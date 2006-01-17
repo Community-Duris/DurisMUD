@@ -585,7 +585,7 @@ Type of spell:  Protection
 See also: "ARMOR CLASS"
 
 #
-ARTIFACT ARTIFACTS (General Information)
+ARTIFACTS (General Information)
 ===========================================================================
 Artifacts are ultimately powerful items on Duris. The artifacts grant the
 wielder/wearer awesome powers. Currently there are twenty-five separate
@@ -3210,7 +3210,7 @@ will smother the light emanating from it.
 See also: "CONTINUAL LIGHT"
 
 #
-DAY DAYS (General Information)
+DAYS (General Information)
 ===========================================================================
         Day of the Moon
         Day of the Bull
@@ -5034,7 +5034,7 @@ You will have to use a little ingenuity to locate those.
 ===========================================================================
 
 #
-EXPERIENCE XP LEVELS (General Information)
+EXPERIENCE XP EXP LEVELS (General Information)
 ===========================================================================
 Syntax:   exp (to see how much experience you currently have)
 
@@ -7233,7 +7233,7 @@ Skills
 See also: RESCUE, "SHIELD PUNCH", "FOLLOW-UP RIPOSTE", "RESCUE ALL"  
 
 #
-GUILD GUILDS ASSOCIATION ASSOCIATIONS CLAN CLANS (General Information)
+GUILDS ASSOCIATIONS CLANS (General Information)
 ===========================================================================
 This document is designed to answer any questions regarding the creation
 of player guilds on Duris. Under the current guild system players are
@@ -7326,7 +7326,7 @@ locker.  This replaces the need for guild chests in guildhalls.
 See also: CONSTRUCT, SOCIETY, GUILDHALL, TITLE
 
 #
-GUILDHALL (General Information)
+GUILDHALLS (General Information)
 ===========================================================================
 After you start a guild you will most likely want to start saving money to
 start building your guild somewhere to hang out and organize your next
@@ -7348,7 +7348,7 @@ For further information on how to construct your guildhall and these items
 within your guildhalls, read the details in the construct section.
 
 ===========================================================================
-See also: CONSTRUCT, GUILD, SOCIETY
+See also: CONSTRUCT, GUILD, SOCIETY, SACK
 
 #
 "HALF ELF" HALF-ELF (General Information)
@@ -8036,7 +8036,7 @@ from one to five rounds.
 ===========================================================================
 
 #
-IMMORTALS GOD GODS (General Information)
+IMMORTALS GODS (General Information)
 ===========================================================================
 Gods are people who have obtained level 57 or above. They should be
 respected for having met and overcome the challenges of Duris DikuMUD.
@@ -18100,7 +18100,7 @@ rewriting) user submitted zonefiles.
 See also: IMMORTALS, CODER, WIZLIST, ZONES
 
 #
-ZONE ZONES (General Information)
+ZONES (General Information)
 ===========================================================================
 The majority of the Duris world is made up of different areas commonly
 called "zones". Within these zones, a variety of things can be found, they
