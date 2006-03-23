@@ -31,7 +31,7 @@ Boats are sold in many hometowns. These will allow you to cross river and other 
 Walking around in the dark? Buy a torch or lantern and hold it, or ask a cleric to cast continual light on a piece of your equipment.
 Evils and Undead can't see very well during the day. You can use the time command to check whether it is night time or not.
 Highland Protectors mark safe zones for new Goodie players that no enemy players above level 25 can enter.
-Been to the website yet?  Point your browser to www.durismud.com.
+Been to the website yet?  Point your browser to www.durismud.net.
 If someone wants to group with you and says ‘f/c’ that means you need to type 'follow <person> and consent <person>
 Your stats will be displayed more accurately at level 10 and completely revealed at level 20.
 When casting offensive spells make sure you are careful about noticing new mobs entering with the same target name.
