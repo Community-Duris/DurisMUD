@@ -32,11 +32,11 @@ while [ $RESULT != 0 ]; do
 	if [ -f /usr/local/bin/sendEmail ]; then
 		/usr/local/bin/sendEmail -t postmaster@angryturnip.com \
 			-f mud@durismud.com -u "Duris Booting..." \
-			-m "Mud booting at ${DATESTR}, previous shutdown reason: ${REASON}."
+			-m "Mud booting at ${DATESTR}, previous shutdown reason: ${STOP_REASON} [${RESULT}]."
 	fi
 
   echo "Starting duris..."
-  ./dms 7777 > dms.out
+  ./dms_new 7878 > dms.out
 
 	# capture the exit code
   RESULT=${PIPESTATUS[0]}
@@ -45,9 +45,10 @@ while [ $RESULT != 0 ]; do
 	case $RESULT in
 		0) STOP_REASON="shutdown";;
 		139) STOP_REASON="crash";;
-		52) STOP_REASON="copyover reboot";;
+		52) STOP_REASON="reboot";;
+		53) STOP_REASON="copyover reboot";;
 		*) STOP_REASON="unknown";;
 	esac	
 
-	echo "Mud stopped, reason: ${STOP_REASON}"
+	echo "Mud stopped, reason: ${STOP_REASON} [${RESULT}]"
 done
