@@ -1,56 +1,53 @@
-Want to see who has the world’s artifacts? Try the ‘artifact’ command!
-No food or water? No problem! You don’t need to eat or drink on Duris.
-Visited Vella’sbrothel  yet? Try giving an ‘employee’ a bit of gold!
+Want to see who has the world's artifacts? Try the "artifact" command!  Currently there are 3 types of artifacts: uniques, iouns and true artifacts. Arti unique, arti ioun or arti will display these lists.
+No food or water? No problem! You don't need to eat or drink on Duris.
+Visited Vella's brothel yet? Try giving an 'employee' a bit of gold!
 You can turn off room descriptions with 'toggle brief', but you might miss some zone clues.
-When out on the maps, avoid walking in hills (marked with ^) and mountains (marked with M) as they will fatigue you more quickly.
+When out on the maps, avoid walking in hills (marked with ^) and mountains (marked with M) as they will fatigue you more quickly. Flying in these areas will not fatigue you as quickly.
 Tired of typing kill 'mob' while the NPC is lying there bleeding to death? Try the toggle vicious command.
-Not sure how tough a monster is? Use the consider command.
+Not sure how tough a monster is? Use the consider command to get a rough idea of the monster's abilities.
 Remember to use your skills! Type "skills" to see what special techniques you may be able to use.
-Make sure you remember how to leave a zone you're in, tracking mobs don't leave their zone.
+Make sure you remember how to leave a zone you're in.  Mobs trying to hunt you down cannot leave their zone.
 Rogues can check an enemy's health without breaking hide by using the 'glance' command.
 Is a dragon about?  Kneel before they enter the room to keep from fleeing from their ROAR!
-Typing ‘aggressive 0’ will make you automatically attack any aggressive monsters that enter the room. Type ‘aggressioff’ to turn this .f.
-Druids can planeshift to 'prime' while standing on ‘Lava’ terrai
+Typing "aggressive 0" will make you automatically attack any aggressive monsters that enter the room. Type "aggressioff" to turn this off.
 Druids can cast 'detect invis' on themselves by casting 'animal vision' while in a swamp.
-Some races and classes can cast 'faerie fire', which will prevent Rogues from hiding.
+Some races and classes can cast 'faerie fire', which will hinder rogues from hiding.  It will also increase your ability to hit your foes.
 Be sure to have a raft or canoe handy in case you need to cross water.
 To regain hitpoints faster, try to 'rest' or 'recline'. Sleeping will increase the heal rate even further.
 Try 'toggle battle' before your next fight.  It displays attacks a little more vividly.
 Some mobs will hunt you down if you attack them and flee.
-Need help? Try the nchat channel! Type ‘nchat’ followed by your questio
-Type ‘spells’ to see what spells your class is able to us
-In certain rooms, you can heal at an advanced rate! Look for the knight in Tharnadia.
-Some mobs are friendlier than others. Try 'ask <mob> hi' to get the quest started or look for clues in their description.
+Need help? Try the nchat channel! Type 'nchat' followed by your question.
+Type "spells" to see what spells your class is able to use.
+In certain rooms, you can heal at an advanced rate!  In others, you won't heal at all!
+Some mobs are friendlier than others. Try 'ask <mob> hi' to get a quest started or look for clues in their description on what to ask them about.
 Type toggle group to let others know that you're interested in grouping.
-The realm of Duris is larger than you know. Type map to see a rough outline of the world.
 Taking a long time to pray or memorize your spells? Try using meditate while you pray/memorize.
-The main stat for Armor Class is Agility. You can improve your armor class with equipment.
+The main stat for armor class is agility. You can improve your armor class with equipment.
 If a mob is at pretty hurt or worse, odds are it will be too hurt to track you down if you fought and fled. 
 Pay attention to what your group does. If someone does something you don't understand, ask why.
 Boats are sold in many hometowns. These will allow you to cross river and other bodies of water. 
 Walking around in the dark? Buy a torch or lantern and hold it, or ask a cleric to cast continual light on a piece of your equipment.
 Evils and Undead can't see very well during the day. You can use the time command to check whether it is night time or not.
-Highland Protectors mark safe zones for new Goodie players that no enemy players above level 25 can enter.
+Highlord Protectors mark safe zones for new goodrace players.  If you find a Highlord Protector corpse, you'd best be on the look out!
 Been to the website yet?  Point your browser to http://www.durismud.com.
 If someone wants to group with you and says "f/c", that means you need to type "follow <person>" and "consent <person>"
 Your stats will be displayed more accurately at level 10 and completely revealed at level 20.
 When casting offensive spells make sure you are careful about noticing new mobs entering with the same target name.
 If you would like to get rid of a spell that is currently memorized type forget <spellname>.
-The Bullywugs zone near Woodseer is a good place for new Goodie players to get equipment.
-The ‘who’ command can sort players by name, level, race or clas
-Watch out when ranging mobs, as you will aggro all the mobs in the room you are ranging into. 
+The Priest of Winterhaven will cast beneficial spells upon you if you stay by him.  Sometimes he might not notice you though!
+The 'who' command can sort players by name, level, race, class or specialization.
+Watch out when range attacking mobs, as you will aggro all the mobs in the room you are ranging into. 
 Remember that all the citizens of Woodseer attack evil-aligned people on sight.
 If you're a Druid, cast the Animal Vision spell in different terrains for different effects.
-A high agility value helps raise your armor class.
-If you need some newbie equipment, Woodseer on the Goodie Continent has some shops. The Bullywugs zone nearby has mobs with good starter equipment as well. You should take the items off mobs you kill and sell them to gain money, and deposit it in banks.
 To scribe spells into your spellbook, you need to goto a teacher mob, hold a quill and spellbook in your hands, rest, and type "practice (spell name)".  You can do it if you have another players book in your inventory and type "scribe (spell name)". - Tayna
 Type "score" to get some information about your character.
+Some commands can be abbreviated.  Try using shortened commands like 'exp' to see if they work.
 Wondering how far you are until you gain your next level? Use the 'experience' command.
 Different equipment will give you different bonuses. After wearing a new piece of equipment, type "attribute" to see if there are any differences.
 Things in your inventory weighing you down?  Wearing or holding your containers may ease the load.
 Mobs starting to get boring when you kill them? The more often you kill the same mob, the less experience you will gain. Type "trophy" to look at which mobs you have recently killed.
 Type "forget (spell name)" to free up a spell slot.  Alternately, you can "forget all" to free all your spell slots.
-Make sure to use your class's skills to do more damage.
+Make sure to use your class's skills to do more damage or to escape from harm.
 Beware of guards!  Some guards will come to the aid of your victims!
 Strength affects how hard you hit, as well as how heavy your load will be.
 Agility affects your armor class, how often you abort your spells, and how often you dodge attacks.
@@ -59,18 +56,18 @@ Wisdom determines how quickly Priest classes pray for spells.
 Intelligence affects how easily you can search for hidden items or exits and affects how quickly Magic-User classes memorize spells.
 Charisma affects the prices stores charge you and affects how obedient your summoned monsters (pets) are.
 Save money and buy a boat!  There's a whole world out there waiting for you! Use help ship to learn how.
-Some magic works at a distance - try "cast 'spellname' <person> west" to hit someone in the next room!
+Some magic works at a distance - try "cast 'spellname' <person> <direction>" to hit someone in the next room!
 "Luring" means hitting a mob and running away to make it follow you.  Luring is useful to trick a mob into leaving its friends, so you can kill it more easily.
 It's rude to look at or consider people you don't know! Try a polite acknowledgement first.
 Experiment with different social commands. Some are useful in actual game play. Example: "beckon" asks someone to follow and consent to you, or "moving" announces that you are moving ahead.
 Killing other players and taking their equipment is completely legal, but so is retribution!  Beware of your victims' allies.
 Type "toggle" to see a list of various commands you can toggle.  Try them out!  Some are quite handy.
-Your equipment will wear out! Repair it when it gets in worse condition than fair.
+Your equipment will wear out! Repair it before it becomes useless or is destroyed altogether!
 Searching a room can sometimes reveal a hidden exit!  Search in suspicious dead ends or in rooms with suspicious descriptions.
 You can sell equipment for money at shops.  However, most stores only purchase certain types of equipment.  Shop around!
 Did you die? Don't despair! Death is a great part of this game. Learn to avoid making the same mistakes.
 Type 'news' daily to read the latest changes and updates on Duris.
-At level 30 you get the option to specialize your character! Once you specialize ,you can't switch to another so make sure to pick one you like.
+At level 30 you get the option to adopt a class specialization if you choose.  Check the help files for your class to see what's available.
 Not sure if you are playing the right class? Experiment with different classes until you find one that fits your play style.
 Left your ship on a different island? Go to any building docks and type 'summon ship'.
 Loosing the battle? Try to 'flee'. But don't flee too many times, or you might run into something even nastier!
@@ -83,9 +80,7 @@ Riding a horse or other mount will make it easier to move across tough terrain.
 Want to see what's for sale?  Try the 'list' command in a shop.
 You take more damage if you're sitting or reclining, so be sure to "stand" if someone knocks you down in battle.
 You can drag a corpse to safety by typing 'drag corpse <direction>'. 
-The 'glance' command allows thieves to see equipped items without anyone knowing they are being looked at.
 The term 'mob' is short for mobile and refers to any computer-controlled monster.
-Hardcore characters have many advantages, but they are only allowed five deaths.
 Most commands have help files.  Type 'help (command)' to learn how to use game commands.
 Type 'terrain' to see what kind of terrain you are in.  Druids benefit from Forest or Field terrain.
 Ask a cleric to bless your weapon - it will strike more accurately. If the blessing wears off, do it again.
@@ -95,7 +90,6 @@ Undeads, trolls and trees fear fire. Also any creatures with bark-like skin are 
 Insects do not like fire nor ice. Protect yourself with elemental shields when fighting a druid with creeping doom.
 If you are an ethermancer, your purge spell is very effective against the summoned creatures.
 Remember you can target any of your area damage spells. The targeted person will always be hit, also those standing close to him have a higher chance to be affected.
-Wearing equipment protecting you from petrification will make you less vulnerable to imprison 	t will also make the spell 'stone skin' more effective on you.
 Fireshield makes you less vulnerable to fire attacks but you will suffer more from cold. Coldshield works in an opposite way.
 You gain much more experience when you heal a person engaged in melee combat.
 Before you sell something try getting a 'value' from the shopkeeper, as different shopkeepers will buy things from you at different prices.
