@@ -12,7 +12,6 @@ while [ $RESULT != 0 ]; do
     if [ -f src/dms_new ]; then
 			if [ -f dms ]; then
 		  	mv dms dms.$DATESTR
-		  	mv gmon.out gmon.out.$DATESTR
 			fi
       mv src/dms_new dms
     fi
@@ -27,11 +26,11 @@ while [ $RESULT != 0 ]; do
   echo "Generating list of function names.."
   nm --demangle dms | grep " T " | sed -e 's/[(].*[)]//g' > lib/event_names
 
-	if [ -f /usr/local/bin/sendEmail ]; then
-		/usr/local/bin/sendEmail -t postmaster@angryturnip.com \
-			-f mud@durismud.com -u "Duris Booting..." \
-			-m "Mud booting at ${DATESTR}, previous shutdown reason: ${STOP_REASON} [${RESULT}]."
-	fi
+#	if [ -f /usr/local/bin/sendEmail ]; then
+#		/usr/local/bin/sendEmail -t postmaster@angryturnip.com \
+#			-f mud@durismud.com -u "Duris Booting..." \
+#			-m "Mud booting at ${DATESTR}, previous shutdown reason: ${STOP_REASON} [${RESULT}]."
+#	fi
 
   echo "Starting duris..."
   ./dms 7777 > dms.out
