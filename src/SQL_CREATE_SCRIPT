@@ -99,7 +99,8 @@ CREATE TABLE `auctions` (
   `id_keywords` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`id`),
   KEY `seller_pid` (`seller_pid`),
-  KEY `auction_end` (`end_time`)
+  KEY `auction_end` (`end_time`),
+  KEY `status` (`status`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -124,14 +125,14 @@ CREATE TABLE `changes` (
   `id` int(11) NOT NULL auto_increment,
   `history_id` int(11) default '-1',
   `history_text` text,
-  `history_title` text,
+  `history_title` varchar(255) default NULL,
   `history_category_id` int(11) default NULL,
   `new_text` text,
-  `new_title` text,
+  `new_title` varchar(255) default NULL,
   `new_category_id` int(11) default NULL,
-  `timestamp` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  `action` varchar(50) NOT NULL default '',
-  `ip_number` varchar(50) default '',
+  `timestamp` datetime default NULL,
+  `action` varchar(255) default NULL,
+  `ip_number` varchar(255) default '',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
 
@@ -246,8 +247,8 @@ CREATE TABLE `pages` (
   `id` int(11) NOT NULL auto_increment,
   `title` varchar(255) default NULL,
   `text` text,
-  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  `last_update_by` tinytext,
+  `last_update` datetime default NULL,
+  `last_update_by` varchar(255) default NULL,
   `category_id` int(11) default NULL,
   `ip_number` varchar(50) default NULL,
   PRIMARY KEY  (`id`),
@@ -300,7 +301,9 @@ CREATE TABLE `pkill_info` (
   `leader` int(11) default NULL,
   PRIMARY KEY  (`id`),
   KEY `part_of_name` (`event_id`),
-  KEY `unique_index` (`pid`)
+  UNIQUE KEY `unique_index` (`pid`),
+  KEY `level` (`level`),
+  KEY `racewar` (`racewar`)
 ) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 --
@@ -410,6 +413,7 @@ CREATE TABLE `zones` (
   `suggested_group_size` int(10) NOT NULL default '1',
   `epic_payout` int(10) NOT NULL default 0,
   `difficulty` int(10) NOT NULL default 0,
+  `randoms_zone` tinyint(1) NOT NULL default '1',
   PRIMARY KEY  (`id`),
   KEY `number_index` (`number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -427,7 +431,7 @@ CREATE TABLE `log_entries` (
   `pid` int(10) NOT NULL default '0',
   `ip_address` varchar(15) NOT NULL default '',
   `room_vnum` int(10) NOT NULL default '0',
-  `zone_number` int(10) NOT NULL default '0',
+  `zone_number` int(11) NOT NULL default '0',
   `message` varchar(255) NOT NULL default '',  
   PRIMARY KEY  (`id`),
   KEY `date_index` (`date`),
@@ -484,7 +488,10 @@ CREATE TABLE `zone_trophy` (
   `pid` bigint(20) NOT NULL default '0',
   `zone_number` int(11) NOT NULL default '0',
   `exp` int(11) NOT NULL default '0',
-  PRIMARY KEY  (`pid`,`zone_number`)
+  PRIMARY KEY  (`pid`,`zone_number`),
+  KEY `pid_index` (`pid`),
+  KEY `zone_number` (`zone_number`),
+  KEY `exp_index` (`exp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `shop_trophy`;
@@ -522,6 +529,8 @@ CREATE TABLE `outposts` (
   `territory` int(11) NOT NULL default '0',
   `portal_room` int(11) NOT NULL default '0',
   `portal_dest` int(11) NOT NULL default '0',
+  `resources` int(11) NOT NULL default '0',
+  `applied_resources` int(11) NOT NULL default '100000',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
