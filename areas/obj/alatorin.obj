@@ -4510,3 +4510,175 @@ wanted list parchment~
 &+y- SEE ULSTER STONEHAMMER  -
 &+y---------------------------
 ~
+#83389
+morning star morningstar mithril headed mithril-headed~
+&+La &N&+mmithril-headed &+Lmorningstar&N~
+&+LA &N&+mmithril-headed &+Lmorningstar&N has been left here.~
+~
+5 18 5 0 9 0 0 8193 64 0 0
+3 3 6 0 0 0 0 0
+6 18223 100
+E
+morning star morningstar mithril headed mithril-headed~
+   &+LThis finely-crafted morning star has a heavy, magical mithril head.  The
+&+Lhead of this flail has huge &N&+rspikes &+Lwhich appear to be well-used.
+~
+A
+18 4
+A
+19 4
+#83390
+potion insane strength~
+&+La &N&+cpotion &+Lof &N&+miN&+MSa&N&+mNe &+YSTrEnGTh&N~
+&+LA &n&+cpotion &+Lof &N&+miN&+MSa&N&+mNe &+YSTReNGTH&N has been left here.~
+~
+10 7 2 0 7 0 33554433 8404993 64 0 0
+60 175 221 255 0 0 0 0
+0 50443 100
+E
+potion insane strength~
+   &+LThis large &+Wglass &+Lbottle contains a &+Wfizzing &n&+rred liquid&+L.
+&+LScrolled across the front of the &N&+cpotion &+Lin bright &+Yyellow paint&+L:
+&+YiNSaNe STrEnGTh&N
+~
+#83391
+potion remedying~
+&+La &N&+cpotion &+Lof &+Yremedying~
+&+LA &N&+cpotion &+Lof &+Yremedying &+Lhas been left here.~
+~
+10 7 2 0 5 0 0 16385 64 0 0
+60 354 275 162 0 0 0 0
+1 14332 100
+E
+potion remedying~
+   &+LThis small &+Cglass &+Lpotion smells faintly like flowers and &N&+rblood&+L.
+~
+#83392
+potion improved vision~
+&+La &N&+cpotion &+Lof improved &N&+cvi&Nsi&+Con&N~
+&+LA &N&+cpotion &+Lof improved &+Cvision &+Lhas been left here.~
+~
+10 7 2 0 7 0 0 8404993 64 0 0
+60 158 204 0 0 0 0 0
+1 21222 100
+E
+potion improved vision~
+   &+LThis thick viscid potion sits heavily in a black bottle.
+~
+#83394
+mithril bladed battle axe mithril-bladed battle-axe~
+&+Wa &n&+mmithril-bladed &+Wbattle-axe&N~
+&+WA polished mithril axe has been left here.~
+~
+5 18 3 0 7 0 0 8193 64 0 0
+1 3 4 0 0 0 0 0
+4 11229 100
+E
+mithril bladed battle axe mithril-bladed battle-axe~
+   &+LThis thick, heavy axe has a massive mithril blade and a &+Wsteel shaft.
+~
+A
+18 3
+A
+19 5
+#83395
+bloody leather eyepatch~
+&N&+ra bloody leather eyepatch&N~
+&n&+rA bloody leather eyepatch has been left here.~
+~
+9 13 2 0 7 0 0 131073 0 0 0
+3 0 0 0 0 0 0 0
+0 164 100
+E
+bloody leather eyepatch~
+&+rThis leather eyepatch has been splattered with the blood of hundreds of unfortunate victims..
+~
+A
+19 2
+A
+18 1
+#83396
+full suit mithril plate~
+&na full suit of &N&+mmithril plate&N~
+&nA full suit of &N&+mmithril plate&N has been left here.~
+~
+9 18 4 0 9 0 536870912 9 64 0 0
+15 0 0 0 0 0 0 0
+6 16332 100
+E
+full suit mithril plate~
+   &+mThis thick suit of mithril plate is much lighter then typical metals.  It is
+&+mmade with fine dwarven craftsmanship.
+~
+A
+17 -55
+#83397
+war banner khoralator~
+&n&+ca &+rwar &+Wbanner &n&+cof &+WKhor&N&+calator&N~
+&+cA war banner of Khoralator Fort&N has been left here, crumbled.~
+~
+9 3 3 0 9 0 0 2097153 64 0 0
+1 0 0 0 0 0 0 0
+2 15343 100
+E
+war banner khoralator~
+   &+LThis masive flag is set on a wooden pole that attaches to ones backpack.
+&+LThe standard itself is that of &+WKhor&N&+calator &+CFort, the mountain dwarf
+&+Lmilitary base on &N&+yShanatar&+L.
+~
+A
+18 3
+A
+19 1
+#83398
+object unnamed~
+an unnamed object~
+An unnamed object lies here, looking lonely and forelorn.~
+~
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#83399
+mithril two-handed warhammer hammer~
+&+ma mithril two-handed warhammer&N~
+&+mA mithril two-handed warhammer has been left here.~
+~
+5 18 3 0 5 0 4194304 8193 0 0 0
+4 6 4 0 0 0 0 0
+20 6000 62
+E
+old heavy mithril hammer~
+   &+mThis old, heavy warhammer has a massive head that is covered in little
+&+mcuts and dings from a lifetime of use.
+~
+A
+18 5
+A
+19 5
+#83400
+full-headed full mithril helmet~
+&Na full-headed &N&+mmithril helmet&N~
+&+mA full-headed mithril helmet and faceplate has been left here.~
+~
+9 18 3 0 7 0 1073741824 17 0 0 0
+1 0 0 0 0 0 0 0
+5 14332 100
+E
+full-headed full mithril helmet~
+   &+mThis finely-crafted mithril helmet has a full-faced plate and armor around the
+&+meyes, with vision coming from two large slits.
+~
+A
+17 -55
+#83401
+potion ultimate protection~
+&+La &N&+cpotion &+Lof &N&+yu&+Yl&n&+mt&+Mi&+Cm&+Ma&N&+mt&+Ye &n&+bprotection&n~
+&+LA &N&+cpotion of ulimate protection has been left here.~
+~
+10 7 2 0 7 0 1 2049 64 0 0
+60 179 400 174 0 0 0 0
+1 75043 100
+E
+potion ultimate protection~
+   &+LThis small glass potion &N&+bsw&+Lir&+Yls &+Bwi&+Rth &+Gdi&+Bff&N&+bere&+cnt &+Bcolors.
+~

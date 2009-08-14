@@ -2006,3 +2006,36 @@ D
 &N$n bows at $N and concludes 'I will report these act of chivalry to the king.'
 ~
 S
+#83355
+MA
+hi hello weep~
+&N$n &+wsobs &Na bit more before giving $N a glance.
+&+c'Please..'&N she says with a quiver in her voice, '&+cGet me out of here.'
+~
+MA
+here prison prisoner torture helgor key lock~
+&N$n nods at $N, catching her breath.
+&+c'Please..' she pleads, 'Get me the key.  Free me from my bonds.'
+~
+M
+qc_action 200~
+&+cThe grey elf prisoner cries, sobbing her eyes out and gasping for hair between her tears.
+~
+M
+qc_action 250~
+&+cA grey elf prisoner weeps uncontrollably, &+Wtears running down her face.
+~
+QA
+&NQuickly freeing herself from her shackles, the &+cgrey elf prisoner &Ncasts a spell.
+&+WCompleting her spell&N, her heals become healed and she smiles at $N.
+&+c'My name is Pearla.  I have already fallen victim to many captures from terrible disgusting monsters.  Thank you for saving me.  I'm afraid I already gave my &+Ygold hair pin &N&+caway about fifteen years ago.. but I will give you some platinum I have gathered in my journey.'
+~
+R E 250000
+R C 55000
+G I 83354
+D
+&NPearla starts casting a spell.
+&+WPearla completes her spell.
+&NPearla utters a single word, and is gone.
+~
+S

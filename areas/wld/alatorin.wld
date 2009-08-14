@@ -10236,8 +10236,14 @@ S
 &N&+rwhich have allowed the duergars to widen the tunnel and modify it to their
 &+rneeds.  This tunnel leads deep through the inside of &+rHel&+Rgor &+WOutpost&+L,
 &N&+rgiving access to the various caves of use.
+   &+rThe northern wall of this stretch of &+Ltunnel &N&+rhas been blocked off
+&+rwith numerous wooden planks and seems to have been a doorway at one point..
 ~
 831 32768 15
+D0
+~
+secret door~
+5 0 83704
 D1
 ~
 ~
@@ -10580,6 +10586,11 @@ S
 &+Lhangs to the east before the private quarters of the general.
 ~
 831 32768 15
+D1
+&+LA large sheet of &N&+yhide &+Lacting as a &Ncurtain &+Lhangs to the east over a passage.
+~
+curtain~
+1 0 83706
 D2
 &+LThe massive doors to the Helgor Outpost.
 ~
@@ -10594,6 +10605,10 @@ S
 &N&+rgiving access to the various caves of use.
 ~
 831 32768 15
+D0
+~
+~
+0 0 83705
 D2
 ~
 ~
@@ -11768,6 +11783,10 @@ S
 &+Lsubterannean shaft.
 ~
 831 32768 0
+D4
+~
+~
+0 0 518643
 D5
 ~
 ~
@@ -11814,6 +11833,10 @@ D2
 ~
 ~
 0 0 83671
+D3
+~
+secret door~
+5 0 83702
 S
 #83682
 &+LStart of a Rocky Pass&N~
@@ -12137,4 +12160,392 @@ D2
 ~
 door~
 1 0 83549
+S
+#83701
+&+yA Secret &+gMerchant Stall&N~
+   &+gThis secret alcove is covered by wood paneling.  There is a small wooden door
+&+gthat leads out to the public shop.  There are various potions sitting across the
+&+gshelves of this small stand.  There is a large &N&+Rsign &N&+gposted next to the
+&+gmerchant stall.
+~
+831 0 0
+D1
+~
+secret door~
+1 0 83703
+E
+sign~
+&+yThis sign reads &+R'DWARF ONLY!'
+~
+S
+#83702
+&NA Short &+LHallway&N~
+   &+LA short hallway stretches north and south, endinag at an empty wall
+&+Lshrouded in darkness.  The start of the hallway features the secret
+&+Ldoor behind the Fort merchant stall.  There are numerous dark footprints
+&+Lin the dirty, unkept floor below - all dwarfish in side.
+~
+831 9 0
+D0
+~
+~
+0 0 83703
+D1
+~
+~
+1 0 83681
+E
+sign~
+&+yThis sign reads &+R'DWARF ONLY!'
+~
+S
+#83703
+&NEnd of a &+LHallway&N~
+   &+LA short hallway stretches north and south, endinag at an empty wall
+&+Lshrouded in darkness.  The start of the hallway features the secret
+&+Ldoor behind the Fort merchant stall.  There are numerous dark footprints
+&+Lin the dirty, unkept floor below - all dwarfish in side.
+~
+831 9 0
+D2
+~
+~
+0 0 83702
+D3
+~
+secret door~
+5 0 83701
+E
+sign~
+&+yThis sign reads &+R'DWARF ONLY!'
+~
+S
+#83704
+&+LA Secret &N&+rMerchant &+LHold&N~
+   &+gThis secret alcove is covered by wood paneling.  There is a small wooden door
+&+gthat leads out to the public shop.  There are various potions sitting across the
+&+gshelves of this small stand.  There is a large &N&+Rsign &N&+gposted next to the
+&+gmerchant stall.
+~
+831 0 0
+D2
+~
+~
+1 0 83595
+E
+sign~
+&+yThis sign reads &+R'CLANSDWARF ONLY'
+~
+S
+#83705
+&+LBelow a &N&+mLong Shaft&N~
+   &+LThis long shaft stretches all the way up to the rocky surface of one of the
+&+Ltallest &N&+ypeaks &+Lof Shanatar, while also descending down into one of the
+&+Lgreatest depths of Shanatar as well.  This shaft leads all the way down into
+&+Lthe heart of &N&+rHel&+Rgor &+Loutpost.  Small red &+Rflags &+Lare tied off
+&+Lat the top of this shaft, baring the insignia of &+RHel&N&+rgor.
+~
+831 9 13
+D2
+~
+~
+0 0 83615
+D4
+~
+~
+0 0 83707
+E
+insignia~
+      \\
+       \\
+        \\  //
+	 \\//
+	  ><
+	 //\\
+	//__\\
+       <___   >
+          /   \
+       __/     >
+      <       /
+       \      \
+        \__    >
+	  /    \__
+	 <__      \
+	    \______>
+~
+S
+#83706
+&+mThe Private Quarters of &+LGeneral &N&+rHel&+Rgor&N~
+   &+LThis private hall deep inside the duergar outpost known as Helgor is that of
+&+LGeneral &N&+rHel&+Rgor &+Lhimself.  Equipping with a private stone bath at which
+&+Lslaves are forced to bathe and primp the general, this home serves its host well.
+&+LThe stone floor is finely-kept, with a large rug made of &N&+yskin&+L covering
+&+Lthe floor.  The thick walls hug the stout exit while encircling the central chamber.
+~
+831 9 0
+D3
+&+LA &N&+yhide sheet&+L acting as a &Ncurtain&+L hangs to the west over a passage.
+~
+curtain~
+1 0 83614
+S
+#83707
+&+LWithin &N&+mA &N&+mLong Shaf&+Lt&N~
+   &+LThis long shaft stretches all the way up to the rocky surface of one of the
+&+Ltallest &N&+ypeaks &+Lof Shanatar, while also descending down into one of the
+&+Lgreatest depths of Shanatar as well.  This shaft leads all the way down into
+&+Lthe heart of &N&+rHel&+Rgor &+Loutpost.  Small red &+Rflags &+Lare tied off
+&+Lat the top of this shaft, baring the insignia of &+RHel&N&+rgor.
+~
+831 9 13
+D4
+~
+~
+0 0 83708
+D5
+~
+~
+0 0 83705
+E
+insignia~
+      \\
+       \\
+        \\  //
+	 \\//
+	  ><
+	 //\\
+	//__\\
+       <___   >
+          /   \
+       __/     >
+      <       /
+       \      \
+        \__    >
+	  /    \__
+	 <__      \
+	    \______>
+~
+S
+#83708
+&+LWithi&N&+mn A Long Sha&+Lft&N~
+   &+LThis long shaft stretches all the way up to the rocky surface of one of the
+&+Ltallest &N&+ypeaks &+Lof Shanatar, while also descending down into one of the
+&+Lgreatest depths of Shanatar as well.  This shaft leads all the way down into
+&+Lthe heart of &N&+rHel&+Rgor &+Loutpost.  Small red &+Rflags &+Lare tied off
+&+Lat the top of this shaft, baring the insignia of &+RHel&N&+rgor.
+~
+831 9 13
+D4
+~
+~
+0 0 83709
+D5
+~
+~
+0 0 83707
+E
+insignia~
+      \\
+       \\
+        \\  //
+	 \\//
+	  ><
+	 //\\
+	//__\\
+       <___   >
+          /   \
+       __/     >
+      <       /
+       \      \
+        \__    >
+	  /    \__
+	 <__      \
+	    \______>
+~
+S
+#83709
+&+LWith&N&+min A Long Sh&+Laft&N~
+   &+LThis long shaft stretches all the way up to the rocky surface of one of the
+&+Ltallest &N&+ypeaks &+Lof Shanatar, while also descending down into one of the
+&+Lgreatest depths of Shanatar as well.  This shaft leads all the way down into
+&+Lthe heart of &N&+rHel&+Rgor &+Loutpost.  Small red &+Rflags &+Lare tied off
+&+Lat the top of this shaft, baring the insignia of &+RHel&N&+rgor.
+~
+831 9 13
+D4
+~
+~
+0 0 83710
+D5
+~
+~
+0 0 83708
+E
+insignia~
+      \\
+       \\
+        \\  //
+	 \\//
+	  ><
+	 //\\
+	//__\\
+       <___   >
+          /   \
+       __/     >
+      <       /
+       \      \
+        \__    >
+	  /    \__
+	 <__      \
+	    \______>
+~
+S
+#83710
+&+LWit&N&+mhin A Long S&+Lhaft&N~
+   &+LThis long shaft stretches all the way up to the rocky surface of one of the
+&+Ltallest &N&+ypeaks &+Lof Shanatar, while also descending down into one of the
+&+Lgreatest depths of Shanatar as well.  This shaft leads all the way down into
+&+Lthe heart of &N&+rHel&+Rgor &+Loutpost.  Small red &+Rflags &+Lare tied off
+&+Lat the top of this shaft, baring the insignia of &+RHel&N&+rgor.
+~
+831 9 13
+D4
+~
+~
+0 0 83711
+D5
+~
+~
+0 0 83709
+E
+insignia~
+      \\
+       \\
+        \\  //
+	 \\//
+	  ><
+	 //\\
+	//__\\
+       <___   >
+          /   \
+       __/     >
+      <       /
+       \      \
+        \__    >
+	  /    \__
+	 <__      \
+	    \______>
+~
+S
+#83711
+&+LWi&N&+mthin A Long &+LShaft&N~
+   &+LThis long shaft stretches all the way up to the rocky surface of one of the
+&+Ltallest &N&+ypeaks &+Lof Shanatar, while also descending down into one of the
+&+Lgreatest depths of Shanatar as well.  This shaft leads all the way down into
+&+Lthe heart of &N&+rHel&+Rgor &+Loutpost.  Small red &+Rflags &+Lare tied off
+&+Lat the top of this shaft, baring the insignia of &+RHel&N&+rgor.
+~
+831 9 13
+D4
+~
+~
+0 0 83712
+D5
+~
+~
+0 0 83710
+E
+insignia~
+      \\
+       \\
+        \\  //
+	 \\//
+	  ><
+	 //\\
+	//__\\
+       <___   >
+          /   \
+       __/     >
+      <       /
+       \      \
+        \__    >
+	  /    \__
+	 <__      \
+	    \______>
+~
+S
+#83712
+&+LW&N&+mithin A Lon&+Lg Shaft&N~
+   &+LThis long shaft stretches all the way up to the rocky surface of one of the
+&+Ltallest &N&+ypeaks &+Lof Shanatar, while also descending down into one of the
+&+Lgreatest depths of Shanatar as well.  This shaft leads all the way down into
+&+Lthe heart of &N&+rHel&+Rgor &+Loutpost.  Small red &+Rflags &+Lare tied off
+&+Lat the top of this shaft, baring the insignia of &+RHel&N&+rgor.
+~
+831 9 13
+D4
+~
+~
+0 0 83713
+D5
+~
+~
+0 0 83711
+E
+insignia~
+      \\
+       \\
+        \\  //
+	 \\//
+	  ><
+	 //\\
+	//__\\
+       <___   >
+          /   \
+       __/     >
+      <       /
+       \      \
+        \__    >
+	  /    \__
+	 <__      \
+	    \______>
+~
+S
+#83713
+&+mTop of a Lon&+Lg Shaft&N~
+   &+LThis long shaft stretches all the way up to the rocky surface of one of the
+&+Ltallest &N&+ypeaks &+Lof Shanatar, while also descending down into one of the
+&+Lgreatest depths of Shanatar as well.  This shaft leads all the way down into
+&+Lthe heart of &N&+rHel&+Rgor &+Loutpost.  Small red &+Rflags &+Lare tied off
+&+Lat the top of this shaft, baring the insignia of &+RHel&N&+rgor.
+~
+831 9 13
+D4
+&+mThe shaft opens up &+Wto the mountains above &N&+yShanatar.
+~
+~
+0 0 522647
+D5
+~
+~
+0 0 83712
+E
+insignia~
+      \\
+       \\
+        \\  //
+	 \\//
+	  ><
+	 //\\
+	//__\\
+       <___   >
+          /   \
+       __/     >
+      <       /
+       \      \
+        \__    >
+	  /    \__
+	 <__      \
+	    \______>
+~
 S

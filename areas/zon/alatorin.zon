@@ -1,6 +1,6 @@
 #831
 &+CAlatorin &+L- the &N&+rForge &+LCity~
-83700 2 0 40 50 1
+83713 2 0 40 50 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -829,6 +829,14 @@ D 0 83613 0 1 100 0 0 0
 *     north exit from "An Officer's Chamber" to
 *     "A Guard Post at the Bottom of the Stairs" - closed
 *
+D 0 83595 0 5 100 0 0 0
+*     north exit from "An Adamantite-Reinforced Tunnel" to
+*     "A Secret Merchant Hold" - closed/secret
+*
+D 0 83704 2 1 100 0 0 0
+*     south exit from "A Secret Merchant Hold" to
+*     "An Adamantite-Reinforced Tunnel" - closed
+*
 D 0 83597 1 2 100 0 0 0
 *     east exit from "An Adamantite-Reinforced Tunnel" to
 *     "A Foul Cavern Cell" - closed/locked
@@ -868,6 +876,14 @@ D 0 83600 3 2 100 0 0 0
 D 0 83603 1 2 100 0 0 0
 *     east exit from "A Small, Filthy Cave" to
 *     "An Adamantite-Reinforced Tunnel" - closed/locked
+*
+D 0 83614 1 1 100 0 0 0
+*     east exit from "General Helgor's Chamber" to
+*     "The Private Quarters of General Helgor" - closed
+*
+D 0 83706 3 1 100 0 0 0
+*     west exit from "The Private Quarters of General Helgor" to
+*     "General Helgor's Chamber" - closed
 *
 D 0 83629 2 1 100 0 0 0
 *     south exit from "Before a Huge Storage Hold" to
@@ -940,6 +956,22 @@ D 0 83670 0 2 100 0 0 0
 D 0 83679 2 1 100 0 0 0
 *     south exit from "The Private Chamber of Lord Khoralator" to
 *     "A Guard Post" - closed
+*
+D 0 83681 3 5 100 0 0 0
+*     west exit from "A Small Merchant Cove" to
+*     "A Short Hallway" - closed/secret
+*
+D 0 83702 1 1 100 0 0 0
+*     east exit from "A Short Hallway" to
+*     "A Small Merchant Cove" - closed
+*
+D 0 83701 1 1 100 0 0 0
+*     east exit from "A Secret Merchant Stall" to
+*     "End of a Hallway" - closed
+*
+D 0 83703 3 5 100 0 0 0
+*     west exit from "End of a Hallway" to
+*     "A Secret Merchant Stall" - closed/secret
 *
 *
 O 0 83100 1 83103 100 0 0 0        * a giant statue of a dwarven warrior
@@ -1468,7 +1500,7 @@ M 0 83123 2 83128 100 0 0 0        * a famished explorer
 M 0 83123 2 83128 100 0 0 0        * a famished explorer
 M 0 83124 2 83128 100 0 0 0        * a retired guard
 M 0 83227 1 83133 100 0 0 0        * Farbash the dwarven inquisitor
-E 1 83214 1 16 100 0 0 0           *   an old heavy mithril hammer
+E 1 83214 2 16 100 0 0 0           *   an old heavy mithril hammer
 E 1 83215 1 17 3 0 0 0             *   an old heavy mithril hammer
 F 1 83157 16 83133 100 0 0 0       * an Alatorin peacekeeper (following)
 E 1 83119 999 16 100 0 0 0         *   a polished iron broadsword
@@ -2452,22 +2484,23 @@ M 0 83319 1 83582 100 0 0 0        * Grukadak the watcher
 E 1 83353 1 24 100 0 0 0           *   a war banner of Helgor
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 8 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
 F 1 83318 4 83582 100 0 0 0        * a gate guard of Helgor outpost (following)
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 8 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
 F 1 83318 4 83582 100 0 0 0        * a gate guard of Helgor outpost (following)
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 8 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
 F 1 83318 4 83582 100 0 0 0        * a gate guard of Helgor outpost (following)
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
+E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
 F 1 83318 4 83582 100 0 0 0        * a gate guard of Helgor outpost (following)
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 8 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
 M 0 83323 8 83585 100 0 0 0        * a Helgor crossbowmnan
 M 0 83323 8 83585 100 0 0 0        * a Helgor crossbowmnan
 M 0 83323 8 83587 100 0 0 0        * a Helgor crossbowmnan
@@ -2477,7 +2510,7 @@ M 0 83323 8 83589 100 0 0 0        * a Helgor crossbowmnan
 M 0 83334 4 83589 100 0 0 0        * a burly guard of Helgor outpost
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 8 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
 R 1 83321 6 83589 100 0 0 0        * a huge warg (being ridden)
 M 0 83323 8 83590 100 0 0 0        * a Helgor crossbowmnan
 M 0 83323 8 83590 100 0 0 0        * a Helgor crossbowmnan
@@ -2494,11 +2527,12 @@ E 1 83281 12 16 100 0 0 0          *   a mithril dwarven halberd
 M 0 83334 4 83595 100 0 0 0        * a burly guard of Helgor outpost
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 8 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
 R 1 83321 6 83595 100 0 0 0        * a huge warg (being ridden)
 M 0 83320 1 83600 100 0 0 0        * the Helgor taskmaster
 E 1 83355 2 16 100 0 0 0           *   a barbed bull whip
 E 1 83355 2 17 100 0 0 0           *   a barbed bull whip
+E 1 83395 1 19 100 0 0 0           *   a bloody leather eyepatch
 G 1 83354 1 0 100 0 0 0            *    an adamantite cell key
 M 0 83327 3 83601 100 0 0 0        * a mountain dwarf slave
 M 0 83328 1 83601 100 0 0 0        * a grey elf slave
@@ -2509,10 +2543,11 @@ M 0 83329 2 83602 100 0 0 0        * a halfling slave
 M 0 83327 3 83603 100 0 0 0        * a mountain dwarf slave
 M 0 83329 2 83603 100 0 0 0        * a halfling slave
 M 0 83330 3 83603 100 0 0 0        * a gnome slave
+M 0 83355 1 83603 85 0 0 0         * a grey elf prisoner
 M 0 83334 4 83604 100 0 0 0        * a burly guard of Helgor outpost
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 8 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
 R 1 83321 6 83604 100 0 0 0        * a huge warg (being ridden)
 M 0 17197 2 83605 45 0 0 0         * (mob type not in this .mob file)
 M 0 17206 2 83605 45 0 0 0         * (mob type not in this .mob file)
@@ -2534,7 +2569,7 @@ G 1 53 999 0 100 0 0 0             *    (object type not in this .obj file)
 M 0 83334 4 83609 100 0 0 0        * a burly guard of Helgor outpost
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 8 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
 R 1 83321 6 83609 100 0 0 0        * a huge warg (being ridden)
 M 0 83325 1 83613 100 0 0 0        * an officer of Helgor
 E 1 83174 9 16 100 0 0 0           *   a bloody warhammer
@@ -2564,10 +2599,26 @@ M 0 83157 16 83627 100 0 0 0       * an Alatorin peacekeeper
 E 1 83111 999 16 100 0 0 0         *   an iron broadsword
 E 1 83111 999 17 100 0 0 0         *   an iron broadsword
 M 0 83340 1 83641 100 0 0 0        * Barny Taskgulch the watcher
+E 1 83397 1 24 100 0 0 0           *   a war banner of Khoralator
+E 1 83396 5 5 100 0 0 0            *   a full suit of mithril plate
+E 1 83400 5 6 100 0 0 0            *   a full-headed mithril helmet
+E 1 83214 2 16 100 0 0 0           *   an old heavy mithril hammer
 M 0 83339 4 83641 100 0 0 0        * a gate guard of Khoralator fort
+E 1 83396 5 5 100 0 0 0            *   a full suit of mithril plate
+E 1 83400 5 6 100 0 0 0            *   a full-headed mithril helmet
+E 1 83399 4 16 100 0 0 0           *   a mithril two-handed warhammer
 M 0 83339 4 83641 100 0 0 0        * a gate guard of Khoralator fort
+E 1 83396 5 5 100 0 0 0            *   a full suit of mithril plate
+E 1 83400 5 6 100 0 0 0            *   a full-headed mithril helmet
+E 1 83399 4 16 100 0 0 0           *   a mithril two-handed warhammer
 M 0 83339 4 83641 100 0 0 0        * a gate guard of Khoralator fort
+E 1 83396 5 5 100 0 0 0            *   a full suit of mithril plate
+E 1 83400 5 6 100 0 0 0            *   a full-headed mithril helmet
+E 1 83399 4 16 100 0 0 0           *   a mithril two-handed warhammer
 M 0 83339 4 83641 100 0 0 0        * a gate guard of Khoralator fort
+E 1 83396 5 5 100 0 0 0            *   a full suit of mithril plate
+E 1 83400 5 6 100 0 0 0            *   a full-headed mithril helmet
+E 1 83399 4 16 100 0 0 0           *   a mithril two-handed warhammer
 M 0 83346 4 83645 100 0 0 0        * a fearless guard of Khoralator Fort
 M 0 83346 4 83649 100 0 0 0        * a fearless guard of Khoralator Fort
 M 0 83342 1 83655 100 0 0 0        * Mundorno the blacksmith
@@ -2591,10 +2642,28 @@ M 0 83346 4 83666 100 0 0 0        * a fearless guard of Khoralator Fort
 R 1 83351 2 83666 100 0 0 0        * a huge boar (being ridden)
 M 0 83346 4 83667 100 0 0 0        * a fearless guard of Khoralator Fort
 R 1 83351 2 83667 100 0 0 0        * a huge boar (being ridden)
-M 0 83347 2 83670 100 0 0 0        * an elite dwarven guard
-M 0 83347 2 83670 100 0 0 0        * an elite dwarven guard
+M 0 83347 4 83670 100 0 0 0        * an elite dwarven guard
+E 1 83394 8 16 100 0 0 0           *   a mithril-bladed battle-axe
+E 1 83394 8 17 100 0 0 0           *   a mithril-bladed battle-axe
+M 0 83347 4 83670 100 0 0 0        * an elite dwarven guard
+E 1 83394 8 16 100 0 0 0           *   a mithril-bladed battle-axe
+E 1 83394 8 17 100 0 0 0           *   a mithril-bladed battle-axe
 M 0 83349 2 83670 100 0 0 0        * a dwarven battlerager
+E 1 83389 4 16 100 0 0 0           *   a mithril-headed morningstar
+E 1 83389 4 17 100 0 0 0           *   a mithril-headed morningstar
 M 0 83349 2 83670 100 0 0 0        * a dwarven battlerager
+E 1 83389 4 16 100 0 0 0           *   a mithril-headed morningstar
+E 1 83389 4 17 100 0 0 0           *   a mithril-headed morningstar
+M 0 83354 1 83672 100 0 0 0        * an officer of Khoralator
+E 1 83142 999 16 100 0 0 0         *   a huge warhammer
+E 1 83142 999 17 100 0 0 0         *   a huge warhammer
+G 1 83386 1 0 100 0 0 0            *    a large mithril key
+F 1 83347 4 83672 100 0 0 0        * an elite dwarven guard (following)
+E 1 83394 8 16 100 0 0 0           *   a mithril-bladed battle-axe
+E 1 83394 8 17 100 0 0 0           *   a mithril-bladed battle-axe
+F 1 83347 4 83672 100 0 0 0        * an elite dwarven guard (following)
+E 1 83394 8 16 100 0 0 0           *   a mithril-bladed battle-axe
+E 1 83394 8 17 100 0 0 0           *   a mithril-bladed battle-axe
 M 0 83350 1 83679 100 0 0 0        * Lord Berhad Khoralator
 M 0 95531 3 83680 65 0 0 0         * (mob type not in this .mob file)
 M 0 95531 3 83680 100 0 0 0        * (mob type not in this .mob file)
@@ -2610,5 +2679,14 @@ G 1 500 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 368 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 53 999 0 100 0 0 0             *    (object type not in this .obj file)
 G 1 377 999 0 100 0 0 0            *    (object type not in this .obj file)
+M 0 83352 1 83701 100 0 0 0        * a shady dwarf merchant
+G 1 83390 999 0 100 0 0 0          *    a potion of iNSaNe STrEnGTh
+G 1 83391 999 0 100 0 0 0          *    a potion of remedying
+G 1 83392 999 0 100 0 0 0          *    a potion of improved vision
+M 0 83353 1 83703 100 0 0 0        * a trained guard dog
+M 0 83356 1 83704 100 0 0 0        * a shady clansdwarf
+G 1 83391 999 0 100 0 0 0          *    a potion of remedying
+G 1 83392 999 0 100 0 0 0          *    a potion of improved vision
+G 1 83401 1 0 100 0 0 0            *    a potion of ultimate protection
 *
 S
