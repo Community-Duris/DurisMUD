@@ -4324,8 +4324,10 @@ void spell_dimension_door(int level, P_char ch, char *arg, int type,
     return;
   }
   
-  distance = (int) (level * 1.25);
-  if( GET_SPEC(ch, CLASS_SORCERER, SPEC_SHADOW) ) distance = (int) (distance * 1.5);
+  distance = MAX(25, level);
+
+  if(GET_SPEC(ch, CLASS_SORCERER, SPEC_SHADOW))
+    distance += 15;
 
   if(!IS_TRUSTED(ch) &&
       (how_close(ch->in_room, victim->in_room, distance) < 0) &&
