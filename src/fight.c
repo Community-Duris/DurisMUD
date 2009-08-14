@@ -2572,12 +2572,15 @@ void kill_gain(P_char ch, P_char victim)
   
   for (gl = ch->group; gl; gl = gl->next)
   {
-    if(IS_PC(gl->ch) && !IS_TRUSTED(gl->ch))
-      group_size++;
+    if(IS_PC(gl->ch) &&
+      !IS_TRUSTED(gl->ch))
+        group_size++;
     
-    if (IS_PC(gl->ch) && !IS_TRUSTED(gl->ch) && (ch->in_room == gl->ch->in_room))
-      if (GET_LEVEL(gl->ch) > highest_level)
-        highest_level = GET_LEVEL(gl->ch);
+    if (IS_PC(gl->ch) &&
+        !IS_TRUSTED(gl->ch) &&
+        (ch->in_room == gl->ch->in_room))
+          if(GET_LEVEL(gl->ch) > highest_level)
+            highest_level = GET_LEVEL(gl->ch);
     
   }  
   
@@ -2593,17 +2596,19 @@ void kill_gain(P_char ch, P_char victim)
 
   for (gl = ch->group; gl; gl = gl->next)
   {
-    if (IS_PC(gl->ch) && !IS_TRUSTED(gl->ch) && (gl->ch->in_room == ch->in_room))
+    if (IS_PC(gl->ch) &&
+        !IS_TRUSTED(gl->ch) &&
+        (gl->ch->in_room == ch->in_room))
     {
       XP = (int) ((GET_LEVEL(gl->ch) * gain) / (highest_level * exp_divider));
 
       /* power leveler stopgap measure */
       if ((GET_LEVEL(gl->ch) + 40) < highest_level)
-        XP /= 100;
+        XP /= 10000;
       else if ((GET_LEVEL(gl->ch) + 30) < highest_level)
-        XP /= 75;
+        XP /= 5000;
       else if ((GET_LEVEL(gl->ch) + 20) < highest_level)
-        XP /= 50;
+        XP /= 1000;
       else if ((GET_LEVEL(gl->ch) + 10) < highest_level)
         XP /= 2;
 

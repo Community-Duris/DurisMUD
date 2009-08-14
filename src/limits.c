@@ -870,7 +870,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 // Non multi-class mobs exp modifiers are below.
     if(!IS_MULTICLASS_NPC(victim))
     {
-      if(GET_LEVEL(victim) < 15)
+      if(GET_LEVEL(victim) <= 20)
       { }
       else if(GET_CLASS(victim, CLASS_WARRIOR))
         XP *= 0.50;
@@ -910,7 +910,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
         XP *= 0.50;
     }
     
-    if(GET_LEVEL(victim) > 15)
+    if(GET_LEVEL(victim) > 20)
     {
       if(IS_ANIMAL(victim) ||
          IS_SLIME(victim))
@@ -926,23 +926,19 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     if(GET_RACE(victim) == RACE_PLICH)
       XP *= 1.15;
       
-    if(GET_RACE(victim) == RACE_GIANT)
-      XP *= 1.50;
-      
-    if(IS_ELEMENTAL(victim))
-      XP *= 1.30;
-    
-    if(IS_UNDEADRACE(victim))
-      XP *= 1.30;      
-      
     if(IS_SET(victim->specials.act, ACT_HUNTER))
-      XP *= 1.25;
+      XP *= 1.15;
       
     if(IS_GREATER_RACE(victim))
-      XP *= 3.00;
-      
-    if(IS_ELITE(victim))
-      XP *= 3.00;
+      XP *= 2.00;
+    else if(IS_ELITE(victim))
+      XP *= 2.00;
+    else if(GET_RACE(victim) == RACE_GIANT)
+      XP *= 1.50;
+    else if(IS_ELEMENTAL(victim))
+      XP *= 1.30;
+    else if(IS_UNDEADRACE(victim))
+      XP *= 1.30;
       
     if(!IS_PC(ch) &&
        !IS_SET(ch->specials.act, ACT_MEMORY))
