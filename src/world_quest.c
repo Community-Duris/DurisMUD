@@ -189,7 +189,7 @@ void quest_reward(P_char ch, P_char quest_mob, int type)
                   if(!reward)
                         reward = create_random_eq_new(ch, ch, -1, -1);
     
-  if(reward){
+    if(reward){
       REMOVE_BIT(reward->extra_flags, ITEM_SECRET);
       SET_BIT(reward->extra_flags, ITEM_NOREPAIR);
       wizlog(56, "%s reward was: %s", GET_NAME(ch), reward->short_description);
@@ -241,7 +241,16 @@ void quest_reward(P_char ch, P_char quest_mob, int type)
   }
 
   sql_world_quest_finished(ch, quest_mob, reward);
-  gain_exp(ch, NULL, (EXP_NOTCH(ch) * number(1,4)), EXP_WORLD_QUEST);
+  
+  if(GET_LEVEL(ch) < 21)
+    gain_exp(ch, NULL, (EXP_NOTCH(ch) * 2), EXP_WORLD_QUEST);
+  else if(GET_LEVEL(ch) < 31)
+    gain_exp(ch, NULL, (EXP_NOTCH(ch)), EXP_WORLD_QUEST);
+  else if(GET_LEVEL(ch) < 41)
+    gain_exp(ch, NULL, ((int)(EXP_NOTCH(ch) * 0.25)), EXP_WORLD_QUEST);
+  else
+    gain_exp(ch, NULL, ((int)(EXP_NOTCH(ch) * 0.05)), EXP_WORLD_QUEST);
+    
   resetQuest(ch);
 }
 
