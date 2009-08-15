@@ -2584,14 +2584,15 @@ void kill_gain(P_char ch, P_char victim)
     
   }  
   
-  exp_divider = MAX(group_size, 1);
+//  exp_divider = MAX(group_size, 1);
+  exp_divider = 1;
 
-  if( ( RACE_GOOD(ch) && get_property("exp.groupLimit.good", 8) &&
-        group_size > get_property("exp.groupLimit.good", 8) ) ||
-      ( RACE_EVIL(ch) && get_property("exp.groupLimit.evil", 3) &&
-        group_size > get_property("exp.groupLimit.evil", 3) ) )
+  if( ( RACE_GOOD(ch) && get_property("exp.groupLimit.good", 10) &&
+        group_size > get_property("exp.groupLimit.good", 10) ) ||
+      ( RACE_EVIL(ch) && get_property("exp.groupLimit.evil", 8) &&
+        group_size > get_property("exp.groupLimit.evil", 8) ) )
   {
-    exp_divider *= 2;
+    exp_divider *= 10;
   }
 
   for (gl = ch->group; gl; gl = gl->next)
