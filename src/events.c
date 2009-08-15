@@ -513,12 +513,10 @@ void event_hit_regen(P_char ch, P_char victim, P_obj obj, void *data)
 {
   float regen_value = *((float*)data);
   int regen_value_int = (int)regen_value;
+
   if (regen_value_int >= 1 || regen_value_int <= -1)
   {
       GET_HIT(ch) += regen_value_int;
-
-      if (GET_HIT(ch) > GET_MAX_HIT(ch))
-          GET_HIT(ch) = GET_MAX_HIT(ch);
 
       if (GET_HIT(ch) < -10)
       {
@@ -537,12 +535,17 @@ void event_hit_regen(P_char ch, P_char victim, P_obj obj, void *data)
 
   update_pos(ch);
   int per_tick = hit_regen(ch);
-  if ((per_tick == 0) ||
-      (GET_HIT(ch) == GET_MAX_HIT(ch) && per_tick > 0))
+  healCondition(ch, per_tick); // no idea if it really needed, disabled by NEW_COMBAT  -Odorf
+
+  if (GET_HIT(ch) > GET_MAX_HIT(ch) && per_tick > 0)
+  {
+      GET_HIT(ch) = GET_MAX_HIT(ch);
+      return;
+  }
+  if (per_tick == 0)
   {
     return;
   }
-  healCondition(ch, per_tick); // no idea if it really needed, disabled by NEW_COMBAT  -Odorf
 
   regen_value += (float)per_tick / (float)PULSES_IN_TICK;
   add_event(event_hit_regen, 1, ch, 0, 0, 0, &regen_value, sizeof(regen_value));
