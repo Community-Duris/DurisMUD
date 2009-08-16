@@ -24,7 +24,7 @@ while [ $RESULT != 0 ]; do
   fi
 
   echo "Generating list of function names.."
-  nm --demangle dms | grep " T " | sed -e 's/[(].*[)]//g' > lib/event_names
+  nm --demangle dms | grep " T " | sed -e 's/[(].*[)]//g' > lib/misc/event_names
 
 	if [ -f /usr/local/bin/sendEmail ]; then
 		/usr/local/bin/sendEmail -t torgal@durismud.com \
