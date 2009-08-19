@@ -111,24 +111,24 @@ P 1 93302 72 93301 100 0 0 0       *   a narm
 P 1 93302 72 93301 100 0 0 0       *   a narm
 P 1 93302 72 93301 100 0 0 0       *   a narm
 P 1 93302 72 93301 100 0 0 0       *   a narm
-O 0 93307 1 93363 100 0 0 0        * Some over tangled vines
-O 0 93308 1 93365 100 0 0 0        * Some overtangled vines
+O 0 93307 1 93363 100 0 0 0        * Some overtangled vines
+O 0 93308 1 93365 100 0 0 0        * Some over tangled vines
 O 0 93325 1 93366 100 0 0 0        * a freshwater pond
 O 0 93309 1 93370 100 0 0 0        * a vine entangled rock
 O 0 93316 1 93370 100 0 0 0        * under a tangle of vines
 P 1 93317 1 93316 100 0 0 0        *   a crooked old staff
-O 0 93306 1 93375 100 0 0 0        * Some overtangled vines
-O 0 93305 1 93377 100 0 0 0        * Some overtangled vines
+O 0 93306 1 93375 100 0 0 0        * Some over tangled vines
+O 0 93305 1 93377 100 0 0 0        * Some over tangled vines
 O 0 93304 1 93386 100 0 0 0        * a freshwater spring
 O 0 93315 1 93398 100 0 0 0        * Naergot's treasure horde
 *
 M 0 93304 1 93317 100 0 0 0        * Haornig Mardigan
 G 1 93321 1 0 100 0 0 0            *    a coonskin cap
-G 1 93322 1 0 100 0 0 0            *    a pair of ermine-skin boots
-G 1 93318 1 0 100 0 0 0            *    a drow-skin backpack
+G 1 93322 1 0 100 0 0 0            *    a pair of ermineskin boots
+G 1 93318 1 0 100 0 0 0            *    a drowskin backpack
 P 1 93312 1 93318 100 0 0 0        *   the horn of Gilandrimeel
-G 1 93319 2 0 100 0 0 0            *    a ebony-bladed gladius
-G 1 93319 2 0 100 0 0 0            *    a ebony-bladed gladius
+G 1 93319 2 0 100 0 0 0            *    a ebon-bladed gladius
+G 1 93319 2 0 100 0 0 0            *    a ebon-bladed gladius
 F 1 93305 1 93317 100 0 0 0        * a jet black wolf (following)
 M 0 93312 1 93321 100 0 0 0        * a nomadic centaur
 F 1 93316 2 93321 100 0 0 0        * an adolescent centaur (following)
@@ -169,7 +169,7 @@ M 0 93320 7 93362 100 0 0 0        * a sylvan centaur
 M 0 93307 7 93363 100 0 0 0        * a treant guardian
 M 0 93318 12 93364 100 0 0 0       * an ermine
 M 0 93320 7 93364 100 0 0 0        * a sylvan centaur
-M 0 93319 5 93365 100 0 0 0        * a raccoon
+M 0 93319 5 93365 100 0 0 0        * a racoon
 M 0 93302 1 93366 100 0 0 0        * Rrmzlbbrintkmmbor, the treant elder
 G 1 93313 2 0 100 0 0 0            *    a half amulet
 F 1 93303 4 93366 100 0 0 0        * a treant guardian (following)
@@ -182,19 +182,19 @@ M 0 93306 3 93370 100 0 0 0        * a treant guardian
 M 0 93306 3 93372 100 0 0 0        * a treant guardian
 M 0 93318 12 93373 100 0 0 0       * an ermine
 M 0 93318 12 93373 100 0 0 0       * an ermine
-M 0 93319 5 93375 100 0 0 0        * a raccoon
+M 0 93319 5 93375 100 0 0 0        * a racoon
 M 0 93306 3 93376 100 0 0 0        * a treant guardian
 M 0 93318 12 93377 100 0 0 0       * an ermine
 M 0 93320 7 93377 100 0 0 0        * a sylvan centaur
 G 1 93328 3 0 100 0 0 0            *    a silver-bladed partisan
-M 0 93319 5 93379 100 0 0 0        * a raccoon
+M 0 93319 5 93379 100 0 0 0        * a racoon
 M 0 93323 4 93379 100 0 0 0        * an adolescent centaur
 M 0 93318 12 93380 100 0 0 0       * an ermine
 M 0 93321 4 93380 100 0 0 0        * a sylvan centaur
 M 0 93307 7 93381 100 0 0 0        * a treant guardian
 M 0 93322 1 93381 100 0 0 0        * an adolescent centaur
 G 1 93327 2 0 100 0 0 0            *    a polished oak ring
-M 0 93319 5 93382 100 0 0 0        * a raccoon
+M 0 93319 5 93382 100 0 0 0        * a racoon
 M 0 93321 4 93382 100 0 0 0        * a sylvan centaur
 M 0 93323 4 93383 100 0 0 0        * an adolescent centaur
 M 0 93318 12 93384 100 0 0 0       * an ermine
@@ -213,7 +213,7 @@ M 0 93320 7 93391 100 0 0 0        * a sylvan centaur
 G 1 93328 3 0 100 0 0 0            *    a silver-bladed partisan
 M 0 93307 7 93392 100 0 0 0        * a treant guardian
 M 0 93318 12 93392 100 0 0 0       * an ermine
-M 0 93319 5 93393 100 0 0 0        * a raccoon
+M 0 93319 5 93393 100 0 0 0        * a racoon
 M 0 93320 7 93393 100 0 0 0        * a sylvan centaur
 M 0 93321 4 93394 100 0 0 0        * a sylvan centaur
 M 0 93307 7 93395 100 0 0 0        * a treant guardian
