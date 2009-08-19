@@ -13971,11 +13971,15 @@ S
 &+yrocky embankment further down to the south.  These long wooden docks
 &+yare supported by huge posts of thick moorwood.
 ~
-831 0 1
+831 1048576 1
 D1
 ~
 ~
 0 0 83776
+D2
+~
+~
+0 0 83802
 D3
 ~
 ~
@@ -13991,11 +13995,15 @@ S
 &+yrocky embankment further down to the south.  These long wooden docks
 &+yare supported by huge posts of thick moorwood.
 ~
-831 0 1
+831 1048576 1
 D1
 ~
 ~
 0 0 83784
+D2
+~
+~
+0 0 83803
 D3
 ~
 ~
@@ -14011,11 +14019,19 @@ S
 &+yrocky embankment further down to the south.  These long wooden docks
 &+yare supported by huge posts of thick moorwood.
 ~
-831 0 1
+831 1048576 1
 D1
 ~
 ~
 0 0 83785
+D2
+~
+~
+0 0 83804
+D3
+~
+~
+0 0 83805
 S
 #83787
 &+yA Long Pier of &n&+WDeramuth Port&N~
@@ -14027,7 +14043,11 @@ S
 &+yrocky embankment further down to the south.  These long wooden docks
 &+yare supported by huge posts of thick moorwood.
 ~
-831 0 1
+831 1048576 1
+D0
+~
+~
+0 0 83802
 D1
 ~
 ~
@@ -14047,7 +14067,11 @@ S
 &+yrocky embankment further down to the south.  These long wooden docks
 &+yare supported by huge posts of thick moorwood.
 ~
-831 0 1
+831 1048576 1
+D0
+~
+~
+0 0 83803
 D1
 ~
 ~
@@ -14067,11 +14091,19 @@ S
 &+yrocky embankment further down to the south.  These long wooden docks
 &+yare supported by huge posts of thick moorwood.
 ~
-831 0 1
+831 1048576 1
+D0
+~
+~
+0 0 83804
 D1
 ~
 ~
 0 0 83788
+D3
+~
+~
+0 0 83807
 S
 #83790
 &+mA Small Shop&N~
@@ -14289,4 +14321,204 @@ D0
 ~
 door~
 1 0 83800
+S
+#83802
+&+BDeramuth Bay&N~
+   &+BThis small bay inlets from the ocean to the west into the
+&+BDeramuth bay, named after the Port which was also named after
+&+Bits dwarven ruler.  The ocean water is fresh and clear.
+~
+831 33554432 12
+D0
+~
+~
+0 0 83784
+D2
+~
+~
+0 0 83787
+D3
+~
+~
+0 0 83803
+S
+#83803
+&+BDeramuth Bay&N~
+   &+BThis small bay inlets from the ocean to the west into the
+&+BDeramuth bay, named after the Port which was also named after
+&+Bits dwarven ruler.  The ocean water is fresh and clear.
+~
+831 33554432 12
+D0
+~
+~
+0 0 83785
+D1
+~
+~
+0 0 83802
+D2
+~
+~
+0 0 83788
+D3
+~
+~
+0 0 83804
+S
+#83804
+&+BDeramuth Bay&N~
+   &+BThis small bay inlets from the ocean to the west into the
+&+BDeramuth bay, named after the Port which was also named after
+&+Bits dwarven ruler.  The ocean water is fresh and clear.
+~
+831 33554432 12
+D0
+~
+~
+0 0 83786
+D1
+~
+~
+0 0 83803
+D2
+~
+~
+0 0 83789
+D3
+~
+~
+0 0 83806
+S
+#83805
+&+BDeramuth Bay&N~
+   &+BThis small bay inlets from the ocean to the west into the
+&+BDeramuth bay, named after the Port which was also named after
+&+Bits dwarven ruler.  The ocean water is fresh and clear.
+~
+831 33554432 12
+D1
+~
+~
+0 0 83786
+D2
+~
+~
+0 0 83806
+D3
+~
+~
+0 0 83808
+S
+#83806
+&+BDeramuth Bay&N~
+   &+BThis small bay inlets from the ocean to the west into the
+&+BDeramuth bay, named after the Port which was also named after
+&+Bits dwarven ruler.  The ocean water is fresh and clear.
+~
+831 33554432 12
+D0
+~
+~
+0 0 83805
+D1
+~
+~
+0 0 83804
+D2
+~
+~
+0 0 83807
+D3
+~
+~
+0 0 83809
+S
+#83807
+&+BDeramuth Bay&N~
+   &+BThis small bay inlets from the ocean to the west into the
+&+BDeramuth bay, named after the Port which was also named after
+&+Bits dwarven ruler.  The ocean water is fresh and clear.
+~
+831 33554432 12
+D0
+~
+~
+0 0 83806
+D1
+~
+~
+0 0 83789
+D3
+~
+~
+0 0 83810
+S
+#83808
+&+BDeramuth Bay&N~
+   &+BThis small bay inlets from the ocean to the west into the
+&+BDeramuth bay, named after the Port which was also named after
+&+Bits dwarven ruler.  The ocean water is fresh and clear.
+~
+831 33554432 12
+D1
+~
+~
+0 0 83805
+D2
+~
+~
+0 0 83809
+S
+#83809
+&+BDeramuth Bay&N~
+   &+BThis small bay inlets from the ocean to the west into the
+&+BDeramuth bay, named after the Port which was also named after
+&+Bits dwarven ruler.  The ocean water is fresh and clear.
+~
+831 33554432 12
+D0
+~
+~
+0 0 83808
+D1
+~
+~
+0 0 83806
+D2
+~
+~
+0 0 83810
+D3
+~
+~
+0 0 83811
+S
+#83810
+&+BDeramuth Bay&N~
+   &+BThis small bay inlets from the ocean to the west into the
+&+BDeramuth bay, named after the Port which was also named after
+&+Bits dwarven ruler.  The ocean water is fresh and clear.
+~
+831 33554432 12
+D0
+~
+~
+0 0 83809
+D1
+~
+~
+0 0 83807
+S
+#83811
+&+BA Waterway Into Deramuth Bay~
+   &+BThis small bay inlets from the ocean to the west into the
+&+BDeramuth bay, named after the Port which was also named after
+&+Bits dwarven ruler.  The ocean water is fresh and clear.
+~
+831 33554432 12
+D1
+~
+~
+0 0 83809
 S

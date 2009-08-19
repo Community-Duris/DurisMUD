@@ -4272,3 +4272,18 @@ pb 0 16385 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#83370
+tohr kreen tohr-kreen patron~
+&+La &+Btohr&N&+y-kreen &+gpatron&N~
+&+LA large &+Btohr&N&+y-kreen &+gpatron &Neyes his surroundings warrily.
+~
+&+LThis noble &+Btohr&N-&+gkreen&+L, which is a larger cousin of
+&+Lthe more common &+Gthri&N&+g-kreen&+L, is dressed in strange
+&+Lwraps.  This large, bipedal insect chitters quickly and
+&+Lcommunicates mostly with quick gestures.
+~
+2250 0 0 0 0 0 0 10 S
+tk 0 1 4
+49 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

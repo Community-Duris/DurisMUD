@@ -1,6 +1,6 @@
 #831
 &+CAlatorin &+L- the &N&+rForge &+LCity~
-83801 2 0 40 50 1
+83811 2 0 40 50 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -2857,12 +2857,18 @@ M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
 M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
 M 0 43137 7 83752 100 0 0 0        * (mob type not in this .mob file)
 M 0 43152 1 83752 100 0 0 0        * (mob type not in this .mob file)
-M 0 83358 1 83755 100 0 0 0        * a Deramuth guard
-E 1 83403 1 16 100 0 0 0           *   a wooden spear with a tied off red flag
+M 0 83358 4 83753 100 0 0 0        * a Deramuth guard
+E 1 83403 4 16 100 0 0 0           *   a wooden spear with a tied off red flag
+M 0 83358 4 83755 100 0 0 0        * a Deramuth guard
+E 1 83403 4 16 100 0 0 0           *   a wooden spear with a tied off red flag
 M 0 43132 1 83756 100 0 0 0        * (mob type not in this .mob file)
 M 0 43137 7 83757 100 0 0 0        * (mob type not in this .mob file)
+M 0 83358 4 83758 100 0 0 0        * a Deramuth guard
+E 1 83403 4 16 100 0 0 0           *   a wooden spear with a tied off red flag
 M 0 83360 3 83760 100 0 0 0        * a Deramuth mercenary
 M 0 83360 3 83760 100 0 0 0        * a Deramuth mercenary
+M 0 83370 1 83760 100 0 0 0        * a tohr-kreen patron
+G 1 94730 1 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83367 1 83764 100 0 0 0        * a cheerful dwarven receptionist
 M 0 43123 2 83768 60 0 0 0         * (mob type not in this .mob file)
 M 0 43124 2 83768 60 0 0 0         * (mob type not in this .mob file)
@@ -2880,6 +2886,8 @@ M 0 43123 2 83771 90 0 0 0         * (mob type not in this .mob file)
 M 0 43124 2 83771 90 0 0 0         * (mob type not in this .mob file)
 M 0 43149 2 83771 60 0 0 0         * (mob type not in this .mob file)
 M 0 43150 2 83771 60 0 0 0         * (mob type not in this .mob file)
+M 0 83358 4 83778 100 0 0 0        * a Deramuth guard
+E 1 83403 4 16 100 0 0 0           *   a wooden spear with a tied off red flag
 M 0 83361 7 83782 100 0 0 0        * a halfling dock hand
 M 0 43137 7 83782 100 0 0 0        * (mob type not in this .mob file)
 M 0 83361 7 83786 100 0 0 0        * a halfling dock hand
