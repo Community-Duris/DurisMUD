@@ -841,7 +841,7 @@ P_obj create_random_eq_new(P_char killer, P_char mob, int object_type,
     {
       obj = setsuffix_obj_new(obj);
       int sufcount = 0; // to ensure that we don't infinite loop if difficulty isn't set
-      while (number(0, zone->difficulty) && sufcount < 2)  // zone difficulty generally 1, harder zones might be 2
+      while (!number(0, zone->difficulty) && sufcount < 2)  // zone difficulty generally 1, harder zones might be 2
       {
         obj = setsuffix_obj_new(obj);
         sufcount++; 
