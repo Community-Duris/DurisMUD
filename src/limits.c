@@ -176,6 +176,9 @@ int mana_regen(P_char ch)
     break;
   }
 
+  if (IS_AFFECTED(ch, AFF_MEDITATE))
+    gain += 5 + GET_CHAR_SKILL(ch, SKILL_MEDITATE);
+
   if (USES_MANA(ch))
   {
     if (GET_CHAR_SKILL(ch, SKILL_ADVANCED_MEDITATION) >= 90)
@@ -188,8 +191,6 @@ int mana_regen(P_char ch)
     }
   }
 
-  if (IS_AFFECTED(ch, AFF_MEDITATE))
-    gain += 5 + GET_CHAR_SKILL(ch, SKILL_MEDITATE);
 
   gain += ch->points.mana_reg;
 
