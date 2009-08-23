@@ -1125,7 +1125,9 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch)) && !IS_ANIMAL(ch))
 #define IS_IMMOBILE(ch) (IS_AFFECTED2(ch, AFF2_MAJOR_PARALYSIS) || \
        IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS) || \
        IS_AFFECTED(ch, AFF_KNOCKED_OUT) || \
-       IS_AFFECTED(ch, AFF_BOUND))
+       IS_AFFECTED(ch, AFF_BOUND) || \
+       affected_by_spell(ch, SONG_SLEEP) || \
+       affected_by_spell(ch, SPELL_SLEEP))
 
 // Meeting the following define grants hitpoints.spellcaster.maxConBonus.
 #define IS_MAX_CON_BONUS_CLASS(ch) (GET_CLASS(ch, CLASS_ETHERMANCER | CLASS_DRUID | CLASS_CLERIC | CLASS_SORCERER | CLASS_NECROMANCER | CLASS_SHAMAN | CLASS_PSIONICIST | CLASS_ILLUSIONIST | CLASS_CONJURER | CLASS_BARD))

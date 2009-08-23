@@ -9194,9 +9194,9 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
   }
 
 
-  if(!CAN_ACT(ch) || IS_AFFECTED2(ch, AFF2_MAJOR_PARALYSIS) ||
-      IS_CASTING(ch) || IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS) ||
-      affected_by_spell(ch, SONG_SLEEP) || affected_by_spell(ch, SPELL_SLEEP))
+  if(!CAN_ACT(ch) ||
+     IS_IMMOBILE(ch) ||
+     IS_CASTING(ch))
   {
     /*
      * Okay.. if anything falls in here, they can't move right now, but
@@ -9316,21 +9316,9 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
   if((GET_VITALITY(ch) <= (GET_MAX_VITALITY(ch) / 4)) &&       /*IS_CLERIC(ch) && */
       !IS_SET(world[cur_room].room_flags, (NO_MAGIC | ROOM_SILENT)))
   {
-    if(npc_has_spell_slot(ch, SPELL_VIGORIZE_CRITIC))
+    if(npc_has_spell_slot(ch, SPELL_INVIGORATE))
     {
       MobCastSpell(ch, ch, 0, SPELL_VIGORIZE_CRITIC, GET_LEVEL(ch));
-      add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, data, sizeof(hunt_data));
-      return;
-    }
-    else if(npc_has_spell_slot(ch, SPELL_VIGORIZE_SERIOUS))
-    {
-      MobCastSpell(ch, ch, 0, SPELL_VIGORIZE_SERIOUS, GET_LEVEL(ch));
-      add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, data, sizeof(hunt_data));
-      return;
-    }
-    else if(npc_has_spell_slot(ch, SPELL_VIGORIZE_LIGHT))
-    {
-      MobCastSpell(ch, ch, 0, SPELL_VIGORIZE_LIGHT, GET_LEVEL(ch));
       add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, data, sizeof(hunt_data));
       return;
     }
@@ -9453,13 +9441,14 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
    * (which will keep them from looping in un forseen circumstances)
    */
 
+// Do not want mage mobs dimming into a trap such as a no magic room.
   if((cur_room != targ_room) &&
      (dummy > 5) &&
      number(0, 10))
     if((IS_MAGE(ch) ||
        GET_CLASS(ch, CLASS_SHAMAN)) &&
        !IS_SET(world[cur_room].room_flags, (NO_TELEPORT | NO_MAGIC | ROOM_SILENT)) &&
-       !IS_SET(world[targ_room].room_flags, NO_TELEPORT))
+       !IS_SET(world[targ_room].room_flags, (NO_TELEPORT | NO_MAGIC | ROOM_SILENT)))
     {
 
       /*
@@ -9468,31 +9457,38 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
        */
       if(!vict)
         for (vict = world[targ_room].people; vict; vict = vict->next_in_room)
-          if(!IS_TRUSTED(vict) && IS_PC(vict))
-            break;
+          if(!IS_TRUSTED(vict) &&
+             IS_PC(vict) &&
+             number(0, 4))
+                break;
 
-      if(vict)
+      if(vict &&
+         world[cur_room].zone == world[vict->in_room].zone)
       {
-        if(world[cur_room].zone == world[vict->in_room].zone &&
-           npc_has_spell_slot(ch, SPELL_DIMENSION_DOOR))
+        if(npc_has_spell_slot(ch, SPELL_DIMENSION_DOOR))
         {
           MobCastSpell(ch, vict, 0, SPELL_DIMENSION_DOOR, GET_LEVEL(ch));
           add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0,
             data, sizeof(hunt_data));
           return;
         }
-        else if(world[cur_room].zone != world[vict->in_room].zone &&
-                npc_has_spell_slot(ch, SPELL_SPIRIT_JUMP))
+        else if(npc_has_spell_slot(ch, SPELL_SPIRIT_JUMP))
         {
           MobCastSpell(ch, vict, 0, SPELL_SPIRIT_JUMP, GET_LEVEL(ch));
           add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0,
             data, sizeof(hunt_data));
           return;
         }
-        else if(world[cur_room].zone != world[vict->in_room].zone
-                 && npc_has_spell_slot(ch, SPELL_RELOCATE))
+        else if(npc_has_spell_slot(ch, SPELL_RELOCATE))
         {
           MobCastSpell(ch, vict, 0, SPELL_RELOCATE, GET_LEVEL(ch));
+          add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0,
+            data, sizeof(hunt_data));
+          return;
+        }
+        else if(npc_has_spell_slot(ch, SPELL_SHADOW_TRAVEL))
+        {
+          MobCastSpell(ch, vict, 0, SPELL_SHADOW_TRAVEL, GET_LEVEL(ch));
           add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0,
             data, sizeof(hunt_data));
           return;
@@ -9546,7 +9542,9 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
      !IS_AFFECTED2(ch, AFF2_PASSDOOR))
   {
     /* animals don't open doors! */
-    if(!CAN_SPEAK(ch))
+// but greater races can figure out how to open a door.
+    if(!CAN_SPEAK(ch) &&
+       !IS_GREATER_RACE(ch))
     {
       justice_hunt_cancel(ch);
       return;
@@ -9563,27 +9561,6 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
     add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, data, sizeof(hunt_data));
     return;
   }
-
-  // Why duplicate the above written code? Apr09 -Lucrot
-  // if(IS_SET(world[(cur_room)].dir_option[(int) next_step]->exit_info,
-             // EX_CLOSED))
-  // {
-    // /* animals don't open doors! */
-    // if(!CAN_SPEAK(ch))
-    // {
-      // justice_hunt_cancel(ch);
-      // return;
-    // }
-    // /*
-     // * okay.. closed door in the way.. just open it :)
-     // */
-    // sprintf(buf, "%s %s", EXIT(ch, (int) next_step)->keyword ?
-            // FirstWord(EXIT(ch, (int) next_step)->keyword) : "door",
-            // dirs[(int) next_step]);
-    // do_open(ch, buf, 0);
-    // add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, data, sizeof(hunt_data));
-    // return;
-  // }
   
   if(IS_WALLED(cur_room, next_step))
   {
