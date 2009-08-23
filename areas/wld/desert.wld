@@ -515,11 +515,15 @@ S
 &+yThe beams upon below the deck, upholding it are cleaned on a regular basis to
 &+yensure slime and algae to not plague it.
 ~
-490 0 1
+490 1048576 1
 D1
 ~
 ~
 0 0 49088
+D2
+~
+~
+0 0 49497
 D3
 ~
 ~
@@ -536,11 +540,19 @@ S
 &+yproblems docking, since it's the lowest of the three. Passengers often times
 &+yget there feet wet, even though they try very hard not to.
 ~
-490 0 1
+490 1048576 1
+D0
+~
+~
+0 0 49497
 D1
 ~
 ~
 0 0 49089
+D2
+~
+~
+0 0 49383
 D3
 ~
 ~
@@ -557,7 +569,11 @@ S
 &+yIt seems as though a good storm could bring these docks splashing down into
 &+ythe sea, for the lumber is very rotted.
 ~
-490 0 1
+490 1048576 1
+D0
+~
+~
+0 0 49383
 D1
 ~
 ~
@@ -2178,7 +2194,7 @@ Along the&+b Beach~
 D0
 ~
 ~
-0 0 49086
+0 0 49485
 D1
 ~
 ~
@@ -2211,7 +2227,7 @@ D1
 D2
 ~
 ~
-0 0 49085
+0 0 49485
 D3
 ~
 door~
@@ -2253,7 +2269,15 @@ S
 &+yThe beams upon below the deck, upholding it are cleaned on a regular basis to
 &+yensure slime and algae to not plague it.
 ~
-490 0 1
+490 1048576 1
+D1
+~
+~
+0 0 49511
+D2
+~
+~
+0 0 49505
 D3
 ~
 ~
@@ -2270,7 +2294,19 @@ S
 &+yproblems docking, since it's the lowest of the three. Passengers often times
 &+yget there feet wet, even though they try very hard not to.
 ~
-490 0 1
+490 1048576 1
+D0
+~
+~
+0 0 49505
+D1
+~
+~
+0 0 49431
+D2
+~
+~
+0 0 49429
 D3
 ~
 ~
@@ -2287,7 +2323,15 @@ S
 &+yIt seems as though a good storm could bring these docks splashing down into
 &+ythe sea, for the lumber is very rotted.
 ~
-490 0 1
+490 1048576 1
+D0
+~
+~
+0 0 49429
+D1
+~
+~
+0 0 49465
 D3
 ~
 ~
@@ -9684,6 +9728,26 @@ D2
 ~
 0 0 49026
 S
+#49383
+&+BThe Bay of Venan'Trut&N~
+   &+BThis huge, watery bay has a beach descent below a massive framework of
+&+Bwooden docks.  This inlet is contained by roped-off buoeys located around
+&+Bthe shipyard, opening to the ocean eastward.
+~
+490 0 12
+D0
+~
+~
+0 0 49021
+D1
+~
+~
+0 0 49429
+D2
+~
+~
+0 0 49022
+S
 #49384
 &+yA Winding Dune Encampment~
    For most of the people who live here, life is wretched. If there's one thing
@@ -10896,6 +10960,30 @@ D3
 ~
 0 0 49427
 S
+#49429
+&+BThe Bay of Venan'Trut&N~
+   &+BThis huge, watery bay has a beach descent below a massive framework of
+&+Bwooden docks.  This inlet is contained by roped-off buoeys located around
+&+Bthe shipyard, opening to the ocean eastward.
+~
+490 0 12
+D0
+~
+~
+0 0 49089
+D1
+~
+~
+0 0 49432
+D2
+~
+~
+0 0 49090
+D3
+~
+~
+0 0 49383
+S
 #49430
 &+yTent &nof the &+rButcher~
    Rats can be heard over the occasional hacking of the butcher. Parnn is the
@@ -10921,6 +11009,50 @@ D3
 ~
 ~
 0 0 49415
+S
+#49431
+&+BThe Bay of Venan'Trut&N~
+   &+BThis huge, watery bay has a beach descent below a massive framework of
+&+Bwooden docks.  This inlet is contained by roped-off buoeys located around
+&+Bthe shipyard, opening to the ocean eastward.
+~
+490 0 12
+D0
+~
+~
+0 0 49509
+D1
+~
+~
+0 0 545021
+D2
+~
+~
+0 0 49432
+D3
+~
+~
+0 0 49089
+S
+#49432
+&+BThe Bay of Venan'Trut&N~
+   &+BThis huge, watery bay has a beach descent below a massive framework of
+&+Bwooden docks.  This inlet is contained by roped-off buoeys located around
+&+Bthe shipyard, opening to the ocean eastward.
+~
+490 0 12
+D0
+~
+~
+0 0 49431
+D2
+~
+~
+0 0 49465
+D3
+~
+~
+0 0 49429
 S
 #49433
 &+MThe Room of Pleasure~
@@ -11681,6 +11813,22 @@ D2
 ~
 0 0 49474
 S
+#49465
+&+BThe Bay of Venan'Trut&N~
+   &+BThis huge, watery bay has a beach descent below a massive framework of
+&+Bwooden docks.  This inlet is contained by roped-off buoeys located around
+&+Bthe shipyard, opening to the ocean eastward.
+~
+490 0 12
+D0
+~
+~
+0 0 49432
+D3
+~
+~
+0 0 49090
+S
 #49466
 &+LA Huge Cavern filled with &+GPho&+gspho&+Gric &+LAcid~
 &+L   This cavern circles around a large pool of phosphoric acid. There would be
@@ -12167,6 +12315,31 @@ D2
 ~
 0 0 49494
 S
+#49485
+Along the&+b Beach~
+&+b   Large gray blocks of stone make up this road, that runs along Lake
+&+bAlester's western shore. Used as the main travel route between &+YVenan &+YTrut's&n
+&+bthree docking areas, this road is almost always packed to capacity. Sailors
+&+band merchants alike push along the wide road, making their way to or from one
+&+bof the countless ships that are moored nearby. Massive buildings line this
+&+broad, from warehouses to filthy ale rooms. Most are in a poor condition,
+&+bhaving long since succumbed to graffiti and corrosion. Those owned by powerful
+&+bmerchants appear to be well cared for however, still clean and guarded around
+&+bthe clock by armed mercenaries. It would be unwise to enter these docks, simply
+&+bbecause they've been given orders to chase off anyone who is foolish enough to
+&+bapproach. These mercenaries could care less if they're forced to kill, all
+&+bthat matters to them is getting paid, and they'll do anything have that happen.
+~
+490 0 1
+D0
+~
+~
+0 0 49086
+D2
+~
+~
+0 0 49085
+S
 #49486
 &+LA Huge Cavern filled with &+GPho&+gspho&+Gric &+LAcid~
 &+L   This cavern circles around a large pool of phosphoric acid. There would be
@@ -12433,6 +12606,26 @@ D3
 ~
 0 0 49495
 S
+#49497
+&+BThe Bay of Venan'Trut&N~
+   &+BThis huge, watery bay has a beach descent below a massive framework of
+&+Bwooden docks.  This inlet is contained by roped-off buoeys located around
+&+Bthe shipyard, opening to the ocean eastward.
+~
+490 0 12
+D0
+~
+~
+0 0 49020
+D1
+~
+~
+0 0 49505
+D2
+~
+~
+0 0 49021
+S
 #49498
 &+LA Huge Cavern filled with &+GPho&+gspho&+Gric &+LAcid~
 &+L   This cavern circles around a large pool of phosphoric acid. There would be
@@ -12579,6 +12772,30 @@ D0
 ~
 0 0 49494
 S
+#49505
+&+BThe Bay of Venan'Trut&N~
+   &+BThis huge, watery bay has a beach descent below a massive framework of
+&+Bwooden docks.  This inlet is contained by roped-off buoeys located around
+&+Bthe shipyard, opening to the ocean eastward.
+~
+490 0 12
+D0
+~
+~
+0 0 49088
+D1
+~
+~
+0 0 49509
+D2
+~
+~
+0 0 49089
+D3
+~
+~
+0 0 49497
+S
 #49506
 &+LA Huge Cavern filled with &+GPho&+gspho&+Gric &+LAcid~
 &+L   This cavern circles around a large pool of phosphoric acid. There would be
@@ -12650,6 +12867,26 @@ D3
 ~
 0 0 49507
 S
+#49509
+&+BThe Bay of Venan'Trut&N~
+   &+BThis huge, watery bay has a beach descent below a massive framework of
+&+Bwooden docks.  This inlet is contained by roped-off buoeys located around
+&+Bthe shipyard, opening to the ocean eastward.
+~
+490 0 12
+D0
+~
+~
+0 0 49511
+D2
+~
+~
+0 0 49431
+D3
+~
+~
+0 0 49505
+S
 #49510
 &+LA Huge Cavern filled with &+GPho&+gspho&+Gric &+LAcid~
 &+L   This cavern circles around a large pool of phosphoric acid. There would be
@@ -12666,6 +12903,22 @@ D2
 ~
 ~
 0 0 49520
+S
+#49511
+&+BThe Bay of Venan'Trut&N~
+   &+BThis huge, watery bay has a beach descent below a massive framework of
+&+Bwooden docks.  This inlet is contained by roped-off buoeys located around
+&+Bthe shipyard, opening to the ocean eastward.
+~
+490 0 12
+D2
+~
+~
+0 0 49509
+D3
+~
+~
+0 0 49088
 S
 #49513
 &+LA Huge Cavern filled with &+GPho&+gspho&+Gric &+LAcid~
