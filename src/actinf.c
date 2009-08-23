@@ -4406,7 +4406,7 @@ void do_score(P_char ch, char *argument, int cmd)
 
       if (afp = get_spell_from_char(ch, TAG_EPIC_ERRAND)) {
         if (afp->modifier == -10)
-          sprintf(buf, "&nEpic points: &+W%d&n  Skill points: &+W%d&n  Current task: &+rspill enemy blood&n\n",
+          sprintf(buf, "&n&+YEpic points:&n &+W%d&n  &+YSkill points:&n &+W%d&n  Current task: &+rspill enemy blood&n\n",
               ch->only.pc->epics, ch->only.pc->epic_skill_points);
         else if (afp->modifier >= 0)
           sprintf(buf, "&nEpic points: &+W%d&n  Skill points: &+W%d&n  Current task: find runestone of %s\n",
@@ -4437,15 +4437,11 @@ void do_score(P_char ch, char *argument, int cmd)
       send_to_char(buf, ch);
     }
   }
-  send_to_char("Frags:   ", ch);
-  if (ch->only.pc->frags > 0)
-    send_to_char("&+W", ch);
-  else if (ch->only.pc->frags < 0)
-    send_to_char("&+L", ch);
+  send_to_char("&+RFrags:&n   ", ch);
 
   fragnum = (float) ch->only.pc->frags;
   fragnum /= 100;
-  sprintf(buf, "%+.2f   &nDeaths:   %d\n", fragnum, ch->only.pc->numb_deaths);
+  sprintf(buf, "%+.2f   &n&+LDeaths:&n   %d\n", fragnum, ch->only.pc->numb_deaths);
   send_to_char(buf, ch);
 
   if(ch->linking)
@@ -4645,6 +4641,12 @@ void do_score(P_char ch, char *argument, int cmd)
     send_to_char(buf, ch);
     send_to_char("\n", ch);
   }
+  
+  buf[0] = 0;
+  int RemainingBartenderQuests = sql_world_quest_can_do_another(ch);
+
+  sprintf(buf, "&+yBartender Quests Remaining:&n %d\n", RemainingBartenderQuests);
+  send_to_char(buf, ch);
   
   buf[0] = 0;
 
@@ -4860,7 +4862,7 @@ void do_score(P_char ch, char *argument, int cmd)
     if(*buf &&
        !affected_by_spell(ch, SPELL_FEEBLEMIND))
     {
-      send_to_char("\nActive Spells:\n--------------\n", ch);
+      send_to_char("\n&+cActive Spells:&n\n--------------\n", ch);
 
       send_to_char(buf, ch);
     }
