@@ -685,7 +685,7 @@ void shopping_sell(char *arg, P_char ch, P_char keeper, int shop_nr)
   if(sale &&
      sale >= get_property("stats.sell.log", 50000))
       statuslog(ch->player.level,
-        "&+LSALE:&n (%s) just sold [%d] (%s) for (%s)!",
+        "&+LSALE:&n (%s&n) just sold [%d] (%s&n) for (%s&n)!",
           GET_NAME(ch), GET_OBJ_VNUM(temp1), temp1->short_description, coin_stringv(sale));
   
   ADD_MONEY(ch, sale);
