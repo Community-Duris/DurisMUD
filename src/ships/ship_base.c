@@ -25,6 +25,7 @@ Updated with warships. Nov08 -Lucrot
 #include "map.h"
 #include "epic.h"
 #include "nexus_stones.h"
+#include "limits.h"
 
 int read_newship();
 int write_newship(P_ship ship);
