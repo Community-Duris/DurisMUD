@@ -671,7 +671,7 @@ void chant_calm(P_char ch, char *argument, int cmd)
 
 void chant_heroism(P_char ch, char *argument, int cmd)
 {
-  struct affected_type af1, af2, af3;
+  struct affected_type af, af1;
   char     buf[100];
   int      skl_lvl = 0;
 
@@ -685,54 +685,63 @@ void chant_heroism(P_char ch, char *argument, int cmd)
         WAIT_SEC * get_property("timer.secs.monkHeroism", 120),
         SKILL_HEROISM))
   {
-    send_to_char("Yer not in proper mood for that right now!\r\n", ch);
+    send_to_char("Your mind needs rest...\r\n", ch);
     return;
   }
 
-  if (IS_PC(ch))
-    skl_lvl = GET_CHAR_SKILL(ch, SKILL_HEROISM);
+  if(IS_PC(ch) ||
+     IS_PC_PET(ch))
+        skl_lvl = GET_CHAR_SKILL(ch, SKILL_HEROISM);
+  else
+    skl_lvl = GET_LEVEL(ch) * 2;
 
-  if (affected_by_spell(ch, SKILL_HEROISM) ||
-      affected_by_spell(ch, SONG_HEROISM))
+  if (affected_by_spell(ch, SKILL_HEROISM))
   {
-    send_to_char("You feel like a super hero already.\r\n", ch);
+    send_to_char("You are already under the affects of heroism.\r\n", ch);
     return;
   }
-  if (number(1, 101) > skl_lvl)
+  
+  if (number(1, 105) > skl_lvl) // 5 percent chance to fail at max pc skill.
   {
-    send_to_char("You forgot the words for the chant.\r\n", ch);
-    notch_skill(ch, SKILL_HEROISM, 10);
-    CharWait(ch, 2 * PULSE_VIOLENCE);
+    send_to_char("Your inner thoughts are in turmoil.\r\n", ch);
+    notch_skill(ch, SKILL_HEROISM, 25);
+    CharWait(ch, PULSE_VIOLENCE);
     return;
   }
+  
   sprintf(buf, "A sense of heroism grows in your heart.\r\n");
-  bzero(&af1, sizeof(af1));
-  af1.type = SKILL_HEROISM;
-  af1.duration = GET_LEVEL(ch) / 2;
-  af1.modifier = MAX(2, (int) (GET_LEVEL(ch) / 4));
-  af1.location = APPLY_HITROLL;
-  bzero(&af2, sizeof(af2));
-  af2.type = SKILL_HEROISM;
-  af2.duration = GET_LEVEL(ch) / 2;
-  af2.modifier = MAX(1, GET_LEVEL(ch) / 8);
-  af2.location = APPLY_DAMROLL;
-  if(GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFDRAGON)){
-  send_to_char("Something wicked just happened didn't it? My god you feel weird. \r\n", ch);
-  bzero(&af3, sizeof(af3));
-  af3.type = SPELL_INDOMITABILITY;
-  af3.duration = GET_LEVEL(ch) / 2;
-  affect_to_char(ch, &af3);
-  }
-  send_to_char(buf, ch);
-  affect_to_char(ch, &af1);
-  affect_to_char(ch, &af2);
-  if (GET_LEVEL(ch) >= 36 && GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFSNAKE) &&
-  !IS_AFFECTED4(ch, AFF4_DAZZLER))
+  bzero(&af, sizeof(af));
+  af.type = SKILL_HEROISM;
+  af.flags = AFFTYPE_NODISPEL | AFFTYPE_SHORT;
+  af.duration = GET_LEVEL(ch) / 2;
+  
+  af.modifier = MAX(2, (int) (GET_LEVEL(ch) / 4));
+  af.location = APPLY_HITROLL;
+  
+  af.modifier = MAX(1, GET_LEVEL(ch) / 8);
+  af.location = APPLY_DAMROLL;
+  affect_to_char(ch, &af);
+  
+  if(GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFDRAGON))
   {
-  send_to_char("Wow, you feel absolutely...Dazzling! \r\n", ch);
-  spell_dazzle(50, ch, 0, 0, ch, NULL);
+    send_to_char("Something wicked just happened didn't it? My god you feel weird. \r\n", ch);
+    bzero(&af1, sizeof(af1));
+    af1.type = SPELL_INDOMITABILITY;
+    af1.flags = AFFTYPE_NODISPEL | AFFTYPE_SHORT;
+    af1.duration = GET_LEVEL(ch) / 2;
+    affect_to_char(ch, &af1);
   }
-  notch_skill(ch, SKILL_HEROISM, 50);
+  
+  send_to_char(buf, ch);
+  
+  if(GET_LEVEL(ch) >= 36 &&
+    GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFSNAKE) &&
+    !IS_AFFECTED4(ch, AFF4_DAZZLER))
+  {
+    send_to_char("Your body begins to glow with disorienting colors... \r\n", ch);
+    spell_dazzle(50, ch, 0, 0, ch, NULL);
+  }
+
   CharWait(ch, PULSE_VIOLENCE);
 }
 
