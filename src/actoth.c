@@ -5727,7 +5727,7 @@ void do_ascend(P_char ch, char *arg, int cmd)
       return;
     }
 
-    if(GET_LEVEL(ch) < 46)
+    if(GET_LEVEL(ch) < 40)
     {
       send_to_char("You hear a loud voice exclaiming, '&+WYou are not ready yet!&n'\n", ch);
       return;
@@ -5808,7 +5808,7 @@ void do_descend(P_char ch, char *arg, int cmd)
 
     argument_interpreter(arg, second_arg, third_arg);
 
-    if(GET_LEVEL(ch) < 46)
+    if(GET_LEVEL(ch) < 40)
     {
       send_to_char("You do not have enough experience to descend into the depths of evil.\r\n" ,ch);
       return;
