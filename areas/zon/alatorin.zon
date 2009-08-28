@@ -1307,10 +1307,10 @@ O 0 83180 2 83376 100 0 0 0        * a huge crate
 P 1 500 999 83180 100 0 0 0        *   (object type not in this .obj file)
 P 1 102 2 83180 100 0 0 0          *   (object type not in this .obj file)
 P 1 102 2 83180 100 0 0 0          *   (object type not in this .obj file)
-P 1 412 4 83180 100 0 0 0          *   (object type not in this .obj file)
-P 1 412 4 83180 100 0 0 0          *   (object type not in this .obj file)
-P 1 412 4 83180 100 0 0 0          *   (object type not in this .obj file)
-P 1 412 4 83180 100 0 0 0          *   (object type not in this .obj file)
+P 1 412 999 83180 100 0 0 0        *   (object type not in this .obj file)
+P 1 412 999 83180 100 0 0 0        *   (object type not in this .obj file)
+P 1 412 999 83180 100 0 0 0        *   (object type not in this .obj file)
+P 1 412 999 83180 100 0 0 0        *   (object type not in this .obj file)
 O 0 38314 1 83380 5 0 0 0          * (object type not in this .obj file)
 O 0 83197 1 83385 100 0 0 0        * a pacing bookshelf
 P 1 83196 1 83197 100 0 0 0        *   a flying spellbook
@@ -2410,6 +2410,8 @@ M 0 38303 2 83361 100 0 0 0        * (mob type not in this .mob file)
 M 0 5717 1 83361 7 0 0 0           * (mob type not in this .mob file)
 M 0 85617 1 83361 33 0 0 0         * (mob type not in this .mob file)
 M 0 120037 5 83361 99 0 0 0        * (mob type not in this .mob file)
+M 0 83396 2 83368 100 0 0 0        * a brutish dwarven thug
+M 0 83395 1 83369 100 0 0 0        * a towering duergar thug
 M 0 83378 1 83377 100 0 0 0        * a notorious thief named Jenk
 G 1 83387 1 0 100 0 0 0            *    the bloody heart of Jenk
 G 1 83275 6 0 100 0 0 0            *    a concealed dirk
@@ -2730,6 +2732,11 @@ G 1 58334 9 0 10 0 0 0             *    (object type not in this .obj file)
 M 0 83341 1 83538 75 0 0 0         * Brek the orc rogue
 G 1 16599 2 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 16599 2 0 100 0 0 0            *    (object type not in this .obj file)
+M 0 83396 2 83539 100 0 0 0        * a brutish dwarven thug
+M 0 83398 2 83539 100 0 0 0        * an ugly, strong, brutish thug
+M 0 83398 2 83539 100 0 0 0        * an ugly, strong, brutish thug
+M 0 83397 2 83549 100 0 0 0        * a strong, brutish thug
+M 0 83397 2 83549 100 0 0 0        * a strong, brutish thug
 M 0 83335 1 83552 100 0 0 0        * Kirrb Faktl
 E 1 83362 11 16 100 0 0 0          *   a slender adamantite dagger
 E 1 83362 11 17 100 0 0 0          *   a slender adamantite dagger
@@ -2975,6 +2982,7 @@ G 1 83419 999 0 100 0 0 0          *    a potion of greater invisibility
 G 1 83421 999 0 100 0 0 0          *    a bottle of crimson poison
 G 1 2800 999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 93914 999 0 100 0 0 0          *    (object type not in this .obj file)
+G 1 412 999 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83352 1 83701 100 0 0 0        * a shady dwarf merchant
 G 1 83390 999 0 100 0 0 0          *    a potion of iNSaNe STrEnGTh
 G 1 83391 999 0 100 0 0 0          *    a potion of remedying
@@ -3066,6 +3074,7 @@ M 0 43124 2 83768 60 0 0 0         * (mob type not in this .mob file)
 M 0 43149 2 83768 90 0 0 0         * (mob type not in this .mob file)
 M 0 43150 2 83768 90 0 0 0         * (mob type not in this .mob file)
 M 0 83369 1 83769 100 0 0 0        * a relaxing barbarian
+M 0 83394 1 83770 100 0 0 0        * a resting mage
 M 0 43123 2 83771 90 0 0 0         * (mob type not in this .mob file)
 M 0 43124 2 83771 90 0 0 0         * (mob type not in this .mob file)
 M 0 43149 2 83771 60 0 0 0         * (mob type not in this .mob file)

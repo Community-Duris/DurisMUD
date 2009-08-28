@@ -4635,3 +4635,84 @@ pf 0 16384 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#83394
+resting elven mage~
+&N&+ba resting mage&N~
+&N&+bA weary elven mage rests after a long travel.
+~
+   &+bThis elven mage, which looks to be perhaps of &+Whigh elven
+&N&+bdescent, rests after a seemingly long journey.  Regardless
+&+bof his exact pedigree, the port of &+WDeramuth &N&+bfrom any
+&+bof the elven-native realms would prove a considerable journey.
+&+bHe is dressed in fine cloth garments, currently resting.
+~
+2250 0 0 402653340 0 0 0 1000 S
+pe 0 512 -1
+44 0 0 1d1+1 1d1+1
+0.0.0.0 0
+5 5 1
+#83395
+towering duergar thug~
+&+La towering &N&+rduergar &N&+ythug&N~
+&+LA towering &N&+rduergar&+L &N&+ythug &+Lleans against the wall, &Ncr&+ya&Nck&+yi&Nng &+Lhis &+Yknuckles&+L.
+~
+   &+LThis towering, powerful &N&+rduergar&+L is of completely
+&+Labnormal size, standing at least an entire three feet taller
+&+Lthe typical &N&+rduergar&+L.  He is covered in huge slabs of
+&+Lthick, dark muscle and a pelt of curly black hair.  He occupies
+&+Lthe hallway with his enormous bulging size, curiously posed
+&+Lby the southern wall.
+~
+67127498 0 0 24 14528 0 0 -1000 S
+pd 0 1064960 5
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#83396
+brutish dwarf thug~
+&+La brutish dwarven &N&+ythug&N~
+&+LA brutish &N&+ythug &+Llurks through the area, sizing up the others.
+~
+   &+yThis muscular, brutish &+Ydwarf &N&+ygrins as he sizes up all
+&+Lof those who come within his proximity.  He constantly challenges
+&+Lothers, often being the oppressor of frail &N&+cAlatorians &+Lwho
+&+Lhe can muscle money out of.  He has a twisted black beard and beady
+&N&+rred &+Leyes.
+~
+1073742024 0 0 671195196 12510 32 0 -400 S
+pm 0 20480 -1
+52 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#83397
+strong brutish thug~
+&+La &+Ystrong&+L, brutish &N&+ythug&N~
+&+LA &+Ystrong&+L, brutish &N&+ythug &+Llurks the undercity.
+~
+   &+yThis muscular, brutish &+Ydwarf &N&+ygrins as he sizes up all
+&+Lof those who come within his proximity.  He constantly challenges
+&+Lothers, often being the oppressor of frail &N&+cAlatorians &+Lwho
+&+Lhe can muscle money out of.  He has a twisted black beard and beady
+&N&+rred &+Leyes.
+~
+1073742024 0 0 671195196 12510 32 0 -400 S
+pm 0 20480 -1
+54 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#83398
+ugly strong brutish thug~
+&+Lan &N&+mugly&+L, &+Ystrong&+L, brutish &N&+ythug&N~
+&+LAn &N&+mugly&+L, &+Ystrong&+L, and brutish &N&+ythug&+L stomps through here with a surly confidence.
+~
+   &+yThis muscular, brutish &+Ydwarf &N&+ygrins as he sizes up all
+&+Lof those who come within his proximity.  He constantly challenges
+&+Lothers, often being the oppressor of frail &N&+cAlatorians &+Lwho
+&+Lhe can muscle money out of.  He has a twisted black beard and beady
+&N&+rred &+Leyes.
+~
+1073742024 0 0 671195196 12510 32 0 -400 S
+pm 0 20480 -1
+57 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
