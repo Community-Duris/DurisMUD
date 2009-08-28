@@ -647,13 +647,15 @@ void bard_sleep(int l, P_char ch, P_char victim, int song)
   P_obj    tmp_obj;
   int      i;
 
-  if( IS_TRUSTED(victim) )
+  if(IS_TRUSTED(victim))
     return;
     
   if(affected_by_spell(victim, song))
     return;
+  
   if(IS_AFFECTED(ch, AFF_INVISIBLE))
     appear(ch);
+  
   for (tmp_obj = victim->carrying; tmp_obj; tmp_obj = tmp_obj->next_content)
     if(IS_SET(tmp_obj->extra_flags, ITEM_NOSLEEP))
     {
@@ -661,6 +663,7 @@ void bard_sleep(int l, P_char ch, P_char victim, int song)
         send_to_char("&+yYou stifle a yawn.\r\n", victim);
       return;
     }
+    
   for (i = 0; i < MAX_WEAR; i++)
     if(victim->equipment[i] &&
         IS_SET(victim->equipment[i]->extra_flags, ITEM_NOSLEEP))
@@ -670,7 +673,9 @@ void bard_sleep(int l, P_char ch, P_char victim, int song)
       return;
     }
 
-  if(IS_SHOPKEEPER(ch))
+  if(IS_SHOPKEEPER(victim) ||
+     IS_GREATER_RACE(victim) ||
+     IS_ELITE(victim))
   {
     bard_aggro(victim, ch);
     return;
@@ -683,13 +688,16 @@ void bard_sleep(int l, P_char ch, P_char victim, int song)
   af.type = song;
   af.bitvector = AFF_SLEEP;
   act("&+LYou feel very sleepy ..... zzzzzz", FALSE, victim, 0, 0, TO_CHAR);
+  
   if(victim->specials.fighting)
     stop_fighting(victim);
+  
   if(GET_STAT(victim) > STAT_SLEEPING)
   {
     act("&+G$n falls sleep.", TRUE, victim, 0, 0, TO_ROOM);
     SET_POS(victim, GET_POS(victim) + STAT_SLEEPING);
   }
+  
   linked_affect_to_char(victim, &af, ch, LNK_SONG);
   StopMercifulAttackers(victim);
 }
