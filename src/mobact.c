@@ -7844,8 +7844,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
 
   if(IS_FIGHTING(ch) &&
       MIN_POS(ch, POS_STANDING + STAT_RESTING) &&
-      !IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS) &&
-      !IS_AFFECTED2(ch, AFF2_MAJOR_PARALYSIS))
+      !IS_IMMOBILE(ch))
   { // 0%
     tmp_ch = ch->specials.fighting;
     if(IS_NPC(tmp_ch) && GET_MASTER(tmp_ch) &&

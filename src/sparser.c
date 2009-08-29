@@ -2186,7 +2186,8 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
-  if (IS_HEADLOCK(ch))
+  if(IS_HEADLOCK(ch) ||
+     IS_IMMOBILE(ch))
   {
     StopCasting(ch);
     return;

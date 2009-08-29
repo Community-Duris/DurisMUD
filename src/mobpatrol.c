@@ -142,11 +142,8 @@ void event_patrol_move(P_char ch, P_char vict, P_obj obj, void *data)
   PatrolData *huntData = (PatrolData *)data;
     
   // standard mob can act checks..
-  if (!IS_NPC(ch) || !CAN_ACT(ch) || 
-       IS_AFFECTED2(ch, AFF2_MAJOR_PARALYSIS) || 
-       IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS) ||
-       IS_CASTING(ch) || affected_by_spell(ch, SONG_SLEEP) || 
-       affected_by_spell(ch, SPELL_SLEEP))
+  if(!IS_NPC(ch) || 
+     IS_IMMOBILE(ch))
   { // reset the event and return
     add_event(event_patrol_move, PULSE_VIOLENCE , ch, vict, obj, 0, huntData,
               huntData ? sizeof(struct hunt_data) : 0);

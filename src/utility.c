@@ -1862,8 +1862,7 @@ bool aggressive_to(P_char ch, P_char target)
   if (TRUSTED_NPC(ch))
     return FALSE;
 
-  if (IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS) ||
-      IS_AFFECTED2(ch, AFF2_MAJOR_PARALYSIS))
+  if (IS_IMMOBILE(ch))
     return FALSE;
 
   if ((world[ch->in_room].room_flags & SINGLE_FILE) &&
@@ -2194,8 +2193,7 @@ bool aggressive_to(P_char ch, P_char target)
 
     if (!IS_SET(ch->specials.act, PLR_VICIOUS))
     {
-      if (!AWAKE(target) || IS_AFFECTED2(target, AFF2_MINOR_PARALYSIS) ||
-          IS_AFFECTED2(target, AFF2_MAJOR_PARALYSIS))
+      if (IS_IMMOBILE(ch))
         return FALSE;
     }
     if ((ch->only.pc->aggressive != -1) &&

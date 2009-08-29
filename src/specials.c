@@ -299,11 +299,7 @@ void npc_steal(P_char ch, P_char vict)
       percent -= 100;
     if (!CAN_SEE(vict, ch))
       percent += 40;
-    if ((GET_STAT(vict) < STAT_SLEEPING) || IS_AFFECTED(vict, AFF_SLEEP) ||
-        IS_AFFECTED(vict, AFF_BOUND) ||
-        IS_AFFECTED(vict, AFF_KNOCKED_OUT) ||
-        IS_AFFECTED2(vict, AFF2_MINOR_PARALYSIS) ||
-        IS_AFFECTED2(vict, AFF2_MAJOR_PARALYSIS))
+    if(IS_IMMOBILE(vict))
       percent += 200;           /* ALWAYS SUCCESS */
     else if (IS_AFFECTED2(vict, AFF2_STUNNED))
       percent += 20;            /* nice bonus if target is stunned */

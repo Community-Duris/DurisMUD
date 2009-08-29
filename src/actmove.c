@@ -262,15 +262,10 @@ int leave_by_exit(P_char ch, int exitnumb)
   if (IS_PC(ch) && IS_RIDING(ch))
   {
     t_ch = get_linked_char(ch, LNK_RIDING);
-    if (IS_AFFECTED2(t_ch, AFF2_MINOR_PARALYSIS) ||
-        IS_AFFECTED2(t_ch, AFF2_MAJOR_PARALYSIS) ||
-        IS_AFFECTED(t_ch, AFF_KNOCKED_OUT) ||
-        GET_STAT(t_ch) == STAT_SLEEPING ||
-        GET_STAT(t_ch) == STAT_DYING || 
-        GET_STAT(t_ch) == STAT_INCAP)
+    if(IS_IMMOBILE(t_ch));
     {
-     	send_to_char("Alas, your mount is not quite in the shape for that.\n", ch);
-     	return FALSE;
+      send_to_char("Alas, your mount is not quite in the shape for that.\n", ch);
+      return FALSE;
     }
 /*
     if (IS_FIGHTING(t_ch))

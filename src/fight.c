@@ -1091,9 +1091,7 @@ void update_pos(P_char ch)
     clear_links(ch, LNK_CIRCLING);
   }
 
-  if (!AWAKE(ch) || IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS) ||
-      IS_AFFECTED2(ch, AFF2_MAJOR_PARALYSIS) ||
-      IS_AFFECTED(ch, AFF_KNOCKED_OUT) || (GET_STAT(ch) < STAT_SLEEPING))
+  if(IS_IMMOBILE(ch))
   {
     if (IS_FIGHTING(ch))
       stop_fighting(ch);
@@ -3187,11 +3185,7 @@ void attack_back(P_char ch, P_char victim, int physical)
       IS_PC(victim) &&
       (!IS_SET(ch->specials.act, PLR_VICIOUS) || IS_BACKRANKED(ch) || IS_BACKRANKED(victim)))
     return;
-  if ((GET_STAT(victim) > STAT_INCAP) &&
-      !IS_AFFECTED2(victim, AFF2_MINOR_PARALYSIS) &&
-      !IS_AFFECTED2(victim, AFF2_MAJOR_PARALYSIS) &&
-      !IS_AFFECTED(victim, AFF_SLEEP) &&
-      !IS_AFFECTED(victim, AFF_KNOCKED_OUT))
+  if(!IS_IMMOBILE(ch))
     set_fighting(victim, ch);
 }
 
