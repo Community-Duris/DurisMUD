@@ -4095,8 +4095,7 @@ void check_contraband(P_ship ship, int to_room)
                 conf_chance += (100.0 - conf_chance) * (1.0 - total_load); // the more total cargo onboard, the less confiscation chance
                 if (conf_chance > 100) conf_chance = 100;
             }
-            sptrinf(buf, "COnf chance: %d", conf_chance);
-	    act_to_all_in_ship(ship, buf);
+            debug("SHIP: (%s) confiscation chance (%d).", SHIPOWNER(ship), conf_chance);
 
             int confiscated = 0;
             for (int i = 0; i < crates; i++)
