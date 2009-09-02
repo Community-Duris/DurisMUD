@@ -2477,7 +2477,7 @@ struct god_list_data_struct god_list_data[] = {
    "&+yBerronar &+wTrue&+Wsilver&N", "&+YClangeddin &+WSilver&+wbeard&N", "&+YMoradin&N"},
    
   {RACE_BARBARIAN,
-   "&+cLathander the Morninglord&N", "&+YTorm the True&N", "&+YY&+yarg&+Ymok&+yra&n"},
+   "&+cA&+Cu&+cr&+Ci&+cl&N", "&+GBhal&+gla&n", "&+RUt&+rhg&+Lar&n"},
    
   {RACE_TROLL,
    "&+cLathander the Morninglord&N", "&+YTorm the True&N", "&+GGranf&+galkor&n"},
