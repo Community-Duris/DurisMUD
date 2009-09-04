@@ -12823,13 +12823,14 @@ D3
 0 0 55099
 S
 #55629
-&+LA &+CVacant &+Lbuilding&n~
-   &+wThis building stands here completely unused and waits for
-&+wsomeone to rent or purchase it. Other than a need for some new
-&+wpaint and maybe visit from the local pest control, the building
-&+wis in great condition.&n
+&+LThe &+RBlood&+rbath &+LDebriefing Room&n~
+&+W  This building is completely vacant and has not had any inhabitants
+&+Wfor quite some time. The floors are dirty and covered with dirt, dried
+&+Wblood and broken pieces of equipment. Graffiti cover the backwall and
+&+Wdepict stories of battles, both won and lost. Local adventurers use
+&+Wthis place for splitting their loot after battles.&n
 ~
-550 32768 0
+550 32772 0
 D3
 ~
 ~

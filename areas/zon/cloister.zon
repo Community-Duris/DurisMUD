@@ -179,15 +179,12 @@ M 0 67118 1 67150 100 0 0 0        * a clansdwarf cook
 M 0 67119 2 67151 100 0 0 0        * a clansdwarf
 M 0 67119 2 67151 100 0 0 0        * a clansdwarf
 M 0 67120 1 67154 100 0 0 0        * the clansdwarf advisor
-M 0 67122 9 67163 100 0 0 0        * an enormous purple worm
-F 1 67122 9 67163 100 0 0 0        * an enormous purple worm (following)
-F 1 67122 9 67163 100 0 0 0        * an enormous purple worm (following)
-M 0 67122 9 67164 100 0 0 0        * an enormous purple worm
-F 1 67122 9 67164 100 0 0 0        * an enormous purple worm (following)
-F 1 67122 9 67164 100 0 0 0        * an enormous purple worm (following)
-M 0 67122 9 67166 100 0 0 0        * an enormous purple worm
-F 1 67122 9 67166 100 0 0 0        * an enormous purple worm (following)
-F 1 67122 9 67166 100 0 0 0        * an enormous purple worm (following)
+M 0 67122 6 67163 100 0 0 0        * an enormous purple worm
+F 1 67122 6 67163 100 0 0 0        * an enormous purple worm (following)
+M 0 67122 6 67164 100 0 0 0        * an enormous purple worm
+F 1 67122 6 67164 100 0 0 0        * an enormous purple worm (following)
+M 0 67122 6 67166 100 0 0 0        * an enormous purple worm
+F 1 67122 6 67166 100 0 0 0        * an enormous purple worm (following)
 M 0 67121 1 67167 100 0 0 0        * Troggahn, the black dragon
 G 1 67116 1 0 100 0 0 0            *    an egg of Troggahn, the black
 M 0 67104 1 67168 100 0 0 0        * General Bakarakh

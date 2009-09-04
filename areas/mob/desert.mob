@@ -3335,3 +3335,18 @@ PB 0 1 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#49244
+fugly shipwright~
+&+CFugly&n~
+&+CFugly&+c, the gap-toothed and cross-eyed shipwright stands here.&n
+~
+   &+CFugly &+cis not what you call an attractive man. He has a very large gap in
+&+chis teeth, as well as a serious set of crossed eyes. It's amazing that he is
+&+cable to run the docks. Apparently he's able to keep his eyes on the docks as
+&+cwell as the ships without any extra effort.&n
+~
+2058 0 0 0 0 0 0 0 S
+pm 0 1 4
+59 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
