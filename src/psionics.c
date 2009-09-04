@@ -1210,7 +1210,7 @@ void spell_psychic_crush(int level, P_char ch, char *arg, int type, P_char victi
       
   if(IS_BRAINLESS(victim))
   {
-    send_to_char("Your victim lacks a brain... you are attempting to crush nothing.", ch);
+    send_to_char("Your victim lacks a brain... you are attempting to crush nothing.\r\n", ch);
     return;
   }
   
