@@ -840,7 +840,7 @@ void do_rage(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if(number(0, 110) > GET_CHAR_SKILL(ch, SKILL_RAGE))
+  if(number(1, 105) > GET_CHAR_SKILL(ch, SKILL_RAGE))
   {
     send_to_char("&+RYou are unable to call forth the rage within you...\r\n", ch);
     CharWait(ch, 2 * PULSE_VIOLENCE);
