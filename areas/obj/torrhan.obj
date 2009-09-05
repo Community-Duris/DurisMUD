@@ -533,7 +533,7 @@ A
 A
 19 3
 #66636
-leg legplates blue blinding plates~
+leg legplates blue blinding plates _ignore_~
 &+Lsome&+W brig&+wht&+B b&+bl&+bu&+Le leg plates&n~
 &+CSome bright legplates have been left here.&n~
 ~
@@ -549,7 +549,7 @@ A
 A
 24 -3
 #66637
-cloth translucent~
+cloth translucent _ignore_~
 &+Lsome&+W tr&+wa&+wns&+Wluc&+we&+Wnt&+L cloth&n~
 &+LA large roll of&+W tr&+wans&+Wluc&+we&+Wnt&+L cloth has been left here.&n~
 ~
@@ -561,7 +561,7 @@ cloth translucent~
 This cloth shimmers with its own light.
 ~
 #66638
-cloak translucent ancients ancient~
+cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the&+W anc&+wien&+Wts&n~
 &+LA&+W shi&+wmm&+Weri&+wn&+Wg&+L cloak has been left here.&n~
 ~
@@ -577,7 +577,7 @@ A
 A
 3 10
 #66639
-cloak ancients ancient translucent~
+cloak ancients ancient translucent _ignore_~
 &+La&+W tra&+wnsl&+Wuc&+we&+Wnt&+L cloak of the&+B anc&+bien&+Bt&+bs&n~
 &+LA &+Wtr&+wans&+Wluce&+wnt&+L cloak has been left here.&n~
 ~
@@ -593,11 +593,11 @@ A
 A
 35 4
 #66640
-cloak translucent ancients ancient~
+cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the&+M anc&+mien&+Mt&+ms&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak has been left here.&n_~
 ~
-9 3 3 0 7 0 8192 1025 0 0 0
+9 3 3 0 7 0 8192 1025 8 0 0
 9 0 0 2 0 0 0 0
 5 2341 100
 E
@@ -609,7 +609,7 @@ A
 A
 31 3
 #66641
-cloak translucent ancients ancient~
+cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the &+Ran&+rcie&+Lnts&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak has been left here.&n~
 ~
@@ -625,7 +625,7 @@ A
 A
 32 5
 #66642
-cloak translucent ancients ancient~
+cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the&+y an&+Yci&+Len&+Yt&+ys&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak shimmers on the ground here.&n~
 ~
@@ -641,7 +641,7 @@ A
 A
 13 20
 #66643
-cloak translucent ancients ancient green~
+cloak translucent ancients ancient green _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the&+G a&+gnci&+Gen&+gt&+Gs&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak shimmers with its own light here.&n~
 ~
@@ -657,7 +657,7 @@ A
 A
 18 1
 #66644
-cloak translucent ancients ancient~
+cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the&+C anc&+cien&+Ct&+cs&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak shimmers on the ground here.&n~
 ~
@@ -673,7 +673,7 @@ A
 A
 5 7
 #66645
-cloak translucent ancients ancient~
+cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the ancients&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Lnt&+L cloak shimmers on the ground here.&n   y~
 ~
