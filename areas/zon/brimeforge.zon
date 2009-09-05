@@ -1,0 +1,147 @@
+#449
+&+LThe &+rBrim&+LStone &+LForge&n~
+131037 2 0 40 50 1
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 131009 5 5 100 0 0 0
+*     down exit from "A Deep Cavern of BrimStone" to
+*     "A Dark Crevice of BrimStone" - closed/secret
+*
+D 0 131025 4 1 100 0 0 0
+*     up exit from "A Dark Crevice of BrimStone" to
+*     "A Deep Cavern of BrimStone" - closed
+*
+D 0 131011 1 5 100 0 0 0
+*     east exit from "A Deep Cavern of BrimStone" to
+*     "A Dark Crevice of BrimStone" - closed/secret
+*
+D 0 131024 3 1 100 0 0 0
+*     west exit from "A Dark Crevice of BrimStone" to
+*     "A Deep Cavern of BrimStone" - closed
+*
+D 0 131012 0 5 100 0 0 0
+*     north exit from "A Deep Cavern of BrimStone" to
+*     "A Dark Crevice of BrimStone" - closed/secret
+*
+D 0 131023 2 1 100 0 0 0
+*     south exit from "A Dark Crevice of BrimStone" to
+*     "A Deep Cavern of BrimStone" - closed
+*
+D 0 131014 1 5 100 0 0 0
+*     east exit from "A Deep Cavern of BrimStone" to
+*     "A Dark Crevice of BrimStone" - closed/secret
+*
+D 0 131022 3 1 100 0 0 0
+*     west exit from "A Dark Crevice of BrimStone" to
+*     "A Deep Cavern of BrimStone" - closed
+*
+D 0 131017 3 5 100 0 0 0
+*     west exit from "A Deep Cavern of BrimStone" to
+*     "A Dark Crevice of BrimStone" - closed/secret
+*
+D 0 131021 1 1 100 0 0 0
+*     east exit from "A Dark Crevice of BrimStone" to
+*     "A Deep Cavern of BrimStone" - closed
+*
+D 0 131018 1 2 100 0 0 0
+*     east exit from "A Deep Cavern of BrimStone" to
+*     "Inside the BrimStone Forge" - closed/locked
+*
+D 0 131027 3 1 100 0 0 0
+*     west exit from "Inside the BrimStone Forge" to
+*     "A Deep Cavern of BrimStone" - closed
+*
+D 0 131019 5 5 100 0 0 0
+*     down exit from "A Deep Cavern of BrimStone" to
+*     "A Dark Crevice of BrimStone" - closed/secret
+*
+D 0 131020 4 1 100 0 0 0
+*     up exit from "A Dark Crevice of BrimStone" to
+*     "A Deep Cavern of BrimStone" - closed
+*
+*
+O 0 131007 5 131003 100 0 0 0      * a smoldering chunk of BrimStone
+O 0 131007 5 131006 100 0 0 0      * a smoldering chunk of BrimStone
+O 0 131007 5 131008 100 0 0 0      * a smoldering chunk of BrimStone
+O 0 131001 6 131009 100 0 0 0      * a large crack
+O 0 131001 6 131011 100 0 0 0      * a large crack
+O 0 131001 6 131012 100 0 0 0      * a large crack
+O 0 131001 6 131014 100 0 0 0      * a large crack
+O 0 131007 5 131014 100 0 0 0      * a smoldering chunk of BrimStone
+O 0 131007 5 131016 100 0 0 0      * a smoldering chunk of BrimStone
+O 0 131001 6 131017 100 0 0 0      * a large crack
+O 0 131001 6 131019 100 0 0 0      * a large crack
+O 0 131009 2 131036 100 0 0 0      * a strange sign
+O 0 131009 2 131037 100 0 0 0      * a strange sign
+*
+M 0 131009 1 131001 100 0 0 0      * a traveling Efreeti
+M 0 131008 3 131004 100 0 0 0      * an illithid overseer
+E 1 131003 1 3 100 0 0 0           *   the locket of the second
+M 0 131001 5 131009 100 0 0 0      * a svirfneblin slave
+M 0 131002 5 131009 100 0 0 0      * a troll slave
+M 0 131003 5 131009 100 0 0 0      * a minotaur slave
+M 0 131004 5 131009 100 0 0 0      * a drow slave
+M 0 131005 5 131009 100 0 0 0      * a thri-kreen slave
+M 0 131006 5 131009 100 0 0 0      * a devil slavemaster
+M 0 131008 3 131009 100 0 0 0      * an illithid overseer
+E 1 131004 1 3 100 0 0 0           *   the locket of the third
+M 0 131001 5 131011 100 0 0 0      * a svirfneblin slave
+M 0 131002 5 131011 100 0 0 0      * a troll slave
+M 0 131003 5 131011 100 0 0 0      * a minotaur slave
+M 0 131004 5 131011 100 0 0 0      * a drow slave
+M 0 131005 5 131011 100 0 0 0      * a thri-kreen slave
+M 0 131006 5 131011 100 0 0 0      * a devil slavemaster
+M 0 131001 5 131012 100 0 0 0      * a svirfneblin slave
+M 0 131002 5 131012 100 0 0 0      * a troll slave
+M 0 131003 5 131012 100 0 0 0      * a minotaur slave
+M 0 131004 5 131012 100 0 0 0      * a drow slave
+M 0 131005 5 131012 100 0 0 0      * a thri-kreen slave
+M 0 131006 5 131012 100 0 0 0      * a devil slavemaster
+M 0 131001 5 131013 100 0 0 0      * a svirfneblin slave
+M 0 131002 5 131013 100 0 0 0      * a troll slave
+M 0 131003 5 131013 100 0 0 0      * a minotaur slave
+M 0 131004 5 131013 100 0 0 0      * a drow slave
+M 0 131005 5 131013 100 0 0 0      * a thri-kreen slave
+M 0 131006 5 131013 100 0 0 0      * a devil slavemaster
+M 0 131008 3 131016 100 0 0 0      * an illithid overseer
+E 1 131002 1 3 100 0 0 0           *   the locket of the first
+M 0 131001 5 131018 100 0 0 0      * a svirfneblin slave
+M 0 131002 5 131018 100 0 0 0      * a troll slave
+M 0 131003 5 131018 100 0 0 0      * a minotaur slave
+M 0 131004 5 131018 100 0 0 0      * a drow slave
+M 0 131005 5 131018 100 0 0 0      * a thri-kreen slave
+M 0 131006 5 131018 100 0 0 0      * a devil slavemaster
+M 0 131007 6 131020 100 0 0 0      * a vile demon
+M 0 131007 6 131021 100 0 0 0      * a vile demon
+M 0 131007 6 131022 100 0 0 0      * a vile demon
+M 0 131007 6 131023 100 0 0 0      * a vile demon
+M 0 131007 6 131024 100 0 0 0      * a vile demon
+M 0 131007 6 131025 100 0 0 0      * a vile demon
+M 0 131010 8 131031 100 0 0 0      * a dangerous spectre
+E 1 131008 16 16 100 0 0 0         *   a shard of BrimStone
+E 1 131008 16 17 100 0 0 0         *   a shard of BrimStone
+M 0 131010 8 131031 100 0 0 0      * a dangerous spectre
+E 1 131008 16 16 100 0 0 0         *   a shard of BrimStone
+E 1 131008 16 17 100 0 0 0         *   a shard of BrimStone
+M 0 131010 8 131031 100 0 0 0      * a dangerous spectre
+E 1 131008 16 16 100 0 0 0         *   a shard of BrimStone
+E 1 131008 16 17 100 0 0 0         *   a shard of BrimStone
+M 0 131010 8 131031 100 0 0 0      * a dangerous spectre
+E 1 131008 16 16 100 0 0 0         *   a shard of BrimStone
+E 1 131008 16 17 100 0 0 0         *   a shard of BrimStone
+M 0 131010 8 131035 100 0 0 0      * a dangerous spectre
+E 1 131008 16 16 100 0 0 0         *   a shard of BrimStone
+E 1 131008 16 17 100 0 0 0         *   a shard of BrimStone
+M 0 131010 8 131035 100 0 0 0      * a dangerous spectre
+E 1 131008 16 16 100 0 0 0         *   a shard of BrimStone
+E 1 131008 16 17 100 0 0 0         *   a shard of BrimStone
+M 0 131010 8 131035 100 0 0 0      * a dangerous spectre
+E 1 131008 16 16 100 0 0 0         *   a shard of BrimStone
+E 1 131008 16 17 100 0 0 0         *   a shard of BrimStone
+M 0 131010 8 131035 100 0 0 0      * a dangerous spectre
+E 1 131008 16 16 100 0 0 0         *   a shard of BrimStone
+E 1 131008 16 17 100 0 0 0         *   a shard of BrimStone
+*
+S

@@ -1,0 +1,127 @@
+#131001
+svirfneblin slave~
+&+La &+ysvirfneblin &+Lslave&n~
+&+LA weak and badly wounded &+ysvirfneblin &+Lis being worked to the bone.&n
+~
+&+L  This poor &+ysvirfneblin &+Lhas been bound to captivity and is being forced to work
+&+Lin these mines.&n
+~
+1073743880 0 0 0 0 0 0 0 S
+pg 0 1048576 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131002
+troll slave~
+&+La &+gtroll &+Lslave&n~
+&+LA defeated &+gtroll &+Lhangs his head low as he hammers at the &+rbrim&+Lstone.&n
+~
+&+L  This poor &+gtroll &+Lhas been bound to captivity and is being forced to work
+&+Lin these mines.&n
+~
+1073743880 0 0 0 0 0 0 0 S
+pt 0 1048576 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131003
+minotaur slave~
+&+La mino&+rtaur &+Lslave&n~
+&+LA humiliated mino&+rtaur &+Lsulks in the corner.&n
+~
+&+L  This poor mino&+rtaur &+Lhas been bound to captivity and is being forced to work
+&+Lin these mines.&n
+~
+1073743880 0 0 0 0 0 0 0 S
+mt 0 1048576 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131004
+drow slave~
+&+La &+mdrow &+Lslave&n~
+&+LA &+mdrow &+Lslave stands here with chains around her ankles.&n
+~
+&+L  This poor &+mdrow &+Lhas been bound to captivity and is being forced to work
+&+Lin these mines.&n
+~
+1073743880 0 0 0 0 0 0 0 S
+pl 0 1048576 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131005
+thri-kreen slave~
+&+La &+Gthri-&+Ykreen &+Lslave&n~
+&+LA &+Gthri-&+Ykreen &+Lslave hammers away viciously at the surrounding rocks.&n
+~
+&+L  This poor &+gtroll &+Lhas been bound to captivity and is being forced to work
+&+Lin these mines.&n
+~
+1073743880 0 0 0 0 0 0 0 S
+tk 0 1048576 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131006
+devil slavemaster~
+&+La &+Rd&+re&+Rv&+ri&+Rl &+Lslavemaster&n~
+&+LA &+Rd&+re&+Rv&+ri&+Rl &+Lslavemaster wanders the area, keeping it under control.&n
+~
+&+L  This poor &+gtroll &+Lhas been bound to captivity and is being forced to work
+&+Lin these mines.&n
+~
+1140852744 0 0 0 0 0 0 0 S
+y 0 32 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131007
+vile demon~
+&+La vile d&+we&+Lm&+wo&+Ln&n~
+&+LA vile looking d&+we&+Lm&+wo&+Ln grunts loudly and stretches out its claws.&n
+~
+   &+LThis strange looking demon lunges at you in anger!&n
+~
+1073743880 1 0 0 0 0 0 0 S
+x 0 16384 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131008
+illithid overseer~
+&+Lan &+Millithid &+Loverseer&n~
+&+LAn &+Millithid &+Loverseer keeps his mind on the task at hand.&n
+~
+&+L  This strange looking &+Millithid &+Lseems to be very focused on keeping this mine on track.&n
+~
+1140852744 0 0 0 0 0 0 0 S
+mf 0 4 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131009
+traveling efreeti~
+&+La traveling &+REfreeti&n~
+&+LAn &+REfreeti &+Lstands before you, a visitor to this world.&n
+~
+&+L  This poor &+gtroll &+Lhas been bound to captivity and is being forced to work
+&+Lin these mines.&n
+~
+1073743882 0 0 0 0 0 0 0 S
+e 0 256 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131010
+dangerous spectre~
+&+La &+mdangerous &+Lspectre&n~
+&+LA &+mdangerous &+Lspectre hides here.&n
+~
+   &+LThis spectre hides in the shadows and waits to strike unsuspecting victims.&n
+~
+2120 5 0 1572872 0 0 0 0 S
+sp 0 8192 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
