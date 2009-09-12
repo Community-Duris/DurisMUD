@@ -4869,7 +4869,7 @@ void bash(P_char ch, P_char victim)
     return;
   }
 
-  if(GET_CHAR_SKILL(ch, SKILL_BASH) == 0)
+  if(GET_CHAR_SKILL(ch, SKILL_BASH) < 1)
   {
     send_to_char("You don't know how to bash.\n", ch);
     return;
@@ -5192,20 +5192,35 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
     
     if(melee_damage(ch, victim, MAX(1, dmg), PHSDAM_TOUCH, 0) == DAM_NONEDEAD)
     {
-      act("Your bash knocks $N to the ground!", FALSE, ch, 0, victim,
-          TO_CHAR);
-      act("You are knocked to the ground by $n's mighty bash!", FALSE, ch, 0,
-          victim, TO_VICT);
-      act("$N is knocked to the ground by $n's mighty bash!", FALSE, ch, 0,
-          victim, TO_NOTVICT);
+      act("Your bash knocks $N to the ground!",
+        FALSE, ch, 0, victim, TO_CHAR);
+      
+      if(!LEGLESS(ch))
+      {
+        act("You are knocked to the ground by $n's mighty bash!",
+          FALSE, ch, 0, victim, TO_VICT);
+        act("$N is knocked to the ground by $n's mighty bash!",
+          FALSE, ch, 0, victim, TO_NOTVICT);
+        set_short_affected_by(ch, SKILL_BASH, (int) (2.8 * PULSE_VIOLENCE));
+      }
+      else
+      {
+        act("$n's mass &+rslams&n into you, knocking you to the &+yground!&n",
+          FALSE, ch, 0, victim, TO_VICT);
+        act("$n's mass &+rslams&n into $N, knocking $M to the &+yground!&n",
+          FALSE, ch, 0, victim, TO_NOTVICT);
+        set_short_affected_by(ch, SKILL_BASH, (int) (1.5 * PULSE_VIOLENCE));
+      }
+      
       SET_POS(victim, POS_SITTING + GET_STAT(victim));
       update_pos(victim);
-      set_short_affected_by(ch, SKILL_BASH, (int) (2.8 * PULSE_VIOLENCE));
     }
+    
     if(!IS_ALIVE(ch))
     {
       return;
     }
+    
     if(GET_CHAR_SKILL(ch, SKILL_SKEWER) > 0 && ch->equipment[WIELD] && good_for_skewering(ch->equipment[WIELD]))
     {
       percent_chance = GET_CHAR_SKILL(ch, SKILL_SKEWER) / 2;
