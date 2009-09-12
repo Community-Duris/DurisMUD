@@ -387,7 +387,7 @@ eye~
 ~
 11 2 9 0 15 0 1225728 131073 64 46567332 0
 0 0 0 0 0 0 0 0
-0 509238 100 32 16 0 0
+0 10000 100 32 16 0 0
 A
 13 20
 A
@@ -603,7 +603,7 @@ earth spot earthen~
 7494 7 -1 0 0 0 0 0
 0 0 100
 #7365
-axe azer~
+axe azer _noquest_~
 &+ra &+bf&+Bl&+Wami&+Bn&+bg &+Raxe&+r of the &+rA&+Rze&+rr~
 &+RAn axe of flames lays here burning eternally.~
 ~
@@ -633,7 +633,7 @@ coat ki-rin~
 ~
 9 24 9 0 13 0 46080 9 2 4197892 0
 10 0 0 4 0 0 0 0
-10 846677 100 134217728 0 0 0
+10 25000 100 134217728 0 0 0
 A
 33 4
 A
@@ -663,7 +663,7 @@ A
 A
 19 4
 #7369
-stone sleeves~
+stone sleeves _noquest_~
 &+La pair of stone sleeves~
 &+LA pair of stone sleeves lays here.~
 ~
