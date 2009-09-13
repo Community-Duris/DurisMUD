@@ -424,7 +424,7 @@ HO 0 32 -1
 0.0.0.0 0
 8 8 1
 #22429
-orc crew man crewman~
+crew man crewman~
 &+Lan orc &+bcrewman&n~
 &+LAn Orc &+bcrewman&+L performs his duties on the deck.&n
 ~
@@ -438,7 +438,7 @@ HO 0 16384 -1
 0.0.0.0 0
 8 8 1
 #22430
-captain juggernaught orc~
+captain juggernaught~
 &+Lthe jugge&+Wrnaug&+Lht captain&n~
 &+LThe captain of the jugge&+Wrnaug&+Lht steers the ship from here.&n
 ~
@@ -453,7 +453,7 @@ HO 0 1 -1
 0.0.0.0 0
 8 8 1
 #22431
-first mate orc~
+first mate~
 &+Wthe first mate&n~
 &+WThe first mate of the jugge&+Lrnaug&+Wht stay close to his captain.&n
 ~
