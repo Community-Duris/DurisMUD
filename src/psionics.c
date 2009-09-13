@@ -1397,11 +1397,11 @@ void spell_detonate(int level, P_char ch, char *arg, int type, P_char victim,
   if(victim == ch)
     dam = 1;
     
-  if(!StatSave(victim, APPLY_POW, POW_DIFF(ch, victim)))
-    dam = (int)(dam * 1.15);
+  // if(!StatSave(victim, APPLY_POW, POW_DIFF(ch, victim)))
+    // dam = (int)(dam * 1.15);
     
-  if(!NewSaves(victim, SAVING_SPELL, 0))
-    dam = (int)(dam * 1.15);
+  // if(!NewSaves(victim, SAVING_SPELL, 0))
+    // dam = (int)(dam * 1.15);
   
   if(GET_SPEC(ch, CLASS_PSIONICIST, SPEC_PYROKINETIC))
   {
