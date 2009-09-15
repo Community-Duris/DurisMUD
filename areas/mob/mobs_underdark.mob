@@ -198,7 +198,7 @@ cloaker dark creature~
 &+Litself around its victim, attacking it with bleeding speed.
 ~
 264200 0 0 1048576 0 0 0 -1000 S
-MH 0 1 -1
+MH 0 33554433 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
