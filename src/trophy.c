@@ -41,7 +41,7 @@ int modify_exp_by_zone_trophy(P_char ch, int type, int XP)
   if (IS_ILLITHID(ch))
     return XP;
   
-  if( GET_LEVEL(ch) < 20 )
+  if( GET_LEVEL(ch) < 11 )
     return XP;
   
   int zone_number = zone_table[world[ch->in_room].zone].number;
@@ -96,9 +96,13 @@ int modify_exp_by_zone_trophy(P_char ch, int type, int XP)
         exp_mod = 0.05;
       }
       
-      if( type == EXP_KILL || type == EXP_QUEST )
+      if(exp_mod < 1.0 &&
+        (type == EXP_KILL ||
+         type == EXP_QUEST ||
+         type == EXP_DAMAGE ||
+         type == EXP_HEALING))
       {
-        if( exp_mod < 1.00 && exp_mod >= 0.70 )
+        if(exp_mod >= 0.70 )
         {
           send_to_char("&+gThis area feels rather easy.\n", ch);
         }
@@ -106,13 +110,14 @@ int modify_exp_by_zone_trophy(P_char ch, int type, int XP)
         {
           send_to_char("&+yThis area really isn't much of a challenge.\n", ch);
         }
-        else if( exp_mod >= 0.25 )
+        else if( exp_mod >= 0.15 )
         {
           send_to_char("&+rWhat's the point? Isn't this area getting boring?\n", ch);
         }
-        else if( exp_mod < 0.1 )
+        else
         {
           send_to_char("&+YYAWN! You really should find somewhere else to gain experience.\n", ch);
+          exp_mod = 0;
         }              
       }
       

@@ -6643,14 +6643,24 @@ P_char PickTarget(P_char ch)
 
   for (t_ch = world[ch->in_room].people; t_ch; t_ch = t_ch->next_in_room)
   {
+    if(!(t_ch))
+    {
+      return NULL;
+    }
+    
     if(t_ch == ch)
+    {
       continue;
+    }
 /*
  * if(n_a && (!IS_FIGHTING(t_ch) || t_ch->specials.fighting != ch))
  * continue;
  */
     if(!is_aggr_to(ch, t_ch))
+    {
       continue;
+    }
+      
     if(a < MAX_TARGETS)
     {
       target_table[a] = CountToughness(ch, t_ch);
