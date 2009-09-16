@@ -5077,17 +5077,19 @@ void SweepAttack(P_char ch)
   
   if(!(ch) ||
      !IS_ALIVE(ch))
-        return;
+  {
+    return;
+  }
 
   if(IS_PC_PET(ch))
+  {
     chMaster = GET_MASTER(ch);
-
+  }
+  
   act("$n lashes out with $s mighty tail!", 0, ch, 0, 0, TO_ROOM);
 
   for (tch = world[ch->in_room].people; tch; tch = tch_next)
   {
-    tch_next = tch->next_in_room;  
-  
     if(chMaster &&
       !IS_FIGHTING(ch))
       if((tch == chMaster) ||
@@ -6588,20 +6590,37 @@ int CountToughness(P_char ch, P_char victim)
   int      val, foo;
 
   if(IS_PC(ch))
+  {
     return -1;
-
+  }
+  
   val = GET_HIT(victim);
 
-  if(IS_CLERIC(victim) || IS_MAGE(victim))
+  if(!GET_CLASS(ch, CLASS_PALADIN) &&
+     !GET_CLASS(ch, CLASS_ANTIPALADIN) &&
+    (IS_CLERIC(victim) ||
+     IS_MAGE(victim)))
+  {
     val = val * 2 / 3;
+  }
   else if(IS_WARRIOR(victim))
+  {
     val = val * 2;
+  }
+  
   foo = MAX(0, 60 - GET_LEVEL(victim));
+  
   if(!IS_FIGHTING(victim))
+  {
     val = val / (IS_THIEF(ch) ? 4 : 2);
+  }
   if((IS_AFFECTED(victim, AFF_AWARE) ||
-       IS_AFFECTED(victim, AFF_SKILL_AWARE)) && IS_THIEF(ch))
+      IS_AFFECTED(victim, AFF_SKILL_AWARE)) &&
+      IS_THIEF(ch))
+  {
     val = (int) (val * 1.5);
+  }
+  
   val = (int) (val * 100 / number(100 - foo, 100 + foo));
   return val;
 }
@@ -6622,36 +6641,30 @@ P_char PickTarget(P_char ch)
   P_char   target_addr[MAX_TARGETS + 1];
   int      a, b, c, d, n_a;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch))
+  if(!SanityCheck(ch, "PickTarget"))
   {
     return NULL;
   }
-
+  
   if(IS_SET(world[ch->in_room].room_flags, SAFE_ZONE))
+  {
     return NULL;
-
+  }
+  
   if(IS_STUNNED(ch) ||
-    !AWAKE(ch) ||
-    IS_IMMOBILE(ch))
+     !AWAKE(ch) ||
+     IS_IMMOBILE(ch))
   {
     return NULL;
   }
   
   a = 0;
-//  n_a = NumAttackers(ch);
+  n_a = NumAttackers(ch);
 
   for (t_ch = world[ch->in_room].people; t_ch; t_ch = t_ch->next_in_room)
   {
-    if(!(t_ch))
-    {
-      return NULL;
-    }
-    
     if(t_ch == ch)
-    {
       continue;
-    }
 /*
  * if(n_a && (!IS_FIGHTING(t_ch) || t_ch->specials.fighting != ch))
  * continue;
@@ -6660,7 +6673,7 @@ P_char PickTarget(P_char ch)
     {
       continue;
     }
-      
+    
     if(a < MAX_TARGETS)
     {
       target_table[a] = CountToughness(ch, t_ch);
@@ -6670,25 +6683,36 @@ P_char PickTarget(P_char ch)
       a++;
     }
     else
+    {
       break;
+    }
   }
 
   if(a == 0)
+  {
     return NULL;
-
+  }
+  
   if(IS_PC(ch))
+  {
     return (target_addr[number(0, (a - 1))]);
-
+  }
+  
   b = -2;
   c = -1;
+  
   for (d = 0; d < a; d++)
+  {
     if((target_table[d] < b) || (b == -2))
     {
       c = d;
       b = target_table[d];
     }
+  }
   if(c != -1)
+  {
     return target_addr[c];
+  }
 
   /*
    * nope, no likely targets in room
