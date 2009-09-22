@@ -172,6 +172,11 @@ void quest_reward(P_char ch, P_char quest_mob, int type)
       {
         SET_BIT(reward->extra_flags, ITEM_NOREPAIR);
       }
+      
+      if(IS_SET(reward->extra_flags, ITEM_NODROP))
+      {
+        REMOVE_BIT(reward->extra_flags, ITEM_NODROP);
+      }
         
       act("$n gives you $q ", TRUE, quest_mob, reward, ch, TO_VICT);
       act("$n gives $N $q.", FALSE, quest_mob, reward, ch, TO_NOTVICT);
