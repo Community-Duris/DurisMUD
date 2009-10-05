@@ -30,7 +30,7 @@ to dig into it and survive. It has a rounded, almost man-made appearance, and
 there are the faint outlines of what might have been carvings in the &+wstone.
 &nThe air here is humid and smells faintly of earth and other living things.&n
 ~
-353 1073741832 3
+353 1073741832 13
 D0
 ~
 ~
@@ -54,7 +54,7 @@ floor has become uneven, giving unsteady footing and lots of things to trip
 over. A rumbling sound can be heard from below and to the south, but it is
 not distiguishable as anything.&n
 ~
-353 1073742081 3
+353 1073742081 13
 D0
 ~
 ~
@@ -73,7 +73,7 @@ the edge of it and you are on the northern rim of it. Below this point, another
 deafening. This room is lighter than the last two, it seems to be coming from
 some hole above and to the south of you.&n
 ~
-353 4194304 4
+353 4194304 13
 D0
 ~
 ~
@@ -157,7 +157,7 @@ line the walls. The smell here is pleasant and earthy. The walls seem far
 less likely to collapse here. The air seems to vibrate oddly, almost as if
 the rocks and plants were humming to themselves happily.&n
 ~
-353 1 1
+353 1 13
 D0
 ~
 ~
@@ -179,7 +179,7 @@ if someone was taking care of them. There looks to be what might be footprints
 on the ground here, but it really is impossible to tell. The humming noise is
 getting louder as you progress.&n
 ~
-353 9 0
+353 9 13
 D1
 ~
 ~
@@ -196,7 +196,7 @@ taken care of. The smell of flowers is in the air, and that pleasant humming
 has gotten louder. What looks like the end of this passage is to your south,
 though it's hard to tell in this light.&n
 ~
-353 0 0
+353 0 13
 D2
 ~
 ~
@@ -220,7 +220,7 @@ is a bed in one corner, a table in the other, and gardening tools everywhere.
 The general atmosphere is happy and calm, and the sounds of that humming are
 still quite prominant.&n
 ~
-353 4194312 0
+353 4194312 3
 D0
 ~
 ~
@@ -233,7 +233,7 @@ glittering. Looking closer, there appears to be both &+Ygold &nand &+Rgems &nemb
 in the &+wwall &nalong here. The stone is extremely hard though, and it doesn't
 look very easy to get them out.&n
 ~
-353 1 4
+353 1 13
 D1
 ~
 ~
@@ -258,7 +258,7 @@ pleasant than what is currently in the &+Lcavern&n. There also seems to be a
 passage about twenty feet to the south, but there doens't look like there's
 any way to get to it from this side.&n
 ~
-353 1 4
+353 1 13
 D0
 ~
 ~
@@ -274,7 +274,7 @@ S
 This passage, although warm with solid footing, is rather tight with a low
 ceiling. It curves slowly southward.&n
 ~
-353 8193 4
+353 8193 13
 D1
 ~
 ~
@@ -306,7 +306,7 @@ fountain, heading to the north. There is a hole in the tunnel, just big enough
 to let in some light, in the ceiling here. It looks like it was carved out by
 someone.&n
 ~
-353 4096 3
+353 4096 13
 D0
 ~
 ~
@@ -330,7 +330,7 @@ similar looking ways to go. The only difference is that there are plants
 to the west, and only shadowed tunnels in the other directions. The pounding
 of the &+Bwaterfall &nhas quieted, fading to only a dull throbbing.&n
 ~
-353 1 1
+353 1 13
 D0
 ~
 ~
@@ -358,7 +358,7 @@ bouncing and churning and then flowing on to the south. There is an eerie
 glow from the bottom of the falls, but it seems to be natural light reflected
 off of the water.
 ~
-353 4194312 0
+353 4194312 13
 D3
 ~
 ~
@@ -369,7 +369,7 @@ S
 &nThis featureless passage is made of smooth &+Lblack &nstone, and is circular
 in shape. It turns to the east.&n
 ~
-353 1 1
+353 1 13
 D0
 ~
 ~
@@ -384,7 +384,7 @@ An Unremarkable Passage~
 &nThis featureless passage is made out of smooth &+Lblack &nstone, and is rather
 circular in shape. The waterfall can be heard through the walls, rumbling.&n
 ~
-353 1 1
+353 1 13
 D1
 ~
 ~
@@ -399,7 +399,7 @@ S
 &nThis featureless passage is made out of smooth &+Lblack &nstone, and is rather
 circular in shape. The waterfall can be heard through the walls, rumbling.&n
 ~
-353 1 1
+353 1 13
 D1
 ~
 ~
@@ -414,7 +414,7 @@ S
 &nThis featureless passage is made out of smooth &+Lblack &nstone, and is rather
 circular in shape. The waterfall can be heard through the walls, rumbling.&n
 ~
-353 1 1
+353 1 13
 D1
 ~
 ~
@@ -430,7 +430,7 @@ S
 in shape. The waterfall can be heard through the walls, rumbling. There is
 another passage downwards, extremely steep, but it looks climbable.&n
 ~
-353 1 1
+353 1 13
 D0
 ~
 ~
@@ -451,7 +451,7 @@ over the rocks here. Beyond the ledge, the cavern expands outwards into
 an otherwise hidden valley in the mountains. &+GJungle vegetation &nseems to be
 fed by the river and is thickly spread out below.&n
 ~
-353 8388612 4
+353 8388612 13
 D3
 ~
 ~
@@ -470,7 +470,7 @@ to be a light green aura that vibrates in the air. The jungle looks unspoiled
 and extremely natural, as if no human hand had ever touched anything. A ledge
 is to the east, a little above the waterline.&n
 ~
-353 4096 4
+353 4104 13
 D0
 ~
 ~
@@ -540,7 +540,7 @@ falls. The air is thick with spray, and it is hard to see very far. The
 water swiftly runs eastwards, then south, towards the end of the cliff, trying
 hard to take everything in its path along for the ride.&n
 ~
-353 4096 6
+353 0 6
 D1
 ~
 ~
@@ -563,7 +563,7 @@ of water is also curbed by two large &+Lridges of rock&n, one to the east and
 one to the west. They direct the river southwards, towards the end of this
 rocky precipice.&n
 ~
-353 4096 4
+353 0 2
 D0
 ~
 ~
@@ -619,7 +619,7 @@ unsteady. The view over the tree-tops in breathtaking, however. There seems
 to be a light green aura that vibrates in the air. The jungle looks unspoiled
 and extremely natural, as if no human hand had ever touched anything.&n
 ~
-353 4096 4
+353 4096 5
 D0
 ~
 ~
@@ -983,7 +983,7 @@ side of the trail. The damp soil underfoot is very &+Ldark&n, but the &+Gplants 
 seem to thrive on it. The trail turns southward soon after the &+bpool &nis out of
 view.&n
 ~
-353 0 1
+353 0 3
 D2
 ~
 ~
@@ -1001,7 +1001,7 @@ side of the trail. The damp soil underfoot is very &+Ldark&n, but the &+Gplants 
 seem to thrive on it. The trail turns westward soon after the &+bpool &nis back
 in view.&n
 ~
-353 0 1
+353 0 3
 D0
 ~
 ~
@@ -1137,7 +1137,7 @@ it easy see over them. The trail continues out of sight to the north, to a
 &+bpool &nof water to the east, and the vegetation gets taller as the trail winds
 towards the south.&n
 ~
-353 4 1
+353 4 3
 D0
 ~
 ~
@@ -1159,7 +1159,7 @@ it easy see over them. The trail gets narrower as it leads away from the
 &+bpool &nof water to the east, and the vegetation gets taller as the trail winds
 towards the south.&n
 ~
-353 0 1
+353 0 3
 D1
 ~
 ~
@@ -1177,7 +1177,7 @@ depressing and then going back to its original shape with every shape. The
 noises of the jungle are quite loud, with many birds chirping and chattering.
 The trail continues north and west.&n
 ~
-353 0 1
+353 0 3
 D0
 ~
 ~
@@ -1195,7 +1195,7 @@ depressing and then going back to its original shape with every shape. The
 noises of the jungle are quite loud, with many birds chirping and chattering.
 The trail continues east and south.&n
 ~
-353 0 1
+353 0 3
 D1
 ~
 ~
@@ -1214,7 +1214,7 @@ disappears around a bend quite early. The &+Gvegetation &nto the west and south
 seems sparser, and the trail leading in those directions seems like a game
 trail.&n
 ~
-353 0 1
+353 0 3
 D0
 ~
 ~
@@ -1378,7 +1378,7 @@ be a tight squeeze. To the north is the &+Bdeep pool &nand the &+Lchasm &nit's r
 into, and to the south is what looks to be almost a solid wall of &+yb&+Ya&+ymb&+Yo&+yo&n. A
 little bit of tricky maneuvering will lead to a clearer spot to the south.&n
 ~
-353 4 0
+353 4 3
 D0
 ~
 ~
@@ -1684,7 +1684,7 @@ ground, there is a virtual forest of &+yb&+Ya&+ymb&+Yo&+yo &nhere. The stalks gr
 together that it is hard to see the &+ytrail &ntwo feet in front of you. The
 &+ytrail &nseems to go north, east and south from here.&n
 ~
-353 0 1
+353 0 3
 D0
 ~
 ~
@@ -1706,7 +1706,7 @@ ground, there is a virtual forest of &+yb&+Ya&+ymb&+Yo&+yo &nhere. The stalks gr
 together that it is hard to see the &+ytrail &ntwo feet in front of you. The
 &+ytrail &nseems to go north and east from here.&n
 ~
-353 0 1
+353 0 3
 D0
 ~
 ~
@@ -1884,7 +1884,7 @@ cushion and keep the user warm. The walls are covered with elegant carvings,
 what looks to be an almost solid pole of &+cf&+ml&+Yo&+Ww&+Me&+rr&+Ci&+Gn&+Bg &+Gv&+gi&+Gn&+ge&+Gs &nruns down the center
 of the room from a hole in the ceiling.&n
 ~
-353 8433664 0
+353 8433664 13
 D3
 ~
 ~
@@ -1899,7 +1899,7 @@ S
 &nThis tunnel smells fainly musky, but a breeze is running from somewhere. The
 floor is soft dirt and the walls are smooth and featureless.&n
 ~
-353 8429580 0
+353 8429580 13
 D0
 ~
 ~
@@ -1914,7 +1914,7 @@ S
 &nThis tunnel smells fainly musky, but a breeze is running from somewhere. The
 floor is soft dirt and the walls are smooth and featureless.&n
 ~
-353 8429580 0
+353 8429580 13
 D1
 ~
 ~
@@ -1929,7 +1929,7 @@ S
 &nThis tunnel smells fainly musky, but a breeze is running from somewhere. The
 floor is soft dirt and the walls are smooth and featureless.&n
 ~
-353 8429580 0
+353 8429580 13
 D0
 ~
 ~
@@ -1944,7 +1944,7 @@ S
 &nThis tunnel smells fainly musky, but a breeze is running from somewhere. The
 floor is soft dirt and the walls are smooth and featureless.&n
 ~
-353 8429580 0
+353 8429580 13
 D1
 ~
 ~
@@ -1959,7 +1959,7 @@ S
 &nThis tunnel smells fainly musky, but a breeze is running from somewhere. The
 floor is soft dirt and the walls are smooth and featureless.&n
 ~
-353 8429580 0
+353 8429580 13
 D0
 ~
 ~
@@ -1974,7 +1974,7 @@ S
 &nThis tunnel smells fainly musky, but a breeze is running from somewhere. The
 floor is soft dirt and the walls are smooth and featureless.&n
 ~
-353 8429580 0
+353 8429580 13
 D2
 ~
 ~
@@ -2048,7 +2048,7 @@ S
 &+Gv&+gi&+Gn&+ge&+Gs &ncrawl over the floor, walls and ceiling, but do not put even a tendril
 onto a statue in the southwest corner of the passage.&n
 ~
-353 32776 0
+353 32776 13
 D0
 ~
 ~
@@ -2074,7 +2074,7 @@ S
 &+Gv&+gi&+Gn&+ge&+Gs &ncrawl over the floor, walls and ceiling, but do not put even a tendril
 onto a statue in the northwest corner of the passage.&n
 ~
-353 32776 0
+353 32776 13
 D1
 ~
 ~
@@ -2097,7 +2097,7 @@ of &+Ldark stone &nwith flecks of &+Ygolden yellow &nin it. Dense &+Gv&+gi&+Gn&+
 the floor, walls and ceiling, but do not put even a tendril onto a statue
 in the southeast corner of the passage.&n
 ~
-353 32776 0
+353 32776 13
 D0
 ~
 rock rocks~
@@ -2123,7 +2123,7 @@ holes that are in the ground here and does not back up. It appears that the
 water goes back underground and emerges somewhere else. It looks like you
 could possibly get back to the area to the west.&n
 ~
-353 0 0
+353 0 13
 D2
 &nThe &+Lrocks &nhere look as if they have been piled up oddly, almost as if
 you could push on one and open up the wall...&n
@@ -2152,7 +2152,7 @@ widened here at the bottom, about three feet wide now. The &+Lrocks &nand &+Gv&+
 tumbles down the rocks on top of you. The &+Bwater &nmoves swiftly to the east and
 you could possibly get back to the area to the west.&n
 ~
-353 0 0
+353 0 13
 D1
 ~
 ~
@@ -2173,7 +2173,7 @@ widened here at the bottom, about three feet wide now. The &+Lrocks &nand &+Gv&+
 &ncovering the floor are incredibly slippery, as the water from the &+bpool &nabove
 tumbles down the rocks on top of you. The &+Bwater &nmoves swiftly to the east.&n
 ~
-353 0 0
+353 0 13
 D1
 ~
 ~
