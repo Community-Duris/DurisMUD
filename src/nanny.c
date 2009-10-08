@@ -2253,7 +2253,7 @@ void enter_game(P_desc d)
 
   struct affected_type *af;
 
-  if ((af = get_spell_from_char(ch, SPELL_RACE_CHANGE)) != NULL)
+  if ((af = get_spell_from_char(ch, TAG_RACE_CHANGE)) != NULL)
   {
     ch->player.race = af->modifier;
     affect_remove(ch, af);

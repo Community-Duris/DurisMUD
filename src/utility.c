@@ -3719,7 +3719,7 @@ int GET_ALT_SIZE(P_char ch)
 {
   int size = GET_SIZE(ch);
 
-  if( affected_by_spell(ch,SPELL_RACE_CHANGE) )
+  if( affected_by_spell(ch,TAG_RACE_CHANGE) )
     size = race_size(GET_RACE(ch));
   
   

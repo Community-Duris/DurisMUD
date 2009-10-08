@@ -1020,6 +1020,7 @@
 #define TAG_ARROW_BLEED              2057
 #define TAG_STOP_PROC                2058 
 #define TAG_TROLL_BURN               2059
+#define TAG_RACE_CHANGE              2060
 
 #define DAMAGE_FALLING               2100       /* From falling to the ground */
 

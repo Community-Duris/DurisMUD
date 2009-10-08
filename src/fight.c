@@ -534,7 +534,7 @@ void heal(P_char ch, P_char healer, int hits, int cap)
   
   hits = vamp(ch, hits, cap);
 
-debug("Hitting heal function in fight with (%d) hits.", hits);
+// debug("Hitting heal function in fight with (%d) hits.", hits);
   if(IS_PC(healer) &&
      IS_FIGHTING(ch) &&
      hits > 5)
@@ -2010,554 +2010,555 @@ void die(P_char ch, P_char killer)
   P_obj tempobj;
   struct affected_type *af, *next_af;
   P_obj corpse = NULL;
-  int loss = 0, diff, x, i;
+  int loss = 0, diff, x, i, j;
 
   if(!ch)
   {
     logit(LOG_EXIT, "die called in fight.c with no ch");
     raise(SIGSEGV);
   }
-  if(ch) // Just making sure.
+
+  if(!killer)
   {
-    if(!killer)
+    return;
+  }
+  
+  for (af = ch->affected; af; af = af->next)
+  {
+    if(af->type == TAG_RACE_CHANGE)
     {
-      return;
-    }
-    /* switched god */
-    if(ch->desc &&
-       ch->desc->original &&
-       ch->desc->original->only.pc->switched)
-    {
-      do_return(ch, 0, -4);
-    }
-
-    ch = ForceReturn(ch);
-    /* count xp gained by killer */
-
-    /* make mirror images disappear */
-    if(IS_NPC(ch) &&
-      GET_VNUM(ch) == 250)
-    {
-      act("Upon being struck, $n disappears into thin air.", TRUE, ch, 0, 0, TO_ROOM);
-      extract_char(ch);
-      return;
-    }
-
-    /* drop any disguise */
-    if(IS_DISGUISE(ch))
-    {
-     remove_disguise(ch, TRUE);
-    }
-    
-    if (ch && killer)
-      if (check_outpost_death(ch, killer))
-        return;
-
-    act("$n is dead! &+RR.I.P.&n", TRUE, ch, 0, 0, TO_ROOM);
-    act("&-L&+rYou feel yourself falling to the ground.&n", FALSE, ch, 0, 0, TO_CHAR);
-    act("&-L&+rYour soul leaves your body in the cold sleep of death...&n", FALSE,
-        ch, 0, 0, TO_CHAR);
-
-    if(check_reincarnate(ch))
-    {
-      return;
-    }
-
-    if(get_linked_char(ch, LNK_ETHEREAL) ||
-      get_linking_char(ch, LNK_ETHEREAL))
-    {
-      if(get_linked_char(ch, LNK_ETHEREAL))
-      {
-         eth_ch = get_linked_char(ch, LNK_ETHEREAL);
-      }
-      else if(get_linking_char(ch, LNK_ETHEREAL))
-      {
-        eth_ch = get_linking_char(ch, LNK_ETHEREAL);
-      }
-      clear_links(eth_ch, LNK_ETHEREAL);
-      clear_links(ch, LNK_ETHEREAL);
-    }
-    if(!killer)
-    {
-      return;
-    }
-    holy_crusade_check(killer, ch);
-    soul_taking_check(killer, ch);
-
-    if((IS_NPC(ch) || ch->desc) &&
-      (killer != ch) &&
-      !IS_TRUSTED(killer) &&
-      ch &&
-      killer) 
-    {
-      kill_gain(killer, ch);
-
-      if(IS_NPC(ch) &&
-         IS_SET(ch->specials.act, ACT_ELITE) &&
-         GET_LEVEL(ch) > 45)
-      {
-        group_gain_epic(killer, EPIC_ELITE_MOB, GET_VNUM(ch),
-          (GET_LEVEL(ch) - 40) / 2);
-      }
-    }
-    /* victim is pc */
-    if(killer &&
-      IS_PC(ch) &&
-      !IS_TRUSTED(ch) &&
-      !IS_TRUSTED(killer))
-    {
-      logit(LOG_DEATH, "%s killed by %s at %s", GET_NAME(ch),
-            (IS_NPC(killer) ? killer->player.short_descr : GET_NAME(killer)),
-            world[ch->in_room].name);
-      statuslog(ch->player.level, "%s killed by %s at [%d] %s", GET_NAME(ch),
-                (IS_NPC(killer) ? killer->player.
-                 short_descr : GET_NAME(killer)), world[ch->in_room].number,
-                world[ch->in_room].name);
-
-      if((IS_PC(killer) ||
-        IS_PC_PET(killer)) &&
-        (killer != ch))
-      {
-        setHeavenTime(ch);
-        if(opposite_racewar(ch, killer))
-        {
-          sql_save_pkill(killer, ch);
-        }
-      }
-      if(CHAR_IN_ARENA(ch))
-      {
-        ;
-      }
-      else if(IS_PC(killer) &&
-              fragWorthy(killer, ch))
-      {
-        AddFrags(killer, ch);
-      }
-      else if(IS_PC_PET(killer) &&
-              fragWorthy(GET_MASTER(killer), ch))
-      {
-        AddFrags(killer, ch);
-      }
-    }
-
-    if(IS_NPC(killer) &&
-      CAN_ACT(killer) &&
-      killer != ch &&
-      MIN_POS(killer, POS_STANDING + STAT_RESTING))
-    {
-      add_event(retarget_event, PULSE_VIOLENCE - 1, killer, NULL, NULL, 0, NULL, 0);
-    }
-    /* count xp loss for victim and apply */
-    if(IS_PC(ch) &&
-      !CHAR_IN_ARENA(ch) &&
-      !IS_TRUSTED(ch))
-    {
-      loss = gain_exp(ch, NULL, 0, EXP_DEATH);
-    }
-
-    if(IS_PC(killer))
-    {
-      nq_char_death(killer, ch);
-    }
-    if (ch->specials.fighting)
-    {
-      stop_fighting(ch);
-    }
-    StopAllAttackers(ch);
-
-    REMOVE_BIT(ch->specials.act2, PLR2_WAIT);
-
-    if(!ch || !killer)
-    {
-      return;
-    }
-    
-    if(!CAN_SPEAK(ch))
-    {
-      death_rattle(ch);
-    }
-    else
-    {
-      death_cry(ch);
-    }
-    
-    // dragon mobs now will drop a dragon scale
-    if(GET_RACE(ch) == RACE_DRAGON)
-    {
-       P_obj tempobj = read_object(392, VIRTUAL);
-       obj_to_char(tempobj, ch);
-    }
-
-    //Random object code - Normal kills.  Kvark
-    if((IS_PC(killer) ||
-        IS_PC_PET(killer)) &&
-        IS_NPC(ch) &&
-        IS_ALIVE(killer))
-    {
-      if(check_random_drop(killer, ch, 0))
-      {
-        if(!number(0, 25) &&
-          (GET_LEVEL(ch) > 51))
-        {
-          tempobj = create_stones(ch);
-        }
-        else
-        {
-          tempobj = create_random_eq_new(killer, ch, -1, -1);
-        }
-        if(tempobj &&
-           ch)
-        {
-          obj_to_char(tempobj, ch);
-        }
-      }
-
-      if(check_random_drop(killer, ch, 1))
-      {
-        if(!number(0, 25) &&
-          (GET_LEVEL(ch) > 51))
-        {
-          tempobj = create_stones(ch);
-        }
-        else
-        {
-          tempobj = create_material(killer, ch);
-        }
-        if(tempobj &&
-           ch)
-        {
-          obj_to_char(tempobj, ch);
-        }
-      }
-    }
-    
-    update_pos(ch);
-    SET_POS(ch, GET_POS(ch) + STAT_DEAD);
-    update_pos(ch);
-    
-    if(get_spell_from_char(ch, SPELL_RACE_CHANGE))
-    {  
       ch->player.race = af->modifier;
       affect_remove(ch, af);
     }
-    
-    if(!CHAR_IN_ARENA(ch) ||
-       IS_NPC(ch))
+  }
+  
+  /* switched god */
+  if(ch->desc &&
+     ch->desc->original &&
+     ch->desc->original->only.pc->switched)
+  {
+    do_return(ch, 0, -4);
+  }
+
+  ch = ForceReturn(ch);
+  /* count xp gained by killer */
+
+  /* make mirror images disappear */
+  if(IS_NPC(ch) &&
+    GET_VNUM(ch) == 250)
+  {
+    act("Upon being struck, $n disappears into thin air.", TRUE, ch, 0, 0, TO_ROOM);
+    extract_char(ch);
+    return;
+  }
+
+  /* drop any disguise */
+  if(IS_DISGUISE(ch))
+  {
+    remove_disguise(ch, TRUE);
+  }
+  
+  if (ch && killer)
+    if (check_outpost_death(ch, killer))
+      return;
+
+  act("$n is dead! &+RR.I.P.&n", TRUE, ch, 0, 0, TO_ROOM);
+  act("&-L&+rYou feel yourself falling to the ground.&n", FALSE, ch, 0, 0, TO_CHAR);
+  act("&-L&+rYour soul leaves your body in the cold sleep of death...&n", FALSE,
+      ch, 0, 0, TO_CHAR);
+
+  if(check_reincarnate(ch))
+  {
+    return;
+  }
+
+  if(get_linked_char(ch, LNK_ETHEREAL) ||
+    get_linking_char(ch, LNK_ETHEREAL))
+  {
+    if(get_linked_char(ch, LNK_ETHEREAL))
     {
-      if (killer->in_room >= 0)
+       eth_ch = get_linked_char(ch, LNK_ETHEREAL);
+    }
+    else if(get_linking_char(ch, LNK_ETHEREAL))
+    {
+      eth_ch = get_linking_char(ch, LNK_ETHEREAL);
+    }
+    clear_links(eth_ch, LNK_ETHEREAL);
+    clear_links(ch, LNK_ETHEREAL);
+  }
+  if(!killer)
+  {
+    return;
+  }
+  holy_crusade_check(killer, ch);
+  soul_taking_check(killer, ch);
+
+  if((IS_NPC(ch) || ch->desc) &&
+    (killer != ch) &&
+    !IS_TRUSTED(killer) &&
+    ch &&
+    killer) 
+  {
+    kill_gain(killer, ch);
+
+    if(IS_NPC(ch) &&
+       IS_SET(ch->specials.act, ACT_ELITE) &&
+       GET_LEVEL(ch) > 45)
+    {
+      group_gain_epic(killer, EPIC_ELITE_MOB, GET_VNUM(ch),
+        (GET_LEVEL(ch) - 40) / 2);
+    }
+  }
+  /* victim is pc */
+  if(killer &&
+    IS_PC(ch) &&
+    !IS_TRUSTED(ch) &&
+    !IS_TRUSTED(killer))
+  {
+    logit(LOG_DEATH, "%s killed by %s at %s", GET_NAME(ch),
+          (IS_NPC(killer) ? killer->player.short_descr : GET_NAME(killer)),
+          world[ch->in_room].name);
+    statuslog(ch->player.level, "%s killed by %s at [%d] %s", GET_NAME(ch),
+              (IS_NPC(killer) ? killer->player.
+               short_descr : GET_NAME(killer)), world[ch->in_room].number,
+              world[ch->in_room].name);
+
+    if((IS_PC(killer) ||
+      IS_PC_PET(killer)) &&
+      (killer != ch))
+    {
+      setHeavenTime(ch);
+      if(opposite_racewar(ch, killer))
       {
-        for(tmp_ch = world[killer->in_room].people; tmp_ch; tmp_ch = tmp_ch->next_in_room)
+        sql_save_pkill(killer, ch);
+      }
+    }
+    if(CHAR_IN_ARENA(ch))
+    {
+      ;
+    }
+    else if(IS_PC(killer) &&
+            fragWorthy(killer, ch))
+    {
+      AddFrags(killer, ch);
+    }
+    else if(IS_PC_PET(killer) &&
+            fragWorthy(GET_MASTER(killer), ch))
+    {
+      AddFrags(killer, ch);
+    }
+  }
+
+  if(IS_NPC(killer) &&
+    CAN_ACT(killer) &&
+    killer != ch &&
+    MIN_POS(killer, POS_STANDING + STAT_RESTING))
+  {
+    add_event(retarget_event, PULSE_VIOLENCE - 1, killer, NULL, NULL, 0, NULL, 0);
+  }
+  /* count xp loss for victim and apply */
+  if(IS_PC(ch) &&
+    !CHAR_IN_ARENA(ch) &&
+    !IS_TRUSTED(ch))
+  {
+    loss = gain_exp(ch, NULL, 0, EXP_DEATH);
+  }
+
+  if(IS_PC(killer))
+  {
+    nq_char_death(killer, ch);
+  }
+  if (ch->specials.fighting)
+  {
+    stop_fighting(ch);
+  }
+  StopAllAttackers(ch);
+
+  REMOVE_BIT(ch->specials.act2, PLR2_WAIT);
+
+  if(!ch || !killer)
+  {
+    return;
+  }
+  
+  if(!CAN_SPEAK(ch))
+  {
+    death_rattle(ch);
+  }
+  else
+  {
+    death_cry(ch);
+  }
+  
+  // dragon mobs now will drop a dragon scale
+  if(GET_RACE(ch) == RACE_DRAGON)
+  {
+     P_obj tempobj = read_object(392, VIRTUAL);
+     obj_to_char(tempobj, ch);
+  }
+/*
+  //Random object code - Normal kills.  Kvark
+  if((IS_PC(killer) ||
+      IS_PC_PET(killer)) &&
+      IS_NPC(ch) &&
+      IS_ALIVE(killer))
+  {
+    if(check_random_drop(killer, ch, 0))
+    {
+      if(!number(0, 25) &&
+        (GET_LEVEL(ch) > 51))
+      {
+        tempobj = create_stones(ch);
+      }
+      else
+      {
+        tempobj = create_random_eq_new(killer, ch, -1, -1);
+      }
+      if(tempobj &&
+         ch)
+      {
+        obj_to_char(tempobj, ch);
+      }
+    }
+
+    if(check_random_drop(killer, ch, 1))
+    {
+      if(!number(0, 25) &&
+        (GET_LEVEL(ch) > 51))
+      {
+        tempobj = create_stones(ch);
+      }
+      else
+      {
+        tempobj = create_material(killer, ch);
+      }
+      
+      if(tempobj)
+      {
+        obj_to_char(tempobj, ch);
+      }
+    }
+  }
+*/
+  update_pos(ch);
+  SET_POS(ch, GET_POS(ch) + STAT_DEAD);
+  update_pos(ch);
+  
+  if(!CHAR_IN_ARENA(ch) ||
+     IS_NPC(ch))
+  {
+    if (killer->in_room >= 0)
+    {
+      for(tmp_ch = world[killer->in_room].people; tmp_ch; tmp_ch = tmp_ch->next_in_room)
+      {
+        if(killer->group)
         {
-          if(killer->group)
+          if(killer->group == tmp_ch->group &&
+            tmp_ch != ch &&
+            killer != tmp_ch)
           {
-            if(killer->group == tmp_ch->group &&
-              tmp_ch != ch &&
-              killer != tmp_ch)
+            if(IS_PC(killer) || 
+               IS_PC_PET(killer))
             {
-              if(IS_PC(killer) || 
-                 IS_PC_PET(killer))
-              {
-                quest_kill(tmp_ch , ch);
-              }
+              quest_kill(tmp_ch , ch);
             }
           }
         }
       }
+    }
 
-      if(IS_NPC(ch) &&
-        (ch->specials.act & ACT_SPEC_DIE) &&
-        (ch->specials.act & ACT_SPEC))
+    if(IS_NPC(ch) &&
+      (ch->specials.act & ACT_SPEC_DIE) &&
+      (ch->specials.act & ACT_SPEC))
+    {
+      if(!mob_index[GET_RNUM(ch)].func.mob)
       {
-        if(!mob_index[GET_RNUM(ch)].func.mob)
-        {
-          sprintf(buf, "%s %d", ch->player.name, GET_RNUM(ch));
-          logit(LOG_STATUS, buf);
-          logit(LOG_STATUS, "No special function for ACT_SPEC_DIE");
-          REMOVE_BIT(ch->specials.act, ACT_SPEC_DIE);
-          corpse = make_corpse(ch, loss);
-        }
-        else
-        {
-          (*mob_index[GET_RNUM(ch)].func.mob) (ch, killer, CMD_DEATH, 0);
-        }
-      }
-      else
-      {
+        sprintf(buf, "%s %d", ch->player.name, GET_RNUM(ch));
+        logit(LOG_STATUS, buf);
+        logit(LOG_STATUS, "No special function for ACT_SPEC_DIE");
+        REMOVE_BIT(ch->specials.act, ACT_SPEC_DIE);
         corpse = make_corpse(ch, loss);
       }
-      //world quest hook
-      if(IS_PC(killer) || 
-         IS_PC_PET(killer))
-      {
-        quest_kill(killer , ch);
-      }
-      
-      if(corpse &&
-        killer != ch &&
-        has_innate(killer, INNATE_MUMMIFY))
-      {
-        mummify(killer, ch, corpse);
-      }
-      
-      if(corpse &&
-        killer != ch &&
-        ( affected_by_spell(killer, SPELL_SPAWN) ||
-        has_innate(killer, INNATE_SPAWN) ) )
-      {
-        if((IS_NPC(ch) &&
-          !number(0, 2)) ||
-          !number(0, 3))
-        {
-          spawn_raise_undead(killer, ch, corpse);        
-        }
-      }
-
-      if(IS_PC(ch))
-      {
-        if(!CHAR_IN_ARENA(ch))
-        {
-          ch->only.pc->numb_deaths++;
-        }
-        // Hardcore chars die after 5 deaths.
-        if((ch->only.pc->numb_deaths > 4) &&
-          IS_HARDCORE(ch))
-        {
-          update_pos(ch);
-          checkHallOfFame(ch, GET_NAME(killer));
-          act("&+LThe &+rhand &+Lof &+WGod &+Lgrabs &+R$n &+Lby the &+cthroat&+L.&N",
-             FALSE, ch, 0, 0, TO_ROOM);
-          act("&+LThe &+rhand &+Lof &+WGod &+Ltears &+R$n&+L's &+wsoul &+Lfrom this &+cplane &+Lof existence.&N",
-             FALSE, ch, 0, 0, TO_ROOM);
-          act("&+L$n's &+cbody &+Llands on the ground in a crumpled heap, &+wsoul &+Lgone forever.&N",
-             FALSE, ch, 0, 0, TO_ROOM);
-
-          send_to_char
-            ("&+LThe &+rhand &+Lof &+WGod &+Lgrabs &+RYou &+Lby the &+cthroat&+L.&N\r\n",
-             ch);
-          send_to_char
-            ("&+LThe &+rhand &+Lof &+WGod &+Ltears &+RYour&+L &+wsoul &+Lfrom this &+cplane &+Lof existence.&N\r\n",
-             ch);
-          send_to_char
-            ("&+WGod&+L stands before you and says '&+wYou have died your last death, Your existence shall not continue.&+L'\r\n",
-             ch);
-          send_to_char
-            ("&+WGod&+L says '&+wYou have died a miserable soul with a value of &+R&+w.&+L'&N\r\n",
-             ch);
-
-          statuslog(ch->player.level,
-                    "%s's existence on Duris was just ended...by %s!",
-                    GET_NAME(ch), GET_NAME(killer));
-          if (ch->desc)
-          {
-            close_socket(ch->desc);
-          }
-          extract_char(ch);
-          deleteCharacter(ch);
-          free_char(ch);
-          ch = NULL;
-          return;
-        }
-        
-        GET_MANA(ch) = 0;
-
-        for(af = ch->affected; af; af = next_af)
-        {
-          next_af = af->next;
-          if (!(af->flags & AFFTYPE_PERM))
-          {
-            affect_remove(ch, af);
-          }
-          else if (af->type == TAG_MEMORIZE)
-          {
-            af->flags &= ~MEMTYPE_FULL;
-          }
-        }
-
-        ClearCharEvents(ch);
-        ch->specials.conditions[DISEASE_TYPE] = 0;
-        ch->specials.conditions[POISON_TYPE] = 0;
-
-        /* remove all undead/druid/harpy spells */
-        for(i = 1; i <= MAX_CIRCLE; i++)
-        {
-          ch->specials.undead_spell_slots[i] = 0;
-        }
-
-        update_pos(ch);
-        SET_POS(ch, STAT_DEAD + GET_POS(ch));
-        update_pos(ch);
-        
-        /* even things out so it doesn't barf when removing perm affect items */
-        affect_total(ch, FALSE);
-      }
-    }
-    /*
-     * this WAS in extract_char, but only death removes you from mobs mem
-     * now. renting won't do it, as long as the game is up and neither
-     * char nor mob dies, they WILL remember!
-     */
-
-    if(IS_PC(ch) && !CHAR_IN_ARENA(ch))
-    {
-      P_char   mob, mob_next;
-
-      for (mob = character_list; mob; mob = mob_next)
-      {
-        mob_next = mob->next;
-        forget(mob, ch);
-      }
-    }
-    if(IS_PC(ch))
-    {
-      REMOVE_BIT(ch->specials.act2, PLR2_SPEC_TIMER);
-      GET_HIT(ch) = 1;
-      if(!CHAR_IN_ARENA(ch))
-      {
-        writeCharacter(ch, 4, NOWHERE);
-      }
-      ch->only.pc->pc_timer[1] = 0;       // reset flee timer
-    }
-
-    add_track(ch, NUMB_EXITS);
-
-    if(!CHAR_IN_ARENA(ch) ||
-      IS_NPC(ch))
-    {
-      if(IS_NPC(ch))
-      {
-        extract_char(ch);
-        ch = NULL;
-      }
       else
       {
-        extract_char(ch);
-        if (!ch->desc)
-        {
-          free_char(ch);
-        }
+        (*mob_index[GET_RNUM(ch)].func.mob) (ch, killer, CMD_DEATH, 0);
       }
     }
     else
     {
-      int      i, nr;
-      char     strn[MAX_STRING_LENGTH];
-
-      if(ch == killer)
+      corpse = make_corpse(ch, loss);
+    }
+    //world quest hook
+    if(IS_PC(killer) || 
+       IS_PC_PET(killer))
+    {
+      quest_kill(killer , ch);
+    }
+    
+    if(corpse &&
+      killer != ch &&
+      has_innate(killer, INNATE_MUMMIFY))
+    {
+      mummify(killer, ch, corpse);
+    }
+    
+    if(corpse &&
+      killer != ch &&
+      ( affected_by_spell(killer, SPELL_SPAWN) ||
+      has_innate(killer, INNATE_SPAWN) ) )
+    {
+      if((IS_NPC(ch) &&
+        !number(0, 2)) ||
+        !number(0, 3))
       {
-        sprintf(strn, "&+W%s killed %s own dumb self!&N\r\n", GET_NAME(ch),
-                HSHR(ch));
-        send_to_arena(strn, -1);
-        ARENA_PLAYER(ch).frags -= 1;
+        spawn_raise_undead(killer, ch, corpse);        
       }
-      else
+    }
+
+    if(IS_PC(ch))
+    {
+      if(!CHAR_IN_ARENA(ch))
       {
-        sprintf(strn, "&+R%s was %s by %s!&N\r\n", GET_NAME(ch),
-                arena_death_msg(killer->equipment[WIELD]), GET_NAME(killer));
-        send_to_arena(strn, -1);
-        ARENA_PLAYER(killer).frags += 2;
-        arena.team[arena_team(killer)].score += 1;
-        send_to_char("&+GYou gain 2 frags for scoring a primary kill!&N\r\n",  killer);
-        if (arena.type != TYPE_DEATHMATCH ||
-            arena.type != TYPE_KING_OF_THE_HILL)
+        ch->only.pc->numb_deaths++;
+      }
+      // Hardcore chars die after 5 deaths.
+      if((ch->only.pc->numb_deaths > 4) &&
+        IS_HARDCORE(ch))
+      {
+        update_pos(ch);
+        checkHallOfFame(ch, GET_NAME(killer));
+        act("&+LThe &+rhand &+Lof &+WGod &+Lgrabs &+R$n &+Lby the &+cthroat&+L.&N",
+           FALSE, ch, 0, 0, TO_ROOM);
+        act("&+LThe &+rhand &+Lof &+WGod &+Ltears &+R$n&+L's &+wsoul &+Lfrom this &+cplane &+Lof existence.&N",
+           FALSE, ch, 0, 0, TO_ROOM);
+        act("&+L$n's &+cbody &+Llands on the ground in a crumpled heap, &+wsoul &+Lgone forever.&N",
+           FALSE, ch, 0, 0, TO_ROOM);
+
+        send_to_char
+          ("&+LThe &+rhand &+Lof &+WGod &+Lgrabs &+RYou &+Lby the &+cthroat&+L.&N\r\n",
+           ch);
+        send_to_char
+          ("&+LThe &+rhand &+Lof &+WGod &+Ltears &+RYour&+L &+wsoul &+Lfrom this &+cplane &+Lof existence.&N\r\n",
+           ch);
+        send_to_char
+          ("&+WGod&+L stands before you and says '&+wYou have died your last death, Your existence shall not continue.&+L'\r\n",
+           ch);
+        send_to_char
+          ("&+WGod&+L says '&+wYou have died a miserable soul with a value of &+R&+w.&+L'&N\r\n",
+           ch);
+
+        statuslog(ch->player.level,
+                  "%s's existence on Duris was just ended...by %s!",
+                  GET_NAME(ch), GET_NAME(killer));
+        if (ch->desc)
         {
-          for (tmp_ch = world[killer->in_room].people; tmp_ch;
-               tmp_ch = tmp_ch->next_in_room)
+          close_socket(ch->desc);
+        }
+        extract_char(ch);
+        deleteCharacter(ch);
+        free_char(ch);
+        ch = NULL;
+        return;
+      }
+      
+      GET_MANA(ch) = 0;
+
+      for(af = ch->affected; af; af = next_af)
+      {
+        next_af = af->next;
+        if (!(af->flags & AFFTYPE_PERM))
+        {
+          affect_remove(ch, af);
+        }
+        else if (af->type == TAG_MEMORIZE)
+        {
+          af->flags &= ~MEMTYPE_FULL;
+        }
+      }
+
+      ClearCharEvents(ch);
+      ch->specials.conditions[DISEASE_TYPE] = 0;
+      ch->specials.conditions[POISON_TYPE] = 0;
+
+      /* remove all undead/druid/harpy spells */
+      for(i = 1; i <= MAX_CIRCLE; i++)
+      {
+        ch->specials.undead_spell_slots[i] = 0;
+      }
+
+      update_pos(ch);
+      SET_POS(ch, STAT_DEAD + GET_POS(ch));
+      update_pos(ch);
+      
+      /* even things out so it doesn't barf when removing perm affect items */
+      affect_total(ch, FALSE);
+    }
+  }
+  /*
+   * this WAS in extract_char, but only death removes you from mobs mem
+   * now. renting won't do it, as long as the game is up and neither
+   * char nor mob dies, they WILL remember!
+   */
+
+  if(IS_PC(ch) && !CHAR_IN_ARENA(ch))
+  {
+    P_char   mob, mob_next;
+
+    for (mob = character_list; mob; mob = mob_next)
+    {
+      mob_next = mob->next;
+      forget(mob, ch);
+    }
+  }
+  if(IS_PC(ch))
+  {
+    REMOVE_BIT(ch->specials.act2, PLR2_SPEC_TIMER);
+    GET_HIT(ch) = 1;
+    if(!CHAR_IN_ARENA(ch))
+    {
+      writeCharacter(ch, 4, NOWHERE);
+    }
+    ch->only.pc->pc_timer[1] = 0;       // reset flee timer
+  }
+
+  add_track(ch, NUMB_EXITS);
+
+  if(!CHAR_IN_ARENA(ch) ||
+    IS_NPC(ch))
+  {
+    if(IS_NPC(ch))
+    {
+      extract_char(ch);
+      ch = NULL;
+    }
+    else
+    {
+      extract_char(ch);
+      if (!ch->desc)
+      {
+        free_char(ch);
+      }
+    }
+  }
+  else
+  {
+    int      i, nr;
+    char     strn[MAX_STRING_LENGTH];
+
+    if(ch == killer)
+    {
+      sprintf(strn, "&+W%s killed %s own dumb self!&N\r\n", GET_NAME(ch),
+              HSHR(ch));
+      send_to_arena(strn, -1);
+      ARENA_PLAYER(ch).frags -= 1;
+    }
+    else
+    {
+      sprintf(strn, "&+R%s was %s by %s!&N\r\n", GET_NAME(ch),
+              arena_death_msg(killer->equipment[WIELD]), GET_NAME(killer));
+      send_to_arena(strn, -1);
+      ARENA_PLAYER(killer).frags += 2;
+      arena.team[arena_team(killer)].score += 1;
+      send_to_char("&+GYou gain 2 frags for scoring a primary kill!&N\r\n",  killer);
+      if (arena.type != TYPE_DEATHMATCH ||
+          arena.type != TYPE_KING_OF_THE_HILL)
+      {
+        for (tmp_ch = world[killer->in_room].people; tmp_ch;
+             tmp_ch = tmp_ch->next_in_room)
+        {
+          if (killer->group)
           {
-            if (killer->group)
+            if (killer->group == tmp_ch->group && tmp_ch != ch &&
+                killer != tmp_ch)
             {
-              if (killer->group == tmp_ch->group && tmp_ch != ch &&
-                  killer != tmp_ch)
+              if (arena_id(tmp_ch) != -1)
               {
-                if (arena_id(tmp_ch) != -1)
-                {
-                  ARENA_PLAYER(tmp_ch).frags += 1;
-                  send_to_char("&+GYou gain a frag from an assist kill!&N\r\n",
-                               ch);
-                }
+                ARENA_PLAYER(tmp_ch).frags += 1;
+                send_to_char("&+GYou gain a frag from an assist kill!&N\r\n",
+                             ch);
               }
             }
           }
         }
       }
+    }
 
-      /* figure out which arena ch is in */
-      if(arena_id(ch) == -1)
+    /* figure out which arena ch is in */
+    if(arena_id(ch) == -1)
+    {
+      GET_HIT(ch) = GET_MAX_HIT(ch);
+      update_pos(ch);
+      send_to_char("&+WYou do not belong in the arena!&N\r\n", ch);
+      char_from_room(ch);
+      char_to_room(ch, real_room(ch->player.birthplace), -1);
+      return;
+    }
+
+    switch (arena.deathmode)
+    {
+    case DEATH_TOLL:
+    case DEATH_EVEN_TRADE:
+    case DEATH_WINNER_TAKES_ALL:
+    case DEATH_FREE:
+      char_from_room(ch);
+      if (ARENA_PLAYER(ch).lives > 0)
       {
-        GET_HIT(ch) = GET_MAX_HIT(ch);
-        update_pos(ch);
-        send_to_char("&+WYou do not belong in the arena!&N\r\n", ch);
+        ARENA_PLAYER(ch).lives--;
+        arena_char_spawn(ch);
+        sprintf(strn,
+                "&+WYou breathe new air as you respawn.\r\nLives remaining: %d\r\n",
+                ARENA_PLAYER(ch).lives);
+        send_to_char(strn, ch);
+      }
+      else
+      {
+        char_to_room(ch, real_room(arena_hometown_location[arena_team(ch)]),
+                     -1);
+        sprintf(strn, "&+C%s has been vanquished!\r\n&N", GET_NAME(ch));
+        send_to_arena(strn, -1);
+        SET_BIT(ARENA_PLAYER(ch).flags, PLAYER_DEAD);
+      }
+      GET_HIT(ch) = GET_MAX_HIT(ch);
+      update_pos(ch);
+      break;
+    default:
+      break;
+    }
+    if (arena_team_count(arena_team(ch)) < 1)
+    {
+      if(arena.type != TYPE_DEATHMATCH ||
+        arena.type != TYPE_KING_OF_THE_HILL)
+      {
+        send_to_arena("&+LOne side has been completely vanquished!&N\r\n", -1);
+        arena.stage++;
+      }
+    }
+
+    return;
+/*
+    for (i = 0; i <= LAST_HOME; i++)
+    {
+      nr = world[ch->in_room].number;
+
+      if ((nr >= hometown_arena[i][1]) &&
+          (nr <= hometown_arena[i][2]))
+      {
         char_from_room(ch);
-        char_to_room(ch, real_room(ch->player.birthplace), -1);
+        char_to_room(ch, real_room(hometown_arena[i][0]), -1);
+
+        GET_HIT(ch) = GET_MAX_HIT(ch) / 4;
+        update_pos(ch);
+
+        act("&+W$n suddenly appears with a flash.", TRUE, ch, 0, 0, TO_ROOM);
+        send_to_char("&+WYou are restored to health, albeit a bit disoriented.\r\n", ch);
+
+        CharWait(ch, 30);
+
         return;
       }
-
-      switch (arena.deathmode)
-      {
-      case DEATH_TOLL:
-      case DEATH_EVEN_TRADE:
-      case DEATH_WINNER_TAKES_ALL:
-      case DEATH_FREE:
-        char_from_room(ch);
-        if (ARENA_PLAYER(ch).lives > 0)
-        {
-          ARENA_PLAYER(ch).lives--;
-          arena_char_spawn(ch);
-          sprintf(strn,
-                  "&+WYou breathe new air as you respawn.\r\nLives remaining: %d\r\n",
-                  ARENA_PLAYER(ch).lives);
-          send_to_char(strn, ch);
-        }
-        else
-        {
-          char_to_room(ch, real_room(arena_hometown_location[arena_team(ch)]),
-                       -1);
-          sprintf(strn, "&+C%s has been vanquished!\r\n&N", GET_NAME(ch));
-          send_to_arena(strn, -1);
-          SET_BIT(ARENA_PLAYER(ch).flags, PLAYER_DEAD);
-        }
-        GET_HIT(ch) = GET_MAX_HIT(ch);
-        update_pos(ch);
-        break;
-      default:
-        break;
-      }
-      if (arena_team_count(arena_team(ch)) < 1)
-      {
-        if(arena.type != TYPE_DEATHMATCH ||
-          arena.type != TYPE_KING_OF_THE_HILL)
-        {
-          send_to_arena("&+LOne side has been completely vanquished!&N\r\n", -1);
-          arena.stage++;
-        }
-      }
-
-      return;
-/*
-      for (i = 0; i <= LAST_HOME; i++)
-      {
-        nr = world[ch->in_room].number;
-
-        if ((nr >= hometown_arena[i][1]) &&
-            (nr <= hometown_arena[i][2]))
-        {
-          char_from_room(ch);
-          char_to_room(ch, real_room(hometown_arena[i][0]), -1);
-
-          GET_HIT(ch) = GET_MAX_HIT(ch) / 4;
-          update_pos(ch);
-
-          act("&+W$n suddenly appears with a flash.", TRUE, ch, 0, 0, TO_ROOM);
-          send_to_char("&+WYou are restored to health, albeit a bit disoriented.\r\n", ch);
-
-          CharWait(ch, 30);
-
-          return;
-        }
-      }
-*/
-      send_to_char("couldn't find yer arena, this is bad.\r\n", ch);
     }
-    
+*/
+    send_to_char("couldn't find yer arena, this is bad.\r\n", ch);
   }
 }
 // end of die
@@ -5213,7 +5214,19 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
       act_flag = 0;
 
     new_stat = calculate_ch_state(victim);
-
+    
+    if(new_stat == STAT_DEAD)
+    {
+      for (af = victim->affected; af; af = af->next)
+      {
+        if(af->type == TAG_RACE_CHANGE)
+        {
+          victim->player.race = af->modifier;
+          affect_remove(victim, af);
+        }
+      }
+    }
+    
     if (!messages)
     {
       if (new_stat == STAT_DEAD)

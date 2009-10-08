@@ -1613,7 +1613,7 @@ void spell_corpseform(int level, P_char ch, char *arg, int type,
   afcf->duration = (int) get_property("spell.corpseform.duration.mins", 20);
   affect_to_char(ch, afcf);
   
-  afrc->type = SPELL_RACE_CHANGE;
+  afrc->type = TAG_RACE_CHANGE;
   afrc->flags = AFFTYPE_NODISPEL | AFFTYPE_NOSAVE;
   afrc->modifier = GET_RACE(ch);
   afrc->duration = -1;
@@ -1663,7 +1663,7 @@ void event_corpseform_wearoff(P_char ch, P_char victim, P_obj obj, void *data)
 {
   struct affected_type *afrc;
   
-  if ((afrc = get_spell_from_char(ch, SPELL_RACE_CHANGE)) != NULL)
+  if ((afrc = get_spell_from_char(ch, TAG_RACE_CHANGE)) != NULL)
   {
     if (!affected_by_spell(ch, SPELL_CORPSEFORM))
     {  

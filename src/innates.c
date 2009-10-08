@@ -382,7 +382,7 @@ bool has_innate(P_char ch, int innate)
   {
     race = ch->disguise.race;
   }
-  else if ((af = get_spell_from_char(ch, SPELL_RACE_CHANGE)) != NULL)
+  else if ((af = get_spell_from_char(ch, TAG_RACE_CHANGE)) != NULL)
   {
     if ((af2 = get_spell_from_char(ch, SPELL_CORPSEFORM)) != NULL)
     {

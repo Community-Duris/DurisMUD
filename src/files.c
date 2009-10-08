@@ -321,7 +321,7 @@ int writeStatus(char *buf, P_char ch)
   ADD_BYTE(buf, ch->player.spec);
 
   //NEVER SAVE THE "WRONG" RACE.. Kvark
-  if ((af = get_spell_from_char(ch, SPELL_RACE_CHANGE)) != NULL)
+  if ((af = get_spell_from_char(ch, TAG_RACE_CHANGE)) != NULL)
   {
     ADD_BYTE(buf, af->modifier);
   }
@@ -1718,7 +1718,7 @@ int writeCharacter(P_char ch, int type, int room)
   {
     struct affected_type *af;
 
-    if ((af = get_spell_from_char(ch, SPELL_RACE_CHANGE)) != NULL)
+    if ((af = get_spell_from_char(ch, TAG_RACE_CHANGE)) != NULL)
     {
        ch->player.race = af->modifier;
        affect_remove(ch, af);

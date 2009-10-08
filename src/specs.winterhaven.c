@@ -4147,6 +4147,8 @@ int collar_flames(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (IS_SET(world[ch->in_room].room_flags, LOCKER))
     return FALSE;
+	
+  return false; // Will fix this proc later -Lucrot
 
   return false; //Will fix proc after vacation. -Lucrot
 

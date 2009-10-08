@@ -766,7 +766,6 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
            (GET_RACE(ch) == RACE_FAERIE) || \
            (GET_RACE(ch) == RACE_VAMPIRE) || \
            (GET_RACE(ch) == RACE_RAKSHASA) || \
-           affected_by_spell(ch,SPELL_RACE_CHANGE) || \
            (GET_RACE(ch) == RACE_ANGEL) || \
            (GET_RACE(ch) == RACE_DRIDER) || \
            (GET_RACE(ch) == RACE_SNOW_OGRE) || \

@@ -11087,9 +11087,9 @@ void BackToUsualForm(P_char ch)
 {
   P_event  e, save_ce = current_event;
 
-  act("The mists in the room coalesce into $n's form..", TRUE, ch, 0, 0,
+  act("The mists in the room coalesce into $n's form...", TRUE, ch, 0, 0,
       TO_ROOM);
-  act("You return to your ordinary form..", TRUE, ch, 0, 0, TO_CHAR);
+  act("You return to your ordinary form...", TRUE, ch, 0, 0, TO_CHAR);
   
   // looks like this stuff was remove elsewhere, so commenting this out
   // but the function is used elsewhere, just no event related stuff anymore

@@ -1124,27 +1124,67 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 // No exps for killing your friends.
     if(IS_PC(ch) &&
        IS_PC(victim) &&
-       !(pvp))
+       !(pvp) &&
+       !CHAR_IN_TOWN(ch))
     {
       return 0;
     }
-// debug("kill 1 exp gain (%d)", XP);     
-    XP = (int)((XP * exp_mod(ch, victim)) / 100);     
-    XP = (int)(XP * get_property("exp.factor.kill", 1.000));
-    XP = (int)(modify_exp_by_zone_trophy(ch, type, XP));
-    XP = (int)(gain_exp_modifiers(ch, victim, XP));
-    XP = (int)(gain_exp_modifiers_race_only(ch, victim, XP));
-    XP = (int)(check_nexus_bonus(ch, XP, NEXUS_BONUS_EXP)); 
-    logit(LOG_EXP,
-          "KILL EXP: %s (%d) killed by %s (%d): old exp: %d, new exp: %d, +exp: %d",
-          GET_NAME(victim), GET_LEVEL(victim), GET_NAME(ch),
-          GET_LEVEL(ch), GET_EXP(ch), GET_EXP(ch) + XP, XP);
-          
+    
+// Hard coding goodie anti-griefing code for hometowns. Oct09 -Lucrot
+    if(IS_PC(ch) &&
+       IS_PC(victim) &&
+       CHAR_IN_TOWN(ch) &&
+       GOOD_RACE(ch) &&
+       GOOD_RACE(victim))
+    {
+      XP = (int)(-1 * (new_exp_table[GET_LEVEL(ch) + 1] >> 4));
+      send_to_char("&+WThe divine frowns upon you...\r\n", ch);
+      send_to_char("&+WArcing bolts of energy drain away your life.\r\n", ch);
+      send_to_char("&+RA red aura surrounds you.\r\n", ch);
+      
+      struct affected_type af;
+      bzero(&af, sizeof(af));
+
+      af.type = SPELL_CURSE;
+      af.flags = AFFTYPE_NODISPEL | AFFTYPE_PERM;
+      af.modifier = 20;
+      af.duration = 100;
+
+      af.location = APPLY_SAVING_SPELL;
+      affect_to_char(ch, &af);
+      
+      af.location = APPLY_SAVING_BREATH;
+      affect_to_char(ch, &af);
+      
+      af.location = APPLY_SAVING_PARA;
+      affect_to_char(ch, &af);
+      
+      af.location = APPLY_SAVING_FEAR;
+      affect_to_char(ch, &af);
+      
+      af.type = SPELL_SLOW;
+      affect_to_char(ch, &af);
+    }
+    else
+    {
+  // debug("kill 1 exp gain (%d)", XP);
+      XP = (int)((XP * exp_mod(ch, victim)) / 100);
+      XP = (int)(XP * get_property("exp.factor.kill", 1.000));
+      XP = (int)(modify_exp_by_zone_trophy(ch, type, XP));
+      XP = (int)(gain_exp_modifiers(ch, victim, XP));
+      XP = (int)(gain_exp_modifiers_race_only(ch, victim, XP));
+      XP = (int)(check_nexus_bonus(ch, XP, NEXUS_BONUS_EXP)); 
+      logit(LOG_EXP,
+            "KILL EXP: %s (%d) killed by %s (%d): old exp: %d, new exp: %d, +exp: %d",
+            GET_NAME(victim), GET_LEVEL(victim), GET_NAME(ch),
+            GET_LEVEL(ch), GET_EXP(ch), GET_EXP(ch) + XP, XP);
+    }
+    
     if(pvp)
     {
       XP = (int)(XP * get_property("gain.exp.mod.pvp", 1.250));
     }
-    
+
 // debug("melee 1 exp gain final (%d)", XP);     
   }
   else if(type == EXP_WORLD_QUEST)

@@ -4556,7 +4556,7 @@ SPELL_ADD(CLASS_NONE, 1);
   TAG_CREATE("nuked counter", TAG_NUKED_COUNTER);
   TAG_CREATE("stormcallers fury target", TAG_STORMCALLERS_FURY_TARGET);
   TAG_CREATE("kostchtchies implosion target", TAG_CHILLING_IMPLOSION_TARGET);
-  TAG_CREATE("racechange", SPELL_RACE_CHANGE);
+  TAG_CREATE("racechange", TAG_RACE_CHANGE);
   TAG_CREATE("building", TAG_BUILDING);
   TAG_CREATE("reduced exp", TAG_REDUCED_EXP);
   TAG_CREATE_WITH_MESSAGES("dread wrath", TAG_DREAD_WRATH,

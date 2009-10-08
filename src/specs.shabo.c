@@ -876,7 +876,7 @@ void event_shabo_racechange(P_char ch, P_char victim, P_obj obj, void *data)
 {
   struct affected_type *af;
 
-  if ((af = get_spell_from_char(ch, SPELL_RACE_CHANGE)) == NULL)
+  if ((af = get_spell_from_char(ch, TAG_RACE_CHANGE)) == NULL)
   {
     send_to_char
       ("&+WPossible serious screwup in the racechange proc! Tell a coder as once!&n\r\n",
@@ -959,14 +959,14 @@ int shaboath_alternation_tower(int room, P_char ch, int cmd, char *argument)
     if (IS_DISGUISE(tch))
       remove_disguise(ch, TRUE);
 
-    if ((af = get_spell_from_char(tch, SPELL_RACE_CHANGE)) == NULL)
+    if ((af = get_spell_from_char(tch, TAG_RACE_CHANGE)) == NULL)
     {
 
       struct affected_type new_affect;
 
       af = &new_affect;
       memset(af, 0, sizeof(new_affect));
-      af->type = SPELL_RACE_CHANGE;
+      af->type = TAG_RACE_CHANGE;
       af->duration = -1;
       af->flags = AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
       af->modifier = GET_RACE(tch);

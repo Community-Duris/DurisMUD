@@ -2451,7 +2451,7 @@ void event_revenant_crown(P_char ch, P_char victim, P_obj obj, void *data)
     GET_HIT(ch) >> 1;
     CharWait(ch, 2 * WAIT_SEC);
   }
-  else if ((af = get_spell_from_char(ch, SPELL_RACE_CHANGE)) == NULL)
+  else if ((af = get_spell_from_char(ch, TAG_RACE_CHANGE)) == NULL)
   {
     send_to_char
       ("&+WPossible serious screwup in the revenant helm proc! Tell a coder as once!&n\r\n",
@@ -2514,7 +2514,7 @@ int revenant_helm(P_obj obj, P_char ch, int cmd, char *arg)
         return TRUE;
       }
 
-      if (affected_by_spell(temp_ch,SPELL_RACE_CHANGE))
+      if (affected_by_spell(temp_ch,TAG_RACE_CHANGE))
       {
         return TRUE;
       }
@@ -2531,7 +2531,7 @@ int revenant_helm(P_obj obj, P_char ch, int cmd, char *arg)
       send_to_char("Brr, you suddenly feel _almost_ naked.\r\n\n", temp_ch);
 
       memset(&af, 0, sizeof(af));
-      af.type = SPELL_RACE_CHANGE;
+      af.type = TAG_RACE_CHANGE;
       af.flags = AFFTYPE_NOSAVE | AFFTYPE_NODISPEL;
       af.duration = -1;
       af.modifier = GET_RACE(temp_ch);
@@ -2551,6 +2551,7 @@ int revenant_helm(P_obj obj, P_char ch, int cmd, char *arg)
   }
   return FALSE;
 }
+
 void event_dragonlord_check(P_char ch, P_char victim, P_obj obj, void *data)
 {
   struct affected_type *af;
@@ -2558,65 +2559,75 @@ void event_dragonlord_check(P_char ch, P_char victim, P_obj obj, void *data)
   int temp, dragonlord_slot = MAX_WEAR;
   bool bHasOtherArti = false;
 
-  if(ch)
+  if(GET_RACE(ch) != RACE_DRAGONKIN)
+  { 
+    act("Your scales smoke and burn as they &+Rdisintegrate!&n",
+      FALSE, ch, obj, 0, TO_CHAR);
+    wizlog(57,"Dragonlord armor worn by %s begins to melt due race check conflict!", GET_NAME(ch));
+    GET_HIT(ch) >> 1;
+    CharWait(ch, 2 * WAIT_SEC);
+  }
+  else if((af = get_spell_from_char(ch, TAG_RACE_CHANGE)) == NULL)
   {
-    if(GET_RACE(ch) != RACE_DRAGONKIN)
-    { 
-      act("Your scales smoke and burn as they &+Rdisintegrate!&n",
-        FALSE, ch, obj, 0, TO_CHAR);
-      wizlog(57,
-      "Dragonlord armor worn by %s begins to melt due race check conflict!", GET_NAME(ch));
-      GET_HIT(ch) >> 1;
-    }
-    else if((af = get_spell_from_char(ch, SPELL_RACE_CHANGE)) == NULL)
-    {
-      send_to_char
-        ("&+WPossible serious screwup in the dragonlord proc! Tell a coder as once!&n\r\n", ch);
-      wizlog(57, "Char %s found with racechange event but without racechange affect! Dragonlord proc", GET_NAME(ch));
-      return;
-    }
-// Same code Necroplasm uses.
-    for (int i = 0; i < MAX_WEAR; i++)
-    {
-      if(ch->equipment[i] == armor)
-      {
-        dragonlord_slot = i;
-      }
-      if(ch->equipment[i] &&
-         IS_SET(ch->equipment[i]->extra_flags, ITEM_ARTIFACT) &&
-	 (ch->equipment[i] != armor))
-      {
-        bHasOtherArti = true;
-      }
-    }
-    
-    if(bHasOtherArti &&
-      (dragonlord_slot != MAX_WEAR) &&
-      ch->equipment[dragonlord_slot])
-    {
-      act("The &+Wplatemail&n of the &+YDragonLord&n erupts acid and detaches from $n's body!&n", FALSE, ch, obj, 0, TO_ROOM);
-      act("The &+Wplatemail&n of the &+YDragonLord&n erupts acid as it detaches from your body!", FALSE, ch, obj, 0, TO_CHAR);
-      obj_to_char(unequip_char(ch, dragonlord_slot), ch);
-    }
-    else if(armor != NULL &&
-            obj_index[armor->R_num].virtual_number == 25723)
-    {
-      add_event(event_dragonlord_check, PULSE_VIOLENCE, ch, 0, 0, 0, 0, 0); 
-      return;
-    }
-    
-    ch->player.race = af->modifier;
-    
-    affect_remove(ch, af);
-    
-    GET_AGE(ch) = (int) (racial_data[(int) GET_RACE(ch)].base_age * 2.25);
-    
     send_to_char
-      ("&+LThe dragon flesh is absorbed and your body returns to normal.&n\r\n", ch);
+      ("&+WPossible serious screwup in the dragonlord proc! Tell a coder as once!&n\r\n", ch);
+    wizlog(57, "Char %s found with racechange event but without racechange affect! Dragonlord proc", GET_NAME(ch));
     return;
   }
-  return;
+// Same code Necroplasm uses.
+  for (int i = 0; i < MAX_WEAR; i++)
+  {
+    if(ch->equipment[i] == armor)
+    {
+      dragonlord_slot = i;
+    }
+    if(ch->equipment[i] &&
+       IS_SET(ch->equipment[i]->extra_flags, ITEM_ARTIFACT) &&
+       (ch->equipment[i] != armor))
+    {
+      bHasOtherArti = true;
+    }
+  }
+  
+  if(bHasOtherArti &&
+    (dragonlord_slot != MAX_WEAR) &&
+    ch->equipment[dragonlord_slot])
+  {
+    act("The &+Wplatemail&n of the &+YDragonLord&n erupts acid and detaches from $n's body!&n",
+      FALSE, ch, obj, 0, TO_ROOM);
+    act("The &+Wplatemail&n of the &+YDragonLord&n erupts acid as it detaches from your body!",
+      FALSE, ch, obj, 0, TO_CHAR);
+    obj_to_char(unequip_char(ch, dragonlord_slot), ch);
+  }
+  else if(armor != NULL &&
+          obj_index[armor->R_num].virtual_number == DRAGONLORD_PLATE_VNUM &&
+          GET_STAT(ch) > STAT_DEAD)
+  {
+    add_event(event_dragonlord_check, (int)(0.5 * PULSE_VIOLENCE), ch, 0, 0, 0, 0, 0); 
+    return;
+  }
+  else
+  {
+    ch->player.race = af->modifier;
+    affect_remove(ch, af);
+    GET_AGE(ch) = racial_data[(int) GET_RACE(ch)].base_age*2;
+    send_to_char
+      ("The curse of the dark powers fade and your soul restores the body.\r\n",
+       ch);
+    int k = 0;
+    P_obj temp_obj;
+    for (k = 0; k < MAX_WEAR; k++)
+    {
+      temp_obj = ch->equipment[k];
+      if(temp_obj)
+        obj_to_char(unequip_char(ch, k), ch);
+    }
+    send_to_char
+      ("Brr, you suddenly feel very naked.\r\n",
+       ch);
 
+    return;
+  }
   // int k = 0;
   // P_obj temp_obj;
   // for (k = 0; k < MAX_WEAR; k++)
@@ -2652,7 +2663,7 @@ int dragonlord_plate(P_obj obj, P_char ch, int cmd, char *arg)
         return TRUE;
       }
       
-      if(affected_by_spell(temp_ch, SPELL_RACE_CHANGE))
+      if(affected_by_spell(temp_ch, TAG_RACE_CHANGE))
       {
         return TRUE;
       }
@@ -2667,29 +2678,30 @@ int dragonlord_plate(P_obj obj, P_char ch, int cmd, char *arg)
           obj_to_char(unequip_char(temp_ch, k), temp_ch);
         }
       }
-
-      if(!get_scheduled(temp_ch, event_dragonlord_check))
-      {
-        memset(&af, 0, sizeof(af));
-        af.type = SPELL_RACE_CHANGE;
-        af.flags = AFFTYPE_NOSAVE | AFFTYPE_NODISPEL;
-        af.duration = -1;
-        af.modifier = GET_RACE(temp_ch);
-        affect_to_char(temp_ch, &af);
-        
-        add_event(event_dragonlord_check, PULSE_VIOLENCE, temp_ch, 0, 0, 0, 0, 0);
       
-        act("&+RPain &+Llike you have never felt before renders you momentarily dazed as your\n&+Lflesh is ripped apart.  Your &N&+rmuscles &+Lripple and flex as they grow in size and\n&+Lstrength and a new skin of &N&+whardened dragonscales begins to form upon your body.\n&+LYou emerge from the transformation, flex your mighty new wings and &+Rroar &+Lloudly!&n\r\n",
-            FALSE, temp_ch, obj, 0, TO_CHAR);
-        act("&+L$n shudders and drops to $s knees as the awesome transformation takes hold.\n&+L$n&+L's body grows more muscular, while thick scales replace the shedded skin\n&+Land two &+Rgreat wings &+Lsprout from $s back. $n's face twists and is replaced by the\n&+Lvisage of a dragon, jaws filled with razor sharp teeth as $e roars loudly!&n\r\n",
-            FALSE, temp_ch, obj, 0, TO_ROOM);
+      send_to_char("Brr, you suddenly feel _almost_ naked.\r\n\n", temp_ch);
 
-        temp_ch->player.race = RACE_DRAGONKIN;
+      CharWait(temp_ch, 5 * WAIT_SEC);
 
-        GET_AGE(temp_ch) += racial_data[RACE_DRAGONKIN].base_age * 2;
+      memset(&af, 0, sizeof(af));
+      af.type = TAG_RACE_CHANGE;
+      af.flags = AFFTYPE_NOSAVE | AFFTYPE_NODISPEL;
+      af.duration = -1;
+      af.modifier = GET_RACE(temp_ch);
+      affect_to_char(temp_ch, &af);
       
-        return TRUE;
-      }
+      add_event(event_dragonlord_check, (int)(0.5 * PULSE_VIOLENCE), temp_ch, 0, 0, 0, 0, 0);
+    
+      act("&+RPain &+Llike you have never felt before renders you momentarily dazed as your\n&+Lflesh is ripped apart.  Your &N&+rmuscles &+Lripple and flex as they grow in size and\n&+Lstrength and a new skin of &N&+whardened dragonscales begins to form upon your body.\n&+LYou emerge from the transformation, flex your mighty new wings and &+Rroar &+Lloudly!&n\r\n",
+          FALSE, temp_ch, obj, 0, TO_CHAR);
+      act("&+L$n shudders and drops to $s knees as the awesome transformation takes hold.\n&+L$n&+L's body grows more muscular, while thick scales replace the shedded skin\n&+Land two &+Rgreat wings &+Lsprout from $s back. $n's face twists and is replaced by the\n&+Lvisage of a dragon, jaws filled with razor sharp teeth as $e roars loudly!&n\r\n",
+          FALSE, temp_ch, obj, 0, TO_ROOM);
+
+      temp_ch->player.race = RACE_DRAGONKIN;
+
+      GET_AGE(temp_ch) += racial_data[RACE_DRAGONKIN].base_age * 2;
+    
+      return TRUE;
     }
   }
   return FALSE;
@@ -4940,7 +4952,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
   }
 
   if(cmd == CMD_MELEE_HIT &&
-    !number(0, 32) &&
+    !number(0, 24) &&
     CheckMultiProcTiming(ch))
   {
     vict = (P_char) arg;
@@ -4983,13 +4995,13 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
     {
       act("You are filled with &+WHOLY&n power!", FALSE, ch, obj, 0, TO_CHAR);
       act("$n is filled with &+WHOLY&n power!", FALSE, ch, obj, 0, TO_ROOM);
-      spell_holy_word(GET_LEVEL(ch), ch, NULL, 0, vict, 0);
+      spell_holy_word(60, ch, NULL, 0, vict, 0);
     }
     else if( alignment == 1 && ( IS_GOOD(vict) || RACE_GOOD(vict) ) )
     {
       act("You are filled with &+LUNHOLY&n power!", FALSE, ch, obj, 0, TO_CHAR);
       act("$n is filled with &+LUNHOLY&n power!", FALSE, ch, obj, 0, TO_ROOM);
-      spell_unholy_word(GET_LEVEL(ch), ch, NULL, 0, vict, 0);
+      spell_unholy_word(60, ch, NULL, 0, vict, 0);
     }
 
     return TRUE;
@@ -5047,7 +5059,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
               obj, tch, TO_NOTVICT);
           act("$p &=LCshimmers&n and blasts $n as it leaps to you!", FALSE,
               ch, obj, tch, TO_VICT);
-          spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      		spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
           obj_to_char(obj, tch);
           break;
         }
@@ -5059,7 +5071,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
            FALSE, ch, obj, 0, TO_CHAR);
         act("$p &=LCshimmers&n and blasts $n before vanishing!", FALSE, ch,
             obj, 0, TO_ROOM);
-        spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      	spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         extract_obj(obj, TRUE);
       }
       return TRUE;
@@ -5067,28 +5079,28 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
 
     if (ch->equipment[WIELD] == obj && number(0,10) == 0 )
     {
-      act("Your $p&n hums quietly.",
+			act("Your $p&n hums quietly.",
           FALSE, ch, obj, 0, TO_CHAR);
-      act("$n's $p&n hums quietly.",
+			act("$n's $p&n hums quietly.",
           FALSE, ch, obj, 0, TO_ROOM);
 
       for( struct group_list *tgl = ch->group; tgl && tgl->ch; tgl = tgl->next )
-      {
-        if( tgl->ch->in_room != ch->in_room ) continue;
+			{
+				if( tgl->ch->in_room != ch->in_room ) continue;
 
-        if( !affected_by_spell(tgl->ch, SPELL_ARMOR) )
-        {
+				if( !affected_by_spell(tgl->ch, SPELL_ARMOR) )
+				{
           spell_armor(60, ch, 0, 0, tgl->ch, 0);
-        }
+			  }
 
-        if( !affected_by_spell(tgl->ch, SPELL_BLESS) )
-        {
+				if( !affected_by_spell(tgl->ch, SPELL_BLESS) )
+				{
           spell_bless(60, ch, 0, 0, tgl->ch, 0);
-        }
+				}
 
-      }
+			}
 
-      return TRUE;
+			return TRUE;
 
     }
   }
@@ -6811,6 +6823,7 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam, type, dircmd, spl;
   int      was_in, to_room = 0;
+  P_char   illusionist;
   char     buffer[MAX_STRING_LENGTH], Gbuf1[MAX_STRING_LENGTH];
   char     arg1[512], arg2[512];
   struct follow_type *k, *next_dude;
@@ -6861,12 +6874,9 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info,
-          EX_WALLED);
-      REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info,
-          EX_BREAKABLE);
-      REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info,
-          EX_ILLUSION);
+      REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info, EX_WALLED);
+      REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info, EX_BREAKABLE);
+      REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info, EX_ILLUSION);
     }
     return TRUE;
   }
@@ -6883,7 +6893,6 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (type == WATCHING_WALL && cmd >= 1 && cmd < 1000)
   {
-    P_char   illusionist;
 
     if (obj->loc_p == LOC_ROOM && ch && !IS_TRUSTED(ch) &&
         (time(NULL) - obj->value[6]) > 10)
@@ -6899,7 +6908,7 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       if (illusionist != NULL && ch->in_room != illusionist->in_room &&
           !number(0, 2))
       {
-        send_to_char("You receive a vision from elsewhere..\n", illusionist);
+        send_to_char("&=LWYou receive a vision from elsewhere.&n&n\n", illusionist);
         new_look(illusionist, "", CMD_LOOK, obj->loc.room);
       }
     }
@@ -6918,8 +6927,19 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
     if (strcmp(arg1, "wall") || obj->value[1] != dir_from_keyword(arg2))
       return FALSE;
 
-    if (type == WALL_OF_STONE || type == WATCHING_WALL)
+    if (type == WALL_OF_STONE)
       dam = GET_DAMROLL(ch);
+    else if (type == WATCHING_WALL &&
+             illusionist)
+    {
+      dam = GET_DAMROLL(ch);
+      if(ch->in_room != illusionist->in_room &&
+        !number(0, 1))
+      {
+        send_to_char("&=LWYou receive a vision from elsewhere.&n&n\n", illusionist);
+        new_look(illusionist, "", CMD_LOOK, obj->loc.room);
+      }
+    }
     else if (type == WALL_OF_IRON)
       dam = GET_DAMROLL(ch) / 2;
     else if (type == WALL_OF_FORCE)
@@ -7104,8 +7124,6 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
     break;
 
   case PRISMATIC_WALL:
-    act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
-    act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
 /*
     if (GET_PID(ch) == obj->value[5])
     {
@@ -7125,6 +7143,11 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       act("$n steps through the wall.", TRUE, ch, obj, NULL, TO_ROOM);
       GET_HIT(ch) = MAX(1, GET_HIT(ch) - 100);
       return TRUE;
+    }
+    else
+    {
+      act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
+      act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     }
 
     dam = 0;
@@ -7186,18 +7209,16 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
     act(buffer, TRUE, ch, obj, NULL, TO_ROOM);
     do_simple_move_skipping_procs(ch, dircmd, 0);
     act("$n &+Wsteps through the web&n", TRUE, ch, NULL, NULL, TO_ROOM);
-    if (!number(0, 1) && (dice(2, 4) > GET_ALT_SIZE(ch)) &&
-        !NewSaves(ch, SAVING_PARA, 2))
+    if (!NewSaves(ch, SAVING_PARA, 0))
     {
       bzero(&af, sizeof(af));
       af.type = SPELL_MINOR_PARALYSIS;
       af.flags = AFFTYPE_SHORT;
-      af.duration = 10*WAIT_SEC;
+      af.duration = number(4, 15) * WAIT_SEC;
       af.bitvector2 = AFF2_MINOR_PARALYSIS;
       affect_to_char(ch, &af);
     }
-    spell_dispel_magic(45 + GET_ALT_SIZE(ch), ch, NULL, SPELL_TYPE_SPELL, 0,
-                       obj);
+    spell_dispel_magic(45 + GET_ALT_SIZE(ch), ch, NULL, SPELL_TYPE_SPELL, 0, obj);
     update_pos(ch);
 
     drag_followers = TRUE;
@@ -7256,16 +7277,16 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
     return FALSE;
 
   case WALL_OF_FORCE:
-    if ( (IS_PC(ch) && GET_PID(ch) == obj->value[5]) ||
-         (IS_NPC(ch) && GET_RNUM(ch) == obj->value[5])
-       )
+    if ((IS_PC(ch) && GET_PID(ch) == obj->value[5]) ||
+        (IS_NPC(ch) && GET_RNUM(ch) == obj->value[5]))
     {
-      act("&+L$n&+L passes right through $p&+L.", TRUE, ch, obj, 0,
-          TO_ROOM);
-      act("&+LYou pass right through $p&+L.", TRUE, ch, obj, 0,
-          TO_CHAR);
+      act("&+L$n&+L passes right through $p&+L.", TRUE, ch, obj, 0, TO_ROOM);
+      act("&+LYou pass right through $p&+L.", TRUE, ch, obj, 0, TO_CHAR);
+      
       do_simple_move_skipping_procs(ch, dircmd, 0);
-    } else {
+    }
+    else
+    {
       act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
       act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     }
