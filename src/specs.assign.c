@@ -2397,6 +2397,7 @@ void assign_rooms(void)
   world[real_room0(258421)].funct = newship_shop;
   world[real_room0(43118)].funct = newship_shop;
   world[real_room0(635260)].funct = newship_shop;
+  world[real_room0(584171)].funct = newship_shop;
 
   // Fiord on west side of GC.
   world[real_room0(559633)].funct = newship_shop;
