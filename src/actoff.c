@@ -1243,6 +1243,12 @@ void do_charge(P_char ch, char *argument, int cmd)
     return;
   }
   
+  if(IS_FIGHTING(ch))
+  {
+	send_to_char("&+rYou may not charge while already engaged!\r\n", ch);
+	return;
+  }
+  
   half_chop(argument, arg1, arg2);
   
   if(!*arg1)
@@ -1382,21 +1388,7 @@ void do_charge(P_char ch, char *argument, int cmd)
       SET_POS(ch, POS_KNEELING + GET_STAT(ch));
     }
 
-    if(!IS_FIGHTING(victim))
-    {
-      if(IS_NPC(victim))
-      {
-        MobStartFight(victim, ch);
-      }
-      else
-      {
-        set_fighting(victim, ch);
-      }
-    }
-    else
-    {
-      set_fighting(ch, victim);
-    }
+	engage(ch, victim);
     
     return;
   }
@@ -1488,7 +1480,7 @@ void do_charge(P_char ch, char *argument, int cmd)
       PHSDAM_TOUCH, &messages) != DAM_NONEDEAD)
         return;
 
-        if(char_in_list(ch))
+    if(char_in_list(ch))
     {
       CharWait(ch, (int) (PULSE_VIOLENCE * 1.0));
       set_short_affected_by(ch, SKILL_CHARGE, (int) (2.0 * PULSE_VIOLENCE));
