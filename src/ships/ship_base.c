@@ -5735,7 +5735,7 @@ int crew_shop(int room, P_char ch, int cmd, char *arg)
                     "&+Y%d)%s %-20s&N       %4d       %1.2f      %s&N\r\n",
                     i, ship->frags < ship_crew_data[j].min_frags ? "&+L" : "&+W",
                     ship_crew_data[j].name, 
-                    ship_crew_data[j].min_skill / 1000,
+                    ship_crew_data[j].start_skill / 1000,
                     (float)ship_crew_data[j].skill_gain / 1000.0,
                     coin_stringv(ship_crew_data[j].hire_cost));
                 send_to_char(buf, ch);
@@ -5751,7 +5751,7 @@ int crew_shop(int room, P_char ch, int cmd, char *arg)
                     "&+Y%d)%s %-20s&N       %4d       %1.2f        %d       %s&N\r\n",
                     i, ship->frags < ship_crew_data[j].min_frags ? "&+L" : "&+W",
                     ship_crew_data[j].name, 
-                    ship_crew_data[j].min_skill / 1000,
+                    ship_crew_data[j].start_skill / 1000,
                     (float)ship_crew_data[j].skill_gain / 1000.0,
                     ship_crew_data[j].base_stamina,
                     coin_stringv(ship_crew_data[j].hire_cost));
@@ -5768,7 +5768,7 @@ int crew_shop(int room, P_char ch, int cmd, char *arg)
                     "&+Y%d)%s %-20s&N       %4d       %1.2f      %s&N\r\n",
                     i, ship->frags < ship_crew_data[j].min_frags ? "&+L" : "&+W",
                     ship_crew_data[j].name, 
-                    ship_crew_data[j].min_skill / 1000,
+                    ship_crew_data[j].start_skill / 1000,
                     (float)ship_crew_data[j].skill_gain / 1000.0,
                     coin_stringv(ship_crew_data[j].hire_cost));
                 send_to_char(buf, ch);
@@ -5854,7 +5854,7 @@ int crew_shop(int room, P_char ch, int cmd, char *arg)
             current_skill = ship->rowingcrew.skill;
             break;
         };
-        if (current_skill > ship_crew_data[j].min_skill)
+        if (current_skill > ship_crew_data[j].start_skill)
         {
             if (!arg || !(*arg) || !isname(arg, "confirm"))
             {
@@ -5865,7 +5865,7 @@ int crew_shop(int room, P_char ch, int cmd, char *arg)
 
         SUB_MONEY(ch, cost, 0);
         send_to_char ("Aye aye cap'n!  We'll be on yer ship before you board!\r\n", ch);
-        setcrew(ship, j, 0);
+        setcrew(ship, j, ship_crew_data[j].start_skill);
         update_ship_status(ship);
         write_newship(ship);
         return TRUE;
@@ -6015,7 +6015,7 @@ int erzul(P_char ch, P_char pl, int cmd, char *arg)
       obj_from_char(obj, TRUE);
       extract_obj(obj, TRUE);
       obj = NULL;
-      setcrew(ship, SAIL_AUTOMATONS, 0);
+      setcrew(ship, SAIL_AUTOMATONS, ship_crew_data[SAIL_AUTOMATONS].start_skill);
       update_ship_status(ship);
       write_newship(ship);
       send_to_char ("Erzul says 'They'll be at your ship by the time you get there!\r\n", pl);
@@ -6034,7 +6034,7 @@ int erzul(P_char ch, P_char pl, int cmd, char *arg)
       obj_from_char(obj, TRUE);
       extract_obj(obj, TRUE);
       obj = NULL;
-      setcrew(ship, GUN_AUTOMATONS, 0);
+      setcrew(ship, GUN_AUTOMATONS, ship_crew_data[GUN_AUTOMATONS].start_skill);
       update_ship_status(ship);
       write_newship(ship);
       send_to_char("Erzul says 'They'll be at your ship by the time you get there!\r\n",       pl);

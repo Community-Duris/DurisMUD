@@ -267,6 +267,7 @@ struct ShipCrewData
 {
     int type;
     char *name;  //Crew desc
+    int start_skill;
     int min_skill;
     int skill_gain;
     int base_stamina;

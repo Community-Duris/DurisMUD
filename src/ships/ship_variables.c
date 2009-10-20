@@ -122,24 +122,24 @@ const int sailcrewcost[MAXSAILCREW] = {
 
 // DO NOT move crews, just add new ones!
 const ShipCrewData ship_crew_data[MAXCREWS] = {
-//      Type          Name                     Min  Skill   Base      Hire   Min
-//                                            Skill  Gain  Stamina    Cost  Frags
-    { SAIL_CREW,   "Standard Crew",              0, 1000,     70,        0,     0},
-    { SAIL_CREW,   "Veteran Crew",          450000, 1250,    100,  2000000,   500},
-    { SAIL_CREW,   "Elite Crew",           1000000, 1500,    140,  5000000,  1000},
-    { SAIL_CREW,   "Magical Automatons",   3600000, 2000,    200, 20000000,  3000},
-
-    { GUN_CREW,    "Standard Crew",              0, 1000,     70,        0,     0},
-    { GUN_CREW,    "Sturdy Catapult Crew",       0,  600,    140,  1000000,     0},
-    { GUN_CREW,    "Veteran Archers",       550000, 1300,    100,  2500000,   600},
-    { GUN_CREW,    "Elite Ballistic Crew", 1250000, 1600,    140,  6000000,  1200},
-    { GUN_CREW,    "Magical Automatons",   3600000, 2000,    200, 20000000,  3000},
-
-    { REPAIR_CREW, "Standard Crew",              0, 1000,     70,        0,     0},
-    { REPAIR_CREW, "Veteran Shipwrights",   700000, 1400,    100,  3000000,   750},
-    { REPAIR_CREW, "Expert Shipwrights",   1650000, 1800,    140,  8000000,  1500}, 
-
-    { ROWING_CREW, "Standard Crew",           0,    0,     70,        0,     0},
+//      Type          Name                    Start     Min  Skill   Base      Hire   Min
+//                                            Skill    Skill  Gain  Stamina    Cost  Frags
+    { SAIL_CREW,   "Standard Crew",              0,       0, 1000,     70,        0,     0},
+    { SAIL_CREW,   "Veteran Crew",          550000,  450000, 1250,    100,  2000000,   500},
+    { SAIL_CREW,   "Elite Crew",           1250000, 1000000, 1500,    140,  5000000,  1000},
+    { SAIL_CREW,   "Magical Automatons",   4500000, 3600000, 2000,    200, 20000000,  3000},
+                                                            
+    { GUN_CREW,    "Standard Crew",              0,       0, 1000,     70,        0,     0},
+    { GUN_CREW,    "Sturdy Catapult Crew",       0,       0,  600,    140,  1000000,     0},
+    { GUN_CREW,    "Veteran Archers",       650000,  550000, 1300,    100,  2500000,   600},
+    { GUN_CREW,    "Elite Ballistic Crew", 1550000, 1250000, 1600,    140,  6000000,  1200},
+    { GUN_CREW,    "Magical Automatons",   4500000, 3600000, 2000,    200, 20000000,  3000},
+                                                            
+    { REPAIR_CREW, "Standard Crew",              0,       0, 1000,     70,        0,     0},
+    { REPAIR_CREW, "Veteran Shipwrights",   800000,  700000, 1400,    100,  3000000,   750},
+    { REPAIR_CREW, "Expert Shipwrights",   1900000, 1650000, 1800,    140,  8000000,  1500}, 
+                                                            
+    { ROWING_CREW, "Standard Crew",              0,       0,    0,     70,        0,     0},
 };
 const int sail_crew_list[MAXCREWS]   = { 0,   1,  2,  3 , -1, -1, -1, -1, -1, -1, -1, -1, -1};
 const int gun_crew_list[MAXCREWS]    = { 4,   5,  6,  7 ,  8, -1, -1, -1, -1, -1, -1, -1, -1};
