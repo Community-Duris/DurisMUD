@@ -1661,6 +1661,13 @@ void spell_ethereal_discharge(int level, P_char ch, char *arg, int type, P_char 
     "$N&+L is overwhelmed by the e&+ct&+Ch&+ce&+Lreal shockwave, and collapses, d&+Ce&+Lad.&n", 0
   };
 
+  if(!(ch) ||
+     !(victim) ||
+     !IS_ALIVE(ch))
+  {
+    return;
+  }
+
   if (!(afp = get_spell_from_char(ch, SPELL_ETHEREAL_FORM)))
   {
     send_to_char("&+LYou must be in et&+ch&+Ce&+cr&+Leal form.\n", ch);
@@ -1678,7 +1685,7 @@ void spell_ethereal_discharge(int level, P_char ch, char *arg, int type, P_char 
   affect_remove(ch, afp);
   
   mod = (MAX(0, GET_LEVEL(ch) - GET_LEVEL(victim)) +
-         GET_CHAR_SKILL(ch, SKILL_DEVOTION) / 25);
+         (int)(GET_CHAR_SKILL(ch, SKILL_DEVOTION) / 25));
 
   for (tch = world[ch->in_room].people; tch; tch = next_tch)
   {  
