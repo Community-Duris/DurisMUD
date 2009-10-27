@@ -1216,6 +1216,6 @@ struct material_data {
 #define FIND_AND_KILL   1
 #define FIND_AND_ASK   2
 
-#define RANDOM_ZONES 0 // Set to 1 to enable
+#define RANDOM_ZONES 1 // Set to 1 to enable
 
 #endif /* _DURIS_DEFINES_H_ */
