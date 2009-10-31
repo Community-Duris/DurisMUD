@@ -45,25 +45,25 @@ static char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
 int epic_ship_damage_control(P_char ch, int dam)
 {
-    if(!(ch) ||
-       GET_CHAR_SKILL(ch, SKILL_SHIP_DAMAGE_CONTROL) < 1)
-    {
+    if(!(ch) || dam < 2)
         return dam;
-    }
-    
-    if(GET_CHAR_SKILL(ch, SKILL_SHIP_DAMAGE_CONTROL) < 60)
+
+    int skill = GET_CHAR_SKILL(ch, SKILL_SHIP_DAMAGE_CONTROL);
+    if (skill < 1)
+        return dam;
+
+    float reduction_mod = dam * (4.0 + (float)skill / 5.0) / 100.0;
+    while (reduction_mod >= 1.0 && dam > 1)
     {
-        return dam = (int) (dam * 0.95);
+        dam--;
+        reduction_mod -= 1.0;
     }
-    else if(GET_CHAR_SKILL(ch, SKILL_SHIP_DAMAGE_CONTROL) <= 90)
-    {
-        return dam = (int) (dam * 0.85);
-    }
-    else
-    {
-        return dam = (int) (dam * 0.75);
-    }
-    
+    if (reduction_mod == 0.0 || dam < 2)
+        return dam;
+
+    if (number(1, (int)(1.0 / reduction_mod)) == 1)
+        dam--;
+
     return dam;
 }
 
