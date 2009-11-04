@@ -3980,6 +3980,9 @@ int collar_frost(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
+  return false;
+
+
   if (!obj || !ch)
     return FALSE;
 
@@ -4138,6 +4141,7 @@ int collar_flames(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
+  return false;
 
   if (!obj ||
       !ch ||
