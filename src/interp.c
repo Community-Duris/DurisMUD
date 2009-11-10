@@ -1967,23 +1967,23 @@ bool special(P_char ch, int cmd, char *arg)
      * special in mobile present?
      */
     for (k = world[ch->in_room].people; k; k = k->next_in_room)
-	{
-	  if(!IS_ALIVE(k) ||
-	     k->in_room != NOWHERE)
 	  {
-	    continue;
-	  }
-      if ((k != ch) &&
-	       IS_NPC(k) &&
-		   AWAKE(k) &&
-		   mob_index[GET_RNUM(k)].func.mob &&
-		   !IS_IMMOBILE(k))
-	  {
+      if(!IS_ALIVE(k) ||
+         k->in_room != NOWHERE)
+      {
+        continue;
+      }
+      if((k != ch) &&
+         IS_NPC(k) &&
+         AWAKE(k) &&
+         mob_index[GET_RNUM(k)].func.mob &&
+         !IS_IMMOBILE(k))
+      {
         if ((*mob_index[GET_RNUM(k)].func.mob) (k, ch, cmd, arg))
-		{
+        {
           return (1);
-		}
-	  }
+        }
+      }
     }
     /*
      * quest mobile present?
