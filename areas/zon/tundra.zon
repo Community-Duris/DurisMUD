@@ -21,6 +21,14 @@ D 0 13728 2 1 100 0 0 0
 *     south exit from "A Dark Passage Behind The Rooms" to
 *     "The Onyx Stairs" - closed
 *
+D 0 13725 2 1 100 0 0 0
+*     south exit from "A Small Fisherman's Hut" to
+*     "End of the Path Through the Fishing Village" - closed
+*
+D 0 13809 0 2 100 0 0 0
+*     north exit from "End of the Path Through the Fishing Village" to
+*     "A Small Fisherman's Hut" - closed/locked
+*
 D 0 13726 0 1 100 0 0 0
 *     north exit from "A Small Hallway" to
 *     "A Small Bedroom" - closed
@@ -196,6 +204,10 @@ M 0 13720 20 13721 100 0 0 0       * a snow leopard
 M 0 13721 53 13722 100 0 0 0       * an arctic fox
 M 0 13721 53 13722 100 0 0 0       * an arctic fox
 M 0 13715 13 13724 100 0 0 0       * a snow fox
+M 0 13724 1 13725 100 0 0 0        * a barbarian fishmonger
+G 1 334 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 318 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 319 999 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 13709 5 13728 100 0 0 0        * a hungry hook horror
 M 0 13700 6 13729 100 0 0 0        * a shimmering blue shark
 M 0 13700 6 13729 100 0 0 0        * a shimmering blue shark
@@ -268,6 +280,8 @@ M 0 13713 19 13807 100 0 0 0       * a barbarian guard
 M 0 13711 13 13808 100 0 0 0       * a barbarian fisherman
 M 0 13711 13 13808 100 0 0 0       * a barbarian fisherman
 M 0 13723 1 13808 100 0 0 0        * a starving barbarian
+M 0 13725 1 13809 100 0 0 0        * an angry barbarian wife
+G 1 13730 1 0 100 0 0 0            *    a small key made of wood
 M 0 13713 19 13810 100 0 0 0       * a barbarian guard
 M 0 13713 19 13810 100 0 0 0       * a barbarian guard
 M 0 13713 19 13810 100 0 0 0       * a barbarian guard
@@ -286,6 +300,7 @@ M 0 13711 13 13815 100 0 0 0       * a barbarian fisherman
 M 0 13711 13 13816 100 0 0 0       * a barbarian fisherman
 M 0 13711 13 13816 100 0 0 0       * a barbarian fisherman
 M 0 13722 1 13817 100 0 0 0        * a barbarian shaman
+E 1 13729 1 6 100 0 0 0            *   the crown of the shaman
 M 0 13712 1 13818 100 0 0 0        * the barbarian elder
 E 1 13716 1 19 100 0 0 0           *   a pair of worn snow goggles
 M 0 13713 19 13818 100 0 0 0       * a barbarian guard

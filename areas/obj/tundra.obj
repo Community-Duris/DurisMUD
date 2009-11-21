@@ -92,7 +92,7 @@ key fishbones~
 &+Wa key made of &+gfish&+Gbones&n~
 &+WA strange looking key made of &+gfish&+Gbones &+Wlies here.&n~
 ~
-18 15 3 0 7 0 0 0 0 0 0
+18 15 3 0 7 0 0 1 0 0 0
 0 100 0 0 0 0 0 0
 0 0 100
 #13706
@@ -380,6 +380,26 @@ A
 18 2
 A
 19 2
+#13729
+crown shaman~
+&+cthe crown of the &+gshaman&n~
+&+cA very nice looking crown lies here.&n~
+~
+9 15 3 0 7 0 0 17 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100 67108864 0 0 0
+A
+34 3
+A
+4 7
+#13730
+small key wood~
+&+Wa small key made of &+ywood&n~
+&+WA small key made of &+ywood &+Wlies here.&n~
+~
+18 15 3 0 7 0 4096 1 0 0 0
+0 100 0 0 0 0 0 0
+0 0 100
 #13755
 earring dangling crystal~
 &+La dangling &+Learring of &+Mcrystal&n~

@@ -353,3 +353,25 @@ pb 0 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
+#13724
+barbarian fishmonger~
+&+ca barbarian &+gfishmonger&n~
+&+cThis stout barbarian &+gfishmonger &+ctries to sell his catch.&n
+~
+~
+10 0 0 0 0 0 0 0 S
+pb 0 1 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#13725
+angry barbarian wife~
+&+can &+gangry &+cbarbarian wife&n~
+&+cA really &+gangry &+cbarbarian wife stands here, her foot placed firmly on the door.&n
+~
+~
+2058 0 0 0 0 0 0 0 S
+pb 0 32 -1
+37 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2

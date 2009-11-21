@@ -3362,17 +3362,17 @@ pike _fishing_~
 &+ca large pike fish&n~
 &+cA large pike lies here.&n~
 ~
-19 15 3 0 5 0 8388608 1 0 0 0
+19 2 3 0 5 0 8388608 1 0 0 0
 12 7 2 0 0 0 0 0
-0 0 100
+0 100 100
 #319
 lobster _fishing_~
 an &+rimpressive &+Rlobster&n~
 &+rA red lobster crawls here snapping its claws.&n~
 ~
-19 15 3 0 5 0 8388608 1 0 0 0
+19 2 3 0 5 0 8388608 1 0 0 0
 15 8 2 0 0 0 0 0
-0 0 100
+0 100 100
 #320
 water glass~
 a glass of water~
@@ -3495,9 +3495,9 @@ clam _fishing_~
 a &+ysmall clam&n~
 &+yA small clam lies here on the ground.&n~
 ~
-19 15 3 0 5 0 8388608 1 0 0 0
+19 2 3 0 5 0 8388608 1 0 0 0
 2 3 1 0 0 0 0 0
-0 0 100
+0 100 100
 #335
 mussel _fishing_~
 &+ba large &+Bmussel&n~

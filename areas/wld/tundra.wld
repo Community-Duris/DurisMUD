@@ -511,6 +511,18 @@ D1
 ~
 0 0 13723
 S
+#13725
+&+CA Small Fisherman's Hut&n~
+&+c   This hut is fairly small, barely large enough for a small group. The smell
+&+cof fish is overwhelming and it's obvious much of the fish you can buy here is
+&+ca bit aged. However, that's how the barbarians like it.&n
+~
+137 142639168 0
+D2
+~
+flap~
+1 0 13809
+S
 #13726
 A Small Hallway~
   This hall comes down from the stairs and slopes downward, with many rooms
@@ -2074,7 +2086,7 @@ D1
 D3
 ~
 flap~
-3 0 13817
+3 13705 13817
 S
 #13809
 &+CEnd of the Path Through the Fishing Village~
@@ -2086,6 +2098,10 @@ S
 &+cover during the construction of the village.
 ~
 137 33554432 4
+D0
+~
+flap~
+3 13730 13725
 D1
 ~
 ~

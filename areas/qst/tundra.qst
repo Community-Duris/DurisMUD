@@ -129,14 +129,43 @@ Eleadora tells you 'I can finally be at peace now, may the tundra never
 experience the presence of a being like Malinar again!'
 ~
 S
+#13722
+M
+hi~
+&+cA barbarian &+gshaman &+csays to you, 'There are two items in this world that I have
+&+cneed for. Bring me &+Wa snapjaw turtle shell &+cor &+ga &+Yfire &+rgland &+cand I will reward
+&+cyou.'&n
+~
+Q
+~
+R C 85000
+R E 65000
+G I 43138
+Q
+~
+R C 85000
+R E 55000
+G I 43137
+S
 #13723
 M
-default~
+hi hello hey~
+&+cA &+rstarving &+cbarbarian pleads to you, 'I haven't had anything to eat for almost a
+&+cweek! Please.. I beg of you, bring me some food? I know beggars can't be choosers, but
+&+cI could really go for a lobster, a pike, and a small clam!'&n
 ~
 Q
 ~
 R I 13705
 G I 334
-G I 334
-G I 334
+G I 318
+G I 319
+S
+#13725
+M
+qc_action 80~
+&+cAn &+gangry &+cbarbarian wife mutters, 'If that idiot of a husband wants to spend all
+&+chis time trying to sell old fish, then I'll do him a favor and keep him locked in his
+&+cshop!'&n
+~
 S
