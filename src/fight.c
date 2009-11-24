@@ -2573,7 +2573,17 @@ void kill_gain(P_char ch, P_char victim)
 
   if( IS_PC(victim) )
   {
-    gain = (new_exp_table[GET_LEVEL(victim)] / 2);
+    if(GOOD_RACE(ch) && 
+       GOOD_RACE(victim) ||
+       EVIL_RACE(ch) &&
+       EVIL_RACE(victim))
+    {
+      gain = 1;
+    }
+    else
+    {
+      gain = (new_exp_table[GET_LEVEL(victim)] / 2);
+    }
   }
   else
   {
