@@ -1,7 +1,7 @@
 set MainZoneName alatorin
 set ObjAffect true
-set LastCommand edit dweefniggle
-set StartRoom 83356
+set LastCommand edit soldier
+set StartRoom 83164
 limit object 74021 999
 limit object 66004 999
 limit object 38639 999

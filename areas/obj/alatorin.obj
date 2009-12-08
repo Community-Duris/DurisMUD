@@ -629,7 +629,7 @@ small concealed chest~
 &+YA small, &+Lconcealed &+Ychest is here, &+cbolted &+Yto the corner of the floor.~
 ~
 15 6 3 0 7 0 4096 0 0 0 0
-10 25 83145 5 0 0 0 0
+10 29 83145 5 0 0 0 0
 0 0 100
 E
 small concealed chest~
@@ -705,7 +705,7 @@ small concealed chest~
 &+YA small, &+Lconcealed &+Ychest is here, &+cbolted &+Yto the corner of the floor.~
 ~
 15 6 3 0 7 0 4096 0 0 0 0
-10 25 83145 5 0 0 0 0
+10 29 83145 5 0 0 0 0
 0 0 100
 E
 small concealed chest~
@@ -1446,7 +1446,7 @@ small concealed chest~
 &+YA small, &+Lconcealed &+Ychest is here, &+cbolted &+Yto the corner of the floor.~
 ~
 15 6 3 0 7 0 4096 0 0 0 0
-10 9 83200 5 0 0 0 0
+10 13 83200 5 0 0 0 0
 0 0 100
 E
 small concealed chest~
@@ -1893,7 +1893,7 @@ polished wooden desk~
 &+yA well-&+Wpolished&N&+y wooden desk &Nis pushed against the far wall.~
 ~
 15 15 3 0 7 0 0 0 0 0 0
-20 13 83145 0 0 0 0 0
+20 5 83145 0 0 0 0 0
 0 0 100
 E
 small wooden desk~
@@ -5186,7 +5186,7 @@ cask vintage hammer shield ale~
 &N&+ya cask of vintage &n&+cHammer&N&+y and &+WShield &N&+ybrand ale&N~
 &+yA cask of vintage &N&+cHammer&N&+y and &+WShield &N&+ybrand dwarven ale has been left here.~
 ~
-17 6 4 0 7 0 4096 0 0 0 0
+17 6 4 0 7 0 4096 16385 0 0 0
 120 120 1 0 0 0 0 0
 9 20333 100
 E

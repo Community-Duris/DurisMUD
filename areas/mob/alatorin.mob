@@ -778,7 +778,7 @@ ragdagan miner merchant goblin~
 &+Lgood business.  This is exactly the case with &+RRagdagan&+L selling his
 &+Lwares deep within &+cAlatorin.
 ~
-2122 0 0 0 0 0 0 0 S
+2122 0 0 8 0 0 0 0 S
 hg 0 1 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -1055,7 +1055,7 @@ hungry brightaxe soldier shield dwarf~
 &+Lendlessly-huge walls of &+cAlatorin&+L.  Much like the other soldiers
 &+Lwithin &+CBrightAxe &+Lhall, this warrior is a full-blooded &Nsh&+Wie&Nld &+Ydwarf&+L.
 ~
-67110984 0 0 24 0 0 0 40 S
+2122 0 0 24 0 0 0 40 S
 pm 0 1 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -1671,7 +1671,7 @@ clund hammerhelm shield dwarf~
 &+Wmaster of the Hammer&+Yhelm &+Warmy, and oversees the grand production
 &+Wof troops in the entire &N&+cAlatorin &+Warmy from a very young age.
 ~
-1157650632 0 0 402653336 14528 128 4718592 1000 S
+1157650888 0 0 402653336 14528 128 4718592 1000 S
 pm 0 33 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
