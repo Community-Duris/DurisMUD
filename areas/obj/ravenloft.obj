@@ -619,7 +619,7 @@ change coins~
 &+YSome coi&Nns lay sc&+Yatte&Nrred a&+Ybout &Nthe a&+Yrea&N.~
 ~
 20 22 3 0 7 0 4096 1 0 0 0
-16 44 39 21 0 0 0 0
+16 44 39 43 0 0 0 0
 0 0 100
 E
 change coins~
@@ -2013,7 +2013,7 @@ huge pile platinum coins~
 &+WA huge pile of platinum coins sits here with an ancient &+rRavenloft&+W insignia on each.~
 ~
 20 25 3 0 7 0 0 1 0 0 0
-0 0 0 1994 0 0 0 0
+0 0 0 5000 0 0 0 0
 0 0 100
 E
 huge pile platinum coins~
@@ -2241,3 +2241,43 @@ torch~
 &+YThis wood and flax torch sits in a sconce, which i screwed into a block
 &+Yalong the northern wall.  The torch burns softly with a soft glow.
 ~
+#58438
+spiked ring bloody retribution~
+&n&+rthe spiked &+Lring of &N&+rbloody retribution&N~
+&+LA spiked ring of bloody &N&+rretribution&+L has been left here.~
+~
+9 11 2 0 7 0 0 3 64 0 0
+5 0 0 3 1 0 0 0
+0 14331 100 268435488 0 0 0
+E
+spiked ring bloody retribution~
+   &+LThis stone ring is actually quite large, barely fitting over a medium-
+&+Lsized humanoid's thumb.  Five large spikes sit around the ring, each
+&+Lstained with dried &N&+rblood &+Lfrom numerous sources.  This blood hums
+&+Lwith a deep and otherwordly &N&+mevil &+Lmagic.
+~
+A
+18 4
+A
+19 4
+#58439
+eladrin bone crown obyriths~
+&+Lthe &N&+ge&+Gl&n&+ga&+Gd&+gr&+Gi&+gn&+L-&+Wb&No&+Wn&ne &n&+mcrown &+Lof the &+yo&+mb&+My&N&+mr&+yi&+mt&+Mh&+ms&N~
+&+LThe &+Geladrin&+W-bone &N&+mcrown &+Lof the &+yob&+myr&+yit&+mhs &+Lfloats here.~
+~
+9 10 4 0 15 0 100671488 17 64 0 0
+5 0 0 5 0 0 0 0
+3 200431 100 536944640 12480 0 570425344
+E
+eladrin bone crown obyriths~
+   &+LThis large crown is made of the celestial bones of the &+GEladrin&+L, a
+&+Lmystical race of &N&+rdemon-hunters &+Lnative to the ethereal sub-plane of
+&+CArborea&+L.  The &N&+mcrown&+L itself has six large &+mspikes&+L - the most
+&+Lprominent of which are the three towards the front of the &N&+mcrown.
+&+LStrange &+Gstones &+Lof &+Rred &+Land &N&+ggreen &N&+rcolors &+Lare set along these sharp
+&+Lspikes, while a &N&+bball of negative energy &+Lburns at their apex.
+~
+A
+17 -100
+A
+20 -5

@@ -3057,7 +3057,7 @@ D2
 D3
 ~
 ~
-0 0 58451
+8 0 58451
 S
 #58443
 &+CThe Hall of Riches&N~
@@ -3194,7 +3194,7 @@ gate~
 D8
 ~
 ~
-0 0 58450
+8 0 58450
 S
 #58450
 &-L&+WA Secret Passage~
@@ -3229,9 +3229,10 @@ D0
 door~
 1 0 58518
 D1
+&+LThe wall is barren and lifeless.
 ~
-~
-0 0 58442
+wall~
+5 0 58442
 D5
 ~
 ~
@@ -4981,12 +4982,12 @@ D0
 &+gThick moss grows to the north.
 ~
 moss~
-4 0 58531
+1 0 58531
 D1
    &+gThe thick vegetation of the &+mdevil's &+ggarden.
 ~
-~
-4 0 58517
+vegetation~
+1 0 58517
 D5
 ~
 ~
@@ -5003,9 +5004,10 @@ S
 ~
 583 1241546752 3
 D3
+&+LA large stone wall.
 ~
-~
-4 0 58516
+wall~
+1 0 58516
 S
 #58518
 The Butler's Quarters~
@@ -5288,7 +5290,7 @@ D2
 &+gThick moss grows to the south.
 ~
 moss~
-4 0 58531
+5 0 58531
 D4
 ~
 ~
@@ -5310,13 +5312,14 @@ S
 ~
 583 1249943556 0
 D0
+&+LThe ledge opens up towards a tower landing.
 ~
-~
-0 0 58530
+secret~
+1 0 58530
 D2
 ~
-~
-0 0 58516
+wall~
+1 0 58516
 S
 #58532
 &+YNorthTower Peak&N~
