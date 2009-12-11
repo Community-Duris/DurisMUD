@@ -9988,13 +9988,15 @@ void remember(P_char ch, P_char victim, bool check_group_remember)
   P_house  house = NULL;
   Memory  *tmp;
   struct group_list *gl;
-
-  if(IS_PC(ch) ||
-    IS_NPC(victim) ||
+  
+  if(!(ch) ||
+     !(victim) ||
+     !IS_ALIVE(ch) ||
+     !IS_ALIVE(victim) ||
+     !IS_NPC(ch) ||
+     IS_NPC(victim) ||
      IS_TRUSTED(victim) ||
-    !HAS_MEMORY(ch) ||
-    !IS_ALIVE(ch) ||
-    !IS_ALIVE(victim))
+     !HAS_MEMORY(ch))
   {
     return;
   }
@@ -10007,9 +10009,9 @@ void remember(P_char ch, P_char victim, bool check_group_remember)
     {
       if (ch->in_room == gl->ch->in_room)
       {
-        logit(LOG_DEBUG,
-          "remembering group members, and the lucky one is: %s",
-          GET_NAME(gl->ch));
+        // logit(LOG_DEBUG,
+          // "remembering group members, and the lucky one is: %s",
+          // GET_NAME(gl->ch));
         remember(ch, gl->ch, FALSE);
       }
     }
