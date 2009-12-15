@@ -1,0 +1,5 @@
+/dms
+/dms_new
+/dms.*
+/nohup.out
+*.o
