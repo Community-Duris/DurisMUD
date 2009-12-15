@@ -99,6 +99,12 @@ struct transport_route {
 
   //
   {563522, 545407, "&+YVenan'Trut", 50, 47, 0},  
+
+	// alatorin routes
+	{543662, 519043, "&+CFort &+WKhor&N&+calator", 100, 0, 0}, // Kimordril -> Fort Khoralator
+	{519043, 543662, "&+YKimordril", 100, 0, 0}, // Fort Khoralator -> Kimordril
+	{631413, 522247, "&+RHel&N&+rgor Outpost", 100, 0, 0}, // Clan Shatter Stone -> Helgor Outpost
+	{522247, 631413, "&+WClan Shatter Stone", 100, 0, 0}, // Helgor Outpost -> Clan Shatter Stone
   
   {0}  
 };
@@ -121,6 +127,13 @@ struct transport_data {
   {47019, 545407},
   {47023, 622276},
   {47024, 563522},  
+
+	// alatorin routes	
+	{47028, 519043}, // Fort Khoralator
+	{47030, 543662}, // Kimordril
+	{47026, 522247}, // Helgor Outpost
+	{47029, 631413}, // Clan Shatter Stone
+	
   {0}
 };
 
