@@ -7489,6 +7489,12 @@ int rod_of_zarbon(P_obj obj, P_char ch, int cmd, char *arg)
   P_obj    curse;
   char     e_pos;
   int      bad_owner;
+  int      dam = (dice(8, 10) * 6);
+  struct damage_messages messages = {
+    "&+L$N &+Lturns pale as your $q &+Ldrains $S lifeforce, transferring it to you!&n",
+    "&+LYour soul feels hollow, as the power of $n&+L's $q&+L saps your lifeforce!&n",
+    "&+L&+N &+Lscreams out in pain, as $S lifeforce is drained by $n&+L!&n",
+    "", "", "", 0, obj};
 
   vict = (P_char) arg;
 
@@ -7538,7 +7544,29 @@ int rod_of_zarbon(P_obj obj, P_char ch, int cmd, char *arg)
     act("$n's $q flares up upon hitting you!",
       FALSE, ch, obj, vict, TO_VICT);
 
-    spell_energy_drain(51, ch, 0, SPELL_TYPE_SPELL, vict, 0);
+	spell_damage(ch, vict, dam, SPLDAM_NEGATIVE, 
+    SPLDAM_NOSHRUG | SPLDAM_NODEFLECT | RAWDAM_NOKILL, &messages);
+
+    vamp(ch, dam / 4, (int) (GET_MAX_HIT(ch) * 1.1));
+
+	   if(GET_VITALITY(vict) >= 25 &&
+		  !number(0, 2))
+          {
+		    act("&+rYour $q &+mFLARES&n&+r, tapping the vigor of $N&+r!&n",
+            FALSE, ch, obj, vict, TO_CHAR);
+            act("&+r$n&+r's $q &+mFLARES&n&+r, draining $N&+r's vigor!&n",
+            FALSE, ch, obj, vict, TO_NOTVICT);
+            act("&+r$n&+r's $q &+mFLARES&n&+r, draining your vigor!&n",
+            FALSE, ch, obj, vict, TO_VICT);
+
+            GET_VITALITY(vict) -= (dam / 9);
+            GET_VITALITY(ch) += (dam / 9);
+
+			StartRegen(ch, EVENT_MOVE_REGEN);
+            StartRegen(vict, EVENT_MOVE_REGEN);
+	      }
+
+    
   }
   return TRUE;
 }
