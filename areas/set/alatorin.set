@@ -1,6 +1,6 @@
 set MainZoneName alatorin
 set ObjAffect true
-set LastCommand sav
+set LastCommand lookup obj hammer
 set StartRoom 83907
 limit object 74021 999
 limit object 66004 999
