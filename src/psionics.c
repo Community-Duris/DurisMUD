@@ -1214,8 +1214,8 @@ void spell_psychic_crush(int level, P_char ch, char *arg, int type, P_char victi
     return;
   }
   
-// 33% harder to shrug.
-  if(number(0, 2) &&
+// 40% harder to shrug.
+  if(number(1, 100) < 40 &&
     resists_spell(ch, victim))
       return;
       
