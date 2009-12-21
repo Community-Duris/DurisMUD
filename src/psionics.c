@@ -1219,8 +1219,7 @@ void spell_psychic_crush(int level, P_char ch, char *arg, int type, P_char victi
     resists_spell(ch, victim))
       return;
       
-// Exactly the same as bigby's crushing hand.
-  dam = 12 * level + number(1, 25); 
+  dam = 9 * level + number(1, 25); 
 
 // Pow difference stat save and it is harder (25% only) to do extra damage.
 // Crushing hand does *2 damage on failed spell saves.
@@ -1392,8 +1391,7 @@ void spell_detonate(int level, P_char ch, char *arg, int type, P_char victim,
      !(victim))
         return;
       
-// Same as bigbys clenched fist.
-  dam = 10 * level + number(1, 25);
+  dam = 8 * level + number(1, 20);
   
   if(victim == ch)
     dam = 1;
