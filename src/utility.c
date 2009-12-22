@@ -4567,3 +4567,24 @@ int is_prime_plane(int room)
   }
 }
 
+bool match_pattern(const char *pat, const char *str) 
+{
+  while (*str) {
+    switch (*pat) {
+      case '?':
+        if (*str == '.') return FALSE;
+        break;
+      case '*':
+        do { ++pat; } while (*pat == '*'); /* enddo */
+        if (!*pat) return TRUE;
+        while (*str) if (match_pattern(pat, str++)) return TRUE;
+        return FALSE;
+      default:
+        if (*str != *pat) return FALSE;
+        break;
+    } /* endswitch */
+    ++pat, ++str;
+  } /* endwhile */
+  while (*pat == '*') ++pat;
+  return !*pat;
+}

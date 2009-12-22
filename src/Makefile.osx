@@ -208,7 +208,8 @@ OBJS	=  \
 	wikihelp.o \
   reavers.o \
   avengers.o \
-  specs.lucrot.o
+  specs.lucrot.o \
+  multiplay_whitelist.o
 
 SHARED_PFILE_OBJS=pf-skills.o \
 					 pf-files.o

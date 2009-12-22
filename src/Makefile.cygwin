@@ -207,7 +207,8 @@ OBJS	=  \
 	testcmd.o \
 	wikihelp.o \
   reavers.o \
-  avengers.o
+  avengers.o \
+  multiplay_whitelist.o
 
 SHARED_PFILE_OBJS=pf-skills.o \
 					 pf-files.o

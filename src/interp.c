@@ -45,6 +45,7 @@
 #include "alliances.h"
 #include "avengers.h"
 #include "outposts.h"
+#include "multiplay_whitelist.h"
 
 /*
  * external variables
@@ -1040,6 +1041,7 @@ const char *command[] = {
   "battlerager", // For the battlerager proc room
   "petition_block",
   "area",
+  "whitelist",
   "\n"                          /* MAX_CMD_LIST is now 1000 */
 };
 
@@ -2192,6 +2194,7 @@ void assign_command_pointers(void)
   CMD_GRT(CMD_NEWBSU, STAT_DEAD + POS_PRONE, do_newb_spellup, LESSER_G);
   CMD_GRT(CMD_GIVEPET, STAT_DEAD + POS_PRONE, do_givepet, LESSER_G);
   CMD_GRT(CMD_PETITION_BLOCK, STAT_DEAD + POS_PRONE, do_petition_block, FORGER);
+  CMD_GRT(CMD_WHITELIST, STAT_DEAD + POS_PRONE, do_whitelist, IMMORTAL);
 
 
   /*

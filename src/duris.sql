@@ -183,6 +183,21 @@ CREATE TABLE `items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Table structure for table `multiplay_whitelist`
+--
+
+DROP TABLE IF EXISTS `multiplay_whitelist`;
+CREATE TABLE `multiplay_whitelist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pattern` varchar(255) NOT NULL,
+  `admin` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `created_on` date DEFAULT NULL,
+  `player` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+--
 -- Table structure for table `nexus_stones`
 --
 

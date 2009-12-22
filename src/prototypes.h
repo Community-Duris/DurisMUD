@@ -2897,6 +2897,7 @@ void spawn_random_mapmob(void);
 int decimal2binary(unsigned decimal, char* str);
 bool is_natural_creature(P_char);
 bool is_casting_aggr_spell(P_char);
+bool match_pattern(const char *pat, const char *str);
 
 /* statistcs.c */
 void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data);

@@ -33,6 +33,7 @@
 #include "paladins.h"
 #include "ships.h"
 #include "specializations.h"
+#include "multiplay_whitelist.h"
 
 /* external variables */
 
@@ -2167,25 +2168,25 @@ void enter_game(P_desc d)
              GET_NAME(ch), d->host, Gbuf1);
   
 
-  /* multiplay check */
-  for (P_desc k = descriptor_list; k; k = k->next)
-  {
-    if( d == k || !k->character )
-      continue;
-    
-    if (k->connected == CON_PLYNG && d->host && k->host && !str_cmp(d->host, k->host) )
-    {
-      logit(LOG_STATUS, "%s and %s are logged in from the same IP address",
-            d->character->player.name, k->character->player.name);
-      sql_log(d->character, PLAYERLOG, "%s and %s logged in from same IP address", d->character->player.name, k->character->player.name);
-
-      if( d->character->in_room != k->character->in_room )
-      {
-        wizlog(AVATAR, "%s and %s are logged in from the same IP address but not in the same room",
-               d->character->player.name, k->character->player.name);
-      }
-    }
-  }  
+//  /* multiplay check */
+//  for (P_desc k = descriptor_list; k; k = k->next)
+//  {
+//    if( d == k || !k->character )
+//      continue;
+//    
+//    if (k->connected == CON_PLYNG && d->host && k->host && !str_cmp(d->host, k->host) )
+//    {
+//      logit(LOG_STATUS, "%s and %s are logged in from the same IP address",
+//            d->character->player.name, k->character->player.name);
+//      sql_log(d->character, PLAYERLOG, "%s and %s logged in from same IP address", d->character->player.name, k->character->player.name);
+//
+//      if( d->character->in_room != k->character->in_room )
+//      {
+//        wizlog(AVATAR, "%s and %s are logged in from the same IP address but not in the same room",
+//               d->character->player.name, k->character->player.name);
+//      }
+//    }
+//  }  
   
   set_town_flag_justice(ch, FALSE);
 
@@ -2606,6 +2607,38 @@ void select_name(P_desc d, char *arg, int flag)
   raise(SIGSEGV);
 }
 
+P_char is_already_in_game(P_desc d)
+{
+  if( IS_TRUSTED(d->character) )
+  {
+    return NULL;
+  }
+  
+  // first, run through descriptor list to see if they are connected
+  for (P_desc k = descriptor_list; k; k = k->next)
+  {
+    if( d == k || !k->character )
+      continue;
+    
+    if (k->connected == CON_PLYNG && !IS_TRUSTED(k->character) && d->host && k->host && !str_cmp(d->host, k->host) )
+    {
+      // is already connected
+      return k->character;
+    }
+  }  
+  
+  // next, run through character list to make sure they didn't just drop link  
+  for (P_char tmp_ch = character_list; tmp_ch; tmp_ch = tmp_ch->next)
+  {
+    if (!tmp_ch->desc && IS_PC(tmp_ch) && !IS_TRUSTED(tmp_ch) && tmp_ch->only.pc->last_ip == ip2ul(d->host) )
+    {
+      return tmp_ch;
+    }
+  }
+  
+  return NULL;
+}
+
 void select_pwd(P_desc d, char *arg)
 {
   P_char   tmp_ch;
@@ -2945,16 +2978,43 @@ void select_main_menu(P_desc d, char *arg)
     close_socket(d);
     break;
   case '1':                    /* enter game */
+#ifdef TEST_MUD
+    // multi check
+    if (P_char t_ch = is_already_in_game(d))
+    {
+      if (whitelisted_host(d->host))
+      {
+        wizlog(AVATAR, "%s on multiplay whitelist, entering game.", GET_NAME(d->character));
+        sql_log(d->character, PLAYERLOG, "On multiplay whitelist, entering game.");
+        
+        SEND_TO_Q("\r\nYou are on the approved list for multiple players from the same network.\r\n"
+                  "&+RIf you abuse this privilege, you will be dealt with harshly when we catch you!&n\r\n"
+                  "Otherwise, enjoy!\r\n", d);
+      }
+      else
+      {
+        wizlog(AVATAR, "%s tried to enter the game while already logged on as %s", GET_NAME(d->character), GET_NAME(t_ch));
+        sql_log(d->character, PLAYERLOG, "Tried to enter game while already logged on as %s", GET_NAME(t_ch));
+        
+        char buf[MAX_STRING_LENGTH];
+        
+        sprintf(buf, "\r\nYou are already in the game as %s, and you need to rent or camp them before you can\r\n"
+                     "enter the game with a new character.\r\n\r\n"
+                     "If you are multiple people playing from the same location, please petition or send an email to admin@durismud.com\r\n"
+                     "and we can allow multiple connections from your location.\r\n\r\n", GET_NAME(t_ch));
+                
+        SEND_TO_Q(buf, d);
+        SEND_TO_Q(MENU, d);
+        break;
+      }
+
+    }
+#endif
+      
     enter_game(d);
     STATE(d) = CON_PLYNG;
     d->prompt_mode = 1;
     break;
-/*  case '2':                         who list
-    do_who(d->character, 0, -4);
-    SEND_TO_Q("Can no longer use who from the menu.\r\n", d);
-    SEND_TO_Q(MENU, d);
-    break;
-*/
   case '2':                    /* read background story */
     SEND_TO_Q(BACKGR_STORY, d);
     STATE(d) = CON_RMOTD;
@@ -2966,11 +3026,6 @@ void select_main_menu(P_desc d, char *arg)
     STATE(d) = CON_PWDNEW;
     break;
   case '4':                    /* change long description */
-#if 0
-    SEND_TO_Q("temporarily disabled.\r\n", d);
-    SEND_TO_Q(MENU, d);
-    break;
-#endif
     /* same deal here as with password, rather than adding complicated code
        to solve a minor problem, they must enter the game to save changes to
        their description.  Note that there is no 'case' for CON_EXDSCR, it
