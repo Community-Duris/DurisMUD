@@ -1,3 +1,5 @@
+#include <string.h>
+
 #include "utils.h"
 #include "prototypes.h"
 #include "sql.h"
