@@ -344,12 +344,12 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
         if (obj->timer[0] + 300 <= curr_time)
         {
 
-          act("&+LYour $q &+Lslows down time and freezes &n$n &+Lin place!&n", TRUE, ch, obj, NULL, TO_CHAR);
-          act("&+L...you leap at &n$n &+Land deal a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, NULL, TO_CHAR);
-          act("&n$N's $q &+Lslows down time and freezes you in place!&n", TRUE, ch, obj, NULL, TO_VICT);
-          act("&+L...&n$n leaps at you and deals a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, NULL, TO_VICT);
-          act("&n$N's $q &+Lslows down time and freezes &n$n &+Lin place!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
-          act("&+L...&n$N &+Lleaps towards &n$n &+Land deals a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
+          act("&+LYour $q &+Lslows down time and freezes $n &+Lin place!&n", TRUE, ch, obj, NULL, TO_CHAR);
+          act("&+L...you leap at $n &+Land deal a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, NULL, TO_CHAR);
+          act("$n's $q &+Lslows down time and freezes you in place!&n", TRUE, ch, obj, NULL, TO_VICT);
+          act("&+L...$n leaps at you and deals a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, NULL, TO_VICT);
+          act("$n's $q &+Lslows down time and freezes&n $n &+Lin place!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
+          act("&+L...$n &+Lleaps towards&n $N &+Land deals a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
 
           if (ch->specials.fighting)
             hit(ch, ch->specials.fighting, obj);
@@ -360,11 +360,11 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
           if (ch->specials.fighting)
             hit(ch, ch->specials.fighting, obj);
 
-          act("$q &+Cglows &+Las it touches $n&+L's &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_CHAR);
+          act("$Q &+Cglows &+Las it touches $N's &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_CHAR);
 
-          act("$q &+Cglows &+Las it touches your &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_VICT);
+          act("$Q &+Cglows &+Las it touches your &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_VICT);
  
-          act("$q &+Cglows &+Las it touches $n&+L's &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
+          act("$Q &+Cglows &+Las it touches $N's &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
 
           switch (number(0,2))
           {
@@ -1786,7 +1786,7 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
         curr_time = time(NULL);
         vict = ParseTarget(ch, arg);
 
-        if (obj->timer[0] + 450 <= curr_time)
+        if (obj->timer[0] + 800 <= curr_time)
         {
           act("&+WYou scream '&+rBel&+L! I call upon you to &+rS&+Rl&+rA&+Ry my foe!&n", TRUE, ch, obj, vict, TO_CHAR);
           act("&+WYou thrust $q &+Winto the ground!&n", TRUE, ch, obj, vict, TO_CHAR);
@@ -1821,16 +1821,16 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
             spell_pword_stun(56, ch, 0, SPELL_TYPE_SPELL, vict, 0);
             spell_pword_blind(60, ch, 0, SPELL_TYPE_SPELL, vict, 0);
           }
-          if(61 <= rand <= 80)
+          if(61 <= rand <= 85)
           {
             spell_bigbys_clenched_fist(45, ch, 0, SPELL_TYPE_SPELL, vict, 0);
           }
-          if(81 <= rand <= 95)
+          if(86 <= rand <= 98)
           {
             spell_bigbys_clenched_fist(45, ch, 0, SPELL_TYPE_SPELL, vict, 0);
             spell_bigbys_clenched_fist(45, ch, 0, SPELL_TYPE_SPELL, vict, 0);
           }
-          if(96 <= rand <= 100)
+          if(99 <= rand <= 100)
           {
             spell_chaotic_ripple(56, ch, 0, SPELL_TYPE_SPELL, vict, 0);
           }
@@ -1918,7 +1918,7 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
             GET_HIT(ch) = 50;
         }
         else
-        if(rand > 97)
+        if(rand > 98)
         {
             act("&+rThe Prince of Demons &+Llooks at you and laughs, &+W'&+rD&+Re&+ra&+Rt&+rh&+W? &+mU&+Mn&+md&+Me&+ma&+Mt&+mh&+L!'&n", TRUE, ch, obj, vict, TO_CHAR);
             act("&+rEuronymous &+Lleaps forward and bites you in the neck, sinking his fangs deep into your flesh!", TRUE, ch, obj, vict, TO_CHAR);
@@ -1972,28 +1972,28 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
         {
             act("You are bathed in a light healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
             act("$n is bathed in a light healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
-            GET_HIT(ch) += 75;
+            GET_HIT(ch) += 100;
             spell_invigorate(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         }
         if(26 <= rand <= 50)
         {
             act("You are bathed in a healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
             act("$n is bathed in a healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
-            GET_HIT(ch) += 150;
+            GET_HIT(ch) += 200;
             spell_invigorate(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         }
         if(51 <= rand <= 75)
         {
             act("You are bathed in a strong healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
             act("$n is bathed in a strong healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
-            GET_HIT(ch) += 225;
+            GET_HIT(ch) += 300;
             spell_invigorate(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         }
         if(76 <= rand <= 100)
         {
             act("You are bathed in an extremely powerful healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
             act("$n is bathed in an extremely powerful healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
-            GET_HIT(ch) += 300;
+            GET_HIT(ch) += 400;
             spell_invigorate(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         }
 
