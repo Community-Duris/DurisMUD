@@ -1661,8 +1661,10 @@ void spell_ethereal_discharge(int level, P_char ch, char *arg, int type, P_char 
     "$N&+L is overwhelmed by the e&+ct&+Ch&+ce&+Lreal shockwave, and collapses, d&+Ce&+Lad.&n", 0
   };
 
-  if(!(ch) ||
-     !IS_ALIVE(ch))
+  if(!ch ||
+     !IS_ALIVE(ch) ||
+     !victim ||
+     !IS_ALIVE(victim))
   {
     return;
   }
