@@ -2681,6 +2681,45 @@ bool is_multiplaying(P_desc d)
   return false;
 }
 
+void reconnect(P_desc d, P_char tmp_ch)
+{
+  echo_on(d);
+  SEND_TO_Q("Reconnecting.\r\n", d);
+  free_char(d->character);
+  d->character = NULL;
+  tmp_ch->desc = d;
+  d->character = tmp_ch;
+  sql_connectIP(tmp_ch);
+  tmp_ch->only.pc->last_ip = ip2ul(d->host);
+  tmp_ch->specials.timer = 0;
+  STATE(d) = CON_PLYNG;
+  act("$n has reconnected.", TRUE, tmp_ch, 0, 0, TO_ROOM);
+  logit(LOG_COMM, "%s [%s@%s] has reconnected.",
+        GET_NAME(d->character), d->login, d->host);
+  loginlog(d->character->player.level, "%s [%s@%s] has reconnected.",
+           GET_NAME(d->character), d->login, d->host);
+  sql_log(d->character, CONNECTLOG, "Reconnected");
+  /* if they were morph'ed when they lost link, put them
+   back... */
+  if (IS_SET(tmp_ch->specials.act, PLR_MORPH))
+  {
+    if (!tmp_ch->only.pc->switched ||
+        !IS_MORPH(tmp_ch->only.pc->switched) ||
+    /*              (tmp_ch != ((P_char)
+     tmp_ch->only.pc->switched->only.npc->memory))) */
+        (tmp_ch != tmp_ch->only.pc->switched->only.npc->orig_char))
+    {
+      logit(LOG_EXIT,
+            "Something fucked while trying to reconnect linkless morph");
+      raise(SIGSEGV);
+    }
+    d->original = tmp_ch;
+    d->character = tmp_ch->only.pc->switched;
+    d->character->desc = d;
+    tmp_ch->desc = NULL;
+  }
+}
+
 void select_pwd(P_desc d, char *arg)
 {
   P_char   tmp_ch;
@@ -2713,6 +2752,7 @@ void select_pwd(P_desc d, char *arg)
         STATE(d) = CON_FLUSH;
         return;
       }
+      
       /* Check if already playing */
       for (k = descriptor_list; k; k = k->next)
       {
@@ -2744,41 +2784,7 @@ void select_pwd(P_desc d, char *arg)
         if (!tmp_ch->desc && IS_PC(tmp_ch) &&
             !str_cmp(GET_NAME(d->character), GET_NAME(tmp_ch)))
         {          
-          echo_on(d);
-          SEND_TO_Q("Reconnecting.\r\n", d);
-          free_char(d->character);
-          d->character = NULL;
-          tmp_ch->desc = d;
-          d->character = tmp_ch;
-          sql_connectIP(tmp_ch);
-          tmp_ch->only.pc->last_ip = ip2ul(d->host);
-          tmp_ch->specials.timer = 0;
-          STATE(d) = CON_PLYNG;
-          act("$n has reconnected.", TRUE, tmp_ch, 0, 0, TO_ROOM);
-          logit(LOG_COMM, "%s [%s@%s] has reconnected.",
-                GET_NAME(d->character), d->login, d->host);
-          loginlog(d->character->player.level, "%s [%s@%s] has reconnected.",
-                   GET_NAME(d->character), d->login, d->host);
-          sql_log(d->character, CONNECTLOG, "Reconnected");
-          /* if they were morph'ed when they lost link, put them
-             back... */
-          if (IS_SET(tmp_ch->specials.act, PLR_MORPH))
-          {
-            if (!tmp_ch->only.pc->switched ||
-                !IS_MORPH(tmp_ch->only.pc->switched) ||
-/*              (tmp_ch != ((P_char)
-   tmp_ch->only.pc->switched->only.npc->memory))) */
-                (tmp_ch != tmp_ch->only.pc->switched->only.npc->orig_char))
-            {
-              logit(LOG_EXIT,
-                    "Something fucked while trying to reconnect linkless morph");
-              raise(SIGSEGV);
-            }
-            d->original = tmp_ch;
-            d->character = tmp_ch->only.pc->switched;
-            d->character->desc = d;
-            tmp_ch->desc = NULL;
-          }
+          reconnect(d, tmp_ch);
           return;
         }
       }
@@ -2812,6 +2818,7 @@ void select_pwd(P_desc d, char *arg)
         STATE(d) = CON_NME;
         return;
       }
+      
       if ((IS_SET(game_locked, LOCK_CONNECTIONS)) &&
           (GET_LEVEL(d->character) <= MAXLVLMORTAL))
       {
@@ -2821,6 +2828,7 @@ void select_pwd(P_desc d, char *arg)
         STATE(d) = CON_FLUSH;
         return;
       }
+      
       if ((IS_SET(game_locked, LOCK_MAX_PLAYERS)) &&
           (GET_LEVEL(d->character) <= MAXLVLMORTAL) &&
           (number_of_players() >= MAX_PLAYERS_BEFORE_LOCK))
@@ -3026,6 +3034,11 @@ void select_main_menu(P_desc d, char *arg)
     close_socket(d);
     break;
   case '1':                    /* enter game */
+    if( is_multiplaying(d) )
+    {
+      break;
+    }
+      
     enter_game(d);
     STATE(d) = CON_PLYNG;
     d->prompt_mode = 1;
