@@ -2062,10 +2062,11 @@ SPELL_CREATE("vigorize light", SPELL_VIGORIZE_LIGHT, PULSE_SPELLCAST * 2,
   SPELL_ADD(CLASS_NECROMANCER, 2);
 
   SPELL_CREATE_MSG("protection from animals", SPELL_PROTECT_FROM_ANIMAL, PULSE_SPELLCAST,
-                TAR_CHAR_ROOM,
+                TAR_CHAR_ROOM | TAR_SPIRIT,
                 spell_protection_from_animals, "You no longer feel safe from &+yanimals&n.");
   SPELL_ADD(CLASS_DRUID, 3);
   SPELL_ADD(CLASS_RANGER, 4);
+  SPEC_SPELL_ADD(CLASS_SHAMAN, 5, SPEC_ANIMALIST);
   
   SPELL_CREATE("animal friendship", SPELL_ANIMAL_FRIENDSHIP, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT,
