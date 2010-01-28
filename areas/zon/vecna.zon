@@ -1,6 +1,6 @@
 #1300
-Vecnas Tomb~
-130079 1300 0 40 50 1
+&+rVecna's &+LTomb&n~
+130079 0 0 40 50 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -250,6 +250,7 @@ M 0 130022 8 130062 100 0 0 0      * a flame spirit
 M 0 130022 8 130062 100 0 0 0      * a flame spirit
 M 0 130025 1 130065 100 0 0 0      * Tobosh
 E 1 130014 1 5 100 0 0 0           *   the armor of purity
+G 1 22070 1 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 130023 1 130067 100 0 0 0      * the lich of Kairvo
 E 1 130038 40 13 100 0 0 0         *   Vecna zone proc item
 M 0 130024 1 130068 100 0 0 0      * Kaervek
@@ -270,7 +271,6 @@ M 0 130033 1 130073 100 0 0 0      * a twisted statue
 M 0 130028 1 130074 100 0 0 0      * a black mass
 M 0 130034 1 130075 100 0 0 0      * a twisted statue
 M 0 130026 1 130076 100 0 0 0      * the torturer
-G 1 130028 1 0 50 0 0 0            *    Krindors Incredible Device
 M 0 130027 1 130076 100 0 0 0      * the torturers apprentice
 G 1 130033 1 0 100 0 0 0           *    Kaervek's Trinket
 M 0 130037 1 130078 100 0 0 0      * the death knight
