@@ -922,6 +922,7 @@ int staff_of_blue_flames(P_obj obj, P_char ch, int cmd, char *arg)
 {
   P_char vict;
   bool staff = false;
+  int curr_time;
 
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
@@ -998,17 +999,22 @@ int staff_of_blue_flames(P_obj obj, P_char ch, int cmd, char *arg)
         spell_fly(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
       return TRUE;
     } 
-    // else if (isname(arg, "haste")) 
-    // {
-      // act("&+bThe flames of your&N $q &+Bintensify.&N", FALSE, ch, obj, obj, TO_CHAR);
-      // act("$n says 'haste' to $p.", FALSE, ch, obj, obj, TO_ROOM);
-      // act("$n's&N $q &+Bglows intently!", TRUE, ch, obj, 0, TO_ROOM);
-      // if (ch->group)
-        // cast_as_area(ch, SPELL_HASTE, 50, 0);
-      // else
-        // spell_haste(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-      // return TRUE;
-    // } 
+    else if (isname(arg, "haste")) 
+    {
+      curr_time = time(NULL);
+
+      act("&+bThe flames of your&N $q &+Bintensify.&N", FALSE, ch, obj, obj, TO_CHAR);
+      act("$n says 'haste' to $p.", FALSE, ch, obj, obj, TO_ROOM);
+      act("$n's&N $q &+Bglows intently!", TRUE, ch, obj, 0, TO_ROOM);
+      if (ch->group && (obj->timer[1] + number(100, 150) <= curr_time))
+	  {
+           cast_as_area(ch, SPELL_HASTE, 50, 0);
+           obj->timer[1] = curr_time;
+	  }
+      else
+        spell_haste(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      return TRUE;
+    } 
     else if (isname(arg, "fire")) 
     {
       act("You say 'fire'", FALSE, ch, 0, 0, TO_CHAR);
@@ -1033,55 +1039,69 @@ int staff_of_blue_flames(P_obj obj, P_char ch, int cmd, char *arg)
             spell_coldshield(50, vict, 0, SPELL_TYPE_SPELL, vict, 0);
       return TRUE;
     } 
-    // else if (isname(arg, "grow")) 
-    // {
-      // act("You say 'grow'", FALSE, ch, 0, 0, TO_CHAR);
-      // act("&+YThe flames of your&N $q &+Yglow brightly.&N", FALSE, ch, obj, obj, TO_CHAR);
-      // act("$n says 'grow' to $p.", FALSE, ch, obj, obj, TO_ROOM);
-      // act("$n's&N $q &+Yglows brightly!", TRUE, ch, obj, 0, TO_ROOM);
-      // if (ch->group)
-        // cast_as_area(ch, SPELL_ENLARGE, 50, 0);
-      // else
-        // spell_enlarge(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-      // obj->value[5] = time_info.day;
-      // return TRUE;
-    // } 
+    else if (isname(arg, "grow")) 
+    {
+      curr_time = time(NULL);
+
+      act("You say 'grow'", FALSE, ch, 0, 0, TO_CHAR);
+      act("&+YThe flames of your&N $q &+Yglow brightly.&N", FALSE, ch, obj, obj, TO_CHAR);
+      act("$n says 'grow' to $p.", FALSE, ch, obj, obj, TO_ROOM);
+      act("$n's&N $q &+Yglows brightly!", TRUE, ch, obj, 0, TO_ROOM);
+      if (ch->group && (obj->timer[2] + number(15, 25) <= curr_time))
+	  {
+            cast_as_area(ch, SPELL_ENLARGE, 50, 0);
+	    obj->timer[2] = curr_time;
+	  }
+      else
+       spell_enlarge(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      return TRUE;
+    } 
     else if (isname(arg, "invisible")) 
     {
       act("You say 'invisible'", FALSE, ch, 0, 0, TO_CHAR);
       act("&+LThe flames of your&N $q &+Lturn pitch black.&N", FALSE, ch, obj, obj, TO_CHAR);
       act("$n says 'invisible' to $p.", FALSE, ch, obj, obj, TO_ROOM);
       act("$n's&N $q &+Lturns pitch black!", TRUE, ch, obj, 0, TO_ROOM);
-      if (ch->group)
+      if (ch->group) 
         spell_mass_invisibility(GET_LEVEL(ch), ch, 0, 0, 0, 0);
       else
         spell_improved_invisibility(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
       return TRUE;
     } 
-    // else if (isname(arg, "stone")) 
-    // {
-      // act("You say 'stone'", FALSE, ch, 0, 0, TO_CHAR);
-      // act("&+bThe flames of your&N $q &+Bintensify.&N", FALSE, ch, obj, obj, TO_CHAR);
-      // act("$n says 'stone' to $p.", FALSE, ch, obj, obj, TO_ROOM);
-      // act("$n's&N $q &+Bglows intently!", TRUE, ch, obj, 0, TO_ROOM);
-      // if (ch->group)
-        // cast_as_area(ch, SPELL_STONE_SKIN, 50, 0);
-      // else
-        // spell_stone_skin(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-      // return TRUE;
-    // } 
-    // else if (isname(arg, "globe")) 
-    // {
-      // act("You say 'globe'", FALSE, ch, 0, 0, TO_CHAR);
-      // act("&+bThe flames of your&N $q &+Bintensify.&N", FALSE, ch, obj, obj, TO_CHAR);
-      // act("$n says 'globe' to $p.", FALSE, ch, obj, obj, TO_ROOM);
-      // act("$n's&N $q &+Bglows intently!", TRUE, ch, obj, 0, TO_ROOM);
-      // if (ch->group)
-        // cast_as_area(ch, SPELL_GLOBE, 50, 0);
-      // else
-        // spell_globe(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-      // return TRUE;
-    // } 
+    else if (isname(arg, "stone")) 
+    {
+      curr_time = time(NULL);
+
+      act("You say 'stone'", FALSE, ch, 0, 0, TO_CHAR);
+      act("&+bThe flames of your&N $q &+Bintensify.&N", FALSE, ch, obj, obj, TO_CHAR);
+      act("$n says 'stone' to $p.", FALSE, ch, obj, obj, TO_ROOM);
+      act("$n's&N $q &+Bglows intently!", TRUE, ch, obj, 0, TO_ROOM);
+      if (ch->group && (obj->timer[3] + number(30, 40) <= curr_time))
+	  {
+           cast_as_area(ch, SPELL_STONE_SKIN, 50, 0);
+           obj->timer[3] = curr_time;
+	  }
+      else
+        spell_stone_skin(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      return TRUE;
+    } 
+    else if (isname(arg, "globe")) 
+    {
+      curr_time = time(NULL);
+
+      act("You say 'globe'", FALSE, ch, 0, 0, TO_CHAR);
+      act("&+bThe flames of your&N $q &+Bintensify.&N", FALSE, ch, obj, obj, TO_CHAR);
+      act("$n says 'globe' to $p.", FALSE, ch, obj, obj, TO_ROOM);
+      act("$n's&N $q &+Bglows intently!", TRUE, ch, obj, 0, TO_ROOM);
+      if (ch->group && (obj->timer[4] + number(200, 250) <= curr_time))
+	  {
+           cast_as_area(ch, SPELL_GLOBE, 50, 0);
+           obj->timer[4] = curr_time;
+	  }
+      else
+        spell_globe(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      return TRUE;
+    } 
   }
   
   if (arg && (cmd == CMD_USE) && staff)
