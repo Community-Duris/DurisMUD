@@ -1,0 +1,32 @@
+#48000
+guildhall gh~
+a guildhall~
+The guildhall of %s&n is here.~
+~
+25 1 0 0 0 0 0 0 0 0 0
+0 7 -1 0 0 0 0 0
+0 0 100
+#48001
+portal~
+a portal~
+A portal to %s&n is here.~
+~
+25 15 3 0 7 0 0 0 0 0 0
+0 7 0 0 0 0 0 0
+0 0 100
+#48002
+heartstone power~
+&+Wthe culminated &+rpo&+Rwe&+rr &nof %s&n~
+&+WThe heartstone of %s has been erected here.&n~
+~
+13 15 3 0 7 0 33554433 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#48003
+outpost op~
+an outpost~
+An outpost of %s&n is here.~
+~
+25 1 0 0 0 0 0 0 0 0 0
+0 7 -1 0 0 0 0 0
+0 0 100

@@ -1,0 +1,42 @@
+#48000
+golem sorcerer~
+&+ba colossal &+cdjinn &+bstatue&n~
+&+bAn enormous statue of a &+cdjinn &+bresides here.&n
+~
+   &+bHulking nearly thirty feet tall, this wispy being is adorned by a&n
+&+bsingle golden earring in his left ear and a nazarine vest and pants.&n
+&+bIts skin, and the very essense of it crackle and spark with mystical&n
+&+benergy.&n
+~
+4194312 0 0 0 0 0 0 0 S
+og 0 512 6
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#48001
+golem warrior~
+&+Lthe statue of an &+yanu&+Lbian sol&+ydier&n~
+&+LA colossal onyx statue stands, &+Wsp&+Cea&+Wr &+Lat the ready!&n
+~
+   &+LOnyx skin and a glint of &+Wsi&+Clv&+Wer we&+Cap&+Won&+Cry &+Ldisplay the&n
+&+Lprowess of this towering anubian soldier.&n
+~
+4194312 0 0 0 0 0 0 0 S
+og 0 1 6
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#48002
+golem cleric~
+&+yA giant bronze statue overlooks this foyer.&n~
+&+ya bronzed statue&n
+~
+   &+yA calm expression permeates the face of this automaton.&n
+&+yStanding nearly ten meters tall, this bronzed hunk of&n
+&+ymetal stands vigil over this foyer.&n
+~
+4194312 0 0 0 0 0 0 0 S
+og 0 512 6
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0

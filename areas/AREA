@@ -195,7 +195,7 @@ charing                   *450-452 (new elf hometown)
 celestia                  *455 Celestia 56 zone
 orogs                     *458-459
 vehicles                  *470-479 /* wagons, ferrys, flying carpets */
-castle_rooms              *480-489 /* for castle rooms */
+guildhalls                *480-489 /* for guildhalls */
 desert                    *490-497 (scip)
 player_ships              *500-509  /* For creating ships on the fly */
 hell_one_avernus          *510-513
