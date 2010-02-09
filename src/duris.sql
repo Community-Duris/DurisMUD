@@ -156,6 +156,54 @@ CREATE TABLE `guild_transactions` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
+-- Table structure for table `guildhall_rooms`
+--
+
+DROP TABLE IF EXISTS `guildhall_rooms`;
+CREATE TABLE `guildhall_rooms` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `guildhall_id` int(11) NOT NULL DEFAULT '0',
+  `vnum` int(11) NOT NULL DEFAULT '0',
+  `type` int(11) NOT NULL DEFAULT '0',
+  `value0` int(10) unsigned NOT NULL DEFAULT '0',
+  `value1` int(10) unsigned NOT NULL DEFAULT '0',
+  `value2` int(10) unsigned NOT NULL DEFAULT '0',
+  `value3` int(10) unsigned NOT NULL DEFAULT '0',
+  `value4` int(10) unsigned NOT NULL DEFAULT '0',
+  `value5` int(10) unsigned NOT NULL DEFAULT '0',
+  `value6` int(10) unsigned NOT NULL DEFAULT '0',
+  `value7` int(10) unsigned NOT NULL DEFAULT '0',
+  `exit0` int(11) NOT NULL DEFAULT '0',
+  `exit1` int(11) NOT NULL DEFAULT '0',
+  `exit2` int(11) NOT NULL DEFAULT '0',
+  `exit3` int(11) NOT NULL DEFAULT '0',
+  `exit4` int(11) NOT NULL DEFAULT '0',
+  `exit5` int(11) NOT NULL DEFAULT '0',
+  `exit6` int(11) NOT NULL DEFAULT '0',
+  `exit7` int(11) NOT NULL DEFAULT '0',
+  `exit8` int(11) NOT NULL DEFAULT '0',
+  `exit9` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `vnum` (`vnum`),
+  KEY `guildhall_id` (`guildhall_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `guildhalls`
+--
+
+DROP TABLE IF EXISTS `guildhalls`;
+CREATE TABLE `guildhalls` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `assoc_id` int(11) NOT NULL DEFAULT '0',
+  `type` int(11) NOT NULL DEFAULT '0',
+  `outside_vnum` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `assoc_id` (`assoc_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
 -- Table structure for table `ip_info`
 --
 
@@ -456,6 +504,7 @@ CREATE TABLE `associations` (
   `active` bool NOT NULL default 1,
   `wood` int(11) NOT NULL default '0',
   `stone` int(11) NOT NULL default '0',
+  `construction_points` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
