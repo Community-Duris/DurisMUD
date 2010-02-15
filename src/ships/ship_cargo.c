@@ -22,15 +22,15 @@ struct CargoStats ship_contra_market_mod[NUM_PORTS];
 
 const CargoData cargo_location_data[NUM_PORTS] = {
   //  Base cargo cost, Base contra cost, Required frags for contraband
-  { 51,    202,    150},
-  { 53,    212,    150},
-  { 50,    186,    100},
-  { 58,    206,    150},
-  { 48,    224,    200},
-  { 52,    193,    100},
-  { 49,    230,    200},
-  { 56,    214,    150},
-  { 54,    200,    150},
+  { 31,    162,    150},
+  { 33,    172,    150},
+  { 30,    146,    100},
+  { 38,    166,    150},
+  { 28,    184,    200},
+  { 32,    153,    100},
+  { 29,    190,    200},
+  { 36,    174,    150},
+  { 34,    160,    150},
 };
 
 const char *cargo_name[NUM_PORTS] = {
