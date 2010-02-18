@@ -307,7 +307,7 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
     return;
   }
   
-  if (IS_GOOD(ch) && !IS_TRUSTED(ch))
+  if (GET_ALIGNMENT(ch) > 0)
   {
     send_to_char
       ("You don't even _consider_ such a evil act, meddling with undead!",
