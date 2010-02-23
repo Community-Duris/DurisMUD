@@ -158,16 +158,54 @@ int write_cargo()
     logit(LOG_DEBUG, "write_cargo(): cargo query failed!");
     return FALSE;
   }
+
+  if(!qry("delete from ship_cargo_prices"))
+  {
+    logit(LOG_DEBUG, "write_cargo(): price query failed!");
+    return FALSE;
+  }
   
   for( int port = 0; port < NUM_PORTS; port++ )
   {
     for( int type = 0; type < NUM_PORTS; type++ )
     {
+      if(port == type)
+      {
+        // insert into prices table
+        if(!qry("insert into ship_cargo_prices (type, port_id, cargo_type, price) values ('%s', %d, %d, %d)", "CARGO", port, type, cargo_sell_price(port)))
+        {
+          logit(LOG_DEBUG, "write_cargo(): insert query failed!");
+          return FALSE;
+        }
+        if(!qry("insert into ship_cargo_prices (type, port_id, cargo_type, price) values ('%s', %d, %d, %d)", "CONTRABAND", port, type, contra_sell_price(port)))
+        {
+          logit(LOG_DEBUG, "write_cargo(): insert query failed!");
+          return FALSE;
+        }              
+      }
+      else
+      {
+        // insert into prices table
+        if(!qry("insert into ship_cargo_prices (type, port_id, cargo_type, price) values ('%s', %d, %d, %d)", "CARGO", port, type, cargo_buy_price(port, type)))
+        {
+          logit(LOG_DEBUG, "write_cargo(): insert query failed!");
+          return FALSE;
+        }
+        
+        if(!qry("insert into ship_cargo_prices (type, port_id, cargo_type, price) values ('%s', %d, %d, %d)", "CONTRABAND", port, type, contra_buy_price(port, type)))
+        {
+          logit(LOG_DEBUG, "write_cargo(): insert query failed!");
+          return FALSE;
+        }        
+      }
+      
+      // insert into mods table
       if(!qry("insert into ship_cargo_market_mods (type, port_id, cargo_type, modifier) values ('%s', %d, %d, %f)", "CARGO", port, type, ship_cargo_market_mod[port][type]))
       {
         logit(LOG_DEBUG, "write_cargo(): insert query failed!");
         return FALSE;
       }
+              
       if(!qry("insert into ship_cargo_market_mods (type, port_id, cargo_type, modifier) values ('%s', %d, %d, %f)", "CONTRABAND", port, type, ship_contra_market_mod[port][type]))
       {
         logit(LOG_DEBUG, "write_cargo(): insert query failed!");

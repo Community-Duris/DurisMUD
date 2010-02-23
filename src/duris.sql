@@ -568,6 +568,19 @@ CREATE TABLE `ship_cargo_market_mods` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
+-- Table structure for table `ship_cargo_market_mods`
+--
+
+DROP TABLE IF EXISTS `ship_cargo_prices`;
+CREATE TABLE `ship_cargo_prices` (
+  `type` varchar(255) NOT NULL DEFAULT '',
+  `port_id` int(11) NOT NULL DEFAULT '-1',
+  `cargo_type` int(11) NOT NULL DEFAULT '-1',
+  `price` int(11) NOT NULL DEFAULT '0',
+  KEY `type_port_id_cargo_type` (`type`,`port_id`,`cargo_type`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
 -- Table structure for table 'outposts'
 --
 
