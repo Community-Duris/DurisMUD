@@ -662,10 +662,11 @@ M 0 74040 1 74147 100 0 0 0        * T'Lothka
 G 1 74093 1 0 100 0 0 0            *    a black potion
 G 1 74021 1 0 100 0 0 0            *    a scroll of Numbla
 G 1 74022 1 0 100 0 0 0            *    a steel blue potion
-G 1 3054 9999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 3050 9999 0 100 0 0 0          *    (object type not in this .obj file)
+G 1 3054 1 0 100 0 0 0             *    (object type not in this .obj file)
+G 1 3050 1 0 100 0 0 0             *    (object type not in this .obj file)
 G 1 74203 9999 0 100 0 0 0         *    a wooden walking stick
 G 1 74202 9999 0 100 0 0 0         *    a leather headband
+G 1 55396 1 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 74181 14 74149 100 0 0 0       * an elite watcher
 E 1 74179 3 13 100 0 0 0           *   a belt of flesh hooks
 E 1 74283 2 20 100 0 0 0           *   a dull copper mask
