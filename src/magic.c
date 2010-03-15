@@ -12374,9 +12374,9 @@ void spell_pword_kill(int level, P_char ch, char *arg, int type,
   if(!IS_GREATER_RACE(victim) &&
      !IS_TRUSTED(victim) &&
      !IS_ELITE(victim) &&
-     !(GET_RACE(victim) == RACE_GOLEM | RACE_CONSTRUCT) &&
-     !NewSaves(victim, SAVING_SPELL, -5) &&
-     (level >= number(0, 99) || level > GET_LEVEL(victim) + 15))
+     (GET_HIT(victim) < 1500) &&
+     !NewSaves(victim, SAVING_SPELL, 15) &&
+     (((int)(level - GET_LEVEL(victim)) >= number(0, 99)) || level > GET_LEVEL(victim) + 15))
   {
     act("&+Y$N &+Ydies instantly from the power of your word.&n", FALSE, ch, 0, victim, TO_CHAR);
     act("&+YYou hear a word of power, and die instantly.&n", FALSE, ch, 0, victim, TO_VICT);
