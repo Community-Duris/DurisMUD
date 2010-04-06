@@ -12288,7 +12288,7 @@ void spell_faerie_fog(int level, P_char ch, char *arg, int type,
          IS_AFFECTED(tmp_victim, AFF_HIDE) ||
          IS_AFFECTED2(tmp_victim, AFF2_MINOR_INVIS)))
     {
-      if(saves_spell(tmp_victim, SAVING_SPELL))
+      if(NewSaves(tmp_victim, SAVING_SPELL, (int)(level - GET_LEVEL(tmp_victim))))
       {
         a = tmp_victim->specials.affected_by;
         a2 = tmp_victim->specials.affected_by2;
