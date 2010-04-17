@@ -113,7 +113,7 @@ void shutdown_newships()
 //--------------------------------------------------------------------
 // set ship object names with ship name in them
 //--------------------------------------------------------------------
-void nameship(char *name, P_ship ship)
+void nameship(const char *name, P_ship ship)
 {
    int rroom, i;
    
@@ -280,7 +280,7 @@ int loadship(P_ship ship, int to_room)
 //--------------------------------------------------------------------
 // create new ship of given class
 //--------------------------------------------------------------------
-struct ShipData *newship(int m_class)
+struct ShipData *newship(int m_class, bool npc)
 {
    int j = 0;
    ShipVisitor svs;
@@ -297,6 +297,7 @@ struct ShipData *newship(int m_class)
 
    // Set up the new ship
    ship->shipai = 0;
+   ship->combat_ai = 0;
    ship->panel = read_object(60000, VIRTUAL);
    ship->m_class = m_class;
    setarmor(ship, true);
@@ -386,6 +387,8 @@ void delete_ship(P_ship ship)
     extract_obj(ship->shipobj, TRUE);
     ship->panel = NULL;
     ship->shipobj = NULL;
+    if (ship->combat_ai)
+        delete ship->combat_ai;
 
     logit(LOG_STATUS, "Ship \"%s\" (%s) deleted", strip_ansi(ship->name).c_str(), ship->ownername);
     
@@ -871,9 +874,33 @@ void dock_ship(P_ship ship, int to_room)
 }
 
 
+bool check_ship_name(P_ship ship, P_char ch, char* name)
+{
+    ShipVisitor svs;
+    for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
+    {
+        if (svs == ship || svs->race == NPCSHIP)
+            continue;
+        if (!strcmp(strip_ansi(name).c_str(), strip_ansi(svs->name).c_str()))
+        {
+            if (!ship || ship->frags <= svs->frags)
+            {
+                send_to_char("Another player already has a ship with such name, choose another name for your ship!\r\n", ch);
+                return false;
+            }
+        }
+    }
+    return true;    
+}    
+
+
+
 bool check_undocking_conditions(P_ship ship, P_char ch)
 {
     int arc_weapons[4], arc_weapon_weight[4];
+
+    if (!check_ship_name(ship, ch, ship->name))
+        return false;
 
     for (int a = 0; a < 4; a++)
     {
@@ -1608,6 +1635,17 @@ int do_fire (P_char ch, P_ship ship, char* arg)
         send_to_char("Valid syntax: 'fire <fore/starboard/port/rear/weapon number>'\r\n", ch);
         return TRUE;
     }
+    arg = skip_spaces(arg);
+    if (isname(arg, "pirate") && IS_TRUSTED(ch)) 
+    {
+        if (try_load_pirate_ship(ship, ch))
+            return true;
+        else
+        {
+            send_to_char("Failed to load pirate ship!\r\n", ch);
+            return false;
+        }
+    }
     if (ship->target == NULL) 
     {
         send_to_char("No target locked.\r\n", ch);
@@ -1623,7 +1661,6 @@ int do_fire (P_char ch, P_ship ship, char* arg)
         send_to_char("Your gun crew has not recovered from the ram impact yet!\r\n", ch);
         return TRUE;
     }
-    arg = skip_spaces(arg);
     if (isname(arg, "fore")) 
     {
         return fire_arc(ship, ch, FORE);
@@ -1665,6 +1702,12 @@ int lock_target(P_char ch, P_ship ship, char* arg)
     }
     if (isname(arg, "off")) 
     {
+        if (ship->combat_ai != 0 && IS_TRUSTED(ch))
+        {
+            delete ship->combat_ai;
+            ship->combat_ai = 0;
+        }
+
         if (ship->target != NULL) {
             ship->target = NULL;
             act_to_all_in_ship(ship, "Target Cleared.\r\n");
@@ -1673,6 +1716,10 @@ int lock_target(P_char ch, P_ship ship, char* arg)
             send_to_char("You currently have no target.\r\n", ch);
             return TRUE;
         }
+    }
+    if (isname(arg, "pirate") && IS_TRUSTED(ch))
+    {
+        ship->combat_ai = new ShipCombatAI(ship, ch);
     }
 
 
@@ -1830,7 +1877,7 @@ int look_weapon (P_char ch, P_ship ship, char* arg)
         send_to_char("Target out of range or out of sight!\r\n", ch);
         return TRUE;
     }
-    sprintf(buf, "Chance to hit target: &+W%d%%&N\r\n", weaponsight(ch, ship, ship->target, slot, contacts[j].range));
+    sprintf(buf, "Chance to hit target: &+W%d%%&N\r\n", weaponsight(ship, ship->target, slot, contacts[j].range));
     send_to_char(buf, ch);
     return TRUE;
 }
@@ -1942,17 +1989,65 @@ int look_contacts(P_char ch, P_ship ship)
             if (contacts[i].range > 5)
                 continue;
         }
-        dispcontact(i);
-        if (contacts[i].ship == ship->target)
-            sprintf(buf, "&+G%s", contact);
-        else if (contacts[i].ship->target == ship)
-            sprintf(buf, "&+R%s", contact);
-        else
-            sprintf(buf, contact);
+        //dispcontact(i);
+
+        const char* race_indicator = "&n";
+        if (contacts[i].range < SCAN_RANGE && !SHIPISDOCKED(contacts[i].ship))
+        {
+            if (contacts[i].ship->race == GOODIESHIP)
+                race_indicator = "&+Y";
+            else if (contacts[i].ship->race == EVILSHIP)
+                race_indicator = "&+R";
+        }
+        const char* target_indicator1 =  (contacts[i].ship->target == ship) ? "&+W" : "";
+        const char* target_indicator2 =  (contacts[i].ship == ship->target) ? "&+G" : "";
+
+        sprintf(buf,
+          "%s[&N%s%s&N%s]&N %s%-30s&N X:%-3d Y:%-3d Z:%-3d R:%-5.1f B:%-3d H:%-3d S:%-3d|%s%s\r\n",
+          race_indicator,
+          target_indicator1,
+          contacts[i].ship->id, 
+          race_indicator,
+          target_indicator2,
+          strip_ansi(contacts[i].ship->name).c_str(), 
+          contacts[i].x, 
+          contacts[i].y, 
+          contacts[i].z, 
+          contacts[i].range, 
+          contacts[i].bearing, 
+          contacts[i].ship->heading,
+          contacts[i].ship->speed, 
+          contacts[i].arc,
+          SHIPSINKING(contacts[i].ship) ? "&+RS&N" :
+            SHIPISDOCKED(contacts[i].ship) ?
+              "&+yD&N" : "");
+        
         send_to_char(buf, ch);
     }
     return TRUE;
 }
+
+/*void dispcontact(int i)
+{
+  int      x, y, z, bearing;
+  float    range;
+  P_ship j;
+
+  x = contacts[i].x;
+  y = contacts[i].y;
+  z = contacts[i].z;
+  range = contacts[i].range;
+  bearing = contacts[i].bearing;
+  j = contacts[i].ship;
+
+  sprintf(contact,
+          "[%s] %-30s X:%-3d Y:%-3d Z:%-3d R:%-5.1f B:%-3d H:%-3d S:%-3d|%s%s\r\n",
+          j->id, strip_ansi(j->name).c_str(), x, y, z, range, bearing, j->heading,
+          j->speed, contacts[i].arc,
+          SHIPSINKING(contacts[i].ship) ? "&+RS&N" :
+            SHIPISDOCKED(contacts[i].ship) ?
+              "&+yD&N" : "");
+}*/
 
 
 int look_weaponspec(P_char ch, P_ship ship)
@@ -2406,12 +2501,12 @@ int fire_weapon(P_ship ship, P_char ch, int w_num)
 {
     if (w_num < 0 || w_num >= MAXSLOTS)
     {
-        send_to_char("Invalid weapon!\r\n", ch);
+        if (ch) send_to_char("Invalid weapon!\r\n", ch);
         return TRUE;
     }
     if (ship->slot[w_num].type != SLOT_WEAPON)
     {
-        send_to_char("Invalid weapon!\r\n", ch);
+        if (ch) send_to_char("Invalid weapon!\r\n", ch);
         return TRUE;
     }
 
@@ -2424,7 +2519,7 @@ int fire_weapon(P_ship ship, P_char ch, int w_num)
     }
     if (j == k)
     {
-        send_to_char("Target out of sight!\r\n", ch);
+        if (ch) send_to_char("Target out of sight!\r\n", ch);
         return TRUE;
     }
 
@@ -2432,44 +2527,44 @@ int fire_weapon(P_ship ship, P_char ch, int w_num)
     float range = contacts[j].range;
     if (range > (float) weapon_data[w_index].max_range)
     {
-        send_to_char("Out of Range!\r\n", ch);
+        if (ch) send_to_char("Out of Range!\r\n", ch);
         return TRUE;
     }
     if (range < (float) weapon_data[w_index].min_range) 
     {
-        send_to_char("You're too close to use this weapon!\r\n", ch);
+        if (ch) send_to_char("You're too close to use this weapon!\r\n", ch);
         return TRUE;
     }
     if (getarc(ship->heading, contacts[j].bearing) != ship->slot[w_num].position) 
     {
-        send_to_char("Target is not in weapon's firing arc!\r\n", ch);
+        if (ch) send_to_char("Target is not in weapon's firing arc!\r\n", ch);
         return TRUE;
     }
     if (SHIPWEAPONDESTROYED(ship, w_num)) 
     {
-        send_to_char("Weapon is destroyed!\r\n", ch);
+        if (ch) send_to_char("Weapon is destroyed!\r\n", ch);
         return TRUE;
     }
     if (SHIPWEAPONDAMAGED(ship, w_num)) 
     {
-        send_to_char("Weapon is damaged!\r\n", ch);
+        if (ch) send_to_char("Weapon is damaged!\r\n", ch);
         return TRUE;
     }
     if (ship->slot[w_num].timer > 0) 
     {
-        send_to_char("Weapon is still reloading.\r\n", ch);
+        if (ch) send_to_char("Weapon is still reloading.\r\n", ch);
         return TRUE;
     }
     if (ship->slot[w_num].val1 == 0) 
     {
-        send_to_char("Out of Ammo!\r\n", ch);
+        if (ch) send_to_char("Out of Ammo!\r\n", ch);
         return TRUE;
     }
 
     P_ship target = ship->target;
 
     // calculating hit chance/displaying firing messages
-    int hit_chance = weaponsight(ch, ship, target, w_num, range);
+    int hit_chance = weaponsight(ship, target, w_num, range);
     sprintf(buf, "Your ship fires &+W%s&N at &+W[%s]&N:%s! Chance to hit: &+W%d%%&N",
             ship->slot[w_num].get_description(), ship->target->id, ship->target->name, hit_chance);
     act_to_all_in_ship(ship, buf);
@@ -2501,7 +2596,7 @@ int fire_weapon(P_ship ship, P_char ch, int w_num)
     ship->timer[T_BSTATION] = BSTATION;
 
     // initiating reload
-    if (ship->slot[w_num].val1 == 1) 
+    if (ship->slot[w_num].val1 == 1 && ch) 
         send_to_char("&+RWarning! This is the last round of ammo!\r\n", ch);
     if (ship->slot[w_num].val1 > 0)
        ship->slot[w_num].val1--;
@@ -2788,7 +2883,7 @@ void finish_sinking(P_ship ship)
 
     if (P_char owner = get_char2(str_dup(SHIPOWNER(ship))))
     {
-		GET_BALANCE_PLATINUM(get_char2(str_dup(SHIPOWNER(ship)))) += insurance / 1000;
+		GET_BALANCE_PLATINUM(owner) += insurance / 1000;
 		wizlog(56, "Ship insurance to account: %d", insurance / 1000);
 		logit(LOG_SHIP, "%s's insurance deposit to account: %d", ship->ownername, insurance / 1000);
     }
@@ -3346,6 +3441,8 @@ void newship_activity()
             }
 
             shipai_activity(ship);
+            if (ship->combat_ai)
+                ship->combat_ai->activity();
         }
     }
 }
@@ -3489,7 +3586,7 @@ int list_cargo(P_char ch, P_ship ship, int owned)
                 //if( GET_LEVEL(ch) < 50 )
                 //    cost = (int) (cost * (float) ((float) GET_LEVEL(ch) / 50.0));
             
-                int profit = ( ((float)cost / (float)ship->slot[i].val1) - 1.00 ) * 100;
+                int profit = (int)(( ((float)cost / (float)ship->slot[i].val1) - 1.00 ) * 100.0);
             
                 sprintf(buf2, "%s", coin_stringv(ship->slot[i].val1));              
                 sprintf(buf, "%s&n, &+Y%d&n crates. Bought for %s&n, can sell for %s (%d%% profit)\r\n",
@@ -3520,7 +3617,7 @@ int list_cargo(P_char ch, P_ship ship, int owned)
                 //if( GET_LEVEL(ch) < 50 )
                 //    cost = (int) (cost * (float) ((float) GET_LEVEL(ch) / 50.0));
             
-                int profit = ( ((float)cost / (float)ship->slot[i].val1) - 1.00 ) * 100;
+                int profit = (int)(( ((float)cost / (float)ship->slot[i].val1) - 1.00 ) * 100.0);
 
                 sprintf(buf2, "%s", coin_stringv(ship->slot[i].val1));
                 sprintf(buf, "&+L*&n%s&n, &+Y%d&n crates. Bought for %s&n, can sell for %s (%d%% profit)\r\n", 
@@ -3856,7 +3953,7 @@ int sell_cargo_slot(P_char ch, P_ship ship, int slot, int rroom)
     {
         int crates = ship->slot[slot].val0;
         int cost = crates * cargo_buy_price(rroom, type);
-        int profit = ( ((float)cost / (float)ship->slot[slot].val1) - 1.00 ) * 100;
+        int profit = (int)(( ((float)cost / (float)ship->slot[slot].val1) - 1.00 ) * 100.0);
         ship->slot[slot].clear();
 
         //if( GET_LEVEL(ch) < 50 )
@@ -3958,7 +4055,7 @@ int sell_contra_slot(P_char ch, P_ship ship, int slot, int rroom)
     {
       int crates = ship->slot[slot].val0;
       int cost = crates * contra_buy_price(rroom, type);
-      int profit = ( ((float)cost / (float)ship->slot[slot].val1) - 1.00 ) * 100;
+      int profit = (int)(( ((float)cost / (float)ship->slot[slot].val1) - 1.00 ) * 100.0);
       ship->slot[slot].clear();
 
       //if( GET_LEVEL(ch) < 50 )
@@ -4426,6 +4523,9 @@ int rename_ship(P_char ch, P_ship ship, char* new_name)
         send_to_char("Invalid syntax.\r\n", ch);
         return TRUE;
     }
+    if (!check_ship_name(0, ch, new_name))
+        return TRUE;
+
 
     /* count money */
     int renamePrice = (int) (SHIPTYPECOST(ship->m_class) / 10);
@@ -4806,13 +4906,7 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
     }
 
     SUB_MONEY(ch, cost, 0);
-    ship->slot[slot].type = SLOT_WEAPON;
-    ship->slot[slot].index = w;
-    ship->slot[slot].position = arc;
-    ship->slot[slot].timer = 0;
-    ship->slot[slot].val0 = w; // ammo type
-    ship->slot[slot].val1 = weapon_data[w].ammo; // ammo count
-    ship->slot[slot].val2 = 0; // damage level
+    set_weapon(ship, slot, w, arc);
     if (!IS_TRUSTED(ch) && BUILDTIME)
         SET_BIT(ship->flags, MAINTENANCE);
     int buildtime = weapon_data[w].weight * 75;
@@ -4823,6 +4917,7 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
     write_newship(ship);
     return TRUE;
 }
+
 
 int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
 {
@@ -4959,6 +5054,8 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
             send_to_char("Name must be less than 20 characters (not including ansi))\r\n", ch);
             return TRUE;
         }
+        if (!check_ship_name(0, ch, arg2))
+            return TRUE;
 
         if (GET_MONEY(ch) < SHIPTYPECOST(i) || epic_skillpoints(ch) < SHIPTYPEEPICCOST(i)) 
         {
@@ -4989,7 +5086,6 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
         buildtime = 75 * SHIPTYPEID(i) / 4;
         ship->ownername = str_dup(GET_NAME(ch));
         ship->anchor = world[ch->in_room].number;
-        set_ship_layout(ship, i);
         nameship(arg2, ship);
         if (!loadship(ship, ch->in_room)) 
         {
@@ -5309,12 +5405,15 @@ int write_newship(P_ship ship)
         ShipVisitor svs;
         for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
         {
-            if (IS_SET(svs->flags, LOADED))
+            if (IS_SET(svs->flags, LOADED) && svs->race != NPCSHIP)
                 fprintf(f, "%s~\n", svs->ownername);
         }
         fprintf(f, "$~");
         fclose(f);
         return TRUE;
+    }
+    if (ship->race == NPCSHIP) {
+        return FALSE;
     }
     if (!IS_SET(ship->flags, LOADED)) {
         return FALSE;
@@ -5979,3 +6078,4 @@ int erzul(P_char ch, P_char pl, int cmd, char *arg)
 
 
               
+    

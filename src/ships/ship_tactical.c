@@ -175,27 +175,6 @@ void stun_all_in_ship(P_ship ship, int timer)
   }
 }
 
-void dispcontact(int i)
-{
-  int      x, y, z, bearing;
-  float    range;
-  P_ship j;
-
-  x = contacts[i].x;
-  y = contacts[i].y;
-  z = contacts[i].z;
-  range = contacts[i].range;
-  bearing = contacts[i].bearing;
-  j = contacts[i].ship;
-
-  sprintf(contact,
-          "[%s] %-30s X:%-3d Y:%-3d Z:%-3d R:%-5.1f B:%-3d H:%-3d S:%-3d|%s%s\r\n",
-          j->id, strip_ansi(j->name).c_str(), x, y, z, range, bearing, j->heading,
-          j->speed, contacts[i].arc,
-          SHIPSINKING(contacts[i].ship) ? "&+RS&N" :
-            SHIPISDOCKED(contacts[i].ship) ?
-              "&+yD&N" : "");
-}
 
 float range(float x1, float y1, float z1, float x2, float y2, float z2)
 {
@@ -275,7 +254,7 @@ void scantarget(P_ship target, P_char ch)
                 SHIPSINKING(target) ?  "&+RSINKING&N" : 
                 SHIPIMMOBILE(target) ? "&+RIMMOBILE&N" : 
                 SHIPISDOCKED(target) ?  "&+yDOCKED&N" : "",
-                contacts[i].range < 20 ? 
+                contacts[i].range < SCAN_RANGE ? 
                   (!SHIPISDOCKED(target) ? 
                     ((target->race == EVILSHIP) ? "&+RThis ship has an Evil flag&N" : 
                       (target->race == UNDEADSHIP) ? "&+LThis ship has a tattered black flag&N" :
@@ -1228,7 +1207,7 @@ int weaprange(int w_index, char range)
   return 0;
 }
 
-int weaponsight(P_char ch, P_ship ship, P_ship target, int slot, float range)
+int weaponsight(P_ship ship, P_ship target, int slot, float range)
 {
   int percent = 50;
 
@@ -1242,7 +1221,6 @@ int weaponsight(P_char ch, P_ship ship, P_ship target, int slot, float range)
     float range_mod = (max - (float)range) / ((float)max - (float)min);
     percent += (int)((float)75 * range_mod);
     percent += (int)((float)50 * ship->guncrew.skill_mod);
-    //percent = (int) (percent * ((float) GET_LEVEL(ch) / 50.0));
     if (percent > 100)
       percent = 100;
     if (percent < 0)

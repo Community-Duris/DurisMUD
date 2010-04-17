@@ -321,7 +321,7 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
         else
         {
           P_ship temp = shipObjHash.find(obj);
-          if (SHIPISDOCKED(temp))
+          if (SHIPISDOCKED(temp) || temp->race == NPCSHIP)
               val = MIN(val, CONTAINS_SHIP);
           else if (temp->race == GOODIESHIP)
               val = MIN(val, CONTAINS_GOOD_SHIP);

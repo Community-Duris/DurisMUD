@@ -57,6 +57,7 @@ Updated with warships. Nov08 -Lucrot
 #define MINCAPFRAG      2000
 #define MAXSAIL          250
 #define BOARDING_SPEED     9
+#define SCAN_RANGE        20
 
 //Inactivity time in seconds
 #define NEWSHIP_INACTIVITY 1814400
@@ -117,6 +118,7 @@ Updated with warships. Nov08 -Lucrot
 #define EVILSHIP          0
 #define GOODIESHIP        1
 #define UNDEADSHIP        2
+#define NPCSHIP           3
 
 // Weapon Flags
 #define FORE_ALLOWED     BIT_1
@@ -128,6 +130,20 @@ Updated with warships. Nov08 -Lucrot
 #define MINDBLAST        BIT_7
 #define SAILSHOT         BIT_8
 #define RANGEDAM         BIT_9
+
+
+#define W_SMALL_BALLISTA    0
+#define W_MEDIUM_BALLISTA   1
+#define W_LARGE_BALLISTA    2
+#define W_SMALL_CATAPULT    3
+#define W_MEDIUM_CATAPULT   4
+#define W_LARGE_CATAPULT    5  
+#define W_HEAVY_BALLISTA    6
+#define W_QUARTZ            7
+#define W_DARKSTONE         8
+#define W_MINDBLAST         9
+#define W_FRAG_CANON       10
+#define W_LONGTOM          11
 
 
 // Slot Types
@@ -318,6 +334,7 @@ struct ShipData
     ulong flags;
     struct ShipData *next, *target;
     struct shipai_data *shipai;
+    struct ShipCombatAI *combat_ai;
     int time;
     int race;
     int pilotlevel;
@@ -503,10 +520,10 @@ bool rename_ship_owner(char *old_name, char *new_name);
 int read_newship();
 int write_newship(P_ship ship);
 
-void nameship(char *name, P_ship ship);
+void nameship(const char *name, P_ship ship);
 int loadship(P_ship shipdata, int to_room);
 
-struct ShipData *newship(int m_class);
+struct ShipData *newship(int m_class, bool npc = false);
 void delete_ship(P_ship ship);
 
 // shops
@@ -530,6 +547,7 @@ void crash_land(P_ship ship);
 
 void setarmor(P_ship ship, bool equal);
 void setcrew(P_ship ship, int crew_index, int exp);
+void set_weapon(P_ship ship, int slot, int w_num, int arc);
 void clear_ship_layout(P_ship ship);
 void set_ship_layout(P_ship ship, int m_class);
 void reset_ship_physical_layout(P_ship ship);
@@ -545,11 +563,11 @@ extern void act_to_outside(P_ship ship, const char *msg);
 extern void everyone_get_out_newship(P_ship ship);
 extern void everyone_look_out_newship(P_ship ship);
 extern int  armorcondition(int maxhp, int curhp);
-extern void assignid(P_ship ship, char *id);
+extern void assignid(P_ship ship, char *id, bool npc = false);
 extern int  assign_shipai(P_ship ship);
 extern int damage_sail(P_ship ship, P_ship target, int dam);
 extern int  damage_hull(P_ship ship, P_ship target, int dam, int arc, int armor_pierce);
-extern void dispcontact(int i);
+//extern void dispcontact(int i);
 //extern int  getarc(P_ship ship1, int x, int y);
 extern int  getarc(int heading, int bearing);
 extern int  ybearing(int bearing, int range);
@@ -565,8 +583,9 @@ extern void scantarget(P_ship target, P_char ch);
 extern void stun_all_in_ship(P_ship ship, int timer);
 extern void summon_ship_event(P_char ch, P_char victim, P_obj obj, void *data);
 extern int weaprange(int w_index, char range);
-extern int weaponsight(P_char ch, P_ship ship, P_ship target, int weapon, float mod);
+extern int weaponsight(P_ship ship, P_ship target, int weapon, float mod);
 extern void calc_crew_adjustments(P_ship ship);
+extern bool try_load_pirate_ship(P_ship target, P_char ch);
 
 
 int sell_cargo(P_char ch, P_ship ship, int slot);

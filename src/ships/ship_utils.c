@@ -21,7 +21,6 @@
 extern const char *ship_symbol[35];
 
 extern void    dock_ship(P_ship ship, int to_room);
-extern void    nameship(char *name, P_ship ship);
 extern float   range(float x1, float y1, float z1, float x2, float y2, float z2);
 extern int     write_newship(P_ship temp);
 
@@ -442,7 +441,7 @@ int num_people_in_ship(P_ship ship)
   return (num);
 }
 
-void assignid(P_ship ship, char *id)
+void assignid(P_ship ship, char *id, bool npc)
 {
   if(!id)
   {
@@ -455,7 +454,10 @@ void assignid(P_ship ship, char *id)
 
     while( !found_id )
     {
-      newid[0] = 'A' + number(0,25);
+      if (npc)
+        newid[0] = 'X' + number(0,2);
+      else
+        newid[0] = 'A' + number(0,22);
       newid[1] = 'A' + number(0,25);
 
 
@@ -914,4 +916,15 @@ P_char captain_is_aboard(P_ship ship)
     }
 
     return NULL;
+}
+
+void set_weapon(P_ship ship, int slot, int w_num, int arc)
+{
+    ship->slot[slot].type = SLOT_WEAPON;
+    ship->slot[slot].index = w_num;
+    ship->slot[slot].position = arc;
+    ship->slot[slot].timer = 0;
+    ship->slot[slot].val0 = w_num; // ammo type
+    ship->slot[slot].val1 = weapon_data[w_num].ammo; // ammo count
+    ship->slot[slot].val2 = 0; // damage level
 }
