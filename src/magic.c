@@ -18883,7 +18883,7 @@ bool can_do_general_portal( int level, P_char ch, P_char victim,
 
    if(!ch) return FALSE;
 
-   if(ch == victim && !affected_by_spell(ch, SPELL_MOONSTONE)) return FALSE;
+   if(ch == victim && !affected_by_spell(ch, SPELL_MOONSTONE) && !affected_by_spell(ch, SPELL_THOUGHT_BEACON)) return FALSE;
 
    to_room = settings->to_room;
    if(!IS_TRUSTED(ch) &&
