@@ -1239,7 +1239,7 @@ void spell_hammer(int level, P_char ch, char *arg, int type, P_char victim,
     stunself = 1;
   }
 
-  dam = dice(3 * level, 6);
+  dam = 9 * level + number(-25, 25);
   
   if(spell_damage(ch, victim, dam, SPLDAM_GENERIC, SPLDAM_NOSHRUG, &messages)  
     != DAM_NONEDEAD)
