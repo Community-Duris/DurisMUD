@@ -110,11 +110,13 @@ int CanDoFightMove(P_char ch, P_char victim)
     return FALSE;
   }
   
-  if(IS_RIDING(ch) &&
-    !GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT))
+  if (P_char mount = get_linked_char(ch, LNK_RIDING))
   {
-    send_to_char("While mounted? I don't think so...\r\n", ch);
-    return FALSE;
+    if (!GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT) && !is_natural_mount(ch, mount))
+    {
+      send_to_char("While mounted? I don't think so...\r\n", ch);
+      return FALSE;
+    }
   }
   
   if(get_linking_char(ch, LNK_RIDING) == victim)
@@ -1451,8 +1453,11 @@ int GetConditionModifier(P_char victim)
   if (IS_AFFECTED(victim, AFF_BOUND))
     return 20;
 
-  if (IS_RIDING(victim) && !GET_CHAR_SKILL(victim, SKILL_MOUNTED_COMBAT))
-    return 15;
+  if (P_char mount = get_linked_char(victim, LNK_RIDING))
+  {
+      if (!GET_CHAR_SKILL(victim, SKILL_MOUNTED_COMBAT) && !is_natural_mount(victim, mount))
+        return 15;
+  }
 
   if (affected_by_spell(victim, SONG_PEACE))
     return 10;

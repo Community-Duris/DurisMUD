@@ -116,13 +116,23 @@ void do_debug(P_char ch, char *argument, int cmd)
     #ifdef DO_PROFILE
       if (isname(arg2, "on"))
       {
-        do_profile = true;
-        send_to_char("Profiling mode is now ON.\r\n", ch);
+        if (!do_profile)
+        {
+          do_profile = true;
+          send_to_char("Profiling mode is now ON.\r\n", ch);
+        }
+        else
+          send_to_char("Profiling mode is already ON.\r\n", ch);
       }
       else if (isname(arg2, "off"))
       {
-        do_profile = false;
-        send_to_char("Profiling mode is now OFF.\r\n", ch);
+        if (do_profile)
+        {
+          do_profile = false;
+          send_to_char("Profiling mode is now OFF.\r\n", ch);
+        }
+        else
+          send_to_char("Profiling mode is already OFF.\r\n", ch);
       }
       else if (isname(arg2, "reset"))
       {

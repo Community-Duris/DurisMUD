@@ -710,3 +710,8 @@ int wagon_exit_room(int room, P_char ch, int cmd, char *arg)
   }
   return FALSE;
 }
+
+bool is_natural_mount(P_char ch, P_char mount)
+{
+    return false; // TODO
+}

@@ -516,13 +516,14 @@ void do_fire(P_char ch, char *argument, int cmd)
    }
    //-------------------------------
    // Lom: disabled mounted archery
-   P_char mount;
-   if (!GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT) &&
-       (mount = get_linked_char(ch, LNK_RIDING)))
+   if (P_char mount = get_linked_char(ch, LNK_RIDING))
    {
-     send_to_char("I'm afraid you aren't quite up to mounted combat.\r\n", ch);
-     act("$n quickly slides off $N's back.", TRUE, ch, 0, mount, TO_NOTVICT);
-     stop_riding(ch);
+       if (!GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT) && !is_natural_mount(ch, mount))
+       {
+         send_to_char("I'm afraid you aren't quite up to mounted combat.\r\n", ch);
+         act("$n quickly slides off $N's back.", TRUE, ch, 0, mount, TO_NOTVICT);
+         stop_riding(ch);
+       }
    }
    //-------------------------------
 

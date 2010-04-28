@@ -1710,6 +1710,7 @@ int wagon_exit_room(int, P_char, int, char *);
 int wagon_pull (P_char, int);
 int num_char_in_vehicle(P_obj);
 int stable_master (P_char, P_char, int, char *);
+bool is_natural_mount(P_char ch, P_char mount);
 
 /* nanny.c */
 

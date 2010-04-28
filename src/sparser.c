@@ -1969,10 +1969,13 @@ void do_cast(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (IS_RIDING(ch) && !GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT))
+  if (P_char mount = get_linked_char(ch, LNK_RIDING))
   {
-    send_to_char("You're too busy concentrating on staying on your mount to cast!\n", ch);
-    return;
+    if (!GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT) && !is_natural_mount(ch, mount))
+    {
+      send_to_char("You're too busy concentrating on staying on your mount to cast!\n", ch);
+      return;
+    }
   }
 
   if (affected_by_spell(ch, FIRST_INSTRUMENT))

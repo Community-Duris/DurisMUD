@@ -6195,12 +6195,15 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   room = ch->in_room;
   mount = get_linked_char(victim, LNK_RIDING);
 
-  if(mount &&
-     GET_CHAR_SKILL(victim, SKILL_MOUNTED_COMBAT))
+  if(mount)
   {
-    if(notch_skill(victim, SKILL_MOUNTED_COMBAT,
-                    get_property("skill.notch.defensive", 100)) ||
-        GET_CHAR_SKILL_P(victim, SKILL_MOUNTED_COMBAT) * 0.3 > number(0, 100))
+    if(GET_CHAR_SKILL(victim, SKILL_MOUNTED_COMBAT) &&
+        (notch_skill(victim, SKILL_MOUNTED_COMBAT, get_property("skill.notch.defensive", 100)) ||
+        GET_CHAR_SKILL_P(victim, SKILL_MOUNTED_COMBAT) * 0.3 > number(0, 100)))
+    {
+      return hit(ch, mount, weapon);
+    }
+    else if (is_natural_mount(victim, mount) && (GET_LEVEL(victim) * 0.3 > number(0, 100))) // for natural mounts skill is equal to level
     {
       return hit(ch, mount, weapon);
     }
@@ -6932,7 +6935,7 @@ void StopMercifulAttackers(P_char ch)
 
 void set_fighting(P_char ch, P_char vict)
 {
-  P_char   victim = vict, mount;
+  P_char   victim = vict;
   P_char   tch;
   char     Gbuf[10];
 
@@ -7096,12 +7099,14 @@ void set_fighting(P_char ch, P_char vict)
     SET_POS(ch, POS_SITTING + GET_STAT(ch));
     do_wake(ch, 0, -4);
   }
-  if (!GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT) &&
-      (mount = get_linked_char(ch, LNK_RIDING)))
+  if (P_char mount = get_linked_char(ch, LNK_RIDING))
   {
-    send_to_char("I'm afraid you aren't quite up to mounted combat.\r\n", ch);
-    act("$n quickly slides off $N's back.", TRUE, ch, 0, mount, TO_NOTVICT);
-    stop_riding(ch);
+      if (!GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT) && !is_natural_mount(ch, mount))
+      {
+        send_to_char("I'm afraid you aren't quite up to mounted combat.\r\n", ch);
+        act("$n quickly slides off $N's back.", TRUE, ch, 0, mount, TO_NOTVICT);
+        stop_riding(ch);
+      }
   }
 
   if (has_innate(ch, INNATE_ANTI_EVIL) && IS_EVIL(vict))
