@@ -7270,6 +7270,11 @@ int dodgeSucceed(P_char char_dodger, P_char attacker, P_obj wpn)
   {
     return 0;
   }
+
+  if (affected_by_spell(char_dodger, SKILL_RAGE) && attacker != char_dodger->specials.fighting)
+  {
+    return 0;
+  }
   
   //Notching dodge fails dodge check.
   if(notch_skill
@@ -7402,6 +7407,9 @@ int blockSucceed(P_char victim, P_char attacker, P_obj wpn)
     !(shield = victim->equipment[WEAR_SHIELD]))
       return false;
   
+  if (affected_by_spell(victim, SKILL_RAGE) && attacker != victim->specials.fighting)
+      return false;
+
   if(notch_skill(victim, SKILL_SHIELD_BLOCK, get_property("skill.notch.defensive", 100)))
     return false;
 
@@ -7664,6 +7672,9 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   // Flaying weapons are !parry.
   if((wpn && IS_FLAYING(wpn)) ||
     (victim->equipment[WIELD] && IS_FLAYING(victim->equipment[WIELD])))
+      return false;
+
+  if (affected_by_spell(victim, SKILL_RAGE) && attacker != victim->specials.fighting)
       return false;
 
   // Notching the parry skill fails the parry check.
