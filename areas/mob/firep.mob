@@ -35,7 +35,7 @@ fire elemental huge~
 ~
 67110984 1 0 536870940 1 0 0 0 S
 EF 0 1 5
-52 0 0 1d1+1 1d1+1
+50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88302
@@ -55,7 +55,7 @@ warrior efreeti~
 ~
 1140852840 1 0 536871064 1 0 0 0 S
 E 0 16385 -1
-58 0 0 1d1+1 1d1+1
+49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #88303
@@ -74,7 +74,7 @@ efreeti magi robed figure~
 ~
 1140852808 1 0 536871028 1 0 0 0 S
 E 0 2048 -1
-61 0 0 1d1+1 1d1+1
+50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
 #88304
@@ -89,7 +89,7 @@ efreeti fire strong berserker~
 ~
 1140852840 1 0 536871000 1 0 0 -1000 S
 E 0 1048576 -1
-56 0 0 1d1+1 1d1+1
+50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88305
@@ -106,7 +106,7 @@ efreeti fire magi sharp mage~
 ~
 1073743976 1 0 536871040 1 0 0 -950 S
 E 0 512 -1
-61 0 0 1d1+1 1d1+1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
 #88306
@@ -120,7 +120,7 @@ fire minion creature~
 ~
 67110986 1 0 536871064 2049 0 0 0 S
 EF 0 64 -1
-56 0 0 1d1+1 1d1+1
+50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88307
@@ -135,7 +135,7 @@ golem flaming br_f _no_move_~
 &+rbut one purpose in this world, and that is preventing anyone unasked
 &+rfrom entering the Palace.&n
 ~
-67176554 1 0 939597976 272644316 393216 0 0 S
+67176554 1 0 939597976 272644316 131072 0 0 S
 OG 0 1 -1
 62 -1 -500 7500d2+5000 20d4+40
 0.0.0.0 750000
@@ -151,7 +151,7 @@ magma man guard fire~
 ~
 1140852812 1 0 536871064 0 0 0 0 S
 EF 0 16 7
-58 0 0 1d1+1 1d1+1
+54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #88309
@@ -166,7 +166,7 @@ fire strong minion guard~
 ~
 1140852842 1 0 805830808 4194304 0 4096 -970 S
 EF 0 16777232 7
-57 0 0 1d1+1 1d1+1
+53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88310
@@ -181,7 +181,7 @@ huge fire minion guard massive~
 ~
 1140852842 1 0 536871064 4194304 0 4096 -1000 S
 EF 0 1048592 7
-61 0 0 1d1+1 1d1+1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88311
@@ -196,7 +196,7 @@ khoe earth emissary~
 ~
 1142951112 1 0 140 1061888 524288 83890688 0 S
 EE 0 2560 5
-60 0 0 1d1+1 1d1+1
+55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #88312
@@ -210,7 +210,7 @@ air aeolyn emissary~
 ~
 1140984648 1 0 536871040 2048 262304 4096 1000 S
 EA 0 10 0
-60 0 0 1d1+1 1d1+1
+52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
 #88313
@@ -233,15 +233,16 @@ drooz drow dark figure shadows~
 &+mDrooz Kyrendyleea~
 &+mA dark-cloaked figure stands on the edges of the shadows here.&n
 ~
-&+m   Drooz is an enigma if he is anything.  A drow assassin of the highest regard,
-&+mhe long ago swore off a life upon the Prime Material Plane and instead now
-&+mcontracts his services out to the most prominent figures in the universe.  Highly
-&+mregarded as one of the most deadly people to ever have lived, he has made a fortune
-&+mcarrying out the dirty deeds of his employers... and he enjoys every minute of it.&n
+&+m   Drooz is an enigma if he is anything. A drow assassin of the highest regard,
+&+mhe long ago swore off a lif eupon the Prime Material Plane and instead now
+&+mcontracts his services out to the most prominent figures in the universe.
+&+mHighly regarded as one of the most deadly people to ever have lived, he has
+&+mmade a fortune carrying out the dirty deeds of his employers... and he enjoys
+&+mevery minute of it.&n
 ~
 1099053133 1 0 974758078 276826142 256 101979648 -1000 S
 PL 0 8192 0
-62 0 0 1d1+1 1d1+1
+58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #88315
@@ -289,7 +290,7 @@ Palace.  He stands of human hieght, blazing through the hallways.
 ~
 2252 1 0 536870912 1 0 0 -466 S
 EF 0 288 6
-56 0 0 1d1+1 1d1+1
+49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
 #88318
@@ -327,7 +328,7 @@ important figure fruaack fire minion captain _block_up_~
 ~
 117471338 0 0 805306428 4194397 0 33559040 0 S
 EF 0 16777216 7
-62 0 0 1d1+1 1d1+1
+59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88320
@@ -358,7 +359,7 @@ flaming maelstrom whirling blaze _spec1_~
 ~
 268466282 0 0 939524156 4194333 786432 5120 0 S
 EF 0 4 7
-59 0 0 1d1+1 1d1+1
+56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88322
@@ -375,7 +376,7 @@ efreeti fire magi ancient mage _spec3_~
 ~
 1073743976 1 0 1006633148 4196353 0 4198912 -950 S
 E 0 512 -1
-58 200 -500 5500d3+7500 90d3+100
+61 200 -500 5500d3+7500 90d3+100
 0.0.0.0 0
 8 8 1
 #88323
@@ -389,7 +390,7 @@ fire minion creature~
 ~
 67110984 1 0 536871064 2049 0 0 0 S
 EF 0 64 6
-56 0 0 1d1+1 1d1+1
+49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88324
@@ -403,7 +404,7 @@ fire minion creature~
 ~
 67110984 1 0 538443928 2049 0 0 0 S
 EF 0 8192 6
-51 0 0 1d1+1 1d1+1
+49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88325
@@ -422,7 +423,7 @@ efreeti magi robed figure captain~
 ~
 67110984 1 0 536871028 1 0 536576 0 S
 E 0 2560 -1
-59 0 0 1d1+1 1d1+1
+54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
 #88326
@@ -462,7 +463,7 @@ efreeti magi robed figure _spec1_~
 ~
 67110984 1 0 536871028 1 0 0 0 S
 E 0 512 -1
-55 0 0 1d1+1 1d1+1
+50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
 #88328
@@ -476,8 +477,8 @@ fire strong minion guard~
 &+rto attack.
 ~
 1140852842 1 0 805830808 4194305 0 4096 -970 S
-EF 0 16384 6
-59 0 0 1d1+1 1d1+1
+EF 0 1 6
+50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88329
@@ -491,8 +492,8 @@ huge fire minion guard massive~
 &+rthere, it simply just performs its task, destroy intruders.
 ~
 1140852842 1 0 536871064 4195329 0 4096 -1000 S
-EF 0 1 7
-56 0 0 1d1+1 1d1+1
+ef 0 1 7
+55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #88452

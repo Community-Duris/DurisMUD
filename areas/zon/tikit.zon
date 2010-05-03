@@ -22,59 +22,59 @@ D 0 43704 0 2 100 0 0 0
 *     "A Well-Traveled Street" - closed/locked
 *
 D 0 43705 0 1 100 0 0 0
-*     north exit from "A well-traveled street" to
+*     north exit from "A Well-Traveled Street" to
 *     "Entrance To The Inn" - closed
 *
 D 0 43706 2 1 100 0 0 0
 *     south exit from "Entrance To The Inn" to
-*     "A well-traveled street" - closed
+*     "A Well-Traveled Street" - closed
 *
 D 0 43717 0 1 100 0 0 0
-*     north exit from "A well-traveled street" to
+*     north exit from "A Well-Traveled Street" to
 *     "The Jeweler's Shop" - closed
 *
 D 0 43718 2 1 100 0 0 0
 *     south exit from "The Jeweler's Shop" to
-*     "A well-traveled street" - closed
+*     "A Well-Traveled Street" - closed
 *
 D 0 43720 0 1 100 0 0 0
 *     north exit from "The Jeweler's Shop" to
-*     "A heavily-traveled street" - closed
+*     "A Heavily-Traveled Street" - closed
 *
 D 0 43729 2 1 100 0 0 0
-*     south exit from "A heavily-traveled street" to
+*     south exit from "A Heavily-Traveled Street" to
 *     "The Jeweler's Shop" - closed
 *
 D 0 43723 0 2 100 0 0 0
-*     north exit from "A well-traveled street" to
+*     north exit from "A Well-Traveled Street" to
 *     "A Small Dwelling" - closed/locked
 *
 D 0 43724 2 2 100 0 0 0
 *     south exit from "A Small Dwelling" to
-*     "A well-traveled street" - closed/locked
+*     "A Well-Traveled Street" - closed/locked
 *
 D 0 43732 2 1 100 0 0 0
-*     south exit from "A heavily-traveled street" to
+*     south exit from "A Heavily-Traveled Street" to
 *     "Entrance To A Bar" - closed
 *
 D 0 43737 0 1 100 0 0 0
 *     north exit from "Entrance To A Bar" to
-*     "A heavily-traveled street" - closed
+*     "A Heavily-Traveled Street" - closed
 *
 D 0 43734 2 1 100 0 0 0
-*     south exit from "A heavily-traveled street" to
+*     south exit from "A Heavily-Traveled Street" to
 *     "Ahmeni's Bar" - closed
 *
 D 0 43735 0 1 100 0 0 0
 *     north exit from "Ahmeni's Bar" to
-*     "A heavily-traveled street" - closed
+*     "A Heavily-Traveled Street" - closed
 *
 D 0 43746 0 6 100 0 0 0
 *     north exit from "The Armoury" to
-*     " A store room" - closed/locked/secret
+*     "A Store Room" - closed/locked/secret
 *
 D 0 43747 2 2 100 0 0 0
-*     south exit from " A store room" to
+*     south exit from "A Store Room" to
 *     "The Armoury" - closed/locked
 *
 D 0 43750 2 6 100 0 0 0
@@ -87,43 +87,43 @@ D 0 43757 0 2 100 0 0 0
 *
 D 0 43800 3 5 100 0 0 0
 *     west exit from "A Dark Path Along The River" to
-*     "A small opening in the forest" - closed/secret
+*     "A Small Opening in the Forest" - closed/secret
 *
 D 0 43818 1 1 100 0 0 0
-*     east exit from "A small opening in the forest" to
+*     east exit from "A Small Opening in the Forest" to
 *     "A Dark Path Along The River" - closed
 *
 D 0 43810 3 1 100 0 0 0
-*     west exit from "A lesser-traveled street" to
-*     "The western entrance" - closed
+*     west exit from "A Lesser-Traveled Street" to
+*     "The Western Entrance" - closed
 *
 D 0 43812 1 1 100 0 0 0
-*     east exit from "The western entrance" to
-*     "A lesser-traveled street" - closed
+*     east exit from "The Western Entrance" to
+*     "A Lesser-Traveled Street" - closed
 *
 D 0 43903 0 5 100 0 0 0
-*     north exit from "A dark forest path" to
-*     "An ancient forest" - closed/secret
+*     north exit from "A Dark Forest Path" to
+*     "An Ancient Forest" - closed/secret
 *
 D 0 43951 2 5 100 0 0 0
-*     south exit from "An ancient forest" to
-*     "A dark forest path" - closed/secret
+*     south exit from "An Ancient Forest" to
+*     "A Dark Forest Path" - closed/secret
 *
 D 0 43926 2 5 100 0 0 0
-*     south exit from "A dark forest path" to
-*     "An ancient forest" - closed/secret
+*     south exit from "A Dark Forest Path" to
+*     "An Ancient Forest" - closed/secret
 *
 D 0 44019 0 5 100 0 0 0
-*     north exit from "An ancient forest" to
-*     "A dark forest path" - closed/secret
+*     north exit from "An Ancient Forest" to
+*     "A Dark Forest Path" - closed/secret
 *
 D 0 44038 3 2 100 0 0 0
-*     west exit from "A temple entrance" to
+*     west exit from "A Temple Entrance" to
 *     "Temple Entrance" - closed/locked
 *
 D 0 44039 1 2 100 0 0 0
 *     east exit from "Temple Entrance" to
-*     "A temple entrance" - closed/locked
+*     "A Temple Entrance" - closed/locked
 *
 *
 O 0 43754 1 43704 100 0 0 0        * a small key of leaves

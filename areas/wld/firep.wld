@@ -1,5 +1,5 @@
 #88300
-&+LPlatform before a &+RMolten &+rRock &+RLake&n~
+&+LPlatform Before a &+RMolten &+rRock &+RLake&n~
 &+L   A flat expanse of hardened magma makes up a small ledge here against
 &+Lan unscalable wall of towering obsidian which blocks travel to the north
 &+Land west.  To the southeast, a gigantic lake of magma stretches off into
@@ -472,11 +472,11 @@ D3
 S
 #88318
 &+rA Pillar of F&+Rl&+Yam&+Re&+rs~
-&+YA massive &+rpillar of &+Rflame &+Ytwists and curls &+ras it rises &+Rquickly through the area
-&+rand upwards into &+Ythe hazy &+Rorange and red sky of the &+rPlane of Fire.  &+YThe swirling
-&+Rsuper-heated gouts of &+rflame and fire &+Ycreate a strong wind as &+Rthey rise, &+rsucking
-&+Ysparks and liquid magma &+Rinto the flaming pillar.  &+rThe sound of the flames &+Yas they
-&+rreadily consume everything &+Yis defeaning.&N
+&+Y   A massive &+rpillar of &+Rflame &+Ytwists and curls &+ras it rises &+Rquickly through the
+&+Rarea &+rand upwards into &+Ythe hazy &+Rorange and red sky of the &+rPlane of Fire.
+&+YThe swirling &+Rsuper-heated gouts of &+rflame and fire &+Ycreate a strong wind as
+&+Rthey rise, &+rsucking &+Ysparks and liquid &+rmagma &+Rinto the flaming pillar.
+&+rThe sound of the flames &+Yas they &+rreadily consume everything &+Yis defeaning.&n
 ~
 883 33853440 11
 D0
@@ -669,7 +669,7 @@ S
 &+rcurrents and moving towards the lake beyond.  Vortexes of hotter, swirling
 &+rgases rise from turbulent pools of fire along the edges of the wide stream.&n
 ~
-883 176459904 11
+883 176459840 11
 D1
 ~
 ~
@@ -979,7 +979,7 @@ S
 &+LUpon the vast slopes, creatures of fire toil tirelessly, adding more of the
 &+Lvolcanic remains of the plane to the mountain.&n
 ~
-883 176459972 11
+883 176459844 11
 D0
 ~
 ~
@@ -1358,6 +1358,10 @@ S
 &+La better time.&n
 ~
 883 176459840 11
+D0
+~
+~
+0 0 88354
 D1
 ~
 ~
@@ -2019,16 +2023,16 @@ D3
 0 0 88378
 S
 #88380
-&+LAn Obsidian Bridge over a &+RFiery &+LChasm&N~
-&+R   Fathoms above the surface of the bubbling and churning magma below, this
-&+Rbridge extends from the edge of the cinder cone's top, out towards the Charcoal
-&+RPalace.  The palace itself seems to float within the air, tethered to the ashen
-&+Rmountain by only the bridge.  Towering spires writhe and weave in the likeness
-&+Rof flames reaching towards the fiery sky above.  Spiked protrusions extend outwards
-&+Rfrom random locations all around the palace walls.  Wisps of thick smoke seem to
-&+Rooze slowly out of the structure, coalescing in great swaths about the highest
-&+Rreaches of the palace.  The bridge leads eastwards towards the fields of the Fire
-&+RPlane.&n
+&+LAn Obsidian Bridge Over a &+RFiery &+LChasm&N~
+&+R   Fathoms above the surface of the bubbling and chrning magma below, this
+&+Rbridge extends from the edge of the cinder cone's top, out towards the &+LCharcoal
+&+LPalace&+R. The palace itself seems to float within the air, tethered to the ashen
+&+Rmountains by only the bridge. Towering spires writhe and weave in the likeness
+&+Rof flames reaching towards the fiery sky above. Spiked protrusions extend
+&+Routwards from random locations all around the palace walls. Wisps of thick
+&+Rsmoke seem to ooze slowly out of the structure, coalescing in great swaths
+&+Rabove the highest reaches of the palace. The bridge leads eastwards towards
+&+Rthe field of the ashen slopes.&n
 ~
 883 176459844 11
 D1
@@ -2052,7 +2056,7 @@ S
 &+yground even more so.  The groaning of rock against rock echoes across the
 &+yentire cone, reverberating loudly against everything solid.&n
 ~
-883 176463940 11
+883 176455748 11
 D1
 ~
 ~
@@ -2065,14 +2069,14 @@ S
 #88382
 &+LGates of the Charcoal Palace~
 &+L   Twin gates of some alchemical amalgam stand before the entrance to the
-&+LCharcoal Palace here.  The gates span a massive distance for any mortal creature
-&+Land as such the metallic-rock gates must be made of an impressively strong
-&+Lsubstance.  The gatehouse leading into the palace lies just beyond the gates, and
-&+Lappears to be heavily guarded.  Wisps of smoke waft through the gates regularly,
-&+Lfloating outwards and partially obscuring the upper reaches of the gatehouse
-&+Lparapets.  There are several blackened corpses of large beasts hanging ominously
-&+Lfrom wooden spikes drilled into the archway over the gates.  A strange silence
-&+Lseems to permeate the area, almost as a calm before a storm.&n
+&+LCharcoal Palace here. The gates span a massive distance for any mortal creature
+&+Land as such, the metallic-rock gates must be made of an impressively strong
+&+Lsubstance. The gatehouse leading into the palace lies just beyond the gates,
+&+Land appears to be heavily guarded. Wisps of smoke waft through the gates
+&+Lregularly, floating outwards and partially obscuring the upper reaches of the
+&+Lgatehouse parapets. There are several blackened corpses of large beasts hanging
+&+Lominously from metal spikes drilled into the archway over the gates. A strange
+&+Lsilence seems to permeate the area, almost as a calm before a storm.&n
 ~
 883 176459844 11
 D1
@@ -2098,16 +2102,16 @@ S
 883 176459848 11
 D0
 ~
-~
-0 0 88449
+door~
+1 0 88449
 D1
 ~
 ~
 1 0 88382
 D2
 ~
-~
-0 0 88450
+door~
+1 0 88450
 D3
 ~
 portcullis~
@@ -2420,7 +2424,7 @@ S
 &+LThe vault is eternally lit by a single pillar of flame stretching from the
 &+Lground to the ceiling in the very center of the room.&n
 ~
-883 176459848 11
+883 176459784 11
 D2
 ~
 doors~
@@ -3046,7 +3050,7 @@ D3
 0 0 88425
 S
 #88428
-&+rLanding within the &+LCharcoal Palace&n~
+&+rLanding Within the &+LCharcoal Palace&n~
    &+LHere the charcoal glows a little more brighter than before.  The roof
 &+Lof the palace is engulfed in flames that drift along the bottom surface of
 &+Lceiling.  Small flares of fire billow outwards and touch the dark stone
@@ -3130,7 +3134,7 @@ D2
 0 0 88433
 S
 #88432
-&+LOpen area in the Palace of Charcoal~
+&+LOpen Area in the Palace of Charcoal~
    &+LHere the charcoal glows a little more brighter than before.  The roof is
 &+Lengulfed in flames that billow along the underside of the ceiling.  Pillars
 &+Lof half-molten charcoal hold up the roof in a macabre scene of licentious
@@ -3158,7 +3162,7 @@ D3
 0 0 88435
 S
 #88433
-&+LOpen area in the Palace of Charcoal~
+&+LOpen Area in the Palace of Charcoal~
    &+LHere the charcoal glows a little more brighter than before.  The roof is
 &+Lengulfed in flames that billow along the underside of the ceiling.  Pillars
 &+Lof half-molten charcoal hold up the roof in a macabre scene of licentious
@@ -3182,7 +3186,7 @@ D2
 0 0 88435
 S
 #88434
-&+LOpen area in the Palace of Charcoal~
+&+LOpen Area in the Palace of Charcoal~
    &+LHere the charcoal glows a little more brighter than before.  The roof is
 &+Lengulfed in flames that billow along the underside of the ceiling.  Pillars
 &+Lof half-molten charcoal hold up the roof in a macabre scene of licentious
@@ -3206,7 +3210,7 @@ D3
 0 0 88433
 S
 #88435
-&+LOpen area in the Palace of Charcoal~
+&+LOpen Area in the Palace of Charcoal~
    &+LHere the charcoal glows a little more brighter than before.  The roof is
 &+Lengulfed in flames that billow along the underside of the ceiling.  Pillars
 &+Lof half-molten charcoal hold up the roof in a macabre scene of licentious
@@ -3230,7 +3234,7 @@ D2
 0 0 88437
 S
 #88436
-&+LOpen area in the Palace of Charcoal~
+&+LOpen Area in the Palace of Charcoal~
    &+LHere the charcoal glows a little more brighter than before.  The roof is
 &+Lengulfed in flames that billow along the underside of the ceiling.  Pillars
 &+Lof half-molten charcoal hold up the roof in a macabre scene of licentious
@@ -3254,7 +3258,7 @@ D3
 0 0 88437
 S
 #88437
-&+LOpen area in the Palace of Charcoal~
+&+LOpen Area in the Palace of Charcoal~
    &+LHere the charcoal glows a little more brighter than before.  The roof is
 &+Lengulfed in flames that billow along the underside of the ceiling.  Pillars
 &+Lof half-molten charcoal hold up the roof in a macabre scene of licentious
@@ -3274,7 +3278,7 @@ D1
 0 0 88436
 S
 #88438
-&+LOpen area in the Palace of Charcoal~
+&+LOpen Area in the Palace of Charcoal~
    &+LHere the charcoal glows a little more brighter than before.  The roof is
 &+Lengulfed in flames that billow along the underside of the ceiling.  Pillars
 &+Lof half-molten charcoal hold up the roof in a macabre scene of licentious
@@ -3298,7 +3302,7 @@ D3
 0 0 88432
 S
 #88439
-&+LOpen area in the Palace of Charcoal~
+&+LOpen Area in the Palace of Charcoal~
    &+LHere the charcoal glows a little more brighter than before.  The roof is
 &+Lengulfed in flames that billow along the underside of the ceiling.  Pillars
 &+Lof half-molten charcoal hold up the roof in a macabre scene of licentious
@@ -3322,7 +3326,7 @@ D3
 0 0 88438
 S
 #88440
-&+LOpen area in the Palace of Charcoal~
+&+LOpen Area in the Palace of Charcoal~
    &+LHere the charcoal glows a little more brighter than before.  The roof is
 &+Lengulfed in flames that billow along the underside of the ceiling.  Pillars
 &+Lof half-molten charcoal hold up the roof in a macabre scene of licentious
@@ -3346,7 +3350,7 @@ D3
 0 0 88436
 S
 #88441
-&+LOpen area in the Palace of Charcoal~
+&+LOpen Area in the Palace of Charcoal~
    &+LHere the charcoal glows a little more brighter than before.  The roof is
 &+Lengulfed in flames that billow along the underside of the ceiling.  Pillars
 &+Lof half-molten charcoal hold up the roof in a macabre scene of licentious
@@ -3370,8 +3374,8 @@ S
 &+L   A dark staircase winds upwards to the west, where it disappears through
 &+Lthe flame-engulfed roof of this chamber.  This particular region of the palace
 &+Lis particularly odd, as remnants of a battle that waged here not long ago are
-&+Lstill visible.  Splatters of charred blood mar the surfaces of several pillars
-&+Land the walls.  A broken silver arrow, the tip of a mithril sword and some other
+&+Lstill visible. Splatters of charred blood mar the surfaces of several pillars
+&+Land the walls. A broken silver arrow, the tip of a mithril sword and some other
 &+Lmiscellaneous debris of warfare can be seen.  What might have happened or when
 &+Lremains a mystery, however.&n
 ~
@@ -3519,8 +3523,8 @@ S
 883 176193624 11
 D2
 ~
-~
-0 0 88383
+door charcoal north~
+1 0 88383
 S
 #88450
 &+LA Guards Alcove&n~
@@ -3529,13 +3533,13 @@ S
 &+rKossuth &+Lare generally non-sentient beings, the alcove itself is sparsely
 &+Ldecorated and otherwise completely utilitarian in nature and appearance.  A
 &+Lsquad of guards could easily occupy the room, waiting for the moment they were
-&+Lneeded.&n
+&+Lneeded. Once empty, this room feels oddly &+wcalm&+L.&n
 ~
-883 176193624 11
+883 176160776 11
 D0
 ~
-~
-0 0 88383
+door~
+1 0 88383
 S
 #88459
 &+BLucrot's room of &+rdevious &+Bquest mobs.~
