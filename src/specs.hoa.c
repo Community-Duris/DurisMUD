@@ -320,7 +320,7 @@ int hoa_plat(P_obj obj, P_char ch, int cmd, char *arg)
   if (!ch)
     return FALSE;
 
-  if (cmd == CMD_GET)
+  if (cmd == CMD_GET || cmd == CMD_TAKE)
   {
     act("&+LA large rumble of stones moving can be heard from the other room.&n", FALSE, ch, 0, 0, TO_ROOM);
     act("&+LA large rumble of stones moving can be heard from the other room.&n", FALSE, ch, 0, 0, TO_CHAR);
