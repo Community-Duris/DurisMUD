@@ -1,9 +1,12 @@
 #14000
-Punishment~
-   I don't know what you could have done to piss the gods off, but now
-you're stuck here until given further notice.  Sorry.
+<SEELIE COURT> Valley of the Dancing Lights~
+   This is the beginning room for the Seelie Court of the elves.
 ~
 140 37081 0
+D4
+~
+~
+0 0 14198
 M
 0 -30
 S
@@ -4631,4 +4634,154 @@ D5
 ~
 ~
 0 0 14111
+S
+#14208
+&+RNOREPAIR SMITHY DISPERSEMENT ROOM 1~
+~
+140 142639104 0
+D0
+North to tiamat
+~
+~
+0 0 19953
+D1
+East to more exits
+~
+~
+0 0 14209
+D2
+South to Vecna
+~
+~
+0 0 130021
+D3
+West to 222
+~
+~
+0 0 87628
+D4
+Up to Bahamut
+~
+~
+0 0 25918
+D5
+Down to Bronze Citadel
+~
+~
+0 0 32469
+D6
+Northwest to Celestia
+~
+~
+0 0 45718
+D7
+Southwest to Nyneth
+~
+~
+0 0 38811
+D8
+Northeast to HoA
+~
+~
+0 0 77867
+D9
+Northeast to Ravenloft
+~
+~
+0 0 58369
+S
+#14209
+&+RNOREPAIR SMITHY DISPERSEMENT ROOM~
+~
+140 142639104 0
+D0
+North to Fortress of Dreams
+~
+~
+0 0 32707
+D1
+East to more exits
+~
+~
+0 0 14210
+D2
+South to Avernus Grid in TransTower
+~
+~
+0 0 16271
+D3
+West to more exits
+~
+~
+0 0 14208
+D4
+Up to Pit of Dragons
+~
+~
+0 0 15913
+D5
+Down to Temple of Earth
+~
+~
+0 0 43568
+D8
+Northeast to lair of the gibberling king
+~
+~
+0 0 8788
+S
+#14210
+&+RNOREPAIR SMITHY DISPERSEMENT ROOM~
+~
+140 142639104 0
+D0
+North to Githzerai Fortress
+~
+~
+0 0 44753
+D1
+east to githzerai fortress
+~
+~
+0 0 44476
+D2
+South to 4horse
+~
+~
+0 0 34804
+D3
+West to more exits
+~
+~
+0 0 14209
+D4
+Up to negative
+~
+~
+0 0 26852
+D5
+Down to Barovia 2
+~
+~
+0 0 58984
+D6
+Northwest to Dragonnia
+~
+~
+0 0 6839
+D7
+Southwest to snow ogres
+~
+~
+0 0 87777
+D8
+Northeast to Ceothia
+~
+~
+0 0 81677
+D9
+Southeast to City of Brass
+~
+~
+0 0 25087
 S
