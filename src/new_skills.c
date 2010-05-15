@@ -964,7 +964,7 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
 {
   P_char   vict = NULL;
   char name[256];
-  int dam, damdice, percent, skl_level;
+  int dam, damdice, percent, skl_lvl;
   
   if(!(ch) ||
      !IS_ALIVE(ch) ||
@@ -973,26 +973,38 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
 
   if(!GET_CLASS(ch, CLASS_MONK))
   {
-    send_to_char("Too bad you're not a monk, eh?\r\n", ch);
+    send_to_char("Too bad you're not a monk.\r\n", ch);
     return;
   }
-  
-  skl_level = GET_CHAR_SKILL(ch, SKILL_JIN_TOUCH);
-  
-  if(IS_NPC(ch) &&
-     IS_ELITE(ch))
-        skl_level = 2 * GET_LEVEL(ch);
-  else if(IS_NPC(ch) &&
-          !IS_PC_PET(ch) &&
-          GET_LEVEL(ch) >= 50)
-            skl_level = GET_LEVEL(ch);    
-
-  if(skl_level < 1);
+  else
   {
-    send_to_char("&+GYou are not trained in the ways of the Jin.\r\n", ch);
-    return;
+    if (IS_PC(ch) ||
+        IS_PC_PET(ch))
+      skl_lvl = GET_CHAR_SKILL(ch, SKILL_JIN_TOUCH);
+    else
+      skl_lvl = MAX(100, GET_LEVEL(ch) * 3);
   }
 
+  debug("(%s) jin skill is (%d).", GET_NAME(ch), skl_lvl);
+
+  if(number(1, 50) > skl_lvl)
+  {
+    send_to_char("You forgot the words for the chant.\r\n", ch);
+    
+    CharWait(ch, PULSE_VIOLENCE);
+
+    if(IS_NPC(vict) && CAN_SEE(vict, ch) && number(0, 1))
+    {
+      remember(vict, ch); 
+      if(!IS_FIGHTING(vict))
+      {
+        MobStartFight(vict, ch);
+      }
+    }
+
+    return;
+  }
+  
   if(IS_FIGHTING(ch))
     vict = ch->specials.fighting;
   else if (argument)
@@ -1026,9 +1038,7 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
   
   if (CHAR_IN_SAFE_ZONE(ch))
   {
-    send_to_char
-      ("&+GYou feel ashamed to try to disrupt the tranquility of this place.\r\n",
-       ch);
+    send_to_char("&+GYou feel ashamed to try to disrupt the tranquility of this place.\r\n", ch);
     return;
   }
   
@@ -1046,15 +1056,13 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
       MobStartFight(vict, ch);
   }
   
-  dam = (int)(dice(GET_C_DEX(ch), 5) +
-              dice(GET_C_AGI(ch), 5) +
-              dice(GET_C_WIS(ch), 5)) / 3;
+  dam = (int)(dice(GET_C_DEX(ch), 3) +
+              dice(GET_C_AGI(ch), 3) +
+              dice(GET_C_WIS(ch), 3)) / 3;
   
-  if(skl_level <= 40)
-    dam = (int) (0.4 * dam);
-  else if(skl_level <= 60)
+  if(skl_lvl <= 60)
     dam = (int) (0.5 * dam);
-  else if(skl_level <= 90)
+  else if(skl_lvl <= 90)
     dam = (int) (0.7 * dam);
     
   act("&+CYou harness your full Jin, and deliver a powerful strike to&n $N!&n",
@@ -1063,6 +1071,8 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
     FALSE, ch, 0, vict, TO_NOTVICT);
   act("$n&+C's chants a mantra as $e touches you - pain courses throughout your body!&n",
     FALSE, ch, 0, vict, TO_VICT);
+    
+  debug("(%s) Jin Touch: damage upon (%s) for (%d).", GET_NAME(ch), GET_NAME(vict), dam);
 
   if(melee_damage(ch, vict, dam, PHSDAM_NOREDUCE | PHSDAM_NOPOSITION |
       PHSDAM_TOUCH, 0) != DAM_NONEDEAD)
@@ -1075,7 +1085,7 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
 
   if(!affected_by_spell(vict, SKILL_JIN_TOUCH) &&
     (percent > number(0, 19)) &&
-    skl_level >= 100 &&
+    skl_lvl >= 100 &&
     !IS_SOULLESS(vict) &&
     !IS_GREATER_RACE(vict) &&
     !IS_ELITE(vict))
