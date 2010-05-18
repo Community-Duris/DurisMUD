@@ -1073,6 +1073,11 @@ void update_pos(P_char ch)
           REMOVE_BIT(ch->specials.affected_by, AFF_SLEEP);
           affect_from_char(ch, SPELL_SLEEP);
         }
+        if(affected_by_spell(ch, SONG_SLEEP))
+        {
+          REMOVE_BIT(ch->specials.affected_by, AFF_SLEEP);
+          affect_from_char(ch, SONG_SLEEP);
+        }        
         if (stat == STAT_SLEEPING)
         {
           stat = STAT_NORMAL;
@@ -1085,8 +1090,23 @@ void update_pos(P_char ch)
   if ((GET_STAT(ch) == STAT_SLEEPING) && (stat > STAT_SLEEPING))
   {
     act("$n has a RUDE awakening!", TRUE, ch, 0, 0, TO_ROOM);
-    affect_from_char(ch, SPELL_SLEEP);
+    if(affected_by_spell(ch, SPELL_SLEEP))
+    {
+      REMOVE_BIT(ch->specials.affected_by, AFF_SLEEP);
+      affect_from_char(ch, SPELL_SLEEP);
+    }
+    if(affected_by_spell(ch, SONG_SLEEP))
+    {
+      REMOVE_BIT(ch->specials.affected_by, AFF_SLEEP);
+      affect_from_char(ch, SONG_SLEEP);
+    }
     do_wake(ch, 0, -4);
+    if(IS_NPC(ch))
+    {
+      do_stand(ch, 0, 0);
+      do_alert(ch, 0, 0);
+    }
+    
   }
   /*
    * finally, set new position and status
