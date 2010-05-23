@@ -13218,11 +13218,12 @@ void spell_dispel_magic(int level, P_char ch, char *arg, int type,
     }
 
     if(is_linked_to(ch, victim, LNK_CONSENT) ||
-       IS_TRUSTED(ch) ||
-       level > 57)
-          nosave = 1;
+       IS_TRUSTED(ch))
+    {
+      nosave = 1;
+    }
 
-    mod = MAX(2, (GET_LEVEL(ch) - GET_LEVEL(victim)) / 2);
+    mod = GET_LEVEL(ch) - GET_LEVEL(victim);
 
     act("$n tries to dispel your magic!", FALSE, ch, 0, victim, TO_VICT);
     act("You try to dispel $N's magic.", FALSE, ch, 0, victim, TO_CHAR);
