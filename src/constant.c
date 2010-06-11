@@ -284,7 +284,7 @@ const mcname multiclass_names[] = {
   {CLASS_SORCERER, CLASS_REAVER,         "&+LDe&+mfil&+Ler     &n"},
   {CLASS_SORCERER, CLASS_ILLUSIONIST,    "Sleuth      "},
   {CLASS_SORCERER, CLASS_DREADLORD,      "Dreadcaster "},  
-  {CLASS_SORCERER, CLASS_ETHERMANCER,    "&+cSt*+Corm Ma&+cgi  &n"},
+  {CLASS_SORCERER, CLASS_ETHERMANCER,    "&+cSt&+Corm Ma&+cgi  &n"},
   {CLASS_SORCERER, CLASS_AVENGER,        "Arcane Zeal "},
   {CLASS_SORCERER, CLASS_THEURGIST,      "Diviner     "},
   {CLASS_NECROMANCER, CLASS_CONJURER,    "Plane Ruiner"},
