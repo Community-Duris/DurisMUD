@@ -25,8 +25,7 @@ const char *specdata[][MAX_SPEC] = {
   {"&+LDark Knight", "&+LDem&+ronic Ri&+Lder", "", ""},  //Anti-Paladin
   {"&+YZealot&n", "&+WHealer&n", "&+cHoly&+Wman&n", ""},      //Cleric
   {"&+rRe&+Rd Dra&+rgon", "&+gElap&+Ghi&+gdist", "", ""},   //Monk
-  {"&+gFo&+Gre&+gst Druid", "&+cStorm &+CDruid", "&+YLunar &+gDruid&n", 
-""},       //Druid
+  {"&+gFo&+Gre&+gst Druid", "&+cStorm &+CDruid", "&+YLunar &+gDruid&n", ""},       //Druid
   {"&+rEl&+Rem&+Lenta&+Rli&n&+rst", "&+WSpir&+Citua&+Wlist", "&+yAni&+Ymal&n&+yist", ""},       //Shaman
   {"&+MWild&+mmage", "&+LWizard", "&+LShadow&+wmage", ""},      //Sorcerer
   {"&+mDia&+rbolis", "&+mNe&+Lcro&+mlyte", "&+LReap&+wer", ""}, //Necromancer
