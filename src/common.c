@@ -47,7 +47,7 @@ const char *specdata[][MAX_SPEC] = {
   {"&+cWindtalker", "&+WFro&+cst &+CMagus", "&+WCo&+Ysm&+Wom&+Yanc&+Wer", ""},     // Ethermancer
   {"&+YLight&+Wbringer", "&+WInq&+wuisi&+Wtor", "", ""},       //Avenger
 };
-
+/* fun times testing! */
 /*
  * mob race lookup table, used to assign a race to a mob when reading them
  * from the .mob file.  Need to update this table when adding new races.
