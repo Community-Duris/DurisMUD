@@ -2838,7 +2838,7 @@ int camp(P_char ch)
 {
   struct affected_type *af;
 
-  if (IS_PC(ch) && IS_AFFECTED(ch, AFF_CAMPING))
+  if (IS_PC(ch) && IS_ALIVE(ch) && IS_AFFECTED(ch, AFF_CAMPING))
   {
     for (af = ch->affected; af && (af->type != SKILL_CAMP); af = af->next) ;
 
