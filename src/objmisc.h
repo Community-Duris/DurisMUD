@@ -123,7 +123,8 @@
 #define ARMOR_WEAR_NOSE        21
 #define ARMOR_WEAR_HORNS       22
 #define ARMOR_WEAR_IOUN        23
-#define ARMOR_WEAR_HIGHEST     23
+#define ARMOR_WEAR_SPIDERBODY  24
+#define ARMOR_WEAR_HIGHEST     24
 
 // bitvectors for where armor covers
 

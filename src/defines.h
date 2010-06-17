@@ -169,6 +169,7 @@ typedef unsigned int uint;
 #define ITEM_WEAR_NOSE      BIT_27
 #define ITEM_WEAR_HORN      BIT_28
 #define ITEM_WEAR_IOUN      BIT_29
+#define ITEM_SPIDER_BODY    BIT_30
 
 /* Bitvector for 'extra_flags' */
 

@@ -722,6 +722,15 @@ void apply_affs(P_char ch, int mode)
     ch->points.hitroll += GET_LEVEL(ch) / 8;
     ch->points.damroll += GET_LEVEL(ch) / 12;
   }
+  
+  if( has_innate(ch, INNATE_LONGSWORD_MASTER) &&
+      ( ch->equipment[PRIMARY_WEAPON] && 
+ch->equipment[PRIMARY_WEAPON]->value[0] == WEAPON_LONGSWORD )
+   )
+  {
+   ch->points.hitroll += GET_LEVEL(ch) / 8;
+   ch->points.damroll += GET_LEVEL(ch) / 10;
+  }
 
   if (has_innate(ch, INNATE_GAMBLERS_LUCK))
   {

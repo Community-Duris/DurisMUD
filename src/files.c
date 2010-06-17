@@ -3891,7 +3891,7 @@ int      restore_wear[MAX_WEAR] = {
   6,                            /* WEAR_FEET_REAR */
   24,                           /* WEAR_NOSE */
   25,                           /* WEAR_HORN */
-  26                            /* WEAR_IOUN */
+  26,                            /* WEAR_IOUN */
 };
 
 /*
