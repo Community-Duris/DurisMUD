@@ -683,7 +683,8 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_GIANT(ch)  ((GET_RACE(ch) == RACE_GIANT) || (GET_RACE(ch) == RACE_OGRE) || \
                        (GET_RACE(ch) == RACE_SGIANT) || \
-                       (GET_RACE(ch) == RACE_MINOTAUR) || GET_RACE(ch) == RACE_SNOW_OGRE)
+                       (GET_RACE(ch) == RACE_MINOTAUR) || GET_RACE(ch) == RACE_SNOW_OGRE || \
+					   (GET_RACE(ch) == RACE_FIRBOLG))
 
 #define IS_INSECT(ch) ((GET_RACE(ch) == RACE_INSECT))
 
@@ -984,6 +985,9 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch)) && !IS_ANIMAL(ch))
       (GET_RACE(ch) == RACE_CENTAUR) || \
       (GET_RACE(ch) == RACE_GITHZERAI) || \
       (GET_RACE(ch) == RACE_AGATHINON) || \
+	  (GET_RACE(ch) == RACE_WOODELF) || \
+	  (GET_RACE(ch) == RACE_FIRBOLG) || \
+	  (GET_RACE(ch) == RACE_ELADRIN) || \
       (OLD_RACE_NEUTRAL(ch) && \
        GET_ALIGNMENT(ch) >= 0))
 
@@ -996,7 +1000,11 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch)) && !IS_ANIMAL(ch))
       ((OLD_RACE_NEUTRAL(ch) && (GET_ALIGNMENT(ch)) < 0)) || \
       (GET_RACE(ch) == RACE_ORC) || \
       (GET_RACE(ch) == RACE_OROG) || \
-      (GET_RACE(ch) == RACE_TROLL))
+      (GET_RACE(ch) == RACE_TROLL) || \
+	  (GET_RACE(ch) == RACE_KUOTOA) || \
+	  (GET_RACE(ch) == RACE_PILLITHID) || \
+	  (GET_RACE(ch) == RACE_KOBOLD) || \
+	  (GET_RACE(ch) == RACE_DRIDER))
 
 #define OLD_RACE_PUNDEAD(ch) ((GET_RACE(ch) == RACE_PLICH) || \
       (GET_RACE(ch) == RACE_PVAMPIRE) || \
@@ -1140,7 +1148,7 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch)) && !IS_ANIMAL(ch))
        affected_by_spell(ch, SPELL_SLEEP))
 
 // Meeting the following define grants hitpoints.spellcaster.maxConBonus.
-#define IS_MAX_CON_BONUS_CLASS(ch) (GET_CLASS(ch, CLASS_ETHERMANCER | CLASS_DRUID | CLASS_CLERIC | CLASS_SORCERER | CLASS_NECROMANCER | CLASS_SHAMAN | CLASS_PSIONICIST | CLASS_ILLUSIONIST | CLASS_CONJURER | CLASS_BARD))
+#define IS_MAX_CON_BONUS_CLASS(ch) (GET_CLASS(ch, CLASS_ETHERMANCER | CLASS_DRUID | CLASS_CLERIC | CLASS_SORCERER | CLASS_NECROMANCER | CLASS_SHAMAN | CLASS_PSIONICIST | CLASS_ILLUSIONIST | CLASS_CONJURER | CLASS_BARD | CLASS_THEURGIST))
 
 #define IS_COLD_VULN(ch) (GET_RACE(ch) == RACE_THRIKREEN || \
                           GET_RACE(ch) == RACE_F_ELEMENTAL || \

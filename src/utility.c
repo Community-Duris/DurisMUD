@@ -1912,7 +1912,7 @@ bool aggressive_to(P_char ch, P_char target)
 
     if ((GET_LEVEL(ch) <= (GET_LEVEL(target) - 10)) && \
         has_innate(target, INNATE_UNDEAD_FEALTY) && \
-        !CheckFor_remember(ch, target))
+        !CheckFor_remember(ch, target) && IS_UNDEADRACE(target))
       return FALSE;  // Liches are revered/feared by lower level undead - Jexni 8/18/08
 
     /* check if mob is nocturnal/diurnal/perpetually angry */
