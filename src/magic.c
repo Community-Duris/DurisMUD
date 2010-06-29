@@ -5197,6 +5197,10 @@ void spell_wandering_woods(int level, P_char ch, char *arg, int type,
   {
     temp = 4;
   }
+  else
+  {
+    temp = 4;
+  }
 
   if(!ch)
     return;
