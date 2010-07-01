@@ -139,7 +139,7 @@ const struct race_names race_names_table[LAST_RACE + 2] = {
   {"Purple Worm", "PurpleWorm", "&+mPurple &+LWorm&n", "PW"},
   {"Agathinon", "Agathinon", "&+WAga&+Yt&+Whin&+Yo&+Wn&n", "AG"},
   {"Void Elemental", "VoidElemental", "&+LVoi&+wd Elemen&+Ltal&n", "VE"},
-  {"Ice Elemental", "IceElemental", "&+CIc&+We Ele&+cme&+Wnt&+Cal&n", "IE"},
+  {"Ice Elemental", "IceElemental", "&+CIc&+We Ele&+Cme&+Wnt&+Cal&n", "IE"},
   {"Eladrin", "Eladrin", "&+cE&+Cl&+Wadr&+Ci&+cn&n", "EL"},
   {"Kobold", "Kobold", "&+LKobold&n", "KB"},
   {"Planetbound Illithid", "Pillithid", "&+MIllithid&n", "PI"},
