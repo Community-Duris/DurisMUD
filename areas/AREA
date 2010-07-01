@@ -38,7 +38,7 @@ willem                    *71-72
 prison                    *73-74
 bastine                   *76-77
 v2                        *78-79
-jotinv                    *80-83
+*jotinv                    *80-83
 grave                     *84-86
 gibber                    *87,88
 raiders                   *89
@@ -259,7 +259,7 @@ ceopast                   *811-813
 ceofutur                  *814-816
 jin                       *820
 outpost                   *821
-//lylr                      *822
+*lylr                      *822
 lab                       *823
 suntmpl                   *824
 mira                      *825-826
@@ -282,7 +282,7 @@ fishermans_wharf          *889
 newhope                   *890
 foggy_woods               *900-902
 rtun                      *903 (Alachest, undead town)
-//glacier                   *904-905
+*glacier                   *904-905
 river_styx                *907
 valinhav                  *908-909
 barovia                   *910-911
@@ -331,7 +331,7 @@ nexus_roper               *1304
 brimeforge                 *1310-1311
 earthp                    *1312
 airp                      *1316
-//lortower                  *1320
+*lortower                  *1320
 *surf                     *2000
 *underdark                *2100
 surface                   *5000
