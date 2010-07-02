@@ -32,7 +32,7 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include <new.h>    // nothrow
+#include <new>    // nothrow
 
 #include "../types.h"
 
