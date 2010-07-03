@@ -933,7 +933,7 @@ typedef unsigned int uint;
 #define RACE_SUCCUBUS        96 /* mob race code: SU */
 #define RACE_FIREGIANT       97 /* mob race code: FG */
 #define RACE_FROSTGIANT      98 /* mob race code: IG */
-#define LAST_RACE            99
+#define LAST_RACE            99 /* 99 races on duris today, 99 races..*/
 
 #define DEFINED_RACES        98 /* actual number of races defined */
 #define MAX_HATRED	     5

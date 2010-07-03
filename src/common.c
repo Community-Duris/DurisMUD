@@ -158,7 +158,7 @@ const struct race_names race_names_table[LAST_RACE + 2] = {
   {"Succubus", "Succubus", "&+LS&+ru&+Rcubb&+ru&+Ls&n", "SU"},
   {"Fire Giant", "FireGiant", "&+rFi&+Rre Gia&+rnt&n", "FG"},
   {"Frost Giant", "FrostGiant", "&+cFro&+Cst Gi&+cant&n", "IG"},
-  {0}
+  {0} /* 99 races! *//
 };
 
 int race_size(int race)
