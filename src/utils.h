@@ -681,10 +681,12 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define IS_DEMON(ch)  (GET_RACE(ch) == RACE_DEMON)
 #define IS_DEVIL(ch) (GET_RACE(ch) == RACE_DEVIL)
 
-#define IS_GIANT(ch)  ((GET_RACE(ch) == RACE_GIANT) || (GET_RACE(ch) == RACE_OGRE) || \
+#define IS_GIANT(ch)  ((GET_RACE(ch) == RACE_GIANT) || \
+                       (GET_RACE(ch) == RACE_OGRE) || \
                        (GET_RACE(ch) == RACE_SGIANT) || \
-                       (GET_RACE(ch) == RACE_MINOTAUR) || GET_RACE(ch) == RACE_SNOW_OGRE || \
-					   (GET_RACE(ch) == RACE_FIRBOLG))
+                       (GET_RACE(ch) == RACE_MINOTAUR) || \
+                       (GET_RACE(ch) == RACE_SNOW_OGRE) || \
+                       (GET_RACE(ch) == RACE_FIRBOLG))
 
 #define IS_INSECT(ch) ((GET_RACE(ch) == RACE_INSECT))
 
@@ -1249,5 +1251,8 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch)) && !IS_ANIMAL(ch))
 
 #define IS_CONSTRUCT(ch) ((GET_RACE(ch) == RACE_GOLEM) || \
                           (GET_RACE(ch) == RACE_CONSTRUCT))
-        
+
+#define IS_ANGEL(ch) ((GET_RACE(ch) == RACE_ANGEL) || \
+                      (GET_RACE(ch) == RACE_ELADRIN))
+
 #endif /* _DURIS_UTILS_H_ */

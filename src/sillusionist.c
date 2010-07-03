@@ -380,7 +380,7 @@ void spell_shadow_travel(int level, P_char ch, char *arg, int type,
     return;
   }
   
-  distance = MAX(25, level);
+  distance = (int)(level * 1.35);
 
   if(GET_SPEC(ch, CLASS_ILLUSIONIST, SPEC_DARK_DREAMER))
     distance += 15;

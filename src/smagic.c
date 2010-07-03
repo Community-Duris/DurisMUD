@@ -4399,7 +4399,7 @@ void spell_spirit_jump(int level, P_char ch, char *arg, int type,
     return;
   }
   
-  distance = MAX(25, level);
+  distance = (int)(level * 1.35);
   
   if(IS_SPIRITUALIST(ch))
     distance += 15;

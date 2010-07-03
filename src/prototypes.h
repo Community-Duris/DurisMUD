@@ -1286,6 +1286,7 @@ void spell_firestorm(int, P_char, char*, int, P_char, P_obj);
 void spell_fly(int, P_char, char *, int, P_char, P_obj);
 void spell_frost_breath(int, P_char, char*, int, P_char, P_obj);
 void spell_destroy_undead(int, P_char, char *, int, P_char, P_obj);
+void spell_taint(int, P_char, char *, int, P_char, P_obj);
 void spell_gas_breath(int, P_char, char*, int, P_char, P_obj);
 void spell_gate(int, P_char, P_char, P_obj);
 void spell_globe(int, P_char, char *, int, P_char, P_obj);

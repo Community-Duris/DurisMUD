@@ -1816,6 +1816,43 @@ void spell_undead_to_death(int level, P_char ch, char *arg, int type,
   }
 }
 
+void spell_taint(int level, P_char ch, char *arg, int type,
+                          P_char victim, P_obj obj)
+{
+  int      dam;
+  struct damage_messages messages = {
+    "Your &+rpowerful voice&n causes $N's &+Cs&nou&+Cl&n to distort and shimmer, writhing in agony!",
+    "Your divine spirit writhes in agony at the power of $n's &+rtainted&n word!",
+    "$n utters a &+rwicked&n word, causing $N to writhe in agony, echoes of $s &+Cs&nou&+Cl&n shimmering around $s body!",
+    "Your eyes sparkle with an insane glee as the &+rabsolute power&n of your word destroys that which was $N!",
+    "With a &+Gw&+gr&+Letch&+ge&+Gd &+mincantation&n $n opens $s mouth wider than $s skull and swallos your &+Cs&nou&+Cl&n.",
+    "With a &+Gw&+gr&+Letch&+ge&+Gd &+mincantation&n, $n opens $s mouth wider than $s skull, swallowing the &+Cs&nou&+Cl&n of $N!", 0
+  };
+
+  if(!ch)
+  {
+    logit(LOG_EXIT, "spell_taint called in magic.c with no ch");
+    raise(SIGSEGV);
+    return;
+  }
+
+  if(ch &&
+    victim &&
+    !IS_ANGEL(victim))
+  {
+    send_to_char("Your victim cannot be tainted!\n", ch);
+    return;
+  }
+
+  dam = 9 * MIN(level, 56) + number(-40, 40);
+// dam = 13 * level + number(0, level);
+  if(saves_spell(victim, SAVING_SPELL))
+    dam >>= 1;
+
+  spell_damage(ch, victim, dam, SPLDAM_HOLY, 0,
+               &messages);
+}
+
 /*
 void spell_eyes_death(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
