@@ -3572,6 +3572,14 @@ void do_nchat(P_char ch, char *argument, int cmd)
     return;
   }
 
+  if((GET_LEVEL(ch) > 31) &&
+     (GET_LEVEL(ch) < 57) &&
+     !IS_SET(PLR2_FLAGS(ch), PLR2_NEWBIE_GUIDE))
+  {
+   send_to_char("Your level no longer qualifies you for newbie-chat, sorry.\r\n", ch);
+   return;
+  }
+
   if (IS_DISGUISE_PC(ch) ||
       IS_DISGUISE_ILLUSION(ch) ||
       IS_DISGUISE_SHAPE(ch))

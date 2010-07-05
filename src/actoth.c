@@ -4451,7 +4451,7 @@ void do_toggle(P_char ch, char *arg, int cmd)
     result = TOGGLE_BIT(ch->specials.act, PLR_AFK) & (PLR_AFK);
     break;
   case 41:
-    /* if((GET_LEVEL(ch) > 31) &&
+     if((GET_LEVEL(ch) > 31) &&
         (GET_LEVEL(ch) < 57) &&
         !IS_SET(PLR2_FLAGS(ch), PLR2_NCHAT) &&
         !IS_SET(PLR2_FLAGS(ch), PLR2_NEWBIE_GUIDE))
@@ -4462,7 +4462,7 @@ void do_toggle(P_char ch, char *arg, int cmd)
        return;
      }
     result = PLR2_TOG_CHK(ch, PLR2_NCHAT);
-    break; */
+    break; 
   case 42:
     result = PLR2_TOG_CHK(ch, PLR2_DAMAGE);
     break;
