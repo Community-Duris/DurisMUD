@@ -8456,13 +8456,6 @@ void spell_vitality(int level, P_char ch, char *arg, int type, P_char victim,
      GET_VNUM(victim) == IMAGE_RELFECTION_VNUM)
       return;
       
-  if(affected_by_spell(victim, SPELL_MIELIKKI_VITALITY))
-  {
-    send_to_char("&+WThe vitality spell fails.\r\n", ch);
-    send_to_char("&+GThe Goddess blocks the vitality spell.\r\n", ch);
-    return;
-  }
-      
   if(!IS_PC(ch) &&
      !IS_PC(victim))
         duration = 30;
@@ -19652,10 +19645,9 @@ void spell_mielikki_vitality(int level, P_char ch, char *arg, int type, P_char v
 {
   struct affected_type af;
   bool message = false;
-  double points;
-  
-  if(affected_by_spell(ch, SPELL_VITALITY) ||
-     affected_by_spell(ch, SPELL_ESHABALAS_VITALITY))
+  int healpoints = (2 * level) + number(40, 90);
+ 
+  if(affected_by_spell(ch, SPELL_ESHABALAS_VITALITY))
   {
     send_to_char("&+GThe blessings of the Goddess Mielikki are denied!\r\n", victim);
     return;
@@ -19668,7 +19660,7 @@ void spell_mielikki_vitality(int level, P_char ch, char *arg, int type, P_char v
     for (af1 = victim->affected; af1; af1 = af1->next)
       if (af1->type == SPELL_MIELIKKI_VITALITY)
       {
-        af1->duration = 12;
+        af1->duration = 15;
         message = true;
       }
     
@@ -19678,31 +19670,16 @@ void spell_mielikki_vitality(int level, P_char ch, char *arg, int type, P_char v
     return;
   }
   
-  if(GET_CLASS(ch, CLASS_DRUID))
-  {
-    points = GET_HIT(victim) * 0.15;
-  }
-  else if(GET_CLASS(ch, CLASS_RANGER))
-  {
-    points = GET_HIT(victim) * 0.20;
-  }
-  else
-  {
-    points = GET_HIT(victim) * 0.10;
-  }
-  
-  points = points + number(1, 30);
-  
   bzero(&af, sizeof(af));
   af.type = SPELL_MIELIKKI_VITALITY;
-  af.duration = 10;
-  af.modifier = (int)(points + number(0, 10));
+  af.duration = 15;
+  af.modifier = healpoints;
   af.location = APPLY_HIT;
   affect_to_char(victim, &af);
 
   if(GET_CLASS(ch, CLASS_DRUID))
   {
-    af.modifier = level + number(0, 10);
+    af.modifier = number(20, 45);
     af.location = APPLY_MOVE;
     affect_to_char(victim, &af);
   }
@@ -19711,7 +19688,7 @@ void spell_mielikki_vitality(int level, P_char ch, char *arg, int type, P_char v
      !affected_by_spell(ch, SPELL_REGENERATION) &&
      !affected_by_spell(ch, SPELL_ACCEL_HEALING))
   {
-    af.modifier = level;  
+    af.modifier = number(20, 45);  
     af.location = APPLY_HIT_REG;
     affect_to_char(victim, &af);
   }
@@ -19720,7 +19697,7 @@ void spell_mielikki_vitality(int level, P_char ch, char *arg, int type, P_char v
      !affected_by_spell(ch, SPELL_ENDURANCE)) ||
      GET_SPEC(ch, CLASS_RANGER, SPEC_WOODSMAN))
   {
-    af.modifier = MAX(10, (int)(level / 5));  
+    af.modifier = number(25, 50);
     af.location = APPLY_MOVE_REG;
     affect_to_char(victim, &af);    
   }    
