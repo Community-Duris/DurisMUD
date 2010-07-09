@@ -1146,7 +1146,7 @@ void NPCShipAI::set_new_dir()
         safe_speed = 40;
 
     ship->setheading = new_heading;
-    int delta = (int)abs(ship->heading - new_heading);
+    int delta = (int)std::abs(ship->heading - new_heading);
     if (delta > 180) delta = 360 - delta;
     if (delta < 60)
         ship->setspeed = ship->get_maxspeed();
@@ -1860,11 +1860,11 @@ float NPCShipAI::calc_land_dist(float x, float y, float dir, float max_range)
 
         if (dir_cos == 0)
         {
-            loc_range = abs(delta_x);
+            loc_range = std::abs(delta_x);
             x = next_x;
             // y doesnt change
         }
-        else if (abs(dir_sin / dir_cos) >  abs(delta_x / delta_y))  // w/e
+        else if (std::abs(dir_sin / dir_cos) >  std::abs(delta_x / delta_y))  // w/e
         {
             loc_range = delta_x / dir_sin;
             x = next_x;
