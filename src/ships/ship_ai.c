@@ -1146,7 +1146,7 @@ void NPCShipAI::set_new_dir()
         safe_speed = 40;
 
     ship->setheading = new_heading;
-    int delta = (int)std::abs(ship->heading - new_heading);
+    int delta = (int)abs(ship->heading - new_heading);
     if (delta > 180) delta = 360 - delta;
     if (delta < 60)
         ship->setspeed = ship->get_maxspeed();
@@ -1860,21 +1860,31 @@ float NPCShipAI::calc_land_dist(float x, float y, float dir, float max_range)
 
         if (dir_cos == 0)
         {
-            loc_range = std::abs(delta_x);
+            //loc_range = abs(delta_x);
+            loc_range = delta_x;
+            if (loc_range < 0.0) loc_range = loc_range * -1.0;
             x = next_x;
             // y doesnt change
         }
-        else if (std::abs(dir_sin / dir_cos) >  std::abs(delta_x / delta_y))  // w/e
+        else
         {
-            loc_range = delta_x / dir_sin;
-            x = next_x;
-            y = y + loc_range * dir_cos;
-        }
-        else // n/s
-        {
-            loc_range = delta_y / dir_cos;
-            x = x + loc_range * dir_sin;
-            y = next_y;
+            float r1 = dir_sin / dir_cos;
+            if (r1 < 0.0) r1 = r1 * -1.0;
+            float r2 = delta_x / delta_y;
+            if (r2 < 0.0) r2 = r2 * -1.0;
+            //if (abs(dir_sin / dir_cos) >  abs(delta_x / delta_y))  // w/e
+            if (r1 >  r2)  // w/e
+            {
+                loc_range = delta_x / dir_sin;
+                x = next_x;
+                y = y + loc_range * dir_cos;
+            }
+            else // n/s
+            {
+                loc_range = delta_y / dir_cos;
+                x = x + loc_range * dir_sin;
+                y = next_y;
+            }
         }
         range += loc_range;
         //send_message_to_debug_char("x=%5.2f,y=%5.2f, lr=%5.2f, r=%5.2f", x, y, loc_range, range);
