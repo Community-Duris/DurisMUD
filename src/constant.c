@@ -1366,7 +1366,7 @@ const char *kingdom_type_list[] = {
 
 const char *town_name_list[] = {
   "Nowhere",                    /* must remain 'nowhere'! */
-  "Tharnadia",
+  "Winterhaven",
   "Ixarkon",
   "Arachdrathos",
   "Sylvandawn",
@@ -1687,7 +1687,7 @@ const int hometown_arena[LAST_HOME + 1][3] = {
 
 const int hometown[] = {
   1200,                         /* * Gods */
-  130000,                       /* * Tharnadia */
+  55500,                        /* * Winterhaven */
   96400,                        /* * Ixarkon */
   36329,                        /* * Arachdrathos */
   8001,                         /* Sylvandawn */
@@ -1741,7 +1741,7 @@ extern const int avail_hometowns[][LAST_RACE + 1];
 const int avail_hometowns[][LAST_RACE + 1] = {
 /* N  Hu Ba Dr Gr Mo Du Ha Gn Og Tr H2 Il Or Th Ce Gi Mi Ae Su Gb Li Va Dk Sb Sg Wg Ph Hr Oo Gt*/
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* * None */
-  {0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},   /* * Tharnadia */
+  {0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},   /* * Winterhaven */
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* * Ixarkon */
   {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* * Arachdrathos */
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* * Sylvandawn */
@@ -1796,13 +1796,13 @@ const int guild_locations[][CLASS_COUNT + 1] = {
    -1, -1, -1, -1, -1,
    -1, -1, -1, -1},
 
-  /* Tharnadia */
-  {133323, 133323, 133478,     -1, 133044,
-       -1, 133477, 133044, 133233, 133073,
-   133519, 133435, 133518, 133033, 133033,
-   133033, 133073, 133033,     -1,     -1,
-       -1,     -1,     -1, 133001,     -1,
-       -1, 133073,     -1, 133073},
+  /* Winterhaven */
+  {55160, 55155, 55159,    -1, 55155,
+   55160, 55154, 55159, 55154, 55152,
+   55153,    -1, 55153, 55157, 55157,
+   55157, 55156, 55157,    -1,    -1,
+   55160,    -1,    -1, 55158,    -1,
+      -1, 55152, 55155, 55158},
 
   /* * Ixarkon */
   {96524,    -1,    -1, 96524,    -1,
