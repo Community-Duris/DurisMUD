@@ -645,7 +645,7 @@ void bard_sleep(int l, P_char ch, P_char victim, int song)
 {
   struct affected_type af;
   P_obj    tmp_obj;
-  int      i;
+  int      i, level;
 
   if(IS_TRUSTED(victim))
     return;
@@ -685,8 +685,15 @@ void bard_sleep(int l, P_char ch, P_char victim, int song)
     return;
 
   bzero(&af, sizeof(af));
-  af.type = song;
+  af.type = SPELL_SLEEP;
+  af.duration = 4 + (level < 0 ? -level : level);
+  af.duration /= 10;
+  if(af.duration > 1)
+    af.duration--;
+  else
+    af.duration = 1;
   af.bitvector = AFF_SLEEP;
+
   act("&+LYou feel very sleepy ..... zzzzzz", FALSE, victim, 0, 0, TO_CHAR);
   
   if(victim->specials.fighting)
@@ -697,8 +704,8 @@ void bard_sleep(int l, P_char ch, P_char victim, int song)
     act("&+G$n falls sleep.", TRUE, victim, 0, 0, TO_ROOM);
     SET_POS(victim, GET_POS(victim) + STAT_SLEEPING);
   }
-  
-  linked_affect_to_char(victim, &af, ch, LNK_SONG);
+ 
+  affect_join(victim, &af, FALSE, FALSE); 
   StopMercifulAttackers(victim);
 }
 
