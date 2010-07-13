@@ -3568,8 +3568,13 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     {
       if (IS_SET(obj_object->extra_flags, ITEM_WHOLE_BODY))
       {
-        if (IS_CENTAUR(ch) || IS_MINOTAUR(ch) || IS_OGRE(ch) || IS_SGIANT(ch) ||
-                   GET_RACE(ch) == RACE_WIGHT || GET_RACE(ch) == RACE_SNOW_OGRE)
+        if (IS_CENTAUR(ch) || \
+            IS_MINOTAUR(ch) || \
+            IS_OGRE(ch) || \
+            IS_SGIANT(ch) ||
+            GET_RACE(ch) == RACE_WIGHT || \
+            GET_RACE(ch) == RACE_SNOW_OGRE || \
+            GET_RACE(ch) == RACE_DRIDER)
         {
           if (showit)
             send_to_char("You can't wear full body armor.\r\n", ch);
@@ -3677,7 +3682,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
       if (showit)
       {
         if (IS_ILLITHID(ch))
-          send_to_char("Sorry, you can't wear anything on your head.\r\n",
+          send_to_char("Sorry, your head is far too bulbous to make a fashion statement.\r\n",
                        ch);
         else
           send_to_char("You can't wear that on your head.\r\n", ch);
@@ -3687,7 +3692,8 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
 
   case 5:
     if (CAN_WEAR(obj_object, ITEM_WEAR_LEGS) && 
-       !IS_CENTAUR(ch) &&
+       IS_CENTAUR(ch) &&
+       GET_RACE(ch) != RACE_DRIDER &&
        !IS_HARPY(ch)/* &&
        !IS_MINOTAUR(ch)*/)
     {
@@ -3733,8 +3739,12 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
 
   case 6:
     if (CAN_WEAR(obj_object, ITEM_WEAR_FEET) 
-        && (!IS_CENTAUR(ch) || !strcmp(obj_object->name, "horseshoe")) 
-        && !IS_THRIKREEN(ch) && !IS_HARPY(ch) && !IS_MINOTAUR(ch))
+        && (IS_CENTAUR(ch) || \
+        !strcmp(obj_object->name, "horseshoe")) 
+        && !IS_THRIKREEN(ch) &&
+        !IS_HARPY(ch) &&
+        !IS_MINOTAUR(ch) &&
+        GET_RACE(ch) != RACE_DRIDER)
     {
       if (ch->equipment[WEAR_FEET])
       {
@@ -4551,7 +4561,8 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     }
     break;
   case 24:                     /* nose */
-    if (CAN_WEAR(obj_object, ITEM_WEAR_NOSE) && IS_MINOTAUR(ch))
+    if (CAN_WEAR(obj_object, ITEM_WEAR_NOSE) && IS_MINOTAUR(ch) || \
+                                             GET_RACE(ch) == RACE_DRIDER)
     {
       if (ch->equipment[WEAR_NOSE])
       {
@@ -4745,6 +4756,7 @@ void do_wear(P_char ch, char *argument, int cmd)
     "nose",
     "horns",                    /* 24 */
     "ioun",
+    "spider_body",
     "\n"
   };
   int      loop = 0;

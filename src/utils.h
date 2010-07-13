@@ -823,7 +823,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_THRIKREEN(ch) (GET_RACE(ch) == RACE_THRIKREEN)
 
-#define IS_CENTAUR(ch) (GET_RACE(ch) == RACE_CENTAUR || GET_RACE(ch) == RACE_DRIDER)
+#define IS_CENTAUR(ch) (GET_RACE(ch) == RACE_CENTAUR)
 
 #define IS_GOBLIN(ch) (GET_RACE(ch) == RACE_GOBLIN)
 
