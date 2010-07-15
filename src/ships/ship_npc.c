@@ -21,7 +21,7 @@ void  act_to_all_in_ship(P_ship ship, const char *msg);
 int   getmap(P_ship ship);
 bool load_npc_ship_crew(P_ship ship, int crew_size, int crew_level);
 
-#define LOAD_RANGE 10
+#define LOAD_RANGE 36
 
 extern int top_of_world;
 
