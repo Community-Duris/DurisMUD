@@ -264,12 +264,12 @@ void NPCShipAI::cruise()
         if (turning == NPC_AI_NOT_TURNING)
             turning = (number(1, 2) == 1) ? NPC_AI_TURNING_LEFT : NPC_AI_TURNING_RIGHT;
         if (turning == NPC_AI_TURNING_LEFT)
-            new_heading -= 20; 
+            new_heading = ship->heading - 30; 
         else
-            new_heading += 20; 
+            new_heading = ship->heading + 30; 
     }
     else
-        turning == NPC_AI_NOT_TURNING;
+        turning = NPC_AI_NOT_TURNING;
 
     set_new_dir();
 }
@@ -1862,5 +1862,4 @@ void NPCShipAI::send_message_to_debug_char(char *fmt, ... )
 
 
 
-// add target's side per time statistic, switch target side if too many
-// reward - pieces, eq
+// add target's side-per-time statistic, switch target side if too many
