@@ -929,18 +929,18 @@ int try_ram_ship(P_ship ship, P_ship target, int tbearing)
 }
 
 
-int weaponsight(P_ship ship, P_ship target, int slot, float range, int bearing, P_char ch)
+/*int weaponsight(P_ship ship, int slot, ContactData& t_contact, P_char ch)
 {
   int percent = 50;
 
   int max = weapon_data[ship->slot[slot].index].max_range;
   int min = weapon_data[ship->slot[slot].index].min_range;
-  if ((range <= (float) max) && (range >= (float) min))
+  if ((t_contact.range <= (float) max) && (t_contact.range >= (float) min))
   {
     percent -= (ship->speed / 5);
-    percent -= (target->speed / 3);
+    percent -= (t_contact.target->speed / 3);
 
-    float range_mod = (max - (float)range) / ((float)max - (float)min);
+    float range_mod = (max - (float)t_contact.range) / ((float)max - (float)min);
     percent += (int)((float)75 * range_mod);
     percent += (int)((float)50 * ship->guncrew.skill_mod);
     if (percent > 100)
@@ -950,39 +950,37 @@ int weaponsight(P_ship ship, P_ship target, int slot, float range, int bearing, 
     return percent;
   }
   return 0;
-}
+}*/
 
-/*#define ABS(x) ((x) < 0 ? -(x) : (x));
 
-int weaponsight(P_ship ship, P_ship target, int slot, float range, int bearing, P_char ch)
+#define ABS(x) ((x) < 0 ? -(x) : (x))
+
+int weaponsight(P_ship ship, int slot, int t_contact, P_char ch)
 {
   float max = (float)weapon_data[ship->slot[slot].index].max_range;
   float min = (float)weapon_data[ship->slot[slot].index].min_range;
-  //if ((range > max) || (range < min)) // uncomment!
-  //    return 0;
+  float t_curr_range = contacts[t_contact].range;                     // target range this turn
 
-  int sr_heading = ship->heading - bearing;
-  if (sr_heading < 0) sr_heading += 360;
-  int tr_heading = target->heading - bearing;
+  if ((t_curr_range > max) || (t_curr_range < min))
+      return 0;
+
+  P_ship target = contacts[t_contact].ship;
+
+  // first, calculating 'normal' ortogonal speed of target
+  int tr_heading = target->heading - contacts[t_contact].bearing;
   if (tr_heading < 0) tr_heading += 360;
-
-  float sr_rad = (float) ((float) (sr_heading) * M_PI / 180.000);
   float tr_rad = (float) ((float) (tr_heading) * M_PI / 180.000);
+  float ortogonal_speed = sin(tr_rad) * (float)target->speed; // targets ortogonal speed in 'ship units'
 
-  float closing_speed = ABS(cos(tr_rad) * (float)target->speed - cos(sr_rad) * (float)ship->speed);
-
-  send_to_char_f(ch, "cl_sp=%f", closing_speed);
-  
-
-  float ortogonal_rel_speed = sin(tr_rad) * (float)target->speed - sin(sr_rad) * (float)ship->speed; // speed in 'ship' units
-
-  send_to_char_f(ch, " ort_r_sp=%f", ortogonal_rel_speed);
-  
-  // check if your turning compensates for target relative movement
-  int next_turn = 0;
+  // second, calculating projected change in relative position/heading
+  int t_curr_bearing = contacts[t_contact].bearing - ship->heading;   // target relative bearing this turn
+  if (t_curr_bearing < 0) t_curr_bearing += 360;
+ 
+  // calculating next position of the ship
+  int s_next_turn = 0;
   if (ship->heading != ship->setheading)
   {
-    next_turn = get_turning_speed(ship);
+    s_next_turn = get_turning_speed(ship);
     int diff = ship->setheading - ship->heading;
     if (diff > 180)
       diff -= 360;
@@ -990,97 +988,109 @@ int weaponsight(P_ship ship, P_ship target, int slot, float range, int bearing, 
       diff += 360;
 
     if (diff > 0)
-      next_turn = MIN(diff, next_turn);
+      s_next_turn = MIN(diff, s_next_turn);
     else
-      next_turn = MAX(diff, -next_turn);
+      s_next_turn = MAX(diff, -s_next_turn);
   }
+  int s_next_heading = ship->heading + s_next_turn;
+  float rad = (float) ((float) (s_next_heading) * M_PI / 180.000);
+  float s_next_x = ship->x + (float) ((float) ship->speed * sin(rad)) / 150.000;
+  float s_next_y = ship->y + (float) ((float) ship->speed * cos(rad)) / 150.000;
 
-  send_to_char_f(ch, " n_t=%d", next_turn);
-
-  if (next_turn)
+  // calculating next position of the target
+  int t_next_turn = 0;
+  if (target->heading != target->setheading)
   {
-    float ortogonal_turn_speed = sin((float) (next_turn) * M_PI / 180.000) * range; // speed in map squares
-    ortogonal_turn_speed *= 150.0; // speed in ship units
+    t_next_turn = get_turning_speed(target);
+    int diff = target->setheading - target->heading;
+    if (diff > 180)
+      diff -= 360;
+    if (diff < -180)
+      diff += 360;
 
-    send_to_char_f(ch, " ort_t_sp=%f", ortogonal_turn_speed);
-
-    if (ortogonal_rel_speed * ortogonal_turn_speed >= 0) // same direction, movement compensated by turning
-    {
-        ortogonal_rel_speed = ABS(ortogonal_rel_speed);
-        ortogonal_turn_speed = ABS(ortogonal_turn_speed);
-        if (ortogonal_turn_speed < ortogonal_rel_speed)
-            ortogonal_rel_speed -= ortogonal_turn_speed;
-        else
-            ortogonal_rel_speed = 0;
-    }
+    if (diff > 0)
+      t_next_turn = MIN(diff, t_next_turn);
     else
-        ortogonal_rel_speed = ABS(ortogonal_rel_speed);
-
-    ortogonal_rel_speed += ABS((float)next_turn * 2); // additional disturbance from turning (1 degree of turn equals to 2 additional speed)
+      t_next_turn = MAX(diff, -t_next_turn);
   }
-  else
-  {
-    ortogonal_rel_speed = ABS(ortogonal_rel_speed);
-  }
+  int t_next_heading = target->heading + t_next_turn;
+  rad = (float) (t_next_heading) * M_PI / 180.000;
+  float t_next_x = (float) contacts[t_contact].x + (target->x - 50.0) + ((float) target->speed * sin(rad)) / 150.000;
+  float t_next_y = (float) contacts[t_contact].y + (target->y - 50.0) + ((float) target->speed * cos(rad)) / 150.000;
 
-  send_to_char_f(ch, " ort_r_sp1=%f", ortogonal_rel_speed);
+  int t_next_bearing = bearing(s_next_x, s_next_y, t_next_x, t_next_y);
+  t_next_bearing -= s_next_heading;                                                       // target relative bearing next turn
+  if (t_next_bearing < 0) t_next_bearing += 360;
+  float t_next_range = range(s_next_x, s_next_y, ship->z, t_next_x, t_next_y, target->z); // target range next turn
 
-  float rel_speed;
+  //send_to_char_f(ch, "snt=%d,snx=%5.2f,sny=%5.2f,snh=%d,tnt=%d,tnx=%5.2f,tny=%5.2f,tnh=%d   tcb=%d,tcr=%5.2f,tnb=%d,tnr=%5.2f", s_next_turn, s_next_x, s_next_y, s_next_heading, t_next_turn, t_next_x, t_next_y, t_next_heading, t_curr_bearing, t_curr_range, t_next_bearing, t_next_range);
+
+  float closing_speed = ABS(t_next_range - t_curr_range) * 150.0; // in 'ship units'
+  float angle_speed = ABS(t_next_bearing - t_curr_bearing);       // in degrees
+
+  //send_to_char_f(ch, " ort_sp=%f, cl_sp=%f, an_sp=%f", ortogonal_speed, closing_speed, angle_speed);
+
+
+
+  float speed;
   if (IS_SET(weapon_data[ship->slot[slot].index].flags, BALLISTIC))
   {
-    rel_speed = (ortogonal_rel_speed + closing_speed * 2.0) / 3.0; // catapults mostly depend on approaching speed
+    speed = ABS(ortogonal_speed) / 2 + ABS(angle_speed) * 3 + ABS(closing_speed); // catapults mostly depend on approaching speed
   }
   else
   {
-    rel_speed = (ortogonal_rel_speed * 4.0 + closing_speed) / 5.0; // straight weapons almost exclusively depend on ortogonal speed
+    speed = ABS(ortogonal_speed) + ABS(angle_speed) * 4 + ABS(closing_speed) / 4; // straight weapons almost exclusively depend on ortogonal and angle speed
   }
 
-  send_to_char_f(ch, " r_sp1=%f", rel_speed);
+  //send_to_char_f(ch, " speed=%5.2f", speed);
 
-  float hit_chance = 0.3; // sloop with zero relative speed at max range
+  float hit_chance = 0.3; // sloop with zero speed modifier at max range
 
-  float rel_speed_mod = sqrt(rel_speed + 100.0) - 9.0; // 1 for speed 0 and raising by shifted squareroot (20->2.0 50->3,2 100->5,1 200->8,2)
-  hit_chance /= rel_speed_mod;
+  float speed_mod = 1 + speed / 100.0;
+  hit_chance /= speed_mod;
 
-  send_to_char_f(ch, " hit_1=%f", hit_chance);
+  //send_to_char_f(ch, " hit_1=%5.2f", hit_chance * 100);
 
-  float miss_chance = 1.0 - hit_chance;
-  float size_to_speed_mod = miss_chance * miss_chance* miss_chance * (1.0 + sqrt(SHIPHULLWEIGHT(target)) / 5.0); // the faster it goes, the more hullsize affects it (from 1,7 to 5 between sloop/cruiser)
+  float size_mod = sqrt(SHIPHULLWEIGHT(target)) - 3; // to compensate for sloops size (~0-17)
+  float size_to_speed_mod = 1 + (size_mod / 100) / hit_chance; // the faster it goes, the more hullsize affects it
   hit_chance = hit_chance * size_to_speed_mod;
 
-  send_to_char_f(ch, " hit_2=%f", hit_chance);
+  //send_to_char_f(ch, " hit_2=%5.2f", hit_chance * 100);
   
-  miss_chance = 1.0 - hit_chance;
+  float miss_chance = 1.0 - hit_chance;
   float max_range_miss = miss_chance;
   miss_chance -= 0.05;
   float min_range_miss = miss_chance * miss_chance * miss_chance * miss_chance;
-  float range_mod = (max - range) / (max * 0.66); // if range below max/3, there is no-penalty
-  range_mod = BOUND(0, range_mod, 1);
+  float range_mod = (max - t_curr_range) / (max * 0.75); // if range below max/4, there is no-penalty (and yes, too bad for longtom)
   if (range_mod < 0.0) range_mod = 0.0;
   if (range_mod > 1.0) range_mod = 1.0;
 
   miss_chance = max_range_miss - (max_range_miss - min_range_miss) * range_mod;  // ok here we have our miss chance for the basic crew
 
-  send_to_char_f(ch, " hit_3=%f", 1.0 - miss_chance);
+  //send_to_char_f(ch, " hit_3=%5.2f", (1.0 - miss_chance) * 100);
 
   
   miss_chance /= (1.0 + ship->guncrew.skill_mod);
   hit_chance = 1.0 - miss_chance;
 
-  send_to_char_f(ch, " hit_4=%f\n", hit_chance);
+  //send_to_char_f(ch, " hit_4=%5.2f\n", hit_chance * 100);
   
-  if ((range > (float) max) || (range < (float) min)) // remove it
-      return 0;
+  //if ((t_curr_range > (float) max) || (t_curr_range < (float) min)) // remove it
+  //    return 0;
 
   return (int)(hit_chance * 100);
-}*/
+}
 
-int fire_weapon(P_ship ship, int w_num, P_ship target, float range, int bearing, P_char ch)
+
+
+int fire_weapon(P_ship ship, int w_num, int t_contact, P_char ch)
 {
+    P_ship target = contacts[t_contact].ship;
+    float range = contacts[t_contact].range;
     int w_index = ship->slot[w_num].index;
 
     // calculating hit chance/displaying firing messages
-    int hit_chance = weaponsight(ship, target, w_num, range, bearing, ch);
+    int hit_chance = weaponsight(ship, w_num, t_contact, ch);
     act_to_all_in_ship(ship, "Your ship fires &+W%s&N at &+W[%s]&N:%s! Chance to hit: &+W%d%%&N", ship->slot[w_num].get_description(), target->id, target->name, hit_chance);
     act_to_all_in_ship(target, "&+W[%s]&N:%s&N fires %s at your ship!", SHIPID(ship), ship->name, ship->slot[w_num].get_description());
     act_to_outside(ship, "%s&N fires %s at %s!", ship->name, ship->slot[w_num].get_description(), target->name);

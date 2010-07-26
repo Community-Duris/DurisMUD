@@ -275,6 +275,11 @@ clean:
 	rm -f *.o *~ dms_new .depend
 	rm -f ships/*.a ships/*.o ships/*~ ships/.depend
 
+debug: $(PROGS)
+	cp dms_new ..
+	cd ..
+	gdb dms_new
+
 -include .depend
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.

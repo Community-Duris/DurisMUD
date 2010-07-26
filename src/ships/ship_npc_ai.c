@@ -94,6 +94,7 @@ NPCShipAI::NPCShipAI(P_ship s, P_char ch)
     permanent = false;
     mode = NPC_AI_IDLING;
     turning = NPC_AI_NOT_TURNING;
+    t_contact = 0;
     t_bearing = 0;
     t_arc = 0;
     s_arc = 0;
@@ -385,6 +386,7 @@ bool NPCShipAI::find_new_target()
 }
 void NPCShipAI::update_target(int i) // index in contacts
 {
+    t_contact = i;
     t_bearing = contacts[i].bearing;
     t_range = contacts[i].range;
     t_x = contacts[i].x;
@@ -726,7 +728,8 @@ void NPCShipAI::b_attack()
                 t_range < (float)weapon_data[w_index].max_range &&
                 ship->guncrew.stamina > weapon_data[w_index].reload_stamina)
             {
-                fire_weapon(ship, w_num, ship->target, t_range, t_bearing, debug_char);
+                ship->setheading = ship->heading;
+                fire_weapon(ship, w_num, t_contact, debug_char);
             }
         }
     }
@@ -749,7 +752,8 @@ void NPCShipAI::b_attack()
                             contacts[i].range < (float)weapon_data[w_index].max_range &&
                             ship->guncrew.stamina > weapon_data[w_index].reload_stamina)
                         {
-                            fire_weapon(ship, w_num, contacts[i].ship, contacts[i].range, contacts[i].bearing, debug_char);
+                            ship->setheading = ship->heading;
+                            fire_weapon(ship, w_num, i, debug_char);
                         }
                     }
                 }
@@ -771,7 +775,7 @@ void NPCShipAI::b_check_weapons()
                 continue;
             int w_index = ship->slot[w_num].index;
 
-            float good_range = (float)weapon_data[w_index].min_range + ((float)weapon_data[w_index].max_range - (float)weapon_data[w_index].min_range) * 0.7;
+            float good_range = MAX((float)weapon_data[w_index].min_range + 1, (float)weapon_data[w_index].max_range * 0.25);
 
             if (ship->slot[w_num].timer == 0) // weapon ready to fire
             {
@@ -1232,7 +1236,8 @@ void NPCShipAI::a_attack()
     {
         if (to_fire[w_num])
         {
-            fire_weapon(ship, w_num, ship->target, t_range, t_bearing, debug_char);
+            ship->setheading = ship->heading;
+            fire_weapon(ship, w_num, t_contact, debug_char);
         }
     }
     if (can_fire_but_not_right)
@@ -1315,8 +1320,8 @@ void NPCShipAI::a_update_side_props()
                     side_props[pos].damage_ready += weapon_data[w_index].average_hull_damage();
                 if (side_props[pos].max_range > (float)weapon_data[w_index].max_range)
                     side_props[pos].max_range = (float)weapon_data[w_index].max_range;
-                if (side_props[pos].good_range > (float)weapon_data[w_index].max_range * 0.3)
-                    side_props[pos].good_range = (float)weapon_data[w_index].max_range * 0.3;
+                if (side_props[pos].good_range > (float)weapon_data[w_index].max_range * 0.25)
+                    side_props[pos].good_range = (float)weapon_data[w_index].max_range * 0.25;
                 if (side_props[pos].min_range > weapon_data[w_index].min_range)
                     side_props[pos].min_range = weapon_data[w_index].min_range;
                 if (min_range_total > weapon_data[w_index].min_range)
@@ -1326,8 +1331,8 @@ void NPCShipAI::a_update_side_props()
             {
                 if(side_props[pos].ready_timer > ship->slot[w_num].timer)
                     side_props[pos].ready_timer = ship->slot[w_num].timer;
-                if (side_props[pos].good_range > (float)weapon_data[w_index].max_range * 0.3) // still want to know it to get into right distance for reloading guns if none ready
-                    side_props[pos].good_range = (float)weapon_data[w_index].max_range * 0.3;
+                if (side_props[pos].good_range > (float)weapon_data[w_index].max_range * 0.25) // still want to know it to get into right distance for reloading guns if none ready
+                    side_props[pos].good_range = (float)weapon_data[w_index].max_range * 0.25;
                 //if (weapon_data[w_index].min_range == 0 && ship->slot[w_num].timer < 15) // if weapon is more or less close to reload, account for it damage partially
                 //    side_props[pos].damage_ready += weapon_data[w_index].average_hull_damage() * (float)ship->slot[w_num].timer / 30.0;
             }

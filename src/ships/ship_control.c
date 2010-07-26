@@ -626,7 +626,7 @@ int do_fire_weapon(P_ship ship, P_char ch, int w_num)
         return TRUE;
     }
 
-    return fire_weapon(ship, w_num, ship->target, range, bearing, ch);
+    return fire_weapon(ship, w_num, j, ch);
 }
 
 int do_fire_arc(P_ship ship, P_char ch, int arc)
@@ -946,7 +946,7 @@ int look_weapon (P_char ch, P_ship ship, char* arg)
         send_to_char("Target out of range or out of sight!\r\n", ch);
         return TRUE;
     }
-    send_to_char_f(ch, "Chance to hit target: &+W%d%%&N\r\n", weaponsight(ship, ship->target, slot, contacts[j].range, contacts[j].bearing, ch));
+    send_to_char_f(ch, "Chance to hit target: &+W%d%%&N\r\n", weaponsight(ship, slot, j, ch));
     return TRUE;
 }
 

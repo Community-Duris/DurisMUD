@@ -329,7 +329,7 @@ void setup_npc_corvette_10(P_ship ship, NPC_AI_Type type) // level 3
 
 void setup_npc_corvette_11(P_ship ship, NPC_AI_Type type) // level 3
 {
-    set_weapon(ship, 0, W_QUARTZ, SIDE_FORE);
+    set_weapon(ship, 0, W_LIGHT_BEAM, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_BAL, SIDE_PORT);
     set_weapon(ship, 2, W_LARGE_BAL, SIDE_PORT);
     set_weapon(ship, 3, W_LARGE_BAL, SIDE_PORT);
@@ -483,7 +483,7 @@ void setup_npc_destroyer_10(P_ship ship, NPC_AI_Type type) // level 3
 
 void setup_npc_destroyer_11(P_ship ship, NPC_AI_Type type) // level 3
 {
-    set_weapon(ship, 0, W_DARKSTONE, SIDE_FORE);
+    set_weapon(ship, 0, W_HEAVY_BEAM, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 2, W_LARGE_BAL, SIDE_STAR);
     set_weapon(ship, 3, W_LARGE_BAL, SIDE_STAR);
@@ -497,7 +497,7 @@ void setup_npc_destroyer_11(P_ship ship, NPC_AI_Type type) // level 3
 
 void setup_npc_destroyer_12(P_ship ship, NPC_AI_Type type) // level 3
 {
-    set_weapon(ship, 0, W_DARKSTONE, SIDE_FORE);
+    set_weapon(ship, 0, W_HEAVY_BEAM, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_CAT, SIDE_REAR);
     set_weapon(ship, 2, W_LARGE_BAL, SIDE_PORT);
     set_weapon(ship, 3, W_LARGE_BAL, SIDE_PORT);

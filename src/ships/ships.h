@@ -96,8 +96,8 @@
 #define W_MEDIUM_CAT        4
 #define W_LARGE_CAT         5  
 #define W_HEAVY_BAL         6
-#define W_QUARTZ            7
-#define W_DARKSTONE         8
+#define W_LIGHT_BEAM        7
+#define W_HEAVY_BEAM        8
 #define W_MINDBLAST         9
 #define W_FRAG_CAN         10
 #define W_LONGTOM          11
@@ -525,8 +525,8 @@ void autopilot_activity(P_ship ship);
 
 // combat
 int try_ram_ship(P_ship ship, P_ship target, int contact_j);
-int weaponsight(P_ship ship, P_ship target, int weapon, float range, int bearing, P_char ch);
-int fire_weapon(P_ship ship, int w_num, P_ship target, float range, int bearing, P_char ch);
+int weaponsight(P_ship ship, int slot, int t_contact, P_char ch);
+int fire_weapon(P_ship ship, int w_num, int t_contact, P_char ch);
 void volley_hit_event(P_char ch, P_char victim, P_obj obj, void *data);
 void stun_all_in_ship(P_ship ship, int timer);
 int damage_sail(P_ship ship, P_ship target, int dam);

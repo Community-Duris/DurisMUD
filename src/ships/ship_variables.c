@@ -76,9 +76,9 @@ const WeaponData weapon_data[MAXWEAPON] = {
  { "Small Catapult",          500000,   10,   30,      4,     15,      2,      3,      4,     160,   20,    100,    100,      2,      30,     10,     18,  WPNFLAG04, },
  { "Medium Catapult",         800000,   13,   20,      5,     20,      2,      4,      5,     260,   20,    100,    100,      2,      30,     15,     24,  WPNFLAG05, },
  { "Large Catapult",         1200000,   17,   12,      6,     25,      2,      5,      6,     360,   20,    100,    100,      2,      30,     20,     30,  WPNFLAG06, },
- { "Heavy Ballistae",        1000000,   15,    6,      0,      5,     15,     22,      1,      10,    0,    100,      0,     15,      30,     20,      3,  WPNFLAG07, },
- { "Quartz Beamcannon",      4000000,    7,   40,      0,     20,      4,     16,      1,      10,   20,    100,     50,     15,      45,     10,      0,  WPNFLAG08, },
- { "Darkstone Beamcannon",   5000000,    9,   40,      0,     23,      5,     22,      1,      10,   20,    100,     50,     15,      45,     12,      0,  WPNFLAG09, },
+ { "Heavy Ballistae",        1000000,   15,    6,      0,      4,     15,     22,      1,      10,    0,    100,      0,     15,      30,     20,      3,  WPNFLAG07, },
+ { "Light Beamcannon",       4000000,    7,   40,      0,     20,      4,     16,      1,      10,   20,    100,     50,     15,      45,     10,      0,  WPNFLAG08, },
+ { "Heavy Beamcannon",       5000000,    9,   40,      0,     23,      5,     22,      1,      10,   20,    100,     50,     15,      45,     12,      0,  WPNFLAG09, },
  { "Mind Blast Cannon",      4000000,    5,   50,      0,     20,      0,      0,      1,     360,    0,      0,      0,      0,      45,      2,      0,  WPNFLAG10, },
  { "Fragmentation Cannon",   5000000,    7,   20,      0,     15,      4,      6,      5,      90,   50,     50,    100,      0,      45,     10,     12,  WPNFLAG11, },
  { "Long Tom Catapult",      5000000,    9,    6,     20,     32,      3,      6,      8,     360,   20,    100,    100,      3,      45,     20,     36,  WPNFLAG12, },
@@ -128,11 +128,11 @@ const ShipArcProperties ship_arc_properties[MAXSHIPCLASS] = {
 extern const int ship_allowed_weapons[MAXSHIPCLASS][MAXWEAPON];
 const int ship_allowed_weapons [MAXSHIPCLASS][MAXWEAPON] = {
 
-//  SmBal MdBal LgBal SmCat MdCat LgCat HvBal SmBmc LgBmc MBlst FrCan LtCat
+//  SmBal MdBal LgBal SmCat MdCat LgCat HvBal LtBmc HvBmc MBlst FrCan LtCat
   {   0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,   }, // Sloop
   {   1,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,   }, // Yacht
   {   1,    1,    0,    1,    0,    0,    0,    0,    0,    1,    0,    0,   }, // Clipper
-  {   1,    1,    1,    1,    1,    0,    0,    0,    0,    1,    1,    0,   }, // Ketch
+  {   1,    1,    1,    1,    1,    0,    0,    1,    0,    1,    1,    0,   }, // Ketch
   {   1,    1,    1,    1,    1,    1,    1,    1,    0,    1,    1,    0,   }, // Caravel
   {   1,    1,    1,    1,    1,    1,    1,    1,    1,    1,    1,    1,   }, // Carrack
   {   1,    1,    1,    1,    1,    1,    1,    1,    1,    1,    1,    1,   }, // Galleon

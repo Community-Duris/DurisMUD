@@ -48,6 +48,7 @@ struct NPCShipAI
     bool try_unload();
     
     // General combat
+    int t_contact;
     int t_bearing;
     int t_arc;
     int s_bearing;

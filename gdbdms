@@ -8,6 +8,10 @@ ulimit -c unlimited
     PORT=7878
   fi
 
+  if [ ! -d src ]; then
+    cd ..
+  fi
+
   mv src/dms_new dms
 
   echo "Generating list of function names.."
