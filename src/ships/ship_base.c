@@ -1183,7 +1183,7 @@ void ship_activity()
             if ((ship->repair > 0) && ship->timer[T_MINDBLAST] == 0) 
             {
                 float chance = 0.0;
-                if (ship->mainsail < (int)((float)SHIPMAXSAIL(ship) * (ship->repaircrew.skill_mod + 0.1)) && 
+                if (ship->mainsail < (int)((float)SHIPMAXSAIL(ship) * (ship->repaircrew.skill_mod + 0.4)) && 
                         ship->mainsail < SHIPMAXSAIL(ship) * 0.9)
                 {
                     if (SHIPANCHORED(ship))
@@ -1201,7 +1201,7 @@ void ship_activity()
                         else                                        chance = 0.0;
                     }
                     chance *= (1.0 + ship->repaircrew.skill_mod);
-                    if (number (0, 999) < (int)chance)
+                    if (number (0, 1000) < (int)chance)
                     {
                         ship->mainsail++;
                         ship->repair--;
@@ -1210,42 +1210,6 @@ void ship_activity()
                         update_ship_status(ship);
                     }
                 } 
-                for (j = 0; j < 4; j++) 
-                {
-                    if (ship->repair < 1)
-                        break;
-                    if (ship->internal[j] < (int)((float)ship->maxinternal[j] * (ship->repaircrew.skill_mod + 0.1)) &&
-                            ship->internal[j] < ship->maxinternal[j] * 0.9) 
-                    {
-                        if (SHIPANCHORED(ship))
-                        {
-                            if (ship->timer[T_BSTATION] == 0) 
-                            {
-                                if (ship->internal[j] > 0) chance = 250.0;
-                                else                       chance = 100.0;
-                            }
-                            else
-                            {
-                                if (ship->internal[j] > 0) chance = 100.0;
-                                else                       chance = 10.0;
-                            }
-                        }
-                        else
-                        {
-                            if (ship->internal[j] > 0) chance = 30.0;
-                            else                       chance = 0.0;
-                        }
-                        chance *= (1.0 + ship->repaircrew.skill_mod);
-                        if (number (0, 999) < (int)chance)
-                        {
-                            ship->internal[j]++;
-                            ship->repair--;
-                            if (ship->repair == 0)
-                                act_to_all_in_ship(ship, "&+RThe ship is out of repair materials!.&N");
-                            update_ship_status(ship);
-                        }
-                    }
-                }
                 for (j = 0; j < MAXSLOTS; j++) 
                 {
                     if (ship->repair < 1)
@@ -1271,6 +1235,74 @@ void ship_activity()
                             }
                         }
                     }
+                }
+                bool can_repair_internal = false;
+                for (j = 0; j < 4; j++) 
+                {
+                    if (ship->repair < 1)
+                        break;
+                    if (ship->internal[j] < (int)((float)ship->maxinternal[j] * (ship->repaircrew.skill_mod + 0.1)) &&
+                            ship->internal[j] < ship->maxinternal[j] * 0.9) 
+                    {
+                        can_repair_internal = true;
+                        if (SHIPANCHORED(ship))
+                        {
+                            if (ship->timer[T_BSTATION] == 0) 
+                            {
+                                if (ship->internal[j] > 0) chance = 250.0;
+                                else                       chance = 100.0;
+                            }
+                            else
+                            {
+                                if (ship->internal[j] > 0) chance = 100.0;
+                                else                       chance = 10.0;
+                            }
+                        }
+                        else
+                        {
+                            if (ship->internal[j] > 0) chance = 30.0;
+                            else                       chance = 0.0;
+                        }
+                        chance *= (1.0 + ship->repaircrew.skill_mod);
+                        if (number (0, 1000) < (int)chance)
+                        {
+                            ship->internal[j]++;
+                            ship->repair--;
+                            if (ship->repair == 0)
+                                act_to_all_in_ship(ship, "&+RThe ship is out of repair materials!.&N");
+                            update_ship_status(ship);
+                        }
+                    }
+                }
+                if (!can_repair_internal && ship->timer[T_BSTATION] == 0 && ship->repaircrew.skill_mod > 0.5)
+                { // highly skilled crew can repair some armor when not in combat
+                    for (j = 0; j < 4; j++) 
+                    {
+                        if (ship->repair < 1)
+                            break;
+                        if (ship->armor[j] < (int)((float)ship->maxarmor[j] * (ship->repaircrew.skill_mod - 0.5)) &&
+                                ship->armor[j] < ship->maxarmor[j] * 0.9) 
+                        {
+                            if (SHIPANCHORED(ship))
+                            {
+                                chance = 150.0;
+                            }
+                            else
+                            {
+                                chance = 20.0;
+                            }
+                            chance *= (1.0 + ship->repaircrew.skill_mod);
+                            if (number (0, 1000) < (int)chance)
+                            {
+                                ship->armor[j]++;
+                                ship->repair--;
+                                if (ship->armor == 0)
+                                    act_to_all_in_ship(ship, "&+RThe ship is out of repair materials!.&N");
+                                update_ship_status(ship);
+                            }
+                        }
+                    }
+
                 }
             }
         }

@@ -1043,7 +1043,8 @@ int look_contacts(P_char ch, P_ship ship)
     }
 
     int k = getcontacts(ship);
-    send_to_char ("&+WContact listing\r\n===============================================&N\r\n", ch);
+    send_to_char_f (ch, "&+WContact listing                                               H:%-3d S:%-3d&N\r\n", ship->heading, ship->speed);
+    send_to_char_f (ch, "=============================================================================&N\r\n");
     for (int i = 0; i < k; i++) 
     {
         if (SHIPISDOCKED(contacts[i].ship)) 
@@ -1065,7 +1066,7 @@ int look_contacts(P_char ch, P_ship ship)
         const char* target_indicator2 =  (contacts[i].ship == ship->target) ? "&+G" : "";
 
         send_to_char_f(ch,
-          "%s[&N%s%s&N%s]&N %s%-30s X:%-3d Y:%-3d Z:%-3d R:%-5.1f B:%-3d H:%-3d S:%-3d&N|%s%s\r\n",
+          "%s[&N%s%s&N%s]&N %s%-30s X:%-3d Y:%-3d R:%-5.1f B:%-3d H:%-3d S:%-3d&N|%s%s\r\n",
           race_indicator,
           target_indicator1,
           contacts[i].ship->id, 
@@ -1074,15 +1075,14 @@ int look_contacts(P_char ch, P_ship ship)
           strip_ansi(contacts[i].ship->name).c_str(), 
           contacts[i].x, 
           contacts[i].y, 
-          contacts[i].z, 
           contacts[i].range, 
           contacts[i].bearing, 
           contacts[i].ship->heading,
           contacts[i].ship->speed, 
           contacts[i].arc,
           SHIPSINKING(contacts[i].ship) ? "&+RS&N" :
-            SHIPISDOCKED(contacts[i].ship) ?
-              "&+yD&N" : "");
+            SHIPISDOCKED(contacts[i].ship) ? "&+yD&N" :
+               SHIPANCHORED(contacts[i].ship) ? "&+yA&N" : "");
     }
     return TRUE;
 }

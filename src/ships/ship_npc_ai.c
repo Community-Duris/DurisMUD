@@ -1871,8 +1871,6 @@ void NPCShipAI::send_message_to_debug_char(const char *fmt, ... )
 // Problems:
 // Take damage_ready into account
 // add target's side-per-time statistic, switch target side if too many
-// make sure repair time adds up
 // make sure people dont attacked twice on same cargo run??
 // make advanced attack support multitarget
 // Validate cargo!
-// Make act_to_all and send_to_char through varargs

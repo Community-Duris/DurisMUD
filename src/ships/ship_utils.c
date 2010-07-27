@@ -850,7 +850,7 @@ void ShipCrew::update()
         skill_mod = sq / 100.0;
         break;
     case REPAIR_CREW:
-        skill_mod = sq / 100.0 * 1.5;
+        skill_mod = sq / 100.0;
         break;
     case ROWING_CREW:
         skill_mod = sq / 100.0;
