@@ -1060,5 +1060,10 @@ int undead_howl(P_char, P_char, int, char *);
 int wh_janitor(P_char, P_char, int, char *);
 int wh_guard(P_char, P_char, int, char *);
 
-// Specs.lucrot.c
+// specs.lucrot.c
 int lucrot_mindstone(P_obj obj, P_char ch, int cmd, char *arg);
+
+// specs.venthix.c
+int roulette_pistol(P_obj obj, P_char ch, int cmd, char *arg);
+int orb_of_deception(P_obj obj, P_char ch, int cmd, char *arg);
+

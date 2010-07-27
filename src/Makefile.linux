@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
  # Makefile for Project Duris!
 
 SHELL = /bin/sh
@@ -283,3 +284,286 @@ debug: $(PROGS)
 -include .depend
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+=======
+ # Makefile for Project Duris!
+
+SHELL = /bin/sh
+#EFENCE = 1
+
+CC	= g++
+DEBUG	= -ggdb3
+#LDFLAGS	= -ggdb3
+
+ifdef USE_SHARED
+LDFLAGS += -rdynamic
+endif
+
+LDFLAGS += -L/usr/lib/mysql -L./ships
+
+OPTS    = -O2
+
+CFLAGS = -g -Wno-write-strings
+#CFLAGS += -D__NO_MYSQL__
+CFLAGS += -DTEST_MUD
+
+# to turn on/off chaos mud, change the flag at the top of db.h
+#CFLAGS += -DCHAOS_MUD=1
+
+INCLUDES	= -I. -I/usr/include/libxml2 -I/usr/include/mysql -I./ships
+
+GENERAL_LIBS    = -lm -lstdc++ -lz -lxml2 -lmysqlclient
+
+ifdef EFENCE
+LDFLAGS += -L.
+LIBS += -lefence -lrt
+CFLAGS += -DEFENCE
+endif
+
+# GENERAL_LIBS += -lcygipc 
+LIBS += -lships $(GENERAL_LIBS)
+
+OUR_LIBS = libships.a
+
+# files that would be compiled as dynamic libs if USE_SHARED was defined
+#    make sure that they are NOT included in ANY form in OBJS!!!
+# The makefile will deal with compiling SH_LIBS as normal files 
+# if USE_SHARED isn't defined
+
+SH_LIBS 	=
+
+OPT_OBJS	= graph.o mm.o 
+
+OBJS	=  \
+	magic.o \
+	actcomm.o \
+	actinf.o \
+	actmove.o \
+	actnew.o \
+	actobj.o \
+	actoff.o \
+	actoth.o \
+	actset.o \
+	actwiz.o \
+  ai_mobs.o \
+  specs.ailvio.o \
+  alliances.o \
+  automatic_rules.o \
+	affects.o \
+	arena.o \
+	artifact.o \
+	assocs.o \
+	auction_houses.o \
+	bard.o \
+  beh_magic.o \
+	boards.o \
+	comm.o \
+	common.o \
+	condition.o \
+	constant.o \
+	db.o \
+	debug.o \
+	disguise.o \
+	dreadlord.o \
+	editor.o \
+  encounters.o \
+	epic.o \
+  ethermancer.o \
+	events.o \
+	new_events.o \
+	fight.o \
+	files.o \
+	fraglist.o \
+	forge_items.o \
+  genrand.o \
+	group.o \
+	guild.o \
+  guildhall.o \
+  guildhall_rooms.o \
+  guildhall_cmds.o \
+  guildhall_procs.o \
+  guildhall_db.o \
+	grapple.o \
+	handler.o \
+	hardcore.o \
+	innates.o \
+	interp.o \
+  justice.o \
+	kick.o \
+	language.o \
+	limits.o \
+	linked_objects.o\
+	listen.o\
+	mail.o \
+	map.o \
+	mccp.o \
+	memorize.o \
+	memory.o \
+	mobact.o \
+  world_quest.o \
+	mobcombat.o \
+	mobconv.o \
+	mobpatrol.o \
+	modify.o \
+  mount.o \
+	name_gen.o \
+	nanny.o \
+  necromancy.o \
+	new_combat_util.o \
+	new_skills.o \
+	nq.o \
+	objconv.o \
+	objmisc.o \
+	period.list.o \
+	prompt.o \
+	properties.o \
+  psionics.o \
+	quest.o \
+	random.o \
+	randomeq.o \
+	random.mob.o \
+  random.zone.o \
+	randobj.o \
+	range.o \
+  rogues.o \
+	shaman.o \
+	shop.o \
+	signals.o \
+	skills.o \
+	smagic.o \
+	salchemist.o \
+  sillusionist.o \
+	sound.o \
+	sparser.o \
+	specials.o \
+  specializations.o \
+	specs.assign.o \
+	specs.barovia.o \
+	specs.clwcvrn.o \
+	specs.dragonnia.o \
+  specs.eth2.o \
+  specs.halfcut.o \
+  specs.ravenloft.o \
+  specs.snogres.o \
+	specs.ioun.o \
+	specs.jot.o \
+	specs.library.o \
+	specs.mobile.o \
+     specs.morgs.o \
+     specs.mist.o \
+	specs.object.o \
+	specs.realm.o \
+	specs.room.o \
+	specs.snikzone.o \
+	specs.grove.o \
+	specs.hoa.o \
+	specs.highway.o \
+	specs.tharnadia.o \
+	specs.twintowers.o \
+  specs.undermountain.o \
+	specs.underworld.o \
+	specs.vecna.o \
+	specs.venthix.o \
+        specs.verzanan.o \
+	specs.zalrix.o \
+	specs.set.o \
+  specs.shabo.o \
+  specs.jubilex.o \
+  specs.keleks.o \
+  specs.caertannad.o \
+  specs.firep.o \
+	specs.winterhaven.o \
+  specs.zion.o \
+	spells.o \
+	sql.o	\
+	statistics.o \
+	storage_lockers.o \
+  timers.o \
+	track.o \
+	tradeskill.o \
+  trap.o \
+  transport.o \
+  trophy.o \
+	utility.o \
+	weather.o \
+	ferry.o \
+	ferryact.o \
+	paladins.o \
+ 	guard.o \
+ 	makeexit.o \
+	racewar_stat_mods.o \
+	nexus_stones.o \
+	testcmd.o \
+	wikihelp.o \
+  reavers.o \
+  avengers.o \
+  specs.lucrot.o \
+  multiplay_whitelist.o
+
+SHARED_PFILE_OBJS=pf-skills.o \
+					 pf-files.o
+
+PFILE_OBJS=pfile-stubs.o \
+					 pfile.o
+
+#******************************************************************************
+#******************************************************************************
+#
+# Don't mess around below this point.  Everything past here are makefile rules,
+# and NOT dependency lists that need to be changed
+
+PROGS 	= dms_new
+
+DMS_OBJS = $(OBJS)
+
+
+ifndef USE_SHARED
+DMS_OBJS += $(SH_LIBS)
+PFILE_OBJS += $(SH_LIBS)
+else
+PROGS += $(SH_LIBS:.o=.so)
+endif
+
+SRCS	= $(OBJS:.o=.c) $(OPT_OBJS:.o=.c) $(SH_LIBS:.o=.c) $(PFILE_OBJS:.o=.c)
+
+all: $(PROGS)
+
+libships.a:
+	cd ships && $(MAKE)
+
+dms_new : $(DMS_OBJS) $(OPT_OBJS) $(OUR_LIBS)
+	$(CC) $(LDFLAGS) -g -o dms_new $(DMS_OBJS) $(OPT_OBJS) $(LIBS)
+	chmod a+rx dms_new
+
+pfile : $(PFILE_OBJS) $(SHARED_PFILE_OBJS) mm.o common.o
+	$(CC) $(LDFLAGS) -g -o pfile $(PFILE_OBJS) $(SHARED_PFILE_OBJS) common.o mm.o $(LIBS) 
+
+$(DMS_OBJS): %.o: %.c
+	$(CC) $(CFLAGS) $(INCLUDES) $(DEBUG) -c $< -o $@
+
+$(PFILE_OBJS): %.o: %.c
+	$(CC) $(CFLAGS) $(INCLUDES) $(DEBUG) -c $< -o $@
+
+$(SHARED_PFILE_OBJS): pf-%.o: %.c
+	$(CC) $(CFLAGS) -D_PFILE_ $(INCLUDES) $(DEBUG) -c $< -o $@
+
+$(OPT_OBJS): %.o: %.c
+	$(CC) $(CFLAGS) $(INCLUDES) $(OPTS) -c $< -o $@
+
+$(SH_LIBS:.o=.so): %.so: %.c
+	$(CC) $(CFLAGS) $(DEBUG) -fpic -c $< -o $*.o
+	ld -shared -o $@ /usr/lib/crtbeginS.o $*.o /usr/lib/crtendS.o
+
+#depend:
+#	makedepend -m -w110 -- $(CFLAGS) -- $(SRCS)
+
+depend .depend:
+	$(CC) $(INCLUDES) $(CFLAGS) -MM $(SRCS) > .depend
+
+clean:
+	rm -f *.o *~ dms_new .depend
+	rm -f ships/*.a ships/*.o ships/*~ ships/.depend
+
+-include .depend
+
+# DO NOT DELETE THIS LINE -- make depend depends on it.
+>>>>>>> Stashed changes
