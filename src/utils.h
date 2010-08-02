@@ -145,6 +145,7 @@
 #define OBJ_POLYMORPH(o) ((o)->polymorphed_ch)
 #define CHAR_POLYMORPH_OBJ(ch) ((ch)->specials.polymorphed_obj)
 #define IS_GREATER_DRACO(ch) (IS_NPC(ch) && (GET_VNUM(ch) == 7 || GET_VNUM(ch) == 8 || GET_VNUM(ch) == 9 || GET_VNUM(ch) == 10))
+#define IS_GREATER_AVATAR(ch) (IS_NPC(ch) && (GET_VNUM(ch) == 82 || GET_VNUM(ch) == 83 || GET_VNUM(ch) == 84 || GET_VNUM(ch) == 85))
 
 #define OUTDOOR_SNEAK(ch)  \
 (has_innate(ch, INNATE_OUTDOOR_SNEAK) && \
@@ -700,6 +701,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define IS_BEHOLDERKIN(ch) ((GET_RACE(ch) == RACE_BEHOLDERKIN))
 
 #define IS_DRACOLICH(ch) (GET_RACE(ch) == RACE_DRACOLICH)
+#define IS_TITAN(ch) (GET_RACE(ch) == RACE_TITAN)
 
 #define IS_UNDEADRACE(ch)  ((GET_RACE(ch) == RACE_UNDEAD) || \
            (GET_RACE(ch) == RACE_GHOST) || \
@@ -722,6 +724,13 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
            (IS_DRACOLICH(ch)) || \
            (IS_UNDEAD(ch)))
 
+#define IS_THEURPET_RACE(ch) ((GET_RACE(ch) == RACE_ARCHON) || \
+           (GET_RACE(ch) == RACE_ASURA) || \
+           (GET_RACE(ch) == RACE_BRALANI) || \
+           (GET_RACE(ch) == RACE_GHAELE) || \
+           (GET_RACE(ch) == RACE_TITAN) || \
+           (GET_RACE(ch) == RACE_AVATAR))
+
 #define IS_UNDEAD(ch) ((GET_RACE(ch) == RACE_UNDEAD) || \
            ( GET_RACE(ch) == RACE_GHOST ) || \
            ( GET_RACE(ch) == RACE_VAMPIRE ) || \
@@ -734,8 +743,10 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
            ( GET_RACE(ch) == RACE_SHADOW) || \
            ( IS_DRACOLICH(ch)) || \
            ( IS_AFFECTED(ch, AFF_WRAITHFORM) ) ||\
-           ( IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM) ) ||\
+           ( IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM) && !GET_CLASS(ch, CLASS_THEURGIST) ) ||\
            ( RACE_PUNDEAD(ch) ) || (OLD_RACE_PUNDEAD(ch) ))
+
+#define IS_ANGELIC(ch) (IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM) && GET_CLASS(ch, CLASS_THEURGIST))
 
 #define IS_ELEMENTAL(ch) ((GET_RACE(ch) == RACE_F_ELEMENTAL) || \
         (GET_RACE(ch) == RACE_A_ELEMENTAL) || \

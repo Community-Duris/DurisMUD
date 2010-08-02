@@ -643,7 +643,22 @@
 #define SPELL_ETHERIC_GUST           594
 #define SPELL_REPAIR_ONE_ITEM        595
 #define SPELL_TAINT                  596
-#define LAST_SPELL  SPELL_TAINT
+#define SPELL_CALL_TITAN             597
+#define SPELL_CALL_AVATAR            598
+#define SPELL_CALL_ASURA             599
+#define SPELL_CALL_BRALANI           600
+#define SPELL_CALL_KNIGHT            601
+#define SPELL_CALL_LIBERATOR         602
+#define SPELL_CALL_DEVA              603
+#define SPELL_RESTORE_SPIRIT         604
+#define SPELL_VITALIZE_SOUL          605
+#define SPELL_ANGELIC_COUNTENANCE    606
+#define SPELL_PROTECT_SOUL           607
+#define SPELL_MEND_SOUL              608
+#define SPELL_HOLY_AURA              609
+#define SPELL_AID_OF_THE_HEAVENS     610
+#define SPELL_VOICE_OF_CREATION      611
+#define LAST_SPELL  SPELL_VOICE_OF_CREATION
 
 #define FIRST_SKILL                  1000  /* should be a decent split point */
 #define SKILL_SNEAK                  1000

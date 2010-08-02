@@ -506,6 +506,8 @@ void do_spells(P_char ch, char *argument, int cmd)
         sprintf(buf2 + strlen(buf2), "&+MIL(&n&+C%d&+M)&n,", lvl);
       if ((lvl = skills[spell].m_class[flag2idx(CLASS_REAVER) - 1].rlevel[0]))
         sprintf(buf2 + strlen(buf2), "&+bRV(&n&+C%d&n&+b)&n", lvl);
+      if ((lvl = skills[spell].m_class[flag2idx(CLASS_THEURGIST) - 1].rlevel[0]))
+        sprintf(buf2 + strlen(buf2), "&+cTH(&n&+C%d&n&+b)&n", lvl);
 
       char buf3[MAX_STRING_LENGTH];
       sprintf(buf3,

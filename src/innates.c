@@ -358,7 +358,10 @@ const struct innate_data
   {"amorphous body", 0},
   {"engulf", do_engulf},
   {"slime", do_slime},
-  {"dual wielding master", 0}  
+  {"dual wielding master", 0},
+  {"requiem", 0},
+  {"ally", 0},
+  {"summon host", do_summon_host}
 };
 
 bool has_innate(P_char ch, int innate)
@@ -807,7 +810,10 @@ void assign_innates()
 
   ADD_CLASS_INNATE(INNATE_UNHOLY_ALLIANCE, CLASS_NECROMANCER, 31, SPEC_NECROLYTE);
   ADD_CLASS_INNATE(INNATE_MUMMIFY, CLASS_NECROMANCER, 41, SPEC_DIABOLIS);
+  ADD_CLASS_INNATE(INNATE_REQUIEM, CLASS_THEURGIST, 31, SPEC_THAUMATURGE);
   ADD_CLASS_INNATE(INNATE_SPAWN, CLASS_NECROMANCER, 41, SPEC_NECROLYTE);
+  ADD_CLASS_INNATE(INNATE_ALLY, CLASS_THEURGIST, 41, SPEC_TEMPLAR);
+  ADD_CLASS_INNATE(INNATE_SUMMON_HOST, CLASS_THEURGIST, 41, SPEC_MEDIUM);
 
   ADD_CLASS_INNATE(INNATE_FPRESENCE, CLASS_DREADLORD, 46, SPEC_SHADOWLORD);
   ADD_CLASS_INNATE(INNATE_FADE, CLASS_DREADLORD, 51, SPEC_SHADOWLORD);
@@ -2488,57 +2494,58 @@ struct god_list_data_struct
   const char *healer;
   const char *holyman;
   const char *zealot;
+  const char *theurgist;
 };
 
 struct god_list_data_struct god_list_data[] = {
   {RACE_HUMAN,
    "&+cLathander the Morninglord&N", "&+YTorm the True&N",
-   "&+rTempus, &+RGod of War&N"},
+   "&+rTempus, &+RGod of War&N", ""},
 
   {RACE_GREY,
    "&+CLabelas &+cEnoreth&N", "&+CFen&+cmarel &+CMesta&+crine&N",
-   "&+cAerdrie &+LFaenya&N"},
+   "&+cAerdrie &+LFaenya&N", ""},
 
   {RACE_HALFLING,
-   "&+YYondalla&N", "&+YUro&+ygal&+wen&N", "&+yArvo&+wre&+Len&N"},
+   "&+YYondalla&N", "&+YUro&+ygal&+wen&N", "&+yArvo&+wre&+Len&N", ""},
 
   {RACE_GNOME,
    "&+ySe&+wgoj&+Lan &+yEarth&+Lcaller&N", "&+RGaerdal &+wIron&+Lhand&N",
-   "&+RGa&+rrl Glitte&+Rrgold&N"},
+   "&+RGa&+rrl Glitte&+Rrgold&N", ""},
 
   {RACE_DUERGAR,
-   "&+rLadu&+Lguer&N", "&+wDiin&+Lkara&+rzan&N", "&+rDii&+wrin&+rka&N"},
+   "&+rLadu&+Lguer&N", "&+wDiin&+Lkara&+rzan&N", "&+rDii&+wrin&+rka&N", ""},
 
   {RACE_DROW,
    "&+MEil&+mistr&+Laee&N", "&+mLloth &+Lthe Spider &+mQueen&N",
-   "&+LZinze&+mrena&N"},
+   "&+LZinze&+mrena&N", ""},
 
   {RACE_ORC,
-   "&+LLuthic&N", "&+LYurt&+wrus&N", "&+gBahg&+Ltru&N"},
+   "&+LLuthic&N", "&+LYurt&+wrus&N", "&+gBahg&+Ltru&N", ""},
 
   {RACE_OROG,
-   "&+yYurtrus&N", "&+GShargaas&N", "&+rIlneval&N"},
+   "&+yYurtrus&N", "&+GShargaas&N", "&+rIlneval&N", ""},
 
   {RACE_GOBLIN,
-   "&+GMaglub&+giyet&N", "&+gKhurg&+worba&+Leyag&N", "&+GBa&+grgriv&+Lyek&N"},
+   "&+GMaglub&+giyet&N", "&+gKhurg&+worba&+Leyag&N", "&+GBa&+grgriv&+Lyek&N", ""},
 
   {RACE_MOUNTAIN,
-   "&+yBerronar &+wTrue&+Wsilver&N", "&+YClangeddin &+WSilver&+wbeard&N", "&+YMoradin&N"},
+   "&+yBerronar &+wTrue&+Wsilver&N", "&+YClangeddin &+WSilver&+wbeard&N", "&+YMoradin&N", ""},
    
   {RACE_BARBARIAN,
-   "&+cA&+Cu&+cr&+Ci&+cl&N", "&+GBhal&+gla&n", "&+RUt&+rhg&+Lar&n"},
+   "&+cA&+Cu&+cr&+Ci&+cl&N", "&+GBhal&+gla&n", "&+RUt&+rhg&+Lar&n", ""},
    
   {RACE_TROLL,
-   "&+cLathander the Morninglord&N", "&+YTorm the True&N", "&+GGranf&+galkor&n"},
+   "&+cLathander the Morninglord&N", "&+YTorm the True&N", "&+GGranf&+galkor&n", ""},
    
   {RACE_GITHYANKI,
-   "&+cLathander the Morninglord&N", "&+YTorm the True&N", "&+WIkkra&+ctalic&n"},
+   "&+cLathander the Morninglord&N", "&+YTorm the True&N", "&+WIkkra&+ctalic&n", ""},
    
   {RACE_GITHZERAI,
-   "&+cLathander the Morninglord&N", "&+GAlixxak&+Wprok&n", "&+RGizar&+rkromik&n"},
+   "&+cLathander the Morninglord&N", "&+GAlixxak&+Wprok&n", "&+RGizar&+rkromik&n", ""},
 
   {RACE_NONE,
-   "&+cLathander the Morninglord&N", "&+YTorm the True&N",  "&+rTempus, &+RGod of War&N"}
+   "&+cLathander the Morninglord&N", "&+YTorm the True&N",  "&+rTempus, &+RGod of War&N", "&+CHeir&+Wo&+Cni&+Wo&+Cus"}
 
 };
 
@@ -2560,6 +2567,10 @@ const char *get_god_name(P_char ch)
     return god_list_data[i].zealot;
   else if (GET_SPEC(ch, CLASS_AVENGER, SPEC_LIGHTBRINGER))
     return god_list_data[i].holyman;
+  
+  if (GET_CLASS(ch, CLASS_THEURGIST))
+    return god_list_data[RACE_NONE].theurgist;
+  
   return god_list_data[i].healer;
 }
 

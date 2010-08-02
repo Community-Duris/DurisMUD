@@ -2336,7 +2336,8 @@ void die(P_char ch, P_char killer)
     
     if(corpse &&
       killer != ch &&
-      has_innate(killer, INNATE_MUMMIFY))
+      ( has_innate(killer, INNATE_MUMMIFY) ||
+	has_innate(killer, INNATE_REQUIEM)))
     {
       mummify(killer, ch, corpse);
     }
@@ -2344,7 +2345,8 @@ void die(P_char ch, P_char killer)
     if(corpse &&
       killer != ch &&
       ( affected_by_spell(killer, SPELL_SPAWN) ||
-      has_innate(killer, INNATE_SPAWN) ) )
+        has_innate(killer, INNATE_SPAWN) || 
+        has_innate(killer, INNATE_ALLY))) 
     {
       if((IS_NPC(ch) &&
         !number(0, 2)) ||
@@ -3310,7 +3312,8 @@ bool damage(P_char ch, P_char victim, double dam, int attacktype)
 
   if (IS_SPELL_S(attacktype))
   {
-    if (attacktype == SPELL_HOLY_WORD || attacktype == SPELL_UNHOLY_WORD)
+    if (attacktype == SPELL_HOLY_WORD || attacktype == SPELL_UNHOLY_WORD || 
+	attacktype == SPELL_VOICE_OF_CREATION)
       type = SPLDAM_HOLY;
     else
       type = SPLDAM_GENERIC;
@@ -7668,7 +7671,7 @@ int MonkRiposte(P_char victim, P_char attacker, P_obj wpn)
   percent = BOUNDED(learned / 25, percent, 30);
 
   if(IS_GREATER_RACE(attacker) &&
-    !IS_DRACOLICH(attacker))
+    !(IS_DRACOLICH(attacker) || IS_TITAN(attacker)))
       percent /= 2;
 
   if(number(1, 150) > percent)
@@ -7825,7 +7828,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   
   // Dragons are more difficult to parry, but not impossible.
   if(IS_GREATER_RACE(attacker) &&
-    !IS_DRACOLICH(attacker))
+    !(IS_DRACOLICH(attacker) || IS_TITAN(attacker)))
       learnedattacker += GET_LEVEL(attacker);
   
 // Much harder to parry with fireweapons like a bow, but not impossible.

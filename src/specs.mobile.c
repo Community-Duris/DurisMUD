@@ -10749,7 +10749,7 @@ int recharm_ch(P_char master, P_char vict, bool madatOldMaster,
 {
   P_char   oldmast = NULL, tmpch;
 
-  if (IS_NPC(vict) && IS_GREATER_DRACO(vict))
+  if (IS_NPC(vict) && (IS_GREATER_DRACO(vict) || IS_GREATER_AVATAR(vict)))
     return FALSE;
 
   if (!master || !vict || (master == vict) || !IS_NPC(vict) ||

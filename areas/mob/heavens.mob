@@ -949,6 +949,105 @@ VE 1 0 -1
 39 2 -34 39d80+819 4d7+10
 0.0.0.0 50544
 8 8 0
+#77
+valorhammer valor hammer golem~
+&+Wa &+Yvalor&+Chamme&+cr&n~
+&+WA &+Yvalor&+Chamme&+cr&+W stands here.&n
+~
+~
+2058 1 0 152 0 0 0 0 S
+U 0 1 5
+1 0 -225 1d1+1 4d6+1
+0.0.0.0 0
+8 8 0
+#78
+crimson titan~
+&+ra &+Rcrimson &+rtitan&n~
+&+rA &+Rcrimson &+rtitan stands here.&n
+~
+~
+134219786 0 0 704708664 274624 0 0 -1000 S
+D 0 1 -1
+54 170 -100 5d10+2500 8d7+90
+0.0.0.0 0
+8 8 0
+#79
+azure titan~
+&+Ban &+bazure &+Btitan&n~
+&+BAn &+bazure &+Btitan stands here.&n
+~
+~
+134219786 0 0 704708664 274624 0 0 -1000 S
+D 0 1 -1
+54 170 -100 5d10+2500 8d7+90
+0.0.0.0 0
+8 8 0
+#80
+jasper titan~
+&+ga &+Gjasper &+gtitan&n~
+&+gA &+Gjasper &+gtitan stands here.&n
+~
+~
+134219786 0 0 704708664 274624 0 0 -1000 S
+D 0 1 -1
+54 170 -100 5d10+2500 8d7+90
+0.0.0.0 0
+8 8 0
+#81
+basalt titan~
+&+wa &+Lbasalt &+wtitan&n~
+&+wA &+Lbasalt &+wtitan stands here.&n
+~
+~
+134219786 0 0 704708664 274624 0 0 -1000 S
+D 0 1 -1
+54 170 -100 5d10+2500 8d7+90
+0.0.0.0 0
+8 8 0
+#82
+war avatar archangel~
+&+wan &+cav&+Ca&+Wt&+Ca&+cr &+wof the &+Warch&+wangel &+wof &+rWar&n~
+&+wan &+cav&+Ca&+Wt&+Ca&+cr &+wof the &+Warch&+wangel &+wof &+rWar &+wstands here.&n
+~
+~
+201588746 0 0 721494168 266304 67108864 0 -1000 S
+UD 0 1 7
+56 193 -100 250d8+5500 10d10+90
+0.0.0.0 0
+8 8 0
+#83
+judgement avatar archangel~
+&+wan &+cav&+Ca&+Wt&+Ca&+cr &+wof the &+Warch&+wangel &+wof &+RJudgement&n~
+&+wan &+cav&+Ca&+Wt&+Ca&+cr &+wof the &+Warch&+wangel &+wof &+RJudgement &+wstands here.&n
+~
+~
+201590794 0 0 704717080 307264 67108864 0 -1000 S
+UD 0 1 7
+56 190 -100 250d7+6000 10d10+50
+0.0.0.0 0
+8 8 0
+#84
+vengeance avatar archangel~
+&+wan &+cav&+Ca&+Wt&+Ca&+cr &+wof the &+Warch&+wangel &+wof &+LVengeance&n~
+&+wan &+cav&+Ca&+Wt&+Ca&+cr &+wof the &+Warch&+wangel &+wof &+LVengeance &+wstands here.&n
+~
+~
+201590794 0 0 704717080 276544 0 512 -1000 S
+UD 0 1 7
+56 190 -100 200d10+7000 10d10+90
+0.0.0.0 0
+8 8 0
+#85
+justice avatar archangel~
+&+wan &+cav&+Ca&+Wt&+Ca&+cr &+wof the &+Warch&+wangel &+wof &+CJustice&n~
+&+wan &+cav&+Ca&+Wt&+Ca&+cr &+wof the &+Warch&+wangel &+wof &+CJustice &+wstands here.&n
+~
+~
+201590794 0 0 704717208 309313 0 570425344 -1000 S
+UD 0 16777217 7
+56 190 -100 100d15+8000 10d10+70
+0.0.0.0 0
+8 8 0
 #99
 (null)~
 something~

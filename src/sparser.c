@@ -1624,7 +1624,8 @@ bool check_mob_retaliate(P_char ch, P_char tar_char, int spl)
          if the below conditional is true, then ITS NOT AN AGGRO SPELL!
        */
       if (((spl == SPELL_HOLY_WORD) && !IS_EVIL(tch)) ||
-          ((spl == SPELL_UNHOLY_WORD) && !IS_GOOD(tch)))
+          ((spl == SPELL_UNHOLY_WORD) && !IS_GOOD(tch)) ||
+	  ((spl == SPELL_VOICE_OF_CREATION)) && !IS_EVIL(tch))
         continue;
 
       if (number(1, 150) > (GET_LEVEL(tch) + STAT_INDEX(GET_C_INT(tch))))
@@ -2501,7 +2502,8 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
         if (should_area_hit(ch, t))
         {
           if (((arg->spell == SPELL_HOLY_WORD) && !IS_EVIL(t)) ||
-              ((arg->spell == SPELL_UNHOLY_WORD) && !IS_GOOD(t)))
+              ((arg->spell == SPELL_UNHOLY_WORD) && !IS_GOOD(t)) ||
+	      ((arg->spell == SPELL_VOICE_OF_CREATION && !IS_EVIL(t))))
             continue;
           justice_witness(ch, t, CRIME_ATT_MURDER);
         }

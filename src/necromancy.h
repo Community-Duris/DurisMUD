@@ -11,6 +11,7 @@
 
 #define DRAGONSCALE_VNUM 392
 
+#define NECROPET_START      0
 #define NECROPET_SKELETON   0
 #define NECROPET_ZOMBIE     1
 #define NECROPET_SPECTRE    2
@@ -18,12 +19,25 @@
 #define NECROPET_VAMPIRE    4
 #define NECROPET_LICH       5
 #define NECROPET_SHADOW     6
-#define NECROPET_LAST       6
+#define NECROPET_END        6
+
+#define THEURPET_START      7
+#define THEURPET_SKELETON   7
+#define THEURPET_ZOMBIE     8
+#define THEURPET_SPECTRE    9
+#define THEURPET_WRAITH     10
+#define THEURPET_VAMPIRE    11
+#define THEURPET_LICH       12
+#define THEURPET_SHADOW     13
+#define THEURPET_END        13
+
+#define NECROPET_LAST       13
 
 #define NECROGOLEM_FLESH 0
 #define NECROGOLEM_BLOOD 1
 #define NECROGOLEM_BONE  2
-#define NECROGOLEM_LAST  2
+#define THEURGOLEM_VALOR 3
+#define NECROGOLEM_LAST  3
 
 #define CORPSEFORM_INNATE 0
 #define CORPSEFORM_REG    1
