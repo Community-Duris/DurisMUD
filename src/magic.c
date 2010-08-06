@@ -816,7 +816,7 @@ void spell_restore_spirit(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  if(IS_THEURPET_RACE(victim))
+  if(IS_ANGEL(victim))
   {
     send_to_char("&+LRestoring the undead is impossible.\r\n", ch);
     return;
@@ -8623,7 +8623,7 @@ void spell_vitalize_undead(int level, P_char ch, char *arg, int type,
   int healpoints = 2 * level;
 
   if(!IS_UNDEADRACE(victim) &&
-      !(IS_THEURPET_RACE(victim) && GET_CLASS(ch, CLASS_THEURGIST)))
+      !(IS_ANGEL(victim) && GET_CLASS(ch, CLASS_THEURGIST)))
   {
     send_to_char("Nothing seems to happen.\n", ch);
     return;
@@ -11028,7 +11028,7 @@ void spell_mend_soul(int level, P_char ch, char *arg, int type,
 {
   int      healpoints;
 
-  if(!IS_THEURPET_RACE(victim))
+  if(!IS_ANGEL(victim))
   {
     act
       ("$N chants something odd and takes a look at $n, a weird look in $S eyes.",
@@ -11147,7 +11147,7 @@ void spell_prot_undead(int level, P_char ch, char *arg, int type,
   struct affected_type af;
 
   if(!IS_UNDEADRACE(victim) &&
-     !IS_THEURPET_RACE(victim))
+     !IS_ANGEL(victim))
   {
     send_to_char("The target is not undead!\r\n", ch);
     return;
@@ -12657,28 +12657,64 @@ void spell_ghastly_touch(int level, P_char ch, char *arg, int type, P_char victi
   }
 }
 
+void spell_heavens_aid(int level, P_char ch, char *arg, int type, P_char victim,
+                P_obj obj)
+{
+  struct damage_messages messages = {
+    "&+LYou direct the &+Wholy beam&n towards $N&+W.&n",
+    "&+L$n's holy light passes over you, burning you with holy power.",
+    "&+LAn directs the &+Wholy beam&n towards $N, burning &m with it's holy power.",
+    "$N &+Lconvulses and dies a quick and quiet &+rdeath.",
+    "&+LYou feel the &+Wholy beam&n sap the last bit of &+clifeforce &+Wfrom you.",
+    "$N quietly collapses and &+rdies!", 0
+  };
+
+  if(!IS_ALIVE(ch) ||
+    !IS_ALIVE(victim))
+      return;
+
+  if(RACE_GOOD(victim) || IS_ANGEL(victim))
+  {
+    act("&+WThe light from above passes over $N without harm.&n", FALSE, ch, 0, victim, TO_CHAR);
+    return;
+  }
+
+  if(GET_LEVEL(victim) < (level / 5) &&
+    spell_damage(ch, victim, 10000, SPLDAM_HOLY, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD)
+      return;
+
+  int dam;
+  dam = (int) number(level * 4, level * 6);
+
+  if(spell_damage (ch, victim, dam, SPLDAM_HOLY, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD)
+  {
+    if(level < (GET_LEVEL(victim) / 2))  
+      spell_minor_paralysis((int) (level / 2), ch, NULL, 0, victim, NULL);
+  }
+}
+
 void event_aid_of_the_heavens(P_char ch, P_char victim, P_obj obj, void *data)
 {
   int room;
   room = *((int*)data);
   if(room != ch->in_room)
   {
-    send_to_char("&+LThe incorporeal figures dissolve into nothing...\n", ch);;
-    act("&+LThe heavenly creatures fade out of existance...", TRUE, ch, 0, 0, TO_ROOM);
+    send_to_char("&+LThe light from above dissolves into nothing...\n", ch);;
+    act("&+LThe light from above fades out of existance...", TRUE, ch, 0, 0, TO_ROOM);
     return;
   }
   
   if(!number(0, 3))
   {
-    act("$n's &+Wheavenly figures glide about the area.",FALSE, ch, 0, 0, TO_ROOM);
+    act("$n's &+Wlight from above glides about the area.",FALSE, ch, 0, 0, TO_ROOM);
     add_event(event_summon_ghasts, PULSE_VIOLENCE * 1, ch, 0, 0, 0, &room, sizeof(room));
     return;
   }
   
-  act("$n's &+Lsummoned heanvly assistance look towards $m &+Lfor guidance, before &+rattacking!",FALSE, ch, 0, 0, TO_ROOM);
-  act("&+LThe heavenly creatures from above look towards you for guidance.",FALSE, ch, 0, 0, TO_CHAR);  
+  act("$n's &+Lsummoned illumination stretches out!",FALSE, ch, 0, 0, TO_ROOM);
+  act("&+LThe summoned illumination stretches out!.",FALSE, ch, 0, 0, TO_CHAR);  
   
-  cast_as_damage_area(ch, spell_aid_of_the_heavens, GET_LEVEL(ch), NULL,
+  cast_as_damage_area(ch, spell_heavens_aid, GET_LEVEL(ch), NULL,
       get_property("spell.area.minChance.summonghasts", 90),
       get_property("spell.area.chanceStep.summonghasts", 10));
 }
@@ -12715,9 +12751,9 @@ void spell_aid_of_the_heavens(int level, P_char ch, char *arg, int type, P_char 
   room = ch->in_room;
 
   
-  act("&+CR&n&+ci&n&+Cght&n&+ceou&n&+Cs &n&+Wsp&n&+wir&n&+Wits&n of past &n&+Lb&n&+ra&n&+Lttl&n&+re&n&+Ls&n begin to &n&+Lco&n&+wa&n&+Wle&n&+ws&n&+Lce&n around $n.", FALSE, ch, 0, 0, TO_ROOM);
+  act("&+WA holy beam of light begin to &n&+Lco&n&+wa&n&+Wle&n&+ws&n&+Lce&n around $n.", FALSE, ch, 0, 0, TO_ROOM);
 
-  act("The &+Cr&+ci&+Cght&+ceou&+Cs &+Wsp&+wir&+Wits&n glance about... before looking towards you for guidance.", FALSE, ch, 0, 0, TO_CHAR);
+  act("&+WYou call down a holy beam of light from the heavens.", FALSE, ch, 0, 0, TO_CHAR);
   
   zone_spellmessage(ch->in_room,
     "&+LYou see a bright light shining on the horizon.\n",

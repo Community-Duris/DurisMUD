@@ -3258,12 +3258,18 @@ void select_race(P_desc d, char *arg)
   case 'T':
     strcpy(Gbuf, "SWAMP TROLL");
     break;
-  // case 'f':
-    // GET_RACE(d->character) = RACE_HALFELF;
-    // break;
-  // case 'F':
-    // strcpy(Gbuf, "HALF ELF");
-    // break;
+  case 'f':
+    GET_RACE(d->character) = RACE_HALFELF;
+    break;
+  case 'F':
+    strcpy(Gbuf, "HALF ELF");
+    break;
+  case 'i':
+    GET_RACE(d->character) = RACE_PILLITHID;
+    break;
+  case 'I':
+    strcpy(Gbuf, "ILLITHID");
+    break;
     /*   case 'i':
        GET_RACE(d->character) = RACE_ILLITHID;
        break;
@@ -3316,10 +3322,34 @@ void select_race(P_desc d, char *arg)
     strcpy(Gbuf, "MINOTAUR");
     break;
   case 'p':
-    GET_RACE(d->character) = RACE_OROG;
+    GET_RACE(d->character) = RACE_FIRBOLG;
     break;
   case 'P':
-    strcpy(Gbuf, "OROG");
+    strcpy(Gbuf, "FIRBOLG");
+    break;
+  case 'w':
+    GET_RACE(d->character) = RACE_WOODELF;
+    break;
+  case 'W':
+    strcpy(Gbuf, "WOOD ELF");
+    break;
+  case '1':
+    GET_RACE(d->character) = RACE_KOBOLD;
+    break;
+  case '!':
+    strcpy(Gbuf, "KOBOLD");
+    break;
+  case '2':
+    GET_RACE(d->character) = RACE_DRIDER;
+    break;
+  case '@':
+    strcpy(Gbuf, "DRIDER");
+    break;
+  case '3':
+    GET_RACE(d->character) = RACE_KUOTOA;
+    break;
+  case '#':
+    strcpy(Gbuf, "KUO TOA");
     break;
     /*   
        case '1':
@@ -4261,12 +4291,13 @@ void set_char_height_weight(P_char ch)
         female = 95;
         break;
     case RACE_BARBARIAN:
+    case RACE_FIRBOLG:
     case RACE_MINOTAUR:
     case RACE_PDKNIGHT:
     case RACE_PSBEAST:
     case RACE_THRIKREEN:
     case RACE_REVENANT:
-	case RACE_OROG:
+    case RACE_OROG:
       mean_h = 76;
       range_h = 18;
       mean_w = 210;
@@ -4280,7 +4311,7 @@ void set_char_height_weight(P_char ch)
     case RACE_GITHYANKI:
     case RACE_ORC:
     case RACE_PHANTOM:
-	case RACE_GITHZERAI:
+    case RACE_GITHZERAI:
       mean_h = 68;
       mean_w = 150;
       range_h = 24;
@@ -4290,6 +4321,7 @@ void set_char_height_weight(P_char ch)
         female = 85;
         break;
     case RACE_HALFLING:
+    case RACE_KUOTOA:
       mean_h = 38;
       range_h = 6;
       mean_w = 55;
@@ -4301,6 +4333,7 @@ void set_char_height_weight(P_char ch)
     case RACE_GNOME:
     case RACE_GOBLIN:
     case RACE_SHADE:
+    case RACE_KOBOLD:
       mean_h = 42;
       range_h = 6;
       mean_w = 55;
@@ -4312,9 +4345,12 @@ void set_char_height_weight(P_char ch)
     case RACE_PLICH:
     case RACE_DROW:
     case RACE_GREY:
+    case RACE_WOODELF:
     case RACE_HARPY:
     case RACE_GARGOYLE:
     case RACE_ILLITHID:
+    case RACE_PILLITHID:
+    case RACE_DRIDER:
       mean_h = 70;
       range_h = 8;
       mean_w = 125;
@@ -4394,6 +4430,7 @@ void set_char_size(P_char ch)
   case RACE_GARGOYLE:
   case RACE_HALFELF:
   case RACE_ILLITHID:
+  case RACE_PILLITHID:
   case RACE_THRIKREEN:
   case RACE_ORC:
   case RACE_MOUNTAIN:
@@ -4405,6 +4442,7 @@ void set_char_size(P_char ch)
   case RACE_DUERGAR:
   case RACE_GITHZERAI:
   case RACE_OROG:
+  case RACE_WOODELF:
     GET_SIZE(ch) = SIZE_MEDIUM;
     break;
   case RACE_HARPY:
@@ -4412,6 +4450,7 @@ void set_char_size(P_char ch)
   case RACE_GNOME:
   case RACE_GOBLIN:
   case RACE_SHADE:
+  case RACE_KOBOLD:
     GET_SIZE(ch) = SIZE_SMALL;
     break;
   case RACE_TROLL:
@@ -4425,7 +4464,10 @@ void set_char_size(P_char ch)
   case RACE_WIGHT:
   case RACE_OGRE:
   case RACE_MINOTAUR:
+  case RACE_FIRBOLG:
     GET_SIZE(ch) = SIZE_HUGE;
+  case RACE_KUOTOA:
+    GET_SIZE(ch) = SIZE_TINY;
   }
 }
 

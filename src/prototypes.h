@@ -2536,6 +2536,7 @@ void spell_create_greater_dracolich(int, P_char, char *, int, P_char, P_obj);
 void spell_create_golem(int, P_char, char *, int, P_char, P_obj);
 void create_golem(int level, P_char ch, P_char victim, P_obj obj, int which_type);
 void spell_slashing_darkness(int, P_char, char *, int, P_char, P_obj);
+void spell_heavens_aid(int, P_char, char, int, P_char, P_obj);
 void spell_aid_of_the_heavens(int, P_char, char *, int, P_char, P_obj);
 void spell_summon_ghasts(int, P_char, char *, int, P_char, P_obj);
 void spell_ghastly_touch(int, P_char, char *, int, P_char, P_obj);

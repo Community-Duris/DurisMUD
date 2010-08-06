@@ -101,7 +101,7 @@ const struct undead_description undead_data[NECROPET_LAST + 1] = {
    "lantern archon soldier", "&+Ylantern &+Rarch&+Wo&+Rn &+yso&+rldi&+yer&n", 4, ACT_NICE_THIEF + ACT_MEMORY, AFF_PROTECT_GOOD, AFF2_SLOW, 1.8, 26, 2, CLASS_WARRIOR,
    RACE_ARCHON},
   {
-   "asura avenger", "&+Rasu&+Yr&+Ra &+rave&+Lng&+rer", 20, ACT_MEMORY,
+   "asura avenger", "&+Rasu&+Yr&+Ra &+rave&+Lng&+rer&n", 20, ACT_MEMORY,
    AFF_FLY + AFF_INVISIBLE + AFF_DETECT_INVISIBLE + AFF_PROTECT_GOOD +
    AFF_SNEAK,
    AFF2_PROT_COLD, 2, 31, 4, CLASS_ASSASSIN, RACE_ASURA},

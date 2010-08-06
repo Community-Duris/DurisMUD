@@ -361,7 +361,8 @@ const struct innate_data
   {"dual wielding master", 0},
   {"requiem", 0},
   {"ally", 0},
-  {"summon host", do_summon_host}
+  {"summon host", do_summon_host},
+  {"spider body", 0}
 };
 
 bool has_innate(P_char ch, int innate)
@@ -486,6 +487,7 @@ void assign_innates()
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_DRIDER, 1);
   //ADD_RACIAL_INNATE(INNATE_WEBWRAP, RACE_DRIDER, 1);
   ADD_RACIAL_INNATE(INNATE_HORSE_BODY, RACE_DRIDER, 1);
+  ADD_RACIAL_INNATE(INNATE_SPIDER_BODY, RACE_DRIDER, 1);
   ADD_RACIAL_INNATE(INNATE_DAYBLIND, RACE_DRIDER, 1);
   /* List of Drow Elf Innates       */
   ADD_RACIAL_INNATE(INNATE_ULTRAVISION, RACE_DROW, 1);

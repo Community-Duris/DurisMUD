@@ -1,4 +1,4 @@
-#6068
+#132568
 M
 qc_action 75~
 The &+WKnight&n says, 'Our burden will soon be lifted as more ascend to new ranks. If you are interested in ascending my dear brother, do ask me, I will be glad to tell you how.'
@@ -10,7 +10,7 @@ The knight says, 'Ah ye are interested in ascending? Well it takes a very specia
 'You can follow the god &+cT&+Cem&+cpus&n as a Punisher of the faith. His altar can be found in the evil lands at a fallen citadel. The god &+YT&+Wo&+Yrm&n is closer to our lands and is found in in the land of towers.'
 ~
 S
-#6081
+#132581
 Q
 ~
 R E 33
@@ -23,15 +23,15 @@ D
 &+L   The child runs off before you can change your mind and take back your gift.&n
 ~
 S
-#6087
+#132587
 Q
 &+L   She leads you over to the straw mat, and presses you against the furs.  You
 &+Lspend the next few hours enthralled.  Arms flailing, juices flowing, eyes
 &+Lrolled back in your head, and the whole time you can hear your mother talking
 &+Labout &+gcookie &+Gjars&+L.&n
 ~
-R I 6102
-G I 6100
+R I 132602
+G I 132600
 Q
    '&+gWhat I'm not good enough to ride without a saddle?!&n' she says before she
 bends down to perform her art.  You let yourself be conjoled into the rack,
@@ -39,10 +39,10 @@ where you get sucked, damned, and manhandled and you're not quite sure if it
 was by woman or machine.
 ~
 R E 3
-G I 6101
-G I 6100
+G I 132601
+G I 132600
 S
-#6113
+#132613
 M
 note text wares goods~
 &+rZa&+Lberetorn&+raz &+Llooks around, then speaks:&N
@@ -63,9 +63,9 @@ QA
 &+wyou have ever seen.  Perhaps its not the best, but still, least give it a try&N
 &+wsometime.  Never forget with great power, comes great responsibility as well.&N
 ~
-R I 6122
-R I 6123
-G I 6124
+R I 132622
+R I 132623
+G I 132624
 Q
 &+rZa&+Lberetorn&+raz &+Lsmiles and looks around, then he speaks:&N
 &+L         &N
@@ -75,9 +75,9 @@ Q
 &+wsome items from you.  Just do not waste my time trying to sell me any garbage&N
 &+wor objects that I have no use for.&N
 ~
-R I 6120
+R I 132620
 R I 99412
-G I 6529
+G I 132664
 Q
 &+rZa&+Lberetorn&+raz &+Llooks at you with a strange look, then speaks:&N
 &+L            &N
@@ -85,11 +85,11 @@ Q
 &+Leither.  I hope you enjoy your reward, I will put this grim dagger to good use.&N
 ~
 R I 500
-R I 6129
-R I 6130
+R I 132629
+R I 132630
 G I 98928
 S
-#6518
+#132649
 M
 book spellbook~
 Khira looks at you briefly before speaking.
@@ -100,7 +100,7 @@ of the illusionist Zaberetornaz. He usually has one or two lying around
 in his bookshelves."
 ~
 S
-#6528
+#132659
 MA
 map gc level experience~
 &+WThis map on the desk is plenty big enough for us both to look at it at once.
@@ -172,10 +172,10 @@ Q
 &+W	It might not be a perfect copy but it should be close enough
 &+W	to help you get around!"&n
 ~
-R I 6576
+R I 132705
 G I 5
 S
-#6529
+#132660
 MA
 advice~
 &+WIt is good that you are not too proud to ask for advice from others,
@@ -200,7 +200,7 @@ QA
 	&+WThere you go!  There are limits to how fine of weapons you can make
 	&+Wfrom that low grade of iron, but you should see a noticable difference!&n
 ~
-R I 6547
+R I 132681
 G I 1108
 QA
 &+bZ&+Le&+bch&n takes a whet stone out of his journey bag and gets to work.  Very quickly he finishes and hands you back your weapon.
@@ -208,7 +208,7 @@ QA
         &+WThere you go!  There are limits to how fine of weapons you can make
         &+Wfrom that low grade of iron, but you should see a noticable difference!&n
 ~
-R I 6543
+R I 132678
 G I 1110
 QA
 &+bZ&+Le&+bch&n takes a whet stone out of his journey bag and gets to work.  Very quickly he finishes and hands you back your weapon.
@@ -216,7 +216,7 @@ QA
         &+WThere you go!  There are limits to how fine of weapons you can make
         &+Wfrom that low grade of iron, but you should see a noticable difference!&n
 ~
-R I 6543
+R I 132678
 G I 1111
 QA
 &+bZ&+Le&+bch&n takes a whet stone out of his journey bag and gets to work.  Very quickly he finishes and hands you back your weapon.
@@ -224,7 +224,7 @@ QA
         &+WThere you go!  There are limits to how fine of weapons you can make
         &+Wfrom that low grade of iron, but you should see a noticable difference!&n
 ~
-R I 6544
+R I 132679
 G I 1113
 QA
 &+bZ&+Le&+bch&n takes a whet stone out of his journey bag and gets to work.  Very quickly he finishes and hands you back your weapon.
@@ -232,10 +232,10 @@ QA
         &+WThere you go!  There are limits to how fine of weapons you can make
         &+Wfrom that low grade of iron, but you should see a noticable difference!&n
 ~
-R I 6545
+R I 132680
 G I 1112
 S
-#6530
+#132661
 QA
 As you hand him the children's instruments, the monk's features contort with the biggest smile you've ever seen.  He immediately snaps each over his knee and does a little jig around the room.
 
@@ -251,29 +251,29 @@ As you hand him the children's instruments, the monk's features contort with the
 ~
 R C 10000
 R E 1500
-G I 6548
-G I 6549
-G I 6550
+G I 132682
+G I 132683
+G I 132684
 S
-#6531
+#132662
 MA
 quiet instrument play loud monk~
 &+WGo away!  We can play loud if we want to and you can't stop us!&n
 ~
 S
-#6532
+#132663
 MA
 loud monk play instrument instruments please quiet~
 &+WHa ha!  You're not our boss!  We'll be as loud as we want!  Go away!&n
 ~
 S
-#6533
+#132664
 MA
 lout quiet instrument instruments play monk please~
 &+WOld people like you are no fun!  We're just kids that know how to have a good time!  Lighten up and stop bothering us!&n
 ~
 S
-#6534
+#132665
 MA
 mercenary mercenaries~
 	&+W"Mercenaries are warriors that rely on stealth.  They are the hunters and trappers
@@ -303,10 +303,10 @@ QA
 	&+Wboots are more important than good weapons.  The sharpest sword won't protect your
 	&+Wfeet from a hundred league journey!"&n
 ~
-R I 6553
-G I 6052
+R I 132687
+G I 132552
 S
-#6555
+#132666
 MA
 search desk book~
 	&+W"The library is only a few doors down.  Once inside there should be a desk
@@ -358,10 +358,10 @@ QA
 
 He walks over to his desk and fetches a small and plain looking book.  Grabbing his quill he hurriedly autographs the inside cover and hands both book and quill to you.
 ~
-R I 6552
-G I 6551
+R I 132686
+G I 132685
 S
-#6556
+#132667
 MA
 stab stabbed hurt wound who~
 Speaking slowly between heavy breaths the halfling relates his tale.
@@ -410,17 +410,17 @@ The &+yhalfling&n smirks before continuing.
 	&+Wbeen able to steal that trader's valuables without your help.  This
 	&+Wshould fetch a good price in the Bazaar!"&n
 ~
-R I 6564
+R I 132698
 R E 3000
-G I 6565
-G I 6563
+G I 132699
+G I 132697
 D
 Throwing the pouch at you, and bolting past you before you can react, the &+yhalfling&n bolts down the hallway, cackling at his success.  As he disappears down the stairs you hear him shout one last time,
 
 	&+W"Never trust a thief!"&n
 ~
 S
-#6557
+#132668
 MA
 mandrake nightshade nebble~
 &+gTh&+Ge&+gr&+Ga&n listens intently as you tell her your story.
@@ -497,7 +497,7 @@ race races centaur~
 	&+Wthe stars in combat, releasing a torrent of destruction!"&n
 ~
 S
-#6558
+#132669
 MA
 alchemy alchemist profession~
 &+YN&+ye&+Ybbl&+ye&n's face lights up as you ask him about alchemy.
@@ -560,11 +560,11 @@ QA
 
 	&+W"Quickly go and administer this to that injured &+yhalfling!"&n
 ~
-R I 6563
-G I 6560
-G I 6561
+R I 132697
+G I 132694
+G I 132695
 S
-#6570
+#132670
 MA
 suspicious guards guard bodyguard bodyguards~
 &+W"In times like these being a successful tradesman can make you an attractive target.
@@ -580,16 +580,16 @@ pendant thief stole father return~
 &+Wat once before I have my men teach you the same lesson they taught him!"
 ~
 S
-#6572
+#132672
 QA
 &+W"thank you so much friend!  I have been worried about what I was going to do,
 &+Wbut it looks like things always seem to work out afterall!  Here is the wand,
 &+Was promised.  Come back and visit with me the next time you are in Tharnadia!"&n
 ~
-R I 6569
+R I 132703
 G C 1000
 S
-#6573
+#132673
 QA
 	&+W"Hukka!  There you are!  Been running around the inn and annoying the other guests
 	&+Whave you?  It is about time I make you a collar and leash to put you on until you
@@ -605,7 +605,7 @@ Taking Hukka from you, &+GR&+gh&+ye&+gd&n ruffles the fur on the pup's head and 
 	&+Woutside the city.  They are not much, but it is all I have to give.  Thank you
 	&+Wagain."&n
 ~
-R I 6567
-R I 6568
-G I 6566
+R I 132701
+R I 132702
+G I 132700
 S

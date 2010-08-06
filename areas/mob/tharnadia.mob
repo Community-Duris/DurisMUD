@@ -1,4 +1,4 @@
-#6000
+#132500
 kienar verdock shopkeep shopkeeper~
 &+RKienar Verdock&n~
 &+RKienar Verdock&+w stands behind the &+ycounter&+W, a silly grin upon his face.&n
@@ -16,7 +16,7 @@ PE 1 2 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6001
+#132501
 tall mysterious merchant~
 a &+Ltall merchant&n~
 &+LTall and mysterious, this cloaked merchant stands behind her stall.&n
@@ -31,7 +31,7 @@ PH 1 512 -1
 45 -1 -69 45d72+1935 6d6+12
 5.9.8.4 109350
 8 8 2
-#6002
+#132502
 sten hardik shopkeep shopkeeper armorer~
 &+BSten Hardik&n~
 &+BSten Hardik&n &+Lstands before the forge banging out some new armor.&n
@@ -47,7 +47,7 @@ PH 1 8 -1
 46 -3 -72 46d119+2530 6d6+25
 6.0.9.4 111780
 8 8 1
-#6003
+#132503
 gar striped fish~
 a &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd &+Lgar&n~
 &+BA &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd &+Lgar&+B swims about eating the algae from the rocks.&n
@@ -64,7 +64,7 @@ F 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
-#6004
+#132504
 gar striped fish~
 a &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd &+Lgar&n~
 &+BA large &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd &+Lgar&+B lounges at the pool's bottom.&n
@@ -81,7 +81,7 @@ F 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
-#6005
+#132505
 gar striped fish~
 a &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd &+Lgar&n~
 &+BA &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd &+Lgar&+B swims about, trying to figure out what type of fish you are.&n
@@ -98,7 +98,7 @@ F 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
-#6006
+#132506
 watersnake deathhead adder~
 a &+Wdea&+wth&+Lhead &+madder&n~
 &+LA dark &+mmaroon water&+Msnake&+L slithers about, here.&n
@@ -114,7 +114,7 @@ RS 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
-#6007
+#132507
 pelican deep billed~
 a &+Ydeep-billed &+Wpelican&n~
 &+LA &+Wpelican&+L sits here, silently observing the world around him.&n
@@ -128,7 +128,7 @@ B 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 1
-#6008
+#132508
 seagull noisy~
 a &+Wseagull&n~
 &+BSwooping through the air in search of food, this &+Wseagull&+B caws noisily.&n
@@ -142,7 +142,7 @@ B 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
-#6009
+#132509
 guard beach female~
 a &+Ybeach &+Wgu&+wa&+Lrd&n~
 &+WThis &+Ybeach &+Wgu&+wa&+Lrd&+W is slowly making her rounds.&n
@@ -158,7 +158,7 @@ PH 1 1 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 2
-#6010
+#132510
 commoner fisherman male~
 a &+cmale &+Ccommoner&n~
 &+WThis &+cmale &+Ccommoner&+W fishes here, feet hanging off the sea wall.&n
@@ -174,7 +174,7 @@ PH 1 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
-#6011
+#132511
 commoner fisherman female~
 a &+cfemale &+Ccommoner&n~
 &+WThis &+cfemale &+Ccommoner&+W fishes here, trying to catch dinner.&n
@@ -189,7 +189,7 @@ PH 1 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 2
-#6012
+#132512
 guard tranquility lighthouse~
 a &+BTranquility &+Wlighthouse gu&+wa&+Lrd&n~
 &+LThis vigilant &+Rguardsman&+L is diligently monitoring the lighthouse grounds.&n
@@ -205,7 +205,7 @@ PH 1 1 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6013
+#132513
 parcifal lighthouse keeper~
 &+LParcifal&n, &+Wthe lighthouse keeper&n~
 &+BThe gnarled and twisted form, that is &+LParcifal&+B, stares out over the seas.&n
@@ -225,7 +225,7 @@ H 1 2 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6014
+#132514
 attendant lighthouse~
 a &+Wlighthouse attendant&n~
 &+LThis &+Wattendant&+L is busy making sure everything is clean and in operating order.&n
@@ -239,7 +239,7 @@ PH 1 0 -1
 4 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 1
-#6015
+#132515
 scorpion bone~
 a &+Wbone &+Wsc&+Yor&+Rpi&+ron&n~
 &+LA small &+Wbone sc&+Yor&+Rpi&+ron&+L clatters around here noisily.&n
@@ -254,7 +254,7 @@ AS 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
-#6016
+#132516
 kylara nevicck shopkeeper~
 &+BKylara Nevicck&n~
 &+BKylara&+L sits behind the counter, tending to her animals.&n
@@ -269,7 +269,7 @@ PH 1 2 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 2
-#6017
+#132517
 wolf black~
 a &+Lblack wolf&n~
 &+LBristling with energy, this black wolf seems ready for anything.&n
@@ -283,7 +283,7 @@ AC 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
-#6018
+#132518
 parrot~
 a &+gp&+Ga&+Yrr&+Ro&+rt&n~
 &+WA &+gp&+Ga&+Yrr&+Ro&+rt&+W squawks at you.&n
@@ -298,7 +298,7 @@ B 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
-#6019
+#132519
 sarn banker~
 &+GSarn&n, &+gthe banker&n~
 &+LA greedy looking &+Wbanker&+L stands behind the counter, eyeing you curiously.&n
@@ -313,7 +313,7 @@ PH 1 20480 -1
 55 -3 -95 50d100+2650 6d6+25
 0.3.1.5 121500
 8 8 1
-#6020
+#132520
 guard wall man patrolling young~
 a &+Lmilitia &+Wguard&n~
 &+WA young man in &+Lleather armor&+W seems to be patrolling the walls.&n
@@ -327,7 +327,7 @@ PH 1 1 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
-#6021
+#132521
 elite guard warrior tough cityguard~
 an &+Lelite &+Wguard&n~
 &+LA tough looking &+Wwarrior&+L is scanning the landscape beyond the walls.&n
@@ -342,7 +342,7 @@ PH 1 1 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6022
+#132522
 firelizard dragon lizard~
 a small &+rf&+Ri&+Yr&+Weliz&+Ma&+mr&+Ld~
 &+WA small &+rd&+Rr&+Ya&+Wgonl&+Mi&+mk&+Le&+W creature hovers here.&n
@@ -361,7 +361,7 @@ DK 0 0 2
 7 18 67 7d18+73 2d3+1
 3.2.0.0 907
 8 8 0
-#6023
+#132523
 raccoon~
 a &+Lr&+Wa&+Lc&+Wc&+Lo&+Wo&+Ln&n~
 &+gA cute and furry &+Lr&+Wa&+Lc&+Wc&+Lo&+Wo&+Ln&+g stands here.&n
@@ -374,7 +374,7 @@ AC 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
-#6024
+#132524
 squirrel~
 a &+ysquirrel&n~
 &+gA &+ysquirrel&+g searches through the underbrush for food.&n
@@ -388,7 +388,7 @@ AH 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
-#6025
+#132525
 hernic tastsgud jeweler~
 &+CHernic &+cTastsgud&n~
 &+CHernic&+L is here, standing behind the &+ycounter&+L and &+Wsmiling&+L at you.&n
@@ -402,7 +402,7 @@ H 1 4096 -1
 45 -1 -69 45d90+1935 6d6+12
 5.9.8.4 109350
 8 8 1
-#6026
+#132526
 arabian black horse mount~
 a &+Lblack arabian mount&n~
 &+LA beautiful black Arabian gelding stands here.&n
@@ -417,7 +417,7 @@ A 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
-#6027
+#132527
 medium war horse mount~
 a magnificient medium &+ywarhorse&n~
 &+yA magnificient looking medium warhorse stands here.&n
@@ -432,7 +432,7 @@ A 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 1
-#6028
+#132528
 vor mount~
 a powerful &+cv&+Co&+Wr&n~
 &+WA regal and powerful looking six-legged &+cv&+Co&+Wr stands here.&n
@@ -447,7 +447,7 @@ A 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
-#6029
+#132529
 griffon mount~
 the powerful &+Wgri&+Yff&+yon&n~
 &+LA mighty &+Wgri&+Yff&+yon&+L is flying close to the ground here.&n
@@ -462,7 +462,7 @@ G 0 0 -1
 25 11 29 25d40+325 3d5+3
 6.2.6.1 22275
 10 10 0
-#6030
+#132530
 baker~
 the &+Wbaker&n~
 &+LThe &+Wbaker&+L looks at you calmly, wiping &+Wflour&+L from his face with one hand.&n
@@ -477,7 +477,7 @@ PH 1 2 -1
 37 2 -18 37d95+851 4d7+10
 0.1.2.2 47952
 8 8 1
-#6031
+#132531
 crier town~
 the &+ctown &+Ccrier&n~
 &+LThe &+ctown &+Ccrier&+L is standing here, eagerly awaiting to perform his duties.&n
@@ -491,7 +491,7 @@ PH 1 1 -1
 56 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
-#6032
+#132532
 merchant human~
 a &+Chuman &+ymerchant&n~
 &+WA &+Chuman &+ymerchant&+W from another town stands here, perusing Tharnadia.&n
@@ -505,7 +505,7 @@ PH 1 16384 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
-#6033
+#132533
 farmer peasant~
 a &+ypeasant &+gfarmer&n~
 &+WA &+ypeasant &+gfarmer&+W is here from his &+Gfarmstead&+W, probably on business.&n
@@ -519,7 +519,7 @@ PH 1 0 -1
 9 18 71 9d18+31 2d3+1
 4.3.0.0 1166
 8 8 1
-#6034
+#132534
 wife baker baker's~
 the &+Wbaker's&+R wife&n~
 &+LThe &+Wbaker's &+Rwife&+W is here, taking care of the house.&n
@@ -533,7 +533,7 @@ PH 1 0 -1
 9 18 71 9d18+31 2d3+1
 4.3.0.0 1166
 8 8 2
-#6035
+#132535
 kid baker bakers~
 the &+Wbaker's &+Ckid&n~
 &+LOne of the &+Wbaker's &+Ckids&+L is here, playing around.&n
@@ -547,7 +547,7 @@ PH 1 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
-#6036
+#132536
 working commoner man~
 a &+Lworking &+ycommoner&n~
 A &+Lworking &+ycommoner&n is here, sleeping after a long day at the job.
@@ -562,7 +562,7 @@ PH 1 1 -1
 7 18 77 7d21+38 2d3+1
 3.2.0.0 907
 4 5 1
-#6037
+#132537
 commoner female woman~
 a &+Cfemale &+Lcommoner&n~
 &+WA &+Cfemale &+Lcommoner&+W is here, sleeping after a hard day at the market.&n
@@ -577,7 +577,7 @@ PH 1 4096 -1
 14 15 55 14d23+56 2d5+2
 7.5.2.0 6804
 4 5 2
-#6038
+#132538
 worker male man common~
 a &+Cmale &+Lworker&n~
 &+WA &+Ccommon &+Lworking&+W man is relaxing here at home after a day work.&n
@@ -590,7 +590,7 @@ PH 1 1 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
-#6039
+#132539
 worker female commoner~
 a &+Cfemale &+ccommoner~
 &+WA &+Cfemale &+ccommoner&+W is relaxing here, looking very tired and worn out.&n
@@ -605,7 +605,7 @@ PH 1 32 -1
 18 13 42 18d33+108 3d4+2
 9.7.3.0 8748
 8 8 2
-#6040
+#132540
 man old~
 an &+Wold &+Bman&n~
 &+LAn &+Wold &+Bman&+L rests here, absently staring at something and daydreaming.&n
@@ -619,7 +619,7 @@ PH 1 8 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
-#6041
+#132541
 rogue mercenary~
 the &+rdangerous&n looking &+Lrogue&n~
 &+LA dangerous looking rogue mercenary is here, looking extremely alarmed.&n
@@ -634,7 +634,7 @@ PH 1 16384 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
-#6042
+#132542
 mercenary shady~
 a &+Lshady &+ymercenary&n~
 &+mA &+Lshady&+m looking &+ymercenary&+m stands here, eyeing you with open contempt.&n
@@ -648,7 +648,7 @@ PH 1 16384 -1
 14 15 55 14d27+84 2d5+2
 7.5.2.0 6804
 8 8 1
-#6043
+#132543
 youth shady~
 the &+Lshady &+Cyouth&n~
 &+LA shady looking &+Cyouth&+L is standing here, eyeing you with a devious glance.&n
@@ -662,7 +662,7 @@ PH 1 1 -1
 5 20 83 5d17+27 1d5+0
 3.1.0.0 648
 8 8 1
-#6044
+#132544
 guard jailor~
 a jailor~
 &+WA &+Ljailor&+W is posted here, keeping a watch over the &+Ljail house&+W.&n
@@ -676,7 +676,7 @@ PH 1 2 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6045
+#132545
 guard peacekeeper~
 a peacekeeper~
 An off-duty peacekeeper is relaxing here, drunk and singing merrily.
@@ -690,7 +690,7 @@ PH 1 8 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
-#6046
+#132546
 guard honor tharnadian~
 a &+Bhonor &+Wguard&n~
 &+LA &+WTharnadian&+B honor&+W guard&+L is resting here after having worked a long shift.&n
@@ -704,7 +704,7 @@ PH 1 2 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6047
+#132547
 dog stray~
 a &+ystray dog&n~
 &+yA large wandering dog is here, growling at you.&n
@@ -718,7 +718,7 @@ AC 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 1
-#6048
+#132548
 cat stray~
 a &+Lstray cat&n~
 &+LA stray tomcat is darting after rodents, here.&n
@@ -732,7 +732,7 @@ A 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 1
-#6049
+#132549
 bailiff guard huge stern~
 the &+bbailiff&n~
 &+bA huge man with a stern expression regards you carefully.&n
@@ -747,7 +747,7 @@ PH 1 1 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
-#6050
+#132550
 judge justice stern woman~
 the &+RHigh Justice&n of &+WTharnadia&n~
 &+LA stern woman presides over the courtroom in a &+Rred&+L robe.&N
@@ -763,7 +763,7 @@ PH 1 512 -1
 50 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 2
-#6051
+#132551
 bartender grubby man~
 the &+gbartender&n~
 &+gAn extremely &+Ggrubby&+g looking man stands behind the bar, peering at you.&n
@@ -776,7 +776,7 @@ PH 1 16 -1
 48 -3 -78 48d119+2640 6d6+25
 8.1.0.5 116640
 8 8 1
-#6052
+#132552
 drunk filthy man~
 a &+Lfilthy &+ydrunk&n~
 &+WA &+Lfilthy&+C man&+W is sitting here, &+ydrunk&+W out of his mind.&n
@@ -789,7 +789,7 @@ PH 1 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
-#6053
+#132553
 drunk scumbag~
 a &+gsc&+Gu&+Ym&+Wb&+wa&+Lg &+ydrunk&n~
 &+LA &+gsc&+Gu&+Ym&+Wb&+wa&+Lg sits at one of the tables here, drunk out of his mind.&n
@@ -803,7 +803,7 @@ PH 1 0 -1
 2 20 93 2d15+7 1d5+0
 1.0.0.0 259
 8 8 1
-#6054
+#132554
 waiter~
 a &+Wwaiter&n~
 &+cA &+Wwaiter&+c dressed in white stands here, smiling at you warmly.&n
@@ -815,7 +815,7 @@ PH 1 1 -1
 43 -1 -62 43d107+1935 6d6+12
 3.8.7.3 104490
 8 8 1
-#6055
+#132555
 bartender~
 the bartender~
 &+mThe bartender is standing here, serving drinks to his customers.&n
@@ -828,7 +828,7 @@ PH 1 1 -1
 41 -1 -56 41d107+1845 6d6+12
 1.7.6.3 99630
 8 8 1
-#6056
+#132556
 waiter~
 the &+Wwaiter&n~
 &+LA waiter dressed in &+Wwhite&+L stands here, ready to serve the patrons.&n
@@ -840,7 +840,7 @@ PH 1 1 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
-#6057
+#132557
 militia guard~
 a &+Wmilitia &+Lguard&n~
 &+LA &+Wmilitia&+L guard is posted here, keeping watch over the bazaar.&n
@@ -854,7 +854,7 @@ PH 1 2 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
-#6058
+#132558
 lady food old~
 an old lady~
 &+LAn &+Wold&+L lady stands here on the &+ycart&+L, peddling her foods to passing customers.&n
@@ -867,7 +867,7 @@ H 1 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 2
-#6059
+#132559
 shopper young woman~
 the &+Cyoung&+W woman&n~
 &+WA &+Cyoung &+Wwoman is passing by here, shopping the bazaar.&n
@@ -880,7 +880,7 @@ PH 1 0 -1
 16 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 8 8 2
-#6060
+#132560
 shopper working commoner~
 the &+Lcommoner&n~
 &+mA working &+Lcommoner&+m is here, shopping in the bazaar.&n
@@ -893,7 +893,7 @@ PH 1 0 -1
 16 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 8 8 1
-#6061
+#132561
 peddler~
 a &+mpeddler&n~
 &+LA &+mpeddler&+L is here, selling her goods to people in the bazaar.&n
@@ -907,7 +907,7 @@ PH 1 1 -1
 41 -1 -56 41d107+1845 6d6+12
 1.7.6.3 99630
 8 8 2
-#6062
+#132562
 spider tarantula giant~
 a &+Lgiant tarantula&n~
 &+LA large tarantula clacks its mandibles at you.&n
@@ -922,7 +922,7 @@ AS 0 1 -1
 13 15 58 13d27+78 2d5+2
 0.0.0.0 6318
 8 8 0
-#6063
+#132563
 receptionist~
 the &+mreceptionist&n~
 &+mThe receptionist stands here behind the counter, waiting to help someone.&n
@@ -934,7 +934,7 @@ PH 1 32 -1
 11 15 64 11d25+55 2d5+2
 5.4.1.0 5346
 8 8 2
-#6064
+#132564
 patron drunk~
 a drunk~
 A tavern patron is singing here, drunk out of his mind.
@@ -946,7 +946,7 @@ PH 1 0 -1
 2 20 93 2d15+7 1d5+0
 1.0.0.0 259
 8 8 1
-#6065
+#132565
 peasant homeless~
 a &+Lhomeless &+cpeasant&n~
 &+LA homeless &+cpeasant&+L is here, looking lost and hungry.&n
@@ -959,7 +959,7 @@ PH 1 0 -1
 1 20 96 1d15+4 1d5+0
 1.0.0.0 129
 8 8 2
-#6066
+#132566
 brinn shopkeeper smith warrior~
 &+mBrinn&n~
 &+LThe shop's &+Wweapon smith&+L stands here, polishing his &+Csword&+L.&n
@@ -972,7 +972,7 @@ PH 1 1 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 2
-#6067
+#132567
 warrior training~
 a warrior in training~
 &+BA warrior in training is here, strutting around as if he's a real tough guy.&n
@@ -984,7 +984,7 @@ PH 1 1 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
-#6068
+#132568
 knight~
 the &+Wknight&n~
 &+LA &+Wknight&+L is standing here, peacefully watching over the temple.&n
@@ -999,7 +999,7 @@ PH 1 8 -1
 27 8 13 27d65+351 3d6+4
 8.3.7.1 24057
 8 8 1
-#6069
+#132569
 cleric young~
 a young &+Ccleric&n~
 &+WA young &+Ccleric&+W is standing here, smiling at you warmly.&n
@@ -1012,7 +1012,7 @@ PH 1 32 -1
 9 18 71 9d19+40 2d3+1
 4.3.0.0 1166
 8 8 2
-#6070
+#132570
 jelian shopkeeper~
 &+mJelian &+MPhry&n~
 &+WThe shopkeeper &+mJelian&+w is here, sitting behind the counter.&n
@@ -1025,7 +1025,7 @@ PH 1 32 -1
 35 6 -12 35d77+560 4d6+7
 9.9.1.2 45360
 8 8 1
-#6071
+#132571
 commoner man~
 a &+ccommoner&n~
 &+WA &+ccommoner&+W is standing here, minding his own business.&n
@@ -1038,7 +1038,7 @@ PH 1 0 -1
 7 18 77 7d18+24 2d3+1
 3.2.0.0 907
 8 8 1
-#6072
+#132572
 woman commoner~
 a &+mwoman&n~
 &+WA &+mwoman&+W is standing here, shopping about the town.&n
@@ -1051,7 +1051,7 @@ PH 1 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 2
-#6073
+#132573
 odd orange shaved man little zealot religious~
 a &+Rreligious &+Lzealot&n~
 &+WAn odd little man, with a shaved head and an &+Rorange&+W robe, hums something.&n
@@ -1068,7 +1068,7 @@ PH 1 32 -1
 15 15 51 15d25+75 2d5+2
 7.6.2.0 7290
 8 8 1
-#6074
+#132574
 beggar~
 the &+Lbeggar&n~
 &+LA homeless beggar is here, asking for a few &+Ycoins&+L.&n
@@ -1080,7 +1080,7 @@ PH 1 0 -1
 1 20 96 1d15+4 1d5+0
 1.0.0.0 129
 8 8 2
-#6075
+#132575
 controller~
 a &+Lcontroller~
 &+WA &+Lcontroller&+W stands here, scanning the traffic for &+rcontraband&+W.&n
@@ -1093,7 +1093,7 @@ PH 1 1 -1
 36 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 1
-#6076
+#132576
 cat hunting black jaguar~
 a &+Lblack panther&n~
 &+LA black panther, most feared of all hunting cats, stands here.&n
@@ -1107,7 +1107,7 @@ A 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 0
-#6077
+#132577
 mercenary tough~
 a &+Ltough &+ymercenary&n~
 &+LA tough looking &+ymercenary&+L is standing here, strutting proudly.&n
@@ -1120,7 +1120,7 @@ PH 1 16384 -1
 21 11 32 21d47+210 3d5+3
 4.0.5.0 18711
 8 8 1
-#6078
+#132578
 mercenary battle scarred~
 a &+Lbattle &+rscarred &+ymercenary&n~
 &+LA battle &+rscarred &+ymercenary&+L is standing here, eyeing you with scrutiny.&n
@@ -1133,7 +1133,7 @@ PH 1 16384 -1
 27 8 13 27d65+351 3d6+4
 8.3.7.1 24057
 8 8 1
-#6079
+#132579
 commoner poor~
 a &+Lpoor &+Ccommoner&n~
 A &+Lpoor&n looking &+Ccommoner&n is standing here, wearing a mean expression.
@@ -1146,7 +1146,7 @@ PH 1 0 -1
 12 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 1
-#6080
+#132580
 whore slutty~
 a slutty whore~
 &+LA working-class whore is standing here, catwalking around.&n
@@ -1160,7 +1160,7 @@ PH 1 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 2
-#6081
+#132581
 child homeless~
 a &+Lhomeless &+Cchild&n~
 &+LA homeless child is here, scrounging around for some food.&n
@@ -1173,7 +1173,7 @@ PH 1 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
-#6082
+#132582
 rat large~
 a &+ylarge rat&n~
 &+yA large rat is scurrying about here.&n
@@ -1185,7 +1185,7 @@ A 1 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
-#6083
+#132583
 rat huge~
 a &+yhuge rat&n~
 &+LA huge rat is here, eyeing you with a vicious hunger.&n
@@ -1198,7 +1198,7 @@ AC 1 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
-#6084
+#132584
 rogue trainee training~
 a rogue in training~
 &+LA rogue in training is standing here, practicing his backstab.&n
@@ -1211,7 +1211,7 @@ PH 1 8192 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 1
-#6085
+#132585
 killer shopkeeper~
 the &+Lshop&+rke&+Rep&+Wer&n~
 &+LThe shop&+rke&+Rep&+Wer&+L of killers is here behind the counter, ready to serve.&n
@@ -1224,7 +1224,7 @@ PH 1 16384 -1
 39 2 -24 39d95+897 4d7+10
 2.2.3.2 50544
 8 8 2
-#6086
+#132586
 chastity lafey shopkeeper~
 &+WChastity &+LLaFey&n~
 &+WThe shopkeeper &+LChastity&+w is here, sitting in the chair.&n
@@ -1241,7 +1241,7 @@ PH 1 8 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 2
-#6087
+#132587
 prostitute slack jawwed~
 a &+cslack-jawed &+Cprostitute&n~
 &+LA slack-jawed prostitute stands, her hand fondling her breast, here.&n
@@ -1258,7 +1258,7 @@ PH 1 4096 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 2
-#6088
+#132588
 youth crapping~
 a &+ycrapping &+Cyouth&n~
 &+LA &+Cyouth&+L turns &+Rred&+L, and quickly moves his hands to his knees, as you enter.&n
@@ -1271,7 +1271,7 @@ PH 0 0 -1
 17 13 45 17d30+85 3d4+2
 8.6.2.0 8262
 8 8 1
-#6089
+#132589
 mercenary grim~
 a &+Lgrim &+ymercenary&n~
 &+LA grim looking &+ymercenary&+L is sitting here, planning something.&n
@@ -1285,7 +1285,7 @@ PH 1 16384 -1
 34 6 -8 34d83+578 4d6+7
 8.9.0.2 44064
 8 8 1
-#6090
+#132590
 tarn bloodblade outlaw~
 &+rTarn &+RBloodblade&n, &+Lthe outlaw of &+WTharnadia&n~
 &+rTarn &+RBloodblade&n, &+Lthe outlaw stands here planning a coup.&n
@@ -1299,7 +1299,7 @@ PH 1 16384 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
-#6091
+#132591
 noble man~
 a &+bnoble&n~
 &+WA &+bnoble&+W is standing here, a pretentious look upon his face.&n
@@ -1314,7 +1314,7 @@ PH 1 512 -1
 37 2 -18 37d64+777 4d7+10
 0.1.2.2 47952
 8 8 1
-#6092
+#132592
 woman noble~
 a &+mwoman &+Mnoble&n~
 &+WA &+mwoman &+Mnoble&+W struts around here, her pert little ass in the air.&n
@@ -1329,7 +1329,7 @@ PH 1 2048 -1
 36 2 -15 36d64+756 4d7+10
 0.1.2.2 46656
 8 8 2
-#6093
+#132593
 street sweeper~
 a &+Lstreet &+Wsweeper&n~
 &+cA &+Lstreet &+Wsweeper&+c is cleaning here, singing songs of labor.&n
@@ -1343,7 +1343,7 @@ PH 1 0 -1
 4 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 1
-#6094
+#132594
 burglar cat agg_n~
 a &+Lcat burglar&n~
 &+LA devious looking cat burglar is standing here, ready to cut your throat out.&n
@@ -1357,7 +1357,7 @@ PH 1 16384 -1
 25 6 -8 34d83+578 4d6+7
 8.9.0.2 44064
 8 8 1
-#6095
+#132595
 archer militia guard~
 a &+Wmilitia &+Rarcher&n~
 &+LA &+Wmilitia&+R archer&+L is posted here, keeping watch of the gates below.&n
@@ -1371,7 +1371,7 @@ PH 1 2 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
-#6096
+#132596
 guard man patrolling young~
 a &+Lmilitia &+Wguard&n~
 &+WA young man in &+Lleather armor&+W seems to be patrolling outside the gates.&n
@@ -1385,7 +1385,7 @@ PH 1 1 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
-#6097
+#132597
 mailman postmaster master postal~
 &+wthe &+Cmailman&N~
 &+wThe postal master of &+WTharnadia &+wsorts piles of letters.&N
@@ -1398,7 +1398,7 @@ G 1 512 -1
 60 -1 -69 45d90+1935 6d6+12
 5.9.8.4 109350
 8 8 1
-#6098
+#132598
 auctioneer~
 the auctioneer~
 A fast talking auctioneer stands behind the podium.
@@ -1410,7 +1410,7 @@ PH 1 1 -1
 61 -1 -100 100d100+7500 10d10+50
 5.9.8.4 10
 8 8 1
-#6099
+#132599
 doctor~
 the doctor~
 The doctor on duty reads a current medical journal.
@@ -1422,7 +1422,7 @@ PH 1 256 -1
 61 0 -100 100d100+7500 10d10+30
 3.3.3.3 10
 8 8 2
-#6100
+#132600
 medium war horse mount~
 a magnificient medium &+ywarhorse&n~
 &+yA magnificient looking medium warhorse stands here.&n
@@ -1437,7 +1437,7 @@ A 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 1
-#6101
+#132601
 griffon mount~
 the powerful &+Wgri&+Yff&+yon&n~
 &+LA mighty &+Wgri&+Yff&+yon&+L is flying close to the ground here.&n
@@ -1452,7 +1452,7 @@ G 0 0 -1
 25 11 29 25d40+325 3d5+3
 6.2.6.1 22275
 10 10 0
-#6102
+#132602
 vor mount~
 a powerful &+cv&+Co&+Wr&n~
 &+WA regal and powerful looking six-legged &+cv&+Co&+Wr stands here.&n
@@ -1467,7 +1467,7 @@ A 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
-#6103
+#132603
 arabian black horse mount~
 a &+Lblack arabian mount&n~
 &+LA beautiful black Arabian gelding stands here.&n
@@ -1482,7 +1482,7 @@ A 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
-#6104
+#132604
 parrot~
 a &+gp&+Ga&+Yrr&+Ro&+rt&n~
 &+WA &+gp&+Ga&+Yrr&+Ro&+rt&+W squawks at you.&n
@@ -1497,7 +1497,7 @@ B 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
-#6105
+#132605
 wolf black~
 a &+Lblack wolf&n~
 &+LBristling with energy, this black wolf seems ready for anything.&n
@@ -1511,7 +1511,7 @@ AC 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
-#6106
+#132606
 firelizard dragon lizard~
 a small &+rf&+Ri&+Yr&+Weliz&+Ma&+mr&+Ld~
 &+WA small &+rd&+Rr&+Ya&+Wgonl&+Mi&+mk&+Le&+W creature hovers here.&n
@@ -1530,7 +1530,7 @@ DK 0 0 2
 7 18 67 7d18+73 2d3+1
 3.2.0.0 907
 8 8 0
-#6107
+#132607
 raccoon~
 a &+Lr&+Wa&+Lc&+Wc&+Lo&+Wo&+Ln&n~
 &+gA cute and furry &+Lr&+Wa&+Lc&+Wc&+Lo&+Wo&+Ln&+g stands here.&n
@@ -1543,7 +1543,7 @@ AC 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
-#6108
+#132608
 cat hunting black panther~
 a &+Lblack panther&n~
 &+LA black panther, most feared of all hunting cats, stands here.&n
@@ -1557,7 +1557,7 @@ A 0 1 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 0
-#6109
+#132609
 clerk justice~
 &+LThe Just&nice Clerk&n~
 &+LThe Just&nice clerk&+L is here, scribing something in his book.&n
@@ -1572,7 +1572,7 @@ PH 1 32 -1
 50 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 1
-#6110
+#132610
 guard man patrolling young~
 a &+Lmilitia &+Wguard&n~
 &+wA young man in &+Lleather armor&+w seems to be patrolling the area.&n
@@ -1586,7 +1586,7 @@ PH 1 1 -1
 26 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
-#6111
+#132611
 tehram ranger~
 &+GTehram&n~
 &+GTehram&+w awaits his customers, working on a new bow.&n
@@ -1601,7 +1601,7 @@ PH 1 2 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6112
+#132612
 malrik illusionist master teacher~
 &+CM&+ca&+Cl&+cr&+Ci&+ck&N~
 &+CM&+ca&+Cl&+cr&+Ci&+ck&+L, the master &+Wil&+Clu&+csi&+Con&+Wist&+L, stands here weaving his &+Wil&+Clu&+csi&+Con&+Ws&+L.&N
@@ -1615,7 +1615,7 @@ PH 1 4194304 -1
 56 6 -12 35d56+525 4d6+7
 9.9.1.2 1
 8 8 1
-#6113
+#132613
 za zaberetornaz shopkeeper keeper~
 &+rZa&+Lberetorn&+raz&N~
 &+rZa&+Lberetorn&+raz &+Lstands here peddling his &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Lwares.&N
@@ -1632,7 +1632,7 @@ PH 1 65 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6114
+#132614
 illusionist~
 &+LA tharnadian &+Willusionist&n~
 &+WA tharnadian &+Lillusionist &+Wstands here watching for intruders.&n
@@ -1648,7 +1648,7 @@ PH 0 4194305 3
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6115
+#132615
 human alchemist~
 &+wa &+Chuman &+Calc&+chem&+Cist&n~
 &+wA tall &+chuman &+Calc&+chem&+Cist&+w stands in the bazaar here.&n
@@ -1660,7 +1660,7 @@ PH 0 1 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6116
+#132616
 thief hunter~
 &+wa &+Wtharnadian&+L thief-hunter&n~
 &+wA &+Wtharnadian&+L thief-hunter&+w watches over the town streets intently.&n
@@ -1671,7 +1671,7 @@ PH 0 8 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6117
+#132617
 kieta shopkeeper~
 &+CKieta&N~
 &+CKieta&N is stocking the shelves of her store.
@@ -1688,7 +1688,7 @@ PH 0 8 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 2
-#6118
+#132618
 guard peacekeeper~
 a peacekeeper~
 An off-duty peacekeeper is relaxing here, drunk and singing merrily.
@@ -1702,7 +1702,7 @@ PH 1 8 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
-#6119
+#132619
 elite guard warrior tough cityguard~
 an &+Lelite &+Wguard&n~
 &+LA tough looking &+Wwarrior&+L is scanning the landscape beyond the walls.&n
@@ -1717,7 +1717,7 @@ PH 1 1 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6120
+#132620
 elite guard warrior tough cityguard~
 an &+Lelite &+Wguard&n~
 &+LA tough looking &+Wwarrior&+L is scanning the landscape beyond the walls.&n
@@ -1732,7 +1732,7 @@ PH 1 1 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6121
+#132621
 elite guard warrior tough cityguard~
 an &+Lelite &+Wguard&n~
 &+LA tough looking &+Wwarrior&+L is scanning the landscape beyond the walls.&n
@@ -1747,7 +1747,7 @@ PH 1 1 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6122
+#132622
 ticket handler~
 &+ythe &+Wticket&+y handler&n~
 &+yThe ferry &+Wticket&+y handler stands here, checking his list.&n
@@ -1758,7 +1758,7 @@ PH 0 1 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6123
+#132623
 thief hunter~
 &+wa &+Wtharnadian&+L thief-hunter&n~
 &+wA &+Wtharnadian&+L thief-hunter&+w patrols the ship here vigilantly.&n
@@ -1769,7 +1769,7 @@ PH 0 8 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6124
+#132624
 militia guard dock~
 a &+ydock &+Lguard&n~
 &+yA &+Wmilitia&+y dock guard helps to protect the ship.
@@ -1783,7 +1783,7 @@ PH 0 2 -1
 41 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
-#6125
+#132625
 elite guard warrior tough cityguard~
 an &+Lelite &+Wguard&n~
 &+LA tough looking &+Wwarrior&+L is watching the docks here intently.&n
@@ -1798,7 +1798,7 @@ PH 0 1 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6126
+#132626
 young soldier~
 &+ya young &+Lsoldier&+y of &+Yfortune&n~
 &+yA young &+Lsoldier&+y sells out his services.&n
@@ -1809,7 +1809,7 @@ PH 0 1 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 500
 8 8 0
-#6127
+#132627
 young mercenary~
 &+ya young mercenary&n~
 &+yA young mercenary has been hired out here.&n
@@ -1820,7 +1820,7 @@ PH 0 16384 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 1500
 8 8 0
-#6128
+#132628
 experienced tracker~
 &+yan &+Lexperienced&+y tracker&n~
 &+yAn &+Lexperienced&+y tracker has sold his services out.&n
@@ -1831,7 +1831,7 @@ PH 0 2 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 4500
 8 8 1
-#6129
+#132629
 veteran soldier~
 &+ya veteran &+Lsoldier&n~
 &+yA veteran &+Lsoldier&+y has been hired out.&n
@@ -1842,7 +1842,7 @@ PH 0 1 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 15000
 8 8 1
-#6130
+#132630
 elite mercenary experienced~
 &+Lan &+Welite&+y mercenary&n~
 &+LAn &+Welite&+L and experienced &+ymercenary&+L has been hired here.&n
@@ -1853,7 +1853,7 @@ PH 0 16384 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 45000
 8 8 1
-#6500
+#132631
 kabanon prophet old man~
 &+LKabanon&n, &+Wthe prophet&n~
 &+yA diminutive &+Wold &+Lman&+y sits here, scribbling on some &+Wvellum&+y.&n
@@ -1881,7 +1881,7 @@ PH 1 4 -1
 45 -1 -69 45d99+1980 6d6+12
 5.9.8.4 109350
 8 8 1
-#6501
+#132632
 swan~
 the &+Wswan&n~
 &+BA &+Wswan&+B is swimming around in the pond.&n
@@ -1893,7 +1893,7 @@ A 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
-#6502
+#132633
 mallard~
 the &+gma&+Wl&+Llard&n~
 &+BA &+gma&+Wl&+Llard&+B is swimming around in the pond.&n
@@ -1907,7 +1907,7 @@ A 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
-#6503
+#132634
 sparrow~
 the &+ysparrow&n~
 &+gA &+ysparrow&+g is flapping around in the tree.&n
@@ -1920,7 +1920,7 @@ B 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
-#6504
+#132635
 duck~
 the &+Yduck&n~
 &+gA &+Yduck&+g is here, quacking happily.&n
@@ -1932,7 +1932,7 @@ A 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
-#6505
+#132636
 squirrel~
 a &+Lsquirrel&n~
 &+WA &+Lsquirrel&+W is wandering around here.&n
@@ -1945,7 +1945,7 @@ A 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
-#6506
+#132637
 rabbit~
 a &+wrabbit&n~
 &+gA &+wrabbit&+g is here, scrounging around for food.&n
@@ -1958,7 +1958,7 @@ A 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
-#6507
+#132638
 chipmunk~
 a &+ychipmunk&n~
 &+gA small &+ychipmunk&+g scurries about here.&n
@@ -1970,7 +1970,7 @@ A 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
-#6508
+#132639
 scorpion bone mesa~
 a &+ymesa &+Lscorpion&n~
 &+yA small &+ymesa &+Lscorpion&+y clatters around here noisily.&n
@@ -1985,7 +1985,7 @@ AS 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
-#6509
+#132640
 guard man patrolling young~
 a &+Lmilitia &+Wguard&n~
 &+wA young man in &+Lleather armor&+w seems to be patrolling the area.&n
@@ -1999,7 +1999,7 @@ PH 1 1 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
-#6510
+#132641
 keepguard guard warrior tough elite~
 an &+Lelite &+Wkeepguard&n~
 &+LA war-hardened &+Wwarrior&+L is scanning the landscape for trouble.&n
@@ -2014,7 +2014,7 @@ PH 1 1 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
-#6511
+#132642
 kyle englis~
 &+BKyle &+CEngils&n~
 &+BKyle &+CEngils&+w sits behind his desk here, pouring over &+Ldungeon&+w records.&n
@@ -2028,7 +2028,7 @@ G 1 1 -1
 50 -3 -85 50d119+3000 6d6+25
 0.3.1.5 121500
 8 8 1
-#6512
+#132643
 militia guard dock~
 a &+ydock &+Lguard&n~
 &+LA &+Wmilitia&+L guard is posted here, keeping watch over the docks.&n
@@ -2042,7 +2042,7 @@ PH 1 2 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
-#6513
+#132644
 grounds keeper~
 a &+ggrounds &+Gkeeper&n~
 &+gA &+Ggrounds keeper&+g is cleaning here, singing songs to &+WMielikki&+g.&n
@@ -2056,7 +2056,7 @@ PH 1 2 -1
 4 20 87 4d17+22 1d5+0
 2.1.0.0 518
 8 8 1
-#6514
+#132645
 archer militia guard~
 a &+Wmilitia &+Rarcher&n~
 &+LA &+Wmilitia&+R archer&+L is posted here, keeping watch of the gates below.&n
@@ -2070,7 +2070,7 @@ PH 1 2 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
-#6515
+#132646
 guard man bridge young~
 a &+Lmilitia &+Wguard&n~
 &+wA young man in &+Lleather armor&+w has been posted here to guard the bridge.&n
@@ -2084,7 +2084,7 @@ PH 1 1 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
-#6516
+#132647
 guard dungeon jailor~
 a &+Ldungeon jailor&n~
 &+WA &+Ljailor&+W is posted here, keeping a watch over the &+Ldungeons&+W.&n
@@ -2098,7 +2098,7 @@ PH 1 2 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
-#6517
+#132648
 alanan sorcerer master teacher~
 &+WAlanan&N~
 &+WAlanan&+L, the great &+Wtharnadian &+Msorcerer&+L, stands here deep in thought.
@@ -2114,7 +2114,7 @@ PH 1 512 -1
 56 6 -12 35d56+525 4d6+7
 9.9.1.2 1
 8 8 1
-#6518
+#132649
 khira conjurer master teacher~
 &+BKhira&N~
 &+BKhira&+L, the great &+Wtharnadian &+Yconjurer&+L, stands here instructing her pupils.&N
@@ -2128,7 +2128,7 @@ PH 1 2048 -1
 50 6 -12 10d10+15000 4d6+7
 9.9.1.2 1
 8 8 2
-#6519
+#132650
 aryan shopkeeper~
 &+WAryan&N~
 &+WAryan&N, the shopkeeper, is here ready to serve you.
@@ -2142,7 +2142,7 @@ PH 1 1 -1
 50 6 -12 35d56+525 4d6+7
 9.9.1.2 1
 8 8 1
-#6520
+#132651
 tired citizen~
 &+Wa tired citizen&N~
 &+WA tired citizen is sound asleep within these chambers.&N
@@ -2157,7 +2157,7 @@ PH 1 1 -1
 41 -1 -56 41d107+1845 6d6+12
 1.7.6.3 99630
 4 4 1
-#6521
+#132652
 strong seaman~
 &+Ba strong seaman&N~
 A &+Bstrong seaman&n stands here drawing up plans.
@@ -2173,7 +2173,7 @@ PH 1 4 -1
 36 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 1
-#6522
+#132653
 zehrim ranger master teacher~
 &+mZehrim&N~
 &+gReading an old &+Lrune&+g, &+mZehrim&+g stands here within his chambers.&N
@@ -2188,7 +2188,7 @@ PH 1 2 -1
 51 -3 -95 50d119+2750 6d6+25
 0.3.1.5 1
 8 8 1
-#6523
+#132654
 sleepy citizen~
 &+Wa sleepy citizen&N~
 &+WA sleepy citizen is trying to fall asleep within these chambers.&N
@@ -2203,7 +2203,7 @@ PH 1 1 -1
 39 2 -24 39d95+897 4d7+10
 2.2.3.2 50544
 5 5 1
-#6524
+#132655
 kyrtan~
 &+CKyrtan&N~
 &+CKyrtan&N is here making final preparations in this shop.
@@ -2218,7 +2218,7 @@ PH 1 1 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 1
 8 8 1
-#6525
+#132656
 melmba dark necromancer teacher~
 &+bMelmba&N~
 &+bMelmba&+L, the dark necromancer, is here wandering the city.&N
@@ -2233,7 +2233,7 @@ PH 1 1024 -1
 52 -5 -101 52d88+4316 7d6+30
 7.9.5.6 1
 8 8 2
-#6526
+#132657
 old inmate~
 &+can old inmate&N~
 &+cAn old inmate lazily rests on a pile of hay.&N
@@ -2248,7 +2248,7 @@ PH 1 16 -1
 36 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 8 8 1
-#6527
+#132658
 old inmate~
 &+can old inmate&N~
 &+cAn old inmate lazily rests on a pile of hay.&N
@@ -2263,7 +2263,7 @@ PH 1 1 -1
 36 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 8 8 1
-#6528
+#132659
 ithilin bard travelling halfling~
 &+bIthilin&n, the travelling bard.~
 A &+yhalfling&n in brightly colored garb sits here, studying his map.
@@ -2289,7 +2289,7 @@ PF 7 32768 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6529
+#132660
 zech dwarf dwarven warrior~
 &+bZ&+Le&+bch&n, the &+Ydwarven warrior&n~
 A brawny &+Ydwarf&n stands here, practicing his technique.
@@ -2322,7 +2322,7 @@ PM 5 1 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6530
+#132661
 muscular human arkeln monk~
 a muscular &+Chuman&n~
 A muscular &+Chuman&n paces back and forth here.
@@ -2346,7 +2346,7 @@ PH 0 64 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6531
+#132662
 rambunctious halfling child~
 a rambunctious &+yhalfling&n child~
 a rambunctious &+yhalfling&n child runs wildly around the room.
@@ -2362,7 +2362,7 @@ PF 0 1 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6532
+#132663
 energetic human child~
 an energetic &+Chuman&n child~
 An energetic &+Chuman&n child runs in circles around the room chasing his friend.
@@ -2379,7 +2379,7 @@ PH 0 1 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6533
+#132664
 wild grey elf child~
 a wild &+cgrey elf&n child~
 A wild &+cgrey elf&n child jumps on the bed and cheers on her comrades.
@@ -2395,7 +2395,7 @@ PE 0 1 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
-#6534
+#132665
 xero barbarian mercenary old large trapper~
 &+yX&+We&+yr&+Yo&n, the &+Bbarbarian &+ymercenary&n~
 A large &+Bbarbarian&n sits here, concentrating on building traps.
@@ -2433,7 +2433,7 @@ PB 0 16384 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6555
+#132666
 leodra pudgy gnome conjurer idiot~
 &+yL&+Ye&+Wo&+yd&+Yra&n, the pudgy &+Rgnome&n &+Yconjurer&n~
 A pudgy &+Rgnome&n sulks while sitting at his desk.
@@ -2469,7 +2469,7 @@ PG 0 2048 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6556
+#132667
 bleeding halfling chiln thief rogue~
 a &+Rbleeding &+yhalfling&n~
 A &+Rbleeding &+yhalfling&n lies on the floor here.
@@ -2489,7 +2489,7 @@ PF 0 4096 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6557
+#132668
 beautiful centaur thera druid~
 a &+Cbeautiful &+gcen&+Ltaur&n~
 A &+Cbeautiful &+gcen&+Ltaur&n stands here.
@@ -2526,7 +2526,7 @@ CT 0 128 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
-#6558
+#132669
 energetic gnome alchemist nebble doctor healer~
 an energetic &+Rgnome&n~
 A &+Rgnome&n stands next to the table, pouring some &+cm&+Wy&+cs&+Ct&+We&+cr&+Ci&+Wo&+cu&+Cs&n liquid into a series of flasks.
@@ -2557,7 +2557,7 @@ PG 0 524288 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6570
+#132670
 rich human merchant~
 rich human merchant~
 A human in rich &+mpurple&n robes sits at his desk, flanked by guards.
@@ -2573,7 +2573,7 @@ PH 0 1 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6571
+#132671
 sturdy barbarian bodyguard guard~
 sturdy barbarian bodyguard~
 A sturdy &+BBarbarian&n stands here protecting his master.
@@ -2588,7 +2588,7 @@ PB 0 1 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#6572
+#132672
 menae sorcerer gnome sorceress apprentice~
 &+mM&+Me&+mna&+Me&n, the apprentice sorcerer~
 A thin &+Rgnome&n covered in thick blue robes sits here peering at a book.
@@ -2621,7 +2621,7 @@ PG 0 512 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
-#6573
+#132673
 rhed elven ranger grey elf~
 &+GR&+gh&+ye&+gd&n, the elven ranger~
 A slender &+cgrey elf&n is here, looking for something.

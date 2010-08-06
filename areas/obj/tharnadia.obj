@@ -1,4 +1,4 @@
-#6000
+#132500
 gold plaque sign~
 a &+Ygold plaque&n~
 &+WA &+Ygold&+W plaque is mounted in the wall here.&n~
@@ -35,7 +35,7 @@ gold plaque sign~
 &+Y                                 So speaks the code
 &+Y .   .. ________________________________________________________________ ..   .
 ~
-#6001
+#132501
 platinum water basin~
 a &+Wplatinum&+L water basin&n~
 &+LMade of polished &+Wplatinum&+L, a water basin stands to the right of the arch.&n~
@@ -50,7 +50,7 @@ seems to be crafted of platinum, and polished to a bright sheen.  Images of
 holy warriors and their clerical brethren dance along the sides of the water
 container.
 ~
-#6002
+#132502
 scorpion ballista~
 a &+rSc&+Ror&+Ypi&+Won&n &+Lballista&n~
 A heavy &+rSc&+Ror&+Ypi&+Won &+Lballista&n is here.~
@@ -65,7 +65,7 @@ scorpion ballista~
 &+Wwould probably take several people working together to draw back the &+Lballista
 &+Wand fire it, and the awesome damage it could do is simply unquestionable.&n
 ~
-#6003
+#132503
 water ivory fountain~
 &nan &+Lengraved &+Wivory &+Lfountain&n~
 &+LA beautifully sculpted &+Wivory &+Bfountain &+Lrests here.&n~
@@ -114,7 +114,7 @@ woman crying tears statue~
 &+wHer dress seems to actually billow, in an imaginary wind that carrys the&N
 &+wcries of lost &+celven &+Wwarriors &+whome to their kin.&N
 ~
-#6004
+#132504
 onyx plaque~
 an &+Lonyx plaque&n~
 &+LAn onyx plaque can be seen written on the &+Bfountain&+L.&n~
@@ -154,7 +154,7 @@ onyx plaque~
 &+L               .. . ______                           _____ . ..
 &+L                          \_________________________/
 ~
-#6005
+#132505
 statue lord kaynor noble man~
 the &+Wstatue&n on the left~
 &+LAn &+Wivory&+L statue of a noble looking man stands here.&n~
@@ -181,7 +181,7 @@ writing base inscription~
                     &+W         Protector of Virtue
                     &+W        Founder of Tharnadia&n
 ~
-#6006
+#132506
 statue lady tharnadia regal woman~
 the &+Wstatue&n on the right~
 &+LAn &+Wivory&+L statue of a regal woman stands here.&n~
@@ -206,7 +206,7 @@ words base inscription plaque~
                     &+W    . .._____________________.. .
                     &+W     Loving Wife of Lord Kaynor
 ~
-#6007
+#132507
 mutton fried~
 a piece of &+Lfried &+ymutton&n~
 &+WA piece of &+Lfried &+ymutton&+W has been left to rot, here.&n~
@@ -220,7 +220,7 @@ fried mutton~
 a pat of lard, three half-cloves of garlic and crushed basil.  It smells
 absolutely divine.
 ~
-#6008
+#132508
 roast succulent~
 a &+rsucculent &+Rroast&n~
 &+WA succulent &+Rroast&+W has been left here.&n~
@@ -232,7 +232,7 @@ E
 succulent roast~
    Dripping with blood, this well marinated roast looks to be very good.
 ~
-#6009
+#132509
 pastry fluffy light elvish~
 a light &+celvish &+Wpastry&n~
 &+CA light and fluffy &+celvish &+Wpastry&+C sits here.&n~
@@ -245,7 +245,7 @@ fluffy light elvish pastry~
    Made from a light batter and a heavy cream-like filling, this pastry is
 capped in a perculiar blue fruit.
 ~
-#6010
+#132510
 stove iron wood-burning~
 an &+Liron stove&n~
 &+WAn &+Liron &+ywood&+W-burning stove stands here.&n~
@@ -259,7 +259,7 @@ iron wood-burning stove~
 can be added to the fire.  A ventilation pipe leads up from its top, and
 disappears through the wall.
 ~
-#6011
+#132511
 hearth stone~
 a &+Lstone &+rhearth&n~
 &+WA &+Lstone &+rhearth&+W is set in the wall.&n~
@@ -272,7 +272,7 @@ stone hearth~
    Made of hewn sarsen, this fireplace is set into the wall, its chimney
 running up through the roof.
 ~
-#6012
+#132512
 dual stone hearth~
 a &+Lstone &+Wdual &+rhearth&n~
 &+WA &+Lstone&+W dual &+rhearth&+W is set in the wall.&n~
@@ -286,7 +286,7 @@ stone hearth dual~
 running up through the roof.  The fire burns in the lower chamber, cooking the
 food, while the upper chamber is meant to keep foods warm.
 ~
-#6013
+#132513
 wicked coffin iron maiden~
 an &+Liron maiden&n~
 &+LA wicked coffin, filled with sharp spikes, stands here.&n~
@@ -300,7 +300,7 @@ wicked coffin iron maiden~
 through the coffin's occupant.  The outside of the coffin is marked with the
 city and rising moon symbol of Tharnadia.
 ~
-#6014
+#132514
 wooden stall~
 a &+ywooden&n &+Wstall&n~
 &+WA &+ywooden&+W stall stands here, goods displayed upon its counter.&n~
@@ -314,7 +314,7 @@ wooden stall~
 bright tarp.  Various goods are on display, covering the counter's top for
 the customers to see.
 ~
-#6015
+#132515
 viscid potion blue vial _id_~
 a thick &+Lv&+wi&+Ws&+Yc&+Ri&+rd&+B potion&n~
 &+WA &+Bblue&+W vial filled with a thick &+Lv&+wi&+Ws&+Yc&+Ri&+rd&+W fluid, rests here.&n~
@@ -335,7 +335,7 @@ E
 _id_short_~
 &+Wa potion of blessed protection&n
 ~
-#6016
+#132516
 clear vial crimson potion _id_~
 a &+Wclear&n vial of &+Rcrimson&n liquid&n~
 A &+Wclear&n vial filled with &+Rcrimson&n fluid, has been left here.~
@@ -357,7 +357,7 @@ E
 _id_short_~
 &+ca potion of curing&n
 ~
-#6017
+#132517
 bizarre vial speckled green potion _id_~
 a &+Gs&+Yp&+Ge&+Yc&+Gk&+Yl&+Ge&+Yd &+ggreen&+W potion&n~
 &+gA bizarre looking vial has been abandoned here.&n~
@@ -379,7 +379,7 @@ E
 _id_short_~
 &+ga potion of curse removal&n
 ~
-#6018
+#132518
 orb vermillion beacon stand~
 the &+Wlighthouse &+Rbeacon&n~
 &+WA glowing &+Rvermillion&+w orb rests in its &+Cstand&+W, here.&n~
@@ -394,7 +394,7 @@ atop the metal stand.  Whatever powers the sphere must be within it, as it
 glows uniformly with a blindingly brilliant crimson hue.  The illumination is
 so bright, that ships could probably see it from miles out.
 ~
-#6019
+#132519
 map tharnadia tourism~
 a &+Wmap&+L of &+WTharnadia&n~
 &+LA well drawn tourism &+Wmap&+L of &+WTharnadia&+L has been left here.&n~
@@ -425,7 +425,7 @@ tourism map tharnadia~
       Southern
         Beach
 ~
-#6020
+#132520
 cuirass blacksteel breastplate~
 a &+Lbla&+wckst&+Weel &+Bcuirass&n~
 &+wA breastplate, &+Rforged&+w from &+Lbla&+wckst&+Weel&+w, rests here.&n~
@@ -442,7 +442,7 @@ divided by an elegant treeshaped cruciform.
 ~
 A
 18 2
-#6021
+#132521
 chainmail vorhide leggings~
 some &+Bvo&+cr&+Chi&+Wde &+Lleggings&n~
 &+LSome leggings made of &+Wchainmail&+L and &+Bvo&+cr&+Chi&+Wde&+L, have been abandoned here.&n~
@@ -459,7 +459,7 @@ left thigh is the twin keep symbol of Tharnadia.
 ~
 A
 2 4
-#6022
+#132522
 chainmail blacksteel coif~
 a &+Lbla&+wckst&+Weel &+Bcoif&n~
 &+wA padded &+Wchainmail&+w coif, of fine &+Ladmantite&+w, has been left here.&n~
@@ -475,7 +475,7 @@ silver links that make up the symbol of Tharnadia, upon the coif's crown.
 ~
 A
 18 1
-#6023
+#132523
 armplates vorhide~
 some &+Bvo&+cr&+Chi&+Wde &+Larmplates&n~
 &+LA pair of &+Bvo&+cr&+Chi&+Wde&+L armplates have been placed here.&n~
@@ -494,7 +494,7 @@ Tharnadia.
 ~
 A
 5 4
-#6024
+#132524
 hammer forge~
 a heavy &+rf&+Ro&+Yr&+Wge &+Lhammer&n~
 &+LA heavy forge hammer is propped against the wall here.&n~
@@ -509,7 +509,7 @@ on one side with a giant flaming anvil and the Tharndian Sigil on the other.
 Its long shaft is made of mithril and has strange magical runes engraven round
 it.
 ~
-#6025
+#132525
 fishing pole~
 a &+yfishing pole&n~
 &+yA rudimentary fishing pole has been abandoned here.&n~
@@ -522,20 +522,20 @@ fishing pole~
    This fishing pole consists of a long treebranch with a thin rope and hook.
 Its owner's name is unintelligably scribbled into the poles handle.
 ~
-#6026
+#132526
 loose brick~
 a &+Lloose brick&n~
 &+LThere is a loose brick in the cell wall, here.&n~
 ~
 29 11 0 50 7 0 4096 0 0 0 0
-270 6120 1 0 0 0 0 0
+270 132619 1 0 0 0 0 0
 0 0 100
 E
 loose brick~
    A previous prisoner must have spent many months loosening this brick, and
 now perhaps it can be to some deserving person's benefit, namely you!
 ~
-#6027
+#132527
 cuirass breastplate steel~
 a &+Wst&+Ce&+cel &+Rcuirass&+L emblazoned with the insignia of &+WTharnadia&n~
 &+wA &+Wst&+Ce&+cel&+w breastplate emblazoned with &+WTharnadia's&+w insignia, rests here.&n~
@@ -550,7 +550,7 @@ which gives it a peculiar ebon hue.  Black leather straps bind the frontplate
 with its rear counterpart.  Emblazoned on the breast of the armor is an image
 of the moon rising behind the twin keeps encircled by a chainlink necklace.
 ~
-#6028
+#132528
 boots blacksteel~
 a pair of &+Lbla&+wckst&+Weel&+L boots&n~
 &+wA pair of &+Lbla&+wckst&+Weel&+L boots&+w stand here.&n~
@@ -564,7 +564,7 @@ boots blacksteel~
 plates joined over the material.  The leather offers comfort, while the plates
 lend the material the protection it previously lacked.
 ~
-#6029
+#132529
 armor leather spiked suit~
 some &+Wspiked &+Lleather armor&n~
 &+WA suit of spiked &+Lleather armor&+W lies here.&n~
@@ -577,7 +577,7 @@ suit armor spiked leather~
 Made from thick leathers that have been boiled in oils then molded to a human
 form, this armor has small one inch spikes mounted all over it.
 ~
-#6030
+#132530
 leggings leather~
 some &+Lleather leggings&n~
 &+LSome leather leggings were left here.&n~
@@ -593,7 +593,7 @@ pants made of soft leather, which conform to the leg.  Altogether there are
 four pads to protect the wearers thighs, while the lower leg is left clear so
 that boots can be worn.
 ~
-#6031
+#132531
 boots leather soft high~
 a pair of &+Lhigh-soft leather boots&n~
 &+LA pair of leather boots lies here.&n~
@@ -609,7 +609,7 @@ then for fighting.
 ~
 A
 2 4
-#6032
+#132532
 leather spiked armor suit~
 some &+Wspiked &+Lleather armor bearing the insignia of &+WTharnadia&n~
 &+WA suit of spiked &+Lleather armor&+W lies here.&n~
@@ -628,7 +628,7 @@ A
 19 2
 A
 2 6
-#6033
+#132533
 freshwater spring pool water~
 a &+Bfreshwater spring&n~
 &+BA freshwater spring bubbles up into a small pool, here.&n~
@@ -641,7 +641,7 @@ freshwater spring pool water~
 &+B   Clear and cool to the touch, a freshwater spring bubbles up from through
 &+Bthe forest floor.&n
 ~
-#6034
+#132534
 boulder encovered vines entangled covered~
 a &+gvine &nentangled &+yrock&n~
 &+WA &+yboulder&+W, almost completely covered with &+gvines&+W, sits here.&n~
@@ -656,7 +656,7 @@ boulder rock stone~
 &+ythe stone looks very ancient.  Possibly this boulder was left here after the
 &+yconstruction of the &+WTharnadian&+B sea &+Lwalls&+y.&n
 ~
-#6035
+#132535
 carnihern circle ivory altar~
 the &+cCarnihern &+CCircle&n~
 &+gA &+Gdruidic&n &+Lstone circle&+g stands here, an &+Wivory&+g altar at its center.&n~
@@ -695,7 +695,7 @@ ivory altar scrimshaw~
 &+Wthe altar's center is carved the union of the moon and the sun, on the verge
 &+Wof ecl&+wi&+Lpse&+W.&n
 ~
-#6036
+#132536
 stack coffins~
 a stack of &+ycoffins&n~
 &+WA stack of &+ycoffins&+W sits next to the &+Liron maiden&+W.&n~
@@ -708,7 +708,7 @@ stack coffins~
    Premeasured and precut to fit any executional occassion, these coffins are
 the cutting edge of justice fashion.
 ~
-#6037
+#132537
 necklace jewelled~
 a beautiful &+mjewelled &+Wnecklace&n~
 &+mA beautiful jewelled necklace lies here.&n~
@@ -721,7 +721,7 @@ necklace jeweled~
 &+W   Several &+mpurple&+W gemstones are set within a white &+Ygold&+W necklace.  This piece
 &+Wof art was most definately a noblewoman's at one time.&n
 ~
-#6038
+#132538
 earring diamond~
 a &+Wdiamond &+Yearring&n~
 A &+Wdiamond &+Yearring&n lies here.~
@@ -739,7 +739,7 @@ A
 18 1
 A
 13 3
-#6039
+#132539
 stone rare ebon ruby~
 a rare &+Lebon &+Rruby&n~
 &+WA beautiful &+Ls&+wt&+Wo&+Rn&+re&+W lies here.&n~
@@ -753,7 +753,7 @@ rare stone ebon ruby~
 &+Wveins of &+Lonyx&+W that formed within the stone during its creation.  Considered
 &+Wvery rare, most jewelers pay well for a stone like this.&n
 ~
-#6040
+#132540
 jewel fine violet~
 a fine &+Mviolet&n jewel~
 A fine &+Mviolet&n jewel~
@@ -766,7 +766,7 @@ jewel fine violet~
 &+M   This violet gem is carved in a pair cut, its many facets trapping and
 &+Mrefracting light.&n
 ~
-#6041
+#132541
 gem gemstone common~
 a common &+rgemstone&n~
 &+LA common &+rgemstone&+L lies here.&n~
@@ -779,7 +779,7 @@ gem gemstone common~
 &+r   This dull looking &+Rred&+r gemstone is quite common amongst the &+yhills&+r and &+Yshores&n
 &+rof the &+WTharnadian&+r provice.  You don't think it will fetch that good a price.&n
 ~
-#6042
+#132542
 sapphire vibrant~
 a vibrant &+Bsapphire&n~
 &+BA vibrant stone lies here.&n~
@@ -792,7 +792,7 @@ sapphire vibrant~
 &+B   This brilliant blue gemstone has meny facets, each one almost without
 &+Bimperfection.&n
 ~
-#6043
+#132543
 diamond~
 a finely cut &+Wdiamond&n~
 &+LA finely cut &+Wdiamond&+L lies here.~
@@ -805,7 +805,7 @@ diamond~
 &+L   The hardest of all stones, this &+Wdiamond&+L has been expertly crafted into a
 &+Lsmall&+W swan&+L.  Each facet lending to the overall beauty of the whole.&n
 ~
-#6044
+#132544
 wooden bat~
 a &+ywooden bat&n~
 &+yA wooden bat rests here.&n~
@@ -823,7 +823,7 @@ A
 18 3
 A
 19 1
-#6045
+#132545
 water glass~
 a &+Wglass&n~
 &+WA water glass has been left here.&n~
@@ -835,7 +835,7 @@ E
 water glass~
    A simplistic looking glass with a deep throat and shallow stem.
 ~
-#6046
+#132546
 ale bottle~
 a &+Ybottle&n~
 &+WAn &+Yale bottle&+W has been left here.&n~
@@ -859,7 +859,7 @@ ale bottle~
                         &+W | &+BWhat's a Deposit?&+W |
                         &+W |___________________|&n
 ~
-#6047
+#132547
 beer bottle~
 a &+ybottle&n~
 &+yA beer bottle has been left here.&n~
@@ -883,7 +883,7 @@ beer bottle~
                           &+W | &+mit'll get on you.&+W |
                           &+W |___________________|&n
 ~
-#6048
+#132548
 firebreather bottle~
 a &+rfir&+Rebr&+Yeat&+Wher&n~
 &+rA firebreather has been left here.~
@@ -898,7 +898,7 @@ firebreather bottle~
 &+Rand his tail is straight out behind him.  You get the idea that this drink has
 &+Rsome kick.&n
 ~
-#6049
+#132549
 local bottle~
 a &+Bbottle&n~
 &+BA dark bottle has been left here.&n~
@@ -912,7 +912,7 @@ local bottle~
 &+BBetter Blinded Populace&+W.'  You're not quite sure what the hell that means, but
 &+Wit can't be good.&n
 ~
-#6050
+#132550
 polearm pole blacksteel black steel~
 a &+Lbla&+wckst&+Weel&+B polearm&n~
 &+WA long polearm lies here.~
@@ -926,7 +926,7 @@ polearm pole blacksteel black steel~
 &+Bpole capped in a wicked curving blade.  The words, '&+RLove Thy Weapon&+B,' are
 &+Bcarved into the shaft.&n
 ~
-#6051
+#132551
 battleaxe axe~
 a &+Wdouble-bladed&+L battle axe&n~
 &+yA &+Wdouble-bladed&+L battle axe&+y lies on the ground here.&n~
@@ -944,7 +944,7 @@ A
 18 3
 A
 19 1
-#6052
+#132552
 bread~
 a loaf of &+ybread&n~
 &+WA loaf of &+ybread&+W has been left here.&n~
@@ -957,7 +957,7 @@ bread~
 &+y   Made from hand-ground wheat and cooked to perfection, this bread is fluffy
 &+yand light.&n
 ~
-#6053
+#132553
 pastry halfling~
 a &+yhalfling &+Wpastry&n~
 &+cA nice looking delicious &+yhalfling&+W pastry&+c has been placed here.&n~
@@ -970,7 +970,7 @@ halfling pastry~
 &+W   This pastry is made in the tradition fashion passed down by halflings from
 &+Wgeneration to generation.  Its is light, fluffy, and tastes exquisite.&n
 ~
-#6054
+#132554
 potion stygian magenta _id_~
 a &+Lstygian &+mmagenta&+L potion&n~
 &+WA &+Lstygian &+mmagenta &+Lpotion&+W lies here.&n~
@@ -990,7 +990,7 @@ E
 _id_short_~
 &+ma potion of poison removal&n
 ~
-#6055
+#132555
 sword small~
 a small &+Wsword&N~
 &+CA small &+Wsword&+C was abandoned here.&n~
@@ -1008,7 +1008,7 @@ sword small~
                 &+Y| |
                 &+Y|_|&n
 ~
-#6056
+#132556
 club wooden~
 a &+ywooden &+Lclub&n~
 &+yA simple looking wooden club is here.&n~
@@ -1021,7 +1021,7 @@ club wooden~
    &+yThis club is actually just a small thick tree branch, gnarled and
 &+yknotted.&n
 ~
-#6057
+#132557
 warhammer hammer~
 a &+Rwar&+Lhammer~
 &+WA medium sized &+Rwar&+Lhammer&+W lies here.&n~
@@ -1034,7 +1034,7 @@ warhammer hammer~
 &+W   Crafted for use in battle, this medium sized hammer has a square steel
 &+Whead and long &+ywooden&+W shaft.&n
 ~
-#6058
+#132558
 flail large~
 a &+Lfl&+wa&+ci&+Cl&n~
 &+LA large flail sits here.&n~
@@ -1049,7 +1049,7 @@ flail large~
 ~
 A
 18 2
-#6059
+#132559
 water skin leather~
 a &+yleather skin&n~
 &+yA leather skin lies here.~
@@ -1062,7 +1062,7 @@ water skin leather~
    This waterskin is crafted from the tanned bladder of an ox.  It has a long
 strap and a cork stopper.
 ~
-#6060
+#132560
 chain mail shirt~
 a &+Wcha&+winm&+Lail &+Cshirt&n~
 &+CA chain mail shirt is lying on the ground.&n~
@@ -1075,7 +1075,7 @@ chain mail shirt~
    Made of thousands upon thousands of small chainlinks, this shirt offers
 decent protection against attacks.
 ~
-#6061
+#132561
 shield wooden~
 a &+ywooden &+Lshield&n~
 &+WA small &+ywooden &+Lshield&+W is lying on the ground.&n~
@@ -1089,7 +1089,7 @@ shield wooden~
 &+Ltwin keeps&+W has been carved into its surface, marred by nicks and holes from
 &+Wbattles fought.&n
 ~
-#6062
+#132562
 jacket soft leather~
 a &+clea&+Cth&+Wer &+Ljacket&n~
 &+LA soft leather jacket has been discarded here.&n~
@@ -1104,7 +1104,7 @@ jacket soft leather~
 ~
 A
 18 1
-#6063
+#132563
 jacket scale mail~
 a &+cscale &+Cmail &+cjacket&n~
 &+cA scale &+Cmail&+c jacket is lying on the ground.&n~
@@ -1117,7 +1117,7 @@ jacket scale mail~
 &+C   This is a coat of soft leather covered with overlapping pieces of metal,
 &+Cmuch like the scales of a fish.&n
 ~
-#6064
+#132564
 breastplate mithril breast plate~
 a &+Cmithril &+Lbreast plate&n~
 &+LA &+Cmithril&+L breast plate is lying on the ground.&n~
@@ -1131,7 +1131,7 @@ mithril breast plate~
 the areas of vital organs.  The emblem of a flying dragon has been banged into
 the front plate of this suit.&n
 ~
-#6065
+#132565
 suit chain chainmail~
 a &+Lsuit of &+Wchainmail&+L armor&n~
 &+WA suit of chainmail armor has been discarded here.&n~
@@ -1148,7 +1148,7 @@ suit chain chainmail~
 ~
 A
 2 1
-#6066
+#132566
 shield round~
 a &+Lshield&+B emblazoned with the insignia of &+WTharnadia&n~
 &+BA &+WTharnadian&+B guard shield rests here.&n~
@@ -1162,7 +1162,7 @@ shield round~
 &+WTharnadia&+L.  The twin keeps are imprinted on the shields front, a light &+Ygilding
 &+Lmaking them prominent.&n
 ~
-#6067
+#132567
 raft oak~
 an &+goak &+yraft&n~
 &+yA raft has been left here.&n~
@@ -1175,7 +1175,7 @@ oak raft~
 &+y   This raft was carved from the dead trunk of an &+goak &+Gtree&+y, the inside having
 &+ybeen hollowed out and covered in tar.  It looks very primitive.&n
 ~
-#6068
+#132568
 canoe deerskin~
 a &+Wdeerskin &+ycanoe&n~
 &+yA canoe has been abandoned here.&n~
@@ -1189,7 +1189,7 @@ canoe deerskin~
 &+yHowever, its wood frame was made of solid oak, thus voiding the crafter's
 &+yintent.&n
 ~
-#6069
+#132569
 two handed claymore~
 a &+Ltwo-handed &+Wclay&+Cmo&+cre&n~
 &+LA fine &+Wclay&+Cmo&+cre&+L has been lain here.&n~
@@ -1207,7 +1207,7 @@ A
 18 4
 A
 19 1
-#6070
+#132570
 die ten sided~
 &+Wa ten-sided die&n~
 &+WA die is here.&n~
@@ -1219,7 +1219,7 @@ E
 die ten sided _ignore_~
 Made of ivory, this die is perfectly balanced.
 ~
-#6071
+#132571
 tally sheet~
 a &+Wtally sheet&n~
 &+WA tally sheet can be seen tacked to the wall, just outside the cell.&n~
@@ -1232,7 +1232,7 @@ tally sheet~
 &+L   It is clearly labeled is property of the &+WTharnadian&+L jail, and includes a
 &+Llist of current prisoners.&n
 ~
-#6072
+#132572
 lantern hooded~
 a &+Lhooded &+rl&+Ra&+Yn&+Wt&+Ye&+Rr&+rn&n~
 &+LA hooded &+rl&+Ra&+Yn&+Wt&+Ye&+Rr&+rn&+L lies here.&n~
@@ -1246,7 +1246,7 @@ lantern hooded~
 &+Whandle extends from the hood, allowing it to be held and carried.  A reserve
 &+Wof &+Loil&+W in the lantern's base, keeps it constantly lit.&n
 ~
-#6073
+#132573
 gauntlets mithril~
 a pair of &+Cmithril &+Lgauntlets&n~
 &+LA pair of &+Cmithril&+L gauntlets are lying on the ground.&n~
@@ -1264,7 +1264,7 @@ A
 18 2
 A
 1 6
-#6074
+#132574
 fingers vorhide~
 a pair of &+cvo&+Crhi&+Wde &+Lfingers&n~
 &+LA pair of &+cvo&+Crhi&+Wde &+Lfingers are lying on the ground.&n~
@@ -1281,7 +1281,7 @@ fingers vorhide~
 ~
 A
 18 1
-#6075
+#132575
 helmet mithril~
 a &+Cmithril &+Lhelmet&n~
 &+LA &+Cmithril&+L helmet is lying on the ground.&n~
@@ -1295,7 +1295,7 @@ helmet mithril~
 &+LA thin splint of metal comes down over the nose, more for show than functional
 &+Lprotection.&n
 ~
-#6076
+#132576
 cap leather~
 a &+Lleather cap&n~
 &+LA leather cap is lying on the ground.&n~
@@ -1310,7 +1310,7 @@ cap leather~
 ~
 A
 18 1
-#6077
+#132577
 guard forearm orcskin~
 an &+Lorcskin &+cforearm&+L guard&n~
 &+WAn &+Lorcskin &+cforearm&+L guard &+Wlies crumpled here.&n~
@@ -1326,7 +1326,7 @@ orcskin forearm guard~
 ~
 A
 18 1
-#6078
+#132578
 leggings mithril~
 a pair of &+Cmithril &+Lleggings&n~
 &+LA pair of &+Cmithril &+Lleggings is lying on the ground.&n~
@@ -1341,7 +1341,7 @@ leggings mithril~
 ~
 A
 18 1
-#6079
+#132579
 pants leather~
 a pair of &+Lleather pants&n~
 &+LA pair of leather pants is lying on the ground.&n~
@@ -1354,7 +1354,7 @@ pants leather~
 &+L   A tight pair of leather pants sort of like the type that singer Mim
 &+LJorrison would wear.  They are quite smelly.&n
 ~
-#6080
+#132580
 gauntlets steel~
 a pair of &+Lsteel &+Wgauntlets&n~
 &+WSome &+Lsteel&+W gauntlets lie here.&n~
@@ -1370,7 +1370,7 @@ A
 18 1
 A
 19 1
-#6081
+#132581
 sign counter~
 the &+ycounter&n~
 &+yA large wooden counter is here, with a &+Wsign&+y posted on it.&n~
@@ -1386,7 +1386,7 @@ sign counter wooden~
              &+W  Have a nice day.
              &+W  . .._______________________________________.. .
 ~
-#6082
+#132582
 chest iron~
 the &+Lchest&n~
 &+LThe chest is small, made from solid iron.&n~
@@ -1398,7 +1398,7 @@ E
 chest iron~
 &+L   This chest stands about two-feet, and is made entirely of iron.&n
 ~
-#6083
+#132583
 coins gold~
 a pile of &+Ygold&n coins~
 &+YA pile of gold is scattered here.&n~
@@ -1406,7 +1406,7 @@ a pile of &+Ygold&n coins~
 20 24 1 0 7 0 0 1 0 0 0
 0 0 50 0 0 0 0 0
 1 0 100
-#6084
+#132584
 chest wood iron~
 an &+Lironbound &+ychest&n~
 &+WAn &+Lironbound &+ychest&+W rests here.&n~
@@ -1420,7 +1420,7 @@ chest wood iron~
 ~
 T
 516 0 -1 10
-#6085
+#132585
 gold coins~
 some &+Ygold &+Wcoins&n~
 &+Ya small pile of gold coins is here.~
@@ -1428,7 +1428,7 @@ some &+Ygold &+Wcoins&n~
 20 24 1 0 7 0 0 1 0 0 0
 0 0 3 1 0 0 0 0
 0 0 100
-#6086
+#132586
 dagger polished steel~
 a &+Wpolished &+Lsteel &+Wdagger&n~
 &+WA polished &+Lsteel&+W dagger lies here.&n~
@@ -1444,7 +1444,7 @@ A
 18 1
 A
 19 1
-#6087
+#132587
 iron rations~
 some &+Liron &+yrations&n~
 &+LA &+ypacket&+L of rations has been left here.&n~
@@ -1456,7 +1456,7 @@ E
 iron rations~
    &+LThis &+ypaper-wrapped&+L packet contains &+Rmeats&+L that have been &+Wsalted&+L for travel.&n
 ~
-#6088
+#132588
 apple ripe~
 an &+rapple&n~
 &+rA ripe, juicy, apple rests here.&n~
@@ -1468,7 +1468,7 @@ E
 apple ripe~
    &+rA fist-sized chunk of fruitatious pleasure.&n
 ~
-#6089
+#132589
 poison skull vial bottle green~
 &+ga dark green bottle&n~
 &+LA &+Wskull&+L-shaped vial has been left here.&n~
@@ -1481,7 +1481,7 @@ poison skull vial~
 &+L   This small vial is shaped like a grinning &+Wskull&+L, two crossed daggers in
 &+Leach of its eyes.&n
 ~
-#6090
+#132590
 bracelet polished steel~
 a &+Wpolished &+Lsteel &+Lbracelet&n~
 &+WA &+Lsteel&+W bracelet lies here.&n~
@@ -1498,7 +1498,7 @@ A
 17 -10
 A
 18 2
-#6091
+#132591
 steel dog collar~
 a &+Lsteel &+ydog collar&n~
 &+WA steel dog collar lies here.&n~
@@ -1508,7 +1508,7 @@ a &+Lsteel &+ydog collar&n~
 2 817 100
 A
 17 -5
-#6092
+#132592
 wicked dagger~
 a &+Lwicked &+Wdagger&n~
 &+LA beautiful dagger lies here.&n~
@@ -1524,7 +1524,7 @@ A
 18 2
 A
 19 2
-#6093
+#132593
 dagger black assassin~
 a &+Lblack &+rassassin's &+Wdagger&n~
 &+LA black assassin's dagger lies here.&n~
@@ -1537,7 +1537,7 @@ dagger black~
 &+L   It is a fine weapon, made from blackened duranium steel that will not rust.
 &+LThe dagger looks like the perfect companion for an assassin.&n
 ~
-#6094
+#132594
 bone picks lockpicks~
 a set of &+Wbone picks&n~
 &+WA set of bone picks have been dropped here.&n~
@@ -1545,7 +1545,7 @@ a set of &+Wbone picks&n~
 31 10 1 2 7 0 1024 16385 0 8515584 0
 20 49 -1 -1 0 0 0 0
 2 45 100
-#6095
+#132595
 sword venom belialian~
 a &+LBelialian &+Wsword&+L of &+Gvenom&n~
 &+LA viscous looking sword lies here.&n~
@@ -1563,7 +1563,7 @@ A
 18 2
 A
 19 1
-#6096
+#132596
 cloak leather~
 a &+Lleather cloak&n~
 &+LA leather cloak was dropped here.&n~
@@ -1581,7 +1581,7 @@ A
 17 -4
 A
 18 1
-#6097
+#132597
 moldy bed straw~
 a &+Gmoldy &+Ystraw&n bed&n~
 &+LA &+gmoldy &+Ystraw&+L bed is covered in ratty &+cfurs&+L, here.&n~
@@ -1596,7 +1596,7 @@ moldy bed straw~
 &+Yand beginning to smell foul.  Ratty torn &+cfurs&+Y cover the bed in an attempt to
 &+Ymake it feel comfortable.&n
 ~
-#6098
+#132598
 cum pool~
 a &+Wpool of cum&n~
 &+LA small pool of &+Wcum&+L has gathered underneath the rack.&n~
@@ -1609,7 +1609,7 @@ cum pool~
 &+W   Little milky white pool, filled with millions of round headed swimming
 &+Wsperm yearning to breath free.&n
 ~
-#6099
+#132599
 rack~
 the &+yrack&n~
 &+yA peculiar sex rack rests here.&n~
@@ -1630,7 +1630,7 @@ placed within his flesh.  All in all this machine does not look to
 pleasureable, but it is the brothel specialty.  A small pool of cum has
 accumulated at the rack's base, having oozed from the hydro-suction pump.&n
 ~
-#6100
+#132600
 hooking ticket~
 a &+Whooking ticket&n~
 &+WA ragged hooking ticket lies crumpled here.&n~
@@ -1647,7 +1647,7 @@ hooking ticket~
              &+W | &+L o&+W| &+RTry Out Our All New Rack&+W |
              &+W |___|__________________________|&n
 ~
-#6101
+#132601
 ribbed vorskin penis sheath~
 a &+cvor&+Csk&+Win &+Ypenis &+Wsheath&n~
 &+WA ribbed &+cvor&+Csk&+Win bag lies here.&n~
@@ -1660,7 +1660,7 @@ ribbed vorskin penis sheath~
   &+LWrap it or slap it.  Ribbed for her pleasure, cause you don't really
 &+Lcount.&n
 ~
-#6102
+#132602
 herpes simplex bacteria~
 a bad case of &+Gherpes simplex&n~
 &+GA rather disgusting bacteria grows here.&n~
@@ -1677,7 +1677,7 @@ A
 5 -10
 A
 26 -10
-#6103
+#132603
 gladius backstabber shortsword sword~
 a &+Lgladius&+W called '&+LBac&+wks&+Wta&+Rbb&+rer&+W'&n~
 &+LA peculiar gladius has been left behind, here.&n~
@@ -1697,7 +1697,7 @@ A
 18 2
 A
 19 2
-#6104
+#132604
 backpack bp ermineskin~
 &+Lan &+Ler&+wm&+Wineskin &+Lbackpack&n~
 &+LA &+Wfur&+L backpack has been left here.&n~
@@ -1710,7 +1710,7 @@ ermineskin bp backpack~
 &+L   This backpack is made from the fur of the ellusive &+Wermine&+L, its smooth fur
 &+Lhiding many pockets and large straps.&n
 ~
-#6105
+#132605
 bag leather~
 a &+Lleather bag&n~
 &+LA leather bag lies crumpled, here.&n~
@@ -1722,7 +1722,7 @@ E
 leather bag~
    &+LJust your average every day leather bag.&n
 ~
-#6106
+#132606
 bag racoonskin coon~
 a &+Lr&+Wa&+Lc&+Wc&+Lo&+Wo&+Lnskin bag&n~
 &+LA &+Wfancy&+L looking bag lies here.&n~
@@ -1734,7 +1734,7 @@ E
 racoonskin bag coon~
    &+LThis bag is fashioned from racoon hides, and looks quite nice.&n
 ~
-#6107
+#132607
 rose beautiful~
 &+R@&+G>&+g--&+W'&+g---&+W,&+g---&n~
 &+gA beautiful &+Rrose&+g has been lain at &+WLady Tharnadia's &+gfeet.&n~
@@ -1748,7 +1748,7 @@ rose beautiful~
 ~
 A
 28 3
-#6108
+#132608
 broom~
 a &+ybroom&n~
 &+yA street sweeper's broom has been abandoned here.&n~
@@ -1760,7 +1760,7 @@ E
 broom~
    &+yA wide bristle broom, used for sweeping streets or large buildings.&n
 ~
-#6109
+#132609
 die six sided~
 &+Wa six-sided die&n~
 &+WA die is here.&n~
@@ -1772,7 +1772,7 @@ E
 die six sided _ignore_~
 Made of ivory, this die is perfectly balanced.
 ~
-#6110
+#132610
 die twenty sided~
 &+Wa twenty-sided die&n~
 &+WA die is here.&n~
@@ -1784,7 +1784,7 @@ E
 die twenty sided~
 Made of ivory, this die is perfectly balanced.
 ~
-#6111
+#132611
 longbow well crafted~
 &+ya well crafted longbow&n~
 A well crafted longbow has been left here.~
@@ -1796,7 +1796,7 @@ E
 longbow well crafted~
 This longbow is finely crafted of a very thin but sturdy wood.
 ~
-#6112
+#132612
 crudely made longbow~
 &+La crudely made longbow&n~
 A longbow has been left here.~
@@ -1804,7 +1804,7 @@ A longbow has been left here.~
 6 6 3 0 7 0 4194304 24577 0 0 0
 60 60 0 1 0 0 0 0
 1 4321 100
-#6113
+#132613
 arrow well crafted~
 &+ya well crafted arrow&n~
 An arrow has been left here.~
@@ -1812,7 +1812,7 @@ An arrow has been left here.~
 7 6 3 0 9 0 0 16385 0 0 0
 4 3 5 1 0 0 0 0
 1 821 100
-#6114
+#132614
 arrow crude crudely~
 &+La crudely made arrow&n~
 &+LAn arrow has been left here.&n~
@@ -1820,7 +1820,7 @@ arrow crude crudely~
 7 6 3 0 3 0 0 16385 0 0 0
 2 1 8 1 0 0 0 0
 1 521 100
-#6115
+#132615
 quiver well crafted~
 &+ya well crafted quiver&n~
 &+yA well crafted quiver is here.&n~
@@ -1828,7 +1828,7 @@ quiver well crafted~
 30 6 2 12 9 0 0 5259265 0 0 0
 30 1 1 0 0 0 0 0
 2 491 100
-#6116
+#132616
 mysterious sleeves~
 &+Lsome &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Lsleeves&N~
 &+LSome &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Lsleeves rest upon the ghastly gloomy ground.&N~
@@ -1847,7 +1847,7 @@ A
 13 8
 A
 4 5
-#6117
+#132617
 mysterious leggings~
 &+Lsome &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Lleggings&N~
 &+LSome &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Lleggings rest upon the ghastly gloomy ground.&N~
@@ -1866,7 +1866,7 @@ A
 13 8
 A
 2 5
-#6118
+#132618
 mysterious boots~
 &+Lsome &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Lboots&N~
 &+LSome &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Lboots rest upon the ghastly gloomy ground.&N~
@@ -1885,7 +1885,7 @@ A
 13 8
 A
 26 5
-#6119
+#132619
 mysterious robe~
 &+La &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Lrobe&N~
 &+LA &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Lrobe rest upon the ghastly gloomy ground.&N~
@@ -1904,7 +1904,7 @@ A
 14 21
 A
 30 5
-#6120
+#132620
 spellbook mysterious tome book~
 &+La &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Ltome&N~
 &+LA &+rm&+Ry&+rs&+Rt&+re&+Rr&+ri&+Ro&+ru&+Rs &+Ltome rest upon the ghastly gloomy ground.&N~
@@ -1922,7 +1922,7 @@ A
 3 4
 A
 4 5
-#6121
+#132621
 bookshelf shelf glowing~
 &+ca &+Cg&+clo&+Cw&+cin&+Cg &+cb&+Co&+co&+Ck&+cs&+Ch&+ce&+Cl&+cf&N~
 &+cA mysterious &+Cg&+clo&+Cw&+cin&+Cg &+cb&+Co&+co&+Ck&+cs&+Ch&+ce&+Cl&+cf rests upon the ground here.&N~
@@ -1936,7 +1936,7 @@ bookshelf shelf glowing~
 &+Cst&+co&+Cne&+c.  &+CN&+co&+Ct &+ca fl&+Ca&+cw &+Ci&+cs &+Ce&+cv&+Ci&+cd&+Ce&+cnt &+Cu&+cp&+Co&+cn th&+Ce &+cs&+Cur&+cf&+Ca&+cc&+Ce o&+cf th&+Ci&+cs &+Cm&+cy&+Cs&+ct&+Ce&+cr&+Ci&+co&+Cu&+cs &+Cg&+clo&+Cw&+cin&+Cg &+ce&+Ce&+cr&+Ci&+ce&N
 &+csh&+Ce&+clf.  &+CM&+co&+Cst &+cl&+Ci&+ck&+Ce&+cly th&+Cis &+cw&+Ca&+cs f&+Co&+crg&+Ce&+cd by m&+Ca&+cg&+Ci&+cc&+Ca&+cl cr&+Cea&+ct&+Cu&+cr&+Ce&+cs &+Ci&+cn th&+Ce &+cn&+Ce&+cth&+Ce&+cr r&+Cea&+clms&+c.&N
 ~
-#6122
+#132622
 spellbook book~
 &+La &+yspellbook&N~
 &+LA &+yspellbook &+Lrests upon the gloomy ground here.&N~
@@ -1952,7 +1952,7 @@ A
 3 2
 A
 4 2
-#6123
+#132623
 quill glowing~
 &+La &+Cg&+clo&+Cw&+cin&+Cg &+Lquill&N~
 &+LA &+Cg&+clo&+Cw&+cin&+Cg &+Lquill rests upon the ghastly ground here.&N~
@@ -1968,7 +1968,7 @@ A
 13 2
 A
 4 4
-#6124
+#132624
 crumpled note~
 &+La crumpled up &+wnote&N~
 &+LA mysterious crumpled &+wnote &+Lrest here gathering dust.&N~
@@ -1982,13 +1982,13 @@ crumpled note~
 &+Linto it as a seal.  There is strange writing also, yet it is impossible to tell&N
 &+Lwhat it means.  The only word you can make out seems to say &+rZa&+Lberetorn&+raz&+L.&N
 ~
-#6125
+#132625
 portal glowing magical gate~
 &+La &+Cg&+clo&+Cw&+cin&+Cg &+cp&+Co&+cr&+Ct&+ca&+Cl&n~
 &+LA &+cp&+Co&+cr&+Ct&+ca&+Cl&+L floats here, &+Cg&+clo&+Cw&+cin&+Cg &+Lwith a miriad of &+Wvibrant&+L colors.&n~
 ~
 25 1 0 50 7 0 0 0 64 0 0
-6002 7 -1 0 0 0 0 0
+132501 7 -1 0 0 0 0 0
 1 1 100
 E
 portal glowing gate magical~
@@ -1998,13 +1998,13 @@ portal glowing gate magical~
 &+Llooks as though you could just enter the &+M&+cp&+Co&+cr&+Ct&+ca&+Cl &+Land step right through to the&N
 &+Lother side.&N
 ~
-#6126
+#132626
 portal glowing magical gate~
 &+La &+Cg&+clo&+Cw&+cin&+Cg &+cp&+Co&+cr&+Ct&+ca&+Cl&n~
 &+LA &+cp&+Co&+cr&+Ct&+ca&+Cl&+L floats here, &+Cg&+clo&+Cw&+cin&+Cg &+Lwith a miriad of &+Wvibrant&+L colors.&n~
 ~
 25 1 0 50 7 0 0 0 64 0 0
-6549 7 -1 0 0 0 0 0
+132919 7 -1 0 0 0 0 0
 1 1 100
 E
 portal glowing gate magical~
@@ -2014,7 +2014,7 @@ portal glowing gate magical~
 &+Llooks as though you could just enter the &+M&+cp&+Co&+cr&+Ct&+ca&+Cl &+Land step right through to the&N
 &+Lother side.&N
 ~
-#6127
+#132627
 oakshingle~
 &+ya &+yshingle&N~
 &+LA &+yshingle &+Lhangs over the door to the south.&N~
@@ -2026,7 +2026,7 @@ E
 oakshingle~
 &+L   This &+yshingle &+Llooks like it was crafted from a rather fine grade of &+yoak &+Lwood.&N
 ~
-#6128
+#132628
 largesign~
 &+La large &+ysign&N~
 &+LA large &+ysign &+Lhangs from the front of the counter here.&N~
@@ -2038,7 +2038,7 @@ E
 largesign~
 &+L   This large &+ysign &+Lseems like it was crafted from a fine grade of &+yoak &+Lwood.&N
 ~
-#6129
+#132629
 robe flowing illusions~
 &+wa &+Lflowing robe of &+Wil&+Clu&+csi&+Con&+Ws&N~
 &+LA flowing robe of &+Wil&+Clu&+csi&+Con&+Ws &+Lrests upon the ghastly ground here.&N~
@@ -2056,7 +2056,7 @@ A
 13 13
 A
 24 -2
-#6130
+#132630
 potion glowing strange~
 &+La strange &+Cg&+clo&+Cw&+cin&+Cg &+Lpotion&N~
 &+LA &+Cg&+clo&+Cw&+cin&+Cg &+Lpotion rests upon the ghastly ground here.&N~
@@ -2072,7 +2072,7 @@ A
 13 2
 A
 4 4
-#6131
+#132631
 stained glass window~
 &+ba &+Bstained glass &+Wwindow&n~
 &+bAn intricate &+Bstained glass &+Wwindow&+b is set in the north wall.&n~
@@ -2091,7 +2091,7 @@ stained glass window~
 &+Lfor it ignoring gravity.  Unless this is all some sort of diabolical &+Wil&+Clu&+csi&+Con&N
 &+Lcreated to protect against invaders.&N
 ~
-#6132
+#132632
 spell spellbook arcane _id_~
 &+ban &+Warcane &+bspellbook covered with &+Brunes~
 &+bA thick &+Btome &+blies here waiting for be filled with &+Warcane magic.&n~
@@ -2105,7 +2105,7 @@ spellbook tome book~
 &+LStrange flawless pages radiate a foreboding &+rm&+Ry&+rs&+Rt&+ri&+Rc&+ra&+Rl &+Lglow.  The strange word&N
 &+w'&+rZa&+Lberetorn&+raz&+w' &+Lhas been burned into the diabolical cover of this spellbook.&N
 ~
-#6133
+#132633
 board ferry schedule~
 &+ya &+Wferry&+y schedule&n~
 &+yA board with the current &+Wferry&+y schedule has been set up here.&n~
@@ -2113,7 +2113,7 @@ board ferry schedule~
 13 6 3 0 5 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
-#6134
+#132634
 deposit box list~
 &+ya deposit box&n~
 &+yA deposit box with a list of the local hirelings is here.&n~
@@ -2133,7 +2133,7 @@ deposit box list~
 &+W	4) Veteran Mercenaries - Mercenaries
 &+W	5) Elite Soldiers - Warriors
 ~
-#6500
+#132635
 packet tharnadia vellum maps map~
 &+La &+Wpacket&+L of &+Wmaps&n~
 &+LA small book of &+Wvellum&+L has been discarded here.&n~
@@ -2272,7 +2272,7 @@ page4 4~
                                               &+W -- Throne Room&n
                                               &+w -- Hallway&n
 ~
-#6501
+#132636
 scorpion ballista~
 a &+rSc&+Ror&+Ypi&+Won&n &+LBallista&n~
 A heavy &+rSc&+Ror&+Ypi&+Won &+Lballista&n remains ready, here.~
@@ -2287,7 +2287,7 @@ scorpion ballista~
 &+Wwould probably take several people working together to draw back the &+Lballista
 &+Wand fire it, and the awesome damage it could do is simply unquestionable.&n
 ~
-#6502
+#132637
 vorhide belt~
 a &+Bvo&+cr&+Chi&+Wde &+Lbelt&n~
 &+LA girth made of &+Bvo&+cr&+Chi&+Wde&+L has been abandoned here.&n~
@@ -2303,7 +2303,7 @@ vorhide belt~
 ~
 A
 26 2
-#6503
+#132638
 chainmail coif rogue's leather~
 &+Wa&N &+Lrogue's &+Wcoif&n~
 &+LA padded &+Wchainmail&+L coif was abandoned here.&n~
@@ -2322,7 +2322,7 @@ A
 1 4
 A
 19 2
-#6504
+#132639
 vorhide loincloth dock worker's~
 a &+Bvo&+cr&+Chi&+Wde &+Ldock worker's loincloth&n~
 &+LA &+Bvo&+cr&+Chi&+Wde&+L loincloth was dropped here.&n~
@@ -2339,7 +2339,7 @@ A
 1 2
 A
 2 2
-#6505
+#132640
 steel cuirass breastplate~
 a &+Wcuirass&+m emblazoned with the insignia of &+LCaer Tannad&n~
 &+wA &+Wsteel cuirass&+w emblazoned with &+LCaer Tannad's&+w insignia, rests here.&n~
@@ -2354,7 +2354,7 @@ which gives it a peculiar ebon hue.  Black leather straps bind the frontplate
 with its rear counterpart.  Emblazoned on the breast of the armor is an image
 of an axe crossed over a rising moon encircled by a chainlink necklace.
 ~
-#6506
+#132641
 boots garskin~
 a pair of &+Lg&+wa&+Wr&+ws&+Lk&+wi&+Wn&+L boots&n~
 &+wA pair of &+Lg&+wa&+Wr&+ws&+Lk&+wi&+Wn&+L boots&+w stand here.&n~
@@ -2368,7 +2368,7 @@ boots garskin~
 &+La garfish.  Very flexible, these boots offer decent protection without
 &+Lcompromising comfort.&n
 ~
-#6507
+#132642
 leggings leather~
 some &+Lleather leggings&n~
 &+LSome leather leggings were left here.&n~
@@ -2384,7 +2384,7 @@ pants made of soft leather, which conform to the leg.  Altogether there are
 four pads to protect the wearers thighs, while the lower leg is left clear so
 that boots can be worn.
 ~
-#6508
+#132643
 boots leather soft high~
 a pair of &+Lhigh-soft leather boots&n~
 &+LA pair of leather boots lies here.&n~
@@ -2398,7 +2398,7 @@ boots leather soft high~
 down the front, and mildly comfortable, they are better suited for walking
 then for fighting.
 ~
-#6509
+#132644
 suit armor spiked leather~
 some &+Wspiked &+Lleather&+m armor bearing the emblem of &+LCaer Tannad&n~
 &+WA suit of spiked &+Lleather armor&+W lies here.&n~
@@ -2417,7 +2417,7 @@ A
 19 2
 A
 1 3
-#6510
+#132645
 polearm pole blacksteel black steel~
 a &+Lbla&+wckst&+Weel&+B polearm&n~
 &+WA long polearm lies here.~
@@ -2431,7 +2431,7 @@ polearm pole blacksteel black steel~
 &+Bpole capped in a wicked curving blade.  The words, '&+RLove Thy Weapon&+B,' are
 &+Bcarved into the shaft.&n
 ~
-#6511
+#132646
 tannadian rapier~
 a &+LTannadian&+W rapier&n~
 &+yA &+LTannadian&+W rapier&+y lies on the ground here.&n~
@@ -2447,7 +2447,7 @@ tannadian rapier~
 ~
 A
 18 1
-#6512
+#132647
 sword short~
 a short &+Wsword&N~
 &+CA short &+Wsword&+C was abandoned here.&n~
@@ -2465,7 +2465,7 @@ sword short~
                 &+Y| |
                 &+Y|_|&n
 ~
-#6513
+#132648
 knobkerrie wooden~
 a &+ywooden &+Lknobkerrie&n~
 &+yA simple looking wooden knobkerrie is here.&n~
@@ -2484,7 +2484,7 @@ knobkerrie wooden~
 ~
 A
 18 1
-#6514
+#132649
 warhammer hammer~
 a &+Rwar&+Lhammer~
 &+WA medium sized &+Rwar&+Lhammer&+W lies here.&n~
@@ -2497,7 +2497,7 @@ warhammer hammer~
 &+W   Crafted for use in battle, this medium sized hammer has a square steel
 &+Whead and long &+ywooden&+W shaft.&n
 ~
-#6515
+#132650
 flail large~
 a &+Lfl&+wa&+ci&+Cl&n~
 &+LA large flail sits here.&n~
@@ -2510,7 +2510,7 @@ flail large~
 &+L   This flail consists of a long rod with three chainlinks and a spiked ball
 &+Lattached to its end.&n
 ~
-#6516
+#132651
 shield militia~
 a &+LCaer Tannad&+m militia &+Lshield&n~
 &+WA &+LCaer Tannad&+m militia&+W shield rests here.&n~
@@ -2524,7 +2524,7 @@ shield militia~
 &+LCaer tannad&+L.  The axe and moon are imprinted on the shield's front, a light
 &+Ygilding &+Lmaking them prominent.&n
 ~
-#6517
+#132652
 jailkey key~
 a &+Ljailkey&n~
 &+LA key, obviously important, has been discarded here.&n~
@@ -2536,7 +2536,7 @@ E
 jailkey key~
    &+LThis small skeleton key is made of steel, and weighs a ton.&n
 ~
-#6518
+#132653
 chest wood iron~
 an &+cironbound &+Wchest&n~
 &+WAn &+Lironbound &+ychest&+W rests here.&n~
@@ -2548,7 +2548,7 @@ E
 chest wood iron~
    &+LThis chest is made of wood slats, and framed with iron.&n
 ~
-#6519
+#132654
 gold coins~
 some &+Ygold &+Wcoins&n~
 &+Ya small pile of gold coins is here.~
@@ -2556,7 +2556,7 @@ some &+Ygold &+Wcoins&n~
 20 24 1 0 7 0 45056 1 0 0 0
 50 50 25 25 0 0 0 0
 0 0 100
-#6520
+#132655
 dagger jagged steel~
 a &+Wjagged &+Lsteel &+Wdagger&n~
 &+WA jagged &+Lsteel&+W dagger lies here.&n~
@@ -2574,7 +2574,7 @@ A
 18 1
 A
 19 1
-#6521
+#132656
 water pond pool~
 the &+Bpond&n~
 &+BA large pond has been rests here.&n~
@@ -2588,7 +2588,7 @@ water pond pool~
 &+Bmosses that grow on its bottom.  This is where the park animals come to drink
 &+Band cool down during the hot season.&n
 ~
-#6522
+#132657
 mahogany desk~
 a &+ymahogany desk&n~
 &+wA finely carved &+ydesk&+w stands, regally, here.&n~
@@ -2602,7 +2602,7 @@ mahogany desk~
 &+yof the desk a tribute to those sex-ravenous creatures.  A small draw takes up
 &+ythe desk's center, locked by a skeletal key.&n
 ~
-#6523
+#132658
 grounds bag~
 a &+Ggrounds&+g bag&n~
 &+GA large bag bearing the symbol of &+LCaer Tannad's&+g parks staff, lies here.&n~
@@ -2616,7 +2616,7 @@ grounds bag~
 &+gadjustable strap that allows it to be worn around the body or the waste.  Sewn
 &+ginto its heavy dungaree fabric is the black symbol of the axe and moon.&n
 ~
-#6524
+#132659
 stained glass window~
 a &+Bstained glass &+Wwindow&n~
 &+wAn intricate &+Bstained glass &+Wwindow&+w is set in the north wall.&n~
@@ -2633,7 +2633,7 @@ stained glass window~
 &+Bis missing from their architecture.  What wondrous times those must have been,
 &+Bwondrous indeed.&n
 ~
-#6525
+#132660
 stained glass window~
 a &+Bstained glass &+Wwindow&n~
 &+wAn intricate &+Bstained glass &+Wwindow&+w is set in the south wall.&n~
@@ -2650,7 +2650,7 @@ stained glass window~
 &+Bbeaches that the docks were first built, a magnificent expanse of timber and
 &+Bthe boats moored there.&n
 ~
-#6526
+#132661
 water pond pool~
 the &+Bpond&n~
 &+BIts waters inviting, this small pond rests languidly here.&n~
@@ -2663,7 +2663,7 @@ water pond pool~
 &+B   This ten foot round pond is well kept, its pristine waters devoid of algae
 &+Band mosses.&n
 ~
-#6527
+#132662
 rock small~
 a &+yrock&n~
 &+gThis small &+yrock&+g has an inscription carved into it.&n~
@@ -2704,7 +2704,7 @@ rock small~
                                 &+W ) &+W(
                                 &+W (&+L"&+W)&n
 ~
-#6528
+#132663
 bookshelf shelf~
 the &+ybookshelf&n~
 A huge bookshelf stands here, nearly twenty feet tall.~
@@ -2712,7 +2712,7 @@ A huge bookshelf stands here, nearly twenty feet tall.~
 15 6 3 0 7 0 2 0 0 0 0
 5000 0 0 100 0 0 0 0
 1 1 100
-#6529
+#132664
 magical book text~
 a &+rmag&+Ric&+Wal &+Ltext book&n~
 &+LA &+rmagically &+Rglowing&+L book is here.&n~
@@ -2729,25 +2729,25 @@ A
 3 4
 A
 4 4
-#6530
+#132665
 portal gate magical~
 the &+Rglowing &+Lportal&n~
 &+WA &+Lportal&+W floats here, glowing with a miriad of &+Rvibrant&+W colors.&n~
 ~
 25 1 0 50 7 0 0 0 64 0 0
-6649 7 -1 0 0 0 0 0
+133019 7 -1 0 0 0 0 0
 1 1 100
 E
 portal gate magical~
 The portal continuously crackles with energy in a random fashion.
 ~
-#6531
+#132666
 portal gate magical~
 the &+Wglowing &+Mportal&n~
 &+LA &+Mportal&+L floats here, glowing with a miriad of &+Wvibrant&+L colors.&n~
 ~
 25 1 0 50 7 0 0 0 64 0 0
-6648 7 -1 0 0 0 0 0
+133018 7 -1 0 0 0 0 0
 1 1 100
 E
 portal gate magical~
@@ -2757,7 +2757,7 @@ portal gate magical~
 &+Llooks as though you could just enter the &+Mportal &+Land step right through to the&N
 &+Lother side.&N
 ~
-#6532
+#132667
 water fountain daedalian onyx~
 a &+Ldaedalian fountain&n~
 &+LA daedalian fountain stands here, exquisitely rendered in onyx stone.&n~
@@ -2781,7 +2781,7 @@ water fountain daedalian onyx~
 &+Linto the lower fountain.  Statues sit facing the four winds.  An &+Wangel&+L gazes
 &+Lto the east and west, while &+wgargoyles&+L peer to the north and south.&n
 ~
-#6533
+#132668
 pair chainmail leggings~
 &+ca pair of polished chainmail leggings&N~
 An unwanted pair of leggings sits here.~
@@ -2793,7 +2793,7 @@ A
 5 4
 A
 23 -2
-#6534
+#132669
 golden amulet tharnadia~
 a &+Ygolden&N amulet of &+MTharnadia&N~
 An unwanted amulet sits on the ground here.~
@@ -2810,7 +2810,7 @@ A
 3 6
 A
 20 -2
-#6535
+#132670
 old wooden wand~
 &+yan old wooden wand&N~
 An unwanted wand sits on the ground here.~
@@ -2818,7 +2818,7 @@ An unwanted wand sits on the ground here.~
 3 6 2 4 7 0 368640 16385 66 0 0
 40 3 3 84 0 0 0 0
 2 3234 100
-#6536
+#132671
 jeweled jade bracelet~
 &+ga jeweled jade bracelet&N~
 An unwanted bracelet sits here.~
@@ -2828,7 +2828,7 @@ An unwanted bracelet sits here.~
 3 2321 100
 A
 19 1
-#6537
+#132672
 glowing sphere magical~
 &+Wa&N &+rmagi&+mcal&N &+Wglowing sphere&N~
 A sphere sits here.~
@@ -2836,7 +2836,7 @@ A sphere sits here.~
 15 16 3 0 7 0 237569 18433 66 0 0
 500 5 0 100 0 0 0 0
 -350 7777777 100
-#6538
+#132673
 old leather suit~
 &+yan old leather suit&N~
 An unwanted leather suit sits here.~
@@ -2848,7 +2848,7 @@ A
 1 3
 A
 5 3
-#6539
+#132674
 suit spiked chainmail~
 &+Wa suit of &+bspiked chainmail&N~
 An unwanted suit rests here.~
@@ -2860,7 +2860,7 @@ A
 13 7
 A
 1 4
-#6540
+#132675
 small desk key~
 &+ya small desk key&N~
 An unwanted desk key sits here.~
@@ -2868,7 +2868,7 @@ An unwanted desk key sits here.~
 18 16 1 1 7 0 8495104 16385 64 0 0
 0 0 0 0 0 0 0 0
 1 32 100
-#6541
+#132676
 shiny magical boots~
 &+Wa pair of&N &+Yshiny&N &+rmag&+mica&+rl &+Wboots&N~
 An pair of unwanted boots sits here.~
@@ -2880,7 +2880,7 @@ A
 23 -1
 A
 13 8
-#6542
+#132677
 map gc giant parchment countryside~
 A giant map of GC~
 A giant map of the surrounding countryside lies on the desk here.~
@@ -2956,7 +2956,7 @@ B - Bridge - The river is very wide at this point, meaning this is the only avai
 
 D - The Tharnadian Docks - Once you save up some spare cash you can build the ship of your dreams and sail to distant lands.. or build a warship and sink other people doing that!
 ~
-#6543
+#132678
 sharp two-handed sword~
 &+Wa sharp two-handed sword&n~
 A sharp two-handed sword lies here.~
@@ -2972,7 +2972,7 @@ A
 18 3
 A
 19 3
-#6544
+#132679
 thick sharp sword~
 &+wa thick and sharp sword&n~
 A thick iron sword with sharp edges lies here.~
@@ -2988,7 +2988,7 @@ A
 18 2
 A
 19 2
-#6545
+#132680
 thin sharp steel dagger~
 &+wa thin sharp steel dagger&n~
 A thin, yet sharp, steel dagger lies here.~
@@ -3004,7 +3004,7 @@ A
 18 2
 A
 19 2
-#6547
+#132681
 sharpened long steel sword _id_~
 &+wa sharpened long steel sword&n~
 a long steel sword is here in the dirt.~
@@ -3020,7 +3020,7 @@ A
 18 2
 A
 19 2
-#6548
+#132682
 small reed flute instrument~
 A small &+Greed&n flute~
 A small flute made from a hollowed reed lies here.~
@@ -3028,7 +3028,7 @@ A small flute made from a hollowed reed lies here.~
 32 42 3 0 2 0 1024 16385 0 32768 0
 184 5 0 0 0 0 0 0
 0 23 100
-#6549
+#132683
 small clumsily made mandolin instrument~
 A small clumsily made &+ymandolin&n~
 A small mandolin that looks to have been hastily carved out of driftwood lies here.~
@@ -3036,7 +3036,7 @@ A small mandolin that looks to have been hastily carved out of driftwood lies he
 32 5 3 0 1 0 1024 16385 0 32768 0
 186 5 0 0 0 0 0 0
 0 28 100
-#6550
+#132684
 small bamboo lyre instrument~
 a small &+ybamboo&n lyre~
 A lyre made out of a set of bamboo stalks lies here.~
@@ -3044,7 +3044,7 @@ A lyre made out of a set of bamboo stalks lies here.~
 32 41 3 0 5 0 1024 16385 0 32768 0
 185 5 0 0 0 0 0 0
 0 25 100
-#6551
+#132685
 large blank book~
 a large blank book~
 A large blank book lies here.~
@@ -3052,7 +3052,7 @@ A large blank book lies here.~
 13 29 3 0 5 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
-#6552
+#132686
 spellbook book spell~
 &+yan autographed spellbook&n~
 A spellbook with some illegible name scribbled on the cover lies here.~
@@ -3064,7 +3064,7 @@ E
 spellbook book spell~
 &+yL&+Ye&+Wo&+yd&+Yra&n
 ~
-#6553
+#132687
 pair boots durable olyx hide olyx-hide leather~
 a pair of durable &+Wolyx&+w-&+yhide&n boots~
 A pair of boots made out of a durable material lie here.~
@@ -3076,7 +3076,7 @@ A
 26 1
 A
 14 5
-#6554
+#132688
 large burlap sack~
 &+ya large burlap sack&n~
 &+yA large burlap sack sits on the floor here.&n~
@@ -3084,7 +3084,7 @@ large burlap sack~
 15 14 3 0 5 0 0 0 0 0 0
 100 5 0 50 0 0 0 0
 0 0 100
-#6555
+#132689
 small wooden lyre instrument~
 a small &+ywooden&n lyre~
 A small wooden lyre lies here.~
@@ -3092,7 +3092,7 @@ A small wooden lyre lies here.~
 32 5 3 0 5 0 4096 16385 0 0 0
 185 1 0 0 0 0 0 0
 0 0 100
-#6556
+#132690
 small wooden horn instrument~
 a small &+ywooden&n horn~
 A small wooden horn lies here.~
@@ -3100,7 +3100,7 @@ A small wooden horn lies here.~
 32 5 3 0 5 0 4096 16385 0 0 0
 189 1 0 0 0 0 0 0
 0 0 100
-#6557
+#132691
 small wooden drum instrument~
 a small &+ywooden&n drum~
 A small wooden drum lies here.~
@@ -3108,7 +3108,7 @@ A small wooden drum lies here.~
 32 5 3 0 5 0 4096 16385 0 0 0
 188 1 0 0 0 0 0 0
 0 0 100
-#6558
+#132692
 small wooden mandolin instrument~
 a small &+ywooden&n mandolin~
 A small wooden mandolin lies here.~
@@ -3116,7 +3116,7 @@ A small wooden mandolin lies here.~
 32 5 3 0 5 0 4096 16385 0 0 0
 186 1 0 0 0 0 0 0
 0 0 100
-#6559
+#132693
 small wooden harp instrument~
 a small &+ywooden&n harp~
 A small wooden harp lies here.~
@@ -3124,7 +3124,7 @@ A small wooden harp lies here.~
 32 5 3 0 5 0 4096 16385 0 0 0
 187 1 0 0 0 0 0 0
 0 0 100
-#6560
+#132694
 clump nightshade plant~
 &+ma clump of &+Lnightshade&n~
 A group of plants lie here.~
@@ -3132,7 +3132,7 @@ A group of plants lie here.~
 13 30 3 0 5 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
-#6561
+#132695
 batch mandrake roots small~
 a small&+g batch&n of &+ymandrake roots&n~
 A clump of gnarly roots lie here.~
@@ -3140,7 +3140,7 @@ A clump of gnarly roots lie here.~
 13 4 3 0 5 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
-#6562
+#132696
 sap sacred yew~
 some &+ysap&n from a &+gsacred&n &+yyew&n~
 A thick syrup slowly seeps into the ground.~
@@ -3148,7 +3148,7 @@ A thick syrup slowly seeps into the ground.~
 10 40 3 0 5 0 0 16385 0 0 0
 13 294 0 0 0 0 0 0
 0 0 100
-#6563
+#132697
 vial thick maroon liquid potion medicine~
 a vial filled with a thick &+rmaroon &+cl&+Ci&+cq&+Cui&+cd&n~
 A vial filled with a brick-colored liquid lies here.~
@@ -3156,7 +3156,7 @@ A vial filled with a brick-colored liquid lies here.~
 10 40 3 0 5 0 0 16385 0 0 0
 11 16 16 16 0 0 0 0
 0 0 100
-#6564
+#132698
 small black pouch~
 &+La small black pouch&n~
 A small black pouch lies here.~
@@ -3168,7 +3168,7 @@ E
 small black pouch~
 This pouch is empty!  You've been swindled!
 ~
-#6565
+#132699
 heavy solid gold pendant heirloom~
 &+ya &+Yheavy &+ysolid &+Ygold &+ypendant&n~
 A large golden pendant glints in the light here.~
@@ -3178,7 +3178,7 @@ A large golden pendant glints in the light here.~
 2 2343 100
 A
 13 6
-#6566
+#132700
 small little black pup wolf puppy _id_~
 small and furry black wolf pup~
 A little black ball of fur is curled up taking a nap.~
@@ -3190,7 +3190,7 @@ E
 small wolf pup black fur furry~
 This incredibly tiny wolf pup is curled up and resting peacefully, and even when picked up isn't disturbed from his slumber.  It is no wonder that he was able to escape his master's room so easily, he could almost be confused for a rabbit because of his small size.  There is little doubt that he will one day grow into a large and powerful hunter however.
 ~
-#6567
+#132701
 strip cured leather hunting belt~
 &+ya cured leather hunting belt&n~
 A strip of cured leather lies here.~
@@ -3200,7 +3200,7 @@ A strip of cured leather lies here.~
 0 34 100
 A
 26 2
-#6568
+#132702
 heavy forest cloak green~
 &+ya heavy &+gf&+Gor&+ge&+Gs&+gt&+y cloak&n~
 A cloak made out of a thick green material lies here.~
@@ -3210,7 +3210,7 @@ A cloak made out of a thick green material lies here.~
 2 343 100
 A
 13 5
-#6569
+#132703
 wand practice small~
 a small practice wand~
 A small wand lies here.~
@@ -3220,7 +3220,7 @@ A small wand lies here.~
 0 23 100
 A
 3 1
-#6575
+#132704
 small wooden flute instrument~
 a small &+ywooden&n flute~
 A small wooden flute lies here.~
@@ -3228,7 +3228,7 @@ A small wooden flute lies here.~
 32 5 3 0 5 0 4096 16385 0 0 0
 184 1 0 0 0 0 0 0
 0 0 100
-#6576
+#132705
 map copy countryside gc tharnadia _id_~
 A copy of &+bIthilin's&n GC map~
 A map of the Tharnadian countryside lies here.~

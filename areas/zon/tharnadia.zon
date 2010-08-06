@@ -1,605 +1,605 @@
-#60
+#1325
 &+WTharnadia &+L- City of &+CHumans&N~
-6685 2 4 15 25 1
+133055 2 4 15 25 1
 *
 * Zone edited with durisEdit v2.99de
 *
 *
-D 0 6001 3 1 100 0 0 0
+D 0 132500 3 1 100 0 0 0
 *     west exit from "Kieta's Adventurer Supply Shoppe" to
 *     "The Tharnadia-Keats Intersection" - closed
 *
-D 0 6051 1 1 100 0 0 0
+D 0 132550 1 1 100 0 0 0
 *     east exit from "The Tharnadia-Keats Intersection" to
 *     "Kieta's Adventurer Supply Shoppe" - closed
 *
-D 0 6004 3 1 100 0 0 0
+D 0 132503 3 1 100 0 0 0
 *     west exit from "Outside the Eastern City Gates" to
 *     "Inside the Eastern City Gates" - closed
 *
-D 0 6005 1 1 100 0 0 0
+D 0 132504 1 1 100 0 0 0
 *     east exit from "Inside the Eastern City Gates" to
 *     "Outside the Eastern City Gates" - closed
 *
-D 0 6006 3 1 100 0 0 0
+D 0 132505 3 1 100 0 0 0
 *     west exit from "Road Beneath the Gate Tower" to
 *     "A Commoner's Dwelling" - closed
 *
-D 0 6007 1 1 100 0 0 0
+D 0 132506 1 1 100 0 0 0
 *     east exit from "A Commoner's Dwelling" to
 *     "Road Beneath the Gate Tower" - closed
 *
-D 0 6008 0 1 100 0 0 0
+D 0 132507 0 1 100 0 0 0
 *     north exit from "A Bend in the Wall Road" to
 *     "Tharnadian Bank" - closed
 *
-D 0 6009 2 1 100 0 0 0
+D 0 132508 2 1 100 0 0 0
 *     south exit from "Tharnadian Bank" to
 *     "A Bend in the Wall Road" - closed
 *
-D 0 6012 5 5 100 0 0 0
+D 0 132511 5 5 100 0 0 0
 *     down exit from "A Burned-out Home" to
 *     "Entrance Hallway to the Guild of Rogues" - closed/secret
 *
-D 0 6029 4 1 100 0 0 0
+D 0 132528 4 1 100 0 0 0
 *     up exit from "Entrance Hallway to the Guild of Rogues" to
 *     "A Burned-out Home" - closed
 *
-D 0 6013 0 0 100 0 0 0
+D 0 132512 0 0 100 0 0 0
 *     north exit from "A corridor" to
 *     "Room #2" - open
 *
-D 0 6324 2 0 100 0 0 0
+D 0 132823 2 0 100 0 0 0
 *     south exit from "Room #2" to
 *     "A corridor" - open
 *
-D 0 6013 1 0 100 0 0 0
+D 0 132512 1 0 100 0 0 0
 *     east exit from "A corridor" to
 *     "The Ogre's Foot Inn" - open
 *
-D 0 6076 3 0 100 0 0 0
+D 0 132575 3 0 100 0 0 0
 *     west exit from "The Ogre's Foot Inn" to
 *     "A corridor" - open
 *
-D 0 6013 2 0 100 0 0 0
+D 0 132512 2 0 100 0 0 0
 *     south exit from "A corridor" to
 *     "Room #1" - open
 *
-D 0 6325 0 0 100 0 0 0
+D 0 132824 0 0 100 0 0 0
 *     north exit from "Room #1" to
 *     "A corridor" - open
 *
-D 0 6033 0 1 100 0 0 0
+D 0 132532 0 1 100 0 0 0
 *     north exit from "Lower Level of the Guild of Rogues" to
 *     "The Secret Training Chamber" - closed
 *
-D 0 6034 2 1 100 0 0 0
+D 0 132533 2 1 100 0 0 0
 *     south exit from "The Secret Training Chamber" to
 *     "Lower Level of the Guild of Rogues" - closed
 *
-D 0 6057 1 0 100 0 0 0
+D 0 132556 1 0 100 0 0 0
 *     east exit from "The Great Bazaar" to
 *     "Kienar's Fast Foods" - open
 *
-D 0 6058 3 0 100 0 0 0
+D 0 132557 3 0 100 0 0 0
 *     west exit from "Kienar's Fast Foods" to
 *     "The Great Bazaar" - open
 *
-D 0 6060 2 1 100 0 0 0
+D 0 132559 2 1 100 0 0 0
 *     south exit from "The Southern Wall Road" to
 *     "The Bloodmoon Rising Tavern" - closed
 *
-D 0 6061 0 1 100 0 0 0
+D 0 132560 0 1 100 0 0 0
 *     north exit from "The Bloodmoon Rising Tavern" to
 *     "The Southern Wall Road" - closed
 *
-D 0 6065 0 2 100 0 0 0
+D 0 132564 0 2 100 0 0 0
 *     north exit from "Road Under the Southern Tower" to
 *     "A Commoner's Dwelling" - closed/locked
 *
-D 0 6066 2 2 100 0 0 0
+D 0 132565 2 2 100 0 0 0
 *     south exit from "A Commoner's Dwelling" to
 *     "Road Under the Southern Tower" - closed/locked
 *
-D 0 6074 2 1 100 0 0 0
+D 0 132573 2 1 100 0 0 0
 *     south exit from "The Great Fountain of Tharnadia" to
 *     "The Ogre's Foot Lounge" - closed
 *
-D 0 6075 0 1 100 0 0 0
+D 0 132574 0 1 100 0 0 0
 *     north exit from "The Ogre's Foot Lounge" to
 *     "The Great Fountain of Tharnadia" - closed
 *
-D 0 6077 0 0 100 0 0 0
+D 0 132576 0 0 100 0 0 0
 *     north exit from "The Grand Tharnadian Way" to
 *     "A Huge Bakery" - open
 *
-D 0 6113 2 0 100 0 0 0
+D 0 132612 2 0 100 0 0 0
 *     south exit from "A Huge Bakery" to
 *     "The Grand Tharnadian Way" - open
 *
-D 0 6081 0 1 100 0 0 0
+D 0 132580 0 1 100 0 0 0
 *     north exit from "The Grand Tharnadian Way" to
 *     "The Tharnadian Armoury" - closed
 *
-D 0 6130 2 1 100 0 0 0
+D 0 132629 2 1 100 0 0 0
 *     south exit from "The Tharnadian Armoury" to
 *     "The Grand Tharnadian Way" - closed
 *
-D 0 6084 3 1 100 0 0 0
+D 0 132583 3 1 100 0 0 0
 *     west exit from "A Bend in the Wall Road" to
 *     "Kylara's Pet Shoppe" - closed
 *
-D 0 6115 1 1 100 0 0 0
+D 0 132614 1 1 100 0 0 0
 *     east exit from "Kylara's Pet Shoppe" to
 *     "A Bend in the Wall Road" - closed
 *
-D 0 6087 2 1 100 0 0 0
+D 0 132586 2 1 100 0 0 0
 *     south exit from "A Bend in the Wall Road" to
 *     "A Commoner's Dwelling" - closed
 *
-D 0 6117 0 1 100 0 0 0
+D 0 132616 0 1 100 0 0 0
 *     north exit from "A Commoner's Dwelling" to
 *     "A Bend in the Wall Road" - closed
 *
-D 0 6092 0 1 100 0 0 0
+D 0 132591 0 1 100 0 0 0
 *     north exit from "Inside the Northern Beach Gates" to
 *     "Outside the Northern Beach Gates" - closed
 *
-D 0 6143 2 1 100 0 0 0
+D 0 132642 2 1 100 0 0 0
 *     south exit from "Outside the Northern Beach Gates" to
 *     "Inside the Northern Beach Gates" - closed
 *
-D 0 6097 0 1 100 0 0 0
+D 0 132596 0 1 100 0 0 0
 *     north exit from "A Bend in the Road Wall" to
 *     "A Small Apartment" - closed
 *
-D 0 6121 2 1 100 0 0 0
+D 0 132620 2 1 100 0 0 0
 *     south exit from "A Small Apartment" to
 *     "A Bend in the Road Wall" - closed
 *
-D 0 6098 3 2 100 0 0 0
+D 0 132597 3 2 100 0 0 0
 *     west exit from "The Southern Wall Road" to
 *     "A Large Dwelling" - closed/locked
 *
-D 0 6122 1 2 100 0 0 0
+D 0 132621 1 2 100 0 0 0
 *     east exit from "A Large Dwelling" to
 *     "The Southern Wall Road" - closed/locked
 *
-D 0 6105 0 1 100 0 0 0
+D 0 132604 0 1 100 0 0 0
 *     north exit from "Road Beneath the Gate Tower" to
 *     "The Living Room" - closed
 *
-D 0 6125 2 1 100 0 0 0
+D 0 132624 2 1 100 0 0 0
 *     south exit from "The Living Room" to
 *     "Road Beneath the Gate Tower" - closed
 *
-D 0 6106 2 1 100 0 0 0
+D 0 132605 2 1 100 0 0 0
 *     south exit from "Inside the Southern Beach Gates" to
 *     "Outside the Southern Beach Gates" - closed
 *
-D 0 6172 0 1 100 0 0 0
+D 0 132671 0 1 100 0 0 0
 *     north exit from "Outside the Southern Beach Gates" to
 *     "Inside the Southern Beach Gates" - closed
 *
-D 0 6119 4 2 100 0 0 0
+D 0 132618 4 2 100 0 0 0
 *     up exit from "The Jail Lobby" to
 *     "Cell" - closed/locked
 *
-D 0 6120 5 2 100 0 0 0
+D 0 132619 5 2 100 0 0 0
 *     down exit from "Cell" to
 *     "The Jail Lobby" - closed/locked
 *
-D 0 6120 1 9 100 0 0 0
+D 0 132619 1 9 100 0 0 0
 *     east exit from "Cell" to
 *     "The Courthouse Rooftop" - closed/blocked
 *
-D 0 6310 3 2 100 0 0 0
+D 0 132809 3 2 100 0 0 0
 *     west exit from "The Courthouse Rooftop" to
 *     "Cell" - closed/locked
 *
-D 0 6127 1 1 100 0 0 0
+D 0 132626 1 1 100 0 0 0
 *     east exit from "A Hallway" to
 *     "The Bedroom" - closed
 *
-D 0 6128 3 1 100 0 0 0
+D 0 132627 3 1 100 0 0 0
 *     west exit from "The Bedroom" to
 *     "A Hallway" - closed
 *
-D 0 6155 1 1 100 0 0 0
+D 0 132654 1 1 100 0 0 0
 *     east exit from "The Western Wall Road" to
 *     "Mercenary's Guild Lobby" - closed
 *
-D 0 6207 3 1 100 0 0 0
+D 0 132706 3 1 100 0 0 0
 *     west exit from "Mercenary's Guild Lobby" to
 *     "The Western Wall Road" - closed
 *
-D 0 6161 1 1 100 0 0 0
+D 0 132660 1 1 100 0 0 0
 *     east exit from "A Bend in the Wall Road" to
 *     "Jelian's Supply Shoppe" - closed
 *
-D 0 6262 3 1 100 0 0 0
+D 0 132761 3 1 100 0 0 0
 *     west exit from "Jelian's Supply Shoppe" to
 *     "A Bend in the Wall Road" - closed
 *
-D 0 6190 3 1 100 0 0 0
+D 0 132689 3 1 100 0 0 0
 *     west exit from "Outside a Huge Stone Lighthouse" to
 *     "Bottom of a Lighthouse" - closed
 *
-D 0 6195 1 1 100 0 0 0
+D 0 132694 1 1 100 0 0 0
 *     east exit from "Bottom of a Lighthouse" to
 *     "Outside a Huge Stone Lighthouse" - closed
 *
-D 0 6198 4 0 100 0 0 0
+D 0 132697 4 0 100 0 0 0
 *     up exit from "Top Level of the Lighthouse" to
 *     "Rooftop of a Huge Lighthouse" - open
 *
-D 0 6199 5 0 100 0 0 0
+D 0 132698 5 0 100 0 0 0
 *     down exit from "Rooftop of a Huge Lighthouse" to
 *     "Top Level of the Lighthouse" - open
 *
-D 0 6210 0 1 100 0 0 0
+D 0 132709 0 1 100 0 0 0
 *     north exit from "A Quiet Alleyway" to
 *     "A Lavish Home" - closed
 *
-D 0 6263 2 1 100 0 0 0
+D 0 132762 2 1 100 0 0 0
 *     south exit from "A Lavish Home" to
 *     "A Quiet Alleyway" - closed
 *
-D 0 6212 3 1 100 0 0 0
+D 0 132711 3 1 100 0 0 0
 *     west exit from "A Bend in a Quiet Alleyway" to
 *     "An Elegant Home" - closed
 *
-D 0 6264 1 1 100 0 0 0
+D 0 132763 1 1 100 0 0 0
 *     east exit from "An Elegant Home" to
 *     "A Bend in a Quiet Alleyway" - closed
 *
-D 0 6213 0 1 100 0 0 0
+D 0 132712 0 1 100 0 0 0
 *     north exit from "A Bend in a Quiet Alleyway" to
 *     "A Noble's Home" - closed
 *
-D 0 6265 2 1 100 0 0 0
+D 0 132764 2 1 100 0 0 0
 *     south exit from "A Noble's Home" to
 *     "A Bend in a Quiet Alleyway" - closed
 *
-D 0 6215 1 0 100 0 0 0
+D 0 132714 1 0 100 0 0 0
 *     east exit from "A Bend in a Quiet Alleyway" to
 *     "A Noble's Home" - open
 *
-D 0 6266 3 0 100 0 0 0
+D 0 132765 3 0 100 0 0 0
 *     west exit from "A Noble's Home" to
 *     "A Bend in a Quiet Alleyway" - open
 *
-D 0 6254 1 2 100 0 0 0
+D 0 132753 1 2 100 0 0 0
 *     east exit from "A Bend in the Eidolon Road" to
 *     "A Lavish Home" - closed/locked
 *
-D 0 6273 3 2 100 0 0 0
+D 0 132772 3 2 100 0 0 0
 *     west exit from "A Lavish Home" to
 *     "A Bend in the Eidolon Road" - closed/locked
 *
-D 0 6267 2 5 100 0 0 0
+D 0 132766 2 5 100 0 0 0
 *     south exit from "A Grubby Tavern" to
 *     "A Sleezy Brothel" - closed/secret
 *
-D 0 6268 0 1 100 0 0 0
+D 0 132767 0 1 100 0 0 0
 *     north exit from "A Sleezy Brothel" to
 *     "A Grubby Tavern" - closed
 *
-D 0 6269 4 1 100 0 0 0
-*     up exit from "A Community Shithouse" to
-*     "The Community Shithouse's Rooftop" - closed
+D 0 132768 4 1 100 0 0 0
+*     up exit from "A Community Outhouse" to
+*     "The Community Outhouse's Rooftop" - closed
 *
-D 0 6305 5 1 100 0 0 0
-*     down exit from "The Community Shithouse's Rooftop" to
-*     "A Community Shithouse" - closed
+D 0 132804 5 1 100 0 0 0
+*     down exit from "The Community Outhouse's Rooftop" to
+*     "A Community Outhouse" - closed
 *
-D 0 6275 4 1 100 0 0 0
+D 0 132774 4 1 100 0 0 0
 *     up exit from "Upper Level of a Huge Dwelling" to
 *     "The Roof of a Huge Building" - closed
 *
-D 0 6276 5 1 100 0 0 0
+D 0 132775 5 1 100 0 0 0
 *     down exit from "The Roof of a Huge Building" to
 *     "Upper Level of a Huge Dwelling" - closed
 *
-D 0 6556 2 1 100 0 0 0
+D 0 132926 2 1 100 0 0 0
 *     south exit from "A Dark Hallway" to
 *     "Entrance to the Dreaded Tannadian Dungeon" - closed
 *
-D 0 6567 0 1 100 0 0 0
+D 0 132937 0 1 100 0 0 0
 *     north exit from "Entrance to the Dreaded Tannadian Dungeon" to
 *     "A Dark Hallway" - closed
 *
-D 0 6568 1 1 100 0 0 0
+D 0 132938 1 1 100 0 0 0
 *     east exit from "A Bend in the Dreaded Tannadian Dungeon" to
 *     "The Jailor's Office" - closed
 *
-D 0 6575 3 1 100 0 0 0
+D 0 132945 3 1 100 0 0 0
 *     west exit from "The Jailor's Office" to
 *     "A Bend in the Dreaded Tannadian Dungeon" - closed
 *
-D 0 6569 1 2 100 0 0 0
+D 0 132939 1 2 100 0 0 0
 *     east exit from "Inside the Dreaded Tannadian Dungeon" to
 *     "A Dank and Lonely Cell" - closed/locked
 *
-D 0 6571 3 2 100 0 0 0
+D 0 132941 3 2 100 0 0 0
 *     west exit from "A Dank and Lonely Cell" to
 *     "Inside the Dreaded Tannadian Dungeon" - closed/locked
 *
-D 0 6569 3 2 100 0 0 0
+D 0 132939 3 2 100 0 0 0
 *     west exit from "Inside the Dreaded Tannadian Dungeon" to
 *     "A Dank and Lonely Cell" - closed/locked
 *
-D 0 6572 1 2 100 0 0 0
+D 0 132942 1 2 100 0 0 0
 *     east exit from "A Dank and Lonely Cell" to
 *     "Inside the Dreaded Tannadian Dungeon" - closed/locked
 *
-D 0 6570 1 2 100 0 0 0
+D 0 132940 1 2 100 0 0 0
 *     east exit from "A Dead End in the Dreaded Tannadian Dungeon" to
 *     "A Dank and Lonely Cell" - closed/locked
 *
-D 0 6573 3 2 100 0 0 0
+D 0 132943 3 2 100 0 0 0
 *     west exit from "A Dank and Lonely Cell" to
 *     "A Dead End in the Dreaded Tannadian Dungeon" - closed/locked
 *
-D 0 6570 3 2 100 0 0 0
+D 0 132940 3 2 100 0 0 0
 *     west exit from "A Dead End in the Dreaded Tannadian Dungeon" to
 *     "A Dank and Lonely Cell" - closed/locked
 *
-D 0 6574 1 2 100 0 0 0
+D 0 132944 1 2 100 0 0 0
 *     east exit from "A Dank and Lonely Cell" to
 *     "A Dead End in the Dreaded Tannadian Dungeon" - closed/locked
 *
-D 0 6595 1 1 100 0 0 0
+D 0 132965 1 1 100 0 0 0
 *     east exit from "A Walkway to the Inner Keep" to
 *     "The Second Floor Hallway" - closed
 *
-D 0 6596 3 1 100 0 0 0
+D 0 132966 3 1 100 0 0 0
 *     west exit from "The Second Floor Hallway" to
 *     "A Walkway to the Inner Keep" - closed
 *
-D 0 6597 1 1 100 0 0 0
+D 0 132967 1 1 100 0 0 0
 *     east exit from "The Second Floor Hallway" to
 *     "Tehram's Fletcher Shop" - closed
 *
-D 0 6609 3 1 100 0 0 0
+D 0 132979 3 1 100 0 0 0
 *     west exit from "Tehram's Fletcher Shop" to
 *     "The Second Floor Hallway" - closed
 *
-D 0 6598 1 1 100 0 0 0
+D 0 132968 1 1 100 0 0 0
 *     east exit from "The Second Floor Hallway" to
 *     "A Guest Chamber" - closed
 *
-D 0 6610 3 1 100 0 0 0
+D 0 132980 3 1 100 0 0 0
 *     west exit from "A Guest Chamber" to
 *     "The Second Floor Hallway" - closed
 *
-D 0 6611 3 1 100 0 0 0
+D 0 132981 3 1 100 0 0 0
 *     west exit from "The Third Floor Hallway" to
 *     "The Tannadian Side of the Great Spanning Bridge" - closed
 *
-D 0 6616 1 1 100 0 0 0
+D 0 132986 1 1 100 0 0 0
 *     east exit from "The Tannadian Side of the Great Spanning Bridge" to
 *     "The Third Floor Hallway" - closed
 *
-D 0 6612 3 1 100 0 0 0
+D 0 132982 3 1 100 0 0 0
 *     west exit from "The Third Floor Hallway" to
 *     "The Arcane Shoppe of Magick" - closed
 *
-D 0 6615 1 1 100 0 0 0
+D 0 132985 1 1 100 0 0 0
 *     east exit from "The Arcane Shoppe of Magick" to
 *     "The Third Floor Hallway" - closed
 *
-D 0 6613 3 1 100 0 0 0
+D 0 132983 3 1 100 0 0 0
 *     west exit from "The Third Floor Hallway" to
 *     "The Linen Closet" - closed
 *
-D 0 6614 1 1 100 0 0 0
+D 0 132984 1 1 100 0 0 0
 *     east exit from "The Linen Closet" to
 *     "The Third Floor Hallway" - closed
 *
-D 0 6636 3 1 100 0 0 0
+D 0 133006 3 1 100 0 0 0
 *     west exit from "A Walkway to the Inner Keep" to
 *     "The Second Floor Hallway" - closed
 *
-D 0 6637 1 1 100 0 0 0
+D 0 133007 1 1 100 0 0 0
 *     east exit from "The Second Floor Hallway" to
 *     "A Walkway to the Inner Keep" - closed
 *
-D 0 6638 3 1 100 0 0 0
+D 0 133008 3 1 100 0 0 0
 *     west exit from "The Second Floor Hallway" to
 *     "The Queen's Bedchamber" - closed
 *
-D 0 6650 1 1 100 0 0 0
+D 0 133020 1 1 100 0 0 0
 *     east exit from "The Queen's Bedchamber" to
 *     "The Second Floor Hallway" - closed
 *
-D 0 6639 3 1 100 0 0 0
+D 0 133009 3 1 100 0 0 0
 *     west exit from "The Second Floor Hallway" to
 *     "The King's Bedchamber" - closed
 *
-D 0 6651 1 1 100 0 0 0
+D 0 133021 1 1 100 0 0 0
 *     east exit from "The King's Bedchamber" to
 *     "The Second Floor Hallway" - closed
 *
-D 0 6652 1 1 100 0 0 0
+D 0 133022 1 1 100 0 0 0
 *     east exit from "The Third Floor Hallway" to
 *     "The Dauthean Side of the Great Spanning Bridge" - closed
 *
-D 0 6657 3 1 100 0 0 0
+D 0 133027 3 1 100 0 0 0
 *     west exit from "The Dauthean Side of the Great Spanning Bridge" to
 *     "The Third Floor Hallway" - closed
 *
-D 0 6653 1 1 100 0 0 0
+D 0 133023 1 1 100 0 0 0
 *     east exit from "The Third Floor Hallway" to
 *     "The Mages' Supply Shoppe" - closed
 *
-D 0 6656 3 1 100 0 0 0
+D 0 133026 3 1 100 0 0 0
 *     west exit from "The Mages' Supply Shoppe" to
 *     "The Third Floor Hallway" - closed
 *
-D 0 6654 1 1 100 0 0 0
+D 0 133024 1 1 100 0 0 0
 *     east exit from "The Third Floor Hallway" to
 *     "The Linen Closet" - closed
 *
-D 0 6655 3 1 100 0 0 0
+D 0 133025 3 1 100 0 0 0
 *     west exit from "The Linen Closet" to
 *     "The Third Floor Hallway" - closed
 *
-D 0 6672 1 1 100 0 0 0
+D 0 133042 1 1 100 0 0 0
 *     east exit from "An Extravagant Hallway" to
 *     "The Royal Resting Chambers" - closed
 *
-D 0 6680 3 1 100 0 0 0
+D 0 133050 3 1 100 0 0 0
 *     west exit from "The Royal Resting Chambers" to
 *     "An Extravagant Hallway" - closed
 *
-D 0 6673 3 1 100 0 0 0
+D 0 133043 3 1 100 0 0 0
 *     west exit from "An Intersection in the Extravagant Hallway" to
 *     "Center of the Docks of Tharnadia" - closed
 *
-D 0 6681 1 1 100 0 0 0
+D 0 133051 1 1 100 0 0 0
 *     east exit from "Center of the Docks of Tharnadia" to
 *     "An Intersection in the Extravagant Hallway" - closed
 *
 *
-O 0 6126 1 6002 100 0 0 0          * a glowing portal
-O 0 6121 1 6002 100 0 0 0          * a glowing bookshelf
-P 1 6122 999 6121 100 0 0 0        *   a spellbook
-P 1 6122 999 6121 100 0 0 0        *   a spellbook
-P 1 6122 999 6121 100 0 0 0        *   a spellbook
-P 1 6123 999 6121 100 0 0 0        *   a glowing quill
-P 1 6123 999 6121 100 0 0 0        *   a glowing quill
-P 1 6123 999 6121 100 0 0 0        *   a glowing quill
-P 1 6124 1 6121 100 0 0 0          *   a crumpled up note
-O 0 6005 1 6004 100 0 0 0          * the statue on the left
-O 0 6006 1 6004 100 0 0 0          * the statue on the right
-O 0 6107 1 6004 100 0 0 0          * @>--'---,---
-O 0 6019 4 6005 100 0 0 0          * a map of Tharnadia
-O 0 6010 6 6007 100 0 0 0          * an iron stove
-O 0 6081 1 6009 100 0 0 0          * the counter
-O 0 6002 10 6035 100 0 0 0         * a Scorpion ballista
-O 0 6002 10 6037 100 0 0 0         * a Scorpion ballista
-O 0 6002 10 6039 100 0 0 0         * a Scorpion ballista
-O 0 6002 10 6040 100 0 0 0         * a Scorpion ballista
-O 0 6001 1 6045 100 0 0 0          * a platinum water basin
-O 0 6000 1 6045 100 0 0 0          * a gold plaque
-O 0 6014 4 6047 100 0 0 0          * a wooden stall
-O 0 6014 4 6053 100 0 0 0          * a wooden stall
-O 0 6014 4 6055 100 0 0 0          * a wooden stall
-O 0 6014 4 6056 100 0 0 0          * a wooden stall
-O 0 6055 65 6061 100 0 0 0         * a small sword
-O 0 6010 6 6066 100 0 0 0          * an iron stove
-O 0 6002 10 6068 100 0 0 0         * a Scorpion ballista
-O 0 6002 10 6071 100 0 0 0         * a Scorpion ballista
-O 0 6003 1 6074 100 0 0 0          * an engraved ivory fountain
-O 0 6004 1 6074 100 0 0 0          * an onyx plaque
-O 0 90 999 6074 100 0 0 0          * (object type not in this .obj file)
-O 0 6127 1 6074 100 0 0 0          * a shingle
-O 0 92 999 6075 100 0 0 0          * (object type not in this .obj file)
-O 0 6011 3 6075 100 0 0 0          * a stone hearth
-O 0 67900 999 6075 100 0 0 0       * (object type not in this .obj file)
-O 0 6128 1 6076 100 0 0 0          * a large sign
-O 0 6002 10 6109 100 0 0 0         * a Scorpion ballista
-O 0 6002 10 6110 100 0 0 0         * a Scorpion ballista
-O 0 6002 10 6111 100 0 0 0         * a Scorpion ballista
-O 0 6002 10 6112 100 0 0 0         * a Scorpion ballista
-O 0 6012 1 6113 100 0 0 0          * a stone dual hearth
-O 0 6011 3 6117 100 0 0 0          * a stone hearth
-O 0 6013 1 6118 100 0 0 0          * an iron maiden
-O 0 6036 1 6118 100 0 0 0          * a stack of coffins
-O 0 6071 2 6119 100 0 0 0          * a tally sheet
-O 0 6026 1 6120 100 0 0 0          * a loose brick
-O 0 6071 2 6120 100 0 0 0          * a tally sheet
-O 0 6010 6 6122 100 0 0 0          * an iron stove
-O 0 6084 5 6122 100 0 0 0          * an ironbound chest
-P 1 6085 2 6084 100 0 0 0          *   some gold coins
-O 0 6082 1 6123 100 0 0 0          * the chest
-P 1 6080 1 6082 100 0 0 0          *   a pair of steel gauntlets
-O 0 6011 3 6125 100 0 0 0          * a stone hearth
-O 0 6010 6 6128 100 0 0 0          * an iron stove
-O 0 6010 6 6129 100 0 0 0          * an iron stove
-O 0 6522 2 6132 100 0 0 0          * a mahogany desk
-P 1 6551 1 6522 100 0 0 0          *   a large blank book
-P 1 5 11 6522 100 0 0 0            *   (object type not in this .obj file)
-P 1 5 11 6522 100 0 0 0            *   (object type not in this .obj file)
-P 1 5 11 6522 100 0 0 0            *   (object type not in this .obj file)
-P 1 5 11 6522 100 0 0 0            *   (object type not in this .obj file)
-P 1 5 11 6522 100 0 0 0            *   (object type not in this .obj file)
-P 1 5 11 6522 100 0 0 0            *   (object type not in this .obj file)
-P 1 5 11 6522 100 0 0 0            *   (object type not in this .obj file)
-P 1 5 11 6522 100 0 0 0            *   (object type not in this .obj file)
-P 1 5 11 6522 100 0 0 0            *   (object type not in this .obj file)
-P 1 5 11 6522 100 0 0 0            *   (object type not in this .obj file)
-O 0 6019 4 6190 100 0 0 0          * a map of Tharnadia
-O 0 6018 1 6198 100 0 0 0          * the lighthouse beacon
-O 0 6033 2 6222 100 0 0 0          * a freshwater spring
-O 0 6034 1 6224 100 0 0 0          * a vine entangled rock
-O 0 6035 1 6234 100 0 0 0          * the Carnihern Circle
-O 0 6033 2 6236 100 0 0 0          * a freshwater spring
-O 0 1211 2 6262 100 0 0 0          * (object type not in this .obj file)
-O 0 6084 5 6263 100 0 0 0          * an ironbound chest
-P 1 6083 1 6084 100 0 0 0          *   a pile of gold coins
-O 0 6084 5 6264 100 0 0 0          * an ironbound chest
-P 1 6086 9 6084 100 0 0 0          *   a polished steel dagger
-P 1 6085 2 6084 100 0 0 0          *   some gold coins
-O 0 6084 5 6265 100 0 0 0          * an ironbound chest
-P 1 6040 999 6084 100 0 0 0        *   a fine violet jewel
-P 1 6039 999 6084 100 0 0 0        *   a rare ebon ruby
-O 0 6084 5 6266 100 0 0 0          * an ironbound chest
-P 1 6043 2 6084 100 0 0 0          *   a finely cut diamond
-P 1 6039 999 6084 100 0 0 0        *   a rare ebon ruby
-O 0 6097 1 6268 100 0 0 0          * a moldy straw bed
-O 0 6099 1 6268 100 0 0 0          * the rack
-O 0 6098 1 6268 100 0 0 0          * a pool of cum
-O 0 6010 6 6271 100 0 0 0          * an iron stove
-P 1 6041 999 6010 100 0 0 0        *   a common gemstone
-O 0 6542 1 6325 100 0 0 0          * A giant map of GC
-O 0 6554 2 6325 100 0 0 0          * a large burlap sack
-P 1 6555 1 6554 100 0 0 0          *   a small wooden lyre
-P 1 6556 1 6554 100 0 0 0          *   a small wooden horn
-P 1 6557 1 6554 100 0 0 0          *   a small wooden drum
-P 1 6558 1 6554 100 0 0 0          *   a small wooden mandolin
-P 1 6559 1 6554 100 0 0 0          *   a small wooden harp
-P 1 6575 1 6554 100 0 0 0          *   a small wooden flute
-O 0 6052 2 6335 100 0 0 0          * a loaf of bread
-O 0 6554 2 6336 100 0 0 0          * a large burlap sack
-P 1 6561 1 6554 100 0 0 0          *   a small batch of mandrake roots
-P 1 6566 1 6554 100 0 0 0          *   small and furry black wolf pup
-P 1 6560 1 6554 100 0 0 0          *   a clump of nightshade
-P 1 6562 1 6554 100 0 0 0          *   some sap from a sacred yew
-O 0 6131 3 6341 100 0 0 0          * a stained glass window
-O 0 6131 3 6348 100 0 0 0          * a stained glass window
-O 0 6131 3 6349 100 0 0 0          * a stained glass window
-O 0 6134 1 6369 100 0 0 0          * a deposit box
-O 0 6521 1 6531 100 0 0 0          * the pond
-O 0 6522 2 6575 100 0 0 0          * a mahogany desk
-P 1 6519 2 6522 100 0 0 0          *   some gold coins
-O 0 6501 4 6586 100 0 0 0          * a Scorpion Ballista
-O 0 6501 4 6588 100 0 0 0          * a Scorpion Ballista
-O 0 6525 4 6597 100 0 0 0          * a stained glass window
-O 0 6524 4 6598 100 0 0 0          * a stained glass window
-O 0 6526 1 6608 100 0 0 0          * the pond
-O 0 6527 1 6608 100 0 0 0          * a rock
-O 0 6524 4 6612 100 0 0 0          * a stained glass window
-O 0 6525 4 6613 100 0 0 0          * a stained glass window
-O 0 6532 1 6619 100 0 0 0          * a daedalian fountain
-O 0 6501 4 6627 100 0 0 0          * a Scorpion Ballista
-O 0 6501 4 6629 100 0 0 0          * a Scorpion Ballista
-O 0 6525 4 6638 100 0 0 0          * a stained glass window
-O 0 6524 4 6639 100 0 0 0          * a stained glass window
-O 0 6125 1 6640 100 0 0 0          * a glowing portal
-O 0 6530 1 6648 100 0 0 0          * the glowing portal
-O 0 6528 1 6648 100 0 0 0          * the bookshelf
-P 1 6529 3 6528 100 0 0 0          *   a magical text book
-O 0 6531 1 6649 100 0 0 0          * the glowing portal
-O 0 6524 4 6653 100 0 0 0          * a stained glass window
-O 0 6525 4 6654 100 0 0 0          * a stained glass window
-O 0 6518 1 6680 100 0 0 0          * an ironbound chest
-P 1 6500 2 6518 100 0 0 0          *   a packet of maps
-P 1 6529 3 6518 100 0 0 0          *   a magical text book
-P 1 6529 3 6518 100 0 0 0          *   a magical text book
+O 0 132626 1 132501 100 0 0 0      * a glowing portal
+O 0 132621 1 132501 100 0 0 0      * a glowing bookshelf
+P 1 132622 999 132621 100 0 0 0    *   a spellbook
+P 1 132622 999 132621 100 0 0 0    *   a spellbook
+P 1 132622 999 132621 100 0 0 0    *   a spellbook
+P 1 132623 999 132621 100 0 0 0    *   a glowing quill
+P 1 132623 999 132621 100 0 0 0    *   a glowing quill
+P 1 132623 999 132621 100 0 0 0    *   a glowing quill
+P 1 132624 1 132621 100 0 0 0      *   a crumpled up note
+O 0 132505 1 132503 100 0 0 0      * the statue on the left
+O 0 132506 1 132503 100 0 0 0      * the statue on the right
+O 0 132607 1 132503 100 0 0 0      * @>--'---,---
+O 0 132519 4 132504 100 0 0 0      * a map of Tharnadia
+O 0 132510 6 132506 100 0 0 0      * an iron stove
+O 0 132581 1 132508 100 0 0 0      * the counter
+O 0 132502 10 132534 100 0 0 0     * a Scorpion ballista
+O 0 132502 10 132536 100 0 0 0     * a Scorpion ballista
+O 0 132502 10 132538 100 0 0 0     * a Scorpion ballista
+O 0 132502 10 132539 100 0 0 0     * a Scorpion ballista
+O 0 132501 1 132544 100 0 0 0      * a platinum water basin
+O 0 132500 1 132544 100 0 0 0      * a gold plaque
+O 0 132514 4 132546 100 0 0 0      * a wooden stall
+O 0 132514 4 132552 100 0 0 0      * a wooden stall
+O 0 132514 4 132554 100 0 0 0      * a wooden stall
+O 0 132514 4 132555 100 0 0 0      * a wooden stall
+O 0 132555 65 132560 100 0 0 0     * a small sword
+O 0 132510 6 132565 100 0 0 0      * an iron stove
+O 0 132502 10 132567 100 0 0 0     * a Scorpion ballista
+O 0 132502 10 132570 100 0 0 0     * a Scorpion ballista
+O 0 132503 1 132573 100 0 0 0      * an engraved ivory fountain
+O 0 132504 1 132573 100 0 0 0      * an onyx plaque
+O 0 90 999 132573 100 0 0 0        * (object type not in this .obj file)
+O 0 132627 1 132573 100 0 0 0      * a shingle
+O 0 92 999 132574 100 0 0 0        * (object type not in this .obj file)
+O 0 132511 3 132574 100 0 0 0      * a stone hearth
+O 0 67900 999 132574 100 0 0 0     * (object type not in this .obj file)
+O 0 132628 1 132575 100 0 0 0      * a large sign
+O 0 132502 10 132608 100 0 0 0     * a Scorpion ballista
+O 0 132502 10 132609 100 0 0 0     * a Scorpion ballista
+O 0 132502 10 132610 100 0 0 0     * a Scorpion ballista
+O 0 132502 10 132611 100 0 0 0     * a Scorpion ballista
+O 0 132512 1 132612 100 0 0 0      * a stone dual hearth
+O 0 132511 3 132616 100 0 0 0      * a stone hearth
+O 0 132513 1 132617 100 0 0 0      * an iron maiden
+O 0 132536 1 132617 100 0 0 0      * a stack of coffins
+O 0 132571 2 132618 100 0 0 0      * a tally sheet
+O 0 132526 1 132619 100 0 0 0      * a loose brick
+O 0 132571 2 132619 100 0 0 0      * a tally sheet
+O 0 132510 6 132621 100 0 0 0      * an iron stove
+O 0 132584 5 132621 100 0 0 0      * an ironbound chest
+P 1 132585 2 132584 100 0 0 0      *   some gold coins
+O 0 132582 1 132622 100 0 0 0      * the chest
+P 1 132580 1 132582 100 0 0 0      *   a pair of steel gauntlets
+O 0 132511 3 132624 100 0 0 0      * a stone hearth
+O 0 132510 6 132627 100 0 0 0      * an iron stove
+O 0 132510 6 132628 100 0 0 0      * an iron stove
+O 0 132657 2 132631 100 0 0 0      * a mahogany desk
+P 1 132685 1 132657 100 0 0 0      *   a large blank book
+P 1 5 11 132657 100 0 0 0          *   (object type not in this .obj file)
+P 1 5 11 132657 100 0 0 0          *   (object type not in this .obj file)
+P 1 5 11 132657 100 0 0 0          *   (object type not in this .obj file)
+P 1 5 11 132657 100 0 0 0          *   (object type not in this .obj file)
+P 1 5 11 132657 100 0 0 0          *   (object type not in this .obj file)
+P 1 5 11 132657 100 0 0 0          *   (object type not in this .obj file)
+P 1 5 11 132657 100 0 0 0          *   (object type not in this .obj file)
+P 1 5 11 132657 100 0 0 0          *   (object type not in this .obj file)
+P 1 5 11 132657 100 0 0 0          *   (object type not in this .obj file)
+P 1 5 11 132657 100 0 0 0          *   (object type not in this .obj file)
+O 0 132519 4 132689 100 0 0 0      * a map of Tharnadia
+O 0 132518 1 132697 100 0 0 0      * the lighthouse beacon
+O 0 132533 2 132721 100 0 0 0      * a freshwater spring
+O 0 132534 1 132723 100 0 0 0      * a vine entangled rock
+O 0 132535 1 132733 100 0 0 0      * the Carnihern Circle
+O 0 132533 2 132735 100 0 0 0      * a freshwater spring
+O 0 1211 2 132761 100 0 0 0        * (object type not in this .obj file)
+O 0 132584 5 132762 100 0 0 0      * an ironbound chest
+P 1 132583 1 132584 100 0 0 0      *   a pile of gold coins
+O 0 132584 5 132763 100 0 0 0      * an ironbound chest
+P 1 132586 9 132584 100 0 0 0      *   a polished steel dagger
+P 1 132585 2 132584 100 0 0 0      *   some gold coins
+O 0 132584 5 132764 100 0 0 0      * an ironbound chest
+P 1 132540 999 132584 100 0 0 0    *   a fine violet jewel
+P 1 132539 999 132584 100 0 0 0    *   a rare ebon ruby
+O 0 132584 5 132765 100 0 0 0      * an ironbound chest
+P 1 132543 2 132584 100 0 0 0      *   a finely cut diamond
+P 1 132539 999 132584 100 0 0 0    *   a rare ebon ruby
+O 0 132597 1 132767 100 0 0 0      * a moldy straw bed
+O 0 132599 1 132767 100 0 0 0      * the rack
+O 0 132598 1 132767 100 0 0 0      * a pool of cum
+O 0 132510 6 132770 100 0 0 0      * an iron stove
+P 1 132541 999 132510 100 0 0 0    *   a common gemstone
+O 0 132677 1 132824 100 0 0 0      * A giant map of GC
+O 0 132688 2 132824 100 0 0 0      * a large burlap sack
+P 1 132689 1 132688 100 0 0 0      *   a small wooden lyre
+P 1 132690 1 132688 100 0 0 0      *   a small wooden horn
+P 1 132691 1 132688 100 0 0 0      *   a small wooden drum
+P 1 132692 1 132688 100 0 0 0      *   a small wooden mandolin
+P 1 132693 1 132688 100 0 0 0      *   a small wooden harp
+P 1 132704 1 132688 100 0 0 0      *   a small wooden flute
+O 0 132552 2 132834 100 0 0 0      * a loaf of bread
+O 0 132688 2 132835 100 0 0 0      * a large burlap sack
+P 1 132695 1 132688 100 0 0 0      *   a small batch of mandrake roots
+P 1 132700 1 132688 100 0 0 0      *   small and furry black wolf pup
+P 1 132694 1 132688 100 0 0 0      *   a clump of nightshade
+P 1 132696 1 132688 100 0 0 0      *   some sap from a sacred yew
+O 0 132631 3 132840 100 0 0 0      * a stained glass window
+O 0 132631 3 132847 100 0 0 0      * a stained glass window
+O 0 132631 3 132848 100 0 0 0      * a stained glass window
+O 0 132634 1 132868 100 0 0 0      * a deposit box
+O 0 132656 1 132901 100 0 0 0      * the pond
+O 0 132657 2 132945 100 0 0 0      * a mahogany desk
+P 1 132654 2 132657 100 0 0 0      *   some gold coins
+O 0 132636 4 132956 100 0 0 0      * a Scorpion Ballista
+O 0 132636 4 132958 100 0 0 0      * a Scorpion Ballista
+O 0 132660 4 132967 100 0 0 0      * a stained glass window
+O 0 132659 4 132968 100 0 0 0      * a stained glass window
+O 0 132661 1 132978 100 0 0 0      * the pond
+O 0 132662 1 132978 100 0 0 0      * a rock
+O 0 132659 4 132982 100 0 0 0      * a stained glass window
+O 0 132660 4 132983 100 0 0 0      * a stained glass window
+O 0 132667 1 132989 100 0 0 0      * a daedalian fountain
+O 0 132636 4 132997 100 0 0 0      * a Scorpion Ballista
+O 0 132636 4 132999 100 0 0 0      * a Scorpion Ballista
+O 0 132660 4 133008 100 0 0 0      * a stained glass window
+O 0 132659 4 133009 100 0 0 0      * a stained glass window
+O 0 132625 1 133010 100 0 0 0      * a glowing portal
+O 0 132665 1 133018 100 0 0 0      * the glowing portal
+O 0 132663 1 133018 100 0 0 0      * the bookshelf
+P 1 132664 3 132663 100 0 0 0      *   a magical text book
+O 0 132666 1 133019 100 0 0 0      * the glowing portal
+O 0 132659 4 133023 100 0 0 0      * a stained glass window
+O 0 132660 4 133024 100 0 0 0      * a stained glass window
+O 0 132653 1 133050 100 0 0 0      * an ironbound chest
+P 1 132635 2 132653 100 0 0 0      *   a packet of maps
+P 1 132664 3 132653 100 0 0 0      *   a magical text book
+P 1 132664 3 132653 100 0 0 0      *   a magical text book
 *
-M 0 6117 1 6001 100 0 0 0          * Kieta
+M 0 132617 1 132500 100 0 0 0      * Kieta
 G 1 66709 999 0 100 0 0 0          *    (object type not in this .obj file)
 G 1 253 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 252 999 0 100 0 0 0            *    (object type not in this .obj file)
@@ -609,179 +609,179 @@ G 1 191 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 363 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 368 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 369 999 0 100 0 0 0            *    (object type not in this .obj file)
-M 0 6112 1 6002 100 0 0 0          * Malrik
-E 1 6129 1 5 100 0 0 0             *   a flowing robe of illusions
-M 0 6096 5 6003 100 0 0 0          * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6021 6 6004 100 0 0 0          * an elite guard
-E 1 6027 5 5 100 0 0 0             *   a steel cuirass emblazoned with the insignia of Tharnadia
-E 1 6022 4 6 100 0 0 0             *   a blacksteel coif
-E 1 6021 5 7 100 0 0 0             *   some vorhide leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6023 4 10 100 0 0 0            *   some vorhide armplates
-E 1 6066 4 11 100 0 0 0            *   a shield emblazoned with the insignia of Tharnadia
-G 1 6051 4 0 100 0 0 0             *    a double-bladed battle axe
-M 0 6075 1 6004 100 0 0 0          * a controller
-E 1 6086 9 16 100 0 0 0            *   a polished steel dagger
-E 1 6086 9 17 100 0 0 0            *   a polished steel dagger
-M 0 6114 1 6004 100 0 0 0          * A tharnadian illusionist
-M 0 6021 6 6004 100 0 0 0          * an elite guard
-M 0 6021 6 6004 100 0 0 0          * an elite guard
-M 0 6021 6 6004 100 0 0 0          * an elite guard
-M 0 6021 6 6004 100 0 0 0          * an elite guard
-M 0 6047 8 6005 100 0 0 0          * a stray dog
-E 1 6091 1 3 100 0 0 0             *   a steel dog collar
-M 0 6116 7 6005 100 0 0 0          * a tharnadian thief-hunter
-M 0 6121 3 6005 100 0 0 0          * an elite guard
-M 0 6121 3 6005 100 0 0 0          * an elite guard
-M 0 6121 3 6005 100 0 0 0          * an elite guard
-M 0 6048 10 6006 100 0 0 0         * a stray cat
-M 0 6036 4 6007 100 0 0 0          * a working commoner
-M 0 6020 13 6008 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6093 9 6008 100 0 0 0          * a street sweeper
-E 1 6108 9 16 100 0 0 0            *   a broom
-M 0 6019 1 6009 100 0 0 0          * Sarn, the banker
-M 0 6047 8 6011 100 0 0 0          * a stray dog
-M 0 6048 10 6011 100 0 0 0         * a stray cat
-M 0 6531 1 6018 100 0 0 0          * a rambunctious halfling child
-G 1 6550 1 0 100 0 0 0             *    a small bamboo lyre
-M 0 6532 1 6018 100 0 0 0          * an energetic human child
-G 1 6549 1 0 100 0 0 0             *    A small clumsily made mandolin
-M 0 6533 1 6018 100 0 0 0          * a wild grey elf child
-G 1 6548 1 0 100 0 0 0             *    A small reed flute
-M 0 6530 1 6019 100 0 0 0          * a muscular human
-M 0 6555 1 6021 100 0 0 0          * Leodra, the pudgy gnome conjurer
-M 0 6558 1 6022 100 0 0 0          * an energetic gnome
-M 0 6020 13 6025 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6116 7 6025 100 0 0 0          * a tharnadian thief-hunter
-M 0 6047 8 6026 100 0 0 0          * a stray dog
-M 0 6093 9 6028 100 0 0 0          * a street sweeper
-E 1 6108 9 16 100 0 0 0            *   a broom
-M 0 6085 1 6031 100 0 0 0          * the shopkeeper
-E 1 6086 9 16 100 0 0 0            *   a polished steel dagger
-G 1 6089 1 0 100 0 0 0             *    a dark green bottle
-G 1 6092 1 0 100 0 0 0             *    a wicked dagger
-G 1 6093 1 0 100 0 0 0             *    a black assassin's dagger
-G 1 6094 1 0 100 0 0 0             *    a set of bone picks
-G 1 6095 4 0 100 0 0 0             *    a Belialian sword of venom
+M 0 132612 1 132501 100 0 0 0      * Malrik
+E 1 132629 1 5 100 0 0 0           *   a flowing robe of illusions
+M 0 132596 5 132502 100 0 0 0      * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132521 6 132503 100 0 0 0      * an elite guard
+E 1 132527 5 5 100 0 0 0           *   a steel cuirass emblazoned with the insignia of Tharnadia
+E 1 132522 4 6 100 0 0 0           *   a blacksteel coif
+E 1 132521 5 7 100 0 0 0           *   some vorhide leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132523 4 10 100 0 0 0          *   some vorhide armplates
+E 1 132566 4 11 100 0 0 0          *   a shield emblazoned with the insignia of Tharnadia
+G 1 132551 4 0 100 0 0 0           *    a double-bladed battle axe
+M 0 132575 1 132503 100 0 0 0      * a controller
+E 1 132586 9 16 100 0 0 0          *   a polished steel dagger
+E 1 132586 9 17 100 0 0 0          *   a polished steel dagger
+M 0 132614 1 132503 100 0 0 0      * A tharnadian illusionist
+M 0 132521 6 132503 100 0 0 0      * an elite guard
+M 0 132521 6 132503 100 0 0 0      * an elite guard
+M 0 132521 6 132503 100 0 0 0      * an elite guard
+M 0 132521 6 132503 100 0 0 0      * an elite guard
+M 0 132547 8 132504 100 0 0 0      * a stray dog
+E 1 132591 1 3 100 0 0 0           *   a steel dog collar
+M 0 132616 7 132504 100 0 0 0      * a tharnadian thief-hunter
+M 0 132621 3 132504 100 0 0 0      * an elite guard
+M 0 132621 3 132504 100 0 0 0      * an elite guard
+M 0 132621 3 132504 100 0 0 0      * an elite guard
+M 0 132548 10 132505 100 0 0 0     * a stray cat
+M 0 132536 4 132506 100 0 0 0      * a working commoner
+M 0 132520 13 132507 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132593 9 132507 100 0 0 0      * a street sweeper
+E 1 132608 9 16 100 0 0 0          *   a broom
+M 0 132519 1 132508 100 0 0 0      * Sarn, the banker
+M 0 132547 8 132510 100 0 0 0      * a stray dog
+M 0 132548 10 132510 100 0 0 0     * a stray cat
+M 0 132662 1 132517 100 0 0 0      * a rambunctious halfling child
+G 1 132684 1 0 100 0 0 0           *    a small bamboo lyre
+M 0 132663 1 132517 100 0 0 0      * an energetic human child
+G 1 132683 1 0 100 0 0 0           *    A small clumsily made mandolin
+M 0 132664 1 132517 100 0 0 0      * a wild grey elf child
+G 1 132682 1 0 100 0 0 0           *    A small reed flute
+M 0 132661 1 132518 100 0 0 0      * a muscular human
+M 0 132666 1 132520 100 0 0 0      * Leodra, the pudgy gnome conjurer
+M 0 132669 1 132521 100 0 0 0      * an energetic gnome
+M 0 132520 13 132524 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132616 7 132524 100 0 0 0      * a tharnadian thief-hunter
+M 0 132547 8 132525 100 0 0 0      * a stray dog
+M 0 132593 9 132527 100 0 0 0      * a street sweeper
+E 1 132608 9 16 100 0 0 0          *   a broom
+M 0 132585 1 132530 100 0 0 0      * the shopkeeper
+E 1 132586 9 16 100 0 0 0          *   a polished steel dagger
+G 1 132589 1 0 100 0 0 0           *    a dark green bottle
+G 1 132592 1 0 100 0 0 0           *    a wicked dagger
+G 1 132593 1 0 100 0 0 0           *    a black assassin's dagger
+G 1 132594 1 0 100 0 0 0           *    a set of bone picks
+G 1 132595 4 0 100 0 0 0           *    a Belialian sword of venom
 G 1 500 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 73 999 0 100 0 0 0             *    (object type not in this .obj file)
 G 1 77 999 0 100 0 0 0             *    (object type not in this .obj file)
-M 0 6084 2 6034 100 0 0 0          * a rogue in training
-M 0 6084 2 6034 100 0 0 0          * a rogue in training
-M 0 6095 26 6035 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6035 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6035 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6020 13 6036 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6095 26 6037 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6037 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6037 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6039 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6039 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6039 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6040 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6040 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6040 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6086 1 6044 100 0 0 0          * Chastity LaFey
-G 1 6020 2 0 100 0 0 0             *    a blacksteel cuirass
-G 1 6021 5 0 100 0 0 0             *    some vorhide leggings
-G 1 6022 4 0 100 0 0 0             *    a blacksteel coif
-G 1 6064 1 0 100 0 0 0             *    a mithril breast plate
-M 0 6068 1 6045 100 0 0 0          * the knight
-M 0 6093 9 6049 100 0 0 0          * a street sweeper
-E 1 6108 9 16 100 0 0 0            *   a broom
-M 0 6082 5 6051 100 0 0 0          * a large rat
-M 0 6082 5 6051 100 0 0 0          * a large rat
-M 0 6082 5 6051 100 0 0 0          * a large rat
-M 0 6047 8 6052 100 0 0 0          * a stray dog
-M 0 6020 13 6052 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6032 4 6053 100 0 0 0          * a human merchant
-M 0 6061 1 6053 100 0 0 0          * a peddler
-G 1 6104 999 0 100 0 0 0           *    an ermineskin backpack
-G 1 6105 999 0 100 0 0 0           *    a leather bag
-G 1 6106 999 0 100 0 0 0           *    a raccoonskin bag
-G 1 6070 999 0 100 0 0 0           *    a ten-sided die
-G 1 6109 999 0 100 0 0 0           *    a six-sided die
-G 1 6110 999 0 100 0 0 0           *    a twenty-sided die
+M 0 132584 2 132533 100 0 0 0      * a rogue in training
+M 0 132584 2 132533 100 0 0 0      * a rogue in training
+M 0 132595 26 132534 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132534 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132534 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132520 13 132535 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132595 26 132536 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132536 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132536 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132538 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132538 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132538 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132539 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132539 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132539 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132586 1 132543 100 0 0 0      * Chastity LaFey
+G 1 132520 2 0 100 0 0 0           *    a blacksteel cuirass
+G 1 132521 5 0 100 0 0 0           *    some vorhide leggings
+G 1 132522 4 0 100 0 0 0           *    a blacksteel coif
+G 1 132564 1 0 100 0 0 0           *    a mithril breast plate
+M 0 132568 1 132544 100 0 0 0      * the knight
+M 0 132593 9 132548 100 0 0 0      * a street sweeper
+E 1 132608 9 16 100 0 0 0          *   a broom
+M 0 132582 5 132550 100 0 0 0      * a large rat
+M 0 132582 5 132550 100 0 0 0      * a large rat
+M 0 132582 5 132550 100 0 0 0      * a large rat
+M 0 132547 8 132551 100 0 0 0      * a stray dog
+M 0 132520 13 132551 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132532 4 132552 100 0 0 0      * a human merchant
+M 0 132561 1 132552 100 0 0 0      * a peddler
+G 1 132604 999 0 100 0 0 0         *    an ermineskin backpack
+G 1 132605 999 0 100 0 0 0         *    a leather bag
+G 1 132606 999 0 100 0 0 0         *    a raccoonskin bag
+G 1 132570 999 0 100 0 0 0         *    a ten-sided die
+G 1 132609 999 0 100 0 0 0         *    a six-sided die
+G 1 132610 999 0 100 0 0 0         *    a twenty-sided die
 G 1 835 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 336 999 0 100 0 0 0            *    (object type not in this .obj file)
-M 0 6057 2 6054 100 0 0 0          * a militia guard
-M 0 6115 1 6054 100 0 0 0          * a human alchemist
+M 0 132557 2 132553 100 0 0 0      * a militia guard
+M 0 132615 1 132553 100 0 0 0      * a human alchemist
 G 1 820 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 821 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 823 999 0 100 0 0 0            *    (object type not in this .obj file)
@@ -792,937 +792,937 @@ G 1 826 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 835 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 827 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 828 999 0 100 0 0 0            *    (object type not in this .obj file)
-M 0 6001 1 6055 100 0 0 0          * a tall merchant
-G 1 6015 999 0 100 0 0 0           *    a thick viscid potion
-G 1 6016 999 0 100 0 0 0           *    a clear vial of crimson liquid
-G 1 6017 999 0 100 0 0 0           *    a speckled green potion
-G 1 6054 1 0 100 0 0 0             *    a stygian magenta potion
+M 0 132501 1 132554 100 0 0 0      * a tall merchant
+G 1 132515 999 0 100 0 0 0         *    a thick viscid potion
+G 1 132516 999 0 100 0 0 0         *    a clear vial of crimson liquid
+G 1 132517 999 0 100 0 0 0         *    a speckled green potion
+G 1 132554 1 0 100 0 0 0           *    a stygian magenta potion
 G 1 835 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 6132 999 0 100 0 0 0           *    an arcane spellbook covered with runes
-M 0 6059 1 6055 100 0 0 0          * the young woman
-M 0 6060 1 6056 100 0 0 0          * the commoner
-M 0 6057 2 6056 100 0 0 0          * a militia guard
-M 0 6058 1 6057 100 0 0 0          * an old lady
-G 1 6088 1 0 100 0 0 0             *    an apple
-M 0 6000 1 6058 100 0 0 0          * Kienar Verdock
-G 1 6007 1 0 100 0 0 0             *    a piece of fried mutton
-G 1 6008 1 0 100 0 0 0             *    a succulent roast
-G 1 6009 1 0 100 0 0 0             *    a light elvish pastry
-M 0 6048 10 6059 100 0 0 0         * a stray cat
-M 0 6046 1 6061 100 0 0 0          * a honor guard
-M 0 6056 1 6061 100 0 0 0          * the waiter
-M 0 6055 1 6061 100 0 0 0          * the bartender
-G 1 6046 2 0 100 0 0 0             *    a bottle
-G 1 6047 3 0 100 0 0 0             *    a bottle
-G 1 6048 2 0 100 0 0 0             *    a firebreather
-G 1 6049 2 0 100 0 0 0             *    a bottle
-G 1 6044 1 0 100 0 0 0             *    a wooden bat
-M 0 6045 1 6061 100 0 0 0          * a peacekeeper
-M 0 6064 1 6061 100 0 0 0          * a drunk
-G 1 6047 3 0 100 0 0 0             *    a bottle
-M 0 6020 13 6064 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6040 3 6066 100 0 0 0          * an old man
-M 0 6039 3 6067 100 0 0 0          * a female commoner
-M 0 6095 26 6068 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6068 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6068 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6071 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6071 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6071 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6080 2 6072 100 0 0 0          * a slutty whore
-M 0 6081 3 6072 100 0 0 0          * a homeless child
-M 0 6093 9 6073 100 0 0 0          * a street sweeper
-E 1 6108 9 16 100 0 0 0            *   a broom
-M 0 6031 1 6074 100 0 0 0          * the town crier
-M 0 6063 1 6076 100 0 0 0          * the receptionist
-M 0 6119 2 6076 100 0 0 0          * an elite guard
-M 0 6119 2 6076 100 0 0 0          * an elite guard
-M 0 6048 10 6077 100 0 0 0         * a stray cat
-M 0 6069 2 6077 100 0 0 0          * a young cleric
-M 0 6093 9 6078 100 0 0 0          * a street sweeper
-E 1 6108 9 16 100 0 0 0            *   a broom
-M 0 6048 10 6079 100 0 0 0         * a stray cat
-M 0 6073 3 6079 100 0 0 0          * a religious zealot
-M 0 6032 4 6081 100 0 0 0          * a human merchant
-E 1 6096 3 12 100 0 0 0            *   a leather cloak
-E 1 6055 65 16 100 0 0 0           *   a small sword
-M 0 6069 2 6081 100 0 0 0          * a young cleric
-M 0 6071 1 6082 100 0 0 0          * a commoner
-M 0 6047 8 6083 100 0 0 0          * a stray dog
-M 0 6021 6 6083 100 0 0 0          * an elite guard
-E 1 6027 5 5 100 0 0 0             *   a steel cuirass emblazoned with the insignia of Tharnadia
-E 1 6022 4 6 100 0 0 0             *   a blacksteel coif
-E 1 6021 5 7 100 0 0 0             *   some vorhide leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6023 4 10 100 0 0 0            *   some vorhide armplates
-E 1 6066 4 11 100 0 0 0            *   a shield emblazoned with the insignia of Tharnadia
-G 1 6051 4 0 100 0 0 0             *    a double-bladed battle axe
-M 0 6093 9 6083 100 0 0 0          * a street sweeper
-E 1 6108 9 16 100 0 0 0            *   a broom
-M 0 6020 13 6084 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6116 7 6084 100 0 0 0          * a tharnadian thief-hunter
-M 0 6093 9 6091 100 0 0 0          * a street sweeper
-E 1 6108 9 16 100 0 0 0            *   a broom
-M 0 6020 13 6095 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6093 9 6096 100 0 0 0          * a street sweeper
-E 1 6108 9 16 100 0 0 0            *   a broom
-M 0 6116 7 6096 100 0 0 0          * a tharnadian thief-hunter
-M 0 6020 13 6099 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6077 2 6103 100 0 0 0          * a tough mercenary
-M 0 6020 13 6104 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6042 4 6107 100 0 0 0          * a shady mercenary
-E 1 6076 3 6 100 0 0 0             *   a leather cap
-E 1 6078 2 7 100 0 0 0             *   a pair of mithril leggings
-M 0 6033 2 6108 100 0 0 0          * a peasant farmer
-E 1 6079 2 7 100 0 0 0             *   a pair of leather pants
-M 0 6095 26 6109 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6109 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6110 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6110 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6111 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6111 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6112 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6095 26 6112 100 0 0 0         * a militia archer
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6030 1 6113 100 0 0 0          * the baker
-G 1 6052 2 0 100 0 0 0             *    a loaf of bread
-G 1 6053 1 0 100 0 0 0             *    a halfling pastry
-M 0 6034 1 6114 100 0 0 0          * the baker's wife
-M 0 6035 4 6114 100 0 0 0          * the baker's kid
-M 0 6035 4 6114 100 0 0 0          * the baker's kid
-M 0 6035 4 6114 100 0 0 0          * the baker's kid
-M 0 6035 4 6114 100 0 0 0          * the baker's kid
-M 0 6016 1 6115 100 0 0 0          * Kylara Nevicck
-M 0 6104 1 6116 100 0 0 0          * a parrot
-M 0 6105 1 6116 100 0 0 0          * a black wolf
-M 0 6106 1 6116 100 0 0 0          * a small firelizard
-M 0 6107 1 6116 100 0 0 0          * a raccoon
-M 0 6108 1 6116 100 0 0 0          * a black panther
-M 0 6050 1 6118 100 0 0 0          * the High Justice of Tharnadia
-M 0 6049 1 6118 100 0 0 0          * the bailiff
-M 0 6109 1 6118 100 0 0 0          * The Justice Clerk
-M 0 6044 1 6119 100 0 0 0          * a jailor
-M 0 6036 4 6121 100 0 0 0          * a working commoner
-M 0 6037 3 6122 100 0 0 0          * a female commoner
-M 0 6062 1 6123 100 0 0 0          * a giant tarantula
-M 0 6040 3 6125 100 0 0 0          * an old man
-M 0 6038 1 6128 100 0 0 0          * a male worker
-M 0 6039 3 6128 100 0 0 0          * a female commoner
-M 0 6036 4 6129 100 0 0 0          * a working commoner
-M 0 6037 3 6129 100 0 0 0          * a female commoner
-M 0 6002 1 6130 100 0 0 0          * Sten Hardik
-E 1 6024 1 16 100 0 0 0            *   a heavy forge hammer
-G 1 6022 4 0 100 0 0 0             *    a blacksteel coif
-G 1 6023 4 0 100 0 0 0             *    some vorhide armplates
-G 1 6029 3 0 100 0 0 0             *    some spiked leather armor
-G 1 6031 3 0 100 0 0 0             *    a pair of high-soft leather boots
-G 1 6065 1 0 100 0 0 0             *    a suit of chainmail armor
-G 1 6074 30 0 100 0 0 0            *    a pair of vorhide fingers
-G 1 6076 3 0 100 0 0 0             *    a leather cap
-G 1 6079 2 0 100 0 0 0             *    a pair of leather pants
-G 1 6021 5 0 100 0 0 0             *    some vorhide leggings
-G 1 6030 16 0 100 0 0 0            *    some leather leggings
-G 1 6073 2 0 100 0 0 0             *    a pair of mithril gauntlets
-M 0 6096 5 6134 100 0 0 0          * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6096 5 6140 100 0 0 0          * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6074 30 9 100 0 0 0            *   a pair of vorhide fingers
-E 1 6055 65 16 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-R 1 6028 4 6140 100 0 0 0          * a powerful vor (being ridden)
-F 1 6028 4 6140 100 0 0 0          * a powerful vor (following)
-M 0 6007 8 6145 100 0 0 0          * a deep-billed pelican
-M 0 6009 5 6145 100 0 0 0          * a beach guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-G 1 6050 4 0 100 0 0 0             *    a blacksteel polearm
-M 0 6008 17 6145 100 0 0 0         * a seagull
-M 0 6008 17 6146 100 0 0 0         * a seagull
-M 0 6010 6 6146 100 0 0 0          * a male commoner
-G 1 6025 9 0 100 0 0 0             *    a fishing pole
-M 0 6006 6 6147 100 0 0 0          * a deathhead adder
-M 0 6007 8 6148 100 0 0 0          * a deep-billed pelican
-M 0 6010 6 6148 100 0 0 0          * a male commoner
-G 1 6025 9 0 100 0 0 0             *    a fishing pole
-M 0 6008 17 6149 100 0 0 0         * a seagull
-M 0 6009 5 6149 100 0 0 0          * a beach guard
-E 1 6027 5 5 100 0 0 0             *   a steel cuirass emblazoned with the insignia of Tharnadia
-E 1 6066 4 11 100 0 0 0            *   a shield emblazoned with the insignia of Tharnadia
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6010 6 6149 100 0 0 0          * a male commoner
-G 1 6025 9 0 100 0 0 0             *    a fishing pole
-M 0 6011 3 6149 100 0 0 0          * a female commoner
-G 1 6025 9 0 100 0 0 0             *    a fishing pole
-M 0 6003 2 6150 100 0 0 0          * a striped gar
-M 0 6003 2 6150 100 0 0 0          * a striped gar
-M 0 6004 1 6150 100 0 0 0          * a striped gar
-M 0 6005 2 6150 100 0 0 0          * a striped gar
-M 0 6005 2 6150 100 0 0 0          * a striped gar
-M 0 6006 6 6150 100 0 0 0          * a deathhead adder
-M 0 6006 6 6150 100 0 0 0          * a deathhead adder
-M 0 6008 17 6151 100 0 0 0         * a seagull
-M 0 6007 8 6152 100 0 0 0          * a deep-billed pelican
-M 0 6011 3 6152 100 0 0 0          * a female commoner
-G 1 6025 9 0 100 0 0 0             *    a fishing pole
-M 0 6006 6 6153 100 0 0 0          * a deathhead adder
-M 0 6006 6 6153 100 0 0 0          * a deathhead adder
-M 0 6007 8 6154 100 0 0 0          * a deep-billed pelican
-M 0 6008 17 6154 100 0 0 0         * a seagull
-M 0 6008 17 6154 100 0 0 0         * a seagull
-M 0 6009 5 6154 100 0 0 0          * a beach guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6066 4 11 100 0 0 0            *   a shield emblazoned with the insignia of Tharnadia
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6010 6 6154 100 0 0 0          * a male commoner
-G 1 6025 9 0 100 0 0 0             *    a fishing pole
-M 0 6020 13 6155 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6048 10 6159 100 0 0 0         * a stray cat
-M 0 6072 1 6159 100 0 0 0          * a woman
-M 0 6020 13 6160 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6032 4 6161 100 0 0 0          * a human merchant
-M 0 6048 10 6161 100 0 0 0         * a stray cat
-M 0 6047 8 6165 100 0 0 0          * a stray dog
-M 0 6020 13 6165 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6033 2 6166 100 0 0 0          * a peasant farmer
-M 0 6047 8 6167 100 0 0 0          * a stray dog
-M 0 6048 10 6168 100 0 0 0         * a stray cat
-M 0 6032 4 6170 100 0 0 0          * a human merchant
-E 1 6062 46 5 100 0 0 0            *   a leather jacket
-M 0 6043 5 6170 100 0 0 0          * the shady youth
-M 0 6020 13 6170 100 0 0 0         * a militia guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6011 3 6173 100 0 0 0          * a female commoner
-G 1 6025 9 0 100 0 0 0             *    a fishing pole
-M 0 6009 5 6173 100 0 0 0          * a beach guard
-E 1 6032 45 5 100 0 0 0            *   some spiked leather armor bearing the insignia of Tharnadia
-G 1 6050 4 0 100 0 0 0             *    a blacksteel polearm
-M 0 6008 17 6175 100 0 0 0         * a seagull
-M 0 6007 8 6175 100 0 0 0          * a deep-billed pelican
-M 0 6008 17 6178 100 0 0 0         * a seagull
-M 0 6008 17 6178 100 0 0 0         * a seagull
-M 0 6008 17 6178 100 0 0 0         * a seagull
-M 0 6015 4 6180 100 0 0 0          * a bone scorpion
-M 0 6008 17 6181 100 0 0 0         * a seagull
-M 0 6022 4 6181 100 0 0 0          * a small firelizard
-M 0 6007 8 6182 100 0 0 0          * a deep-billed pelican
-M 0 6015 4 6183 100 0 0 0          * a bone scorpion
-M 0 6008 17 6184 100 0 0 0         * a seagull
-M 0 6022 4 6184 100 0 0 0          * a small firelizard
-M 0 6015 4 6186 100 0 0 0          * a bone scorpion
-M 0 6015 4 6187 100 0 0 0          * a bone scorpion
-M 0 6022 4 6187 100 0 0 0          * a small firelizard
-M 0 6008 17 6190 100 0 0 0         * a seagull
-M 0 6012 1 6190 100 0 0 0          * a Tranquility lighthouse guard
-E 1 6027 5 5 100 0 0 0             *   a steel cuirass emblazoned with the insignia of Tharnadia
-E 1 6075 1 6 100 0 0 0             *   a mithril helmet
-E 1 6021 5 7 100 0 0 0             *   some vorhide leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6073 2 9 100 0 0 0             *   a pair of mithril gauntlets
-E 1 6023 4 10 100 0 0 0            *   some vorhide armplates
-E 1 6055 65 16 100 0 0 0           *   a small sword
-E 1 6051 4 17 100 0 0 0            *   a double-bladed battle axe
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-M 0 6022 4 6190 100 0 0 0          * a small firelizard
-M 0 6007 8 6193 100 0 0 0          * a deep-billed pelican
-M 0 6008 17 6194 100 0 0 0         * a seagull
-M 0 6010 6 6194 100 0 0 0          * a male commoner
-G 1 6025 9 0 100 0 0 0             *    a fishing pole
-M 0 6014 2 6195 100 0 0 0          * a lighthouse attendant
-E 1 6063 2 5 100 0 0 0             *   a scale mail jacket
-E 1 6058 3 16 100 0 0 0            *   a flail
-M 0 6014 2 6197 100 0 0 0          * a lighthouse attendant
-E 1 6063 2 5 100 0 0 0             *   a scale mail jacket
-E 1 6058 3 16 100 0 0 0            *   a flail
-M 0 6013 1 6198 100 0 0 0          * Parcifal, the lighthouse keeper
-M 0 6008 17 6202 100 0 0 0         * a seagull
-M 0 6010 6 6202 100 0 0 0          * a male commoner
-G 1 6025 9 0 100 0 0 0             *    a fishing pole
-M 0 6008 17 6204 100 0 0 0         * a seagull
-M 0 6008 17 6204 100 0 0 0         * a seagull
-M 0 6009 5 6204 100 0 0 0          * a beach guard
-E 1 6027 5 5 100 0 0 0             *   a steel cuirass emblazoned with the insignia of Tharnadia
-G 1 6050 4 0 100 0 0 0             *    a blacksteel polearm
-M 0 6006 6 6206 100 0 0 0          * a deathhead adder
-M 0 6007 8 6206 100 0 0 0          * a deep-billed pelican
-M 0 6573 1 6209 100 0 0 0          * Rhed, the elven ranger
-M 0 6048 10 6211 100 0 0 0         * a stray cat
-M 0 6074 2 6211 100 0 0 0          * the beggar
-M 0 6093 9 6211 100 0 0 0          * a street sweeper
-E 1 6108 9 16 100 0 0 0            *   a broom
-M 0 6073 3 6213 100 0 0 0          * a religious zealot
-M 0 6079 2 6213 100 0 0 0          * a poor commoner
-M 0 6018 8 6217 100 0 0 0          * a parrot
-M 0 6023 8 6218 100 0 0 0          * a raccoon
-M 0 6018 8 6218 100 0 0 0          * a parrot
-M 0 6017 4 6219 100 0 0 0          * a black wolf
-M 0 6024 7 6219 100 0 0 0          * a squirrel
-M 0 6018 8 6220 100 0 0 0          * a parrot
-M 0 6017 4 6221 100 0 0 0          * a black wolf
-M 0 6018 8 6222 100 0 0 0          * a parrot
-M 0 6023 8 6223 100 0 0 0          * a raccoon
-M 0 6023 8 6224 100 0 0 0          * a raccoon
-M 0 6024 7 6224 100 0 0 0          * a squirrel
-M 0 6018 8 6225 100 0 0 0          * a parrot
-M 0 6017 4 6226 100 0 0 0          * a black wolf
-M 0 6023 8 6226 100 0 0 0          * a raccoon
-M 0 6018 8 6228 100 0 0 0          * a parrot
-M 0 6023 8 6229 100 0 0 0          * a raccoon
-M 0 6024 7 6229 100 0 0 0          * a squirrel
-M 0 6017 4 6230 100 0 0 0          * a black wolf
-M 0 6018 8 6230 100 0 0 0          * a parrot
-M 0 6023 8 6232 100 0 0 0          * a raccoon
-M 0 6024 7 6233 100 0 0 0          * a squirrel
-M 0 6023 8 6236 100 0 0 0          * a raccoon
-M 0 6024 7 6236 100 0 0 0          * a squirrel
-M 0 6024 7 6237 100 0 0 0          * a squirrel
-M 0 6023 8 6238 100 0 0 0          * a raccoon
-M 0 6018 8 6239 100 0 0 0          * a parrot
-M 0 6024 7 6240 100 0 0 0          * a squirrel
-M 0 6025 1 6242 100 0 0 0          * Hernic Tastsgud
-G 1 6042 1 0 100 0 0 0             *    a vibrant sapphire
-G 1 6043 2 0 100 0 0 0             *    a finely cut diamond
-G 1 6041 999 0 100 0 0 0           *    a common gemstone
-G 1 6037 999 0 100 0 0 0           *    a beautiful jewelled necklace
-G 1 6038 999 0 100 0 0 0           *    a diamond earring
-G 1 6039 999 0 100 0 0 0           *    a rare ebon ruby
-G 1 6040 999 0 100 0 0 0           *    a fine violet jewel
-M 0 6066 1 6243 100 0 0 0          * Brinn
-G 1 6050 4 0 100 0 0 0             *    a blacksteel polearm
-G 1 6051 4 0 100 0 0 0             *    a double-bladed battle axe
-G 1 6055 65 0 100 0 0 0            *    a small sword
-G 1 6056 2 0 100 0 0 0             *    a wooden club
-G 1 6057 1 0 100 0 0 0             *    a warhammer
-G 1 6058 3 0 100 0 0 0             *    a flail
-G 1 6069 3 0 100 0 0 0             *    a two-handed claymore
-G 1 6086 9 0 100 0 0 0             *    a polished steel dagger
-M 0 6100 1 6245 100 0 0 0          * a magnificient medium warhorse
-M 0 6101 1 6245 100 0 0 0          * the powerful griffon
-M 0 6102 1 6245 100 0 0 0          * a powerful vor
-M 0 6103 1 6245 100 0 0 0          * a black arabian mount
-M 0 6043 5 6246 100 0 0 0          * the shady youth
-M 0 6042 4 6248 100 0 0 0          * a shady mercenary
-M 0 6047 8 6250 100 0 0 0          * a stray dog
-M 0 6048 10 6250 100 0 0 0         * a stray cat
-M 0 6041 3 6251 100 0 0 0          * the dangerous looking rogue
-E 1 6078 2 7 100 0 0 0             *   a pair of mithril leggings
-E 1 6031 3 8 100 0 0 0             *   a pair of high-soft leather boots
-E 1 6077 2 15 100 0 0 0            *   an orcskin forearm guard
-E 1 6055 65 16 100 0 0 0           *   a small sword
-E 1 6038 999 21 100 0 0 0          *   a diamond earring
-M 0 6043 5 6252 100 0 0 0          * the shady youth
-E 1 6060 2 5 100 0 0 0             *   a chainmail shirt
-E 1 6076 3 6 100 0 0 0             *   a leather cap
-E 1 6056 2 16 100 0 0 0            *   a wooden club
-M 0 6041 3 6252 100 0 0 0          * the dangerous looking rogue
-E 1 6020 2 5 100 0 0 0             *   a blacksteel cuirass
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-M 0 6042 4 6253 100 0 0 0          * a shady mercenary
-E 1 6029 3 5 100 0 0 0             *   some spiked leather armor
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6031 3 8 100 0 0 0             *   a pair of high-soft leather boots
-M 0 6083 3 6253 100 0 0 0          * a huge rat
-M 0 6081 3 6253 100 0 0 0          * a homeless child
-M 0 6083 3 6253 100 0 0 0          * a huge rat
-M 0 6083 3 6253 100 0 0 0          * a huge rat
-M 0 6077 2 6253 100 0 0 0          * a tough mercenary
-E 1 6077 2 15 100 0 0 0            *   an orcskin forearm guard
-E 1 6055 65 16 100 0 0 0           *   a small sword
-M 0 6080 2 6254 100 0 0 0          * a slutty whore
-M 0 6041 3 6255 100 0 0 0          * the dangerous looking rogue
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6065 6 6255 100 0 0 0          * a homeless peasant
-M 0 6078 1 6255 100 0 0 0          * a battle scarred mercenary
-E 1 6090 1 15 100 0 0 0            *   a polished steel bracelet
-E 1 6055 65 16 100 0 0 0           *   a small sword
-M 0 6043 5 6257 100 0 0 0          * the shady youth
-M 0 6042 4 6259 100 0 0 0          * a shady mercenary
-M 0 6043 5 6259 100 0 0 0          * the shady youth
-E 1 6060 2 5 100 0 0 0             *   a chainmail shirt
-E 1 6061 16 11 100 0 0 0           *   a wooden shield
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-G 1 6055 65 0 100 0 0 0            *    a small sword
-M 0 6065 6 6259 100 0 0 0          * a homeless peasant
-M 0 6070 1 6262 100 0 0 0          * Jelian Phry
+G 1 132632 999 0 100 0 0 0         *    an arcane spellbook covered with runes
+M 0 132559 1 132554 100 0 0 0      * the young woman
+M 0 132560 1 132555 100 0 0 0      * the commoner
+M 0 132557 2 132555 100 0 0 0      * a militia guard
+M 0 132558 1 132556 100 0 0 0      * an old lady
+G 1 132588 1 0 100 0 0 0           *    an apple
+M 0 132500 1 132557 100 0 0 0      * Kienar Verdock
+G 1 132507 1 0 100 0 0 0           *    a piece of fried mutton
+G 1 132508 1 0 100 0 0 0           *    a succulent roast
+G 1 132509 1 0 100 0 0 0           *    a light elvish pastry
+M 0 132548 10 132558 100 0 0 0     * a stray cat
+M 0 132546 1 132560 100 0 0 0      * a honor guard
+M 0 132556 1 132560 100 0 0 0      * the waiter
+M 0 132555 1 132560 100 0 0 0      * the bartender
+G 1 132546 2 0 100 0 0 0           *    a bottle
+G 1 132547 3 0 100 0 0 0           *    a bottle
+G 1 132548 2 0 100 0 0 0           *    a firebreather
+G 1 132549 2 0 100 0 0 0           *    a bottle
+G 1 132544 1 0 100 0 0 0           *    a wooden bat
+M 0 132545 1 132560 100 0 0 0      * a peacekeeper
+M 0 132564 1 132560 100 0 0 0      * a drunk
+G 1 132547 3 0 100 0 0 0           *    a bottle
+M 0 132520 13 132563 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132540 3 132565 100 0 0 0      * an old man
+M 0 132539 3 132566 100 0 0 0      * a female commoner
+M 0 132595 26 132567 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132567 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132567 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132570 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132570 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132570 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132580 2 132571 100 0 0 0      * a slutty whore
+M 0 132581 3 132571 100 0 0 0      * a homeless child
+M 0 132593 9 132572 100 0 0 0      * a street sweeper
+E 1 132608 9 16 100 0 0 0          *   a broom
+M 0 132531 1 132573 100 0 0 0      * the town crier
+M 0 132563 1 132575 100 0 0 0      * the receptionist
+M 0 132619 2 132575 100 0 0 0      * an elite guard
+M 0 132619 2 132575 100 0 0 0      * an elite guard
+M 0 132548 10 132576 100 0 0 0     * a stray cat
+M 0 132569 2 132576 100 0 0 0      * a young cleric
+M 0 132593 9 132577 100 0 0 0      * a street sweeper
+E 1 132608 9 16 100 0 0 0          *   a broom
+M 0 132548 10 132578 100 0 0 0     * a stray cat
+M 0 132573 3 132578 100 0 0 0      * a religious zealot
+M 0 132532 4 132580 100 0 0 0      * a human merchant
+E 1 132596 3 12 100 0 0 0          *   a leather cloak
+E 1 132555 65 16 100 0 0 0         *   a small sword
+M 0 132569 2 132580 100 0 0 0      * a young cleric
+M 0 132571 1 132581 100 0 0 0      * a commoner
+M 0 132547 8 132582 100 0 0 0      * a stray dog
+M 0 132521 6 132582 100 0 0 0      * an elite guard
+E 1 132527 5 5 100 0 0 0           *   a steel cuirass emblazoned with the insignia of Tharnadia
+E 1 132522 4 6 100 0 0 0           *   a blacksteel coif
+E 1 132521 5 7 100 0 0 0           *   some vorhide leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132523 4 10 100 0 0 0          *   some vorhide armplates
+E 1 132566 4 11 100 0 0 0          *   a shield emblazoned with the insignia of Tharnadia
+G 1 132551 4 0 100 0 0 0           *    a double-bladed battle axe
+M 0 132593 9 132582 100 0 0 0      * a street sweeper
+E 1 132608 9 16 100 0 0 0          *   a broom
+M 0 132520 13 132583 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132616 7 132583 100 0 0 0      * a tharnadian thief-hunter
+M 0 132593 9 132590 100 0 0 0      * a street sweeper
+E 1 132608 9 16 100 0 0 0          *   a broom
+M 0 132520 13 132594 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132593 9 132595 100 0 0 0      * a street sweeper
+E 1 132608 9 16 100 0 0 0          *   a broom
+M 0 132616 7 132595 100 0 0 0      * a tharnadian thief-hunter
+M 0 132520 13 132598 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132577 2 132602 100 0 0 0      * a tough mercenary
+M 0 132520 13 132603 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132542 4 132606 100 0 0 0      * a shady mercenary
+E 1 132576 3 6 100 0 0 0           *   a leather cap
+E 1 132578 2 7 100 0 0 0           *   a pair of mithril leggings
+M 0 132533 2 132607 100 0 0 0      * a peasant farmer
+E 1 132579 2 7 100 0 0 0           *   a pair of leather pants
+M 0 132595 26 132608 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132608 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132609 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132609 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132610 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132610 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132611 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132595 26 132611 100 0 0 0     * a militia archer
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132530 1 132612 100 0 0 0      * the baker
+G 1 132552 2 0 100 0 0 0           *    a loaf of bread
+G 1 132553 1 0 100 0 0 0           *    a halfling pastry
+M 0 132534 1 132613 100 0 0 0      * the baker's wife
+M 0 132535 4 132613 100 0 0 0      * the baker's kid
+M 0 132535 4 132613 100 0 0 0      * the baker's kid
+M 0 132535 4 132613 100 0 0 0      * the baker's kid
+M 0 132535 4 132613 100 0 0 0      * the baker's kid
+M 0 132516 1 132614 100 0 0 0      * Kylara Nevicck
+M 0 132604 1 132615 100 0 0 0      * a parrot
+M 0 132605 1 132615 100 0 0 0      * a black wolf
+M 0 132606 1 132615 100 0 0 0      * a small firelizard
+M 0 132607 1 132615 100 0 0 0      * a raccoon
+M 0 132608 1 132615 100 0 0 0      * a black panther
+M 0 132550 1 132617 100 0 0 0      * the High Justice of Tharnadia
+M 0 132549 1 132617 100 0 0 0      * the bailiff
+M 0 132609 1 132617 100 0 0 0      * The Justice Clerk
+M 0 132544 1 132618 100 0 0 0      * a jailor
+M 0 132536 4 132620 100 0 0 0      * a working commoner
+M 0 132537 3 132621 100 0 0 0      * a female commoner
+M 0 132562 1 132622 100 0 0 0      * a giant tarantula
+M 0 132540 3 132624 100 0 0 0      * an old man
+M 0 132538 1 132627 100 0 0 0      * a male worker
+M 0 132539 3 132627 100 0 0 0      * a female commoner
+M 0 132536 4 132628 100 0 0 0      * a working commoner
+M 0 132537 3 132628 100 0 0 0      * a female commoner
+M 0 132502 1 132629 100 0 0 0      * Sten Hardik
+E 1 132524 1 16 100 0 0 0          *   a heavy forge hammer
+G 1 132522 4 0 100 0 0 0           *    a blacksteel coif
+G 1 132523 4 0 100 0 0 0           *    some vorhide armplates
+G 1 132529 3 0 100 0 0 0           *    some spiked leather armor
+G 1 132531 3 0 100 0 0 0           *    a pair of high-soft leather boots
+G 1 132565 1 0 100 0 0 0           *    a suit of chainmail armor
+G 1 132574 30 0 100 0 0 0          *    a pair of vorhide fingers
+G 1 132576 3 0 100 0 0 0           *    a leather cap
+G 1 132579 2 0 100 0 0 0           *    a pair of leather pants
+G 1 132521 5 0 100 0 0 0           *    some vorhide leggings
+G 1 132530 16 0 100 0 0 0          *    some leather leggings
+G 1 132573 2 0 100 0 0 0           *    a pair of mithril gauntlets
+M 0 132596 5 132633 100 0 0 0      * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132596 5 132639 100 0 0 0      * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
+E 1 132555 65 16 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+R 1 132528 4 132639 100 0 0 0      * a powerful vor (being ridden)
+F 1 132528 4 132639 100 0 0 0      * a powerful vor (following)
+M 0 132507 8 132644 100 0 0 0      * a deep-billed pelican
+M 0 132509 5 132644 100 0 0 0      * a beach guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+G 1 132550 4 0 100 0 0 0           *    a blacksteel polearm
+M 0 132508 17 132644 100 0 0 0     * a seagull
+M 0 132508 17 132645 100 0 0 0     * a seagull
+M 0 132510 6 132645 100 0 0 0      * a male commoner
+G 1 132525 9 0 100 0 0 0           *    a fishing pole
+M 0 132506 6 132646 100 0 0 0      * a deathhead adder
+M 0 132507 8 132647 100 0 0 0      * a deep-billed pelican
+M 0 132510 6 132647 100 0 0 0      * a male commoner
+G 1 132525 9 0 100 0 0 0           *    a fishing pole
+M 0 132508 17 132648 100 0 0 0     * a seagull
+M 0 132509 5 132648 100 0 0 0      * a beach guard
+E 1 132527 5 5 100 0 0 0           *   a steel cuirass emblazoned with the insignia of Tharnadia
+E 1 132566 4 11 100 0 0 0          *   a shield emblazoned with the insignia of Tharnadia
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132510 6 132648 100 0 0 0      * a male commoner
+G 1 132525 9 0 100 0 0 0           *    a fishing pole
+M 0 132511 3 132648 100 0 0 0      * a female commoner
+G 1 132525 9 0 100 0 0 0           *    a fishing pole
+M 0 132503 2 132649 100 0 0 0      * a striped gar
+M 0 132503 2 132649 100 0 0 0      * a striped gar
+M 0 132504 1 132649 100 0 0 0      * a striped gar
+M 0 132505 2 132649 100 0 0 0      * a striped gar
+M 0 132505 2 132649 100 0 0 0      * a striped gar
+M 0 132506 6 132649 100 0 0 0      * a deathhead adder
+M 0 132506 6 132649 100 0 0 0      * a deathhead adder
+M 0 132508 17 132650 100 0 0 0     * a seagull
+M 0 132507 8 132651 100 0 0 0      * a deep-billed pelican
+M 0 132511 3 132651 100 0 0 0      * a female commoner
+G 1 132525 9 0 100 0 0 0           *    a fishing pole
+M 0 132506 6 132652 100 0 0 0      * a deathhead adder
+M 0 132506 6 132652 100 0 0 0      * a deathhead adder
+M 0 132507 8 132653 100 0 0 0      * a deep-billed pelican
+M 0 132508 17 132653 100 0 0 0     * a seagull
+M 0 132508 17 132653 100 0 0 0     * a seagull
+M 0 132509 5 132653 100 0 0 0      * a beach guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132566 4 11 100 0 0 0          *   a shield emblazoned with the insignia of Tharnadia
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132510 6 132653 100 0 0 0      * a male commoner
+G 1 132525 9 0 100 0 0 0           *    a fishing pole
+M 0 132520 13 132654 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132548 10 132658 100 0 0 0     * a stray cat
+M 0 132572 1 132658 100 0 0 0      * a woman
+M 0 132520 13 132659 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132532 4 132660 100 0 0 0      * a human merchant
+M 0 132548 10 132660 100 0 0 0     * a stray cat
+M 0 132547 8 132664 100 0 0 0      * a stray dog
+M 0 132520 13 132664 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132533 2 132665 100 0 0 0      * a peasant farmer
+M 0 132547 8 132666 100 0 0 0      * a stray dog
+M 0 132548 10 132667 100 0 0 0     * a stray cat
+M 0 132532 4 132669 100 0 0 0      * a human merchant
+E 1 132562 46 5 100 0 0 0          *   a leather jacket
+M 0 132543 5 132669 100 0 0 0      * the shady youth
+M 0 132520 13 132669 100 0 0 0     * a militia guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132511 3 132672 100 0 0 0      * a female commoner
+G 1 132525 9 0 100 0 0 0           *    a fishing pole
+M 0 132509 5 132672 100 0 0 0      * a beach guard
+E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the insignia of Tharnadia
+G 1 132550 4 0 100 0 0 0           *    a blacksteel polearm
+M 0 132508 17 132674 100 0 0 0     * a seagull
+M 0 132507 8 132674 100 0 0 0      * a deep-billed pelican
+M 0 132508 17 132677 100 0 0 0     * a seagull
+M 0 132508 17 132677 100 0 0 0     * a seagull
+M 0 132508 17 132677 100 0 0 0     * a seagull
+M 0 132515 4 132679 100 0 0 0      * a bone scorpion
+M 0 132508 17 132680 100 0 0 0     * a seagull
+M 0 132522 4 132680 100 0 0 0      * a small firelizard
+M 0 132507 8 132681 100 0 0 0      * a deep-billed pelican
+M 0 132515 4 132682 100 0 0 0      * a bone scorpion
+M 0 132508 17 132683 100 0 0 0     * a seagull
+M 0 132522 4 132683 100 0 0 0      * a small firelizard
+M 0 132515 4 132685 100 0 0 0      * a bone scorpion
+M 0 132515 4 132686 100 0 0 0      * a bone scorpion
+M 0 132522 4 132686 100 0 0 0      * a small firelizard
+M 0 132508 17 132689 100 0 0 0     * a seagull
+M 0 132512 1 132689 100 0 0 0      * a Tranquility lighthouse guard
+E 1 132527 5 5 100 0 0 0           *   a steel cuirass emblazoned with the insignia of Tharnadia
+E 1 132575 1 6 100 0 0 0           *   a mithril helmet
+E 1 132521 5 7 100 0 0 0           *   some vorhide leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132573 2 9 100 0 0 0           *   a pair of mithril gauntlets
+E 1 132523 4 10 100 0 0 0          *   some vorhide armplates
+E 1 132555 65 16 100 0 0 0         *   a small sword
+E 1 132551 4 17 100 0 0 0          *   a double-bladed battle axe
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+M 0 132522 4 132689 100 0 0 0      * a small firelizard
+M 0 132507 8 132692 100 0 0 0      * a deep-billed pelican
+M 0 132508 17 132693 100 0 0 0     * a seagull
+M 0 132510 6 132693 100 0 0 0      * a male commoner
+G 1 132525 9 0 100 0 0 0           *    a fishing pole
+M 0 132514 2 132694 100 0 0 0      * a lighthouse attendant
+E 1 132563 2 5 100 0 0 0           *   a scale mail jacket
+E 1 132558 3 16 100 0 0 0          *   a flail
+M 0 132514 2 132696 100 0 0 0      * a lighthouse attendant
+E 1 132563 2 5 100 0 0 0           *   a scale mail jacket
+E 1 132558 3 16 100 0 0 0          *   a flail
+M 0 132513 1 132697 100 0 0 0      * Parcifal, the lighthouse keeper
+M 0 132508 17 132701 100 0 0 0     * a seagull
+M 0 132510 6 132701 100 0 0 0      * a male commoner
+G 1 132525 9 0 100 0 0 0           *    a fishing pole
+M 0 132508 17 132703 100 0 0 0     * a seagull
+M 0 132508 17 132703 100 0 0 0     * a seagull
+M 0 132509 5 132703 100 0 0 0      * a beach guard
+E 1 132527 5 5 100 0 0 0           *   a steel cuirass emblazoned with the insignia of Tharnadia
+G 1 132550 4 0 100 0 0 0           *    a blacksteel polearm
+M 0 132506 6 132705 100 0 0 0      * a deathhead adder
+M 0 132507 8 132705 100 0 0 0      * a deep-billed pelican
+M 0 132673 1 132708 100 0 0 0      * Rhed, the elven ranger
+M 0 132548 10 132710 100 0 0 0     * a stray cat
+M 0 132574 2 132710 100 0 0 0      * the beggar
+M 0 132593 9 132710 100 0 0 0      * a street sweeper
+E 1 132608 9 16 100 0 0 0          *   a broom
+M 0 132573 3 132712 100 0 0 0      * a religious zealot
+M 0 132579 2 132712 100 0 0 0      * a poor commoner
+M 0 132518 8 132716 100 0 0 0      * a parrot
+M 0 132523 8 132717 100 0 0 0      * a raccoon
+M 0 132518 8 132717 100 0 0 0      * a parrot
+M 0 132517 4 132718 100 0 0 0      * a black wolf
+M 0 132524 7 132718 100 0 0 0      * a squirrel
+M 0 132518 8 132719 100 0 0 0      * a parrot
+M 0 132517 4 132720 100 0 0 0      * a black wolf
+M 0 132518 8 132721 100 0 0 0      * a parrot
+M 0 132523 8 132722 100 0 0 0      * a raccoon
+M 0 132523 8 132723 100 0 0 0      * a raccoon
+M 0 132524 7 132723 100 0 0 0      * a squirrel
+M 0 132518 8 132724 100 0 0 0      * a parrot
+M 0 132517 4 132725 100 0 0 0      * a black wolf
+M 0 132523 8 132725 100 0 0 0      * a raccoon
+M 0 132518 8 132727 100 0 0 0      * a parrot
+M 0 132523 8 132728 100 0 0 0      * a raccoon
+M 0 132524 7 132728 100 0 0 0      * a squirrel
+M 0 132517 4 132729 100 0 0 0      * a black wolf
+M 0 132518 8 132729 100 0 0 0      * a parrot
+M 0 132523 8 132731 100 0 0 0      * a raccoon
+M 0 132524 7 132732 100 0 0 0      * a squirrel
+M 0 132523 8 132735 100 0 0 0      * a raccoon
+M 0 132524 7 132735 100 0 0 0      * a squirrel
+M 0 132524 7 132736 100 0 0 0      * a squirrel
+M 0 132523 8 132737 100 0 0 0      * a raccoon
+M 0 132518 8 132738 100 0 0 0      * a parrot
+M 0 132524 7 132739 100 0 0 0      * a squirrel
+M 0 132525 1 132741 100 0 0 0      * Hernic Tastsgud
+G 1 132542 1 0 100 0 0 0           *    a vibrant sapphire
+G 1 132543 2 0 100 0 0 0           *    a finely cut diamond
+G 1 132541 999 0 100 0 0 0         *    a common gemstone
+G 1 132537 999 0 100 0 0 0         *    a beautiful jewelled necklace
+G 1 132538 999 0 100 0 0 0         *    a diamond earring
+G 1 132539 999 0 100 0 0 0         *    a rare ebon ruby
+G 1 132540 999 0 100 0 0 0         *    a fine violet jewel
+M 0 132566 1 132742 100 0 0 0      * Brinn
+G 1 132550 4 0 100 0 0 0           *    a blacksteel polearm
+G 1 132551 4 0 100 0 0 0           *    a double-bladed battle axe
+G 1 132555 65 0 100 0 0 0          *    a small sword
+G 1 132556 2 0 100 0 0 0           *    a wooden club
+G 1 132557 1 0 100 0 0 0           *    a warhammer
+G 1 132558 3 0 100 0 0 0           *    a flail
+G 1 132569 3 0 100 0 0 0           *    a two-handed claymore
+G 1 132586 9 0 100 0 0 0           *    a polished steel dagger
+M 0 132600 1 132744 100 0 0 0      * a magnificient medium warhorse
+M 0 132601 1 132744 100 0 0 0      * the powerful griffon
+M 0 132602 1 132744 100 0 0 0      * a powerful vor
+M 0 132603 1 132744 100 0 0 0      * a black arabian mount
+M 0 132543 5 132745 100 0 0 0      * the shady youth
+M 0 132542 4 132747 100 0 0 0      * a shady mercenary
+M 0 132547 8 132749 100 0 0 0      * a stray dog
+M 0 132548 10 132749 100 0 0 0     * a stray cat
+M 0 132541 3 132750 100 0 0 0      * the dangerous looking rogue
+E 1 132578 2 7 100 0 0 0           *   a pair of mithril leggings
+E 1 132531 3 8 100 0 0 0           *   a pair of high-soft leather boots
+E 1 132577 2 15 100 0 0 0          *   an orcskin forearm guard
+E 1 132555 65 16 100 0 0 0         *   a small sword
+E 1 132538 999 21 100 0 0 0        *   a diamond earring
+M 0 132543 5 132751 100 0 0 0      * the shady youth
+E 1 132560 2 5 100 0 0 0           *   a chainmail shirt
+E 1 132576 3 6 100 0 0 0           *   a leather cap
+E 1 132556 2 16 100 0 0 0          *   a wooden club
+M 0 132541 3 132751 100 0 0 0      * the dangerous looking rogue
+E 1 132520 2 5 100 0 0 0           *   a blacksteel cuirass
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+M 0 132542 4 132752 100 0 0 0      * a shady mercenary
+E 1 132529 3 5 100 0 0 0           *   some spiked leather armor
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132531 3 8 100 0 0 0           *   a pair of high-soft leather boots
+M 0 132583 3 132752 100 0 0 0      * a huge rat
+M 0 132581 3 132752 100 0 0 0      * a homeless child
+M 0 132583 3 132752 100 0 0 0      * a huge rat
+M 0 132583 3 132752 100 0 0 0      * a huge rat
+M 0 132577 2 132752 100 0 0 0      * a tough mercenary
+E 1 132577 2 15 100 0 0 0          *   an orcskin forearm guard
+E 1 132555 65 16 100 0 0 0         *   a small sword
+M 0 132580 2 132753 100 0 0 0      * a slutty whore
+M 0 132541 3 132754 100 0 0 0      * the dangerous looking rogue
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132565 6 132754 100 0 0 0      * a homeless peasant
+M 0 132578 1 132754 100 0 0 0      * a battle scarred mercenary
+E 1 132590 1 15 100 0 0 0          *   a polished steel bracelet
+E 1 132555 65 16 100 0 0 0         *   a small sword
+M 0 132543 5 132756 100 0 0 0      * the shady youth
+M 0 132542 4 132758 100 0 0 0      * a shady mercenary
+M 0 132543 5 132758 100 0 0 0      * the shady youth
+E 1 132560 2 5 100 0 0 0           *   a chainmail shirt
+E 1 132561 16 11 100 0 0 0         *   a wooden shield
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+G 1 132555 65 0 100 0 0 0          *    a small sword
+M 0 132565 6 132758 100 0 0 0      * a homeless peasant
+M 0 132570 1 132761 100 0 0 0      * Jelian Phry
 G 1 5 11 0 100 0 0 0               *    (object type not in this .obj file)
-G 1 6019 4 0 100 0 0 0             *    a map of Tharnadia
-G 1 6059 1 0 100 0 0 0             *    a leather skin
-G 1 6072 1 0 100 0 0 0             *    a hooded lantern
-G 1 6067 1 0 100 0 0 0             *    an oak raft
-G 1 6068 1 0 100 0 0 0             *    a deerskin canoe
-G 1 6087 1 0 100 0 0 0             *    some iron rations
+G 1 132519 4 0 100 0 0 0           *    a map of Tharnadia
+G 1 132559 1 0 100 0 0 0           *    a leather skin
+G 1 132572 1 0 100 0 0 0           *    a hooded lantern
+G 1 132567 1 0 100 0 0 0           *    an oak raft
+G 1 132568 1 0 100 0 0 0           *    a deerskin canoe
+G 1 132587 1 0 100 0 0 0           *    some iron rations
 G 1 53 999 0 100 0 0 0             *    (object type not in this .obj file)
 G 1 11010 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 11011 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 1211 2 0 100 0 0 0             *    (object type not in this .obj file)
 G 1 191 999 0 100 0 0 0            *    (object type not in this .obj file)
-M 0 6091 2 6263 100 0 0 0          * a noble
-G 1 6040 999 0 100 0 0 0           *    a fine violet jewel
-M 0 6092 2 6264 100 0 0 0          * a woman noble
-E 1 6037 999 3 100 0 0 0           *   a beautiful jewelled necklace
-M 0 6091 2 6266 100 0 0 0          * a noble
-F 1 6092 2 6266 100 0 0 0          * a woman noble (following)
-E 1 6038 999 21 100 0 0 0          *   a diamond earring
-M 0 6051 1 6267 100 0 0 0          * the bartender
-G 1 6045 1 0 100 0 0 0             *    a glass
-G 1 6046 2 0 100 0 0 0             *    a bottle
-G 1 6047 3 0 100 0 0 0             *    a bottle
-G 1 6048 2 0 100 0 0 0             *    a firebreather
-G 1 6049 2 0 100 0 0 0             *    a bottle
-G 1 6101 1 0 100 0 0 0             *    a vorskin penis sheath
-G 1 6100 999 0 100 0 0 0           *    a hooking ticket
-M 0 6052 1 6267 100 0 0 0          * a filthy drunk
-M 0 6053 5 6267 100 0 0 0          * a scumbag drunk
-M 0 6053 5 6267 100 0 0 0          * a scumbag drunk
-M 0 6053 5 6267 100 0 0 0          * a scumbag drunk
-M 0 6053 5 6267 100 0 0 0          * a scumbag drunk
-M 0 6053 5 6267 100 0 0 0          * a scumbag drunk
-M 0 6087 1 6268 100 0 0 0          * a slack-jawed prostitute
-M 0 6088 1 6269 100 0 0 0          * a shitting youth
-M 0 6079 2 6270 100 0 0 0          * a poor commoner
-M 0 6065 6 6272 100 0 0 0          * a homeless peasant
-M 0 6065 6 6272 100 0 0 0          * a homeless peasant
-M 0 6065 6 6272 100 0 0 0          * a homeless peasant
-M 0 6074 2 6272 100 0 0 0          * the beggar
-M 0 6081 3 6272 100 0 0 0          * a homeless child
-M 0 6090 1 6273 100 0 0 0          * Tarn Bloodblade, the outlaw of Tharnadia
-E 1 6029 3 5 100 0 0 0             *   some spiked leather armor
-E 1 6030 16 7 100 0 0 0            *   some leather leggings
-E 1 6028 17 8 100 0 0 0            *   a pair of blacksteel boots
-E 1 6103 1 16 100 0 0 0            *   a gladius called 'Backstabber'
-E 1 6055 65 17 100 0 0 0           *   a small sword
-G 1 6062 46 0 100 0 0 0            *    a leather jacket
-F 1 6089 4 6273 100 0 0 0          * a grim mercenary (following)
-E 1 6055 65 16 100 0 0 0           *   a small sword
-F 1 6089 4 6273 100 0 0 0          * a grim mercenary (following)
-E 1 6055 65 16 100 0 0 0           *   a small sword
-F 1 6089 4 6273 100 0 0 0          * a grim mercenary (following)
-E 1 6055 65 16 100 0 0 0           *   a small sword
-F 1 6089 4 6273 100 0 0 0          * a grim mercenary (following)
-E 1 6055 65 16 100 0 0 0           *   a small sword
-M 0 6039 3 6274 100 0 0 0          * a female commoner
-M 0 6040 3 6274 100 0 0 0          * an old man
-M 0 6036 4 6275 100 0 0 0          * a working commoner
-M 0 6037 3 6275 100 0 0 0          * a female commoner
-M 0 6094 4 6282 100 0 0 0          * a cat burglar
-E 1 6096 3 12 100 0 0 0            *   a leather cloak
-E 1 6095 4 16 100 0 0 0            *   a Belialian sword of venom
-M 0 6094 4 6292 100 0 0 0          * a cat burglar
-E 1 6096 3 12 100 0 0 0            *   a leather cloak
-E 1 6095 4 16 100 0 0 0            *   a Belialian sword of venom
-M 0 6094 4 6302 100 0 0 0          * a cat burglar
-G 1 6086 9 0 100 0 0 0             *    a polished steel dagger
-M 0 6094 4 6305 100 0 0 0          * a cat burglar
-G 1 6086 9 0 100 0 0 0             *    a polished steel dagger
-M 0 6097 1 6321 100 0 0 0          * the mailman
-M 0 6098 1 6322 100 0 0 0          * the auctioneer
-M 0 6099 1 6323 100 0 0 0          * the doctor
-M 0 6529 1 6324 100 0 0 0          * Zech, the dwarven warrior
-M 0 6528 1 6325 100 0 0 0          * Ithilin, the travelling bard.
-M 0 6556 1 6334 100 0 0 0          * a bleeding halfling
-M 0 6557 1 6336 100 0 0 0          * a beautiful centaur
-M 0 6570 1 6337 100 0 0 0          * rich human merchant
-E 1 6565 1 3 100 0 0 0             *   a heavy solid gold pendant
-F 1 6571 2 6337 100 0 0 0          * sturdy barbarian bodyguard (following)
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6069 3 16 100 0 0 0            *   a two-handed claymore
-F 1 6571 2 6337 100 0 0 0          * sturdy barbarian bodyguard (following)
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6069 3 16 100 0 0 0            *   a two-handed claymore
-M 0 6572 1 6338 100 0 0 0          * Menae, the apprentice sorcerer
-M 0 6534 1 6340 100 0 0 0          * Xero, the barbarian mercenary
-M 0 6113 1 6358 100 0 0 0          * Zaberetornaz
-E 1 6119 999 5 100 0 0 0           *   a mysterious robe
-E 1 6117 999 7 100 0 0 0           *   some mysterious leggings
-E 1 6118 999 8 100 0 0 0           *   some mysterious boots
-E 1 6116 999 10 100 0 0 0          *   some mysterious sleeves
-G 1 6116 999 0 100 0 0 0           *    some mysterious sleeves
-G 1 6117 999 0 100 0 0 0           *    some mysterious leggings
-G 1 6118 999 0 100 0 0 0           *    some mysterious boots
-G 1 6119 999 0 100 0 0 0           *    a mysterious robe
-G 1 6120 999 0 100 0 0 0           *    a mysterious tome
-G 1 6122 999 0 100 0 0 0           *    a spellbook
-G 1 6123 999 0 100 0 0 0           *    a glowing quill
-G 1 6130 999 0 100 0 0 0           *    a strange glowing potion
-M 0 6096 5 6360 100 0 0 0          * a militia guard
-M 0 6096 5 6361 100 0 0 0          * a militia guard
-M 0 6082 5 6362 100 0 0 0          * a large rat
-M 0 6073 3 6362 100 0 0 0          * a religious zealot
-M 0 6082 5 6363 100 0 0 0          * a large rat
-M 0 6065 6 6364 100 0 0 0          * a homeless peasant
-M 0 6120 1 6368 100 0 0 0          * an elite guard
-M 0 6130 1 6370 100 0 0 0          * an elite mercenary
-M 0 6129 1 6370 100 0 0 0          * a veteran soldier
-M 0 6128 1 6370 100 0 0 0          * an experienced tracker
-M 0 6127 1 6370 100 0 0 0          * a young mercenary
-M 0 6126 1 6370 100 0 0 0          * a young soldier of fortune
-M 0 6505 13 6500 100 0 0 0         * a squirrel
-M 0 6508 15 6503 100 0 0 0         * a mesa scorpion
-M 0 6500 1 6506 100 0 0 0          * Kabanon, the prophet
-G 1 6500 2 0 100 0 0 0             *    a packet of maps
-M 0 6116 7 6506 100 0 0 0          * a tharnadian thief-hunter
-M 0 6508 15 6507 100 0 0 0         * a mesa scorpion
-M 0 6508 15 6508 100 0 0 0         * a mesa scorpion
-M 0 6508 15 6509 100 0 0 0         * a mesa scorpion
-M 0 6508 15 6510 100 0 0 0         * a mesa scorpion
-M 0 6507 12 6513 100 0 0 0         * a chipmunk
-M 0 6507 12 6513 100 0 0 0         * a chipmunk
-M 0 6506 12 6513 100 0 0 0         * a rabbit
-M 0 6505 13 6513 100 0 0 0         * a squirrel
-M 0 6504 11 6513 100 0 0 0         * the duck
-M 0 6503 14 6513 100 0 0 0         * the sparrow
-M 0 6503 14 6515 100 0 0 0         * the sparrow
-M 0 6505 13 6515 100 0 0 0         * a squirrel
-M 0 6505 13 6515 100 0 0 0         * a squirrel
-M 0 6513 12 6516 100 0 0 0         * a grounds keeper
-E 1 6523 10 12 100 0 0 0           *   a grounds bag
-M 0 6503 14 6517 100 0 0 0         * the sparrow
-M 0 6507 12 6518 100 0 0 0         * a chipmunk
-M 0 6506 12 6519 100 0 0 0         * a rabbit
-M 0 6503 14 6519 100 0 0 0         * the sparrow
-M 0 6504 11 6519 100 0 0 0         * the duck
-M 0 6505 13 6519 100 0 0 0         * a squirrel
-M 0 6513 12 6521 100 0 0 0         * a grounds keeper
-E 1 6523 10 12 100 0 0 0           *   a grounds bag
-M 0 6503 14 6522 100 0 0 0         * the sparrow
-M 0 6503 14 6522 100 0 0 0         * the sparrow
-M 0 6505 13 6522 100 0 0 0         * a squirrel
-M 0 6507 12 6522 100 0 0 0         * a chipmunk
-M 0 6506 12 6522 100 0 0 0         * a rabbit
-M 0 6503 14 6524 100 0 0 0         * the sparrow
-M 0 6505 13 6524 100 0 0 0         * a squirrel
-M 0 6504 11 6524 100 0 0 0         * the duck
-M 0 6513 12 6525 100 0 0 0         * a grounds keeper
-E 1 6523 10 12 100 0 0 0           *   a grounds bag
-M 0 6505 13 6526 100 0 0 0         * a squirrel
-M 0 6506 12 6526 100 0 0 0         * a rabbit
-M 0 6503 14 6526 100 0 0 0         * the sparrow
-M 0 6506 12 6526 100 0 0 0         * a rabbit
-M 0 6504 11 6528 100 0 0 0         * the duck
-M 0 6504 11 6528 100 0 0 0         * the duck
-M 0 6507 12 6528 100 0 0 0         * a chipmunk
-M 0 6506 12 6528 100 0 0 0         * a rabbit
-M 0 6507 12 6529 100 0 0 0         * a chipmunk
-M 0 6506 12 6529 100 0 0 0         * a rabbit
-M 0 6504 11 6530 100 0 0 0         * the duck
-M 0 6513 12 6530 100 0 0 0         * a grounds keeper
-E 1 6523 10 12 100 0 0 0           *   a grounds bag
-M 0 6501 3 6531 100 0 0 0          * the swan
-M 0 6501 3 6531 100 0 0 0          * the swan
-M 0 6501 3 6531 100 0 0 0          * the swan
-M 0 6502 4 6531 100 0 0 0          * the mallard
-M 0 6502 4 6531 100 0 0 0          * the mallard
-M 0 6502 4 6531 100 0 0 0          * the mallard
-M 0 6502 4 6531 100 0 0 0          * the mallard
-M 0 6504 11 6532 100 0 0 0         * the duck
-M 0 6503 14 6532 100 0 0 0         * the sparrow
-M 0 6503 14 6532 100 0 0 0         * the sparrow
-M 0 6507 12 6534 100 0 0 0         * a chipmunk
-M 0 6506 12 6534 100 0 0 0         * a rabbit
-M 0 6506 12 6534 100 0 0 0         * a rabbit
-M 0 6513 12 6534 100 0 0 0         * a grounds keeper
-E 1 6523 10 12 100 0 0 0           *   a grounds bag
-M 0 6504 11 6536 100 0 0 0         * the duck
-M 0 6504 11 6536 100 0 0 0         * the duck
-M 0 6505 13 6536 100 0 0 0         * a squirrel
-M 0 6505 13 6536 100 0 0 0         * a squirrel
-M 0 6506 12 6537 100 0 0 0         * a rabbit
-M 0 6507 12 6537 100 0 0 0         * a chipmunk
-M 0 6507 12 6537 100 0 0 0         * a chipmunk
-M 0 6513 12 6538 100 0 0 0         * a grounds keeper
-E 1 6523 10 12 100 0 0 0           *   a grounds bag
-M 0 6504 11 6539 100 0 0 0         * the duck
-M 0 6503 14 6541 100 0 0 0         * the sparrow
-M 0 6503 14 6541 100 0 0 0         * the sparrow
-M 0 6507 12 6541 100 0 0 0         * a chipmunk
-M 0 6513 12 6542 100 0 0 0         * a grounds keeper
-E 1 6523 10 12 100 0 0 0           *   a grounds bag
-M 0 6506 12 6543 100 0 0 0         * a rabbit
-M 0 6507 12 6543 100 0 0 0         * a chipmunk
-M 0 6505 13 6543 100 0 0 0         * a squirrel
-M 0 6503 14 6543 100 0 0 0         * the sparrow
-M 0 6503 14 6546 100 0 0 0         * the sparrow
-M 0 6504 11 6546 100 0 0 0         * the duck
-M 0 6505 13 6546 100 0 0 0         * a squirrel
-M 0 6505 13 6546 100 0 0 0         * a squirrel
-M 0 6506 12 6546 100 0 0 0         * a rabbit
-M 0 6507 12 6546 100 0 0 0         * a chipmunk
-M 0 6513 12 6547 100 0 0 0         * a grounds keeper
-E 1 6523 10 12 100 0 0 0           *   a grounds bag
-M 0 6510 2 6550 100 0 0 0          * an elite keepguard
-E 1 6505 1 5 100 0 0 0             *   a cuirass emblazoned with the insignia of Caer Tannad
-E 1 6506 2 8 100 0 0 0             *   a pair of garskin boots
-E 1 6516 4 11 100 0 0 0            *   a Caer Tannad militia shield
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-G 1 6511 26 0 100 0 0 0            *    a Tannadian rapier
-M 0 6510 2 6550 100 0 0 0          * an elite keepguard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6506 2 8 100 0 0 0             *   a pair of garskin boots
-G 1 6510 1 0 100 0 0 0             *    a blacksteel polearm
-M 0 6509 8 6551 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6509 8 6554 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6509 8 6556 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6509 8 6558 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6509 8 6560 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6509 8 6562 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6509 8 6564 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6509 8 6565 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6525 1 6565 100 0 0 0          * Melmba
-E 1 6541 1 8 100 0 0 0             *   a pair of shiny magical boots
-M 0 6513 12 6567 100 0 0 0         * a grounds keeper
-M 0 6516 2 6569 100 0 0 0          * a dungeon jailor
-G 1 6517 1 0 100 0 0 0             *    a jailkey
-M 0 6516 2 6570 100 0 0 0          * a dungeon jailor
-M 0 6508 15 6571 100 0 0 0         * a mesa scorpion
-M 0 6508 15 6571 100 0 0 0         * a mesa scorpion
-M 0 6508 15 6571 100 0 0 0         * a mesa scorpion
-M 0 6508 15 6571 100 0 0 0         * a mesa scorpion
-M 0 6527 1 6571 100 0 0 0          * an old inmate
-M 0 6508 15 6572 100 0 0 0         * a mesa scorpion
-M 0 6508 15 6572 100 0 0 0         * a mesa scorpion
-M 0 6508 15 6572 100 0 0 0         * a mesa scorpion
-M 0 6508 15 6572 100 0 0 0         * a mesa scorpion
-M 0 6526 3 6572 100 0 0 0          * an old inmate
-G 1 6519 2 0 100 0 0 0             *    some gold coins
-M 0 6526 3 6573 100 0 0 0          * an old inmate
-M 0 6526 3 6574 100 0 0 0          * an old inmate
-M 0 6511 1 6575 100 0 0 0          * Kyle Engils
-E 1 6539 1 5 100 0 0 0             *   a suit of spiked chainmail
-E 1 6503 1 6 100 0 0 0             *   a rogue's coif
-G 1 6540 1 0 100 0 0 0             *    a small desk key
-G 1 6520 1 0 100 0 0 0             *    a jagged steel dagger
-F 1 6110 3 6575 100 0 0 0          * a militia guard (following)
-E 1 6512 28 16 100 0 0 0           *   a short sword
-F 1 6110 3 6575 100 0 0 0          * a militia guard (following)
-E 1 6512 28 16 100 0 0 0           *   a short sword
-F 1 6110 3 6575 100 0 0 0          * a militia guard (following)
-E 1 6512 28 16 100 0 0 0           *   a short sword
-M 0 6514 12 6586 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6586 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6586 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6588 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6588 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6588 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6513 12 6596 100 0 0 0         * a grounds keeper
-E 1 6514 2 16 100 0 0 0            *   a warhammer
-M 0 6522 1 6608 100 0 0 0          * Zehrim
-E 1 6533 2 7 100 0 0 0             *   a pair of polished chainmail leggings
-M 0 6111 1 6609 100 0 0 0          * Tehram
-G 1 6111 999 0 100 0 0 0           *    a well crafted longbow
-G 1 6112 999 0 100 0 0 0           *    a crudely made longbow
-G 1 6113 999 0 100 0 0 0           *    a well crafted arrow
-G 1 6114 999 0 100 0 0 0           *    a crudely made arrow
-G 1 6115 999 0 100 0 0 0           *    a well crafted quiver
+M 0 132591 2 132762 100 0 0 0      * a noble
+G 1 132540 999 0 100 0 0 0         *    a fine violet jewel
+M 0 132592 2 132763 100 0 0 0      * a woman noble
+E 1 132537 999 3 100 0 0 0         *   a beautiful jewelled necklace
+M 0 132591 2 132765 100 0 0 0      * a noble
+F 1 132592 2 132765 100 0 0 0      * a woman noble (following)
+E 1 132538 999 21 100 0 0 0        *   a diamond earring
+M 0 132551 1 132766 100 0 0 0      * the bartender
+G 1 132545 1 0 100 0 0 0           *    a glass
+G 1 132546 2 0 100 0 0 0           *    a bottle
+G 1 132547 3 0 100 0 0 0           *    a bottle
+G 1 132548 2 0 100 0 0 0           *    a firebreather
+G 1 132549 2 0 100 0 0 0           *    a bottle
+G 1 132601 1 0 100 0 0 0           *    a vorskin penis sheath
+G 1 132600 999 0 100 0 0 0         *    a hooking ticket
+M 0 132552 1 132766 100 0 0 0      * a filthy drunk
+M 0 132553 5 132766 100 0 0 0      * a scumbag drunk
+M 0 132553 5 132766 100 0 0 0      * a scumbag drunk
+M 0 132553 5 132766 100 0 0 0      * a scumbag drunk
+M 0 132553 5 132766 100 0 0 0      * a scumbag drunk
+M 0 132553 5 132766 100 0 0 0      * a scumbag drunk
+M 0 132587 1 132767 100 0 0 0      * a slack-jawed prostitute
+M 0 132588 1 132768 100 0 0 0      * a crapping youth
+M 0 132579 2 132769 100 0 0 0      * a poor commoner
+M 0 132565 6 132771 100 0 0 0      * a homeless peasant
+M 0 132565 6 132771 100 0 0 0      * a homeless peasant
+M 0 132565 6 132771 100 0 0 0      * a homeless peasant
+M 0 132574 2 132771 100 0 0 0      * the beggar
+M 0 132581 3 132771 100 0 0 0      * a homeless child
+M 0 132590 1 132772 100 0 0 0      * Tarn Bloodblade, the outlaw of Tharnadia
+E 1 132529 3 5 100 0 0 0           *   some spiked leather armor
+E 1 132530 16 7 100 0 0 0          *   some leather leggings
+E 1 132528 17 8 100 0 0 0          *   a pair of blacksteel boots
+E 1 132603 1 16 100 0 0 0          *   a gladius called 'Backstabber'
+E 1 132555 65 17 100 0 0 0         *   a small sword
+G 1 132562 46 0 100 0 0 0          *    a leather jacket
+F 1 132589 4 132772 100 0 0 0      * a grim mercenary (following)
+E 1 132555 65 16 100 0 0 0         *   a small sword
+F 1 132589 4 132772 100 0 0 0      * a grim mercenary (following)
+E 1 132555 65 16 100 0 0 0         *   a small sword
+F 1 132589 4 132772 100 0 0 0      * a grim mercenary (following)
+E 1 132555 65 16 100 0 0 0         *   a small sword
+F 1 132589 4 132772 100 0 0 0      * a grim mercenary (following)
+E 1 132555 65 16 100 0 0 0         *   a small sword
+M 0 132539 3 132773 100 0 0 0      * a female commoner
+M 0 132540 3 132773 100 0 0 0      * an old man
+M 0 132536 4 132774 100 0 0 0      * a working commoner
+M 0 132537 3 132774 100 0 0 0      * a female commoner
+M 0 132594 4 132781 100 0 0 0      * a cat burglar
+E 1 132596 3 12 100 0 0 0          *   a leather cloak
+E 1 132595 4 16 100 0 0 0          *   a Belialian sword of venom
+M 0 132594 4 132791 100 0 0 0      * a cat burglar
+E 1 132596 3 12 100 0 0 0          *   a leather cloak
+E 1 132595 4 16 100 0 0 0          *   a Belialian sword of venom
+M 0 132594 4 132801 100 0 0 0      * a cat burglar
+G 1 132586 9 0 100 0 0 0           *    a polished steel dagger
+M 0 132594 4 132804 100 0 0 0      * a cat burglar
+G 1 132586 9 0 100 0 0 0           *    a polished steel dagger
+M 0 132597 1 132820 100 0 0 0      * the mailman
+M 0 132598 1 132821 100 0 0 0      * the auctioneer
+M 0 132599 1 132822 100 0 0 0      * the doctor
+M 0 132660 1 132823 100 0 0 0      * Zech, the dwarven warrior
+M 0 132659 1 132824 100 0 0 0      * Ithilin, the travelling bard.
+M 0 132667 1 132833 100 0 0 0      * a bleeding halfling
+M 0 132668 1 132835 100 0 0 0      * a beautiful centaur
+M 0 132670 1 132836 100 0 0 0      * rich human merchant
+E 1 132699 1 3 100 0 0 0           *   a heavy solid gold pendant
+F 1 132671 2 132836 100 0 0 0      * sturdy barbarian bodyguard (following)
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132569 3 16 100 0 0 0          *   a two-handed claymore
+F 1 132671 2 132836 100 0 0 0      * sturdy barbarian bodyguard (following)
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132569 3 16 100 0 0 0          *   a two-handed claymore
+M 0 132672 1 132837 100 0 0 0      * Menae, the apprentice sorcerer
+M 0 132665 1 132839 100 0 0 0      * Xero, the barbarian mercenary
+M 0 132613 1 132857 100 0 0 0      * Zaberetornaz
+E 1 132619 999 5 100 0 0 0         *   a mysterious robe
+E 1 132617 999 7 100 0 0 0         *   some mysterious leggings
+E 1 132618 999 8 100 0 0 0         *   some mysterious boots
+E 1 132616 999 10 100 0 0 0        *   some mysterious sleeves
+G 1 132616 999 0 100 0 0 0         *    some mysterious sleeves
+G 1 132617 999 0 100 0 0 0         *    some mysterious leggings
+G 1 132618 999 0 100 0 0 0         *    some mysterious boots
+G 1 132619 999 0 100 0 0 0         *    a mysterious robe
+G 1 132620 999 0 100 0 0 0         *    a mysterious tome
+G 1 132622 999 0 100 0 0 0         *    a spellbook
+G 1 132623 999 0 100 0 0 0         *    a glowing quill
+G 1 132630 999 0 100 0 0 0         *    a strange glowing potion
+M 0 132596 5 132859 100 0 0 0      * a militia guard
+M 0 132596 5 132860 100 0 0 0      * a militia guard
+M 0 132582 5 132861 100 0 0 0      * a large rat
+M 0 132573 3 132861 100 0 0 0      * a religious zealot
+M 0 132582 5 132862 100 0 0 0      * a large rat
+M 0 132565 6 132863 100 0 0 0      * a homeless peasant
+M 0 132620 1 132867 100 0 0 0      * an elite guard
+M 0 132630 1 132869 100 0 0 0      * an elite mercenary
+M 0 132629 1 132869 100 0 0 0      * a veteran soldier
+M 0 132628 1 132869 100 0 0 0      * an experienced tracker
+M 0 132627 1 132869 100 0 0 0      * a young mercenary
+M 0 132626 1 132869 100 0 0 0      * a young soldier of fortune
+M 0 132636 13 132870 100 0 0 0     * a squirrel
+M 0 132639 15 132873 100 0 0 0     * a mesa scorpion
+M 0 132631 1 132876 100 0 0 0      * Kabanon, the prophet
+G 1 132635 2 0 100 0 0 0           *    a packet of maps
+M 0 132616 7 132876 100 0 0 0      * a tharnadian thief-hunter
+M 0 132639 15 132877 100 0 0 0     * a mesa scorpion
+M 0 132639 15 132878 100 0 0 0     * a mesa scorpion
+M 0 132639 15 132879 100 0 0 0     * a mesa scorpion
+M 0 132639 15 132880 100 0 0 0     * a mesa scorpion
+M 0 132638 12 132883 100 0 0 0     * a chipmunk
+M 0 132638 12 132883 100 0 0 0     * a chipmunk
+M 0 132637 12 132883 100 0 0 0     * a rabbit
+M 0 132636 13 132883 100 0 0 0     * a squirrel
+M 0 132635 11 132883 100 0 0 0     * the duck
+M 0 132634 14 132883 100 0 0 0     * the sparrow
+M 0 132634 14 132885 100 0 0 0     * the sparrow
+M 0 132636 13 132885 100 0 0 0     * a squirrel
+M 0 132636 13 132885 100 0 0 0     * a squirrel
+M 0 132644 12 132886 100 0 0 0     * a grounds keeper
+E 1 132658 10 12 100 0 0 0         *   a grounds bag
+M 0 132634 14 132887 100 0 0 0     * the sparrow
+M 0 132638 12 132888 100 0 0 0     * a chipmunk
+M 0 132637 12 132889 100 0 0 0     * a rabbit
+M 0 132634 14 132889 100 0 0 0     * the sparrow
+M 0 132635 11 132889 100 0 0 0     * the duck
+M 0 132636 13 132889 100 0 0 0     * a squirrel
+M 0 132644 12 132891 100 0 0 0     * a grounds keeper
+E 1 132658 10 12 100 0 0 0         *   a grounds bag
+M 0 132634 14 132892 100 0 0 0     * the sparrow
+M 0 132634 14 132892 100 0 0 0     * the sparrow
+M 0 132636 13 132892 100 0 0 0     * a squirrel
+M 0 132638 12 132892 100 0 0 0     * a chipmunk
+M 0 132637 12 132892 100 0 0 0     * a rabbit
+M 0 132634 14 132894 100 0 0 0     * the sparrow
+M 0 132636 13 132894 100 0 0 0     * a squirrel
+M 0 132635 11 132894 100 0 0 0     * the duck
+M 0 132644 12 132895 100 0 0 0     * a grounds keeper
+E 1 132658 10 12 100 0 0 0         *   a grounds bag
+M 0 132636 13 132896 100 0 0 0     * a squirrel
+M 0 132637 12 132896 100 0 0 0     * a rabbit
+M 0 132634 14 132896 100 0 0 0     * the sparrow
+M 0 132637 12 132896 100 0 0 0     * a rabbit
+M 0 132635 11 132898 100 0 0 0     * the duck
+M 0 132635 11 132898 100 0 0 0     * the duck
+M 0 132638 12 132898 100 0 0 0     * a chipmunk
+M 0 132637 12 132898 100 0 0 0     * a rabbit
+M 0 132638 12 132899 100 0 0 0     * a chipmunk
+M 0 132637 12 132899 100 0 0 0     * a rabbit
+M 0 132635 11 132900 100 0 0 0     * the duck
+M 0 132644 12 132900 100 0 0 0     * a grounds keeper
+E 1 132658 10 12 100 0 0 0         *   a grounds bag
+M 0 132632 3 132901 100 0 0 0      * the swan
+M 0 132632 3 132901 100 0 0 0      * the swan
+M 0 132632 3 132901 100 0 0 0      * the swan
+M 0 132633 4 132901 100 0 0 0      * the mallard
+M 0 132633 4 132901 100 0 0 0      * the mallard
+M 0 132633 4 132901 100 0 0 0      * the mallard
+M 0 132633 4 132901 100 0 0 0      * the mallard
+M 0 132635 11 132902 100 0 0 0     * the duck
+M 0 132634 14 132902 100 0 0 0     * the sparrow
+M 0 132634 14 132902 100 0 0 0     * the sparrow
+M 0 132638 12 132904 100 0 0 0     * a chipmunk
+M 0 132637 12 132904 100 0 0 0     * a rabbit
+M 0 132637 12 132904 100 0 0 0     * a rabbit
+M 0 132644 12 132904 100 0 0 0     * a grounds keeper
+E 1 132658 10 12 100 0 0 0         *   a grounds bag
+M 0 132635 11 132906 100 0 0 0     * the duck
+M 0 132635 11 132906 100 0 0 0     * the duck
+M 0 132636 13 132906 100 0 0 0     * a squirrel
+M 0 132636 13 132906 100 0 0 0     * a squirrel
+M 0 132637 12 132907 100 0 0 0     * a rabbit
+M 0 132638 12 132907 100 0 0 0     * a chipmunk
+M 0 132638 12 132907 100 0 0 0     * a chipmunk
+M 0 132644 12 132908 100 0 0 0     * a grounds keeper
+E 1 132658 10 12 100 0 0 0         *   a grounds bag
+M 0 132635 11 132909 100 0 0 0     * the duck
+M 0 132634 14 132911 100 0 0 0     * the sparrow
+M 0 132634 14 132911 100 0 0 0     * the sparrow
+M 0 132638 12 132911 100 0 0 0     * a chipmunk
+M 0 132644 12 132912 100 0 0 0     * a grounds keeper
+E 1 132658 10 12 100 0 0 0         *   a grounds bag
+M 0 132637 12 132913 100 0 0 0     * a rabbit
+M 0 132638 12 132913 100 0 0 0     * a chipmunk
+M 0 132636 13 132913 100 0 0 0     * a squirrel
+M 0 132634 14 132913 100 0 0 0     * the sparrow
+M 0 132634 14 132916 100 0 0 0     * the sparrow
+M 0 132635 11 132916 100 0 0 0     * the duck
+M 0 132636 13 132916 100 0 0 0     * a squirrel
+M 0 132636 13 132916 100 0 0 0     * a squirrel
+M 0 132637 12 132916 100 0 0 0     * a rabbit
+M 0 132638 12 132916 100 0 0 0     * a chipmunk
+M 0 132644 12 132917 100 0 0 0     * a grounds keeper
+E 1 132658 10 12 100 0 0 0         *   a grounds bag
+M 0 132641 2 132920 100 0 0 0      * an elite keepguard
+E 1 132640 1 5 100 0 0 0           *   a cuirass emblazoned with the insignia of Caer Tannad
+E 1 132641 2 8 100 0 0 0           *   a pair of garskin boots
+E 1 132651 4 11 100 0 0 0          *   a Caer Tannad militia shield
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+G 1 132646 26 0 100 0 0 0          *    a Tannadian rapier
+M 0 132641 2 132920 100 0 0 0      * an elite keepguard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132641 2 8 100 0 0 0           *   a pair of garskin boots
+G 1 132645 1 0 100 0 0 0           *    a blacksteel polearm
+M 0 132640 8 132921 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132640 8 132924 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132640 8 132926 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132640 8 132928 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132640 8 132930 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132640 8 132932 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132640 8 132934 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132640 8 132935 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132656 1 132935 100 0 0 0      * Melmba
+E 1 132676 1 8 100 0 0 0           *   a pair of shiny magical boots
+M 0 132644 12 132937 100 0 0 0     * a grounds keeper
+M 0 132647 2 132939 100 0 0 0      * a dungeon jailor
+G 1 132652 1 0 100 0 0 0           *    a jailkey
+M 0 132647 2 132940 100 0 0 0      * a dungeon jailor
+M 0 132639 15 132941 100 0 0 0     * a mesa scorpion
+M 0 132639 15 132941 100 0 0 0     * a mesa scorpion
+M 0 132639 15 132941 100 0 0 0     * a mesa scorpion
+M 0 132639 15 132941 100 0 0 0     * a mesa scorpion
+M 0 132658 1 132941 100 0 0 0      * an old inmate
+M 0 132639 15 132942 100 0 0 0     * a mesa scorpion
+M 0 132639 15 132942 100 0 0 0     * a mesa scorpion
+M 0 132639 15 132942 100 0 0 0     * a mesa scorpion
+M 0 132639 15 132942 100 0 0 0     * a mesa scorpion
+M 0 132657 3 132942 100 0 0 0      * an old inmate
+G 1 132654 2 0 100 0 0 0           *    some gold coins
+M 0 132657 3 132943 100 0 0 0      * an old inmate
+M 0 132657 3 132944 100 0 0 0      * an old inmate
+M 0 132642 1 132945 100 0 0 0      * Kyle Engils
+E 1 132674 1 5 100 0 0 0           *   a suit of spiked chainmail
+E 1 132638 1 6 100 0 0 0           *   a rogue's coif
+G 1 132675 1 0 100 0 0 0           *    a small desk key
+G 1 132655 1 0 100 0 0 0           *    a jagged steel dagger
+F 1 132610 3 132945 100 0 0 0      * a militia guard (following)
+E 1 132647 28 16 100 0 0 0         *   a short sword
+F 1 132610 3 132945 100 0 0 0      * a militia guard (following)
+E 1 132647 28 16 100 0 0 0         *   a short sword
+F 1 132610 3 132945 100 0 0 0      * a militia guard (following)
+E 1 132647 28 16 100 0 0 0         *   a short sword
+M 0 132645 12 132956 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132956 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132956 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132958 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132958 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132958 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132644 12 132966 100 0 0 0     * a grounds keeper
+E 1 132649 2 16 100 0 0 0          *   a warhammer
+M 0 132653 1 132978 100 0 0 0      * Zehrim
+E 1 132668 2 7 100 0 0 0           *   a pair of polished chainmail leggings
+M 0 132611 1 132979 100 0 0 0      * Tehram
+G 1 132611 999 0 100 0 0 0         *    a well crafted longbow
+G 1 132612 999 0 100 0 0 0         *    a crudely made longbow
+G 1 132613 999 0 100 0 0 0         *    a well crafted arrow
+G 1 132614 999 0 100 0 0 0         *    a crudely made arrow
+G 1 132615 999 0 100 0 0 0         *    a well crafted quiver
 G 1 54 999 0 100 0 0 0             *    (object type not in this .obj file)
-M 0 6523 2 6610 100 0 0 0          * a sleepy citizen
-M 0 6513 12 6611 100 0 0 0         * a grounds keeper
-E 1 6523 10 12 100 0 0 0           *   a grounds bag
-M 0 6523 2 6614 100 0 0 0          * a sleepy citizen
-M 0 6524 1 6615 100 0 0 0          * Kyrtan
-E 1 6538 1 5 100 0 0 0             *   an old leather suit
-E 1 6533 2 7 100 0 0 0             *   a pair of polished chainmail leggings
-E 1 6513 2 16 100 0 0 0            *   a wooden knobkerrie
+M 0 132654 2 132980 100 0 0 0      * a sleepy citizen
+M 0 132644 12 132981 100 0 0 0     * a grounds keeper
+E 1 132658 10 12 100 0 0 0         *   a grounds bag
+M 0 132654 2 132984 100 0 0 0      * a sleepy citizen
+M 0 132655 1 132985 100 0 0 0      * Kyrtan
+E 1 132673 1 5 100 0 0 0           *   an old leather suit
+E 1 132668 2 7 100 0 0 0           *   a pair of polished chainmail leggings
+E 1 132648 2 16 100 0 0 0          *   a wooden knobkerrie
 G 1 835 999 0 100 0 0 0            *    (object type not in this .obj file)
-M 0 6515 5 6616 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6515 5 6616 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6515 5 6619 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6627 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6627 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6627 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6629 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6629 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6514 12 6629 100 0 0 0         * a militia archer
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6502 999 13 100 0 0 0          *   a vorhide belt
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6116 7 6638 100 0 0 0          * a tharnadian thief-hunter
-M 0 6518 1 6648 100 0 0 0          * Khira
-E 1 6534 1 3 100 0 0 0             *   a golden amulet of Tharnadia
-G 1 6535 1 0 100 0 0 0             *    an old wooden wand
-M 0 6517 1 6649 100 0 0 0          * Alanan
-E 1 6536 1 15 100 0 0 0            *   a jeweled jade bracelet
-M 0 6513 12 6652 100 0 0 0         * a grounds keeper
-E 1 6523 10 12 100 0 0 0           *   a grounds bag
-M 0 6519 1 6656 100 0 0 0          * Aryan
+M 0 132646 5 132986 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132646 5 132986 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132646 5 132989 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132997 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132997 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132997 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132999 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132999 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132645 12 132999 100 0 0 0     * a militia archer
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132637 999 13 100 0 0 0        *   a vorhide belt
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132616 7 133008 100 0 0 0      * a tharnadian thief-hunter
+M 0 132649 1 133018 100 0 0 0      * Khira
+E 1 132669 1 3 100 0 0 0           *   a golden amulet of Tharnadia
+G 1 132670 1 0 100 0 0 0           *    an old wooden wand
+M 0 132648 1 133019 100 0 0 0      * Alanan
+E 1 132671 1 15 100 0 0 0          *   a jeweled jade bracelet
+M 0 132644 12 133022 100 0 0 0     * a grounds keeper
+E 1 132658 10 12 100 0 0 0         *   a grounds bag
+M 0 132650 1 133026 100 0 0 0      * Aryan
 G 1 203 1 0 100 0 0 0              *    (object type not in this .obj file)
 G 1 204 1 0 100 0 0 0              *    (object type not in this .obj file)
-G 1 6537 1 0 100 0 0 0             *    a magical glowing sphere
+G 1 132672 1 0 100 0 0 0           *    a magical glowing sphere
 G 1 3050 999 0 100 0 0 0           *    (object type not in this .obj file)
-M 0 6515 5 6657 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6515 5 6657 100 0 0 0          * a militia guard
-E 1 6509 999 5 100 0 0 0           *   some spiked leather armor bearing the emblem of Caer Tannad
-E 1 6507 999 7 100 0 0 0           *   some leather leggings
-E 1 6508 999 8 100 0 0 0           *   a pair of high-soft leather boots
-E 1 6511 26 16 100 0 0 0           *   a Tannadian rapier
-E 1 6512 28 17 100 0 0 0           *   a short sword
-M 0 6521 2 6673 100 0 0 0          * a strong seaman
-E 1 6504 2 13 100 0 0 0            *   a vorhide dock worker's loincloth
-E 1 6513 2 16 100 0 0 0            *   a wooden knobkerrie
-M 0 6512 3 6673 100 0 0 0          * a dock guard
-E 1 6516 4 11 100 0 0 0            *   a Caer Tannad militia shield
-G 1 6514 2 0 100 0 0 0             *    a warhammer
-M 0 6116 7 6673 100 0 0 0          * a tharnadian thief-hunter
-M 0 6521 2 6681 100 0 0 0          * a strong seaman
-E 1 6504 2 13 100 0 0 0            *   a vorhide dock worker's loincloth
-E 1 6515 1 16 100 0 0 0            *   a flail
-M 0 6512 3 6682 100 0 0 0          * a dock guard
-E 1 6516 4 11 100 0 0 0            *   a Caer Tannad militia shield
-M 0 6125 1 6682 100 0 0 0          * an elite guard
-M 0 6512 3 6684 100 0 0 0          * a dock guard
-E 1 6516 4 11 100 0 0 0            *   a Caer Tannad militia shield
+M 0 132646 5 133027 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132646 5 133027 100 0 0 0      * a militia guard
+E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
+E 1 132642 999 7 100 0 0 0         *   some leather leggings
+E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
+E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
+E 1 132647 28 17 100 0 0 0         *   a short sword
+M 0 132652 2 133043 100 0 0 0      * a strong seaman
+E 1 132639 2 13 100 0 0 0          *   a vorhide dock worker's loincloth
+E 1 132648 2 16 100 0 0 0          *   a wooden knobkerrie
+M 0 132643 3 133043 100 0 0 0      * a dock guard
+E 1 132651 4 11 100 0 0 0          *   a Caer Tannad militia shield
+G 1 132649 2 0 100 0 0 0           *    a warhammer
+M 0 132616 7 133043 100 0 0 0      * a tharnadian thief-hunter
+M 0 132652 2 133051 100 0 0 0      * a strong seaman
+E 1 132639 2 13 100 0 0 0          *   a vorhide dock worker's loincloth
+E 1 132650 1 16 100 0 0 0          *   a flail
+M 0 132643 3 133052 100 0 0 0      * a dock guard
+E 1 132651 4 11 100 0 0 0          *   a Caer Tannad militia shield
+M 0 132625 1 133052 100 0 0 0      * an elite guard
+M 0 132643 3 133054 100 0 0 0      * a dock guard
+E 1 132651 4 11 100 0 0 0          *   a Caer Tannad militia shield
 *
 S

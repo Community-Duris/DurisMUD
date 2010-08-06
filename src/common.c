@@ -90,6 +90,12 @@ const struct race_names race_names_table[LAST_RACE + 2] = {
   {"Harpy", "Harpy", "&+yHarpy&n", "MH"},
   {"Orog", "Orog", "&+LOr&+yo&+Lg&n", "OR"},
   {"Githzerai", "Githzerai", "&+WGith&+Gzerai&n", "GZ"},
+  {"Drider", "Drider", "&+mDri&+Lder&n", "DR"},
+  {"Kobold", "Kobold", "&+LKobold&n", "KB"},
+  {"Planetbound Illithid", "Pillithid", "&+MIllithid&n", "PI"},
+  {"Kuo Toa", "KuoToa", "&+GKu&+Lo T&+Goa&n", "KT"},
+  {"Wood Elf", "WoodElf", "&+gW&+Goo&+gd E&+Glf&n", "WE"},
+  {"Firbolg", "Firbolg", "&+yFir&+cbolg&n", "FB"},
   {"Gargoyle", "Gargoyle", "&+LGar&+wgo&+Lyle&n", "MG"},
   {"Fire Elemental", "FireElemental", "&+rFire Elemental&n", "EF"},
   {"Air Elemental", "AirElemental", "&+CAir Elemental&n", "EA"},
@@ -135,17 +141,11 @@ const struct race_names race_names_table[LAST_RACE + 2] = {
   {"Skeleton", "Skeleton", "&+wSkeleton&n", "SK"},
   {"Wraith", "Wraith", "&+LWr&+wai&+Lth&n", "WR"},
   {"Shadow", "Shadow", "&+LShadow&n", "SW"},
-  {"Drider", "Drider", "&+mDri&+Lder&n", "DR"},
   {"Purple Worm", "PurpleWorm", "&+mPurple &+LWorm&n", "PW"},
   {"Agathinon", "Agathinon", "&+WAga&+Yt&+Whin&+Yo&+Wn&n", "AG"},
   {"Void Elemental", "VoidElemental", "&+LVoi&+wd Elemen&+Ltal&n", "VE"},
   {"Ice Elemental", "IceElemental", "&+CIc&+We Ele&+cme&+Wnt&+Cal&n", "IE"},
   {"Eladrin", "Eladrin", "&+cE&+Cl&+Wadr&+Ci&+cn&n", "EL"},
-  {"Kobold", "Kobold", "&+LKobold&n", "KB"},
-  {"Planetbound Illithid", "Pillithid", "&+MIllithid&n", "PI"},
-  {"Kuo Toa", "KuoToa", "&+GKu&+Lo T&+Goa&n", "KT"},
-  {"Wood Elf", "WoodElf", "&+gW&+Goo&+gd E&+Glf&n", "WE"},
-  {"Firbolg", "Firbolg", "&+yFir&+cbolg&n", "FB"},
   {"Phoenix", "Phoenix", "&+rP&+Rh&+Yo&+We&+Yn&+Ri&+rx&n", "PX"},
   {"Archon", "Archon", "&+WA&+Rrch&+Wo&+Rn&n", "AR"},
   {"Asura", "Asura", "&+YA&+Rs&+Yu&+Rra&n", "AU"},
@@ -178,6 +178,7 @@ int race_size(int race)
     case RACE_REPTILE:
     case RACE_SNAKE:
     case RACE_FAERIE:
+    case RACE_KUOTOA:
       return SIZE_TINY;
       break;
       
@@ -223,10 +224,13 @@ int race_size(int race)
     case RACE_AGATHINON:
     case RACE_ELADRIN:
     case RACE_PILLITHID:
-    case RACE_KUOTOA:
     case RACE_WOODELF:
     case RACE_INCUBUS:
     case RACE_SUCCUBUS:
+    case RACE_ARCHON:
+    case RACE_ASURA:
+    case RACE_BRALANI:
+    case RACE_GHAELE:
     default:
       return SIZE_MEDIUM;
       break;
@@ -267,6 +271,8 @@ int race_size(int race)
       
     case RACE_DRAGON:
     case RACE_CONSTRUCT:
+    case RACE_TITAN:
+    case RACE_AVATAR:
       return SIZE_GARGANTUAN;
       break;
   }
