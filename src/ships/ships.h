@@ -8,7 +8,6 @@
 #define PANEL_OBJ 50000
 #define SHIP_ZONE_START 50001
 #define SHIP_ZONE_END 50999
-#define MAX_SHIPS 400
 #define BUILDTIME 1
 
 // Ship status
@@ -23,7 +22,7 @@
 #define T_MINDBLAST       8
 #define MAXTIMERS         9
 
-#define MAXSHIPS        1000
+#define MAXSHIPS        2000
 #define MAX_SHIP_ROOM     10
 #define SHIPZONE         600
 

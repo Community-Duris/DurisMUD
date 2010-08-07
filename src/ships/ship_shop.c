@@ -440,8 +440,8 @@ int sell_cargo(P_char ch, P_ship ship, int slot)
         send_to_char("Thanks for your business!\r\n", ch);        
         ADD_MONEY(ch, total_cost);
 
-        ship->crew.sail_skill_raise(((float)total_cost / 1000000.0) / 1.5);
-        ship->crew.rpar_skill_raise(((float)total_cost / 1000000.0) / 4.0);
+        ship->crew.sail_skill_raise(((float)total_cost / 1000000.0) * 1.5);
+        ship->crew.rpar_skill_raise(((float)total_cost / 1000000.0) / 2.0);
 
         update_crew(ship);
         update_ship_status(ship);
@@ -539,8 +539,8 @@ int sell_contra(P_char ch, P_ship ship, int slot)
         send_to_char("Thanks for your business!\r\n", ch);        
         ADD_MONEY(ch, total_cost);
 
-        ship->crew.sail_skill_raise(((float)total_cost / 1000000.0) / 3.0);
-        ship->crew.rpar_skill_raise(((float)total_cost / 1000000.0) / 9.0);
+        ship->crew.sail_skill_raise(((float)total_cost / 1000000.0) * 1.0);
+        ship->crew.rpar_skill_raise(((float)total_cost / 1000000.0) / 3.0);
 
         update_crew(ship);
         update_ship_status(ship);

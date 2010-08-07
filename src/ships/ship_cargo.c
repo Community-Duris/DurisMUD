@@ -230,18 +230,14 @@ int write_cargo()
 - ship.contraband.minPriceMod
 - ship.contraband.maxPriceMod
 
-+ ship.cargo.autoSellAdjustRate = 0.05
-+ ship.cargo.autoBuyAdjustRate = 0.05
-+ ship.cargo.sellPriceMod=1.0
-+ ship.cargo.buyPriceMod=1.0
-* ship.cargo.sellAdjustMod=0.005
-* ship.cargo.buyAdjustMod=0.003
-+ ship.contraband.autoSellAdjustRate = 0.05
-+ ship.contraband.autoBuyAdjustRate = 0.05
-+ ship.contraband.sellPriceMod=1.0
-+ ship.contraband.buyPriceMod=1.0
-* ship.contraband.sellAdjustMod = 0.025
-* ship.contraband.buyAdjustMod = 0.015
+ship.cargo.autoSellAdjustRate=0.05
+ship.cargo.autoBuyAdjustRate=0.05
+ship.cargo.sellPriceMod=1.0
+ship.cargo.buyPriceMod=1.0
+ship.contraband.autoSellAdjustRate=0.05
+ship.contraband.autoBuyAdjustRate=0.05
+ship.contraband.sellPriceMod=1.0
+ship.contraband.buyPriceMod=1.0
 */
 
 void update_cargo(bool force)

@@ -344,17 +344,17 @@ bool rename_ship_owner(char *old_name, char *new_name)
 //--------------------------------------------------------------------
 int load_ship(P_ship ship, int to_room)
 {
-   if (ship->shipobj == NULL) 
-   {
-      shiperror = 2;
-      return FALSE;
-   }
+    if (ship->shipobj == NULL) 
+    {
+       shiperror = 2;
+       return FALSE;
+    }
 
-   if (ship->panel == NULL) 
-   {
-      shiperror = 3;
-      return FALSE;
-   }
+    if (ship->panel == NULL) 
+    {
+       shiperror = 3;
+       return FALSE;
+    }
 
     for (int i = 0; i < MAX_SHIP_ROOM; i++) 
     {
