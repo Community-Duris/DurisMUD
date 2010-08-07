@@ -1852,6 +1852,150 @@ int NumAttackers(P_char ch)
   return total;
 }
 
+bool aggressive_to_race(P_char ch, P_char target)
+{
+    if (IS_AGGROFLAG(ch, AGGR_HUMAN) && (GET_RACE1(target) == RACE_HUMAN))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_BARBARIAN) &&
+        (GET_RACE1(target) == RACE_BARBARIAN))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_DROW_ELF) && (GET_RACE1(target) == RACE_DROW))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_GREY_ELF) && (GET_RACE1(target) == RACE_GREY))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_MOUNT_DWARF) && (GET_RACE1(target) == RACE_MOUNTAIN))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_DUERGAR) && (GET_RACE1(target) == RACE_DUERGAR))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_HALFLING) && (GET_RACE1(target) == RACE_HALFLING))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_GNOME) && (GET_RACE1(target) == RACE_GNOME))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_OGRE) && (GET_RACE1(target) == RACE_OGRE))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_TROLL) && (GET_RACE1(target) == RACE_TROLL))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_HALF_ELF) && (GET_RACE1(target) == RACE_HALFELF))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_ILLITHID) && (GET_RACE1(target) == RACE_ILLITHID))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_ORC) && (GET_RACE1(target) == RACE_ORC))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_THRIKREEN) && (GET_RACE1(target) == RACE_THRIKREEN))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_CENTAUR) && (GET_RACE1(target) == RACE_CENTAUR))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_GITHYANKI) && (GET_RACE1(target) == RACE_GITHYANKI))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_MINOTAUR) && (GET_RACE1(target) == RACE_MINOTAUR))
+      return TRUE;
+
+    if (IS_AGGROFLAG(ch, AGGR_GOBLIN) && (GET_RACE1(target) == RACE_GOBLIN))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_SGIANT) && (GET_RACE1(target) == RACE_SGIANT))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_WIGHT) && (GET_RACE1(target) == RACE_WIGHT))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_PHANTOM) && (GET_RACE1(target) == RACE_PHANTOM))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_PLICH) && (GET_RACE1(target) == RACE_PLICH))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_PVAMPIRE) && (GET_RACE1(target) == RACE_PVAMPIRE))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_PDKNIGHT) && (GET_RACE1(target) == RACE_PDKNIGHT))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_PSBEAST) && (GET_RACE1(target) == RACE_PSBEAST))
+      return TRUE;
+
+    return FALSE;
+}
+
+
+bool aggressive_to_class(P_char ch, P_char target)
+{
+    if (IS_AGGRO2FLAG(ch, AGGR2_WARRIOR) && GET_CLASS1(target, CLASS_WARRIOR))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_RANGER) && GET_CLASS1(target, CLASS_RANGER))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_PSIONICIST) && GET_CLASS1(target, CLASS_PSIONICIST))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_PALADIN) && GET_CLASS1(target, CLASS_PALADIN))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_ANTIPALADIN) && GET_CLASS1(target, CLASS_ANTIPALADIN))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_CLERIC) && GET_CLASS1(target, CLASS_CLERIC))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_MONK) && GET_CLASS1(target, CLASS_MONK))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_DRUID) && GET_CLASS1(target, CLASS_DRUID))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_SHAMAN) && GET_CLASS1(target, CLASS_SHAMAN))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_SORCERER) && GET_CLASS1(target, CLASS_SORCERER))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_NECROMANCER) && GET_CLASS1(target, CLASS_NECROMANCER))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_CONJURER) && GET_CLASS1(target, CLASS_CONJURER))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_ROGUE) && GET_CLASS1(target, CLASS_ROGUE))
+      return TRUE;
+
+    if(IS_AGGRO2FLAG(ch, AGGR2_ASSASSIN) && GET_SPEC(target, CLASS_ROGUE, SPEC_ASSASSIN))
+      return TRUE;
+    
+    if (IS_AGGRO2FLAG(ch, AGGR2_MERCENARY) && GET_CLASS1(target, CLASS_MERCENARY))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_BARD) && GET_CLASS1(target, CLASS_BARD))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_THIEF) && GET_CLASS1(target, CLASS_THIEF))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_WARLOCK) && GET_CLASS1(target, CLASS_WARLOCK))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_MINDFLAYER) && GET_CLASS1(target, CLASS_MINDFLAYER))
+      return TRUE;
+
+    return FALSE;
+}
+
 bool aggressive_to(P_char ch, P_char target)
 {
   int      tmp_race = 0;
@@ -2011,163 +2155,14 @@ bool aggressive_to(P_char ch, P_char target)
       return TRUE;
 
     /* now, race-specific flags */
+    if (aggressive_to_race(ch, target))
+        return TRUE;
 
-    if (IS_AGGROFLAG(ch, AGGR_HUMAN) && (GET_RACE1(target) == RACE_HUMAN))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_BARBARIAN) &&
-        (GET_RACE1(target) == RACE_BARBARIAN))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_DROW_ELF) && (GET_RACE1(target) == RACE_DROW))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_GREY_ELF) && (GET_RACE1(target) == RACE_GREY))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_MOUNT_DWARF) &&
-        (GET_RACE1(target) == RACE_MOUNTAIN))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_DUERGAR) && (GET_RACE1(target) == RACE_DUERGAR))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_HALFLING) &&
-        (GET_RACE1(target) == RACE_HALFLING))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_GNOME) && (GET_RACE1(target) == RACE_GNOME))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_OGRE) && (GET_RACE1(target) == RACE_OGRE))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_TROLL) && (GET_RACE1(target) == RACE_TROLL))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_HALF_ELF) &&
-        (GET_RACE1(target) == RACE_HALFELF))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_ILLITHID) &&
-        (GET_RACE1(target) == RACE_ILLITHID))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_ORC) && (GET_RACE1(target) == RACE_ORC))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_THRIKREEN) &&
-        (GET_RACE1(target) == RACE_THRIKREEN))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_CENTAUR) && (GET_RACE1(target) == RACE_CENTAUR))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_GITHYANKI) &&
-        (GET_RACE1(target) == RACE_GITHYANKI))
-      return TRUE;
-
-    if (IS_AGGROFLAG(ch, AGGR_MINOTAUR) &&
-        (GET_RACE1(target) == RACE_MINOTAUR))
-      return TRUE;
-
-
-    if (IS_AGGROFLAG(ch, AGGR_GOBLIN) && (GET_RACE1(target) == RACE_GOBLIN))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_SGIANT) && (GET_RACE1(target) == RACE_SGIANT))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_WIGHT) && (GET_RACE1(target) == RACE_WIGHT))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_PHANTOM) &&
-        (GET_RACE1(target) == RACE_PHANTOM))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_PLICH) && (GET_RACE1(target) == RACE_PLICH))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_PVAMPIRE) &&
-        (GET_RACE1(target) == RACE_PVAMPIRE))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_PDKNIGHT) &&
-        (GET_RACE1(target) == RACE_PDKNIGHT))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_PSBEAST) &&
-        (GET_RACE1(target) == RACE_PSBEAST))
-      return TRUE;
 
     /* now, check class */
+    if (aggressive_to_class(ch, target))
+        return TRUE;
 
-    if (IS_AGGRO2FLAG(ch, AGGR2_WARRIOR) && GET_CLASS1(target, CLASS_WARRIOR))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_RANGER) && GET_CLASS1(target, CLASS_RANGER))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_PSIONICIST) &&
-        GET_CLASS1(target, CLASS_PSIONICIST))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_PALADIN) && GET_CLASS1(target, CLASS_PALADIN))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_ANTIPALADIN) &&
-        GET_CLASS1(target, CLASS_ANTIPALADIN))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_CLERIC) && GET_CLASS1(target, CLASS_CLERIC))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_MONK) && GET_CLASS1(target, CLASS_MONK))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_DRUID) && GET_CLASS1(target, CLASS_DRUID))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_SHAMAN) && GET_CLASS1(target, CLASS_SHAMAN))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_SORCERER) &&
-        GET_CLASS1(target, CLASS_SORCERER))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_NECROMANCER) &&
-        GET_CLASS1(target, CLASS_NECROMANCER))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_CONJURER) &&
-        GET_CLASS1(target, CLASS_CONJURER))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_ROGUE) && GET_CLASS1(target, CLASS_ROGUE))
-      return TRUE;
-
-    if(IS_AGGRO2FLAG(ch, AGGR2_ASSASSIN) &&
-       GET_SPEC(target, CLASS_ROGUE, SPEC_ASSASSIN))
-    {
-      return TRUE;
-    }
-    
-    if (IS_AGGRO2FLAG(ch, AGGR2_MERCENARY) &&
-        GET_CLASS1(target, CLASS_MERCENARY))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_BARD) && GET_CLASS1(target, CLASS_BARD))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_THIEF) && GET_CLASS1(target, CLASS_THIEF))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_WARLOCK) && GET_CLASS1(target, CLASS_WARLOCK))
-      return TRUE;
-
-    if (IS_AGGRO2FLAG(ch, AGGR2_MINDFLAYER) &&
-        GET_CLASS1(target, CLASS_MINDFLAYER))
-      return TRUE;
 
     /* final flags?  sex! */
 
@@ -2250,6 +2245,36 @@ bool is_aggr_to(P_char ch, P_char target)
   }
   return aggressive_to(ch, target);
 }
+
+bool aggressive_to_basic(P_char ch, P_char target)  // For exp checks
+{
+    if (IS_AGGROFLAG(ch, AGGR_ALL))
+      return TRUE;
+
+    if ((IS_EVIL(target) && IS_AGGROFLAG(ch, AGGR_EVIL_ALIGN)) ||
+        (IS_GOOD(target) && IS_AGGROFLAG(ch, AGGR_GOOD_ALIGN)) ||
+        (IS_NEUTRAL(target) && IS_AGGROFLAG(ch, AGGR_NEUTRAL_ALIGN)))
+    {
+      return TRUE;
+    }
+
+    if (GET_RACE(target) != GET_RACE(ch) &&
+        ((IS_AGGROFLAG(ch, AGGR_GOOD_RACE) && target->player.racewar == RACEWAR_GOOD) ||
+         (IS_AGGROFLAG(ch, AGGR_EVIL_RACE) && target->player.racewar == RACEWAR_EVIL) ||
+         (IS_AGGROFLAG(ch, AGGR_UNDEAD_RACE) && target->player.racewar == RACEWAR_UNDEAD)))
+    {
+      return TRUE;
+    }
+
+    if (aggressive_to_race(ch, target))
+        return TRUE;
+
+    if (aggressive_to_class(ch, target))
+        return TRUE;
+
+    return FALSE;
+}
+
 
 /*
  * saving throws based on ch's stats, rather than magical saves.  Only DEX

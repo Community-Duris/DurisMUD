@@ -833,6 +833,13 @@ int gain_exp_modifiers(P_char ch, P_char victim, int XP)
       else
         XP = (int)(XP *get_property("gain.exp.mod.other", 1.00));
     }
+  
+    // Aggro mobs yield more exp
+    if (aggressive_to_basic(victim, ch))
+    {
+      XP = (int)(XP *get_property("gain.exp.mod.victim.act.aggro", 1.50));
+    }
+    
     // Careful with the breath modifier since many greater race mobs have a breathe weapon.
     if(CAN_BREATHE(victim))
     {
@@ -964,7 +971,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   {
     return 0;
   }
-// debug("check 1 exp (%d).", XP);  
+// debug("check 1 exp (%d:%d).", type, value);  
   if(GET_LEVEL(ch) >= MINLVLIMMORTAL ||
      CHAR_IN_ARENA(ch) ||
      IS_SET(world[ch->in_room].room_flags, GUILD_ROOM | SAFE_ZONE))
