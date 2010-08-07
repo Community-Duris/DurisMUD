@@ -1523,6 +1523,10 @@ bool parse_spell(P_char ch, char *argument,
       {
         send_to_char("&+mYour thoughts have not collected enough to cast THAT spell.&n\n", ch);
       }
+      else if (GET_CLASS(ch, CLASS_THEURGIST) && IS_ANGELIC(ch))
+      {
+	send_to_char("&+WYou need more gifts from above.&n\n", ch);
+      }
       else
         send_to_char("&+LYour power reserves are not sufficient to "
                      "cast that spell!\n", ch);

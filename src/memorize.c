@@ -24,7 +24,7 @@
 #define IS_PURE_CASTER_CLASS(cls) ( (cls) &\
   (CLASS_SORCERER | CLASS_CONJURER | CLASS_ILLUSIONIST |\
   CLASS_NECROMANCER | CLASS_CLERIC | CLASS_SHAMAN |\
-  CLASS_DRUID | CLASS_ETHERMANCER))
+  CLASS_DRUID | CLASS_ETHERMANCER | CLASS_THEURGIST))
 #define IS_PARTIAL_CASTER_CLASS(cls) ( (cls) &\
   (CLASS_BARD ))
 #define IS_SEMI_CASTER_CLASS(cls) ( (cls) &\
@@ -35,7 +35,7 @@
 #define IS_BOOK_CLASS(cls) ( (cls) &\
   (CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER |\
    CLASS_ILLUSIONIST | CLASS_BARD |\
-   CLASS_RANGER | CLASS_REAVER))
+   CLASS_RANGER | CLASS_REAVER | CLASS_THEURGIST))
 #define IS_PRAYING_CLASS(cls) ( (cls) &\
   (CLASS_CLERIC | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_AVENGER))
 #define IS_MEMING_CLASS(cls) (IS_BOOK_CLASS(cls) || ((cls) & CLASS_SHAMAN))
@@ -823,8 +823,9 @@ void handle_undead_mem(P_char ch)
         is_wearing_necroplasm(ch) ||
         IS_PUNDEAD(ch) ||
         IS_HARPY(ch) ||
-        GET_CLASS(ch, CLASS_ETHERMANCER)) &&
-        IS_AFFECTED2(ch, AFF2_MEMORIZING)))
+        GET_CLASS(ch, CLASS_ETHERMANCER) ||
+	(GET_CLASS(ch, CLASS_THEURGIST) && IS_ANGELIC(ch))) &&
+          IS_AFFECTED2(ch, AFF2_MEMORIZING)))
   {
     return;
   }
@@ -866,6 +867,11 @@ void handle_undead_mem(P_char ch)
     {
       sprintf(gbuf, "&+mYou feel a rush of energy as a&+L %d%s circle &+mspell coalesces in your mind...\n",
               i, i== 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
+    }
+    else if(GET_CLASS(ch, CLASS_THEURGIST) && IS_ANGELIC(ch))
+    {
+      sprintf(gbuf, "&+WYou feel illuminated with a %d%s circle spell.\n",
+	     i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     }
     else
       sprintf(gbuf, "&+GYou feel nature's energy flow into your %d%s "
@@ -913,6 +919,11 @@ void handle_undead_mem(P_char ch)
       send_to_char
         ("&+CThe spir&n&+cits reced&+We, leaving y&+Cou in a m&n&+comentary stat&+We of lethargy.&n\n",
          ch);
+    }
+    else if (GET_CLASS(ch, CLASS_THEURGIST) && IS_ANGELIC(ch))
+    {
+      send_to_char
+	("&+WYour gift from above is now complete.\n", ch);
     }
     REMOVE_BIT(ch->specials.affected_by2, AFF2_MEMORIZING);
     stop_meditation(ch);
@@ -967,6 +978,7 @@ void handle_memorize(P_char ch)
       }
       else
       {
+#if defined(CHAOS_MUD) && (CHAOS_MUD == 1)
         if (book_class(ch) &&
           !(SpellInSpellBook(ch, af->modifier, SBOOK_MODE_IN_INV +
                                                SBOOK_MODE_AT_HAND + 
@@ -976,6 +988,7 @@ void handle_memorize(P_char ch)
           show_stop_memorizing(ch);
           return;
         }
+#endif
         if (meming_class(ch))
         {
           sprintf(Gbuf1, "You have finished memorizing %s.\n", skills[af->modifier].name);
@@ -1060,7 +1073,8 @@ void event_memorize(P_char ch, P_char victim, P_obj obj, void *data)
      GET_CLASS(ch, CLASS_ETHERMANCER) ||
      IS_UNDEADRACE(ch) ||
      is_wearing_necroplasm(ch) ||
-     USES_FOCUS(ch))
+     USES_FOCUS(ch) ||
+     (GET_CLASS(ch, CLASS_THEURGIST) && IS_ANGELIC(ch)))
   {
     handle_undead_mem(ch);
   }
@@ -1089,7 +1103,7 @@ void do_assimilate(P_char ch, char *argument, int cmd)
     send_to_char("&+GThe forces of nature ignore you...\n", ch);
     return;
   }
-  else if (cmd == CMD_TUPOR && !(IS_HARPY(ch) || GET_CLASS(ch, CLASS_ETHERMANCER)))
+  else if (cmd == CMD_TUPOR && !(IS_HARPY(ch) || GET_CLASS(ch, CLASS_ETHERMANCER) || IS_ANGELIC(ch)))
   {
     send_to_char("You have no idea how to even begin.\n", ch);
     return;
@@ -1138,7 +1152,10 @@ void do_assimilate(P_char ch, char *argument, int cmd)
       }
     }
 
-    send_to_char("\n&+cYour mind dr&+Cifts int&+Wo a deep meditat&+cion "
+    if (GET_CLASS(ch, CLASS_THEURGIST) && IS_ANGELIC(ch))
+      send_to_char("\n&+WYou call to the heanves above for the gift of magic.\n", ch);
+    else
+      send_to_char("\n&+cYour mind dr&+Cifts int&+Wo a deep meditat&+cion "
                  "and th&+Ce spirits of sto&+Wrms and i&+cce spe&+Cak "
                  "to yo&+cu.&n\n", ch);
 
@@ -1225,9 +1242,14 @@ void do_memorize(P_char ch, char *argument, int cmd)
           GET_CLASS(ch, CLASS_ETHERMANCER)||
           !meming_class(ch) ||
           IS_UNDEADRACE(ch) ||
-          is_wearing_necroplasm(ch)))
+          is_wearing_necroplasm(ch)) ||
+	  (IS_ANGELIC(ch) && GET_CLASS(ch, CLASS_THEURGIST)))
   {
-    send_to_char("You aren't trained in magic.\n", ch);
+    if (GET_CLASS(ch, CLASS_THEURGIST) && IS_ANGELIC(ch))
+      send_to_char("Try using Tupor in this form.\n", ch);
+    else
+      send_to_char("You aren't trained in magic.\n", ch);
+    
     return;
   }
 
