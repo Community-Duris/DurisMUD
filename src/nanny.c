@@ -4309,7 +4309,7 @@ void display_characteristics(P_desc d)
   {
     logit(LOG_STATUS, "display_characteristics: unknown hometown, %d\n",
           GET_HOME(d->character));
-    GET_HOME(d->character) = HOME_WINTERHAVEN;
+    GET_HOME(d->character) = HOME_THARN;
     sprintf(Gbuf1 + strlen(Gbuf1), "HOMETOWN: %s\r\n",
             town_name_list[GET_HOME(d->character)]);
   }
@@ -4423,7 +4423,7 @@ int find_hometown(int race, bool force)
   {
     sprintf(Gbuf1, "find_hometown: illegal race, %d\n", race);
     logit(LOG_STATUS, Gbuf1);
-    return (HOME_WINTERHAVEN);    /* default */
+    return (HOME_THARN);    /* default */
   }
   for (i = 0; i <= LAST_HOME; i++)
   {
@@ -4438,7 +4438,7 @@ int find_hometown(int race, bool force)
   {                             /* none found, avail_hometowns matrix fucked */
     sprintf(Gbuf1, "find_hometown: race %d has no avail hometowns\n", race);
     logit(LOG_STATUS, Gbuf1);
-    return (HOME_WINTERHAVEN);    /* default */
+    return (HOME_THARN);    /* default */
   }
   else if (count == 1 || force)          /* what we expect, 1 town, return it */
     return (home);
@@ -4463,7 +4463,7 @@ void find_starting_location(P_char ch, int hometown)
     sprintf(Gbuf1, "find_starting_location: illegal hometown %d for %s",
             hometown, GET_NAME(ch));
     logit(LOG_DEBUG, Gbuf1);
-    GET_HOME(ch) = guild_locations[HOME_WINTERHAVEN][0];  /* default */
+    GET_HOME(ch) = guild_locations[HOME_THARN][0];  /* default */
     return;
   }
   if ((ch->player.m_class < 1) ||
@@ -4472,7 +4472,7 @@ void find_starting_location(P_char ch, int hometown)
     sprintf(Gbuf1, "find_starting_location: illegal class %d for %s",
             ch->player.m_class, GET_NAME(ch));
     logit(LOG_DEBUG, Gbuf1);
-    GET_HOME(ch) = guild_locations[HOME_WINTERHAVEN][0];  /* default */
+    GET_HOME(ch) = guild_locations[HOME_THARN][0];  /* default */
     return;
   }
   guild_num = guild_locations[hometown][flag2idx(ch->player.m_class)];

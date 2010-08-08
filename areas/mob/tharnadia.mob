@@ -2228,8 +2228,8 @@ melmba dark necromancer teacher~
 &+Lhas long flowing black hair and dark brown &+yeyes&+L.  Wearing a long satin robe,&N
 &+Lshe is always ready to help new initiates into the realms of necromancy.&N
 ~
-100554 0 0 268509244 276672 0 0 -1000 S
-PH 1 1024 -1
+100554 0 0 268509244 276672 0 0 1000 S
+PH 1 134217728 -1
 52 -5 -101 52d88+4316 7d6+30
 7.9.5.6 1
 8 8 2

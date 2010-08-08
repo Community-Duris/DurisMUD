@@ -991,7 +991,7 @@ typedef unsigned int uint;
 /* hometowns SAM 7-94 */
 #define HOME_CHOICE             -1      /* player has choice among several towns */
 #define HOME_NONE                0
-#define HOME_WINTERHAVEN         1      /* all goodies */
+#define HOME_THARN               1      /* all goodies */
 #define HOME_IXARKON             2       /* barbarian */
 #define HOME_ARACHDRATHOS        3       /* drow elf */
 #define HOME_SYLVANDAWN          4       /* grey-elf, half-elf */
