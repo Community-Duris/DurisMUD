@@ -4717,6 +4717,7 @@ void set_char_size(P_char ch)
   case RACE_OROG:
   case RACE_WOODELF:
   case RACE_KUOTOA:
+  case RACE_DRIDER:
     GET_SIZE(ch) = SIZE_MEDIUM;
     break;
   case RACE_HARPY:
