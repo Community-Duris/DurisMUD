@@ -1360,7 +1360,7 @@ void do_bandage(P_char ch, char *arg, int cmd)
     return;
   }
 
-  if (affected_by_spell(victim, SKILL_BANDAGE))
+  if (affected_by_spell(victim, SKILL_BANDAGE) && GET_HIT(victim) >= 0)
   {
     send_to_char("&+WBandaging&n again wont do any good now.\r\n", ch);
     return;
