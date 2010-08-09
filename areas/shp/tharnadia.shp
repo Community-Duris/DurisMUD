@@ -1,24 +1,24 @@
-#6000~
+#132500~
 N
-6007
-6008
-6009
+132507
+132508
+132509
 0
 0.70
 1.10
 0
-What do I look like?  I don't sell that.~
-I don't deal in items I can't see.~
-I refuse to deal in such matters.~
-A thousand pardons, but I cannot afford that.~
-Perhaps you forgot to ask your mother for your allowance?~
-Oh, splendid!  You won't be disappointed.  That will be %s.~
-I will give you for that.~
+Look here %s, what do I look like?  I don't sell that.~
+I don't deal in items I can't see %s.~
+%s, I refuse to deal in such matters.~
+A thousand pardons, but I cannot afford that %s.~
+Perhaps you forgot to ask your mother for your allowance, %s?~
+Oh, splendid %s!  You won't be disappointed.  That will be %s.~
+I will give you %s for that.~
 0
 0
-6000
+132500
 0
-6058
+132557
 0
 28
 0
@@ -34,30 +34,30 @@ N
 4
 Ewww!  I don't deal with YOU'RE kind.  Tssh.~
 X
-#6001~
+#132501~
 N
-6015
-6016
-6017
-6054
+132515
+132516
+132517
+132554
 835
-6132
+132632
 0
 0.70
 1.50
 0
-I do not sell that.~
-Perhaps you have it in your pocket?~
-I don't deal in such wares.~
-I don't seem to have enough money.~
-I cannot survive on mere shillings, return when you have money.~
-That potion will cost you %s.~
-I will give you for that.~
+I do not sell that %s.~
+Perhaps you have it in your pocket %s?~
+I don't deal in such wares %s.~
+I don't seem to have enough money %s.~
+I cannot survive on mere shillings, return when you have money %s.~
+That potion will cost you %s %s.~
+I will give you for that %s.~
 0
 0
-6001
+132501
 0
-6055
+132554
 0
 28
 0
@@ -73,19 +73,19 @@ N
 1
 Must be the wind, for I know one of THOSE people wouldn't dare talk to me.~
 X
-#6002~
+#132502~
 N
-6021
-6022
-6023
-6029
-6030
-6031
-6065
-6073
-6074
-6076
-6079
+132521
+132522
+132523
+132529
+132530
+132531
+132565
+132573
+132574
+132576
+132579
 0
 0.30
 1.50
@@ -93,18 +93,18 @@ N
 11
 37
 0
-Don't waste my time, damnit!  I have work to do.~
-I don't buy things I can't see.~
-Perhaps you have me confused with that fairy chef?~
-Grrr, I don't have the money fer that.~
-Did you ever think of a part-time job to pay for that?~
-That fine piece of armor will cost ye %s.~
-I will give ye for that, and not a shilling more.~
+Don't waste my time, damnit!  I have work to do %s.~
+I don't buy things I can't see %s.~
+%s, perhaps you have me confused with that fairy chef?~
+Grrr, I don't have the money fer that %s.~
+Did you ever think of a part-time job to pay for that %s?~
+That fine piece of armor will cost ye %s %s.~
+I will give ye %s for that, and not a shilling more %s.~
 0
 0
-6002
+132502
 0
-6130
+132629
 0
 28
 0
@@ -120,33 +120,33 @@ N
 1
 Let me see you're greencard first, deadbeat.~
 X
-#6025~
+#132525~
 N
-6041
-6043
-6037
-6038
-6039
-6040
-6042
+132541
+132543
+132537
+132538
+132539
+132540
+132542
 0
 0.30
 1.50
 8
 27
 0
-I'm not selling that.~
-Perhaps you have it stored somewhere for safe keeping?~
-I only deal in gems and fine treasures.~
-Sorry, but I don't have the money to buy that from you.~
-Sorry, perhaps you left your purse at home.~
-Thank you, that will be %s.~
-I will give you for that.~
+I'm not selling that %s.~
+Perhaps you have it stored somewhere for safe keeping %s?~
+I only deal in gems and fine treasures %s.~
+Sorry, but I don't have the money to buy that from you %s.~
+Sorry, perhaps you left your purse at home %s.~
+Thank you, that will be %s %s.~
+I will give you %s for that %s.~
 0
 0
-6025
+132525
 0
-6242
+132741
 0
 28
 0
@@ -162,26 +162,26 @@ N
 1
 I do not sell to your kind of people!~
 X
-#6030~
+#132530~
 N
-6052
-6053
+132552
+132553
 0
 0.70
 1.10
 0
-I'm not selling that.~
-You don't have that item.~
-I won't buy that.~
-Sorry, but I don't have the money.~
-Sorry, but you don't have the money.~
-Thank you, that will be %s.~
-I will give you for that.~
+I'm not selling that %s.~
+You don't have that item %s.~
+I won't buy that %s.~
+Sorry, but I don't have the money %s.~
+Sorry, but you don't have the money %s.~
+Thank you, that will be %s %s.~
+I will give you %s for that %s.~
 0
 0
-6030
+132530
 0
-6113
+132612
 0
 28
 0
@@ -197,31 +197,31 @@ N
 1
 I do not sell to your people!~
 X
-#6051~
+#132551~
 N
-6100
-6101
-6045
-6046
-6047
-6048
-6049
+132600
+132601
+132545
+132546
+132547
+132548
+132549
 0
 0.70
 1.10
 0
-I don't need ya'ta jack me off, thats why Bertha is in back..~
-If I wanted to get screwed outta my money I'd goto Bertha!~
-I don't deal in that crap.~
-Do I look like an idiot?~
-Beat it!~
-Thank you, that will be %s.~
-I will give you for that.~
+%s I don't need ya'ta jack me off, thats why Bertha is in back..~
+%s if I wanted to get screwed outta my money I'd goto Bertha!~
+I don't deal in that crap %s.~
+Do I look like an idiot %s?~
+Beat it %s!~
+Thank you, that will be %s %s.~
+I will give you %s for that %s.~
 0
 0
-6051
+132551
 0
-6267
+132766
 0
 28
 0
@@ -237,25 +237,25 @@ N
 1
 I do not sell to your people!~
 X
-#6058~
+#132558~
 N
-6088
+132588
 0
 0.70
 1.10
 0
-I'm not selling that.~
-You don't have that item.~
-I won't buy that.~
-Sorry, but I don't have the money.~
-Sorry, but you don't have the money.~
-Thank you, that will be %s.~
-I will give you for that.~
+I'm not selling that %s.~
+You don't have that item %s.~
+I won't buy that %s.~
+Sorry, but I don't have the money %s.~
+Sorry, but you don't have the money %s.~
+Thank you, that will be %s %s.~
+I will give you %s for that %s.~
 0
 0
-6058
+132558
 0
-6057
+132556
 0
 28
 0
@@ -271,32 +271,32 @@ N
 1
 I do not sell to your people!~
 X
-#6061~
+#132561~
 N
-6104
-6105
-6106
-6070
-6109
-6110
+132604
+132605
+132606
+132570
+132609
+132610
 835
 336
 0
 0.70
 1.10
 0
-I'm not selling that.~
-You don't have that item.~
-I won't buy that.~
-Sorry, but I don't have the money.~
-Sorry, but you don't have the money.~
-Thank you, that will be %s.~
-I will give you for that.~
+I'm not selling that %s.~
+You don't have that item %s.~
+I won't buy that %s.~
+Sorry, but I don't have the money %s.~
+Sorry, but you don't have the money %s.~
+Thank you, that will be %s %s.~
+I will give you %s for that %s.~
 0
 0
-6061
+132561
 0
-6053
+132552
 0
 28
 0
@@ -312,32 +312,32 @@ N
 1
 I do not sell to your people!~
 X
-#6066~
+#132566~
 N
-6050
-6051
-6055
-6056
-6058
-6069
-6086
+132550
+132551
+132555
+132556
+132558
+132569
+132586
 0
 0.70
 1.10
 5
 0
-I'm not selling that.~
-Don't try that again, or I'll slice your gonads from your body.~
-I won't buy that crap.~
-I don't need that, maybe later.~
-Cough up some money first, deadbeat!~
-Thank you, that will be %s.~
-I will give you for that.~
+I'm not selling that %s.~
+Don't try that again, or I'll slice your gonads from your body %s.~
+I won't buy that crap %s.~
+I don't need that, maybe later %s.~
+Cough up some money first, deadbeat! %s~
+Thank you, that will be %s %s.~
+I will give you %s for that %s.~
 0
 0
-6066
+132566
 0
-6243
+132742
 0
 28
 0
@@ -353,14 +353,14 @@ N
 1
 Get lost, you pissant!~
 X
-#6070~
+#132570~
 N
-6019
-6059
-6072
-6067
-6068
-6087
+132519
+132559
+132572
+132567
+132568
+132587
 53
 11010
 11011
@@ -372,18 +372,18 @@ N
 1
 22
 0
-I'm don't carry that, friend.~
-Perhaps you misplaced it?~
-I don't deal in that.~
-Sorry, but I don't have the money.~
-You need cash before you can buy things!~
-Thank you, that will be %s.~
-I will give you for that.~
+I'm don't carry that, friend %s.~
+Perhaps you misplaced it %s?~
+I don't deal in that %s.~
+Sorry, but I don't have the money %s.~
+You need cash before you can buy things %s!~
+Thank you, that will be %s %s.~
+I will give you %s for that %s.~
 0
 0
-6070
+132570
 0
-6262
+132761
 0
 28
 0
@@ -399,13 +399,13 @@ N
 1
 I do not sell to your people!~
 X
-#6085~
+#132585~
 N
-6089
-6092
-6093
-6094
-6095
+132589
+132592
+132593
+132594
+132595
 500
 73
 77
@@ -415,18 +415,18 @@ N
 8
 27
 0
-Grrrr.~
-I oughta slit yer troat!~
-What do ya take me fer?~
-Bleh, worthless!~
-Go steal some money, jackass.~
-Give me and its yers.~
-I will give you for that.~
+Grrrr. Get outta here %s!~
+I oughta slit yer troat %s!~
+What do ya take me fer %s?~
+Bleh, worthless %s!~
+Go steal some money, jackass %s.~
+Give me %s and its yers %s.~
+I will give you %s for that %s.~
 0
 0
-6085
+132585
 0
-6031
+132530
 0
 28
 0
@@ -442,11 +442,11 @@ N
 1
 I do not sell to your people!~
 X
-#6086~
+#132586~
 N
-6020
-6022
-6064
+132520
+132522
+132564
 0
 0.30
 1.50
@@ -454,18 +454,18 @@ N
 11
 5
 0
-I'm don't carry that, friend.~
-Perhaps you misplaced it?~
-I don't deal in that.~
-Sorry, but I don't have the money.~
-Broke?  No dice!~
-Thank you, that will be %s.~
-I will give you for that.~
+I'm don't carry that, friend %s.~
+Perhaps you misplaced it %s?~
+I don't deal in that %s.~
+Sorry, but I don't have the money %s.~
+Broke?  No dice %s!~
+Thank you, that will be %s %s.~
+I will give you %s for that %s.~
 0
 0
-6086
+132586
 0
-6044
+132543
 0
 28
 0
@@ -481,13 +481,13 @@ N
 1
 I do not sell to your people!~
 X
-#6111~
+#132611~
 N
-6111
-6112
-6113
-6114
-6115
+132611
+132612
+132613
+132614
+132615
 54
 0
 1.00
@@ -502,12 +502,12 @@ I won't buy that, %s.~
 Sorry there %s, but I don't have the money.~
 You don't have the money, %s!~
 Thank you, %s, that will be %s.~
-%s, I will give you for that.~
+%s, I will give you %s for that.~
 0
 0
-6111
+132611
 0
-6609
+132978
 0
 28
 0
@@ -523,16 +523,16 @@ N
 1
 I do not sell to your people!~
 X
-#6113~
+#132613~
 N
-6116
-6117
-6118
-6119
-6120
-6122
-6123
-6130
+132616
+132617
+132618
+132619
+132620
+132622
+132623
+132630
 0
 1.00
 1.00
@@ -553,12 +553,12 @@ I won't buy that, %s.~
 Sorry there %s, but I don't have the money.~
 You don't have the money, %s!~
 Thank you, %s, that will be %s.~
-%s, I will give you for that.~
+%s, I will give you %s for that.~
 0
 0
-6113
+132613
 0
-6358
+132857
 4
 20
 21
@@ -574,7 +574,7 @@ N
 1
 I do not sell to your people!~
 X
-#6115~
+#132615~
 N
 820
 821
@@ -596,12 +596,12 @@ I won't buy that, %s.~
 Sorry there %s, but I don't have the money.~
 You don't have the money, %s!~
 Thank you, %s, that will be %s.~
-%s, I will give you for that.~
+%s, I will give you %s for that.~
 0
 0
-6115
+132615
 0
-6054
+132553
 0
 28
 0
@@ -617,7 +617,7 @@ N
 1
 I do not sell to your people!~
 X
-#6117~
+#132617~
 N
 66709
 253
@@ -636,18 +636,18 @@ N
 11
 37
 0
-I'm don't carry that, friend.~
-Perhaps you misplaced it?~
-I don't deal in that.~
-Sorry, but I don't have the money.~
-Did you wander into the eidolon area?~
-Thank you, that will be %s.~
-I will give you for that.~
+I'm don't carry that, %s.~
+Perhaps you misplaced it %s?~
+I don't deal in that %s.~
+Sorry, but I don't have the money %s.~
+Did you wander into the eidolon area %s?~
+Thank you, that will be %s %s.~
+I will give you %s for that %s.~
 0
 0
-6117
+132617
 0
-6001
+132500
 0
 28
 0
@@ -663,9 +663,12 @@ N
 1
 I do not sell to your people!~
 X
-#6500~
+#132655~
 N
-6500
+132515
+132517
+132554
+132630
 0
 0.30
 4.00
@@ -673,23 +676,23 @@ N
 16
 21
 0
-Busy, busy, busy.~
-What mud cannot see, mud cannot buy.~
-Your belly button is unscrewed.~
-I am out of shiny metal wealth.~
-I reponly trade for shiny metal wealth.~
-That will be towards my wig.~
-Is shiny metal wealth enough? Good.~
+Busy, busy, busy, go away %s.~
+What mud cannot see, mud cannot buy %s.~
+Your belly button is unscrewed %s.~
+I am out of shiny metal wealth %s.~
+I reponly trade for shiny metal wealth %s.~
+That will be %s towards my wig %s.~
+I will give you %s for that %s.~
 0
 0
-6500
+132655
 0
-0
-0
-28
+132985
 0
 28
-Y
+0
+28
+N
 N
 N
 Busy, busy, busy.~
@@ -700,12 +703,11 @@ N
 1
 I do not sell to your people!~
 X
-#6519~
+#132650~
 N
 203
 204
 3050
-6537
 0
 0.30
 1.23
@@ -713,18 +715,18 @@ N
 2
 4
 0
-I'm not selling that item! Look again dummy!~
-You don't have that item for me to purchase.~
-I won't buy that crap!~
-Sorry, but I don't have the money to buy that off ya.~
-Sorry, but you don't have the money! There will be no free handouts!~
-Thank you, that will be %s.~
-I will give you for that magical item.~
+I'm not selling that item! Look again %s!~
+You don't have that item for me to purchase %s.~
+I won't buy that crap %s!~
+Sorry, but I don't have the money to buy that off ya %s.~
+Sorry, but you don't have the money! There will be no free handouts %s!~
+Thank you, that will be %s %s.~
+I will give you %s for that magical item %s.~
 0
 0
-6519
+132650
 0
-6656
+133026
 0
 28
 0

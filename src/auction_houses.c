@@ -56,7 +56,8 @@ void init_auction_houses() {
   world[real_room0(1200)].funct = auction_house_room_proc;
   world[real_room0(69)].funct = auction_house_room_proc;
   world[real_room0(420)].funct = auction_house_room_proc;
-  
+  world[real_room0(132821)].funct = auction_house_room_proc;
+
 	sorter = new EqSort();
 
 	DEFAULT_AUCTION_LENGTH = get_property("auctions.defaultLength", ( 2 * 24 * 60 * 60 ));

@@ -406,7 +406,7 @@ void assign_mobiles(void)
 
 /*  mob_index[real_mobile0(6050)].func.mob = citizenship;*/
   mob_index[real_mobile0(36203)].func.mob =
-    mob_index[real_mobile0(6099)].func.mob = rentacleric;
+    mob_index[real_mobile0(132599)].func.mob = rentacleric;
   mob_index[real_mobile0(8336)].func.mob =
     mob_index[real_mobile0(95551)].func.mob =
     mob_index[real_mobile0(16512)].func.mob =
@@ -707,23 +707,22 @@ void assign_mobiles(void)
   mob_index[real_mobile0(150139)].func.mob = outpost_captain;
   mob_index[real_mobile0(150140)].func.mob = outpost_captain;
 
-  /*
-  mob_index[real_mobile0(6093)].func.mob = janitor;
-  mob_index[real_mobile0(6019)].func.mob = money_changer;
-  mob_index[real_mobile0(6001)].func.mob = tharn_tall_merchant;
-  mob_index[real_mobile0(6009)].func.mob = tharn_beach_guard;
-  mob_index[real_mobile0(6010)].func.mob = tharn_male_commoner;
-  mob_index[real_mobile0(6011)].func.mob = tharn_female_commoner;
-  mob_index[real_mobile0(6037)].func.mob = tharn_female_commoner;
-  mob_index[real_mobile0(6039)].func.mob = tharn_female_commoner;
-  mob_index[real_mobile0(6032)].func.mob = tharn_human_merchant;
-  mob_index[real_mobile0(6014)].func.mob = tharn_lighthouse_attendent;
-  mob_index[real_mobile0(6031)].func.mob = tharn_crier_one;
-  */
+
+  mob_index[real_mobile0(132593)].func.mob = janitor;
+  mob_index[real_mobile0(132519)].func.mob = money_changer;
+  mob_index[real_mobile0(132501)].func.mob = tharn_tall_merchant;
+  mob_index[real_mobile0(132509)].func.mob = tharn_beach_guard;
+  mob_index[real_mobile0(132510)].func.mob = tharn_male_commoner;
+  mob_index[real_mobile0(132511)].func.mob = tharn_female_commoner;
+  mob_index[real_mobile0(132537)].func.mob = tharn_female_commoner;
+  mob_index[real_mobile0(132539)].func.mob = tharn_female_commoner;
+  mob_index[real_mobile0(132532)].func.mob = tharn_human_merchant;
+  mob_index[real_mobile0(132514)].func.mob = tharn_lighthouse_attendent;
+  mob_index[real_mobile0(132531)].func.mob = tharn_crier_one;
  
  mob_index[real_mobile0(36420)].func.mob = world_quest; // Drow HT
  mob_index[real_mobile0(97540)].func.mob = world_quest; // Ixie
- //mob_index[real_mobile0(6055)].func.mob = world_quest; Mob does not exist.
+ mob_index[real_mobile0(132555)].func.mob = world_quest;// Tharn
  mob_index[real_mobile0(16553)].func.mob = world_quest; // Woodseer
  
  mob_index[real_mobile0(53670)].func.mob = world_quest; // Sunwell
@@ -781,20 +780,16 @@ void assign_mobiles(void)
  mob_index[real_mobile0(16553)].func.mob = world_quest;
  mob_index[real_mobile0(16553)].func.mob = world_quest;
  mob_index[real_mobile0(16553)].func.mob = world_quest;
- 
-
-//i
-
 
  mob_index[real_mobile0(5347)].func.mob = world_quest;
  mob_index[real_mobile0(37718)].func.mob = world_quest;
  mob_index[real_mobile0(74060)].func.mob = world_quest;
-/*
-   mob_index[real_mobile0(6042)].func.mob = tharn_shady_mercenary;
-  mob_index[real_mobile0(6043)].func.mob = tharn_shady_youth;
-  mob_index[real_mobile0(6044)].func.mob = tharn_jailor;
-  mob_index[real_mobile0(6040)].func.mob = tharn_old_man;
-*/
+
+   mob_index[real_mobile0(132542)].func.mob = tharn_shady_mercenary;
+  mob_index[real_mobile0(132543)].func.mob = tharn_shady_youth;
+  mob_index[real_mobile0(132544)].func.mob = tharn_jailor;
+  mob_index[real_mobile0(132540)].func.mob = tharn_old_man;
+
   /* Harpy hometown */
   mob_index[real_mobile0(31103)].func.mob = money_changer;
 
@@ -1310,7 +1305,7 @@ void assign_objects(void)
   obj_index[real_object0(29329)].func.obj = chyron_search_obj;
 
   /* banks - add proc for storage lockers */
-  obj_index[real_object0(6081)].func.obj = storage_locker_obj_hook;
+  obj_index[real_object0(132581)].func.obj = storage_locker_obj_hook;
   obj_index[real_object0(3097)].func.obj = storage_locker_obj_hook;
 
   /* Mossi Mods:  General Items  */
@@ -1796,7 +1791,7 @@ void assign_objects(void)
   obj_index[real_object0(2998)].func.obj = clock_tower; /* WD clock */
 #endif
 
-  obj_index[real_object0(6071)].func.obj = jailtally;
+  obj_index[real_object0(132571)].func.obj = jailtally;
   obj_index[real_object0(8100)].func.obj = jailtally;
   obj_index[real_object0(3068)].func.obj = jailtally;
 
@@ -1824,11 +1819,10 @@ void assign_objects(void)
 //  obj_index[real_object0(5732)].func.obj = control_panel;
 
   /* Tharnadia */
-  obj_index[real_object0(6070)].func.obj =
-    obj_index[real_object0(6109)].func.obj =
-    obj_index[real_object0(6110)].func.obj = die_roller;
+  obj_index[real_object0(132570)].func.obj = die_roller;
+    obj_index[real_object0(132609)].func.obj = die_roller;
+    obj_index[real_object0(132610)].func.obj = die_roller;
 
-  mob_index[real_mobile0(132530)].func.mob = money_changer;
   
   /* Sylvandawn */
   obj_index[real_object0(425)].func.obj = holy_weapon;
@@ -2287,7 +2281,6 @@ void assign_rooms(void)
   world[real_room0(10857)].funct = inn;
   world[real_room0(3398)].funct = inn;
   world[real_room0(1736)].funct = inn;
-  world[real_room0(132575)].funct = inn;
 
 
   /* Aracdrathos */
@@ -2349,11 +2342,11 @@ void assign_rooms(void)
   world[real_room0(17087)].funct = inn;
 
   /* tharn */
-  world[real_room0(6076)].funct = inn;
-  world[real_room0(6115)].funct = pet_shops;
-  world[real_room0(6369)].funct = pet_shops;
-  world[real_room0(6244)].funct = pet_shops;
-  world[real_room0(6683)].funct = ship_shop_proc;
+  world[real_room0(132575)].funct = inn;
+  world[real_room0(132614)].funct = pet_shops;
+  world[real_room0(132868)].funct = pet_shops;
+  world[real_room0(132743)].funct = pet_shops;
+  //world[real_room0(6683)].funct = ship_shop_proc;
   world[real_room0(123113)].funct = ship_shop_proc;
   world[real_room0(88846)].funct = ship_shop_proc;
   world[real_room0(43198)].funct = ship_shop_proc;

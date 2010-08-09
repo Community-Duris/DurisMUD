@@ -1615,7 +1615,6 @@ G 1 132613 999 0 100 0 0 0         *    a well crafted arrow
 G 1 132614 999 0 100 0 0 0         *    a crudely made arrow
 G 1 132615 999 0 100 0 0 0         *    a well crafted quiver
 G 1 54 999 0 100 0 0 0             *    (object type not in this .obj file)
-O 0 3097 1 132612 100 0 0 0        * Bank counter
 M 0 132654 2 132980 100 0 0 0      * a sleepy citizen
 M 0 132644 12 132981 100 0 0 0     * a grounds keeper
 E 1 132658 10 12 100 0 0 0         *   a grounds bag

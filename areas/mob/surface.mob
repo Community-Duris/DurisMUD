@@ -618,11 +618,11 @@ h 0 1 4
 0.0.0.0 0
 8 8 1
 #500041
-decorated winterhaven watchman~
-&+Wa decorated Winterhaven watchman&N~
-&+WA decorated watchman of the Winterhaven patrol scans the horizon.
+decorated tharnadian human watchman~
+&+Wa decorated &+LTharnadian &+Wwatchman&N~
+&+WA decorated watchman of the &+LTharnadian &+Wpatrol scans the horizon.
 ~
-   &+WThis tall, proud guard of the winterhaven patrol watch walks through the
+   &+WThis tall, proud guard of the &+LTharnadian &+Wpatrol watch walks through the
 &+Wlands, keeping a keen eye on anything and everything.  He has large muscles
 &+Wand stands quite tall for a human.
 ~
@@ -815,16 +815,16 @@ pg 0 1 -1
 0.0.0.0 0
 8 8 1
 #500055
-meldar winterhaven marshall~
-&+WMeldar the Winterhaven Marshall&N~
-&+WMeldar the Winterhaven Marshall passes through here, guarding the road.
+meldar tharnadian marshall~
+&+WMeldar the &+LTharnadian &+WMarshall&N~
+&+WMeldar the &+LTharnadian &+WMarshall passes through here, guarding the road.&n
 ~
    &+WMeldar Feshlyn is an old human warrior who has fought in many battles,
-&+Whelping to bring Winterhaven to its current glory.  It is rumored that
-&+Wgenerations ago Meldar's ancestors fought in the Battle for Tharnadia
+&+Whelping to bring Tharnadia to its current glory.  It is rumored that
+&+Wgenerations ago Meldar's ancestors fought in the Battles for Tharnadia
 &+Wbut were defeated after putting up a most valiant effort.  Nowadays,
 &+WMeldar fights for these very ancestors, wearing his Marshall's badge
-&+Wwith pride and protecting the highways under the protection of Winterhaven.
+&+Wwith pride and protecting the highways under the protection of Tharnadia.
 ~
 536872968 128 0 67108888 0 0 0 10000 S
 PH 0 8 -1
@@ -862,7 +862,7 @@ ae 0 1 4
 #500058
 elite highwayman~
 &+Ban elite highwayman&N~
-&+WAn elite highwayman stands here, protecting the roads of Winterhaven.
+&+WAn elite highwayman stands here, protecting the roads of Tharnadia.&n
 ~
    This proud fighter stands average height but is quite muscular.  He wears
 standard leather garments and patrols the countryside on constant watch of
@@ -877,7 +877,7 @@ ph 0 1 -1
 #500059
 highwayman~
 &+ga highwayman&N~
-&+gA highwayman stands here, scanning the roads protected by Winterhaven.
+&+gA highwayman stands here, scanning the roads protected by &+LTharnadia&+g.&n
 ~
    This proud fighter stands average height but is quite muscular.  He wears
 standard leather garments and patrols the countryside on constant watch of
@@ -890,9 +890,9 @@ ph 0 1 -1
 0.0.0.0 0
 8 8 1
 #500060
-elite winterhaven warrior~
-&+Wan elite Winterhaven warrior&N~
-&+WAn elite Winterhaven warrior stands here, poised and ready for combat.
+elite tharnadian warrior~
+&+Wan elite &+LTharnadian &+Wwarrior&N~
+&+WAn elite &+LTharnadian &+Wwarrior stands here, poised and ready for combat.&n
 ~
    This proud fighter stands average height but is quite muscular.  He wears
 standard leather garments and patrols the countryside on constant watch of
@@ -1870,6 +1870,22 @@ sk 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
+#500128
+seni revered theurgist eladrin teacher _spec3_~
+&+WS&+Cen&+Wi, the revered &+cth&+Ceur&+Wgist&n~
+&+WA slender &+ce&+Cl&+Wadr&+Ci&+cn &+Wwonders about, lost in &+Ycontemplation &+Wof the &+Wt&+ch&+Ca&+Wu&+Cm&+ca&+Ct&+Wu&+Cr&+cg&+Ci&+Wc &+Warts.&n
+~
+&+c   Standing before you is the form of a seeminly ageless Eladrin. Light
+&+csilken robes seem to flow about the woman and flutter in the winds. A
+&+csoft glow seems to emit from her presence. The look of wisdom behind
+&+cher eyes seems to draw you in, and you feel like you could learn much
+&+cof the ways of the Theurgist by listening to this woman speak.&n
+~
+2147497992 384 0 402727064 309340 0 4194304 1000 S
+EL 0 134217728 -1
+59 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
 #500150
 reaver snudk goblin shock_reaver teacher _spec3_~
 &+gSnudk&+L, the &+Ggoblin &+Yshock &+Lreaver&N~

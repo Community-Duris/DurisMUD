@@ -1478,7 +1478,7 @@ int test_atm_present(P_char ch)
   {
     return 1;
   }
-  else if( (atm = get_obj_in_list_num(real_object(6081), world[ch->in_room].contents)) && CAN_SEE_OBJ(ch, atm) )
+  else if( (atm = get_obj_in_list_num(real_object(132581), world[ch->in_room].contents)) && CAN_SEE_OBJ(ch, atm) )
   {
     return 1;
   }
