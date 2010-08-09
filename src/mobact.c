@@ -3406,7 +3406,8 @@ bool CastEtherSpell(P_char ch, P_char victim, int helping)
   if((!IS_FIGHTING(ch) || !number(0, 3)) && !spl)
   {
     if(!affected_by_spell(ch, SPELL_ETHEREAL_FORM) &&
-        npc_has_spell_slot(ch, SPELL_ETHEREAL_FORM))
+        npc_has_spell_slot(ch, SPELL_ETHEREAL_FORM) &&
+        !IS_ACT(ch, ACT_TEACHER))
       spl = SPELL_ETHEREAL_FORM;
 
     /* sort of weird here, but the idea is to not always cast healing spells when not fighting and wounded */
