@@ -796,7 +796,7 @@ M 0 132501 1 132554 100 0 0 0      * a tall merchant
 G 1 132515 999 0 100 0 0 0         *    a thick viscid potion
 G 1 132516 999 0 100 0 0 0         *    a clear vial of crimson liquid
 G 1 132517 999 0 100 0 0 0         *    a speckled green potion
-G 1 132554 1 0 100 0 0 0           *    a stygian magenta potion
+G 1 132554 999 0 100 0 0 0         *    a stygian magenta potion
 G 1 835 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 132632 999 0 100 0 0 0         *    an arcane spellbook covered with runes
 M 0 132559 1 132554 100 0 0 0      * the young woman
@@ -1289,7 +1289,7 @@ M 0 132553 5 132766 100 0 0 0      * a scumbag drunk
 M 0 132553 5 132766 100 0 0 0      * a scumbag drunk
 M 0 132553 5 132766 100 0 0 0      * a scumbag drunk
 M 0 132587 1 132767 100 0 0 0      * a slack-jawed prostitute
-M 0 132588 1 132768 100 0 0 0      * a crapping youth
+M 0 132588 1 132768 100 0 0 0      * a shitting youth
 M 0 132579 2 132769 100 0 0 0      * a poor commoner
 M 0 132565 6 132771 100 0 0 0      * a homeless peasant
 M 0 132565 6 132771 100 0 0 0      * a homeless peasant
@@ -1624,6 +1624,10 @@ E 1 132673 1 5 100 0 0 0           *   an old leather suit
 E 1 132668 2 7 100 0 0 0           *   a pair of polished chainmail leggings
 E 1 132648 2 16 100 0 0 0          *   a wooden knobkerrie
 G 1 835 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 132515 999 0 100 0 0 0         *    a thick viscid potion
+G 1 132517 999 0 100 0 0 0         *    a speckled green potion
+G 1 132554 999 0 100 0 0 0         *    a stygian magenta potion
+G 1 132630 999 0 100 0 0 0         *    a strange glowing potion
 M 0 132646 5 132986 100 0 0 0      * a militia guard
 E 1 132644 999 5 100 0 0 0         *   some spiked leather armor bearing the emblem of Caer Tannad
 E 1 132642 999 7 100 0 0 0         *   some leather leggings

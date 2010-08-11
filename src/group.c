@@ -374,13 +374,13 @@ void do_group(P_char ch, char *argument, int cmd)
 
 
       gl = ch->group;
-      if (GET_CLASS(gl->ch, CLASS_PSIONICIST) ||
+/*      if (GET_CLASS(gl->ch, CLASS_PSIONICIST) ||
           GET_CLASS(gl->ch, CLASS_MINDFLAYER))
         sprintf(Gbuf2, "%5d/%-5d hit, %4d/%-4d move, %4d/%-4d mana",
                 GET_HIT(gl->ch), GET_MAX_HIT(gl->ch), GET_VITALITY(gl->ch),
                 GET_MAX_VITALITY(gl->ch), GET_MANA(gl->ch),
                 GET_MAX_MANA(gl->ch));
-      else
+      else*/
         sprintf(Gbuf2, "%5d/%-5d hit, %4d/%-4d move",
                 GET_HIT(gl->ch), GET_MAX_HIT(gl->ch),
                 GET_VITALITY(gl->ch), GET_MAX_VITALITY(gl->ch));
@@ -402,13 +402,13 @@ void do_group(P_char ch, char *argument, int cmd)
 
       for (gl = gl->next; gl; gl = gl->next)
       {
-        if (GET_CLASS(gl->ch, CLASS_PSIONICIST) ||
+        /*if (GET_CLASS(gl->ch, CLASS_PSIONICIST) ||
             GET_CLASS(gl->ch, CLASS_MINDFLAYER))
           sprintf(Gbuf2, "%5d/%-5d hit, %4d/%-4d move, %4d/%-4d mana",
                   GET_HIT(gl->ch), GET_MAX_HIT(gl->ch), GET_VITALITY(gl->ch),
                   GET_MAX_VITALITY(gl->ch), GET_MANA(gl->ch),
                   GET_MAX_MANA(gl->ch));
-        else
+        else*/
           sprintf(Gbuf2, "%5d/%-5d hit, %4d/%-4d move",
                   GET_HIT(gl->ch), GET_MAX_HIT(gl->ch),
                   GET_VITALITY(gl->ch), GET_MAX_VITALITY(gl->ch));

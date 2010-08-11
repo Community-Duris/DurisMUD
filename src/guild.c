@@ -111,7 +111,7 @@ void update_skills(P_char ch)
   {
     if ( GET_LVL_FOR_SKILL(ch, s) > 0 && GET_LEVEL(ch) >= GET_LVL_FOR_SKILL(ch, s) )
     {
-#if defined(CHAOS_MD) && (CHAOS_MUD == 1)
+#if defined(CHAOS_MUD) && (CHAOS_MUD == 1)
       ch->only.pc->skills[s].taught = ch->only.pc->skills[s].learned = 100;
 #else
       ch->only.pc->skills[s].taught =

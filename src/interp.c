@@ -1644,7 +1644,7 @@ void command_interpreter(P_char ch, char *argument)
           {
             send_to_char("You are already meditating.\n", ch);
           }
-          else if (cmd != CMD_PRAY && cmd != CMD_MEMORIZE && cmd != CMD_ASSIMILATE &&
+          else if (cmd != CMD_PRAY && cmd != CMD_MEMORIZE && cmd != CMD_ASSIMILATE && cmd != CMD_FOCUS &&
             cmd != CMD_GCC && cmd != CMD_HELP && cmd != CMD_RWC)
           {
             if(10 + GET_CHAR_SKILL(ch, SKILL_ADVANCED_MEDITATION) < number(10, 60) ||

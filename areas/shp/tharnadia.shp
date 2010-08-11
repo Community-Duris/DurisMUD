@@ -507,7 +507,7 @@ Thank you, %s, that will be %s.~
 0
 132611
 0
-132978
+132979
 0
 28
 0
@@ -663,6 +663,45 @@ N
 1
 I do not sell to your people!~
 X
+#132650~
+N
+203
+204
+3050
+0
+0.30
+1.23
+3
+2
+4
+0
+I'm not selling that item! Look again %s!~
+You don't have that item for me to purchase %s.~
+I won't buy that crap %s!~
+Sorry, but I don't have the money to buy that off ya %s.~
+Sorry, but you don't have the money! There will be no free handouts %s!~
+Thank you, that will be %s %s.~
+I will give you %s for that magical item %s.~
+0
+0
+132650
+0
+133026
+0
+28
+0
+28
+N
+N
+N
+I am now open!~
+My shop is now closed.~
+0
+0
+N
+1
+I do not sell to your people!~
+X
 #132655~
 N
 132515
@@ -697,45 +736,6 @@ N
 N
 Busy, busy, busy.~
 And the butterfly screams on....~
-0
-0
-N
-1
-I do not sell to your people!~
-X
-#132650~
-N
-203
-204
-3050
-0
-0.30
-1.23
-3
-2
-4
-0
-I'm not selling that item! Look again %s!~
-You don't have that item for me to purchase %s.~
-I won't buy that crap %s!~
-Sorry, but I don't have the money to buy that off ya %s.~
-Sorry, but you don't have the money! There will be no free handouts %s!~
-Thank you, that will be %s %s.~
-I will give you %s for that magical item %s.~
-0
-0
-132650
-0
-133026
-0
-28
-0
-28
-N
-N
-N
-I am now open!~
-My shop is now closed.~
 0
 0
 N

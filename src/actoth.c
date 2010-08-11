@@ -2970,7 +2970,7 @@ void do_explist(P_char ch, char *argument, int cmd)
    * them back into sanity
    */
 
-  if (GET_LEVEL(ch) >= 19)
+  if (GET_LEVEL(ch) >= (int)get_property("exp.min.lvl.see.numbers", 51))
   {
     sprintf(Gbuf1, "&+bExperience till level: &+W%d&n\r\n",
             (new_exp_table[GET_LEVEL(ch) + 1] - GET_EXP(ch)));

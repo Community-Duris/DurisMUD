@@ -439,12 +439,12 @@ void event_mana_regen(P_char ch, P_char victim, P_obj obj, void *data)
       if (GET_MANA(ch) > GET_MAX_MANA(ch))
         GET_MANA(ch) = GET_MAX_MANA(ch);
 
-      if (IS_PC(ch) && IS_AFFECTED(ch, AFF_MEDITATE) &&
+      /*if (IS_PC(ch) && IS_AFFECTED(ch, AFF_MEDITATE) &&
           (GET_MANA(ch) == GET_MAX_MANA(ch)) && GET_CLASS(ch, CLASS_PSIONICIST))
       {
         send_to_char("&+LYour mana reserves are now full.&n\r\n", ch);
         stop_meditation(ch);
-      }
+      }*/
 
       regen_value = regen_value - (float)regen_value_int;
   }

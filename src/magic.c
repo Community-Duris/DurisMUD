@@ -2754,7 +2754,7 @@ void spell_bigbys_clenched_fist(int level, P_char ch, char *arg, int type,
     "$n's &+Ymagic fist&N punches $N into so much pulp!", 0
   };
 
-  int dam = 10 * level + number(1, 25);
+  int dam = 7 * level + number(1, 25);
 
   if(!NewSaves(victim, SAVING_SPELL, 0))
     dam = (int) (dam * 2.0);
@@ -2796,7 +2796,7 @@ void spell_bigbys_crushing_hand(int level, P_char ch, char *arg, int type,
       0
   };
 
-  int dam = 14 * level + number(1, 25);
+  int dam = 8 * level + number(1, 25);
 
   if(!NewSaves(victim, SAVING_SPELL, 0))
     dam = (int) (dam * 2);
@@ -11936,7 +11936,7 @@ void spell_single_incendiary_cloud(int level, P_char ch, char *arg, int type,
     return;
   }
   
-  dam = dice(3 * level, 8);
+  dam = dice(3 * level, 7);
   
   if(NewSaves(victim, SAVING_SPELL, 0))
   {
@@ -16673,7 +16673,7 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
  * applying terrain/room modifications
  */
   P_char   tch, next;
-  int      doomdam = 180;
+  int      doomdam = 95 + number(0, 20);
   int      num;
   struct damage_messages messages = {
     "&+LYou send &+ma wave of insects and arachnids &+Lagainst $N!",
@@ -16793,7 +16793,7 @@ void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
   if(!IS_ALIVE(ch))
     return;
 
-  if(GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND) &&
+  if(GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND) ||
     (world[ch->in_room].sector_type == SECT_FOREST))
       waves++;
 

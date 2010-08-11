@@ -1012,7 +1012,7 @@ void handle_memorize(P_char ch)
       }
       else
       {
-#if defined(CHAOS_MUD) && (CHAOS_MUD == 1)
+#if !defined(CHAOS_MUD) || (CHAOS_MUD != 1)
         if (book_class(ch) &&
           !(SpellInSpellBook(ch, af->modifier, SBOOK_MODE_IN_INV +
                                                SBOOK_MODE_AT_HAND + 
@@ -1472,6 +1472,7 @@ void do_memorize(P_char ch, char *argument, int cmd)
 
   circle = get_spell_circle(ch, spl);
 
+#if !defined(CHAOS_MUD) || (CHAOS_MUD != 1)
   if (circle > get_max_circle(ch))
   {
     if (!book_class(ch) || sbook)
@@ -1497,6 +1498,9 @@ void do_memorize(P_char ch, char *argument, int cmd)
     return;
   }
   else if( !SKILL_DATA_ALL(ch, spl).maxlearn[0] && !SKILL_DATA_ALL(ch, spl).maxlearn[ch->player.spec] )
+#else
+  if( !SKILL_DATA_ALL(ch, spl).maxlearn[0] && !SKILL_DATA_ALL(ch, spl).maxlearn[ch->player.spec] )
+#endif
   {
     send_to_char("That spell is beyond your comprehension.\n", ch);
     return;

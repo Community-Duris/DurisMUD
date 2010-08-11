@@ -598,6 +598,11 @@ void load_obj_to_newbies(P_char ch)
   CREATE_KIT(RACE_GNOME, CLASS_ETHERMANCER, ((int[])
                                              {
                                              706, 735, 731, 731, -1}));
+  
+  CREATE_KIT(RACE_GNOME, CLASS_THEURGIST, ((int[])
+                                             {
+                                             1112, 1114, 1115, 209, 614,
+                                             1131, -1}));
 
 /*END Gnome Classes*/
 
