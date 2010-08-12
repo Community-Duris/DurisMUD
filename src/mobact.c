@@ -6755,6 +6755,9 @@ P_char PickTarget(P_char ch)
       continue;
     }
     
+    if(has_innate(t_ch, INNATE_CALMING) && (number(0, 101) <= (get_property("innate.calming.notarget.perc", 75))))
+      continue;
+    
     if(a < MAX_TARGETS)
     {
       target_table[a] = CountToughness(ch, t_ch);
@@ -7954,7 +7957,9 @@ PROFILE_END(mundane_wallbreak);
 PROFILE_START(mundane_picktarget);
   if((GET_POS(ch) > POS_SITTING) && !IS_FIGHTING(ch) && !ALONE(ch) && (tmp_ch = PickTarget(ch)))
   {
-    add_event(event_agg_attack, 1, ch, tmp_ch, 0, 0, 0, 0);
+    add_event(event_agg_attack, 1 +
+	(has_innate(tmp_ch, INNATE_CALMING) ? (int)get_property("innate.calming.delay", 10) : 0),
+	  ch, tmp_ch, 0, 0, 0, 0);
 PROFILE_END(mundane_picktarget);
     goto normal;
   }
@@ -10306,7 +10311,9 @@ void event_agg_attack(P_char ch, P_char victim, P_obj obj, void *data)
         CAN_SEE(ch, victim))
       {
         do_move(ch, 0, exitnumb_to_cmd(door));
-        add_event(event_agg_attack, 1, ch, victim, 0, 0, 0, 0);
+        add_event(event_agg_attack, 1 +
+	    (has_innate(victim, INNATE_CALMING) ? (int)get_property("innate.calming.delay", 10) : 0),
+	    ch, victim, 0, 0, 0, 0);
         return;
       }
   }

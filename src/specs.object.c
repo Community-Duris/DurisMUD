@@ -8177,8 +8177,19 @@ int druid_spring(P_obj obj, P_char ch, int cmd, char *arg)
     {
       act("You drink from $p.", FALSE, ch, obj, 0, TO_CHAR);
       act("$n drinks from $p.", FALSE, ch, obj, 0, TO_ROOM);
-      spell_cure_serious(45, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-      spell_invigorate(10, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      
+      if (obj->value[0] >= 51)
+	spell_regeneration(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      if (obj->value[0] >= 41)
+	spell_endurance(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      
+      if (obj->value[0] >= 31)
+        spell_natures_touch(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      else
+        spell_cure_serious(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      
+      spell_invigorate(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      
       CharWait(ch, PULSE_VIOLENCE);
       return TRUE;
     }

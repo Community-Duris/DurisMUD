@@ -4706,6 +4706,10 @@ void attack(P_char ch, P_char victim)
       skl += GET_LEVEL(ch);
     }
 
+    if(has_innate(victim, INNATE_CALMING) && 
+        (number(0, 120) <= GET_LEVEL(victim) * 2))
+      skl -= (110 - GET_CHAR_SKILL(ch, SKILL_SWITCH_OPPONENTS));
+
     if(notch_skill(ch, SKILL_SWITCH_OPPONENTS,
         get_property("skill.notch.switch", 10)) ||
         skl >= number(1, 101))

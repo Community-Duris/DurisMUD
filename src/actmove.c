@@ -1216,7 +1216,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
   P_char   tch, t_ch;
   char     amsg[MAX_STRING_LENGTH];
   int      need_movement, was_in, new_room, count, i, cmd, cmd2, current, following;
-  int      deceptnum, noise_var;
+  int      deceptnum, noise_var, calming = 0;
   struct weather_data *cond;
   struct follow_type *k, *next_dude;
   P_char   mount, rider, moving;
@@ -1256,6 +1256,9 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
     send_to_char("You can't leave that way.\n", ch);
     return FALSE;
   }
+
+  if(has_innate(ch, INNATE_SWAMP_SNEAK))
+    calming = (int)get_property("innate.calming.delay", 10);
 
   if(!can_enter_room(ch, EXIT(ch, exitnumb)->to_room, TRUE))
     return FALSE;
@@ -1522,7 +1525,8 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
         }
         else if(!IS_AFFECTED(ch, AFF_SNEAK) &&
                 !UD_SNEAK(ch) &&
-                !OUTDOOR_SNEAK(ch))
+                !OUTDOOR_SNEAK(ch) &&
+		!SWAMP_SNEAK(ch))
         {
           act(amsg, TRUE, ch, ch->lobj?ch->lobj->Visible_Object():0, tch, TO_VICT | ACT_IGNORE_ZCOORD);
         }
@@ -1631,19 +1635,20 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
         if(is_aggr_to(tch, ch))
         {
           add_event(event_agg_attack,
-                    number(1, MAX(1, (19 - STAT_INDEX(GET_C_AGI(tch))) / 2)),
+                    number(1, MAX(1, (19 - STAT_INDEX(GET_C_AGI(tch))) / 2)) + calming,
                     tch, ch, 0, 0, 0, 0);
         }
         else if(is_aggr_to(tch, mount))        /* cackle   */
         {
           add_event(event_agg_attack,
-                    number(1, MAX(1, (19 - STAT_INDEX(GET_C_AGI(tch))) / 2)),
+                    number(1, MAX(1, (19 - STAT_INDEX(GET_C_AGI(tch))) / 2)) + calming,
                     tch, mount, 0, 0, 0, 0);
         }
       }
       else if(!IS_AFFECTED(ch, AFF_SNEAK) &&
              !UD_SNEAK(ch) &&
-             !OUTDOOR_SNEAK(ch))
+             !OUTDOOR_SNEAK(ch) &&
+	     !SWAMP_SNEAK(ch))
       {
         if(!(flags & MVFLG_NOMSG))
         {
@@ -1653,7 +1658,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
         if(is_aggr_to(tch, ch))
         {
           add_event(event_agg_attack,
-                    number(0, MAX(1, (22 - STAT_INDEX(GET_C_AGI(tch))) / 2)),
+                    number(0, MAX(1, (22 - STAT_INDEX(GET_C_AGI(tch))) / 2)) + calming,
                     tch, ch, 0, 0, 0, 0);
         }
       }
@@ -1668,7 +1673,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
           isname("_nosneak_", GET_NAME(tch)) &&
           is_aggr_to(tch, ch))
         {
-          add_event(event_agg_attack, 1, tch, ch, 0, 0, 0, 0);
+          add_event(event_agg_attack, 1 + (calming / 3), tch, ch, 0, 0, 0, 0);
         }
 
         else if(IS_TRUSTED(tch) ||
@@ -1685,7 +1690,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
           {
             add_event(event_agg_attack,
                       number(1,
-                             MAX(1, (25 - STAT_INDEX(GET_C_AGI(tch))) / 2)),
+                             MAX(1, (25 - STAT_INDEX(GET_C_AGI(tch))) / 2)) + calming,
                       tch, ch, 0, 0, 0, 0);
           }
         }
@@ -1698,7 +1703,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
                              MAX(PULSE_VIOLENCE,
                                  (PULSE_VIOLENCE + 10 -
                                   dex_app[STAT_INDEX(GET_C_DEX(tch))].
-                                  reaction))), tch, ch, 0, 0, 0, 0);
+                                  reaction))) + calming, tch, ch, 0, 0, 0, 0);
           }
         }
       }

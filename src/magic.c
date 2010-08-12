@@ -11236,6 +11236,7 @@ void spell_create_spring(int level, P_char ch, char *arg, int type,
     send_to_char("Tell someone to make a spring object ASAP!\n", ch);
     return;
   }
+  spring->value[0] = GET_LEVEL(ch);
   send_to_room("&+bA spring shoots up from the ground!\n", ch->in_room);
   set_obj_affected(spring, 60 * 10, TAG_OBJ_DECAY, 0);
   obj_to_room(spring, ch->in_room);

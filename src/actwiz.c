@@ -2021,7 +2021,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     if (j->anti2_flags)
     {
       *buf2 = '\0';
-      for (x = 0; x < 32; x++)
+      for (x = 0; x < RACE_PLAYER_MAX; x++)
         if (j->anti2_flags & (((unsigned long) 1) << x))
           sprintf(buf2 + strlen(buf2), "%s ",
                   race_names_table[x + 1].no_spaces);

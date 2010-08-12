@@ -151,6 +151,8 @@
 (has_innate(ch, INNATE_OUTDOOR_SNEAK) && \
  (world[(ch)->in_room].sector_type >= 2) && (world[(ch)->in_room].sector_type <= 4))
 #define UD_SNEAK(ch) (has_innate(ch, INNATE_UD_SNEAK) && IS_UNDERWORLD(ch->in_room))
+#define SWAMP_SNEAK(ch) (has_innate(ch, INNATE_SWAMP_SNEAK) && \
+ (world[(ch)->in_room].sector_type == SECT_SWAMP || world[(ch)->in_room].sector_type == SECT_UNDRWLD_MUSHROOM))
 
 #define GET_LANGUAGE(ch,d) ((ch)->only.pc->talks[(d)])
 #define GET_PASSWORD(d) ((d)->character->pc_only->pwd)
