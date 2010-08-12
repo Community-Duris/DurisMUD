@@ -3434,12 +3434,12 @@ int can_char_use_item(P_char ch, P_obj obj)
   
   if (!IS_SET(obj->extra_flags, ITEM_ALLOWED_RACES))
   {
-    if (GET_RACE(ch) <= 32 &&
+    if (GET_RACE(ch) <= RACE_PLAYER_MAX &&
         IS_SET(obj->anti2_flags, 1 << (GET_RACE(ch) - 1)))
       return FALSE;
   }
   else
-    if (GET_RACE(ch) > 32 ||
+    if (GET_RACE(ch) > RACE_PLAYER_MAX ||
         !IS_SET(obj->anti2_flags, 1 << (GET_RACE(ch) - 1)))
     return FALSE;
 
@@ -3490,12 +3490,12 @@ int can_prime_class_use_item(P_char ch, P_obj obj)
  	 
  	  if (!IS_SET(obj->extra_flags, ITEM_ALLOWED_RACES))
  	  {
- 	    if (GET_RACE(ch) <= 32 &&
+ 	    if (GET_RACE(ch) <= RACE_PLAYER_MAX &&
  	        IS_SET(obj->anti2_flags, 1 << (GET_RACE(ch) - 1)))
  	      return FALSE;
  	  }
  	  else
- 	    if (GET_RACE(ch) > 32 ||
+ 	    if (GET_RACE(ch) > RACE_PLAYER_MAX ||
 	        !IS_SET(obj->anti2_flags, 1 << (GET_RACE(ch) - 1)))
  	    return FALSE;
  	

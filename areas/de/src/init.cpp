@@ -46,7 +46,7 @@
 
 
 flagDef g_npc_class_bits[CLASS_COUNT + 1];
-flagDef g_race_names[32 + 1];
+flagDef g_race_names[RACE_PLAYER_MAX + 1];
 
 extern room **g_roomLookup;
 extern zone g_zoneRec;
@@ -81,7 +81,7 @@ void startInit(void)
 
   g_npc_class_bits[CLASS_COUNT].flagShort = 0;
 
-  for (uint i = 0; i < 32; i++) 
+  for (uint i = 0; i < RACE_PLAYER_MAX; i++) 
   {
     g_race_names[i].flagShort = race_names_table[i + 1].no_spaces;
     g_race_names[i].flagLong = race_names_table[i + 1].ansi;
@@ -89,7 +89,7 @@ void startInit(void)
     g_race_names[i].defVal = 0;
   }
 
-  g_race_names[32].flagShort = 0;
+  g_race_names[RACE_PLAYER_MAX].flagShort = 0;
   
  // make sure that key vnums specified for exits are valid (only checks
  // if the "check vnums to make sure they're valid" var is true)

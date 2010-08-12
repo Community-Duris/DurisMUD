@@ -35,7 +35,7 @@
 #  define FLAG_ACTIVE_STR   "&+W*"
 #endif
 
-#define MAX_FLAG_COLUMNS  50  // should be more than enough
+#define MAX_FLAG_COLUMNS  70  // should be more than enough
 
 #define HEADER_OFFSETY  3  // where onscreen columns should start
 
