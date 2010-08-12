@@ -2405,7 +2405,7 @@ void do_stat(P_char ch, char *argument, int cmd)
       strcpy(buf, "&+MILLEGAL-SEX!!&N");
       break;
     }
-
+	
     sprintf(buf1, "  &+YIn room [&N%d&+Y]", world[k->in_room].number);
     sprintf(buf2, "%s %s%s  ", buf,
             (IS_PC(k) ? "&+YPC" : (IS_PC(k) ? "&+RNPC" : "&+GMOB")),
@@ -2435,6 +2435,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     if (IS_NPC(k))
     {
       //sprintf(buf2, "&+Y+(&N%s&+Y)", comma_string((long) (GET_LEVEL(k) * GET_HIT(k) * .4)));
+      sprintf(buf2, "");
     }
     else
     {
