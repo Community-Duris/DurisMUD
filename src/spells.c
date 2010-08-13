@@ -2871,7 +2871,9 @@ void spell_mirage(int level, P_char ch, char *arg, int type, P_char victim, P_ob
 	       race != RACE_GITHZERAI &&
 	       race != RACE_AGATHINON &&
 	       race != RACE_THRIKREEN &&
-	       race != RACE_MINOTAUR);
+	       race != RACE_MINOTAUR &&
+	       race != RACE_FIRBOLG &&
+	       race != RACE_WOODELF);
       }
       else if (RACE_EVIL(gm))
       {
@@ -2888,7 +2890,10 @@ void spell_mirage(int level, P_char ch, char *arg, int type, P_char victim, P_ob
 	       race != RACE_OROG &&
 	       race != RACE_TROLL &&
 	       race != RACE_THRIKREEN &&
-	       race != RACE_MINOTAUR);
+	       race != RACE_MINOTAUR &&
+	       race != RACE_DRIDER &&
+	       race != RACE_PILLITHID &&
+	       race != RACE_KUOTOA);
       }
       else if (RACE_PUNDEAD(gm))
       {

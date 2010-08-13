@@ -250,6 +250,10 @@ void kick_messages(P_char ch, P_char victim, bool hit,
   case RACE_OROG:
   case RACE_GITHZERAI:
   case RACE_RAKSHASA:
+  case RACE_WOODELF:
+  case RACE_FIRBOLG:
+  case RACE_KOBOLD:
+  case RACE_KUOTOA:
     i = number(0, 3);
     break;
   case RACE_HERBIVORE:
