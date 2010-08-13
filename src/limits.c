@@ -1031,9 +1031,9 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     }
     
 // Do not provide exps for same side racewar damage.
-    if(IS_PC(ch) && IS_PC(victim) && !(pvp))
+    if(IS_PC(ch) && IS_PC(victim))
     {
-// debug("Not pvp damage exp gain returning 0", XP);
+// debug("Pvp damage exp returning 0", XP);
       return 0;
     }
 
