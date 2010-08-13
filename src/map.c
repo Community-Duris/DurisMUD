@@ -410,14 +410,17 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
       zw = who->specials.z_cord;
       z = ch->specials.z_cord;
 	  
-      if(GET_ALT_SIZE(who) <= SIZE_MEDIUM)
-      {
-        if(IS_AFFECTED3(who, AFF3_PASS_WITHOUT_TRACE) && SECTOR_TYPE(who->in_room) == SECT_FOREST)
+     // if(GET_ALT_SIZE(who) <= SIZE_MEDIUM)
+     // {
+        if(!IS_TRUSTED(ch) && IS_AFFECTED3(who, AFF3_PASS_WITHOUT_TRACE) && SECTOR_TYPE(who->in_room) == SECT_FOREST)
           continue;
         
-        if(affected_by_spell(who, SKILL_EXPEDITIOUS_RETREAT))
+        if(!IS_TRUSTED(ch) && affected_by_spell(who, SKILL_EXPEDITIOUS_RETREAT))
           continue;
-      }
+     
+        if(!IS_TRUSTED(ch) && has_innate(who, INNATE_SWAMP_SNEAK) && SWAMP_SNEAK_TERRAIN(who))
+	  continue;
+      // }
       
       if(GET_SPEC(who, CLASS_ROGUE, SPEC_THIEF) &&
         IS_AFFECTED(who, AFF_SNEAK) &&
