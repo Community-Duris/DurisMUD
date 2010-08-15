@@ -978,7 +978,8 @@ int suggestQuestMob(int zone_num, P_char ch, int QUEST_TYPE)
 
             if(aggressive_to(t_mob, ch) &&
                KIND_OF_QUEST == FIND_AND_ASK || 
-               !CAN_SPEAK(t_mob) && KIND_OF_QUEST == FIND_AND_ASK)
+               !CAN_SPEAK(t_mob) && KIND_OF_QUEST == FIND_AND_ASK ||
+               isname("_noquest_", t_mob->player.name))
             {
               //dont suggest aggresive ask mobs..nor not humanoids
               ;
