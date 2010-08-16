@@ -1073,7 +1073,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     if(IS_NPC(victim))
       return 0;
 
-    if (grouped(victim, ch)) // only for healing groupies
+    if (victim != ch && !grouped(victim, ch)) // only for healing self and groupies
         return 0;
 
     P_char attacker = GET_OPPONENT(victim);
