@@ -3571,8 +3571,9 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     {
       if (IS_SET(obj_object->extra_flags, ITEM_WHOLE_BODY))
       {
-        if (IS_CENTAUR(ch) || IS_MINOTAUR(ch) || IS_OGRE(ch) || IS_SGIANT(ch) ||
-                   GET_RACE(ch) == RACE_WIGHT || GET_RACE(ch) == RACE_SNOW_OGRE)
+        if (IS_CENTAUR(ch) || IS_DRIDER(ch) || IS_MINOTAUR(ch) || 
+	    IS_OGRE(ch) || IS_SGIANT(ch) ||
+            GET_RACE(ch) == RACE_WIGHT || GET_RACE(ch) == RACE_SNOW_OGRE)
         {
           if (showit)
             send_to_char("You can't wear full body armor.\r\n", ch);
@@ -3737,7 +3738,8 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
 
   case 6:
     if (CAN_WEAR(obj_object, ITEM_WEAR_FEET) 
-        && (!IS_CENTAUR(ch) || !IS_DRIDER(ch) || !strcmp(obj_object->name, "horseshoe")) 
+        && !(IS_CENTAUR(ch) && !strcmp(obj_object->name, "horseshoe"))
+	&& !IS_DRIDER(ch)
         && !IS_THRIKREEN(ch) && !IS_HARPY(ch) && !IS_MINOTAUR(ch))
     {
       if (ch->equipment[WEAR_FEET])
