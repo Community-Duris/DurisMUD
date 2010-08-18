@@ -5785,14 +5785,10 @@ int chance_to_hit(P_char ch, P_char victim, int skill, P_obj weapon)
   }
 
   if(IS_UNDEADRACE(ch) &&
-    !IS_UNDEADRACE(victim))
+    !IS_UNDEADRACE(victim)&& 
+    IS_AFFECTED5(victim, AFF5_PROT_UNDEAD))
   {
-    for (af = victim->affected; af; af = af->next)
-      if (af->type == SPELL_PROT_FROM_UNDEAD)
-      {
-        to_hit -= af->modifier;
-        break;
-      }
+    to_hit -= af->modifier;
   }
 
   if(!CAN_SEE(ch, victim))

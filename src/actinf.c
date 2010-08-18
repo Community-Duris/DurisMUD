@@ -4555,7 +4555,7 @@ void do_score(P_char ch, char *argument, int cmd)
       strcat(buf, " &+GGas&n");
     if (IS_AFFECTED2(ch, AFF2_PROT_ACID))
       strcat(buf, " &+GA&+gc&+Gi&+gd&n");
-    if (affected_by_spell(ch, SPELL_PROT_FROM_UNDEAD))
+    if (IS_AFFECTED5(ch, AFF5_PROT_UNDEAD))
       strcat(buf, " &+LU&+Wn&+Ld&+We&+La&+Wd&n");
     if (IS_AFFECTED4(ch, AFF4_PROT_LIVING))
       strcat(buf, " &+WLiving&n");
