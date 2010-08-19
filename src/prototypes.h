@@ -1667,7 +1667,7 @@ P_char pick_target(P_char, unsigned int);
 int dummy_function(P_char, P_char, int, char*);
 int babau_combat(P_char, P_char, int, char*);
 int summon_new_demon(P_char, int);
-
+bool should_teacher_move(P_char);
 
 /* mobconv.c */
 
