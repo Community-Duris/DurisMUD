@@ -699,7 +699,7 @@ P_ship try_load_npc_ship(P_ship target)
     {
         if(IS_SET(target->flags, ATTACKBYNPC)) 
             return 0;
-        if (n < 300)
+        if (n < 250)
         {
             level = 0;
         }

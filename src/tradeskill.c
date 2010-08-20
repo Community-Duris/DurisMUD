@@ -524,46 +524,46 @@ int remove_mine_content(P_obj mine)
 
 int random_ore(int mine_quality)
 {
-  int x = number(1, 100) + mine_quality;
+  int x = number(1, 99 + mine_quality * 9);
     
-  if(x >= 102)
+  if(x >= 98 + mine_quality * 8)
     return LARGE_MITHRIL_ORE;
-  if(x >= 100) 
+  if(x >= 96 + mine_quality * 7) 
     return MEDIUM_MITHRIL_ORE;	
-  if(x >= 98)
+  if(x >= 94 + mine_quality * 6)
     return SMALL_MITHRIL_ORE;
 
-  if(x >= 96)
+  if(x >= 91 + mine_quality * 5)
     return LARGE_PLATINUM_ORE; 
-  if(x >= 94)
+  if(x >= 88 + mine_quality * 4)
     return MEDIUM_PLATINUM_ORE; 
-  if(x >= 92)
+  if(x >= 85 + mine_quality * 3)
     return SMALL_PLATINUM_ORE;
 
-  if(x >= 90)
+  if(x >= 81 + mine_quality * 2)
     return LARGE_GOLD_ORE;
-  if(x >= 88)
+  if(x >= 77 + mine_quality * 1)
     return MEDIUM_GOLD_ORE;
-  if(x >= 85)
+  if(x >= 73 + mine_quality * 0)
     return SMALL_GOLD_ORE;
 
-  if(x >= 80)
+  if(x >= 66)
     return LARGE_SILVER_ORE;
-  if(x >= 75)
+  if(x >= 59)
     return MEDIUM_SILVER_ORE;
-  if(x >= 65)
+  if(x >= 52)
     return SMALL_SILVER_ORE;
 
-  if(x >= 52)
-    return LARGE_COPPER_ORE;
   if(x >= 44)
-    return MEDIUM_COPPER_ORE;
+    return LARGE_COPPER_ORE;
   if(x >= 36)
+    return MEDIUM_COPPER_ORE;
+  if(x >= 28)
     return SMALL_COPPER_ORE;
 
-  if(x >= 25)
+  if(x >= 19)
     return LARGE_IRON_ORE;
-  if(x >= 14)
+  if(x >= 10)
     return MEDIUM_IRON_ORE;
 
   return SMALL_IRON_ORE;
@@ -978,52 +978,28 @@ bool load_one_mine(int map)
   
   int random = number(0,99);
   
-  if( random < 1 )
+  if( random < 3 )
   {
-    mine->value[0] = number( 8, 12);
-    mine->value[1] = number(25, 35);
-    mine->description = str_dup("&+LThe &+yearth &+Lhere is &+cbr&+Lim&+Cm&+Ling with &+Yore&+L - it's the &+GMother &+LLode!&n");
-  }
-  else if( random < 3 )
-  {
-    mine->value[0] = number( 5,  10);
-    mine->value[1] = number(35, 50);
+    mine->value[0] = number(20, 30);
+    mine->value[1] = 3;
     mine->description = str_dup("&+LThe &+yearth &+Lhere is &+cbr&+Lim&+Cm&+Ling with &+Yore&+L - it's the &+GMother &+LLode!&n");
   }  
-  else if( random < 11 )
-  {
-    mine->value[0] = number( 5, 10);
-    mine->value[1] = number(10, 17);
-    mine->description = str_dup("&+LThe &+yearth&+L here is &+cst&+Lrea&+ck&+Led &+Lwith &+core&+L.&n");
-  }
   else if( random < 20 )
   {
-    mine->value[0] = number( 8, 12);
-    mine->value[1] = number(15, 20);
+    mine->value[0] = number(10, 15);
+    mine->value[1] = 2;
     mine->description = str_dup("&+LThe &+yearth&+L here is &+cst&+Lrea&+ck&+Led &+Lwith &+core&+L.&n");
-  }  
-  else if( random < 35 )
+  }
+  else if( random < 60 )
   {
     mine->value[0] = number( 8, 12);
-    mine->value[1] = number( 5, 12);
+    mine->value[1] = 1;
     mine->description = str_dup("&+LA few chunks of &+Yore &+Lpoke out of the ground here.&n");
   }
-  else if( random < 50 )
-  {
-    mine->value[0] = number( 5, 10);
-    mine->value[1] = number(10, 18);
-    mine->description = str_dup("&+LA few chunks of &+Yore &+Lpoke out of the ground here.&n");
-  }  
-  else if( random < 75 )
-  {
-    mine->value[0] = number(10, 15);
-    mine->value[1] = number( 1, 8);
-    mine->description = str_dup("&+LA few glimmers &+Ws&+wpa&+Wrk&+wle&+L in the &+yearth &+Lhere.&n");
-  }  
   else
   {
     mine->value[0] = number( 5, 10);
-    mine->value[1] = number( 5, 10);
+    mine->value[1] = 0;
     mine->description = str_dup("&+LA few glimmers &+Ws&+wpa&+Wrk&+wle&+L in the &+yearth &+Lhere.&n");
   }
   

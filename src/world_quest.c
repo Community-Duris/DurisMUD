@@ -655,7 +655,7 @@ int createQuest(P_char ch, P_char giver)
  
     for (int m = 0; m < 3; m++)
     {
-      QUEST_TYPE = number(1,2);
+      QUEST_TYPE = number(2,4) / 2;
       if(GET_LEVEL(ch) > 49)
         QUEST_TYPE = FIND_AND_KILL;
 

@@ -839,7 +839,7 @@ float gain_exp_modifiers(P_char ch, P_char victim, float XP)
     // Aggro mobs yield more exp
     if (aggressive_to_basic(victim, ch))
     {
-      XP = XP * get_property("gain.exp.mod.victim.act.aggro", 1.50);
+      XP = XP * get_property("gain.exp.mod.victim.act.aggro", 1.25);
     }
     
     // Careful with the breath modifier since many greater race mobs have a breathe weapon.
