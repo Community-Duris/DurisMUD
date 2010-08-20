@@ -886,6 +886,8 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_BRALANI(ch) (GET_RACE(ch) == RACE_BRALANI)
 
+#define IS_KOBOLD(ch) (GET_RACE(ch) == RACE_KOBOLD)
+
 #define HAS_FOUR_HANDS(ch) ((GET_RACE(ch) == RACE_THRIKREEN) || \
                            (IS_AFFECTED3((ch), AFF3_FOUR_ARMS)))
 

@@ -4524,7 +4524,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     break;
 
   case 23:
-    if (IS_CENTAUR(ch) || IS_MINOTAUR(ch) || IS_PSBEAST(ch))
+    if (IS_CENTAUR(ch) || IS_MINOTAUR(ch) || IS_PSBEAST(ch) || IS_KOBOLD(ch))
     {
       if (CAN_WEAR(obj_object, ITEM_WEAR_TAIL))
       {
