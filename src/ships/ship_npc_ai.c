@@ -436,13 +436,13 @@ bool NPCShipAI::find_new_target()
 {
     for (int i = 0; i < contacts_count; i++) 
     {
-        if (ship == npc_dreadnought)
-        { // chance to ignore if not too close
+        if (ship == npc_dreadnought && ship->timer[T_BSTATION] == 0 && !ISNPCSHIP(contacts[i].ship))
+        { // chance to ignore player's if not too close
             if (contacts[i].range > 30)
                 continue;
             if (contacts[i].range > 10 
                 && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT ||
-                number(0, (int)contacts[i].range * 2) > 0))
+                number(0, (int)contacts[i].range * 4) > 0))
             {
                 continue;
             }
@@ -480,6 +480,9 @@ bool NPCShipAI::is_valid_target(P_ship tar)
     if (SHIPSINKING(tar))
         return false;
     if (tar == ship->target)
+        return true;
+
+    if (ship == npc_dreadnought) // Revenge attacks everything
         return true;
     return (tar->race == GOODIESHIP || tar->race == EVILSHIP);
 }
