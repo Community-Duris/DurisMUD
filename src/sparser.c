@@ -2228,12 +2228,21 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
-  if(IS_HEADLOCK(ch) ||
-     IS_IMMOBILE(ch))
+  if (GET_CLASS(ch, CLASS_PSIONICIST))
+  {
+    if (IS_HEADLOCK(ch) || IS_AFFECTED(ch, AFF_KNOCKED_OUT) || affected_by_spell(ch, SONG_SLEEP) || affected_by_spell(ch, SPELL_SLEEP))
+    {
+      StopCasting(ch);
+      return;
+    }
+  }
+  else if(IS_HEADLOCK(ch) || IS_IMMOBILE(ch))
   {
     StopCasting(ch);
     return;
   }
+
+
 
   tar_obj = arg->object;
   tar_char = victim;
