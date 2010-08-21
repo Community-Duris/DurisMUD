@@ -659,8 +659,9 @@
 #define SPELL_AID_OF_THE_HEAVENS     610
 #define SPELL_VOICE_OF_CREATION      611
 #define SPELL_PYROKINESIS            612
+#define SPELL_OBTENEBRATION          613
 
-#define LAST_SPELL  SPELL_PYROKINESIS
+#define LAST_SPELL  SPELL_OBTENEBRATION
 
 #define FIRST_SKILL                  1000  /* should be a decent split point */
 #define SKILL_SNEAK                  1000

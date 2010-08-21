@@ -367,6 +367,8 @@ const struct innate_data
   {"spider body", 0},
   {"swamp sneak", 0},
   {"calming", 0},
+  {"longsword master", 0},
+  {"melee mastery", 0}
 };
 
 bool has_innate(P_char ch, int innate)
