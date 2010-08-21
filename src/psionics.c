@@ -3580,12 +3580,12 @@ void spell_pyrokinesis(int level, P_char ch, char *arg, int type, P_char victim,
   char     buf[256];
   struct affected_type af;
   struct damage_messages messages = {
-    "&+mYou ignite a &+rpersonal &+ri&+Rn&+rf&+Re&+rr&+Rn&+ro &+mwithin $N's body.",
+    "&+mYou ignite a &+rpersonal &+ri&+Rn&+rf&+Re&+rr&+Rn&+ro &+mwithin &N$N's &+mbody.",
     "&+mYou scream in &+Wa&+wg&+Wo&+wn&+Wy &+mas &+rs&+Rea&+rri&+Rng &+rh&+Re&+Ra&+rt &+wi&+rg&+wn&+wi&+rt&+we&+rs and &+rb&+Rur&+Ws&+wt&+Rs &+Ri&+Wn&+wt&+Ro f&+Wl&+wa&+Wm&+Re&+Rs &+mwithin your body.",
-    "&+m$N screams and doubles over in &+Wa&+wg&+Wo&+wn&+Wy &+mas &+rs&+Rea&+rri&+Rng &+rh&+Re&+Ra&+rt &+ri&+Rg&+wn&+Wit&+we&+Rs &+mwithin $S body.",
-    "&+mYou set $N's whole body &+Rab&+wl&+Wa&+wz&+Re&+m, leaving nothing but &+Lscorched &+mremains.",
+    "&N$N &+mscreams and doubles over in &+Wa&+wg&+Wo&+wn&+Wy &+mas &+rs&+Rea&+rri&+Rng &+rh&+Re&+Ra&+rt &+ri&+Rg&+wn&+Wit&+we&+Rs &+mwithin $S body.",
+    "&+mYou set &N$N's &+mwhole body &+Rab&+wl&+Wa&+wz&+Re&+m, leaving nothing but &+Lscorched &+mremains.",
     "&+RBl&+wa&+Wz&+wi&+Rn&+rg i&+Rn&+rf&+Re&+rr&+Rn&+ro &+mgrows from within and &+Lscorches &+myour whole body dead.",
-    "&+RRa&+rgi&+Rng &+rf&+Rla&+rme&+Rs &+Wb&+wu&+Wr&+ws&+Wt &+mfrom within and &+We&+wn&+Wg&+wu&+Wl&+wf &+m$N's whole body, leaving nothing but &+Lscorched &+mremains.", 0
+    "&+RRa&+rgi&+Rng &+rf&+Rla&+rme&+Rs &+Wb&+wu&+Wr&+ws&+Wt &+mfrom within and &+We&+wn&+Wg&+wu&+Wl&+wf &N$N's &+mwhole body, leaving nothing but &+Lscorched &+mremains.", 0
   };
 
   
