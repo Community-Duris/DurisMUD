@@ -174,6 +174,11 @@ int order_maneuver(P_char ch, P_ship ship, char* arg)
         send_to_char("Might want to undock first.\r\n", ch);
         return TRUE;
     }
+    if (SHIPISFLYING(ship)) 
+    {
+        send_to_char("Land your ship before maneuvering it.\r\n", ch);
+        return TRUE;
+    }
     if (SHIPIMMOBILE(ship)) 
     {
         send_to_char("You're immobile, you can't maneuver!\r\n", ch);
@@ -533,6 +538,43 @@ int order_signal(P_char ch, P_ship ship, char* arg1, char* arg2)
     return TRUE;
 }
 
+int order_fly(P_char ch, P_ship ship)
+{
+    int levi_slot = eq_levistone_slot(ship);
+    if (!IS_SET(ship->flags, AIR) && levi_slot == -1)
+    {
+        send_to_char("Flying ship... Thats a nice dream, isn't it?\r\n", ch); 
+        return TRUE; 
+    }
+    if(!IS_MAP_ROOM(ship->location)) 
+    {
+        send_to_char("Your ship must be outside to fly.\r\n", ch); 
+        return TRUE; 
+    }
+    if (SHIPISFLYING(ship))
+    {
+        send_to_char("Your ship is already floating in air.\r\n", ch); 
+        return TRUE; 
+    }
+    if (!IS_SET(ship->flags, AIR) && ship->slot[levi_slot].timer > 0 && !IS_TRUSTED(ch))
+    {
+        send_to_char("Your Levistone is still recharging.\r\n", ch); 
+        return TRUE; 
+    }
+    fly_ship(ship);
+    return TRUE;
+}
+int order_land(P_char ch, P_ship ship)
+{
+    if (!SHIPISFLYING(ship))
+    {
+        send_to_char("Your ship is not flying or anything.\r\n", ch); 
+        return TRUE;
+    }
+    land_ship(ship);
+    return TRUE;
+}
+
 int do_scan(P_char ch, P_ship ship, char* arg)
 {
     if(!IS_MAP_ROOM(ship->location)) 
@@ -698,7 +740,6 @@ int do_fire (P_char ch, P_ship ship, char* arg)
                 send_to_char("Failed to load pirate ship!\r\n", ch);
                 return true;
             }
-
         }
         if (isname(arg1, "hunter")) 
         {
@@ -723,7 +764,6 @@ int do_fire (P_char ch, P_ship ship, char* arg)
                 send_to_char("Failed to load escort ship!\r\n", ch);
                 return true;
             }
-
         }
     }
     
@@ -988,12 +1028,6 @@ int look_tactical_map(P_char ch, P_ship ship, char* arg1, char* arg2)
     int      x, y;
     float    shiprange;
 
-    if( !IS_MAP_ROOM(ship->location) )
-    {
-        send_to_char("You have no maps for this region.\r\n", ch);
-        return TRUE;
-    }
-
     if(SHIPISDOCKED(ship)) 
     { 
         send_to_char("You must be undocked to look tactical.\r\n", ch); 
@@ -1032,7 +1066,13 @@ int look_tactical_map(P_char ch, P_ship ship, char* arg1, char* arg2)
             return TRUE;
         }
     }
-    getmap(ship);
+
+    if (!getmap(ship))
+    {
+        send_to_char("You have no maps for this region.\r\n", ch);
+        return TRUE;
+    }
+
     send_to_char_f(ch,
             "&+W     %-3d   %-3d   %-3d   %-3d   %-3d   %-3d   %-3d   %-3d   %-3d   %-3d   %-3d   %-3d&N\r\n",
             x - 11, x - 9, x - 7, x - 5, x - 3, x - 1, x + 1, x + 3, x + 5,
@@ -1187,6 +1227,11 @@ char* generate_slot(P_ship ship, int sl)
           sprintf(slot_desc, "&+W[%2d] %-20s &+W%-9s   &+L**    %s", sl,
               ship->slot[sl].get_description(), ship->slot[sl].get_position_str(), ship->slot[sl].get_status_str());
       }
+  }
+  else if (ship->slot[sl].type == SLOT_EQUIPMENT)
+  {
+      sprintf(slot_desc, "&+W[%2d] %-20s                   %s", sl, 
+          ship->slot[sl].get_description(), ship->slot[sl].get_status_str());
   }
   else
   {
@@ -1347,6 +1392,7 @@ int ship_panel_proc(P_obj obj, P_char ch, int cmd, char *arg)
               isname(arg1, "ram") ||
               isname(arg1, "heading") || isname(arg1, "h") ||
               isname(arg1, "speed") || isname(arg1, "s") ||
+              isname(arg1, "fly") || isname(arg1, "land") ||
               isname(arg1, "signal")))
         {
             do_order(ch, arg, cmd);
@@ -1430,6 +1476,16 @@ int ship_panel_proc(P_obj obj, P_char ch, int cmd, char *arg)
         if (isname(arg1, "signal")) 
         {
             return order_signal(ch, ship, arg2, arg3);
+        }
+
+        if (isname(arg1, "fly")) 
+        {
+            return order_fly(ch, ship);
+        }
+
+        if (isname(arg1, "land")) 
+        {
+            return order_land(ch, ship);
         }
 
         return FALSE;

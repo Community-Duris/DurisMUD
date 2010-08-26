@@ -224,6 +224,43 @@ int list_weapons(P_char ch, P_ship ship, int owned)
     return TRUE;
 }
 
+int list_equipment(P_char ch, P_ship ship, int owned)
+{
+    if (!owned)
+    {
+        send_to_char("You do not own a ship!\r\n", ch);
+        return TRUE;
+    }
+
+    send_to_char("&+gEqiupment\r\n", ch);
+    send_to_char("&+y===============================================\r\n", ch);
+    send_to_char("    Name                  Weight  Cost            \r\n", ch);
+    send_to_char("                                                  \r\n", ch);
+    send_to_char("&+W-----------------------------------------------\r\n", ch);
+    for (int i = 0; i < MAXEQUIPMENT; i++) 
+    {
+        int weight = equipment_data[i].weight;
+        if (i == E_RAM) weight = eq_ram_weight(ship);
+        if (i == E_LEVISTONE) weight = eq_levistone_weight(ship);
+
+        int cost = equipment_data[i].cost;
+        if (i == E_RAM) cost = eq_ram_cost(ship);
+
+        send_to_char_f(ch,  "%2d) %s%-20s      &+Y%2d  &n%10s&n\r\n",
+          i + 1, 
+          ship_allowed_equipment[ship->m_class][i] && (ship->frags >= equipment_data[i].min_frags) ? "&+W" : "&+L", 
+          equipment_data[i].name,
+          weight,
+          coin_stringv(cost));
+    }
+
+    send_to_char("\r\nTo buy an equipment, type 'buy equipment <number>'\r\n", ch);
+    send_to_char("To sell an equipment, type 'sell <slot number>'\r\n", ch);
+    send_to_char("\r\n", ch);
+    
+    return TRUE;
+}
+
 int list_hulls (P_char ch, P_ship ship, int owned)
 {
     if (owned)
@@ -570,6 +607,19 @@ int sell_slot (P_char ch, P_ship ship, int slot)
             cost = (int) (weapon_data[ship->slot[slot].index].cost * .1);
         else
             cost = (int) (weapon_data[ship->slot[slot].index].cost * .9);
+
+        ADD_MONEY(ch, cost);
+        send_to_char_f(ch, "Here's %s for that %s.\r\n", coin_stringv(cost), ship->slot[slot].get_description());
+        ship->slot[slot].clear();
+        update_ship_status(ship);
+        write_ship(ship);
+        return TRUE;
+    } 
+    else if (ship->slot[slot].type == SLOT_EQUIPMENT) 
+    {
+        int cost = equipment_data[ship->slot[slot].index].cost;
+        if (ship->slot[slot].index == E_RAM) cost = eq_ram_cost(ship);
+        cost = cost * 0.9;
 
         ADD_MONEY(ch, cost);
         send_to_char_f(ch, "Here's %s for that %s.\r\n", coin_stringv(cost), ship->slot[slot].get_description());
@@ -1397,7 +1447,7 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
     }
     if (!ship_allowed_weapons[ship->m_class][w])
     {
-        send_to_char_f(ch, "This weapon can not be installed on this hull!\r\n");
+        send_to_char_f(ch, "Such weapon can not be installed on this hull!\r\n");
         return TRUE;
     }
 
@@ -1434,7 +1484,7 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
         send_to_char_f(ch, "Your can not put more weight to this side! Maximum allowed: %d\r\n", ship_arc_properties[ship->m_class].max_weapon_weight[arc]);
         return TRUE;
     }
-
+    
     if (!IS_SET(weapon_data[w].flags, arcbitmap[arc])) 
     {
         send_to_char ("That weapon cannot be placed in that position, try another one.\r\n", ch);
@@ -1451,10 +1501,11 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
     {
         for (int j = 0; j < MAXSLOTS; j++) 
         {
-            if (IS_SET(weapon_data[ship->slot[j].index].flags, CAPITOL) && (ship->slot[j].type == SLOT_WEAPON)) 
+            if (((ship->slot[j].type == SLOT_WEAPON) && IS_SET(weapon_data[ship->slot[j].index].flags, CAPITOL)) ||
+                ((ship->slot[j].type == SLOT_EQUIPMENT) && IS_SET(equipment_data[ship->slot[j].index].flags, CAPITOL))) 
             {
-                  send_to_char ("You already have a capitol weapon! You can only have one.\r\n", ch);
-                  return TRUE;
+                send_to_char ("You already have a capitol equipment! You can only have one.\r\n", ch);
+                return TRUE;
             }
         }
     }
@@ -1469,6 +1520,88 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
     SUB_MONEY(ch, cost, 0);
     set_weapon(ship, slot, w, arc);
     int buildtime = weapon_data[w].weight * 75;
+    send_to_char_f(ch, "Thank you for your purchase, it will take %d hours to install the part.\r\n", (int) (buildtime / 75));
+    if (!IS_TRUSTED(ch) && BUILDTIME)
+        ship->timer[T_MAINTENANCE] += buildtime;
+    update_ship_status(ship);
+    write_ship(ship);
+    return TRUE;
+}
+
+int buy_equipment(P_char ch, P_ship ship, char* arg1)
+{
+    if (!is_number(arg1)) 
+    {
+        send_to_char ("Valid syntax is 'buy equipment <number>'\r\n", ch);
+        return TRUE;
+    }
+    
+    int e = atoi(arg1) - 1;
+    if ((e < 0) || (e >= MAXEQUIPMENT)) 
+    {
+        send_to_char ("Invalid equipment number.  Valid syntax is 'buy equipment <number>'\r\n", ch);
+        return TRUE;
+    }
+
+    if (equipment_data[e].weight > SHIPAVAILWEIGHT(ship) ) 
+    {
+        send_to_char_f(ch, "That equipment weighs %d! Your ship can only support %d!\r\n", equipment_data[e].weight, SHIPMAXWEIGHT(ship));
+        return TRUE;
+    }
+    if (!ship_allowed_equipment[ship->m_class][e])
+    {
+        send_to_char_f(ch, "Such equipment can not be installed on this hull!\r\n");
+        return TRUE;
+    }
+
+    int slot = 0;
+    while (slot < MAXSLOTS) 
+    {
+        if (ship->slot[slot].type == SLOT_EMPTY)
+            break;
+        slot++;
+    }
+    if (slot >= MAXSLOTS) 
+    {
+        send_to_char("You do not have a free slot to intall this equipment!\r\n", ch);
+        return TRUE;
+    }
+
+    if (ship->frags < equipment_data[e].min_frags)
+    {
+        send_to_char ("I'm sorry, but not just anyone can buy this equipment!  You must earn it!\r\n", ch);
+        return TRUE;
+    }
+
+    if (IS_SET(equipment_data[e].flags, CAPITOL)) 
+    {
+        for (int j = 0; j < MAXSLOTS; j++) 
+        {
+            if (((ship->slot[j].type == SLOT_WEAPON) && IS_SET(weapon_data[ship->slot[j].index].flags, CAPITOL)) ||
+                ((ship->slot[j].type == SLOT_EQUIPMENT) && IS_SET(equipment_data[ship->slot[j].index].flags, CAPITOL))) 
+            {
+                send_to_char ("You already have a capitol equipment! You can only have one.\r\n", ch);
+                return TRUE;
+            }
+        }
+    }
+
+    int cost = equipment_data[e].cost;
+    if (e == E_RAM) cost = eq_ram_cost(ship);
+
+    if (GET_MONEY(ch) < cost) 
+    {
+        send_to_char_f(ch, "This equipment costs %s!\r\n", coin_stringv(cost));
+        return TRUE;
+    }
+
+    SUB_MONEY(ch, cost, 0);
+    set_equipment(ship, slot, e);
+    
+    int weight = equipment_data[e].weight;
+    if (e == E_RAM) weight = eq_ram_weight(ship);
+    if (e == E_LEVISTONE) weight = eq_levistone_weight(ship);
+    int buildtime = equipment_data[e].weight * 75;
     send_to_char_f(ch, "Thank you for your purchase, it will take %d hours to install the part.\r\n", (int) (buildtime / 75));
     if (!IS_TRUSTED(ch) && BUILDTIME)
         ship->timer[T_MAINTENANCE] += buildtime;
@@ -1741,16 +1874,20 @@ int ship_shop_proc(int room, P_char ch, int cmd, char *arg)
             {
                 return list_cargo(ch, ship, owned);
             }
-            else if (isname(arg1, "weapon") || isname(arg1, "weapons")) 
+            else if (isname(arg1, "weapon") || isname(arg1, "weapons") || isname(arg1, "w")) 
             {
                 return list_weapons(ch, ship, owned);
             }
-            else if (isname(arg1, "hull") || isname(arg1, "hulls")) 
+            else if (isname(arg1, "equipment") || isname(arg1, "e")) 
+            {
+                return list_equipment(ch, ship, owned);
+            }
+            else if (isname(arg1, "hull") || isname(arg1, "hulls") || isname(arg1, "h")) 
             {
                 return list_hulls(ch, ship, owned);
             }
         }
-        send_to_char("Valid syntax is 'list <hull/weapon/cargo>'\r\n", ch);
+        send_to_char("Valid syntax is '&+glist <&+Gh&+gull/&+Gw&+geapon/&+Ge&+gquipment/cargo>'\r\n", ch);
         return TRUE;
     }
     if (cmd == CMD_SUMMON) 
@@ -1918,6 +2055,15 @@ int ship_shop_proc(int room, P_char ch, int cmd, char *arg)
             half_chop(arg2, arg1, arg3);
             return buy_weapon(ch, ship, arg1, arg3);
         }
+        else if (isname(arg1, "equipment") || isname(arg1, "e")) 
+        {
+            if (!owned) 
+            {
+                send_to_char("You have no ship to equip!\r\n", ch);
+                return TRUE;
+            }
+            return buy_equipment(ch, ship, arg2);
+        }
         else if (isname(arg1, "hull") || isname(arg1, "h")) 
         {
             if (owned && ship->timer[T_MAINTENANCE] > 0)
@@ -1930,7 +2076,7 @@ int ship_shop_proc(int room, P_char ch, int cmd, char *arg)
         } 
         else
         {
-            send_to_char ("Valid syntax: 'buy hull/cargo/contraband/weapon/rename/swap>'.\r\n", ch);
+            send_to_char ("Valid syntax: '&+gbuy &+Gh&+gull/cargo/contraband/&+Gw&+geapon/&+Ge&+gquipment/rename/swap>'.\r\n", ch);
             return TRUE;
         }
     }

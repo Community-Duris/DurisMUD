@@ -565,8 +565,8 @@ void setup_npc_frigate_02(P_ship ship, NPC_AI_Type type) // level 3
 
 void setup_npc_dreadnought_01(P_ship ship, NPC_AI_Type type) // level 4
 {
-    set_weapon(ship, 0, W_LONGTOM, SIDE_FORE);
-    set_weapon(ship, 1, W_FRAG_CAN, SIDE_FORE);
+    set_weapon(ship, 0, W_FRAG_CAN, SIDE_FORE);
+    set_weapon(ship, 1, W_LARGE_CAT, SIDE_FORE);
     set_weapon(ship, 2, W_LARGE_CAT, SIDE_FORE);
     set_weapon(ship, 3, W_LARGE_BAL, SIDE_STAR);
     set_weapon(ship, 4, W_HEAVY_BAL, SIDE_STAR);
@@ -749,7 +749,8 @@ P_ship try_load_npc_ship(P_ship target)
 
 P_ship try_load_npc_ship(P_ship target, NPC_AI_Type type, int level, P_char ch)
 {
-    getmap(target);
+    if (!getmap(target))
+        return 0;
 
     float dir = target->heading + number(-45, 45);
     normalize_direction(dir);
@@ -911,6 +912,8 @@ bool load_npc_dreadnought()
             name_ship(dreadnoughtShipNames[name_index], npc_dreadnought);
             npc_dreadnought->npc_ai->advanced = 1;
             npc_dreadnought->npc_ai->permanent = true;
+            SET_BIT(npc_dreadnought->flags, AIR);
+            SET_BIT(npc_dreadnought->flags, FLYING);
             return true;
         }
     }

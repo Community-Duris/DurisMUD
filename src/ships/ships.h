@@ -20,7 +20,7 @@
 #define T_RAM_WEAPONS     6
 #define T_MAINTENANCE     7
 #define T_MINDBLAST       8
-#define MAXTIMERS         9
+#define MAXTIMERS        10
 
 #define MAXSHIPS        2000
 #define MAX_SHIP_ROOM     10
@@ -31,7 +31,6 @@
 #define BSTATION         180
 
 #define MAXSLOTS          16
-#define MAXWEAPON         12
 #define NUM_PORTS          9
 #define MAXSAIL          250
 #define BOARDING_SPEED     9
@@ -76,6 +75,7 @@
 #define SUMMONED            BIT_10
 #define SUNKBYNPC           BIT_11
 #define ATTACKBYNPC         BIT_12
+#define FLYING              BIT_13
 
 #define EVILSHIP          0
 #define GOODIESHIP        1
@@ -100,6 +100,7 @@
 #define W_MINDBLAST         9
 #define W_FRAG_CAN         10
 #define W_LONGTOM          11
+#define MAXWEAPON          12
 
 // Weapon Flags
 #define FORE_ALLOWED     FORE_BIT
@@ -113,19 +114,29 @@
 #define RANGEDAM         BIT_9
 #define BALLISTIC        BIT_10
 
+// Equipment
+#define E_RAM            0
+#define E_LEVISTONE      1
+#define MAXEQUIPMENT     2
+
+#define LEVISTONE_TIME     60
+#define LEVISTONE_RECHARGE 600
+
 // Slot Types
 #define SLOT_EMPTY      0
 #define SLOT_WEAPON     1
 #define SLOT_CARGO      2
 #define SLOT_CONTRABAND 3
-#define SLOT_AMMO       4
+#define SLOT_EQUIPMENT  4
+#define SLOT_AMMO       5
 
 // Slot Position
 #define SLOT_FORE       SIDE_FORE
 #define SLOT_PORT       SIDE_PORT
 #define SLOT_REAR       SIDE_REAR
 #define SLOT_STAR       SIDE_STAR
-#define SLOT_HOLD       SIDE_STAR + 1
+#define SLOT_HOLD       SLOT_STAR + 1
+#define SLOT_EQUI       SLOT_STAR + 2
 
 // Cargo
 #define MAXCARGOPERSLOT 10
@@ -201,6 +212,7 @@ struct ShipTypeData
 };
 extern const ShipTypeData ship_type_data[MAXSHIPCLASS];
 extern const int ship_allowed_weapons[MAXSHIPCLASS][MAXWEAPON];
+extern const int ship_allowed_equipment[MAXSHIPCLASS][MAXEQUIPMENT];
 
 // SHIP TYPE DATA MACROS
 #define SHIPTYPEID(index) ship_type_data[(index)]._classid
@@ -236,14 +248,14 @@ extern const ulong arcbitmap[4];
 struct ShipSlot
 {
     void clear();
-    int get_weight() const;
-    void show(P_char ch) const;
+    int get_weight(const ShipData* ship) const;
+    void show(P_char ch, const ShipData* ship) const;
     char* get_description();
     char* get_status_str();
     const char* get_position_str();
     void clone(const ShipSlot& other);
 
-    char desc[100];
+    char desc[50];
     char status[20];
   
     int type;      // type of slot
@@ -498,11 +510,20 @@ struct WeaponData
     int sail_dam;     // damage modifier to sails
     int armor_pierce; // chances for critical hit
     int reload_time;
-    int reload_stamina;
     int volley_time; // pulses for the max range shot
     ulong flags;
 };
 extern const WeaponData weapon_data[MAXWEAPON];
+
+struct EquipmentData
+{
+    const char* name;
+    int cost;
+    int min_frags;
+    int weight;
+    ulong flags;
+};
+extern const EquipmentData equipment_data[MAXEQUIPMENT];
 
 
 struct VolleyData
@@ -573,6 +594,7 @@ extern const char *ship_symbol[NUM_SECT_TYPES];
 #define SHIPIMMOBILE(shipdata) (shipdata->get_maxspeed() == 0)
 #define SHIPISDOCKED(shipdata) IS_SET((shipdata)->flags, DOCKED)
 #define SHIPANCHORED(shipdata) IS_SET((shipdata)->flags, ANCHOR)
+#define SHIPISFLYING(shipdata) IS_SET((shipdata)->flags, FLYING)
 #define ISNPCSHIP(shipdata) ((shipdata)->race == NPCSHIP)
 #define ISMERCHANT(shipdata) (SHIPTYPEKIND((shipdata)->m_class) == SHK_MERCHANT)
 #define ISWARSHIP(shipdata) (SHIPTYPEKIND((shipdata)->m_class) == SHK_WARSHIP)
@@ -625,6 +647,8 @@ void dock_ship(P_ship ship, int to_room);
 void crash_land(P_ship ship);
 void finish_sinking(P_ship ship);
 void summon_ship_event(P_char ch, P_char victim, P_obj obj, void *data);
+void fly_ship(P_ship ship);
+void land_ship(P_ship ship);
 
 bool check_ship_name(P_ship ship, P_char ch, char* name);
 bool check_undocking_conditions(P_ship ship, int m_class, P_char ch);
@@ -695,7 +719,8 @@ void update_crew(P_ship ship);
 void reset_crew_stamina(P_ship ship);
 
 void set_weapon(P_ship ship, int slot, int w_num, int arc);
-void update_maxspeed(P_ship ship);
+void set_equipment(P_ship ship, int slot, int w_num);
+void update_maxspeed(P_ship ship, int breach_count);
 
 void assignid(P_ship ship, char *id, bool npc = false);
 
@@ -720,11 +745,22 @@ int get_next_speed_change(P_ship ship);
 void act_to_all_in_ship_f(P_ship ship, const char *msg, ... );
 void act_to_all_in_ship(P_ship ship, const char *msg);
 void act_to_outside_ships(P_ship ship, P_ship notarget, const char *msg, ... );
+void act_to_outside_ships(P_ship ship, P_ship notarget, int range, const char *msg, ... );
 void act_to_outside(P_ship ship, const char *msg, ... );
+void act_to_outside(P_ship ship, int range, const char *msg, ... );
 void everyone_get_out_newship(P_ship ship);
 void everyone_look_out_newship(P_ship ship);
 bool is_valid_sailing_location(P_ship ship, int room);
 
+bool has_eq_ram(const ShipData* ship);
+int eq_ram_slot(const ShipData* ship);
+int eq_ram_damage(const ShipData* ship);
+int eq_ram_weight(const ShipData* ship);
+int eq_ram_cost(const ShipData* ship);
+
+bool has_eq_levistone(const ShipData* ship);
+int eq_levistone_slot(const ShipData* ship);
+int eq_levistone_weight(const ShipData* ship);
 
 // Externals
 extern P_index obj_index;

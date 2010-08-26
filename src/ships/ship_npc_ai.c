@@ -144,7 +144,9 @@ void NPCShipAI::activity()
         return;
     }
 
-    getmap(ship); // doing it here once
+    if (!getmap(ship)) // doing it here once
+       return;
+
     contacts_count = getcontacts(ship, false); // doing it here once
     speed_restriction = -1;
 
@@ -1873,7 +1875,7 @@ float NPCShipAI::calc_land_dist(float x, float y, float dir, float max_range)
         //send_message_to_debug_char("\r\nnx=%5.2f,ny=%5.2f,", next_x, next_y);
         //send_message_to_debug_char("cx=%d,cy=%d,", x_to_check, y_to_check);
 
-        if (world[tactical_map[x_to_check][100 - y_to_check].rroom].sector_type != SECT_OCEAN && !IS_SET(ship->flags, AIR)) 
+        if (!is_valid_sailing_location(ship, tactical_map[x_to_check][100 - y_to_check].rroom)) 
         { // next room is a land
             //send_message_to_debug_char(" %5.2f\r\n", range);
             return range;
@@ -1930,7 +1932,7 @@ int NPCShipAI::check_dir_for_land_from(float cur_x, float cur_y, float heading, 
 
         if (!inside_map(cur_x, cur_y)) return 0;
         int location = tactical_map[(int) cur_x][100 - (int) cur_y].rroom;
-        if (world[location].sector_type != SECT_OCEAN && !IS_SET(ship->flags, AIR))
+        if (is_valid_sailing_location(ship, location))
             return r;
     }
     return 0;

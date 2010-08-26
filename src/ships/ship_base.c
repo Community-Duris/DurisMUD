@@ -385,11 +385,12 @@ int load_ship(P_ship ship, int to_room)
             }
          }
       }
-    }
-
+   }
 
    if(IS_SET(ship->flags, SINKING)) 
      REMOVE_BIT(ship->flags, SINKING); 
+   if(IS_SET(ship->flags, FLYING)) 
+     REMOVE_BIT(ship->flags, FLYING); 
    if(IS_SET(ship->flags, SUNKBYNPC)) 
      REMOVE_BIT(ship->flags, SUNKBYNPC); 
    if(IS_SET(ship->flags, ATTACKBYNPC)) 
@@ -812,6 +813,8 @@ void reset_ship(P_ship ship, bool clear_slots)
                  
     if(IS_SET(ship->flags, SINKING)) 
         REMOVE_BIT(ship->flags, SINKING); 
+    if(IS_SET(ship->flags, FLYING)) 
+        REMOVE_BIT(ship->flags, FLYING); 
     if(IS_SET(ship->flags, SUNKBYNPC)) 
         REMOVE_BIT(ship->flags, SUNKBYNPC); 
     if(IS_SET(ship->flags, ATTACKBYNPC)) 
@@ -840,31 +843,29 @@ int ship_room_proc(int room, P_char ch, int cmd, char *arg)
    P_ship ship;
    int      virt;
    
-  if(!(ch))
-  {
-    return false;
-  }
+   if(!ch)
+     return false;
         
    if ((cmd != CMD_LOOK) && (cmd != CMD_DISEMBARK))
-      return(FALSE);
+     return(FALSE);
  
    ship = get_ship_from_char(ch);
 
    if (cmd == CMD_LOOK)
    {
-      if (!arg || !*arg || str_cmp(arg, " out"))
-         return(FALSE);
-
-      old_room = ch->in_room;
-      char_from_room(ch);
-      if (ship->m_class == SH_CRUISER || ship->m_class == SH_DREADNOUGHT) {
-         ch->specials.z_cord = 2;
-      }
-      char_to_room(ch, ship->location, -1);
-      char_from_room(ch);
-      ch->specials.z_cord = 0;
-      char_to_room(ch, old_room, -2);
-      return(TRUE);
+     if (!arg || !*arg || str_cmp(arg, " out"))
+        return(FALSE);
+     old_room = ch->in_room;
+     char_from_room(ch);
+     if (ship->m_class == SH_CRUISER || ship->m_class == SH_DREADNOUGHT)
+        ch->specials.z_cord = 2;
+     if (SHIPISFLYING(ship))
+        ch->specials.z_cord = 4;
+     char_to_room(ch, ship->location, -1);
+     char_from_room(ch);
+     ch->specials.z_cord = 0;
+     char_to_room(ch, old_room, -2);
+     return(TRUE);
    }
    if (cmd == CMD_DISEMBARK)
    {
@@ -873,9 +874,14 @@ int ship_room_proc(int room, P_char ch, int cmd, char *arg)
         send_to_char("\r\nYou cannot disembark in your present condition.\r\n", ch);
         return false;
       }
-      
-      if(IS_BLIND(ch) &&
-        number(0, 5))
+
+      if(SHIPISFLYING(ship))
+      {
+        send_to_char("\r\nYou cannot disembark in air!\r\n", ch);
+        return false;
+      }
+
+      if(IS_BLIND(ch) && number(0, 5))
       {
         send_to_char("&+WIt is hard to disembark when you cannot see anything... but you keep trying!\r\n", ch);
         return false;
@@ -999,7 +1005,11 @@ int ship_obj_proc(P_obj obj, P_char ch, int cmd, char *arg)
     if (ship == NULL)
         return FALSE;
 
-      
+    if (SHIPISFLYING(ship) && !IS_TRUSTED(ch))
+    {
+       send_to_char("&+RThat ship flies too high to board!&n\r\n", ch);
+       return TRUE;
+    }
     if (ISWARSHIP(ship) && ship->speed > 0 && !SHIPSINKING(ship) && !IS_TRUSTED(ch))
     {
        send_to_char("&+RThat ship is moving too fast to board!&n\r\n", ch);
@@ -1429,68 +1439,69 @@ void ship_activity()
 
                 if ((ship->y >= 51.000) || (ship->x >= 51.000) || (ship->y < 50.000) || (ship->x < 50.000)) 
                 {
-                    if (SHIPCLASS(ship) != SH_SLOOP && SHIPCLASS(ship) != SH_YACHT)
-                        ship->crew.sail_skill_raise(0.003);
-
-                    getmap(ship);
-                    loc = tactical_map[(int) ship->x][100 - (int) ship->y].rroom;
-                    if (is_valid_sailing_location(ship, loc))
+                    if (getmap(ship))
                     {
-                        if (ship->x > 50.999) 
+                        if (SHIPCLASS(ship) != SH_SLOOP && SHIPCLASS(ship) != SH_YACHT)
+                            ship->crew.sail_skill_raise(0.003);
+                        loc = tactical_map[(int) ship->x][100 - (int) ship->y].rroom;
+                        if (is_valid_sailing_location(ship, loc))
                         {
-                            ship->x -= 1.000;
-                            send_to_room_f(ship->location, "%s sails east.\r\n", ship->name);
-                            send_to_room_f(loc, "%s sails in from the west.\r\n", ship->name);
+                            if (ship->x > 50.999) 
+                            {
+                                ship->x -= 1.000;
+                                send_to_room_f(ship->location, "%s sails east.\r\n", ship->name);
+                                send_to_room_f(loc, "%s sails in from the west.\r\n", ship->name);
+                            } 
+                            else if (ship->x < 50.000) 
+                            {
+                                ship->x += 1.000;
+                                send_to_room_f(ship->location, "%s sails west.\r\n", ship->name);
+                                send_to_room_f(loc, "%s sails in from the east.\r\n", ship->name);
+                            }
+        
+                            if (ship->y > 50.999) 
+                            {
+                                ship->y -= 1.000;
+                                send_to_room_f(ship->location, "%s sails north.\r\n", ship->name);
+                                send_to_room_f(loc, "%s sails in from the south.\r\n", ship->name);
+                            } 
+                            else if (ship->y < 50.000) 
+                            {
+                                ship->y += 1.000;
+                                send_to_room_f(ship->location, "%s sails south.\r\n", ship->name);
+                                send_to_room_f(loc, "%s sails in from the north.\r\n", ship->name);
+                            }
+                            if (SHIPOBJ(ship) && (loc != ship->location)) 
+                            {
+                                ship->location = loc;
+                                obj_from_room(SHIPOBJ(ship));
+                                obj_to_room(SHIPOBJ(ship), loc);
+                                everyone_look_out_newship(ship);
+                            }
                         } 
-                        else if (ship->x < 50.000) 
-                        {
-                            ship->x += 1.000;
-                            send_to_room_f(ship->location, "%s sails west.\r\n", ship->name);
-                            send_to_room_f(loc, "%s sails in from the east.\r\n", ship->name);
-                        }
-
-                        if (ship->y > 50.999) 
-                        {
-                            ship->y -= 1.000;
-                            send_to_room_f(ship->location, "%s sails north.\r\n", ship->name);
-                            send_to_room_f(loc, "%s sails in from the south.\r\n", ship->name);
-                        } 
-                        else if (ship->y < 50.000) 
-                        {
-                            ship->y += 1.000;
-                            send_to_room_f(ship->location, "%s sails south.\r\n", ship->name);
-                            send_to_room_f(loc, "%s sails in from the north.\r\n", ship->name);
-                        }
-                        if (SHIPOBJ(ship) && (loc != ship->location)) 
-                        {
-                            ship->location = loc;
-                            obj_from_room(SHIPOBJ(ship));
-                            obj_to_room(SHIPOBJ(ship), loc);
-                            everyone_look_out_newship(ship);
-                        }
-                    } 
-                    else
-                    {
-                        ship->setspeed = 0;
-                        ship->speed = 0;
-                        ship->x = 50.500;
-                        ship->y = 50.500;
-
-                        if (ship->autopilot) 
-                            stop_autopilot(ship);
-
-                        int crash_chance = (ship->timer[T_BSTATION] == 0) ? 0 :
-                            (int)((float)(ship->speed + 50) / ((1.0 + ship->crew.sail_mod_applied * 2.0) * ship->crew.get_stamina_mod()) );
-
-                        if (ship->timer[T_MINDBLAST] == 0)
-                            act_to_all_in_ship(ship, "Your crew attempts to stop the ship from crashing into land!");
                         else
-                            crash_chance = 100;
-
-                        if (dice(2, 50) <= crash_chance)
-                            crash_land(ship);
-                        else
-                            act_to_all_in_ship(ship, "Your crew manages to stop the ship from running ashore.");
+                        {
+                            ship->setspeed = 0;
+                            ship->speed = 0;
+                            ship->x = 50.500;
+                            ship->y = 50.500;
+        
+                            if (ship->autopilot) 
+                                stop_autopilot(ship);
+        
+                            int crash_chance = (ship->timer[T_BSTATION] == 0) ? 0 :
+                                (int)((float)(ship->speed + 50) / ((1.0 + ship->crew.sail_mod_applied * 2.0) * ship->crew.get_stamina_mod()) );
+        
+                            if (ship->timer[T_MINDBLAST] == 0)
+                                act_to_all_in_ship(ship, "Your crew attempts to stop the ship from crashing into land!");
+                            else
+                                crash_chance = 100;
+        
+                            if (dice(2, 50) <= crash_chance)
+                                crash_land(ship);
+                            else
+                                act_to_all_in_ship(ship, "Your crew manages to stop the ship from running ashore.");
+                        }
                     }
                 }
             }
@@ -1525,7 +1536,7 @@ void ship_activity()
             }
 
 
-            // Weapon reloading
+            // Slot timers
             if (!IS_SET(ship->flags, RAMMING) && ship->timer[T_RAM_WEAPONS] == 0 && ship->timer[T_MINDBLAST] == 0)
             {
                 for (j = 0; j < MAXSLOTS; j++) 
@@ -1545,6 +1556,23 @@ void ship_activity()
                             ship->crew.reduce_stamina((float)weapon_data[ship->slot[j].index].weight / SHIPHULLMOD(ship), ship);
                             if (ship->target && ship->race != ship->target->race)
                                 ship->crew.guns_skill_raise(0.003);
+                        }
+                    }
+                    if (ship->slot[j].type == SLOT_EQUIPMENT) 
+                    {
+                        if (ship->slot[j].timer > 0) 
+                        {
+                            ship->slot[j].timer--;
+                            if (ship->slot[j].timer == 0)
+                            {
+                                if (ship->slot[j].index == E_LEVISTONE && !IS_SET(ship->flags, AIR))
+                                {
+                                    if (SHIPISFLYING(ship))
+                                        land_ship(ship);
+                                    else
+                                        act_to_all_in_ship_f(ship, "%s is fully recharged.", ship->slot[j].get_description());
+                                }
+                            }
                         }
                     }
                 }
@@ -1618,9 +1646,18 @@ void crash_land(P_ship ship)
 
 void finish_sinking(P_ship ship)
 {
-    act_to_all_in_ship(ship, "&+yYour ship sinks and you swim out in time!\r\n");
-    act_to_outside(ship, "&+yA ship has sunk to the depths of the ocean!\r\n");
-    act_to_outside_ships(ship, ship, "&+W[%s]:&N %s&N&+y sinks under the ocean.\r\n", ship->id, ship->name);
+    if (IS_WATER_ROOM(ship->location))
+    {
+        act_to_all_in_ship(ship, "&+yYour ship sinks and you swim out in time!\r\n");
+        act_to_outside(ship, 10, "%s &+yhas sunk to the depths of the ocean!\r\n", SHIPNAME(ship));
+        act_to_outside_ships(ship, ship, "&+W[%s]:&N %s&N&+y sinks under the ocean.\r\n", SHIPID(ship), SHIPNAME(ship));
+    }
+    else
+    {
+        act_to_all_in_ship(ship, "&+yYour ship falls apart and you jump out in time!\r\n");
+        act_to_outside(ship, 10, "%s &+yhas fallen to pieces!\r\n", SHIPNAME(ship));
+        act_to_outside_ships(ship, ship, "&+W[%s]:&N %s&N&+y falls to pieces.\r\n", SHIPID(ship), SHIPNAME(ship));
+    }
     everyone_get_out_newship(ship);
 
     if (!ISNPCSHIP(ship))
@@ -1639,9 +1676,9 @@ void finish_sinking(P_ship ship)
 
         if (P_char owner = get_char2(str_dup(SHIPOWNER(ship))))
         {
-		    GET_BALANCE_PLATINUM(owner) += insurance / 1000;
-		    wizlog(56, "Ship insurance to account: %d", insurance / 1000);
-		    logit(LOG_SHIP, "%s's insurance deposit to account: %d", ship->ownername, insurance / 1000);
+                    GET_BALANCE_PLATINUM(owner) += insurance / 1000;
+                    wizlog(56, "Ship insurance to account: %d", insurance / 1000);
+                    logit(LOG_SHIP, "%s's insurance deposit to account: %d", ship->ownername, insurance / 1000);
         }
         else
         {
@@ -1726,6 +1763,49 @@ void summon_ship_event(P_char ch, P_char victim, P_obj obj, void *data)
   }
 }
 
+void fly_ship(P_ship ship)
+{
+    if (!IS_SET(ship->flags, FLYING))
+        SET_BIT(ship->flags, FLYING);
+    if (!IS_SET(ship->flags, AIR))
+    {
+        int levi_slot = eq_levistone_slot(ship);
+        ship->slot[levi_slot].timer = LEVISTONE_TIME;
+        act_to_all_in_ship_f(ship, "&+W%s &+Ghums and glows with soft &+Cblue light.\r\n", ship->slot[levi_slot].get_description());
+    }
+    act_to_all_in_ship(ship, "&+WYour ship slowly ascends and floats in air!&N\r\n");
+    act_to_outside(ship, 10, "%s &+Wslowly ascends and floats in air!&N", SHIPNAME(ship));
+    act_to_outside_ships(ship, ship, "&+W[%s]:&N %s&N &+Wslowly ascends and floats in air!&N\r\n", SHIPID(ship), SHIPNAME(ship));
+    update_ship_status(ship);
+}
+
+void land_ship(P_ship ship)
+{
+    if (IS_SET(ship->flags, FLYING))
+        REMOVE_BIT(ship->flags, FLYING);
+    if (!IS_SET(ship->flags, AIR))
+    {
+        int levi_slot = eq_levistone_slot(ship);
+        ship->slot[levi_slot].timer = LEVISTONE_RECHARGE;
+        act_to_all_in_ship_f(ship, "&+W%s &+Ldims and becomes silent.\r\n", ship->slot[levi_slot].get_description());
+    }
+    if (IS_WATER_ROOM(ship->location))
+    {
+        act_to_all_in_ship(ship, "&+WYour ship slowly descends and lands with a loud &+Bsplash&+W!&N\r\n");
+        act_to_outside(ship, 10, "%s &+Wslowly descends and lands with a loud &+Bsplash&+W!&N", SHIPNAME(ship));
+        act_to_outside_ships(ship, ship, "&+W[%s]:&N %s&N &+Wslowly descends and lands with a loud &+Bsplash&+W!&N\r\n", SHIPID(ship), SHIPNAME(ship));
+    }
+    else
+    {
+        ship->setspeed = 0;
+        ship->speed = 0;
+
+        act_to_all_in_ship(ship, "&+WYour ship slowly descends and lands with a &+Ycreaking &+Wsounds!&N\r\n");
+        act_to_outside(ship, 10, "%s &+Wslowly descends and lands with a &+Ycreaking &+Wsounds!&N", SHIPNAME(ship));
+        act_to_outside_ships(ship, ship, "&+W[%s]:&N %s&N &+Wslowly descends and lands with a &+Ycreaking &+Wsounds!&N\r\n", SHIPID(ship), SHIPNAME(ship));
+    }
+    update_ship_status(ship);
+}
 
 //--------------------------------------------------------------------
 // Writing ships to disk
@@ -1860,7 +1940,7 @@ int read_ships()
         }
 
         
-        if (ver == 2 || ver == 3)
+        if (ver == 3)
         {
             fgets(buf, MAX_STRING_LENGTH, f2);
             for (int i = 0; buf[i] != '\0'; i++) 
@@ -1884,21 +1964,6 @@ int read_ships()
             fscanf(f2, "%d\n", &(ship->mainsail));
             ship->mainsail = BOUNDED(0, ship->mainsail, SHIPMAXSAIL(ship));
                 
-            if (ver == 2)
-            {
-                int dummy, skill;
-                fscanf(f2, "%d %d\n", &(ship->crew.index), &(skill));
-                ship->crew.sail_skill = skill / 1000;
-                if (ship->crew.index == 3)
-                    ship->crew.index = AUTOMATON_CREW;
-                else
-                    ship->crew.index = DEFAULT_CREW;
-                fscanf(f2, "%d %d\n", &dummy, &skill);
-                ship->crew.guns_skill = skill / 1000;
-                fscanf(f2, "%d %d\n", &dummy, &skill);
-                ship->crew.rpar_skill = skill / 1000;
-                fscanf(f2, "%d %d\n", &dummy, &dummy);
-            }
             if (ver == 3)
             {
                 int dummy, ss, gs, rs;

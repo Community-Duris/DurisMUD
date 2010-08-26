@@ -162,8 +162,10 @@ int engage_autopilot(P_char ch, P_ship ship, char* arg1, char* arg2)
     if (ship->autopilot)
         REMOVE_BIT(ship->autopilot->flags, AIB_ENABLED);
 
+    if (!getmap(ship))
+      return TRUE;
+
     assign_autopilot(ship);
-    getmap(ship);
 
     float rad = (float) ((float) dir * M_PI / 180);
     int xdist = (int) (sin(rad) * (dist + 1));
@@ -347,7 +349,8 @@ void autopilot_activity(P_ship ship)
   switch (ai->type)
   {
   case AI_LINE:
-    getmap(ship);
+    if (!getmap(ship))
+      return;
     k = 0;
     for (i = 0; i < 101; i++)
     {

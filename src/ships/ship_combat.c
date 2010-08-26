@@ -321,6 +321,9 @@ bool sink_ship(P_ship ship, P_ship attacker)
     if (ship->autopilot)
         clear_autopilot(ship);
 
+    if (SHIPISFLYING(ship))
+        land_ship(ship);
+
     if(!IS_SET(ship->flags, SINKING))
         SET_BIT(ship->flags, SINKING);
 
@@ -337,9 +340,18 @@ bool sink_ship(P_ship ship, P_ship attacker)
         statuslog(AVATAR, "%s's ship has sunk", ship->ownername);
     }
 
-    act_to_outside(ship, "%s &+Wstarts to sink!&N", SHIPNAME(ship));
-    act_to_outside_ships(ship, ship, "&+W[%s]&N:%s &+Wstarts to sink!&N", SHIPID(ship), SHIPNAME(ship));
-    act_to_all_in_ship(ship, "&=LRYOUR SHIP STARTS TO SINK!!&N");
+    if (IS_WATER_ROOM(ship->location))
+    {
+        act_to_outside(ship, "%s &+Wstarts to sink!&N", SHIPNAME(ship));
+        act_to_outside_ships(ship, ship, "&+W[%s]&N:%s &+Wstarts to sink!&N", SHIPID(ship), SHIPNAME(ship));
+        act_to_all_in_ship(ship, "&=LRYOUR SHIP STARTS TO SINK!!&N");
+    }
+    else
+    {
+        act_to_outside(ship, "%s &+Wstarts to fall apart!&N", SHIPNAME(ship));
+        act_to_outside_ships(ship, ship, "&+W[%s]&N:%s &+Wstarts to fall apart!&N", SHIPID(ship), SHIPNAME(ship));
+        act_to_all_in_ship(ship, "&=LRYOUR SHIP IS DESTROYED!!&N");
+    }
 
     if (ISNPCSHIP(ship))
         ship->timer[T_SINKING] = number(1000, 1500); // to let people clear it
@@ -717,43 +729,28 @@ void update_ship_status(P_ship ship, P_ship attacker)
     if (SHIPSINKING(ship))
         return;
 
+    if (breach_count > 1 && !SHIPISDOCKED(ship))
+    {
+        sink_ship(ship, attacker);
+        return;
+    }
+
+    bool currently_immobile = SHIPIMMOBILE(ship);
+    update_maxspeed(ship, breach_count);
     if (!SHIPISDOCKED(ship))
     {
-        if (breach_count > 1)
+        if (SHIPIMMOBILE(ship) && !currently_immobile)
         {
-            sink_ship(ship, attacker);
-            return;
-        }
-
-        bool immobilized = false;
-        if (breach_count == 1 && !SHIPIMMOBILE(ship))
-        { // becomes immobile
-            immobilized = true;
             act_to_all_in_ship(ship, "&+RYOUR SHIP IS TOO DAMAGED TO MOVE!&N");
-        }
-        if (ship->mainsail == 0 && !SHIPIMMOBILE(ship))
-        { // becomes immobile
-            immobilized = true;
-            act_to_all_in_ship(ship, "&+RYOUR SAILS ARE TOO DAMAGED TO MOVE!&N");
-        }
-        if (immobilized)
-        {
-            ship->maxspeed = 0;
-            ship->setspeed = 0;
-            ship->speed = 0;
             act_to_outside(ship, "%s is immobilized!", SHIPNAME(ship));
             act_to_outside_ships(ship, ship, "&+W[%s]&N:%s &+Ris immobilized!", SHIPID(ship), SHIPNAME(ship));
         }
+        if (!SHIPIMMOBILE(ship) && currently_immobile)
+        {
+            act_to_all_in_ship(ship, "&+YYOUR SHIP CAN MOVE AGAIN!&N");
+        }
     }
 
-    if (breach_count == 0 && ship->mainsail > 0)
-    {
-        bool currently_immobile = SHIPIMMOBILE(ship) && !SHIPISDOCKED(ship);
-        update_maxspeed(ship);
-        if (currently_immobile && !SHIPIMMOBILE(ship))
-            act_to_all_in_ship(ship, "&+YYOUR SHIP CAN MOVE AGAIN!&N");
-    }
-    
     if (SHIPISDOCKED(ship) && ship->target)
     {
         ship->target = NULL;
@@ -782,9 +779,22 @@ int try_ram_ship(P_ship ship, P_ship target, float tbearing)
     float sbearing = tbearing + 180;
     if (sbearing > 360) sbearing -= 360;
 
+    int tarc = get_arc(target->heading, sbearing);
+    int sarc = get_arc(ship->heading, tbearing);
+
     if (!check_ram_arc(sheading, tbearing, 120))
     {
         act_to_all_in_ship(ship, "&+WTarget is not in front of you to ram it!&N");
+        if (IS_SET(ship->flags, RAMMING)) REMOVE_BIT(ship->flags, RAMMING);
+        return FALSE;
+    }
+
+    if (SHIPISFLYING(ship) != SHIPISFLYING(target))
+    {
+        if (SHIPISFLYING(ship))
+            act_to_all_in_ship(ship, "&+WYou try to ram but pass above your target instead!&N");
+        else
+            act_to_all_in_ship(ship, "&+WYou try to ram but pass below your target instead!&N");
         if (IS_SET(ship->flags, RAMMING)) REMOVE_BIT(ship->flags, RAMMING);
         return FALSE;
     }
@@ -864,22 +874,39 @@ int try_ram_ship(P_ship ship, P_ship target, float tbearing)
         }
 
 
-        // Calculating damage
+        // Calculating damage from crash
         int ram_damage = (SHIPHULLWEIGHT(ship) + 100) / 10;
         ram_damage = (int)((float)ram_damage * (0.1 + 0.4 * (float)ship->speed / (float)SHIPTYPESPEED(ship->m_class) + 0.5 * (float)ram_speed / (float)SHIPTYPESPEED(ship->m_class)));
-        if (get_arc(ship->heading, tbearing) == SIDE_FORE)
+        if (sarc == SIDE_FORE)
             ram_damage = (int)((float)ram_damage * 1.2);
 
         int counter_damage = (SHIPHULLWEIGHT(target) + 100) / 10;
         counter_damage = (int)((float)counter_damage * (0.1 + 0.3 * (float)ship->speed / (float)SHIPTYPESPEED(ship->m_class) + 0.4 * (float)counter_speed / (float)SHIPTYPESPEED(target->m_class)));
-        if (get_arc(target->heading, sbearing) == SIDE_FORE)
+        if (tarc == SIDE_FORE)
             counter_damage = (int)((float)counter_damage * 1.2);
-
         counter_damage += SHIPHULLWEIGHT(target) / SHIPHULLWEIGHT(ship);
+
 
         //act_to_all_in_ship(ship, "SBearing = %f, TBearing = %f, RSpeed = %d, CSpeed = %d, RDam = %d, CDam = %d\r\n", sbearing, tbearing, ram_speed, counter_speed, ram_damage, counter_damage);
 
+
         // Applying damage
+
+        // Damage from weapon ram
+        if (has_eq_ram(ship) && sarc == SIDE_FORE)
+        {
+            int eram_dam = eq_ram_damage(ship);
+            eram_dam = number(eram_dam * 0.8, eram_dam * 1.2);
+            damage_hull(ship, target, eram_dam, tarc, 20);
+        }
+        if (has_eq_ram(target) && tarc == SIDE_FORE)
+        {
+            int counter_eram_dam = eq_ram_damage(ship);
+            counter_eram_dam = number(counter_eram_dam * 0.6, counter_eram_dam * 1.0);
+            damage_hull(NULL, ship, counter_eram_dam, sarc, 20);
+        }
+
+        // Damage from crash
         int split = (int)(100.0 * (float)ram_damage / (float)(ram_damage + counter_damage));
         while (ram_damage != 0 || counter_damage != 0)
         {
@@ -1078,8 +1105,10 @@ int weaponsight(P_ship ship, int slot, int t_contact, P_char ch)
   //send_to_char_f(ch, " hit_3=%5.2f", (1.0 - miss_chance) * 100);
 
   miss_chance /= (1.0 + ship->crew.guns_mod_applied);
+  if (SHIPISFLYING(target)) miss_chance = MIN(miss_chance * 1.5, 1.0);
   hit_chance = 1.0 - miss_chance;
   hit_chance *= ship->crew.get_stamina_mod();
+  hit_chance = BOUNDED(0.01, hit_chance, 1.00);
 
   //send_to_char_f(ch, " hit_4=%5.2f\n", hit_chance * 100);
   
