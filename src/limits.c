@@ -1472,7 +1472,9 @@ void point_update(void)
       
       if (!GET_NAME(i))
         continue;
-	
+
+      // Getting tired of this giving free recalls.
+      /*
       int reloghere = GET_BIRTHPLACE(i);
       
       if (!reloghere)
@@ -1481,10 +1483,12 @@ void point_update(void)
         reloghere = GET_ORIG_BIRTHPLACE(i);
       if (!reloghere)
         reloghere = i->in_room;
-         
+      */
+      
       strcat(Gbuf1, GET_NAME(i));
       strcat(Gbuf1, ", ");
-      writeCharacter(i, 5, reloghere);
+      //writeCharacter(i, 5, reloghere);
+      writeCharacter(i, 5, i->in_room);
       extract_char(i);
       if (i->desc)
         close_socket(i->desc);
