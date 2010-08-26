@@ -113,7 +113,7 @@ gi 0 2560 -1
 0.0.0.0 0
 8 8 1
 #132007
-githyanki grand warlock tilieianaiz~
+githyanki grand warlock tilieianaiz _no_move_~
 &+GTilieianaiz &+Lthe &+Ggith&+Wyanki &+Lgrand &+bwar&+Llock&n~
 &+LThe grand &+bwar&+Llock stands here, conversing with the &+ra&+Rr&+rc&+Rh&+r-&+Rm&+ra&+Rg&+re&+L.&n
 ~
@@ -276,3 +276,64 @@ gi 0 16 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#132017
+ujani celestial outcast figure angel demon~
+&+RU&+rjan&+Ri&+L, the &+ccel&+Ce&+Ws&+Ct&+cial &+Loutcast&n~
+&+LThe figure of a dark &+ccel&+Ce&+Ws&+Ct&+cial &+Loutcast storms about the cell, &+rr&+Ra&+rg&+Ri&+rn&+Rg &+Labout his capture.&n
+~
+&+L   Fallen from grace, this angel retains the handsome form of the divine.
+&+LKnown once as the angel of &+Rf&+ri&+Rr&+re&+L, this fallen has wrecked havok everywhere
+&+Lhe has traveled since his descent. Having once ridden at the front of the
+&+Lcelestial armys with &+GM&+ga&+Gl&+ga&+Gc&+gh&+Gi&+gt&+Ge&+L, the former angelic general has been on
+&+Lrun from the &+ghunter &+Lof the &+Wseven &+Cwinds &+Lfor millenium. Thousands of lives
+&+Lhave been claimed by the fallen angel of fire, the first of which put
+&+Lthe angel on his wicked decent into darkness. Twisted by the Dark Lords
+&+Lof the &+rNine Hells&+L, this angel quickly found itself serving the dark
+&+Lpowers... betraying those who trusted him the most, including &+GM&+ga&+Gl&+ga&+Gc&+gh&+Gi&+gt&+Ge.
+&+LCaptured during a vicious fight with his arch enemy, the &+Ggith&+Wyanki &+Lhave
+&+Lrendered both of the angels powerless in their jail cells.&n&n
+~
+268585032 1 0 402653336 2204 64 536870912 -1000 S
+AN 0 16777217 -1
+57 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#132018
+malachite hunter seven winds angel~
+&+GM&+ga&+Gl&+ga&+Gc&+gh&+Gi&+gt&+Ge&+L, the hunter of the &+Wseven &+Cwinds&n~
+&+LThe imposing form of a war &+Wa&+Cn&+Wg&+Ce&+Wl &+Lstands here, a &+Yh&+Wo&+Yl&+Wy &+Lenergy radiating from its sheathed &+csword&+L.&n
+~
+&+L   Sent from the vast &+CCelestial Plane&+L, and the majestic &+WSeven &+YHeavens&+L,
+&+Lthis battle worn angel was cought by the &+Ggith&+Wyanki &+Lwhile hunting one
+&+Lof the fallen. On a quest to find and destroy &+rU&+Rjan&+ri&+L, this angel has
+&+Lcrossed multitudes of planes in his time. During their time, &+rU&+Rjan&+ri
+&+Land &+GM&+ga&+Gl&+ga&+Gc&+gh&+Gi&+gt&+Ge &+Lwere a force to be reckoned with. Riding in the front
+&+Lof the angelic army in their quest to fight the darkness the angels
+&+Lof the seven heavens stood strong with each other. Discovering &+rU&+Rjan&+ri
+&+Lin his moment of &+wcorruption&+L, &+GM&+ga&+Gl&+ga&+Gc&+gh&+Gi&+gt&+Ge &+Lhas been tasked to seek out
+&+Land destroy the fallen angel for his murderous rampage among the
+&+Lmortals they were sent to protect.&n
+~
+1074137160 1 0 939532440 1 128 4194304 1000 S
+AN 0 67108872 -1
+57 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#132019
+astral projection alenien image~
+&+Lthe &+wastral &+Lprojection of &+WAlenien&n~
+&+LA faint &+wimage &+Lstands here, bound by infused blacksteel shackles.&n
+~
+&+L   Once known as the planes walker Alenien, this faint image seems to
+&+Lbe all thats left of the once powerful mage. Captured while traveling
+&+Lthe astral plane by projection, the mage's body has long since past
+&+Lfrom the living world, leaving Alenien a disembodied essence of her
+&+Lformer self. Still able to control magic, this projection waits
+&+Lfor her moment to strike at the githyanki who captured her and
+&+Lcaused her to become a meer shadow of herself.&n
+~
+18504 1 0 402653336 0 128 536872960 -1000 S
+ug 0 512 -1
+59 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2

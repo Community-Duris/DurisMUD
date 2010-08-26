@@ -2219,14 +2219,16 @@ PH 1 1 -1
 0.3.1.5 1
 8 8 1
 #132656
-melmba dark necromancer teacher~
-&+bMelmba&N~
-&+bMelmba&+L, the dark necromancer, is here wandering the city.&N
+melmba redeemed theurgist _teacher_~
+&+bMelmba&+L, the &+Wredeemed&n~
+&+BMelmba &+Lthe &+Wredeemed &+Lstands here, a &+cf&+Cain&+ct &+Wh&+Yo&+Wl&+Yy &+Laura radiating from deep within.&n
 ~
-&+b   Melmba&+L, the dark necromancer of &+WTharnadia&+L, is here wandering the Mesa&N
+&+b   Melmba&+L, the redeemed theurgist of &+WTharnadia&+L, is here wandering the Mesa&N
 &+Lsearching for &+mZehrim&+L.  &+bMelmba &+Lis a medium aged female of average stature.  She&N
 &+Lhas long flowing black hair and dark brown &+yeyes&+L.  Wearing a long satin robe,&N
-&+Lshe is always ready to help new initiates into the realms of necromancy.&N
+&+Lshe looks eager to help show the pure holy magic that she has been reborn into.&N
+&+LIn a recent revelation, &+BMelmba &+Lhas been redeemed by the celestial powers and
+&+Lbrought into the revered force of theurgists by &+WS&+Cen&+Wi&+L, the planeswalking &+cE&+Cl&+Wadr&+Ci&+cn&+L.&n
 ~
 100554 0 0 268509244 276672 0 0 1000 S
 PH 1 134217728 -1

@@ -1,6 +1,6 @@
 #1320
 The Githyanki Fortress~
-132065 1 0 40 50 1
+132068 1 0 40 50 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -113,6 +113,7 @@ O 0 132017 1 132032 100 0 0 0      * some icy shackles
 O 0 132004 1 132046 100 0 0 0      * a statue of Vlaakith
 O 0 132005 1 132046 100 0 0 0      * a blood-splattered altar
 O 0 132018 1 132052 100 0 0 0      * a desk of magicaly bound and fused illithid bones
+P 1 132021 1 132018 100 0 0 0      *   a pulsing star crystal
 O 0 132011 1 132065 100 0 0 0      * a long wooden desk
 O 0 64 1 132065 100 0 0 0          * (object type not in this .obj file)
 O 0 359 1 132065 100 0 0 0         * (object type not in this .obj file)
@@ -153,12 +154,13 @@ E 1 132006 1 9 100 0 0 0           *   a pair of silverish githyanki gauntlets
 G 1 132002 1 0 100 0 0 0           *    a silvery key imbued with power
 M 0 132003 2 132037 100 0 0 0      * a githyanki advisor
 M 0 132003 2 132037 100 0 0 0      * a githyanki advisor
-M 0 132008 6 132042 100 0 0 0      * a githyanki warlock
-M 0 132008 6 132042 100 0 0 0      * a githyanki warlock
-M 0 132008 6 132042 100 0 0 0      * a githyanki warlock
-M 0 132008 6 132042 100 0 0 0      * a githyanki warlock
-M 0 132008 6 132042 100 0 0 0      * a githyanki warlock
-M 0 132008 6 132042 100 0 0 0      * a githyanki warlock
+M 0 132008 7 132042 100 0 0 0      * a githyanki warlock
+M 0 132008 7 132042 100 0 0 0      * a githyanki warlock
+M 0 132008 7 132042 100 0 0 0      * a githyanki warlock
+M 0 132008 7 132042 100 0 0 0      * a githyanki warlock
+M 0 132008 7 132042 100 0 0 0      * a githyanki warlock
+M 0 132008 7 132042 100 0 0 0      * a githyanki warlock
+M 0 132008 7 132042 100 0 0 0      * a githyanki warlock
 M 0 132015 4 132046 100 0 0 0      * a worshipping githyanki
 M 0 132015 4 132046 100 0 0 0      * a worshipping githyanki
 M 0 132015 4 132046 100 0 0 0      * a worshipping githyanki
@@ -178,5 +180,11 @@ M 0 132011 1 132063 100 0 0 0      * an emissary of Tiamat
 M 0 132010 1 132064 100 0 0 0      * Xalithil, the Githyanki Supreme Leader
 E 1 132020 1 7 100 0 0 0           *   a pair of flayed illithid hide leggings
 G 1 132009 1 0 100 0 0 0           *    a key to the inner study
+M 0 132018 1 132067 100 0 0 0      * Malachite, the hunter of the seven winds
+E 1 132022 1 16 100 0 0 0          *   the holy warhammer 'Discipline'
+M 0 132017 1 132068 100 0 0 0      * Ujani, the celestial outcast
+E 1 132023 1 12 100 0 0 0          *   a pair of razorsteel angel wings
+M 0 132019 1 132068 100 0 0 0      * the astral projection of Alenien
+E 1 132024 1 13 100 0 0 0          *   the threads of astral projection
 *
 S

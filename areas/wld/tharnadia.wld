@@ -321,7 +321,7 @@ trapdoor~
 5 0 132528
 S
 #132512
-A corridor~
+A Corridor&n~
 &+L  The corridor is long and you can see doors on both side of it all
 &+Lthe way down.
 ~
@@ -348,7 +348,7 @@ D4
 0 0 132825
 S
 #132513
-A corridor~
+A Corridor&n~
 &+L  The corridor is long and you can see doors on both side of it all
 &+Lthe way down.
 ~
@@ -371,7 +371,7 @@ D3
 0 0 132514
 S
 #132514
-A corridor~
+A Corridor&n~
 &+L  The corridor is long and you can see doors on both side of it all
 &+Lthe way down.
 ~
@@ -394,7 +394,7 @@ D3
 0 0 132515
 S
 #132515
-A corridor~
+A Corridor&n~
 &+L  The corridor is long and you can see doors on both side of it all
 &+Lthe way down.
 ~
@@ -417,7 +417,7 @@ D3
 0 0 132516
 S
 #132516
-A corridor~
+A Corridor&n~
 &+L  The corridor is long and you can see doors on both side of it all
 &+Lthe way down.
 ~
@@ -7820,7 +7820,7 @@ door~
 1 0 132512
 S
 #132825
- corridor~
+A Corridor~
 &+L  The corridor is long and you can see doors on both side of it all
 &+Lthe way down.
 ~
@@ -7867,7 +7867,7 @@ D0
 0 0 132825
 S
 #132828
-A corridor~
+A Corridor~
 &+L  The corridor is long and you can see doors on both side of it all
 &+Lthe way down.
 ~
@@ -7890,7 +7890,7 @@ D3
 0 0 132829
 S
 #132829
-A corridor~
+A Corridor~
 &+L  The corridor is long and you can see doors on both side of it all
 &+Lthe way down.
 ~
@@ -7913,7 +7913,7 @@ D3
 0 0 132830
 S
 #132830
-A corridor~
+A Corridor~
 &+L  The corridor is long and you can see doors on both side of it all
 &+Lthe way down.
 ~
@@ -7936,7 +7936,7 @@ D3
 0 0 132831
 S
 #132831
-A corridor~
+A Corridor~
 &+L  The corridor is long and you can see doors on both side of it all
 &+Lthe way down.
 ~

@@ -46,28 +46,28 @@ D 0 132528 4 1 100 0 0 0
 *     "A Burned-out Home" - closed
 *
 D 0 132512 0 0 100 0 0 0
-*     north exit from "A corridor" to
+*     north exit from "A Corridor" to
 *     "Room #2" - open
 *
 D 0 132823 2 0 100 0 0 0
 *     south exit from "Room #2" to
-*     "A corridor" - open
+*     "A Corridor" - open
 *
 D 0 132512 1 0 100 0 0 0
-*     east exit from "A corridor" to
+*     east exit from "A Corridor" to
 *     "The Ogre's Foot Inn" - open
 *
 D 0 132575 3 0 100 0 0 0
 *     west exit from "The Ogre's Foot Inn" to
-*     "A corridor" - open
+*     "A Corridor" - open
 *
 D 0 132512 2 0 100 0 0 0
-*     south exit from "A corridor" to
+*     south exit from "A Corridor" to
 *     "Room #1" - open
 *
 D 0 132824 0 0 100 0 0 0
 *     north exit from "Room #1" to
-*     "A corridor" - open
+*     "A Corridor" - open
 *
 D 0 132532 0 1 100 0 0 0
 *     north exit from "Lower Level of the Guild of Rogues" to
@@ -1532,7 +1532,7 @@ E 1 132643 999 8 100 0 0 0         *   a pair of high-soft leather boots
 E 1 132637 999 13 100 0 0 0        *   a vorhide belt
 E 1 132646 26 16 100 0 0 0         *   a Tannadian rapier
 E 1 132647 28 17 100 0 0 0         *   a short sword
-M 0 132656 1 132935 100 0 0 0      * Melmba
+M 0 132656 1 132935 100 0 0 0      * Melmba, the redeemed
 E 1 132676 1 8 100 0 0 0           *   a pair of shiny magical boots
 M 0 132644 12 132937 100 0 0 0     * a grounds keeper
 M 0 132647 2 132939 100 0 0 0      * a dungeon jailor

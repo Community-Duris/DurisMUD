@@ -79,9 +79,13 @@ staff silvery githyanki arch mage arch-mage~
 &+Lthe &+csilvery &+ystaff &+Lof the &+Ggith&+Wyanki &+ra&+Rr&+rc&+Rh&+r-&+Rm&+ra&+Rg&+re&n~
 &+LA &+Csilvery &+Lstaff seems to have been left int he corner here, unattended.&n~
 ~
-13 15 3 0 7 0 0 8193 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
+5 25 3 0 12 0 0 8193 0 0 0
+12 3 4 0 0 0 0 0
+0 14634 100
+A
+33 2
+A
+37 2
 #132008
 key glowing rune silver~
 &+La &+Csilver &+Lkey with a &+Yglowing &+mr&+Mu&+mn&+Me&n~
@@ -175,8 +179,8 @@ desk bound fused illithid bones~
 &+La desk of magicaly &+gb&+Go&+gu&+Gn&+gd &+Land &+bf&+Bu&+bs&+Be&+bd &+millithid &+Lb&+wo&+Ln&+we&+Ls&n~
 &+LA desk composed of magically &+bf&+Bu&+bs&+Be&+bd &+Millithid &+Lb&+wo&+Ln&+we&+Ls sits here.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
+15 15 3 0 7 0 0 0 0 0 0
+123515 5 0 0 0 0 0 0
 0 0 100
 #132019
 astral forge anvil~
@@ -198,3 +202,47 @@ A
 37 3
 A
 13 20
+#132021
+pulsing star crystal shard~
+&+La &+Ypulsing &+Lstar &+Ccrystal&n~
+&+LA large shard of &+Ypulsing &+Ccrystal &+Llies here, looking very valuable.&n~
+~
+8 44 3 0 7 0 1 1 0 0 0
+0 0 0 0 0 0 0 0
+0 310634 100
+#132022
+holy warhammer war hammer discipline~
+&+Lthe &+Wholy &+Lwarhammer '&+rDiscipline&+L'&n~
+&+LA large warhammer lies here, the word '&+rDiscipline&+L' written along the hilt in blazing &+Ygold &+Llettering.&n~
+~
+5 18 3 0 13 0 0 8193 0 0 0
+4 4 5 0 0 0 0 0
+4 17732 100
+A
+18 4
+A
+19 4
+#132023
+razor steel razorsteel wings angel~
+&+La pair of &+brazor&+csteel &+Wa&+Cn&+Wg&+Ce&+Wl &+Lwings&n~
+&+LThe severed wings of a fallen angel lie here, reforged with &+brazor&+csteel&+L.~
+~
+9 15 3 0 7 0 1 1025 0 0 0
+15 0 0 0 0 0 0 0
+0 0 100 134217728 0 0 0
+A
+18 3
+A
+1 5
+#132024
+threads astral projection~
+&+Lthe &+mt&+Mhr&+me&+Mad&+ms &+Lof &+wastral &+Lprojection&n~
+&+LSome wispy threads of some unknown substance lie here, discarded.&n~
+~
+9 1 3 0 14 0 1 2049 0 0 0
+5 0 0 0 0 0 0 0
+0 0 100 0 0 0 262144
+A
+27 6
+A
+13 15
