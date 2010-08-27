@@ -1394,32 +1394,35 @@ void ship_activity()
             !SHIPISDOCKED(ship) &&
             !SHIPANCHORED(ship)) 
         {
-            // Setspeed to Speed
-            if (ship->setspeed > ship->get_maxspeed()) 
+            if (IS_WATER_ROOM(ship->location) || IS_SET(world [ship->location].room_flags, DOCKABLE) || SHIPISFLYING(ship))
             {
-                ship->setspeed = ship->get_maxspeed();
-            }
-            if (ship->setspeed != ship->speed && ship->timer[T_MINDBLAST] == 0) 
-            {
-                int sp_change = get_next_speed_change(ship);
-                ship->speed += sp_change;
+                // Setspeed to Speed
+                if (ship->setspeed > ship->get_maxspeed()) 
+                {
+                    ship->setspeed = ship->get_maxspeed();
+                }
+                if (ship->setspeed != ship->speed && ship->timer[T_MINDBLAST] == 0) 
+                {
+                    int sp_change = get_next_speed_change(ship);
+                    ship->speed += sp_change;
 
-                // affect crew stamina
-                float sp_rel_change = ((float)ABS(sp_change) / (float)SHIPACCEL(ship)) / (1.0 + ship->crew.sail_mod_applied);
-                ship->crew.reduce_stamina(sp_rel_change * (2.0 + SHIPHULLMOD(ship) / 10.0), ship);
-            }
+                    // affect crew stamina
+                    float sp_rel_change = ((float)ABS(sp_change) / (float)SHIPACCEL(ship)) / (1.0 + ship->crew.sail_mod_applied);
+                    ship->crew.reduce_stamina(sp_rel_change * (2.0 + SHIPHULLMOD(ship) / 10.0), ship);
+                }
 
-            // SetHeading to Heading
-            if(ship->setheading != ship->heading && ship->timer[T_MINDBLAST] == 0) 
-            {
-                float hd_change = get_next_heading_change(ship);
-                ship->heading += hd_change;
-                normalize_direction(ship->heading);
+                // SetHeading to Heading
+                if(ship->setheading != ship->heading && ship->timer[T_MINDBLAST] == 0) 
+                {
+                    float hd_change = get_next_heading_change(ship);
+                    ship->heading += hd_change;
+                    normalize_direction(ship->heading);
 
-                // affect crew stamina
-                float hd_rel_change = (ABS(hd_change) / (float)SHIPHDDC(ship)) / (1.0 + ship->crew.sail_mod_applied);
-                if (SHIPIMMOBILE(ship)) hd_rel_change *= 5;
-                ship->crew.reduce_stamina(hd_rel_change * (3.0 + SHIPHULLMOD(ship) / 10.0), ship);
+                    // affect crew stamina
+                    float hd_rel_change = (ABS(hd_change) / (float)SHIPHDDC(ship)) / (1.0 + ship->crew.sail_mod_applied);
+                    if (SHIPIMMOBILE(ship)) hd_rel_change *= 5;
+                    ship->crew.reduce_stamina(hd_rel_change * (3.0 + SHIPHULLMOD(ship) / 10.0), ship);
+                }
             }
 
             // Movement Goes here

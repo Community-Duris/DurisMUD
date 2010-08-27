@@ -699,7 +699,7 @@ int contra_sell_price(int location);
 int contra_sell_price(int location, int type);
 int contra_buy_price(int location, int type);
 void adjust_ship_market(int transaction, int location, int type, int volume);
-int required_ship_frags_for_contraband(int type);
+bool can_buy_contraband(P_ship ship, int type);
 const char *cargo_type_name(int type);
 const char *contra_type_name(int type);
 void show_cargo_prices(P_char ch);

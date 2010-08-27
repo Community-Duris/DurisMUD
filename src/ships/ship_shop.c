@@ -69,7 +69,7 @@ int list_cargo(P_char ch, P_ship ship, int owned)
     if (ship->frags >= MINCONTRAFRAGS && GET_ALIGNMENT(ch) <= MINCONTRAALIGN) 
     {
 
-        if (ship->frags >= required_ship_frags_for_contraband(rroom))
+        if (can_buy_contraband(ship, rroom))
         {
             send_to_char ("\r\n&+L---=== Contraband for sale ===---&N\r\n", ch);
             
@@ -675,7 +675,6 @@ void check_contraband(P_ship ship, int to_room)
                 conf_chance = 0;
             }
             else*/ 
-            if (ship->frags >= required_ship_frags_for_contraband(type))
             {
                 conf_chance = get_property("ship.contraband.baseConfiscationChance", 0.0) + (float)crates / 2; // the more contraband you have, the bigger confiscation chance
                 conf_chance -= sqrt(ship->frags) / 5.0;
@@ -1300,7 +1299,7 @@ int buy_contra(P_char ch, P_ship ship, char* arg)
         send_to_char ("Goodie goodie two shoes like you shouldn't think of contraband.\r\n", ch);
         return TRUE;
     }
-    if (!IS_TRUSTED(ch) && ship->frags < required_ship_frags_for_contraband(rroom)) 
+    if (!IS_TRUSTED(ch) && !can_buy_contraband(ship, rroom)) 
     {
         send_to_char ("Contraband?! *gasp* how could you even think that I would sell such things!\r\n", ch);
         return TRUE;

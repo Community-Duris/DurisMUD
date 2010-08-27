@@ -521,6 +521,20 @@ int required_ship_frags_for_contraband(int type)
   return cargo_location_data[type].required_frags;
 }
 
+bool can_buy_contraband(P_ship ship, int type)
+{
+    int frags = required_ship_frags_for_contraband(type);
+    if (ship->frags >= frags)
+        return true;
+    if (ship->crew.sail_skill >= frags * 4 &&
+        ship->crew.guns_skill >= frags * 1 &&
+        ship->crew.rpar_skill >= frags * 2)
+    {
+        return true;
+    }
+    return false;
+}
+
 const char *cargo_type_name(int type)
 {
   if( type < 0 || type >= NUM_PORTS )

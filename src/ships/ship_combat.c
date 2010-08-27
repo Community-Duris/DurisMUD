@@ -893,17 +893,20 @@ int try_ram_ship(P_ship ship, P_ship target, float tbearing)
         // Applying damage
 
         // Damage from weapon ram
+        bool ship_eram = false, target_eram = false;
         if (has_eq_ram(ship) && sarc == SIDE_FORE)
         {
             int eram_dam = eq_ram_damage(ship);
             eram_dam = number(eram_dam * 0.8, eram_dam * 1.2);
             damage_hull(ship, target, eram_dam, tarc, 20);
+            ship_eram = true;
         }
         if (has_eq_ram(target) && tarc == SIDE_FORE)
         {
             int counter_eram_dam = eq_ram_damage(ship);
             counter_eram_dam = number(counter_eram_dam * 0.6, counter_eram_dam * 1.0);
             damage_hull(NULL, ship, counter_eram_dam, sarc, 20);
+            target_eram = true;
         }
 
         // Damage from crash
@@ -928,7 +931,9 @@ int try_ram_ship(P_ship ship, P_ship target, float tbearing)
                     float hit_dir = sbearing + number(-90, 90);
                     if (hit_dir >= 360)    hit_dir -= 360;
                     else if (hit_dir < 0)  hit_dir = 360 + hit_dir;
-                    damage_hull(ship, target, dam, get_arc(target->heading, hit_dir), 2);
+                    int hit_arc = get_arc(target->heading, hit_dir);
+                    if (!(target_eram && hit_arc == SIDE_FORE && number(1, 2) == 1))  // equiped ram partially protects fore side
+                        damage_hull(ship, target, dam, hit_arc, 2);
                 }
             }
             else
@@ -944,7 +949,9 @@ int try_ram_ship(P_ship ship, P_ship target, float tbearing)
                     float hit_dir = ship->heading + number(-90, 90);
                     if (hit_dir >= 360)    hit_dir -= 360;
                     else if (hit_dir < 0)  hit_dir = 360 + hit_dir;
-                    damage_hull(NULL, ship, dam, get_arc(ship->heading, hit_dir), 0);
+                    int hit_arc = get_arc(ship->heading, hit_dir);
+                    if (!(ship_eram && hit_arc == SIDE_FORE && number(1, 2) == 1))  // equiped ram partially protects fore side
+                        damage_hull(NULL, ship, dam, hit_arc, 0);
                 }
             }
         }
