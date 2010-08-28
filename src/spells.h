@@ -660,8 +660,9 @@
 #define SPELL_VOICE_OF_CREATION      611
 #define SPELL_PYROKINESIS            612
 #define SPELL_OBTENEBRATION          613
+#define SPELL_HOLY_BLADE             614
 
-#define LAST_SPELL  SPELL_OBTENEBRATION
+#define LAST_SPELL  SPELL_HOLY_BLADE
 
 #define FIRST_SKILL                  1000  /* should be a decent split point */
 #define SKILL_SNEAK                  1000
