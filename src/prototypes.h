@@ -2297,6 +2297,7 @@ void spell_divine_fury(int, P_char, char *, int, P_char, P_obj);
 void spell_stornogs_lowered_magical_res(int, P_char, char *, int, P_char, P_obj);
 void spell_command(int, P_char, char *, int, P_char, P_obj);
 void spell_mass_barkskin(int, P_char, char *, int, P_char, P_obj);
+void spell_holy_light(int, P_char, char *, int, P_char, P_obj);
 void spell_mage_flame(int, P_char, char *, int, P_char, P_obj);
 void spell_globe_of_darkness(int, P_char, char *, int, P_char, P_obj);
 void spell_deflect(int, P_char, char *, int, P_char, P_obj);

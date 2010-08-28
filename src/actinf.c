@@ -1675,15 +1675,30 @@ void show_char_to_char(P_char i, P_char ch, int mode)
 
       if (IS_AFFECTED4(i, AFF4_MAGE_FLAME))
       {
-        strcpy(buffer, "&+WA ");
+        if (GET_CLASS(ch, CLASS_THEURGIST))
+	{
+	  strcpy(buffer, "&+WA ");
 
-        if (lt_lvl <= 1)
-          strcat(buffer, "feebly glowing ");
-        else if (lt_lvl >= 5)
-          strcat(buffer, "brightly glowing ");
+          if (lt_lvl <= 1)
+            strcat(buffer, "bright white ");
+          else if (lt_lvl >= 5)
+            strcat(buffer, "blindingly bright white ");
 
-        strcat(buffer,
-               "torch floats near $N&+W's head. &n(&+Willuminating&n)");
+          strcat(buffer,
+                 "light floats near $N&+W's head. &n(&+Willuminating&n)");
+        }
+	else
+	{
+	  strcpy(buffer, "&+WA ");
+
+          if (lt_lvl <= 1)
+            strcat(buffer, "feebly glowing ");
+          else if (lt_lvl >= 5)
+            strcat(buffer, "brightly glowing ");
+
+          strcat(buffer,
+                 "torch floats near $N&+W's head. &n(&+Willuminating&n)");
+        }
       }
       else
       {

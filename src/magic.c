@@ -11757,6 +11757,36 @@ void spell_turn_undead(int level, P_char ch, char *arg, int type, P_char tch,
   }
 }
 
+void spell_holy_light(int level, P_char ch, char *arg, int type,
+                      P_char victim, P_obj obj)
+{
+  struct affected_type af;
+
+  if(!IS_AFFECTED4(victim, AFF4_MAGE_FLAME) &&
+      !IS_AFFECTED4(victim, AFF4_GLOBE_OF_DARKNESS))
+  {
+    act("&+WA bright, white light suddenly appears over $n&+W's head!",
+        TRUE, victim, 0, 0, TO_ROOM);
+    act("&+WA bright, white light appears over your head!", TRUE, victim,
+        0, 0, TO_CHAR);
+    bzero(&af, sizeof(af));
+    af.type = SPELL_HOLY_LIGHT;
+    af.duration = (level / 2 + 3);
+    af.modifier = level;
+    af.bitvector4 = AFF4_MAGE_FLAME;
+    affect_to_char(victim, &af);
+
+    affect_total(victim, FALSE);
+
+    char_light(victim);
+    room_light(victim->in_room, REAL);
+  }
+  else
+    send_to_char
+      ("You must get rid of your existing holy light or globe of darkness before you can create a holy light.\n",
+       victim);
+}
+
 void spell_mage_flame(int level, P_char ch, char *arg, int type,
                       P_char victim, P_obj obj)
 {
