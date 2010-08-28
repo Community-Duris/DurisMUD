@@ -108,12 +108,10 @@
 #define PORT_ALLOWED     PORT_BIT
 #define REAR_ALLOWED     REAR_BIT
 #define STAR_ALLOWED     STAR_BIT
-#define SHOTGUN          BIT_5
-#define CAPITOL          BIT_6
-#define MINDBLAST        BIT_7
-#define SAILSHOT         BIT_8
-#define RANGEDAM         BIT_9
-#define BALLISTIC        BIT_10
+#define CAPITOL          BIT_5
+#define MINDBLAST        BIT_6
+#define RANGEDAM         BIT_7
+#define BALLISTIC        BIT_8
 
 // Equipment
 #define E_RAM            0

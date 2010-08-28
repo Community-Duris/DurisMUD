@@ -83,18 +83,18 @@ const ShipChiefData ship_chief_data[MAXCHIEFS] = {
     { RPAR_CHIEF,  "&+cE&+wxp&+ce&+wrt &+cE&+wng&+ci&+wn&+cee&+wr",   2200,    60,      3,    8000000,   1480, { 49051, 76859,     0, 0, 77 }, CCF_NONE  } ,
 }; 
 
-#define WPNFLAG01   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                                   //small ball        
-#define WPNFLAG02   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                                   //med ball          
-#define WPNFLAG03   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                                   //lrg ball          
-#define WPNFLAG04   FORE_ALLOWED | REAR_ALLOWED |                               SHOTGUN            | BALLISTIC  //small cat         
-#define WPNFLAG05   FORE_ALLOWED | REAR_ALLOWED |                               SHOTGUN            | BALLISTIC  //med cat           
-#define WPNFLAG06   FORE_ALLOWED | REAR_ALLOWED |                               SHOTGUN            | BALLISTIC  //large cat         
-#define WPNFLAG07                                 PORT_ALLOWED | STAR_ALLOWED                                   //hvy ball          
-#define WPNFLAG08   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | RANGEDAM | CAPITOL              //light beam
-#define WPNFLAG09   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | RANGEDAM | CAPITOL              //heavy beam
-#define WPNFLAG10   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | MINDBLAST| CAPITOL              //mind blast        
-#define WPNFLAG11   FORE_ALLOWED | REAR_ALLOWED |                               SAILSHOT | CAPITOL              //frag cannon       
-#define WPNFLAG12   FORE_ALLOWED | REAR_ALLOWED |                               SHOTGUN  | CAPITOL | BALLISTIC  //long tom          
+#define WPNFLAG01   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                         //small ball        
+#define WPNFLAG02   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                         //med ball          
+#define WPNFLAG03   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                         //lrg ball          
+#define WPNFLAG04   FORE_ALLOWED | REAR_ALLOWED                               | BALLISTIC             // small cat         
+#define WPNFLAG05   FORE_ALLOWED | REAR_ALLOWED                               | BALLISTIC             //med cat           
+#define WPNFLAG06   FORE_ALLOWED | REAR_ALLOWED                               | BALLISTIC             //large cat         
+#define WPNFLAG07                                 PORT_ALLOWED | STAR_ALLOWED                         //hvy ball          
+#define WPNFLAG08   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | RANGEDAM  | CAPITOL   //light beam
+#define WPNFLAG09   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | RANGEDAM  | CAPITOL   //heavy beam
+#define WPNFLAG10   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | MINDBLAST | CAPITOL   //mind blast        
+#define WPNFLAG11   FORE_ALLOWED | REAR_ALLOWED                                           | CAPITOL   //frag cannon       
+#define WPNFLAG12   FORE_ALLOWED | REAR_ALLOWED                               | BALLISTIC | CAPITOL   //long tom          
 
 const WeaponData weapon_data[MAXWEAPON] = {
 // Name                         Cost  Frags Weight Ammo    Min     Max     Min     Max  Fragments Damage  Sail   Hull    Sail    Armor   Reload  Volley      Flags
