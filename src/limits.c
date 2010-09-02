@@ -345,7 +345,7 @@ int move_regen(P_char ch)
     return (int) MIN(-1, gain);
   }
   
-  if(IS_NPC(ch) || IS_UNDEADRACE(ch))
+  if(IS_NPC(ch) || IS_UNDEADRACE(ch) || IS_ANGEL(ch))
   {
     gain = 22;
   }

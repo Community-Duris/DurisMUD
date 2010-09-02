@@ -120,6 +120,7 @@
          (GET_RACE(mob) == RACE_PHANTOM) || \
          (GET_RACE(mob) == RACE_WIGHT) || \
          (GET_RACE(mob) == RACE_SHADOW) || \
+         (GET_RACE(mob) == RACE_DEVA) || \
          (GET_RACE(mob) == RACE_SPECTRE) || \
          (GET_RACE(mob) == RACE_V_ELEMENTAL) || \
          (GET_RACE(mob) == RACE_BRALANI) || \
@@ -709,6 +710,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_DRACOLICH(ch) (GET_RACE(ch) == RACE_DRACOLICH)
 #define IS_TITAN(ch) (GET_RACE(ch) == RACE_TITAN)
+#define IS_AVATAR(ch) (GET_RACE(ch) == RACE_AVATAR)
 
 #define IS_UNDEADRACE(ch)  ((GET_RACE(ch) == RACE_UNDEAD) || \
            (GET_RACE(ch) == RACE_GHOST) || \
@@ -770,6 +772,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
            ( GET_RACE(ch) == RACE_SPECTRE ) || \
            ( GET_RACE(ch) == RACE_SKELETON ) || \
            ( GET_RACE(ch) == RACE_WRAITH ) || \
+           ( GET_RACE(ch) == RACE_DEVA) || \
            ( GET_RACE(ch) == RACE_SHADOW ) || \
            ( GET_RACE(ch) == RACE_W_ELEMENTAL ) || \
            ( GET_RACE(ch) == RACE_A_ELEMENTAL ) || \
@@ -881,7 +884,11 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_SHADOW(ch) (GET_RACE(ch) == RACE_SHADOW)
 
+#define IS_DEVA(ch) (GET_RACE(ch) == RACE_DEVA)
+
 #define IS_DRIDER(ch) (GET_RACE(ch) == RACE_DRIDER)
+
+#define IS_ARCHON(ch) (GET_RACE(ch) == RACE_ARCHON)
 
 #define IS_ASURA(ch) (GET_RACE(ch) == RACE_ASURA)
 
@@ -1107,7 +1114,9 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch)) && !IS_ANIMAL(ch))
   (GET_RACE(ch) == RACE_DEVIL) || \
   (GET_RACE(ch) == RACE_ANGEL) || \
   (GET_RACE(ch) == RACE_BEHOLDER) || \
-  (GET_RACE(ch) == RACE_PLICH))
+  (GET_RACE(ch) == RACE_PLICH) || \
+  (GET_RACE(ch) == RACE_TITAN) || \
+  (GET_RACE(ch) == RACE_AVATAR))
 
 #define SKILL_DATA(ch, skill)   (skills[(skill)].m_class[flag2idx((ch)->player.m_class)-1])
 #define SKILL_DATA2(ch, skill)   (skills[(skill)].m_class[flag2idx((ch)->player.secondary_class)-1])
@@ -1305,7 +1314,7 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch)) && !IS_ANIMAL(ch))
                       (GET_RACE(ch) == RACE_AVATAR) || \
                       (GET_RACE(ch) == RACE_GHAELE) || \
                       (GET_RACE(ch) == RACE_BRALANI) || \
-                      (GET_RACE(ch) == RACE_SHADOW) || \
+                      (GET_RACE(ch) == RACE_DEVA) || \
                        IS_ANGELIC(ch))
 
 #endif /* _DURIS_UTILS_H_ */

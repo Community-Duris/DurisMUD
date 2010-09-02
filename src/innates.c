@@ -781,13 +781,16 @@ void assign_innates()
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_ILLITHID, 1);  
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_WRAITH, 1);
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_SHADOW, 1);
+  ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_DEVA, 1);
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_SPECTRE, 1);
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_BRALANI, 1);
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_ASURA, 1);
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_TITAN, 1);
+  ADD_RACIAL_INNATE(INNATE_HASTE, RACE_TITAN, 51);
+  ADD_RACIAL_INNATE(INNATE_EYELESS, RACE_TITAN, 51);
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_AVATAR, 1);
-  ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_GHAELE, 1);
-  ADD_RACIAL_INNATE(INNATE_VAMPIRIC_TOUCH, RACE_GHAELE, 1);
+  ADD_RACIAL_INNATE(INNATE_HASTE, RACE_AVATAR, 51);
+  ADD_RACIAL_INNATE(INNATE_EYELESS, RACE_AVATAR, 51);
   ADD_RACIAL_INNATE(INNATE_VULN_FIRE, RACE_PLANT, 1);
   ADD_RACIAL_INNATE(INNATE_BODYSLAM, RACE_GIANT, 1);
   ADD_RACIAL_INNATE(INNATE_BITE, RACE_SNAKE, 1);
@@ -3355,6 +3358,35 @@ void do_breath(P_char ch, char *arg, int cmd)
     BreathWeapon(ch, dir);
     if (IS_MORPH(ch))
       CharWait(ch, 9);
+    return;
+  }
+}
+
+void do_stomp(P_char ch, char *arg, int cmd)
+{
+  /*
+   * This could very well be expanded to include a char skill
+   */
+  if (IS_PC(ch))
+  {
+    send_to_char
+      ("You stomp on the ground like a sumo wrestler..\n",
+       ch);
+    return;
+  }
+  else if (GET_RACE(ch) == RACE_TITAN ||
+           GET_RACE(ch) == RACE_AVATAR)
+  {
+    StompAttack(ch);
+    if (IS_PC_PET(ch))
+      CharWait(ch, PULSE_VIOLENCE);
+    return;
+  }
+  else
+  {
+    send_to_char
+      ("You stomp away...\n",
+       ch);
     return;
   }
 }

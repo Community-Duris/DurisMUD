@@ -303,6 +303,7 @@ void kick_messages(P_char ch, P_char victim, bool hit,
   case RACE_WRAITH:
   case RACE_SPECTRE:
   case RACE_SHADOW:
+  case RACE_DEVA:
   case RACE_ASURA:
   case RACE_PHANTOM:
   case RACE_WIGHT:

@@ -61,6 +61,7 @@ void spell_beholder_sleep(int level, P_char ch, P_char victim, P_obj obj)
     !IS_GREATER_RACE(victim) &&
     !IS_ELITE(victim) &&
     !IS_UNDEAD(victim) &&
+    !IS_ANGEL(ch) &&
     !IS_ELEMENTAL(victim) &&
     !IS_AFFECTED(victim, AFF_SLEEP) &&
     GET_STAT(victim) != STAT_SLEEPING)
@@ -462,6 +463,7 @@ void spell_beholder_fear(int level, P_char ch, P_char victim, P_obj obj)
   if(IS_GREATER_RACE(victim) ||
     IS_ELITE(victim) ||
     IS_UNDEAD(victim) ||
+    IS_ANGEL(victim) ||
     IS_TRUSTED(victim))
   {
     act("The beam seems to have no effect on $n&n.", FALSE, victim, 0, 0,

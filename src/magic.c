@@ -20128,15 +20128,15 @@ void spell_life_bolt(int level, P_char ch, char *arg, int type,
   "&+w$n stretches out $s hands and &+Rdisintegrates&n $N &+w with a &+Wwhite&n&+w beam of &+Yenergy&n&+w!",
   };
 
-  int dam, self_dam, result;
+  int dam, self_dam = 0, result;
 
-  int num_missiles = BOUNDED(1, (level / 10), 5);
+  int num_missiles = BOUNDED(1, (level / 3), 5);
   
   bool opposing_align;
   
-  dam = (dice(1, 4) * 4 + number(1, level * 2 / 3))*num_missiles;
+  dam = (dice(1, 4) * 4 + number(1, level))*num_missiles;
 
-  self_dam = dam / 2;
+  self_dam = dam;
 
   if (!victim)
   {
@@ -20144,21 +20144,28 @@ void spell_life_bolt(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  if (IS_PC(victim))
-    self_dam >>= 2;
-  else
-    self_dam >>= 1;
-
-  if (GET_HIT(ch) < 0)
+  if (get_property("spell.lifebolt.selfdam.lvl", 0.000) &&
+      GET_LEVEL(ch) >= get_property("spell.lifebolt.selfdam.lvl", 0.000) &&
+      GET_SPEC(ch, CLASS_THEURGIST, SPEC_TEMPLAR))
   {
-    send_to_char("&+WYou're too weak to sacrifice your life force in this way!\r\n", ch);
-    return;
+    if (IS_PC(victim))
+      self_dam >>= 2;
+    else
+      self_dam >>= 1;
+ 
+    if (GET_HIT(ch) < self_dam)
+    {
+      send_to_char("&+WYou're too weak to sacrifice your life force in this way! You gain no bonus.\r\n", ch);
+    }
+    else if (self_dam)
+    {
+      send_to_char("&+WYou send a quick prayer to your Deity, offering your &+Rlifeforce&+W and asking for divine energy to flow through you!\r\n", ch);
+
+      // Yes this vamps angelic.
+      if (spell_damage(ch, ch, self_dam, SPLDAM_HOLY, RAWDAM_NOKILL | SPLDAM_NOSHRUG, 0) != DAM_NONEDEAD)
+	        return;
+    }
   }
-
-  send_to_char("&+WYou send a quick prayer to your Deity, offering your &+Rlifeforce&+W and asking for divine energy to flow through you!\r\n", ch);
-
-  if (spell_damage(ch, ch, self_dam*4, SPLDAM_GENERIC, RAWDAM_NOKILL | SPLDAM_NOSHRUG, 0) != DAM_NONEDEAD)
-    return;
 
   opposing_align = IS_OPPOSING_ALIGN(ch, victim);
 
@@ -20166,6 +20173,8 @@ void spell_life_bolt(int level, P_char ch, char *arg, int type,
   { 
     dam >>= 1;
   }
+
+  dam += self_dam;
 
   if (resists_spell(ch, victim))
     return;
@@ -20183,7 +20192,7 @@ void spell_life_bolt(int level, P_char ch, char *arg, int type,
       send_to_char("&+WThe beam &+Rrends&+W your soul!\r\n", victim); 
 
     if (IS_ALIVE(ch))
-      send_to_char("&+WYour victim seems to be in excruciating pain!", ch);
+      send_to_char("&+WYour victim seems to be in excruciating pain!\r\n", ch);
   }
 }
 

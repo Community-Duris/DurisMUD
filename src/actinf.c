@@ -1831,7 +1831,7 @@ void list_char_to_char(P_char list, P_char ch, int mode)
     {
 
       if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && !IS_UNDEAD(i) &&
-          !IS_AFFECTED3(i, AFF3_NON_DETECTION))
+          !IS_ANGEL(i) && !IS_AFFECTED3(i, AFF3_NON_DETECTION))
       {
         if (higher)
           send_to_char("&+LYou sense a lifeform above you.\n", ch);
@@ -1841,7 +1841,8 @@ void list_char_to_char(P_char list, P_char ch, int mode)
           send_to_char("&+LYou sense a lifeform nearby.\n", ch);
       }
       else if (IS_AFFECTED(ch, AFF_SENSE_LIFE) &&
-               (IS_AFFECTED3(i, AFF3_NON_DETECTION) || IS_UNDEAD(i)) &&
+               (IS_AFFECTED3(i, AFF3_NON_DETECTION) || IS_UNDEAD(i) ||
+		IS_ANGEL(i)) &&
                !number(0, 4))
         send_to_char("&+rYou barely sense a lifeform nearby.\n", ch);
       continue;

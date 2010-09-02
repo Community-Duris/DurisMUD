@@ -1427,6 +1427,10 @@ P_obj make_corpse(P_char ch, int loss)
       act("$n explodes into all corners of the room, covering it in darkness!", TRUE, ch, 0, 0, TO_ROOM);
       spell_darkness(GET_LEVEL(ch), ch, 0, 0, 0, 0);
       break;
+    case RACE_DEVA:
+      act("$n explodes into all corners of the room, covering it in pure light!", TRUE, ch, 0, 0, TO_ROOM);
+      spell_continual_light(GET_LEVEL(ch), ch, 0, 0, 0, 0);
+      break;
     case RACE_V_ELEMENTAL:
       act("$n howls, and returns to the void which spawned it.", TRUE, ch, 0, 0, TO_ROOM);
       break;
@@ -1468,10 +1472,11 @@ void make_bloodstain(P_char ch)
   if (!HAS_FOOTING(ch))
     return;
 
-  if (ch->specials.fighting && IS_UNDEADRACE(ch->specials.fighting))
+  if (ch->specials.fighting && 
+      (IS_UNDEADRACE(ch->specials.fighting) || IS_ANGEL(ch->specials.fighting)))
     return;
 
-  if (IS_UNDEADRACE(ch))
+  if (IS_UNDEADRACE(ch) || IS_ANGEL(ch))
     return;
 
   if (world[ch->in_room].contents)
@@ -2349,12 +2354,10 @@ void die(P_char ch, P_char killer)
         has_innate(killer, INNATE_SPAWN) || 
         has_innate(killer, INNATE_ALLY))) 
     {
-      debug("hi");
       if((IS_NPC(ch) &&
         !number(0, 2)) ||
         !number(0, 3))
       {
-	debug("hi2");
         if (IS_PC(killer) &&
 	    !affected_by_spell(killer, SPELL_SPAWN) &&
 	    !affected_by_spell(killer, TAG_SPAWN))
@@ -3543,7 +3546,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
   {
     act("$N&+W grins wickedly as $e absorbs your spell!&n",
       FALSE, ch, 0, victim, TO_CHAR);
-    act("&+WYess! You can feel the holy energies flowing into your body...&n",
+    act("&+WYess! You can feel the energies flowing into your body...&n",
       FALSE, ch, 0, victim, TO_VICT);
     act("$N&+W grins wickedly as $e absorbs&n $n&+L's spell!&n",
       FALSE, ch, 0, victim, TO_NOTVICT);
@@ -5059,7 +5062,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
   // Tranced vamping
   if(!vamped &&
     (flags & RAWDAM_TRANCEVAMP) &&
-    IS_UNDEADRACE(ch) &&
+    (IS_UNDEADRACE(ch) || IS_ANGEL(ch)) &&
     !IS_AFFECTED4(ch, AFF4_BATTLE_ECSTASY))
   {
     if(IS_NPC(ch))
@@ -6737,6 +6740,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
     
     if(IS_HUMANOID(victim) &&
       !IS_UNDEADRACE(victim) &&
+      !IS_ANGEL(victim) &&
       !IS_GREATER_RACE(victim) &&
       !IS_ELITE(victim) &&
       monk_critic(ch, victim))

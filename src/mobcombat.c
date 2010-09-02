@@ -380,7 +380,7 @@ int UndeadCombat(P_char ch)
   if(!IS_PC_PET(ch) &&
     (GET_RACE(ch) == RACE_GHOST || GET_RACE(ch) == RACE_SPECTRE ||
     GET_RACE(ch) == RACE_WRAITH || GET_RACE(ch) == RACE_SHADOW ||
-    GET_RACE(ch) == RACE_BRALANI) &&
+    GET_RACE(ch) == RACE_BRALANI || GET_RACE(ch) == RACE_DEVA) &&
     (number(1, 100) <= 10))
   {
     GhostFearEffect(ch);
@@ -402,13 +402,68 @@ int UndeadCombat(P_char ch)
   if ((IS_SPECTRE(ch) || IS_ASURA(ch)) && !IS_PC_PET(ch))
     SpectreCombat(ch, victim);
 
-  if (IS_SHADOW(ch))
+  if (IS_SHADOW(ch) || IS_DEVA(ch))
     ShadowCombat(ch, victim);
 
   if((IS_WRAITH(ch) || IS_BRALANI(ch)) && !IS_PC_PET(ch))
     WraithCombat(ch, victim);
 
   if (GET_RACE(ch) == RACE_VAMPIRE && victim && number(0,1))
+    innate_gaze(ch, GET_OPPONENT(ch));
+
+  return FALSE;
+}
+
+void TitanCombat(P_char ch, int i)
+{
+}
+
+void ArchonCombat(P_char ch, P_char victim)
+{}
+
+void AsuraCombat(P_char ch, P_char victim)
+{}
+
+void DevaCombat(P_char ch, P_char victim)
+{}
+
+void BralaniCombat(P_char ch, P_char victim)
+{}
+
+int AngelCombat(P_char ch)
+{
+  P_char victim = NULL;
+  
+  if (ch->in_room < 0)
+    return TRUE;
+
+  if(!IS_PC_PET(ch) &&
+   ( GET_RACE(ch) == RACE_BRALANI || GET_RACE(ch) == RACE_DEVA) &&
+    (number(1, 100) <= 10))
+  {
+    GhostFearEffect(ch);
+    return TRUE;
+  }
+
+  if ((IS_TITAN(ch) || IS_AVATAR(ch)) && IS_PC_PET(ch))
+    TitanCombat(ch, FALSE);
+
+  if( IS_FIGHTING(ch) )
+    victim = ch->specials.fighting;
+  
+  if (IS_ARCHON(ch))
+    ArchonCombat(ch, victim);
+
+  if (IS_ASURA(ch) && !IS_PC_PET(ch))
+    AsuraCombat(ch, victim);
+
+  if (IS_DEVA(ch))
+    DevaCombat(ch, victim);
+
+  if(IS_BRALANI(ch) && !IS_PC_PET(ch))
+    BralaniCombat(ch, victim);
+
+  if (GET_RACE(ch) == RACE_BRALANI && victim && number(0,1))
     innate_gaze(ch, GET_OPPONENT(ch));
 
   return FALSE;

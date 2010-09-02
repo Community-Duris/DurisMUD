@@ -127,7 +127,7 @@ const struct undead_description undead_data[NECROPET_LAST + 1] = {
    AFF_SENSE_LIFE + AFF_FLY + AFF_INVISIBLE + AFF_PROTECT_EVIL,
    AFF2_PROT_COLD + AFF4_PHANTASMAL_FORM,
    5, 50, 8, CLASS_PSIONICIST,
-   RACE_SHADOW}
+   RACE_DEVA}
 };
 
 #define NECROPLASM_VNUM 67243
@@ -2442,7 +2442,7 @@ void spell_undead_to_death(int level, P_char ch, char *arg, int type,
     return;
   }
   
-  if(!IS_UNDEADRACE(victim) ||
+  if(!IS_UNDEADRACE(victim) || !IS_ANGEL(victim) ||
      IS_ELITE(victim))
   {
     send_to_char("Your spell fails.\r\n", ch);
