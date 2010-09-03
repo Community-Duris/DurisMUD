@@ -632,6 +632,10 @@ void sql_world_quest_finished(P_char ch, P_obj reward)
 
 int sql_world_quest_can_do_another(P_char ch)
 {
+  // This crashed us when paly's horse called this function.
+  if (!IS_PC(ch))
+    return 0;
+  
   MYSQL_RES *db = 0;
   if(GET_LEVEL(ch) < 50)
 	 db = db_query("SELECT count(id) FROM world_quest_accomplished where pid = %d and player_level =%d and TO_DAYS( NOW() ) - TO_DAYS( timestamp ) <= 0", GET_PID(ch), GET_LEVEL(ch) );
