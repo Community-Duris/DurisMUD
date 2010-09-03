@@ -2235,7 +2235,7 @@ void assign_command_pointers(void)
    */
   CMD_N(CMD_DESCEND, STAT_NORMAL + POS_PRONE, do_descend, 0);
   CMD_N(CMD_REMORT, STAT_NORMAL + POS_PRONE, do_remort, 0);
-  CMD_N(CMD_SPECIALIZE, STAT_NORMAL + POS_PRONE, do_specialize, 0);
+  CMD_N(CMD_SPECIALIZE, STAT_SLEEPING + POS_PRONE, do_specialize, 0);
 //  CMD_N(CMD_SPECIALIZE, STAT_NORMAL + POS_PRONE, do_spec, 0);
   CMD_N(CMD_APPRAISE, STAT_NORMAL + POS_PRONE, do_appraise, 0);
   CMD_N(CMD_APPLY, STAT_RESTING + POS_PRONE, do_apply_poison, 0);
