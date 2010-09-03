@@ -2807,8 +2807,10 @@ int STAT_INDEX_SPELL_PULSE(float v)
    return 10;
  if (v > 0.650)
    return 11;
- if (v > 0.600)
+ else
    return 12;
+
+ return 12;
 }
 
 bool are_together(P_char ch1, P_char ch2)
