@@ -5767,7 +5767,7 @@ void ascend_theurgist(P_char ch)
   forget_spells(ch, -1);
   ch->player.spec = 0;
   ch->player.secondary_class = 0;
-  ch->only.pc->epics = MAX(0, ch->only.pc->epics - (int) get_property("ascend.epicCost", 10));
+  ch->only.pc->epics = MAX(0, ch->only.pc->epics - (int) get_property("ascend.epicCost.Eladrin", 10));
   GET_HOME(ch) = GET_BIRTHPLACE(ch) = GET_ORIG_BIRTHPLACE(ch) = ch->in_room;
 }
 
@@ -5895,6 +5895,7 @@ void do_descend(P_char ch, char *arg, int cmd)
   const int THIEF = 7;
   const int CONJ = 8;
   const int  ILLU = 9;
+  int cost = 0;
   char second_arg[MAX_INPUT_LENGTH], third_arg[MAX_INPUT_LENGTH];
   char buff[64];
 
@@ -5941,10 +5942,12 @@ void do_descend(P_char ch, char *arg, int cmd)
     if(GET_CLASS(ch, CLASS_ANTIPALADIN))
     {
       SELECTION = DREAD;
+      cost = get_property("descend.epicCost", 2500);
     }
     if(GET_CLASS(ch, CLASS_NECROMANCER))
     {
       SELECTION = NECRO;
+      cost = get_property("descent.epicCost.Lich", 250);
     }
       /*
      if (!str_cmp(second_arg,  "Warrior")){
@@ -6188,7 +6191,7 @@ void do_descend(P_char ch, char *arg, int cmd)
     forget_spells(ch, -1);
     ch->player.spec = 0;
     ch->player.secondary_class = 0;
-    ch->only.pc->epics = MAX(0, ch->only.pc->epics - (int) get_property("descend.epicCost", 10));
+    ch->only.pc->epics = MAX(0, ch->only.pc->epics - cost);
 
     if(RACE_EVIL(ch))
     {
