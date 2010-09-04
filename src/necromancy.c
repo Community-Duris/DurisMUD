@@ -339,10 +339,9 @@ int can_raise_draco(P_char ch, int level, bool bGreater)
   else
     cost = 37;
     
-
+  //debug("numb %d + cost %d > np %d", numb, cost, necro_power);
   if ((numb + cost > necro_power) &&
-      !IS_TRUSTED(ch) &&
-      IS_PC(ch))
+      !IS_TRUSTED(ch))
   {
     act("You are too weak to animate more corpses!",
       FALSE, ch, 0, 0, TO_CHAR);
