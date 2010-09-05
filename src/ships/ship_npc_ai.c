@@ -444,6 +444,8 @@ bool NPCShipAI::find_new_target()
     {
         if (ship == cyrics_revenge && ship->timer[T_BSTATION] == 0 && !IS_NPC_SHIP(contacts[i].ship))
         { // chance to ignore player's if not too close
+            if (contacts[i].range > 35)
+                continue;
             if (contacts[i].range > 10 
                 && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT ||
                 number(0, ((int)contacts[i].range - 9) * 15) > 0))
