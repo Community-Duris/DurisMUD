@@ -20325,8 +20325,6 @@ void spell_life_bolt(int level, P_char ch, char *arg, int type,
   
   dam = (dice(1, 4) * 4 + number(1, level))*num_missiles;
 
-  self_dam = dam;
-
   if (!victim)
   {
     send_to_char("You need someone as a target to your spell.\r\n", ch);
@@ -20337,6 +20335,8 @@ void spell_life_bolt(int level, P_char ch, char *arg, int type,
       GET_LEVEL(ch) >= get_property("spell.lifebolt.selfdam.lvl", 0.000) &&
       GET_SPEC(ch, CLASS_THEURGIST, SPEC_TEMPLAR))
   {
+    self_dam = dam;
+    
     if (IS_PC(victim))
       self_dam >>= 2;
     else
