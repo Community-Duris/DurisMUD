@@ -448,7 +448,7 @@ bool NPCShipAI::find_new_target()
                 continue;
             if (contacts[i].range > 10 
                 && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT ||
-                number(0, ((int)contacts[i].range - 7) * 8) > 0))
+                number(0, ((int)contacts[i].range - 9) * 15) > 0))
             {
                 continue;
             }
@@ -502,7 +502,12 @@ bool NPCShipAI::check_ammo()
         if (ship->slot[slot].type == SLOT_WEAPON) 
         {
             if(ship->slot[slot].val1 != 0)
-            { out_of_ammo = false; break; }
+                out_of_ammo = false;
+            if(ship == cyrics_revenge && ship->slot[slot].val1 < weapon_data[ship->slot[slot].index].ammo)
+            { // Revenge reloads some ammo in combat
+                if (number(1, 60) == 1)
+                    ship->slot[slot].val1++;
+            }
         }
     }
     return !out_of_ammo;

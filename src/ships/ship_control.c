@@ -1157,9 +1157,10 @@ int look_contacts(P_char ch, P_ship ship)
           (int)contacts[i].ship->heading,
           contacts[i].ship->speed, 
           contacts[i].arc,
-          SHIP_SINKING(contacts[i].ship) ? "&+RS&N" :
-            SHIP_DOCKED(contacts[i].ship) ? "&+yD&N" :
-               SHIP_ANCHORED(contacts[i].ship) ? "&+yA&N" : "");
+          SHIP_FLYING(contacts[i].ship) ? "&+cF&N" :
+            SHIP_SINKING(contacts[i].ship) ? "&+RS&N" :
+              SHIP_DOCKED(contacts[i].ship) ? "&+yD&N" :
+                SHIP_ANCHORED(contacts[i].ship) ? "&+yA&N" : "");
     }
     return TRUE;
 }

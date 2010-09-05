@@ -18,9 +18,6 @@
 
 extern int top_of_world;
 
-bool nexus_to_cyrics_revenge = false;
-
-
 //////////////////////
 // NAMES
 //////////////////////
@@ -863,101 +860,6 @@ bool try_unload_npc_ship(P_ship ship)
     return TRUE;
 }
 
-
-P_ship cyrics_revenge = 0;
-
-bool load_cyrics_revenge()
-{
-    if (cyrics_revenge != 0)
-        return false;
-
-    int i = 0, room;
-    for (; i < 20; i++)
-    {
-        room = number (0, top_of_world);
-        if (IS_MAP_ROOM(room) && world[room].sector_type == SECT_OCEAN)
-            break;
-    }
-    if (i == 20) return false;
-
-
-    NPCShipSetup* setup = find_ship_setup(4, SH_DREADNOUGHT, -1);
-    if (!setup)
-        return false;
-
-    cyrics_revenge = create_npc_ship(setup, 0);
-    if (!cyrics_revenge)
-        return false;
-
-    name_ship(CYRICS_REVENGE_NAME, cyrics_revenge);
-    if (!load_ship(cyrics_revenge, room))
-        return false;
-
-    setup->setup(cyrics_revenge);
-    cyrics_revenge->npc_ai->type = NPC_AI_HUNTER;
-    cyrics_revenge->npc_ai->advanced = 1;
-    cyrics_revenge->npc_ai->permanent = true;
-    cyrics_revenge->npc_ai->mode = NPC_AI_CRUISING;
-
-    load_cyrics_revenge_crew(cyrics_revenge);
-
-    assignid(cyrics_revenge, NULL, true);
-    REMOVE_BIT(cyrics_revenge->flags, DOCKED);
-    SET_BIT(cyrics_revenge->flags, AIR);
-    return true;
-}
-
-bool load_cyrics_revenge_crew(P_ship ship)
-{
-    NPCShipCrewData* crew_data = npcShipCrewData + CYRICS_REVENGE_CREW;
-    P_char captain = load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->captain_mob, 5);
-    if (!captain) return false;
-  
-    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->firstmate_mob, 3); // sentinel spec mobs
-    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 6))].number, crew_data->spec_mobs[0], 3); 
-    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 2))].number, crew_data->spec_mobs[1], 3);
-    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 1))].number, crew_data->spec_mobs[2], 3);
-    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->spec_mobs[3], 3); // walking surgeon
-
-    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->spec_mobs[4], 2); // two lookouts
-    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->spec_mobs[4], 2);
-
-    for (int i = 0; i < 9; i++)
-    {
-        load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->inner_grunts[0], 1);
-        load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->inner_grunts[1], 1);
-    }
-
-    set_crew(ship, crew_data->ship_crew_index, false);
-    ship->npc_ai->crew_data = crew_data;
-
-
-    room_direction_data* dn_ex = world[real_room0(SHIP_ROOM_NUM(ship, 2))].dir_option[DOWN];
-    dn_ex->general_description = str_dup("A heavy wooden hatch leads to ship's hold.");
-    dn_ex->exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED | EX_SECRET | EX_PICKPROOF;
-    dn_ex->key = 40225;
-    dn_ex->keyword = str_dup("hatch heavy");
-
-    room_direction_data* up_ex = world[real_room0(SHIP_ROOM_NUM(ship, 7))].dir_option[UP];
-    up_ex->general_description = str_dup("A heavy wooden hatch leads to ship's hold.");
-    up_ex->exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED | EX_SECRET | EX_PICKPROOF;
-    up_ex->key = 40225;
-    up_ex->keyword = str_dup("hatch heavy");
-
-    P_obj chest = load_treasure_chest(ship, captain, crew_data);
-    int r_num = real_object(40225);
-    if (r_num < 0) return NULL;
-    P_obj nexus_key = read_object(r_num, REAL);
-    obj_to_obj(nexus_key, chest);
-    return true;
-}
-
-
-int get_cyrics_revenge_nexus_rvnum(P_ship ship)
-{
-    return SHIP_ROOM_NUM(ship, 7);
-}
-
 /////////////////////////////
 //  CREWS
 /////////////////////////////
@@ -1236,3 +1138,101 @@ bool load_npc_ship_crew(P_ship ship, int crew_size, int ship_level)
 
 
 
+/////////////////////////////
+//  Cyric's Revenge
+/////////////////////////////
+
+P_ship cyrics_revenge = 0;
+bool nexus_to_cyrics_revenge = true;
+
+bool load_cyrics_revenge()
+{
+    if (cyrics_revenge != 0)
+        return false;
+
+    int i = 0, room;
+    for (; i < 20; i++)
+    {
+        room = number (0, top_of_world);
+        if (IS_MAP_ROOM(room) && world[room].sector_type == SECT_OCEAN)
+            break;
+    }
+    if (i == 20) return false;
+
+
+    NPCShipSetup* setup = find_ship_setup(4, SH_DREADNOUGHT, -1);
+    if (!setup)
+        return false;
+
+    cyrics_revenge = create_npc_ship(setup, 0);
+    if (!cyrics_revenge)
+        return false;
+
+    name_ship(CYRICS_REVENGE_NAME, cyrics_revenge);
+    if (!load_ship(cyrics_revenge, room))
+        return false;
+
+    setup->setup(cyrics_revenge);
+    cyrics_revenge->npc_ai->type = NPC_AI_HUNTER;
+    cyrics_revenge->npc_ai->advanced = 1;
+    cyrics_revenge->npc_ai->permanent = true;
+    cyrics_revenge->npc_ai->mode = NPC_AI_CRUISING;
+
+    load_cyrics_revenge_crew(cyrics_revenge);
+
+    assignid(cyrics_revenge, NULL, true);
+    REMOVE_BIT(cyrics_revenge->flags, DOCKED);
+    SET_BIT(cyrics_revenge->flags, AIR);
+    return true;
+}
+
+bool load_cyrics_revenge_crew(P_ship ship)
+{
+    NPCShipCrewData* crew_data = npcShipCrewData + CYRICS_REVENGE_CREW;
+    P_char captain = load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->captain_mob, 5);
+    if (!captain) return false;
+  
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->firstmate_mob, 3); // sentinel spec mobs
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 6))].number, crew_data->spec_mobs[0], 3); 
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 2))].number, crew_data->spec_mobs[1], 3);
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 1))].number, crew_data->spec_mobs[2], 3);
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->spec_mobs[3], 3); // walking surgeon
+
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->spec_mobs[4], 2); // two lookouts
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->spec_mobs[4], 2);
+
+    for (int i = 0; i < 9; i++)
+    {
+        load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->inner_grunts[0], 1);
+        load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->inner_grunts[1], 1);
+    }
+
+    set_crew(ship, crew_data->ship_crew_index, false);
+    ship->npc_ai->crew_data = crew_data;
+
+
+    room_direction_data* dn_ex = world[real_room0(SHIP_ROOM_NUM(ship, 2))].dir_option[DOWN];
+    dn_ex->general_description = str_dup("A heavy wooden hatch leads to ship's hold.");
+    dn_ex->exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED | EX_SECRET | EX_PICKPROOF;
+    dn_ex->key = 40225;
+    dn_ex->keyword = str_dup("hatch heavy");
+
+    room_direction_data* up_ex = world[real_room0(SHIP_ROOM_NUM(ship, 7))].dir_option[UP];
+    up_ex->general_description = str_dup("A heavy wooden hatch leads to ship's hold.");
+    up_ex->exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED | EX_SECRET | EX_PICKPROOF;
+    up_ex->key = 40225;
+    up_ex->keyword = str_dup("hatch heavy");
+
+    P_obj chest = load_treasure_chest(ship, captain, crew_data);
+    int r_num = real_object(40225);
+    if (r_num < 0) return NULL;
+    P_obj nexus_key = read_object(r_num, REAL);
+    obj_to_obj(nexus_key, chest);
+    return true;
+}
+
+
+int get_cyrics_revenge_nexus_rvnum(P_ship ship)
+{
+    return SHIP_ROOM_NUM(ship, 7);
+}

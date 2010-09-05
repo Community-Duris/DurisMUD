@@ -454,7 +454,11 @@ bool sink_ship(P_ship ship, P_ship attacker)
         write_ship(ship);
 
         if (attacker->target == ship)
+        {
             attacker->target = NULL;
+            if (attacker == cyrics_revenge && IS_NPC_SHIP(ship)) // dirty hack to counter revenge's appearing in pirate fight
+                attacker->timer[T_BSTATION] = 0;
+        }
     }
     return true;
 }

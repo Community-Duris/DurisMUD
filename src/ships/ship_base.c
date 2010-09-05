@@ -69,7 +69,7 @@ void initialize_ships()
   }
 
   initialize_ship_cargo();
-  //load_cyrics_revenge();
+  load_cyrics_revenge();
 }
 
 //--------------------------------------------------------------------
