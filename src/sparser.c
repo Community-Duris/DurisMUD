@@ -1524,7 +1524,7 @@ bool parse_spell(P_char ch, char *argument,
       {
         send_to_char("&+mYour thoughts have not collected enough to cast THAT spell.&n\n", ch);
       }
-      else if (IS_ANGELIC(ch))
+      else if (IS_ANGEL(ch))
       {
 	send_to_char("&+WYour illumination is not sufficient enough to cast that spell.&n\n", ch);
       }
