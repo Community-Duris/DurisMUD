@@ -12706,9 +12706,6 @@ void spell_ice_storm(int level, P_char ch, char *arg, int type, P_char victim,
   int num_dice = MIN(level, 36);
   int dam = dice(num_dice, 8);
 
-  if (IS_PC(victim))
-    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
-  
   dam = dam * get_property("spell.area.damage.factor.icestorm", 1.000);
 
   if(rain) {
@@ -12731,6 +12728,9 @@ void spell_ice_storm(int level, P_char ch, char *arg, int type, P_char victim,
         act("$n is splashed with &+bwater&n!", FALSE, tch, 0, 0, TO_ROOM);
         make_wet(tch, WAIT_MIN);
       } else {
+        if (IS_PC(tch))
+          dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  
         send_to_char("You are blasted by the storm!\n", tch);
         spell_damage(ch, tch, dam, SPLDAM_COLD, SPLDAM_GLOBE, &messages);
       }
