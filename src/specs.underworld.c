@@ -1907,7 +1907,7 @@ int githpc_special_weap(P_obj obj, P_char ch, int cmd, char *arg)
         vict = get_char(last_key);
         if (vict && IS_PC(vict) && (vict->in_room != ch->in_room))
         {
-          if (!number(0, 3))
+          if (!number(0, 6))
           {
             /* time to summon */
 
