@@ -1514,13 +1514,13 @@ void ship_activity()
                                 ship->x -= 1.000;
                                 if (SHIP_FLYING(ship))
                                 {
-                                    send_to_room_f(ship->location, "%s floats east above you.\r\n", ship->name);
-                                    send_to_room_f(loc, "%s floats in from the west above you.\r\n", ship->name);
+                                    send_to_room_f(ship->location, "%s&N floats east above you.\r\n", ship->name);
+                                    send_to_room_f(loc, "%s&N floats in from the west above you.\r\n", ship->name);
                                 }
                                 else
                                 {
-                                    send_to_room_f(ship->location, "%s sails east.\r\n", ship->name);
-                                    send_to_room_f(loc, "%s sails in from the west.\r\n", ship->name);
+                                    send_to_room_f(ship->location, "%s&N sails east.\r\n", ship->name);
+                                    send_to_room_f(loc, "%s&N sails in from the west.\r\n", ship->name);
                                 }
                             } 
                             else if (ship->x < 50.000) 
@@ -1528,13 +1528,13 @@ void ship_activity()
                                 ship->x += 1.000;
                                 if (SHIP_FLYING(ship))
                                 {
-                                    send_to_room_f(ship->location, "%s floats west above you.\r\n", ship->name);
-                                    send_to_room_f(loc, "%s floats in from the east above you.\r\n", ship->name);
+                                    send_to_room_f(ship->location, "%s&N floats west above you.\r\n", ship->name);
+                                    send_to_room_f(loc, "%s&N floats in from the east above you.\r\n", ship->name);
                                 }
                                 else
                                 {
-                                    send_to_room_f(ship->location, "%s sails west.\r\n", ship->name);
-                                    send_to_room_f(loc, "%s sails in from the east.\r\n", ship->name);
+                                    send_to_room_f(ship->location, "%s&N sails west.\r\n", ship->name);
+                                    send_to_room_f(loc, "%s&N sails in from the east.\r\n", ship->name);
                                 }
                             }
         
@@ -1543,13 +1543,13 @@ void ship_activity()
                                 ship->y -= 1.000;
                                 if (SHIP_FLYING(ship))
                                 {
-                                    send_to_room_f(ship->location, "%s floats north above you.\r\n", ship->name);
-                                    send_to_room_f(loc, "%s floats in from the south above you.\r\n", ship->name);
+                                    send_to_room_f(ship->location, "%s&N floats north above you.\r\n", ship->name);
+                                    send_to_room_f(loc, "%s&N floats in from the south above you.\r\n", ship->name);
                                 }
                                 else
                                 {
-                                    send_to_room_f(ship->location, "%s sails north.\r\n", ship->name);
-                                    send_to_room_f(loc, "%s sails in from the south.\r\n", ship->name);
+                                    send_to_room_f(ship->location, "%s&N sails north.\r\n", ship->name);
+                                    send_to_room_f(loc, "%s&N sails in from the south.\r\n", ship->name);
                                 }
                             } 
                             else if (ship->y < 50.000) 
@@ -1557,13 +1557,13 @@ void ship_activity()
                                 ship->y += 1.000;
                                 if (SHIP_FLYING(ship))
                                 {
-                                    send_to_room_f(ship->location, "%s floats south above you.\r\n", ship->name);
-                                    send_to_room_f(loc, "%s floats in from the north above you.\r\n", ship->name);
+                                    send_to_room_f(ship->location, "%s&N floats south above you.\r\n", ship->name);
+                                    send_to_room_f(loc, "%s&N floats in from the north above you.\r\n", ship->name);
                                 }
                                 else
                                 {
-                                    send_to_room_f(ship->location, "%s sails south.\r\n", ship->name);
-                                    send_to_room_f(loc, "%s sails in from the north.\r\n", ship->name);
+                                    send_to_room_f(ship->location, "%s&N sails south.\r\n", ship->name);
+                                    send_to_room_f(loc, "%s&N sails in from the north.\r\n", ship->name);
                                 }
                             }
                             if (SHIP_OBJ(ship) && (loc != ship->location)) 

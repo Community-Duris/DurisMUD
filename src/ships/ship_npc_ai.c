@@ -106,6 +106,7 @@ NPCShipAI::NPCShipAI(P_ship s, P_char ch)
     did_board = 0;
     speed_restriction = -1;
     since_last_fired_right = 0;
+    target_side = SIDE_REAR;
 
     if (SHIP_HULL_WEIGHT(ship) > 200)
     {
@@ -440,29 +441,58 @@ bool NPCShipAI::find_current_target()
 
 bool NPCShipAI::find_new_target()
 {
-    for (int i = 0; i < contacts_count; i++) 
+    int i = 0;
+    if (ship == cyrics_revenge)
     {
-        if (ship == cyrics_revenge && ship->timer[T_BSTATION] == 0 && !IS_NPC_SHIP(contacts[i].ship))
-        { // chance to ignore player's if not too close
-            if (contacts[i].range > 35)
-                continue;
-            if (contacts[i].range > 10 
-                && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT ||
-                number(0, ((int)contacts[i].range - 9) * 15) > 0))
-            {
-                continue;
-            }
-        }
-        if (is_valid_target(contacts[i].ship))
+        for (i = 0; i < contacts_count; i++) 
         {
-            ship->target = contacts[i].ship;
-            update_target(i);
-            ship->timer[T_MAINTENANCE] = 0;
-            send_message_to_debug_char("Found new target: %s\r\n", contacts[i].ship->id);
-            return true;
+            if (!IS_NPC_SHIP(contacts[i].ship))
+                continue;
+            if (ship->timer[T_BSTATION] == 0)
+            {
+                if (contacts[i].range > 35)
+                    continue;
+                if (contacts[i].range > 10 && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT))
+                    continue;
+                if (number(0, (int)contacts[i].range * 10) > 0)
+                    continue;
+            }
+            if (is_valid_target(contacts[i].ship))
+                goto found;
+        }
+        for (i = 0; i < contacts_count; i++) 
+        {
+            if (IS_NPC_SHIP(contacts[i].ship))
+                continue;
+            if (ship->timer[T_BSTATION] == 0)
+            {
+                if (contacts[i].range > 35)
+                    continue;
+                if (contacts[i].range > 10 && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT))
+                    continue;
+                if (number(0, (int)contacts[i].range * 10) > 0)
+                    continue;
+            }
+            if (is_valid_target(contacts[i].ship))
+                goto found;
+        }
+    }
+    else
+    {
+        for (i = 0; i < contacts_count; i++) 
+        {
+            if (is_valid_target(contacts[i].ship))
+                goto found;
         }
     }
     return false;
+
+  found:
+    ship->target = contacts[i].ship;
+    update_target(i);
+    ship->timer[T_MAINTENANCE] = 0;
+    send_message_to_debug_char("Found new target: %s\r\n", contacts[i].ship->id);
+    return true;
 }
 void NPCShipAI::update_target(int i) // index in contacts
 {
