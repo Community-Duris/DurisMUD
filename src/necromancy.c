@@ -92,7 +92,7 @@ const struct undead_description undead_data[NECROPET_LAST + 1] = {
    AFF_HASTE + AFF_DETECT_INVISIBLE +
    AFF_SENSE_LIFE + AFF_FLY + AFF_INVISIBLE + AFF_PROTECT_GOOD,
    AFF2_PROT_COLD + AFF4_PHANTASMAL_FORM,
-   5, 50, 18, CLASS_PSIONICIST,
+   5, 50, 65, CLASS_PSIONICIST,
    RACE_SHADOW},
   {
    "hound archon brawler", "&+yhou&+Yn&+yd &+Rarch&+Wo&+Rn &+rbr&+Raw&+rler&n", 2, ACT_NICE_THIEF, AFF_HASTE, 0, 1.2, 21, 10, CLASS_WARRIOR,
@@ -126,7 +126,7 @@ const struct undead_description undead_data[NECROPET_LAST + 1] = {
    AFF_HASTE + AFF_DETECT_INVISIBLE +
    AFF_SENSE_LIFE + AFF_FLY + AFF_INVISIBLE + AFF_PROTECT_EVIL,
    AFF2_PROT_COLD + AFF4_PHANTASMAL_FORM,
-   5, 50, 18, CLASS_PSIONICIST,
+   5, 50, 65, CLASS_PSIONICIST,
    RACE_DEVA}
 };
 

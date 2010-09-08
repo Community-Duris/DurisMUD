@@ -13471,14 +13471,14 @@ void spell_sunray(int level, P_char ch, char *arg, int type, P_char victim,
  
 // A little more than iceball and does less damage when not outside.
 // However, has a chance to blind victim for a while.
-  dam = dice((int)(level * 4), 6) - number(5, 20);
+  dam = dice((int)(level * 4), 6) + number(0, 5);
   
   if(IS_AFFECTED(victim, AFF_BLIND) ||
      !IS_OUTSIDE(victim->in_room))
-        dam = (int)(dam * 0.85);
+        dam = (int)(dam * 0.95);
     
   if(!NewSaves(victim, SAVING_SPELL, mod))
-      dam = (int)(dam * 1.10);
+      dam = (int)(dam * 1.20);
     
   if(!NewSaves(victim, SAVING_SPELL, (int)(mod / 3)) &&
      !IS_BLIND(victim))
