@@ -1459,7 +1459,7 @@ void vampire_bite(P_char ch, P_char victim)
     "$n's savage bite opens a deadly wound in $N's neck!"
   };
 
-  CharWait(victim, PULSE_VIOLENCE);
+  //CharWait(victim, PULSE_VIOLENCE);
   CharWait(ch, 2 * PULSE_VIOLENCE);
 
   if (melee_damage(ch, victim, dice(2, GET_LEVEL(ch)), 0, &messages) !=
