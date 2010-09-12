@@ -2318,7 +2318,7 @@ void do_shapechange(P_char ch, char *arg, int cmd)
     for (af = ch->affected, count = 1; af; af = af->next)
       if (af->type == TAG_KNOWN_SHAPE) {
         sprintf(buf, "[%d] %s &n(&+W%s&n)\n", count++, mob_index[real_mobile(af->modifier)].desc2,
-            how_learned[(5 * af->duration - 1)/get_property("innate.shapechange.memory.time", 500)]);
+          how_learned[BOUNDED(0, (5 * af->duration - 1)/get_property("innate.shapechange.memory.time", 500), 4)]);
         send_to_char(buf, ch);
       }
     return;

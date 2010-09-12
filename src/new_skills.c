@@ -558,7 +558,8 @@ void do_feign_death(P_char ch, char *arg, int cmd)
       {
         stop_fighting(t);
         
-        if(GET_CLASS(ch, CLASS_NECROMANCER) &&
+        if((GET_CLASS(ch, CLASS_NECROMANCER) ||
+	    GET_CLASS(ch, CLASS_THEURGIST)) &&
            GET_LEVEL(ch) > 40)
         {
           LOOP_THRU_PEOPLE(tch, ch)
