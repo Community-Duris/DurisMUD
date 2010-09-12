@@ -216,10 +216,19 @@ holy warhammer war hammer discipline~
 &+LA large warhammer lies here, the word '&+rDiscipline&+L' written along the hilt in blazing &+Ygold &+Llettering.&n~
 ~
 5 18 3 0 13 0 8448 8193 0 0 0
-4 4 5 0 0 0 0 0
+4 4 5 0 0 325 50 25
 4 17732 100
 E
-holy warhammer war hammer discipline~
+_room_msg~
+&N $n's $q &+mpu&+Ml&+mses &+Lwith a &+Yholy &+Wenergy &+Las a blast of &+bfr&+Bee&+bz&+Bi&+bng &+Cc&+Wo&+Cld &+Lis called forth to purge the &+ressence &+Lof $N!
+~
+E
+_victim_msg~
+&N$n's $q &+mpu&+Ml&+mses &+Lwith a &+Yholy &+Wenergy &+Land unleashes a blast of &+Ccold &+Lto &+rpunish &+Lyou!&n
+~
+E
+_char_msg~
+&N&+LYour $q &+mpu&+Ml&+mses &+Lwith a &+Yholy energy&+L, unleashing a powerful blast of &+Ccold &+Lin an attempt to &+rpunish &+Lthe &+ressence &+Lof $N!&n
 ~
 A
 18 4

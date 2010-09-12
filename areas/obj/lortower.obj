@@ -853,10 +853,10 @@ mithril hammer destroyer night _artifact_~
 &+CA large one handed hammer made of &+Wm&ni&+Wt&nh&+Wr&ni&+Wl l&+Cays here.&n~
 ~
 5 18 3 0 14 40 33849664 8193 512 480 0
-4 4 4 6 0 0 0 0
+4 4 4 6 0 378 50 25
 6 48945 100 8192 32960 0 0
 E
-mithril hammer destroyer night&n~
+mithril hammer destroyer night~
 &+C   This hammer seems to be made of the finest mithril. The mithril is made
 &+Cin designs that show creatures that seems to made of shadows being destroyed.
 &+CThe figure doing the destroying is a being bathed in golden light that is
@@ -875,6 +875,18 @@ mithril hammer destroyer night&n~
 &+Chandedly fought off the army. The hammer has been lost since then, some say
 &+Cit was destroyed, others say that it fell into the hands of the minions of
 &+CSargon.                               &n
+~
+E
+_victim_msg~
+&NTesting to see if this is where procs break.&n
+~
+E
+_room_msg~
+&NTesting to see if this is where procs break.&n
+~
+E
+_char_msg~
+&NTesting to see if this is the fix of glory.&n
 ~
 A
 18 4
