@@ -590,10 +590,23 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   {
     sprintf(Gbuf2, "%s", undead_data[typ].name);
     undead->player.name = str_dup(Gbuf2);
-    sprintf(Gbuf1, "a %s", undead_data[typ].short_desc);
-    undead->player.short_descr = str_dup(Gbuf1);
-    sprintf(Gbuf1, "A %s stands here.\r\n", undead_data[typ].short_desc);
-    undead->player.long_descr = str_dup(Gbuf1);
+    if (typ == THEURPET_SPECTRE ||
+	typ == THEURPET_LICH ||
+	typ == THEURPET_SHADOW)
+    {
+      sprintf(Gbuf1, "an %s", undead_data[typ].short_desc);
+      undead->player.short_descr = str_dup(Gbuf1);
+      sprintf(Gbuf1, "An %s stands here.\r\n", undead_data[typ].short_desc);
+      undead->player.long_descr = str_dup(Gbuf1);
+
+    }
+    else
+    {
+      sprintf(Gbuf1, "a %s", undead_data[typ].short_desc);
+      undead->player.short_descr = str_dup(Gbuf1);
+      sprintf(Gbuf1, "A %s stands here.\r\n", undead_data[typ].short_desc);
+      undead->player.long_descr = str_dup(Gbuf1);
+    }
   }
   else
   {
