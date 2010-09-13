@@ -1564,7 +1564,7 @@ int ship_panel_proc(P_obj obj, P_char ch, int cmd, char *arg)
         half_chop(arg, arg1, tmp_str);
         half_chop(tmp_str, arg2, arg3);
 
-        if (isname(arg1, "command")) 
+        if (isname(arg1, "commands")) 
         {
             return do_commands_help(ship, ch);
         }
