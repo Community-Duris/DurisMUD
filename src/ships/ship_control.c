@@ -823,7 +823,7 @@ int do_lock_target(P_char ch, P_ship ship, char* arg)
 
     if (!*arg) 
     {
-        send_to_char("Syntax: Lock <target id>\r\n", ch);
+        send_to_char("Syntax: Lock <id>/off\r\n", ch);
         return TRUE;
     }
     if (isname(arg, "off")) 
@@ -1354,6 +1354,36 @@ int claim_coffer(P_char ch, P_ship ship)
     return TRUE;
 }
 
+int do_commands_help(P_ship ship, P_char ch)
+{
+    send_to_char("Valid info commands:\r\n", ch);
+    send_to_char(" look commands\r\n", ch);
+    send_to_char(" look ship/status\r\n", ch);
+    send_to_char(" look crew\r\n", ch);
+    send_to_char(" look cargo\r\n", ch);
+    send_to_char(" look weaponspec\r\n", ch);
+    send_to_char(" look contacts\r\n", ch);
+    send_to_char(" look tactical [<x> <y>]\r\n", ch);
+    send_to_char(" scan [<id>]\r\n\r\n", ch);
+
+    send_to_char("Valid control commands:\r\n", ch);
+    send_to_char(" order heading <N/E/S/W/NW/NE/SW/SE/heading>\r\n", ch);
+    send_to_char(" order speed <speed>:\r\n", ch);
+    send_to_char(" order sail <N/E/S/W/heading/off> <distance>:\r\n", ch);
+    send_to_char(" order jettison cargo/contraband [<ncrates>]\r\n", ch);
+    send_to_char(" order anchor/undock\r\n", ch);
+    send_to_char(" order maneuver <N/E/S/W>\r\n", ch);
+    send_to_char(" order fly/land\r\n", ch);
+    send_to_char(" order signal <id> <message>\r\n", ch);
+    send_to_char(" get coins/money\r\n\r\n", ch);
+
+    send_to_char("Valid combat commands:\r\n", ch);
+    send_to_char(" lock <id>/off\r\n", ch);
+    send_to_char(" look sight/weapon <weapon>\r\n", ch);
+    send_to_char(" fire <weapon/fore/rear/port/starboard>\r\n", ch);
+    send_to_char(" order ram [off]\r\n", ch);
+    return TRUE;
+}
 int ship_panel_proc(P_obj obj, P_char ch, int cmd, char *arg)
 {
     if (!ch && !cmd)
@@ -1534,6 +1564,10 @@ int ship_panel_proc(P_obj obj, P_char ch, int cmd, char *arg)
         half_chop(arg, arg1, tmp_str);
         half_chop(tmp_str, arg2, arg3);
 
+        if (isname(arg1, "command")) 
+        {
+            return do_commands_help(ship, ch);
+        }
         if (isname(arg1, "cargo")) 
         {
             return look_cargo(ch, ship);
@@ -1572,3 +1606,4 @@ int ship_panel_proc(P_obj obj, P_char ch, int cmd, char *arg)
     }
     return FALSE;
 }
+

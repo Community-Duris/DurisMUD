@@ -52,8 +52,8 @@ int list_cargo(P_char ch, P_ship ship, int owned)
     send_to_char("\r\n&+y---=== We're buying ===---&N\r\n", ch);
     for (int i = 0; i < NUM_PORTS; i++) 
     {
-        if (i == rroom)
-            continue;
+        /*if (i == rroom)
+            continue;*/
       
         cost = cargo_buy_price(rroom, i);
 
@@ -77,8 +77,8 @@ int list_cargo(P_char ch, P_ship ship, int owned)
         bool caption = false;
         for (int i = 0; i < NUM_PORTS; i++) 
         {
-            if (i == rroom)
-                continue;
+            /*if (i == rroom)
+                continue;*/
           
             if (can_buy_contraband(ship, i))
             {
@@ -428,13 +428,13 @@ int sell_cargo_slot(P_char ch, P_ship ship, int slot, int rroom)
     if( type >= NUM_PORTS )
         return 0;
 
-    if (type == rroom)
+    /*if (type == rroom)
     {
         send_to_char_f(ch, "We don't buy %s&n here.\r\n", cargo_type_name(type));
         return 0;
     }
     else
-    {
+    {*/
         int crates = ship->slot[slot].val0;
         int cost = crates * cargo_buy_price(rroom, type);
         int profit = (int)(( ((float)cost / (float)ship->slot[slot].val1) - 1.00 ) * 100.0);
@@ -453,7 +453,7 @@ int sell_cargo_slot(P_char ch, P_ship ship, int slot, int rroom)
         adjust_ship_market(SOLD_CARGO, rroom, type, crates);
       
         return cost;
-    }
+    //}
 }
 
 int sell_cargo(P_char ch, P_ship ship, int slot)
@@ -527,13 +527,13 @@ int sell_contra_slot(P_char ch, P_ship ship, int slot, int rroom)
     if( type >= NUM_PORTS )
         return 0;
 
-    if (type == rroom)
+    /*if (type == rroom)
     {
         send_to_char_f(ch, "We're not interested in your %s&n.\r\n", contra_type_name(type));
         return 0;
     }
     else
-    {
+    {*/
       int crates = ship->slot[slot].val0;
       int cost = crates * contra_buy_price(rroom, type);
       int profit = (int)(( ((float)cost / (float)ship->slot[slot].val1) - 1.00 ) * 100.0);
@@ -552,7 +552,7 @@ int sell_contra_slot(P_char ch, P_ship ship, int slot, int rroom)
       adjust_ship_market(SOLD_CONTRA, rroom, type, crates);
 
       return cost;      
-    }
+    //}
 }
 
 int sell_contra(P_char ch, P_ship ship, int slot)
@@ -707,7 +707,7 @@ void check_contraband(P_ship ship, int to_room)
             {
                 conf_chance = 0;
             }
-            else*/ 
+            else*/
             {
                 conf_chance = get_property("ship.contraband.baseConfiscationChance", 0.0) + (float)crates / 2; // the more contraband you have, the bigger confiscation chance
                 conf_chance -= sqrt(ship->frags) / 5.0;

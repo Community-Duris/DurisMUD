@@ -464,6 +464,8 @@ int cargo_sell_price(int location, bool delayed)
 // i.e. the price the port will pay to buy cargo
 int cargo_buy_price(int location, int type, bool delayed)
 {
+  if (location == type)
+    return cargo_sell_price(location, delayed) * 0.5;
   if( delayed )
   {
     return (int) (1000 * cargo_location_data[type].base_cost_cargo * (cargo_location_mod[location][type] / 100.0) * ship_cargo_market_mod_delayed[location][type]);
@@ -478,13 +480,16 @@ int cargo_buy_price(int location, int type, bool delayed)
 int contra_sell_price(int location)
 {
   // the port sells its own contraband at just base price * market mod
- return (int) (1000 * cargo_location_data[location].base_cost_contra * ship_contra_market_mod[location][location]);
+   return (int) (1000 * cargo_location_data[location].base_cost_contra * ship_contra_market_mod[location][location]);
 }
 
 // i.e. the price the port will pay to buy contraband
 int contra_buy_price(int location, int type)
 {
-  return (int) (1000 * cargo_location_data[type].base_cost_contra * (cargo_location_mod[location][type] / 100.0) * ship_contra_market_mod[location][type]);
+  if (location == type)
+    return contra_sell_price(location) * 0.5;
+  else
+    return (int) (1000 * cargo_location_data[type].base_cost_contra * (cargo_location_mod[location][type] / 100.0) * ship_contra_market_mod[location][type]);
 }
 
 void adjust_ship_market(int transaction, int location, int type, int volume)
