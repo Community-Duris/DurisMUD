@@ -468,7 +468,7 @@ int MonkDamage(P_char ch)
   dam = dice(ch->points.damnodice, ch->points.damsizedice);
   dam += skl_lvl / 11;
   if (GET_CLASS(ch, CLASS_MONK))
-    dam = BOUNDED(1, dam - wornweight(ch) + 50 - GET_LEVEL(ch), dam);
+    dam = BOUNDED(1, dam - wornweight(ch) + 56 - GET_LEVEL(ch), dam);
   return dam;
 }
 
@@ -715,10 +715,10 @@ void chant_heroism(P_char ch, char *argument, int cmd)
     return;
   }
   
-  if (number(1, 105) > skl_lvl) // 5 percent chance to fail at max pc skill.
+  if (!notch_skill(ch, SKILL_HEROISM, 30) &&
+      number(1, 105) > skl_lvl) // 5 percent chance to fail at max pc skill.
   {
     send_to_char("Your inner thoughts are in turmoil.\r\n", ch);
-    notch_skill(ch, SKILL_HEROISM, 50);
     CharWait(ch, PULSE_VIOLENCE);
     return;
   }
@@ -1255,10 +1255,10 @@ void chant_regenerate(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (number(1, 100) > GET_CHAR_SKILL(ch, SKILL_REGENERATE))
+  if (!notch_skill(ch, SKILL_REGENERATE, 20) &&
+      number(1, 100) > GET_CHAR_SKILL(ch, SKILL_REGENERATE))
   {
     send_to_char("You forgot the words for the chant.\r\n", ch);
-    notch_skill(ch, SKILL_REGENERATE, 40);
     CharWait(ch, 2 * PULSE_VIOLENCE);
     return;
   }
