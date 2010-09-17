@@ -805,7 +805,9 @@ void event_mine_check(P_char ch, P_char victim, P_obj, void *data)
   if(!number(0, 999))
     create_parchment(ch); 
 
-  if(!number(0,4) && DamageOneItem(ch, 1, pick, false))
+  if(!number(0,4) &&
+     (GET_OBJ_VNUM(pick) != 82033) &&
+     DamageOneItem(ch, 1, pick, false))
     return;
 
   send_to_char("You continue mining...\n", ch);
@@ -1023,7 +1025,7 @@ void load_mines(bool set_event, bool load_all, int map)
 
   for( P_obj tobj = object_list; tobj; tobj = tobj->next )
   {
-    if( (GET_OBJ_VNUM(tobj) == MINE_VNUM) &&
+    if( (GET_OBJ_VNUM(tobj) == MINE_VNUM) && (tobj->loc.room > 0) &&
         (world[tobj->loc.room].number >= mine_data[map].start) &&
         (world[tobj->loc.room].number <= mine_data[map].end) )
     {

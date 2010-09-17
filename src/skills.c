@@ -441,6 +441,10 @@ void initialize_skills()
     TAR_MENTAL, "The touch of the dragon leaves your soul.","");
   SPEC_SKILL_ADD(CLASS_MONK, 46, 100, SPEC_WAYOFDRAGON);
 
+  SKILL_CREATE_WITH_MESSAGES("tiger palm", SKILL_TIGER_PALM,
+    TAR_MENTAL, "Your tiger palm concentration leaves you.","");
+  SPEC_SKILL_ADD(CLASS_MONK, 46, 100, SPEC_WAYOFSNAKE);
+  
   SKILL_CREATE("flurry of blows", SKILL_FLURRY_OF_BLOWS, TAR_PHYS);
   SPEC_SKILL_ADD(CLASS_MONK, 31, 100, SPEC_WAYOFSNAKE);
 

@@ -2995,7 +2995,7 @@ int vapor(P_obj obj, P_char ch, int cmd, char *arg)
         update_pos(vict);
 
         obj->timer[1] = curr_time;
-        return TRUE;
+        return FALSE;
       }
     }
   }
@@ -3021,15 +3021,18 @@ int vapor(P_obj obj, P_char ch, int cmd, char *arg)
         GET_HIT(ch) = MAX(1, GET_HIT(ch) - 30);
       }
       spell_coldshield(55, ch, NULL, SPELL_TYPE_SPELL, ch, 0);
-      return TRUE;
+      return FALSE;
     }
 
     if(OBJ_CARRIED_BY(obj, ch))
     {
-      if(GET_RACE(ch) != RACE_CENTAUR)
+      if(GET_RACE(ch) != RACE_CENTAUR &&
+	 GET_RACE(ch) != RACE_DRIDER)
       {
         if (GET_RACE(ch) == RACE_CENTAUR)
           slot = WEAR_HORSE_BODY;
+	else if (GET_RACE(ch) == RACE_DRIDER)
+	  slot = WEAR_SPIDER_BODY;
         else
           slot = WEAR_LEGS;
         if (ch->equipment[slot])
@@ -3043,7 +3046,7 @@ int vapor(P_obj obj, P_char ch, int cmd, char *arg)
         act
           ("&+LSuddenly the &+ggreen vapor &+Lby&n $n's &+Lfeet starts to sw&+wi&+Wrl &+Las if&n&L&+Lcoming alive. Staring wide-eyed, as if trying to deny reality, he&n&L&+Lwatches as the &+wvapor &+Lslowly coils itself around his legs. &+WWr&+wi&+Wthing&n&L&+Wtentacles &+Lstart to probe $s body like the arms of a hungry octopus&n&L&+Land within seconds $e is encased in a &+bchilling &+Lcloud of vapor.&n",
            FALSE, ch, obj, 0, TO_ROOM);
-        return TRUE;
+        return FALSE;
       }
     }
   }

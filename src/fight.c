@@ -322,6 +322,7 @@ void update_dam_factors()
   dam_factor[DF_ELSHIELDRED] =
     get_property("damage.reduction.fireColdShield", 0.55);
   dam_factor[DF_IRONWILL] =get_property("damage.reduction.towerOfIronWill", 0.5);
+  dam_factor[DF_TIGERPALM] =get_property("damage.reduction.tigerpalm", 0.65);
   dam_factor[DF_ELAFFINITY] = get_property("damage.reduction.elementalAffinity", 0.25);
   dam_factor[DF_COLDWRITHE] = get_property("damage.increase.coldWrithe", 2.0);
   dam_factor[DF_BARKFIRE] = get_property("damage.increase.barkskin", 1.15);
@@ -4058,6 +4059,8 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
     case SPLDAM_PSI:
       if (IS_AFFECTED3(victim, AFF3_TOWER_IRON_WILL))
         dam *= dam_factor[DF_IRONWILL];
+      if (get_spell_from_char(victim, SKILL_TIGER_PALM))
+	dam *= dam_factor[DF_TIGERPALM];
       break;
     case SPLDAM_NEGATIVE:
       if (IS_AFFECTED2(victim, AFF2_SOULSHIELD))

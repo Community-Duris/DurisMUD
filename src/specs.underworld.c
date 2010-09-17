@@ -4325,7 +4325,7 @@ int Einjar(P_obj obj, P_char ch, int cmd, char *arg)
   }
 // Shield block code was updated and hits far more frequently.
 // Einjar proc rate reduced from 33% to 14%.
-  if (cmd != CMD_GOTHIT || number(0, 7))
+  if (cmd != CMD_GOTHIT || number(0, 4))
     return FALSE;
 
   data = (struct proc_data *) arg;
@@ -4338,7 +4338,8 @@ int Einjar(P_obj obj, P_char ch, int cmd, char *arg)
   act("$n blocks $N's attack.", FALSE, ch, 0, vict,
       TO_NOTVICT | ACT_NOTTERSE);
 
-  if (!number(0, 10) && GET_POS(vict) == POS_STANDING)
+  if (!number(0, 10) && GET_POS(vict) == POS_STANDING &&
+      !IS_TRUSTED(ch))
   {
     act("Your bash knocks $N to the ground!", FALSE, ch, 0, vict, TO_CHAR);
     act("You are knocked to the ground by $n's mighty bash!", FALSE, ch, 0,

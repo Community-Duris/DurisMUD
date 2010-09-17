@@ -468,7 +468,7 @@ int MonkDamage(P_char ch)
   dam = dice(ch->points.damnodice, ch->points.damsizedice);
   dam += skl_lvl / 11;
   if (GET_CLASS(ch, CLASS_MONK))
-    dam = BOUNDED(1, dam - wornweight(ch) + 50 - GET_LEVEL(ch), dam);
+    dam = BOUNDED(1, dam - wornweight(ch) + 56 - GET_LEVEL(ch), dam);
   return dam;
 }
 
@@ -715,10 +715,10 @@ void chant_heroism(P_char ch, char *argument, int cmd)
     return;
   }
   
-  if (number(1, 105) > skl_lvl) // 5 percent chance to fail at max pc skill.
+  if (!notch_skill(ch, SKILL_HEROISM, 30) &&
+      number(1, 105) > skl_lvl) // 5 percent chance to fail at max pc skill.
   {
     send_to_char("Your inner thoughts are in turmoil.\r\n", ch);
-    notch_skill(ch, SKILL_HEROISM, 50);
     CharWait(ch, PULSE_VIOLENCE);
     return;
   }
@@ -1255,10 +1255,10 @@ void chant_regenerate(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (number(1, 100) > GET_CHAR_SKILL(ch, SKILL_REGENERATE))
+  if (!notch_skill(ch, SKILL_REGENERATE, 20) &&
+      number(1, 100) > GET_CHAR_SKILL(ch, SKILL_REGENERATE))
   {
     send_to_char("You forgot the words for the chant.\r\n", ch);
-    notch_skill(ch, SKILL_REGENERATE, 40);
     CharWait(ch, 2 * PULSE_VIOLENCE);
     return;
   }
@@ -1273,6 +1273,39 @@ void chant_regenerate(P_char ch, char *argument, int cmd)
 
   notch_skill(ch, SKILL_REGENERATE, 25);
   CharWait(ch, PULSE_VIOLENCE);
+}
+
+void chant_tiger_palm(P_char ch, char *arg, int cmd)
+{
+  struct affected_type af;
+
+  if (!GET_CHAR_SKILL(ch, SKILL_TIGER_PALM) && !IS_TRUSTED(ch))
+  {
+    send_to_char("You wouldnt know where to begin.\r\n", ch);
+    return;
+  }
+
+ if (!affect_timer(ch,
+       WAIT_SEC * get_property("timer.secs.monkTigerPalm", 30),
+       SKILL_FIST_OF_DRAGON))
+  {
+    send_to_char("Yer not in proper mood for that right now!\r\n", ch);
+    return;
+  }
+
+  if (!notch_skill(ch, SKILL_TIGER_PALM,
+     get_property("skill.notch.chants", 100)) &&
+     (number(1,101) > (IS_PC(ch) ? (1 + GET_CHAR_SKILL(ch, SKILL_TIGER_PALM)) : (MIN(100,GET_LEVEL(ch) * 2)))))
+  {
+    send_to_char("You fail to embrace the tiger palm concentration&n!\r\n", ch);
+    return;
+  }
+
+  set_short_affected_by(ch, SKILL_TIGER_PALM, WAIT_SEC * (BOUNDED(4, (GET_CHAR_SKILL(ch, SKILL_TIGER_PALM) / 2), 55)));
+  send_to_char
+     ("&+rYou invoke the power of the tiger palm concentration.\r\n"
+     , ch);
+  act("&+r$n&+r's concentration grows as $e summons $s inner chi-powers.&n", FALSE, ch, 0, 0, TO_ROOM);
 }
 
 void chant_fist_of_dragon(P_char ch, char *arg, int cmd)
@@ -1323,7 +1356,8 @@ void do_chant(P_char ch, char *argument, int cmd)
     "jin touch",
     "fist of dragon",
     "chi purge",
-	"ki strike",
+    "ki strike",
+    "tiger palm",
     "\n"
   };
 
@@ -1335,8 +1369,9 @@ void do_chant(P_char ch, char *argument, int cmd)
     SKILL_REGENERATE,
     SKILL_JIN_TOUCH,
     SKILL_FIST_OF_DRAGON,
-	SKILL_CHI_PURGE,
-	SKILL_KI_STRIKE,
+    SKILL_CHI_PURGE,
+    SKILL_KI_STRIKE,
+    SKILL_TIGER_PALM,
     0
   };
   int      skl_lvl = 0;
@@ -1372,8 +1407,10 @@ void do_chant(P_char ch, char *argument, int cmd)
       sprintf(buf, "%sJin Touch\r\n", buf);
     if (GET_CHAR_SKILL(ch, SKILL_FIST_OF_DRAGON) > 0)
       sprintf(buf, "%sFist of dragon\r\n", buf);
-	if (GET_CHAR_SKILL(ch, SKILL_KI_STRIKE) > 0)
-	  sprintf(buf, "%sKi Strike\r\n", buf);
+    if (GET_CHAR_SKILL(ch, SKILL_KI_STRIKE) > 0)
+      sprintf(buf, "%sKi Strike\r\n", buf);
+    if (GET_CHAR_SKILL(ch, SKILL_TIGER_PALM) > 0)
+      sprintf(buf, "%sTiger Palm\r\n", buf);
 
     send_to_char(buf, ch);
     return;
@@ -1433,6 +1470,9 @@ void do_chant(P_char ch, char *argument, int cmd)
       break;
     case 8:
       chant_ki_strike(ch, argument, cmd);
+      break;
+    case 9:
+      chant_tiger_palm(ch, argument, cmd);
       break;
     default:
       send_to_char("Error in chant, please report.\r\n", ch);

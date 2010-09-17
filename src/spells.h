@@ -929,8 +929,9 @@
 #define SKILL_THROAT_CRUSHER         1260 // Just a bogus skill to prevent wrong wear off message to the attacker.
 #define SKILL_SHIP_DAMAGE_CONTROL    1261
 #define SKILL_RAGE_REORIENT          1262 // Added to handle reorient on rage skill
+#define SKILL_TIGER_PALM             1263
 
-#define LAST_SKILL                   SKILL_RAGE_REORIENT
+#define LAST_SKILL                   SKILL_TIGER_PALM
 
 #define FIRST_SECONDARY_SKILL        1501
 
