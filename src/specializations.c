@@ -119,6 +119,7 @@ struct allowed_race_spec_struct {
 	{RACE_HALFLING, CLASS_BARD,        SPEC_SCOUNDREL},
 	{RACE_HALFLING, CLASS_ILLUSIONIST, SPEC_DARK_DREAMER},
         {RACE_HALFLING, CLASS_SHAMAN,      SPEC_ANIMALIST},
+	{RACE_HALFLING, CLASS_RANGER,      SPEC_BLADEMASTER},
 	/* End Halfling Options */
 
 	/* Start Gnome Options */
