@@ -684,7 +684,7 @@ void chant_calm(P_char ch, char *argument, int cmd)
 
 void chant_heroism(P_char ch, char *argument, int cmd)
 {
-  struct affected_type af, af1, af2;
+  struct affected_type af, af1, af2, af3;
   char     buf[100];
   int      skl_lvl = 0;
   int duration = MAX(5, (GET_LEVEL(ch) / 4)  + 2);
@@ -756,11 +756,24 @@ void chant_heroism(P_char ch, char *argument, int cmd)
     bzero(&af2, sizeof(af2));
     af2.type = SPELL_DAZZLE;
     af2.flags = AFFTYPE_NODISPEL;
+    af2.bitvector4 = AFF4_DAZZLER;
     af2.duration = duration / 2;
     affect_to_char(ch, &af2);
     send_to_char("Your body begins to glow with disorienting colors... \r\n", ch);
   }
 
+  if (GET_LEVEL(ch) >= 51 &&
+      !IS_AFFECTED(ch, AFF_HASTE))
+  {
+    bzero(&af3, sizeof(af3));
+    af3.type = SPELL_HASTE;
+    af3.flags = AFFTYPE_NODISPEL;
+    af3.bitvector = AFF_HASTE;
+    af3.duration = duration;
+    affect_to_char(ch, &af3);
+    send_to_char("Your body begins to speed up!\r\n", ch);
+  }
+  
   CharWait(ch, PULSE_VIOLENCE);
 }
 
@@ -942,7 +955,7 @@ void chant_quivering_palm(P_char ch, char *argument, int cmd)
 
   if (GET_CHAR_SKILL(ch, SKILL_ANATOMY) &&
       5 + GET_CHAR_SKILL(ch, SKILL_ANATOMY)/10 > number(0,100)) {
-    dam = (int) (dam * 1.1);
+    dam = (int) (dam * 1.5);
   }
 
   /*  can't for the life of me figure out why we need 2 messages for this skill...
@@ -986,7 +999,7 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
       skl_lvl = MAX(100, GET_LEVEL(ch) * 3);
   }
 
-  debug("(%s) jin skill is (%d).", GET_NAME(ch), skl_lvl);
+  //debug("(%s) jin skill is (%d).", GET_NAME(ch), skl_lvl);
 
   if(IS_FIGHTING(ch))
     vict = ch->specials.fighting;
@@ -1073,7 +1086,7 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
   act("$n&+C's chants a mantra as $e touches you - pain courses throughout your body!&n",
     FALSE, ch, 0, vict, TO_VICT);
     
-  debug("(%s) Jin Touch: damage upon (%s) for (%d).", GET_NAME(ch), GET_NAME(vict), dam);
+  //debug("(%s) Jin Touch: damage upon (%s) for (%d).", GET_NAME(ch), GET_NAME(vict), dam);
 
   if(melee_damage(ch, vict, dam, PHSDAM_NOREDUCE | PHSDAM_NOPOSITION |
       PHSDAM_TOUCH, 0) != DAM_NONEDEAD)
@@ -1083,6 +1096,9 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
     return;
 
   percent = (BOUNDED(0, (GET_LEVEL(ch) - GET_LEVEL(vict)), 30)) + number(-5, 5);
+
+  if (GET_CHAR_SKILL(ch, SKILL_ANATOMY))
+    percent += (int)(GET_CHAR_SKILL(ch, SKILL_ANATOMY)/10);
 
   if(!affected_by_spell(vict, SKILL_JIN_TOUCH) &&
     (percent > number(0, 19)) &&
@@ -1197,6 +1213,9 @@ void chant_ki_strike(P_char ch, char *argument, int cmd)
 
   percent = (BOUNDED(0, (GET_LEVEL(ch) - GET_LEVEL(vict)), 100));
   percent += number(-5, 20);
+
+  if (GET_CHAR_SKILL(ch, SKILL_ANATOMY))
+    percent += (int)(GET_CHAR_SKILL(ch, SKILL_ANATOMY)/10);
 
   if(!affected_by_spell(vict, SKILL_KI_STRIKE) &&
     (percent > number(1, 30)) &&

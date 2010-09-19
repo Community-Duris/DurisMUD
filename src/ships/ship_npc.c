@@ -60,7 +60,7 @@ const char* pirateShipNames[] =
     "&+YF&+Wea&+yr&+ws&+Wom&+Ye &+YF&+yis&+Yt&+ys",
     "&+LBl&+wu&+Lnt &+WH&+war&+Wpo&+won",
     "&+WT&+whe &+YGo&+Wl&+Yd&+we&+Yn &+YN&+Wu&+Ygg&+Wet",
-    "&+WT&+whe &+RW&+rr&+Rat&+rh &+wof the &+BT&+bi&+Bta&bn",
+    "&+WT&+whe &+RW&+rr&+Rat&+rh &+wof the &+BT&+bi&+Bta&+bn",
     "&+GS&+Yi&+Gre&+Yn&+w's &+GS&+Wo&+Gng",
 };
 

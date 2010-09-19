@@ -1102,9 +1102,10 @@ void spell_single_death_field(int level, P_char ch, char *args, int type,
   if(IS_BRAINLESS(victim))
     return;
 
-  dam = 100 + level * 6 + number(1, 40);
+  dam = level * 6 + number(1, 40);
     
-  if(!StatSave(victim, APPLY_POW, POW_DIFF(ch, victim)))
+  //if(!StatSave(victim, APPLY_POW, POW_DIFF(ch, victim)))
+  if(!NewSaves(victim, SAVING_SPELL, 0))
     dam = (int)(dam * 1.15);
     
   if(IS_PC_PET(ch))
@@ -1113,7 +1114,7 @@ void spell_single_death_field(int level, P_char ch, char *args, int type,
   if (IS_PC(ch) && IS_PC(victim))
     dam = dam * get_property("spell.area.damage.to.pc", 0.5);
   
-  dam = dam * get_property("spell.area.damage.factor.deathfield", 1.000);
+  dam = dam * get_property("spell.area.damage.factor.deathField", 1.000);
 
   spell_damage(ch, victim, dam, SPLDAM_PSI, 0, &messages);
 }

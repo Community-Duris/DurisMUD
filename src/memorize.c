@@ -1201,7 +1201,7 @@ void do_assimilate(P_char ch, char *argument, int cmd)
       return;
     }
     if (IS_ANGEL(ch))
-      send_to_char("\n&+WYou call to the heanves above for the gift of magic.\n", ch);
+      send_to_char("\n&+WYou call to the heavens above for the gift of magic.\n", ch);
     else
       send_to_char("&+LYou begin to invoke evil and assimilate the "
                    "powers of darkness.\n", ch);

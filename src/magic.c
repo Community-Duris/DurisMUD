@@ -1094,7 +1094,7 @@ void spell_energy_drain(int level, P_char ch, char *arg, int type,
       if(affected_by_spell(victim, SPELL_ENERGY_DRAIN))
         moves /= 2;
         
-      GET_VITALITY(victim) -= moves;
+      GET_VITALITY(victim) = MAX(1, (GET_VITALITY(victim) - moves));
       GET_VITALITY(ch) += moves;
       debug("E DRAIN: (%s&n) loses and (%s&n) gained (%d) moves.", 
         J_NAME(victim), J_NAME(ch), moves);
@@ -3089,7 +3089,7 @@ void spell_single_chain_lightning(int level, P_char ch, char *arg, int type,
   order = *((int *) arg);
   dam = 11 * MIN(51, level) + number(1, level);
   while (order--)
-    dam = (int) (dam * 0.75);
+    dam = (int) (dam * 0.8);
 
   dam = dam * get_property("spell.area.damage.factor.chainlightning", 1.000);
 
@@ -3112,10 +3112,8 @@ void spell_chain_lightning(int level, P_char ch, char *arg, int type,
                        "&=LBThe sky to the %s lights up with brilliant lightning flashes!\n");
 
   hit = cast_as_damage_area(ch, spell_single_chain_lightning, level, victim,
-                            get_property
-                            ("spell.area.minChance.chainLightning", 0),
-                            get_property
-                            ("spell.area.chanceStep.chainLightning", 25));
+                            get_property ("spell.area.minChance.chainLightning", 0),
+                            get_property ("spell.area.chanceStep.chainLightning", 25));
 
   if(!hit)
   {
@@ -3156,8 +3154,7 @@ void spell_ring_lightning(int level, P_char ch, char *arg, int type,
 
   cast_as_damage_area(ch, spell_single_lightning_ring, level, victim,
                       get_property("spell.area.minChance.lightningRing", 30),
-                      get_property("spell.area.chanceStep.lightningRing",
-                                   15));
+                      get_property("spell.area.chanceStep.lightningRing", 15));
 }
 
 void spell_cyclone(int level, P_char ch, char *arg, int type, P_char victim,
@@ -3268,10 +3265,10 @@ void spell_single_meteorswarm(int level, P_char ch, char *arg, int type,
      !IS_ALIVE(victim))
       return;
 
-  dam = 100 + level * 6 + number(1, 40);
+  dam = 80 + level * 6 + number(1, 40);
   if (IS_PC(ch) && IS_PC(victim))
     dam = dam * get_property("spell.area.damage.to.pc", 0.5); 
-  dam = dam * get_property("spell.area.damage.factor.meteorswarm", 1.000);
+  dam = dam * get_property("spell.area.damage.factor.meteorSwarm", 1.000);
   spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
 }
 
@@ -3286,7 +3283,7 @@ void spell_meteorswarm(int level, P_char ch, char *arg, int type,
 
 /*   if(IS_PC(ch) &&
       stack_area(ch, SPELL_METEOR_SWARM,
-                 (int) get_property("spell.area.stackTimer.meteorswarm", 5)))
+                 (int) get_property("spell.area.stackTimer.meteorSwarm", 5)))
   {
     send_to_char
       ("Someone just summoned meteors from the above sky, but you try anyway.\n",
@@ -3307,8 +3304,8 @@ void spell_meteorswarm(int level, P_char ch, char *arg, int type,
                        "&+rThe sky is full of &+Rflaming meteors!\r\n",
                        "&+rThe sky to %s is full of &+Rflaming meteors!\r\n");
   cast_as_damage_area(ch, spell_single_meteorswarm, level, victim,
-                      get_property("spell.area.minChance.meteorswarm", 50),
-                      get_property("spell.area.chanceStep.meteorswarm", 20));
+                      get_property("spell.area.minChance.meteorSwarm", 50),
+                      get_property("spell.area.chanceStep.meteorSwarm", 20));
 }
 
 void spell_entropy_storm(int level, P_char ch, char *arg, int type,
@@ -3607,7 +3604,7 @@ void spell_single_firestorm(int level, P_char ch, char *arg, int type,
   if (IS_PC(ch) && IS_PC(victim))
     dam = dam * get_property("spell.area.damage.to.pc", 0.5);
   
-  dam = dam * get_property("spell.area.damage.factor.firestorm", 1.000);
+  dam = dam * get_property("spell.area.damage.factor.fireStorm", 1.000);
   spell_damage(ch, victim, dam, SPLDAM_FIRE, 0, &messages);
 }
 
@@ -3628,8 +3625,8 @@ void spell_firestorm(int level, P_char ch, char *arg, int type, P_char victim,
                     "&+YYou feel a blast of &+Rheat!\n",
                     "&+YYou feel a blast of &+Rheat &+Yfrom the %s!\n");
   cast_as_damage_area(ch, spell_single_firestorm, level, victim,
-                      get_property("spell.area.minChance.firestorm", 90),
-                      get_property("spell.area.chanceStep.firestorm", 10));
+                      get_property("spell.area.minChance.fireStorm", 90),
+                      get_property("spell.area.chanceStep.fireStorm", 10));
 
   memset(&raf, 0, sizeof(raf));
   raf.type = SPELL_FIRESTORM;
@@ -11594,6 +11591,14 @@ void spell_create_spring(int level, P_char ch, char *arg, int type,
     send_to_char("Fountain indoors? Putz!\n", ch);
     return;
   }*/
+
+  if (world[ch->in_room].sector_type == SECT_NO_GROUND ||
+      world[ch->in_room].sector_type == SECT_UNDRWLD_NOGROUND)
+  {
+  	send_to_char("&+bA spring usually needs more solid ground for support!\n", ch);
+  	return;
+  }
+
   spring = read_object(750, VIRTUAL);
   if(!spring)
   {
@@ -12380,10 +12385,8 @@ void spell_obtenebration(int level, P_char ch, char *arg, int type,
     "&+LOff in the distance to the %s there is a &+wpiercing vibration.\n");
  
   cast_as_damage_area(ch, spell_single_obtenebration, level, victim,
-                      get_property("spell.area.minChance.obtenebration",
-                                   50),
-                      get_property("spell.area.chanceStep.obtenebration",
-                                   20));
+                      get_property("spell.area.minChance.obtenebration", 50),
+                      get_property("spell.area.chanceStep.obtenebration", 20));
 }
 
 void spell_single_incendiary_cloud(int level, P_char ch, char *arg, int type,
@@ -12417,7 +12420,7 @@ void spell_single_incendiary_cloud(int level, P_char ch, char *arg, int type,
   if (IS_PC(ch) && IS_PC(victim))
     dam = dam * get_property("spell.area.damage.to.pc", 0.5);
   
-  dam = dam * get_property("spell.area.damage.factor.incendiary", 1.000);
+  dam = dam * get_property("spell.area.damage.factor.incendiaryCloud", 1.000);
 
   spell_damage(ch, victim, dam, SPLDAM_FIRE, 0, &messages);
 }
@@ -12455,10 +12458,8 @@ void spell_incendiary_cloud(int level, P_char ch, char *arg, int type,
     "&+yOff in the distance to the %s there is a &+Ythundering &+Rroar &+yand &+wbillowing &+Lsmoke.\n");
  
   cast_as_damage_area(ch, spell_single_incendiary_cloud, level, victim,
-                      get_property("spell.area.minChance.incendiaryCloud",
-                                   50),
-                      get_property("spell.area.chanceStep.incendiaryCloud",
-                                   20));
+                      get_property("spell.area.minChance.incendiaryCloud", 50),
+                      get_property("spell.area.chanceStep.incendiaryCloud", 20));
 
   memset(&raf, 0, sizeof(raf));
   raf.type = SPELL_INCENDIARY_CLOUD;
@@ -12817,13 +12818,9 @@ void spell_acid_blast(int level, P_char ch, char *arg, int type,
   spell_damage(ch, victim, dam, SPLDAM_ACID, SPLDAM_ALLGLOBES, &messages);
 }
 
-void spell_ice_storm(int level, P_char ch, char *arg, int type, P_char victim,
-                     P_obj obj)
+void spell_single_icestorm(int level, P_char ch, char *arg, int type,
+                            P_char victim, P_obj obj)
 {
-  int      the_room;
-  P_char   tch, next;
-  bool     rain;
-  struct affected_type af;
   struct damage_messages messages = {
     "You crush $N with your &+Cstorm of ice.",
     "$n bashes you with a &+Cstorm of ice.",
@@ -12833,25 +12830,35 @@ void spell_ice_storm(int level, P_char ch, char *arg, int type, P_char victim,
     "$N is ripped to shreds by $n's &+Cice storm.", 0
   };
 
+  int num_dice = MIN(level, 36);
+  int dam = dice(num_dice, 8);
+  dam = dam * get_property("spell.area.damage.factor.iceStorm", 1.000);
+
+  if(is_hot_in_room(victim->in_room)) {
+    send_to_char("&+bYou are splashed by water&n!\n", victim);
+    act("$n is splashed with &+bwater&n!", FALSE, victim, 0, 0, TO_ROOM);
+    make_wet(victim, WAIT_MIN);
+  } else {
+    if (IS_PC(ch) && IS_PC(victim))
+      dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+
+    send_to_char("You are blasted by the storm!\n", victim);
+    spell_damage(ch, victim, dam, SPLDAM_COLD, SPLDAM_GLOBE, &messages);
+  }
+}
+
+void spell_ice_storm(int level, P_char ch, char *arg, int type, P_char victim,
+                     P_obj obj)
+{
+  bool     rain;
+
   if(victim == ch)
   {
     send_to_char("You suddenly decide against that, oddly enough.\n", ch);
     return;
   }
 
-  if(victim)
-    the_room = victim->in_room;
-  else
-    the_room = ch->in_room;
-
-  rain = is_hot_in_room(the_room);
-
-  int num_dice = MIN(level, 36);
-  int dam = dice(num_dice, 8);
-
-  dam = dam * get_property("spell.area.damage.factor.icestorm", 1.000);
-
-  if(rain) {
+  if(is_hot_in_room(ch->in_room)) {
     send_to_char("Your storm of ice turns into a fountain of &+bwater&n from the heat&n!\n", ch);
     act("$n conjures an ice storm!", FALSE, ch, 0, 0, TO_ROOM);
     act("The heat in here makes all ice melt!", FALSE, ch, 0, 0, TO_ROOM);
@@ -12860,25 +12867,12 @@ void spell_ice_storm(int level, P_char ch, char *arg, int type, P_char victim,
     act("$n conjures an ice storm!", FALSE, ch, 0, 0, TO_ROOM);
   }
 
-  for (tch = world[the_room].people; tch; tch = next)
-  {
-    next = tch->next_in_room;
-
-    if(should_area_hit(ch, tch))
-    {
-      if(rain) {
-        send_to_char("&+bYou are splashed by water&n!\n", tch);
-        act("$n is splashed with &+bwater&n!", FALSE, tch, 0, 0, TO_ROOM);
-        make_wet(tch, WAIT_MIN);
-      } else {
-        if (IS_PC(ch) && IS_PC(tch))
-          dam = dam * get_property("spell.area.damage.to.pc", 0.5);
-  
-        send_to_char("You are blasted by the storm!\n", tch);
-        spell_damage(ch, tch, dam, SPLDAM_COLD, SPLDAM_GLOBE, &messages);
-      }
-    }
-  }
+  cast_as_damage_area(ch, spell_single_icestorm, level, victim,
+                      get_property("spell.area.minChance.iceStorm", 90),
+                      get_property("spell.area.chanceStep.iceStorm", 10));
+  zone_spellmessage(ch->in_room,
+                    "&+CYou feel a blast of &+Bcold!\n",
+                    "&+CYou feel a blast of &+Bcold &+Cfrom the %s!\n");
 }
 
 void spell_faerie_fire(int level, P_char ch, char *arg, int type,
@@ -13145,12 +13139,12 @@ void spell_ghastly_touch(int level, P_char ch, char *arg, int type, P_char victi
       return;
 
   int dam;
-  dam = (int) number(level * 4, level * 6);
+  dam = (int) number(level * 5, level * 7);
   
   if (IS_PC(ch) && IS_PC(victim))
     dam = dam * get_property("spell.area.damage.to.pc", 0.5);
   
-  dam = dam * get_property("spell.area.damage.factor.summonghasts", 1.000);
+  dam = dam * get_property("spell.area.damage.factor.summonGhasts", 1.000);
 
   if(spell_damage (ch, victim, dam, SPLDAM_NEGATIVE, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD)
   {
@@ -13186,12 +13180,12 @@ void spell_heavens_aid(int level, P_char ch, char *arg, int type, P_char victim,
       return;
 
   int dam;
-  dam = (int) number(level * 4, level * 6);
+  dam = (int) number(level * 5, level * 7);
 
   if (IS_PC(ch) && IS_PC(victim))
     dam = dam * get_property("spell.area.damage.to.pc", 0.5);
 
-  dam = dam * get_property("spell.area.damage.factor.aidoftheheavens", 1.000);
+  dam = dam * get_property("spell.area.damage.factor.aidOfTheHeavens", 1.000);
 
   if(spell_damage (ch, victim, dam, SPLDAM_HOLY, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD)
   {
@@ -13222,8 +13216,8 @@ void event_aid_of_the_heavens(P_char ch, P_char victim, P_obj obj, void *data)
   act("&+LThe summoned illumination stretches out!.",FALSE, ch, 0, 0, TO_CHAR);  
   
   cast_as_damage_area(ch, spell_heavens_aid, GET_LEVEL(ch), NULL,
-      get_property("spell.area.minChance.summonghasts", 90),
-      get_property("spell.area.chanceStep.summonghasts", 10));
+      get_property("spell.area.minChance.aidOfTheHeavens", 90),
+      get_property("spell.area.chanceStep.aidOfTheHeavens", 10));
 }
 
 void event_summon_ghasts(P_char ch, P_char victim, P_obj obj, void *data)
@@ -13248,8 +13242,8 @@ void event_summon_ghasts(P_char ch, P_char victim, P_obj obj, void *data)
   act("&+LThe creatures from beyond the grave look towards you for guidance.",FALSE, ch, 0, 0, TO_CHAR);  
   
   cast_as_damage_area(ch, spell_ghastly_touch, GET_LEVEL(ch), NULL,
-      get_property("spell.area.minChance.summonghasts", 90),
-      get_property("spell.area.chanceStep.summonghasts", 10));
+      get_property("spell.area.minChance.summonGhasts", 90),
+      get_property("spell.area.chanceStep.summonGhasts", 10));
 }
 
 void spell_aid_of_the_heavens(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
@@ -13327,7 +13321,7 @@ void single_unholy_word(int level, P_char ch, char *arg, int type,
   {
     int dam = level * 3 + 20;
     dam = GET_RACE(victim) == RACE_GITHZERAI ? (int) (dam * 1.5) : dam;
-    dam = dam * get_property("spell.area.damage.factor.unholyword", 1.000);
+    dam = dam * get_property("spell.area.damage.factor.unholyWord", 1.000);
     if(spell_damage(ch, victim, dam, SPLDAM_HOLY, 0, &messages) == DAM_NONEDEAD)
     {
       if(lev < (level / 2 + 2))        /* 14-27 blind */
@@ -13371,8 +13365,8 @@ void spell_unholy_word(int level, P_char ch, char *arg, int type,
   }
   
   cast_as_damage_area(ch, single_unholy_word, level, victim,
-                      get_property("spell.area.minChance.unholyword", 60),
-                      get_property("spell.area.chanceStep.unholyword", 20));
+                      get_property("spell.area.minChance.unholyWord", 60),
+                      get_property("spell.area.chanceStep.unholyWord", 20));
 }
 
 void single_voice_of_creation(int level, P_char ch, char *arg, int type,
@@ -13516,8 +13510,8 @@ void spell_voice_of_creation(int level, P_char ch, char *arg, int type, P_char v
   }
 
   cast_as_damage_area(ch, single_voice_of_creation, level, victim,
-                      get_property("spell.area.minChance.holyword", 60),
-                      get_property("spell.area.chanceStep.holyword", 20));
+                      get_property("spell.area.minChance.holyWord", 60),
+                      get_property("spell.area.chanceStep.holyWord", 20));
 }
 
 void spell_holy_word(int level, P_char ch, char *arg, int type, P_char victim,
@@ -13557,8 +13551,8 @@ void spell_holy_word(int level, P_char ch, char *arg, int type, P_char victim,
   }
 
   cast_as_damage_area(ch, single_holy_word, level, victim,
-                      get_property("spell.area.minChance.holyword", 60),
-                      get_property("spell.area.chanceStep.holyword", 20));
+                      get_property("spell.area.minChance.holyWord", 60),
+                      get_property("spell.area.chanceStep.holyWord", 20));
                       
 }
 
@@ -17152,15 +17146,9 @@ void spell_magma_burst(int level, P_char ch, char *arg, int type,
   }
 }
 
-void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
+void spell_single_cdoom_wave(int level, P_char ch, char *arg, int type,
+                              P_char victim, P_obj obj)
 {
-/*
- * Original value was 130... bringing base value down to 100 and
- * applying terrain/room modifications
- */
-  P_char   tch, next;
-  int      doomdam = 95 + number(0, 20);
-  int      num, finaldam = 0;
   struct damage_messages messages = {
     "&+LYou send &+ma wave of insects and arachnids &+Lagainst $N!",
     "&+mA sea of arachnids and insects &+Lconsume and overwhelm you!",
@@ -17176,66 +17164,81 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
   if(!IS_ALIVE(ch))
     return;
 
+  int doomdam = 40 + level + number(0, 20);
+
   switch(world[ch->in_room].sector_type)
   {
   case SECT_WATER_SWIM:
   case SECT_WATER_NOSWIM:
   case SECT_NO_GROUND:
+  case SECT_UNDRWLD_NOGROUND:
   case SECT_UNDERWATER:
   case SECT_FIREPLANE:
   case SECT_UNDERWATER_GR:
   case SECT_OCEAN:
-    doomdam -= 20;
-    break;
-  case SECT_CITY:
-  case SECT_ARCTIC:
-  case SECT_ROAD:
-    doomdam += 10;
-    break;
-  case SECT_HILLS:
-  case SECT_MOUNTAIN:
-  case SECT_FIELD:
-  case SECT_DESERT:
-    doomdam += 20;
-    break;
-  case SECT_UNDRWLD_WILD:
-  case SECT_UNDRWLD_CITY:
-  case SECT_UNDRWLD_MOUNTAIN:
-  case SECT_UNDRWLD_SLIME:
-  case SECT_UNDRWLD_LOWCEIL:
   case SECT_UNDRWLD_LIQMITH:
-  case SECT_UNDRWLD_MUSHROOM:
-  case SECT_FOREST:
-  case SECT_SWAMP:
-    doomdam += 30;
+  case SECT_LAVA:
+    doomdam -= 20;
     break;
   case SECT_INSIDE:
   case SECT_UNDRWLD_INSIDE:
-    doomdam -= 15;
+    doomdam -= 10;
+    break;
+  /*case SECT_CITY:
+  case SECT_UNDRWLD_CITY:
+  case SECT_ROAD:
+    doomdam += 10;
+    break;*/
+  case SECT_HILLS:
+  case SECT_MOUNTAIN:
+  case SECT_UNDRWLD_MOUNTAIN:
+  case SECT_FIELD:
+  case SECT_DESERT:
+  case SECT_UNDRWLD_WILD:
+    doomdam += 10;
+    break;
+  case SECT_FOREST:
+  case SECT_SWAMP:
+  case SECT_UNDRWLD_SLIME:
+  case SECT_UNDRWLD_MUSHROOM:
+    doomdam += 20;
     break;
   default:
     break;
   }
 
   if(get_spell_from_room(&world[ch->in_room], SPELL_SUMMON_INSECTS))
-    doomdam += 25;
-
-/*
- * Originally doom was going to be the forest druid spec nuke, and
- * hurricane was going to be the storm druid spec nuke... but after tons
- * of whining from the overpowered multis that they lost their reason for multiing (yeah right)
- * Adding this back in for general druids, but forest druids will still be superior with it
- *    - Clav
- */
+    doomdam += 20;
 
   if(GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND)) 
-    doomdam += 35;
-  else
-    doomdam -= 5;
+    doomdam += 20;
 
-  num = *((int *) data);
+  if(IS_AFFECTED3(victim, AFF3_COLDSHIELD) ||
+      IS_AFFECTED2(victim, AFF2_FIRESHIELD) ||
+      IS_AFFECTED3(victim, AFF3_LIGHTNINGSHIELD))
+  {
+    doomdam = (int) (doomdam * 0.75);
+  }
 
-  if(num == 0)
+  if (IS_PC(ch) && IS_PC(victim))
+    doomdam = doomdam * get_property("spell.area.damage.to.pc", 0.5);
+  
+  doomdam = doomdam * get_property("spell.area.damage.factor.creepingDoom", 1.000);
+
+  spell_damage(ch, victim, doomdam, SPLDAM_GENERIC, SPLDAM_NODEFLECT, &messages);
+}
+
+struct CDoomData
+{
+  int level;
+  int waves;
+};
+
+void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
+{
+  CDoomData *cDoomData = (CDoomData*) data;
+
+  if(cDoomData->waves == 0)
   {
     act("&+LThe sea of &+marachnids&+L fades away...\n",
         FALSE, ch, 0, 0, TO_CHAR);
@@ -17244,59 +17247,38 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
     return;
   }
   else
-    num--;
+    cDoomData->waves--;
   
-  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, tch, TO_CHAR);
-  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, tch, TO_ROOM);
-  for (tch = world[ch->in_room].people; tch; tch = next)
-  {
-    next = tch->next_in_room;
-    finaldam = doomdam;
-    if ((tch == ch) || !should_area_hit(ch, tch))
-      continue;
-    
-    if(IS_AFFECTED3(tch, AFF3_COLDSHIELD) ||
-      IS_AFFECTED2(tch, AFF2_FIRESHIELD) ||
-      IS_AFFECTED3(tch, AFF3_LIGHTNINGSHIELD))
-    {
-      finaldam = (int) (finaldam * 0.75);
-    }
-    
-    if (IS_PC(ch) && IS_PC(tch))
-      finaldam = finaldam * get_property("spell.area.damage.to.pc", 0.5);
-  
-    finaldam = finaldam * get_property("spell.area.damage.factor.doom", 1.000);
+  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, vict, TO_CHAR);
+  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, vict, TO_ROOM);
 
-    if (number(1, 100) >= get_property("spell.area.minChance.doom", 100))
-      continue;
+  // if doom is single-target, replace with direct call to spell_single_cdoom_wave
+  cast_as_damage_area(ch, spell_single_cdoom_wave, cDoomData->level, vict,
+                      get_property("spell.area.minChance.creepingDoom", 50),
+                      get_property("spell.area.chanceStep.creepingDoom", 20));
 
-    if(spell_damage(ch, tch, finaldam, SPLDAM_GENERIC, SPLDAM_NODEFLECT,
-      &messages) == DAM_NONEDEAD)
-    {
-      //if(IS_ALIVE(ch) && IS_ALIVE(tch))
-      //  gain_exp(ch, tch, 0, EXP_DAMAGE);
-    }
-  }
-  add_event(event_cdoom, PULSE_VIOLENCE, ch, vict, NULL, 0, &num, sizeof(num));
+  add_event(event_cdoom, PULSE_VIOLENCE, ch, vict, NULL, 0, cDoomData, sizeof(CDoomData));
 }
 
 void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
                  P_obj obj)
 {
-  int waves = number(4, 5);
-
   if(!IS_ALIVE(ch))
     return;
 
+  CDoomData cDoomData;
+  cDoomData.waves = number(4, 5);
+  cDoomData.level = level;
+
+  /* uncomment if doom is single target
   if(GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND) ||
     (world[ch->in_room].sector_type == SECT_FOREST))
-      waves++;
+      cDoomData.waves++;*/
 
   act("&+LA &+gpl&+Lag&+gue &+Lof &+minsects and arachnids&+L flow like an ocean.", TRUE, ch, 0, victim, TO_ROOM);
-  act("&+LYou send out a &+mwave of insects&+L!",
-    TRUE, ch, 0, victim, TO_CHAR);
+  act("&+LYou send out a &+mwave of insects&+L!", TRUE, ch, 0, victim, TO_CHAR);
   //engage(ch, victim);
-  add_event(event_cdoom, 0, ch, victim, NULL, 0, &waves, sizeof(waves));
+  add_event(event_cdoom, 0, ch, victim, NULL, 0, &cDoomData, sizeof(CDoomData));
 }
 
 void spell_sense_follower(int level, P_char ch, char *arg, int type,
@@ -19137,7 +19119,7 @@ void spell_doom_blade(int level, P_char ch, char *arg, int type,
     act("figure recites a short &n&+Yprayer&n before &n&+Wva&n&+wni&n&+Ls&n&+whi&n&+Wng&n as fast as it came.", TRUE, ch, weapon, 0, TO_CHAR);
 
     act("As $n calls to the &n&+Wh&n&+Yea&n&+Wv&n&+Ye&n&+Wns&n for a weapon to slay the &n&+Lev&n&+ri&n&+Ll&n in the world,", TRUE, ch, weapon, 0, TO_ROOM);
-    act("an &n&+Yang&n&+We&n&+Yl&n&+Ric&n figure &n&+Lmat&n&+wer&n&+Wia&n&+wli&n&+Lzes&n before you, handing a &n&+Ygolden&n blade to (player).", TRUE, ch, weapon, 0, TO_ROOM);
+    act("An &n&+Yang&n&+We&n&+Yl&n&+Ric&n figure &n&+Lmat&n&+wer&n&+Wia&n&+wli&n&+Lzes&n before you, handing a &n&+Ygolden&n blade to $n.", TRUE, ch, weapon, 0, TO_ROOM);
     act("The figure recites a short &n&+Yprayer&n before &n&+Wva&n&+wni&n&+Ls&n&+whi&n&+Wng&n as fast as it came.", TRUE, ch, weapon, 0, TO_ROOM);
   }
   else

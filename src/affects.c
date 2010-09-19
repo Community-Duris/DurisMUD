@@ -221,6 +221,8 @@ int apply_ac(P_char ch, int eq_pos)
       if( GET_CHAR_SKILL(ch, SKILL_SHIELD_COMBAT) )
       {
         value += (int) ( GET_CHAR_SKILL(ch, SKILL_SHIELD_COMBAT) * (float) get_property("skill.shieldCombat.ACBonusMultiplier", 1.00) );
+        if (GET_CLASS(ch, CLASS_WARRIOR | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_MERCENARY))
+	  value *= 2;
       }
       break;
     case WEAR_BODY:
@@ -341,16 +343,18 @@ int calculate_hitpoints(P_char ch)
      !GET_CLASS(ch, CLASS_MONK))
   {
     hps += (int) (toughness * get_property("epic.skill.toughness", 0.500));
+    if (GET_CLASS(ch, CLASS_WARRIOR | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_MERCENARY))
+      hps *= 2;
   }
   else
   {
     if(toughness < 50)
-      hps += (int) (toughness * get_property("epic.skill.toughness.monk", 0.800));
+      hps += (int) (toughness * get_property("epic.skill.toughness.monk.low", 0.800));
     else if(toughness >= 50 &&
              toughness <= 90)
-      hps += (int) (toughness * get_property("epic.skill.toughness.monk", 1.000));
+      hps += (int) (toughness * get_property("epic.skill.toughness.monk.medium", 1.000));
     else
-      hps += (int) (toughness * get_property("epic.skill.toughness.monk", 1.250));    
+      hps += (int) (toughness * get_property("epic.skill.toughness.monk.high", 1.250));    
   }
   if (hps < 0)
   {

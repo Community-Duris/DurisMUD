@@ -1221,7 +1221,7 @@ void spell_scathing_wind(int level, P_char ch, char *arg, int type,
   affect_to_room(room, &raf);
 
   cast_as_damage_area(ch, spell_single_scathing_wind, level, victim,
-                      get_property("spell.area.minChance.scathingWind", 75),
+                      get_property("spell.area.minChance.scathingWind", 0),
                       get_property("spell.area.chanceStep.scathingWind", 20));
 
   for (tch = world[room].people; tch; tch = tch->next_in_room)
@@ -1281,7 +1281,7 @@ void spell_single_earthen_rain(int level, P_char ch, char *arg, int type,
   if (IS_PC(ch) && IS_PC(victim))
     dam = dam * get_property("spell.area.damage.to.pc", 0.5);
   
-  dam = dam * get_property("spell.area.damage.factor.earthenrain", 1.000);
+  dam = dam * get_property("spell.area.damage.factor.earthenRain", 1.000);
 
   spell_damage(ch, victim, dam, SPLDAM_GENERIC, SPLDAM_NOSHRUG, &messages);
 }
@@ -1317,7 +1317,7 @@ void spell_earthen_rain(int level, P_char ch, char *arg, int type,
                        "&+ySmall bits of &+Yearth &+yand rock rain from %sern sky!\n");
 
   cast_as_damage_area(ch, spell_single_earthen_rain, level, victim,
-                      get_property("spell.area.minChance.earthenRain", 50),
+                      get_property("spell.area.minChance.earthenRain", 0),
                       get_property("spell.area.chanceStep.earthenRain", 10));
   
   if(IS_ALIVE(ch))
@@ -1447,6 +1447,13 @@ void spell_earthen_grasp(int level, P_char ch, char *arg, int type,
   earthen_grasp(level, ch, victim, &messages);
 }
 
+
+void spell_single_earthen_grasp(int level, P_char ch, char *arg, int type,
+                              P_char victim, P_obj obj)
+{
+  earthen_grasp(level, ch, victim, 0);
+}
+
 void spell_greater_earthen_grasp(int level, P_char ch, char *arg, int type,
                                  P_char victim, P_obj obj)
 {
@@ -1463,38 +1470,15 @@ void spell_greater_earthen_grasp(int level, P_char ch, char *arg, int type,
     return;
   }
   
+  send_to_char("&+yThe ground rumbles deeply as you finish your spell..&n\n", ch);
+  act("&+yThe ground suddenly rumbles deeply..", FALSE, ch, 0, 0, TO_ROOM);
+  
+  cast_as_damage_area(ch, spell_single_earthen_grasp, level, victim,
+                      get_property("spell.area.minChance.gEarthGrasp", 100),
+                      get_property("spell.area.chanceStep.gEarthGrasp", 20));
   zone_spellmessage(ch->in_room,
     "&+yThe ground rumbles &+Ldeeply &+ynearby...\n",
     "&+yThe ground rumbles &+Ldeeply &+yto the %s...\n");
-  send_to_char("&+yThe ground rumbles deeply as you finish your spell..&n\n", ch);
-  act("&+yThe ground suddenly rumbles deeply..", FALSE, ch, 0, 0, TO_ROOM);
-
-  if(victim)
-  {
-    the_room = victim->in_room;
-    temp_coor = victim->specials.z_cord;
-  }
-  else
-  {
-    the_room = ch->in_room;
-    temp_coor = ch->specials.z_cord;
-  }
-  
-  if(!(the_room))
-  {
-    send_to_char("Bug in greater earthen grasp. Tell an imm!\r\n", ch);
-    return;
-  }
-  
-  for (tch = world[the_room].people; tch; tch = next)
-  {
-    next = tch->next_in_room;
-
-    if(should_area_hit(ch, tch))
-    {
-      earthen_grasp(level, ch, tch, 0);
-    }
-  }
 }
 
 void spell_pythonsting(int level, P_char ch, char *arg, int type,
@@ -1524,7 +1508,7 @@ void spell_pythonsting(int level, P_char ch, char *arg, int type,
 
   temp = level;
   dam = number(1, level * 4);
-  dam = BOUNDED(1, dam, 140);
+  dam = BOUNDED(1, dam, 160);
 
   temp = BOUNDED(-5, (GET_LEVEL(victim) - GET_LEVEL(ch)) / 5, 5);
 
@@ -1541,8 +1525,6 @@ void spell_pythonsting(int level, P_char ch, char *arg, int type,
 
   if (IS_PC(ch) && IS_PC(victim))
     dam = dam * get_property("spell.area.damage.to.pc", 0.5);
-  
-  dam = dam * get_property("spell.area.damage.factor.gpythonsting", 1.000);
   
   if(spell_damage(ch, victim, dam, SPLDAM_GENERIC,
     SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &messages) != DAM_NONEDEAD)
@@ -1580,16 +1562,10 @@ void spell_greater_pythonsting(int level, P_char ch, char *arg, int type,
     send_to_char("You suddenly decide against that, oddly enough.\n", ch);
     return;
   }
-
-  for (tch = world[ch->in_room].people; tch; tch = next)
-  {
-    next = tch->next_in_room;
-
-    if(should_area_hit(ch, tch))
-    {
-      spell_pythonsting(level, ch, NULL, SPELL_TYPE_SPELL, tch, 0);
-    }
-  }
+  
+  cast_as_damage_area(ch, spell_pythonsting, level, victim,
+                      get_property("spell.area.minChance.gPythonSting", 100),
+                      get_property("spell.area.chanceStep.gPythonSting", 20));
 }
 
 void spell_bloodhound(int level, P_char ch, char *arg, int type,

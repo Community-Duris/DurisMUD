@@ -1234,3 +1234,95 @@ A
 30 8
 A
 13 5
+#40780
+blazing sword longsword rising sun~
+&+ca &+rbla&+Yzi&+rng&+c longsword dubbed '&+YRis&+ring &+YSun&+c'&n~
+&+cA &+rbla&+Yzi&+rng&+c longsword has been left here.&n~
+~
+5 15 3 0 7 0 0 8193 64 0 0
+5 3 4 3 0 5 25 20
+0 0 100
+E
+blazing sword longsword rising sun~
+&+cThis longsword has been infused with the powers of &+rfire&+c.  It is
+&+cwarm to the touch and when waved through the air &+Ysparks&+c appear.&n
+&+cIt seems it was reforged from a lesser weapon, although the process
+&+cleft no trace in its magical properties.
+~
+E
+_char_msg~
+&+cYour $q &+rcalls upon the power of the sun!
+~
+E
+_victim_msg~
+&n$n's $q &+rcalls upon the power of the sun!
+~
+E
+_room_msg~
+&n$n's $q &+rcalls upon the power of the sun!
+~
+A
+19 3
+A
+18 3
+#40781
+longsword sword massive dusk dawn~
+&+La massive &+clongsword&+L dubbed '&+rDusk &+Land &+bDawn&+L'~
+&+LA massive &n&+clongsword&+L, its blade covered with &+rred&+L and &+bblue&+L veins, has been left here.~
+~
+5 23 3 25 11 0 0 8193 64 0 0
+5 5 5 3 0 8005 25 30
+25 40000 100
+E
+longsword massive sword dusk dawn~
+&+LA full length of this massive &+clongsword&+L is covered with &+rred&+L and &+bblue&+L veins.
+&+LThe whole sword delicately pulsates with &+mstrong &+Menchantment &+mmagic.
+&+LIt is believed that in combat it can call upon the powers of night and the sun,
+&+Lalthough how much if it is a leged, and how much is truth, is not sure.
+~
+E
+_char_msg~
+&+cYour $q &+ccalls upon the &+Bchill&+c of the&+L night&+c and &+Rheat&n&+c of the &+Ysun&n&+c.
+~
+E
+_victim_msg~
+&n$n's $q &+ccalls upon the &+Bchill&+c of&+L night&+c and &+Rheat&n&+c of the &+Ysun&n&+c.
+~
+E
+_room_msg~
+&n$n's $q &+ccalls upon the &+Bchill&+c of&+L night&+c and &+Rheat&n&+c of the &+Ysun&n&+c.
+~
+A
+18 3
+A
+19 3
+#40782
+rising frost icy sword longsword~
+&+can &+bicy&+c longsword dubbed &+c'&+bRis&+Bing&+b Frost&+c'&n~
+&+cAn &+bicy&+c longsword has been left here.&n~
+~
+5 23 3 0 11 0 1024 8193 64 95993859 0
+5 3 4 3 0 8 25 30
+0 2000 100
+E
+rising frost icy sword longsword~
+&+cThis longsword, infused with the powers of &+Bice&+c by &+BShiva&+c, seems to
+&+chave once been a lesser quality weapon.  Now it glows with an &+Bicy&+c,
+&+cmagical shine.&n
+~
+E
+_char_msg~
+&+cYour $q &+ccalls upon the &+Bchill&+c of&+L night&+c.
+~
+E
+_victim_msg~
+&n$n's $q &+ccalls upon the &+Bchill&+c of&+L night&+c.
+~
+E
+_room_msg~
+&n$n's $q &+ccalls upon the &+Bchill&+c of&+L night&+c.
+~
+A
+18 3
+A
+19 3

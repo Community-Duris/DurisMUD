@@ -4942,6 +4942,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
   
   // This is battle x vamp from your own attacks:
 
+  /* Removing vamping from ones own attacks because they get hellfire
   if(!vamped &&
     ch != victim &&
     !IS_AFFECTED4(victim, AFF4_HOLY_SACRIFICE) &&
@@ -4965,6 +4966,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
       vamp(ch, temp_dam, GET_MAX_HIT(ch) + GET_LEVEL(ch) * 1.5);
     }
   }
+  */
 // get_property("vamping.BTX.self.HP.PC", 1.500)
 
 // This is battle x vamp for PC group hits and damage spells.
@@ -4977,7 +4979,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     {
       temp_dam = 0;
       temp_dam = dam * get_property("vamping.battleEcstasy", 0.050);
-      temp_dam = number(1, (int) (temp_dam));
+      temp_dam = number((int)(temp_dam/2), (int)(temp_dam));
       for(group = ch->group; group; group = group->next)
       {
         tch = group->ch;
@@ -5094,7 +5096,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     // vamped = vamp(ch, MIN(dam, number(2, 7)), (int)(GET_MAX_HIT(ch) * 1.2));
  // }
   
-  if(dam >= 10 &&
+  if(dam >= 2 &&
     !IS_AFFECTED4(ch, AFF4_BATTLE_ECSTASY) &&
     IS_AFFECTED4(victim, AFF4_HOLY_SACRIFICE) &&
     (flags & RAWDAM_HOLYSAC) &&

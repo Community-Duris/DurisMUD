@@ -122,6 +122,29 @@ mist~
 'Yes, the mist.  I've heard there is a shard of mist which when combined with
  another item such as the Prince's hammer, transforms the item into an even
  more powerful weapon.'
+
+'The magic of the shard could also allow me to reforge weapons while retaining
+ their magical properties. However, this process is costly. Ingredients cost
+ about 50 platinum coins.'
+~
+M
+reforge~
+'I have heard there are two higly magical maces available in this general area.
+ Bring them to me, bring me some shard of solidified mist, bring me coins
+ to repay for other ingredients, and I can try to reforge them into longswords.'
+~
+M
+special~
+'So you wish for something special, eh? I might have something like that.
+ When travelling among storm giants, I have heard about one forging trick -
+ merge of magical items. It requires expensive ingredients, dragonscale
+ being one of them, and the resulting item is heavier than the input items,
+ but still it is a powerful magic. Just imagine!'
+
+'Of course, this works best when one personally knows weapons being forged
+ together, and they should be of the same type. If you bring me two longswords
+ of my own creation, a dragonscale, and 200 platinum coins to repay for used
+ ingredients, I might attempt such a magical merge just for you.'
 ~
 Q
 &+CEm&+citi&+Con&+c smiles after finishing his work.
@@ -136,6 +159,44 @@ Q
 ~
 R I 40778
 G I 77539
+Q
+'This wasn't easy at all. Here, I hope the sword will serve you well.
+ And please return in the future if you want to have something special forged.'
+~
+R I 40780
+G I 40729
+G I 40716
+G C 50000
+Q
+'This wasn't easy at all. Here, I hope the sword will serve you well.
+ And please return in the future if you want to have something special forged.'
+~
+R I 40782
+G I 40728
+G I 40716
+G C 50000
+Q
+~
+R I 40781
+R E 150000
+G I 40780
+G I 40782
+G I 392
+G C 200000
+D
+&+CEm&n&+citi&+Con&n works at the forge, fully concentrated on the task at hand.
+It looks as if for him the universe ceased to exist - a total concentration
+on the job is crucial for such feats of magic as he's trying to achieve.
+
+After a longer while, he turns towards you.
+'This was not an easy task, by any means. But here, I think I have succeeded.'
+
+He handles you a still-warm longsword, its length covered in intricate pattern
+of red and blue veins.
+
+'Now please excuse me, I feel tired, really tired. If I knew how tiresome
+ it would be, I would charge you twice more, heh.'
+~
 S
 #40715
 M
@@ -286,6 +347,17 @@ fee scale~
  find either the scale of the celestial dragon, or perhaps
  that of the smoke dragon, add to that the minor fee of
  10 platinum and we shall see!"
+
+After a brief pause, Reln continues:
+
+"This low fee covers my expenses for working with local
+ variety of dragonscales. I have heard of one exotic
+ celestial wyrmscale, with qualities so potent as to
+ allow for imbuing the strongest of magic into items
+ crafted from it. However, being magic resistant itself,
+ that scale would require a great amount of ingredients
+ to work upon. As a result, the fee would increase
+ thousandfolds."
 ~
 Q
 &+W'Ah, celestial dragon scale.. If you wait but one moment I shall

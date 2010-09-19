@@ -3124,11 +3124,37 @@ void do_examine(P_char ch, char *argument, int cmd)
       {
         if (OBJ_WORN(tmp_object) || OBJ_CARRIED(tmp_object))
         {
+
+          if (tmp_object->weight < 0)
+	          percent = 0;
+	        else
+	          percent = (int) (100 * tmp_object->weight / tmp_object->value[0]);
+	      
+      	  percent = BOUNDED(1, (int) percent, 100);
+  	  
+    	    if (percent > 99)
+	          sprintf(buf2, "&nis full!");
+	        else if (percent > 80)
+	          sprintf(buf2, "&nis stuffed with items.");
+	        else if (percent > 60)
+	          sprintf(buf2, "&nis about three-quarters full.");
+	        else if (percent > 40)
+	          sprintf(buf2, "&nis about halfway full.");
+	        else if (percent > 30) 
+	          sprintf(buf2, "&nis partially filled.");
+	        else if (percent > 10)
+	          sprintf(buf2, "&ncan hold a lot more.");
+	        else
+	          sprintf(buf2, "&nis as good as empty.");
+
           sprintf(buf,
-                  "%s&n can hold around %d pounds, and currently contains:\n",
+                  "%s&n can hold around %d pounds, and %s\n",
                   tmp_object->short_description,
                   tmp_object->value[0] + number(-(tmp_object->value[0] >> 1),
-                                                tmp_object->value[0] >> 1));
+                                                tmp_object->value[0] >> 1), buf2);
+          send_to_char(buf, ch);
+          
+          sprintf(buf, "%s &ncurrently contains:\n", tmp_object->short_description);
           send_to_char(buf, ch);
         }
         else
@@ -3140,30 +3166,6 @@ void do_examine(P_char ch, char *argument, int cmd)
       }
       sprintf(buf, "in %s", argument);
       do_look(ch, buf, -4);
-      
-      if (tmp_object->weight < 0)
-	      percent = 0;
-	    else
-	      percent = (int) (100 * tmp_object->weight / tmp_object->value[0]);
-	      
-  	  percent = BOUNDED(1, (int) percent, 100);
-  	  
-	    if (percent > 99)
-	      sprintf(buf2, "%s &nis full!\n", tmp_object->short_description);
-	    else if (percent > 80)
-	      sprintf(buf2, "%s &nis stuffed with items.\n", tmp_object->short_description);
-	    else if (percent > 60)
-	      sprintf(buf2, "%s &nis about three-quarters full.\n", tmp_object->short_description);
-	    else if (percent > 40)
-	      sprintf(buf2, "%s &nis about halfway full.\n", tmp_object->short_description);
-	    else if (percent > 30) 
-	      sprintf(buf2, "%s &nis partially filled.\n", tmp_object->short_description);
-	    else if (percent > 10)
-	      sprintf(buf2, "%s &ncan hold a lot more.\n", tmp_object->short_description);
-	    else
-	      sprintf(buf2, "%s &nis as good as empty.\n",  tmp_object->short_description);
-
-	    send_to_char(buf2, ch);
             
     }
     else if (GET_ITEM_TYPE(tmp_object) == ITEM_CORPSE)
@@ -6273,18 +6275,9 @@ void do_inventory(P_char ch, char *argument, int cmd)
       send_to_char("You have no place to keep anything!\n", ch);
   else
   {
-    send_to_char("You are carrying:\n", ch);
+    sprintf(buf, "You are carrying: (%d/%d)\n", IS_CARRYING_N(ch), CAN_CARRY_N(ch));
+    send_to_char(buf, ch);
     list_obj_to_char(ch->carrying, ch, 1, TRUE);
-    
-    i = CAN_CARRY_N(ch) - IS_CARRYING_N(ch);
-	  
-	  if (i <= 0)
-	    send_to_char("You can carry no more items in your inventory.\n", ch);
-	  else
-	  {
-      sprintf(buf, "You can carry %d more items in your inventory.\n", i);
-      send_to_char(buf, ch);
-	  }
   }
 }
 

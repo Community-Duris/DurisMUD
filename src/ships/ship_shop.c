@@ -389,7 +389,7 @@ int summon_ship (P_char ch, P_ship ship, bool time_only)
     int summontime, pvp = false;
     if( IS_TRUSTED(ch) )
         summontime = 0;
-    else if (SHIP_CLASS(ship) == SH_SLOOP && SHIP_CLASS(ship) == SH_YACHT)
+    else if (SHIP_CLASS(ship) == SH_SLOOP || SHIP_CLASS(ship) == SH_YACHT)
     {
         summontime = (280 * 50) / MAX(get_maxspeed_without_cargo(ship), 1);
     }
@@ -2358,7 +2358,7 @@ int crew_shop_proc(int room, P_char ch, int cmd, char *arg)
                 }
                 if (ship->frags < ship_chief_data[i].hire_frags && 
                     ((ship_chief_data[i].type == SAIL_CHIEF && ship->crew.sail_skill < ship_chief_data[i].min_skill) ||
-                     (ship_chief_data[i].type == GUNS_CHIEF && ship->crew.sail_skill < ship_chief_data[i].min_skill) ||
+                     (ship_chief_data[i].type == GUNS_CHIEF && ship->crew.guns_skill < ship_chief_data[i].min_skill) ||
                      (ship_chief_data[i].type == RPAR_CHIEF && ship->crew.rpar_skill < ship_chief_data[i].min_skill) ))
                 {
                     send_to_char("&+wI won't work with these greenhorns unless their captain is someone famous.\r\n", ch);

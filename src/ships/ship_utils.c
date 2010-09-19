@@ -1135,7 +1135,7 @@ int ShipCrew::get_sail_repair_mod() const
         return 3;
     if (IS_SET(ship_crew_data[index].flags, CF_SAIL_REPAIR_2))
         return 2;
-    return 1; // TODO
+    return 1;
 }
 int ShipCrew::get_weapon_repair_mod() const
 {
@@ -1143,7 +1143,7 @@ int ShipCrew::get_weapon_repair_mod() const
         return 3;
     if (IS_SET(ship_crew_data[index].flags, CF_WEAPONS_REPAIR_2))
         return 2;
-    return 1; // TODO
+    return 1;
 }
 int ShipCrew::get_hull_repair_mod() const
 {
@@ -1151,7 +1151,7 @@ int ShipCrew::get_hull_repair_mod() const
         return 3;
     if (IS_SET(ship_crew_data[index].flags, CF_HULL_REPAIR_2))
         return 2;
-    return 1; // TODO
+    return 1;
 }
 int ShipCrew::get_maxspeed_mod() const
 {
@@ -1159,13 +1159,13 @@ int ShipCrew::get_maxspeed_mod() const
         return 2;
     if (IS_SET(ship_crew_data[index].flags, CF_MAXSPEED_1))
         return 1;
-    return 0; // TODO
+    return 0;
 }
 float ShipCrew::get_maxcargo_mod() const
 {
     if (IS_SET(ship_crew_data[index].flags, CF_MAXCARGO_10))
         return 1.1;
-    return 1.0; // TODO
+    return 1.0;
 }
 
 

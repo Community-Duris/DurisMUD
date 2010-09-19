@@ -1935,8 +1935,9 @@ void cast_transmute_rock_lava(int level, P_char ch, char *arg, int type, P_char 
       case SECT_CITY:
       case SECT_FOREST:
       case SECT_FIELD:
-		case SECT_MOUNTAIN:
-		case SECT_UNDRWLD_WILD:
+      case SECT_HILLS:
+      case SECT_MOUNTAIN:
+      case SECT_UNDRWLD_WILD:
       case SECT_EARTH_PLANE:
 		   break;
 		default:

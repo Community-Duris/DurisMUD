@@ -4269,6 +4269,9 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
   else
     dam = (double)(((dam * dice_multiplier) * final_multiplier) * .75);
   
+  if (IS_NPC(ch))
+    dam = dam / 2.5;
+  
   spinal_tap = get_property("backstab.SpinalTap", 0.150);
   critical_stab = get_property("backstab.CriticalStab", 0.200);
   critical_stab_multiplier = get_property("backstab.CriticalStab.Multiplier", 1.000);

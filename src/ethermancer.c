@@ -519,6 +519,8 @@ void spell_windwalk(int level, P_char ch, char *arg, int type, P_char victim,
   }
   
   distance = (int)(level * 1.35);
+  if (GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_WINDTALKER))
+    distance += 15;
 
   if (!IS_TRUSTED(ch) &&
       (how_close(ch->in_room, victim->in_room, distance) < 0) &&
@@ -1338,7 +1340,7 @@ int door, target_room;
   if((GET_C_LUCK(victim) / 10) < number(1, 100))
     takedown_chance /= 2;
 
-  dam = dam * get_property("spell.area.damage.factor.squall", 1.000);
+  dam = dam * get_property("spell.area.damage.factor.squallTempest", 1.000);
   
   if(spell_damage(ch, victim, dam, SPLDAM_COLD, SPLDAM_NODEFLECT, &messages) ==
       DAM_NONEDEAD);
@@ -1384,8 +1386,8 @@ void spell_tempest(int level, P_char ch, char *arg, int type, P_char victim,
   act("$n &+Wraises &+y$s hands to the sky calling forth a &+cfreezing &+ysquall.", FALSE, ch, 0, 0, TO_NOTVICT);
 
   cast_as_damage_area(ch, spell_single_tempest, level, victim,
-  get_property("spell.area.minChance.squall_Tempest", 90),
-  get_property("spell.area.chanceStep.squall_Tempest", 10));
+  get_property("spell.area.minChance.squallTempest", 90),
+  get_property("spell.area.chanceStep.squallTempest", 10));
   
   if(world[room].sector_type == SECT_INSIDE ||
     IS_SET(world[room].room_flags, INDOORS))
@@ -1591,7 +1593,7 @@ void spell_single_supernova(int level, P_char ch, char *arg, int type, P_char vi
   };
 
   dam = 120 + level * 6 + number(1, 40);
-  dam = dam * get_property("spell.area.damage.factor.nova", 1.000);
+  dam = dam * get_property("spell.area.damage.factor.superNova", 1.000);
   if (spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages))
     return;
 
@@ -1643,7 +1645,7 @@ void spell_supernova(int level, P_char ch, char *arg, int type, P_char victim, P
   
   zone_spellmessage(ch->in_room, "&n&+cThe He&+Wav&n&+cens themselves &-L&+Yflash&n&+c as a &+YSupernova&n&+c is unleashed nearby!&n\r\n",
                                  "&n&+cThe He&+Wav&n&+cens to the %s &-L&+Yflash&n&+c as a &+YSupernova&n&+c is unleashed nearby!&n\r\n" );
-  cast_as_damage_area(ch, spell_single_supernova, level, victim, get_property("spell.area.minChance.supernova", 50), get_property("spell.area.chanceStep.supernova", 10));
+  cast_as_damage_area(ch, spell_single_supernova, level, victim, get_property("spell.area.minChance.superNova", 50), get_property("spell.area.chanceStep.superNova", 10));
   
   if (!is_char_in_room(ch, room)) 
     return;
@@ -1923,12 +1925,9 @@ void spell_planetary_alignment(int level, P_char ch, char *arg, int type, P_char
 
 }
 
-void spell_polar_vortex(int level, P_char ch, char *arg, int type, P_char victim,
-                     P_obj obj)
+void spell_single_polar_vortex(int level, P_char ch, char *arg, int type,
+                              P_char victim, P_obj obj)
 {
-  int      the_room, dam;
-  P_char   tch, next;
-  struct affected_type af;
   struct damage_messages messages = {
     "$N&+C is horrendously battered by the intense vortex!&n",
     "$n's &+Cchilling vortex encases you in a sheet of &+Bice&+C!&n",
@@ -1938,62 +1937,54 @@ void spell_polar_vortex(int level, P_char ch, char *arg, int type, P_char victim
     "$N&+C is frozen solid! Where's Boba Fett?&n", 0
   };
 
+  int dam = dice(level, 6) * 3;
+  if (IS_PC(ch) && IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  dam = dam * get_property("spell.area.damage.factor.polarVortex", 1.000);
+
+  if((!IS_AFFECTED3(victim, AFF3_COLDSHIELD)&&
+      !NewSaves(victim, SAVING_PARA, 2)) ||
+      GET_RACE(ch) == RACE_THRIKREEN)
+  {
+    struct affected_type af;
+
+    send_to_char("&+CThe intense cold causes your entire body to freeze!\n", victim);
+    act("&+CThe intense cold causes $n&+C's entire body to freeze!", FALSE, victim, 0, 0, TO_ROOM);
+    act("$n &+Mceases to move.. still and lifeless.", FALSE, victim, 0, 0, TO_ROOM);
+    send_to_char ("&+LYour body becomes like stone as the paralyzing takes effect.\n", victim);
+
+    bzero(&af, sizeof(af));
+    af.type = SPELL_MAJOR_PARALYSIS;
+    af.flags = AFFTYPE_SHORT;
+    af.duration = WAIT_SEC * 3;
+    af.bitvector2 = AFF2_MAJOR_PARALYSIS;
+
+    affect_to_char(victim, &af);
+
+    if (IS_FIGHTING(victim))
+      stop_fighting(victim);
+  }
+
+  send_to_char("&+CYou find no shelter from the savage vortex!&n\n", victim);
+  spell_damage(ch, victim, dam, SPLDAM_COLD, 0, &messages);
+}
+
+void spell_polar_vortex(int level, P_char ch, char *arg, int type, P_char victim,
+                     P_obj obj)
+{
   if (victim == ch)
   {
     send_to_char("You suddenly decide against that, oddly enough.\n", ch);
     return;
   }
 
-  if (victim)
-    the_room = victim->in_room;
-  else
-    the_room = ch->in_room;
-
-  dam = dice(level, 6) * 3;
-
   send_to_char("&+WYou call upon the chilling winds of the north, summoning a mighty storm!&n\n", ch);
   act("&+WThe wind in the room starts to pick up, as&n $n&+W completes $s incantation.&n", FALSE, ch, 0, 0, TO_ROOM);
  
-  for (tch = world[the_room].people; tch; tch = next)
-  {
-    next = tch->next_in_room;
+  cast_as_damage_area(ch, spell_single_polar_vortex, level, victim,
+                      get_property("spell.area.minChance.polarVortex", 50),
+                      get_property("spell.area.chanceStep.polarVortex", 20));
 
-    if (should_area_hit(ch, tch))
-    {
-      if((!IS_AFFECTED3(tch, AFF3_COLDSHIELD)&&
-          !NewSaves(tch, SAVING_PARA, 2)) ||
-          GET_RACE(ch) == RACE_THRIKREEN)
-      {
-        struct affected_type af;
-
-        send_to_char("&+CThe intense cold causes your entire body to freeze!\n",
-                     tch);
-        act("&+CThe intense cold causes $n&+C's entire body to freeze!",
-          FALSE, tch, 0, 0, TO_ROOM);
-        act("$n &+Mceases to move.. still and lifeless.",
-          FALSE, tch, 0, 0, TO_ROOM);
-        send_to_char
-          ("&+LYour body becomes like stone as the paralyzing takes effect.\n",
-           tch);
-
-        bzero(&af, sizeof(af));
-        af.type = SPELL_MAJOR_PARALYSIS;
-        af.flags = AFFTYPE_SHORT;
-        af.duration = WAIT_SEC * 3;
-        af.bitvector2 = AFF2_MAJOR_PARALYSIS;
-
-        affect_to_char(tch, &af);
-
-        if (IS_FIGHTING(tch))
-          stop_fighting(tch);
-      }
-      send_to_char("&+CYou find no shelter from the savage vortex!&n\n", tch);
-      if (IS_PC(ch) && IS_PC(tch))
-        dam = dam * get_property("spell.area.damage.to.pc", 0.5);
-      dam = dam * get_property("spell.area.damage.factor.polarvortex", 1.000);
-      spell_damage(ch, tch, dam, SPLDAM_COLD, 0, &messages);
-    }
-  }
   zone_spellmessage(ch->in_room,
     "&+CA blast of &+cfreezing &+Cair swirls violently through the area.\r\n",
     "&+CA blast of &+cfreezing &+Cair from the %s swirls violently through the area.\r\n");
@@ -2099,8 +2090,8 @@ void spell_ethereal_travel(int level, P_char ch, char *arg, int type,
   }
 }
 
-void spell_cosmic_rift(int level, P_char ch, char *arg, int type, P_char victim,
-                     P_obj obj)
+void spell_single_cosmic_rift(int level, P_char ch, char *arg, int type,
+                              P_char victim, P_obj obj)
 {
   struct damage_messages messages = {
     "&+LThe cosmic rift bends the fabric space and time around&n $N&+L, causing $M extreme pain!&n",
@@ -2110,51 +2101,50 @@ void spell_cosmic_rift(int level, P_char ch, char *arg, int type, P_char victim,
     "&+LThe cosmic rift is too much, and you feel yourself being swallowed whole by it...&n",
     "$N&+L is consumed completely by the cosmic rift!&n", 0
   };
-  P_char   t, t_next;
-  int  in_room, lev, dam, new_room, num_dice, id;
+  int dam = dice(number(25, 75), 4) * 4;
+  if (IS_PC(ch) && IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5); 
+  dam = dam * get_property("spell.area.damage.factor.cosmicRift", 1.000);
 
-  for (t = world[ch->in_room].people; t; t = t_next)
+  if (GET_HIT(victim) < dam / 4)
   {
-    t_next = t->next_in_room;
-    
-    if (!should_area_hit(ch, t))
-      continue;
+    int id = -1;
 
-    dam = dice(number(20, 100), 4) * 4;
-
-    if (GET_HIT(t) < dam / 4)
-    {
-      id = -1;
-
-      if( IS_PC(t) )
-        id = GET_PID(t);
-      else
-        id = GET_VNUM(t);
+    if( IS_PC(victim) )
+      id = GET_PID(victim);
+    else
+      id = GET_VNUM(victim);
           
-      act("$N &+Ltries to resist the power of your cosmic rift, but alas, $E succumbs to it's might.&n",
-        FALSE, ch, 0, t, TO_CHAR);
-      act("&+LThe cosmic rift is too much, and you feel yourself being swallowed whole by it...&n",
-        FALSE, ch, 0, t, TO_VICT);
-      act("$N&+L is consumed completely by the cosmic rift!&n",
-        FALSE, ch, 0, t, TO_NOTVICT);
+    act("$N &+Ltries to resist the power of your cosmic rift, but alas, $E succumbs to it's might.&n",
+      FALSE, ch, 0, victim, TO_CHAR);
+    act("&+LThe cosmic rift is too much, and you feel yourself being swallowed whole by it...&n",
+      FALSE, ch, 0, victim, TO_VICT);
+    act("$N&+L is consumed completely by the cosmic rift!&n",
+      FALSE, ch, 0, victim, TO_NOTVICT);
 
-      die(t, ch);
-      t = NULL;
+    die(victim, ch);
+    victim = NULL;
 
-      for( P_obj obj = world[ch->in_room].contents; obj; obj = obj->next_content )
+    for( P_obj obj = world[ch->in_room].contents; obj; obj = obj->next_content )
+    {
+      if( obj->value[3] == id )
       {
-        if( obj->value[3] == id )
-        {
-          obj_from_room(obj);
-          new_room = real_room(number(ASTRAL_VNUM_BEGIN,ASTRAL_VNUM_END));
-          obj_to_room(obj, new_room);
-          if (obj->type == ITEM_CORPSE && IS_SET(obj->value[1], PC_CORPSE))
-            writeCorpse(obj);
-        }
+        obj_from_room(obj);
+        obj_to_room(obj, real_room(number(ASTRAL_VNUM_BEGIN,ASTRAL_VNUM_END)));
+        if (obj->type == ITEM_CORPSE && IS_SET(obj->value[1], PC_CORPSE))
+          writeCorpse(obj);
       }
     }
-    spell_damage(ch, t, dam, SPLDAM_GENERIC, 0, &messages);
-  }
+  } 
+  spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
+}
+
+void spell_cosmic_rift(int level, P_char ch, char *arg, int type, P_char victim,
+                     P_obj obj)
+{
+  cast_as_damage_area(ch, spell_single_cosmic_rift, level, victim,
+                      get_property("spell.area.minChance.cosmicRift", 0),
+                      get_property("spell.area.chanceStep.cosmicRift", 20));
   zone_spellmessage(ch->in_room,
                      "&+LThe air visibly ripples and distorts.\r\n",
                      "&+LThe air to the %s visibly ripples and distorts.\r\n");

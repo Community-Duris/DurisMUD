@@ -4311,7 +4311,6 @@ int cast_as_damage_area(P_char ch,
                         bool (*select_func) (P_char, P_char))
 {
   P_char   tch, *vict_array;
-  int  chance, i, vict_room, ch_room, hit, in_room;
   
   if(!(ch) ||
      !IS_ALIVE(ch))
@@ -4319,14 +4318,97 @@ int cast_as_damage_area(P_char ch,
     return 0;
   }
   
-  ch_room = ch->in_room;
+  int ch_room = ch->in_room;
+
+  ////////////
+  // new algo
+
+  if(IS_SET(world[ch_room].room_flags, SAFE_ZONE))
+  {
+    return 0;
+  }
+
+  int count = 0;
+  for(tch = world[ch_room].people; tch; tch = tch->next_in_room)
+  {
+    if(IS_ALIVE(tch))
+      count++;
+  }
+
+  if (count <= 0)
+      return 0;
+
+  CREATE(vict_array, P_char, count + 1, MEM_TAG_ARRAY);
+
+  
+  count = 0;
+  int pc_count = 0;
+  for(tch = world[ch_room].people; tch; tch = tch->next_in_room)
+  {
+    if(IS_ALIVE(tch) && select_func(ch, tch))
+    {
+      vict_array[count++] = tch;
+      if(IS_PC(tch)) pc_count++;
+    }
+  }
+
+  if (pc_count > 0)
+  {
+      float median = (float)pc_count / 2.0 + 5.0 / (float)pc_count;
+      float range = 1.5;
+      int pc_hit = number((int)((median - range / 2.0) * 1000.0), (int)((median + range / 2.0) * 1000.0)) / 1000;
+      pc_hit = MIN((int)(pc_count * min_chance / 100), pc_hit);
+      pc_hit = MAX(pc_hit, pc_count);
+      int pc_skip = pc_count - pc_hit;
+      if (pc_skip > 0)
+      {
+          for (int i = number(0, count - 1); pc_skip; i = (i + 1) % count)
+          {
+              if (!vict_array[i])
+                  continue;
+              if (!IS_PC(vict_array[i]))
+                  continue;
+              if (vict_array[i] == victim)
+                  continue;
+              if (!number(0, 1))
+                  continue;
+              vict_array[i] = 0;
+              pc_skip--;
+          }
+      }
+  }
+ 
+  int hit = 0;
+  for (int i = 0; i < count; i++)
+  {
+    P_char tch = vict_array[i];
+    if (!tch)
+      continue;
+    if (!is_char_in_room(tch, ch_room))
+      continue;
+    if (!is_char_in_room(ch, ch_room))
+      break;
+    if (has_innate(tch, INNATE_EVASION))
+    {
+      if ((GET_LEVEL(tch) - ((int) get_property("innate.evasion.removechance", 15.000))) > number(1,100))
+      {
+        send_to_char("You twist out of the way avoiding the harmful magic!\n", tch);
+        act ("$n twists out of the way avoiding the harmful magic!", FALSE, tch, 0, ch, TO_ROOM);
+        continue;
+      }
+    }    
+    spell_func(level, ch, (char *) &hit, 0, tch, NULL);
+    hit++;
+  }
+
+  /* old algo
 
   if(!(victim = get_random_char_in_room(ch_room, ch, DISALLOW_SELF)))
   {
     return 0;
   }
 
-  vict_room = victim->in_room;
+  int vict_room = victim->in_room;
   
   if(IS_SET(world[ch_room].room_flags, SAFE_ZONE) ||
      IS_SET(world[vict_room].room_flags, SAFE_ZONE))
@@ -4343,9 +4425,10 @@ int cast_as_damage_area(P_char ch,
   }
 
   CREATE(vict_array, P_char, i + 1, MEM_TAG_ARRAY);
-  
+
   vict_array[i] = NULL;
 
+  int i;
   for (i = 0, tch = victim; tch && (i == 0 || tch != victim);
        tch =
        (tch->next_in_room ? tch->next_in_room : world[vict_room].people))
@@ -4353,7 +4436,8 @@ int cast_as_damage_area(P_char ch,
     vict_array[i++] = tch;
   }
 
-  for (chance = 100, hit = 0, i = 0; tch = vict_array[i]; i++)
+  int hit = 0;
+  for (int chance = 100, i = 0; tch = vict_array[i]; i++)
   {
     if (!is_char_in_room(tch, vict_room))
       continue;
@@ -4377,7 +4461,7 @@ int cast_as_damage_area(P_char ch,
       chance = MAX((int) min_chance, (int) (chance - chance_step));
       hit++;
     }
-  }
+  }*/
 
   FREE(vict_array);
   return hit;
