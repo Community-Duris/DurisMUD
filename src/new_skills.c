@@ -743,7 +743,7 @@ void chant_heroism(P_char ch, char *argument, int cmd)
     bzero(&af1, sizeof(af1));
     af1.type = SPELL_INDOMITABILITY;
     af1.flags = AFFTYPE_NODISPEL;
-    af1.duration = duration / 2;
+    af1.duration = duration;
     affect_to_char(ch, &af1);
   }
   
@@ -757,7 +757,7 @@ void chant_heroism(P_char ch, char *argument, int cmd)
     af2.type = SPELL_DAZZLE;
     af2.flags = AFFTYPE_NODISPEL;
     af2.bitvector4 = AFF4_DAZZLER;
-    af2.duration = duration / 2;
+    af2.duration = duration;
     affect_to_char(ch, &af2);
     send_to_char("Your body begins to glow with disorienting colors... \r\n", ch);
   }
