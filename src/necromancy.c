@@ -2602,11 +2602,12 @@ void spell_taint(int level, P_char ch, char *arg, int type,
   }
 
   dam = 9 * MIN(level, 56) + number(-40, 40);
+  dam *= 1.8;
 // dam = 13 * level + number(0, level);
   if(saves_spell(victim, SAVING_SPELL))
     dam >>= 1;
 
-  spell_damage(ch, victim, dam, SPLDAM_HOLY, 0,
+  spell_damage(ch, victim, dam, SPLDAM_NEGATIVE, 0,
                &messages);
 }
 
