@@ -907,13 +907,10 @@ void do_guildhall_destroy(P_char ch, char *arg)
 
 void do_guildhall_reload(P_char ch, char *arg)
 {
-  char buff[MAX_STRING_LENGTH];
-
   if(!ch)
     return;
   
-  arg = one_argument(arg, buff);
-  int id = atoi(buff);
+  int id = atoi(arg);
   
   if( reload_guildhall(id) )
   {
