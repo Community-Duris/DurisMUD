@@ -30,7 +30,6 @@ D 0 26133 3 2 100 0 0 0
 *     "A Large Chamber" - closed/locked
 *
 *
-O 0 359 1 26133 100 0 0 0          * (object type not in this .obj file)
 *
 M 0 26003 1 26100 100 0 0 0        * (mob type not in this .mob file)
 M 0 26004 19 26103 100 0 0 0       * (mob type not in this .mob file)
@@ -62,6 +61,7 @@ G 1 26012 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 26014 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 26013 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 55185 1 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 359 1 0 100 0 0 0              *    (object type not in this .obj file)
 M 0 26011 2 26133 100 0 0 0        * (mob type not in this .mob file)
 M 0 26011 2 26133 100 0 0 0        * (mob type not in this .mob file)
 *
