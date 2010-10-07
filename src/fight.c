@@ -3507,6 +3507,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
     return DAM_NONEDEAD;
   }
 
+  /*
   if(type == SPLDAM_NEGATIVE &&
      IS_UNDEADRACE(ch) &&
      IS_UNDEADRACE(victim))
@@ -3555,6 +3556,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
     vamp(victim,  dam / 4, GET_MAX_HIT(victim) * 1.15);
     return DAM_NONEDEAD;
   }
+  */
 
   // end of vamping(is non agro now)
   // Lom: I think should set memory here, before messages
@@ -4043,7 +4045,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
           }
           dam = (int) (dam / levelmod);
         }  
-        dam *= get_property("damage.holy.increase.modifierVsUndead", 2.000);
+        //dam *= get_property("damage.holy.increase.modifierVsUndead", 2.000);
         
         if(levelmod < 2.5) // Message is not displayed versus level 56 and greater vampires.
         {
@@ -4074,8 +4076,8 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
 	dam *= dam_factor[DF_TIGERPALM];
       break;
     case SPLDAM_NEGATIVE:
-      if (victim && IS_ANGEL(victim))
-        dam *= get_property("damage.neg.increase.modifierVsAngel", 1.300);
+      //if (victim && IS_ANGEL(victim))
+        //dam *= get_property("damage.neg.increase.modifierVsAngel", 1.300);
       if (IS_AFFECTED2(victim, AFF2_SOULSHIELD))
         dam *= dam_factor[DF_SLSHIELDINCREASE];
       if (IS_AFFECTED4(victim, AFF4_NEG_SHIELD))
@@ -4193,6 +4195,20 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
       {
         float dam_mod = 1.0 + ((float) get_property("damage.zoneDifficulty.spells.factor", 0.200) * zone_difficulty);
         dam = (float) ( dam * dam_mod );
+      }
+    }
+
+    int necropets[] = {3, 4, 5, 6, 7, 8, 9, 10, 78, 79, 80, 81, 82, 83, 84, 85};
+    if (IS_NPC(ch))
+    {
+      for (int r = 0; r < 16; r++)
+      {
+	if (mob_index[GET_RNUM(ch)].virtual_number == NECROPET ||
+	    mob_index[GET_RNUM(ch)].virtual_number == necropets[r])
+        {
+	  dam = dam/2;
+	  break;
+	}
       }
     }
 

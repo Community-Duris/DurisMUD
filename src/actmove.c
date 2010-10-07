@@ -1261,9 +1261,6 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
     return FALSE;
   }
 
-  if(has_innate(ch, INNATE_CALMING))
-    calming = (int)get_property("innate.calming.delay", 10);
-
   if(!can_enter_room(ch, EXIT(ch, exitnumb)->to_room, TRUE))
     return FALSE;
 
@@ -1632,6 +1629,11 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
 
       amsg[0] = '\0';
       enter_message(ch, tch, exitnumb, amsg, was_in, new_room);
+
+      if(!IS_ELITE(tch) &&
+	 (((GET_LEVEL(tch) - GET_LEVEL(ch)) <= 5) || !number(0, 3)) &&
+	 has_innate(ch, INNATE_CALMING))
+        calming = (int)get_property("innate.calming.delay", 10);
 
       if(mount)
       {
