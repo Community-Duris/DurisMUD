@@ -237,7 +237,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {0, 0, 0, 0, 0, 0}},
 
 //  18 "payang" (evil undead)
-  {JUSTICE_EVILHOME, 0,
+  {JUSTICE_LEVEL_CHAOS, 0,
    {90341, 0, 0, 0, 0}, 90313, 0, NULL,
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},

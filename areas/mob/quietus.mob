@@ -809,3 +809,25 @@ RA 0 1 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#1752
+experienced canoneer~
+&+Lan &+cexperienced &+rcanoneer&n~
+&+LAn &+cexperienced &+rcanoneer &+Lstands towards the back of the room, drinking ale.&n
+~
+~
+2058 0 0 0 0 0 0 0 S
+ho 0 16384 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#1753
+old quartermaster~
+&+Lan &+yold &+gq&nu&+ga&nr&+gt&ne&+gr&nmaster&n~
+&+LAn &+yold &+gq&nu&+ga&nr&+gt&ne&+gr&nmaster &+Lis busy chatting with one of the &+rbarmaids&+L.&n
+~
+~
+2058 0 0 0 0 0 0 0 S
+ho 0 16384 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0

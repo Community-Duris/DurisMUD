@@ -1,216 +1,216 @@
-#13
+#1350
 &+bBraddistock &+WMansion&n~
-1348 2 4 10 20 1
+135048 2 4 10 20 1
 *
-* Zone edited with dikuEdit v2.98i
+* Zone edited with durisEdit v2.99de
 *
 *
-D 0 1300 0 1 100 0 0 0
+D 0 135001 0 1 100 0 0 0
 *     north exit from "Road leading to a Dark Mansion" to
 *     "Entrance Hall" - closed
 *
-D 0 1301 2 1 100 0 0 0
+D 0 135002 2 1 100 0 0 0
 *     south exit from "Entrance Hall" to
 *     "Road leading to a Dark Mansion" - closed
 *
-D 0 1326 2 2 100 0 0 0
+D 0 135026 2 2 100 0 0 0
 *     south exit from "End of the Eastern Corridor" to
 *     "A Bedroom" - closed/locked
 *
-D 0 1327 0 1 100 0 0 0
+D 0 135027 0 1 100 0 0 0
 *     north exit from "A Bedroom" to
 *     "End of the Eastern Corridor" - closed
 *
-D 0 1335 2 5 100 0 0 0
+D 0 135035 2 5 100 0 0 0
 *     south exit from "Wine Cellar" to
 *     "Cellar" - closed/secret
 *
-D 0 1336 0 5 100 0 0 0
+D 0 135036 0 5 100 0 0 0
 *     north exit from "Cellar" to
 *     "Wine Cellar" - closed/secret
 *
-D 0 1336 1 1 100 0 0 0
+D 0 135036 1 1 100 0 0 0
 *     east exit from "Cellar" to
 *     "Skeleton's Room" - closed
 *
-D 0 1337 3 1 100 0 0 0
+D 0 135037 3 1 100 0 0 0
 *     west exit from "Skeleton's Room" to
 *     "Cellar" - closed
 *
-D 0 1337 1 5 100 0 0 0
+D 0 135037 1 5 100 0 0 0
 *     east exit from "Skeleton's Room" to
 *     "Laboratory" - closed/secret
 *
-D 0 1338 3 5 100 0 0 0
+D 0 135038 3 5 100 0 0 0
 *     west exit from "Laboratory" to
 *     "Skeleton's Room" - closed/secret
 *
 *
-O 0 1301 1 1303 100 0 0 0          * an old worn book
-O 0 1302 1 1303 100 0 0 0          * a musty book
-O 0 1303 1 1303 100 0 0 0          * an old tome
-P 1 1304 1 1303 100 0 0 0          *   a note
-O 0 1305 1 1304 100 0 0 0          * a broken desk
-P 1 1306 2 1305 100 0 0 0          *   a watery rose-colored potion
-P 1 1306 2 1305 100 0 0 0          *   a watery rose-colored potion
-O 0 1307 1 1305 100 0 0 0          * a pile of refuse
-P 1 1308 1 1307 100 0 0 0          *   a shiny gold earring
-O 0 1309 1 1308 100 0 0 0          * an amethyst
-O 0 1366 1 1308 100 0 0 0          * tiny red mushrooms
-O 0 1367 1 1308 100 0 0 0          * an intact fireplace
-O 0 1311 1 1313 100 0 0 0          * a small metal box
-P 1 1310 1 1311 100 0 0 0          *   a ring of protection
-O 0 1359 2 1313 100 0 0 0          * a broken armchair
-O 0 1359 2 1313 100 0 0 0          * a broken armchair
-O 0 1360 1 1313 100 0 0 0          * a broken table
-O 0 1361 1 1315 100 0 0 0          * a cracked and discolored sink
-O 0 1362 1 1315 100 0 0 0          * cooking equipment
-O 0 1371 1 1316 100 0 0 0          * a large copper boiler
-O 0 1312 1 1319 100 0 0 0          * a pair of old cracked leather boots
-O 0 1313 1 1319 100 0 0 0          * a ragged stained cloak
-O 0 1314 4 1319 100 0 0 0          * a large fireplace
-O 0 1364 5 1319 100 0 0 0          * pile of rubbish
-O 0 1364 5 1321 100 0 0 0          * pile of rubbish
-O 0 1314 4 1321 100 0 0 0          * a large fireplace
-O 0 1368 1 1321 100 0 0 0          * a four-poster bed
-O 0 1314 4 1323 100 0 0 0          * a large fireplace
-P 1 1315 1 1314 100 0 0 0          *   a fist-sized chunk of crystal
-O 0 1364 5 1323 100 0 0 0          * pile of rubbish
-O 0 1316 1 1326 100 0 0 0          * a scratched key
-O 0 1314 4 1327 100 0 0 0          * a large fireplace
-O 0 1318 2 1329 100 0 0 0          * a large wooden chest
-P 1 1320 2 1318 100 0 0 0          *   a small diamond
-P 1 1320 2 1318 100 0 0 0          *   a small diamond
-O 0 1364 5 1329 100 0 0 0          * pile of rubbish
-O 0 1321 1 1331 100 0 0 0          * a mildewed sack
-O 0 1370 3 1331 100 0 0 0          * a wooden chair
-O 0 1369 1 1331 100 0 0 0          * a bundle of clothing
-O 0 1370 3 1331 100 0 0 0          * a wooden chair
-O 0 1370 3 1331 100 0 0 0          * a wooden chair
-O 0 1318 2 1331 100 0 0 0          * a large wooden chest
-O 0 1363 1 1332 100 0 0 0          * rotten timber
-O 0 1364 5 1333 100 0 0 0          * pile of rubbish
-O 0 1365 1 1333 100 0 0 0          * two large sacks
-O 0 1322 1 1334 100 0 0 0          * a stirges nest
-P 1 1323 1 1322 100 0 0 0          *   a silverish ring
-O 0 1324 1 1335 100 0 0 0          * a warrior's corpse
-P 1 1325 1 1324 100 0 0 0          *   a suit of plate mail
-P 1 1326 1 1324 100 0 0 0          *   a jagged longsword
-P 1 1327 1 1324 100 0 0 0          *   a dented shield
-P 1 1328 1 1324 100 0 0 0          *   a jagged dagger
-P 1 1329 1 1324 100 0 0 0          *   a cracked leather backpack
-P 1 1330 1 1324 100 0 0 0          *   a cracked leather waterskin
-P 1 364 1 1324 100 0 0 0           *   (object not in this .OBJ file)
-P 1 398 1 1324 100 0 0 0           *   (object not in this .OBJ file)
-P 1 1356 1 1324 100 0 0 0          *   a breathtaking emerald
-O 0 1373 2 1335 100 0 0 0          * wooden bottle racks
-O 0 1373 2 1335 100 0 0 0          * wooden bottle racks
-O 0 1333 15 1336 100 0 0 0         * a cask of brandy
-O 0 1334 8 1336 100 0 0 0          * a bolt of fine silk
-O 0 1333 15 1336 100 0 0 0         * a cask of brandy
-O 0 1335 1 1338 100 0 0 0          * a book entitled "Ye Secret of Ye Philosopher's Stone"
-O 0 1336 1 1338 100 0 0 0          * a golden human skull
-O 0 1337 1 1338 100 0 0 0          * a golden apple
-O 0 1338 1 1338 100 0 0 0          * a golden rose
-O 0 1339 1 1338 100 0 0 0          * a set of five small golden balance weights
-O 0 1340 1 1338 100 0 0 0          * the skeleton of an alchemist
-P 1 1342 1 1340 100 0 0 0          *   a smooth ovoid pebble
-O 0 1341 1 1338 100 0 0 0          * an alchemist's table
-P 1 1343 1 1341 100 0 0 0          *   an alchemist's scroll
-O 0 1344 1 1339 100 0 0 0          * a medium wooden table
-P 1 1346 1 1344 100 0 0 0          *   a glowing green scroll
-O 0 1347 1 1339 100 0 0 0          * a small iron strongbox
-P 1 1348 3 1347 100 0 0 0          *   a pale yellow potion
-P 1 1348 3 1347 100 0 0 0          *   a pale yellow potion
-P 1 1348 3 1347 100 0 0 0          *   a pale yellow potion
-P 1 1349 2 1347 100 0 0 0          *   a deep green potion
-P 1 1349 2 1347 100 0 0 0          *   a deep green potion
-O 0 1334 8 1345 100 0 0 0          * a bolt of fine silk
-O 0 1334 8 1345 100 0 0 0          * a bolt of fine silk
-O 0 1334 8 1345 100 0 0 0          * a bolt of fine silk
-O 0 1334 8 1345 100 0 0 0          * a bolt of fine silk
-O 0 1334 8 1345 100 0 0 0          * a bolt of fine silk
-O 0 1333 15 1345 100 0 0 0         * a cask of brandy
-O 0 1333 15 1345 100 0 0 0         * a cask of brandy
-O 0 1333 15 1345 100 0 0 0         * a cask of brandy
-O 0 1333 15 1345 100 0 0 0         * a cask of brandy
-O 0 1333 15 1345 100 0 0 0         * a cask of brandy
-O 0 1333 15 1345 100 0 0 0         * a cask of brandy
-O 0 1333 15 1345 100 0 0 0         * a cask of brandy
-O 0 1333 15 1345 100 0 0 0         * a cask of brandy
-O 0 1334 8 1347 100 0 0 0          * a bolt of fine silk
-O 0 1334 8 1347 100 0 0 0          * a bolt of fine silk
-O 0 1333 15 1347 100 0 0 0         * a cask of brandy
-O 0 1333 15 1347 100 0 0 0         * a cask of brandy
-O 0 1333 15 1347 100 0 0 0         * a cask of brandy
-O 0 1333 15 1347 100 0 0 0         * a cask of brandy
-O 0 1333 15 1347 100 0 0 0         * a cask of brandy
-O 0 1353 1 1348 100 0 0 0          * a glowing boat
+O 0 135001 1 135004 100 0 0 0      * an old worn book
+O 0 135002 1 135004 100 0 0 0      * a musty book
+O 0 135003 1 135004 100 0 0 0      * an old tome
+P 1 135004 1 135003 100 0 0 0      *   a note
+O 0 135005 1 135005 100 0 0 0      * a broken desk
+P 1 135006 2 135005 100 0 0 0      *   a watery rose-colored potion
+P 1 135006 2 135005 100 0 0 0      *   a watery rose-colored potion
+O 0 135007 1 135006 100 0 0 0      * a pile of refuse
+P 1 135008 1 135007 100 0 0 0      *   a shiny gold earring
+O 0 135009 1 135008 100 0 0 0      * an amethyst
+O 0 135065 1 135008 100 0 0 0      * tiny red mushrooms
+O 0 135066 1 135008 100 0 0 0      * an intact fireplace
+O 0 135011 1 135013 100 0 0 0      * a small metal box
+P 1 135010 1 135011 100 0 0 0      *   a ring of protection
+O 0 135058 2 135013 100 0 0 0      * a broken armchair
+O 0 135058 2 135013 100 0 0 0      * a broken armchair
+O 0 135059 1 135013 100 0 0 0      * a broken table
+O 0 135060 1 135015 100 0 0 0      * a cracked and discolored sink
+O 0 135061 1 135015 100 0 0 0      * cooking equipment
+O 0 135070 1 135016 100 0 0 0      * a large copper boiler
+O 0 135012 1 135019 100 0 0 0      * a pair of old cracked leather boots
+O 0 135013 1 135019 100 0 0 0      * a ragged stained cloak
+O 0 135014 4 135019 100 0 0 0      * a large fireplace
+O 0 135063 5 135019 100 0 0 0      * pile of rubbish
+O 0 135063 5 135021 100 0 0 0      * pile of rubbish
+O 0 135014 4 135021 100 0 0 0      * a large fireplace
+O 0 135067 1 135021 100 0 0 0      * a four-poster bed
+O 0 135014 4 135023 100 0 0 0      * a large fireplace
+P 1 135015 1 135014 100 0 0 0      *   a fist-sized chunk of crystal
+O 0 135063 5 135023 100 0 0 0      * pile of rubbish
+O 0 135016 1 135026 100 0 0 0      * a scratched key
+O 0 135014 4 135027 100 0 0 0      * a large fireplace
+O 0 135018 2 135029 100 0 0 0      * a large wooden chest
+P 1 135020 2 135018 100 0 0 0      *   a small diamond
+P 1 135020 2 135018 100 0 0 0      *   a small diamond
+O 0 135063 5 135029 100 0 0 0      * pile of rubbish
+O 0 135021 1 135031 100 0 0 0      * a mildewed sack
+O 0 135069 3 135031 100 0 0 0      * a wooden chair
+O 0 135068 1 135031 100 0 0 0      * a bundle of clothing
+O 0 135069 3 135031 100 0 0 0      * a wooden chair
+O 0 135069 3 135031 100 0 0 0      * a wooden chair
+O 0 135018 2 135031 100 0 0 0      * a large wooden chest
+O 0 135062 1 135032 100 0 0 0      * rotten timber
+O 0 135063 5 135033 100 0 0 0      * pile of rubbish
+O 0 135064 1 135033 100 0 0 0      * two large sacks
+O 0 135022 1 135034 100 0 0 0      * a stirges nest
+P 1 135023 1 135022 100 0 0 0      *   a silverish ring
+O 0 135024 1 135035 100 0 0 0      * a warrior's corpse
+P 1 135025 1 135024 100 0 0 0      *   a suit of plate mail
+P 1 135026 1 135024 100 0 0 0      *   a jagged longsword
+P 1 135027 1 135024 100 0 0 0      *   a dented shield
+P 1 135028 1 135024 100 0 0 0      *   a jagged dagger
+P 1 135029 1 135024 100 0 0 0      *   a cracked leather backpack
+P 1 135030 1 135024 100 0 0 0      *   a cracked leather waterskin
+P 1 364 1 135024 100 0 0 0         *   (object type not in this .obj file)
+P 1 398 1 135024 100 0 0 0         *   (object type not in this .obj file)
+P 1 135055 1 135024 100 0 0 0      *   a breathtaking emerald
+O 0 135072 2 135035 100 0 0 0      * wooden bottle racks
+O 0 135072 2 135035 100 0 0 0      * wooden bottle racks
+O 0 135033 15 135036 100 0 0 0     * a cask of brandy
+O 0 135034 8 135036 100 0 0 0      * a bolt of fine silk
+O 0 135033 15 135036 100 0 0 0     * a cask of brandy
+O 0 135035 1 135038 100 0 0 0      * a book entitled "Ye Secret of Ye Philosopher's Stone"
+O 0 135036 1 135038 100 0 0 0      * a golden human skull
+O 0 135037 1 135038 100 0 0 0      * a golden apple
+O 0 135038 1 135038 100 0 0 0      * a golden rose
+O 0 135039 1 135038 100 0 0 0      * a set of five small golden balance weights
+O 0 135040 1 135038 100 0 0 0      * the skeleton of an alchemist
+P 1 135042 1 135040 100 0 0 0      *   a smooth ovoid pebble
+O 0 135041 1 135038 100 0 0 0      * an alchemist's table
+P 1 135043 1 135041 100 0 0 0      *   an alchemist's scroll
+O 0 135044 1 135039 100 0 0 0      * a medium wooden table
+P 1 135045 1 135044 100 0 0 0      *   a glowing green scroll
+O 0 135046 1 135039 100 0 0 0      * a small iron strongbox
+P 1 135047 3 135046 100 0 0 0      *   a pale yellow potion
+P 1 135047 3 135046 100 0 0 0      *   a pale yellow potion
+P 1 135047 3 135046 100 0 0 0      *   a pale yellow potion
+P 1 135048 2 135046 100 0 0 0      *   a deep green potion
+P 1 135048 2 135046 100 0 0 0      *   a deep green potion
+O 0 135034 8 135045 100 0 0 0      * a bolt of fine silk
+O 0 135034 8 135045 100 0 0 0      * a bolt of fine silk
+O 0 135034 8 135045 100 0 0 0      * a bolt of fine silk
+O 0 135034 8 135045 100 0 0 0      * a bolt of fine silk
+O 0 135034 8 135045 100 0 0 0      * a bolt of fine silk
+O 0 135033 15 135045 100 0 0 0     * a cask of brandy
+O 0 135033 15 135045 100 0 0 0     * a cask of brandy
+O 0 135033 15 135045 100 0 0 0     * a cask of brandy
+O 0 135033 15 135045 100 0 0 0     * a cask of brandy
+O 0 135033 15 135045 100 0 0 0     * a cask of brandy
+O 0 135033 15 135045 100 0 0 0     * a cask of brandy
+O 0 135033 15 135045 100 0 0 0     * a cask of brandy
+O 0 135033 15 135045 100 0 0 0     * a cask of brandy
+O 0 135034 8 135047 100 0 0 0      * a bolt of fine silk
+O 0 135034 8 135047 100 0 0 0      * a bolt of fine silk
+O 0 135033 15 135047 100 0 0 0     * a cask of brandy
+O 0 135033 15 135047 100 0 0 0     * a cask of brandy
+O 0 135033 15 135047 100 0 0 0     * a cask of brandy
+O 0 135033 15 135047 100 0 0 0     * a cask of brandy
+O 0 135033 15 135047 100 0 0 0     * a cask of brandy
+O 0 135052 1 135048 100 0 0 0      * a glowing boat
 *
-M 0 1314 1 1300 100 0 0 0          * the spirit of Lord Braddistock
-M 0 1313 3 1304 100 0 0 0          * a giant ant
-M 0 1313 3 1304 100 0 0 0          * a giant ant
-M 0 1313 3 1304 100 0 0 0          * a giant ant
-M 0 1311 7 1305 100 0 0 0          * a wandering goblin
-E 1 1352 9 16 100 0 0 0            *   a rusty battle axe
-M 0 1311 7 1309 100 0 0 0          * a wandering goblin
-E 1 1352 9 16 100 0 0 0            *   a rusty battle axe
-M 0 1311 7 1310 100 0 0 0          * a wandering goblin
-E 1 1352 9 16 100 0 0 0            *   a rusty battle axe
-M 0 1311 7 1312 100 0 0 0          * a wandering goblin
-E 1 1352 9 16 100 0 0 0            *   a rusty battle axe
-M 0 1301 3 1313 100 0 0 0          * a large spider
-M 0 1302 5 1315 100 0 0 0          * a giant centipede
-M 0 1302 5 1315 100 0 0 0          * a giant centipede
-M 0 1302 5 1315 100 0 0 0          * a giant centipede
-M 0 1302 5 1315 100 0 0 0          * a giant centipede
-M 0 1302 5 1315 100 0 0 0          * a giant centipede
-M 0 1312 1 1315 100 0 0 0          * a giant weasel
-M 0 1301 3 1323 100 0 0 0          * a large spider
-M 0 1301 3 1323 100 0 0 0          * a large spider
-M 0 1311 7 1325 100 0 0 0          * a wandering goblin
-E 1 1352 9 16 100 0 0 0            *   a rusty battle axe
-M 0 1303 1 1327 100 0 0 0          * a spry thief
-E 1 1317 1 16 100 0 0 0            *   a sharp assassin's dagger
-M 0 1311 7 1329 100 0 0 0          * a wandering goblin
-E 1 1352 9 16 100 0 0 0            *   a rusty battle axe
-M 0 1311 7 1331 100 0 0 0          * a wandering goblin
-E 1 1352 9 16 100 0 0 0            *   a rusty battle axe
-M 0 1304 5 1334 100 0 0 0          * a bloodthirsty stirge
-M 0 1304 5 1334 100 0 0 0          * a bloodthirsty stirge
-M 0 1304 5 1334 100 0 0 0          * a bloodthirsty stirge
-M 0 1304 5 1334 100 0 0 0          * a bloodthirsty stirge
-M 0 1304 5 1334 100 0 0 0          * a bloodthirsty stirge
-M 0 1305 5 1335 100 0 0 0          * a large cellar rat
-M 0 1305 5 1335 100 0 0 0          * a large cellar rat
-M 0 1305 5 1335 100 0 0 0          * a large cellar rat
-M 0 1305 5 1335 100 0 0 0          * a large cellar rat
-M 0 1305 5 1335 100 0 0 0          * a large cellar rat
-M 0 1306 4 1336 100 0 0 0          * a seafaring smuggler
-E 1 1355 2 3 100 0 0 0             *   a 'lucky charm' necklace
-M 0 1308 6 1337 100 0 0 0          * a skeleton
-M 0 1308 6 1337 100 0 0 0          * a skeleton
-M 0 1308 6 1337 100 0 0 0          * a skeleton
-M 0 1308 6 1337 100 0 0 0          * a skeleton
-M 0 1308 6 1337 100 0 0 0          * a skeleton
-M 0 1308 6 1337 100 0 0 0          * a skeleton
-M 0 1307 4 1345 100 0 0 0          * a human smuggler
-E 1 1355 2 3 100 0 0 0             *   a 'lucky charm' necklace
-M 0 1310 2 1345 100 0 0 0          * a gnoll
-E 1 1352 9 16 100 0 0 0            *   a rusty battle axe
-M 0 1310 2 1345 100 0 0 0          * a gnoll
-E 1 1352 9 16 100 0 0 0            *   a rusty battle axe
-M 0 1309 1 1345 100 0 0 0          * Sanbalet, the chief smuggler
-E 1 1358 1 8 100 0 0 0             *   a pair of mage boots
-E 1 1350 1 16 100 0 0 0            *   an iron rod
-M 0 1306 4 1346 100 0 0 0          * a seafaring smuggler
-E 1 1354 2 21 100 0 0 0            *   a large golden hoop earring
-M 0 1306 4 1346 100 0 0 0          * a seafaring smuggler
-M 0 1307 4 1346 100 0 0 0          * a human smuggler
-E 1 1357 1 15 100 0 0 0            *   a dull pale gold bracelet
-M 0 1306 4 1347 100 0 0 0          * a seafaring smuggler
-M 0 1307 4 1347 100 0 0 0          * a human smuggler
-E 1 1354 2 21 100 0 0 0            *   a large golden hoop earring
-M 0 1307 4 1347 100 0 0 0          * a human smuggler
+M 0 135014 1 135001 100 0 0 0      * the spirit of Lord Braddistock
+M 0 135013 3 135005 100 0 0 0      * a giant ant
+M 0 135013 3 135005 100 0 0 0      * a giant ant
+M 0 135013 3 135005 100 0 0 0      * a giant ant
+M 0 135011 7 135006 100 0 0 0      * a wandering goblin
+E 1 135051 9 16 100 0 0 0          *   a rusty battle axe
+M 0 135011 7 135009 100 0 0 0      * a wandering goblin
+E 1 135051 9 16 100 0 0 0          *   a rusty battle axe
+M 0 135011 7 135010 100 0 0 0      * a wandering goblin
+E 1 135051 9 16 100 0 0 0          *   a rusty battle axe
+M 0 135011 7 135012 100 0 0 0      * a wandering goblin
+E 1 135051 9 16 100 0 0 0          *   a rusty battle axe
+M 0 135001 3 135013 100 0 0 0      * a large spider
+M 0 135002 5 135015 100 0 0 0      * a giant centipede
+M 0 135002 5 135015 100 0 0 0      * a giant centipede
+M 0 135002 5 135015 100 0 0 0      * a giant centipede
+M 0 135002 5 135015 100 0 0 0      * a giant centipede
+M 0 135002 5 135015 100 0 0 0      * a giant centipede
+M 0 135012 1 135015 100 0 0 0      * a giant weasel
+M 0 135001 3 135023 100 0 0 0      * a large spider
+M 0 135001 3 135023 100 0 0 0      * a large spider
+M 0 135011 7 135025 100 0 0 0      * a wandering goblin
+E 1 135051 9 16 100 0 0 0          *   a rusty battle axe
+M 0 135003 1 135027 100 0 0 0      * a spry thief
+E 1 135017 1 16 100 0 0 0          *   a sharp assassin's dagger
+M 0 135011 7 135029 100 0 0 0      * a wandering goblin
+E 1 135051 9 16 100 0 0 0          *   a rusty battle axe
+M 0 135011 7 135031 100 0 0 0      * a wandering goblin
+E 1 135051 9 16 100 0 0 0          *   a rusty battle axe
+M 0 135004 5 135034 100 0 0 0      * a bloodthirsty stirge
+M 0 135004 5 135034 100 0 0 0      * a bloodthirsty stirge
+M 0 135004 5 135034 100 0 0 0      * a bloodthirsty stirge
+M 0 135004 5 135034 100 0 0 0      * a bloodthirsty stirge
+M 0 135004 5 135034 100 0 0 0      * a bloodthirsty stirge
+M 0 135005 5 135035 100 0 0 0      * a large cellar rat
+M 0 135005 5 135035 100 0 0 0      * a large cellar rat
+M 0 135005 5 135035 100 0 0 0      * a large cellar rat
+M 0 135005 5 135035 100 0 0 0      * a large cellar rat
+M 0 135005 5 135035 100 0 0 0      * a large cellar rat
+M 0 135006 4 135036 100 0 0 0      * a seafaring smuggler
+E 1 135054 2 3 100 0 0 0           *   a 'lucky charm' necklace
+M 0 135008 6 135037 100 0 0 0      * a skeleton
+M 0 135008 6 135037 100 0 0 0      * a skeleton
+M 0 135008 6 135037 100 0 0 0      * a skeleton
+M 0 135008 6 135037 100 0 0 0      * a skeleton
+M 0 135008 6 135037 100 0 0 0      * a skeleton
+M 0 135008 6 135037 100 0 0 0      * a skeleton
+M 0 135007 4 135045 100 0 0 0      * a human smuggler
+E 1 135054 2 3 100 0 0 0           *   a 'lucky charm' necklace
+M 0 135010 2 135045 100 0 0 0      * a gnoll
+E 1 135051 9 16 100 0 0 0          *   a rusty battle axe
+M 0 135010 2 135045 100 0 0 0      * a gnoll
+E 1 135051 9 16 100 0 0 0          *   a rusty battle axe
+M 0 135009 1 135045 100 0 0 0      * Sanbalet, the chief smuggler
+E 1 135057 1 8 100 0 0 0           *   a pair of mage boots
+E 1 135049 1 16 100 0 0 0          *   an iron rod
+M 0 135006 4 135046 100 0 0 0      * a seafaring smuggler
+E 1 135053 2 21 100 0 0 0          *   a large golden hoop earring
+M 0 135006 4 135046 100 0 0 0      * a seafaring smuggler
+M 0 135007 4 135046 100 0 0 0      * a human smuggler
+E 1 135056 1 15 100 0 0 0          *   a dull pale gold bracelet
+M 0 135006 4 135047 100 0 0 0      * a seafaring smuggler
+M 0 135007 4 135047 100 0 0 0      * a human smuggler
+E 1 135053 2 21 100 0 0 0          *   a large golden hoop earring
+M 0 135007 4 135047 100 0 0 0      * a human smuggler
 *
 S

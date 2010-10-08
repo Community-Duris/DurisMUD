@@ -1,0 +1,120 @@
+#1312
+The Elemental Plane of Earth~
+131376 2 0 40 50 1
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+*
+O 0 19722 1 131211 100 0 0 0       * (object type not in this .obj file)
+*
+M 0 131204 4 131200 100 0 0 0      * A small earth elemental
+M 0 131205 10 131201 100 0 0 0     * A gigantic earth elemental
+M 0 131209 5 131202 100 0 0 0      * A xaren
+E 1 131209 1 8 100 0 0 0           *   boots of the xaren
+M 0 131210 5 131205 100 0 0 0      * A galber dher
+E 1 131203 1 3 100 0 0 0           *   a necklace of granite
+M 0 131200 17 131206 100 0 0 0     * A pech
+M 0 131200 17 131212 100 0 0 0     * A pech
+M 0 131200 17 131213 100 0 0 0     * A pech
+M 0 131200 17 131214 100 0 0 0     * A pech
+M 0 131200 17 131216 100 0 0 0     * A pech
+M 0 131202 7 131218 100 0 0 0      * A dao guardian
+M 0 131204 4 131220 100 0 0 0      * A small earth elemental
+M 0 131203 7 131221 100 0 0 0      * An earth mephit
+E 1 131205 7 16 100 0 0 0          *   a stone dagger
+M 0 131200 17 131222 100 0 0 0     * A pech
+M 0 131205 10 131224 100 0 0 0     * A gigantic earth elemental
+M 0 131203 7 131225 100 0 0 0      * An earth mephit
+E 1 131205 7 16 100 0 0 0          *   a stone dagger
+M 0 131205 10 131231 100 0 0 0     * A gigantic earth elemental
+M 0 131201 6 131231 100 0 0 0      * A dao magician
+E 1 131208 1 18 100 0 0 0          *   a granite orb
+M 0 131208 6 131232 100 0 0 0      * A xorn
+E 1 131207 2 14 100 0 0 0          *   an earthen bracer
+F 1 131208 6 131232 100 0 0 0      * A xorn (following)
+F 1 131208 6 131232 100 0 0 0      * A xorn (following)
+M 0 131207 5 131233 100 0 0 0      * A dao enforcer
+M 0 131200 17 131234 100 0 0 0     * A pech
+M 0 131203 7 131235 100 0 0 0      * An earth mephit
+E 1 131205 7 16 100 0 0 0          *   a stone dagger
+M 0 131210 5 131237 100 0 0 0      * A galber dher
+M 0 131203 7 131238 100 0 0 0      * An earth mephit
+E 1 131205 7 16 100 0 0 0          *   a stone dagger
+M 0 131202 7 131240 100 0 0 0      * A dao guardian
+M 0 131205 10 131240 100 0 0 0     * A gigantic earth elemental
+M 0 131209 5 131243 100 0 0 0      * A xaren
+M 0 131210 5 131244 100 0 0 0      * A galber dher
+M 0 131206 18 131251 100 0 0 0     * A sandling
+M 0 131206 18 131252 100 0 0 0     * A sandling
+M 0 131206 18 131253 100 0 0 0     * A sandling
+M 0 131206 18 131254 100 0 0 0     * A sandling
+M 0 131210 5 131255 100 0 0 0      * A galber dher
+M 0 131206 18 131256 100 0 0 0     * A sandling
+M 0 131206 18 131258 100 0 0 0     * A sandling
+M 0 131206 18 131259 100 0 0 0     * A sandling
+M 0 131204 4 131261 100 0 0 0      * A small earth elemental
+M 0 131206 18 131263 100 0 0 0     * A sandling
+M 0 131206 18 131264 100 0 0 0     * A sandling
+M 0 131202 7 131265 100 0 0 0      * A dao guardian
+M 0 131206 18 131266 100 0 0 0     * A sandling
+M 0 131200 17 131272 100 0 0 0     * A pech
+M 0 131200 17 131273 100 0 0 0     * A pech
+M 0 131200 17 131274 100 0 0 0     * A pech
+M 0 131200 17 131274 100 0 0 0     * A pech
+M 0 131200 17 131274 100 0 0 0     * A pech
+M 0 131207 5 131280 100 0 0 0      * A dao enforcer
+M 0 131209 5 131281 100 0 0 0      * A xaren
+M 0 131205 10 131283 100 0 0 0     * A gigantic earth elemental
+M 0 131205 10 131284 100 0 0 0     * A gigantic earth elemental
+M 0 131205 10 131289 100 0 0 0     * A gigantic earth elemental
+M 0 131203 7 131292 100 0 0 0      * An earth mephit
+E 1 131205 7 16 100 0 0 0          *   a stone dagger
+M 0 131204 4 131292 100 0 0 0      * A small earth elemental
+M 0 131202 7 131295 100 0 0 0      * A dao guardian
+M 0 131201 6 131295 100 0 0 0      * A dao magician
+M 0 131206 18 131297 100 0 0 0     * A sandling
+M 0 131206 18 131298 100 0 0 0     * A sandling
+M 0 131206 18 131299 100 0 0 0     * A sandling
+M 0 131206 18 131300 100 0 0 0     * A sandling
+M 0 131206 18 131302 100 0 0 0     * A sandling
+M 0 131206 18 131304 100 0 0 0     * A sandling
+M 0 131206 18 131305 100 0 0 0     * A sandling
+M 0 131212 1 131314 100 0 0 0      * A Titan
+E 1 131201 1 11 100 0 0 0          *   a shield of the ancients
+E 1 131206 1 18 100 0 0 0          *   the staff of Truth
+M 0 131209 5 131332 100 0 0 0      * A xaren
+M 0 131208 6 131334 100 0 0 0      * A xorn
+G 1 131207 2 0 100 0 0 0           *    an earthen bracer
+F 1 131208 6 131334 100 0 0 0      * A xorn (following)
+F 1 131208 6 131334 100 0 0 0      * A xorn (following)
+M 0 131205 10 131340 100 0 0 0     * A gigantic earth elemental
+M 0 131207 5 131343 100 0 0 0      * A dao enforcer
+M 0 131201 6 131344 100 0 0 0      * A dao magician
+M 0 131202 7 131344 100 0 0 0      * A dao guardian
+M 0 131200 17 131345 100 0 0 0     * A pech
+M 0 131203 7 131345 100 0 0 0      * An earth mephit
+E 1 131205 7 16 100 0 0 0          *   a stone dagger
+M 0 131200 17 131346 100 0 0 0     * A pech
+M 0 131200 17 131347 100 0 0 0     * A pech
+M 0 131200 17 131348 100 0 0 0     * A pech
+M 0 131201 6 131349 100 0 0 0      * A dao magician
+M 0 131206 18 131352 100 0 0 0     * A sandling
+M 0 131203 7 131352 100 0 0 0      * An earth mephit
+E 1 131205 7 16 100 0 0 0          *   a stone dagger
+M 0 131210 5 131354 100 0 0 0      * A galber dher
+M 0 131209 5 131354 100 0 0 0      * A xaren
+M 0 131205 10 131357 100 0 0 0     * A gigantic earth elemental
+M 0 131205 10 131358 100 0 0 0     * A gigantic earth elemental
+M 0 131200 17 131359 100 0 0 0     * A pech
+M 0 131201 6 131361 100 0 0 0      * A dao magician
+M 0 131202 7 131361 100 0 0 0      * A dao guardian
+M 0 131207 5 131361 100 0 0 0      * A dao enforcer
+M 0 131201 6 131363 100 0 0 0      * A dao magician
+M 0 131202 7 131363 100 0 0 0      * A dao guardian
+M 0 131207 5 131363 100 0 0 0      * A dao enforcer
+M 0 131211 1 131369 100 0 0 0      * Grumbar
+E 1 131204 1 20 100 0 0 0          *   a stone mask
+E 1 131200 1 16 100 0 0 0          *   the earthen hammer of Grumbar
+*
+S

@@ -1305,20 +1305,34 @@ bool guildhall_map_check(P_char ch)
 
   if( GET_RACEWAR(ch) == RACEWAR_EVIL )
   {
-    if( !IS_CONTINENT(rroom, CONT_EC) )
+    if (IS_CONTINENT(rroom, CONT_EC))
     {
-      send_to_char("You can only build a guildhall on the &+LEvil Continent&n.\r\n", ch);
-      return FALSE;
+      int dist = calculate_map_distance(ch->in_room, real_room(SHADY_MAP_VNUM));
+
+      if( dist )
+        dist = (int) sqrt(dist); // calculate_map_distance returns the square of the distance
+
+      if( dist < 0 || dist > MAX_GH_HOMETOWN_RADIUS )
+      {
+        send_to_char("You need to build your guildhall closer to Shady Grove.\r\n", ch);
+        return FALSE;
+      }
     }
-    
-    int dist = calculate_map_distance(ch->in_room, real_room(SHADY_MAP_VNUM));
-
-    if( dist )
-      dist = (int) sqrt(dist); // calculate_map_distance returns the square of the distance
-
-    if( dist < 0 || dist > MAX_GH_HOMETOWN_RADIUS )
+    else if (IS_UD_MAP(ch->in_room))
     {
-      send_to_char("You need to build your guildhall closer to Shady Grove.\r\n", ch);
+      int dist = calculate_map_distance(ch->in_room, real_room(KHILD_MAP_VNUM));
+
+      if (dist)
+	dist = (int) sqrt(dist);
+      if (dist < 0 || dist > MAX_GH_HOMETOWN_RADIUS)
+      {
+	send_to_char("You need to build your guildhall closer to Khildarak.\r\n", ch);
+	return FALSE;
+      }
+    }
+    else
+    {
+      send_to_char("You can only build a guildhall on the &+LEvil Continent&n or Underdark.\r\n", ch);
       return FALSE;
     }
   }
@@ -1341,7 +1355,8 @@ bool guildhall_map_check(P_char ch)
   
   if( world[rroom].sector_type == SECT_FOREST ||
       world[rroom].sector_type == SECT_HILLS ||
-      world[rroom].sector_type == SECT_FIELD )
+      world[rroom].sector_type == SECT_FIELD ||
+      IS_UD_MAP(rroom))
   {
     return TRUE;
   }

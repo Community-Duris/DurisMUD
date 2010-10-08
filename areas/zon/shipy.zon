@@ -486,11 +486,14 @@ G 1 40441 2 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 43134 2 43220 100 0 0 0        * a noble sailor
 G 1 40441 2 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 43135 1 43220 100 0 0 0        * Gringash the Barkeep
+M 0 43199 1 43220 100 0 0 0        * a gunner cadet
+M 0 43200 1 43220 100 0 0 0        * a shipwright tyro
 M 0 43174 1 43221 100 0 0 0        * Cairme BloodFang
 M 0 43175 2 43221 100 0 0 0        * a seasoned sailor
 M 0 43175 2 43221 100 0 0 0        * a seasoned sailor
 M 0 43176 2 43221 100 0 0 0        * a drunk sailor
 M 0 43176 2 43221 100 0 0 0        * a drunk sailor
+M 0 43201 1 43221 100 0 0 0        * a veteran boatswain
 M 0 43153 1 43222 100 0 0 0        * Martinek
 M 0 43154 2 43222 100 0 0 0        * a high elven sailor
 M 0 43154 2 43222 100 0 0 0        * a high elven sailor

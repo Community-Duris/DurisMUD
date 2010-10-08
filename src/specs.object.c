@@ -2550,6 +2550,7 @@ void event_dragonlord_check(P_char ch, P_char victim, P_obj obj, void *data)
     act("The &+Wplatemail&n of the &+YDragonLord&n erupts acid as it detaches from your body!",
       FALSE, ch, obj, 0, TO_CHAR);
     obj_to_char(unequip_char(ch, dragonlord_slot), ch);
+    add_event(event_dragonlord_check, (int)(0.5 * PULSE_VIOLENCE), ch, 0, 0, 0, 0, 0); 
   }
   else if(armor != NULL &&
           obj_index[armor->R_num].virtual_number == DRAGONLORD_PLATE_VNUM &&
@@ -3052,7 +3053,8 @@ int vapor(P_obj obj, P_char ch, int cmd, char *arg)
     }
     // It's on body
     if(OBJ_WORN_BY(obj, ch) &&
-      !affected_by_spell(ch, SPELL_GLOBE))
+      !affected_by_spell(ch, SPELL_GLOBE) &&
+      !IS_AFFECTED2(ch, AFF2_GLOBE))
     {
       if(IS_PC(ch))
       {

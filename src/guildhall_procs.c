@@ -32,24 +32,13 @@ int guildhall_door(P_obj obj, P_char ch, int cmd, char *arg)
   //
   // if a player does "look in <objectname>", we want to show them inside the entrance room
   //
-  if( ch && cmd == CMD_LOOK )
+  if( ch && cmd == CMD_LOOK &&
+      isname(arg, "in guildhall"))
   {
-    char buff[MAX_STRING_LENGTH];
-    half_chop(arg, buff, arg);
-    
-    if( is_abbrev(buff, "in") )
-    {
-      half_chop(arg, buff, arg);
-      
-      if( isname(buff, obj->name) )
-      {
-        send_to_char("You peer inside the guildhall...\r\n", ch);
-        new_look(ch, "inside", CMD_LOOK, real_room0(obj->value[0]));    
-        return TRUE;
-      }
-    }
-  }
-    
+    send_to_char("You peer inside the guildhall...\r\n", ch);
+    new_look(ch, "inside", CMD_LOOK, real_room0(obj->value[0]));    
+    return TRUE;
+  }    
   return FALSE;
 }
 

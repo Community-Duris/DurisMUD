@@ -8151,7 +8151,7 @@ PROFILE_START(mundane_picktarget);
   if((GET_POS(ch) > POS_SITTING) && !IS_FIGHTING(ch) && !ALONE(ch) && (tmp_ch = PickTarget(ch)))
   {
     add_event(event_agg_attack, 1 +
-	(has_innate(tmp_ch, INNATE_CALMING) ? (int)get_property("innate.calming.delay", 10) : 0),
+	(has_innate(tmp_ch, INNATE_CALMING) ? (int)number(0, get_property("innate.calming.delay", 10)) : 0),
 	  ch, tmp_ch, 0, 0, 0, 0);
 PROFILE_END(mundane_picktarget);
     goto normal;
@@ -10500,7 +10500,7 @@ void event_agg_attack(P_char ch, P_char victim, P_obj obj, void *data)
       {
         do_move(ch, 0, exitnumb_to_cmd(door));
         add_event(event_agg_attack, 1 +
-	    (has_innate(victim, INNATE_CALMING) ? (int)get_property("innate.calming.delay", 10) : 0),
+	    (has_innate(victim, INNATE_CALMING) ? (int)number(0, get_property("innate.calming.delay", 10)) : 0),
 	    ch, victim, 0, 0, 0, 0);
         return;
       }

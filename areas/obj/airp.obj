@@ -1,0 +1,470 @@
+#131600
+gate large~
+&+Ca gate~
+&+CA large gate made of mist leads to the &n&+LFortress &n&+Cof Mists stands here.~
+~
+25 1 10 0 14 0 24640 0 0 1 0
+131610 7 -1 0 0 0 0 0
+0 0 100
+E
+gate large~
+&+C   This large gate leads into the &+LFortress&+C of Mists. It stands over twenty
+&+Cfeet tall and seem to waver sometimes in the wind. Beyond it there looks to
+&+Cbe a large hallway and guard area that leads into the heart of this small
+&+Cbut sturdy structure.
+~
+#131601
+gate large~
+&+Ca gate~
+&+CA large gate made of mists leads back out to the Air Plane.~
+~
+25 1 10 0 10 0 32832 0 0 1 0
+131605 7 -1 0 0 0 0 0
+0 0 100
+#131602
+generator~
+A Generator~
+A Lightning generator is here that the PC's can't see.~
+~
+12 15 3 0 14 100 32770 0 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+T
+129 5 2 35
+#131603
+gate smoke smoky~
+&+La smoky gate~
+&+LA gate of smoke leads into the Fortress of Smoke stands here.~
+~
+25 19 10 0 7 0 49216 0 0 1 0
+131736 7 -1 0 0 0 0 0
+0 0 100
+E
+gate smoke smoky~
+&+L   This large gate is the entrace into the Fortress of smoke that stands
+&+Lbehind the portal. The fortress itself wavers and blows its self around
+&+Lslightly as heat waves in from the east.
+~
+#131604
+smoky gate~
+&+La smoky gate~
+&+LA large gate made of smaok wavers here in the air.~
+~
+25 15 10 0 7 100 32832 0 0 1 0
+131720 7 -1 0 0 0 0 0
+0 0 100
+#131605
+smoke key pure~
+&+La key of pure smoke~
+&+LA key made of swirling smoke lays here unwanted.~
+~
+18 15 3 0 7 0 8507393 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+#131606
+gate ice~
+&+Ba gate of ice~
+&+BA large gate of ice stands here leading into the Fortress of Ice.~
+~
+25 15 3 0 7 100 32832 0 0 1 0
+131751 7 -1 0 0 0 0 0
+0 0 100
+E
+gate ice~
+&+B   This huge gate stands difrectly in front of the Fortress of Ice. Two
+&+Bmassive pillars stand on either side that are so cold that the air around
+&+Bthem is visible as the warm and freezing air collide.
+~
+#131607
+gate ice~
+&+Ba gate of ice~
+&+BA large gate of ice stands here that leads out of the Fortress of Ice~
+~
+25 15 3 0 7 100 32832 0 0 1 0
+131730 7 -1 0 0 0 0 0
+0 0 100
+#131608
+key frost~
+&+Ca key of frost~
+&+CA large key made of packed frost lays here, discarded.~
+~
+18 15 3 0 7 0 8442048 16385 0 1 0
+0 2 0 0 0 0 0 0
+0 0 100
+#131609
+essence frost ball essense~
+&+Wthe essence of frost~
+&+WA ball of pure frost and power levitate here emiting a radiance of cold.~
+~
+12 1 3 0 7 100 67235904 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 130400 100
+E
+essence frost~
+&+W   This small ball seems to be the essense of all frost and air. Somehow in
+&+Wthis ball the two have been melded together to form something new.
+~
+#131610
+smoke essense ball~
+&+Lthe essense of smoke~
+&+LA small ball made of smoke levitates in mid air here.~
+~
+12 15 3 0 7 100 118848 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 130594 100
+E
+smoke essense ball~
+&+L   This small ball seems to be made of the very essense of smoke, and the
+&+Lelement seems to keep pouring forth from it chocking up everything.
+~
+#131611
+essense ball mist~
+&+Cthe essense of mist~
+&+CA small ball made of the essense of mist levitates in mid air here.~
+~
+12 15 3 0 7 100 67227712 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 139284 100
+E
+essense ball mist~
+&+C   This small ball seems be filled with mist and air, and seems to radiate
+&+Ca sort of fog out from its center.
+~
+#131612
+key palace tempests~
+&+Wthe key to the Palace of Tempests~
+&+WSome total idiot has dropped the key to the Palace of Tempests here.~
+~
+18 15 3 0 7 100 75620417 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+key palace tempests~
+&+W  This ksy is actually very normal looking excelt it has large runes written
+&+Winto the whole length of the key.
+~
+#131613
+gate tempests~
+&+Ca gate of tempests~
+&+CA large gate into the Palace of Tempests stands here.~
+~
+25 15 3 0 7 100 32833 0 0 1 0
+131768 7 -1 0 0 0 0 0
+0 0 100
+E
+gate tempests~
+&+C   This large gate is the entrace way into the Palace of Tempests.
+~
+#131614
+gate tempests~
+&+Ca gate of tempests~
+&+CA large gate that exits out to the Elemental Plane of Air stands here.~
+~
+25 15 3 0 7 100 65 0 0 1 0
+131647 7 -1 0 0 0 0 0
+0 0 100
+#131615
+heart ixteal small~
+&n&+rthe heart of &n&+Mixteal~
+&n&+rA small heart has been droped here, obviously unwanted.~
+~
+12 15 3 0 7 50 53312 16385 0 2560 0
+0 0 0 0 0 0 0 0
+0 5019 100
+E
+heart ixteal small~
+&n&+r   This heart seems to have been ripped from the body of some medium sized
+&n&+rcreature, it looks REALLY disgusting!!
+~
+#131616
+dagger wind _artifact_~
+&+cthe dagger of &+CWind&N~
+&+cThe dagger of &+CWind&N&+c lies here.~
+~
+5 44 2 0 15 100 67117088 8193 512 125470 0
+2 9 4 11 0 0 0 0
+1 0 100 134217754 192 0 0
+A
+18 5
+A
+19 5
+#131617
+cloak north wind~
+&+ca cloak of the north wind&N~
+&+cA cloak of the north wind lies here.&N~
+~
+11 15 3 0 7 0 32800 1025 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100 67108880 0 0 0
+A
+18 3
+A
+13 15
+#131618
+crystal earring~
+a &+cc&+br&+cy&+bs&+ct&+ba&+cl&N earring~
+A &+ccrystal&N earing lies here.~
+~
+11 15 3 0 7 0 98336 524289 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100 268435456 0 0 0
+A
+14 10
+A
+13 10
+#131619
+dagger tricksters~
+&+La &+Ytricksters&N&+L dagger~
+A &+Ldark-bladed&N dagger rests on end here.~
+~
+5 15 2 0 15 50 163968 8193 192 57344 0
+2 4 4 11 0 0 0 0
+1 0 100 67108864 0 0 0
+A
+18 3
+A
+19 4
+#131620
+bracelet rainbow~
+&+ba bracelet of &+rr&+ba&+Yi&N&+gn&+mb&+co&+rw&+bs~
+A tiny rainbow springs from the ground here.~
+~
+11 15 3 0 7 0 57345 4097 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100 805306372 0 0 0
+A
+13 15
+A
+38 6
+#131621
+crystal spear~
+&+ca &+Ccrystal&N&+c spear~
+An unnamed object lies here, looking lonely and forelorn.~
+~
+5 15 3 0 10 80 4227105 8193 0 2 0
+8 5 8 11 0 0 0 0
+6 0 100
+A
+18 5
+A
+18 5
+#131622
+ring djin~
+&+bthe ring of the &+BDjinn&N~
+&+bThe ring of the &+BDjinn&N&+b lies here.~
+~
+11 15 3 0 7 0 163841 3 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100 134217728 0 0 0
+A
+13 15
+A
+30 10
+#131623
+crystal dagger~
+&+ca crystal dagger&N~
+&+cA crystal dagger lies here.7N~
+~
+5 15 3 0 7 0 32768 8193 0 1 0
+2 4 4 11 0 0 0 0
+0 0 100
+A
+18 3
+A
+19 3
+#131624
+ruby dragons _ignore_~
+&+rthe fabled ruby of the &+RDragons&N~
+&+rA large ruby lies here.7N~
+~
+8 31 3 0 15 100 102400 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 1500000 100
+#131625
+mass dark~
+&+La dark mass&N~
+&+LA broken mass of something undetermined lies here.~
+~
+11 15 3 0 7 0 36992 16385 0 32 0
+0 0 0 0 0 0 0 0
+0 0 100 32 32768 0 0
+A
+4 -5
+A
+13 20
+#131626
+barbed black whip~
+&+La black &Nbarbed&+L whip&N~
+&+LA long black whip lies here.7N~
+~
+5 15 3 0 7 0 32768 8193 0 1 0
+14 5 4 0 0 0 0 0
+0 0 100 16 0 0 0
+A
+18 4
+A
+24 -3
+#131627
+medallion djinn~
+&+Ythe medallion of the Djinn&N~
+&+YA shiny gold medallion lies here.&N~
+~
+11 15 3 0 7 0 233472 16389 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+#131628
+sapphire eyepiece lens~
+&+Ba sapphire eyepiece&N~
+&+BA lens made from crystal blue saphire lies here.&N~
+~
+11 33 3 0 15 0 163848 131073 0 8160 0
+0 0 0 0 0 0 0 0
+2 0 100 12 12288 0 0
+A
+18 3
+A
+13 20
+#131629
+robe deva~
+&+Wa holy deva robe&N~
+&+WA pure white robe lies here.&N~
+~
+11 15 3 0 7 0 164097 9 0 416 0
+0 0 0 0 0 0 0 0
+0 0 100 1048576 0 0 0
+A
+34 5
+A
+24 -3
+#131630
+earring negative energy~
+&+Lan earring of negative energy&N~
+&+LA dark earring lies here, crackling with energy.&N~
+~
+11 1 1 0 13 100 37024 524289 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100 524288 0 0 0
+A
+5 5
+A
+13 10
+#131631
+sword ice~
+&+ca sword of &+Bice&N~
+&+cA glimmering sword of &+Bice&N&+c rests here.&N~
+~
+5 15 2 0 10 0 0 8193 0 57350 0
+5 5 5 3 0 0 0 0
+2 0 100 0 64 0 0
+A
+18 4
+A
+19 4
+#131632
+dagger ice~
+&+ca dagger of &+Bice&N~
+&+cA glimmering dagger of &+Bice&N&+c rests here.&N~
+~
+5 15 2 0 10 0 0 8193 0 57350 0
+2 4 5 11 0 0 0 0
+2 0 100 0 64 0 0
+A
+18 4
+A
+19 4
+#131633
+ice crystal _ignore_~
+&+can &+Bice&N&+c crystal~
+&+cA crystal of sparkling ice rests here.&N~
+~
+13 8 1 0 15 0 0 1 0 1 0
+0 0 0 0 0 0 0 0
+0 700000 100
+#131634
+staff marid~
+&+ba staff of the marids&N~
+&+bA blue crystal staff lies on the ground here.&N~
+~
+3 15 3 0 7 0 102400 16385 0 1 0
+40 3 3 254 0 0 0 0
+0 0 100
+#131635
+fiery ring~
+&+ra f&+Ri&N&+re&+Rr&N&+ry ring&N~
+&+rA ring of fire lies here.&N~
+~
+11 15 3 0 7 0 32768 3 0 2560 0
+0 0 0 0 0 0 0 0
+0 0 100 536870912 0 0 0
+A
+13 35
+A
+14 20
+#131636
+silvery gauntlets~
+&+ba pair of &+csilvery&+b gauntlets~
+&+bA finely made pair of gauntlets rests on the ground here.&N~
+~
+9 15 3 0 7 0 163872 129 0 1 0
+15 7 0 5 0 0 0 0
+0 0 100 4 4096 0 0
+A
+18 3
+A
+19 3
+#131637
+mithral vambraces~
+&+csome &+Wmithral&N&+c vambraces~
+&+cA pair of &+Wmithral&N&+c vambraces lies here.~
+~
+9 15 3 0 7 0 32832 257 0 32798 0
+10 8 0 0 0 0 0 0
+0 0 100 32768 0 0 0
+A
+18 3
+A
+21 -3
+#131638
+holy symbol~
+&+Wa &N&+ydwarven-made&N&+W holy symbol&N~
+&+WA holy symbol rests on the gorund here.&N~
+~
+11 15 3 0 7 0 32833 5 0 160 0
+0 0 0 0 0 0 0 0
+0 0 100 8192 8192 0 0
+A
+13 22
+A
+20 -3
+#131639
+bracer iron~
+&+Ga wrought-&+Liron&N &+Gbracer&N~
+&+LA wrought-iron bracer lies on the ground here.&N~
+~
+9 15 3 0 7 0 163840 4097 0 1 0
+8 11 0 0 0 0 0 0
+0 0 100 65536 0 0 0
+A
+18 2
+A
+19 2
+#131640
+belt dragonscale~
+&+ga dragon&+Gscale&N&+g belt~
+&+gA belt of dragon scales lies here.&N~
+~
+11 35 2 0 10 40 36864 2049 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100 0 12288 0 0
+A
+13 30
+A
+23 -3
+#131641
+portal~
+a &+Bportal made of clouds&n~
+A &+Bportal made from clouds&n hovers here.&n~
+~
+25 15 3 0 7 0 0 0 0 1 0
+1823 0 0 0 0 0 0 0
+0 0 100

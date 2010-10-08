@@ -1175,7 +1175,7 @@ int char_to_room(P_char ch, int room, int dir)
                          (11 -
                           dex_app[STAT_INDEX(GET_C_DEX(ch))].reaction) / 2)) +
 	      (has_innate(t_ch, INNATE_CALMING) ? 
-	         get_property("innate.calming.delay", 10) : 0),
+	         number(1, get_property("innate.calming.delay", 10)) : 0),
               ch, t_ch, 0, 0, 0, 0);
 
   for (t_ch = world[ch->in_room].people; t_ch; t_ch = t_ch->next_in_room)

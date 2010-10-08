@@ -236,6 +236,8 @@ G 1 1705 999 0 100 0 0 0           *    a stone ale tankard
 M 0 1710 2 1734 100 0 0 0          * an orcish merchant
 M 0 1710 2 1734 100 0 0 0          * an orcish merchant
 M 0 1711 1 1734 100 0 0 0          * a burly duergar
+M 0 1752 1 1734 100 0 0 0          * an experienced canoneer
+M 0 1753 1 1734 100 0 0 0          * an old quartermaster
 M 0 1712 1 1735 100 0 0 0          * Blierthro
 G 1 500 99999 0 100 0 0 0          *    (object type not in this .obj file)
 G 1 412 99999 0 100 0 0 0          *    (object type not in this .obj file)

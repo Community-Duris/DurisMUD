@@ -1,0 +1,220 @@
+#135201
+mob unnamed~
+&+Wan an&+wcien&+Wt white dr&+wagon&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135202
+mob unnamed~
+&+Lan an&+wcien&+Lt black d&+wra&+Lgon&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135203
+mob unnamed~
+&+gan an&+Gcien&+gt green d&+Gra&+ggon&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135204
+mob unnamed~
+&+Ban an&+bcien&+Bt blue d&+bra&+Bgon&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135205
+mob unnamed~
+&+ran an&+Rcien&+rt red d&+Rra&+rgon&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135206
+mob unnamed~
+&+rEp&+Rhelem&+ron&+L, the ancient &+rr&+Re&+rd &+Ldragon consort&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135207
+mob unnamed~
+&+gXa&+Gsormalath&+gin&+L, the ancient &+gg&+Gr&+ge&+Ge&+gn &+Ldragon consort&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135208
+mob unnamed~
+&+LKa&+wlanakanit&+Lan, the ancient b&+wlac&+Lk dragon consort&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135209
+mob unnamed~
+&+WZenalithianathisa&+L, the ancient &+Wwhite &+Ldragon consort&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135210
+mob unnamed~
+&+bTe&+Bnanizeothi&+ban&+L, the ancient &+bb&+Bl&+bu&+Be &+Ldragon consort&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135211
+mob unnamed~
+&+La dragon-&+mknight &+Lprotector&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135212
+golem fused bone demon _no_move_~
+&+La &+wgo&+Ll&+wem &+Lof &+rf&+Ru&+rs&+Re&+rd &+Ld&+we&+Lm&+wo&+Ln &+Wbones&n~
+&+LA &+wgo&+Ll&+wem &+Lforged from the slain &+Ld&+we&+Lm&+wo&+Ln&+ws &+Lof the &+Rb&+rloo&+Rd &+ww&+Wa&+wr &+Lstands here, guarding the Pillar.&n
+~
+~
+268466282 0 0 402653336 1 128 0 -1000 S
+OG 0 513 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135213
+mob unnamed~
+&+LDr&+wa&+Lg&+wo&+Ltha, the &+wun&+Ldead &+rf&+Ru&+rr&+Ry&n~
+&+LDr&+wa&+Lg&+wo&+Lth the dragon of the &+mdepths &+Lguards passage into the tunnels.&n
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135214
+mob unnamed~
+&+La &+Gd&+grago&+Gn&+Lkin &+rs&+Ree&+rr&n~
+&+LA &+Gd&+grago&+Gn&+Lkin &+rs&+Ree&+rr &+Lstands here, guarding the &+Cpool &+Lof &+cscrying&+L.&n
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135215
+mob unnamed~
+&+LMordukhavar &+wthe &+mreaver&n~
+&+LMordukhavar, the d&+we&+Lm&+wo&+Ln &+rs&+Rpaw&+rn &+Lof the dragon queen stands here, blocking &+wentrance&+L.&n
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135216
+mob unnamed~
+&+La barbed &+rd&+Re&+rv&+Ri&+rl &+Lof the &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+Llegion&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135217
+mob unnamed~
+&+La &+rp&+Ri&+rt &+Lfiend &+rwar&+Rlord &+Lof the &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+Llegion&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135218
+zyla destroyer daughter abishai~
+&+LZ&+ry&+Ll&+ra&+L, the &+gd&+Ge&+gs&+Gt&+gr&+Go&+gy&+Ge&+gr&n~
+&+LZ&+ry&+Ll&+ra&+L, &+cdaughter &+Lof Tiamat, and &+mQueen &+Lof the &+rAb&+wish&+rai &+Lstands here, awaiting to enter into her mothers presence.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135219
+mob unnamed~
+an unnamed mob~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135220
+mob unnamed~
+an unnamed mob~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0

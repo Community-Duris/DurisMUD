@@ -1,0 +1,417 @@
+#135101
+A Cobblestone Road~
+Zone notes:
+
+Altar of the Firesworn...
+
+Structure created by a mad illusionist with plans to raise himself to a god
+
+has charged several demons of the Firesworn Legion to guard his various altars
+needed to raise himself to godhood
+
+4 spires ne/nw/se/sw
+
+each spire has a mid level named mob of some sort w/ parts to key
+
+4 parts turned in at base of final tower to unlock the last spire where the illuionist waits
+
+Upon death of the illusionist, a portal is opened into his world of dreams, granting access
+the Twin Keeps and Tharn Ruins once more.
+
+small zone, 20ish rooms at most. No repop once the portal is opened.
+
+illusionist will be worth epics, maybe small stone. (will show players possibly that TK is being
+done... more scouting potential...
+~
+1351 0 0
+D0
+~
+~
+0 0 135102
+S
+#135102
+A Cobblestone Path Enshrouded By Thick Foliage~
+~
+1351 0 0
+D0
+~
+~
+0 0 135103
+D2
+~
+~
+0 0 135101
+S
+#135103
+A Bend in the Cobblestone Road~
+~
+1351 0 0
+D1
+~
+~
+0 0 135104
+D2
+~
+~
+0 0 135102
+S
+#135104
+Nearing a Grand Archway~
+~
+1351 0 0
+D0
+~
+~
+0 0 135105
+D3
+~
+~
+0 0 135103
+S
+#135105
+&+LBefore the &+rArchway &+Lto the &+WAltars &+Lof &+cTr&+Cans&+Wen&+Cden&+cce~
+~
+1351 0 0
+D0
+~
+~
+0 0 135106
+D2
+~
+~
+0 0 135104
+S
+#135106
+The Grand Foyer Within the Temple~
+~
+1351 0 0
+D0
+~
+~
+0 0 135107
+D2
+~
+~
+0 0 135105
+S
+#135107
+Within the Foyer of the Firesworn Altars~
+~
+1351 0 0
+D0
+~
+~
+0 0 135108
+D2
+~
+~
+0 0 135106
+S
+#135108
+An Illuminated Cathedral~
+~
+1351 0 0
+D0
+~
+~
+0 0 135109
+D2
+~
+~
+0 0 135107
+D6
+~
+~
+0 0 135119
+D7
+~
+~
+0 0 135116
+D8
+~
+~
+0 0 135110
+D9
+~
+~
+0 0 135113
+S
+#135109
+A Spiral Stairwell~
+~
+1351 0 0
+D2
+~
+~
+0 0 135108
+D4
+~
+~
+0 0 135122
+S
+#135110
+The Base of a Highrise Spire~
+~
+1351 0 0
+D4
+~
+~
+0 0 135111
+D7
+~
+~
+0 0 135108
+S
+#135111
+Within a Highrise Spire~
+~
+1351 0 0
+D4
+~
+~
+0 0 135112
+D5
+~
+~
+0 0 135110
+S
+#135112
+The Altar of Temperance~
+~
+1351 0 0
+D5
+~
+~
+0 0 135111
+S
+#135113
+The Base of a Highrise Spire~
+~
+1351 0 0
+D4
+~
+~
+0 0 135114
+D6
+~
+~
+0 0 135108
+S
+#135114
+Within the South-Eastern Spire~
+~
+1351 0 0
+D4
+~
+~
+0 0 135115
+D5
+~
+~
+0 0 135113
+S
+#135115
+The Altar of Transcendence~
+~
+1351 0 0
+D5
+~
+~
+0 0 135114
+S
+#135116
+Unnamed~
+~
+1351 0 0
+D4
+~
+~
+0 0 135117
+D8
+~
+~
+0 0 135108
+S
+#135117
+the mid of the south west spire~
+~
+1351 0 0
+D4
+~
+~
+0 0 135118
+D5
+~
+~
+0 0 135116
+S
+#135118
+the altar of somethingelse~
+~
+1351 0 0
+D5
+~
+~
+0 0 135117
+S
+#135119
+Unnamed~
+~
+1351 0 0
+D4
+~
+~
+0 0 135120
+D9
+~
+~
+0 0 135108
+S
+#135120
+middle of the north west spire~
+~
+1351 0 0
+D4
+~
+~
+0 0 135121
+D5
+~
+~
+0 0 135119
+S
+#135121
+the altar of anotherthing~
+~
+1351 0 0
+D5
+~
+~
+0 0 135120
+S
+#135122
+Atop a Spire Stairwell~
+~
+1351 0 0
+D0
+~
+~
+0 0 135123
+D5
+~
+~
+0 0 135109
+S
+#135123
+A Fire-Blasted Bloodstone Hall~
+~
+1351 0 0
+D0
+~
+~
+0 0 135124
+D1
+~
+~
+0 0 135125
+D2
+~
+~
+0 0 135122
+D3
+~
+~
+0 0 135126
+S
+#135124
+A Fire-Blasted Bloodstone Hallway~
+~
+1351 0 0
+D0
+~
+~
+0 0 135127
+D2
+~
+~
+0 0 135123
+S
+#135125
+A Private Spellcasting Chamber~
+~
+1351 0 0
+D3
+~
+~
+0 0 135123
+S
+#135126
+A Private Spellcasting Chamber~
+~
+1351 0 0
+D1
+~
+~
+0 0 135123
+S
+#135127
+A Fire-Blasted Bloodstone Hallway~
+~
+1351 0 0
+D2
+~
+~
+0 0 135124
+D3
+~
+~
+0 0 135128
+S
+#135128
+A Fire-Blasted Bloodstone Hallway~
+~
+1351 0 0
+D0
+~
+~
+0 0 135129
+D1
+~
+~
+0 0 135127
+S
+#135129
+A Stairwell Composed of Engraved Bloodstone Steps~
+~
+1351 0 0
+D2
+~
+~
+0 0 135128
+D4
+~
+~
+0 0 135130
+S
+#135130
+A Stairwell Composed of Engraved Bloodstone Steps~
+~
+1351 0 0
+D4
+~
+~
+0 0 135131
+D5
+~
+~
+0 0 135129
+S
+#135131
+&+LA &+gCir&+Gcu&+glar &+LChamber Atop the &+BS&+bp&+Bi&+br&+Be &+Lof Malsheam~
+~
+1351 0 0
+D5
+~
+~
+0 0 135130
+S

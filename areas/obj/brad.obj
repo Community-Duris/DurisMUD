@@ -1,4 +1,4 @@
-#1301
+#135001
 book old worn~
 an old &+yworn&N book~
 an old &+yworn&N book lies in the corner collecting dust.~
@@ -10,7 +10,7 @@ E
 book old worn~
 This book is entitled "The Magical Properties of Gemstones" by Mage Tenser.
 ~
-#1302
+#135002
 old musty book~
 a &+ymusty book&N~
 a &+ymusty book&N lies in the corner.~
@@ -23,7 +23,7 @@ old musty book~
 This book has the title "The Magical Properties of Herbs and Flowers"
 by Mage Tenser.
 ~
-#1303
+#135003
 old book text tome~
 an old &+btome&N~
 an old thick &+btome&N lies in the corner.~
@@ -35,7 +35,7 @@ E
 old tome book~
 This book has the title "The Metaphysics of Mathematics" by Mage Nystul.
 ~
-#1304
+#135004
 note~
 a &+Wnote&N~
 a note lies in between the pages of this book.~
@@ -50,7 +50,7 @@ contains a few lines of text scrawled in the common tongue.  It has been
 spoiled by damp so that only two words are still legible:
       "......beyond skeletons......"
 ~
-#1305
+#135005
 broken desk drawer~
 &+ya broken desk~
 &+ya broken desk&N with a large drawer lies against the wall.~
@@ -62,7 +62,7 @@ E
 desk broken~
    The keyhole on the drawer looks very misshapen and damaged.
 ~
-#1306
+#135006
 potion rose watery _id_~
 a &+bwatery &+Rrose-colored&N potion~
 a &+bwatery &+Rrose-colored&N potion is here.~
@@ -78,7 +78,7 @@ E
 _id_short_~
 &+Ra potion of curing&n
 ~
-#1307
+#135007
 trash refuse pile~
 a pile of refuse~
 a &+Cpile&N of &+Lrefuse&N lies in the south east corner.~
@@ -86,7 +86,7 @@ a &+Cpile&N of &+Lrefuse&N lies in the south east corner.~
 15 5 3 0 7 0 0 0 0 0 0
 10 0 -1 100 0 0 0 0
 10 0 100
-#1308
+#135008
 shiny gold earring~
 a &+Wshiny&+Y gold&N earring~
 a &+Wshiny&N &+Ygold earring&N, long forgotten, lies here.~
@@ -96,7 +96,7 @@ a &+Wshiny&N &+Ygold earring&N, long forgotten, lies here.~
 1 2000 100
 A
 13 5
-#1309
+#135009
 gem amethyst stone~
 an &+Yamethyst&N~
 an &+Yamethyst&N is carefully concealed here.~
@@ -104,7 +104,7 @@ an &+Yamethyst&N is carefully concealed here.~
 8 26 0 0 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
 2 1273 100
-#1310
+#135010
 ring protection~
 a &+Wring&N of &+bprotection&N~
 a valuable &+Wring&N of &+bprotection&N is here.~
@@ -116,7 +116,7 @@ A
 24 -1
 A
 17 -1
-#1311
+#135011
 small metal box~
 a &+Lsmall metal&N box~
 a &+Lsmall metal&N box was carefully hidden here.~
@@ -129,7 +129,7 @@ box lock metal small~
 This small box has an old rusty lock.  You can sense that if you want
 to open it you will have to pick it, or find the key -- if one exists.
 ~
-#1312
+#135012
 cracked old leather boots~
 a pair of &+yold cracked leather boots&N~
 a pair of &+yold cracked leather boots&N lies here aging with time.~
@@ -137,7 +137,7 @@ a pair of &+yold cracked leather boots&N lies here aging with time.~
 9 13 3 8 7 0 0 65 0 0 0
 3 6 1 3 0 0 0 0
 4 100 100
-#1313
+#135013
 dirty ragged stained cloak~
 a &+rragged&N &+Yst&+yai&+cned&N cloak~
 a &+rragged&N, dirty &+Yst&+yain&+Yed&N cloak lies here discarded.~
@@ -145,7 +145,7 @@ a &+rragged&N, dirty &+Yst&+yain&+Yed&N cloak lies here discarded.~
 9 3 3 8 7 0 0 1025 0 0 0
 4 9 1 3 0 0 0 0
 3 100 100
-#1314
+#135014
 fire place fireplace~
 &+Ra large fireplace&N~
 a large &+Rfireplace&N lies along the western wall.~
@@ -157,7 +157,7 @@ E
 fireplace fire huge~
 This used to be a warm fireplace, but it hasn't been used in some time.
 ~
-#1315
+#135015
 crystal chunk fist-sized~
 &+Ca fist-sized chunk of&N &+Wcrystal&N~
 &+Ca fist-sized chunk of&N &+Wcrystal&N is here.~
@@ -171,7 +171,7 @@ chunk crystal~
 &+Wmake a nice light source if needed, plus would fetch a nice value at a
 &+Wstore.&N
 ~
-#1316
+#135016
 key scratched~
 a &+Lscratched&N key~
 a &+Lscratched&N key is here.~
@@ -179,7 +179,7 @@ a &+Lscratched&N key is here.~
 18 16 1 1 7 0 8392704 16385 0 0 0
 1 0 0 0 0 0 0 0
 1 1 100
-#1317
+#135017
 dagger assassin sharp~
 a &+Wsharp&N &+rassassin's&N dagger~
 a &+Wsharp&N &+rassassins&N dagger rests here.~
@@ -196,7 +196,7 @@ A
 26 1
 A
 18 1
-#1318
+#135018
 large wooden chest~
 a large &+ywooden chest&N~
 a large &+ywooden chest&N, its timbers split, lies here.~
@@ -204,7 +204,7 @@ a large &+ywooden chest&N, its timbers split, lies here.~
 15 6 5 50 7 0 0 0 0 0 0
 100 5 0 250 0 0 0 0
 400 1 100
-#1319
+#135019
 magical ioun stone~
 &+Ba magical ioun stone&n~
 &+BA magical stone lies here glowing.&n~
@@ -212,7 +212,7 @@ magical ioun stone~
 9 15 3 0 7 0 0 268435457 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
-#1320
+#135020
 small diamond~
 a small &+Wdiamond&N~
 a small &+Wdiamond&N lies here.  It looks fairly valueable.~
@@ -220,7 +220,7 @@ a small &+Wdiamond&N lies here.  It looks fairly valueable.~
 8 8 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 375 100
-#1321
+#135021
 mildew mildewed sack~
 a &+Ymil&+ydewed&N &+csack&N~
 a &+Ymil&+ydewed&N &+csack&N rots on the ground.~
@@ -234,7 +234,7 @@ sack mildew mildewed large~
 &+ycover the bottom of the sack along with various spots of mold and mildew.
 &+yAll in all this doesn't look to be a very long-term type of container.
 ~
-#1322
+#135022
 nest stirges~
 a stirges &+ynest&N~
 a &+ynest&N for the &+Lstirges&N was made here.~
@@ -246,7 +246,7 @@ E
 nest~
 This is a nest made from twigs and sticks.
 ~
-#1323
+#135023
 silverish ring~
 a &+Wsil&+Cver&+cish&N ring~
 a &+Wsil&+Cver&+cish&N ring is here &+Wglinting&N in the sun.~
@@ -262,7 +262,7 @@ A
 1 1
 A
 17 -1
-#1324
+#135024
 corpse warrior~
 a &+bwarrior's&N corpse~
 the &+Wcorpse&N of a &+bdead warrior&N is here.~
@@ -277,7 +277,7 @@ His belt pouch has been sliced open and emptied.  It looks like he
 died from multiple stab wounds.  His face is twisted in a grisly mask
 of pain and horror.
 ~
-#1325
+#135025
 plate mail suit~
 a suit of &+Wplate mail&N~
 a suit of &+Wplate mail&N is lying on the ground.~
@@ -290,7 +290,7 @@ plate mail platemail suit~
 This plate mail is obviously magical, and where normal plate mail
 might weigh a lot, this mail is almost weightless.
 ~
-#1326
+#135026
 long sword jagged longsword~
 a &+yja&+bgg&+ced&N &+Llongsword&N~
 a &+yja&+bgg&+ced&N &+Llongsword&N is lying on the ground waiting to be picked up.~
@@ -308,7 +308,7 @@ A
 18 1
 A
 19 1
-#1327
+#135027
 shield dented~
 a de&+Rnt&Ned &+Wshield&N~
 a round de&+Rnt&Ned &+Wshield&N is lying on the ground.~
@@ -316,7 +316,7 @@ a round de&+Rnt&Ned &+Wshield&N is lying on the ground.~
 37 16 3 15 7 0 0 513 0 4173708804 0
 2 1 2 57 2 0 0 0
 10 500 100
-#1328
+#135028
 dagger jagged~
 a &+yja&+bgg&+ced&N &+Ldagger&N~
 a &+yja&+bgg&+ced&N &+Ldagger&N lies on the ground.~
@@ -333,7 +333,7 @@ A
 19 1
 A
 18 1
-#1329
+#135029
 backpack cracked leather bp~
 a c&+yrack&Ned &+yleather&N backpack~
 a c&+yrack&Ned &+yleather&N backpack is here ready to store things for you.~
@@ -345,7 +345,7 @@ E
 backpack cracked leather~
 Somewhat worse for wear, this backpack still looks functional.
 ~
-#1330
+#135030
 water skin cracked leather~
 a c&+yrack&Ned &+yleather&N waterskin~
 a c&+yrack&Ned &+yleather&N waterskin is on the ground.~
@@ -357,7 +357,7 @@ E
 cracked leather waterskin water skin~
 This waterskin looks functional, though it has seen better days.
 ~
-#1331
+#135031
 pack ration rations adventurer adventurers~
 a pack of &+Badventurer's&N &+Lrations&N~
 a pack of &+Badventurer's&N &+Lrations&N is on the ground getting dirty.~
@@ -370,7 +370,7 @@ ration rations adeventurers~
 This package contains various meats and breads.  It will keep a
 warrior full for at least 8 hours.
 ~
-#1332
+#135032
 torch~
 a &+Rto&+rrc&+Rh&N~
 a &+Rto&+rrc&+Rh&N is on the ground.~
@@ -382,7 +382,7 @@ E
 torch~
 It looks like a normal torch.
 ~
-#1333
+#135033
 cask brandy~
 a &+rcask of brandy&N~
 a &+rcask of brandy&N is on the ground.~
@@ -395,7 +395,7 @@ cask brandy~
 You wouldn't dare open this cask, but rather you think it would fetch
 a nice price at a shop.
 ~
-#1334
+#135034
 bolt fine silk~
 a &+Wbolt of fine&N &+csilk&N~
 a &+Wbolt of fine&N &+csilk&N is on the ground.~
@@ -408,7 +408,7 @@ bolt silk~
 This is a bolt of fine silk.  You know you could get a nice price if
 you sold it at a market.
 ~
-#1335
+#135035
 book philosophers stone~
 a book entitled "&+RYe Secret of Ye Philosopher's Stone&N"~
 a book entitled "&+RYe Secret of Ye Philosopher's Stone&N" is here.~
@@ -422,7 +422,7 @@ The book is filled with obscure methods of trying to turn normal base
 metals into gold by using something called a philosopher's stone.
 You wonder if any such stone really exists.
 ~
-#1336
+#135036
 golden human skull~
 a &+Ygolden&N human &+Wskull&N~
 a &+Ygolden&N human &+Wskull&N is here.~
@@ -435,7 +435,7 @@ skull human golden~
 This was obviously a result of some chemical reaction.  You do know
 that it _is_ pure gold though.
 ~
-#1337
+#135037
 golden apple~
 a &+Ygolden&N &+rapple&N~
 a &+Ygolden&N &+rapple&N is here.~
@@ -448,7 +448,7 @@ golden apple~
 This was obviously a result of some chemical reaction.  You do know
 that it _is_ pure gold though.
 ~
-#1338
+#135038
 golden rose~
 a &+Ygolden&N &+Rrose&N~
 a &+Ygolden&N &+Rrose&N is here.~
@@ -461,7 +461,7 @@ golden rose~
 This was obviously a result of some chemical reaction.  You do know
 that it _is_ pure gold though.
 ~
-#1339
+#135039
 set five small golden balance weights~
 a set of &+bfive&N small &+Ygolden&N &+gbalance weights&N~
 a set of &+bfive&N small &+Ygolden&N &+gbalance weights&N is here.~
@@ -474,7 +474,7 @@ golden small five set balance weights~
 This was obviously a result of some chemical reaction.  You do know
 that it _is_ pure gold though.
 ~
-#1340
+#135040
 skeleton dead alchemist~
 the &+Wskeleton of an alchemist&N~
 the &+Wskeleton&N of the &+balchemist&N is sitting in a chair.~
@@ -482,7 +482,7 @@ the &+Wskeleton&N of the &+balchemist&N is sitting in a chair.~
 15 10 3 0 7 0 32768 0 0 0 0
 100 0 0 100 0 0 0 0
 150 1 100
-#1341
+#135041
 table alchemists~
 an &+balchemist's&N &+ytable&N~
 an &+balchemist's&N &+ytable&N is here, covered with alchemy contraptions.~
@@ -495,7 +495,7 @@ table~
 This table looks like it was where the alchemist did all his
 experiments from.
 ~
-#1342
+#135042
 smooth ovoid pebble~
 a &+Wsm&+Coo&+cth&N &+Movoid&N &+Ypeb&+Wble&N~
 a &+Wsm&+Coo&+cth&N &+Movoid&N &+Lpebble&N is on the ground shining in the sun's light.~
@@ -512,7 +512,7 @@ A
 19 -2
 A
 18 -2
-#1343
+#135043
 scroll alchemist _id_~
 an &+balchemist's&N &+gscroll&N~
 an &+balchemist's&N &+gscroll&N is lying here.~
@@ -528,7 +528,7 @@ E
 _id_short_~
 &+ya scroll of detect magic&n
 ~
-#1344
+#135044
 medium wooden table~
 a medium &+ywooden table&N~
 a medium &+ywooden table&N stands against the east wall.~
@@ -536,7 +536,7 @@ a medium &+ywooden table&N stands against the east wall.~
 15 6 3 0 7 0 0 0 0 0 0
 50 0 0 100 0 0 0 0
 150 1 100
-#1346
+#135045
 scroll green glowing _id_~
 a &+Wglowing&N &+Ggreen&N scroll~
 a &+Wglowing&N &+Ggreen&N scroll is lying here.~
@@ -552,20 +552,20 @@ E
 _id_short_~
 &+ba scroll of &+Bmagic missile&n
 ~
-#1347
+#135046
 small iron strongbox strong~
 a small &+Liron&N strongbox~
 a small &+Liron&N strongbox is on the ground.~
 ~
 15 15 3 0 7 0 4096 16385 0 0 0
-15 13 1351 100 0 0 0 0
+15 13 135050 100 0 0 0 0
 10 500 100
 E
 iron strongbox~
 This small box looks like it can be used to hold a small number of items
 safely.
 ~
-#1348
+#135047
 pale yellow potion _id_~
 a &+Wpale&N &+Yyellow&N potion~
 a &+Wpale&N &+Yyellow&N potion is here.~
@@ -581,7 +581,7 @@ E
 _id_short_~
 &+Ya potion of curing&n
 ~
-#1349
+#135048
 deep green potion _id_~
 a &+gdeep green&N potion~
 a &+gdeep green&N potion is here.~
@@ -597,7 +597,7 @@ E
 _id_short_~
 &+ga potion of dexterity&n
 ~
-#1350
+#135049
 rod iron _id_~
 &+can iron rod&n~
 &+cAn iron rod is here.~
@@ -617,7 +617,7 @@ A
 19 2
 A
 18 1
-#1351
+#135050
 small iron key~
 a small &+Liron&N key~
 a small &+Liron&N key is on the round here.~
@@ -625,7 +625,7 @@ a small &+Liron&N key is on the round here.~
 18 15 1 1 7 0 8392704 16385 0 0 0
 1347 0 0 0 0 0 0 0
 1 1 100
-#1352
+#135051
 rusty battle axe~
 a &+yrusty&N &+Lbattle&N &+Waxe&N~
 A &+yrusty&N &+Lbattle&N &+Waxe&N is on the ground here.~
@@ -633,7 +633,7 @@ A &+yrusty&N &+Lbattle&N &+Waxe&N is on the ground here.~
 5 15 3 8 7 0 1024 8193 0 87572571 0
 1 1 5 3 0 0 0 0
 13 50 100
-#1353
+#135052
 boat glowing blue~
 a &+Wgl&+Cow&+Wing&N boat~
 a &+Wgl&+Cow&+Wing&N boat is on the ground here.~
@@ -646,7 +646,7 @@ boat glowing~
 Supposedly this boat should be heavy, but in reality it's almost
 weightless!
 ~
-#1354
+#135053
 large golden hoop earring~
 a large &+Ygolden&N &+Choop&N earring~
 a large &+Ygolden&N &+Choop&N earring is on the ground here.~
@@ -656,7 +656,7 @@ a large &+Ygolden&N &+Choop&N earring is on the ground here.~
 1 329 100
 A
 13 5
-#1355
+#135054
 lucky charm necklace~
 a '&+Glucky&N &+gcharm&N' &+Rnecklace&N~
 a '&+Glucky&N &+gcharm&N' &+Rnecklace&N is lying here.~
@@ -666,7 +666,7 @@ a '&+Glucky&N &+gcharm&N' &+Rnecklace&N is lying here.~
 1 317 100
 A
 18 1
-#1356
+#135055
 breath taking emerald breathtaking~
 a &+Wbreath&+Mtaking&N &+Gemerald&N~
 a &+Wbreath&+Mtaking&N &+Gemerald&N is on the ground!  Pick it up!~
@@ -678,7 +678,7 @@ E
 emerald breathtaking breath~
 This gem is so beautiful you almost hate to sell it.
 ~
-#1357
+#135056
 dull pale gold bracelet~
 a &+cdull&N &+Wpale&N &+Ygold&N bracelet~
 a &+cdull&N &+Wpale&N &+Ygold&N bracelet is rolling around on the ground.~
@@ -690,7 +690,7 @@ A
 5 2
 A
 24 -1
-#1358
+#135057
 pair mage boots~
 a &+Lpair&N of &+Mmage&N boots~
 a &+Lpair&N of &+Mmage&N boots is sitting on the ground.~
@@ -704,7 +704,7 @@ These boots were made for a mage.
 ~
 A
 3 4
-#1359
+#135058
 arm chair armchair broken~
 &+La broken armchair&N~
 an &+Barmchair&N, once &+Rbeautiful&N, lies &+ybroken and forgotten here.&N~
@@ -717,7 +717,7 @@ arm chair armchair broken~
 This once beautiful chair has since been destroyed.  Only the frame can
 hint at what this chair must have been like in its day.
 ~
-#1360
+#135059
 table broken wood~
 &+Wa broken table&N~
 pieces of &+ywood&N that used to be a &+ytable&N, lie here in the corner.~
@@ -730,7 +730,7 @@ table broken wood~
 This table might once have been a serviceable desk used for writing or study.
 Now, however, it is merely hunks of wood torn apart, lying in the corner.
 ~
-#1361
+#135060
 sink cracked discolored~
 a &+ycracked and discolored sink&N~
 a &+rcracked&N and &+Wdi&+Yscolor&+yed&N &+Wsink&N stands here.~
@@ -743,7 +743,7 @@ cracked sink discolored~
 Once a pearl colored sink, now spots of brown and yellow occupy the finish.
 Traces of mold of various colors are noticeable as well.
 ~
-#1362
+#135061
 cooking implements~
 &+ycooking equipment&N~
 various &+Mcooking implements&N are attached to the walls.~
@@ -755,7 +755,7 @@ E
 cooking implements various~
 The cooking equipment is all unusable.
 ~
-#1363
+#135062
 rotten timber heap~
 &+yrotten timber&N~
 a heap of &+yro&+Ytt&+yen&N &+ytimber&N lies in the northeast corner.~
@@ -768,7 +768,7 @@ rotten timber heap~
 This looks like it used to be part of the staircase.  The wood is the same
 type that was used, only this wood is all rotted from age and neglect.
 ~
-#1364
+#135063
 rubbish pile~
 pile of &+yrubbish&N~
 &+yrubbish&N is strewn all over the floor.~
@@ -781,7 +781,7 @@ rubbish pile~
 Yuck!  You can't identify half of what this stuff is, but either way, you
 know it's been here a long time.
 ~
-#1365
+#135064
 two large sacks~
 &+Wtwo large sacks~
 two large &+ysacks&N are lying here on the floor.~
@@ -794,7 +794,7 @@ two large sacks~
 The sacks themselves are torn in most areas.  They contain old clothing and
 rags, but otherwise nothing of value in either one.
 ~
-#1366
+#135065
 tiny red mushrooms~
 &+rtiny red mushrooms&N~
 a clump of &+rtiny red&N mushrooms has sprouted through the floor.~
@@ -802,7 +802,7 @@ a clump of &+rtiny red&N mushrooms has sprouted through the floor.~
 13 2 0 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
-#1367
+#135066
 intact fireplace fire place~
 an intact &+rfireplace&N~
 an intact &+Rfireplace&N is in the middle of the southern wall.~
@@ -815,7 +815,7 @@ intact fireplace fire~
 The fires that burned here long ago must have been grand indeed.  Now
 it just stands without warmth or use.
 ~
-#1368
+#135067
 grand bed four poster four-poster~
 &+Wa four-poster bed&N~
 a once &+Wgrand&N &+cbed&N lies here mostly destroyed.~
@@ -823,7 +823,7 @@ a once &+Wgrand&N &+cbed&N lies here mostly destroyed.~
 13 6 0 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 300 0 100
-#1369
+#135068
 bundle clothing~
 &+Wa bundle of clothing&N~
 a bundle of &+bclothing&N is on the ground.~
@@ -831,7 +831,7 @@ a bundle of &+bclothing&N is on the ground.~
 13 3 3 8 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 30 0 100
-#1370
+#135069
 wooden chair splinters~
 &+ya wooden chair&N~
 a broken &+ywooden chair&N lies here.~
@@ -844,7 +844,7 @@ chair wooden broken~
 These chairs once looked like they were comfortable.  Now they are broken
 and unusable.
 ~
-#1371
+#135070
 copper boiler large~
 &+ya large copper boiler&N~
 a large &+ycopper&N &+rboiler&N is on the ground here.~
@@ -852,7 +852,7 @@ a large &+ycopper&N &+rboiler&N is on the ground here.~
 13 21 0 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 100 0 100
-#1372
+#135071
 maul titans sledge hammer~
 &+La jet-black maul of the &+rtitans&N~
 &+La massive looking sledge has been left here.&N~
@@ -864,7 +864,7 @@ A
 18 2
 A
 19 2
-#1373
+#135072
 racks bottle wooden~
 &+ywooden bottle racks&N~
 &+ywooden&N bottle racks line the walls of this room.~
@@ -876,7 +876,7 @@ E
 wooden bottle racks wine~
 These used to hold the wine and spirits.
 ~
-#1374
+#135073
 searing sword lightning~
 &+Ya searing two-handed sword of lightning&N~
 &+Ya sword made from electricity is here.&N~

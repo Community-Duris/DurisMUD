@@ -15,6 +15,7 @@
 #include "prototypes.h"
 #include "specs.prototypes.h"
 #include "spells.h"
+#include "map.h"
 
 // external global variables
 extern P_room world;
@@ -358,10 +359,18 @@ bool TownPortalRoom::init()
     else if( this->guildhall->racewar == RACEWAR_EVIL )
     {
       char buff[MAX_STRING_LENGTH];
-      sprintf(buff, this->portal->description, "Shady Grove");
+      if (IS_CONTINENT(real_room(this->guildhall->outside_vnum), CONT_EC))
+      {
+	sprintf(buff, this->portal->description, "Shady Grove");
+        this->portal->value[0] = SHADY_INN_VNUM;      
+      }
+      else
+      {
+	sprintf(buff, this->portal->description, "Khildarak");
+	this->portal->value[0] = KHILD_INN_VNUM;
+      }
       this->portal->description = str_dup(buff);
       this->portal->str_mask = STRUNG_DESC1;
-      this->portal->value[0] = SHADY_INN_VNUM;      
       obj_to_room(this->portal, real_room0(this->vnum));
     }
   }

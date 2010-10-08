@@ -1500,3 +1500,36 @@ PH 0 8192 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#43199
+gunner cadet~
+&+Wa &+rgunner &+ccadet&n~
+&+WA &+rgunner &+ccadet &+Wstands tall and is ready to join a captain on his ship.&n
+~
+~
+2058 0 0 0 0 0 0 0 S
+PH 0 1 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#43200
+shipwright tyro~
+&+Wa &nship&+yw&nr&+yi&ng&+yh&nt &+ytyro&n~
+&+WA &nship&+yw&nr&+yi&ng&+yh&nt &+ytyro &+Wis busy bartering his services with a local captain.&n
+~
+~
+2058 0 0 0 0 0 0 0 S
+PH 0 1 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#43201
+veteran boatswain~
+&+La &+yvet&+Ye&+Wr&+Ya&+yn b&+Yo&+Wats&+Yw&+yain&n~
+&+LA &+yvet&+Ye&+Wr&+Ya&+yn b&+Yo&+Wats&+Yw&+yain &+Lsits by the bar, waiting for his next payday.&n
+~
+~
+2058 0 0 0 0 0 0 0 S
+hg 0 16384 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0

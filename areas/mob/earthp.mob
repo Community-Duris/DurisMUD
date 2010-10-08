@@ -1,0 +1,200 @@
+#131200
+pech earth~
+&+yA pech&N~
+&+yA pech stands here looking for new &n&+Ypassages&n&+y to dig.
+~
+&+y   This small humanoid seems to be total absorbed in his work.  His eyes
+&+yare &n&+Yyellowish&n&+y and small, his thin sturdy body is covered in sweat from using
+&+yhis axe to tunnel in the &n&+Lrock&n&+y all around here.d  He barely notices you when
+&+yyou enter this area, then without warning turns and attacks!
+~
+1073752296 0 0 1573016 0 0 0 -500 S
+H 0 1 -1
+48 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131201
+dao magician djinn~
+&+yA dao &n&+Ymagician~
+&+yA dao &n&+cdjinn&n&+y sifts through the &n&+Lrock&n&+y here.
+~
+   &+yThis Dao looks like a legendary &n&+cDjinn&n&+y, a race of powerful magic users.
+&+yIt has a small cloud of dirt at where its feet would be and it seems to
+&+yhover there in midair above it.  This &n&+cDjinn&n&+y looks to be going over some
+&+yaction or order in his mind, probably from the &n&+rKhan&n&+y himself.
+~
+1073756264 0 0 134217736 18 0 0 -1000 S
+EE 0 10 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#131202
+dao guardian djinn~
+&+yA dao &n&+Lguardian~
+&+yA &n&+rangry&n&+y dao &n&+Lguardian&n&+y looks for intruders to kill here.
+~
+  &+y A Dao moves here looking for any intruders that may have been foolish
+&+yenough to come to the Elemental Plane of &n&+LEarth&n&+y.  This &n&+Lguardian&n&+y looks like
+&+yhe loves his work and his duty, to endlessly patrol these caverns and to
+&+ysmash anything he finds thats not susposed to be here.
+~
+1073756264 0 0 134217880 18 0 0 -1000 S
+EE 0 1 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#131203
+earth mephit~
+&+yAn earth &n&+Ymephit~
+&+yAn earth &n&+Ymephit&n&+y walks here avoiding everything.
+~
+   &+yThis small humanoid sized creature moves here nervously looking around
+&+ynot wanting to run into anything.  It reacts violently and runs whenever
+&+yanyone does sneak up on him.  How it managed to avoid everything and to
+&+ysurvive this long is a mystery to all.
+~
+252 0 0 34078722 0 0 0 -400 S
+H 0 13 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#131204
+small earth elemental~
+&+yA small earth elemental~
+&+yAn earth elemental moves through the rock here.
+~
+   &+yThis smaller earth elemental moves in the rock here.  He is part of the
+&+yplane of earth itself, with half of his body inside the rock and the other
+&+yhalf jutting out.  The only part of a body, if it could be called that, is
+&+ya head of sorts and arms.
+~
+1073756264 0 0 33554584 0 0 0 -1000 S
+EE 0 1 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#131205
+gigantic earth elemental~
+&+yA gigantic earth elemental~
+&+yA gigantic earth elemental moves around quickly.
+~
+   &+yThis massive earth elemental moves very quickly for its imensense size.
+&+yIts body is composed entirely of rock, althogh from the waist down it is
+&+ypart of the floor here, it has only arms and heads pertruding from the
+&+yground.  It takes one look at you and with no expression as it moves towards
+&+yyou to attack!
+~
+1073756264 0 0 33554584 0 0 0 -1000 S
+EE 0 1 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#131206
+sandling earth~
+&+yA sandling~
+&+yA sandling is digging in the &n&+Learth&n&+y here.
+~
+   &+yThis huge worm like creature, is digging in the &n&+Learth&n&+y all around here.
+&+yIt appears to be feeding and digging at the same time, eating and devoring
+&+ythe &n&+Learth&n&+y at the same time.  It has the the appearance of a man sized
+&+yearthworm, that mindless eats everything in its path.
+~
+12392 0 0 34603144 0 0 0 -500 S
+I 0 1 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#131207
+dao enforcer djinn~
+&+yA dao &n&+renforcer~
+&+yA dao &n&+renforcer&n&+y roams this area.
+~
+   &+yThis Dao is in direct contact with the Khan himself.  He is a member of
+&+ythe Khans elite unit of &n&+rEnforcers&n&+y, a punisher of those that do not follow
+&+yhis orders to the absolute letter.  Just the sight of anyone being this far
+&+yinto the elemental plane of his home is enough reason for him to attack.
+~
+1140865128 0 0 302514328 2051 0 0 -1000 S
+EE 0 5 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#131208
+xorn earth~
+&+yA xorn~
+&+yA xorn moves through here looking for food.
+~
+   &+yMoving in a pack these Xorn walk the rubble of their home.  This region
+&+yis ruled by the Earth Plane lord &n&+LGrumbar&n&+y, and the city of Djinn by the &n&+rKhan
+&+yof the Dao this place is still plenty large enough to be home for the Xorn
+&+yas well.  They protect what is theres fiercely and without mercy, using there
+&+ynatural powers as weapons.
+~
+14440 0 0 33554568 0 0 0 -1000 S
+EE 0 1 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#131209
+xaren earth~
+&+yA xaren~
+&+yA xaren roams here looking for &n&+Lmetal&n&+y to devour.
+~
+   &+yThis Xaren wanders the plane looking for &n&+Lmetal&n&+y.  It appears to be very
+&+yhungry, and would do anything to get the &n&+Lmetal&n&+y it craves.  This relative
+&+yof the Xorn, is also a native of the Earth Plane usually working for metal
+&+yfood from the Daos.
+~
+1140865132 0 0 302514312 0 0 0 -1000 S
+EE 0 2 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#131210
+galber dher earth~
+&+LA galber dher~
+&+yA &n&+Lgalber dher&n&+y moves through the rock.
+~
+  &+L This large earth looking creature appears to look more like a large
+&+Ltreant of sorts.  Its huge arm looking limbs reach out all around it moving
+&+Lin exact percison towards its targets.  It moves along here looking over
+&+Lthe plane making sure none of the damage here is too extensive to its home.
+~
+1073756392 0 0 33554568 0 0 0 -1000 S
+EE 0 9 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#131211
+grumbar lord earth br_a~
+&+LGrumbar~
+&+LGrumbar&n&+y, Lord of the &n&+LEarth&n&+y Plane walks his &n&+Ychambers&n&+y here.
+~
+   &+LGrumbar&n&+y, Lord of the Elemental Plane of &n&+LEarth&n&+y, stands in his &n&+Ychambers&n&+y here.
+&+yHe appears to have much on his mind although what he could be pondering is
+&+ybeyond normal comprehension.  Perhaps another of the Elemental &n&+cplanes&n&+y is moving
+&+yfurther to his or some other power is trying to take his own place? Reguardless
+&+yof the reason when you enter his &n&+Ychambers&n&+y he looks puzzled for a moment then
+&+yproceeds to smash these bothersome insects.
+~
+1191213163 0 0 436207802 2076 0 0 -1000 S
+EE 0 301 7
+62 180 -85 1d100+30000 7d6+70
+0.0.50.30 500000
+8 8 1
+#131212
+titan~
+&+GA Titan~
+&+LAn imprisoned &n&+GTitan&n&+L, stands here.
+~
+   &+yA &n&+GTitan&n&+y stands in front of you here, at least 30 feet high he peers down
+&+yat you and ponders for a second.  Imprisoned here, in this large &n&+Ycavern&n&+y all
+&+yhe can do is wander eternaly in his cell of&n&+L rock&n&+y and&n&+L dirt&n&+y.  The floor here
+&+yis littered with Dao, Xorn, and Xaren bodies, you can only guess he doesn't
+&+ylike there kind at all.
+~
+1073756264 0 0 570466360 2076 0 0 1000 S
+G 0 4 -1
+53 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

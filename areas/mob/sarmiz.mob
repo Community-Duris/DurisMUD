@@ -761,3 +761,25 @@ H2 0 524288 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#9455
+rugged helmsman~
+&+LA &nr&+Lu&ngg&+Le&nd &+yhelms&nman&n~
+&+LA &nr&+Lu&ngg&+Le&nd &+yhelms&nman &+Llaughs loudly as he clinks his bottle of ale with a friend.&n
+~
+~
+2058 0 0 0 0 0 0 0 S
+ho 0 1 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#9456
+dock carpenter~
+&+La &nd&+yoc&nk &+yca&nrp&+yen&nter&n~
+&+LA scruffy looking &nd&+yoc&nk &+yca&nrp&+yen&nter &+Lbusily tries to drink his ale before his next shift.&n
+~
+~
+2058 0 0 0 0 0 0 0 S
+ho 0 16384 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0

@@ -957,7 +957,7 @@ int shaboath_alternation_tower(int room, P_char ch, int cmd, char *argument)
       continue;
 
     if (IS_DISGUISE(tch))
-      remove_disguise(ch, TRUE);
+      remove_disguise(tch, TRUE);
 
     if ((af = get_spell_from_char(tch, TAG_RACE_CHANGE)) == NULL)
     {

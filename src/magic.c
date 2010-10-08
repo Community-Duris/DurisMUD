@@ -17228,7 +17228,8 @@ void spell_single_cdoom_wave(int level, P_char ch, char *arg, int type,
   } 
   else  // single target
   {
-    doomdam = doomdam * 1.5;
+    //reducing damage since we are gona let it stay with target when ch isnt in room
+    doomdam = doomdam * 1.25;
   }
   
   doomdam = doomdam * get_property("spell.area.damage.factor.creepingDoom", 1.000);
@@ -17250,24 +17251,35 @@ void event_cdoom(P_char ch, P_char victim, P_obj obj, void *data)
 
   if (!cDoomData->area)
   {
-     if(!IS_ALIVE(victim) || victim->in_room != ch->in_room)
+     if(!IS_ALIVE(victim))
          cDoomData->waves = 0;
   }
 
   if(cDoomData->waves == 0)
   {
-    act("&+LThe sea of &+marachnids&+L fades away...\n",
-        FALSE, ch, 0, 0, TO_CHAR);
-    act("&+LThe sea of &+marachnids&+L fades away...\n",
-        FALSE, ch, 0, 0, TO_ROOM);
+    act("&+LThe sea of &+marachnids&+L fades away...",
+        FALSE, ch, 0, victim, TO_CHAR);
+    if (!cDoomData->area)
+      act("&+LThe sea of &+marachnids&+L fades away...",
+	  FALSE, ch, 0, victim, TO_VICT);
+    else
+      act("&+LThe sea of &+marachnids&+L fades away...",
+	  FALSE, ch, 0, victim, TO_ROOM);
     return;
   }
   else
     cDoomData->waves--;
-  
-  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, victim, TO_CHAR);
-  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, victim, TO_ROOM);
-
+  if (cDoomData->area)
+  {
+    act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, victim, TO_CHAR);
+    act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, victim, TO_ROOM);
+  }
+  else
+  {
+    //act("&+LA wave of &+marachnids&+L crawls about $N...", FALSE, ch, 0, victim, TO_CHAR);
+    //act("&+LA wave of &+marachnids&+L crawls about $N...", FALSE, victim, 0, victim, TO_ROOM);
+    //act("&+LA wave of &+marachnids&+L crawls about you...", FALSE, ch, 0, victim, TO_VICT);
+  }
   // if doom is single-target, replace with direct call to spell_single_cdoom_wave
   if (cDoomData->area)
   {
@@ -19274,7 +19286,7 @@ void spell_divine_blessing(int level, P_char ch, char *arg, int type, P_char vic
         TRUE, victim, weapon, 0, TO_ROOM);
     memset(&af, 0, sizeof(af));
     af.type = SPELL_DIVINE_BLESSING;
-    af.duration = 5;
+    af.duration = 15;
     affect_to_char(victim, &af);
   }
 }
