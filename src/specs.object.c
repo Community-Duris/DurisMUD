@@ -7321,8 +7321,9 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
 	    else
 	    {
   	    act("You bump into $p, visibly weakening it!", TRUE, ch, obj, 0, TO_CHAR);
-        act("$n bumps into $p, visibly weakening it!", TRUE, ch, obj, 0, TO_NOTVICT);
-        obj->value[2] -= 1;
+            act("$n bumps into $p, visibly weakening it!", TRUE, ch, obj, 0, TO_NOTVICT);
+            if (!number(0, 2))
+		obj->value[2] -= 1;
 	    }
     }
 	  else  /* a "normal" wall of bones */

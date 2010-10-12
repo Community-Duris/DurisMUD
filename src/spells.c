@@ -1145,7 +1145,7 @@ void cast_wall_of_bones(int level, P_char ch, char *arg, int type,
   if (var != -1)
   {
     if (EXIT(ch, var))
-      scales = get_spell_component(ch, DRAGONSCALE_VNUM, 4);
+      scales = get_spell_component(ch, DRAGONSCALE_VNUM, 4) * number(1, 2);
     else
     {
       send_to_char("You see no exit in that direction!\r\n", ch);
