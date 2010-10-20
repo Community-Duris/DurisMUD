@@ -543,6 +543,11 @@ void gain_epic(P_char ch, int type, int data, int amount)
   // For murdok nexus stone... to change rate use property nexusStones.bonus.epics
   amount = check_nexus_bonus(ch, amount, NEXUS_BONUS_EPICS);
 
+  if (GET_RACEWAR(ch) == RACEWAR_GOOD)
+    amount = amount * (float)get_property("epic.gain.modifier.good", 1.000);
+  if (GET_RACEWAR(ch) == RACEWAR_EVIL)
+    amount = amount * (float)get_property("epic.gain.modifier.evil", 1.000);
+  
   // add guild prestige
   check_assoc_prestige_epics(ch, amount, type);
 

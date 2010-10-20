@@ -42,6 +42,7 @@
 #include "grapple.h"
 #include "map.h"
 #include "dreadlord.h"
+#include "outposts.h"
 
 /*
  * external variables
@@ -2115,9 +2116,9 @@ void die(P_char ch, P_char killer)
     remove_disguise(ch, TRUE);
   }
   
-//  if (ch && killer)
-//    if (check_outpost_death(ch, killer))
-//      return;
+  //if (ch && killer)
+  //  if (check_outpost_death(ch, killer))
+  //    return;
 
   act("$n is dead! &+RR.I.P.&n", TRUE, ch, 0, 0, TO_ROOM);
   act("&-L&+rYou feel yourself falling to the ground.&n", FALSE, ch, 0, 0, TO_CHAR);
@@ -5141,7 +5142,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
          tch != victim &&
          !IS_AFFECTED4(tch, AFF4_HOLY_SACRIFICE) &&
          !affected_by_spell(tch, SPELL_PLAGUE))
-            vamp(tch, sac_gain, GET_MAX_HIT(tch));
+            vamp(tch, sac_gain, (GET_MAX_HIT(tch) + (GET_MAX_HIT(tch)/3)));
     }
   }
 }
@@ -5347,6 +5348,10 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
       (IS_PC(victim) || IS_PC_PET(victim) || IS_MORPH(victim)))
     {
       dam = dam * (dam_factor[DF_NPCTOPC] / 2);
+      if (GET_RACEWAR(victim) == RACEWAR_GOOD)
+        dam = dam * (float)get_property("damage.modifier.npcToPc.good", 1.000);
+      if (GET_RACEWAR(victim) == RACEWAR_EVIL)
+	dam = dam * (float)get_property("damage.modifier.npcToPc.evil", 1.000);
     }
     else
     {
