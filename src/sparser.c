@@ -194,10 +194,9 @@ void perform_chaos_check(P_char ch, P_char tar,
     break;  
   }
 
-  // Wildmagic has a greater probability to injure caster -Lucrot
-  if (number(0, 1))
+  if (!number(0, 3))
   {
-    if (number(0, 3))
+    if (!number(0, 3))
     {
     GET_HIT(ch) -= (int) (GET_LEVEL(ch) / 4 + number(1, 5));
     send_to_char("&+rThe violent magic stream drains your health!&n\n", ch);
@@ -223,7 +222,7 @@ void perform_chaos_check(P_char ch, P_char tar,
         && (!controlled || !grouped(ch, tch)))
     {
       // Luck influences chaos - Lucrot
-      if (!controlled && grouped(ch, tch) && (int) (number(1, 100) < GET_C_LUCK(ch) / 5))
+      if (!controlled && grouped(ch, tch) && (int) (number(1, 100) < GET_C_LUCK(ch) / 2))
         return;
       else
         ((*skills[arg->spell].spell_pointer) ((int) GET_LEVEL(ch), ch, NULL,
