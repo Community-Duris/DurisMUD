@@ -4831,7 +4831,8 @@ void do_score(P_char ch, char *argument, int cmd)
 	  else
 	  {
 	    sprintf(buf, "Stat Pool timeout: %d hours\n", 
-	            af->duration * PULSES_IN_TICK / (WAIT_SEC * SECS_PER_REAL_HOUR));
+	            //af->duration * PULSES_IN_TICK / (WAIT_SEC * SECS_PER_REAL_HOUR));
+	      (af->modifier / 60 / 60));
 	    send_to_char(buf, ch);
 	  }
   }

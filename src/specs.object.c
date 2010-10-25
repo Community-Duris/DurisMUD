@@ -7977,7 +7977,7 @@ int stat_pool_common(P_obj obj, P_char ch, int cmd, sh_int * statPtr,
                      const char *plusMsgCh, const char *plusMsgRoom)
 {
   int      numb, oldStat;
-
+  struct affected_type *af2;
 
   if (!ch || !IS_PC(ch))
     return FALSE;
@@ -8006,15 +8006,18 @@ int stat_pool_common(P_obj obj, P_char ch, int cmd, sh_int * statPtr,
       return TRUE;
     }
 
-    if( affected_by_spell(ch, TAG_POOL) )
+    if ((af2 = get_spell_from_char(ch, TAG_POOL)) != NULL)
     {
-      send_to_char("The liquid burns your throat!  Ouch!\n", ch);
-      act("$n reels in pain as $e takes a drink from $p!", FALSE,
-          ch, obj, 0, TO_ROOM);
+      if ((af2.modifier + (60 * 60 * 24 * 2)) < time(NULL))
+      {
+        send_to_char("The liquid burns your throat!  Ouch!\n", ch);
+        act("$n reels in pain as $e takes a drink from $p!", FALSE,
+            ch, obj, 0, TO_ROOM);
 
-      damage(ch, ch, TYPE_UNDEFINED, 50);
+        damage(ch, ch, TYPE_UNDEFINED, 50);
 
-      return TRUE;
+        return TRUE;
+      }
     }
 
     numb = number(STAT_POOL_DRINK_MIN, STAT_POOL_DRINK_MAX);
@@ -8023,12 +8026,16 @@ int stat_pool_common(P_obj obj, P_char ch, int cmd, sh_int * statPtr,
   default:
     return FALSE;
   }
+  
+  affect_from_char(ch, TAG_POOL);
 
   struct affected_type af;
   bzero(&af, sizeof(af));
   af.type = TAG_POOL;
   af.flags = AFFTYPE_STORE | AFFTYPE_PERM;
-  af.duration = (int) (get_property("timer.mins.statPool", SECS_PER_REAL_HOUR * 24));
+  //af.duration = (int) (get_property("timer.mins.statPool", SECS_PER_REAL_HOUR * 24));
+  af.duration = -1;
+  af.modifier = time(NULL);
   affect_to_char(ch, &af);
 
   act("$n takes a drink from $p.", FALSE, ch, obj, 0, TO_ROOM);
