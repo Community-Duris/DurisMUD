@@ -4246,7 +4246,7 @@ int collar_flames(P_obj obj, P_char ch, int cmd, char *arg)
 	justice_witness(ch, NULL, CRIME_SUMMON);
 	firemental->player.level = 45 + number(-5, 0);
         sum = dice(GET_LEVEL(firemental) * 4, 8) + (GET_LEVEL(firemental) * 3);
-        if (IS_SET(firemental->specials.act, ACT_MEMORY))
+        if (!IS_SET(firemental->specials.act, ACT_MEMORY))
           clearMemory(firemental);
         if (!IS_SET(firemental->specials.affected_by, AFF_INFRAVISION))
           SET_BIT(firemental->specials.affected_by, AFF_INFRAVISION);
