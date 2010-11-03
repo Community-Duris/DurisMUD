@@ -1682,24 +1682,25 @@ byte find_first_step(int src, int target, long hunt_flags,
         }
         if(IS_PC(tar))
         {
-          logit(LOG_DEBUG,"PC (%s) with next too many rooms searched.", GET_NAME(tar));
+          //logit(LOG_DEBUG,"PC (%s) with next too many rooms searched.", GET_NAME(tar));
           continue;
         }
         if(IS_NPC(tar))
         {
-          logit(LOG_DEBUG,"NPC (%d) with next too many rooms searched.", mob_index[GET_RNUM(tar)].virtual_number);
+          //logit(LOG_DEBUG,"NPC (%d) with next too many rooms searched.", mob_index[GET_RNUM(tar)].virtual_number);
           continue;
         }
       }
       
       // debug
      
+      /*
       logit(LOG_DEBUG,"too many rooms searched from room (%d) target (%d) is_ship (%d) wagon_type(%d)",
         ROOM_VNUM(src),
         ROOM_VNUM(target),
         is_ship,
         wagon_type);
-     
+     */
       bfs_clear_queue();
 
       return BFS_ERROR;
