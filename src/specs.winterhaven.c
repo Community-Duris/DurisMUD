@@ -1771,6 +1771,22 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
     }
   }
 
+  // This should work good to prevent cheesing the procs.
+  // Not going to reset for situations like when it's been disarmed
+  // and they rewield, and I would say that's a nice feature, not
+  // a bug, so just keep that in mind if you are looking to edit this.
+  if (OBJ_WORN(obj) &&
+      obj->timer[1] == 0)
+  {
+    obj->timer[1] = time(NULL);
+  }
+  if (arg && (cmd == CMD_REMOVE))
+  {
+    int j;
+    if (obj == get_object_in_equip(ch, arg, &j) || isname(arg, "all"))
+      obj->timer[1] = 0;
+  }
+  
   if (IS_FIGHTING(ch))
   {
 
@@ -1781,7 +1797,8 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
         curr_time = time(NULL);
         vict = ParseTarget(ch, arg);
 
-        if (obj->timer[0] + 800 <= curr_time)
+        if (obj->timer[0] + 800 <= curr_time &&
+	    obj->timer[1] + 600 <= curr_time)
         {
           act("&+WYou scream '&+rBel&+L! I call upon you to &+rS&+Rl&+rA&+Ry my foe!&n", TRUE, ch, obj, vict, TO_CHAR);
           act("&+WYou thrust $q &+Winto the ground!&n", TRUE, ch, obj, vict, TO_CHAR);
@@ -1851,7 +1868,8 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
       curr_time = time(NULL);
       vict = ParseTarget(ch, arg);
 
-      if (obj->timer[0] + 450 <= curr_time)
+      if (obj->timer[0] + 450 <= curr_time &&
+	  obj->timer[1] + 600 <= curr_time)
       {
         act("&+WYou say '&+rEuronymous&+L! Bring me &+mP&+Mo&+mW&+Me&+mr &+Lor bring me &+rD&+Re&+rA&+Rt&+rH&+L!'&n", TRUE, ch, obj, vict, TO_CHAR);
         act("&+WYou thrust $q &+Winto the ground!&n", TRUE, ch, obj, vict, TO_CHAR);
@@ -1948,7 +1966,8 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
       curr_time = time(NULL);
       vict = ParseTarget(ch, arg);
 
-      if (obj->timer[0] + 450 <= curr_time)
+      if (obj->timer[0] + 450 <= curr_time &&
+	  obj->timer[1] + 600 <= curr_time)
       {
         act("&+WYou say '&+rJubilex&+L! Grant me strength!&+W'&n", TRUE, ch, obj, vict, TO_CHAR);
         act("&+WYou thrust $q &+Winto the ground!&n", TRUE, ch, obj, vict, TO_CHAR);
@@ -1962,32 +1981,32 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
 
         rand = number(0, 100);
   
-        if(rand < 26)
+	if(rand >= 76)
         {
-            act("You are bathed in a light healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
-            act("$n is bathed in a light healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
-            GET_HIT(ch) += 100;
+            act("You are bathed in an extremely powerful healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
+            act("$n is bathed in an extremely powerful healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
+            GET_HIT(ch) += 400;
             spell_invigorate(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         }
-        if(26 <= rand <= 50)
-        {
-            act("You are bathed in a healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
-            act("$n is bathed in a healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
-            GET_HIT(ch) += 200;
-            spell_invigorate(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-        }
-        if(51 <= rand <= 75)
+	else if(rand >= 51)
         {
             act("You are bathed in a strong healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
             act("$n is bathed in a strong healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
             GET_HIT(ch) += 300;
             spell_invigorate(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         }
-        if(76 <= rand <= 100)
+	else if(rand >= 26)
         {
-            act("You are bathed in an extremely powerful healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
-            act("$n is bathed in an extremely powerful healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
-            GET_HIT(ch) += 400;
+            act("You are bathed in a healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
+            act("$n is bathed in a healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
+            GET_HIT(ch) += 200;
+            spell_invigorate(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+        }
+	else
+        {
+            act("You are bathed in a light healing aura.&n", TRUE, ch, obj, vict, TO_CHAR);
+            act("$n is bathed in a light healing aura.&n", TRUE, ch, obj, vict, TO_ROOM);
+            GET_HIT(ch) += 100;
             spell_invigorate(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         }
 
