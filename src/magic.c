@@ -17254,7 +17254,7 @@ struct CDoomData
   int area;
 };
 
-void event_cdoom(P_char ch, P_char victim, P_obj obj, void *data)
+void event_cdoom(P_char victim, P_char ch, P_obj obj, void *data)
 {
   CDoomData *cDoomData = (CDoomData*) data;
 
@@ -17311,6 +17311,20 @@ void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
   if(!IS_ALIVE(ch))
     return;
 
+  if (victim)
+  {
+    if (!is_char_in_room(victim, ch->in_room))
+    {
+      send_to_char("Your victim is no longer here.\r\n", ch);
+      return;
+    }
+    if (!CAN_SEE(ch, victim))
+    {
+      send_to_char("You cannot see your victim.\r\n", ch);
+      return;
+    }
+  }
+
   CDoomData cDoomData;
   cDoomData.waves = number(4, 5);
   cDoomData.level = level;
@@ -17324,7 +17338,7 @@ void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
   act("&+LA &+gpl&+Lag&+gue &+Lof &+minsects and arachnids&+L flow like an ocean.", TRUE, ch, 0, victim, TO_ROOM);
   act("&+LYou send out a &+mwave of insects&+L!", TRUE, ch, 0, victim, TO_CHAR);
   //engage(ch, victim);
-  add_event(event_cdoom, 0, ch, victim, NULL, 0, &cDoomData, sizeof(CDoomData));
+  add_event(event_cdoom, 0, victim, ch, NULL, 0, &cDoomData, sizeof(CDoomData));
 }
 
 void spell_sense_follower(int level, P_char ch, char *arg, int type,
