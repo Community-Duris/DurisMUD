@@ -229,7 +229,7 @@ int check_outpost_death(P_char ch, P_char killer)
   
   if( !affected_by_spell(ch, TAG_BUILDING) )
     return FALSE;
-
+  
   act("&+W$n has been destroyed!&n", TRUE, ch, 0, 0, TO_ROOM);
   
   if (ch->specials.fighting)
@@ -262,6 +262,13 @@ int check_outpost_death(P_char ch, P_char killer)
     if (!mob_index[GET_RNUM(ch)].func.mob)
     {
       debug("Error, outpost %d contains no mob spec function", building->id);
+      return TRUE;
+    }
+    else if (ch->in_room == NOWHERE)
+    {
+      debug("Outpost being attacked while in NOWHERE, not passing CMD_DEATH");
+      GET_HIT(ch) = 0;
+      set_current_outpost_hitpoints(building);
       return TRUE;
     }
     else

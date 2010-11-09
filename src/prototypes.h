@@ -111,6 +111,7 @@ void do_gossip(P_char, char *, int);
 void do_insult(P_char, char *, int);
 /*bool CAN_GCC(P_char);*/
 void do_gcc(P_char, char *, int);
+void send_to_guild(int, char *, char *);
 void do_project(P_char, char *, int);
 void do_page(P_char, char *, int);
 void do_petition(P_char, char *, int);
@@ -2950,6 +2951,7 @@ int challenge (P_char, P_char);
 void member_list(P_char);
 int fine_member (P_char, char *, int, int, int, int);
 int deposit_asc (P_char, int, int, int, int);
+int sub_money_asc (int, int, int, int, int);
 int withdraw_asc (P_char, int, int, int, int);
 void str_to_money(char *, int *, int *, int *, int *);
 char *title_member(P_char, char *);

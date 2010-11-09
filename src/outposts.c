@@ -435,23 +435,16 @@ void do_outpost(P_char ch, char *arg, int cmd)
 	send_to_char("You must belong to an association to claim an outpost.\r\n", ch);
 	return;
       }
-      if (!IS_TRUSTED(ch))
+      if (get_scheduled(op, event_outpost_repair))
       {
-        if (GET_MONEY(ch) < cost)
-        {
-	  sprintf(buff, "You don't have enough money on you - it costs %s&n to begin repairs on the outpost.\r\n", coin_stringv(cost));
-	  send_to_char(buff, ch);
-	  return;
-        }
+	send_to_char("The outpost is already being repaired.\r\n", ch);
+	return;
       }
-
       // Ok we own it, so begin repairs.
       send_to_char("You begin repairing the outpost.\r\n", ch);
       char_to_room(op, ch->in_room, -2);
       extract_obj(rubble, TRUE);
       act("$n begins repairs on the outpost.", TRUE, ch, 0, 0, TO_ROOM);
-      if (!IS_TRUSTED(ch))
-	SUB_MONEY(ch, cost, 0);
       add_event(event_outpost_repair, 1, op, NULL, NULL, 0, NULL, 0);
       return;
     }
@@ -495,20 +488,14 @@ void do_outpost(P_char ch, char *arg, int cmd)
             return;
 	  }
 	}
-        if (!IS_TRUSTED(ch))
+        if (get_scheduled(op, event_outpost_repair))
         {
-          if (GET_MONEY(ch) < cost)
-          {
-	    sprintf(buff, "You don't have enough money on you - it costs %s&n to begin repairs on the outpost.\r\n", coin_stringv(cost));
-	    send_to_char(buff, ch);
-	    return;
-          }
+	  send_to_char("The outpost is already being repaired.\r\n", ch);
+	  return;
         }
 
 	send_to_char("You begin repairing the outpost.\r\n", ch);
         act("$n begins repairs on the outpost.", TRUE, ch, 0, 0, TO_ROOM);
-        if (!IS_TRUSTED(ch))
-	  SUB_MONEY(ch, cost, 0);
 	add_event(event_outpost_repair, PULSES_IN_TICK, op, NULL, NULL, 0, NULL, 0);
         return;
       }
@@ -538,22 +525,16 @@ void do_outpost(P_char ch, char *arg, int cmd)
       return;
     }
    
-    if (!IS_TRUSTED(ch))
+    if (!sub_money_asc(building->guild_id, cost/1000, 0, 0, 0))
     {
-      if (GET_MONEY(ch) < cost)
-      {
-	sprintf(buff, "You don't have enough money on you - it costs %s&n to build a portal here.\r\n", coin_stringv(cost));
-	send_to_char(buff, ch);
-	return;
-      }
+      send_to_guild(building->guild_id, "The Guild Banker", "There are not enough guild funds to purchase a portal.");
+      return;
     }
 
     if (outpost_generate_portals(building))
     {
       db_query("UPDATE outposts SET portal_room = '1' WHERE id = '%d'", building->id-1);
       send_to_char("Your outpost now contains portals.\r\n", ch);
-      if (!IS_TRUSTED(ch))
-	SUB_MONEY(ch, cost, 0);
     }
     else
       send_to_char("There was an issue building portals.\r\n", ch);
@@ -583,20 +564,14 @@ void do_outpost(P_char ch, char *arg, int cmd)
       return;
     }
     
-    //if (!IS_TRUSTED(ch))
-    //{
-      if (GET_MONEY(ch) < cost)
-      {
-	sprintf(buff, "You don't have enough money on you - it costs %s&n to add gateguards.\r\n", coin_stringv(cost));
-	send_to_char(buff, ch);
-	return;
-      }
-    //}
+    if (!sub_money_asc(building->guild_id, cost/1000, 0, 0, 0))
+    {
+      send_to_guild(building->guild_id, "The Guild Banker", "There are not enough guild funds to purchase an outpost golem.");
+      return;
+    }
 
     outpost_load_gateguard(building->golem_room, OUTPOST_GATEGUARD_WAR, building, (get_outpost_golems(building)));
     db_query("UPDATE outposts SET golems = '%d' WHERE id = '%d'", (get_outpost_golems(building) + 1), building->id-1);
-    if (!IS_TRUSTED(ch))
-      SUB_MONEY(ch, cost, 0);
     send_to_char("You hire a new outpost gateguard.\r\n", ch);
     return;
   }
@@ -620,12 +595,19 @@ void event_outpost_repair(P_char op, P_char vict, P_obj obj, void *data)
 {
   Building *building = get_building_from_char(op);
   int cost = (int)get_property("outpost.cost.repair", 0);
+  int div = (int)get_property("outpost.repair.div", 10);
 
   for (P_char tch = world[op->in_room].people; tch != NULL; tch = tch->next_in_room)
   {
     if (GET_OPPONENT(tch) == op ||
 	IS_FIGHTING(op))
       return;
+  }
+
+  if (!sub_money_asc(building->guild_id, cost/div/1000, 0, 0, 0))
+  {
+    send_to_guild(building->guild_id, "The Guild Banker", "There are not enough guild funds to complete outpost repairs.");
+    return;
   }
 
   //  Add 10% of the buildings max hitpoints, up to max.
@@ -1050,9 +1032,6 @@ int outpost_gateguard_proc(P_char ch, P_char pl, int cmd, char *arg)
     act("$n pops into existence.&n", FALSE, ch, 0, 0, TO_ROOM);
   }
   
-  //
-  // standard checks
-  //
   // Make sure the gate guards update with the new owner
   Building *building = get_building_from_gateguard(ch);
   if (!building)

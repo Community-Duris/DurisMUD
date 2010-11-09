@@ -550,6 +550,25 @@ void do_gcc(P_char ch, char *argument, int cmd)
   }
 }
 
+void send_to_guild(int asc, char *name, char *arg)
+{
+  P_desc i;
+  char Gbuf1[MAX_STRING_LENGTH];
+
+  for (i = descriptor_list; i; i = i->next)
+    if (!i->connected &&
+        !is_silent(i->character, FALSE) &&
+        IS_SET(i->character->specials.act, PLR_GCC) &&
+        IS_MEMBER(GET_A_BITS(i->character)) &&
+	(GET_A_NUM(i->character) == asc) &&
+        (!(IS_AFFECTED4(i->character, AFF4_DEAF))) &&
+        (GT_PAROLE(GET_A_BITS(i->character))))
+    {
+      sprintf(Gbuf1, "&+c%s&n&+c tells your guild '&+C%s&n&+c'\r\n", name, arg);
+      send_to_char(Gbuf1, i->character, LOG_PRIVATE);
+    }
+}
+
 void do_rwc(P_char ch, char *argument, int cmd)
 {
   P_desc   i;
