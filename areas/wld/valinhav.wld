@@ -1,6 +1,6 @@
 #90800
 &+BAlong a Mysterious River~
-&+b  The current sweaps along the jagged boulders that seep out of the
+&+b   The current sweaps along the jagged boulders that seep out of the
 &+bwalls that are painted in a pallette of violets and azure. Most of these
 &+brocks are very smooth to the touch with oozing moses growing in the
 &+bcrevaces and maggots scuttering around frantically on the over passes and
@@ -19,7 +19,7 @@ D1
 S
 #90801
 &+BA Bend in the Mysterious River~
-&+b The rapids take a sharp turn here and the water gushes out against
+&+b   The rapids take a sharp turn here and the water gushes out against
 &+bthe rocks where vast amounts of backlash coming whipping out stining
 &+banything the water colides with. The damp rocks have become very smooth
 &+bwith age and are constantly bombarded with gushes of river water. Even
@@ -39,7 +39,7 @@ The river continues.
 S
 #90802
 &+BSharp Turn in the Mysterious River~
-&+b Coming around the bend water thrashes everything in its sight making it
+&+b   Coming around the bend water thrashes everything in its sight making it
 &+bvery difficult to travel along. The &+Bfrigid&+b rapids bring iciles to
 &+bthe peaks of outlashing rock and boulder. Although most of the time worn
 &+brock is smooth, there are still stalactites borrowing up.
@@ -58,7 +58,7 @@ The river continues.
 S
 #90803
 &+BA Swirling Wirlpool~
-&+b The waves of the river collect and swirl here to form a very deep whirl
+&+b   The waves of the river collect and swirl here to form a very deep whirl
 &+bpool that has worn the rock totally smooth and there appears to be a
 &+bpassage way at the bottom of this abyss. The walls are painted in shades
 &+bof indigo and azure. There are absolutly no animilia around this part as if
@@ -77,8 +77,8 @@ A waterfall is down.
 0 0 90804
 S
 #90804
-&+W A Raging Waterfall~
-&+B The &+bfrigid &+Bwater gushes down from above down this quaint tunnel
+&+WA Raging Waterfall~
+&+B   The &+bfrigid &+Bwater gushes down from above down this quaint tunnel
 &+Bwith little room to gasp a breath of air. Although the water is aboslutly
 &+Bfreezing steam rises from below along with some unfamiliar noises.
 ~
@@ -95,8 +95,8 @@ A waterfall is down.
 0 0 90805
 S
 #90805
-&+W Down a Raging Waterfall~
-&+B Water falling from above and the steam rising from below makes this
+&+WDown a Raging Waterfall~
+&+B   Water falling from above and the steam rising from below makes this
 &+Bvery tiny passage down abosultly hell. The walls have been worn to a
 &+Bsmoothness that few have felt before. They're painted with shades all across
 &+Bthe spectrum with an errily glowing presence that few have experienced.
@@ -114,8 +114,8 @@ A waterfall is down.
 0 0 90806
 S
 #90806
-&+W A Large Cliff Along the Waterfall~
-&+B There is a massive rock making a big cliff with a quaint little cave
+&+WA Large Cliff Along the Waterfall~
+&+B   There is a massive rock making a big cliff with a quaint little cave
 &+Boff to the side, probally due to volcanic activity in these parts. The cliff
 &+Bhas a smooth round edge where the flowing water has flatened it. There is
 &+Bmuch plant life here due to the pleasant air and mists of the river. Even
@@ -138,8 +138,8 @@ D5
 0 0 90816
 S
 #90807
-&+L In a Dark Cave~
-  This cave has been formed from the constant beeting it takes from the
+&+LIn a Dark Cave~
+   This cave has been formed from the constant beeting it takes from the
 waterfall, and has worn smooth. The walls are a dark granite and very shiny.
 There is small moss growing along cracks and crevices from the moisture of
 the waterfall.
@@ -161,8 +161,8 @@ D3
 0 0 90808
 S
 #90808
-&+L In the West Corner~
-  A smooth corner of the cave is here, with the walls flowing into each other
+&+LIn the West Corner~
+   A smooth corner of the cave is here, with the walls flowing into each other
 to form a very elegant corner. Here the pools have formed from the dangling
 mists in the air. These puddles provide much nourishment for the surrounding
 plant and animal life. Cob webs decorate the azure walls.
@@ -178,7 +178,7 @@ D1
 0 0 90807
 S
 #90809
-&+L A Bend in the Cave~
+&+LA Bend in the Cave~
    This Northern part of the cave is not as damp as the others since it is
 farthest away, but still some things manage to strive for life here. Cob webs
 are most common in this part of the cave and many an insect has become victim
@@ -195,8 +195,8 @@ D2
 0 0 90808
 S
 #90810
-&+L Back of the Cave~
-   Like the other parts of this cave, the rooms is definitly a formation
+&+LBack of the Cave~
+    Like the other parts of this cave, the rooms is definitly a formation
 of molten rock and has molded togehter to form a perfectly smooth corner.
 It is very dry here due to the lack of the mist from the waterfall.
 ~
@@ -224,8 +224,8 @@ D2
 0 0 90807
 S
 #90816
-&+W Nearing the Bottom~
-&+B The waterfall starts to come to an end here as more steam rises and
+&+WNearing the Bottom~
+&+B   The waterfall starts to come to an end here as more steam rises and
 &+Bsome of the backlash of hitting whatever it is below sprays upwards. The
 &+Bwalls are a bit lumpy but rather smooth in texture and colored in more of
 &+Ba reddish orange colors versus the indigos over before.
@@ -242,7 +242,7 @@ D5
 S
 #90817
 &+RA Lava Pit~
-&+r The waterfall comes down to meet a huge flow of lava here. The room is
+&+r   The waterfall comes down to meet a huge flow of lava here. The room is
 &+rjust scorthing hot and steam rises higher and higher. The walls seem to
 &+rbleed colors into the festeringpool of lava. The ceiling comes to small
 &+rventage point and a thin beam of sun hits the center of the pool.
@@ -258,8 +258,8 @@ D4
 0 0 90816
 S
 #90818
-&+R Along a Lava Bed~
-&+r A stream of lava flows along this path downward into the deepest
+&+RAlong a Lava Bed~
+&+r   A stream of lava flows along this path downward into the deepest
 &+rcreaves of the earth. Steam comes along the ground and the once beautiful
 &+rmystical patterns of the earth tones now gets melted in to this stream of
 &+rmagma. The trail is over farther away from the magma to prevent any
@@ -276,8 +276,8 @@ D2
 0 0 90817
 S
 #90819
-&+R Along a Lava Bed~
-&+r The lava here is very hot but seems to be leaving the sides of the trail
+&+RAlong a Lava Bed~
+&+r   The lava here is very hot but seems to be leaving the sides of the trail
 &+rand the rocks look a tad harder than what they were a while back. The steam
 &+rdiffuses and the trail is more solid. The earth tones of indigos look more
 &+rlike they did back up aways.
@@ -297,8 +297,8 @@ D3
 0 0 90824
 S
 #90820
-&+L The Mouth of a Cave~
-&+L The old trail of lava shoots back down another shaft and a huge entrance
+&+LThe Mouth of a Cave~
+&+L   The old trail of lava shoots back down another shaft and a huge entrance
 &+Lstands before you, the boulders pushing out making it somewhat hidden. Plants
 &+Lthrive in the moist crevaces and spider webs practically cover the entrance.
 &+LAlthough there is a path, it is very faint and doesn't look like its been
@@ -316,7 +316,7 @@ D2
 S
 #90821
 &+mCentral Path~
-&+w This path continues in from the cave and deeper and deeper into the
+&+w   This path continues in from the cave and deeper and deeper into the
 darkest cassisms of the cave. It has clearly been used more often than other
 pathes around and has the most beautiful displayings of colors decorating
 what appears to be gem embedded walls. The path has the worn foot prints of
@@ -335,7 +335,7 @@ D2
 S
 #90822
 &+mCentral Path~
-&+w The cave gets larger and larger as the path continue with lave made
+&+w   The cave gets larger and larger as the path continue with lave made
 tunnels streaking off in different directions. Mud has made its home to
 the roads, walls, ceilings and tunnels of this place. Mud of all textures
 and colors sometimes even glowing. From ages ago this cave with its tunnels
@@ -354,8 +354,8 @@ D2
 0 0 90821
 S
 #90823
-&+m A Dip in the Central Path~
-&+w This dip in the Central Path looks as though it was worn down by a
+&+mA Dip in the Central Path~
+&+w   This dip in the Central Path looks as though it was worn down by a
 lava overflow and constant use. Puddles seem to form in the crevaces
 due to the warm moisture in the air. Small arachnids creep around the
 lava made walls and make their nests with huge webs spun from their
@@ -373,8 +373,8 @@ D2
 0 0 90822
 S
 #90824
-&+R Lava Spring~
-&+r This spring shoots up lava from the very primordial elements of the
+&+RLava Spring~
+&+r   This spring shoots up lava from the very primordial elements of the
 &+rplanet with much scarring of the lava formed rock. Lava spurts out in
 &+rmost directions causing sparks to dance in the night. Many dead insects
 &+rlay scattered on the crisp floor of oozing lava. The room is unbearably
@@ -394,7 +394,7 @@ floor~
 S
 #90825
 &+mBefore The Gates of Valinhaven~
-&+w These gates glow as if some magical presence were sustaining their
+&+w   These gates glow as if some magical presence were sustaining their
 azure glow. Faint traces of life are here along with many a foot print of
 small puddering feet. The surrounding walls are pitch black and smooth as
 the finest gem. The gates themselves seem to be forged from pure crystal
@@ -413,10 +413,10 @@ gates~
 S
 #90826
 &+mEntrance Way Into Valinhaven~
-&+w This glorified entrance leads  out in to an ancient system of caves and
+&+w   This glorified entrance leads  out in to an ancient system of caves and
 tunnels. The walls are almost completely mud, but are splattered occaisonally
-with various types of the gems of these parts. Children can be seen playing
-, miner's coming back from a hard days's work and the house wives scurrying
+with various types of the gems of these parts. Children can be seen playing,
+miner's are coming back from a hard days work and the house wives scurrying
 around on different errands along with their most unusual pets. The ceiling
 here is barely tall enough for things to stand in, and cob webs spread
 around the highest corners. The air is moist and damp with a pleasant scent
@@ -441,8 +441,8 @@ D3
 0 0 90831
 S
 #90827
-&+R Tallenor Way~
-&+L This rugged dirt road is very muddy and has constant wear as miners
+&+RTallenor Way~
+&+L   This rugged dirt road is very muddy and has constant wear as miners
 &+Lusally use this to get to work. Scraps of soiled cloth and broken tools
 &+Llay on the sides. The thick stone walls are splattered with much earth
 &+Las if it was done on purpose. The ceiling rises to a bigger distance
@@ -468,8 +468,8 @@ D3
 0 0 90828
 S
 #90828
-&+L The Gem Refinery~
-&+w This small dwelling is a refinery for the gems where they are cleaned
+&+LThe Gem Refinery~
+&+w   This small dwelling is a refinery for the gems where they are cleaned
 and polished by different workers. Many types of gems cover the shelves
 on the indigo wall and ceiling. The walls are nice and smooth along with the
 floor and there are many machinery type sounds coming from here. There is
@@ -492,7 +492,7 @@ D3
 S
 #90829
 &+BThe Public Baths~
-&+w This room is filled with many tubs and springs, both cold and hot
+&+w   This room is filled with many tubs and springs, both cold and hot
 for the miners and other members of the community to relax and clean
 off from a hard days's work. Different panting of the locals line the
 walls along with other small annoncements. Actual walls have been made
@@ -506,8 +506,8 @@ D3
 0 0 90827
 S
 #90830
-&+R Tallenor Way~
-&+L This dirt road passes along many different things through the mud and
+&+RTallenor Way~
+&+L   This dirt road passes along many different things through the mud and
 &+Linsect dwellings. Large snarls are a common thing to hear along with the
 &+Lsounds of small feet pattering along carrying gems to and from the mines.
 &+LBroken tools, old rags, and the like are left in the mud here discraded
@@ -533,7 +533,7 @@ D3
 S
 #90831
 &+WA Diamond Path~
-&+w  This path is basically crushed out diamond and padded down to form
+&+w   This path is basically crushed out diamond and padded down to form
 an almost impenatrable slippery surface. This looks like one of the richest
 parts of town with jade and emerald walls and ceilings, and fine underground
 plants planted sparatically along the way. The insect population is kept
@@ -551,7 +551,7 @@ D3
 S
 #90832
 &+WA Diamond Path~
-&+w This path studded with diamons, breaks off to the east where the shadows
+&+w   This path studded with diamons, breaks off to the east where the shadows
 become no more due to the fancy light fictures which decorate the gleaming
 walls that have been smoothed with the fine crafstman ship of the lock gem
 worker and provides an errily glowing presence as if you were not alone. This
@@ -570,7 +570,7 @@ D3
 S
 #90833
 &+WA Diamond Path~
-&+w This diamond studded path runs long to the west and is a fairly well
+&+w   This diamond studded path runs long to the west and is a fairly well
 kept part of the villge. The walls are as smooth as a baby's skin and the
 glimmering of the light upon the sleek diamons brings dancing images to the
 walls of the tunnel.
@@ -594,8 +594,8 @@ D3
 0 0 90846
 S
 #90834
-&+R Tallenor Way~
-&+L The gravel and dirt road continues here coming closerr and closer the
+&+RTallenor Way~
+&+L   The gravel and dirt road continues here coming closerr and closer the
 &+Lmines themsleves. The soot has piled up around the tunnel and the black
 &+Lsmoke makes it difficult to see. Piles of old pieces of broken equipment,
 &+Lsoiled rags, and chipped gems. Spiders make their homes in cracked helmets
@@ -613,8 +613,8 @@ D2
 0 0 90830
 S
 #90835
-&+L The Gem Refinery~
-&+w The refinery continues here where the gems are wiped clean and the little
+&+LThe Gem Refinery~
+&+w   The refinery continues here where the gems are wiped clean and the little
 bits of rock still atached are removed with small little svirfneblin tools.
 The tools are nicely aranged on the shelves aligned the walls. There is
 a constant supply of gems coming in to be refined to their purest state and
@@ -633,7 +633,7 @@ D1
 S
 #90836
 &+LThe Gem Refinery~
-&+w This soot covered room with a dreary mist outlines some of the more
+&+w   This soot covered room with a dreary mist outlines some of the more
 interesting aspects of the refinery. This is where the gems are processed
 for show or sale. It is more like a store actually, but nothing is for sale.
 There are shelves hanging from wall to wall. The walls are practically
@@ -651,8 +651,8 @@ D3
 0 0 90838
 S
 #90837
-&+W A Steam Filled Room~
-&+w This room is filled with steam where the old rock and mud is dropped into
+&+WA Steam-filled Room~
+&+w   This room is filled with steam where the old rock and mud is dropped into
 an outspirt of lava that comes up from the very essence of the world. The
 steam brings fatiqueness to the eyes and you can hardly see your hand in
 front of your face. Louds smashes hit something very dense near by. Ear
@@ -665,8 +665,8 @@ door~
 1 0 90828
 S
 #90838
-&+L Dark Storage Room~
-&+w Boxes of gems here, broken and polished scatter the shelves made out of
+&+LDark Storage Room~
+&+w   Boxes of gems here, broken and polished scatter the shelves made out of
 some kinda underground birch wood. The spiders find their homes in the dark
 corners that lay around the room. Dust has settle to form a perfect blanket
 over the small wooden boxes.
@@ -679,7 +679,7 @@ D1
 S
 #90839
 &+LEntrance to the Gem Mine~
-&+w Here stands huge gem studded gates that lead out in the the tunneling
+&+w   Here stands huge gem studded gates that lead out in the the tunneling
 mines where beams of light can be seen moving around deep inside. Smells of
 mining are drifting in the air along with the scent of the working
 svirfneblin. The enterring tunnel is jagged with small gems peaking out of
@@ -697,8 +697,8 @@ D2
 0 0 90834
 S
 #90840
-&+wSomewhere In the Mine~
-&+L The mine brings a sense of workmanship with the smells of a working man
+&+wSomewhere in the Mine~
+&+L   The mine brings a sense of workmanship with the smells of a working man
 &+Land the dim lights and shambles of torches long since rotted upon the mud
 &+Lfloor of the mine. Tracks of small gem carrying carts span the floor and
 &+Lgo off in many directions leading big canyons within the mud. Wood supports
@@ -723,8 +723,8 @@ D3
 0 0 90842
 S
 #90842
-&+w Somewhere In The Mine~
-&+L The mine here looks like all other parts of the mine with the mud just
+&+wSomewhere in the Mine~
+&+L   The mine here looks like all other parts of the mine with the mud just
 &+Ldripping off the walls with only the finest crafted supports to keep this
 &+Ltunnel standing. The smell is the same as if the rooms do not change but yet
 &+Lthere are still workers everywhere that know their way around.
@@ -744,8 +744,8 @@ D3
 0 0 90857
 S
 #90843
-&+w Somewhere In The Mine~
-&+L This part of the mine is like all other parts of the mine in that the mud
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like all other parts of the mine in that the mud
 &+Ldrips off the sides of the tunnel with only the finely crafted supports
 &+Lholding it in place. The supports are of some dark svalich wood, or of a
 &+Lsimiliar type. Yet, there are still many workers scurrying around here as if
@@ -766,8 +766,8 @@ D3
 0 0 90840
 S
 #90844
-&+w Somewhere In The Mine~
-&+L The room  is like just any other part of the mine, with the mud just
+&+wSomewhere in the Mine~
+&+L   The room  is like just any other part of the mine, with the mud just
 &+Ldripping off the sides of the tunnel. Only the finely crafted supports made
 &+Lof some dark svalich wood help to hold this place together. Yet, there are
 &+Lmany miners scurrying around here about their  buisness who know this place
@@ -792,8 +792,8 @@ D3
 0 0 90850
 S
 #90845
-&+Y A Commoner's Dwelling~
-&+w This dwelling has been forged from stone with walls as thick as the back
+&+YA Commoner's Dwelling~
+&+w   This dwelling has been forged from stone with walls as thick as the back
 of a Zaratan. The smell of home cooked rodents and of small insect type
 creatures that resemble the face of that of an illithid. There are drapes
 over each doorway that tell a story of a land time had forgotten. The
@@ -808,7 +808,7 @@ D2
 S
 #90846
 &+WA Diamond Path~
-&+w This path is forged from some of the finest diamonds that are brought
+&+w   This path is forged from some of the finest diamonds that are brought
 from the mines. There are praticly no skuff marks on this path as though
 few have ever walked on it in their life. It seems as though it glows as
 the light strikes the path from all angles leaving paterns of beauty and
@@ -826,7 +826,7 @@ D3
 S
 #90847
 &+WA Diamond Path~
-&+w This path is forged from some of the finest diamonds that the mines can
+&+w   This path is forged from some of the finest diamonds that the mines can
 provide, unlike the other parts of the path this one seems a little bit
 more used, but not too much there might be one skuff mark within twenty feet
 followed by a couple more skuff marks and then nothing. The faint scent
@@ -846,7 +846,7 @@ D3
 S
 #90848
 &+mA Storage Shed~
-&+w This building is definitly for storage in that most of the items stored
+&+w   This building is definitly for storage in that most of the items stored
 here are all nicely kept in boxes that are labled in a language only the
 natives of this town can understand. Shelves line the rooms of this dwelling
 with only one or two svirfneblin coming in to add more items to storage or
@@ -859,8 +859,8 @@ D0
 0 0 90833
 S
 #90849
-&+w Somewhere In The Mine~
-&+L This part of the mine is like any other part with the mud dripping off
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like any other part with the mud dripping off
 &+Lthe edges of the tunnel with only a strange dark support holding it in place.
 &+LThe wood of the support is that of a svalich relative or something like it,
 &+Land does not seem to have any particular parts that have rotted. Yet, there
@@ -885,8 +885,8 @@ D3
 0 0 90853
 S
 #90850
-&+w Somewhere In The Mine~
-&+L This part of the mine is like that of any other part in that the mud is
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like that of any other part in that the mud is
 &+Ljust dripping off the sides of the tunnel with only the supports keeping it
 &+Lin place. The wood is that of some svalich relative or something like it.
 &+LYet, there are still workers here.
@@ -902,8 +902,8 @@ D3
 0 0 90871
 S
 #90851
-&+w Somewhere In The Mine~
-&+L This part of the mine is like that of any other part in that the mud is
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like that of any other part in that the mud is
 &+Ljust dripping off the walls of the tunnel with only the supports to keep it
 &+Lin place. The supports are that of a svalich wood, or something like it. Yet,
 &+Lthere are still workers going about their buisness.
@@ -919,8 +919,8 @@ D3
 0 0 90844
 S
 #90852
-&+w Somewhere In The Mine~
-&+L This part of the mine is like that of any other part of the mine in that
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like that of any other part of the mine in that
 &+Lthe mud here is just dripping off the walls with only the supports to keep
 &+Lthe walls in place. The supports are made out of some kinda svalich wood.
 &+LYet, there are still many workers here.
@@ -944,8 +944,8 @@ D3
 0 0 90859
 S
 #90853
-&+w Somewhere In The Mine~
-&+L This part of the mine is just like any other part of the mine in that the
+&+wSomewhere in the Mine~
+&+L   This part of the mine is just like any other part of the mine in that the
 &+Lwalls are just dripping with mud with only the supports to hold them in
 &+Lplace. The supports are that of a dark svalich wood. Yet, the confusion of
 &+Lthe mines, there are still many workers here.
@@ -969,8 +969,8 @@ D3
 0 0 90921
 S
 #90854
-&+w Somewhere In The Mine~
-&+L This part of the mine is like that of any other part of the mine in that
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like that of any other part of the mine in that
 &+Lthe walls are dripping with mud with only the supports to hold them in place.
 &+LThe supports are made out of some type of svalich wood. Yet, there are many
 &+Lworkers in this confusing place.
@@ -994,8 +994,8 @@ D3
 0 0 90849
 S
 #90857
-&+w Somewhere In The Mine~
-&+L This part of the mine is like that of any other part in that the walls
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like that of any other part in that the walls
 &+Lare just dripping with mud and only the supports can keep them in place. The
 &+Lsupports are made out of some dark svalich wood. Yet, the confusion of this
 &+Lplace, there are many workers roaming.
@@ -1011,8 +1011,8 @@ D2
 0 0 90953
 S
 #90858
-&+w Somewhere In The Mine~
-&+L This part of the mine is like that of any other part in that the walls
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like that of any other part in that the walls
 &+Lare just dripping with mud, only the suports can hold them up. The supports
 &+Lthemselves are made out of that of a dark svalich wood and seem very sturdy.
 &+LYet there is much confusion in here, the workers around here seem to know
@@ -1029,8 +1029,8 @@ D3
 0 0 90843
 S
 #90859
-&+w Somewhere In The Mine~
-&+L This part of the mine is like that of any other part of the mine in that
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like that of any other part of the mine in that
 &+Lthere is mud dripping off the walls with only the supports to keep it in
 &+Lplace. The supports themselves are made out a dark svalich wood. The workers
 &+Lhere are looking confused.
@@ -1054,8 +1054,8 @@ D3
 0 0 90865
 S
 #90860
-&+w Somewhere In The Mine~
-&+L This part of the mine is like that of any part of the mine in that there
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like that of any part of the mine in that there
 &+Lis much mud dripping off the walls, and only the supports keep it in place.
 &+LThe supports themselves are made of a dark svalich wood. The workers here are
 &+Llost.
@@ -1075,8 +1075,8 @@ D3
 0 0 90852
 S
 #90861
-&+w Somewhere In The Mine~
-&+L This part of the mine is like any other part of the mine in that there is
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like any other part of the mine in that there is
 &+Lmud dripping off the sides of the walls and only the supports can keep it in
 &+Lplace. The supports themselves are made out of a dark svalich wood and have
 &+Llittle or no signs of wear. The workers here are definitly not lost.
@@ -1100,8 +1100,8 @@ D3
 0 0 90862
 S
 #90862
-&+w Somewhere In The Mine~
-&+L This part of the mine is like any other part of the mine in that there is
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like any other part of the mine in that there is
 &+Lmuch mud dripping of the walls with only the supports to keep it in place.
 &+LThere supports themselves are made of dark svalich wood. The workers here
 &+Lare content as they work with the greatest spirit in their hearts.
@@ -1117,8 +1117,8 @@ D3
 0 0 90875
 S
 #90863
-&+w Somewhere In The Mine~
-&+L This part of the mine is just like any other part of the mine in that
+&+wSomewhere in the Mine~
+&+L   This part of the mine is just like any other part of the mine in that
 &+Lthere is much mudd dripping from the walls with only the supports to hold
 &+Lit in place. The supports themselves are made from a dark svalich wood and
 &+Ldoes not seem to rott. The workers here are extremely dirty and tired.
@@ -1142,8 +1142,8 @@ D3
 0 0 90873
 S
 #90864
-&+w Somewhere In The Mine~
-&+L This part of the mine is like any other part in that there is much mud
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like any other part in that there is much mud
 &+Ldripping from the walls with only the supports to hold it in place. The
 &+Lsupports themselves are made from a dark svalich wood that does not rot. The
 &+Lworkers here are very content with their work and whistling sweetens the air.
@@ -1159,8 +1159,8 @@ D3
 0 0 90861
 S
 #90865
-&+w Somewhere In The Mine~
-&+L This part of the mine is like that of any other mine in that there is
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like that of any other mine in that there is
 &+Lmud dripping of the walls which are only being kept together by supports.
 &+LThe supports themselves are made of a dark svalich wood that does not seem
 &+Lto rot. The workers here know this place like the back of their hand.
@@ -1172,8 +1172,8 @@ D1
 0 0 90859
 S
 #90866
-&+w Somewhere In The Mine~
-&+L This part of the mine is like any other part of the mine in that there is
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like any other part of the mine in that there is
 &+Lmud dripping off the walls with only the supports to keep it in place. The
 &+Lsupports themselves are made out of a dark svalich wood. This part of the
 &+Lmine is interesting in that there are few workers here.
@@ -1193,8 +1193,8 @@ D3
 0 0 90860
 S
 #90867
-&+w Somewhere In The Mine~
-&+L This part of the mine is like any other part of the mine in that there is
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like any other part of the mine in that there is
 &+Lmuch mud dripping of the walls with only the supports keeping it in place.
 &+LThe supports themselves are made out of a dark svalich wood that does not
 &+Lseem to rot. The workers are scurring about attentivly as if they were being
@@ -1207,8 +1207,8 @@ D2
 0 0 90860
 S
 #90868
-&+w Somewhere In The Mine~
-&+L This part of the mine is like any other part of the mine in that there is
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like any other part of the mine in that there is
 &+Lmuch mud dripping of the walls of the cave with only the supports to keep
 &+Lthem in place. The supports themselves are made out of a dark svalich wood.
 &+LThe workers here push carts around and whistle happily.
@@ -1220,8 +1220,8 @@ D0
 0 0 90859
 S
 #90869
-&+w Somewhere In The Mine~
-&+L This part of the mine is like any other part of the mine in that there is
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like any other part of the mine in that there is
 &+Lmud dripping of the walls with only the supports to keep it in place. The
 &+Lsupports themselves are made out of a dark svalich wood and have little or
 &+Lno wear to them. The workers here act as though they are very familiar to
@@ -1234,12 +1234,12 @@ D2
 0 0 90859
 S
 #90870
-&+B Miner's Break Room~
-&+W This seems to have a constant cool mist that forms around people who
+&+BMiner's Break Room~
+&+W   This seems to have a constant cool mist that forms around people who
 &+Wenter with a title floors and walls this is probally the nicest part in all
 &+Wof the mines. Many of the miners seem to come here often, probally without
-&+Wthe authorization of their superior. There are many washing stations, lockers
-&+W , and the scent of fresh emerald leaf soap that seams to make the people
+&+Wthe authorization of their superior. There are many washing stations, lockers,
+&+Wand the scent of fresh emerald leaf soap that seams to make the people
 &+Where relax and take a break from the mines. The tile is a marble color of
 &+Walmost completely white. Infact, everything in this room is composed of a
 &+Wsleak white marble. Even the svirfneblin women can be seen her giving their
@@ -1252,8 +1252,8 @@ D3
 0 0 90866
 S
 #90871
-&+w Somewhere In The Mine~
-&+L This part of the mine is like any other part of the mine in that there is
+&+wSomewhere in the Mine~
+&+L   This part of the mine is like any other part of the mine in that there is
 &+Lmuch mud dripping from the walls with only supports to hold it in place. The
 &+Lsupports themselves are made of a dark svalich wood and do not seem to rot.
 &+LThe workers go about their merry way.
@@ -1265,8 +1265,8 @@ D1
 0 0 90850
 S
 #90872
-&+w Somewhere In The Mines~
-&+L This part of the mine is like other parts in that there is much mud
+&+wSomewhere in the Mines~
+&+L   This part of the mine is like other parts in that there is much mud
 &+Ldripping from the walls with only supports holding them in place. The
 &+Lthe supports are made from a black svalich wood and look like they can not
 &+Lbe rotted out. There are few workers here.
@@ -1278,8 +1278,8 @@ D3
 0 0 90863
 S
 #90873
-&+w Somewhere In The Mine~
-&+L This part of the mine is much like any other part of the mine in that
+&+wSomewhere in the Mine~
+&+L   This part of the mine is much like any other part of the mine in that
 &+Lthere is much mud dripping from the walls with only supports to hold them in
 &+Lplace. These supports are made of a black svalich wood. There are very few
 &+Lworkers around here.
@@ -1291,8 +1291,8 @@ D1
 0 0 90863
 S
 #90874
-&+w Somewhere In The Mines~
-&+L This part of the mines is like most other parts of the mine in that there
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like most other parts of the mine in that there
 &+Lis much mudd dripping from walls wich are held up by supports. These supports
 &+Lare composed of svalich black wood, which appears not to be rotted. There are
 &+Lmany tracks of mining carts here.
@@ -1316,8 +1316,8 @@ D3
 0 0 90888
 S
 #90875
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like the other parts in that there is
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like the other parts in that there is
 &+Lmuch mud drippning from the walls with only supports to keep them in place.
 &+LThe supports seem to be made from a black svalich wood and look as though
 &+Lthey can not rot.
@@ -1337,8 +1337,8 @@ D3
 0 0 90878
 S
 #90876
-&+L Somewhere In The Mines~
-&+L This part of the mine is just like other parts as it is just dripping
+&+LSomewhere in the Mines~
+&+L   This part of the mine is just like other parts as it is just dripping
 &+Lwith mud along the walls, with only supports to keep them in place. These
 &+Lsupports are made of a black svalich wood and seem as though they could not
 &+Lrott. The workers here are very cheerful in spirit.
@@ -1354,8 +1354,8 @@ D2
 0 0 90875
 S
 #90877
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like the other parts in there is mud
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like the other parts in there is mud
 &+Ldripping from the walls, with only supports to keep them in place. The
 &+Lsupports seem to be made of a black svalich wood.
 ~
@@ -1366,8 +1366,8 @@ D3
 0 0 90876
 S
 #90878
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like the other parts in that there is
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like the other parts in that there is
 &+Lmuch mud dripping along the walls, with only supports to keep them in place.
 &+LThe supports seem to be made of a black svalich wood wich does not seem to
 &+Lbe rotting.
@@ -1387,8 +1387,8 @@ D3
 0 0 90880
 S
 #90879
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like the other parts in there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like the other parts in there is much
 &+Lmud dripping along the walls, with only supports to hold them in place.
 &+LThese supports seem to be made from a black svalich wood.
 ~
@@ -1399,8 +1399,8 @@ D0
 0 0 90878
 S
 #90880
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like the other parts in that there is
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like the other parts in that there is
 &+Lmuch mud dripping along the walls, with only supports to keep it in place.
 &+LThe supports seem to be made of a black svalich wood.
 ~
@@ -1423,8 +1423,8 @@ D3
 0 0 90882
 S
 #90881
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like the other parts in there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like the other parts in there is much
 &+Lmud dripping along the walls, with only supports to keep them in place. The
 &+Lsupports seem to be made of a black svalich wood.
 ~
@@ -1435,8 +1435,8 @@ D2
 0 0 90880
 S
 #90882
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like other parts in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like other parts in that there is much
 &+Lmud dripping along the walls, with only the supports to keep it in place.
 &+LThe supports seem to be made from a black svalich wood.
 ~
@@ -1447,8 +1447,8 @@ D1
 0 0 90880
 S
 #90883
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like other parts in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like other parts in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made of a black svalich wood.
 ~
@@ -1463,8 +1463,8 @@ D1
 0 0 90884
 S
 #90884
-&+w A Cave In~
-&+L This part of the mines is not like the other parts in that the supports
+&+wA Cave In~
+&+L   This part of the mine is not like the other parts in that the supports
 &+Lseem to have been broken down. The wood is definitly not the normal black
 &+Lsvalich kind that is a custom to being used and the boulders have came
 &+Lcrashing down on this spot. The rocks are all jagged and not smooth like the
@@ -1482,8 +1482,8 @@ D4
 4 0 90885
 S
 #90885
-&+w Up A Jagged Passage~
-&+w This passage coming up from the cave in is very narrow and barely
+&+wUp A Jagged Passage~
+&+w   This passage coming up from the cave in is very narrow and barely
 passable. The passage has dim light, faint breezes, and just a hint of
 moisture within the air. The smells of the outside world come down in here
 and gives strangers a sense of home. Grass can be seen a little bit above
@@ -1500,8 +1500,8 @@ D5
 4 0 90884
 S
 #90886
-&+w Just Inside~
-&+w There is a definite gloominess to this part of the passage. It seems
+&+wJust Inside~
+&+w   There is a definite gloominess to this part of the passage. It seems
 that whatever is above is very nasty and brings dark dapness down the trail.
 As there would normally be light on the outside, this place is very gloomy
 and dark. The rocks are jagged, but it widends as you go up and it gets more
@@ -1519,8 +1519,8 @@ D5
 4 0 90885
 S
 #90887
-&+r Dark Altar On A Steap Peak~
-&+R Blood pours out from different crevaces sending thick red blood down the
+&+rDark Altar on a Steap Peak~
+&+R   Blood pours out from different crevaces sending thick red blood down the
 &+Rback of the mountain side. There seems to be a constant storm here and all
 &+Rpowerful continual darkness. The air is that of the damned, and a presence
 &+Rof evil fills the area. Corpses glow as though there souls have not gone
@@ -1530,7 +1530,7 @@ S
 &+Rwith the burnt dead bodies on the gallows around the altar. Severed limbs
 &+Rhave been thrown down the mountain side and the rotting flesh brings swarms
 &+Rof plaque brinings vermin and insects who devour in the rotted pours of the
-&+Rransacked flesh. Snarls are close behind.
+&+Rransacked flesh.
 ~
 908 266241 5
 D5
@@ -1539,8 +1539,8 @@ D5
 4 0 90886
 S
 #90888
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to made from a black svalich wood.
 ~
@@ -1551,8 +1551,8 @@ D1
 0 0 90874
 S
 #90889
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like all others in that there is mud
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like all others in that there is mud
 &+Ldripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made of a black svalich wood.
 ~
@@ -1567,8 +1567,8 @@ D3
 0 0 90874
 S
 #90890
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1591,8 +1591,8 @@ D3
 0 0 90892
 S
 #90891
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all other parts in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all other parts in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made of a black svalich wood.
 ~
@@ -1603,8 +1603,8 @@ D3
 0 0 90858
 S
 #90892
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1619,8 +1619,8 @@ D1
 0 0 90890
 S
 #90893
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1643,8 +1643,8 @@ D3
 0 0 90905
 S
 #90894
-&+w Somewhere In The Minse~
-&+L This part of the miens is like all others in that there is much
+&+wSomewhere In The Mines~
+&+L   This part of the mine is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made of a black svalich wood.
 ~
@@ -1659,8 +1659,8 @@ D2
 0 0 90889
 S
 #90895
-&+w Somewhere In The Mines~
-&+L This part of the mine is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mine is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1675,8 +1675,8 @@ D3
 0 0 90894
 S
 #90896
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only support to keep it in place. The
 &+Lsupport seem to be made from a black svalich wood.
 ~
@@ -1695,8 +1695,8 @@ D2
 0 0 90897
 S
 #90897
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1707,8 +1707,8 @@ D0
 0 0 90896
 S
 #90898
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all the others in that there is
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all the others in that there is
 &+Lmuch mud dripping along the walls, with only supports to keep it in place.
 &+LThe supports seem to be made of a black svalich wood.
 ~
@@ -1727,8 +1727,8 @@ D3
 0 0 90896
 S
 #90899
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1739,8 +1739,8 @@ D3
 0 0 90898
 S
 #90900
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1751,8 +1751,8 @@ D2
 0 0 90898
 S
 #90901
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1767,8 +1767,8 @@ D3
 0 0 90890
 S
 #90902
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1779,8 +1779,8 @@ D2
 0 0 90892
 S
 #90903
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like the others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made of a black svalich wood.
 ~
@@ -1791,8 +1791,8 @@ D0
 0 0 90901
 S
 #90904
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1815,8 +1815,8 @@ D3
 0 0 90893
 S
 #90905
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a blak svalich wood.
 ~
@@ -1839,8 +1839,8 @@ D3
 0 0 90934
 S
 #90906
-&+w Somewhere In The Mines~
-&+L This part of the mines is just like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is just like the others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1864,7 +1864,7 @@ D3
 S
 #90907
 &+WA Diamond Path~
-&+w This is the end of a beautifully forged diamond plated path that leads
+&+w   This is the end of a beautifully forged diamond plated path that leads
 up to a very percular house, that looks like a mansion of the upper world, as
 if someone has gotten lost down here. The reflecting light seems to make it
 illuminate with a sharp white glow and dancing images can be seen as the
@@ -1882,7 +1882,7 @@ D3
 S
 #90908
 &+mEntrance to the Officials Office~
-&+L  This room is beautifully decorated with many fine gems and has many
+&+L   This room is beautifully decorated with many fine gems and has many
 &+Lwaiting stools for people who need to wait. There are also portraits of
 &+Lthe officials family along the walls. The floor is made of solid granite
 &+Land has a huge throw rug on it. There is a sign up sheet with a small
@@ -1900,7 +1900,7 @@ D3
 S
 #90909
 &+mA Huge Cave In~
-&+w The diamonds here have been crushed by what seems to be a huge cave in
+&+w   The diamonds here have been crushed by what seems to be a huge cave in
 due to lava as it seems the rock has been melted along with the poor souls
 who have been buried along with the diamonds and the lava. There are several
 flower beds and tombstones lining the edge of the boulder with great care
@@ -1913,8 +1913,8 @@ D1
 0 0 90846
 S
 #90910
-&+m Taelar's Office~
-&+L The officials office is a well kept, and well clean small little room
+&+mTaelar's Office~
+&+L   The officials office is a well kept, and well clean small little room
 &+Lwith many organized stacks of papers on gem trade routes, work shifts of the
 &+Lminers, slave trades, and the foreman's reports. There is a wall to wall
 &+Lcarpet made out of silk along the floor and many different potted plants
@@ -1932,8 +1932,8 @@ D3
 0 0 90908
 S
 #90911
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -1948,8 +1948,8 @@ D2
 0 0 90912
 S
 #90912
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place.
 &+LThe supports seem to be made from a black svalich wood.
 ~
@@ -1972,8 +1972,8 @@ D3
 0 0 90915
 S
 #90913
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place.
 &+LThe supports seem to be made from a black svalich wood.
 ~
@@ -1996,8 +1996,8 @@ D3
 0 0 90912
 S
 #90914
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports are made from a black svalich wood.
 ~
@@ -2008,8 +2008,8 @@ D0
 0 0 90912
 S
 #90915
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports are made from a black svalich wood.
 ~
@@ -2020,8 +2020,8 @@ D1
 0 0 90912
 S
 #90916
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2032,8 +2032,8 @@ D3
 0 0 90913
 S
 #90917
-&+w Somewhere In The mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2044,8 +2044,8 @@ D2
 0 0 90913
 S
 #90918
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2056,8 +2056,8 @@ D0
 0 0 90913
 S
 #90919
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2068,8 +2068,8 @@ D2
 0 0 90853
 S
 #90920
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2080,8 +2080,8 @@ D0
 0 0 90853
 S
 #90921
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports are made from a black svalich wood.
 ~
@@ -2104,8 +2104,8 @@ D3
 0 0 90922
 S
 #90922
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports to keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2121,7 +2121,7 @@ D1
 S
 #90923
 &+w Somewhere In The Minds~
-&+L This part of the mines is like the others in that there is much
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood
 ~
@@ -2132,8 +2132,8 @@ D2
 0 0 90921
 S
 #90924
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2144,8 +2144,8 @@ D0
 0 0 90921
 S
 #90925
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud drippign along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2156,8 +2156,8 @@ D2
 0 0 90922
 S
 #90926
-&+w Somewhere In The Mines~
-&+L This part of the mine is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mine is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2168,8 +2168,8 @@ D2
 0 0 90854
 S
 #90927
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a svalich wood.
 ~
@@ -2180,8 +2180,8 @@ D0
 0 0 90854
 S
 #90928
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keepign it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2204,8 +2204,8 @@ D3
 0 0 90854
 S
 #90929
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2216,8 +2216,8 @@ D2
 0 0 90928
 S
 #90930
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2228,8 +2228,8 @@ D0
 0 0 90928
 S
 #90931
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2240,8 +2240,8 @@ D3
 0 0 90928
 S
 #90932
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2253,7 +2253,7 @@ D2
 S
 #90933
 &+w Somewhere In The Main~
-&+L This part of the mines is much like the others in that there is much
+&+L   This part of the mines is much like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2264,8 +2264,8 @@ D0
 0 0 90905
 S
 #90934
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the other in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the other in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2276,8 +2276,8 @@ D1
 0 0 90905
 S
 #90935
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2288,8 +2288,8 @@ D2
 0 0 90904
 S
 #90936
-&+R Pit Of The Lava Fiend~
-&+r This boiling pit is actually a bubble of the fire plane some how seeped
+&+RPit of the Lava Fiend~
+&+r   This boiling pit is actually a bubble of the fire plane some how seeped
 &+rand got stuck in the normal plane. The fire burns like the raging fires of
 &+rhell and swarms of steam burst out as sweat hits the burning lava. Bugs
 &+rcrawl in, only to be evaporated within seconds. Beings of the fire plane
@@ -2303,8 +2303,8 @@ ceiling~
 5 0 90824
 S
 #90937
-&+Y Conjurers Training Ground~
-&+w Mysticism is the power of this small complex as young svirfneblin are
+&+YConjurers Training Ground~
+&+w   Mysticism is the power of this small complex as young svirfneblin are
 taught the powers to summon the beings of the planes and large lumbering
 hulks of fire and earth clash in here as the young students practice their
 deadly skills. Sounds of disolving elementals swarm the room as spells rip
@@ -2327,8 +2327,8 @@ D3
 0 0 90830
 S
 #90938
-&+y Miners Training Baracks~
-&+w This place has all the normal svirneblin miner gear laid out as young
+&+yMiners Training Barracks~
+&+w   This place has all the normal svirneblin miner gear laid out as young
 svirfneblin, from the ages of 3 learn how to hit rocks so they smash open
 to form the perfect gems. Even some adult trainers and guards come to watch
 the youngins practice their heritage. The smells or blood and iron fill the
@@ -2342,8 +2342,8 @@ D1
 0 0 90830
 S
 #90939
-&+Y Master's Room~
-&+w This room is has a couple really big elementals that look very fierce
+&+YMaster's Room~
+&+w   This room is has a couple really big elementals that look very fierce
 as their master sits there helping the more advanced students and recites
 scrolls and creates great magical potions. Many different maps and charts
 lay on the shelves that are scattered around the room. Smells of burning
@@ -2358,8 +2358,8 @@ door~
 1 0 90937
 S
 #90940
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a dark svalich wood.
 ~
@@ -2370,8 +2370,8 @@ D0
 0 0 90904
 S
 #90941
-&+w Somewhere In The Mines~
-&+L This part of the mines is like the others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like the others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2382,8 +2382,8 @@ D3
 0 0 90904
 S
 #90942
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2406,8 +2406,8 @@ D3
 0 0 90946
 S
 #90943
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2422,8 +2422,8 @@ D3
 0 0 90906
 S
 #90944
-&+r The Foreman's Office~
-&+L This office is very soiled from the constant barging ins that the foreman
+&+rThe Foreman's Office~
+&+L   This office is very soiled from the constant barging ins that the foreman
 &+Lhas to deal with, and the mud along the damp floors and walls shows this
 &+Lvery well. The office its self is fulled with rotation tables, check in/out
 &+Lboxes and schedules to which the mines must follow. There is a large desk
@@ -2443,8 +2443,8 @@ D2
 0 0 90906
 S
 #90945
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2455,8 +2455,8 @@ D0
 0 0 90942
 S
 #90946
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2479,8 +2479,8 @@ D3
 0 0 90950
 S
 #90947
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2491,8 +2491,8 @@ D2
 0 0 90942
 S
 #90948
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports to keep it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2503,8 +2503,8 @@ D2
 0 0 90946
 S
 #90949
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2515,8 +2515,8 @@ D0
 0 0 90946
 S
 #90950
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2527,8 +2527,8 @@ D1
 0 0 90946
 S
 #90951
-&+G A Display Room~
-&+W This magnificent room is plated with diamons all around and a small
+&+GA Display Room~
+&+W   This magnificent room is plated with diamons all around and a small
 &+Wcenter piece in the room draws the attention of most people. The center
 &+Wpiece looks as though it has been carved out of solid ruby and resting on
 &+Wtop of it is a &+gjade&+W piece carved in the shape of a hammer that looks roughly
@@ -2543,8 +2543,8 @@ door~
 2 0 90944
 S
 #90952
-&+L Rubbled Filled Room~
-&+w This room smells of dead elementals and even some lowly conjurers who
+&+LRubble-filled Room~
+&+w   This room smells of dead elementals and even some lowly conjurers who
 had failed in their duties. The rubble has dark burn marks on it as though
 this is a very deadly practicing chamber. Sounds of pain can be heard about
 as yet another elementals fizzles and dies. The room itself is extremely
@@ -2561,8 +2561,8 @@ D3
 0 0 90937
 S
 #90953
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2577,8 +2577,8 @@ D1
 0 0 90954
 S
 #90954
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2589,8 +2589,8 @@ D3
 0 0 90953
 S
 #90955
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2605,8 +2605,8 @@ D2
 0 0 90864
 S
 #90956
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2621,8 +2621,8 @@ D2
 0 0 90955
 S
 #90957
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2637,8 +2637,8 @@ D3
 0 0 90956
 S
 #90958
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2653,8 +2653,8 @@ D2
 0 0 90957
 S
 #90959
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2669,8 +2669,8 @@ D2
 0 0 90958
 S
 #90960
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2685,8 +2685,8 @@ D3
 0 0 90959
 S
 #90961
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2701,8 +2701,8 @@ D2
 0 0 90960
 S
 #90962
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2713,8 +2713,8 @@ D2
 0 0 90961
 S
 #90963
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2729,8 +2729,8 @@ D3
 0 0 90943
 S
 #90964
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
@@ -2741,8 +2741,8 @@ D0
 0 0 90963
 S
 #90965
-&+w Somewhere In The Mines~
-&+L This part of the mines is like all others in that there is much
+&+wSomewhere in the Mines~
+&+L   This part of the mines is like all others in that there is much
 &+Lmud dripping along the walls, with only supports keeping it in place. The
 &+Lsupports seem to be made from a black svalich wood.
 ~
