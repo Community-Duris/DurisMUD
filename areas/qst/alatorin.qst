@@ -777,10 +777,10 @@ With a gleam in his eye, &+RTaark Shanat&N exclaims &+R'Well done, $N!'
 &NAfter a snap of &+RTaark's &Ningers, an &+Wattendant &Nrushes into his chamber and
 graciously takes all ten pieces &Nfrom $N and carries them out as hastily as he entered.
 &+RTaark &Nreaches into his royal garments and pulls out a magnificent, shiny &+Ytoken.
-&+R'In honor of the Kingdom of Alatorin, I present to thee this commendation tokeng, $N.'
+&+R'In honor of the Kingdom of Alatorin, I present to thee this commendation token, $N.'
 &+RTaark Shanat &Nsmiles at $N and they proudly shake hands.
 &+R'My trusted son, Modan Shanat, in the &+CCourt Hall&+R, will tell you what to do with
-&+Rthese tokens&+R' &Nhe says with a smile and a nod.
+&+Rthese tokens&+R'&N he says with a smile and a nod.
 ~
 R I 83178
 G I 83532
@@ -2442,6 +2442,14 @@ azarem tumek~
 &+W'Find this brute, and bring me his head, $N!' &N$n exclaims.
 ~
 QA
+&N$n cautiously regards the head, noting the extensive damage it has suffered as he spins it 'round.
+&+W'&+wA n'er do-well come to his righteous end for sure.  Never in my days have I thought he would meet
+&+whis end.  You've done a great service for all of Alatorin.&+W'
+~
+G I 83539
+R E 300000
+R C 1000000
+QA
 &N$n applauds $N and says 'Excellent work, $N!'
 Gathering the heads, he continues 'Please, as a token of service to Alatorin, take this medal of honor and your reward money.'
 ~
@@ -2454,7 +2462,7 @@ G I 83323
 G I 83276
 G I 83387
 D
-&N$n bows at $N and concludes 'I will report these act of chivalry to the king.'
+&N$n bows at $N and concludes 'I will report these acts of chivalry to the king.'
 ~
 S
 #83350

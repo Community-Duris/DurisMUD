@@ -1059,6 +1059,17 @@ zo 0 1 3
 30 120 -200 25d5+200 6d4+20
 0.0.0.0 0
 8 8 0
+#87
+zombie~
+&+La zombie&n~
+&+LA zombie groans as it shambles towards you.&n
+~
+~
+1074145352 1 0 134217736 0 0 0 0 S
+zo 0 1 3
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
 #99
 (null)~
 something~

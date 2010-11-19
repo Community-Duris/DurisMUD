@@ -1630,7 +1630,12 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
       amsg[0] = '\0';
       enter_message(ch, tch, exitnumb, amsg, was_in, new_room);
 
-      if(!IS_ELITE(tch) &&
+      int nocalming = 0;
+      if ((RACE_EVIL(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_GOODHOME)) ||
+          (RACE_GOOD(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_EVILHOME)))
+      nocalming = 1;
+
+      if(!IS_ELITE(tch) && !nocalming &&
 	 (((GET_LEVEL(tch) - GET_LEVEL(ch)) <= 5) || !number(0, 3)) &&
 	 has_innate(ch, INNATE_CALMING))
         calming = (int)get_property("innate.calming.delay", 10);
@@ -1647,7 +1652,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
         else if(is_aggr_to(tch, mount))        /* cackle   */
         {
           add_event(event_agg_attack,
-                    number(1, MAX(1, (19 - STAT_INDEX(GET_C_AGI(tch))) / 2)) + calming,
+                    number(1, MAX(1, (19 - STAT_INDEX(GET_C_AGI(tch))) / 2)),
                     tch, mount, 0, 0, 0, 0);
         }
       }

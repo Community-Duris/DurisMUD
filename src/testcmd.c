@@ -249,6 +249,11 @@ void do_test(P_char ch, char *arg, int cmd)
       debug("[%d] %s", GET_CHAR_SKILL(ch, i), skills[i].name);
     }    
   }  
+  else if ( isname("loadallchars", buff) )
+  {
+    test_load_all_chars(ch);
+    return;
+  }
   else
   {
     send_to_char("Invalid keyword.\r\n", ch);

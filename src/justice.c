@@ -101,8 +101,8 @@ struct hometown_data hometowns[LAST_HOME] = {
    */
 
   /* 1. Tharnadia */
-  {JUSTICE_GOODHOME, 6118,
-   {6550, 6028, 6069, 6024, 6004}, 6510, 6120, NULL,
+  {JUSTICE_GOODHOME, 132618,
+   {133050, 132628, 133057, 133065, 132504}, 132546, 132619, NULL,
    {0, 2, 5, 10, 15, 20, 10, 10, 5, 12, 20, 2, 2, 8, 8},
    {0, 0, 0, 10, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 7, 12, 17, 22, 27},
@@ -134,7 +134,7 @@ struct hometown_data hometowns[LAST_HOME] = {
 
   /* 5. dwarf town */
   {JUSTICE_GOODHOME, 95643,
-   {95540, 95522, 0, 0, 0}, 95532, 95644, NULL,
+   {95540, 95522, 95650, 0, 0}, 95532, 95644, NULL,
    {0, 2, 5, 10, 15, 20, 10, 10, 5, 12, 20, 2, 2, 8, 10},
    {0, 0, 0, 10, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 7, 12, 17, 22, 27},
@@ -1804,10 +1804,9 @@ void justice_action_invader(P_char ch)
 
 
   // For hometown invading
-/*
-  if (!justice_send_guards(NOWHERE, ch, MOB_SPEC_J_OUTCAST, 4))
-    return;
-  */
+  if (RACE_EVIL(ch))
+    justice_send_guards(NOWHERE, ch, MOB_SPEC_J_OUTCAST, 4);
+  
   if(IS_INVADER(ch))
   {
     if((GET_RACEWAR(ch) == RACEWAR_EVIL) &&

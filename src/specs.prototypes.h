@@ -1073,3 +1073,5 @@ int orb_of_deception(P_obj obj, P_char ch, int cmd, char *arg);
 void event_super_cannon(P_char ch, P_char vict, P_obj obj, void *data);
 int super_cannon(P_obj obj, P_char ch, int cmd, char *arg);
 void halloween_mine_proc(P_char ch);
+int zombies_game(P_obj obj, P_char ch, int cmd, char *arg);
+int zg_count_zombies(P_obj obj);

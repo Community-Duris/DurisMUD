@@ -593,6 +593,7 @@ void save_wizconnect_file(void);
 void do_terminate(P_char, char *, int);
 void do_sacrifice(P_char, char *, int);
 void do_unspec(P_char, char*, int);
+void test_load_all_chars(P_char);
 void do_read_player(P_char, char *, int);
 void do_nchat(P_char, char *, int);
 void do_tranquilize(P_char ch, char *argument, int cmd);

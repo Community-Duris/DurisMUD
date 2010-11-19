@@ -4555,6 +4555,14 @@ To prime the cannon for firing use 'order cannon [gunpowder] [direction]'
 Ie, to go north 10 paces, type 'order cannon 10 0'
 The larger the distance, the more inacuraate the direction can be.
 ~
+#428
+generator zombie~
+a zombies game generator~
+A zombies game generator is here.~
+~
+38 15 3 0 7 0 8429570 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
 #429
 canoe~
 &+ya small one-man canoe&n~

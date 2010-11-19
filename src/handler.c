@@ -1168,14 +1168,23 @@ int char_to_room(P_char ch, int room, int dir)
    * thing of the past.
    */
 
+      int nocalming = 0;
+      int calming = 0;
+      if ((RACE_EVIL(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_GOODHOME)) ||
+          (RACE_GOOD(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_EVILHOME)))
+      nocalming = 1;
+
+      if(t_ch && !IS_ELITE(t_ch) && !nocalming &&
+	 (((GET_LEVEL(t_ch) - GET_LEVEL(ch)) <= 5) || !number(0, 3)) &&
+	 has_innate(ch, INNATE_CALMING))
+        calming = (int)get_property("innate.calming.delay", 10);
+
   if (t_ch && is_aggr_to(ch, t_ch))
     add_event(event_agg_attack,
               number(0,
                      MAX(0,
                          (11 -
-                          dex_app[STAT_INDEX(GET_C_DEX(ch))].reaction) / 2)) +
-	      (has_innate(t_ch, INNATE_CALMING) ? 
-	         number(1, get_property("innate.calming.delay", 10)) : 0),
+                          dex_app[STAT_INDEX(GET_C_DEX(ch))].reaction) / 2)) + calming,
               ch, t_ch, 0, 0, 0, 0);
 
   for (t_ch = world[ch->in_room].people; t_ch; t_ch = t_ch->next_in_room)

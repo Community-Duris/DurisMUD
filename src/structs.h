@@ -1930,6 +1930,7 @@ struct mcname {
 #define SPEC_ICE_REAVER 1
 #define SPEC_FLAME_REAVER 2
 #define SPEC_SHOCK_REAVER 3
+#define SPEC_EARTH_REAVER 4
 
 //Conj Specs
 #define SPEC_AIR 1
