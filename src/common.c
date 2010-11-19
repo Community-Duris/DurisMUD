@@ -39,7 +39,7 @@ const char *specdata[][MAX_SPEC] = {
   {"", "", "", ""},         //MindFlayer
   {"&+CBat&n&+ctle-For&+Cger&n", "&+LBla&+ccksm&+Lith&n", "", ""},   //Alchemist
   {"&+rMa&+RUle&+rR", "&+RRa&+rGe&+Rlo&+rRd", "", ""},  //Berserker
-  {"&+CI&+Wc&+Ce &+LR&+Le&+wa&+wv&+Le&+Lr", "&+rF&+Rl&+Ya&+Rm&+re &+LR&+Le&+wa&+wv&+Le&+Lr", "&+bSh&+Bo&+Wck &+LR&+Le&+wa&+wv&+Le&+Lr", ""},      //Reaver
+  {"&+CI&+Wc&+Ce &+LR&+Le&+wa&+wv&+Le&+Lr", "&+rF&+Rl&+Ya&+Rm&+re &+LR&+Le&+wa&+wv&+Le&+Lr", "&+bSh&+Bo&+Wck &+LR&+Le&+wa&+wv&+Le&+Lr", "&+LEa&+yrt&+Lh R&+yea&+Lve&+yr"},      //Reaver
   {"&+BM&+Yag&+Bic&+Yia&+Bn&n", "&+LDark &+mDreamer&n", "", ""},         // Illusionist
   {"", "", "", ""},  // Unused
   {"&+LDeath&+rlord", "&+LShadow&+rlord", "", ""},      // Dreadlord
