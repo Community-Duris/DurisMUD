@@ -867,6 +867,10 @@ int zgame_mob_proc(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_DEATH)
   {
     ZombieGame* zgame = get_zgame_from_zombie(ch);
+    
+    if (!zgame)
+      return FALSE;
+
     for (int i = 0; i < zgame->zombies.size(); i++)
     {
       if (zgame->zombies[i] == ch)

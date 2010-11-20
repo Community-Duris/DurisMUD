@@ -1481,11 +1481,13 @@ void spell_ethereal_alliance(int level, P_char ch, char *arg, int type,
   af1.duration = 32;
   af1.bitvector5 = AFF5_ETHEREAL_ALLIANCE;
 
+  // Removing phantasmal form and passdoor from target,
+  // that's way too powerful for a basher/shreader.
   af2.type = SPELL_ETHEREAL_ALLIANCE;
   af2.duration = 32;
   af2.bitvector = AFF_INVISIBLE;
-  af2.bitvector2 = AFF2_PASSDOOR;
-  af2.bitvector4 = AFF4_PHANTASMAL_FORM;
+  //af2.bitvector2 = AFF2_PASSDOOR;
+  //af2.bitvector4 = AFF4_PHANTASMAL_FORM;
   af2.bitvector5 = AFF5_ETHEREAL_ALLIANCE;
 
   affect_to_char(victim, &af2);

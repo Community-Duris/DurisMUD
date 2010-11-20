@@ -679,26 +679,10 @@ void spell_reflection(int level, P_char ch, char *arg, int type,
       continue;
     }
     
-    if(targ == i && targ != spot)
-    {
-      for(tch = world[victim->in_room].people; tch; tch = tch->next_in_room)
-      {
-        if(IS_FIGHTING(tch))
-        {
-          if(tch->specials.fighting == victim)
-          {
-            stop_fighting(tch);
-            stop_fighting(victim);
-            set_fighting(tch, image);
-            
-            if(!IS_FIGHTING(image))
-            {
-              set_fighting(image, tch);
-            }
-          }
-        }
-      }
-    }
+    image->only.npc->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2);
+    
+    image->points.base_hit = GET_MAX_HIT(image) = GET_HIT(image) =
+      level * 4 + number(0, 50);
 
     while(image->affected)
     {
@@ -710,9 +694,6 @@ void spell_reflection(int level, P_char ch, char *arg, int type,
       clearMemory(image);
     }
     
-    image->points.base_hit = GET_MAX_HIT(image) = GET_HIT(image) =
-      level * 4 + number(0, 50);
-
     SET_BIT(image->specials.affected_by, AFF_DETECT_INVISIBLE);
 
     balance_affects(image);
@@ -725,8 +706,6 @@ void spell_reflection(int level, P_char ch, char *arg, int type,
 
     logit(LOG_DEBUG, "REFLECTION: (%s) casting on (%s).", GET_NAME(ch), GET_NAME(victim));
 
-    image->only.npc->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2);
-    
     sprintf(Gbuf1, "image %s %s", GET_NAME(victim),
             race_names_table[GET_RACE(victim)].normal);
     
@@ -749,6 +728,27 @@ void spell_reflection(int level, P_char ch, char *arg, int type,
     GET_SIZE(image) = GET_SIZE(victim);
 
     remove_plushit_bits(image);
+    
+    if(targ == i && targ != spot)
+    {
+      for(tch = world[victim->in_room].people; tch; tch = tch->next_in_room)
+      {
+        if(IS_FIGHTING(tch))
+        {
+          if(tch->specials.fighting == victim)
+          {
+            stop_fighting(tch);
+            stop_fighting(victim);
+            set_fighting(tch, image);
+            
+            if(!IS_FIGHTING(image))
+            {
+              set_fighting(image, tch);
+            }
+          }
+        }
+      }
+    }
   }
 }
 

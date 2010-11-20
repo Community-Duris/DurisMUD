@@ -787,9 +787,9 @@ plate platemail awe~
 &+Wthe &ntransparent &+Wpl&+Cat&+cemail o&+Cf a&+Wwe~
 &+cA majestic platemail lay on the ground here, just begging to be worn.&n~
 ~
-9 7 3 14 13 80 1088 9 66 121258171 0
+9 7 3 14 13 80 1088 9 66 25 256
 20 3 1 5 0 0 0 0
-2 1 100 0 0 0 67108864
+2 1 100 0 0 0 2048
 E
 plate platemail awe~
 &+W   Somewhat transparent, this armor is surely made of some magical type&n
