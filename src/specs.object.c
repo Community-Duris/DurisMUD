@@ -6935,7 +6935,8 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       return FALSE;
 
     if (type == WALL_OF_STONE ||
-	      type == WALL_OF_BONES)
+	      type == WALL_OF_BONES ||
+	      type == WALL_OF_ICE)
       dam = GET_DAMROLL(ch);
     else if (type == WATCHING_WALL &&
              illusionist &&
