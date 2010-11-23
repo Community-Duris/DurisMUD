@@ -473,6 +473,8 @@ int vecna_minifist(P_obj obj, P_char ch, int cmd, char *arg)
   if (number(0, 100) <= 6)
   {
     victim = ch->specials.fighting;
+    if (!victim)
+      return FALSE;
     if (GET_RACE(victim) != RACE_OGRE || GET_RACE(victim) != RACE_CENTAUR || GET_RACE(victim) != RACE_SGIANT || GET_RACE(victim) != RACE_MINOTAUR)
       return FALSE;
 
