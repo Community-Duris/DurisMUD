@@ -85,7 +85,7 @@ stylish backpack~
 #70808
 leaf earring~
 &+Ya small &+gl&+Gea&+gf &+Yshaped earring&n~
-&+Ya tiny &+gl&+Ge&+ga&+Gf &+yhas fallen here.~
+&+YA tiny &+gl&+Ge&+ga&+Gf &+yhas fallen here.~
 ~
 9 24 0 0 7 0 64 524289 0 1 0
 7 0 0 0 0 0 0 0
@@ -99,7 +99,7 @@ A
 #70809
 silk belt~
 &+ra si&+Rlke&+rn belt with a st&+Ryli&+rzed &+Liron &+rbuckle&n~
-&+ra shimmering belt has been droped here~
+&+rA shimmering belt has been dropped here.~
 ~
 9 15 3 0 7 0 0 2049 0 1 0
 7 0 0 0 0 0 0 0
@@ -113,7 +113,7 @@ A
 #70810
 desk~
 &+ya cherry wood desk~
-&+ya handsomely carved cherry wood desk has been pushed near the window.~
+&+yA handsomely carved, cherry wood desk has been pushed near the window.~
 ~
 15 6 3 0 7 0 0 0 0 1 0
 80 1 0 80 0 0 0 0
@@ -121,13 +121,13 @@ desk~
 E
 desk~
    &+yExpertly carved by the hands of elven artisans in the enclave, this desk is
-&+yvery handsome indeed. Years of use by students, for stoing their tomes and quills
+&+yvery handsome indeed. Years of use by students, for storing their tomes and quills
 &+yhave hardly marred the detail at all.&n
 ~
 #70811
 tome book midnight~
 &+ba midnight blue tome with &+cs&+Ci&+cl&+Cv&+ce&+Cr &+bbindings~
-&+ba midnight blue book lies here.~
+&+bA midnight blue book lies here.~
 ~
 33 22 2 5 7 0 1 8388609 0 1 0
 0 0 320 0 0 0 0 0
@@ -142,7 +142,7 @@ tome book midnight~
 #70812
 quill feather~
 &+yan ea&+Ygl&+ye feather quill~
-&+ya stunning feather has fallen here.~
+&+yA stunning feather has fallen here.~
 ~
 21 50 1 0 7 0 0 8404993 0 1 0
 0 0 0 0 0 0 0 0
@@ -171,7 +171,7 @@ A
 #70814
 boots worn endurance~
 &+gbo&+Gots o&+yf en&+gdu&+yr&+Gan&+gce~
-&+ya pair of well worn leather boots have been discarded here.~
+&+yA pair of well worn leather boots have been discarded here.~
 ~
 9 13 2 5 7 0 64 65 0 0 0
 7 0 0 0 0 0 0 0
@@ -190,7 +190,7 @@ A
 #70815
 opal beads prayer~
 &+Wa se&+wt of &+Wo&+wp&+Wa&+wl pr&+Waye&+wr be&+Wa&+wds~
-&+Wa bracelet of opal beads lies on the ground.~
+&+WA bracelet of opal beads lies on the ground.~
 ~
 9 52 1 0 7 0 328 4097 0 0 0
 10 0 0 1 0 0 0 0
@@ -220,7 +220,7 @@ the woodland Goddess &+gMi&+ye&+Gli&+yk&+gk&+yi.
 #70817
 silver potion glass vial~
 &+ca si&+Clv&+cery potion&n~
-&+ca si&+Clv&+cery potion in a &+Wglass&+c vial rests here.&n~
+&+cA si&+Clv&+cery potion in a &+Wglass&+c vial rests here.&n~
 ~
 10 40 1 0 8 0 0 16385 64 0 0
 46 1 3 141 0 0 0 0
@@ -233,7 +233,7 @@ silver potion glass vial~
 #70818
 branch staff vigor~
 &+ya staff of woodland vigor~
-&+yan elegantly curving tree branch has fallen here.~
+&+yAn elegantly curving tree branch has fallen here.~
 ~
 4 6 3 6 7 0 0 16385 0 67108447 0
 46 7 7 66 0 0 0 0
@@ -281,7 +281,7 @@ A
 #70821
 birchwood talisman~
 &+ya small talisman of birchwood~
-&+ya small piece of birchwood lies here~
+&+yA small piece of birchwood lies here.~
 ~
 18 6 1 0 7 0 8409088 1 0 0 0
 0 100 0 0 0 0 0 0
@@ -311,7 +311,7 @@ A
 #70823
 large container fine sand~
 &+ya large container of fine &+Ysand&n~
-&+ya container full of fine &+Ysand&+y has been dropped here.&n~
+&+yA container full of fine &+Ysand&+y has been dropped here.&n~
 ~
 12 15 3 0 5 0 20480 16385 0 0 0
 0 0 0 0 0 0 0 0

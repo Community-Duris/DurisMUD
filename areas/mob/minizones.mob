@@ -77,7 +77,7 @@ deer doe~
 &+yA beautiful deer is standing here, regarding you with extreme caution.
 ~
 It stands about four feet high and has brown colored fur and black eyes.
-It's small tail is extended upwards, revealing white feathers beneath, and
+Its small tail is extended upwards, revealing white feathers beneath, and
 it studies your every move, ready to bolt if danger is perceived.
 ~
 72 0 0 0 0 0 0 0 S
@@ -92,7 +92,7 @@ rattler snake~
 ~
 It is about four feet long and has brownish-grey scales. It large head and
 huge fangs, which are quite evident in its gaping maw, promise death
-to whoever tries it's temper.
+to whoever tries its temper.
 ~
 72 0 0 0 0 0 0 0 S
 A 0 0 -1
@@ -117,8 +117,8 @@ red fox~
 &+rthe red fox~
 &+rA small red fox is wandering around the area, looking for food.
 ~
-It is long and lean, with fur that is a dull-reddish color. It's long snout
-looking exceptionally good at sniffing out its prey, and it's pointed
+It is long and lean, with fur that is a dull-reddish color. Its long snout
+looking exceptionally good at sniffing out its prey, and its pointed
 ears make it look like a distant cousin of felines..
 ~
 72 0 0 0 0 0 0 0 S
@@ -145,7 +145,7 @@ brownie child~
 &+ythe brownie child~
 &+yA tiny brownie child is dancing through the area here.
 ~
-It stands about a foot high and is extremely agile. It's long brown hair
+It stands about a foot high and is extremely agile. Its long brown hair
 and flashing blue eyes are filled with fun and trouble. It laughs and
 plays and dances about the area with not a care in the world..
 ~
@@ -188,7 +188,7 @@ travelling human merchant~
 &nthe travelling merchant~
 &nA travelling human merchant is strolling by here.
 ~
-He is dressed in travelling cloths and high-soft boots, which are worn
+He is dressed in travelling clothes and high-soft boots, which are worn
 and muddied from the long roads. He hums a chipper tune as he passes
 by, and eyes you with some caution.
 ~
@@ -1418,7 +1418,7 @@ spirit groaning figure~
 &+wA mysterious &+Wtranslucent&+w figure floats here groaning in agony.
 ~
 This pathetic wretch of an undead elf doesn't seem interested in anything
-but moaning, groaning, and screaming in the hell that is it's so-called
+but moaning, groaning, and screaming in the hell that is its so-called
 life. It flashes a hostile look in your direction and screams...
 
 &+WThe spirit groans, 'It wasn't our fault! He got us all killed, that
@@ -1434,7 +1434,7 @@ humanoid skulk figure~
 &+La skulk~
 &+LA shadowy humanoid skulks about in the shadows here.
 ~
-&+LWhatever this creature is, it is very good at blending in to it's
+&+LWhatever this creature is, it is very good at blending in to its
 &+Lsurroundings. Your are quite sure you can make out arms, legs, and a head,
 &+Lbut you can't be sure. Upon noticing it, it quickly juts for a new hiding
 &+Lplace.
@@ -1499,7 +1499,7 @@ bodak~
 ~
 This dark figure with pearly skin seems uncontrolably outraged at your
 presense. The muscular form has no hair and its head is oddly distorted.
-It's &+Wmilky-white&N oval eyes peer into your soul as it attempts to
+Its &+Wmilky-white&N oval eyes peer into your soul as it attempts to
 destroy you.
 ~
 1115686924 1 0 33554696 2 0 0 -1000 S
@@ -1571,7 +1571,7 @@ wither weed plant huge~
 &+La wither &+gweed~
 &+LA HUGE &+gweed &+Lhas attached itself to the masonry here.
 ~
-The sheer SIZE of this plant is breathtaking! Each of it's gargantuine
+The sheer SIZE of this plant is breathtaking! Each of its gargantuan
 tentacles has a very dry texture. As you near the plant, it begins to
 emit a faint odor unlike anything you have ever smelled before.
 ~
@@ -1586,7 +1586,7 @@ whipweed plant creature~
 &+GA small plant-like creature darts about at your feet.&N
 ~
 This small plant appears to be carrying itself about with the use of
-it's stubby green stalks. It does have roots, although they do not
+its stubby green stalks. It does have roots, although they do not
 penetrate the ground as they should.
 ~
 1073743944 1 0 16 0 0 0 0 S
@@ -1597,11 +1597,11 @@ AP 0 0 -1
 #5809
 large whipweed plant~
 &+ga LARGE whipweed~
-&+gA LARGE plant-like creature sits here, cleaning the bones of it's last victim.
+&+gA LARGE plant-like creature sits here, cleaning the bones of its last victim.
 ~
-&+gThis creature sports a very large bulb in the center of it's flailing
-&+gtendrils. It's motions are very fast and precise. Whatever it was doing
-&+gbefore you appeared has slipped its mind, as you have become it's
+&+gThis creature sports a very large bulb in the center of its flailing
+&+gtendrils. Its motions are very fast and precise. Whatever it was doing
+&+gbefore you appeared has slipped its mind, as you have become its
 &+gprimary focus.
 ~
 1174407241 1 0 301989912 0 0 0 0 S

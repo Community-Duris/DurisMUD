@@ -91,7 +91,7 @@ phycomid fungus~
 ~
    &+mThis small fungus resembles a fibrous blob of decomposing
 &+mmilky-colored matter with capped fungi growing out of it.  It
-&+mappears to have several sensory extensions growing from it's
+&+mappears to have several sensory extensions growing from its
 &+mmass, releasing poisonous spores when disturbed.
 ~
 262152 0 0 0 0 0 0 0 S
@@ -134,7 +134,7 @@ large venomous spider~
 ~
    &+LThis large spider is about two feet long and looks like it could
 &+Lweigh around thirty pounds.  Large shiny black fangs protrude from
-&+Lit's maw.  Long strands of dark green poison hang from its mouth.
+&+Lits maw.  Long strands of dark green poison hang from its mouth.
 ~
 8 0 0 0 0 0 0 -1000 S
 AS 0 1 -1

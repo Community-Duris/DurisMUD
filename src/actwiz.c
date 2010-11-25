@@ -330,7 +330,7 @@ void do_reload_help(P_char ch, char *arg, int cmd)
 }
 
 
-void do_lucrot_restore(P_char ch, P_char victim)
+void do_reboot_restore(P_char ch, P_char victim)
 {
 
   if(!IS_TRUSTED(ch))
@@ -5224,16 +5224,9 @@ void do_restore(P_char ch, char *argument, int cmd)
           victim->points.location_hit[i] = 0;
 #endif
 
-        if(isname("Lucrot", ch->player.name))
-        {
-          send_to_char("&+WBeams of light and shafts of &+Ldarkness &+Wperforate the air!!!&n\n", victim);
-          if(ch != victim)
-            do_lucrot_restore(ch, victim);            
-        }
-        else
-        {
-          send_to_char("&+BA haze of magical energies fall from the heavens, engulfing all that you see.   As they subside, you feel refreshed...&n\n", victim);
-        }
+        send_to_char("&+BA haze of magical energies fall from the heavens, engulfing all that you see.&LAs they subside, you feel refreshed...&n\n", victim);
+        if(ch != victim)
+            do_reboot_restore(ch, victim);
         
         act("You have been fully restored by $N!",
           FALSE, victim, 0, ch, TO_CHAR);
@@ -5245,7 +5238,7 @@ void do_restore(P_char ch, char *argument, int cmd)
         if (isname("Venthix", ch->player.name))
           send_to_char(file_to_string("lib/creation/skullsword"), victim);
         if (isname("Jexni", ch->player.name))
-          send_to_char(file_to_string("lib/creation/bio"), victim);
+          send_to_char(file_to_string("lib/creation/hypnotoad"), victim);
 
       }
     send_to_char("Restoration of all players completed.\n", ch);
@@ -5270,7 +5263,7 @@ void do_restore(P_char ch, char *argument, int cmd)
         for (obj = victim->carrying; obj; obj = obj->next_content)
           obj->condition = 100;
         send_to_char
-          ("&+gFrom out of nowhere, little gremlin-like creatures about 6 inches tall pop up.  They grab all of your equipment, and fiddle with it before returning to you.  They then vanish as quickly as they came.\n",
+          ("&+gFrom out of nowhere, little gremlin-like creatures about 6 inches tall pop up.&LThey grab all of your equipment, and fiddle with it before returning to you.&LThey then vanish as quickly as they came.\n",
            victim);
       }
   }
@@ -5285,12 +5278,6 @@ void do_restore(P_char ch, char *argument, int cmd)
     }
        
     balance_affects(victim);
-    
-    if(isname("Lucrot", ch->player.name))
-    {
-      send_to_char("&+WBeams of light and shafts of &+Ldarkness &+Wperforate the air!!!&n\n", victim);
-      do_lucrot_restore(ch, victim);            
-    }
     
     GET_MANA(victim) = GET_MAX_MANA(victim);
     GET_HIT(victim) = GET_MAX_HIT(victim);

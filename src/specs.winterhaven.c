@@ -211,7 +211,7 @@ int storm_legplates(P_obj obj, P_char ch, int cmd, char *arg)
         curr_time = time(NULL);
         vict = ch->specials.fighting;
 
-        if (obj->timer[0] + 300 <= curr_time)
+        if (obj->timer[0] + 600 <= curr_time)
         {
 
           if(OUTSIDE(ch))
@@ -265,7 +265,7 @@ int storm_legplates(P_obj obj, P_char ch, int cmd, char *arg)
         curr_time = time(NULL);
 
         if(OUTSIDE(ch) &&
-           obj->timer[0] + 300 <= curr_time)
+           obj->timer[0] + 600 <= curr_time)
         {
 
           act("&+WYou say '&+wI summon the &+Lst&+wo&+Lrm&+w!&+W'&n", TRUE, ch, obj, NULL, TO_CHAR);
@@ -291,7 +291,7 @@ int storm_legplates(P_obj obj, P_char ch, int cmd, char *arg)
       {
         curr_time = time(NULL);
     
-        if (obj->timer[0] + 300 <= curr_time)
+        if (obj->timer[0] + 600 <= curr_time)
         {
           act("$q &+wsends a burst of &+Yelectricity &+wthrough your body.&n", TRUE, ch, obj, obj, TO_CHAR);
           act("You feel &+Bvitalized &+wand &+Cenergized&n.", TRUE, ch, obj, obj, TO_CHAR);
@@ -340,7 +340,7 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
         curr_time = time(NULL);
         vict = ch->specials.fighting;
  
-        if (obj->timer[0] + 300 <= curr_time)
+        if (obj->timer[0] + 600 <= curr_time)
         {
 
           act("&+LYour $q &+Lslows down time and freezes $n &+Lin place!&n", TRUE, ch, obj, NULL, TO_CHAR);
@@ -465,7 +465,7 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
       {
         curr_time = time(NULL);
  
-        if (obj->timer[0] + 300 <= curr_time)
+        if (obj->timer[0] + 600 <= curr_time)
         {
 
           act("&+LYour $q &+Chums &+Lloudly and surrounds you in a &+Cmisty &+chaze&+L.&n", TRUE, ch, obj, NULL, TO_CHAR);
@@ -515,7 +515,7 @@ int volo_longsword(P_obj obj, P_char ch, int cmd, char *arg)
         curr_time = time(NULL);
         vict = ParseTarget(ch, arg);
 
-        if (obj->timer[0] + 300 <= curr_time)
+        if (obj->timer[0] + 600 <= curr_time)
         {
           act("&+WYou say '&+cI s&+Lummon &+ct&+Lhe &+cT&+Lraveler!&+W'&n", TRUE, ch, obj, NULL, TO_CHAR);
           act("&+cY&+Lou &+Lthrust $q &+Linto $n&+L's &+rfl&+Re&+rsh &+Land send a &+ct&+Lor&+cr&+Len&+ct &+Lof dark &+cp&+Llanar &+ce&+Lnergy into their &+cs&+Lou&+cl&+L!&n", TRUE, ch, obj, NULL, TO_CHAR);
@@ -956,7 +956,7 @@ int deathseeker_mace(P_obj obj, P_char ch, int cmd, char *arg)
       {
         curr_time = time(NULL);
 
-        if (obj->timer[0] + 300 <= curr_time)
+        if (obj->timer[0] + 600 <= curr_time)
         {
           act("You say 'death'", TRUE, ch, obj, vict, TO_CHAR);
           act("&+LYou grip $q &+Lfirmly in your hand and call upon the &+Rp&+ro&+Rw&+re&+Rr&+rs &+Lof &+BD&+Lar&+Bk&+Lness to aid you in your &+Rb&+ra&+Rttl&+re&+Rs&+L!", TRUE, ch, obj, vict, TO_CHAR);
@@ -1007,7 +1007,7 @@ int deathseeker_mace(P_obj obj, P_char ch, int cmd, char *arg)
         if (target && target != ch && IS_PC(target) && !IS_TRUSTED(target))
         {
           curr_time = time(NULL);
-          if (obj->timer[0] + 300 <= curr_time)
+          if (obj->timer[0] + 600 <= curr_time)
           {
             switch (number(0,1))
             {
@@ -1198,7 +1198,7 @@ int illithid_axe(P_obj obj, P_char ch, int cmd, char *arg)
         }
         
         curr_time = time(NULL);
-        if (obj->timer[0] + 300 <= curr_time)
+        if (obj->timer[0] + 600 <= curr_time)
         {
           act("&+L$p &+Lshoots out a &+mB&+ME&+mA&+MM &+Lof pure &+WL&+YI&+WG&+YH&+WT&+L that completely engulfs $n!&n\r\n",
             TRUE, ch, obj, target, TO_ROOM);
@@ -1286,7 +1286,7 @@ int dagger_ra(P_obj obj, P_char ch, int cmd, char *arg)
     
     if(!CHAR_IN_NO_MAGIC_ROOM(ch))
     {
-      if(obj->timer[0] + 20 <= curr_time)
+      if(obj->timer[0] + 60 <= curr_time)
       {
         obj->timer[0] = curr_time;
         
@@ -3069,7 +3069,7 @@ int gauntlets_legend(P_obj obj, P_char ch, int cmd, char *arg)
       {
         curr_time = time(NULL);
   
-        if (obj->timer[0] + 300 <= curr_time)
+        if (obj->timer[0] + 600 <= curr_time)
         {
           act("&nAs you clap your hands, $q begin to tremble with power.&n", TRUE, ch, obj, vict, TO_CHAR);
           act("&+LDarkness &ncreeps up and begins to surround you.&n", TRUE, ch, obj, vict, TO_CHAR);
@@ -3143,7 +3143,7 @@ int boots_abyss(P_obj obj, P_char ch, int cmd, char *arg)
       {
         curr_time2 = time(NULL);
   
-        if (obj->timer[1] + 300 <= curr_time2)
+        if (obj->timer[1] + 600 <= curr_time2)
         {
           act("&nYou tap your heels.&n", TRUE, ch, obj, vict, TO_CHAR);
           act("&n$q conjures a powerful potion.&n", TRUE, ch, obj, vict, TO_CHAR);
@@ -3188,7 +3188,7 @@ int boots_abyss(P_obj obj, P_char ch, int cmd, char *arg)
     {
       curr_time2 = time(NULL);
 
-      if (obj->timer[1] + 300 <= curr_time2)
+      if (obj->timer[1] + 600 <= curr_time2)
       {
         act("&nYou say, 'water'&n", TRUE, ch, obj, vict, TO_CHAR);
         act("&nA powerful wave of aquatic energy resonates from $q&n.", TRUE, ch, obj, vict, TO_CHAR);
@@ -3211,7 +3211,7 @@ int boots_abyss(P_obj obj, P_char ch, int cmd, char *arg)
     {
       curr_time2 = time(NULL);
 
-      if (obj->timer[1] + 300 <= curr_time2)
+      if (obj->timer[1] + 600 <= curr_time2)
       {
         act("&nYou say, 'water'&n", TRUE, ch, obj, vict, TO_CHAR);
         act("&nA powerful wave of aquatic energy resonates from $q&n.", TRUE, ch, obj, vict, TO_CHAR);
@@ -3347,7 +3347,7 @@ int poseidon_trident(P_obj obj, P_char ch, int cmd, char *arg)
     {
       curr_time = time(NULL);
 
-      if (obj->timer[0] + 300 <= curr_time)
+      if (obj->timer[0] + 600 <= curr_time)
       {
         act("&nYou call upon the dreaded Kraken.&n", TRUE, ch, obj, vict, TO_CHAR);
         act("$N calls upon the dreaded Kraken.&n", TRUE, ch, obj, vict, TO_ROOM);
@@ -3380,7 +3380,7 @@ int poseidon_trident(P_obj obj, P_char ch, int cmd, char *arg)
     {
       curr_time = time(NULL);
 
-      if (obj->timer[0] + 300 <= curr_time)
+      if (obj->timer[0] + 600 <= curr_time)
       {
         act("&nYou summon the powers of Poseidon.&n", TRUE, ch, obj, vict, TO_CHAR);
         act("$N summons the powers of Poseidon.&n", TRUE, ch, obj, vict, TO_ROOM);
@@ -3653,7 +3653,7 @@ int earring_powers(P_obj obj, P_char ch, int cmd, char *arg)
 
   curr_time = time(NULL);
 
-  if (obj->timer[0] + 300 <= curr_time)
+  if (obj->timer[0] + 600 <= curr_time)
   {
 
     act("&nYour $q hums briefly.&n", TRUE, obj->loc.wearing, obj, vict, TO_CHAR);
@@ -3827,9 +3827,12 @@ int gladius_backstabber(P_obj obj, P_char ch, int cmd, char *arg)
 
     room = ch->in_room;
     vict = ParseTarget(ch, arg);
-      
-    if (cmd == CMD_MELEE_HIT && ch && vict && !number(0, 30) && CheckMultiProcTiming(ch))
-        
+    if (!CanDoFightMove(ch, vict))
+      return FALSE;
+    if (GET_POS(ch) < POS_STANDING)
+      return FALSE;
+
+    if (cmd == CMD_MELEE_HIT && ch && vict && !number(0, 1) && CheckMultiProcTiming(ch))
     {
 
       act("&nYour $q &nbegins to &+mhum&n.", TRUE, ch, obj, vict, TO_CHAR);
@@ -4010,7 +4013,7 @@ int collar_frost(P_obj obj, P_char ch, int cmd, char *arg)
 
       curr_time = time(NULL);
 
-      if (obj->timer[0] + 300 <= curr_time)
+      if (obj->timer[0] + 600 <= curr_time)
       {
 
         elesize = number(1, 100);        //raise to 100 if you want spec pets to occur
@@ -4177,7 +4180,7 @@ int collar_flames(P_obj obj, P_char ch, int cmd, char *arg)
   
       curr_time = time(NULL);
 
-      if (obj->timer[0] + 300 <= curr_time)
+      if (obj->timer[0] + 600 <= curr_time)
       {
         elesize = number(1, 100); //raise to 100 if you want spec pets to occur
 

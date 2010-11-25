@@ -3,8 +3,7 @@ ffolk commoner~
 the ffolk commoner~
 The Ffolk commoner greets you as you arrive.
 ~
-Hello there M'Friend..Welcome to Caer Corwell.
-The ffolk commoner is wearing bright colored cloths and has a warm smile on his face.
+The ffolk commoner is wearing bright colored clothes and has a warm smile on his face.
 ~
 136 0 0 0 0 0 0 0 S
 H 0 0 -1
@@ -29,7 +28,9 @@ guard corwell~
 &+Wa Corwell guard&N~
 &+WThe Corwell guard greets you as you pass.
 ~
-The Corwell guard is wearing bright colored cloths, He is Very strong looking, almost timid but friendly at first glance. You arent to sure you could best him by his looks.
+The Corwell guard is wearing bright colored clothes. He is very strong looking,
+almost timid but friendly at first glance. You arent too sure you could best
+him by his looks.
 ~
 2184 0 0 8 0 0 0 0 S
 H 0 1 -1
@@ -41,7 +42,8 @@ pawldo~
 &+YPawldo&N~
 &+YPawldo the merchant, is here jabbering away trying to sell goods.
 ~
-Pwaldo has very bright cloth clothes on, he is about 3 feet tall, and has short brown hair. He looks to you and asks you if he would talk you out of all your money.
+Pawldo has very bright cloth clothes on, he is about 3 feet tall, and has
+short brown hair. He looks to you as if he could talk you out of all of your money.
 ~
 2120 0 0 524432 0 0 0 0 S
 H 0 4096 -1
@@ -68,8 +70,8 @@ noble lord~
 &+GA noble lord ignores your existance.
 ~
 The Lord seems to be wearing bright but decent clothing
-you notice a magnifacent sowrd in his possesion
-he looks like a goos swordsman, but you do not wish to find out.
+you notice a magnificent sword in his possession
+he looks like a good swordsman, but you do not wish to find out.
 ~
 2120 0 0 8208 0 0 0 1000 S
 H 0 2 -1
@@ -78,11 +80,11 @@ H 0 2 -1
 8 8 0
 #26206
 corwell maid~
-a Corwell Maid~
+a Corwell maid~
 The maid is going about her busness here.
 ~
-The maid looks at you then turns away, She is wearing alight blue maid
-outfit with white bows on it, she looks to be in here mid eightys
+The maid looks at you then turns away.  She is wearing a light blue maid
+outfit with white bows on it, she looks to be in her mid-eighties
 from what you can tell.
 ~
 12 0 0 32 0 0 0 0 S

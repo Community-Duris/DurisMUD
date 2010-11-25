@@ -859,7 +859,7 @@ okurah~
 ~
   Okurah the fair maiden searches for her marbles. She has looked all over
 Ashrumite Village and Tharnadia, maybe you can help her find them.  Her
-dark hair has fallen from it's braid and she has begun to look a bit
+dark hair has fallen from its braid and she has begun to look a bit
 disheveled.
 ~
 133128 768 0 134742144 0 0 0 0 S
@@ -1808,7 +1808,7 @@ fire elemental~
 ~
   &+rAfter breaking away from its former master, this fire elemental
 &+rappears that it could start a fire anywhere.  It crisps the country
-&+rside as it burns along here.  It's red hot flames stand at least
+&+rside as it burns along here.  Its red hot flames stand at least
 &+rseven feet in the air, and it leaves a burn mark wherever it goes.
 ~
 8 1 0 0 0 0 0 0 S
@@ -1823,8 +1823,8 @@ grell~
 ~
    Normally living in caves, this grell seems to have come up and is
 rather lost.  It is a huge tentacled brain that wields many spears.
-It's body is rather slimy and seems very unhappy to be out in the
-wilderness, and would rather be back in it's cave.
+Its body is rather slimy and seems very unhappy to be out in the
+wilderness, and would rather be back in its cave.
 ~
 8 1 0 16 0 0 0 0 S
 TK 0 1 -1
@@ -1834,7 +1834,7 @@ TK 0 1 -1
 #200141
 robin bird~
 &+ra robin~
-&+rA robin flies through here, chirping it's heart out.
+&+rA robin flies through here, chirping its heart out.
 ~
   &+rLike most robins, this robin has a beautiful red stripe and
 &+rblack feathers to match.  It flies through the air here looking
@@ -2000,7 +2000,7 @@ beast displacer~
    Someone must have stumbled near this displacer beast's lair because
 normally they try to avoid human contact, however, this one has come out
 to see who is disturbing it.  Much like one of the great cats, this displacer
-beast has two huge tentacles growing from it's shoulders.
+beast has two huge tentacles growing from its shoulders.
 ~
 8 1 0 0 0 0 0 0 S
 A 0 1 -1
@@ -2232,7 +2232,7 @@ sprite~
 ~
    Like a minerature elf with wings, the sprites seem to enhabit the
 wilderness of Duris, creating their own societies.  They appear
-attired in very small sets of noblish cloths and usually wielding
+attired in very small sets of noblish clothes and usually wielding
 some sort of spear.
 ~
 8 0 0 0 0 0 0 0 S
@@ -2306,7 +2306,7 @@ satyr~
    With the legs of a bull, torso of a human, and horns, this creature
 looks rather weird to most people.  It usually travells with followers
 that it has charmed.  It also carries with it some sort of container
-which to hold it's magical set of pipes.
+which to hold its magical set of pipes.
 ~
 8 0 0 0 0 0 0 0 S
 H 0 32768 -1
@@ -2334,7 +2334,7 @@ spider~
 ~
    This spider hangs from a web here, looking to catch some insects.
 It is of normal size, and scurries away from someone when they
-come near to it's web.
+come near to its web.
 ~
 136 0 0 0 0 0 0 0 S
 I 0 1 -1
@@ -2477,7 +2477,7 @@ eagle~
 &+WA large eagle flies through here, on its way to its nest.
 ~
    Like all other eagles, this eagle has brown and white feathers and
-appears to be on its way back to its nest.  In it's large claws, it
+appears to be on its way back to its nest.  In its large claws, it
 carries twigs and worms for its young ones.
 ~
 8 0 0 0 0 0 0 1000 S
@@ -2519,10 +2519,10 @@ sheep~
 &+Wa lost sheep~
 &+WA lost sheep stands here, frozen with fear.
 ~
-   This sheep seems to have wandered off from it's heard and is standing
+   This sheep seems to have wandered off from its herd and is standing
 here frozen stiff out of fear that a fox or something might come along
 and take it and eat it.  It has rather nice fur for a sheep that has
-been sepereated from its heard.
+been sepereated from its herd.
 ~
 8 0 0 0 0 0 0 0 S
 A 0 1 -1
@@ -2549,7 +2549,7 @@ bat~
 &+LA black bat flies about here, resting now and then.
 ~
    This bat is flying by night and sleeping by day.  It has fury wings
-and large ears.  It's fur is short and black.  For the most part,
+and large ears.  Its fur is short and black.  For the most part,
 it looks like a big flying rat.
 ~
 8 0 0 0 0 0 0 0 S
@@ -2678,7 +2678,7 @@ an ox~
 An ox grazes on the grass in the area.
 ~
         Large and fat with huge horns, this ox grazes in the fields here,
-its owner not far off. It has a big leather collar strapped around it's
+its owner not far off. It has a big leather collar strapped around its
 neck, and a large plow pulling apartus strapped to its back.
 ~
 8 0 0 0 0 0 0 0 S
@@ -2736,7 +2736,7 @@ horse wild~
 &+yA wild horse grazes peacefully here.
 ~
     This horse appears to have never been tamed and probably never will.
-It grazes here peacefull with its heard.  It has long dark brown hair and
+It grazes here peaceful with its herd.  It has long dark brown hair and
 is rather smelly.
 ~
 8 0 0 0 0 0 0 0 S
@@ -3213,7 +3213,7 @@ fire elemental~
 ~
   &+rAfter breaking away from its former master, this fire elemental
 &+rappears that it could start a fire anywhere.  It crisps the country
-&+rside as it burns along here.  It's red hot flames stand at least
+&+rside as it burns along here.  Its red hot flames stand at least
 &+rseven feet in the air, and it leaves a burn mark wherever it goes.
 ~
 2056 1 0 570425600 1 0 0 0 S
@@ -3314,7 +3314,7 @@ bat~
 &+LA black bat flies about here, resting now and then.
 ~
    This bat is flying by night and sleeping by day.  It has fury wings
-and large ears.  It's fur is short and black.  For the most part,
+and large ears.  Its fur is short and black.  For the most part,
 it looks like a big flying rat.
 ~
 131080 1 0 167772416 0 0 0 0 S
@@ -3520,7 +3520,7 @@ brownie child~
 &+ythe brownie child~
 &+yA tiny brownie child is dancing through the area here.
 ~
-It stands about a foot high and is extremely agile. It's long brown hair
+It stands about a foot high and is extremely agile. Its long brown hair
 and flashing blue eyes are filled with fun and trouble. It laughs and
 plays and dances about the area with not a care in the world..
 ~
@@ -3576,8 +3576,8 @@ male leucrotta~
 ~
 &+L   This beast stands over 6 feet tall at the shoulder and is about 9 feet in
 &+Llength.  The body of the leucrotta resembles that of a stag, with a leonine
-&+Ltufted tail and cloven hooves.  It's head resembles resembles that of a huge
-&+Lbadger, with sharp jagged bony ridges used as teeth.  It's eyes glow with a
+&+Ltufted tail and cloven hooves.  Its head resembles resembles that of a huge
+&+Lbadger, with sharp jagged bony ridges used as teeth.  Its eyes glow with a
 &+Lferal red light.&n
 ~
 1073743944 1 0 33554472 0 0 0 -500 S
@@ -3591,7 +3591,7 @@ dragon red chromatic~
 &+RA gigantic red dragon, rests here preening itself.&n
 ~
 &+R   This gigantic ancient red chromatic dragon towers over 50 feet high and is
-&+Rfrightening to behold.  It's dull red scales are harder then the toughest
+&+Rfrightening to behold.  Its dull red scales are harder then the toughest
 &+Rmetals and long claws end in sharp points.  Smoke bellows from its flared
 &+Rnostrels and one can hear the rumble deep within its body of the fiery flames
 &+Rthat are given birth there.
@@ -4037,7 +4037,7 @@ a &+glarge roper&N~
 A &+glarge roper&N is here with dozens of &+Yswirling tentacles&N flailing about!&N
 ~
 The roper looks like a short, fat tree with a dozen or so rope-like tentacles
-protruding out of its body on all sides.  It has two small black eyes in it's
+protruding out of its body on all sides.  It has two small black eyes in its
 torso and a large mouth or sharp teeth in its midsection.
 ~
 1107695692 1 0 296 2 0 0 -1000 S
@@ -4113,7 +4113,7 @@ H 0 1 -1
 #200307
 kuo-toan kuo toan man fisherman~
 &+ga kuo-toan&N &+Gfisherman&N~
-&+gA kuo-toan&N &+Gfisherman&N &+gis standing here, tending to it's job.&N
+&+gA kuo-toan&N &+Gfisherman&N &+gis standing here, tending to its job.&N
 ~
 This kuo-toan is lean, and stands about five feet tall.  Its humanoid body
 and frog are head is slimy.  It has large webbed hands and green scaly skin.

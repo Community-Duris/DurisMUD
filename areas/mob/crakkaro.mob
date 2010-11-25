@@ -53,7 +53,7 @@ A 0 0 -1
 #87004
 human guard~
 &+Wa gate guard&N~
-&+WA human guard stands here guarding the gates&n
+&+WA human guard stands here guarding the gates.&n
 ~
      &+WStanding tall and proud the guard has his hand on his sword determined
  &+Wto keep all strangers out of the temple.&N
@@ -66,7 +66,7 @@ PH 0 8 -1
 #87005
 dark drow cleric~
 &+LA dark &+mdrow&n~
-&+LA dark&n &+mdrow&n &+Lcleric stands here chanting a spell&n
+&+LA dark&n &+mdrow&n &+Lcleric stands here chanting a spell.&n
 ~
   &+LThe dark&n &+mdrow&n &+Lwas hidden here in this cell to prevent it from returning to&n
 &+Lthe Underdark to report on the Temple's status. The Temple's clerics know&n
@@ -172,7 +172,7 @@ PH 0 1 -1
 #87013
 ravisihing ogre~
 &+La ravishing &+bogre&n~
-&+LA ravishing&n &+bogre&n &+Lscreams at the ceiling&n
+&+LA ravishing&n &+bogre&n &+Lscreams at the ceiling.&n
 ~
   &+LThe ogre was captured doing some crime or not, a ogre is guilty out of hand.&n
 &+LThe poor beast screams at the ceiling in a mad rage.&n
@@ -200,7 +200,7 @@ PH 0 16 4
 #87015
 hunched orc~
 &+La hunched &+Lorc&n~
-&+LA hunched over&n &+Lorc&n &+Llooks for a way out&n
+&+LA hunched over&n &+Lorc&n &+Llooks for a way out.&n
 ~
   &+LThe orc was captured doing some crime or not, a orc is guilty out of hand.&n
 &+LHe is hunched over in despair over being in the Temple's prison.&n
@@ -213,7 +213,7 @@ HO 0 8192 -1
 #87016
 red dragon~
 &+Ra red dragon&n~
-&+RA massive red dragon roars in rage&n
+&+RA massive red dragon roars in rage.&n
 ~
   &+RThe dragon was captured by the Temple members and brought here so that it&n
 &+Rcan no longer wreck havok on the prime material plane. It raises its head and&n
@@ -227,7 +227,7 @@ D 0 1 -1
 #87017
 dragonkin dragon~
 &+wa &+Gdragon&+Wkin&n~
-&+wA &+Gdragon&+Wkin&n &+wstands here snarling&n
+&+wA &+Gdragon&+Wkin&n &+wstands here snarling.&n
 ~
    &+WThe dragonkin are not all evil but this one has done something evil to be&n
 &+Wbrought to the temple's prison. It looks at you with eyes full of hate.&n
@@ -240,7 +240,7 @@ DK 0 1 -1
 #87018
 illithid~
 &+Man illithid&n~
-&+LAn &+MIllithid&n &+Lstands here in deep thought&n
+&+LAn &+MIllithid&n &+Lstands here in deep thought.&n
 ~
    &+WTricked by the temple clerics into a trap the mindflayer is constantly&n
 &+Wtrying to establish a link to the master brain.&n
@@ -253,7 +253,7 @@ MF 0 262144 -1
 #87019
 black demon~
 &+La demon&n~
-&+LA black demon stands here looking about it's cell&n
+&+LA black demon stands here looking about its cell.&n
 ~
    &+LThe demon was trapped in a summoning inside the temple itself. The&n
 &+Late the priest that summoned it, but the paladins easily trapped it and&n
@@ -267,7 +267,7 @@ X 0 16 -1
 #87020
 bantu devil~
 &+ra bantu devil&n~
-&+rA bantu devil stands here clawing at the walls&n
+&+rA bantu devil stands here clawing at the walls.&n
 ~
    &+WThe bantu devil is very large and has many scars. Its skin is loose and&n
 &+Weludes to great age. It is missing one of his wings.&n
@@ -398,7 +398,7 @@ OG 0 1 -1
 #87030
 woman~
 &+La wailing woman&n~
-&+LA woman holds her head and wails in misery&n
+&+LA woman holds her head and wails in misery.&n
 ~
    &+wThe woman's face is red and parched from hours of crying. Her hair is in a&n
 &+wwild state of disarray and some of it has been pulled out.&n
@@ -413,7 +413,7 @@ PF 0 512 3
 #87031
 green dragon~
 &+Ga green dragon&n~
-&+GA massive green dragon roars in rage&n
+&+GA massive green dragon roars in rage.&n
 ~
   &+RThe dragon was captured by the Temple members and brought here so that it&n
 &+Rcan no longer wreck havok on the prime material plane. It raises its head and&n
@@ -453,7 +453,7 @@ PH 0 8 -1
 #87034
 deer~
 &+ya large deer&n~
-&+yA large deer looks ready to dart into the woods&n
+&+yA large deer looks ready to dart into the woods.&n
 ~
    &+yThe deer is large and healthy with a full set of horns. His coat shines&n
 &+yeluding to the good grazing found here in the clearing.&n
@@ -466,7 +466,7 @@ AH 0 1 -1
 #87035
 deer~
 &+ya large doe&n~
-&+yA large doe looks around nervous&n
+&+yA large doe looks around nervously.&n
 ~
    &+yThe doe is small but healthy. She is well feed from the good grazing&n
 &+yfound here in the clearing.&n

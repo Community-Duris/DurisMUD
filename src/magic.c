@@ -12335,7 +12335,7 @@ void spell_single_obtenebration(int level, P_char ch, char *arg, int type,
     "&+LYour voice fills the living with dread and despair!&n",
     "&+LA wave of blackness sweeps over you, eating your flesh!&n",
     "&+LA pitch-darkness sweeps across the area, scalding the living!&n",
-    "&+LYour voice disconnects every bit of $N's being.&n"
+    "&+LYour voice disconnects every bit of $N's being.&n",
     "&+LA wave of blackness utterly consumes you.&n",
     "&+LA pitch-darkness consumes $N!&n"
   };

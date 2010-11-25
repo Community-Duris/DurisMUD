@@ -338,13 +338,10 @@ int magebane_falchion(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!obj)
   {
-    /*
-       What the fuck?! 
-     */
     logit(LOG_EXIT, "magebane_falchion() called with null obj");
     raise(SIGSEGV);
   }
-  /*
+   /*
      okay.  Deal with the periodic calls first.... periodics are known as ch,
      and cmd will be 0 
    */
@@ -355,29 +352,25 @@ int magebane_falchion(P_obj obj, P_char ch, int cmd, char *arg)
   if (!ch && cmd == CMD_PERIODIC)
   {
     ch = obj->loc.wearing;
-
-    LOOP_THRU_PEOPLE(tmp_vict, ch)      /*
-                                           this method makes it only glow once
-                                           no matter how many mages 
-                                         */
+    if(GET_STAT(ch) == STAT_SLEEPING)
+      return FALSE;
+    LOOP_THRU_PEOPLE(tmp_vict, ch)
       if (IS_MAGE(tmp_vict) && (tmp_vict != ch))
-      break;
+         break;
 
-    for (i = 0; i < NUM_EXITS; i++)    /*
-                                           search neighboring rooms... muhaha 
-                                         */
+    for (i = 0; i < NUM_EXITS; i++)
       if (!tmp_vict && (world[ch->in_room].dir_option[i]))
       {
         int      r = world[ch->in_room].dir_option[i]->to_room;
 
         if (r == NOWHERE)
           continue;
-        for (tmp_vict = world[r].people; tmp_vict; tmp_vict =
-             tmp_vict->next_in_room)
+        for (tmp_vict = world[r].people; tmp_vict; tmp_vict = tmp_vict->next_in_room)
           if (IS_MAGE(tmp_vict))
             break;
       }
-    if (tmp_vict)
+    
+    if (tmp_vict && !number(0, 30))
     {
       send_to_char
         ("Your blade &+Wglows brightly&N as it senses spellcasters nearby...\r\n",
@@ -421,8 +414,8 @@ int magebane_falchion(P_obj obj, P_char ch, int cmd, char *arg)
 
   if ((!number(0, 30)) && IS_MAGE(vict))
   {
-    act("You score a CRITICAL HIT!!!!!\r\n", FALSE, ch, obj, vict, TO_CHAR);
-    spell_feeblemind(35, ch, 0, SPELL_TYPE_SPELL, vict, 0);
+    act("&+wYour $q &+Wflashes brightly &+was it connects with $N&+w!&n", FALSE, ch, obj, vict, TO_CHAR);
+    spell_feeblemind((GET_LEVEL(ch) - 5), ch, 0, SPELL_TYPE_SPELL, vict, 0);
   }
   return FALSE;
 }

@@ -236,7 +236,7 @@ R I 83347
 R I 83250
 G I 83345
 D
-&N$n chuckles and says &N&+g'You see?   &+WClund &+YHammer&+Whelm &nwas cursed from the beginning with that &+Rdemon&n-&+Weye&N'
+&N$n chuckles and says &N&+g'You see? &+WClund &+YHammer&+Whelm &nwas cursed from the beginning with that &+Rdemon&n-&+Weye&N'
 ~
 S
 #83130
@@ -1242,7 +1242,7 @@ githzerai githzerais~
 ~
 MA
 adamantite~
-&+M'Adamantite is a metal that is very familiar to my people, although marked as contraband among these dwarves.  I wish to visit my people, but I would be a meer pauper amongst them.  You will help me, $N.  Venture to the &+GGith&+yzerai &+LStronghold&+M, $N.  In one of the three guilds in their &+LAdamantite Outpost&+L you will find their stash of &+Ladamantite coins&+M.  Find, take, and bring these &+Ladamantite coins &+Mto me, $N.  They have no value to you, but are precious to my people.  You will be repaid handsomly.'
+&+M'Adamantite is a metal that is very familiar to my people, although marked as contraband among these dwarves.  I wish to visit my people, but I would be a mere pauper amongst them.  You will help me, $N.  Venture to the &+GGith&+yzerai &+LStronghold&+M, $N.  In one of the three guilds in their &+LAdamantite Outpost&+L you will find their stash of &+Ladamantite coins&+M.  Find, take, and bring these &+Ladamantite coins &+Mto me, $N.  They have no value to you, but are precious to my people.  You will be repaid handsomly.'
 &NAfter your mind is invaded with such a lengthy command, you momentarily drop to one knee, catching your breath and re-gaining your vision.
 ~
 MA
@@ -1794,11 +1794,11 @@ S
 #83291
 M
 qc_action 160~
-&N$n swings his &+chammer&N, pounding a rare piece of &+More&N, sending &+Ymagical &+Bsparks &Nflying.
+&+YG&+gi&+Lmbr&+gi&+Gn swings his &+chammer&N, pounding a rare piece of &+More&N, sending &+Ymagical &+Bsparks &Nflying.
 ~
 M
 qc_action 160~
-&N$n grins as he begins shaping a strange piece of &+More &Nwith his &+chammering &+Lprocess&N.
+&+YG&+gi&+Lmbr&+gi&+Gn grins as he begins shaping a strange piece of &+More &Nwith his &+chammering &+Lprocess&N.
 ~
 M
 qc_action 600~
@@ -1855,7 +1855,7 @@ S
 #83295
 M
 qc_action 200~
-&N$n hammers and shapes some &+Yore&N, his hammering hand moving with a &N&+bblur &nof speed.
+&+ySmi&+Yd&+Lrin&n hammers and shapes some &+Yore&N, his hammering hand moving with a &N&+bblur &nof speed.
 ~
 MA
 hi hello~
@@ -2446,9 +2446,9 @@ QA
 &+W'&+wA n'er do-well come to his righteous end for sure.  Never in my days have I thought he would meet
 &+whis end.  You've done a great service for all of Alatorin.&+W'
 ~
-G I 83539
 R E 300000
 R C 1000000
+G I 83539
 QA
 &N$n applauds $N and says 'Excellent work, $N!'
 Gathering the heads, he continues 'Please, as a token of service to Alatorin, take this medal of honor and your reward money.'

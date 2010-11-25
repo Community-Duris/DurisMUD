@@ -1555,7 +1555,7 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
               t_ch->player.short_descr);
       send_to_char(tbuf, ch);
       sprintf(tbuf,
-              " &+LThe image of %s &Ndisappears&+L, replaced with changing %s!\r\n",
+              " &+LThe image of %s &Ndisappears&+L, and is replaced by %s!\r\n",
               GET_NAME(ch), t_ch->player.short_descr);
       act(tbuf, FALSE, ch, 0, NULL, TO_ROOM);
       SET_BIT(ch->specials.act, PLR_NOWHO);

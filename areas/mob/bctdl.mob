@@ -1,7 +1,7 @@
 #32420
 bel pit fiend _ignore_ _no_move_~
 &+rBel, &+Lthe lord of the First~
-&+rThe mighty Bel is standing here, reeking of doom&n
+&+rThe mighty Bel is standing here, reeking of doom.&n
 ~
 &+rBel is one of the newer lords of the Nine Hells. He currently rules over the
 &+rfirst layer, Avernus, from here. He is the only archdevil who spends more of
@@ -24,11 +24,11 @@ Y 0 16777476 7
 8 8 1
 #32421
 assassin devil~
-&+Lassassin of ages&n~
-&+LA devil of a terrifying nature stands here&n
+&+Lan assassin of ages&n~
+&+LA devil of a terrifying nature stands here.&n
 ~
 &+LThis devil is very difficult to discern from his surroundings. He seems to
-&+Lbe quite adept at stealth, and the reeks of death.
+&+Lbe quite adept at stealth, and reeks of death.
 ~
 1107310796 1 0 806952986 47296 69206464 33555456 -1000 S
 Y 0 8192 4
@@ -38,7 +38,7 @@ Y 0 8192 4
 #32422
 white devil~
 &+Wa snow white devil~
-&+Wa fiendish looking white devil stands here&n
+&+WA fiendish looking white devil stands here.&n
 ~
 &+WThis devil appears humanoid, but its skin is the color of the purest snow.
 &+WIt turns to look at you as you enter, and then charges to attack. It will
@@ -52,7 +52,7 @@ Y 0 64 4
 #32423
 devil erinyes woman~
 &+Lan &+we&+rr&+Rin&+ry&+we&+Ls &+Rd&+rev&+Ril&n~
-&+yA beautiful tanned woman stands here, with huge leathery wings&n
+&+yA beautiful tanned woman stands here, with huge leathery wings.&n
 ~
 &+WErinyes devils are the baaetzu&+w equivalent of the tana'ri su&+rccubi. They
 &+Wappear as very comely femal&+wes, minus the wings, and use&+rsimilar methods
@@ -69,8 +69,8 @@ Y 0 2048 4
 8 8 2
 #32424
 blue devil~
-&+ba devil&n~
-&+bA deep blue colored devil sits here meditating&n.
+&+ba blue devil&n~
+&+bA deep blue colored devil sits here meditating.&n
 ~
 &+bThis deep blue skinned devil is very thin.  He stands no more than six
 feet
@@ -102,7 +102,7 @@ Y 0 1 6
 #32426
 green pit fiend~
 &+ga green pit fiend&n~
-&+gA large green pit fiend stands here&n.
+&+gA large green pit fiend stands here.&n
 ~
 &+gThis is one of the brute tanks of Asmodeus's army against the tanar'ri.
 &+gThe green skinned pit fiends are almost always mindless golems, doing
@@ -119,7 +119,7 @@ Y 0 1 6
 #32427
 silver dragon~
 &+Wa mature silver dragon&n~
-&+WA large silver dragon stands here&n.
+&+WA large silver dragon stands here.&n
 ~
 &+WWhile most commonly seen in the heavens, this silver dragon seems to have
 &+Wbeen corrupted by the evil might of Dagos.  This massive being is as large
@@ -135,7 +135,7 @@ D 0 4 7
 #32428
 goblin thief~
 &+La &+Gsly &+ggoblin &+Lthief&n~
-&+LA small lanky goblin hides in the shadows here&n
+&+LA small lanky goblin hides in the shadows here.&n
 ~
 &+LThis little goblin sneaks around the outside of the Citadel looking for
 goodies
@@ -151,7 +151,7 @@ HG 0 65536 -1
 #32429
 pitch black devil~
 &+La devil&n~
-&+LA pitch black devil stands here&n.
+&+LA pitch black devil stands here.&n
 ~
 &+LIts skin nearly as black as negative material, it's hard to even tell there
 &+Lis a being there.  It seems to be a humanoid figure, with wings, and two
@@ -164,12 +164,12 @@ Y 0 1040 4
 8 8 1
 #32430
 tan devil~
-&+ma devil&n~
-&+mA devil stands here practicing magic&n.
+&+ya tan devil&n~
+&+yA devil stands here practicing magic.&n
 ~
-&+mThe slender devil appears very beautiful.  It probably once was an erinyes,
-&+mand was promoted to greater status.  She wears nothing at all, but always
-&+mkeeps her wings pulled infront of her.&n
+&+yThe slender devil appears very beautiful.  It probably once was an erinyes,
+&+yand was promoted to greater status.  She wears nothing at all, but always
+&+ykeeps her wings pulled infront of her.&n
 ~
 30826 1 0 805306378 262144 0 0 -1000 S
 Y 0 512 4
@@ -179,7 +179,7 @@ Y 0 512 4
 #32431
 erinyes devil priest~
 &+Lan erinyes priest&n~
-&+La beautiful erinyes devil stands here, practicing her art.&n
+&+LA beautiful erinyes devil stands here, practicing her art.&n
 ~
 &+cThis devil seems to be practicing the way&+Cs of the priest. While it is known
 &+cthat most of the baaetzu do not gain their&+C divine powers from that of a god
@@ -197,7 +197,7 @@ Y 0 32 4
 #32432
 black pit fiend~
 &+La black pit fiend&n~
-&+LA large black pit fiend stands here, guarding &+rBel&+L's Lair&n
+&+LA large black pit fiend stands here, guarding &+rBel&+L's Lair.&n
 ~
 &+LThis large pit fiend stands here with pride, as he is one of few that Bel
 &+Ltrusts with guarding the citadel.  Although he is no where near as impressive
@@ -229,7 +229,7 @@ Y 0 1048577 -1
 #32434
 green guard abishai devil~
 &+ga green abishai guard&n~
-&+ga green abishai devil stands here, ready to die for the &+LDungeon&+wMaster&n
+&+gA green abishai devil stands here, ready to die for the &+LDungeon&+wMaster.&n
 ~
 &+LThis seven foot long devil appears much like the gargoyles of the
 &+rPrime Material Plane. It sports a wickedly barbed, scaly tail and
@@ -263,13 +263,11 @@ Y 0 512 -1
 #32436
 goblin thief~
 &+La &+Gsly &+ggoblin &+Lthief&n~
-&+LA small lanky goblin hides in the shadows here&n
+&+LA small lanky goblin hides in the shadows here.&n
 ~
 &+LThis little goblin sneaks around the outside of the Citadel looking for
-goodies
-&+Lto steal.  The goblin is so small and fast that the devils don't really
-seem
-&+Lnotice it.&n
+&+Lgoodies to steal.  The goblin is so small and fast that the devils don't
+&+Lreally seem notice it.&n
 ~
 6344 0 0 538443786 0 0 0 -1000 S
 HG 0 65536 -1
@@ -279,13 +277,11 @@ HG 0 65536 -1
 #32437
 goblin thief~
 &+La &+Gsly &+ggoblin &+Lthief&n~
-&+LA small lanky goblin hides in the shadows here&n
+&+LA small lanky goblin hides in the shadows here.&n
 ~
 &+LThis little goblin sneaks around the outside of the Citadel looking for
-goodies
-&+Lto steal.  The goblin is so small and fast that the devils don't really
-seem
-&+Lnotice it.&n
+&+Lgoodies to steal.  The goblin is so small and fast that the devils don't
+&+Lreally seem notice it.&n
 ~
 6344 0 0 538443786 0 0 0 -1000 S
 HG 0 65536 -1
@@ -295,13 +291,11 @@ HG 0 65536 -1
 #32438
 goblin thief~
 &+La &+Gsly &+ggoblin &+Lthief&n~
-&+LA small lanky goblin hides in the shadows here&n
+&+LA small lanky goblin hides in the shadows here.&n
 ~
 &+LThis little goblin sneaks around the outside of the Citadel looking for
-goodies
-&+Lto steal.  The goblin is so small and fast that the devils don't really
-seem
-&+Lnotice it.&n
+&+Lgoodies to steal.  The goblin is so small and fast that the devils don't
+&+Lreally seem notice it.&n
 ~
 6344 0 0 538443786 0 0 0 -1000 S
 HG 0 65536 -1
@@ -311,7 +305,7 @@ HG 0 65536 -1
 #32439
 dungeonmaster master kocrachon insect~
 &+Lthe Dungeon Master&n~
-&+Lan abnormally HUGE &+ginsect&+L-like creature turns to face you.&n
+&+LAn abnormally HUGE &+ginsect&+L-like creature turns to face you.&n
 ~
 &+gSimilar in nature to his lesser guards &+Gseen throughout the dungeon, this
 &+gkocrachon captain seems none too pleased&+G to see you. Blood-stained proboscises
@@ -330,8 +324,7 @@ human paladin~
 &+Wa &+Chuman &+Wpaladin&n~
 &+WA &+Chuman&+W paladin stands here, looking for a way to the Citadel.&n
 ~
-&+WThis is a tall, muscular human.  He wears a glowing set of full
-platemail,
+&+WThis is a tall, muscular human.  He wears a glowing set of full platemail,
 &+Wand wields a large admantium two-handed sword.  He seems to be trying to
 &+Wsneak around, and is babbling to himself about something or another.&n
 ~
@@ -345,8 +338,7 @@ human cleric~
 &+Wa &+Chuman &+Wcleric&n~
 &+WA &+Chuman&+W cleric stands here, looking for a way to the Citadel.&n
 ~
-&+WThis is a tall, muscular human.  He wears a glowing set of full
-platemail,
+&+WThis is a tall, muscular human.  He wears a glowing set of full platemail,
 &+Wand wields a large admantium heavy mace.  He seems to be trying to
 &+Wsneak around, and is babbling to himself about something or another.&n
 ~
@@ -360,8 +352,7 @@ human mercenary~
 &+Wa &+Chuman &+ymercenary&n~
 &+WA &+Chuman&+y mercenary &+Wstands here, looking for a way to the Citadel.&n
 ~
-&+WThis is a tall, muscular human.  He wears a glowing set of full
-platemail,
+&+WThis is a tall, muscular human.  He wears a glowing set of full platemail,
 &+Wand wields a large admantium long sword.  He seems to be trying to
 &+Wsneak around, and is babbling to himself about something or another.&n
 ~
@@ -375,8 +366,7 @@ human sorcerer~
 &+Wa &+Chuman &+Msorcerer&n~
 &+WA &+Chuman&+M sorcerer &+Wstands here, looking for a way to the Citadel.&n
 ~
-&+WThis is a tall, thin human.  He wears a glowing set of flowing silk
-robes,
+&+WThis is a tall, thin human.  He wears a glowing set of flowing silk robes,
 &+Wand wields a large wooden quarter staff.  He seems to be trying to
 &+Wsneak around, and is babbling to himself about something or another.&n
 ~
@@ -428,7 +418,7 @@ X 0 2097156 5
 #32446
 succubus woman torment~
 &+Lan e&+rt&+we&+rr&+Lna&+wll&+Ly to&+wrmen&+Lted &+rsuccubus~
-&+La beautiful woman stands here, showing her...wings?&n
+&+LA beautiful woman stands here, showing her...wings?&n
 ~
 &+LSuccubi are not warriors. T&+rhey f&+Llee in combat whenever they can. Their
 &+Lpreferred tactic is &+rto feign friendship when&+L they encounter a being,
@@ -448,7 +438,7 @@ X 0 24576 3
 #32447
 balor demon red~
 an &+Le&+wn&+rr&+La&+wg&+re&+wd &+rb&+Ral&+wor &+Ld&+wem&+Lon~
-&+La hideous dark &+rred&+L being stands here, chained.&n
+&+LA hideous dark &+rred&+L being stands here, chained.&n
 ~
 &+RQuite fearsome, and rightly so, the &+rbalor stands approximately 12 feet tall
 &+Rwith dark red skin. Balors love to jo&+rin battle armed with their mighty
@@ -466,7 +456,7 @@ X 0 1048576 6
 #32448
 zariel human woman lord~
 &+LZariel, the former lord of Avernus&n~
-&+wa seemingly &+Chuman&+w woman stands here, beaten.&n
+&+wA seemingly &+Chuman&+w woman stands here, beaten.&n
 ~
 &+LBroken and battered, this woman seems to be damned to face eternal torment.
 &+LEven so, it is unclear as to why the baaetzu keep such a creature behind
@@ -481,9 +471,9 @@ PH 0 512 3
 0.0.0.0 0
 8 8 2
 #32449
-dagos marshall fiend~
+dagos marshall fiend pit~
 &+LDagos, Marshall of the &+yP&+Ri&+yt&n~
-&+LAn incredibly large pit fiend stands here
+&+LAn incredibly large pit fiend stands here.
 ~
 &+rDagos is one of the Dark Eight and&+W is charged with maintaining the legions of
 &+rhell. Referred to as the Marshall of &+Wthe Pit, Dagos is a truly terrifying pit
@@ -504,7 +494,7 @@ Y 0 18874880 6
 #32450
 baalzephon duke fiend~
 &+LBaalzephon, Duke of &+rH&+Rel&+rl&n~
-&+LA gruesomely scarred pit fiend stands here, emanating evil
+&+LA gruesomely scarred pit fiend stands here, emanating evil.
 ~
 &+WBaalzephon is one of the mightiest pit&+r fiends found in the nine hells.
 &+WPromoted to membership of the dark ei&+rght by Asmodeus himself, Baalze-
@@ -522,7 +512,7 @@ Y 0 3145732 6
 #32451
 chromatic dragon tiamat~
 &+La HUGE c&+Wh&+Cr&+Mo&+Bm&+Ra&+Yt&+Gi&+Lc dragon~
-&+La multi colored dragon stands here, awaiting audience with &+rBel
+&+LA multi-colored dragon stands here, awaiting audience with &+rBel&+L.
 ~
 &+LThis dragon is one of the many offspring of Tiamat. Its body is covered in
 &+Lpitch black scales, and it has 3 heads, one of each evil dragon. It has
@@ -554,7 +544,7 @@ Y 0 33 6
 #32453
 yeddikadir servant devil~
 &+LYeddikadir, servant of &+rBel~
-&+La large devil stands here, to &+rBel&+L's right side&n
+&+LA large devil stands here, to &+rBel&+L's right side.&n
 ~
 &+LYeddikadir is a large cornugon devil, nearly 10 feet in height. Cornugon
 &+Ldevils closely resemble the devils in standard mythology, having small
@@ -569,7 +559,7 @@ Y 0 544 4
 #32454
 nalebranc servant devil~
 &+LNalebranc, servant of &+rBel~
-&+La large devil stands here, to &+rBel&+L's left side&n
+&+La large devil stands here, to &+rBel&+L's left side.&n
 ~
 &+LNalebranc is a huge cornugon devil, nearly 12 feet in height. Cornugon
 &+Ldevils closely resemble the devils in standard mythology, having small

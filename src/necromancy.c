@@ -821,9 +821,9 @@ void spawn_raise_undead(P_char ch, P_char vict, P_obj corpse)
       
       if (GET_CLASS(ch, CLASS_THEURGIST))
       {
-        act("You place your hand on &N upon $S last dieing breath.", FALSE, ch, 0, vict, TO_CHAR);
+        act("You place your hand on &N upon $S last dying breath.", FALSE, ch, 0, vict, TO_CHAR);
         act("After a short &+yr&+Yi&+Wtu&+Ya&+yl&n, the &+Wsoul&n of $N&n is called to inhibit the $p.", FALSE, ch, 0, vict, TO_CHAR);
-	act("$n&n places $s hand on $N upon $S last dieing breath.", FALSE, ch, 0, vict, TO_ROOM);
+	act("$n&n places $s hand on $N upon $S last dying breath.", FALSE, ch, 0, vict, TO_ROOM);
         act("The $p &+btr&+Ban&+Csf&+Bor&+bms&n into $N&n and awaits instructions from &n&n.", FALSE, ch, 0, vict, TO_ROOM);
       }
       else

@@ -7639,7 +7639,7 @@ the barrel's beer.
 #1101
 studded leather sleeves~
 &+ya pair of studded leather sleeves&N~
-&+ysome studded leather sleeves have been left here.&N~
+&+ySome studded leather sleeves have been left here.&N~
 ~
 9 13 3 2 7 0 524296 16641 0 4203196896 0
 2 0 0 2 0 0 0 0
@@ -7647,7 +7647,7 @@ studded leather sleeves~
 #1102
 studded leather leggings~
 &+ya pair of studded leather leggings&N~
-&+ysome studded leather leggings lay here tossed aside.&N~
+&+ySome studded leather leggings lay here tossed aside.&N~
 ~
 9 13 3 2 7 0 524296 16417 0 4203196896 0
 2 0 0 2 0 0 0 0
@@ -7655,7 +7655,7 @@ studded leather leggings~
 #1103
 studded leather boots~
 &+ya pair of studded leather boots&N~
-&+ysome studded leather boots have been left here.&N~
+&+ySome studded leather boots have been left here.&N~
 ~
 9 13 3 2 7 0 525320 16449 0 87572507 0
 2 0 0 2 0 0 0 0
@@ -7663,7 +7663,7 @@ studded leather boots~
 #1104
 thick leather gloves~
 &+ysome thick leather gloves&N~
-&+ysome thick leather gloves are laying here in the dust&N~
+&+ySome thick leather gloves are laying here in the dust.&N~
 ~
 9 14 3 2 7 0 525320 16513 0 87572483 0
 2 0 0 4 0 0 0 0
@@ -7671,7 +7671,7 @@ thick leather gloves~
 #1105
 thick spiked leather bracer~
 &+ya thick spiked leather bracer&N~
-&+ya leather bracer lays here in the dirt&N~
+&+yA leather bracer lays here in the dirt.&N~
 ~
 9 14 3 1 7 0 525320 20481 0 87556099 0
 1 0 0 4 1 0 0 0
@@ -7679,7 +7679,7 @@ thick spiked leather bracer~
 #1106
 bronze skull cap~
 &+Ya &+ybronze&+Y skull cap&N~
-&+Ya &+ybronze&+Yskull cap has been left here&N~
+&+YA &+ybronze &+Yskull cap has been left here.&N~
 ~
 9 20 3 1 7 0 525320 16401 0 87572507 0
 1 0 0 2 0 0 0 0
@@ -7687,7 +7687,7 @@ bronze skull cap~
 #1107
 suit spiked leather armor~
 &+ya suit of spiked leather armor&N~
-&+ya suit of leather armor is tossed aside here&N~
+&+yA suit of leather armor is tossed aside here.&N~
 ~
 9 14 3 3 7 0 525320 16393 0 87572507 0
 3 0 0 3 0 0 0 0
@@ -7703,7 +7703,7 @@ long steel sword~
 #1109
 small round wooden shield~
 &+ya small round wooden shield&N~
-&+ya small round shield has been dropped here.&N~
+&+yA small round shield has been dropped here.&N~
 ~
 37 6 3 5 7 0 8 16897 0 0 0
 1 1 2 50 3 0 0 0
@@ -7711,7 +7711,7 @@ small round wooden shield~
 #1110
 large two handed two-handed twohanded sword~
 &+Wa large two-handed sword&N~
-&+Wa large two-handed sword has been left here.&N~
+&+WA large two-handed sword has been left here.&N~
 ~
 5 16 3 4 7 0 4203528 24577 0 67108872 0
 13 2 9 3 0 0 0 0
@@ -7719,7 +7719,7 @@ large two handed two-handed twohanded sword~
 #1111
 large two handed two-handed twohanded sword~
 &+La large two-handed sword&N~
-&+La large two-handed sword has been left here.&N~
+&+LA large two-handed sword has been left here.&N~
 ~
 5 16 3 4 7 0 4202504 24577 0 0 0
 13 2 9 3 0 0 0 0
@@ -7731,7 +7731,7 @@ A
 #1112
 thin steel dagger~
 &+wa thin steel dagger&N~
-&+wa steel dagger has been tossed aside here.&N~
+&+wA steel dagger has been tossed aside here.&N~
 ~
 5 16 3 1 7 0 8200 24577 0 4060479992 0
 2 3 2 11 0 0 0 0
@@ -7739,7 +7739,7 @@ thin steel dagger~
 #1113
 thick short sword~
 &+wa thick short sword&N~
-&+wa thick sword has been tossed aside here.&N~
+&+wA thick sword has been tossed aside here.&N~
 ~
 5 16 3 2 7 0 9224 24577 0 87650307 0
 9 1 7 3 0 0 0 0
@@ -7747,7 +7747,7 @@ thick short sword~
 #1114
 quill~
 &+Ya quill&N~
-&+Ya quill has been dropped here.&N~
+&+YA quill has been dropped here.&N~
 ~
 21 50 3 1 7 0 8 8404993 0 0 0
 0 0 0 0 0 0 0 0
@@ -7755,7 +7755,7 @@ quill~
 #1115
 book spell spellbook~
 &+ya spellbook&N~
-&+ya spellbook has been tossed aside here.&N~
+&+yA spellbook has been tossed aside here.&N~
 ~
 33 28 3 1 7 0 8 16385 0 0 0
 0 0 80 0 0 0 0 0
@@ -7763,7 +7763,7 @@ book spell spellbook~
 #1116
 quiver small~
 &+ga small quiver&N~
-&+ga small quiver lays here in the dust.&N~
+&+gA small quiver lays here in the dust.&N~
 ~
 30 42 3 1 7 0 525320 1048577 0 2097154 0
 10 1 1 0 0 0 0 0
@@ -7771,7 +7771,7 @@ quiver small~
 #1117
 thin arrow~
 &+ga thin arrow&N~
-&+ga thin arrow has been left on the ground here&N~
+&+gA thin arrow has been left on the ground here.&N~
 ~
 7 6 3 1 7 0 1032 16385 0 2097154 0
 0 1 4 1 0 0 0 0
@@ -7779,7 +7779,7 @@ thin arrow~
 #1118
 reed bow longbow~
 &+Ga reed longbow&N~
-&+Ga bow has been dropped here.&N~
+&+GA bow has been dropped here.&N~
 ~
 6 42 3 2 7 0 8 24577 0 0 0
 60 60 0 1 0 0 0 0
@@ -7787,7 +7787,7 @@ reed bow longbow~
 #1119
 thin cloth sleeves~
 &+Wa pair of thin cloth sleeves&N~
-&+Wsome cloth sleeves have been dropped here.&N~
+&+WSome cloth sleeves have been dropped here.&N~
 ~
 9 3 3 0 7 0 525320 16641 0 33685536 0
 1 0 0 2 0 0 0 0
@@ -7795,7 +7795,7 @@ thin cloth sleeves~
 #1120
 thin cloth pants~
 &+Wa pair of thin cloth pants&N~
-&+Wa pair of pants have been dropped here.&N~
+&+WA pair of pants have been dropped here.&N~
 ~
 9 3 3 0 7 0 525320 16417 0 33685536 0
 1 0 0 2 0 0 0 0
@@ -7803,7 +7803,7 @@ thin cloth pants~
 #1121
 wormskin worm boots~
 &+ma pair of wormskin boots&N~
-&+ma pair of wormskin boots have been tossed aside here.&N~
+&+mA pair of wormskin boots have been tossed aside here.&N~
 ~
 9 12 3 1 7 0 524296 65 0 0 0
 1 0 0 2 0 0 0 0
@@ -7811,7 +7811,7 @@ wormskin worm boots~
 #1122
 holy beads~
 &+Wsome holy beads&N~
-&+Wsome holy beads have been dropped here.&N~
+&+WSome holy beads have been dropped here.&N~
 ~
 9 52 3 1 7 0 525320 16389 0 33685536 0
 1 0 0 1 0 0 0 0
@@ -7819,7 +7819,7 @@ holy beads~
 #1123
 unholy beads~
 &+Lsome unholy beads&N~
-&+Lsome unholy beads have been dropped here.&N~
+&+LSome unholy beads have been dropped here.&N~
 ~
 9 52 3 1 7 0 525320 16389 0 33685536 0
 1 0 0 1 0 0 0 0
@@ -7827,7 +7827,7 @@ unholy beads~
 #1124
 holy priest cap~
 &+Wa holy priest cap&N~
-&+Wa holy priest cap has been dropped here.&N~
+&+WA holy priest cap has been dropped here.&N~
 ~
 9 3 3 1 7 0 525320 16401 0 33685536 0
 1 0 0 1 0 0 0 0
@@ -7835,7 +7835,7 @@ holy priest cap~
 #1125
 unholy priest cap~
 &+Lan unholy priest cap&N~
-&+Lan unholy priest cap has been dropped here.&N~
+&+LAn unholy priest cap has been dropped here.&N~
 ~
 9 3 3 1 7 0 525320 16401 0 33685536 0
 1 0 0 1 0 0 0 0
@@ -7843,7 +7843,7 @@ unholy priest cap~
 #1126
 priest gown thin~
 &+wa thin priest gown&N~
-&+wa priest gown has been left here.&N~
+&+wA priest gown has been left here.&N~
 ~
 9 3 3 2 7 0 525320 16393 0 33685536 0
 2 0 0 1 0 0 0 0
@@ -7851,7 +7851,7 @@ priest gown thin~
 #1127
 stone warhammer hammer large~
 &+La large stone warhammer&N~
-&+La large stone warhammer has been dropped here.&N~
+&+LA large stone warhammer has been dropped here.&N~
 ~
 5 11 3 3 7 0 1032 24577 0 121258275 0
 4 1 8 6 0 0 0 0
@@ -7859,7 +7859,7 @@ stone warhammer hammer large~
 #1128
 tight black sleeves~
 &+La pair of tight black sleeves&N~
-&+La pair of sleeves have been dropped here.&N~
+&+LA pair of sleeves have been dropped here.&N~
 ~
 9 3 3 0 7 0 525320 16641 0 8499200 0
 1 0 0 1 0 0 0 0
@@ -7867,7 +7867,7 @@ tight black sleeves~
 #1129
 tight black pants~
 &+La pair of tight black pants&N~
-&+La pair of pants have been dropped here.&N~
+&+LA pair of pants have been dropped here.&N~
 ~
 9 3 3 0 7 0 525320 16417 0 8499200 0
 1 0 0 1 0 0 0 0
@@ -7875,7 +7875,7 @@ tight black pants~
 #1130
 tight black gloves~
 &+La pair of tight black gloves&N~
-&+La pair of gloves has been dropped here.&N~
+&+LA pair of gloves has been dropped here.&N~
 ~
 9 3 3 0 7 0 525320 16513 0 8499200 0
 1 0 0 1 0 0 0 0
@@ -7883,7 +7883,7 @@ tight black gloves~
 #1131
 tight black slippers~
 &+La pair of tight black slippers&N~
-&+La pair of tight black slippers has been tossed here.&N~
+&+LA pair of tight black slippers has been tossed here.&N~
 ~
 9 3 3 0 7 0 525320 16449 0 146913792 0
 1 0 0 1 0 0 0 0
@@ -7891,7 +7891,7 @@ tight black slippers~
 #1132
 black leather mask~
 &+La black leather mask&N~
-&+La black mask has been dropped here.&N~
+&+LA black mask has been dropped here.&N~
 ~
 9 13 3 0 7 0 525320 278529 0 126976 0
 1 0 0 1 0 0 0 0
@@ -7899,7 +7899,7 @@ black leather mask~
 #1133
 pointy cap~
 &+ba pointy cap&N~
-&+ba point cap has been dropped here.&N~
+&+bA point cap has been dropped here.&N~
 ~
 9 3 3 1 7 0 524296 16401 0 0 0
 1 0 0 1 0 0 0 0
@@ -7907,7 +7907,7 @@ pointy cap~
 #1134
 silver flute instrument~
 &+wa plain silver flute&N~
-&+wa plain silver flute lays on the ground here.&N~
+&+wA plain silver flute lays on the ground here.&N~
 ~
 32 22 3 1 7 0 8 8404993 0 0 0
 184 1 5 1 0 0 0 0
@@ -7915,7 +7915,7 @@ silver flute instrument~
 #1135
 bark sleeves~
 &+ya pair of bark sleeves&N~
-&+ya pair of bark sleeves was dropped here.&N~
+&+yA pair of bark sleeves was dropped here.&N~
 ~
 9 4 3 2 7 0 525320 16641 0 128 0
 1 0 0 2 0 0 0 0
@@ -7923,7 +7923,7 @@ bark sleeves~
 #1136
 bark leggings~
 &+ya pair of bark leggings&N~
-&+ysome bark leggings have been dropped here.&N~
+&+ySome bark leggings have been dropped here.&N~
 ~
 9 4 3 2 7 0 525320 16417 0 128 0
 1 0 0 2 0 0 0 0
@@ -7931,7 +7931,7 @@ bark leggings~
 #1137
 bark boots~
 &+ya pair of bark lined boots&N~
-&+ysome bark boots have been dropped here.&N~
+&+ySome bark boots have been dropped here.&N~
 ~
 9 4 3 1 7 0 525320 16449 0 128 0
 1 0 0 2 0 0 0 0
@@ -7939,7 +7939,7 @@ bark boots~
 #1138
 bark leaf cap~
 &+ya bark and &+gleaf&+y cap&N~
-&+ya cap made from &+gleaves&+y and bark has been dropped here.&N~
+&+yA cap made from &+gleaves&+y and bark has been dropped here.&N~
 ~
 9 4 3 2 7 0 525320 16401 0 128 0
 1 0 0 2 0 0 0 0
@@ -7947,7 +7947,7 @@ bark leaf cap~
 #1139
 bark armor~
 &+ya suit of bark coated armor&N~
-&+ya suit of bark coated armor is laying here.&N~
+&+yA suit of bark coated armor is laying here.&N~
 ~
 9 4 3 3 7 0 525320 16393 0 128 0
 2 0 0 2 0 0 0 0
@@ -7955,7 +7955,7 @@ bark armor~
 #1140
 hardwood wood cudgel~
 &+ya hardwood cudgel&N~
-&+ya cudgel has been dropped here.&N~
+&+yA cudgel has been dropped here.&N~
 ~
 5 6 3 4 7 0 1032 24577 0 128 0
 10 1 8 7 0 0 0 0
@@ -7963,7 +7963,7 @@ hardwood wood cudgel~
 #1141
 evil helm~
 &+Lan evil looking helm&N~
-&+Lan evil looking helm has been dropped here.&N~
+&+LAn evil looking helm has been dropped here.&N~
 ~
 9 3 3 1 7 0 1074267144 16401 0 8500224 0
 1 0 0 1 0 0 0 0
@@ -7971,7 +7971,7 @@ evil helm~
 #1142
 dark black robe~
 &+La dark black robe&N~
-&+La dark black robe has been dropped here.&N~
+&+LA dark black robe has been dropped here.&N~
 ~
 9 3 3 1 7 0 525320 16393 0 1024 0
 1 0 0 1 0 0 0 0
@@ -7979,7 +7979,7 @@ dark black robe~
 #1143
 dark black boots~
 &+La pair of dark black boots&N~
-&+La pair of dark black boots has been dropped here.&N~
+&+LA pair of dark black boots has been dropped here.&N~
 ~
 9 3 3 1 7 0 525320 16449 0 1024 0
 1 0 0 1 0 0 0 0
@@ -7987,7 +7987,7 @@ dark black boots~
 #1144
 smelly fur hat~
 &+Ra smelly fur hat&N~
-&+Ra smelly hat has been dropped here.&N~
+&+RA smelly hat has been dropped here.&N~
 ~
 9 2 3 1 7 0 525320 16401 0 256 0
 1 0 0 2 0 0 0 0
@@ -7995,7 +7995,7 @@ smelly fur hat~
 #1145
 suit smelly animal furs~
 &+Ra suit of smelly animal furs&N~
-&+Rsome smelly animal furs has been dropped here.&N~
+&+RSome smelly animal furs has been dropped here.&N~
 ~
 9 2 3 1 7 0 525320 16393 0 256 0
 2 0 0 3 0 0 0 0
@@ -8003,7 +8003,7 @@ suit smelly animal furs~
 #1146
 fur boots~
 &+Ra pair of fur boots&N~
-&+Ra pair of fur boots has been dropped here.&N~
+&+RA pair of fur boots has been dropped here.&N~
 ~
 9 2 3 1 7 0 525320 16449 0 256 0
 2 0 0 3 0 0 0 0
@@ -8011,7 +8011,7 @@ fur boots~
 #1147
 loose robes~
 &+wa set of loose fitting robes&N~
-&+wa set of loose fitting robes has been dropped here&N~
+&+wA set of loose fitting robes has been dropped here.&N~
 ~
 9 2 3 0 7 0 525320 16393 0 64 0
 1 0 0 1 0 0 0 0
@@ -8019,7 +8019,7 @@ loose robes~
 #1148
 loose leggings~
 &+wa set of loose fitting leggings&N~
-&+wa set of loose fitting leggings has been dropped here.&N~
+&+wA set of loose fitting leggings has been dropped here.&N~
 ~
 9 3 3 0 7 0 525320 16417 0 64 0
 1 0 0 1 0 0 0 0
@@ -8027,7 +8027,7 @@ loose leggings~
 #1149
 loose sleeves~
 &+wa set of loose fitting sleeves&N~
-&+wa set of loose fitting sleeves was dropped here.&N~
+&+wA set of loose fitting sleeves was dropped here.&N~
 ~
 9 3 3 0 7 0 525320 16641 0 64 0
 1 0 0 1 0 0 0 0
@@ -8035,7 +8035,7 @@ loose sleeves~
 #1150
 leather sandals~
 &+wsome thin leather sandals&N~
-&+wsome thin leather sandals was dropped here.&N~
+&+wSome thin leather sandals was dropped here.&N~
 ~
 9 3 3 0 7 0 525320 16449 0 64 0
 1 0 0 1 0 0 0 0
@@ -8187,7 +8187,7 @@ deerskin belt~
 #1169
 deerskin cloak~
 &+ya deerskin cloak&N~
-&+ya cloak made from deerskin has been dropped here.&N~
+&+yA cloak made from deerskin has been dropped here.&N~
 ~
 9 12 3 0 7 0 524296 1025 0 0 0
 1 0 0 1 0 0 0 0
@@ -8195,7 +8195,7 @@ deerskin cloak~
 #1170
 belt skins assorted~
 &+ra belt made from &+yassorted &+Yskins&N~
-&+ra belt made from skins has been dropped here.&N~
+&+rA belt made from skins has been dropped here.&N~
 ~
 9 12 3 0 7 0 524296 2049 0 0 0
 0 0 0 1 0 0 0 0
@@ -8203,7 +8203,7 @@ belt skins assorted~
 #1171
 hardened bracer crystal~
 &+ca hardened bracer of &+Ccrystal&N~
-&+Ca bracer made from crystal has been dropped here.&N~
+&+CA bracer made from crystal has been dropped here.&N~
 ~
 9 8 3 0 7 0 524296 20481 0 0 0
 1 0 0 1 0 0 0 0
@@ -8211,7 +8211,7 @@ hardened bracer crystal~
 #1172
 ratskins ratskin belt sewn~
 &+La belt of sewn &+rratskins&N~
-&+La belt made from skin has been dropped here.&N~
+&+LA belt made from skin has been dropped here.&N~
 ~
 9 12 3 0 7 0 524296 2049 0 0 0
 0 0 0 1 0 0 0 0
@@ -8219,7 +8219,7 @@ ratskins ratskin belt sewn~
 #1173
 reptile skin cloak~
 &+Ga &+greptile skin &+Gcloak&N~
-&+Ga cloak made from skin has been dropped here.&N~
+&+GA cloak made from skin has been dropped here.&N~
 ~
 9 12 3 0 7 0 524296 1025 0 0 0
 1 0 0 1 0 0 0 0
@@ -8227,7 +8227,7 @@ reptile skin cloak~
 #1174
 belt cured white leather~
 &+Wa belt of cured white leather&N~
-&+Wa belt made from skin has been dropped here.&N~
+&+WA belt made from skin has been dropped here.&N~
 ~
 9 14 3 0 7 0 524296 2049 0 0 0
 0 0 0 1 0 0 0 0
@@ -8235,7 +8235,7 @@ belt cured white leather~
 #1175
 cloak soft white fur~
 &+Wa cloak of soft white fur&N~
-&+Wa cloak made from fur has been dropped here.&N~
+&+WA cloak made from fur has been dropped here.&N~
 ~
 9 12 3 0 7 0 524296 1025 0 0 0
 1 0 0 1 0 0 0 0
@@ -8243,7 +8243,7 @@ cloak soft white fur~
 #1176
 belt thick leather~
 &+La thick leather belt&N~
-&+La belt made from thick leather has been dropped here.&N~
+&+LA belt made from thick leather has been dropped here.&N~
 ~
 9 13 3 0 7 0 524296 2049 0 0 0
 0 0 0 1 0 0 0 0
@@ -8251,7 +8251,7 @@ belt thick leather~
 #1177
 cloak dark animal hide~
 &+La cloak of dark animal hide&N~
-&+Ga cloak made from skins has been dropped here.&N~
+&+GA cloak made from skins has been dropped here.&N~
 ~
 9 12 3 0 7 0 524296 1025 0 0 0
 1 0 0 1 0 0 0 0
@@ -8259,7 +8259,7 @@ cloak dark animal hide~
 #1178
 woven hide belt~
 &+ga belt of woven hides&N~
-&+ga belt made from skins has been dropped here.&N~
+&+gA belt made from skins has been dropped here.&N~
 ~
 9 12 3 0 7 0 524296 2049 0 0 0
 0 0 0 1 0 0 0 0
@@ -8267,7 +8267,7 @@ woven hide belt~
 #1179
 cured leather cloak~
 &+ga cloak of cured leather&N~
-&+Ga cloak made from skins has been dropped here.&N~
+&+GA cloak made from skins has been dropped here.&N~
 ~
 9 12 3 0 7 0 524296 1025 0 0 0
 1 0 0 1 0 0 0 0
@@ -8275,7 +8275,7 @@ cured leather cloak~
 #1180
 illithidskin belt~
 &+Man illithidskin belt&N~
-&+Ma belt made from skins has been dropped here.&N~
+&+MA belt made from skins has been dropped here.&N~
 ~
 9 12 3 0 7 0 524296 2049 0 0 0
 0 0 0 1 0 0 0 0
@@ -8283,7 +8283,7 @@ illithidskin belt~
 #1181
 illithidskin cloak~
 &+Man illithidskin cloak&N~
-&+Ma cloak made from skins has been dropped here.&N~
+&+MA cloak made from skins has been dropped here.&N~
 ~
 9 12 3 0 7 0 524296 1025 0 0 0
 1 0 0 1 0 0 0 0
@@ -8291,7 +8291,7 @@ illithidskin cloak~
 #1182
 brass nose ring~
 &+Ya brass nose ring&N~
-&+Ya ring of brass has been dropped here.&N~
+&+YA ring of brass has been dropped here.&N~
 ~
 9 17 3 2 7 0 524296 67108865 0 0 0
 1 0 0 3 0 0 0 0
@@ -8299,7 +8299,7 @@ brass nose ring~
 #1183
 dwarfskin collar~
 &+ya tattered &+Ydwarfskin &+ycollar&N~
-&+ya collar made from skins has been dropped here.&N~
+&+yA collar made from skins has been dropped here.&N~
 ~
 9 2 3 2 7 0 524296 5 0 0 0
 2 0 0 3 0 0 0 0
@@ -8307,7 +8307,7 @@ dwarfskin collar~
 #1184
 mask flesh stitched~
 &+ra stitched mask of flesh&N~
-&+ra mask made from flesh has been left here.&N~
+&+rA mask made from flesh has been left here.&N~
 ~
 9 2 3 1 7 0 524296 278529 0 0 0
 1 0 0 2 0 0 0 0
@@ -8315,7 +8315,7 @@ mask flesh stitched~
 #1185
 small broken tree~
 &+ya small broken tree&N~
-&+ya small tree of some sort is laying here on the ground.&N~
+&+yA small tree of some sort is laying here on the ground.&N~
 ~
 5 4 3 10 7 0 4194312 24577 0 0 0
 13 2 5 7 0 0 0 0
@@ -8323,7 +8323,7 @@ small broken tree~
 #1186
 smelly fur sleeves~
 &+Ra pair of smelly fur sleeves&N~
-&+Rsome smelly fur sleeves have been dropped here.&N~
+&+RSome smelly fur sleeves have been dropped here.&N~
 ~
 9 12 3 0 7 0 525312 257 0 256 0
 8 0 0 3 0 0 0 0
@@ -8331,7 +8331,7 @@ smelly fur sleeves~
 #1187
 smelly fur leggings~
 &+Ra pair of smelly fur leggings&N~
-&+Rsome smelly fur leggings have been dropped here.&N~
+&+RSome smelly fur leggings have been dropped here.&N~
 ~
 9 12 3 0 7 0 525312 33 0 256 0
 8 0 0 3 0 0 0 0
@@ -8339,7 +8339,7 @@ smelly fur leggings~
 #1188
 net illithid tentacles~
 &+Ma net woven of Illithid tentacles&N~
-&+Ma net of waving tentacles writhes on the ground&N~
+&+MA net of waving tentacles writhes on the ground.&N~
 ~
 15 2 3 0 7 0 524288 16385 0 0 0
 50 1 0 400 0 0 0 0
@@ -8347,7 +8347,7 @@ net illithid tentacles~
 #1189
 cowl~
 &+Ma ragged cl&+Coth cowl&N~
-&+Ma ragged cl&+Coth cowl lays here.&N~
+&+MA ragged cl&+Coth cowl lays here.&N~
 ~
 9 3 3 0 7 0 525824 17 0 131072 520521728
 8 0 0 3 0 0 0 0
@@ -8385,14 +8385,14 @@ rika~
 #1193
 cute fuzzy badge~
 &+Ma c&+Wut&+Me a&+Wnd&N &+Mfu&+Wzz&+My b&+Wad&+Mge&N~
-&+Ma c&+Wut&+Me a&+Wnd&N &+Mfu&+Wzz&+My b&+Wad&+Mge&N &+Wfloats around here.&N~
+&+MA c&+Wut&+Me a&+Wnd&N &+Mfu&+Wzz&+My b&+Wad&+Mge&N &+Wfloats around here.&N~
 ~
 11 3 2 0 7 0 67108865 2097153 64 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
 cute fuzzy badge~
-&+M   This cute badge shows a tiny inscription on its back&N
+&+M   This cute badge shows a tiny inscription on its back:&N
 
    &+MPro&+Wpert&+My of J&+Wera&N
 ~
@@ -8407,15 +8407,15 @@ biara~
 #1200
 onyx potion~
 an &+Lonyx&N potion~
-a small bottle of &+Lonyx&N liquid sits here~
+A small bottle of &+Lonyx&N liquid sits here.~
 ~
 10 7 2 4 7 0 0 16385 0 0 0
 50 9 1 41 0 0 0 0
 5 10 100
 #1201
-dildo~
+dildo tripod~
 &+LTripods Dildo of Death&N~
-a large dildo has been left here.~
+A large dildo has been left here.~
 ~
 5 16 5 0 7 0 557056 67117057 0 0 0
 10 200 200 3 0 0 0 0
@@ -8423,7 +8423,7 @@ a large dildo has been left here.~
 #1202
 shadow shadows carpet~
 &+Lwisp of shadow~
-&+La carpet of shadows covers the floor, walls and ceiling.&n~
+&+LA carpet of shadows covers the floor, walls and ceiling.&n~
 ~
 29 1 0 50 7 0 0 0 0 0 0
 320 1218 5 1 0 0 0 0
@@ -8454,27 +8454,6 @@ book ansi color~
 8 28 2 5 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 1000 100
-E
-oldscat~
-First things first.  The main thing to understand when using our version of
-ansi color is:  you can SET things, or CLEAR ALL (back to white on black), but
-you cannot just turn off bold, or blink.
-
-There are 3 types of ansi control sequences:
-
-&+<color> -  set foreground color.  If the color letter is uppercase, the BOLD
-             (bright/light) bit is also set (and will STAY set) until either
-             a newline, or &<N> is done.
-&-<color> -  set background color.  If the color letter is uppercase, the BLINK
-             bit will be set (same as for &+ above).
-&=<bg><fg> - set both background <bg> and foreground <fg> color, exactly the
-             same restrictions as for setting foreground and background
-             separately.
-
-w - white    l - black    r - red    b - blue    g - green
-y - yellow   c - cyan     m - magenta
-(+w is normal text, +W is bold text)
-~
 E
 book ansi color~
 
@@ -8510,7 +8489,7 @@ tree palm~
 200 0 100
 #1214
 wine tub hot~
-&+MRend's hot tub&N~
+&+MRand's hot tub&N~
 &+mA &+Mbubble filled&N &+mhot tub sits here, babes all around.&N~
 ~
 17 18 10 0 15 0 0 0 0 0 0
@@ -8534,7 +8513,7 @@ cheese~
 1 0 100
 #1217
 bed~
-&+RRend's bed&N~
+&+RRand's bed&N~
 &+RA heart shaped bed, complete with &+mvelvet pillows&N &+Rand &+Csatin sheets&N &+Ris here.~
 ~
 13 18 5 0 15 0 0 0 0 0 0
@@ -8543,7 +8522,7 @@ bed~
 #1218
 hook citadel~
 flying citadel hook object~
-A flying citadel hook object roams the valley~
+A flying citadel hook object roams the valley.~
 ~
 13 16 0 0 7 0 2 0 0 0 0
 0 0 0 0 0 0 0 0
@@ -8576,8 +8555,8 @@ A
 35 15
 #1222
 god stone nobody~
-&+WA God Stone&N~
-&+WA God Stone lies here beckoning you to pick it up.&N~
+&+Wthe God Stone&N~
+&+WThe God Stone lies here beckoning you to pick it up.&N~
 ~
 13 44 3 0 15 100 302096392 16385 0 0 0
 0 0 0 0 0 0 0 0
@@ -8585,7 +8564,7 @@ god stone nobody~
 #1223
 wand~
 &+La small &+ycargo information&+L wand&N~
-&+LA small wand with a ship shaped pommel lie here&N~
+&+LA small wand with a ship-shaped pommel lies here.&N~
 ~
 13 15 3 0 7 0 67215369 16385 0 0 0
 0 0 0 0 0 0 0 0
@@ -8728,8 +8707,8 @@ A
 13 50
 #1231
 dagger bone~
-&+Lthe &+bskull tipped&+L dagger of &+bOrcus&N~
-&+LA skull tipped bone dagger is floating here.&N~
+&+Lthe &+bskull-tipped&+L dagger of &+bOrcus&N~
+&+LA skull-tipped bone dagger is floating here.&N~
 ~
 5 15 3 0 7 0 8986625 8193 64 0 0
 2 3 59 11 0 0 0 0
@@ -8767,7 +8746,7 @@ A
 #1240
 ham haunch~
 &+La tasty&N &+Yhoney glazed&N &+yH&+RA&+yM&N &+Lhaunch&N~
-&+La tasty&N &+Yhoney glazed&N &+yH&+RA&+yM&N &+Lhaunch is here.&N~
+&+LA tasty&N &+Yhoney glazed&N &+yH&+RA&+yM&N &+Lhaunch is here.&N~
 ~
 19 2 2 2 7 0 0 16385 0 0 0
 60 0 0 0 0 0 0 0
@@ -8784,7 +8763,7 @@ A
 #1241
 wooden lyre instrument~
 &+ya plain wooden lyre&N~
-&+ya small wooden lyre is here.&N~
+&+yA small wooden lyre is here.&N~
 ~
 32 6 3 0 7 0 1024 16385 0 8421920 0
 185 1 1 1 0 0 0 0
@@ -8796,7 +8775,7 @@ wooden lyre instrument~
 #1242
 wooden horn instrument~
 &+ya small wooden horn&N~
-&+ya small wooden horn has been left here.&N~
+&+yA small wooden horn has been left here.&N~
 ~
 32 6 3 0 7 0 1024 16385 0 8421920 0
 189 1 1 1 0 0 0 0
@@ -8808,7 +8787,7 @@ wooden horn instrument~
 #1243
 drum drums instrument~
 &+ya small wooden drum&N~
-&+ya small wooden drum has been left here.&N~
+&+yA small wooden drum has been left here.&N~
 ~
 32 6 3 0 7 0 1024 16385 0 8421920 0
 188 1 1 1 0 0 0 0
@@ -8820,7 +8799,7 @@ drum drums instrument~
 #1244
 small wooden mandolin instrument~
 &+ya small wooden mandolin&N~
-&+ya small wooden mandolin has been left here.&N~
+&+yA small wooden mandolin has been left here.&N~
 ~
 32 6 3 0 7 0 1024 16385 0 8421920 0
 186 1 1 1 0 0 0 0
@@ -8832,7 +8811,7 @@ small wooden mandolin instrument~
 #1245
 small wooden harp instrument~
 &+ya small wooden harp&N~
-&+ya small wooden harp has been left here.&N~
+&+yA small wooden harp has been left here.&N~
 ~
 32 6 3 0 7 0 1024 16385 0 8421920 0
 187 1 1 1 0 0 0 0
@@ -8844,7 +8823,7 @@ small wooden harp instrument~
 #1246
 small wooden flute instrument~
 &+ya small wooden flute&N~
-&+ya small wooden flute has been left here.&N~
+&+yA small wooden flute has been left here.&N~
 ~
 32 6 3 0 7 0 1024 16385 0 8421920 0
 184 1 1 1 0 0 0 0
@@ -8935,7 +8914,7 @@ track~
 #1277
 rose~
 a &+rred rose&N with &+gthorns&N and a long &+ystem&N~
-a rose lies here~
+&+rA rose lies here.~
 ~
 8 5 0 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0

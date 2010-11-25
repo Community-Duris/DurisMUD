@@ -65,7 +65,7 @@ tiny earth worm earthworm~
 ~
 &+yThis earthworm burrows through the mountain. It seeks refuge from the predators
 &+yat large that could eat it. It is a tiny worm, however, it could bite off
-&+ya man's foot. Tough rawhide covers its skin because it's strangely deformed
+&+ya man's foot. Tough rawhide covers its skin because it has strangely deformed
 &+yover the years from some unnatural incantations cursing these mountains.
 ~
 8 0 0 0 0 0 0 -555 S
@@ -463,7 +463,7 @@ a &+ygrazing stag~
 A &+ystag&n grazes here.&n
 ~
 &+yThis large stag roams the fields and eats the plant life. It is a large one,
-&+yand could kick a small tree over. It's powerful legs could send an opponent
+&+yand could kick a small tree over. Its powerful legs could send an opponent
 &+yreeling. Sometimes he calls out for a mate.
 ~
 72 0 0 0 0 0 0 0 S
@@ -477,7 +477,7 @@ a &+ystag&n~
 A &+ystag&n sends out a mating call.
 ~
 &+yThis large stag roams the fields and eats the plant life. It is a large one,
-&+yand could kick a small tree over. It's powerful legs could send an opponent
+&+yand could kick a small tree over. Its powerful legs could send an opponent
 &+yreeling. Sometimes he calls out for a mate.
 ~
 72 0 0 0 0 0 0 0 S
@@ -922,7 +922,7 @@ a &+ygrazing stag~
 A &+ystag&n grazes here.&n
 ~
 &+yThis large stag roams the fields and eats the plant life. It is a large one,
-&+yand could kick a small tree over. It's powerful legs could send an opponent
+&+yand could kick a small tree over. Its powerful legs could send an opponent
 &+yreeling. Sometimes he calls out for a mate.
 ~
 72 0 0 0 0 0 0 0 S
@@ -1089,7 +1089,7 @@ a &+ggreen dragon~
 An &+GENORMOUS&+g green dragon&n rests comfortably.
 ~
 &+gThis dragon has been around for thousands of years. Dragons live many many
-&+gmore years longer than any race. All dragons posess great magical abilities,
+&+gmore years longer than any race. All dragons possess great magical abilities,
 &+gand green are the strong powerful ones.
 ~
 3147786 1 0 24 4096 0 0 -999 S
@@ -1131,7 +1131,7 @@ An old &+Lhalf&n-&+Lorc&n sits mumbling to himself.
 This old half-orc mage sits on a log. He mumbles something to himself as he
 stares at at the ground, in recollectino. His old pointy top hat seems peculiar
 on him, as it would any orc. It is an old hat and has seen better days, just
-like it's bearer. The half-orc mage seems to posess may posess great power,
+like its bearer. The half-orc mage may posess great power,
 it seems to radiate around him strangely.
 ~
 2058 0 0 0 0 0 0 -999 S
@@ -1323,7 +1323,7 @@ great stag~
 &+yA great stag approaches a tree.
 ~
 This stag lives in the mountain forest. It is a great stag and would feed a
-family of five for a month. It's powerful legs could crush a man's skull.
+family of five for a month. Its powerful legs could crush a man's skull.
 ~
 8 0 0 0 0 0 0 0 S
 A 0 1 -1

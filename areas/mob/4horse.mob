@@ -6,7 +6,7 @@ golem silverr enormous~
 &+cThis magical beast is the ultimate guard dog.  It needs no food, drink or
 &+csleep.  It simply stands in wait for any that would dare to pass.  The silver
 &+cgolem towers over 75 feet in height.  It has lumbered forth from the
-&+crecesses beside the gate.  The golem knows no remorse and no mercy.  It's
+&+crecesses beside the gate.  The golem knows no remorse and no mercy.  Its
 &+conly purpose is to kill.
 ~
 33556586 1 0 268435644 1 0 8192 0 S
@@ -22,7 +22,7 @@ golem silverr enormous~
 &+cThis magical beast is the ultimate guard dog.  It needs no food, drink or
 &+csleep.  It simply stands in wait for any that would dare to pass.  The silver
 &+cgolem towers over 75 feet in height.  It has lumbered forth from the
-&+crecesses beside the gate.  The golem knows no remorse and no mercy.  It's
+&+crecesses beside the gate.  The golem knows no remorse and no mercy.  Its
 &+conly purpose is to kill.
 ~
 33557066 1 0 268435644 1 0 8192 0 S
@@ -110,7 +110,7 @@ skeletal weaponsmith skeleton~
 &+WA strong skeleton in &+Lchainmail&+W paces the store.
 ~
 This skeleton is rather large.  It has a rusted suit of chainmail dangling off
-of it's gaunt torso for protection.  The skeleton is quite powerful and it's
+of its gaunt torso for protection.  The skeleton is quite powerful and its
 hatred for the living is unmatched.
 ~
 1107298378 1 0 268435644 1 0 8192 -950 S
@@ -152,8 +152,8 @@ druid demented~
 &+ga &+Lde&+Gment&+Led &+gdruid~
 &+gA demented druid stands here, underneath a tree.
 ~
-&+gThis druid has become demented in it's undead form.  It's devotion to
-&+gnature remains intact, but it's hatred for humanoids has been increased
+&+gThis druid has become demented in its undead form.  Its devotion to
+&+gnature remains intact, but its hatred for humanoids has been increased
 &+gimmensely.
 ~
 1107298378 1 0 285212860 0 0 8192 0 S
@@ -310,7 +310,7 @@ zombie wretched~
 &+gA wretched &+Gzombie &+gstumbles about the town.
 ~
 A decomposing figure stumbles about the town angrily.  The zombie posseses
-great strength in it's undead state.  Care should be taken in dealing with
+great strength in its undead state.  Care should be taken in dealing with
 this slow, but very powerful beast.
 ~
 1107298376 1 0 268435468 12480 0 8192 -1000 S
@@ -338,7 +338,7 @@ a small skeleton~
 A small &+Wskeleton&n walks here, aimlessly.
 ~
 This small skeleton has no distinguishing features.  It's rather short, but it
-can still cause heavy damage using it's bony limbs as weapons.
+can still cause heavy damage using its bony limbs as weapons.
 ~
 1107298376 1 0 268435468 12480 0 8192 -1000 S
 U 0 1 2
@@ -365,7 +365,7 @@ the &+Lwraith&n of a dead &+cvillager~
 The &+Lwraith&n of a dead villager stands here.
 ~
 This undead creature maintains the ability to cast devastating spells.  The
-wraith is very aggressive and will attack anything that comes across it's
+wraith is very aggressive and will attack anything that comes across its
 path - especially humanoids.
 ~
 1107298376 1 0 268435484 12481 0 8192 -1000 S
@@ -379,7 +379,7 @@ zombie wise~
 &+yA wise zom&+gbie &+ystands here, starting intently.
 ~
 This zombie shows signs of intelligence.  The zombie is far more gifted than
-it's warrior counterparts.  This zombie maintains the ability of an evil
+its warrior counterparts.  This zombie maintains the ability of an evil
 acolyte.
 ~
 1107298376 1 0 268435468 45248 0 8192 -1000 S
@@ -392,8 +392,8 @@ ghast vengeful~
 &+La &+rvengeful &+Lghast~
 &+LA &+rvengeful&n &+Lghast &nstalks the streets.
 ~
-This creature has very thick black skin, and it seems to be sneering from it's
-undead mouth.  The monster shuffles along, twisting it's disgusting head to
+This creature has very thick black skin, and it seems to be sneering from its
+undead mouth.  The monster shuffles along, twisting its disgusting head to
 and fro taking in the surrounding area.
 ~
 1107298376 1 0 268435484 12480 128 8192 -1000 S
@@ -407,7 +407,7 @@ nightmare horse~
 &+LA nightmare gallops about the plains.
 ~
 The pitch black horse has gleeming &+rred&n eys that stare out defiantly.
-The large steed is muscular and stands nearly eight feet high at it's
+The large steed is muscular and stands nearly eight feet high at its
 broad shoulders.  Smoke billows from the nostrils of the horse as it breathes.
 ~
 1140852808 1 0 268435484 12480 0 8192 -1000 S
@@ -504,7 +504,7 @@ skeleton patrol patrolman~
 a &+Wskeleton &npatrolman~
 A &+Wskeleton&n patrolman walks the path near the castle.
 ~
-This skeleton wears a simple leather tunic over it's bony torso.  The skeleton
+This skeleton wears a simple leather tunic over its bony torso.  The skeleton
 appears to be guarding entry to the castle to the north.  These undead appear
 to be much smarter than most.  They walk in formation and seem to have a sense
 of purpose.
@@ -519,7 +519,7 @@ skeleton patrol leader~
 &+La &+Wskeleton &+Lpatrol leader~
 &+LA &+Wskeleton&+L patrol leader points out an attack formation.
 ~
-This skeleton wears a fine set of scalemail over it's bony torso.  The skeleton
+This skeleton wears a fine set of scalemail over its bony torso.  The skeleton
 appears to be guarding entry to the castle to the north.  The strong skeleton
 appears to be controlling the others.  It motions for the other skeletons to
 attack.
@@ -534,7 +534,7 @@ skeleton patrol leader~
 &+Ba &+Wskeleton &+Bpatrol leader~
 &+BA &+Wskeleton&+B patrol leader points out an attack formation.
 ~
-This skeleton wears a fine set of scalemail over it's bony torso.  The skeleton
+This skeleton wears a fine set of scalemail over its bony torso.  The skeleton
 appears to be guarding entry to the castle to the north.  The strong skeleton
 appears to be controlling the others.  It motions for the other skeletons to
 attack.
@@ -549,7 +549,7 @@ skeleton patrol leader~
 &+Ma &+Wskeleton &+Mpatrol leader~
 &+MA &+Wskeleton&+M patrol leader points out an attack formation.
 ~
-This skeleton wears a fine set of scalemail over it's bony torso.  The skeleton
+This skeleton wears a fine set of scalemail over its bony torso.  The skeleton
 appears to be guarding entry to the castle to the north.  The strong skeleton
 appears to be controlling the others.  It motions for the other skeletons to
 attack.
@@ -723,7 +723,7 @@ X 0 528 6
 #34548
 dracolich draco~
 &+La dra&ncol&+Lich~
-&+LA dracolich stands here, &+grotting flesh&n &+Lpeeling off it's frame.
+&+LA dracolich stands here, &+grotting flesh&n &+Lpeeling off its frame.
 ~
 &+LA Vicious dracolich stands here.  The beast is well over 50 feet high.  The
 &+Ldracolich is an undead dragon.  Truly an awe-inspiring creature of destruction
@@ -799,10 +799,10 @@ izykyzz enslaver illithid humanoid~
 &+mIzykyzz, the &+Menslaver~
 &+mA purple colored humanoid with a &+Mtentacled head&+m stands here.
 ~
-&+MThis elder illithid has earned a powerful rank within it's society.  The &+LElder
+&+MThis elder illithid has earned a powerful rank within its society.  The &+LElder
 &+LBrain&+M has granted this enslaver the position of ambassador.  It travels the
 &+Mland in search of allies that will join the illithid collective in enslaving
-&+Mall of the living in the universe.  Izykyzz has learned how to control it's
+&+Mall of the living in the universe.  Izykyzz has learned how to control its
 &+Mmassive brain with incredible accuracy.  The enslaver not only enjoys the
 &+Mthrill of conquering humanoids, but also the chance to inflict massive amounts
 &+Mof pain upon them.
@@ -833,7 +833,7 @@ wyrm enormous~
 &+ran enormous wyrm~
 &+rAn enormous wyrm crashes about in the &+gatrium.
 ~
-&+rThis great wyrm seems to have made the atrium in the castle it's home.  It
+&+rThis great wyrm seems to have made the atrium in the castle its home.  It
 &+ris unknown if the magnificent beast has come here out of free will, or if
 &+rthe enormous dragon has been enslaved.  The wyrm is very agressive and
 &+rit thrashes about angrily.
@@ -864,7 +864,7 @@ hydra enormous ravenous~
 &+LAn enormous multi-headed &+Ghydra&+L stands here, looking hungry.
 ~
 &+GThis beast is big.. really big.  The multiheaded dragon known as the hydra
-&+Gis a fearsome foe.  It's many heads allow it to fight off more than one
+&+Gis a fearsome foe.  Its many heads allow it to fight off more than one
 &+Gopponent at a time with east.  The hydra is almost as big as a dragon,
 &+Gbut just as vicious in combat.
 ~
@@ -881,7 +881,7 @@ apostle pestilence humanoid~
 A chanting figure appears out of the darkness.  The cloaked individual seems
 to be praying before an altar dedicated to the apocalypse demons.  This strange
 creature hovers slightly above the ground, and its head is rotating in a
-slight circular motion with it's hands raised.
+slight circular motion with its hands raised.
 ~
 1140852808 1 0 268435644 32768 0 8192 -1000 S
 UV 0 33 4
@@ -924,7 +924,7 @@ skeletal protector~
 &+La &+Wskeletal &+Lprotector~
 &+LA &+Wskeletal &+Lprotector stands here, protecting the horseman.
 ~
-This skeleton protects the Horseman.  It's job is to attack any that dare
+This skeleton protects the Horseman.  Its job is to attack any that dare
 the unthinkable and challenge the Horsemen.  The powerful skeleton will
 die(again) for the demon.
 ~
@@ -938,7 +938,7 @@ skeletal worshiper~
 &+ba &+Wskeletal &+bworshiper~
 &+bA &+Wskeletal &+bworshiper stands here, protecting the horseman.
 ~
-This skeleton protects the Horseman.  It's job is to attack any that dare
+This skeleton protects the Horseman.  Its job is to attack any that dare
 the unthinkable and challenge the Horsemen.  The powerful skeleton will
 die(again) for the demon.
 ~
@@ -952,7 +952,7 @@ skeletal mage~
 &+ma &+Wskeletal &+mmage~
 &+mA &+Wskeletal &+mmage stands here, protecting the horseman.
 ~
-This skeleton protects the Horseman.  It's job is to attack any that dare
+This skeleton protects the Horseman.  Its job is to attack any that dare
 the unthinkable and challenge the Horsemen.  The powerful skeleton will
 die(again) for the demon.
 ~
@@ -969,7 +969,7 @@ apostle famine humanoid~
 A chanting figure appears out of the darkness.  The cloaked individual seems
 to be praying before an altar dedicated to the apocalypse demons.  This strange
 creature hovers slightly above the ground, and its head is rotating in a
-slight circular motion with it's hands raised.
+slight circular motion with its hands raised.
 ~
 1140852808 1 0 268435644 32768 0 8192 -1000 S
 UV 0 33 4
@@ -984,7 +984,7 @@ an apostle of &+Ldeath~
 A chanting figure appears out of the darkness.  The cloaked individual seems
 to be praying before an altar dedicated to the apocalypse demons.  This strange
 creature hovers slightly above the ground, and its head is rotating in a
-slight circular motion with it's hands raised.
+slight circular motion with its hands raised.
 ~
 1140852808 1 0 268435516 32768 0 8192 -1000 S
 UV 0 33 4
@@ -999,7 +999,7 @@ apostle war humanoid~
 A chanting figure appears out of the darkness.  The cloaked individual seems
 to be praying before an altar dedicated to the apocalypse demons.  This strange
 creature hovers slightly above the ground, and its head is rotating in a
-slight circular motion with it's hands raised.
+slight circular motion with its hands raised.
 ~
 1140852808 1 0 268435516 32768 0 8192 -1000 S
 UV 0 33 4

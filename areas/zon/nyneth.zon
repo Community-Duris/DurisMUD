@@ -109,7 +109,7 @@ O 0 360 1 22994 100 0 0 0          * (object type not in this .obj file)
 *
 M 0 22900 2 22901 100 0 0 0        * an archway golem
 M 0 22900 2 22901 100 0 0 0        * an archway golem
-G 1 22900 1 0 100 0 0 0            *    the key of Ny'Neth
+G 1 22900 5 0 100 0 0 0            *    the key of Ny'Neth
 M 0 22901 3 22902 100 0 0 0        * an earth pixie
 M 0 22901 3 22903 100 0 0 0        * an earth pixie
 M 0 22901 3 22903 100 0 0 0        * an earth pixie

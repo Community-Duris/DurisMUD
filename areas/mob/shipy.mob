@@ -1,7 +1,7 @@
 #43100
-winterhaven guard burly~
-&+La burly &+WWinterhaven &+Lguard&N~
-&+LSent by &+WWinterhaven&+L, this burly &+Wguard&+L protects the gates&N.
+tharnadian guard burly~
+&+La burly &+WTharnadian &+Lguard&N~
+&+LSent by &+WTharnadian&+L, this burly &+Wguard&+L protects the gates&N.
 ~
    This elite dock guard stands here at the gates of the ship
 yard on his assigned post.  His number one goal is to keep all
@@ -220,9 +220,9 @@ PT 0 1 -1
 0.0.0.0 0
 8 8 1
 #43114
-winterhaven harbor watchman~
-&+La &+WWinterhaven &+Lharbor watchman&N~
-&+LA &+WWinterhaven &+Lwatchman has been sent here to guard the harbor.
+tharnadian harbor watchman~
+&+La &+WTharnadian &+Lharbor watchman&N~
+&+LA &+WTharnadian &+Lwatchman has been sent here to guard the harbor.
 ~
    This elite dock guard stands here at the gates of the ship
 yard on his assigned post.  His number one goal is to keep all

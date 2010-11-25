@@ -1363,7 +1363,7 @@ sprite~
 ~
    Like a minerature elf with wings, the sprites seem to enhabit the
 wilderness of Duris, creating their own societies.  They appear
-attired in very small sets of noblish cloths and usually wielding
+attired in very small sets of noblish clothes and usually wielding
 some sort of spear.
 ~
 8 0 0 0 0 0 0 0 S
@@ -1653,7 +1653,7 @@ sheep~
    This sheep seems to have wandered off from its herd and is standing
 here frozen stiff out of fear that a fox or something might come along
 and take it and eat it.  It has rather nice fur for a sheep that has
-been sepereated from its heard.
+been sepereated from its herd.
 ~
 8 0 0 0 0 0 0 0 S
 A 0 1 -1
@@ -1867,7 +1867,7 @@ horse wild~
 &+yA wild horse grazes peacefully here.
 ~
     This horse appears to have never been tamed and probably never will.
-It grazes here peacefull with its heard.  It has long dark brown hair and
+It grazes here peaceful with its herd.  It has long dark brown hair and
 is rather smelly.
 ~
 8 0 0 0 0 0 0 0 S

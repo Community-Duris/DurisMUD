@@ -506,7 +506,7 @@ D9
 0 0 70808
 S
 #70822
-&+gO&+yn &+ga &+WQ&+wu&+Mar&+wt&+Wz &+gSta&+Gir &+gCa&+yse in th&+ge &+RHe&+ra&+Rrt &+gof t&+yhe A&+gnci&+Gen&+gt O&+yak~
+&+gO&+yn &+ga &+WQ&+wu&+Mar&+wt&+Wz &+gSta&+Gir&+gca&+yse in th&+ge &+RHe&+ra&+Rrt &+gof t&+yhe A&+gnci&+Gen&+gt O&+yak~
    &+yThe heart of this forest giant seems to pulse with a sentience that
 &+yis at once maddening and calming to any who venture here. Fine netting
 &+ystrung with small &+Cc&+cry&+Cs&+cta&+Cls &+yhave been hung in dazzling patterns in the
@@ -993,7 +993,7 @@ D8
 0 0 70826
 S
 #70843
-&+gO&+yn &+ga &+WQ&+wu&+Mar&+wt&+Wz &+gSta&+Gir &+gCa&+yse in th&+ge &+RHe&+ra&+Rrt &+gof t&+yhe A&+gnci&+Gen&+gt O&+yak~
+&+gO&+yn &+ga &+WQ&+wu&+Mar&+wt&+Wz &+gSta&+Gir&+gca&+yse in th&+ge &+RHe&+ra&+Rrt &+gof t&+yhe A&+gnci&+Gen&+gt O&+yak~
    &+yThe heart of this forest giant seems to pulse with a sentience that
 &+yis at once maddening and calming to any who venture here. Fine netting
 &+ystrung with small &+Cc&+cry&+Cs&+cta&+Cls &+yhave been hung in dazzling patterns in the
@@ -1028,9 +1028,9 @@ D9
 0 0 70862
 S
 #70844
-&+yA Ha&+gllw&+Gay &+yof L&+givi&+Gng &+gBra&+Gnc&+yes~
+&+yA Ha&+gllwa&+Gy o&+gf Li&+yvin&+Gg Br&+ganc&+yhes~
    &+yThe branches of the Oak tree have been formed into an arched ceiling
-&+ythrough this  hallway. Light from the sky  beyond filters through small
+&+ythrough this hallway. Light from the sky beyond filters through small
 &+yopening between numerous branches and leaves in the walls and roof. The
 &+yboughs of the tree creak softly as the hallway sways gently in the wind
 &+yhigh above the rest of the forest.
@@ -1059,13 +1059,13 @@ D7
 S
 #70845
 &+cA Comfortable and Well Lit Study Hall~
-   &+cLike  the rest of the  Enclave, this  room has been  made from the
-&+cliving brances of the great Oak. Magically coaxed and manipulated, the
+   &+cLike the rest of the Enclave, this room has been made from the
+&+cliving branches of the great Oak. Magically coaxed and manipulated, the
 &+ctree has formed a comfortable, solid room  that is well protected from
-&+cthe elements in the forest beyond its leafy walls. Elegantly  carved
-&+cwooden desks have been placed along the southern wall, each  with its
-&+cown oil lamp for students who find  themselves studying late into  the
-&+cnight.  The eastern  wall has been covered  in bookshelves containing
+&+cthe elements in the forest beyond its leafy walls. Elegantly carved
+&+cwooden desks have been placed along the southern wall, each with its
+&+cown oil lamp for students who find themselves studying late into the
+&+cnight.  The eastern wall has been covered in bookshelves containing
 &+ctomes of knowledge on everything from forest lore, to spellbooks given
 &+cto the enclave by more knowledgable wizards. Large, soft cushions have
 &+cbeen strewn about along the northern wall of the study room, providing
@@ -1080,17 +1080,17 @@ D3
 S
 #70846
 &+CThe Private Chambers of the Archmage~
-   &+CThis room is  sparsely furnished, though  very  comfortable, smelling
-&+Cfaintly  of rose  petals and cedar. A  large and handsomely  made cedar
-&+Cwood  desk with a  matching chair has been  set in front of a large bay
+   &+CThis room is sparsely furnished, though very comfortable, smelling
+&+Cfaintly of rose petals and cedar. A large and handsomely made cedar
+&+Cwood desk with a matching chair has been set in front of a large bay
 &+Cwindow that looks out over the the tree tops to the east. Small crystals
-&+Cthat have  been magically  illuminated float near the ceiling above the
-&+Cdesk, casting  a  warm  glow  over various  tomes and sheafs of  arcane
-&+Cscrolls that have been  meticulously  organized on the  desktop. Placed
+&+Cthat have been magically illuminated float near the ceiling above the
+&+Cdesk, casting a warm glow over various tomes and sheafs of arcane
+&+Cscrolls that have been meticulously organized on the desktop. Placed
 &+Cnext to a particlularly large set of silver bound tomes, is a bowl with
-&+Cvarious nuts, and slices of dried fruit in it that would  be considered
+&+Cvarious nuts, and slices of dried fruit in it that would be considered
 &+Csuitable to delicate elven tastes. A large bed that has been covered with
-&+Ccomfortable looking pillows draped and with sheer fabric  embroidered with
+&+Ccomfortable looking pillows draped and with sheer fabric embroidered with
 &+Civy leaves rests in the corner opposite the desk. A large dresser, complete
 &+Cwith a fine and delecately framed mirror, has been placed near the bed.
 ~
@@ -1194,8 +1194,8 @@ D9
 S
 #70851
 &+GAn Open Platform High in the Branches of the Oak~
-   The floor of this large  platform  consists of  numerous intertwined
-living  branches of the ancient Oak tree. A  small cupboard  containing
+   The floor of this large platform consists of numerous intertwined
+living branches of the ancient Oak tree. A small cupboard containing
 various herbs for healing pultices and other magical needs rests in the
 far corner. A soft bed of moss covers the floor branches of the platform
 providing comfort for the students of the druid Azalea who teaches here.
@@ -1208,12 +1208,12 @@ D1
 S
 #70852
 &+gThe Bed Chamber of the High Druid~
-   &+gLacking  walls or even a ceiling, this  bedroom  is more akin to the
-&+gguard platforms of the  lower level of the  Enclave. In place of a bed,
+   &+gLacking walls or even a ceiling, this bedroom is more akin to the
+&+gguard platforms of the lower level of the Enclave. In place of a bed,
 &+ga cozy looking hammock has been hung from the hardy branches of the Oak
-&+gtree. It appears that  this place is a favorite of the small creatures
+&+gtree. It appears that this place is a favorite of the small creatures
 &+gof the forest that possess the ability to climb or fly, as many of them
-&+gflit in and out,  perhaps seeking  the druid Azalea  that resides here.
+&+gflit in and out, perhaps seeking the druid Azalea that resides here.
 &+gThough it resembles a campsite more than a bedroom, this place never the
 &+gless has a calming energy and a feeling of security to it.
 ~
@@ -1313,9 +1313,9 @@ beads~
 S
 #70857
 &+wA Sparsely Furnished and Undecorated Bedroom~
-   &+WThe walls of this bedroom are bare  and the  only  furniture in the
-&+Wroom  are  small  cot  and  a  plain, functional desk. A set of crisp,
-&+Wclean  robes hang on a brass hook in the southern wall. A large window
+   &+WThe walls of this bedroom are bare and the only furniture in the
+&+Wroom are small cot and a plain, functional desk. A set of crisp,
+&+Wclean robes hang on a brass hook in the southern wall. A large window
 &+Wis open on the western side of the room, allowing fresh air to come in.
 &+WA small wax candle sits on the desk in a brass holder. Sheets of pale
 &+Wparchment have been neatly stacked in the center of the desktop and
@@ -1347,12 +1347,12 @@ D3
 S
 #70859
 &+BA Well Lit Training Room~
-  &+b This room is full of various objects  used ot train  fighters of all
-&+btypes. Dummies  have been  set up along the  eastern wall, while planks
-&+bhave been arranged  along the  western side to  provide students with a
-&+bplace  to work on  keeping their  footing  solid on  awkward terrain. A
-&+brather  large  curtain has  been pulled  back from  the southern  wall,
-&+brevealing  a rack  containing  weapons of all  shapes, sizes and types.
+  &+b This room is full of various objects used to train fighters of all
+&+btypes. Dummies have been set up along the eastern wall, while planks
+&+bhave been arranged along the western side to provide students with a
+&+bplace to work on keeping their footing solid on awkward terrain. A
+&+brather large curtain has been pulled back from the southern wall,
+&+brevealing a rack containing weapons of all shapes, sizes and types.
 &+bThough smelling faintly of stale sweat, there is something invigorating
 &+babout being in this room.
 ~

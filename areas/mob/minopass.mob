@@ -4,7 +4,7 @@ cat displacer beast~
 &+LA black and &+bdark blue &+Lcat prowls here, &+bfading &+Lin and &+bout &+Lof exis&+btence.
 ~
    &+LThis large black cat looks to be quite heavy, and quite forboding.
-&+LIt's sleek body is covered with fine black and dark blue fur, which
+&+LIts sleek body is covered with fine black and dark blue fur, which
 &+Lseems to conceal it in and out of existence.  Two large spiked tentacles
 &+Lprotrude from its back, which are raised in the air like a warrior's
 &+Lweapons during battle.
@@ -73,7 +73,7 @@ oesh'lyn oesh sage truth~
    &+YOesh'lyn&+W, the &+Csage&+W of truth stands about six feet tall, floating
 &+Wa few inches above the ground.  His clean, fit body is draped with a
 &+Wlong silken robe.  &+YOesh'lyn&+W guards the ivory gates from the evil
-&+Wof the world that attempts to violate it's holy sanctity.
+&+Wof the world that attempts to violate its holy sanctity.
 ~
 2058 0 0 8 0 0 0 1000 S
 AN 0 8 4
@@ -152,7 +152,7 @@ mountain eagle~
 &+yA brilliant winged mountain eagle perches on a nearby rock.
 ~
    &+yThis large bird has glorious brown and white feathers
-&+ycovering it's large body.  It currently perches on a nearby
+&+ycovering its large body.  It currently perches on a nearby
 &+yrock, beak poking into the ground looking for worms.
 ~
 2120 0 0 134217728 0 0 0 0 S
@@ -167,7 +167,7 @@ rock spider~
 ~
    &+LA small rock spider is here crawling across the
 &+Lmountain floor.  This spider is quite hard to detect
-&+Lwhen scanning the surroundings, as it's natural
+&+Lwhen scanning the surroundings, as its natural
 &+Ldefense is to blend in perfectly.
 ~
 2120 0 0 0 0 0 0 0 S
@@ -181,7 +181,7 @@ young thri kreen thri-kreen~
 &NA young &+gthri&N-&+Ykreen&N wanders through these temperate mountains.
 ~
    &NThis large insect-humanoid wanders slowly through the mountains
-and surrounding vegetation.  It's body reacts quickly, yet rarely,
+and surrounding vegetation.  Its body reacts quickly, yet rarely,
 to the environment as it peacefully scouts the area.
 ~
 2120 0 0 0 0 0 0 0 S
@@ -195,7 +195,7 @@ mountain goat~
 &+WA moun&Ntain &+Wgoat &Ntrots &+Wthrou&Ngh &+Wthe &Npasses &+Wof the &Nmoun&+Wtain.
 ~
    &+WThis mountain goat is small in size, but has a
-&+Wstrong body.  Two small antlers protrude from it's
+&+Wstrong body.  Two small antlers protrude from its
 &+Wfurry head.  This animal hops along the mountain
 &+Wwith grace and finess in search of food.
 ~
@@ -251,11 +251,11 @@ MT 0 1 -1
 #94716
 tohr-kreen tohr kreen relaxed~
 &+La relaxed &+Btohr&N-&+ykreen&N~
-&+LA large &+Btohr&N-&+ykreen&+L wades in the &+Rsprings&+L, neck-deep in it's waters.
+&+LA large &+Btohr&N-&+ykreen&+L wades in the &+Rsprings&+L, neck-deep in its waters.
 ~
    &+LThis &+Btohr&+y-kreen &+Lrelaxes in the hot springs, letting
-&+Lthe warm water bubble across it's &+ggreen &+Lbody.  This large
-&+Linsect-humanoid is larger and rarer then it's cousin, the
+&+Lthe warm water bubble across its &+ggreen &+Lbody.  This large
+&+Linsect-humanoid is larger and rarer then its cousin, the
 &+Gthri-&+Ykreen&+L.
 ~
 2122 0 0 0 0 0 0 0 S
@@ -266,7 +266,7 @@ TK 0 1 4
 #94717
 thri kreen thri-kreen~
 &Na &+gthri&N-&+Ykreen&N~
-&NA &+gthri&N-&+Ykreen &Nrests in the hot &+Rsprings&N, enjoying it's temperate &+Rwarmth&n.
+&NA &+gthri&N-&+Ykreen &Nrests in the hot &+Rsprings&N, enjoying its temperate &+Rwarmth&n.
 ~
    &+gThis &+Gthri&N-&+Ykreen&+g rests in the hot bubbling waters
 &+gof the &+Rsprings&+g, taking in the warmth as if it has some
@@ -336,9 +336,9 @@ A 0 1 4
 #94722
 harpy mother~
 &+ya harpy &+Wmother&N~
-&+yA large harpy &+Wmother &+ysquats on its nest, guarding it's babies.
+&+yA large harpy &+Wmother &+ysquats on its nest, guarding its babies.
 ~
-   &+yThis harpy is quite large and experienced.  It's thick brown
+   &+yThis harpy is quite large and experienced.  Its thick brown
 &+yfeathers have small missing patches, resulting from an older
 &+yage.
 ~
@@ -350,7 +350,7 @@ MH 0 1 2
 #94723
 baby harpy~
 &+ya baby harpy&N~
-&+yA baby harpy huddles close to it's &Nmother&+y.
+&+yA baby harpy huddles close to its &Nmother&+y.
 ~
    &+yThis small harpy seems quite young, but very quick
 &+yand nimble.  It currently is circling its prey at
@@ -425,7 +425,7 @@ exhausted thri kreen thri-kreen~
 &+gAn &Nexhausted &+Gthri&N-&+Ykreen&+g relaxes huddled in the corner.
 ~
    &+gThis &+Gthri-&+Ykreen&+g looks very tired as it finally
-&+gregains it's strength, relaxing in the corner of this campsite.
+&+gregains its strength, relaxing in the corner of this campsite.
 ~
 2058 0 0 0 0 0 0 0 S
 TK 0 1 3
@@ -562,7 +562,7 @@ frenzied air elemental~
 &+Wa &Nfrenzied &+Wair &Nelemental&N~
 &NA frenzied &+Wair &Nelemental swirls through the area in an &+Wuncontrolled &Nfury.
 ~
-   &+WThis air elemental, broken from the will of it's original masters,
+   &+WThis air elemental, broken from the will of its original masters,
 &+Wfloats around here in a frenzy, trapped in this foreign plane.
 ~
 8 1 0 8 0 0 0 0 S
