@@ -483,8 +483,7 @@ bool NPCShipAI::find_new_target()
                 continue;
             if (contacts[i].ship->target && contacts[i].ship->race != contacts[i].ship->target->race)
             {
-                ship->setheading = contacts[i].bearing + 180;
-                normalize_direction(ship->setheading);
+                new_heading = contacts[i].bearing + 180;
             }
             if (ship->timer[T_BSTATION] == 0)
             {
