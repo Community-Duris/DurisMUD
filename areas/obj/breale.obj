@@ -88,8 +88,6 @@ A &+Wrag of many cackles&N lies crumpled here.~
 9 3 3 8 7 0 1024 9 0 4197892 0
 3 3 1 3 0 0 0 0
 5 200 100
-A
-9 10
 #2610
 ceremonial dagger~
 a &+Wceremonial dagger&N~
@@ -98,8 +96,6 @@ A &+Wceremonial dagger&N lies here.~
 5 16 2 3 7 0 1024 8193 64 4197892 0
 2 1 4 11 0 0 0 0
 1 300 100
-A
-9 15
 #2611
 cloak dark~
 a &+Ldark cloak&N~
@@ -108,8 +104,6 @@ A &+Ldark cloak&N lies crumpled here.~
 9 3 3 8 7 0 1024 1025 0 4197892 0
 5 9 1 3 0 0 0 0
 5 400 100
-A
-9 40
 A
 18 2
 #2612
@@ -238,8 +232,6 @@ The &+Wpriestly robes of sacrifice&N lie crumpled here.~
 9 3 3 8 7 0 1024 9 0 33685920 0
 6 3 1 3 0 0 0 0
 8 20 100
-A
-9 10
 A
 13 -5
 #2625
@@ -386,8 +378,6 @@ A &+Wsharpened wooden dagger&N lies here.~
 5 6 2 3 7 0 0 8193 0 0 0
 2 1 3 11 0 0 0 0
 1 10 100
-A
-9 5
 #2642
 bloodstained apron~
 a &+Rbloodstained &+Wapron&N~

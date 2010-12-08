@@ -758,7 +758,7 @@ void event_zion_netheril(P_char ch, P_char victim, P_obj obj, void *data)
 
   if (!number(0, 10))
    {
-    if (IS_PUNDEAD(ch))
+    if (IS_PUNDEAD(ch) || (GET_RACE(ch) == RACE_ELADRIN))
     {
       for (circle = get_max_circle(ch); circle >= 1; circle--)
       {

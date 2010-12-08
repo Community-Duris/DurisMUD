@@ -19,6 +19,7 @@ extern char buf[MAX_STRING_LENGTH];
 extern char arg1[MAX_STRING_LENGTH];
 extern char arg2[MAX_STRING_LENGTH];
 extern char arg3[MAX_STRING_LENGTH];
+extern P_char character_list;
 
 
 int list_cargo(P_char ch, P_ship ship, int owned)
@@ -2391,13 +2392,126 @@ int crew_shop_proc(int room, P_char ch, int cmd, char *arg)
 }
 
 
+/////////////////////////
+/// Automatons quest
+/////////////////////////
+
+
+#define IS_MOONSTONE(obj)          (obj_index[obj->R_num].virtual_number == AUTOMATONS_MOONSTONE)
+#define IS_MOONSTONE_FRAGMENT(obj) (obj_index[obj->R_num].virtual_number == AUTOMATONS_MOONSTONE_FRAGMENT)
+
+int moonstone_fragment(P_obj obj, P_char ch, int cmd, char *argument)
+{
+  if (cmd == CMD_SET_PERIODIC)
+    return TRUE;
+
+  if (!obj)
+    return FALSE;
+
+  if (cmd == CMD_PERIODIC)
+  {
+    if (obj->loc_p == LOC_CARRIED && obj->loc.carrying != 0)
+    {
+      ch = obj->loc.carrying;
+      int fragment_count = 0;
+      for (P_obj obj = ch->carrying; obj; obj = obj->next_content)
+      {
+        if (IS_MOONSTONE_FRAGMENT(obj))
+          fragment_count++;
+      }
+      if (fragment_count == 3)
+      {
+        send_to_char("&+WMoonstone &+Rf&+rra&+Rg&+rme&+Rn&+rts &+Gsuddenly glow &+Wbrightly &+Gin your hands and combine into &+Rh&+rea&+Rr&+rt-&+Rs&+rha&+Rp&+red &+Wobject&+G!&N\r\n\r\n", ch);
+        P_obj next_obj = 0;
+        for (P_obj obj = ch->carrying; obj; obj = next_obj)
+        {
+          next_obj = obj->next_content;
+          if (IS_MOONSTONE_FRAGMENT(obj))
+          {
+              obj_from_char(obj, TRUE);
+              extract_obj(obj, TRUE);
+          }
+        }
+        int r_num = real_object(AUTOMATONS_MOONSTONE);
+        if (r_num < 0) return NULL;
+        P_obj moonstone = read_object(r_num, REAL);
+        if (!moonstone)
+            return NULL;
+        obj_to_char(moonstone, ch);
+
+      }
+    }
+    return TRUE;
+  }
+  return FALSE;
+}
+
+P_obj has_moonstone_fragment(P_char ch)
+{
+  for (P_obj obj = ch->carrying; obj; obj = obj->next_content)
+  {
+    if (IS_MOONSTONE_FRAGMENT(obj))
+      return obj;
+  }
+  return NULL;
+}
+P_obj has_moonstone(P_char ch)
+{
+  for (P_obj obj = ch->carrying; obj; obj = obj->next_content)
+  {
+    if (IS_MOONSTONE(obj))
+      return obj;
+  }
+  return NULL;
+}
+
+bool load_moonstone_fragments()
+{
+  P_char olhydra = 0;
+  for (P_char mob = character_list; mob; mob = mob->next)
+  {
+    if(IS_NPC(mob) && GET_VNUM(mob) == 23240)
+    {
+        olhydra = mob;
+        break;
+    }
+  }
+
+  int r_num = real_object(AUTOMATONS_MOONSTONE_FRAGMENT);
+  if (r_num < 0) return FALSE;
+  P_obj fragment = read_object(r_num, REAL);
+
+  if (olhydra && number(0, 1))
+  {
+    obj_to_char(fragment, olhydra);
+  }
+  else
+  {
+    obj_to_room(fragment, real_room(31724)); // to locker
+  }
+
+  P_char automaton = 0;
+  for (P_char mob = character_list; mob; mob = mob->next)
+  {
+    if(IS_NPC(mob) && GET_VNUM(mob) == 12027)
+    {
+        automaton = mob;
+        break;
+    }
+  }
+  if (!automaton)
+      return FALSE;
+
+  r_num = real_object(AUTOMATONS_MOONSTONE_FRAGMENT);
+  if (r_num < 0) return FALSE;
+  fragment = read_object(r_num, REAL);
+
+  obj_to_char(fragment, automaton);
+  return TRUE;
+}
 
 int erzul_proc(P_char ch, P_char pl, int cmd, char *arg)
 {
-  int      cost;
-  P_obj    obj;
-  P_ship   ship = 0;
-
   /*
    check for periodic event calls 
    */
@@ -2410,160 +2524,111 @@ int erzul_proc(P_char ch, P_char pl, int cmd, char *arg)
   if (pl == ch)
     return FALSE;
 
-  if (cmd == CMD_SAY)
+  if (!pl || !ch)
+      return FALSE;
+
+  P_ship ship = get_ship_from_owner(GET_NAME(pl));
+  int cost = ship_crew_data[AUTOMATON_CREW].hire_cost;
+
+  if (cmd == CMD_ASK)
   {
-    if (*arg)
+    half_chop(arg, arg1, arg2);
+    if (has_moonstone_fragment(pl))
     {
-        if (isname(arg, "hello hi quest help"))
+       send_to_char ("Erzul says '&+GYou have it! You have the moonstone!\r\n", pl);
+       send_to_char ("&+G  What?! It's broken! You broke my masterpiece!!&N'\r\n", pl);
+       send_to_char ("Erzul screams '&+RNOOOOOO!!!&N'\r\n", pl);
+       attack(ch, pl);
+       return TRUE;
+    } 
+    if (P_obj moonstone = has_moonstone(pl))
+    {
+      if (*arg2)
+      {
+        if (isname(arg2, "automaton automatons"))
         {
-          send_to_char ("Erzul says 'That cursed &+WXexos&N!  Now I can't complete my &+Wmasterpiece&N!'\r\n", pl);
+          if (!ship || (ship->frags < ship_crew_data[AUTOMATON_CREW].hire_frags))
+          {
+            send_to_char ("Erzul says '&+GI'm sorry, but you are not famous enough to be trusted with this crew!\r\n", pl);
+            send_to_char ("&+G  But... if you &+Wask&+G for your &+Wreward&+G you will receive it!&N'\r\n", pl);
+            return TRUE;
+          }
+          else
+          {
+            send_to_char_f(pl, "Erzul says '&+GOkay, i heard about you. I will trust you with my best creation!\r\n");
+            send_to_char_f(pl, "&+G  But i need about &+W%s &+Gto start this work!&N'\r\n", coin_stringv(cost));
+            if (GET_MONEY(pl) < cost)
+            {
+              return TRUE;
+            }
+            send_to_char_f(pl, "You hand over the &+Wmoonstone&N and the &+Wmoney&N.\r\n");
+            SUB_MONEY(pl, cost, 0);
+            obj_from_char(moonstone, TRUE);
+            extract_obj(moonstone, TRUE);
+            set_crew(ship, AUTOMATON_CREW, false);
+            update_ship_status(ship);
+            write_ship(ship);
+            send_to_char ("Erzul says '&+GThey'll be at your ship by the time you get there!&N'\r\n", pl);
+            return TRUE;
+          }
+        }
+        if (isname(arg2, "reward"))
+        {
+          send_to_char_f(pl, "You hand over the &+Wmoonstone&N.\r\n");
+          obj_from_char(moonstone, TRUE);
+          extract_obj(moonstone, TRUE);
+
+          int r_num = real_object(9460);
+          if (r_num < 0) return FALSE;
+          P_obj ring = read_object(r_num, REAL);
+          send_to_char_f(pl, "Erzul rewarded you with %s&N.\r\n", ring->short_description);
+          obj_to_char(ring, pl);
           return TRUE;
         }
-        if (isname(arg, "xexos"))
+      }
+      send_to_char ("Erzul says '&+GYou have it! You have the moonstone! &+WAsk&+G for your &+Wreward&+G and you will receive it!&N'\r\n", pl);
+      if (ship && (ship->frags >= ship_crew_data[AUTOMATON_CREW].hire_frags))
+      {
+        send_to_char ("Erzul says '&+GI could even trust you with my &+Wautomatons &+Gif you &+Wask &+Gfor them!&N'\r\n", pl);
+      }
+      return TRUE;
+    }
+    if (*arg2)
+    {
+        if (isname(arg2, "hello hi quest help"))
         {
-          send_to_char ("Erzul says 'Yes, Xexos, he stole my &+Wmoonstone&N heart and used it on his\r\naccursed creation!\r\n", pl);
+          send_to_char ("Erzul says '&+GThat cursed &+WXexos&N!  &+GNow I can't complete my masterpiece!'\r\n", pl);
           return TRUE;
         }
-        if (isname(arg, "masterpiece moonstone"))
+        if (isname(arg2, "xexos"))
         {
-          send_to_char ("Erzul says 'The moonstone was my life's work.  It's the power source I was\r\ngoing to use to power my &+Wautomoton&N, my masterpiece!'", pl);
+          send_to_char ("Erzul says '&+GYes, Xexos, the bastard who stole the &+Wmoonstone&N &+Gheart i've created!&N\r\n", pl);
           return TRUE;
         }
-        if (isname(arg, "automoton"))
+        if (isname(arg2, "moonstone"))
         {
-          send_to_char ("Yes, if you can retrieve my moonstone, then I can create the ultimate crew for a ship!'\r\n", pl);
+          send_to_char ("Erzul says '&+GThe moonstone was my life's work.  It's the power source I was\r\n", pl);
+          send_to_char ("&+g  going to use to power my &+Wautomatons&N, &+gmy masterpiece!&N'", pl);
+          return TRUE;
+        }
+        if (isname(arg2, "automaton automatons"))
+        {
+          send_to_char ("Erzul says '&+GYes, automatons, ultimate ship crew made of powerful and skilled golems.\r\n", pl);
+          send_to_char ("  &+GIf only someone brought back my moonstone, I could astound the world with my greatest work!\r\n", pl);
+          send_to_char ("  &+GThough it would &+Wcost&+G a fortune to make them...&N'\r\n", pl);
+          return TRUE;
+        }
+        if (isname(arg2, "cost money"))
+        {
+          send_to_char_f (pl, "Erzul says '&+GHow much? I would need about &+W%s &+Gfor that work.\r\n", coin_stringv(cost));
+          send_to_char_f (pl, "&+G  Does it even matter now, as i can not even start it!'\r\n");
           return TRUE;
         }
     }
     return FALSE;
   }
-
-  if (cmd == CMD_LIST)
-  {
-    ShipVisitor svs;
-    for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
-    {
-      if (isname(GET_NAME(pl), svs->ownername))
-      {
-        ship = svs;
-        break;
-      }
-    }
-
-    if (!ship)
-    {
-      send_to_char ("Erzul says 'You have no ship, I have no business with you!'\r\n", pl);
-      return TRUE;
-    }
-
-    if (ship->frags < ship_crew_data[3].hire_frags || ship->frags < ship_crew_data[8].hire_frags)
-    {
-      send_to_char ("Erzul says 'Who are you I've never heard of you, come back when you are\r\nmore well known.'\r\n", pl);
-      return TRUE;
-    }
-
-    for (obj = ch->carrying; obj; obj = obj->next_content)
-    {
-      if (obj_index[obj->R_num].virtual_number == 12001)
-        break;
-    }
-    if (!obj)
-    {
-      send_to_char ("Erzul says 'I'm sorry, but I can't make any magical automotons right now, maybe\r\nif you performed a quest for me, then I can sell you one for\r\n20000 &+Wplatinum&N'\r\n", pl);
-      return TRUE;
-    }
-
-    send_to_char("Erzul says 'Now that I have the proper power source, I can sell you a \r\nmagical automoton for 20000 &+Wplatinum&N.'\r\n", pl);
-    send_to_char("To buy, type 'buy <sail/gun crew>'\r\n", pl);
-    return TRUE;
-  }
-
-  if (cmd == CMD_BUY)
-  {
-    ShipVisitor svs;
-    for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
-    {
-      if (isname(GET_NAME(pl), svs->ownername))
-      {
-        ship = svs;
-        break;
-      }
-    }
-
-    if (!ship)
-    {
-      send_to_char("Erzul says 'You have no ship, I have no business with you!'\r\n", pl);
-      return TRUE;
-    }
-
-    if (ship->frags < ship_crew_data[3].hire_frags || ship->frags < ship_crew_data[8].hire_frags )
-    {
-      send_to_char ("Erzul says 'Who are you I've never heard of you, come back when you are\r\nmore well known.'\r\n", pl);
-      return TRUE;
-    }
-
-    for (obj = ch->carrying; obj; obj = obj->next_content)
-    {
-      if (obj_index[obj->R_num].virtual_number == 12001)
-        break;
-    }
-
-    if (!obj)
-    {  
-      send_to_char ("Erzul says 'I'm sorry, but I can't make any magical automotons right now, maybe\r\nif you performed a quest for me, then I can sell you one for 20000 &+Wplatinum&N'\r\n", pl);
-      return TRUE;
-    }
-
-    if (!*arg)
-    {
-      send_to_char ("Erzul says 'Buy what? Sail crew or Gun crew, they are made differently\r\nyou know.'\r\n", pl);
-      return TRUE;
-    }
-
-    if (isname(arg, "sail s"))
-    {
-      cost = ship_crew_data[3].hire_cost;
-      if (GET_MONEY(pl) < cost)
-      {
-        send_to_char_f(ch, "Erzul says 'It will cost %s to make this crew!\r\n", coin_stringv(cost));
-        return TRUE;
-      }
-      SUB_MONEY(pl, cost, 0);
-      obj_from_char(obj, TRUE);
-      extract_obj(obj, TRUE);
-      obj = NULL;
-      set_crew(ship, 3, false);
-      update_ship_status(ship);
-      write_ship(ship);
-      send_to_char ("Erzul says 'They'll be at your ship by the time you get there!\r\n", pl);
-      return TRUE;
-    }
-    else if (isname(arg, "gun g"))
-    {
-      cost = ship_crew_data[8].hire_cost;
-      if (GET_MONEY(pl) < cost)
-      {
-        send_to_char_f(ch, "Erzul says 'It will cost %s to make this crew!\r\n", coin_stringv(cost));
-        return TRUE;
-      }
-      SUB_MONEY(pl, cost, 0);
-      obj_from_char(obj, TRUE);
-      extract_obj(obj, TRUE);
-      obj = NULL;
-      set_crew(ship, 8, false);
-      update_ship_status(ship);
-      write_ship(ship);
-      send_to_char("Erzul says 'They'll be at your ship by the time you get there!\r\n",       pl);
-      return TRUE;
-    }
-    else
-    {
-      send_to_char ("Erzul says 'Buy what? Sail crew or Gun crew, they are made differently\r\nyou know.'\r\n", pl);
-      return TRUE;
-    }
-    return TRUE;
-  }
   return FALSE;
 }
 
 
+// ring: 9460

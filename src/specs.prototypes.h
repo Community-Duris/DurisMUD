@@ -1003,6 +1003,7 @@ int ship_panel_proc(P_obj, P_char, int, char *);
 int ship_obj_proc(P_obj, P_char, int, char *);
 int crew_shop_proc(int,P_char,int,char *);
 int erzul_proc(P_char, P_char, int, char *);
+int moonstone_fragment(P_obj obj, P_char ch, int cmd, char *argument);
 
 
 // sea kingdom stuff

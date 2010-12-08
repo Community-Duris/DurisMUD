@@ -964,6 +964,7 @@ void assign_mobiles(void)
   mob_index[real_mobile0(12025)].func.mob = xexos;
   mob_index[real_mobile0(12026)].func.mob = agthrodos;
   mob_index[real_mobile0(12027)].func.mob = automaton_unblock;
+  obj_index[real_object0(12028)].func.obj = moonstone_fragment;
 
   /*
      Twin Towers - Forest

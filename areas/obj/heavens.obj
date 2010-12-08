@@ -366,7 +366,7 @@ pizza pepperoni~
 0 0 100
 #33
 small stream~
-&+bA small stream&N~
+&+ba small stream&N~
 &+BA small stream flows to the south.&N~
 ~
 17 15 4 0 7 0 1 0 0 0 0
@@ -4463,9 +4463,9 @@ sign battered _id_~
 &+y\----------------------/
 ~
 #421
-elixer youth bubbling~
-&+wa &+Gbubbling &+welixer of &+gyouth&N~
-&+gAn elixer of youth has been tossed aside here.&n~
+elixir youth bubbling~
+&+wa &+Gbubbling &+welixir of &+gyouth&N~
+&+gAn elixir of youth has been tossed aside here.&n~
 ~
 10 7 3 0 7 0 0 8388609 0 0 0
 40 70 0 0 0 0 0 0
@@ -6699,7 +6699,7 @@ gate portal~
 0 0 100
 #789
 orb crystal~
-&+WA Cr&Nys&+Wta&Nlli&+Wne&N Or&+Wb &+mon a &+Ygolden chain~
+&+Wa Cr&Nys&+Wta&Nlli&+Wne&N Or&+Wb &+mon a &+Ygolden chain~
 &+LThe &+Wcr&Nys&+Wta&Nlli&+Wne&N or&+Wb &+Lof&+m Paradox &+Llies here &+Wglowing&+L softly.&N~
 ~
 9 8 1 2 7 0 65537 5 0 0 0

@@ -794,9 +794,9 @@ A
 A
 2 6
 #21568
-elixer bubbling wellness potion~
+elixir bubbling wellness potion~
 &+Can elixir of wellness&n~
-&+CA bubbling elixer has been dropped here&n.~
+&+CA bubbling elixir has been dropped here&n.~
 ~
 10 7 2 2 7 0 0 1 64 0 0
 20 15 -1 -1 0 0 0 0
@@ -1667,9 +1667,9 @@ potion dark power liquid~
 56 36 -1 -1 0 0 0 0
 1 0 100
 #21647
-elixer demonic power blood sizzling~
-&+Lelixer of &+rdemonic &+Lpower&n~
-&+LAn elixer of sizzling &+rblood&+L waits to be picked up&n.~
+elixir demonic power blood sizzling~
+&+Lelixir of &+rdemonic &+Lpower&n~
+&+LAn elixir of sizzling &+rblood&+L waits to be picked up&n.~
 ~
 10 7 3 1 15 0 0 1 64 0 0
 56 158 215 209 0 0 0 0

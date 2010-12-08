@@ -164,7 +164,6 @@ G 1 397 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 12026 1 0 100 0 0 0            *    a clear potion
 M 0 12027 1 12159 100 0 0 0        * an automaton
 E 1 12024 1 12 100 0 0 0           *   a chain harness
-G 1 12001 1 0 100 0 0 0            *    a glowing heart of moonstone
 M 0 12011 1 12164 100 0 0 0        * a fire spirit
 E 1 12006 1 8 100 0 0 0            *   some sinister slippers
 G 1 12007 1 0 100 0 0 0            *    a rigid glowing stone

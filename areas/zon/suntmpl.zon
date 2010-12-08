@@ -310,8 +310,8 @@ O 0 823 40 82482 100 0 0 0         * (object type not in this .obj file)
 M 0 82400 1 82406 100 0 0 0        * Trentloss
 E 1 82401 1 2 100 0 0 0            *   a shimmering ring of vines
 E 1 82400 1 12 100 0 0 0           *   a finely woven centaur blanket
-M 0 82401 1 82408 100 0 0 0        * spirit
-M 0 82402 1 82409 100 0 0 0        * spirit
+M 0 82401 1 82408 100 0 0 0        * a spirit
+M 0 82402 1 82409 100 0 0 0        * a spirit
 G 1 82402 1 0 100 0 0 0            *    the twisted heart of a pine
 M 0 82426 2 82410 100 0 0 0        * a baby bear
 M 0 82426 2 82411 100 0 0 0        * a baby bear

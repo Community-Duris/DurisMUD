@@ -79,12 +79,12 @@ O 0 19941 1 19953 100 0 0 0        * the mighty scepter of the Valhalla
 O 0 19995 1 19953 25 0 0 0         * the helm of the dragonkind
 O 0 19923 1 19955 100 0 0 0        * a longsword covered with black onyx etchings
 *
-M 0 19904 2 19902 100 0 0 0        * An ancient shock wyrm
-M 0 19904 2 19902 100 0 0 0        * An ancient shock wyrm
-M 0 19905 4 19902 100 0 0 0        * An assassin wyrm
+M 0 19904 2 19902 100 0 0 0        * an ancient shock wyrm
+M 0 19904 2 19902 100 0 0 0        * an ancient shock wyrm
+M 0 19905 4 19902 100 0 0 0        * an assassin wyrm
 E 1 19933 8 16 100 0 0 0           *   its razor sharp talons
 E 1 19933 8 17 100 0 0 0           *   its razor sharp talons
-M 0 19905 4 19902 100 0 0 0        * An assassin wyrm
+M 0 19905 4 19902 100 0 0 0        * an assassin wyrm
 E 1 19933 8 16 100 0 0 0           *   its razor sharp talons
 E 1 19933 8 17 100 0 0 0           *   its razor sharp talons
 M 0 19760 5 19928 100 0 0 0        * (mob type not in this .mob file)
@@ -99,14 +99,14 @@ G 1 19908 1 0 100 0 0 0            *    a rusty key
 M 0 19705 2 19946 100 0 0 0        * (mob type not in this .mob file)
 M 0 19921 1 19947 100 0 0 0        * (mob type not in this .mob file)
 G 1 55203 1 0 100 0 0 0            *    (object type not in this .obj file)
-M 0 19905 4 19950 100 0 0 0        * An assassin wyrm
+M 0 19905 4 19950 100 0 0 0        * an assassin wyrm
 E 1 19933 8 16 100 0 0 0           *   its razor sharp talons
 E 1 19933 8 17 100 0 0 0           *   its razor sharp talons
-M 0 19905 4 19950 100 0 0 0        * An assassin wyrm
+M 0 19905 4 19950 100 0 0 0        * an assassin wyrm
 E 1 19933 8 16 100 0 0 0           *   its razor sharp talons
 E 1 19933 8 17 100 0 0 0           *   its razor sharp talons
-M 0 19902 1 19951 100 0 0 0        * An ancient fire wyrm
-M 0 19903 1 19951 100 0 0 0        * An ancient ice wyrm
+M 0 19902 1 19951 100 0 0 0        * an ancient fire wyrm
+M 0 19903 1 19951 100 0 0 0        * an ancient ice wyrm
 M 0 19907 1 19953 100 0 0 0        * the guardian wyrm
 M 0 19906 2 19954 100 0 0 0        * A dark wyrm
 E 1 19937 4 16 100 0 0 0           *   no show weapon, cloak of fear

@@ -16,7 +16,7 @@ CT 0 128 -1
 8 8 1
 #82401
 spirit~
-&+Wspirit&N~
+&+Wa spirit&N~
 The spirit of the oak wails in agony.&N
 ~
 &+w   This being represents the &+Wgood spirits &+wof &+gna&+Gtu&+gre &+wand has been rather&N
@@ -27,13 +27,13 @@ The spirit of the oak wails in agony.&N
 &+wproper place the temple and the &+gforest &+wmight be cure of this plague.&N
 ~
 2058 0 0 128 34816 0 0 1000 S
-HF 0 32 -1
+ug 0 32 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #82402
 spirit pine~
-&+Lspirit&N~
+&+La spirit&N~
 &+wThe twisted &+Lspirit &+wof the pine snarls at you.&N
 ~
 &+L   This &+revil &+Lincarnation has inhabited this &+wpine &+Land twisted it to a dark&N
@@ -43,8 +43,8 @@ spirit pine~
 &+Lweaken the spirit of the woods.&N
 ~
 2058 1 0 136 34816 0 0 -1000 S
-AP 0 16 -1
-55 0 0 1d1+1 1d1+1
+ug 0 16 -1
+52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #82403

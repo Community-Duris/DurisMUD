@@ -1303,7 +1303,13 @@ bool load_cyrics_revenge_crew(P_ship ship)
     up_ex->keyword = str_dup("hatch heavy");
 
     P_obj chest = load_treasure_chest(ship, captain, crew_data);
-    int r_num = real_object(40225);
+    
+    int r_num = real_object(AUTOMATONS_MOONSTONE_FRAGMENT);
+    if (r_num < 0) return NULL;
+    P_obj fragment = read_object(r_num, REAL);
+    obj_to_obj(fragment, chest);
+
+    r_num = real_object(40225);
     if (r_num < 0) return NULL;
     P_obj nexus_key = read_object(r_num, REAL);
     obj_to_obj(nexus_key, chest);

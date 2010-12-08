@@ -25,7 +25,7 @@ EA 0 576 7
 8 8 0
 #19902
 fire wyrm ancient~
-&+RAn ancient fire wyrm&n~
+&+Ran ancient fire wyrm&n~
 &+RAn ancient fire wyrm guards the vault from intruders.
 ~
 ~
@@ -36,7 +36,7 @@ d 0 1 -1
 8 8 0
 #19903
 ice wyrm ancient~
-&+BAn ancient ice wyrm&n~
+&+Ban ancient ice wyrm&n~
 &+BAn ancient ice wyrm guards the vault from intruders.&n
 ~
 ~
@@ -47,7 +47,7 @@ d 0 1 -1
 8 8 0
 #19904
 shock wyrm ancient~
-&+bAn ancient shock wyrm&n~
+&+ban ancient shock wyrm&n~
 &+bAn ancient shock wyrm is looking for an easy meal.&n
 ~
 ~
@@ -58,7 +58,7 @@ d 0 4 -1
 8 8 0
 #19905
 assassin stealthy wyrm~
-&+LAn assassin wyrm&n~
+&+Lan assassin wyrm&n~
 &+LA stealthy wyrm hides in the shadows.&n
 ~
 ~
@@ -91,14 +91,14 @@ d 0 2 -1
 8 8 0
 #19910
 githyanki high mage~
-&+WThe&N &+GGith&N &+WHigh Mage&N~
+&+Wthe&N &+GGith&N &+WHigh Mage&N~
 &+mThe&N &+GGith&+Wyanki&N &+mHigh-Mage is standing here, preparing to cast a spell.&N
 ~
 The figure is hidden behind a thick-auburn cloak, covered in intricate runes.
 A pair of glowing-red eyes stare at you, and seem to shift in hue.
 ~
 1073743886 1 0 33554602 0 0 0 -1000 S
-X 0 1024 -1
+GI 0 1028 -1
 55 -5 -126 55d88+4950 7d6+30
 0.2.0.9 334125
 8 8 0

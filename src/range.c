@@ -1904,7 +1904,7 @@ int number_throw(P_char ch, char *name)
  return nb_att;
 }
 
-/* fonction to see if there is a wall in the room blocking the direction */
+/* function to see if there is a wall in the room blocking the direction */
 
 int check_wall(int room, int direction)
 {

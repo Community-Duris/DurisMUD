@@ -665,7 +665,6 @@ void display_shipfrags(P_char ch);
 // shops
 int ship_shop_proc(int room, P_char ch, int cmd, char *arg);
 int crew_shop_proc(int room, P_char ch, int cmd, char *arg);
-int erzul_proc(P_char ch, P_char pl, int cmd, char *arg);
 
 // control
 int ship_panel_proc(P_obj obj, P_char ch, int cmd, char *arg);
@@ -824,5 +823,12 @@ private:
 typedef ShipObjHash::visitor ShipVisitor;
 extern ShipObjHash shipObjHash;
 
+
+
+#define AUTOMATONS_MOONSTONE          12001
+#define AUTOMATONS_MOONSTONE_FRAGMENT 12028
+//int moonstone_fragment(P_obj obj, P_char ch, int cmd, char *argument);
+//int erzul_proc(P_char ch, P_char pl, int cmd, char *arg);
+bool load_moonstone_fragments();
 
 #endif // _SHIPS_H_

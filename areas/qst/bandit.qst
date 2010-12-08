@@ -1,22 +1,3 @@
-#98513
-M
-qc_action 45~
-&+BOlat&n seems to juggle a set of boulders with ease.
-~
-M
-qc_action 48~
-&+BOlat&n says in ogre 'Urrr, who need brain when can have great strength?
-Me can show you secrets.'
-~
-Q
-You feel raw power coursing throughout your body. Suddenly, the feeling
-subsides, and a scroll appears in your hands.
-~
-R I 403
-G I 32490
-G I 26614
-G I 402
-S
 #98534
 M
 qc_action 45~

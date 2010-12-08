@@ -70,6 +70,10 @@ void initialize_ships()
 
   initialize_ship_cargo();
   load_cyrics_revenge();
+  if (!load_moonstone_fragments())
+  {
+    logit(LOG_FILE, "Error initializing automatons quest!\r\n");
+  }
 }
 
 //--------------------------------------------------------------------

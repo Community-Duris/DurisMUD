@@ -17,7 +17,7 @@ glowing heart moonstone~
 &+wa &+Rg&+rlo&+Rw&+rin&+Rg &+rheart &+Lof &+Wmoonstone&N~
 &+LA &+Rg&+rlo&+Rw&+rin&+Rg &+rheart&+L-shaped piece of &+Wmoonstone &+Lhovers in midair&N~
 ~
-13 15 3 0 14 44 75509761 16385 0 0 0
+13 15 3 0 14 44 75505665 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 E
@@ -382,3 +382,11 @@ E
 lever~
 &+B   The lever is mounted on the wall, and has no distinguishing features.&N
 ~
+#12028
+moonstone heart fragment~
+&+wa &+Rf&+rra&+Rg&+rme&+Rn&+rt &+Lof &+Wmoonstone &+rheart~
+&+wA &+Rf&+rra&+Rg&+rme&+Rn&+rt &+Lof &+Wmoonstone &+rheart &+Lhovers here.&N~
+~
+13 11 3 0 7 0 75505664 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100

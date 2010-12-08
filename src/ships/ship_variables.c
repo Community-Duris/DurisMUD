@@ -32,7 +32,7 @@ const ShipCrewData ship_crew_data[MAXCREWS] = {
 //        Name                                                          Crew  Base     Base    Base     Base     Sail    Gun  Repair     Hire   Hire     Hire rooms
 //                                                                     Level  Sail      Gun   Repair  Stamina     Mod    Mod    Mod      Cost  Frags 
     { "&+wAmateur Crew",                                                   0,     0,       0,       0,    500,      0,     0,     0,         0,     0, {     0, 0, 0, 0, 77 }, CF_NONE },
-    { "&+WMagical Automatons",                                             3,  3000,    3000,    2000,   1500,      3,     3,     2,         0,  3000, {     0, 0, 0, 0, 77 }, CF_SCOUT_RANGE_2 | CF_MAXSPEED_1 },
+    { "&+yM&+La&+yg&+Li&+yc&+La&+yl &+yAu&+Lto&+yma&+Lto&+yns",           3,  3000,    3000,    2000,   1500,      3,     3,     2,  40000000,  3000, {     0, 0, 0, 0, 77 }, CF_SCOUT_RANGE_2 | CF_MAXSPEED_1 },
     { "&+yNorth&+Wshore &+LPirates",                                       0,   100,     100,     100,    600,      1,     1,     1,         0,     0, {     0, 0, 0, 0, 77 }, CF_NONE },
     { "&+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBucaneers",             1,   300,     300,     300,    700,      1,     1,     1,         0,     0, {     0, 0, 0, 0, 77 }, CF_NONE },
     { "&+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds",         2,  1000,    1000,    1000,    800,      1,     1,     1,         0,     0, {     0, 0, 0, 0, 77 }, CF_NONE },

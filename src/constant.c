@@ -289,7 +289,7 @@ const mcname multiclass_names[] = {
   {CLASS_SORCERER, CLASS_THEURGIST,      "Diviner     "},
   {CLASS_NECROMANCER, CLASS_CONJURER,    "Plane Ruiner"},
   {CLASS_NECROMANCER, CLASS_ROGUE,       "Pale Dirk   "},
-  {CLASS_NECROMANCER, CLASS_MERCENARY,    "Pale Brawler"},
+  {CLASS_NECROMANCER, CLASS_MERCENARY,   "Pale Brawler"},
   {CLASS_NECROMANCER, CLASS_BARD,        "Pale Singer "},
   {CLASS_NECROMANCER, CLASS_MINDFLAYER,  "Pale Wave   "},
   {CLASS_NECROMANCER, CLASS_BERSERKER,   "Pale Maul   "},
@@ -448,9 +448,9 @@ const float druid_memtime_terrain_mod[NUM_SECT_TYPES] = {
   1.5,                          /* castle gate */
   1.5,                          /* castle */
   1.8,                          /* neg plane */
-  1.2,                           /* plane of avernus */
-  1.5,                             // sect_road
-  1.1,                            /* snowy forest */
+  1.2,                          /* plane of avernus */
+  1.5,                          /* sect_road */
+  1.1,                          /* snowy forest */
 };
 
 const char *spell_types[] = {
@@ -628,7 +628,7 @@ const int track_limit[] = {
   0,                            /* * underwater */
   0,                            /* * underwater walking */
   0,                            /* * plane of fire */
-  0,                           /* * ocean      */
+  0,                            /* * ocean      */
   4,                            /* * UD Wild    */
   2,                            /* * UD City    */
   1,                            /* * UD Inside  */
@@ -648,12 +648,12 @@ const int track_limit[] = {
   3,                            /* UD low cavern */
   2,                            /* UD liquid mithril */
   4,                            /* UD mushroom forest */
-  0,                           /* Castle Wall */
+  0,                            /* Castle Wall */
   0,                            /* Castle Gate */
   0,                            /* Castle Main */
   0,                            /* negative plane */
-  0,                             /* plane of avernus */
-  4                             // road
+  0,                            /* plane of avernus */
+  4                             /* road */
 };
 
 
@@ -1418,60 +1418,60 @@ struct stat_data stat_factor[LAST_RACE + 1];
  */
 struct racial_data_type racial_data[LAST_RACE + 1] = {
   {17, 90, 50, 100, 0, 9999},                  /* * none */
-  {17, 90, 50, 100, 0, 120},                   /* * human */
-  {15, 130, 45, 80, 1, 80},                    /* * barbarian */
-  {100, 100, 60, 120, -1, 1000},               /* * drow */
-  {250, 100, 60, 120, -1, 2000},               /* * grey */
-  {50, 85, 45, 90, 1, 525},                    /* * mountain */
-  {40, 90, 45, 95, 1, 450},                    /* * duergar */
+  {17, 90, 50, 100, 0, 100},                   /* * human */
+  {15, 130, 45, 80, 1, 100},                   /* * barbarian */
+  {100, 100, 60, 120, -1, 1200},               /* * drow */
+  {150, 100, 60, 120, -1, 1200},               /* * grey */
+  {50, 85, 45, 90, 1, 800},                    /* * mountain */
+  {40, 90, 45, 95, 1, 650},                    /* * duergar */
   {33, 80, 50, 95, 0, 199},                    /* * halfling */
-  {90, 80, 55, 150, -1, 750},                  /* * gnome */
-  {25, 105, 35, 75, 1, 135},                   /* * ogre - hp_bonus mostly in handler.c */
-  {12, 110, 35, 75, 2, 70},                    /* * troll */
-  {40, 95, 55, 110, 0, 325},                   /* * half-elf */
-  {10, 100, 500, 600, -1, 25},                 /* * Illithid  */
+  {90, 80, 55, 150, -1, 450},                  /* * gnome */
+  {20, 105, 35, 75, 1, 75},                    /* * ogre - hp_bonus mostly in handler.c */
+  {16, 110, 35, 75, 2, 75},                    /* * troll */
+  {40, 95, 55, 110, 0, 225},                   /* * half-elf */
+  {100, 100, 500, 600, -1, 325},               /* * Illithid  */
   {15, 90, 50, 100, 0, 80},                    /* * orc */
-  {5, 140, 50, 100, 2, 65},                    /* * thri-kreen */
-  {10, 200, 50, 100, 1, 80},                   /* * centaur */
-  {20, 100, 200, 400, 0, 125},                 /* * githyanki */
-  {10, 150, 50, 50, 1, 125},                   /* * minotaur */
-  {90, 100, 200, 150, -1, 750},                /* * shade */
-  {400, 110, 200, 75, 2, 1500},                /* * Revenant */
-  {20, 80, 60, 150, -1, 70},                   /* * goblin */
-  {550, 100, 200, 600, 0, 5000},               /* * lich */
+  {15, 140, 50, 100, 2, 65},                   /* * thri-kreen */
+  {18, 200, 50, 100, 1, 100},                  /* * centaur */
+  {20, 100, 200, 400, 0, 225},                 /* * githyanki */
+  {55, 150, 50, 50, 1, 300},                   /* * minotaur */
+  {90, 100, 200, 150, -1, 250},                /* * shade */
+  {100, 110, 200, 75, 2, 250},                 /* * Revenant */
+  {20, 80, 60, 150, -1, 40},                   /* * goblin */
+  {550, 100, 200, 600, 0, 1500},               /* * lich */
   {550, 100, 200, 600, 1, 1000},               /* * vampire */
-  {550, 100, 200, 600, 2, 5000},               /* * death knight */
-  {550, 130, 200, 600, 0, 5000},               /* * shadow beast */
+  {550, 100, 200, 600, 2, 1500},               /* * death knight */
+  {150, 130, 200, 600, 0, 500},                /* * shadow beast */
   {25, 100, 35, 75, 1, 135},                   /* * Storm Giant */
-  {550, 105, 35, 75, 1, 5000},                 /* * Wight */
-  {550, 110, 200, 400, -1, 5000},              /* * Phantom */
+  {550, 105, 35, 75, 1, 1000},                 /* * Wight */
+  {550, 110, 200, 400, -1, 1000},              /* * Phantom */
   {14, 170, 200, 150, -1, 65},                 /* * Harpy */
-  {40, 100, 50, 100, 1, 320} ,                 /* * Orog * */
+  {40, 100, 50, 100, 1, 60} ,                  /* * Orog * */
   {20, 100, 200, 400, 0, 225},                 /* * Githzerai * */
-  {100, 200, 60, 120, -1, 1000},               /* * Drider * */
-  {6, 90, 10, 50, -1, 55},                     /* * Kobold * */
-  {3, 120, 250, 600, -3, 24},                  /* * Pillithid * */
-  {12, 120, 10, 50, 1, 3000},                  /* * Kuo Toa * */
-  {250, 120, 10, 50, 1, 3000},                 /* * Wood Elf * */
-  {21, 140, 12, 55, 2, 1500},                  /* * Firbolg * */
-  {500, 130, 200, 150, 1, 3000},               /* * Agathinon * */
-  {150, 120, 10, 50, 1, 3000},                 /* * Eladrin * */
+  {100, 200, 60, 120, -1, 90},                 /* * Drider * */
+  {12, 90, 10, 50, -1, 55},                    /* * Kobold * */
+  {6, 120, 250, 600, -3, 24},                  /* * Pillithid * */
+  {12, 120, 10, 50, 1, 60},                    /* * Kuo Toa * */
+  {250, 120, 10, 50, 1, 750},                  /* * Wood Elf * */
+  {21, 140, 12, 55, 2, 45},                    /* * Firbolg * */
+  {500, 130, 200, 150, 1, 1000},               /* * Agathinon * */
+  {150, 120, 10, 50, 1, 1500},                 /* * Eladrin * */
   {55, 170, 200, 150, 0, 250},                 /* * Gargyole */
   {8, 170, 200, 150, 1, 20} ,                  /* * Fire Elemental * */
   {8, 170, 200, 150, 1, 20} ,                  /* * Air Elemental * */
   {8, 170, 200, 150, 1, 20} ,                  /* * Water Elemental */
   {8, 170, 200, 150, 1, 20} ,                  /* * Earth Elemental */
-  {14, 170, 200, 150, 2, 1000} ,               /* * Demon * * */
-  {14, 170, 200, 150, 2, 1000} ,               /* * Devil * * */
+  {400, 170, 200, 150, 2, 1000} ,              /* * Demon * * */
+  {400, 170, 200, 150, 2, 1000} ,              /* * Devil * * */
   {14, 170, 200, 150, 0, 20} ,                 /* * Undead * */
-  {1000, 170, 200, 150, 1, 5000} ,             /* * Vampire */
-  {2000, 170, 200, 150, -1, 5000},             /* * Ghost * */
+  {500, 170, 200, 150, 1, 1500} ,              /* * Vampire */
+  {1000, 170, 200, 150, -1, 1500},             /* * Ghost * */
   {14, 170, 200, 150, 2, 150} ,                /* * Lycanthrope */
   {14, 170, 200, 150, 2, 55} ,                 /* * Giant * */
   {14, 170, 200, 150, 1, 65} ,                 /* * Half Orc * */
-  {14, 170, 200, 150, 2, 5000} ,               /* * Golem * */
+  {1500, 170, 200, 150, 2, 1500} ,             /* * Golem * */
   {65, 170, 200, 150, -2, 250} ,               /* * Faerie * */
-  {1500, 100, 200, 120, 2, 4000} ,             /* * Dragon * */
+  {750, 100, 200, 120, 2, 1500} ,              /* * Dragon * */
   {400, 100, 200, 120, 1, 1500} ,              /* * Dragonkin * */
   {5, 60, 50, 100, -1, 20} ,                   /* * Reptile * */
   {5, 60, 50, 100, -1, 20} ,                   /* * Snake * */
@@ -1488,7 +1488,7 @@ struct racial_data_type racial_data[LAST_RACE + 1] = {
   {9, 75, 50, 100, 0, 40} ,                    /* * Carnivore * */
   {1, 50, 50, 100, -2, 2} ,                    /* * Parasite * */
   {200, 150, 50, 100, 1, 1000} ,               /* * Beholder * */
-  {500, 300, 50, 100, 2, 3000} ,               /* * Dracolich * */
+  {500, 300, 50, 100, 2, 1500} ,               /* * Dracolich * */
   {15, 30, 50, 100, -1, 50} ,                  /* * Slime * */
   {250, 150, 200, 300, 1, 1000} ,              /* * Angel * */
   {150, 175, 100, 200, 1, 400} ,               /* * Rakshasa * */
@@ -1499,18 +1499,18 @@ struct racial_data_type racial_data[LAST_RACE + 1] = {
   {25, 125, 0, 0, 2, 125} ,                    /* * Zombie * */
   {150, 250, 300, 500, 1, 1000} ,              /* * Spectre * */
   {200, 250, 0, 0, 2, 1000} ,                  /* * Skeleton * */
-  {500, 300, 800, 1000, 1, 3000} ,             /* * Wraith * */
-  {500, 300, 500, 700, 1, 3000} ,              /* * Shadow * */
-  {14, 170, 200, 150, 2, 5000} ,               /* * Purple Worm * */
+  {500, 300, 800, 1000, 1, 1500} ,             /* * Wraith * */
+  {500, 300, 500, 700, 1, 1500} ,              /* * Shadow * */
+  {14, 170, 200, 150, 2, 500} ,                /* * Purple Worm * */
   {8, 170, 200, 150, 1, 20},                   /* * Void Elemental */
   {8, 170, 200, 150, 1, 20},                   /* * Ice Elemental */
-  {500, 150, 300, 500, 2, 1000} ,              /* * Phoenix * */
+  {500, 150, 300, 500, 2, 1500} ,              /* * Phoenix * */
   {200, 250, 0, 0, 2, 1000} ,                  /* * Archon * */
-  {500, 300, 800, 1000, 1, 3000} ,             /* * Asura * */
-  {500, 300, 50, 100, 2, 3000} ,               /* * Titan * */
-  {500, 300, 50, 100, 2, 3000} ,               /* * Avatar * */
-  {1000, 170, 200, 150, 1, 5000} ,             /* * Ghaele */
-  {500, 300, 800, 1000, 1, 3000} ,             /* * Bralani * */
+  {500, 300, 800, 1000, 1, 1500} ,             /* * Asura * */
+  {500, 300, 50, 100, 2, 1000} ,               /* * Titan * */
+  {125, 300, 50, 100, 2, 500} ,                /* * Avatar * */
+  {150, 170, 200, 150, 1, 500} ,               /* * Ghaele */
+  {100, 300, 800, 1000, 1, 300} ,              /* * Bralani * */
 };
 
 /*
@@ -1527,33 +1527,33 @@ const int min_stats_for_class[CLASS_COUNT + 1][8] = {
 /*
  * S,  D,  A,  C,  P,  I,  W,  Ch
  */
-  {0, 0, 0, 0, 0, 0, 0, 0},     /* * (none) */
-  {55, 20, 25, 55, 0, 0, 0, 0}, /* * warrior */
-  {40, 40, 30, 40, 0, 40, 10, 0},       /* * ranger */
-  {0, 0, 0, 0, 90, 50, 0, 0},   /* * psionicist */
-  {55, 20, 25, 50, 0, 0, 65, 50},       /* * paladin */
-  {55, 20, 25, 50, 0, 0, 65, 50},       /* * anti-paladin */
-  {40, 0, 20, 20, 0, 0, 55, 50},        /* * cleric */
-  {65, 60, 75, 50, 0, 0, 40, 0},        /* * monk */
-  {0, 0, 0, 20, 0, 50, 65, 40}, /* * druid */
-  {0, 0, 0, 0, 0, 50, 50, 40},  /* * shaman */
-  {0, 0, 30, 0, 0, 75, 10, 0},  /* * sorcerer */
-  {0, 0, 30, 0, 0, 75, 10, 0},  /* * necromancer */
-  {40, 30, 0, 40, 0, 60, 10, 0},        /* * conjurer */
-  {0, 75, 65, 0, 0, 30, 0, 30}, /* * rogue */
-  {0, 75, 60, 0, 0, 30, 0, 0},  /* * assassin */
-  {55, 50, 30, 40, 0, 30, 30, 0},       /* * mercenary */
-  {0, 55, 30, 30, 0, 60, 30, 70},       /* * bard  */
-  {0, 75, 75, 0, 0, 30, 0, 0},  /* * thief */
-  {0, 75, 75, 0, 0, 30, 0, 0},  /* *  */
-  {0, 75, 75, 0, 0, 30, 0, 0},  /* *  */
-  {80, 75, 75, 0, 0, 30, 0, 0}, /* * alchemist */
-  {65, 30, 30, 65, 0, 0, 0, 0}, /* * berserker */
-  {40, 40, 30, 40, 0, 40, 10, 0},       /* * reaver */
-  {40, 30, 0, 40, 0, 60, 10, 0},  /** illusionist */
-  {0, 55, 30, 30, 0, 60, 30, 70},       /* * Spectal Piper  */
-  {60, 40, 30, 50, 0, 40, 10, 50},      /* * dreadlord */
-  {0, 0, 0, 0, 0, 50, 50, 40}   /* ethermancer */
+  {0, 0, 0, 0, 0, 0, 0, 0},          /* * (none) */
+  {55, 20, 25, 55, 0, 0, 0, 0},      /* * warrior */
+  {40, 40, 30, 40, 0, 40, 10, 0},    /* * ranger */
+  {0, 0, 0, 0, 90, 50, 0, 0},        /* * psionicist */
+  {55, 20, 25, 50, 0, 0, 65, 50},    /* * paladin */
+  {55, 20, 25, 50, 0, 0, 65, 50},    /* * anti-paladin */
+  {40, 0, 20, 20, 0, 0, 55, 50},     /* * cleric */
+  {65, 60, 75, 50, 0, 0, 40, 0},     /* * monk */
+  {0, 0, 0, 20, 0, 50, 65, 40},      /* * druid */
+  {0, 0, 0, 0, 0, 50, 50, 40},       /* * shaman */
+  {0, 0, 30, 0, 0, 75, 10, 0},       /* * sorcerer */
+  {0, 0, 30, 0, 0, 75, 10, 0},       /* * necromancer */
+  {40, 30, 0, 40, 0, 60, 10, 0},     /* * conjurer */
+  {0, 75, 65, 0, 0, 30, 0, 30},      /* * rogue */
+  {0, 75, 60, 0, 0, 30, 0, 0},       /* * assassin */
+  {55, 50, 30, 40, 0, 30, 30, 0},    /* * mercenary */
+  {0, 55, 30, 30, 0, 60, 30, 70},    /* * bard  */
+  {0, 75, 75, 0, 0, 30, 0, 0},       /* * thief */
+  {0, 75, 75, 0, 0, 30, 0, 0},       /* *  */
+  {0, 75, 75, 0, 0, 30, 0, 0},       /* *  */
+  {80, 75, 75, 0, 0, 30, 0, 0},      /* * alchemist */
+  {65, 30, 30, 65, 0, 0, 0, 0},      /* * berserker */
+  {40, 40, 30, 40, 0, 40, 10, 0},    /* * reaver */
+  {40, 30, 0, 40, 0, 60, 10, 0},     /* * illusionist */
+  {0, 55, 30, 30, 0, 60, 30, 70},    /* * piper  */
+  {60, 40, 30, 50, 0, 40, 10, 50},   /* * dreadlord */
+  {0, 0, 0, 0, 0, 50, 50, 40}        /* * ethermancer */
 
 };
 
@@ -2137,13 +2137,9 @@ and uncomment those below... */
  * I dont care if you hate AD&D elves, I personally think Tolkienistic
  * elves suck...so NO they will be shorter..suffer -Cython
  *
- */
-/*
- * racial modifiers to weight in init_height_weight:
- *
- * dwarves 177%         human of same height halflings 150%       -//-
- * -cuz they're damn gluttonous- gnomes 130%          -//- -because of
- * small size- elves 90%            -//- -slim build-
+ * Since you're both long gone, I'm going to go ahead and tell you both
+ * to STFU, especially since we don't even use ht/wt for anything anymore!
+ * - Jexni
  */
 
 int      racial_values[LAST_RACE + 1][2] = {
@@ -2157,7 +2153,7 @@ int      racial_values[LAST_RACE + 1][2] = {
   {75, 135},                    /* * gnome */
   {350, 450},                   /* * ogre */
   {170, 210},                   /* * troll */
-  {140, 180},                   /* * 1/2-elf */
+  {140, 180},                   /* * half-elf */
   {140, 180},                   /* * illithid  */
   {156, 170},                   /* * orc */
   {100, 150},                   /* * thri-kreen */

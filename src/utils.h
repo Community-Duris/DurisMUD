@@ -1122,7 +1122,8 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch)) && !IS_ANIMAL(ch))
   (GET_RACE(ch) == RACE_ELADRIN) || \
   (GET_RACE(ch) == RACE_TITAN) || \
   (GET_RACE(ch) == RACE_AVATAR) || \
-  (GET_RACE(ch) == RACE_CONSTRUCT))
+  (GET_RACE(ch) == RACE_CONSTRUCT) || \
+  (GET_RACE(ch) == RACE_EFREET))
 
 #define SKILL_DATA(ch, skill)   (skills[(skill)].m_class[flag2idx((ch)->player.m_class)-1])
 #define SKILL_DATA2(ch, skill)   (skills[(skill)].m_class[flag2idx((ch)->player.secondary_class)-1])
@@ -1209,7 +1210,17 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch)) && !IS_ANIMAL(ch))
        affected_by_spell(ch, SPELL_SLEEP))
 
 // Meeting the following define grants hitpoints.spellcaster.maxConBonus.
-#define IS_MAX_CON_BONUS_CLASS(ch) (GET_CLASS(ch, CLASS_ETHERMANCER | CLASS_DRUID | CLASS_CLERIC | CLASS_SORCERER | CLASS_NECROMANCER | CLASS_SHAMAN | CLASS_PSIONICIST | CLASS_ILLUSIONIST | CLASS_CONJURER | CLASS_BARD | CLASS_THEURGIST))
+#define IS_MAX_CON_BONUS_CLASS(ch) (GET_CLASS(ch, CLASS_ETHERMANCER | \
+                                                  CLASS_DRUID | \
+                                                  CLASS_CLERIC | \
+                                                  CLASS_SORCERER | \
+                                                  CLASS_NECROMANCER | \
+                                                  CLASS_SHAMAN | \
+                                                  CLASS_PSIONICIST | \
+                                                  CLASS_ILLUSIONIST | \
+                                                  CLASS_CONJURER | \
+                                                  CLASS_BARD | \
+                                                  CLASS_THEURGIST))
 
 #define IS_COLD_VULN(ch) (GET_RACE(ch) == RACE_THRIKREEN || \
                           GET_RACE(ch) == RACE_F_ELEMENTAL || \

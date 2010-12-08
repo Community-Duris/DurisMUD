@@ -1,6 +1,6 @@
 #387
 &+BN&+by'&+BN&+beth's&+L Stronghold Continued&n~
-38817 0 0 40 50 3
+38817 0 0 40 50 4
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -186,7 +186,7 @@ G 1 38715 1 0 100 0 0 0            *    a potion of bubbling acid
 G 1 38748 1 0 100 0 0 0            *    an elusive yet immortal soul
 M 0 38723 1 38803 100 0 0 0        * Kaska, valkyrie of truth
 E 1 38725 1 16 40 0 0 0            *   a frost brand named "Stormbringer"
-G 1 38729 3 0 100 0 0 0            *    the precious elixer of life
+G 1 38729 3 0 100 0 0 0            *    the precious elixir of life
 G 1 38749 1 0 100 0 0 0            *    an elusive yet immortal soul
 M 0 38724 1 38803 100 0 0 0        * Cavadd the holy avenger
 E 1 38726 1 9 100 0 0 0            *   the hands of justice
@@ -198,12 +198,12 @@ G 1 38751 1 0 100 0 0 0            *    an elusive yet immortal soul
 M 0 38731 1 38804 100 0 0 0        * Nainutom the dwarven infiltrator
 E 1 38737 2 16 100 0 0 0           *   a dirk of infiltration
 E 1 38737 2 17 100 0 0 0           *   a dirk of infiltration
-G 1 38729 3 0 100 0 0 0            *    the precious elixer of life
+G 1 38729 3 0 100 0 0 0            *    the precious elixir of life
 G 1 38752 1 0 100 0 0 0            *    an elusive yet immortal soul
 M 0 38732 1 38804 100 0 0 0        * Sir Dannyk the Reverend
 E 1 38738 1 21 40 0 0 0            *   an earring of hope and enlightenment
 E 1 38711 4 16 100 0 0 0           *   a massive two-handed sword
-G 1 38729 3 0 100 0 0 0            *    the precious elixer of life
+G 1 38729 3 0 100 0 0 0            *    the precious elixir of life
 G 1 38753 1 0 100 0 0 0            *    an elusive yet immortal soul
 M 0 38733 1 38804 100 0 0 0        * Lecani the angel wyrm
 E 1 38739 1 11 100 0 0 0           *   an angel wyrm scale

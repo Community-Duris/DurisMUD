@@ -3918,9 +3918,9 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
 
         send_to_char("&+RThe flames cause your skin to &+Lsmoke!\r\n", victim);
         act("&+rThe intense &+Rflames &+rcause&n $n's skin to &+rsmolder and &+Yburn!&n",
-          FALSE, victim, 0, 0, TO_CHAR);
+          FALSE, victim, 0, 0, TO_VICT);
         act("&+rThe intense &+Rflames &+rcause&n $n's skin to &+rsmolder and &+Yburn!&n",
-          FALSE, victim, 0, 0, TO_ROOM);
+          FALSE, victim, 0, 0, TO_NOTVICT);
           
         if(!affected_by_spell(ch, TAG_TROLL_BURN))
         {

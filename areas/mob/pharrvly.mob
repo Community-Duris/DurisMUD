@@ -425,7 +425,7 @@ gunner pirate north shore northshore~
 &+La &+cgunner &+Lof the &+YNorth&+Wshore &+LPirates&n~
 &+LA strong pirate moves about, rearming munitions.&n
 ~
-&+L   This large pirate hussels about running from below deck to the ballista's.
+&+L   This large pirate hustles about running from below deck to the ballista's.
 &+LCarrying the large bolts, this pirate has developed huge muscles which strain
 &+Lfrom the weight of the bolts. As the crew goes to war with its next victims,
 &+Lthis man helps fuel the destructive powers the ship can unleash.&n
@@ -530,7 +530,7 @@ deck hand twilight cove buccaneer pirate~
 &+La &+ydeck hand &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
 &+LAn orc deck hand stands here, trying to look busy.&n
 ~
-&+L   This squat orc hussels about the ship, weary of the captains vicious mood swings.
+&+L   This squat orc hustles about the ship, weary of the captains vicious mood swings.
 &+LAssigned to the littlest of tasks, this deck hand better obey, or fear getting left
 &+Lon a deserted island.&n
 ~
@@ -589,7 +589,7 @@ gunner pirate twilight cove buccaneer~
 &+La &+Gg&+gu&+Gn&+gn&+Ge&+gr &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
 &+LA burly pirate moves about, husseling to rearm!&n
 ~
-&+L   This burly orc hussels about, making sure the weapons are well stocked
+&+L   This burly orc hustles about, making sure the weapons are well stocked
 &+Land ready for use. Huge scars criss cross this orcs arms, from various
 &+Lbattles and previously conquered victims.&n
 ~
@@ -739,7 +739,7 @@ cutthroat plunderer marauder four winds _spec1_~
 &+L   This galley workers looks abused. Constantly under the heel of the
 &+Lhigher up crew members, the work for this pirate never ends. In a mad
 &+Lrush, his sour attitude is evident on his face as he works his tasks.
-&+LFlayed flesh shows where the crew have whiped this poor undead pirate
+&+LFlayed flesh shows where the crew have whipped this poor undead pirate
 &+Linto shape!&n
 ~
 10312 1 0 402653240 0 0 0 -1000 S
@@ -950,9 +950,9 @@ PH 0 1 -1
 #40263
 bolt carrier dark sun syndicate~
 &+La &+wgu&+Lnn&+wer &+Lof the Dark &+ySun &+LSyndicate&n~
-&+LA large bolt carrier stands here, perpairing the &+cweapons &+Lfor an encounter with the &+bnavy&+L.&n
+&+LA large bolt carrier stands here, preparing the &+cweapons &+Lfor an encounter with the &+bnavy&+L.&n
 ~
-&+L   This strong figure hussels about, taking extra care with the special
+&+L   This strong figure hustles about, taking extra care with the special
 &+Lcontraband weapons. Carrying the exploding tip'd ballista bolts with extra
 &+Lcare, the swaying of the ocean makes for an interesting entertainment, as
 &+Lhe dodges and ducks various swinging ropes and beams. As he stacks the
@@ -966,9 +966,9 @@ PH 0 64 -1
 #40264
 captain scion abyss demon _no_move_~
 &+Lthe &+rc&+Ra&+rp&+Rt&+ra&+Ri&+rn &+Lof the &+rSci&+Rons &+Lof the &+WAb&+wy&+Lss&n~
-&+LA demon enshrouded in &+rflames &+Lstands here, issueing &+borders&+L.&n
+&+LA demon enshrouded in &+rflames &+Lstands here, issuing &+borders&+L.&n
 ~
-&+L   Standing nearly 12 feet tall, this massive d&+we&+Lm&+wo&+Ln stands here, a
+&+L   Standing nearly 12 feet tall, this massive d&+we&+Lm&+wo&+Ln looms here, a
 &+Lshroud of &+rflame &+Lflowing about his body. As you look upon his face,
 &+Lpitch black eyes stare back, never blinking. A billowing pirate's
 &+Lcoat rests across broad shoulders, and appears to be made from the
@@ -1115,7 +1115,7 @@ x 0 33554432 -1
 #40273
 gunner scion abyss demon~
 &+La &+cgu&+Lnn&+cer &+Lof the &+rSci&+Rons &+Lof the &+WAb&+wy&+Lss&n~
-&+LA burly d&+we&+Lm&+wo&+Ln hussels about, reloading guns as they &+rf&+Ri&+rr&+Re&+L.&n
+&+LA burly d&+we&+Lm&+wo&+Ln hustles about, reloading guns as they &+rf&+Ri&+rr&+Re&+L.&n
 ~
 &+L   This large demon has muscles layered upon even more muscles. Carrying
 &+Lammo for various weapons on board, he is quick to hussel from catapult
@@ -1131,7 +1131,7 @@ x 0 512 -1
 #40274
 deck hand scion demon abyss swab~
 &+La &+yde&+Lck ha&+ynd &+Lof the S&+rci&+Rons &+Lof the &+WAb&+wy&+Lss&n~
-&+LA small d&+we&+Lm&+wo&+Ln stands here, &+cswabbing &+Lthe deck to avoid getting &+wwhiped &+Lby the &+rcaptain&+L.&n
+&+LA small d&+we&+Lm&+wo&+Ln stands here, &+cswabbing &+Lthe deck to avoid getting &+wwhipped &+Lby the &+rcaptain&+L.&n
 ~
 &+L   The smallest of the crew, these lesser demons are the whipping stock
 &+Lof the ship. Forced to handle the lesser duties, these demons are quick

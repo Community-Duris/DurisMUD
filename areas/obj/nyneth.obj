@@ -111,9 +111,9 @@ potion dust dusty~
 50 36 -1 -1 0 0 0 0
 1 0 100
 #22937
-elixer vial potion hunting sizzling~
-&+Lelixer of &+rhunting&n~
-&+LA vial filled with a &+rsizzling&+L elixer has been left here.&n~
+elixir vial potion hunting sizzling~
+&+Lelixir of &+rhunting&n~
+&+LA vial filled with a &+rsizzling&+L elixir has been left here.&n~
 ~
 10 7 3 1 7 0 0 1 64 0 0
 60 66 66 66 0 0 0 0
@@ -143,17 +143,17 @@ jar rotting flesh potion~
 60 97 131 318 0 0 0 0
 1 0 100
 #22941
-potion translucent elixer~
-&+La &+Wtrans&+clucent &+Lelixer&n~
-&+LA potion filled with a &+Wtrans&+clucent &+Lelixer waits to be taken.&n~
+potion translucent elixir~
+&+La &+Wtrans&+clucent &+Lelixir&n~
+&+LA potion filled with a &+Wtrans&+clucent &+Lelixir waits to be taken.&n~
 ~
 10 7 3 1 7 0 0 1 64 0 0
 60 19 84 189 0 0 0 0
 1 0 100
 #22942
-elixer potion arcane resistance shimmering~
-&+gan elixer of &+marcane&+g resistance&n~
-&+gAn elixer of shimmering green liquid floats here.&n~
+elixir potion arcane resistance shimmering~
+&+gan elixir of &+marcane&+g resistance&n~
+&+gAn elixir of shimmering green liquid floats here.&n~
 ~
 10 15 3 0 7 0 8192 1 64 0 0
 60 144 -1 -1 0 0 0 0
@@ -457,9 +457,9 @@ A
 A
 24 -3
 #22971
-elixer beyond~
-&+Lthe &+Relixer &+Lfrom the &+cbeyond&n~
-&+cAn elixer has been left here.&n~
+elixir beyond~
+&+Lthe &+Relixir &+Lfrom the &+cbeyond&n~
+&+cAn elixir has been left here.&n~
 ~
 10 15 3 0 7 0 0 16385 0 0 0
 60 161 180 286 0 0 0 0

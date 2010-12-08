@@ -3461,6 +3461,9 @@ int butthead(P_char ch, P_char pl, int cmd, char *arg)
  * * it will morph back, with all inventory and equipment in proper place.
  */
 
+P_obj has_moonstone_fragment(P_char ch);
+extern char arg1[MAX_STRING_LENGTH];
+extern char arg2[MAX_STRING_LENGTH];
 int xexos(P_char ch, P_char pl, int cmd, char *arg)
 {
   P_char   tempchar = NULL, was_fighting = NULL;
@@ -3474,12 +3477,6 @@ int xexos(P_char ch, P_char pl, int cmd, char *arg)
     return TRUE;
 
   if (!ch || !AWAKE(ch))
-    return FALSE;
-
-  /*
-   * if it's some command besides a periodic event call, return
-   */
-  if (cmd != 0)
     return FALSE;
 
   if (IS_FIGHTING(ch))
@@ -3549,10 +3546,36 @@ int xexos(P_char ch, P_char pl, int cmd, char *arg)
     return (TRUE);
 
   }
-  else
+  if (cmd == CMD_ASK)
   {
-    return (FALSE);
+    if (has_moonstone_fragment(pl))
+    {
+      send_to_char ("Xexos says 'So, you've killed that... thing.\r\n", pl);
+      send_to_char ("  Fine, i admit it. I stole the moonstone from that old fool!\r\n", pl);
+      send_to_char ("  But as i was escaping Sarmiz bay on a ship, we've come under pirates attack.\r\n", pl);
+      send_to_char ("  In the heat of battle, the moonstone has been broken into three pieces!\r\n", pl);
+      send_to_char ("  One fragment fell into ocean and i managed to escape to the land with another.\r\n", pl);
+      send_to_char ("  Pirates got the third one i guess...'\r\n\r\n", pl);
+      send_to_char ("Xexos says 'I've tried to make an automaton with a single fragment, but its incomplete!\r\n", pl);
+      send_to_char ("  Damn thing went berserk and i had to lock it down!'\r\n\r\n", pl);
+      send_to_char ("Xexos signs 'And now i have to hide in this shithole from Erzul's revenge. So useless...'\r\n", pl);
+      return TRUE;
+    }
+    else
+    {
+      half_chop(arg, arg1, arg2);
+      if (*arg2)
+      {
+        if (isname(arg2, "automaton automatons erzul moonstone"))
+        {
+          send_to_char ("Xexos says 'I dont know what are you talking about, get lost!'\r\n", pl);
+          return TRUE;
+        }
+      }
+    }
   }
+
+  return (FALSE);
 }
 
 int agthrodos(P_char ch, P_char pl, int cmd, char *arg)

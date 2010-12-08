@@ -46,9 +46,9 @@
 &+rCeothia                           &+L* &+r45-50      &+w-&+L=&+C  Cy
 &+rCeothia - the past                &+L* &+r45-50      &+w-&+L=&+C  Cy
 &+rCeothia - the future              &+L* &+r45-50      &+w-&+L=&+C  Cy
-&+RThe Charcoal Palace               &+L*     &+R51+    &+w-&+L=&+C  Unknown/Jexni
+&+RThe Charcoal Palace               &+L*    &+R51+     &+w-&+L=&+C  Unknown/Jexni
 &+gCity of Breale                    &+L* &+g 5-50      &+w-&+L=&+C  Unknown
-&+RCity of Brass (Efreeti)           &+L*     &+R51+    &+w-&+L=&+C  Cython
+&+RCity of Brass (Efreeti)           &+L*    &+R51+     &+w-&+L=&+C  Cython
 &+YCity of BogenTok                  &+L* &+Y10-50      &+w-&+L=&+C  Clavados
 &+YCity of Torrhan                   &+L* &+Y20-50      &+w-&+L=&+C  Denel
 &+gCity of Verspin                   &+L*  &+g3-50      &+w-&+L=&+C  Zepline/Mren
@@ -154,7 +154,10 @@
 &+RNew Cave City                     &+L*    &+R51+     &+w-&+L=&+C  Ilienze
 &+gNewhaven                          &+L* &+g20-40      &+w-&+L=&+C  Drevarr/Ilshadrial
 &+gNeverwind Valley                  &+L* &+g15-30      &+w-&+L=&+C  Halcyon
-&+RNexus: Marduk/Antu/Enlil/Ningishzida            &+w-&+L=&+C  Kitsero
+&+RReliquary Nexus, Antu             &+L*    &+R51+     &+w-&+L=&+C  Kitsero
+&+RReliquary Nexus, Enlil            &+L*    &+R51+     &+w-&+L=&+C  Kitsero
+&+RReliquary Nexus, Marduk           &+L*    &+R51+     &+w-&+L=&+C  Kitsero
+&+RReliquary Nexus, Ningishzida      &+L*    &+R51+     &+w-&+L=&+C  Kitsero
 &+gNhavan Island                     &+L* &+g10-30      &+w-&+L=&+C  Oghma
 &+YNizari                            &+L* &+Y20-40      &+w-&+L=&+C  Shadowy
 &+YNorthern Lakes and Settlements    &+L* &+Y20-40      &+w-&+L=&+C  Melkivar
@@ -217,7 +220,7 @@
 &+YThe Temple of Lizizania           &+L* &+Y20-40      &+w-&+L=&+C  Ssseri
 &+rThe Temple of the Sun             &+L* &+r40-50      &+w-&+L=&+C  Gnosha
 &+rTemple of the Earth               &+L* &+r40-50      &+w-&+L=&+C  Teruaf
-&+RTezcatlipoca                      &+L*     &+R51+    &+w-&+L=&+C  Beretorn
+&+RTezcatlipoca                      &+L*    &+R51+     &+w-&+L=&+C  Beretorn
 &+rTikitzopl                         &+L* &+r30-50      &+w-&+L=&+C  Orthaz
 &+YTower of High Sorcery             &+L* &+Y30-50      &+w-&+L=&+C  Prodigy/Miax/Beretorn
 &+gThe Town of Miaeril               &+L*  &+g1-40      &+w-&+L=&+C  Sizan
@@ -232,7 +235,7 @@
 &+gTruktakyagyo                      &+L* &+g10-30      &+w-&+L=&+C  Dryzkul
 &+gThe Tunnels of Cyric              &+L* &+g15-50      &+w-&+L=&+C  Krzzn
 &+gTwilight Tower of Illusion        &+L*  &+g1-50      &+w-&+L=&+C  Beretorn
-&+rTwin Keeps of Devestated Tharnadia&+L*  &N&+r45-50   &+w-&+L=&+C  Fotenak
+&+rTwin Keeps of Devestated Tharnadia&+L*    &+r45+     &+w-&+L=&+C  Fotenak
 &+gThe Twin Towers                   &+L* &+g10-30      &+w-&+L=&+C  Clavados
 &+gThe Twin Towers Forest            &+L* &+g 1-15      &+w-&+L=&+C  Sehanine
 &+gThe Twisted Wood                  &+L* &+g 1-15      &+w-&+L=&+C  Xueqin
@@ -246,11 +249,11 @@
 &+YUndermountain                     &+L* &+Y10-40      &+w-&+L=&+C  Corellon
 &+gValinhaven                        &+L* &+g10-30      &+w-&+L=&+C  Clavados
 &+gValley of Crushk                  &+L* &+g10-20      &+w-&+L=&+C  Valkur
-&+RThe Valley of the Snow Ogres      &+L*     &+R51+    &+w-&+L=&+C  Jexni
+&+RThe Valley of the Snow Ogres      &+L*    &+R51+     &+w-&+L=&+C  Jexni
 &+rThe Valoisian Castle              &+L* &+r40-50      &+w-&+L=&+C  Scip
 &+YVarathorn Keep                    &+L* &+Y10-30      &+w-&+L=&+C  Beretorn
 &+YVargan Dungeon                    &+L* &+Y20-40      &+w-&+L=&+C  Zith
-&+rVecnas Tomb                       &+L*     &+r51+    &+w-&+L=&+C  Timken/Ski
+&+rVecnas Tomb                       &+L*    &+r51+     &+w-&+L=&+C  Timken/Ski
 &+gVella's Bordello                  &+L* &+g10-30      &+w-&+L=&+C  Clavados
 &+gVenan'Trut                        &+L* &+g10-50      &+w-&+L=&+C  Scip
 &+rVillage of the Damned             &+L* &+r45-50      &+w-&+L=&+C  Xueqin
@@ -265,7 +268,7 @@
     &+BHometowns = Good&N &+rHometowns = Evil &+gHometowns = Neutral&N
 &+L****************************************************************
 
-&+BWinterhaven             &+L* &+W<&+YAll Good Races&+W>                &+W-&+L=&+CSeif
+&+BWinterhaven             &+L* &+W<&+YAll Good Races&+W>        &+W-&+L=&+CSeif
 &+rGith Fort               &+L* &+w<&+GGith&+Wyanki&+w>             &+w-&+L=&+CJera
 &+rFaang                   &+L* &+w<&+bOgres&+w>                 &+w-&+L=&+CTripod
 &+rGhore                   &+L* &+w<&+gSwamp Trolls&+w>          &+w-&+L=&+CTripod
@@ -275,12 +278,12 @@
 &+rShady Grove             &+L* &+w<&+LOrcs&+w>                  &+w-&+L=&+CMelkivar
 &+gKhhiytik                &+L* &+w<&+GThri-&+YKreen&+w>            &+w-&+L=&+CUklor
 &+gNax'Varan               &+L* &+w<&+LMino&+rtaur&+w>              &+w-&+L=&+CScipio
-&+gHarpy Settlement        &+L* &+w<&n&+yEthermancers&+w>                 &+w-&+L=&+CAlachest
+&+gHarpy Settlement        &+L* &+w<&n&+yEthermancers&+w>         &+w-&+L=&+CAlachest
 
 
                    &+L<<<   &+CDEFUNCT HOMETOWNS &+L>>>
 &+L*****************************************************************
-&+rBloodstone              &+L* &+w<&+CHumans&+w>               &+w-&+L=&+CGlantor
+&+rBloodstone              &+L* &+w<&+CHumans&+w>                &+w-&+L=&+CGlantor
 &+mIxarkon                 &+L* &+w<&+MIllithids&+w>             &+w-&+L=&+CTalos
 &+BTharnadia               &+L* &+w<&+CHumans&+w>                &+w-&+L=&+CSniktiorg
 &+BCharing                 &+L* &+w<&+cGrey Elves&+L\&+CHalf&+c-Elves&+w> &+w-&+L=&+CMelkivar
@@ -289,7 +292,7 @@
 &+BAshrumite Village       &+L* &+w<&+RGnomes&+w>                &+w-&+L=&+CFafhrd
 &+BUgta                    &+L* &+w<&+BBarbarians&+w>            &+w-&+L=&+CTavril
 &+BFort Marigot            &+L* &+w<&+gCen&+Ltaur&+w>               &+w-&+L=&+CMelkivar
-&+BStrathor                &+L*&+w<&+WS&+wt&+Wo&+wr&+Wm&+wG&+Wi&+wa&+Wnt&+w>            &+w-&+L=&+C  Terauf
+&+BStrathor                &+L*&+w<&+WS&+wt&+Wo&+wr&+Wm&+wG&+Wi&+wa&+Wnt&+w>            &+w-&+L=&+CTerauf
 
 
                            &+WOriginal Diku Creators:
@@ -323,19 +326,19 @@
 
       &+rDuris Currently Run By: &+cTorgal, Kitsero
 
-      &+rDuris Coders: &+cTorgal, Zion, Odorf, Lom, Lucrot, Venthix, Alver
-      &+rDuris Areas &+rGroup: &+cFotenak, Seif, Kitsero, Lucrot, Aliera
+      &+rDuris Coders: &+cTorgal, Odorf, Lom, Venthix, Alver, Jexni
+      &+rDuris Areas &+rGroup: &+cAliera, Seif, Kitsero, Jexni, Fotenak
       &+rCaretakers of Custom DE Editor: &+cTharkun, Venthix
       &+rDuris Server and Machine: &+cTorgal
       &+rDuris Site provided by: &+cTorgal
-      &+rDuris Quest Creators: &+cFotenak, Seif, Kitsero
-      &+rDuris Help Files: &+cLucrot
-      &+rDuris Zone Credits: &+cLucrot
+      &+rDuris Quest Creators: &+cFotenak, Seif, Kitsero, Jexni
+      &+rDuris Help Files: &+cJexni, Venthix, Aliera, Kitsero
+      &+rDuris Zone Credits: &+cJexni
 
       &+rDuris Website: &+Whttp://www.durismud.com      
          &+rWebsite run by: &+cTorgal
 
-      &+bCopyright 2000 - 2009 - Duris Mud Project&N
+      &+bCopyright 2000 - 2010 - Duris Mud Project&N
 
 
       Zones created for Duris: Land of BloodLust become the sole property of:

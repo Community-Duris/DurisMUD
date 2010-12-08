@@ -471,7 +471,7 @@ bool NPCShipAI::find_new_target()
                     continue;
                 if (contacts[i].range > 10 && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT))
                     continue;
-                if (number(0, (int)contacts[i].range * 40) > 0)
+                if (number(0, (int)contacts[i].range * 50) > 0)
                     continue;
             }
             if (is_valid_target(contacts[i].ship))
@@ -481,13 +481,17 @@ bool NPCShipAI::find_new_target()
         {
             if (IS_NPC_SHIP(contacts[i].ship))
                 continue;
+            if (contacts[i].ship->target && contacts[i].ship->race != contacts[i].ship->target->race)
+            {
+                new_heading = contacts[i].bearing + 180;
+            }
             if (ship->timer[T_BSTATION] == 0)
             {
                 if (contacts[i].range > 35)
                     continue;
                 if (contacts[i].range > 10 && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT))
                     continue;
-                if (number(0, (int)contacts[i].range * 80) > 0)
+                if (number(0, (int)contacts[i].range * 100) > 0)
                     continue;
             }
             if (is_valid_target(contacts[i].ship))

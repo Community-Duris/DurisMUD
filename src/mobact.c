@@ -7157,19 +7157,18 @@ void MobStartFight(P_char ch, P_char vict)
   if(!fudge_flag && vict && ch && (vict->in_room == ch->in_room))
     attack(ch, vict);
 
-  if(!fudge_flag && vict && ch && (vict->in_room == ch->in_room) &&
-      CAN_ACT(ch))
+ /* if(!fudge_flag && vict && ch && (vict->in_room == ch->in_room) && CAN_ACT(ch))
   {
-    /*
-     * hit command does not support blindfighting, hitall does. -Torm
-     */
-    /*
-     * generic perform_violence supports blindfighting, the point is
-     * just to get fight going on.
-     */
+    //
+    // hit command does not support blindfighting, hitall does. -Torm
+    //
+    //
+    // generic perform_violence supports blindfighting, the point is
+    // just to get fight going on.
+    //
     strcpy(buf, "hitall all");
     command_interpreter(ch, buf);
-  }
+  }*/
 }
 
 /*
