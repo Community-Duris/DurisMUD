@@ -418,8 +418,7 @@ int skull_leggings(P_obj leggings, P_char ch, int cmd, char *arg)
      if (OBJ_CARRIED_BY(leggings, ch))
      {
        if (GET_RACE(ch) == RACE_SNOW_OGRE || GET_RACE(ch) == RACE_OGRE  || \
-           GET_RACE(ch) == RACE_MINOTAUR || GET_RACE(ch) == RACE_SGIANT || \
-	   GET_RACE(ch) == RACE_FIRBOLG)
+           GET_RACE(ch) == RACE_MINOTAUR || GET_RACE(ch) == RACE_FIRBOLG)
        {
           int slot = WEAR_LEGS;
           if (ch->equipment[slot])
