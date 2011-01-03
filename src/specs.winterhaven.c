@@ -4444,8 +4444,7 @@ int dragon_heart_decay(P_obj obj, P_char ch, int cmd, char *args)
       raise(SIGSEGV);
     }
     corpse->weight = obj->weight;
-    set_obj_affected(corpse, get_property("timer.decay.corpse.npc", 120),
-                     TAG_OBJ_DECAY, 0);
+    set_obj_affected(corpse, 15000, TAG_OBJ_DECAY, 0);
 
     if (OBJ_CARRIED(obj))
     {

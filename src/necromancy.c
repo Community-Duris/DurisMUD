@@ -465,7 +465,7 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   
   if (globe && (globe->R_num == real_object(GLOBE_SHADOWS_VNUM)))
   {
-    act("&+LYour $q &+Lpulses with evil energy, infusing part of it's malevolence into your undead abomination!&N",
+    act("&+LYour $q &+Lpulses with evil energy, infusing part of its malevolence into your undead abomination!&N",
           FALSE, ch, globe, 0, TO_CHAR);
     act("&+L$n's $q &+Lthrobs with evil energy, combining its unholy power with $s abomination!&N",
           FALSE, ch, globe, 0, TO_ROOM);
@@ -652,7 +652,7 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
 
   if ((typ >= THEURPET_START) && (typ <= THEURPET_END))
   {
-    act("After a short &+yr&+Yi&+Wtu&+Ya&+yl&n, the &+Wsoul&n of $N&n is called to inhibit the $p.", FALSE, ch, obj, undead, TO_CHAR);
+    act("After a short &+yr&+Yi&+Wtu&+Ya&+yl&n, the &+Wsoul&n of $N&n is called to inhabit the $p.", FALSE, ch, obj, undead, TO_CHAR);
     act("The $p &+btr&+Ban&+Csf&+Bor&+bms&n into $N&n and awaits instructions from &n&n.", FALSE, ch, obj, undead, TO_ROOM);
   }
   else
@@ -821,8 +821,8 @@ void spawn_raise_undead(P_char ch, P_char vict, P_obj corpse)
       
       if (GET_CLASS(ch, CLASS_THEURGIST))
       {
-        act("You place your hand on &N upon $S last dying breath.", FALSE, ch, 0, vict, TO_CHAR);
-        act("After a short &+yr&+Yi&+Wtu&+Ya&+yl&n, the &+Wsoul&n of $N&n is called to inhibit the $p.", FALSE, ch, 0, vict, TO_CHAR);
+        act("You place your hand on $N upon $S last dying breath.", FALSE, ch, 0, vict, TO_CHAR);
+        act("After a short &+yr&+Yi&+Wtu&+Ya&+yl&n, the &+Wsoul&n of $N&n is called to inhabit the $p.", FALSE, ch, 0, vict, TO_CHAR);
 	act("$n&n places $s hand on $N upon $S last dying breath.", FALSE, ch, 0, vict, TO_ROOM);
         act("The $p &+btr&+Ban&+Csf&+Bor&+bms&n into $N&n and awaits instructions from &n&n.", FALSE, ch, 0, vict, TO_ROOM);
       }
