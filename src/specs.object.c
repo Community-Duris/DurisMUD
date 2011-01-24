@@ -7016,7 +7016,7 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info, EX_BREAKABLE);
       REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info, EX_ILLUSION);
     }
-    if(downexit)
+    if(downexit && (world[obj->loc.room].sector_type == SECT_NO_GROUND || world[obj->loc.room].sector_type == SECT_UNDRWLD_NOGROUND))
     {
       int speed = 1;
       was_in = obj->loc.room;

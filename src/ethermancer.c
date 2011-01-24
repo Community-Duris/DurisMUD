@@ -639,7 +639,7 @@ void spell_forked_lightning(int level, P_char ch, char *arg, int type,
     "Giant bolts of &-L&+Bforked lightning&n hit you square in the chest, sending you reeling.",
     "$n stretches out $s hand, unleashing a blast of deadly &-L&+Bforked lightning&n toward $N.",
     "Your deadly blast of &-L&+Bforked lightning&n ends $N's life abruptly.",
-    "Your body goes numb as a bolt of &+Cfrost&n ends your life.",
+    "Your body goes numb as a bolt of &+Blightning&n ends your life.",
     "$n hits $N with such a blast of &-L&+Blightning&n that nothing is left but a pair of smoking boots.",
       0
   };
