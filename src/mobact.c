@@ -703,6 +703,7 @@ bool MobCastSpell(P_char ch, P_char victim, P_obj object, int spl, int lvl)
           continue;
         if(IS_NPC(tch))
           MobStartFight(tch, ch);
+
         else
 #ifndef NEW_COMBAT
           hit(tch, ch, tch->equipment[PRIMARY_WEAPON]);
@@ -5143,6 +5144,7 @@ void BreathWeapon(P_char ch, int dir)
         get_property("dragon.Breath.area.minChance", 60),
         get_property("dragon.Breath.area.chanceStep", 20));
     
+    CharWait(ch, PULSE_VIOLENCE * 2.5);
     if(GET_MASTER(ch))
       CharWait(ch, PULSE_VIOLENCE * 4);
     waited = TRUE;
@@ -7003,11 +7005,8 @@ void MobStartFight(P_char ch, P_char vict)
     return;
   }
 
-  if(ch &&
-    IS_PC(ch))
-  {
+  if(IS_PC(ch))
     return;
-  }
 
   if(ch->specials.z_cord != vict->specials.z_cord)
     return;
@@ -7058,13 +7057,11 @@ void MobStartFight(P_char ch, P_char vict)
     stop_riding(ch);
   }
 
-  // CAN_BREATHE() checks dragon-ness
-
-  if(CAN_BREATHE(ch))
+  if(CAN_BREATHE(ch) && IS_DRAGON(ch))
   {
     if(fudge_flag)
     {
-      if(DragonCombat(ch, number(0, 1))) // Always roar in single file.
+      if(DragonCombat(ch, !number(0, 1))) // Always roar in single file.
       {
         return;
       }
@@ -7088,8 +7085,7 @@ void MobStartFight(P_char ch, P_char vict)
     }
   }
   
-  if(!fudge_flag && IS_THIEF(ch) && (GET_RACE(ch) != RACE_TROLL) &&
-      (GET_RACE(ch) != RACE_OGRE) &&
+  if(!fudge_flag && IS_THIEF(ch) &&
       ((ch->equipment[WIELD] && IS_BACKSTABBER(ch->equipment[WIELD])) ||
        (ch->equipment[SECONDARY_WEAPON] &&
         IS_BACKSTABBER(ch->equipment[SECONDARY_WEAPON]))) &&
@@ -7134,18 +7130,6 @@ void MobStartFight(P_char ch, P_char vict)
   if(!fudge_flag && vict && ch && (vict->in_room == ch->in_room))
     attack(ch, vict);
 
- /* if(!fudge_flag && vict && ch && (vict->in_room == ch->in_room) && CAN_ACT(ch))
-  {
-    //
-    // hit command does not support blindfighting, hitall does. -Torm
-    //
-    //
-    // generic perform_violence supports blindfighting, the point is
-    // just to get fight going on.
-    //
-    strcpy(buf, "hitall all");
-    command_interpreter(ch, buf);
-  }*/
 }
 
 /*
@@ -7310,6 +7294,7 @@ int IsBetterObject(P_char ch, P_obj obj, int foo)
           foo2 = unequip_char(ch, l);
           obj_to_char(foo2, ch);
           wear(ch, obj, equipment_pos_table[a][1], 1);
+          CharWait(ch, 1);
           IsBetterObject(ch, foo2, a + 1);      /*
                                                  * Nifty recursive
                                                  * call to make of

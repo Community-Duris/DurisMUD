@@ -1949,7 +1949,7 @@ void spell_single_polar_vortex(int level, P_char ch, char *arg, int type,
 
   if((!IS_AFFECTED3(victim, AFF3_COLDSHIELD) &&
       !NewSaves(victim, SAVING_PARA, 2)) ||
-      (GET_RACE(victim) == RACE_THRIKREEN && !NewSaves(victim, SAVING_PARA, -2)))
+      (GET_RACE(victim) == RACE_THRIKREEN && !NewSaves(victim, SAVING_PARA, 0)))
   {
     struct affected_type af;
 

@@ -903,33 +903,15 @@ bool DragonCombat(P_char ch, int awe)
       return FALSE;
     }
   }
-    
-  if (!IS_DRAGON(ch) && !IS_TITAN(ch) && !IS_AVATAR(ch) &&
-      awe)
-  {
-    return FALSE;
-  }
 
   // Dragons breathing = cool.  Other mobs breathing = ok... but not every round - Jexni 1/20/11
-  breath_chance = (int) (IS_DRAGON(ch) ? (GET_LEVEL(ch) / 30) : (GET_LEVEL(ch) / 60));
-  breath_chance = (IS_ELITE(ch) ? breath_chance + 1 : breath_chance);
-
-  if (!IS_DRAGON(ch) && !IS_TITAN(ch) && !IS_AVATAR(ch) && CAN_BREATHE(ch))
-  {
-    if (number(0, breath_chance))
-    {
-      return FALSE;
-    }
-
-    BreathWeapon(ch, -1);
-    return TRUE;
-  }
+  breath_chance = (IS_DRAGON(ch) ? GET_LEVEL(ch) / 20 : 12 - (GET_LEVEL(ch) / 5));
+  breath_chance = ((IS_ELITE(ch) && IS_DRAGON(ch)) ? breath_chance + 1 : breath_chance - 1);
 
   /* awe should never kill anyone, since DragonCombat is called from
      set_fighting() and assumes just that */
 
-  if(awe &&
-     number(0, breath_chance))
+  if(awe)
   {
     /*
      * means we were called from start_fighting, dragons get a
@@ -1059,6 +1041,17 @@ bool DragonCombat(P_char ch, int awe)
    * something to worry about.  Dragons will either breathe or cast,
    * every round.
    */
+  
+  if (!IS_DRAGON(ch) && !IS_TITAN(ch) && !IS_AVATAR(ch) && CAN_BREATHE(ch))
+  {
+    if (number(0, breath_chance)) // chance is backwards for non-dragons, we want them to only
+    {                             // breathe on a 0... this is by design - Jexni 2/5/11
+      return FALSE;
+    }
+
+    BreathWeapon(ch, -1);
+    return TRUE;
+  }
 
   if(!number(0, 3))
   {
@@ -1079,6 +1072,13 @@ bool DragonCombat(P_char ch, int awe)
   {
     return FALSE;
   }
+  
+  if(IS_DRAGON(ch) && CAN_BREATHE(ch) && number(0, breath_chance))
+  {
+     BreathWeapon(ch, -1);
+     return TRUE;
+  }
+
   return TRUE;
 }
 
