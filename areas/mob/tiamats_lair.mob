@@ -164,38 +164,38 @@ PH 0 0 -1
 0.0.0.0 0
 8 8 0
 #135216
-mob unnamed~
+barbed devil firesworn legion~
 &+La barbed &+rd&+Re&+rv&+Ri&+rl &+Lof the &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+Llegion&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+LA barbed devil stands here, following his commanders instructions and ravaging the lands.&n
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
-1 0 0 1d1+1 1d1+1
+8 0 0 939532312 0 0 0 -1000 S
+Y 0 1 -1
+55 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #135217
-mob unnamed~
+pit fiend warlord firesworn legion~
 &+La &+rp&+Ri&+rt &+Lfiend &+rwar&+Rlord &+Lof the &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+Llegion&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+LA HUGE &+rp&+Ri&+rt f&+Ri&+re&+Rn&+rd &+Lstands here, commanding his soldiers during the invasion.&n
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
-1 0 0 1d1+1 1d1+1
+16807944 1 0 402653368 0 0 0 -1000 S
+Y 0 513 -1
+60 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #135218
 zyla destroyer daughter abishai~
 &+rZyla&+L, the &+gd&+Ge&+gs&+Gt&+gr&+Go&+gy&+Ge&+gr&n~
-&+rZyla&+L, daughter of Tiamat, and &+mQueen &+Lof the &+rabashai &+Lstands here, awaiting to enter into her mothers presence.&n
+&+rZyla&+L, daughter of Tiamat and lieutenant of &+rBel's &+Larmy, stands here, overseeing the &+Yinvasion&+L.&n
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
-1 0 0 1d1+1 1d1+1
+285243432 1 0 402653208 0 0 0 -1000 S
+Y 0 520 -1
+60 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 2
 #135219
 mob unnamed~
 an unnamed mob~

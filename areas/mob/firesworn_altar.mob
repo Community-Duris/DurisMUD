@@ -12,14 +12,14 @@ PH 0 0 -1
 #135102
 commander firesworn legion demon~
 &+La &+ccom&+Cman&+cder &+Lof the &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+Llegion&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+LA commander in the firesworn legion stands here, directing soldiers.&n
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
-1 0 0 1d1+1 1d1+1
+268466184 1 0 24 0 0 0 -1000 S
+Y 0 513 -1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #135103
 mob unnamed~
 &+Lthe guardian of the &+rbl&+Roo&+rd&n~
@@ -65,16 +65,16 @@ PH 0 0 -1
 0.0.0.0 0
 8 8 0
 #135107
-firesworn legion shock troop demon~
+firesworn legion shock troop devil _spec3_~
 &+La &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+Llegion &+Yshock &+Ltroop&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+LA &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+Llegion &+Yshock &+Ltroop stands here, ready to pounce.&n
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
-1 0 0 1d1+1 1d1+1
+30728 1 0 24 0 0 0 -1000 S
+Y 0 1 -1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #135108
 firesworn legion entry demon~
 &+La &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+Llegion &+bse&+Bnt&+bry&n~

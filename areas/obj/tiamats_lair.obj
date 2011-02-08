@@ -183,13 +183,17 @@ An unnamed object lies here, looking lonely and forelorn.~
 0 0 0 0 0 0 0 0
 0 0 100
 #135224
-object unnamed~
+ancient two handed longsword fiery runes~
 &+Lan &+rancient &+Ltwo handed longsword emblazioned with &+rf&+Yi&+We&+Yr&+ry &+Lr&+mu&+Ln&+me&+Ls&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LAn ancient longsword lies here, &+rf&+Yi&+We&+Yr&+ry &+Lrunes smoldering.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
+5 15 3 0 7 0 4194305 8193 125 0 0
+13 6 6 0 0 0 0 0
+0 0 100 16 0 0 33558528
+A
+18 6
+A
+29 6
 #135225
 object unnamed~
 an unnamed object~
