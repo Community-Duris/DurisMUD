@@ -101,37 +101,37 @@ D 0 70918 0 2 100 0 0 0
 *     north exit from "The Hall of Knighthood" to
 *     "Holy Auditorium" - closed/locked
 *
-D 0 70919 1 2 100 0 0 0
-*     east exit from "Conjurer Room" to
+D 0 70918 3 2 100 0 0 0
+*     west exit from "The Hall of Knighthood" to
 *     "Conjurer Room" - closed/locked
 *
 D 0 70919 1 2 100 0 0 0
 *     east exit from "Conjurer Room" to
+*     "The Hall of Knighthood" - closed/locked
+*
+D 0 70919 3 2 100 0 0 0
+*     west exit from "Conjurer Room" to
+*     "Paladin Room" - closed/locked
+*
+D 0 70920 1 2 100 0 0 0
+*     east exit from "Paladin Room" to
 *     "Conjurer Room" - closed/locked
 *
-D 0 70920 1 2 100 0 0 0
-*     east exit from "Paladin Room" to
-*     "Paladin Room" - closed/locked
-*
-D 0 70920 1 2 100 0 0 0
-*     east exit from "Paladin Room" to
-*     "Paladin Room" - closed/locked
-*
-D 0 70921 1 2 100 0 0 0
-*     east exit from "Necromancer Room" to
+D 0 70920 3 2 100 0 0 0
+*     west exit from "Paladin Room" to
 *     "Necromancer Room" - closed/locked
 *
 D 0 70921 1 2 100 0 0 0
 *     east exit from "Necromancer Room" to
-*     "Necromancer Room" - closed/locked
+*     "Paladin Room" - closed/locked
 *
-D 0 70922 1 2 100 0 0 0
-*     east exit from "Sorcerer Room" to
-*     "Sorcerer Room" - closed/locked
+D 0 70921 3 1 100 0 0 0
+*     west exit from "Necromancer Room" to
+*     "Sorcerer Room" - closed
 *
-D 0 70922 1 2 100 0 0 0
+D 0 70922 1 1 100 0 0 0
 *     east exit from "Sorcerer Room" to
-*     "Sorcerer Room" - closed/locked
+*     "Necromancer Room" - closed
 *
 D 0 70922 3 2 100 0 0 0
 *     west exit from "Sorcerer Room" to

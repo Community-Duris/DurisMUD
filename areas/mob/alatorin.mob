@@ -2170,7 +2170,7 @@ personal advisor dwarf lean~
 &+Wposition of great honour as personal advisor to Clund Hammerhelm, lord and
 &+Wcommander of the young, able Hammer&+Yhelm &+Warmy.
 ~
-1073809608 0 0 134217884 2065 0 0 0 S
+1073744072 0 0 134217884 2065 0 0 0 S
 pd 0 512 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -4511,7 +4511,7 @@ huge fat disgusting dwarf _ignore_~
 &+Wglisten with juices of the meats he has recently devoured.  His
 &+Wenormous, fat legs sit lifelessly below his mountain of a torso.
 ~
-591946 0 0 0 1024 0 0 700 S
+526410 0 0 0 1024 0 0 700 S
 pm 0 1 6
 51 -3 -80 550d10+5000 6d6+40
 0.0.16.9 119070
@@ -4581,7 +4581,7 @@ massive flesh golem _spec1_ _ignore_~
    &+LThis hulking beast is composed of various organs and muscles of
 &+Lnumerous different sources, all twisted together into one abomination.
 ~
-67786 0 0 134217880 2048 0 0 -1000 S
+2250 0 0 134217880 2048 0 0 -1000 S
 u 0 1 7
 51 -4 -80 400d30+5000 6d6+6
 5.12.17.22 1250000

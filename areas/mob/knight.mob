@@ -49,7 +49,7 @@ sun. It's bright yellow tint is disturbing to the senses. His
 helmet has a feather stuck in it-- no doubt an arrow just in case
 he runs out from his quiver.
 ~
-94218 1 0 73944 0 67108864 0 -500 S
+28682 1 0 73944 0 67108864 0 -500 S
 PH 0 1 -1
 60 180 -100 5d5+28000 4d8+40
 2.2.3.50 80000
@@ -92,7 +92,7 @@ son of the god of thievery. You should keep your hands on your
 pockets with Lobos in the room-- and even then, you may just lose
 your money.
 ~
-1073827916 1 0 301998264 2048 67108864 0 -700 S
+1073764424 1 0 301998264 2048 67108864 0 -700 S
 PL 0 8192 4
 60 300 -128 10d10+28800 7d6+75
 4.5.9.500 238950
@@ -270,7 +270,7 @@ His form glows a bright light. His cloak bears a holy symbol on
 it, and sewn in his hood is a cross. Verdonnaly has shirked his
 mortal coil and was sainted in spirit.
 ~
-1073807370 48 0 216 0 0 0 1000 S
+1073741834 48 0 216 0 0 0 1000 S
 PH 0 32 -1
 60 500 -128 10d10+28000 7d6+50
 4.5.9.100 238950
@@ -338,7 +338,7 @@ anger as he looks at you. Maxwell's origins are unknown, but he
 must be the descendant of the supernatural, as his powers are
 magnanimus.
 ~
-86026 1 0 536871064 0 67108864 0 1000 S
+20490 1 0 536871064 0 67108864 0 1000 S
 PH 0 576 7
 60 500 -128 10d10+29000 7d6+55
 4.5.9.250 238950
@@ -630,7 +630,7 @@ kithron knight warrior~
    This powerful knight looks incredibly huge and mean, dressed in full
 battle gear he is ready for any challenge.  Glowing red eyes turn your way
 ~
-1073825802 1 0 536944824 192 0 0 0 S
+1073760266 1 0 940122296 276672 32768 1061888 0 S
 TK 0 1 -1
 60 500 -250 10d10+29000 10d7+50
 4.5.9.500 238950

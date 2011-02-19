@@ -241,7 +241,7 @@ M 0 25221 1 25225 100 0 0 0        * an efreeti armorer
 M 0 25222 1 25226 100 0 0 0        * an efreeti weapon-smith
 M 0 25223 1 25227 100 0 0 0        * saladeem the efreeti clothier
 M 0 25224 1 25228 100 0 0 0        * Yodono the efreeti magi shop owner
-M 0 25225 1 25229 100 0 0 0        * Groyana the efreeti gemoligist.
+M 0 25225 1 25229 100 0 0 0        * Groyana
 M 0 25226 1 25230 100 0 0 0        * Tila Banto
 M 0 25227 1 25231 100 0 0 0        * Grand Hurloo
 M 0 25190 57 25232 100 0 0 0       * an efreeti commoner
@@ -410,8 +410,8 @@ M 0 25205 47 25316 100 0 0 0       * an efreeti commoner
 M 0 25205 47 25317 100 0 0 0       * an efreeti commoner
 M 0 25190 57 25318 100 0 0 0       * an efreeti commoner
 M 0 25205 47 25319 100 0 0 0       * an efreeti commoner
-M 0 25101 2 25320 100 0 0 0        * An Iron Golem
-M 0 25101 2 25320 100 0 0 0        * An Iron Golem
+M 0 25101 2 25320 100 0 0 0        * an iron golem
+M 0 25101 2 25320 100 0 0 0        * an iron golem
 M 0 25102 7 25321 100 0 0 0        * An efreeti temple guard
 M 0 25102 7 25321 100 0 0 0        * An efreeti temple guard
 M 0 25102 7 25321 100 0 0 0        * An efreeti temple guard

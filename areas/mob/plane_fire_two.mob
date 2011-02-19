@@ -13,14 +13,14 @@ EF 0 256 -1
 8 8 1
 #25101
 iron golem _no_move_~
-&+yAn Iron Golem&N~
+&+yan iron golem&N~
 &+yAn iron golem stands here guarding the enterance&N
 ~
 &+yThis mighty iron golem, given life by the effteeti clerics
 &+yof the tempple, refuses to allow ANY to pass who are not
 &+yone with the great god Kossuth.
 ~
-33622063 1 0 805314712 47297 0 0 -1000 S
+33556527 1 0 805314712 47297 0 0 -1000 S
 OG 0 32 -1
 60 -10 -120 100d100+25000 5d5+50
 0.0.0.0 1000000
@@ -474,8 +474,8 @@ EF 0 512 -1
 8 8 1
 #25225
 efreeti groyana~
-&+YGroyana the efreeti gemoligist.&N~
-&+YGroyana the efreeti gemoligist stands here.
+&+YGroyana&n~
+&+YGroyana the efreeti gemologist stands here.
 ~
 This female efreeti sells many strange gems that can not
 be found on the prime plane.  Of of which are resistant

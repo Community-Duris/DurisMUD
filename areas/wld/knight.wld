@@ -526,7 +526,7 @@ D3
 You see a door.
 ~
 door~
-0 70912 70919
+3 70912 70919
 E
 sign~
                   &+WWelcome to the Test of Resilience!&N
@@ -562,12 +562,12 @@ D1
 You see a door.
 ~
 door~
-3 70912 70919
+3 70912 70918
 D3
 You see a door.
 ~
 door~
-0 70913 70920
+3 70913 70920
 S
 #70920
 &+LPaladin Room~
@@ -582,12 +582,12 @@ D1
 You see a door.
 ~
 door~
-3 70913 70920
+3 70913 70919
 D3
 You see a door.
 ~
 door~
-0 70914 70921
+2 70914 70921
 S
 #70921
 &+MNecromancer Room~
@@ -602,12 +602,12 @@ D1
 You see a door.
 ~
 door~
-2 70914 70921
+2 70914 70920
 D3
 You see a door.
 ~
 door~
-0 70915 70922
+1 70915 70922
 S
 #70922
 &+BSorcerer Room~
@@ -623,7 +623,7 @@ D1
 You see a door.
 ~
 door~
-2 70915 70922
+1 70915 70921
 D3
 You see a door.
 ~
