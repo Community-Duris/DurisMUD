@@ -898,7 +898,7 @@ void handle_undead_mem(P_char ch)
 		      "res&+Ctoring your %d%s&+c &+Wcircle powers!\n",
               i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     }
-    else if(GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
+    else if(GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER) || GET_RACE(ch) == RACE_PILLITHID)
     {
       sprintf(gbuf, "&+mYou feel a rush of energy as a&+L %d%s circle &+mspell coalesces in your mind...\n",
               i, i== 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
@@ -963,7 +963,7 @@ void handle_undead_mem(P_char ch)
     REMOVE_BIT(ch->specials.affected_by2, AFF2_MEMORIZING);
     stop_meditation(ch);
   }
-  else if (GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
+  else if (GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER) || (GET_RACE(ch) == RACE_PILLITHID))
   {
     send_to_char("&+mThe energies in your mind converge into full cohesion...\n", ch);
   }

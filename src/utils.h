@@ -899,8 +899,10 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define USES_COMMUNE(ch) ( \
     (IS_NPC(ch) || IS_SET((ch)->player.m_class, CLASS_DRUID)))
 #define USES_FOCUS(ch) ((GET_RACE(ch) == RACE_PILLITHID) || \
-						(GET_RACE(ch) == RACE_ILLITHID))
-	
+						(GET_RACE(ch) == RACE_ILLITHID)  || \
+						(GET_CLASS(ch, CLASS_PSIONICIST)) || \
+						(GET_CLASS(ch, CLASS_MINDFLAYER)))
+										
     //(IS_NPC(ch) || IS_SET((ch)->player.m_class, CLASS_PSIONICIST)) || \
     //IS_SET((ch)->player.m_class, CLASS_MINDFLAYER))
 #define USES_SPELL_SLOTS(ch) ( \

@@ -395,12 +395,12 @@ int say(P_char ch, const char *argument)
     {
       if ((kala != ch) && (ch->specials.z_cord == kala->specials.z_cord))
       {
-        if (IS_ILLITHID(ch) || IS_PILLITHID(ch) || !strcmp(GET_NAME(ch), "Id"))
+        if (IS_ILLITHID(ch) || IS_PILLITHID(ch) || !strcmp(GET_NAME(ch), "Xzthu"))
         {
           if (IS_ILLITHID(kala) || IS_PILLITHID(kala) || IS_TRUSTED(kala))
-            sprintf(Gbuf2, "$n projects '%s'", argument + i);
-          else
             sprintf(Gbuf2, "$n invades your mind with '%s'", argument + i);
+          else
+            sprintf(Gbuf2, "$n projects '%s'", argument + i);
         }
         else
         {
@@ -693,7 +693,8 @@ void do_project(P_char ch, char *argument, int cmd)
   }
   for (i = descriptor_list; i; i = i->next)
     if ((i->character != ch) && !i->connected &&
-        ((GET_RACE(i->character) == RACE_ILLITHID) ||
+        ((GET_RACE(i->character) == RACE_ILLITHID) || IS_PILLITHID(ch) 
+||
          IS_TRUSTED(i->character)) &&
         (IS_SET(i->character->specials.act2, PLR2_PROJECT)))
     {
