@@ -1242,6 +1242,7 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch)) && !IS_ANIMAL(ch))
         affected_by_spell(victim, SPELL_PLAGUE) || \
         affected_by_spell(victim, TAG_ARMLOCK) || \
         affected_by_spell(victim, TAG_LEGLOCK) || \
+        affected_by_spell(victim, SPELL_BMANTLE) || \
         affected_by_spell(victim, SPELL_ENERGY_DRAIN))
 
 // Simply change these defines to focus reaver preferred weapons.

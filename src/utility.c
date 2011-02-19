@@ -15,7 +15,7 @@
 #include <time.h>
 using namespace std;
 #ifdef _HPUX_SOURCE
-#   include <varargs.h>
+#include <varargs.h>
 #endif
 
 #include "utility.h"
@@ -2322,68 +2322,68 @@ bool StatSave(P_char ch, int stat, int mod)
    */
   if ((stat != APPLY_AGI) && (stat != APPLY_INT) &&
       (stat != APPLY_POW) && (stat != APPLY_DEX) &&
-	  (stat != APPLY_CON) && (stat != APPLY_WIS) &&
-	  (stat != APPLY_STR))
-    return FALSE;
+      (stat != APPLY_CON) && (stat != APPLY_WIS) &&
+      (stat != APPLY_STR))
+     return FALSE;
 
   switch (stat)
   {
-  case APPLY_AGI:
-    save_num = STAT_INDEX(GET_C_AGI(ch)) + mod;
+    case APPLY_AGI:
+      save_num = STAT_INDEX(GET_C_AGI(ch)) + mod;
 
-    if (!GET_CLASS(ch, CLASS_MONK))
-    {
-      if (IS_AFFECTED(ch, AFF_HASTE))
-        save_num += 5;
+      if (!GET_CLASS(ch, CLASS_MONK))
+      {
+        if (IS_AFFECTED(ch, AFF_HASTE))
+          save_num += 2;
 
-      if (IS_AFFECTED2(ch, AFF2_SLOW))
-        save_num /= 2;
-    }
+        if (IS_AFFECTED2(ch, AFF2_SLOW))
+          save_num -= 2;
+      }
 
-    /*
-     * those heavy loaded folks are less than nimble eh?
-     */
-    if (load_modifier(ch) > 299)
-      save_num -= 5;
-    else if (load_modifier(ch) > 199)
-      save_num -= 3;
-    else if (load_modifier(ch) > 99)
-      save_num -= 1;
+      /*
+       * those heavy loaded folks are less than nimble eh?
+       */
+      if (load_modifier(ch) > 299)
+        save_num -= 3;
+      else if (load_modifier(ch) > 199)
+        save_num -= 2;
+      else if (load_modifier(ch) > 99)
+        save_num -= 1;
 
-    /*
-     * and let us penalize for being off balance eh?
-     */
-    if (IS_AFFECTED2(ch, AFF2_STUNNED))
-      save_num -= 5;
+      /*
+       * and let us penalize for being off balance eh?
+       */
+      if (IS_AFFECTED2(ch, AFF2_STUNNED))
+        save_num -= 3;
 
-    save_num += GET_POS(ch) - 3;
+      save_num += GET_POS(ch) - 3;
 
-    /*
-     * there are a few bonuses
-     */
-    if (IS_AFFECTED(ch, AFF_FLY) || IS_AFFECTED(ch, AFF_LEVITATE))
-      save_num += 1;
-    break;
+      /*
+       * there are a few bonuses
+      */
+      if (IS_AFFECTED(ch, AFF_FLY) || IS_AFFECTED(ch, AFF_LEVITATE))
+        save_num += 1;
+      break;
 
   case APPLY_DEX:
     save_num = STAT_INDEX(GET_C_DEX(ch)) + mod;
 
     if (IS_THIEF(ch))
-      save_num += 10;
+      save_num += 3;
 
     if (IS_AFFECTED(ch, AFF_HASTE))
       save_num += 2;
 
     if (IS_AFFECTED2(ch, AFF2_SLOW))
-      save_num /= 2;
+      save_num -= 2;
 
     /*
      * those heavy loaded folks are less than nimble eh?
      */
     if (load_modifier(ch) > 299)
-      save_num -= 5;
-    else if (load_modifier(ch) > 199)
       save_num -= 3;
+    else if (load_modifier(ch) > 199)
+      save_num -= 2;
     else if (load_modifier(ch) > 99)
       save_num -= 1;
 
@@ -2391,7 +2391,7 @@ bool StatSave(P_char ch, int stat, int mod)
      * and let us penalize for being off balance eh?
      */
     if (IS_AFFECTED2(ch, AFF2_STUNNED))
-      save_num -= 10;
+      save_num -= 3;
 
     save_num += GET_POS(ch) - 3;
 
@@ -2399,12 +2399,10 @@ bool StatSave(P_char ch, int stat, int mod)
   case APPLY_INT:
     save_num = STAT_INDEX(GET_C_INT(ch)) + mod;
     if (has_innate(ch, INNATE_QUICK_THINKING))
-      save_num += 5;
+      save_num += 2;
     break;
   case APPLY_POW:
     save_num = STAT_INDEX(GET_C_POW(ch)) + mod;
-    if (has_innate(ch, INNATE_QUICK_THINKING))
-      save_num += 5;
     break;
   case APPLY_CON:
     save_num = STAT_INDEX(GET_C_CON(ch)) + mod;
@@ -2661,7 +2659,6 @@ string pad_ansi(const char *str, int length, bool trim_to_length)
 string strip_ansi(const char *str)
 {
   int      i = 0;
-//  static char colorless[MAX_STRING_LENGTH];
   string colorless;
   
   while (*str)
@@ -2688,11 +2685,10 @@ string strip_ansi(const char *str)
       }
     }
     colorless.push_back(*str);
-//    colorless[i] = *str;
     i++;
     str++;
   }
-//  colorless[i] = '\0';
+
   return colorless;
 }
 
@@ -2745,8 +2741,24 @@ int STAT_INDEX(int v)
     return 15;
   else if (v < 101)
     return 16;
+  else if (v < 106)
+    return 17;
+  else if (v < 116)
+    return 18;
+  else if (v < 130)
+    return 19;
+  else if (v < 148)
+    return 20;
+  else if (v < 170)
+    return 21;
+  else if (v < 196)
+    return 22;
+  else if (v < 226)
+    return 23;
+  else
+    return 24;
 
-  return ((v - 101) / 8 + 17);
+return 24;
 }
 
 // This relates to stat_names3 where average = human at 100
@@ -2766,15 +2778,15 @@ int STAT_INDEX2(int v)
     return 5;
   else if (v < 116)
     return 6;
-  else if (v < 126)
+  else if (v < 130)
     return 7;
-  else if (v < 136)
+  else if (v < 148)
     return 8;
-  else if (v < 146)
+  else if (v < 170)
     return 9;
-  else if (v < 156)
+  else if (v < 196)
     return 10;
-  else if (v < 166)
+  else if (v < 226)
     return 11;
   else
     return 12;
@@ -3478,7 +3490,7 @@ void generate_desc(P_char ch)
 
   if ((GET_RACE(ch) == RACE_ORC) || (GET_RACE(ch) == RACE_OGRE) ||
       (GET_RACE(ch) == RACE_OROG) || (GET_RACE(ch) == RACE_ILLITHID) ||
-      (GET_RACE(ch) == RACE_AGATHINON))
+      (GET_RACE(ch) == RACE_AGATHINON) || (GET_RACE(ch) == RACE_PILLITHID))
   {
     prep = "An";
   }
@@ -4191,7 +4203,6 @@ bool should_area_hit(P_char ch, P_char victim)
 
   if (GET_STAT(victim) == STAT_DEAD)
     return FALSE;
-
 
   if ((ch->specials.fighting == victim) || (victim->specials.fighting == ch))
     return TRUE;
