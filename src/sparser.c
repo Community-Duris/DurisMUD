@@ -1741,7 +1741,7 @@ void do_will(P_char ch, char *argument, int cmd)
   P_char tar_char;
 
   memset(&tmp_spl, 0, sizeof(tmp_spl));
-  if (!GET_CLASS(ch, CLASS_PSIONICIST) && !GET_CLASS(ch, CLASS_MINDFLAYER) && !IS_TRUSTED(ch))
+  if (!GET_CLASS(ch, CLASS_PSIONICIST) && !GET_CLASS(ch, CLASS_MINDFLAYER) && !IS_TRUSTED(ch) && !IS_PILLITHID(ch))
   {
     send_to_char("Your character lacks the training to enforce his will.\n", ch);
     return;
