@@ -479,20 +479,17 @@ void do_outpost(P_char ch, char *arg, int cmd)
     if (rubble && GET_OBJ_VNUM(rubble) == BUILDING_RUBBLE)
     {
       building = get_building_from_rubble(rubble);
-      int ownerid = get_outpost_owner(building);
-      op = building->mob;
-      if (ownerid == 0 && 		
-          GET_A_NUM(ch))
+      if(!building)
       {
-        send_to_char("You being the arduous task of rebuilding the destroyed tower, claiming it for your guild!\r\n", ch);
-	ownerid = GET_A_NUM(ch);
-	update_outpost_owner(ownerid, building);
+         wizlog(56, "Failed to get building id from rubble.");
+         raise(SIGSEGV);
       }
-      if (GET_A_NUM(ch) != ownerid &&
-          ownerid != 0)
+      op = building->mob;
+      if (GET_A_NUM(ch))
       {
-        send_to_char("You don't own this outpost!\r\n", ch);
-        return;
+        send_to_char("You begin the arduous task of rebuilding the destroyed tower, claiming it for your guild!\r\n", ch);
+	int ownerid = GET_A_NUM(ch);
+	update_outpost_owner(ownerid, building);
       }
       if (!GET_A_NUM(ch))
       {
@@ -709,8 +706,7 @@ void outpost_death(P_char outpost, P_char killer)
   reset_one_outpost(building);
   GET_HIT(building->mob) = 0;
   set_current_outpost_hitpoints(building);
-  ownerid = get_killing_association(killer);
-  update_outpost_owner(ownerid, building);
+  update_outpost_owner(0, building);
   // Remove players from inside the outpost.
   for (int i = 0; i < building->rooms.size(); i++)
   {
