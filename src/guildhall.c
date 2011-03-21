@@ -114,6 +114,19 @@ Guildhall* Guildhall::find_by_id(int id)
   return NULL;
 }
 
+Guildhall* Guildhall::find_by_assoc_id(int id)
+{
+  for( int i = 0; i < guildhalls.size(); i++ )
+  {
+    if( guildhalls[i] && guildhalls[i]->assoc_id == id )
+    {
+      return guildhalls[i];
+    }
+  }
+  debug("failed to return a guildhall in guildhall.c find_by_assoc_id");
+  return NULL;
+}
+
 //
 //  finds the Guildhall that ch is currently inside of
 //

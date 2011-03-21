@@ -304,6 +304,7 @@ struct Guildhall {
   static void remove(Guildhall*);
   
   static Guildhall* find_by_id(int id);
+  static Guildhall* find_by_assoc_id(int id);
   static Guildhall* find_by_vnum(int vnum);
   static Guildhall* find_by_outside_vnum(int vnum);
   static GuildhallRoom* find_room_by_id(int id);
