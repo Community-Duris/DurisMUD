@@ -572,6 +572,7 @@ bool is_neg_good(sbyte location) {
     case APPLY_SAVING_FEAR:
     case APPLY_SAVING_BREATH:
     case APPLY_SAVING_SPELL:
+    case APPLY_ARMOR:
       return TRUE;
     default:
       return FALSE;
@@ -685,9 +686,10 @@ void do_spellbind (P_char ch, char *argument, int cmd)
   if(!IS_SET(item->extra_flags, ITEM_NOLOCATE)) 
     SET_BIT(item->extra_flags, ITEM_NOLOCATE);
 
-  for (int i = 0; i < 3; i++ )
+  for (int i = 0; i < 3; i++)
   {
     bonus = 0;
+    total = 0;
     neggood = is_neg_good(item->affected[i].location);
     
 // Don't want to mess with race max, pulse or bad applies etc...
@@ -718,11 +720,17 @@ void do_spellbind (P_char ch, char *argument, int cmd)
     {
       if(item->affected[i].location >= APPLY_SAVING_PARA &&
          item->affected[i].location <= APPLY_SAVING_SPELL)
-        total = -total - (skill / 50);
+      {
+        total = item->affected[i].modifier + ((total * -1) - (skill / 50));
+      }
       else if(item->affected[i].location == APPLY_ARMOR)
-        total = (int) (item->affected[i].modifier * ((int) (skill / 50)));
+      {
+        total = (int) (item->affected[i].modifier * ((int) (skill / 50) + total));
+      }
       else
+      {
         total = (int) (item->affected[i].modifier - (-total - bonus));      
+      }
     }
     else
     {
@@ -733,7 +741,12 @@ void do_spellbind (P_char ch, char *argument, int cmd)
 
   sprintf(tempbuf , "%s %s", item->name, GET_NAME(ch));
   set_keywords(item, tempbuf);
+  if(RACE_GOOD(ch))
   sprintf(tempbuf , "%s &+yenc&+Yha&+ynted by &+L%s&n", item->short_description, GET_NAME(ch));
+  else if(RACE_EVIL(ch))
+  sprintf(tempbuf , "%s &+renc&+Rha&+rnted by &+L%s&n", item->short_description, GET_NAME(ch));
+  else
+  sprintf(tempbuf , "%s &+wenc&+Wha&+wnted by &+L%s&n", item->short_description, GET_NAME(ch));
   set_short_description(item, tempbuf);
 }
 
