@@ -2307,16 +2307,16 @@ void event_flame_of_north(P_char ch, P_char victim, P_obj obj, void *data)
 	  return;
 
   if (!IS_SET(world[ch->in_room].room_flags, NO_MAGIC))
-   {
+  {
      if (!affected_by_spell(ch, SPELL_ILIENZES_FLAME_SWORD) && !number(0, 3))
-        {
-	      spell_ilienzes_flame_sword(70, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-        }
+     {
+       spell_ilienzes_flame_sword(70, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+     }
      if (!affected_by_spell(ch, SPELL_CEGILUNE_BLADE) && affected_by_spell(ch, SPELL_ILIENZES_FLAME_SWORD) && !number(0, 4))
-        {
-	      spell_cegilunes_searing_blade(70, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-        }
-	}
+     {
+       spell_cegilunes_searing_blade(70, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+     }
+  }
   if (affected_by_spell(ch, SPELL_ILIENZES_FLAME_SWORD) && !number(0, 15) && !GET_SPEC(ch, CLASS_REAVER, SPEC_FLAME_REAVER) && 
 	  !IS_TRUSTED(ch) && GET_HIT(ch) > 50)
   {
@@ -2324,11 +2324,12 @@ void event_flame_of_north(P_char ch, P_char victim, P_obj obj, void *data)
         ch, 0, victim, TO_NOTVICT);
     act("&+RIn your unskilled hands, the flames surrounding the Flame of the North cause you great pain!&n", TRUE,
         ch, 0, victim, TO_CHAR);
-	dam = number(20, 50);
-	if (affected_by_spell(ch, SPELL_CEGILUNE_BLADE))
-		dam += number(5, 15);
+    dam = number(20, 50);
 
-	spell_damage(ch, ch, dam, SPLDAM_FIRE, SPLDAM_NOSHRUG | SPLDAM_NOVAMP | SPLDAM_NODEFLECT | RAWDAM_NOKILL, 0);
+    if (affected_by_spell(ch, SPELL_CEGILUNE_BLADE))
+     dam += number(5, 15);
+
+    spell_damage(ch, ch, dam, SPLDAM_FIRE, SPLDAM_NOSHRUG | SPLDAM_NOVAMP | SPLDAM_NODEFLECT | RAWDAM_NOKILL, 0);
   }
 
   add_event(event_flame_of_north, PULSE_VIOLENCE, ch, 0, 0, 0, 0, 0);

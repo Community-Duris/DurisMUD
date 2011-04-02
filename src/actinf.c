@@ -963,7 +963,7 @@ void show_visual_status(P_char ch, P_char tar_char)
   else if (percent >= 30)
   {
     if(IS_CONSTRUCT(tar_char))
-      sprintf(buf2, buf, "has &+mbegun to crumble from the seige&n.");
+      sprintf(buf2, buf, "has &+mbegun to crumble from from an ongoing assault&n.");
     else
     sprintf(buf2, buf, "has &+msome big nasty wounds and scratches&n.");
   }
