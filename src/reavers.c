@@ -171,7 +171,7 @@ void spell_kanchelsis_fury(int level, P_char ch, char *arg, int type,
   if (!affected_by_spell(victim, SPELL_KANCHELSIS_FURY))
   {
     send_to_char
-    ("&+mYou feel your heart start to burn as fury of Kanchelsis takes hold!\n",
+    ("&+mYou feel your heart start to burn as the fury of Kanchelsis takes hold!\n",
      victim);
     act("$n &+mlooks stronger and starts to move with uncanny speed!", TRUE,
         victim, 0, 0, TO_ROOM);
@@ -455,14 +455,10 @@ void spell_cegilunes_searing_blade(int level, P_char ch, char *arg, int type,
                                    P_char victim, P_obj obj)
 {
   struct affected_type af;
-  P_obj wpn;
   bool weapon = false;
   
   if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim) ||
-     !(wpn))
+     !IS_ALIVE(ch))
   {
     return;
   }
@@ -507,12 +503,11 @@ void spell_cegilunes_searing_blade(int level, P_char ch, char *arg, int type,
   af.location = APPLY_NONE;
   af.modifier = 0;
 
-  affect_to_char(victim, &af);
+  affect_to_char(ch, &af);
 
   act("&+LYour weapon glows with a strange &+Rh&+rea&+Rt&+L as Cegilune infuses it.&n",
     false, ch, 0, 0, TO_CHAR);
 
-//  with &+rd&+Re&+rm&+Ro&+rn&+Ri&+rc &+me&+Lnergie&+ms&+L.", FALSE, ch, wpn, 0, TO_CHAR);
 }
 
 bool cegilune_blade(P_char ch, P_char victim, P_obj wpn)
@@ -1210,6 +1205,9 @@ bool kostchtchies_implosion(P_char ch, P_char victim, P_obj wpn)
 
 bool reaver_hit_proc(P_char ch, P_char victim, P_obj weapon)
 {
+  if(GET_RACE(victim) == RACE_CONSTRUCT)
+     return FALSE;
+
   if (affected_by_spell(ch, SPELL_STORMCALLERS_FURY) && stormcallers_fury(ch, victim, weapon))
     return TRUE;
 

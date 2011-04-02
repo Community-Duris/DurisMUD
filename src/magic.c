@@ -89,6 +89,14 @@ extern const int carve_part_flag[];
 extern struct mm_ds *dead_mob_pool;
 extern struct mm_ds *dead_pconly_pool;
 
+// THE NEXT PERSON THAT OUTRIGHT COPIES A SPELL JUST TO CHANGE THE NAME/MESSAGES
+// IT OUTPUTS IS GOING TO BE CASTRATED BY ME AND FORCED TO EAT THEIR OWN GENITALIA.
+// There is no reason to do this other than to make a headache for another coder.
+// If you feel the need to have a "different" spell than one already in the game
+// for racewar purposes or whatever, MAKE CHANGES TO THE ORIGINAL SPELL and call
+// THAT SPELL with a command in interp.c.  There is no reason to have 3253232 different
+// functions for the exact same spell(transmute/ethereal grounds etc.) - Jexni 3/28/11
+
 void affect_to_end(P_char ch, struct affected_type *af);
 int conjure_terrain_check(P_char, P_char);
 
@@ -7672,18 +7680,8 @@ void spell_word_of_recall(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  if(IS_GRAPPLED(ch))
-  {
-    send_to_char("&+WYou are being grappled! Wording is not possible!&n\n", ch);
-    return;
-  }
-
   if(IS_SET(world[ch->in_room].room_flags, NO_RECALL)
-/* Allowing players to gate, portal, recall, and shift from ocean tiles
- * to enchance naval conflict: 22Aug08 Lucrot
- * ||(world[ch->in_room].sector_type == SECT_OCEAN)
- */
-     )
+     ||(world[ch->in_room].sector_type == SECT_OCEAN))
   {
     if(ch == victim)
       act("$n utters a single word.", TRUE, ch, 0, 0, TO_ROOM);
