@@ -559,7 +559,7 @@ void spell_stunning_visions(int level, P_char ch, char *arg, int type,
       FALSE, ch, 0, victim, TO_CHAR);
     act("$n's &+cstunning visions seem to slightly mesmerize&n $N!",
       FALSE, ch, 0, victim, TO_NOTVICT);
-    act("&+c$n causes visions to dance before your eyes, bewildering you!&n.",
+    act("$n &+ccauses visions to dance before your eyes, bewildering you!&n.",
       FALSE, ch, 0, victim, TO_VICT);
 
     if (IS_FIGHTING(victim))

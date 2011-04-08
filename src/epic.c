@@ -1938,7 +1938,7 @@ int chant_mastery_bonus(P_char ch, int dura)
         chant_bonus == 0 ? "&+WSparkling&n" :
         chant_bonus == 1 ? "&+WSparkling" : "&+WSp&+Cark&+Wli&+Cn&+Wg");
     act(buffer, FALSE, ch, 0, 0, TO_CHAR);
-    sprintf(buffer, "%s magic surrounds $n as $e begins $s chant.&n",
+    sprintf(buffer, "%s magic surrounds $n &+Was $e begins $s chant.&n",
         chant_bonus == 0 ? "&+WSparkling&n" :
         chant_bonus == 1 ? "&+WSparkling" : "&+WSp&+Cark&+Wli&+Cn&+Wg");
     act(buffer, FALSE, ch, 0, 0, TO_ROOM);

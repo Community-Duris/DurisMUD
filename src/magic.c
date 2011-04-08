@@ -7680,8 +7680,14 @@ void spell_word_of_recall(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  if(IS_SET(world[ch->in_room].room_flags, NO_RECALL)
-     ||(world[ch->in_room].sector_type == SECT_OCEAN))
+  if(affected_by_spell(ch, SKILL_BEARHUG))
+  {
+    send_to_char("You can't seem to get enough breath to speak!", ch);
+    return;
+  }
+
+  if(IS_SET(world[ch->in_room].room_flags, NO_RECALL))
+     //||(world[ch->in_room].sector_type == SECT_OCEAN))
   {
     if(ch == victim)
       act("$n utters a single word.", TRUE, ch, 0, 0, TO_ROOM);
@@ -13235,9 +13241,9 @@ void spell_heavens_aid(int level, P_char ch, char *arg, int type, P_char victim,
                 P_obj obj)
 {
   struct damage_messages messages = {
-    "&+LYou direct the &+Wholy beam&n towards $N&+W.&n",
-    "&+L$n's holy light passes over you, burning you with holy power.",
-    "&+LAn directs the &+Wholy beam&n towards $N, burning $m with it's holy power.",
+    "&+LYou direct the &+Wholy beam &+Ltowards $N&+L.",
+    "$n&+L's holy light passes over you, burning you with holy power.",
+    "$n &+Ldirects a &+Wholy beam&n &+Ltowards $N&+L, burning $m with its &+Wholy power&+L.",
     "$N &+Lconvulses and dies a quick and quiet &+rdeath.",
     "&+LYou feel the &+Wholy beam&n sap the last bit of &+clifeforce &+Wfrom you.",
     "$N quietly collapses and &+rdies!", 0
@@ -13249,7 +13255,7 @@ void spell_heavens_aid(int level, P_char ch, char *arg, int type, P_char victim,
 
   if(RACE_GOOD(victim) || IS_ANGEL(victim))
   {
-    act("&+WThe light from above passes over $N without harm.&n", FALSE, ch, 0, victim, TO_CHAR);
+    act("&+WThe light from above passes over $N &+Wwithout harm.&n", FALSE, ch, 0, victim, TO_CHAR);
     return;
   }
 
@@ -13278,20 +13284,20 @@ void event_aid_of_the_heavens(P_char ch, P_char victim, P_obj obj, void *data)
   room = *((int*)data);
   if(room != ch->in_room)
   {
-    send_to_char("&+LThe light from above dissolves into nothing...\n", ch);;
-    act("&+LThe light from above fades out of existance...", TRUE, ch, 0, 0, TO_ROOM);
+    send_to_char("&+LThe light from above dissolves into nothing...\n", ch);
+    act("&+LThe light from above fades out of existence...", TRUE, ch, 0, 0, TO_ROOM);
     return;
   }
   
   if(!number(0, 3))
   {
-    act("$n's &+Wlight from above glides about the area.",FALSE, ch, 0, 0, TO_ROOM);
+    act("$n&+W's light from above glides about the area.", FALSE, ch, 0, 0, TO_ROOM);
     add_event(event_aid_of_the_heavens, PULSE_VIOLENCE * 1, ch, 0, 0, 0, &room, sizeof(room));
     return;
   }
   
-  act("$n's &+Lsummoned illumination stretches out!",FALSE, ch, 0, 0, TO_ROOM);
-  act("&+LThe summoned illumination stretches out!.",FALSE, ch, 0, 0, TO_CHAR);  
+  act("$n&+L's summoned illumination stretches out!", FALSE, ch, 0, 0, TO_ROOM);
+  act("&+LYour summoned illumination stretches out!.", FALSE, ch, 0, 0, TO_CHAR);  
   
   cast_as_damage_area(ch, spell_heavens_aid, GET_LEVEL(ch), NULL,
       get_property("spell.area.minChance.aidOfTheHeavens", 90),
@@ -13311,13 +13317,13 @@ void event_summon_ghasts(P_char ch, P_char victim, P_obj obj, void *data)
   
   if(!number(0, 3))
   {
-    act("$n's &+Lghastly figures glide about the area.",FALSE, ch, 0, 0, TO_ROOM);
+    act("$n&+L's ghastly figures glide about the area.",FALSE, ch, 0, 0, TO_ROOM);
     add_event(event_summon_ghasts, PULSE_VIOLENCE * 1, ch, 0, 0, 0, &room, sizeof(room));
     return;
   }
   
-  act("$n's &+Lsummoned creatures look towards $m &+Lfor guidance, before &+rattacking!",FALSE, ch, 0, 0, TO_ROOM);
-  act("&+LThe creatures from beyond the grave look towards you for guidance.",FALSE, ch, 0, 0, TO_CHAR);  
+  act("$n&+L's summoned creatures look towards $m &+Lfor guidance, before &+rattacking&+L!",FALSE, ch, 0, 0, TO_ROOM);
+  act("&+LYour creatures from beyond the grave look towards you for guidance.",FALSE, ch, 0, 0, TO_CHAR);  
   
   cast_as_damage_area(ch, spell_ghastly_touch, GET_LEVEL(ch), NULL,
       get_property("spell.area.minChance.summonGhasts", 90),
@@ -13330,13 +13336,13 @@ void spell_aid_of_the_heavens(int level, P_char ch, char *arg, int type, P_char 
   room = ch->in_room;
 
   
-  act("&+WA holy beam of light begin to &n&+Lco&n&+wa&n&+Wle&n&+ws&n&+Lce&n around $n.", FALSE, ch, 0, 0, TO_ROOM);
+  act("&+WA holy beam of light begins to &+Lco&+wa&+Wle&+ws&+Lce &+Waround $n.", FALSE, ch, 0, 0, TO_ROOM);
 
   act("&+WYou call down a holy beam of light from the heavens.", FALSE, ch, 0, 0, TO_CHAR);
   
   zone_spellmessage(ch->in_room,
     "&+LYou see a bright light shining on the horizon.\n",
-    "&+LThe air to the %s &+Rwarms &+Land the &+Yholy shine&n enlighten your senses.\n");
+    "&+LThe air to the %s &+Rwarms &+Land the &+Yholy shine&n enlightens your senses.\n");
 
   add_event(event_aid_of_the_heavens, PULSE_VIOLENCE * 1, ch, 0, 0, 0, &room, sizeof(room));
 
@@ -13347,11 +13353,10 @@ void spell_summon_ghasts(int level, P_char ch, char *arg, int type, P_char victi
 {
   int room;
   room = ch->in_room;
-  send_to_room("&+LDeathly incorporeal ghasts enter the realm of the living...\n",
-     ch->in_room);
+  send_to_room("&+LDeathly incorporeal ghasts enter the realm of the living...\n", ch->in_room);
   zone_spellmessage(ch->in_room,
     "&+LThe air &+cchills &+Land the odor of &+rdeath &+Land &+ydecay &+Lassault your senses.\n",
-    "&+LThe air to the %s &+cchills &+Land the odor of &+rdeath &+Land &+ydecay &+Lassault your senses.\n");
+    "&+LThe air to the %s &+cchills &+Land the odor of &+rdeath &+Land &+ydecay &+Lassaults your senses.\n");
 
   add_event(event_summon_ghasts, PULSE_VIOLENCE * 1, ch, 0, 0, 0, &room, sizeof(room));
 
@@ -17222,14 +17227,14 @@ void spell_single_cdoom_wave(int level, P_char ch, char *arg, int type,
                               P_char victim, P_obj obj)
 {
   struct damage_messages messages = {
-    "&+LYou send &+ma wave of insects and arachnids &+Lagainst $N!",
-    "&+mA sea of arachnids and insects &+Lconsume and overwhelm you!",
-    "&+mA sea of arachnids and insects &+Lconsume and overwhelm $N!",
-    "&+mA sea of insects and arachnids &+Lconsumed $N &+Lcompletely "
+    "&+LYou send &+ma wave of &+Linsects &+mand &+Larachnids &+magainst $N!",
+    "&+mA sea of &+Larachnids &+mand &+Linsects &+mconsume and overwhelm you!",
+    "&+mA sea of &+Larachnids &+mand &+Linsects &+mconsume and overwhelm $N!",
+    "&+mA sea of &+Linsects &+mand &+Larachnids &+mconsumed $N &+mcompletely "
       "leaving nothing but a few &+Wbones&+L..",
-    "&+LYou suffer a terrible death as &+ma sea of insects and arachnids "
-      "&+Ldevours you alive..",
-    "&+mA sea of insects and arachnids &+Lconsumed $N &+Lcompletely "
+    "&+LYou suffer a terrible death as &+ma sea of &+Linsects &+mand &+Larachnids "
+      "&+mdevours you &+Lalive...",
+    "&+mA sea of &+Linsects &+mand &+Larachnids &+mconsumed $N &+mcompletely "
       "leaving nothing but a few &+Wbones&+L..", 0
   };
 
@@ -17332,13 +17337,13 @@ void event_cdoom(P_char ch, P_char victim, P_obj obj, void *data)
 
   if(cDoomData->waves == 0)
   {
-    act("&+LThe sea of &+marachnids&+L fades away...",
+    act("&+LThe sea of &+minsects &+Land &+marachnids &+Lfades away...",
         FALSE, ch, 0, victim, TO_CHAR);
     if (!cDoomData->area)
-      act("&+LThe sea of &+marachnids&+L fades away...",
+      act("&+LThe sea of &+minsects &+Land &+marachnids &+Lfades away...",
 	  FALSE, ch, 0, victim, TO_VICT);
     else
-      act("&+LThe sea of &+marachnids&+L fades away...",
+      act("&+LThe sea of &+minsects &+Land &+marachnids &+Lfades away...",
 	  FALSE, ch, 0, victim, TO_ROOM);
     return;
   }
@@ -17346,8 +17351,8 @@ void event_cdoom(P_char ch, P_char victim, P_obj obj, void *data)
     cDoomData->waves--;
   if (cDoomData->area)
   {
-    act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, victim, TO_CHAR);
-    act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, victim, TO_ROOM);
+    act("&+LA wave of &+minsects &+Land &+marachnids &+Lcrawls about the area...", FALSE, ch, 0, victim, TO_CHAR);
+    act("&+LA wave of &+minsects &+Land &+marachnids &+Lcrawls about the area...", FALSE, ch, 0, victim, TO_ROOM);
   }
   else
   {
@@ -17403,7 +17408,7 @@ void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
       cDoomData.waves++;*/
 
   act("&+LA &+gpl&+Lag&+gue &+Lof &+minsects and arachnids&+L flow like an ocean.", TRUE, ch, 0, victim, TO_ROOM);
-  act("&+LYou send out a &+mwave of insects&+L!", TRUE, ch, 0, victim, TO_CHAR);
+  act("&+LYou send out a &+mwave of &+Linsects &+mand &+Larachnids&+m!", TRUE, ch, 0, victim, TO_CHAR);
   //engage(ch, victim);
   if (victim)
     add_event(event_cdoom, 0, ch, victim, NULL, 0, &cDoomData, sizeof(CDoomData));
@@ -18659,9 +18664,9 @@ void spell_negative_concussion_blast(int level, P_char ch, char *arg,
     "&+LYour concussion &+Yblast&+L rips into $N, &+Wsh&+Lat&Nte&+Wri&+Lng $S&+r soul&+L!&N",
     "&+L$n's concussion &+Yblast&+L rips into you, &+Wsh&+Lat&Nte&+Wri&+Lng your &+rsoul&+L!&N",
     "&+L$n's concussion &+Yblast&+L rips into $N, &+Wsh&+Lat&Nte&+Wri&+Lng $S&+r soul&+L!&N",
-    "&+LYour blast shatters $N into a million pieces!&N",
-    "&+LYou scream as $n blasts you into the next life!&N",
-    "&+L$n blasts $N into the next life!&N"};
+    "&+LYour blast shatters $N &+Linto a million pieces!&N",
+    "&+LYou scream as $n &+Lblasts you into the next life!&N",
+    "$n &+Lblasts $N &+Linto the next life!&N"};
   int  dam, temp;
 
   if(!ch)
