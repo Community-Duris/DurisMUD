@@ -2337,7 +2337,7 @@ void enter_game(P_desc d)
     load_obj_to_newbies(ch);
     set_town_flag_justice(ch, TRUE);
   }
-  else if (GET_LEVEL(ch) <= 3 && !ch->carrying)
+  else if (IS_SET(ch->specials.act2, PLR2_NEWBIEEQ) && !ch->carrying)
     load_obj_to_newbies(ch);
 
   // hack to handle improperly set highest_level

@@ -861,7 +861,7 @@ struct room_data {
 #define PLR2_DAMAGE        BIT_15
 #define PLR2_B_PETITION      BIT_16 // Block petition channel
 #define PLR2_UNUSED_3      BIT_17
-#define PLR2_UNUSED_4      BIT_18
+#define PLR2_NEWBIEEQ      BIT_18
 #define PLR2_SHOW_QUEST    BIT_19
 #define PLR2_SPEC_TIMER    BIT_20
 #define PLR2_HEAL          BIT_21
