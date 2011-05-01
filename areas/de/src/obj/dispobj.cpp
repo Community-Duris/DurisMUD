@@ -45,7 +45,7 @@
 extern "C" flagDef room_bits[], extra_bits[], extra2_bits[], wear_bits[],
                           affected1_bits[], affected2_bits[], affected3_bits[], 
                           affected4_bits[], affected5_bits[],
-                          action_bits[], aggro_bits[], aggro2_bits[];
+                          action_bits[], aggro_bits[], aggro2_bits[], aggro3_bits[];
 extern flagDef g_npc_class_bits[];
 extern flagDef g_race_names[];
 extern room *g_currentRoom;

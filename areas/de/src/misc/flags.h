@@ -41,8 +41,9 @@
 #define AFF4_FL      11
 #define AGGR_FL      12
 #define AGGR2_FL     13
-#define CLASS_FL     14  // mob class
-#define AFF5_FL      15
+#define AGGR3_FL     14
+#define CLASS_FL     15  // mob class
+#define AFF5_FL      16
 
 #define _FLAGS_H_
 #endif

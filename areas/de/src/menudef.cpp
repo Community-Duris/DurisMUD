@@ -366,6 +366,12 @@ const menuChoice mobAggro12FlagsChoiceArr[] =
 { { "aggro1/2 flags", "aggro1 flags", 0, offsetof(mobType, aggroBits), mctMobAggro, mclNone, mcdDefault, 0, 
     mobAggro12FlagsChoiceAggro2ExtraArr }, { 0 } };
 
+// extra data for agg3 flags
+
+const menuChoice mobAggro3FlagsChoiceArr[] =
+{ { "aggro3 flags", 0, 0, offsetof(mobType, aggro3Bits), mctMobAggro3, mclNone, mcdDefault, 0, 
+    0 }, { 0 } };
+
 // extra data for aff1/aff2 flags (aff2 flags)
 
 const menuChoice mobAff12FlagsChoiceAff2ExtraArr[] =
@@ -388,9 +394,10 @@ const menuChoice mobAff34FlagsChoiceArr[] =
 
 const menuChoice mobMiscChoiceArr[] =
 { { "species", 0, 0, offsetof(mobType, mobSpecies), mctSpecies, mclNone, mcdDefault, MAX_SPECIES_LEN, 0 }, 
+  { "class(es)", 0, 0, offsetof(mobType, mobClass), mctMobClass, mclNone, mcdDefault, 0, 0 },
+  { "specialization", 0, 0, offsetof(mobType, mobSpec), mctInt, mclMobSpec, mcdDefault, 0, 0 },
   { "hometown", 0, 0, offsetof(mobType, mobHometown), mctInt, mclHometown, mcdDefault, 0, 0 },
   { "alignment", 0, 0, offsetof(mobType, alignment), mctInt, mclNone, mcdDefault, 0, 0 },
-  { "class(es)", 0, 0, offsetof(mobType, mobClass), mctMobClass, mclNone, mcdDefault, 0, 0 },
   { "size", 0, 0, offsetof(mobType, size), mctInt, mclMobSize, mcdDefault, 0, 0 },
   { 0 } };
 
@@ -448,6 +455,7 @@ const menuChoiceGroup mobGroupArr[] =
   { mobDescChoiceArr, 'D', 0 },
   { mobActFlagsChoiceArr, 'E', 0 },
   { mobAggro12FlagsChoiceArr, 'F', 'G' },
+  { mobAggro3FlagsChoiceArr, 'P', 0 },
   { mobAff12FlagsChoiceArr, 'H', 'I' },
   { mobAff34FlagsChoiceArr, 'J', 'K' },
   { mobMiscChoiceArr, 'M', 0 },
@@ -473,6 +481,7 @@ const menuChoiceGroup mobMiscGroupArr[] =
   { &mobMiscChoiceArr[2], 'C', 0 },
   { &mobMiscChoiceArr[3], 'D', 0 },
   { &mobMiscChoiceArr[4], 'E', 0 },
+  { &mobMiscChoiceArr[5], 'F', 0 },
   { 0, 0, 0 } };
 
 menu g_mobMiscMenu =
@@ -755,8 +764,8 @@ const menuChoice shopMessagesOpenChoiceArr[] =
     MAX_SHOPSTRING_LEN, 0 }, { 0 } };
 
 const menuChoice shopMessagesCloseChoiceArr[] =
-{ { "closing message", 0, 0, offsetof(shop, closeMessage), mctString, mclNone, mcdDoNotDisplay, 
-    MAX_SHOPSTRING_LEN, 0 }, { 0 } };
+{ { "closing message", 0, 0, offsetof(shop, closeMessage), mctString, mclNone, mcdDoNotDisplay,
+  MAX_SHOPSTRING_LEN, 0 }, { 0 } };
 
 const menuChoice shopMessagesRacistChoiceArr[] =
 { { "racist shopkeeper message", 0, 0, offsetof(shop, racistMessage), mctString, mclNone, mcdDoNotDisplay, 

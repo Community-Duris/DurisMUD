@@ -16,9 +16,10 @@ DEPEND = $(CCPP) -MM
 # Compiler flags.
 #
 # Turn on -O3 for the production version!
-COMPILER_FLAGS = -g -Wall
+COMPILER_FLAGS = -g -Wall -Wno-write-strings -m32 #-arch x86_32
 PROFILE_FLAGS = #-pg -static
-INCLUDES = -I/usr/local/mysql-i386/include
+#INCLUDES = -I/usr/local/mysql-i386/include -I/usr/include/mysql
+INCLUDES  = -I. -I/usr/include/libxml2 -I/usr/local/include/mysql -I./ships
 
 #
 # Preprocessing flags. 
@@ -31,8 +32,9 @@ COMPILER_FLAGS += $(DEBUG_FLAGS) $(OPTION_FLAGS)
 # Libraries.
 #
 # PROFILE_LIBS = #/usr/lib/libm_p.a  # uncomment for profiling 
-GENERAL_LIBS =-lm # comment for profiling
+GENERAL_LIBS    = -lm -lstdc++ -lz -lxml2 -lmysqlclient
 LIBS = 
+
 
 #
 # Include Directories
@@ -47,7 +49,7 @@ INC_DIRS = -I../ -I./
 # Source Files. 
 #
 # KEEP THESE IN ALPHABETICAL ORDER PLEASE 
-SRC_FILES =  ship_base.c ship_ai.c ship_building.c ship_cargo.c ship_tactical.c ship_utils.c ship_variables.c 
+SRC_FILES =  ship_auto.c ship_base.c ship_cargo.c ship_combat.c ship_control.c ship_npc.c ship_npc_ai.c ship_shop.c ship_utils.c ship_variables.c
 
 #
 # Object Files

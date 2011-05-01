@@ -131,7 +131,8 @@ extern uint g_roomFlagTemplates[], g_objExtraFlagTemplates[], g_objWearFlagTempl
             g_mobActionFlagTemplates[],
             g_mobAff1FlagTemplates[], g_mobAff2FlagTemplates[],
             g_mobAff3FlagTemplates[], g_mobAff4FlagTemplates[],
-            g_mobAggroFlagTemplates[], g_mobAggro2FlagTemplates[];
+            g_mobAggroFlagTemplates[], g_mobAggro2FlagTemplates[],
+	    g_mobAggro3FlagTemplates[];
 
 
 // all uppercase apply names looks bad to me, and lowercasing the table in-place causes the 'no execute'
@@ -186,6 +187,7 @@ int __cdecl main(const int argc, const char *argv[])
   memset(g_mobAff4FlagTemplates, 0, sizeof(uint) * NUMB_FLAG_TEMPLATES);
   memset(g_mobAggroFlagTemplates, 0, sizeof(uint) * NUMB_FLAG_TEMPLATES);
   memset(g_mobAggro2FlagTemplates, 0, sizeof(uint) * NUMB_FLAG_TEMPLATES);
+  memset(g_mobAggro3FlagTemplates, 0, sizeof(uint) * NUMB_FLAG_TEMPLATES);
 
  // check for command-line arguments or lack thereof
 

@@ -42,7 +42,7 @@
 
 extern "C" flagDef room_bits[], extra_bits[], extra2_bits[], wear_bits[],
                    affected1_bits[], affected2_bits[], affected3_bits[], affected4_bits[],
-                   action_bits[], aggro_bits[], aggro2_bits[];
+                   action_bits[], aggro_bits[], aggro2_bits[], aggro3_bits[];
 extern flagDef g_npc_class_bits[], g_race_names[];
 extern bool g_madeChanges;
 extern uint g_numbObjTypes, g_numbMobTypes;
@@ -225,6 +225,8 @@ void fixAllFlags(void)
       numbFixed += fixFlags(&(mob->aggroBits), aggro_bits);
       bitVects++;
       numbFixed += fixFlags(&(mob->aggro2Bits), aggro2_bits);
+      bitVects++;
+      numbFixed += fixFlags(&(mob->aggro3Bits), aggro3_bits);
       bitVects++;
       numbFixed += fixFlags(&(mob->mobClass), g_npc_class_bits);
       bitVects++;
@@ -511,6 +513,17 @@ int getFlagLocMob(const char *flagName, uint *whichSet, const flagDef **flagList
     return flagNumb;
   }
 
+  flagNumb = whichFlag(flagName, aggro3_bits);
+  if (flagNumb != -1) 
+  {
+    *whichSet = AGGR3_FL;
+
+    if (flagListPtr)
+      *flagListPtr = aggro3_bits;
+
+    return flagNumb;
+  }
+
   flagNumb = whichFlag(flagName, g_npc_class_bits);
   if (flagNumb != -1) 
   {
@@ -583,6 +596,7 @@ uint *getMobFlagPtr(mobType *mob, const uint flagVect)
     case AFF4_FL  : return &(mob->affect4Bits);
     case AGGR_FL  : return &(mob->aggroBits);
     case AGGR2_FL : return &(mob->aggro2Bits);
+    case AGGR3_FL : return &(mob->aggro3Bits);
     case CLASS_FL : return &(mob->mobClass);
 
     default : return NULL;

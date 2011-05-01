@@ -3,7 +3,7 @@
 SHELL = /bin/sh
 #EFENCE = 1
 
-CC	= g++
+CC	= /usr/bin/g++-4.0
 DEBUG	= -ggdb3
 #LDFLAGS	= -ggdb3
 
@@ -11,11 +11,12 @@ ifdef USE_SHARED
 LDFLAGS += -rdynamic
 endif
 
-LDFLAGS += -L/usr/local/mysql/lib -L./ships
+LDFLAGS += -L/usr/local/lib/mysql -L./ships
 
 OPTS    = -O2
 
-CFLAGS = -pg
+CFLAGS = -pg -Wno-write-strings -arch i386
+
 #CFLAGS += -D__NO_MYSQL__
 CFLAGS += -DTEST_MUD
 CFLAGS += -D_OSX_
@@ -23,7 +24,7 @@ CFLAGS += -D_OSX_
 # to turn on/off chaos mud, change the flag at the top of db.h
 #CFLAGS += -DCHAOS_MUD=1
 
-INCLUDES	= -I. -I/usr/include/libxml2 -I/usr/local/mysql/include -I./ships
+INCLUDES	= -I. -I/usr/include/libxml2 -I/usr/local/include/mysql -I./ships
 
 GENERAL_LIBS    = -lm -lstdc++ -lz -lxml2 -lmysqlclient
 
@@ -70,12 +71,13 @@ OBJS	=  \
 	bard.o \
   beh_magic.o \
 	boards.o \
-	boon.o \
+  boon.o \
+  buildings.o \
 	comm.o \
 	common.o \
 	condition.o \
 	constant.o \
-        CTF.o \
+  CTF.o \
 	db.o \
 	debug.o \
 	disguise.o \
@@ -129,6 +131,7 @@ OBJS	=  \
 	nq.o \
 	objconv.o \
 	objmisc.o \
+  outposts.o \
 	period.list.o \
 	prompt.o \
 	properties.o \
@@ -178,6 +181,7 @@ OBJS	=  \
   specs.undermountain.o \
 	specs.underworld.o \
   specs.vecna.o \
+  specs.venthix.o \
 	specs.verzanan.o \
 	specs.zalrix.o \
 	specs.set.o \
@@ -276,6 +280,10 @@ depend .depend:
 
 clean:
 	rm -f *.o *~ dms_new .depend
+	rm -f ships/*.a ships/*.o ships/*~ ships/.depend
+
+debug: $(PROGS)
+	cd ..; ./gdbdms
 
 -include .depend
 

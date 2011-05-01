@@ -1162,6 +1162,25 @@ typedef unsigned int uint;
 #define AGGR2_PHANTOM        BIT_28
 #define AGGR2_SHADE          BIT_29
 #define AGGR2_REVENANT       BIT_30
+#define AGGR2_GITHZERAI      BIT_31
+#define AGGR2_THEURGIST      BIT_32
+
+#define AGGR3_OROG	     BIT_1
+#define AGGR3_DRIDER         BIT_2
+#define AGGR3_KOBOLD         BIT_3
+#define AGGR3_KUOTOA         BIT_4
+#define AGGR3_WOODELF        BIT_5
+#define AGGR3_FIRBOLG        BIT_6
+#define AGGR3_AGATHINON      BIT_7
+#define AGGR3_ELADRIN        BIT_8
+#define AGGR3_PILLITHID      BIT_9
+#define AGGR3_ALCHEMIST      BIT_10
+#define AGGR3_BERSERKER      BIT_11
+#define AGGR3_REAVER         BIT_12
+#define AGGR3_ILLUSIONIST    BIT_13
+#define AGGR3_ETHERMANCER    BIT_14
+#define AGGR3_DREADLORD      BIT_15
+#define AGGR3_AVENGER        BIT_16
 
 #define SECS_BETWEEN_AFF_REFRESH  60    /* RL seconds between each refresh */
 

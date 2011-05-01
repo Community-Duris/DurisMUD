@@ -60,7 +60,8 @@ extern uint g_roomFlagTemplates[],
             g_objAnti2FlagTemplates[],
             g_mobActionFlagTemplates[], g_mobAff1FlagTemplates[], g_mobAff2FlagTemplates[], 
              g_mobAff3FlagTemplates[], 
-            g_mobAff4FlagTemplates[], g_mobAggroFlagTemplates[], g_mobAggro2FlagTemplates[];
+            g_mobAff4FlagTemplates[], g_mobAggroFlagTemplates[], g_mobAggro2FlagTemplates[],
+	    g_mobAggro3FlagTemplates[];
 extern alias *g_aliasHead;
 
 //
@@ -182,6 +183,7 @@ void writeSettingsFile(const char *filename, const bool writeLimits)
     writeTemplateRedundant(setFile, "mobaff4", i, g_mobAff4FlagTemplates[i]);
     writeTemplateRedundant(setFile, "mobaggro", i, g_mobAggroFlagTemplates[i]);
     writeTemplateRedundant(setFile, "mobaggro2", i, g_mobAggro2FlagTemplates[i]);
+    writeTemplateRedundant(setFile, "mobaggro3", i, g_mobAggro3FlagTemplates[i]);
   }
 
   fclose(setFile);

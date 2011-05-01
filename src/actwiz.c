@@ -64,6 +64,7 @@ extern const flagDef action_bits[];
 extern const flagDef action2_bits[];
 extern const flagDef aggro_bits[];
 extern const flagDef aggro2_bits[];
+extern const flagDef aggro3_bits[];
 extern const flagDef anti_bits[];
 extern const flagDef anti2_bits[];
 extern const char *apply_types[];
@@ -2867,6 +2868,8 @@ void do_stat(P_char ch, char *argument, int cmd)
       sprintf(buf + strlen(buf), "&+YAggro    : &n%s\n", buf2);
       sprintbitde(k->only.npc->aggro2_flags, aggro2_bits, buf2);
       sprintf(buf + strlen(buf), "&+YAggro2   : &n%s\n", buf2);
+      sprintbitde(k->only.npc->aggro3_flags, aggro3_bits, buf2);
+      sprintf(buf + strlen(buf), "&+YAggro3   : &n%s\n", buf2);
       strcat(o_buf, buf);
     }
     else

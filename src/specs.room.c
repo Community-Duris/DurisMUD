@@ -1401,7 +1401,7 @@ int duergar_guild(int room, P_char ch, int cmd, char *arg)
   GET_EXP(killer) = 0;
   SET_BIT(killer->specials.act, ACT_BREAK_CHARM);
   REMOVE_BIT(killer->specials.act, ACT_MEMORY);
-  killer->only.npc->aggro_flags = killer->only.npc->aggro2_flags = 0;
+  killer->only.npc->aggro_flags = killer->only.npc->aggro2_flags = killer->only.npc->aggro3_flags = 0;
   clearMemory(killer);
 
   for (i = 1; i <= MAX_CIRCLE; i++)

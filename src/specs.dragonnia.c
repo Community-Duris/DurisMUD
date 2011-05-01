@@ -844,7 +844,7 @@ void call_protector(P_char ch, P_char tmp_ch, int nprotector, int type)
 //    REMOVE_BIT(protector->specials.act, ACT_AGGRESSIVE);
   if (IS_AGGRESSIVE(protector))
   {
-    protector->only.npc->aggro_flags = protector->only.npc->aggro2_flags = 0;
+    protector->only.npc->aggro_flags = protector->only.npc->aggro2_flags = protector->only.npc->aggro3_flags = 0;
   }
   if (!IS_SET(protector->specials.act, ACT_MEMORY))
     SET_BIT(protector->specials.act, ACT_MEMORY);

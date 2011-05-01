@@ -193,6 +193,7 @@ SECS_PER_MUD_DAY)
 
 #define IS_AGGROFLAG(ch, flags) (IS_NPC(ch) && IS_SET((ch)->only.npc->aggro_flags, (flags)))
 #define IS_AGGRO2FLAG(ch, flags) (IS_NPC(ch) && IS_SET((ch)->only.npc->aggro2_flags, (flags)))
+#define IS_AGGRO3FLAG(ch, flags) (IS_NPC(ch) && IS_SET((ch)->only.npc->aggro3_flags, (flags)))
 
 #define GET_CHAR_SKILL_S(ch, num) (GET_CHAR_SKILL_P((ch), num))
 #define GET_CHAR_SKILL(ch, num)  (\
@@ -646,7 +647,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
   (IS_SET((MOB)->specials.act, ACT_AGG_OUTCAST))))
 */
 
-#define IS_AGGRESSIVE(m) (IS_NPC(m) && ((m)->only.npc->aggro_flags || (m)->only.npc->aggro2_flags))
+#define IS_AGGRESSIVE(m) (IS_NPC(m) && ((m)->only.npc->aggro_flags || (m)->only.npc->aggro2_flags || (m)->only.npc->aggro3_flags))
 
 #define CHAR_IS_FLAGGED(CH)  \
 (0)

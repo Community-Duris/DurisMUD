@@ -38,8 +38,9 @@
 #include "../boolean.h"
 #include "../fh.h"
 
-extern flagDef g_mobHometownList[], g_mobPositionList[], g_mobSexList[], g_mobSizeList[];
-extern "C" const struct race_names race_names_table[];                      
+extern flagDef g_mobHometownList[], g_mobPositionList[], g_mobSexList[], g_mobSizeList[], g_mobSpecList[];
+extern "C" const struct race_names race_names_table[];
+extern "C" const char *specdata[][MAX_SPEC];
 
 //
 // getMobSpeciesStrn : return colored name for particular species ID
@@ -126,6 +127,22 @@ const char *getMobHometownStrn(const int hometown)
 
 
 //
+// getMobSpecStrn
+//
+
+const char *getMobSpecStrn(const int spec)
+{
+  /*
+  const char *buff = "None";
+  if (!spec)
+    return buff;
+  return specdata[classNumb(cls)][spec];
+  */
+  return getFlagNameFromList(g_mobSpecList, spec);
+}
+
+
+//
 // getMobSizeStrn
 //
 
@@ -142,7 +159,7 @@ const char *getMobSizeStrn(const int mobSize)
 
 bool isAggro(const mobType *mob)
 {
-  return (mob->aggroBits || mob->aggro2Bits);
+  return (mob->aggroBits || mob->aggro2Bits || mob->aggro3Bits);
 }
 
 
@@ -155,5 +172,35 @@ bool castingClass(const uint cl)
   return ((cl & CLASS_RANGER) || (cl & CLASS_PSIONICIST) || (cl & CLASS_PALADIN) ||
           (cl & CLASS_ANTIPALADIN) || (cl & CLASS_CLERIC) || (cl & CLASS_DRUID) ||
           (cl & CLASS_SHAMAN) || (cl & CLASS_SORCERER) || (cl & CLASS_NECROMANCER) ||
-          (cl & CLASS_CONJURER) || (cl & CLASS_WARLOCK));
+          (cl & CLASS_CONJURER) || (cl & CLASS_WARLOCK) || (cl & CLASS_ETHERMANCER) ||
+	  (cl & CLASS_ILLUSIONIST) || (cl & CLASS_THEURGIST) || (cl & CLASS_AVENGER));
 }
+
+//
+// Count how many classes are set on the mob
+//
+
+uint countClass(const uint cl)
+{
+  uint i;
+  uint count = 0;
+  for (i = 0; i < 32; i++)
+  {
+    if (cl & (1 << i))
+      count++;
+  }
+  return count;
+}
+
+uint classNumb(const uint cl)
+{
+  uint i;
+
+  for (i = 0; i < 32; i++)
+  {
+    if (cl & (1 << i))
+      break;
+  }
+  return i+1;
+}
+

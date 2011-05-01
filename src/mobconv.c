@@ -81,7 +81,7 @@ void convertMob(P_char ch)
 
 
   /* assign specialization */
-  if( !IS_MULTICLASS_NPC(ch) )
+  if( !IS_MULTICLASS_NPC(ch) && ch->player.spec == 0)
   {
     if( isname("_spec1_", GET_NAME(ch)) && 
         *GET_SPEC_NAME(ch->player.m_class, 0) )

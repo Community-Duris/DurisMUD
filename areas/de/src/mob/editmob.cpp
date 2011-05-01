@@ -51,7 +51,7 @@ extern mobType **g_mobLookup;
 extern menuChoice mobLimitChoiceExtraOverrideLimitArr[];
 extern menuChoice mobLimitChoiceArr[];
 extern menu g_mobMenu;
-
+extern flagDef g_mobSpecList[];
 
 //
 // displayEditMobTypeMenu : Displays edit mob type menu
@@ -84,6 +84,7 @@ bool interpEditMobTypeMenu(const usint ch, mobType *mob, const uint origVnum)
   {
     editMobMisc(mob);
 
+    updateSpecList(mob);
     displayEditMobTypeMenu(mob, origVnum);
   }
   else
@@ -295,7 +296,8 @@ mobType *realEditMobType(mobType *mob, const bool allowJump)
 
     return NULL;
   }
-
+  
+  updateSpecList(mob);
   displayEditMobTypeMenu(mob, mob->mobNumber);
 
   while (true)

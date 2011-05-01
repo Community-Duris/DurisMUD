@@ -117,12 +117,13 @@ typedef enum
   mctMobAction = 102,
   mctMobAggro = 103,
   mctMobAggro2 = 104,
-  mctMobAffect1 = 105,
-  mctMobAffect2 = 106,
-  mctMobAffect3 = 107,
-  mctMobAffect4 = 108,
-  mctMobLimit = 109, 
-  mctMobLimitOverride = 110, 
+  mctMobAggro3 = 105,
+  mctMobAffect1 = 106,
+  mctMobAffect2 = 107,
+  mctMobAffect3 = 108,
+  mctMobAffect4 = 109,
+  mctMobLimit = 110, 
+  mctMobLimitOverride = 111,
 
   mctNumbShopSold = 120,
   mctNumbShopBought = 121, 
@@ -173,7 +174,8 @@ typedef enum
   mclMobSize = 41, 
   mclPosition = 42, 
   mclSex = 43,
-
+  mclMobSpec = 44,
+    
   mclResetMode = 50, 
 
   mclQuestItemGivenToMobType = 60,

@@ -6710,6 +6710,22 @@ orb crystal~
 &+LThis &+Wcr&Nys&+Wta&Nlli&+Wne&N or&+Wb &+Lhangs on a &+Ydelicate gold
 &+Ychain,&+W glowing&+L softly with an &+Wop&Nal&+Wes&Nca&+Wnt&+L light.
 ~
+#790
+flag standard good~
+&+Wthe &+Gstandard &+Wof the &+YGood Races &+Wof &+LDuris&n~
+&+WA flag bearing the symbols of the &+YGood Races &+Wstands here.&n~
+~
+8 3 3 0 15 0 469884936 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#791
+flag standard evil~
+&+Lthe &+Rstandard &+Lof the &+rEvil Races &+Lof &+RDuris&n~
+&+LA flag bearing the symbols of the &+rEvil Races &+Lstands here.&n~
+~
+8 3 3 0 15 0 469884936 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
 #792
 flag standard neutral~
 &+La standard neutral flag&n~

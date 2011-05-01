@@ -321,7 +321,7 @@ void displayArgHelp(void);
 
 // dispmob.cpp
 
-char *getClassString(const uint class_code, char *strn, const size_t intMaxLen);
+char *getClassString(const mobType *mob, char *strn, const size_t intMaxLen);
 void displayMobTypeList(const char *strn);
 void displayMobHereList(void);
 void displayMobSpeciesList(const char *searchStrn);
@@ -456,6 +456,10 @@ bool editFlags(const flagDef *flagArr, uint *flagVal, const char entityType, con
                const bool asBitVect);
 bool editFlags(const flagDef *flagArr, int *sflagVal, const char entityType, const char *entityName, 
                const uint entityNumb, const char *flagName, uint *templates, uint numbCols, 
+               const bool asBitVect);
+void updateSpecList(const mobType *mob);
+bool editSpecs(uint *flagVal, const char entityType, const char *entityName, 
+               const uint entityNumb, const char *flagName, uint *templates, uint numbCols,
                const bool asBitVect);
 
 // editichk.cpp
@@ -1013,9 +1017,12 @@ const char *getMobSpeciesCode(const int numb);
 const char *getMobPosStrn(const uint position);
 const char *getMobSexStrn(const int sex);
 const char *getMobHometownStrn(const int hometown);
+const char *getMobSpecStrn(const int spec);
 const char *getMobSizeStrn(const int mobSize);
 bool isAggro(const mobType *mob);
 bool castingClass(const uint cl);
+uint countClass(const uint cl);
+uint classNumb(const uint cl);
 
 // mobu.cpp
 

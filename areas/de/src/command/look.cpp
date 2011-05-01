@@ -374,6 +374,7 @@ bool displayMobMisc(const mobHere *mob, size_t &numbLines)
 
 
   mobT = mob->mobPtr;
+  updateSpecList(mobT);
 
   if (!mobT)
   {
@@ -382,9 +383,10 @@ bool displayMobMisc(const mobHere *mob, size_t &numbLines)
   }
 
   sprintf(outstrn,
-"&+W%s&n is &+clevel %d&n, &+malign %d&n, of class(es) '%s&n', and a%s &+g%s&n.\n",
+"&+W%s&n is &+clevel %d&n, &+malign %d&n, of class(es) '%s&n'(%s), and a%s &+g%s&n.\n",
           mobT->mobShortName, mobT->level,
-          mobT->alignment, getClassString(mobT->mobClass, strn, 2047),
+          mobT->alignment, getClassString(mobT, strn, 2047),
+	  getMobSpecStrn(mobT->mobSpec),
           getVowelN(getMobSpeciesNoColorStrn(mobT->mobSpecies)[0]),
           getMobSpeciesStrn(mobT->mobSpecies));
 

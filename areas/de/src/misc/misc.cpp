@@ -1774,9 +1774,9 @@ void fixGuildStuff(void)
     {
       mobType *mob = findMob(numb);
 
-      if (mob->aggroBits || mob->aggro2Bits)
+      if (mob->aggroBits || mob->aggro2Bits || mob->aggro3Bits)
       {
-        mob->aggroBits = mob->aggro2Bits = 0;
+        mob->aggroBits = mob->aggro2Bits = mob->aggro3Bits = 0;
         numbAggr++;
       }
 

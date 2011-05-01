@@ -1198,6 +1198,7 @@ struct npc_only_data {          /* values only used by NPCs  */
         int idnum;                    /* Given only to pets, used for crashsave */
   ulong aggro_flags;            /* Err..  aggro flags */
   ulong aggro2_flags;           /* aggro2 flags, more aggro goodness */
+  ulong aggro3_flags;
   ubyte default_pos;            /* Default position                       */
   byte last_direction;          /* The last direction the monster went    */
   ubyte str_mask;               /* flag field for 'strung' char* fields   */

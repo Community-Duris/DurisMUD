@@ -52,6 +52,7 @@
 
 extern usint g_templateKeys[], g_setTemplateKeys[];
 extern bool g_madeChanges;
+extern "C" const char *specdata[][MAX_SPEC];
 
 //
 // canEditFlag : returns true if user can toggle flag
@@ -572,6 +573,96 @@ bool editFlags(const flagDef *flagArr, uint *flagVal, const char entityType, con
 
   while (flagArr[numbFlags].flagShort)
     numbFlags++;
+
+  displayFlagMenu(*flagVal, flagArr, entityType, entityName, entityNumb, flagName,
+                  colXpos, colTopFlag, &numbCols, asBitVect);
+
+  while (true)
+  {
+    ch = toupper(getkey());
+
+    if (checkMenuKey(ch, true) == MENUKEY_ABORT)
+    {
+      *flagVal = oldFlags;
+
+      _outtext("\n\n");
+
+      return false;
+    }
+
+    if (interpEditFlags(ch, flagArr, flagVal, numbFlags,
+                        colXpos, colTopFlag, numbCols, templates, asBitVect))
+    {
+      return true;
+    }
+  }
+}
+
+// Because speclist is class dependent, we need to create g_mobSpecList on
+// the fly.
+
+flagDef g_mobSpecList[MAX_SPEC+2];
+
+void updateSpecList(const mobType *mob)
+{
+  uint speclist = 0;
+  uint specnum = 0;
+
+  uint classCount = countClass(mob->mobClass);
+  uint classnum = classNumb(mob->mobClass);
+
+  while (speclist <= MAX_SPEC+1)
+  {
+    g_mobSpecList[speclist].flagShort = "Test";
+    
+    // We don't have a no spec in specdata, so creating it artificially here
+    if (!speclist)
+    {
+      g_mobSpecList[speclist].flagLong = "None";
+      g_mobSpecList[speclist].editable = 1;
+    }
+    else if (!classCount || classCount > 1)
+    {
+      g_mobSpecList[speclist].flagLong = "Not Available";
+      g_mobSpecList[speclist].editable = 0;
+    }
+    else
+    {
+      if (classnum <= CLASS_COUNT)
+      {
+	g_mobSpecList[speclist].flagLong = (*specdata[classnum][specnum] ? specdata[classnum][specnum] : "Unused");
+	g_mobSpecList[speclist].editable = (!*specdata[classnum][specnum] ? 0 : 1);
+      }
+      else
+      {
+	g_mobSpecList[speclist].flagLong = "Unused";
+	g_mobSpecList[speclist].editable = 0;
+      }
+    }
+    
+    g_mobSpecList[speclist].defVal = speclist;
+    
+    if (speclist++)
+      specnum++;
+  }
+  g_mobSpecList[MAX_SPEC+1].flagShort = 0; // SPEC_NONE + MAX_SPEC + NULL
+}
+
+bool editSpecs(uint *flagVal, const char entityType, const char *entityName, 
+               const uint entityNumb, const char *flagName, uint *templates, uint numbCols,
+               const bool asBitVect)
+{
+  usint ch;
+  uint colTopFlag[MAX_FLAG_COLUMNS];
+  sint colXpos[MAX_FLAG_COLUMNS];
+  uint oldFlags = *flagVal;
+  uint numbFlags;
+
+  numbFlags = 0;
+  while (g_mobSpecList[numbFlags].flagShort)
+    numbFlags++;
+
+  const flagDef *flagArr = g_mobSpecList;
 
   displayFlagMenu(*flagVal, flagArr, entityType, entityName, entityNumb, flagName,
                   colXpos, colTopFlag, &numbCols, asBitVect);

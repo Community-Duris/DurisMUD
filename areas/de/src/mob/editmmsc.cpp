@@ -76,6 +76,7 @@ char interpEditMobMiscMenu(const usint ch, mobType *mob)
 {
   if (interpretMenu(&g_mobMiscMenu, mob, ch))
   {
+    updateSpecList(mob);
     displayEditMobMiscMenu(mob);
 
     return false;
@@ -106,6 +107,7 @@ void editMobMisc(mobType *mob)
 
   strcpy(oldSpecies, mob->mobSpecies);
 
+  updateSpecList(mob);
   displayEditMobMiscMenu(mob);
 
   while (true)

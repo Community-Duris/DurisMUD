@@ -1135,7 +1135,7 @@ const struct class_names class_names_table[] = {
   {"Unholy Piper", "&+GUnholy Piper&n", "Pip", 'y'},
   {"Dreadlord", "&+LDread&+rlord&n", "Dre", 'e'},
   {"Ethermancer", "&+wEthermancer&n", "Eth", 'g'},
-  {"Avenger", "&+WAvenger&n", "Ave", 'z'},
+  {"Avenger", "&+WAvenger&n", "Ave", '2'},
   {"Theurgist", "&+cTh&+Ceur&+Wgist&n", "The", '1'},
   {0}
 };
@@ -1277,7 +1277,29 @@ flagDef  aggro2_bits[] = {
   {"AGGR2_SGIANT", ".. to storm giants", 1, 0},
   {"AGGR2_WIGHT", ".. to wights", 1, 0},
   {"AGGR2_PHANTOM", ".. to phantoms", 1, 0},
-  {0}
+  {"AGGR2_SHADE", ".. to shades", 1, 0},
+  {"AGGR2_REVENANT", ".. to revenants", 1, 0},
+  {"AGGR2_GITHZERAI", ".. to githzerais", 1, 0},
+  {"AGGR2_THEURGIST", ".. to theurgists", 1, 0}
+};
+
+flagDef aggro3_bits[] = {
+  {"AGGR3_OROG", ".. to orogs", 1, 0},
+  {"AGGR3_DRIDER", ".. to driders", 1, 0},
+  {"AGGR3_KOBOLD", ".. to kobolds", 1, 0},
+  {"AGGR3_KUOTOA", ".. to kuo toas", 1, 0},
+  {"AGGR3_WOODELF", ".. to wood elves", 1, 0},
+  {"AGGR3_FIRBOLG", ".. to firbolgs", 1, 0},
+  {"AGGR3_AGATHINON", ".. to agathinons", 1, 0},
+  {"AGGR3_ELADRIN", ".. to eladrins", 1, 0},
+  {"AGGR3_PILLITHID", ".. to planetbound illithids", 1, 0},
+  {"AGGR3_ALCHEMIST", ".. to alchemists", 1, 0},
+  {"AGGR3_BERSeRKER", ".. to berserkers", 1, 0},
+  {"AGGR3_REAVER", ".. to reavers", 1, 0},
+  {"AGGR3_ILLUSIONIST", ".. to illusionists", 1, 0},
+  {"AGGR3_ETHERMANCER", ".. to ethermancers", 1, 0},
+  {"AGGR3_DREADLORD", ".. to dreadlords", 1, 0},
+  {"AGGR3_AVENGER", ".. to avengers", 1, 0}
 };
 
 const char *item_material[] = {

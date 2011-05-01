@@ -90,10 +90,11 @@ void writeMobtoFile(FILE *mobFile, const mobType *mob)
  // next, write the action, agg, agg2, aff1, aff2, aff3, aff4 flags,
  // alignment and "S"
 
-  fprintf(mobFile, "%u %u %u %u %u %u %u %d S\n",
+  fprintf(mobFile, "%u %u %u %u %u %u %u %u %d S\n",
                                             mob->actionBits,
                                             mob->aggroBits,
                                             mob->aggro2Bits,
+                                            mob->aggro3Bits,
                                             mob->affect1Bits,
                                             mob->affect2Bits,
                                             mob->affect3Bits,
@@ -107,8 +108,8 @@ void writeMobtoFile(FILE *mobFile, const mobType *mob)
   strcpy(speciesUp, mob->mobSpecies);
   upstrn(speciesUp);
 
-  fprintf(mobFile, "%s %d %u %d\n", mob->mobSpecies, mob->mobHometown,
-                                    mob->mobClass, mob->size);
+  fprintf(mobFile, "%s %d %u %u %d\n", mob->mobSpecies, mob->mobHometown,
+                                    mob->mobClass, mob->mobSpec, mob->size);
 
  // next, the level, thac0, ac, hit points and damage
 

@@ -39,6 +39,7 @@ extern const flagDef affected4_bits[];
 extern const flagDef affected5_bits[];
 extern const flagDef aggro_bits[];
 extern const flagDef aggro2_bits[];
+extern const flagDef aggro3_bits[];
 extern const char *apply_types[];
 extern const char *connected_types[];
 extern const char *dirs[];
@@ -539,6 +540,9 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val,
     {"aggro2", NPOFFSET(aggro2_flags), (char **) aggro2_bits, ac_bitCopy,
      sizeof(flagDef)}
     ,
+    {"aggro3", NPOFFSET(aggro3_flags), (char **) aggro3_bits, ac_bitCopy,
+     sizeof(flagDef)}
+    ,
     /* char_skill_data */
     {"skill", OFFSET_OF(struct char_skill_data *, learned), (char **) spells,
      ac_skillCopy, sizeof(char *)}
@@ -652,6 +656,7 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val,
     if (SAME_STRING(flag, "ldir") || SAME_STRING(flag, "defpos") ||
         SAME_STRING(flag, "attack") || SAME_STRING(flag, "memory") ||
         SAME_STRING(flag, "aggro") || SAME_STRING(flag, "aggro2") ||
+        SAME_STRING(flag, "aggro3") ||
         SAME_STRING(flag, "val0") || SAME_STRING(flag, "val1") ||
         SAME_STRING(flag, "val2") || SAME_STRING(flag, "val3") ||
         SAME_STRING(flag, "val4") || SAME_STRING(flag, "val5") ||

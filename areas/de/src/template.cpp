@@ -67,6 +67,7 @@ uint g_mobAff3FlagTemplates[NUMB_FLAG_TEMPLATES];
 uint g_mobAff4FlagTemplates[NUMB_FLAG_TEMPLATES];
 uint g_mobAggroFlagTemplates[NUMB_FLAG_TEMPLATES];
 uint g_mobAggro2FlagTemplates[NUMB_FLAG_TEMPLATES];
+uint g_mobAggro3FlagTemplates[NUMB_FLAG_TEMPLATES];
 
 // different keys for templates depending on OS
 
@@ -181,6 +182,9 @@ void setTemplateArgs(const char *args, const bool updateChanges, const bool disp
 
       if (!displayTemplateRedundant(i, "mobaggro2", g_mobAggro2FlagTemplates[i], numblines, &foundTemplate))
         return;
+      
+      if (!displayTemplateRedundant(i, "mobaggro3", g_mobAggro3FlagTemplates[i], numblines, &foundTemplate))
+        return;
     }
 
     if (!foundTemplate) 
@@ -268,12 +272,15 @@ void setTemplateArgs(const char *args, const bool updateChanges, const bool disp
   if (strcmpnocase(flagname, "MOBAGGRO2"))
     g_mobAggro2FlagTemplates[tempNumb] = value;
   else
+  if (strcmpnocase(flagname, "MOBAGGRO3"))
+    g_mobAggro3FlagTemplates[tempNumb] = value;
+  else
   {
     _outtext("\n"
 "Invalid flag name specified - valid flagnames are roomflag, objextra,\n"
 "objextra2, objwear, objaff1, objaff2, objaff3, objaff4, objanti,\n"
-"objanti2, mobact, mobaff1, mobaff2, mobaff3, mobaff4, mobaggro, and\n"
-"mobaggro2.\n\n");
+"objanti2, mobact, mobaff1, mobaff2, mobaff3, mobaff4, mobaggro,\n"
+"mobaggro2, and mobaggro3.\n\n");
 
     return;
   }

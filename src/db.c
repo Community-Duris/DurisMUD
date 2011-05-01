@@ -1913,8 +1913,8 @@ P_char read_mobile(int nr, int type)
 {
   P_char   mob = NULL;
   char     Gbuf1[MAX_STRING_LENGTH], buf[MAX_INPUT_LENGTH], letter = 0;
-  int      foo, bar, i, j;
-  long     tmp, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8;
+  int      foo, bar, i, j, tmpd1, tmpd2, tmpd3;
+  long     tmp, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9;
   static int idnum = 0;
 
   i = nr;
@@ -2032,6 +2032,21 @@ P_char read_mobile(int nr, int type)
 
   fgets(buf, sizeof(buf) - 1, mob_f);
   if (sscanf
+      (buf, " %lu %lu %lu %1u %lu %lu %lu %lu %lu %c \n", &tmp1, &tmp7, &tmp8, &tmp9,
+       &tmp2, &tmp3, &tmp4, &tmp5, &tmp6, &letter) == 10)
+  {
+    mob->specials.act = tmp1;
+    mob->only.npc->aggro_flags = tmp7;
+    mob->only.npc->aggro2_flags = tmp8;
+    mob->only.npc->aggro3_flags = tmp9;
+    mob->specials.affected_by = tmp2;
+    mob->specials.affected_by2 = tmp3;
+    mob->specials.affected_by3 = tmp4;
+    mob->specials.affected_by4 = tmp5;
+    mob->specials.affected_by5 = 0;
+    mob->specials.alignment = tmp6;
+  }
+  else if (sscanf
       (buf, " %lu %lu %lu %lu %lu %lu %lu %lu %c \n", &tmp1, &tmp7, &tmp8,
        &tmp2, &tmp3, &tmp4, &tmp5, &tmp6, &letter) == 9)
   {
@@ -2085,26 +2100,39 @@ P_char read_mobile(int nr, int type)
 
   SET_BIT(mob->specials.act, ACT_ISNPC);
 
-  if (letter == 'S')
+  fgets(buf, sizeof(buf) - 1, mob_f);
+  if (sscanf
+      (buf, "%s %i %1u %1i %i\n", Gbuf1, &tmpd1, &tmp, &tmpd2, &tmpd3) == 5)
   {
-    fscanf(mob_f, " %s ", Gbuf1);
     mob->player.race = 0;
 
     /* defaults to RACE_NONE */
     for (i = 0; (i <= LAST_RACE) && !mob->player.race; i++)
       if (!str_cmp(race_names_table[i].code, Gbuf1))
         mob->player.race = i;
-
-    fscanf(mob_f, " %ld ", &tmp);
-    GET_HOME(mob) = tmp;
-
-    fscanf(mob_f, " %lu ", &tmp);
-//    GET_CLASS(mob) = tmp;
+    
+    GET_HOME(mob) = tmpd1;
     mob->player.m_class = tmp;
+    mob->player.spec = tmpd2;
+    mob->player.size = tmpd3;
+  }
+  else
+  {
+    sscanf(buf, "%s %i %1u %i\n", Gbuf1, &tmpd1, &tmp, &tmpd2);
+    mob->player.race = 0;
 
-    fscanf(mob_f, " %ld \n ", &tmp);
-    mob->player.size = tmp;
+    /* defaults to RACE_NONE */
+    for (i = 0; (i <= LAST_RACE) && !mob->player.race; i++)
+      if (!str_cmp(race_names_table[i].code, Gbuf1))
+        mob->player.race = i;
+    
+    GET_HOME(mob) = tmpd1;
+    mob->player.m_class = tmp;
+    mob->player.size = tmpd2;
+  }
 
+  if (letter == 'S')
+  {
     /* The new easy monsters */
     fscanf(mob_f, " %ld ", &tmp);
 //    GET_LEVEL(mob) = tmp;

@@ -1957,7 +1957,40 @@ bool aggressive_to_race(P_char ch, P_char target)
     if (IS_AGGRO2FLAG(ch, AGGR2_PDKNIGHT) && (GET_RACE1(target) == RACE_PDKNIGHT))
       return TRUE;
 
-    if (IS_AGGRO2FLAG(ch, AGGR2_PSBEAST) && (GET_RACE1(target) == RACE_PSBEAST))
+    if (IS_AGGRO2FLAG(ch, AGGR2_SHADE) && (GET_RACE1(target) == RACE_SHADE))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_REVENANT) && (GET_RACE1(target) == RACE_REVENANT))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_GITHZERAI) && (GET_RACE1(target) == RACE_GITHZERAI))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_OROG) && (GET_RACE1(target) == RACE_OROG))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_DRIDER) && (GET_RACE1(target) == RACE_DRIDER))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_KOBOLD) && (GET_RACE1(target) == RACE_KOBOLD))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_KUOTOA) && (GET_RACE1(target) == RACE_KUOTOA))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_WOODELF) && (GET_RACE1(target) == RACE_WOODELF))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_FIRBOLG) && (GET_RACE1(target) == RACE_FIRBOLG))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_AGATHINON) && (GET_RACE1(target) == RACE_AGATHINON))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_ELADRIN) && (GET_RACE1(target) == RACE_ELADRIN))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_PILLITHID) && (GET_RACE1(target) == RACE_PILLITHID))
       return TRUE;
 
     return FALSE;
@@ -2005,7 +2038,7 @@ bool aggressive_to_class(P_char ch, P_char target)
     if (IS_AGGRO2FLAG(ch, AGGR2_ROGUE) && GET_CLASS1(target, CLASS_ROGUE))
       return TRUE;
 
-    if(IS_AGGRO2FLAG(ch, AGGR2_ASSASSIN) && GET_SPEC(target, CLASS_ROGUE, SPEC_ASSASSIN))
+    if (IS_AGGRO2FLAG(ch, AGGR2_ASSASSIN) && GET_SPEC(target, CLASS_ROGUE, SPEC_ASSASSIN))
       return TRUE;
     
     if (IS_AGGRO2FLAG(ch, AGGR2_MERCENARY) && GET_CLASS1(target, CLASS_MERCENARY))
@@ -2021,6 +2054,30 @@ bool aggressive_to_class(P_char ch, P_char target)
       return TRUE;
 
     if (IS_AGGRO2FLAG(ch, AGGR2_MINDFLAYER) && GET_CLASS1(target, CLASS_MINDFLAYER))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR2_THEURGIST) && GET_CLASS1(target, CLASS_THEURGIST))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_ALCHEMIST) && GET_CLASS1(target, CLASS_ALCHEMIST))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_BERSERKER) && GET_CLASS1(target, CLASS_BERSERKER))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_REAVER) && GET_CLASS1(target, CLASS_REAVER))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_ILLUSIONIST) && GET_CLASS1(target, CLASS_ILLUSIONIST))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_ETHERMANCER) && GET_CLASS1(target, CLASS_ETHERMANCER))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_DREADLORD) && GET_CLASS1(target, CLASS_DREADLORD))
+      return TRUE;
+
+    if (IS_AGGRO2FLAG(ch, AGGR3_AVENGER) && GET_CLASS1(target, CLASS_AVENGER))
       return TRUE;
 
     return FALSE;
