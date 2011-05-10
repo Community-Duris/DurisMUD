@@ -17012,7 +17012,6 @@ void spell_immolate(int level, P_char ch, char *arg, int type, P_char victim,
     if(IS_ALIVE(victim) &&
       (spell_damage(ch, victim, (int) GET_LEVEL(ch) * 4 + number(4, 20), SPLDAM_FIRE, SPLDAM_NODEFLECT, NULL) == DAM_NONEDEAD));
     {
-      debug("adding event");
       if(ch &&
         IS_ALIVE(victim)) // Adding another check.
       {

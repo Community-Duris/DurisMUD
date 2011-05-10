@@ -31,6 +31,7 @@
 #include "defines.h"
 #include "nexus_stones.h"
 #include "boon.h"
+#include "ctf.h"
 
 /*
  * external variables
@@ -1468,7 +1469,17 @@ void point_update(void)
 
     if (i->specials.timer > 3)
       if (!IS_SET(i->specials.act, PLR_AFK))
+      {
         SET_BIT(i->specials.act, PLR_AFK);
+#if defined (CTF_MUD) && (CTF_MUD == 1)
+	if (affected_by_spell(i, TAG_CTF))
+	{
+	  send_to_char("You're idling has caused you to forget about the flag.\r\n", i);
+	  while (affected_by_spell(i, TAG_CTF))
+	    drop_ctf_flag(i);
+	}
+#endif
+      }
 
     if ((i->specials.timer > 15) &&
         ((GET_LEVEL(i) <= 56) || ((!i->desc) && (GET_LEVEL(i) > 58))))

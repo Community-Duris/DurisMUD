@@ -17,6 +17,7 @@
 #include "transport.h"
 #include "reavers.h"
 #include "assocs.h"
+#include "ctf.h"
 
 extern P_char character_list;
 extern P_desc descriptor_list;
@@ -334,7 +335,13 @@ bool flying_transport_cmd_give(P_char ch, P_char victim, char *arg)
 
   TRANSPORT_ROUTE(victim) = ticket->value[7];
   TRANSPORT_STEP(victim) = 0;
-  
+
+#if defined(CTF_MUD) && (CTF_MUD == 1)
+  send_to_char("Oops, you can't take that with you!\r\n", victim);
+  while (affected_by_spell(victim, TAG_CTF))
+    drop_ctf_flag(ch);
+#endif
+
   act("You climb up and ride $n.", FALSE, victim, 0, ch, TO_VICT);
   act("$N climbs up and rides $n.", FALSE, victim, 0, ch, TO_NOTVICT);
   link_char(ch, victim, LNK_RIDING);

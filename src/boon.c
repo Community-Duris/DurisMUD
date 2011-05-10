@@ -47,6 +47,7 @@ using namespace std;
 #include "nexus_stones.h"
 #include "buildings.h"
 #include "epic.h"
+#include "ctf.h"
 
 extern P_desc descriptor_list;
 extern P_room world;
@@ -62,6 +63,7 @@ extern const flagDef affected3_bits[];
 extern const flagDef affected4_bits[];
 extern const flagDef affected5_bits[];
 extern int new_exp_table[];
+extern struct ctfData ctfdata[];
 
 struct boon_types_struct boon_types[] = {
   {"none",	"No bonus exists"}, 
@@ -92,6 +94,8 @@ struct boon_options_struct boon_options[] = {
   {"nexus",	"when you capture the %s&n nexus.",	0},
   {"cargo",	"when you sell %d cargo.",		0},
   {"auction",	"when you auction %d equipment.",	0},
+  {"ctf",	"when you capture the CTF flag # %d.",	0},
+  {"ctfb",	"when you capture the CTF flag # %d.",	0},
   "\0"
 };
 
@@ -110,6 +114,8 @@ struct boon_data_struct boon_data[] = {
   {BTYPE_EXP,	BOPT_LEVEL,	0},
   {BTYPE_EXP,	BOPT_OP,	0},
   {BTYPE_EXP,	BOPT_NEXUS,	0},
+  {BTYPE_EXP,	BOPT_CTF,	0},
+  {BTYPE_EXP,	BOPT_CTFB,	0},
   {BTYPE_EPIC,	BOPT_ZONE,	0},
   {BTYPE_EPIC,	BOPT_MOB,	0},		// 11
   {BTYPE_EPIC,	BOPT_RACE,	GREATER_G},
@@ -118,6 +124,8 @@ struct boon_data_struct boon_data[] = {
   {BTYPE_EPIC,	BOPT_LEVEL,	GREATER_G},
   {BTYPE_EPIC,  BOPT_OP,	0},		// 16
   {BTYPE_EPIC,	BOPT_NEXUS,	0},
+  {BTYPE_EPIC,	BOPT_CTF,	0},
+  {BTYPE_EPIC,	BOPT_CTFB,	0},
   {BTYPE_CASH,	BOPT_ZONE,	0},
   {BTYPE_CASH,	BOPT_MOB,	0},
   {BTYPE_CASH,	BOPT_RACE,	GREATER_G},
@@ -126,6 +134,8 @@ struct boon_data_struct boon_data[] = {
   {BTYPE_CASH,	BOPT_LEVEL,	GREATER_G},
   {BTYPE_CASH,	BOPT_OP,	0},
   {BTYPE_CASH,	BOPT_NEXUS,	0},
+  {BTYPE_CASH,	BOPT_CTF,	0},
+  {BTYPE_CASH,	BOPT_CTFB,	0},
   {BTYPE_LEVEL,	BOPT_ZONE,	GREATER_G},	// 26
   {BTYPE_LEVEL, BOPT_MOB,	GREATER_G},
   {BTYPE_LEVEL, BOPT_RACE,	GREATER_G},
@@ -133,30 +143,40 @@ struct boon_data_struct boon_data[] = {
   {BTYPE_LEVEL, BOPT_FRAGS,	FORGER},
   {BTYPE_LEVEL,	BOPT_OP,	FORGER},	// 31
   {BTYPE_LEVEL,	BOPT_NEXUS,	FORGER},
+  {BTYPE_LEVEL,	BOPT_CTF,	FORGER},
+  {BTYPE_LEVEL,	BOPT_CTFB,	FORGER},
   {BTYPE_POWER,	BOPT_ZONE,	GREATER_G},
   {BTYPE_POWER, BOPT_MOB,	GREATER_G},
   {BTYPE_POWER,	BOPT_FRAG,	GREATER_G},
   {BTYPE_POWER, BOPT_FRAGS,	GREATER_G},	// 36
   {BTYPE_POWER,	BOPT_OP,	GREATER_G},
   {BTYPE_POWER,	BOPT_NEXUS,	GREATER_G},
+  {BTYPE_POWER,	BOPT_CTF,	GREATER_G},
+  {BTYPE_POWER,	BOPT_CTFB,	GREATER_G},
   {BTYPE_SPELL, BOPT_ZONE,	GREATER_G},
   {BTYPE_SPELL, BOPT_MOB,	GREATER_G},
   {BTYPE_SPELL, BOPT_FRAG,	GREATER_G},	// 41
   {BTYPE_SPELL, BOPT_FRAGS,	GREATER_G},
   {BTYPE_SPELL, BOPT_OP,	GREATER_G},
   {BTYPE_SPELL, BOPT_NEXUS,	GREATER_G},
+  {BTYPE_SPELL, BOPT_CTF,	GREATER_G},
+  {BTYPE_SPELL, BOPT_CTFB,	GREATER_G},
   {BTYPE_STAT,	BOPT_ZONE,	FORGER},
   {BTYPE_STAT,	BOPT_MOB,	FORGER},	// 46
   {BTYPE_STAT,	BOPT_FRAG,	FORGER},
   {BTYPE_STAT,	BOPT_FRAGS,	FORGER},
   {BTYPE_STAT,	BOPT_OP,	FORGER},
   {BTYPE_STAT,	BOPT_NEXUS,	FORGER},
+  {BTYPE_STAT,	BOPT_CTF,	FORGER},
+  {BTYPE_STAT,	BOPT_CTFB,	FORGER},
   {BTYPE_STATS,	BOPT_ZONE,	FORGER},	// 51
   {BTYPE_STATS, BOPT_MOB,	FORGER},
   {BTYPE_STATS,	BOPT_FRAG,	FORGER},
   {BTYPE_STATS,	BOPT_FRAGS,	FORGER},
   {BTYPE_STATS,	BOPT_OP,	FORGER},
   {BTYPE_STATS,	BOPT_NEXUS,	FORGER},	// 56
+  {BTYPE_STATS,	BOPT_CTF,	FORGER},
+  {BTYPE_STATS,	BOPT_CTFB,	FORGER},
   {BTYPE_POINT,	BOPT_ZONE,	GREATER_G},
   {BTYPE_POINT, BOPT_MOB,	GREATER_G},
   {BTYPE_POINT, BOPT_RACE,	GREATER_G},
@@ -165,6 +185,8 @@ struct boon_data_struct boon_data[] = {
   {BTYPE_POINT, BOPT_LEVEL,	GREATER_G},
   {BTYPE_POINT,	BOPT_OP,	GREATER_G},
   {BTYPE_POINT,	BOPT_NEXUS,	GREATER_G},
+  {BTYPE_POINT,	BOPT_CTF,	GREATER_G},
+  {BTYPE_POINT,	BOPT_CTFB,	GREATER_G},
   {0}
 };
 
@@ -350,7 +372,6 @@ bool get_boon_progress_data(int id, int pid, BoonProgress *bpg)
 
   if (!qry("SELECT id, boonid, pid, counter FROM boons_progress WHERE boonid = '%d' AND pid = '%d'", id, pid))
   {
-    debug("%d, %d", id, pid);
     debug("get_boon_progress_data(): cant read from db");
     return FALSE;
   }
@@ -447,6 +468,9 @@ int validate_boon_data(BoonData *bdata, int flag)
 	  return 1;
 	if (bdata->type && !check_boon_combo(bdata->type, bdata->option, FALSE))
 	  return 2;
+#if !defined(CTF_MUD) || (CTF_MUD != 1)
+	  return 3;
+#endif
         break;
       }
     case BARG_CRITERIA:
@@ -456,7 +480,6 @@ int validate_boon_data(BoonData *bdata, int flag)
 	  case BOPT_NONE:
 	  case BOPT_ZONE:
 	    {
-	      debug("crit begin %d", (int)bdata->criteria);
 	      i = 0;
 	      while (i <= top_of_zone_table)
 	      {
@@ -562,6 +585,42 @@ int validate_boon_data(BoonData *bdata, int flag)
 		return 1;
 	      break;
 	    }
+	  case BOPT_CTF:
+	    {
+	      int z = 0;
+	      if (bdata->criteria <= 0)
+		return 1;
+	      for (z = 1; ctfdata[z].id; z++)
+	      {
+		if (ctfdata[z].id == bdata->criteria)
+		  break;
+	      }
+	      if (!ctfdata[z].id)
+		return 2;
+	      if (!ctfdata[z].room)
+		return 2;
+	      else
+		bdata->criteria2 = ctfdata[z].room;
+	      break;
+	    }
+	  case BOPT_CTFB:
+	    {
+	      int z = 0;
+	      if (bdata->racewar != RACEWAR_NONE)
+		bdata->racewar = RACEWAR_NONE;
+	      if (!real_room0(bdata->criteria2))
+		return 1;
+	      for (z = 1; ctfdata[z].id; z++)
+	      {
+		if (ctfdata[z].type != CTF_BOON)
+		  continue;
+		if (!ctfdata[z].room)
+		  break;
+	      }
+	      if (!ctfdata[z].id)
+		return 2; // no boon ctf's left to pick
+	      break;
+	    }
 	  default:
 	    break;
 	}
@@ -584,6 +643,7 @@ int validate_boon_data(BoonData *bdata, int flag)
 	    {
 	      if (bdata->bonus < 1 || bdata->bonus > 56)
 		return 1;
+	      break;
 	    }
 	  case BTYPE_SPELL:
 	    {
@@ -797,7 +857,7 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
     }
 
     // Then we handle the normal number type stats
-    if (!bdata->bonus && (!*arg || !atof(arg)))
+    if (!bdata->bonus && (!isdigit(*arg)))
     {
       send_to_char_f(ch, "&+W'%s' is not a valid bonus.  Please enter a number.&n\r\n", arg);
       return FALSE;
@@ -805,17 +865,29 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
     else if (!bdata->bonus)
       bdata->bonus = atof(arg);
 
-    if (bdata->type == BTYPE_LEVEL && *arg)
+    if (bdata->type == BTYPE_LEVEL)
     {
       argument = setbit_parseArgument(argument, arg);
-      if (is_abbrev(arg, "yes"))
+      if (*arg && !strcmp(arg, "yes"))
+      {
+	debug("yes");
 	bdata->bonus2 = 1;
-      else if (is_abbrev(arg, "no"))
+      }
+      else if (*arg && !strcmp(arg, "no"))
+      {
+	debug("no");
 	bdata->bonus2 = 0;
-      else if (atoi(arg) == 0)
+      }
+      else if (*arg && atoi(arg) == 0)
+      {
+	debug("0");
 	bdata->bonus2 = 0;
-      else if (atoi(arg) == 1)
+      }
+      else if (*arg && atoi(arg) == 1)
+      {
+	debug("1");
 	bdata->bonus2 = 1;
+      }
       else
       {
 	send_to_char("Invalid secondary bonus, please indicate whether or not to bypass epics (1 or yes, 0 or no).\r\n", ch);
@@ -875,6 +947,8 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
     bdata->option = i;
     if ((retval = validate_boon_data(bdata, BARG_OPTION)))
     {
+      if (retval == 3)
+        send_to_char("CTF boon's are not available when CTF_MUD is not enabled.\r\n", ch);
       if (retval == 2)
       {
 	send_to_char("That is not a valid type and option combination.\r\n", ch);
@@ -908,7 +982,7 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
 	  if (is_abbrev(strip_ansi(zone_table[i].name).c_str(), arg) ||
 	      !strcmp(zone_table[i].filename, arg))
 	  {
-	    debug("strip: %s, zt: %s, arg: %s", strip_ansi(zone_table[i].name).c_str(), zone_table[i].filename, arg);
+	    //debug("strip: %s, zt: %s, arg: %s", strip_ansi(zone_table[i].name).c_str(), zone_table[i].filename, arg);
 	    break;
 	  }
 	}
@@ -918,7 +992,51 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
 	  return FALSE;
 	}
 	bdata->criteria = zone_table[i].number;
-	debug("bdata->criteria: %d, i: %d, num: %d", (int)bdata->criteria, i, zone_table[i].number);
+	//debug("bdata->criteria: %d, i: %d, num: %d", (int)bdata->criteria, i, zone_table[i].number);
+      }
+    }
+
+    if (bdata->option == BOPT_CTF)
+    {
+      if (*arg)
+      {
+	if (!isdigit(*arg))
+	{
+	  if (!strcmp(arg, "good"))
+	    bdata->criteria = CTF_FLAG_GOOD;
+	  else if (!strcmp(arg, "evil"))
+	    bdata->criteria = CTF_FLAG_EVIL;
+	  else
+	  {
+	    send_to_char("Please enter good, evil, or the ctf flag ID #.\r\n", ch);
+	    return FALSE;
+	  }
+	}
+	else
+	{
+	  bdata->criteria = atof(arg);
+	}
+      }
+      else
+      {
+	send_to_char("Please enter good, evil, or the ctf flag ID #.\r\n", ch);
+	return FALSE;
+      }
+    }
+
+    if (bdata->option == BOPT_CTFB)
+    {
+      if (*arg && !isdigit(*arg))
+      {
+	send_to_char("Please enter the vnum of the room you wish this ctf flag to load.", ch);
+	return FALSE;
+      }
+      else
+	bdata->criteria2 = atof(arg);
+      if (bdata->racewar != RACEWAR_NONE)
+      {
+	send_to_char("CTF Flag Boons must be for all racewars, setting racewar to all.\r\n", ch);
+	bdata->racewar = RACEWAR_NONE;
       }
     }
 
@@ -1037,6 +1155,22 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
 	      send_to_char("&+WWhat's the point?&n\r\n", ch);
 	    break;
 	  }
+	case BOPT_CTF:
+	  {
+	    if (retval == 1)
+	      send_to_char("&+WPlease enter a valid CTF flag ID.\r\n", ch);
+	    if (retval == 2)
+	      send_to_char("&+WThat is not a valid CTF flag ID.\r\n", ch);
+	    break;
+	  }
+	case BOPT_CTFB:
+	  {
+	    if (retval == 1)
+	      send_to_char("&+WThat room vnum does not exist.\r\n", ch);
+	    if (retval == 2)
+	      send_to_char("&+WThere are no ctf boon flags available for use.\r\n", ch);
+	    break;
+	  }
 	default:
 	  {
 	    send_to_char("&+RA case was not handled by parse_boon_args().&n\r\n",ch);
@@ -1140,6 +1274,13 @@ void do_boon(P_char ch, char *argument, int cmd)
     // Let's check the arguments and sort them into BoonData
     if (!parse_boon_args(ch, &bdata, argument))
       return;
+
+    if (bdata.option == BOPT_CTFB)
+      if (!ctf_use_boon(&bdata))
+      {
+	send_to_char("Failed to create a CTF Boon Flag.\r\n", ch);
+	return;
+      }
 
     // Ok, we should have everything we need, time to create the boon
     if (create_boon(&bdata))
@@ -1337,7 +1478,6 @@ int boon_display(P_char ch, char *argument)
 	    sprintf(name + strlen(name), "OR author LIKE '%s' ", arg);
 	  else
 	    sprintf(name, "author LIKE '%s' ", arg);
-	  debug("LIKE: %s", name);
 	  break;
 	}
       case 't':
@@ -1734,6 +1874,12 @@ int boon_display(P_char ch, char *argument)
 	      continent_name(world[building->location()].continent));
 	  break;
 	}
+      case BOPT_CTF:
+      case BOPT_CTFB:
+	{
+	  sprintf(buffoption, boon_options[option].desc, (int)criteria);
+	  break;
+	}
       default:
 	{
 	  if (option >= MAX_BOPT)
@@ -1741,7 +1887,7 @@ int boon_display(P_char ch, char *argument)
 	    sprintf(buffoption, "Error, option is invalid.");
 	    break;
           }
-	  sprintf(bufftype, boon_options[option].desc);
+	  sprintf(buffoption, boon_options[option].desc);
 	  break;
 	}
     }
@@ -2065,17 +2211,18 @@ void boon_maintenance()
     get_boon_data(id[i], &bdata);
 
     // check durations and expire if necessesary
+    expire = FALSE;
     if ((bdata.duration != -1) &&
         (bdata.time + (bdata.duration*60)) < time(0))
     {
-      remove_boon(bdata.id);
       boon_notify(bdata.id, NULL, BN_EXPIRE);
+      remove_boon(bdata.id);
+      expire = 2;
     }
 
     // Check status of current boon criteria, ie is an epic zone complete, or goodie nexus already goodie, etc..
     //boon_notify(bdata.id, NULL, BN_VOID);
     // Check boon completability
-    expire = FALSE;
     switch (bdata.option)
     {
       case BOPT_ZONE:
@@ -2083,28 +2230,6 @@ void boon_maintenance()
 	  // is epic zone already complete?
 	  if (epic_zone_done_now(bdata.criteria))
 	    expire = TRUE;
-	  break;
-	}
-      case BOPT_LEVEL:
-	{
-	  // Only need to check if it's directed at a player, since this is a special case, handling expiration
-	  // in check_boon_completion().
-	    /*P_char pl;
-	    int lvl = 0;
-	    if (pl = find_player_by_pid(bdata.pid))
-	    {
-	      lvl = GET_LEVEL(pl);
-	    }
-	    else if (pl = get_player_from_name(get_player_name_from_pid(bdata.pid)))
-	    {
-	      lvl = GET_LEVEL(pl);
-	      free_char(pl);
-	    }
-	    if (GET_LEVEL(pl) >= (int)bdata.criteria)
-	      expire = TRUE;
-	  }
-	  if (bdata.pid && !bdata.criteria && !bdata.repeat)
-	      */ // Taking this out so we don't have to pull a players file every second.
 	  break;
 	}
       case BOPT_NEXUS:
@@ -2117,6 +2242,23 @@ void boon_maintenance()
 	    expire = TRUE;
 	  break;
 	}
+      case BOPT_CTFB:
+	{
+	  // If this is based on a boon type flag, and that flag has expired
+	  if (ctfdata[(int)bdata.criteria].type == CTF_BOON &&
+	      ctfdata[(int)bdata.criteria].room == 0)
+	  {
+	    expire = TRUE;
+	  }
+	  if (expire)
+	  {
+	    ctf_delete_flag((int)bdata.criteria);
+	    ctfdata[(int)bdata.criteria].room = 0;
+	  }
+	  break;
+	}
+      case BOPT_CTF:
+      case BOPT_LEVEL:
       case BOPT_CARGO:
       case BOPT_AUCTION:
       case BOPT_OP: // others of same racewar side can capture outpost
@@ -2129,12 +2271,13 @@ void boon_maintenance()
       default:
 	break;
     }
-    if (expire)
+    if (expire == TRUE)
     {
-      remove_boon(bdata.id);
       boon_notify(bdata.id, NULL, BN_VOID);
+      remove_boon(bdata.id);
     }
   }
+
 
   // Check state of random boons
   boon_random_maintenance();
@@ -2201,7 +2344,9 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
   //else if (option == BOPT_FRAGS) // No need for this, we check below in progress
   //else if (option == BOPT_GH) // not imped
   else if (option == BOPT_OP ||
-           option == BOPT_NEXUS)
+           option == BOPT_NEXUS ||
+	   option == BOPT_CTF ||
+	   option == BOPT_CTFB)
     sprintf(buff, " AND (criteria = '%d')", (int)data);
 
   // Perform the search
@@ -2527,6 +2672,22 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
       remove_boon(bdata.id);
       boon_notify(bdata.id, NULL, BN_VOID);
     }
+#if defined(CTF_MUD) && (CTF_MUD == 1)
+    // if its a boon ctf flag and not repeatable boon remove flag
+    if (bdata.option == BOPT_CTFB)
+    {
+      if (bdata.repeat)
+      {
+	obj_to_room(ctfdata[(int)bdata.criteria].obj, real_room0(ctfdata[(int)bdata.criteria].room));
+	send_to_room_f(real_room0(ctfdata[(int)bdata.criteria].room), "%s &n appears.\r\n", (ctfdata[(int)bdata.criteria].obj)->short_description);
+      }
+      else
+      {
+	ctf_delete_flag((int)bdata.criteria);
+	ctfdata[(int)bdata.criteria].room = 0;
+      }
+    }
+#endif
   }
   
   return;

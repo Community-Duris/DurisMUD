@@ -31,6 +31,7 @@
 #include "vnum.obj.h"
 #include "map.h"
 #include "handler.h"
+#include "ctf.h"
 
 /*
  *
@@ -2638,6 +2639,10 @@ void extract_char(P_char ch)
     logit(LOG_EXIT, "No name in extract_char");
     raise(SIGSEGV);
   }
+#if defined (CTF_MUD) && (CTF_MUD == 1)
+  while (affected_by_spell(ch, TAG_CTF))
+    drop_ctf_flag(ch);
+#endif
   if (IS_MORPH(ch))
   {                             /*
                                  * eek...

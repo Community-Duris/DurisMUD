@@ -41,6 +41,7 @@ using namespace std;
 #include "grapple.h"
 #include "nexus_stones.h"
 #include "ships.h"
+#include "ctf.h"
 
 /* * external variables */
 
@@ -1601,6 +1602,18 @@ void show_char_to_char(P_char i, P_char ch, int mode)
           }
         }
       }
+
+#if defined (CTF_MUD) && (CTF_MUD == 1)
+      if ((af = get_spell_from_char(i, TAG_CTF)) != NULL)
+      {
+	if (af->modifier == CTF_FLAG_GOOD)
+	  strcat(buffer, " &+W(&+YFlag&+W)&n");
+	else if (af->modifier == CTF_FLAG_EVIL)
+	  strcat(buffer, " &+W(&+rFlag&+W)&n");
+	else
+	  strcat(buffer, " &+W(&+LFlag&+W)&n");
+      }
+#endif
 
       create_in_room_status(ch, i, buffer);
 
@@ -5028,7 +5041,8 @@ void do_score(P_char ch, char *argument, int cmd)
     for (aff = ch->affected; aff; aff = aff->next)
       if(aff->type &&
          skills[aff->type].name &&
-         aff->type <= LAST_SKILL)
+	 (aff->type <= LAST_SKILL ||
+	  aff->type == TAG_CTF))
       {
         switch (aff->type)
         {

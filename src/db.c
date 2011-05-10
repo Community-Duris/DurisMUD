@@ -2506,6 +2506,10 @@ P_char read_mobile(int nr, int type)
 //    GET_LEVEL(mob) = tmp;
     mob->player.level = tmp;
 
+#if defined(CTF_MUD) && (CTF_MUD == 1)
+    mob->player.level = (int)(mob->player.level/2);
+#endif
+
     fscanf(mob_f, " %ld ", &tmp);
     mob->player.time.birth = time(0);
     mob->player.time.played = 0;
@@ -2773,6 +2777,7 @@ P_obj read_object(int nr, int type)
     skip_fread(obj_f);
     obj->action_description = obj_index[nr].desc3;
   }
+  obj->str_mask = 0;
 
   /* *** numeric data *** */
 
@@ -3884,6 +3889,8 @@ void free_obj(P_obj obj)
 
   if ((obj->str_mask & STRUNG_DESC3) && obj->action_description)
     str_free(obj->action_description);
+
+  obj->str_mask = 0;
 
   for (th = obj->ex_description; th; th = next_one)
   {

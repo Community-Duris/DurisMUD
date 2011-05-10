@@ -19,6 +19,7 @@
 #include "structs.h"
 #include "utils.h"
 #include "graph.h"
+#include "ctf.h"
 
 /*
    external variables
@@ -175,6 +176,11 @@ void do_mount(P_char ch, char *argument, int cmd)
     send_to_char("You cant ride and deal with what you are moving.\n", ch);
     return;
   }
+
+#if defined (CTF_MUD) && (CTF_MUD == 1)
+  while (affected_by_spell(ch, TAG_CTF))
+    drop_ctf_flag(ch);
+#endif
 
   GET_VITALITY(ch) -= movescost;
 

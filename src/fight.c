@@ -2262,12 +2262,6 @@ void die(P_char ch, P_char killer)
     death_cry(ch);
   }
   
-  if (!IS_PC_PET(ch))
-  {
-    check_boon_completion(killer, ch, 0, BOPT_MOB);
-    check_boon_completion(killer, ch, 0, BOPT_RACE);
-  }
-
   // dragon mobs now will drop a dragon scale
   if(GET_RACE(ch) == RACE_DRAGON)
   {
@@ -2328,6 +2322,12 @@ void die(P_char ch, P_char killer)
     //world quest hook
     if((IS_PC(killer) || IS_PC_PET(killer)) && killer->in_room >= 0)
     {
+      if (!IS_PC_PET(ch))
+      {
+	check_boon_completion(killer, ch, 0, BOPT_MOB);
+	check_boon_completion(killer, ch, 0, BOPT_RACE);
+      }
+
       quest_kill(killer , ch);
       if (killer->group)
       {
@@ -2335,6 +2335,12 @@ void die(P_char ch, P_char killer)
         {
           if(killer->group == tmp_ch->group && tmp_ch != killer && tmp_ch != ch)
           {
+	    if (!IS_PC_PET(ch))
+	    {
+	      check_boon_completion(tmp_ch, ch, 0, BOPT_MOB);
+	      check_boon_completion(tmp_ch, ch, 0, BOPT_RACE);
+	    }
+
             quest_kill(tmp_ch , ch);
           }
         }

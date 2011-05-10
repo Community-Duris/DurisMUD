@@ -52,6 +52,7 @@
 #include "guildhall.h"
 #include "outposts.h"
 #include "boon.h"
+#include "ctf.h"
 
 /* external variables */
 
@@ -384,10 +385,7 @@ void run_the_game(int port)
   fprintf(stderr, "-- Loading alliances\r\n");
   load_alliances();
   
-#if CTF_MODE
-  fprintf(stderr, "-- CTF MODE engaged\r\n");
-  init_CTF();
-#endif
+  init_ctf();
 
   loadHints();
   epic_initialization();

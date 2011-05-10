@@ -24,6 +24,7 @@
 #include "objmisc.h"
 #include "necromancy.h"
 #include "sql.h"
+#include "ctf.h"
 
 /*
  * external variables
@@ -1402,6 +1403,16 @@ void do_drop(P_char ch, char *argument, int cmd)
 
   argument = one_argument(argument, Gbuf1);
 
+#if defined (CTF_MUD) && (CTF_MUD == 1)
+  if (!is_number(Gbuf1) &&
+      *Gbuf1 && !strcmp(Gbuf1, "flag"))
+  {
+    // look for flag, if they have it, drop it, otherwise continue.
+    if (drop_ctf_flag(ch))
+      return;
+  }
+#endif
+
   if (is_number(Gbuf1))
   {
     if (strlen(Gbuf1) > 7)
@@ -1460,8 +1471,8 @@ void do_drop(P_char ch, char *argument, int cmd)
     else
       send_to_char("OK.\r\n", ch);
 
-if(IS_PC(ch))
-{
+  if(IS_PC(ch))
+  {
     if (((ctype == 3) && (amount > 999)) || ((ctype == 2) && (amount > 99)))
     {
       wizlog(MINLVLIMMORTAL, "%s drops %d %s in [%d]", J_NAME(ch), amount,

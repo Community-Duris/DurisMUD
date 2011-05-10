@@ -106,7 +106,9 @@ struct boon_options_struct {
 #define BOPT_NEXUS	9	// Nexus ID (sack Nexus)
 #define BOPT_CARGO	10	// Cargo Goal (Sell so much cargo in a set time period)
 #define BOPT_AUCTION    11	// Auction Goal (Auction so much eq in a set time period)
-#define MAX_BOPT	12	// Last + 1
+#define BOPT_CTF	12	// CTF flag ID (found in ctf.c ctfdata struct)
+#define BOPT_CTFB	13	// Create a temp ctf flag
+#define MAX_BOPT	14	// Last + 1
 
 // Arguments to BoonData struct for validate_boon_data()
 // Some of these might not be needed, can adjust after code is done

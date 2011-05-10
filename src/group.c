@@ -369,6 +369,10 @@ void do_group(P_char ch, char *argument, int cmd)
         maxsize = (int) get_property("groups.size.max.evil", 13);
       if (RACE_GOOD(ch))
         maxsize = (int) get_property("groups.size.max.good", 13);
+#if defined(CTF_MUD) && (CTF_MUD == 1)
+      maxsize = 5;
+#endif
+
       sprintf(Gbuf1, "Your group consists of (%2d/%d):\n", counter, maxsize);
       send_to_char(Gbuf1, ch);
 
@@ -998,6 +1002,13 @@ bool group_add_member(P_char leader, P_char member)
       group_size++;
     }
 
+#if defined(CTF_MUD) && (CTF_MUD == 1)
+    if (group_size >= 5)
+    {
+      send_to_char("Your group is too large!\n", leader);
+      return FALSE;
+    }
+#else
     if (RACE_EVIL(leader) && !IS_PC_PET(member)) {
       if (group_size >= (int) get_property("groups.size.max.evil", 13) ) {
         send_to_char("Your group is too large!\n", leader);
@@ -1010,6 +1021,7 @@ bool group_add_member(P_char leader, P_char member)
         return FALSE;
       }
     }
+#endif
   }
 
   if (!leader->group)

@@ -48,6 +48,7 @@
 #include "outposts.h"
 #include "buildings.h"
 #include "boon.h"
+#include "ctf.h"
 
 /*
  * external variables
@@ -1047,6 +1048,7 @@ const char *command[] = {
   "epicreset",
   "focus",
   "boon",
+  "ctf",
   "\n"                          /* MAX_CMD_LIST is now 1000 */
 };
 
@@ -2564,6 +2566,7 @@ void assign_command_pointers(void)
   CMD_Y(CMD_OFFENSIVE, STAT_RESTING + POS_PRONE, do_offensive, 0);
   CMD_Y(CMD_FOCUS, STAT_RESTING + POS_KNEELING, do_assimilate, 0);
   CMD_Y(CMD_BOON, STAT_SLEEPING + POS_PRONE, do_boon, 0);
+  CMD_Y(CMD_CTF, STAT_NORMAL + POS_STANDING, do_ctf, 0);
 
   /*
    * 'commands' which exist only to trigger specials

@@ -873,6 +873,10 @@ void epic_stone_level_char(P_obj obj, P_char ch)
     epics_for_level *= (int) get_property("exp.multiEpicMultiplier", 3);
   }
 
+#if defined(CTF_MUD) && (CTF_MUD == 1)
+  epics_for_level = (int)(epics_for_level/3);
+#endif
+
   if( GET_EXP(ch) >= new_exp_table[GET_LEVEL(ch)+1] &&
       ch->only.pc->epics >= epics_for_level )
   {
