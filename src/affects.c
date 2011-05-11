@@ -1490,7 +1490,7 @@ void all_affects(P_char ch, int mode)
     int num = af->modifier;
     GET_MAX_HIT(ch) += (num*15);
     GET_HIT(ch) = GET_MAX_HIT(ch) - missing_hps;
-    GET_MAX_VITALITY(ch) = GET_VITALITY(ch) += (num*20);
+    GET_MAX_VITALITY(ch) += (num*20);
     GET_VITALITY(ch) = GET_MAX_VITALITY(ch) - missing_vitality;
     ch->points.hitroll += num;
     ch->points.damroll += num;
