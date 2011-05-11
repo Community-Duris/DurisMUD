@@ -2140,7 +2140,7 @@ P_char read_mobile(int nr, int type)
     mob->player.level = tmp;
 #if defined(CTF_MUD) && (CTF_MUD == 1)
     if (!IS_SET(mob->specials.act, ACT_ELITE))
-      mob->player.level = (int)(mob->player.level/2);
+      mob->player.level = MAX(1, (int)(mob->player.level/2));
 
     if (IS_SET(mob->specials.act, ACT_ELITE))
       mob->player.level -= number(10, 20);
