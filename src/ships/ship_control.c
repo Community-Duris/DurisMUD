@@ -384,9 +384,17 @@ int carrying_flag(P_ship ship)
 {
   int i;
   P_char ch;
+  P_obj obj;
 
   for (i = 0; i < ship->room_count; i++)
   {
+    for (obj = world[real_room0(ship->room[i].roomnum)].contents; obj; obj = obj->next_content)
+    {
+      if (GET_OBJ_VNUM(obj) == 790 ||
+	  GET_OBJ_VNUM(obj) == 791 ||
+	  GET_OBJ_VNUM(obj) == 792)
+	return TRUE;
+    }
     for (ch = world[real_room0(ship->room[i].roomnum)].people; ch; ch = ch->next_in_room)
     {
       if (ctf_carrying_flag(ch))
