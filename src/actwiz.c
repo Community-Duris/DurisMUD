@@ -4790,31 +4790,17 @@ void roll_basic_abilities(P_char ch, int flag)
   ch->base_stats.Karma = ch->curr_stats.Karma = number(1, 100);
   ch->base_stats.Luck = ch->curr_stats.Luck = number(1, 100);
 #endif
-// if (GET_RACE(ch) == RACE_HUMAN) // Let's make everyone start at 85 base stats.
-// {
-/*ch->base_stats.Str = ch->curr_stats.Str = 85;
-  ch->base_stats.Dex = ch->curr_stats.Dex = 85;
-  ch->base_stats.Agi = ch->curr_stats.Agi = 85;
-  ch->base_stats.Con = ch->curr_stats.Con = 85;
-  ch->base_stats.Pow = ch->curr_stats.Pow = 85;
-  ch->base_stats.Int = ch->curr_stats.Int = 85;
-  ch->base_stats.Wis = ch->curr_stats.Wis = 85;
-  ch->base_stats.Cha = ch->curr_stats.Cha = 85;
-  ch->base_stats.Karma = ch->curr_stats.Karma = 85;
-  ch->base_stats.Luck = ch->curr_stats.Luck = 85;
-  }
-  else
-  {
-*/ch->base_stats.Str = ch->curr_stats.Str = 75;
-  ch->base_stats.Dex = ch->curr_stats.Dex = 75;
-  ch->base_stats.Agi = ch->curr_stats.Agi = 75;
-  ch->base_stats.Con = ch->curr_stats.Con = 75;
-  ch->base_stats.Pow = ch->curr_stats.Pow = 75;
-  ch->base_stats.Int = ch->curr_stats.Int = 75;
-  ch->base_stats.Wis = ch->curr_stats.Wis = 75;
-  ch->base_stats.Cha = ch->curr_stats.Cha = 75;
-  ch->base_stats.Karma = ch->curr_stats.Karma = 75;
-  ch->base_stats.Luck = ch->curr_stats.Luck = 75;
+  
+  ch->base_stats.Str = ch->curr_stats.Str = 30;
+  ch->base_stats.Dex = ch->curr_stats.Dex = 30;
+  ch->base_stats.Agi = ch->curr_stats.Agi = 30;
+  ch->base_stats.Con = ch->curr_stats.Con = 30;
+  ch->base_stats.Pow = ch->curr_stats.Pow = 30;
+  ch->base_stats.Int = ch->curr_stats.Int = 30;
+  ch->base_stats.Wis = ch->curr_stats.Wis = 30;
+  ch->base_stats.Cha = ch->curr_stats.Cha = 30;
+  ch->base_stats.Karma = ch->curr_stats.Karma = 50;
+  ch->base_stats.Luck = ch->curr_stats.Luck = 50;
 /*}
 
 int rolls[8];
@@ -4835,10 +4821,10 @@ int rolls[8];
   ch->base_stats.Int = ch->curr_stats.Int = rolls[5];
   ch->base_stats.Wis = ch->curr_stats.Wis = rolls[6];
   ch->base_stats.Cha = ch->curr_stats.Cha = rolls[7];
-
-  ch->base_stats.Karma = ch->curr_stats.Karma = 75;
-  ch->base_stats.Luck = ch->curr_stats.Luck = 70 + number(1, 6);
 */
+  ch->base_stats.Karma = ch->curr_stats.Karma = number(50, 100); //  These two rolls are invisible
+  ch->base_stats.Luck = ch->curr_stats.Luck = number(50, 100);   //  to players during creation on purpose - Jexni
+
 }
 
 void NewbySkillSet(P_char ch)

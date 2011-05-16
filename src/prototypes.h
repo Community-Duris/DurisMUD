@@ -1782,6 +1782,8 @@ void nanny(P_desc, char *);
 void newby_announce(P_desc);
 void print_recommended_action(P_desc);
 void select_alignment(P_desc, char *);
+void select_attrib(P_desc, char *);
+int allocation_total(P_char, int);
 void select_bonus(P_desc, char *);
 void select_class(P_desc, char *);
 void select_class_info(P_desc, char *);

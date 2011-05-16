@@ -1464,7 +1464,7 @@ struct txt_q {
 #define CON_ACCT_NEW_CHAR_NAME 80
 #define CON_HARDCORE     81
 #define CON_NEWBIE              82
-
+#define CON_STATMOD 83
 
 /* modes of confirmation- SAM 7-94 */
 #define CONFIRM_NONE    0

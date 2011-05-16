@@ -1,0 +1,16 @@
+Please select an attribute to modify, and an amount to modify it by.
+You are allowed a total of 300 points, but no stat can be above 80.
+                            Choose wisely.
+
+(s) Strength
+(d) Dexterity
+(a) Agility
+(c) Constitution
+(p) Power
+(i) Intelligence
+(w) Wisdom
+(h) Charisma
+
+(x) Done
+(z) Re-display stats
+

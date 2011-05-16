@@ -85,6 +85,7 @@ extern int new_exp_table[];
 #define PLR_FLAGS(ch)          ((ch)->specials.act)
 #define PLR_FLAGGED(ch, flag)  (IS_SET(PLR_FLAGS(ch), flag))
 #define PLR_TOG_CHK(ch, flag)  ((TOGGLE_BIT(PLR_FLAGS(ch), (flag))) & (flag))
+#define ALLOCATE_AMT 200
 
 void     email_player_info(char *, char *, struct descriptor_data *);
 extern int email_in_use(char *, char *);
@@ -3602,6 +3603,12 @@ void select_race(P_desc d, char *arg)
   case 'P':
     strcpy(Gbuf, "OROG");
     break;
+  case 'f':
+    GET_RACE(d->character) = RACE_HARPY;
+    break;
+  case 'F':
+    strcpy(Gbuf, "HARPY");
+    break;
 /*  case 'w':
     GET_RACE(d->character) = RACE_WOODELF;
     break;  
@@ -3740,11 +3747,157 @@ void select_race(P_desc d, char *arg)
   }
 }
 
+void select_attrib(P_desc d, char *arg)
+{
+  char buf[MAX_INPUT_LENGTH];
+  char buf1[MAX_INPUT_LENGTH];
+  char buf2[MAX_STRING_LENGTH] = "\0";  
 
+  int num, stat = 0, alloc, choice = 0, allocation = ALLOCATE_AMT;
+    
+  half_chop(arg, buf, buf1);
+  num = atoi(buf1);
+  
+  switch(LOWER(*buf))
+  {
+    case 's':
+      stat = 1;
+    break;
+    case 'd':
+      stat = 2;
+    break;
+    case 'a':
+      stat = 3;
+    break;
+    case 'c':
+      stat = 4;
+    break;
+    case 'p':
+      stat = 5;
+    break;
+    case 'i':
+      stat = 6;
+    break;
+    case 'w':
+      stat = 7;
+    break;
+    case 'h':
+      stat = 8;
+    break;
+    case 'x':
+      STATE(d) = CON_KEEPCHAR;
+      stat = -1;
+    break;
+    case 'z':
+      display_stats(d);
+      SEND_TO_Q(attribmod, d);
+    break;
+    default:
+      stat = -2;
+  }
 
+  if(stat > 0)
+  {
+    alloc = allocation_total(d->character, -1);
+    if(alloc < 0 && num > 0)
+    {
+      SEND_TO_Q("\r\nYou don't have that many points to spend...\r\n", d);
+      SEND_TO_Q("Please choose a statistic to change, and an amount to change it by: \r\n", d);
+      return;
+    }
+    else if(allocation_total(d->character, stat) + num > 85)
+    {
+      SEND_TO_Q("\r\nYou can't allocate any more points to that stat...\r\n", d);
+      SEND_TO_Q("Please choose a statistic to change, and an amount to change it by: \r\n", d);
+      return;
+    }
+    else
+    {
+      if(alloc > -1)
+        sprintf(buf2 + strlen(buf2), "You have %d points remaining to allocate.\r\n", alloc);
+      add_stat_bonus(d->character, stat, num);
+      SEND_TO_Q(buf2, d);
+    }
+  }
+  display_stats(d);
+  SEND_TO_Q(attribmod, d);
+
+  if (stat == -2)
+  {
+    SEND_TO_Q("Please choose a statistic to change, and an amount to change it by: \r\n", d);
+    SEND_TO_Q("Ex: a -5, s 7 etc.  (z) to refresh...\r\n", d);
+    return;
+  }
+  
+  if(STATE(d) == CON_KEEPCHAR)
+  {
+    display_characteristics(d);
+    display_stats(d);
+    SEND_TO_Q(keepchar, d);
+    return;
+  }
+}
+ 
+int allocation_total(P_char ch, int which)
+{
+  int total;
+
+  if(which == -1)
+  {
+    total += ch->base_stats.Str;
+    total += ch->base_stats.Dex;
+    total += ch->base_stats.Agi;
+    total += ch->base_stats.Con;
+    total += ch->base_stats.Pow;
+    total += ch->base_stats.Int;
+    total += ch->base_stats.Wis;
+    total += ch->base_stats.Cha;
+
+    if(total > 540)
+    {
+      return 0;
+    }
+    else
+    {
+      return 540 - total;
+    }
+  }
+  else
+  {
+    switch(which)
+    {
+      case 1:
+      return ch->base_stats.Str;
+      break;
+      case 2:
+      return ch->base_stats.Dex;
+      break;
+      case 3:
+      return ch->base_stats.Agi;
+      break;
+      case 4:
+      return ch->base_stats.Con;
+      break;
+      case 5:
+      return ch->base_stats.Pow;
+      break;
+      case 6:
+      return ch->base_stats.Int;
+      break;
+      case 7:
+      return ch->base_stats.Wis;
+      break;
+      case 8:
+      return ch->base_stats.Cha;
+      break;
+      default:
+      return 0;
+    }
+  }
+  return 0;
+}
+  
 /* Krov: select_class_info eaten up by select_class */
-
-
 void select_reroll(P_desc d, char *arg)
 {
   /* skip whitespaces */
@@ -3755,7 +3908,8 @@ void select_reroll(P_desc d, char *arg)
   case 'N':
   case 'n':
     SEND_TO_Q("\r\n\r\nAccepting these stats.\r\n\r\n", d);
-    STATE(d) = CON_BONUS1;
+   // STATE(d) = CON_BONUS1;  changed for wipe 2011
+    STATE(d) = CON_STATMOD;
     break;
   default:
     SEND_TO_Q("\r\n\r\nRerolling this character.\r\n\r\n", d);
@@ -3767,11 +3921,13 @@ void select_reroll(P_desc d, char *arg)
     break;
   }
 
-  if (STATE(d) == CON_BONUS1)
+  if (STATE(d) == CON_STATMOD) //STATE(d) == CON_BONUS1) wipe 2011
   {
     display_stats(d);
-    SEND_TO_Q(bonus, d);
-    SEND_TO_Q("\r\n\r\nEnter stat for first bonus:  ", d);
+   //    SEND_TO_Q(bonus, d); wipe 2011
+    SEND_TO_Q(attribmod, d);
+   //    SEND_TO_Q("\r\n\r\nEnter stat for first bonus:  ", d);  wipe 2011
+    SEND_TO_Q("\r\n\r\nPlease select an attribute to modify, and by how much:  ", d);
   }
 }
 
@@ -4022,7 +4178,8 @@ void select_class(P_desc d, char *arg)
   GET_ORIG_BIRTHPLACE(d->character) = home;
 
   /* Krov: didn't get hometown choice either, roll the stats */
-  STATE(d) = CON_BONUS1;
+//  STATE(d) = CON_BONUS1;  changed for wipe 2011
+  STATE(d) = CON_STATMOD;
   roll_basic_abilities(d->character, 0);
   display_characteristics(d);
 
@@ -4239,35 +4396,22 @@ void select_keepchar(P_desc d, char *arg)
 
 void display_stats(P_desc d)
 {
-  char     Gbuf1[MAX_STRING_LENGTH];
+  char buf1[MAX_STRING_LENGTH] = "\0";
 
-  strcpy(Gbuf1, "\r\nYour basic stats:\r\n");
+  strcpy(buf1, "\r\nYour basic stats:\r\n");
 
-  sprintf(Gbuf1 + strlen(Gbuf1),
-          "Strength:     %15s      Power:        %s\r\n",
-          stat_to_string2((int) d->character->base_stats.Str),
-          stat_to_string2((int) d->character->base_stats.Pow));
-
-  sprintf(Gbuf1 + strlen(Gbuf1),
-          "Dexterity:    %15s      Intelligence: %s\r\n",
-          stat_to_string2((int) d->character->base_stats.Dex),
-          stat_to_string2((int) d->character->base_stats.Int));
-
-  sprintf(Gbuf1 + strlen(Gbuf1),
-          "Agility:      %15s      Wisdom:       %s\r\n",
-          stat_to_string2((int) d->character->base_stats.Agi),
-          stat_to_string2((int) d->character->base_stats.Wis));
-
-  sprintf(Gbuf1 + strlen(Gbuf1),
-          "Constitution: %15s      Charisma:     %s\r\n\r\n",
-          stat_to_string2((int) d->character->base_stats.Con),
-          stat_to_string2((int) d->character->base_stats.Cha));
-
-  sprintf(Gbuf1 + strlen(Gbuf1), "Luck: %15s      Unused:     %s\r\n\r\n",
+  sprintf(buf1 + strlen(buf1),
+          "Strength:     %5d  Power:        %d\r\n", d->character->base_stats.Str, d->character->base_stats.Pow);
+  sprintf(buf1 + strlen(buf1),
+          "Dexterity:    %5d  Intelligence: %d\r\n", d->character->base_stats.Dex, d->character->base_stats.Int);
+  sprintf(buf1 + strlen(buf1),
+          "Agility:      %5d  Wisdom:       %d\r\n", d->character->base_stats.Agi, d->character->base_stats.Wis);
+  sprintf(buf1 + strlen(buf1),
+          "Constitution: %5d  Charisma:     %d\r\n\r\n", d->character->base_stats.Con, d->character->base_stats.Cha);
+/*  sprintf(buf1 + strlen(buf1), "Luck: %15s      Unused:     %s\r\n\r\n",
           stat_to_string2((int) d->character->base_stats.Luck),
-          stat_to_string2((int) d->character->base_stats.Karma));
-
-  SEND_TO_Q(Gbuf1, d);
+          stat_to_string2((int) d->character->base_stats.Karma)); */
+  SEND_TO_Q(buf1, d);
 }
 
 
@@ -4353,34 +4497,36 @@ void add_stat_bonus(P_char ch, int which, int what)
 
   tmp = what;
 
+  // changing these bounds from 100 to 85, as 85 will be our max stat after
+  // attribute allocation for wipe 2011 - Jexni 5/14/11
   switch (which)
   {
   case 1:
-    ch->base_stats.Str = BOUNDED(1, ch->base_stats.Str + tmp, 100);
+    ch->base_stats.Str = BOUNDED(30, ch->base_stats.Str + tmp, 80);
     break;
   case 2:
-    ch->base_stats.Dex = BOUNDED(1, ch->base_stats.Dex + tmp, 100);
+    ch->base_stats.Dex = BOUNDED(30, ch->base_stats.Dex + tmp, 80);
     break;
   case 3:
-    ch->base_stats.Agi = BOUNDED(1, ch->base_stats.Agi + tmp, 100);
+    ch->base_stats.Agi = BOUNDED(30, ch->base_stats.Agi + tmp, 80);
     break;
   case 4:
-    ch->base_stats.Con = BOUNDED(1, ch->base_stats.Con + tmp, 100);
+    ch->base_stats.Con = BOUNDED(30, ch->base_stats.Con + tmp, 80);
     break;
   case 5:
-    ch->base_stats.Pow = BOUNDED(1, ch->base_stats.Pow + tmp, 100);
+    ch->base_stats.Pow = BOUNDED(30, ch->base_stats.Pow + tmp, 80);
     break;
   case 6:
-    ch->base_stats.Int = BOUNDED(1, ch->base_stats.Int + tmp, 100);
+    ch->base_stats.Int = BOUNDED(30, ch->base_stats.Int + tmp, 80);
     break;
   case 7:
-    ch->base_stats.Wis = BOUNDED(1, ch->base_stats.Wis + tmp, 100);
+    ch->base_stats.Wis = BOUNDED(30, ch->base_stats.Wis + tmp, 80);
     break;
   case 8:
-    ch->base_stats.Cha = BOUNDED(1, ch->base_stats.Cha + tmp, 100);
+    ch->base_stats.Cha = BOUNDED(30, ch->base_stats.Cha + tmp, 80);
     break;
   case 9:
-    ch->base_stats.Luck = BOUNDED(1, ch->base_stats.Luck + tmp, 100);
+    ch->base_stats.Luck = BOUNDED(30, ch->base_stats.Luck + tmp, 80);
     break;
   }
   ch->curr_stats = ch->base_stats;
@@ -5230,33 +5376,38 @@ void nanny(P_desc d, char *arg)
     select_reroll(d, arg);
     break;
 
-    /* Stat bonus 1 for new player */
-  case CON_BONUS1:
-    /* record how many bonuses the char gets, 1d3 */
-    select_bonus(d, arg);
+//    /* Stat bonus 1 for new player */
+//  case CON_BONUS1:
+//    /* record how many bonuses the char gets, 1d3 */
+//    select_bonus(d, arg);
+//    break;
+
+//    /* Stat bonus 2 for new player */
+//  case CON_BONUS2:
+//    select_bonus(d, arg);
+//    break;
+
+//    /* Stat bonus 3 for new player */
+//  case CON_BONUS3:
+//    select_bonus(d, arg);
+//    break;
+
+//    /* Stat bonus 4 for new player */
+//  case CON_BONUS4:
+//    select_bonus(d, arg);
+//    break;
+
+//    /* Stat bonus 5 for new player */
+//  case CON_BONUS5:
+//    select_bonus(d, arg);
+//    break;
+
+   /* Attribute modification for wipe 2011 */
+  case CON_STATMOD:
+    select_attrib(d, arg);
     break;
 
-    /* Stat bonus 2 for new player */
-  case CON_BONUS2:
-    select_bonus(d, arg);
-    break;
-
-    /* Stat bonus 3 for new player */
-  case CON_BONUS3:
-    select_bonus(d, arg);
-    break;
-
-    /* Stat bonus 4 for new player */
-  case CON_BONUS4:
-    select_bonus(d, arg);
-    break;
-
-    /* Stat bonus 5 for new player */
-  case CON_BONUS5:
-    select_bonus(d, arg);
-    break;
-
-    /* Select alignment for new player, when appropriate */
+   /* Select alignment for new player, when appropriate */
   case CON_ALIGN:
     select_alignment(d, arg);
     break;

@@ -82,9 +82,10 @@ using namespace std;
 #define GENERALTABLE_FILE "lib/creation/generaltable"   /* for race/class comparisons */
 #define CLASSTABLE_FILE   "lib/creation/classtable"     /* for class table selection */
 #define RACETABLE_FILE    "lib/creation/racetable"      /* for race table selection */
+#define ATTRIBMOD_FILE    "lib/creation/attribmod"      /* attrib mod message for wipe 2011 */
 #define NAMECHART_FILE    "lib/creation/namechart"      /* Name selection page */
-#define REROLL_FILE       "lib/creation/reroll" /* for reroll explanation */
-#define BONUS_FILE        "lib/creation/bonus"  /* for bonus explanation */
+#define REROLL_FILE       "lib/creation/reroll"         /* for reroll explanation */
+#define BONUS_FILE        "lib/creation/bonus"          /* for bonus explanation */
 #define KEEPCHAR_FILE     "lib/creation/keepchar"       /* for accepting char explanation */
 #define HOMETOWN_FILE     "lib/creation/hometown"
 #define ALIGNMENT_FILE    "lib/creation/alignment"
@@ -140,6 +141,7 @@ extern char *generaltable;
 extern char *racewars;
 extern char *classtable;
 extern char *racetable;
+extern char *attribmod;
 extern char *namechart;
 extern char *reroll;
 extern char *bonus;

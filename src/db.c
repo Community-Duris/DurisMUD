@@ -114,6 +114,7 @@ char    *generaltable = NULL;   /* * race/class comparison charts * */
 char    *racewars = NULL;       /* * good/evil race explanation * */
 char    *classtable = NULL;     /* * class selection tables * */
 char    *racetable = NULL;      /* * race selection tables * */
+char    *attribmod = NULL;      /* * attribute modification for wipe 2011 * */
 char    *namechart = NULL;
 char    *reroll = NULL;
 char    *bonus = NULL;
@@ -456,6 +457,8 @@ void boot_db(int mini_mode)
   generaltable = file_to_string(GENERALTABLE_FILE);
   logit(LOG_STATUS, "Reading Race table.");
   racetable = file_to_string(RACETABLE_FILE);
+  logit(LOG_STATUS, "Reading Attribute Mod Message(wipe 2011)");
+  attribmod = file_to_string(ATTRIBMOD_FILE);
   logit(LOG_STATUS, "Reading Class table.");
   classtable = file_to_string(CLASSTABLE_FILE);
   logit(LOG_STATUS, "Reading Racewars explanation.");
