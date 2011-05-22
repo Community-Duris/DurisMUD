@@ -28,6 +28,7 @@ using namespace std;
 #include "tradeskill.h"
 #include "ships/ships.h"
 #include "guildhall.h"
+#include "ctf.h"
 
 struct continent
 {
@@ -103,6 +104,7 @@ void     add_quest_data(char *map);
 #define CONTAINS_WITCH       20
 #define CONTAINS_GUILDHALL   21
 #define CONTAINS_CARGO       22
+#define CONTAINS_CTF_FLAG    23
 
 #define HIDDEN_BY_FOREST(from_room,to_room) ( world[to_room].sector_type == SECT_FOREST && world[from_room].sector_type != SECT_FOREST )
 
@@ -275,7 +277,19 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
   {
     return 0;
   }
-  
+
+#if defined(CTF_MUD) && (CTF_MUD == 1)
+  if (world[room].people)
+  {
+    for (who = world[room].people; who; who = who_next)
+    {
+      who_next = who->next_in_room;
+      if (ctf_carrying_flag(who) == CTF_PRIMARY)
+	return CONTAINS_CTF_FLAG;
+    }
+  }
+#endif
+
   if(ch->specials.z_cord < 0)
   {
     return 0;
@@ -724,6 +738,12 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless)
       {                         /* underwater */
         strcat(buf, "&+L ");
       }
+#if defined(CTF_MUD) && (CTF_MUD == 1)
+      else if (whats_in == CONTAINS_CTF_FLAG)
+      {
+	strcat(buf, "&=LYF");
+      }
+#endif
       else if ((prev != what) || (x == -n))
       {
         int shift = 0;

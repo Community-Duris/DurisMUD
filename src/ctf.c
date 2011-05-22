@@ -143,14 +143,47 @@ int ctf_flag_proc(P_obj flag, P_char ch, int cmd, char *argument)
   char buff[MAX_STRING_LENGTH], buff2[MAX_STRING_LENGTH];
   P_obj tobj;
   int i;
+  int reset = (int)get_property("ctf.reset", 5);
   int block_cmd = 0;
 
-  if (cmd == CMD_SET_PERIODIC || cmd == CMD_PERIODIC)
+  if (!flag)
     return FALSE;
 
-  if (!flag || !ch)
-    return FALSE;
+  if (cmd == CMD_SET_PERIODIC)
+    return TRUE;
 
+  // Error checking
+  for (i = 1; ctfdata[i].id; i++)
+  {
+    if (ctfdata[i].obj == flag)
+      break;
+  }
+  if (!ctfdata[i].id)
+  {
+    return FALSE;
+  }
+  
+  if (cmd == CMD_PERIODIC && OBJ_ROOM(flag) && !OBJ_IN_ROOM(ctfdata[i].obj, real_room0(ctfdata[i].room)))
+  { 
+    if (!flag->timer[0])
+      flag->timer[0] = time(NULL);
+    else
+    {
+      if ((flag->timer[0] + (reset * 60)) <= time(NULL))
+      {
+	// Not needed because reload makes us a new flag
+	flag->timer[0] = 0; // But just in case...
+	sprintf(buff, "%s &+Whas been left alone for too long and has reset!\r\n", flag->short_description);
+	CAP(buff);
+	ctf_notify(buff, 0);
+	ctf_reload_flag(i);
+      }
+    }
+  }
+
+  if (!ch)
+    return FALSE;
+  
   if (IS_NPC(ch) || IS_TRUSTED(ch))
     return FALSE;
  
@@ -177,18 +210,6 @@ int ctf_flag_proc(P_obj flag, P_char ch, int cmd, char *argument)
     else
       return FALSE;
 
-    // Error checking
-    for (i = 1; ctfdata[i].id; i++)
-    {
-      if (ctfdata[i].obj == flag)
-	break;
-    }
-    if (!ctfdata[i].id)
-    {
-      debug("Should have found a flag, but didn't.");
-      send_to_char("Problem with ctf flag data, notify an Imm.\r\n", ch);
-      return TRUE;
-    }
 
     if (affected_by_spell(ch, TAG_CTF))
     {
@@ -254,6 +275,9 @@ int ctf_flag_proc(P_obj flag, P_char ch, int cmd, char *argument)
 
     if (apply_flag)
     {
+      if (ch->following)
+	stop_follower(ch);
+
       struct affected_type af;
 
       memset(&af, 0, sizeof(af));
@@ -678,18 +702,21 @@ void show_ctf_score(P_char ch, char *argument)
 void do_ctf(P_char ch, char *arg, int cmd)
 {
   char arg1[MAX_STRING_LENGTH], arg2[MAX_STRING_LENGTH];
+  char arg3[MAX_STRING_LENGTH];
   int i;
 
-  half_chop(arg, arg1, arg2);
+  //half_chop(arg, arg1, arg2);
+  arg = one_argument(arg, arg1);
 
   if (!strcmp(arg1, "score"))
   {
-    show_ctf_score(ch, arg2);
+    show_ctf_score(ch, arg);
     return;
   }
 
-  if (!strcmp(arg1, "reset"))
+  if (!strcmp(arg1, "reset") && IS_TRUSTED(ch))
   {
+    arg = one_argument(arg, arg2);
     if (arg2 && isdigit(*arg2))
     {
       for (i = 1; ctfdata[i].id; i++)
@@ -709,6 +736,36 @@ void do_ctf(P_char ch, char *arg, int cmd)
       send_to_char("Please enter a valid ctf flag id #.\r\n", ch);
       return;
     }
+  }
+
+  if (!strcmp(arg1, "bonus") && IS_TRUSTED(ch))
+  {
+    arg = one_argument(arg, arg2);
+    int amnt = 1;
+    P_char vict = get_char(arg2);
+    if (!vict)
+    {
+      send_to_char("No player by that name available.\r\n", ch);
+      return;
+    }
+    arg = one_argument(arg, arg3);
+    if (arg3 && isdigit(*arg3))
+    {
+      amnt = atoi(arg3);
+      if (amnt <= 0)
+      {
+	send_to_char("You can't grant them a bonus of 0 or less silly.\r\n", ch);
+	return;
+      }
+    }
+    if (amnt && vict)
+    {
+      for (;amnt;amnt--)
+      {
+	ctf_update_bonus(vict);
+      }
+    }
+    return;
   }
 
   show_ctf(ch);
@@ -965,7 +1022,7 @@ void ctf_update_bonus(P_char ch)
 
   if ((afp = get_spell_from_char(ch, TAG_CTF_BONUS)) != NULL)
   {
-    afp->modifier = BOUNDED(0, ++afp->modifier, 20);
+    afp->modifier = BOUNDED(0, ++afp->modifier, 50);
   }
   else
   {
