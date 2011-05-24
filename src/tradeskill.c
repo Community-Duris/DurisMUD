@@ -65,6 +65,7 @@ extern struct message_list fight_messages[];
 extern struct str_app_type str_app[];
 extern struct time_info_data time_info;
 extern struct zone_data *zone_table;
+extern struct randomeq_material material_data[];
 extern void material_restrictions(P_obj);
 extern int find_map_place();
 extern struct forge_item forge_item_list[]; 
@@ -270,6 +271,7 @@ P_obj forge_create(int choice, P_char ch, int material)
   set_keywords(obj, keywords);
 
   obj->material = material;
+  obj->weight = material_data[material].m_wt;
   obj->affected[0].location = forge_item_list[choice].loc0;
   obj->affected[0].modifier = number(forge_item_list[choice].min0, forge_item_list[choice].max0);                   
   obj->affected[1].location = forge_item_list[choice].loc1;
@@ -287,7 +289,8 @@ P_obj forge_create(int choice, P_char ch, int material)
 
   if(forge_item_list[choice].allow_anti)
     obj->extra_flags = ITEM_ALLOWED_CLASSES;;
-  if (isname("quiver", obj->name)){    
+
+  if(isname("quiver", obj->name)){    
     obj->value[0] = number(20, 80);
     obj->value[1] = number(0, 1);
     obj->value[2] = 1;
@@ -296,6 +299,12 @@ P_obj forge_create(int choice, P_char ch, int material)
   }
   else
     obj->type == ITEM_ARMOR;
+
+  if(obj->wear_flags == ITEM_WEAR_SHIELD)
+    obj->weight = (obj->weight * 2) * obj->wieght;  
+  else if(obj->wear_flags == ITEM_WEAR_BODY)
+    obj->weight = (obj->weight * obj->weight);
+
   return obj;
 }
 

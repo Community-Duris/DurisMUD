@@ -154,44 +154,43 @@ int      stone_spell_list[] = {
   0
 };
 
-
-
+extern struct randomeq_material material_data[MAXMATERIAL + 1];
 struct randomeq_material material_data[MAXMATERIAL + 1] = {
-  {3, "cloth", 12, 1},          //Cloth
-  {5, "&+ysoftwood&n", 12, 3},  //soft wood
-  {6, "&+yhardwood&n", 14, 4},  //hard wood
-  {4, "&+ybark&n", 15, 6},      //Bark
-  {7, "&+Wglass&n", 16, 2},     //glass
-  {9, "&+Lclay&n", 17, 4},      //clay
-  {12, "&+yhide&n", 18, 5},     //hide
-  {39, "&+glimestone&n", 19, 3},        //limestone
-  {21, "&+ycopper&n", 20, 6},   //copper
-  {13, "&+yleather", 21, 5},    //leather
-  {20, "&+ybronze&n", 21, 6},   //bronze
-  {10, "&+wbone&n", 22, 7},     //bone
-  {17, "&+ybrass&n", 23, 7},    //brass
-  {34, "&+Wivory&n", 24, 5},    //ivory
-  {37, "&+wgranite&n", 25, 9},  //granite
-  {38, "&+Wma&+wr&+Lb&+wl&+We&n", 25, 7},       //marble
-  {14, "&+ycured leather&n", 25, 6},    //cured leather
-  {16, "steel", 30, 12},        //steel
-  {15, "&+ciron&n", 30, 8},    //iron
-  {36, "&+Lobsidian&n", 30, 10},        //obsidian
-  {32, "&+Gemerald&n", 34, 7},  //emerald
-  {8, "&+Ccrystal&n", 36, 7},   //crystal
-  {26, "&+Rgem&n", 36, 7},      //gem
-  {11, "&+Lstone&n", 38, 12},   //stone
-  {2, "&+rflesh&n", 38, 5},     //Flesh
-  {24, "&+Ygold&n", 38, 9},     //gold
-  {33, "&+bsapphire&n", 38, 7}, //sapphire
-  {22, "&+Wsilver&n", 40, 10},  //silver
-  {31, "&+rruby&n", 42, 9},     //ruby
-  {27, "&+Wdiamond&n", 43, 14}, //diamond
-  {23, "&+Welectrum&n", 44, 12},        //electrum
-  {19, "&+madamantium&n", 45, 15},      //adamantium
-  {18, "&+Cmithril&n", 46, 15}, //mithril
-  {25, "&+Wplatinum&n", 46, 13},        //platinum
-  {35, "&+rdragon&+Lscale&n", 50, 15},  //dragon scale
+  {3, "cloth", 12, 1, 1},          //Cloth
+  {5, "&+ysoftwood&n", 12, 3, 2},  //soft wood
+  {6, "&+yhardwood&n", 14, 4, 4},  //hard wood
+  {4, "&+ybark&n", 15, 6, 2},      //Bark
+  {7, "&+Wglass&n", 16, 2, 3},     //glass
+  {9, "&+Lclay&n", 17, 4, 4},      //clay
+  {12, "&+yhide&n", 18, 5, 1},     //hide
+  {39, "&+glimestone&n", 19, 3, 5},        //limestone
+  {21, "&+ycopper&n", 20, 6, 3},   //copper
+  {13, "&+yleather", 21, 5, 2},    //leather
+  {20, "&+ybronze&n", 21, 6, 4},   //bronze
+  {10, "&+wbone&n", 22, 7, 3},     //bone
+  {17, "&+ybrass&n", 23, 7, 3},    //brass
+  {34, "&+Wivory&n", 24, 5, 3},    //ivory
+  {37, "&+wgranite&n", 25, 9, 5},  //granite
+  {38, "&+Wma&+wr&+Lb&+wl&+We&n", 25, 7, 5},       //marble
+  {14, "&+ycured leather&n", 25, 6, 2},    //cured leather
+  {16, "steel", 30, 12, 5},        //steel
+  {15, "&+ciron&n", 30, 8, 6},    //iron
+  {36, "&+Lobsidian&n", 30, 10, 6},        //obsidian
+  {32, "&+Gemerald&n", 34, 7, 3},  //emerald
+  {8, "&+Ccrystal&n", 36, 7, 2},   //crystal
+  {26, "&+Rgem&n", 36, 7, 2},      //gem
+  {11, "&+Lstone&n", 38, 12, 5},   //stone
+  {2, "&+rflesh&n", 38, 5, 0},     //Flesh
+  {24, "&+Ygold&n", 38, 9, 2},     //gold
+  {33, "&+bsapphire&n", 38, 7, 2}, //sapphire
+  {22, "&+Wsilver&n", 40, 10, 3},  //silver
+  {31, "&+rruby&n", 42, 9, 2},     //ruby
+  {27, "&+Wdiamond&n", 43, 14, 3}, //diamond
+  {23, "&+Welectrum&n", 44, 12, 3},        //electrum
+  {19, "&+madamantium&n", 45, 15, 4},      //adamantium
+  {18, "&+Cmithril&n", 46, 15, 4}, //mithril
+  {25, "&+Wplatinum&n", 46, 13, 3},        //platinum
+  {35, "&+rdragon&+Lscale&n", 50, 15, 4},  //dragon scale
 
 };
 

@@ -2106,12 +2106,11 @@ struct randomeq_slots {
 };
 
 struct randomeq_material {
-
-
         int m_number;
         char *m_name;
         float m_stat;
         float m_ac;
+        int m_wt;
 };
 
 struct spell_target_data {
