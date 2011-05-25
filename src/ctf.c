@@ -980,18 +980,18 @@ int ctf_get_random_room(int id)
       room = world[obj_room_id(obj)].number;
       if (room < 0)
 	continue;
+      for (int i = 1; ctfdata[i].id; i++)
+      {
+	if (ctfdata[i].room > 0 &&
+	    ctfdata[i].room == room)
+	{
+	  room = 0;
+	  continue;
+	}
+      }
     }
     if (!obj)
       break;
-    for (int i = 1; ctfdata[i].id; i++)
-    {
-      if (ctfdata[i].room > 0 &&
-	  ctfdata[i].room == room)
-      {
-	room = 0;
-	break;
-      }
-    }
   }
 
   if (room > 0)

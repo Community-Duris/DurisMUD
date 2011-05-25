@@ -284,6 +284,8 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
     for (who = world[room].people; who; who = who_next)
     {
       who_next = who->next_in_room;
+      if (!IS_ALIVE(who))
+	  continue;
       if (ctf_carrying_flag(who) == CTF_PRIMARY)
 	return CONTAINS_CTF_FLAG;
     }
