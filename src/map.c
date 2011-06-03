@@ -286,6 +286,8 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
       who_next = who->next_in_room;
       if (!IS_ALIVE(who))
 	  continue;
+      if (ch == who || IS_TRUSTED(who))
+	continue;
       if (ctf_carrying_flag(who) == CTF_PRIMARY)
 	return CONTAINS_CTF_FLAG;
     }
