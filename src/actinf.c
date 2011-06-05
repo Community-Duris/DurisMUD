@@ -4006,7 +4006,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
 
   /* Armor Class */
 
-  t_val = calculate_ac(ch);
+  t_val = calculate_ac(ch, TRUE);
 /*  if (GET_LEVEL(ch) >= 25) { */
 //    sprintf(buf, "&+cArmor Class: &+Y%d&n  &+y(100 to -100)\n", t_val);
       if(t_val >= 0)

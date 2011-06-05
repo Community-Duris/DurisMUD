@@ -6060,7 +6060,7 @@ bool MobWarrior(P_char ch)
     }
   }
   
-  if(isKickable(ch, ch->specials.fighting) &&
+  if(!LEGLESS(ch) && isKickable(ch, ch->specials.fighting) &&
      number(0, 2))
   {
     do_kick(ch, 0, 0);
@@ -7116,13 +7116,7 @@ void MobStartFight(P_char ch, P_char vict)
     !number(0, 2))
   {
     bash(ch, vict);
-    if(ch->specials.fighting)  /*
-                                 * * * Due to certain cleverness in * * bash
-                                 * (if not likely to * succeed,  * mob
-                                 doesn't)  *  *  * return  * only if * bashed
-                                 (success/fail,  *  *  *  * matters * not)
-
-                                 */
+    if(ch->specials.fighting)
       return;
   }
   /*
@@ -10602,19 +10596,20 @@ int empty_slot_for_weapon(P_char ch)
 
 void give_proper_stat(P_char ch)
 {
-  if(ch->base_stats.Str < 80)
-    ch->base_stats.Str = number(80, 100);
-  if(ch->base_stats.Dex < 80)
-    ch->base_stats.Dex = number(80, 100);
-  if(ch->base_stats.Int < 80)
-    ch->base_stats.Int = number(80, 100);
-  if(ch->base_stats.Wis < 80)
-    ch->base_stats.Wis = number(80, 100);
-  if(ch->base_stats.Agi < 80)
-    ch->base_stats.Agi = number(80, 100);
-  if(ch->base_stats.Con < 80)
-    ch->base_stats.Con = number(80, 100);
-
+  if(ch->base_stats.Str < 70)
+    ch->base_stats.Str = number(70, 110);
+  if(ch->base_stats.Dex < 70)
+    ch->base_stats.Dex = number(70, 110);
+  if(ch->base_stats.Int < 70)
+    ch->base_stats.Int = number(70, 110);
+  if(ch->base_stats.Wis < 70)
+    ch->base_stats.Wis = number(70, 110);
+  if(ch->base_stats.Agi < 70)
+    ch->base_stats.Agi = number(70, 110);
+  if(ch->base_stats.Con < 70)
+    ch->base_stats.Con = number(70, 110);
+  if(ch->base_stats.Pow < 70)
+    ch->base_stats.Pow = number(70, 110);
   affect_total(ch, FALSE);
 }
 

@@ -2048,7 +2048,7 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
       !IS_AFFECTED2(victim, AFF2_MAJOR_PARALYSIS) &&
       (CAN_SEE(victim, ch) ||
        (GET_CHAR_SKILL_P(victim, SKILL_BLINDFIGHTING) < number(1, 100))))
-    victim_ac += io_agi_defense(victim);
+    victim_ac += agi_defense(victim);
 
   victim_ac = BOUNDED(-100, victim_ac, 100);
 #      ifdef FIGHT_DEBUG

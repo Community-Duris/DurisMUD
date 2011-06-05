@@ -844,7 +844,7 @@ float group_exp_modifier(P_char ch);
 bool hit(P_char, P_char, P_obj);
 int chance_to_hit(P_char, P_char, int, P_obj);
 bool weapon_proc(P_obj, P_char, P_char);
-int calculate_ac(P_char);
+int calculate_ac(P_char, bool);
 #endif
 void load_messages(void);
 P_obj make_corpse(P_char, int);
@@ -1110,10 +1110,7 @@ struct obj_affect* get_obj_affect(P_obj, int);
 int obj_affect_time(P_obj, struct obj_affect*);
 void set_obj_affected(P_obj, int, sh_int, sh_int);
 int affect_from_obj(P_obj, sh_int);
-
-
-int io_agi_defense(P_char);
-int io_con_hitp(P_char);
+int agi_defense(P_char);
 
 
 /* innates.c */

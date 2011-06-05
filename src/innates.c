@@ -1533,6 +1533,13 @@ void insectbite(P_char ch, P_char victim)
 /*	replaced by the above statement, to prevent magical shrug working on non-magical innate */
 /*    while (i-- && !IS_AFFECTED2(victim, AFF2_POISONED))
       spell_poison(GET_LEVEL(ch), ch, 0, 0, victim, 0);*/
+
+    struct affected_type af;
+    memset(&af, 0, sizeof(struct affected_type));
+    af.type = TAG_SKILL_TIMER;
+    af.flags = AFFTYPE_SHORT;
+    af.duration = 8 * PULSE_VIOLENCE;
+    affect_to_char(ch, &af);  
   }
 }
 
@@ -1598,8 +1605,7 @@ int parasitebite(P_char ch, P_char victim)
     "$n leaps towards $N and bites $M savagely, attempting to latch to $S body!",
     "You leap towards $N and bite $M savagely, tearing off a big chunk of $S body.",
     "$n leaps towards you and bites you savagely, tearing off a big chunk of your body!",
-    "$n leaps towards $N and bites $M savagely, tearing off a big chunk of $S body"};
-
+    "$n leaps towards $N and bites $M savagely, tearing off a big chunk of $S body"};  
 
   level = GET_LEVEL(ch);
   mod = (level >= 40) ? (level / 10) : (level / 15);
@@ -1628,6 +1634,13 @@ int parasitebite(P_char ch, P_char victim)
 /*if (IS_ALIVE(victim) && has_innate(ch, INNATE_INFEST) && !number(0, 7-mod) && IS_ATTACHED_TO(ch, victim))
     infest(ch, victim); FOR LATER USE */
 
+    struct affected_type af;
+    memset(&af, 0, sizeof(struct affected_type));
+    af.type = TAG_SKILL_TIMER;
+    af.flags = AFFTYPE_SHORT;
+    af.duration = 8 * PULSE_VIOLENCE;
+    affect_to_char(ch, &af);  
+
 }
 
 void bite(P_char ch, P_char victim)
@@ -1636,7 +1649,17 @@ void bite(P_char ch, P_char victim)
 
   if (isname("_nobite_", GET_NAME(ch)))
   {
-   return;
+    return;
+  }
+
+  if(GET_LEVEL(ch) < 10)
+  {
+    return;
+  }
+
+  if(affected_by_spell(ch, TAG_SKILL_TIMER))
+  {
+    return;
   }
 
   if (GET_RACE2(ch) == RACE_SNAKE) {
@@ -1713,6 +1736,12 @@ void bite(P_char ch, P_char victim)
       engage(ch, victim);
     }
     CharWait(ch, PULSE_VIOLENCE * 3);
+    struct affected_type af;
+    memset(&af, 0, sizeof(struct affected_type));
+    af.type = TAG_SKILL_TIMER;
+    af.flags = AFFTYPE_SHORT;
+    af.duration = 8 * PULSE_VIOLENCE;
+    affect_to_char(ch, &af);  
     return;
   }
 

@@ -3331,13 +3331,7 @@ int chance_kick(P_char ch, P_char victim)
 
   percent_chance = GET_CHAR_SKILL(ch, SKILL_KICK);
 
-  percent_chance =
-    (int) (percent_chance * ((double) BOUNDED(80, GET_C_DEX(ch), 125)) / 100);
-
-  percent_chance = 
-    (int) (percent_chance *
-          ((int) BOUNDED(80, GET_C_STR(ch) + GET_C_AGI(ch) -
-          GET_C_AGI(victim), 125)) / 100);
+  percent_chance = (int) (percent_chance * ((double) BOUNDED(30, GET_C_DEX(ch), 120)) / 100);
 
   if((int) (GET_C_LUCK(ch) / 10) > number(1, 100))
   {
@@ -3352,11 +3346,6 @@ int chance_kick(P_char ch, P_char victim)
   if(IS_AFFECTED(victim, AFF_AWARE))
   {
     percent_chance = (int) (percent_chance * 0.9);
-  }
-
-  if(IS_NPC(ch))
-  {
-    percent_chance = (int) (percent_chance * 1.30);
   }
 
   if(IS_IMMOBILE(victim) ||
@@ -3397,29 +3386,12 @@ bool kick(P_char ch, P_char victim)
       return false;
     }
     
-    dam = MAX((int) (GET_C_STR(ch) / 2),
-           GET_CHAR_SKILL(ch, SKILL_MARTIAL_ARTS)) +
-           GET_CHAR_SKILL(ch, SKILL_KICK);
+    dam = GET_LEVEL(ch) + (IS_NPC(ch) ? GET_LEVEL(ch) / 3 : GET_CHAR_SKILL(ch, SKILL_KICK));
 
-// Randomize damage a bit. Jan08 -Lucrot
+    // Randomize damage a bit. Jan08 -Lucrot
     dam = number( (int) (dam/2), dam );
 
-// Adjust property for dragon damage. Jan08 -Lucrot
-    dam = (int) (dam * get_property("kick.damage.modifier", 1.000));
-
-// Dragons do more damage and adjusted by level and a bit quicker.
-// Includes dracoliches. Jan08 -Lucrot
-    if(IS_DRAGON(ch))
-    {
-      dam = (int) ( dam * 2 * (GET_LEVEL(ch) / 60) );
-      CharWait(ch, (int) (PULSE_VIOLENCE * 1.500));
-    }
-    else
-    {
-      CharWait(ch, PULSE_VIOLENCE * 2);
-    }
-
-    //debug("&+gKick&n (%s) chance (%d) at (%s).", GET_NAME(ch), percent_chance, GET_NAME(victim));
+    CharWait(ch, PULSE_VIOLENCE * 2);
 
     if(!notch_skill(ch, SKILL_KICK,
         get_property("skill.notch.offensive", 15)) &&
@@ -3582,6 +3554,12 @@ void do_kick(P_char ch, char *argument, int cmd)
     return;
   }
   
+  if(LEGLESS(ch))
+  {
+    send_to_char("Sprout some legs first, chump.", ch);
+    return;
+  }
+
   if(has_innate(ch, INNATE_HORSE_BODY))
   {
     do_rearkick(ch, argument, cmd);
@@ -3624,13 +3602,19 @@ int chance_roundkick(P_char ch, P_char victim)
     logit(LOG_EXIT, "chance_roundkick called in actoff.c with no ch");
     raise(SIGSEGV);
   }
-
+  
   if(!IS_ALIVE(ch) ||
     !IS_ALIVE(victim))
   {
     return 0;
   }
-  
+
+  if(LEGLESS(ch))
+  {
+    send_to_char("Sprout some legs first, chump.", ch);
+    return 0;
+  }  
+
   if(affected_by_spell(ch, SKILL_BASH))
   {
     send_to_char
@@ -3641,14 +3625,6 @@ int chance_roundkick(P_char ch, P_char victim)
   if(GET_CHAR_SKILL(ch, SKILL_ROUNDKICK) < 1)
   {
     send_to_char("You don't know how to roundkick.\n", ch);
-    return 0;
-  }
-  
-  if(IS_NPC(ch) &&
-     LEGLESS(ch)) // Legless define includes immaterial. This hack allows the phantom
-     // monk to use roundkick.
-  {
-    send_to_char("You don't possess the necessary body parts to roundkick.\n", ch);
     return 0;
   }
   

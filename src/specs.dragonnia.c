@@ -121,7 +121,7 @@ void do_mobdisarm(P_char ch, char *argument, int cmd)
      bonus penalties 
    */
   percent -= dex_app[STAT_INDEX(GET_C_DEX(ch))].reaction * 5;
-  percent -= io_agi_defense(victim) / 2;
+  percent -= agi_defense(victim) / 2;
 
   /*
      If this will be installed as skill the message need to be moved on the

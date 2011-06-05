@@ -3553,22 +3553,10 @@ int can_prime_class_use_item(P_char ch, P_obj obj)
  	  return TRUE;
 }
 
-int io_agi_defense(P_char ch)
+int agi_defense(P_char ch)
 {
-  int      i = GET_C_AGI(ch);
-
-#ifdef GOND_KLUDGE
-  return agi_app[STAT_INDEX(i)].defensive;
-#else
-
-  /*
-   * NOTE:  This formula took me _hours_ to come up with.  It produces values
-   * that are very close to what the "gond kludge" method does, however, it
-   * works much smoother, allowing naked AC to 'notch' 1 point at a time,
-   * instead of 8-10 points at a time.   DON'T FUCK WITH THIS UNLESS YOU HAVE A
-   * FUCKING PH.D. IN STATISTICS!
-   */
-  i = MAX(-275, 275 - i);
-  return -((18906 - (i * i / 4)) / 151 - 44);
-#endif
+  int      i = GET_C_AGI(ch), final = 0;
+  i = MAX(-250, 300 - i);
+  final = (((i * i) / 484 + i)) - 400;
+  return final;
 }

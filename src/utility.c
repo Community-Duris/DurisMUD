@@ -2378,11 +2378,11 @@ bool StatSave(P_char ch, int stat, int mod)
       /*
        * those heavy loaded folks are less than nimble eh?
        */
-      if (load_modifier(ch) > 299)
+      if (load_modifier(ch) > 150)
         save_num -= 3;
-      else if (load_modifier(ch) > 199)
+      else if (load_modifier(ch) > 100)
         save_num -= 2;
-      else if (load_modifier(ch) > 99)
+      else if (load_modifier(ch) > 50)
         save_num -= 1;
 
       /*
@@ -2415,11 +2415,11 @@ bool StatSave(P_char ch, int stat, int mod)
     /*
      * those heavy loaded folks are less than nimble eh?
      */
-    if (load_modifier(ch) > 299)
+    if (load_modifier(ch) > 150)
       save_num -= 3;
-    else if (load_modifier(ch) > 199)
+    else if (load_modifier(ch) > 100)
       save_num -= 2;
-    else if (load_modifier(ch) > 99)
+    else if (load_modifier(ch) > 50)
       save_num -= 1;
 
     /*

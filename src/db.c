@@ -2274,11 +2274,8 @@ P_char read_mobile(int nr, int type)
             mob_index[nr].virtual_number, mob->points.hit);
 
     fscanf(mob_f, " %ld ", &tmp);
-#if 1
-    if ((tmp > -10) && (tmp < 10))
-      tmp *= 10;
-    mob->points.base_armor = BOUNDED(-100, tmp, 0);
-#endif
+
+    mob->points.base_armor = 250;
 
     fscanf(mob_f, " %ld ", &tmp);
     mob->points.mana = mob->points.base_mana = mob->points.max_mana = tmp;

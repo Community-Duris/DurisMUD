@@ -388,8 +388,10 @@ int UndeadCombat(P_char ch)
   }
 
   if (IS_DRACOLICH(ch) && IS_PC_PET(ch))
+  {
     DragonCombat(ch, FALSE);
-
+    wizlog(56, "IS_DRACOLICH PET");
+  }
   if( IS_FIGHTING(ch) )
     victim = ch->specials.fighting;
   
@@ -442,8 +444,10 @@ int AngelCombat(P_char ch)
   }
 
   if ((IS_TITAN(ch) || IS_AVATAR(ch)) && IS_PC_PET(ch))
+  {
     DragonCombat(ch, FALSE);
-
+    wizlog(56, "IS TITAN PET");
+  }
   if( IS_FIGHTING(ch) )
     victim = ch->specials.fighting;
   
@@ -1050,6 +1054,7 @@ bool DragonCombat(P_char ch, int awe)
     }
 
     BreathWeapon(ch, -1);
+    wizlog(56, "breathing non-dragon");
     return TRUE;
   }
 
@@ -1076,6 +1081,7 @@ bool DragonCombat(P_char ch, int awe)
   if(IS_DRAGON(ch) && CAN_BREATHE(ch) && number(0, breath_chance))
   {
      BreathWeapon(ch, -1);
+     wizlog(56, "breathing dragon");
      return TRUE;
   }
 

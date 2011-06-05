@@ -2699,69 +2699,14 @@ void do_stat(P_char ch, char *argument, int cmd)
       strcat(buf, "\n");
     strcat(o_buf, buf);
 
-    // if (IS_NPC(k))
-    // {
-      // if (IS_DRAGON(k))
-        // i = 13;
-      // else if (IS_WARRIOR(k) || IS_DEMON(k) ||
-               // IS_SET(k->specials.act, ACT_PROTECTOR))
-        // i = 12;
-      // else if (IS_CLERIC(k))
-        // i = 8;
-      // else if (IS_THIEF(k))
-        // i = 6;
-      // else if (IS_MAGE(k))
-        // i = 4;
-      // else
-        // i = 10;
+    i = calculate_ac(k, TRUE);
 
-      // i2 = (int) (i * GET_LEVEL(k) / 6);
-    // }
-    // else
-    // {
-      // i2 = (int) (GET_LEVEL(k) * class_mod[flag2idx(k->player.m_class)] / 6);
-    // }
-
-// /*
-    // if (!WeaponSkill_num(k))
-      // i2 += (IS_NPC(k) ? BOUNDED(3, (GET_LEVEL(k) * 2), 95) :
-       // GET_CHAR_SKILL(k, SKILL_MARTIAL_ARTS));
-    // else
-// */
-    // i2 += (IS_NPC(k) ? BOUNDED(3, (GET_LEVEL(k) * 2), 95) : GET_CHAR_SKILL(k,   /*WeaponSkill_num(k) */
-                                                                           // getWeaponSkillNumb
-                                                                           // (k->
-                                                                            // equipment
-                                                                            // [WIELD])));
-
-    // /* weapon skill and level bonus are now equally important, so we
-       // average them, this keeps me from having to fine tune things
-       // again. JAB  */
-
-    // i2 = (int) ((i2 / 2) + 19);
-
-    // i2 += (int) ((GET_HITROLL(k) + str_app[STAT_INDEX(GET_C_STR(k))].tohit) * 2);
-
-    // if(k &&
-      // !k->equipment[WIELD] &&
-      // affected_by_spell(k, SPELL_VAMPIRIC_TOUCH))
-    // {
-      // i2 += (int) (GET_LEVEL(k));
-    // }
-
-    i = calculate_ac(k);
-  if(i > 0)
+    if(i > 0)
         sprintf(buf, "&+cArmor Points: &+Y%d&n,  Increase melees damage by &+W%+.2f&n percent.\n", i, (double)(i * 0.10) );
       else
         sprintf(buf, "&+cArmor Points: &+Y%d&n,  Reduce melees damage by &+W%+.2f&n.\n", i, (double)(i * 0.10) );
 
-    //sprintf(buf, "&+YAC: &N%d&+Y(&N%d&+Y)  thAC0: &N%d &+Y  +Hit: &N%d",
     strcat(o_buf, buf);
-    // if(k &&
-      // i2 < -50)
-    // {
-      // wizlog(60, "%s has a thac0 less than -50: %d", GET_NAME(k), i2);
-    // }
 
     i2 = calculate_thac_zero(k, 100); // Assumes 100 weapon skill.
 
@@ -2844,7 +2789,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     }
     else
       sprintf(buf, "&+YPosition: &N%s", buf1);
-    sprintf(buf1, "%s  &+YFighting: %s", buf,
+    sprintf(buf1, "%s  &+YFighting:&n %s", buf,
             ((k->specials.fighting) ? GET_NAME(k->specials.
                                                fighting) : "---"));
     if (IS_NPC(k))
@@ -4718,10 +4663,12 @@ void do_purge(P_char ch, char *argument, int cmd)
    roll time, so they can't control their stats completely
  */
 
+// This function now assigns a static low level base value to all
+// "normal" stats(not luck or karma). - Jexni
+
 void roll_basic_abilities(P_char ch, int flag)
 {
-
-/* screw 'bell curves' and stat totalling, let's keep it simple */
+  int stat_base = 30;
 
 #if 0
   int      i, rolls[10], statp, temp, total, sides;
@@ -4793,17 +4740,56 @@ void roll_basic_abilities(P_char ch, int flag)
   ch->base_stats.Karma = ch->curr_stats.Karma = number(1, 100);
   ch->base_stats.Luck = ch->curr_stats.Luck = number(1, 100);
 #endif
-  
-  ch->base_stats.Str = ch->curr_stats.Str = 30;
-  ch->base_stats.Dex = ch->curr_stats.Dex = 30;
-  ch->base_stats.Agi = ch->curr_stats.Agi = 30;
-  ch->base_stats.Con = ch->curr_stats.Con = 30;
-  ch->base_stats.Pow = ch->curr_stats.Pow = 30;
-  ch->base_stats.Int = ch->curr_stats.Int = 30;
-  ch->base_stats.Wis = ch->curr_stats.Wis = 30;
-  ch->base_stats.Cha = ch->curr_stats.Cha = 30;
-  ch->base_stats.Karma = ch->curr_stats.Karma = 50;
-  ch->base_stats.Luck = ch->curr_stats.Luck = 50;
+  if(IS_NPC(ch))
+  {
+    if(GET_LEVEL(ch) < 40)
+      flag = 0;
+    else
+      flag = 1;
+  }
+  else
+   flag = -1;
+
+  if(flag == -1)
+  {
+    ch->base_stats.Str = ch->curr_stats.Str = stat_base;
+    ch->base_stats.Dex = ch->curr_stats.Dex = stat_base;
+    ch->base_stats.Agi = ch->curr_stats.Agi = stat_base;
+    ch->base_stats.Con = ch->curr_stats.Con = stat_base;
+    ch->base_stats.Pow = ch->curr_stats.Pow = stat_base;
+    ch->base_stats.Int = ch->curr_stats.Int = stat_base;
+    ch->base_stats.Wis = ch->curr_stats.Wis = stat_base;
+    ch->base_stats.Cha = ch->curr_stats.Cha = stat_base;
+    ch->base_stats.Karma = ch->curr_stats.Karma = 50;
+    ch->base_stats.Luck = ch->curr_stats.Luck = 50 + number(0, 70);
+  }
+  else if(flag == 0)
+  {
+    ch->base_stats.Str = ch->curr_stats.Str = stat_base + number(10, GET_LEVEL(ch));
+    ch->base_stats.Dex = ch->curr_stats.Dex = stat_base + number(10, GET_LEVEL(ch));
+    ch->base_stats.Agi = ch->curr_stats.Agi = stat_base + number(10, GET_LEVEL(ch));
+    ch->base_stats.Con = ch->curr_stats.Con = stat_base + number(10, GET_LEVEL(ch));
+    ch->base_stats.Pow = ch->curr_stats.Pow = stat_base + number(10, GET_LEVEL(ch));
+    ch->base_stats.Int = ch->curr_stats.Int = stat_base + number(10, GET_LEVEL(ch));
+    ch->base_stats.Wis = ch->curr_stats.Wis = stat_base + number(10, GET_LEVEL(ch));
+    ch->base_stats.Cha = ch->curr_stats.Cha = stat_base + number(10, GET_LEVEL(ch));
+    ch->base_stats.Karma = ch->curr_stats.Karma = 50;
+    ch->base_stats.Luck = ch->curr_stats.Luck = number(80, 120);
+  }
+  else if(flag == 1)
+  {
+    ch->base_stats.Str = ch->curr_stats.Str = stat_base + number(20, GET_LEVEL(ch) + 10);
+    ch->base_stats.Dex = ch->curr_stats.Dex = stat_base + number(20, GET_LEVEL(ch) + 10);
+    ch->base_stats.Agi = ch->curr_stats.Agi = stat_base + number(20, GET_LEVEL(ch) + 10);
+    ch->base_stats.Con = ch->curr_stats.Con = stat_base + number(20, GET_LEVEL(ch) + 10);
+    ch->base_stats.Pow = ch->curr_stats.Pow = stat_base + number(20, GET_LEVEL(ch) + 10);
+    ch->base_stats.Int = ch->curr_stats.Int = stat_base + number(20, GET_LEVEL(ch) + 10);
+    ch->base_stats.Wis = ch->curr_stats.Wis = stat_base + number(20, GET_LEVEL(ch) + 10);
+    ch->base_stats.Cha = ch->curr_stats.Cha = stat_base + number(20, GET_LEVEL(ch) + 10);
+    ch->base_stats.Karma = ch->curr_stats.Karma = 50;
+    ch->base_stats.Luck = ch->curr_stats.Luck = number(90, 110);
+  }
+ 
 /*}
 
 int rolls[8];
@@ -4825,8 +4811,8 @@ int rolls[8];
   ch->base_stats.Wis = ch->curr_stats.Wis = rolls[6];
   ch->base_stats.Cha = ch->curr_stats.Cha = rolls[7];
 */
-  ch->base_stats.Karma = ch->curr_stats.Karma = number(50, 100); //  These two rolls are invisible
-  ch->base_stats.Luck = ch->curr_stats.Luck = number(50, 100);   //  to players during creation on purpose - Jexni
+  ch->base_stats.Karma = ch->curr_stats.Karma = number(50, 110); //  These two rolls are invisible
+  ch->base_stats.Luck = ch->curr_stats.Luck = number(50, 110);   //  to players during creation on purpose - Jexni
 
 }
 

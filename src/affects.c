@@ -269,7 +269,7 @@ int apply_ac(P_char ch, int eq_pos)
       return 0;
   }
 
-  return BOUNDED( -500, (value * MIN(100, ch->equipment[eq_pos]->condition)) / 100, 500);
+  return BOUNDED(-500, (value * MIN(100, ch->equipment[eq_pos]->condition)) / 100, 500);
 }
 
 int calculate_mana(P_char ch)
@@ -711,11 +711,6 @@ void apply_affs(P_char ch, int mode)
 
   GET_AC(ch) = ch->points.base_armor + ((mode) ? TmpAffs.AC : 0);
 
-  if (GET_C_AGI(ch) > stat_factor[(int) GET_RACE(ch)].Agi)
-  {
-    GET_AC(ch) -= (int) (GET_C_AGI(ch) - stat_factor[(int) GET_RACE(ch)].Agi);
-  }
-
   ch->points.damroll = ch->points.base_damroll + ((mode) ? TmpAffs.Dam : 0);
 
   P_obj wpn;
@@ -909,9 +904,9 @@ void apply_affs(P_char ch, int mode)
   if (mode)
   {
     if (IS_AFFECTED(ch, AFF_ARMOR))
-      GET_AC(ch) -= 30;
+      GET_AC(ch) -= 25;
     if (IS_AFFECTED(ch, AFF_BARKSKIN))
-      GET_AC(ch) -= 100;
+      GET_AC(ch) -= 75;
     if (IS_AFFECTED3(ch, AFF3_GR_SPIRIT_WARD))
       ch->specials.apply_saving_throw[SAVING_SPELL] -= 4;
     if (IS_AFFECTED3(ch, AFF3_SPIRIT_WARD))

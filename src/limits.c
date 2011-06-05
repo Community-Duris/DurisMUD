@@ -786,7 +786,7 @@ float gain_exp_modifiers(P_char ch, P_char victim, float XP)
       !IS_PC(victim))
     {
       XP = XP * get_property("gain.exp.mod.victim.location.hometown", 1.00);
-      if(!number(0, 49)) // Limit the spam
+      if(!number(0, 100)) // Limit the spam
         send_to_char("&+gThis being a hometown, you receive fewer exps...&n\r\n", ch);
     } 
       
@@ -912,8 +912,6 @@ float gain_exp_modifiers(P_char ch, P_char victim, float XP)
   if(GET_LEVEL(ch) >= 55)
     XP = XP * get_property("gain.exp.mod.player.level.fiftyfive", 1.000);    
 
-// debug("Gain exps mofidiers (%d).", (int)XP);
-
   return XP;
 }
 
@@ -948,15 +946,15 @@ int exp_mod(P_char k, P_char victim)
   else if (diff > 5)            /* 6-10    */
     mod = 55;
   else if (diff > 2)            /* 3-5    */
-    mod = 90;
+    mod = 75;
   else if (diff >= 0)           /* 0-2    */
-    mod = 100;
+    mod = 85;
   else if (diff > -3)           /* -2 - 1    */
-    mod = 120;
+    mod = 95;
   else if (diff > -6)           /* -6 - -3    */
-    mod = 125;
+    mod = 110;
   else if (diff > -10)           /* -9 - -6    */
-    mod = 130;
+    mod = 120;
   else if (diff > -15)          /* -14 - -10    */
     mod = 135;
   else if (diff > -20)          /* -19 - -15    */
@@ -985,7 +983,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   {
     return 0;
   }
-// debug("check 1 exp (%d:%d).", type, value);  
+
   if(GET_LEVEL(ch) >= MINLVLIMMORTAL ||
      CHAR_IN_ARENA(ch) ||
      IS_SET(world[ch->in_room].room_flags, GUILD_ROOM | SAFE_ZONE))
@@ -1020,7 +1018,6 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   }
   
   float XP = MAX(1, value);
-// debug("check 2 xp (%d)", (int)XP);  
   if(type == EXP_RESURRECT)
   {
     ;
@@ -1029,13 +1026,11 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   {
     if(ch == victim)
     {
-// debug("Damage to self exp gain returning 0", XP);
       return 0;
     }
     
     if(IS_PC(ch) && IS_PC(victim))
     {
-// debug("Pvp damage exp returning 0", XP);
       return 0;
     }
 
@@ -1056,19 +1051,12 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     }
 
     XP = XP * get_property("exp.factor.damage", 1.00);
-// debug("damage 1 exp gain (%d)", (int)XP);    
     XP = gain_global_exp_modifiers(ch, XP);
-// debug("damage 2 exp gain (%d)", (int)XP);    
-    XP = XP * exp_mod(ch, victim) / 100;
-// debug("damage 3 exp gain (%d)", (int)XP);    
-    XP = modify_exp_by_zone_trophy(ch, type, XP);
-// debug("damage 4 exp gain (%d)", (int)XP);    
+    XP = XP * exp_mod(ch, victim) / 100;    
+    XP = modify_exp_by_zone_trophy(ch, type, XP);    
     XP = gain_exp_modifiers(ch, victim, XP);
-// debug("damage 5 exp gain (%d)", (int)XP);    
-    XP = gain_exp_modifiers_race_only(ch, victim, XP);
-// debug("damage 6 exp gain (%d)", (int)XP);    
+    XP = gain_exp_modifiers_race_only(ch, victim, XP);    
     XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP);
-// debug("damage 7 exp gain (%d)", (int)XP);    
   }
   else if(type == EXP_HEALING)
   {
@@ -1091,31 +1079,22 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     XP = ((XP + 10) / 5) * ((GET_LEVEL(ch) + GET_LEVEL(victim)) / 2);
     XP = XP * get_property("exp.factor.healing", 1.00);
 
-// debug("healing 1 (%d)", (int)XP);
     if(!GET_CLASS(ch, CLASS_CLERIC) &&
        !GET_SPEC(ch, CLASS_SHAMAN, SPEC_SPIRITUALIST))
     {
       XP = XP * get_property("exp.factor.healing.class.penalty", 0.50);
     }
     
-// debug("healing 2 (%d)", (int)XP);
     if(IS_NPC(victim))
       XP /= 2;
     if(ch == victim)
       XP = XP / 2;
-// debug("healing 3 (%d)", (int)XP);
     XP = gain_global_exp_modifiers(ch, XP);
-// debug("healing 4 (%d)", (int)XP);
     XP = XP * exp_mod(ch, attacker) / 100;
-// debug("healing 5 (%d)", (int)XP);
     XP = modify_exp_by_zone_trophy(ch, type, XP);
-// debug("healing 6 (%d)", (int)XP);
     XP = gain_exp_modifiers(ch, attacker, XP);
-// debug("healing 7 (%d)", (int)XP);
     XP = gain_exp_modifiers_race_only(ch, attacker, XP);
-// debug("healing 8 (%d)", (int)XP);
     XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP);
-// debug("healing 9 (%d)", (int)XP);
   }
   else if(type == EXP_TANKING)
   {
@@ -1137,49 +1116,30 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
         return 0;
 
     XP = XP * get_property("exp.factor.tanking", 1.00);
-// debug("tanking 1 (%d)", (int)XP);
     XP = gain_global_exp_modifiers(ch, XP);
-// debug("tanking 2 (%d)", (int)XP);
     XP = XP * exp_mod(ch, victim) / 100;
-// debug("tanking 3 (%d)", (int)XP);
     XP = modify_exp_by_zone_trophy(ch, type, XP);
-// debug("tanking 4 (%d)", (int)XP);
     XP = gain_exp_modifiers(ch, victim, XP);
-// debug("tanking 5 (%d)", (int)XP);
     XP = gain_exp_modifiers_race_only(ch, victim, XP);
-// debug("tanking 6 (%d)", (int)XP);
     XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP); 
-// debug("tanking 7 (%d)", (int)XP);
   }  
   else if(type == EXP_MELEE)
   {
     if(ch == victim)
     {
-// debug("Self-melee returning 0");      
       return 0;
     }
     if(IS_PC(ch) && IS_PC(victim) && !(pvp)) // Do not provide exps to same side combat melee exps.
     {
-// debug("Same side melee returning 0");      
       return 0;
     }
     XP = XP * GET_LEVEL(victim) * get_property("exp.factor.melee", 1.00);  // Just a small boost for lowbies, becomes insignificant at higher levels  -Odorf
-// debug("melee 1 exp gain (%d)", (int)XP);     
-    if (GET_LEVEL(victim) < GET_LEVEL(ch) - 5)
-        XP = XP / (1 + (GET_LEVEL(ch) - GET_LEVEL(victim) + 5) / 2); // no exp flow from fighting small mobs
-// debug("melee 2 exp gain (%d)", (int)XP);     
     XP = gain_global_exp_modifiers(ch, XP);
-// debug("melee 3 exp gain (%d)", (int)XP);                
-    XP = XP * exp_mod(ch, victim) / 100;
-// debug("melee 4 exp gain (%d)", (int)XP);  
-    XP = modify_exp_by_zone_trophy(ch, type, XP);
-// debug("melee 5 exp gain (%d)", (int)XP);  
+    XP = XP * exp_mod(ch, victim) / 100;  
+    XP = modify_exp_by_zone_trophy(ch, type, XP);  
     XP = gain_exp_modifiers(ch, victim, XP);
-// debug("melee 6 exp gain (%d)", (int)XP);  
-    XP = gain_exp_modifiers_race_only(ch, victim, XP);
-// debug("melee 7 exp gain (%d)", (int)XP);  
+    XP = gain_exp_modifiers_race_only(ch, victim, XP); 
     XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP); 
-// debug("melee 8 exp gain (%d)", (int)XP);  
   }
   else if(type == EXP_DEATH)
   {
@@ -1190,119 +1150,52 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     }
 
     XP = -1 * (new_exp_table[GET_LEVEL(ch) + 1] * get_property("exp.death.level.loss", 0.10));
-// debug("death 1 exp gain (%d)", (int)XP);  
   }
   else if(type == EXP_KILL)
   {
     if(ch == victim)
     {
-// debug("Self-kill returning 0");      
       return 0;
     }
   
-// No exps for killing your friends.
+    // No exps for killing your friends.
     if(IS_PC(ch) && IS_PC(victim) && !(pvp) && !CHAR_IN_TOWN(ch))
     {
-// debug("Same side kill returning 0");      
       return 0;
     }
-    
-// Hard coding goodie anti-griefing code for hometowns. Oct09 -Lucrot
-// This is a pure pvp mud.  Learn to intergrate into the pbase.
-/*     
-       if(IS_PC(ch) &&
-       IS_PC(victim) &&
-       CHAR_IN_TOWN(ch) &&
-       GOOD_RACE(ch) &&
-       GOOD_RACE(victim) &&
-       GET_LEVEL(victim) >= (int)(get_property("pvp.good.level.grief.victim", 20)) &&
-       GET_LEVEL(ch) >= (int)(get_property("pvp.good.level.grief.ch", 20)) ||
-       IS_PC_PET(ch))
+     
+    if (!IS_PC(victim))
     {
-      XP = -1 * (new_exp_table[GET_LEVEL(ch) + 1] >> 4);
-      send_to_char("&+WThe divine forces of &+RDuris &+Wfrowns upon you...\r\n", ch);
-      send_to_char("&+WArcing bolts of energy drain away your life.\r\n", ch);
-      send_to_char("&+RA blood red aura surrounds you.\r\n", ch);
-      
-      struct affected_type af;
-      bzero(&af, sizeof(af));
-
-      af.type = SPELL_CURSE;
-      af.flags = AFFTYPE_NODISPEL | AFFTYPE_PERM;
-      af.modifier = 20;
-      af.duration = 25;
-
-      af.location = APPLY_SAVING_SPELL;
-      affect_to_char(ch, &af);
-      
-      af.location = APPLY_SAVING_BREATH;
-      affect_to_char(ch, &af);
-      
-      af.location = APPLY_SAVING_PARA;
-      affect_to_char(ch, &af);
-      
-      af.location = APPLY_SAVING_FEAR;
-      affect_to_char(ch, &af);
-      
-      af.modifier = 2;
-      af.type = SPELL_SLOW;
-      affect_to_char(ch, &af);
+      XP = XP * get_property("exp.factor.kill", 1.00) ;
+      XP = gain_global_exp_modifiers(ch, XP);
+      XP = XP * exp_mod(ch, victim) / 100;
+      XP = modify_exp_by_zone_trophy(ch, type, XP);
+      XP = gain_exp_modifiers(ch, victim, XP);
+      XP = gain_exp_modifiers_race_only(ch, victim, XP);
+      XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP); 
     }
-    else
-    {
-    */
-      if (!IS_PC(victim))
-      {
-        XP = XP * get_property("exp.factor.kill", 1.00) ;
-// debug("kill 1 exp gain (%d)", (int)XP);
-        XP = gain_global_exp_modifiers(ch, XP);
-// debug("kill 2 exp gain (%d)", (int)XP);
-        XP = XP * exp_mod(ch, victim) / 100;
-// debug("kill 3 exp gain (%d)", (int)XP);
-        XP = modify_exp_by_zone_trophy(ch, type, XP);
-// debug("kill 4 exp gain (%d)", (int)XP);
-        XP = gain_exp_modifiers(ch, victim, XP);
-// debug("kill 5 exp gain (%d)", (int)XP);
-        XP = gain_exp_modifiers_race_only(ch, victim, XP);
-// debug("kill 6 exp gain (%d)", (int)XP);
-        XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP); 
-// debug("kill 7 exp gain (%d)", (int)XP);
-      }
-      logit(LOG_EXP,
+    logit(LOG_EXP,
             "KILL EXP: %s (%d) killed by %s (%d): old exp: %d, new exp: %d, +exp: %d",
             GET_NAME(victim), GET_LEVEL(victim), GET_NAME(ch),
             GET_LEVEL(ch), GET_EXP(ch), GET_EXP(ch) + (int)XP, (int)XP);
-    //}
     
     if(pvp)
     {
       XP = XP * get_property("gain.exp.mod.pvp", 1.000);
-// debug("kill 8 exp gain (%d)", (int)XP);
     }
   }
   else if(type == EXP_WORLD_QUEST)
   {
     XP = gain_exp_modifiers_race_only(ch, NULL, XP);
-// debug("world quest 1 (%d)", (int)XP);   
   }
   else if(type == EXP_QUEST)
   {
     XP = gain_exp_modifiers_race_only(ch, NULL, XP); 
-// debug("quest 1 (%d)", (int)XP);   
   }
   
   int XP_final = (int)XP;
-// debug("check 3 xp (%d)", XP_final);  
   int range = new_exp_table[GET_LEVEL(ch) + 1] / 3;
-// debug("check 4 xp (%d)", XP_final);  
   XP_final = BOUNDED(-range, XP_final, range);
-  
-  // if(XP_final > 0 &&
-     // GET_EXP(ch) > (new_exp_table[GET_LEVEL(ch) + 1]));
-  // {
-    // XP_final = 1;
-    // send_to_char("&+LYour exps are capped and you must gain a level to accumulate more exps.\r\n", ch);
-  // }
   
   // increase exp only to some limit (cumulative exp till 61)
   if(XP_final < 0 || GET_EXP(ch) < global_exp_limit)
@@ -1338,7 +1231,6 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   if (type == EXP_KILL)
     check_boon_completion(ch, victim, (int)XP, BOPT_RACE);
 
-// debug("Gain exps final return (%d).", XP_final);
   return XP_final;
 }
 
@@ -1360,10 +1252,6 @@ int gain_condition(P_char ch, int condition, int value)
 
       GET_COND(ch, i) = BOUNDED(0, (GET_COND(ch, i) + value), 24);
 
-//        GET_COND(ch,i) = -1; /* prolly unnecessary but who knows */
-      /* hunger/thirst removed as per tripods orders */
-
-
       if (IS_TRUSTED(ch))
         continue;
 
@@ -1383,7 +1271,6 @@ int gain_condition(P_char ch, int condition, int value)
         if (GET_COND(ch, i) >= 0)
         {
           if (!GET_COND(ch, i))
-//          send_to_char("&+RYou feel yourself weakening from intense hunger..\r\n", ch);
             send_to_char("&+RYou are hungry.\r\n", ch);
           else if (GET_COND(ch, i) < 3 &&
                    !IS_SET(ch->specials.act, PLR_WRITE))
@@ -1404,7 +1291,6 @@ int gain_condition(P_char ch, int condition, int value)
         {
           if (!GET_COND(ch, i))
           {
-//          send_to_char("&+RYou feel yourself weakening from intense thirst..\r\n", ch);
             send_to_char("&+RYou are thirsty.\r\n", ch);
 
 /*            num = (GET_MAX_HIT(ch) / 24) + 8;
@@ -1456,7 +1342,7 @@ void point_update(void)
     if (IS_SET(i->specials.act, PLR_MORPH))
       continue;
       
-// No idle rent for imprisonment as it crashes the game. Mar09 -Lucrot
+    // No idle rent for imprisonment as it crashes the game. Mar09 -Lucrot
     if(IS_SET(i->specials.affected_by5, AFF5_IMPRISON))
     {
       continue;
@@ -1493,18 +1379,6 @@ void point_update(void)
       
       if (!GET_NAME(i))
         continue;
-
-      // Getting tired of this giving free recalls.
-      /*
-      int reloghere = GET_BIRTHPLACE(i);
-      
-      if (!reloghere)
-        reloghere = GET_HOME(i);
-      if (!reloghere)
-        reloghere = GET_ORIG_BIRTHPLACE(i);
-      if (!reloghere)
-        reloghere = i->in_room;
-      */
       
       strcat(Gbuf1, GET_NAME(i));
       strcat(Gbuf1, ", ");

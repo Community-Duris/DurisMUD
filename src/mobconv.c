@@ -226,7 +226,7 @@ void convertMob(P_char ch)
       (GET_RACE(ch) == RACE_W_ELEMENTAL) ||
       (GET_RACE(ch) == RACE_E_ELEMENTAL) ||
       (GET_RACE(ch) == RACE_V_ELEMENTAL) ||
-	  (GET_RACE(ch) == RACE_I_ELEMENTAL) ||
+      (GET_RACE(ch) == RACE_I_ELEMENTAL) ||
       IS_UNDEADRACE(ch) ||
       (GET_RACE(ch) == RACE_INSECT) ||
       (GET_RACE(ch) == RACE_REPTILE) ||
@@ -254,7 +254,7 @@ void convertMob(P_char ch)
     ch->points.mana = ch->points.base_mana = ch->points.max_mana =
       GET_LEVEL(ch) * 10;
 
-  /* thac0 */
+  /* hitroll */
   if (IS_MELEE_CLASS(ch) || IS_DRAGON(ch) || IS_DEMON(ch) || IS_GIANT(ch))
     ch->points.base_hitroll = BOUNDED(2, (GET_LEVEL(ch) / 2), 35);
   else
@@ -263,7 +263,7 @@ void convertMob(P_char ch)
   ch->points.hitroll = ch->points.base_hitroll;
 
   /* AC computations... first base AC */
-  ch->points.base_armor = (int) (GET_LEVEL(ch) * -3 + 100);
+  ch->points.base_armor = (int) (GET_LEVEL(ch) * -3);
 
   /* then additions based on level... */
   if (GET_LEVEL(ch) > 57)
@@ -276,6 +276,14 @@ void convertMob(P_char ch)
   /* racial conditions to AC */
   switch (GET_RACE(ch))
   {
+  case RACE_ANIMAL:
+  case RACE_INSECT:
+  case RACE_AQUATIC_ANIMAL:
+  case RACE_QUADRUPED:
+  case RACE_FLYING_ANIMAL:
+  case RACE_HERBIVORE:
+    ch->points.base_armor = + 150; //  these species don't have natural armor
+    break;
   case RACE_F_ELEMENTAL:
   case RACE_W_ELEMENTAL:
   case RACE_A_ELEMENTAL:
@@ -297,7 +305,7 @@ void convertMob(P_char ch)
     ch->points.base_armor -= 150;
     break;
   }
-  ch->points.base_armor = BOUNDED(-750, ch->points.base_armor, 100);
+  ch->points.base_armor = BOUNDED(-250, ch->points.base_armor, 250);
 
   /* hitpoints, and damage dice */
 
@@ -313,30 +321,30 @@ void convertMob(P_char ch)
   else if (level <= 5)
   {
     damN = 1;
-    damS = 5;
+    damS = 3;
     damA = 0;
   }
   else if (level <= 10)
   {
-    damN = 2;
-    damS = 3;
+    damN = 1;
+    damS = 4;
     damA = 1;
   }
   else if (level <= 15)
   {
-    damN = 3;
-    damS = 3;
+    damN = 2;
+    damS = 5;
     damA = 5;
   }
   else if (level <= 20)
   {
-    damN = 4;
+    damN = 3;
     damS = 4;
     damA = 10;
   }
   else if (level <= 25)
   {
-    damN = 5;
+    damN = 4;
     damS = 5;
     damA = 10;
   }
@@ -438,8 +446,7 @@ void convertMob(P_char ch)
 
   ch->curr_stats = ch->base_stats;
 
-  /* if they don't have memory, and we thing they should, give it to
-     them */
+  /* if they don't have memory, and we think they should, give it to them */
   if (!IS_SET(ch->specials.act, ACT_MEMORY) && !IS_ANIMAL(ch) &&
       !IS_INSECT(ch) && (GET_RACE(ch) != RACE_PLANT))
   {

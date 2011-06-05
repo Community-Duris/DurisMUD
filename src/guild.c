@@ -141,7 +141,7 @@ void update_skills(P_char ch)
 
 int notch_skill(P_char ch, int skill, int chance)
 {
-  int t, lvl, l, slvl, percent_chance;
+  int intel, t, lvl, l, slvl, percent_chance;
   char buf[MAX_STRING_LENGTH];
 
   if(!(ch) ||
@@ -157,10 +157,10 @@ int notch_skill(P_char ch, int skill, int chance)
   
   if(IS_FIGHTING(ch))
   {
-// This prevents players from notching up skills using images and 
-// summoned pets such as elementals. Jan08 -Lucrot
+  // This prevents players from notching up skills using images and 
+  // summoned pets such as elementals. Jan08 -Lucrot
     if(IS_PC_PET(ch->specials.fighting) ||
-       GET_LEVEL(ch->specials.fighting) < 5)
+       GET_LEVEL(ch->specials.fighting) < 2)
     {
       return 0;
     }
@@ -176,6 +176,12 @@ int notch_skill(P_char ch, int skill, int chance)
     ch->only.pc->skills[skill].learned = t;
     return 0;
   }
+
+  //  The following addition is for wipe 2011, where intelligence will help determine
+  //  chance to notch a skill, thus making it a partially important stat for rockhead melee
+  //  characters - Jexni 6/5/11  
+  intel = BOUNDED(0, 100 - GET_C_INT(ch), 70);
+  chance = chance - (intel / 10);
 
   /* skills can be no higher than level * 2.5 + 5 */
 
@@ -193,7 +199,7 @@ int notch_skill(P_char ch, int skill, int chance)
   {
     return 0;
   }
-  
+#if 0  
   // some exp for using skills, chance check should
   // exclude automatic skills
   if(chance <= get_property("exp.maxSkillChance", 100) &&
@@ -201,6 +207,15 @@ int notch_skill(P_char ch, int skill, int chance)
   {
     gain_exp(ch, GET_OPPONENT(ch), 0, EXP_MELEE);
   }
+#endif
+  //  The above code causes several issues.
+  //  1. GET_OPPONENT only returns who you are currently tanking
+  //     meaning all experience is compared to that mob, not necesssarily
+  //     the one the actual skill is being compared to.
+  //  2. This checks multiple skills regardless of whether or not they
+  //     actually come into play, such as checking dodge and parry when
+  //     the mob misses anyhow.
+  //  To that end, we'll add a check into fight.c instead. - Jexni 6/5/11
 
   if (IS_HARDCORE(ch))
   {
