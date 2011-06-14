@@ -1,31 +1,17 @@
 #1352
 The Lair of Tiamat~
-135288 0 0 40 50 3
+135283 0 0 40 50 3
 *
 * Zone edited with durisEdit v2.99de
 *
 *
-D 0 135202 1 2 100 0 0 0
-*     east exit from "The Massive Entrance to the Azhural Caverns" to
-*     "A Massive Tunnel Within the Azhural Caverns" - closed/locked
 *
-D 0 135203 3 2 100 0 0 0
-*     west exit from "A Massive Tunnel Within the Azhural Caverns" to
-*     "The Massive Entrance to the Azhural Caverns" - closed/locked
+O 0 135208 1 135201 100 0 0 0      * The Pillar of Skulls
 *
-*
-O 0 135208 2 135201 100 0 0 0      * The Pillar of Skulls
-O 0 135208 2 135286 100 0 0 0      * The Pillar of Skulls
-*
-M 0 135212 8 135201 100 0 0 0      * a golem of fused demon bones
-G 1 135211 8 0 100 0 0 0           *    a shard of bone
-M 0 135212 8 135201 100 0 0 0      * a golem of fused demon bones
-G 1 135211 8 0 100 0 0 0           *    a shard of bone
-M 0 135212 8 135201 100 0 0 0      * a golem of fused demon bones
-G 1 135211 8 0 100 0 0 0           *    a shard of bone
-M 0 135212 8 135201 100 0 0 0      * a golem of fused demon bones
-G 1 135211 8 0 100 0 0 0           *    a shard of bone
-M 0 135219 1 135202 100 0 0 0      * a shadowy figure
+M 0 135212 4 135201 100 0 0 0      * a golem of fused demon bones
+M 0 135212 4 135201 100 0 0 0      * a golem of fused demon bones
+M 0 135212 4 135201 100 0 0 0      * a golem of fused demon bones
+M 0 135212 4 135201 100 0 0 0      * a golem of fused demon bones
 M 0 135209 1 135216 100 0 0 0      * Zenalithianathisa, the ancient white dragon consort
 M 0 135214 4 135220 100 0 0 0      * a dragonkin seer
 M 0 135214 4 135220 100 0 0 0      * a dragonkin seer
@@ -38,13 +24,5 @@ M 0 135210 1 135260 100 0 0 0      * Tenanizeothian, the ancient blue dragon con
 M 0 135218 2 135266 100 0 0 0      * Zyla, the destroyer
 M 0 135206 1 135274 100 0 0 0      * Ephelemon, the ancient red dragon consort
 M 0 135218 2 135279 100 0 0 0      * Zyla, the destroyer
-M 0 135212 8 135286 100 0 0 0      * a golem of fused demon bones
-G 1 135211 8 0 100 0 0 0           *    a shard of bone
-M 0 135212 8 135286 100 0 0 0      * a golem of fused demon bones
-G 1 135211 8 0 100 0 0 0           *    a shard of bone
-M 0 135212 8 135286 100 0 0 0      * a golem of fused demon bones
-G 1 135211 8 0 100 0 0 0           *    a shard of bone
-M 0 135212 8 135286 100 0 0 0      * a golem of fused demon bones
-G 1 135211 8 0 100 0 0 0           *    a shard of bone
 *
 S

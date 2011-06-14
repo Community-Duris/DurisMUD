@@ -135,7 +135,7 @@ E 1 15143 2 17 100 0 0 0           *   a steel longsword
 G 1 15102 1 0 100 0 0 0            *    a glowing aqua-colored key
 M 0 15104 8 15118 100 0 0 0        * a ghoul
 M 0 15102 5 15119 100 0 0 0        * a vampiric warg
-M 0 15109 1 15120 100 0 0 0        * the master wizard, Akabar
+M 0 15109 1 15120 100 0 0 0        * Akabar
 E 1 15112 1 2 100 0 0 0            *   a glowing crystal ring
 E 1 15113 1 10 100 0 0 0           *   some glowing magic bracers
 M 0 15125 1 15122 100 0 0 0        * Jurtrem the Dreaded
@@ -145,7 +145,7 @@ E 1 15128 1 16 100 0 0 0           *   the axe of the executioner
 M 0 15101 6 15124 100 0 0 0        * the skeletal knight
 E 1 15106 1 6 100 0 0 0            *   a glowing skeletal helm
 E 1 15105 1 8 100 0 0 0            *   a pair of indigo-plated boots
-M 0 15112 1 15126 100 0 0 0        * the high necromancer, Ordack
+M 0 15112 1 15126 100 0 0 0        * Ordack
 E 1 15115 1 18 100 0 0 0           *   the shard of a demon
 M 0 15101 6 15127 100 0 0 0        * the skeletal knight
 M 0 15107 9 15127 100 0 0 0        * an undead dragon

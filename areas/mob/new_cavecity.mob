@@ -1,21 +1,21 @@
 #15100
 skeleton gate guard~
-&+Lthe &+wsk&+Lelet&+won &+Lgate guard&n~
-&+LA &+wskeleton &+Lgate guard stands here guardian the gates.&n
+the skeleton gate guard~
+&+WA skeleton gate guard stands here guardian the gates.&n
 ~
    No flesh remains on this once human being. His bones are a darkened ash
 color.  His blazing skull seems to see into your soul. He throws his head
 back and bellows, 'No Mortal shall pass thru these gates. Try and I shall
 destroy you!
 ~
-2062 1 0 0 587276440 14530 0 0 -1000 S
-U 0 1 0 -1
+2062 1 0 587276440 14530 0 0 -1000 S
+U 0 1 -1
 59 -7 -117 57d143+5985 7d6+35
 0.0.0.0 230850
 8 8 1
 #15101
 skeletal knight~
-&+Lthe &+ws&+Wk&+we&+Wl&+we&+Wt&+wa&+Wl &+Lkn&+wig&+Lht&n~
+the skeletal knight~
 &+WA skeletal knight stands here, blade drawn for combat.&n
 ~
    He is an animated corpse of a once brave human knight. He appears to be
@@ -23,162 +23,162 @@ a skeleton in full armor, his armor glows red, matching the color of his
 hollow eye sockets. He has been brought back to existence by an evil cleric,
 forced to protect the halls of which he roams.
 ~
-2120 1 0 0 838869144 2 0 0 -1000 S
-U 0 1 0 -1
+2120 1 0 838869144 2 0 0 -1000 S
+U 0 1 -1
 55 -5 -111 55d131+4675 7d6+30
 0.0.0.0 222750
 8 8 1
 #15102
 undead warg~
-&+ya &+Lv&+ra&+Lm&+rp&+Li&+rr&+Li&+rc &+ywarg&n~
-&+yA &+Lv&+ra&+Lm&+rp&+Li&+rr&+Li&+rc &+ywarg &+Lreveals his evil fangs.&n
+&+ya vampiric warg&n~
+&+yA vampiric warg reveals his evil fangs.&n
 ~
    A very large, undead creature. He appears as an larg wolf-like creature
 with a brown coat of fur, and blazing red eyes. His 3ich fangs are bloody,
 probably from a recent kill of an animal. A sent of death fills your nostrils.
 ~
-136 1 0 0 33554440 262144 0 0 -1000 S
-U 0 4096 0 -1
+136 1 0 33554440 262144 0 0 -1000 S
+U 0 4096 -1
 51 -5 -98 51d110+4233 7d6+30
 0.0.0.0 206550
 8 8 0
 #15103
 wight~
-&+Lan &+revil&+L-&+wlooking &+Lw&+Gi&+Lg&+Gh&+Lt&n~
+&+Lan evil-looking wight&n~
 &+LAn evil-looking wight is floating here, &+Rflaming hands &+Loutstretched.&n
 ~
    It looks pretty wicked. Flames spire up from its head and finger tips.
 It has 2 deep black holes that appear as voids to the human soul. It moans
 a deep evil song of hatred and sorrow.
 ~
-200 1 0 0 33554440 1 0 0 -1000 S
-U 0 0 0 -1
+200 1 0 33554440 1 0 0 -1000 S
+U 0 0 -1
 49 -3 -81 49d100+2597 6d6+25
 0.0.0.0 119070
 8 8 0
 #15104
 ghoul undead~
-&+La &+Gg&+Lhou&+Gl&N~
-&+LA floating &+Gg&+Lhou&+Gl &+Lis standing here.&N
+&+Wa ghoul&N~
+&+WA floating ghoul is standing here.&N
 ~
    It looks dead, long dead, very dead. It mumbles some strange things, but it
 seem to be chanting "Drizz'ul Act'reeen Azar" over and over again..
 ~
-200 1 0 0 33554568 0 0 0 -1000 S
-U 0 1 0 -1
+200 1 0 33554568 0 0 0 -1000 S
+U 0 1 -1
 50 -1 -69 45d107+2025 6d6+12
 0.0.0.0 109350
 8 8 0
 #15105
 ghast undead~
-&+La &+ygh&+ga&+yst&N~
-&+LA &+rfiendish &+Llooking &+ygh&+ga&+yst &+Lis here, staggering.&n
+&+Wa ghast&N~
+A fiendish looking ghast is here, staggering.
 ~
    It looks great, for being dead for as long as it has. Much of its flesh as
 already rotted away.
 ~
-200 1 0 0 136 2 0 0 -1000 S
-U 0 1 0 -1
+200 1 0 136 2 0 0 -1000 S
+U 0 1 -1
 51 -1 -56 41d99+1804 6d6+12
 0.0.0.0 99630
 8 8 0
 #15106
 quturac death dragon~
-&+rQuturac&+L, &+Lthe &+ws&+Wk&+we&+Wl&+we&+Wt&+wa&+Wl &+Ld&+we&+Wa&+wt&+Lh dragon&n~
-&+rQuturac&+L, the &+wskeletal &+Ld&+we&+Wa&+wt&+Lh dragon is here, lost in &+bthought&+L.&n
+&+rQuturac&+L, &+Wthe skeletal death dragon&n~
+&+WQuturac, the skeletal death dragon is here, lost in thought.&n
 ~
    Quturac looks very very ancient, and very very evil. His four eyes blaze
 a deep black. A powerful aura surrounds him, for he is a dragon that lives
 even after death itself. He doesnt like your intrusion on his haven of death.
 Your skin crawls as his deep eyes see deep into your soul.
 ~
-2058 1 0 0 838860952 2242 0 0 -1000 S
-D 0 512 0 -1
+2058 1 0 838860952 2242 0 0 -1000 S
+D 0 512 -1
 60 -10 -152 60d96+6780 7d6+35
 6.6.9.22 486000
 8 8 1
 #15107
 dragon undead~
-&+Lan u&+wn&+Wde&+wa&+Ld &+Ldragon&n~
-&+LAn undead dragon is here, a dim &+rf&+Ri&+rr&+Re &+Lburning behind its hollow eye sockets.
+an undead dragon~
+An undead dragon is here, aimlessly wandering.
 ~
    It seems to have no mind at all, it staggers from side to side waiting for
 someone to attack.
 ~
-2248 1 0 0 33554568 2 0 0 -1000 S
-D 0 1 0 -1
+2248 1 0 33554568 2 0 0 -1000 S
+D 0 1 -1
 50 -3 -115 50d119+3250 6d6+25
 0.3.7.14 243000
 8 8 0
 #15108
 autexil guardian~
-&+bA&+Butexil &+Lthe &+GG&+guardia&+Gn&N~
-&+bA&+Butexil &+Lthe &+GG&+guardia&+Gn&+L is here, guarding the door to his &+mmaster&+L.&n
+&+bAutexil the Guardian&N~
+&+bAutexil the Guardian&N is here, guarding the door to his master.
 ~
    He is tall and strong with the powers of a warrior and a mage as well. This
 makes him a good guard for his master.
 ~
-2058 0 0 0 33554584 2 0 0 -1000 S
-H 0 512 0 -1
+2058 0 0 33554584 2 0 0 -1000 S
+H 0 512 -1
 57 -7 -117 57d96+5871 7d6+35
 2.4.8.6 230850
 8 8 1
 #15109
 akabar cleric~
-&+Lthe master &+bw&+Bi&+bz&+Ba&+br&+Bd&+L, &+MA&+mkaba&+Mr&n~
-&+mAkabar &+Lthe strange, stands here working over a few spells.&n
+&+MAkabar&n~
+&+mAkabar the strange, stands here working over a few spells.&n
 ~
    An old and sage, he has learned a lot during his many years of life. He is
 trained in the fields of fighters, mages, and clerics. His power is overwhelming
 to most in the area.
 ~
-67594 1 0 0 33554568 2 0 0 -1000 S
-H 0 512 0 -1
+67594 1 0 33554568 2 0 0 -1000 S
+H 0 512 -1
 60 -10 -132 10d10+20000 7d6+35
 6.6.9.7 243000
 8 8 1
 #15110
 soul wife~
-&+Lthe &+wsoul &+Lof an u&+wn&+Wde&+wa&+Ld &+Gwife&n~
-&+LThe &+wsoul &+Lof an undead &+Ghousewife &+Lis screaming here.&n
+the soul of an undead wife~
+The soul of an undead housewife is screaming here.
 ~
    She look really, really angry. Almost ready to rip someone's head off and eat
 it.
 ~
-2058 0 0 0 8 0 0 0 -1000 S
-U 0 256 0 -1
+2058 0 0 8 0 0 0 -1000 S
+U 0 256 -1
 55 -5 -111 55d121+4620 7d6+30
 0.0.0.0 222750
 8 8 2
 #15111
 soul husband~
-&+Lthe &+wsoul &+Lof an u&+wn&+Wde&+wa&+Ld &+Yhusband&n~
-&+LThe &+Wsoul &+Lof an undead &+Yhusband &+Lis here, &+mbeating &+Lhis wife.&n
+the soul of an undead husband~
+The soul of an undead husband is here, beating his wife.
 ~
    He is beating his wife repeatedly with his belt. He looks very angry as well.
 ~
-2058 0 0 0 33554440 2 0 0 0 S
-U 0 32 0 -1
+2058 0 0 33554440 2 0 0 0 S
+U 0 32 -1
 55 -5 -111 55d121+4620 7d6+30
 0.0.0.0 222750
 8 8 1
 #15112
 necromancer ordack~
-&+Lthe high &+Mn&+mecromance&+Mr&+L, &+YO&+yrdac&+Yk&n~
-&+LThe &+Mn&+mecromance&+Mr &+YO&+yrdac&+Yk &+Lis here scribing some new &+cscrolls&+L.&n
+&+YOrdack&n~
+&+YOrdack the Necromancer is here meditating.&n
 ~
    He has been here many, many years, doing the pre-training of apprentices for
 the Tower's archmage. He has survived through many holders of the tower, and may
 be around for years to come.
 ~
-2186 0 0 0 33554440 2 0 0 -1000 S
-H 0 1024 0 -1
+2186 0 0 33554440 2 0 0 -1000 S
+H 0 1024 -1
 58 -7 -125 58d96+5974 7d6+35
 3.4.8.6 234900
 5 5 1
 #15113
 dranum slayer wraith~
-&+LD&+wr&+Wan&+wu&+Lm the &+RS&+rlayer&n~
+&+LDranum the Slayer&n~
 &+LA shadow wraith is resting here, blazing with evilness.&n
 ~
    Dranum the Slayer was once king from another time. He was known as an evil
@@ -187,34 +187,34 @@ blade. Till one day, his sword became thirsty for his own blood and imbeded
 itself into his heart, resulting in the death, and rebirth of his soul...
 this time as a shadow wraith.
 ~
-67176649 1 0 0 33628328 0 0 0 -1000 S
-X 0 512 0 -1
+67176649 1 0 33628328 0 0 0 -1000 S
+X 0 512 -1
 62 -10 -147 60d96+35600 7d6+45
 6.6.4.10 364500
 8 8 1
 #15114
 akulab overlord~
-&+MA&+mkulab &+Lthe &+rO&+Rv&+re&+Rr&+Ll&+wo&+Lr&+wd&n~
-&+MA&+mkulab &+Lthe Overlord is here, memorizing spells known only to him.&n
+&+MAkulab the Overlord&n~
+&+MAkulab the Overlord is here, memorizing spells known only to him.&n
 ~
    He says "I hate being interrupted when I am working!" He turns around ready
 to fight.
 ~
-1073744010 0 0 0 33554600 3 0 0 -1000 S
-G 0 256 0 -1
+1073744010 0 0 33554600 3 0 0 -1000 S
+G 0 256 -1
 60 -10 -122 60d132+6540 7d6+35
 6.6.9.7 243000
 8 8 1
 #15115
 dred guard mine~
-&+yDred &+Lthe &+YG&+yu&+Ya&+yr&+Yd&+yi&+Ya&+yn &+Lof the M&+win&+Le&n~
-&+LA HUGE guard stands here, &+bblocking &+Lentrance to the M&+win&+Le.&n
+&+yDred the Guardian of the Mine&n~
+&+yA burly mine guard is standing here.&n
 ~
    Dred has been here guarding the mine forever, pledged his unending faith
 to Akulab, his evil master. He looks wary, but still could put up a good fight.
 ~
-2058 1 0 0 33554456 2 0 0 -1000 S
-H 0 1 0 -1
+2058 1 0 33554456 2 0 0 -1000 S
+H 0 1 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -226,21 +226,21 @@ water elemental~
    The water elemental is huge size and does not seems at all pleased to
 see you.
 ~
-264266 1 0 0 33554584 2 0 0 0 S
-EW 0 1 0 -1
+264266 1 0 33554584 2 0 0 0 S
+EW 0 1 -1
 42 -1 -69 42d107+1890 6d6+12
 0.0.0.0 102060
 8 8 0
 #15120
 undead wizard~
-&+Wthe &+wun&+Ld&+we&+La&+wd &+Mw&+mizar&+Md&n~
+&+Wthe undead wizard&n~
 &+LThe undead wizard is standing here, waiting for your order.&n
 ~
    He says "Welcome to my shop." He forces a smile with what is left of his
 face.....
 ~
-2058 0 0 0 33554568 2 0 0 -1000 S
-U 0 512 0 -1
+2058 0 0 33554568 2 0 0 -1000 S
+U 0 512 -1
 56 -7 -114 56d96+5768 7d6+35
 0.0.0.0 226800
 8 8 1
@@ -252,60 +252,60 @@ water fiend~
    A fiend formed from the water elemental, it is here to guard the rivers water
 against unwanted visitors.
 ~
-2058 1 0 0 8 0 0 0 -1000 S
-EW 0 1 0 -1
+2058 1 0 8 0 0 0 -1000 S
+EW 0 1 -1
 54 -5 -117 54d131+4590 7d6+30
 0.0.0.0 218700
 8 8 0
 #15122
 undead fish~
-&+Lan undead &+gfish&n~
+an undead fish~
 An undead fish is here, floating on top of the water.
 ~
    Its dead, very dead....Not something that people would catch and bring home
 for the family.
 ~
-295048 1 0 0 8 0 0 0 -1000 S
-U 0 0 0 -1
+295048 1 0 8 0 0 0 -1000 S
+U 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
 #15123
 undead child~
-&+Lan undead &+cchild&n~
-&+LAn undead &+cchild &+Lis here, crawling on the ground.&n
+an undead child~
+An undead child is here, crawling on the ground.
 ~
    It looks very very young. It seems to be very very evil.
 ~
-2184 1 0 0 33554440 2 0 0 -1000 S
-U 0 0 0 -1
+2184 1 0 33554440 2 0 0 -1000 S
+U 0 0 -1
 12 15 61 12d23+48 2d5+2
 0.0.0.0 5832
 8 8 0
 #15124
 undead boatman keeper~
-&+Wthe &+Lundead &+cb&+Co&+ca&+Ct &+Lk&+weepe&+Lr&n~
-&+wAn &+Lundead &+cboat &+Lkeeper is here, mindlessly selling boats.&n
+&+Wthe undead boat keeper&n~
+&+WAn undead boat keeper is here, mindlessly selling boats.&n
 ~
    The undead boat keeper is grotesque in appearence with flesh still
 falling from its limbs. He seems to be repeating the job he did in life
 over and over again till the end of time.
 ~
-2122 0 0 0 136 194 0 0 -1000 S
-U 0 256 0 -1
+2122 0 0 136 194 0 0 -1000 S
+U 0 256 -1
 60 -7 -117 57d132+5928 7d6+35
 0.0.0.0 230850
 8 8 1
 #15125
 jurtrem dreaded executioner~
-&+gJ&+Lurtrem the &+RD&+rreaded&n~
+&+rJurtrem the Dreaded&n~
 &+LThe dark executioner, Jurtrem the Dreaded, is here preparing to destroy you.&n
 ~
 He stands nine feet tall with pitch-black eyes and long white hair.  His arms
 are extremely muscled, covered by pale white skin.
 ~
-67595 1 0 0 33628344 32770 0 0 -1000 S
-G 0 16777216 0 -1
+67595 1 0 33628344 32770 0 0 -1000 S
+G 0 16777216 -1
 60 -10 -122 60d120+16480 7d6+47
 6.6.9.7 275000
 8 8 1
@@ -316,8 +316,8 @@ kraken~
 ~
 Its form shift and wavers about, not allowing you to get a good look at it.
 ~
-1074007114 1 0 0 34605096 0 0 0 -1000 S
-A 0 8192 0 -1
+1074007114 1 0 34605096 0 0 0 -1000 S
+A 0 8192 -1
 58 -7 -125 58d120+5974 7d6+35
 0.0.0.0 234900
 8 8 0
@@ -329,8 +329,8 @@ shadow lord~
 His blackened form shifts in and out, never quite allowing you a good look
 at any of its features.  The shadow is about eight feet tall.
 ~
-1140852810 1 0 0 570949816 2 0 0 -1000 S
-X 0 1 0 -1
+1140852810 1 0 570949816 2 0 0 -1000 S
+X 0 1 -1
 59 -7 -132 57d143+6384 7d6+35
 2.4.2.9 346275
 8 8 0

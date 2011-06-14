@@ -1,23 +1,11 @@
 #135201
-&+LBefore the Base of the &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof &+LS&+wk&+Lu&+wl&+Ll&+ws&n~
+&+LBefore the &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof &+LS&+wk&+Lu&+wl&+Ll&+ws&n~
 ~
 1352 0 0 0
-D0
-~
-~
-0 0 135284
 D1
 ~
 ~
 0 0 135202
-D2
-~
-~
-0 0 135285
-D3
-~
-~
-0 0 135286
 S
 #135202
 &+LThe Massive &+wE&+Ln&+wt&+Lr&+wa&+Ln&+wc&+Le &+Lto the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Caverns&n~
@@ -25,8 +13,8 @@ S
 1352 0 0 0
 D1
 ~
-gate~
-3 135210 135203
+~
+0 0 135203
 D3
 ~
 ~
@@ -43,7 +31,7 @@ D1
 D3
 ~
 ~
-3 135210 135202
+0 0 135202
 S
 #135204
 &+LAn Intersection of Tunnels in the &+LA&+rz&+Lh&+ru&+Lr&+ra&+Ll Ca&+wver&+Lns~
@@ -1224,73 +1212,4 @@ S
 &+BTh&+be G&+Bat&+bes &+Bof &+bM&+Ba&+bl&+Bs&+bp&+Be&+br&+Ba&+bn&+Bz&+be&n~
 ~
 1352 0 0 0
-S
-#135284
-&+LNearing the &+YL&+yegendar&+Yy &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
-~
-1352 0 0 0
-D2
-~
-~
-0 0 135201
-D3
-~
-~
-0 0 135287
-S
-#135285
-&+LNearing the &+YL&+yegendar&+Yy &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
-~
-1352 0 0 0
-D0
-~
-~
-0 0 135201
-D3
-~
-~
-0 0 135288
-S
-#135286
-&+LBefore the Base of the &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
-~
-1352 0 0 0
-D0
-~
-~
-0 0 135287
-D1
-~
-~
-0 0 135201
-D2
-~
-~
-0 0 135288
-S
-#135287
-&+LNearing the &+YL&+yegendar&+Yy &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
-~
-1352 0 0 0
-D1
-~
-~
-0 0 135284
-D2
-~
-~
-0 0 135286
-S
-#135288
-&+LNearing the &+YL&+yegendar&+Yy &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
-~
-1352 0 0 0
-D0
-~
-~
-0 0 135286
-D1
-~
-~
-0 0 135285
 S

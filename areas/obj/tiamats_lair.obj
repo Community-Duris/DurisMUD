@@ -63,27 +63,27 @@ object unnamed~
 0 0 0 0 0 0 0 0
 0 0 100
 #135209
-blackened bloodstone key~
+object unnamed~
 &+La blackened &+rbl&+Roo&+rdst&+Ro&+rne &+wk&+Le&+wy&n~
 &+LA blackened &+rbl&+Roo&+rdst&+Ro&+rne &+Lkey in the shape of a &+mdragons &+rtalon &+Llies here, discarded.&n~
 ~
-18 11 3 0 7 0 1 16385 0 0 0
-0 100 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
 0 0 100
 #135210
-key fused bone shards~
-&+La key of &+Gf&+gused &+wb&+Wo&+wn&+We &+Lshards&n~
-&+LA key of fused &+wb&+Wo&+wn&+We&+ws &+Llies here, &+Yglowing &+Lsoftly with a &+ggreen &+Lfire.&n~
+object unnamed~
+an unnamed object~
+An unnamed object lies here, looking lonely and forelorn.~
 ~
-18 15 3 0 7 0 41951241 16385 0 0 0
-0 100 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
 0 0 100
 #135211
-shard bone~
-&+La shard of &+wb&+Wo&+wn&+We&n~
-&+LA shard of &+wb&+Wo&+wn&+We &+Llies here, discarded.&n~
+object unnamed~
+an unnamed object~
+An unnamed object lies here, looking lonely and forelorn.~
 ~
-13 10 3 0 14 0 8392705 16385 0 0 0
+13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135212
@@ -113,51 +113,35 @@ An unnamed object lies here, looking lonely and forelorn.~
 #135215
 mighty scepter valhalla~
 &+ythe mighty scepter of v&+Ya&+yl&+Yh&+ya&+Yl&+yl&+Ya&n~
-&+yA &+Ygold &+ystudded scepter lies here, emitting a soft &+Lhum&+y.&n~
+An unnamed object lies here, looking lonely and forelorn.~
 ~
-5 19 3 0 15 0 33554433 8193 0 62951396 270336
-6 6 4 0 0 0 0 0
-0 712324 100
-A
-18 5
-A
-19 5
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
 #135216
 hooded cloak isha wanderer black~
 &+Lthe black hooded cloak of &+cI&+Ls&+ch&+La the Wanderer~
-&+LA dark hooded cloak lies here, absorbing light like the darkest of night.&n~
+An unnamed object lies here, looking lonely and forelorn.~
 ~
-9 15 3 0 7 0 69632 1025 0 267517926 0
-10 0 0 0 0 0 0 0
-0 0 100 268959744 0 0 0
-A
-17 -50
-A
-55 10
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
 #135217
 shadowforged shadow forged pendant dragon queen~
 &+La sh&+wa&+Ldow&+Bfor&+bged &+Lpe&+wnd&+Lan&+wt &+Lof the &+gd&+Gr&+ga&+Gg&+Go&+gn &+Mq&+mu&+Me&+me&+Mn&n~
-&+LA pendant shaped like &+Wfive &+Lscreaming dragons lies here, &+cgli&+Cmmer&+cing&+L.&n~
+An unnamed object lies here, looking lonely and forelorn.~
 ~
-9 23 3 0 15 0 1 5 0 95514747 0
-8 0 0 0 0 0 0 0
-0 300123 100 0 32768 0 0
-A
-24 5
-A
-35 5
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100 0 32768 0 0
 #135218
 crown legendary sphinx prefects~
 &+La &+ycrown &+Lof the legendary &+Ys&+yp&+Yh&+yi&+Yn&+yx &+Gp&+gr&+Ge&+gf&+Ge&+gc&+Gt&+gs&n~
-&+LA crown of encircled &+ysphinx &+Llies here, discarded.&n~
+An unnamed object lies here, looking lonely and forelorn.~
 ~
-9 19 3 0 7 0 1 17 0 234225247 0
-15 0 0 0 0 0 0 0
-0 1241010 100 134217744 0 0 0
-A
-34 6
-A
-35 6
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
 #135219
 shield battle dragon~
 &+La &+msh&+Mie&+mld &+Lof the &+mba&+Mtt&+mle &+Ldragon&n~

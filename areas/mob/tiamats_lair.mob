@@ -4,9 +4,9 @@ ancient white dragon patrol~
 &+WAn an&+wcien&+Wt white dr&+wagon &+Wpatrols the &+cf&+Cr&+ci&+Cg&+ci&+Cd &+Wl&+wai&+Wr.&n
 ~
 ~
-1342208584 1 0 0 0 0 0 0 -1000 S
-D 0 513 0 -1
-59 0 0 1d1+1 1d1+1
+1342208584 1 0 0 0 0 0 -1000 S
+D 0 513 -1
+55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #135202
@@ -15,8 +15,8 @@ mob unnamed~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -26,8 +26,8 @@ mob unnamed~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ mob unnamed~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -48,8 +48,8 @@ mob unnamed~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -59,8 +59,8 @@ ephelemon ancient red dragon consort _no_move_~
 &+rA &+RHUGE &+rred dragon stands here, towering above the rest of his kind.&n
 ~
 ~
-268458090 1 0 0 402653336 4194305 1048704 262144 -1000 S
-D 0 2561 0 -1
+268458090 1 0 402653336 4194305 1048704 262144 -1000 S
+D 0 2561 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -70,8 +70,8 @@ xasormalathin ancient green dragon consort _no_move_~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-268459082 1 0 0 939524248 2176 1048704 33555456 -1000 S
-D 0 2099200 0 -1
+268459082 1 0 939524248 2176 1048704 33555456 -1000 S
+D 0 2099200 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -81,8 +81,8 @@ kalanakanitan ancient black dragon consort _no_move_~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-268438602 1 0 0 939524248 2048 1048704 33554432 -1000 S
-D 0 33554689 0 -1
+268438602 1 0 939524248 2048 1048704 33554432 -1000 S
+D 0 33554689 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -92,8 +92,8 @@ zenalithiananthisa ancient white dragon consort _no_move_ _spec3_~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-268458506 1 0 0 402727096 34880 128 4195328 -1000 S
-D 0 33554689 0 -1
+268458506 1 0 402727096 34880 128 4195328 -1000 S
+D 0 33554689 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -103,8 +103,8 @@ tenanizeothian ancient blue dragon consort _no_move_~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-268458250 1 0 0 402653336 128 0 0 -1000 S
-D 0 39845888 0 -1
+268458250 1 0 402653336 128 0 0 -1000 S
+D 0 39845888 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -114,8 +114,8 @@ mob unnamed~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -125,8 +125,8 @@ golem fused bone demon _no_move_~
 &+LA &+wgo&+Ll&+wem &+Lforged from the slain &+Ld&+we&+Lm&+wo&+Ln&+ws &+Lof the &+Rb&+rloo&+Rd &+ww&+Wa&+wr &+Lstands here, guarding the Pillar.&n
 ~
 ~
-268466282 0 0 0 402653336 1 128 0 -1000 S
-OG 0 513 0 -1
+268466282 0 0 402653336 1 128 0 -1000 S
+OG 0 513 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -136,8 +136,8 @@ mob unnamed~
 &+LDr&+wa&+Lg&+wo&+Lth the dragon of the &+mdepths &+Lguards passage into the tunnels.&n
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -147,8 +147,8 @@ dragon dragonkin kin seer _no_move_~
 &+LA &+Gd&+grago&+Gn&+Lkin &+rs&+Ree&+rr &+Lstands here, guarding the &+Cpool &+Lof &+cscrying&+L.&n
 ~
 ~
-10 1 0 0 134217872 32768 128 4096 -1000 S
-DK 0 416 0 -1
+10 1 0 134217872 32768 128 4096 -1000 S
+DK 0 416 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -158,8 +158,8 @@ mob unnamed~
 &+LMordukhavar, the d&+we&+Lm&+wo&+Ln &+rs&+Rpaw&+rn &+Lof the dragon queen stands here, blocking &+wentrance&+L.&n
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -169,8 +169,8 @@ barbed devil firesworn legion~
 &+LA barbed devil stands here, following his commanders instructions and ravaging the lands.&n
 ~
 ~
-8 0 0 0 939532312 0 0 0 -1000 S
-Y 0 1 0 -1
+8 0 0 939532312 0 0 0 -1000 S
+Y 0 1 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -180,8 +180,8 @@ pit fiend warlord firesworn legion~
 &+LA HUGE &+rp&+Ri&+rt f&+Ri&+re&+Rn&+rd &+Lstands here, commanding his soldiers during the invasion.&n
 ~
 ~
-16807944 1 0 0 402653368 0 0 0 -1000 S
-Y 0 513 0 -1
+16807944 1 0 402653368 0 0 0 -1000 S
+Y 0 513 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -191,30 +191,30 @@ zyla destroyer daughter abishai~
 &+rZyla&+L, daughter of Tiamat and lieutenant of &+rBel's &+Larmy, stands here, overseeing the &+Yinvasion&+L.&n
 ~
 ~
-285243432 1 0 0 402653208 0 0 0 -1000 S
-Y 0 520 0 -1
+285243432 1 0 402653208 0 0 0 -1000 S
+Y 0 520 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
 #135219
-shadowy figure~
-&+La shadowy figure&n~
-&+LA tall, shadowy figure stands here, blocking entrance past the &+Bgate&+L.&n
+mob unnamed~
+an unnamed mob~
+An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-268529738 0 0 0 402653328 0 0 0 0 S
-dk 0 16779777 0 -1
-61 0 0 1d1+1 1d1+1
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 1
+8 8 0
 #135220
 mob unnamed~
 an unnamed mob~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
