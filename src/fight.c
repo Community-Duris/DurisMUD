@@ -3123,7 +3123,7 @@ int try_riposte(P_char ch, P_char victim, P_obj wpn)
     skl *= 0.50;
 
   if(IS_AFFECTED5(ch, AFF5_DAZZLEE))
-    skl *= 0.95;
+    skl *= 0.85;
 
 // Expert riposte.
   if(expertriposte)
@@ -7408,7 +7408,7 @@ int dodgeSucceed(P_char char_dodger, P_char attacker, P_obj wpn)
   if(IS_AFFECTED5(char_dodger, AFF5_DAZZLEE) ||
     IS_STUNNED(char_dodger))
   {
-    percent = (int) (percent * 0.90);
+    percent = (int) (percent * 0.80);
   }
 
   if(IS_STUNNED(attacker))
@@ -7506,7 +7506,7 @@ int blockSucceed(P_char victim, P_char attacker, P_obj wpn)
         learned = (int) (learned * 1.5); 
 
   if(IS_AFFECTED5(victim, AFF5_DAZZLEE))
-    learned -= 10;
+    learned -= 15;
   // Victim benefits from having a shield and not standing.
   // This is intentional as parry and dodge values are
   // greatly reduced when victim is not standing. The victim
@@ -7795,7 +7795,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
     learnedattacker = (int) (learnedattacker * 0.75);
 
   if(IS_AFFECTED5(victim, AFF5_DAZZLEE))
-    learnedvictim = (int) (learnedvictim * 0.90);
+    learnedvictim = (int) (learnedvictim * 0.80);
 
   if(affected_by_spell(victim, SKILL_GAZE))
     learnedvictim = (int) (learnedvictim * 0.80);
@@ -8829,7 +8829,7 @@ void DestroyStuff(P_char victim, int type)
   int slot, poofed = 0, worn = 0;
   P_obj item;
   int poof_chance = (int)(get_property("pvp.eq.poof.chance", 10));
-//  int poof_chance_niceq_multiplier = (int)(get_property("pvp.eq.poof.niceeq.chance.multiplier", 2));
+  int poof_chance_niceq_multiplier = (int)(get_property("pvp.eq.poof.niceeq.chance.multiplier", 2));
 
   if(!(victim))
   {
@@ -8841,64 +8841,59 @@ void DestroyStuff(P_char victim, int type)
   {
     item = victim->equipment[proccing_slots[slot]];
     
-    if(!item ||
-       is_nopoof(item))
+    if(!item || is_nopoof(item))
     {
       continue;
     }
     
-//    worn++;
+    worn++;
     
-    //poof_chance =
-      // MIN((int)
-          // (get_property("damage.minPoofChance", 5.) +
-           // obj_index[item->R_num].number / 5),
-          // (int) get_property("damage.maxPoofChance", 20.));
+    poof_chance =  MIN((int) (get_property("damage.minPoofChance", 5.) + obj_index[item->R_num].number / 5),
+                       (int) get_property("damage.maxPoofChance", 20.));
     
-    // if(IS_SET(item->bitvector, AFF_STONE_SKIN) ||
-       // IS_SET(item->bitvector, AFF_HASTE) ||
-       // IS_SET(item->bitvector, AFF_AWARE) ||
-       // IS_SET(item->bitvector, AFF_HIDE) ||
-       // IS_SET(item->bitvector2, AFF2_FIRE_AURA) ||
-       // IS_SET(item->bitvector2, AFF2_GLOBE) ||
-       // IS_SET(item->bitvector3, AFF3_GR_SPIRIT_WARD) ||
-       // IS_SET(item->bitvector4, AFF4_DAZZLER) ||
-       // IS_SET(item->bitvector4, AFF4_HELLFIRE) ||
-       // IS_SET(item->bitvector4, AFF4_REGENERATION) ||
-       // obj_index[item->R_num].func.obj != NULL)
-    // {
-      // poof_chance = (int)(poof_chance_niceq_multiplier * poof_chance);
-    // }
+    if(IS_SET(item->bitvector, AFF_STONE_SKIN) ||
+       IS_SET(item->bitvector, AFF_HASTE) ||
+       IS_SET(item->bitvector, AFF_AWARE) ||
+       IS_SET(item->bitvector, AFF_HIDE) ||
+       IS_SET(item->bitvector2, AFF2_FIRE_AURA) ||
+       IS_SET(item->bitvector2, AFF2_GLOBE) ||
+       IS_SET(item->bitvector3, AFF3_GR_SPIRIT_WARD) ||
+       IS_SET(item->bitvector4, AFF4_DAZZLER) ||
+       IS_SET(item->bitvector4, AFF4_HELLFIRE) ||
+       IS_SET(item->bitvector4, AFF4_REGENERATION) ||
+       IS_SET(item->bitvector, AFF_SNEAK) ||
+       obj_index[item->R_num].func.obj != NULL)
+    {
+       poof_chance = (int)(poof_chance_niceq_multiplier * poof_chance);
+    }
     
     if(poof_chance > number(1, 100))
     {
-//      poofed++;
+      poofed++;
       statuslog(AVATAR, "%s [%d] was destroyed.", item->short_description,
                 (item->R_num >= 0) ? obj_index[item->R_num].virtual_number : 0);
       DamageOneItem(victim, type, item, TRUE);
     }
   }
 
-  // if(worn)
-  // {
-    // if(!poofed)
-    // {
-      // do
-      // {
-        // slot = number(0, sizeof(proccing_slots) / sizeof(int) - 1);
-      // }
-      // while (!(item = victim->equipment[proccing_slots[slot]]) ||
-             // is_nopoof(item));
-             // statuslog(AVATAR, "%s [%d] was destroyed.", item->short_description,
-                // (item->R_num >=
-                 // 0) ? obj_index[item->R_num].virtual_number : 0);
-      // DamageOneItem(victim, type, item, TRUE);
-    // }
-  // }
-  // else
-  // {
-    // statuslog(AVATAR, "%s died with no eq.", victim->player.name);
-  // }
+  if(worn)
+  {
+    if(!poofed)
+    {
+      do
+      {
+        slot = number(0, sizeof(proccing_slots) / sizeof(int) - 1);
+      }
+      while (!(item = victim->equipment[proccing_slots[slot]]) || is_nopoof(item));
+      statuslog(AVATAR, "%s [%d] was destroyed.", item->short_description,
+               (item->R_num >= 0) ? obj_index[item->R_num].virtual_number : 0);
+      DamageOneItem(victim, type, item, TRUE);
+    }
+  }
+  else
+  {
+    statuslog(AVATAR, "%s died with no eq.", victim->player.name);
+  }
 }
 
 bool fear_check(P_char ch)

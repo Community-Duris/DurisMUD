@@ -468,7 +468,7 @@ int writeStatus(char *buf, P_char ch)
   ADD_INT(buf, ch->only.pc->quest_zone_number );
   ADD_INT(buf, ch->only.pc->quest_giver);
   ADD_INT(buf, ch->only.pc->quest_level );
-  ADD_INT(buf, ch->only.pc->quest_reciver );
+  ADD_INT(buf, ch->only.pc->quest_receiver );
   ADD_INT(buf, ch->only.pc->quest_shares_left );
   ADD_INT(buf, ch->only.pc->quest_kill_how_many);
   ADD_INT(buf, ch->only.pc->quest_kill_original);
@@ -2394,7 +2394,7 @@ int restoreStatus(char *buf, P_char ch)
   ch->only.pc->quest_zone_number = GET_INTE(buf);
   ch->only.pc->quest_giver = GET_INTE(buf);
   ch->only.pc->quest_level = GET_INTE(buf);
-  ch->only.pc->quest_reciver = GET_INTE(buf);
+  ch->only.pc->quest_receiver = GET_INTE(buf);
   ch->only.pc->quest_shares_left = GET_INTE(buf);
   ch->only.pc->quest_kill_how_many = GET_INTE(buf);
   ch->only.pc->quest_kill_original = GET_INTE(buf);

@@ -1669,7 +1669,7 @@ int new_descriptor(int s)
     buf.desc = desc;
     /*
      * note that I put in a "." in the front of the addr field. That
-     * will signal the "reciver" that this name already occurs in the
+     * will signal the "receiver" that this name already occurs in the
      * lookup list.
      */
     sprintf(buf.addr, ".%d.%d.%d.%d",

@@ -1185,7 +1185,7 @@ struct pc_only_data {           /* values only used by PCs        */
   int quest_zone_number;
   int quest_giver;
   int quest_level;
-  int quest_reciver;
+  int quest_receiver;
   int quest_shares_left;
   int quest_kill_how_many;
   int quest_kill_original;
