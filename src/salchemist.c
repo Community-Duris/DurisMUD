@@ -1698,7 +1698,7 @@ void spell_napalm(int level, P_char ch, char *arg, int type, P_char victim, P_ob
   spell_damage(ch, victim, dam, SPLDAM_FIRE, SPLDAM_NODEFLECT, &messages);
 }
 
-void spell_strong_acid(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
+/*void spell_strong_acid(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int dam;
   struct damage_messages messages = {
@@ -1712,6 +1712,59 @@ void spell_strong_acid(int level, P_char ch, char *arg, int type, P_char victim,
   dam = (int)(10.5 * MIN(level, 50)) + number(1, 25);
 
   spell_damage(ch, victim, dam, SPLDAM_ACID, SPLDAM_NODEFLECT, &messages);
+}*/
+
+void spell_strong_acid(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
+{
+   switch(level / 5)
+   {
+     case 12:
+       spell_acidimmolate(level, ch, 0, 0, victim, 0);
+       spell_acid_blast(level, ch, 0, 0, victim, 0);
+       break;
+     case 11:
+       spell_acidimmolate(level, ch, 0, 0, victim, 0);
+       spell_acid_stream(level, ch, 0, 0, victim, 0);
+       break;
+     case 10:
+       spell_acidimmolate(level, ch, 0, 0, victim, 0);
+       break;
+     case 9:
+       spell_acidimmolate(level, ch, 0, 0, victim, 0);
+       break;
+     case 8:
+       spell_acid_blast(level, ch, 0, 0, victim, 0);
+       spell_acid_stream(level, ch, 0, 0, victim, 0);
+       break;
+     case 7:
+       spell_acid_blast(level, ch, 0, 0, victim, 0);
+       spell_acid_stream(level, ch, 0, 0, victim, 0);
+       break;
+     case 6:
+       spell_acid_blast(level, ch, 0, 0, victim, 0);
+       spell_acid_stream(level, ch, 0, 0, victim, 0);
+       break;
+     case 5:
+       spell_acid_blast(level, ch, 0, 0, victim, 0);
+       spell_acid_stream(level, ch, 0, 0, victim, 0);
+       break;
+     case 4:
+       spell_acid_blast(level, ch, 0, 0, victim, 0);
+       break;
+     case 3:
+       spell_acid_blast(level, ch, 0, 0, victim, 0);
+       break;
+     case 2:
+       spell_acid_stream(level, ch, 0, 0, victim, 0);
+       break;
+     case 1:
+       spell_acid_stream(level, ch, 0, 0, victim, 0);
+       break;
+     default:
+       spell_acid_blast(level, ch, 0, 0, victim, 0);
+  }
+
+  return;
 }
 
 void spell_glass_bomb(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)

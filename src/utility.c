@@ -1140,18 +1140,6 @@ int ac_can_see(P_char sub, P_char obj, bool check_z)
   if (sub->in_room == -1)
     return 0;
 
-  for (tmp_char = world[sub->in_room].people; tmp_char; tmp_char = tmp_char->next_in_room)
-  {
-    if (IS_AFFECTED4(tmp_char, AFF4_MAGE_FLAME))
-    {
-      flame = 1;
-    }
-    if (IS_AFFECTED4(tmp_char, AFF4_GLOBE_OF_DARKNESS))
-    {
-      globe = 1;
-    }
-  }
-
   if (!AWAKE(sub))
     return 0;
   if(IS_BLIND(sub))
@@ -1162,6 +1150,7 @@ int ac_can_see(P_char sub, P_char obj, bool check_z)
 
   if (GET_LEVEL(sub) > MAXLVLMORTAL)
     return 1;
+
 
   /* Flyers */
   if( 0 &&
@@ -1190,6 +1179,19 @@ int ac_can_see(P_char sub, P_char obj, bool check_z)
   
   if(IS_AFFECTED(obj, AFF_HIDE) && !affected_by_spell(obj, TAG_CTF))// && (obj != sub))
     return 0;
+
+
+  for (tmp_char = world[sub->in_room].people; tmp_char; tmp_char = tmp_char->next_in_room)
+  {
+    if (IS_AFFECTED4(tmp_char, AFF4_MAGE_FLAME))
+    {
+      flame = 1;
+    }
+    if (IS_AFFECTED4(tmp_char, AFF4_GLOBE_OF_DARKNESS))
+    {
+      globe = 1;
+    }
+  }
 
   /*
    * Room is magically dark
@@ -1759,10 +1761,6 @@ bool FightingCheck(P_char ch, P_char vic, const char *calling)
    chars that are 1. of the class(param) 2. >= to min_level(param)
    3. in same room and 4. are consented to leader
 */
-
-
-
-
 
 int get_multicast_chars(P_char leader, int m_class, int min_level)
 {
@@ -3940,15 +3938,6 @@ int GET_CLASS1(P_char ch, uint m_class)
 
 }
 
-
-/*
-#define GET_ALT_SIZE(ch) (BOUNDED(SIZE_MINIMUM, ((ch)->player.size + \
-                                 ((IS_AFFECTED3((ch), AFF3_ENLARGE)) ? 1 : \
-                                                           ((IS_AFFECTED3((ch), AFF3_REDUCE)) ? -1 : 0))) + \
-                               ( ( IS_AFFECTED5( (ch) , AFF5_TITAN_FORM ) ) ? 3 : 0), \
-                                                        SIZE_MAXIMUM))
-
-*/
 int GET_ALT_SIZE(P_char ch)
 {
   int size = GET_SIZE(ch);
@@ -4658,23 +4647,23 @@ bool is_hot_in_room(int room)
 
 int IS_TWILIGHT_ROOM(int r)
 {
-  if( !IS_SET(world[r].room_flags, MAGIC_DARK) && IS_SET(world[r].room_flags, TWILIGHT) ) 
+  if(!IS_SET(world[r].room_flags, MAGIC_DARK) && IS_SET(world[r].room_flags, TWILIGHT)) 
     return TRUE;
  
-  if( IS_UD_MAP(r) )
+  if(IS_UD_MAP(r))
     return TRUE;
  
-  if( !IS_SUNLIT(r) && 
+  if(!IS_SUNLIT(r) && 
       !IS_SET(world[r].room_flags, INDOORS | MAGIC_LIGHT | MAGIC_DARK | DARK) && 
       !IS_UNDERWORLD(r) && 
-      (world[r].sector_type != SECT_INSIDE) )
+      (world[r].sector_type != SECT_INSIDE))
     return TRUE;
     
-  if( IS_SET(world[r].room_flags, MAGIC_LIGHT) && IS_SET(world[r].room_flags, MAGIC_DARK | DARK) )
+  if(IS_SET(world[r].room_flags, MAGIC_LIGHT) && IS_SET(world[r].room_flags, MAGIC_DARK | DARK))
     return TRUE;
   
-  if( !IS_SET(world[r].room_flags, MAGIC_LIGHT) && 
-      ( IS_SWAMP_ROOM(r) || IS_FOREST_ROOM(r) ) )
+  if(!IS_SET(world[r].room_flags, MAGIC_LIGHT) && 
+      (IS_SWAMP_ROOM(r) || IS_FOREST_ROOM(r)))
     return TRUE;
 
   if(world[r].sector_type == SECT_ASTRAL || world[r].sector_type == SECT_ETHEREAL)

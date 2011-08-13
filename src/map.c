@@ -793,8 +793,7 @@ int map_view_distance(P_char ch, int room)
   
   if(has_innate(ch, INNATE_EYELESS))
   {
-    // eyeless - this means that ANY other factors mean nothing.
-    n = 8;
+    n = 4;
   }
   // if on the surface
   else if (IS_SURFACE_MAP(room))
@@ -808,32 +807,32 @@ int map_view_distance(P_char ch, int room)
       n = BOUNDED(0, map_g_modifier, 8);
     }
     
-    if( IS_AFFECTED(ch, AFF_FLY) )
+    if(IS_AFFECTED(ch, AFF_FLY))
     {
       n++;
     }
     
   }
-  else if (IS_UD_MAP(room))
+  else if(IS_UD_MAP(room))
   {
     if(RACE_GOOD(ch))
     {
-      n = 5;
+      n = 4;
 
-      if( IS_LIGHT(room) )
+      if(IS_LIGHT(room))
         n += 1;
       
-      if (IS_AFFECTED2(ch, AFF2_ULTRAVISION))
+      if(IS_AFFECTED2(ch, AFF2_ULTRAVISION))
         n += 1;
     }
     else
     {
       n = 5;
     
-      if (has_innate(ch, INNATE_DAYBLIND))
+      if(has_innate(ch, INNATE_DAYBLIND))
         n += 1; 
       
-      if (IS_AFFECTED2(ch, AFF2_ULTRAVISION))
+      if(IS_AFFECTED2(ch, AFF2_ULTRAVISION))
         n += 2;
     }
   }
@@ -842,30 +841,35 @@ int map_view_distance(P_char ch, int room)
     n = 5;
     
     if(has_innate(ch, INNATE_PERCEPTION))
-      n += 2;
+      n += 1;
     
     if(IS_AFFECTED4(ch, AFF4_HAWKVISION))
       n += 1;
   }
   
-  if (IS_FOREST_ROOM(room) &&
+  if(IS_FOREST_ROOM(room) &&
       !has_innate(ch, INNATE_FOREST_SIGHT) &&
       n > 3) 
   {
     n = 3;
   }
+  else if(IS_FOREST_ROOM(room) &&
+         has_innate(ch, INNATE_FOREST_SIGHT))
+  {
+    n = 4;
+  }
 
   n = BOUNDED(0, n, 10);
   
-  if( IS_OCEAN_ROOM(room) )
+  if(IS_OCEAN_ROOM(room))
   {
     n = 10;
   }
-  if( IS_TRUSTED(ch) )
+  if(IS_TRUSTED(ch))
   {
     n = 12;
   }
-  if (ch->specials.z_cord > 0)
+  if(ch->specials.z_cord > 0)
   {
     n += ch->specials.z_cord;
   }
@@ -1043,16 +1047,16 @@ bool set_continent(int start_room, int continent)
     
     for( int dir = 0; dir < NUM_EXITS; dir++ ) 
     {
-      if( !world[room].dir_option[dir] ) continue;
-      if( !TOROOM(room, dir) ) continue;      
-      if( world[TOROOM(room, dir)].continent ) continue;
-      if( TOROOM(room, dir) == NOWHERE ) continue;
-      if( !world[TOROOM(room,dir)].dir_option[rev_dir[dir]] ) continue;
-      if( TOROOM(TOROOM(room, dir), rev_dir[dir]) != room ) continue;      
-      if( TO_OCEAN(room, dir) ) continue;
-      if( !SAME_ZONE(room, dir) ) continue;
+      if(!world[room].dir_option[dir]) continue;
+      if(!TOROOM(room, dir)) continue;      
+      if(world[TOROOM(room, dir)].continent) continue;
+      if(TOROOM(room, dir) == NOWHERE) continue;
+      if(!world[TOROOM(room,dir)].dir_option[rev_dir[dir]]) continue;
+      if(TOROOM(TOROOM(room, dir), rev_dir[dir]) != room) continue;      
+      if(TO_OCEAN(room, dir)) continue;
+      if(!SAME_ZONE(room, dir)) continue;
       
-      rooms_left.push_front( TOROOM(room, dir) );
+      rooms_left.push_front(TOROOM(room, dir));
     }
     
   }
@@ -1064,9 +1068,9 @@ bool set_continent(int start_room, int continent)
 
 const char *continent_name(int continent_id)
 {
-  for( int i = 0; continents[i].id; i++ )
+  for(int i = 0; continents[i].id; i++)
   {
-    if( continents[i].id == continent_id )
+    if(continents[i].id == continent_id)
       return continents[i].name;
   }
   
@@ -1080,7 +1084,7 @@ void calculate_map_coordinates()
     int* room_stack = (int*) malloc(sizeof(int) * top_of_world);
 
     unsigned rs_pointer = 0;
-    if (!room_stack)
+    if(!room_stack)
     {
       logit(LOG_BOARD, " Error - malloc failed in map coordinate calculation");
       exit(1);

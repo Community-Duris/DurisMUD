@@ -556,21 +556,84 @@ void illithid_advance_level(P_char ch)
   }
 }
 
+bool check_advancement(P_char player)
+{
+  bool tf = FALSE;
+
+  if(GET_LEVEL(player) < 49)
+    return TRUE;
+
+  switch(GET_LEVEL(player))
+  {
+    case 56:
+     break;
+    case 55:
+     if(player->only.pc->frags > 8.00 &&
+        player->only.pc->epics > 4000)
+       tf = TRUE;
+     else
+       tf = FALSE;
+     break;
+    case 54:
+     if(player->only.pc->frags > 4.00 &&
+        player->only.pc->epics > 3000)
+       tf = TRUE;
+     else
+       tf = FALSE;
+     break;
+     case 53:
+     if(player->only.pc->frags > 2.00 &&
+        player->only.pc->epics > 2000)
+       tf = TRUE;
+     else
+       tf = FALSE;
+     break;
+     case 52:
+     if(player->only.pc->frags > 1.00 &&
+        player->only.pc->epics > 1000)
+       tf = TRUE;
+     else
+       tf = FALSE;
+     break;
+     case 51:
+     if(player->only.pc->frags > 0.50 &&
+        player->only.pc->epics > 500)
+       tf = TRUE;
+     else
+       tf = FALSE;
+     break;
+     case 50:
+     if(player->only.pc->frags > 0.10 &&
+        player->only.pc->epics > 250)
+       tf = TRUE;
+     else
+       tf = FALSE;
+     break;
+     case 49:
+     if(player->only.pc->epics > 100)
+       tf = TRUE;
+     else
+       tf = FALSE;
+     break;
+     default:
+     break;
+   }
+
+  return tf;
+}
+    
 void advance_level(P_char ch)
 {
-/*  struct time_info_data playing_time;*/
+  if(!check_advancement(ch))
+    return;
+
   int      add_mana = 0, i;
   int      prestige = 100;
-  /* level normally, please
-   *
-   *
- ///TODO CODE THIS PIECE OF MASTER    */
-
   
   ch->player.level++;
   sql_update_level(ch);
 
-  if( GET_LEVEL(ch) > 1 )
+  if(GET_LEVEL(ch) > 1)
   {
     sql_log(ch, PLAYERLOG, "Advanced to level %d", GET_LEVEL(ch)); 
   }
@@ -581,7 +644,7 @@ void advance_level(P_char ch)
   logit(LOG_LEVEL, "Level %2d: %s", GET_LEVEL(ch), GET_NAME(ch));
   ch->only.pc->prestige++;
 
-  if( IS_PC(ch) && 
+  if(IS_PC(ch) && 
      GET_A_NUM(ch) && 
      ch->only.pc->highest_level < GET_LEVEL(ch) &&
      ch->group )
