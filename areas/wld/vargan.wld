@@ -1,5 +1,5 @@
 #2100
-&+g Forest Path~
+&+gForest Path~
 &+gA forest spreads out in all directions. The forest contains many different
 &+gspecies of trees, and some individual trees are obviously very ancient, with
 &+gmassive trunks rising high above the forest floor.  There is also much scrub
@@ -25,7 +25,7 @@ D3
 0 0 609046
 S
 #2101
-&+g Forest Path~
+&+gForest Path~
 &+gA forest spreads out in all directions. The forest contains many different
 &+gspecies of trees, and some individual trees are obviously very ancient, with
 &+gmassive trunks rising high above the forest floor.  There is also much scrub
@@ -48,7 +48,7 @@ D3
 0 0 2100
 S
 #2102
-&+g Forest Path~
+&+gForest Path~
 &+gA forest spreads out in all directions. The forest contains many different
 &+gspecies of trees, and some individual trees are obviously very ancient, with
 &+gmassive trunks rising high above the forest floor.  There is also much scrub
@@ -71,7 +71,7 @@ D3
 0 0 2101
 S
 #2103
-&+g Forest Path~
+&+gForest Path~
 &+gA forest spreads out in all directions. The forest contains many different
 &+gspecies of trees, and some individual trees are obviously very ancient, with
 &+gmassive trunks rising high above the forest floor.  There is also much scrub
@@ -94,7 +94,7 @@ D3
 0 0 2102
 S
 #2104
-&+g Forest Path~
+&+gForest Path~
 &+gA forest spreads out in all directions. The forest contains many different
 &+gspecies of trees, and some individual trees are obviously very ancient, with
 &+gmassive trunks rising high above the forest floor.  There is also much scrub
@@ -117,7 +117,7 @@ D3
 0 0 2103
 S
 #2105
-&+g Forest Path~
+&+gForest Path~
 &+gSeveral dead trees lie across the path ahead. The trees look like they have
 &+glaid there for centuries and appear to have been almost fossilized. Behind
 &+gthe dead trees is a deeper shadow which upon closer inspection is an opening
@@ -137,7 +137,7 @@ D2
 0 0 2104
 S
 #2106
-&+g Forest Path~
+&+gForest Path~
 &+gA forest spreads out in all directions. The forest contains many different
 &+gspecies of trees, and some individual trees are obviously very ancient, with
 &+gmassive trunks rising high above the forest floor.  There is also much scrub
@@ -160,7 +160,7 @@ D3
 0 0 2105
 S
 #2107
-&+c Cave Entrance~
+&+cCave Entrance~
 &+cThe opening is an entrance to a cave! On one side of the opening is faint
 &+cmarkings on the face of the rock. The markings are too eroded to make out,
 &+chowever, even to tell if they were natural or made by some long ago
@@ -180,7 +180,7 @@ D2
 0 0 2108
 S
 #2108
-&+g A Shadowy Forest Path~
+&+gA Shadowy Forest Path~
 &+gA forest spreads out in all directions. The forest contains many different
 &+gspecies of trees, and some individual trees are obviously very ancient, with
 &+gmassive trunks rising high above the forest floor.  There is also much scrub
@@ -203,7 +203,7 @@ D2
 0 0 2106
 S
 #2109
-&+c Back of the Abandoned Cave~
+&+cBack of the Abandoned Cave~
 &+cThe walls of the cavern are smooth as if they had been worn down by many
 &+ccenturies of water running over them or perhaps by the hands of some unknown
 &+crace. The floor of the cavern runs slightly uphill and seems to end in a pile
@@ -232,7 +232,7 @@ D3
 0 0 2110
 S
 #2110
-&+c Southwest Corner of the Abandoned Cave~
+&+cSouthwest Corner of the Abandoned Cave~
 &+cThe walls of the cavern are smooth as if they had been worn down by many
 &+ccenturies of water running over them or perhaps by the hands of some unknown
 &+crace. The floor of the cavern runs slightly uphill and seems to end in a pile
@@ -251,7 +251,7 @@ D1
 0 0 2109
 S
 #2111
-&+c Southeast Corner of the Abandoned Cave~
+&+cSoutheast Corner of the Abandoned Cave~
 &+cThe walls of the cavern are smooth as if they had been worn down by many
 &+ccenturies of water running over them or perhaps by the hands of some unknown
 &+crace. The floor of the cavern runs slightly uphill and seems to end in a pile
@@ -270,7 +270,7 @@ D3
 0 0 2109
 S
 #2112
-&+c Abandoned Cave~
+&+cAbandoned Cave~
 &+cThe walls of the cavern are smooth as if they had been worn down by many
 &+ccenturies of water running over them or perhaps by the hands of some unknown
 &+crace. The floor of the cavern runs slightly uphill and seems to end in a pile
@@ -299,7 +299,7 @@ D5
 0 0 2115
 S
 #2113
-&+c Northwest Corner of the Abandoned Cave~
+&+cNorthwest Corner of the Abandoned Cave~
 &+cThe walls of the cavern are smooth as if they had been worn down by many
 &+ccenturies of water running over them or perhaps by the hands of some unknown
 &+crace. The floor of the cavern runs slightly uphill and seems to end in a pile
@@ -318,7 +318,7 @@ D2
 0 0 2110
 S
 #2114
-&+c Northeast Corner of the Abandoned Cave~
+&+cNortheast Corner of the Abandoned Cave~
 &+cThe walls of the cavern are smooth as if they had been worn down by many
 &+ccenturies of water running over them or perhaps by the hands of some unknown
 &+crace. The floor of the cavern runs slightly uphill and seems to end in a pile
@@ -337,7 +337,7 @@ D3
 0 0 2112
 S
 #2115
-&+c Crawl Space~
+&+cCrawl Space~
 &+cBehind the pile of rubble is  an opening to an underground crawl way, leading
 &+cdown. The crawl way is cramped and almost blocked at times by fallen bits of
 &+cthe roof. It is very dusty and uncomfortable. On the floor, besides the rocks
@@ -357,7 +357,7 @@ D5
 0 0 2116
 S
 #2116
-&+c Crawl Space~
+&+cCrawl Space~
 &+cThe crawl way is cramped and almost blocked at times by fallen bits of
 &+cthe roof. It is very dusty and uncomfortable. On the floor, besides the rocks
 &+cand gravel, there are small pieces of rusty metal, although they are too
@@ -376,7 +376,7 @@ D4
 0 0 2115
 S
 #2117
-&+m Beginning of an Ancient Passageway~
+&+mBeginning of an Ancient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -395,7 +395,7 @@ D2
 0 0 2116
 S
 #2118
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -420,7 +420,7 @@ D3
 0 0 2119
 S
 #2119
-&+m Southwest corner of an Ancient Passageway~
+&+mSouthwest corner of an Ancient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -439,7 +439,7 @@ D1
 0 0 2118
 S
 #2120
-&+m Southeast Corner of an Ancient Passageway~
+&+mSoutheast Corner of an Ancient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -458,7 +458,7 @@ D3
 0 0 2118
 S
 #2121
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -478,7 +478,7 @@ D2
 0 0 2119
 S
 #2122
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -498,7 +498,7 @@ D2
 0 0 2121
 S
 #2123
-&+m End of an Ancient Passageway~
+&+mEnd of an Ancient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -517,7 +517,7 @@ D3
 0 0 2124
 S
 #2124
-&+m Ancient Storeroom~
+&+mAncient Storeroom~
 &+mThe passageway comes to an end here. On the floor are piles of many broken
 &+mcrates which look like they have been there for a long time. This debris is
 &+mpushed to the sides, however, leaving the center of the room curiously
@@ -541,7 +541,7 @@ D3
 0 0 2127
 S
 #2125
-&+m Ancient Storeroom~
+&+mAncient Storeroom~
 &+mThe passageway comes to an end here. On the floor are piles of many broken
 &+mcrates which look like they have been there for a long time. This debris is
 &+mpushed to the sides, however, leaving the center of the room curiously
@@ -560,7 +560,7 @@ D3
 0 0 2126
 S
 #2126
-&+m Ancient Storeroom~
+&+mAncient Storeroom~
 &+mThe passageway comes to an end here. On the floor are piles of many broken
 &+mcrates which look like they have been there for a long time. This debris is
 &+mpushed to the sides, however, leaving the center of the room curiously
@@ -579,7 +579,7 @@ D2
 0 0 2127
 S
 #2127
-&+m Ancient Storeroom~
+&+mAncient Storeroom~
 &+mThe passageway comes to a deadend here. By the amount of debris scattered
 &+mabout it is evident that this room was once used as some sort of store room.
 &+mThere is water seeping through from some source, however, and it drips down
@@ -603,7 +603,7 @@ wall~
 5 0 2128
 S
 #2128
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -624,7 +624,7 @@ wall~
 5 0 2127
 S
 #2129
-&+b Northeast Bend on the Scrag River~
+&+bNortheast Bend on the Scrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -646,7 +646,7 @@ D3
 0 0 2130
 S
 #2130
-&+b Northwest Bend on the Scrag River~
+&+bNorthwest Bend on the Scrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -668,7 +668,7 @@ D2
 0 0 2131
 S
 #2131
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -689,7 +689,7 @@ D2
 0 0 2132
 S
 #2132
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -715,7 +715,7 @@ D2
 0 0 2147
 S
 #2133
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -736,7 +736,7 @@ D3
 0 0 2132
 S
 #2134
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -757,7 +757,7 @@ D3
 0 0 2133
 S
 #2135
-&+b Northeast Bend on the Scrag River~
+&+bNortheast Bend on the Scrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -779,7 +779,7 @@ D3
 0 0 2134
 S
 #2136
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -800,7 +800,7 @@ D2
 0 0 2137
 S
 #2137
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -821,7 +821,7 @@ D2
 0 0 2138
 S
 #2138
-&+b Southeast Bend on the Scrag River~
+&+bSoutheast Bend on the Scrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -843,7 +843,7 @@ D3
 0 0 2139
 S
 #2139
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -864,7 +864,7 @@ D3
 0 0 2140
 S
 #2140
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -891,7 +891,7 @@ D3
 0 0 2145
 S
 #2141
-&+c Southwest Corner of an Ancient Ruin~
+&+cSouthwest Corner of an Ancient Ruin~
 &+cThe island contains the ruins of an ancient building. It is difficult to tell
 &+cwhat the building once was, as it is mostly a pile of rubble. On some of the
 &+clarger pieces of rubble, however, there can be seen writing. This writing,
@@ -916,7 +916,7 @@ exit
 0 0 2140
 S
 #2142
-&+c Southeast Corner of an Ancient Ruin~
+&+cSoutheast Corner of an Ancient Ruin~
 &+cThe island contains the ruins of an ancient building. It is difficult to tell
 &+cwhat the building once was, as it is mostly a pile of rubble. On some of the
 &+clarger pieces of rubble, however, there can be seen writing. This writing,
@@ -936,7 +936,7 @@ exit
 0 0 2141
 S
 #2143
-&+c Northeast Corner of an Ancient Ruin~
+&+cNortheast Corner of an Ancient Ruin~
 &+cThe island contains the ruins of an ancient building. It is difficult to tell
 &+cwhat the building once was, as it is mostly a pile of rubble. On some of the
 &+clarger pieces of rubble, however, there can be seen writing. This writing,
@@ -956,7 +956,7 @@ exit
 0 0 2144
 S
 #2144
-&+c Northwest Corner of an Ancient Ruin~
+&+cNorthwest Corner of an Ancient Ruin~
 &+cThe island contains the ruins of an ancient building. It is difficult to tell
 &+cwhat the building once was, as it is mostly a pile of rubble. On some of the
 &+clarger pieces of rubble, however, there can be seen writing. This writing,
@@ -976,7 +976,7 @@ exit
 0 0 2141
 S
 #2145
-&+b Southwest Bend of the Scrag River~
+&+bSouthwest Bend of the Scrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -998,7 +998,7 @@ D1
 0 0 2140
 S
 #2146
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -1019,7 +1019,7 @@ D2
 0 0 2145
 S
 #2147
-&+b Scrag River~
+&+bScrag River~
 &+bA underground river flows though here. The water is cold and dark and the
 &+bcurrent is quite swift, making travel on the river hazardous. The water
 &+balmost fills the passageway although there is enough space between the river
@@ -1040,7 +1040,7 @@ D2
 0 0 2146
 S
 #2148
-&+m Northwest Corner of an Ancient Passageway~
+&+mNorthwest Corner of an Ancient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -1059,7 +1059,7 @@ D2
 0 0 2120
 S
 #2149
-&+m Northeast Corner of an Ancient Passageway~
+&+mNortheast Corner of an Ancient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -1078,7 +1078,7 @@ D3
 0 0 2148
 S
 #2150
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -1098,7 +1098,7 @@ D2
 0 0 2149
 S
 #2151
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. There is the remains of a large
 &+mfortified door to the left. It barely remains attached to its hinges and
@@ -1127,7 +1127,7 @@ D3
 0 0 2162
 S
 #2152
-&+w Limestone Cavern~
+&+wLimestone Cavern~
 &+wStalactites hang down from the ceiling of the cavern with the corresponding
 &+wstalagmites rising from the floor. They are various colors resulting from the
 &+wdifferent minerals left behind as the water seeped though the porous
@@ -1141,7 +1141,7 @@ wall~
 5 0 2151
 S
 #2153
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -1161,7 +1161,7 @@ D2
 0 0 2151
 S
 #2154
-&+m Northeast Corner of an Ancient Passageway~
+&+mNortheast Corner of an Ancient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -1180,7 +1180,7 @@ D3
 0 0 2155
 S
 #2155
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -1205,7 +1205,7 @@ D5
 0 0 2164
 S
 #2156
-&+m Northwest Corner of an Ancient Passageway~
+&+mNorthwest Corner of an Ancient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -1224,7 +1224,7 @@ D2
 0 0 2157
 S
 #2157
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -1244,7 +1244,7 @@ D2
 0 0 2158
 S
 #2158
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -1264,7 +1264,7 @@ D2
 0 0 2159
 S
 #2159
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. There is the remains of a large
 &+mfortified door to the right. It barely remains attached to its hinges and
@@ -1288,7 +1288,7 @@ D2
 0 0 2160
 S
 #2160
-&+m Ancient Passageway~
+&+mAncient Passageway~
 &+mThe rock walls of the hallway are very smooth and uniform in contrast to
 &+mthe ceiling which is uneven and rough. The sides of the floor are piled up
 &+mwith many small rocks and pebbles which look like they have fallen from the
@@ -1303,7 +1303,7 @@ D0
 0 0 2159
 S
 #2161
-&+y Ancient Armory~
+&+yAncient Armory~
 &+yThe room is littered with old, rusty pieces of metal. Along the walls are
 &+yhung the remains of what might have once been armor. Parts of weapons
 &+yand other implements of war lie on the floor and on several racks and
@@ -1322,7 +1322,7 @@ D3
 0 0 2159
 S
 #2162
-&+y Ancient Armory~
+&+yAncient Armory~
 &+yThe room is littered with old, rusty pieces of metal. Along the walls are
 &+yhung the remains of what might have once been armor. Parts of weapons
 &+yand other implements of war lie on the floor and on several racks and
@@ -1347,7 +1347,7 @@ D2
 0 0 2161
 S
 #2163
-&+r Ancient Forge~
+&+rAncient Forge~
 &+rA massive forge stands in the middle of the room. The fire burning inside
 &+rhas caused the outside to glow bright red. Parts of swords, axes, and
 &+rother sharp objects litter the floor beside the forge. There is a pile of
@@ -1361,7 +1361,7 @@ D2
 0 0 2162
 S
 #2164
-&+m Stairway~
+&+mStairway~
 &+mA steep staircase leads downwards from the hallway to a large cavern. The
 &+msteps of the staircase are very worn as if they had been in use for hundreds
 &+mof years. However, it's very obvious that nothing living has passed here
@@ -1380,7 +1380,7 @@ D5
 0 0 2165
 S
 #2165
-&+m Stairway~
+&+mStairway~
 &+mA steep staircase leads downwards from the hallway to a large cavern. The
 &+msteps of the staircase are very worn as if they had been in use for hundreds
 &+mof years. To the north can be seen a corpse with two bloody puncture wounds
@@ -1399,7 +1399,7 @@ D4
 0 0 2164
 S
 #2166
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1430,7 +1430,7 @@ D3
 0 0 2167
 S
 #2167
-&+r Southwest Corner of the Ancient Cavern~
+&+rSouthwest Corner of the Ancient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1450,7 +1450,7 @@ D1
 0 0 2166
 S
 #2168
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1476,7 +1476,7 @@ D3
 0 0 2166
 S
 #2169
-&+r Center of the Ancient Cavern~
+&+rCenter of the Ancient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. Over head there are occasional small
 &+rstrange noises that could be from water dripping from the rock or then again
@@ -1506,7 +1506,7 @@ D3
 0 0 2170
 S
 #2170
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1532,7 +1532,7 @@ D2
 0 0 2167
 S
 #2171
-&+r Center of the Ancient Cavern~
+&+rCenter of the Ancient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. Over head there are occasional small
 &+rstrange noises that could be from water dripping from the rock or then again
@@ -1562,7 +1562,7 @@ D3
 0 0 2169
 S
 #2172
-&+r Center of the Ancient Cavern~
+&+rCenter of the Ancient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. Over head there are occasional small
 &+rstrange noises that could be from water dripping from the rock or then again
@@ -1592,7 +1592,7 @@ D3
 0 0 2173
 S
 #2173
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1618,7 +1618,7 @@ D2
 0 0 2170
 S
 #2174
-&+r Center of the Ancient Cavern~
+&+rCenter of the Ancient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. Over head there are occasional small
 &+rstrange noises that could be from water dripping from the rock or then again
@@ -1648,7 +1648,7 @@ D3
 0 0 2172
 S
 #2175
-&+r Center of the Ancient Cavern~
+&+rCenter of the Ancient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. Over head there are occasional small
 &+rstrange noises that could be from water dripping from the rock or then again
@@ -1683,7 +1683,7 @@ D4
 0 0 2193
 S
 #2176
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1709,7 +1709,7 @@ D2
 0 0 2173
 S
 #2177
-&+r Center of the Ancient Cavern~
+&+rCenter of the Ancient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. Over head there are occasional small
 &+rstrange noises that could be from water dripping from the rock or then again
@@ -1744,7 +1744,7 @@ D4
 0 0 2192
 S
 #2178
-&+r Center of the Ancient Cavern~
+&+rCenter of the Ancient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. Over head there are occasional small
 &+rstrange noises that could be from water dripping from the rock or then again
@@ -1779,7 +1779,7 @@ D4
 0 0 2190
 S
 #2179
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1805,7 +1805,7 @@ D2
 0 0 2176
 S
 #2180
-&+r Center of Ancient Cavern~
+&+rCenter of Ancient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. Over head there are occasional small
 &+rstrange noises that could be from water dripping from the rock or then again
@@ -1840,7 +1840,7 @@ D4
 0 0 2191
 S
 #2181
-&+r Ancient cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1866,7 +1866,7 @@ D3
 0 0 2182
 S
 #2182
-&+r Northwest Corner of the Ancient Cavern~
+&+rNorthwest Corner of the Ancient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1891,7 +1891,7 @@ D5
 0 0 7800
 S
 #2183
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1917,7 +1917,7 @@ D3
 0 0 2181
 S
 #2184
-&+r Northeast Corner of the Ancient Cavern~
+&+rNortheast Corner of the Ancient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1937,7 +1937,7 @@ D3
 0 0 2183
 S
 #2185
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1963,7 +1963,7 @@ D3
 0 0 2180
 S
 #2186
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -1989,7 +1989,7 @@ D3
 0 0 2177
 S
 #2187
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -2015,7 +2015,7 @@ D3
 0 0 2174
 S
 #2188
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -2041,7 +2041,7 @@ D3
 0 0 2171
 S
 #2189
-&+r Southeast Corner of the Ancient Cavern~
+&+rSoutheast Corner of the Ancient Cavern~
 &+rThe cavern is very large with a high domed ceiling. On the walls of the
 &+rhallway at regularly spaced intervals are the remains of what looks like
 &+rsconces that might have been for torches. Mysteriously, they still emanate
@@ -2061,7 +2061,7 @@ D3
 0 0 2168
 S
 #2190
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. There are occasional small strange noises
 &+rthat could be from water dripping from the rock or then again maybe not.
@@ -2086,7 +2086,7 @@ D5
 0 0 2178
 S
 #2191
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. There are occasional small strange noises
 &+rthat could be from water dripping from the rock or then again maybe not.
@@ -2111,7 +2111,7 @@ D5
 0 0 2180
 S
 #2192
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. There are occasional small strange noises
 &+rthat could be from water dripping from the rock or then again maybe not.
@@ -2136,7 +2136,7 @@ D5
 0 0 2177
 S
 #2193
-&+r Ancient Cavern~
+&+rAncient Cavern~
 &+rThe center of the cavern is very dark. The mysterious light from the sconces
 &+ron the walls does not reach here. There are occasional small strange noises
 &+rthat could be from water dripping from the rock or then again maybe not.
