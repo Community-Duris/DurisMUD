@@ -579,7 +579,6 @@ return FALSE;
       data.hunt_type = HUNT_JUSTICE_INVADER;
       data.targ.victim = ch->specials.arrest_by;
       add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, &data, sizeof(hunt_data));
-      //AddEvent(EVENT_MOB_HUNT, PULSE_MOB_HUNT, TRUE, ch, data);
       return TRUE;
     }
   }
@@ -616,7 +615,6 @@ return FALSE;
   data.hunt_type = HUNT_JUSTICE_SPECROOM;
   data.targ.room = real_room(GET_BIRTHPLACE(ch));
   add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, &data, sizeof(hunt_data));
-  //AddEvent(EVENT_MOB_HUNT, PULSE_MOB_HUNT, TRUE, ch, data);
   return TRUE;
 }
 
@@ -713,7 +711,6 @@ void JusticeGuardHunt(P_char ch)
     data.hunt_type = HUNT_JUSTICE_SPECROOM;
     data.targ.room = real_room(hometowns[CHAR_IN_TOWN(ch) - 1].report_room);
     add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, &data, sizeof(hunt_data));
-    //AddEvent(EVENT_MOB_HUNT, PULSE_MOB_HUNT, TRUE, ch, data);
 
     return;
   }
@@ -779,7 +776,6 @@ void JusticeGuardHunt(P_char ch)
       data.hunt_type = HUNT_JUSTICE_SPECROOM;
       data.targ.room = real_room(GET_BIRTHPLACE(ch));
       add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, &data, sizeof(hunt_data));
-      //AddEvent(EVENT_MOB_HUNT, PULSE_MOB_HUNT, TRUE, ch, data);
     }
     else
     {
@@ -1418,7 +1414,6 @@ void justice_send_witness(P_char ch, P_char attacker, P_char victim, int rroom,
   data.hunt_type = HUNT_JUSTICE_SPECROOM;
   data.targ.room = real_room(hometowns[CHAR_IN_TOWN(ch) - 1].report_room);
   add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, &data, sizeof(hunt_data));
-  //AddEvent(EVENT_MOB_HUNT, PULSE_MOB_HUNT, TRUE, ch, data);
 
   return;
 }
@@ -1765,27 +1760,27 @@ void justice_witness(P_char attacker, P_char victim, int crime)
 }
 
 const char *justice_descriptor_first[] = {
-    "&+WA fearsome ",
-    "&+WA menacing ",
-    "&+WA hulking ",
-    "&+WA battle-scarred ",
-    "&+WA veteran ",
-    "&+WA disfigured ",
-    "&+WA brash, young ",
-    "&+WA weary, old ",
-    "&+WA ferocious ",
-    "&+WA gruff ",
-    "&+WA lordly "
+    "&+WA fearsome",
+    "&+WA menacing",
+    "&+WA hulking",
+    "&+WA battle-scarred",
+    "&+WA veteran",
+    "&+WA disfigured",
+    "&+WA brash, young",
+    "&+WA weary, old",
+    "&+WA ferocious",
+    "&+WA gruff",
+    "&+WA lordly"
 };
 
 const char *g_justice_descriptor[] = {
-    "&+BBarbarian ",
-    "&+YMountain Dwarf ",
-    "&+cGrey Elf ",
-    "&+RGnome ",
-    "&+yHalfling ",
-    "Gith&+Gzerai ",
-    "&+CHuman "
+    "&+BBarbarian",
+    "&+YMountain Dwarf",
+    "&+cGrey Elf",
+    "&+RGnome",
+    "&+yHalfling",
+    "Gith&+Gzerai",
+    "&+CHuman"
 };
 
 const char *justice_descriptor_last[] = {
@@ -1802,13 +1797,13 @@ const char *justice_descriptor_last[] = {
 };
 
 const char *e_justice_descriptor[] = {
-    "&+bOgre ",
-    "&+gTroll ",
-    "&+mDrow Elf ",
-    "&+rDuergar Dwarf ",
-    "&+GGoblin ",
-    "&+LOrc ",
-    "&+GGith&+Wyanki "
+    "&+bOgre",
+    "&+gTroll",
+    "&+mDrow Elf",
+    "&+rDuergar Dwarf",
+    "&+GGoblin",
+    "&+LOrc",
+    "&+GGith&+Wyanki"
 };
 
 void justice_action_invader(P_char ch)
@@ -1903,7 +1898,7 @@ void call_out_the_army(P_char ch)
 {
    char buf[MAX_STRING_LENGTH];
    const char *buf1;
-   int j, i, allies = 0, lvlsum = GET_LEVEL(ch), guard_start, town;
+   int j, i, first, second, third, allies = 0, lvlsum = GET_LEVEL(ch), guard_start, town;
    P_char tch;
    struct zone_data *zone;
    hunt_data data;
@@ -1939,20 +1934,22 @@ void call_out_the_army(P_char ch)
    {
       for(tch = world[j].people; tch; tch = tch->next_in_room)
       {
-        if(IS_TRUSTED(tch) || IS_NPC(tch))
+        if(IS_TRUSTED(tch) || IS_NPC(tch) || ch == tch)
            continue;
 
         if((GET_RACEWAR(tch) == RACEWAR_EVIL && RW == 2) ||
            (GET_RACEWAR(tch) == RACEWAR_UNDEAD && RW == 3) ||
            (GET_RACEWAR(tch) == RACEWAR_GOOD && RW == 1))
         {
+           wizlog(56, "found an ally: %s at %d", GET_NAME(tch), world[tch->in_room].number);
            allies++;
+           wizlog(56, "adding to level sum: %d to %d", GET_LEVEL(tch), lvlsum);
            lvlsum += GET_LEVEL(tch);
         }
       }
    }
 
-   lvlsum /= allies;
+   lvlsum /= allies + 1;
    wizlog(56, "calling out the army: allies in zone = %d, average level of invaders = %d", allies, lvlsum);
    for(i = 0;i < 5;i++)
    {
@@ -1963,7 +1960,7 @@ void call_out_the_army(P_char ch)
         break;
    }
 
-   for(j = allies;j > 0;j--)
+   for(j = allies + 4;j > 0;j--)
    { 
      wizlog(56, "calling out the army: making a guard");
      tch = justice_make_guard(guard_start);
@@ -1974,25 +1971,27 @@ void call_out_the_army(P_char ch)
                     world[ch->in_room].number);
          return;
      }
-     i = number(0, 9);
-     sprintf(buf, justice_descriptor_first[i]);
-     i = number(0, 6);
-     strcat(buf, RW == 1 ? g_justice_descriptor[i] : e_justice_descriptor[i]);  
-     i = number(0, 9);
-     strcat(buf, justice_descriptor_last[i]);
-     sprintf(tch->player.short_descr, buf);
-     stripansi_2(buf1, buf);
-     sprintf(tch->player.name, buf1);
-     strcat(buf, " &+Wstands here impassively.&n");
-     sprintf(tch->player.long_descr, buf);
-     wizlog(56, "creating: %s", tch->player.long_descr);
-     SET_BIT(tch->only.npc->spec[2], MOB_SPEC_JUSTICE);
-     tch->specials.arrest_by = ch;
+     first = number(0, 9);
+     second = number(0, 6);
+     third = number(0, 9);
+     tch->only.npc->str_mask |= STRUNG_DESC1;
+     sprintf(buf, "%s %s %s &+Wstands here impassively.&n", justice_descriptor_first[first],
+              (RW == 2) ? g_justice_descriptor[second] : e_justice_descriptor[second], justice_descriptor_last[third]);
+     tch->player.long_descr = str_dup(buf);
+     tch->only.npc->str_mask |= STRUNG_DESC2;
+     sprintf(buf, "%s %s %s", justice_descriptor_first[first], (RW == 2) ? g_justice_descriptor[second] : e_justice_descriptor[second],
+               justice_descriptor_last[third]);
+     tch->player.short_descr = str_dup(buf);
+     tch->only.npc->str_mask |= STRUNG_KEYS;
+     sprintf(buf, "%s %s %s", strip_ansi(justice_descriptor_first[first]).c_str(), 
+               (RW == 2) ? strip_ansi(g_justice_descriptor[second]).c_str(): strip_ansi(e_justice_descriptor[second]).c_str(), 
+               strip_ansi(justice_descriptor_last[third]).c_str());
+     tch->player.name = str_dup(buf);
+     wizlog(56, "creating: %s with RW = %d", tch->player.long_descr, RW);
+     SET_BIT(tch->only.npc->spec[2], MOB_SPEC_J_OUTCAST);
      set_justice_guard_parms(tch, TRUE);
      data.hunt_type = HUNT_JUSTICE_INVADER;
-     if(ch)
-       data.targ.victim = ch;
-
+     data.targ.victim = tch->specials.arrest_by = ch;
      data.huntFlags = BFS_CAN_FLY | BFS_BREAK_WALLS;
      if(npc_has_spell_slot(tch, SPELL_DISPEL_MAGIC))
        data.huntFlags |= BFS_CAN_DISPEL;
@@ -2629,7 +2628,6 @@ int shout_and_hunt(P_char ch,
         data.targ.room = ch->in_room;
       }
       add_event(mob_hunt_event, PULSE_MOB_HUNT, target, NULL, NULL, 0, &data, sizeof(hunt_data));
-      //AddEvent(EVENT_MOB_HUNT, PULSE_MOB_HUNT, TRUE, target, data);
     }
   }
 
