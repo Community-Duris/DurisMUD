@@ -466,9 +466,6 @@ int validate_boon_data(BoonData *bdata, int flag)
 	  return 1;
 	if (bdata->type && !check_boon_combo(bdata->type, bdata->option, FALSE))
 	  return 2;
-#if !defined(CTF_MUD) || (CTF_MUD != 1)
-	  return 3;
-#endif
         break;
       }
     case BARG_CRITERIA:
