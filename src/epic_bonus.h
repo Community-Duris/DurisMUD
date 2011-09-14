@@ -20,12 +20,12 @@ struct epic_bonus_data
   int type;
   const char *name;
   const char *description;
-  float max;
 };
 
 void do_epic_bonus(P_char, char*, int);
 void epic_bonus_help(P_char);
 void epic_bonus_set(P_char, int);
+float get_epic_bonus_max(int);
 bool get_epic_bonus_data(P_char, EpicBonusData*);
 float get_epic_bonus(P_char, int);
 #endif

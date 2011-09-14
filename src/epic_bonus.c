@@ -17,13 +17,13 @@
 #include "sql.h"
 
 struct epic_bonus_data ebd[] = {
-  {EPIC_BONUS_NONE, "none", "No Epic Bonus", 0},
-  {EPIC_BONUS_CARGO, "cargo", "Cargo Discount", .1},
-  {EPIC_BONUS_SHOP, "shop", "Shop Discount", .2},
-  {EPIC_BONUS_EXP, "exp", "Experience Bonus", .5},
-  {EPIC_BONUS_EPIC_POINT, "epic", "Epic Points Bonus", .4},
-  {EPIC_BONUS_HEALTH, "health", "Health Regen Bonus", .3},
-  {EPIC_BONUS_MOVES, "moves", "Movement Regen Bonus", .3},
+  {EPIC_BONUS_NONE, "none", "No Epic Bonus"},
+  {EPIC_BONUS_CARGO, "cargo", "Cargo Discount"},
+  {EPIC_BONUS_SHOP, "shop", "Shop Discount"},
+  {EPIC_BONUS_EXP, "exp", "Experience Bonus"},
+  {EPIC_BONUS_EPIC_POINT, "epic", "Epic Points Bonus"},
+  {EPIC_BONUS_HEALTH, "health", "Health Regen Bonus"},
+  {EPIC_BONUS_MOVES, "moves", "Movement Regen Bonus"},
   {0},
 };
 
@@ -71,10 +71,10 @@ void epic_bonus_help(P_char ch)
   send_to_char("&+WEpic Bonus:&n\r\n\r\n", ch);
   send_to_char_f(ch, "&+cYou are currently benefiting from the &+C%s &+c(&+C%.2f%&+c).\r\n\r\n", ebd[ebdata.type].description, get_epic_bonus(ch, ebdata.type)*100);
   send_to_char("&+CYou can choose from the following bonuses:&n\r\n", ch);
-  send_to_char_f(ch, "&+C%10s &+w- &+c%s\r\n", ebd[0].name, ebd[0].description);
+  send_to_char_f(ch, "&+C%10s &+c(&+CMAX: %3d%%&+c) &+w- &+c%s\r\n", ebd[0].name, (int)(get_epic_bonus_max(0)*100), ebd[0].description);
   for (int i = 1; ebd[i].type; i++)
   {
-    send_to_char_f(ch, "&+C%10s &+w- &+c%s\r\n", ebd[i].name, ebd[i].description);
+    send_to_char_f(ch, "&+C%10s &+c(&+CMax: %3d%%&+c) &+w- &+c%s\r\n", ebd[i].name, (int)(get_epic_bonus_max(i)*100), ebd[i].description);
   }
   send_to_char("\r\n", ch);
   return;
@@ -97,6 +97,24 @@ void epic_bonus_set(P_char ch, int type)
   send_to_char("&+RPlease be aware your timer has been reset to now.&n\r\n", ch);
 
   return;
+}
+
+float get_epic_bonus_max(int id)
+{
+  char buff[MAX_STRING_LENGTH];
+
+  int i;
+  for (i = 1; ebd[i].type; i++);
+  
+  if (id < 0 || id >= i)
+  {
+    debug("get_epic_bonus_max(): called with invalid id: %d", id);
+    return 0;
+  }
+
+  sprintf(buff, "epic.bonus.max.%s", ebd[id].name);
+
+  return get_property(buff, 0.000);
 }
 
 bool get_epic_bonus_data(P_char ch, EpicBonusData *ebdata)
@@ -163,7 +181,6 @@ float get_epic_bonus(P_char ch, int type)
 
   mysql_free_result(res);
 
-  //debug("MIN(%i, 1000) / 1000 * %f) = %f", accum_epics, ebd[type].max, (int)((float)MIN(accum_epics, 1000)/1000.0)*(float)ebd[type].max);
-
-  return ((float)MIN(accum_epics, 1000) / 1000.0)*(float)ebd[type].max;
+  float epic_max = get_property("epic.bonus.epic.cap", 1.000);
+  return ((float)MIN(accum_epics, epic_max) / epic_max)*get_epic_bonus_max(type);
 }

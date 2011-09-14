@@ -4665,7 +4665,7 @@ void do_score(P_char ch, char *argument, int cmd)
   {
     ebdata.type = EPIC_BONUS_NONE;
   }
-  send_to_char_f(ch, "&nEpic Bonus: &+C%s&n (&+C%.2f%&n)\r\n", ebd[ebdata.type].description, get_epic_bonus(ch, ebdata.type)*100);
+  send_to_char_f(ch, "&nEpic Bonus: &+C%s&n (&+C%.2f%%&n)\r\n", ebd[ebdata.type].description, get_epic_bonus(ch, ebdata.type)*100);
 
   send_to_char("&+RFrags:&n   ", ch);
 
