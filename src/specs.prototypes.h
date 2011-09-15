@@ -480,7 +480,7 @@ int assoc_golem (P_char, P_char, int, char *);
 int house_guard (P_char, P_char, int, char *);
 int patrol_leader(P_char, P_char, int, char *);
 int patrol_leader_road(P_char, P_char, int, char *);
-int transp_tow_acerlade(P_char, P_char, int, char *);
+int transp_tow_aceralde(P_char, P_char, int, char *);
 int recharm_ch(P_char, P_char, bool, char *);
 int underdark_track(P_char, P_char, int, char *);
 int undeadcont_track(P_char, P_char, int, char *);

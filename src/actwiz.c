@@ -5061,7 +5061,7 @@ void do_advance(P_char ch, char *argument, int cmd)
   }
 
   for (i = oldlevel; i < newlevel; i++)
-    advance_level(victim);
+    advance_level(victim, TRUE);
 
   GET_EXP(victim) = 1;
 

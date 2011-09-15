@@ -1216,7 +1216,7 @@ int mana_regen(P_char);
 int vitality_limit(P_char);
 int move_regen(P_char);
 bool check_advancement(P_char);
-void advance_level(P_char);
+void advance_level(P_char, bool);
 void illithid_advance_level(P_char);
 void check_idling(P_char);
 int gain_condition(P_char, int, int);
@@ -1531,7 +1531,7 @@ P_obj ran_obj(P_char, ulong);
 
 /* memorize.c */
 int IS_PART_NOT_CASTER(P_char ch);
-
+float mem_time_modifiers(P_char, float, bool);
 void balance_align(P_char ch);
 
 bool book_class( P_char ch );

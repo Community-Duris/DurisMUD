@@ -106,7 +106,7 @@ int ioun_testicle(P_obj obj, P_char ch, int cmd, char *argument)
       act("&+W$n looks strangely satisfied...&n", FALSE, ch, obj, 0, TO_ROOM);
       act("&+WYou feel satisfied...&n", FALSE, ch, obj, 0, TO_CHAR);
       obj->value[0]++;
-      advance_level(ch);
+      advance_level(ch, TRUE);
       obj->timer[0] = current_time;
       if (obj->value[0] > 1)
       {

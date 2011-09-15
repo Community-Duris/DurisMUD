@@ -2736,7 +2736,7 @@ string strip_ansi(const char *str)
  * they are all treated identically, however, I shudder at the thought of 10 tables
  * with 511 entries each.  So, run the GET_C_XXX value through this function to yield
  * a number from 0 to 51.  Index values from 0-16 follow the bell-curve, but above
- * 100, the divisions are linear.  The lookup tables reflect this.
+ * 100, the divisions are also not linear....  The lookup tables reflect this.
  * You can of course, use this return value directly, or the stat directly.
  * This WAS a macro, but the expansions were hideous, and actually exhausted virtual
  * memory during compile.  So it's a function, though a simple one.  JAB

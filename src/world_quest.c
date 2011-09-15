@@ -1106,6 +1106,7 @@ int calc_zone_mob_level()
     else
     {
       zone_table[i].avg_mob_level = (int) avg_mob_level[i];
+      zone_table[i].mob_count = mob_count[i];
     }
   }
   

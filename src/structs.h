@@ -649,6 +649,7 @@ struct zone_data {
                     LAST_HOME */
   char *owner;
   int avg_mob_level;
+  int mob_count;
 };
 
 struct table_element {

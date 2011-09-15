@@ -516,28 +516,11 @@ int JusticeGuardAct(P_char ch)
   hunt_data data;
   P_char   tch, nextch;
 
-  /* being all mobs check here anyway, its a good place townies to
-     check for invaders
-
-  if(int ht = CHAR_IN_TOWN(ch))
+  if(!ch || !IS_ALIVE(ch))
   {
-    for (tch = world[ch->in_room].people; tch; tch = nextch)
-    {
-      nextch = tch->next_in_room;
-      if(tch != ch && IS_TOWN_INVADER(tch, ht) && !IS_AFFECTED(tch, AFF_BOUND))
-        justice_action_invader(tch);
-    }
-  } */
-
-  /* small hook here to get more guards, if more guards are needed...
-
-  for(tch = world[ch->in_room].people; tch; tch = nextch)
-  {
-    nextch = tch->next_in_room;
-
-    if(IS_INVADER(tch) || IS_OUTCAST(tch))
-      justice_action_invader(tch);
-  }*/
+     logit(LOG_EXIT, "No ch or dead ch passed to JusticeGuardAct(), aborting...");
+     raise(SIGSEGV);
+  }
 
   if(IS_FIGHTING(ch))
     return FALSE;
@@ -547,7 +530,7 @@ int JusticeGuardAct(P_char ch)
 
   if(IS_SET(ch->only.npc->spec[2], MOB_SPEC_J_OUTCAST))
   {
-    wizlog(56, "spec correctly set for %s", GET_NAME(ch));
+
     if(!ch->specials.arrest_by)
     {                           /* wtf? */
       REMOVE_BIT(ch->only.npc->spec[2], MOB_SPEC_J_OUTCAST);
@@ -572,7 +555,7 @@ int JusticeGuardAct(P_char ch)
          fighting... fix it */
       data.hunt_type = HUNT_JUSTICE_INVADER;
       data.targ.victim = ch->specials.arrest_by;
-      wizlog(56, "adding hunt event to %s", GET_NAME(ch));
+
       add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, &data, sizeof(hunt_data));
       return TRUE;
     }
@@ -598,19 +581,7 @@ int JusticeGuardAct(P_char ch)
     return TRUE;
   }
 
-  /* PUT OTHER POSSIBLE CONDITIONS FOR spec[2] HERE... ALSO, Make damn
-     sure that each of them returns either TRUE or FALSE... if you let
-     them drop past this point, they will be sent HOME! */
-
-  /* okay.  At this point, the guard doesn't have any reason for
-     existing... so we send them the fuck home! */
-
-  ch->only.npc->spec[2] = MOB_SPEC_J_REMOVE | MOB_SPEC_JUSTICE;
-
-  data.hunt_type = HUNT_JUSTICE_SPECROOM;
-  data.targ.room = real_room(GET_BIRTHPLACE(ch));
-  add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, &data, sizeof(hunt_data));
-  return TRUE;
+  return FALSE;
 }
 
 /* called by mob_hunt_event whenever a HUNT_JUSTICE_SPEC* hunt type
@@ -1214,9 +1185,6 @@ P_char justice_make_guard(int rroom)
 
   if(!IS_AGGROFLAG(ch, AGGR_OUTCASTS))
     SET_BIT(ch->only.npc->aggro_flags, AGGR_OUTCASTS);
-
-  if(IS_SET(ch->specials.act, ACT_PROTECTOR))
-    REMOVE_BIT(ch->specials.act, ACT_PROTECTOR);
 
   /* also, I don't want guards that I control to be hunting on their
      own, so nuke HUNTER flags */

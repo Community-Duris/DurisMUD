@@ -308,6 +308,24 @@ int get_zone_exp(P_char ch, int zone_number)
   return 0;
 }
 
+long calc_min_zone_exp(P_char ch)
+{
+   int count;
+   long exp;
+   
+   if(!ch || !IS_PC(ch) || world[ch->in_room].number == NOWHERE)
+     return 0;
+
+   struct zone_data *zone = &zone_table[world[ch->in_room].zone];
+   if(zone->difficulty < 2)
+     return 0;
+   count = get_property("zone.count.needed.for.touch", 0.300) * zone->mob_count;
+   debug("mob_count %d for %s in %s, reduced by count mod to %d", zone->mob_count, GET_NAME(ch), zone->name, count);
+   exp = count * zone->avg_mob_level * (1.0 + zone->difficulty / 10) * get_property("zone.exp.needed.for.touch", 1000);
+   debug("zone exp needed = %d for %s", exp, GET_NAME(ch));
+   return exp;
+}
+   
 #ifdef __NO_MYSQL__
 void load_zone_trophy(P_char ch)
 {

@@ -2435,12 +2435,12 @@ void enter_game(P_desc d)
   // changing this to conform with Kitsero's version of chaos
   while (GET_LEVEL(ch) < 53)
   {
-    advance_level(ch);
+    advance_level(ch, TRUE);
   }
 #endif
 
   // chaos - level them up, and setbit hardcore off them!
-#if defined(CHAOS_MUD) && (CHAOS_MUD == 1) && (CTF_MODE == 0)
+#if defined(CHAOS_MUD) && (CHAOS_MUD == 1) && (CTF_MUD == 0)
   // setbit hardcore  off
   REMOVE_BIT(ch->specials.act2, PLR2_HARDCORE_CHAR);
   // if not trusted, make sure they are level 55
@@ -2452,7 +2452,7 @@ void enter_game(P_desc d)
   // changing this to conform with Kitsero's version of chaos
   while (GET_LEVEL(ch) < 56)
   {
-    advance_level(ch);
+    advance_level(ch, TRUE);
   }
 #endif
 

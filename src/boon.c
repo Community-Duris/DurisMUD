@@ -2475,14 +2475,14 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 	  boon_notify(bdata.id, ch, BN_COMPLETE);
 	  if ((GET_LEVEL(ch)+1) > (int)bdata.bonus)
 	  {
-	    send_to_char("&+WWell done, unfortionately you've already surpassed the max level this boon will grant.&n\r\n", ch);
+	    send_to_char("&+WWell done, unfortunately you've already surpassed the max level this boon will grant.&n\r\n", ch);
 	    continue;
 	  }
 	  if ((int)bdata.bonus2)
 	  {
-	    //bypass epics
+	    //bypass delimiters
 	    GET_EXP(ch) -= new_exp_table[GET_LEVEL(ch) + 1];
-	    advance_level(ch);
+	    advance_level(ch, TRUE);
 	  }
 	  else
 	    // We'll give them a free level, so long as they have the epics for it.

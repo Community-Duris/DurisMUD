@@ -16,6 +16,7 @@ struct zone_trophy_data {
 
 void update_zone_trophy(P_char ch, int zone_number, int XP);
 int get_zone_exp(P_char ch, int zone_number);
+long calc_min_zone_exp(P_char);
 vector<struct zone_trophy_data> get_zone_trophy(P_char ch);
 float modify_exp_by_zone_trophy(P_char ch, int type, float XP);
 void save_zone_trophy(P_char ch);

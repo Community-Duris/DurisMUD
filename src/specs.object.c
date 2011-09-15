@@ -5224,7 +5224,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
         {      
            if(CanDoFightMove(ch, tch))
            {
-              if(alignment = 0)
+              if(alignment == 0)
               {
                  act("Your $q &+Wglows &+was you slam the pommel into $N&+w,&L&+wknocking $M away from your ally!", FALSE, ch, obj, tch, TO_CHAR);
                  act("$p &+Wglows &+was its pommel is slammed into $N&+w,&L&+wknocking $M away from YOU!", FALSE, vict, obj, tch, TO_CHAR);

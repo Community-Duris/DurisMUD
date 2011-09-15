@@ -10877,7 +10877,6 @@ int recharm_ch(P_char master, P_char vict, bool madatOldMaster,
 
   group_add_member(master, vict);
 
-//  SET_BIT(vict->specials.act, ACT_AGGRESSIVE);
   SET_BIT(vict->only.npc->aggro_flags, AGGR_ALL);
   SET_BIT(vict->specials.act, ACT_SENTINEL);
   SET_BIT(vict->specials.act, ACT_PROTECTOR);
@@ -10889,11 +10888,11 @@ int recharm_ch(P_char master, P_char vict, bool madatOldMaster,
 }
 
 /*
- * acerlade, the big meany in the transparent tower who turns PC charmees
+ * aceralde, the big meany in the transparent tower who turns PC charmees
  * into NPC charmees..  WATCH OUT KIDS!
  */
 
-int transp_tow_acerlade(P_char ch, P_char pl, int cmd, char *arg)
+int transp_tow_aceralde(P_char ch, P_char pl, int cmd, char *arg)
 {
   P_char   tch, next;
   char     didit = FALSE;

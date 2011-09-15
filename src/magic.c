@@ -14984,22 +14984,6 @@ void spell_lesser_resurrect(int level, P_char ch, char *arg, int type, P_char vi
       }
     }
 
-    /*
-     * new bit, resurrectee must make a CON system shock save, if
-     * they: make the save - spell works, they regain 80% of lost exp.
-     * fail the save by < 50 - spell works, but they lose a semi-random
-     * number of permanent stat points, usually from Con, but other
-     * losses are possible. fail the spell by > 50 - spell fails,and
-     * THIS corpse can never be resurrected (except by a god).  (No stat
-     * losses, but they don't get any exp back either.)
-     *
-     * save maxes at 97% (for players), so it can fail on ANYONE, chance
-     * has to fall below 50% before the spell can completely fail though
-     * (Con (REAL) of < 40), stat losses will be fairly common though.
-     * JAB
-     */
-
-//    ss_save = con_app[STAT_INDEX(GET_C_CON(t_ch))].shock;
     chance = 90 - (4 * (56 - GET_LEVEL(ch)));   /* 90% success at 56, 50% at 46 */
     ss_roll = number(1, 100);
 
@@ -15018,8 +15002,7 @@ void spell_lesser_resurrect(int level, P_char ch, char *arg, int type, P_char vi
               "%s ressed %s:  Failed roll: %3d Chance: %3d Level: %2d",
               GET_NAME(ch), GET_NAME(t_ch), ss_roll, chance, level);
       }
-    }
-    
+    }    
     
     act("$n &+Mhowls in pain&n as $s body &+Lcrumbles to dust.&n",
       FALSE, t_ch, 0, 0, TO_ROOM);
@@ -15161,8 +15144,7 @@ void spell_lesser_resurrect(int level, P_char ch, char *arg, int type, P_char vi
     send_to_char("There was a problem saving your character!\n", t_ch);
     send_to_char("Contact an Implementor ASAP.\n", t_ch);
   }
-/*  if(clevel == 56)
-    advance_level(t_ch);*/
+
   extract_obj(obj, TRUE);
 }
 

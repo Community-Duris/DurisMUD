@@ -26,6 +26,7 @@ using namespace std;
 #include "nexus_stones.h"
 #include "auction_houses.h"
 #include "boon.h"
+#include "trophy.h"
 
 extern P_room world;
 extern P_index obj_index;
@@ -252,7 +253,7 @@ const char *epic_prestige(P_char ch)
 
 int epic_skillpoints(P_char ch)
 {
-  if( !ch || !IS_PC(ch) )
+  if(!ch || !IS_PC(ch))
     return 0;
 
   return ch->only.pc->epic_skill_points;
@@ -260,7 +261,7 @@ int epic_skillpoints(P_char ch)
 
 void epic_gain_skillpoints(P_char ch, int gain)
 {
-  if( !ch || !IS_PC(ch) )
+  if(!ch || !IS_PC(ch))
     return;
 
   ch->only.pc->epic_skill_points = MAX(0, ch->only.pc->epic_skill_points + gain);
@@ -270,11 +271,11 @@ bool epic_stored_in(unsigned int *vector, int code)
 {
   unsigned int flag = *vector;
 
-  if ( (flag >> 30) == 0)
+  if ((flag >> 30) == 0)
     *vector = (unsigned int)code;
-  else if ( (flag >> 30) == 1)
+  else if ((flag >> 30) == 1)
     *vector |= (unsigned int)code << 10;
-  else if ( (flag >> 30) == 2)
+  else if ((flag >> 30) == 2)
     *vector |= (unsigned int)code << 20;
   else
     return false;
@@ -317,14 +318,14 @@ int epic_random_task_zone(P_char ch)
 #ifdef __NO_MYSQL__
   return zone_number;
 #else
-  if( !qry("select number, name from zones where task_zone = 1 and number not in " \
+  if(!qry("select number, name from zones where task_zone = 1 and number not in " \
            "(select type_id from epic_gain where pid = '%d' and type = '%d') " \
-           "order by rand() limit 1", GET_PID(ch), EPIC_ZONE) )
+           "order by rand() limit 1", GET_PID(ch), EPIC_ZONE))
     return -1;
 
   MYSQL_RES *res = mysql_store_result(DB);
 
-  if( mysql_num_rows(res) > 0 )
+  if(mysql_num_rows(res) > 0)
   {
     MYSQL_ROW row = mysql_fetch_row(res);
     zone_number = atoi(row[0]);
@@ -360,7 +361,7 @@ void epic_choose_new_epic_task(P_char ch)
     zone_number = epic_random_task_zone(ch);
   }
 
-  if(zone_number < 0 )
+  if(zone_number < 0)
   {
     nexus = get_random_enemy_nexus(ch);
     if ((number(0, 100) < 50) && (GET_LEVEL(ch) >= 51) && nexus)
@@ -392,12 +393,12 @@ vector<epic_trophy_data> get_epic_zone_trophy(P_char ch)
   debug("get_epic_zone_trophy(): __NO_MYSQL__, returning 0");
   return trophy;
 #else
-  if( !qry("select type_id from epic_gain where pid = '%d' and type = '%d' order by time asc", GET_PID(ch), EPIC_ZONE ) )
+  if(!qry("select type_id from epic_gain where pid = '%d' and type = '%d' order by time asc", GET_PID(ch), EPIC_ZONE))
     return trophy;
 
   MYSQL_RES *res = mysql_store_result(DB);
 
-  if( !res )
+  if(!res)
   {
     mysql_free_result(res);
     return trophy;
@@ -408,30 +409,30 @@ vector<epic_trophy_data> get_epic_zone_trophy(P_char ch)
   int trophy_size = (int) get_property("epic.zoneTrophy.size", 40);
 
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while(row = mysql_fetch_row(res))
   {
     int zone_number = atoi(row[0]);
 
     bool in_trophy = false;
-    for( list<epic_trophy_data>::iterator it = tq.begin(); it != tq.end(); it++ )
+    for(list<epic_trophy_data>::iterator it = tq.begin(); it != tq.end(); it++)
     {
-      if( it->zone_number == zone_number )
+      if(it->zone_number == zone_number)
       {
         in_trophy = true;
         break;
       }
     }
 
-    if( !in_trophy )
+    if(!in_trophy)
     {
       tq.push_front(epic_trophy_data(zone_number, 1));
-      if( tq.size() > trophy_size ) tq.pop_back();
+      if(tq.size() > trophy_size) tq.pop_back();
     }
     else
     {
-      for( list<epic_trophy_data>::iterator it = tq.begin(); it != tq.end(); it++ )
+      for(list<epic_trophy_data>::iterator it = tq.begin(); it != tq.end(); it++)
       {
-        if( it->zone_number == zone_number )
+        if(it->zone_number == zone_number)
         {
           it->count++;
           break;
@@ -441,9 +442,9 @@ vector<epic_trophy_data> get_epic_zone_trophy(P_char ch)
 
   }
 
-  while( !tq.empty() )
+  while(!tq.empty())
   {
-    trophy.push_back( tq.front() );
+    trophy.push_back(tq.front());
     tq.pop_front();
   }
 
@@ -458,15 +459,15 @@ int modify_by_epic_trophy(P_char ch, int amount, int zone_number)
 {
   vector<epic_trophy_data> trophy = get_epic_zone_trophy(ch);
 
-  for( vector<epic_trophy_data>::iterator it = trophy.begin(); it != trophy.end(); it++ )
+  for(vector<epic_trophy_data>::iterator it = trophy.begin(); it != trophy.end(); it++)
   {
-    if( zone_number == it->zone_number  && it->count > 0 )
+    if(zone_number == it->zone_number  && it->count > 0)
     {
-      float factor = pow( get_property("epic.zoneTrophy.mod", 0.8), MIN(it->count, get_property("epic.zoneTrophy.maxMods", 4) ) );
+      float factor = pow(get_property("epic.zoneTrophy.mod", 0.8), MIN(it->count, get_property("epic.zoneTrophy.maxMods", 4)));
       amount = (int) (amount * factor);
       amount = MAX(1, amount);
 
-      switch( it->count )
+      switch(it->count)
       {
         case 1:
           send_to_char("This seems familiar somehow...\n", ch);
@@ -495,12 +496,12 @@ void group_gain_epic(P_char ch, int type, int data, int amount)
 {
   gain_epic(ch, type, data, amount);
 
-  if( ch->group )
+  if(ch->group)
   {
-    for( struct group_list *gl = ch->group; gl; gl = gl->next )
+    for(struct group_list *gl = ch->group; gl; gl = gl->next)
     {
-      if( gl->ch == ch ) continue;
-      if( gl->ch->in_room == ch->in_room )
+      if(gl->ch == ch) continue;
+      if(gl->ch->in_room == ch->in_room)
       {
         gain_epic(gl->ch, type, data, amount);
       }
@@ -531,14 +532,14 @@ void gain_epic(P_char ch, int type, int data, int amount)
   if (IS_AFFECTED4(ch, AFF4_EPIC_INCREASE))
   {
     send_to_char("You feel the &+cblessing&n of the &+WGods&n wash over you.\n", ch);
-	amount = (int) ( amount * get_property("epic.witch.multiplier", 1.5));
+	amount = (int) (amount * get_property("epic.witch.multiplier", 1.5));
   }
 
   if(type != EPIC_PVP && type != EPIC_SHIP_PVP && has_epic_task(ch))
   {
     send_to_char("You have not completed the task given to you by the Gods, \n" \
                  "so you are not able to progress at usual pace.\n", ch);
-    amount = MAX(1, (int) ( amount * get_property("epic.errand.penaltyMod", 0.25) ) );
+    amount = MAX(1, (int) (amount * get_property("epic.errand.penaltyMod", 0.25)));
   }
 
   // For marduk nexus stone... to change rate use property nexusStones.bonus.epics
@@ -560,7 +561,7 @@ void gain_epic(P_char ch, int type, int data, int amount)
 
   char type_str[10];
  
-  switch( type )
+  switch(type)
   {
     case EPIC_ZONE:
       strcpy(type_str, "ZONE");
@@ -610,7 +611,7 @@ void gain_epic(P_char ch, int type, int data, int amount)
 
   int skill_notches = MAX(0, (int) ((old+amount)/notch) - (old/notch));
   
-  if( skill_notches )
+  if(skill_notches)
   {
     send_to_char("&+WYou have gained an epic skill point!&n\n", ch);
     epic_gain_skillpoints(ch, skill_notches);
@@ -659,21 +660,21 @@ void epic_frag(P_char ch, int victim_pid, int amount)
 
 void epic_feed_artifacts(P_char ch, int epics, int epic_type)
 {
-  if( IS_TRUSTED(ch) || !IS_PC(ch) )
+  if(IS_TRUSTED(ch) || !IS_PC(ch))
     return;
 
   int num_artis = 0;
   for (int i = 0; i < MAX_WEAR; i++)
   {
-    if (ch->equipment[i] && ( IS_ARTIFACT(ch->equipment[i]) || isname("powerunique", ch->equipment[i]->name)) )
+    if (ch->equipment[i] && (IS_ARTIFACT(ch->equipment[i]) || isname("powerunique", ch->equipment[i]->name)))
     {
       num_artis++;
     }
   }
 
-  int feed_seconds = (int) ( epics * get_property("artifact.feeding.epic.point.seconds", 3600) );
+  int feed_seconds = (int) (epics * get_property("artifact.feeding.epic.point.seconds", 3600));
 
-  switch( epic_type )
+  switch(epic_type)
   {
     case EPIC_ZONE:
       feed_seconds = (int) (feed_seconds * get_property("artifact.feeding.epic.typeMod.zone", 1.0));
@@ -700,13 +701,13 @@ void epic_feed_artifacts(P_char ch, int epics, int epic_type)
       break;
   }
 
-  if( num_artis > 0 )
-    feed_seconds = (int) ( feed_seconds / num_artis );
+  if(num_artis > 0)
+    feed_seconds = (int) (feed_seconds / num_artis);
 
   for (int i = 0; i < MAX_WEAR; i++)
   {
     P_obj obj = ch->equipment[i];
-    if ( obj && IS_ARTIFACT(obj) )
+    if (obj && IS_ARTIFACT(obj))
     {
       feed_artifact(ch, ch->equipment[i], feed_seconds, ((epic_type == EPIC_PVP || epic_type == EPIC_SHIP_PVP) ? TRUE : FALSE));
     }
@@ -718,32 +719,32 @@ void epic_stone_absorb(P_obj obj)
 {
   P_obj obj_list = NULL;
 
-  if( OBJ_ROOM(obj) )
+  if(OBJ_ROOM(obj))
   {
     obj_list = world[obj->loc.room].contents;
   }
-  else if( OBJ_CARRIED(obj) )
+  else if(OBJ_CARRIED(obj))
   {
     obj_list = (obj->loc.carrying)->carrying;
   }
 
-  if( !obj_list )
+  if(!obj_list)
     return;
 
-  for( P_obj tobj = obj_list; tobj; tobj = tobj->next_content )
+  for(P_obj tobj = obj_list; tobj; tobj = tobj->next_content)
   {
-    if( tobj == obj )
+    if(tobj == obj)
       continue;
 
    /* if the other object is smaller epic stone, absorb it */
-   if( GET_OBJ_VNUM(tobj) <= GET_OBJ_VNUM(obj) &&
-       obj_index[tobj->R_num].func.obj == epic_stone )
+   if(GET_OBJ_VNUM(tobj) <= GET_OBJ_VNUM(obj) &&
+       obj_index[tobj->R_num].func.obj == epic_stone)
    {
      extract_obj(tobj, TRUE);
    }
 
    /* if there is a level potion on the ground, absorb it */
-   if( tobj->affected[0].location == APPLY_LEVEL )
+   if(tobj->affected[0].location == APPLY_LEVEL)
    {
      extract_obj(tobj, TRUE);
    }
@@ -754,20 +755,20 @@ void epic_stone_absorb(P_obj obj)
 int epic_stone_payout(P_obj obj, P_char ch)
 {
   int num_players = 1;
-  if( ch->group )
+  if(ch->group)
   {
-    for( struct group_list *gl = ch->group; gl; gl = gl->next )
+    for(struct group_list *gl = ch->group; gl; gl = gl->next)
     {
-      if(gl->ch == ch )
+      if(gl->ch == ch)
       {
         continue;
       }
       if(!IS_PC(gl->ch) ||
-         IS_TRUSTED(gl->ch) )
+         IS_TRUSTED(gl->ch))
       {
         continue;
       }
-      if( gl->ch->in_room == ch->in_room )
+      if(gl->ch->in_room == ch->in_room)
       {
         num_players++;
       }
@@ -781,22 +782,22 @@ int epic_stone_payout(P_obj obj, P_char ch)
     the old payout value * number of touches / total group players in room,
     max = (1.5) * the old payout value */
 
-  int payout = (int) ( obj->value[0] * obj->value[1] / num_players );
-  int max_payout = (int) ( obj->value[0] * (float) get_property("epic.touch.maxPayoutFactor", 1.5));
+  int payout = (int) (obj->value[0] * obj->value[1] / num_players);
+  int max_payout = (int) (obj->value[0] * (float) get_property("epic.touch.maxPayoutFactor", 1.5));
 
-  int epic_value = BOUNDED( 1, payout, max_payout );
+  int epic_value = BOUNDED(1, payout, max_payout);
 
 //  DEPRECATED - Torgal 12/21/09
 //  float freq_mod = get_epic_zone_frequency_mod(obj->value[2]);
 //  int __old_epic_value = epic_value;
 //
-//  epic_value = MAX( 1, (int) (epic_value * freq_mod) );
+//  epic_value = MAX(1, (int) (epic_value * freq_mod));
 //  debug("epic_stone_payout:freq_mod: old_epic_value: %d, epic_value: %d", __old_epic_value, epic_value);
 
   float alignment_mod = get_epic_zone_alignment_mod(obj->value[2], GET_RACEWAR(ch));
   int __old_epic_value = epic_value;
 
-  epic_value = MAX( 1, (int) (epic_value * alignment_mod) );
+  epic_value = MAX(1, (int) (epic_value * alignment_mod));
   debug("epic_stone_payout:alignment_mod: old_epic_value: %d, epic_value: %d", __old_epic_value, epic_value);  
 
   epic_value = epic_value * get_property("epic.touch.PayoutFactor", 1.000);
@@ -807,7 +808,7 @@ int epic_stone_payout(P_obj obj, P_char ch)
 void epic_stone_feed_artifacts(P_obj obj, P_char ch)
 {
   int feed_amount = 0;
-  switch( GET_OBJ_VNUM(obj) )
+  switch(GET_OBJ_VNUM(obj))
   {
     case EPIC_MONOLITH:
       feed_amount = 3600 * get_property("artifact.feeding.epic.hours.monolith", 12);
@@ -845,11 +846,11 @@ void epic_free_level(P_char ch)
 
   int epics_for_level = get_property(buf, 1 << ((GET_LEVEL(ch) + 1) - 43));
 
-  if( GET_EXP(ch) >= new_exp_table[GET_LEVEL(ch)+1] &&
-         ch->only.pc->epics >= epics_for_level )
+  if(GET_EXP(ch) >= new_exp_table[GET_LEVEL(ch)+1] &&
+         ch->only.pc->epics >= epics_for_level)
      {
          GET_EXP(ch) -= new_exp_table[GET_LEVEL(ch) + 1];
-         advance_level(ch);
+         advance_level(ch, FALSE);
 		 wizlog(56, "%s has attained epic level &+W%d&n!",
                 GET_NAME(ch),
                 GET_LEVEL(ch));
@@ -859,8 +860,8 @@ void epic_free_level(P_char ch)
 
 void epic_stone_level_char(P_obj obj, P_char ch)
 {
-  if( IS_MULTICLASS_PC(ch) &&
-      GET_LEVEL(ch) >= get_property("exp.maxMultiLevel", 56) )
+  if(IS_MULTICLASS_PC(ch) &&
+      GET_LEVEL(ch) >= get_property("exp.maxMultiLevel", 56))
     return;
 
   char buf[256];
@@ -868,7 +869,7 @@ void epic_stone_level_char(P_obj obj, P_char ch)
 
   int epics_for_level = get_property(buf, 1 << (obj->value[3] - 43));
 
-  if( IS_MULTICLASS_PC(ch) && GET_LEVEL(ch) >= 51 )
+  if(IS_MULTICLASS_PC(ch) && GET_LEVEL(ch) >= 51)
   {
     epics_for_level *= (int) get_property("exp.multiEpicMultiplier", 3);
   }
@@ -877,11 +878,11 @@ void epic_stone_level_char(P_obj obj, P_char ch)
   epics_for_level = (int)(epics_for_level/3);
 #endif
 
-  if( GET_EXP(ch) >= new_exp_table[GET_LEVEL(ch)+1] &&
-      ch->only.pc->epics >= epics_for_level )
+  if(GET_EXP(ch) >= new_exp_table[GET_LEVEL(ch)+1] &&
+      ch->only.pc->epics >= epics_for_level)
   {
     GET_EXP(ch) -= new_exp_table[GET_LEVEL(ch) + 1];
-    advance_level(ch);
+    advance_level(ch, TRUE);
 	wizlog(56, "%s has attained epic level &+W%d&n!",
            GET_NAME(ch),
            GET_LEVEL(ch));
@@ -890,16 +891,16 @@ void epic_stone_level_char(P_obj obj, P_char ch)
 
 void epic_stone_one_touch(P_obj obj, P_char ch, int epic_value)
 {
-  if( !obj || !ch || !epic_value )
+  if(!obj || !ch || !epic_value)
     return;
 
-  if( affected_by_spell(ch, TAG_EPIC_MONOLITH) )
+  if(get_zone_exp(ch, world[ch->in_room].zone) < calc_min_zone_exp(ch))	
   {
     act("The burst of &+Bblue energy&n from $p flows around $n, leaving them unaffected!",
-        FALSE, ch, obj, ch, TO_NOTVICT );
+        FALSE, ch, obj, ch, TO_NOTVICT);
     act("The burst of &+Bblue energy&n from $p flows around you, leaving you unaffected!",
         FALSE, ch, obj, 0, TO_CHAR);
-    send_to_char("You needed to have waited awhile before receiving more epic power!\n", ch);
+    send_to_char("You did not gain enough experience here before trying to gain more power!\n", ch);
     return;
   }
 
@@ -915,20 +916,20 @@ void epic_stone_one_touch(P_obj obj, P_char ch, int epic_value)
 
   /* if char is completing their epic errand, give them extra epic points! */
   struct affected_type *afp = get_epic_task(ch);
-  if( afp && afp->modifier == obj->value[2] )
+  if(afp && afp->modifier == obj->value[2])
   {
     send_to_char("The &+rGods of Duris&n are very pleased with your achievement!\n"
                  "You can now continue with your quest for &+Wpower!\n", ch);
     epic_complete_errand(ch, afp->modifier);
     affect_remove(ch, afp);
-    gain_epic(ch, EPIC_ZONE, obj->value[2], (int) (epic_value * get_property("epic.errand.completeBonusMod", 1.5) ) );
+    gain_epic(ch, EPIC_ZONE, obj->value[2], (int) (epic_value * get_property("epic.errand.completeBonusMod", 1.5)));
 
   } else {
     /* not on epic errand, just give them the epic points */
     gain_epic(ch, EPIC_ZONE, obj->value[2], epic_value);
   }
 
-  if( GET_LEVEL(ch) == ( obj->value[3] - 1 ) )
+  if(GET_LEVEL(ch) == (obj->value[3] - 1))
   {
     epic_stone_level_char(obj, ch);
   }
@@ -944,7 +945,7 @@ int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if( obj && cmd == CMD_PERIODIC )
+  if(obj && cmd == CMD_PERIODIC)
   {
     /* periodic call */
     epic_stone_absorb(obj);
@@ -957,7 +958,7 @@ int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)
 
       // set epic payout, suggested_group_size and epic_level from db
       struct zone_info zinfo;
-      if( get_zone_info(zone_number, &zinfo) )
+      if(get_zone_info(zone_number, &zinfo))
       {
         obj->value[0] = zinfo.epic_payout;
         obj->value[1] = zinfo.suggested_group_size;
@@ -965,18 +966,18 @@ int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)
       }
     }
 
-    if( OBJ_ROOM(obj) )
+    if(OBJ_ROOM(obj))
     {
       REMOVE_BIT(obj->wear_flags, ITEM_TAKE);
 
-      if( OBJ_MAGIC(obj) && !number(0,5) )
+      if(OBJ_MAGIC(obj) && !number(0,5))
       {
         act("A powerful humming sound can be heard from $p.", FALSE, 0, obj, 0, TO_ROOM);
       }
     }
   }
 
-  if( cmd == CMD_TOUCH && IS_PC(ch) )
+  if(cmd == CMD_TOUCH && IS_PC(ch))
   {
     one_argument(arg, arg1);
     stoneobj = get_obj_in_list_vis(ch, arg1, ch->carrying);
@@ -993,7 +994,7 @@ int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)
     zone_number = obj->value[2];
 
     /* the (magic) flag determines if the stone has been touched or not */
-    if( !OBJ_MAGIC(obj) )
+    if(!OBJ_MAGIC(obj))
     {
       act("$p seems to be powerless.", FALSE, ch, obj, 0, TO_CHAR);
       return TRUE;
@@ -1001,21 +1002,21 @@ int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)
 
     for (P_char tmp_p = world[ch->in_room].people; tmp_p; tmp_p = tmp_p->next_in_room)
     {
-      if( IS_FIGHTING(tmp_p) )
+      if(IS_FIGHTING(tmp_p))
       {
         send_to_char("It's not peaceful enough here!\r\n", ch);
         return TRUE;
       }
     }
 
-    if( IS_TRUSTED(ch) )
+    if(IS_TRUSTED(ch))
     {
       send_to_char("But you're already epic enough!\r\n", ch);
       return TRUE;
     }
 
     /* stones must be touched in the zone in which they were loaded */
-    if( zone_number && world[ch->in_room].zone != real_zone(zone_number))
+    if(zone_number && world[ch->in_room].zone != real_zone(zone_number))
     {
       act("A sick noise emanates from $p, and a large crack runs down the side! Something was misplaced!",
            FALSE, ch, obj, 0, TO_CHAR);
@@ -1026,7 +1027,7 @@ int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)
       return TRUE;
     }
 
-    if( affected_by_spell(ch, TAG_EPIC_MONOLITH) )
+    if(affected_by_spell(ch, TAG_EPIC_MONOLITH))
     {
       send_to_char("You need to wait before touching an epic stone again!\n", ch);
       return TRUE;
@@ -1042,7 +1043,7 @@ int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)
         "almost knocking you off your feet!\n"
         "Suddenly, a huge storm of &+Bblue energy&n erupts from it!", FALSE, ch, obj, 0, TO_ROOM);
 
-    if( zone_number )
+    if(zone_number)
     {
       statuslog(GREATER_G, "%s touched the epic stone in %s", ch->player.name, zone_table[real_zone0(zone_number)].name);
       logit(LOG_EPIC, "%s touched the epic stone in %s", ch->player.name, strip_ansi(zone_table[real_zone0(zone_number)].name).c_str());
@@ -1051,20 +1052,20 @@ int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)
     epic_stone_one_touch(obj, ch, epic_value);
 
     /* go through all members of group */
-    if( ch->group )
+    if(ch->group)
     {
-      for( struct group_list *gl = ch->group; gl; gl = gl->next )
+      for(struct group_list *gl = ch->group; gl; gl = gl->next)
       {
-        if( gl->ch == ch ) continue;
-        if( !IS_PC(gl->ch) || IS_TRUSTED(gl->ch) ) continue;
-        if( gl->ch->in_room == ch->in_room )
+        if(gl->ch == ch) continue;
+        if(!IS_PC(gl->ch) || IS_TRUSTED(gl->ch)) continue;
+        if(gl->ch->in_room == ch->in_room)
         {
           epic_stone_one_touch(obj, gl->ch, epic_value);
         }
       }
     }
 
-    if( zone_number > 0 && zone_number != RANDOM_ZONE_ID)
+    if(zone_number > 0 && zone_number != RANDOM_ZONE_ID)
     {
       int delta = GET_RACEWAR(ch) == RACEWAR_EVIL ? -1 : 1;
       update_epic_zone_alignment(zone_number, delta);
@@ -1093,7 +1094,7 @@ void epic_zone_balance()
   for (i = 0; i <= epic_zones.size(); i++)
   {
     // No need to balance at 0, and code automatically fixes it to 1 or -1
-    if ( !qry("SELECT alignment, last_touch FROM zones WHERE number = %d", epic_zones[i].number) )
+    if (!qry("SELECT alignment, last_touch FROM zones WHERE number = %d", epic_zones[i].number))
       return;
 
     MYSQL_RES *res = mysql_store_result(DB);
@@ -1143,29 +1144,29 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
   int cash_penalty_cost = 1;
   char buffer[256];
 
-  if( cmd == CMD_PRACTICE )
+  if(cmd == CMD_PRACTICE)
   {
     // find the teacher
     int t;
-    for( t = 0; epic_teachers[t].vnum; t++ )
+    for(t = 0; epic_teachers[t].vnum; t++)
     {
-      if( GET_VNUM(ch) == epic_teachers[t].vnum )
+      if(GET_VNUM(ch) == epic_teachers[t].vnum)
         break;
     }
 
-    if( !epic_teachers[t].vnum )
+    if(!epic_teachers[t].vnum)
       return FALSE;
 
     // find the skill
     int s;
-    for( s = 0; epic_rewards[s].type; s++ )
+    for(s = 0; epic_rewards[s].type; s++)
     {
-      if( epic_rewards[s].type == EPIC_REWARD_SKILL &&
-          epic_rewards[s].value == epic_teachers[t].skill )
+      if(epic_rewards[s].type == EPIC_REWARD_SKILL &&
+          epic_rewards[s].value == epic_teachers[t].skill)
         break;
     }
 
-    if( !epic_rewards[s].type )
+    if(!epic_rewards[s].type)
       return FALSE;
 
     int skill = epic_rewards[s].value;
@@ -1181,7 +1182,7 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
       coins_cost *= (int) (get_property("epic.multiclass.EpicPlatCost", 3));
     }
 
-    if( !arg || !*arg )
+    if(!arg || !*arg)
     {
       // practice called with no arguments
       sprintf(buffer,
@@ -1198,34 +1199,34 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
         return TRUE;
       }
 
-      if( epic_teachers[t].deny_skill && GET_CHAR_SKILL(pl, epic_teachers[t].deny_skill) )
+      if(epic_teachers[t].deny_skill && GET_CHAR_SKILL(pl, epic_teachers[t].deny_skill))
       {
         sprintf(buffer, "I cannot with good conscience teach that skill to someone who has already studied &+W%s&n!\n", skills[epic_teachers[s].deny_skill].name);
         send_to_char(buffer, pl);
         return TRUE;
       }
 
-      if( epic_teachers[t].pre_requisite && GET_CHAR_SKILL(pl, epic_teachers[t].pre_requisite) < epic_teachers[t].pre_req_lvl )
+      if(epic_teachers[t].pre_requisite && GET_CHAR_SKILL(pl, epic_teachers[t].pre_requisite) < epic_teachers[t].pre_req_lvl)
       {
         sprintf(buffer, "You have not yet mastered the art of &+W%s&n!\r\n", skills[epic_teachers[t].pre_requisite].name);
         send_to_char(buffer, pl);
         return TRUE;
       }
 
-      if( GET_CHAR_SKILL(pl, skill) >= 100 || GET_CHAR_SKILL(pl, skill) >= epic_teachers[t].max )
+      if(GET_CHAR_SKILL(pl, skill) >= 100 || GET_CHAR_SKILL(pl, skill) >= epic_teachers[t].max)
       {
         send_to_char("Unfortunately, I cannot teach you anything more, you have already mastered this skill!\n", pl);
         return TRUE;
       }
       
-      sprintf(buffer, "It will cost you &+W%d&n epic skill points and &+W%s&n.\n", points_cost, coin_stringv(coins_cost) );
+      sprintf(buffer, "It will cost you &+W%d&n epic skill points and &+W%s&n.\n", points_cost, coin_stringv(coins_cost));
       send_to_char(buffer, pl);
       return TRUE;
     }
-    else if( strstr(arg, skills[skill].name) )
+    else if(strstr(arg, skills[skill].name))
     {
       // called with skill name
-      if( epic_rewards[s].classes &&
+      if(epic_rewards[s].classes &&
           !IS_SET(epic_rewards[s].classes, pl->player.m_class) &&
           !IS_SET(epic_rewards[s].classes, pl->player.secondary_class))
       {
@@ -1233,32 +1234,32 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
         return TRUE;
       }
 
-      if( epic_teachers[t].deny_skill && GET_CHAR_SKILL(pl, epic_teachers[t].deny_skill) )
+      if(epic_teachers[t].deny_skill && GET_CHAR_SKILL(pl, epic_teachers[t].deny_skill))
       {
         sprintf(buffer, "I cannot with good conscience teach that skill to someone who has already studied &+W%s&n!\n", skills[epic_teachers[s].deny_skill].name);
         send_to_char(buffer, pl);
         return TRUE;
       }
 
-      if( epic_skillpoints(pl) < points_cost )
+      if(epic_skillpoints(pl) < points_cost)
       {
         send_to_char("You don't have enough epic skill points!\n", pl);
         return TRUE;
       }
 
-      if( epic_points(pl) < epic_rewards[s].min_points )
+      if(epic_points(pl) < epic_rewards[s].min_points)
       {
         send_to_char("You haven't progressed far enough to be able to master such skills!\n", pl);
         return TRUE;
       }
 
-      if( GET_MONEY(pl) < coins_cost )
+      if(GET_MONEY(pl) < coins_cost)
       {
         send_to_char("You can't afford my teaching!", pl);
         return TRUE;
       }
 
-      if( GET_CHAR_SKILL(pl, skill) >= 100 || GET_CHAR_SKILL(pl, skill) >= epic_teachers[t].max )
+      if(GET_CHAR_SKILL(pl, skill) >= 100 || GET_CHAR_SKILL(pl, skill) >= epic_teachers[t].max)
       {
         send_to_char("Unfortunately, I cannot teach you anything more, you have already mastered this skill!\n", pl);
         return TRUE;
@@ -1338,7 +1339,7 @@ void event_blizzard(P_char ch, P_char victim, P_obj obj, void *data)
         count++;
     }
 
-    if ( (faf = get_spell_from_room(room, SPELL_FIRESTORM)) ||
+    if ((faf = get_spell_from_room(room, SPELL_FIRESTORM)) ||
         (faf = get_spell_from_room(room, SPELL_SCATHING_WIND)) ||
         (faf = get_spell_from_room(room, SPELL_INCENDIARY_CLOUD))) {
       if (victim = get_random_char_in_room(ch->in_room, ch, 0)) {
@@ -1412,7 +1413,7 @@ void do_summon_familiar(P_char ch, char *argument, int cmd)
 
   int ch_skill_level = GET_CHAR_SKILL(ch, SKILL_SUMMON_FAMILIAR);
 
-  if( IS_TRUSTED(ch) )
+  if(IS_TRUSTED(ch))
   {
     ch_skill_level = 100;
   }
@@ -1428,11 +1429,11 @@ void do_summon_familiar(P_char ch, char *argument, int cmd)
 
   for (cld = ch->linked; cld; cld = cld->next_linked)
   {
-    if (cld->type == LNK_PET )
+    if (cld->type == LNK_PET)
     {
-      for( i = 0; familiars[i].vnum; i++ )
+      for(i = 0; familiars[i].vnum; i++)
       {
-        if( mob_index[GET_RNUM(cld->linking)].virtual_number == familiars[i].vnum )
+        if(mob_index[GET_RNUM(cld->linking)].virtual_number == familiars[i].vnum)
         {
           send_to_char("But you already have a familiar!\n", ch);
           return;
@@ -1454,13 +1455,13 @@ void do_summon_familiar(P_char ch, char *argument, int cmd)
     if (!str_cmp(argument, familiars[i].name)) {
       mob = read_mobile(familiars[i].vnum, VIRTUAL);
 
-      if( !mob )
+      if(!mob)
       {
         send_to_char("Nothing answers.\n", ch);
         return;
       }
 
-      int hits = GET_HIT(mob) + ( 2 * ch_skill_level );
+      int hits = GET_HIT(mob) + (2 * ch_skill_level);
       GET_HIT(mob) = GET_MAX_HIT(mob) = mob->points.base_hit = hits;
 
       char_to_room(mob, ch->in_room, 0);
@@ -1480,17 +1481,17 @@ bool epic_summon(P_char ch, char *arg)
   char buff2[MAX_STRING_LENGTH];
   char buff3[MAX_STRING_LENGTH];
 
-  if( !ch || IS_NPC(ch) )
+  if(!ch || IS_NPC(ch))
     return false;
 
   argument_interpreter(arg, buff2, buff3);
 
-  if( !str_cmp("blizzard", buff2) && GET_CHAR_SKILL(ch, SKILL_SUMMON_BLIZZARD) )
+  if(!str_cmp("blizzard", buff2) && GET_CHAR_SKILL(ch, SKILL_SUMMON_BLIZZARD))
   {
     do_summon_blizzard(ch, 0, CMD_SUMMON);
 
   }
-  else if( !str_cmp("familiar", buff2) && ( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_SUMMON_FAMILIAR)) )
+  else if(!str_cmp("familiar", buff2) && (IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_SUMMON_FAMILIAR)))
   {
     do_summon_familiar(ch, buff3, CMD_SUMMON);
   }
@@ -1504,7 +1505,7 @@ bool epic_summon(P_char ch, char *arg)
 
 int epic_familiar(P_char ch, P_char pl, int cmd, char *arg)
 {
-  if( !ch )
+  if(!ch)
     return FALSE;
 
   if (cmd == CMD_SET_PERIODIC)
@@ -1514,7 +1515,7 @@ int epic_familiar(P_char ch, P_char pl, int cmd, char *arg)
 
 
   // bat proc, has a chance to prevent incoming takedown
-  if ( GET_VNUM(ch) == EPIC_BAT_VNUM &&
+  if (GET_VNUM(ch) == EPIC_BAT_VNUM &&
       (cmd == CMD_BASH || cmd == CMD_TRIP || cmd == CMD_SPRINGLEAP ||
       cmd == CMD_TACKLE || cmd == CMD_BODYSLAM || cmd == CMD_MAUL) &&
       get_char_vis(pl, arg) == master && !number(0,2))
@@ -1567,7 +1568,7 @@ int epic_familiar(P_char ch, P_char pl, int cmd, char *arg)
     return TRUE;
   }
 
-  if( cmd == CMD_PERIODIC )
+  if(cmd == CMD_PERIODIC)
   {
     if (!master)
     {
@@ -1584,7 +1585,7 @@ int epic_familiar(P_char ch, P_char pl, int cmd, char *arg)
 
       case CLASS_SORCERER:
       case CLASS_CONJURER:
-        if (!number(0,2) && master->in_room == ch->in_room )
+        if (!number(0,2) && master->in_room == ch->in_room)
         {
           CastMageSpell(ch, master, 1);
           return TRUE;
@@ -1592,7 +1593,7 @@ int epic_familiar(P_char ch, P_char pl, int cmd, char *arg)
         break;
 
       case CLASS_CLERIC:
-        if (!number(0,2) && master->in_room == ch->in_room )
+        if (!number(0,2) && master->in_room == ch->in_room)
         {
           CastClericSpell(ch, master, 1);
           return TRUE;
@@ -1662,7 +1663,7 @@ int devotion_skill_check(P_char ch)
 {
   int dev_power = (GET_CHAR_SKILL(ch, SKILL_DEVOTION) - 40)/10 - number(0,50);
 
-  if( dev_power <= 0 ) return 0;
+  if(dev_power <= 0) return 0;
 
   char buf[128];
   buf[0] = '\0';
@@ -2009,19 +2010,19 @@ vector<string> get_epic_players(int racewar)
   debug("get_epic_players(): __NO_MYSQL__, returning 0");
   return names;
 #else
-  if( !qry("SELECT name from players_core WHERE epics > 0 and racewar = '%d' and level < 57 order by epics desc limit %d", racewar, (int) get_property("epic.list.limit", 10) ) )
+  if(!qry("SELECT name from players_core WHERE epics > 0 and racewar = '%d' and level < 57 order by epics desc limit %d", racewar, (int) get_property("epic.list.limit", 10)))
     return names;
 
   MYSQL_RES *res = mysql_store_result(DB);
 
-  if( !res )
+  if(!res)
   {
     mysql_free_result(res);
     return names;
   }
 
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while(row = mysql_fetch_row(res))
   {
     names.push_back(string(row[0]));
   }
@@ -2037,30 +2038,30 @@ void do_epic(P_char ch, char *arg, int cmd)
   char buff2[MAX_STRING_LENGTH];
   char buff3[MAX_STRING_LENGTH];
 
-  if( !ch || IS_NPC(ch) )
+  if(!ch || IS_NPC(ch))
     return;
 
   argument_interpreter(arg, buff2, buff3);
 
-  if( !str_cmp("reset", buff2) )
+  if(!str_cmp("reset", buff2))
   {
     do_epic_reset(ch, arg, cmd);
     return;
   }
   
-  if( !str_cmp("skills", buff2) )
+  if(!str_cmp("skills", buff2))
   {
     do_epic_skills(ch, arg, cmd);
     return;
   }
 
-  if( !str_cmp("trophy", buff2) )
+  if(!str_cmp("trophy", buff2))
   {
     do_epic_trophy(ch, arg, cmd);
     return;
   }
 
-  if( !str_cmp("zones", buff2) )
+  if(!str_cmp("zones", buff2))
   {
     do_epic_zones(ch, arg, cmd);
     return;
@@ -2075,7 +2076,7 @@ void do_epic(P_char ch, char *arg, int cmd)
 
   send_to_char(" &+WGoods\n\n", ch);
 
-  for( int i = 0; i < top_good_players.size(); i++ )
+  for(int i = 0; i < top_good_players.size(); i++)
   {
     send_to_char("   ", ch);
     send_to_char(top_good_players[i].c_str(), ch);
@@ -2086,7 +2087,7 @@ void do_epic(P_char ch, char *arg, int cmd)
   send_to_char("\n\n &+LEvils\n\n", ch);
 
 
-  for( int i = 0; i < top_evil_players.size(); i++ )
+  for(int i = 0; i < top_evil_players.size(); i++)
   {
     send_to_char("   ", ch);
     send_to_char(top_evil_players[i].c_str(), ch);
@@ -2097,22 +2098,22 @@ void do_epic(P_char ch, char *arg, int cmd)
 
 bool epic_zone_done_now(int zone_number)
 {
-	for( vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
+	for(vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
 			 it != epic_zone_completions.end();
-			 it++ )
+			 it++)
 	{
-		if( (it->number == zone_number) ) return true;
+		if((it->number == zone_number)) return true;
 	}
 	return false;
 }
 
 bool epic_zone_done(int zone_number)
 {
-	for( vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
+	for(vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
 			 it != epic_zone_completions.end();
-			 it++ )
+			 it++)
 	{
-		if( (it->number == zone_number) && (time(NULL) - it->done_at) > (int) get_property("epic.showCompleted.delaySecs", (15*60)) ) return true;
+		if((it->number == zone_number) && (time(NULL) - it->done_at) > (int) get_property("epic.showCompleted.delaySecs", (15*60))) return true;
 	}
 	return false;
 }
@@ -2120,11 +2121,11 @@ bool epic_zone_done(int zone_number)
 int epic_zone_data::displayed_alignment() const 
 {
   int delta = 0;
- 	for( vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
+ 	for(vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
       it != epic_zone_completions.end();
-      it++ )
+      it++)
 	{
-		if( (it->number == this->number) && (time(NULL) - it->done_at) < (int) get_property("epic.showCompleted.delaySecs", (15*60)) ) 
+		if((it->number == this->number) && (time(NULL) - it->done_at) < (int) get_property("epic.showCompleted.delaySecs", (15*60))) 
     {
       return this->alignment - it->delta;
     }
@@ -2138,7 +2139,7 @@ int epic_zone_data::displayed_alignment() const
 //{
 //  return;
 //  
-//  if( !ch || IS_NPC(ch) )
+//  if(!ch || IS_NPC(ch))
 //    return;
 //
 //#ifdef __NO_MYSQL__
@@ -2163,31 +2164,31 @@ int epic_zone_data::displayed_alignment() const
 //    "&+W(&+BVERY RARE&+W)"
 //  };
 //
-//  for( int i = 0; i < epic_zones.size(); i++ )
+//  for(int i = 0; i < epic_zones.size(); i++)
 //  {
 //    float freq = epic_zones[i].freq;
 //
-//		if( epic_zone_done(epic_zones[i].number) ) done_str[0] = '*';
+//		if(epic_zone_done(epic_zones[i].number)) done_str[0] = '*';
 //		else done_str[0] = ' ';
 //
 //    int freq_str = 3;
 //
-//    if( freq < 0.50 )
+//    if(freq < 0.50)
 //      freq_str = 0;
-//    else if( freq < 0.50 )
+//    else if(freq < 0.50)
 //      freq_str = 1;
-//    else if( freq < 0.80 )
+//    else if(freq < 0.80)
 //      freq_str = 2;
-//    else if( freq > 1.90 )
+//    else if(freq > 1.90)
 //      freq_str = 6;
-//    else if( freq > 1.50 )
+//    else if(freq > 1.50)
 //      freq_str = 5;
-//    else if( freq > 1.20 )
+//    else if(freq > 1.20)
 //      freq_str = 4;
 //    else
 //      freq_str = 3;
 //
-//    sprintf(buff, "  %s%s %s\r\n", done_str, epic_zones[i].name.c_str(), freq_strs[freq_str] );
+//    sprintf(buff, "  %s%s %s\r\n", done_str, epic_zones[i].name.c_str(), freq_strs[freq_str]);
 //    send_to_char(buff, ch);
 //  }
 //
@@ -2202,14 +2203,14 @@ void do_epic_reset(P_char ch, char *arg, int cmd)
   
   argument_interpreter(arg, buff2, buff3);
   
-  if( !ch || !IS_PC(ch) )
+  if(!ch || !IS_PC(ch))
     return;
   
   P_char t_ch = ch;
   
-  if( IS_TRUSTED(ch) && strlen(buff3) )
+  if(IS_TRUSTED(ch) && strlen(buff3))
   {
-    if( !(t_ch = get_char_vis(ch, buff3)) || !IS_PC(t_ch) )
+    if(!(t_ch = get_char_vis(ch, buff3)) || !IS_PC(t_ch))
     {
       send_to_char("They don't appear to be in the game.\n", ch);
       return;
@@ -2237,16 +2238,16 @@ void do_epic_reset(P_char ch, char *arg, int cmd)
       int s;
       
       bool found = false;
-      for( s = 0; epic_rewards[s].type; s++ )
+      for(s = 0; epic_rewards[s].type; s++)
       {
-        if( epic_rewards[s].value == skill_id )
+        if(epic_rewards[s].value == skill_id)
         {
           found = true;
           break;
         }
       }
       
-      if( !found )
+      if(!found)
       {
         continue;
       }
@@ -2254,7 +2255,7 @@ void do_epic_reset(P_char ch, char *arg, int cmd)
       int points = 0;
       int coins = 0;
       
-      for( int skill_level = 0; skill_level < learned; skill_level += (int) get_property("epic.skillGain", 10) )
+      for(int skill_level = 0; skill_level < learned; skill_level += (int) get_property("epic.skillGain", 10))
       {
         float cost_f = 1 + skill_level / get_property("epic.progressFactor", 30);
         int points_cost = (int) (cost_f * epic_rewards[s].points_cost);
@@ -2290,7 +2291,7 @@ void do_epic_reset(P_char ch, char *arg, int cmd)
 
   sprintf(buff2, "\r\n&+GYour epic skills have been reset: your skill points have been refunded, \r\n&+Gand %s&+G has been reimbursed and is waiting for you at the nearest auction house.\r\n\r\n", coin_stringv(coins_refund));
   
-  if( !send_to_pid(buff2, GET_PID(t_ch)) )
+  if(!send_to_pid(buff2, GET_PID(t_ch)))
     send_to_pid_offline(buff2, GET_PID(t_ch));
   
   do_save_silent(t_ch, 1);  
@@ -2298,7 +2299,7 @@ void do_epic_reset(P_char ch, char *arg, int cmd)
 
 void do_epic_zones(P_char ch, char *arg, int cmd)
 {
-  if( !ch || IS_NPC(ch) )
+  if(!ch || IS_NPC(ch))
     return;
   
 #ifdef __NO_MYSQL__
@@ -2328,14 +2329,14 @@ void do_epic_zones(P_char ch, char *arg, int cmd)
     "&n(&+Wpure good&n)"
   };
   
-  for( int i = 0; i < epic_zones.size(); i++ )
+  for(int i = 0; i < epic_zones.size(); i++)
   {    
-		if( epic_zone_done(epic_zones[i].number) ) done_str[0] = '*';
+		if(epic_zone_done(epic_zones[i].number)) done_str[0] = '*';
 		else done_str[0] = ' ';
     
     int alignment_str = BOUNDED(0, EPIC_ZONE_ALIGNMENT_MAX + epic_zones[i].displayed_alignment(), 10);
     
-    sprintf(buff, "  %s%s %s\r\n", done_str, pad_ansi(epic_zones[i].name.c_str(), 45).c_str(), alignment_strs[alignment_str] );
+    sprintf(buff, "  %s%s %s\r\n", done_str, pad_ansi(epic_zones[i].name.c_str(), 45).c_str(), alignment_strs[alignment_str]);
     send_to_char(buff, ch);
   }
   
@@ -2349,14 +2350,14 @@ void do_epic_trophy(P_char ch, char *arg, int cmd)
 
   argument_interpreter(arg, buff2, buff3);
 
-  if( !ch || IS_NPC(ch) )
+  if(!ch || IS_NPC(ch))
     return;
 
   P_char t_ch = ch;
 
-  if( IS_TRUSTED(ch) && strlen(buff3) )
+  if(IS_TRUSTED(ch) && strlen(buff3))
   {
-    if( !(t_ch = get_char_vis(ch, buff3)))
+    if(!(t_ch = get_char_vis(ch, buff3)))
     {
       send_to_char("They don't appear to be in the game.\n", ch);
       return;
@@ -2367,11 +2368,11 @@ void do_epic_trophy(P_char ch, char *arg, int cmd)
 
   send_to_char("&+WEpic Trophy\n", ch);
 
-  for( int i = 0; i < trophy.size(); i++ )
+  for(int i = 0; i < trophy.size(); i++)
   {
-    if( trophy[i].zone_number >= 0 && real_zone0(trophy[i].zone_number) )
+    if(trophy[i].zone_number >= 0 && real_zone0(trophy[i].zone_number))
     {
-      sprintf( buff2, "[&+W%3d&n] %s\n", trophy[i].count, zone_table[real_zone0(trophy[i].zone_number)].name);
+      sprintf(buff2, "[&+W%3d&n] %s\n", trophy[i].count, zone_table[real_zone0(trophy[i].zone_number)].name);
       send_to_char(buff2, ch);
     }
 
@@ -2407,27 +2408,27 @@ float get_epic_zone_alignment_mod(int zone_number, ubyte racewar)
   float mod = 1.0;
   int alignment = 0;
   
-  if( !qry("SELECT alignment FROM zones WHERE number = %d", zone_number) )
+  if(!qry("SELECT alignment FROM zones WHERE number = %d", zone_number))
     return mod;
   
   MYSQL_RES *res = mysql_store_result(DB);
   
-  if( mysql_num_rows(res) < 1 )
+  if(mysql_num_rows(res) < 1)
     return mod;
   
   MYSQL_ROW row = mysql_fetch_row(res);
   
-  if( row )
+  if(row)
     alignment = atoi(row[0]);
   
   mysql_free_result(res);
 
-  if( (alignment < 0 && racewar == RACEWAR_GOOD) || (alignment > 0 && racewar == RACEWAR_EVIL) )
+  if((alignment < 0 && racewar == RACEWAR_GOOD) || (alignment > 0 && racewar == RACEWAR_EVIL))
   {
     // good alignment, evil racewar or evil alignment, good racewar
     mod += ((float) abs(alignment)) * 0.3 * (float) get_property("epic.zone.alignmentMod", 0.10);
   }
-  else if( (alignment > 0 && racewar == RACEWAR_GOOD) || (alignment < 0 && racewar == RACEWAR_EVIL) )
+  else if((alignment > 0 && racewar == RACEWAR_GOOD) || (alignment < 0 && racewar == RACEWAR_EVIL))
   {
     // good alignment, good racewar or evil alignment, evil racewar
     mod -= ((float) abs(alignment)) * (float) get_property("epic.zone.alignmentMod", 0.10);    
@@ -2447,7 +2448,7 @@ void update_epic_zone_mods()
 #else
   int wait_secs = (int) get_property("epic.freqMod.tick.waitSecs", 3600);
 
-  if( !has_elapsed("epic_zone_mod", wait_secs) )
+  if(!has_elapsed("epic_zone_mod", wait_secs))
     return;
 
   float add = (float) get_property("epic.freqMod.tick.add", 0.002);
@@ -2485,17 +2486,17 @@ float get_epic_zone_frequency_mod(int zone_number)
 
   float mod = 1.0;
 
-  if( !qry("SELECT frequency_mod FROM zones WHERE number = %d", zone_number) )
+  if(!qry("SELECT frequency_mod FROM zones WHERE number = %d", zone_number))
     return mod;
 
   MYSQL_RES *res = mysql_store_result(DB);
 
-  if( mysql_num_rows(res) < 1 )
+  if(mysql_num_rows(res) < 1)
     return mod;
 
   MYSQL_ROW row = mysql_fetch_row(res);
 
-  if( row )
+  if(row)
     mod = atof(row[0]);
 
   mysql_free_result(res);
@@ -2512,7 +2513,7 @@ vector<epic_zone_data> get_epic_zones()
   return zones;
 #else
 
-  if( !qry("SELECT number, name, frequency_mod, alignment FROM zones WHERE epic_type > 0 ORDER BY (suggested_group_size*epic_payout), id") )
+  if(!qry("SELECT number, name, frequency_mod, alignment FROM zones WHERE epic_type > 0 ORDER BY (suggested_group_size*epic_payout), id"))
   {
     return zones;
   }
@@ -2521,9 +2522,9 @@ vector<epic_zone_data> get_epic_zones()
 
   MYSQL_ROW row;
 
-  while( row = mysql_fetch_row(res) )
+  while(row = mysql_fetch_row(res))
   {
-    zones.push_back( epic_zone_data(atoi(row[0]), string(row[1]), atof(row[2]), atoi(row[3]) ));
+    zones.push_back(epic_zone_data(atoi(row[0]), string(row[1]), atof(row[2]), atoi(row[3])));
   }
 
   mysql_free_result(res);
@@ -2536,12 +2537,12 @@ bool silent_spell_check(P_char ch)
 {
   int skill = GET_CHAR_SKILL(ch, SKILL_SILENT_SPELL);
 
-  if( skill <= 0 )
+  if(skill <= 0)
     return FALSE;
 
-  skill = BOUNDED( 25, skill, 100 );
+  skill = BOUNDED(25, skill, 100);
 
-  if( number(0, 100) < skill )
+  if(number(0, 100) < skill)
   {
     return TRUE;
   }
@@ -2610,9 +2611,9 @@ void do_epic_skills(P_char ch, char *arg, int cmd)
   char buff[MAX_STRING_LENGTH];
   P_char teacher;
 
-  if ( IS_TRUSTED(ch) )
+  if (IS_TRUSTED(ch))
   {
-    send_to_char("&+GSkills                    (Vnum ) Teacher Name\n" \
+    send_to_char("&+GSkills                    (Vnum) Teacher Name\n" \
                  "-------------------------------------------------\n", ch);
   } else {
     send_to_char("&+GThe following epic skills are available to you:\n" \
@@ -2620,34 +2621,34 @@ void do_epic_skills(P_char ch, char *arg, int cmd)
   }
 
   int s, t;
-  for( s = 0; epic_rewards[s].type; s++ )
+  for(s = 0; epic_rewards[s].type; s++)
   {
     int skill = epic_rewards[s].value;
 
-    if( skill <= 0 || skill >= (LAST_SKILL + 1) )
+    if(skill <= 0 || skill >= (LAST_SKILL + 1))
       continue;
 
-    for( t = 0; epic_teachers[t].vnum; t++ )
+    for(t = 0; epic_teachers[t].vnum; t++)
     {
-      if( epic_teachers[t].skill == skill )
+      if(epic_teachers[t].skill == skill)
         break;
     }
 
-    if( !epic_teachers[t].vnum )
+    if(!epic_teachers[t].vnum)
       continue;
 
-    if( epic_rewards[s].classes &&
+    if(epic_rewards[s].classes &&
         !IS_SET(epic_rewards[s].classes, ch->player.m_class) &&
         !IS_SET(epic_rewards[s].classes, ch->player.secondary_class))
       continue;
 
-    if( epic_teachers[t].deny_skill && GET_CHAR_SKILL(ch, epic_teachers[t].deny_skill) )
+    if(epic_teachers[t].deny_skill && GET_CHAR_SKILL(ch, epic_teachers[t].deny_skill))
       continue;
 
-    if( epic_teachers[t].pre_requisite && GET_CHAR_SKILL(ch, epic_teachers[t].pre_requisite) < 100 )
+    if(epic_teachers[t].pre_requisite && GET_CHAR_SKILL(ch, epic_teachers[t].pre_requisite) < 100)
       continue;
 
-    if( IS_TRUSTED(ch) )
+    if(IS_TRUSTED(ch))
     {
       if (teacher = read_mobile(epic_teachers[t].vnum, VIRTUAL))
       {
@@ -2689,8 +2690,8 @@ void do_infuse(P_char ch, char *arg, int cmd)
     return;
   }
 
-  if ( (device->type != ITEM_STAFF) &&
-       (device->type != ITEM_WAND) )
+  if ((device->type != ITEM_STAFF) &&
+       (device->type != ITEM_WAND))
   {
     send_to_char("You can't infuse that!\r\n", ch);
     return;
@@ -2702,8 +2703,8 @@ void do_infuse(P_char ch, char *arg, int cmd)
     return;
   }
 
-  if ( (device->type == ITEM_STAFF) &&
-       (skill < 40) )
+  if ((device->type == ITEM_STAFF) &&
+       (skill < 40))
   {
     send_to_char("You're not proficient enough to infuse a staff yet.\r\n", ch);
     return;
@@ -2764,7 +2765,7 @@ void do_infuse(P_char ch, char *arg, int cmd)
     }
 
     check += 10;
-    if ( (number(0, 100) < ((check) - (skill/2))) || (check == 100) )
+    if ((number(0, 100) < ((check) - (skill/2))) || (check == 100))
     {
       send_to_char("&+LYou can't infuse this anymore today.&n\r\n",  ch);
       break;

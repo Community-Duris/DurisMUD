@@ -2139,7 +2139,6 @@ P_char read_mobile(int nr, int type)
     }
     /* The new easy monsters */
     fscanf(mob_f, " %ld ", &tmp);
-//    GET_LEVEL(mob) = tmp;
     mob->player.level = tmp;
 #if defined(CTF_MUD) && (CTF_MUD == 1)
     if (!IS_SET(mob->specials.act, ACT_ELITE))
@@ -2157,7 +2156,7 @@ P_char read_mobile(int nr, int type)
  * The following initialises the # of spells useable for NPCs in a given
  * spell circle based on the spl_table[level][spell_circle] in memorize.c.
  * Element 0 of this tracking array serves as an accumulator used in
- * repleneshing used slots. - SKB 31 Mar 1995
+ * replenishing used slots. - SKB 31 Mar 1995
  */
     mob->specials.undead_spell_slots[0] = 0;
 
@@ -2181,11 +2180,7 @@ P_char read_mobile(int nr, int type)
     mob->points.hitroll = mob->points.base_hitroll;
 
     fscanf(mob_f, " %ld ", &tmp);
-#if 1
-    if ((tmp > -10) && (tmp < 10))
-      tmp *= 10;
-    mob->points.base_armor = BOUNDED(-1000, tmp, 0);
-#endif
+    mob->points.base_armor = BOUNDED(-250, tmp, 250);
 
     tmp = 0;
     tmp2 = 0;
@@ -2434,13 +2429,13 @@ P_char read_mobile(int nr, int type)
       strstr(mob->player.name, "warrior"))
     {
       while (mob->base_stats.Str < min_stats_for_class[1][0])
-        mob->base_stats.Str += number(20, 50);
+        mob->base_stats.Str += number(10, 20);
       while (mob->base_stats.Dex < min_stats_for_class[1][1])
-        mob->base_stats.Dex += number(20, 50);
+        mob->base_stats.Dex += number(10, 20);
       while (mob->base_stats.Agi < min_stats_for_class[1][2])
-        mob->base_stats.Agi += number(20, 50);
+        mob->base_stats.Agi += number(10, 20);
       while (mob->base_stats.Con < min_stats_for_class[1][3])
-        mob->base_stats.Con += number(20, 50);
+        mob->base_stats.Con += number(10, 20);
     }
     if (strstr(mob->player.name, "thief") ||
         strstr(mob->player.name, "rogue") ||
@@ -2448,13 +2443,13 @@ P_char read_mobile(int nr, int type)
         strstr(mob->player.name, "assassin"))
     {
       while (mob->base_stats.Dex < min_stats_for_class[13][1])
-        mob->base_stats.Dex += number(20, 50);
+        mob->base_stats.Dex += number(10, 20);
       while (mob->base_stats.Agi < min_stats_for_class[13][2])
-        mob->base_stats.Agi += number(20, 50);
+        mob->base_stats.Agi += number(10, 20);
       while (mob->base_stats.Int < min_stats_for_class[13][5])
-        mob->base_stats.Int += number(20, 50);
+        mob->base_stats.Int += number(10, 20);
       while (mob->base_stats.Cha < min_stats_for_class[13][7])
-        mob->base_stats.Cha += number(20, 50);
+        mob->base_stats.Cha += number(10, 20);
       if (GET_CLASS(mob, CLASS_ROGUE) && (!mob_index[GET_RNUM(mob)].func.mob))
         mob_index[GET_RNUM(mob)].func.mob = thief;
     }
@@ -2462,14 +2457,14 @@ P_char read_mobile(int nr, int type)
       if (!mob_index[GET_RNUM(mob)].func.mob)
         mob_index[GET_RNUM(mob)].func.mob = citizenship;
 
-    mob->base_stats.Str = BOUNDED(50, mob->base_stats.Str, 100);
-    mob->base_stats.Dex = BOUNDED(50, mob->base_stats.Dex, 100);
-    mob->base_stats.Agi = BOUNDED(50, mob->base_stats.Dex, 100);
-    mob->base_stats.Con = BOUNDED(50, mob->base_stats.Con, 100);
-    mob->base_stats.Pow = BOUNDED(50, mob->base_stats.Con, 100);
-    mob->base_stats.Int = BOUNDED(50, mob->base_stats.Int, 100);
-    mob->base_stats.Wis = BOUNDED(50, mob->base_stats.Wis, 100);
-    mob->base_stats.Cha = BOUNDED(50, mob->base_stats.Wis, 100);
+    mob->base_stats.Str = BOUNDED(25, mob->base_stats.Str, 200);
+    mob->base_stats.Dex = BOUNDED(25, mob->base_stats.Dex, 200);
+    mob->base_stats.Agi = BOUNDED(25, mob->base_stats.Dex, 200);
+    mob->base_stats.Con = BOUNDED(25, mob->base_stats.Con, 200);
+    mob->base_stats.Pow = BOUNDED(25, mob->base_stats.Con, 200);
+    mob->base_stats.Int = BOUNDED(25, mob->base_stats.Int, 200);
+    mob->base_stats.Wis = BOUNDED(25, mob->base_stats.Wis, 200);
+    mob->base_stats.Cha = BOUNDED(25, mob->base_stats.Wis, 200);
 
     /* * variable mana */
     i = 80 + dice(MAX(1, GET_LEVEL(mob)), IS_ANIMAL(mob) ? 1 : 4) +
@@ -2484,7 +2479,7 @@ P_char read_mobile(int nr, int type)
 
     /* at this point, i ranges from 83 to 696, there are a few other cases */
     if (GET_LEVEL(mob) >= 56)
-      i += 5000;
+      i += 1000;
     else if (GET_LEVEL(mob) > 53)
       i += 500;
     else if (GET_LEVEL(mob) > 50)
@@ -2622,23 +2617,7 @@ P_char read_mobile(int nr, int type)
           GET_DAMROLL(mob) + mob->points.damnodice,
           GET_DAMROLL(mob) +
           (mob->points.damnodice * mob->points.damsizedice));
-/*
-    mob->points.base_damroll = bar / 3;
-    bar -= mob->points.base_damroll;
-    mob->points.damsizedice = 7;
-    mob->points.damnodice = MAX(1, bar / 4);
-    logit(LOG_MOB, "MOB: %d damage reduced to: %dd%d + %d (%d to %d)",
-          mob_index[nr].virtual_number, mob->points.damnodice,
-          mob->points.damsizedice, mob->points.base_damroll,
-          mob->points.base_damroll + mob->points.damnodice,
-          mob->points.base_damroll +
-          (mob->points.damnodice * mob->points.damsizedice));
-*/
   }
-  /*
-   * Result of these adjustments: mob damage = max average of 120 for
-   * nondemon/dragons, 200 for dragons/demons.
-   */
 
   mob->curr_stats = mob->base_stats;
 

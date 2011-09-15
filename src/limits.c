@@ -552,7 +552,7 @@ void illithid_advance_level(P_char ch)
   for (i = GET_LEVEL(ch) + 1; i > minlvl && (new_exp_table[i] <= GET_EXP(ch)); i++)
   {
     GET_EXP(ch) -= new_exp_table[i];
-    advance_level(ch);
+    advance_level(ch, FALSE);
   }
 }
 
@@ -568,35 +568,35 @@ bool check_advancement(P_char player)
     case 56:
      break;
     case 55:
-     if(player->only.pc->frags > 8.00 &&
+     if(player->only.pc->frags > 4.00 &&
         player->only.pc->epics > 4000)
        tf = TRUE;
      else
        tf = FALSE;
      break;
     case 54:
-     if(player->only.pc->frags > 4.00 &&
+     if(player->only.pc->frags > 2.00 &&
         player->only.pc->epics > 3000)
        tf = TRUE;
      else
        tf = FALSE;
      break;
      case 53:
-     if(player->only.pc->frags > 2.00 &&
+     if(player->only.pc->frags > 1.00 &&
         player->only.pc->epics > 2000)
        tf = TRUE;
      else
        tf = FALSE;
      break;
      case 52:
-     if(player->only.pc->frags > 1.00 &&
+     if(player->only.pc->frags > 0.50 &&
         player->only.pc->epics > 1000)
        tf = TRUE;
      else
        tf = FALSE;
      break;
      case 51:
-     if(player->only.pc->frags > 0.50 &&
+     if(player->only.pc->frags > 0.25 &&
         player->only.pc->epics > 500)
        tf = TRUE;
      else
@@ -622,9 +622,9 @@ bool check_advancement(P_char player)
   return tf;
 }
     
-void advance_level(P_char ch)
+void advance_level(P_char ch, bool bypass)
 {
-  if(!check_advancement(ch))
+  if(!bypass || !check_advancement(ch))
     return;
 
   int      add_mana = 0, i;
@@ -688,11 +688,9 @@ void advance_level(P_char ch)
   if (GET_LEVEL(ch) == get_property("exp.maxExpLevel", 45)) {
     char buf[512];
     sprintf(buf, 
-        "You are now level %d and are considered among "
-        "the high level adventurers\n"
-        "of Duris!  The path now set before you is a difficult one, "
-        "as you must now\n"
-        "battle the higher forces of the realms to further your conquest!\n",
+        "You have gained a considerable amount of knowledge and experience, however",
+        "from this day forward, your progression will require even greater amounts",
+        "of determination and knowledge-seeking.  The Gods will be watching...",
         get_property("exp.maxExpLevel", 45));
     send_to_char(buf, ch);
   }
@@ -909,8 +907,7 @@ float gain_exp_modifiers(P_char ch, P_char victim, float XP)
       XP = XP * get_property("gain.exp.mod.victim.act.aggro", 1.25);
     }
     
-    // Careful with the breath modifier since many greater race mobs have a breathe weapon.
-    if(CAN_BREATHE(victim))
+    if(CAN_BREATHE(victim) && !IS_DRAGON(victim))
     {
       XP = XP * get_property("gain.exp.mod.victim.ability.breath.weapon", 1.00);
     }
@@ -995,15 +992,23 @@ int exp_mod(P_char k, P_char victim)
 {
   int      diff, mod;
 
+  // Changed parameters here to better define leveling requirements.
+  // Reducing experience from a mob that already gives none is stupid
+  // and frustrates people.  They should always be gaining something for
+  // playing, even if it's very little, not 0.  The higher end modifiers
+  // have been adjusted as well to give diminished gains for obviously
+  // "powerkilled" mobs.  This should work as a better stopgap for
+  // powerleveling.  - Jexni 9/9/11
+
   diff = GET_LEVEL(k) - GET_LEVEL(victim);
   if (diff > 40)
-    mod = 1;
+    mod = 25;
   else if (diff > 30)           /* 31+    */
-    mod = 3;
+    mod = 25;
   else if (diff > 20)           /* 21-30    */
-    mod = 10;
+    mod = 25;
   else if (diff > 15)           /* 16-20    */
-    mod = 20;
+    mod = 25;
   else if (diff > 10)           /* 11-15    */
     mod = 30;
   else if (diff > 5)            /* 6-10    */
@@ -1013,17 +1018,17 @@ int exp_mod(P_char k, P_char victim)
   else if (diff >= 0)           /* 0-2    */
     mod = 85;
   else if (diff > -3)           /* -2 - 1    */
-    mod = 95;
+    mod = 100;
   else if (diff > -6)           /* -6 - -3    */
-    mod = 110;
+    mod = 105;
   else if (diff > -10)           /* -9 - -6    */
-    mod = 120;
+    mod = 108;
   else if (diff > -15)          /* -14 - -10    */
-    mod = 135;
+    mod = 109;
   else if (diff > -20)          /* -19 - -15    */
-    mod = 140;
+    mod = 110;
   else                          /* < -20 */
-    mod = 150;                  
+    mod = 110;                  
     
   return mod;
 }
@@ -1196,7 +1201,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     {
       return 0;
     }
-    XP = XP * GET_LEVEL(victim) * get_property("exp.factor.melee", 1.00);  // Just a small boost for lowbies, becomes insignificant at higher levels  -Odorf
+    XP = XP * get_property("exp.factor.melee", 1.00);
     XP = gain_global_exp_modifiers(ch, XP);
     XP = XP * exp_mod(ch, victim) / 100;  
     XP = modify_exp_by_zone_trophy(ch, type, XP);  
@@ -1274,7 +1279,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
         (new_exp_table[i] <= GET_EXP(ch)); i++)
     {
       GET_EXP(ch) -= new_exp_table[i];
-      advance_level(ch);
+      advance_level(ch, FALSE);
     }
   }
   else
@@ -1417,7 +1422,7 @@ void point_update(void)
       i->specials.timer++;
 
     if (i->specials.timer > 3)
-      if (!IS_SET(i->specials.act, PLR_AFK))
+      if (!IS_SET(i->specials.act, PLR_AFK) && !IS_TRUSTED(i))
       {
         SET_BIT(i->specials.act, PLR_AFK);
 #if defined (CTF_MUD) && (CTF_MUD == 1)

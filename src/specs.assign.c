@@ -370,7 +370,7 @@ void assign_mobiles(void)
   mob_index[real_mobile0(8047)].func.mob = cityguard;
 
   /* transparent tower */
-  mob_index[real_mobile0(16205)].func.mob = transp_tow_acerlade;
+  mob_index[real_mobile0(16205)].func.mob = transp_tow_aceralde;
 
   /* necro dracoliches */
   mob_index[real_mobile0(3)].func.mob = necro_dracolich;

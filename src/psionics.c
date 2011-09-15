@@ -654,7 +654,7 @@ void spell_ballistic_attack(int level, P_char ch, char *arg, int type,
   if(IS_WATER_ROOM(ch->in_room) ||
      IS_OCEAN_ROOM(ch->in_room))
   {
-    send_to_char("You seen a bunch of water, but no rocks!\r\n", ch);
+    send_to_char("You see a bunch of water, but no rocks!\r\n", ch);
     return;
   }
   

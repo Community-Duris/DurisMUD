@@ -380,7 +380,7 @@ void event_bearhug(P_char ch, P_char victim, P_obj obj, void *data)
   {
     int dam = BOUNDED(40, (int)(GET_LEVEL(ch) + (3 * (int)(GET_C_STR(ch) - GET_C_STR(victim))) * (float)get_property("grapple.bearhug.dmgmod", 1.00) * ((float)GET_CHAR_SKILL(ch, SKILL_BEARHUG) / 100)), 300);
     dam += number(-20, 20); 
-    melee_damage(ch, victim, dam, PHSDAM_TOUCH, &messages);
+    melee_damage(ch, victim, dam, PHSDAM_TOUCH | PHSDAM_NOREDUCE, &messages);
     notch_skill(ch, SKILL_BEARHUG, (int)get_property("skill.notch.bearhug", 10));
     //check_shields(ch, victim, dam, RAWDAM_DEFAULT);
     if (IS_ALIVE(ch) && IS_ALIVE(victim))
@@ -707,7 +707,7 @@ void event_headlock(P_char ch, P_char victim, P_obj obj, void *data)
     if (!knockedout)
     {
     	int dam = (int)((GET_C_DEX(ch)/7)*damage);
-      raw_damage(ch, victim, dam, RAWDAM_DEFAULT, &messages);
+      melee_damage(ch, victim, dam, PHSDAM_TOUCH | PHSDAM_NOREDUCE, &messages);
       notch_skill(ch, SKILL_HEADLOCK, (int)get_property("skill.notch.headlock", 5));
       check_shields(ch, victim, dam, RAWDAM_DEFAULT);
       if (IS_ALIVE(ch) && IS_ALIVE(victim))
@@ -789,7 +789,7 @@ void armlock_check(P_char attacker, P_char grappler)
   {
     case ARMREFLEX_HOLD:
       dam = (int)(GET_C_DEX(grappler)/15*4*(float)get_property("grapple.armlock.dmgmod", 1.00));
-      raw_damage(grappler, attacker, dam, RAWDAM_DEFAULT, &messages);
+      melee_damage(grappler, attacker, dam, PHSDAM_TOUCH | PHSDAM_NOREDUCE, &messages);
       check_shields(grappler, attacker, dam, RAWDAM_DEFAULT);
       
       if (!IS_ALIVE(grappler) || !IS_ALIVE(attacker))
@@ -811,7 +811,7 @@ void armlock_check(P_char attacker, P_char grappler)
         affect_to_char(attacker, &af);
         
         int dam = (int)(((GET_C_DEX(grappler)/10)+str)*4*(float)get_property("grapple.armlock.break.dmgmod", 1.00));
-        raw_damage(grappler, attacker, dam, RAWDAM_DEFAULT, &breakmsg);
+        melee_damage(grappler, attacker, dam, PHSDAM_TOUCH | PHSDAM_NOREDUCE, &breakmsg);
         check_shields(grappler, attacker, dam, RAWDAM_DEFAULT);
       
         if (!IS_ALIVE(grappler) || !IS_ALIVE(attacker))
@@ -1197,7 +1197,7 @@ void event_leglock(P_char ch, P_char victim, P_obj obj, void *data)
       affect_to_char(victim, &af);
 
       int dam = (int)(((GET_C_DEX(ch)/10)+str)*4*(float)get_property("grapple.leglock.break.dmgmod", 1.00));
-      raw_damage(ch, victim, dam, RAWDAM_DEFAULT, &breakmsg);
+      melee_damage(ch, victim, dam, PHSDAM_TOUCH | PHSDAM_NOREDUCE, &breakmsg);
       notch_skill(ch, SKILL_LEGLOCK, (int)get_property("skill.notch.leglock", 5));
       check_shields(ch, victim, dam, RAWDAM_DEFAULT);
       
@@ -1222,7 +1222,7 @@ void event_leglock(P_char ch, P_char victim, P_obj obj, void *data)
     if (!legbreak)
     {
       int dam = (int)((GET_C_DEX(ch)/7)*damage);
-      raw_damage(ch, victim, dam, RAWDAM_DEFAULT, &messages);
+      melee_damage(ch, victim, dam, PHSDAM_TOUCH | PHSDAM_NOREDUCE, &messages);
       notch_skill(ch, SKILL_LEGLOCK, (int)get_property("skill.notch.leglock", 5));
       check_shields(ch, victim, dam, RAWDAM_DEFAULT);
       if (!IS_ALIVE(ch) || !IS_ALIVE(victim))
@@ -1340,13 +1340,13 @@ void do_groundslam(P_char ch, char *argument, int cmd)
     percent = GET_CHAR_SKILL(ch, SKILL_GROUNDSLAM);
      
     if ((number(1, 101) < percent) ||
-        notch_skill(ch, SKILL_GROUNDSLAM, (int)get_property("skill.notch.groundslam", 5)) ||
-        notch_skill(ch, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 1))
+        notch_skill(ch, SKILL_GROUNDSLAM, (int)get_property("skill.notch.groundslam", 15)) ||
+        notch_skill(ch, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 15))
        )
     {
-      // Add weight based damge here
+      // Add weight based damage here
       int dam = (int)((GET_WEIGHT(ch)/5)*(float)get_property("grapple.groundslam.dmgmod", 1.00));
-      raw_damage(ch, victim, dam, RAWDAM_DEFAULT, &messages);
+      melee_damage(ch, victim, dam, PHSDAM_TOUCH | PHSDAM_NOREDUCE, &messages);
       check_shields(ch, victim, dam, RAWDAM_DEFAULT);
       if (!IS_ALIVE(ch) || !IS_ALIVE(victim))
         return;

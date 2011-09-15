@@ -14,8 +14,8 @@
 extern P_index mob_index;       /* for IS_SHOPKEEPER() macro */
 extern struct stat_data stat_factor[];
 extern float class_hitpoints[];
-float    hp_mob_con_factor = get_property("hitpoints.mob.conFactor", 1.000);
-float    hp_mob_npc_pc_ratio = get_property("hitpoints.mob.NpcPcRatio", 2.250);
+float    hp_mob_con_factor = get_property("hitpoints.mob.conFactor", 0.400);
+float    hp_mob_npc_pc_ratio = get_property("hitpoints.mob.NpcPcRatio", 2.000);
 extern P_room world;
 extern struct zone_data *zone_table;
 extern char *specdata[][MAX_SPEC];
@@ -26,9 +26,9 @@ void set_npc_multi(P_char ch)
 
   for (i = 0; i < CLASS_COUNT; i++)
   {
-    if (ch->player.m_class & (1 << i))
+    if(ch->player.m_class & (1 << i))
     {
-      if (flag)
+      if(flag)
       {
         ch->specials.affected_by4 |= AFF4_MULTI_CLASS;
         return;
@@ -46,7 +46,7 @@ void convertMob(P_char ch)
   float    xp, copp, silv, gold, plat;
   int      damN, damS, damA, hits, level, x, xhigh;
 
-  if (!ch)
+  if(!ch)
     return;
     
   if(IS_PC(ch))
@@ -56,12 +56,12 @@ void convertMob(P_char ch)
 
   /* default pos of sleeping = bad */
 
-  if ((ch->only.npc->default_pos & STAT_MASK) == STAT_SLEEPING)
+  if((ch->only.npc->default_pos & STAT_MASK) == STAT_SLEEPING)
     ch->only.npc->default_pos = STAT_RESTING + POS_SITTING;
 
   /* ok we now set size and check for exception */
 
-  if (ch->player.size == SIZE_DEFAULT)
+  if(ch->player.size == SIZE_DEFAULT)
   {
     GET_SIZE(ch) = race_size(GET_RACE(ch));
   }
@@ -71,23 +71,23 @@ void convertMob(P_char ch)
      to assign properly newly created undead races, lets just assume
      that everything that walks and is RACE_UNDEAD and has keywords
      of skeleton or zombie is assigned to RACE_SKELETON or RACE_ZOMBIE*/
-  if (GET_RACE(ch) == RACE_UNDEAD &&
+  if(GET_RACE(ch) == RACE_UNDEAD &&
       isname("skeleton", GET_NAME(ch)))
       GET_RACE(ch) = RACE_SKELETON;
       
-  if (GET_RACE(ch) == RACE_UNDEAD &&
+  if(GET_RACE(ch) == RACE_UNDEAD &&
       isname("zombie", GET_NAME(ch)))
       GET_RACE(ch) = RACE_ZOMBIE;
 
-  if (GET_RACE(ch) == RACE_UNDEAD &&
+  if(GET_RACE(ch) == RACE_UNDEAD &&
       isname("wraith", GET_NAME(ch)))
       GET_RACE(ch) = RACE_WRAITH;
 
-  if (GET_RACE(ch) == RACE_UNDEAD &&
+  if(GET_RACE(ch) == RACE_UNDEAD &&
       isname("spectre", GET_NAME(ch)))
       GET_RACE(ch) = RACE_SPECTRE;
 
-  if (GET_RACE(ch) == RACE_UNDEAD &&
+  if(GET_RACE(ch) == RACE_UNDEAD &&
       isname("shadow", GET_NAME(ch)))
       GET_RACE(ch) = RACE_SHADOW;
 
@@ -130,50 +130,50 @@ void convertMob(P_char ch)
   /* for guild golem and mob that should not move set cover
      so they don't get attack by range */
 
-  if (strstr(ch->player.name, "assoc"))
+  if(strstr(ch->player.name, "assoc"))
     SET_BIT(ch->specials.affected_by3, AFF3_COVER);
-  else if (strstr(ch->player.name, "_no_move_"))
+  else if(strstr(ch->player.name, "_no_move_"))
   {
      SET_BIT(ch->specials.act2, ACT2_NO_LURE);
      SET_BIT(ch->specials.affected_by3, AFF3_COVER);
   }
-  else if (IS_SET(ch->specials.act, ACT_SENTINEL))
+  else if(IS_SET(ch->specials.act, ACT_SENTINEL))
     SET_BIT(ch->specials.affected_by3, AFF3_COVER);
 
   /* some mobs, we do NOT convert! */
-  if (IS_SET(ch->specials.act, ACT_IGNORE) ||
+  if(IS_SET(ch->specials.act, ACT_IGNORE) ||
       strstr(ch->player.name, "_ignore_"))
   {
     ch->points.hit = ch->points.max_hit = ch->points.base_hit =
-      MAX(1, ch->points.base_hit / number(2, 6));
+      MAX(1, ch->points.base_hit / 4);
     affect_total(ch, FALSE);
     return;
   }
    
-  if ((ch->player.m_class == 0) && (GET_LEVEL(ch) >= 15))
+  if((ch->player.m_class == 0) && (GET_LEVEL(ch) >= 15))
   {
     ch->player.m_class = CLASS_WARRIOR;
   }
 
   /* minimum mob level */
-  if (!GET_LEVEL(ch))
+  if(!GET_LEVEL(ch))
     ch->player.level = 1;
 
-  if (GET_LEVEL(ch) > MAXLVL)
+  if(GET_LEVEL(ch) > MAXLVL)
     ch->player.level = MAXLVL;
 
   xp = copp = silv = gold = plat = 0;
 
   /* find multipliers for mob xp/money */
-  if (GET_LEVEL(ch) > 50)
+  if(GET_LEVEL(ch) > 50)
   {
-    xp = 1600;
+    xp = 2000;
     copp = 0;
     silv = 0;
     gold = .9292;
-    plat = .1950;
+    plat = .5950;
   }
-  else if (GET_LEVEL(ch) > 40)
+  else if(GET_LEVEL(ch) > 40)
   {
     xp = 1000;
     copp = 0;
@@ -181,7 +181,7 @@ void convertMob(P_char ch)
     gold = .6637;
     plat = .1267;
   }
-  else if (GET_LEVEL(ch) > 30)
+  else if(GET_LEVEL(ch) > 30)
   {
     xp = 525;
     copp = 0;
@@ -189,7 +189,7 @@ void convertMob(P_char ch)
     gold = .4857;
     plat = .0800;
   }
-  else if (GET_LEVEL(ch) > 20)
+  else if(GET_LEVEL(ch) > 20)
   {
     xp = 275;
     copp = .6667;
@@ -197,7 +197,7 @@ void convertMob(P_char ch)
     gold = .2223;
     plat = .0400;
   }
-  else if (GET_LEVEL(ch) > 10)
+  else if(GET_LEVEL(ch) > 10)
   {
     xp = 100;
     copp = .5000;
@@ -228,10 +228,10 @@ void convertMob(P_char ch)
       GET_PLATINUM(ch) *= number(3, 6);
 
   /* make sure they get at least 1 coin... */
-  if (!GET_MONEY(ch))
+  if(!GET_MONEY(ch))
     GET_COPPER(ch) = 1;
 
-  if ((GET_RACE(ch) == RACE_F_ELEMENTAL) ||
+  if((GET_RACE(ch) == RACE_F_ELEMENTAL) ||
       (GET_RACE(ch) == RACE_A_ELEMENTAL) ||
       (GET_RACE(ch) == RACE_W_ELEMENTAL) ||
       (GET_RACE(ch) == RACE_E_ELEMENTAL) ||
@@ -257,15 +257,15 @@ void convertMob(P_char ch)
     GET_PLATINUM(ch) = GET_GOLD(ch) = GET_SILVER(ch) = GET_COPPER(ch) = 0;
 
   /* adjust for mana */
-  if (GET_CLASS(ch, CLASS_PSIONICIST))
+  if(GET_CLASS(ch, CLASS_PSIONICIST))
     ch->points.mana = ch->points.base_mana = ch->points.max_mana =
-      GET_LEVEL(ch) * 25;
+      GET_LEVEL(ch) * 15;
   else
     ch->points.mana = ch->points.base_mana = ch->points.max_mana =
       GET_LEVEL(ch) * 10;
 
   /* hitroll */
-  if (IS_MELEE_CLASS(ch) || IS_DRAGON(ch) || IS_DEMON(ch) || IS_GIANT(ch))
+  if(IS_MELEE_CLASS(ch) || IS_DRAGON(ch) || IS_DEMON(ch) || IS_GIANT(ch))
     ch->points.base_hitroll = BOUNDED(2, (GET_LEVEL(ch) / 2), 35);
   else
     ch->points.base_hitroll = BOUNDED(0, (GET_LEVEL(ch) / 3), 25);
@@ -276,11 +276,11 @@ void convertMob(P_char ch)
   ch->points.base_armor = 250 - (int) (GET_LEVEL(ch) * number(2, 4));
 
   /* then additions based on level... */
-  if (GET_LEVEL(ch) > 57)
+  if(GET_LEVEL(ch) > 57)
     ch->points.base_armor -= 150;
-  else if (GET_LEVEL(ch) > 49)
+  else if(GET_LEVEL(ch) > 49)
     ch->points.base_armor -= 100;
-  else if (GET_LEVEL(ch) > 40)
+  else if(GET_LEVEL(ch) > 40)
     ch->points.base_armor -= 50;
 
   /* racial conditions to AC */
@@ -328,67 +328,67 @@ void convertMob(P_char ch)
     damS = 9;
     damA = 45;
   }
-  else if (level <= 5)
+  else if(level <= 5)
   {
     damN = 1;
     damS = 3;
     damA = 0;
   }
-  else if (level <= 10)
+  else if(level <= 10)
   {
     damN = 1;
     damS = 4;
     damA = 1;
   }
-  else if (level <= 15)
+  else if(level <= 15)
   {
     damN = 2;
     damS = 5;
     damA = 5;
   }
-  else if (level <= 20)
+  else if(level <= 20)
   {
     damN = 3;
     damS = 4;
     damA = 10;
   }
-  else if (level <= 25)
+  else if(level <= 25)
   {
     damN = 4;
     damS = 5;
     damA = 10;
   }
-  else if (level <= 30)
+  else if(level <= 30)
   {
     damN = 5;
     damS = 5;
     damA = 15;
   }
-  else if (level <= 35)
+  else if(level <= 35)
   {
     damN = 6;
     damS = 6;
     damA = 20;
   }
-  else if (level <= 40)
+  else if(level <= 40)
   {
     damN = 6;
     damS = 6;
     damA = 25;
   }
-  else if (level <= 45)
+  else if(level <= 45)
   {
     damN = 6;
     damS = 7;
     damA = 30;
   }
-  else if (level <= 50)
+  else if(level <= 50)
   {
     damN = 7;
     damS = 7;
     damA = 35;
   }
-  else if (level <= 55)
+  else if(level <= 55)
   {
     damN = 8;
     damS = 9;
@@ -401,7 +401,7 @@ void convertMob(P_char ch)
     damA = 45;
   }
 
-  if (IS_MELEE_CLASS(ch))
+  if(IS_MELEE_CLASS(ch))
   {
     damN += GET_LEVEL(ch) / 15;
   }
@@ -417,7 +417,7 @@ void convertMob(P_char ch)
    * in property hp_mob_con_factor ranging from 0 to 1 tells us how much
    * racial con affects hitpoints. when it's 0, then all mob races have
    * same hitpoints, when it's 1 then differences are as big as for the
-   * PC races, so ogres having twice human and nearly for times drow
+   * PC races, so ogres having twice human and nearly four times drow
    * hitpoints etc. the goal was to make it intuitively adjustable via
    * two provided properties. /tharkun
    */
@@ -444,7 +444,7 @@ void convertMob(P_char ch)
 
   damN = MIN(damA, 70);
 
-  if (damA > damN)
+  if(damA > damN)
   {
     damA = damN;
     ch->points.base_damroll = ch->points.damroll = damA / 3;
@@ -456,31 +456,31 @@ void convertMob(P_char ch)
   ch->curr_stats = ch->base_stats;
 
   /* if they don't have memory, and we think they should, give it to them */
-  if (!IS_SET(ch->specials.act, ACT_MEMORY) && !IS_ANIMAL(ch) &&
+  if(!IS_SET(ch->specials.act, ACT_MEMORY) && !IS_ANIMAL(ch) &&
       !IS_INSECT(ch) && (GET_RACE(ch) != RACE_PLANT))
   {
     SET_BIT(ch->specials.act, ACT_MEMORY);
   }
 
   /* druids are neutral aligned... */
-  if (GET_CLASS(ch, CLASS_DRUID) || (IS_MULTICLASS_PC(ch) && GET_SECONDARY_CLASS(ch, CLASS_DRUID)))
+  if(GET_CLASS(ch, CLASS_DRUID) || (IS_MULTICLASS_PC(ch) && GET_SECONDARY_CLASS(ch, CLASS_DRUID)))
     GET_ALIGNMENT(ch) = BOUNDED(-349, GET_ALIGNMENT(ch), 349);
 
   /* paladins and rangers are good aligned */
-  else if (GET_CLASS(ch, CLASS_PALADIN) || GET_CLASS(ch, CLASS_RANGER))
+  else if(GET_CLASS(ch, CLASS_PALADIN) || GET_CLASS(ch, CLASS_RANGER))
     GET_ALIGNMENT(ch) = MAX(750, GET_ALIGNMENT(ch));
 
   /* anti paladins are evil aligned */
-  else if (GET_CLASS(ch, CLASS_ANTIPALADIN))
+  else if(GET_CLASS(ch, CLASS_ANTIPALADIN))
     GET_ALIGNMENT(ch) = MIN(-1000, GET_ALIGNMENT(ch));
 
   /* necro's are evil aligned (undead spells won't work otherwise) */
-  else if (GET_CLASS(ch, CLASS_NECROMANCER))
+  else if(GET_CLASS(ch, CLASS_NECROMANCER))
     GET_ALIGNMENT(ch) = MIN(-1000, GET_ALIGNMENT(ch));
 
-  if (GET_ALIGNMENT(ch) > 1000)
+  if(GET_ALIGNMENT(ch) > 1000)
     GET_ALIGNMENT(ch) = 1000;
-  if (GET_ALIGNMENT(ch) < -1000)
+  if(GET_ALIGNMENT(ch) < -1000)
     GET_ALIGNMENT(ch) = -1000;
 
   /* horses get ridden.. */
@@ -510,13 +510,13 @@ void convertMob(P_char ch)
      strstr(ch->player.name, "captain"))
       SET_BIT(ch->specials.act, ACT_PROTECTOR);
 
-  if (IS_SHOPKEEPER(ch))
+  if(IS_SHOPKEEPER(ch))
     REMOVE_BIT(ch->specials.act, ACT_SCAVENGER);
 
   /* now that the STONE_SKIN affect does something without the spell
      being cast, need to make sure area builders didn't use it
      improperly... so... */
-  if (IS_AFFECTED(ch, AFF_STONE_SKIN) &&
+  if(IS_AFFECTED(ch, AFF_STONE_SKIN) &&
       !((GET_LEVEL(ch) > 39) &&
        ((GET_RACE(ch) == RACE_GOLEM) ||
        (GET_RACE(ch) == RACE_CONSTRUCT) ||
@@ -525,7 +525,7 @@ void convertMob(P_char ch)
     REMOVE_BIT(ch->specials.affected_by, AFF_STONE_SKIN);
 
   /* earth elems get perm stoneskin */
-  if (GET_RACE(ch) == RACE_E_ELEMENTAL)
+  if(GET_RACE(ch) == RACE_E_ELEMENTAL)
     SET_BIT(ch->specials.affected_by, AFF_STONE_SKIN);
 
   /* remove ALL affects that don't belong! */
@@ -562,17 +562,17 @@ void convertMob(P_char ch)
              AFF5_IMPRISON |
              AFF5_MEMORY_BLOCK);
 
-  if (IS_SET(ch->specials.act, ACT_ELITE)) 
+  if(IS_SET(ch->specials.act, ACT_ELITE)) 
   {
     give_proper_stat(ch);
     ch->points.hit = ch->points.max_hit = ch->points.base_hit =
-      (int)(ch->points.hit * get_property("hitpoints.mob.eliteBonus", 2.5));
+      (int)(ch->points.hit * get_property("hitpoints.mob.eliteBonus", 1.25));
     ch->points.damnodice = (int)(get_property("damage.eliteBonus", 1.2) * ch->points.damnodice);
-    GET_EXP(ch) = (int) (GET_EXP(ch) * get_property("hitpoints.mob.eliteBonus", 2.5) *
+    GET_EXP(ch) = (int) (GET_EXP(ch) * get_property("hitpoints.mob.eliteBonus", 1.25) *
         get_property("damage.eliteBonus", 1.2));
   }
 
-  if (IS_SET(ch->specials.act, ACT_TEACHER))
+  if(IS_SET(ch->specials.act, ACT_TEACHER))
     REMOVE_BIT(ch->specials.act, ACT_HUNTER); 
 
   affect_total(ch, FALSE);
@@ -587,10 +587,10 @@ void apply_zone_modifier(P_char ch)
   if(difficulty == 1)
     return;
   
-  float hit_mod = 1.0 + ((float) get_property("hitpoints.zoneDifficulty.factor", 0.500) * difficulty);
+  float hit_mod = 1.0 + ((float) get_property("hitpoints.zoneDifficulty.factor", 0.250) * difficulty);
   GET_MAX_HIT(ch) = GET_HIT(ch) = ch->points.base_hit = (int) (ch->points.base_hit * hit_mod );
   
-  float exp_mod = 1.0 + ((float) get_property("exp.zoneDifficulty.factor", 0.500) * difficulty);
+  float exp_mod = 1.0 + ((float) get_property("exp.zoneDifficulty.factor", 0.250) * difficulty);
   GET_EXP(ch) = (int) (GET_EXP(ch) * exp_mod);  
 
   float damage_mod_mod = 1.0 + ((float) get_property("damage.zoneDifficulty.mod.factor", 0.200) * difficulty);

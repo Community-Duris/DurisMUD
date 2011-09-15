@@ -5650,7 +5650,7 @@ int calculate_ac(P_char ch, bool flag)
   }
   else if(IS_NPC(ch))
   {
-    victim_ac += (62 - GET_LEVEL(ch)); // this helps PC's at low levels hit NPC's
+    victim_ac += 2 * (62 - GET_LEVEL(ch)); // this helps PC's at low levels hit NPC's
   }
 
   if(flag)
@@ -5744,7 +5744,7 @@ int calculate_thac_zero(P_char ch, int skill)
   // The final number out of this function will be modified by the
   // natural(agi) AC from calculate_ac, and the level of the
   // character being hit.  A 56 Human with 100 agility, will be
-  // hit by a warrior(base 15) at 56, and 35 hitroll and 100 skill
+  // hit by a warrior(base 16) at 56, and 35 hitroll and 100 skill
   // ~ 72% of the time.  - Jexni  6/1/11
  
   to_hit = to_hit * to_hit * to_hit; // base THAC0 cubed to start
@@ -7688,7 +7688,7 @@ int MonkRiposte(P_char victim, P_char attacker, P_obj wpn)
 
 int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
 {
-  int vic_perc = GET_CHAR_SKILL(victim, SKILL_PARRY);
+  int vic_perc = GET_CHAR_SKILL(victim, SKILL_PARRY) / 2;
   int att_perc;
   int blindfightskl = GET_CHAR_SKILL(victim, SKILL_BLINDFIGHTING);
   bool NPC_epic_parry = false;
@@ -7698,8 +7698,8 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
 
   if(affected_by_spell(victim, SPELL_COMBAT_MIND) &&
      GET_CLASS(victim, CLASS_PSIONICIST))
-      vic_perc += GET_LEVEL(victim);
-
+      vic_perc += GET_LEVEL(victim) / 6;
+  
   if(vic_perc < 1)
     return false;
   
@@ -7716,7 +7716,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   // based on weapon types (e.g. maces are harder to parry with or
   // parry against).  Parry is only achieved with the primary weapon
   // for balance purposes.
-  if(!victim->equipment[WIELD])
+  if(IS_PC(victim) && !victim->equipment[WIELD])
       return false;
   
   // Flaying weapons are !parry.
@@ -7724,7 +7724,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
     (victim->equipment[WIELD] && IS_FLAYING(victim->equipment[WIELD])))
       return false;
 
-  if (affected_by_spell(victim, SKILL_RAGE) && attacker != victim->specials.fighting)
+  if(affected_by_spell(victim, SKILL_RAGE) && attacker != victim->specials.fighting)
       return false;
 
   // Notching the parry skill fails the parry check.
@@ -7733,22 +7733,20 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
       return false;
 
   // Victim's parry:    
-
   if(affected_by_spell(victim, SPELL_COMBAT_MIND) &&
      GET_CLASS(victim, CLASS_PSIONICIST))
-        vic_perc += (int)(GET_LEVEL(victim) / 2);
-  vic_perc += dex_app[STAT_INDEX(GET_C_DEX(victim))].reaction * 15;
+        vic_perc += 5;
+  vic_perc += dex_app[STAT_INDEX(GET_C_DEX(victim))].reaction;
   
   if(vic_perc < 1)
     return false;
     
-  // Attacker's parry:
-  att_perc = WeaponSkill(attacker, wpn);
-  att_perc += str_app[STAT_INDEX(GET_C_STR(attacker))].tohit * 10;
-  att_perc += str_app[STAT_INDEX(GET_C_STR(attacker))].todam * 15;
+  // Attacker:
+  att_perc = WeaponSkill(attacker, wpn) / 5;
+  att_perc += str_app[STAT_INDEX(GET_C_STR(attacker))].tohit;
   
   // If attacker is significantly stronger than the defender, parry is reduced.
-  // This will benefit giants, dragons, etc... which is logical.
+  // This will benefit giants, dragons, etc...
   if(GET_C_STR(attacker) > GET_C_STR(victim) + 100)
     att_perc += GET_C_STR(attacker) - 100 - GET_C_STR(victim);
   
@@ -7791,21 +7789,19 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
      GET_CHAR_SKILL(victim, SKILL_EXPERT_PARRY))
   {
     expertparry = GET_CHAR_SKILL(victim, SKILL_EXPERT_PARRY);
-    // 125 percent max bonus
-    vic_perc = (int) (vic_perc * (1 + expertparry/400));
+    // 12.5 percent max bonus
+    vic_perc = (int) (vic_perc * (1 + expertparry/800));
   }
 
-  // Harder to parry a swashbuckler.
-  if(GET_SPEC(attacker, CLASS_WARRIOR, SPEC_SWASHBUCKLER))
-    att_perc = (int) (att_perc * 0.80);
-  
   // Random 5% change based on random luck comparison.
   if(number(0, GET_C_LUCK(victim)) > number(0, GET_C_LUCK(attacker)))
     vic_perc = (int) (vic_perc * 1.05);
-  
+  else
+    att_perc = (int) (att_perc * 1.05);
+
   // Greater races are more difficult to parry, but not impossible.
   if(IS_GREATER_RACE(attacker))
-      att_perc += GET_LEVEL(attacker);
+      att_perc += GET_LEVEL(attacker) / 2;
   
   // Much harder to parry with fireweapons like a bow, but not impossible.
   P_obj weapon = victim->equipment[WIELD];
@@ -7818,20 +7814,14 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   // Harder to parry something you are not fighting.
   if(IS_PC(victim) && victim->specials.fighting != attacker)
   {
-    vic_perc = (int) (vic_perc * 0.90);
+    vic_perc = (int) (vic_perc * 0.80);
   }
   
-  // Generate attacker and victim ranges.    
-  int defroll, attroll;
-  defroll = MAX(5, number(1, vic_perc));
-  attroll = MAX(5, number(1, att_perc));
-  
-  // debug("Defroll (%d), Attroll (%d)", defroll, attroll);
+  vic_perc = BOUNDED(5, vic_perc - att_perc, 100); // always a 5% chance
 
-  // Simple parry success check via comparison of two constrained random numbers.  
-  if(attroll > defroll)
+  if(number(0, 100) > vic_perc)
     return false;
-  
+
   if(rapier_dirk(victim, attacker))
   {
     return true;
@@ -8043,14 +8033,10 @@ int calculate_attacks(P_char ch, int attacks[])
 
     if (IS_CARRYING_W(ch) >= weight_threshold && IS_PC(ch))
     {
-      // if (affected_by_spell(ch, SPELL_STONE_SKIN))
-        // num_atts -=
-          // MIN(num_atts - 1, (int) ((IS_CARRYING_W(ch) - 20) / 10));
-      // else
-        num_atts -= MIN(num_atts - 1, (int) ((IS_CARRYING_W(ch) - 30) / 10));
+      num_atts -= MIN(num_atts - 1, (int) ((IS_CARRYING_W(ch) - 30) / 10));
 
-      if (!number(0, 4))
-        send_to_char("&+LYou feel weighed down, which is causing you to lose attacks.&n\r\n", ch);
+      if (!number(0, 15))
+        send_to_char("&+LYou feel weighed down...&n\r\n", ch);
     }
 
     if (IS_AFFECTED2(ch, AFF2_SLOW) && num_atts > 1)
@@ -8058,6 +8044,9 @@ int calculate_attacks(P_char ch, int attacks[])
 
     while (num_atts--)
       ADD_ATTACK(PRIMARY_WEAPON);
+
+    if(IS_MULTICLASS_NPC(ch))
+      num_atts -= 2;
   }
   else
   {                           // not MONK
@@ -8100,15 +8089,14 @@ int calculate_attacks(P_char ch, int attacks[])
         || GET_CHAR_SKILL(ch, SKILL_DOUBLE_ATTACK) > number(0, 100))
       ADD_ATTACK(PRIMARY_WEAPON);
 
-
     if (notch_skill(ch, SKILL_TRIPLE_ATTACK,
           get_property("skill.notch.offensive.auto", 100))
-        || GET_CHAR_SKILL(ch, SKILL_TRIPLE_ATTACK) > number(0, 100))
+        || GET_CHAR_SKILL(ch, SKILL_TRIPLE_ATTACK) > number(0, 110))
       ADD_ATTACK(PRIMARY_WEAPON);
 
     if (notch_skill(ch, SKILL_QUADRUPLE_ATTACK,
           get_property("skill.notch.offensive.auto", 100))
-        || GET_CHAR_SKILL(ch, SKILL_QUADRUPLE_ATTACK) > number(0, 100))
+        || GET_CHAR_SKILL(ch, SKILL_QUADRUPLE_ATTACK) > number(0, 125))
       ADD_ATTACK(PRIMARY_WEAPON);
 
     if (HAS_FOUR_HANDS(ch))
@@ -8143,9 +8131,7 @@ int calculate_attacks(P_char ch, int attacks[])
         ADD_ATTACK(PRIMARY_WEAPON);
 
   if (GET_CLASS(ch, CLASS_DREADLORD | CLASS_AVENGER) &&
-      GET_CHAR_SKILL(ch,
-        required_weapon_skill(ch->equipment[PRIMARY_WEAPON])) >
-      69)
+      GET_CHAR_SKILL(ch, required_weapon_skill(ch->equipment[PRIMARY_WEAPON])) > 69)
     ADD_ATTACK(PRIMARY_WEAPON);
 
   if (affected_by_spell(ch, SPELL_HOLY_SWORD))
