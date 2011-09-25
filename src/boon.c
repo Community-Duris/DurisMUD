@@ -400,7 +400,7 @@ bool get_boon_shop_data(int pid, BoonShop *bshop)
   if (!bshop)
     return FALSE;
 
-  if (!qry("SELECT id, pid, points, stats from boons_shop WHERE pid = '%d'", bshop->pid))
+  if (!qry("SELECT id, pid, points, stats from boons_shop WHERE pid = '%d'", pid))
   {
     debug("get_boon_shop_data(): cant read from db");
     return FALSE;
