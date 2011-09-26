@@ -2396,7 +2396,7 @@ int buckler_saints(P_obj obj, P_char ch, int cmd, char *arg)
       }
     }
   }
-/*
+
   if (arg && (cmd == CMD_SAY))
   {
     if (isname(arg, "verdonnaly"))
@@ -2417,7 +2417,7 @@ int buckler_saints(P_obj obj, P_char ch, int cmd, char *arg)
         }
         else
         {
-          spell_vitality(50, ch, 0, SPELL_TYPE_SPELL, 0, 0);
+        spell_vitality(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         }
 
         obj->timer[0] = curr_time;
@@ -2425,7 +2425,7 @@ int buckler_saints(P_obj obj, P_char ch, int cmd, char *arg)
       }
     }
   }
-*/
+
   if(IS_FIGHTING(ch))
   {
     if (cmd == CMD_GOTHIT && !number(0,25))
