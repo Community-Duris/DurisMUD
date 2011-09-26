@@ -41,7 +41,7 @@ const char *specdata[][MAX_SPEC] = {
   {"&+rMa&+RUle&+rR", "&+RRa&+rGe&+Rlo&+rRd", "", ""},  //Berserker
   {"&+CI&+Wc&+Ce &+LR&+Le&+wa&+wv&+Le&+Lr", "&+rF&+Rl&+Ya&+Rm&+re &+LR&+Le&+wa&+wv&+Le&+Lr", "&+bSh&+Bo&+Wck &+LR&+Le&+wa&+wv&+Le&+Lr", "&+LEa&+yrt&+Lh R&+yea&+Lve&+yr"},      //Reaver
   {"&+BM&+Yag&+Bic&+Yia&+Bn&n", "&+LDark &+mDreamer&n", "", ""},         // Illusionist
-  {"&+LDrag&+Lo&+Lnb&+Ro&+Lrn", "&+bAb&+Lyss&+bal&n", "&+LD&+war&+Lk &+bT&+ce&+Cm&+Wp&+Ce&+cs&+bt&n", ""},  /* Cabalist */
+  {"&+LDrag&+Ro&+Lnb&+Ro&+Lrn", "&+bAb&+Lyss&+bal&n", "&+LD&+war&+Lk &+bT&+ce&+Cm&+Wp&+Ce&+cs&+bt&n", ""},  /* Cabalist */
   {"&+LDeath&+rlord", "&+LShadow&+rlord", "", ""},      // Dreadlord
   {"&+cWindtalker", "&+WFro&+cst &+CMagus", "&+WCo&+Ysm&+Wom&+Yanc&+Wer", ""},     // Ethermancer
   {"&+YLight&+Wbringer", "&+WInq&+wuisi&+Wtor", "", ""},       //Avenger
