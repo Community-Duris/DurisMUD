@@ -3,6 +3,9 @@
 #include "interp.h"
 #include "comm.h"
 #include "prototypes.h"
+extern P_room world;
+
+int adjacent_room_nesw(P_char ch, int num_rooms );
 
 // This is an old proc for Lohrr's eq..
 void proc_lohrr( P_obj obj, P_char ch, int cmd, char *argument )
@@ -35,6 +38,75 @@ void proc_lohrr( P_obj obj, P_char ch, int cmd, char *argument )
 	   spell_full_heal( 60, ch, 0, 0, ch, 0);
       break;
    }
+}
+
+// This is a proc for the Leviathan mob.
+int leviathan( P_char ch, P_char pl, int cmd, char *arg )
+{
+   P_char tch;
+   int to_room;
+
+// ship_data * ship;
+
+   if( cmd == CMD_SET_PERIODIC )
+      return TRUE;
+
+   if( !ch )
+      return TRUE;
+
+// random chance to nearby ships:
+// if( ship = find_ship( ch ) && number( 0, 3) )
+// {
+//       roll/whale dive damaging ships like a ram attack
+//       return TRUE;
+// }
+
+   if( cmd == CMD_PERIODIC && !number( 0, 1 ) )
+   {
+      switch( number( 1, 2 ) )
+      {
+      case 1:
+         act( "$N lifts up out of the water, then splashes back down, causing a massive wave!", FALSE, ch, NULL, ch, TO_ROOM );
+
+         // To each char in room, chance of knockdown.
+         for( tch = world[ch->in_room].people;tch;tch = tch->next_in_room )
+         {
+            if( tch != ch )
+            {
+               if( number( 0, 1 ) )
+                  SET_POS( tch, POS_SITTING + GET_STAT(tch));
+               // if not knocked down, chance to get moved 1 room away.
+               else if( number( 0, 1 ) && (to_room = adjacent_room_nesw(ch, 1)) )
+               {
+                  // Move char 1 room
+                  char_from_room(tch);
+                  char_to_room(tch, to_room, -1);
+               }
+            }
+         }
+      break;
+      case 2:
+         tch = ch->specials.fighting;
+         if( tch )
+         {
+            act( "$N lashes out with a tentacle, wrapping it around you, lifts and quickly slams you upon the water surface!", FALSE, tch, NULL, ch, TO_CHAR );
+            act( "$N lashes out grabbing $n with a tentacle, thrashing $m into the water!", FALSE, tch, NULL, ch, TO_ROOM );
+            // Move victim 1-3 rooms away
+            if( to_room = adjacent_room_nesw(ch, number( 1, 3 )) )
+            {
+               char_from_room(tch);
+               char_to_room(tch, to_room, -1);
+            }
+            stop_fighting( tch );
+            // Stun for 3-5 sec
+            CharWait( tch, number( 3, 5 ) );
+         }
+      default:
+      break;
+      }
+   }
+
+   return FALSE;
 }
 
 // It's a percentage chance to make them attack a few extra times.
@@ -127,4 +199,29 @@ int sphinx_prefect_crown( P_obj obj, P_char ch, int cmd, char *arg )
          TRUE, obj->loc.wearing, obj, 0, TO_CHAR);
       obj->timer[1] = 1;														      return FALSE;
    }
+}
+
+int adjacent_room_nesw(P_char ch, int num_rooms )
+{
+   int dir = number( 0, 3 );
+   int i, j;
+   room_direction_data *exit;
+
+   if( !ch )
+      return -1;
+
+   for( i = 0; i < 3; i++ )
+   {
+      exit = EXIT( ch, (dir+i)%4 );
+      if( exit && exit->to_room )
+         // Move num_rooms away (if possible).
+         for ( j = 1; j < num_rooms;j++ )
+            if( world[exit->to_room].dir_option[(dir+i)%4] )
+               exit = world[exit->to_room].dir_option[(dir+i)%4];
+      if( exit && exit->to_room )
+         return exit->to_room;
+   }
+
+   // If no exit found, return -1;
+   return -1;
 }
