@@ -2609,11 +2609,12 @@ void do_lore(P_char ch, char *arg, int cmd)
 
   percent = number(1, 101);
 
+  sprintf( Gbuf1, "This item is from the zone: %s.\n", get_str_zone(obj) );
+  send_to_char( Gbuf1, ch );
+
   if (percent > skl_lvl)
   {
     notch_skill(ch, SKILL_LORE, 30);
-    sprintf( Gbuf1, "This item is from the zone: %s.\n", get_str_zone(obj) );
-    send_to_char( Gbuf1, ch );
     send_to_char("That's all you can recall about this item.\r\n", ch);
     CharWait(ch, 2);
     return;
