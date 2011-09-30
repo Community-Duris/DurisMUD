@@ -4102,8 +4102,7 @@ int sevenoaks_longsword(P_obj obj, P_char ch, int cmd, char *arg)
     "$n's $q &+rhums briefly as it unleashes a &+Cr&+Wai&+Cn of sharp &+Wic&+Ci&+Bc&+Cl&+Wes at $N!",
     "", "", "", 0, obj};
     
-  if(cmd != CMD_MELEE_HIT ||
-    !(ch))
+  if(cmd != CMD_MELEE_HIT || !(ch))
   {
     return (FALSE);
   }
@@ -4117,9 +4116,8 @@ int sevenoaks_longsword(P_obj obj, P_char ch, int cmd, char *arg)
     return false;
   }
 
-  /* if(CheckMultiProcTiming(ch) &&
-    !number(0, 32))
-  */
+  /* if(CheckMultiProcTiming(ch) && */
+  if(!number(0, 32))
   {
     act("&+LYour $q blurs as it strikes $N.",
       FALSE, ch, obj, vict, TO_CHAR);

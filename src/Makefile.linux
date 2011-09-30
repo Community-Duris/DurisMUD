@@ -252,8 +252,8 @@ libships.a:
 	cd ships && $(MAKE)
 
 dms_new : $(DMS_OBJS) $(OPT_OBJS) $(OUR_LIBS)
-	$(CC) $(LDFLAGS) -g -o ../dms_new $(DMS_OBJS) $(OPT_OBJS) $(LIBS)
-	chmod a+rx ../dms_new
+	$(CC) $(LDFLAGS) -g -o dms_new $(DMS_OBJS) $(OPT_OBJS) $(LIBS)
+	chmod a+rx dms_new
 
 pfile : $(PFILE_OBJS) $(SHARED_PFILE_OBJS) mm.o common.o
 	$(CC) $(LDFLAGS) -g -o pfile $(PFILE_OBJS) $(SHARED_PFILE_OBJS) common.o mm.o $(LIBS) 
