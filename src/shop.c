@@ -1776,15 +1776,37 @@ void shopping_stat( P_char ch, P_char keeper, char *arg, int cmd )
 {
    int i = 0;
    P_obj obj;
+   int shop_nr;
 
    if( !ch || !keeper )
+      return;
+
+  for (shop_nr = 0; shop_index[shop_nr].keeper != GET_RNUM(keeper); shop_nr++) ;
+
+  if (SHOP_FUNC(shop_nr))       /* Check secondary function  */
+    if ((SHOP_FUNC(shop_nr)) (keeper, ch, cmd, arg))
       return;
 
    for( obj = keeper->carrying; obj; obj = obj->next_content )
       if( CAN_SEE_OBJ( ch, obj ) && ( obj->cost > 0 ) )
          if( ++i == atoi(arg) )
          { 
-            lore_item( ch, obj );
+            if( shop_producing( obj, shop_nr) )
+            {
+               int cost = GET_LEVEL(ch);
+               if( cost > 25 )
+                  cost = 25;
+               if( cost > 1 )
+                  cost = ( cost - 1 ) * 40;
+               if( cost == 960 )
+                  cost = 1000;
+               if (!transact(ch, NULL, keeper, cost))
+                  act("It costs money to learn about $p.", FALSE, ch, obj, 0, TO_CHAR);
+               else
+                  lore_item( ch, obj );
+            }
+            else
+               act("I don't know anthing about $p.", FALSE, ch, obj, 0, TO_CHAR);
             return;
          }
    mobsay( keeper, "I do not sell that item." );
