@@ -3241,24 +3241,17 @@ bool make_random_boon_optnexus( BoonData *bdata )
   P_obj contents;
 
   if( !qry( "SELECT id, name, room_vnum, align FROM nexus_stones") )
-{
-if(descriptor_list)
-  send_to_char( "m_r_b_optnexus: failed qry.\n\r", descriptor_list->character );
     return FALSE;
-}
   res = mysql_store_result(DB);
 
   if( mysql_num_rows(res) < 1 )
   {
     mysql_free_result(res);
-if(descriptor_list)
-  send_to_char( "m_r_b_optnexus: numrows< 1.\n\r", descriptor_list->character );
     return FALSE;
   }
 
   // Pick a random stone
-//  for( i = number(1, mysql_num_rows(res));i>0;i--)
-  for( i = 1;i>0;i--)
+  for( i = number(1, mysql_num_rows(res));i>0;i--)
     row = mysql_fetch_row( res );
 
   room_vnum = atoi(row[2]);
@@ -3270,14 +3263,7 @@ if(descriptor_list)
   if( contents )
     bdata->criteria = atoi(row[0]);
   else
-{
-char buf[MAX_STRING_LENGTH];
-sprintf( buf, "m_r_b_optnexus: nexus not in room: vnum %d, rnum: %d.\n\r", 
-  room_vnum, real_room( room_vnum ) );
-if(descriptor_list)
-  send_to_char( buf, descriptor_list->character );
     return FALSE;
-}
   return TRUE;
 }
 
