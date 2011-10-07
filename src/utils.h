@@ -905,7 +905,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 						(GET_CLASS(ch, CLASS_PSIONICIST)) || \
 						(GET_CLASS(ch, CLASS_MINDFLAYER)))
 										
-    //(IS_NPC(ch) || IS_SET((ch)->player.m_class, CLASS_PSIONICIST)) || \
+    //(IS_NPC(ch) || IS_SET((ch)->player.m_class, CLASS_PSIONICIST)) ||
     //IS_SET((ch)->player.m_class, CLASS_MINDFLAYER))
 #define USES_SPELL_SLOTS(ch) ( \
         USES_COMMUNE(ch) || \

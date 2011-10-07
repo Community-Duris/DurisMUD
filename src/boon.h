@@ -168,5 +168,11 @@ void boon_maintenance();
 void boon_random_maintenance();
 int boon_get_random_zone(int);
 void check_boon_completion(P_char, P_char, double, int);
+bool random_build( P_char ch );
+bool make_random_boon( P_char ch );
+void make_random_boon_optmob( BoonData *bdata );
+void make_random_boon_optop( BoonData *bdata );
+bool make_random_boon_optnexus( BoonData *bdata );
+void make_random_boon_optzone( BoonData *bdata );
 
 #endif // __BOON_H__

@@ -1,68 +1,71 @@
-// Boon system for DurisMUD.
-// Redmine Ticket #577 by Seif
+// Boon system for DurisMUD. 
+// Redmine Ticket #577 by Seif 
 // Created April 2011 - Venthix
 
-// TODO:
-// in addition to the debug's setup some real logging incase someone completes a boon
-//   and gets an error message to contact an imm because the db wouldn't update or
-//   create.
-// make automatic random boon engine
-// finish boon command random controller
-// the boon shop
+// TODO: 
+// in addition to the debug's setup some real logging incase someone completes a boon 
+// and gets an error message to contact an imm because the db wouldn't update or 
+// create. 
+// make automatic random boon engine 
+// finish boon command random controller 
+// the boon shop 
 // Add live boon listings to the website.
 
-// To add new boon types or options:
-// Add the define to boon.h
-// Update boon_types or boon_options with the appropriate messages
-// Update boon_data to include the new type or option
-// Update parse_boon_data if special circumstances require, especailly
-//   if the bonus or criteria arguments require words instead of numbers.
-// Update validate_boon_data with appropriate checks
-// Update check_boon_completion
-// Update boon_notify
-// If you want it to be included in the random generator instead of only
-//   being manually added, update the random_std array to include the new
-//   boon_data array number.
+// To add new boon types or options: 
+// Add the define to boon.h 
+// Update boon_types or boon_options with the appropriate messages 
+// Update boon_data to include the new type or option 
+// Update parse_boon_data if special circumstances require, especailly 
+// if the bonus or criteria arguments require words instead of numbers. 
+// Update validate_boon_data with appropriate checks 
+// Update check_boon_completion 
+// Update boon_notify 
+// If you want it to be included in the random generator instead of only 
+// being manually added, update the random_std array to include the new 
+// boon_data array number.
 
 #include <stdio.h>
-#include <string.h>
-#include <time.h>
+#include <string.h> 
+#include <time.h> 
 #include <string>
 using namespace std;
 
-#include "boon.h"
-#include "interp.h"
-#include "structs.h"
-#include "sql.h"
-#include "utils.h"
-#include "utility.h"
-#include "prototypes.h"
-#include "spells.h"
-#include "guildhall.h"
-#include "assocs.h"
-#include "nexus_stones.h"
-#include "buildings.h"
-#include "epic.h"
+#include "boon.h" 
+#include "interp.h" 
+#include "structs.h" 
+#include "sql.h" 
+#include "utils.h" 
+#include "utility.h" 
+#include "prototypes.h" 
+#include "spells.h" 
+#include "guildhall.h" 
+#include "assocs.h" 
+#include "nexus_stones.h" 
+#include "buildings.h" 
+#include "epic.h" 
 #include "ctf.h"
 
-extern P_desc descriptor_list;
-extern P_room world;
-extern Skill skills[];
-extern struct race_names race_names_table[];
-extern P_index mob_index;
-extern const struct attr_names_struct attr_names[];
-extern int top_of_zone_table;
-extern struct zone_data *zone_table;
-extern const flagDef affected1_bits[];
-extern const flagDef affected2_bits[];
-extern const flagDef affected3_bits[];
-extern const flagDef affected4_bits[];
-extern const flagDef affected5_bits[];
-extern int new_exp_table[];
-extern struct ctfData ctfdata[];
+extern P_desc descriptor_list; 
+extern P_room world; 
+extern Skill skills[]; 
+extern struct race_names race_names_table[]; 
+extern P_index mob_index; 
+extern const struct attr_names_struct attr_names[]; 
+extern int top_of_zone_table; 
+extern struct zone_data *zone_table; 
+extern const flagDef affected1_bits[]; 
+extern const flagDef affected2_bits[]; 
+extern const flagDef affected3_bits[]; 
+extern const flagDef affected4_bits[]; 
+extern const flagDef affected5_bits[]; 
+extern int new_exp_table[]; 
+extern struct ctfData ctfdata[]; 
+extern int top_of_mobt; 
+extern vector<Building*> buildings; 
+extern P_index obj_index;
 
 struct boon_types_struct boon_types[] = {
-  {"none",	"No bonus exists"}, 
+  {"none",	"No bonus exists"},
   {"expm",	"Gain %d% bonus to exp"},
   {"exp",	"Gain exp"},
   {"epic",	"Gain %d epics"},
@@ -76,56 +79,55 @@ struct boon_types_struct boon_types[] = {
   {"\0"}
 };
 
-struct boon_options_struct boon_options[] = {
-// RACE		DESC					PROGRESS
-  {"none",	"from the zone %s&n.",			0},
+struct boon_options_struct boon_options[] = { // RACE DESC PROGRESS
+  {"none",	"from the zone %s&n.", 0},
   {"zone",	"when you complete the zone %s&n.",	0},
-  {"level",	"when you obtain level %d.",		0},
-  {"mob",	"when you kill %d %s&n(s).",		1},
-  {"race",	"when you kill %d %s&n(s).",		1},
+  {"level",	"when you obtain level %d.", 0},
+  {"mob",	"when you kill %d %s&n(s).", 1},
+  {"race",	"when you kill %d %s&n(s).", 1},
   {"frag",	"when you receive a %.2f frag or better.",	0},
-  {"frags",	"when you obtain %.2f frags.",		1},
+  {"frags",	"when you obtain %.2f frags.", 1},
   {"guildhall",	"when you sack the %s&n guildhall.",	0},
   {"outpost",	"when you capture the %s&n outpost.",	0},
   {"nexus",	"when you capture the %s&n nexus.",	0},
-  {"cargo",	"when you sell %d cargo.",		0},
+  {"cargo",	"when you sell %d cargo.", 0},
   {"auction",	"when you auction %d equipment.",	0},
   {"ctf",	"when you capture the CTF flag # %d.",	0},
   {"ctfb",	"when you capture the CTF flag # %d.",	0},
   "\0"
 };
 
-// level 0 means it can be randomly set, otherwise manually by the listed level.
-// Can make more randomly set once the data_validation is updated so we don't end
-// up with crazy bonuses for easy accomplishments.
-struct boon_data_struct boon_data[] = {
-// Type		Option		Level Requirement
-  {BTYPE_EXPM,	BOPT_NONE,	0},		// 0
+// level 0 means it can be randomly set, otherwise manually by the listed level. 
+// Can make more randomly set once the data_validation is updated so we don't end 
+// up with crazy bonuses for easy accomplishments. 
+struct boon_data_struct boon_data[] = { 
+// Type Option Level Requirement
+  {BTYPE_EXPM,	BOPT_NONE,	0}, // 0
   {BTYPE_EXPM,	BOPT_RACE,	0},
   {BTYPE_EXPM,	BOPT_MOB,	0},
   {BTYPE_EXP,	BOPT_ZONE,	0},
   {BTYPE_EXP,	BOPT_MOB,	0},
   {BTYPE_EXP,	BOPT_FRAG,	0},
-  {BTYPE_EXP,	BOPT_FRAGS,	0},		// 6
+  {BTYPE_EXP,	BOPT_FRAGS,	0}, // 6
   {BTYPE_EXP,	BOPT_LEVEL,	0},
   {BTYPE_EXP,	BOPT_OP,	0},
   {BTYPE_EXP,	BOPT_NEXUS,	0},
   {BTYPE_EXP,	BOPT_CTF,	0},
   {BTYPE_EXP,	BOPT_CTFB,	0},
   {BTYPE_EPIC,	BOPT_ZONE,	0},
-  {BTYPE_EPIC,	BOPT_MOB,	0},		// 11
+  {BTYPE_EPIC,	BOPT_MOB,	0}, // 11
   {BTYPE_EPIC,	BOPT_RACE,	GREATER_G},
   {BTYPE_EPIC,	BOPT_FRAG,	0},
   {BTYPE_EPIC,	BOPT_FRAGS,	0},
   {BTYPE_EPIC,	BOPT_LEVEL,	GREATER_G},
-  {BTYPE_EPIC,  BOPT_OP,	0},		// 16
+  {BTYPE_EPIC,	BOPT_OP,	0}, // 16
   {BTYPE_EPIC,	BOPT_NEXUS,	0},
   {BTYPE_EPIC,	BOPT_CTF,	0},
   {BTYPE_EPIC,	BOPT_CTFB,	0},
   {BTYPE_CASH,	BOPT_ZONE,	0},
   {BTYPE_CASH,	BOPT_MOB,	0},
   {BTYPE_CASH,	BOPT_RACE,	GREATER_G},
-  {BTYPE_CASH,	BOPT_FRAG,	0},		// 21
+  {BTYPE_CASH,	BOPT_FRAG,	0}, // 21
   {BTYPE_CASH,	BOPT_FRAGS,	0},
   {BTYPE_CASH,	BOPT_LEVEL,	GREATER_G},
   {BTYPE_CASH,	BOPT_OP,	0},
@@ -187,15 +189,14 @@ struct boon_data_struct boon_data[] = {
 };
 
 struct BoonRandomStandards random_std[] = {
-// ID	Racewar Side 	low	high	boon_data
-  {0,	0,		0,	0,	0},
+// ID	Racewar Side	low	high	boon_data
+  {0, 0, 0, 0, 0},
   {1,	RACEWAR_GOOD,	1,	20,	0},
   {2,	RACEWAR_EVIL,	1,	20,	0},
   {0}
 };
 
-bool check_boon_combo(int type, int option, int random)
-{
+bool check_boon_combo(int type, int option, int random) {
   for (int i = 0; boon_data[i].type; i++)
   {
     if (boon_data[i].type == type &&
@@ -215,8 +216,7 @@ bool check_boon_combo(int type, int option, int random)
   return FALSE;
 }
 
-int get_boon_level(int type, int option)
-{
+int get_boon_level(int type, int option) {
   for (int i = 0; boon_data[i].type; i++)
   {
     if (boon_data[i].type == type &&
@@ -228,8 +228,7 @@ int get_boon_level(int type, int option)
   return 0;
 }
 
-int get_valid_boon_type(char *arg)
-{
+int get_valid_boon_type(char *arg) {
   for (int i = 1; i < MAX_BTYPE; i++)
   {
     if (!strcmp(boon_types[i].type, arg))
@@ -240,8 +239,7 @@ int get_valid_boon_type(char *arg)
   return -1;
 }
 
-int get_valid_boon_option(char *arg)
-{
+int get_valid_boon_option(char *arg) {
   for (int i = 0; i < MAX_BOPT; i++)
   {
     if (!strcmp(boon_options[i].option, arg))
@@ -252,8 +250,7 @@ int get_valid_boon_option(char *arg)
   return -1;
 }
 
-int is_boon_valid(int id)
-{
+int is_boon_valid(int id) {
   if (!qry("SELECT id FROM boons WHERE id = '%d'", id))
     return FALSE;
   else
@@ -273,8 +270,7 @@ int is_boon_valid(int id)
   return FALSE;
 }
 
-int count_boons(int active, int random)
-{
+int count_boons(int active, int random) {
   char dbqry[MAX_STRING_LENGTH];
   int count = 0;
 
@@ -296,8 +292,7 @@ int count_boons(int active, int random)
   return 0;
 }
 
-void zero_boon_data(BoonData *bdata)
-{
+void zero_boon_data(BoonData *bdata) {
   if (!bdata)
     return;
 
@@ -320,8 +315,7 @@ void zero_boon_data(BoonData *bdata)
   return;
 }
 
-bool get_boon_data(int id, BoonData *bdata)
-{
+bool get_boon_data(int id, BoonData *bdata) {
   if (!bdata)
     return FALSE;
 
@@ -363,8 +357,7 @@ bool get_boon_data(int id, BoonData *bdata)
   return TRUE;
 }
 
-bool get_boon_progress_data(int id, int pid, BoonProgress *bpg)
-{
+bool get_boon_progress_data(int id, int pid, BoonProgress *bpg) {
   if (!bpg)
     return FALSE;
 
@@ -395,8 +388,7 @@ bool get_boon_progress_data(int id, int pid, BoonProgress *bpg)
   return TRUE;
 }
 
-bool get_boon_shop_data(int pid, BoonShop *bshop)
-{
+bool get_boon_shop_data(int pid, BoonShop *bshop) {
   if (!bshop)
     return FALSE;
 
@@ -427,15 +419,15 @@ bool get_boon_shop_data(int pid, BoonShop *bshop)
   return TRUE;
 }
 
-// Data validation for data in BoonData struct
-// Flag = which variable in the struct you want to validate
-// Can also select an all option
-// Returns 0 if data validates OK
-// returns number for error msg to display in parse_boon_args
-// Special return for BARG_ALL that fails:
-// retval / 100 = which BARG flag we failed
-// retval % 100 = true retval for diagnosing problem
-int validate_boon_data(BoonData *bdata, int flag)
+// Data validation for data in BoonData struct 
+// Flag = which variable in the struct you want to validate 
+// Can also select an all option 
+// Returns 0 if data validates OK 
+// returns number for error msg to display in parse_boon_args 
+// Special return for BARG_ALL that fails: 
+// retval / 100 = which BARG flag we failed 
+// retval % 100 = true retval for diagnosing problem 
+int validate_boon_data(BoonData *bdata, int flag) 
 {
   char buff[MAX_STRING_LENGTH];
   int i, retval = 0;
@@ -551,8 +543,8 @@ int validate_boon_data(BoonData *bdata, int flag)
 	      NexusStoneInfo nexus;
 	      if (!nexus_stone_info(bdata->criteria, &nexus))
 		return 1;
-	      if ((nexus.align == 3 && bdata->racewar == RACEWAR_GOOD) ||
-		  (nexus.align == -3 && bdata->racewar == RACEWAR_EVIL))
+	      if ((nexus.align == 3 && bdata->racewar == RACEWAR_GOOD) 
+		||  (nexus.align == -3 && bdata->racewar == RACEWAR_EVIL))
 		return 2;
 	      break;
 	    }
@@ -642,14 +634,14 @@ int validate_boon_data(BoonData *bdata, int flag)
 	    }
 	  case BTYPE_SPELL:
 	    {
-	      if (IS_SET(skills[(int)bdata->bonus].targets, TAR_FIGHT_VICT) ||
-		  IS_SET(skills[(int)bdata->bonus].targets, TAR_OBJ_INV) ||
-		  IS_SET(skills[(int)bdata->bonus].targets, TAR_OBJ_ROOM) ||
-		  IS_SET(skills[(int)bdata->bonus].targets, TAR_OBJ_WORLD) ||
-		  IS_SET(skills[(int)bdata->bonus].targets, TAR_OBJ_EQUIP) ||
-		  IS_SET(skills[(int)bdata->bonus].targets, TAR_OFFAREA) ||
-		  IS_SET(skills[(int)bdata->bonus].targets, TAR_AGGRO) ||
-		  IS_SET(skills[(int)bdata->bonus].targets, TAR_WALL))
+	      if (IS_SET(skills[(int)bdata->bonus].targets, TAR_FIGHT_VICT) 
+		|| IS_SET(skills[(int)bdata->bonus].targets, TAR_OBJ_INV) 
+		|| IS_SET(skills[(int)bdata->bonus].targets, TAR_OBJ_ROOM)
+		|| IS_SET(skills[(int)bdata->bonus].targets, TAR_OBJ_WORLD)
+		|| IS_SET(skills[(int)bdata->bonus].targets, TAR_OBJ_EQUIP)
+		|| IS_SET(skills[(int)bdata->bonus].targets, TAR_OFFAREA) 
+		|| IS_SET(skills[(int)bdata->bonus].targets, TAR_AGGRO) 
+		|| IS_SET(skills[(int)bdata->bonus].targets, TAR_WALL))
 		return 1;
 	    break;
 	    }
@@ -686,9 +678,8 @@ int validate_boon_data(BoonData *bdata, int flag)
   return 0;
 }
 
-// sort data from argument into BoonData struct
-int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
-{
+// sort data from argument into BoonData struct 
+int parse_boon_args(P_char ch, BoonData *bdata, char *argument) {
   char arg[MAX_STRING_LENGTH];
   int i, retval;
 
@@ -1069,7 +1060,7 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
       }
       // otherwise check for abbreviation
       if (i == 0)
-      {	
+      {
 	for (i = 0; i <= LAST_RACE; i++)
 	{
 	  if (is_abbrev(arg, race_names_table[i].normal))
@@ -1215,8 +1206,7 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
   return TRUE;
 }
 
-void do_boon(P_char ch, char *argument, int cmd)
-{
+void do_boon(P_char ch, char *argument, int cmd) {
   char arg[MAX_STRING_LENGTH];
   char buff[MAX_STRING_LENGTH], buffline[MAX_STRING_LENGTH];
   int duration = 0, id = 0;
@@ -1359,40 +1349,40 @@ void do_boon(P_char ch, char *argument, int cmd)
   else if (!strcmp(arg, "help") || !strcmp(arg, "?"))
   {
     sprintf(buff, "&+WBoon Command Help&n\r\n");
-    strcat(buff, "&+CNo Argument&n   display current boons(Default flags: hmr)\r\n");
-    strcat(buff, "&+CList&n          display current boons\r\n");
-    strcat(buff, "       &+Lsyntax&n boon list im u venthix\r\n");
-    strcat(buff, "            &+ch&n show active boons\r\n");
-    strcat(buff, "            &+ci&n show inactive boons\r\n");
-    strcat(buff, "            &+cm&n list manually created boons\r\n");
-    strcat(buff, "            &+cr&n list randomly created boons\r\n");
-    strcat(buff, "     &+cu [name]&n show only boons created by name\r\n");
-    strcat(buff, "                   You can use the '%%' symbol as a wildcard\r\n");
-    strcat(buff, "     &+ct [type]&n show only boons of a specified type\r\n");
-    strcat(buff, "   &+co [option]&n show only boons of a specified option\r\n");
-    strcat(buff, "     &+cp [name]&n show only boons specified for name\r\n");
-    strcat(buff, "&+CAdd&n           add a new boon\r\n");
-    strcat(buff, "       &+Lsyntax&n boon add racewar type bonus [bonus2] option criteria [criteria2] duration -p playername\r\n");
-    strcat(buff, "      &+cracewar&n [all|good|evil|undead|neutral]\r\n");
-    strcat(buff, "         &+ctype&n [exp|epic|cash|level|power|stat|point]\r\n");
-    strcat(buff, "       &+coption&n [none|zone|level|frag|guildhall|outpost|nexus|cargo|auction]\r\n");
-    strcat(buff, "     &+ccriteria&n zone number, level or frag requirement, outpost ID, etc\r\n");
-    strcat(buff, "        &+cbonus&n the boon type bonus\r\n");
-    strcat(buff, "     &+cduration&n time limit till boon expires in minutes (-1 for no expiration)\r\n");
-    strcat(buff, "       &+crepeat&n designates the completing the boon is repeatable\r\n");
-    strcat(buff, "           &+c-p&n create boon for specified person only.\r\n");
-    strcat(buff, "&+CRemove&n        remove an existing boon\r\n");
-    strcat(buff, "       &+Lsyntax&n boon remove boon_id\r\n");
-    strcat(buff, "&+CExtend&n        Extend an existing boon's duration, An * will show next to author name\r\n");
-    strcat(buff, "                   (extending an existing boon will reactivate the boon\r\n");
-    strcat(buff, "&+CRandom&n        replace existing random boons with new ones.\r\n");
-    strcat(buff, "       &+Lsyntax&n boon random [optional boon_id]\r\n");
-    strcat(buff, "      &+cboon_id&n You can select a specific random boon to replace instead\r\n");
-    strcat(buff, "              of replacing them all.\r\n\r\n");
+    strcat(buff, "&+CNo Argument&n display current boons(Default flags: hmr)\r\n");
+    strcat(buff, "&+CList&n display current boons\r\n");
+    strcat(buff, " &+Lsyntax&n boon list im u venthix\r\n");
+    strcat(buff, " &+ch&n show active boons\r\n");
+    strcat(buff, " &+ci&n show inactive boons\r\n");
+    strcat(buff, " &+cm&n list manually created boons\r\n");
+    strcat(buff, " &+cr&n list randomly created boons\r\n");
+    strcat(buff, " &+cu [name]&n show only boons created by name\r\n");
+    strcat(buff, " You can use the '%%' symbol as a wildcard\r\n");
+    strcat(buff, " &+ct [type]&n show only boons of a specified type\r\n");
+    strcat(buff, " &+co [option]&n show only boons of a specified option\r\n");
+    strcat(buff, " &+cp [name]&n show only boons specified for name\r\n");
+    strcat(buff, "&+CAdd&n add a new boon\r\n");
+    strcat(buff, " &+Lsyntax&n boon add racewar type bonus [bonus2] option criteria [criteria2] duration -p playername\r\n");
+    strcat(buff, " &+cracewar&n [all|good|evil|undead|neutral]\r\n");
+    strcat(buff, " &+ctype&n [exp|epic|cash|level|power|stat|point]\r\n");
+    strcat(buff, " &+coption&n [none|zone|level|frag|guildhall|outpost|nexus|cargo|auction]\r\n");
+    strcat(buff, " &+ccriteria&n zone number, level or frag requirement, outpost ID, etc\r\n");
+    strcat(buff, " &+cbonus&n the boon type bonus\r\n");
+    strcat(buff, " &+cduration&n time limit till boon expires in minutes (-1 for no expiration)\r\n");
+    strcat(buff, " &+crepeat&n designates the completing the boon is repeatable\r\n");
+    strcat(buff, " &+c-p&n create boon for specified person only.\r\n");
+    strcat(buff, "&+CRemove&n remove an existing boon\r\n");
+    strcat(buff, " &+Lsyntax&n boon remove boon_id\r\n");
+    strcat(buff, "&+CExtend&n Extend an existing boon's duration, An * will show next to author name\r\n");
+    strcat(buff, " (extending an existing boon will reactivate the boon\r\n");
+    strcat(buff, "&+CRandom&n replace existing random boons with new ones.\r\n");
+    strcat(buff, " &+Lsyntax&n boon random [optional boon_id]\r\n");
+    strcat(buff, " &+cboon_id&n You can select a specific random boon to replace instead\r\n");
+    strcat(buff, " of replacing them all.\r\n\r\n");
     send_to_char(buff, ch);
     send_to_char("&+WValid boon type and option combinations:&n\r\n", ch);
     send_to_char("'&+mM&n' designates manual set by a specific level.\r\n\r\n", ch);
-    sprintf(buff, "          ");
+    sprintf(buff, " ");
     for (i = 1; i < MAX_BTYPE; i++)
     {
       sprintf(buff + strlen(buff), "|&+C%-5s&n", boon_types[i].type);
@@ -1415,9 +1405,9 @@ void do_boon(P_char ch, char *argument, int cmd)
 	  if (!check_boon_combo(k, i, TRUE))
 	    sprintf(buff + strlen(buff), "|&+mM&n(&+c%2d&n)", get_boon_level(k, i));
 	  else
-            strcat(buff, "|&+W  X  &n");
+            strcat(buff, "|&+W X &n");
 	else
-	  strcat(buff, "|     ");
+	  strcat(buff, "| ");
       }
       strcat(buff, "|\r\n");
       send_to_char(buff, ch);
@@ -1432,8 +1422,7 @@ void do_boon(P_char ch, char *argument, int cmd)
   return;
 }
 
-void boon_shop(P_char ch, char *argument)
-{
+void boon_shop(P_char ch, char *argument) {
   char arg[MAX_STRING_LENGTH];
   int stat = 0;
   int i;
@@ -1635,8 +1624,7 @@ void boon_shop(P_char ch, char *argument)
   }
 }
 
-int boon_display(P_char ch, char *argument)
-{
+int boon_display(P_char ch, char *argument) {
   char arg[MAX_STRING_LENGTH];
   char buff[MAX_STRING_LENGTH], dbqry[MAX_STRING_LENGTH];
   char bufftype[MAX_STRING_LENGTH], buffoption[MAX_STRING_LENGTH];
@@ -1771,7 +1759,7 @@ int boon_display(P_char ch, char *argument)
   // pad_ansi(zone_table[zone_count].name, 45].c_str() = zone name
   // zone_table[zone_count].avg_mob_level = way to find out range of zone
   
-  // Please do not touch, thanks. 
+  // Please do not touch, thanks.
   sprintf(dbqry, "SELECT id, time, duration, racewar, type, opt, criteria, " \
       "criteria2, bonus, bonus2, random, author, active, pid, rpt FROM boons " \
       "%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s" \
@@ -1787,8 +1775,9 @@ int boon_display(P_char ch, char *argument)
 	(manual ? "random = '0' " : ""),
 	(active && random && !manual || inactive && random && !manual ? "AND " : ""),
 	(random && !manual ? "( " : ""),
-	(random && manual ? "OR " : ""),
-	(random ? "random = '1' " : ""),
+	(random && manual ? "OR " : ""), 
+//	(manual ? "random = '1' " : ""),
+	(random ? "random > '0' " : ""),
 	(manual || random ? ") " : ""),
 	(active && *name || inactive && *name || manual && *name || random && *name ? "AND " : ""),
 	(*name ? "( " : ""),
@@ -1822,10 +1811,10 @@ int boon_display(P_char ch, char *argument)
   }
 
   if (IS_TRUSTED(ch))
-    send_to_char_f(ch, "&+C%-6s   %-10s %-8s %-7s %-6s %-9s %9s %9s %10s %7s %-10s&n\r\n",
+    send_to_char_f(ch, "&+C%-6s %-10s %-8s %-7s %-6s %-9s %9s %9s %10s %7s %-10s&n\r\n",
       "ID", "Random", "Duration", "Racewar", "Type", "Option", "Criteria", "Criteria2", "Bonus", "Bonus2", "Assigned");
   else
-    send_to_char_f(ch, "&+C%-6s   %-8s %-7s %s&n\r\n",
+    send_to_char_f(ch, "&+C%-6s %-8s %-7s %s&n\r\n",
 	"ID", "Duration", "Racewar", "Description");
 
   MYSQL_ROW row;
@@ -2104,17 +2093,16 @@ int boon_display(P_char ch, char *argument)
   return TRUE;
 }
 
-int create_boon(BoonData *bdata)
-{
+int create_boon(BoonData *bdata) {
   int id;
 
-  if (!bdata)
+  if( !bdata )
   {
     debug("create_boon(): NULL bdata passed to function");
     return FALSE;
   }
 
-  if (count_boons(TRUE, FALSE) >= MAX_BOONS)
+  if( count_boons(TRUE, FALSE) >= MAX_BOONS )
   {
     debug("Maximum number of boons has been reached.  Aborting create_boon().");
     return FALSE;
@@ -2142,15 +2130,13 @@ int create_boon(BoonData *bdata)
     }
 
     boon_notify(bdata->id, NULL, BN_CREATE);
-
     return TRUE;
   }
   
   return FALSE;
 }
 
-int create_boon_progress(BoonProgress *bpg)
-{
+int create_boon_progress(BoonProgress *bpg) {
   if (!bpg)
   {
     debug("create_boon_progress(): NULL bpg passed to function");
@@ -2180,8 +2166,7 @@ int create_boon_progress(BoonProgress *bpg)
   return FALSE;
 }
 
-int create_boon_shop_entry(BoonShop *bshop)
-{
+int create_boon_shop_entry(BoonShop *bshop) {
   if (!bshop)
   {
     debug("create_boon_shop_entry(): NULL bshop passed to function");
@@ -2197,8 +2182,7 @@ int create_boon_shop_entry(BoonShop *bshop)
     return TRUE;
 }
 
-int remove_boon(int id)
-{
+int remove_boon(int id) {
   //if (!qry("DELETE FROM boons WHERE id = %d", id))
   // Gona leave boons on the DB for history lookup purposes
   if (!qry("UPDATE boons SET active='0', duration='0' WHERE id='%d'", id))
@@ -2208,7 +2192,7 @@ int remove_boon(int id)
   return 1;
 }
 
-int extend_boon(int id, int extend, const char *name)
+int extend_boon(int id, int extend, const char *name) 
 {
   if (!qry("SELECT time, duration, active FROM boons WHERE id = %d", id))
   {
@@ -2257,7 +2241,7 @@ int extend_boon(int id, int extend, const char *name)
   return TRUE;
 }
 
-void boon_notify(int id, P_char ch, int action)
+void boon_notify(int id, P_char ch, int action) 
 {
   char buff[MAX_STRING_LENGTH];
   P_desc d;
@@ -2368,14 +2352,26 @@ void boon_notify(int id, P_char ch, int action)
   return;
 }
 
-void boon_randomize(P_char ch, char *argument)
-{
-  send_to_char_f(ch, "Randomizing boon list with argument: %s.\r\n", argument);
-  return;
+void boon_randomize(P_char ch, char *argument) {
+  char arg[MAX_STRING_LENGTH];
+  static bool built = FALSE;
+
+  argument = one_argument(argument, arg);
+
+  // Add a random boon.
+  if (!strcmp(arg, "add"))
+  {
+    if( !make_random_boon(ch) )
+      send_to_char_f(ch, "Randomize: add boon failed.\r\n");
+    else
+      send_to_char_f(ch, "Randomize: boon created.\r\n");
+  }
+  else
+    send_to_char_f(ch, "Valid argument is 'add'.\r\n");
 }
 
-// Called from game loop
-void boon_maintenance()
+// Called from game loop 
+void boon_maintenance() 
 {
   BoonData bdata;
   int i, expire;
@@ -2395,6 +2391,7 @@ void boon_maintenance()
   if (mysql_num_rows(res) < 1)
   {
     mysql_free_result(res);
+    boon_random_maintenance();
     return;
   }
 
@@ -2488,14 +2485,13 @@ void boon_maintenance()
   return;
 }
 
-void boon_random_maintenance()
+void boon_random_maintenance() 
 {
-  return;
   BoonData bdata;
   int i, j;
   int id[MAX_BOONS];
   int r[MAX_BOONS];
-  
+
   // assure appropriate levels of random boons in game
   for (i = 0; i < MAX_BOONS; i++)
   {
@@ -2503,20 +2499,22 @@ void boon_random_maintenance()
     r[i] = 0;
   }
 
-
-  if (!qry("SELECT id, random FROM boons WHERE active = '1' & random > '0'"))
+  if (!qry("SELECT id, random FROM boons WHERE active = '1' ORDER BY random DESC" ))
   {
-    debug("boon_maintenance(): can't read from db");
+    debug("boon_random_maintenance(): can't read from db");
     return;
   }
 
   MYSQL_RES *res = mysql_store_result(DB);
 
+// No reason to return: maybe there are no active boons. 
+/*
   if (mysql_num_rows(res) < 1)
   {
     mysql_free_result(res);
     return;
   }
+*/
 
   MYSQL_ROW row;
   
@@ -2530,58 +2528,79 @@ void boon_random_maintenance()
   
   mysql_free_result(res);
 
-  // loop through random standards list and load missing boons
-  for (i = 1; random_std[i].id; i++)
+  // loop through random standards list and load missing boon.
+  for( i = 1; random_std[i].id; i++ )
   {
-    for (j = 0; r[j]; j++)
-      if (r[j] == random_std[i].id)
+    for( j = 0; r[j]; j++ )
+      if( r[j] == random_std[i].id )
 	break;
-    if (r[j])
+
+    if( r[j] || random_std[i].high == 0 || random_std[i].low == 0 )
       continue;
+
     // if we didn't find it, load one up
     zero_boon_data(&bdata);
-   
+
     bdata.duration = 120;
     bdata.racewar = random_std[i].racewar;
     bdata.type = boon_data[random_std[i].boon_data].type;
     bdata.option = boon_data[random_std[i].boon_data].option;
-    bdata.random = i;
-    bdata.active = 1;
-    bdata.repeat = 1;
+    bdata.random = random_std[i].id;
+    bdata.author = "Random";
+    bdata.active = TRUE;
+    bdata.repeat = TRUE;
 
-    // refer to boon_data struct for which we're adding in 
+    // refer to boon_data struct for which we're adding in
     switch (random_std[i].boon_data)
     {
-      case 0: // BTYPE_EXPM, BOPT_NONE
-	{
-	  bdata.criteria = boon_get_random_zone(j);
-	  bdata.criteria2 = 0;
-	  bdata.bonus = number(20, 50);
-	  bdata.bonus2 = 0;
-	  break;
-	}
-      default:
-	continue;
+    case 0: // BTYPE_EXPM, BOPT_NONE
+      bdata.criteria = boon_get_random_zone(i);
+      if( bdata.criteria == 0 )
+      {
+        debug("boon_random_maintenance(): Failed getting random zone.");
+        break;
+      }
+      bdata.criteria2 = 0;
+      bdata.bonus = number( 10, 30 ) / 10.0;
+      bdata.bonus2 = 0;
+      // set boon
+      if( !create_boon(&bdata) )
+        debug("boon_random_maintenance(): Failed creating boon.");
+    break;
+    default:
+    continue;
     }
-    // set boon
-    // create_boon(&bdata);
   }
 }
 
-int boon_get_random_zone(int std)
+// Returns a zone with avg mob lvl within limits and not a hometown.
+int boon_get_random_zone(int std) 
 {
-  if (!random_std[std].id)
+  int zonenumber;
+
+  if( !random_std[std].id || random_std[std].high < random_std[std].low
+    || random_std[std].high < 1 )
     return 0;
+  do
+  {
+    // Starting at 1 instead of 0.  We do not include Heaven.
+    zonenumber = number( 1, top_of_zone_table);
+  }
+  while( zone_table[zonenumber].avg_mob_level > random_std[std].high
+    || zone_table[zonenumber].avg_mob_level < random_std[std].low 
+    || zone_table[zonenumber].hometown );
+
+  return zone_table[zonenumber].number;
 }
 
-// The function placed throughout the code to check for completion of boons
-// and checks to see if a player qualifies for an active boon.  If so, it will
-// call boon_notify() to update progress, or notify of completion and apply
-// the appropriate bonus.
-// This function doesn't update the boon itself to inactive incase others
-// in the group have completed the boon as well.  That will be handled at the
-// bottom of boon_maintenance().
-void check_boon_completion(P_char ch, P_char victim, double data, int option)
+// The function placed throughout the code to check for completion of boons 
+// and checks to see if a player qualifies for an active boon.  If so, it will 
+// call boon_notify() to update progress, or notify of completion and apply 
+// the appropriate bonus. 
+// This function doesn't update the boon itself to inactive incase others 
+// in the group have completed the boon as well.  That will be handled at the 
+// bottom of boon_maintenance(). 
+void check_boon_completion(P_char ch, P_char victim, double data, int option) 
 {
   if (IS_NPC(ch))
     return;
@@ -2624,8 +2643,10 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
   }
   else if (option == BOPT_FRAG)
     sprintf(buff, " AND (criteria <= '%f')", data);
-  //else if (option == BOPT_FRAGS) // No need for this, we check below in progress
-  //else if (option == BOPT_GH) // not imped
+  //else if (option == BOPT_FRAGS) 
+  // No need for this, we check below in progress
+  //else if (option == BOPT_GH)
+  // not imped
   else if (option == BOPT_OP ||
            option == BOPT_NEXUS ||
 	   option == BOPT_CTF ||
@@ -2976,4 +2997,303 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
   }
   
   return;
+}
+
+bool make_random_boon( P_char ch ) 
+{
+  int num_boons;
+  int boon_type;
+  BoonData bdata;
+
+  // Count the number of boons.
+  for( num_boons=0; boon_data[num_boons].type; num_boons++ );
+
+  // Find a random boon type.
+  while( boon_type = number( 0, num_boons-1 ) )
+    if( boon_data[boon_type].level == 0
+    && boon_data[boon_type].option != BOPT_CTF
+    && boon_data[boon_type].option != BOPT_CTFB )
+      break;
+
+  zero_boon_data(&bdata);
+  bdata.type = boon_data[boon_type].type;
+  bdata.option = boon_data[boon_type].option;
+  bdata.racewar = random_std[number( 0, 2 )].racewar;
+  bdata.author = "Random";
+  bdata.duration = 120;
+  bdata.random = 999;
+  bdata.active = TRUE;
+
+  // Create that boon
+  switch( boon_data[boon_type].type )
+  {
+  case BTYPE_EXPM:
+    bdata.repeat = TRUE;
+    if( bdata.option == BOPT_NONE )
+    {
+      bdata.criteria = zone_table[number(0, top_of_zone_table)].number;
+      bdata.bonus = number( 2, 10 );
+    }
+    else if( bdata.option == BOPT_RACE )
+    {
+      bdata.criteria = 1;
+      bdata.criteria2 = number( RACE_NONE+1, LAST_RACE );
+      bdata.bonus = number( 2, 10 );
+    }
+    else if( bdata.option == BOPT_MOB )
+    {
+      make_random_boon_optmob( &bdata );
+      bdata.bonus = number( 2, 10 );
+    }
+    else
+    {
+      send_to_char_f(ch, "Invalid option in make_random_boon:expm.\r\n");
+      return FALSE;
+    }
+    create_boon( &bdata );
+    return TRUE;
+  case BTYPE_EXP:
+    bdata.repeat = FALSE;
+    if( bdata.option == BOPT_ZONE )
+    {
+      make_random_boon_optzone( &bdata );
+      bdata.bonus = bdata.bonus * bdata.bonus * number( 10, 12 );
+    }
+    else if( bdata.option == BOPT_MOB )
+    {
+      make_random_boon_optmob( &bdata );
+    }
+    else if( bdata.option == BOPT_FRAG )
+    {
+      bdata.criteria =( (double) number( 1, 12 )) / 10;
+      bdata.bonus = number( 10, 20 ) * 100;
+    }
+    else if( bdata.option == BOPT_FRAGS )
+    {
+      bdata.criteria =( (double) number( 10, 120 )) / 100;
+      bdata.bonus = bdata.criteria * number( 1, 3) * 100000;
+    }
+    else if( bdata.option == BOPT_LEVEL )
+    {
+      bdata.criteria = number( 1, 55 );
+      bdata.bonus = bdata.criteria * bdata.criteria * 100;
+    }
+    else if( bdata.option == BOPT_OP )
+    {
+      make_random_boon_optop( &bdata );
+      bdata.bonus = 100000 * number( 1, 20 );
+    }
+    else if( bdata.option == BOPT_NEXUS )
+    {
+      if( !make_random_boon_optnexus( &bdata ) )
+      {
+        send_to_char_f(ch, "make_random_boon: Couldn't find nexus.\r\n");
+        return FALSE;
+      }
+      bdata.bonus = 100000 * number( 1, 20 );
+    }
+    else
+    {
+      send_to_char_f(ch, "Invalid option in make_random_boon:exp.\r\n");
+      return FALSE;
+    }
+    create_boon( &bdata );
+    return TRUE;
+  case BTYPE_EPIC:
+    bdata.repeat = TRUE;
+    if( bdata.option == BOPT_ZONE )
+    {
+      make_random_boon_optzone( &bdata );
+      bdata.bonus = bdata.bonus * 2;
+    }
+    else if( bdata.option == BOPT_MOB )
+    {
+      make_random_boon_optmob( &bdata );
+      bdata.bonus = 1;
+    }
+    else if( bdata.option == BOPT_FRAG )
+    {
+      bdata.criteria =( (double) number( 1, 12 )) / 10;
+      bdata.bonus = number( 10, 20 );
+    }
+    else if( bdata.option == BOPT_FRAGS )
+    {
+      bdata.criteria =( (double) number( 10, 120 )) / 100;
+      bdata.bonus = bdata.criteria * 15;
+    }
+    else if( bdata.option == BOPT_OP )
+    {
+      make_random_boon_optop( &bdata );
+      bdata.bonus = 10 * number( 10, 20 );
+    }
+    else if( bdata.option == BOPT_NEXUS )
+    {
+      if( !make_random_boon_optnexus( &bdata ) )
+      {
+        send_to_char_f(ch, "make_random_boon: Couldn't find nexus.\r\n");
+        return FALSE;
+      }
+      bdata.bonus = 100 * number( 5, 9 );
+    }
+    else
+    {
+      send_to_char_f(ch, "Invalid option in make_random_boon:epic.\r\n");
+      return FALSE;
+    }
+    create_boon( &bdata );
+    return TRUE;
+  case BTYPE_CASH:
+    bdata.repeat = TRUE;
+    if( bdata.option == BOPT_ZONE )
+    {
+      make_random_boon_optzone( &bdata );
+      bdata.bonus = bdata.bonus * bdata.bonus * 1000 * number( 1, 3 );
+    }
+    else if( bdata.option == BOPT_MOB )
+    {
+      make_random_boon_optmob( &bdata );
+      bdata.bonus = 1000 * number( 1, 100);
+    }
+    else if( bdata.option == BOPT_FRAG )
+    {
+      bdata.criteria =( (double) number( 1, 12 )) / 10;
+      bdata.bonus = bdata.criteria * 1000000;
+    }
+    else if( bdata.option == BOPT_FRAGS )
+    {
+      bdata.criteria =( (double) number( 10, 120 )) / 100;
+      bdata.bonus = bdata.criteria * 1000000;
+    }
+    else if( bdata.option == BOPT_OP )
+    {
+      make_random_boon_optop( &bdata );
+      bdata.bonus = 100000 * number( 10, 20 );
+    }
+    else if( bdata.option == BOPT_NEXUS )
+    {
+      if( !make_random_boon_optnexus( &bdata ) )
+      {
+        send_to_char_f(ch, "make_random_boon: Couldn't find nexus.\r\n");
+        return FALSE;
+      }
+      bdata.bonus = 10000 * number( 10, 20 );
+    }
+    else
+    {
+      send_to_char_f(ch, "Invalid option in make_random_boon:cash.\r\n");
+      return FALSE;
+    }
+    create_boon( &bdata );
+    return TRUE;
+  default:
+    send_to_char_f(ch, "Invalid option in make_random_boon:default.\r\n");
+    return FALSE;
+  }
+}
+
+void make_random_boon_optmob( BoonData *bdata ) 
+{
+  int i;
+  bool invalid;
+  P_char victim;
+
+  do
+  {
+    i = number( 0, top_of_mobt );
+    victim = read_mobile( i, REAL );
+    if( !victim || IS_SHOPKEEPER(victim) || GET_EXP(victim) == 0 )
+      invalid = TRUE;
+    else
+      invalid = FALSE;
+    if( victim )
+    {
+      bdata->bonus = GET_EXP(victim) * 2;
+      extract_char(victim);
+    }
+  }
+  // While mob is not loaded or mob is no exp.
+  while( mob_index[i].number < 1 || invalid );
+
+  bdata->criteria = 1;
+  bdata->criteria2 = mob_index[i].virtual_number;
+}
+
+void make_random_boon_optop( BoonData *bdata ) 
+{
+  int i;
+  Building *building;
+
+  do
+  {
+    i = number( 0, buildings.size() -1 );
+    building = get_building_from_id(i+1);
+  }
+  while( !building || building->type != BUILDING_OUTPOST );
+
+  bdata->criteria = building->id;
+}
+
+bool make_random_boon_optnexus( BoonData *bdata ) 
+{
+  int i, room_vnum;
+  MYSQL_ROW row;
+  MYSQL_RES *res;
+  P_obj contents;
+
+  if( !qry( "SELECT id, name, room_vnum, align FROM nexus_stones") )
+{
+if(descriptor_list)
+  send_to_char( "m_r_b_optnexus: failed qry.\n\r", descriptor_list->character );
+    return FALSE;
+}
+  res = mysql_store_result(DB);
+
+  if( mysql_num_rows(res) < 1 )
+  {
+    mysql_free_result(res);
+if(descriptor_list)
+  send_to_char( "m_r_b_optnexus: numrows< 1.\n\r", descriptor_list->character );
+    return FALSE;
+  }
+
+  // Pick a random stone
+//  for( i = number(1, mysql_num_rows(res));i>0;i--)
+  for( i = 1;i>0;i--)
+    row = mysql_fetch_row( res );
+
+  room_vnum = atoi(row[2]);
+  contents = world[real_room( room_vnum )].contents;
+
+  // Find that stone in room.
+  while( contents && !IS_NEXUS_STONE(contents) )
+    contents = contents->next_content;
+  if( contents )
+    bdata->criteria = atoi(row[0]);
+  else
+{
+char buf[MAX_STRING_LENGTH];
+sprintf( buf, "m_r_b_optnexus: nexus not in room: vnum %d, rnum: %d.\n\r", 
+  room_vnum, real_room( room_vnum ) );
+if(descriptor_list)
+  send_to_char( buf, descriptor_list->character );
+    return FALSE;
+}
+  return TRUE;
+}
+
+void make_random_boon_optzone( BoonData *bdata )
+{
+  vector<epic_zone_data> epic_zones = get_epic_zones();
+  int zonenumber;
+
+  do
+    zonenumber = number( 0, epic_zones.size() );
+  while( epic_zone_done_now(epic_zones[zonenumber].number) );
+
+  bdata->criteria = epic_zones[zonenumber].number;
+  bdata->bonus = zone_table[epic_zones[zonenumber].number].avg_mob_level;
+  if( bdata->bonus < 10 )
+    bdata->bonus = 10;
+  if( bdata->bonus > 56 )
+    bdata->bonus = 56;
 }
