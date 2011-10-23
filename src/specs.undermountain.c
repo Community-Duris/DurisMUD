@@ -1062,10 +1062,10 @@ int staff_of_blue_flames(P_obj obj, P_char ch, int cmd, char *arg)
       act("&+bThe flames of your&N $q &+Bintensify.&N", FALSE, ch, obj, obj, TO_CHAR);
       act("$n says 'stone' to $p.", FALSE, ch, obj, obj, TO_ROOM);
       act("$n's&N $q &+Bglows intently!", TRUE, ch, obj, 0, TO_ROOM);
-      if (ch->group && (obj->timer[3] + 60 <= curr_time) || IS_TRUSTED(ch))
+      if (ch->group && (obj->timer[5] + 60 <= curr_time) || IS_TRUSTED(ch))
 	  {
            cast_as_area(ch, SPELL_STONE_SKIN, 60, 0);
-           obj->timer[3] = curr_time;
+           obj->timer[5] = curr_time;
 	  }
       else
         spell_stone_skin(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
