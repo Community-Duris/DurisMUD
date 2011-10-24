@@ -298,6 +298,11 @@ void feed_artifact(P_char ch, P_obj obj, int feed_seconds, int bypass)
     return;
   }
 
+  if (!(int)get_property("artifact.feed", 1))
+  {
+    return;
+  }
+
   int owner_pid, timer, vnum;
   
   vnum = GET_OBJ_VNUM(obj);
