@@ -1,4 +1,4 @@
-#252
+#1390
 &+rPlane of Fire, &+RBr&+rass&n~
 139357 1 0 25 35 2
 *
@@ -601,14 +601,14 @@ M 0 139054 37 139047 100 0 0 0     * a guard member of the Illuminated
 M 0 139069 2 139048 100 0 0 0      * a djinni
 E 1 139046 2 21 100 0 0 0          *   a large polished pearl stud
 M 0 139105 45 139049 100 0 0 0     * an efreeti commoner
-M 0 139100 13 139050 100 0 0 0     * an efreeti noble
-M 0 139100 13 139051 100 0 0 0     * an efreeti noble
-M 0 139100 13 139052 100 0 0 0     * an efreeti noble
-M 0 139100 13 139053 100 0 0 0     * an efreeti noble
-M 0 139100 13 139053 100 0 0 0     * an efreeti noble
-M 0 139100 13 139054 100 0 0 0     * an efreeti noble
-M 0 139100 13 139054 100 0 0 0     * an efreeti noble
-M 0 139100 13 139055 100 0 0 0     * an efreeti noble
+M 0 139100 60 139050 100 0 0 0     * an efreeti noble
+M 0 139100 60 139051 100 0 0 0     * an efreeti noble
+M 0 139100 60 139052 100 0 0 0     * an efreeti noble
+M 0 139100 60 139053 100 0 0 0     * an efreeti noble
+M 0 139100 60 139053 100 0 0 0     * an efreeti noble
+M 0 139100 60 139054 100 0 0 0     * an efreeti noble
+M 0 139100 60 139054 100 0 0 0     * an efreeti noble
+M 0 139100 60 139055 100 0 0 0     * an efreeti noble
 M 0 139105 45 139056 100 0 0 0     * an efreeti commoner
 M 0 139054 37 139056 100 0 0 0     * a guard member of the Illuminated
 M 0 139071 2 139056 100 0 0 0      * a beautiful succubus
@@ -619,8 +619,8 @@ E 1 139045 2 26 100 0 0 0          *   an ethereal blade scimitar
 M 0 139075 10 139056 100 0 0 0     * an efreeti noble
 M 0 139105 45 139057 100 0 0 0     * an efreeti commoner
 M 0 139054 37 139058 100 0 0 0     * a guard member of the Illuminated
-M 0 139100 13 139059 100 0 0 0     * an efreeti noble
-M 0 139100 13 139059 100 0 0 0     * an efreeti noble
+M 0 139100 60 139059 100 0 0 0     * an efreeti noble
+M 0 139100 60 139059 100 0 0 0     * an efreeti noble
 M 0 139090 47 139061 100 0 0 0     * an efreeti commoner
 M 0 139075 10 139061 100 0 0 0     * an efreeti noble
 M 0 139090 47 139062 100 0 0 0     * an efreeti commoner
@@ -742,9 +742,9 @@ M 0 139105 45 139130 100 0 0 0     * an efreeti commoner
 M 0 139073 6 139130 100 0 0 0      * a medium fire elemental
 M 0 139090 47 139131 100 0 0 0     * an efreeti commoner
 M 0 139105 45 139131 100 0 0 0     * an efreeti commoner
-M 0 139100 13 139132 100 0 0 0     * an efreeti noble
-M 0 139100 13 139132 100 0 0 0     * an efreeti noble
-M 0 139100 13 139132 100 0 0 0     * an efreeti noble
+M 0 139100 60 139132 100 0 0 0     * an efreeti noble
+M 0 139100 60 139132 100 0 0 0     * an efreeti noble
+M 0 139100 60 139132 100 0 0 0     * an efreeti noble
 M 0 139105 45 139133 100 0 0 0     * an efreeti commoner
 M 0 139090 47 139134 100 0 0 0     * an efreeti commoner
 M 0 139105 45 139135 100 0 0 0     * an efreeti commoner

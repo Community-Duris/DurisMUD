@@ -7,7 +7,7 @@
 &+yTo the west is a small beaten path that leads into some fallow fields. To the
 &+ysouth the old road continues toward a tower in the distance.&n
 ~
-1 32768 3 0
+1340 32768 3 0
 D0
 &+yTo the north is the road to Dubneth.&n
 ~
@@ -35,7 +35,7 @@ S
 &+ythe grass and crops to the north and south are unable to grow here. To the
 &+ywest is a small sloping field that heads toward some sort of small hill.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D1
 &+YTo the east is an old road of some sort.&n
 ~
@@ -55,7 +55,7 @@ S
 &+yeast the dirt road continues through a farmers path, while to the west the
 &+ypath heads up onto a small hill that partially dominates the area.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D1
 &+yTo the east is a small dirt road.&n
 ~
@@ -78,7 +78,7 @@ S
 &+yexpands. Also here is a large stone that is about ten feet tall, it is made
 &+yof granite and seems to face west.&n
 ~
-1 32768 4 0
+1340 32768 4 0
 D1
 &+yTo the east the hill heads down toward an old road.
 ~
@@ -99,7 +99,7 @@ S
 &+Lentire complex, one single stone is not standing up but laying down. This
 &+Llarge stone is the key stone of Dubneth.&n
 ~
-1 32768 4 0
+1340 32768 4 0
 D1
 To the east is the western part of this strange hill.&n
 ~
@@ -119,7 +119,7 @@ S
 &+ycobble stones that has been used to keep in some of the &+Wsh&+Cee&+Wp&n&+y in the area.
 &+yTo the south the old road continues toward a tower in the distance.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D0
 &+yTo the north is the road to the heart of Dubneth.&n
 ~
@@ -140,7 +140,7 @@ S
 &+Lbe seen from here. The path here is beginning to slope slightly up the hill
 &+Luntil it reaches the tower to the south.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D0
 &+yTo the north is a road that leads to the small village of Dubneth.&n&n
 ~
@@ -160,7 +160,7 @@ S
 &+yTo the east is a small dirt road that leads to a farmhouse that dominates the
 &+yfarm to the east.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D0
 &+yTo the north is the road into Dubneth.&n&n
 ~
@@ -185,7 +185,7 @@ Before the &+LBlack T&no&+Cw&ne&+Lr&n~
 &+Llike one seamless construction, obviously constructed by &n&+Bmagic&+L. To the north
 &+Lthe old road leads to the village of Du&nbn&+Cet&+Wh&+L.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D0
 &+LTo the north is the road leading away from the Black Tower.&n
 ~
@@ -206,7 +206,7 @@ S
 &+LA few of the tables are stained with dark &n&+rblood&+L, and the room looks like it
 &+Lhas seen its fair share of bar fights.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D1
 &+LTo the east is the foyer.
 ~
@@ -226,7 +226,7 @@ S
 &+Lin the air. There are several sets of marks on the floor and ceiling that
 &+Lindicate a battle has taken place here. To the south the room continues.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 ~
 door oak&n~
@@ -255,7 +255,7 @@ S
 &+Ltwenty beds here for the various warriors. To the west and south are two doors
 &+Lthat are made of oak and lead to other parts of the t&no&+Cw&ne&+Lr.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D2
 &+LTo the north is a small shrine to Sargon.&n
 ~
@@ -275,7 +275,7 @@ S
 &+Lthe beds here are in perfect condition, obviously someone keeps strict
 &+Ldiscipline here.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+LTo the north is the guards bar.&n
 ~
@@ -297,7 +297,7 @@ S
 &+Las to actually draw a complete picture. Also to the east there lies a large
 &+Ldoor made of pine wood.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+LTo the north is the foyer.&n
 ~
@@ -322,7 +322,7 @@ S
 &+Lblack marble of a huge black warrior wielding a black sword with the skulls
 &+Lof various creatures scattered on the ground.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+LTo the north is the eastern barracks.&n
 ~
@@ -347,7 +347,7 @@ S
 &+Lchaos that is here would be impossible. Besides the desk and a bed in the
 &+Lsouth west corner, the room is bare.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+LTo the north is the barracks.&n
 ~
@@ -364,7 +364,7 @@ S
 &+yare in place and the entire area looks like it is used by someone who actually
 &+yknows what they are doing.
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+yTo the north is the mess hall.&n
 ~
@@ -378,7 +378,7 @@ S
 &+LThis entire room is completely bare and seems heavily traveled through. Above
 &+Lis an exit through which the stairs lead.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+LTo the north is a small shrine to Sargon.&n
 ~
@@ -398,7 +398,7 @@ S
 &+Lfor weapons drill. Finally, to the east is a large wooden door that leads out
 &+Lof the room.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D1
 &+LTo the east is the captains 'play' area.&n&n
 ~
@@ -414,7 +414,7 @@ S
 &+Mmen also are scattered about the room. To the west and south are two large
 &+Mstout doors made of black iron.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D2
 &+LTo the south is a dark hallway.&n
 ~
@@ -434,7 +434,7 @@ S
 &+Lare stark black and uninviting and the tower itself from here looks like a
 &+Lprison.&n
 ~
-1 33587212 0 0
+1340 33587212 0 0
 D2
 &+LTo the south is a dark hallway.&n
 ~
@@ -449,7 +449,7 @@ S
 &+Lsmells of smoke and &n&+rblood&+L. To the south is a oak door that is rather
 &+Lsmall and fits into the wall seamlessly.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D1
 &+LTo the east is a dark hallway.&n
 ~
@@ -470,7 +470,7 @@ S
 &+Lthat seems to dominate this part of the hallway. To the south is some sort of
 &+Lwooden door.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+LTo the north is the captains personal area.&n&n
 ~
@@ -500,7 +500,7 @@ S
 &+Lsmells of smoke and &n&+rblood&+L. To the south is a oak door that is rather
 &+Lsmall and fits into the wall seafmlessly.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+LTo the north is a small offshoot of a hall with some &+Wlight &+Lcoming in.&n
 ~
@@ -525,7 +525,7 @@ S
 &+rthings that break bones, to hot coals to burn away parts of a creature,
 &+rand finally tools of disfigurement. To the north is a large wooden door.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+LTo the north is a long dark hallway.&n
 ~
@@ -541,7 +541,7 @@ S
 &+Ltable are six large chairs, four on the sides and one on each end. To the
 &+Lnorth is the only exit out of the room.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+LTo the north is the dark hallway of the officers level.&n
 ~
@@ -557,7 +557,7 @@ S
 &+Lground which the black iron stairs lead through. To the north is a small oak
 &+Loak door.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+LTo the north is the officers level.&n
 ~
@@ -584,7 +584,7 @@ S
 &+Llike they are used to restrain someone. Also on the desk are an assortment
 &+Lof various dark tools for the gutting and ritual slaying of creatures.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D1
 ~
 door wood&n~
@@ -599,7 +599,7 @@ S
 &+Lalso is spattered around the room. It looks like there has been a frenzy of
 &+Lactivity recently.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D2
 ~
 door iron&n~
@@ -621,7 +621,7 @@ S
 &+Land is a large pattern of circles within circles. At the heart of it is a
 &+Lblackness.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D2
 ~
 door iron black&n~
@@ -657,7 +657,7 @@ S
 &+Lhere that would let in any light. It seems like this area is used only for
 &+Lsleeping and praying.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D1
 ~
 door iron&n~
@@ -676,7 +676,7 @@ S
 &+LTo the north, east, west, and south stand four identical doors that are all
 &+Lmade out of black iron.&n
 ~
-1 41975944 0 0
+1340 41975944 0 0
 D0
 &+LTo the north is a door that leads to a large shrine to Sargon.&n
 ~
@@ -707,7 +707,7 @@ S
 &+Lso often one will glow a faint blood color, then recede back to normal. To
 &+Lthe west and to the north are two large black iron doors.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 door iron&n~
@@ -725,7 +725,7 @@ S
 &+Lhere that would let in any light. It seems like this area is used only for
 &+Lsleeping and praying.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 ~
@@ -740,7 +740,7 @@ S
 &+LGuard ruthlessly destroyed. To the east and the north are two large stone
 &+Ldoors.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 &+L   To the north is a strong black metal door.&n
 ~
@@ -761,7 +761,7 @@ S
 &+Lground which the black iron stairs lead through. To the west is a small door
 &+Lthat leads off this level.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D3
 &+L   To the west is a large door made of stone.&n
 ~
@@ -786,7 +786,7 @@ S
 &+Lroom for them all to use to study and work at. To the southeast is a large
 &+Ldoor that leads out to the main prayer area.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D9
 ~
 black door&n~
@@ -799,7 +799,7 @@ S
 &+Lblack iron chest in the middle of the room. To the south is the main worship
 &+Larea of this level.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D2
 ~
 ~
@@ -813,7 +813,7 @@ S
 &+Lroom for them all to use to study and work at. To the southwest is a large
 &+Ldoor that leads out to the main prayer area.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D7
 ~
 black door&n~
@@ -830,7 +830,7 @@ S
 &+Lforgotten god. Finally to the south are a series of chains where the prisoners
 &+Lare kept before they are sacrificed.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D1
 ~
 ~
@@ -846,7 +846,7 @@ S
 &+LFinally to the northwest north and northeast are three doors along the wall
 &+Lof this octagon shaped room.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 ~
@@ -897,7 +897,7 @@ S
 &+Land walls here are made of rare black marble and everything has a dark cast
 &+Lover it.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D2
 ~
 door stone&n~
@@ -915,7 +915,7 @@ S
 &+Lhere, but the entire area stinks of human waste. Symbols are drawn on the
 &+Lwall here, preventing any from escaping.&n
 ~
-1 41975880 0 0
+1340 41975880 0 0
 D1
 ~
 bars&n~
@@ -930,7 +930,7 @@ S
 &+LTo the north is a large black iron door, while to the west is a set of bars
 &+Lthat leads into the small holding pin.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 door iron&n~
@@ -949,7 +949,7 @@ S
 &+Lground which the black iron stairs lead through. To the north is a small door
 &+Lthat leads off this level.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D0
 ~
 door iron&n~
@@ -974,7 +974,7 @@ S
 &+ypicture is brought into focus. In the middle of the picture one being of
 &+ydarkness, wielding a black sword, stands here ordering everything.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D2
 ~
 door stone&n~
@@ -990,7 +990,7 @@ S
 &+Lmade of rock that was built into the room. Finally to the south is a large
 &+Wmithril&+L laced door that blocks the exit to the south
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D2
 ~
 door mithril&n~
@@ -1005,7 +1005,7 @@ S
 &+ris even a portal shown in the picture, with huge devils swarming out of it
 &+rto destroy all of Duris.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D2
 ~
 door stone&n~
@@ -1019,7 +1019,7 @@ S
 &+ybut it seems to be a room dedicated to the powers of sorcery, the controlling
 &+yof the elements.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 door stone&n~
@@ -1038,7 +1038,7 @@ S
 &n&+btower must have been built on some sort of inherently magical spot. To the
 &n&+bsoutheast is a small exit out of this level of the tower.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 door mithril&n~
@@ -1068,7 +1068,7 @@ seem made to make sure nothing escapes from the circle. The room is made of
 granite and rock. To the west is a large &+Lblack iron &ndoor, while to the north
 is a door made of stone.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 door stone&n~
@@ -1087,7 +1087,7 @@ S
 &+Wof the picture, a warrior figure cloaked in &+Wsh&nad&+Cow&+Ws and wielding a blade of
 &+Lblack &+Wpower.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D1
 ~
 bone door&n~
@@ -1101,7 +1101,7 @@ S
 &+Wstone and bone, as well as the ceiling. To the north is a large black iron
 &+Wdoor, while to the west is a door made of bone.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 door black iron&n~
@@ -1120,7 +1120,7 @@ S
 &+Lground which the black iron stairs lead through. To the west is a small door
 &+Lthat leads off this level.&n
 ~
-1 33587208 0 0
+1340 33587208 0 0
 D4
 &+LAbove is the last level of the Black Tower.&n
 ~
@@ -1144,7 +1144,7 @@ S
 &+Claws of reality itself. Who can tell from where it goes, or where it ends,
 &+Cor if there is even a way out of this large maze.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 ~
@@ -1170,7 +1170,7 @@ S
 &+Claws of reality itself. Who can tell from where it goes, or where it ends,
 &+Cor if there is even a way out of this large maze.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 ~
@@ -1196,7 +1196,7 @@ S
 &+Claws of reality itself. Who can tell from where it goes, or where it ends,
 &+Cor if there is even a way out of this large maze.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 ~
@@ -1222,7 +1222,7 @@ S
 &+Claws of reality itself. Who can tell from where it goes, or where it ends,
 &+Cor if there is even a way out of this large maze.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 ~
@@ -1248,7 +1248,7 @@ S
 &+Claws of reality itself. Who can tell from where it goes, or where it ends,
 &+Cor if there is even a way out of this large maze.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 ~
@@ -1274,7 +1274,7 @@ S
 &+Claws of reality itself. Who can tell from where it goes, or where it ends,
 &+Cor if there is even a way out of this large maze.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 ~
@@ -1300,7 +1300,7 @@ S
 &+Claws of reality itself. Who can tell from where it goes, or where it ends,
 &+Cor if there is even a way out of this large maze.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 ~
@@ -1326,7 +1326,7 @@ S
 &+Claws of reality itself. Who can tell from where it goes, or where it ends,
 &+Cor if there is even a way out of this large maze.&n
 ~
-1 1115717640 0 0
+1340 1115717640 0 0
 D0
 ~
 ~
@@ -1353,7 +1353,7 @@ S
 &+Lin the ground which the black iron stairs lead through. To the west is a small
 &+Lhall that leads off this level.&n
 ~
-1 41975816 0 0
+1340 41975816 0 0
 D3
 ~
 door wood&n~
@@ -1373,7 +1373,7 @@ S
 &+yAlso in the distance to the north west there seems to be a small church that
 &+yis the largest building in town.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D0
 &+yTo the north is the center of the village of Dubneth.&n&n
 ~
@@ -1398,7 +1398,7 @@ S
 &+yon metal can be heard inside it from here. To the north in the distance there
 &+yseems to be a large church.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D1
 &+yTo the east is the main road of Dubneth.&n&n
 ~
@@ -1419,7 +1419,7 @@ S
 &+LThe smith seems to have been very busy lately. To the west is a small &npicture
 &+Lof a young woman with &n&+ybrown &+Lhair anda &+Ccharming &+Lsmile.&n
 ~
-1 32776 0 0
+1340 32776 0 0
 D1
 &+yTo the east is the road out to the main road.&n
 ~
@@ -1441,7 +1441,7 @@ S
 &+Wpart of the wall. To the north the hallway continues, while to the east and
 &+Wwest are two large bone doors.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D0
 ~
 ~
@@ -1463,7 +1463,7 @@ S
 &+Lnecromancy here. In the center of the room is a large table with several &n&+ybooks
 &+Llined out on it
 ~
-1 32768 2 0
+1340 32768 2 0
 D1
 ~
 door bone&n~
@@ -1487,7 +1487,7 @@ S
 &+Ldeal with the power of magic. On the walls are a few small pictures of the
 &+LBlack Tower that have been drawn by hand that are quite realistic.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D3
 ~
 door bone&n~
@@ -1501,7 +1501,7 @@ S
 &+Wpart of the wall. To the north the is a large door that looks like a skull,
 &+W, while to the east and west are two large bone doors.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D0
 ~
 door skull&n~
@@ -1527,7 +1527,7 @@ S
 &+yshows any personal element, as if the wizards who live here do nothing except
 &+ypractice necromancy.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D1
 ~
 door bone&n~
@@ -1542,7 +1542,7 @@ S
 &+rand other creatures. Around the floor here are some crawling claws that have
 &+rgotten lose. To the west is a large one door.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D3
 ~
 door bone&n~
@@ -1557,7 +1557,7 @@ S
 &+Lagain, a hard item to come by in this day and age. To the south is a large
 &+Lbone door that leads out of the room.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D2
 ~
 door skull&n~
@@ -1575,7 +1575,7 @@ S
 &+Wstrange dimension. Below there seems to be a hole in reality that leads out
 &+Wof this strange bubble.&n
 ~
-1 1073774592 19 0
+1340 1073774592 19 0
 D4
 ~
 door magic thothrontithos&n~
@@ -1603,7 +1603,7 @@ S
 &+yFinally in the center of the room, above the table is a gorgeous &+Cglass &+Ycandle
 &+yholder that sheds light over the room.&n
 ~
-1 33587212 0 0
+1340 33587212 0 0
 D0
 ~
 door wood oak&n~
@@ -1643,7 +1643,7 @@ S
 &+rand scrolls, along with a large desk. To the south is a door made of oak
 &+rwood, while to the north is a small passageway.&n
 ~
-1 1107329032 2 0
+1340 1107329032 2 0
 D0
 ~
 ~
@@ -1661,7 +1661,7 @@ S
 &+Ythe floor. It looks like who ever lives here is a very disorganized sort of
 &+Yperson.&n
 ~
-1 1107333128 2 0
+1340 1107333128 2 0
 D1
 ~
 ~
@@ -1679,7 +1679,7 @@ S
 &+Lcolor, and hate life. To the north is a solid oak door that has been painted
 &+Lblack, while to the south is a dark corridor.&n
 ~
-1 1073778697 0 0
+1340 1073778697 0 0
 D0
 ~
 door oak&n~
@@ -1698,7 +1698,7 @@ S
 &+mbut is covered by some fine drow rugs. On the walls are several tapestries
 &+mshowing pictures of drow cities.&n
 ~
-1 1107329032 0 0
+1340 1107329032 0 0
 D1
 ~
 door oak&n~
@@ -1716,7 +1716,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -1762,7 +1762,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -1808,7 +1808,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -1854,7 +1854,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -1902,7 +1902,7 @@ S
 &+Cof the plane. Coming from the magic barrier is a beam of light that seems to
 &+Cbe heading straight up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -1952,7 +1952,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -1998,7 +1998,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2044,7 +2044,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2090,7 +2090,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2136,7 +2136,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2182,7 +2182,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2228,7 +2228,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2270,7 +2270,7 @@ S
 &+Ca little here. The &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg strikes seem to be increasing the further you
 &+Cmove up.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2317,7 +2317,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2364,7 +2364,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2411,7 +2411,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2458,7 +2458,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2507,7 +2507,7 @@ massive &n&+mmagical &n&+rexplosions&n all about. It is as if &+Wp&+Co&+Bs&n&+bi
 seems to absorb all the power that is exchanged between to two. It then
 funnels it down toward the &+Cbarrier &nof &+Bmagic&n that is below.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2554,7 +2554,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2601,7 +2601,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2648,7 +2648,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2695,7 +2695,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2742,7 +2742,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2785,7 +2785,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2828,7 +2828,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D0
 ~
 ~
@@ -2875,7 +2875,7 @@ S
 &+Cpart of the region while above is the entrance to the quasi-elemental plane of
 &+Wl&+Ci&+Bgh&n&+btn&+Bin&+Cg.&n
 ~
-1 1250070528 19 0
+1340 1250070528 19 0
 D1
 ~
 ~
@@ -2922,7 +2922,7 @@ S
 &+Lways though. To the north, between the two areas is a small open area of a
 &ncave &+Lthat expands before you. It seems to be slightly on the Sargon area.&n
 ~
-1 1250201600 5 0
+1340 1250201600 5 0
 D0
 ~
 ~
@@ -2936,7 +2936,7 @@ S
 &+Wskull&n&+G, with the entrance its large mouth. A &n&+ggreenish &n&+mglow &+Gprojects out of the
 &+Geyes of the skull itself, barely illuminating the area.&n
 ~
-1 1250201612 0 0
+1340 1250201612 0 0
 D2
 ~
 ~
@@ -2953,7 +2953,7 @@ S
 &+Lare on the floor every so often, and an occasional scream can be heard
 &+Lechoing down the corridor. The floor here is made of hard basalt.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D0
 ~
 door&n~
@@ -2982,7 +2982,7 @@ S
 &+Lare on the floor every so often, and an occasional scream can be heard
 &+Lechoing down the corridor. The floor here is made of hard basalt.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D1
 ~
 ~
@@ -3003,7 +3003,7 @@ S
 &+Lare on the floor every so often, and an occasional scream can be heard
 &+Lechoing down the corridor. The floor here is made of hard basalt.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D3
 ~
 door stone&n~
@@ -3020,7 +3020,7 @@ S
 &+Lare on the floor every so often, and an occasional scream can be heard
 &+Lechoing down the corridor. The floor here is made of hard basalt.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D2
 ~
 door stone&n~
@@ -3042,7 +3042,7 @@ S
 &+yroom is a large table with one single book that has been left out on it for
 &+yanyone to see. It is a large book, but seems to be important.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D3
 ~
 ~
@@ -3056,7 +3056,7 @@ S
 &+Bcenter of the room spiral together, forming some sort of interwoven magical
 &+Bprotection circles that prevent the summoned creature from escaping.
 ~
-1 1250201612 0 0
+1340 1250201612 0 0
 D1
 ~
 ~
@@ -3070,7 +3070,7 @@ S
 &+Lnote and have little value at all. To the south is a large door that leads
 &+Lback out into the cavern.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D2
 ~
 door&n~
@@ -3085,7 +3085,7 @@ S
 &+LA few solid pillars of basalt hold the ceiling up. Finally, to the north are
 &+Ltwo double doors made of stone.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D0
 ~
 door stone&n~
@@ -3099,7 +3099,7 @@ S
 &+Land chairs, although none of the ammount of material this one does on it.
 &+LFinally, to the east is a large stone door that leads out of the room.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D1
 ~
 door stone&n~
@@ -3116,7 +3116,7 @@ S
 &+LFinally there is a large desk here, with a small wooden chair in front of it.
 &+LTo the east is a large door made of rock.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D1
 ~
 door stone&n~
@@ -3153,7 +3153,7 @@ S
 &+Lin a &+Ygold &+Lframe, the other a burnished &nsilver&+L one. To the south the hall
 &+Lcontinues, while to the north is simply another formless wall of shadows.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D2
 ~
 ~
@@ -3181,7 +3181,7 @@ S
 &+Ldifficult. The doors themselves seem to be made of condensed darkness that has
 &+Lsomehow been givin form.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D0
 ~
 ~
@@ -3203,7 +3203,7 @@ S
 &+Land even then not for long. To the west is a large door of shadow that leads
 &+Lout of the room.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D3
 ~
 shadow door&n~
@@ -3213,13 +3213,13 @@ S
 Random Mob Holding Room&n~
    This is the random mob holding room.
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 S
 #134121
 The Emissary Random Load Room&n~
   It is what the title says.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D0
 ~
 ~
@@ -3251,7 +3251,7 @@ S
 &+Lseat. Beside it is a nice table made of ash wood, and a few papers lie
 &+Lscattered across it.&n
 ~
-1 1250201608 0 0
+1340 1250201608 0 0
 D0
 ~
 door shadow&n~
@@ -3268,7 +3268,7 @@ S
 &+YThe room is made of black stone, and runes encrust everything within sight,
 &+Yto make sure that no one appears here through any magical means.&n
 ~
-1 1250201608 1 0
+1340 1250201608 1 0
 D1
 ~
 secret&n~
@@ -3281,7 +3281,7 @@ S
 &+yand south, probably to keep in the sheep. To the south and west is a huge
 &+Lblack tower &n&+ythat seems to be like an eternal evil laid on the land.&n
 ~
-1 32772 2 0
+1340 32772 2 0
 D1
 &+yTo the east is a small farmhouse. &n
 ~
@@ -3300,7 +3300,7 @@ S
 &+yis one story. The house looks very poor, but well taken care of. To the south
 &+ywest is a massive &+Lblack tower &n&+ythat dominates the horizon.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D0
 &+yTo the north is a large barn.&n
 ~
@@ -3324,7 +3324,7 @@ S
 &+yThere isn't much else that can be said about it, except it doesn't smell very
 &+ynice.&n
 ~
-1 32768 2 0
+1340 32768 2 0
 D2
 &+yTo the south is the field before the farmhouse.    &n
 ~
@@ -3338,7 +3338,7 @@ S
 &+ygets cooked, while to the north is a single large bed. In the center of the
 &+yroom is a fireplace that keeps the place well warmed from the elements.&n
 ~
-1 33591304 0 0
+1340 33591304 0 0
 D3
 &+yTo the west is the path to the road to the town.&n
 ~
@@ -3354,7 +3354,7 @@ There are &+Lno &+Cclouds&n, &+Lno &n&+gbirds&n, &n&+Lno &n&+yland&n, &+Lnothing
 all, it's almost enough to make someone go &n&+Minsane&n. To the north is a single
 floating portal to... somewhere.&n
 ~
-1 1107431424 2 0
+1340 1107431424 2 0
 D0
 ~
 ~
@@ -3403,7 +3403,7 @@ to create a disturbing array of sights. In all directions it seems is the
 &n&+mglowing &ndisc of &+Cforce&n, there is no escape from it, it's above, below, in all
 directions... there is no &+Lescape&n from it. There is also no ground.&n
 ~
-1 176328768 8 0
+1340 176328768 8 0
 D0
 ~
 ~
@@ -3455,7 +3455,7 @@ dominates every direction. Beyond that there seems to be nothing but more
 &n&+mmagical&n barriers. The only way to leave here looks to be to head north,
 through a &n&+mglowing &nmagical doorway standing in mid-air.&n
 ~
-1 1250070600 0 0
+1340 1250070600 0 0
 D0
 ~
 ~
@@ -3468,7 +3468,7 @@ The &+LPrison &nof the &+LGreater &+LS&nh&+Lad&ne&+Ls&n~
 &+Ldarkness, and it is very hard to see anything. Finally, to the north is a large
 &+Lglowing doorway that extends to...somewhere.&n
 ~
-1 1250070600 0 0
+1340 1250070600 0 0
 D0
 ~
 ~
@@ -3482,7 +3482,7 @@ west. It is surrounded in a &n&+gshimmering &ndome of &+Cforce&n and &n&+gmagic&
 magic, some sort of disk. There is nothing in the room at all, save a &n&+bblue
 door to the north.&n
 ~
-1 1250070600 0 0
+1340 1250070600 0 0
 D0
 ~
 ~
@@ -3499,7 +3499,7 @@ finds himself in. On the edge of the room is a large white &+Wcircle&n of &+Wpow
 glows fiercely as &+Lblack &+Wli&+Cgh&+Btn&n&+bi&+Bn&+Cg&n shoots from the center of the room,
 constantly striking it, trying to gain entry.&n
 ~
-1 1250070600 0 0
+1340 1250070600 0 0
 D0
 ~
 door blue magic&n~
@@ -3512,7 +3512,7 @@ S
 &+Wbright light seems to open up to some place, and a large stone is visible.
 &+WFinally, to the south is a glowing magical door, made of blue power.&n
 ~
-1 1250070600 0 0
+1340 1250070600 0 0
 D0
 ~
 ~
@@ -3531,7 +3531,7 @@ S
 &+yis a small path that leads out to what looks to be a church nearby. Finally,
 &+yfar to the south, is a towering &+Lblack tower &n&+ythat dominates the skyline.&n
 ~
-1 1250070600 0 0
+1340 1250070600 0 0
 D1
 &n&+yTo the east is the small tavern of the &+WLady &n&+yof &+WLight &n
 ~
@@ -3557,7 +3557,7 @@ S
 &+ynormally it seems dead and unused now, as if a pallor has fallen over it. To
 &+ythe west is a wide door that leads out of the nice tavern.&n
 ~
-1 1250070600 0 0
+1340 1250070600 0 0
 D3
 &n&+yTo the west is the center of the small village of Dubneth.&n&n
 ~
@@ -3573,7 +3573,7 @@ S
 &+Cwoman in a golden robe, each seems to be looking down on those who enter
 &+Cthe church and smiling.&n
 ~
-1 1250070600 0 0
+1340 1250070600 0 0
 D0
 ~
 door wood&n~
@@ -3593,7 +3593,7 @@ S
 &+Wspeaks to his congregation. Besides that the small little church is with
 &+Wout note, except that there is a feeling of peace here.&n
 ~
-1 1250070600 0 0
+1340 1250070600 0 0
 D2
 &+CTo the south is the exit of this holy church.&n
 ~
@@ -3609,7 +3609,7 @@ S
 &+Cleader is tossed head first into the &+Lrift&+C. The &+Lrift &+Citself in the picture
 &+Cseems to glow and move, as if it is alive.&n
 ~
-1 0 0 0
+1340 0 0 0
 D4
 ~
 stone ketstone&n~
@@ -3619,7 +3619,7 @@ S
 Mob Loading Room II&n~
   This is the normal random mob loading room.&n
 ~
-1 176193728 0 0
+1340 176193728 0 0
 D0
 ~
 ~
@@ -3649,7 +3649,7 @@ S
 Random Mob Placement Chamber&n~
    This is the room that distributes the random mobs throughout the zone.&n
 ~
-1 142639168 0 0
+1340 142639168 0 0
 D0
 ~
 ~

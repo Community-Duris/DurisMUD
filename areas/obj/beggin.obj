@@ -1,0 +1,89 @@
+#3300
+tome book command _id_~
+A Tome of Command~
+A ragged tome lies on a small stand, pages yellowed and worn.~
+~
+23 28 2 0 7 0 0 0 1024 0 0
+0 0 0 0 0 0 0 0
+0 0 100 0
+E
+tome book~
+   Greetings, Those of stout heart and perservence should find a welcome in
+the lands here. For those heros are needed to fight the battle of Good...
+and of Evil. You will learn from heros that are now holding the battle
+lines. You will learn by the doing and the success or failure of that
+doing. You will learn... or perish.
+   For those truly new to this realm called Duris, then a helping hand may
+come as a welcome to some. The best help anyone can give is knowledge and
+within these pages there is a bit of that knowledge. To read and to learn
+will help you in the days and months to come. Come! READ PAGE1
+~
+E
+page1~
+   DISCLAIMER:: This tome has but a few commands and but a few bits of
+advice that might help you adventurer! When something is in quotes such as
+'look at book', then that is the expected command to be typed and entered.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PAGE 1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Adventuring can be a lonely buisness in the beginning. Somtimes you may
+feel like your alone in your fight. But there are others. 'who' will give
+you a list of other adventurers like yourself, that are on your side of the
+race war.
+   The race war is the war of the Goodie races (human, elves, dwarves and
+the like) against the Evil races (Trolls, Orcs, Drow and the like). It is
+fought by adventurers like yourselves. Not every Troll or Orc you see will
+be an adventurer however. Some are just inhabitants of the game and not
+controlled by someone such as you. With experience you will be able to tell
+but for now, its not that important.
+   Some basic tools are 'look', 'examine', 'who', 'east/west/north/south',
+'inventory', 'equipment', 'score' and 'attributes'. If you are unfamiliar
+with any of these try them. Now would be a good time.
+   'Wear', 'wield', 'get', and 'open' are other essential commands. Most
+commands require arguments added to do what you want. Such as 'look at
+book' or 'wear cloak' or 'open backpack' or 'get shoes from backpack'.
+   'remove cloak' will remove an item you are wearing. 'kill rat' will
+kill a rat if there is one in the room. If you have two cloaks in your
+inventory and you want to put the second cloak in your backpack, then
+something like 'put 2.cloak backpack' will do the trick.
+   'READ PAGE2' for a secret.
+~
+E
+page2~
+   Alot of these commands have shortcuts to use them. Backpack can be
+shortened to 'bp', east can be shortened to 'e' etc. Sometimes you can set
+a shortcut that you want by using your Mud Client. The most common use of
+this is for casting. If you are a caster, to cast a spell you have to type
+cast 'magic missile' orc. But if you set up in your Mud Client an alias of
+'mm' equaling cast 'magic missile', then to cast it at an orc you would
+simply type 'mm orc' and your Mud Client would substitute mm with cast
+'magic missile'.
+   And that is about it for the scope of this book. To actually learn your
+class we will take that on with on the game training. You will want to know
+this next thing now though. How to communicate.
+   You can communicate with anyone on the 'who' list by 'tell name
+message' where name and message is substituted by a persons name and your
+message. Type 'who' now! Find the 3rd or 4th person down the list and then
+type 'tell (that persons name goes here) HI! I'm new.'. Depending on many
+things you may get a response back or not. There are a few people with
+GUIDE written beside their names and those will be able to help alot as
+well.
+~
+E
+page3~
+   Sometimes you will want to group with others. To do so, you must
+'consent' the group leader for him to group you. The leader would type
+'group (name of person)' to group that person. Once in a group, you have a
+new communication option of 'gsay' which is short for group say that only
+those that are grouped with you can hear. You can type 'group' by itself
+to see who are currently in your group.
+   You will also want to follow someone eventually. This is as easy as
+typing 'follow (name of person)' you want to follow. 'Con (mob name)' will
+give you vague idea if that mob is too much for you to fight and win
+against. Some animals like horses can be mounted by 'mount (mob name)'.
+   If you walk around you may find you can eventually not move anymore.
+This is because you only have a certain number of movement points and once
+those are used up, it takes abit of time to regenrate those movement
+points. 'skills' will show you the skills you have and what level those
+skills are. 'help' and 'help (subject)' will give you alot of help in
+game.
+~~~~THE END
+~

@@ -7,8 +7,8 @@ A &+Wsh&nee&+Wp &nstands here eating &n&+ggrass&n.&n
 &+Ctemperature. It seems to be ignoring everything around it and is concerned with
 &+Ceating its grass.&n&n
 ~
-200 0 0 0 0 0 0 0 S
-A 0 0 -1
+200 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -21,8 +21,8 @@ A large &+Wr&+Ca&nm stands here &n&+ggrazing&n and getting in the way.&n
 &+Cand butting heads with other rams is all he seems to enjoy. Other then that
 &+Che seems to just be in the way.    &n
 ~
-200 0 0 0 0 0 0 0 S
-A 0 1 -1
+200 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -34,8 +34,8 @@ flies horde~
 &+L   The mass of flies seek death and here they have found it, eating the flesh
 &+Loff the recetly dead villagers. They are most disgusting creatures.&n
 ~
-143434 0 0 0 0 0 0 -149 S
-AP 0 0 -1
+143434 0 0 0 0 0 0 0 -149 S
+AP 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -49,8 +49,8 @@ orc knight~
 &+Lhis resurrection. He seems like a warrior possessed with a cause and that
 &+Lis a fearsome individual indeed.                  &n
 ~
-2122 0 0 65560 294912 0 0 -999 S
-HO 0 17 -1
+2122 0 0 0 65560 294912 0 0 -999 S
+HO 0 17 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -65,8 +65,8 @@ ogre mercenary _spec1_~
 &+Logre seems totally engrossed in playing with the decapitated head of a dead
 &+Lfarmer.&n
 ~
-2250 1 0 8 0 0 0 -1000 S
-PO 0 16384 -1
+2250 1 0 0 8 0 0 0 -1000 S
+PO 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -80,8 +80,8 @@ apprentice mage conjurer~
 &+Land his apprentices have talents along various fields. This one seems to be
 &+Lstudied in conjuration magic.&n
 ~
-2250 0 0 134217880 2049 0 0 -603 S
-PH 0 2048 -1
+2250 0 0 0 134217880 2049 0 0 -603 S
+PH 0 2048 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -95,8 +95,8 @@ orc guard~
 &+Lmilitant clerics of Sargon. He wears a lesser unholy symbol around his neck,
 &+Lalong with a napkin as he wolfs down his food.&n
 ~
-67110986 1 0 8 0 0 0 -895 S
-HO 0 1 -1
+67110986 1 0 0 8 0 0 0 -895 S
+HO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -110,8 +110,8 @@ giant hill thug~
 &n&+yand a little cash. It is dressed in almost nothing and seems to be quite
 &n&+ycontent with its life, especially when it gets to destroy things.&n
 ~
-2250 1 0 152 64 0 0 -500 S
-G 0 1 -1
+2250 1 0 0 152 64 0 0 -500 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -126,8 +126,8 @@ goblin cook~
 &+Gand has accumulated a large pile of earnings by gaming... trading... and
 &+Gstealing.&n
 ~
-2254 1 0 8 0 0 0 -500 S
-HG 0 33 -1
+2254 1 0 0 8 0 0 0 -500 S
+HG 0 33 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -142,8 +142,8 @@ ogress cook~
 &+Lsomething in a big pot. Her cooking is universally hated by all the guards,
 &+Lexcept the ogres who think she is a genius.&n
 ~
-2250 1 0 0 0 0 0 -592 S
-PO 0 1 -1
+2250 1 0 0 0 0 0 0 -592 S
+PO 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -162,8 +162,8 @@ katalia human slave huge~
 &+Cway. Her feet are chained to the floor here, and it looks like she hasn't
 &+Cmoved from her spot here since she arrived over a week ago.&n
 ~
-2122 0 0 0 0 0 0 900 S
-PH 0 0 -1
+2122 0 0 0 0 0 0 0 900 S
+PH 0 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -177,8 +177,8 @@ orc acolyte~
 &+Ldoing penance for his god. Even though he has little standing with his
 &+Lfellow clerics, he is still above every rank guard.&n
 ~
-1073743978 0 0 65576 32832 0 0 -956 S
-HO 0 32 -1
+1073743978 0 0 0 65576 32832 0 0 -956 S
+HO 0 32 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -192,8 +192,8 @@ unholy orc warrior~
 &+Land lead him down the path of evil. He seems to be very serious about his
 &+Lpraying.&n
 ~
-2122 1 0 65560 32832 0 0 -952 S
-HO 0 1 -1
+2122 1 0 0 65560 32832 0 0 -952 S
+HO 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -207,8 +207,8 @@ ogre guard~
 &n&+ba one will bring him fame and fortune he has come to earn money and hopefully
 &n&+ba woman.&n
 ~
-1073743944 1 0 24 0 0 0 -582 S
-PO 0 1 -1
+1073743944 1 0 0 24 0 0 0 -582 S
+PO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -222,8 +222,8 @@ A strong &n&+ytroll &n&+ywarrior&n stands here off duty.&n
 &+gthat are abnormally strong and brutal. This one, like its fellows passed his
 &+gtests, the others became ash.&n
 ~
-74 0 0 1048600 0 0 0 -999 S
-PT 0 1 -1
+74 0 0 0 1048600 0 0 0 -999 S
+PT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -237,8 +237,8 @@ fire giant~
 &n&+ra runt he is still huge by other races standards. He seems to enjoy being
 &n&+rmean to the troll who seems to be oversensitive to fire&n
 ~
-1073743946 1 0 536870936 4194305 0 0 -859 S
-G 0 1 -1
+1073743946 1 0 0 536870936 4194305 0 0 -859 S
+G 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -252,8 +252,8 @@ drake fire~
 &n&+rdrake. The drake itself seems to be a miniature dragon of some type, with a
 &n&+rlong snake like neck and serrated teeth that make it look quite menacing.&n
 ~
-134350922 0 0 671088664 1 0 0 -396 S
-DK 0 1 -1
+134350922 0 0 0 671088664 1 0 0 -396 S
+DK 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -267,8 +267,8 @@ apprentice urian~
 &n&+rsuch, but speaking with them is always boring. He has been discussing fire
 &n&+rand how it works with the fire giant for days now.&n
 ~
-2122 0 0 536870920 65 0 0 -859 S
-PH 0 10 -1
+2122 0 0 0 536870920 65 0 0 -859 S
+PH 0 10 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -282,8 +282,8 @@ an &n&+bogre &n&+ybartender&n~
 &+Ldrinks and making sure nothing gets out of hand. He seems a little larger then
 &+Lthe other ogres in the room, and is totally sober.&n
 ~
-2122 0 0 24 0 0 0 -859 S
-PO 0 1 -1
+2122 0 0 0 24 0 0 0 -859 S
+PO 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -297,8 +297,8 @@ drunk orc guard~
 &+Lare in total chaos. He reaks of alcohol and sick and should be steered clear
 &+Lof.&n
 ~
-2122 0 0 8 0 0 0 -502 S
-HO 0 1 -1
+2122 0 0 0 8 0 0 0 -502 S
+HO 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -312,8 +312,8 @@ hooded human vampire~
 &+Lthe scene. He is about six feet tall and his skin is rather pale. It almost
 &+Lseems like he is the color of someone who is... dead.&n
 ~
-2122 0 0 65688 262144 0 0 -940 S
-UV 0 1 -1
+2122 0 0 0 65688 262144 0 0 -940 S
+UV 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -327,8 +327,8 @@ a &n&+Ggoblin &+Ldicer&n~
 &+Gfingering his dagger in case any of his gaming mates decide to try and get
 &+Gtheir money back in any other way.&n
 ~
-1073744074 0 0 24 0 0 0 -758 S
-HG 0 14 -1
+1073744074 0 0 0 24 0 0 0 -758 S
+HG 0 14 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -342,8 +342,8 @@ human soldier~
 &+Lanyway, no messy ethics, and better pay. He wields one of the evil black iron
 &+Lweapons of the Black Tower with ease and expertise.&n
 ~
-2122 0 0 8 0 0 0 -495 S
-PH 0 1 -1
+2122 0 0 0 8 0 0 0 -495 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -357,8 +357,8 @@ flind scout~
 &+yand for message delivery they are some of his most trusted men. This one
 &+yseems to be getting ready to leave, with his small bag around his back.&n
 ~
-2250 0 0 24 0 0 0 -999 S
-H 0 15 -1
+2250 0 0 0 24 0 0 0 -999 S
+H 0 15 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -372,8 +372,8 @@ orc preacher~
 &+LThe soldiers of the Black Tower normally ignore him, but he comes back every
 &+Lday to preach, hoping to gain more converts for the Dark Guard.&n
 ~
-2122 0 0 536936456 45248 0 0 -1000 S
-HO 0 6 -1
+2122 0 0 0 536936456 45248 0 0 -1000 S
+HO 0 6 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -387,8 +387,8 @@ hobgoblin warrior~
 &+yseems to enjoy the work however, although the preachers that come to speak
 &+ywith him constantly are beginning to grate on his nerves.&n
 ~
-2122 0 0 8 0 0 0 -582 S
-H 0 1 -1
+2122 0 0 0 8 0 0 0 -582 S
+H 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -402,8 +402,8 @@ orc sergeant~
 &+Lrather out of it, and totally dumbfounded. He suddenly grumbles, &+W'Come on
 &+Wyou stupid emissary, get here, I am ready to go back to bed.'&n
 ~
-2250 0 0 8 0 0 0 -1000 S
-HO 0 1 -1
+2250 0 0 0 8 0 0 0 -1000 S
+HO 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -417,8 +417,8 @@ hill giant guard~
 &+yhim. He wears a rough tunic of the Black Tower around his waist as a loin
 &+ycloth and wields a huge club of his tribe.&n
 ~
-1140852940 0 0 8 0 0 0 -591 S
-G 0 1 -1
+1140852940 0 0 0 8 0 0 0 -591 S
+G 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -432,8 +432,8 @@ flind guard black~
 &+LHe is wearing a a simple tabard of the Black Guard and he wields one of the
 &+Lswords of the unholy group in his hands.&n
 ~
-2120 0 0 65560 32768 0 0 -1000 S
-H 0 5 -1
+2120 0 0 0 65560 32768 0 0 -1000 S
+H 0 5 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -447,8 +447,8 @@ threaten the captain's health. As some of the most loyal and most mercenary
 guards they work for the captain as long as he pays their price... they
 always work for he highest bidder.
 ~
-1073744074 0 0 144 192 0 0 -1 S
-G 0 1 -1
+1073744074 0 0 0 144 192 0 0 -1 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -462,8 +462,8 @@ war wizard~
 &n&+rGuard to advise his war council. He wears a set of red robes and seems to
 &n&+rhold himself with aloof reflection.&n
 ~
-2122 0 0 268435608 1 0 0 -692 S
-PH 0 10 -1
+2122 0 0 0 268435608 1 0 0 -692 S
+PH 0 10 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -477,8 +477,8 @@ ogre commander~
 &+Lhis side. He seems extrememly intelligent for an ogre and his bearing marks
 &+Lhim as a soldier of high ability.&n
 ~
-2122 0 0 24 0 0 0 -592 S
-PO 0 1 -1
+2122 0 0 0 24 0 0 0 -592 S
+PO 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -492,8 +492,8 @@ drow officer cavalry~
 &n&+mto enjoy his life very much. He stands here discussing strategy with a huge
 &n&+mogre commander.&n
 ~
-2122 0 0 24 0 0 0 -950 S
-PL 0 2 -1
+2122 0 0 0 24 0 0 0 -950 S
+PL 0 2 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -507,8 +507,8 @@ orc field marshal~
 &+Lseems to have his attention fully intent on the map that he is focusing on
 &+Lso intently.&n
 ~
-1073743946 0 0 65560 0 0 0 -592 S
-HO 0 1 -1
+1073743946 0 0 0 65560 0 0 0 -592 S
+HO 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -522,8 +522,8 @@ duergar chaplain~
 &+rthat will smite the good races of the north. He seems very intent on what
 &+rhe is doing, and is really getting in the other advisors' way.&n
 ~
-2122 0 0 536936488 45248 0 0 -793 S
-PD 0 6 -1
+2122 0 0 0 536936488 45248 0 0 -793 S
+PD 0 6 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -537,8 +537,8 @@ mistress human succubi daemonic~
 &+Mred hair lays about her as she plays with the pillows casually. She wears
 &+Ma long black teddy that seems to be barely concealing... anything.&n
 ~
-1073743946 0 0 536936600 307201 0 0 -1000 S
-X 0 9 -1
+1073743946 0 0 0 536936600 307201 0 0 -1000 S
+X 0 9 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -552,8 +552,8 @@ tiny imp~
 &+Ldoes anything she tells him to. Hoping one day he will be granted more power
 &+Lhe follows here willingly, although hatefully.&n
 ~
-6218 0 0 1638554 1 0 0 -1000 S
-X 0 10 -1
+6218 0 0 0 1638554 1 0 0 -1000 S
+X 0 10 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -566,8 +566,8 @@ doctor goblin~
 &+Gwith spattered blood. He seems to greatly enjoy his work becuse he has a large
 &+Ggrin that seems permanantly plastered on his face.&n
 ~
-2122 0 0 8 262144 0 0 -692 S
-HG 0 9 -1
+2122 0 0 0 8 262144 0 0 -692 S
+HG 0 9 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -581,8 +581,8 @@ dackron orc~
 &+Lhis cold heart having seen almost everything. He seems unimpressed by anything
 &+Land waits for you to make your move.&n
 ~
-1073744074 0 0 404226048 0 0 0 -859 S
-HO 0 14 -1
+1073744074 0 0 0 404226048 0 0 0 -859 S
+HO 0 14 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -595,8 +595,8 @@ shadow small drake br_s~
 &+Lbeen tamed. Given as a personal pet to Dackron, its shadowy body seems to
 &+Labsorb all light from the area, making it a small pit of darkness.&n
 ~
-2250 0 0 1048600 34816 0 0 -682 S
-A 0 1 -1
+2250 0 0 0 1048600 34816 0 0 -682 S
+A 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -611,8 +611,8 @@ kinslor elfslayer captian br_f~
 &+rpart fire creature becuse of his love of all things flaming. Many say he
 &+ris evil itself, who knows, but he is formidable.&n
 ~
-1073744074 0 0 536936600 1 0 0 -582 S
-X 0 1 -1
+1073744074 0 0 0 536936600 1 0 0 -582 S
+X 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -626,8 +626,8 @@ priest sargon~
 &+LHe also carries a holy text of Sargon in one of his hands as he blesses
 &+LKinslor with his mace.&n
 ~
-2122 0 0 536936456 45248 0 0 -1000 S
-HO 0 6 -1
+2122 0 0 0 536936456 45248 0 0 -1000 S
+HO 0 6 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -641,8 +641,8 @@ dana blond girl cute young~
 &+Cher look like a gorgeous little angel. Who would ever want to hurt her would
 &+Cbe sad indeed. However there does seem to be a chill about her.&n
 ~
-6154 0 0 152 12480 0 0 -968 S
-PG 0 10 -1
+6154 0 0 0 152 12480 0 0 -968 S
+PG 0 10 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -656,8 +656,8 @@ drow priest~
 &+mthe rumors that Sargon will be free soon from his eternal prison. He stands
 &+mhere speaking of the plans of the dark god once he has been resurrected.&n
 ~
-2122 0 0 536936488 45248 0 0 -999 S
-PL 0 6 -1
+2122 0 0 0 536936488 45248 0 0 -999 S
+PL 0 6 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -670,8 +670,8 @@ greater shadow br_s~
 &+Lexist on more then one plane at once as its form seems to ooze and form
 &+Laround some sort of evil core.&n
 ~
-67110922 0 0 538443962 262209 0 0 -999 S
-UV 0 1 -1
+67110922 0 0 0 538443962 262209 0 0 -999 S
+UV 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -685,8 +685,8 @@ rakshasa champion guard~
 &+La panther. He seems to be thoughtlessly fingering his large two handed sword
 &+Las he speaks with his companions.&n
 ~
-2122 0 0 65688 32768 0 0 -1000 S
-PE 0 5 -1
+2122 0 0 0 65688 32768 0 0 -1000 S
+PE 0 5 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -700,8 +700,8 @@ knight dark deadly~
 &+Lof Ice Crag around his neck. Obviously the place of his origin. His dark
 &+Lmail and powerful build mark him as a man not to be messed with.&n
 ~
-2122 0 0 24 294912 0 0 -1000 S
-PB 0 5 -1
+2122 0 0 0 24 294912 0 0 -1000 S
+PB 0 5 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -715,8 +715,8 @@ ogre applicant~
 &+bover ten feet tall and his large muscles and strength make him seem more like
 &+ba living tree then a person.&n
 ~
-2250 0 0 65560 0 0 0 -985 S
-PO 0 1 -1
+2250 0 0 0 65560 0 0 0 -985 S
+PO 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -730,8 +730,8 @@ knight champion~
 &+Lreadying for battle. He is a large human in black chainmail and has large
 &+Linset eyes that give his face an evil cast.&n
 ~
-2122 0 0 65688 294912 0 0 -999 S
-PH 0 5 -1
+2122 0 0 0 65688 294912 0 0 -999 S
+PH 0 5 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -745,8 +745,8 @@ sister knight~
 &+Ltheir combat. She wears a set of form fitting plate mail that while looking
 &+Lprotective has also been made to show off her body.&n
 ~
-2122 0 0 136 32768 0 0 -987 S
-PH 0 5 -1
+2122 0 0 0 136 32768 0 0 -987 S
+PH 0 5 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -760,8 +760,8 @@ flind knight~
 &+MHe has burned into his fur a mark of the dark lord and his armor and weapons
 &+Mare all made of black iron, indication that he is one of the chosen.&n
 ~
-2122 0 0 65688 32768 0 0 -999 S
-PH 0 5 -1
+2122 0 0 0 65688 32768 0 0 -999 S
+PH 0 5 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -775,8 +775,8 @@ militant priest~
 &+Land lead him down the path of evil. He seems to be very serious about his
 &+Lpraying.&n
 ~
-1140852808 0 0 65560 32768 0 0 -948 S
-HO 0 5 -1
+1140852808 0 0 0 65560 32768 0 0 -948 S
+HO 0 5 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -790,8 +790,8 @@ dark hearted warrior~
 &+Lpoint him out as one of the best of the warriors. He stands here awaiting the
 &+Lchange to march upon all that is good in the world.&n
 ~
-1140852808 0 0 65688 296960 0 0 -1000 S
-PO 0 5 -1
+1140852808 0 0 0 65688 296960 0 0 -1000 S
+PO 0 5 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -805,8 +805,8 @@ sleep. He is bald and middle aged at the moment. He seems to be working on
 a large black iron two-handed sword right now. The sound of his anvil cracking
 makes it difficult to hear anything here.
 ~
-2122 0 0 8 0 0 0 0 S
-PH 0 0 -1
+2122 0 0 0 8 0 0 0 0 S
+PH 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -819,8 +819,8 @@ amelia woman young~
  She stands here in chains. She has the evidence of one dimple on her cheek
  and she is dressed in a dirty peasant dress. She seems to have been crying.
 ~
-2122 0 0 8 0 0 0 0 S
-PH 0 0 -1
+2122 0 0 0 8 0 0 0 0 S
+PH 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -834,8 +834,8 @@ priest sargon consecrated~
 &+rrequired lives to his evil god he stands here covered in the thick red fluid
 &+ras he prepares for another ritual.&n
 ~
-2122 0 0 536936456 32768 0 0 -987 S
-HO 0 6 -1
+2122 0 0 0 536936456 32768 0 0 -987 S
+HO 0 6 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -849,8 +849,8 @@ priest bodyguard~
 &+Lblack god Sargon. He seems to be ready for anything, and is nervous, after
 &+Lwatching the scenes of slaghter played out in front of him.&n
 ~
-2122 0 0 24 0 0 0 -784 S
-PB 0 0 -1
+2122 0 0 0 24 0 0 0 -784 S
+PB 0 0 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -864,8 +864,8 @@ warrior blood blessed~
 &+ris buckling as his body seeems to be getting stronger and stronger, as he
 &+rabsorbs the life that has just been taken.&n
 ~
-2122 0 0 805372056 307392 0 0 -1000 S
-PO 0 5 -1
+2122 0 0 0 805372056 307392 0 0 -1000 S
+PO 0 5 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -880,8 +880,8 @@ sister superior~
 &+Llooks very serious and like she hasn't cared for anyone or anything except
 &+Lthe cause in a long time.&n
 ~
-2122 0 0 65688 0 0 0 -999 S
-PH 0 5 -1
+2122 0 0 0 65688 0 0 0 -999 S
+PH 0 5 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -896,8 +896,8 @@ urian urian's champion black guard~
 &+Lthe mage's personal battles for him. ALthough he is not his bodyguard, this
 &+Lknight does decide all situations where there is a need for trial by combat.&n
 ~
-2122 0 0 65688 32960 0 0 -999 S
-PO 0 5 -1
+2122 0 0 0 65688 32960 0 0 -999 S
+PO 0 5 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -913,8 +913,8 @@ ancient master black guard br_f~
 &+Lnow advises his children and brethren on how best to bring back the imprisoned
 &+Llord.&n
 ~
-2122 0 0 536936472 309441 0 0 -1000 S
-U 0 5 -1
+2122 0 0 0 536936472 309441 0 0 -1000 S
+U 0 5 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -928,8 +928,8 @@ orcus emissary~
 &+Lhe knows that his situation will be very much improved. His messenger labors
 &+Lhere to help in his resurrection.&n
 ~
-14410 0 0 806945176 47297 0 0 -1000 S
-X 0 10 -1
+14410 0 0 0 806945176 47297 0 0 -1000 S
+X 0 10 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -944,8 +944,8 @@ lord mordren ap dethyin ap'dethyin master~
 &+Lin form. He wears the black armor of the Black Guard and wields one of their
 &+Lswords. He is dressed in his finest clothes and seems ready for something.&n
 ~
-1073743946 0 0 536936600 309441 0 0 -1000 S
-X 0 5 -1
+1073743946 0 0 0 536936600 309441 0 0 -1000 S
+X 0 5 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -958,8 +958,8 @@ elite orc knight~
 &+LPersonally loyal to the Lord, he is one of his must trusted lieutenants and
 &+Lhis personal bodyguards. This orc stands proud and ready to destroy anything.&n
 ~
-2122 0 0 65560 0 0 0 -999 S
-HO 0 5 -1
+2122 0 0 0 65560 0 0 0 -999 S
+HO 0 5 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -973,8 +973,8 @@ elite human knight~
 &+Lthe Lord's life. The situation is more honor then help, they both know that
 &+LLord Mordren could destroy them easily.&n
 ~
-2122 0 0 24 32768 0 0 -999 S
-PB 0 5 -1
+2122 0 0 0 24 32768 0 0 -999 S
+PB 0 5 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -987,8 +987,8 @@ clerical zealot~
 &+Lover and he seems to be in a state of clerical frenzy. He looks at you with
 &+La glazed gaze and grins and laughs with maniacal laughter.&n
 ~
-67110984 0 0 536936456 45248 0 0 -998 S
-PH 0 6 -1
+67110984 0 0 0 536936456 45248 0 0 -998 S
+PH 0 6 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1001,8 +1001,8 @@ traveller cloaked~
 &+Lthat drapes his shoulders. He seems to be looking around for something,
 &+Lhiding his face from everyone, including you.&n
 ~
-1073743944 0 0 152 264384 0 0 -967 S
-PH 0 10 -1
+1073743944 0 0 0 152 264384 0 0 -967 S
+PH 0 10 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1016,8 +1016,8 @@ orc guard lazy~
 &+Lthe time. He has a sword at his side and seems to know how to use it, he
 &+Ljust doesn't like to.&n
 ~
-2122 0 0 8 0 0 0 -894 S
-HO 0 1 -1
+2122 0 0 0 8 0 0 0 -894 S
+HO 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1030,8 +1030,8 @@ orc slavemaster~
 &+Lthe clerics of the Black Order he seems to be haggling with their buyer
 &+Lover a fair price for his merchandise.&n
 ~
-2122 0 0 65560 0 0 0 -899 S
-HO 0 12 -1
+2122 0 0 0 65560 0 0 0 -899 S
+HO 0 12 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1045,8 +1045,8 @@ prison master~
 &+LHe wears one of the holy symbols of Sargon, and holds in his hands one of
 &+Lthe holy maces. Finally, he is attended by one of the Darkons.
 ~
-2122 0 0 536936472 45248 0 0 -1000 S
-PH 0 6 -1
+2122 0 0 0 536936472 45248 0 0 -1000 S
+PH 0 6 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1060,8 +1060,8 @@ a &n&+yclay &ngolem&n~
 &+yof Sargon all about its body and it seems to have been constructed long ago.
 &+yAlso on its chest it has a symbol of a Black Tower stamped onto it.&n
 ~
-2122 0 0 537395352 307392 0 0 -700 S
-OG 0 1 -1
+2122 0 0 0 537395352 307392 0 0 -700 S
+OG 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1075,8 +1075,8 @@ golem bone~
 &+Lof Sargon all about its body and it seems to have been constructed long ago.
 &+LAlso on its chest it has a symbol of a Black Tower stamped onto it.&n
 ~
-2122 0 0 537395352 307392 0 0 -700 S
-OG 0 1 -1
+2122 0 0 0 537395352 307392 0 0 -700 S
+OG 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1090,8 +1090,8 @@ golem clay guardian large~
 &+yof Sargon all about its body and it seems to have been constructed long ago.
 &+yAlso on its chest it has a symbol of a Black Tower stamped onto it.&n
 ~
-2122 0 0 537395384 307392 0 0 -700 S
-OG 0 1 -1
+2122 0 0 0 537395384 307392 0 0 -700 S
+OG 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1105,8 +1105,8 @@ golem clay ancient~
 &+yof Sargon all about its body and it seems to have been constructed long ago.
 &+yAlso on its chest it has a symbol of a Black Tower stamped onto it.&n
 ~
-2122 0 0 537395384 307392 0 0 -700 S
-OG 0 1 -1
+2122 0 0 0 537395384 307392 0 0 -700 S
+OG 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1141,8 +1141,8 @@ statue old man~
       and retrieve the keys I have placed there to open
       up my stasis should you have need of me or the Key.&n
 ~
-74 0 0 24 0 0 0 0 S
-OG 0 1 -1
+74 0 0 0 24 0 0 0 0 S
+OG 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1156,8 +1156,8 @@ drow priestess~
 &+Land has taken up the black iron mace of darkness and cast away the multi
 &+Lheaded whip of Lolth.&n
 ~
-67110984 0 0 536936472 45248 0 0 -1000 S
-PL 0 6 -1
+67110984 0 0 0 536936472 45248 0 0 -1000 S
+PL 0 6 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1171,8 +1171,8 @@ orc cleric~
 &+Lforces of the black tower will march against the good races, and those evil
 &+Lraces that do not worship Sargon.&n
 ~
-67110984 0 0 536936472 45248 0 0 -1000 S
-HO 0 6 -1
+67110984 0 0 0 536936472 45248 0 0 -1000 S
+HO 0 6 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1185,8 +1185,8 @@ human monk~
 &+CHis body is in perfect shape however and he seems to have prepared for any
 &+Ccombat that might occur, actually he seems to be looking for a fight.&n
 ~
-67110984 0 0 805306520 12480 0 0 -200 S
-PH 0 7 -1
+67110984 0 0 0 805306520 12480 0 0 -200 S
+PH 0 7 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1199,8 +1199,8 @@ orc monk~
 &+Lvery lean and very toned. He wears a simple set of robes about his body that
 &+Lhave the symbol of the fighting order of clerics emblazoned on it.&n
 ~
-67110984 0 0 805371912 12480 0 0 -200 S
-HO 0 7 -1
+67110984 0 0 0 805371912 12480 0 0 -200 S
+HO 0 7 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1214,8 +1214,8 @@ bishop sargon~
 &+rHe has small horns growing out of his head and he seems to be covered from
 &+rhead to toe in rich dark blood.&n
 ~
-1073760330 0 0 805896360 309440 0 0 -1000 S
-MT 0 6 -1
+1073760330 0 0 0 805896360 309440 0 0 -1000 S
+MT 0 6 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1229,8 +1229,8 @@ vicar shadows shadow~
 &+rdown and his face is in s tate of grinning anticipation as he prepares for
 &+rthe coming of his god.&n
 ~
-6218 0 0 536936456 45248 0 0 -1000 S
-HO 0 6 -1
+6218 0 0 0 536936456 45248 0 0 -1000 S
+HO 0 6 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1244,8 +1244,8 @@ cardinal faethron sargon~
 &+rthe Church should he succeed in freeing his master. He stands here covered in
 &+rthe blood of the innocent and good, making offerings to his evil diety.&n
 ~
-1073748042 0 0 805896344 307392 0 0 -1000 S
-X 0 6 -1
+1073748042 0 0 0 805896344 307392 0 0 -1000 S
+X 0 6 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1259,8 +1259,8 @@ necromantic necromancer guard~
 &+Lundead that guard this area direction as to who to kill. He seems to enjoy his
 &+Lnew life very much.&n
 ~
-1073743946 0 0 536870968 0 0 0 -999 S
-PH 0 11 -1
+1073743946 0 0 0 536870968 0 0 0 -999 S
+PH 0 11 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1274,8 +1274,8 @@ vampire~
 &+rstill wears the overalls from the field, and his face is not quite as pale
 &+ras would be expected.&n
 ~
-2122 0 0 537395224 307264 0 0 -789 S
-UV 0 1 -1
+2122 0 0 0 537395224 307264 0 0 -789 S
+UV 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1289,8 +1289,8 @@ half visible half-visible wraith~
 &+Lwill always be here, a constant in the Tower. He instantly knows who has
 &+Lfaith toward Sargon, and who is here to destroy the faith.&n
 ~
-2122 0 0 536936472 274624 0 0 -1000 S
-UG 0 10 -1
+2122 0 0 0 536936472 274624 0 0 -1000 S
+UG 0 10 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1303,8 +1303,8 @@ zombie farmer~
 &+ycheeks, and his wounds still ooze blood from them. He seems to have died in
 &+yviolent conflict. He now stands here, serving the cause of darkness.&n
 ~
-2122 0 0 24 0 0 0 -999 S
-U 0 1 -1
+2122 0 0 0 24 0 0 0 -999 S
+U 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1318,8 +1318,8 @@ golem iron br_a~
 &+Ltime they stand here, ready to destroy anything that their new masters tell
 &+Lthem to.&n
 ~
-2122 0 0 152 14528 0 0 0 S
-OG 0 1 -1
+2122 0 0 0 152 14528 0 0 0 S
+OG 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1333,8 +1333,8 @@ drow sorcerer~
 &+mfairly young for a drow, however his eyes show great skill, and he seems
 &+mready to defend the tower at any time.&n
 ~
-1073743946 0 0 524382 25 0 0 -899 S
-PL 0 10 -1
+1073743946 0 0 0 524382 25 0 0 -899 S
+PL 0 10 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1349,8 +1349,8 @@ half half-drow drow conjurer~
 &+mincantation to summon up the last of the guards of this level. He looks like
 &+mhe has not had a shower in days and needs rest.&n
 ~
-1073743946 0 0 134742232 2048 0 0 -899 S
-P2 0 12 -1
+1073743946 0 0 0 134742232 2048 0 0 -899 S
+P2 0 12 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1364,8 +1364,8 @@ vrock demonic~
 &+rready for combat in any way and will destroy anything that tried to enter this
 &+rarea.&n
 ~
-2122 0 0 134807576 309441 0 0 -999 S
-X 0 5 -1
+2122 0 0 0 134807576 309441 0 0 -999 S
+X 0 5 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1379,8 +1379,8 @@ earlion spectre was _nofear_~
 &+Cmotions of the past, his ethereal robes being blown by ancient winds he seems
 &+Cto be a fractured or broken thing.&n
 ~
-1073743950 0 0 598168 309440 0 0 -999 S
-UG 0 10 -1
+1073743950 0 0 0 598168 309440 0 0 -999 S
+UG 0 10 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1394,8 +1394,8 @@ man power earlion is _nobash_~
 &+Lhe is missing something, possibly his past, maybe his desires and his future.
 &+LHe is dressed in black robes consecrated to Sargon.&n
 ~
-1073743950 0 0 268435608 14529 0 0 -999 S
-PO 0 10 -1
+1073743950 0 0 0 268435608 14529 0 0 -999 S
+PO 0 10 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1410,8 +1410,8 @@ earlion demon ultraloth~
 &+rglaze forth with power and without empathy. He stands here, a creature with
 &+rno past and no memories, just a desire to destroy.&n
 ~
-1073743950 0 0 940114104 309441 0 0 -1000 S
-X 0 10 -1
+1073743950 0 0 0 940114104 309441 0 0 -1000 S
+X 0 10 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1425,8 +1425,8 @@ shade shadow darkness being br_s~
 &+Lbind them to their will, and they serve only with reservation even then. This
 &+Lbeing seems to emit a cold chill of death.&n
 ~
-2122 0 0 8 309440 0 0 -1000 S
-UG 0 10 -1
+2122 0 0 0 8 309440 0 0 -1000 S
+UG 0 10 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1441,8 +1441,8 @@ shadow dragon br_s~
 &+Lfeared it. The dragon has huge wings and claws that make it seem like it would
 &+Lbe unwise to mess with it.&n
 ~
-2122 0 0 73916 276544 0 0 -1000 S
-D 0 1 -1
+2122 0 0 0 73916 276544 0 0 -1000 S
+D 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1456,8 +1456,8 @@ lich lichgate emissary~
 &+Wtheir, and Orcus's ally Sargon he stands here awaiting to speak to the master
 &+Wof Necromancy, before going on to see Lord Urian.&n
 ~
-1140852744 0 0 134217756 276673 0 0 -999 S
-U 0 10 -1
+1140852744 0 0 0 134217756 276673 0 0 -999 S
+U 0 10 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1470,8 +1470,8 @@ guard vampire vampiric~
 &+rof the Black Tower. Whether he did it for power, or immortality who can say,
 &+rbecause now he is little more then a slave for his dark masters.&n
 ~
-2122 0 0 589976 262336 0 0 -988 S
-UV 0 1 -1
+2122 0 0 0 589976 262336 0 0 -988 S
+UV 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1485,8 +1485,8 @@ spectre innkeeper~
 &+Ca play thing of the necromancers no one can tell. He wears illusionary overalls
 &+Cand he seems to have been a middle aged man with a thick mustache.&n
 ~
-1073744074 0 0 24 12480 0 0 -999 S
-UG 0 13 -1
+1073744074 0 0 0 24 12480 0 0 -999 S
+UG 0 13 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1500,8 +1500,8 @@ magus necromantic necromancer~
 &+Land a look of disdain on his face. He seems to fear nothing including death,
 &+Lbecause he knows that is not the end.&n
 ~
-1140852840 0 0 536936476 192 0 0 -1000 S
-PH 0 11 -1
+1140852840 0 0 0 536936476 192 0 0 -1000 S
+PH 0 11 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1516,8 +1516,8 @@ bone unearthly golem~
 &+Wlevel of the Abyss to animate and control the creatures. It is truly a
 &+Wfearsome creature.&n
 ~
-2122 0 0 24 14528 0 0 0 S
-OG 0 1 -1
+2122 0 0 0 24 14528 0 0 0 S
+OG 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1531,8 +1531,8 @@ cowaled reasearch researcher human~
 &+Lblue eyes. He wears black robes and is stooped over a little. On his back he
 &+Lcarries a black backpack with a few books poking out of it.&n
 ~
-1073743944 0 0 134217752 2240 0 0 -1000 S
-PH 0 11 -1
+1073743944 0 0 0 134217752 2240 0 0 -1000 S
+PH 0 11 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1546,8 +1546,8 @@ necromancer bloody blood~
 &+Lto be thinking of something far away, and he has a large knife in his hand
 &+Lfor carving up corpses.&n
 ~
-1073743944 0 0 589980 4288 0 0 -999 S
-PH 0 11 -1
+1073743944 0 0 0 589980 4288 0 0 -999 S
+PH 0 11 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1561,8 +1561,8 @@ envoy zrack~
 &+Lbeen sent here to bring a reply back to the Master of the Necromancy of the
 &+LBlack Tower.&n
 ~
-1073743944 0 0 65564 2048 0 0 -1000 S
-PH 0 11 -1
+1073743944 0 0 0 65564 2048 0 0 -1000 S
+PH 0 11 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1575,8 +1575,8 @@ zombie ju-ju ju~
 life force still attatched. That way they make excellant servants as well as
 guards to those who created them.
 ~
-2122 0 0 152 192 0 0 -1000 S
-U 0 1 -1
+2122 0 0 0 152 192 0 0 -1000 S
+U 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1591,8 +1591,8 @@ verinor dead deadlord lord~
 &+Lof Lichgate allready, and only waits for them to teach him the ritual to
 &+Lturn himself into a lich.&n
 ~
-1073743946 0 0 269025434 274624 0 0 -1000 S
-PH 0 11 -1
+1073743946 0 0 0 269025434 274624 0 0 -1000 S
+PH 0 11 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1606,8 +1606,8 @@ quasit demon devil br_f~
 &+ritself. It has small little horns and forked teeth and a pointed tail. It
 &+rseems to be missing only its little pitchfork.&n
 ~
-2122 0 0 537460888 47296 0 0 -1000 S
-Y 0 10 -1
+2122 0 0 0 537460888 47296 0 0 -1000 S
+Y 0 10 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1621,8 +1621,8 @@ greater positive energy elemental~
 &+Wcrackling about its body. It seems in an unhappy mood, since it has been
 &+Wforced to guard this place.&n
 ~
-2122 0 0 537927866 276672 0 0 -40 S
-X 0 10 -1
+2122 0 0 0 537927866 276672 0 0 -40 S
+X 0 10 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1636,8 +1636,8 @@ lighting elemental energy br_l~
 &+Chave been made to guard this place, when it would have been happier somewhere
 &+Celse.&n
 ~
-2122 0 0 134217752 14528 0 0 0 S
-EA 0 1 -1
+2122 0 0 0 134217752 14528 0 0 0 S
+EA 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1651,8 +1651,8 @@ faelia drow woman sorceress~
 &+mlooking around, as if something is wrong. Her piercing red eyes make her
 &+mlook very ominous and evil.
 ~
-1073760330 0 0 805371928 12481 0 0 -999 S
-PL 0 10 -1
+1073760330 0 0 0 805371928 12481 0 0 -999 S
+PL 0 10 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1669,8 +1669,8 @@ cambion demon man huge~
 &+LA &n&+rcambion &n&+Rdemon &n&+Wtells you in demon 'ARE YOU READY TO DIE MORTAL?!!!'
 &n
 ~
-2122 0 0 536936600 47296 0 0 -1000 S
-X 0 5 -1
+2122 0 0 0 536936600 47296 0 0 -1000 S
+X 0 5 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1684,8 +1684,8 @@ hackron minotaur sorceror huge~
 &+Lemerge again one day. Hackron has sided with Sargon in the hopes that he
 &+Lwill allow his race to return to the light once again.&n
 ~
-1073743946 0 0 939598010 2049 0 0 -899 S
-MT 0 10 -1
+1073743946 0 0 0 939598010 2049 0 0 -899 S
+MT 0 10 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1698,8 +1698,8 @@ stone huge golem br_g~
 guard for him. The stone golem takes no orders from anyone other then Hackron
 and he seems to be standing here, ready to obey his master.
 ~
-2122 0 0 152 14528 0 0 -10 S
-OG 0 1 -1
+2122 0 0 0 152 14528 0 0 -10 S
+OG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1715,8 +1715,8 @@ januhazanth gnome~
 &+RIt's rumored that he is related to the gnome Jylisa, but who believes those
 &+Rrumors...&n
 ~
-1073743946 0 0 524328 2049 0 0 -1000 S
-PG 0 10 -1
+1073743946 0 0 0 524328 2049 0 0 -1000 S
+PG 0 10 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1730,8 +1730,8 @@ drake frost venerable br_c~
 &+Ccruelty and evil. They enjoy catching things simply to torment them and are
 &+Cdrawn to evil creatures of all sorts.&n
 ~
-2122 0 0 134742040 2112 0 0 -999 S
-DK 0 1 -1
+2122 0 0 0 134742040 2112 0 0 -999 S
+DK 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1744,8 +1744,8 @@ nomrin shadow mage being darkness shadows~
 &+Ltotal black and there is not much that can be seen about them at all. His
 &+Lentire being seems to be one of shifting darkness...&n
 ~
-1073743946 0 0 134217882 47296 0 0 -1000 S
-UG 0 10 -1
+1073743946 0 0 0 134217882 47296 0 0 -1000 S
+UG 0 10 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1759,8 +1759,8 @@ negative greater energy elemental br_s~
 &+Ltruly evil, but really a pure force of nature this thing stands here unmoving
 &+Las it tries to understand how it got here.&n
 ~
-2122 0 0 403767482 309440 0 0 -10 S
-EA 0 1 -1
+2122 0 0 0 403767482 309440 0 0 -10 S
+EA 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1774,8 +1774,8 @@ positive energy elemental~
 &+Conly allows it to recognize those things that are like itself, and those that
 &+Care not.&n
 ~
-1140852808 0 0 403185694 14528 0 0 0 S
-EA 0 1 -1
+1140852808 0 0 0 403185694 14528 0 0 0 S
+EA 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1789,8 +1789,8 @@ huge positive energy elemental~
 &+Conly allows it to recognize those things that are like itself, and those that
 &+Care not.&n
 ~
-1140852808 0 0 403185694 14528 0 0 0 S
-EA 0 1 -1
+1140852808 0 0 0 403185694 14528 0 0 0 S
+EA 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1804,8 +1804,8 @@ greater positive energy elemental br_c~
 &+Conly allows it to recognize those things that are like itself, and those that
 &+Care not.&n
 ~
-1140852808 0 0 403185694 14528 0 0 0 S
-EA 0 1 -1
+1140852808 0 0 0 403185694 14528 0 0 0 S
+EA 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1819,8 +1819,8 @@ large positive energy elemental~
 &+Conly allows it to recognize those things that are like itself, and those that
 &+Care not.&n
 ~
-1140852808 0 0 403185694 14528 0 0 0 S
-EA 0 1 -1
+1140852808 0 0 0 403185694 14528 0 0 0 S
+EA 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1834,8 +1834,8 @@ lightning elemental br_l~
 &+Conly allows it to recognize those things that are like itself, and those that
 &+Care not.&n
 ~
-1140852808 0 0 403185694 14528 0 0 0 S
-EA 0 1 -1
+1140852808 0 0 0 403185694 14528 0 0 0 S
+EA 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1849,8 +1849,8 @@ large lightning elemental br_l~
 &+Conly allows it to recognize those things that are like itself, and those that
 &+Care not.&n
 ~
-1140852808 0 0 403185694 14528 0 0 0 S
-EA 0 1 -1
+1140852808 0 0 0 403185694 14528 0 0 0 S
+EA 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1864,8 +1864,8 @@ huge lightning elemental br_l~
 &+Conly allows it to recognize those things that are like itself, and those that
 &+Care not.&n
 ~
-1140852808 0 0 403185694 14528 0 0 0 S
-EA 0 1 -1
+1140852808 0 0 0 403185694 14528 0 0 0 S
+EA 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1879,8 +1879,8 @@ red dragon abyssal br_f~
 &+rbrothers. He lays here ready to destroy any that might come this way, or
 &+rattempt to enter in this direction.&n
 ~
-1140852810 0 0 403185694 14528 0 0 0 S
-D 0 1 -1
+1140852810 0 0 0 403185694 14528 0 0 0 S
+D 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1895,8 +1895,8 @@ huge fire elemental~
 &+ra thousand years, and the nature of this hellish place has changed their
 &+rnatures forever.&n
 ~
-2122 0 0 536936472 34817 0 0 -899 S
-EF 0 1 -1
+2122 0 0 0 536936472 34817 0 0 -899 S
+EF 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1911,8 +1911,8 @@ janyon old servant~
 &+Cstands here meak and unassuming. He keeps saying something to himself about
 &+Ckeys, and not being given any, he seems sad.&n
 ~
-2122 0 0 24 0 0 0 406 S
-PH 0 1 -1
+2122 0 0 0 24 0 0 0 406 S
+PH 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1926,8 +1926,8 @@ shavron door keeper demon being dark~
 &n&+rserve him. He now serves his most powerful minion on the prime material plane,
 &+LUrian Shadowborn.&n
 ~
-1073743946 0 0 537395224 47297 0 0 -1000 S
-X 0 5 -1
+1073743946 0 0 0 537395224 47297 0 0 -1000 S
+X 0 5 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1941,8 +1941,8 @@ shadow~
 &+La thin shell of evil that has been given body. Best left destroyed, this
 &+Lcreature shows no pity and hates all living creatures.&n
 ~
-2122 0 0 65560 309440 0 0 -1000 S
-UG 0 10 -1
+2122 0 0 0 65560 309440 0 0 -1000 S
+UG 0 10 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1955,8 +1955,8 @@ xandur beholder huge emissary~
 &+Mspeak with Urian about possible plans for conquest he levitates here in mid
 &+Mair, watching for anything that might threaten him.&n
 ~
-1073743944 0 0 402718744 14528 0 0 -1000 S
-BH 0 10 -1
+1073743944 0 0 0 402718744 14528 0 0 -1000 S
+BH 0 10 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1968,8 +1968,8 @@ drackron demon emissary orcus~
    This large demon is one of the sorcerer demons that serve Orcus. Sent here
 personally by Orcus to speak with Urian he stands here waiting impatiently.
 ~
-2122 0 0 536870936 264193 0 0 0 S
-X 0 1 -1
+2122 0 0 0 536870936 264193 0 0 0 S
+X 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1983,8 +1983,8 @@ kaxgrath draconian black br_a~
 &+Lbody is that of a dragon though, it seems to be partly a black dragon and
 &+Lis here to deliver some sort of message from the dragons of Dragon Mount.&n
 ~
-2122 0 0 24 14337 0 0 -999 S
-Y 0 10 -1
+2122 0 0 0 24 14337 0 0 -999 S
+Y 0 10 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1998,8 +1998,8 @@ javra bloodstone emissary human~
 &+rhis lordship back in the city. He seems very sure of himself. He has a black
 &+rmustache and a very regal manner.&n
 ~
-2122 0 0 24 1 0 0 -1000 S
-PH 0 5 -1
+2122 0 0 0 24 1 0 0 -1000 S
+PH 0 5 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2012,8 +2012,8 @@ morteus giant hel frost~
 &+Wand began to wander the world in service of his dark goddess. He now comes here
 &+Wto speak with Urian, and confer about the future.&n
 ~
-1073743946 0 0 65560 32768 0 0 -1000 S
-G 0 9 -1
+1073743946 0 0 0 65560 32768 0 0 -1000 S
+G 0 9 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2027,8 +2027,8 @@ urian shadowborn master black tower~
 &+Lhe was invested with the god's dark and evil power. He stands here now as a
 &+Levil representative of that dark god.&n
 ~
-1073743946 0 0 940122264 309441 0 0 -1000 S
-D 0 10 -1
+1073743946 0 0 0 940122264 309441 0 0 -1000 S
+D 0 10 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2042,8 +2042,8 @@ summoner human powerful~
 &+mdemons and devils. He stands here proudly, daring any to fight him.
 &n
 ~
-1140852808 0 0 152 1 0 0 -800 S
-PH 0 12 -1
+1140852808 0 0 0 152 1 0 0 -800 S
+PH 0 12 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2058,8 +2058,8 @@ conjurer evil dark darkest~
 &+Ycolor of blood.
 &n
 ~
-1140852808 0 0 24 0 0 0 -999 S
-PH 0 12 -1
+1140852808 0 0 0 24 0 0 0 -999 S
+PH 0 12 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2073,8 +2073,8 @@ shadow summoner man~
 &+LNow however he is a creature that lives to serve Sargon. His figure is black
 &+Lwithin blackness.&n
 ~
-1073743944 0 0 65560 296960 0 0 -1000 S
-UG 0 12 -1
+1073743944 0 0 0 65560 296960 0 0 -1000 S
+UG 0 12 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2089,8 +2089,8 @@ demonic acolyte minion~
 &n&+rhis evil masters.
 &n
 ~
-2122 0 0 536870936 294913 0 0 -1000 S
-X 0 1 -1
+2122 0 0 0 536870936 294913 0 0 -1000 S
+X 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2105,8 +2105,8 @@ cambion demon sorcerer huge~
 &+mincantation of a powerful spell of some sort.
 &n
 ~
-1073743944 0 0 24 0 0 0 -1000 S
-X 0 10 -1
+1073743944 0 0 0 24 0 0 0 -1000 S
+X 0 10 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2120,8 +2120,8 @@ balor demon creature abyss~
 &+rdances around his body, he seems ready to destroy anything that might get
 &+rin his way.&n
 ~
-1140852808 0 0 939589784 296961 0 0 -1000 S
-X 0 1 -1
+1140852808 0 0 0 939589784 296961 0 0 -1000 S
+X 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2134,8 +2134,8 @@ evil quasit demon~
 &n&+rGlowing with power, he stands here looking for his conjuring master. He seems
 &n&+rto be powerful, but feel insecure without his master to help him.&n
 ~
-1073743946 0 0 671154202 32768 0 0 -1000 S
-HG 0 10 -1
+1073743946 0 0 0 671154202 32768 0 0 -1000 S
+HG 0 10 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2150,8 +2150,8 @@ gailon darkhoast cambion huge br_f~
 &n&+rDem&n&+mor&+Mgo&+Cn &+Lon the level below, who wages a never ending &n&+rwar &+Lagainst the waining
 &n&+mpower &+Lof Sargon.&n
 ~
-1073743946 0 0 940122266 47297 0 0 -1000 S
-X 0 12 -1
+1073743946 0 0 0 940122266 47297 0 0 -1000 S
+X 0 12 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2167,8 +2167,8 @@ gorgeous alu alu-fiend fiend demon~
 &+Lonly Gailon's &n&+Mlover&+L, but also his bodyguard, here to prevent any harm to him,
 &+Lunless she gets to inflict it...&n
 ~
-2122 0 0 939524120 45249 0 0 -1000 S
-X 0 5 -1
+2122 0 0 0 939524120 45249 0 0 -1000 S
+X 0 5 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2184,8 +2184,8 @@ renegade dao noble huge~
 &+ycause of &+LSargon.
 &n
 ~
-1073743944 0 0 536871096 0 0 0 -1000 S
-EE 0 9 -1
+1073743944 0 0 0 536871096 0 0 0 -1000 S
+EE 0 9 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2200,8 +2200,8 @@ calther three demon huge br_s~
 &+Lhis master will return, and then they can crush the forces of Demorgon.
 &n
 ~
-2122 0 0 24 296961 0 0 -1000 S
-X 0 5 -1
+2122 0 0 0 24 296961 0 0 -1000 S
+X 0 5 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2215,8 +2215,8 @@ elite demon guard city shadows~
 &+rwould raise word against him or attack him. He seems quite fit for the job.
 &n
 ~
-67110986 0 0 536936472 294976 0 0 -1000 S
-X 0 1 -1
+67110986 0 0 0 536936472 294976 0 0 -1000 S
+X 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2238,8 +2238,8 @@ azlion planetar huge~
 &+Wmany things. Now, hurry we have little time before the ritual.
 &n
 ~
-2122 0 0 805314584 296961 0 0 1000 S
-X 0 4 -1
+2122 0 0 0 805314584 296961 0 0 1000 S
+X 0 4 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2253,8 +2253,8 @@ A &+Ychicken&n wanders around here, looking for &n&+gseeds.&n
 &+Ywhite feathers, and yellow feet, and seems to be completely ignoring you.
 &n
 ~
-2120 0 0 24 0 0 0 0 S
-A 0 0 -1
+2120 0 0 0 24 0 0 0 0 S
+A 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2269,8 +2269,8 @@ excited conjurer~
 &+Lcame here to tell Azlion's ancient enemy, Calthor of the Three.
 &n
 ~
-2122 0 0 536870936 0 0 0 -999 S
-PH 0 12 -1
+2122 0 0 0 536870936 0 0 0 -999 S
+PH 0 12 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2283,8 +2283,8 @@ A &+Wwhite &+Lc&no&+Ww &nwith &+Lblack &nspots stands here, ready to &+Wmilk.&n
 was around that would milk it.
  &n
 ~
-74 0 0 0 0 0 0 0 S
-A 0 1 -1
+74 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2300,8 +2300,8 @@ jenifer woman~
 &+CJenifer &nsays 'If only I knew if he lived or died... if only I knew.'
 &n
 ~
-2154 0 0 24 0 0 0 0 S
-PH 0 0 -1
+2154 0 0 0 24 0 0 0 0 S
+PH 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2315,8 +2315,8 @@ maalthasu demon~
 &+Rbut they do usually destroy anything which they get into hand to hand combat
 &+Rwith.&n
 ~
-2122 0 0 536870936 47297 0 0 0 S
-TK 0 1 -1
+2122 0 0 0 536870936 47297 0 0 0 S
+TK 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2330,8 +2330,8 @@ greater balor guard~
 &+rway for the lessers. This one however knows nothing of that, and stands here
 &+rready to destroy you utterly.&n
 ~
-2122 0 0 536944792 47297 0 0 -1000 S
-X 0 1 -1
+2122 0 0 0 536944792 47297 0 0 -1000 S
+X 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2345,8 +2345,8 @@ ancient vampire guard~
 &n&+rfor some. He seems to be very glad to see you.
 &n
 ~
-2122 0 0 536871000 309440 0 0 -1000 S
-UV 0 1 -1
+2122 0 0 0 536871000 309440 0 0 -1000 S
+UV 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2360,8 +2360,8 @@ dracolich lich red dragon~
 &n&+rhimself. Now he stands here awaifting his master, but killing you should be
 &n&+rfun as well.&n
 ~
-2122 0 0 24 0 0 0 -1000 S
-UD 0 1 -1
+2122 0 0 0 24 0 0 0 -1000 S
+UD 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2376,8 +2376,8 @@ zanthos dawnreaver dawn scourge~
 &n&+rmassive barbarian from Carpathia, a country that existed long ago, and is
 &n&+ra legendary warlord.&n
 ~
-2122 0 0 24 64 0 0 -1000 S
-PB 0 1 -1
+2122 0 0 0 24 64 0 0 -1000 S
+PB 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2392,8 +2392,8 @@ greater shade br_s~
 &+Lmost having been destroyed during the Wars of Light and Shadow.
 &n
 ~
-2122 0 0 536870936 309441 0 0 -1000 S
-UG 0 10 -1
+2122 0 0 0 536870936 309441 0 0 -1000 S
+UG 0 10 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2408,8 +2408,8 @@ krintha matriarch sargon woman drow half~
 &+mhere, and also his lover at times. Now she is an old and bitter hag that
 &+mwields tremendous power.&n
 ~
-2122 0 0 24 45248 0 0 -1000 S
-PL 0 6 -1
+2122 0 0 0 24 45248 0 0 -1000 S
+PL 0 6 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2424,8 +2424,8 @@ fazoul lich lichgate~
 &+Wnever speaks anymore. He seems to be working on something, making notations
 &+Win the air, as if he is seeing something no one else does.&n
 ~
-2122 0 0 65688 297025 0 0 -1000 S
-U 0 10 -1
+2122 0 0 0 65688 297025 0 0 -1000 S
+U 0 10 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2439,8 +2439,8 @@ sir edrod death knight br_f~
 &+Lworship of Sargon and was imprisoned here with him when Martin's spell was
 &+Lcast. He has been here for a long time, but what is time to the eternal?&n
 ~
-2122 0 0 24 34817 0 0 -1000 S
-U 0 5 -1
+2122 0 0 0 24 34817 0 0 -1000 S
+U 0 5 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2457,8 +2457,8 @@ sargon god demi shadow shadows darkness energy negative br_s~
 
 &+LSargon &+Wtells you 'Worship me or die, Mortal.'&n
 ~
-1073743946 0 0 2952855704 47296 0 0 -1000 S
-D 0 10 -1
+1073743946 0 0 0 2952855704 47296 0 0 -1000 S
+D 0 10 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2472,8 +2472,8 @@ fenrral tavern keeper~
 &+yin need of some repair. It seems that there have been some fights inside the
 &+ybuilding itself some time recently.&n
 ~
-2122 0 0 24 0 0 0 1000 S
-PH 0 1 -1
+2122 0 0 0 24 0 0 0 1000 S
+PH 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2488,8 +2488,8 @@ father darrin cleric~
 &+CHe looks up at you all of the sudden and says, &+W'Are you the ones I have been
 &+Wwaiting for?'&n
 ~
-1073743946 0 0 24 32768 0 0 1000 S
-PH 0 6 -1
+1073743946 0 0 0 24 32768 0 0 1000 S
+PH 0 6 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2503,8 +2503,8 @@ elite fire giant~
 &n&+rlong black beard and thick shoulders. He seems to be enjoying his job very
 &n&+rmuch, it's the best he has had since getting thrown out of Musplehime.&n
 ~
-1073743944 0 0 24 0 0 0 -1000 S
-G 0 1 -1
+1073743944 0 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2518,8 +2518,8 @@ galthon dragon ogre dragon-ogre~
 &+rfour feet and a long serpent like body with a long tail. He wields two huge
 &+rweapons, and seems ready for combat.&n
 ~
-1073743880 0 0 152 0 0 0 -1000 S
-CT 0 5 -1
+1073743880 0 0 0 152 0 0 0 -1000 S
+CT 0 5 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2533,8 +2533,8 @@ illithid magus zaquia~
 &+Mhaving lost one of his tentacles to some Grimlocks in Undermountain
 &+Mrecently.&n
 ~
-1073744008 0 0 26 0 0 0 -1000 S
-MF 0 10 -1
+1073744008 0 0 0 26 0 0 0 -1000 S
+MF 0 10 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2549,8 +2549,8 @@ shassthar shade shadow greater huge br_s~
 &+Lready to destroy anything that gets into his way in his efforts to raise his
 &+Ldread lord.&n
 ~
-1073743880 0 0 1572890 0 0 0 -1000 S
-UG 0 10 -1
+1073743880 0 0 0 1572890 0 0 0 -1000 S
+UG 0 10 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2564,8 +2564,8 @@ danthas elven scout being shadows~
 &+gdo much to stop it. Danthas is rather muscular and wears forest colored
 &+gclothes, and seems to be trying to avoid being seen by anyone at all.&n
 ~
-1073744072 0 0 1572888 0 0 0 999 S
-PE 0 2 -1
+1073744072 0 0 0 1572888 0 0 0 999 S
+PE 0 2 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2580,8 +2580,8 @@ versin deathsinger~
 &+Lexistence, and the hope that possibly one day he will find a true patron.
 &+LRecently he has, in the form of Urian Shadowborn.&n
 ~
-1073742024 0 0 24 0 0 0 -1000 S
-PL 0 16 -1
+1073742024 0 0 0 24 0 0 0 -1000 S
+PL 0 16 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2594,8 +2594,8 @@ isabia elven noble~
 &+Whas been captured by the forces of Urian Shadowborn. She now sits here,
 &+Wwaiting to be freed from her capture, and hopefully returned to her home.&n
 ~
-10 0 0 0 0 0 0 1000 S
-PE 0 1 -1
+10 0 0 0 0 0 0 0 1000 S
+PE 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

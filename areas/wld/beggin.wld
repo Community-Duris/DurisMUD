@@ -1,0 +1,42 @@
+#3300
+A Rutted Road~
+   The wars against the evil races have left their mark upon the
+land as well as the people. Here at Fateful Falls one can see the
+marks of this. Trees, those still standing, have arrows embedded
+within their bark, spots of black where fire scored but did not kill.
+The ground is littered with the odd broken buckle that once held
+swords secure to a warriors belt or a shield that was shattered by
+a massive blow. The rutted road leads eastward toward the village.
+~
+33 0 2
+D1
+~
+~
+0 0 3301
+S
+#3301
+A Rutted Road~
+   A dirt road lies east and west of here. Ruts made by wagon's wheels
+gouge the road to either side. The fields that lie to the north are
+ill tended. Grass has overtaken parts of the nearest field and the
+corn that is planted there are leaning with wilted brown leaves. To
+the south it looks even worse. What might have once been a field is
+now a tangle of brush and briars.
+~
+33 0 2
+D3
+~
+~
+0 0 3300
+E
+field~
+   The field may yield some corn and other vegetables, but it has been
+neglected. Grass is abundant taking in the nutrients that otherwise
+would be used by the crop.
+~
+E
+tag~
+A tag around the neck of the black cat says "Hello, talk to my master
+Zornade. He can help me and you."
+~
+S

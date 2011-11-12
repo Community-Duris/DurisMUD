@@ -6,8 +6,8 @@ svirfneblin slave~
 &+L  This poor &+ysvirfneblin &+Lhas been bound to captivity and is being forced to work
 &+Lin these mines.&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-pg 0 1048576 -1
+1073743880 0 0 0 0 0 0 0 0 S
+pg 0 1048576 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -19,8 +19,8 @@ troll slave~
 &+L  This poor &+gtroll &+Lhas been bound to captivity and is being forced to work
 &+Lin these mines.&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-pt 0 1048576 -1
+1073743880 0 0 0 0 0 0 0 0 S
+pt 0 1048576 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -32,8 +32,8 @@ minotaur slave~
 &+L  This poor mino&+rtaur &+Lhas been bound to captivity and is being forced to work
 &+Lin these mines.&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-mt 0 1048576 -1
+1073743880 0 0 0 0 0 0 0 0 S
+mt 0 1048576 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -45,8 +45,8 @@ drow slave~
 &+L  This poor &+mdrow &+Lhas been bound to captivity and is being forced to work
 &+Lin these mines.&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-pl 0 1048576 -1
+1073743880 0 0 0 0 0 0 0 0 S
+pl 0 1048576 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -58,8 +58,8 @@ thri-kreen slave~
 &+L  This poor &+gtroll &+Lhas been bound to captivity and is being forced to work
 &+Lin these mines.&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-tk 0 1048576 -1
+1073743880 0 0 0 0 0 0 0 0 S
+tk 0 1048576 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -71,8 +71,8 @@ devil slavemaster~
 &+L  This poor &+gtroll &+Lhas been bound to captivity and is being forced to work
 &+Lin these mines.&n
 ~
-1140852744 0 0 0 0 0 0 0 S
-y 0 32 -1
+1140852744 0 0 0 0 0 0 0 0 S
+y 0 32 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -83,8 +83,8 @@ vile demon~
 ~
    &+LThis strange looking demon lunges at you in anger!&n
 ~
-1073743880 1 0 0 0 0 0 0 S
-x 0 16384 -1
+1073743880 1 0 0 0 0 0 0 0 S
+x 0 16384 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -95,8 +95,8 @@ illithid overseer~
 ~
 &+L  This strange looking &+Millithid &+Lseems to be very focused on keeping this mine on track.&n
 ~
-1140852744 0 0 0 0 0 0 0 S
-mf 0 4 -1
+1140852744 0 0 0 0 0 0 0 0 S
+mf 0 4 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -108,8 +108,8 @@ traveling efreeti~
 &+L  This poor &+gtroll &+Lhas been bound to captivity and is being forced to work
 &+Lin these mines.&n
 ~
-1073743882 0 0 0 0 0 0 0 S
-e 0 256 -1
+1073743882 0 0 0 0 0 0 0 0 S
+e 0 256 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -120,8 +120,8 @@ dangerous spectre~
 ~
    &+LThis spectre hides in the shadows and waits to strike unsuspecting victims.&n
 ~
-2120 5 0 1572872 0 0 0 0 S
-sp 0 8192 -1
+2120 5 0 0 1572872 0 0 0 0 S
+sp 0 8192 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -133,8 +133,8 @@ ethereal guardian~
 &+L  This poor &+gtroll &+Lhas been bound to captivity and is being forced to work
 &+Lin these mines.&n
 ~
-1149241354 0 0 939524120 8390784 128 38811648 0 S
-an 0 128 -1
+1149241354 0 0 0 939524120 8390784 128 38811648 0 S
+an 0 128 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -144,8 +144,8 @@ lord kaynor lord tharnadia~
 &+WLord Kaynor&+L, the exiled &+Wlord &+Lof &+WTharnadia &+Lstands here.&n
 ~
 ~
-285214730 1 0 0 0 0 0 0 S
-ul 0 512 -1
+285214730 1 0 0 0 0 0 0 0 S
+ul 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -155,8 +155,8 @@ wicked child chronomancer~
 &+LThe wicked child of the Chronomancer stands before you.&n
 ~
 ~
-16779274 1 0 0 0 0 0 0 S
-sh 0 1024 -1
+16779274 1 0 0 0 0 0 0 0 S
+sh 0 1024 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -166,8 +166,8 @@ azureal~
 &+LAzureal, the lieutenant of Zariel, stands quietly here.&n
 ~
 ~
-16779274 1 0 0 0 0 0 0 S
-uw 0 16 -1
+16779274 1 0 0 0 0 0 0 0 S
+uw 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -181,8 +181,8 @@ massive guardsman~
 &+Lbuckle. His hands look hard as a rock. You definitely should considering picking
 &+La different fight.&n
 ~
-411658 0 0 0 0 0 0 0 S
-mt 0 1048576 -1
+411658 0 0 0 0 0 0 0 0 S
+mt 0 1048576 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -196,8 +196,8 @@ minotaur general~
 &+Lbuckle. His hands look hard as a rock. You definitely should considering picking
 &+La different fight.&n
 ~
-411658 0 0 0 0 0 0 0 S
-mt 0 1 -1
+411658 0 0 0 0 0 0 0 0 S
+mt 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

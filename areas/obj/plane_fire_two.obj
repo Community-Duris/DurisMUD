@@ -5,7 +5,7 @@ The &+Wmedallion of kossuth&N has been left here.~
 ~
 9 8 3 2 13 0 1024 5 64 33685920 0
 8 2 1 3 0 0 0 0
-1 100000 100
+1 100000 100 100
 E
 medallion kossuth~
 This is a large golden medallion set with a number of sapphires rubies
@@ -22,7 +22,7 @@ flaming saber~
 ~
 5 26 3 0 14 0 271361 8193 64 87572571 0
 9 5 5 3 0 0 0 0
-1 150000 100 536870912 0 0 0
+1 150000 100 100 536870912 0 0 0
 E
 flaming saber~
    &+rThis might saber of pure flame sizzles and crackles with a
@@ -40,7 +40,7 @@ The almighty &+cstaff&N &+Cof&N &+Bblue&N &+bflames&N burns the ground here!~
 ~
 5 17 3 10 15 0 271983617 8193 64 3588 0
 12 4 6 0 0 0 0 0
-1 1000000 100 134217736 0 0 0
+1 1000000 100 100 134217736 0 0 0
 E
 staff blue flames~
    &+BThis staff is legendary for its incredible potency.  It is
@@ -55,7 +55,7 @@ holy flaming mace~
 ~
 5 1 3 8 13 0 9216 8193 0 33685920 0
 6 5 5 7 0 0 0 0
-5 700000 100 536870912 32768 0 0
+5 700000 100 100 536870912 32768 0 0
 E
 holy flaming mace~
    &+GThe mace flickers with green and yellow fire, and surrounds
@@ -72,7 +72,7 @@ holy mace efreeti~
 ~
 5 8 4 8 15 0 268575745 8193 64 33685920 0
 6 5 7 6 0 0 0 0
-10 1000000 100 536870960 32768 0 0
+10 1000000 100 100 536870960 32768 0 0
 E
 holy mace efreeti~
 &+GThis mighty mace was given to the leader of the effretti church
@@ -90,7 +90,7 @@ glowing potion 52potion~
 ~
 10 7 2 4 15 0 8716289 16385 0 0 0
 52 9 35 56 0 0 0 0
-1 10000000 100
+1 10000000 100 100
 E
 glowing potion~
    &+YA highly sought after commodity, this powerful potion will
@@ -107,7 +107,7 @@ a set of the &+Mprayer beads of kossuth&N is piled here.~
 ~
 9 10 3 2 11 0 1025 16389 2 33685920 0
 6 2 1 3 0 0 0 0
-1 40000 100 536870912 0 0 0
+1 40000 100 100 536870912 0 0 0
 E
 beads prayer kossuth~
    &+MThese holy beads are used by the worshippers of Kossuth.&N
@@ -123,7 +123,7 @@ a &+rwa&+Rnd&N &+Yof&N &+Rfla&+rmes&N lies here.~
 ~
 3 1 2 4 11 0 263168 16385 64 4197892 0
 50 3 3 47 0 0 0 0
-0 33000 100
+0 33000 100 100
 E
 wand of flames~
    &+RIt flickers with tougues of flame.&N
@@ -135,7 +135,7 @@ The &+Meye of the beholder&N blinks on its own here.~
 ~
 11 2 4 0 14 100 103821313 131073 64 0 0
 0 0 0 0 0 0 0 0
-5 100000 100 268435460 28 0 0
+5 100000 100 100 268435460 28 0 0
 E
 _id_short_~
 &+Meye of the beholder&N
@@ -163,7 +163,7 @@ The wand of power has been left here.~
 ~
 3 16 2 4 7 0 1024 16385 0 4197888 0
 25 3 3 277 0 0 0 0
-1 20000 100
+1 20000 100 100
 E
 wand power~
    &+RLooks like one powerful wand!&N
@@ -175,7 +175,7 @@ a &+cbracelet&N &+Cof&N &+Bblue&N &+bflames&N sizzles on the ground here.~
 ~
 9 17 3 0 14 0 41984 4097 64 46305252 0
 10 0 0 3 0 0 0 0
-1 100000 100
+1 100000 100 100
 E
 bracelet blue flames~
    &+CThis bracelet burns with blue flame, yet it does not
@@ -192,7 +192,7 @@ flaming head caltoon~
 ~
 13 11 3 0 7 0 8388608 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139012
 leggings flames~
 &+csome leggings&N &+Cof&N &+rred&N &+bflames&N~
@@ -200,7 +200,7 @@ a pair of &+cleggings&N &+Cof&N &+rred&N &+bflames&N crackle away here.~
 ~
 9 1 3 0 13 0 8192 33 64 0 0
 10 0 0 3 0 0 0 0
-1 100000 100
+1 100000 100 100
 E
 leggings flames~
    &+rThese flaming leggings burn with intense red and blue flame,
@@ -217,7 +217,7 @@ lengths fire eldrich~
 ~
 9 32 3 0 14 0 1 257 64 0 0
 9 0 0 2 0 0 0 0
-0 85000 100 536870912 0 0 0
+0 85000 100 100 536870912 0 0 0
 E
 lengths fire eldrich~
    &+MThese bands of fire are borne of the ancient flame that
@@ -234,7 +234,7 @@ A &+rblazing&N key sizzles on the ground.~
 ~
 18 15 3 0 7 0 8388616 16385 0 0 0
 0 100 0 0 0 0 0 0
-0 1 100
+0 1 100 100
 E
 key~
 &+rAlthough made of iron, this key burns with eternal fire.&N
@@ -246,7 +246,7 @@ collar flames dark~
 ~
 9 1 3 0 14 0 131072 16389 0 0 0
 10 9 0 2 0 0 0 0
-0 85 100
+0 85 100 100
 E
 collar flames dark~
 &+LPitch black flames flicker in a circular pattern,
@@ -263,7 +263,7 @@ flaming head arch-magi~
 ~
 13 11 3 0 7 0 8388608 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139017
 flaming head amir ornon kasoon~
 &+rthe &+Rflaming &+rhead of &+MO&+mrnon &+MK&+masoon&n~
@@ -271,7 +271,7 @@ flaming head amir ornon kasoon~
 ~
 13 11 3 0 7 0 8388608 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139018
 cold strange blue vial flames~
 &+La &+bcold &+Lvial of &+bblue &+rflames&n~
@@ -279,7 +279,7 @@ cold strange blue vial flames~
 ~
 10 11 3 0 7 0 0 1 0 0 0
 55 267 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139019
 shield dancing flames~
 &+ca shield &+Cof&n &+Gdancing&n &+bflames&n~
@@ -287,7 +287,7 @@ A &+Bblue&n &+bflaming&n &+cshield&N has been left here.~
 ~
 37 19 3 15 13 0 9217 513 64 8503353 0
 2 1 3 30 3 1 0 0
-11 40000 100 0 1 0 1024
+11 40000 100 100 0 1 0 1024
 E
 shield blue fire~
 This is a blue metallic shield totally engulfed in flames.
@@ -303,7 +303,7 @@ A huge pile of &+Wplatinum&n coins are in the corner.~
 ~
 20 25 3 0 7 0 0 1 0 0 0
 0 0 0 2500 0 0 0 0
-50 0 100
+50 0 100 100
 #139021
 key~
 &+Ya key of &+cbl&+Cu&+ce&n &+Rf&+ri&+Rre&n~
@@ -311,7 +311,7 @@ key~
 ~
 18 1 1 0 12 0 8400897 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139022
 key blue flame fire~
 &+Ya key of &+Bbl&+Cu&+Be&n &+Rf&+ri&+Rre~
@@ -319,7 +319,7 @@ key blue flame fire~
 ~
 18 1 0 0 12 0 8400897 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139023
 key vault~
 the &+Ypalace &+yvault&n &+Lkey~
@@ -327,7 +327,7 @@ The &+Lkey&n to the &+YSultan's &+yvault&n lies here.~
 ~
 18 17 0 0 12 0 8400897 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139024
 flaming dagger~
 &+ra flaming dagger&N~
@@ -335,7 +335,7 @@ flaming dagger~
 ~
 5 26 3 0 14 0 271361 8193 64 11140639 0
 2 3 5 3 0 0 0 0
-1 150000 100 536870912 0 0 0
+1 150000 100 100 536870912 0 0 0
 E
 flaming saber~
    &+rThis might saber of pure flame sizzles and crackles with a
@@ -353,7 +353,7 @@ A stack of papers lie here.~
 ~
 23 28 0 0 7 0 8200 16385 64 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139026
 flaming quill~
 &+ra f&+Rl&+Ya&+Wm&+Yi&+Rn&+rg quill&n~
@@ -361,7 +361,7 @@ flaming quill~
 ~
 21 10 0 0 11 0 8193 8404993 64 0 0
 0 0 0 0 0 0 0 0
-0 0 100 536870912 1 0 0
+0 0 100 100 536870912 1 0 0
 A
 3 4
 #139027
@@ -371,7 +371,7 @@ A battle hammer is lying here.~
 ~
 5 20 3 0 9 0 0 8193 64 0 0
 4 4 5 0 0 0 0 0
-4 8000 100
+4 8000 100 100
 A
 18 5
 A
@@ -383,7 +383,7 @@ golden coin surtr~
 ~
 8 24 0 0 15 0 8409089 16385 0 0 0
 0 0 0 0 0 0 0 0
-1 1000000 100 2 0 0 0
+1 1000000 100 100 2 0 0 0
 #139029
 mace flaming~
 &+ra fl&+Ra&+rming mace&n~
@@ -391,7 +391,7 @@ mace flaming~
 ~
 5 1 3 8 11 0 0 8193 0 4173708804 0
 6 3 8 7 0 0 0 0
-1 20000 100
+1 20000 100 100
 E
 mace flaming~
 This is a rather large mace which is burning soft flames.
@@ -407,7 +407,7 @@ A &+rF&+Rl&+Ya&+Rm&+re&n erupting from the ground flickers in the center of the 
 ~
 17 1 1 0 15 0 327681 0 64 0 0
 200 200 16 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139031
 imix coin flaming~
 &+ra&n &+rf&+Rl&+Ya&+Wm&+Yi&+Rn&+rg&n &+LI&+rmi&n&+Lx&n &+rcoin~
@@ -415,7 +415,7 @@ Marked with the symbol of &+RImix&n, a flaming coin lies here.~
 ~
 8 31 0 0 15 0 274432 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 500000 100
+0 500000 100 100
 A
 25 0
 #139032
@@ -425,7 +425,7 @@ flaming sword two two-handed~
 ~
 5 16 4 0 10 0 4194304 8193 64 182452196 0
 13 5 7 0 0 0 0 0
-0 9000 100
+0 9000 100 100
 A
 18 5
 A
@@ -437,7 +437,7 @@ quartz crystal~
 ~
 8 8 0 0 9 0 45056 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 550000 100
+0 550000 100 100
 #139034
 key blazing armory~
 a &+Lbl&naz&+Ling &+Yar&+ymo&+Yry&n &+rk&+Re&+ry&n~
@@ -445,7 +445,7 @@ a &+Lbl&naz&+Ling &+Yar&+ymo&+Yry&n &+rk&+Re&+ry&n~
 ~
 18 17 0 0 10 0 8200 1 0 0 0
 0 0 0 0 0 0 0 0
-0 10000 100
+0 10000 100 100
 #139035
 suit flaming ring mail ringmail~
 &+ra suit of fl&+Ra&+rming ringmail~
@@ -453,7 +453,7 @@ A suit of &+rflaming ringmail&n has been left here.~
 ~
 9 19 4 5 12 25 0 9 0 172363684 0
 40 3 1 4 0 0 0 0
-5 60000 100
+5 60000 100 100
 E
 suit flaming ring mail ringmail~
 This is a large suit of armor made from tiny rings meshed together.  The
@@ -470,7 +470,7 @@ crown might~
 ~
 9 19 3 2 14 50 0 17 66 172363684 0
 12 0 0 3 0 0 0 0
-5 135000 100 536870912 0 0 0
+5 135000 100 100 536870912 0 0 0
 E
 crown might~
 This glowing brass crown with several large rubies embedded in
@@ -487,7 +487,7 @@ A &+rring of elemental control&n pulses here.~
 ~
 3 27 0 10 14 0 1180673 3 64 4197888 0
 56 8 8 69 0 0 0 0
-1 120000 100
+1 120000 100 100
 E
 ring elemental control~
 This is a large ring made from a fiery-red metal with a large unidentifiable
@@ -504,7 +504,7 @@ gloves brass sapphire~
 ~
 9 17 3 0 14 0 32768 16513 66 0 0
 9 0 0 3 0 0 0 0
-0 100000 100 32 0 0 0
+0 100000 100 100 32 0 0 0
 E
 gloves brass sapphire~
   &+yThese spectacular gloves sparkle with brilliance from
@@ -521,7 +521,7 @@ A &+Rfiery cloak&N has been left here.~
 ~
 9 1 3 8 13 0 9216 1025 64 180522980 0
 13 0 0 2 0 0 0 0
-3 60000 100 805306368 0 0 0
+3 60000 100 100 805306368 0 0 0
 E
 cloak fiery~
 This is a cloak made from a material unknown to you and is totally
@@ -538,7 +538,7 @@ A &+rsash burning with orange fire&n has been left here.~
 ~
 9 3 3 3 7 0 0 2049 64 172396420 0
 9 10 0 3 0 0 0 0
-1 20000 100 536870912 0 0 0
+1 20000 100 100 536870912 0 0 0
 E
 sash fiery orange~
 This is a silky sash which is flaming with bright orange fire.
@@ -554,7 +554,7 @@ A &+rflaming stiletto&n has been left here.~
 ~
 5 19 3 0 14 0 1024 8193 0 8515584 0
 2 3 4 11 0 0 0 0
-1 20000 100
+1 20000 100 100
 E
 flaming stiletto~
 This is a dull black stiletto with a long thin blade.  The handle has been
@@ -571,7 +571,7 @@ A &+Wglowing scimitar&n has been tossed on the ground here.~
 ~
 5 18 3 10 13 0 1 8193 64 172363684 0
 9 4 4 3 0 0 0 0
-13 50000 100
+13 50000 100 100
 E
 scimitar glowing~
 This is a long bladed scimitar which glows rather brightly.
@@ -587,7 +587,7 @@ A &+Lserrated &+ylong spear&n is lies here.~
 ~
 5 16 4 0 7 0 4202496 8193 64 41009124 0
 15 7 3 0 2 0 0 0
-5 25000 100
+5 25000 100 100
 A
 18 3
 A
@@ -599,7 +599,7 @@ A &+Llance&n writhed in &+rfl&+Ra&+rme&ns burns here.~
 ~
 5 20 4 0 10 0 4194816 8193 64 24 0
 16 8 2 0 0 0 0 0
-10 100000 100
+10 100000 100 100
 A
 18 6
 #139045
@@ -609,7 +609,7 @@ An &+Lwhispy&n blade shaped into a sci&+Wmi&+Ytar&n is left here.~
 ~
 5 1 3 0 14 0 1024 8193 64 20635 0
 9 3 7 0 0 0 0 0
-1 50000 100
+1 50000 100 100
 E
 whispy blade scimitar ethereal _id_~
 A blackened blade made from steel and materials found on the ethereal plane
@@ -626,7 +626,7 @@ A large &+Wpearl&n glistens on the floor.~
 ~
 9 52 0 0 9 0 4128 524289 0 0 0
 2 0 0 1 0 0 0 0
-1 25000 100 0 128 0 0
+1 25000 100 100 0 128 0 0
 A
 4 4
 A
@@ -638,7 +638,7 @@ A pair of &+Lglasses&n made from &+Lstone&n were left here.~
 ~
 9 15 3 0 7 0 1024 131073 64 33554848 0
 1 0 0 4 0 0 0 0
-0 0 100 0 32788 0 0
+0 0 100 100 0 32788 0 0
 E
 stone glasses~
 Made of polished stone these glasses seem unusually lite. There is a thin emerald and ruby crystal placed one in each of the eye holes.
@@ -654,7 +654,7 @@ A thick &+Lwhip&n with three &+csteel&n tips was left here.~
 ~
 5 12 3 0 10 0 9216 8193 64 3162112 0
 14 5 3 0 0 0 0 0
-4 5000 100
+4 5000 100 100
 E
 whip titan~
 A tightly woven whip tipped with three blunted steel ends. Its 25% longer than
@@ -671,7 +671,7 @@ boots fiery~
 ~
 9 1 3 8 7 0 33792 65 64 96071707 0
 8 6 1 3 0 0 0 0
-1 100000 100 536870912 0 0 0
+1 100000 100 100 536870912 0 0 0
 E
 boots fiery~
 These boots are very comfortable and made from a material unknown to you.
@@ -688,7 +688,7 @@ thin green cloak~
 ~
 9 3 3 0 14 0 9729 1025 64 32832 32768
 10 0 0 2 0 0 0 0
-1 75000 100 285212672 0 0 0
+1 75000 100 100 285212672 0 0 0
 E
 thin green cloak~
 This plain looking green cloak seems as though it is almost in tatters but has
@@ -705,7 +705,7 @@ a pair of &+Wbone&n sandals~
 ~
 9 10 1 0 11 0 9217 65 64 3652 0
 3 0 0 1 0 0 0 0
-0 25000 100
+0 25000 100 100
 E
 bone sandals~
 Made from the small bones of a troll these sandals seem in excellent condition.
@@ -721,7 +721,7 @@ chest plate hellish~
 ~
 9 20 3 0 9 0 1024 9 64 27 0
 30 0 0 4 0 0 0 0
-25 45000 100 536870912 0 0 0
+25 45000 100 100 536870912 0 0 0
 E
 chest plate hellish~
 The bronze chest plate is marked by unreadable symbols and are highlighted by all the black grim that has filled them.
@@ -737,7 +737,7 @@ bronze shinguards shin~
 ~
 9 20 2 0 9 0 1024 33 64 57 0
 20 0 0 4 0 0 0 0
-8 20000 100 8192 0 0 0
+8 20000 100 100 8192 0 0 0
 E
 bronze shinguards shin~
 A pair of bronze shinguards with leather straps cover from knee to ankle for an average humanoid.
@@ -753,7 +753,7 @@ Left on the floor is a set of grey &+Lrobes&n.~
 ~
 9 3 3 0 7 0 9216 9 64 138415872 0
 5 0 0 0 0 0 0 0
-3 5000 100 0 0 0 33554432
+3 5000 100 100 0 0 0 33554432
 E
 grey robes~
 These are average grey robes which are decorated with just two red stripes that go over the shoulder from the front to the back.
@@ -769,7 +769,7 @@ frosty icicle wand~
 ~
 3 40 1 0 13 0 12288 16385 64 0 0
 46 5 5 254 0 0 0 0
-1 500000 100
+1 500000 100 100
 #139056
 spellbook leather runes swirling book~
 &+La &+yleather &+Lspellbook with &+Ms&+mwi&nrl&+min&+Mg&n &+mr&+Mu&nn&+Me&+ms&n~
@@ -777,7 +777,7 @@ spellbook leather runes swirling book~
 ~
 33 14 2 0 11 0 33567744 8404993 64 140545536 0
 0 0 200 0 0 0 0 0
-3 20000 100 0 32768 0 0
+3 20000 100 100 0 32768 0 0
 A
 26 8
 #139057
@@ -787,7 +787,7 @@ A &+Csteel &+cbracelet&n with carvings was left here.~
 ~
 9 16 2 0 9 0 33555456 4097 0 87052379 0
 10 0 0 3 0 0 0 0
-3 15000 100
+3 15000 100 100
 A
 1 7
 A
@@ -799,7 +799,7 @@ sword claymore mithril~
 ~
 5 18 4 0 11 0 4195328 8193 64 83886105 0
 13 5 7 0 0 0 0 0
-8 75000 100 0 0 64 0
+8 75000 100 100 0 0 64 0
 E
 sword claymore mithril~
 This large claymore was constructed with special care and finished with a golden hilt.
@@ -815,7 +815,7 @@ Some fool has left &+Lthe turban of the Unquenchables&n here!~
 ~
 9 1 3 0 13 0 33792 17 64 127067 0
 12 4 1 3 0 0 0 0
-1 85000 100 134291456 0 0 0
+1 85000 100 100 134291456 0 0 0
 E
 turban flames blue~
 &+bThis turban is made from a thick sturdy material unknown to you.  The whole
@@ -832,7 +832,7 @@ dagger kris fanged~
 ~
 5 15 3 0 7 0 1296 8193 64 61440 0
 2 2 8 0 2 0 0 0
-2 10000 100 0 12 0 0
+2 10000 100 100 0 12 0 0
 E
 dagger kris fanged~
 A double fanged dagger that kris cross three times before ending in very sharp tips.
@@ -848,7 +848,7 @@ A slimy &+mpurple&n &+cband &nwas left here.~
 ~
 9 2 1 0 9 0 9216 3 64 4460036 0
 5 0 0 1 0 0 0 0
-0 10000 100 33554464 0 0 0
+0 10000 100 100 33554464 0 0 0
 E
 finger band purple~
 Made from an illithids tentacle, this ring holds its slimey feel.
@@ -864,7 +864,7 @@ the &+Rj&+re&+Rw&+re&+Rl&n of a &+Ggith&+Wyanki~
 ~
 8 31 1 0 10 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-0 700000 100
+0 700000 100 100
 #139063
 wrist guard~
 &+La &+Lsl&+cav&+Cery &+Lmarked &+gw&+Gr&+gi&+Gs&+gt &+Lguard~
@@ -872,7 +872,7 @@ wrist guard~
 ~
 9 14 2 0 8 0 9216 4097 0 64 0
 4 0 0 2 0 0 0 0
-1 10000 100 536870912 0 0 0
+1 10000 100 100 536870912 0 0 0
 A
 18 4
 #139064
@@ -882,7 +882,7 @@ large sapphire gem~
 ~
 8 33 1 0 10 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-0 700000 100
+0 700000 100 100
 #139065
 mithril elvish chain chainmail~
 a s&+Lui&nt of &+mmi&+Mthr&+mil&n &+Mel&+mvi&+Msh&n &+Lcha&ninm&+Lail~
@@ -890,7 +890,7 @@ a s&+Lui&nt of &+mmi&+Mthr&+mil&n &+Mel&+mvi&+Msh&n &+Lcha&ninm&+Lail~
 ~
 9 18 3 0 7 0 12801 9 64 0 1036
 60 0 0 4 0 0 0 0
-4 800000 100 0 0 0 33554432
+4 800000 100 100 0 0 0 33554432
 A
 24 3
 A
@@ -902,7 +902,7 @@ mithril longsword~
 ~
 5 18 3 0 14 0 1025 8193 64 2113539 0
 5 4 5 0 0 0 0 0
-4 25000 100 0 12 0 0
+4 25000 100 100 0 12 0 0
 E
 mithril longsword~
 Made by an elven craftsman its quality can only be surpassed by a few. The mithril blade keeps its edge better than any steel blade and it is much lighter as well.
@@ -918,7 +918,7 @@ a massive &+Ct&+Wi&+Ct&+Wa&+Cn&n &+Lha&nmm&+Ler&n~
 ~
 5 16 4 0 9 0 4195328 8193 64 17842233 0
 4 5 7 0 0 0 0 0
-10 25000 100 73728 0 0 0
+10 25000 100 100 73728 0 0 0
 E
 massive titan hammer~
 Made of steel this hammer is massive yet is easily wielded by a titan with one hand. The handle is wrapped in a leather hide and has a spike on its pommel.
@@ -934,7 +934,7 @@ A &+ybrass&n longsword was left on the ground.~
 ~
 5 17 3 0 5 0 0 8193 64 0 0
 9 3 5 0 0 0 0 0
-7 5000 100
+7 5000 100 100
 A
 18 2
 A
@@ -946,7 +946,7 @@ An &+Mamethyst ring&N has been left here.~
 ~
 9 26 1 1 13 0 0 3 64 0 0
 4 0 0 1 0 0 0 0
-1 140000 100
+1 140000 100 100
 E
 ring amethyst~
 This is a beautiful amethyst stone set in a ring made from a combination of
@@ -963,7 +963,7 @@ palace key gate~
 ~
 18 17 0 0 15 0 8396800 16385 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 E
 palace key gate~
 A brass key engraved with the shape of the palace building in its handle.
@@ -975,7 +975,7 @@ emerald earring~
 ~
 9 32 1 0 7 0 0 524289 64 0 0
 0 0 0 0 0 0 0 0
-0 600000 100
+0 600000 100 100
 A
 20 2
 A
@@ -987,7 +987,7 @@ a &+bsapphire&n stud~
 ~
 9 33 1 0 7 0 0 524289 64 0 0
 0 0 0 0 0 0 0 0
-0 600000 100
+0 600000 100 100
 A
 19 2
 A
@@ -999,7 +999,7 @@ feather white deva copper chain~
 ~
 9 50 1 0 7 0 0 524289 0 0 0
 0 0 0 0 0 0 0 0
-0 899101 100 134217728 0 0 0
+0 899101 100 100 134217728 0 0 0
 #139074
 ruby stud earring~
 &+La &+Rruby&n &+Lstud earring~
@@ -1007,7 +1007,7 @@ ruby stud earring~
 ~
 9 31 1 0 7 0 0 524289 0 0 0
 0 0 0 0 0 0 0 0
-0 505000 100
+0 505000 100 100
 A
 3 5
 A
@@ -1019,7 +1019,7 @@ a &+ybrass&n and &+ycopper&n woven ring~
 ~
 9 17 1 0 7 0 0 3 64 0 0
 0 0 0 0 0 0 0 0
-0 801101 100
+0 801101 100 100
 A
 18 3
 A
@@ -1031,7 +1031,7 @@ silver ring leaves~
 ~
 9 22 1 0 13 0 1 3 64 0 0
 0 0 0 0 0 0 0 0
-0 999999 100 0 0 160 0
+0 999999 100 100 0 0 160 0
 #139077
 ivory promise ring~
 &+Wan ivory &+cpromise &+Wring~
@@ -1039,7 +1039,7 @@ ivory promise ring~
 ~
 9 34 1 0 7 0 1 3 0 0 0
 0 0 0 0 0 0 0 0
-0 580000 100
+0 580000 100 100
 A
 5 8
 A
@@ -1051,7 +1051,7 @@ A three inch &+Wopal&n glitters on the ground nearby.~
 ~
 3 52 1 0 13 0 1 16385 0 0 0
 50 1 1 414 0 0 0 0
-1 255555 100
+1 255555 100 100
 #139079
 wings griffon~
 &+Ythe wings of the griffon&N~
@@ -1059,7 +1059,7 @@ A pair of &+Ygriffon wings&N lay here in a folded heap.~
 ~
 9 2 3 0 13 0 0 1025 64 0 0
 11 9 1 3 0 0 0 0
-1 65000 100 671088640 0 0 0
+1 65000 100 100 671088640 0 0 0
 E
 wings griffon~
    &+YThese griffon wings have been severed from their former
@@ -1076,7 +1076,7 @@ amethyst flaw~
 ~
 3 26 1 0 8 0 1 16385 0 0 0
 45 3 3 176 0 0 0 0
-1 550005 100
+1 550005 100 100
 #139081
 tome flames blue bluish large~
 &+La l&na&+Lrge t&no&+Lme &+Ben&+bg&+cul&+bf&+Bed&n &+Lin &+Bb&+bl&+cu&+Be &+Bf&+bl&+cam&+be&+Bs~
@@ -1084,7 +1084,7 @@ tome flames blue bluish large~
 ~
 33 28 2 0 11 0 33555456 8404993 64 140545538 0
 0 0 275 0 0 0 0 0
-5 850850 100 536870946 0 0 0
+5 850850 100 100 536870946 0 0 0
 A
 3 7
 A
@@ -1096,7 +1096,7 @@ illithid illithids tentacle petrified stick purple~
 ~
 3 2 1 0 6 0 1 8404993 64 0 0
 41 3 3 260 0 0 0 0
-0 666888 100
+0 666888 100 100
 E
 illithid illithids tentacle petrified stick purple~
 This wand is made from an illithids tentacle that has been magically enchanted.
@@ -1108,7 +1108,7 @@ wand power~
 ~
 3 17 1 0 12 0 1025 16385 0 138493440 0
 51 3 3 277 0 0 0 0
-1 222222 100
+1 222222 100 100
 E
 wand power~
 A reddish one foot long smooth piece of brass has been crafted into a glowing wand.
@@ -1120,7 +1120,7 @@ blue staff cold frost magus~
 ~
 4 7 3 0 15 0 33555456 16385 64 33632672 0
 51 1 1 471 0 0 0 0
-2 460700 100
+2 460700 100 100
 E
 blue staff cold frost magus~
 This staff is blue and white. It has an occasional vibration when held and is cold to touch.
@@ -1132,7 +1132,7 @@ brass lyre red flames~
 ~
 32 17 2 0 14 0 33555456 16385 0 8421376 0
 185 58 0 41 0 0 0 0
-3 330500 100 536870912 0 0 0
+3 330500 100 100 536870912 0 0 0
 E
 brass lyre red flames~
 This lyre is made of brass which highlights the sounds coming from it. The strings are made of demon fur and are uneffected by the magical burning of the brass frame.
@@ -1148,7 +1148,7 @@ musical horn ogre ogre-magi magi instrument~
 ~
 32 10 2 0 14 0 1025 16385 64 8421376 0
 189 57 0 41 0 0 0 0
-1 220220 100 0 2 0 0
+1 220220 100 100 0 2 0 0
 E
 musical horn ogre ogre-magi magi instrument~
 This unique horn was made from an ogre-magi's horn. As the center of their magic this instrument must contain strong magic.
@@ -1164,7 +1164,7 @@ A piece of parchment labelled "&+gGith&+yzerai &+LStronghold&n" is crumbled here
 ~
 16 28 1 0 11 0 134225920 1 0 0 0
 0 0 0 0 0 0 0 0
-0 25050 100
+0 25050 100 100
 E
 githzerai stronghold shannanna parchment piece paper~
 At 1st you will need to find the captain because he has the key to the magical door that hides the rift into their realm. He can be bribed for around 500 platinum pieces. Otherwise you will need to complete what other mundane task he needs.
@@ -1189,7 +1189,7 @@ A piece of parchment labelled "&+LApocalypse &+mCastle&n" is crumbled here.~
 ~
 16 28 1 0 11 0 134225920 1 0 0 0
 0 0 0 0 0 0 0 0
-0 25050 100
+0 25050 100 100
 E
 apocalypse castle shanaanaa parchment piece paper note notes~
 Apocalypse Castle
@@ -1221,7 +1221,7 @@ A red chef's hat has been left here.~
 ~
 9 3 3 3 7 0 0 17 64 0 0
 5 4 16 3 0 0 0 0
-1 1 100
+1 1 100 100
 E
 hat red chef's~
 This is a normal chef's hat made from a red material.
@@ -1237,7 +1237,7 @@ A &+rring of fire protection&N has been left here.~
 ~
 9 34 2 1 10 0 0 3 64 0 0
 5 0 0 2 0 0 0 0
-1 40000 100 536870912 0 0 0
+1 40000 100 100 536870912 0 0 0
 E
 ring fire protection~
 This ring glows softly with a red gem set in the center.
@@ -1254,7 +1254,7 @@ A piece of parchment labelled "&+CJotunheim&n" is crumbled here.~
 ~
 16 28 1 0 11 0 134225920 1 0 0 0
 0 0 0 0 0 0 0 0
-0 25050 100
+0 25050 100 100
 E
 jotunheim jot shanaanaa parchment piece paper note notes~
 Jotunheim
@@ -1289,7 +1289,7 @@ A piece of parchment labelled "The Lair of the Gibberling King" is crumbled here
 ~
 16 28 1 0 11 0 134225920 1 0 0 0
 0 0 0 0 0 0 0 0
-0 25050 100
+0 25050 100 100
 E
 lair gibberling king shanaanaa parchment piece paper note notes~
 The Lair of the Gibberling King
@@ -1322,7 +1322,7 @@ A piece of parchment labelled "&+BMazzolin&n" is crumbled here.~
 ~
 16 28 1 0 11 0 134225920 1 0 0 0
 0 0 0 0 0 0 0 0
-0 25050 100
+0 25050 100 100
 E
 mazzolin shanaanaa parchment piece paper note notes~
 Mazzolin
@@ -1355,7 +1355,7 @@ A piece of parchment labelled "&+mShadamehr Keep&n" is crumbled here.~
 ~
 16 28 1 0 11 0 134225920 1 0 0 0
 0 0 0 0 0 0 0 0
-0 25050 100
+0 25050 100 100
 E
 shadamehr keep shanaanaa parchment piece paper note notes~
 Shadamehr Keep
@@ -1394,7 +1394,7 @@ A piece of parchment labelled "&+WCel&+Ces&+ctia&+Cl Pl&+Wane&n" is crumbled her
 ~
 16 28 1 0 11 0 134225920 1 0 0 0
 0 0 0 0 0 0 0 0
-0 25050 100
+0 25050 100 100
 E
 celestial plane shanaanaa parchment piece paper note notes~
 Celestial Plane
@@ -1443,7 +1443,7 @@ copper dragonskin armor leather suit~
 ~
 9 12 3 0 15 0 9216 9 64 651328 0
 50 0 0 4 0 0 0 0
-5 880150 100 16777216 8192 0 0
+5 880150 100 100 16777216 8192 0 0
 E
 copper dragonskin armor leather suit~
 Crafted from the hide of a great copper wyrm this exotic leather armor is excellently made. It is extremely light and allows for easy movement for the wearer.
@@ -1459,7 +1459,7 @@ blue dragonskin armor suit~
 ~
 9 12 3 0 15 0 9216 9 64 138448384 0
 50 0 0 4 0 0 0 0
-5 880180 100 0 128 0 0
+5 880180 100 100 0 128 0 0
 A
 33 3
 A
@@ -1471,7 +1471,7 @@ white dragonskin armor suit~
 ~
 9 12 3 0 15 0 9216 9 64 33554848 0
 50 0 0 4 0 0 0 0
-5 880108 100 0 64 0 4096
+5 880108 100 100 0 64 0 4096
 E
 white dragonskin armor suit~
 Made from the hide of a great white wyrm this leather armor is of the highest quality. It is extremely light and hardened to protect its wearer against both physical attacks and attacks made by a wyrm of its color.
@@ -1487,7 +1487,7 @@ What looks to be skin from a &+Mfa&+mer&+Mie&n is formed into a ring lays here.~
 ~
 9 12 1 0 15 0 8193 3 0 0 0
 0 0 0 0 0 0 0 0
-0 757777 100 134217728 0 0 0
+0 757777 100 100 134217728 0 0 0
 A
 26 8
 #139100
@@ -1497,7 +1497,7 @@ A small bracer made of &+Rd&+re&+Rv&+ri&+Rl&n-&+Lhi&nd&+Le&n was left behind.~
 ~
 9 12 2 0 13 0 8192 4097 64 0 0
 0 0 0 3 0 0 0 0
-1 660000 100 536870912 0 0 0
+1 660000 100 100 536870912 0 0 0
 E
 bracer devil devil-hide strange markings~
 Made from the skin of a devil and hardened by a skilled leather worker this bracer is covered with magical markings. Its a deep red and laced with devilish hair.
@@ -1513,7 +1513,7 @@ a &+Lleather &npurse made of &+mpurple &+Lworms&n &+clarvae~
 ~
 15 12 10 0 13 0 8192 16385 64 0 0
 600 1 0 300 0 0 0 0
--300 787500 100
+-300 787500 100 100
 E
 purse purple worm worms larvae leather material large~
 A highly skilled leather worker has sewn together the hide of purple worms larvae to create a very stretchable container.
@@ -1525,7 +1525,7 @@ spicy salty dragon roast beef~
 ~
 19 48 1 0 11 0 8192 1 0 0 0
 14 0 0 0 0 0 0 0
-1 2500 100
+1 2500 100 100
 E
 spicy salty dragon roast beef~
 Made of different types of dragon meat and marinated into fireweed and peppered to perfection this roast beef is delightful.
@@ -1537,7 +1537,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 292 0 0 0 0 0 0
-1 450000 100
+1 450000 100 100
 E
 metal flask battle ecstasy~
 A metal flask made of tin and a single stopper is marked with a label "battle ecstasy"
@@ -1549,7 +1549,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 9 0 0 0 0 0 0
-1 300000 100
+1 300000 100 100
 E
 metal flask full heal~
 A metal flask made of tin and a single stopper is marked with a label "full heal"
@@ -1561,7 +1561,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 2 0 0 0 0 0 0
-1 500000 100
+1 500000 100 100
 E
 metal flask teleport~
 A metal flask made of tin and a single stopper is marked with a label "teleport"
@@ -1573,7 +1573,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 65 233 0 0 0 0 0 0
-1 25000 100
+1 25000 100 100
 E
 metal flask fire ward~
 A metal flask made of tin and a single stopper is marked with a label "fire ward"
@@ -1585,7 +1585,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 165 0 0 0 0 0 0
-1 35000 100
+1 35000 100 100
 E
 metal flask create sound~
 A metal flask made of tin and a single stopper is marked with a label "create sound"
@@ -1597,7 +1597,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 155 0 0 0 0 0 0
-1 180000 100
+1 180000 100 100
 E
 metal flask molecular control~
 A metal flask made of tin and a single stopper is marked with a label "molecular control"
@@ -1609,7 +1609,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 280 0 0 0 0 0 0
-1 550000 100
+1 550000 100 100
 E
 metal flask pass without trace~
 A metal flask made of tin and a single stopper is marked with a label "pass without trace"
@@ -1621,7 +1621,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 42 0 0 0 0 0 0
-1 1100000 100
+1 1100000 100 100
 E
 metal flask word of recall~
 A metal flask made of tin and a single stopper is marked with a label "word of recall"
@@ -1633,7 +1633,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 65 274 0 0 0 0 0 0
-1 50000 100
+1 50000 100 100
 E
 metal flask airy water~
 A metal flask made of tin and a single stopper is marked with a label "airy water"
@@ -1645,7 +1645,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 65 249 0 0 0 0 0 0
-1 100000 100
+1 100000 100 100
 E
 metal flask reduce~
 A metal flask made of tin and a single stopper is marked with a label "reduce"
@@ -1657,7 +1657,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 321 0 0 0 0 0 0
-1 130000 100
+1 130000 100 100
 E
 metal flask lifelust~
 A metal flask made of tin and a single stopper is marked with a label "lifelust"
@@ -1669,7 +1669,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 349 0 0 0 0 0 0
-1 430000 100
+1 430000 100 100
 E
 metal flask wandering woods~
 A metal flask made of tin and a single stopper is marked with a label "wandering woods"
@@ -1681,7 +1681,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 393 0 0 0 0 0 0
-1 300000 100
+1 300000 100 100
 E
 metal flask sneaky ways~
 A metal flask made of tin and a single stopper is marked with a label "sneaky ways"
@@ -1693,7 +1693,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 438 0 0 0 0 0 0
-1 300000 100
+1 300000 100 100
 E
 metal flask healing salve~
 A metal flask made of tin and a single stopper is marked with a label "healing salve"
@@ -1705,7 +1705,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 41 263 0 0 0 0 0 0
-1 410000 100
+1 410000 100 100
 E
 metal flask blur~
 A metal flask made of tin and a single stopper is marked with a label "blur"
@@ -1717,7 +1717,7 @@ saddle flaming medal decore~
 ~
 9 14 8 0 12 0 8705 553648129 64 0 1073758208
 30 0 0 4 0 0 0 0
-8 650000 100 536870912 0 0 0
+8 650000 100 100 536870912 0 0 0
 E
 saddle flaming medal decore~
 This saddle is excellently made with leather and barding coverings that are designed to look like flames. The leather is dyed a deep red and the metal is polished bright.
@@ -1733,7 +1733,7 @@ bronze bronze-made barding spikes~
 ~
 9 20 8 0 12 0 512 553648129 64 0 1073758208
 25 0 0 5 1 0 0 0
-8 675000 100 0 2 0 0
+8 675000 100 100 0 2 0 0
 E
 bronze bronze-made barding spikes~
 Forged here in the city these bronze bardings are made of a high quality and magically enchanted as well as being adorned with spikes.
@@ -1749,7 +1749,7 @@ flaming hammer two two-handed~
 ~
 5 16 4 0 10 0 4194304 8193 64 182452196 0
 4 5 7 0 0 0 0 0
-0 505505 100
+0 505505 100 100
 A
 18 4
 A
@@ -1761,7 +1761,7 @@ A &+Lclub&n made from a d&+Le&nm&+Lo&nn&+L's&n claw rests on the ground &+raflam
 ~
 5 18 3 0 14 0 8193 8193 64 0 0
 11 4 5 0 0 0 0 0
-3 650700 100 0 1 0 0
+3 650700 100 100 0 1 0 0
 E
 flaming demon claw club~
 Made from a demon's lower arm and hardened with metal this club is unique as it has been magically set aflame.
@@ -1777,7 +1777,7 @@ sword two two-handed mithril~
 ~
 5 18 4 0 11 0 37749760 8193 64 83886105 0
 13 5 7 0 0 0 0 0
-8 750000 100
+8 750000 100 100
 E
 sword two two-handed mithril~
 A two-handed sword is excellently made and crafted of mithril. It radiates magic and hums from it.
@@ -1793,7 +1793,7 @@ a suit of &+rf&+Ri&+Yr&+re&n &+rsal&+Ra&+rman&+Rde&+rr&n &+Lsca&nlem&+Lail~
 ~
 9 47 3 0 11 0 8192 9 64 138415620 0
 30 0 0 5 0 0 0 0
-5 750075 100 536870912 0 0 0
+5 750075 100 100 536870912 0 0 0
 E
 fire suit salamander scalemail~
 This suit of scalemail was crafted using the scales of a fire salamander. It is warm when worn.
@@ -1809,7 +1809,7 @@ A &+Wglass&n ring with swirling &+Lsmoke&n inside was left here.~
 ~
 9 7 1 0 11 0 1025 3 0 138939908 0
 0 0 0 2 0 0 0 0
-0 350500 100 0 4096 0 262144
+0 350500 100 100 0 4096 0 262144
 E
 glass ring smoke mephit~
 Filled with the essence of a smoke mephit this glass ring holds strong magic. The smoke moves as if it is alive and trying to escape the clutches of the ring.
@@ -1825,7 +1825,7 @@ quartz crystal leg plates~
 ~
 9 16 2 0 11 0 1025 33 0 34079160 0
 10 0 0 4 0 0 0 0
-4 250100 100 0 4096 0 0
+4 250100 100 100 0 4096 0 0
 E
 quartz crystal leg plates~
 Hardened crystals by magma then crafted by an excellently skilled armorer these quartz leg plates are very durable.
@@ -1841,7 +1841,7 @@ furnace massive~
 ~
 12 11 7 0 15 0 1 0 64 0 0
 0 0 0 0 0 0 0 0
-10000 10000000 100
+10000 10000000 100 100
 E
 furnace massive~
 This massive furnace has been built over an large opening that must run to the
@@ -1857,7 +1857,7 @@ pile elder hydra scales scale~
 ~
 8 35 2 0 15 0 12289 16385 0 0 0
 0 0 0 0 0 0 0 0
-11 550000 100
+11 550000 100 100
 E
 pile elder hydra scales scale~
 A pile of hydra scales have been removed from an elder wyrm and are very valuable. These are useful to an exotic collector or can be crafted into some form of armor.
@@ -1869,7 +1869,7 @@ a &+Ldrop&n of &+mch&+Mi&+mmer&+Ma&n &+rblood&n~
 ~
 8 40 1 0 12 0 8192 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 550000 100
+0 550000 100 100
 E
 drop chimera chimera's blood~
 The blood is a deep red and very valuable.
@@ -1881,7 +1881,7 @@ key fire purple~
 ~
 18 1 0 0 11 0 8200 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 10000 100
+0 10000 100 100
 E
 key fire purple~
 This key looks to match the door in the room leaving the Amir's chambers.
@@ -1893,7 +1893,7 @@ key green fire~
 ~
 18 17 0 0 10 0 8200 16385 0 0 0
 0 0 0 0 0 0 0 0
-1 10000 100
+1 10000 100 100
 E
 key green fire~
 The key to the harem.
@@ -1905,7 +1905,7 @@ a &+Ld&Ne&+Lm&No&+Ln&N-&+Lhide&n &+Gfl&+gami&+Gng&n whip&n~
 ~
 5 12 3 0 11 0 9217 8193 64 3264514 0
 14 4 5 0 0 0 0 0
-3 55000 100 8192 12288 0 0
+3 55000 100 100 8192 12288 0 0
 E
 whip flaming green demon demon-hide~
 Made from demon-hide this highly resiliant whip was made to hurt. Used mostly by the efreeti to tame and train their beasts it could easily be used in combat to cause great pain.
@@ -1921,7 +1921,7 @@ fountain flames~
 ~
 17 17 5 0 12 0 0 0 64 0 0
 0 999 16 0 0 0 0 0
-300 0 100
+300 0 100 100
 #139133
 boots yellow flames~
 &+csome boots &+Cof&n &+Yy&+yello&+Yw&n &+bflames&n~
@@ -1929,7 +1929,7 @@ boots yellow flames~
 ~
 9 14 2 0 13 0 9217 65 64 171970464 0
 15 0 0 0 0 0 0 0
-3 220000 100 33554436 0 0 0
+3 220000 100 100 33554436 0 0 0
 E
 boots yellow flames~
 These boots are made of a comfortable leather and have been enchanted with magics that enshroud them in yellow flames.
@@ -1945,7 +1945,7 @@ armoire~
 ~
 15 15 3 0 7 0 0 0 0 0 0
 0 28 139135 0 0 0 0 0
-0 0 100
+0 0 100 100
 E
 armoire~
 A large brass armoire with two doors are adorned with a lock and emblazed
@@ -1958,7 +1958,7 @@ A &+rf&+Rl&+Ya&+Wm&+Yi&+Rn&+rg&n &+Wske&nle&+Wton&n &+Lk&ne&+Ly&n shines bright 
 ~
 18 10 0 0 9 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 E
 flaming skeleton key~
 A key made from the bones of a lich and crafted to work the lock of the chief's armoire.
@@ -1970,7 +1970,7 @@ A huge pile of &+Wplatinum&n coins are in the corner.~
 ~
 20 25 3 0 7 0 0 1 0 0 0
 0 0 0 1000 0 0 0 0
-50 0 100
+50 0 100 100
 #139137
 shimmering pyrohydra bracer pyro hydra~
 &+La&n &+csh&+Cim&+Wme&+Cri&+cng&n &+rpy&+Rro&+Yhy&+Wdra &nsc&+Lal&ned &+Lbr&nac&+Ler&n~
@@ -1978,7 +1978,7 @@ shimmering pyrohydra bracer pyro hydra~
 ~
 9 35 2 0 14 0 1 4097 64 0 0
 15 0 0 0 0 0 0 0
-3 250000 100 536870928 0 0 0
+3 250000 100 100 536870928 0 0 0
 A
 20 4
 A
@@ -1990,7 +1990,7 @@ thin dragonskin cloak brass~
 ~
 9 35 3 0 15 0 9216 1025 64 138677764 0
 30 0 0 0 0 0 0 0
-4 750000 100 537919488 0 0 0
+4 750000 100 100 537919488 0 0 0
 A
 27 9
 A
@@ -2002,7 +2002,7 @@ flaming head high priest~
 ~
 13 11 3 0 7 0 8388608 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139140
 flaming head wrinyan otis~
 &+rthe &+Rflaming &+rhead of &+CW&+crinyen &+CO&+ctis&n~
@@ -2010,7 +2010,7 @@ flaming head wrinyan otis~
 ~
 13 11 3 0 7 0 8388608 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139141
 flaming head hakim okewonaku~
 &+rthe &+Rflaming &+rhead of &nH&+Lakim &nO&+Lkewonaku&n~
@@ -2018,7 +2018,7 @@ flaming head hakim okewonaku~
 ~
 13 11 3 0 7 0 8388608 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139142
 pile ancient pyro pyrohydra hydra scales scale~
 &+La p&ni&+Lle of &+Lan&nci&+Lent &+rpy&+Rro&+Yhy&+Wdra&n &+Lsc&na&+Lles~
@@ -2026,7 +2026,7 @@ pile ancient pyro pyrohydra hydra scales scale~
 ~
 8 35 2 0 15 0 12289 16385 0 0 0
 0 0 0 0 0 0 0 0
-11 550000 100
+11 550000 100 100
 E
 pile elder hydra scales scale~
 A pile of hydra scales have been removed from an elder wyrm and are very valuable. These are useful to an exotic collector or can be crafted into some form of armor.
@@ -2038,7 +2038,7 @@ air vortex sash~
 ~
 9 1 10 0 15 0 0 2049 0 146836992 0
 0 0 0 1 0 0 0 0
-0 0 100 0 8388608 0 0
+0 0 100 100 0 8388608 0 0
 E
 air vortex sash~
 &+CNo desernable front to this sash made of air the owner just simply
@@ -2053,7 +2053,7 @@ flaming head artoon branan~
 ~
 13 11 3 0 7 0 8388608 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #139145
 shanaanaa parchment piece paper note notes ultarium city sky~
 &+BSha&+bnaana&+Ba's&n adventuring notes on &+WThe &+bSky&n &+WCity of Ultarium&n~
@@ -2061,7 +2061,7 @@ A piece of parchment labelled "&+WThe &+bSky&n &+WCity of Ultarium&n" is crumble
 ~
 16 28 1 0 11 0 134225920 1 0 0 0
 0 0 0 0 0 0 0 0
-0 25050 100
+0 25050 100 100
 E
 shanaanaa parchment piece paper note notes sky ultarium city~
 The Sky city of Ultarium
@@ -2112,7 +2112,7 @@ A piece of parchment labelled "&+mArachdrathos Guilds&n" is crumbled here.~
 ~
 16 28 1 0 11 0 134225920 1 0 0 0
 0 0 0 0 0 0 0 0
-0 25050 100
+0 25050 100 100
 E
 shanaanaa parchment piece paper note notes arachdrathos guilds drow~
 Arachdrathos Guilds (Drow)
@@ -2194,7 +2194,7 @@ Two &+Rr&+ru&+Rb&+ri&+Re&+rs&n are attached to a thick &+yb&+Yr&+ya&+Ys&+ys&n ri
 ~
 9 17 1 0 11 0 1 33554433 64 0 0
 0 0 0 0 0 0 0 0
-1 750000 100 0 0 128 0
+1 750000 100 100 0 0 128 0
 E
 brass tail ring rubies~
 Two beautiful rubies are attached with their own seperate chain to a thick
@@ -2212,4 +2212,4 @@ A &+Ltin &+Wt&+Yo&+Gy &+Cb&+Mo&+Rx&n with a &+ycopper&n latch rests here.~
 ~
 15 17 3 0 10 0 33816577 16385 64 0 0
 150 1 0 150 0 0 0 0
-1 5390 100
+1 5390 100 100

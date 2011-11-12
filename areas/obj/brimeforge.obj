@@ -5,7 +5,7 @@ large crack~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131002
 locket strange first~
 &+Lthe locket of the &+Mfirst&n~
@@ -13,7 +13,7 @@ locket strange first~
 ~
 9 18 2 0 12 0 8388609 5 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100 0 0 0 32
+0 0 100 100 0 0 0 32
 #131003
 locket strange second~
 &+Lthe locket of the &+Msecond&n~
@@ -21,7 +21,7 @@ locket strange second~
 ~
 9 18 2 0 12 0 8388609 5 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131004
 locket strange third~
 &+Lthe locket of the &+Mthird&n~
@@ -29,7 +29,7 @@ locket strange third~
 ~
 9 18 2 0 12 0 8388609 5 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131005
 wand fiery power~
 &+La wand of &+Rfi&+rer&+Ry &+Lpower&n~
@@ -37,7 +37,7 @@ wand fiery power~
 ~
 3 18 2 0 10 0 8193 16385 64 0 0
 41 4 4 277 0 0 0 0
-0 0 100
+0 0 100 100
 A
 24 -2
 A
@@ -49,7 +49,7 @@ ethereal key~
 ~
 18 18 2 0 12 0 8396801 1 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131007
 smoldering chunk brimstone~
 &+La &+rsmoldering &+Lchunk of &+rBrim&+LStone&n~
@@ -57,7 +57,7 @@ smoldering chunk brimstone~
 ~
 9 11 2 0 12 0 8388609 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131008
 shard brimstone~
 &+La shard of &+rBrim&+LStone&n~
@@ -65,7 +65,7 @@ shard brimstone~
 ~
 5 11 2 0 2 0 0 8193 0 0 0
 2 2 2 0 0 0 0 0
-0 0 100
+0 0 100 100
 A
 18 2
 A
@@ -77,7 +77,7 @@ strange sign~
 ~
 13 6 2 0 12 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 E
 strange sign~
 &+y
@@ -101,7 +101,7 @@ defiled golden amulet tharnadia~
 ~
 9 18 2 0 12 0 1 5 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100 134217736 0 0 0
+0 0 100 100 134217736 0 0 0
 A
 24 -4
 A
@@ -113,7 +113,7 @@ unholy bifocals chronomancer~
 ~
 9 18 2 0 12 0 8388609 131073 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100 40 0 0 0
+0 0 100 100 40 0 0 0
 A
 13 25
 A
@@ -125,7 +125,7 @@ strange mithril key~
 ~
 18 18 2 0 12 0 8388609 1 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131013
 single large key~
 &+La single and very large &+rkey&n~
@@ -133,7 +133,7 @@ single large key~
 ~
 18 18 2 0 12 0 8388608 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131014
 massive chest~
 &+La massive &+rchest&n~
@@ -141,7 +141,7 @@ massive chest~
 ~
 15 18 2 0 12 0 8388609 0 0 0 0
 0 29 131020 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131015
 flaming halberd rage~
 &+Lthe &+Rfl&+ram&+Ring &+Lhalberd of &+rra&+Rge&n~
@@ -149,7 +149,7 @@ flaming halberd rage~
 ~
 5 18 2 0 12 0 8388609 8193 0 0 0
 13 4 5 0 0 0 0 0
-0 0 100 536870928 0 0 0
+0 0 100 100 536870928 0 0 0
 A
 18 5
 A
@@ -161,7 +161,7 @@ bloody heart lord kaynor~
 ~
 8 2 2 0 12 0 8388609 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131017
 bloody heart chronomancer child~
 &+Lthe &+rbloody &+Lheart of the Chronomancer's child&n~
@@ -169,7 +169,7 @@ bloody heart chronomancer child~
 ~
 8 2 2 0 12 0 1 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131018
 bloody horns azureal~
 &+Lthe &+rbloody &+Lhorns of Azureal&n~
@@ -177,7 +177,7 @@ bloody horns azureal~
 ~
 8 2 2 0 12 0 8388609 1 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131019
 powerful brimstone rune~
 &+La powerful &+rbrim&+Lstone rune&n~
@@ -185,7 +185,7 @@ powerful brimstone rune~
 ~
 8 11 2 0 15 0 8388608 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #131020
 unremarkable key~
 &+Lan &+runremarkable &+Lkey&n~
@@ -193,4 +193,4 @@ unremarkable key~
 ~
 18 18 2 0 12 0 8388608 1 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100

@@ -1,0 +1,27 @@
+#3300
+cat fluffy black~
+A fluffy black cat~
+A fluffy black cat relaxes idly, eyeing you with curiosity.
+~
+   A cat sits idly, staring back at you with curiosity. It does not
+seem afraid. Its fluffy coat is black and it has bright, slanted green
+eyes. You notice that around its neck is a tag.
+~
+74 0 0 0 268435464 0 0 0 0 S
+a 0 0 0 1
+2 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#3301
+girl village~
+A small village girl~
+A small village girl skips around the book singing to herself.
+~
+   A small village girl ignores you as she skips and sings around the
+pedestal holding an old worn book.
+~
+75 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
