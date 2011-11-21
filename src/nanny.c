@@ -2967,6 +2967,7 @@ void select_pwd(P_desc d, char *arg)
   P_char   tmp_ch;
   P_desc   k;
   char     Gbuf1[MAX_STRING_LENGTH];
+  char buf[MAX_INPUT_LENGTH];
 
   switch (STATE(d))
   {
@@ -2981,7 +2982,7 @@ void select_pwd(P_desc d, char *arg)
     {
       if(strn_cmp
           (CRYPT(arg, d->character->only.pc->pwd), d->character->only.pc->pwd,
-           10))
+           39))
       {
         SEND_TO_Q("Invalid password.\r\n", d);
         SEND_TO_Q("Invalid password ... disconnecting.\r\n", d);
@@ -3129,9 +3130,13 @@ void select_pwd(P_desc d, char *arg)
       echo_off(d);
       return;
     }
-    strncpy(d->character->only.pc->pwd, CRYPT(arg, d->character->player.name),
-            10);
-    *(d->character->only.pc->pwd + 10) = '\0';
+
+    // This changes to a better encryption and uses the whole password.
+    sprintf( buf, "$1$" );
+    strcat( buf, d->character->player.name );
+
+    strncpy(d->character->only.pc->pwd, CRYPT(arg, buf), 39);
+    *(d->character->only.pc->pwd + 40) = '\0';
     echo_on(d);
     SEND_TO_Q("\r\nPlease retype password: ", d);
     echo_off(d);
@@ -3143,7 +3148,7 @@ void select_pwd(P_desc d, char *arg)
   case CON_PWDCNF:
     if(strn_cmp
         (CRYPT(arg, d->character->only.pc->pwd), d->character->only.pc->pwd,
-         10))
+         40))
     {
       echo_on(d);
       sprintf(Gbuf1,
@@ -3165,7 +3170,7 @@ void select_pwd(P_desc d, char *arg)
   case CON_PWDNEW:
     if(strn_cmp
         (CRYPT(arg, d->character->only.pc->pwd), d->character->only.pc->pwd,
-         10))
+         39))
     {
       echo_on(d);
       SEND_TO_Q("\r\nInvalid password, password change aborted.\r\n", d);
@@ -3188,9 +3193,14 @@ void select_pwd(P_desc d, char *arg)
       echo_off(d);
       return;
     }
-    strncpy(d->character->only.pc->pwd, CRYPT(arg, d->character->player.name),
-            10);
-    *(d->character->only.pc->pwd + 10) = '\0';
+
+    // This changes to a better encryption and uses the whole password.
+    sprintf( buf, "$1$" );
+    strcat( buf, d->character->player.name );
+
+    strncpy(d->character->only.pc->pwd, CRYPT(arg, buf), 39);
+
+    *(d->character->only.pc->pwd + 40) = '\0';
     echo_on(d);
     SEND_TO_Q("\r\nPlease retype your new password: ", d);
     echo_off(d);
@@ -3202,7 +3212,7 @@ void select_pwd(P_desc d, char *arg)
     echo_on(d);
     if(strn_cmp
         (CRYPT(arg, d->character->only.pc->pwd), d->character->only.pc->pwd,
-         10))
+         39))
     {
       SEND_TO_Q("\r\nPasswords don't match.\r\nPassword change aborted\r\n",
                 d);
@@ -3226,7 +3236,7 @@ void select_pwd(P_desc d, char *arg)
   case CON_PWDDCNF:
     if(strn_cmp
         (CRYPT(arg, d->character->only.pc->pwd), d->character->only.pc->pwd,
-         10))
+         39))
     {
       echo_on(d);
       SEND_TO_Q("\r\nInvalid password, character delete aborted.\r\n", d);
