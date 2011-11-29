@@ -1082,10 +1082,11 @@ void ShipCrew::rpar_skill_raise(float raise)
 void ShipCrew::skill_raise(float raise, float& skill, int chief)
 {
     raise *= 1.0 + (float)ship_chief_data[chief].skill_gain_bonus / 100;
-    if (skill < ship_chief_data[chief].min_skill)
+
+    if( skill < ship_chief_data[chief].min_skill )
     {
         skill += raise * 4;
-        if (skill > ship_chief_data[chief].min_skill)
+        if( skill > ship_chief_data[chief].min_skill )
         {
             raise = (skill - ship_chief_data[chief].min_skill) / 4;
             skill = ship_chief_data[chief].min_skill;
@@ -1094,6 +1095,10 @@ void ShipCrew::skill_raise(float raise, float& skill, int chief)
             raise = 0;
     }
     skill += raise;
+
+    // Cap skills at cap property.
+    if( skill > get_property( "ship.crew.maxexp", 4000 ) )
+      skill = get_property( "ship.crew.maxexp", 4000 );
 }
 
 

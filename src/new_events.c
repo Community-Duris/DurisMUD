@@ -502,6 +502,9 @@ char *get_function_name(void *func)
       return function_names[i].func_name;
   }
 
+  if( event_autosave == func )
+    return "autosave";
+
   return "unknown function";
 }
 
