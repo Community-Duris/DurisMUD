@@ -7314,7 +7314,7 @@ void spell_stone_skin(int level, P_char ch, char *arg, int type,
 
   af.type = SPELL_STONE_SKIN;
   af.duration = 4;
-  af.modifier = -3;
+  af.modifier = 3;
   af.location = victim->points.combat_pulse;
   affect_to_char(victim, &af);
 }
@@ -7333,7 +7333,6 @@ void spell_ironwood(int level, P_char ch, char *arg, int type,
   }
   if(!has_skin_spell(victim))
   {
-
       absorb = (int) (absorb * 2);
       act("&+y$n's &+ybarkskin seems to take on the texture of &+Liron.",
         TRUE, victim, 0, 0, TO_ROOM);
@@ -7357,7 +7356,7 @@ void spell_ironwood(int level, P_char ch, char *arg, int type,
 
   af.type = SPELL_IRONWOOD;
   af.duration = 4;
-  af.modifier = -2;
+  af.modifier = 2;
   af.location = victim->points.combat_pulse;
   affect_to_char(victim, &af);
 }

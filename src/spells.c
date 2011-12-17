@@ -2591,13 +2591,19 @@ void cast_bloodstone(int level, P_char ch, char *arg, int type, P_char victim, P
   }
 
   af.type = SPELL_BLOODSTONE;
-
-  GET_VITALITY(victim) -= 2;
+  GET_VITALITY(victim) -= level / 2;
   StartRegen(victim, EVENT_MOVE_REGEN);
-
-  af.duration = 1;
-
+  af.duration = (level / 4) * WAIT_SEC;
   affect_to_char(victim, &af);
+
+  if(level > 51)
+  {
+    af.type = SPELL_BLOODSTONE;
+    af.duration = (level / 4) * PULSE_VIOLENCE;
+    af.location = victim->points.combat_pulse;
+    af.modifier = 1;
+    affect_to_char(victim, &af);
+  }
 
   act("You feel as if though your blood starts to flow slower in your veins.",
     FALSE, victim, 0, 0, TO_CHAR);

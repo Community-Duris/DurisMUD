@@ -80,6 +80,8 @@ typedef unsigned int uint;
 #define BIT_31  1073741824U
 #define BIT_32  2147483648U
 
+#define CRIT_LWR_BOUND 5
+
 /* The following defs are for obj_data  */
 
 /* note:  before reassigning any of these, especially the ones that you have no

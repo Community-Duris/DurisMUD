@@ -482,7 +482,7 @@ int vamp(P_char ch, double fhits, double fcap)
   else if(af = get_spell_from_char(ch, SPELL_BMANTLE))
   {
     blocked = (int) (MIN(hits * (GET_LEVEL(ch) / 100), af->modifier));
-    hits -=blocked;
+    hits -= blocked;
     if(af->modifier <= blocked)
     {
       affect_remove(ch, af);
@@ -598,19 +598,14 @@ bool soul_trap(P_char ch, P_char victim)
 
   if(himself)
   {
-    act("&+LThe room seems to darken as&n $n &+Rslams&n $p &+Lthrough&n $N's &+Lchest!&n",
-      FALSE, ch, 0, victim, TO_ROOM);
-    act("&+LAs $E slumps to the ground, bleeding, screaming, begging for mercy,&n $n &+Ltwist the weapon and draws the soul from the dying body.",
-       FALSE, ch, 0, victim, TO_ROOM);
-    act("&+LThe air seems to vibrate with &+Wenergy &+Lwhich causes&n $n &+Lto throw back $s head and let out a mocking laughter that freezes your &+Rblood.&n",
-       FALSE, ch, 0, victim, TO_ROOM);
+    act("&+LThe room seems to darken as $n &+Rslams $p &+Lthrough&n $N's &+Lchest!&n", FALSE, ch, 0, victim, TO_ROOM);
+    act("&+LAs $E begs for mercy, $n &+Ltwists the weapon, drawing the soul from $s victim.", FALSE, ch, 0, victim, TO_ROOM);
+    act("&+LThe air seems to vibrate with &+Wenergy &+Land $n &+Lthrows back $s head", FALSE, ch, 0, victim, TO_ROOM);
+    act("&+Land lets out a mocking laughter that freezes your &+Rblood.&n", FALSE, ch, 0, victim, TO_ROOM);
 
-    act("&+LThe room seems to darken as you slam&n $p &+Lthrough&n $N's &+Lchest!&n",
-      FALSE, ch, 0, victim, TO_CHAR);
-    act("&+LAs $E slumps to the ground, bleeding, screaming, begging for mercy, you twist the weapon and draw the soul from the dying body.",
-       FALSE, ch, 0, victim, TO_CHAR);
-    act("&+LA sweetness fills your being and you cannot help but to let out a &=LWmocking laughter.&n&n",
-       FALSE, ch, 0, victim, TO_CHAR);
+    act("&+LThe room seems to darken as you slam&n $p &+Lthrough&n $N's &+Lchest!&n", FALSE, ch, 0, victim, TO_CHAR);
+    act("&+L$E begs for mercy, as you twist the weapon and draw the soul from $S dying body.", FALSE, ch, 0, victim, TO_CHAR);
+    act("&+LEuphoria fills your head and you cannot help but to let out a &=LWmocking laughter.&n&n", FALSE, ch, 0, victim, TO_CHAR);
   }
   else
   {
@@ -3245,7 +3240,7 @@ int try_riposte(P_char ch, P_char victim, P_obj wpn)
           ("Before you can recover $n steps forward and slams $s fist into your face!",
            TRUE, ch, 0, victim, TO_VICT);
         victim_dead =
-          damage(ch, victim, GET_DAMROLL(ch) * ch->specials.damage_mod,
+          damage(ch, victim, 25 * ch->specials.damage_mod,
           SKILL_FOLLOWUP_RIPOSTE);
 
         if(!victim_dead &&
@@ -3273,7 +3268,7 @@ int try_riposte(P_char ch, P_char victim, P_obj wpn)
         act("Spinning around you slam your elbow into $N's throat.", TRUE, ch,
             0, victim, TO_CHAR);
         victim_dead =
-          damage(ch, victim, GET_DAMROLL(ch) * ch->specials.damage_mod,
+          damage(ch, victim, 25 * ch->specials.damage_mod,
           SKILL_FOLLOWUP_RIPOSTE);
 
         if(!victim_dead &&
@@ -6011,7 +6006,7 @@ bool tainted_blade(P_char ch, P_char victim)
   if(!ch->equipment[WIELD])
     return false;
 
-  if(raw_damage(ch, victim, 60, RAWDAM_DEFAULT, messages) == DAM_NONEDEAD)
+  if(raw_damage(ch, victim, GET_LEVEL(ch) / 2, RAWDAM_DEFAULT, messages) == DAM_NONEDEAD)
   {
     if(old_af = get_spell_from_char(victim, blade_skill))
     {
@@ -6218,6 +6213,7 @@ int required_weapon_skill(P_obj wpn)
 
 }
 #endif
+
 /*
  * this performs an attack of ch on victim using weapon currently
  * wielded as primary.
@@ -6237,7 +6233,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   P_char   tch, mount, gvict;
   int      msg, victim_ac, to_hit, diceroll, wpn_skill, hit_type, tmp, wpn_skill_num;
   double dam;
-  int room, pos, i, blade_skill, chance;
+  int room, pos, i, blade_skill, chance, damroll = GET_DAMROLL(ch);
   int vs_skill = GET_CHAR_SKILL(ch, SKILL_VICIOUS_STRIKE);
   struct affected_type aff, ir, *af;
   char attacker_msg[512];
@@ -6247,6 +6243,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   struct obj_affect *o_af;
   static bool vicious_hit = false;
   int devcrit = number(1, 100);
+  int critical_bound = CRIT_LWR_BOUND;
 
   if(!(ch) ||
     !(victim) ||
@@ -6345,7 +6342,13 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   if(affected_by_spell(ch, SKILL_RAGE))
     diceroll = BOUNDED(1, diceroll - (GET_CHAR_SKILL(ch, SKILL_RAGE) / 10), 100);
 
-  if(diceroll < 5)
+  //damroll above 50 gives a .25% bonus to critical attacks - Jexni 12/17/11
+  if(damroll > 50)
+  {
+     critical_bound += ((damroll - 50) / 4);
+  }
+
+  if(diceroll < critical_bound)
     hit_type = -1; // critical hit
   else if(diceroll < 96)
     hit_type = 0;
@@ -6658,7 +6661,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
     dam = dice(ch->points.damnodice, ch->points.damsizedice);
   }
   else
-    dam = number(4, 16);         /* 1d4 dam with bare hands */
+    dam = number(1, 4);         /* 1d4 dam with bare hands */
 
   if(weapon)
   {
@@ -6670,11 +6673,11 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   
   dam = (int) dam * dam_factor[DF_WEAPON_DICE];
   
-  dam = dam + (int) (GET_DAMROLL(ch) * get_property("damroll.mod", 1.0));
+  dam = dam * (BOUNDEDF(0.05, (GET_DAMROLL(ch) * 2) / 10, 1.20));
   
   if(hit_type == -1 && GET_CHAR_SKILL(ch, SKILL_DEVASTATING_CRITICAL) > devcrit)
   {
-    dam = (int) (dam * 2.0);
+    dam = (int) (dam * 1.75);
   }
   else if(hit_type == -1)
   {
