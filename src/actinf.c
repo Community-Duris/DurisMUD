@@ -5608,8 +5608,14 @@ void do_who(P_char ch, char *argument, int cmd)
   {
     tch = d->character;
 
-    if(d->connected || racewar(ch, tch) || !CAN_SEE(ch, tch) || IS_NPC(tch))
+    if(d->connected || 
+       racewar(ch, tch) || 
+       IS_NPC(tch))
       continue;
+      
+    if(!CAN_SEE(ch, tch))
+      if(!IS_SET(tch->specials.act2, PLR2_NEWBIE_GUIDE))
+        continue;
 
     if(!IS_TRUSTED(ch))
       if(IS_DISGUISE(tch) || IS_SET(tch->specials.act, PLR_NOWHO) ||
