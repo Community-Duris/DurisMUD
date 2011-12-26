@@ -1129,73 +1129,103 @@ P_obj setsuffix_obj_new(P_obj obj)
   // you get to be in a different range entirely than the entire range,
   // which was originally intended...  Do not set this to a random number
   // as that does not result in a bell curve of values, and some of these
-  // affects are worth far more than others...  odds of rolling a 5 or a 25
-  // here are 7775 to 1...  which is so ultra-rare we may never see an object
-  // with an affect at either end in an entire wipe  -Jexni 10/22/11
+  // affects are worth far more than others...  odds of rolling a 6 or a 36
+  // here are 46656 to 1...  which is so ultra-rare we may never see an object
+  // with an affect at either end in an entire wipe  -Jexni 12/26/11
 
-  switch (dice(5,5))
+  switch(dice(6, 6))
   {
-  case 5:
-    SET_BIT(obj->bitvector, AFF_DETECT_INVISIBLE);
-    break;
   case 6:
-    SET_BIT(obj->bitvector2, AFF2_ULTRAVISION);
+    SET_BIT(obj->bitvector, AFF_DETECT_INVISIBLE);
     break;
   case 7:
     SET_BIT(obj->bitvector2, AFF2_FIRESHIELD);
     break;
   case 8:
-    SET_BIT(obj->bitvector, AFF_SLOW_POISON);
+    SET_BIT(obj->bitvector, AFF_AWARE);
     break;
   case 9:
-    SET_BIT(obj->bitvector, AFF_WATERBREATH);
-    break;
-  case 10:
-    SET_BIT(obj->bitvector, AFF_INFRAVISION);
-    break;
-  case 11:
-    SET_BIT(obj->bitvector, AFF_PROTECT_GOOD);
-    break;
-  case 12:
-    SET_BIT(obj->bitvector, AFF_PROTECT_EVIL);
-    break;
-  case 13:
-    SET_BIT(obj->bitvector2, AFF2_PROT_COLD);
-    break;
-  case 14:
-    SET_BIT(obj->bitvector, AFF_LEVITATE);
-    break;
-  case 15:
-    SET_BIT(obj->bitvector2, AFF2_DETECT_MAGIC);
-    break;
-  case 16:
     SET_BIT(obj->bitvector, AFF_PROT_FIRE);
     break;
-  case 17:
-    SET_BIT(obj->bitvector5, AFF5_PROT_UNDEAD);
-    break;
-  case 18:
-    SET_BIT(obj->bitvector2, AFF2_PROT_ACID);
-    break;
-  case 19:
-    SET_BIT(obj->bitvector, AFF_SENSE_LIFE);
-    break;
-  case 20:
-    SET_BIT(obj->bitvector, AFF_MINOR_GLOBE);
-    break;
-  case 21:
-    SET_BIT(obj->bitvector, AFF_FARSEE);
-    break;
-  case 22:
+  case 10:
     SET_BIT(obj->bitvector3, AFF3_COLDSHIELD);
     break;
+  case 11:
+    SET_BIT(obj->bitvector, AFF_FLY);
+    break;
+  case 12:
+    SET_BIT(obj->bitvector2, AFF2_PROT_GAS);
+    break;
+  case 13:
+    SET_BIT(obj->bitvector4, AFF4_PROT_LIVING);
+    break;
+  case 14:
+    SET_BIT(obj->bitvector, AFF_ARMOR);
+    break;
+  case 15:
+    SET_BIT(obj->bitvector3, AFF3_PROT_ANIMAL);
+    break;
+  case 16:
+    SET_BIT(obj->bitvector, AFF_PROTECT_EVIL);
+    break;
+  case 17:
+    SET_BIT(obj->bitvector, AFF_PROTECT_GOOD);
+    break;
+  case 18:
+    SET_BIT(obj->bitvector, AFF_LEVITATE);
+    break;
+  case 19:
+    SET_BIT(obj->bitvector2, AFF2_DETECT_EVIL);
+    break;
+  case 20:
+    SET_BIT(obj->bitvector2, AFF2_DETECT_GOOD);
+    break;
+  case 21:
+    SET_BIT(obj->bitvector2, AFF2_DETECT_MAGIC);
+    break;
+  case 22:
+    SET_BIT(obj->bitvector, AFF_WATERBREATH);
+    break;
   case 23:
-    SET_BIT(obj->bitvector2, AFF2_SOULSHIELD);
+    SET_BIT(obj->bitvector5, AFF5_PROT_UNDEAD);
     break;
   case 24:
-    SET_BIT(obj->bitvector, AFF_BARKSKIN);
+    SET_BIT(obj->bitvector2, AFF2_PROT_ACID);
     break;
   case 25:
+    SET_BIT(obj->bitvector, AFF_SENSE_LIFE);
+    break;
+  case 26:
+    SET_BIT(obj->bitvector, AFF_MINOR_GLOBE);
+    break;
+  case 27:
+    SET_BIT(obj->bitvector, AFF_FARSEE);
+    break;
+  case 28:
+    SET_BIT(obj->bitvector2, AFF2_PROT_COLD);
+    break;
+  case 29:
+    SET_BIT(obj->bitvector2, AFF2_PROT_LIGHTNING);
+    break;
+  case 30:
+    SET_BIT(obj->bitvector, AFF_UD_VISION);
+    break;
+  case 31:
+    SET_BIT(obj->bitvector3, AFF3_SPIRIT_WARD);
+    break;
+  case 32:
+    SET_BIT(obj->bitvector4, AFF4_REGENERATION);
+    break;
+  case 33:
+    SET_BIT(obj->bitvector, AFF_BARKSKIN);
+    break;
+  case 34:
+    SET_BIT(obj->bitvector2, AFF2_SOULSHIELD);
+    break;
+  case 35:
+    SET_BIT(obj->bitvector2, AFF2_MINOR_INVIS);
+    break;
+  case 36:
     SET_BIT(obj->bitvector, AFF_HASTE);
     break;
   default:
