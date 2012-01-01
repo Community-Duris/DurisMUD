@@ -335,6 +335,9 @@ int epic_random_task_zone(P_char ch)
 
   mysql_free_result(res);
 
+  if(epic_zone_done(zone_number))
+    epic_random_task_zone(ch);
+
   return zone_number;
 
 #endif
@@ -346,10 +349,9 @@ void epic_choose_new_epic_task(P_char ch)
   int zone_number = -1;
   P_obj nexus;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch))
+  if(!(ch) || !IS_ALIVE(ch))
   {
-    return;
+     return;
   }
   
   struct affected_type af, *afp;
@@ -621,11 +623,20 @@ void gain_epic(P_char ch, int type, int data, int amount)
     epic_gain_skillpoints(ch, skill_notches);
   }
 
-  if((old / errand_notch < (old + amount) / errand_notch) && !has_epic_task(ch))
+  if((type == EPIC_ZONE ||
+     type == EPIC_RANDOM_ZONE ||
+     type == EPIC_NEXUS_STONE) && 
+     !number(0, 8))
   {
     epic_choose_new_epic_task(ch);
   }
 
+/*
+  if((old / errand_notch < (old + amount) / errand_notch) && !has_epic_task(ch))
+  {
+    epic_choose_new_epic_task(ch);
+  }
+*/
 }
 
 struct affected_type *get_epic_task(P_char ch)

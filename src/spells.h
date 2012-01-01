@@ -1062,6 +1062,7 @@
 #define TAG_BOON		     2066
 #define TAG_CTF			     2067
 #define TAG_CTF_BONUS		     2068
+#define TAG_PVP_ENGAGE               2069
 #define DAMAGE_FALLING               2100       /* From falling to the ground */
 
 #define SAVING_PARA   0

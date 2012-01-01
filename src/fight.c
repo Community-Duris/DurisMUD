@@ -7167,9 +7167,8 @@ void set_fighting(P_char ch, P_char vict)
       else if(IS_PC_PET(ch) && (GET_MASTER(ch)->in_room == ch->in_room) &&
                CAN_SEE(victim, GET_MASTER(ch)))
       {
-        if(!
-            (IS_TRUSTED(GET_MASTER(ch)) &&
-             IS_SET(GET_MASTER(ch)->specials.act, PLR_AGGIMMUNE)))
+        if(!(IS_TRUSTED(GET_MASTER(ch)) &&
+            IS_SET(GET_MASTER(ch)->specials.act, PLR_AGGIMMUNE)))
           if(GET_STAT(victim) > STAT_INCAP)
             remember(victim, GET_MASTER(ch));
       }
@@ -7189,25 +7188,36 @@ void set_fighting(P_char ch, P_char vict)
   }
   if(P_char mount = get_linked_char(ch, LNK_RIDING))
   {
-      if(!GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT)/* && !is_natural_mount(ch, mount)*/)
-      {
-        send_to_char("I'm afraid you aren't quite up to mounted combat.\r\n", ch);
-        act("$n quickly slides off $N's back.", TRUE, ch, 0, mount, TO_NOTVICT);
-        stop_riding(ch);
-      }
+    if(!GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT))
+    {
+      send_to_char("I'm afraid you aren't quite up to mounted combat.\r\n", ch);
+      act("$n quickly slides off $N's back.", TRUE, ch, 0, mount, TO_NOTVICT);
+      stop_riding(ch);
+    }
   }
 
   if(has_innate(ch, INNATE_ANTI_EVIL) && IS_EVIL(vict))
     do_innate_anti_evil(ch, vict);
   if(has_innate(ch, INNATE_DECREPIFY))
-    do_innate_decrepify(ch,vict);
+    do_innate_decrepify(ch, vict);
   if(GET_CHAR_SKILL(ch, SKILL_DREAD_WRATH))
-    do_dread_wrath(ch,vict);
+    do_dread_wrath(ch, vict);
 
-
+  if(GET_RACEWAR(ch) != GET_RACEWAR(vict) &&
+     IS_PC(ch) && IS_PC(vict))
+  {
+    struct affected_type af;
+          
+    bzero(&af, sizeof(af));
+    af.type = TAG_PVP_ENGAGE;
+    af.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
+    af.duration = WAIT_SEC * 4;
+    affect_to_char(vict, &af);
+    affect_to_char(ch, &af);
+  }
 }
 
-void MoveAllAttackers(P_char ch,P_char v)
+void MoveAllAttackers(P_char ch, P_char v)
 {
   P_char   t_ch, hold;
 
@@ -7259,8 +7269,6 @@ void retarget_event(P_char ch, P_char victim, P_obj obj, void *data)
   }
 }
 
-
-
 int WeaponSkill(P_char ch, P_obj weapon)
 {
   if(IS_NPC(ch))
@@ -7268,7 +7276,6 @@ int WeaponSkill(P_char ch, P_obj weapon)
   else
     return GET_CHAR_SKILL(ch, required_weapon_skill(weapon));
 }
-
 
 int leapSucceed(P_char victim, P_char attacker)
 {
@@ -7975,14 +7982,14 @@ void stop_fighting(P_char ch)
   ch->specials.next_fighting = NULL;
   ch->specials.fighting = NULL;
 
-  if(affected_by_spell(ch, SPELL_CEGILUNE_BLADE)) {
-	  struct affected_type *afp = get_spell_from_char(ch, SPELL_CEGILUNE_BLADE);
-	  afp->modifier = 0;
+  if(affected_by_spell(ch, SPELL_CEGILUNE_BLADE)) 
+  {
+    struct affected_type *afp = get_spell_from_char(ch, SPELL_CEGILUNE_BLADE);
+    afp->modifier = 0;
   }
 
   if( GET_CHAR_SKILL(ch, SKILL_LANCE_CHARGE) != 0 )
     set_short_affected_by(ch, SKILL_LANCE_CHARGE, PULSE_VIOLENCE / 2); // to prevent flee/charge
-
 
   update_pos(ch);
 }
@@ -8006,7 +8013,6 @@ void event_windstrom(P_char ch, P_char vict, char *args)
   spell_damage(ch, vict, hits * GET_LEVEL(ch) / 4, SPLDAM_COLD,
                SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &messages);
 }
-
 
 #ifndef NEW_COMBAT
 #   define ADD_ATTACK(slot) (attacks[number_attacks++] = (slot))
@@ -8201,7 +8207,7 @@ void perform_violence(void)
 {
   P_char   ch, opponent;
   char     GBuf1[MAX_STRING_LENGTH];
-  struct affected_type *af, *next_af;
+  struct affected_type *af, *next_af, *afp;
   struct affected_type aff;
   int      attacks[256];
   int      number_attacks;
@@ -8218,7 +8224,7 @@ void perform_violence(void)
 
   time_now = time(0);
 
-  for (ch = combat_list; ch; ch = combat_next_ch)
+  for(ch = combat_list; ch; ch = combat_next_ch)
   {
     if(!(ch))
     {
@@ -8228,7 +8234,7 @@ void perform_violence(void)
     if(!IS_ALIVE(ch))
       return;
     
-    room_rnums.insert( ch->in_room );
+    room_rnums.insert(ch->in_room);
     combat_next_ch = ch->specials.next_fighting;
 
     opponent = ch->specials.fighting;
@@ -8261,11 +8267,58 @@ void perform_violence(void)
       ch->specials.combat_tics = ch->specials.base_combat_round;
     }
 
-    if(IS_PC(ch) &&
-      IS_PC(opponent) &&
-      !affected_by_spell(ch, TAG_PVPDELAY))
+    if(IS_PC(ch) && opponent)
     {
-      set_short_affected_by(ch, TAG_PVPDELAY, 20 * WAIT_SEC);
+      if(IS_PC(opponent))
+      {
+        // update PVP tag to prevent renting, instead of allowing them to rent regardless
+        // of continued action - Jexni 12/31/11
+      /*  if(affected_by_spell(ch, TAG_PVPDELAY))
+        {
+          for(afp = ch->affected; afp; afp = next_af);
+          {
+            next_af = afp->next;
+            if(afp->type == TAG_PVPDELAY)
+            {
+              afp->duration += WAIT_SEC * 20;
+            }
+          }
+        } 
+        else */
+        {
+          bzero(&aff, sizeof(aff));
+          aff.type = TAG_PVPDELAY;
+          aff.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
+          aff.duration = WAIT_SEC * 20;
+          affect_to_char(ch, &aff);
+        }
+
+      /*  if(affected_by_spell(opponent, TAG_PVPDELAY))
+        {
+          for(afp = opponent->affected; afp; afp = next_af);
+          {
+            next_af = afp->next;
+            if(afp->type == TAG_PVPDELAY)
+            {
+              afp->duration += WAIT_SEC * 20;
+            }
+          }
+        }        
+        else */
+        {
+          bzero(&aff, sizeof(aff));
+          aff.type = TAG_PVPDELAY;
+          aff.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
+          aff.duration = WAIT_SEC * 20;
+          affect_to_char(opponent, &aff);   
+        }
+
+        if(GET_RACEWAR(ch) != GET_RACEWAR(opponent))
+        {
+          add_counter(ch, TAG_PVP_ENGAGE, 1, PULSE_VIOLENCE);
+          add_counter(opponent, TAG_PVP_ENGAGE, 1, PULSE_VIOLENCE);
+        }
+      }
     }
     
     if(!FightingCheck(ch, opponent, "perform_violence"))
@@ -8292,10 +8345,9 @@ void perform_violence(void)
     {
       act("You remain paralyzed and can't do a thing to defend yourself.",
           FALSE, ch, 0, 0, TO_CHAR);
-      act
-        ("$n strains to respond to $N's attack, but the paralysis is too overpowering.",
-         FALSE, ch, 0, opponent, TO_ROOM);
-        continue;
+      act("$n strains to respond to $N's attack, but the paralysis is too overpowering.",
+          FALSE, ch, 0, opponent, TO_ROOM);
+      continue;
     }
 
     else if(IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS))
@@ -8314,7 +8366,7 @@ void perform_violence(void)
     
     if(IS_AFFECTED5(ch, AFF5_NOT_OFFENSIVE))
     {
-      if(!number(0, 4))
+      if(!number(0, 8))
       {
         send_to_char("You are being non-offensive... just a random reminder.\r\n", ch);
       }
@@ -8325,7 +8377,7 @@ void perform_violence(void)
 
     if(IS_AFFECTED3(opponent, AFF3_INERTIAL_BARRIER) ||
       (!GET_CLASS(ch, CLASS_PSIONICIST) &&
-      IS_AFFECTED3(ch, AFF3_INERTIAL_BARRIER) ) ||
+      IS_AFFECTED3(ch, AFF3_INERTIAL_BARRIER)) ||
       IS_ARMLOCK(ch))
     {
       real_attacks = number_attacks - (int) (number_attacks / 2);
@@ -8383,8 +8435,8 @@ void perform_violence(void)
     }
 
     if(IS_PC(opponent) &&
-      ch == GET_OPPONENT(opponent) &&
-      IS_NPC(ch))
+       ch == GET_OPPONENT(opponent) &&
+       IS_NPC(ch))
     {
       SET_BIT(opponent->specials.act2, PLR2_MELEE_EXP);
     }
@@ -8420,17 +8472,17 @@ void perform_violence(void)
     }
 
     if(is_char_in_room(ch, room) &&
-      IS_NPC(ch) &&
-      AWAKE(ch) &&
-      CAN_ACT(ch))
+       IS_NPC(ch) &&
+       AWAKE(ch) &&
+       CAN_ACT(ch))
     {
       MobCombat(ch);
     }
 
     if(IS_PC(ch) &&
-      num_hits &&
-      IS_NPC(opponent) &&
-      !IS_SET(ch->specials.act2, PLR2_MELEE_EXP))
+       num_hits &&
+       IS_NPC(opponent) &&
+       !IS_SET(ch->specials.act2, PLR2_MELEE_EXP))
     {
       SET_BIT(ch->specials.act2, PLR2_MELEE_EXP);
     }
@@ -8456,28 +8508,45 @@ void perform_violence(void)
     act(GBuf1, FALSE, ch, 0, opponent, TO_VICT | ACT_TERSE);
     sprintf(GBuf1, "$n attacks $N. [&+R%d&n hits]", num_hits);
     act(GBuf1, FALSE, ch, 0, opponent, TO_NOTVICT | ACT_TERSE);
+  
+    if(affected_by_spell(ch, TAG_PVP_ENGAGE))
+    {
+      int amount;
+ 
+      for(afp = ch->affected; afp; afp = next_af)
+      {
+        next_af = afp->next;
+        if(afp->type == TAG_PVP_ENGAGE)
+        {
+          amount = BOUNDED(1, afp->modifier, 4);
+        }
+      }
+      if(!number(0, 10))
+        gain_epic(ch, EPIC_PVP, 0, amount);
+    }
   }
 
-  /* Now room_rnums contains rooms where combat took place. Handle
+  /* Now room_rnum contains room where combat took place. Handle
      each room once. We don't add any checks here, since they will
      be done by the flagged mobs. */
-  for ( it = room_rnums.begin(); it != room_rnums.end(); it++ ) {
-    for ( door = 0; door < NUM_EXITS; door++ )
+  for(it = room_rnums.begin(); it != room_rnums.end(); it++) 
+  {
+    for(door = 0; door < NUM_EXITS; door++ )
     {
-      if( !VIRTUAL_EXIT( *it, door ) )
+      if(!VIRTUAL_EXIT(*it, door))
       {
         continue;
       }
-      nearby_room = VIRTUAL_EXIT( *it, door )->to_room;
-      if( nearby_room == NOWHERE )
+      nearby_room = VIRTUAL_EXIT(*it, door)->to_room;
+      if(nearby_room == NOWHERE)
       {
         continue;
       }
-      for ( tmp_ch = world[ nearby_room ].people; tmp_ch; tmp_ch = tmp_ch->next_in_room )
+      for(tmp_ch = world[nearby_room].people; tmp_ch; tmp_ch = tmp_ch->next_in_room)
       {
-        if( IS_NPC( tmp_ch ) )
+        if(IS_NPC(tmp_ch))
         {
-          SET_BIT( tmp_ch->specials.act2, ACT2_COMBAT_NEARBY );
+          SET_BIT(tmp_ch->specials.act2, ACT2_COMBAT_NEARBY);
         }
       }
     }
@@ -8745,6 +8814,19 @@ void engage(P_char ch, P_char victim)
 
   if(!IS_FIGHTING(victim))
     set_fighting(victim, ch);
+
+  if(GET_RACEWAR(ch) == GET_RACEWAR(victim) &&
+     IS_PC(ch) && IS_PC(victim))
+  {
+    struct affected_type af;
+          
+    bzero(&af, sizeof(af));
+    af.type = TAG_PVP_ENGAGE;
+    af.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
+    af.duration = WAIT_SEC * 4;
+    affect_to_char(victim, &af);
+    affect_to_char(ch, &af);
+  }
 }
 
 bool is_nopoof(P_obj obj)

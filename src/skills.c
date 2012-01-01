@@ -4406,6 +4406,8 @@ void initialize_skills()
   TAG_CREATE("boon power", TAG_BOON);
   TAG_CREATE("flag carrier", TAG_CTF);
   TAG_CREATE("ctf flag bonus", TAG_CTF_BONUS);
+  TAG_CREATE("pvp rent delay", TAG_PVPDELAY);
+  TAG_CREATE("pvp engagement", TAG_PVP_ENGAGE);
 
   TAG_CREATE_WITH_MESSAGES("recently fragged", TAG_PLR_RECENT_FRAG, 
                            "&+rThe thrill of the &+Lrecent &+Rkill &+rleaves your veins.", "");
