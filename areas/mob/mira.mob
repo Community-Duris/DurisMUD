@@ -10,8 +10,8 @@ moon in silver, the sign of the Myrabolus supreme guard. He seems to
 have nothing of any value except for his sword, which he holds tightly,
 and former belt buckle.
 ~
-3221260296 0 0 268435592 0 0 0 0 S
-PH 0 2 -1
+3221260296 0 0 0 268435592 0 0 0 0 S
+PH 0 2 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -24,8 +24,8 @@ This archer has surpassed the elite in training. He has become the perfection
 of his trade, excelling in his trade beyond all others. He is an expert
 marksmen, but also a truly loyal and efficient soldier.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -40,8 +40,8 @@ trained for at least a decade in melee combat and martial arts under
 the training of Roland.  It's seems apparent that messing with them would
 not fall into the to-do list of the days priorities.
 ~
-1140861002 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140861002 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ town. Their main priorities are to keep the peace and serve the public.
 They are legendary for the &+GHunter&n &+cGuards&n are members of the
 handful of the only neutral rangers in the entire world.
 ~
-1140852744 0 0 0 0 0 0 0 S
-PH 0 2 -1
+1140852744 0 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -70,8 +70,8 @@ a second pair of eyes and ears for the militia. They seem to have a
 keen sense of criminal activity and if need be they are vicious
 protectors.
 ~
-10 0 0 0 0 0 0 0 S
-A 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -87,8 +87,8 @@ an experienced fighter.  He poses no threat, however, for civilians,
 travellers, and visitors to the city.  He appears to know a great deal
 about Myrabolus, and anyone wondering should direct all questions his way.
 ~
-67110922 2048 0 0 0 0 0 0 S
-PH 0 1 -1
+67110922 2048 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -101,8 +101,8 @@ Not quite as elite as the &+Ghunter &+cguards&n of the city, but still
 more competent than a kobold, this &+cguard&n dutifully protects the &+Ygates
 and listens to his commanding officer.
 ~
-67108874 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67108874 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -117,8 +117,8 @@ mage xavier warlock hunter~
 &+Wfrom them when they are in certain alignments.  He calls this &+CCosmocy.
 &+WHowever this art is a long ways from perfect and quite unstable.
 ~
-2147518474 0 0 8 2049 0 0 0 S
-PH 0 33685504 -1
+2147518474 0 0 0 8 2049 0 0 0 S
+PH 0 33685504 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -134,8 +134,8 @@ with the &+MMyrabolan&n &+gHunters&n have continued for so long, it seemed
 prudent to send an emmissary.  The &+MMyrabolans&n barely tolerate his
 presence.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-PL 0 512 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+PL 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -152,8 +152,8 @@ and address you when you focus on him.
 &+bneutrality! Someone will put a stop to this! That someone is me!&n'
         Certainly, Valentyne is less tolerated in this town then even &+MMardoc&n.
 ~
-2058 0 0 0 0 0 0 1000 S
-PH 0 8 -1
+2058 0 0 0 0 0 0 0 1000 S
+PH 0 8 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -166,8 +166,8 @@ This &+Wpalace&n &+cguard&n is spending his free time in the local tavern
 pounding back pint after pint of the locally brewed &+yale&n. The bartender
 enjoys his presence since he tends to keep bar fights at a minimum.
 ~
-67108874 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67108874 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -182,8 +182,8 @@ looking for a medium away from racial hatred and the &+Yblazing sun&n.
 Eventually he found &+MMyrabolus&n and since that day has built a
 tavern and made a career out if it.
 ~
-1073741898 0 0 0 0 0 0 0 S
-PD 0 0 -1
+1073741898 0 0 0 0 0 0 0 0 S
+PD 0 0 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -197,8 +197,8 @@ it isn't fluttering around making pigeon-like noises it is delivering
 scout reports to the &+Wpalace&n then back to the towers with a beakfull
 of written orders from the &+rMagistrate&n.
 ~
-136 0 0 0 0 0 0 500 S
-B 0 0 -1
+136 0 0 0 0 0 0 0 500 S
+B 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 2
@@ -213,8 +213,8 @@ A hideous &+rdemon&n, held captive for years in the &+Lship's&n &+yhull&n, &+rru
 he has grown larger and stronger over his years of containment. He
 could wreck havoc on the &+Mcity&n if he escaped.
 ~
-1073743886 1 0 268435480 0 0 0 -1000 S
-X 0 1 -1
+1073743886 1 0 0 268435480 0 0 0 -1000 S
+X 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -230,8 +230,8 @@ A &+ccelestial&n dragon curls around the &+Wfountain &+Yplaza&n, absorbing the &
 &+wpet the scaly snout of this heavenly creature that was born and
 &+wraised deep in the heart of the Home of the Divine.&n
 ~
-1073743882 0 0 268435584 0 0 0 250 S
-D 0 1 -1
+1073743882 0 0 0 268435584 0 0 0 250 S
+D 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 0
@@ -245,8 +245,8 @@ king cool rico~
 &+Bneeds to come down a few levels and all of the &+gHunters&+B will agree if
 &+Bsomething is 'uncool' don't let &+LRico&+B see it.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -262,8 +262,8 @@ random~
         &+Wtwo hundred years. Unless you're elven, then ummm.. two
         &+Wthousand years. Thank you, that will be 12340 platium.'
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -278,8 +278,8 @@ face is wrinkled up. Nevertheless is makes a fine assistant and works
 hard at his duties which include running around town fetching things
 at all hours of the day and night.
 ~
-1073744012 0 0 0 0 0 0 0 S
-PH 0 32 -1
+1073744012 0 0 0 0 0 0 0 0 S
+PH 0 32 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -296,8 +296,8 @@ them whole again.  He smiles as you enter and boasts heartily :
         &+WI believe my blacksmithing to be second only to Emition
         &+Wnow!'&n
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -310,8 +310,8 @@ This &+LHalf-Orc&n is training to become the next great blacksmith of &+MMyrabol
 Chances are slim that will ever happened however, since after all he is
 half orc and not very bright.
 ~
-2058 0 0 0 0 0 0 0 S
-H2 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+H2 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -324,8 +324,8 @@ This &+rMino&+Ltaur&n has moved to &+MMyrabolus&n from the &+rPhiadnae &+LFlats.
 He finds it comfortable living here and their are a enough of
 his race around to keep him from growing homesick.
 ~
-2188 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2188 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -339,8 +339,8 @@ dutch banker~
 &+mwelcome addition. The &+gHunters&+m gave rebirth to the town and now
 &+mhis banking business is flourishing like never before.
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 0 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -356,8 +356,8 @@ decker~
 &+Lstrike down the heavens and the mortal realm as well. You have been
 &+Lwarned!'
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -373,8 +373,8 @@ shantil woman~
 &+ynow runs a small store, she clearly wishes to travel more and yearns
 &+yfor a new adventure.
 ~
-1073743946 0 0 0 0 0 0 0 S
-PH 0 0 -1
+1073743946 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -387,8 +387,8 @@ A amazing creature, this &+Ltiger&n is probably as fearsome a combatant as
 it is beautiful to look at. It is good they are so well trained by the
 &+cguards&n or it could cause trouble.
 ~
-134219786 0 0 0 0 0 0 0 S
-A 0 0 -1
+134219786 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -402,8 +402,8 @@ commonly to assist the &+GHunter&+c Guards&n. The larger ones are also
 used as mounts for crossing long distances in short time. They are
 difficult to tame, however, and sometimes get a little out of control.
 ~
-134219786 0 0 0 0 0 0 0 S
-A 0 0 -1
+134219786 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -415,8 +415,8 @@ A supreme &+Lblack&n, &+MMyrabolan&n war horse rests here.&n
 &+LThis elite &+MMyrabolan&+L warhorse makes a great mount and a &+Lloyal,
 &+Lwell trained pet.
 ~
-134217738 0 0 0 0 0 0 0 S
-A 0 1 -1
+134217738 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -430,8 +430,8 @@ shock troop myrabolan~
 &+Lnoise can rattle him. He appears to have been munching on far too
 &+Lmany of those coffee beans they have over on the southern islands. &n
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -444,8 +444,8 @@ This &+cguard&n is off duty and is spending the rest of his day in his
 barracks. He never gets too comfortable however, since his secondary
 duty, defending the city proper, could set him into motion at any time.
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 2 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -460,8 +460,8 @@ a battle axe. Since he has settled down with the majority of the other
 &+gHunters&n he has devoloped a handful of pupils who train hard to become
 the next &+rKnight of the Axe&n.
 ~
-1073776650 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073776650 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -472,8 +472,8 @@ a &+Mmyrabolan&n &+ccommoner&n~
 ~
 &+cCan't get any more common than this guy. His name is probably Joe Smith.
 ~
-204 0 0 0 0 0 0 250 S
-PH 0 0 -1
+204 0 0 0 0 0 0 0 250 S
+PH 0 0 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -486,8 +486,8 @@ half-orc half orc commoner~
 &+Llitter the city. Even being an enlightnened &+MMyrabolan&n &+Lcitizen he
 &+Lis still half orc and therefore not extremely intelligent.
 ~
-2120 0 0 0 0 0 0 -250 S
-H2 0 1 -1
+2120 0 0 0 0 0 0 0 -250 S
+H2 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -500,8 +500,8 @@ This &+Lwarlock&n is a pupil of &+LXavier&n. She must be taking a break
 from her schooling at the moment as she wanders around observing
 everything around her.
 ~
-2120 0 0 0 0 0 0 -250 S
-PH 0 512 -1
+2120 0 0 0 0 0 0 0 -250 S
+PH 0 512 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -514,8 +514,8 @@ a &+rknight&n in training&n~
 &+LHe is in prime physical condition and has learned many combat tecniques
 &+Lalready. His mentor is always telling him how much potential he has.
 ~
-67119178 0 0 0 0 0 0 250 S
-PH 0 1 -1
+67119178 0 0 0 0 0 0 0 250 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -528,8 +528,8 @@ pretty woman shopper~
 &+merrands throughout the city. She is probably far too busy to
 &+mstop and &+mchat with anyone.
 ~
-72 0 0 0 0 0 0 0 S
-PH 0 32768 -1
+72 0 0 0 0 0 0 0 0 S
+PH 0 32768 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -543,8 +543,8 @@ This &+YHalfling&n spends his days playing pranks on visitors.&n
 &+Ypractical jokes on anyone gullible enough to fall for them.  Those who
 &+Yvalue their wallets should best steer clear of this little guy.
 ~
-2264 0 0 0 0 0 0 0 S
-PF 0 4096 -1
+2264 0 0 0 0 0 0 0 0 S
+PF 0 4096 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -561,8 +561,8 @@ flagar grey elf~
 &+chim, that always seems to make Roland laugh. They both enjoy their time
 &+coff in this city immensely.
 ~
-1073743882 0 0 0 0 0 0 0 S
-PE 0 2 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PE 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -579,8 +579,8 @@ alexis woman hunter~
 &+bas she is physically.  She sleeps now, but spends all her waking hours
 &+bpraying and hoping for the return of her fiancee &+LMa&+mver&+Liss.
 ~
-1073743946 0 0 268435472 0 0 0 0 S
-PH 0 512 -1
+1073743946 0 0 0 268435472 0 0 0 0 S
+PH 0 512 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 2
@@ -596,8 +596,8 @@ everything he does, and although he doesn't like to fight he has a true
 noble warrior spirit and skills. He is one of the nicest and kindest
 people in the world.
 ~
-2122 0 0 268509336 0 0 0 0 S
-PH 0 1 -1
+2122 0 0 0 268509336 0 0 0 0 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -610,8 +610,8 @@ This elite &+GHunter &+cGuard&n is dedicated to defending the &+YSun&+Lwea&+Yver
 as well as keeping its location and existence a complete secret
 from everyone.
 ~
-1140850696 1 0 0 0 0 0 0 S
-PH 0 2 -1
+1140850696 1 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -624,8 +624,8 @@ The &+Wconstables&n of the &+cguard&n command the &+Wfirst class&n and regular
 &+Ghunter &+cguards&n. They have been charged with protecting the secret
 of the &+MMyrabolus&n secret and keeping out any outsiders.
 ~
-1140850696 1 0 0 0 0 0 0 S
-PH 0 2 -1
+1140850696 1 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -638,8 +638,8 @@ forsaken guardian creature~
 &+ma nightmarish monster whose only purpose is to protect the &+Ytreasure&n
 &+mfrom falling into the hands of outsiders.
 ~
-1073743880 1 0 268435480 2048 0 0 0 S
-X 0 1 -1
+1073743880 1 0 0 268435480 2048 0 0 0 S
+X 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -651,8 +651,8 @@ monkey~
 &+YThe monkey looks at you and says&n
                 &+W'Ek eek bleh eck bleh'
 ~
-24 0 0 0 0 0 0 0 S
-AA 0 0 -1
+24 0 0 0 0 0 0 0 0 S
+AA 0 0 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -664,8 +664,8 @@ monkey hunter man~
 &+LThis man is searching everywhere. When he sees you he asks
                 &+W'Have you seen my &+ymonkey&+W?'
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -682,8 +682,8 @@ the &+Wspiritual&n power he posseses.  Although not as bad as the other
 two, he is an example of how power corrupts and absolute power corrupts
 absolutely.
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 256 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 256 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -699,8 +699,8 @@ has the &+barcane&n abilities to bend gravity upon a foe and cut his
 strength and power down by 1/4 or 1/2 or even 3/4's.  Few respect him,
 many fear him.
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 33554432 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 33554432 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -715,8 +715,8 @@ himself to concentrate &+Ytime&n and bend it to his own ways. He has
 actually achieved a small part of this with the discovery of &+rhaste&n
 and &+Lstop&n &+bmagics&n but in no way can he can control linear &+Ytime.
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 2048 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 2048 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -734,8 +734,8 @@ both are dedicated to the &+gHunters&n and everything the group stands for.
 of just sitting at home in &+MMyrabolus&n.  On his back he carrys the
 famous &+Wmas&+Rter's &+Wqui&+Rver&n, a trademark of his archery skills.&n
 ~
-1073776648 0 0 268435464 0 0 0 0 S
-PH 0 2 -1
+1073776648 0 0 0 268435464 0 0 0 0 S
+PH 0 2 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -751,8 +751,8 @@ orders at his subordinates and ushers them into rank.
         &+WThats an order! Tie those boots, clowny! No ones gonna mess with
         &+Wus, now stay in formation! Get marching!'
 ~
-1140852744 0 0 8 0 0 0 -500 S
-PH 0 2 -1
+1140852744 0 0 0 8 0 0 0 -500 S
+PH 0 2 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -764,8 +764,8 @@ ranger follower vigilante~
 This member of squad 58 follows his leader and continuously shouts out,
         &+W'Yes sir! Captain sir!'
 ~
-1140852746 0 0 0 0 0 0 -500 S
-PH 0 2 -1
+1140852746 0 0 0 0 0 0 0 -500 S
+PH 0 2 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -777,8 +777,8 @@ grey elf~
 This &+cGrey Elf&n seems to enjoy the city. He wanders about with wide
 eyes taking in all the wonderment of famed city of balance.
 ~
-2056 0 0 0 0 0 0 0 S
-PE 0 512 -1
+2056 0 0 0 0 0 0 0 0 S
+PE 0 512 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -792,8 +792,8 @@ high elf citizen~
 &+ythe world and are not very well known, but in this city a population
 &+yof this bronze-skinned race has grown abundently.
 ~
-1073743880 0 0 0 0 0 0 500 S
-P2 0 1 -1
+1073743880 0 0 0 0 0 0 0 500 S
+P2 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -807,8 +807,8 @@ logger desolate~
 &+yhappily at all the citizens as he walks by, uncaring of their looks
 &+yand giggles at his odd clothes and country demeanor.&n
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -821,8 +821,8 @@ soldier fortune mercenary~
         &+W'Just make sure your ready to go.'&+L He says&n.
         &+W'This is going to be one helluva fight.'&n
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -835,8 +835,8 @@ warrior elite~
 &+cof the &+MMyrabolan&+c city gates.  He stands here vigilantly wary of those
 &+cbringing trouble to his fair city.&n
 ~
-67119114 2048 0 8 0 0 0 0 S
-PH 0 1 -1
+67119114 2048 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -847,8 +847,8 @@ commoner~
 ~
 &+cCan't get any more common than this guy. His name is probably Joe Smith.
 ~
-2252 0 0 0 0 0 0 250 S
-PH 0 0 -1
+2252 0 0 0 0 0 0 0 250 S
+PH 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -861,8 +861,8 @@ This &+Wpalace&n &+cguard&n is spending his free time in the local tavern
 pounding back pint after pint of the locally brewed &+yale&n. The bartender
 enjoys his presence since he tends to keep bar fights at a minimum.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -875,8 +875,8 @@ An &+Welite&n &+Ghunter &+cguard&n looks to the south intently.&n
 &+cfrom the south of here.  He seems to be on high alert, and waiting
 &+cfor something.&n
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 2 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -889,8 +889,8 @@ su monster~
 &+gin search of food.  The beastly creature leaps from tree to tree
 &+ghunting for anything edible.&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-AA 0 1 3
+1073743880 0 0 0 0 0 0 0 0 S
+AA 0 1 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -902,8 +902,8 @@ su monster~
 &+gThis &+rsu&+c-monster&+g must be very hungry to have become so aggresive and
 &+gwill charge to attack almost anything he sees coming his way.&n
 ~
-1073743880 1 0 0 0 0 0 0 S
-AA 0 1 3
+1073743880 1 0 0 0 0 0 0 0 S
+AA 0 1 0 3
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -916,8 +916,8 @@ This &+cguard&n is off duty and is spending the rest of his day in his
 barracks. He never gets too comfortable however, since his secondary
 duty, defending the city proper, could set him into motion at any time.
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 2 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -931,8 +931,8 @@ hunter guard captain~
         &+Wdown the su-monsters that have been wandering onto
         &+Wthe road outside town.'&n
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 2 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -944,8 +944,8 @@ kitty kitten~
 &+LThis little kitten wanders the city, searching for legs to rub up
 &+Lagainst and donations of food.&n
 ~
-8 0 0 0 0 0 0 500 S
-A 0 0 1
+8 0 0 0 0 0 0 0 500 S
+A 0 0 0 1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 2
@@ -958,8 +958,8 @@ soldier fortune mercenary~
         &+W'I heard there was a big battle going on from here,
         &+Wbut I just can't find the way there...'&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+1073743880 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -972,8 +972,8 @@ This archer has surpassed the elite in training. He has become the perfection
 of his trade, excelling in his trade beyond all others. He is an expert
 marksmen, but also a truly loyal and efficient soldier.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -986,8 +986,8 @@ orc naval officer~
 &+Lunder his breath something about his raft.&n
         &+W'It has a leak in it! How am I going to get out of here!?'
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -997,8 +997,8 @@ half half-elf elf~
 &+cA young &+CHalf-&+cElf wanders the &+Lroad&+c here.&n
 ~
 ~
-2056 0 0 0 0 0 0 0 S
-P2 0 128 -1
+2056 0 0 0 0 0 0 0 0 S
+P2 0 128 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1010,8 +1010,8 @@ playful squirrel~
 &+yThis little squirrel bounds down the road, dashing under the cover
 &+yof the trees whenever anyone gets to close.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1024,8 +1024,8 @@ small doe~
 &+yare quite common around these forests, and often wander on the road
 &+yto nibble on the vegetation.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 3
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 3
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1039,8 +1039,8 @@ balance bounty hunter~
 	&+W'I seek to restore balance here in Myrabolus, it must come
 	&+Wat a high price of the unright.'&n
 ~
-1073743882 0 0 8 0 0 0 0 S
-PH 0 2 -1
+1073743882 0 0 0 8 0 0 0 0 S
+PH 0 2 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1050,8 +1050,8 @@ waitress shapely~
 &+cA shapely waitress tends to the patrons here.&n
 ~
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1063,8 +1063,8 @@ seagull~
 &+WThis seagull flies about the beach lazily, occasionally diving into
 &+Wthe shallows of the ocean for a quick snack.&n
 ~
-2056 0 0 0 0 0 0 0 S
-A 0 0 2
+2056 0 0 0 0 0 0 0 0 S
+A 0 0 0 2
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1077,8 +1077,8 @@ su monster huge~
 &+gwithin the dark forest behind the dock road.  He snarls and viciously
 &+gattacks whoever approaches his makeshift home.&n
 ~
-1073743946 1 0 0 0 0 0 0 S
-AA 0 1 3
+1073743946 1 0 0 0 0 0 0 0 S
+AA 0 1 0 3
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1093,8 +1093,8 @@ dark beard covers his face and his eyes are grey and stern. He is clad in
 wide blue breeches and a white shirt. Around his waist is a sash of fine
 yellow silk from some exotic far-away land.
 ~
-33556490 0 0 553648280 0 0 0 0 S
-PH 0 1 -1
+33556490 0 0 0 553648280 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1105,8 +1105,8 @@ A &+ywounded &+MMyrabolan &+Ghunter &+cguard&n lies here &+rbleeding&n.
 ~
 This unfortunate young soldier underestimated the speed and cunning of the harmless looking &+mDrow&n and paid dearly for his mistake.  In the blink of an eye &+MMardoc&n lept over his desk and rammed a sleek dagger into this young soldier's chest, and then ran out the door.  Though the blade was small, it was delt with the accuracy of a seasoned fighter, and the chance of survival for this young man is slim.  Unless &+YSi&+Bmon&n can be summoned immediately, this soldier will not have the luxury of learning from his mistake.&n
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1117,8 +1117,8 @@ A &+MMyrabolan &+Ghunter &+cguard&n tends to the wounds of his comrade.
 ~
 This soldier is part of the detachment sent to arrest the treacherous &+MMardoc&n.  He tends to the wound of his fallen comrade and pleads with his captain to send word to &+MMar&+rkam&n that the city's defenses must be strengthened immediately in preporation for the inevitable siege.
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 2 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1139,8 +1139,8 @@ Slumped in &+MMardoc's&n chair, this old captain looks miserable.
 &+Wa successful invasion.  I fear my arrogance has doomed many of
 &+Wmy fellow countrymen to death at the hands of the mighty hoardes."&n
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 2 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1151,8 +1151,8 @@ A &+ywounded &+MMyrabolan &+Ghunter &+cguard&n lies here &+rbleeding&n.
 ~
 This young soldier lies bleeding on the floor.  Underestimating the prowess of the fragile appearing &+MMardoc&n has led to this unfortunate soul being run through as the crafty &+mDrow&n made his escape from the detachment of guards &+MMar&+rkam&n sent to arrest him.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1

@@ -5,7 +5,7 @@ sword huntsmaster short~
 ~
 5 16 3 0 12 0 41984 8193 64 96059395 0
 9 3 3 0 0 0 0 0
-5 12345 100
+5 12345 100 100
 E
 sword huntsmaster~
 This blade, designed and made especially for Roland the swordsmaster,
@@ -24,7 +24,7 @@ quill purple~
 ~
 21 15 3 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
-1 12 100
+1 12 100 100
 E
 quill purple~
 &+mThis quill is made from a long pigeon feather, dyed purple.
@@ -36,7 +36,7 @@ backpack bp myrabolan~
 ~
 15 13 3 0 7 0 0 4210689 0 0 0
 160 1 0 160 0 0 0 0
-5 452 100
+5 452 100 100
 E
 backpack purple myrabolan~
 &+mThis backpack is constructed from sheets of dyed leather. It looks
@@ -49,7 +49,7 @@ A &+csilvery&n &+Wblade&n glistens in the &+Ysun&n with the mark of the cresent 
 ~
 5 15 3 0 7 0 1024 8193 0 96071683 0
 9 2 3 11 0 0 0 0
-3 654 100
+3 654 100 100
 E
 sword blade myrabolan short~
 &+cThis &+Wsword&n &+chas been forged by the local blacksmith by tempered steel.
@@ -65,7 +65,7 @@ A &+Lbow&n, obviously too good for you, lies here.&n~
 ~
 6 15 3 0 7 0 4194304 24577 0 37752740 0
 70 60 0 1 0 0 0 0
-4 6236 100
+4 6236 100 100
 E
 compound bow~
 It is a high quality bow designed specificaly for the archers of &+MMyrabolus.
@@ -81,7 +81,7 @@ A &+Wfountain&n, designed with the symbol of &+Lbal&+Wance&n, &+bbubbles&n with 
 ~
 17 15 3 0 7 0 1024 0 0 0 0
 10 -1 16 0 0 0 0 0
-100 120 100
+100 120 100 100
 E
 fountain~
 &+WThis fountain, set in center of town, displays the symbol of balance
@@ -95,7 +95,7 @@ food supplement~
 ~
 19 48 3 0 7 0 0 1 0 0 0
 10 3 4 0 0 0 5 0
-1 2222 100
+1 2222 100 100
 E
 food supplement~
 It doesn't look tasty, but if your hungry the price is right.
@@ -107,7 +107,7 @@ A crumpled pile of &+Lrobes&n, dripping with &+bmagic&n, lies here.&n~
 ~
 9 3 3 0 7 0 234881025 9 64 0 0
 14 0 0 3 0 0 0 0
-5 123 100
+5 123 100 100
 E
 robes equality~
 &+WSewn from &+Lmagical &+Wfibers this &+Lrobe has &+Wmystical &+Lproperties about it.
@@ -123,7 +123,7 @@ An unremarkable &+Wwhite&n staff with the &+MMyrabolan&n insignia is dropped her
 ~
 4 15 3 0 7 0 234882048 8193 64 4198276 0
 50 3 3 111 0 0 0 0
-1 3234 100
+1 3234 100 100
 E
 staff white~
 &+YThis staff seems to have a great degree of power over the afterlife.
@@ -135,7 +135,7 @@ A &+MMyrabolan&n badge lays here.&n~
 ~
 11 3 3 0 7 0 0 2097153 0 0 0
 0 0 0 0 0 0 0 0
-1 1234 100
+1 1234 100 100
 E
 badge symbol moon~
 This badge bears the mark of the &+MMyrabolan&n guard.&n
@@ -149,7 +149,7 @@ A &+Ycrate&n, possibly several years old, sits in the corner of the room.&n~
 ~
 15 6 3 0 7 0 1024 0 0 0 0
 100 5 0 0 0 0 0 0
-100 100 100
+100 100 100 100
 E
 crate wooden~
 &+yThis looks like a plain storage crated used for transporting goods
@@ -163,7 +163,7 @@ The &+RBloody&n, &+Rsevered&n, &+rhead is dropped here.~
 ~
 13 15 3 0 7 0 8392704 16385 0 0 0
 0 0 0 0 0 0 0 0
-10 123 100
+10 123 100 100
 E
 head~
 This head seems to have been preserved quite well as you can still make
@@ -179,7 +179,7 @@ the &+Lclaws&n of the &+rrui&+Lner&n~
 ~
 9 10 3 0 7 0 0 129 0 0 0
 9 0 0 4 0 0 0 0
-1 100 100
+1 100 100 100
 E
 claws ruiner~
 Upon examination of these &+rclaws&n you ask yourself.
@@ -196,7 +196,7 @@ lockpicks lock picks~
 ~
 31 15 3 0 7 0 1024 16385 0 77824 0
 10 20 0 0 0 0 0 0
-1 234 100
+1 234 100 100
 E
 lockpicks lock picks~
 &+LThese lockpicks appear to be of average quality iron.
@@ -208,7 +208,7 @@ spell book myrabolan~
 ~
 33 13 3 0 7 0 0 1 0 0 0
 0 0 130 0 0 0 0 0
-1 121 100
+1 121 100 100
 E
 spell book myrabolan~
 &+MThis book is bound with leather and bears the standard purple
@@ -221,7 +221,7 @@ A &+cscimitar&n, tainted &+mpurple&n, has been dropped here.&n~
 ~
 5 16 3 0 7 0 1024 8193 64 95993883 0
 5 1 8 3 0 0 0 0
-4 100 100
+4 100 100 100
 E
 purple scimitar~
 &+cForged by the town blacksmith this scimitar seems to radiate a deep
@@ -238,7 +238,7 @@ red battle axe~
 ~
 5 16 3 0 7 0 4195329 8193 0 85475353 0
 1 3 5 3 0 0 0 0
-6 1000 100
+6 1000 100 100
 E
 red battle axe~
 This battle-axe is almost five feet in length. The shaft is made from
@@ -256,7 +256,7 @@ piece note parchment~
 ~
 8 29 3 0 7 0 8388608 16385 0 0 0
 0 0 0 0 0 0 0 0
-1 1 100
+1 1 100 100
 E
 piece note parchment~
 The note reads,
@@ -277,7 +277,7 @@ half keystone key~
 ~
 8 15 3 0 7 0 8388609 1 0 0 0
 0 0 0 0 0 0 0 0
-1 199 100
+1 199 100 100
 #82519
 key stone half~
 &+Lone half of the keystone&n~
@@ -285,7 +285,7 @@ key stone half~
 ~
 8 11 3 0 7 0 8917024 1 0 0 0
 0 0 0 0 0 0 0 0
-1 100 100
+1 100 100 100
 #82520
 key stone~
 the &+Lkey&+Wstone&n~
@@ -293,7 +293,7 @@ A &+Wwhite&n and &+Lblack&n stone has been dropped here.&n~
 ~
 18 11 3 0 7 0 8912896 1 0 0 0
 0 100 0 0 0 0 0 0
-1 199 100
+1 199 100 100
 #82521
 armor balance plate~
 &+cthe armor of &+Wbal&+Lance&n~
@@ -301,7 +301,7 @@ armor balance plate~
 ~
 9 44 3 0 7 0 1025 9 64 95993923 581632
 20 0 0 5 0 0 0 0
-12 10000 100
+12 10000 100 100
 E
 armor balance plate~
 &+cIt is unclear where this armor orginated but it seems to be forged
@@ -319,7 +319,7 @@ horns magus bantar~
 ~
 9 1 3 0 5 0 0 134217729 0 0 0
 5 0 0 3 0 0 0 0
-0 16881 100 536936448 0 0 33554432
+0 16881 100 100 536936448 0 0 33554432
 E
 horns magus bantar~
 &+wThese rings, which are worn on the horns, are marked with the
@@ -335,7 +335,7 @@ purple steel bracer~
 ~
 9 16 3 0 7 0 0 4097 0 4165209988 0
 6 0 0 4 0 0 0 0
-1 100 100
+1 100 100 100
 E
 purple steel bracer~
 &+MThis purple steel bracer has sharp spikes on it to give the wearer
@@ -352,7 +352,7 @@ blue mask~
 ~
 9 1 3 0 7 0 0 262145 64 0 0
 12 0 0 3 0 0 0 0
-1 1000 100
+1 1000 100 100
 E
 blue mask~
 &+bThis mask is almost transparent. It is most certainly not from the
@@ -371,7 +371,7 @@ black leather pants cool~
 ~
 9 13 3 0 7 0 0 33 0 0 0
 2 0 0 1 0 0 0 0
-1 123 100
+1 123 100 100
 E
 black leather pants cool~
 &+LBlack leather pants, crafted by some unknown leatherworker, but
@@ -384,7 +384,7 @@ deck cool cards aces~
 ~
 13 15 3 0 7 0 0 8388609 0 0 0
 0 0 0 0 0 0 0 0
-1 123 100
+1 123 100 100
 E
 deck cool cards aces~
 &+rAces &+Ware cool. Just ask &+LRico&+W. If you had a deck of all &+races&+W,
@@ -397,7 +397,7 @@ magic ball cool~
 ~
 13 7 3 0 7 0 0 8388609 0 0 0
 0 0 0 0 0 0 0 0
-1 777 100
+1 777 100 100
 E
 magic ball cool~
 You shake it...
@@ -411,7 +411,7 @@ A &+rroyal fal&+Lchion&n has been left behind here.&n~
 ~
 5 15 3 0 7 0 1024 8193 0 85553177 0
 8 3 4 11 0 0 0 0
-4 1234 100
+4 1234 100 100
 E
 royal falchion~
 &+rThis falchion is the standard issue weapon of the &+MMyrabolan
@@ -430,7 +430,7 @@ jack bottle cool~
 ~
 17 15 3 0 7 0 0 8388609 0 0 0
 5 5 5 0 0 0 0 0
-1 123 100
+1 123 100 100
 E
 jack bottle cool~
 &+yThe best brand of sour whiskey in the world! Remember, dont drink
@@ -443,7 +443,7 @@ quiver masters case~
 ~
 30 15 3 0 7 0 1 1048577 64 0 0
 30 0 1 0 0 0 0 0
-1 2345 100
+1 2345 100 100
 E
 quiver masters case~
 &+RThis &+Wquiver&n &+Rappears small at first glance but it never seems to
@@ -458,7 +458,7 @@ myrabolan arrow~
 ~
 7 15 3 4 7 0 0 16385 0 0 0
 4 2 8 1 0 0 0 0
-1 234 100
+1 234 100 100
 E
 myrabolan arrow~
 &+MThe shaft of this arrow is cut from the lumbar that grows abundantly
@@ -471,7 +471,7 @@ totem tri lord~
 ~
 34 9 3 0 7 0 0 16385 0 0 0
 60 0 0 0 0 0 0 0
-1 12121 100
+1 12121 100 100
 E
 totem tri lord~
 &+LThis multicoloured totem seems to gather the &+bmagics&n &+Lof
@@ -489,7 +489,7 @@ service tags~
 ~
 9 16 3 0 7 0 1 5 0 0 0
 6 0 0 3 0 0 0 0
-1 1212 100
+1 1212 100 100
 E
 service tags 58~
 &+cThese steel tags have the nickname of the leader of squad &+W58&n etched
@@ -506,7 +506,7 @@ drums dignity instrument~
 ~
 32 3 3 0 7 0 0 16385 0 0 0
 188 21 0 10 0 0 0 0
-1 12 100
+1 12 100 100
 E
 drums dignity~
 &+MThese appear to be an excellent set of drums, used by Myrabolan bards.&n
@@ -520,7 +520,7 @@ silver ring moon~
 ~
 9 22 3 0 7 0 0 3 1 0 0
 4 0 0 3 0 0 0 0
-2 122 100
+2 122 100 100
 E
 silver ring moon~
 &+cThis &+Wsilver&n &+cring appears to be elven in design.
@@ -534,7 +534,7 @@ golden earring elven nobility~
 ~
 9 15 3 0 7 0 0 524289 0 0 0
 7 0 0 1 0 0 0 0
-1 12 100
+1 12 100 100
 E
 golden earring elven nobility~
 &+yThis tiny, golden earring, seems be of elven origin and possesses
@@ -549,7 +549,7 @@ An unwanted palace key sits on the ground here.~
 ~
 18 15 3 0 7 0 8388608 16385 0 0 0
 0 0 0 0 0 0 0 0
-1 1 100
+1 1 100 100
 #82538
 observatory key~
 &+Wthe observatory key&n~
@@ -557,7 +557,7 @@ observatory key~
 ~
 18 15 3 0 7 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
-0 109 100
+0 109 100 100
 E
 observatory key~
 &+WThis key is quite small, but it must have some grand importance.&n
@@ -569,7 +569,7 @@ swirling portal~
 ~
 25 15 3 0 7 0 0 0 0 0 0
 13341 7 -1 0 0 0 0 0
-0 0 100
+0 0 100 100
 E
 swirling portal~
 &+WBy peering into this swirling portal one can clearly see a huge
@@ -582,7 +582,7 @@ tree bark sleeves~
 ~
 9 6 3 0 7 0 0 257 0 0 0
 5 0 0 3 0 0 0 0
-0 9009 100
+0 9009 100 100
 E
 tree bark sleeves~
 &+yThese sleeves may be uncomfortable to wear, but they have been
@@ -599,7 +599,7 @@ fire pit~
 ~
 13 15 3 0 7 0 262144 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 E
 fire pit~
 &+yThis small &+rfire&+y pit has been dug into the earth and burns almost
@@ -612,7 +612,7 @@ dragon scale~
 ~
 8 35 3 0 7 0 8392704 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 1000 100
+0 1000 100 100
 E
 dragon scale~
 &+cThis massive dragon scale has come from a mythical celestial dragon.
@@ -626,7 +626,7 @@ small letter~
 ~
 16 15 3 0 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-1 1 100
+1 1 100 100
 E
 small letter~
         &+CNansuo&+b, please be advised the stories are true. The &+Ytreasure&n
@@ -645,7 +645,7 @@ A dresser drawer is open here.&n~
 ~
 15 15 3 0 7 0 2 0 0 0 0
 1000 5 0 1000 0 0 0 0
-0 0 100
+0 0 100 100
 #82545
 quiver masters case~
 &+Wthe &+Rmast&+Wers &+Rqui&+Wver&n~
@@ -653,7 +653,7 @@ quiver masters case~
 ~
 30 15 3 0 7 0 1 1048577 64 0 0
 100 0 1 0 0 0 0 0
-10 2345 100
+10 2345 100 100
 E
 quiver masters case~
 &+RThis &+Wquiver&n &+Rappears small at first glance but it never seems to
@@ -670,7 +670,7 @@ life raft~
 ~
 15 6 3 0 7 0 8192 0 0 0 0
 1000 5 0 1000 0 0 0 0
-0 0 100
+0 0 100 100
 E
 life raft~
 &+yThis raft seems to have sprung a leak and is in the process of
@@ -683,7 +683,7 @@ staff drider bones~
 ~
 4 10 3 0 7 0 0 16385 0 0 0
 35 1 1 2 0 0 0 0
-1 33333 100
+1 33333 100 100
 #82548
 chrome polished sun glasses~
 &+wsome &+cpoli&+Wshed &+wchrome-&+ccoloured &+Ysun&+wglasses&n~
@@ -691,7 +691,7 @@ chrome polished sun glasses~
 ~
 9 44 3 0 7 0 0 131073 0 0 0
 8 0 0 2 0 0 0 0
-1 31222 100 0 16 0 0
+1 31222 100 100 0 16 0 0
 E
 chrome polished sun glasses~
 &+wThese are some of the most stylish sunglasses ever seen.  Even Rico
@@ -706,7 +706,7 @@ white stone broad sword whitestone~
 ~
 5 11 3 0 7 0 4194304 8193 0 0 0
 13 4 4 3 0 0 0 0
-1 27171 100
+1 27171 100 100
 E
 white stone broad sword whitestone~
 &+cThis broadsword has been crafted out of &+Wwhitestone&+c, a fairly
@@ -724,7 +724,7 @@ wad tree sap~
 ~
 8 51 3 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 2 100
+0 2 100 100
 E
 wad tree sap~
 &+yThis tree sap appears very very sticky, and could most likely bind
@@ -737,7 +737,7 @@ spiked pair purple sabatons~
 ~
 9 15 3 0 7 0 0 65 0 0 0
 9 0 0 3 0 0 0 0
-1 23881 100
+1 23881 100 100
 A
 19 2
 A
@@ -749,7 +749,7 @@ purple vial~
 ~
 10 15 3 0 7 0 0 16385 0 0 0
 50 15 15 1 0 0 0 0
-1 11111 100
+1 11111 100 100
 #82553
 combat brace maelstrom~
 &+Cthe co&+wmbat bra&+Lce of the mael&+wstr&+Com~
@@ -757,7 +757,7 @@ combat brace maelstrom~
 ~
 9 1 3 0 7 0 0 4097 0 0 0
 9 0 0 3 0 0 0 0
-0 33121 100
+0 33121 100 100
 A
 18 3
 A
@@ -769,7 +769,7 @@ priests shayla maelstrom~
 ~
 9 1 3 0 7 0 0 131073 0 0 0
 4 0 0 1 0 0 0 0
-0 20101 100
+0 20101 100 100
 A
 34 2
 A
@@ -781,7 +781,7 @@ axe maelstrom~
 ~
 5 15 3 0 7 0 0 8193 0 0 0
 1 2 8 3 0 0 0 0
-0 22333 100 2048 12288 0 0
+0 22333 100 100 2048 12288 0 0
 A
 18 4
 A
@@ -793,7 +793,7 @@ strip skin su monster~
 ~
 9 2 3 0 7 0 0 2049 0 0 0
 5 0 0 3 0 0 0 0
-0 6721 100
+0 6721 100 100
 A
 13 10
 #82557
@@ -803,7 +803,7 @@ golden plated chest~
 ~
 15 15 3 0 5 0 0 0 0 0 0
 1000 13 82558 1000 0 0 0 0
-0 0 100
+0 0 100 100
 #82558
 gold key~
 &+yan ancient &+Ygold&+y tinted key&n~
@@ -811,7 +811,7 @@ gold key~
 ~
 18 15 3 0 5 0 4096 16385 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #82559
 masters longbow bow~
 &+Wth&+Re ma&+Wste&+Rrs &+Wlong&+Rbow&n~
@@ -819,7 +819,7 @@ masters longbow bow~
 ~
 6 6 3 0 11 0 4194305 24577 0 0 0
 105 90 0 1 0 0 0 0
-0 43211 100 0 16 0 0
+0 43211 100 100 0 16 0 0
 E
 masters longbow bow~
 &+WThis bow seems to be of the hig&+Rhest quality in the co&+Wuntry side. It
@@ -836,7 +836,7 @@ belt embossed silver moon~
 ~
 9 14 3 0 11 0 0 2049 0 0 0
 8 0 0 2 0 0 0 0
-0 8921 100
+0 8921 100 100
 A
 18 2
 A
@@ -848,7 +848,7 @@ pelt su hide monster~
 ~
 8 2 3 0 5 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 1 100
+0 1 100 100
 E
 pelt su hide monster~
 &+gThis hide could be useful to trappers and skinnners, perhaps.&n
