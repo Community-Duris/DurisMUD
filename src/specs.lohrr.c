@@ -339,10 +339,18 @@ int proc_load_firesworn( P_obj obj, P_char ch, int cmd, char *argument )
   }
 
   // Send out a shout...
-  radiate_message_from_room(ROOM_FIRESWORN, "&+cYou hear a loud roar in the distance.&n\r\n", 15,
+  radiate_message_from_room(ROOM_FIRESWORN, "&+LYou shudder as a violent &+Ycrash &+Lof &+cthunder &+Lbreaks across the walls of the caverns.&n\n\r"
+    "&+rMalphas&+L, Duke of A&+wve&+Wr&+wnu&+Ls and &+yGuardian &+Lof &+rTiamat&+L'&+rs &+LLair &+wshouts &+Lin a &+Ygutteral &+Ltongue:&n\n\r"
+    "&+L\"&+rF&+RI&+YR&+WESW&+YO&+RR&+rN &+LLEGION! &n&+RTO ARMS!&n &+WSEEK &+LAND &+WDESTROY &+LTHOSE WHO WOULD CHALLENGE THE MIGHT OF THE "
+    "&+GD&+gR&+GA&+gG&+GO&+gN &+MQ&+mU&+ME&+mE&+MN&+L!\"&n\n\r"
+    "&+LThe sounds of heavy marching feet and demonic hissing seems to echo off the A&+rz&+Lh&+ru&+Lr&+ra&+Ll cavern walls...&n\n\r", 15,
     (RMFR_FLAGS) (RMFR_RADIATE_ALL_DIRS | RMFR_PASS_WALL | RMFR_PASS_DOOR | RMFR_CROSS_ZONE_BARRIER), 100);
   // Send shout to the load room too.
-  act("&+cYou hear a loud roar in the distance.&n",
+  act( "&+LYou shudder as a violent &+Ycrash &+Lof &+cthunder &+Lbreaks across the walls of the caverns.&n\n\r"
+    "&+rMalphas&+L, Duke of A&+wve&+Wr&+wnu&+Ls and &+yGuardian &+Lof &+rTiamat&+L'&+rs &+LLair &+wshouts &+Lin a &+Ygutteral &+Ltongue:&n\n\r"
+    "&+L\"&+rF&+RI&+YR&+WESW&+YO&+RR&+rN &+LLEGION! &n&+RTO ARMS!&n &+WSEEK &+LAND &+WDESTROY &+LTHOSE WHO WOULD CHALLENGE THE MIGHT OF THE "
+    "&+GD&+gR&+GA&+gG&+GO&+gN &+MQ&+mU&+ME&+mE&+MN&+L!\"&n\n\r"
+    "&+LThe sounds of heavy marching feet and demonic hissing seems to echo off the A&+rz&+Lh&+ru&+Lr&+ra&+Ll cavern walls...&n\n\r",
     FALSE, leader, NULL, 0, TO_ROOM);
   // We always return false 'cause we don't want to prevent movement.
   return FALSE;
