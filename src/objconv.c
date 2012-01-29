@@ -666,7 +666,7 @@ int getSpellCost(const int spell)
     return 25000;
   case SPELL_SCALDING_BLAST:
     return 35000;
-  case SPELL_PYTHONSTING:
+  case SPELL_COBRASTING:
     return 8500;
   case SPELL_SNAILSPEED:
     return 23450;
@@ -716,7 +716,7 @@ int getSpellCost(const int spell)
     return 80000;
   case SPELL_ELEPHANTSTRENGTH:
     return 75000;
-  case SPELL_GREATER_PYTHONSTING:
+  case SPELL_GREATER_COBRASTING:
     return 35000;
   case SPELL_SCATHING_WIND:
     return 150000;

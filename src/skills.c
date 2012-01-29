@@ -2332,9 +2332,9 @@ void initialize_skills()
                    spell_wolfspeed, "You feel less like a wolf and more like your normal self.");
   SPELL_ADD(CLASS_SHAMAN, 1);
 
-  SPELL_CREATE("pythonsting", SPELL_PYTHONSTING, PULSE_SPELLCAST,
+  SPELL_CREATE("cobrasting", SPELL_COBRASTING, PULSE_SPELLCAST,
                TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO | TAR_ANIMAL,
-               spell_pythonsting);
+               spell_cobrasting);
   SPELL_ADD(CLASS_SHAMAN, 3);
 
   SPELL_CREATE_MSG("snailspeed", SPELL_SNAILSPEED, PULSE_SPELLCAST * 2,
@@ -2401,9 +2401,9 @@ void initialize_skills()
                spell_greater_ravenflight);
   SPELL_ADD(CLASS_SHAMAN, 9);
 
-  SPELL_CREATE("greater pythonsting", SPELL_GREATER_PYTHONSTING, PULSE_SPELLCAST * 4,
+  SPELL_CREATE("greater cobrasting", SPELL_GREATER_COBRASTING, PULSE_SPELLCAST * 4,
                TAR_AREA | TAR_AGGRO | TAR_ANIMAL,
-               spell_greater_pythonsting);
+               spell_greater_cobrasting);
   SPELL_ADD(CLASS_SHAMAN, 8);
 
   SPELL_CREATE("call of the wild", SPELL_CALL_OF_THE_WILD, PULSE_SPELLCAST * 3,
@@ -2466,7 +2466,7 @@ void initialize_skills()
   SPELL_CREATE("molten spray", SPELL_MOLTEN_SPRAY, PULSE_SPELLCAST * (3 / 2),
                TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_CHAR_RANGE | TAR_AGGRO | TAR_ELEMENTAL,
                spell_molten_spray);
-  SPELL_ADD(CLASS_SHAMAN, 5);
+  SPEC_SPELL_ADD(CLASS_SHAMAN, 7, SPEC_ELEMENTALIST);
 
   SPELL_CREATE_MSG("earthen grasp", SPELL_EARTHEN_GRASP, PULSE_SPELLCAST,
                    TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO | TAR_ELEMENTAL,

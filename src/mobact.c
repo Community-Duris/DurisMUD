@@ -3120,8 +3120,8 @@ bool CastShamanSpell(P_char ch, P_char victim, int helping)
    /* why not?  it'll be fun */
 
     if(!spl && (number(0, 15) == 6) &&
-       npc_has_spell_slot(ch, SPELL_GREATER_PYTHONSTING))
-      spl = SPELL_GREATER_PYTHONSTING;
+       npc_has_spell_slot(ch, SPELL_GREATER_COBRASTING))
+      spl = SPELL_GREATER_COBRASTING;
 
   }
   if(spl && ch)
@@ -3153,10 +3153,10 @@ bool CastShamanSpell(P_char ch, P_char victim, int helping)
         spl = SPELL_MALISON;
 
     case 3:
-      if(!spl && npc_has_spell_slot(ch, SPELL_PYTHONSTING) &&
+      if(!spl && npc_has_spell_slot(ch, SPELL_COBRASTING) &&
           !affected_by_spell(target, SPELL_POISON) &&
           !IS_AFFECTED2(target, AFF2_POISONED))
-        spl = SPELL_PYTHONSTING;
+        spl = SPELL_COBRASTING;
         
     case 4:
       if(!spl && npc_has_spell_slot(ch, SPELL_MOUSESTRENGTH) &&

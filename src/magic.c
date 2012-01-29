@@ -16169,7 +16169,8 @@ void event_acidimmolate(P_char ch, P_char vict, P_obj obj, void *data)
     raise(SIGSEGV);
   }
   if(!vict ||
-     !IS_ALIVE(vict))
+     !IS_ALIVE(vict) ||
+     !IS_ALIVE(ch))
   {
     return;
   }
@@ -16190,12 +16191,12 @@ void event_acidimmolate(P_char ch, P_char vict, P_obj obj, void *data)
   else
   {
     if(IS_ALIVE(vict) && 
-       (spell_damage(ch, vict, dam, SPLDAM_ACID, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &messages) == DAM_NONEDEAD))
+      (spell_damage(ch, vict, dam, SPLDAM_ACID, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD))
     {
-       aciddata->damage >> 1;
+       aciddata->damage = (int) (dam * 0.75);
        aciddata->burntime--;
-       add_event(event_acidimmolate, PULSE_VIOLENCE, ch, vict, NULL, 0, &aciddata, sizeof(aciddata));
-       if(GET_CHAR_SKILL(vict, SKILL_MEDITATE) > number(1, 101) && !number(0, 8))
+       add_event(event_acidimmolate, PULSE_VIOLENCE, ch, vict, NULL, 0, data, sizeof(struct burn_data));
+       if(GET_CHAR_SKILL(vict, SKILL_MEDITATE) > number(1, 101) && !number(0, GET_LEVEL(vict) / 7))
        {
           stop_memorizing(vict);
        }
@@ -16210,7 +16211,7 @@ void spell_acidimmolate(int level, P_char ch, char *arg, int type, P_char victim
   struct burn_data aciddata;
   if(!ch)
   {
-    logit(LOG_EXIT, "spell_immolate called in magic.c with no ch");
+    logit(LOG_EXIT, "spell_acidimmolate called in magic.c with no ch");
     raise(SIGSEGV);
   }
   
@@ -16219,8 +16220,11 @@ void spell_acidimmolate(int level, P_char ch, char *arg, int type, P_char victim
     return;
   }
   
-  dam = (dice(18, 2) + dice(8, level / 8));
-  acidburn = (level - 1) / 10;
+  dam = (dice(18, 2) + dice(level / 8, 4));
+  acidburn = (int) ((level - 1) / 10);
+
+  if(NewSaves(victim, SAVING_SPELL, 0))
+    dam >> 1;
 
   act("&+GYour bubbling spray of goo strikes $N&+G full on!&N", TRUE, ch, 0, victim, TO_CHAR);
   act("&+GA bubbling spray of goo spews from $n&+G striking you &+Gfull on!&N", FALSE, ch, 0, victim, TO_VICT);
@@ -16240,9 +16244,9 @@ void event_immolate(P_char ch, P_char vict, P_obj obj, void *data)
   int dam, burntime, in_room;
   struct burn_data *burndata = (struct burn_data*)data;
   struct damage_messages messages = {
-   "&+RF&+rl&+Ram&+Wes &+ysmother $N, &+Lse&+war&+Ling&+y and &+rba&+Rki&+rng&+y $M.",
+   "&+RFl&+ram&+Res &+ysmother $N&+y, &+Lse&+rari&+Lng &+y$S exposed &+rflesh!&n",
     "&+RThe fire burns &+Wwhite &+Rhot as it consumes your flesh!",
-    "&+RF&+Yir&+We &+Ls&+wea&+Lrs&+y and &+rb&+Rak&+res&n $N!",
+    "&+RFl&+ram&+Res &+ysmother $N&+y, &+Lse&+rari&+Lng &+y$S exposed &+rflesh!&n",
     "$N screams in agony as &+Rthe flames&n consume $M completely.",
     "You scream in agony as &+Rthe flames&n consume you completely.",
     "$N screams in agony as &+Rthe flames&n consume $M completely.", 0
@@ -16260,7 +16264,7 @@ void event_immolate(P_char ch, P_char vict, P_obj obj, void *data)
    
   burntime = burndata->burntime;
   dam = burndata->damage;
- 
+
   if(burntime-- <= 0)
   {
     act("The &+Yfi&+Rer&+Yy&N &+rconflagration&n subsides!", FALSE, ch, 0, vict, TO_VICT);
@@ -16270,19 +16274,20 @@ void event_immolate(P_char ch, P_char vict, P_obj obj, void *data)
       act("The &+Yfi&+Rer&+Yy&N &+rconflagration&N burning $N subsides!", FALSE, ch, 0, vict, TO_CHAR);
       return;
     }
-    else
-    {
-      if(IS_ALIVE(vict) && spell_damage(ch, vict, dam, SPLDAM_FIRE, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD)
-      {       
-        burndata->damage >> 1;
-        burndata->burntime--;
-        add_event(event_immolate, PULSE_VIOLENCE, ch, vict, NULL, 0, &burntime, sizeof(burntime));
-        if(GET_CHAR_SKILL(vict, SKILL_MEDITATE) > number(1, 101) && !number(0, 10))
-        {
-           stop_memorizing(vict);
-        }
-        return;
+  }
+  else
+  {
+    if(IS_ALIVE(vict) && 
+      (spell_damage(ch, vict, dam, SPLDAM_FIRE, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD))
+    {       
+      burndata->damage = (int) (dam * 0.75);
+      burndata->burntime--;
+      add_event(event_immolate, PULSE_VIOLENCE, ch, vict, NULL, 0, data, sizeof(struct burn_data));
+      if(GET_CHAR_SKILL(vict, SKILL_MEDITATE) > number(1, 101) && !number(0, GET_LEVEL(vict) / 7))
+      {
+         stop_memorizing(vict);
       }
+      return;
     }
   }
 }
@@ -16302,14 +16307,17 @@ void spell_immolate(int level, P_char ch, char *arg, int type, P_char victim, P_
   }
 
   dam = dice(25, 3) + (level / 7);
-  burn = (level - 1) / 14;
+  burn = (int) (level - 1) / 12;
+
+  if(NewSaves(victim, SAVING_SPELL, 0))
+    dam >> 1;
 
   act("Your &+Yfi&+Rer&+Yy&N blast strikes $N full on!", TRUE, ch, 0, victim, TO_CHAR);
-  act("A &+Yfi&+Rer&+Yy&N &+rconflagration&N spews from $n striking you full on!", FALSE, ch, 0, victim, TO_VICT);
-  act("A &+Yfi&+Rer&+Yy&N &+rconflagration&N spews from $n striking $N full on!", FALSE, ch, 0, victim, TO_NOTVICT);
+  act("A &+Yfi&+Rer&+Yy &+rconflagration&N spews from $n striking you full on!", FALSE, ch, 0, victim, TO_VICT);
+  act("A &+Yfi&+Rer&+Yy &+rconflagration&N spews from $n striking $N full on!", FALSE, ch, 0, victim, TO_NOTVICT);
   engage(ch, victim);
 
-  if(IS_ALIVE(victim) && (spell_damage(ch, victim, dam, SPLDAM_FIRE, SPLDAM_NODEFLECT, NULL) == DAM_NONEDEAD));
+  if(spell_damage(ch, victim, dam, SPLDAM_FIRE, SPLDAM_NODEFLECT, NULL) == DAM_NONEDEAD);
   {
     burndata.damage = dam;
     burndata.burntime = burn;
@@ -16642,7 +16650,7 @@ void event_cdoom(P_char ch, P_char victim, P_obj obj, void *data)
   if(cDoomData->area)
   {
     //act("&+LA wave of &+minsects &+Land &+marachnids &+Lcrawls about the area...", FALSE, ch, 0, victim, TO_CHAR);
-    send_to_room("A wave of &+minsects &+Land &+marachnids &+Lcrawls about the area...", real_room(cDoomData.room, VIRTUAL));
+    send_to_room("A wave of &+minsects &+Land &+marachnids &+Lcrawls about the area...", real_room(cDoomData->room));
   }
 
   if(cDoomData->area)

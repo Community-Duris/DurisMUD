@@ -816,7 +816,7 @@ int amphisbean(P_char ch, P_char tch, int cmd, char *arg)
   {
     act("$n &+GBLURS &+gwith the speed of light...&n", FALSE, ch, 0, 0,
         TO_ROOM);
-    spell_greater_pythonsting(60, ch, NULL, SPELL_TYPE_SPELL, 0, 0);
+    spell_greater_cobrasting(60, ch, NULL, SPELL_TYPE_SPELL, 0, 0);
     return TRUE;
   }
 

@@ -284,7 +284,7 @@ struct random_spells spells_data[61] = {
   {15, SPELL_FLESH_ARMOR, 1},
   {16, SPELL_WOLFSPEED, 1},
   {17, SPELL_HAWKVISION, 1},
-  {18, SPELL_PYTHONSTING, 0, "&+gthe snake"},
+  {18, SPELL_COBRASTING, 0, "&+gthe snake"},
   {19, SPELL_FLAMEBURST, 0, "&+Rflameburst"},
   {20, SPELL_SCORCHING_TOUCH, 0, "&+Rscorching"},
   {21, SPELL_CURE_SERIOUS, 1},
