@@ -350,6 +350,7 @@ void update_dam_factors()
   dam_factor[DF_BERSERKRAGE] = get_property("damage.increase.berserk.rage", 1.350);
   dam_factor[DF_ENERGY_CONTAINMENT] = get_property("damage.reduction.EnergyContainment", 0.750);
   dam_factor[DF_GUARDIANS_BULWARK] = get_property("damage.reduction.guardians.bulwark", 0.850);
+  dam_factor[DF_PROT_F_UNDEAD] = get_property("damage.reduction.prot.from.undead", 0.750);
 }
 
 // The swashbuckler is considered the victim.
@@ -718,7 +719,6 @@ void AddFrags(P_char ch, P_char victim)
   /*  Code for recent frags to allow blood task to be fulfilled within a set
       period of time indicated in epic.frag.thrill.duration.  This allows for
       multiple frags to add up to enough to fulfill blood task - Jexni 12/1/08 */
-
       
   if(EVIL_RACE(ch) &&
      GOOD_RACE(victim))
@@ -727,12 +727,10 @@ void AddFrags(P_char ch, P_char victim)
         
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   { 
-
     if((IS_PC(tch) &&
       (grouped(ch, tch)) ||
       ch == tch))
-    {
-     
+    { 
       for(afp = tch->affected; afp; afp = next_af)
       {
         next_af = afp->next;
@@ -772,7 +770,7 @@ void AddFrags(P_char ch, P_char victim)
           af.type = TAG_PLR_RECENT_FRAG;
           af.flags = AFFTYPE_SHORT | AFFTYPE_NODISPEL | AFFTYPE_NOAPPLY;
           af.modifier = recfrag + real_gain;
-          af.duration = get_property("epic.frag.thrill.duration", 45) * WAIT_SEC;
+          af.duration = get_property("epic.frag.thrill.duration", 45);
           affect_to_char(tch, &af);
         }
         else if(affected_by_spell(tch, TAG_PLR_RECENT_FRAG))
@@ -784,7 +782,7 @@ void AddFrags(P_char ch, P_char victim)
             if(af1->type == TAG_PLR_RECENT_FRAG)
             {
               af1->modifier = af1->modifier + real_gain;
-              af1->duration = get_property("epic.frag.thrill.duration", 45) * WAIT_SEC;;
+              af1->duration = get_property("epic.frag.thrill.duration", 45);
             }
           }
         }
@@ -1865,7 +1863,7 @@ void death_cry(P_char ch)
         break;
         case 2:
         sprintf(buf,
-                "&+rYour spine tingles as a rattling death cry reaches your senses from nearby.\r\n");
+                "&+rYour spine tingles as a rattling death cry echoes from nearby.\r\n");
         break;
         case 3:
         sprintf(buf,
@@ -1883,9 +1881,7 @@ void death_rattle(P_char ch)
   int      door, was_in, room;
   char     buf[MAX_INPUT_LENGTH];
 
-  act
-    ("&+rYou feel a carnal satisfaction as $n&+r's gurgling and choking signals $s demise.&n",
-     FALSE, ch, 0, 0, TO_ROOM);
+  act("&+rYou feel a carnal satisfaction as $n&+r's gurgling and choking signals $s demise.&n", FALSE, ch, 0, 0, TO_ROOM);
   was_in = ch->in_room;
   play_sound(SOUND_DEATH_CRY, NULL, was_in, TO_ROOM);
 
@@ -2777,28 +2773,29 @@ void kill_gain(P_char ch, P_char victim)
   }
 }
 
-void dam_message(double fdam, P_char ch, P_char victim,
-                 struct damage_messages *messages)
+void dam_message(double fdam, P_char ch, P_char victim, struct damage_messages *messages)
 {
   int      dam = (int) fdam;
   P_obj    wield;
   P_obj    wpn;
-  char    *buf, buf_char[160], buf_vict[160], buf_notvict[160];
+  char    *buf, buf_char[MAX_STRING_LENGTH], buf_vict[MAX_STRING_LENGTH], buf_notvict[MAX_STRING_LENGTH];
   int      w_percent, h_percent, max_dam = 0, w_loop, h_loop, dam2;
   int      msg_flags = messages->type;
-  static int dam_ref[] = { 0, 2, 7, 10, 15, 25, 40, 55, 70, 85, 9999 };
+  static int dam_ref[] = {0, 2, 4, 7, 10, 14, 18, 24, 30, 40, 55, 70, 9999};
   const char *weapon_damage[] = {
     "",
-    " feeble",
-    " weak",
-    " crude",
-    " decent",
-    " fine",
-    " impressive",
-    " powerful",
-    " mighty",
-    " awesome",
-    " amazing",
+    " &+gfeeble&n",
+    " &+gweak&n",
+    " &+gcrude&n",
+    " &+mdecent&n",
+    " &+mfine&n",
+    " &+mskillful&n",
+    " &+bstrong&n",
+    " &+bimpressive&n",
+    " &+bpowerful&n",
+    " &+rmighty&n",
+    " &+rawesome&n",
+    " &+ramazing&n",
   };
 
   const char *victim_damage[] = {
@@ -2857,17 +2854,20 @@ void dam_message(double fdam, P_char ch, P_char victim,
   }
 
   h_percent = BOUNDED(0, (int) ((dam * 100) / (GET_HIT(victim) + dam + 10)), 100);
-  w_percent = BOUNDED(0, (int) ((dam * 100) / (max_dam + dam + 10)), 100);
+//  w_percent = BOUNDED(0, (int) ((dam * 100) / (max_dam + dam + 10)), 100);
 
   for (h_loop = 0; (h_percent > dam_ref[h_loop]); h_loop++) ;
   if(h_loop > 10)
     h_loop = 10;                /* h and w require reverse. dont ask why */
-  for (w_loop = 0; (w_percent > dam_ref[w_loop]); w_loop++) ;
-  if(w_loop > 10)
-    w_loop = 0;
+//  for (w_loop = 0; (w_percent > dam_ref[w_loop]); w_loop++) ;
+//  if(w_loop > 10)
+//    w_loop = 0;
 
-  if(!number(0, 3))
-    w_loop = 0;
+//  if(!number(0, 3))
+//    w_loop = 0;
+
+  // let's just go with actual numbers instead of percentage to spice things up for wipe2011
+  for(w_loop = 0; dam > dam_ref[w_loop]; w_loop++);
 
   if(msg_flags & DAMMSG_HIT_EFFECT)
   {
@@ -3895,7 +3895,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
           bzero(&af, sizeof(af));
           af.type = TAG_TROLL_BURN;
           af.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
-          af.duration = WAIT_SEC * 20;
+          af.duration = 20;
           affect_to_char(victim, &af);
         }
         else
@@ -3905,7 +3905,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
           {
             if(af1->type == TAG_TROLL_BURN)
             {
-              af1->duration =  WAIT_SEC * 20;
+              af1->duration = 20;
             }
           }
         }
@@ -4052,6 +4052,8 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
         dam *= dam_factor[DF_SLSHIELDINCREASE];
       if(IS_AFFECTED4(victim, AFF4_NEG_SHIELD))
         dam *= dam_factor[DF_NEG_SHIELD_SPELL];
+      if(affected_by_spell(ch, SPELL_PROT_FROM_UNDEAD))
+        dam *= dam_factor[DF_PROT_F_UNDEAD];
       break;
     case SPLDAM_EXPLAN:
       dam *= dam_factor[DF_EXPLAN];
@@ -4124,7 +4126,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
         bzero(&af, sizeof(af));
         af.type = SPELL_MAJOR_PARALYSIS;
         af.flags = AFFTYPE_SHORT;
-        af.duration = WAIT_SEC * 3;
+        af.duration = 3;
         af.bitvector2 = AFF2_MAJOR_PARALYSIS;
 
         affect_to_char(victim, &af);
@@ -4256,7 +4258,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
         memset(&shock_af, 0, sizeof(shock_af));
         shock_af.type = SPELL_LIGHTNING_BOLT;
         shock_af.flags = AFFTYPE_SHORT;
-        shock_af.duration = (int) (get_property("shock.duration", 2.000 * WAIT_SEC));
+        shock_af.duration = (int) (get_property("shock.duration", 2.000));
         affect_to_char(victim, &shock_af);
       }
     }
@@ -5860,7 +5862,7 @@ bool monk_critic(P_char ch, P_char victim)
       aff.type = TAG_PRESSURE_POINTS;
       aff.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL | AFFTYPE_NOAPPLY;
       aff.modifier = 1;
-      aff.duration = (10 * WAIT_SEC);
+      aff.duration = 10;
       affect_to_char(victim, &aff);
       return false;
     }
@@ -5891,7 +5893,7 @@ bool monk_critic(P_char ch, P_char victim)
 
     if(af->modifier == 4)
     {
-      CharWait(victim, (2 * WAIT_SEC));
+      CharWait(victim, 2);
       act("$n strikes you hard at the side of the neck.", TRUE, ch, 0, victim, TO_VICT);
       act("$n deals a crippling blow to the side of $N's neck.", TRUE, ch, 0, victim, TO_NOTVICT);
       act("You deal a crippling blow to the side of $N's neck.", TRUE, ch, 0, victim, TO_CHAR);
@@ -7183,7 +7185,7 @@ void set_fighting(P_char ch, P_char vict)
     bzero(&af, sizeof(af));
     af.type = TAG_PVP_ENGAGE;
     af.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
-    af.duration = WAIT_SEC * 4;
+    af.duration = 4;
     affect_to_char(vict, &af);
     affect_to_char(ch, &af);
   }
@@ -8251,7 +8253,7 @@ void perform_violence(void)
           {
             if(afp->type == TAG_PVPDELAY)
             {
-              afp->duration = WAIT_SEC * 20;
+              afp->duration = 20;
             }
           }
         } 
@@ -8260,7 +8262,7 @@ void perform_violence(void)
           bzero(&aff, sizeof(aff));
           aff.type = TAG_PVPDELAY;
           aff.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
-          aff.duration = WAIT_SEC * 20;
+          aff.duration = 20;
           affect_to_char(ch, &aff);
         }
 
@@ -8270,7 +8272,7 @@ void perform_violence(void)
           {
             if(afp->type == TAG_PVPDELAY)
             {
-              afp->duration = WAIT_SEC * 20;
+              afp->duration = 20;
             }
           }
         }        
@@ -8279,7 +8281,7 @@ void perform_violence(void)
           bzero(&aff, sizeof(aff));
           aff.type = TAG_PVPDELAY;
           aff.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
-          aff.duration = WAIT_SEC * 20;
+          aff.duration = 20;
           affect_to_char(opponent, &aff);   
         }
 
@@ -8793,7 +8795,7 @@ void engage(P_char ch, P_char victim)
     bzero(&af, sizeof(af));
     af.type = TAG_PVP_ENGAGE;
     af.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
-    af.duration = WAIT_SEC * 4;
+    af.duration = 4;
     affect_to_char(victim, &af);
     affect_to_char(ch, &af);
   }
