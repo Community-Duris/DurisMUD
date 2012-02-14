@@ -1147,15 +1147,15 @@ void handle_memorize(P_char ch)
       else
       {
 #if !defined(CHAOS_MUD) || (CHAOS_MUD != 1)
-        if(book_class(ch) &&
-          !(SpellInSpellBook(ch, af->modifier, SBOOK_MODE_IN_INV +
-                                               SBOOK_MODE_AT_HAND + 
-                                               SBOOK_MODE_ON_BELT)))
-        {
-          send_to_char("You have managed to misplace your spellbook!\n", ch);
-          show_stop_memorizing(ch);
-          return;
-        }
+        //if(book_class(ch) &&
+        //  !(SpellInSpellBook(ch, af->modifier, SBOOK_MODE_IN_INV +
+        //                                       SBOOK_MODE_AT_HAND + 
+        //                                       SBOOK_MODE_ON_BELT)))
+        //{
+        //  send_to_char("You have managed to misplace your spellbook!\n", ch);
+        //  show_stop_memorizing(ch);
+        //  return;
+        //}
 #endif
         if(meming_class(ch))
         {
