@@ -340,75 +340,75 @@ void convertMob(P_char ch)
 
   if(IS_ELITE(ch))
   {
-    damN = 7;
+    damN = 6;
     damS = 7;
-    damA = 45;
+    damA = 60;
   }
   else if(level <= 5)
   {
-    damN = 1;
+    damN = 2;
     damS = 3;
-    damA = 0;
+    damA = 4;
   }
   else if(level <= 10)
   {
-    damN = 1;
+    damN = 2;
     damS = 4;
-    damA = 1;
+    damA = 9;
   }
   else if(level <= 15)
   {
-    damN = 2;
+    damN = 3;
     damS = 3;
-    damA = 5;
+    damA = 14;
   }
   else if(level <= 20)
   {
     damN = 3;
-    damS = 3;
-    damA = 10;
+    damS = 4;
+    damA = 19;
   }
   else if(level <= 25)
   {
     damN = 3;
-    damS = 4;
-    damA = 10;
+    damS = 5;
+    damA = 24;
   }
   else if(level <= 30)
   {
     damN = 4;
     damS = 4;
-    damA = 15;
+    damA = 29;
   }
   else if(level <= 35)
   {
     damN = 5;
     damS = 4;
-    damA = 20;
+    damA = 34;
   }
   else if(level <= 40)
   {
     damN = 5;
     damS = 5;
-    damA = 25;
+    damA = 39;
   }
   else if(level <= 45)
   {
     damN = 6;
     damS = 5;
-    damA = 30;
+    damA = 44;
   }
   else if(level <= 50)
   {
     damN = 6;
     damS = 6;
-    damA = 35;
+    damA = 49;
   }
   else if(level <= 55)
   {
     damN = 7;
     damS = 6;
-    damA = 40;
+    damA = 54;
   }
   else
   {

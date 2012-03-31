@@ -3361,7 +3361,7 @@ bool kick(P_char ch, P_char victim)
       return false;
     }
     
-    dam = (GET_LEVEL(ch) + 5) * (GET_CHAR_SKILL(ch, SKILL_KICK) / 100);
+    dam = BOUNDED(5, (GET_CHAR_SKILL(ch, SKILL_KICK) / 4) + number(-5, 5), 30);
 
     CharWait(ch, PULSE_VIOLENCE * 2);
 
@@ -3381,7 +3381,7 @@ bool kick(P_char ch, P_char victim)
 
     kick_messages(ch, victim, TRUE, &messages);
     
-    if(melee_damage(ch, victim, dam , PHSDAM_TOUCH, &messages) != DAM_NONEDEAD)
+    if(melee_damage(ch, victim, dam, PHSDAM_TOUCH, &messages) != DAM_NONEDEAD)
     {
       return false;
     }
@@ -4819,7 +4819,7 @@ void attack(P_char ch, P_char victim)
   }
   else if(victim == ch->specials.fighting)
   {
-    act("You're already fighting %m, genius.\n", FALSE, ch, 0, victim, 0);
+    act("You're already fighting $M, genius.", FALSE, ch, 0, victim, 0);
     return;
   }
   else

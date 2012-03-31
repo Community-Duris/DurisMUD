@@ -304,7 +304,7 @@ int hit_regen(P_char ch)
       ;
     else if(IS_AFFECTED4(ch, AFF4_REGENERATION))
       if(GET_RACE(ch) == RACE_TROLL)
-        gain += 10;
+        gain += 6;
       else
         gain >> 1;
     else
@@ -358,8 +358,7 @@ int move_regen(P_char ch)
      if(has_innate(ch, INNATE_HORSE_BODY))
        gain = 35;
      else
-       gain = GET_LEVEL(ch) / 2;
-     //gain = 22; wipe2011
+       gain = 18;
   }
   else
   {
@@ -761,7 +760,10 @@ void display_gain(P_char ch, int gain)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (IS_TRUSTED(tch) && IS_SET(tch->specials.act2, PLR2_EXP))
+    if(!IS_ALIVE(tch))
+      continue;
+
+    if(IS_TRUSTED(tch) && IS_SET(tch->specials.act2, PLR2_EXP))
     {
       send_to_char(buffer, tch);
     }
@@ -827,7 +829,7 @@ float gain_exp_modifiers(P_char ch, P_char victim, float XP)
     {
       XP = XP * get_property("gain.exp.mod.victim.location.hometown", 1.00);
       if(!number(0, 100)) // Limit the spam
-        send_to_char("&+gThis being a hometown, you receive fewer exps...&n\r\n", ch);
+        send_to_char("&+gThis being a hometown, you receive less experience...\r\n", ch);
     } 
       
     if(!IS_MULTICLASS_NPC(victim) &&
@@ -993,21 +995,21 @@ int exp_mod(P_char k, P_char victim)
   else if (diff > 5)            /* 6-10    */
     mod = 55;
   else if (diff > 2)            /* 3-5    */
-    mod = 75;
+    mod = 95;
   else if (diff >= 0)           /* 0-2    */
-    mod = 85;
-  else if (diff > -3)           /* -2 - 1    */
     mod = 100;
-  else if (diff > -6)           /* -6 - -3    */
+  else if (diff > -3)           /* -2 - 1    */
     mod = 105;
-  else if (diff > -10)           /* -9 - -6    */
-    mod = 108;
-  else if (diff > -15)          /* -14 - -10    */
-    mod = 109;
-  else if (diff > -20)          /* -19 - -15    */
+  else if (diff > -6)           /* -6 - -3    */
     mod = 110;
+  else if (diff > -10)           /* -9 - -6    */
+    mod = 120;
+  else if (diff > -15)          /* -14 - -10    */
+    mod = 130;
+  else if (diff > -20)          /* -19 - -15    */
+    mod = 140;
   else                          /* < -20 */
-    mod = 110;                  
+    mod = 150;                  
     
   return mod;
 }
@@ -1104,7 +1106,6 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     XP = gain_exp_modifiers(ch, victim, XP);
     XP = gain_exp_modifiers_race_only(ch, victim, XP);    
     XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP);
-// debug("damage 7 exp gain (%d)", (int)XP);
     XP = XP + (int)((float)XP * get_epic_bonus(ch, EPIC_BONUS_EXP));
   }
   else if(type == EXP_HEALING)

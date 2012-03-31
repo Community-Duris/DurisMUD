@@ -2679,7 +2679,7 @@ void kill_gain(P_char ch, P_char victim)
   int group_size = 0;
   int highest_level = 0;
 
-  if( IS_PC(victim) )
+  if(IS_PC(victim))
   {
     if(GOOD_RACE(ch) && 
        GOOD_RACE(victim) ||
@@ -2698,7 +2698,7 @@ void kill_gain(P_char ch, P_char victim)
     gain = GET_EXP(victim);
   }
   
-  if( !ch->group )
+  if(!ch->group)
   {
     send_to_char("You receive your share of experience.\r\n", ch);
     gain_exp(ch, victim, gain, EXP_KILL);
@@ -4796,11 +4796,17 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     return;
       
   // So does not being alive!
-  if(GET_RACE(victim) == RACE_CONSTRUCT)
+  if(GET_RACE(victim) == RACE_CONSTRUCT ||
+     GET_RACE(victim) == RACE_PLANT)
     return;
 
   if(flags & SPLDAM_NOVAMP)
     return;
+
+  if(UNDEADRACE(victim))
+  {
+    dam >> 1;
+  }
 
   // Physical type actions that vamp
   // PC vamp touch.
@@ -4809,7 +4815,8 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     IS_AFFECTED2(ch, AFF2_VAMPIRIC_TOUCH) &&
     IS_PC(ch) &&
     !IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM) &&
-    !IS_AFFECTED4(ch, AFF4_BATTLE_ECSTASY))
+    !IS_AFFECTED4(ch, AFF4_BATTLE_ECSTASY) &&
+    !IS_AFFECTED4(ch, AFF4_HELLFIRE))
   {
    // The class order makes a difference to multiclass chars.
     if(GET_CLASS(ch, CLASS_ANTIPALADIN))
@@ -5320,7 +5327,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
     sprintf(buffer, "Damage: %d\n", (int) dam);
 
     for (tch = world[victim->in_room].people; tch; tch = tch->next_in_room)
-      if(IS_TRUSTED(tch) && IS_SET(tch->specials.act2, PLR2_DAMAGE) )
+      if(/*IS_TRUSTED(tch) &&*/ IS_SET(tch->specials.act2, PLR2_DAMAGE))
         send_to_char(buffer, tch);
 
     if(messages->type & DAMMSG_TERSE)
@@ -5598,18 +5605,18 @@ int calculate_ac(P_char ch, bool flag)
     int mod = load_modifier(ch) / 2; // Modifies agility AC to account for weight carried
     victim_ac += mod;
   }
-  else if(IS_NPC(ch) && GET_LEVEL(ch) < 50)
+  else if(IS_NPC(ch) && GET_LEVEL(ch) < 30)
   {
-    victim_ac += (75 - GET_LEVEL(ch)); // this helps PC's at low levels hit NPC's
+    victim_ac += (125 - GET_LEVEL(ch)); // this helps PC's at low levels hit NPC's
   }
 
   if(flag)
   {
     victim_ac += GET_AC(ch); // Adds in modifiers from equipment
-    return BOUNDED(-500, (int)victim_ac, 100);
+    return BOUNDED(-500, (int)victim_ac, 250);
   }
 
-  return BOUNDED(-250, (int)victim_ac, 100);
+  return BOUNDED(-250, (int)victim_ac, 250);
 }
 
 int calculate_thac_zero(P_char ch, int skill)
@@ -5787,7 +5794,7 @@ int chance_to_hit(P_char ch, P_char victim, int skill, P_obj weapon)
     }
   }
 
-  victim_ac = calculate_ac(ch, FALSE);
+  victim_ac = calculate_ac(victim, FALSE);
 
   if(IS_AFFECTED(victim, AFF_BLIND))
   {
@@ -5823,9 +5830,8 @@ int chance_to_hit(P_char ch, P_char victim, int skill, P_obj weapon)
   to_hit += diff;
 
 #ifdef FIGHT_DEBUG
-  wizlog(56, "returning from to_hit: %d percent chance to hit, victim_ac %d", 
-              to_hit + victim_ac + GET_LEVEL(victim), victim_ac, GET_LEVEL(victim));
-  wizlog(56, "victim %s, attacker %s", GET_NAME(ch), GET_NAME(victim));
+  wizlog(56, "returning from to_hit: %d percent chance to hit, victim_ac %d", to_hit + victim_ac, victim_ac);
+  wizlog(56, "victim %s, attacker %s", GET_NAME(victim), GET_NAME(ch));
 #endif
 
   return BOUNDED(1, to_hit + victim_ac, 100);
@@ -6205,7 +6211,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
 {
   P_char   tch, mount, gvict;
   int      msg, victim_ac, to_hit, diceroll, wpn_skill, hit_type, tmp, wpn_skill_num;
-  double dam;
+  double dam = 0;
   int room, pos, i, blade_skill, chance, damroll = GET_DAMROLL(ch);
   int vs_skill = GET_CHAR_SKILL(ch, SKILL_VICIOUS_STRIKE);
   int lvl = GET_LEVEL(ch);
@@ -6217,7 +6223,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   struct obj_affect *o_af;
   static bool vicious_hit = false;
   int devcrit = number(1, 100);
-  int critical_bound = CRIT_LWR_BOUND;
+  int critical_bound = 7;  // 7%
 
   if(!(ch) ||
     !(victim) ||
@@ -6306,12 +6312,8 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
     msg = MSG_HIT;
 
   wpn_skill_num = required_weapon_skill(weapon);
-  wpn_skill = (IS_PC(ch) || IS_AFFECTED(ch, AFF_CHARM)) ? GET_CHAR_SKILL(ch, wpn_skill_num) : MIN(95, lvl * 2 - 15);
-  if(wpn_skill < 10)
-  {
-    wpn_skill = lvl / 2;
-  }
-  wpn_skill = BOUNDED(10, wpn_skill, 95);
+  wpn_skill = (IS_PC(ch) || IS_AFFECTED(ch, AFF_CHARM)) ? GET_CHAR_SKILL(ch, wpn_skill_num) : MIN(95, lvl * 2.5);
+  wpn_skill = BOUNDED(20, wpn_skill, 95);
   to_hit = chance_to_hit(ch, victim, wpn_skill, weapon);
   diceroll = number(1, 100);
 
@@ -6414,16 +6416,16 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
           {
             if(bIsQuickStepMiss)
             {
-              act("&-L&+YYou swing at your foe _really_ badly, losing control of your&n $q&-L&+Y!\r\n",
+              act("&-L&+YYou swing at your foe _really_ badly, losing control of your $q&-L&+Y!",
                 FALSE, ch, weap, victim, TO_CHAR);
               act("$n stumbles with $s attack, losing control of $s weapon!",
-                TRUE, ch, 0, 0, TO_ROOM);
+                FALSE, ch, 0, 0, TO_ROOM);
               obj_to_char(weap, ch);
             }
             else
             {
-            act("&-L&+YYou swing at your foe _really_ badly, sending your&n $q&-L&+Y flying!\r\n", FALSE, ch, weap, victim, TO_CHAR);
-                act("$n stumbles with $s attack, sending $s weapon flying!", TRUE, ch, 0, 0, TO_ROOM);
+            act("&-L&+YYou swing at your foe _really_ badly, sending your $q&-L&+Y flying!", FALSE, ch, weap, victim, TO_CHAR);
+                act("$n stumbles with $s attack, sending $s weapon flying!", FALSE, ch, 0, 0, TO_ROOM);
                 obj_to_room(weap, ch->in_room);
               }
           }
@@ -6570,19 +6572,6 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
     }
   }
 
-  if((hit_type == -1) && (GET_CHAR_SKILL(ch, SKILL_DEVASTATING_CRITICAL) > devcrit))
-  {
-    send_to_char("&=LWYou score a DEVASTATING HIT!!!!!&N\r\n", ch);
-    make_bloodstain(ch);
-  }
-  else if(hit_type == -1 && (!GET_CLASS(ch, CLASS_MONK) || lvl <= 50))
-  {
-    send_to_char("&=LWYou score a CRITICAL HIT!!!!!&N\r\n", ch);
-    
-    if(!number(0, 9))
-        make_bloodstain(victim);
-  }
-
   if(hit_type == -1 &&
      (notch_skill(ch, SKILL_CRITICAL_ATTACK, get_property("skill.notch.criticalAttack", 25)) ||
         (GET_CHAR_SKILL(ch, SKILL_CRITICAL_ATTACK)) > number(1, 100)))
@@ -6648,22 +6637,28 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   wizlog(56, "first damage calc(NPC/unarmed) for %s is %f", GET_NAME(ch), dam);
 #endif
 
+  int mod = (int)(GET_LEVEL(victim) - 56) / 7;
+
   // damroll mitigation for wipe2011 - Jexni 12/17/11
-  dam = dam * BOUNDEDF(0.70, ((float)damroll / GET_LEVEL(victim) - 3), 1.20);
-  dam = dam + ((float)damroll / 10);
+  dam = dam * BOUNDEDF(0.70, ((float)damroll / GET_LEVEL(victim) + mod), 1.20);
+  dam = dam + ((float)damroll / 5);
 #ifdef FIGHT_DEBUG
   wizlog(56, "damage calc after damroll for %s is %f", GET_NAME(ch), dam);
 #endif
 
-  if(hit_type == -1 && GET_CHAR_SKILL(ch, SKILL_DEVASTATING_CRITICAL) > devcrit)
+  if((hit_type == -1) && (GET_CHAR_SKILL(ch, SKILL_DEVASTATING_CRITICAL) > devcrit))
   {
+    send_to_char("&=LWYou score a DEVASTATING HIT!!!!!&N\r\n", ch);
     dam = (int) (dam * get_property("damage.devastatingCritical.mult", 1.75));
+    make_bloodstain(ch);
   }
-  else if(hit_type == -1)
+  else if(hit_type == -1 && (!GET_CLASS(ch, CLASS_MONK) || lvl <= 50))
   {
+    send_to_char("&=LWYou score a CRITICAL HIT!!!!!&N\r\n", ch);
     dam = (int) (dam * get_property("damage.Critical.mult", 1.5));
+    if(!number(0, 9))
+        make_bloodstain(victim);
   }
-
   if(GET_CLASS(ch, CLASS_MONK) &&
      lvl > 30 &&
     (hit_type == -1 || diceroll < lvl - 40))
@@ -8038,7 +8033,7 @@ int calculate_attacks(P_char ch, int attacks[])
       {
         ADD_ATTACK(SECONDARY_WEAPON);
 
-        if(number(1, 101) < GET_CHAR_SKILL(ch, SKILL_IMPROVED_TWOWEAPON))
+        if(number(1, 201) < GET_CHAR_SKILL(ch, SKILL_IMPROVED_TWOWEAPON))
         {
           ADD_ATTACK(SECONDARY_WEAPON);
         }
@@ -8230,7 +8225,7 @@ void perform_violence(void)
         !IS_CASTING(ch) &&
         !IS_IMMOBILE(ch))
       {
-        gain_exp(ch, opponent, 0, EXP_MELEE);
+        gain_exp(ch, opponent, GET_LEVEL(opponent), EXP_MELEE);
         REMOVE_BIT(ch->specials.act2, PLR2_MELEE_EXP);
       }
     }
@@ -8631,7 +8626,7 @@ int pv_common(P_char ch, P_char opponent, const P_obj wpn)
     if(affected_by_spell(ch, SKILL_SHADOW_MOVEMENT))
     {
       if(!number(0, 35))
-        gain_exp(ch, opponent, 0, EXP_MELEE);
+        gain_exp(ch, opponent, GET_LEVEL(opponent) / 2, EXP_MELEE);
     }
     else
     {
@@ -8643,7 +8638,7 @@ int pv_common(P_char ch, P_char opponent, const P_obj wpn)
         leapSucceed(opponent, ch) ||
         MonkRiposte(opponent, ch, wpn)))
       {
-        gain_exp(ch, opponent, 0, EXP_MELEE);
+        gain_exp(ch, opponent, GET_LEVEL(opponent), EXP_MELEE);
         return false;
       }
     }

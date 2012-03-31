@@ -10508,20 +10508,21 @@ int empty_slot_for_weapon(P_char ch)
 
 void give_proper_stat(P_char ch)
 {
-  if(ch->base_stats.Str < 50)
-    ch->base_stats.Str = number(55, 100);
-  if(ch->base_stats.Dex < 50)
-    ch->base_stats.Dex = number(55, 100);
-  if(ch->base_stats.Int < 50)
-    ch->base_stats.Int = number(55, 100);
-  if(ch->base_stats.Wis < 50)
-    ch->base_stats.Wis = number(55, 100);
-  if(ch->base_stats.Agi < 50)
-    ch->base_stats.Agi = number(55, 100);
-  if(ch->base_stats.Con < 50)
-    ch->base_stats.Con = number(55, 100);
-  if(ch->base_stats.Pow < 50)
-    ch->base_stats.Pow = number(55, 100);
+  int mod = 40 + (GET_LEVEL(ch));
+  if(ch->base_stats.Str < mod)
+    ch->base_stats.Str = number(GET_LEVEL(ch), mod);
+  if(ch->base_stats.Dex < mod)
+    ch->base_stats.Dex = number(GET_LEVEL(ch), mod);
+  if(ch->base_stats.Int < mod)
+    ch->base_stats.Int = number(GET_LEVEL(ch), mod);
+  if(ch->base_stats.Wis < mod)
+    ch->base_stats.Wis = number(GET_LEVEL(ch), mod);
+  if(ch->base_stats.Agi < mod)
+    ch->base_stats.Agi = number(GET_LEVEL(ch), mod);
+  if(ch->base_stats.Con < mod)
+    ch->base_stats.Con = number(GET_LEVEL(ch), mod);
+  if(ch->base_stats.Pow < mod)
+    ch->base_stats.Pow = number(GET_LEVEL(ch), mod);
   affect_total(ch, FALSE);
 }
 
