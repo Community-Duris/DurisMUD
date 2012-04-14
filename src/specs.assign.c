@@ -188,7 +188,7 @@ void assign_mobiles(void)
   mob_index[real_mobile0(22428)].func.mob = clear_epic_task_spec;
   
   /* monk quest mob */
-  mob_index[real_mobile0(55178)].func.mob = monk_remort;
+  //mob_index[real_mobile0(55178)].func.mob = monk_remort;
 
   /* player castles */
 
@@ -2265,9 +2265,9 @@ void assign_rooms(void)
 
 
   // testing for multiclass
-  world[real_room0(1200)].funct = multiclass_proc;
-  world[real_room0(6801)].funct = multiclass_proc;
-  world[real_room0(52904)].funct = multiclass_proc;
+  //world[real_room0(1200)].funct = multiclass_proc;
+  //world[real_room0(6801)].funct = multiclass_proc;
+  //world[real_room0(52904)].funct = multiclass_proc;
   
 // Dwarf and duergar berserkers
 // Gilaxi's Hidden Chamber in Torgs
@@ -2581,7 +2581,7 @@ void assign_rooms(void)
   obj_index[real_object0(36894)].func.obj = critical_attack_proc;
 
   /* Lost Temple of Tikitzopl */
-  obj_index[real_object0(44165)].func.obj = unmulti_altar; 
+  //obj_index[real_object0(44165)].func.obj = unmulti_altar; 
   
   /* Trakkia */
   world[real_room0(57068)].funct = pet_shops;

@@ -1,0 +1,370 @@
+#1
+Mitashi - Capital City of the Jade Empire~
+138428 2 0 40 50 1
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 138277 1 1 100 0 0 0
+*     east exit from "The Guards Walk" to
+*     "A Guard Barracks" - closed
+*
+D 0 138284 3 1 100 0 0 0
+*     west exit from "A Guard Barracks" to
+*     "The Guards Walk" - closed
+*
+D 0 138280 0 1 100 0 0 0
+*     north exit from "The Guards Walk" to
+*     "A Guard Barracks" - closed
+*
+D 0 138288 2 1 100 0 0 0
+*     south exit from "A Guard Barracks" to
+*     "The Guards Walk" - closed
+*
+D 0 138283 0 1 100 0 0 0
+*     north exit from "The Guards Walk" to
+*     "A Guard Barracks" - closed
+*
+D 0 138292 2 1 100 0 0 0
+*     south exit from "A Guard Barracks" to
+*     "The Guards Walk" - closed
+*
+*
+*
+M 0 138200 4 138201 100 0 0 0      * an Imperial gate guard
+E 1 138201 5 5 100 0 0 0           *   a leather chest plate
+E 1 138203 5 6 100 0 0 0           *   a kabuto great helmet
+E 1 138202 5 13 100 0 0 0          *   a leather haidate
+E 1 138200 4 16 100 0 0 0          *   a blue-steel wakizashi
+M 0 138200 4 138201 100 0 0 0      * an Imperial gate guard
+E 1 138201 5 5 100 0 0 0           *   a leather chest plate
+E 1 138203 5 6 100 0 0 0           *   a kabuto great helmet
+E 1 138202 5 13 100 0 0 0          *   a leather haidate
+E 1 138200 4 16 100 0 0 0          *   a blue-steel wakizashi
+M 0 138200 4 138201 100 0 0 0      * an Imperial gate guard
+E 1 138201 5 5 100 0 0 0           *   a leather chest plate
+E 1 138203 5 6 100 0 0 0           *   a kabuto great helmet
+E 1 138202 5 13 100 0 0 0          *   a leather haidate
+E 1 138200 4 16 100 0 0 0          *   a blue-steel wakizashi
+M 0 138200 4 138201 100 0 0 0      * an Imperial gate guard
+E 1 138201 5 5 100 0 0 0           *   a leather chest plate
+E 1 138203 5 6 100 0 0 0           *   a kabuto great helmet
+E 1 138202 5 13 100 0 0 0          *   a leather haidate
+E 1 138200 4 16 100 0 0 0          *   a blue-steel wakizashi
+M 0 138201 1 138201 100 0 0 0      * an Imperial Captain
+E 1 138201 5 5 100 0 0 0           *   a leather chest plate
+E 1 138203 5 6 100 0 0 0           *   a kabuto great helmet
+E 1 138202 5 13 100 0 0 0          *   a leather haidate
+E 1 138204 1 16 100 0 0 0          *   a blue-steel katana
+M 0 138255 5 138205 100 0 0 0      * a young watchman
+M 0 138255 5 138205 100 0 0 0      * a young watchman
+M 0 138254 34 138206 100 0 0 0     * a yakuza agent
+M 0 138254 34 138206 100 0 0 0     * a yakuza agent
+M 0 138254 34 138206 100 0 0 0     * a yakuza agent
+M 0 138254 34 138206 100 0 0 0     * a yakuza agent
+M 0 138202 1 138208 100 0 0 0      * a Crane warrior
+E 1 138206 1 6 100 0 0 0           *   a highly stylized great helmet
+E 1 138205 1 16 100 0 0 0          *   a katana bearing markings of the Crane Clan
+E 1 138207 2 5 100 0 0 0           *   a full-set of leather armor
+M 0 138254 34 138208 100 0 0 0     * a yakuza agent
+M 0 138204 11 138209 100 0 0 0     * a commoner
+M 0 138204 11 138209 100 0 0 0     * a commoner
+M 0 138204 11 138209 100 0 0 0     * a commoner
+M 0 138204 11 138209 100 0 0 0     * a commoner
+M 0 138203 5 138214 100 0 0 0      * a bushi warrior
+E 1 138208 5 16 100 0 0 0          *   a black, steel tanto
+M 0 138203 5 138214 100 0 0 0      * a bushi warrior
+E 1 138208 5 16 100 0 0 0          *   a black, steel tanto
+M 0 138254 34 138228 100 0 0 0     * a yakuza agent
+M 0 138254 34 138228 100 0 0 0     * a yakuza agent
+M 0 138254 34 138230 100 0 0 0     * a yakuza agent
+M 0 138254 34 138230 100 0 0 0     * a yakuza agent
+M 0 138254 34 138230 100 0 0 0     * a yakuza agent
+M 0 138254 34 138230 100 0 0 0     * a yakuza agent
+M 0 138254 34 138231 100 0 0 0     * a yakuza agent
+M 0 138254 34 138231 100 0 0 0     * a yakuza agent
+M 0 138204 11 138234 100 0 0 0     * a commoner
+M 0 138204 11 138234 100 0 0 0     * a commoner
+M 0 138204 11 138234 100 0 0 0     * a commoner
+M 0 138254 34 138236 100 0 0 0     * a yakuza agent
+M 0 138254 34 138236 100 0 0 0     * a yakuza agent
+M 0 138254 34 138236 100 0 0 0     * a yakuza agent
+M 0 138254 34 138236 100 0 0 0     * a yakuza agent
+M 0 138204 11 138237 100 0 0 0     * a commoner
+E 1 138209 5 5 100 0 0 0           *   a worker's shirt
+E 1 138210 5 7 100 0 0 0           *   some brown wool pants
+M 0 138214 2 138237 100 0 0 0      * a monk of the Ivory Order
+M 0 138213 1 138238 100 0 0 0      * a Captain of the Watch
+M 0 138204 11 138240 100 0 0 0     * a commoner
+E 1 138209 5 5 100 0 0 0           *   a worker's shirt
+E 1 138210 5 7 100 0 0 0           *   some brown wool pants
+M 0 138255 5 138240 100 0 0 0      * a young watchman
+M 0 138203 5 138244 100 0 0 0      * a bushi warrior
+E 1 138208 5 16 100 0 0 0          *   a black, steel tanto
+M 0 138254 34 138247 100 0 0 0     * a yakuza agent
+M 0 138254 34 138247 100 0 0 0     * a yakuza agent
+M 0 138254 34 138247 100 0 0 0     * a yakuza agent
+M 0 138205 4 138253 100 0 0 0      * an Imperial watchman
+E 1 138211 4 5 100 0 0 0           *   a tunic bearing the insignia of the Imperial Watch
+E 1 138213 4 9 100 0 0 0           *   a pair of light, leather gloves
+E 1 138212 4 16 100 0 0 0          *   a guardman's wakizashi
+M 0 138205 4 138253 100 0 0 0      * an Imperial watchman
+E 1 138211 4 5 100 0 0 0           *   a tunic bearing the insignia of the Imperial Watch
+E 1 138213 4 9 100 0 0 0           *   a pair of light, leather gloves
+E 1 138212 4 16 100 0 0 0          *   a guardman's wakizashi
+M 0 138205 4 138255 100 0 0 0      * an Imperial watchman
+E 1 138211 4 5 100 0 0 0           *   a tunic bearing the insignia of the Imperial Watch
+E 1 138213 4 9 100 0 0 0           *   a pair of light, leather gloves
+E 1 138212 4 16 100 0 0 0          *   a guardman's wakizashi
+M 0 138205 4 138255 100 0 0 0      * an Imperial watchman
+E 1 138211 4 5 100 0 0 0           *   a tunic bearing the insignia of the Imperial Watch
+E 1 138213 4 9 100 0 0 0           *   a pair of light, leather gloves
+E 1 138212 4 16 100 0 0 0          *   a guardman's wakizashi
+M 0 138206 1 138256 100 0 0 0      * a noble of the Rat Clan
+E 1 138214 1 3 100 0 0 0           *   a blue dragon's eye pendant
+E 1 138218 1 5 100 0 0 0           *   a long-sleeved kimono
+E 1 138217 1 13 100 0 0 0          *   a black, silk belt
+E 1 138215 1 16 100 0 0 0          *   an iron war fan
+E 1 138216 1 28 100 0 0 0          *   a purple silk coinpurse
+F 1 138207 2 138256 100 0 0 0      * a Clan Rat bodyguard (following)
+E 1 138220 2 5 100 0 0 0           *   a chest plate bearing the insignia of Clan Rat
+E 1 138219 3 6 100 0 0 0           *   a kabuto great helmet
+E 1 138221 2 10 100 0 0 0          *   a set of kote
+E 1 138222 2 16 100 0 0 0          *   a katana bearing markings of the Rat Clan
+F 1 138207 2 138256 100 0 0 0      * a Clan Rat bodyguard (following)
+E 1 138220 2 5 100 0 0 0           *   a chest plate bearing the insignia of Clan Rat
+E 1 138219 3 6 100 0 0 0           *   a kabuto great helmet
+E 1 138221 2 10 100 0 0 0          *   a set of kote
+E 1 138222 2 16 100 0 0 0          *   a katana bearing markings of the Rat Clan
+M 0 138204 11 138257 100 0 0 0     * a commoner
+E 1 138209 5 5 100 0 0 0           *   a worker's shirt
+E 1 138210 5 7 100 0 0 0           *   some brown wool pants
+M 0 138210 7 138259 100 0 0 0      * a young child
+E 1 138223 8 16 100 0 0 0          *   a double-bladed dagger
+M 0 138210 7 138259 100 0 0 0      * a young child
+E 1 138223 8 16 100 0 0 0          *   a double-bladed dagger
+M 0 138208 1 138261 100 0 0 0      * a knife merchant
+G 1 138223 8 0 100 0 0 0           *    a double-bladed dagger
+G 1 138224 2 0 100 0 0 0           *    a steel jitte
+G 1 138225 2 0 100 0 0 0           *    a black-bladed throwing knife
+M 0 138210 7 138262 100 0 0 0      * a young child
+E 1 138223 8 16 100 0 0 0          *   a double-bladed dagger
+M 0 138211 2 138265 100 0 0 0      * a female shopper
+M 0 138209 1 138267 100 0 0 0      * a food merchant
+G 1 138226 999 0 100 0 0 0         *    a strip of rough jerky
+G 1 138227 999 0 100 0 0 0         *    some dried smoked fish
+G 1 138228 999 0 100 0 0 0         *    a hard bread roll
+M 0 138210 7 138267 100 0 0 0      * a young child
+E 1 138223 8 16 100 0 0 0          *   a double-bladed dagger
+M 0 138210 7 138267 100 0 0 0      * a young child
+E 1 138223 8 16 100 0 0 0          *   a double-bladed dagger
+M 0 138210 7 138271 100 0 0 0      * a young child
+E 1 138223 8 16 100 0 0 0          *   a double-bladed dagger
+M 0 138210 7 138271 100 0 0 0      * a young child
+E 1 138223 8 16 100 0 0 0          *   a double-bladed dagger
+M 0 138211 2 138273 100 0 0 0      * a female shopper
+M 0 138212 1 138273 100 0 0 0      * a young Tiger warrior
+E 1 138219 3 6 100 0 0 0           *   a kabuto great helmet
+E 1 138229 1 16 100 0 0 0          *   a wakizashi bearing markings of the Tiger Clan
+E 1 138231 1 27 100 0 0 0          *   a black cloth backpack
+E 1 138230 1 5 100 0 0 0           *   a full-body set of leather armor
+M 0 138214 2 138273 100 0 0 0      * a monk of the Ivory Order
+M 0 138255 5 138278 100 0 0 0      * a young watchman
+M 0 138204 11 138280 100 0 0 0     * a commoner
+M 0 138215 3 138284 100 0 0 0      * a sergeant of the Watch
+E 1 138232 3 6 100 0 0 0           *   a simple leather helm
+E 1 138233 4 16 100 0 0 0          *   a naginata
+M 0 138217 3 138286 100 0 0 0      * an officer of the Watch
+E 1 138236 3 5 100 0 0 0           *   a guardsman's kimono
+E 1 138235 3 13 100 0 0 0          *   a belt of rank
+M 0 138216 12 138287 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+M 0 138216 12 138287 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+M 0 138216 12 138287 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+M 0 138216 12 138287 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+M 0 138215 3 138288 100 0 0 0      * a sergeant of the Watch
+E 1 138232 3 6 100 0 0 0           *   a simple leather helm
+E 1 138233 4 16 100 0 0 0          *   a naginata
+M 0 138217 3 138290 100 0 0 0      * an officer of the Watch
+E 1 138236 3 5 100 0 0 0           *   a guardsman's kimono
+E 1 138235 3 13 100 0 0 0          *   a belt of rank
+M 0 138216 12 138291 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+E 1 138234 12 17 100 0 0 0         *   a bokken
+M 0 138216 12 138291 100 0 0 0     * an elite watchman
+M 0 138216 12 138291 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+M 0 138216 12 138291 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+M 0 138215 3 138292 100 0 0 0      * a sergeant of the Watch
+E 1 138232 3 6 100 0 0 0           *   a simple leather helm
+E 1 138233 4 16 100 0 0 0          *   a naginata
+M 0 138217 3 138294 100 0 0 0      * an officer of the Watch
+E 1 138236 3 5 100 0 0 0           *   a guardsman's kimono
+E 1 138235 3 13 100 0 0 0          *   a belt of rank
+M 0 138216 12 138295 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+M 0 138216 12 138295 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+M 0 138216 12 138295 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+M 0 138216 12 138295 100 0 0 0     * an elite watchman
+E 1 138234 12 16 100 0 0 0         *   a bokken
+M 0 138259 1 138298 100 0 0 0      * Lilari, daughter of Lord Kawasawa
+E 1 138278 1 5 100 0 0 0           *   a crimson lotus-flower kimono
+F 1 138260 1 138298 100 0 0 0      * a Clan Raven bodyguard (following)
+M 0 138219 1 138301 100 0 0 0      * a gardener
+M 0 138218 1 138303 100 0 0 0      * an old white-robed monk
+M 0 138220 1 138304 100 0 0 0      * a petite young woman
+M 0 138254 34 138311 100 0 0 0     * a yakuza agent
+M 0 138254 34 138311 100 0 0 0     * a yakuza agent
+M 0 138254 34 138311 100 0 0 0     * a yakuza agent
+M 0 138221 1 138313 100 0 0 0      * the wu-jen Hengi
+G 1 138237 999 0 100 0 0 0         *    a potion of harmony
+G 1 138238 999 0 100 0 0 0         *    a potion of completion
+G 1 138239 999 0 100 0 0 0         *    a scroll of inner strength
+G 1 138240 999 0 100 0 0 0         *    a potion of discordance
+G 1 138241 1 0 100 0 0 0           *    a ring of contemplation
+M 0 138222 1 138314 100 0 0 0      * Xial
+G 1 138242 999 0 100 0 0 0         *    a hand pick
+G 1 138243 999 0 100 0 0 0         *    a miner's pick
+G 1 138244 999 0 100 0 0 0         *    a forge hammer
+G 1 138245 999 0 100 0 0 0         *    heavy workmen's gloves
+G 1 138246 999 0 100 0 0 0         *    a miner's lantern
+G 1 138247 999 0 100 0 0 0         *    heavy workman's boots
+G 1 138248 999 0 100 0 0 0         *    a shovel
+M 0 138223 1 138315 100 0 0 0      * Can Hy, the trader
+M 0 138254 34 138317 100 0 0 0     * a yakuza agent
+M 0 138254 34 138317 100 0 0 0     * a yakuza agent
+M 0 138254 34 138317 100 0 0 0     * a yakuza agent
+M 0 138224 1 138318 100 0 0 0      * Le Ming, the Lady of Poison
+G 1 138249 999 0 100 0 0 0         *    a vial labelled Ajida
+G 1 138250 999 0 100 0 0 0         *    a vial labelled Askume
+G 1 138251 999 0 100 0 0 0         *    a vial labelled Assassin Bug Toxin
+G 1 138252 999 0 100 0 0 0         *    a vial labelled Barba Amarilla
+G 1 138253 999 0 100 0 0 0         *    a vial labelled Harvestman Poison
+M 0 138225 1 138318 100 0 0 0      * Shukenha, the dwarf
+M 0 138203 5 138320 100 0 0 0      * a bushi warrior
+E 1 138274 2 16 100 0 0 0          *   a long-shafted yari
+M 0 138255 5 138331 100 0 0 0      * a young watchman
+M 0 138226 2 138335 100 0 0 0      * a Raven complex guard
+E 1 138254 2 16 100 0 0 0          *   a kau sin ke whipping chain
+E 1 138256 7 5 100 0 0 0           *   a full-body set of leather armor
+M 0 138226 2 138335 100 0 0 0      * a Raven complex guard
+E 1 138255 2 16 100 0 0 0          *   an iron sai
+E 1 138255 2 17 100 0 0 0          *   an iron sai
+E 1 138256 7 5 100 0 0 0           *   a full-body set of leather armor
+M 0 138237 3 138338 100 0 0 0      * a servant
+M 0 138235 1 138339 100 0 0 0      * a young child
+M 0 138236 1 138339 100 0 0 0      * a Clan Raven shadowwalker
+E 1 138265 1 16 100 0 0 0          *   a long-bladed assassin's dagger
+E 1 138266 1 5 100 0 0 0           *   robes of the shadowwalker
+M 0 138238 1 138344 100 0 0 0      * Lord Kawasawa
+E 1 138267 1 16 100 0 0 0          *   a katana called 'Shadows Breath'
+M 0 138227 2 138345 100 0 0 0      * a Leopard complex guard
+E 1 138257 1 16 100 0 0 0          *   an iron guntou
+E 1 138256 7 5 100 0 0 0           *   a full-body set of leather armor
+M 0 138227 2 138345 100 0 0 0      * a Leopard complex guard
+E 1 138256 7 5 100 0 0 0           *   a full-body set of leather armor
+E 1 138258 1 16 100 0 0 0          *   a two-handed no-dachi
+M 0 138245 1 138349 100 0 0 0      * a young Leopard warrior
+E 1 138274 2 16 100 0 0 0          *   a long-shafted yari
+M 0 138239 1 138354 100 0 0 0      * Lord Hanyo
+E 1 138268 1 16 100 0 0 0          *   a katana called 'The North Wind'
+M 0 138228 1 138355 100 0 0 0      * a Snow Dragon complex guard
+E 1 138254 2 16 100 0 0 0          *   a kau sin ke whipping chain
+E 1 138256 7 5 100 0 0 0           *   a full-body set of leather armor
+M 0 138229 1 138355 100 0 0 0      * a Snow Dragon complex guard
+E 1 138259 1 16 100 0 0 0          *   an iron-shod rod
+M 0 138237 3 138358 100 0 0 0      * a servant
+M 0 138246 1 138359 100 0 0 0      * a noble of the Snow Dragon Clan
+M 0 138240 1 138364 100 0 0 0      * Lord Murimasi
+E 1 138269 1 16 100 0 0 0          *   a katana called 'Divine Fury'
+M 0 138230 1 138365 100 0 0 0      * a Clan Crane complex guard
+E 1 138260 3 16 100 0 0 0          *   a black-bladed tanto
+E 1 138260 3 17 100 0 0 0          *   a black-bladed tanto
+E 1 138207 2 5 100 0 0 0           *   a full-set of leather armor
+M 0 138231 1 138365 100 0 0 0      * a Clan Crane complex guard
+E 1 138261 1 5 100 0 0 0           *   some blue robes of the Crane Clan
+E 1 138262 1 16 100 0 0 0          *   an iron-shod staff
+M 0 138241 1 138374 100 0 0 0      * Lord Ajikira
+E 1 138270 1 16 100 0 0 0          *   a katana called 'The Lotus Blossom'
+M 0 138232 2 138375 100 0 0 0      * a Clan Tiger complex guard
+E 1 138264 2 7 100 0 0 0           *   some light, black pants
+E 1 138263 2 16 100 0 0 0          *   a set of nunchaku
+M 0 138232 2 138375 100 0 0 0      * a Clan Tiger complex guard
+E 1 138264 2 7 100 0 0 0           *   some light, black pants
+E 1 138263 2 16 100 0 0 0          *   a set of nunchaku
+M 0 138237 3 138378 100 0 0 0      * a servant
+M 0 138244 1 138379 100 0 0 0      * a white-robed monk
+E 1 138273 1 16 100 0 0 0          *   a bo stick
+M 0 138242 1 138384 100 0 0 0      * Lord Yumi
+E 1 138271 1 16 100 0 0 0          *   a katana called 'Celestial Dragon'
+M 0 138233 1 138385 100 0 0 0      * a Clan Rat complex guard
+E 1 138256 7 5 100 0 0 0           *   a full-body set of leather armor
+E 1 138233 4 16 100 0 0 0          *   a naginata
+M 0 138234 1 138385 100 0 0 0      * a Clan Rat complex guard
+E 1 138260 3 16 100 0 0 0          *   a black-bladed tanto
+E 1 138256 7 5 100 0 0 0           *   a full-body set of leather armor
+M 0 138247 1 138389 100 0 0 0      * a bushi warrior
+E 1 138208 5 16 100 0 0 0          *   a black, steel tanto
+M 0 138243 1 138394 100 0 0 0      * Lady Kitsuro
+E 1 138272 1 16 100 0 0 0          *   a katana called 'Torrential Rain'
+M 0 138248 2 138395 100 0 0 0      * a Royal dock guard
+E 1 138275 2 16 100 0 0 0          *   a steel warhammer
+M 0 138248 2 138395 100 0 0 0      * a Royal dock guard
+E 1 138275 2 16 100 0 0 0          *   a steel warhammer
+M 0 138249 5 138396 100 0 0 0      * a customs officer
+E 1 138277 5 6 100 0 0 0           *   an iron jingasa
+E 1 138276 5 16 100 0 0 0          *   a bamboo jo stick
+M 0 138249 5 138397 100 0 0 0      * a customs officer
+E 1 138277 5 6 100 0 0 0           *   an iron jingasa
+E 1 138276 5 16 100 0 0 0          *   a bamboo jo stick
+M 0 138249 5 138398 100 0 0 0      * a customs officer
+E 1 138277 5 6 100 0 0 0           *   an iron jingasa
+E 1 138276 5 16 100 0 0 0          *   a bamboo jo stick
+M 0 138249 5 138399 100 0 0 0      * a customs officer
+E 1 138277 5 6 100 0 0 0           *   an iron jingasa
+E 1 138276 5 16 100 0 0 0          *   a bamboo jo stick
+M 0 138249 5 138400 100 0 0 0      * a customs officer
+E 1 138277 5 6 100 0 0 0           *   an iron jingasa
+E 1 138276 5 16 100 0 0 0          *   a bamboo jo stick
+M 0 138254 34 138410 100 0 0 0     * a yakuza agent
+M 0 138254 34 138410 100 0 0 0     * a yakuza agent
+M 0 138254 34 138410 100 0 0 0     * a yakuza agent
+M 0 138254 34 138410 100 0 0 0     * a yakuza agent
+M 0 138203 5 138412 100 0 0 0      * a bushi warrior
+E 1 138208 5 16 100 0 0 0          *   a black, steel tanto
+M 0 138254 34 138415 100 0 0 0     * a yakuza agent
+M 0 138254 34 138415 100 0 0 0     * a yakuza agent
+M 0 138254 34 138415 100 0 0 0     * a yakuza agent
+M 0 138254 34 138415 100 0 0 0     * a yakuza agent
+M 0 138250 4 138416 100 0 0 0      * an old man
+M 0 138251 3 138417 100 0 0 0      * a sleeping workman
+M 0 138252 5 138417 100 0 0 0      * a sleeping woman
+M 0 138250 4 138418 100 0 0 0      * an old man
+M 0 138252 5 138418 100 0 0 0      * a sleeping woman
+M 0 138250 4 138419 100 0 0 0      * an old man
+M 0 138252 5 138419 100 0 0 0      * a sleeping woman
+M 0 138253 3 138420 100 0 0 0      * a young girl
+M 0 138251 3 138420 100 0 0 0      * a sleeping workman
+M 0 138250 4 138421 100 0 0 0      * an old man
+M 0 138252 5 138421 100 0 0 0      * a sleeping woman
+M 0 138253 3 138422 100 0 0 0      * a young girl
+M 0 138252 5 138422 100 0 0 0      * a sleeping woman
+M 0 138253 3 138423 100 0 0 0      * a young girl
+M 0 138251 3 138423 100 0 0 0      * a sleeping workman
+M 0 138258 2 138424 100 0 0 0      * a commoner
+E 1 138209 5 5 100 0 0 0           *   a worker's shirt
+E 1 138210 5 7 100 0 0 0           *   some brown wool pants
+M 0 138258 2 138424 100 0 0 0      * a commoner
+E 1 138209 5 5 100 0 0 0           *   a worker's shirt
+E 1 138210 5 7 100 0 0 0           *   some brown wool pants
+M 0 138256 1 138425 100 0 0 0      * a drinking workman
+M 0 138257 1 138425 100 0 0 0      * a commoner
+M 0 138261 1 138428 100 0 0 0      * the mad spirit Kunji Pishida
+*
+S

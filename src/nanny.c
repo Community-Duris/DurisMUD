@@ -3552,18 +3552,22 @@ void select_race(P_desc d, char *arg)
   case 'T':
     strcpy(Gbuf, "SWAMP TROLL");
     break;
+  /*
   case 'f':
     GET_RACE(d->character) = RACE_HALFELF;
     break;
   case 'F':
     strcpy(Gbuf, "HALF ELF");
     break;
+    */
+/*  
   case 'i':
     GET_RACE(d->character) = RACE_PILLITHID;
     break;
   case 'I':
     strcpy(Gbuf, "ILLITHID");
     break;
+    */
     /*   case 'i':
        GET_RACE(d->character) = RACE_ILLITHID;
        break;
@@ -3615,6 +3619,7 @@ void select_race(P_desc d, char *arg)
   case 'S':
     strcpy(Gbuf, "MINOTAUR");
     break;
+/*
   case 'p':
     GET_RACE(d->character) = RACE_FIRBOLG;
     break;
@@ -3645,6 +3650,7 @@ void select_race(P_desc d, char *arg)
   case '#':
     strcpy(Gbuf, "KUO TOA");
     break;
+    */
     /*   
        case '1':
        GET_RACE(d->character) = RACE_PLICH;

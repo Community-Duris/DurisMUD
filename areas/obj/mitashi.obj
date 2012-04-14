@@ -1,0 +1,1359 @@
+#138200
+wakizashi sword~
+&+wa &+cblue-steel&n &+wwakizashi&n~
+&+wA wakizashi, the blade made of &+cblue-steel&n&+w, rests on the ground.&n~
+~
+5 16 3 0 8 0 0 8193 0 122910 0
+9 1 9 3 0 0 0 0
+7 9000 100
+E
+wakizashi sword~
+This wakizashi, or short sword, has a steel hilt wrapped in black cloth.
+The blade is made of a bluish tinged steel, native to the Jade Empire.
+The blade curves slightly and has an extremely sharp edge to it.
+~
+#138201
+leather chest plate~
+&+ya leather chest plate&n~
+&+yA chest plate made of reinforced leather has been left behind.&n~
+~
+9 13 3 0 7 0 0 16393 0 123390 0
+5 0 0 3 0 0 0 0
+10 9000 100
+E
+leather chest plate~
+This piece of armor provides protection to the front and back of the wearer's
+upper torso.  It's made of two seperate pieces of leather, reinforced with
+heavy cloth padding.  Black leather straps lace up the side of the chest
+plate, allowing the armor to be adjusted depending on the size of the
+wearer.
+
+The armor has been dyed and treated in the colors of the Imperial Guards
+of the Jade Empire, with muted blues and greens that remind one of
+the colors of the sea.
+~
+A
+22 -2
+#138202
+haidate apron armor~
+&+ya leather haidate&n~
+&+yA long leather haidate, or apron, has been tossed aside.&n~
+~
+9 13 3 0 7 0 0 2049 0 123390 0
+3 0 0 3 0 0 0 0
+4 8000 100
+E
+haidate apron armor~
+This leather haidate looks much like an ordinary apron, but it has been
+specially treated and hardened to be worn as armor.  It provides the
+wearer from the waist down to knee level, and has a piece for the front
+and back of the user.  A simple belt of the same material holds the two
+pieces together and straps of black cord can be used to adjust the
+haidate depending on the size of the wearer.
+~
+#138203
+kabuto great helmet~
+&+ya kabuto great helmet&n~
+&+yA kabuto, or great helmet, rests on the ground.&n~
+~
+9 13 3 0 7 0 0 16401 0 32798 0
+3 0 0 2 0 0 0 0
+3 7000 100
+E
+kabuto great helmet~
+This great helmet, called a kabuto, has been fashioned out of cured and
+laminated leather.  It's quite a sturdy piece of work and should be enough
+to protect the wearer from glancing blows to the head.  The sides of the
+helmet extend to protect the ears and the back is long enough to provide
+some measure of safety to the back of the neck.  It's semi-conical in
+shape, coming together in a point at the top.  A band of green cloth
+encircles the helmet and the symbol of the Jade Empire has been
+embroidered on the band with black thread.
+~
+A
+23 -1
+#138204
+katana sword~
+&+wa &+cblue-steel&n &+Wkatana&n~
+&+wA katana, the blade made of &+cblue-steel&n&+w, rests on the ground.&n~
+~
+5 16 3 0 8 0 0 8193 0 122910 0
+5 2 5 3 0 0 0 0
+7 9000 100
+E
+katana sword~
+This exotic longsword has a long, extremely sharp blade made of blue-steel.
+Both the tip and the edge of the blade have been honed to a razor thin
+sharpness.  The katana's blade curves slightly, and the hilt is made of
+the same blue steel covered in a thick wrap of black leather.  The sword's
+guard is a flat metal disc that has carvings of seagulls in flight
+emblazoned on it.
+~
+#138205
+katana sword~
+&+wa &+ckatana&n &+wbearing markings of the&n &+cCrane Clan&n~
+&+wA long-bladed katana bearing the markings of the&n &+cCrane Clan&n &+whas been dropped.&n~
+~
+5 16 3 0 8 0 0 8193 0 122910 0
+5 2 5 3 0 0 0 0
+7 10000 100
+E
+katana sword~
+This exotic longsword has a long, extremely sharp blade made of blue-steel.
+Both the tip and the edge of the blade have been honed to a razor thin
+sharpness.  The katana's blade curves slightly, and the hilt is made of
+the same blue steel covered in a thick wrap of black leather.  The sword's
+guard is a flat metal disc that has carvings of seagulls in flight
+emblazoned on it.  Inscribed on the metal of the blade itself is the
+insignia of the Crane Clan, one of the most powerful of the Jade Empire's
+families.
+~
+#138206
+great helmet stylized~
+&+ca highly stylized great helmet&n~
+&+cA helmet of a very intricate design has been discarded.&n~
+~
+9 13 3 0 7 0 0 16401 0 32798 0
+3 0 0 2 0 0 0 0
+3 8000 100
+E
+kabuto great helmet~
+This great helmet, called a kabuto, has been fashioned out of cured and
+laminated leather.  It's quite a sturdy piece of work and should be enough
+to protect the wearer from glancing blows to the head.  The sides of the
+helmet extend to protect the ears and the back is long enough to provide
+some measure of safety to the back of the neck.  It's semi-conical in
+shape, coming together in a point at the top.  A band of cyan cloth
+encircles the helmet and the symbol of the Crane Clan has been embroidered
+on the band with white thread.
+~
+A
+23 -1
+#138207
+armor set full complete~
+&+ca full-set of&n &+yleather&n &+carmor&n~
+&+wA complete set of leather armor has been set down on the ground.&n~
+~
+9 13 3 0 8 0 536870912 9 0 122942 0
+13 0 0 3 0 0 0 0
+20 9000 100
+E
+armor set full complete~
+This complete set of leather armor is enough to give protection to the
+wearer from his neck down to his shins, including arm plates.  It's
+made of thick leather with padding sewn into it to make it more
+comfortable to wear.  Black leather straps on the sides of the armor allow
+one to tighten or loosen the suit.  The suit has been treated with dye
+to give it a cyan color, and the insignia of the Crane Clan has been
+stenciled on the left shoulder pad.
+~
+#138208
+tanto steel dagger knife~
+&+La black, steel tanto&n~
+&+LA short tanto made of steel has been lost or misplaced.&n~
+~
+5 15 3 0 7 0 0 8193 0 1 0
+2 2 4 11 0 0 0 0
+0 4000 100
+E
+tanto steel dagger knife~
+This small, black tanto, is comprised of a small, slightly curved blade,
+on a black, hollow metal hilt.  It's a high quality blade, suitable for
+close-in fighting where a longer weapon would lack the necessary room to
+strike.
+~
+A
+18 1
+A
+19 1
+#138209
+shirt rough wool worker~
+&+ya worker's shirt&n~
+&+yA rough shirt made of wool has been tossed aside.&n~
+~
+9 3 3 0 3 0 0 16393 0 1 0
+1 0 0 1 0 0 0 0
+1 4000 100
+E
+shirt rough wool worker~
+This rough wool shirt is suitable to a field worker or manual laborer.  It's
+quite dirty and has some obvious signs of patching being done to it.  It's
+a dull gray in color, except for the patches of dirt and dried sweat.
+~
+#138210
+brown wool pants~
+&+ysome brown wool pants&n~
+&+yA pair of pants made of rough brown-dyed wool has been forgotten.&n~
+~
+9 3 3 0 3 0 0 16417 0 1 0
+1 0 0 1 0 0 0 0
+1 600 100
+E
+brown wool pants~
+This pair of rough wool pants is suitable to a field worker or manual
+laborer.  They are quite dirty and have some obvious signs of patching
+being done to them.  They're a dull brown in color, except for the
+patches of dirt and dried sweat.
+~
+#138211
+tunic imperial watch~
+&+ca tunic bearing the insignia of the&n &+CImperial Watch&n~
+&+cA dull blue tunic lies in a pile on the ground.&n~
+~
+9 3 3 0 8 0 0 9 0 1 0
+1 0 0 2 0 0 0 0
+2 45000 100
+E
+tunic imperial watch~
+This heavy cloth tunic has a circular patch sewn into the left breast area.
+The symbol on the patch is that of the Imperial Watch, a police force that
+has some ties to the Imperial Army.  The short-sleeved tunic is made of a
+heavy cloth died a dull blue color.
+~
+#138212
+wakizashi sword~
+&+wa &+cguardman's&n &+wwakizashi&n~
+&+wA simple&n &+cwakizashi&n &+whas been left behind.&n~
+~
+5 16 3 0 8 0 0 8193 0 122910 0
+9 1 8 3 0 0 0 0
+7 900 100
+E
+wakizashi sword~
+This wakizashi, or short sword, has a steel hilt wrapped in black cloth.
+The blade is made of a bluish tinged steel, native to the Jade Empire.
+The blade curves slightly and has an extremely sharp edge to it.
+~
+A
+18 2
+A
+19 2
+#138213
+gloves~
+&+ya pair of light, leather gloves&n~
+&+yA pair of gloves has been dropped and left behind.&n~
+~
+9 14 3 0 8 0 0 129 0 1 0
+1 0 0 3 0 0 0 0
+1 700 100
+E
+gloves~
+This pair of gloves is made of thin, well-worn leather.  They feel quite
+comfortable, easy expanding to fit one's hands.  They provide a good,
+solid grip as well.
+~
+#138214
+blue eye dragon's teardrop pendant~
+&+La&n &+Bblue&n &+Ldragon's eye pendant&n~
+&+LA small pendant, shaped like a&n &+Bblue teardrop&n&+L, lies on the ground.&n~
+~
+9 26 3 0 10 0 0 5 0 1 0
+15 0 0 1 0 0 0 0
+0 25000 100
+E
+blue eye dragon's teardrop pendant~
+This pendant is made of a glass-like blue gem formed into the shape of a
+teardrop.  Called a dragon's eye, the blue gem is quite valuable and there
+are rumor's that they grant the wearer long life and protect him from
+evil spirits.  The pendants are quite popular with the superstitious
+nobility of the Jade Empire.
+~
+A
+20 -2
+A
+24 -2
+#138215
+fan war iron~
+&+Lan iron war fan&n~
+&+LAn iron fan, sharpened and suitable for use as a weapon, was left here.&n~
+~
+5 15 3 0 7 0 0 8193 0 130590 0
+2 4 3 3 0 0 0 0
+3 600 100
+E
+fan war iron~
+This light fan is made of a thin iron and the edge has been sharpened so
+that it can be used as a weapon.  The edge, or blade, has been reinforced
+and honed to an extremely sharp edge.   An artist, possibly the weaponsmith
+himself, has drawn an extremely stylized dragon on the side of the fan in
+black ink.
+~
+A
+18 2
+A
+1 7
+#138216
+coinpurse purse silk purple~
+&+ma purple&n &+Msilk&n &+mcoinpurse&n~
+&+mSomeone has discarded a small purse made of&n &+Mpurple silk&n&+m.&n~
+~
+15 3 3 0 10 0 0 8388609 0 1 0
+5 1 0 5 0 0 0 0
+0 790 100
+E
+coinpurse purse silk purple~
+This small pouch is suitable for holding coins or other small objects.  It
+is made of a brilliant purple silk which can almost glitter if the light
+catches it right.  The top is tied together with small, black cords.
+~
+#138217
+belt silk strip~
+&+La black, silk belt&n~
+&+LA strip of black felt, suitable as a belt, has been dropped.&n~
+~
+9 3 3 0 13 0 0 18433 0 1 0
+1 0 0 1 0 0 0 0
+0 556 100
+E
+belt silk strip~
+This is a simple strip of black silk, probably for use as a belt.
+~
+#138218
+kimono~
+&+ra long-sleeved kimono&n~
+&+rA kimono made of red cloth has been neatly set aside.&n~
+~
+9 3 3 0 13 0 0 9 0 1 0
+2 0 0 2 0 0 0 0
+3 797 100
+E
+kimono~
+This man's kimono is made of an expensive red cloth, decorated with designs
+made of gold thread.  The main design is on the back of the garment and
+consists of a noble-looking rat clawing at a bloodied wyrm or wingless
+dragon.
+~
+#138219
+kabuto great helmet~
+&+Ya kabuto great helmet&n~
+&+YA kabuto, or great helmet, sits on the ground.&n~
+~
+9 16 3 0 8 0 0 16401 0 32798 0
+5 0 0 3 0 0 0 0
+6 799 100
+E
+kabuto great helmet~
+This great helmet, called a kabuto, has been fashioned out of cured and
+laminated leather that sits atop a shell of hard steel.  It's quite a
+sturdy piece of work and should be enough to protect the wearer from glancing
+blows to the head.  The sides of the helmet extend to protect the ears and
+the back is long enough to provide some measure of safety to the back of
+the neck.  It's semi-conical in shape, coming together in a point at the
+top.
+~
+A
+23 -2
+A
+18 2
+#138220
+leather chest plate~
+&+ya chest plate bearing the insignia of&n &+YClan Rat&n~
+&+yA chest plate made of reinforced leather has been left behind.&n~
+~
+9 13 3 0 7 0 0 16393 0 123390 0
+6 0 0 3 0 0 0 0
+10 10101 100
+E
+leather chest plate~
+This piece of armor provides protection to the front and back of the wearer's
+upper torso.  It's made of two seperate pieces of leather, reinforced with
+heavy cloth padding.  Black leather straps lace up the side of the chest
+plate, allowing the armor to be adjusted depending on the size of the
+wearer.
+
+The armor has been dyed and treated in the colors of the Rat Clan, one of
+the more powerful Imperial Clans.  A small patch has been sewn into the
+right shoulder pad showing the insignia of the Clan Rat.
+~
+A
+22 -2
+#138221
+kote armored sleeves~
+&+ya set of kote&n~
+&+ySome armored sleeves, called kote, have been carelessly discarded.&n~
+~
+9 14 3 0 7 0 0 16641 0 123326 0
+3 0 0 3 0 0 0 0
+5 444 100
+E
+kote armored sleeves~
+This set of leather sleeves has been specially reinforced with thick
+padding to provide some protection for the upper arm, while the lower
+arm is left virtually unprotected.
+~
+#138222
+katana sword~
+&+ya &+Ykatana&n &+ybearing markings of the&n &+YRat Clan&n~
+&+yA long-bladed katana bearing the markings of the&n &+YRat Clan&n &+yhas been dropped.&n~
+~
+5 16 3 0 8 0 0 8193 0 122910 0
+5 2 5 3 0 0 0 0
+7 10101 100
+E
+katana sword~
+This exotic longsword has a long, extremely sharp blade made of blue-steel.
+Both the tip and the edge of the blade have been honed to a razor thin
+sharpness.  The katana's blade curves slightly, and the hilt is made of
+the same blue steel covered in a thick wrap of black leather.  The sword's
+guard is a flat metal disc that has carvings of seagulls in flight
+emblazoned on it.  Inscribed on the metal of the blade itself is the
+insignia of the Rat Clan, one of the most powerful of the Jade Empire's
+families.
+~
+#138223
+dagger blade double~
+&+La double-bladed dagger&n~
+&+LA dagger with two blades, shaped like an "H", has been dropped.&n~
+~
+5 16 3 0 9 0 64 8193 0 122910 0
+2 4 3 11 0 0 0 0
+3 101 100
+E
+dagger blade double~
+This wicked looking weapon is shaped like an "H", with a pair of blades
+coupled together by a leather-wrapped handle.  The blades are extremely
+sharp and the weapon is designed for piercing, rather than slashing.
+~
+A
+18 1
+A
+19 4
+#138224
+jitte fork steel~
+&+Wa &+Csteel&n&+L jitte&n~
+&+LAn oversized, three-pronged fork-type weapon has been left behind.&n~
+~
+5 16 3 0 8 0 0 8193 0 1 0
+2 3 2 11 0 0 0 0
+2 999 100
+E
+jitte fork steel~
+This weapon looks much like an oversized three-pronged fork.  It's called
+a jitte in the Jade Empire, and is used mostly for defensive purposes.  The
+jitte's main blade is not sharp, but the fork shape allows it to block
+attacks and catch weapons.  It could be used for piercing, but slashing
+with the jitte would have little effect.
+~
+A
+18 2
+#138225
+knife black~
+&+Ba &+Lblack-bladed&n&+B throwing knife&n~
+&+LA black-bladed knife, made for throwing, has been dropped.&n~
+~
+5 15 3 0 6 0 0 24577 0 130622 0
+2 3 2 11 0 0 0 0
+0 1500 100
+E
+knife black~
+This short black-bladed knife was made to be thrown.  As a wielded weapon,
+it lacks a hilt, which would make it near-useless for defense.  On the
+other hand, it's been finely balanced for it's intended purpose.
+~
+A
+18 2
+#138226
+jerky strip~
+&+La &+ystrip&n&+L of rough &n&+yjerky&n~
+&+yA thick strip of toughened jerky has been dropped.&n~
+~
+19 2 3 0 2 0 0 16385 0 1 0
+16 0 0 0 0 0 0 0
+0 89 100
+E
+jerky strip~
+&+yThis is a simple strip of meat, toughened and dehydrated.&n
+~
+#138227
+fish steak dried~
+&+Msome &+Ld&+wri&+Led&n &+ws&+Wmoke&+wd&n &+Mf&+mish&n~
+&+MA steak of dried fish has been set on the ground where it emits an odor.&n~
+~
+19 2 3 0 2 0 0 16385 0 1 0
+12 0 0 0 0 0 0 0
+0 455 100
+E
+fish steak dried~
+This is a piece of salmon, dried a bit and cut into a small steak, suitable
+for a single meal.
+~
+#138228
+bread roll hard~
+&+wa &+Lhard &+wb&+Wre&+wad &+Wr&+wol&+Wl&n~
+&+LA small, hard roll of bread is sitting on the ground.&n~
+~
+19 2 3 0 2 0 0 16385 0 1 0
+8 0 0 0 0 0 0 0
+0 44 100
+E
+bread roll hard~
+This simple roll is made of hard, tasteless bread.  It's filling, but not
+very appetizing.
+~
+#138229
+wakizashi sword~
+&+ba &+Bwakizashi&n &+bbearing markings of the&n &+BTiger Clan&n~
+&+bA curved wakizashi sword bearing the markings of the&n &+BTiger Clan&n &+bhas been dropped.&n~
+~
+5 16 3 0 8 0 0 8193 0 122910 0
+5 3 3 3 0 0 0 0
+7 9000 100
+E
+wakizashi sword~
+This exotic shortsword has a long, extremely sharp blade made of blue-steel.
+Both the tip and the edge of the blade have been honed to a razor thin
+sharpness.  The wakizashi's blade curves slightly, and the hilt is made of
+the same blue steel covered in a thick wrap of black leather.  The sword's
+guard is a flat metal disc that has carvings of jungle birds emblazoned on
+it.  Inscribed on the metal of the blade itself is the insignia of the Tiger
+Clan, one of the most powerful of the Jade Empire's families.
+~
+#138230
+armor set full-body leather~
+&+ya &+Lfull-body&n&+y set of leather &+Larmor&n~
+&+yA complete full-body set of leather armor has dropped in a pile.&n~
+~
+9 13 3 0 8 0 536870912 16393 0 122942 0
+12 0 0 3 0 0 0 0
+20 4500 100
+E
+armor set full-body leather~
+This complete set of leather armor is enough to give protection to the
+wearer from his neck down to his shins, including arm plates.  It's
+made of thick leather with padding sewn into it to make it more
+comfortable to wear.  Black leather straps on the sides of the armor allow
+one to tighten or loosen the suit.  The suit has been treated with dye
+to give it a blue color, and the insignia of the Tiger Clan has been
+stenciled on the left shoulder pad.
+~
+#138231
+backpack black cloth~
+&+wa &+Lblack &+wc&+Wlo&+wth&n &+Lbackpack&n~
+&+LA backpack made of black cloth has been dropped.&n~
+~
+15 3 3 0 6 0 0 4194305 0 1 0
+170 1 0 80 0 0 0 0
+2 101 100
+E
+backpack black cloth~
+This light little backpack is made of a thick black cloth.  A few cords of
+rope allow the owner to loop the straps around his shoulders and under
+the arms for support.  The thread used to sew the backpack together is
+surprisingly tough and the black backpack is a sturdy piece of equipment.
+~
+#138232
+helm helmet leather~
+&+ya simple &+Lleather &+yhelm&n~
+&+yA simple helm of leather has been dropped.&n~
+~
+9 13 3 0 8 0 0 16401 0 1 0
+2 0 0 2 0 0 0 0
+2 101 100
+E
+helm helmet leather~
+This simple helmet is crafted from high-quality leather.  A strap, made out
+of the same material, can be adjusted so the helmet sits properly, if not
+comfortably.  A leather "flap" hangs off the back of the helm, allowing
+some protection for the back of the neck.  The flap, which is connected
+by small loops of cord, moves freely enough that the wearer can move his
+head around without the neck protector getting in the way.
+~
+#138233
+naginata polearm~
+&+La &+wna&+Wgina&+wta&n~
+&+LA wicked looking naginata polearm has been placed on the ground.&n~
+~
+5 15 3 0 9 0 4194304 8193 0 32798 0
+8 4 6 3 0 0 0 0
+12 1011 100
+E
+naginata polearm~
+This heavy polearm has a long wooden shaft topped by a sixteen-inch long
+curved and pointed blade.  It's heavy and somewhat unwieldy, but can do
+a great deal of damage in the right hands.  The hilt has been wrapped
+with a multi-colored silk.
+~
+A
+18 -1
+A
+19 3
+#138234
+bokken training sword~
+&+ya bo&+Ykk&+yen&n~
+&+yA bokken, or wooden practice sword, has been discarded.&n~
+~
+5 41 3 0 5 0 0 8193 0 123358 0
+5 1 6 3 0 0 0 0
+3 455 100
+E
+bokken training sword~
+This wooden copy of a katana longsword is well-balanced, perfect for
+training and much less dangerous than the real thing.  It has a "blade"
+of roughly thirty inches, followed by a hard wood guard and a grip
+wrapped in cotton cord.
+~
+A
+18 1
+A
+19 -1
+#138235
+rank belt~
+&+La belt of r&n&+wan&+Lk&n~
+&+LA black belt bearing the stripes of a Captain has dropped to the ground.&n~
+~
+9 3 3 0 10 0 0 18433 0 1 0
+4 0 0 1 0 0 0 0
+1 797 100
+E
+rank belt~
+This black belt bears two yellow stripes, indicating the rank of its
+owner.  The belt is made of fine cloth and the stitching on it is of
+very high quality.
+~
+A
+19 1
+#138236
+kimono~
+&+ca guardsman's &+Ck&+cimo&+Cno&n~
+&+cAn informal kimono, bearing marks of the Imperial Watch, lies here.&n~
+~
+9 3 3 0 13 0 0 9 0 1 0
+2 0 0 2 0 0 0 0
+3 999 100
+E
+kimono~
+This is an informal, short-sleeved kimono made from fine blue cloth.  The
+cuffs on the sleevesare black, as is the bottom of the garment.  A small
+insignia of the Imperial Watch has been embroidered on the front, right
+shoulder area of the kimono, while a much larger copy has been stitched
+on the back in gold thread.
+~
+#138237
+blue potion~
+&+ba &+Wpotion&n&+B of&n &+Bha&+brmo&+Bny&n~
+&+bA blue potion&n &+Bsparkles&n &+bfrom a spot on the ground.&n~
+~
+10 40 3 0 7 0 65600 16385 0 1 0
+31 16 16 16 0 0 0 0
+1 1 100
+E
+blue potion~
+This small clear glass vial contains a blue liquid that catches the light
+and sparkles.
+~
+#138238
+green potion~
+&+ga &+Wpotion &n&+gof&n &+gco&n&+Gmpleti&+gon&n~
+&+gA green potion&n &+Gsparkles&n &+gfrom a spot on the ground.&n~
+~
+10 40 3 0 7 0 64 16385 0 1 0
+21 3 39 1 0 0 0 0
+1 1 100
+E
+green potion~
+This small clear glass vial contains a green liquid that catches the light
+and sparkles.
+~
+#138239
+scroll inner strength~
+&+ya &+ws&+Wcrol&+wl&n&+y of&n &+Rinner &+Wst&+wreng&+Wth&n~
+&+yA small scroll with flowing black script has been cast aside.&n~
+~
+2 29 3 0 7 0 64 16385 0 1 0
+31 215 177 193 0 0 0 0
+1 1 100
+E
+scroll inner strength~
+This magic scroll is made of a thin sheet of parchment covered in flowing
+black script.
+~
+#138240
+dark green potion~
+&+ga &+Wpotion&n&+g of&n &+wdis&+Wcorda&+wnce&n~
+&+gA dark green potion in a glass container lies on the floor.&n~
+~
+10 40 3 0 7 0 64 16385 0 1 0
+21 66 34 53 0 0 0 0
+1 1 100
+E
+green potion~
+This small clear glass vial contains a green liquid that catches the light
+and sparkles.
+~
+#138241
+ring steel bluish~
+&+ca r&+Cin&+cg of&n &+Cco&+cntemplati&+Con&n~
+&+cA steel ring with a distinct bluish tint lies on the ground.&n~
+~
+9 16 3 0 14 0 320 3 0 1 0
+15 0 0 1 0 0 0 0
+1 1 100
+E
+ring steel bluish~
+This small ring radiates a certain vibrancy, an effect that can't be felt
+directly by touching it, but there's something about the ring that feels
+proper and right.
+~
+A
+3 9
+A
+4 9
+#138242
+pick hand~
+&+La &+Whand &+Lpick&n~
+&+wA small miner's hand pick has been left behind.&n~
+~
+5 15 3 0 5 0 0 24577 0 122910 0
+15 2 3 3 0 0 0 0
+4 44 100
+E
+pick hand~
+This double-bladed miner's pick is short, suitable for use with one hand.
+The ends of are tapered to points, which have been somewhat blunted by use.
+~
+A
+18 -1
+A
+19 1
+#138243
+pick large miner miner's~
+&+La &+Mminer's &+Lpick&n~
+&+wA large miner's pick has been left behind.&n~
+~
+5 15 3 0 6 0 4194304 24577 0 122910 0
+15 4 5 3 0 0 0 0
+25 45 100
+E
+pick miner miner's large~
+This double-bladed miner's pick is a hefty piece of equipment.  The pointed
+blades are extremely heavy, made of hardened iron for use in shattering
+rock.  The handle is long and made of old wood, showing signs of age.
+~
+A
+18 -2
+A
+19 2
+#138244
+forge hammer~
+&+wa&n &+Lfo&+wrg&+Le&n &+wha&+Lmm&+wer&n~
+&+wA heavy hammer like those used at forges has been dropped.&n~
+~
+5 15 3 0 6 0 4194304 24577 0 122910 0
+15 4 5 3 0 0 0 0
+25 789 100
+E
+forge hammer~
+This heavy, two-handed forge hammer is the type a smith might use to pound
+hard metals into shape.  It's certainly too unwieldy to be used for any
+detail work, but for basic forming, it would do well enough.
+~
+A
+18 -3
+A
+19 3
+#138245
+gloves heavy workman workmen's~
+&+Lheavy &+mworkmen's &+Wgloves&n~
+&+yA heavy set of workman's gloves has been tossed aside.&n~
+~
+9 14 3 0 6 0 0 16513 0 1 0
+4 0 0 4 0 0 0 0
+2 545 100
+E
+gloves heavy workman workmen's~
+This heavy set of leather gloves is suitable for use in hot or dangerous
+environments, where they would provide adequate protection for one's hands
+and wrists.  They would certainly hamper your ability to do any type
+of detail work requiring your fingers.
+~
+A
+2 -5
+#138246
+lantern~
+&+La &+Mminer's &+Yla&+ynte&+Yrn&n~
+&+yA lantern of the type used in mining work has been set on the ground.&n~
+~
+1 6 3 0 5 0 8 16385 0 1 0
+0 0 24 0 0 0 0 0
+1 898 100
+E
+lantern~
+This simple mining lantern has a small reserve of fuel oil for use in
+burning.
+~
+#138247
+boots heavy workman workmen's~
+&+Lheavy &+Mworkman's &+Lboots&n~
+&+yA heavy set of workman's boots has been set aside.&n~
+~
+9 14 3 0 6 0 0 16449 0 1 0
+4 0 0 4 0 0 0 0
+2 984 100
+E
+boots heavy workman workmen's~
+This heavy pair of boots is made from reinforced leather.  Near the toe
+of each boot, there's a thin, sturdy plate of some kind of metal that
+provides additional support.  The soles of the boots are also made from
+some kind of reinforced material, possibly hard rubber, that provides
+excellent traction and a sense of stability when the boots are worn.
+~
+#138248
+shovel~
+&+wa &+Lshovel&n~
+&+wA shovel has been dropped and left behind.&n~
+~
+5 15 3 0 5 0 0 24577 0 1 0
+15 2 5 6 0 0 0 0
+9 491 100
+E
+shovel~
+This is a simple, flat bladed shovel suitable for digging holes and moving
+dirt or other small objects.
+~
+A
+18 -2
+#138249
+vial ajida~
+&+ga &+Wvial&n&+g labelled&n &+GAjida&n~
+&+gA small vial with&n &+GAjida&n &+gwritten on the label has been dropped.&n~
+~
+10 40 3 0 7 0 0 16385 0 1 0
+40 4 102 26 10 0 0 0
+1 394 100
+E
+vial ajida~
+Ajida is odorous and colorless and is known to cause a victim to become
+violently ill.  The poison is also known to attack a victim's optic nerves,
+causing temporary or even permanent blinding.
+~
+#138250
+vial ajida~
+&+ga &+Wvial &n&+Llabelled&n &+GAskume&n~
+&+gA small vial with&n &+GAskume&n &+gwritten on the label has been dropped.&n~
+~
+10 40 3 0 7 0 0 16385 0 1 0
+30 127 38 33 0 0 0 0
+1 839 100
+E
+vial askume~
+Askume is a reddish-orange liquid, created from lichen that grows on warm
+cavern walls.  When ingested into the bloodstream, it causes a violent
+allergic reaction that swells the victims throat.  The victim can suffer
+asphixiation and death, as well as being unable to speak.
+~
+#138251
+vial assassin bug toxin~
+&+ga &+Wvial&+g labelled&n &+GAssassin Bug Toxin&n~
+&+gA small vial with&n &+GAssassin Bug Toxin&n &+gwritten on the label has been dropped.&n~
+~
+10 40 3 0 7 0 0 16385 0 1 0
+25 33 103 102 0 0 0 0
+1 1 100
+E
+vial assassin bug toxin~
+The toxin of the assassin bug has been known to cause paralysis in its
+victims.  In addition, even if someone resists the effects of the toxin,
+the victim can still feel lethargic and have his wits dulled for a time
+until his body is able to overcome the poison.
+~
+#138252
+vial barba amarilla~
+&+ga &+Wvial&n&+g labelled&n &+GBarba Amarilla&n~
+&+gA small vial with&n &+GBarba Amarilla&n &+gwritten on the label has been dropped.&n~
+~
+10 40 3 0 7 0 0 16385 0 1 0
+20 198 202 186 10 0 0 0
+1 1 100
+E
+vial barba amarilla~
+Barba Amarilla is made from the leaves of a rare flower, grown only in
+certainly wetland areas.  In small doses it's usually harmless, but in
+larger portions it can cause paralysis or even death.  It is a yellow
+liquid with a sweet, lemony odor to it.  The odor itself is harmless,
+although it can burn sensitive noses.
+~
+#138253
+vial harvestman poison~
+&+ga &+Wvial&+L labelled&n &+GHarvestman Poison&n~
+&+gA small vial with&n &+GHarvestman Poison&n &+gwritten on the label has been dropped.&n~
+~
+10 40 3 0 7 0 0 16385 0 1 0
+31 186 212 493 0 0 0 0
+1 1 100
+E
+vial harvestman poison~
+Harvestman poison is made from the secretions of a particularly nasty insect
+that hides in rice fields.  Dangerous to the touch, the poison viciously
+attacks the nervous system of its victim leaving them weak and stunned.
+~
+#138254
+chain whip whipping kau sin ke~
+&+La &+Wk&+Lau &+rs&+Rin &n&+Wk&+Le &+Ww&+Lhipping&n &+Wc&+Lhain&n~
+&+LA long chain-like weapon has been tossed aside.&n~
+~
+5 15 3 0 9 0 16384 24577 0 123006 0
+14 4 6 0 0 0 0 0
+5 465 100
+E
+chain whip whipping kau sin ke~
+This long-length of thin iron chain is suitable for use as a whip-style
+weapon.  Called a kau sin ke, it's made almost exclusively in the Jade
+Empire.  A skilled used of the kau sin ke can use the weapon to disarm
+a foe.
+~
+A
+18 4
+A
+19 4
+#138255
+sai weapon iron~
+&+wan &+Liron &+Wsai&n~
+&+wA two-pronged weapon has been dropped on the ground.&n~
+~
+5 15 3 0 8 0 0 8193 0 122910 0
+2 3 2 11 0 0 0 0
+2 549 100
+E
+sai weapon~
+This weapon looks like a short sword with a blunted tip coupled with another
+blade-like appendage near the handle.  It looks almost like an off-centered
+fork.  Called a sai, the weapon is used mostly for defensive purposes, with
+the design allowing the wielder to catch his opponents weapon between the
+two prongs.
+~
+A
+18 2
+#138256
+armor set full-body leather~
+&+La &+Lfull-body &+Wset &+Lof &+yleather armor&n~
+&+yA complete full-body set of leather armor has dropped in a pile.&n~
+~
+9 13 3 0 8 0 536870912 16393 0 122942 0
+12 0 0 3 0 0 0 0
+20 6744 100
+E
+armor set full-body leather~
+This complete set of leather armor is enough to give protection to the
+wearer from his neck down to his shins, including arm plates.  It's
+made of thick leather with padding sewn into it to make it more
+comfortable to wear.  Black leather straps on the sides of the armor allow
+one to tighten or loosen the suit.
+~
+#138257
+guntou saber weapon sword~
+&+wan &+Liron &+Cguntou&n~
+&+wAn iron guntou, a saber-like weapon, sticks partially in the ground.&n~
+~
+5 15 3 0 7 0 0 24577 0 123358 0
+9 2 4 3 0 0 0 0
+0 888 100
+E
+guntou saber weapon sword~
+This iron-weapon looks much like an ordinary saber, except that it is
+slightly heavier.
+~
+A
+18 1
+#138258
+sword greatsword no-dachi~
+&+La two-handed&n &+bno-dachi&n~
+&+LA greatsword of exceptional workmanship lies here.&n~
+~
+5 16 3 0 6 0 4194304 24577 0 30 0
+13 4 5 3 0 0 0 0
+12 444 100
+E
+sword greatsword no-dachi~
+This great two-handed sword, called a no-dachi, is made of a blue-tinged
+steel alloy.  Exceptionally sharp, the blade is decorated with various
+runes of fortune and luck, inscribed on the blade itself.
+~
+A
+19 2
+#138259
+rod iron iron-shod~
+&+yan&n &+wiron-shod&n &+yrod&n~
+&+yAn&n &+wiron-shod&n &+wrod has been discarded.&n~
+~
+5 15 3 0 9 0 0 24577 0 1 0
+6 3 2 6 0 0 0 0
+7 101 100
+E
+rod iron iron-shod~
+This simple wood rod has been capped with iron on both ends, making it
+a dangerous bludgeon.
+~
+#138260
+tanto black~
+&+La black-bladed &+wt&+Wanto&n~
+&+LA black-bladed tanto has been left here.&n~
+~
+5 15 3 0 7 0 0 24577 128 1 0
+2 2 3 11 0 0 0 0
+0 566 100
+E
+tanto black~
+This simple matte-black dagger is about six inches in length with a
+straight, razor-sharp blade.  It has a small guard, also colored black,
+and a cloth-wrapped hilt.
+~
+#138261
+robes crane~
+&+bsome blue robes of the&n &+cCrane Clan&n~
+&+bA set of dark blue robes with a crane embroidered on the back are here.&n~
+~
+9 3 3 0 10 0 0 16393 0 1 0
+2 0 0 2 0 0 0 0
+2 9888 100
+E
+robes crane~
+This simple blue robe has been decorated with some extremely well-made
+embroidery work.  On the back, someone has created the image of a
+white crane in a golden disk.
+~
+#138262
+staff iron iron-shod~
+&+yan&n &+wiron-shod&n &+ystaff&n~
+&+yAn&n &+wiron-shod&n &+wstaff has been discarded.&n~
+~
+5 15 3 0 9 0 4194304 24577 0 1 0
+6 3 4 6 0 0 0 0
+7 555 100
+E
+staff iron iron-shod~
+This simple wood staff has been capped with iron on both ends, making it
+a dangerous bludgeon.
+~
+#138263
+nunchaku numchuks numchucks~
+&+ya &+Wset&n&+y of nunchaku&n~
+&+yA high-quality set of wooden nunchaku has been set aside.&n~
+~
+5 6 3 0 10 0 0 24577 0 122974 0
+20 2 5 6 0 0 0 0
+2 9899 100
+E
+nunchaku numchuks numchucks~
+This set of nunchaku, also known as numchuks in some areas, is made up of
+two short rods of a very hard wood held together with a short metal chain.
+The weapon is often used by martial artists of the Jade Empire.
+~
+A
+18 1
+#138264
+pants black~
+&+Lsome &+wlight&+L, black pants&n~
+&+LA pair of very light, billowy black pants have been thrown away.&n~
+~
+9 15 3 0 7 0 0 16417 0 1 0
+1 0 0 1 0 0 0 0
+0 455 100
+E
+pants black~
+This billowy black pants have been designed so that the wearer still retains
+all his movement abilities.  They're light and flexible enough that they
+do not hinder leg movements at all.
+~
+#138265
+dagger assassin~
+&+La long-bladed a&n&+rs&n&+Ls&n&+ra&n&+Ls&n&+rs&n&+Li&n&+rn&n&+L's dagger&n~
+&+LThere is a long-bladed dagger lying on the ground here.&n~
+~
+5 16 3 0 12 0 16448 24577 128 130974 0
+2 3 2 11 0 0 0 0
+2 10101 100
+E
+dagger assassin~
+This long-bladed dagger has been blackened by some means so that it's dull,
+dark profile is harder to see.  The coating on the blade doesn't affect its
+sharpness, but it will prevent light from gleaming off the blade and giving
+away the position of the wielder.
+~
+A
+19 3
+#138266
+robes shadowwalker~
+&+Lrobes of the sh&n&+wad&n&+Low&n&+wwa&n&+Llk&n&+wer&n~
+&+LSome pitch black robes have been discarded.&n~
+~
+9 3 3 0 14 0 536952896 16393 0 16384 0
+12 0 0 2 0 0 0 0
+3 1010 100 524288 0 0 0
+E
+robes shadowwalker~
+These robes have a strange feel to them, a warmth generated by the fabric
+of the garment.  For some reason, your eyes can't seem to focus on them
+either.  Staring at the black cloth for more than a few moments causes
+disorientation and dizziness.
+~
+A
+20 -2
+A
+26 6
+#138267
+katana sword shadows breath~
+&+ca katana called '&n&+LShadows Breath&n&+c'&n~
+&+cThe magical katana '&n&+LShadows Breath&n&+c' has been mistakenly dropped.&n~
+~
+5 16 3 0 15 0 81984 24577 0 32774 0
+5 3 4 3 0 0 0 0
+8 99880 100 32800 0 0 0
+E
+katana sword shadows breath~
+This magical sword is called 'Shadows Breath', and it is one of the seven
+great swords of the Jade Empire.  Created by the mad master smith Kunji
+Pishida during the chaotic years when the Empire was first formed, the
+seven swords were given to the seven Lords who unified the lands, ending
+the decades of civil war and infighting between the Clans.
+
+Since that time, the seven swords have been given out to the six leaders
+of the most powerful clans, while the seventh and most powerful sword
+has been hidden away.
+~
+A
+18 2
+A
+2 -10
+#138268
+katana sword north wind~
+&+ca katana called '&n&+WThe North Wind&n&+c'&n~
+&+cThe magical katana '&n&+WThe North Wind&n&+c' has been mistakenly dropped.&n~
+~
+5 16 3 0 15 0 81984 24577 0 32774 0
+5 3 4 3 0 0 0 0
+8 95555 100 8 0 0 0
+E
+katana sword north wind~
+This magical sword is called 'North Wind', and it is one of the seven
+great swords of the Jade Empire.  Created by the mad master smith Kunji
+Pishida during the chaotic years when the Empire was first formed, the
+seven swords were given to the seven Lords who unified the lands, ending
+the decades of civil war and infighting between the Clans.
+
+Since that time, the seven swords have been given out to the six leaders
+of the most powerful clans, while the seventh and most powerful sword
+has been hidden away.
+~
+A
+18 2
+A
+3 -5
+#138269
+katana sword divine fury~
+&+ca katana called '&n&+CDivine Fury&n&+c'&n~
+&+cThe magical katana '&n&+CDivine Fury&n&+c' has been mistakenly dropped.&n~
+~
+5 16 3 0 15 0 81984 24577 0 32774 0
+5 3 4 3 0 0 0 0
+8 95666 100 4 0 0 0
+E
+katana sword divine fury~
+This magical sword is called 'Divine Fury', and it is one of the seven
+great swords of the Jade Empire.  Created by the mad master smith Kunji
+Pishida during the chaotic years when the Empire was first formed, the
+seven swords were given to the seven Lords who unified the lands, ending
+the decades of civil war and infighting between the Clans.
+
+Since that time, the seven swords have been given out to the six leaders
+of the most powerful clans, while the seventh and most powerful sword
+has been hidden away.
+~
+A
+18 2
+A
+4 -5
+#138270
+katana sword lotus blossom~
+&+ca katana called '&n&+mThe Lotus Bl&n&+Moss&n&+mom&+c'&n~
+&+cThe magical katana '&n&+mThe Lotus Bl&n&+Moss&n&+mom&n&+c' has been mistakenly dropped.&n~
+~
+5 16 3 0 15 0 81984 24577 0 32774 0
+5 3 4 3 0 0 0 0
+8 98888 100 524288 0 0 0
+E
+katana sword lotus blossom~
+This magical sword is called 'The Lotus Blossom', and it is one of the seven
+great swords of the Jade Empire.  Created by the mad master smith Kunji
+Pishida during the chaotic years when the Empire was first formed, the
+seven swords were given to the seven Lords who unified the lands, ending
+the decades of civil war and infighting between the Clans.
+
+Since that time, the seven swords have been given out to the six leaders
+of the most powerful clans, while the seventh and most powerful sword
+has been hidden away.
+~
+A
+18 2
+A
+26 -5
+#138271
+katana sword celestial dragon~
+&+ca katana called '&n&+BCelestial Dragon&n&+c'&n~
+&+cThe magical katana '&n&+BCelestial Dragon&n&+c' has been mistakenly dropped.&n~
+~
+5 16 3 0 15 0 81984 24577 0 32774 0
+5 3 4 3 0 0 0 0
+8 101010 100 67108864 0 0 0
+E
+katana sword celestial dragon~
+This magical sword is called 'Celestial Dragon', and it is one of the seven
+great swords of the Jade Empire.  Created by the mad master smith Kunji
+Pishida during the chaotic years when the Empire was first formed, the
+seven swords were given to the seven Lords who unified the lands, ending
+the decades of civil war and infighting between the Clans.
+
+Since that time, the seven swords have been given out to the six leaders
+of the most powerful clans, while the seventh and most powerful sword
+has been hidden away.
+~
+A
+18 2
+A
+1 -5
+#138272
+katana sword torrential rain~
+&+ca katana called '&n&+bTorrential Rain&n&+c'&n~
+&+cThe magical katana '&n&+bTorrential Rain&n&+c' has been mistakenly dropped.&n~
+~
+5 16 3 0 15 0 81984 24577 0 32774 0
+5 3 4 3 0 0 0 0
+8 90000 100 268435456 0 0 0
+E
+katana sword torrential rain~
+This magical sword is called 'Torrential Rain', and it is one of the seven
+great swords of the Jade Empire.  Created by the mad master smith Kunji
+Pishida during the chaotic years when the Empire was first formed, the
+seven swords were given to the seven Lords who unified the lands, ending
+the decades of civil war and infighting between the Clans.
+
+Since that time, the seven swords have been given out to the six leaders
+of the most powerful clans, while the seventh and most powerful sword
+has been hidden away.
+~
+A
+18 2
+A
+28 -10
+#138273
+stick bo staff~
+&+La &+Wb&+Lo &+Ws&+Ltick&n~
+&+yA long wooden staff has been discarded.&n~
+~
+5 6 3 0 9 0 4194560 24577 0 1 0
+12 3 4 0 0 0 0 0
+6 8000 100
+E
+stick bo staff~
+This long wooden staff is suitable for use as an aid for walking or as
+a weapon.  It is made of a hollow, hardened bamboo.
+~
+#138274
+yari spear~
+&+La &+Wlong-shafted&n &+Lyari&n~
+&+yA long-shafted&n &+Lyari&n&+y, or spear, sits on the ground.&n~
+~
+5 15 3 0 7 0 4194304 24577 0 32798 0
+8 2 10 11 0 0 0 0
+0 8000 100
+E
+yari spear~
+&+LA strange oriental spear&n
+~
+A
+18 -2
+A
+19 2
+#138275
+steel hammer warhammer~
+&+wa&n &+Wsteel&n &+wwarhammer&n~
+&+wA warhammer made of wood and&n &+Wsteel&n &+whas been left behind.&n~
+~
+5 16 3 0 6 0 4194304 24577 0 32798 0
+4 3 4 6 0 0 0 0
+13 8000 100
+E
+steel hammer warhammer~
+Constructed of a heavy, solid wood topped with a steel head, this warhammer
+is unwieldy enough to require two hands to use effectively for most.
+~
+A
+18 -1
+A
+19 2
+#138276
+jo stick bamboo~
+&+ya&n &+Yb&+gamboo&n &+Wj&+Lo &+Ws&+Ltick&n~
+&+yA short jo stick, made of&n &+Ybamboo&n&+y, has been tossed aside.&n~
+~
+5 41 3 0 6 0 8192 8193 0 131070 0
+12 1 9 6 0 0 0 0
+5 5000 100
+E
+jo stick bamboo~
+This jo stick is similar to it's cousin the bo stick.  It is much shorter
+and lighter, suitable for use with one hand instead of two.  It's about
+four feet in length, wrapped in the middle with light cloth held by black
+string, and made of bamboo.
+~
+#138277
+iron jingasa hat~
+&+Lan &+wiron &+Ljingasa&n~
+&+LA wide, round hat, made of iron, is laying here on the ground.&n~
+~
+9 15 3 0 8 0 0 17 0 123390 0
+2 0 0 2 0 0 0 0
+3 9000 100
+E
+iron jingasa hat~
+This hat resembles the wide, round straw hat used by peasant farmers except
+for this one is made of iron instead of straw.  It doesn't have guards
+for the ears, cheeks, or neck.  It would provide excellent shade from the
+sun, but no real protection to those areas.  Two simple straps made of cord
+extend from the side of the hat, where the ears of a wearer would be,
+and they can be tied to keep it on one's head.
+~
+#138278
+kimono lotus flower cimson silk komono~
+&+ra crimson &+Rlo&n&+rtus&n&+r-&+Rfl&n&+rower&n&+r kimono&n~
+&+rA deep crimson kimono, embroidered with a lotus flower, lies here.&n~
+~
+9 3 3 0 15 0 98368 9 0 25088 16
+6 0 0 1 0 0 0 0
+0 20000 100
+E
+kimono lotus flower cimson silk komono~
+&+r   This kimono has been finely woven and embroidered with the care of a
+&+rmaster craftsman, or woman. It has a fine pattern of lotus flowers and
+&+rswans, interlocking and juxtaposed along the edges of the garmet. It
+&+rseems to have a rather thin braided silk belt, which indicates that this
+&+ris a female's garmet. The quality of this garmet seems to imply only a
+&+rnoble woman could afford such a luxury.&n
+~
+A
+13 10
+A
+18 2
+#138279
+katana sword retribution~
+&+La &+Wk&+Latana &+Wc&+Lalled '&n&+LRet&n&+rribut&n&+Lion&n&+c'&n~
+&+cThe magical katana '&n&+LRet&n&+rribut&n&+Lion&n&+c' has been mistakenly dropped.&n~
+~
+5 16 3 0 15 0 16448 24577 0 32774 0
+5 3 4 3 115057 45 30 0
+8 100000 100 269484032 0 0 0
+E
+katana sword retribution~
+This magical sword is called 'Retribution', and it is one of the seven
+great swords of the Jade Empire.  Created by the mad master smith Kunji
+Pishida during the chaotic years when the Empire was first formed, the
+seven swords were given to the seven Lords who unified the lands, ending
+the decades of civil war and infighting between the Clans.
+
+Since that time, the seven swords have been given out to the six leaders
+of the most powerful clans, while the seventh and most powerful sword
+had been hidden away.  'Retribution' is that seventh weapon.
+~
+A
+18 3
+A
+19 3

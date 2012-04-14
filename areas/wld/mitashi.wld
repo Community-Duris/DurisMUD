@@ -1,0 +1,5327 @@
+#138200
+&+LOutside the Gates of&n &+GM&+gi&+Gtas&+gh&+Gi&n&+L, the &+gJ&+Gad&+ge C&+Git&+gy&n~
+&+G   M&+gi&+Gtas&+gh&+Gi&n &+Lis a wide, sprawling city surrounded by high walls of &+rr&n&+we&n&+rd b&n&+wr&n&+ri&n&+wc&n&+rk&n
+&+Land&n g&+rr&n&+wa&N&+ry&n &+wm&n&+ro&n&+wr&n&+rt&n&+wa&n&+rr&n&+L.  The walls are fifteen feet in height and wide enough so
+&+Lthat guards can easily keep watch over the countryside by walking along
+&+Lthe top.  At equal intervals around the capital city of the &+gJ&+Gad&+ge E&+Gmpir&+ge&n&+L,
+&+Lwooden towers rise up above the walls, providing an even higher perch
+&+Lfor the vigilant Imperial Guardsmen.  The city gates are made of solid
+&+cblue-steel&n &+Land swing easily on well-oiled hinges.  Painted in the middle
+&+Lof the gates is the symbol of the &+gJ&+Gad&+ge E&+Gmpir&+ge&n&+L, a bengal tiger crouching
+&+Las it moves through a field of reeds.
+~
+1 4 2 0
+D0
+~
+~
+0 0 647688
+D2
+~
+~
+0 0 138201
+S
+#138201
+&+gInside the Gates of&n &+GM&+gi&+Gtas&+gh&+Gi&n~
+&+L   This area stands just inside the solid city walls and acts as a checkpoint
+&+Lfor traffic entering and leaving the city.  Guards dressed in the &+ggr&n&+Gee&n&+gns&n
+&+Land &+bb&n&+Blue&n&+bs&n &+Lof the&n &+cImperial Guard&n &+Lpatrol the vicinity, searching for any signs
+&+Lof trouble.  More guards stand atop the red brick walls, each carrying a
+&+Lshortbow to deal with threats on the ground.  The main city road continues
+&+Lto head directly south into the heart of the city and smaller paths
+&+Lbranch off to the west and east, following the interior of the city walls.
+~
+1 0 0 0
+D0
+~
+~
+0 0 138200
+D1
+~
+~
+0 0 138215
+D2
+~
+~
+0 0 138232
+D3
+~
+~
+0 0 138202
+S
+#138202
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138201
+D2
+~
+~
+0 0 138203
+S
+#138203
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138202
+D3
+~
+~
+0 0 138204
+S
+#138204
+&+gAn Intersection of the &+GCity Wall Road&n &+gand the&n &+wPath of&n &+WSilver&n~
+&+w   A stone road that parallels the inner side of the city walls intersects
+&+where with the main road into the Henshu residential district.  To the south,
+&+wa wide avenue leads into a housing area filled with every manner of
+&+wcolorful building.  From here, one can see a vast array of people wandering
+&+wthe Path of Silver, including street vendors, commoners, and soldiers.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138203
+D2
+~
+~
+0 0 138245
+D3
+~
+~
+0 0 138205
+S
+#138205
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138204
+D3
+~
+~
+0 0 138206
+S
+#138206
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138205
+D2
+~
+~
+0 0 138207
+S
+#138207
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138206
+D3
+~
+~
+0 0 138208
+S
+#138208
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138207
+D2
+~
+~
+0 0 138209
+S
+#138209
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138208
+D2
+~
+~
+0 0 138210
+S
+#138210
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138209
+D1
+~
+~
+0 0 138211
+S
+#138211
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D2
+~
+~
+0 0 138212
+D3
+~
+~
+0 0 138210
+S
+#138212
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138211
+D2
+~
+~
+0 0 138213
+S
+#138213
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138212
+D2
+~
+~
+0 0 138214
+S
+#138214
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138213
+D2
+~
+~
+0 0 138311
+S
+#138215
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138216
+D3
+~
+~
+0 0 138201
+S
+#138216
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138217
+D3
+~
+~
+0 0 138215
+S
+#138217
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138218
+D2
+~
+~
+0 0 138312
+D3
+~
+~
+0 0 138216
+S
+#138218
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138219
+D3
+~
+~
+0 0 138217
+S
+#138219
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D2
+~
+~
+0 0 138220
+D3
+~
+~
+0 0 138218
+S
+#138220
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138219
+D2
+~
+~
+0 0 138221
+S
+#138221
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138220
+D1
+~
+~
+0 0 138222
+D2
+~
+~
+0 0 138317
+S
+#138222
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138223
+D3
+~
+~
+0 0 138221
+S
+#138223
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D1
+~
+~
+0 0 138224
+D3
+~
+~
+0 0 138222
+S
+#138224
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D2
+~
+~
+0 0 138225
+D3
+~
+~
+0 0 138223
+S
+#138225
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138224
+D2
+~
+~
+0 0 138226
+S
+#138226
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138225
+D2
+~
+~
+0 0 138227
+S
+#138227
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138226
+D1
+~
+~
+0 0 138228
+D3
+~
+~
+0 0 138413
+S
+#138228
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D2
+~
+~
+0 0 138229
+D3
+~
+~
+0 0 138227
+S
+#138229
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138228
+D2
+~
+~
+0 0 138230
+S
+#138230
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138229
+D2
+~
+~
+0 0 138231
+S
+#138231
+&+gAlong the City Walls&n~
+&+L   This stone road parallels the inner side of the city walls.  The area has
+&+La &+Cchill&n &+Lto it, since the majority of the path is in the &+Lshadow&n &+Lof either the
+&+Lwall or the buildings, depending on the time of day.  The road is clean and
+&+Lwell-maintained, with very few signs of wear and tear.  The stone of the road
+&+Lis comprised of small, well rounded rocks of various shades of gray.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138230
+S
+#138232
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan &+ws&+Wton&+wes&+y, each an exact replica of one
+&+yanother.  The &+wst&+Wone&+ws&+y are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called &+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n
+&+ybecause of where it leads: the &+WP&+Calac&+We o&+Cf t&+Wh&+Ce &+WHe&+Cave&+Wns&n&+y, and certainly
+&+ynot because of its coloration.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138201
+D1
+~
+~
+0 0 138315
+D2
+~
+~
+0 0 138233
+S
+#138233
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan &+ws&+Wton&+wes&+y, each an exact replica of one
+&+yanother.  The &+wst&+Wone&+ws&+y are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called &+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n
+&+ybecause of where it leads: the &+WP&+Calac&+We o&+Cf t&+Wh&+Ce &+WHe&+Cave&+Wns&n&+y, and certainly
+&+ynot because of its coloration.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138232
+D1
+~
+~
+0 0 138252
+D2
+~
+~
+0 0 138234
+S
+#138234
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan &+ws&+Wton&+wes&+y, each an exact replica of one
+&+yanother.  The &+wst&+Wone&+ws&+y are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called &+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n
+&+ybecause of where it leads: the &+WP&+Calac&+We o&+Cf t&+Wh&+Ce &+WHe&+Cave&+Wns&n&+y, and certainly
+&+ynot because of its coloration.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138233
+D2
+~
+~
+0 0 138235
+S
+#138235
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan &+ws&+Wton&+wes&+y, each an exact replica of one
+&+yanother.  The &+wst&+Wone&+ws&+y are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called &+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n
+&+ybecause of where it leads: the &+WP&+Calac&+We o&+Cf t&+Wh&+Ce &+WHe&+Cave&+Wns&n&+y, and certainly
+&+ynot because of its coloration.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138234
+D2
+~
+~
+0 0 138236
+S
+#138236
+&+gAn Intersection of &+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n &+gand&n &+ythe Path of&n &+YBronze&n~
+&+y   The wide&n &+GJade Highway&n &+ymeets here with a smaller road called the &+YPath of
+&+YBronze&n&+y.  Acting mostly as a trafficway for people moving from this main road
+&+yto a nearby residential district, the&n &+YPath of Bronze&n &+yis made from patchwork
+&+ycobblestones of various shades of browns and tans.  The upkeep on the
+&+ysmaller path is just as good as that on the &+GJade Highway&n&+y.  It leads
+&+yto the west into the residential district and east into a large marketplace.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138235
+D1
+~
+~
+0 0 138264
+D2
+~
+~
+0 0 138237
+D3
+~
+~
+0 0 138251
+S
+#138237
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan &+ws&+Wton&+wes&+y, each an exact replica of one
+&+yanother.  The &+wst&+Wone&+ws&+y are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called &+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n
+&+ybecause of where it leads: the &+WP&+Calac&+We o&+Cf t&+Wh&+Ce &+WHe&+Cave&+Wns&n&+y, and certainly
+&+ynot because of its coloration.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138236
+D2
+~
+~
+0 0 138238
+S
+#138238
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan &+ws&+Wton&+wes&+y, each an exact replica of one
+&+yanother.  The &+wst&+Wone&+ws&+y are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called &+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n
+&+ybecause of where it leads: the &+WP&+Calac&+We o&+Cf t&+Wh&+Ce &+WHe&+Cave&+Wns&n&+y, and certainly
+&+ynot because of its coloration.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138237
+D1
+~
+~
+0 0 138272
+D2
+~
+~
+0 0 138239
+D3
+~
+~
+0 0 138419
+S
+#138239
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan stones, each an exact replica of one
+&+yanother.  The stones are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called the &+GJade&n &+gHighway&n
+&+ybecause of where it leads: the &+GPalace of the Heavens&n&+y, and certainly
+&+ynot because of its coloration.   A long road made of &+Yy&n&+ye&n&+Yl&n&+yl&n&+Yo&n&+yw and&n &+Yb&n&+yr&n&+Yo&n&+yw&n&+Yn&n &+yb&n&+Yr&n&+yi&n&+Yc&n&+yk&n&+Ys&n
+&+yleads to the west, off towards the city docks.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138238
+D2
+~
+~
+0 0 138240
+D3
+~
+~
+0 0 138308
+S
+#138240
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan stones, each an exact replica of one
+&+yanother.  The stones are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called the &+GJade&n &+gHighway&n
+&+ybecause of where it leads: the &+GPalace of the Heavens&n&+y, and certainly
+&+ynot because of its coloration.  A path made out of &+Lblack gravel&n &+yleads to
+&+ythe east, underneath a stone archway, and into what looks like a park or
+&+ygarden.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138239
+D1
+~
+~
+0 0 138299
+D2
+~
+~
+0 0 138241
+S
+#138241
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan stones, each an exact replica of one
+&+yanother.  The stones are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called the &+GJade&n &+gHighway&n
+&+ybecause of where it leads: the &+GPalace of the Heavens&n&+y, and certainly
+&+ynot because of its coloration.  A path made out of &+Lblack gravel&n &+yleads to
+&+ythe east, underneath a stone archway, and into what looks like a park or
+&+ygarden.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138240
+D1
+~
+~
+0 0 138302
+D2
+~
+~
+0 0 138242
+S
+#138242
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan stones, each an exact replica of one
+&+yanother.  The stones are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called the &+GJade&n &+gHighway&n
+&+ybecause of where it leads: the &+GPalace of the Heavens&n&+y, and certainly
+&+ynot because of its coloration.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138241
+D2
+~
+~
+0 0 138243
+S
+#138243
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan stones, each an exact replica of one
+&+yanother.  The stones are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called the &+GJade&n &+gHighway&n
+&+ybecause of where it leads: the &+GPalace of the Heavens&n&+y, and certainly
+&+ynot because of its coloration.  Splitting off from this highway in both the
+&+ywest and east directions is the &+RPath of Roses&n&+y, which leads past the
+&+ygreat Clan houses.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138242
+D1
+~
+~
+0 0 138327
+D2
+~
+~
+0 0 138244
+D3
+~
+~
+0 0 138326
+S
+#138244
+&+LT&+wh&+We&n &+gJ&+Gad&+ge&n &+LHi&+wghw&+Way&n~
+&+y   This wide road is made of flat tan stones, each an exact replica of one
+&+yanother.  The stones are rectangular, roughly four inches wide and eight
+&+yinches long and are made from a mix of sand and clay.  The roads are
+&+yimmaculately maintained.  No cracks, holes, or chips can be seen anywhere
+&+yon the entire stretch of the highway.  The road is called the &+GJade&n &+gHighway&n
+&+ybecause of where it leads: the &+GPalace of the Heavens&n&+y, and certainly
+&+ynot because of its coloration.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138243
+S
+#138245
+&+LThe &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n~
+&+L   This major road leads north and south and is a main path for traffic to&n
+&+Land from the Hinshu residential district.  Along the road lie houses of all&n
+&+Lshapes and sizes painted in a incredible array of &+Rbright colors&n&+L.  Instead&n
+&+Lof looking gaudy, however, the buildings paint a brilliant tapestry of&n
+&+Lcity life.  Most of the houses are fat, rectangular affairs with broad,
+&+Lsharply tapered &+wblack roofs&n&+L.  Some are smaller, little more than shacks,&n
+&+Land unfortunately it seems these smaller houses are the homes of large,&n
+&+Lpoorer families who must be crammed into the tiny living spaces.  Street&n
+&+Lvendors hawk their wares up and down the &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n&+L, mostly food&n
+&+Lmerchants serving those who are too lazy to venture to the&n &+mMarket Square&n &+Lin&n
+&+Lthe east section of the city.&n
+~
+1 0 1 0
+D0
+~
+~
+0 0 138204
+D2
+~
+~
+0 0 138246
+D3
+~
+~
+0 0 138416
+S
+#138246
+&+LThe &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n~
+&+L   This major road leads north and south and is a main path for traffic to&n
+&+Land from the Hinshu residential district.  Along the road lie houses of all&n
+&+Lshapes and sizes painted in a incredible array of &+Rbright colors&n&+L.  Instead&n
+&+Lof looking gaudy, however, the buildings paint a brilliant tapestry of&n
+&+Lcity life.  Most of the houses are fat, rectangular affairs with broad,
+&+Lsharply tapered &+wblack roofs&n&+L.  Some are smaller, little more than shacks,&n
+&+Land unfortunately it seems these smaller houses are the homes of large,&n
+&+Lpoorer families who must be crammed into the tiny living spaces.  Street&n
+&+Lvendors hawk their wares up and down the &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n&+L, mostly food&n
+&+Lmerchants serving those who are too lazy to venture to the&n &+mMarket Square&n &+Lin&n
+&+Lthe east section of the city.&n
+~
+1 0 1 0
+D0
+~
+~
+0 0 138245
+D2
+~
+~
+0 0 138247
+D3
+~
+~
+0 0 138417
+S
+#138247
+&+LThe &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n~
+&+L   This major road leads north and south and is a main path for traffic to&n
+&+Land from the Hinshu residential district.  Along the road lie houses of all&n
+&+Lshapes and sizes painted in a incredible array of &+Rbright colors&n&+L.  Instead&n
+&+Lof looking gaudy, however, the buildings paint a brilliant tapestry of&n
+&+Lcity life.  Most of the houses are fat, rectangular affairs with broad,
+&+Lsharply tapered &+wblack roofs&n&+L.  Some are smaller, little more than shacks,&n
+&+Land unfortunately it seems these smaller houses are the homes of large,&n
+&+Lpoorer families who must be crammed into the tiny living spaces.  Street&n
+&+Lvendors hawk their wares up and down the &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n&+L, mostly food&n
+&+Lmerchants serving those who are too lazy to venture to the&n &+mMarket Square&n &+Lin&n
+&+Lthe east section of the city.&n
+~
+1 0 1 0
+D0
+~
+~
+0 0 138246
+D1
+~
+~
+0 0 138418
+D2
+~
+~
+0 0 138248
+D3
+~
+~
+0 0 138427
+S
+#138248
+&+LThe &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n &+Land&n &+yPath of&n &+YBronze&n &+LIntersection&n~
+&+L   The major road leading through the Hinshu residential district intersects
+&+Lwith a short road leading east.  The&n &+yPath of Bronze&n &+Lis smaller and much less
+&+Ltravelled than &+LThe &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n &+Land is mostly used by people heading from
+&+Lthe&n &+GJade Highway&n &+Lto this area of citizen housing.  At the southeast corner
+&+Lof this intersection is a large, multi-level apartment-style building that
+&+Lrises high above the surrounding structures.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138247
+D1
+~
+~
+0 0 138251
+D2
+~
+~
+0 0 138249
+S
+#138249
+&+LThe &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n~
+&+L   This major road leads north and south and is a main path for traffic to&n
+&+Land from the Hinshu residential district.  Along the road lie houses of all&n
+&+Lshapes and sizes painted in a incredible array of &+Rbright colors&n&+L.  Instead&n
+&+Lof looking gaudy, however, the buildings paint a brilliant tapestry of&n
+&+Lcity life.  Most of the houses are fat, rectangular affairs with broad,
+&+Lsharply tapered &+wblack roofs&n&+L.  Some are smaller, little more than shacks,&n
+&+Land unfortunately it seems these smaller houses are the homes of large,&n
+&+Lpoorer families who must be crammed into the tiny living spaces.  Street&n
+&+Lvendors hawk their wares up and down the &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n&+L, mostly food&n
+&+Lmerchants serving those who are too lazy to venture to the&n &+mMarket Square&n &+Lin&n
+&+Lthe east section of the city.&n
+~
+1 0 1 0
+D0
+~
+~
+0 0 138248
+D2
+~
+~
+0 0 138250
+S
+#138250
+&+LThe &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n~
+&+L   This major road leads north and south and is a main path for traffic to&n
+&+Land from the Hinshu residential district.  Along the road lie houses of all&n
+&+Lshapes and sizes painted in a incredible array of &+Rbright colors&n&+L.  Instead&n
+&+Lof looking gaudy, however, the buildings paint a brilliant tapestry of&n
+&+Lcity life.  Most of the houses are fat, rectangular affairs with broad,
+&+Lsharply tapered &+wblack roofs&n&+L.  Some are smaller, little more than shacks,&n
+&+Land unfortunately it seems these smaller houses are the homes of large,&n
+&+Lpoorer families who must be crammed into the tiny living spaces.  Street&n
+&+Lvendors hawk their wares up and down the &+WP&+wat&+Wh&+L of&n &+WSi&+wlv&+Wer&n&+L, mostly food&n
+&+Lmerchants serving those who are too lazy to venture to the&n &+mMarket Square&n &+Lin&n
+&+Lthe east section of the city.&n
+~
+1 0 1 0
+D0
+~
+~
+0 0 138249
+D2
+~
+~
+0 0 138309
+D3
+~
+~
+0 0 138422
+S
+#138251
+&+yThe Path of&n &+YBronze&n~
+&+y   This is a small side road, little more than a cobblestone path that
+&+yprovides a quick link between the&n &+GJade Highway&n &+yand the&n &+wPath of&n &+WSilver&n&+y.  A
+&+ylarge, multi-story building lies directly south of here, rising ponderously
+&+yinto the city skyline.  It's redwood facade is decorated with various
+&+ysmall&n &+wst&n&+Lo&n&+wne gar&n&+Lgoy&n&+wles&n &+yand &+wst&n&+Latu&n&+wes&n &+yof festive spirits that are frozen in
+&+yexpressions joy and merriment.  North of this location is a simple house
+&+ythat looks out of place next to its neighboring building.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138236
+D3
+~
+~
+0 0 138248
+S
+#138252
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+&+mA wide cobblestone path leads to the west, back towards the main highway
+&+mthrough town.
+~
+1 4 1 0
+D1
+~
+~
+0 0 138253
+D2
+~
+~
+0 0 138256
+D3
+~
+~
+0 0 138233
+S
+#138253
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138254
+D2
+~
+~
+0 0 138257
+D3
+~
+~
+0 0 138252
+S
+#138254
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 4 1 0
+D0
+~
+~
+0 0 138312
+D1
+~
+~
+0 0 138255
+D2
+~
+~
+0 0 138258
+D3
+~
+~
+0 0 138253
+S
+#138255
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D2
+~
+~
+0 0 138259
+D3
+~
+~
+0 0 138254
+S
+#138256
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138252
+D1
+~
+~
+0 0 138257
+D2
+~
+~
+0 0 138260
+S
+#138257
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138253
+D1
+~
+~
+0 0 138258
+D2
+~
+~
+0 0 138261
+D3
+~
+~
+0 0 138256
+S
+#138258
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138254
+D1
+~
+~
+0 0 138259
+D2
+~
+~
+0 0 138262
+D3
+~
+~
+0 0 138257
+S
+#138259
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138255
+D2
+~
+~
+0 0 138263
+D3
+~
+~
+0 0 138258
+S
+#138260
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138256
+D1
+~
+~
+0 0 138261
+D2
+~
+~
+0 0 138264
+S
+#138261
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138257
+D1
+~
+~
+0 0 138262
+D2
+~
+~
+0 0 138265
+D3
+~
+~
+0 0 138260
+S
+#138262
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138258
+D1
+~
+~
+0 0 138263
+D2
+~
+~
+0 0 138266
+D3
+~
+~
+0 0 138261
+S
+#138263
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 4 1 0
+D0
+~
+~
+0 0 138259
+D1
+~
+~
+0 0 138410
+D2
+~
+~
+0 0 138267
+D3
+~
+~
+0 0 138262
+S
+#138264
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+&+mA road called&n &+ythe Path of Bronze&n &+mheads west towards the main highway.
+~
+1 4 1 0
+D0
+~
+~
+0 0 138260
+D1
+~
+~
+0 0 138265
+D2
+~
+~
+0 0 138268
+D3
+~
+~
+0 0 138236
+S
+#138265
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138261
+D1
+~
+~
+0 0 138266
+D2
+~
+~
+0 0 138269
+D3
+~
+~
+0 0 138264
+S
+#138266
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138262
+D1
+~
+~
+0 0 138267
+D2
+~
+~
+0 0 138270
+D3
+~
+~
+0 0 138265
+S
+#138267
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138263
+D2
+~
+~
+0 0 138271
+D3
+~
+~
+0 0 138266
+S
+#138268
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138264
+D1
+~
+~
+0 0 138269
+D2
+~
+~
+0 0 138272
+S
+#138269
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138265
+D1
+~
+~
+0 0 138270
+D2
+~
+~
+0 0 138273
+D3
+~
+~
+0 0 138268
+S
+#138270
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138266
+D1
+~
+~
+0 0 138271
+D2
+~
+~
+0 0 138274
+D3
+~
+~
+0 0 138269
+S
+#138271
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138267
+D2
+~
+~
+0 0 138275
+D3
+~
+~
+0 0 138270
+S
+#138272
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+&+mA wide cobblestone path leads to the west, back towards the main highway
+&+mthrough town.
+~
+1 4 1 0
+D0
+~
+~
+0 0 138268
+D1
+~
+~
+0 0 138273
+D3
+~
+~
+0 0 138238
+S
+#138273
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138269
+D1
+~
+~
+0 0 138274
+D3
+~
+~
+0 0 138272
+S
+#138274
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138270
+D1
+~
+~
+0 0 138275
+D3
+~
+~
+0 0 138273
+S
+#138275
+&+BThe Market Square&n~
+&+m   A large, flat plaza has been constructed here to be used as a giant,
+&+mopen-air market.  Vendors hawk their wares in many ways.  Some smaller
+&+mvendors carry their goods with them, while the larger vendors have wooden
+&+mstalls covered with multi-colored cloth awnings to provide shade.
+&+mAdding to the confusion is the number of children who run through the crowds,
+&+munsupervised by their parents and turning the marketplace into a giant
+&+mplayground.  Merchants seem to find the kids to be a nuisance, as do many
+&+mof the shoppers, and the town guards are often called in to run them off.
+&+mA great stone pathway leads directly south to the section of town used
+&+mby the &+BImperial Army&n&+m.
+~
+1 4 1 0
+D0
+~
+~
+0 0 138271
+D2
+~
+~
+0 0 138276
+D3
+~
+~
+0 0 138274
+S
+#138276
+&+cThe Guards Walk&n~
+&+w   This road is used mostly by the soliders of the&n &+cImperial Army&n &+wand the
+&+BWatch&n&+w.  It is comprised of brown bricks, roughly square in shape, made out
+&+wof a &+ymi&n&+Lx&n&+ytu&n&+Lr&n&+ye&n &+wof&n &+ydirt&n &+wand&n &+Ldark clay&n&+w.  The road is very well maintained and is
+&+wwide enough for two wagons to travel along it side-by-side.  Alongside the
+&+wroad are the dull, non-descript two-story buildings that belong to the
+&+wImperial military.  The buildings are ugly and lack the color that makes
+&+wthe rest of Mitashi so alive.  The colorful garb of the soldiers and their
+&+wservants takes away some of the drabness though.  A great stone arch at
+&+wthe far north side of this road leads into the sights and sounds of the
+&+mmarketplace&n&+w.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138275
+D2
+~
+~
+0 0 138277
+S
+#138277
+&+cThe Guards Walk&n~
+&+w   This road is used mostly by the soliders of the&n &+cImperial Army&n &+wand the
+&+BWatch&n&+w.  It is comprised of brown bricks, roughly square in shape, made out
+&+wof a &+ymi&n&+Lx&n&+ytu&n&+Lr&n&+ye&n &+wof&n &+ydirt&n &+wand&n &+Ldark clay&n&+w.  The road is very well maintained and is
+&+wwide enough for two wagons to travel along it side-by-side.  Alongside the
+&+wroad are the dull, non-descript two-story buildings that belong to the
+&+wImperial military.  The buildings are ugly and lack the color that makes
+&+wthe rest of Mitashi so alive.  The colorful garb of the soldiers and their
+&+wservants takes away some of the drabness though.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138276
+D1
+&+LA wooden door.&n
+~
+door~
+1 0 138284
+D2
+~
+~
+0 0 138278
+S
+#138278
+&+cThe Guards Walk&n~
+&+w   This road is used mostly by the soliders of the&n &+cImperial Army&n &+wand the
+&+BWatch&n&+w.  It is comprised of brown bricks, roughly square in shape, made out
+&+wof a &+ymi&n&+Lx&n&+ytu&n&+Lr&n&+ye&n &+wof&n &+ydirt&n &+wand&n &+Ldark clay&n&+w.  The road is very well maintained and is
+&+wwide enough for two wagons to travel along it side-by-side.  Alongside the
+&+wroad are the dull, non-descript two-story buildings that belong to the
+&+wImperial military.  The buildings are ugly and lack the color that makes
+&+wthe rest of Mitashi so alive.  The colorful garb of the soldiers and their
+&+wservants takes away some of the drabness though.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138277
+D2
+~
+~
+0 0 138279
+S
+#138279
+&+cThe Guards Walk&n~
+&+w   This road is used mostly by the soliders of the&n &+cImperial Army&n &+wand the
+&+BWatch&n&+w.  It is comprised of brown bricks, roughly square in shape, made out
+&+wof a &+ymi&n&+Lx&n&+ytu&n&+Lr&n&+ye&n &+wof&n &+ydirt&n &+wand&n &+Ldark clay&n&+w.  The road is very well maintained and is
+&+wwide enough for two wagons to travel along it side-by-side.  Alongside the
+&+wroad are the dull, non-descript two-story buildings that belong to the
+&+wImperial military.  The buildings are ugly and lack the color that makes
+&+wthe rest of Mitashi so alive.  The colorful garb of the soldiers and their
+&+wservants takes away some of the drabness though.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138278
+D1
+~
+~
+0 0 138280
+S
+#138280
+&+cThe Guards Walk&n~
+&+w   This road is used mostly by the soliders of the&n &+cImperial Army&n &+wand the
+&+BWatch&n&+w.  It is comprised of brown bricks, roughly square in shape, made out
+&+wof a &+ymi&n&+Lx&n&+ytu&n&+Lr&n&+ye&n &+wof&n &+ydirt&n &+wand&n &+Ldark clay&n&+w.  The road is very well maintained and is
+&+wwide enough for two wagons to travel along it side-by-side.  Alongside the
+&+wroad are the dull, non-descript two-story buildings that belong to the
+&+wImperial military.  The buildings are ugly and lack the color that makes
+&+wthe rest of Mitashi so alive.  The colorful garb of the soldiers and their
+&+wservants takes away some of the drabness though.
+~
+1 0 1 0
+D0
+&+LA wooden door&n
+~
+door~
+1 0 138288
+D1
+~
+~
+0 0 138281
+D3
+~
+~
+0 0 138279
+S
+#138281
+&+cThe Guards Walk&n~
+&+w   This road is used mostly by the soliders of the&n &+cImperial Army&n &+wand the
+&+BWatch&n&+w.  It is comprised of brown bricks, roughly square in shape, made out
+&+wof a &+ymi&n&+Lx&n&+ytu&n&+Lr&n&+ye&n &+wof&n &+ydirt&n &+wand&n &+Ldark clay&n&+w.  The road is very well maintained and is
+&+wwide enough for two wagons to travel along it side-by-side.  Alongside the
+&+wroad are the dull, non-descript two-story buildings that belong to the
+&+wImperial military.  The buildings are ugly and lack the color that makes
+&+wthe rest of Mitashi so alive.  The colorful garb of the soldiers and their
+&+wservants takes away some of the drabness though.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138282
+D3
+~
+~
+0 0 138280
+S
+#138282
+&+cThe Guards Walk&n~
+&+w   This road is used mostly by the soliders of the&n &+cImperial Army&n &+wand the
+&+BWatch&n&+w.  It is comprised of brown bricks, roughly square in shape, made out
+&+wof a &+ymi&n&+Lx&n&+ytu&n&+Lr&n&+ye&n &+wof&n &+ydirt&n &+wand&n &+Ldark clay&n&+w.  The road is very well maintained and is
+&+wwide enough for two wagons to travel along it side-by-side.  Alongside the
+&+wroad are the dull, non-descript two-story buildings that belong to the
+&+wImperial military.  The buildings are ugly and lack the color that makes
+&+wthe rest of Mitashi so alive.  The colorful garb of the soldiers and their
+&+wservants takes away some of the drabness though.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138283
+D2
+~
+~
+0 0 138333
+D3
+~
+~
+0 0 138281
+S
+#138283
+&+cThe Guards Walk&n~
+&+w   This road is used mostly by the soliders of the&n &+cImperial Army&n &+wand the
+&+BWatch&n&+w.  It is comprised of brown bricks, roughly square in shape, made out
+&+wof a &+ymi&n&+Lx&n&+ytu&n&+Lr&n&+ye&n &+wof&n &+ydirt&n &+wand&n &+Ldark clay&n&+w.  The road is very well maintained and is
+&+wwide enough for two wagons to travel along it side-by-side.  Alongside the
+&+wroad are the dull, non-descript two-story buildings that belong to the
+&+wImperial military.  The buildings are ugly and lack the color that makes
+&+wthe rest of Mitashi so alive.  The colorful garb of the soldiers and their
+&+wservants takes away some of the drabness though.
+~
+1 0 1 0
+D0
+&+LA wooden door&n
+~
+door~
+1 0 138292
+D3
+~
+~
+0 0 138282
+S
+#138284
+&+CA Guard Barracks&n~
+&+L   This small room serves as the entry point into a larger, multi-level
+&+Lbarracks structure.  The room is extremely clean and well organized
+&+Land the walls are made from treated wood designed to resist the effects
+&+Lof water and age.  While the interior may be spartan, there is a feeling
+&+Lof purpose and quiet solitude to the building that would appeal to a
+&+Ldedicated and honor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138285
+D3
+&+LA wooden door&n
+~
+door~
+1 0 138277
+S
+#138285
+&+CA Guard Barracks&n~
+&+L   This small room serves as the entry point into a larger, multi-level
+&+Lbarracks structure.  The room is extremely clean and well organized
+&+Land the walls are made from treated wood designed to resist the effects
+&+Lof water and age.  While the interior may be spartan, there is a feeling
+&+Lof purpose and quiet solitude to the building that would appeal to a
+&+Ldedicated and honor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D1
+~
+~
+0 0 138286
+D2
+~
+~
+0 0 138284
+S
+#138286
+&+CA Guard Barracks&n~
+&+L   This large room serves as a sleeping room for the soldiers of the
+&+LImperial Watch.  The room is extremely clean and well organized and the
+&+Lwalls are made from treated wood designed to resist the effects of water
+&+Land age.  Movable interior walls made of bamboo frames and thin paper
+&+Lallow the warriors some measure of privacy, while also allowing them
+&+Lto be moved out of the way for training or sparring sessions held here.
+&+LWhile the interior may be spartan, there is a feeling of purpose and
+&+Lquiet solitude to the building that would appeal to a dedicated and
+&+Lhonor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D3
+~
+~
+0 0 138285
+D4
+~
+~
+0 0 138287
+S
+#138287
+&+CA Guard Barracks&n~
+&+L   This large room serves as a classroom for the men of the Imperial
+&+LWatch.  There are no chairs present, but there are numerous small mats
+&+Lsuitable for kneeling upon.  There are some practice weapons made of
+&+Lbamboo sitting on racks near the walls and some armor made of thin leather
+&+Land wood.  The room is extremely clean and well organized and the
+&+Lwalls are made from treated wood designed to resist the effects of water
+&+Land age.  Movable interior walls made of bamboo frames and thin paper
+&+Lallow the warriors some measure of privacy, while also allowing them
+&+Lto be moved out of the way for training or sparring sessions held here.
+&+LWhile the interior may be spartan, there is a feeling of purpose and
+&+Lquiet solitude to the building that would appeal to a dedicated and
+&+Lhonor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D5
+~
+~
+0 0 138286
+S
+#138288
+&+CA Guard Barracks&n~
+&+L   This small room serves as the entry point into a larger, multi-level
+&+Lbarracks structure.  The room is extremely clean and well organized
+&+Land the walls are made from treated wood designed to resist the effects
+&+Lof water and age.  While the interior may be spartan, there is a feeling
+&+Lof purpose and quiet solitude to the building that would appeal to a
+&+Ldedicated and honor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D1
+~
+~
+0 0 138289
+D2
+&+LA wooden door&n
+~
+door~
+1 0 138280
+S
+#138289
+&+CA Guard Barracks&n~
+&+L   This small room serves a dual purpose as a storage room and a hallway
+&+Lleading further into the building.  The room is extremely clean and well
+&+Lorganized and the walls are made from treated wood designed to resist the
+&+Leffects of water and age.  While the interior may be spartan, there is a
+&+Lfeeling of purpose and quiet solitude to the building that would appeal
+&+Lto a dedicated and honor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138290
+D3
+~
+~
+0 0 138288
+S
+#138290
+&+CA Guard Barracks&n~
+&+L   This large room serves as a sleeping room for the soldiers of the
+&+LImperial Watch.  The room is extremely clean and well organized and the
+&+Lwalls are made from treated wood designed to resist the effects of water
+&+Land age.  Movable interior walls made of bamboo frames and thin paper
+&+Lallow the warriors some measure of privacy, while also allowing them
+&+Lto be moved out of the way for training or sparring sessions held here.
+&+LWhile the interior may be spartan, there is a feeling of purpose and
+&+Lquiet solitude to the building that would appeal to a dedicated and
+&+Lhonor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D2
+~
+~
+0 0 138289
+D4
+~
+~
+0 0 138291
+S
+#138291
+&+CA Guard Barracks&n~
+&+L   This large room serves as a classroom for the men of the Imperial
+&+LWatch.  There are no chairs present, but there are numerous small mats
+&+Lsuitable for kneeling upon.  There are some practice weapons made of
+&+Lbamboo sitting on racks near the walls and some armor made of thin leather
+&+Land wood.  The room is extremely clean and well organized and the
+&+Lwalls are made from treated wood designed to resist the effects of water
+&+Land age.  Movable interior walls made of bamboo frames and thin paper
+&+Lallow the warriors some measure of privacy, while also allowing them
+&+Lto be moved out of the way for training or sparring sessions held here.
+&+LWhile the interior may be spartan, there is a feeling of purpose and
+&+Lquiet solitude to the building that would appeal to a dedicated and
+&+Lhonor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D5
+~
+~
+0 0 138290
+S
+#138292
+&+CA Guard Barracks&n~
+&+w   This small room serves as the entry point into a larger, multi-level
+&+wbarracks structure.  The room is extremely clean and well organized
+&+wand the walls are made from treated wood designed to resist the effects
+&+wof water and age.  While the interior may be spartan, there is a feeling
+&+wof purpose and quiet solitude to the building that would appeal to a
+&+wdedicated and honor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D2
+&+LA wooden door&n
+~
+door~
+1 0 138283
+D3
+~
+~
+0 0 138293
+S
+#138293
+&+CA Guard Barracks&n~
+&+w   This small room serves a dual purpose as a storage room and a hallway
+&+wleading further into the building.  The room is extremely clean and well
+&+worganized and the walls are made from treated wood designed to resist the
+&+weffects of water and age.  While the interior may be spartan, there is a
+&+wfeeling of purpose and quiet solitude to the building that would appeal
+&+wto a dedicated and honor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138294
+D1
+~
+~
+0 0 138292
+S
+#138294
+&+CA Guard Barracks&n~
+&+w   This large room serves as a sleeping room for the soldiers of the
+&+wImperial Watch.  The room is extremely clean and well organized and the
+&+wwalls are made from treated wood designed to resist the effects of water
+&+wand age.  Movable interior walls made of bamboo frames and thin paper
+&+wallow the warriors some measure of privacy, while also allowing them
+&+wto be moved out of the way for training or sparring sessions held here.
+&+wWhile the interior may be spartan, there is a feeling of purpose and
+&+wquiet solitude to the building that would appeal to a dedicated and
+&+whonor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D2
+~
+~
+0 0 138293
+D4
+~
+~
+0 0 138295
+S
+#138295
+&+CA Guard Barracks&n~
+&+L   This large room serves as a classroom for the men of the Imperial
+&+LWatch.  There are no chairs present, but there are numerous small mats
+&+Lsuitable for kneeling upon.  There are some practice weapons made of
+&+Lbamboo sitting on racks near the walls and some armor made of thin leather
+&+Land wood.  The room is extremely clean and well organized and the
+&+Lwalls are made from treated wood designed to resist the effects of water
+&+Land age.  Movable interior walls made of bamboo frames and thin paper
+&+Lallow the warriors some measure of privacy, while also allowing them
+&+Lto be moved out of the way for training or sparring sessions held here.
+&+LWhile the interior may be spartan, there is a feeling of purpose and
+&+Lquiet solitude to the building that would appeal to a dedicated and
+&+Lhonor-bound warrior of the Jade Empire.
+~
+1 33558536 1 0
+D5
+~
+~
+0 0 138294
+S
+#138296
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138297
+D2
+~
+~
+0 0 138299
+S
+#138297
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138298
+D2
+~
+~
+0 0 138300
+D3
+~
+~
+0 0 138296
+S
+#138298
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 0 1 0
+D2
+~
+~
+0 0 138301
+D3
+~
+~
+0 0 138297
+S
+#138299
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 4 1 0
+D0
+~
+~
+0 0 138296
+D1
+~
+~
+0 0 138300
+D2
+~
+~
+0 0 138302
+D3
+~
+~
+0 0 138240
+S
+#138300
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138297
+D1
+~
+~
+0 0 138301
+D2
+~
+~
+0 0 138303
+D3
+~
+~
+0 0 138299
+S
+#138301
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138298
+D2
+~
+~
+0 0 138304
+D3
+~
+~
+0 0 138300
+S
+#138302
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 4 1 0
+D0
+~
+~
+0 0 138299
+D1
+~
+~
+0 0 138303
+D2
+~
+~
+0 0 138305
+D3
+~
+~
+0 0 138241
+S
+#138303
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138300
+D1
+~
+~
+0 0 138304
+D2
+~
+~
+0 0 138306
+D3
+~
+~
+0 0 138302
+S
+#138304
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138301
+D2
+~
+~
+0 0 138307
+D3
+~
+~
+0 0 138303
+S
+#138305
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138302
+D1
+~
+~
+0 0 138306
+S
+#138306
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138303
+D1
+~
+~
+0 0 138307
+D3
+~
+~
+0 0 138305
+S
+#138307
+&+cThe Harmony Garden&n~
+&+g   A path of&n &+Lblack gravel&n &+gleads through a small but well-tended garden
+&+gfilled with numerous blooming &n&+rfl&n&+Rowe&n&+rrs&n &+gand small trees and shrubs.  Small
+&+glily ponds are present as well, filled with the &+Ggreen lily pads&n &+gtopped
+&+gwith small&n &+Wwhite&n &+gand&n &+Yyellow&n &+gflowers.  The rest of the garden is a rainbow
+&+gof&n &+rred&n&+g,&n &+Rorange&n&+g,&n &+Yyellow&n&+g, and &n&+mvi&n&+Mol&n&+met&n &+gflowers.   A few small stone benches
+&+ghave been placed alongside the path, most located under the &+ys&n&+Lhad&n&+yy br&n&+Lanch&n&+yes
+&+gof trees.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138304
+D3
+~
+~
+0 0 138306
+S
+#138308
+&+BThe Path of the Winds&n~
+&+y   This path of yellow and brown bricks heads west-east and provides a main
+&+ypath of travel from the city's docks near the waterfront.  Various small
+&+ydomiciles line this road, mostly belonging to the dock workers and their
+&+yfamilies.  The road itself it well upkept, but the homes are definitely not
+&+yin the best of shapes.  Many of the small houses and shacks are delapidated,
+&+ymade with wood that has become weak and rotted with age.  Others have begun
+&+yto collapse and lack sections of their pointed, &+Lblack shingled rooves&n&+y.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138239
+D3
+~
+~
+0 0 138309
+S
+#138309
+&+BThe Path of the Winds&n~
+&+y   This path of yellow and brown bricks heads west-east and provides a main
+&+ypath of travel from the city's docks near the waterfront.  Various small
+&+ydomiciles line this road, mostly belonging to the dock workers and their
+&+yfamilies.  The road itself it well upkept, but the homes are definitely not
+&+yin the best of shapes.  Many of the small houses and shacks are delapidated,
+&+ymade with wood that has become weak and rotted with age.  Others have begun
+&+yto collapse and lack sections of their pointed, &+Lblack shingled rooves&n&+y.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138250
+D1
+~
+~
+0 0 138308
+D3
+~
+~
+0 0 138310
+S
+#138310
+&+BThe Path of the Winds&n~
+&+y   This path of yellow and brown bricks heads west-east and provides a main
+&+ypath of travel from the city's docks near the waterfront.  Various small
+&+ydomiciles line this road, mostly belonging to the dock workers and their
+&+yfamilies.  The road itself it well upkept, but the homes are definitely not
+&+yin the best of shapes.  Many of the small houses and shacks are delapidated,
+&+ymade with wood that has become weak and rotted with age.  Others have begun
+&+yto collapse and lack sections of their pointed, &+Lblack shingled rooves&n&+y.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138309
+D3
+~
+~
+0 0 138311
+S
+#138311
+&+BThe Path of the Winds&n~
+&+y   This path of yellow and brown bricks heads west-east and provides a main
+&+ypath of travel from the city's docks near the waterfront.  Various small
+&+ydomiciles line this road, mostly belonging to the dock workers and their
+&+yfamilies.  The road itself it well upkept, but the homes are definitely not
+&+yin the best of shapes.  Many of the small houses and shacks are delapidated,
+&+ymade with wood that has become weak and rotted with age.  Others have begun
+&+yto collapse and lack sections of their pointed, &+Lblack shingled rooves&n&+y.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138214
+D1
+~
+~
+0 0 138310
+D3
+~
+~
+0 0 138395
+S
+#138312
+&+yThe Merchants Road&n~
+&+w   This small path of flat yellow stones leads in a north-south direction,
+&+wcreating a link between the road that runs along the city wall and the main
+&+wmerchant square.  Two stores flank the ten-foot wide road, one on either
+&+wside.  Both are housed in large, nearly identical buildings.  The one on
+&+wthe west is some type of perfume store or apothecary.  It's been painted
+&+win gaudy shades of &+Rorange&n &+wand&n &+Ggreen&n &+wand looks altogether hideous.  The one
+&+won the east is much more subdued, covered in shades of &+bdark blue&n &+wand
+&+Cturquoise&n&+w.  It looks to be supply shop for miners or woodsmen.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138217
+D1
+~
+~
+0 0 138314
+D2
+~
+~
+0 0 138254
+D3
+~
+~
+0 0 138313
+S
+#138313
+&+GHengi's Shop of&n &+BCelestrial Wonders&n~
+&+B   This amazing room is filled with shelves of trinkets, baubles, and jars
+&+Bcontaining fluids of various colors and densities.  Most of the bottles are
+&+Bsmall and corked, allowing one to easily sniff the contents by removing the
+&+Bcork stopper.  Others are clearly labeled with warning signs about inhaling
+&+Bvapors.  Hanging from the ceiling are various wind chimes that tinkle in
+&+Bthe slight breeze.  Some sections of the store contain shelves of nothing
+&+Bbut small statues and miniatures made of pewter, finely crafted and carved
+&+Bto resemble fantastic creatues.  Another section contains pictures that
+&+Bhave been chemically etched on glass mirrors of all sizes.
+~
+1 33558536 0 0
+D1
+~
+~
+0 0 138312
+S
+#138314
+&+mXial's Common Goods&n~
+&+y   This large shop looks to be filled with various supplies for miners and
+&+yloggers.  There are twelve shelves spread out around the room, along with
+&+ya pair of tables located in the middle of the room.  Each of the shelves
+&+yand tables contains neat rows of various hardware, such as hammers, picks,
+&+yaxes, and heavy gloves and boots.
+~
+1 4104 0 0
+D3
+~
+~
+0 0 138312
+S
+#138315
+&+YThe Horsetraders&n~
+&+L   This small shop sits near the main gates of the city, allowing easy
+&+Laccess to and from the stableyards that sit behind the shop.  From this
+&+Llocation, one can see the small, fenced-in field that sits behind this
+&+Lbuilding, along with a full-sized covered stable.  Another storage shed is
+&+Llocated inside the fenced off corral, most likely containing feed and other
+&+Lgoods for use in taking care of the animals.  There is a strong smell of
+&+Lanimals in the air, which is obviously to be expected in a business such
+&+Las this one.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138316
+D3
+~
+~
+0 0 138232
+S
+#138316
+&+yThe Stable Yards&n~
+&+y   This stableyard and corral serve to house some of the animals for sale
+&+yin the Horsetraders shop to the west.  The field is muddy and churned up by
+&+ythe exercises of the various animals.  There's some bales of hay and troughs
+&+yfull of water for feed, and some short fences for training the horses to
+&+yjump obstacles.
+~
+1 0 1 0
+D3
+~
+~
+0 0 138315
+S
+#138317
+&+LA Nameless Side Road&n~
+&+L   This path of black and brown bricks heads north-south and provides a side
+&+Lpath of travel from the city wall road towards the marketplace.  There is a
+&+Lsmall, single story building on the east side of this street, entry provided
+&+Lby a single, slided door made of heavy paper held on a bamboo frame.   The
+&+Lstruture looks to be some type of business, but it must not be a well-visited
+&+Lone based on its location and the tiny amount of traffic on this road.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138221
+D1
+~
+~
+0 0 138318
+D2
+~
+~
+0 0 138410
+S
+#138318
+&+GThe Lady of&n &+gPoison&n~
+&+g   This dimly lit shop seems strangely ominous, although there is nothing out
+&+gof the ordinary that one can see.  It's a simple store, with no displays
+&+gor shelves except for what's behind a long, wooden counter.  Behind that
+&+gcounter there are various glass jars filled with liquids of all colors,
+&+ga vast array of plants, both alive and dead, and a plethora of vials and
+&+gsealed bowls of powders.   Many of the containers have labels on them,
+&+gwritten in some code of numbers and letters.
+~
+1 33558536 0 0
+D3
+~
+~
+0 0 138317
+S
+#138319
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138320
+D2
+~
+~
+0 0 138335
+S
+#138320
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138321
+D3
+~
+~
+0 0 138319
+S
+#138321
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138322
+D3
+~
+~
+0 0 138320
+S
+#138322
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138323
+D2
+~
+~
+0 0 138345
+D3
+~
+~
+0 0 138321
+S
+#138323
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138324
+D3
+~
+~
+0 0 138322
+S
+#138324
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138325
+D3
+~
+~
+0 0 138323
+S
+#138325
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138326
+D2
+~
+~
+0 0 138355
+D3
+~
+~
+0 0 138324
+S
+#138326
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138243
+D3
+~
+~
+0 0 138325
+S
+#138327
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138328
+D3
+~
+~
+0 0 138243
+S
+#138328
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138329
+D2
+~
+~
+0 0 138365
+D3
+~
+~
+0 0 138327
+S
+#138329
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138330
+D3
+~
+~
+0 0 138328
+S
+#138330
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138331
+D3
+~
+~
+0 0 138329
+S
+#138331
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138332
+D2
+~
+~
+0 0 138375
+D3
+~
+~
+0 0 138330
+S
+#138332
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138333
+D3
+~
+~
+0 0 138331
+S
+#138333
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138282
+D1
+~
+~
+0 0 138334
+D3
+~
+~
+0 0 138332
+S
+#138334
+&+rPath of&n &+RFl&n&+rowe&n&+Rrs&n~
+&+r   This exceptionally well-maintained path leads past all the noble houses
+&+rof the Empire's great Clans.  Each of the six major families has a large
+&+rpiece of land along the Path of Flowers, each identical in size with a
+&+rsingle identical struture.  Only the exterior coloring of the houses are
+&+rallowed to vary, per an Imperial decree created to insure that each of the
+&+rClans was "equal" in stature in the&n &+GJade City&n&+r.&n
+&+r   The nobles of the Clans have abused the ability to paint their complexes
+&+rand the&n &+RPath of Flowers&n &+rhas become the&n &+RPath of&n &+YG&+Ga&+Mr&+Ci&+Rs&+Bh &+ME&+Yy&+Ge&+Rs&+Co&+Br&+Ce&+Rs&n&+r.  Each of the
+&+rClan houses has been splashed with horrendous amounts of bright color, some
+&+rdecorated with almost unrecognizable impressionistist paintings of the
+&+ranimal their Clan is named for, while others seem content just to mix and
+&+rmatch contrasting hues in a wildly &+Rc&+Bh&+Ga&+Yo&+Mt&+Bi&+Cc&n &+rdesign.  In their attemps to outdo
+&+rone another, the Clan nobles have taken the natural beauty of the
+&+rarchitecture of the buildings and destroyed it completely.
+~
+1 0 1 0
+D2
+~
+~
+0 0 138385
+D3
+~
+~
+0 0 138333
+S
+#138335
+&+BThe Entrance to the&n &+LClan R&n&+wave&n&+Ln&n &+BComplex&n~
+&+L   The&n &+LClan R&n&+wave&n&+Ln&n &+Lbuilding, like the rest of the Clan houses along the
+&+LPath of Flowers&n&+L, is laid out like a large square.  The middle of the
+&+Lsquare contains a lovely&n &+ggarden area&n&+L, which is surrounded by the rest
+&+Lof the building.  From this position, one can either continue to the south
+&+Land enter the garden, or use one of the two sliding panel doors to the west
+&+Lor east to enter the house.  The garden is roughly fifty feet per side,
+&+Lwhile the house is another fifty feet surrounding that.  The structure
+&+Lis only a single-story in height except for the central section of the
+&+Lsouthern part of the house, where it extends up another floor.
+~
+1 4108 1 0
+D0
+~
+~
+0 0 138319
+D1
+~
+~
+0 0 138337
+D2
+~
+~
+0 0 138339
+D3
+~
+~
+0 0 138336
+S
+#138336
+&+BA Dining Area&n~
+&+L   This room is a formal dining area, dominated by one centralized table
+&+Lmade of a hard, deep brown wood.  There are eight chairs around the
+&+Lrectangular table, each of the same material as the table.  Illumination
+&+Lis provided by a number of candles spaced around the walls, each held
+&+Lby a highly decorated piece made of gold.  Entry to this room is controlled
+&+Lby doors to the east and south, both made of a light, thin wood panel
+&+Lattached to a heavier wood frame that slides easily from side-to-side,
+&+Linstead of swinging open on hinges.  Around the room are various framed
+&+Lwatercolor paintings, mostly of birds in flight in peaceful natural settings.
+~
+1 33558536 1 0
+D1
+~
+~
+0 0 138335
+D2
+~
+~
+0 0 138338
+S
+#138337
+&+BA Library&n~
+&+L   This room serves as a library or study for the Clan.  The room is laid
+&+Lout simply, with four chairs spaced around the middle of the room
+&+Lsurrounded by eight shelves of books and scrolls, two per wall.  The shelves
+&+Lon the south and west walls are slightly small in length, because of the
+&+Lsliding wood panelled doors that allow access to this room.  When opened
+&+Lthe doors cleverly slide behind a shelf, out of sight.  Windows in the north
+&+Land east walls are currently open to the outside environment, but each has
+&+La set of folding blinds that can be used to cut off the noise and weather
+&+Lof the outside world.
+~
+1 33558536 1 0
+D2
+~
+~
+0 0 138340
+D3
+~
+~
+0 0 138335
+S
+#138338
+&+BServants Quarters&n~
+&+L   Small beds made of cloth suspended used bamboo frames take up the
+&+Lmajority of the space in this area that has been set aside for servants.
+&+LThe beds are hung about three feet off the ground by the sturdy frames,
+&+Lallowing room underneath for long, rectangular wooden chests for personal
+&+Litems and clothing.  Privacy in the tight quarters is granted somewhat by
+&+Lmovable walls made of thick white paper held by the same style of bamboo
+&+Lframes.  Some of the paper walls have been decorated by some aspiring
+&+Lartist using a brush and black ink.  Sliding wood panelled doors allow
+&+Laccess to the room from the north, east, and south.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138336
+D1
+~
+~
+0 0 138339
+D2
+~
+~
+0 0 138341
+S
+#138339
+&+GA Large Garden Area&n~
+&+g   Set inside the interior of the&n &+LClan R&n&+wave&n&+Ln&n &+ghouse struture, this garden is
+&+ga peaceful island away from the rest of the city.  Small sections of flowers
+&+ghave been carefully planted and cultivated, and numerous tiny shrubs dot
+&+gthe green grass.  One large&n &+wwhite birch&n &+gtree climbs up into the sky, it's
+&+gbranches and leaves providing&n &+Lshade&n &+gto a solitary wooden bench that sits
+&+gnear the middle of the garden.  A patio, about five feet in width, runs
+&+galong the inside walls of the surrounding building and the roofline of the
+&+gstructure overhangs that porch area, also providing&n &+Lshade&n &+gand comfort.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138335
+D1
+~
+~
+0 0 138340
+D2
+~
+~
+0 0 138342
+D3
+~
+~
+0 0 138338
+S
+#138340
+&+BGuest Quarters&n~
+&+L   A lone bed sits near the eastern wall of this room, covered in a dark
+&+bblue blanket&n &+Lthat has a&n &+Lblack embroidered raven&n &+Ldesign in the middle of it.
+&+LNear that bed's headboard on either side sit small wooden dressers, each
+&+Lwith a pair of drawers in it.  On the lefthand dresser sits a small incense
+&+Lburner, currently unlit although the sweet&n &+Raroma&n &+Lstill hangs in the air.
+&+LA desk has been placed near the southeast corner of the room, next to a
+&+Lsliding door leading into the next room.  Similar sliding doors are present
+&+Lin the north and west walls.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138337
+D2
+~
+~
+0 0 138343
+D3
+~
+~
+0 0 138339
+S
+#138341
+&+BA Bedroom&n~
+&+L   Exquisitely designed, this room's interior furnishings are fit for
+&+Lroyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+Land numerous light covers and sheets.  Pillows made of satin and goose
+&+Lfeathers sit near the head of the bed, each of them in shades of &+Bblue&n
+&+Lthat accent the lovely&n &+bblue fabrics&n &+Lof the bed coverings.  A four-drawer
+&+Ldresser has been placed along the north wall, on the right side of the
+&+Lsliding wood panelled door.  A similar door can be seen in the east wall.
+&+LA window in the west wall provides both illumination and a cooling
+&+Lbreeze if the wind outside is blowing in the right direction.  From that
+&+Lwindow, one can see a magnificent view of the bay, the water &+bsp&n&+Ba&n&+brk&n&+Bl&n&+bin&n&+Bg&n
+&+Lbeautifully.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138338
+D1
+~
+~
+0 0 138342
+S
+#138342
+&+BAn Elegant Sitting Room&n~
+&+L   Decorated with beautiful wood panelling and various watercolor prints
+&+Lof outdoor scenes, this sitting room can comfortably hold about a dozen
+&+Lpeople, who could either stand or sit on one of the plush couches or
+&+Lchairs.  A large window in the south wall looks out upon the palace
+&+Lwalls, large affairs of wh&n&+Li&n&+wt&+Le&n &+ws&n&+Lt&n&+won&n&+Le&n &+Land&n &+Lg&n&+wre&n&+Ly&n &+wmo&n&+Lr&n&+wt&n&+La&n&+wr&+L.  A double set of
+&+Lsliding wood panelled walls can be slid aside to offer a splendid view
+&+Lof the&n &+LClan R&n&+wave&n&+Ln&n &+westate&n &+ggardens&n&+L.  Other sliding doors allow one to gain
+&+Lentrance to bedrooms west and east of here.  A sharply inclined set of
+&+Lstairs spiral around a supporting pole and lead upstairs to yet another
+&+Lbedroom area.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138339
+D1
+~
+~
+0 0 138343
+D3
+~
+~
+0 0 138341
+D4
+~
+~
+0 0 138344
+S
+#138343
+&+BA Bedroom&n~
+&+L   Exquisitely designed, this room's interior furnishings are fit for
+&+Lroyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+Land numerous light covers and sheets.  Pillows made of satin and goose
+&+Lfeathers sit near the head of the bed, each of them in shades of &+Bblue&n
+&+Lthat accent the lovely&n &+bblue fabrics&n &+Lof the bed coverings.  A four-drawer
+&+Ldresser has been placed along the north wall, on the right side of the
+&+Lsliding wood panelled door.  A similar door can be seen in the west wall.
+&+LA window in the east wall provides both illumination and a cooling
+&+Lbreeze if the wind outside is blowing in the right direction.  From that
+&+Lwindow, one can see the&n &+yClan&n &+yL&n&+Le&n&+yopa&n&+Lr&n&+yd&n &+Lcompound area that sits next to
+&+Lthis one.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138340
+D3
+~
+~
+0 0 138342
+S
+#138344
+&+BA Second-Story Meeting Room&n~
+&+L   Offering a spectacular view of the rest of the Clan house, the main parts
+&+Lof the city to the north, and the palace complex to the south, this meeting
+&+Lroom is the only second-story room in this structure.   The room itself
+&+Lconsists of four supporting pillars at the corners of the square room
+&+Lwhich hold aloft a triangular sloped roof.  The "walls" of the room are
+&+Llong blinds of thin wood panels held together by string which can be raised
+&+Lup from the floor using pull cords.  This clever arrangement allows the
+&+Loccupants to completely remove any of the walls if they wish.  A small round
+&+Ltable sits in the middle of the room, surrounded by four high-backed wooden
+&+Lchairs.
+~
+1 33558536 0 0
+D5
+~
+~
+0 0 138342
+S
+#138345
+&+BThe Entrance to the&n &+yClan L&n&+Le&n&+yopa&n&+Lr&n&+yd&n &+BComplex&n~
+&+g   The&n &+yClan L&n&+Le&n&+yopa&n&+Lr&n&+yd&n &+gbuilding, like the rest of the Clan houses along the
+&+RPath of Flowers&n&+g, is laid out like a large square.  The middle of the
+&+gsquare contains a lovely&n &+ggarden area&n&+g, which is surrounded by the rest
+&+gof the building.  From this position, one can either continue to the south
+&+gand enter the garden, or use one of the two sliding panel doors to the west
+&+gor east to enter the house.  The garden is roughly fifty feet per side,
+&+gwhile the house is another fifty feet surrounding that.  The structure
+&+gis only a single-story in height except for the central section of the
+&+gsouthern part of the house, where it extends up another floor.
+~
+1 4108 1 0
+D0
+~
+~
+0 0 138322
+D1
+~
+~
+0 0 138347
+D2
+~
+~
+0 0 138349
+D3
+~
+~
+0 0 138346
+S
+#138346
+&+BA Dining Area&n~
+&+g   This room is a formal dining area, dominated by one centralized table
+&+gmade of a hard, deep brown wood.  There are eight chairs around the
+&+grectangular table, each of the same material as the table.  Illumination
+&+gis provided by a number of candles spaced around the walls, each held
+&+gby a highly decorated piece made of gold.  Entry to this room is controlled
+&+gby doors to the east and south, both made of a light, thin wood panel
+&+gattached to a heavier wood frame that slides easily from side-to-side,
+&+ginstead of swinging open on hinges.  Around the room are various framed
+&+gwatercolor paintings, mostly of birds in flight in peaceful natural settings.
+~
+1 33558536 1 0
+D1
+~
+~
+0 0 138345
+D2
+~
+~
+0 0 138348
+S
+#138347
+&+BA Library&n~
+&+g   This room serves as a library or study for the Clan.  The room is laid
+&+gout simply, with four chairs spaced around the middle of the room
+&+gsurrounded by eight shelves of books and scrolls, two per wall.  The shelves
+&+gon the south and west walls are slightly small in length, because of the
+&+gsliding wood panelled doors that allow access to this room.  When opened
+&+gthe doors cleverly slide behind a shelf, out of sight.  Windows in the north
+&+gand east walls are currently open to the outside environment, but each has
+&+ga set of folding blinds that can be used to cut off the noise and weather
+&+gof the outside world.
+~
+1 33558536 1 0
+D2
+~
+~
+0 0 138350
+D3
+~
+~
+0 0 138345
+S
+#138348
+&+BServants Quarters&n~
+&+g   Small beds made of cloth suspended used bamboo frames take up the
+&+gmajority of the space in this area that has been set aside for servants.
+&+gThe beds are hung about three feet off the ground by the sturdy frames,
+&+gallowing room underneath for long, rectangular wooden chests for personal
+&+gitems and clothing.  Privacy in the tight quarters is granted somewhat by
+&+gmovable walls made of thick white paper held by the same style of bamboo
+&+gframes.  Some of the paper walls have been decorated by some aspiring
+&+gartist using a brush and black ink.  Sliding wood panelled doors allow
+&+gaccess to the room from the north, east, and south.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138346
+D1
+~
+~
+0 0 138349
+D2
+~
+~
+0 0 138351
+S
+#138349
+&+GA Large Garden Area&n~
+&+g   Set inside the interior of the&n &+yClan L&n&+Le&n&+yopa&n&+Lr&n&+yd &+ghouse struture, this garden is
+&+ga peaceful island away from the rest of the city.  Small sections of flowers
+&+ghave been carefully planted and cultivated, and numerous tiny shrubs dot
+&+gthe green grass.  One large&n &+wwhite birch&n &+gtree climbs up into the sky, it's
+&+gbranches and leaves providing&n &+Lshade&n &+gto a solitary wooden bench that sits
+&+gnear the middle of the garden.  A patio, about five feet in width, runs
+&+galong the inside walls of the surrounding building and the roofline of the
+&+gstructure overhangs that porch area, also providing&n &+Lshade&n &+gand comfort.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138345
+D1
+~
+~
+0 0 138350
+D2
+~
+~
+0 0 138352
+D3
+~
+~
+0 0 138348
+S
+#138350
+&+BGuest Quarters&n~
+&+g   A lone bed sits near the eastern wall of this room, covered in a dark
+&+Ggreen blanket&n &+gthat has a&n &+Yyellow embroidered leopard&n &+gdesign in the middle of it.
+&+gNear that bed's headboard on either side sit small wooden dressers, each
+&+gwith a pair of drawers in it.  On the lefthand dresser sits a small incense
+&+gburner, currently unlit although the sweet&n &+Raroma&n &+gstill hangs in the air.
+&+gA desk has been placed near the southeast corner of the room, next to a
+&+gsliding door leading into the next room.  Similar sliding doors are present
+&+gin the north and west walls.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138347
+D2
+~
+~
+0 0 138353
+D3
+~
+~
+0 0 138349
+S
+#138351
+&+BA Bedroom&n~
+&+g   Exquisitely designed, this room's interior furnishings are fit for
+&+groyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+gand numerous light covers and sheets.  Pillows made of satin and goose
+&+gfeathers sit near the head of the bed, each of them in shades of &+Ggreen&n
+&+gthat accent the lovely&n &+Ggreen fabrics&n &+gof the bed coverings.  A four-drawer
+&+gdresser has been placed along the north wall, on the right side of the
+&+gsliding wood panelled door.  A similar door can be seen in the east wall.
+&+gA window in the west wall provides both illumination and a cooling
+&+gbreeze if the wind outside is blowing in the right direction.  From that
+&+gwindow, one can see the&n &+LClan R&n&+wave&n&+Ln&n &+gcompound area that sits next to
+&+gthis one.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138348
+D1
+~
+~
+0 0 138352
+S
+#138352
+&+BAn Elegant Sitting Room&n~
+&+g   Decorated with beautiful wood panelling and various watercolor prints
+&+gof outdoor scenes, this sitting room can comfortably hold about a dozen
+&+gpeople, who could either stand or sit on one of the plush couches or
+&+gchairs.  A large window in the south wall looks out upon the palace
+&+gwalls, large affairs of wh&n&+Li&n&+wt&+Le&n &+ws&n&+Lt&n&+won&n&+Le&n &+wand&n &+Lg&n&+wre&n&+Ly&n &+wmo&n&+Lr&n&+wt&n&+La&n&+gr.  A double set of
+&+gsliding wood panelled walls can be slid aside to offer a splendid view
+&+gof the&n &+yClan L&n&+Le&n&+yopa&n&+Lr&n&+yd&n &+gestate&n &+Ggardens&n&+g.  Other sliding doors allow one to gain
+&+gentrance to bedrooms west and east of here.  A sharply inclined set of
+&+gstairs spiral around a supporting pole and lead upstairs to yet another
+&+gbedroom area.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138349
+D1
+~
+~
+0 0 138353
+D3
+~
+~
+0 0 138351
+D4
+~
+~
+0 0 138354
+S
+#138353
+&+BA Bedroom&n~
+&+g   Exquisitely designed, this room's interior furnishings are fit for
+&+groyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+gand numerous light covers and sheets.  Pillows made of satin and goose
+&+gfeathers sit near the head of the bed, each of them in shades of &+Bblue&n
+&+gthat accent the lovely&n &+bblue fabrics&n &+gof the bed coverings.  A four-drawer
+&+gdresser has been placed along the north wall, on the right side of the
+&+gsliding wood panelled door.  A similar door can be seen in the west wall.
+&+gA window in the east wall provides both illumination and a cooling
+&+gbreeze if the wind outside is blowing in the right direction.  From that
+&+gwindow, one can see the&n &+CClan&n &+WSnow D&n&+Crago&n&+Wn&n &+gcompound area that sits next to
+&+gthis one.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138350
+D3
+~
+~
+0 0 138352
+S
+#138354
+&+BA Second-Story Meeting Room&n~
+&+g   Offering a spectacular view of the rest of the Clan house, the main parts
+&+gof the city to the north, and the palace complex to the south, this meeting
+&+groom is the only second-story room in this structure.   The room itself
+&+gconsists of four supporting pillars at the corners of the square room
+&+gwhich hold aloft a triangular sloped roof.  The "walls" of the room are
+&+glong blinds of thin wood panels held together by string which can be raised
+&+gup from the floor using pull cords.  This clever arrangement allows the
+&+goccupants to completely remove any of the walls if they wish.  A small round
+&+gtable sits in the middle of the room, surrounded by four high-backed wooden
+&+gchairs.
+~
+1 33558536 0 0
+D5
+~
+~
+0 0 138352
+S
+#138355
+&+BThe Entrance to the&n &+CClan&n &+WSnow D&n&+Crago&n&+Wn&n &+BComplex&n~
+&+W   The&n &+CClan &+WSnow D&n&+Crago&n&+Wn&n &+Wbuilding, like the rest of the Clan houses along the
+&+RPath of Flowers&n&+W, is laid out like a large square.  The middle of the
+&+Wsquare contains a lovely&n &+ggarden area&n&+W, which is surrounded by the rest
+&+Wof the building.  From this position, one can either continue to the south
+&+Wand enter the garden, or use one of the two sliding panel doors to the west
+&+Wor east to enter the house.  The garden is roughly fifty feet per side,
+&+Wwhile the house is another fifty feet surrounding that.  The structure
+&+Wis only a single-story in height except for the central section of the
+&+Wsouthern part of the house, where it extends up another floor.
+~
+1 4108 1 0
+D0
+~
+~
+0 0 138325
+D1
+~
+~
+0 0 138357
+D2
+~
+~
+0 0 138359
+D3
+~
+~
+0 0 138356
+S
+#138356
+&+BA Dining Area&n~
+&+W   This room is a formal dining area, dominated by one centralized table
+&+Wmade of a hard, deep brown wood.  There are eight chairs around the
+&+Wrectangular table, each of the same material as the table.  Illumination
+&+Wis provided by a number of candles spaced around the walls, each held
+&+Wby a highly decorated piece made of gold.  Entry to this room is controlled
+&+Wby doors to the east and south, both made of a light, thin wood panel
+&+Wattached to a heavier wood frame that slides easily from side-to-side,
+&+Winstead of swinging open on hinges.  Around the room are various framed
+&+Wwatercolor paintings, mostly of birds in flight in peaceful natural settings.
+~
+1 33558536 1 0
+D1
+~
+~
+0 0 138355
+D2
+~
+~
+0 0 138358
+S
+#138357
+&+BA Library&n~
+&+W   This room serves as a library or study for the Clan.  The room is laid
+&+Wout simply, with four chairs spaced around the middle of the room
+&+Wsurrounded by eight shelves of books and scrolls, two per wall.  The shelves
+&+Won the south and west walls are slightly small in length, because of the
+&+Wsliding wood panelled doors that allow access to this room.  When opened
+&+Wthe doors cleverly slide behind a shelf, out of sight.  Windows in the north
+&+Wand east walls are currently open to the outside environment, but each has
+&+Wa set of folding blinds that can be used to cut off the noise and weather
+&+Wof the outside world.
+~
+1 33558536 1 0
+D2
+~
+~
+0 0 138360
+D3
+~
+~
+0 0 138355
+S
+#138358
+&+BServants Quarters&n~
+&+W   Small beds made of cloth suspended used bamboo frames take up the
+&+Wmajority of the space in this area that has been set aside for servants.
+&+WThe beds are hung about three feet off the ground by the sturdy frames,
+&+Wallowing room underneath for long, rectangular wooden chests for personal
+&+Witems and clothing.  Privacy in the tight quarters is granted somewhat by
+&+Wmovable walls made of thick white paper held by the same style of bamboo
+&+Wframes.  Some of the paper walls have been decorated by some aspiring
+&+Wartist using a brush and black ink.  Sliding wood panelled doors allow
+&+Waccess to the room from the north, east, and south.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138356
+D1
+~
+~
+0 0 138359
+D2
+~
+~
+0 0 138361
+S
+#138359
+&+GA Large Garden Area&n~
+&+g   Set inside the interior of the&n &+CClan &+WSnow D&n&+Crago&n&+Wn&n &+ghouse struture, this garden
+&+gis a peaceful island away from the rest of the city.  Small sections of
+&+gflowers have been carefully planted and cultivated, and numerous tiny shrubs
+&+gdot the green grass.  One large&n &+wwhite birch&n &+gtree climbs up into the sky, it's
+&+gbranches and leaves providing&n &+Lshade&n &+gto a solitary wooden bench that sits
+&+gnear the middle of the garden.  A patio, about five feet in width, runs
+&+galong the inside walls of the surrounding building and the roofline of the
+&+gstructure overhangs that porch area, also providing&n &+Lshade&n &+gand comfort.
+~
+1 8 1 0
+D0
+~
+~
+0 0 138355
+D1
+~
+~
+0 0 138360
+D2
+~
+~
+0 0 138362
+D3
+~
+~
+0 0 138358
+S
+#138360
+&+BGuest Quarters&n~
+&+W   A lone bed sits near the eastern wall of this room, covered in a dark
+&+Lblack blanket&n &+Wthat has a&n &+Wwhite embroidered dragon&n &+Wdesign in the middle of it.
+&+WNear that bed's headboard on either side sit small wooden dressers, each
+&+Wwith a pair of drawers in it.  On the lefthand dresser sits a small incense
+&+Wburner, currently unlit although the sweet&n &+Raroma&n &+Wstill hangs in the air.
+&+WA desk has been placed near the southeast corner of the room, next to a
+&+Wsliding door leading into the next room.  Similar sliding doors are present
+&+Win the north and west walls.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138357
+D2
+~
+~
+0 0 138363
+D3
+~
+~
+0 0 138359
+S
+#138361
+&+BA Bedroom&n~
+&+W   Exquisitely designed, this room's interior furnishings are fit for
+&+Wroyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+Wand numerous light covers and sheets.  Pillows made of satin and goose
+&+Wfeathers sit near the head of the bed, each of them in shades of &+Ggreen&n
+&+Wthat accent the lovely&n &+ggreen fabrics&n &+Wof the bed coverings.  A four-drawer
+&+Wdresser has been placed along the north wall, on the right side of the
+&+Wsliding wood panelled door.  A similar door can be seen in the east wall.
+&+WA window in the west wall provides both illumination and a cooling
+&+Wbreeze if the wind outside is blowing in the right direction.  From that
+&+Wwindow, one can see the&n &+yClan L&n&+Le&n&+yopa&n&+Lr&n&+yd&n &+Wcompound area that sits next to
+&+Wthis one.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138358
+D1
+~
+~
+0 0 138362
+S
+#138362
+&+BAn Elegant Sitting Room&n~
+&+W   Decorated with beautiful wood panelling and various watercolor prints
+&+Wof outdoor scenes, this sitting room can comfortably hold about a dozen
+&+Wpeople, who could either stand or sit on one of the plush couches or
+&+Wchairs.  A large window in the south wall looks out upon the palace
+&+Wwalls, large affairs of wh&n&+Li&n&+wt&+Le&n &+ws&n&+Lt&n&+won&n&+Le&n &+wand&n &+Lg&n&+wre&n&+Ly&n &+wmo&n&+Lr&n&+wt&n&+La&n&+wr&+W.  A double set of
+&+Wsliding wood panelled walls can be slid aside to offer a splendid view
+&+Wof the&n &+CClan &+WSnow D&+Crago&+Wn&n &+westate&n &+ggardens&n&+W.  Other sliding doors allow one to
+&+Wgain entrance to bedrooms west and east of here.  A sharply inclined set
+&+Wof stairs spiral around a supporting pole and lead upstairs to yet another
+&+Wbedroom area.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138359
+D1
+~
+~
+0 0 138363
+D3
+~
+~
+0 0 138361
+D4
+~
+~
+0 0 138364
+S
+#138363
+&+BA Bedroom&n~
+&+W   Exquisitely designed, this room's interior furnishings are fit for
+&+Wroyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+Wand numerous light covers and sheets.  Pillows made of satin and goose
+&+Wfeathers sit near the head of the bed, each of them in shades of &+Bblue&n
+&+Wthat accent the lovely&n &+bblue fabrics&n &+Wof the bed coverings.  A four-drawer
+&+Wdresser has been placed along the north wall, on the right side of the
+&+Wsliding wood panelled door.  A similar door can be seen in the west wall.
+&+WA window in the east wall provides both illumination and a cooling
+&+Wbreeze if the wind outside is blowing in the right direction.  From that
+&+Wwindow, one can see the&n &+GJade Highway&n &+Wroad that sits next to this
+&+Wbuilding.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138360
+D3
+~
+~
+0 0 138362
+S
+#138364
+&+BA Second-Story Meeting Room&n~
+&+W   Offering a spectacular view of the rest of the Clan house, the main parts
+&+Wof the city to the north, and the palace complex to the south, this meeting
+&+Wroom is the only second-story room in this structure.   The room itself
+&+Wconsists of four supporting pillars at the corners of the square room
+&+Wwhich hold aloft a triangular sloped roof.  The "walls" of the room are
+&+Wlong blinds of thin wood panels held together by string which can be raised
+&+Wup from the floor using pull cords.  This clever arrangement allows the
+&+Woccupants to completely remove any of the walls if they wish.  A small round
+&+Wtable sits in the middle of the room, surrounded by four high-backed wooden
+&+Wchairs.
+~
+1 33558536 0 0
+D5
+~
+~
+0 0 138362
+S
+#138365
+&+BThe Entrance to the&n &+cClan&n &+CCrane&n &+BComplex&n~
+&+C   The&n &+cClan &+CCrane&n &+Cbuilding, like the rest of the Clan houses along the
+&+RPath of Flowers&n&+C, is laid out like a large square.  The middle of the
+&+Csquare contains a lovely&n &+ggarden area&n&+C, which is surrounded by the rest
+&+Cof the building.  From this position, one can either continue to the south
+&+Cand enter the garden, or use one of the two sliding panel doors to the west
+&+Cor east to enter the house.  The garden is roughly fifty feet per side,
+&+Cwhile the house is another fifty feet surrounding that.  The structure
+&+Cis only a single-story in height except for the central section of the
+&+Csouthern part of the house, where it extends up another floor.
+~
+1 4108 1 0
+D0
+~
+~
+0 0 138328
+D1
+~
+~
+0 0 138367
+D2
+~
+~
+0 0 138369
+D3
+~
+~
+0 0 138366
+S
+#138366
+&+BA Dining Area&n~
+&+C   This room is a formal dining area, dominated by one centralized table
+&+Cmade of a hard, deep brown wood.  There are eight chairs around the
+&+Crectangular table, each of the same material as the table.  Illumination
+&+Cis provided by a number of candles spaced around the walls, each held
+&+Cby a highly decorated piece made of gold.  Entry to this room is controlled
+&+Cby doors to the east and south, both made of a light, thin wood panel
+&+Cattached to a heavier wood frame that slides easily from side-to-side,
+&+Cinstead of swinging open on hinges.  Around the room are various framed
+&+Cwatercolor paintings, mostly of birds in flight in peaceful natural settings.
+~
+1 33558536 1 0
+D1
+~
+~
+0 0 138365
+D2
+~
+~
+0 0 138368
+S
+#138367
+&+BA Library&n~
+&+C   This room serves as a library or study for the Clan.  The room is laid
+&+Cout simply, with four chairs spaced around the middle of the room
+&+Csurrounded by eight shelves of books and scrolls, two per wall.  The shelves
+&+Con the south and west walls are slightly small in length, because of the
+&+Csliding wood panelled doors that allow access to this room.  When opened
+&+Cthe doors cleverly slide behind a shelf, out of sight.  Windows in the north
+&+Cand east walls are currently open to the outside environment, but each has
+&+Ca set of folding blinds that can be used to cut off the noise and weather
+&+Cof the outside world.
+~
+1 33558536 1 0
+D2
+~
+~
+0 0 138370
+D3
+~
+~
+0 0 138365
+S
+#138368
+&+BServants Quarters&n~
+&+C   Small beds made of cloth suspended used bamboo frames take up the
+&+Cmajority of the space in this area that has been set aside for servants.
+&+CThe beds are hung about three feet off the ground by the sturdy frames,
+&+Callowing room underneath for long, rectangular wooden chests for personal
+&+Citems and clothing.  Privacy in the tight quarters is granted somewhat by
+&+Cmovable walls made of thick white paper held by the same style of bamboo
+&+Cframes.  Some of the paper walls have been decorated by some aspiring
+&+Cartist using a brush and black ink.  Sliding wood panelled doors allow
+&+Caccess to the room from the north, east, and south.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138366
+D1
+~
+~
+0 0 138369
+D2
+~
+~
+0 0 138371
+S
+#138369
+&+GA Large Garden Area&n~
+&+g   Set inside the interior of the&n &+cClan &+CCrane&n &+ghouse struture, this garden
+&+gis a peaceful island away from the rest of the city.  Small sections of
+&+gflowers have been carefully planted and cultivated, and numerous tiny shrubs
+&+gdot the green grass.  One large&n &+wwhite birch&n &+gtree climbs up into the sky, it's
+&+gbranches and leaves providing&n &+Lshade&n &+gto a solitary wooden bench that sits
+&+gnear the middle of the garden.  A patio, about five feet in width, runs
+&+galong the inside walls of the surrounding building and the roofline of the
+&+gstructure overhangs that porch area, also providing&n &+Lshade&n &+gand comfort.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138365
+D1
+~
+~
+0 0 138370
+D2
+~
+~
+0 0 138372
+D3
+~
+~
+0 0 138368
+S
+#138370
+&+BGuest Quarters&n~
+&+C   A lone bed sits near the eastern wall of this room, covered in a dark
+&+Bblue blanket&n &+wthat has a&n &+Wwhite embroidered crane&n &+Cdesign in the middle of it.
+&+CNear that bed's headboard on either side sit small wooden dressers, each
+&+Cwith a pair of drawers in it.  On the lefthand dresser sits a small incense
+&+Cburner, currently unlit although the sweet&n &+Raroma&n &+Cstill hangs in the air.
+&+CA desk has been placed near the southeast corner of the room, next to a
+&+Csliding door leading into the next room.  Similar sliding doors are present
+&+Cin the north and west walls.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138367
+D2
+~
+~
+0 0 138373
+D3
+~
+~
+0 0 138369
+S
+#138371
+&+BA Bedroom&n~
+&+C   Exquisitely designed, this room's interior furnishings are fit for
+&+Croyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+Cand numerous light covers and sheets.  Pillows made of satin and goose
+&+Cfeathers sit near the head of the bed, each of them in shades of &+Bblue&n
+&+Cthat accent the lovely&n &+bblue fabrics&n &+Cof the bed coverings.  A four-drawer
+&+Cdresser has been placed along the north wall, on the right side of the
+&+CCsliding wood panelled door.  A similar door can be seen in the east wall.
+&+CA window in the west wall provides both illumination and a cooling
+&+Cbreeze if the wind outside is blowing in the right direction.  From that
+&+Cwindow, one can see the&n &+GJade Highway&n &+Croad that sits next to this
+&+Cbuilding.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138368
+D1
+~
+~
+0 0 138372
+S
+#138372
+&+BAn Elegant Sitting Room&n~
+&+C   Decorated with beautiful wood panelling and various watercolor prints
+&+Cof outdoor scenes, this sitting room can comfortably hold about a dozen
+&+Cpeople, who could either stand or sit on one of the plush couches or
+&+Cchairs.  A large window in the south wall looks out upon the palace
+&+Cwalls, large affairs of wh&n&+Li&n&+wt&+Le&n &+ws&n&+Lt&n&+won&n&+Le&n &+wand&n &+Lg&n&+wre&n&+Ly&n &+wmo&n&+Lr&n&+wt&n&+La&n&+wr&+C.  A double set of
+&+Csliding wood panelled walls can be slid aside to offer a splendid view
+&+Cof the&n &+cClan &+CCrane&n &+Cestate&n &+ggardens&n&+C.  Other sliding doors allow one to
+&+Cgain entrance to bedrooms west and east of here.  A sharply inclined set
+&+Cof stairs spiral around a supporting pole and lead upstairs to yet another
+&+Cbedroom area.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138369
+D1
+~
+~
+0 0 138373
+D3
+~
+~
+0 0 138371
+D4
+~
+~
+0 0 138374
+S
+#138373
+&+BA Bedroom&n~
+&+C   Exquisitely designed, this room's interior furnishings are fit for
+&+Croyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+Cand numerous light covers and sheets.  Pillows made of satin and goose
+&+Cfeathers sit near the head of the bed, each of them in shades of &+Ggreen&n
+&+Cthat accent the lovely&n &+ggreen fabrics&n &+Cof the bed coverings.  A four-drawer
+&+Cdresser has been placed along the north wall, on the right side of the
+&+Csliding wood panelled door.  A similar door can be seen in the west wall.
+&+CA window in the east wall provides both illumination and a cooling
+&+Cbreeze if the wind outside is blowing in the right direction.  From that
+&+Cwindow, one can see the&n &+BClan T&n&+bi&n&+Bg&n&+be&n&+Br&n &+Ccompound area that sits next to
+&+Cthis one.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138370
+D3
+~
+~
+0 0 138372
+S
+#138374
+&+BA Second-Story Meeting Room&n~
+&+C   Offering a spectacular view of the rest of the Clan house, the main parts
+&+Cof the city to the north, and the palace complex to the south, this meeting
+&+Croom is the only second-story room in this structure.   The room itself
+&+Cconsists of four supporting pillars at the corners of the square room
+&+Chich hold aloft a triangular sloped roof.  The "walls" of the room are
+&+Clong blinds of thin wood panels held together by string which can be raised
+&+Cup from the floor using pull cords.  This clever arrangement allows the
+&+Coccupants to completely remove any of the walls if they wish.  A small round
+&+Ctable sits in the middle of the room, surrounded by four high-backed wooden
+&+Cchairs.
+~
+1 33558536 0 0
+D5
+~
+~
+0 0 138372
+S
+#138375
+&+BThe Entrance to the Clan T&n&+bi&n&+Bg&n&+be&n&+Br Complex&n~
+&+B   The&n &+BClan T&n&+bi&n&+Bg&n&+be&n&+Br&n &+Bbuilding, like the rest of the Clan houses along the
+&+RPath of Flowers&n&+B, is laid out like a large square.  The middle of the
+&+Bsquare contains a lovely&n &+ggarden area&n&+B, which is surrounded by the rest
+&+Bof the building.  From this position, one can either continue to the south
+&+Band enter the garden, or use one of the two sliding panel doors to the west
+&+Bor east to enter the house.  The garden is roughly fifty feet per side,
+&+Bwhile the house is another fifty feet surrounding that.  The structure
+&+Bis only a single-story in height except for the central section of the
+&+Bsouthern part of the house, where it extends up another floor.
+~
+1 4108 1 0
+D0
+~
+~
+0 0 138331
+D1
+~
+~
+0 0 138377
+D2
+~
+~
+0 0 138379
+D3
+~
+~
+0 0 138376
+S
+#138376
+&+BA Dining Area&n~
+&+B   This room is a formal dining area, dominated by one centralized table
+&+Bmade of a hard, deep brown wood.  There are eight chairs around the
+&+Brectangular table, each of the same material as the table.  Illumination
+&+Bis provided by a number of candles spaced around the walls, each held
+&+Bby a highly decorated piece made of gold.  Entry to this room is controlled
+&+Bby doors to the east and south, both made of a light, thin wood panel
+&+Battached to a heavier wood frame that slides easily from side-to-side,
+&+Binstead of swinging open on hinges.  Around the room are various framed
+&+Bwatercolor paintings, mostly of birds in flight in peaceful natural settings.
+~
+1 33558536 1 0
+D1
+~
+~
+0 0 138375
+D2
+~
+~
+0 0 138378
+S
+#138377
+&+BA Library&n~
+&+B   This room serves as a library or study for the Clan.  The room is laid
+&+Bout simply, with four chairs spaced around the middle of the room
+&+Bsurrounded by eight shelves of books and scrolls, two per wall.  The shelves
+&+Bon the south and west walls are slightly small in length, because of the
+&+Bsliding wood panelled doors that allow access to this room.  When opened
+&+Bthe doors cleverly slide behind a shelf, out of sight.  Windows in the north
+&+Band east walls are currently open to the outside environment, but each has
+&+Ba set of folding blinds that can be used to cut off the noise and weather
+&+Bof the outside world.
+~
+1 33558536 1 0
+D2
+~
+~
+0 0 138380
+D3
+~
+~
+0 0 138375
+S
+#138378
+&+BServants Quarters&n~
+&+B   Small beds made of cloth suspended used bamboo frames take up the
+&+Bmajority of the space in this area that has been set aside for servants.
+&+BThe beds are hung about three feet off the ground by the sturdy frames,
+&+Ballowing room underneath for long, rectangular wooden chests for personal
+&+Bitems and clothing.  Privacy in the tight quarters is granted somewhat by
+&+Bmovable walls made of thick white paper held by the same style of bamboo
+&+Bframes.  Some of the paper walls have been decorated by some aspiring
+&+Bartist using a brush and black ink.  Sliding wood panelled doors allow
+&+Baccess to the room from the north, east, and south.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138376
+D1
+~
+~
+0 0 138379
+D2
+~
+~
+0 0 138381
+S
+#138379
+&+GA Large Garden Area&n~
+&+g   Set inside the interior of the&n &+BClan T&n&+bi&n&+Bg&n&+be&n&+Br&n &+ghouse struture, this garden
+&+gis a peaceful island away from the rest of the city.  Small sections of
+&+gflowers have been carefully planted and cultivated, and numerous tiny shrubs
+&+gdot the green grass.  One large&n &+wwhite birch&n &+gtree climbs up into the sky, it's
+&+gbranches and leaves providing&n &+Lshade&n &+gto a solitary wooden bench that sits
+&+gnear the middle of the garden.  A patio, about five feet in width, runs
+&+galong the inside walls of the surrounding building and the roofline of the
+&+gstructure overhangs that porch area, also providing&n &+Lshade&n &+gand comfort.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138375
+D1
+~
+~
+0 0 138380
+D2
+~
+~
+0 0 138382
+D3
+~
+~
+0 0 138378
+S
+#138380
+&+BGuest Quarters&n~
+&+B   A lone bed sits near the eastern wall of this room, covered in a dark
+&+Yyellow blanket&n &+Bthat has a&n &+Lblack embroidered tiger&n &+Bdesign in the middle of it.
+&+BNear that bed's headboard on either side sit small wooden dressers, each
+&+Bwith a pair of drawers in it.  On the lefthand dresser sits a small incense
+&+Bburner, currently unlit although the sweet&n &+Raroma&n &+Bstill hangs in the air.
+&+BA desk has been placed near the southeast corner of the room, next to a
+&+Bsliding door leading into the next room.  Similar sliding doors are present
+&+Bin the north and west walls.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138377
+D2
+~
+~
+0 0 138383
+D3
+~
+~
+0 0 138379
+S
+#138381
+&+BA Bedroom&n~
+&+B   Exquisitely designed, this room's interior furnishings are fit for
+&+Broyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+Band numerous light covers and sheets.  Pillows made of satin and goose
+&+Bfeathers sit near the head of the bed, each of them in shades of &+Ggreen&n
+&+Bthat accent the lovely&n &+ggreen fabrics&n &+Bof the bed coverings.  A four-drawer
+&+Bdresser has been placed along the north wall, on the right side of the
+&+Bsliding wood panelled door.  A similar door can be seen in the east wall.
+&+BA window in the west wall provides both illumination and a cooling
+&+Bbreeze if the wind outside is blowing in the right direction.  From that
+&+Bwindow, one can see the&n &+cClan&n &+CCrane&n &+Bcompound area that sits next to
+&+Bthis one.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138378
+D1
+~
+~
+0 0 138382
+S
+#138382
+&+BAn Elegant Sitting Room&n~
+&+B   Decorated with beautiful wood panelling and various watercolor prints
+&+Bof outdoor scenes, this sitting room can comfortably hold about a dozen
+&+Bpeople, who could either stand or sit on one of the plush couches or
+&+Bchairs.  A large window in the south wall looks out upon the palace
+&+Bwalls, large affairs of &+wwh&n&+Li&n&+wt&+Le&n &+ws&n&+Lt&n&+won&n&+Le&n &+wand&n &+Lg&n&+wre&n&+Ly&n &+wmo&n&+Lr&n&+wt&n&+La&n&+wr&n&+B.  A double set of&n
+&+Bsliding wood panelled walls can be slid aside to offer a splendid view
+&+Bof the&n &+BClan T&n&+bi&n&+Bg&n&+be&n&+Br&n &+westate&n &+ggardens&n&+B.  Other sliding doors allow one to
+&+Bgain entrance to bedrooms west and east of here.  A sharply inclined set
+&+Bof stairs spiral around a supporting pole and lead upstairs to yet another
+&+Bbedroom area.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138379
+D1
+~
+~
+0 0 138383
+D3
+~
+~
+0 0 138381
+D4
+~
+~
+0 0 138384
+S
+#138383
+&+BA Bedroom&n~
+&+B   Exquisitely designed, this room's interior furnishings are fit for
+&+Broyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+Band numerous light covers and sheets.  Pillows made of satin and goose
+&+Bfeathers sit near the head of the bed, each of them in shades of &+Ggreen&n
+&+Bthat accent the lovely&n &+ggreen fabrics&n &+Bof the bed coverings.  A four-drawer
+&+Bdresser has been placed along the north wall, on the right side of the
+&+Bsliding wood panelled door.  A similar door can be seen in the west wall.
+&+BA window in the east wall provides both illumination and a cooling
+&+Bbreeze if the wind outside is blowing in the right direction.  From that
+&+Bwindow, one can see the&n &+yClan Rat&n &+Bcompound area that sits next to
+&+Bthis one.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138380
+D3
+~
+~
+0 0 138382
+S
+#138384
+&+BA Second-Story Meeting Room&n~
+&+w   Offering a spectacular view of the rest of the Clan house, the main parts
+&+wof the city to the north, and the palace complex to the south, this meeting
+&+wroom is the only second-story room in this structure.   The room itself
+&+wconsists of four supporting pillars at the corners of the square room
+&+wwhich hold aloft a triangular sloped roof.  The "walls" of the room are
+&+wlong blinds of thin wood panels held together by string which can be raised
+&+wup from the floor using pull cords.  This clever arrangement allows the
+&+woccupants to completely remove any of the walls if they wish.  A small round
+&+wtable sits in the middle of the room, surrounded by four high-backed wooden
+&+wchairs.
+~
+1 33558536 0 0
+D5
+~
+~
+0 0 138382
+S
+#138385
+&+BThe Entrance to the&n &+yClan Rat&n &+BComplex&n~
+&+w   The&n &+yClan Rat&n &+wbuilding, like the rest of the Clan houses along the
+&+RPath of Flowers&n&+w, is laid out like a large square.  The middle of the
+&+wsquare contains a lovely&n &+ggarden area&n&+w, which is surrounded by the rest
+&+wof the building.  From this position, one can either continue to the south
+&+wand enter the garden, or use one of the two sliding panel doors to the west
+&+wor east to enter the house.  The garden is roughly fifty feet per side,
+&+wwhile the house is another fifty feet surrounding that.  The structure
+&+wis only a single-story in height except for the central section of the
+&+wsouthern part of the house, where it extends up another floor.
+~
+1 4108 1 0
+D0
+~
+~
+0 0 138334
+D1
+~
+~
+0 0 138387
+D2
+~
+~
+0 0 138389
+D3
+~
+~
+0 0 138386
+S
+#138386
+&+BA Dining Area&n~
+&+w   This room is a formal dining area, dominated by one centralized table
+&+wmade of a hard, deep brown wood.  There are eight chairs around the
+&+wrectangular table, each of the same material as the table.  Illumination
+&+wis provided by a number of candles spaced around the walls, each held
+&+wby a highly decorated piece made of gold.  Entry to this room is controlled
+&+wby doors to the east and south, both made of a light, thin wood panel
+&+wattached to a heavier wood frame that slides easily from side-to-side,
+&+winstead of swinging open on hinges.  Around the room are various framed
+&+wwatercolor paintings, mostly of birds in flight in peaceful natural settings.
+~
+1 33558536 1 0
+D1
+~
+~
+0 0 138385
+D2
+~
+~
+0 0 138388
+S
+#138387
+&+BA Library&n~
+&+w   This room serves as a library or study for the Clan.  The room is laid
+&+wout simply, with four chairs spaced around the middle of the room
+&+wsurrounded by eight shelves of books and scrolls, two per wall.  The shelves
+&+won the south and west walls are slightly small in length, because of the
+&+wsliding wood panelled doors that allow access to this room.  When opened
+&+wthe doors cleverly slide behind a shelf, out of sight.  Windows in the north
+&+wand east walls are currently open to the outside environment, but each has
+&+wa set of folding blinds that can be used to cut off the noise and weather
+&+wof the outside world.
+~
+1 33558536 1 0
+D2
+~
+~
+0 0 138390
+D3
+~
+~
+0 0 138385
+S
+#138388
+&+BServants Quarters&n~
+&+w   Small beds made of cloth suspended used bamboo frames take up the
+&+wmajority of the space in this area that has been set aside for servants.
+&+wThe beds are hung about three feet off the ground by the sturdy frames,
+&+wallowing room underneath for long, rectangular wooden chests for personal
+&+witems and clothing.  Privacy in the tight quarters is granted somewhat by
+&+wmovable walls made of thick white paper held by the same style of bamboo
+&+wframes.  Some of the paper walls have been decorated by some aspiring
+&+wartist using a brush and black ink.  Sliding wood panelled doors allow
+&+waccess to the room from the north, east, and south.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138386
+D1
+~
+~
+0 0 138389
+D2
+~
+~
+0 0 138391
+S
+#138389
+&+GA Large Garden Area&n~
+&+g   Set inside the interior of the&n &+yClan Rat&n &+ghouse struture, this garden
+&+gis a peaceful island away from the rest of the city.  Small sections of
+&+gflowers have been carefully planted and cultivated, and numerous tiny shrubs
+&+gdot the green grass.  One large&n &+wwhite birch&n &+gtree climbs up into the sky, it's
+&+gbranches and leaves providing&n &+Lshade&n &+gto a solitary wooden bench that sits
+&+gnear the middle of the garden.  A patio, about five feet in width, runs
+&+galong the inside walls of the surrounding building and the roofline of the
+&+gstructure overhangs that porch area, also providing&n &+Lshade&n &+gand comfort.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138385
+D1
+~
+~
+0 0 138390
+D2
+~
+~
+0 0 138392
+D3
+~
+~
+0 0 138388
+S
+#138390
+&+BGuest Quarters&n~
+&+w   A lone bed sits near the eastern wall of this room, covered in a dark
+&+ybrown blanket&n &+wthat has a&n &+Lblack embroidered rat&n &+wdesign in the middle of it.
+&+wNear that bed's headboard on either side sit small wooden dressers, each
+&+wwith a pair of drawers in it.  On the lefthand dresser sits a small incense
+&+wburner, currently unlit although the sweet&n &+Raroma&n &+wstill hangs in the air.
+&+wA desk has been placed near the southeast corner of the room, next to a
+&+wsliding door leading into the next room.  Similar sliding doors are present
+&+win the north and west walls.
+~
+1 33558536 1 0
+D0
+~
+~
+0 0 138387
+D2
+~
+~
+0 0 138393
+D3
+~
+~
+0 0 138389
+S
+#138391
+&+BA Bedroom&n~
+&+w   Exquisitely designed, this room's interior furnishings are fit for
+&+wroyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+wand numerous light covers and sheets.  Pillows made of satin and goose
+&+wfeathers sit near the head of the bed, each of them in shades of &+Ggreen&n
+&+wthat accent the lovely&n &+ggreen fabrics&n &+wof the bed coverings.  A four-drawer
+&+wdresser has been placed along the north wall, on the right side of the
+&+wsliding wood panelled door.  A similar door can be seen in the east wall.
+&+wA window in the west wall provides both illumination and a cooling
+&+wbreeze if the wind outside is blowing in the right direction.  From that
+&+wwindow, one can see the&n &+BClan T&n&+bi&n&+Bg&n&+be&n&+Br&n &+wcompound area that sits next to
+&+wthis one.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138388
+D1
+~
+~
+0 0 138392
+S
+#138392
+&+BAn Elegant Sitting Room&n~
+&+w   Decorated with beautiful wood panelling and various watercolor prints
+&+wof outdoor scenes, this sitting room can comfortably hold about a dozen
+&+wpeople, who could either stand or sit on one of the plush couches or
+&+wchairs.  A large window in the south wall looks out upon the palace
+&+wwalls, large affairs of wh&n&+Li&n&+wt&+Le&n &+ws&n&+Lt&n&+won&n&+Le&n &+wand&n &+Lg&n&+wre&n&+Ly&n &+wmo&n&+Lr&n&+wt&n&+La&n&+wr.  A double set of
+&+wsliding wood panelled walls can be slid aside to offer a splendid view
+&+wof the&n &+yClan Rat&n &+westate&n &+ggardens&n&+w.  Other sliding doors allow one to
+&+wgain entrance to bedrooms west and east of here.  A sharply inclined set
+&+wof stairs spiral around a supporting pole and lead upstairs to yet another
+&+wbedroom area.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138389
+D1
+~
+~
+0 0 138393
+D3
+~
+~
+0 0 138391
+D4
+~
+~
+0 0 138394
+S
+#138393
+&+BA Bedroom&n~
+&+w   Exquisitely designed, this room's interior furnishings are fit for
+&+wroyalty.  The four-post bed is large, made of a thick fluffy mattress
+&+wand numerous light covers and sheets.  Pillows made of satin and goose
+&+wfeathers sit near the head of the bed, each of them in shades of &+Ggreen&n
+&+wthat accent the lovely&n &+ggreen fabrics&n &+wof the bed coverings.  A four-drawer
+&+wdresser has been placed along the north wall, on the right side of the
+&+wsliding wood panelled door.  A similar door can be seen in the west wall.
+&+wA window in the east wall provides both illumination and a cooling
+&+wbreeze if the wind outside is blowing in the right direction.  From that
+&+wwindow, one can see the great walls of Mitashi.&n
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138390
+D3
+~
+~
+0 0 138392
+S
+#138394
+&+BA Second-Story Meeting Room&n~
+&+w   Offering a spectacular view of the rest of the Clan house, the main parts
+&+wof the city to the north, and the palace complex to the south, this meeting
+&+wroom is the only second-story room in this structure.   The room itself
+&+wconsists of four supporting pillars at the corners of the square room
+&+wwhich hold aloft a triangular sloped roof.  The "walls" of the room are
+&+wlong blinds of thin wood panels held together by string which can be raised
+&+wup from the floor using pull cords.  This clever arrangement allows the
+&+woccupants to completely remove any of the walls if they wish.  A small round
+&+wtable sits in the middle of the room, surrounded by four high-backed wooden
+&+wchairs.
+~
+1 33558536 0 0
+D5
+~
+~
+0 0 138392
+S
+#138395
+&+GThe&n &+gJ&+Gad&+ge&n &+gH&+Garbo&+gr&n~
+&+B   A &+yyellow-brown&n &+Bbricked path leads to a walled area where is passes through
+&+Ba pair of high, wooden gates.  The wall extends north and south, forming a
+&+Bborder between the city of&n &+GMitashi&n &+Band its harbor.  Guard towers are spaced
+&+Balong the wall, but look like they remain unmanned except in times of trouble.
+&+BTo the west, the path continues for a bit, before it turns into a wide
+&+Brange of docks made of wood, extending out into the waters of the bay.
+&+BEast, the&n &+yyellow-brown&n &+wbricks&+B extend in straight line to enter the heart of
+&+Bthe capital of the&n &+GJade Empire&n&+B.
+~
+1 4 1 0
+D1
+~
+~
+0 0 138311
+D3
+~
+~
+0 0 138396
+S
+#138396
+&+GThe&n &+gJ&+Gad&+ge&n &+gH&+Garbo&+gr&n~
+&+B   A path of&n &+yyellow-brown bricks&n &+Bstops here where it intersects with the
+&+Bexpansive dockyards of the&n &+GJade Harbor&n&+B.  To the east, a short wall of wood,
+&+Bbacked by a few guard towers, effectively funnels traffic through a pair of
+&+Bgates.  These walls serve a dual-purpose: keep out invaders and keep
+&+Btraders from getting around the customs offices that lie directly north of
+&+Bhere.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138397
+D1
+~
+~
+0 0 138395
+D3
+~
+~
+0 0 138398
+S
+#138397
+&+BThe Imperial Customs House&n~
+&+y   A small building made of thin planks of a light tan wood, this area serves
+&+yas the customs house for the city of Mitashi.  Since most of the inspections
+&+yare done either on-board the ships or during the unloading process, this
+&+ybuilding is used only as an office space for the many customs officers who
+&+yroam the dock area.  A wide window has been cut in the west wall, allowing
+&+yan excellent view of the harbor and the ships docked in the bay.
+~
+1 33558536 0 0
+D2
+~
+~
+0 0 138396
+S
+#138398
+&+GThe&n &+gJ&+Gad&+ge&n &+gH&+Garbo&+gr&n~
+&+B   This extended dock is the main one in use by the ships entering and
+&+Bleaving the mighty city of&n &+GMitashi&n&+B, capital of the&n &+GJade Empire&n&+B.  Most of the
+&+Bvessels look to be the fat, wide hulls used by merchants to carry goods.
+&+BSome are obviously fishing vessels, providing a good deal of the food for
+&+Bthe city.  There is much traffic about the wide dock area, with various
+&+Bsailors, merchants, and imperial officers bustling to and fro.
+~
+1 1048576 1 0
+D0
+~
+~
+0 0 138401
+D1
+~
+~
+0 0 138396
+D2
+~
+~
+0 0 138409
+D3
+~
+~
+0 0 138399
+S
+#138399
+&+GThe&n &+gJ&+Gad&+ge&n &+gH&+Garbo&+gr&n~
+&+B   This extended dock is the main one in use by the ships entering and
+&+Bleaving the mighty city of&n &+GMitashi&n&+B, capital of the&n &+GJade Empire&n&+B.  Most of the
+&+Bvessels look to be the fat, wide hulls used by merchants to carry goods.
+&+BSome are obviously fishing vessels, providing a good deal of the food for
+&+Bthe city.  There is much traffic about the wide dock area, with various
+&+Bsailors, merchants, and imperial officers bustling to and fro.
+~
+1 1048576 1 0
+D0
+~
+~
+0 0 138402
+D1
+~
+~
+0 0 138398
+D2
+~
+~
+0 0 138408
+D3
+~
+~
+0 0 138400
+S
+#138400
+&+GThe&n &+gJ&+Gad&+ge&n &+gH&+Garbo&+gr&n~
+&+B   This extended dock is the main one in use by the ships entering and
+&+Bleaving the mighty city of&n &+GMitashi&n&+B, capital of the&n &+GJade Empire&n&+B.  Most of the
+&+Bvessels look to be the fat, wide hulls used by merchants to carry goods.
+&+BSome are obviously fishing vessels, providing a good deal of the food for
+&+Bthe city.  There is much traffic about the wide dock area, with various
+&+Bsailors, merchants, and imperial officers bustling to and fro.
+~
+1 1048576 1 0
+D0
+~
+~
+0 0 138403
+D1
+~
+~
+0 0 138399
+D2
+~
+~
+0 0 138407
+D3
+~
+~
+0 0 138405
+S
+#138401
+&+bThe&n &+BImperial&n &+bBay&n~
+&+b   The Imperial Bay is the wide, deep body of water that sits to the west of
+&+bthe great city of Mitashi.  In fact, this bay is the reason that the original
+&+bcity was built long ago.  Small fishing vessels dart about the area, many
+&+bdragging nets behind them in an attempt to snag the various colorful fishes
+&+bthat swim close to the surface of the placid waters.
+~
+1 0 7 0
+D2
+~
+~
+0 0 138398
+D3
+~
+~
+0 0 138402
+S
+#138402
+&+bThe&n &+BImperial&n &+bBay&n~
+&+b   The Imperial Bay is the wide, deep body of water that sits to the west of
+&+bthe great city of Mitashi.  In fact, this bay is the reason that the original
+&+bcity was built long ago.  Small fishing vessels dart about the area, many
+&+bdragging nets behind them in an attempt to snag the various colorful fishes
+&+bthat swim close to the surface of the placid waters.
+~
+1 0 7 0
+D1
+~
+~
+0 0 138401
+D2
+~
+~
+0 0 138399
+D3
+~
+~
+0 0 138403
+S
+#138403
+&+bThe&n &+BImperial&n &+bBay&n~
+&+b   The Imperial Bay is the wide, deep body of water that sits to the west of
+&+bthe great city of Mitashi.  In fact, this bay is the reason that the original
+&+bcity was built long ago.  Small fishing vessels dart about the area, many
+&+bdragging nets behind them in an attempt to snag the various colorful fishes
+&+bthat swim close to the surface of the placid waters.
+~
+1 0 7 0
+D1
+~
+~
+0 0 138402
+D2
+~
+~
+0 0 138400
+D3
+~
+~
+0 0 138404
+S
+#138404
+&+bThe&n &+BImperial&n &+bBay&n~
+&+b   The Imperial Bay is the wide, deep body of water that sits to the west of
+&+bthe great city of Mitashi.  In fact, this bay is the reason that the original
+&+bcity was built long ago.  Small fishing vessels dart about the area, many
+&+bdragging nets behind them in an attempt to snag the various colorful fishes
+&+bthat swim close to the surface of the placid waters.
+~
+1 0 7 0
+D1
+~
+~
+0 0 138403
+D2
+~
+~
+0 0 138405
+S
+#138405
+&+bThe&n &+BImperial&n &+bBay&n~
+&+b   The Imperial Bay is the wide, deep body of water that sits to the west of
+&+bthe great city of Mitashi.  In fact, this bay is the reason that the original
+&+bcity was built long ago.  Small fishing vessels dart about the area, many
+&+bdragging nets behind them in an attempt to snag the various colorful fishes
+&+bthat swim close to the surface of the placid waters.
+~
+1 0 7 0
+D0
+~
+~
+0 0 138404
+D1
+~
+~
+0 0 138400
+D2
+~
+~
+0 0 138406
+S
+#138406
+&+bThe&n &+BImperial&n &+bBay&n~
+&+b   The Imperial Bay is the wide, deep body of water that sits to the west of
+&+bthe great city of Mitashi.  In fact, this bay is the reason that the original
+&+bcity was built long ago.  Small fishing vessels dart about the area, many
+&+bdragging nets behind them in an attempt to snag the various colorful fishes
+&+bthat swim close to the surface of the placid waters.
+~
+1 0 7 0
+D0
+~
+~
+0 0 138405
+D1
+~
+~
+0 0 138407
+S
+#138407
+&+bThe&n &+BImperial&n &+bBay&n~
+&+b   The Imperial Bay is the wide, deep body of water that sits to the west of
+&+bthe great city of Mitashi.  In fact, this bay is the reason that the original
+&+bcity was built long ago.  Small fishing vessels dart about the area, many
+&+bdragging nets behind them in an attempt to snag the various colorful fishes
+&+bthat swim close to the surface of the placid waters.
+~
+1 0 7 0
+D0
+~
+~
+0 0 138400
+D1
+~
+~
+0 0 138408
+D3
+~
+~
+0 0 138406
+S
+#138408
+&+bThe&n &+BImperial&n &+bBay&n~
+&+b   The Imperial Bay is the wide, deep body of water that sits to the west of
+&+bthe great city of Mitashi.  In fact, this bay is the reason that the original
+&+bcity was built long ago.  Small fishing vessels dart about the area, many
+&+bdragging nets behind them in an attempt to snag the various colorful fishes
+&+bthat swim close to the surface of the placid waters.
+~
+1 0 7 0
+D0
+~
+~
+0 0 138399
+D1
+~
+~
+0 0 138409
+D3
+~
+~
+0 0 138407
+S
+#138409
+&+bThe&n &+BImperial&n &+bBay&n~
+&+b   The Imperial Bay is the wide, deep body of water that sits to the west of
+&+bthe great city of Mitashi.  In fact, this bay is the reason that the original
+&+bcity was built long ago.  Small fishing vessels dart about the area, many
+&+bdragging nets behind them in an attempt to snag the various colorful fishes
+&+bthat swim close to the surface of the placid waters.
+~
+1 0 7 0
+D0
+~
+~
+0 0 138398
+D3
+~
+~
+0 0 138408
+S
+#138410
+&+MT&+Rhe &+MP&+Rath &+Mo&+Rf&n &+RBl&+Mo&+Rss&+Mo&+Rms&n~
+&+g   Made of strange green-&n&+wgray&n &+grocks, this path leads from west to east here,
+&+gturning sharply to the south further on down the road.  West of here, it
+&+gleads to the vast and colorful marketplace square.  The shouts of the vendors
+&+gwho do business there can be heard easily from this location.  North is a
+&+gnon-descript road of&n &+Lblack&n &+gand&n &+ybrown&n &+gstones, leading between the market wall
+&+gand a simple building.  Southeast of here, before the path turns sharply,
+&+glies a large structure, proclaiming itself to be an inn and tavern.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138317
+D1
+~
+~
+0 0 138411
+D3
+~
+~
+0 0 138263
+S
+#138411
+&+MT&+Rhe &+MP&+Rath &+Mo&+Rf&n &+RBl&+Mo&+Rss&+Mo&+Rms&n~
+&+g   Made of strange green-&n&+wgray&n &+grocks, this path leads from west to east here,
+&+gturning sharply to the south further on down the road.  West of here, it
+&+gleads to the vast and colorful marketplace square.  The shouts of the vendors
+&+gwho do business there can be heard easily from this location.  Directly
+&+gsouth is a large, colorful building, fat and wide and made of a collection
+&+gof brown bricks and painted oak.  It has a highly sloping black roof and
+&+ga front porch where guests can sit outside and enjoy the fresh air.  A wood
+&+gsign hangs from chains from the porch's roof, proclaiming the building to
+&+gbe the&n &+BSeven Gardens&n&+g.
+~
+1 0 1 0
+D1
+~
+~
+0 0 138412
+D2
+~
+~
+0 0 138424
+D3
+~
+~
+0 0 138410
+S
+#138412
+&+MT&+Rhe &+MP&+Rath &+Mo&+Rf&n &+RBl&+Mo&+Rss&+Mo&+Rms&n~
+&+g   Made of strange green-&n&+wgray&n &+grocks, this path makes a ninety
+&+gdegree turn here, leading west and south.  Various homes of odd shapes and
+&+gsizes line the path, which extends for about a block or so to the south and
+&+ga little less than that to the west.  Southwest of here is a fat, broad
+&+gbuilding made of stone and painted wood that seems out of place among the
+&+grest of the smaller houses.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138423
+D2
+~
+~
+0 0 138413
+D3
+~
+~
+0 0 138411
+S
+#138413
+&+MT&+Rhe &+MP&+Rath &+Mo&+Rf&n &+RBl&+Mo&+Rss&+Mo&+Rms&n~
+&+g   Made of strange green-&n&+wgray&n &+grocks, this path leads from the south
+&+gto the north, passing between numerous houses of various shapes and sizes.
+&+gMany of the houses are made of the same materials: thin, brightly painted
+&+gwood walls topped with black-shingled roofs.  Many of the houses look to
+&+gbe in poor condition, with paint starting to chip and crack.  To the east,
+&+ga small alleyway leads to what looks like the road that borders the city
+&+gwalls.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138412
+D1
+~
+~
+0 0 138227
+D2
+~
+~
+0 0 138414
+S
+#138414
+&+MT&+Rhe &+MP&+Rath &+Mo&+Rf&n &+RBl&+Mo&+Rss&+Mo&+Rms&n~
+&+g   Made of strange green-&n&+wgray&n &+grocks, this path leads from the south
+&+gto the north, passing between numerous houses of various shapes and sizes.
+&+gMany of the houses are made of the same materials: thin, brightly painted
+&+gwood walls topped with black-shingled roofs.  Many of the houses look to
+&+gbe in poor condition, with paint starting to chip and crack.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138413
+D1
+~
+~
+0 0 138420
+D2
+~
+~
+0 0 138415
+S
+#138415
+&+MT&+Rhe &+MP&+Rath &+Mo&+Rf&n &+RBl&+Mo&+Rss&+Mo&+Rms&n~
+&+g   Made of strange green-&n&+wgray&n &+grocks, this path leads from the south
+&+gto the north, passing between numerous houses of various shapes and sizes.
+&+gMany of the houses are made of the same materials: thin, brightly painted
+&+gwood walls topped with black-shingled roofs.  Many of the houses look to
+&+gbe in poor condition, with paint starting to chip and crack.
+~
+1 0 1 0
+D0
+~
+~
+0 0 138414
+D1
+~
+~
+0 0 138421
+S
+#138416
+&+RA Family Dwelling&n~
+&+L   A simple dwelling owned by either a poor family or one that avoids
+&+Lpurchasing any types of luxury items, this is a single-story, four room
+&+Lstructure.  It looks as if one of the rooms is the kitchen, another is
+&+La bedroom, the third a bathroom and washroom, while the last is the main
+&+Lroom that connects the rest.  The interior walls are thin and made from
+&+Lthin wood frames with paper coverings.  The paper of the walls has started
+&+Lto yellow with age, but it looks to be a simple matter to replace it on
+&+Lthe frames.
+~
+1 8 0 0
+D1
+~
+~
+0 0 138245
+S
+#138417
+&+RA Family Dwelling&n~
+&+L   A simple dwelling owned by either a poor family or one that avoids
+&+Lpurchasing any types of luxury items, this is a single-story, four room
+&+Lstructure.  It looks as if one of the rooms is the kitchen, another is
+&+La bedroom, the third a bathroom and washroom, while the last is the main
+&+Lroom that connects the rest.  The interior walls are thin and made from
+&+Lthin wood frames with paper coverings.  The paper of the walls has started
+&+Lto yellow with age, but it looks to be a simple matter to replace it on
+&+Lthe frames.
+~
+1 8 0 0
+D1
+~
+~
+0 0 138246
+S
+#138418
+&+RA Family Dwelling&n~
+&+L   A simple dwelling owned by either a poor family or one that avoids
+&+Lpurchasing any types of luxury items, this is a single-story, four room
+&+Lstructure.  It looks as if one of the rooms is the kitchen, another is
+&+La bedroom, the third a bathroom and washroom, while the last is the main
+&+Lroom that connects the rest.  The interior walls are thin and made from
+&+Lthin wood frames with paper coverings.  The paper of the walls has started
+&+Lto yellow with age, but it looks to be a simple matter to replace it on
+&+Lthe frames.
+~
+1 33558540 0 0
+D3
+~
+~
+0 0 138247
+S
+#138419
+&+RA Family Dwelling&n~
+&+w   A simple dwelling owned by either a poor family or one that avoids
+&+wpurchasing any types of luxury items, this is a single-story, four room
+&+wstructure.  It looks as if one of the rooms is the kitchen, another is
+&+wa bedroom, the third a bathroom and washroom, while the last is the main
+&+wroom that connects the rest.  The interior walls are thin and made from
+&+wthin wood frames with paper coverings.  The paper of the walls has started
+&+wto yellow with age, but it looks to be a simple matter to replace it on
+&+wthe frames.
+~
+1 33558540 0 0
+D1
+~
+~
+0 0 138238
+S
+#138420
+&+RA Family Dwelling&n~
+&+L   A simple dwelling owned by either a poor family or one that avoids
+&+Lpurchasing any types of luxury items, this is a single-story, four room
+&+Lstructure.  It looks as if one of the rooms is the kitchen, another is
+&+La bedroom, the third a bathroom and washroom, while the last is the main
+&+Lroom that connects the rest.  The interior walls are thin and made from
+&+Lthin wood frames with paper coverings.  The paper of the walls has started
+&+Lto yellow with age, but it looks to be a simple matter to replace it on
+&+Lthe frames.
+~
+1 33558540 0 0
+D3
+~
+~
+0 0 138414
+S
+#138421
+&+RA Family Dwelling&n~
+&+L   A simple dwelling owned by either a poor family or one that avoids
+&+Lpurchasing any types of luxury items, this is a single-story, four room
+&+Lstructure.  It looks as if one of the rooms is the kitchen, another is
+&+La bedroom, the third a bathroom and washroom, while the last is the main
+&+Lroom that connects the rest.  The interior walls are thin and made from
+&+Lthin wood frames with paper coverings.  The paper of the walls has started
+&+Lto yellow with age, but it looks to be a simple matter to replace it on
+&+Lthe frames.
+~
+1 33558540 0 0
+D3
+~
+~
+0 0 138415
+S
+#138422
+&+RA Family Dwelling&n~
+&+w   A simple dwelling owned by either a poor family or one that avoids
+&+wpurchasing any types of luxury items, this is a single-story, four room
+&+wstructure.  It looks as if one of the rooms is the kitchen, another is
+&+wa bedroom, the third a bathroom and washroom, while the last is the main
+&+wroom that connects the rest.  The interior walls are thin and made from
+&+wthin wood frames with paper coverings.  The paper of the walls has started
+&+wto yellow with age, but it looks to be a simple matter to replace it on
+&+wthe frames.
+~
+1 33558540 0 0
+D1
+~
+~
+0 0 138250
+S
+#138423
+&+RA Family Dwelling&n~
+&+L   A simple dwelling owned by either a poor family or one that avoids
+&+Lpurchasing any types of luxury items, this is a single-story, four room
+&+Lstructure.  It looks as if one of the rooms is the kitchen, another is
+&+La bedroom, the third a bathroom and washroom, while the last is the main
+&+Lroom that connects the rest.  The interior walls are thin and made from
+&+Lthin wood frames with paper coverings.  The paper of the walls has started
+&+Lto yellow with age, but it looks to be a simple matter to replace it on
+&+Lthe frames.
+~
+1 33558540 0 0
+D2
+~
+~
+0 0 138412
+S
+#138424
+&+bThe Porch of&n &+BThe Seven Gardens&n~
+&+B   This front porch area belongs to an inn called the Seven Gardens, a stout
+&+Bbuilding that looks like it could house a great many visitors.  Small
+&+Btables and chairs have been spaced around the porch area, each made with
+&+Bhigh-quality construction and workmanship.  The roof overhead is made from a
+&+Bmesh of long, rectangular strips of wood, with small square holes caused
+&+Bby the mesh.  It provides adequate shade, but would offer no protection from
+&+Brain or snow.
+~
+1 33558540 0 0
+D0
+~
+~
+0 0 138411
+D2
+~
+~
+0 0 138425
+S
+#138425
+&+BThe Seven Gardens&n~
+&+B   This is a large, single-level building, very wide and long.  The common
+&+Btakes up most of the north part of the structure and features a bar and
+&+Bgreat number of tables and chairs.  A fireplace, unused currently, sits
+&+Bin the far north wall close enough to provide warmth to the bar but far
+&+Benough away so that smoke won't bother the patrons there.  A few windows
+&+Blook out over a street that runs parallel to the north side of the building.
+~
+1 33558536 0 0
+D0
+~
+~
+0 0 138424
+D2
+~
+~
+0 0 138426
+S
+#138426
+&+BThe Seven Gardens&n~
+&+B   This back area of the Seven Gardens houses most of the rooms that are
+&+Bavailable for rent.  The Seven Gardens has a good reputation for being a
+&+Bhigh-quality establishment that cares for its guests.  The people who work
+&+Bhere are friendly and strive to provide for the needs of the travellers
+&+Bwho stay here.
+~
+1 34082824 0 0
+D0
+~
+~
+0 0 138425
+S
+#138427
+&+yAn Abandoned Warehouse&n~
+&+L   What was once a larger house has been converted into a warehouse of some
+&+Lkind.  The interior walls were removed and the windows were boarded up for
+&+Lsecurity reasons.  At some time in the past though, it looks like there
+&+Lwas a fire or some other disaster.  The only thing that remains here are
+&+Lburnt and scarred wooden crates and boxes and cobwebs.  The interior is
+&+Lvery dark, which is to be expected since  light can only enter through the
+&+Ldoorway.  What is not normal is the temperature, which is cold enough to
+&+Lcause one's breath to mist.
+~
+1 13 0 0
+D1
+~
+~
+0 0 138247
+D5
+~
+~
+0 0 138428
+S
+#138428
+&+LAn Abandoned Warehouse&n~
+&+L   This was once the basement of the warehouse, but it has fallen into a
+&+Ldangerous state of disrepair.  The timbers that support the floor overhead
+&+Lare rotted and weakened, sagging in many places, cracked in others.  The
+&+Lair in the basement area is practically frigid, at least twenty to thirty
+&+Ldegrees lower than the temperature outside.  Very little light manages
+&+Lto sneak it's way down to this level of the structure.
+~
+1 13 0 0
+D4
+~
+~
+0 0 138427
+S

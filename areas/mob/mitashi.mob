@@ -1,0 +1,1058 @@
+#138200
+guard gate imperial~
+&+Lan &+wI&+Wmperia&+wl&+L gate guard&n~
+&+LAn &+wI&+Wmperia&+wl&+L guardsman keeps an eye on the city traffic.&n
+~
+This Imperial guard is typical of his people: short, dark tan skin, black
+hair and dark eyes.  He's well-muscled from years of military training
+and a look of smug superiority is evident in his appearance and mannerisms.
+In the strict caste system present in the Empire, military men are held
+in high regard and this individual looks more than happy to abuse his
+status as he bullies the city traffic.
+
+&+wAn&n &+cImperial&n &+wgate guard looks at you.&n
+&+wAn&n &+cImperial&n &+wgate guard snears at you in contempt.&n
+~
+67110986 0 0 0 268435504 0 0 0 0 S
+PH 0 1 0 -1
+47 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138201
+captain guard imperial~
+&+Lan &+wI&+Wmperia&+wl &+WC&+waptai&+Wn&n~
+&+LA &+WC&+waptai&+Wn &+Lof the &+wI&+Wmperia&+wl&+L &+wG&+Luar&+wd&+L supervises the watch.&n
+~
+This Imperial guard Captain is a severe man, his face hardened by long
+years of war and strife.  His eyes are cold and dark and his light tan
+skin has a weathered look to it.  He has a long, thin mustache that droops
+down below his chin, and thin black eyebrows.  He supervises the gate
+guards with a noticable disinterest, looking upon the peasants and merchants
+as if they were far beneath him.
+
+&+wAn&n &+cImperial&n &+WCaptain&n &+wlooks at you.&n
+&+wAn&n &+cImperial&n &+WCaptain&n says 'Move along, please.'&n
+~
+67110986 0 0 0 268435504 0 0 0 0 S
+PH 0 1 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138202
+warrior crane clan~
+&+ca&n &+CC&+Wran&+Ce&n &+cwarrior&n~
+&+cA warrior of the&n &+CC&+Wran&+Ce&n &+cclan walks through the city.&n
+~
+This man has the look of a veteran soldier about him.  His eyes are hard
+and cold and his weapons and armor have the look of recent use to them.
+He wears the livery of the Crane Clan, one of the largest and most
+politically influential of the Imperial Clans.
+
+The man has a shaved head, except for a top knot that reaches down to the
+middle of his back.  He has dark skin and even darker eyes, coupled with
+a flat, broad nose and high cheekbones.
+~
+1140852808 0 0 0 301989904 0 0 0 100 S
+PH 0 1 0 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138203
+bushi warrior~
+&+ya&n &+Ybushi&n &+ywarrior&n~
+&+yA bushi, a clanless warrior, enjoys some time in the city.&n
+~
+&+gThis aging warrior still looks spry and fit, despite his years.  Bushi are
+&+gclanless warriors who make up the vast majority of the armies fielded
+&+gby the Jade Empire.  Professional soldiers, the skills of most bushi
+&+gare equivalent to move full blooded Clan soldiers.  Only the strict family
+&+gand Clan structures of the Empire keep the non-affiliated warriors down.
+~
+1073743944 0 0 0 301989888 0 0 0 100 S
+PH 0 16384 0 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138204
+common man commoner~
+&+Ba commoner&n~
+&+BA common man of&n &+gMitashi&n &+Bgoes about his daily business.&n
+~
+&+y   This peasant stands about five feet in height, has a dark complexion and
+&+ydark eyes, and stoops over from years of backbreaking labor.  His hands
+&+yare calloused and there's a sense of weariness to him.  He looks to be
+&+yin his early fifties and his skin is starting to show signs of wrinkles
+&+ywhile gray has started appearing in his mostly black hair.
+~
+2184 0 0 0 16 0 0 0 400 S
+PH 0 1 0 -1
+37 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138205
+watchman guard imperial~
+&+Lan&n &+cIm&+Wperi&+cal&n &+Lwatchman&n~
+&+LA watchman of the &+cIm&+Wperi&+cal &+wG&+Wuar&+wd&n &+Lkeeps an eye on the marketplace.&n
+~
+&+LThis young man wears the uniform of an Imperial guardsman, albeit his rank
+&+Linsignia shows him to be a member of the Watch and not a full member of
+&+Lthe Imperial Army.  He keeps a sharp eye out on the marketplace, watchful
+&+Lof the thieves and troublemakers that frequent the well-travelled area.
+~
+1140852744 0 0 0 268435496 0 0 0 0 S
+PH 0 1 0 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138206
+noble rat clan~
+&+La noble of the&n &+YRat Clan&n~
+&+yA &+Wnoble&+y in the&n &+YR&+yat &+YC&+ylan &+Wshops&+y in the marketplace.&n
+~
+&+YThis rat-faced man is perfectly suited for Clan Rat.  He has a long, pointed
+&+Ynose and beady dark eyes.  A sloped forehead and small chin also contribute
+&+Yto his similarity to the animal his clan is named after.  He wears fine
+&+Yclothing made of brightly colored silk and proceeds around the marketplace
+&+Yas if it were built only for him.  He looks especially annoyed when one
+&+Yof the children who play in the market square comes near and his guards
+&+Yusually shuffle to positions to scare off the child.
+~
+1140852808 0 0 0 24 0 0 0 0 S
+PH 0 67108864 0 -1
+48 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138207
+bodyguard guard rat clan~
+&+ya&n &+YClan Rat&n &+ybodyguard&n~
+&+yA bodyguard belonging to &+YC&+ylan &+YR&+yat &+yprovides &+Wprotection &+yto a &+Cnoble&+y.&n
+~
+&+YCold and hard dark eyes stare out of an ugly and weather-beaten face as
+&+Ythis guard performs his duties in protecting a noble of Clan Rat.  His
+&+Yhead is shaved, except for a long top-knot of black hair.  Despite his
+&+Yprofessional manner, he can't quite hide looks of dissatisfaction
+&+Yat his duties.  Judging by his stance and self-confidence, this bodyguard
+&+Yis a warrior of quite some skill and most likely he'd rather by with the
+&+YClan Rat military forces instead of babysitting some spoiled nobleman.
+~
+67110984 0 0 0 369100864 0 0 0 100 S
+PH 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138208
+merchant~
+&+ma knife merchant&n~
+&+mA merchant is here, hawking knives and blades.&n
+~
+A short, bald man, this citizen of the Empire makes a living selling various
+knives and short blades.  Amazingly, the sales of such weapons doesn't seem
+to be regulated by any laws.  On occassion, one can even see this little man
+selling the dangerous weapons to young children, although how the they manage
+to afford them is anyone's guess.  Petty theft comes to mind, however.
+~
+2186 0 0 0 268435512 0 0 0 0 S
+PH 0 15 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138209
+merchant~
+&+Ra food merchant&n~
+&+RA merchant shouts to passersby about the quality of his foods.&n
+~
+&+RThis overweight merchant looks like he's sampled more than one of the many
+&+Rtypes of food he hawks from his small cart.  Strips of meat, sausages,
+&+Rand some various hard breads are on display.  The merchant's bald head
+&+Ris covered in a thin shean of sweat and the poor guy looks like he's
+&+Rbaking in the heavy clothing he wears.
+~
+2186 0 0 0 268435512 0 0 0 0 S
+PH 0 640 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138210
+young child~
+&+ga young child&n~
+&+gA young child runs through the marketplace, playing tag with other kids.&n
+~
+&+gThis young child is skinny, almost malnourished.  He manages to run around
+&+gthe marketplace fast enough though in a wild game of tag with kids his
+&+gage.  Some of the children bump into shoppers... and more than once you see
+&+gthe child try for the shopper's purse.  Most of the people are smart enough
+&+gto protect their gold, but once or twice you see a kid get away with his
+&+gtheft.
+~
+2200 0 0 0 0 0 0 0 -200 S
+PH 0 81920 0 -1
+34 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138211
+female shopper human~
+&+Ma female shopper&n~
+&+MA &+Chuman &+Mfemale bustles around the area shopping.&n
+~
+&+M   This short, petite young man bustles quickly around the marketplace,
+&+Mquickly walking from shop to shop looking for goods.  She's a pretty
+&+Mwoman, probably in her early twenties, with exotic blue eyes and long,
+&+Mfluttering eyelashes.  A tiny nose and mouth give her entire face a
+&+Msmallish look to it, and long, black bangs hang down in front of her
+&+Meyes while a black braid extends down her back to her waistline.
+~
+2184 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138212
+member warrior tiger clan~
+&+ba young&n &+BTiger&n &+bwarrior&n~
+&+bA young member of the&n &+BTiger&n &+bclan walks through the city.&n
+~
+&+bThis youth, a teenage boy, wears the weapons and armor of a full-fledged
+&+bTiger warrior, although it is doubtful he's ever seen battle.  He wanders
+&+baround the town with a sense of awe, amazed at the size and chaotic nature
+&+bof the large city.  Like many warriors, the boy has shaved his head but
+&+bhe lacks the topknot many others wear.
+~
+2120 0 0 0 301989888 0 0 0 100 S
+PH 0 67108864 0 -1
+38 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138213
+captain watch officer~
+&+wa&n &+cCaptain&n &+wof the&n &+BWatch&n~
+&+wAn officer of the&n &+BImperial Watch&n &+wpatrols the city streets.&n
+~
+A soldier of the Imperial Watch, bearing the stripes of a Captain on the
+sleeves of his tunic, watches over the city.  While impossible to completely
+eliminate crime in a city the size of Mitashi, harsh punishments (most
+often death) along with a very diligent and military-trained Imperial Watch
+keep major crimes down to a minimum.  This officer is a one mean looking
+individual, very muscular and brawny, and wearing a scowl constantly.
+~
+1140852808 0 0 0 301989944 0 0 0 250 S
+PH 0 1 0 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138214
+monk ivory order white~
+&+La monk of the&n &+WI&+Cvor&+Wy O&+Crde&+Wr&n~
+&+LA &+Wwhite &+Lrobed &+Lm&+gon&+Lk walks about slowing, head bowed.&n
+~
+&+CRobes of pure white clothe this middle aged man, a monk of the Ivory Order.
+&+CHe possesses a thin, wiry frame chiseled from years of physical labor and
+&+Ctraining.  Devoutly religious, these monks often live in monasteries for
+&+Cdecades without seeing another human being.  Occassionally, the make
+&+Cpilgrimages to the city for goods and recruiting.  Even the most callous
+&+Cof citizen steps aside for this monk, as they are incredibly well-respected
+&+Cby all throughout the Empire.
+~
+2120 0 0 0 301989904 28 0 0 500 S
+PH 0 64 0 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138215
+sergeant watch~
+&+ca &+Bsergeant&n &+cof the&n &+BWatch&n~
+&+cA sergeant of the&n &+BImperial Watch&n &+cstands here.&n
+~
+&+B   This gruff man wears the arms and armor of the solider in the Imperial
+&+BWatch, the paramilitary organization dedicated to policing the Jade City,
+&+BMitashi, capital of the Empire.  His aged-lined face has a hardness to it,
+&+Band his eyes are dark and cold.  Many of the Watch, such as this gentleman,
+&+Bare former members of the Imperial Army, retired but still having the urge
+&+Bto work for their home country in some capacity.
+~
+1140852810 1 0 0 301989936 0 0 0 100 S
+PH 0 16385 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138216
+elite young watchman youth watch~
+&+can &+Ce&+clit&+Ce&+c watchman&n~
+&+cAn &+Ce&+clit&+Ce&+c of the&n &+BImperial Watch&n &+cstands here and trains.&n
+~
+&+cThis young man, probably in his late teens, practices swordplay with a mix
+&+cof youthful enthusiasm and clueless amateurism.  His sword strokes are
+&+cwild and showy, and he leaves himself open for many counters that would
+&+ccost him his life against a real foe.  Occassionally a more experienced
+&+cWatchman will attempt to correct this young man's techniques, but he's
+&+ceither too dumb or too cocky to listen.
+~
+1140852810 0 0 0 33554448 0 0 0 300 S
+PH 0 16385 0 -1
+49 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138217
+captain officer watch man~
+&+can&n &+Bofficer&n &+cof the&n &+BWatch&n~
+&+cAn man wearing the uniform of a&n &+BWatch Captain&n &+cstands here.&n
+~
+&+BTall and lanky, this man is made of little more than muscle and bone.
+&+BRapier thin and sharp, his movements are smooth and flowing, even when
+&+Bdoing the most mundane of tasks.  He has a presense to him that speaks of
+&+Bself-confidence in his abilities.  He bears close-cropped black hair over
+&+Ba thin, dark-skinned face.  Pale thin lips and dark eyes give this captain
+&+Ban extremely gaunt look.
+~
+1140852810 0 0 0 301989904 0 0 0 200 S
+PH 0 16384 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138218
+monk old man gentleman~
+&+wan old white-robed monk&n~
+&+wA short, older gentleman in the robes of a monk enjoys the serenity.&n
+~
+This older man wears the long, flowing robes of one of the orders of monks
+that live in the Jade Empire.  His tanned face has become wrinkled in age
+and he has either shaved his hair or lost it naturally.  He has a white
+mustache which droops down past his chin, and thick white eyebrows.  His
+motions are smooth and flowing, never hurried or impatient and he stands
+peacefully watching the garden area.
+~
+1140852810 0 0 0 301989920 0 0 0 500 S
+PH 0 7 0 -1
+37 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138219
+aged gardener~
+&+Ga gardener&n~
+&+GAn aged gardener sits and tends his plants.&n
+~
+This aged man tends the Harmony Gardens with love and care, working for
+hours from dawn to dusk on the flowers and trees of the park.  His hands
+are dirty and calloused, and his dark blue shirt and breeches are stained
+with mud.
+~
+2248 0 0 0 0 0 0 0 600 S
+PH 0 0 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+6 6 1
+#138220
+young woman~
+&+Ma petite young woman&n~
+&+MA pretty and petite young woman enjoys the peace and quiet of the garden.&n
+~
+This pretty young girl, with dark exotic eyes and a small angelic face
+framed with a long black hair, quietly walks about the garden area.  She
+stops to smell the flowers occassionally, and carries a small sketch
+book she used to make charcoal drawings of the park area.
+~
+2248 0 0 0 0 0 0 0 700 S
+PH 0 0 0 -1
+21 0 0 1d1+1 1d1+1
+0.0.0.0 0
+6 6 2
+#138221
+hengi wu-jen~
+&+gthe wu-jen&n &+GHengi&n~
+&+gThe wu-jen&n &+GHengi&n &+gwatches over her store.&n
+~
+&+g   Tall, slender, and exotic, Hengi is a beautiful specimen.  She wears a
+&+gpurple gown that covers her from neck to ankle, but the dress is nearly
+&+gskin-tight and shows off her well-proportioned figure perfectly.  Long,
+&+gfine black hair runs down to her waist, tied with a bow near the back of
+&+gher head.  Her face has high cheekbones, slightly tipped with rouge to
+&+gadd some color.  Deep blue eyes and a thin mouth that always seems to
+&+gbe on the verge of a smile add to her beauty.
+   &+GHengi is a wu-jen, a sorcerer, of some note.  Famed for her potions and
+&+Galchemical skills, it is rumored that the young woman can cure anything
+&+Gfrom insomnia to warts and concoct potions that make one fall for sleep
+&+Gfor days or fall in love with the first person he or she sees.
+~
+2122 0 0 0 33554472 16 0 0 100 S
+PH 0 10 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138222
+xial owner~
+&+mXial&n~
+&+mThe owner of the shop stands behind his counter, smiling as you browse.&n
+~
+   Xial is a short man, stooped over with age.  He squints constantly, as
+if his eyesight was especially poor.  White hair, receeding, tops his head.
+His skin is wrinkled and pale, and there are some small liver spots visible
+on his forearms.  He wears common clothes, a simple shirt and breeches,
+and a pair of hard wood sandals.  He smiles happily as you browse his
+store.
+
+&+WXial tells you "Let me know if I can help you with anything."&n
+~
+10314 0 0 0 301989896 0 0 0 400 S
+PH 0 1 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138223
+can hy trader human man~
+&+cCan Hy, the trader&n~
+&+cA tall, thin human stands here, waiting silently for you to shop or get out.&n
+~
+&+c   Tall and lanky, this horsetrader, Can Hy by name, is well-tanned and
+&+cmuscled.  His eyes are cold and observant, taking in everything he sees.
+&+cCan Hy's manner is blunt and quick to the point, not exactly the best of
+&+csales techniques.  His passion for his work is apparent when he talks
+&+cto a customer about the animals though.  He treats the horses well and
+&+cnever hits them, unlike many other animal trainers.  There are no signs
+&+cof abuse or mistreatment of any of the animals sold here, and more than
+&+cone customer has been thrown out on the street by trying to sell Can Hy a
+&+cinjured or abused animal.
+~
+2122 0 0 0 33554440 0 0 0 500 S
+PH 0 512 0 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138224
+le ming lady crone woman poison~
+&+GLe Ming&n&+g, the Lady of Poison&n~
+&+GAn old crone of a woman stands, tending the counter.&n
+~
+&+g   This old, white-haired woman stands near the store counter, cloaked in a
+&+gheavy black shawl.  A sharp nose and beady eyes give her the look of a
+&+gpredator, even considering her age.  Her wits certainly haven't been hampered
+&+gby the years as she seems to sum up your worth with a simple glance.
+~
+67110986 0 0 0 301989932 0 0 0 -300 S
+PH 0 10 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138225
+shukenha dwarf creature dwarven~
+&+yShukenha, the dwarf&n~
+&+yAn odd dwarven creature grinds a powder in a mortal and pestle.&n
+~
+&+y   This strange dwarf-like creature is almost certainly related to the
+&+ymountain dwarf people, based on his size, build, and other physical
+&+ycharacteristics.  Most likely he is one of the korobokuru, the dwarves
+&+yof the east.  His arms and legs are longer than a mountain dwarf, and he
+&+yhas dark hair on his arms and legs but only a sparse beard and mustache.
+&+yHis eyes are an odd yellow color with smallish pupils.
+~
+67110986 0 0 0 301989896 0 0 0 0 S
+PM 0 0 0 -1
+32 0 0 1d1+1 1d1+1
+0.0.0.0 0
+6 6 1
+#138226
+raven complex guard~
+&+La&n &+LR&n&+wave&n&+Ln complex guard&n~
+&+LAn armed guard watches over the entrance to the&n &+LR&n&+wave&n&+Ln&n &+Lcomplex.&n
+~
+   This stern looking individual watches over the entrance to the Clan
+Raven estate here in Mitashi.  The guard stands about six feet in height
+and was obviously chosen for his size and imposing musculature.  His head
+is shaved bald and he has a tattoo of a raven on his face in blue ink.
+~
+67110986 0 0 0 33554472 0 0 0 50 S
+PH 0 1 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138227
+leopard complex guard~
+&+La&n &+yL&n&+Le&n&+yopa&n&+Lr&n&+yd&n &+Lcomplex guard&n~
+&+LAn armed guard watches over the entrance to the&n &+yL&n&+Le&n&+yopa&n&+Lr&n&+yd&n &+Lcomplex.&n
+~
+&+g   This stern looking individual watches over the entrance to the Clan
+&+gLeopard estate here in Mitashi.  The guard stands about six feet in height
+&+gand was obviously chosen for his size and imposing musculature.  His head
+&+gis shaved bald and he has a tattoo of a leopard on his face in blue ink.
+~
+67110986 0 0 0 33554472 0 0 0 50 S
+PH 0 1 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138228
+snow dragon complex guard~
+&+Wa&n &+WSnow D&n&+Crago&n&+Wn&n &+Wcomplex guard&n~
+&+WAn armed guard watches over the entrance to the&n &+WSnow D&n&+Crago&n&+Wn&n &+Wcomplex.&n
+~
+&+W   This stern looking individual watches over the entrance to the Clan
+&+WSnow Dragon estate here in Mitashi.  The guard stands about six feet in
+&+Wheight and was obviously chosen for his size and imposing musculature.  His
+&+Whead is shaved bald and he has a tattoo of a dragon on his face in blue ink.
+~
+67110986 0 0 0 33554472 0 0 0 50 S
+PH 0 1 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138229
+snow dragon complex guard~
+&+wa&n &+WSnow D&n&+Crago&n&+Wn&n &+wcomplex guard&n~
+&+wAn armed guard watches over the entrance to the&n &+WSnow D&n&+Crago&n&+Wn&n &+wcomplex.&n
+~
+   This stern looking individual watches over the entrance to the Clan
+Snow Dragon estate here in Mitashi.  The guard stands about six feet in
+height and was obviously chosen for his size and imposing musculature.  His
+head is shaved bald and he has a tattoo of a dragon on his face in blue ink.
+~
+67110986 0 0 0 33554472 0 0 0 900 S
+PH 0 6 0 -1
+29 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138230
+crane complex guard~
+&+wa&n &+cClan &+CCrane&n &+wcomplex guard&n~
+&+wAn armed guard watches over the entrance to the&n &+cClan &+CCrane&n &+wcomplex.&n
+~
+&+C   This stern looking individual watches over the entrance to the Clan
+&+CCrane estate here in Mitashi.  The guard stands about six feet in
+&+Cheight and was obviously chosen for his size and imposing musculature.  His
+&+Chead is shaved bald and he has a tattoo of a crane on his face in blue ink.
+~
+67110986 0 0 0 33554472 0 0 0 50 S
+PH 0 1 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138231
+crane complex guard~
+&+wa&n &+cClan &+CCrane&n &+wcomplex guard&n~
+&+wAn armed guard watches over the entrance to the&n &+cClan &+CCrane&n &+wcomplex.&n
+~
+   This stern looking individual watches over the entrance to the Clan
+Crane estate here in Mitashi.  The guard stands about six feet in
+height and was obviously chosen for his size and imposing musculature.  His
+head is shaved bald and he has a tattoo of a crane on his face in blue ink.
+~
+67110986 0 0 0 33554472 0 0 0 50 S
+PH 0 10 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138232
+tiger complex guard~
+&+La&n &+BClan T&n&+bi&n&+Bg&n&+be&n&+Br&n &+Lcomplex guard&n~
+&+Ln armed guard watches over the entrance to the&n &+BClan T&n&+bi&n&+Bg&n&+be&n&+Br&n &+Lcomplex.&n
+~
+   This stern looking individual watches over the entrance to the Clan
+Tiger estate here in Mitashi.  The guard stands about six feet in
+height and was obviously chosen for his size and imposing musculature.  His
+head is shaved bald and he has a tattoo of a tiger on his face in blue ink.
+~
+67110986 0 0 0 33554472 0 0 0 500 S
+PH 0 7 0 -1
+21 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138233
+rat complex guard~
+&+wa&n &+yClan Rat&n &+wcomplex guard&n~
+&+wAn armed guard watches over the entrance to the&n &+yClan Rat&n &+wcomplex.&n
+~
+   This stern looking individual watches over the entrance to the Clan
+Rat estate here in Mitashi.  The guard stands about six feet in
+height and was obviously chosen for his size and imposing musculature.  His
+head is shaved bald and he has a tattoo of a rat on his face in blue ink.
+~
+67110986 0 0 0 33554472 0 0 0 500 S
+PH 0 1 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138234
+rat complex guard~
+&+wa&n &+yClan Rat&n &+wcomplex guard&n~
+&+wAn armed guard watches over the entrance to the&n &+yClan Rat&n &+wcomplex.&n
+~
+   This stern looking individual watches over the entrance to the Clan
+Rat estate here in Mitashi.  The guard stands about six feet in
+height and was obviously chosen for his size and imposing musculature.  His
+head is shaved bald and he has a tattoo of a rat on his face in blue ink.
+~
+67110986 0 0 0 33554472 0 0 0 -200 S
+PH 0 15 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138235
+child young little boy~
+&+Ma young child&n~
+&+MA little boy runs and plays in the&n &+Ggarden&n &+Marea.&n
+~
+&+MThis young child dashes about the garden playfully.  Barefooted and&n
+&+Mwith grass-stained clothing, he seems to have an endless supply of&n
+&+Myouthful energy.&n
+~
+74 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138236
+shadowwalker assassin raven~
+&+La Clan R&n&+wave&n&+Ln shadowwalker&n~
+&+LA black-robed Clan R&n&+wave&n&+Ln assassin paces anxiously about the area.&n
+~
+&+LThis man, clad in robes of the blackest night, is a shadowwalker, one of the
+&+Lfeared professional killers of Clan Raven.   Known to be ruthless stalkers
+&+Lof the night, they move with the grace and strength of a panther.
+&+LUtterly fearless and loyal to the Clan, the shadowwalkers turn the otherwise
+&+Lunimportant Clan Raven into one of the major powers in the Imperial Courts.
+&+LIt is said that the&n &+GJady Lady&n &+Lherself picks the best of the shadowwalkers
+&+Lto become members of the Imperial assassins.
+~
+1140852808 0 0 0 302514216 28 0 0 -600 S
+PH 0 14 0 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138237
+servant~
+&+ya servant&n~
+&+yA brown-robed servant attempts to get some rest.&n
+~
+This older gentleman, probably in his late fifties, looks worn out by age
+and his work.  His wrinkled hands are heavily calloused, suggesting some
+type of manual labor.  His white hair is rapidly receeding, with large
+tufts of it remaining near his overly large ears.
+~
+2122 0 0 0 0 0 0 0 250 S
+PH 0 0 0 -1
+17 0 0 1d1+1 1d1+1
+0.0.0.0 0
+4 4 1
+#138238
+lord kawasawa~
+&+LLord Ka&n&+wwasa&n&+Lwa&n~
+&+LLord Ka&n&+wwasa&n&+Lwa of the R&n&+wave&n&+Ln Clan stands and watches the city.
+~
+Lord Kawasawa, head of Clan Raven, stands here in the second-story
+conference room, idly watching the city below.  A powerfully built man,
+Kawasawa has brought his clan up from almost nothing to it's present
+position as one of the six most powerful politically entities in the Empire.
+His head is shaved, except for a long top-knot that extends down his back,
+a hint of his warrior background.  Despite his upbringing as a proper
+kouhei, or sword warrior, Kawasawa used "dishonorable" methods to gain
+his power, hiring and training the elite corp of Shadowwalker assassins
+employed by Clan Raven.
+
+Because of his ambition and intelligence, Kawasawa is feared by many of
+the other Clan leaders.
+~
+67119178 0 0 0 301990040 2076 67108864 270336 0 S
+PH 0 1 0 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138239
+lord hanyo~
+&+yLord H&n&+La&n&+yn&n&+Ly&n&+yo&n~
+&+yLord H&n&+La&n&+yn&n&+Ly&n&+yo of the L&n&+Le&n&+yopa&n&+Lr&n&+yd Clan stands and watches the city.
+~
+Clan Leopard is reknown for its bravery and sense of duty to the Empire and
+nowhere is that more apparent than in the persona of Lord Hanyo, leader
+of the Leopard Clan.  This short, balding man has unintimidating and
+friendly nature, almost overly polite and well-mannered, except where manners
+of combat are concerned.  When the fighting begins, Lord Hanyo becomes much
+like his clan's animalistic icon, combining ferocious power and incredible
+quickness.
+
+Because of a recent outburst by a minor Leopard official against the
+Empress, the Leopard Clan has lost favor with the Jade Lady and her court.
+Lord Hanyo, unsuited for the deviousness and underhanded nature of politics,
+has been doing his best to rectify that situation.  Even those the Leopard
+has served the Empire without fault for hundreds of years, one small
+comment by some worthless functionary has put this Lord's clan in a difficult
+situation.
+~
+67119178 0 0 0 301990040 2076 67108864 270336 0 S
+PH 0 1 0 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138240
+lord murimasi~
+&+WLord M&n&+Curimas&n&+Wi&n~
+&+WLord M&n&+Curimas&n&+Wi of the Snow D&n&+Crago&n&+Wn&n &+CClan&n &+Wstands and watches the city.
+~
+Lord Murimasi is an elderly man, approaching his late fifties.  He still
+retains all the power of his youth, however, and its now coupled with the
+wisdom of his age and experience.  Murimasi, like most Clan leaders, is a
+hardened warrior who has fought on many battlegrounds inside and outside
+the Empire's borders.
+
+The Snow Dragon has always been the favored of the Jade Lady, the immortal
+ruler of the Empire, stretching all the way back to the foundation of the
+Empire itself.  The Clan is probably the most powerful of the six major
+Clans and with good reason.  Snow Dragon warriors are famed for their
+skills and abilities, and the battle-clerics of the Clan have won many
+a battle.
+~
+67119178 0 0 0 301990040 2076 67108864 270336 0 S
+PH 0 1 0 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138241
+lord ajikira~
+&+cLord&n &+CAjikira&n~
+&+cLord&n &+CAjikira&n &+cof the&n &+CCrane&n &+cClan stands and watches the city.
+~
+Scorned by many but feared by all, Lord Ajikira is the mysterious leader
+of Clan Crane.  Known to be a mystic of some power, Ajikira is as deadly
+with his so-called black arts as he is with the blade.   Tall, with broad,
+powerful shoulders, Ajikira is a giant amongst the people of Mitashi.
+
+While bickering and political maneuvering between the Clans is as common
+as night and day, for the most part they do not touch Lord Ajikira's
+Clan Crane.  Fear of the wu-jen spellmasters of the Clan keep many
+would-be upstart Clans in their place.  Even the dangerous Lord Kawasawa
+of the Raven Clan stays out of Crane business.
+~
+67119178 0 0 0 301990040 2076 67108864 0 0 S
+PH 0 1 0 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138242
+lord yumi~
+&+BLord Y&n&+bu&n&+Bm&n&+bi&n~
+&+BLord Y&n&+bu&n&+Bm&n&+bi&n &+Bof the T&n&+bi&n&+Bg&n&+be&n&+Br Clan stands and watches the city.
+~
+Lord Yumi is a relative oddity among the leaders of the Clans.  A monk of
+the Order of Purity for most of his life, Yumi has just recently left
+the monastery to assume the mantle of leadership for Clan Tiger.  The
+Clan had been in a decline and was in danger of losing its position as one
+of the six great houses until Lord Yumi took over.
+
+A simple and unassuming young man, Lord Yumi has a quietness to him that's
+both unnerving to his foes and comforting to his allies.  He's known to
+be a thinker and not a fighter, although combat training is an integral
+part to the Order of Purity's teachings, which strives for both mental and
+physical harmony.
+~
+67119178 0 0 0 301990040 28 67108864 270336 0 S
+PH 0 1 0 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138243
+lady kitsuro~
+&+yLady Kitsuro&n~
+&+yLady Kitsuro of the Rat Clan stands and watches the city.
+~
+Certainly looking nothing like her Clan's namesake, the beautiful Lady
+Kitsuro is one of the few women leaders in the Jade Empire, except for
+the Jady Lady of course.  Black hair cascades down her back, and subtle
+bits of cosmetics highlight her high cheekbones and deep brown eyes.
+
+In addition to her political power, Lady Kitsuro is also an oddity because
+of her military upbringing.  Trained just as any kouhei, or sword warrior,
+would be, the so-called Rat Lady (although not to her face) is quite skilled
+with the sword.
+
+Known to be calculating and devious, Lady Kitsuro keeps her foes off balance
+with a mixture of feigned innocence, because she's a woman, and backstabbing
+ruthlessness.
+~
+67119178 0 0 0 301990040 262172 67108864 270336 0 S
+PH 0 1 0 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138244
+monk man gentleman~
+&+wa white-robed monk&n~
+&+wA short man in the white robes of a monk enjoys the garden.&n
+~
+This man wears the long, flowing robes of one of the orders of monks
+that live in the Jade Empire.  His tanned face has become wrinkled in age
+and he has either shaved his hair or lost it naturally.  He has a white
+mustache which droops down past his chin, and thick white eyebrows.  His
+motions are smooth and flowing, never hurried or impatient and he stands
+peacefully watching the garden area.
+~
+67110986 0 0 0 301989920 0 0 0 500 S
+PH 0 7 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138245
+member warrior leopard clan~
+&+ya young L&n&+Le&n&+yopa&n&+Lr&n&+yd warrior&n~
+&+yA young member of the L&n&+Le&n&+yopa&n&+Lr&n&+yd Clan patrols the complex.&n
+~
+&+gThis youth, a teenage boy, wears the weapons and armor of a full-fledged
+&+gLeopard warrior, although it is doubtful he's ever seen battle.  Still, he
+&+gtakes his duties as a complex guard most seriously and tries to keep a keen
+&+geye on the grounds.
+~
+2120 0 0 0 33554432 0 0 0 100 S
+PH 0 1 0 -1
+23 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138246
+noble snow dragon clan~
+&+wa noble of the&n &+WSnow D&n&+Crago&n&+Wn&n &+CClan&n~
+&+wA noble in the&n &+WSnow D&n&+Crago&n&+Cn Clan&n &+cidly walks about the house complex.&n
+~
+This elegantly dressed young man wears clothing in the colors of Clan Snow
+Dragon.  A black beard and close-shaved black hair frame a youthful face.
+His ears jut out from his head, and his nose is sharp and pointed, giving
+him an awkward, gawky look.
+~
+2252 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
+32 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138247
+bushi warrior~
+&+ya bushi warrior&n~
+&+yA bushi warrior, hired by Clan Rat, keeps an eye on the grounds.&n
+~
+This aging warrior still looks spry and fit, despite his years.  Bushi are
+clanless warriors who make up the vast majority of the armies fielded
+by the Jade Empire.  Professional soldiers, the skills of most bushi
+are equivalent to move full blooded Clan soldiers.  Only the strict family
+and Clan structures of the Empire keep the non-affiliated warriors down.
+~
+2120 0 0 0 301989888 0 0 0 100 S
+PH 0 1 0 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138248
+royal guard dock man~
+&+ya&n &+GRoyal&n &+ydock guard&n~
+&+yA man stands near the gates dressed in the livery of a&n &+GRoyal Guard&n&+y.&n
+~
+A simple man dressed in simple armor and equipment, this dock guard may have
+had some military training in the past, but his slovenly appearance and
+lazy posture would be enough to get him severely disciplined in a "real"
+military unit in the Jade Army.  As a dock guard, however, the standards
+for quality obviously do not seem to apply.  The guard is human, male,
+and stands about five and a half feet tall.  He does stay awake at his post,
+which is probably the only redeeming thing one could say about him.
+~
+2122 0 0 0 301989888 0 0 0 100 S
+PH 0 1 0 -1
+39 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138249
+customs officer guard patrol man~
+&+ba &+Ccustoms&+b officer&n~
+&+bA &+Ccustoms&+b officer patrols the dock area, inspecting cargo ships.&n
+~
+&+bThis short, heavy-set man is dressed in the blue and white uniform of a
+&+GMitashi Customs Officer&n&+b, one of the people responsible for making sure
+&+bthat only legal items are brought into the capital of the Jade Empire.
+&+bThey also ensure that the appropriate taxes are paid on all goods brought
+&+bin or shipped out.
+~
+2122 0 0 0 16 0 0 0 100 S
+PH 0 16385 0 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138250
+man old older gentleman~
+&+Lan &+wold&+L man&n~
+&+LAn &+wolder&+L gentleman lies sleeping, trying to get some rest.&n
+~
+&+LWithered and ravaged by age, this old man looks to be thin and wiry, still
+&+Lmaintaining some of his strength due to decades of manual labor in the city.
+&+LHe's bald, and there are liver spots atop his head, looking like little
+&+Lconstellations of skin blemishes.
+~
+2122 0 0 0 0 0 0 0 700 S
+PH 0 16384 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+4 4 1
+#138251
+workman human male sleeping~
+&+La &+Csleeping &+Lworkman&n~
+&+LA &+Chuman &+wmale&+L, still dressed in his work clothes, lies sleeping.&n
+~
+&+LA strong man, muscled and toughened by difficult manual labor, this person
+&+Lstill wears his work clothing, simple affairs of rough cloth.  There's
+&+Lnothing fancy about the man or his manner of dress.  He's just a simple
+&+Lpeasant worker, the same type that form the backbone of many cities such
+&+Las Mitashi.
+~
+2122 0 0 0 0 0 0 0 700 S
+PH 0 0 0 -1
+38 0 0 1d1+1 1d1+1
+0.0.0.0 0
+4 4 1
+#138252
+woman sleeping older old~
+&+La &+Csleeping &+Lwoman&n~
+&+LAn &+wolder &+Lwoman, her face and body lined with wrinkles, &+Csleeps&+L peacefully.&n
+~
+&+LThis stout, older woman looks to be in her mid to late fourties, although
+&+Ltime certainly hasn't been kind to her.  Wrinkles line her face and arms,
+&+Lbut she still retains a simple, elegant beauty in her sleep.
+~
+2122 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
+33 0 0 1d1+1 1d1+1
+0.0.0.0 0
+4 4 2
+#138253
+girl woman young~
+&+La &+Cyoung&+L girl&n~
+&+LA &+Cyoung&+L woman sits on a chair and does some sewing on a garment.&n
+~
+&+LIntent on her sewing, this young girl doesn't even look up at your presence.
+&+LIt looks like she's doing some work on a set of cloth pants, small in size
+&+Land suitable for a young child.  She has deep black hair and exotic,
+&+Lalmond-shaped eyes.  She's thin and looks almost undernourished, but it
+&+Llooks like she'll develop into a beautiful young woman as she matures.
+~
+67110986 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+6 6 2
+#138254
+yakuza agent~
+&+La &+cy&+Wakuz&+ca&+L agent&n~
+&+LAn agent of the &+cy&+Wakuz&+ca&+L hurries about, trying to avoid the authorities.&n
+~
+&+cA tattoo on the back of his right hand blatantly proclaim this young man to
+&+cbe a member of one of the local yakuza organizations, one of the criminal
+&+ccartels who run the shady underworld of the city.  Hunted by the law, the
+&+cyakuza are criminals, but far from the "common" variety.  Just like the
+&+ckouhei swordmasters of the Empire, the yakuza place high importance on honor,
+&+calthough they have a different code than the warriors of the Empire.
+~
+1140852824 0 0 0 524304 0 0 0 100 S
+PH 0 16448 0 -1
+47 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138255
+young watchman youth watch~
+&+ca young watchman&n~
+&+cA youth of the&n &+BImperial Watch&n &+cpatrols the city streets.&n
+~
+&+BThis young man, probably in his late teens, walks about the town with a
+&+Bcocky arrogance provided by his uniform and authority.  Many of the
+&+Bnormal city watch have been recently conscripted into the military to
+&+Bdeal with the rebellion that has been brewing.
+~
+1140852936 0 0 0 33554432 0 0 0 300 S
+PH 0 1 0 -1
+33 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138256
+workman drinking worker man~
+&+wa drinking workman&n~
+&+wAn off-duty workman enjoys a drink in a quiet corner of the inn.&n
+~
+This man, approximately in his mid-thirties, tries to relax here after a
+hard shift at work.  Based on his dirty appearance, you'd guess that he's a
+miner or digger.  He wears clothing of heavy leathers, designed for
+durability instead of looks.
+~
+2122 0 0 0 33554432 0 0 0 200 S
+PH 0 1 0 -1
+26 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138257
+common man commoner~
+&+Ba commoner&n~
+&+BA common man of&n &+gMitashi&n &+Bdrinks at the bar.&n
+~
+&+y   This peasant stands about five feet in height, has a dark complexion and
+&+ydark eyes, and stoops over from years of backbreaking labor.  His hands
+&+yare calloused and there's a sense of weariness to him.  He looks to be
+&+yin his early fifties and his skin is starting to show signs of wrinkles
+&+ywhile gray has started appearing in his mostly black hair.
+~
+2186 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138258
+common man commoner~
+&+Ba commoner&n~
+&+BA common man of&n &+gMitashi&n &+Bsits on the porch and enjoys a small meal.&n
+~
+&+y   This peasant stands about five feet in height, has a dark complexion and
+&+ydark eyes, and stoops over from years of backbreaking labor.  His hands
+&+yare calloused and there's a sense of weariness to him.  He looks to be
+&+yin his early fifties and his skin is starting to show signs of wrinkles
+&+ywhile gray has started appearing in his mostly black hair.
+~
+2186 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138259
+lilari young noble woman~
+&+RLilari&n&+r, daughter of &+LLord Ka&n&+wwasa&+Lwa&n~
+&+rAn elegant young &+Rnoble woman&n&+r wanders the town daydreaming.&n
+~
+&+r   This young female appears to be no older than twenty years old. She
+&+rhas a delicate body frame, emphasized by her elegant manner of walking.
+&+rHer hair is twisted up into a bun, with thin ebony-wood hair sticks to
+&+rkeep it in place. Her skin is very fair and pale, as she does not often
+&+rleave the Clan estate of House Raven. Out for a moment of sanity, she
+&+rseems to wander about, daydreaming... oblivious to her surroundings.&n
+~
+34109512 0 0 0 8 2 0 0 -750 S
+PH 0 14 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138260
+bodyguard guard house clan raven~
+&+ra &+LClan R&n&+wav&+Len&n&+r bodyguard&n~
+&+rA bodyguard of &+LHouse R&n&+wav&+Len&n&+r escorts the Lord's daughter.&n
+~
+&+r   This bodyguard follows the Lord's daughter carefully, and while she is
+&+rhappily oblivious in her daydreams, he is nervously scanning the area to
+&+rensure her safety. He knows well that she should not leave the estate, and
+&+rshould anything happen to her, his honor and life would be held
+&+raccountable.&n
+~
+2120 0 0 0 369100864 0 0 0 -250 S
+PH 0 14 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138261
+ghost apparition spirit mad kunji pishida~
+&+Lthe mad spirit&n &+CKunji Pishida&n~
+&+LA &+wgh&+Wost&+wly&+L apparition shambles around the basement area.&n
+~
+&+L   This enraged spirit stalks the basement of this warehouse, confined by
+&+Lsome magical means to linger forever in the cold depths.  As it shambles
+&+Labout the room, it mutters to itself, almost imperceptibly.  Words such
+&+Las "sword", "torment", and "empress" can be made out, however.  It
+&+Lseems as if the strange ghostly figure is the cause for the temperature
+&+Lin the basement, since he eminates an intense cold.
+~
+686154 0 0 0 838934618 14528 2097152 0 -1000 S
+UG 0 512 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
