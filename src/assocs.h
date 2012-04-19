@@ -20,7 +20,7 @@
 #define MAX_ASC       999       /* maximal number of associations */
 #define MAX_ENEMIES   10        /* maximal number of non-member enemies */
 #define MIN_LEVEL     25        /* minimum level to join */
-#define MAX_DISPLAY   60        /* max number of shown people on soc list */
+#define MAX_DISPLAY   200       /* max number of shown people on soc list */
 
 /* note that the following is including ansi color chars, displayed
    strings are much shorter due to color */
