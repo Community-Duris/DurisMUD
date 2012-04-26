@@ -8,8 +8,8 @@ entry guard~
 &+Lof the &+cAlatorin &+Lcity guard.  This &+Ydwarf &+Lhas a long beard
 &+Land &+Rfire &+Lin his eyes.
 ~
-67110986 0 0 0 0 0 0 0 S
-pm 0 1 -1
+67110986 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -25,8 +25,8 @@ burly bouncer dwarf dwarvish~
 &+Lbeard, giving him a particularly striking presence besides
 &+Lthat from his build.
 ~
-67110922 0 0 0 0 0 0 -10 S
-pm 0 1 -1
+67110922 0 0 0 0 0 0 0 -10 S
+pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -40,8 +40,8 @@ stumbling drunk goblin~
 &+gdrunk goblin like this can manage when he realizes he is being looked
 &+gat.
 ~
-1073743944 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+1073743944 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ hungry dwarf~
 &+Lso close to the &+YGreat Forge&+L.  This &Ns&+Whiel&Nd &+Ldwarf has a
 &+Lstern eye and a strong fist, living in his beloved city &+cAlatorin&+L.
 ~
-2122 0 0 0 0 0 0 7 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 7 S
+pm 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -70,8 +70,8 @@ fat dwarf~
 &+Lso close to the &+YGreat Forge&+L.  This &Ns&+Whiel&Nd &+Ldwarf has a
 &+Lstern eye and a strong fist, living in his beloved city &+cAlatorin&+L.
 ~
-18506 0 0 0 0 0 0 7 S
-pm 0 1 -1
+18506 0 0 0 0 0 0 0 7 S
+pm 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -87,8 +87,8 @@ stonebrew cook~
 &+Rribs &+Wand simotaneously dicing up potatos and tossing them into
 &+Wa &+Lpot&+W.
 ~
-2126 0 0 256 0 0 0 0 S
-pm 0 1 -1
+2126 0 0 0 256 0 0 0 0 S
+pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -104,8 +104,8 @@ stonebrew bartender~
 &+WStone&+Ybrew &+yale&+W.  He wears a &+Lheavily-stained &+Wleather
 &+Wapron with finely-stitched cloth pants and a grin on his face.
 ~
-2122 0 0 0 0 0 0 0 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -119,8 +119,8 @@ patron dwarf~
 &+Lso close to the &+YGreat Forge&+L.  This &Ns&+Whiel&Nd &+Ldwarf has a
 &+Lstern eye and a strong fist, living in his beloved city &+cAlatorin&+L.
 ~
-2122 0 0 0 0 0 0 7 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 7 S
+pm 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -134,8 +134,8 @@ relaxing alatorin guard dwarf~
 &+Lso close to the &+YGreat Forge&+L.  This &Ns&+Whiel&Nd &+Ldwarf has a
 &+Lstern eye and a strong fist, living in his beloved city &+cAlatorin&+L.
 ~
-67110986 0 0 0 0 0 0 7 S
-pm 0 1 -1
+67110986 0 0 0 0 0 0 0 7 S
+pm 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -151,8 +151,8 @@ snow ogre~
 &+Wchosen gods by others, this particular snow &+bogre&+W lives up to
 &+Wthe reputation of utter brute physicality.
 ~
-1073743946 1 0 0 0 0 0 -1000 S
-so 0 1048576 -1
+1073743946 1 0 0 0 0 0 0 -1000 S
+so 0 1048576 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -166,8 +166,8 @@ exhausted sailor~
 &+Wweapons.  He has high-leather boots and a large-brimmed hat with a single
 &+Wfeather sticking out.
 ~
-2122 0 0 0 0 0 0 1000 S
-PH 0 16386 3
+2122 0 0 0 0 0 0 0 1000 S
+PH 0 16386 0 3
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -181,8 +181,8 @@ in search of rare and covetted ore.  A thick brown beard with reddish streaks,
 this young, able, and most of all determined dwarf readies himself for his next
 expedition.
 ~
-1140852808 0 0 0 0 0 0 20 S
-pm 5 1 -1
+1140852808 0 0 0 0 0 0 0 20 S
+pm 5 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 0
@@ -195,8 +195,8 @@ alatorin receptionist~
 &+Wa large grin on her face and an equally proportioned bossum.  Small wisps of
 &+Whair are seen on the chin of this pleasant old &+cAlatorin &+Wnative.
 ~
-2122 0 0 0 0 0 0 400 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 400 S
+pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 2
@@ -210,8 +210,8 @@ tough mercenary~
 &+Lso close to the &+YGreat Forge&+L.  This &Ns&+Whiel&Nd &+Ldwarf has a
 &+Lstern eye and a strong fist, living in his beloved city &+cAlatorin&+L.
 ~
-2122 0 0 0 0 0 0 -15 S
-pm 0 16384 -1
+2122 0 0 0 0 0 0 0 -15 S
+pm 0 16384 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -226,8 +226,8 @@ figure earthen robe emissary _spec4_~
 &+ymassive, dilated pupils stare across the mercenaries, looking for one
 &+ynoble enough to aid him.
 ~
-2122 0 128 0 0 0 0 1 S
-pg 0 2048 -1
+2122 0 128 0 0 0 0 0 1 S
+pg 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -242,8 +242,8 @@ man robed flaming emissary burning flames _spec3_~
 &+rmana-forge crystals of Astranar.  However, this emissary has come
 &+rto &+cAlatorin &+rseeking adventurers, not &+more.
 ~
-2154 0 128 536870912 1 0 0 1 S
-ef 0 2048 -1
+2154 0 128 0 536870912 1 0 0 1 S
+ef 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -257,8 +257,8 @@ slyph emissary _spec1_~
 &+Wfluctuating, fingers.  This whirlwind speaks with a deep, arcane voice, and
 &+Wseems to be in search of aid.
 ~
-2122 0 0 0 0 0 0 -20 S
-ea 0 2048 -1
+2122 0 0 0 0 0 0 0 -20 S
+ea 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -272,8 +272,8 @@ water dwarf _spec2_~
 &+Bfalling on death ears, this water dwarf sighs and continues.  He wears strange
 &+Bmagically-flowing garments.
 ~
-2122 0 0 0 0 0 0 40 S
-pd 0 2048 -1
+2122 0 0 0 0 0 0 0 40 S
+pd 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -288,8 +288,8 @@ can attempt to communicate best.  It has a sloped, featureless nose and
 round eyes.  A lipless, almost perfectly horizontal slit forms his mouth.
 Further inspection reveals this humanoid also bares only eight total fingers.
 ~
-2122 0 0 0 0 0 0 -50 S
-h 0 1 -1
+2122 0 0 0 0 0 0 0 -50 S
+h 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -302,8 +302,8 @@ ethereal walker man shrouded mists mist _spec2_~
 &+Linvisible robe that seems to be shrouded in misty darkness.  A faceless
 &+Lvoid acts as the face of this strange figure.
 ~
-18506 0 0 0 0 0 0 -400 S
-sh 0 4 3
+18506 0 0 0 0 0 0 0 -400 S
+sh 0 4 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -317,8 +317,8 @@ alatorin elite guard~
 &+Lof the &+cAlatorin &+Lcity guard.  This &+Ydwarf &+Lhas a long beard
 &+Land &+Rfire &+Lin his eyes.
 ~
-67110986 0 0 0 0 0 0 0 S
-pm 0 1 -1
+67110986 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -332,8 +332,8 @@ shield dwarf explorer~
 &+Lso close to the &+YGreat Forge&+L.  This &Ns&+Whiel&Nd &+Ldwarf has a
 &+Lstern eye and a strong fist, living in his beloved city &+cAlatorin&+L.
 ~
-1073743944 0 0 0 0 0 0 7 S
-pm 0 16384 -1
+1073743944 0 0 0 0 0 0 0 7 S
+pm 0 16384 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -347,8 +347,8 @@ strong explorer~
 &+Lso close to the &+YGreat Forge&+L.  This &Ns&+Whiel&Nd &+Ldwarf has a
 &+Lstern eye and a strong fist, living in his beloved city &+cAlatorin&+L.
 ~
-1073743944 0 0 16 0 0 0 7 S
-pm 0 16384 -1
+1073743944 0 0 0 16 0 0 0 7 S
+pm 0 16384 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -362,8 +362,8 @@ famished explorer shield dwarf~
 &+Lso close to the &+YGreat Forge&+L.  This &Ns&+Whiel&Nd &+Ldwarf has a
 &+Lstern eye and a strong fist, living in his beloved city &+cAlatorin&+L.
 ~
-2122 0 0 0 0 0 0 7 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 7 S
+pm 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -377,8 +377,8 @@ retired guard~
 &+Lvestment.  He has stern, piercing eyes and seems still have the watchful
 &+Wgaze&+L of the &+cAlatorin &+Lelite.
 ~
-67110986 0 0 0 0 0 0 40 S
-pm 0 1 -1
+67110986 0 0 0 0 0 0 0 40 S
+pm 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -398,8 +398,8 @@ rzayk githzerai planestraveler _spec1_~
 &+Lmaster of the &N&+bpsionic &+Larts, teaching the power of willing ones
 &+Lown &+Mmind&+L to those daring enough to learn it.
 ~
-2147518538 0 0 0 0 0 0 0 S
-gz 0 4 -1
+2147518538 0 0 0 0 0 0 0 0 S
+gz 0 4 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -418,8 +418,8 @@ brudo short stack macfuggens leader~
 &+GAdventurers, something on his mind.  Not surprising for the leader of the
 &+cAlatorin &+Gexplorers has a lot to think about.
 ~
-67110984 0 0 939524248 14528 262144 0 -100 S
-pm 0 81923 2
+67110984 0 0 0 939524248 14528 262144 0 -100 S
+pm 0 81923 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -433,8 +433,8 @@ greedy banker dwarf~
 &+Lcoins.  A sly grin and an unhesitant hand stand as the two most dominant
 &+Lcharacter features of this short, dark-skinned, sinister-seeming &+rduergar.
 ~
-2122 0 0 24 0 0 0 -777 S
-pd 0 1 -1
+2122 0 0 0 24 0 0 0 -777 S
+pd 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -448,8 +448,8 @@ battle-ready siege dwarf battle shield~
 &+Lhammer, and a set of towering shoulder plates covered in huge &+rrusty &+L
 &+Lspikes.
 ~
-67110984 0 0 24 0 0 0 -100 S
-pm 0 1 -1
+67110984 0 0 0 24 0 0 0 -100 S
+pm 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -463,8 +463,8 @@ battlerager shield dwarf rager~
 &+Lhammer, and a set of towering shoulder plates covered in huge &+rrusty &+L
 &+Lspikes.
 ~
-67110984 0 0 24 0 0 0 -100 S
-pm 0 1048576 -1
+67110984 0 0 0 24 0 0 0 -100 S
+pm 0 1048576 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -478,8 +478,8 @@ giraffe~
 &+Ygiraffe's feet look like they could inflict some heavy damage, if this
 &+Ybeast was so provoked.
 ~
-2120 0 0 0 0 0 0 -15 S
-a 0 1 5
+2120 0 0 0 0 0 0 0 -15 S
+a 0 1 0 5
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -495,8 +495,8 @@ sslitheran exiled drow~
 &+mseen about wanted posters across the city.  Nevertheless, he remains here within
 &+mthe city of Shield Dwarves, right where he is wanted.
 ~
-1073744010 0 0 1048600 0 0 0 -450 S
-pl 0 512 -1
+1073744010 0 0 0 1048600 0 0 0 -450 S
+pl 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -509,8 +509,8 @@ sneaky pixie~
 &+cfield does.  It sneaks through, lurking about, ready to ambush anything
 &+cthat comes too close.
 ~
-2248 1 0 1572872 0 0 0 -100 S
-hf 0 8192 2
+2248 1 0 0 1572872 0 0 0 -100 S
+hf 0 8192 0 2
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -523,8 +523,8 @@ savannah lion~
 &+LDark&+yPeak &+Wlion or even your &+yEagle Ridge &+Wlion.  Nevertheless,
 &+Wit is just as vicious, if not moreso, then its cousins.
 ~
-1073743944 1 0 0 0 0 0 69 S
-a 0 1 4
+1073743944 1 0 0 0 0 0 0 69 S
+a 0 1 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -537,8 +537,8 @@ prairie dog~
 &+yIt casually shakes the soil from its body and continues burrowing
 &+ythrough this savannah.
 ~
-8 0 0 0 0 0 0 0 S
-a 0 1 1
+8 0 0 0 0 0 0 0 0 S
+a 0 1 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -552,8 +552,8 @@ regal zebra~
 &+Lthen your average draft horse, or even &+ypack &+Lhorse, this four-
 &+Llegged savannah native is still quite strong, and very fast.
 ~
-134219912 0 0 24 0 0 0 0 S
-ae 0 1 -1
+134219912 0 0 0 24 0 0 0 0 S
+ae 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -567,8 +567,8 @@ intelligent talking lioness~
 &+Wpulled back from the tension and worry in this &+Ylioness' &+Wface,
 &+Wthis female savannah lion paces awkwardly around the oasis.
 ~
-2122 0 0 24 0 0 0 185 S
-a 0 1 3
+2122 0 0 0 24 0 0 0 185 S
+a 0 1 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -582,8 +582,8 @@ gnome merchant~
 &+Lmystic and mage of the &+cAlatorin &+Ldefenses, has long-since retired
 &+Land set up shop in the Mystic Ward he so frequently called home.
 ~
-2250 0 0 0 0 0 0 420 S
-pg 0 512 2
+2250 0 0 0 0 0 0 0 420 S
+pg 0 512 0 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -597,8 +597,8 @@ shield dwarf summoner _spec4_~
 &+Rgreat elementalists.  Judging by his garments and his magic, he
 &+Rseems more like the latter.
 ~
-2120 0 0 0 0 0 0 0 S
-pm 0 2048 -1
+2120 0 0 0 0 0 0 0 0 S
+pm 0 2048 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -611,8 +611,8 @@ young channeler~
 &+Wfocal point of intense magic.  His head bowed under his silk cloak,
 &+Wthis sage explores the depths of his young, yet powerful mind.
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 2304 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 2304 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -628,8 +628,8 @@ miboli snoblesniz deep gnome mage trainer sorcerer teacher _spec1_~
 &+Macross the room like his body has a mind of its own.  He flashes a
 &+Mquick grin and continues swirling about his tower, awaiting visitors.
 ~
-3221276746 0 0 0 0 0 0 0 S
-pg 0 512 -1
+3221276746 0 0 0 0 0 0 0 0 S
+pg 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -648,8 +648,8 @@ odeth hooded deep gnome _spec2_~
 &+Lblack robe and immersed in shadow, Od&+re&+Lth spends his endless
 &+Llife guarding this ancient dark secret of the Alatorin mystic ward.
 ~
-2147518538 0 0 0 0 0 0 0 S
-pg 0 4194304 -1
+2147518538 0 0 0 0 0 0 0 0 S
+pg 0 4194304 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -664,8 +664,8 @@ vicious shadow beast~
 &+Lbetween regular elementals and this shadow beast is the sheer ferocity
 &+Lat which this beast posesses.
 ~
-2122 0 0 0 0 0 536870912 0 S
-us 0 64 -1
+2122 0 0 0 0 0 0 536870912 0 S
+us 0 64 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -679,8 +679,8 @@ gate guard shanat citadel~
 &+Lbeard that is very characteristic of all dwarves hangs down the
 &+Lhard, determined face of this warrior shield dwarf.
 ~
-67110986 0 0 24 0 0 0 10 S
-pm 0 1 -1
+67110986 0 0 0 24 0 0 0 10 S
+pm 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -698,8 +698,8 @@ jedd burningbraids mountain dwarf channeler~
 &+Yshield dwarf natives of Alatorin, and he is treated with no less
 &+Yrespect then that of the brotherhood.
 ~
-34890 0 0 0 0 0 0 20 S
-pm 0 2304 -1
+34890 0 0 0 0 0 0 0 20 S
+pm 0 2304 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -712,8 +712,8 @@ young apprentice~
 &+Cthe city of Alatorin is known for its heat, it is ironic that many of the mages
 &+Ctherein are proficcient in ice and frost.
 ~
-2120 0 0 0 0 0 0 0 S
-pg 0 512 -1
+2120 0 0 0 0 0 0 0 0 S
+pg 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -727,8 +727,8 @@ horusite cosmomancer halfling _spec3_~
 &+Ytime as one of the great final survivoring descendants of Azura the halfling
 &+Ysorcereress master of Woodseer, but that was ages ago..
 ~
-3221243978 0 0 0 0 0 0 0 S
-pf 0 33554432 -1
+3221243978 0 0 0 0 0 0 0 0 S
+pf 0 33554432 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -745,8 +745,8 @@ sturb ironhead shield dwarf general~
 &+Wreached one of the highest positions of the &+cAlatorin &+Wassault
 &+Warmy.
 ~
-1140852810 0 0 402653336 6336 0 4194304 0 S
-pm 0 16385 -1
+1140852810 0 0 0 402653336 6336 0 4194304 0 S
+pm 0 16385 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -760,8 +760,8 @@ shield dwarf blacksmith~
 &+Lbronzed from the seering heat of the Forge.  He hammers away, his braide
 &+L-d beard tossling about as he heaves.
 ~
-2122 0 0 0 0 0 0 0 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -778,8 +778,8 @@ ragdagan miner merchant goblin~
 &+Lgood business.  This is exactly the case with &+RRagdagan&+L selling his
 &+Lwares deep within &+cAlatorin.
 ~
-2122 0 0 8 0 0 0 0 S
-hg 0 1 -1
+2122 0 0 0 8 0 0 0 0 S
+hg 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -795,8 +795,8 @@ dweefniggle gnome tinkerer~
 &+cstill bares the bouncy gnome jubilee that is come to expected around
 &+csuch an atmosphere, here within Dweefniggle's workshop.
 ~
-2120 0 0 939524120 14528 0 524288 0 S
-pg 0 512 -1
+2120 0 0 0 939524120 14528 0 524288 0 S
+pg 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -814,8 +814,8 @@ glab'grol goblin auctioneer~
 &+Lfearsome pirate responsible for many of the great contraband runs in
 &+Lthe first age of Duris.
 ~
-2122 0 0 0 0 0 0 0 S
-hg 0 16385 -1
+2122 0 0 0 0 0 0 0 0 S
+hg 0 16385 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -830,8 +830,8 @@ young common man commoner dwarf~
 &+Ldressed in common cloth and wool garments, standard for the
 &+Lcommon public of &+cAlatorin&+L.
 ~
-2122 0 0 0 0 0 0 0 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -843,8 +843,8 @@ greedy merchant~
    &+LThis cloaked figure, most likely an orc or a half-orc, stands here
 &+Lgreedily and impatiently awaiting the next auction.
 ~
-2122 0 0 0 0 0 0 -350 S
-h2 0 16384 -1
+2122 0 0 0 0 0 0 0 -350 S
+h2 0 16384 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -858,8 +858,8 @@ kranmoe strongwill~
 &+Yof his people that he came to Alatorin to carry on his passion of
 &+Yriding.  He has a fiery golden red beard and a will of stone.
 ~
-2122 0 0 0 0 0 0 0 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -873,8 +873,8 @@ silwynthel elven minstrel elf _spec3_~
 &+cof song.  She currently sits here on one of her &+Rrare&+c visits to
 &+RTaark Shanat&+c, petitioning the great Shield Dwarf king about something.
 ~
-2122 0 0 0 0 0 0 420 S
-pe 0 32768 -1
+2122 0 0 0 0 0 0 0 420 S
+pe 0 32768 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -888,8 +888,8 @@ sithrezyn drow minstrel~
 &+LShanat &+mhimself.  Sithrezyn has a wicked look on his face, which
 &+Lis nearly completely encased in darkness beneath his large hood.
 ~
-2122 0 0 0 0 0 0 -666 S
-pl 0 32768 -1
+2122 0 0 0 0 0 0 0 -666 S
+pl 0 32768 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -903,8 +903,8 @@ alatorin peacekeeper guard~
 &+Lof the &+cAlatorin &+Lcity guard.  This &+Ydwarf &+Lhas a long beard
 &+Land &+Rfire &+Lin his eyes.
 ~
-1140852810 0 0 0 0 0 0 0 S
-pm 0 1 -1
+1140852810 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -917,8 +917,8 @@ jig'jagrek jig goblin sage~
 &+Gtaken on a new life from war and instead acts as a diplomat, incredibl
 &+g-ly eager to speak with the king of the &Nsh&+Wie&Nld &+Ydwarves&+L.
 ~
-2122 0 0 0 0 0 0 -600 S
-hg 0 33554944 -1
+2122 0 0 0 0 0 0 0 -600 S
+hg 0 33554944 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -932,8 +932,8 @@ sir daxden knight winterhaven~
 &+Wplatemail well and stands proudly, representing Winterhaven in
 &+Wnegotiations with Taark Shanat.
 ~
-2122 0 0 0 0 0 0 0 S
-PH 0 8 -1
+2122 0 0 0 0 0 0 0 0 S
+PH 0 8 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -952,8 +952,8 @@ ditts stomard dwarven holyman dwarf _spec3_~
 &+YDwarf &+yburns stronger then ever.  &+YDitts Stomard &+yhas as much
 &+yhistory as the Hero of &+cAlatorin &+yhimself.
 ~
-2122 0 0 24 0 0 0 1000 S
-pm 0 32 -1
+2122 0 0 0 24 0 0 0 1000 S
+pm 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -967,8 +967,8 @@ osemius cloud giant~
 &+WMassive arms and tree-trunk-like legs.  A deep, raspy voice speaks
 &+Wthe thoughts of this imposing tennant of King Straat.
 ~
-2122 0 0 0 0 0 0 0 S
-g 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+g 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -984,8 +984,8 @@ babdrabble gnome water magus _spec2_~
 &+Bgeyser of water thrusts and gushes around this gnome, carrying him to
 &+Banywhere he desires.
 ~
-2122 0 0 0 0 0 0 500 S
-pg 0 2048 -1
+2122 0 0 0 0 0 0 0 500 S
+pg 0 2048 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -999,8 +999,8 @@ crysanthilis noble shaledrieth high elven~
 &+Calmost.  Eagerly awaiting his meeting with the king, this almost
 &+Cpompous-seeming high elf raises his eyebrow and continues pacing.
 ~
-2122 0 0 0 0 0 0 500 S
-pe 0 2 -1
+2122 0 0 0 0 0 0 0 500 S
+pe 0 2 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1013,8 +1013,8 @@ brightaxe soldier shield dwarf~
 &+Lendlessly-huge walls of &+cAlatorin&+L.  Much like the other soldiers
 &+Lwithin &+CBrightAxe &+Lhall, this warrior is a full-blooded &Nsh&+Wie&Nld &+Ydwarf&+L.
 ~
-67110984 0 0 24 0 0 0 40 S
-pm 0 1 -1
+67110984 0 0 0 24 0 0 0 40 S
+pm 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1027,8 +1027,8 @@ brightaxe soldier shield dwarf surly~
 &+Lendlessly-huge walls of &+cAlatorin&+L.  Much like the other soldiers
 &+Lwithin &+CBrightAxe &+Lhall, this warrior is a full-blooded &Nsh&+Wie&Nld &+Ydwarf&+L.
 ~
-67110984 0 0 24 0 0 0 40 S
-pm 0 1 -1
+67110984 0 0 0 24 0 0 0 40 S
+pm 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1041,8 +1041,8 @@ lieutenant shield dwarf~
 &+Lendlessly-huge walls of &+cAlatorin&+L.  Much like the other soldiers
 &+Lwithin &+CBrightAxe &+Lhall, this warrior is a full-blooded &Nsh&+Wie&Nld &+Ydwarf&+L.
 ~
-67110984 0 0 24 0 0 0 40 S
-pm 0 65 -1
+67110984 0 0 0 24 0 0 0 40 S
+pm 0 65 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1055,8 +1055,8 @@ hungry brightaxe soldier shield dwarf~
 &+Lendlessly-huge walls of &+cAlatorin&+L.  Much like the other soldiers
 &+Lwithin &+CBrightAxe &+Lhall, this warrior is a full-blooded &Nsh&+Wie&Nld &+Ydwarf&+L.
 ~
-2122 0 0 24 0 0 0 40 S
-pm 0 1 -1
+2122 0 0 0 24 0 0 0 40 S
+pm 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1070,8 +1070,8 @@ brightaxe cook shield dwarf~
 &+Wdwarf is quite strong as well.  A bushy white beard and moustache sit across
 &+Wa massive belly.  Two muscular arms reach out from an otherwise massive trunk.
 ~
-2122 0 0 0 0 0 0 4 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 4 S
+pm 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1086,8 +1086,8 @@ bernie bramhost dwarf bartender~
 &+ysparkling eyes sit around a round, fleshy nose.  Bernie Bramhost works here
 &+yin the Beer Bar, loving every second of it.
 ~
-2122 0 0 0 0 0 0 18 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 18 S
+pm 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1101,8 +1101,8 @@ gru'dank half orc hunter gru dank~
 &+Lthe notorious &+ghunter &+Lcurrently has made his way into &+cAlatorin&+L,
 &+Lanswering the call of the &+Wfrothy &+ydelight&+L.
 ~
-1073743946 0 0 24 0 0 0 -800 S
-h2 0 2105344 -1
+1073743946 0 0 0 24 0 0 0 -800 S
+h2 0 2105344 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1115,8 +1115,8 @@ brewer dwarf~
 &+Linner workings of Barlow Brewstash's Brewery.  He is a strong, honorable-
 &+Llooking &+ydwarf &+Lwith thick arms and a thicker beard.
 ~
-1140852936 0 0 16 0 0 0 0 S
-pm 0 524289 -1
+1140852936 0 0 0 16 0 0 0 0 S
+pm 0 524289 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1129,8 +1129,8 @@ seasoned brewer~
 &+Linner workings of Barlow Brewstash's Brewery.  He is a strong, honorable-
 &+Llooking &+ydwarf &+Lwith thick arms and a thicker beard.
 ~
-1140852936 0 0 16 0 0 0 0 S
-pm 0 524289 -1
+1140852936 0 0 0 16 0 0 0 0 S
+pm 0 524289 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1147,8 +1147,8 @@ barlow brewstash dwarf brewmaster~
 &+yof compassion.  Barlow Brewstash brews some of the finest ale known
 &+yto all dwarves, here in Alatorin.
 ~
-1073744074 0 0 24 0 262144 0 0 S
-pm 0 69633 -1
+1073744074 0 0 0 24 0 262144 0 0 S
+pm 0 69633 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1163,8 +1163,8 @@ birch scruden exalted duergar battleraged~
 &+rthen his ruthless Duergar brothers.  Nevertheless, the reputation of
 &+rthis fierce Duergar battlerager precedes him.
 ~
-1140852810 0 0 24 0 0 0 -400 S
-pd 0 1 -1
+1140852810 0 0 0 24 0 0 0 -400 S
+pd 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1177,8 +1177,8 @@ commander siege army~
 rank of commander in the &+rsiege &+Yarmy&N.  He has piercing blue eyes and
 walks with a determined stride.
 ~
-1140852808 0 0 24 0 0 0 0 S
-pm 0 33 -1
+1140852808 0 0 0 24 0 0 0 0 S
+pm 0 33 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1199,8 +1199,8 @@ taark shanat king alatorin~
 &+WRringlor Noroth, the ancient blue wyrm that used to inhabit this
 &+Wunderworld, and terrorize the &Nsh&+Wie&Nld &+Ydwarves&+W..
 ~
-1090541834 0 0 956407960 2240 262272 38286336 420 S
-pm 0 69206019 -1
+1090541834 0 0 0 956407960 2240 262272 38286336 420 S
+pm 0 69206019 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1213,8 +1213,8 @@ tiny gnome summoner~
 to poke out of.  Beneath the shade of his cloak reveals a huge grin going
 from ear to ear on this peculiar looking gnome.
 ~
-1073744074 0 0 0 0 0 0 0 S
-pg 0 512 1
+1073744074 0 0 0 0 0 0 0 0 S
+pg 0 512 0 1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1230,8 +1230,8 @@ grendar womhstal brightaxe sergeant dwarf~
 &+BBlue &+ceyes &+cwatch his eager dwarven recruits gather in
 &+cthe halls, sharing in their plunder with great celebrations.
 ~
-1140852808 0 0 24 0 0 0 20 S
-pm 0 25 -1
+1140852808 0 0 0 24 0 0 0 20 S
+pm 0 25 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1243,8 +1243,8 @@ flesh golem~
    &+mThis massive, disgusting blob of fleshy arms and boney appendages
 &+mhulks here, animated to help guard this area.
 ~
-67110986 0 0 24 0 0 0 -200 S
-og 0 1 5
+67110986 0 0 0 24 0 0 0 -200 S
+og 0 1 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1260,8 +1260,8 @@ sharsta shadowmage mage _spec3_~
 &+Ltall and an average build.  His body moves in and out of existence with the
 &+Ldarkness in the surrounding area.
 ~
-34890 0 0 0 0 0 0 -30 S
-PH 0 512 -1
+34890 0 0 0 0 0 0 0 -30 S
+PH 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1276,8 +1276,8 @@ muntz bloodpore shield dwarf~
 &+yin slabs of heavy muscle.  He has taken to the life of shopkeeper in his
 &+yold age.
 ~
-2122 0 0 24 0 0 0 69 S
-pm 0 1 -1
+2122 0 0 0 24 0 0 0 69 S
+pm 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1292,8 +1292,8 @@ shadowmage mage gnome _spec3_~
 &+Lbulbous nose and rosey cheeks.  However, most of the time his cute little
 &+Lface is shrouded in darkness.
 ~
-1073744072 0 0 0 0 0 0 0 S
-pg 0 512 -1
+1073744072 0 0 0 0 0 0 0 0 S
+pg 0 512 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1307,8 +1307,8 @@ goblin wildmage mage _spec1_~
 &+Lwho look him in the eye.  This &+ggoblin&+L, although hated by most
 &+Ldwarves, is one of the few who have made their way into &+cAlatorin&+L.
 ~
-1342179528 0 0 0 0 0 0 -400 S
-hg 0 512 -1
+1342179528 0 0 0 0 0 0 0 -400 S
+hg 0 512 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1321,8 +1321,8 @@ hooded shield dwarf merchant~
 &+Lin this hidden cave.  He wears a long robe with a huge hood that
 &+Lcovers his head and casts a huge shadow across his face and chest.
 ~
-2122 0 0 24 0 0 0 -1 S
-pm 0 4 -1
+2122 0 0 0 24 0 0 0 -1 S
+pm 0 4 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1336,8 +1336,8 @@ mishanen centaur herbalist _spec1_~
 &+Lhas taken her attention to the court of &+CBrightAxe&+L, seeking the
 &+Lcouncil of the shield dwarves.
 ~
-2250 0 0 24 0 0 0 0 S
-ct 0 128 -1
+2250 0 0 0 24 0 0 0 0 S
+ct 0 128 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1352,8 +1352,8 @@ grem hooded prophecizer~
 &+mshorter and more duergar-sized.  He has glowing red eyes that shine
 &+mfrom the darkness deep under his long, ominous hood.
 ~
-2250 0 0 24 0 0 0 -200 S
-pd 0 36 -1
+2250 0 0 0 24 0 0 0 -200 S
+pd 0 36 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1370,8 +1370,8 @@ steelgrip shield dwarf armourer~
 &+Lthe perfect combination and volume of ores to make the smoothest, hardest
 &+Lmetals.
 ~
-2122 0 0 24 0 0 0 0 S
-pm 0 1 -1
+2122 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1384,8 +1384,8 @@ merchant~
 &+Lbeard.  This promising youngster is most likely in relation to
 &+Lthe owner of such a &+Cprestigous &+Lshop, working the counter.
 ~
-2250 0 0 24 0 0 0 0 S
-pm 0 1 -1
+2250 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1400,8 +1400,8 @@ maggeynel tuufnigal gnome enchantress~
 &+Weyes &+Ythat are shiny &N&+ybrown&+Y.  She has full, pouting &+Rred &+Ylips
 &+Yand a round, gnomish face.
 ~
-1073744074 0 0 24 0 0 0 200 S
-pg 0 2560 -1
+1073744074 0 0 0 24 0 0 0 200 S
+pg 0 2560 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1414,8 +1414,8 @@ walking wooden stool~
 &+yunder a magical reality-bending power.  It almost prances in its
 &+yfaster pace, clattering along as it maneuvers across the floor.
 ~
-2250 0 0 0 0 0 0 0 S
-ee 0 1 -1
+2250 0 0 0 0 0 0 0 0 S
+ee 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1427,8 +1427,8 @@ broom sweeping own~
    &+yThis magical broom swings back and forth, sweeping this chamber
 &+yon its own, endlessly!
 ~
-2250 0 0 0 0 0 0 0 S
-ee 0 1 -1
+2250 0 0 0 0 0 0 0 0 S
+ee 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1440,8 +1440,8 @@ galloping arm chair~
    &+WThis piece of furniture currently bends and twists with a magical
 &+Winfluence, galloping and leaping about the chamber like an animal.
 ~
-2250 0 0 0 128 0 0 0 S
-ee 0 0 -1
+2250 0 0 0 0 128 0 0 0 S
+ee 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1456,8 +1456,8 @@ chuival wind magus mountain dwarf _spec1_~
 &+Cand is often seen meditating in a state of total spiritual emergence
 &+Lhere within his chamber in the &N&+mMy&+Mstic Wa&N&+mrd&+L.
 ~
-34890 0 0 24 0 0 0 0 S
-pm 0 2048 -1
+34890 0 0 0 24 0 0 0 0 S
+pm 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -1471,8 +1471,8 @@ dunobious wave magus _spec2_~
 &+BConjuress.  Dunobious is a short halfling with a large bushy moustache
 &+Band bushy eyebrows.  He floats on a wave of bubbling water.
 ~
-35018 0 0 0 0 0 0 0 S
-pf 0 2048 -1
+35018 0 0 0 0 0 0 0 0 S
+pf 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1486,8 +1486,8 @@ kethren pyro magus _spec3_~
 &+Rof flame.  This fiery-eyed gnome Fire Magus has trained in the Mystic
 &+WWard of Alatorin since its creation.
 ~
-35018 0 0 0 0 0 0 0 S
-pg 0 2048 -1
+35018 0 0 0 0 0 0 0 0 S
+pg 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1501,8 +1501,8 @@ dehbel rock magus halfling _spec4_~
 &+ytail and wears an earth-brown robe.  On either wrist is a simple, bent
 &+ycopper bracelet.
 ~
-35018 0 0 0 0 0 0 0 S
-pf 0 2048 -1
+35018 0 0 0 0 0 0 0 0 S
+pf 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1516,8 +1516,8 @@ gradden dwarf bounty hunter _spec2_~
 &+Yhair, tostled across his back and chest.  He has huge muscles and
 &+Ypowerful blue eyes..
 ~
-3221227722 0 0 0 0 0 0 0 S
-pm 0 16384 -1
+3221227722 0 0 0 0 0 0 0 0 S
+pm 0 16384 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1530,8 +1530,8 @@ young impressionable guard~
 one would expect of their stereotypical &+WHammer&+Yhelm &Nshield dwarf,
 but nevertheless he wears their colors and guards their barracks.
 ~
-2250 0 0 24 0 0 0 -300 S
-pf 0 65536 -1
+2250 0 0 0 24 0 0 0 -300 S
+pf 0 65536 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1552,8 +1552,8 @@ hammerhelm soldier shield dwarf recruit young~
 &+Lthen promoted to the &+CBright&N&+cAxe &+Larmy, the personal troops of the
 &+LKing and savior of the &N&+cAlatorin &+Lshield dwarves himself.
 ~
-1073743944 0 0 24 0 0 0 0 S
-pm 0 1 -1
+1073743944 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1574,8 +1574,8 @@ tired soldier hammerhelm~
 &+Lthen promoted to the &+CBright&N&+cAxe &+Larmy, the personal troops of the
 &+LKing and savior of the &N&+cAlatorin &+Lshield dwarves himself.
 ~
-67110986 0 0 24 0 0 0 0 S
-pm 0 1 -1
+67110986 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1596,8 +1596,8 @@ exhausted soldier~
 &+Lthen promoted to the &+CBright&N&+cAxe &+Larmy, the personal troops of the
 &+LKing and savior of the &N&+cAlatorin &+Lshield dwarves himself.
 ~
-67110986 0 0 24 0 0 0 0 S
-pm 0 1 -1
+67110986 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -1618,8 +1618,8 @@ burly shield dwarf~
 &+Lthen promoted to the &+CBright&N&+cAxe &+Larmy, the personal troops of the
 &+LKing and savior of the &N&+cAlatorin &+Lshield dwarves himself.
 ~
-1140852810 0 0 24 0 0 0 0 S
-pm 0 1 -1
+1140852810 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1634,8 +1634,8 @@ chained troll slave~
 &+gby a long &+Cchain &N&+gthat connects the troll's steel collar to a metal
 &+gnub fastened to the ground.
 ~
-2122 1 0 536871056 14528 128 0 -1000 S
-pt 0 1 -1
+2122 1 0 0 536871056 14528 128 0 -1000 S
+pt 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1656,8 +1656,8 @@ young soldier training~
 &+Lthen promoted to the &+CBright&N&+cAxe &+Larmy, the personal troops of the
 &+LKing and savior of the &N&+cAlatorin &+Lshield dwarves himself.
 ~
-1140852810 0 0 24 0 0 0 0 S
-pm 0 1 -1
+1140852810 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1674,8 +1674,8 @@ clund hammerhelm shield dwarf _spec1_~
 &+Wmaster of the Hammer&+Yhelm &+Warmy, and oversees the grand production
 &+Wof troops in the entire &N&+cAlatorin &+Warmy from a very young age.
 ~
-1157650888 0 0 402653336 47296 1074004096 4722944 1000 S
-pm 0 67108897 -1
+1157650888 0 0 0 402653336 47296 1074004096 4722944 1000 S
+pm 0 67108897 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1696,8 +1696,8 @@ elite hammerhelm soldier shield dwarf~
 &+Lthen promoted to the &+CBright&N&+cAxe &+Larmy, the personal troops of the
 &+LKing and savior of the &N&+cAlatorin &+Lshield dwarves himself.
 ~
-67110986 0 0 24 0 0 0 0 S
-pm 0 1 -1
+67110986 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1712,8 +1712,8 @@ hammerhelm cook shield dwarf~
 &+Wface as he hurridly chops vegetables, mixes spices, and tenderizes
 &+Wmeat.
 ~
-2250 0 0 24 0 0 0 0 S
-pm 0 1 -1
+2250 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1734,8 +1734,8 @@ hungry hammerhelm shield dwarf soldier~
 &+Lthen promoted to the &+CBright&N&+cAxe &+Larmy, the personal troops of the
 &+LKing and savior of the &N&+cAlatorin &+Lshield dwarves himself.
 ~
-1073743946 0 0 24 0 0 0 0 S
-pm 0 1 -1
+1073743946 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1756,8 +1756,8 @@ hammerhelm weaponsmaster shield dwarf weapons master~
 &+Lthen promoted to the &+CBright&N&+cAxe &+Larmy, the personal troops of the
 &+LKing and savior of the &N&+cAlatorin &+Lshield dwarves himself.
 ~
-1073743946 0 0 24 0 0 0 0 S
-pm 0 1 -1
+1073743946 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1772,8 +1772,8 @@ holyman mountain dwarf _spec3_~
 &+Wpool that sits in the shadow of the statue of Breuldin, Mountain Dwarf
 &+WGod.
 ~
-1073744074 0 0 24 0 0 0 1000 S
-pm 0 32 -1
+1073744074 0 0 0 24 0 0 0 1000 S
+pm 0 32 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1794,8 +1794,8 @@ shield dwarf drill sergeant hammerhelm~
 &+Lthen promoted to the &+CBright&N&+cAxe &+Larmy, the personal troops of the
 &+LKing and savior of the &N&+cAlatorin &+Lshield dwarves himself.
 ~
-1140852808 0 0 24 0 0 0 0 S
-pm 0 1 -1
+1140852808 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1816,8 +1816,8 @@ hammerhelm shield dwarf soldier~
 &+Lthen promoted to the &+CBright&N&+cAxe &+Larmy, the personal troops of the
 &+LKing and savior of the &N&+cAlatorin &+Lshield dwarves himself.
 ~
-1140852808 0 0 24 0 0 0 0 S
-pm 0 1 -1
+1140852808 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1830,8 +1830,8 @@ faerie sprite~
 &+Mbeating wildly.  This faerie appears to be female, with a small blonde
 &+Mponytail hanging from its tiny head.
 ~
-1073744074 0 0 939524096 0 524416 0 420 S
-hf 0 512 1
+1073744074 0 0 0 939524096 0 524416 0 420 S
+hf 0 512 0 1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1845,8 +1845,8 @@ gnome gnomish master craftsman emissary~
 &+yof all types, this emissary of Woodseer is a well-put together
 &+yhalfling with a glimmer of brilliance in his eyes.
 ~
-1073744074 0 0 152 0 0 0 420 S
-pg 0 524289 -1
+1073744074 0 0 0 152 0 0 0 420 S
+pg 0 524289 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1861,8 +1861,8 @@ gordo clamheart halfling sea captain~
 &+WCanderthal Harbor&+Y, has become a world-renowned sailor, favoring the
 &+Ydelicacies of the land at every port he visits.
 ~
-1073744074 0 0 24 0 0 0 60 S
-pf 0 768 -1
+1073744074 0 0 0 24 0 0 0 60 S
+pf 0 768 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1874,8 +1874,8 @@ rugged mercenary~
    &+LThis rugged human is a mercenary who has travelled quite far
 &+Lin giving his service.  Strong arms extend from a sturdy trunk.
 ~
-1073744074 0 0 24 0 0 0 -400 S
-PH 0 16384 -1
+1073744074 0 0 0 24 0 0 0 -400 S
+PH 0 16384 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1890,8 +1890,8 @@ chromium dragon~
 &+Lblue colors.  This greater, &+Yholy &+Ldragon stands here in great awe and
 &+Ladmiration and has vowed its service to the &n&+gWyrm&+Wslayer&N.
 ~
-1073744842 0 0 0 0 0 33554432 0 S
-d 0 514 -1
+1073744842 0 0 0 0 0 0 33554432 0 S
+d 0 514 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1905,8 +1905,8 @@ citadel summoner _spec4_~
 &+Lwools, this dwarf master summoner feverishly tries to purge all those
 &+Lthat do not belong in this sacred, highly-coveted and lored place.
 ~
-1073744072 1 0 0 0 0 0 0 S
-pg 0 2048 1
+1073744072 1 0 0 0 0 0 0 0 S
+pg 0 2048 0 1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1919,8 +1919,8 @@ mother shield dwarf common~
 &+LShe is middle-aged and has is of average dwarven size.  A round, jolly belly
 &+Lsits beneath two huge breasts, all dressed in a large cloth apron.
 ~
-1073744072 0 0 0 0 0 0 300 S
-pm 0 1 -1
+1073744072 0 0 0 0 0 0 0 300 S
+pm 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1933,8 +1933,8 @@ young native dwarf~
 &+yjoin the Hammerhelm army.  He has a strong body and a chiseled jaw with
 &+ya fine crop of beard growing.
 ~
-1073744072 0 0 0 0 0 0 350 S
-pm 0 1 -1
+1073744072 0 0 0 0 0 0 0 350 S
+pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1949,8 +1949,8 @@ common man shield dwarf~
 &+Ldressed in common cloth and wool garments, standard for the
 &+Lcommon public of &+cAlatorin&+L.
 ~
-2120 0 0 0 0 0 0 0 S
-pm 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1965,8 +1965,8 @@ dwarven child dwarf~
 &+Ldressed in common cloth and wool garments, standard for the
 &+Lcommon public of &+cAlatorin&+L.
 ~
-1073743944 0 0 0 0 0 0 0 S
-pm 0 1 -1
+1073743944 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1981,8 +1981,8 @@ common man shield dwarf~
 &+Ldressed in common cloth and wool garments, standard for the
 &+Lcommon public of &+cAlatorin&+L.
 ~
-2120 0 0 0 0 0 0 0 S
-pm 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1997,8 +1997,8 @@ sleepy dwarf~
 &+Ldressed in common cloth and wool garments, standard for the
 &+Lcommon public of &+cAlatorin&+L.
 ~
-2250 0 0 0 0 0 0 0 S
-pm 0 1 -1
+2250 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -2011,8 +2011,8 @@ dwarven woman dwarf~
 &+LShe is middle-aged and has is of average dwarven size.  A round, jolly belly
 &+Lsits beneath two huge breasts, all dressed in a large cloth apron.
 ~
-1073744072 0 0 0 0 0 0 300 S
-pm 0 1 -1
+1073744072 0 0 0 0 0 0 0 300 S
+pm 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2026,8 +2026,8 @@ elderly disciple dumathoin dwarf~
 &+Wgolden spectacles, meeting the eyes of all those who visit his temple with
 &+Wan opportunistic eagerness.
 ~
-2250 0 0 24 0 0 0 1000 S
-pm 0 96 -1
+2250 0 0 0 24 0 0 0 1000 S
+pm 0 96 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2044,8 +2044,8 @@ farbash dwarven inquisitor dwarf mountain~
 &+Yfor young shield dwarven cousins, Fargan has taken into the life of treating
 &+Ythe battle arts, rather then continuing the legacy of undead slayer.
 ~
-3288369354 0 0 24 0 262144 0 1000 S
-pm 0 67108864 -1
+3288369354 0 0 0 24 0 262144 0 1000 S
+pm 0 67108864 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2058,8 +2058,8 @@ aspiring paladin~
 &+Wrealm, seeking the aid of the Mountain Dwarf, who actually hails from closer
 &+Wto the human, Farbash for his incredible teachings.
 ~
-1140852938 0 0 0 0 0 0 1000 S
-PH 0 8 -1
+1140852938 0 0 0 0 0 0 0 1000 S
+PH 0 8 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2077,8 +2077,8 @@ in and has been fighting for his entire life.  Now becoming an old man, this onc
 guardian of the city is now teaching those the skills by which he swore his very
 life to.
 ~
-2214627530 0 0 268435600 2048 0 0 450 S
-pm 0 1 -1
+2214627530 0 0 0 268435600 2048 0 0 450 S
+pm 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2091,8 +2091,8 @@ shield dwarf warrior~
 &+Loutside of the &N&+rmilitary&+L, this averaged-sized young man practices combat
 &+Ltechniques.
 ~
-1073744074 0 0 24 0 0 0 20 S
-pm 0 1 -1
+1073744074 0 0 0 24 0 0 0 20 S
+pm 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2107,8 +2107,8 @@ barbarian~
 &+Yas intelligent as the dwarves surrounding him, this barbarian grasps battle
 &+Yconcept very well.
 ~
-1073744074 0 0 24 0 0 0 0 S
-pb 0 1 -1
+1073744074 0 0 0 24 0 0 0 0 S
+pb 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2122,8 +2122,8 @@ minotaur~
 &+Lmino&N&+rtaur&+L is dressed in hide and leather garments and looks quite
 &+Linexperienced in combat, yet presses on to learn the ways of the &N&+yguardian&+L.
 ~
-1073744106 0 0 0 0 0 0 0 S
-mt 0 1 -1
+1073744106 0 0 0 0 0 0 0 0 S
+mt 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2139,8 +2139,8 @@ nadaven wild elf elven swordsman _spec1_~
 &+Gof the &N&+cAlatorin&+G people and the great many travelers that make their
 &+Gway through these walls.
 ~
-1073776842 0 0 402653336 0 0 0 0 S
-pe 0 1 -1
+1073776842 0 0 0 402653336 0 0 0 0 S
+pe 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2154,8 +2154,8 @@ young fighter~
 shield style of the Alatorin people.  Nevertheless, this elaborate weapon
 training may proove deadly if this young shield dwarf can master it.
 ~
-1073743946 0 0 0 0 0 0 0 S
-pm 0 1 -1
+1073743946 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2170,8 +2170,8 @@ personal advisor dwarf lean~
 &+Wposition of great honour as personal advisor to Clund Hammerhelm, lord and
 &+Wcommander of the young, able Hammer&+Yhelm &+Warmy.
 ~
-1073744072 0 0 134217884 2065 0 0 0 S
-pd 0 512 2
+1073744072 0 0 0 134217884 2065 0 0 0 S
+pd 0 512 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2186,8 +2186,8 @@ k'tharz githzerai elaphidist monk _spec2_~
 &+Cblack hair, pulled back behind a snug-fitting black hood that cascades
 &+Cdown into a &+Lblack cape &+Caround his back.
 ~
-35018 0 0 24 0 0 0 0 S
-gz 0 64 -1
+35018 0 0 0 24 0 0 0 0 S
+gz 0 64 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2203,8 +2203,8 @@ brother manedius human monk _spec1_~
 &+rroughly six feet tall with an able, muscular build.  He moves with
 &+rswift grace and strikes with the deadly fists of the &+Rd&N&+rragon.
 ~
-35018 0 0 24 0 0 0 0 S
-PH 0 64 -1
+35018 0 0 0 24 0 0 0 0 S
+PH 0 64 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2219,8 +2219,8 @@ blazing avatar breuldin~
 &+Was a mortal resemblance of Breuldin, manifested by the great holy might
 &+Wof this holy sanctum.
 ~
-1091569866 0 0 152 14528 524288 37880832 1000 S
-ug 0 32 -1
+1091569866 0 0 0 152 14528 524288 37880832 1000 S
+ug 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2234,8 +2234,8 @@ guild cook shield dwarf~
 &+Wdwarf is quite strong as well.  A bushy white beard and moustache sit across
 &+Wa massive belly.  Two muscular arms reach out from an otherwise massive trunk.
 ~
-2122 0 0 8 0 0 0 4 S
-pm 0 1 -1
+2122 0 0 0 8 0 0 0 4 S
+pm 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2251,8 +2251,8 @@ attendant worried shield dwarf~
    &NThis attendant, the personal and private assistant of the King, is
 &+Wcurrently pacing about, looking quite worried.
 ~
-2250 0 0 24 0 0 0 444 S
-pm 0 1 -1
+2250 0 0 0 24 0 0 0 444 S
+pm 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2267,8 +2267,8 @@ disgruntled incoherent goblin drunk~
 &+Lbeer and &+Wsaliva&+L.  This &n&+ggoblin &+Lrecently drank an awful lot, and is now
 &+Lexhibiting the effects of the powerful &+Ydwarven &+Lbrew.
 ~
-2250 0 0 24 0 0 0 -420 S
-hg 0 1 -1
+2250 0 0 0 24 0 0 0 -420 S
+hg 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1
@@ -2282,8 +2282,8 @@ fergulton gnome inventor~
 &+Cwithin &N&+cShanat Citadel&+C.  &+RFergulton &+Chas a very defining moustache, twisted
 &+Cat both ends.  Piercing &+Bblue &+Ceyes stare forth with a very special gleam.
 ~
-268462282 0 0 268435608 0 524288 38273024 100 S
-pg 8 524288 -1
+268462282 0 0 0 268435608 0 524288 38273024 100 S
+pg 8 524288 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2297,8 +2297,8 @@ strong noble minotaur diplomat~
 &+Lpolished horns, each with small &+Crings &+Lon them.  He has a long, braided mane and
 &+Ldeep-set &N&+bazure &+Leyes.
 ~
-2250 1 0 152 0 0 0 0 S
-mt 14 1 -1
+2250 1 0 0 152 0 0 0 0 S
+mt 14 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2313,8 +2313,8 @@ mystic gardener shield dwarf~
 &+Ymystic was rumored to have played a great part in King Shanat's decision to remain
 &+Yin Alatorin after the initial defeat of Rringlor.
 ~
-2250 0 0 134217728 0 0 0 400 S
-pm 0 4 -1
+2250 0 0 0 134217728 0 0 0 400 S
+pm 0 4 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2328,8 +2328,8 @@ royal guard bodyguard body~
 &+Lof the &+RTaark &N&+cShanat &+Lhimself.  Standing ready and poised for combat all
 &+Ltime, this noble warrior lives to die for the &N&+cShanat&+L family.
 ~
-1140852936 1 0 0 0 0 0 0 S
-pm 0 16385 -1
+1140852936 1 0 0 0 0 0 0 0 S
+pm 0 16385 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2343,8 +2343,8 @@ shanat royal guard shield dwarf _spec3_~
 &+LHe has a thick, proud beard and piercing eyes.  Instated to protect the
 &+Lpersonal hall of &N&+cShanat&+L and the dwelling of the king.
 ~
-67111112 1 0 152 0 0 0 0 S
-pm 0 2097152 -1
+67111112 1 0 0 152 0 0 0 0 S
+pm 0 2097152 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2358,8 +2358,8 @@ captain guard shanat _spec3_~
 &+LHe has a thick, proud beard and piercing eyes.  Instated to protect the
 &+Lpersonal hall of &N&+cShanat&+L and the dwelling of the king.
 ~
-67111112 1 0 152 0 0 0 0 S
-pm 0 2097216 -1
+67111112 1 0 0 152 0 0 0 0 S
+pm 0 2097216 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2375,8 +2375,8 @@ queen bellethra~
 &+mdire of moments, the now-aged &+Ydwarf &N&+mrules over her noble people with &+Rthe King
 &n&+mside by side.
 ~
-1358985418 0 0 402653656 14528 128 0 0 S
-pm 0 33313 3
+1358985418 0 0 0 402653656 14528 128 0 0 S
+pm 0 33313 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2392,8 +2392,8 @@ grylus shield dwarf royal bodyguard guard~
 &+Lstern &N&+ybrown &+Leyes.  He looks over the Citadel, guarding the halls of the &n&+mroyal
 &+Lfamily under persistant patrol.
 ~
-1140852808 1 0 144 14528 0 0 0 S
-pm 0 16385 -1
+1140852808 1 0 0 144 14528 0 0 0 S
+pm 0 16385 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2406,8 +2406,8 @@ dweefniggles assistant aspiring craftsman _spec1_~
     &+yHe follows &+cDweefniggle &+yabout the workshop working hurridly on many
 &+ydiffernt projects at once with the master tinkerer.
 ~
-72 0 0 216 0 0 0 0 S
-pf 0 1 -1
+72 0 0 0 216 0 0 0 0 S
+pf 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2421,8 +2421,8 @@ gnomish gnome tinkerer~
 &+Rengineer's goggles on and works hard on one of his many simotaneous
 &+Rprojects.
 ~
-2248 0 0 28 0 0 0 200 S
-pg 0 524288 -1
+2248 0 0 0 28 0 0 0 200 S
+pg 0 524288 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2440,8 +2440,8 @@ modan shanat clerk~
 &+Lof &N&+cAlatorin&+L that &+WModan &N&+cShanat &+Loversees the official work
 &+Lof the city.
 ~
-2250 0 0 24 0 0 0 0 S
-pm 0 1 -1
+2250 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2457,8 +2457,8 @@ commander shield dwarf~
 &+Lwhich is unusual for the normally plate-bearing shield dwarves.  He moves
 &+Lquickly and methodically with all techniques.
 ~
-1140852938 1 0 536871064 14528 0 0 420 S
-pm 0 65 3
+1140852938 1 0 0 536871064 14528 0 0 420 S
+pm 0 65 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2471,8 +2471,8 @@ golden golem~
 &+Ygold spikes jutting out from its joints.  This lustrous monstrosity protects
 &+Ythe deeper hallways of Shanat Citadel from unwanted trespassers.
 ~
-67110986 1 0 805306524 14528 0 0 0 S
-og 0 1 -1
+67110986 1 0 0 805306524 14528 0 0 0 S
+og 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2487,8 +2487,8 @@ spirit avatar dumathoin~
 &+WThis spirit avatar is that of &N&+cDumathoin, God of Buried Wealth, Ore,
 &+Wgems, and exploration.
 ~
-16584 0 0 939524248 8403136 0 524288 400 S
-pm 0 513 -1
+16584 0 0 0 939524248 8403136 0 524288 400 S
+pm 0 513 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2501,8 +2501,8 @@ shield dwarf general~
 &+Woversized around the general.  He walks proudly, wearing a long flowing
 &+Wcape and a neatly-groomed, thick beard.
 ~
-1140852938 1 0 402653336 0 0 0 450 S
-pm 0 1 -1
+1140852938 1 0 0 402653336 0 0 0 450 S
+pm 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2515,8 +2515,8 @@ shield dwarf officer~
 &+cprosperous poise.  He has clearly worked his way up dilligently
 &+cthrough the ranks of the various militia groups of Alatorin.
 ~
-1140852938 0 0 24 0 0 0 420 S
-pm 0 1 -1
+1140852938 0 0 0 24 0 0 0 420 S
+pm 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2531,8 +2531,8 @@ omak barbarian warlord~
 &+Wtundra, this fisherman's son rose to become one of the most feared warlords
 &+Wacross the realm, and most &+Yexpensive &+Wfor the shield dwarfs to hire.
 ~
-67111114 1 0 940048536 12480 0 0 0 S
-pb 0 1048576 4
+67111114 1 0 0 940048536 12480 0 0 0 S
+pb 0 1048576 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2546,8 +2546,8 @@ Having received the training of an average patrol &+Wguard&N in his native town
 of Shaledrieth, this now-legendary swashbuckler has become a master of the
 blade, and been taken in great interest by the Shanat militia.
 ~
-2250 0 0 536871064 14528 0 0 500 S
-pe 0 32770 -1
+2250 0 0 0 536871064 14528 0 0 500 S
+pe 0 32770 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2560,8 +2560,8 @@ vicious tundra panther~
 &+Wmountainous tundra of Omak.  It has a sleek white coat and two
 &+Whuge sharp fangs.
 ~
-1073744074 0 0 536870936 0 0 0 0 S
-a 0 8192 3
+1073744074 0 0 0 536870936 0 0 0 0 S
+a 0 8192 0 3
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2577,8 +2577,8 @@ kholai zherd~
 &+cher father and the military ways so many years ago.  Ironically, now she is seeking out
 &+cthe Alatorin army to fight beside the shield dwarves.
 ~
-1073744074 1 0 939524120 14528 0 0 -420 S
-gz 0 64 -1
+1073744074 1 0 0 939524120 14528 0 0 -420 S
+gz 0 64 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2594,8 +2594,8 @@ and a wild, twisted black beard.  He has risen to the ranks in the &N&+rKhildara
 &nmilitary blood of $n that has drawn &+RTaark Shanat &Nto employ the duergar general and
 &nhis troops.
 ~
-16779496 64 0 939524312 14552 0 4195328 -1000 S
-pd 0 1048577 -1
+16779496 64 0 0 939524312 14552 0 4195328 -1000 S
+pd 0 1048577 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2610,8 +2610,8 @@ chungy taskgulch mountain dwarf general~
 &+YChungy has a finely-braided golden beard and piercing bronze eyes.  His buldging muscles
 &+Ymake his old age seem unlikely, but this dwarf has lived a long legacy.
 ~
-1090521288 128 0 248 15552 0 4195328 1000 S
-pm 0 67108937 -1
+1090521288 128 0 0 248 15552 0 4195328 1000 S
+pm 0 67108937 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2625,8 +2625,8 @@ well-armored well mountain dwarf soldier~
 &+Lsoldier and the many others like it fight with an unparalelled ferocity for the
 &+Lhonor of his people.
 ~
-1073741912 128 0 0 0 0 0 1000 S
-pm 0 1 -1
+1073741912 128 0 0 0 0 0 0 1000 S
+pm 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2640,8 +2640,8 @@ battle ready battle-ready duergar soldier~
 &+Lsoldier and the many others like it fight with an unparalelled ferocity for the
 &+Lhonor of his people.
 ~
-1073741912 64 0 0 0 0 0 -1000 S
-pd 0 1 -1
+1073741912 64 0 0 0 0 0 0 -1000 S
+pd 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2654,8 +2654,8 @@ mithril golem~
 &+Lbody is made of rock and huge blade-like protrusions.  This mithril golem was created
 &+Lwith the most powerful &N&+yearth &+Lmagic.
 ~
-3274 1 0 144 0 0 0 0 S
-ee 0 1 6
+3274 1 0 0 144 0 0 0 0 S
+ee 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2669,8 +2669,8 @@ royal shield dwarf delegate~
 &+Cofficial business or just a visit.  This delegate sees to it that the guests of the
 &+Cking are attended to and meet their deadlines with the dragonslayer.
 ~
-2248 0 0 24 0 0 0 400 S
-pm 0 33 -1
+2248 0 0 0 24 0 0 0 400 S
+pm 0 33 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2685,8 +2685,8 @@ ambassador kimordril mountain dwarf~
 &+YHis thick &+Wwhite &+Ybeard hangs over his platemail.  He stands here
 &+Yvisiting &N&+cShanat Citadel&+Y as a messanger for his general.
 ~
-1073744072 0 0 216 0 0 0 1000 S
-pm 5 1 -1
+1073744072 0 0 0 216 0 0 0 1000 S
+pm 5 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2699,8 +2699,8 @@ citadel patrol guard shield dwarf _spec1_~
 &+Lthe high golden seal colors of Shanat Citadel with pale blue trim.  He has a large
 &+Ygolden blonde &+Lbeard and piercing &+Cblue &+Leyes.
 ~
-1140852936 1 0 216 0 0 0 0 S
-pm 0 1 -1
+1140852936 1 0 0 216 0 0 0 0 S
+pm 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2714,8 +2714,8 @@ strange baobob tree~
 &+ga massive trunk.  It howls with a strange magical delight and moves to intercept
 &+gthe foreign blood.
 ~
-268961866 1 0 216 0 0 0 0 S
-vt 0 128 6
+268961866 1 0 0 216 0 0 0 0 S
+vt 0 128 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2730,8 +2730,8 @@ aging librarian~
 &+yof &+Ymagic&N&+y, this librarian sits at his desk within &N&+cAlatorin&N&+y,
 &+ycarrying a twisted &+Lgrimmace&N&+y on his face.
 ~
-2122 0 0 24 0 0 0 200 S
-pf 0 512 -1
+2122 0 0 0 24 0 0 0 200 S
+pf 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -2744,8 +2744,8 @@ gnarled lash root~
 baobob trunk like tentacles from a roper.  This root is gnarled and thick,
 yet moves with uncanny &+Yspeed&N and deadly &+ystrength.
 ~
-67109066 0 0 1048592 0 0 0 0 S
-vt 0 1 4
+67109066 0 0 0 1048592 0 0 0 0 S
+vt 0 1 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2760,8 +2760,8 @@ elite guard mountain dwarf~
 &+YHis thick &+Wwhite &+Ybeard hangs over his platemail.  He stands here
 &+Yvisiting &N&+cShanat Citadel&+Y as a messanger for his general.
 ~
-1073744072 0 0 216 0 0 0 1000 S
-pm 5 1 -1
+1073744072 0 0 0 216 0 0 0 1000 S
+pm 5 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2776,8 +2776,8 @@ visiting duergar guild leader~
 &+rKhildarak and Strongstone Circle.  This duergar has a long white beard and
 &+rpiercing fiery eyes.
 ~
-1073744072 0 0 24 0 0 0 -1000 S
-pd 0 12289 -1
+1073744072 0 0 0 24 0 0 0 -1000 S
+pd 0 12289 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2791,8 +2791,8 @@ clansdwarf duergar clans dwarf~
 &+rthe shield dwarf castle, it is this duergar's responsibility to guard
 &+rthe leader with his life.
 ~
-1140852808 0 0 24 0 0 0 -1000 S
-pd 0 12289 -1
+1140852808 0 0 0 24 0 0 0 -1000 S
+pd 0 12289 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2838,8 +2838,8 @@ meshadan recruiter shield dwarf~
 &+Y                    *.    .*
 &+Y                      ".."
 ~
-1073762762 0 0 408 0 0 0 500 S
-pm 0 69206537 -1
+1073762762 0 0 0 408 0 0 0 500 S
+pm 0 69206537 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2854,8 +2854,8 @@ mithril dwarf golem priestess~
 &+mthe lines and forms of a dwarf priestess.  This golem is composed entirely
 &+mof mithril, moving freely and purely.
 ~
-67127562 4294164480 234881039 0 0 0 0 -1000 S
-og 0 32 6
+67127562 4294164480 234881039 0 0 0 0 0 -1000 S
+og 0 32 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2869,8 +2869,8 @@ four armed four-armed mithril warrior golem~
 &+mtorso between the arms.  This golem's features and appendages are all very blocky, all existing in suttle nuances and sutures in the makeup of the beast
 &+mthat give an overall portrayal of this four-armed monstrosity.
 ~
-18698 4294164480 234881039 144 0 262144 0 -1000 S
-og 0 1 6
+18698 4294164480 234881039 0 144 0 262144 0 -1000 S
+og 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2884,8 +2884,8 @@ mithril dwarf knight golem~
    &+mbeast are all merely simple cracks on the mithril blocks, perfectly
    &+mdetailing human features on an inhuman creation.
 ~
-18698 4294164480 234881039 144 0 0 0 -1000 S
-og 0 67108864 6
+18698 4294164480 234881039 0 144 0 0 0 -1000 S
+og 0 67108864 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2904,8 +2904,8 @@ mithril statue laduguer~
 &+mThis statue sits as a symbol to some of the harshest and most secluded,
 &+mevil blood enemies of the shield dwarves, stored in this deep below.
 ~
-1075466 0 0 144 192 524416 12582912 -1000 S
-ee 0 577 6
+1075466 0 0 0 144 192 524416 12582912 -1000 S
+ee 0 577 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2921,8 +2921,8 @@ prison guard guardian shield dwarf~
 &+La great dwarven halberd, keeping everyone away from the beasts within this prison
 &+Lwith all of his might.
 ~
-1140852810 1 0 536871320 14528 0 0 -500 S
-pm 0 16777216 -1
+1140852810 1 0 0 536871320 14528 0 0 -500 S
+pm 0 16777216 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2936,8 +2936,8 @@ shield dwarf legionnaire _spec1_~
 &+Lbeard that is very characteristic of all dwarves hangs down the
 &+Lhard, determined face of this warrior shield dwarf.
 ~
-67110986 0 0 24 0 0 0 10 S
-pm 0 1 -1
+67110986 0 0 0 24 0 0 0 10 S
+pm 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2951,8 +2951,8 @@ huge gloomwing bat~
 &+Lthe caverns of time, this strange, dark specimine resides in these caverns
 &+Lits entire life.
 ~
-1073743882 0 0 0 0 0 0 -400 S
-b 0 1 3
+1073743882 0 0 0 0 0 0 0 -400 S
+b 0 1 0 3
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -2966,8 +2966,8 @@ gloomwing bat~
 &+Lthe caverns of time, this strange, dark specimine resides in these caverns
 &+Lits entire life.
 ~
-1073743882 0 0 0 0 0 0 -400 S
-b 0 1 3
+1073743882 0 0 0 0 0 0 0 -400 S
+b 0 1 0 3
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -2986,8 +2986,8 @@ melbe githyanki enslaver~
 &+bhis crimes against &N&+cAlatorin &N&+bhave not gone unnoticed, although his hiding
 &+bspot may have.
 ~
-2122 0 0 152 2240 0 0 -1000 S
-gi 0 4 -1
+2122 0 0 0 152 2240 0 0 -1000 S
+gi 0 4 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3000,8 +3000,8 @@ A &+Wpale&n-&+beyed &Nsh&+Wie&Nld &+Ydwarf &Nslave stands here, a blank expressi
 &+Wseemingly dead.  He walks blindly, following only the mental instructions
 &+Wwhich have been &N&+mimplanted &+Winto his young brain by an unknown source.
 ~
-136 0 0 0 0 0 0 0 S
-pm 0 1 -1
+136 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3015,8 +3015,8 @@ half visible half-visible dwarf~
 &+Lhome of &+RTaark Shanat&+L or an appiration summoned by the king himself,
 &+Lthis &N&+cimage&+L does not take kindly to intruders.
 ~
-1140853064 1 0 538443800 14528 0 0 0 S
-wr 0 12288 -1
+1140853064 1 0 0 538443800 14528 0 0 0 S
+wr 0 12288 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3034,8 +3034,8 @@ massive blue drake~
 &+Bspread its wings in its imprisonment.  Solitary confinement in this deep
 &+Bsubterranean recess have driven this welp into complete and total &+Rr&N&+ra&+Rg&N&+re.
 ~
-1358956906 1 0 939524312 14528 0 0 -1000 S
-d 0 513 -1
+1358956906 1 0 0 939524312 14528 0 0 -1000 S
+d 0 513 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3053,8 +3053,8 @@ massive blue drake~
 &+Bspread its wings in its imprisonment.  Solitary confinement in this deep
 &+Bsubterranean recess have driven this welp into complete and total &+Rr&N&+ra&+Rg&N&+re.
 ~
-1360005482 1 0 939524312 14528 0 0 -1000 S
-d 0 1048833 -1
+1360005482 1 0 0 939524312 14528 0 0 -1000 S
+d 0 1048833 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3068,8 +3068,8 @@ dwarf miner~
 &+Lgrit and determination, sifting &n&+bsmashed &+Lchunks of ore through the metal
 &+Lgrating, revealing any &+Yore&+L that might have been contained within.
 ~
-2122 0 0 268435480 0 0 0 300 S
-pm 0 1 -1
+2122 0 0 0 268435480 0 0 0 300 S
+pm 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3087,8 +3087,8 @@ metal on the realm-renowned &+YGreat Anvil &Nof &+cAlatorin.  Gimbrin also pride
 himself in his appearance, decorating his wrists with &+Bbr&N&+bac&+re&+Rl&+Yet&n&+gs crafted by
 the same precious metals and ores that he seeks.
 ~
-2250 0 0 402653208 14528 0 0 600 S
-pd 0 16385 -1
+2250 0 0 0 402653208 14528 0 0 600 S
+pd 0 16385 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3103,8 +3103,8 @@ monaran ancient prison overseer dwarf~
   &+LOverseeing the dark, fiery depths of the Shanat Citadel prison, Monaran patrols
 &+Lthe rocky ledges with glowing eyes hidden beneath his dark cloak.
 ~
-1141266504 1 0 940048408 14528 262144 0 -888 S
-pm 0 18874433 -1
+1141266504 1 0 0 940048408 14528 262144 0 -888 S
+pm 0 18874433 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3117,8 +3117,8 @@ dark dwarven minion~
 &+Lminions behind Monaran like a blurred serpent.  This dwarf wears a long, hooded
 &+Lcloak, underneath which two glowing red eyes peak out.
 ~
-1140852808 0 0 208 0 0 0 0 S
-pm 0 1 -1
+1140852808 0 0 0 208 0 0 0 0 S
+pm 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3132,8 +3132,8 @@ dwarf miner~
 &+Lgrit and determination, sifting &n&+bsmashed &+Lchunks of ore through the metal
 &+Lgrating, revealing any &+Yore&+L that might have been contained within.
 ~
-2122 0 0 268435480 0 0 0 300 S
-pm 0 1 -1
+2122 0 0 0 268435480 0 0 0 300 S
+pm 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3148,8 +3148,8 @@ smidrin forgemaster master dwarf dwarven blacksmith~
 &+Ypeople is that Smidrin was once a warrior in Taark's defensive seiges during
 &+Ythe earliest years of Alatorin's origination.
 ~
-2122 0 0 939524248 192 0 0 60 S
-pm 0 1 -1
+2122 0 0 0 939524248 192 0 0 60 S
+pm 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3163,8 +3163,8 @@ harmon smeltmaster smelt master dwarf~
 &+Wwrit and determination that he has exhibited throughout his extensive ore-
 &+Wprocessing and &+Lmining &+Rcareer.
 ~
-2250 0 0 939524248 15552 0 0 0 S
-pm 0 32769 -1
+2250 0 0 0 939524248 15552 0 0 0 S
+pm 0 32769 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3181,8 +3181,8 @@ hammer shield bartender dwarf~
 &+Lknotted old beard hangs with small cloth bindings that have been tied
 &+Ldozens, if not hundreds of years ago.
 ~
-202 0 0 24 0 0 0 0 S
-pm 0 1 -1
+202 0 0 0 24 0 0 0 0 S
+pm 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3197,8 +3197,8 @@ bariic mighty mountain dwarf hero~
 &+YBariic's assumedly many adventures, his time spent at the Hammer and Shield
 &+YTavern is sure to be spent revisiting a very familiar mug.
 ~
-1073744074 0 0 134217880 12480 0 0 50 S
-pm 0 1 -1
+1073744074 0 0 0 134217880 12480 0 0 50 S
+pm 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3214,8 +3214,8 @@ dwarf dwarven baritonist skilled baritone~
 &+ybut reserved in his old age.  Non-confrontational and always aiming to please
 &+yhis fellow dwarf, this baritonist plays on, musing the crowd.
 ~
-2250 0 0 24 0 0 0 550 S
-pm 0 32768 -1
+2250 0 0 0 24 0 0 0 550 S
+pm 0 32768 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3229,8 +3229,8 @@ Horbor the &+cE&Nn&+ct&Ne&+cr&Nt&+ca&Ni&+cn&Ne&+cr&N~
 the Hammer and Shield Tavern.  Horbor currently looks rather distraut, having apparently
 been missing his act in the tavern.
 ~
-2250 0 0 152 2048 0 0 0 S
-pm 0 32768 -1
+2250 0 0 0 152 2048 0 0 0 S
+pm 0 32768 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -3243,8 +3243,8 @@ dwarf tavern cook dwarven~
 &+Lthe &n&+cHammer&+L and &+WShield &+LTavern, the local bar of the &+YMilitary &+LDistrict
 &+Lwithin the &Nsh&+Wie&Nld &+Ydwarf &+Lcity.
 ~
-2250 0 0 24 2240 0 0 0 S
-pm 0 1 -1
+2250 0 0 0 24 2240 0 0 0 S
+pm 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3258,8 +3258,8 @@ brino stonehammer dwarf~
 &+Ychastity.  Brino has a long blonde beard tied off in three seperate braids.
 &+YHe moves with great speed and has green eyes.
 ~
-1073743944 0 0 402653320 14528 0 0 1000 S
-pm 0 67108872 -1
+1073743944 0 0 0 402653320 14528 0 0 1000 S
+pm 0 67108872 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3273,8 +3273,8 @@ raucous goblin drunk~
 &+gdrunk goblin like this can manage when he realizes he is being looked
 &+gat.
 ~
-1073743944 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+1073743944 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3288,8 +3288,8 @@ private hammerhelm militia shield dwarf~
 &+WHe walks cautiously through the Hammer and Shield, aware of the fact that his branch
 &+Wis sparsely represented in this tavern.
 ~
-2248 0 0 134217732 0 0 0 400 S
-pm 0 1 -1
+2248 0 0 0 134217732 0 0 0 400 S
+pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3302,8 +3302,8 @@ starving dwarf warrior hungry~
 &+LShield tavern.  It is unclear where his military allegiences lie or what his
 &+Lmotives are at the moment other then anything but eating.
 ~
-2250 0 0 16 0 0 0 40 S
-pm 0 1 -1
+2250 0 0 0 16 0 0 0 40 S
+pm 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3321,8 +3321,8 @@ dark dwarf taigorus~
 &+Lfar and remote lands.  Perhaps the most distinctive feature of &N&+rTaigorus &+Lare his
 &+Ldeep-set, yet shimmering &+Ggreen &N&+geyes.
 ~
-1073743946 0 0 939524120 13512 0 0 -400 S
-pd 0 12289 -1
+1073743946 0 0 0 939524120 13512 0 0 -400 S
+pd 0 12289 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3335,8 +3335,8 @@ pet dire wolf~
 &+Lsensitivity.  Thick, knotted black fur runs sleek along the back of this hulking
 &+Lbut surprizingly-loyal beast.
 ~
-1073744074 0 0 0 0 0 0 -500 S
-a 0 1 -1
+1073744074 0 0 0 0 0 0 0 -500 S
+a 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3349,8 +3349,8 @@ cute gnome gnomish receptionist~
 &+Rribbons.  She has huge round, &n&+yhazel &+Reyes that &+Wsparkle &+Rwith youthful
 &+Rexuberance.  She has a delicate, sweet touch and a soft, sensual voice.
 ~
-2122 0 0 0 0 0 0 400 S
-pg 0 1 -1
+2122 0 0 0 0 0 0 0 400 S
+pg 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 2
@@ -3364,8 +3364,8 @@ alatorin peacekeeper guard relaxing~
 &+Lof the &+cAlatorin &+Lcity guard.  This &+Ydwarf &+Lhas a long beard
 &+Land &+Rfire &+Lin his eyes.
 ~
-67110986 0 0 0 0 0 0 0 S
-pm 0 1 -1
+67110986 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3378,8 +3378,8 @@ sleepy human patron~
 &+Lwithin the &n&+cHammer &+Land &+WShield &+LTavern.  He looks to be late-middle
 &+Laged, getting some well-needed rest during his visit to &N&+cAlatorin&+W.
 ~
-2250 0 0 0 0 0 0 800 S
-PH 0 1 -1
+2250 0 0 0 0 0 0 0 800 S
+PH 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -3394,8 +3394,8 @@ orc exhausted~
 &+Lmost likely of some type of rogue or illusionist to alter his appearance,
 &+Lsuggesting that he may bare great intelligence.
 ~
-2250 0 0 402653396 2240 0 0 -999 S
-ho 0 4194304 -1
+2250 0 0 0 402653396 2240 0 0 -999 S
+ho 0 4194304 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -3410,8 +3410,8 @@ orc exhausted~
 &+Lmost likely of some type of rogue or illusionist to alter his appearance,
 &+Lsuggesting that he may bare great intelligence.
 ~
-2250 0 0 402653396 2240 0 0 -999 S
-ho 0 4194304 -1
+2250 0 0 0 402653396 2240 0 0 -999 S
+ho 0 4194304 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -3426,8 +3426,8 @@ sleepy orc~
 &+LTavern, regardless of the fact that it is nested at the heart of the
 &+YMilitary Ward&+L here in &N&+cAlatorin.
 ~
-67111114 0 0 402653396 2240 0 0 -999 S
-ho 0 20480 -1
+67111114 0 0 0 402653396 2240 0 0 -999 S
+ho 0 20480 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -3441,8 +3441,8 @@ massive siege dwarf~
 &+Lhammer, and a set of towering shoulder plates covered in huge &+rrusty &+L
 &+Lspikes.
 ~
-1073743944 0 0 24 0 0 0 -100 S
-pm 0 1 -1
+1073743944 0 0 0 24 0 0 0 -100 S
+pm 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3456,8 +3456,8 @@ solemn dwarf pious~
 &+Yproud look graces his stern dwarven brow, as thoughts of crushing the skulls
 &+Yof the vile &+Lorcs&+Y with his stone hammer bless his dwarven mind.
 ~
-1073743882 0 0 0 0 0 0 360 S
-pm 0 1 3
+1073743882 0 0 0 0 0 0 0 360 S
+pm 0 1 0 3
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -3470,8 +3470,8 @@ wealthy halfling~
 &+yof hours under the sun - perhaps like many of the halflings that find
 &+ytheir wealth as a &+Bcargo &n&+yrunner.
 ~
-202 0 0 0 0 0 0 200 S
-pf 0 65537 -1
+202 0 0 0 0 0 0 0 200 S
+pf 0 65537 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3485,8 +3485,8 @@ dwarf miner~
 &+Lgrit and determination, sifting &n&+bsmashed &+Lchunks of ore through the metal
 &+Lgrating, revealing any &+Yore&+L that might have been contained within.
 ~
-2120 0 0 268435480 0 0 0 300 S
-pm 0 1 -1
+2120 0 0 0 268435480 0 0 0 300 S
+pm 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3500,8 +3500,8 @@ gate guard helgor outpost duergar~
 &+La fearsome member of &N&+rHel&+Rgor &+Loutposts guard, this &N&+rclansdwraf&+L
 &+Lserves his people with a great honor.
 ~
-67110922 64 0 402653328 14528 0 0 -1000 S
-pd 0 16781313 -1
+67110922 64 0 0 402653328 14528 0 0 -1000 S
+pd 0 16781313 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3517,8 +3517,8 @@ grukadak watcher duergar~
 &+rjoined them as a mere watcher.  Not quite as notorious as his previous life
 &+rof murder and secrecy, his position is just as quenching for his bloodthirst.
 ~
-1073760266 64 0 939524124 14528 0 0 -1000 S
-pd 0 16777233 -1
+1073760266 64 0 0 939524124 14528 0 0 -1000 S
+pd 0 16777233 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3533,8 +3533,8 @@ duergar helgor taskmaster master~
 &+Lstudded adamantite greaves.  A thick finely-tailored black leather vest
 &+Lcovers his large, hairy chest.
 ~
-2122 64 0 0 12480 0 33554432 -1000 S
-pd 0 1048577 -1
+2122 64 0 0 0 12480 0 33554432 -1000 S
+pd 0 1048577 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3548,8 +3548,8 @@ huge warg~
 &+Lwhich sit just above several huge razor-sharp &+Wteeth&+L protruding from
 &+Lthe salivating maw of this beast.
 ~
-1207961610 0 0 402653336 14528 0 0 -900 S
-ae 0 1 4
+1207961610 0 0 0 402653336 14528 0 0 -900 S
+ae 0 1 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3564,8 +3564,8 @@ undoubtedly for some percentage of the profit, investing in the strange items
 that the &+rHel&+Rgor &Nraiding parties return with and constantly selling the
 &+rclansdwarves &ninstruments to their cause.
 ~
-2266 0 0 8 0 0 0 -1000 S
-hg 0 65536 -1
+2266 0 0 0 8 0 0 0 -1000 S
+hg 0 65536 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3579,8 +3579,8 @@ helgor crossbowman duergar~
 &+La fearsome member of &N&+rHel&+Rgor &+Loutposts guard, this &N&+rclansdwraf&+L
 &+Lserves his people with a great honor.
 ~
-67110922 64 0 402653328 14528 0 0 -1000 S
-pd 0 4097 -1
+67110922 64 0 0 402653328 14528 0 0 -1000 S
+pd 0 4097 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3594,8 +3594,8 @@ outpost clansdwarf~
 &+La fearsome member of &N&+rHel&+Rgor &+Loutposts guard, this &N&+rclansdwraf&+L
 &+Lserves his people with a great honor.
 ~
-1140852746 64 0 402653328 14528 0 0 -1000 S
-pd 0 4097 -1
+1140852746 64 0 0 402653328 14528 0 0 -1000 S
+pd 0 4097 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3609,8 +3609,8 @@ officer clansdwarf duergar helgor outpost~
 &+La huge forehead ridge.  This officer of Helgor Outpost oversees various matters for
 &n&+rHel&+Rgor &+Lhimself and carries out his general's orders.
 ~
-2122 64 0 24 0 0 0 -1000 S
-pd 0 257 -1
+2122 64 0 0 24 0 0 0 -1000 S
+pd 0 257 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3624,8 +3624,8 @@ draksol torturer duergar~
 &+Lforks, also stained with &N&+rblood&+L.  He carries a bloody red whip and an
 &+Ladamantite blade, curved for precision.
 ~
-1073764426 64 0 134217880 12480 0 0 -1000 S
-pd 0 1048577 -1
+1073764426 64 0 0 134217880 12480 0 0 -1000 S
+pd 0 1048577 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3638,8 +3638,8 @@ mountain dwarf slave~
 &+Yin his captivity.  He has been reduced to mere rags, cowering helplessly
 &+Yunder the cruel conditions set forth by his captors.
 ~
-2250 0 0 0 0 0 0 1000 S
-pm 0 1 -1
+2250 0 0 0 0 0 0 0 1000 S
+pm 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -3652,8 +3652,8 @@ grey elf slave~
 &+cin his captivity.  He has been reduced to mere rags, cowering helplessly
 &+cunder the cruel conditions set forth by his captors.
 ~
-2250 0 0 0 0 0 0 1000 S
-pe 0 1 -1
+2250 0 0 0 0 0 0 0 1000 S
+pe 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -3666,8 +3666,8 @@ halfling slave~
 &+yin his captivity.  He has been reduced to mere rags, cowering helplessly
 &+yunder the cruel conditions set forth by his captors.
 ~
-2250 0 0 0 0 0 0 1000 S
-pf 0 1 -1
+2250 0 0 0 0 0 0 0 1000 S
+pf 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -3680,8 +3680,8 @@ gnome slave~
 &+Rin his captivty.  He has been reduced to mere rags, cowering helplessly
 &+Runder the cruel conditions set forth by his captors.
 ~
-2250 0 0 0 0 0 0 1000 S
-pg 0 1 -1
+2250 0 0 0 0 0 0 0 1000 S
+pg 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -3695,8 +3695,8 @@ clansdwarf duergar lookout~
 &+rof Khoralator.  He is dressed in studded black leather and bares a sheathed
 &+Lshortsword.
 ~
-1073744074 0 0 0 0 0 0 -1000 S
-pd 0 4097 -1
+1073744074 0 0 0 0 0 0 0 -1000 S
+pd 0 4097 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3710,8 +3710,8 @@ elite helgor sentinel~
 &+La fearsome member of &N&+rHel&+Rgor &+Loutposts guard, this &N&+rclansdwraf&+L
 &+Lserves his people with a great honor.
 ~
-67110922 64 0 402653328 14528 0 0 -1000 S
-pd 0 16781313 -1
+67110922 64 0 0 402653328 14528 0 0 -1000 S
+pd 0 16781313 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3726,8 +3726,8 @@ ancient white dragon~
 &+Wfour massive trunk-like legs support the fearsome bite of this ravenous
 &+Wbeast.
 ~
-1073743944 1 0 0 14528 0 0 1000 S
-d 0 513 -1
+1073743944 1 0 0 0 14528 0 0 1000 S
+d 0 513 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3741,8 +3741,8 @@ burly guard helgor outpost~
 &+La fearsome member of &N&+rHel&+Rgor &+Loutposts guard, this &N&+rclansdwraf&+L
 &+Lserves his people with a great honor.
 ~
-67110922 64 0 402653328 14528 0 0 -1000 S
-pd 0 16781313 -1
+67110922 64 0 0 402653328 14528 0 0 -1000 S
+pd 0 16781313 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3758,8 +3758,8 @@ kirrb faktl duergar nefarious assassin~
 &+rin the &+Rbloodshot &N&+reyes of this assassin, consumed with his own
 &+rthirst for the mung of his victims.
 ~
-1140852872 4294426624 0 805306392 14528 0 0 -1000 S
-pd 0 12288 -1
+1140852872 4294426624 0 0 805306392 14528 0 0 -1000 S
+pd 0 12288 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3774,8 +3774,8 @@ ragmor duergar brigand~
 &+Rthis remote den.  He wears tight black leather and moves with an uncanny,
 &+Rancient dexterity.
 ~
-1140852872 4294426624 0 805306392 14528 0 0 -1000 S
-pd 0 28672 -1
+1140852872 4294426624 0 0 805306392 14528 0 0 -1000 S
+pd 0 28672 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3789,8 +3789,8 @@ romgar duergar thief scoundrel~
 &+rclansdwarves&+L, and befriended by &N&+rClan Stealth Hunter&+L, Ro&N&+bmg&+Lar
 &+Ltells great &N&+rKhildarak&+L lore in his travels while subterfuging his enemies.
 ~
-1140852872 4294426624 0 805306392 14528 0 0 -1000 S
-pd 0 98304 -1
+1140852872 4294426624 0 0 805306392 14528 0 0 -1000 S
+pd 0 98304 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3804,8 +3804,8 @@ tarkorsh duergar inquisitor~
 &N&+cTar&+Bko&N&+crsh &+Lgrins with evil malevolence, taking pleasure in his
 &+Linquisition and &+Rtorture &+Lof enemies to his &N&+rclansdwarf&+L brethren.
 ~
-1140852872 4294426624 0 0 0 0 0 -1000 S
-pd 0 12289 -1
+1140852872 4294426624 0 0 0 0 0 0 -1000 S
+pd 0 12289 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3820,8 +3820,8 @@ burly dwarf guard gate khoralator fort~
 &+Yfor his legion.  A &+Rfirey &+Ygaze stares from his deep-set eyes, armed and trained
 &+Yby the &+WKhor&N&+calator &+CFort &N&+rmilitia &+Yto defend his post.
 ~
-2250 128 0 24 0 0 0 1000 S
-pm 0 67108865 -1
+2250 128 0 0 24 0 0 0 1000 S
+pm 0 67108865 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3836,8 +3836,8 @@ barny taskgulch mountain dwarf watcher~
 &+yMount Shanatar&+Y.  Barny has huge hairy arms and a bright golden beard.  Bushy
 &+Yeyebrows sit atop a proud brow under which piercing eyes stare out.
 ~
-67111114 128 0 28 14528 0 0 -1000 S
-pd 0 67108865 -1
+67111114 128 0 0 28 14528 0 0 -1000 S
+pd 0 67108865 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3852,8 +3852,8 @@ brek orc rogue~
 &+Land blackened daggers, sneaking through &N&+cAlatorin&+L on some sort of
 &+Lmischievious and seemingly &n&+runtrustworthy &+Lmission.
 ~
-1073744010 0 0 135790616 0 0 0 -1000 S
-ho 0 4096 -1
+1073744010 0 0 0 135790616 0 0 0 -1000 S
+ho 0 4096 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3868,8 +3868,8 @@ mundorno ancient dwarf blacksmith~
 &+Cthicker with less chainmail.  He pounds away at his speciality, the &n&+gscales
 &+Cof &+Ldragons&+C.
 ~
-2250 0 0 402653240 0 0 0 427 S
-pm 0 1 -1
+2250 0 0 0 402653240 0 0 0 427 S
+pm 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3883,8 +3883,8 @@ glimdo halfling merchant~
 &+yround, bright eyes and nimble fingers, eager and ready to accept coins from
 &+ythose in need of his products.
 ~
-2266 0 0 8 0 0 0 200 S
-pf 0 1 -1
+2266 0 0 0 8 0 0 0 200 S
+pf 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3898,8 +3898,8 @@ elite khoralator watchman~
 &+Wvery own.  He has piercing &+Bblue &+Weyes and a golden &+Yflowing beard&+W of
 &+Wthe purest dwarven pedigree.
 ~
-2250 128 0 134217752 0 0 0 1000 S
-pm 0 67108865 -1
+2250 128 0 0 134217752 0 0 0 1000 S
+pm 0 67108865 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3912,8 +3912,8 @@ mountain dwarf archer dwarven _spec4_~
 &+Ymaneuverability from afar.  His beard is tied into three long braids, and
 &+Yhis &+Bblue&+Y eye carry a determined, precise stare.
 ~
-1073744074 0 0 0 0 0 0 200 S
-pm 0 65536 -1
+1073744074 0 0 0 0 0 0 0 200 S
+pm 0 65536 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3928,8 +3928,8 @@ fearless guard khoralator fort dwarf mountain~
 &+Yfor his legion.  A &+Rfirey &+Ygaze stares from his deep-set eyes, armed and trained
 &+Yby the &+WKhor&N&+calator &+CFort &N&+rmilitia &+Yto defend his post.
 ~
-1140852936 128 0 671162520 14528 0 0 1000 S
-pm 0 67108865 -1
+1140852936 128 0 0 671162520 14528 0 0 1000 S
+pm 0 67108865 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3944,8 +3944,8 @@ elite dwarven guard mountain dwarf~
 &+Yfor his legion.  A &+Rfirey &+Ygaze stares from his deep-set eyes, armed and trained
 &+Yby the &+WKhor&N&+calator &+CFort &N&+rmilitia &+Yto defend his post.
 ~
-2250 128 0 536879256 14528 0 0 0 S
-pm 0 1 -1
+2250 128 0 0 536879256 14528 0 0 0 S
+pm 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3962,8 +3962,8 @@ ulster stonehammer shield dwarf constable~
 &+W&+WUlster Stone&Nh&+Lammer &+Yhas risen to the ranks of &+RConstable&+W of &N&+cAlatorin&+Y,
 &+Yone of the few positions in city authority not controlled by &N&+cShanat&N&+r blood.
 ~
-1140852938 0 0 134217752 0 0 0 950 S
-pm 0 10 -1
+1140852938 0 0 0 134217752 0 0 0 950 S
+pm 0 10 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3979,8 +3979,8 @@ dwarven dwarf battle rager battlerager~
 &+Yabsolute &+Rrage&+Y, muscles rippling beneath his platemail and eyes
 &+Yswelling with &N&+rBloodLust&+Y.
 ~
-1073744074 0 0 216 0 0 0 1000 S
-pm 5 1048576 -1
+1073744074 0 0 0 216 0 0 0 1000 S
+pm 5 1048576 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3996,8 +3996,8 @@ lord borhad khoralator dwarf leader~
 &+Yboasts strong ties to &N&+yShan&+La&N&+yt&+La&N&+yr&+Y.  He has a long &+Lblack &+Ybeard
 &+Ywith wisps of &Ngrey &+Yand &+Wwhite&+Y, showing signs of age.
 ~
-1157630154 128 0 956301464 14528 0 0 1000 S
-pm 0 67125313 -1
+1157630154 128 0 0 956301464 14528 0 0 1000 S
+pm 0 67125313 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4010,8 +4010,8 @@ huge boar~
 &+Llayer of &N&+yfur&+L.  This boar has beady black eyes and a small tuft of hair
 &+Lupon its large head.
 ~
-134217738 0 0 402653208 0 0 0 0 S
-ae 0 1 -1
+134217738 0 0 0 402653208 0 0 0 0 S
+ae 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4025,8 +4025,8 @@ shady dwarf merchant~
 &+Lblack-bearded face, and the look of &+Ygold-loving &+Lgreed fills his eyes
 &+Las they gle&+Wa&+Lm in the darkness.
 ~
-26 0 0 24 0 0 0 -600 S
-pm 0 81920 -1
+26 0 0 0 24 0 0 0 -600 S
+pm 0 81920 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4041,8 +4041,8 @@ trained guard dog _spec1_~
    &+yThis dog is fit with a thick leather collar and is chained to a post,
 &+yplaced here by its master to guard the area.
 ~
-67110986 4294164480 234881039 268435480 0 0 0 200 S
-a 0 1 3
+67110986 4294164480 234881039 0 268435480 0 0 0 200 S
+a 0 1 0 3
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4057,8 +4057,8 @@ officer mountain dwarf khoralator brawny~
 &+Land main controller, behind &N&+rBorhad &+WKhor&N&+calator&+L, of the &+CFort's
 &+Loperations.
 ~
-1140852936 128 0 402653208 12504 0 0 1000 S
-pm 0 257 -1
+1140852936 128 0 0 402653208 12504 0 0 1000 S
+pm 0 257 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4071,8 +4071,8 @@ grey elf prisoner~
 &+cShe has pearly-white eyes and silvery hair.  As long as she kneels here
 &+gimprisoned by the torturous &N&+rduergars&+g, she will &+Wweep.
 ~
-2250 0 0 216 0 0 0 1000 S
-pe 0 1 -1
+2250 0 0 0 216 0 0 0 1000 S
+pe 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -4086,8 +4086,8 @@ shady clansdwarf duergar~
 &+Lblack-bearded face, and the look of &+Ygold-loving &+Lgreed fills his eyes
 &+Las they gle&+Wa&+Lm in the darkness.
 ~
-26 0 0 24 0 0 0 -600 S
-pd 0 81920 -1
+26 0 0 0 24 0 0 0 -600 S
+pd 0 81920 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4101,8 +4101,8 @@ sneaky clansdwarf duergar dwarf~
 &+Lin his eyes may be a side effect of the sheer &N&+rbloodlust &+Lfilling his
 &+Lveins at this moment.
 ~
-1073744010 1 0 24 0 0 0 -1000 S
-pd 0 8192 -1
+1073744010 1 0 0 24 0 0 0 -1000 S
+pd 0 8192 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4117,8 +4117,8 @@ deramuth guard patrolling~
 &+Yhis eye amidst a youthful gaze.  He clutches a long, &N&+ywooden spear
 &+Yin his hands like many of the other &N&+yhalfling &+Yguards of Deramuth.
 ~
-1140850844 0 0 134217752 0 0 0 0 S
-pf 0 16384 -1
+1140850844 0 0 0 134217752 0 0 0 0 S
+pf 0 16384 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4132,8 +4132,8 @@ wide-eyed shopkeeper~
 &+yonlookers with his bright and colorful jewelry, sporting two large gold
 &+Yhoop &N&+yearrings and a couple large diamond rings.
 ~
-2250 0 0 24 0 0 0 0 S
-pf 0 32768 -1
+2250 0 0 0 24 0 0 0 0 S
+pf 0 32768 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4148,8 +4148,8 @@ deramuth mercenary~
 &+yon the name of a '&+WDeramuth &N&+yMerc' to the people of &N&+cAlatorin
 &+ywho have ears beyond the mountain walls.
 ~
-1073744074 0 0 24 0 0 0 0 S
-pf 0 16384 -1
+1073744074 0 0 0 24 0 0 0 0 S
+pf 0 16384 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4163,8 +4163,8 @@ halfling dockhand dock hand~
 &+ybody and a youthful exhuberance shining brightly in his day-to-day
 &+yactivities.
 ~
-2250 0 0 0 0 0 0 1000 S
-pf 0 16384 -1
+2250 0 0 0 0 0 0 0 1000 S
+pf 0 16384 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4181,8 +4181,8 @@ general helgor dwarf warlord duergar~
    &+rGeneral &+RHel&N&+rgor is quite tall for a duergar, and impressively-
 &+rmuscular.  He wears thick ringmail, which is draped by his thick mighty beard.
 ~
-1073744074 64 0 939524120 14528 0 0 -1000 S
-pd 0 16777233 -1
+1073744074 64 0 0 939524120 14528 0 0 -1000 S
+pd 0 16777233 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4200,8 +4200,8 @@ candella high forest druid~
 &+gwoods, where her youth has transformed to age and her power has
 &+gascended in her communal solitude.
 ~
-2250 0 0 24 0 0 0 0 S
-pe 0 384 -1
+2250 0 0 0 24 0 0 0 0 S
+pe 0 384 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -4216,8 +4216,8 @@ burly dwarven dwarf shopkeeper~
 &+Yhis shop, distributing armor and weapons to those and buying
 &+Ythe same from others.
 ~
-2250 0 0 24 0 0 0 200 S
-pm 0 1 -1
+2250 0 0 0 24 0 0 0 200 S
+pm 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4230,8 +4230,8 @@ eager moneychanger~
 &+ysmall wooden shack at the head of the docks, exchanging currencies from
 &+ythe numerous races that pay visit to the port of &N&+yShanatar.
 ~
-2250 0 0 24 0 0 0 1000 S
-pf 0 256 -1
+2250 0 0 0 24 0 0 0 1000 S
+pf 0 256 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4246,8 +4246,8 @@ mercenary guard~
 &+ymakes his living under the &+Wcoin &N&+yof those who wish to
 &+yafford his protection.
 ~
-1073744072 0 0 134217752 0 0 0 0 S
-pf 0 16384 -1
+1073744072 0 0 0 134217752 0 0 0 0 S
+pf 0 16384 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4261,8 +4261,8 @@ cheerful dwarven dwarf receptionist~
 &+yshowing tired and weary travelers to their guest rooms.  She
 &+Yhas a cheerful attitude and flowing blonde hair.
 ~
-2250 0 0 24 0 0 0 1000 S
-pm 0 32 -1
+2250 0 0 0 24 0 0 0 1000 S
+pm 0 32 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -4275,8 +4275,8 @@ traveling gypsy~
 &+me of some sort of elven descent, judging by his long ears and
 &+mother sylvan features.
 ~
-2248 0 0 0 0 0 0 600 S
-p2 0 32768 -1
+2248 0 0 0 0 0 0 0 600 S
+p2 0 32768 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4289,8 +4289,8 @@ relaxing barbarian~
 &+Bthe unforgiving world of Duris.  He rests here trying to catch up
 &+Bon some much-needed sleep.
 ~
-2250 0 0 0 0 0 0 0 S
-pb 0 16385 -1
+2250 0 0 0 0 0 0 0 0 S
+pb 0 16385 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4304,8 +4304,8 @@ tohr kreen tohr-kreen patron~
 &+Lwraps.  This large, bipedal insect chitters quickly and
 &+Lcommunicates mostly with quick gestures.
 ~
-2250 0 0 0 0 0 0 10 S
-tk 0 1 4
+2250 0 0 0 0 0 0 0 10 S
+tk 0 1 0 4
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4320,8 +4320,8 @@ burly dwarf bartender~
 &+ycloth aprons over a thick pair of leather overalls, he
 &+Ydiligently serves his patrons.
 ~
-2250 0 0 0 0 0 0 800 S
-pm 0 67108864 -1
+2250 0 0 0 0 0 0 0 800 S
+pm 0 67108864 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4334,8 +4334,8 @@ short monk~
 &Nwith tenacious speed, however, and posesses great strength.  While meditating,
 &Nhe remains completely motionless.  He is dressed in loose-fitting monks robes.
 ~
-2250 0 0 0 0 0 0 300 S
-PH 0 64 2
+2250 0 0 0 0 0 0 0 300 S
+PH 0 64 0 2
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -4353,8 +4353,8 @@ alatorin captain shield dwarf~
    &+LCurrently, this &+Ccaptain &+Lhas been sent here with a platoon
 &+Lof soldiers to patrol and protect &+WDeramuth Port&+L.
 ~
-1140852936 0 0 24 0 0 0 700 S
-pm 0 1 -1
+1140852936 0 0 0 24 0 0 0 700 S
+pm 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4368,8 +4368,8 @@ soldier alatorin~
 &+Lof the &+cAlatorin &+Lcity guard.  This &+Ydwarf &+Lhas a long beard
 &+Land &+Rfire &+Lin his eyes.
 ~
-67110986 0 0 0 0 0 0 0 S
-pm 0 1 -1
+67110986 0 0 0 0 0 0 0 0 S
+pm 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4383,8 +4383,8 @@ at such a small humble town after being born and raised in the extravagant
 city of &+cAlatorin&n.  In fact, it is from the nearby sh&+Wie&Nld &+Ydwarf&N city
 that this particular &+Ydwarf &Nhas embarked through the realm of &N&+yShanatar&+L.
 ~
-1073743944 0 0 24 0 0 0 600 S
-pm 0 1 -1
+1073743944 0 0 0 24 0 0 0 600 S
+pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4398,8 +4398,8 @@ pet mountain lion _spec1_~
 &+Yhaving seen many fights alongside its master, Borhad Khoralator, this
 &+Ylion is now a simple pet to the proud shield dwarf king.
 ~
-1073743944 0 0 134217752 0 0 0 600 S
-a 0 1 -1
+1073743944 0 0 0 134217752 0 0 0 600 S
+a 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4412,8 +4412,8 @@ pet cave bear _spec1_~
 &+Lits thick, strong paws.  He snarls with a viciousness unseen in surface
 &+Lmammals, coming from a deep-seeded primal rage.
 ~
-1073743944 0 0 24 0 0 0 -800 S
-a 0 1 -1
+1073743944 0 0 0 24 0 0 0 -800 S
+a 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4430,8 +4430,8 @@ notorious thief jenk~
 &+gunofficially been called off.  He now currently resides in the
 &+gshady undercity beneath &N&+cAlatorin&N.
 ~
-1073744074 0 0 24 0 0 0 -1000 S
-hg 0 65536 -1
+1073744074 0 0 0 24 0 0 0 -1000 S
+hg 0 65536 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4445,8 +4445,8 @@ fast-talking fast goblin dealer~
 &+gHe is dressed in much finer &+Lleather&N&+g then most others seen in
 &+gthe underbelly of Alatorin.
 ~
-2250 0 0 24 0 0 0 -1000 S
-hg 0 1 -1
+2250 0 0 0 24 0 0 0 -1000 S
+hg 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4461,8 +4461,8 @@ human grim smuggler~
 &+La hairy chest peaks out from beneath his stained cloth shirt.
 &+LLeather boots and gloves adorn his gloves and hands.
 ~
-1140852746 1 0 0 0 0 0 0 S
-PH 0 16384 -1
+1140852746 1 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4476,8 +4476,8 @@ metlan smuggler leader~
 &+gand wields a shiny blade.  Commanding the other smugglers below him, he
 &+gsees to it that his operations bring him lots of extra platinum.
 ~
-1140852938 0 0 24 0 0 0 -700 S
-PH 0 28672 -1
+1140852938 0 0 0 24 0 0 0 -700 S
+PH 0 28672 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4493,8 +4493,8 @@ skull ancient demi lich demilich~
 &+Wultimate and fiendish power in its ancient age, having culiminated over
 &+Wmany years of mummification.
 ~
-1360026760 1 0 2819162136 276672 524288 33558528 -1000 S
-ud 0 1536 1
+1360026760 1 0 0 2819162136 276672 524288 33558528 -1000 S
+ud 0 1536 0 1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -4511,8 +4511,8 @@ huge fat disgusting dwarf _ignore_~
 &+Wglisten with juices of the meats he has recently devoured.  His
 &+Wenormous, fat legs sit lifelessly below his mountain of a torso.
 ~
-526410 0 0 0 1024 0 0 700 S
-pm 0 1 6
+526410 0 0 0 0 1024 0 0 700 S
+pm 0 1 0 6
 51 -3 -80 550d10+5000 6d6+40
 0.0.16.9 119070
 5 5 1
@@ -4526,8 +4526,8 @@ derro rogue~
 &+ybeneath bushy &+Lblack eyebrows&N&+y growing at the base of a sloped
 &+yforehead.
 ~
-1073744074 0 0 24 0 0 0 -400 S
-pd 0 8192 -1
+1073744074 0 0 0 24 0 0 0 -400 S
+pd 0 8192 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4539,8 +4539,8 @@ gruneegth goblin warrior traveler~
    &+LThis scrawny, wretched green &+Ggoblin &+Lwears raggy clothes and
 &+Lgrins with a toothy, yellowed smile.
 ~
-1073744074 0 0 24 0 0 0 -1000 S
-hg 0 1 -1
+1073744074 0 0 0 24 0 0 0 -1000 S
+hg 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4554,8 +4554,8 @@ halfling magician~
 &+yHe is dressed in loose, silken robes, and floats about repetively,
 &+ybasking in the paradise of his master's tower.
 ~
-2250 0 0 24 14528 0 0 800 S
-pf 0 4194816 -1
+2250 0 0 0 24 14528 0 0 800 S
+pf 0 4194816 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4568,8 +4568,8 @@ gust black smoke appirition~
 &+Lthroughout the tower.  It appears to be sentient, but lacks any
 &+Ltrance of physical existence other then its color.
 ~
-1073770696 0 0 134217728 0 0 0 -1000 S
-an 0 128 -1
+1073770696 0 0 0 134217728 0 0 0 -1000 S
+an 0 128 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -4581,8 +4581,8 @@ massive flesh golem _spec1_ _ignore_~
    &+LThis hulking beast is composed of various organs and muscles of
 &+Lnumerous different sources, all twisted together into one abomination.
 ~
-2250 0 0 134217880 2048 0 0 -1000 S
-u 0 1 7
+2250 0 0 0 134217880 2048 0 0 -1000 S
+u 0 1 0 7
 51 -4 -80 400d30+5000 6d6+6
 5.12.17.22 1250000
 8 8 0
@@ -4595,8 +4595,8 @@ halfling scribe~
 &+Lpriviledged young halflings that has been granted the opportunity
 &+Lto train under the tutelage of &+CX&N&+ca&+Bmo&N&+cr&+Ca &+Lthe magician.
 ~
-1073743946 0 0 402727128 14556 0 0 1000 S
-pf 0 512 -1
+1073743946 0 0 0 402727128 14556 0 0 1000 S
+pf 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4609,8 +4609,8 @@ meditative halfling mage~
 &+Lpriviledged young halflings that has been granted the opportunity
 &+Lto train under the tutelage of &+CX&N&+ca&+Bmo&N&+cr&+Ca &+Lthe magician.
 ~
-2122 0 0 402727128 14556 0 0 1000 S
-pf 0 2560 -1
+2122 0 0 0 402727128 14556 0 0 1000 S
+pf 0 2560 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4625,8 +4625,8 @@ a powerful magic, legendary amongst her people.  She has taken her craft to the
 far mountains of Shanatar and erected this very stone pillar.  She wears loose,
 but elegant silk robes and flies through her tower having the time of her life.
 ~
-1342228682 0 0 2550136856 14528 524416 0 1000 S
-pf 0 4194304 -1
+1342228682 0 0 0 2550136856 14528 524416 0 1000 S
+pf 0 4194304 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -4642,8 +4642,8 @@ bimk goblin seafarer~
 &+Gport authorities, Bimk can be found at more remote ports such as Deramuth.
    &+GBimk is often known to go on and on about the fabled warship &+BThe Ultranos.
 ~
-1073744074 0 0 0 0 0 33554432 900 S
-hg 0 2 -1
+1073744074 0 0 0 0 0 0 33554432 900 S
+hg 0 2 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -4656,8 +4656,8 @@ manor gate guard~
 &+Cbe a halfling youth who has been recruited like many others his age
 &+Cto the mercenaryship of Deramuth.
 ~
-1140852938 0 0 0 0 0 0 1000 S
-pf 0 16384 -1
+1140852938 0 0 0 0 0 0 0 1000 S
+pf 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4672,8 +4672,8 @@ resting elven mage~
 &+bof the elven-native realms would prove a considerable journey.
 &+bHe is dressed in fine cloth garments, currently resting.
 ~
-2250 0 0 402653340 0 0 0 1000 S
-pe 0 512 -1
+2250 0 0 0 402653340 0 0 0 1000 S
+pe 0 512 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -4689,8 +4689,8 @@ towering duergar thug _block_south_~
 &+Lthe hallway with his enormous bulging size, curiously posed
 &+Lby the southern wall.
 ~
-67127498 0 0 24 14528 0 0 -1000 S
-pd 0 20480 4
+67127498 0 0 0 24 14528 0 0 -1000 S
+pd 0 20480 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4705,8 +4705,8 @@ brutish dwarf thug~
 &+Lhe can muscle money out of.  He has a twisted black beard and beady
 &N&+rred &+Leyes.
 ~
-1073742024 0 0 671195196 12510 32 0 -400 S
-pm 0 20480 -1
+1073742024 0 0 0 671195196 12510 32 0 -400 S
+pm 0 20480 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4721,8 +4721,8 @@ strong brutish thug~
 &+Lhe can muscle money out of.  He has a twisted black beard and beady
 &N&+rred &+Leyes.
 ~
-1073742024 0 0 671195196 12510 32 0 -400 S
-pm 0 20480 -1
+1073742024 0 0 0 671195196 12510 32 0 -400 S
+pm 0 20480 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4737,8 +4737,8 @@ ugly strong brutish thug~
 &+Lhe can muscle money out of.  He has a twisted black beard and beady
 &N&+rred &+Leyes.
 ~
-1073742024 0 0 671195196 12510 32 0 -400 S
-pm 0 20480 -1
+1073742024 0 0 0 671195196 12510 32 0 -400 S
+pm 0 20480 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4753,8 +4753,8 @@ merchant sailor~
 &+Win the lands of &N&+yman&+W.  He walks with a familiar grit on his brow,
 &+Wsuggesting that this may be one of many visits to &+WDeramuth.
 ~
-2248 0 0 134217752 0 0 0 900 S
-PH 0 16384 -1
+2248 0 0 0 134217752 0 0 0 900 S
+PH 0 16384 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4768,8 +4768,8 @@ sneaky goblin thief~
 &+Lkeep out of sight.  He has sly, &+Rred &+Leyes and a lean, lithe
 &+Lbody.
 ~
-1073744088 0 0 402653208 0 0 0 -1000 S
-hg 0 65536 -1
+1073744088 0 0 0 402653208 0 0 0 -1000 S
+hg 0 65536 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4784,8 +4784,8 @@ human maiden~
 &+Wconfidence and aura of superiority - possibly suggesting a
 &+Wroyal background.
 ~
-2264 0 0 24 0 0 0 800 S
-PH 0 128 -1
+2264 0 0 0 24 0 0 0 800 S
+PH 0 128 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -4799,8 +4799,8 @@ winterhaven bodyguard guard~
 &+WWinterhaven platemail, having been issued from the city's royal
 &+Wofficials to protect his escort.
 ~
-1140852938 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1140852938 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4815,8 +4815,8 @@ huge storm giant sentinel~
 &+Wbrow with thick white hair around &+Blightning-filled &+Weyes.  His
 &+Warms and legs are like massive tree trunks of bone and muscle.
 ~
-1140852938 0 0 0 0 0 0 1000 S
-sg 0 20481 -1
+1140852938 0 0 0 0 0 0 0 1000 S
+sg 0 20481 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4830,8 +4830,8 @@ brutal-looking brutal storm giant guard bodyguard~
 &+Lhair flowing down his mountain of a back.  &+BLightning-blue &+Leyes stare
 &+Lforth from deepley-set sockets within his giant, jagged head.
 ~
-67111114 0 0 402653400 12504 0 0 800 S
-sg 0 16385 -1
+67111114 0 0 0 402653400 12504 0 0 800 S
+sg 0 16385 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4851,8 +4851,8 @@ lord deramuth portmaster _spec1_~
 &+rheavy-set figure with a muscular back and massive chest.  He has
 &+Ywi&+Yl&+Ld &N&+yhazel &+reyes and thick, &N&+cmannish &+Lhands.
 ~
-1090521290 0 0 939524248 14528 0 0 1000 S
-pd 0 1 -1
+1090521290 0 0 0 939524248 14528 0 0 1000 S
+pd 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4869,8 +4869,8 @@ ravi bjornson champion hunter~
 &+Lof the &+Yfinest &N&+gjade&+L.  He seems like he would be an excellent
 &+Lfoe in a fight.
 ~
-1073744074 0 0 402653208 14552 0 0 1000 S
-PH 0 2 -1
+1073744074 0 0 0 402653208 14552 0 0 1000 S
+PH 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4884,8 +4884,8 @@ angry guard~
 &+rabout through the &+WLord's &N&+rmanor, alerted at the presence of
 &+ra trespasser.
 ~
-1140852808 1 0 134217984 12368 0 0 600 S
-pm 0 1048576 -1
+1140852808 1 0 0 134217984 12368 0 0 600 S
+pm 0 1048576 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4899,8 +4899,8 @@ dwarf mercenary captain~
 &+ywears thick mithril armor and resembles a soldier of the Kimordril
 &+ymountaineer brigade - perhaps a former position for this guardian.
 ~
-1140852808 1 0 8408 14528 0 0 1000 S
-pm 0 16385 -1
+1140852808 1 0 0 8408 14528 0 0 1000 S
+pm 0 16385 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4916,8 +4916,8 @@ crooked advisor~
 &+yhas a very mischievous, untrusting nature to his actions and
 &+ybody language.
 ~
-2250 0 0 216 0 128 0 -1000 S
-hg 0 512 -1
+2250 0 0 0 216 0 128 0 -1000 S
+hg 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4932,8 +4932,8 @@ cloaked visitor druid~
 &+melegance and speaks only to the seagulls and other various
 &+mshore-dwelling critters around him.
 ~
-2120 0 0 134217752 0 0 0 0 S
-p2 0 128 -1
+2120 0 0 0 134217752 0 0 0 0 S
+p2 0 128 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4948,8 +4948,8 @@ wandering halfling mercenary~
 &+yon the name of a '&+WDeramuth &N&+yMerc' to the people of &N&+cAlatorin
 &+ywho have ears beyond the mountain walls.
 ~
-1073744074 0 0 24 0 0 0 0 S
-pf 0 16384 -1
+1073744074 0 0 0 24 0 0 0 0 S
+pf 0 16384 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4964,8 +4964,8 @@ his years physically and emotionally and no longer feels the innate
 He currently sits here, beard &+Wwhite&N with age, selling his hand-made
 &+Ctraps&N to turn a profit in the &+Lshady undergoings&N of &+cAlatorin&N.
 ~
-2250 0 0 24 0 0 0 1000 S
-pm 0 16385 -1
+2250 0 0 0 24 0 0 0 1000 S
+pm 0 16385 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4982,8 +4982,8 @@ artukin dwarven dwarf ragelord~
 &+rwirey, twisted black beard hangs from his broad boney chin; his eyes
 &+rripe with &+RBloodLust&N&+r.
 ~
-1073744074 128 0 939524120 14528 0 0 -500 S
-pm 0 1048576 -1
+1073744074 128 0 0 939524120 14528 0 0 -500 S
+pm 0 1048576 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4999,8 +4999,8 @@ shield dwarf doctor alatorin~
 &+yneed within the great city of Alatorin.  It is not uncommon to see
 &+yassistants beside this woman, who is dressed in dwarf-sized cloth linens.
 ~
-2250 0 0 24 14552 0 0 1000 S
-pm 0 32 -1
+2250 0 0 0 24 14552 0 0 1000 S
+pm 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -5016,8 +5016,8 @@ black-hooded black hooded dwarf~
 &+Lrunes.  He can be heard repeating the same phrases 'Akoth
 &+Lmon Rringlor Narath.'
 ~
-1409303752 4294164480 234881039 0 0 0 0 -450 S
-pd 0 548 2
+1409303752 4294164480 234881039 0 0 0 0 0 -450 S
+pd 0 548 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5031,8 +5031,8 @@ white appirition~
 &+WIt seems to be aware of anyone who approaches it, reacting
 &+Wtimidly and cautious.
 ~
-1073893576 0 0 134217728 0 0 0 1000 S
-an 0 128 -1
+1073893576 0 0 0 134217728 0 0 0 1000 S
+an 0 128 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5047,8 +5047,8 @@ birgibir goblin frost magus _spec2_~
    &+BBergibir &N&+gis dressed in a crystal-colored robe, floating several feet
 &+goff the ground on a &+Cplatform &N&+gmade of magical &+Wice&n&+g.
 ~
-133322 0 0 134217752 14528 0 0 -1000 S
-hg 0 33554432 -1
+133322 0 0 0 134217752 14528 0 0 -1000 S
+hg 0 33554432 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5064,8 +5064,8 @@ sambisam gnome trickster~
 &+rdistracting sounds or reflections to grab the attention of his victims
 &+rjust long enough to make his heists.
 ~
-2250 0 0 0 0 0 0 0 S
-pg 0 4227072 -1
+2250 0 0 0 0 0 0 0 0 S
+pg 0 4227072 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5080,8 +5080,8 @@ modo dwarven treasure hunter~
 &+Rred &+Ynose sprouts forth between &+Rrosy &+Ycheekbones, kissed by the
 &+Wchill &+Yof the &N&+yShanatar &+Ywinds.
 ~
-1073743880 0 0 134217752 0 0 0 800 S
-pm 0 16384 -1
+1073743880 0 0 0 134217752 0 0 0 800 S
+pm 0 16384 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5096,8 +5096,8 @@ dezik goblin hunter~
 &+rof &+GGalban&n&+r.  Nowadays, however, Dezik finds himself immersed in
 &+rthe great lore of &N&+yShanatar&N&+r and the beasts that dwell within.
 ~
-1073744072 0 0 134217752 0 0 0 -1000 S
-hg 0 20480 -1
+1073744072 0 0 0 134217752 0 0 0 -1000 S
+hg 0 20480 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5110,8 +5110,8 @@ bound halfling~
 &+Lpost at the center of the compound.  His hands have been recently chopped
 &+Loff, as all that remains at the end of his arms are &N&+rbloody &+Rstumps&+L.
 ~
-2058 0 0 0 0 0 0 -400 S
-pf 0 65536 -1
+2058 0 0 0 0 0 0 0 -400 S
+pf 0 65536 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5127,8 +5127,8 @@ dortweimer cuttlebuck gully dwarf clerk~
 &+Yhas much to say and quite a few different faces to say it to.  At present
 &+Ytime, however, he seems to be frustrated with the paperwork in front of him.
 ~
-2250 0 0 8 0 0 0 1000 S
-pm 0 16385 -1
+2250 0 0 0 8 0 0 0 1000 S
+pm 0 16385 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5141,8 +5141,8 @@ large barbarian~
 &+Chead to toe in thick furs.  He has dark hair pulled back down his back
 &+Cand a large oversized jaw.
 ~
-1073743944 0 0 0 0 0 0 0 S
-pb 0 256 -1
+1073743944 0 0 0 0 0 0 0 0 S
+pb 0 256 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5159,8 +5159,8 @@ steam powered steam-powered mechanical construct~
 &+Ythe mechanical giant.  Within the center of the construct is a heat
 &+Ysource, most likely coal-burning, that powers the machine.
 ~
-2122 0 0 24 0 0 0 0 S
-cn 0 16384 6
+2122 0 0 0 24 0 0 0 0 S
+cn 0 16384 0 6
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5173,8 +5173,8 @@ locke mountain dwarf mountaineer~
 &+Ygolden-blonde beard that is forked into two long braids.  He is very strong
 &+Yand fills out his bandedmail with his thick bulging muscles.
 ~
-1073743882 0 0 0 0 0 0 800 S
-pm 0 16384 -1
+1073743882 0 0 0 0 0 0 0 800 S
+pm 0 16384 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5189,8 +5189,8 @@ lundeen dwarf soup master~
 &+YLundeen stirs a massive &+Lcauldron &+Yfull of some of his famous soup,
 &+Ydistributing it to the patrons of the &+YGolden &NPe&+Warl&+Y.
 ~
-2122 0 0 8 0 0 0 50 S
-pm 0 1 -1
+2122 0 0 0 8 0 0 0 50 S
+pm 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5204,8 +5204,8 @@ rotund halfling~
 &+Wdown shirt is stained with the remanents of various meals, as are his pants
 &+Wover which his titanic belly rests.
 ~
-2058 0 0 0 0 0 0 600 S
-pf 0 1 -1
+2058 0 0 0 0 0 0 0 600 S
+pf 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -5220,8 +5220,8 @@ well traveled well-traveled wanderer~
 &+Cthis elf is taking in all of the culture of this part of the world, starting with
 &+Cthe food.
 ~
-1073743882 0 0 0 0 0 0 400 S
-pe 0 2 -1
+1073743882 0 0 0 0 0 0 0 400 S
+pe 0 2 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5237,8 +5237,8 @@ hungry dwarf~
 &+LCurrently visiting the port of &+WDeramuth&+L, this &+Ydwarf &+Lis indulging in
 &+Lsome of the more delicant perks of the &+Wport&+L.
 ~
-2122 0 0 0 0 0 0 7 S
-pm 0 1 -1
+2122 0 0 0 0 0 0 0 7 S
+pm 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -5252,8 +5252,8 @@ halfling waiter~
 &+Ywalks through from patron to patron, gathering orders and delivering the
 &+Wport-famous soup.
 ~
-1073744074 0 0 8 0 0 0 200 S
-pf 0 16384 -1
+1073744074 0 0 0 8 0 0 0 200 S
+pf 0 16384 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5266,8 +5266,8 @@ muscular githzerai prince~
 &+Lbillowing black cloak and has a bushy white beard.  Paying this plane
 &+La visit, he has taken up lodging within Deramuth Port.
 ~
-1073743882 0 0 0 0 0 0 1000 S
-gz 0 512 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+gz 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5281,8 +5281,8 @@ smuggler~
 &+yquick on his feet, albeit smaller than the average human.  He is
 &+ydressed in fine leathers and looks like he has been in many fights.
 ~
-1073743944 1 0 0 0 0 0 0 S
-h 0 16384 2
+1073743944 1 0 0 0 0 0 0 0 S
+h 0 16384 0 2
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5296,8 +5296,8 @@ barbarian smuggler~
 &+Bdressed in stereotypical thick hides that one would expect such a person
 &+Bto wear.
 ~
-1073743944 1 0 0 0 0 0 0 S
-pb 0 16384 -1
+1073743944 1 0 0 0 0 0 0 0 S
+pb 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5312,8 +5312,8 @@ dreary smuggling rings of &+cAlatorin&N.  He has numerous tattoos on his
 muscular arms, including one very distinguishable as a &+Lpsychomia &+gp&+Glan&+gt
 &+Gleaf&n.
 ~
-1073744074 0 0 24 0 0 0 -420 S
-pf 0 16384 -1
+1073744074 0 0 0 24 0 0 0 -420 S
+pf 0 16384 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5327,8 +5327,8 @@ doklin mountain dwarf assassin~
 &+Yhis cunning ability to elude those that inevitablty begin to chase him, it
 &+Yis no wonder to encounter Doklin in such a place.
 ~
-1073743944 4294688768 234881039 0 0 0 0 -1000 S
-pm 0 12288 -1
+1073743944 4294688768 234881039 0 0 0 0 0 -1000 S
+pm 0 12288 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5342,8 +5342,8 @@ gimabon tracker~
 &+Rred &+Lbeard with two &+Rfiery &+Leyebrows.  Dressed almost entirely in
 &+Lblack, he moves very well with the shadows.
 ~
-1073744072 4294688768 234881039 24 0 0 0 -1000 S
-pm 0 8192 -1
+1073744072 4294688768 234881039 0 24 0 0 0 -1000 S
+pm 0 8192 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5358,8 +5358,8 @@ tarkorsh dwarf dwarven inquisitor~
 &+Lmilitia, only to be taken in by the &N&+rcutpurse killers&+L - a suitable
 &+Lplacement given his reputation.
 ~
-1073743944 4294688768 234881039 24 14528 128 0 1000 S
-pm 0 67117057 -1
+1073743944 4294688768 234881039 0 24 14528 128 0 1000 S
+pm 0 67117057 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5374,8 +5374,8 @@ troglodyte trog huge black _spec1_~
 &+Leyes stare out from its sloped head.  Saliva drips down from
 &+Lits toothy maw.
 ~
-1073743882 1 0 24 0 0 0 -1000 S
-h 0 1 -1
+1073743882 1 0 0 24 0 0 0 -1000 S
+h 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5391,8 +5391,8 @@ wikzor dwarven warlord _spec1_~
 &+rskin.  Huge &+mv&+Me&+mi&+Mn&+Ms &+rripple beneath his thick dwarven hide
 &+rwhich is loosely covered in black leather.
 ~
-1140852872 4294426624 0 805306392 14528 0 0 0 S
-pm 0 1 -1
+1140852872 4294426624 0 0 805306392 14528 0 0 0 S
+pm 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5409,8 +5409,8 @@ brutish troglodyte trog huge bone bonechewer~
 &+yin-breeding, or perhaps some sort of &+motherwordly &+ymutation.
 &+yRegardless, this fearsome scaled &+Rbeast&+y is one to be reckoned.
 ~
-1073743882 1 0 24 0 0 0 -1000 S
-h 0 1048577 -1
+1073743882 1 0 0 24 0 0 0 -1000 S
+h 0 1048577 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5426,8 +5426,8 @@ troglodyte trog menacing savage~
 &+Lbipedal cave-dweller is much more vicious and aggressive then
 &+Lits primative cousins.
 ~
-1073743882 1 0 0 0 0 0 -1000 S
-h 0 16385 -1
+1073743882 1 0 0 0 0 0 0 -1000 S
+h 0 16385 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5443,8 +5443,8 @@ in height, covered in thick scales and bulging muscles.  It moves
 With a fierce aggression, attacking those who dare enter its hovel
 as well as its own troglodyte cousins with a vicious bloodthirst.
 ~
-1073741896 1 0 0 0 0 0 -1000 S
-h 0 1048576 -1
+1073741896 1 0 0 0 0 0 0 -1000 S
+h 0 1048576 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5460,8 +5460,8 @@ the more ferocious of his kind.  Always wandering and looking
 for opportunities to increase its survival, or prestige among
 the tribe, this scaled primative beast scavenges its domain.
 ~
-1073743944 1 0 0 0 0 0 -1000 S
-h 0 16385 -1
+1073743944 1 0 0 0 0 0 0 -1000 S
+h 0 16385 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5487,8 +5487,8 @@ blazing demilich~
 &+W                                  \             (
 &+W                                   \_____________)
 ~
-1073760458 1 0 939532434 14528 18350080 541066752 -1000 S
-ul 0 1540 -1
+1073760458 1 0 0 939532434 14528 18350080 541066752 -1000 S
+ul 0 1540 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5504,8 +5504,8 @@ skeletal hand _spec1_~
 &+Whand is quite old, yet maintains its strength through
 &+Wthe dark forces that have caused its evil reanimation.
 ~
-1073743882 1 0 1048600 0 0 0 -1000 S
-u 0 1 1
+1073743882 1 0 0 1048600 0 0 0 -1000 S
+u 0 1 0 1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5522,8 +5522,8 @@ skeleton~
 &+Wspine.  This freshly-animated skeleton is made
 &+Wout of many species bones, both old and new.
 ~
-10 1 0 1048576 0 0 0 -1000 S
-sk 0 1 -1
+10 1 0 0 1048576 0 0 0 -1000 S
+sk 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5538,8 +5538,8 @@ bone gargoyle _spec1_~
 &+Wteeth - dominated by four front teeth that are as sharp as ever
 &+Win their post mortem state.
 ~
-1073743882 1 0 671088664 0 0 0 -1000 S
-sk 0 1 5
+1073743882 1 0 0 671088664 0 0 0 -1000 S
+sk 0 1 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5554,8 +5554,8 @@ vicious white trog troglodyte _spec1_~
 &+Wof massive inbreeding amongst albino troglodytes, this
 &+Wpale-bodied beast is as aggressive as it is inhuman.
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-h 0 1 -1
+1073743880 1 0 0 0 0 0 0 -1000 S
+h 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5570,8 +5570,8 @@ berserker white-faced white faced trog troglodyte~
 &+Wof massive inbreeding amongst albino troglodytes, this
 &+Wpale-bodied beast is as aggressive as it is inhuman.
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-h 0 1048576 -1
+1073743880 1 0 0 0 0 0 0 -1000 S
+h 0 1048576 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5588,8 +5588,8 @@ massive stone golem _spec1_~
 &+LThe &+Warms &+Lof this titanic golem are made up of the same &+mstone
 &+Las the body.  The golem seems to ignore the native troglodytes entirely.
 ~
-17301514 1 0 152 2048 0 0 0 S
-ee 0 1 -1
+17301514 1 0 0 152 2048 0 0 0 S
+ee 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5604,8 +5604,8 @@ large white troglodyte trog~
 &+Wof massive inbreeding amongst albino troglodytes, this
 &+Wpale-bodied beast is as aggressive as it is inhuman.
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-h 0 1 4
+1073743880 1 0 0 0 0 0 0 -1000 S
+h 0 1 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5620,8 +5620,8 @@ black white speckled trog troglodyte~
 &+Wof massive inbreeding amongst albino troglodytes, this
 &+Wpale-bodied beast is as aggressive as it is inhuman.
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-h 0 1 4
+1073743880 1 0 0 0 0 0 0 -1000 S
+h 0 1 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5637,8 +5637,8 @@ huge stone arm~
 &+Lits arms alike, seems to be completely uninterested in the native
 &+Ltroglodytes that inhabit these tunnels.
 ~
-10 1 0 1048576 0 0 0 0 S
-ee 0 65 5
+10 1 0 0 1048576 0 0 0 0 S
+ee 0 65 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5654,8 +5654,8 @@ mithril golem dwarven king~
 &+mof this royal warrior.  This golem wields no weapons, but has
 &+mhuge, mighty arms.  It stands motionless before the center &+Bdias&+m.
 ~
-2122 0 0 805306520 14528 0 0 0 S
-ee 0 64 -1
+2122 0 0 0 805306520 14528 0 0 0 S
+ee 0 64 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5676,8 +5676,8 @@ marg d'ghor hooded figure trog troglodyte witch doctor witchdoctor~
 &+Wreverred with such 'graces' among the other troglodytes, as he
 &+Wclearly has an otherwordly intellect and presence.
 ~
-1359497224 1 0 939524248 14528 524416 4194816 -1000 S
-up 0 289 -1
+1359497224 1 0 0 939524248 14528 524416 4194816 -1000 S
+up 0 289 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5692,8 +5692,8 @@ black smoke monster~
 &+LThis black matter contains small crackles of dark energy and
 &+Lexists devoid of all light.
 ~
-1074790408 1 0 134217752 0 524288 537657344 -1000 S
-SW 0 64 -1
+1074790408 1 0 0 134217752 0 524288 537657344 -1000 S
+SW 0 64 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5710,8 +5710,8 @@ lithe slimy trog troglodyte~
 &+ygreen fecu&+Glenc&+ye, as its sk&+Gin is nearl&+yy reflect&+Give w&+yith
 &+ysmooth&+Gness.
 ~
-2122 0 0 0 0 0 0 -500 S
-h 0 1 -1
+2122 0 0 0 0 0 0 0 -500 S
+h 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5727,8 +5727,8 @@ slime slug~
 &+gwind up a&+ys the food of the troglodytes providing them
 &+gwi&+yth their food, ironically.
 ~
-262154 1 0 0 0 0 0 -200 S
-pw 0 4160749569 0
+262154 1 0 0 0 0 0 0 -200 S
+pw 0 4160749569 0 0
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5744,8 +5744,8 @@ huge slime slug~
 &+gbloodworm, however its body is cov&+Gered in a thick, transl-
 &+gucent liquid &+Gwith slightly smaller teeth in its maw.
 ~
-264202 1 0 24 0 0 0 -400 S
-pw 0 1 -1
+264202 1 0 0 24 0 0 0 -400 S
+pw 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5762,8 +5762,8 @@ aboleth slime mage~
 &+gthem, while others have thick, &+rb&+ga&+rr&+gb&+re&+gd pads covered in a sticky
 &+ybrown &+gdi&+ysc&+gha&+yrg&+ge.
 ~
-1359088650 1 0 671088664 1063104 262144 37753344 -1000 S
-bh 0 33556997 6
+1359088650 1 0 0 671088664 1063104 262144 37753344 -1000 S
+bh 0 33556997 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5778,8 +5778,8 @@ hungry trog troglodyte~
 &+gof his brethren's kills.  Not particularly muscular for a
 &+gtroglodyte, this creature does, however, possess size.
 ~
-2122 0 0 0 0 0 0 -1000 S
-h 0 1 -1
+2122 0 0 0 0 0 0 0 -1000 S
+h 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5799,8 +5799,8 @@ ancient ravenous arctic beast~
 &+rstrength and an insatiable hunger, attacking with a furious
 &+rbl&+Roo&+rdl&+Rus&+rt.
 ~
-1090521096 1 0 805306392 0 0 4206592 -1000 S
-x 0 17891329 5
+1090521096 1 0 0 805306392 0 0 4206592 -1000 S
+x 0 17891329 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5818,8 +5818,8 @@ hargorigard duergar elder~
 &+rthe Grand Council of Khildarak, rather then his prowess with
 &+rthe blunt-headed weapon.
 ~
-1073743882 0 0 268435480 0 262144 0 -1000 S
-pd 0 1048576 -1
+1073743882 0 0 0 268435480 0 262144 0 -1000 S
+pd 0 1048576 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5835,8 +5835,8 @@ azarem tumek duergar assassin~
 &+rbound goatee braid sit below a long, narrow nose and two blood-
 &+rshot eyes.
 ~
-1073743896 0 0 270008344 2048 0 0 -1000 S
-pd 0 8192 -1
+1073743896 0 0 0 270008344 2048 0 0 -1000 S
+pd 0 8192 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5849,8 +5849,8 @@ writhing tendril _spec1_~
 &+gthick, green slime.  It lashes about within the slime
 &+gpool, wrapping itself around victims of the aboleth.
 ~
-10 1 0 24 0 0 0 -500 S
-vt 0 1 3
+10 1 0 0 24 0 0 0 -500 S
+vt 0 1 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -5867,8 +5867,8 @@ tired trog troglodyte~
 &+Ltrying to get some rest after what must have been
 &+La grueling hunt or ambush.
 ~
-2186 0 0 0 0 0 0 -700 S
-h 0 1 -1
+2186 0 0 0 0 0 0 0 -700 S
+h 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1
@@ -5886,8 +5886,8 @@ troglodyte brightly colored trog matron~
 &+Gis noti&+Ycably sma&+Gller than th&+Ye males of &+Gher species,
 &+Gand bares muc&+Yh bri&+Gghter colors.
 ~
-2058 0 0 24 0 0 0 -800 S
-h 0 1 -1
+2058 0 0 0 24 0 0 0 -800 S
+h 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 9 2
@@ -5905,8 +5905,8 @@ lean trog troglodyte fanatical fanatic~
 &+Gseemingly brought upon by the ancient &+baboleth&+G inhabiting this
 &+Gdreadful place.s
 ~
-1140983816 1 0 134217752 0 0 0 -1000 S
-h 0 1048641 -1
+1140983816 1 0 0 134217752 0 0 0 -1000 S
+h 0 1048641 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5924,8 +5924,8 @@ crazy young troglodyte trog _spec1_~
 &+Gseemingly brought upon by the ancient &+baboleth&+G inhabiting this
 &+Gdreadful place.s
 ~
-1140983816 1 0 134217752 0 0 0 -1000 S
-h 0 1 -1
+1140983816 1 0 0 134217752 0 0 0 -1000 S
+h 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5942,8 +5942,8 @@ exhausted young troglodyte trog~
 &+Ltrying to get some rest after what must have been
 &+La grueling hunt or ambush.
 ~
-2186 0 0 0 0 0 0 -700 S
-h 0 1 -1
+2186 0 0 0 0 0 0 0 -700 S
+h 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -5957,8 +5957,8 @@ sex-crazed sex crazed trog troglodyte~
 &+gresides here, deep within the Shanatar troglodyte tunnels,
 &+genthusiastically grunting and salivating before sex.
 ~
-1073743946 0 0 24 0 0 0 0 S
-h 0 16384 -1
+1073743946 0 0 0 24 0 0 0 0 S
+h 0 16384 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5975,8 +5975,8 @@ troglodyte trog bone chewer bonechewer~
 &+yin-breeding, or perhaps some sort of &+motherwordly &+ymutation.
 &+yRegardless, this fearsome scaled &+Rbeast&+y is one to be reckoned.
 ~
-1073743882 1 0 24 0 0 0 -1000 S
-h 0 1048576 -1
+1073743882 1 0 0 24 0 0 0 -1000 S
+h 0 1048576 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5992,8 +5992,8 @@ shaman trog beefy troglodyte~
 &+yputting hexes, curses, and occasionally blessings upon his
 &+ybrethren.
 ~
-2186 0 0 24 0 0 0 -1000 S
-h 0 256 -1
+2186 0 0 0 24 0 0 0 -1000 S
+h 0 256 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6009,8 +6009,8 @@ young trog troglodyte shaman~
 &+gmaster, this young trog entrances himself in the shamanistic
 &+grituals.
 ~
-1073743946 0 0 24 0 0 0 -1000 S
-h 0 256 -1
+1073743946 0 0 0 24 0 0 0 -1000 S
+h 0 256 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6027,8 +6027,8 @@ fat extremely black trog troglodyte~
 &+Lits many mates and is treated like an alpha among the
 &+Ltribe.
 ~
-1073743944 0 0 24 0 0 0 -800 S
-h 0 1 -1
+1073743944 0 0 0 24 0 0 0 -800 S
+h 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6043,8 +6043,8 @@ large green basilisk _spec1_~
 &+glook upon the troglodytes with fiendish protection,
 &+gsummoned here by the power of the troglodyte shaman.
 ~
-1074268168 0 0 24 0 0 0 0 S
-r 0 1 4
+1074268168 0 0 0 24 0 0 0 0 S
+r 0 1 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6060,8 +6060,8 @@ the more ferocious of his kind.  Always wandering and looking
 for opportunities to increase its survival, or prestige among
 the tribe, this scaled primative beast scavenges its domain.
 ~
-1073743944 1 0 0 0 0 0 -1000 S
-h 0 16385 -1
+1073743944 1 0 0 0 0 0 0 -1000 S
+h 0 16385 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6076,8 +6076,8 @@ angry trog troglodyte guard~
 &+glong &+Wbone &+Bspear&+g but does not particularly seem to enjoy
 &+ghis position.
 ~
-1140852810 1 0 24 0 0 0 -850 S
-h 0 1 -1
+1140852810 1 0 0 24 0 0 0 -850 S
+h 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6093,8 +6093,8 @@ muscular trog troglodyte blood monger bloodmonger~
 &+yfrom his own race as well.  A keen look of hatred and
 &+ybloodlust fills the eyes of this supremely-violent trog.
 ~
-1140852810 1 0 24 0 0 0 -1000 S
-h 0 1048576 -1
+1140852810 1 0 0 24 0 0 0 -1000 S
+h 0 1048576 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6110,8 +6110,8 @@ small young trog~
 &+gimmature troglodyte appears to have been taught one or two
 &+glessons.
 ~
-2188 0 0 24 0 0 0 -750 S
-h 0 16384 2
+2188 0 0 0 24 0 0 0 -750 S
+h 0 16384 0 2
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6127,8 +6127,8 @@ huge beastly trog troglodyte bone chewer bonechewer~
 &+Wa large hunchback, leaning over to duck under the lower parts of
 &+Wof the tunnel ceilings as well as sharp stalagmites.
 ~
-1073743944 1 0 24 0 262144 0 -1000 S
-h 0 1048576 5
+1073743944 1 0 0 24 0 262144 0 -1000 S
+h 0 1048576 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6143,8 +6143,8 @@ troglodyte trog excited hunter~
 &+ymore then the frequently-naked trogs, wearing bits of leather
 &+yarmor; occasionally seen with straps of metal strapped about.
 ~
-1073744074 1 0 24 0 0 0 -1000 S
-h 0 16384 -1
+1073744074 1 0 0 24 0 0 0 -1000 S
+h 0 16384 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6165,8 +6165,8 @@ borik mountain dwarf~
 &+Yand armor; wearing only stains of &+rblood&+Y and the &+yfilth&+Y around
 &+Yhim.
 ~
-2122 0 0 8 0 0 0 1000 S
-pm 0 1 -1
+2122 0 0 0 8 0 0 0 1000 S
+pm 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6184,8 +6184,8 @@ stealthy shield dwarf rogue~
 &+Lfor conversation.  Perhaps his motives surround riches and
 &+Lfortune, or perhaps just his carnal instincts for blood.
 ~
-1073744074 0 0 1572888 0 0 0 0 S
-pm 0 8192 -1
+1073744074 0 0 0 1572888 0 0 0 0 S
+pm 0 8192 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6199,8 +6199,8 @@ troglodyte trog brawny sentinel~
 &+ycase.  He has a devious look in his black eyes, and carries a
 &+ybone spear in his scaly claws.
 ~
-67110922 1 0 24 0 0 0 -600 S
-h 0 1 -1
+67110922 1 0 0 24 0 0 0 -600 S
+h 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -6221,8 +6221,8 @@ kereghaktis kereg trog troglodyte mutant king~
 &+gand combat.  He has huge yellow and green teeth and awfully-
 &+grank halitosis.
 ~
-1092619338 1 0 956301336 276672 0 0 -1000 S
-x 0 131137 -1
+1092619338 1 0 0 956301336 276672 0 0 -1000 S
+x 0 131137 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6242,8 +6242,8 @@ margon gortat'nyk gortat nyk minotaur~
 &+Lstill seems to enjoy the finer things in life, regardless of what
 &+Lvile creatures he might enjoy them with.
 ~
-1140852938 0 0 24 0 0 0 -800 S
-mt 0 16385 6
+1140852938 0 0 0 24 0 0 0 -800 S
+mt 0 16385 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 5 1
@@ -6258,8 +6258,8 @@ basillion drow hunter~
 &+Wa mystery, as he is not known for any affiliation with any of
 &+Wthe houses of Arachdrathos, nor does he wear any of their colors.
 ~
-1090521160 0 0 939524120 14528 0 0 -1000 S
-pl 0 2097152 -1
+1090521160 0 0 0 939524120 14528 0 0 -1000 S
+pl 0 2097152 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6301,8 +6301,8 @@ silmaeth devil price~
 &+LHis &+Rc&+Yl&+Ra&+Yw&+Re&+Yd&+L hands are long and powerful; the entwined muscles ready to
 &+Ldismember limbs from a man with the mere flick of his wrist.
 ~
-1158707338 1 0 939524120 12480 0 33554432 -1000 S
-y 0 272 -1
+1158707338 1 0 0 939524120 12480 0 33554432 -1000 S
+y 0 272 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6317,8 +6317,8 @@ chained cockatrice _spec1_~
 &+rthis vicious mountain bird is still just as deadly as it would
 &+rbe in flight.
 ~
-3082 1 0 24 0 0 0 -600 S
-dk 0 1 2
+3082 1 0 0 24 0 0 0 -600 S
+dk 0 1 0 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -6335,8 +6335,8 @@ trog beast troglodyte handler _spec1_~
 &+ghim, or perhaps that the position of beast handler is
 &+gin constant rotation amongst the troglodytes.
 ~
-67111114 1 0 24 0 0 0 -800 S
-h 0 1 -1
+67111114 1 0 0 24 0 0 0 -800 S
+h 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
