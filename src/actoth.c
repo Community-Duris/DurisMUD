@@ -5855,6 +5855,11 @@ void do_ascend(P_char ch, char *arg, int cmd)
         ("This would be really really really really really dumb........\n\r",ch);
       return;
     }
+    if (affected_by_spell(ch, TAG_RACE_CHANGE))
+    {
+      send_to_char("You cannot ascend until you're in your true form.\n\r", ch);
+      return;
+    }
     if (GET_CLASS(ch, CLASS_THEURGIST))
     {  
       ascend_theurgist(ch);
@@ -5976,6 +5981,11 @@ void do_descend(P_char ch, char *arg, int cmd)
     {
       send_to_char
         ("This would be really really really really really dumb........\n\r",ch);
+      return;
+    }
+    if (affected_by_spell(ch, TAG_RACE_CHANGE))
+    {
+      send_to_char("You cannot descend until you're in your true form.\n\r", ch);
       return;
     }
     if(!GET_CLASS(ch, CLASS_ANTIPALADIN) &&
