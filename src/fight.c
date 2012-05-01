@@ -8397,10 +8397,16 @@ void perform_violence(void)
     }
 
     if(IS_PC(ch) &&
-      IS_PC(opponent) &&
-      !affected_by_spell(ch, TAG_PVPDELAY))
+      IS_PC(opponent))
     {
-      set_short_affected_by(ch, TAG_PVPDELAY, 20 * WAIT_SEC);
+      if (!affected_by_spell(ch, TAG_PVPDELAY))
+      {
+        set_short_affected_by(ch, TAG_PVPDELAY, 20 * WAIT_SEC);
+      }
+      if (!affected_by_spell(opponent, TAG_PVPDELAY))
+      {
+        set_short_affected_by(opponent, TAG_PVPDELAY, 20 * WAIT_SEC);
+      }
     }
     
     if(!FightingCheck(ch, opponent, "perform_violence"))
