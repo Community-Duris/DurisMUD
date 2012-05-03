@@ -1,6 +1,6 @@
 #1351
 The Altar of the Firesworn~
-135171 2 0 40 50 1
+135171 0 0 40 50 2
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -69,9 +69,9 @@ D 0 135130 5 1 100 0 0 0
 *     down exit from "A Stairwell Composed of Engraved Bloodstone Steps" to
 *     "A Stairwell Composed of Engraved Bloodstone Steps" - closed
 *
-D 0 135130 4 1 100 0 0 0
+D 0 135130 4 2 100 0 0 0
 *     up exit from "A Stairwell Composed of Engraved Bloodstone Steps" to
-*     "A Circular Chamber Atop the Firesworn Spire" - closed
+*     "A Circular Chamber Atop the Firesworn Spire" - closed/locked
 *
 D 0 135131 5 1 100 0 0 0
 *     down exit from "A Circular Chamber Atop the Firesworn Spire" to
@@ -93,29 +93,44 @@ O 0 135127 5 135129 100 0 0 0      * a large torch
 M 0 135109 1 135105 100 0 0 0      * Vrolithin, the devil priest of Maelshem
 G 1 135111 1 0 100 0 0 0           *    a key of forged shadowsteel
 M 0 135108 11 135105 100 0 0 0     * a firesworn legion sentry
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 M 0 135108 11 135105 100 0 0 0     * a firesworn legion sentry
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 M 0 135108 11 135105 100 0 0 0     * a firesworn legion sentry
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
+M 0 135101 4 135108 100 0 0 0      * a firesworn soldier
+M 0 135101 4 135108 100 0 0 0      * a firesworn soldier
+M 0 135101 4 135108 100 0 0 0      * a firesworn soldier
+M 0 135101 4 135108 100 0 0 0      * a firesworn soldier
 M 0 135108 11 135110 100 0 0 0     * a firesworn legion sentry
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 M 0 135108 11 135110 100 0 0 0     * a firesworn legion sentry
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 G 1 135123 1 0 100 0 0 0           *    a key of blood
 M 0 135103 1 135112 100 0 0 0      * the guardian of the blood
 G 1 135106 1 0 100 0 0 0           *    the divine essence of blood
 M 0 135108 11 135113 100 0 0 0     * a firesworn legion sentry
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 M 0 135108 11 135113 100 0 0 0     * a firesworn legion sentry
-G 1 135125 1 0 100 0 0 0           *    a fire imbued key
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
+E 1 135125 1 18 100 0 0 0          *   a fire imbued key
 M 0 135104 1 135115 100 0 0 0      * the guardian of the fire
 E 1 135112 2 16 100 0 0 0          *   the sword of dancing fire
 E 1 135112 2 17 100 0 0 0          *   the sword of dancing fire
 G 1 135107 1 0 100 0 0 0           *    the divine essence of fire
 M 0 135108 11 135116 100 0 0 0     * a firesworn legion sentry
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 M 0 135108 11 135116 100 0 0 0     * a firesworn legion sentry
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 G 1 135124 1 0 100 0 0 0           *    a key of solidified mists
 M 0 135105 1 135118 100 0 0 0      * the guardian of the mists
 E 1 135113 2 16 100 0 0 0          *   a frost-encrusted hammer of shadowsteel
 E 1 135113 2 17 100 0 0 0          *   a frost-encrusted hammer of shadowsteel
 G 1 135108 1 0 100 0 0 0           *    the divine essence of mist
 M 0 135108 11 135119 100 0 0 0     * a firesworn legion sentry
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 M 0 135108 11 135119 100 0 0 0     * a firesworn legion sentry
+E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 G 1 135126 1 0 100 0 0 0           *    a key of binding enchantment
 M 0 135106 1 135121 100 0 0 0      * the guardian of enchantment
 E 1 135116 2 16 100 0 0 0          *   hidden enchantment priest proc 1
@@ -126,8 +141,18 @@ E 1 135118 2 16 100 0 0 0          *   a wickedly barbed shadowsteel greatsword
 M 0 135113 2 135122 100 0 0 0      * a construct of infused shadowsteel
 E 1 135118 2 16 100 0 0 0          *   a wickedly barbed shadowsteel greatsword
 G 1 135130 1 0 100 0 0 0           *    a bloodstone key
+M 0 135112 1 135125 100 0 0 0      * Calian, high priestess of Maelshem
+M 0 135121 1 135125 100 0 0 0      * Ram'kuk, the first apprentice of Maelshem
+M 0 135120 7 135126 100 0 0 0      * a sycophantic acolyte
+M 0 135120 7 135126 100 0 0 0      * a sycophantic acolyte
+M 0 135120 7 135126 100 0 0 0      * a sycophantic acolyte
+M 0 135120 7 135126 100 0 0 0      * a sycophantic acolyte
+M 0 135120 7 135126 100 0 0 0      * a sycophantic acolyte
+M 0 135120 7 135126 100 0 0 0      * a sycophantic acolyte
+M 0 135120 7 135126 100 0 0 0      * a sycophantic acolyte
 M 0 135111 3 135130 100 0 0 0      * a shadow infused hellhound
 M 0 135111 3 135130 100 0 0 0      * a shadow infused hellhound
+G 1 135133 1 0 100 0 0 0           *    a silver key hanging from a collar
 M 0 135111 3 135130 100 0 0 0      * a shadow infused hellhound
 M 0 135110 1 135131 100 0 0 0      * Maelshem, the false god
 E 1 135121 1 16 100 0 0 0          *   hidden maelshem proc

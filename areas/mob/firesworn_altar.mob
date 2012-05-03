@@ -1,10 +1,10 @@
 #135101
-firesworn soldier demon~
+firesworn soldier devil~
 &+La &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+Lsoldier&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+LA &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+Lsoldier stands here, guarding the main complex from &+mintruders&+L.&n
 ~
 ~
-8 1 0 0 402653336 0 0 0 -1000 S
+161864 1 0 0 402653336 0 0 0 -1000 S
 y 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -15,29 +15,29 @@ commander firesworn legion demon~
 &+LA commander in the firesworn legion stands here, directing soldiers.&n
 ~
 ~
-268466184 1 0 0 24 0 0 0 -1000 S
+268466184 1 1 0 152 0 0 0 -1000 S
 Y 0 513 0 -1
-55 0 0 1d1+1 1d1+1
+60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #135103
-guardian blood _no_move_~
+guardian priest blood _no_move_~
 &+Lthe guardian of the &+rbl&+Roo&+rd&n~
 &+LA priest garbed in &+rblood s&+Lp&+rl&+La&+rt&+Lt&+re&+Lr&+re&+Ld robes stands here, guarding the altar.&n
 ~
 ~
-268453962 1 0 0 0 0 0 0 -1000 S
+268453962 1 1 0 0 0 0 0 -1000 S
 y 0 768 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #135104
-guardian fire _spec1_~
+guardian priest fire _spec1_~
 &+Lthe guardian of the &+Rf&+ri&+Rr&+re&n~
 &+LA priest dressed in &+Wb&+wi&+Wl&+wl&+Wo&+ww&+Wi&+wn&+Wg &+Lrobes of &+Rf&+ri&+Rr&+re &+Lstands here, guarding the altar.&n
 ~
 ~
-2090 0 0 0 0 0 0 0 -1000 S
+2090 1 1 0 0 0 0 0 -1000 S
 y 0 2097152 2 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -48,7 +48,7 @@ guardian mists priest _no_move_~
 &+LA priest enshrouded in a cloak of &+cm&+Ci&+cs&+Ct&+cs &+Lstands here, guarding the altar.&n
 ~
 ~
-268466186 1 0 0 24 0 2097152 0 -1000 S
+268466186 1 1 0 24 0 2097152 0 -1000 S
 Y 0 2097152 1 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -59,7 +59,7 @@ guardian priest enchantment~
 &+LA priest stands here, complex ma&+Ygi&+Lca&+Yl e&+Lne&+Yrg&+Lie&+Ys &+Lweaving a pr&+mot&+Lec&+mti&+Lon around the altar.&n
 ~
 ~
-8 0 0 0 0 0 0 0 -1000 S
+8 1 1 0 0 0 0 0 -1000 S
 Y 0 33281 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -81,7 +81,7 @@ firesworn legion demon sentry _no_move_~
 &+LA burly &+rf&+Ri&+Yr&+Wesw&+Yo&+Rr&+rn &+bse&+Bnt&+bry &+Lstands here, guarding access to the Spires of Ascendance.&n
 ~
 ~
-30794 0 0 0 268435512 0 0 0 -1000 S
+30794 1 1 0 268435512 0 0 0 -1000 S
 Y 0 16385 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -92,7 +92,7 @@ vrolithin devil priest _no_move_~
 &+LStanding guard here, the d&+re&+Lv&+ri&+Ll priest known as &+rVrolithin &+Lblocks entrance to the Spires.&n
 ~
 ~
-423946 1 1 0 402653392 0 0 0 -1000 S
+17201162 1 1 0 402653392 0 0 0 -1000 S
 Y 0 1048576 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -104,7 +104,7 @@ maelshem false god~
 ~
 ~
 30730 1 0 0 24 1 16777216 1024 -1000 S
-SW 0 16777472 0 -1
+ea 0 16777472 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -120,9 +120,9 @@ sw 0 1048576 2 -1
 0.0.0.0 0
 8 8 1
 #135112
-calian high priestess human~
+calian high priestess human _no_move_~
 &+LCalian, &+chigh priestess &+Lof &+bMaelshem&n~
-&+LA small &+Chuman &+Ygirl &+Lstands here, draped in &+rpriestess &+Lrobes.&n
+&+LA gaunt &+Chuman &+Ygirl &+Lstands here, draped in &+rpriestess &+Lrobes.&n
 ~
 ~
 268453962 0 0 0 939524248 0 0 0 -1000 S
@@ -159,8 +159,8 @@ tiliwibble halfling thief~
 &+La soft '&+WHello&+L'.&n
 ~
 30794 0 0 0 402653336 1048576 0 33559552 0 S
-PF 0 4096 2 -1
-60 0 0 1d1+1 1d1+1
+PF 0 4096 0 -1
+50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
 #135115
@@ -169,8 +169,8 @@ elemental rampaging dreams~
 &+LAn elemental conglomeration of shifting dreams flows about the merky void.&n
 ~
 ~
-30728 0 0 0 0 0 0 0 0 S
-VE 0 1048576 2 -1
+30728 1 1 0 0 0 0 0 0 S
+ef 0 1048576 2 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -192,7 +192,7 @@ nightmare projection maelshem~
 ~
 ~
 16807976 1 0 0 402653208 8400896 16777216 33554432 -1000 S
-VE 0 16777761 0 -1
+ea 0 16777761 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -202,7 +202,7 @@ nightmare empowered hellhound~
 &+LA vicious &+rhellhound &+Lstands here, guarding the weakend projection of &+bMaelshem.&n
 ~
 ~
-40 1 0 0 0 4194304 0 0 0 S
+40 1 1 0 144 4194304 0 0 0 S
 AE 0 1 1 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -218,3 +218,25 @@ PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
+#135120
+sycophantic acolyte cleric novice~
+&+La &+Cs&+cycophanti&+Cc &+Ra&+rcolyt&+Re&n~
+&+LA &+Mw&+Mi&+ml&+Md &+Leyed &+Ra&+rcolyt&+Re &+Lstands here, praising the works his &+cprophet&+L.&n
+~
+~
+30728 1 1 0 144 2049 0 4096 -1000 S
+PH 0 32 1 -1
+53 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#135121
+mage ram kuk ram'kuk first apprentice _no_move_~
+&+GR&+ga&+Gm&+g'&+Gk&+gu&+Gk&+L, the &+Wfirst &+ya&+Ypprentic&+ye &+Lof &+bMaelshem&n~
+&+LA slender &+Bm&+bag&+Be &+Lstands here, studying a complex tome.&n
+~
+~
+30730 1 1 0 152 0 0 0 -1000 S
+PH 0 4194304 1 -1
+59 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
