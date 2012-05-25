@@ -1592,7 +1592,7 @@ const int min_stats_for_class[CLASS_COUNT + 1][8] = {
  *                       5 = not a legal race/class combo
  */ 
 
-cxtern const int class_table[LAST_RACE + 1][CLASS_COUNT + 1];
+extern const int class_table[LAST_RACE + 1][CLASS_COUNT + 1];
 const int class_table[LAST_RACE + 1][CLASS_COUNT + 1] = {
 /*
  *      Wa   Ra   Ps   Pa   Ap   Cl   Mo   Dr   Sh   So   Ne   Co   Ro   As   Me   Ba   Th   Wl   Mf   Cm   Be   RV   Il   SP   DL   EM   Av   Th=Class
