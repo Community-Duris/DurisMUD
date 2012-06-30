@@ -3,7 +3,7 @@
 SHELL = /bin/sh
 #EFENCE = 1
 
-CC	= /usr/bin/g++-4.0
+CC	= /usr/bin/g++
 DEBUG	= -ggdb3
 #LDFLAGS	= -ggdb3
 
@@ -15,7 +15,7 @@ LDFLAGS += -L/usr/local/lib/mysql -L./ships
 
 OPTS    = -O2
 
-CFLAGS = -pg -Wno-write-strings -arch i386
+CFLAGS = -pg -Wno-write-strings -m32 
 
 #CFLAGS += -D__NO_MYSQL__
 CFLAGS += -DTEST_MUD
@@ -254,7 +254,7 @@ libships.a:
 	cd ships && $(MAKE)
 
 dms_new : $(DMS_OBJS) $(OPT_OBJS) $(OUR_LIBS)
-	$(CC) $(LDFLAGS) -pg -o dms_new $(DMS_OBJS) $(OPT_OBJS) $(LIBS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -pg -o dms_new $(DMS_OBJS) $(OPT_OBJS) $(LIBS)
 	chmod a+rx dms_new
 
 pfile : $(PFILE_OBJS) $(SHARED_PFILE_OBJS) mm.o common.o
