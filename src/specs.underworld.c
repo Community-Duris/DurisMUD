@@ -639,7 +639,7 @@ int orb_of_the_sea(P_obj obj, P_char ch, int cmd, char *arg)
   data = (struct proc_data *) arg;
   victim = data->victim;
 
-  if (OBJ_WORN_BY(obj, ch) && victim && !IS_SET(world[ch->in_room].room_flags, NO_TELEPORT))
+  if (OBJ_WORN_BY(obj, ch) && victim && !IS_SET(world[ch->in_room].room_flags, NO_TELEPORT) && !IS_GH_GOLEM(victim) && GET_RACE(victim) != RACE_CONSTRUCT && !(strstr(victim->player.name, "_no_move_")))
   {
     if (!number(0, 30))
     {
