@@ -8103,7 +8103,7 @@ void do_recall(P_char ch, char *argument, int cmd)
   int index, i;
   char arg[256];
   int size = 10;
-  char *pattern = 0;
+  char *pattern = NULL;
 
   one_argument(argument, arg);
 
@@ -8128,7 +8128,7 @@ void do_recall(P_char ch, char *argument, int cmd)
   
   ITERATE_LOG_LIMIT(ch, LOG_PRIVATE, size)
   {
-    if( !pattern || fnmatch(pattern, LOG_MSG(), FNM_CASEFOLD) )
+    if( !pattern || isname( pattern, LOG_MSG()) )
       send_to_char( LOG_MSG(), ch, LOG_NONE );
   }  
 }
