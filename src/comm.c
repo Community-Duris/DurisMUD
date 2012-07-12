@@ -1701,7 +1701,7 @@ int new_descriptor(int s)
    * init desc data
    */
   newd->descriptor = desc;
-//  newd->connected = CON_HOST_LOOKUP;
+  //newd->connected = CON_HOST_LOOKUP;
   newd->wait = 1;
   strncpy(newd->host, Gbuf1, 50);
   sprintf(Gbuf1,
@@ -1802,6 +1802,7 @@ int new_descriptor(int s)
   descriptor_list = newd;
 
   newd->term_type = TERM_ANSI;
+  select_terminal(newd, "");
   STATE(newd) = CON_NME;
   SEND_TO_Q
     ("By what name do you wish to be known? Type 'generate' to generate names.",

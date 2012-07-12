@@ -4367,6 +4367,12 @@ void spell_spirit_jump(int level, P_char ch, char *arg, int type,
     send_to_char("&+CYou failed.\n", ch);
     return;
   }
+  P_char rider = get_linking_char(victim, LNK_RIDING);
+  if(IS_NPC(victim) && rider)
+  {
+    send_to_char("&+CYou failed.\n", ch);
+    return;
+  }
 
   location = victim->in_room;
 

@@ -649,7 +649,7 @@ Because of his ambition and intelligence, Kawasawa is feared by many of
 the other Clan leaders.
 ~
 67119178 0 0 0 301990040 2076 67108864 270336 0 S
-PH 0 1 0 -1
+PH 0 1048576 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -675,7 +675,7 @@ comment by some worthless functionary has put this Lord's clan in a difficult
 situation.
 ~
 67119178 0 0 0 301990040 2076 67108864 270336 0 S
-PH 0 1 0 -1
+PH 0 64 2 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -698,7 +698,7 @@ skills and abilities, and the battle-clerics of the Clan have won many
 a battle.
 ~
 67119178 0 0 0 301990040 2076 67108864 270336 0 S
-PH 0 1 0 -1
+PH 0 33554432 2 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -719,7 +719,7 @@ would-be upstart Clans in their place.  Even the dangerous Lord Kawasawa
 of the Raven Clan stays out of Crane business.
 ~
 67119178 0 0 0 301990040 2076 67108864 0 0 S
-PH 0 1 0 -1
+PH 0 16384 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -740,8 +740,8 @@ be a thinker and not a fighter, although combat training is an integral
 part to the Order of Purity's teachings, which strives for both mental and
 physical harmony.
 ~
-67119178 0 0 0 301990040 28 67108864 270336 0 S
-PH 0 1 0 -1
+67119178 0 0 0 301990040 28 67108864 270336 750 S
+PH 0 8 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -765,7 +765,7 @@ with a mixture of feigned innocence, because she's a woman, and backstabbing
 ruthlessness.
 ~
 67119178 0 0 0 301990040 262172 67108864 270336 0 S
-PH 0 1 0 -1
+PH 0 1 3 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

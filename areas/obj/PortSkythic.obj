@@ -102,3 +102,19 @@ remains beaten corpse prostitute~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
+#138013
+patch scalp torn naga scales~
+&+La &+ypatch &+Lof &+rtorn &+Ln&+ma&+Lg&+ma &+Lscales&n~
+&+LA pile if scalped &+Ln&+ma&+Lg&+ma &+Lscales lies here, covered in congealed &+rblood&+L.&n~
+~
+8 47 3 0 7 0 8388608 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 142 100
+#138014
+object unnamed~
+the ruins of a giant statue~
+~
+~
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100

@@ -1,0 +1,859 @@
+#2
+&+rM&+Ra&+Lvul&+Rs&+rk&+L - the Mino&+rtaur &+wSet&+Wtlem&+went&n~
+139732 1 0 40 50 2
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 139500 0 2 100 0 0 0
+*     north exit from "Before the Stone Mansion" to
+*     "Inside the Stone Mansion" - closed/locked
+*
+D 0 139501 2 2 100 0 0 0
+*     south exit from "Inside the Stone Mansion" to
+*     "Before the Stone Mansion" - closed/locked
+*
+D 0 139503 3 2 100 0 0 0
+*     west exit from "Along the Central Street" to
+*     "The Home of Advisor Ilver" - closed/locked
+*
+D 0 139510 1 2 100 0 0 0
+*     east exit from "The Home of Advisor Ilver" to
+*     "Along the Central Street" - closed/locked
+*
+D 0 139504 1 1 100 0 0 0
+*     east exit from "A Turn in the Central Street" to
+*     "Inside Valtor's Jewellery" - closed
+*
+D 0 139511 3 1 100 0 0 0
+*     west exit from "Inside Valtor's Jewellery" to
+*     "A Turn in the Central Street" - closed
+*
+D 0 139504 2 1 100 0 0 0
+*     south exit from "A Turn in the Central Street" to
+*     "Inside A Citizens Dwelling" - closed
+*
+D 0 139513 0 1 100 0 0 0
+*     north exit from "Inside A Citizens Dwelling" to
+*     "A Turn in the Central Street" - closed
+*
+D 0 139505 2 1 100 0 0 0
+*     south exit from "The Central Street" to
+*     "In the Lobby of Avlir's Restaurant" - closed
+*
+D 0 139514 0 1 100 0 0 0
+*     north exit from "In the Lobby of Avlir's Restaurant" to
+*     "The Central Street" - closed
+*
+D 0 139506 0 1 100 0 0 0
+*     north exit from "On the Central Road" to
+*     "A Commoner's Home" - closed
+*
+D 0 139518 2 1 100 0 0 0
+*     south exit from "A Commoner's Home" to
+*     "On the Central Road" - closed
+*
+D 0 139506 3 1 100 0 0 0
+*     west exit from "On the Central Road" to
+*     "A Merchant's Home" - closed
+*
+D 0 139519 1 1 100 0 0 0
+*     east exit from "A Merchant's Home" to
+*     "On the Central Road" - closed
+*
+D 0 139508 3 1 100 0 0 0
+*     west exit from "The Central Street" to
+*     "A Commoner's Dwelling" - closed
+*
+D 0 139524 1 1 100 0 0 0
+*     east exit from "A Commoner's Dwelling" to
+*     "The Central Street" - closed
+*
+D 0 139511 2 2 100 0 0 0
+*     south exit from "Inside Valtor's Jewellery" to
+*     "Valtor's Private Office" - closed/locked
+*
+D 0 139512 0 2 100 0 0 0
+*     north exit from "Valtor's Private Office" to
+*     "Inside Valtor's Jewellery" - closed/locked
+*
+D 0 139515 1 1 100 0 0 0
+*     east exit from "Avlir's Restaurant" to
+*     "The Kitchen" - closed
+*
+D 0 139516 3 1 100 0 0 0
+*     west exit from "The Kitchen" to
+*     "Avlir's Restaurant" - closed
+*
+D 0 139515 4 2 100 0 0 0
+*     up exit from "Avlir's Restaurant" to
+*     "Avlir's Private Office" - closed/locked
+*
+D 0 139517 5 2 100 0 0 0
+*     down exit from "Avlir's Private Office" to
+*     "Avlir's Restaurant" - closed/locked
+*
+D 0 139520 4 1 100 0 0 0
+*     up exit from "Griber's Armory" to
+*     "Griber's Home" - closed
+*
+D 0 139522 5 1 100 0 0 0
+*     down exit from "Griber's Home" to
+*     "Griber's Armory" - closed
+*
+D 0 139528 5 1 100 0 0 0
+*     down exit from "Along the Palisade Road" to
+*     "A Tunnel Under the Palisade" - closed
+*
+D 0 139576 4 1 100 0 0 0
+*     up exit from "A Tunnel Under the Palisade" to
+*     "Along the Palisade Road" - closed
+*
+D 0 139530 1 1 100 0 0 0
+*     east exit from "Along the Palisade Road" to
+*     "A Tanner's Home" - closed
+*
+D 0 139533 3 1 100 0 0 0
+*     west exit from "A Tanner's Home" to
+*     "Along the Palisade Road" - closed
+*
+D 0 139530 3 1 100 0 0 0
+*     west exit from "Along the Palisade Road" to
+*     "A Tanner's Workshop" - closed
+*
+D 0 139532 1 1 100 0 0 0
+*     east exit from "A Tanner's Workshop" to
+*     "Along the Palisade Road" - closed
+*
+D 0 139535 0 2 100 0 0 0
+*     north exit from "Walgor's Skins and Hides" to
+*     "Alizalin's Working Quarters" - closed/locked
+*
+D 0 139536 2 2 100 0 0 0
+*     south exit from "Alizalin's Working Quarters" to
+*     "Walgor's Skins and Hides" - closed/locked
+*
+D 0 139540 0 1 100 0 0 0
+*     north exit from "The Soldier's Road" to
+*     "A Soldier's Home" - closed
+*
+D 0 139541 2 1 100 0 0 0
+*     south exit from "A Soldier's Home" to
+*     "The Soldier's Road" - closed
+*
+D 0 139542 0 1 100 0 0 0
+*     north exit from "The Soldier's Road" to
+*     "The Home of a Soldier" - closed
+*
+D 0 139543 2 1 100 0 0 0
+*     south exit from "The Home of a Soldier" to
+*     "The Soldier's Road" - closed
+*
+D 0 139542 2 1 100 0 0 0
+*     south exit from "The Soldier's Road" to
+*     "A Soldier's Dwelling" - closed
+*
+D 0 139544 0 1 100 0 0 0
+*     north exit from "A Soldier's Dwelling" to
+*     "The Soldier's Road" - closed
+*
+D 0 139547 5 2 100 0 0 0
+*     down exit from "A Burnt-out Home" to
+*     "In a Mage's Secret Library" - closed/locked
+*
+D 0 139599 4 2 100 0 0 0
+*     up exit from "In a Mage's Secret Library" to
+*     "A Burnt-out Home" - closed/locked
+*
+D 0 139548 2 1 100 0 0 0
+*     south exit from "Inside the Gates of Mavulsk" to
+*     "Before the Gates of Mavulsk" - closed
+*
+D 0 139549 0 1 100 0 0 0
+*     north exit from "Before the Gates of Mavulsk" to
+*     "Inside the Gates of Mavulsk" - closed
+*
+D 0 139548 4 1 100 0 0 0
+*     up exit from "Inside the Gates of Mavulsk" to
+*     "The Gatehouse above the Gate" - closed
+*
+D 0 139550 5 1 100 0 0 0
+*     down exit from "The Gatehouse above the Gate" to
+*     "Inside the Gates of Mavulsk" - closed
+*
+D 0 139550 1 1 100 0 0 0
+*     east exit from "The Gatehouse above the Gate" to
+*     "On the Palisade Walkway" - closed
+*
+D 0 139554 3 1 100 0 0 0
+*     west exit from "On the Palisade Walkway" to
+*     "The Gatehouse above the Gate" - closed
+*
+D 0 139550 3 1 100 0 0 0
+*     west exit from "The Gatehouse above the Gate" to
+*     "The Guard's Walkway on the Palisade" - closed
+*
+D 0 139551 1 1 100 0 0 0
+*     east exit from "The Guard's Walkway on the Palisade" to
+*     "The Gatehouse above the Gate" - closed
+*
+D 0 139556 1 1 100 0 0 0
+*     east exit from "Further East on the Guard's Walkway" to
+*     "Inside a Watchtower" - closed
+*
+D 0 139557 3 1 100 0 0 0
+*     west exit from "Inside a Watchtower" to
+*     "Further East on the Guard's Walkway" - closed
+*
+D 0 139559 2 1 100 0 0 0
+*     south exit from "The Eastern Palisade Road" to
+*     "Inside a Tanner's Workshop" - closed
+*
+D 0 139560 0 1 100 0 0 0
+*     north exit from "Inside a Tanner's Workshop" to
+*     "The Eastern Palisade Road" - closed
+*
+D 0 139561 0 1 100 0 0 0
+*     north exit from "Along the Southern Palisade Road" to
+*     "The Barreler's Workshop" - closed
+*
+D 0 139568 2 1 100 0 0 0
+*     south exit from "The Barreler's Workshop" to
+*     "Along the Southern Palisade Road" - closed
+*
+D 0 139564 1 1 100 0 0 0
+*     east exit from "Claw Alley" to
+*     "A Room Before the Tavern" - closed
+*
+D 0 139565 3 1 100 0 0 0
+*     west exit from "A Room Before the Tavern" to
+*     "Claw Alley" - closed
+*
+D 0 139566 1 1 100 0 0 0
+*     east exit from "Claw Alley" to
+*     "A Poor Commoner's Dwelling" - closed
+*
+D 0 139571 3 1 100 0 0 0
+*     west exit from "A Poor Commoner's Dwelling" to
+*     "Claw Alley" - closed
+*
+D 0 139569 2 1 100 0 0 0
+*     south exit from "Inside One Eye's Tavern" to
+*     "The Gambler's Hangout" - closed
+*
+D 0 139570 0 1 100 0 0 0
+*     north exit from "The Gambler's Hangout" to
+*     "Inside One Eye's Tavern" - closed
+*
+D 0 139572 1 1 100 0 0 0
+*     east exit from "The Northern Part of Claw Alley" to
+*     "A Commoner's Spartan Home" - closed
+*
+D 0 139573 3 1 100 0 0 0
+*     west exit from "A Commoner's Spartan Home" to
+*     "The Northern Part of Claw Alley" - closed
+*
+D 0 139572 3 1 100 0 0 0
+*     west exit from "The Northern Part of Claw Alley" to
+*     "The Home of a Poor Commoner" - closed
+*
+D 0 139574 1 1 100 0 0 0
+*     east exit from "The Home of a Poor Commoner" to
+*     "The Northern Part of Claw Alley" - closed
+*
+D 0 139576 3 1 100 0 0 0
+*     west exit from "A Tunnel Under the Palisade" to
+*     "By a Huge Bush on the Sand Embankment" - closed
+*
+D 0 139579 1 1 100 0 0 0
+*     east exit from "By a Huge Bush on the Sand Embankment" to
+*     "A Tunnel Under the Palisade" - closed
+*
+D 0 139586 0 1 100 0 0 0
+*     north exit from "Below a Waterfall" to
+*     "Behind the Waterfall" - closed
+*
+D 0 139587 2 1 100 0 0 0
+*     south exit from "Behind the Waterfall" to
+*     "Below a Waterfall" - closed
+*
+D 0 139587 8 1 100 0 0 0
+*     northeast exit from "Behind the Waterfall" to
+*     "Behind a Large Stone" - closed
+*
+D 0 139588 7 1 100 0 0 0
+*     southwest exit from "Behind a Large Stone" to
+*     "Behind the Waterfall" - closed
+*
+D 0 139590 1 1 100 0 0 0
+*     east exit from "A Guardroom" to
+*     "The Lieutenant's Office" - closed
+*
+D 0 139592 3 1 100 0 0 0
+*     west exit from "The Lieutenant's Office" to
+*     "A Guardroom" - closed
+*
+D 0 139593 6 1 100 0 0 0
+*     northwest exit from "Before a Huge Stone Stairway" to
+*     "A Hallway in the West Wing" - closed
+*
+D 0 139596 9 1 100 0 0 0
+*     southeast exit from "A Hallway in the West Wing" to
+*     "Before a Huge Stone Stairway" - closed
+*
+D 0 139593 8 1 100 0 0 0
+*     northeast exit from "Before a Huge Stone Stairway" to
+*     "Above a Steep Staircase" - closed
+*
+D 0 139595 7 1 100 0 0 0
+*     southwest exit from "Above a Steep Staircase" to
+*     "Before a Huge Stone Stairway" - closed
+*
+D 0 139594 1 2 100 0 0 0
+*     east exit from "A Huge Stone Hall" to
+*     "The Emissary's Hallway" - closed/locked
+*
+D 0 139601 3 2 100 0 0 0
+*     west exit from "The Emissary's Hallway" to
+*     "A Huge Stone Hall" - closed/locked
+*
+D 0 139594 3 1 100 0 0 0
+*     west exit from "A Huge Stone Hall" to
+*     "A Quiet Library" - closed
+*
+D 0 139603 1 1 100 0 0 0
+*     east exit from "A Quiet Library" to
+*     "A Huge Stone Hall" - closed
+*
+D 0 139595 5 1 100 0 0 0
+*     down exit from "Above a Steep Staircase" to
+*     "At the Bottom of Some Stairs" - closed
+*
+D 0 139613 4 1 100 0 0 0
+*     up exit from "At the Bottom of Some Stairs" to
+*     "Above a Steep Staircase" - closed
+*
+D 0 139596 1 1 100 0 0 0
+*     east exit from "A Hallway in the West Wing" to
+*     "A Storage Room" - closed
+*
+D 0 139598 3 1 100 0 0 0
+*     west exit from "A Storage Room" to
+*     "A Hallway in the West Wing" - closed
+*
+D 0 139599 1 1 100 0 0 0
+*     east exit from "In a Mage's Secret Library" to
+*     "The Room of Pentagrams" - closed
+*
+D 0 139600 3 1 100 0 0 0
+*     west exit from "The Room of Pentagrams" to
+*     "In a Mage's Secret Library" - closed
+*
+D 0 139601 0 1 100 0 0 0
+*     north exit from "The Emissary's Hallway" to
+*     "An Empty Guestroom" - closed
+*
+D 0 139606 2 1 100 0 0 0
+*     south exit from "An Empty Guestroom" to
+*     "The Emissary's Hallway" - closed
+*
+D 0 139601 2 1 100 0 0 0
+*     south exit from "The Emissary's Hallway" to
+*     "An Emissary's Bedroom" - closed
+*
+D 0 139604 0 1 100 0 0 0
+*     north exit from "An Emissary's Bedroom" to
+*     "The Emissary's Hallway" - closed
+*
+D 0 139605 0 1 100 0 0 0
+*     north exit from "The Emissary's Hallway" to
+*     "An Emissary's Bedroom" - closed
+*
+D 0 139607 2 1 100 0 0 0
+*     south exit from "An Emissary's Bedroom" to
+*     "The Emissary's Hallway" - closed
+*
+D 0 139605 2 1 100 0 0 0
+*     south exit from "The Emissary's Hallway" to
+*     "An Emissary's Room" - closed
+*
+D 0 139608 0 1 100 0 0 0
+*     north exit from "An Emissary's Room" to
+*     "The Emissary's Hallway" - closed
+*
+D 0 139609 0 1 100 0 0 0
+*     north exit from "The Grand Hallway" to
+*     "The Audience Chamber" - closed
+*
+D 0 139612 2 1 100 0 0 0
+*     south exit from "The Audience Chamber" to
+*     "The Grand Hallway" - closed
+*
+D 0 139609 3 1 100 0 0 0
+*     west exit from "The Grand Hallway" to
+*     "Inside a Large Bedroom" - closed
+*
+D 0 139610 1 1 100 0 0 0
+*     east exit from "Inside a Large Bedroom" to
+*     "The Grand Hallway" - closed
+*
+D 0 139610 0 1 100 0 0 0
+*     north exit from "Inside a Large Bedroom" to
+*     "A Small Treasure Room" - closed
+*
+D 0 139611 2 1 100 0 0 0
+*     south exit from "A Small Treasure Room" to
+*     "Inside a Large Bedroom" - closed
+*
+D 0 139614 1 1 100 0 0 0
+*     east exit from "Before the Prison" to
+*     "The Prison Hall" - closed
+*
+D 0 139615 3 1 100 0 0 0
+*     west exit from "The Prison Hall" to
+*     "Before the Prison" - closed
+*
+D 0 139615 0 2 100 0 0 0
+*     north exit from "The Prison Hall" to
+*     "A Prison Cell" - closed/locked
+*
+D 0 139619 2 2 100 0 0 0
+*     south exit from "A Prison Cell" to
+*     "The Prison Hall" - closed/locked
+*
+D 0 139616 0 2 100 0 0 0
+*     north exit from "The End of the Prison Corridor" to
+*     "A Prison Cell" - closed/locked
+*
+D 0 139617 2 2 100 0 0 0
+*     south exit from "A Prison Cell" to
+*     "The End of the Prison Corridor" - closed/locked
+*
+D 0 139616 2 2 100 0 0 0
+*     south exit from "The End of the Prison Corridor" to
+*     "A Magical Prison Cell" - closed/locked
+*
+D 0 139618 0 2 100 0 0 0
+*     north exit from "A Magical Prison Cell" to
+*     "The End of the Prison Corridor" - closed/locked
+*
+D 0 139623 0 2 100 0 0 0
+*     north exit from "A Tunel Through the Miner's Complex" to
+*     "At the Top of a Mining Shaft" - closed/locked
+*
+D 0 139626 2 2 100 0 0 0
+*     south exit from "At the Top of a Mining Shaft" to
+*     "A Tunel Through the Miner's Complex" - closed/locked
+*
+D 0 139642 1 1 100 0 0 0
+*     east exit from "A Dead End in The Mines" to
+*     "Behind a Large Boulder" - closed
+*
+D 0 139643 3 1 100 0 0 0
+*     west exit from "Behind a Large Boulder" to
+*     "A Dead End in The Mines" - closed
+*
+D 0 139649 8 1 100 0 0 0
+*     northeast exit from "An Underground Lake" to
+*     "A Hidden Part of the Lake" - closed
+*
+D 0 139652 7 1 100 0 0 0
+*     southwest exit from "A Hidden Part of the Lake" to
+*     "An Underground Lake" - closed
+*
+D 0 139673 5 1 100 0 0 0
+*     down exit from "The Outer Layers of Hell" to
+*     "In a Glowing Magma Pit" - closed
+*
+D 0 139678 4 1 100 0 0 0
+*     up exit from "In a Glowing Magma Pit" to
+*     "The Outer Layers of Hell" - closed
+*
+D 0 139709 2 1 100 0 0 0
+*     south exit from "Below some Cliffs in the Forest" to
+*     "Inside a Large Tunnel" - closed
+*
+D 0 139713 0 1 100 0 0 0
+*     north exit from "Inside a Large Tunnel" to
+*     "Below some Cliffs in the Forest" - closed
+*
+D 0 139721 9 1 100 0 0 0
+*     southeast exit from "Before the Chieftain's Cave" to
+*     "The Chieftain's Cave" - closed
+*
+D 0 139722 6 1 100 0 0 0
+*     northwest exit from "The Chieftain's Cave" to
+*     "Before the Chieftain's Cave" - closed
+*
+D 0 139722 5 1 100 0 0 0
+*     down exit from "The Chieftain's Cave" to
+*     "The Shamans Cave" - closed
+*
+D 0 139723 4 1 100 0 0 0
+*     up exit from "The Shamans Cave" to
+*     "The Chieftain's Cave" - closed
+*
+*
+O 0 139518 1 139502 100 0 0 0      * a granite fountain
+O 0 139507 1 139511 100 0 0 0      * an ebonwood counter
+O 0 139510 1 139512 100 0 0 0      * a pinewood desk
+O 0 139514 2 139514 100 0 0 0      * a pinewood table
+O 0 139523 2 139520 100 0 0 0      * a pinewood desk
+O 0 139524 1 139521 100 0 0 0      * griber's anvil
+O 0 139526 1 139535 100 0 0 0      * a tanner's barrel
+O 0 139529 1 139535 100 0 0 0      * a black workdesk
+O 0 139523 2 139545 100 0 0 0      * a pinewood desk
+O 0 139534 1 139547 100 0 0 0      * A handful of evidence
+O 0 139536 2 139550 100 0 0 0      * a pinewood table
+O 0 139536 2 139557 100 0 0 0      * a pinewood table
+O 0 139541 1 139569 100 0 0 0      * a black bar
+O 0 139601 1 139580 100 0 0 0      * a dirty little boy
+O 0 139548 1 139588 100 0 0 0      * a small crystal bowl
+O 0 139514 2 139591 100 0 0 0      * a pinewood table
+O 0 139565 1 139611 100 0 0 0      * a huge mithril chest
+P 1 139584 1 139565 100 0 0 0      *   the platemail of BloodLust
+P 1 139572 1 139565 100 0 0 0      *   the abyssal horns of Baphomet, the Horned King
+O 0 139589 5 139637 100 0 0 0      * a large gold nugget
+O 0 139589 5 139637 100 0 0 0      * a large gold nugget
+O 0 139589 5 139637 100 0 0 0      * a large gold nugget
+O 0 139589 5 139637 100 0 0 0      * a large gold nugget
+O 0 139589 5 139637 100 0 0 0      * a large gold nugget
+O 0 139578 1 139652 100 0 0 0      * a strange swirling mass of darkness
+O 0 139581 1 139666 100 0 0 0      * a portal of fire
+O 0 139587 1 139677 100 0 0 0      * a black pulsating portal
+O 0 139582 1 139678 100 0 0 0      * a cloud of fire
+O 0 139580 1 139678 100 0 0 0      * a large clump of red-steel
+O 0 139608 1 139685 100 0 0 0      * an abused sign
+O 0 139595 1 139722 100 0 0 0      * a granite throne
+O 0 139591 1 139724 100 0 0 0      * a disgusting pool of blood
+O 0 139596 1 139724 100 0 0 0      * a bloodcovered stone altar
+O 0 139594 1 139725 100 0 0 0      * a pool of blood
+*
+M 0 139500 2 139500 100 0 0 0      * a huge minotaur guard
+G 1 139501 5 0 100 0 0 0           *    a steel flail
+M 0 139500 2 139500 100 0 0 0      * a huge minotaur guard
+G 1 139501 5 0 100 0 0 0           *    a steel flail
+G 1 139500 2 0 100 0 0 0           *    a rusty nosering
+M 0 139544 14 139501 100 0 0 0     * a huge minotaur guard
+M 0 139544 14 139501 100 0 0 0     * a huge minotaur guard
+M 0 139547 1 139502 100 0 0 0      * the Captain
+G 1 139502 1 0 100 0 0 0           *    a stone key
+M 0 139578 6 139502 100 0 0 0      * a street sweeper
+M 0 139580 10 139502 100 0 0 0     * a commoner
+M 0 139578 6 139504 100 0 0 0      * a street sweeper
+M 0 139578 6 139506 100 0 0 0      * a street sweeper
+M 0 139579 3 139506 100 0 0 0      * a street sweeper
+M 0 139580 10 139507 100 0 0 0     * a commoner
+M 0 139576 3 139509 100 0 0 0      * a shopper
+M 0 139580 10 139509 100 0 0 0     * a commoner
+M 0 139501 1 139510 100 0 0 0      * Olvriana
+G 1 139505 1 0 100 0 0 0           *    a purple dress
+G 1 139504 1 0 100 0 0 0           *    a golden necklace
+G 1 139503 1 0 100 0 0 0           *    a strange monocle
+M 0 139502 1 139511 100 0 0 0      * Valtor
+G 1 139508 1 0 100 0 0 0           *    an ebonwood key
+M 0 139503 1 139511 100 0 0 0      * a bodyguard
+G 1 139509 4 0 100 0 0 0           *    a long black dagger
+G 1 139512 1 0 100 0 0 0           *    an emerald nosering
+M 0 139504 3 139513 100 0 0 0      * a male citizen
+G 1 139513 1 0 100 0 0 0           *    a stone tailring
+M 0 139505 3 139513 100 0 0 0      * a female minotaur
+M 0 139506 1 139514 100 0 0 0      * a fat waiter
+M 0 139507 3 139514 100 0 0 0      * a local merchant
+G 1 139516 3 0 100 0 0 0           *    a purple belt
+G 1 139515 3 0 100 0 0 0           *    a bronze shortsword
+M 0 139507 3 139514 100 0 0 0      * a local merchant
+G 1 139516 3 0 100 0 0 0           *    a purple belt
+G 1 139515 3 0 100 0 0 0           *    a bronze shortsword
+M 0 139508 2 139514 100 0 0 0      * a fat merchant
+M 0 139507 3 139515 100 0 0 0      * a local merchant
+G 1 139516 3 0 100 0 0 0           *    a purple belt
+G 1 139515 3 0 100 0 0 0           *    a bronze shortsword
+M 0 139508 2 139515 100 0 0 0      * a fat merchant
+F 1 139510 1 139515 100 0 0 0      * a hired guard (following)
+G 1 139501 5 0 100 0 0 0           *    a steel flail
+M 0 139509 1 139515 100 0 0 0      * a midget
+M 0 139511 1 139515 100 0 0 0      * a Drow bard
+G 1 139517 1 0 100 0 0 0           *    a small flute
+M 0 139512 1 139516 100 0 0 0      * the assistant cook
+M 0 139513 1 139516 100 0 0 0      * a plump cook
+G 1 139519 1 0 100 0 0 0           *    a stained apron
+M 0 139514 1 139517 100 0 0 0      * Avlir
+G 1 139520 1 0 100 0 0 0           *    the cloak of avlir
+M 0 139504 3 139518 100 0 0 0      * a male citizen
+M 0 139505 3 139518 100 0 0 0      * a female minotaur
+M 0 139505 3 139519 100 0 0 0      * a female minotaur
+M 0 139515 2 139519 100 0 0 0      * a merchant
+G 1 139521 1 0 100 0 0 0           *    a steel shortsword
+G 1 139522 1 0 100 0 0 0           *    a grey tailring
+M 0 139516 1 139520 100 0 0 0      * Griber's assistant
+M 0 139593 1 139521 100 0 0 0      * Griber
+M 0 139517 1 139522 100 0 0 0      * Griber's wife
+M 0 139578 6 139523 100 0 0 0      * a street sweeper
+M 0 139580 10 139523 100 0 0 0     * a commoner
+M 0 139504 3 139524 100 0 0 0      * a male citizen
+M 0 139515 2 139524 100 0 0 0      * a merchant
+M 0 139580 10 139525 100 0 0 0     * a commoner
+M 0 139518 2 139527 100 0 0 0      * a tanner's wife
+M 0 139579 3 139529 100 0 0 0      * a street sweeper
+M 0 139580 10 139530 100 0 0 0     * a commoner
+M 0 139519 4 139531 100 0 0 0      * a tanner
+G 1 139525 4 0 100 0 0 0           *    some dirty leather armor
+M 0 139519 4 139531 100 0 0 0      * a tanner
+G 1 139525 4 0 100 0 0 0           *    some dirty leather armor
+M 0 139520 3 139532 100 0 0 0      * a minotaur tanner
+M 0 139520 3 139532 100 0 0 0      * a minotaur tanner
+M 0 139518 2 139533 100 0 0 0      * a tanner's wife
+M 0 139519 4 139533 100 0 0 0      * a tanner
+M 0 139522 1 139535 100 0 0 0      * Walgor
+M 0 139521 1 139536 100 0 0 0      * Alizalin
+G 1 139528 1 0 100 0 0 0           *    an earring of mist
+M 0 139580 10 139537 100 0 0 0     * a commoner
+M 0 139523 1 139539 100 0 0 0      * a lieutenant
+G 1 139531 1 0 100 0 0 0           *    a steel shield
+G 1 139530 3 0 100 0 0 0           *    a black battlehammer
+M 0 139580 10 139540 100 0 0 0     * a commoner
+M 0 139578 6 139542 100 0 0 0      * a street sweeper
+M 0 139524 1 139545 100 0 0 0      * the doctor
+G 1 139532 1 0 100 0 0 0           *    a tribal pinewood mask
+G 1 139533 1 0 100 0 0 0           *    some birchbark horn wrappings
+M 0 139525 4 139548 100 0 0 0      * a gateguard
+M 0 139525 4 139548 100 0 0 0      * a gateguard
+M 0 139525 4 139549 100 0 0 0      * a gateguard
+G 1 139530 3 0 100 0 0 0           *    a black battlehammer
+M 0 139525 4 139549 100 0 0 0      * a gateguard
+G 1 139501 5 0 100 0 0 0           *    a steel flail
+M 0 139526 1 139549 100 0 0 0      * The Controller
+G 1 139535 1 0 100 0 0 0           *    some steel horncaps
+M 0 139527 8 139550 100 0 0 0      * an off-duty guard
+M 0 139527 8 139550 100 0 0 0      * an off-duty guard
+M 0 139527 8 139550 100 0 0 0      * an off-duty guard
+M 0 139527 8 139550 100 0 0 0      * an off-duty guard
+M 0 139528 4 139551 100 0 0 0      * a palisade guard
+G 1 139537 4 0 100 0 0 0           *    a pinewood spear with a steel tip
+M 0 139528 4 139553 100 0 0 0      * a palisade guard
+G 1 139537 4 0 100 0 0 0           *    a pinewood spear with a steel tip
+M 0 139528 4 139554 100 0 0 0      * a palisade guard
+G 1 139537 4 0 100 0 0 0           *    a pinewood spear with a steel tip
+M 0 139528 4 139555 100 0 0 0      * a palisade guard
+G 1 139537 4 0 100 0 0 0           *    a pinewood spear with a steel tip
+M 0 139527 8 139557 100 0 0 0      * an off-duty guard
+M 0 139527 8 139557 100 0 0 0      * an off-duty guard
+M 0 139527 8 139557 100 0 0 0      * an off-duty guard
+M 0 139527 8 139557 100 0 0 0      * an off-duty guard
+M 0 139520 3 139560 100 0 0 0      * a minotaur tanner
+G 1 139525 4 0 100 0 0 0           *    some dirty leather armor
+M 0 139519 4 139560 100 0 0 0      * a tanner
+G 1 139525 4 0 100 0 0 0           *    some dirty leather armor
+M 0 139579 3 139562 100 0 0 0      * a street sweeper
+M 0 139580 10 139562 100 0 0 0     * a commoner
+M 0 139531 1 139565 100 0 0 0      * One Eye's burly bouncer
+G 1 139509 4 0 100 0 0 0           *    a long black dagger
+G 1 139540 1 0 100 0 0 0           *    a heavy black nosering
+M 0 139539 1 139566 100 0 0 0      * an alley assassin
+G 1 139509 4 0 100 0 0 0           *    a long black dagger
+M 0 139529 1 139568 100 0 0 0      * Nilstin
+G 1 139539 1 0 100 0 0 0           *    a goblin's eyepatch
+G 1 139538 999 0 100 0 0 0         *    a skincovered barrel
+M 0 139530 1 139568 100 0 0 0      * Nilstin's apprentice
+M 0 139532 2 139569 100 0 0 0      * a drunk orcish worker
+M 0 139532 2 139569 100 0 0 0      * a drunk orcish worker
+M 0 139533 1 139569 100 0 0 0      * a drunk minotaur
+M 0 139534 1 139569 100 0 0 0      * a drunk merchant
+M 0 139535 1 139569 100 0 0 0      * One Eye
+M 0 139538 1 139570 100 0 0 0      * Noraus
+G 1 139509 4 0 100 0 0 0           *    a long black dagger
+G 1 139543 1 0 100 0 0 0           *    the Ace of Spades
+F 1 139536 1 139570 100 0 0 0      * a card shark (following)
+G 1 139542 1 0 100 0 0 0           *    a red-hide wristband
+F 1 139537 1 139570 100 0 0 0      * Saliniz (following)
+G 1 139545 1 0 100 0 0 0           *    a pair of black leggings
+G 1 139544 1 0 100 0 0 0           *    a long thin blade
+M 0 139540 6 139571 100 0 0 0      * a poor commoner
+M 0 139540 6 139571 100 0 0 0      * a poor commoner
+M 0 139540 6 139573 100 0 0 0      * a poor commoner
+M 0 139540 6 139573 100 0 0 0      * a poor commoner
+M 0 139540 6 139574 100 0 0 0      * a poor commoner
+M 0 139540 6 139574 100 0 0 0      * a poor commoner
+M 0 139576 3 139575 100 0 0 0      * a shopper
+M 0 139578 6 139575 100 0 0 0      * a street sweeper
+M 0 139563 1 139577 100 0 0 0      * a hysterical woman
+G 1 139576 1 0 100 0 0 0           *    a butcherknife
+M 0 139576 3 139577 100 0 0 0      * a shopper
+M 0 139580 10 139577 100 0 0 0     * a commoner
+M 0 139577 1 139578 100 0 0 0      * a fat merchant
+M 0 139541 15 139579 100 0 0 0     * a huge watersnake
+M 0 139541 15 139580 100 0 0 0     * a huge watersnake
+M 0 139541 15 139581 100 0 0 0     * a huge watersnake
+M 0 139541 15 139582 100 0 0 0     * a huge watersnake
+M 0 139541 15 139583 100 0 0 0     * a huge watersnake
+M 0 139541 15 139583 100 0 0 0     * a huge watersnake
+M 0 139541 15 139583 100 0 0 0     * a huge watersnake
+M 0 139541 15 139584 100 0 0 0     * a huge watersnake
+M 0 139541 15 139585 100 0 0 0     * a huge watersnake
+M 0 139541 15 139586 100 0 0 0     * a huge watersnake
+M 0 139542 1 139587 100 0 0 0      * a watefriend
+G 1 139547 1 0 100 0 0 0           *    the hide of a waterfiend
+M 0 139543 1 139588 100 0 0 0      * a waterfaerie
+G 1 139546 1 0 100 0 0 0           *    a tiny earring of water
+M 0 139541 15 139589 100 0 0 0     * a huge watersnake
+M 0 139541 15 139589 100 0 0 0     * a huge watersnake
+M 0 139544 14 139590 100 0 0 0     * a huge minotaur guard
+M 0 139544 14 139590 100 0 0 0     * a huge minotaur guard
+M 0 139544 14 139590 100 0 0 0     * a huge minotaur guard
+M 0 139544 14 139591 100 0 0 0     * a huge minotaur guard
+M 0 139545 1 139592 100 0 0 0      * the Lieutenant
+G 1 139554 1 0 100 0 0 0           *    a heavy mithril platemail
+G 1 139501 5 0 100 0 0 0           *    a steel flail
+G 1 139500 2 0 100 0 0 0           *    a rusty nosering
+G 1 139553 1 0 100 0 0 0           *    a seal of stone
+G 1 139559 1 0 100 0 0 0           *    a golden key
+M 0 139544 14 139593 100 0 0 0     * a huge minotaur guard
+M 0 139544 14 139593 100 0 0 0     * a huge minotaur guard
+M 0 139546 4 139594 100 0 0 0      * a stairguard
+G 1 139530 3 0 100 0 0 0           *    a black battlehammer
+M 0 139546 4 139594 100 0 0 0      * a stairguard
+M 0 139546 4 139594 100 0 0 0      * a stairguard
+M 0 139546 4 139594 100 0 0 0      * a stairguard
+M 0 139544 14 139595 100 0 0 0     * a huge minotaur guard
+M 0 139544 14 139595 100 0 0 0     * a huge minotaur guard
+M 0 139544 14 139595 100 0 0 0     * a huge minotaur guard
+M 0 139544 14 139595 100 0 0 0     * a huge minotaur guard
+M 0 139549 1 139597 100 0 0 0      * the cook
+M 0 139548 1 139600 100 0 0 0      * a hideous demon
+G 1 139557 1 0 100 0 0 0           *    the bloodsoaked face of a demon
+M 0 139544 14 139602 100 0 0 0     * a huge minotaur guard
+M 0 139544 14 139602 100 0 0 0     * a huge minotaur guard
+M 0 139550 1 139603 100 0 0 0      * Ivlor
+M 0 139551 1 139604 100 0 0 0      * an orc emissary
+G 1 139561 1 0 100 0 0 0           *    a mithril tiara
+M 0 139552 1 139604 100 0 0 0      * a bodyguard
+G 1 139562 1 0 100 0 0 0           *    a black two-handed sword
+M 0 139554 1 139607 100 0 0 0      * an emissary
+M 0 139555 1 139607 100 0 0 0      * an emissary's assassin
+G 1 139564 1 0 100 0 0 0           *    a long thin stiletto
+M 0 139553 1 139608 100 0 0 0      * an emissary
+G 1 139563 1 0 100 0 0 0           *    a beautiful goblin chainmail
+M 0 139556 3 139609 100 0 0 0      * an elite guard
+M 0 139556 3 139609 100 0 0 0      * an elite guard
+M 0 139556 3 139609 100 0 0 0      * an elite guard
+M 0 139557 1 139612 100 0 0 0      * the Baron
+G 1 139567 1 0 100 0 0 0           *    some red-steel horncaps
+M 0 139559 1 139616 100 0 0 0      * the hobgoblin torturer
+M 0 139560 1 139616 100 0 0 0      * the prison guard
+G 1 139571 1 0 100 0 0 0           *    the prison key
+M 0 139561 1 139617 100 0 0 0      * a filthy pervert
+G 1 139573 1 0 100 0 0 0           *    the scalp of a pervert
+M 0 139562 1 139624 100 0 0 0      * a saturated miner
+G 1 139574 1 0 100 0 0 0           *    the scalp of a miner
+M 0 139564 15 139630 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139630 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139631 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139632 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139634 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139635 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139636 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139637 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139638 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139640 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139642 100 0 0 0     * the ghost of a miner
+M 0 139565 1 139650 100 0 0 0      * a huge waterfiend
+F 1 139566 1 139650 100 0 0 0      * a blue waterdevil (following)
+G 1 139579 1 0 100 0 0 0           *    a fang of a waterdevil
+M 0 139564 15 139653 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139654 100 0 0 0     * the ghost of a miner
+M 0 139564 15 139655 100 0 0 0     * the ghost of a miner
+M 0 139574 12 139656 100 0 0 0     * a small demon
+M 0 139575 14 139656 100 0 0 0     * a large demon
+M 0 139574 12 139657 100 0 0 0     * a small demon
+M 0 139575 14 139658 100 0 0 0     * a large demon
+M 0 139575 14 139659 100 0 0 0     * a large demon
+M 0 139574 12 139660 100 0 0 0     * a small demon
+M 0 139575 14 139660 100 0 0 0     * a large demon
+M 0 139575 14 139660 100 0 0 0     * a large demon
+M 0 139575 14 139661 100 0 0 0     * a large demon
+M 0 139575 14 139662 100 0 0 0     * a large demon
+M 0 139574 12 139663 100 0 0 0     * a small demon
+M 0 139575 14 139664 100 0 0 0     * a large demon
+M 0 139575 14 139664 100 0 0 0     * a large demon
+M 0 139564 15 139664 100 0 0 0     * the ghost of a miner
+M 0 139574 12 139665 100 0 0 0     * a small demon
+M 0 139575 14 139666 100 0 0 0     * a large demon
+M 0 139574 12 139666 100 0 0 0     * a small demon
+M 0 139574 12 139667 100 0 0 0     * a small demon
+M 0 139575 14 139668 100 0 0 0     * a large demon
+M 0 139574 12 139669 100 0 0 0     * a small demon
+M 0 139575 14 139670 100 0 0 0     * a large demon
+M 0 139574 12 139671 100 0 0 0     * a small demon
+M 0 139575 14 139672 100 0 0 0     * a large demon
+M 0 139574 12 139672 100 0 0 0     * a small demon
+M 0 139575 14 139673 100 0 0 0     * a large demon
+M 0 139574 12 139673 100 0 0 0     * a small demon
+M 0 139574 12 139674 100 0 0 0     * a small demon
+M 0 139568 2 139675 100 0 0 0      * a fire dragon
+M 0 139567 1 139676 100 0 0 0      * the Beholder
+G 1 139583 1 0 100 0 0 0           *    the eye of a beholder
+M 0 139568 2 139676 100 0 0 0      * a fire dragon
+M 0 139569 1 139677 100 0 0 0      * a small devil prince
+E 1 139585 1 12 100 0 0 0          *   the devil prince Infernal wings of the Nine Hells
+G 1 139586 1 0 100 0 0 0           *    the pulsating heart of a devilprince
+M 0 139570 1 139677 100 0 0 0      * a magma demon
+M 0 139571 1 139677 100 0 0 0      * a large demon from Hell
+M 0 139572 1 139678 100 0 0 0      * a red-steel golem
+M 0 139573 1 139680 100 0 0 0      * A small firedragon
+G 1 139588 1 0 100 0 0 0           *    some boots of the firelizard
+M 0 139596 1 139680 100 0 0 0      * a red devil
+G 1 139605 1 0 100 0 0 0           *    the Infernal visage of a tormented devil
+M 0 139581 1 139682 100 0 0 0      * Drablin
+M 0 139583 1 139691 100 0 0 0      * a huge black wolf
+F 1 139582 4 139691 100 0 0 0      * a large wolf (following)
+F 1 139582 4 139691 100 0 0 0      * a large wolf (following)
+F 1 139582 4 139691 100 0 0 0      * a large wolf (following)
+M 0 139585 2 139701 100 0 0 0      * a rabid bear
+M 0 139582 4 139705 100 0 0 0      * a large wolf
+M 0 139595 1 139706 100 0 0 0      * a wolverine
+M 0 139585 2 139710 100 0 0 0      * a rabid bear
+M 0 139586 7 139715 100 0 0 0      * a huge troll guard
+G 1 139597 3 0 100 0 0 0           *    a huge oaken club
+M 0 139586 7 139715 100 0 0 0      * a huge troll guard
+G 1 139597 3 0 100 0 0 0           *    a huge oaken club
+M 0 139586 7 139715 100 0 0 0      * a huge troll guard
+M 0 139587 5 139716 100 0 0 0      * a male troll
+M 0 139588 5 139716 100 0 0 0      * a female cavetroll
+M 0 139589 5 139716 100 0 0 0      * a small troll
+M 0 139587 5 139717 100 0 0 0      * a male troll
+M 0 139588 5 139717 100 0 0 0      * a female cavetroll
+M 0 139589 5 139717 100 0 0 0      * a small troll
+M 0 139587 5 139718 100 0 0 0      * a male troll
+M 0 139588 5 139718 100 0 0 0      * a female cavetroll
+M 0 139589 5 139718 100 0 0 0      * a small troll
+M 0 139587 5 139719 100 0 0 0      * a male troll
+M 0 139589 5 139719 100 0 0 0      * a small troll
+M 0 139588 5 139720 100 0 0 0      * a female cavetroll
+M 0 139588 5 139720 100 0 0 0      * a female cavetroll
+M 0 139589 5 139720 100 0 0 0      * a small troll
+M 0 139587 5 139721 100 0 0 0      * a male troll
+M 0 139586 7 139721 100 0 0 0      * a huge troll guard
+M 0 139586 7 139721 100 0 0 0      * a huge troll guard
+M 0 139586 7 139721 100 0 0 0      * a huge troll guard
+M 0 139590 1 139722 100 0 0 0      * the Chieftain
+G 1 139598 1 0 100 0 0 0           *    a dangling troll finger
+G 1 139593 1 0 100 0 0 0           *    the bloody scalp of the chieftain
+M 0 139591 1 139722 100 0 0 0      * a troll berserker
+G 1 139597 3 0 100 0 0 0           *    a huge oaken club
+M 0 139586 7 139722 100 0 0 0      * a huge troll guard
+M 0 139584 1 139725 100 0 0 0      * the Serpentgod
+G 1 139552 1 0 100 0 0 0           *    eye of the serpent
+M 0 139541 15 139726 100 0 0 0     * a huge watersnake
+M 0 139541 15 139727 100 0 0 0     * a huge watersnake
+M 0 139541 15 139728 100 0 0 0     * a huge watersnake
+M 0 139594 1 139729 100 0 0 0      * a large seaserpent
+G 1 139604 1 0 100 0 0 0           *    the scale of a seaserpent
+M 0 139592 1 139730 100 0 0 0      * the clan's shaman
+G 1 139599 1 0 100 0 0 0           *    the scalp of a troll shaman
+M 0 139558 1 139731 100 0 0 0      * an illithid
+G 1 139568 1 0 100 0 0 0           *    the thin skin of an Illithid
+M 0 139597 1 139732 100 0 0 0      * a poorly disguised dwarf
+E 1 139607 1 12 100 0 0 0          *   a traveller's coat
+*
+S

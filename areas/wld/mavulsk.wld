@@ -1,0 +1,4815 @@
+#139500
+&n&+wBefore the&n&+L Stone Mansion~
+   To the north lies the&n&+L Stone Mansion&n&+w where&n&+r Th&n&+Le Bar&n&+ron of Mav&n&+Lulsk&n
+sits upon his throne.  A huge double door, made of stone blocks
+the northern exit.  The building is constructed so its northern
+parts are located deep inside the great mountain.  From here it
+appears to be a two-floor building but one can't tell how many
+floors there are inside the mountain.  Originally this was the areas
+only building made by&n&+L Orc&n&+w's and&n&+r Duergar Dwarves&n&+w to defend their
+mine close by.  After being abandoned for several years a tribe of
+&n&+rMino&n&+Ltaurs&n&+w arrived and settled here.  The village has grown around
+the mansion and is now more of a small town than a village. &n
+~
+2 0 1
+D0
+~
+stone double&n~
+2 139502 139501
+D2
+~
+~
+0 0 139502
+S
+#139501
+&nInside the St&n&+Lo&n&+wne Ma&n&+Ln&n&+wsio&n&+wn&n~
+   Inside the double stonedoor lies this hall with a floor is of solid
+granite-stone.  The stone floor is the mountain that this hall has been
+carved out from.  When the miner's first arrived here this was a cave but
+they improved it as they dug further into the mountainside and made it
+the entrance hall.  Now there are&n&+C mo&n&+Rsa&n&+cic&n&+w On the central Part of the floor
+that continues through the exit north.  The walls are covered with carpets
+with various motives and painted shields.  In both the eastern and western
+wall there are wooden doors.
+~
+2 1082163273 0
+D0
+~
+~
+0 0 139593
+D1
+~
+~
+0 0 139590
+D2
+~
+stone double&n~
+2 0 139500
+D3
+~
+~
+0 0 139591
+S
+#139502
+&n&+wThe Central Street of&n&+r Mav&n&+Lulsk&n~
+   The&n&+r Cen&n&+Ltral&n&+w Street stretches in north-south direction through
+this little town.  The paved road is&n&+W tidy and clean&n&+w, obviously
+the baron consider this important.  A street sweeper or two can be
+seen in the crowd On the street.  Many races can be seen moving
+Along the street,&n&+r Mino&n&+Ltaurs&n&+w,&n&+C Humans&n&+w and&n&+L Orcs&n&+w are most common but
+every now and then other races occur here On the street.  All races
+are welcome in&n&+r Mav&n&+Lulsk&n&+w as long as they stick to&n&+L th&n&+Le Bar&n&+ron's&n&+w Law. &n
+From the east can loud bargaining be heard and there is a constant
+stream of people moving in that direction.  A narrower street can be
+seen in the west direction. &N
+~
+2 0 1
+D0
+~
+~
+0 0 139500
+D1
+~
+~
+0 0 139509
+D2
+~
+~
+0 0 139503
+D3
+~
+~
+0 0 139538
+S
+#139503
+&n&+wAlong the&n&+r Cen&n&+Ltral&n&+w Street&n~
+   The&n&+r Cen&n&+Ltral&n&+w Street stretches in north-south direction through
+this little town.  The paved road is&n&+W tidy and clean&n&+w, obviously
+the baron consider this important.  A street sweeper or two can be
+seen in the crowd On the street.  Many races can be seen moving
+Along the street,&n&+r Mino&n&+Ltaurs&n&+w,&n&+C Humans&n&+w and&n&+L Orcs&n&+w are most common but
+every now and then other races occur here On the street.  All races
+are welcome in&n&+r Mav&n&+Lulsk&n&+w as long as they stick to&n&+L th&n&+Le Bar&n&+ron's&n&+w Law. &n
+On the west side of the street there is a beautiful two-level building
+with&n&+y a huge oaken&n&+w door. &n Probably the home of either a very
+rich or important person. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139502
+D2
+~
+~
+0 0 139504
+D3
+~
+door&n~
+2 0 139510
+S
+#139504
+&nA Turn in the &n&+rCent&n&+Lral St&n&+rreet&n~
+   The&n&+r Cen&n&+Ltral&n&+w Street makes a turn here with one way to the north
+and one to the west.  The paved road is&n&+W tidy and clean&n&+w, obviously
+the baron consider this important.  A street sweeper or two can be
+seen in the crowd On the street.  Many races can be seen moving
+Along the street,&n&+r Mino&n&+Ltaurs&n&+w,&n&+C Humans&n&+w and&n&+L Orcs&n&+w are most common but
+every now and then other races occur here On the street.  All races
+are welcome in&n&+r Mav&n&+Lulsk&n&+w as long as they stick to&n&+L th&n&+Le Bar&n&+ron's&n&+w Law. &n
+To the east side in this turn a small&n&+y sign&n&+w stands.  On the south
+side of the street there is a door leading into what appears to be a home. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139503
+D1
+~
+door&n~
+1 0 139511
+D2
+~
+door&n~
+1 0 139513
+D3
+~
+~
+0 0 139505
+E
+sign~
+&n
+      . -----------------------.
+      |                       |
+      |   Valtor's Jewelery   |
+      |                       |
+      `-----------------------'
+~
+S
+#139505
+The &n&+rCent&n&+Lral&n Street&n~
+   The&n&+r Cen&n&+Ltral&n&+w Street stretches in east-west direction through
+this little town.  The paved road is&n&+W tidy and clean&n&+w, obviously
+the baron consider this important.  A street sweeper or two can be
+seen in the crowd On the street.  Many races can be seen moving
+Along the street,&n&+r Mino&n&+Ltaurs&n&+w,&n&+C Humans&n&+w and&n&+L Orcs&n&+w are most common but
+every now and then other races occur here On the street.  All races
+are welcome in&n&+r Mav&n&+Lulsk&n&+w as long as they stick to&n&+L th&n&+Le Bar&n&+ron's&n&+w Law. &n
+On the south side of the street lies an elegant building hosting
+the restaurant in town.  A large sign hangs On the wall titled
+&n&+L '&n&+MAvlir's&n&+G Restaurant&n&+L'. &n
+~
+2 0 1
+D1
+~
+~
+0 0 139504
+D2
+~
+door&n~
+1 0 139514
+D3
+~
+~
+0 0 139506
+S
+#139506
+On the&n&+r Cent&n&+Lral&n Road~
+   The&n&+r Cen&n&+Ltral&n&+w Street makes a turn here and stretches in east-south
+direction through the town.  The paved road is&n&+W tidy and clean&n&+w, obviously
+the baron consider this important.  A street sweeper or two can be
+seen in the crowd On the street.  Many races can be seen moving
+Along the street,&n&+r Mino&n&+Ltaurs&n&+w,&n&+C Humans&n&+w and&n&+L Orcs&n&+w are most common but
+every now and then other races occur here On the street.  All races
+are welcome in&n&+r Mav&n&+Lulsk&n&+w as long as they stick to&n&+L th&n&+Le Bar&n&+ron's&n&+w Law. &n
+~
+2 0 1
+D0
+~
+door&n~
+1 0 139518
+D1
+~
+~
+0 0 139505
+D2
+~
+~
+0 0 139507
+D3
+~
+door&n~
+1 0 139519
+S
+#139507
+The&n&+r Cent&n&+Lral&n Street&n~
+   The&n&+r Cen&n&+Ltral&n&+w Street stretches in north-south direction through
+this little town.  The paved road is&n&+W tidy and clean&n&+w, obviously
+the baron consider this important.  A street sweeper or two can be
+seen in the crowd On the street.  Many races can be seen moving
+Along the street,&n&+r Mino&n&+Ltaurs&n&+w,&n&+C Humans&n&+w and&n&+L Orcs&n&+w are most common but
+every now and then other races occur here On the street.  All races
+are welcome in&n&+r Mav&n&+Lulsk&n&+w as long as they stick to&n&+L th&n&+Le Bar&n&+ron's&n&+w Law. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139506
+D2
+~
+~
+0 0 139508
+D3
+~
+~
+0 0 139520
+S
+#139508
+The &n&+rCent&n&+Lral&n Street&n~
+   The&n&+r Cen&n&+Ltral&n&+w Street stretches in north-south direction through
+this little town.  The paved road is&n&+W tidy and clean&n&+w, obviously
+the baron consider this important.  A street sweeper or two can be
+seen in the crowd On the street.  Many races can be seen moving
+Along the street,&n&+r Mino&n&+Ltaurs&n&+w,&n&+C Humans&n&+w and&n&+L Orcs&n&+w are most common but
+every now and then other races occur here On the street.  All races
+are welcome in&n&+r Mav&n&+Lulsk&n&+w as long as they stick to&n&+L th&n&+Le Bar&n&+ron's&n&+w Law. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139507
+D2
+~
+~
+0 0 139523
+D3
+~
+door&n~
+1 0 139524
+S
+#139509
+The Southwestern Part of the&n&+m Market&n~
+&+m   The marketplace if full of merchants and farmers trying to sell
+&+mtheir goods to the inhabitants of Mavulsk.  The air is full of the
+&+msounds associated with serious bargaining.  The market is very
+&+mcrowded and it is hard to make way in the crowd through all the
+&+mcustomers and merchants.  A crowd like this would be perfect for a
+&+mpickpocket and one would best keep their purse and valuables hidden.
+&+mTo the west lies the Central Road and to the east and north lies
+&+mthe rest of the market. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139578
+D1
+~
+~
+0 0 139575
+D3
+~
+~
+0 0 139502
+S
+#139510
+&+gThe Home of&+m Advisor&n&+L Ilver&n~
+&+g   This is the home of&n&+m Advisor&n&+L Ilvor&n&+g and the furniture is
+&+gthereafter, very expensive indeed.   Numerous paintings covers the
+&+gwalls and in the northern wall a big&+b aqu&n&+Bar&+ciu&n&+Bm&n&+g is built in.  All
+&+gsorts of fish swims there, many from countries far away other
+&+gmore common.   This man must be very amused or amazed?  By these
+&+gcreatures.   An oaken stair of great craftsmanship leads up to the
+&+gsecond floor.   The Birchwood floor is covered with soft red carpets. &n
+~
+2 0 0
+D1
+~
+door&n~
+2 0 139503
+E
+aquarium&n~
+&+B   In the wall this aquarium is inserted.  Inside
+&+Bthe aquarium swims fish of all sorts.  Some of
+&+Bthem from foreign countries and some local
+&+Bspecies.  The Advisor loves these, maybe even
+&+Bmore than his wife, and he is always looking
+&+Bfor new species to add. &n
+~
+S
+#139511
+&n&+gInside&n&+L Valtor&n&+W's&n&+Y Jew&n&+Well&n&+Yery&n~
+&+Y   All what one would expext to find in a Jewellers shop is found in
+&n&+LValtor'&n&+Y Jewellery.  The growth On the village to a small town have made
+&+Ythe marketsituation possible for a jeweller.  Valtor stands behind a
+&+Ycounter in the east Part of the shop examining something valuable.  A
+&+Yman like Valtor doesn't take any chances and he has hired one of the
+&+Ytown's most famous champions as bodyguard.  Town is growing and attracting
+&+Ymore merchants and tradesmens but also all sorts of criminals.  To the
+&+Ysouth is a door leading into the personal office of Valtor. &n
+~
+2 200 0
+D2
+~
+door&n~
+3 139506 139512
+D3
+~
+door&n~
+1 0 139504
+S
+#139512
+&n&+LValtor's&n&+g Private&n&+w Office&n~
+&+g   This room has a big desk in the center of it and bookshelves
+&+garound the walls.  The room is covered with all types of
+&+ginstruments used by a skilled Jeweller.  The desk is made
+&+gof ancient &n&+rPine&n&+ywood&n&+g and nearly drowns in documents and books
+&+gof all sort.  This is where Valtor go when he examine the most
+&+gvaluable pieces he trades or if he wanna be alone. &n
+~
+2 0 0
+D0
+~
+door&n~
+3 139506 139511
+S
+#139513
+Inside A&n&+r Citi&n&+Lzens&n&+w Dwelling&n~
+   This is the home of a minotaur family.  Telling from the way the
+furniture looks they are of middleclass in this town.  The house
+is constructed out of ancient&n&+r pine&n&+ywood&n&+w except the stove of stone
+and iron.  A large bed stands At the southern wall and a table is
+placed in the middle of the room.  Maybe this is the home of a
+merchant since some of the items in the room are from places far
+away. &n
+~
+2 0 0
+D0
+~
+door&n~
+1 0 139504
+S
+#139514
+In the&n&+y Lobby&n&+g of&n&+M Avlir&n&+g's Restaurant&n~
+&+g   This is the lobby where the guests who come here not to eat but
+&+gto converstate sits.  The room has a soft red carpet and On the walls
+&+gdelecate curtains with different motives hangs.  Along the walls red
+&+gsofas stands and by them small pinewood tables to host the glasses.
+&+gloud conversations and cigarr&n&+wsmoke&n&+g fills the room.  To the south is
+&+glies restaurant where the customers eat.  At the entrance a sleek
+&+gfat server stands awaiting the customers orders. &n
+~
+2 0 0
+D0
+~
+door&n~
+1 0 139505
+D2
+~
+~
+0 0 139515
+S
+#139515
+&n&+MAvlir&n&+w's &n&+GRestaurant&n~
+&+G   This restaurant is the best and most expensive in the city of
+&+rMav&n&+Lulsk&n&+G.  When people wanna eat something extra they come here for
+&+Gthe extraordinary baked potato and steak.  Avlir is more or less
+&+Ga perfectionist and his customers knows it but the bill is thereafter.
+&+GMost customers are rich traveling merchants or local merchants.  The
+&+Gcommon man can't afford this kind of restaurant by far.  The air is
+&+Gfilled with smoke from the expensive cigars and discussions and
+&+Gcomplains about the high tolls and taxes. &n
+~
+2 0 0
+D0
+~
+~
+0 0 139514
+D1
+~
+door&n~
+1 0 139516
+D4
+~
+door&n~
+1 0 139517
+S
+#139516
+&+WThe Kitchen&n~
+&+W   A large bench occupies the center of the room and is used in the
+&+Wpreparation of fresh fruit and vegetables.  On another bench by the
+&+Weastern wall lies meat that awaits to be chopped up into steaks.
+&+WAll kinds of tools for cooking hangs On the walls and lies On the
+&+Wbenches.  By the eastern wall is a huge stove where pots bubbles. &n
+~
+2 0 0
+D3
+~
+door&n~
+1 0 139515
+S
+#139517
+&n&+MAvlir&n&+W's&n&+g Private Office&n~
+&+g   This is the owner of the restaurants private office.  A large desk
+&+gstands in the northwestern corner and a leather chair next to it.  In
+&+gthe chair an elegant minotaur sits studying some bills.  The walls are
+&+gof pinewood and so is the floor.  The room is dim and the only light source
+&+gis a oil lamp On the desk. &n
+~
+2 0 0
+D5
+~
+door&n~
+1 0 139515
+S
+#139518
+A&n&+r Comm&n&+Loner&n's Home&n~
+&+g   This is the home of a minotaur family.  Telling from the way the
+&+gfurniture looks they are of middleclass in this town.  The house
+&+gis constructed out of ancient&n&+r pine&n&+ywood&n&+g except the stove of stone
+&+gand iron.  A large bed stands At the southern wall and a table is
+&+gplaced in the middle of the room.  Maybe this is the home of a
+&+gmerchant since some of the items in the room are from places far
+&+gaway. &n
+~
+2 0 0
+D2
+~
+door&n~
+1 0 139506
+S
+#139519
+A &+rMerc&n&+Lhant&n's Home&n~
+&+g   This is the home of a minotaur family.  Telling from the way the
+&+gfurniture looks they are of middleclass in this town.  The house
+&+gis constructed out of ancient&n&+r pine&n&+ywood&n&+g except the stove of stone
+&+gand iron.  A large bed stands At the southern wall and a table is
+&+gplaced in the middle of the room.  Maybe this is the home of a
+&+gmerchant since some of the items in the room are from places far
+&+gaway. &n
+~
+2 0 0
+D1
+~
+door&n~
+1 0 139506
+S
+#139520
+&n&+rGri&n&+Lber&n&+w's Armory&n~
+   This is the city's armory.  Around the walls in this room hangs several
+armors of different types.  Here you can find everything from a pair of
+leather sleeves to the heaviest platemail.  The Capt&n&+rain of t&n&+whe Guard makes
+his purchases for his soldiers from this armory and that is the main
+reason why it is so profitable.  Not that the captain have any better
+options available but&n&+r Gri&n&+Lber&n&+w is a skilled blacksmith and has a good
+reputation even outside the city. &n
+~
+2 0 0
+D1
+~
+~
+0 0 139507
+D4
+~
+door&n~
+1 0 139522
+D5
+~
+~
+0 0 139521
+S
+#139521
+&n&+rGri&n&+Lber&n&+w's&n&+L Workplace&n~
+   This is the heart of the armory.  Here&n&+r Gri&n&+Lber&n&+w forges the best armors
+in the district.  All types of metal lies On the ground and several
+half-done works stand here.  Griber only trades in leather wares so
+it is only the metal wares that are made by his hand with the help
+of his assistant.  The room is filled with smoke and the sound from
+the pounding hammer of a master blacksmith.  The only obvious exit
+is up. &n
+~
+2 0 0
+D4
+~
+~
+0 0 139520
+S
+#139522
+&n&+rGri&n&+Lber&n&+w's Home&n~
+   This is the home of a Griber's family.  Telling from the way the
+furniture looks they are of the upper-class in this town.  The house
+is constructed out of ancient&n&+r pine&n&+ywood&n&+w except the stove of stone
+and iron.  A large bed stands At the southern wall and a table is
+placed in the middle of the room. &n
+~
+2 0 0
+D5
+~
+door&n~
+1 0 139520
+S
+#139523
+&n&+rCen&n&+Ltral &n&+wStreet and&n&+y Palisade&n&+w Intersection&n~
+   The&n&+r Cen&n&+Ltral&n&+w Street stretches in north-south direction and meets
+here the &+yPalisade Road&n&+w, The paved road is&n&+W tidy and clean&n&+w, obviously
+the baron consider this important.  A street sweeper or two can be
+seen in the crowd On the street.  Many races can be seen moving
+Along the street,&n&+r Mino&n&+Ltaurs&n&+w,&n&+C Humans&n&+w and&n&+L Orcs&n&+w are most common but
+every now and then other races occur here On the street.  All races
+are welcome in&n&+r Mav&n&+Lulsk&n&+w as long as they stick to&n&+L th&n&+Le Bar&n&+ron's&n&+w Law. &n
+ To the south lies the Gate through the&n&+y palisade&n&+w and it is now very
+crowded in the street.  People trying to get home, to work to the market
+struggle to find their way. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139508
+D1
+~
+~
+0 0 139558
+D2
+~
+~
+0 0 139548
+D3
+~
+~
+0 0 139525
+S
+#139524
+A &n&+rCommo&n&+Lner's&n&+w Dwelling&n~
+&+g   This is the home of a minotaur family.  Telling from the way the
+&+gfurniture looks they are of middleclass in this town.  The house
+&+gis constructed out of ancient&n&+r pine&n&+ywood&n&+g except the stove of stone
+&+gand iron.  A large bed stands At the southern wall and a table is
+&+gplaced in the middle of the room with four chairs around it. &n
+~
+2 0 0
+D1
+~
+door&n~
+1 0 139508
+S
+#139525
+Along the&n&+y Palisade Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center. &n
+~
+2 0 1
+D1
+~
+~
+0 0 139523
+D3
+~
+~
+0 0 139526
+S
+#139526
+&n&+yThe Palisade Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139527
+D1
+~
+~
+0 0 139525
+D3
+~
+~
+0 0 139528
+S
+#139527
+A&n&+y Tanner's Home&n~
+   A&n&+y Tanner&n&+w works with the craftsmanship of preparing&n&+y skins. &n&+w The trade
+with skins is important for the town, maybe not as important as the
+farming is but close.  The smell from the liquids and chemicals used
+in the process is horrible and that's the reason why their workshops
+and homes are located in the outer region of the city. &n
+~
+2 0 0
+D2
+~
+~
+0 0 139526
+S
+#139528
+Along the&n&+y Palisade&n&+L Road&n~
+    The&n&+y Palisade Road&n&+w runs along the palisade around the town
+ and intersects with all of the other streets of the city.  The
+ street here is not paved like the Central Road.  There is a very
+ good reason for this.  The town is expanding fast and as the town
+ grows the palisade moves further away from the center of town and
+ the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+ shops located to the side of Palisade Road facing away from the
+ town center. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139529
+D1
+~
+~
+0 0 139526
+D5
+&+y   Someone has discovered a loose plank in
+&+ythe palisade.  You can tell since there are
+&+yfootprints who disappear under the palisade. &n
+~
+plank~
+5 0 139576
+S
+#139529
+Along the&n&+y Palisade&n&+L Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139530
+D2
+~
+~
+0 0 139528
+D3
+~
+~
+0 0 139531
+S
+#139530
+Along the&n&+y Palisade&n&+L Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139534
+D1
+~
+door&n~
+1 0 139533
+D2
+~
+~
+0 0 139529
+D3
+~
+door&n~
+1 0 139532
+S
+#139531
+A&n&+y Tanner&n&+w's Workshop&n~
+&+y   The room is full with hides and skins of many different animals,
+&+ynot all of these from forest or farm animals.  A couple of barrels
+&+ystand At the western wall, probably filled with some nasty chemical
+&+yfor the process.  The room has two big desks where the tanner works
+&+yto prepare a hide.  The skin cannot be used for making armors and clothes
+&+yunless it is properly prepared by a skilled tanner. &n
+~
+2 0 0
+D1
+~
+~
+0 0 139529
+S
+#139532
+A&n&+y Tanner&n&+w's Workshop&n~
+&+y   The room is full with hides and skins of many different animals,
+&+ynot all of these from forest or farm animals.  A couple of barrels
+&+ystand At the western wall, probably filled with some nasty chemical
+&+yfor the process.  The room has two big desks where the tanner works
+&+yto prepare a hide.  The skin cannot be used for making armors and clothes
+&+yunless it is properly prepared by a skilled tanner. &n
+~
+2 0 0
+D1
+~
+door&n~
+1 0 139530
+S
+#139533
+A&n&+y Tanner's Home&n~
+   A&n&+y Tanner&n&+w works with the craftsmanship of preparing&n&+y skins. &n&+w The trade
+with skins is important for the town, maybe not as important as the
+farming is but close.  The smell from the liquids and chemicals used
+in the process is horrible and that's the reason why their workshops
+and homes are located in the outer region of the city. &n
+~
+2 0 0
+D3
+~
+door&n~
+1 0 139530
+S
+#139534
+&+wAlong the &n&+yPalisade&n&+L Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center. &n&+L A dirty sign&n&+w is posted On the western wall. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139537
+D2
+~
+~
+0 0 139530
+D3
+~
+~
+0 0 139535
+E
+sign~
+&n
+  .-------------------------.
+  |                         |
+  |   Walgor's Skin Trade   |
+  |                         |
+  |      And Tannery        |
+  |                         |
+  |     Welcome Inside      |
+  |                         |
+  `-------------------------'
+~
+S
+#139535
+&n&+rWal&n&+Lgor&n&+w's&n&+y Skins&n&+w and&n&+g Hi&n&+Gde&n&+gs&n~
+&+y   The room is full with&n&+g hi&n&+Gde&n&+gs&n&+y and skins of many different animals,
+&+ynot all of these from forest or farm animals.  A couple of barrels
+&+yare placed by the western wall, probably filled with some nasty chemical
+&+yfor the process.  The room has two big desks where the tanner works
+&+yto prepare a hide.  The skin cannot be used for making armors and clothes
+&+yunless it is properly prepared by a skilled tanner.  Walgor is the most
+&+yskilled among the town's tanners and considered master in his art.  He
+&+ydoes not only prepare skins but trade with them to and has a new
+&+yassociate who works here with the artisanship of leather and&n&+r h&n&+Ri&n&+rde&n&+y armors. &n
+~
+2 209748160 0
+D0
+~
+door&n~
+7 139527 139536
+D1
+~
+~
+0 0 139534
+S
+#139536
+&+mAli&n&+Mzal&n&+min'&n&+Ms &n&+gWor&n&+Gking&n&+w Quarters&n~
+&+m  This little room has a strange smell, not like the awful smell
+&+min&n&+r Wal&n&+Lgor&n&+w's&n&+m workshop.  There are three smoky chandeliers with odd
+&+mcandles burning who emits a more pleasant smell.  In the north part
+&+mof the room stand a black desk where a drow elf stands working on
+&+ma &n&+gst&n&+Gr&n&+Ran&N&+rge h&n&+gid&n&+Ge. &n&+m The walls are more or less totally covered with
+&+mdifferent hides and some scales, waiting on attention from the master. &n
+~
+2 209748160 0
+D2
+~
+door&n~
+7 139527 139535
+S
+#139537
+Along the western &n&+yPalisade&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center. &n
+~
+2 0 1
+D1
+~
+~
+0 0 139546
+D2
+~
+~
+0 0 139534
+S
+#139538
+The Sold&n&+rier'&n&+Ls Road&n~
+   This road hosts the home of most of the soldier's families.  The road
+ starts At the western side of the marketplace and continues until it
+ reaches the&n&+y Palisade&n&+w Road.  Some children are playing in the
+ street and wives stand here conversing about important issues like
+ who has done what with who and how the price on something has risen
+ again.  To the north lies a large building with a sign beside the door:
+ &+y'The Officer's Quarters'&n
+~
+2 0 1
+D0
+~
+~
+0 0 139539
+D1
+~
+~
+0 0 139502
+D3
+~
+~
+0 0 139540
+S
+#139539
+&+gInside the&n&+w Officer's Quarters&n~
+&+y  This is where the lower ranked officers rest when they are not on
+&+ypatrol mission outside the palisade.  The room has several benches and
+&+ytables.  A pinewood bar is placed along the western wall where the
+&+yofficers can provide themselves with refreshments.  Drinking is not
+&+yallowed when they are on duty but after work it is allowed to use
+&+ythe bar. &n
+~
+2 0 0
+D2
+~
+~
+0 0 139538
+S
+#139540
+The So&n&+rldier&n&+L's Road&n~
+  This road hosts the home of most of the soldier's families.  The road
+starts At the western side of the marketplace and continues until it
+reaches the&n&+y Palisade&n&+w Road.  Some children are playing in the
+street and wives stand here conversing about important issues like
+who has done what whit who and how the price on something has risen
+again.  To the north lies a soldier's home. &n
+~
+2 0 1
+D0
+~
+door&n~
+1 0 139541
+D1
+~
+~
+0 0 139538
+D3
+~
+~
+0 0 139542
+S
+#139541
+A&n&+r Sold&n&+Lier's&n&+w Home&n~
+  This is the humble home of a soldier.  The walls and the floor are
+made of &n&+rpine&n&+ywood. &n These home are provided by the Barony for the
+soldiers and their families.  The furniture includes a pinewood table
+and four chairs.  In the east part a stove is burning.  A two-level bed
+stands next to the stove so the inhabitants can easier keep themselves
+warm during the winter. &n
+~
+2 0 0
+D2
+~
+door&n~
+1 0 139540
+S
+#139542
+The &n&+rSold&n&+Lier's&n&+w Road&n~
+  This road hosts the home of most of the soldier's families.  The road
+starts At the western side of the marketplace and continues until it
+reaches the&n&+y Palisade&n&+w Road.  Some children are playing in the
+street and wives stand here conversing about important issues like
+who has done what whit who and how the price on something has risen
+again.  To the north lies a soldier's home. &n
+~
+2 0 1
+D0
+~
+door&n~
+1 0 139543
+D1
+~
+~
+0 0 139540
+D2
+~
+door&n~
+1 0 139544
+D3
+~
+~
+0 0 139545
+D7
+~
+~
+0 0 139546
+S
+#139543
+The Home of a&n&+r Sold&n&+Lier&n~
+  This is the humble home of a soldier.  The walls and the floor are
+made of &n&+rpine&n&+ywood. &n These home are provided by the Barony for the
+soldiers and their families.  The furniture includes a pinewood table
+and four chairs.  In the east part a stove is burning.  A two-level bed
+stands next to the stove so the inhabitants can easier keep themselves
+warm during the winter. &n
+~
+2 0 0
+D2
+~
+door&n~
+1 0 139542
+S
+#139544
+A&n&+r Sold&n&+Lier's&n&+w Dwelling&n~
+  This is the humble home of a soldier.  The walls and the floor are
+made of &n&+rpine&n&+ywood. &n These home are provided by the Barony for the
+soldiers and their families.  The furniture includes a pinewood table
+and four chairs.  In the east part a stove is burning.  A two-level bed
+stands next to the stove so the inhabitants can easier keep themselves
+warm during the winter. &n
+~
+2 0 0
+D0
+~
+door&n~
+1 0 139542
+S
+#139545
+The&n&+C Doctor's&n&+w Home&n~
+&+g  This is the home of the town's&n&+L doctor&n&+g.  Whenever the citizens get ill
+&+ghe will come to help.  This room has an old&n&+r pine&n&+ywood&n&+g desk in the
+&+gcenter where the doctor is sitting sorting some new mushrooms he
+&+ghas found.  The walls are covered with all sorts of ritual masks and
+&+gdried sn&n&+Gake &n&+gand f&n&+Rro&n&+Ggs&n&+gkin.  The room is dimly lit from the stove and
+&+gthe air is filled with smell from whatever is cooking On the stove.
+~
+2 134250560 0
+D1
+~
+~
+0 0 139542
+S
+#139546
+&+yPalisade&n&+w Road meets&n&+r Sold&n&+wiers Road&n~
+   Here the &n&+yPalisade&n&+w Road and the&n&+r Sold&n&+Lier's&n&+w Road meet and so do their
+kids.  A couple of children are playing in the street and a stray cat
+gets hunted by a barking dog.  The paved road meets the muddy Palisade
+Road and the street sweeper have a hard time keeping this Part of the
+Soldier's Road clean from all the mud and dust.  To the south lies a
+totally burnt-out house. &n
+~
+2 0 1
+D2
+~
+~
+0 0 139547
+D3
+~
+~
+0 0 139537
+D8
+~
+~
+0 0 139542
+S
+#139547
+&n&+LA&n&+r B&n&+Ru&n&+Yr&n&+Wn&n&+Yt&n&+R-&n&+ro&n&+Lut Home&n~
+&+L  This Home burned down to the ground totally some two weeks ago.
+&+LHow the fire started is still unknown, but the Captain is still
+&+Linvestigating the matter.  The wooden structure of the house has
+&+Lcollapsed and the former furniture is just ashes.  The floor is
+&+Lmore or less intact and the reason is that it was made out of
+&n&+yoak&n&+L and not&n&+r pi&n&+yne. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139546
+D5
+&+L   Buried under the ash this trapdoor
+&+Llies hidden, big enough to let a
+&+Lman pass. &n
+~
+trapdoor&n~
+6 139555 139599
+S
+#139548
+Inside the&n&+L Gates&n&+w of&n&+r Mav&n&+Lulsk&n~
+   Here inside the citygates the&n&+r Cent&n&+Lral&n&+w Street begins.  The road is
+paved with granite stone and it is kept very tidy and clean by the town's
+street sweepers.  Looking north one can see the great mountain behind the
+city.  The traffic has increased every year since the town was founded
+some 20 years ago.  Most important to the economy is the trade with metals,
+farming and fur trade and related goods.  At this time of day the road is
+full of merchants traveling to the market or a guild meeting.  The town
+was founded by a&n&+r Mino&n&+Ltaur&n&+w tribe but now they only stand for two thirds
+of the total inhabitants.  The other third is dominated by&n&+L Orcs&n&+w and
+&n&+CHumans&n&+w but other races can be seen occasionally.  The Baron's policy
+is freedom of religion and to discriminate no one. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139523
+D2
+~
+gate&n~
+1 0 139549
+D4
+~
+trapdoor&n~
+1 0 139550
+S
+#139549
+Before the&n&+L Gates&n&+w of&n&+r Mav&n&+Lulsk&n~
+  The gates through the&n&+y palisade&n&+w into the city are heavily guarded by
+soldiers On the ground and guards in the&n&+r Guard&n&+yhouse&n&+w above the gates.
+The gate is made of&n&+r Pine&n&+ywood&n&+w strenghten with steel and looks fairly
+resistant to violence.  The choice to use a palisade instead of a stone
+wall was natural since the town has been growing so fast that a stationary
+stone wall only would protect a small Part of the city after a couple
+of years.  Below the gates stands a couple of fierce Minotaur Guards
+and&n&+L The Co&n&+wntr&n&+Loller&n&+w who sees to that no known criminals or Cave Troll
+are let inside.  Every since the Minotaur town was founded some 20-years
+ago they've had trouble with a clan of Cave Trolls.
+~
+2 0 1
+D0
+~
+gate&n~
+1 0 139548
+D2
+~
+~
+0 0 139683
+S
+#139550
+The&n&+r Gate&n&+yhouse&n&+w above the&n&+L Gate&n~
+&+g   The Gate can be defended from up here with arrows and by pouring
+&+gburning oil down On the attackers.  The Gatehouse is made of&n&+r pine&n&+ywood&n
+&+gand serves as an resting area for the off-duty gateguards.  The room
+&+ghas a couple of wooden chairs and a table where the guards play cards
+&+gand brickgames. &n
+~
+2 0 0
+D1
+~
+door&n~
+1 0 139554
+D3
+~
+door&n~
+1 0 139551
+D5
+~
+trapdoor&n~
+1 0 139548
+S
+#139551
+The&n&+r Gua&n&+Lrd's&n&+w Walkway on&n&+y the Palisade&n~
+&n&+y  The walkway On the palisade is almost 20-feet above ground.  Up from
+&n&+yhere one have a great view over the landscape.  To the south the&n&+g deep
+&n&+gforest&n&+y with all its ancient&n&+g Spruces&n&+y and to the north behind the
+&n&+ycity the great mountain range can be seen.  Looking southwest the river
+&n&+bUmr&n&+Bal fl&n&+boats&n&+y in a steady stream into the deep forest.  The walkway and&n
+&n&+ythe palisade is made of &n&+rpine&n&+ywood and the choice fell on a palisade
+&n&+ysince a stonewall will be stationary and cannot me moved.  The city
+&n&+yis in a state of rapid growth and a palisade can be moved so all
+&n&+ycitizens can enjoy protection. &n
+~
+2 0 1
+D1
+~
+door&n~
+1 0 139550
+D3
+~
+~
+0 0 139552
+S
+#139552
+Further West on&n&+y the Palisade&n~
+&n&+y  The walkway On the palisade is almost 20-feet above ground.  Up from
+&n&+yhere one have a great view over the landscape.  To the south the&n&+g deep
+&n&+gforest&n&+y with all its ancient&n&+g Spruces&n&+y and to the north behind the
+&n&+ycity the great mountain range can be seen.  Looking southwest the river
+&n&+bUmr&n&+Bal fl&n&+boats&n&+y in a steady stream into the deep forest.  The walkway and&n
+&n&+ythe palisade is made of &n&+rpine&n&+ywood and the choice fell on a palisade
+&n&+ysince a stonewall will be stationary and cannot me moved.  The city
+&n&+yis in a state of rapid growth and a palisade can be moved so all
+&n&+ycitizens can enjoy protection. &n
+~
+2 0 1
+D1
+~
+~
+0 0 139551
+D3
+~
+~
+0 0 139553
+S
+#139553
+West on the&n&+r Gua&n&+Lrd's&n&+y Walkway&n~
+&n&+y  The walkway On the palisade is almost 20-feet above ground.  Up from
+&n&+yhere one have a great view over the landscape.  To the south the&n&+g deep
+&n&+gforest&n&+y with all its ancient&n&+g Spruces&n&+y and to the north behind the
+&n&+ycity the great mountain range can be seen.  Looking southwest the river
+&n&+bUmr&n&+Bal fl&n&+boats&n&+y in a steady stream into the deep forest.  The walkway and&n
+&n&+ythe palisade is made of &n&+rpine&n&+ywood and the choice fell on a palisade
+&n&+ysince a stonewall will be stationary and cannot me moved.  The city
+&n&+yis in a state of rapid growth and a palisade can be moved so all
+&n&+ycitizens can enjoy protection. &n
+~
+2 0 1
+D1
+~
+~
+0 0 139552
+S
+#139554
+On&n&+y the Palisade&n&+w Walkway&n~
+&n&+y  The walkway On the palisade is almost 20-feet above ground.  Up from
+&n&+yhere one have a great view over the landscape.  To the south the&n&+g deep
+&n&+gforest&n&+y with all its ancient&n&+g spruces&n&+y and to the north behind the
+&n&+ycity the great mountain range can be seen.  Looking southwest the river
+&n&+bUmr&n&+Bal fl&n&+boats&n&+y in a steady stream into the deep forest.  The walkway and&n
+&n&+ythe palisade is made of &n&+rpine&n&+ywood and the choice fell on a palisade
+&n&+ysince a stonewall will be stationary and cannot me moved.  The city
+&n&+yis in a state of rapid growth and a palisade can be moved so all
+&n&+ycitizens can enjoy protection.
+~
+2 0 1
+D1
+~
+~
+0 0 139555
+D3
+~
+door&n~
+1 0 139550
+S
+#139555
+East on&n&+y the Palisade&n~
+&n&+y  The walkway On the palisade is almost 20-feet above ground.  Up from
+&n&+yhere one have a great view over the landscape.  To the south the&n&+g deep
+&n&+gforest&n&+y with all its ancient&n&+g spruces&n&+y and to the north behind the
+&n&+ycity the great mountain range can be seen.  Looking southwest the river
+&n&+bUmr&n&+Bal fl&n&+boats&n&+y in a steady stream into the deep forest.  The walkway and&n
+&n&+ythe palisade is made of &n&+rpine&n&+ywood and the choice fell on a palisade
+&n&+ysince a stonewall will be stationary and cannot me moved.  The city
+&n&+yis in a state of rapid growth and a palisade can be moved so all
+&n&+ycitizens can enjoy protection. &n
+~
+2 0 1
+D1
+~
+~
+0 0 139556
+D3
+~
+~
+0 0 139554
+S
+#139556
+Further East on the&n&+r Gua&n&+Lrd's&n&+y Walkway&n~
+&n&+y  The walkway On the palisade is almost 20-feet above ground.  Up from
+&n&+yhere one have a great view over the landscape.  To the south the&n&+g deep
+&n&+gforest&n&+y with all its ancient&n&+g spruces&n&+y and to the north behind the
+&n&+ycity the great mountain range can be seen.  Looking southwest the river
+&n&+bUmr&n&+Bal fl&n&+boats&n&+y in a steady stream into the deep forest.  The walkway and&n
+&n&+ythe palisade is made of &n&+rpine&n&+ywood and the choice fell on a palisade
+&n&+ysince a stonewall will be stationary and cannot me moved.  The city
+&n&+yis in a state of rapid growth and a palisade can be moved so all
+&n&+ycitizens can enjoy protection.  To the east a&n&+r pine&n&+ywood tower rises
+&n&+ytoward the sky. &n
+~
+2 0 1
+D1
+~
+door&n~
+1 0 139557
+D3
+~
+~
+0 0 139555
+S
+#139557
+Inside a&n&+r Watch&n&+Ltower&n~
+&+g  This tower was built to get a even better scan over the landscape
+&+gbelow.  An enclosing enemy can be seen much earlier and threatening fire
+&+gcan also be discovered earlier.  The tower is constructed of&n&+r pine&n&+ywood&n
+&+gand this room and its furniture are alose made of that tree.  In the
+&+gmiddle of the room a table stands with four chairs around it and a couple
+&+gof&n&+r off&n&+w-&n&+Lduty&n&+g guard sits there playing. &n
+~
+2 0 0
+D3
+~
+door&n~
+1 0 139556
+S
+#139558
+The Eastern&n&+y Palisade&n&+y Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center. &n
+~
+2 0 1
+D1
+~
+~
+0 0 139559
+D3
+~
+~
+0 0 139523
+S
+#139559
+The Eastern&n&+y Palisade&n&+w Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center. &n
+~
+2 0 1
+D1
+~
+~
+0 0 139561
+D2
+~
+door&n~
+1 0 139560
+D3
+~
+~
+0 0 139558
+S
+#139560
+Inside a &n&+yTanner's&n&+L Workshop&n~
+&+y   The room is full with hides and skins of many different animals,
+&+ynot all of these from forest or farm animals.  A couple of barrels
+&+ystand At the western wall, probably filled with some nasty chemical
+&+yfor the process.  The room has two big desks where the tanner works
+&+yto prepare a hide.  The skin cannot be used for making armors and clothes
+&+yunless it is properly prepared by a skilled tanner. &n
+~
+2 0 0
+D0
+~
+door&n~
+1 0 139559
+S
+#139561
+Along the Southern&n&+y Palisade&n&+w Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center.  On the northern side of the road hangs a small sign
+On the wall. &n
+~
+2 0 1
+D0
+~
+door&n~
+1 0 139568
+D1
+~
+~
+0 0 139562
+D3
+~
+~
+0 0 139559
+E
+sign~
+&n
+&+L      .------------------------.
+&+L      |                        |
+&+L      |   Klubre The Barreler  |
+&+L      |                        |
+&+L      `------------------------'
+~
+S
+#139562
+A Turn in the&n&+y Palisade&n&+w Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139563
+D3
+~
+~
+0 0 139561
+S
+#139563
+The&n&+y Palisade&n&+w Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center.  To the north lies&n&+L a dark&n&+w and narrow alley and to the
+east the Palisade Road continues. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139564
+D1
+~
+~
+0 0 139567
+D2
+~
+~
+0 0 139562
+S
+#139564
+&n&+LCl&n&+wa&n&+Lw Alley&n~
+&+L  This alley is narrow and quite dirty, the street sweepers must have
+&+Lmissed this Part of the city.  Rubbish and mud covers the paved road
+&+Lmaking the stones almost not visible.  Clearly this must be the slum or
+&+Lat least the poor peoples neighborhood.  People in the street seems to
+&+Lbe nervous and hurries Along the street to wherever they are going.
+&+LA child can be heard screaming somewhere among the buildings. &n&+w A shabby
+&+wsign&n&+L hangs on a building On the east side of the alley. &n
+~
+2 9 1
+D0
+~
+~
+0 0 139566
+D1
+~
+door&n~
+1 0 139565
+D2
+~
+~
+0 0 139563
+E
+sign shabby&n~
+&n
+     .------------------------.
+     |                        |
+     |                        |
+     |     The Tavern of      |
+     |                        |
+     |    the Lost Unicorn    |
+     |                        |
+     |                        |
+     `------------------------'
+~
+S
+#139565
+&n&+LA R&n&+woom Be&n&+Lfo&n&+wre the Ta&n&+Lvern&n~
+  This is the room where the bouncer decide who is to be let inside
+and who is not.  The room has almost no furniture with the exception
+of a black bench.  Vomit lies On the floor as a lead of whAt the
+clientele here might be.  Unemployed and laid off workers is what
+the majority of the customers consists of.  Smoke and loud conversations
+flow in from the eastern exit which leads into the Tavern.
+~
+2 0 0
+D1
+~
+~
+0 0 139569
+D3
+~
+door&n~
+1 0 139564
+S
+#139566
+Cl&n&+wa&n&+Lw Alley&n~
+&+L  This alley is narrow and quite dirty, the street sweepers must have
+&+Lmissed this Part of the city.  Rubbish and mud covers the paved road
+&+Lmaking the stones almost not visible.  Clearly this must be the slum or
+&+Lat least the poor peoples neighborhood.  People in the street seems to
+&+Lbe nervous and hurries Along the street to wherever they are going.
+&+LA child can be heard screaming somewhere among the buildings.  One
+&+Lnever knows what or who might hide here in the&n&+w sh&n&+Lado&n&+wws. &n
+~
+2 9 1
+D0
+~
+~
+0 0 139572
+D1
+~
+door&n~
+1 0 139571
+D2
+~
+~
+0 0 139564
+S
+#139567
+&n&+LA Dead End&n&+w in the&n&+y Palisade&n&+w Road&n~
+   The&n&+y Palisade Road&n&+w runs along the palisade around the town
+and intersects with all of the other streets of the city.  The
+street here is not paved like the Central Road.  There is a very
+good reason for this.  The town is expanding fast and as the town
+grows the palisade moves further away from the center of town and
+the road follows with it. &n&+y The tanners&n&+w of the town have their work-
+shops located to the side of Palisade Road facing away from the
+town center.  The Palisade Road stops here due to the last
+modification of the palisade. &n
+~
+2 0 1
+D3
+~
+~
+0 0 139563
+S
+#139568
+&n&+GThe&n&+y Barreler&n&+G's Workshop&n~
+&+L   This is the workshop of Nilstin, the goblin barreler and the room is
+&+Ldimly lit by&n&+y a candle&n&+L On the southern wall.  Nilstin is a&n&+G Goblin&n&+L and
+&+Lcan see in the dark but some of his customers can't so that is the
+&+Lreason why he keeps this candle lit during open hours.  The room is
+&+Lfilled with all sorts of containers, mostly large ones but some smaller
+&+Lfor the bars serving barrels.  Nilstin and his apprentice stands in the
+&+Lnorthern part of the room trying to strip&n&+y a copper band&n&+L around a
+&+Lhuge barrel. &n
+~
+2 0 0
+D2
+~
+door&n~
+1 0 139561
+S
+#139569
+Inside&n&+L One &n&+wEy&n&+Le's Tav&n&+wern&n~
+&+L  The tavern is fairly dark and the only light sourcees are two tardipped
+&+Ltorches On the southern wall.  A black oaken bardesk stands in the northern
+&+Lpart of the room and a couple of drunks are leaning against it.  The tables
+&+Lare robust and made of heavy&n&+r pine&n&+ywood&n&+L.  Beer and food lies allwer the
+&+Ltables.  At this time of day or rather, evening the tavern is filled with
+&+Lpeople and the conversations are really loud.  Make oneself heard while
+&+Lordering is nearly impossible.  In the southeastern wall stands a huge
+&+L&n&+rf&n&+Ri&n&+Yre&n&+Rpl&n&+race&n&+L.  Rumors  whisper about One Eye's connection to the feared
+&+Land well known criminal &n&+rNor&+Laus but that has never been proved by the
+&+Lcity guards. &n
+~
+2 0 0
+D2
+~
+door&n~
+5 0 139570
+D3
+~
+~
+0 0 139565
+E
+fireplace&n~
+   This fireplace is made of granite and is the
+only heat source in the room except for the
+candles.
+~
+S
+#139570
+&n&+LThe&n&+r Gamb&n&+Ller's Hangout&n~
+&+L   This room is for the people who can afford the stakes of a real
+&+Lpoker game.  The players sits barely viable in the smoke around a
+&+Lblack poker table and only glance At the newcomers.  Everyone in the
+&+LTavern knows what it takes to enter this room so only the right
+&+Lpeople come here. &n&+r A murder&n&+L or two a month is not unusual in this
+&+Lroom, and the corpses are never seen again. &n
+~
+2 0 0
+D0
+~
+door&n~
+5 0 139569
+S
+#139571
+A&n&+L Poor&n&+r Comm&n&+Loner's Dwelling&n~
+   This is the home of one of the poor families of Mavulsk.  The walls and
+furniture are very dirty and worn down.  The floor is dirty and in a
+very bad condition.  A fat rat scurries along the floor to avoid an
+attack from the housecat who is resting by the fireplace.  The fireplace
+is the only light source in the room.
+~
+2 0 0
+D3
+~
+door&n~
+1 0 139566
+S
+#139572
+&n&+LThe Northern Part of Cl&n&+waw&n&+L Alley&n~
+&+L  This alley is narrow and quite dirty, the street sweepers must have
+&+Lmissed this Part of the city.  Rubbish and mud covers the paved road
+&+Lmaking the stones almost not visible.  Clearly this must be the slum or
+&+Lat least the poor peoples neighborhood.  People in the street seems to
+&+Lbe nervous and hurries Along the street to wherever they are going.
+&+LA child can be heard screaming somewhere among the buildings. &n
+~
+2 9 1
+D0
+~
+~
+0 0 139575
+D1
+~
+door&n~
+1 0 139573
+D2
+~
+~
+0 0 139566
+D3
+~
+door&n~
+1 0 139574
+S
+#139573
+&n&+LA&n&+r Comm&n&+Loner's&n&+w Spartan Home&n~
+   This is the home of one of the poor families of Mavulsk.  The walls and
+furniture are very dirty and worn down.  The floor is dirty and in a
+very bad condition.  A fat rat scurries along the floor to avoid an
+attack from the housecat who is resting by the fireplace.  The fireplace
+is the only light source in the room.
+~
+2 0 0
+D3
+~
+door&n~
+1 0 139572
+S
+#139574
+The Home of a Poor&n&+r Comm&n&+Loner&n~
+   This is the home of one of the poor families of Mavulsk.  The walls and
+furniture are very dirty and worn down.  The floor is dirty and in a
+very bad condition.  A fat rat scurries along the floor to avoid an
+attack from the housecat who is resting by the fireplace.  The fireplace
+is the only light source in the room.
+~
+2 0 0
+D1
+~
+door&n~
+1 0 139572
+S
+#139575
+Southeastern&n&+m Market&n~
+&+m  The marketplace if full of merchants and farmers trying to sell
+&+mtheir goods to the inhabitants of Mavulsk.  The air is full of the
+&+msounds associated with serious bargaining.  The market is very
+&+mcrowded and it is hard to make way in the crowd through all the
+&+mcustomers and merchants.  A crowd like this would be perfect for a
+&+pickpocket and one better keep the purse and valuables hidden.
+&+mSounds of forging can be heard from the east, to the far west lies
+&+mthe Central Road and to the north lies the  market.  To the south
+&+mlies the dark and dangerous&n&+L Cl&n&+wa&n&+Lw Alley. &n
+~
+2 0 1
+D0
+~
+~
+0 0 139577
+D1
+~
+~
+0 0 139682
+D2
+~
+~
+0 0 139572
+D3
+~
+~
+0 0 139509
+S
+#139576
+&n&+LA Tunnel Under&n&+y the Palisade&n~
+&+L  This tunnel is very small, about three foot in diameter and it
+&+Lis very damp.  The only way to pass it is by crawling through it
+&+Lbut that idea doesn't feel to appealing since the ceiling consists
+&+Lof wet sand and look very instable.  By the way the walls look with
+&+Lno mushrooms and algae this must be a fairly freshly dug tunnel. &n
+~
+2 257 0
+D3
+~
+bush~
+5 0 139579
+D4
+&+y   This plank is loose and if you pull it
+&+yaside it opens an exit into the town. &n
+~
+plank~
+5 0 139528
+S
+#139577
+Northeastern Part of the&n&+m Market&n~
+&+m   The marketplace if full of merchants and farmers trying to sell
+&+mtheir goods to the inhabitants of Mavulsk.  The air is full of the
+&+msounds associated with serious bargaining.  The market is very
+&+mcrowded and it is hard to make way in the crowd through all the
+&+mcustomers and merchants.  A crowd like this would be perfect for a
+&+mpickpocket and one better keep the purse and valuables hidden.
+&+mThis part of the market is mostly full of foreign merchants who
+&+mare trying to sell their goods to the town's inhabitant.  One can
+&+msee the stone mansion to the northwest and to the west and south
+&+mlies the rest of the market. &n
+~
+2 0 1
+D2
+~
+~
+0 0 139575
+D3
+~
+~
+0 0 139578
+S
+#139578
+The Northwestern Part of the&n&+m Market&n~
+&+m   The marketplace if full of merchants and farmers trying to sell
+&+mtheir goods to the inhabitants of Mavulsk.  The air is full of the
+&+msounds associated with serious bargaining.  The market is very
+&+mcrowded and it is hard to make way in the crowd through all the
+&+mcustomers and merchants.  A crowd like this would be perfect for a
+&+mpickpocket and one better keep the purse and valuables hidden.
+&+mThis part of the market is mostly full of farmers and fur taders
+&+mwho tries to sell their goods.  One can see the stone mansion to
+&+mthe northwest and to the east and south lies the rest of the market. &N
+~
+2 0 1
+D1
+~
+~
+0 0 139577
+D2
+~
+~
+0 0 139509
+S
+#139579
+&n&+gBy a Huge &+GBush&n&+g on the&n&+y Sand Embankment&n~
+&+y   Standing here On the sandy shore of&n&+B Um&n&+bral&n&+B Ri&n&+bver&n&+y you can see the dark
+&n&+gconifer forest&n&+y On the other side of the river.  In the northeast lies the
+&+ycity of Mavulsk and behind it the great mountain range.  The River comes
+&+yfrom the northwest and flows down to the southeast.  The River is wide
+&+yand calm here but more rapid parts can be seen upstream downstream
+&+ythe river flows calmly through the landscape.  A huge green&n&+g bush&n&+y grows
+&+yin the sand here. &n
+~
+2 0 2
+D1
+~
+bush~
+5 0 139576
+D3
+~
+~
+0 0 139581
+D6
+~
+~
+0 0 139580
+S
+#139580
+&+yOn the Shore of &n&+bRi&n&+Bver Um&n&+bral&n~
+&+y   Standing here On the sandy shore of&n&+B Um&n&+bral&n&+B Ri&n&+bver&n&+y you can see the dark
+&n&+gconifer forest&n&+y On the other side of the river.  In the northeast lies the
+&+ycity of Mavulsk and behind it the great mountain range.  The River comes
+&+yfrom the northwest and flows down to the southeast.  The River is wide
+&+yand calm here but more rapid parts can bee seen upstream downstream
+&+ythe river flows calmly through the landscape. &n
+~
+2 0 2
+D3
+~
+~
+0 0 139582
+D9
+~
+~
+0 0 139579
+S
+#139581
+&n&+BOn the R&n&+biv&n&+Ber&n&+C U&n&+Bm&n&+br&n&+bal&n~
+&+b   The river flows calmly here down passed the City of Mavulsk.  The
+&+bwater is very clear and tastes fresh.  Some salmons can be seen swimming
+&+bin the water but other&n&+L shapes&n&+b moves around too in the deep.  Further
+&+bupstream the river seems wilder and downstream calmer, maybe it
+&+bends in a lake. &n
+~
+2 0 6
+D1
+~
+~
+0 0 139579
+D2
+~
+~
+0 0 139727
+D3
+~
+~
+0 0 139589
+D6
+~
+~
+0 0 139582
+D9
+~
+~
+0 0 139728
+S
+#139582
+&n&+BOn the Ri&+bve&n&+Br &n&+CU&n&+Bm&n&+bral&n~
+&+b   The river flows calmly here down passed the City of Mavulsk.  The
+&+bwater is very clear and tastes fresh.  Some salmons can be seen swimming
+&+bin the water but other&n&+L shapes&n&+b moves around too in the deep.  Further
+&+bupstream the river seems wilder and downstream calmer, maybe it
+&+bends in a lake. &n
+~
+2 0 6
+D1
+~
+~
+0 0 139580
+D2
+~
+~
+0 0 139589
+D3
+~
+~
+0 0 139585
+D6
+~
+~
+0 0 139583
+D9
+~
+~
+0 0 139581
+S
+#139583
+&n&+BOn the R&n&+biv&n&+Ber&n&+C U&n&+Bm&n&+bral&n~
+&+b   The river flows calmly here down passed the City of Mavulsk.  The
+&+bwater is very clear and tastes fresh.  Some salmons can be seen swimming
+&+bin the water but other&n&+L shapes&n&+b moves around too in the deep.  Further
+&+bupstream the river seems wilder and downstream calmer, maybe it
+&+bends in a lake. &n
+~
+2 0 6
+D0
+~
+~
+0 0 139586
+D1
+~
+~
+0 0 139584
+D2
+~
+~
+0 0 139585
+D9
+~
+~
+0 0 139582
+S
+#139584
+&n&+bA More Calm Part of t&n&+Bhe R&n&+biv&n&+Be&n&+br&n~
+&+b   The river flows calmly here down passed the City of Mavulsk.  The
+&+bwater is very clear and tastes fresh.  Some salmons can be seen swimming
+&+bin the water but other&n&+L shapes&n&+b moves around too in the deep.  Further
+&+bupstream the river seems wilder and downstream calmer, maybe it
+&+bends in a lake. &n
+~
+2 0 6
+D3
+~
+~
+0 0 139583
+S
+#139585
+&+BOn a &n&+bBend i&+Bn the &+BRiver &+CU&+Bm&n&+bral&n~
+&+b   The river flows calmly here down passed the City of Mavulsk.  The
+&+bwater is very clear and tastes fresh.  Some salmons can be seen swimming
+&+bin the water but other&n&+L shapes&n&+b moves around too in the deep.  Further
+&+bupstream the river seems wilder and downstream calmer, maybe it
+&+bends in a lake. &n
+~
+2 0 6
+D0
+~
+~
+0 0 139583
+D1
+~
+~
+0 0 139582
+S
+#139586
+&n&+bBelow&n&+B a W&n&+Cat&n&+Ber&n&+bfall&n~
+&+B   The travel upstream blocks here by a large and wild waterfall.  The
+&+Bfresh water from the mountains whirls around here and it looks very
+&+Bdangerous.  Some&n&+w cl&n&+Lif&n&+wfs&n&+B stand below the waterfall and seem unaffected
+&+Bby the wild waterfall.  Salmon stand below the waterfall in a futile
+&+Battempt to pass it.  Other&n&+L dark&n&+B shapes can bee seen moving down in the
+&+B deep to. &n
+~
+2 0 6
+D0
+~
+cliff~
+5 0 139587
+D2
+~
+~
+0 0 139583
+S
+#139587
+&n&+bBehind the W&n&+Bat&n&+Cer&n&+Bfa&n&+bll&n~
+&+b   This water-filled cave is hidden behind the waterfall by a cliff.
+&+bThe walls are overgrown with&n&+g algae&n&+b of all kinds and some &n&+Walbino&n
+&+bfish and water salamanders can be seen in the water.  At the bottom
+&+bof the water cavern,&n&+W bones&n&+b of all sorts of animals be seen, wonder
+&+bwhat might live in this dark and wet cave.  In the northern part of
+&+bthe cavern stands some large stones. &n
+~
+2 210010217 9
+D2
+~
+cliff~
+5 0 139586
+D8
+~
+stone&n~
+5 0 139588
+S
+#139588
+&n&+bBehind a Large&n&+L St&n&+wo&n&+Lne&n~
+&n&+B   Behind the large stone a little room has been dug out in the&n&+Y sand. &n
+&n&+BIn the middle of this little rooms stand a water-bowl buried in the
+&n&+Bsand with a tiny fish in it.  All sorts colours emits from the bowl and
+&n&+Bbeside the bowl sits a &n&+Rti&n&+Bn&n&+Gy &n&+blittle c&n&+Breature gazing into it.  As you
+&n&+Benter the creature raises to its feet. &n
+~
+2 209748193 9
+D7
+~
+stone&n~
+5 0 139587
+S
+#139589
+&n&n&+bOn the R&n&+Biv&n&+ber&n&+B Um&n&+bral&n~
+&+b  The river flows calmly here down passed the City of Mavulsk.  The
+&+bwater is very clear and tastes fresh.  Some salmons can be seen swimming
+&+bin the water but other&n&+L shapes&n&+b moves around too in the deep.  Further
+&+bupstream the river seems wilder and downstream calmer, maybe it
+&+bends in a lake. &n
+~
+2 0 6
+D0
+~
+~
+0 0 139582
+D1
+~
+~
+0 0 139581
+D2
+~
+~
+0 0 139726
+S
+#139590
+A Gua&n&+Lrdro&nom&n~
+   This room is where the guards who are not on duty rests before next
+shift.  The room is tidy but have no carpets or shields On the walls.
+The room looks as if it has been carved right out of the mountain,
+and it probably have.  The only furniture in this room is a table
+and a couple of chairs.
+~
+2 1283489865 0
+D1
+A&n&+r Pine&n&+ywood&n&+g door&n
+~
+door&n~
+1 0 139592
+D3
+~
+~
+0 0 139501
+S
+#139591
+The&n&+r Gua&n&+Lrd's Room&n~
+   This room is where the guards who are not on duty rests before next
+shift.  The room is tidy but have no carpets or shields On the walls.
+The room looks as if it has been carved right out of the mountain,
+and it probably have.  The only furniture in this room are a table
+and a couple of chairs.
+~
+2 1283489865 0
+D1
+~
+~
+0 0 139501
+S
+#139592
+The&n&+r Lieute&n&+Lnant's&n Office&n~
+   This is the room of the lieutenant who is in charge of the defense
+inside the stone fortress closest to the double door.  The room is tidy
+and clean, not even a carpet On the floor or the walls.  The room has
+two pieces of furniture, a chair and a pinewood desk.  The only visible
+exit from this room is the door west.
+~
+2 1283489865 0
+D3
+A&n&+r Pine&n&+ywood door&n
+~
+door&n~
+1 0 139590
+S
+#139593
+Before a H&n&+Lu&nge St&n&+Lo&nne St&n&+La&nirway&n~
+   The walls in this room are covered with carpets of all kinds but mostly
+with motives of hunters and wild animals.  The floor is of solid granite
+and At the center of the floor a beautiful mosaic continues from this
+room up the stone stairway.  Except for the door there are two other visible
+exits, one door to northwest and one door to northeast.  The door to the
+northwest has a sign on it.
+~
+2 1283489865 0
+D2
+~
+~
+0 0 139501
+D4
+~
+~
+0 0 139594
+D6
+~
+door&n~
+1 0 139596
+D8
+~
+door&n~
+1 0 139595
+E
+sign~
+&n
+      __________________________________
+     |                                  |
+     |  Only Kitchen Personnel Allowed  |
+     |__________________________________|
+~
+S
+#139594
+A H&n&+Lu&nge St&n&+Lo&nne&n&+L Hall&n~
+   This stone hall At the top of some stairs have carpet-covered
+walls and several thick animal furs On the floor.  The walls,
+ceiling, and floor are all made out of solid granite stone.  There
+are three visible exits.  One in the western wall and one in the
+eastern wall, both these exits are blocked by a &n&+rpine&n&+ywood door&n.
+The &n&+cmo&n&+Rs&n&+Ca&n&+cic&n leading to this room from below continues to the north
+exit.  A small&n&+Y golden&n sign hangs On the eastern door.
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139602
+D1
+~
+door&n~
+3 139559 139601
+D3
+~
+door&n~
+1 0 139603
+D5
+~
+~
+0 0 139593
+E
+sign~
+&n
+&n&+Y     _____________________
+&n&+Y    |                     |
+&n&+Y    |  Official Visitors  |
+&n&+Y    |_____________________| &n
+~
+S
+#139595
+&+LAbove a Steep Staircase&n~
+   Nobody have made an effort to make this room nice in any way.  The walls
+are of stone together with the ceiling and floor.  The room is pitch-black
+and has no light source .  A huge trapdoor can be seen in the floor.  A long
+moaning sound can be heard from below the stairway.
+~
+2 1283489865 0
+D5
+~
+trapdoor&n~
+1 0 139613
+D7
+~
+door&n~
+1 0 139593
+S
+#139596
+A H&n&+La&n&+wllway in the W&n&+Le&nst Wi&n&+wn&ng~
+   This small hallway has its walls covered with pinewood and the floor
+with a thick red carpet.  A small door is placed On the eastern wall.  Loud
+sounds of work can be heard, someone shouting orders at someone and the
+sound of metal hitting metal.  The sounds are not the sounds of battle
+or even practice for battle, and together with the tasty smell there must
+be a kitchen somewhere north.
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139597
+D1
+~
+door&n~
+1 0 139598
+D9
+~
+door&n~
+1 0 139593
+S
+#139597
+&+gInside the Kitchen&n~
+&+W   The kitchen dominates of a huge work desk in the middle of the room.  The
+&+Wdesk is covered with all types of fresh fruits and vegetables.  Two large
+&+Wstoves stands burning in the northern Part of the room.  The sound of
+&+Wcooking pots can be heard over the noise here in the kitchen.  A fat cook
+&+Wstands here supervising the rest of the workers.
+~
+2 1283489865 0
+D2
+~
+~
+0 0 139596
+S
+#139598
+&+WA Storage Room&n~
+   This little room is a storage room for the most used ingredients used
+by the kitchen workers.  Along the walls are shelves full of all sorts
+of ingredients, dried herbs, fish and potatoes.  By the eastern wall stands
+a couple of barrels with bear, wine and salted fish.
+~
+2 1283489865 0
+D3
+~
+door&n~
+1 0 139596
+S
+#139599
+&+LIn a&n&+m Mage&n&+L's Secret &n&+yLibrary&n~
+&+L   Under the trapdoor lies a small room.  Both the floor and the walls
+&+Lare made of stone.  The ceiling looks to be made of oak, the fire have
+&+Lnot made it through the thick oaken floor in the house.  Some burn markings
+&+Lcan be see in the ceiling and the fire haven't spread into this room
+&+Lbut it is severely damaged by the smoke.  The walls are covered with
+&+Lbooks of all sorts but they have been severely damaged by the heat
+&+Land smoke and are to the most part unreadable. &n
+~
+2 1283489865 0
+D1
+~
+shelf~
+5 0 139600
+D4
+~
+trapdoor&n~
+6 0 139547
+S
+#139600
+&+rThe R&n&+Lo&n&+rom of&n&+L Pe&n&+rnt&n&+La&n&+rgra&n&+Lms&n~
+&n&+r   This room has been used by the&n&+m mage&n&+L to summon&n&+r de&n&+Rmo&n&+rns from other
+&n&+rdimensions.  The room seems totally&n&+L undamaged by&n&+r the fire.  The walls,
+&n&+rceiling and floor are made of some&n&+L black stone and&n&+r the room has no
+&n&+rfurniture at all.  Both the&n&+L ceiling and the&n&+r walls are covered with
+&n&+rpentagrams and the floor is&n&+L mostly covered a&n&+W silver inlayed&n&+r pentagram.
+&n&+rTrapped in this pentagram&n&+L stands a hideous&n&+r demon staring at you.&n
+~
+2 1283489865 0
+D3
+~
+wall&n~
+5 0 139599
+S
+#139601
+The &n&+mEm&n&+Li&n&+mssa&n&+Lr&n&+my&n's Hallway&n~
+&+g   The hallway has beautiful carpets On the walls covered with all
+&+gkinds of motives.  Along the hallway there are doors on both the
+&+gnorthern and southern wall.  The floor is covered with a soft red
+&+gcarpet.  Candlesticks of gold hangs On the walls to light the hallway
+&+gsince some of the emissaries are of races with no underdark vision. &n
+~
+2 1283489864 0
+D0
+~
+door&n~
+1 0 139606
+D1
+~
+~
+0 0 139605
+D2
+~
+door&n~
+1 0 139604
+D3
+~
+door&n~
+3 139559 139594
+S
+#139602
+The Grand&n&+r Hallway&n~
+   This is the hallway leading to the hall of audiences where the baron
+usually residents during his waken hours.  The walls, floor and ceiling
+are all made of solid granite stone.  The hall has no exquisite carpets
+or paintings, its just tidy and plain, giving a cold impression.  In
+the center of the floor the &n&+Cm&n&+Ro&n&+csa&n&+Cic&n runs from the southern exit to the
+northern exit. &n
+~
+2 1283489864 0
+D0
+~
+~
+0 0 139609
+D2
+~
+~
+0 0 139594
+S
+#139603
+A Quiet&n&+m Library&n~
+&+M   This little library is for the emissaries and the Baron's advisor.
+&+MSmall but contains a huge amount of knowledge for those who can read.
+&+MThe room is full of shelves with all kinds of books, On the floor lies
+&+Ma purple carpet and in the ceiling hangs a crystal candle which spread
+&+Mlight to this room.  In the middle of the room stands a small table and
+&+Mnext to it two &n&+rpine&n&+ywood&n&+M chairs.  In one of these chairs sits the Baron's
+&+Madvisor&n&+m Ivlor. &n
+~
+2 1283489865 0
+D1
+~
+door&n~
+1 0 139594
+S
+#139604
+&+WAn Emissary's Bedroom&n~
+&+g   This room is the guest quarters of an emissary.  The walls are covered
+&+gwith beautiful paintings and carpets.  The floor is of boards that have
+&+gbeen placed On the stone floor to increase the temperature in here.  The
+&+groom has a window in the southern wall through which one can overview
+&+gthe city.  A bed made of pinewood stands by the western wall and a table
+&+gstand below the window. &n
+~
+2 1283489864 0
+D0
+~
+door&n~
+1 0 139601
+S
+#139605
+The&n&+m Em&n&+Li&n&+mssary&n's Hallway&n~
+&+g   The hallway has beautiful carpets On the walls covered with all
+&+gkinds of motives.  Along the hallway there are doors on both the
+&+gnorthern and southern wall.  The floor is covered with a soft red
+&+gcarpet.  Candlesticks of gold hangs On the walls to light the hallway
+&+gsince some of the emissaries are of races with no underdark vision. &n
+~
+2 1283489864 0
+D0
+~
+door&n~
+1 0 139607
+D2
+~
+door&n~
+1 0 139608
+D3
+~
+~
+0 0 139601
+S
+#139606
+An Empty Guestroom&n~
+&+g   This room is the guest quarters of an emissary.  The walls are covered
+&+gwith beautiful paintings and carpets.  The floor is of boards that have
+&+gbeen placed On the stone floor to increase the temperature in here.  A
+&+gbed made of pinewood stands by the western wall and high-quality pinewood
+&+gdesk stands in the north of the room. &n
+~
+2 0 0
+D2
+~
+door&n~
+1 0 139601
+S
+#139607
+&nAn &n&+rEmissary&n&+w's Bedroom&n~
+&+g   This room is the guest quarters of an emissary.  The walls are covered
+&+gwith beautiful paintings and carpets.  The floor is of boards that have
+&+gbeen placed On the stone floor to increase the temperature in here.  A
+&+gbed made of pinewood stands by the western wall and high-quality pinewood
+&+gdesk stands in the north of the room. &n
+~
+2 1283489864 0
+D2
+~
+door&n~
+1 0 139605
+S
+#139608
+&n&+GAn Emissary's Room&n~
+&+g   This room is the guest quarters of an emissary.  The walls are covered
+&+gwith beautiful paintings and carpets.  The floor is of boards that have
+&+gbeen placed On the stone floor to increase the temperature in here.  The
+&+groom has a window in the southern wall through which one can overview
+&+gthe city.  A bed made of pinewood stands by the western wall and a table
+&+gstand below the window. &n
+~
+2 1283489864 0
+D0
+~
+door&n~
+1 0 139605
+S
+#139609
+&nThe&n&+r Grand&n&+w Hall&nway&n~
+   This is the hallway leading to the hall of audiens where the baron
+usually residents during his waken hours.  The walls, floor and ceiling
+are all made of solid granite stone.  The hall has no exquisite carpets
+or paintings, its just tidy and plain, giving a cold impression.  In
+the center of the floor the &n&+Cm&n&+Ro&n&+csa&n&+Cic&n runs from the southern exit to the
+northern exit.  The northern exit is blocked by a huge&n&+r pine&n&+Lwood&n door.
+ In the western wall is a closed door. &n
+~
+2 1283489864 0
+D0
+~
+door&n~
+1 0 139612
+D2
+~
+~
+0 0 139602
+D3
+~
+door&n~
+1 0 139610
+S
+#139610
+&+RInside a Large Bedroom&n~
+   This room is a fashionable bedroom, maybe the Baron's.  The walls
+have paintings of beautiful dryads and nymphs.  The stone floor is
+covered with several thick red carpets.  A&n&+L black&n bookcase stands against
+the northern wall and a carpenters masterpiece of bed stands next
+to it.  The room is totally dark and has no light source at all.
+~
+2 1283489864 0
+D0
+~
+bookcase&n~
+5 0 139611
+D1
+~
+door&n~
+1 0 139609
+S
+#139611
+&+LA Small &+YTreasure&+L Room&n~
+&+C   This little room behind the bookcase have no light source at all
+&+Cand the walls are plain stone.  The room has no special furniture,
+&+Cexcept for a large mithril chest in the middle of the room.  The
+&+Conly exit is the bookshelf. &n
+~
+2 1317044288 0
+D2
+~
+wall&n~
+5 0 139610
+S
+#139612
+&+mThe Audience Chamber&n~
+   The audience chamber of the stone mansion has been richly decorated
+with fine carving, carpets and paintings.  In the middle of the room
+stands a large banquet table around which many feasts have been held.  The
+table is made of iron oak, which is a very rare piece of wood to come by.
+In the north side of the room stands the Baron's throne, made also of iron
+oak and full of ornaments and silver inlays.
+~
+2 1283489865 0
+D2
+~
+door&n~
+1 0 139609
+S
+#139613
+&+LAt the&n Bottom of&+L Some Stairs&n~
+&+L   At the bottom of the dark stairway lies this room which is a intersection
+&+Lwhere a damp corridor from east meets another corridor from the north.
+&+LThe northern corridor looks rougher than the eastern one.  The moaning
+&+Lsound is clearly distinguished from the eastern corridor.  The floor is
+&+Lfar from clean and is covered with dust and gravel. &n
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139620
+D1
+~
+~
+0 0 139614
+D4
+~
+trapdoor&n~
+1 0 139595
+S
+#139614
+&+LBe&nfo&n&+Lre &nthe&n&+r Prison&n~
+&+L   This corridor stretches in east to west direction and is both
+&+Lpitch-black and damp.  The walls, floor and the ceiling have been
+&+Lcarved out from the raw mountains.  The eastern exit is blocked by
+&+Lsome closed bars.  From behind the bars somewhere a low moaning
+&+Lsound can be heard. &n
+~
+2 1283489865 0
+D1
+~
+bars&n~
+1 0 139615
+D3
+~
+~
+0 0 139613
+S
+#139615
+Th&n&+Le Pr&niso&n&+Ln Hall&n~
+&+L   This is the corridor where the torturer roams, longing to inflict
+&+Lmore pain to a defenseless prisoner.  The corridor is damp and totally
+&+Lpitch-black with no light source .  The walls, ceiling and floor are
+&+Lcarved directly out from the mountain.  To the north is a prison door
+&+Land from the east can a moaning sound be heard. &n
+~
+2 1283489865 0
+D0
+~
+door&n~
+3 139571 139619
+D1
+~
+~
+0 0 139616
+D3
+~
+bars&n~
+1 0 139614
+S
+#139616
+Th&n&+Le End&n of t&n&+Lhe P&nris&n&+Lon Co&nrri&n&+Ldor&n~
+&+L   This is the end of the prison corridor.  The room is pitch-black and
+&+Lhas no light source, not even unlit.  In the middle of the room by the
+&+Leastern wall stands a table and two chairs.  The walls are moist and of
+&+Lsolid granite, A cell is placed on both the south and north side of
+&+Lthe corridor.  From the northern cell a low moaning sound can be heard.&n
+~
+2 1283489865 0
+D0
+~
+door&n~
+3 139571 139617
+D2
+~
+door&n~
+3 139571 139618
+D3
+~
+~
+0 0 139615
+S
+#139617
+&n&+LA Pr&nis&n&+Lon&n Cell&n~
+&+L   This cell is pitch-black and has no light source and it is full of filth
+&+Land&n&+y excrement. &n&+L Someone has painted the walls with his excrements
+&+L and the stench here would even make a devil from hell puke.  The room
+&+L has no furniture, in the north wall hangs a pair of unused iron shackles.
+&+L The only obvious exit is the cell door. &n
+~
+2 1283489865 0
+D2
+~
+door&n~
+3 139571 139616
+S
+#139618
+&nA&+B Magical&n&+r Priso&n&+Ln Cell&n~
+&+B   This prison was constructed by Ivlor to prevent a special prisoner from
+&+Bescaping.  The walls are covered with a blue cloth similar to velvet and
+&+Bit seems to move like the waves of the ocean.  The room is totally empty
+&+Bif it weren't for the magical shackles in the floor.  The only obvious exit
+&+Bis the door which you just came through. &n
+~
+2 1283489993 0
+D0
+~
+door&n~
+3 139571 139616
+S
+#139619
+A &n&+LPr&niso&n&+Ln Cell&n~
+&+L   This cell has for the moment no inhabitant.  It has no light source
+&+Land is totally dark.  The walls are covered with algae and the room
+&+Lis very damp.  A pair of bronze shackles hangs On the western wall
+&+Lwaiting for a new customer.  If it weren't for the moist atmosphere
+&+Lthe room gives a tidy and clean impression. &n
+~
+2 1283489865 0
+D2
+~
+door&n~
+3 139571 139615
+S
+#139620
+A Tu&+Lnnel Th&nrou&n&+Lgh t&nhe Min&n&+Ler's Complex&n~
+&+L   This tunnel leads to the worksite of the miner's.  The tunnel has no
+&+Lsource of light and is very damp.  Leaning against the tunnel wall stands
+&+La miner's pick with a murky tree handle, and the air is filled with the
+&+Lsmell of rotten wood.  Small pools of grey water lies On the slippery
+&+Ltunnel floor and somewhere ahead can a rat scurrying along the walls. &n
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139623
+D1
+~
+~
+0 0 139621
+D2
+~
+~
+0 0 139613
+D3
+~
+~
+0 0 139622
+S
+#139621
+&n&+LThe&n Min&n&+Ler'&ns R&n&+Lesting Area&n~
+&+L   This room was once used as the resting area for the off-duty miner's
+&+Lwho didn't have a long enough break to go back home so they sat here
+&+Linstead playing cards.  The walls are of stone carved out directly
+&+Lfrom the mountain and they are now covered with algae.  Against the
+&+Lwalls stands various tools for mining work, but they look to be in
+&+Lvery bad shape. &n
+~
+2 1283489865 0
+D3
+~
+~
+0 0 139620
+S
+#139622
+&n&+LA R&nest&n&+Ling&n Area~
+&+L   This room was once used as the resting area for the off-duty miner's
+&+Lwho didn't have a long enough break to go back home so they sat here
+&+Linstead playing cards.  The walls are of stone carved out directly
+&+Lfrom the mountain and they are now covered with algae.  Against the
+&+Lwalls stands various tools for mining work, but they look to be in
+&+Lvery bad shape. &n
+~
+2 1283489865 0
+D1
+~
+~
+0 0 139620
+S
+#139623
+&+LA Tu&nnel&n&+L Thr&nough&n&+L the M&niner&n&+L's Comp&nlex&n~
+&+L   The tunnel ends here with a huge iron-strengthened oak door which blocks
+&+Lthe northern exit.  The door is covered with moss and algae but the key-
+&+Lhole seems intact.  The tunnel is dark and very moist and the walls
+&+Lare covered with moss and algae the floor is covered with tools in
+&+Ldifferent state of decay.  To the east lies the former foreman's office
+&+Land to the east lies a storage room for tools. &n
+~
+2 1283489865 0
+D0
+~
+door&n~
+3 139575 139626
+D1
+~
+~
+0 0 139624
+D2
+~
+~
+0 0 139620
+D3
+~
+~
+0 0 139625
+S
+#139624
+T&n&+Lhe F&norem&n&+Lan'&ns O&n&+Lffice&n~
+&+L   This was once the office of the foreman.  Here he had his books
+&+Lof account and his keys.  The room still has his rotting desk
+&+Lleft, but all other pieces of furniture are since long gone.  The
+&+Lwalls are moss-covered now and pools of grey water covers the floor.
+&+LThe air is filled with the smell of decay. &n
+~
+2 1283489865 0
+D3
+~
+~
+0 0 139623
+S
+#139625
+An&n&+L Old Stor&nage&n&+L Room&n~
+&+L   This is the old storage room for the miner's equipment.  The room is
+&+Lpitch-black and have no light source.  The room was once carved directly
+&+Lout from the raw mountain and is very moist.  Where there had once been
+&+Lshelves there is only algae, the moisture has been bad to this place.
+&+LSome murky tools are still standing leaning against the walls. &n
+~
+2 1283489865 0
+D1
+~
+~
+0 0 139623
+S
+#139626
+At &n&+Lthe T&nop o&n&+Lf a M&nini&n&+Lng Sh&na&n&+Lft&n~
+&+L   This is where the actual mines start.  The shaft is wide and was dug
+&+Lout many years ago.  The smell of rotten wood fills the air and the
+&+Lair is very damp.  Fortunately the Duergar dwarves and Orcs that once
+&+Lbuilt this shaft didn't put all their trust into a wooden structure
+&+Lso they made an extra ladder, or rather steps carved out from the
+&+Lraw mountain, so even if the originally ladder has decayed one can still
+&+Lclimb the shaft.  The shaft is pitch-black and looks endless. &n
+~
+2 1283489865 0
+D2
+~
+door&n~
+3 139575 139623
+D5
+~
+~
+0 0 139627
+F
+50
+S
+#139627
+In a M&n&+Linin&Ng Sha&n&+Lft&n~
+&+L   The shaft is wide here and was dug out many years ago.  The smell of
+&+Lrotten wood fills the air and the air is very damp.  Fortunately the
+&+LDuergar dwarves and Orcs that once built this shaft didn't put all their
+&+Ltrust into a wooden structure so they made an extra ladder, or rather
+&+Lsteps carved out from the raw mountain, so even if the originally ladder
+&+Lhas decayed one can still climb the shaft.  The shaft is pitch-black and
+&+Llooks endless. &n
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139628
+D4
+~
+~
+0 0 139626
+D5
+~
+~
+0 0 139631
+F
+50
+S
+#139628
+In a &n&+LMini&nng Tun&n&+Lnel&n~
+&+L   This large mine tunnel has been dug out from the raw mountain in the hunt
+&+Lfor mithril-silver.  Only a Duergar dwarf or a Mountain dwarf have the
+&+Lcapacity to construct something like this, a perfect mining tunnel.  The
+&+Ltunnel is dark and moist, the walls are covered with all sorts of moss
+&+Land algae.  The floor looks very slippery with all the moss on it.  The
+&+Lair smells as if there haven't been a fresh bit of air in here in a
+&+Lthousand years. &n
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139629
+D2
+~
+~
+0 0 139627
+S
+#139629
+&n&+LIn &na M&n&+Lining&n Tun&n&+Lnel&n~
+&+L   This large mine tunnel has been dug out from the raw mountain in the hunt
+&+Lfor mithril-silver.  Only a Duergar dwarf or a Mountain dwarf have the
+&+Lcapacity to construct something like this, a perfect mining tunnel.  The
+&+Ltunnel is dark and moist, the walls are covered with all sorts of moss
+&+Land algae.  The floor looks very slippery with all the moss on it.  The
+&+Lair smells as if there haven't been a fresh bit of air in here in a
+&+Lthousand years. &n
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139630
+D2
+~
+~
+0 0 139628
+S
+#139630
+A Coll&n&+Lapse&nd Tunnel&n~
+&+L   The ceiling have collapsed here and blocked off the tunnel.  The blocks
+&+Land the stones are not yet covered with moss and algae so it cannot
+&+Lhave been to long since it collapsed.  To pass this blocked off tunnel
+&+Lwould probably take a week if it is even possible.  The tunnel floor and
+&+Lwalls are very moist and covered with moss and algae.  Some insects
+&+Lcan be seen crawling On the floor. &n
+~
+2 1283489865 0
+D2
+~
+~
+0 0 139629
+S
+#139631
+At T&n&+Lhe Bo&nttom&n&+L of Th&ne Ma&n&+Linsha&nft&n~
+&+L   The shaft here is wide, having been dug out many years ago.  The smell of
+&+Lrotten wood fills the air and the air is very damp.  Fortunately the
+&+LDuergar dwarves and Orcs that once built this shaft didn't put all their
+&+Ltrust into a wooden structure so they made an extra ladder, or rather
+&+Lsteps carved out from the raw mountain, so even if the originally ladder
+&+Lhas decayed one can still climb the shaft.  This is the bottom of this
+&+Lshaft and a tunnel exits from this shaft to the east. &n
+~
+2 1283489865 0
+D1
+~
+~
+0 0 139632
+D4
+~
+~
+0 0 139627
+S
+#139632
+A Tu&n&+Lnnel&n Int&n&+Lerse&nction&n~
+&+L   This intersection is where three different tunnels intersect one
+&+Lfrom the north, one from the west and one from the southeast.  The
+&+Lfloor is very moist and slippery here, moss and algae covers the
+&+Lfloor, walls and ceiling.  A few cockroaches can be seen as scurries
+&+LAlong the tunnel wall. &n
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139633
+D3
+~
+~
+0 0 139631
+D9
+~
+~
+0 0 139635
+S
+#139633
+A Mining Tunnel&n~
+&+L   This large mine tunnel has been dug out from the raw mountain in the hunt
+&+Lfor mithril-silver.  Only a Duergar dwarf or a Mountain dwarf have the
+&+Lcapacity to construct something like this, a perfect mining tunnel.  The
+&+Ltunnel is dark and moist, the walls are covered with all sorts of moss
+&+Land algae.  The floor looks very slippery with all the moss on it.  The
+&+Lair smells as if there haven't been a fresh bit of air in here in a
+&+Lthousand years. &n
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139634
+D2
+~
+~
+0 0 139632
+S
+#139634
+&n&+LA Bl&nock&n&+Led Tunnel&n~
+&+L   The ceiling have collapsed here and blocked off the tunnel.  The blocks
+&+Land the stones are not yet covered with moss and algae so it cannot
+&+Lhave been to long since it collapsed.  To pass this blocked off tunnel
+&+Lwould probably take a week if it is even possible.  The tunnel floor and
+&+Lwalls are very moist and covered with moss and algae.  Some insects
+&+Lcan be seen crawling On the floor. &n
+~
+2 1283489865 0
+D2
+~
+~
+0 0 139633
+S
+#139635
+A &n&+LTunn&nel i&n&+Ln t&nhe Mi&n&+Lnes&n~
+&+L   This large mine tunnel has been dug out from the raw mountain in the hunt
+&+Lfor mithril-silver.  Only a Duergar dwarf or a Mountain dwarf have the
+&+Lcapacity to construct something like this, a perfect mining tunnel.  The
+&+Ltunnel is dark and moist, the walls are covered with all sorts of moss
+&+Land algae.  The floor looks very slippery with all the moss on it.  The
+&+Lair smells as if there haven't been a fresh bit of air in here in a
+&+Lthousand years. &n
+~
+2 1283489865 0
+D1
+~
+~
+0 0 139640
+D6
+~
+~
+0 0 139632
+D8
+~
+~
+0 0 139636
+S
+#139636
+&+LA B&n&+wen&+Ld i&n&+wn a &+LTun&n&+wne&+Ll&n&+w in t&+Lhe Mi&n&+wnes&n~
+&+L   This large mine tunnel has been dug out from the raw mountain in the hunt
+&+Lfor mithril-silver.  Only a Duergar dwarf or a Mountain dwarf have the
+&+Lcapacity to construct something like this, a perfect mining tunnel.  The
+&+Ltunnel is dark and moist, the walls are covered with all sorts of moss
+&+Land algae.  The floor looks very slippery with all the moss on it.  The
+&+Lair smells as if there haven't been a fresh bit of air in here in a
+&+Lthousand years. &n
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139637
+D7
+~
+~
+0 0 139635
+S
+#139637
+&+LAn I&n&+wnt&+Le&n&+wrsect&+Lion o&n&+wf M&+Lin&n&+we T&+Lunn&n&+wels&n~
+&+L   This large mine tunnel has been dug out from the raw mountain in the hunt
+&+Lfor mithril-silver.  Only a Duergar dwarf or a Mountain dwarf have the
+&+Lcapacity to construct something like this, a perfect mining tunnel.  The
+&+Ltunnel is dark and moist, the walls are covered with all sorts of moss
+&+Land algae.  The floor looks very slippery with all the moss on it.  The
+&+Lair smells as if there haven't been a fresh bit of air in here in a
+&+Lthousand years. &n
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139639
+D1
+~
+~
+0 0 139638
+D2
+~
+~
+0 0 139636
+S
+#139638
+&n&+LA Col&nlap&n&+Lsed Tun&nnel&n~
+&+L   The ceiling have collapsed here and blocked off the tunnel.  The blocks
+&+Land the stones are not yet covered with moss and algae so it cannot
+&+Lhave been to long since it collapsed.  To pass this blocked off tunnel
+&+Lwould probably take a week if it is even possible.  The tunnel floor and
+&+Lwalls are very moist and covered with moss and algae.  Some insects
+&+Lcan be seen crawling On the floor. &n
+~
+2 1283489865 0
+D3
+~
+~
+0 0 139637
+S
+#139639
+A &n&+LBlocked&n Tunnel&n~
+&+L   The ceiling have collapsed here and blocked off the tunnel.  The blocks
+&+Land the stones are not yet covered with moss and algae so it cannot
+&+Lhave been to long since it collapsed.  To pass this blocked off tunnel
+&+Lwould probably take a week if it is even possible.  The tunnel floor and
+&+Lwalls are very moist and covered with moss and algae.  Some insects
+&+Lcan be seen crawling On the floor. &n
+~
+2 1283489865 0
+D2
+~
+~
+0 0 139637
+S
+#139640
+&+LA W&nid&n&+Le Minin&ng Tunnel&n~
+&+L   This large mine tunnel has been dug out from the raw mountain in the hunt
+&+Lfor mithril-silver.  Only a Duergar dwarf or a Mountain dwarf have the
+&+Lcapacity to construct something like this, a perfect mining tunnel.  The
+&+Ltunnel is dark and moist, the walls are covered with all sorts of moss
+&+Land algae.  The floor looks very slippery with all the moss on it.  The
+&+Lair smells as if there haven't been a fresh bit of air in here in a
+&+Lthousand years. &n
+~
+2 1283489865 0
+D1
+~
+~
+0 0 139641
+D3
+~
+~
+0 0 139635
+S
+#139641
+&+LA &nTunnel &n&+LDeep In&nto Th&n&+Le Min&nes&n~
+&+L   This large mine tunnel has been dug out from the raw mountain in the hunt
+&+Lfor mithril-silver.  Only a Duergar dwarf or a Mountain dwarf have the
+&+Lcapacity to construct something like this, a perfect mining tunnel.  The
+&+Ltunnel is dark and moist, the walls are covered with all sorts of moss
+&+Land algae.  The floor looks very slippery with all the moss on it.  The
+&+Lair smells as if there haven't been a fresh bit of air in here in a
+&+Lthousand years. &n
+~
+2 1283489865 0
+D2
+~
+~
+0 0 139642
+D3
+~
+~
+0 0 139640
+S
+#139642
+A&n&+L Dead&n End i&n&+Ln Th&ne Mines&n~
+&+L   The ceiling have collapsed here and blocked off the tunnel.  The blocks
+&+Land the stones are not yet covered with moss and algae so it cannot
+&+Lhave been to long since it collapsed.  To pass this blocked off tunnel
+&+Lwould probably take a week if it is even possible.  The tunnel floor and
+&+Lwalls are very moist and covered with moss and algae.  Some insects
+&+Lcan be seen crawling On the floor. &n
+~
+2 1283489865 0
+D0
+~
+~
+0 0 139641
+D1
+A large boulder stand here, it looks as if you can push it aside.
+~
+boulder&n~
+5 0 139643
+S
+#139643
+Beh&n&+Lind a&n Lar&n&+Lge Bou&nlder&n~
+&+L   The tunnel behind the large boulder is not of the same skilled
+&+Lquality as the earlier ones, either they were very eager to dig
+&+Ldeeper into the mountain or someone else must have made this tunnel.
+&+LThe tunnel is covered with algae and moss.  The water dripping from
+&+Lfrom the tunnel ceiling forms pools of water On the floor.  The only
+&+Lvisible exit is the one leading down.  From below the sound of water
+&+Lmoving can be heard and the smell here isn't as bad as before. &n
+~
+2 1283489869 0
+D3
+~
+boulder&n~
+5 0 139642
+D5
+~
+~
+0 0 139644
+S
+#139644
+&+LA &+bWater&+L-filled &nTunnel&n~
+&+B   The tunnel is totally filled with water up to the ceiling and the
+&+Bworld is totally silent under the surface.  The walls are rough and
+&+Bcould be natural as well as dug out from the raw mountain.  Some small
+&+Walbino shrimp&n&+B can be seen moving along the tunnel floor in their
+&+Bhunt for something to eat among the algae and moss On the bottom. &n
+~
+2 1283489897 10
+D1
+~
+~
+0 0 139645
+D4
+~
+~
+0 0 139643
+S
+#139645
+&+cAn &n&+bUnderground&+B Lake&n~
+&+B   The tunnel is totally filled with water up to the ceiling and the
+&+Bworld is totally silent under the surface.  The walls are rough and
+&+Bcould be natural as well as dug out from the raw mountain.  Some small
+&+Walbino shrimp&n&+B can be seen moving along the tunnel floor in their
+&+Bhunt for something to eat among the algae and moss On the bottom.  The
+&+Blake continues to the northeast and to the east. &n
+~
+2 1283489897 10
+D1
+~
+~
+0 0 139646
+D3
+~
+~
+0 0 139644
+D8
+~
+~
+0 0 139651
+S
+#139646
+&+cAn &n&+bUnderground &n&+BLake&n~
+&+B   The tunnel is totally filled with water up to the ceiling and the
+&+Bworld is totally silent under the surface.  The walls are rough and
+&+Bcould be natural as well as dug out from the raw mountain.  Some small
+&+Walbino shrimp&n&+B can be seen moving along the tunnel floor in their
+&+Bhunt for something to eat among the algae and moss On the bottom.  The
+&+Blake continues to the west, east and north. &n
+~
+2 1283489897 10
+D0
+~
+~
+0 0 139651
+D1
+~
+~
+0 0 139647
+D3
+~
+~
+0 0 139645
+S
+#139647
+&n&+bAn Underground Lake&n~
+&+B   The tunnel is totally filled with water up to the ceiling and the
+&+Bworld is totally silent under the surface.  The walls are rough and
+&+Bcould be natural as well as dug out from the raw mountain.  Some small
+&+Walbino shrimp&n&+B can be seen moving along the tunnel floor in their
+&+Bhunt for something to eat among the algae and moss On the bottom.  The
+&+Blake continues to the west, east and north. &n
+~
+2 1283489897 10
+D0
+~
+~
+0 0 139650
+D1
+~
+~
+0 0 139648
+D3
+~
+~
+0 0 139646
+S
+#139648
+&n&+bAn Underground Lake&n~
+&+B   The tunnel is totally filled with water up to the ceiling and the
+&+Bworld is totally silent under the surface.  The walls are rough and
+&+Bcould be natural as well as dug out from the raw mountain.  Some small
+&+Walbino shrimp&n&+B can be seen moving along the tunnel floor in their
+&+Bhunt for something to eat among the algae and moss On the bottom. &n
+~
+2 1283489897 10
+D0
+~
+~
+0 0 139649
+D3
+~
+~
+0 0 139647
+S
+#139649
+&n&+bAn Underground Lake&n~
+&+B   The tunnel is totally filled with water up to the ceiling and the
+&+Bworld is totally silent under the surface.  The walls are rough and
+&+Bcould be natural as well as dug out from the raw mountain.  Some small
+&+Walbino shrimp&n&+B can be seen moving along the tunnel floor in their
+&+Bhunt for something to eat among the algae and moss On the bottom.  The
+&+Bwell preserved corpse of a huge octopus lies here covering almost the
+&+Bwhole northeastern tunnel wall.
+~
+2 1283489897 10
+D2
+~
+~
+0 0 139648
+D3
+~
+~
+0 0 139650
+D8
+&+b   This exit was well hidden behind the corpse
+&+bof an large octopus. &n
+~
+corpse&n~
+5 0 139652
+E
+octopus corpse&n~
+&+B   This corpse looks either freshly deceased or it has been very
+&+Bwell preserved.  Alive this must have been a horrid creature. &n
+~
+S
+#139650
+&+bThe No&n&+Brth S&n&+cide o&n&+Bf an &n&+bUnderground&n&+B Lake&n~
+&+B   The tunnel is totally filled with water up to the ceiling and the
+&+Bworld is totally silent under the surface.  The walls are rough and
+&+Bcould be natural as well as dug out from the raw mountain.  Some small
+&+Walbino shrimp&n&+B can be seen moving along the tunnel floor in their
+&+Bhunt for something to eat among the algae and moss On the bottom.  The
+&+Blake continues to the west, south and east.
+~
+2 1283489897 10
+D1
+~
+~
+0 0 139649
+D2
+~
+~
+0 0 139647
+D3
+~
+~
+0 0 139651
+S
+#139651
+&n&+bAn Underground&n&+B Lake&n~
+&+B   The tunnel is totally filled with water up to the ceiling and the
+&+Bworld is totally silent under the surface.  The walls are rough and
+&+Bcould be natural as well as dug out from the raw mountain.  Some small
+&+Walbino shrimp&n&+B can be seen moving along the tunnel floor in their
+&+Bhunt for something to eat among the algae and moss On the bottom.  The
+&+Blake continues to the southwest, south and east.
+~
+2 1283489897 10
+D1
+~
+~
+0 0 139650
+D2
+~
+~
+0 0 139646
+D7
+~
+~
+0 0 139645
+S
+#139652
+&+LA Hidden&n&+b Part of the&n&+B Lake&n~
+&+B   The tunnel is totally filled with water up to the ceiling and the
+&+Bworld is totally silent under the surface.  The walls are rough and
+&+Bcould be natural as well as dug out from the raw mountain.  Behind
+&+Bthe large carcass of the octopus lies this little Part of the lake.
+&+BNo life can be seen in this Part of the lake, no algae, no moss or
+&+Balbino shrimp. &n
+~
+2 1283489897 10
+D7
+~
+wall&n~
+5 0 139649
+S
+#139653
+&+rBeside a S&n&+Rtr&n&+re&n&+Ra&n&+rm of &n&+rLa&n&+Lva&n~
+&n&+r   This room is rea&n&+Rlly hot, &n&+rthe walls &n&+Rare near&n&+rly glowing from heat.
+&n&+rHeavy sulfur smoke&n&+R and sten&n&+rch hangs in&n&+R the air&n&+r.  In the tunnel a
+&n&+rlavastream flows i&n&+Rn the west&n&+r part from&n&+R the nor&n&+rth to the south.  A
+&n&+rbath in the stream w&n&+Rill sure&n&+r result &n&+Rin a fast &n&+rput painful death.
+&n&+rThe magma is stiff&n&+Rened to sol&n&+rid ro&n&+Rck on this &n&+rside and one can walk
+&n&+ron it without gett&n&+Ring burnt. &n&+r The &n&+Ronly exit is t&n&+ro the south. &+n
+~
+2 1287684168 11
+D2
+~
+~
+0 0 139654
+S
+#139654
+&n&+rAlong a St&n&+Rre&n&+ram of L&n&+La&n&+rva~
+&n&+r   This room is rea&n&+Rlly hot, &n&+rthe walls &n&+Rare near&n&+rly glowing from heat.
+&n&+rHeavy sulfur smoke&n&+R and sten&n&+rch hangs in&n&+R the air&n&+r.  In the tunnel a
+&n&+rlavastream flows i&n&+Rn the west&n&+r part from&n&+R the nor&n&+rth to the south.  A
+&n&+rbath in the stream w&n&+Rill sure&n&+r result &n&+Rin a fast &n&+rput painful death.
+&n&+rThe magma is stiff&n&+Rened to sol&n&+rid ro&n&+Rck on this &n&+rside and one can walk
+&n&+ron it without gett&n&+Ring burnt. &n&+r The la&n&+Rvastream and&n&+r the tunnel turns
+&n&+rto the southeast here. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139653
+D9
+~
+~
+0 0 139655
+S
+#139655
+&n&+rA Sh&n&+Rar&n&+rp Turn in the L&n&+La&n&+rva River&n~
+&+r   The lava river makes a sharp turn here to the northeast.  The room is
+&+rdimly lit by the glowing lavastream and the heat is nearly unbearable.
+&+rThe stench from the sulfur is horrible and the smoke from the river
+&+rmakes it impossible to scan the way ahead. &n
+~
+2 1287684168 11
+D6
+~
+~
+0 0 139654
+D8
+~
+~
+0 0 139656
+S
+#139656
+&+rBes&n&+Ri&n&+rde &n&+ra Gr&n&+Rea&n&+rt L&n&+La&n&+rva Lake&n~
+&+R   The lava river widens here to a great lake of lava.  This lava cavern
+&+Ris huge and the smoke is hanging heavy above the lake.  The stench is
+&+Rfrom the sulfur is horrible.  The lake's shore is made from cooled
+&+Rmagma which have stiffened to solid rock.  Moaning strange sounds can
+&+Rbe heard over the lake.  The room is dimly lit by the glow from the
+&+Rlava lake. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139663
+D1
+~
+~
+0 0 139657
+D7
+~
+~
+0 0 139655
+S
+#139657
+&+rOn the So&n&+Rut&n&+rhern Sh&n&+Ro&n&+rre of the L&n&+La&n&+rva Lake&n~
+&+R   The lava lake lies here glowing and bubbling with gases.  Over the
+&+Rlake hangs a heavy smoky cloud of sulfurous gas and the stench is
+&+Rawful and it is almost impossible breath here.  The room is dimly lit
+&+Rfrom the glowing lava lake and it is incredible hot.  To the north
+&+Rlies the lake and to the east and west the shore continues. &n
+~
+2 1287684168 11
+D1
+~
+~
+0 0 139658
+D3
+~
+~
+0 0 139656
+S
+#139658
+&+RO&n&+rn t&+Rhe &+rSout&n&+Rh&n&+reast&n&+Re&n&+rrn Sh&+Ro&n&+rre o&+Rf th&n&+re L&+Ra&n&+rva L&+La&n&+rke&n~
+&+R   The lava lake lies here glowing and bubbling with gases.  Over the
+&+Rlake hangs a heavy smoky cloud of sulfurous gas and the stench is
+&+Rawful and it is almost impossible breath here.  The room is dimly lit
+&+Rfrom the glowing lava lake and it is incredible hot.  The lake lies
+&+Rto the northwest and the shore continues to the north and west. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139659
+D3
+~
+~
+0 0 139657
+S
+#139659
+&+rO&+Rn th&n&+re East S&n&+Ri&n&+rde of the L&n&+La&n&+rva Lake&n~
+&+R   The lava lake lies here glowing and bubbling with gases.  Over the
+&+Rlake hangs a heavy smoky cloud of sulfurous gas and the stench is
+&+Rawful and it is almost impossible breath here.  The room is dimly lit
+&+Rfrom the glowing lava lake and it is incredible hot.  The lake lies to
+&+Rthe west and the shore continues to the north and south. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139660
+D2
+~
+~
+0 0 139658
+S
+#139660
+&+rThe Nort&n&+Rhe&n&+rastern S&n&+Ri&n&+rde of the L&n&+La&n&+rke&n~
+&+R   The lava lake lies here glowing and bubbling with gases.  Over the
+&+Rlake hangs a heavy smoky cloud of sulfurous gas and the stench is
+&+Rawful and it is almost impossible breath here.  The room is dimly lit
+&+Rfrom the glowing lava lake and it is incredible hot.  The lake lies to
+&+Rthe southwest from here, to the northeast lies a large magma cavern. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139664
+D1
+~
+~
+0 0 139665
+D2
+~
+~
+0 0 139659
+D3
+~
+~
+0 0 139661
+S
+#139661
+&n&+rThe No&n&+Rr&n&+rthern S&n&+Ri&n&+rde of the L&n&+La&n&+rke&n~
+&+R   The lava lake lies to the south from here glowing and bubbling with
+&+Rgases.  Over the lake hangs a heavy smoky cloud of sulfurous gas and
+&+Rthe stench is awful and it is almost impossible breath here.  The room
+&+Ris dimly lit from the glowing lava lake and it is incredible hot. &n
+~
+2 1287684168 11
+D1
+~
+~
+0 0 139660
+D3
+~
+~
+0 0 139662
+S
+#139662
+&+rThe Northw&n&+Res&n&+rtern S&n&+Ri&n&+rde of the L&n&+La&n&+rke&n~
+&+R   The lava lake lies here glowing and bubbling with gases.  Over the
+&+Rlake hangs a heavy smoky cloud of sulfurous gas and the stench is
+&+Rawful and it is almost impossible breath here.  The room is dimly lit
+&+Rfrom the glowing lava lake and it is incredible hot.  The shore continues
+&+Rto the east and south. &n
+~
+2 1287684168 11
+D1
+~
+~
+0 0 139661
+D2
+~
+~
+0 0 139663
+S
+#139663
+&+rThe W&n&+Res&n&+rt S&n&+Ri&n&+rde of the L&n&+La&n&+rke&n~
+&+R   The lava lake lies here glowing and bubbling with gases.  Over the
+&+Rlake hangs a heavy smoky cloud of sulfurous gas and the stench is
+&+Rawful and it is almost impossible breath here.  The room is dimly lit
+&+Rfrom the glowing lava lake and it is incredible hot. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139662
+D2
+~
+~
+0 0 139656
+S
+#139664
+&+rThe O&n&+Ru&n&+rter Lay&n&+Re&n&+rrs of H&n&+Re&n&+rll&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139669
+D1
+~
+~
+0 0 139666
+D2
+~
+~
+0 0 139660
+S
+#139665
+&n&+rThe Ou&n&+Rte&n&+rr Layers o&n&+Rf &n&+rHell&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139666
+D1
+~
+~
+0 0 139668
+D3
+~
+~
+0 0 139660
+S
+#139666
+&+rThe O&n&+Rut&n&+rer La&n&+Rye&n&+rrs of Hell&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139670
+D1
+~
+~
+0 0 139667
+D2
+~
+~
+0 0 139665
+D3
+~
+~
+0 0 139664
+S
+#139667
+&n&+rThe O&n&+Ru&n&+rter Lay&n&+Re&n&+rrs of H&n&+Re&n&+rll&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139671
+D1
+~
+~
+0 0 139673
+D2
+~
+~
+0 0 139668
+D3
+~
+~
+0 0 139666
+S
+#139668
+&n&+rThe Outer La&n&+Rye&n&+rrs of H&+Re&n&+rll&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139667
+D1
+~
+~
+0 0 139674
+D3
+~
+~
+0 0 139665
+S
+#139669
+&n&+rThe Out&n&+Re&n&+rr Lay&n&+Re&n&+rrs of H&n&+Re&n&+rll&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D1
+~
+~
+0 0 139670
+D2
+~
+~
+0 0 139664
+S
+#139670
+&n&+rThe Out&n&+Re&n&+rr Lay&n&+Re&n&+rrs of H&n&+Re&n&+rll&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D1
+~
+~
+0 0 139671
+D2
+~
+~
+0 0 139666
+D3
+~
+~
+0 0 139669
+S
+#139671
+&n&+rThe O&n&+Ru&n&+rter Lay&n&+Re&n&+rrs of H&n&+Re&n&+rll&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D1
+~
+~
+0 0 139672
+D2
+~
+~
+0 0 139667
+D3
+~
+~
+0 0 139670
+S
+#139672
+&n&+rThe O&n&+Ru&n&+rter Lay&n&+Re&n&+rrs of H&n&+Re&n&+rll&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D2
+~
+~
+0 0 139673
+D3
+~
+~
+0 0 139671
+S
+#139673
+&n&+rThe O&n&+Ru&n&+rter Lay&n&+Re&n&+rrs of Hell&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139672
+D2
+~
+~
+0 0 139674
+D3
+~
+~
+0 0 139667
+D5
+~
+magma~
+5 0 139678
+S
+#139674
+&n&+rThe Out&n&+Re&n&+rr Lay&n&+Re&n&+rrs of &n&+rH&n&+Re&n&+rll&n~
+&+r   This huge cavern is pulsating with glow, the glow manages to light
+&+rthe room dimly.  The floor is made of partly stiffened magma but every
+&+Rhere and there On the floor another pool of magma appear.  The air in this
+&+rcavern is filled with the itching smell of sulfur and the cavern is
+&+rpartly filled with smoke.  One have to watch carefully to avoid the pools
+&+Rof magma On the floor, one wrong step On the way could be disastrous. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139673
+D3
+~
+~
+0 0 139668
+S
+#139675
+&+rOn T&n&+Rh&n&+re P&n&+La&n&+rth to H&n&+Re&n&+rll&n~
+&+r   This is the path to the gates of hell.  The air is much hotter here
+&+rthan in the outer layers but it is still filled with smoke and the awful
+&+rstench of sulfur.  The path is a large tunnel with walls glowing from
+&+rhot magma, On the tunnel floor there are small pools of still flowing magma
+&+rwhich will make anything turn to ashes if put there.  It is hard to tell
+&+rif this is a often used path or not since the floor seems to change shape
+&+rall the time.  The tunnel continues to the north and it seems to be the
+&+ronly visible exit. &n
+~
+2 1287684296 11
+D0
+~
+~
+0 0 139676
+S
+#139676
+&n&+rOn the P&n&+La&n&+Rt&n&+rh to H&n&+Re&n&+rll&n~
+&+r   This is the path to the gates of hell.  The air is much hotter here
+&+rthan in the outer layers but it is still filled with smoke and the awful
+&+rstench of sulfur.  The path is a large tunnel with walls glowing from
+&+rhot magma, On the tunnel floor there are small pools of still flowing magma
+&+rwhich will make anything turn to ashes if put there.  It is hard to tell
+&+rif this is a often used path or not since the floor seems to change shape
+&+rall the time.  The tunnel continues to the north and it seems to be the
+&+ronly visible exit.  In the middle of the room floats a h&n&+Li&n&+rdeous creature. &n
+~
+2 1287684168 11
+D0
+~
+~
+0 0 139677
+D2
+~
+~
+0 0 139675
+S
+#139677
+&n&+rBef&n&+Ro&n&+rre the G&n&+La&n&+Rt&n&+res of H&n&+Re&n&+rll&n~
+&+r   The tunnel widens here to a large cavern.  The cavern is filled with the
+&+rglow from the flowing magma in the walls, ceiling and floor.  The cavern
+&+ris filled with heavy yellow smoke and the stench from sulfur is horrible.
+&+rThat any creature can live here longer than a breath is quite amazing.  The
+&+rcavern floor is covered with pools of glowing magma and one step in the wrong
+&+rdirection will lead to a certain death.  In the northern wall of the cavern
+&+ris a huge magma gate, this is one of the seven gates to hell.  A throne made
+&+rof coal stands On the eastern side of the gates and in it sits the seventh
+&+rdevil guardian of hell. &n
+~
+2 1287684168 11
+S
+#139678
+&+rIn a G&n&+Rlo&n&+rwing M&n&+Ra&n&+rg&n&+Rm&n&+ra Pit&n~
+&+R   This pi&n&+rt looks&n&+R like it is&n&+r dug out fro&n&+Rm the flowing &n&+rmagma, the walls
+&+Rand floor&n&+r is puls&n&+Rating and &n&+r&n&+rglowing&n&+R from heat.  There mu&n&+rst be some sort
+&+Rof powerf&n&+rul magi&n&+Rc keeping t&n&+rhe walls to &n&+Rflow out and fil&n&+rl this pit in
+&+Rthe magma&n&+rlayer.  &n&+RThe floor i&n&+rs barely sol&n&+Rid at all here, sm&n&+roke and gases
+&+Rrise cons&n&+rtantl&n&+Ry from the po&n&+rols of magma&n&+R On the floor. &n
+~
+2 1287684168 11
+D4
+~
+magma gate~
+5 0 139673
+S
+#139679
+&+LRoom Without Function&n~
+ THIS ROOM SHOULD BE !PC
+~
+2 0 0
+S
+#139680
+&+LLoadroom for the Rare Firesalamander&n~
+&+R THIS IS A LOADROOM FOR A RARE-MOB.
+&+R NO PLAYERS SHOULD BE ABLE TO GET HERE.
+~
+2 1283489993 0
+D1
+~
+~
+0 0 139681
+D3
+~
+~
+0 0 139659
+S
+#139681
+&+LMob Trap Room&n~
+&+R THIS IS THE TRAPROOM FOR THE RARES THAT DOES NOT LOAD
+&+R IN THE ZONE.  NO PLAYERS SHOULD BE ABLE TO GET HERE. &n
+~
+2 1285587160 0
+S
+#139682
+&+RInside &n&+LDr&n&+ya&n&+Lblin&n's &n&+rW&n&+Rork&n&+rshop&n~
+&+L   This is where D&nra&n&+Lblin the town's best and only weaponsmith works.
+&+LThe room is dimly lit by a fading torch On the eastern wall and the
+&+Lsmoke from the forge hangs heavy in the air.  The hard and loud sound
+&+Lfrom Drablin's ha&nmm&n&+Ler can be heard constantly beating on some metal.
+&+LAlong the walls all sorts of tools stands but hardly any raw metal.
+&+LOn a desk in the east part of the room stands a desk below the torch
+&+L where the weapons for sale lies. &n
+~
+2 0 0
+D3
+~
+~
+0 0 139575
+S
+#139683
+&n&+yA Bridge&n Over the River &+BUmral&n~
+   This bridge looks in perfect condition and is wide enough to let
+two big wagons cross it At the same time.  Next to the bridge On the
+south side stands a large sign demanding attention.  On the other side
+of the bridge can a fairly large city be seen surrounded by a high
+&+rpine&n&+ywood&n palisade.  Behind the palisade smoke is rising towards the sky
+from the houses inside.  This bridge seems to lead to the gate through
+the&n&+y palisade. &n
+~
+2 0 3
+D0
+~
+~
+0 0 139549
+D9
+~
+~
+0 0 139684
+E
+sign~
+&n
+      _______________________
+     |                       |
+     |                       |
+     |    Welcome to the     |
+     |                       |
+     |   &n&+LBar&n&+rony &n&+Lof &n&+rMav&n&+Luslk&n   |
+     |                       |
+     |_______________________|
+~
+S
+#139684
+On a St&n&+Lo&nne R&n&+Lo&nad&n~
+   This paved road looks quite new, no moss covers it, not even At the
+edges.  It can't be more than five years old or so.  The stone road has
+been made of finest granite and the stones have been cut by a very skilled
+craftsman.  To the north can the palisade of a town be seen On the other side
+of the river.  Smoke rises from the houses towards the sky behind the palisade.
+to the south lies a dark conifer forest, which mostly consists of spruce. &n
+~
+2 0 3
+D2
+~
+~
+0 0 139685
+D6
+~
+~
+0 0 139683
+S
+#139685
+A Sh&n&+La&nrp T&n&+Lu&nrn in the R&n&+Lo&nad&n~
+   This paved road looks quite new, no moss covers it, not even At the
+edges.  It can't be more than five years old or so.  The stone road has
+been made of finest granite and the stones have been cut by a very skilled
+craftsman.  On the north side of the road a calm and wide river floats
+from the west to the east.  On the south side of the road lies a dark
+spruce forest.  The road makes a sharp turn to the north here.  In the
+dirt On the south side of the road lies an &n&+yold sign&n.  An overgrown
+path can been leading into the forest. &n
+~
+2 0 3
+D0
+~
+~
+0 0 139684
+D1
+~
+~
+0 0 139686
+D2
+~
+~
+0 0 139688
+S
+#139686
+On a New P&n&+La&nved R&n&+Lo&nad&n~
+   This paved road looks quite new, no moss covers it, not even At the
+edges.  It can't be more than five years old or so.  The stone road has
+been made of finest granite and the stones have been cut by a very skilled
+craftsman.  On the north side of the road a calm and wide river floats
+from the west to the east.  On the south side of the road lies a dark
+spruce forest.
+~
+2 0 3
+D1
+~
+~
+0 0 139687
+D3
+~
+~
+0 0 139685
+S
+#139687
+On a New P&n&+La&nved R&n&+Lo&nad&n~
+   This paved road looks quite new, no moss covers it, not even At the
+edges.  It can't be more than five years old or so.  The stone road has
+been made of finest granite and the stones have been cut by a very skilled
+craftsman.  On the north side of the road a calm and wide river floats
+from the west to the east.  On the south side of the road lies a dark
+spruce forest.
+~
+2 0 3
+D1
+~
+~
+0 0 228202
+D3
+~
+~
+0 0 139686
+S
+#139688
+&+gAn Ove&n&+Gr&n&+ggrown &n&+yPath &n&+gin the Forest&n~
+&+g   This path seems to be seldom used, if used at all anymore except for
+&+gsome wild animals crossing it.  The path is overgrown with moss and some
+&+gbushes and tree-plants have started to grow on it.  The forest lies on
+&+gboth sides of the path and from somewhere deep in the forest can an owl
+&+gbe heard howling.  To the north lies a new paved road. &n
+~
+2 4 3
+D0
+~
+~
+0 0 139685
+D2
+~
+~
+0 0 139689
+S
+#139689
+&n&+gAn Over&n&+Ggr&n&+gown &n&+yPath&n&+g in the Fo&n&+Gre&n&+gst&n~
+&+g   This path seems to be seldom used, if used at all anymore except for
+&+gsome wild animals crossing it.  The path is overgrown with moss and some
+&+gbushes and tree-plants have started to grow on it.  The forest lies on
+&+gboth sides of the path and from somewhere deep in the forest can an owl
+&+gbe heard howling. &n
+~
+2 0 3
+D0
+~
+~
+0 0 139688
+D2
+~
+~
+0 0 139690
+D3
+~
+~
+0 0 139692
+S
+#139690
+&n&+gA Tu&n&+Gr&n&+gn in the &n&+yPath&n~
+&+g   This path seems to be seldom used, if used at all anymore except for
+&+gsome wild animals crossing it.  The path is overgrown with moss and some
+&+gbushes and tree-plants have started to grow on it.  The forest lies on
+&+gboth sides of the path and from somewhere deep in the forest can an owl
+&+gbe heard howling.  The path makes a turn here to the west and a small
+&+gclearing can be seen ahead in that direction. &n
+~
+2 0 3
+D0
+~
+~
+0 0 139689
+D3
+~
+~
+0 0 139691
+S
+#139691
+&n&+gA Cl&n&+Gea&n&+gring in the Fo&n&+Gre&n&+gst&n~
+&+G   This cleraring is bright and no trees grow here.  To the east a small
+&+Govergrown path can be seen leading away from the clearing.  The old spruces
+&+Garound the clearing makes it impossible to see anything in the forest from
+&+Ghere.  The forest seem indeed dark and scary.  In the middle of the clearing
+&+Gthe remnants of a &+Lburnt out &n&+Ghouse lies, or at least the house grounds. &n
+&+Glife-supporting grass grows high here in the clearing and this is probably
+&+Ga well-visited spot for herbivores. &n
+~
+2 0 3
+D0
+~
+~
+0 0 139692
+D1
+~
+~
+0 0 139690
+D2
+~
+~
+0 0 139696
+D3
+~
+~
+0 0 139694
+S
+#139692
+&+gInside a&n&+L Dark&n&+g For&n&+Ges&n&+gt&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+&+gTo the south a small clearing can be seen. &n
+~
+2 0 3
+D1
+~
+~
+0 0 139689
+D2
+~
+~
+0 0 139691
+D3
+~
+~
+0 0 139693
+S
+#139693
+&+gIns&n&+Gi&n&+gde a &n&+LDark&n&+g For&n&+Ge&n&+gst&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 8 3
+D1
+~
+~
+0 0 139692
+D2
+~
+~
+0 0 139694
+S
+#139694
+&+gIns&n&+Gi&n&+gde a&n&+L Dark&n&+g For&n&+Ge&n&+gst&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+&+gIn the east a little clearing can be seen. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139693
+D1
+~
+~
+0 0 139691
+D2
+~
+~
+0 0 139695
+D3
+~
+~
+0 0 139705
+S
+#139695
+&+gIns&n&+Gi&n&+gde a &n&+LDark&n&+g For&n&+Ge&n&+gst&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139694
+D1
+~
+~
+0 0 139696
+D2
+~
+~
+0 0 139700
+D3
+~
+~
+0 0 139704
+S
+#139696
+&+gIns&n&+Gi&n&+gde a &n&+LDark&n&+g For&n&+Ge&n&+gst&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+&+gTo the north a clearing can been seen. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139691
+D1
+~
+~
+0 0 139697
+D2
+~
+~
+0 0 139699
+D3
+~
+~
+0 0 139695
+S
+#139697
+&+gD&n&+Leep&n&+ger I&n&+Ln&n&+gto the For&n&+Ge&n&+gst&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D2
+~
+~
+0 0 139698
+D3
+~
+~
+0 0 139696
+S
+#139698
+&n&+gBelow some &n&+LCliffs&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139697
+D3
+~
+~
+0 0 139699
+S
+#139699
+&n&+gBelow some &n&+LCliffs&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139696
+D1
+~
+~
+0 0 139698
+D3
+~
+~
+0 0 139700
+S
+#139700
+&n&+gD&n&+Lee&n&+gper Into the Forest&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139695
+D1
+~
+~
+0 0 139699
+D2
+~
+~
+0 0 139701
+D3
+~
+~
+0 0 139703
+S
+#139701
+&n&+gD&n&+Lee&n&+gp Into the For&n&+Ge&n&+gst below some&n&+L Cliffs&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+&+gTo the south some large &n&+Lcliffs&n&+g can be seen, as a beginning of a mountain. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139700
+D3
+~
+~
+0 0 139702
+S
+#139702
+&+gD&n&+Lee&n&+gp Into the For&n&+Ge&n&+gst below some &n&+LCliffs&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+&+gTo the south some large &n&+Lcliffs&n&+g can be seen, as a beginning of a mountain. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139703
+D1
+~
+~
+0 0 139701
+S
+#139703
+&n&+gD&n&+Leep&n&+ger I&n&+Ln&n&+gto the For&n&+Ge&n&+gst&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139704
+D1
+~
+~
+0 0 139700
+D2
+~
+~
+0 0 139702
+D3
+~
+~
+0 0 139707
+S
+#139704
+&n&+gD&n&+Leep&n&+ger I&n&+Ln&n&+gto the For&n&+Le&n&+gst&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139705
+D1
+~
+~
+0 0 139695
+D2
+~
+~
+0 0 139703
+D3
+~
+~
+0 0 139706
+S
+#139705
+&+gD&n&+Leep&n&+ger I&n&+Ln&n&+gto the For&n&+Ge&n&+gst&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D1
+~
+~
+0 0 139694
+D2
+~
+~
+0 0 139704
+S
+#139706
+&n&+gD&n&+Lee&n&+gp Inside the Forest&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D1
+~
+~
+0 0 139704
+D2
+~
+~
+0 0 139707
+D3
+~
+~
+0 0 139711
+S
+#139707
+&n&+gD&n&+Lee&n&+gp Inside the Forest&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139706
+D1
+~
+~
+0 0 139703
+D2
+~
+~
+0 0 139708
+D3
+~
+~
+0 0 139710
+S
+#139708
+&n&+gBelow some &n&+LCliffs&n&+g in the Forest&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+&+gTo the south some large &n&+Lcliffs&n&+g can be seen, as a beginning of a mountain. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139707
+D3
+~
+~
+0 0 139709
+S
+#139709
+&n&+gBelow some &n&+LCliffs&n&+g in the Forest&n~
+&+g   The forest consists of almost only spruce here, which makes it very dark.
+&+gThe forest floor has no grass or bushes, just moss, nothing else can grow can
+&+ggrow below the trees since there is dark here night and day.   Some birds can
+&+gbe heard singing in the treetops, other from that the forest is dead silent.
+&+gWhen the storm rides the lands it is still quiet and calm here below the
+&+gspruces, just the sound of the wind can be heard.   To the south the vaguest
+&+goutlines of a secret passage can be seen in the stone of a set of large &n&+Lcliffs
+&+gthat mark the beginning of a mountain. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139710
+D1
+~
+~
+0 0 139708
+D2
+~
+boulder&n~
+5 0 139713
+S
+#139710
+&n&+gD&n&+Lee&n&+gp Inside the Forest&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139711
+D1
+~
+~
+0 0 139707
+D2
+~
+~
+0 0 139709
+D3
+~
+~
+0 0 139712
+S
+#139711
+&n&+gD&n&+Lee&n&+gp Inside the Forest&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D1
+~
+~
+0 0 139706
+D2
+~
+~
+0 0 139710
+S
+#139712
+&n&+gD&n&+Lee&n&+gp Inside the Forest&n~
+&+g   The forest consists of almost only spruce here, which makes it very
+&+gdark.  The forest floor has no grass or bushes, just moss, nothing else
+&+gcan grow below the trees since there is dark here night and day.  Some
+&+gbirds can be heard singing in the treetops, other from that the forest
+&+gis dead silent.  When the storm rides the lands it is still quiet and
+&+gcalm here below the spruces, just the sound of the wind can be heard. &n
+~
+2 1073741832 3
+D0
+~
+~
+0 0 139704
+D1
+~
+~
+0 0 139710
+D2
+~
+~
+0 0 139704
+D3
+~
+~
+0 0 139703
+S
+#139713
+&n&+LIn&nsi&n&+Lde a L&nar&n&+Lge Tu&nnnel&n~
+&+L   This secret tunnel is very large and whoever managed to hide it this
+&+Lgood did a really good job.  The tunnel is pitch-black and the only light
+&+Lcomes from the opening to the north.  The tunnel is very damp, moss and
+&+Lalgae covers the walls but the floor seems to be used to often, so no
+&+Lmoss can grow there.  The tunnel continues up from here. &n
+~
+2 0 0
+D0
+~
+boulder&n~
+5 0 139709
+D4
+~
+~
+0 0 139714
+S
+#139714
+In&n&+Lsid&ne a La&n&+Lrge Tunnel&n~
+&+L   The tunnel is not so damp here as it is below but still one can see
+&+galg&n&+Gae&n&+L On the ceiling and the walls.  The tunnel is both wide and high
+&+Lso it is no problem to move here, even if one brings a whole group of
+&+Lpeople.  The tunnel has no light source and is pitch-black but somewhere
+&+Lahead some sort of faint light can be seen. &n
+~
+2 0 0
+D2
+~
+~
+0 0 139715
+D5
+~
+~
+0 0 139713
+S
+#139715
+&n&+LA Nat&nural T&n&+Lunne&nl in the M&n&+Loun&ntain&n~
+&+L   The tunnel is more dry here than in the northern part and no moss or
+&+Lor algae can be seen, neither On the walls nor the ceiling.  The tunnel
+&+Lis dimly lit from some faint light source further ahead.  On the tunnel-
+&+Lfloor lies some bones, from the size to tell they come from some small
+&+Lanimals.  Two granite blocks stand on each side of the tunnel and serve
+&+Las chairs for the trolls who stand on guard here. &n
+~
+2 0 0
+D0
+~
+~
+0 0 139714
+D2
+~
+~
+0 0 139716
+S
+#139716
+&n&+LA Lar&nge Ca&n&+Lvern Ins&nide the&n&+L Mountain&n~
+&+L   The tunnel ends here in a large cavern filled with smoke.  A fireplace
+&+Ldimly lights the room and casts shadows across the cavern walls.  Over the
+&+Lfireplace hangs a piece of &n&+rme&n&+Ra&n&+rt&n&+L.  And one can nearly swear that it is the
+&+Lleg from a &n&+rMino&n&+Ltaur&n&+L.  Around the fireplace on safe distance sits a bunch
+&+Lof trolls.  They fear the fire but nothing tastes like roasted minotaur
+&+Lin these hard times.  The cavern floor is covered with all sorts of &nbones. &n
+~
+2 0 0
+D0
+~
+~
+0 0 139715
+D1
+~
+~
+0 0 139717
+D2
+~
+~
+0 0 139719
+D3
+~
+~
+0 0 139718
+S
+#139717
+&+LThe Home of Some &n&+gTr&n&+Go&n&+glls&n~
+&+L   This smaller cavern is connected with the clan's main cavern to the
+&+Least.  The cave is full all sorts of rubbish, everything from broken
+&+Lpieces of wood to &n&+wbones&n&+L.  Some hides lies On the floor and some are
+&+Lhanging On the walls, telling from the way they look, probably to dry.
+&+LThis must obviously be a home but no real beds can be seen just piles
+&+Lof different &n&+yhides&n&+L in various states of decay. &n
+~
+2 0 0
+D3
+~
+~
+0 0 139716
+S
+#139718
+&n&+LA Sma&nll&n&+Ler C&nav&n&+Lern&n~
+&+L   This smaller cavern is connected with the clan's main cavern to the
+&+Least.  The cave is full all sorts of rubbish, everything from broken
+&+Lpieces of wood to &n&+wbones&n&+L.  Some hides lies On the floor and some are
+&+Lhanging On the walls, telling from the way they look, probably to dry.
+&+LThis must obviously be a home but no real beds can be seen just piles
+&+Lof different &n&+yhides&n&+L in various states of decay. &n
+~
+2 0 0
+D1
+~
+~
+0 0 139716
+S
+#139719
+&n&+LA La&nrge Ca&n&+Lvern in th&ne Mo&n&+Luntain&n~
+&+L  The cavern floor is here full of bones, apparently the trolls who
+&+Llives in these caves doesn't care about cleaning the cave once in a
+&+Lwhile so the bones stacks here.  The cave have no light source but is
+&+Ldimly lit from the fireplace in the cavern to the north.  The sounds
+&+Lof loud conversation can be heard from the north and to the east
+&+Lcontines a dark tunnel.  To the west can a smaller cavern be seen,
+&+Lprobably the home of a troll family. &n
+~
+2 0 0
+D0
+~
+~
+0 0 139716
+D1
+~
+~
+0 0 139721
+D3
+~
+~
+0 0 139720
+S
+#139720
+&n&+LA &n&+gTr&n&+Go&n&+gll&n&+L's Home&n~
+&+L   This smaller cavern is connected with the clan's main cavern to the
+&+Least.  The cave is full all sorts of rubbish, everything from broken
+&+Lpieces of wood to &n&+wbones&n&+L.  Some hides lies On the floor and some are
+&+Lhanging On the walls, telling from the way they look, probably to dry.
+&+LThis must obviously be a home but no real beds can be seen just piles
+&+Lof different &n&+yhides&n&+L in various states of decay. &n
+~
+2 0 0
+D1
+~
+~
+0 0 139719
+S
+#139721
+&+LBefore the &n&+gCh&n&+Gie&n&+gft&n&+yai&n&+Ln's&n&+L Cave&n~
+&+L   This cave has no light source and is pitch-black.  Telling from the way
+&+Lthe walls, ceiling and floor look, this is a natural cave in the mountain.
+&+LTwo large granite boulders stands on each side of the cave, serving as
+&+L resting place for the guards before the chieftains cave.  On the floor
+&+Llies piles of bones from different animals.  The southeastern exit is
+&+Lis covered by a hide and from behind it a loud conversation on a strange
+&+Llanguage can be heard. &n
+~
+2 0 0
+D3
+~
+~
+0 0 139719
+D9
+~
+hide&n~
+1 0 139722
+S
+#139722
+&n&+gThe Ch&n&+Gie&n&+gft&n&+yain&n&+L's Cave&n~
+&+L   This cave is also a natural cave but have been modified a little by
+&+Lhand to meet the chieftains demands.  The cave has one exit to the
+&+Lnorthwest which is covered with a large hide.  The floor is covered with
+&+Lbones from all sorts of animals.  The walls are covered with hides in
+&+Lvarious level of decay, maybe as decoration, who knows.  In the southern
+&+LPart of the cave a large, rough throne stands made granite.  UpOn the
+&+Lthrone on several layers of wolfskin the Troll Chieftain sits. &n
+~
+2 1283489865 0
+D5
+~
+trapdoor&n~
+5 0 139723
+D6
+~
+hide&n~
+1 0 139721
+S
+#139723
+&n&+gThe Sh&n&+Ga&n&+gma&n&+Gn&n&+gs &n&+LC&na&n&+Lv&ne&n~
+&+L   This cave below the chieftains cavern is the home of the cavetroll
+&+Lshaman who also is the spiritual advisor of the chieftain.  The cave is
+&+Lpitch-black and have no light source .  The floor is covered with hides
+&+Lfrom bears and wolves and in the south part some sort of bed stands. &n
+&+LIn the eastern Part of the cave an opening can be seen leading out
+&+Lfrom it. &n
+~
+2 1283489865 0
+D1
+~
+~
+0 0 139724
+D4
+~
+trapdoor&n~
+5 0 139722
+S
+#139724
+&n&+gBe&nf&n&+Lor&ne&n&+g the &n&+LAltar &nof &n&+rBlood&n~
+&+L   This is the cavetrolls most sacred place, the altarroom dedicated to
+&+Ltheir snakegod.  In the middle of the cave a large pool of blood lies.  In
+&+Lthe eastern part a large altar of granite stands.  The altar is covered
+&+Lwith ornaments of a giant snake and &n&+rcoagulated blood&n&+L.  A freshly killed
+&+Ldeer lies On the altar and blood is still dripping from open wounds on
+&+Lit.  This place gives the most hard-skinned adventurer the chills, a faint
+&+Lhumming sound can be heard from the altar. &n
+~
+2 1283493961 0
+D3
+~
+~
+0 0 139723
+S
+#139725
+&n&+gIn &n&+Lthe&n&+g S&n&+Ge&n&+grp&n&+Ge&n&+gnts &n&+rPit&n~
+&+L   This cave is covered with moss and algae except for the floor which
+&+L is full of bones and &n&+rcoagulated blood&n&+L.  The horns and skulls of several
+&+LMinotaurs can be seen lying among the piles of bones.  This cave has
+&+Lan awful stench that would even make a devil from hell puke.  The awful
+&+Lstench comes from the rotting corpses and blood.  In the middle of
+&+Lthis hellhole a gigantic snakegod coils waiting for the next sacrifice. &n
+~
+2 1283489865 0
+S
+#139726
+&n&+bOn the R&n&+Biv&n&+ber &n&+BUm&n&+bral&n~
+&+b   The river flows calmly here down passed the City of Mavulsk.  The
+&+bwater is very clear and tastes fresh.  Some salmons can be seen swimming
+&+bin the water but other&n&+L shapes&n&+b moves around too in the deep.  Further
+&+bupstream the river seems wilder and downstream calmer, maybe it
+&+bends in a lake. &n
+~
+2 0 6
+D0
+~
+~
+0 0 139589
+D1
+~
+~
+0 0 139727
+S
+#139727
+&n&+bOn the R&n&+Biv&n&+ber &n&+BUm&n&+bral&n~
+&+b   The river flows calmly here down passed the City of Mavulsk.  The
+&+bwater is very clear and tastes fresh.  Some salmons can be seen swimming
+&+bin the water but other&n&+L shapes&n&+b moves around too in the deep.  Further
+&+bupstream the river seems wilder and downstream calmer, maybe it
+&+bends in a lake. &n
+~
+2 0 6
+D0
+~
+~
+0 0 139581
+D1
+~
+~
+0 0 139728
+D3
+~
+~
+0 0 139726
+D5
+~
+~
+0 0 139729
+S
+#139728
+&n&+BO&n&+bn th&n&+Be &n&+bRiv&n&+Ber &n&+bUmr&n&+Bal&n~
+&+b   The river flows calmly here down passed the City of Mavulsk.  The
+&+bwater is very clear and tastes fresh.  Some salmons can be seen swimming
+&+bin the water but other&n&+L shapes&n&+b moves around too in the deep.  Further
+&+bupstream the river seems wilder and downstream calmer, maybe it
+&+bends in a lake. &n
+~
+2 0 6
+D3
+~
+~
+0 0 139727
+D6
+~
+~
+0 0 139581
+S
+#139729
+&n&+bB&n&+Be&n&+blow t&n&+Bhe &n&+bRiv&n&+Ber&n&+bsur&n&+Bfa&n&+bce&n~
+&+b   From here the surface can be seen above.  Here below the surface the
+&+bsounds from bubbling water is the only sounds that can be heard and it
+&+bis quite dark but still shadows and shapes can be seen.  To the east the
+&+briverbank can be seen and the bottom consists of sand and some large
+&+bblocks of granite.  Shadows can be spotted swimming On the surface, the
+&+bshadows of large watersnakes.  &nBones&n&+b lies scattered around On the bottom
+&+bhere. &n
+~
+2 32 10
+D4
+~
+~
+0 0 139727
+S
+#139730
+&+LLoadroom for the &n&+gTroll&+G Shaman&n~
+&+R This is a loadroom for a rare mob. &n
+~
+2 209748160 0
+D0
+~
+~
+0 0 139724
+D1
+~
+~
+0 0 139681
+S
+#139731
+&+LLoadroom for the &+MIllithid&n~
+&+L   This room is for the loading of a rareload Illithid. &n
+~
+2 209752256 0
+D0
+~
+~
+0 0 139618
+D1
+~
+~
+0 0 139681
+D2
+~
+~
+0 0 139618
+S
+#139732
+&+LLoadroom for a Disguised &+YDwarf&n~
+ Rareload room
+~
+2 209748176 0
+D0
+~
+~
+0 0 139681
+D1
+~
+~
+0 0 139681
+D3
+~
+~
+0 0 139681
+D5
+~
+~
+0 0 139567
+S

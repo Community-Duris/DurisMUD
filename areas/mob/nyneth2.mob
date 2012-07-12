@@ -9,8 +9,8 @@ illithite golem~
 &+gdevices, yet its rarity is only surpassed by the other evil imbued ores
 &+gthat can be found in &+BN&+by'&+BN&+beth's &+ymines&+g.&n
 ~
-67663946 1 0 268435900 8222 0 8192 -1000 S
-OG 0 1 5
+67663946 1 0 0 268435900 8222 0 8192 -1000 S
+OG 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -25,8 +25,8 @@ illithite golem~
 &+gdevices, yet its rarity is only surpassed by the other evil imbued ores
 &+gthat can be found in &+BN&+by'&+BN&+beth's &+ymines&+g.&n
 ~
-67663944 1 0 268435900 8222 0 8192 -1000 S
-OG 0 1 5
+67663944 1 0 0 268435900 8222 0 8192 -1000 S
+OG 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -42,8 +42,8 @@ foreman golem energy~
 &+Binto existence.  He seems to be waiting for some kind of interaction from
 &+Bsomeone or something, and keeps muttering the word '&+GT&+Ri&+Gl&+Ro&+Gx&+Ri&+B'.
 ~
-29130 0 0 805306812 14558 0 1024 -1000 S
-OG 0 1 5
+29130 0 0 0 805306812 14558 0 1024 -1000 S
+OG 0 1 0 5
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -59,8 +59,8 @@ malicite golem~
 &+rit loose from the &+Wvein&+r.  Its eyes burn like miniature suns, the hatred
 &+rpouring fourth from those inhuman orbs unabated.&n
 ~
-1141012584 1 0 268435900 2079 0 8389120 -1000 S
-OG 0 1 5
+1141012584 1 0 0 268435900 2079 0 8389120 -1000 S
+OG 0 1 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -79,8 +79,8 @@ evilite golem~
 &+Lgolem presses the loose chunks of &+re&+Lv&+ri&+Ll&+ri&+Lte which stick to his hands
 &+Linto a single nugget.&n
 ~
-1140881992 1 0 268435900 2142 2097152 0 -1000 S
-OG 0 16 5
+1140881992 1 0 0 268435900 2142 2097152 0 -1000 S
+OG 0 16 0 5
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -95,8 +95,8 @@ perversium radiating ghoulish golem~
 &+Lto determine, as its appearance is in constant fluctuation from the influence
 &+Lof the elements &+gperverting&+L and overpowering influence.&n
 ~
-69367880 1 0 268435900 6174 0 0 -1000 S
-OG 0 1 5
+69367880 1 0 0 268435900 6174 0 0 -1000 S
+OG 0 1 0 5
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -110,8 +110,8 @@ deep duergar assassin~
 &+rto conceal itself.  Occassionally, if the watcher looks close enough, a pair
 &+rof hate filled eyes peers forth from under a deep hood.&n
 ~
-1073887432 1 0 404291902 30 67108864 0 -1000 S
-PD 0 8192 2
+1073887432 1 0 0 404291902 30 67108864 0 -1000 S
+PD 0 8192 0 2
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -126,8 +126,8 @@ deathalite golem~
 &+Lmonstrosity, chilling the life out of anything it comes into contact with.
 &+LThe power that &+BN&+by'&+BN&+beth&+L harnessed to create these beings is staggering.&n
 ~
-1074952264 1 0 402719132 34846 0 0 -1000 S
-OG 0 1 6
+1074952264 1 0 0 402719132 34846 0 0 -1000 S
+OG 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -143,8 +143,8 @@ deep gnome~
 &+rseems extremely nervous.  Small scars encircle its ankles, probably the
 &+Lresult of wearing shackles for a long period of time.&n
 ~
-1073883212 1 0 134217996 30 0 0 -1000 S
-PG 0 4 1
+1073883212 1 0 0 134217996 30 0 0 -1000 S
+PG 0 4 0 1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -159,8 +159,8 @@ sorting golem~
 &+Wbeing completely transparent, giving him a shimmering look as he reflects
 &+Wmuch of the light.&n
 ~
-30794 1 0 412 0 67108864 0 -1000 S
-OG 0 1 5
+30794 1 0 0 412 0 67108864 0 -1000 S
+OG 0 1 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -174,8 +174,8 @@ toloxi faerie~
 &+ras he hovers effortlessly in the air upon delicate wings.  Around his
 &+Yneck dangles a thin &+Wsilver&+Y chain, upon which hangs a small key.&n
 ~
-161866 1 0 403243308 30 0 0 -1000 S
-HF 0 2560 1
+161866 1 0 0 403243308 30 0 0 -1000 S
+HF 0 2560 0 1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -190,8 +190,8 @@ deep cube~
 &+Gimprisioned within its bulk, destined to remain there until the natural acids
 &+Gof the creature finish their decades long work.&n
 ~
-1073773642 1 0 2416967964 2078 67108864 4194304 -1000 S
-SL 0 1 6
+1073773642 1 0 0 2416967964 2078 67108864 4194304 -1000 S
+SL 0 1 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -205,8 +205,8 @@ morgus demon short stocky~
 &+Lout of nowhere.  His body is charcoal black, with streaks of &+rred&+L running
 &+Lthe length of his stocky limbs.  His eyes are glowing balls of liquid &+rfire&+L.&n
 ~
-67270760 1 0 284 264222 0 0 -1000 S
-X 0 64 4
+67270760 1 0 0 284 264222 0 0 -1000 S
+X 0 64 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -221,8 +221,8 @@ half-materialized demon~
 &+Lmassive amounts of heat, slowly cooling as its contact with its &+Rfiery&+L home
 &+Lenvironment wanes.&n
 ~
-161866 1 0 284 31 0 0 -1000 S
-X 0 1 5
+161866 1 0 0 284 31 0 0 -1000 S
+X 0 1 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -236,8 +236,8 @@ apprentice summoner~
 &+Rwand pokes through the wide sleeves of her robe, beneath which the rest of
 &+Rher body is hidden in the manner of an apprentice.&n
 ~
-14410 1 0 268435740 30 0 0 -1000 S
-PL 0 2048 3
+14410 1 0 0 268435740 30 0 0 -1000 S
+PL 0 2048 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -252,8 +252,8 @@ master summoner~
 &+Rso, for her to &+Yconjure &+rdemons&+R of the greater families suggests that
 &+Rthere is a &+crift &+Rto the &+r666 planes&+R somewhere nearby.&n
 ~
-14410 1 0 268435724 12510 0 0 -1000 S
-PL 0 2048 3
+14410 1 0 0 268435724 12510 0 0 -1000 S
+PL 0 2048 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -268,8 +268,8 @@ tzuz demon~
 &+rof any kind, posessing full &+Bspell &+rknowledge innately.  They usually
 &+rfocus their &+Bsorcerery&+r in acts of &+Ldestruction &+rand &+Lunmaking&+r.&n
 ~
-162122 1 0 134218046 158 0 0 -1000 S
-X 0 512 5
+162122 1 0 0 134218046 158 0 0 -1000 S
+X 0 512 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -285,8 +285,8 @@ enslaved deep gnome~
 &+rmark.  So harmless looking, its hard to remember this &+Rgnome&+r can &+Lkill
 &+rwith a single &+bthought&+r.&n
 ~
-1073756362 0 0 268435772 30 0 0 -1000 S
-PG 0 4 2
+1073756362 0 0 0 268435772 30 0 0 -1000 S
+PG 0 4 0 2
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -302,8 +302,8 @@ enslaved deep gnome~
 &+rmark.  So harmless looking, its hard to remember this &+Rgnome&+r can &+Lkill
 &+rwith a single &+bthought&+r.&n
 ~
-1073756360 0 0 268435772 30 0 0 -1000 S
-PG 0 4 2
+1073756360 0 0 0 268435772 30 0 0 -1000 S
+PG 0 4 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -319,8 +319,8 @@ azel demon~
 &+Lforward to inflicting his anger on those unfortunate enough to stray into
 &+Lhis path.&n
 ~
-1076000840 1 0 402719004 2078 67108864 0 -1000 S
-X 0 1 6
+1076000840 1 0 0 402719004 2078 67108864 0 -1000 S
+X 0 1 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -336,8 +336,8 @@ corus demon~
 &+Lmuscular arms hang in what seems to be an awkward coiled position, yet this
 &+Lallows the beast to strike out with blinding speed.&n
 ~
-1073903816 1 0 672727356 2078 0 0 -1000 S
-X 0 8192 4
+1073903816 1 0 0 672727356 2078 0 0 -1000 S
+X 0 8192 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -351,8 +351,8 @@ xyyn demon~
 &+Lswirl about their form makes their true shape difficult to discern, fading
 &+Lonly upon the creatures mortal death.&n
 ~
-30792 1 0 268501292 34846 0 4194304 -1000 S
-X 0 288 5
+30792 1 0 0 268501292 34846 0 4194304 -1000 S
+X 0 288 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -368,8 +368,8 @@ maluzaan greater morgus demon~
 &+rbare hands, this demon is aided by the help of thick &+Wbone &+rstuds which
 &+rcover the entire surface of its skin.&n
 ~
-161898 1 0 805372348 264223 67108864 0 -1000 S
-X 0 577 6
+161898 1 0 0 805372348 264223 67108864 0 -1000 S
+X 0 577 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -385,8 +385,8 @@ deep wyrm dragon adult~
 &+cspells&+m, preferring instead to &+Wfreeze &+mits opponents with its &+Wicy
 &+Wbreath&+m.&n
 ~
-1073773128 1 0 268435868 2078 67108864 0 -1000 S
-D 0 1 7
+1073773128 1 0 0 268435868 2078 67108864 0 -1000 S
+D 0 1 0 7
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -400,8 +400,8 @@ arus demon~
 &+Lthe darkness which envelopes him.  Even the &+mwyrms&+L which wander these realms
 &+Lfear this predator.&n
 ~
-1073772552 1 0 805306764 2078 0 0 -1000 S
-X 0 16 5
+1073772552 1 0 0 805306764 2078 0 0 -1000 S
+X 0 16 0 5
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -415,8 +415,8 @@ tortured soul~
 &+Lof the &+munderworld &+Lresponds to the negative emotions of the ghost, granting
 &+Lthe &+rtortured &+csoul &+Lwild and unfocused magical powers.&n
 ~
-1073903688 1 0 302 34846 0 0 -1000 S
-UG 0 256 3
+1073903688 1 0 0 302 34846 0 0 -1000 S
+UG 0 256 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -432,8 +432,8 @@ taus devil~
 &+Lits &+Rp&+Yu&+Rm&+Yp&+Rk&+Yi&+Rn &+Lshaped head whips quickly back and forth as it casts its gaze
 &+Lin all directions.&n
 ~
-1073772616 1 0 270008636 2078 67108864 0 -1000 S
-Y 0 8192 4
+1073772616 1 0 0 270008636 2078 67108864 0 -1000 S
+Y 0 8192 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -448,8 +448,8 @@ beholder eye painseeker~
 &+Lcolor of &+rblood&+L.  Its powers are called into being with mere &+cthoughts&+L,
 &+Land literally ripple the air as its will is carried out.&n
 ~
-1073903624 1 0 268435724 30 0 0 -1000 S
-BH 0 4 4
+1073903624 1 0 0 268435724 30 0 0 -1000 S
+BH 0 4 0 4
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -465,8 +465,8 @@ greater devil nogoz'tzel~
 &+Lof mind are of such strength that even the dreaded &+rpain&+csee&+rkers &+Lgive
 &+mNogoz&+L'&+BTzel &+La wide berth.&n
 ~
-161866 1 0 939524380 30 0 0 -1000 S
-Y 0 4 6
+161866 1 0 0 939524380 30 0 0 -1000 S
+Y 0 4 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -481,8 +481,8 @@ slyten drow wizard~
 &+bsingle braid of hair drops from his scalp just behind the ear, and curles
 &+bonce around his neck before disappearing behind his shoulder.&n
 ~
-14410 1 0 268 30 17825792 0 -1000 S
-PL 0 2048 3
+14410 1 0 0 268 30 17825792 0 -1000 S
+PL 0 2048 0 3
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -499,8 +499,8 @@ tuosceck blizzard king wyrm dragon~
 &+Wcavern by a dozen degrees, and ripples of static &+Belectricity &+Wcharge the air
 &+Waround him.&n
 ~
-162634 1 0 268435852 2078 67108864 1024 -1000 S
-D 0 1 7
+162634 1 0 0 268435852 2078 67108864 1024 -1000 S
+D 0 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -515,8 +515,8 @@ gormash berserker lord~
 &+Lsmoke slowly curl upwards from anything it contacts, a burnt ashy darkness
 &+Lcreeping outward in protest of its terrible touch.&n
 ~
-1073899628 1 0 939589916 0 0 134217728 -1000 S
-Y 0 1048576 7
+1073899628 1 0 0 939589916 0 0 134217728 -1000 S
+Y 0 1048576 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -530,8 +530,8 @@ ancient roper gargantuan~
 &+gover thirty feet in length and whip about at blinding speeds.  Four of its
 &+gtentacles in particular look &+Ldevastating &+gin their size and precision.&n
 ~
-1075869768 1 0 402653500 2078 67371008 1024 -1000 S
-TK 0 1 7
+1075869768 1 0 0 402653500 2078 67371008 1024 -1000 S
+TK 0 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -546,8 +546,8 @@ sythuun reaper lord shape black hole~
 &+Lnothing.  Only a swift swooshing sound barely louder than a whisper even
 &+Lbetrays the fact that it is more than &+cillusion&+L.&n
 ~
-1077049416 1 0 404292030 34846 70778880 134218752 -1000 S
-UV 0 24576 4
+1077049416 1 0 0 404292030 34846 70778880 134218752 -1000 S
+UV 0 24576 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -562,8 +562,8 @@ jugger golem~
 &+Lof the thing reverberates throught the area, testimony to the awesome power
 &+Lwhich has been instilled within it.&n
 ~
-1073770568 1 0 2415919512 14558 262144 1024 -1000 S
-OG 0 65 5
+1073770568 1 0 0 2415919512 14558 262144 1024 -1000 S
+OG 0 65 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

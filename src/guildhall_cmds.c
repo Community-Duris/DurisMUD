@@ -346,6 +346,12 @@ void do_construct_room(P_char ch, char *arg)
     send_to_char("There is already a room in that direction!\r\n", ch);
     return;
   }
+
+  if(!gh->can_add_room())
+  {
+    send_to_char("Your guildhall has reached its room limit.\r\n", ch);
+    return;
+  }
   
   if(!IS_TRUSTED(ch))
   {

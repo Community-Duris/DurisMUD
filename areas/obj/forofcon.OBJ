@@ -1,0 +1,2392 @@
+#139900
+stone key~
+&+wa stone key&n~
+&+wA stone key was placed here.&n~
+~
+18 11 3 0 7 0 8405000 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+stone key~
+&+wIt is made of granite.&n
+~
+#139901
+wooden key~
+&+ya wooden key&n~
+&+yA wooden key is half buried in the ground here.&n~
+~
+18 6 3 0 7 0 8405000 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+wooden key~
+&+yIt is made of oak.&n
+~
+#139902
+metal pry bar~
+&+wa large &+cmetal&+w pry bar&n~
+&+wA large &+cmetal&+w pry bar was laid here.&n~
+~
+18 16 3 0 7 0 8405000 16385 0 1 0
+0 0 0 0 0 0 0 0
+25 0 100
+E
+metal pry bar~
+&+cIt is a huge pry bar for giants, it has a few stone scraps on it.&n
+~
+#139903
+wooden stick~
+&+ya pointy wooden stick&n~
+&+yA pointy wooden stick was left here.&n~
+~
+5 6 3 0 7 0 8200 24577 0 131014 0
+15 1 5 11 0 0 0 0
+2 0 100
+E
+wooden stick~
+&+yIts a sharpened wooden stick.&n
+~
+#139904
+skull helm~
+&+Wa skull helm&n~
+&+WA skull helm was left here.&n~
+~
+9 10 3 0 7 0 16384 16401 0 61202 0
+5 0 0 3 0 0 0 0
+3 0 100
+E
+skull helm~
+&+wIt is a skull of some animal crafted to be a helm.&n
+~
+A
+3 -3
+#139905
+cestus~
+&+ra bloody set of &+Lcestus&n~
+&+rA bloody set of cestus was left here.&n~
+~
+5 17 3 0 9 0 4194304 8193 0 57426 0
+11 3 4 7 0 0 0 0
+1 0 100
+E
+cestus~
+&+rThe cestus are made of &+ybrass&+r and stained with the blood of its victims.&n
+~
+A
+18 2
+A
+19 2
+#139906
+staff stick~
+&+ma gnarled &+ywood&+m staff~
+&+mA fungus infested stick was left here.&n~
+~
+5 6 3 0 10 0 8256 24577 0 73632 0
+12 2 4 6 0 0 0 0
+5 0 100 0 80 0 0
+E
+staff~
+&+mThe staff is twisted with some magical fungus around it.  It looks solid
+&+mthought.&n
+~
+#139907
+amulet insignia~
+&+wan amulet with a ship insignia&n~
+&+wAn amulet was left here.&n~
+~
+16 24 3 0 7 0 8 16389 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+amulet insignia~
+&+w   The amulet is an insignia of a ship, the "&+WPearl&n&+w" is the name of
+&+wthe vessel.&n
+~
+#139908
+shiny gold key~
+&+Ya shiny gold key&n~
+&+YA shiny gold key was placed here.&n~
+~
+18 11 3 0 7 0 8405000 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+shiny gold key~
+&+wHey its not real gold, its pyrite!&n
+~
+#139909
+map paper~
+&+wa map of the local area&n~
+&+wA rolled up map was left here.&n~
+~
+16 28 3 0 7 0 8200 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+map paper~
+&+w
+&+w           /--------&+yFynhorn Mountains
+&+w          |
+&+w      &+WKalstrand
+&+w            \
+&+w             |
+&+w              \
+&+w               \______
+&+w              &+MTents&+w   \
+&+w             /         \
+&+w            /           \___
+&+w                            \
+&+w                           &+WEnvirons
+&+w                             |
+&+w                           &+LCaves
+&n
+~
+#139910
+coins~
+&+Ya pile of coins&n~
+&+YA pile of coins is neatly stacked here.&n~
+~
+20 24 3 0 7 0 0 16385 0 1 0
+0 0 100 0 0 0 0 0
+1 0 100
+E
+coins~
+&+YIts gold what did you expect.&n
+~
+#139911
+head~
+&+ya goblin king's head&n~
+&+yAn ugly head with its tongue stuck out was left here.&n~
+~
+13 2 3 0 4 0 8454144 16385 0 1 0
+0 0 0 0 0 0 0 0
+5 0 100
+E
+head~
+&+yIts the rotting head of the goblin king.&n
+~
+#139912
+apple fruit~
+&+ran apple&n~
+&+rA shiny apple was left here.&n~
+~
+19 48 3 0 7 0 0 16385 0 1 0
+4 0 0 0 0 0 0 0
+0 0 100
+E
+apple fruit~
+&+wIts a nice shiny apple.&n
+~
+#139913
+banana fruit~
+&+Ya banana&n~
+&+YA long yellow banana was left here.&n~
+~
+19 48 3 0 7 0 0 16385 0 1 0
+4 0 0 0 0 0 0 0
+0 0 100
+E
+banana fruit~
+&+wIts a long yellow banana.&n
+~
+#139914
+tomato fruit~
+&+Ra tomato&n~
+&+RA ripe tomato was left here.&n~
+~
+19 48 3 0 7 0 0 16385 0 1 0
+4 0 0 0 0 0 0 0
+0 0 100
+E
+tomato fruit~
+&+wIts a ripe tomato.&n
+~
+#139915
+pear fruit~
+&+Ga ripe pear&n~
+&+GA large pear was left here.&n~
+~
+19 48 3 0 7 0 0 16385 0 1 0
+4 0 0 0 0 0 0 0
+0 0 100
+E
+pear fruit~
+&+wIts a large pear.&n
+~
+#139916
+dagger steel~
+&+wa long &+Wsteel &n&+wdagger&n~
+&+wA long &+Wsteel &n&+w dagger was left here.&n~
+~
+5 16 3 0 7 0 0 24577 0 131030 0
+2 1 5 11 0 0 0 0
+2 0 100
+E
+dagger steel~
+&+wThe dagger has a long pointy blade and a solid &+ywooden&+w handle.&n
+~
+A
+18 1
+#139917
+ale mug~
+&+ya &+Ylight &n&+ydwarven ale&n~
+&+yA mug of &+Ylight&n&+y dwarven ale was left here.&n~
+~
+10 7 3 0 7 0 0 16385 0 1 0
+10 102 39 -1 0 0 0 0
+1 0 100
+E
+ale mug~
+&+gThis is the &+Glight&n&+g version of dwarven ale, so its not too strong.&n
+~
+#139918
+ale mug~
+&+ya &+Ymoderate &n&+ydwarven ale&n~
+&+yA mug of &+Ymoderate&n&+y dwarven ale was left here.&n~
+~
+10 7 3 0 7 0 0 16385 0 1 0
+20 102 39 -1 0 0 0 0
+1 0 100
+E
+ale mug~
+&+gThis is the &+Gmoderate&n&+g version of dwarven ale, so its not weak.&n
+~
+#139919
+ale mug~
+&+ya &+Ystrong &n&+ydwarven ale&n~
+&+yA mug of &+Ystrong&n&+y dwarven ale was left here.&n~
+~
+10 7 3 0 7 0 0 16385 0 1 0
+30 102 39 -1 0 0 0 0
+1 0 100
+E
+ale mug~
+&+gThis is the &+Gstrong&n&+g version of dwarven ale, so its not too strong.&n
+~
+#139920
+ale mug~
+&+ya &+Ypowerful &n&+ydwarven ale&n~
+&+yA mug of &+Ypowerful&n&+y dwarven ale was left here.&n~
+~
+10 7 3 0 7 0 0 16385 0 1 0
+50 102 39 -1 20 0 0 0
+1 0 100
+E
+ale mug~
+&+gThis is the &+Glight&n&+g version of dwarven ale, so its not too strong.&n
+~
+#139921
+lamp wooden~
+&+ya small wooden lamp&n~
+&+yA small wooden lamp rests here.&n~
+~
+1 5 3 0 5 0 0 16385 0 1 0
+0 0 6 0 0 0 0 0
+1 0 100
+E
+lamp wooden~
+&+yThis is a simple block of wood carved into holding a small candle for light.&n
+~
+#139922
+sturdy broad sword broadsword~
+&+wa sturdy &+cbroadsword&n~
+&+wA sturdy &+cbroadsword was laid here.&n~
+~
+5 16 3 0 9 0 0 24577 1 122910 0
+5 2 6 3 0 0 0 0
+5 0 100
+E
+sturdy broad sword broadsword~
+&+cThe sword appears very well forged and will do well in battle.&n
+~
+A
+18 2
+#139923
+bark suit armor~
+&+gan armor of &+ytree bark&n~
+&+gAn armor made of &+ytree bark&+g was left here.&n~
+~
+9 5 3 0 11 0 64 16393 0 201361796 8
+12 0 0 3 0 0 0 0
+8 0 100
+E
+bark suit armor~
+&+yThis unusual armor is made from enchanted tree bark.  The bark is weaved
+&+ytogether providing solid protection and light weight.  The only drawback
+&+yis that one smells like the trees and scratches every once in a while.&n
+~
+A
+2 -4
+A
+25 0
+#139924
+platemail plate armor suit~
+&+Wa suit of heavy &n&+wplatemail&n~
+&+WA suit of heavy &n&+wplatemail was dropped here.&n~
+~
+9 16 3 0 9 0 0 16393 0 39845946 512
+20 0 0 5 0 0 0 0
+50 0 100
+E
+platemail plate armor suit~
+&+wOn the outside the plate looks well fitted and formed, no open gaps in the
+&+warmor.  Within, a layer of leather combined with chain protect the wearer
+&+wfrom further harm if any weapon penetrates the outside plate.&n
+~
+A
+14 -15
+A
+23 -4
+#139925
+belt silvery silver leather~
+&+Ca silvery belt with a &n&+yleather back&n~
+&+CA wide strip of &n&+yleather &+Cwith a silver clasp is in a heap.&n~
+~
+9 13 3 0 10 0 0 18433 0 61374 0
+3 0 0 1 0 0 0 0
+2 0 100
+E
+belt silvery silver leather~
+&+CThe &n&+yleather&+C forms into a belt with a silver buckle and chain that extends
+&+Cfrom one end to the other.&n
+~
+A
+1 2
+#139926
+leafy leaves leaf spellbook book~
+&+ga leafy covered spellbook.&n~
+&+gA pile of leaves is piled neatly here.&n~
+~
+33 30 3 0 11 0 64 16385 0 68480 0
+0 0 120 0 0 0 0 0
+6 0 100
+E
+leafy leaves leaf spellbook book~
+&+gThe spellbook is bound and covered in leaves.  Each page comes from an unknown
+&+gplant to make it useable for spells.&n
+~
+#139927
+ring wood wooden~
+&+GSather's &n&+gwooden ring&n~
+&+gA gnarled piece of wood was discarded here.&n~
+~
+9 5 3 0 12 0 16448 16387 0 4000 0
+2 0 0 1 0 0 0 0
+1 0 100
+E
+ring wood wooden~
+&+yThe wood appears to be a ring of some sort.  It has a slight glow to it.
+&+ySmall thin branches protrude from the ornament that would cover most of
+&+yone's finger.&n
+~
+A
+4 2
+A
+3 2
+#139928
+shelf~
+&+Lan obsidian wine shelf&n~
+&+LAn obsidian wine shelf fills the room.&m~
+~
+14 36 3 0 12 0 16384 0 0 1 0
+0 0 0 0 0 0 0 0
+150 0 100
+E
+shelf~
+&+wThe shelf crosses all around the room and has the capability to hold about
+&+wtwo hundred bottles.&n
+~
+#139929
+emerald gem~
+&+Ga shiny &n&+gemerald&n~
+&+GA shiny &n&+gemerald &+Gwas dropped here.&n~
+~
+8 32 3 0 11 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+emerald gem~
+&+wIt is a finely made gem, very finely made.&n
+~
+#139930
+desk~
+&+ca long &+Csilver &+Land &+Cblack &n&+cdesk&n~
+&+cA long &+Csilver &+Land &+Cblack &n&+cdesk is snuggled against the corner.&n~
+~
+15 38 3 0 15 0 8264 16385 1 1 0
+50 29 139908 50 0 0 0 0
+350 0 100
+E
+desk~
+&+wThe desk is made from very fine polished marble.  The three types of marble
+&+wwithin give the desk its arcane beauty.  Each marble is inlaid with silver
+&+wstrands of the most skillful design.  The strands sparkle amidst the swirling
+&+wpatterns of marble.  The silver seems to give the "magic" to keep the desk
+&+wlocked.&n
+~
+#139931
+book journal~
+&+wDesatysso's journal&n~
+&+yA bark covered book was abandoned here.&n~
+~
+16 28 3 0 7 0 8200 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+book journal~
+&+yThe journal is worn and the parchment old and brittle.  None the less it is
+&+ystill legible.  There is no doubt in one's mind that this is Desatysso's
+&+yjournal.
+&n
+&+wYear of the Stag, day 111
+&+w   Gerik Desatysso the sorceror of Burnstone, contrcted my old companions
+&+wof the Band of the Hand to accompany me on my quest to discover the true
+&+wtomb of the ancients, the tomb of Mealdrun.  After months of study I feel
+&+wconfident that my information will lead us to magic and treasure,
+&n
+&+yThe journal goes on at this point to describe the party that went with
+&+yDesatuysso, Falon and his company.  It also describes in detail the troubles
+&+ythe mage went through to get any information on this elusive tomb.
+&n
+&+wDay 119
+&+w   Sather and Lyla seem to never get along.  It didn't help in the morning
+&+wto find Lyla riffling through Sather backpack for components.  Our travel
+&+wthrough the swamp has been difficult and wearing on everyone's nerve.
+&n
+&+yIt goes on to describe the tedious task of them trudging through a swamp
+&+ywith each other to deal with.  The following passage gives something
+&+yinteresting.
+&n
+&+wDay 123
+&+w   We made camp at the foot of this flat-topped hill.  I knew we were close
+&+wto our goal.  This might be the entrance to the tomb.
+&+wWhen the light of day illuminated the hill the next morning we noticed
+&+wthat the piles of rocks on the hill were arranged to give the entire hill
+&+wthe resemblance of a grinning skull.
+&n
+&+yFor a while the journal continues with tales of different but obscure things.
+&+yA triple entrance, a mammoth elephant, a four large gargoyle, riddles, and
+&+ysecret passages, many of them.  Each tells a vague story of the tomb, but
+&+yno clues as to what or where it is.  As each passage is read more injury
+&+yand death comes to the party.  Sather loses a leg, and Grunthar a hand to
+&+ya devil face.  Near the end of this tragedy a small clue reveals perhaps
+&+ywhat one is looking for, a record from Mealdrun's own handwriting was found
+&+yby Desatysso in his studies.
+&n
+&+wDay 128
+&+w   Mealdrun was a hybrid of a human mother and a being of the lower planes.
+&+wInstead of discarding the deformed child Mealdrun's mother loved him in a
+&+wway only a mother could.  This idyllic existance ended when villagers,
+&+wfrightened by the boys appearance, put a torch to the house and killed the
+&+wboys mother.  He only survived due to his cambionic nature.  In the years
+&+wthat followed Mealdrun barely survived to adulthood.  He took up sorcery
+&+wand necromancy in his studies.  With the death of his mother and others
+&+walways shunning him away any goodness that was given by his mother was soon
+&+wlost and his quest toward lichdom began.  In his logs he mentions an amulet
+&+wthat was forged with his magic.  The curious thing about it is a passage I
+&+wfound withing his scriptures, "and so in the fullness of time I shall cast
+&+wthe amulet out in to the lands of Men, that it may draw those of proper
+&+wmettle.  Only those of the keenest luck and greatest skill will win through
+&+wto me in my ultimate Fortress of Conclusion.  There they will rewarded for
+&+wtheir persistence."
+&+W   As you can probably imagine, this greatly intrigued me.  With some more
+&+wresearch, a long arduous search I ultimately gained the amulet of the void
+&+wthat I now gaze upon.  Such a simple key to decipher it, so devilishly
+&+wclever it was.  For all those who follow me apply this key to the amulet:
+&+wsubtract three then read, there are two exceptions, but not troublesome ones.
+&+w   It all has led to this.  I regret nothing.  When my pen leaves this page,
+&+wI shall step foward through the portal, leaving behind this log and the
+&+wamulet for those with the bravery to follow me.
+&n
+&+yThat is the end of the journal, but one other entry was made as apparently
+&+ya cleric named Sather was given the logs and the amulet before the mage
+&+ywent to the fortress.
+&n
+&+cThe wizard is now gone.
+&+che led me and mine to our doom.  he gives me this journal and this amulet
+&+cas if it makes up for the &+Closs of everyone&n&+c and everything I hold dear.  I
+&+cspit upon him.  I hope he finds nothing but death.  I stand now outside the
+&+ctomb, looking at the lonely hill of one long undead, one left better off
+&+cundisturbed.  I have cast the amulet in the tomb, sealing it so no other
+&+cwill suffer.  My goddess has abandoned me, and I can find not a single
+&+cshred of compassion for any that walk on two legs.  &+CLeast of all&n&+c I carry
+&+cout the last wishes of he who I despise above all others: &+CDesatysso.&n
+~
+#139932
+vial~
+&+La &n&+rdark and misty &+Lvial&n~
+&+LA &n&+rdark and misty&+L vial was placed here.&n~
+~
+10 7 3 0 7 0 8256 16385 0 1 0
+30 141 -1 -1 0 0 0 0
+1 0 100
+E
+vial~
+&+wit has a foul stench to it.&n
+~
+#139933
+potion bottle~
+&+Wa milky potion&n~
+&+WA white bottle is on its side here.&n~
+~
+10 7 3 0 10 0 64 16385 0 1 0
+26 45 -1 -1 0 0 0 0
+1 0 100
+E
+potion bottle~
+&+WIt has a milky substance within.&n
+~
+#139934
+potion vial~
+&+La dark potion&n~
+&+LA black vial was discarded here.&n~
+~
+10 7 3 0 10 0 64 16385 0 1 0
+26 41 -1 -1 70 0 0 0
+1 0 100
+E
+potion bottle~
+&+LIt has a black fluid within.&n
+~
+#139935
+potion flask~
+&+Ga clear green flask&n~
+&+GA clear green flask was dropped here.&n~
+~
+10 7 3 0 10 0 64 16385 0 1 0
+26 35 -1 -1 0 0 0 0
+1 0 100
+E
+potion bottle~
+&+GIt has a green ichor within.&n
+~
+#139936
+potion container~
+&+ya brown potion&n~
+&+yA tiny glass container is lying here.&n~
+~
+10 7 3 0 10 0 64 16385 0 1 0
+26 83 -1 -1 0 0 0 0
+1 0 100
+E
+potion bottle~
+&+yIt has a smelly, gunky, brown liquid within within.&n
+~
+#139937
+sword bone~
+&+Wa giant bone sword&n~
+&+WA giant bone sword was left here&n~
+~
+5 10 3 0 15 0 12582985 8193 0 1342177282 0
+13 4 5 3 0 0 0 0
+20 0 100
+E
+sword bone~
+&+wThis is a massive bone sword made of some very large animal, perhaps several
+&+Wpieces of it.&n
+~
+A
+18 5
+A
+19 5
+#139938
+suit bone armor~
+&+Wa suit of bone armor&n~
+&+WA pile of bones was left here.&n~
+~
+9 10 3 0 10 0 540016704 9 0 1342177282 0
+25 0 0 3 0 0 0 0
+5 0 100
+E
+suit bone armor~
+&+wThis is armor made from bones and it seems no &+Wliving &n&+wperson can fit in it.&n
+~
+A
+13 10
+#139939
+mace skull~
+&+Wa bone &+Lskull &+Wmace~
+&+WA &+LSkull &+Won a stick was left here.&n~
+~
+5 10 3 0 10 0 64 8193 0 1342177280 0
+6 2 5 6 0 0 0 0
+2 0 100
+E
+mace skull~
+&+wIt is a &+Lskull&n&+w attached to the end of a thigh bone and it seems that no
+&+Wliving&n&+wperson can or would use it.  It seems clumsy and slimy to the touch.&n
+~
+A
+18 1
+A
+19 1
+#139940
+dagger bone deathtooth~
+&+ma Death&+Wtooth &n&+mdagger~
+&+mA dagger made of &+Wbone&n&+m is spiked in the ground here.&n~
+~
+5 10 3 0 10 0 64 8193 0 28178 0
+2 2 4 11 0 0 0 0
+1 0 100
+E
+dagger bone~
+&+wThe dagger is made from the tooth of some unknown animal.&n
+~
+A
+18 2
+A
+20 -3
+#139941
+flesh skin medallion~
+&+ma drow skin &+wmedallion&n~
+&+mA piece of flesh was discarded here.&n~
+~
+9 2 3 0 10 0 64 16389 0 19984 0
+4 0 0 1 0 0 0 0
+1 0 100
+E
+flesh skin medallion~
+&+mThe drow flesh is sewn on the &+ycopper&+m medallion to allow it to go
+&+maround one's neck.&n
+~
+A
+3 3
+A
+24 -1
+#139942
+cloth cloak wraith~
+&+La &+WWraith&+L cloak&n~
+&+LA mysterious black cloth was dropped here.&n~
+~
+9 3 3 0 10 0 576 1025 0 3600 0
+6 0 0 1 0 0 0 0
+1 0 100
+E
+cloth cloak wraith~
+&+wA ghostly figure can be seen within the cloak.&n
+~
+A
+1 12
+A
+5 -8
+#139943
+bone finger quill~
+&+La fine &+Wbone &+Lquill~
+&+A dirty finger bone was left here.&n~
+~
+21 10 3 0 10 0 24576 0 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+bone finger quill~
+&+wThis is a quill made from an &+celf&+w finger bone.&n
+~
+A
+5 -20
+#139944
+meat flesh ration~
+&+ya piece of dried &+rflesh&n~
+&+yAn unusual &+rmeat&+y was left here.&n~
+~
+19 2 3 0 7 0 0 16385 0 1 0
+24 0 0 0 0 0 0 0
+1 0 100
+E
+meat flesh ration~
+&+yIt is some soft of dried up flesh, unusual apperance bu tasty.&n
+~
+#139945
+skin bag water skin~
+&+ma &+gtroll &+mwater skin&n~
+&+mA &+ggreen bag &+mwas plopped here.&n~
+~
+17 2 3 0 7 0 0 16385 0 1 0
+6 6 0 0 0 0 0 0
+1 0 100
+E
+skin bag water skin~
+&+gThe bag is made from troll skin and can hold liquid.&n
+~
+#139946
+robe blue~
+&+Ba blue robe&n~
+&+BA fine robe was left here.&n~
+~
+9 3 3 0 11 0 3153984 9 0 3584 0
+12 0 0 1 0 0 0 0
+2 0 100
+E
+robe blue~
+&+wThe robes are made from a fine material unknown to one's eyes.&n
+~
+A
+24 -3
+#139947
+bone dust~
+&+Wcrushed bone dust&n~
+&+WA white dust pile is here.&n~
+~
+18 10 3 0 15 0 8454224 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+bone dust~
+&+wThis is some powdered bone dust from what one is not sure.  It gives a sense
+&+wof dread when handling it.&n
+~
+#139948
+libram book~
+&+Lthe libram of &+rIneffable Damnation&n~
+&+LA black book in &n&+wmetal bindings&+L is on a &n&+ywooden podium&+L in the corner.&n~
+~
+33 12 3 0 13 0 2640 16385 0 3584 0
+0 0 666 0 0 0 0 0
+2 0 100
+E
+libram book~
+&+wThe book contains powerful evil magic.&n
+~
+A
+33 5
+A
+3 5
+#139949
+amulet sun~
+&+wa &+Ysun&n&+w amulet with a &+Cpiercing sword&n~
+&+wA beautiful amulet shines on the floor.&n~
+~
+9 24 3 0 13 0 279872 5 0 113646 0
+5 0 0 1 0 0 0 0
+1 0 100 8192 68 0 0
+E
+amulet sun~
+&+wThe amulet has the symbol from &+WThe Order of Light&n&+w, a &+Ysun &n&+wwith a &+Csword
+&+wpiercing through the center.&n
+~
+#139950
+broadsword sword broad~
+&+wa sturdy &+cbroadsword&n~
+&+wA &+cbroadsword &+wof fine quality was abandoned here.&n~
+~
+5 16 3 0 13 0 64 8193 0 49182 0
+5 4 6 3 0 0 0 0
+5 0 100
+E
+broadsword sword broad~
+&+wit is a very nicely made broadsword, probably made by dwarves.&n
+~
+A
+18 2
+A
+19 4
+#139951
+longsword sword long~
+&+Wa white &n&+clongsword&n~
+&+WA white &n&+clongsword &+Wof was abandoned here.&n~
+~
+5 16 3 0 13 0 64 8193 0 49182 0
+5 2 5 3 0 0 0 0
+5 0 100
+E
+longsword sword long~
+&+wit is a very nicely made longsword, probably made by dwarves.&n
+~
+A
+18 1
+A
+19 1
+#139952
+ring purple gem~
+&+ma round purple ring&n~
+&+Ma small gem was left on the ground~
+~
+9 26 3 0 15 0 67108928 3 0 1 0
+4 0 0 1 0 0 0 0
+1 0 100 8 0 0 0
+E
+ring purple~
+&+wA most unusual ring made of a strange purple gem.  The gem feels soft to
+&+wthe touch.&n
+~
+A
+26 -10
+A
+13 -20
+#139953
+paper note~
+&+ya small piece of paper&n~
+&+wA crumpled note was dropped here.&n~
+~
+16 28 3 0 3 0 12288 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+paper note~
+&+w   It has an insignia of a &+cdagger &+wwith &+Mpurple poison &n&+wdripping from the end of
+&+wit.  In big awful handwriting is the word "&+Ygold&n&+w" written on it.  One recognizes
+&+wthe insignia to be of the &+mUmbra&+w thieves guild.  This is a notorious guild
+&+wrun by the infamous &+BDitch-Matuga&n&+w, a master &+Mkobold&n&+w thief.&n
+~
+#139954
+stiletto steel small~
+&+wa small &+Wsteel &n&+wstiletto&n~
+&+wA small &+Wsteel &n&+w stiletto was left here.&n~
+~
+5 16 3 0 7 0 0 24577 0 131030 0
+2 2 4 11 0 0 0 0
+2 0 100
+E
+stiletto steel small~
+&+wThe stiletto has a long pointy blade and a solid &+ywooden&+w handle.&n
+~
+A
+18 2
+A
+19 2
+#139955
+bone key skeleton~
+&+Wa skeleton key&n~
+&+WA bone was left here.&n~
+~
+18 10 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+bone key skeleton~
+&+wIt is a finger bone of a &+yhalfling&+w that was sharpened into some king of key.&n
+~
+#139956
+bone bracelet~
+&+Ga lucky &+Wbone &+Gbracelet~
+&+WA twisted bone was dropped here.&n~
+~
+9 10 3 0 7 0 64 4097 0 1 0
+2 0 0 1 0 0 0 0
+1 0 100
+E
+bone bracelet~
+&+wIt is a bracelet made from human bones.&n
+~
+A
+30 6
+#139957
+wand stone~
+&+wa long stone wand&n~
+&+wA long stone wand was left here.&n~
+~
+3 11 3 0 13 0 16448 16385 0 69376 0
+10 5 5 100 0 0 0 0
+1 0 100
+E
+wand stone~
+&+wThis is a long slender stone wand with a nob at one end.&n
+~
+#139958
+wand wood~
+&+ya curved wood wand&n~
+&+wA curved piece of wood was abandoned here.&n~
+~
+3 6 3 0 13 0 8256 16385 0 69376 0
+10 10 10 1 0 0 0 0
+1 0 100
+E
+wand wood~
+&+wThis is a curved wood wand with a split at one end.&n
+~
+#139959
+skull belt pegasus~
+&+La pegasus &+Wskull &+Lbelt&n~
+&+LA pegasus &+Wskull was left here.&n~
+~
+9 15 3 0 7 0 64 2049 0 134344498 2
+4 0 0 1 0 0 0 0
+0 0 100 0 64 0 0
+E
+skull belt pegasus~
+&+w   The belt is made from the hide of a ugly black boar and the skull of a
+&+wbeautiful pegasus.  The magic the belt holds is the combination of both
+&+wthe beauty and the beast.&n
+~
+A
+26 4
+#139960
+skull elven~
+&+Wan &n&+celven &+Wskull~
+&+WA bright &n&+celven&+W skull was left here.&n~
+~
+15 10 3 0 12 0 270417 16385 0 130930 0
+10 0 0 10 0 0 0 0
+1 0 100
+E
+skull elven~
+&+w   The skull, made from &+celves, is a &+Wlight source&n&+w to allow young &+Lnecromancers
+&+wto see at night while they work on thier spells.  A small insignia of a
+&+Ggreen devil face&n&+w is on the forhead of the skull.  The skull also can &+Whold
+&+wa few small important items within its cavity.&n
+~
+A
+3 5
+A
+28 -15
+#139961
+key finger bone~
+&+Wa small bone key&n~
+&+wA &+Wfinger bone &n&+wwas discarded here.&n~
+~
+18 10 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+key finger bone~
+&+w   This is a finger of some humanoid that has been carved with the grooves
+&+wthat a key would hold.&n
+~
+#139962
+bones bone plate~
+&+Wsome bone fused &n&+wplatemail&n~
+&+wA heap of &+Wbones &n&+wis piled here.&n~
+~
+9 10 3 0 14 0 592 9 0 134250550 2
+25 0 0 4 0 0 0 0
+20 0 100 33554432 0 0 0
+E
+bones bone plate~
+&+w   The armor is bones and steel fused together making a horrorific sight
+&+wwith anyone that wears it.&n
+~
+A
+19 2
+A
+28 -10
+#139963
+sword two~
+&+wa &+Lblack bladed&n&+w two handed &+csteel &+wsword&n~
+&+wA &+Lblack bladed&n&+w two handed sword was left here.&n~
+~
+5 16 3 0 14 0 4194384 8193 0 49182 0
+13 3 6 3 0 0 0 0
+5 0 100 65536 0 0 0
+E
+sword two~
+&+w   The sword blade is black as night and gives off an erie feint glow if
+&+wviewed closely.  Its handle is made from fine leather with a small tassle
+&+wof a horned beast at the end.&n
+~
+A
+18 3
+A
+19 3
+#139964
+hood cloth~
+&+ba &+Wskull emblem &n&+bhood&n~
+&+bSome &+wdirty&+b cloth with a &+Wwhite emblem &n&+c was left here.&n~
+~
+9 3 3 0 12 0 576 17 0 24082 0
+6 0 0 1 0 0 0 0
+0 0 100 65536 0 0 0
+E
+hood cloth~
+&+wThe hood has an emblem of a human skull where the forehead rests.&n
+~
+A
+33 4
+#139965
+collar griffon~
+&+ya grif&+Yfon ski&n&+yn coll&+Yar~
+&+yAn ani&+Ymal ski&n&+yn coll&+Yar was left &n&+yhere.&n~
+~
+9 12 3 0 10 0 0 5 0 1 0
+5 0 0 1 0 0 0 0
+0 0 100
+E
+collar griffon~
+&+wThe collar comes from the skin of a dead griffon.&n
+~
+A
+23 -2
+A
+13 3
+#139966
+boots warthog~
+&+La pair of warthog &n&+yskin boots&n~
+&+LA pair of &n&+yboots was left here.&n~
+~
+9 12 3 0 6 0 0 65 0 1 0
+4 0 0 1 0 0 0 0
+1 0 100
+E
+boots warthog~
+&+wMade from the hide of a smelly worthog, these boots look quite comfortable.&n
+~
+A
+14 10
+A
+26 3
+#139967
+rod mace purple~
+&+La dark metal &n&+mmace of pu&+Mrple mist&n~
+&+LA dark metal rod &n&+mis here givi&+Mng off a purple haze.&n~
+~
+5 36 3 0 15 0 66113 8193 0 1 0
+6 4 5 6 0 0 0 0
+4 0 100 0 64 0 0
+E
+rod mace purple~
+&+w   From the mace comes very, very, feint voices whispering softly.  The mace
+&+whas a ghastly glow to it as violet mist emits from the top end flowing out
+&+was an early morning fog.  Its jet black handle and tip shines when light
+&+wreflects off of it.  It pulsates in anticipation of something.&n
+~
+A
+30 -20
+A
+18 5
+#139968
+gold ring band~
+&+Ya gold ring band&n~
+&+YA gold ring was dropped here.&n~
+~
+9 24 3 0 15 0 0 3 0 1 0
+2 0 0 1 0 0 0 0
+0 0 100 33562624 0 0 0
+E
+gold ring band~
+&+w   The ring is a plain gold band but has an inscription on the inside that
+&+wreads "in memory of my family".&n
+~
+A
+4 5
+#139969
+starfish medallion~
+&+Ca starfish medallion&n~
+&+CA starfish was left here.&n~
+~
+9 39 3 0 13 0 1024 5 0 80864 0
+7 0 0 1 0 0 0 0
+1 0 100
+E
+starfish medallion~
+&+wThis is dead starfish that is tied to a chain of gold, very pretty.
+~
+A
+34 5
+#139970
+axe~
+&+La gleaming black axe&n~
+&+LAn axe is embedded in the ground here.&n~
+~
+5 16 3 0 12 0 4194304 8193 0 49182 0
+1 3 7 3 0 0 0 0
+8 0 100
+E
+axe~
+&+w   This is an axe with a black painted wooden handle.  It is well kept and
+&+wvery sharp to the touch.&n
+~
+A
+18 4
+A
+19 2
+#139971
+obsidian key~
+&+wan &+Lobsidian key&n~
+&+wA piece of &+Lobsidian was dropped here.&n~
+~
+18 36 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+obsidian key~
+&+wIt is a key to some complex lock with many small and twisted groves in its
+&+wshaft.  It has a blood stain on the handle end.&n
+~
+#139972
+parchment scroll old~
+&+wan old &+yscroll&n~
+&+wa tattered rolled &+yup parchment was hidden here.&n~
+~
+2 29 3 0 10 0 12288 16385 0 3584 0
+30 82 99 72 0 0 0 0
+0 0 100
+E
+parchment scroll old~
+&+w   It is a very old scroll so be careful with it, oops you just torn another
+&+wpiece off.&n
+~
+#139973
+corpse~
+&+Ya corpse&n~
+&+YA corpse &n&+yis propp&+Yed up o&n&+yn the tab&+Yle here.&n~
+~
+15 2 3 0 2 0 0 0 0 1 0
+20 0 0 20 0 0 0 0
+150 0 100
+E
+corpse~
+&+w   The corpse is very decomposed and rotting.  Its chest is open and parts
+&+whave been cut or taken out.&n
+~
+#139974
+corpse~
+&+Ya corpse&n~
+&+YA ha&n&+ylf-open cor&+Ypse &n&+yis propp&+Yed up o&n&+yn the tab&+Yle here.&n~
+~
+15 2 3 0 2 0 0 0 0 1 0
+20 0 0 20 0 0 0 0
+150 0 100
+E
+corpse~
+&+w   The corpse is very decomposed and rotting.  Its chest is open and parts
+&+whave been cut or taken out.&n
+~
+#139975
+metal key~
+&+wa metal key&n~
+&+wA metal key was dropped here.&n~
+~
+18 20 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+metal key~
+&+wIt is a key to some complex lock with many small and twisted groves in its
+&+wshaft.  It has a blood stain on the handle end.&n
+~
+#139976
+heart~
+&+ra heart of a humanoid pulsing&n~
+&+rA humanoid heart is here echoing its pulsing beat.&n~
+~
+14 2 3 0 15 0 73808 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+heart~
+&+w   The heart pulsates faster as one approaches.  One feels weakening as one
+&+wgets closer to the heart.&n
+~
+#139977
+skull~
+&+wa &+Wskull &n&+wemitting &+Lblack &n&+wsmoke&n~
+&+wA &+Wskull &n&+wemitting &+Lblack&n&+w smoke is sitting on a &+ywrought-iron &+wstand.&n~
+~
+11 10 3 0 15 0 82137 8404993 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+skull~
+&+wThe skull is emitting black smoke which seems to follow living beings.
+~
+A
+5 -50
+#139978
+statue obsidian~
+&+wa g&+Liant obsidian stat&n&+wue&n~
+&+wA g&+Liant obsidian statue of a skeleton is here against the south wall.&n~
+~
+25 36 3 0 15 0 82000 0 0 1 0
+140189 7 -1 0 0 0 0 0
+250 0 100
+E
+statue obsidian~
+&+w   The statue is as big as an ogre and attached to the south wall.  It
+&+wdepicts a skeleton with both hands raised to waist level, palms upward.
+&+winset into each of the palms is a smooth, flat, obsidian tile, also palm-
+&+wshaped.  The eye sockets of the stone skull &+Rflare red&n&+w as a menacing voice
+&+wintones &+W"Enter, and be judged, petitioners!"&n
+~
+#139979
+scroll~
+&+ya scroll of spells&n~
+&+wa scroll &+ywas neatly placed here.&n~
+~
+2 29 3 0 12 0 64 0 0 3584 0
+10 1 100 8 0 0 0 0
+0 0 100
+E
+scroll~
+&+wThe scroll is sealed with a &+Ggreen devil face&n&+w made from wax.&n
+~
+A
+1 10
+#139980
+coffin~
+&+ya wooden coffin&n~
+&+yA wooden coffin is resting on some &+Ldirt&n&+y here.~
+~
+15 6 3 0 15 0 8200 1 0 1 0
+250 5 0 50 0 0 0 0
+250 0 100
+E
+coffin~
+&+wThe coffin is of incredible craftmanship.  It is made from oak and iron.&n
+~
+#139981
+coffin~
+&+ya &+Lbanded &n&+yoak coffin&n~
+&+yA &+Lbanded &n&+yoak coffin is resting on some &+Ldirt&n&+y here.~
+~
+15 6 3 0 15 0 8200 1 0 1 0
+250 5 0 50 0 0 0 0
+250 0 100
+E
+coffin~
+&+wThe coffin is of incredible craftmanship.  It is made from oak and iron.&n
+~
+#139982
+coffin~
+&+wa &+Lblack wood&n&+w coffin&n~
+&+wA &+Lblack wood &n&+wcoffin is resting on some &+Ldirt&n&+w here.~
+~
+15 6 3 0 15 0 8200 1 0 1 0
+250 5 0 50 0 0 0 0
+250 0 100
+E
+coffin~
+&+wThe coffin is of incredible craftmanship.  It is made from oak and iron.&n
+~
+#139983
+dagger bone deathtooth~
+&+ma &+Mlong jagged&n&+m Death&+Wtooth &n&+mdagger~
+&+mA dagger made of &+Wbone&n&+m is spiked in the ground here.&n~
+~
+5 10 3 0 10 0 64 8193 0 28178 0
+2 3 4 11 0 0 0 0
+1 0 100
+E
+dagger bone~
+&+wThe dagger is made from the tooth of some unknown animal.&n
+~
+A
+18 2
+A
+19 3
+#139984
+sarcophagus stone~
+&+La stone sarcoghagus&n~
+&+LA large stone sarcophagus of a burly &+Ydwarf&+L is against the east wall.&n~
+~
+15 11 3 0 13 0 64 0 0 1 0
+300 5 0 300 0 0 0 0
+500 0 100
+E
+sarcophagus stone~
+&+w   This is a crudly sculpted sarcophagus of a burly dwarf wielding a
+&+wmassive axe over his head.  The sarcophagus is made of an uknown stone
+&+wand at closer inspection the eyes of the dwarf seem to have a feint
+&+Ggreen &n&+wglow to them.&n
+~
+#139985
+iron sarcophagus~
+&+yan iron sarcoghagus&n~
+&+yAn iron sarcophagus of a female warrior is resting against the north wall.&n~
+~
+15 15 3 0 13 0 64 0 0 1 0
+300 5 0 300 0 0 0 0
+500 0 100
+E
+sarcophagus iron~
+&+w   This sarcophagus is of a doughty human female warrior in full plate.&n
+~
+#139986
+iron sarcophagus~
+&+yan iron sarcoghagus&n~
+&+yAn iron sarcophagus of an &+Welongated skeleton&n&+y is resting against the north wall.&n~
+~
+15 15 3 0 13 0 64 0 0 1 0
+300 5 0 300 0 0 0 0
+500 0 100
+E
+sarcophagus iron~
+&+w   This sarcophagus is of an elongated skeleton wearing a dark, hooded robe
+&+wand holding a rusty scythe.&n
+~
+#139987
+sarcophagus stone~
+&+La stone sarcoghagus&n~
+&+LA large stone sarcophagus of an &n&+celf lord&+L is resting against the south wall.&n~
+~
+15 11 3 0 13 0 64 0 0 1 0
+300 5 0 300 0 0 0 0
+500 0 100
+E
+sarcophagus stone~
+&+w   This is a very well done sculpture of some ancient elf lord.  The huge
+&+wsarcophagus stands about a troll height and is made entirely from granite.&n
+~
+#139988
+gem green~
+&+Ga green gem&n~
+&+GA green gem was placed here.&n~
+~
+8 26 3 0 12 0 65729 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+gem green~
+&+wThis is an octagonal gem made of some green crystal.&n
+~
+#139989
+devil face~
+&+La &+Ggreen devil &+Lface&n~
+&+gA &+Ggreen devil face &n&+gwith an opened mouth of &+Ldarkness&n&+g rests on the south wall.~
+~
+25 18 3 0 10 0 64 0 0 1 0
+140196 197 -1 0 0 0 0 0
+200 0 100
+E
+devil face~
+&+gThe &+Gface &n&+ghas a huge open mouth.  The mouth opening is a &+Lblack void &n&+gwhere
+&+gno light enters or escapes.  It seems a man could &+Genter&n&+g inside the opening
+&+gof the mouth.  The face hangs about chest height on the south wall.
+&n
+~
+#139990
+mummy~
+&+Wa tattered mummy&n~
+&+WA small tattered mummy was placed here.&n~
+~
+14 3 3 0 13 0 8192 0 0 1 0
+0 0 0 0 0 0 0 0
+200 0 100
+E
+mummy~
+&+w   The mummy is old and smells unusual.&n
+~
+#139991
+theendforyou~
+&+ga deathly smell~
+&+gA deathly smell of dirt, decay, and rot fills one's mouth and nose.&n~
+~
+14 1 3 0 15 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139992
+sarcophagus stone~
+&+La stone sarcoghagus&n~
+&+LA large stone sarcophagus of a &+Chuman &+Lmale warrior is against the south wall.&n~
+~
+25 11 3 0 13 0 64 0 0 1 0
+140193 99 -1 0 0 0 0 0
+500 0 100
+E
+sarcophagus stone~
+&+wThis is a finely sculptured sarcophagus of a human warrior in chainmail.&n
+~
+#139993
+iron sarcophagus~
+&+yan iron sarcoghagus&n~
+&+yAn iron sarcophagus of a &+bbarbarian&n&+y is against the north wall.&n~
+~
+15 15 3 0 13 0 64 0 0 1 0
+300 5 0 300 0 0 0 0
+500 0 100
+E
+sarcophagus iron~
+&+w   This is a sarcophagus of a fierce barbarian clad only in leather breeches,
+&+wwielding a large ivory spear.&n
+~
+#139994
+sarcophagus stone~
+&+La stone sarcoghagus&n~
+&+LA stone sarcophagus of three children holding hands is against the north wall.&n~
+~
+29 11 3 0 13 0 64 0 0 1 0
+270 140190 0 1 0 0 0 0
+500 0 100
+E
+sarcophagus stone~
+&+w   This sarcophagus shows three innocent children, holding hands in merry
+&+wlaughter.&n
+~
+#139995
+sarcophagus stone~
+&+La stone sarcoghagus&n~
+&+LA stone sarcophagus of of a &+Chuman&+L undergoing torture is against the south wall.&n~
+~
+29 11 3 0 13 0 64 0 0 1 0
+270 140191 0 1 0 0 0 0
+500 0 100
+E
+sarcophagus stone~
+&+w   This sarcophagus shows three innocent children, holding hands in merry
+&+wlaughter.&n
+~
+#139996
+tome~
+&+ya small tome&n~
+&+yA small tome is upright here.&n~
+~
+16 28 3 0 7 0 4096 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+tome~
+&+w   After searching through the tome one comes upon a few important notes
+&+wthat were jotted down within.  The tome is actually a record of Ferranifer's
+&+wobsession with Mealdrun's tomb.&n
+&n
+&+w   The few notes of interest are as follows...
+&n
+&+y . Mealdrun's Tomb is only the first and least of his holdings.
+&+y . Mealdrun's Tomb was sunk into the underdark for reasons unknown.
+&+y . Mealdrun labors on another place to bring about a grand change.
+&+y . Mealdrun long ago prepared a single route to access his true abode.
+&+y . To travel this route one needs the &+LAmulet of the Void&n&+y.
+&+y . The runes inscribed on the &+LAmulet of the Void&n&+y are in a forgotten
+&+y     magical tongue.  If one could learn this lost language, one could
+&+y     decipher the runes.
+&n
+~
+#139997
+coffin~
+&+ya &+rch&+yer&+rry&+y wood coffin&n~
+&+yA &+rch&+yer&+rry &+ywood coffin is mounted on the south shelf.~
+~
+15 6 3 0 15 0 8200 1 0 1 0
+250 5 0 50 0 0 0 0
+250 0 100
+E
+coffin~
+&+wThe coffin is of incredible craftmanship.  It is made from cherry wood.&n
+~
+#139998
+coins pile~
+&+Ya pile of coins&n~
+&+YA pile of coins was hidden in the coffin.&n~
+~
+20 24 3 0 7 0 4096 1 0 1 0
+0 0 304 15 0 0 0 0
+0 0 100
+E
+coins pile~
+&+wIts a pile of coins, duh!&n
+~
+#139999
+parchment scroll old~
+&+wa sticky &+yscroll&n~
+&+wa tattered rolled &+yup parchment was hidden here.&n~
+~
+2 29 3 0 10 0 12288 16385 0 3584 0
+30 30 23 19 0 0 0 0
+0 0 100
+E
+parchment scroll old~
+&+w   It is a very old scroll so be careful with it, oops you just torn another
+&+wpiece off.&n
+~
+#140000
+tome~
+&+wa &+Lla&n&+wrge gray to&+Lme&n~
+&+wA &+Lla&n&+wrge gray to&+Lme&n&+w is upright here.&n~
+~
+2 28 3 0 7 0 0 16385 0 3584 0
+30 -1 -1 -1 0 0 0 0
+0 0 100
+E
+tome~
+&+w   When the trap went off it burned a few of the pages within.  The tome
+&+winstructs how to make a greater bone golem like the one guarding Skull City.
+&+wUnfortunately the pages burned were the secrets to its power.  Somehow not
+&+wall the pages were burnt and there is enough to create one minor creature
+&+wto serve one's every need.&n
+~
+#140001
+tome~
+&+wthe &+rBlood Codex&n~
+&+wA &+rblood red &+wand &+Lblack &n&+wtome was placed here.&n~
+~
+16 28 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+tome~
+&+wThis tome instructs one on how to become a vampire.&n
+~
+#140002
+amulet metal~
+&+wthe bottom half of an &+Lobsidian amulet~
+&+LA hunk of metal was left here.&n~
+~
+11 36 3 0 10 0 65544 5 0 1 0
+0 0 0 0 0 0 0 0
+2 0 100
+E
+amulet metal~
+&+wAn inscription across the bottom reads:
+&n
+&+r  zlwk idlwk ws wkh ehdv(t), wlv wkh jds wr srzhu
+&n
+~
+#140003
+ring silver~
+&+wa &+csilver &+wring with a &+Bsapphire&n~
+&+wA nice &+csilver&+w ring was discarded here.&n~
+~
+9 22 3 0 13 0 64 3 1 1 0
+3 0 0 1 0 0 0 0
+0 0 100 67108864 0 0 0
+E
+ring silver~
+&+wThis is a finely crafted silver ring with a large sapphire as its jewel piece.&n
+~
+#140004
+shelf shelves skull~
+&+wa bookshelf with two &+Wskull endcaps&n~
+&+wA book shelf with two &+Wskull endcaps &n&+wis mounted on the north wall.&n~
+~
+15 11 3 0 7 0 0 0 0 1 0
+100 0 0 100 0 0 0 0
+20 0 100
+E
+shelf shelves skull~
+&+w   This shelf is made of stone and is mounted by two stone pegs on the
+&+wnorth wall at about chest height.&n
+~
+#140005
+gold key~
+&+Ya large gold key&n~
+&+YA large gold key was dropped here.&n~
+~
+18 24 3 0 12 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+gold key~
+&+wIt is a gold key to some complex lock with many small and twisted groves in
+&+wits shaft.&n
+~
+#140006
+coins~
+&+Ya pile of coins&n~
+&+wA mound of &+Wplatinum&n&+w, &+Ygold&n&+w, &+csilver&n&+w, and &+ycopper&+w is neatly stacked here.&n~
+~
+20 24 3 0 7 0 0 16385 0 1 0
+6454 3422 642 77 0 0 0 0
+1 0 100
+E
+coins~
+&+YIts gold what did you expect.&n
+~
+#140007
+statue~
+&+wa statue of a woman without a head&n~
+&+wA statue of a woman without a head is here.&n~
+~
+8 11 3 0 12 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+500 0 100
+E
+statue~
+&+w   This statue is of a mature woman in simple clothes, but without a head.&n
+&+wOnly her figure and dress shows that it was a woman.&n
+~
+#140008
+statue~
+&+wa finely made statue of a bard&n~
+&+wA finely made statue of a bard without arms is here.&n~
+~
+8 11 3 0 12 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+500 0 100
+E
+statue~
+&+w   This statue is of a bard playing some musical instrument that is still
+&+wattached to his mouth.  The arms that hold the flute are snapped off and
+&+won the floor next to it.&n
+~
+#140009
+statue~
+&+wa statue of some legs&n~
+&+wOnly legs remain on this statue, the rest was broken off.&n~
+~
+8 11 3 0 12 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+500 0 100
+E
+statue~
+&+w   Only a pair of legs remanin on this statue.&n
+~
+#140010
+statue~
+&+wa partially complete statue&n~
+&+wA partially completed statue of a warrior is here.&n~
+~
+8 11 3 0 12 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+500 0 100
+E
+statue~
+&+w   Apparently this form was not near completion when the cataclysm occured
+&+win Moil.&n
+~
+#140011
+fang~
+&+Wa wraith &+Gspider &+Wfang&n~
+&+wA spider fang is here torn at the root.&n~
+~
+5 10 3 0 12 0 0 8193 0 25616 0
+19 2 2 11 5 0 0 0
+0 0 100
+E
+fang~
+&+w   These are fangs that come from the deadly wraith spider.  They have been
+&+wtorn off the spider.&n
+~
+#140012
+puzzle box~
+&+ya puzzle box&n~
+&+yA sqaure puzzle box is here suspended by a &+gsi&+Gngle w&n&+geb &+ythread.&n~
+~
+8 15 3 0 15 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+500 0 100
+E
+puzzle box~
+&+W   The puzzle box has six facings, each with writing or an image on its side.
+&+WIt seems that each image facing can be depressed or pushed in.&n
+&n
+&+w   Side one: &+yMany tail have I,
+&+y             or many a beginning.
+&+y             If I fall people sigh;
+&+y             wails mark their passing.
+&n
+&+w   Side two: &+yIs the &+Cimage&n&+y of a mighty oak tree with many
+&+y             roots reaching down into loamy soil.
+&n
+&+w Side three: &+yIs the &+Cimage&n&+y of a cat with many hissing
+&+y             snake-headed tails.
+&n
+&+w  Side four: &+yIs the &+Cimage&n&+y of a rope with one end frayed
+&+y             and partially unraveled.&n
+~
+#140013
+tree~
+&+Ma sensation of magic&n~
+&+MA sensation of powerful magic permeates the room.&n~
+~
+25 1 3 0 15 0 2 0 0 1 0
+140209 270 -1 0 0 0 0 0
+0 0 100
+#140014
+cat~
+&+Ma sensation of magic&n~
+&+MA sensation of powerful magic permeates the room.&n~
+~
+25 1 3 0 15 0 2 0 0 1 0
+140212 270 -1 0 0 0 0 0
+0 0 100
+#140015
+rope~
+&+Ma sensation of magic&n~
+&+MA sensation of powerful magic permeates the room.&n~
+~
+25 1 3 0 15 0 2 0 0 1 0
+140228 270 -1 0 0 0 0 0
+0 0 100
+#140016
+ivory key~
+&+Wa large ivory key&n~
+&+WA large ivory key was dropped here.&n~
+~
+18 34 3 0 12 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+ivory key~
+&+wIt is a simple ivory key with one grove.&n
+~
+#140017
+stand~
+&+Yan illuminated &n&+csilver &+Ystand~
+&+YAn illuminated &n&+csilver&+Y stand is the only light withing the void~
+~
+15 22 3 0 13 0 64 0 1 1 0
+30 5 0 30 0 0 0 0
+30 0 100
+E
+stand~
+&+w   The stand is made of pure silver and raises about chest height to a small
+&+whuman.  Each of the three legs are inlaid whith carvings of maidens, flowers,
+&+wand happiness.  At the top a rounded box with a lid contains a most intricate
+&+wdisplay of angels and clouds.&n
+~
+#140018
+tiny key marble~
+&+Ba t&+Wi&+Bny key &+Wof m&+Barble&n~
+&+wA &+Bt&+Wi&+Bny key &+Wof m&+Barble&n&+w was lost here.&n~
+~
+18 11 3 0 12 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+gold key~
+&+wIt is a gold key to some complex lock with many small and twisted groves in
+&+wits shaft.&n
+~
+#140019
+portal~
+&+Can &n&+cicy portal of &+Lblack&n&+c mi&+Cst&n~
+&+CAn &n&+cicy portal of &+Lblack mist &n&+cis on the center of the platfo&+Crm.&n~
+~
+25 1 3 0 15 0 65 0 0 1 0
+140259 7 -1 0 0 0 0 0
+500 0 100
+E
+portal~
+&+w   The black mist within the portal chruns and moves in distorted fashion.
+&+wNothing can be heard or seen from its dark soup.&n
+~
+#140020
+chest small~
+&+La s&n&+wmall metal ch&+Lest&n~
+&+LA s&n&+wmall metal chest was place here under the pla&+Lque.&n~
+~
+15 18 3 0 12 0 64 0 0 1 0
+30 15 139929 100 0 0 0 0
+50 0 100
+E
+chest small~
+&+w   This is a small chest made of mithril and bound by black leather.  A lock
+&+wholds the lid tightly sealed.  At closer examination it is intricate and
+&+wcomplex, a good bashing won't be enough to open it.  It glows slightly
+&+wshowing its true form, magical.&n
+~
+#140021
+bone key~
+&+Wa large bone key&n~
+&+WA large bone key full of writing is here.&n~
+~
+18 10 3 0 12 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+bone key~
+&+w   This is a bone key of some large animal.  All over the bone surface is
+&+winscribed the following...
+&n
+&+W"A glorious hall, walled in red velvet"&n
+~
+#140022
+bone key~
+&+Wa twisted bone key&n~
+&+WA large bone key full of writing is here.&n~
+~
+18 10 3 0 12 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+bone key~
+&+w   This is a bone key of some large animal.  All over the bone surface is
+&+winscribed the following...
+&n
+&+W"With all thrones of white bone within"&n
+~
+#140023
+iron sword drusus~
+&+LA mas&n&+ysive d&+rru&+ysus swor&+rd &+yof r&+ru&+yst&+re&+yd ir&+ron&n~
+&+yAn iron sword was force into the gorund here.&n~
+~
+5 15 3 0 13 0 0 8193 0 49182 0
+9 4 5 11 0 0 0 0
+16 0 100
+E
+iron sword drusus~
+&+w   The iron drusus has seen many battles as its blade shows.  It almost is
+&+wunwieldable in one hand but seems very well balanced.  Its handle is of
+&+wworn black leather.&n
+~
+A
+18 4
+A
+19 4
+#140024
+shield~
+&+La l&n&+yarge iron bound shi&+Leld&n~
+&+yA large iron bound shield was left here.&n~
+~
+37 15 3 0 12 0 0 513 0 32958 0
+1 5 4 5 4 0 0 0
+12 0 100
+E
+shield~
+&+w   The shield is made from hard leather and bounded by an iron band to protect
+&+wit from damage.  It is large in size, being able to fully protect any dwarf.&n
+~
+#140025
+bone key~
+&+Wa curved bone key&n~
+&+WA large bone key full of writing is here.&n~
+~
+18 10 3 0 12 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+bone key~
+&+w   This is a bone key of some large animal.  All over the bone surface is
+&+winscribed the following...
+&n
+&+W"with a red table for kings, awaiting his feast"&n
+~
+#140026
+block stone~
+&+wA large stone block&n~
+&+wA large stone block with a &+rred devil face &n&+wis in the center of the room.&n~
+~
+15 11 3 0 13 0 64 0 0 1 0
+30 5 0 30 0 0 0 0
+800 0 100
+E
+stone block~
+&+w   This is a simple stone block in the center of the chamber.  It has a top
+&+whalf that can be slid open, this is where the face is carved on.  The block
+&+wand lid are made from solid granite.&n
+~
+#140027
+stone key~
+&+wa large stone key&n~
+&+wA large stone key was dropped here.&n~
+~
+18 11 3 0 12 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+stone key~
+&+w   The key is made of a dark gray stone.  It is heavy and has many grooves.&n
+~
+#140028
+dark darkness mist void negative plane abyss mist mists~
+&+Lthe dark void below&n~
+&+LThe negative material plane begins just below the platform.&n~
+~
+25 1 3 0 15 0 2 0 0 1 0
+140302 320 -1 0 0 0 0 0
+500 0 100
+E
+dark darkness mist void negative plane abyss~
+&+L   The dark mist envelopes and swirls around one's face.  A slumber starts
+&+Lto overcome you, but it is shook off.  The mist dances around your body as
+&+Lyou peer into the darkness.  It beckons you to come closer and touch it, to
+&+Ltouch the darkness.&n
+~
+#140029
+note~
+&+ya small note&n~
+&+yA small note was left here.&n~
+~
+16 29 3 0 5 0 8396800 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+note~
+&+wThe note found is a page torn from a journal.  A date at the top of the page
+&+wputs this parchment at eighty-three years old.  Could there have been a group
+&+wof brave adventurers before Desatysso's arrival some seventy-three years
+&+wprior?  After the date an entry was made, most likely the last one.&n
+&n
+&n
+&+y   I were foolish to think we could venture in here so unprepared.  Now
+&+ywith all our resources spent and no treasure to be found we are cornered.
+&+yThe mist of death follows us at every turn of this damned city.  It now
+&+yapproaches to consume us, make us part of its own.  The priest can hold
+&+yoff the horror for a while with his spells, this will give me time to complete
+&+wmy repairs to the portal.
+&+y   I write this in an attempt to thwart any others from coming here.  There
+&+yis no gold, no treasure, and no life here.  Leave this forsaken place before
+&+yyou also are consumed by its undeath.  I am finishing repairs on one of the
+&+yportals in this Chamber of Days.  This will lead anyone back to the realm
+&+yof man.  Touch the noon panel and return to your homes.  There is no time for
+&+yme as I must maintain the portal for my associates and make sure it stays
+&+Yopen for those that follow.
+&+y   I beg for their forgiveness in my lack of insight traveling to this place.
+&+yEach are heros and I hope, no pray, that Walkarr, Alena, and Delbious return
+&+ysafely, may the gods bless them.
+&n
+&+w   It is signed by Salgarth the Sorcerer&n
+~
+#140030
+noon~
+&+Ya panel of noon time&n~
+&+YA sensation of powerful magic emits from the noon panel.&n~
+~
+25 1 3 0 15 0 0 0 0 1 0
+139903 320 -1 0 0 0 0 0
+0 0 100
+#140031
+stitches~
+&+wmany hundred stitches&n~
+&+WA pile of stitching wire is here.&n~
+~
+14 43 3 0 15 0 536994000 9 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+stitches~
+&+wThese look like they would be used to heal wounds, but appear more insidious.&n
+~
+A
+5 -70
+#140032
+mistygas~
+&+cmisty gas~
+&+CA misty gas swirls about the room.&n~
+~
+14 1 3 0 7 0 2 0 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+#140033
+axe~
+&+La double &n&+wbladed &+Laxe&n~
+&+LA large &n&+wdouble bladed axe&+L was implanted in the ground here.&n~
+~
+5 19 3 0 15 0 4194368 8193 0 32786 0
+1 5 6 3 0 0 0 0
+20 0 100
+E
+axe~
+&+w   The axe is massive and very heavy.  It towers to about an dwarf's height.
+&+wIts black handle gleams in the darkness providing its own illumination.&n
+~
+A
+18 4
+A
+19 4
+#140034
+lever iron~
+&+yan iron lever&n~
+&+LAn &n&+yiron &+Llever hangs on the west wall.&n~
+~
+29 15 3 0 7 0 114688 0 0 1 0
+340 140273 1 1 0 0 0 0
+2 0 100
+E
+lever iron~
+&+wA simple iron lever, odd though it is not in the one bit rusted.&n
+~
+#140035
+crystal key~
+&+Ca crystal key&n~
+&+CA crystal skull key was dropped here.&n~
+~
+18 8 3 0 7 0 114689 16385 0 1 0
+0 0 0 0 0 0 0 0
+2 0 100
+E
+key crystal~
+&+w   This key is made from a glowing illuminating crystal like substance that
+&+wone has never seen before.&n
+~
+#140036
+scroll~
+&+wa scroll&n~
+&+wA scroll like parchement lies here.&n~
+~
+16 29 3 0 12 0 64 1 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+scroll~
+&+w   This scroll is a powerful spell unknown to the world.  It will take years
+&+wto decipher its meaning.  It brings about an alteration to time in some form.&n
+~
+#140037
+block obsidian~
+&+Lan obsidian block&n~
+&+LAn obdidian block is centered in the middle of the chamber here.&n~
+~
+15 36 3 0 12 0 0 0 0 1 0
+1000 0 0 500 0 0 0 0
+900 0 100
+E
+block obsidian~
+&+w   The block is perfectly cornered and made from obsidian. There is no sign
+&+wof aging which is odd.&n
+~
+#140038
+lever iron~
+&+yan iron lever&n~
+&+LAn &n&+yiron &+Llever hangs on the west wall.&n~
+~
+25 15 3 0 7 0 114688 0 0 1 0
+140263 340 -1 0 0 0 0 0
+2 0 100
+E
+lever iron~
+&+wA simple iron lever, odd though it is not in the one bit rusted.&n
+~
+#140039
+plate~
+&+yan iron plate&n~
+&+LAn &n&+yiron &+Lplate hangs above the lever with the words "&+WPUSH ME&+L".&n&n~
+~
+29 15 3 0 7 0 114688 0 0 1 0
+270 140283 0 0 0 0 0 0
+2 0 100
+E
+lever iron~
+&+wA simple iron plate, odd though it is not in the one bit rusted.&n
+~
+#140040
+tile tiles mealdrun~
+&+ga series of stepping tiles&n~
+&+wA series of tiles spelling that may be &+Wpushed&n&+w in.&n~
+~
+25 9 3 0 15 0 8503360 0 0 1 0
+140263 270 -1 0 0 0 0 0
+5 0 100
+E
+tile tiles mealdrun~
+&+w   After a bit of observation these set of tiles spell out Mealdrun.  One
+&+wmay &+Wpush&n&+w on these tiles spelling the name correctly.
+~
+#140041
+tile tiles devourer~
+&+ga series of stepping tiles&n~
+&+wA series of tiles spelling that may be &+Wpushed&n&+w in.&n~
+~
+25 9 3 0 15 0 8503360 0 0 1 0
+140263 270 -1 0 0 0 0 0
+5 0 100
+E
+tile tiles mealdrun~
+&+w   After a bit of observation these set of tiles spell out Devourer.  One
+&+wmay &+Wpush&n&+w on these tiles spelling the name correctly.
+~
+#140042
+archway misty~
+&+ma sw&+Yirli&n&+mng mi&+Ys&n&+mty ar&+Ychw&n&+may&n~
+&+mA sw&+Yirli&n&+mng ar&+Ychw&n&+may is on the north wall.&n~
+~
+25 1 3 0 15 0 65 0 0 1 0
+140287 7 -1 0 0 0 0 0
+0 0 100
+E
+archway misty~
+&+w   The archway framed in rough stone pierces one wall.  Whatever might lie
+&+wbeyond the archway is obscured by a thickly roiling orange-hued haze.  As
+&+wone's gaze lingers upon the arch, the keystone at the top of the arch begins
+&+wto glow a hazel color.&n
+~
+#140043
+long obsidian key~
+&+La long obsidian key&n~
+&+LA long obsidian key was dropped here.&n~
+~
+18 36 3 0 7 0 118785 16385 0 1 0
+0 0 0 0 0 0 0 0
+2 0 100
+E
+key crystal~
+&+w   This key is made from a glowing illuminating crystal like substance that
+&+wone has never seen before.&n
+~
+#140044
+circle fire~
+&+ra c&+Rirc&n&+rle&+R of fi&n&+rre&n~
+&+rA cir&+Rcle o&n&+rf f&+Rire c&n&+rov&+Re&n&+rrs the e&+Rntire ro&n&+rom.&n~
+~
+14 1 3 0 15 0 81920 0 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+circle fire~
+&+w   A circle of fire has encompassed the chamber preventing exit unless one
+&+wwants to jump through it.&n
+~
+#140045
+archway misty~
+&+ma sw&+Yirli&n&+mng mi&+Ys&n&+mty ar&+Ychw&n&+may&n~
+&+mA sw&+Yirli&n&+mng ar&+Ychw&n&+may is on the north wall.&n~
+~
+25 1 3 0 15 0 65 0 0 1 0
+140286 7 -1 0 0 0 0 0
+0 0 100
+E
+archway misty~
+&+w   The archway framed in rough stone pierces one wall.  Whatever might lie
+&+wbeyond the archway is obscured by a thickly roiling orange-hued haze.  As
+&+wone's gaze lingers upon the arch, the keystone at the top of the arch begins
+&+wto glow a hazel color.&n
+~
+#140046
+staff~
+&+ya &+csilver &+ytipped staff&n~
+&+yA staff was left here.&n~
+~
+5 6 3 0 14 0 4097 8193 1 3968 0
+12 3 8 6 0 0 0 0
+4 0 100 268435456 0 0 0
+E
+staff~
+&+w   The staff is the height of a dwarf and has a silver tipped end.  Magical
+&+wrunes are carved in a swirl pattern within the wood.&n
+~
+A
+21 -4
+A
+33 4
+#140047
+coins~
+&+Ya pile of coins&n~
+&+YA pile of coins is neatly stacked here.&n~
+~
+20 24 3 0 7 0 4096 16385 0 1 0
+322 274 189 88 0 0 0 0
+1 0 100
+E
+coins~
+&+YIts gold what did you expect.&n
+~
+#140048
+crystal key~
+&+ca dark crystal skull key&n~
+&+cA dark crystal skull key was left here.&n~
+~
+18 8 3 0 15 0 114697 16385 0 1 0
+0 0 0 0 0 0 0 0
+2 0 100
+E
+key crystal~
+&+w   This key is made from a glowing illuminating crystal like substance that
+&+wone has never seen before.&n
+~
+#140049
+blade~
+&+La blade of &+Ylightning&n~
+&+La blade of &+Ylightning&+L is here.&n~
+~
+5 1 3 0 15 0 4259921 8193 0 49170 0
+13 6 6 3 0 0 0 0
+25 0 100
+E
+blade~
+&+w   This sword is of demonic origin and is massive indeed.  It requires two
+&+whands to hold it, for a large demon one hand.  Its blade is an ever changing
+&+wand crackling lightning bolt that never fades.  The magic it holds would do
+&+wconsiderable damage to any opponent.&n
+~
+A
+51 100
+A
+1 -80
+#140050
+forge machine sarcophagus~
+&+Lthe dim forge&n~
+&+CAn &+Lominous sarcophagus&+C like machine is here in the middle of the room.&n~
+~
+25 11 3 0 15 0 80 0 0 1 0
+140301 43 -1 0 0 0 0 0
+600 0 100
+E
+forge machine sarcophagus~
+&+w   The large and unfamilliar device stands on the floor in the center of the
+&+wroom situated directly under a blister of black crystal projecting from the
+&+wceiling.  The device on the floor is primarily composed of a burnished black
+&+wmetal canister whose shape vaguely suggests a blank sarcophagus.  The ominous
+&+wlooking device is set at a forty-five degree angle so that one end is within
+&+wa meter of the domed-shaped ebony crystal above it.  it does not seem friendly
+&+wbut can be easily &+Wsat&n&+w in.&n
+~
+#140051
+blade~
+&+La blade of &+Ylightning&n~
+&+La blade of &+Ylightning&+L is here.&n~
+~
+5 1 3 0 15 0 4263505 8193 0 49170 0
+13 4 6 3 0 0 0 0
+25 0 100
+E
+blade~
+&+w   This sword is of demonic origin and is massive indeed.  It requires two
+&+whands to hold it, for a large demon one hand.  Its blade is an ever changing
+&+wand crackling lightning bolt that never fades.  The magic it holds would do
+&+wconsiderable damage to any opponent.&n
+~
+#140052
+dark darkness mist void negative plane abyss pit~
+&+Lthe dark void below&n~
+&+LA pit of absolute darkness is in the center of the floor.&n~
+~
+25 1 3 0 15 0 2 0 0 1 0
+140302 320 -1 0 0 0 0 0
+500 0 100
+E
+dark darkness mist void negative plane abyss~
+&+L   The dark mist envelopes and swirls around one's face.  A slumber starts
+&+Lto overcome you, but it is shook off.  The mist dances around your body as
+&+Lyou peer into the darkness.  It beckons you to come closer and touch it, to
+&+Ltouch the darkness.&n
+~
+#140053
+gem emerald key~
+&+Gan emerald of incredible value&n~
+&+GA green gem was left here.&n~
+~
+18 32 3 0 15 0 114697 16385 0 1 0
+0 0 0 0 0 0 0 0
+2 0 100
+E
+gem emerald key~
+&+w   This is one of &+RMealdrun's&n&+w eye sockets that is an &+Gemerald&n&+w.  The gem is
+&+wvery valuable to any one who would buy it.  A small depression is on one
+&+wend of the gem.&n
+~
+#140054
+chest large obsidian~
+&+La large obsidian chest&n~
+&+LA large obsidian chest is here in the corner.&n~
+~
+15 36 3 0 12 0 0 1 0 1 0
+30 15 0 200 0 0 0 0
+200 0 100
+E
+chest large obsidian~
+&+w   This is a large chest made of obsidian.  A lock holds the lid tightly
+&+wsealed.&n
+~
+#140055
+mask devourer~
+&+Lthe mask of the &+GDevourer&n~
+&+LA demonic looking mask was left here.&n~
+~
+9 13 3 0 15 0 209 262145 0 1 0
+6 0 0 1 0 0 0 0
+1 0 100 536870948 12480 0 0
+E
+mask devourer~
+&+G   The mask of the devourer is the form of a green devil face, the devourer's
+&+Gsymbol.  It encompasses the entire face and occationally the mouth begins
+&+Gto talk gibberish and spew gas.  It pulses to the touch giving away the fact
+&+Gthat it is possibly alive.&n
+~
+A
+24 -4
+A
+31 5
+#140056
+cloak blue~
+&+La &n&+bmisty cold &+Lcloak&n~
+&+LA cloak emitting a &+Bbluish mist&+L is here.&n~
+~
+9 53 3 0 13 0 65616 1025 0 3856 0
+8 0 0 1 0 0 0 0
+0 0 100 0 1088 2097152 0
+E
+cloak blue~
+&+w   The cloak flows easily around the air as if it is floating within water.
+&+wIt gives off a bluish mist as it moves and a chill tocuhes one when in contact
+&+wwith the cloak.  It is a fine dark blue silk.&n
+~
+A
+5 -20
+#140057
+coins~
+&+Ya pile of coins&n~
+&+YA pile of coins is neatly stacked here.&n~
+~
+20 24 3 0 7 0 0 16385 0 1 0
+3223 2352 1422 576 0 0 0 0
+1 0 100
+E
+coins~
+&+YIts gold what did you expect.&n
+~
+#140058
+symbol devourer~
+&+ra symbol of the &+RDevourer&n~
+&+rA small symbol was placed here.&n~
+~
+9 10 3 0 14 0 80 2097153 0 1 0
+4 0 0 1 0 0 0 0
+0 0 100 268435456 0 0 0
+E
+symbol devourer~
+&+wThis is a small devil face with horns.  It is made of bone.&n
+~
+A
+33 2
+A
+14 12
+#140059
+parchment scroll~
+&+yan old scroll&n~
+&+yA dried up parchment was put here.&n~
+~
+2 29 3 0 12 0 64 16385 0 3584 0
+40 19 131 26 0 0 0 0
+0 0 100
+E
+parchment scroll~
+&+wThis is very old unused scroll.&n
+~
+#140060
+boots~
+&+Wboots of the &+Cwinter &+Wwight&n~
+&+wSome frost covered boots were left here.&n~
+~
+9 10 3 0 15 0 80 65 0 1 0
+8 0 0 1 0 0 0 0
+1 0 100 0 262144 0 0
+E
+boots~
+&+wThese are frost covered boots made of flesh and bone.
+~
+A
+2 -8
+#140061
+chest large obsidian~
+&+La large obsidian chest&n~
+&+LA large obsidian chest is here in the corner.&n~
+~
+15 36 3 0 12 0 0 0 0 1 0
+30 29 139971 200 0 0 0 0
+200 0 100
+E
+chest large obsidian~
+&+w   This is a large chest made of obsidian.  A lock holds the lid tightly
+&+wsealed.&n
+~
+#140062
+ring~
+&+yring of &+rfire&n~
+&+yA wooden ring was dropped here.&n~
+~
+3 5 3 0 14 0 64 3 0 1 0
+35 3 3 26 0 0 0 0
+0 0 100 536870912 0 0 0
+E
+ring~
+&+wThis is a simple wooden ring with a sun symbol in the center.&n
+~
+#140063
+sword red~
+&+Ca &+Rred dragon &n&+Cslayer sword&n~
+&+ca &+rred bladed &+csword was left here.&n~
+~
+5 19 3 0 15 0 4194368 8193 1 57374 0
+5 4 8 3 0 0 0 0
+4 0 100 570425344 0 0 0
+E
+sword red~
+&+w   The sword is made from an unusual blade that has a dark red ting to it.&n
+~
+A
+23 -4
+A
+18 4
+#140064
+sword black~
+&+Ca &+Lblack dragon &n&+Cslayer sword&n~
+&+ca &+Lblack bladed &n&+csword was left here.&n~
+~
+5 19 3 0 15 0 4194368 8193 1 67166267 0
+5 4 8 3 0 0 0 0
+4 0 100 33554432 8192 0 0
+E
+sword black~
+&+wThe sword is made from an unusual blade that is jet black.&n
+~
+A
+23 -4
+A
+18 4

@@ -1,0 +1,1120 @@
+#252
+&+rPlane of Fire, &+RBr&+rass&n~
+139357 1 0 25 35 2
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 139000 0 1 100 0 0 0
+*     north exit from "The Mighty Gates Of The City Of Brass" to
+*     "Royal Way" - closed
+*
+D 0 139001 2 1 100 0 0 0
+*     south exit from "Royal Way" to
+*     "The Mighty Gates Of The City Of Brass" - closed
+*
+D 0 139004 0 1 100 0 0 0
+*     north exit from "Imix Avenue" to
+*     "The Royal Magi Guild" - closed
+*
+D 0 139032 2 1 100 0 0 0
+*     south exit from "The Royal Magi Guild" to
+*     "Imix Avenue" - closed
+*
+D 0 139004 2 1 100 0 0 0
+*     south exit from "Imix Avenue" to
+*     "Entrance to the Royal Efreeti Warriors Guild" - closed
+*
+D 0 139005 0 1 100 0 0 0
+*     north exit from "Entrance to the Royal Efreeti Warriors Guild" to
+*     "Imix Avenue" - closed
+*
+D 0 139006 2 0 100 0 0 0
+*     south exit from "Warriors Bar" to
+*     "The Royal Practice Room" - open
+*
+D 0 139007 0 0 100 0 0 0
+*     north exit from "The Royal Practice Room" to
+*     "Warriors Bar" - open
+*
+D 0 139012 3 1 100 0 0 0
+*     west exit from "Long Hallway" to
+*     "The Guild-Masters Quarters" - closed
+*
+D 0 139013 1 1 100 0 0 0
+*     east exit from "The Guild-Masters Quarters" to
+*     "Long Hallway" - closed
+*
+D 0 139013 0 1 100 0 0 0
+*     north exit from "The Guild-Masters Quarters" to
+*     "Guild Armory" - closed
+*
+D 0 139014 2 1 100 0 0 0
+*     south exit from "Guild Armory" to
+*     "The Guild-Masters Quarters" - closed
+*
+D 0 139016 2 1 100 0 0 0
+*     south exit from "Imix Avenue" to
+*     "The Entrance to the Shrine of Imix" - closed
+*
+D 0 139216 0 1 100 0 0 0
+*     north exit from "The Entrance to the Shrine of Imix" to
+*     "Imix Avenue" - closed
+*
+D 0 139018 2 1 100 0 0 0
+*     south exit from "Intersection of Imix Avenue and Merchants Street" to
+*     "South West Watch Tower" - closed
+*
+D 0 139019 0 1 100 0 0 0
+*     north exit from "South West Watch Tower" to
+*     "Intersection of Imix Avenue and Merchants Street" - closed
+*
+D 0 139018 3 1 100 0 0 0
+*     west exit from "Intersection of Imix Avenue and Merchants Street" to
+*     "The Royal Tax Office" - closed
+*
+D 0 139020 1 1 100 0 0 0
+*     east exit from "The Royal Tax Office" to
+*     "Intersection of Imix Avenue and Merchants Street" - closed
+*
+D 0 139021 1 1 100 0 0 0
+*     east exit from "Census Bureau" to
+*     "Merchants Street" - closed
+*
+D 0 139022 3 1 100 0 0 0
+*     west exit from "Merchants Street" to
+*     "Census Bureau" - closed
+*
+D 0 139035 0 1 100 0 0 0
+*     north exit from "Grand Stairway" to
+*     "The Great Magi Library" - closed
+*
+D 0 139036 2 1 100 0 0 0
+*     south exit from "The Great Magi Library" to
+*     "Grand Stairway" - closed
+*
+D 0 139036 1 0 100 0 0 0
+*     east exit from "The Great Magi Library" to
+*     "Magi Observation Tower" - open
+*
+D 0 139037 3 0 100 0 0 0
+*     west exit from "Magi Observation Tower" to
+*     "The Great Magi Library" - open
+*
+D 0 139040 2 1 100 0 0 0
+*     south exit from "Grand Magi's Laboratory" to
+*     "Grand Magi's Chamber" - closed
+*
+D 0 139041 0 1 100 0 0 0
+*     north exit from "Grand Magi's Chamber" to
+*     "Grand Magi's Laboratory" - closed
+*
+D 0 139047 3 1 100 0 0 0
+*     west exit from "Intersection of Merchants Street and the Road of Wisdom" to
+*     "House Anone" - closed
+*
+D 0 139052 1 1 100 0 0 0
+*     east exit from "House Anone" to
+*     "Intersection of Merchants Street and the Road of Wisdom" - closed
+*
+D 0 139048 3 1 100 0 0 0
+*     west exit from "Merchants Street" to
+*     "House Flamnari" - closed
+*
+D 0 139051 1 1 100 0 0 0
+*     east exit from "House Flamnari" to
+*     "Merchants Street" - closed
+*
+D 0 139049 3 1 100 0 0 0
+*     west exit from "Merchants Street" to
+*     "House Saranti" - closed
+*
+D 0 139050 1 1 100 0 0 0
+*     east exit from "House Saranti" to
+*     "Merchants Street" - closed
+*
+D 0 139053 1 1 100 0 0 0
+*     east exit from "House Tilama" to
+*     "Merchants Street" - closed
+*
+D 0 139056 3 1 100 0 0 0
+*     west exit from "Merchants Street" to
+*     "House Tilama" - closed
+*
+D 0 139054 1 1 100 0 0 0
+*     east exit from "House Onitalri" to
+*     "Merchants Street" - closed
+*
+D 0 139057 3 1 100 0 0 0
+*     west exit from "Merchants Street" to
+*     "House Onitalri" - closed
+*
+D 0 139055 1 1 100 0 0 0
+*     east exit from "House Wujalia" to
+*     "Intersection of the Way of Heroes and Merchants Street" - closed
+*
+D 0 139058 3 1 100 0 0 0
+*     west exit from "Intersection of the Way of Heroes and Merchants Street" to
+*     "House Wujalia" - closed
+*
+D 0 139059 2 1 100 0 0 0
+*     south exit from "North West Watch Tower" to
+*     "Intersection of Merchants Street and Street of Steale" - closed
+*
+D 0 139185 0 1 100 0 0 0
+*     north exit from "Intersection of Merchants Street and Street of Steale" to
+*     "North West Watch Tower" - closed
+*
+D 0 139082 3 1 100 0 0 0
+*     west exit from "Zoo Cage One" to
+*     "Cage Number Twelve" - closed
+*
+D 0 139093 1 1 100 0 0 0
+*     east exit from "Cage Number Twelve" to
+*     "Zoo Cage One" - closed
+*
+D 0 139083 3 1 100 0 0 0
+*     west exit from "Cage Number Two" to
+*     "Cage Number Nine" - closed
+*
+D 0 139090 1 1 100 0 0 0
+*     east exit from "Cage Number Nine" to
+*     "Cage Number Two" - closed
+*
+D 0 139084 1 1 100 0 0 0
+*     east exit from "Cage Number Three" to
+*     "Cage Number Four" - closed
+*
+D 0 139085 3 1 100 0 0 0
+*     west exit from "Cage Number Four" to
+*     "Cage Number Three" - closed
+*
+D 0 139086 1 1 100 0 0 0
+*     east exit from "Cage Number Five" to
+*     "Cage Number Six" - closed
+*
+D 0 139087 3 1 100 0 0 0
+*     west exit from "Cage Number Six" to
+*     "Cage Number Five" - closed
+*
+D 0 139088 3 1 100 0 0 0
+*     west exit from "Cage Number Seven" to
+*     "Cage Number Eight" - closed
+*
+D 0 139089 1 1 100 0 0 0
+*     east exit from "Cage Number Eight" to
+*     "Cage Number Seven" - closed
+*
+D 0 139090 3 1 100 0 0 0
+*     west exit from "Cage Number Nine" to
+*     "Cage Number Ten" - closed
+*
+D 0 139091 1 1 100 0 0 0
+*     east exit from "Cage Number Ten" to
+*     "Cage Number Nine" - closed
+*
+D 0 139092 1 1 100 0 0 0
+*     east exit from "Cage Number Eleven" to
+*     "Cage Number Twelve" - closed
+*
+D 0 139093 3 1 100 0 0 0
+*     west exit from "Cage Number Twelve" to
+*     "Cage Number Eleven" - closed
+*
+D 0 139132 2 2 100 0 0 0
+*     south exit from "North East Watch Tower" to
+*     "Intersection of Street of Steale and High Street" - closed/locked
+*
+D 0 139207 0 2 100 0 0 0
+*     north exit from "Intersection of Street of Steale and High Street" to
+*     "North East Watch Tower" - closed/locked
+*
+D 0 139140 0 2 100 0 0 0
+*     north exit from "The Gates of the Royal Palace of the Sultan" to
+*     "An Entryway Inside the Palace Gates" - closed/locked
+*
+D 0 139249 2 1 100 0 0 0
+*     south exit from "An Entryway Inside the Palace Gates" to
+*     "The Gates of the Royal Palace of the Sultan" - closed
+*
+D 0 139174 1 1 100 0 0 0
+*     east exit from "Outside the Smoking Hammer Shrine" to
+*     "Entryway of the Smoking Hammer Shrine" - closed
+*
+D 0 139175 3 1 100 0 0 0
+*     west exit from "Entryway of the Smoking Hammer Shrine" to
+*     "Outside the Smoking Hammer Shrine" - closed
+*
+D 0 139192 1 1 100 0 0 0
+*     east exit from "Brass Harbor Way" to
+*     "Brass Harbor Shop" - closed
+*
+D 0 139199 3 1 100 0 0 0
+*     west exit from "Brass Harbor Shop" to
+*     "Brass Harbor Way" - closed
+*
+D 0 139192 3 1 100 0 0 0
+*     west exit from "Brass Harbor Way" to
+*     "Brass Harbor Customs Office" - closed
+*
+D 0 139200 1 1 100 0 0 0
+*     east exit from "Brass Harbor Customs Office" to
+*     "Brass Harbor Way" - closed
+*
+D 0 139283 0 2 100 0 0 0
+*     north exit from "Intersection in the Hallway" to
+*     "The Guards Room" - closed/locked
+*
+D 0 139290 2 1 100 0 0 0
+*     south exit from "The Guards Room" to
+*     "Intersection in the Hallway" - closed
+*
+D 0 139284 1 2 100 0 0 0
+*     east exit from "A Long Hallway" to
+*     "A Grand Foyer" - closed/locked
+*
+D 0 139285 3 1 100 0 0 0
+*     west exit from "A Grand Foyer" to
+*     "A Long Hallway" - closed
+*
+D 0 139285 1 1 100 0 0 0
+*     east exit from "A Grand Foyer" to
+*     "Artoon's Room" - closed
+*
+D 0 139286 3 1 100 0 0 0
+*     west exit from "Artoon's Room" to
+*     "A Grand Foyer" - closed
+*
+D 0 139290 0 1 100 0 0 0
+*     north exit from "The Guards Room" to
+*     "The Amir's Outer Chamber" - closed
+*
+D 0 139291 2 1 100 0 0 0
+*     south exit from "The Amir's Outer Chamber" to
+*     "The Guards Room" - closed
+*
+D 0 139291 1 2 100 0 0 0
+*     east exit from "The Amir's Outer Chamber" to
+*     "Ornon's Main Chamber" - closed/locked
+*
+D 0 139292 3 2 100 0 0 0
+*     west exit from "Ornon's Main Chamber" to
+*     "The Amir's Outer Chamber" - closed/locked
+*
+D 0 139292 1 1 100 0 0 0
+*     east exit from "Ornon's Main Chamber" to
+*     "Amir's Spiritual Meditation Room" - closed
+*
+D 0 139293 3 1 100 0 0 0
+*     west exit from "Amir's Spiritual Meditation Room" to
+*     "Ornon's Main Chamber" - closed
+*
+D 0 139293 0 1 100 0 0 0
+*     north exit from "Amir's Spiritual Meditation Room" to
+*     "West Hallway" - closed
+*
+D 0 139294 2 1 100 0 0 0
+*     south exit from "West Hallway" to
+*     "Amir's Spiritual Meditation Room" - closed
+*
+D 0 139297 2 1 100 0 0 0
+*     south exit from "The Tower of Magic" to
+*     "Central Chamber of the Tower of Magic" - closed
+*
+D 0 139298 0 1 100 0 0 0
+*     north exit from "Central Chamber of the Tower of Magic" to
+*     "The Tower of Magic" - closed
+*
+D 0 139302 0 1 100 0 0 0
+*     north exit from "A Grand Hallway" to
+*     "Royal Palace Guard Room" - closed
+*
+D 0 139307 2 1 100 0 0 0
+*     south exit from "Royal Palace Guard Room" to
+*     "A Grand Hallway" - closed
+*
+D 0 139303 0 1 100 0 0 0
+*     north exit from "A Grand Hallway" to
+*     "A Lavish Dinning Room" - closed
+*
+D 0 139308 2 1 100 0 0 0
+*     south exit from "A Lavish Dinning Room" to
+*     "A Grand Hallway" - closed
+*
+D 0 139308 0 0 100 0 0 0
+*     north exit from "A Lavish Dinning Room" to
+*     "The Royal Kitchen" - open
+*
+D 0 139309 2 0 100 0 0 0
+*     south exit from "The Royal Kitchen" to
+*     "A Lavish Dinning Room" - open
+*
+D 0 139311 0 2 100 0 0 0
+*     north exit from "Intersection in the Grand Hallway" to
+*     "A Grand Archway to the Palace's Throne Room" - closed/locked
+*
+D 0 139357 2 1 100 0 0 0
+*     south exit from "A Grand Archway to the Palace's Throne Room" to
+*     "Intersection in the Grand Hallway" - closed
+*
+D 0 139312 0 2 100 0 0 0
+*     north exit from "Throne Room of the Sultan" to
+*     "Treasure Room of the Efreet" - closed/locked
+*
+D 0 139313 2 2 100 0 0 0
+*     south exit from "Treasure Room of the Efreet" to
+*     "Throne Room of the Sultan" - closed/locked
+*
+D 0 139312 2 1 100 0 0 0
+*     south exit from "Throne Room of the Sultan" to
+*     "A Grand Archway to the Palace's Throne Room" - closed
+*
+D 0 139357 0 2 100 0 0 0
+*     north exit from "A Grand Archway to the Palace's Throne Room" to
+*     "Throne Room of the Sultan" - closed/locked
+*
+D 0 139314 0 1 100 0 0 0
+*     north exit from "The Grand Hallway" to
+*     "Royal Palace Guard Room" - closed
+*
+D 0 139315 2 1 100 0 0 0
+*     south exit from "Royal Palace Guard Room" to
+*     "The Grand Hallway" - closed
+*
+D 0 139317 1 1 100 0 0 0
+*     east exit from "A Grand Library" to
+*     "The Lower Stairway Landing" - closed
+*
+D 0 139326 3 1 100 0 0 0
+*     west exit from "The Lower Stairway Landing" to
+*     "A Grand Library" - closed
+*
+D 0 139317 2 1 100 0 0 0
+*     south exit from "A Grand Library" to
+*     "The East Hallway" - closed
+*
+D 0 139318 0 1 100 0 0 0
+*     north exit from "The East Hallway" to
+*     "A Grand Library" - closed
+*
+D 0 139329 1 1 100 0 0 0
+*     east exit from "The Main Meditation Room" to
+*     "The High Priests Chamber" - closed
+*
+D 0 139330 3 1 100 0 0 0
+*     west exit from "The High Priests Chamber" to
+*     "The Main Meditation Room" - closed
+*
+D 0 139333 2 1 100 0 0 0
+*     south exit from "A Long Hallway" to
+*     "A Warriors Lounge" - closed
+*
+D 0 139334 0 1 100 0 0 0
+*     north exit from "A Warriors Lounge" to
+*     "A Long Hallway" - closed
+*
+D 0 139334 2 2 100 0 0 0
+*     south exit from "A Warriors Lounge" to
+*     "An Armory" - closed/locked
+*
+D 0 139335 0 1 100 0 0 0
+*     north exit from "An Armory" to
+*     "A Warriors Lounge" - closed
+*
+D 0 139338 3 2 100 0 0 0
+*     west exit from "An Intersection" to
+*     "The Slave Quarters" - closed/locked
+*
+D 0 139339 1 1 100 0 0 0
+*     east exit from "The Slave Quarters" to
+*     "An Intersection" - closed
+*
+D 0 139339 2 2 100 0 0 0
+*     south exit from "The Slave Quarters" to
+*     "The Slave Quarters" - closed/locked
+*
+D 0 139342 0 1 100 0 0 0
+*     north exit from "The Slave Quarters" to
+*     "The Slave Quarters" - closed
+*
+D 0 139339 3 2 100 0 0 0
+*     west exit from "The Slave Quarters" to
+*     "A Prison" - closed/locked
+*
+D 0 139340 1 1 100 0 0 0
+*     east exit from "A Prison" to
+*     "The Slave Quarters" - closed
+*
+D 0 139350 1 1 100 0 0 0
+*     east exit from "A Hallway in the Palace Barracks" to
+*     "The Chief of the Guard's Room" - closed
+*
+D 0 139351 3 1 100 0 0 0
+*     west exit from "The Chief of the Guard's Room" to
+*     "A Hallway in the Palace Barracks" - closed
+*
+*
+O 0 139126 1 139027 100 0 0 0      * A MASSIVE FURNACE
+O 0 48012 1 139063 100 0 0 0       * (object type not in this .obj file)
+O 0 139033 1 139241 100 0 0 0      * a quartz crystal
+O 0 139030 1 139246 100 0 0 0      * a Flame
+O 0 139132 1 139252 100 0 0 0      * a fountain of flames
+O 0 139020 1 139313 100 0 0 0      * a pile of platinum coins
+O 0 60 1 139313 100 0 0 0          * (object type not in this .obj file)
+O 0 139019 1 139335 60 0 0 0       * a shield of dancing flames
+O 0 139134 1 139335 100 0 0 0      * chief of the guard's armoire
+P 1 67244 1 139134 100 0 0 0       *   (object type not in this .obj file)
+O 0 139090 1 139335 60 0 0 0       * a ring of fire protection
+O 0 139039 1 139335 60 0 0 0       * a fiery cloak
+O 0 139049 1 139335 60 0 0 0       * a pair of fiery boots
+*
+M 0 25400 2 139000 100 0 0 0       * (mob type not in this .mob file)
+M 0 25400 2 139000 100 0 0 0       * (mob type not in this .mob file)
+M 0 139073 6 139001 100 0 0 0      * a medium fire elemental
+M 0 139090 47 139001 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139002 100 0 0 0     * a guard member of the Illuminated
+M 0 139054 37 139002 100 0 0 0     * a guard member of the Illuminated
+M 0 139062 2 139002 100 0 0 0      * a stealthy duergar
+E 1 139060 2 16 100 0 0 0          *   a kris fanged dagger
+E 1 139024 6 17 100 0 0 0          *   a flaming dagger
+M 0 139105 45 139003 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139004 100 0 0 0     * a guard member of the Illuminated
+M 0 139054 37 139004 100 0 0 0     * a guard member of the Illuminated
+M 0 139111 1 139005 100 0 0 0      * the warrior guild guardian
+M 0 139112 1 139006 100 0 0 0      * altona the bartend
+M 0 139113 16 139006 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139006 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139007 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139007 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139007 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139008 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139008 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139009 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139010 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139010 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139010 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139010 100 0 0 0     * an efreeti warrior
+M 0 139114 1 139013 100 0 0 0      * the warrior master of the efreeti
+E 1 139015 1 3 65 0 0 0            *   a collar of dark flames
+E 1 139001 2 16 100 0 0 0          *   a flaming saber
+E 1 139001 2 17 100 0 0 0          *   a flaming saber
+M 0 139113 16 139013 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139013 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139013 100 0 0 0     * an efreeti warrior
+M 0 139113 16 139013 100 0 0 0     * an efreeti warrior
+M 0 139105 45 139015 100 0 0 0     * an efreeti commoner
+M 0 139066 2 139015 100 0 0 0      * a demon ambassador
+E 1 139052 1 5 100 0 0 0           *   a chest plate with hellish markings
+M 0 139054 37 139016 100 0 0 0     * a guard member of the Illuminated
+M 0 139074 5 139016 100 0 0 0      * a large fire elemental
+M 0 139105 45 139018 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139018 100 0 0 0     * a guard member of the Illuminated
+M 0 139119 1 139020 100 0 0 0      * the efreeti tax collector
+M 0 139090 47 139020 100 0 0 0     * an efreeti commoner
+M 0 139120 1 139021 100 0 0 0      * efreeti census taker
+M 0 139090 47 139022 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139022 100 0 0 0     * a guard member of the Illuminated
+M 0 139061 2 139022 100 0 0 0      * an illithid slaver
+E 1 139061 1 1 100 0 0 0           *   a finger band made from an illithids tentacle
+M 0 139121 1 139024 100 0 0 0      * an efreeti armorer
+G 1 139124 1 0 50 0 0 0            *    a glass ring filled with the essence of a smoke mephit
+G 1 139125 1 0 80 0 0 0            *    quartz crystal leg plates
+G 1 139123 1 0 70 0 0 0            *    a suit of fire salamander scalemail
+G 1 139151 1 0 60 0 0 0            *    a magma shield reinforced with mithril
+G 1 139152 1 0 40 0 0 0            *    some gauntlets of cooled magma
+G 1 139153 1 0 80 0 0 0            *    a fire hardened ring of brass
+M 0 139074 5 139024 100 0 0 0      * a large fire elemental
+M 0 139122 1 139025 100 0 0 0      * an efreeti weapon-smith
+G 1 139120 2 0 70 0 0 0            *    a flaming two-handed hammer
+G 1 139121 1 0 60 0 0 0            *    a flaming demon claw club
+G 1 139003 1 0 60 0 0 0            *    a holy flaming mace
+G 1 139122 1 0 65 0 0 0            *    a two-handed mithril sword with a spiked pommel
+G 1 139154 1 0 80 0 0 0            *    a long thin flaming rapier
+M 0 139078 1 139026 100 0 0 0      * Oto Glittermaker
+G 1 139148 1 0 80 0 0 0            *    a tin toy box
+G 1 139155 1 0 40 0 0 0            *    a copper-plated mask
+G 1 139156 1 0 70 0 0 0            *    a fire hardened copper bracer
+G 1 139157 1 0 80 0 0 0            *    a multiple hoop earring made of copper
+G 1 139158 1 0 60 0 0 0            *    a pair of tin framed glasses with an emerald lens.
+M 0 139054 37 139027 100 0 0 0     * a guard member of the Illuminated
+M 0 139054 37 139027 100 0 0 0     * a guard member of the Illuminated
+M 0 139090 47 139027 100 0 0 0     * an efreeti commoner
+M 0 139079 1 139028 100 0 0 0      * Hutzparoon the mason
+G 1 139161 1 0 60 0 0 0            *    a stone collar studded with jewels
+G 1 139162 1 0 70 0 0 0            *    a silver stone amulet
+G 1 139163 1 0 40 0 0 0            *    some heavily-spiked stone-soled boots
+G 1 139164 1 0 100 0 0 0           *    a stone mug with "City of Brass" carved in the side
+M 0 139076 1 139029 100 0 0 0      * Hellspiniger the unjust
+G 1 139118 1 0 80 0 0 0            *    a saddle with flaming medal decore
+G 1 139119 1 0 70 0 0 0            *    bronze-made barding with spikes
+G 1 139147 1 0 60 0 0 0            *    a brass tail ring with two dangling rubies
+G 1 139159 1 0 60 0 0 0            *    a plush saddle embroided with lightning bolts
+G 1 139160 1 0 50 0 0 0            *    a black ring etched with runes
+M 0 139077 1 139030 100 0 0 0      * Fingers
+G 1 97 1 0 70 0 0 0                *    (object type not in this .obj file)
+G 1 96 1 0 70 0 0 0                *    (object type not in this .obj file)
+G 1 77 1 0 70 0 0 0                *    (object type not in this .obj file)
+G 1 73 1 0 70 0 0 0                *    (object type not in this .obj file)
+G 1 54 1 0 70 0 0 0                *    (object type not in this .obj file)
+G 1 92046 1 0 70 0 0 0             *    (object type not in this .obj file)
+G 1 44504 1 0 70 0 0 0             *    (object type not in this .obj file)
+M 0 139115 1 139032 100 0 0 0      * the magi guild guardian
+M 0 139116 12 139033 100 0 0 0     * efreeti magi
+E 1 139007 17 18 100 0 0 0         *   a wand of flames
+M 0 139116 12 139033 100 0 0 0     * efreeti magi
+E 1 139007 17 18 100 0 0 0         *   a wand of flames
+M 0 139116 12 139034 100 0 0 0     * efreeti magi
+M 0 139116 12 139034 100 0 0 0     * efreeti magi
+M 0 139117 7 139034 100 0 0 0      * an efreeti acolyte conjurer
+M 0 139116 12 139036 100 0 0 0     * efreeti magi
+E 1 139007 17 18 100 0 0 0         *   a wand of flames
+M 0 139116 12 139036 100 0 0 0     * efreeti magi
+M 0 139116 12 139037 100 0 0 0     * efreeti magi
+M 0 139116 12 139037 100 0 0 0     * efreeti magi
+M 0 139117 7 139038 100 0 0 0      * an efreeti acolyte conjurer
+M 0 139117 7 139038 100 0 0 0      * an efreeti acolyte conjurer
+M 0 139117 7 139039 100 0 0 0      * an efreeti acolyte conjurer
+M 0 139117 7 139039 100 0 0 0      * an efreeti acolyte conjurer
+M 0 139117 7 139040 100 0 0 0      * an efreeti acolyte conjurer
+M 0 139117 7 139040 100 0 0 0      * an efreeti acolyte conjurer
+M 0 139116 12 139040 100 0 0 0     * efreeti magi
+E 1 139007 17 18 100 0 0 0         *   a wand of flames
+M 0 139116 12 139040 100 0 0 0     * efreeti magi
+E 1 139007 17 18 100 0 0 0         *   a wand of flames
+M 0 139116 12 139041 100 0 0 0     * efreeti magi
+E 1 139007 17 18 100 0 0 0         *   a wand of flames
+M 0 139116 12 139041 100 0 0 0     * efreeti magi
+E 1 139007 17 18 100 0 0 0         *   a wand of flames
+M 0 139118 1 139041 100 0 0 0      * Caltoon the efreeti magi master
+E 1 139010 1 14 65 0 0 0           *   a bracelet of blue flames
+G 1 139011 1 0 100 0 0 0           *    the flaming head of Caltoon
+M 0 139090 47 139042 100 0 0 0     * an efreeti commoner
+M 0 139059 2 139042 100 0 0 0      * a mountain dwarf priest
+E 1 139047 1 19 100 0 0 0          *   stone glasses with a emerald and ruby lens
+M 0 139105 45 139043 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139044 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139044 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139044 100 0 0 0     * a guard member of the Illuminated
+M 0 139090 47 139045 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139046 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139047 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139047 100 0 0 0     * a guard member of the Illuminated
+M 0 139069 2 139048 100 0 0 0      * a djinni
+E 1 139046 2 21 100 0 0 0          *   a large polished pearl stud
+M 0 139105 45 139049 100 0 0 0     * an efreeti commoner
+M 0 139100 13 139050 100 0 0 0     * an efreeti noble
+M 0 139100 13 139051 100 0 0 0     * an efreeti noble
+M 0 139100 13 139052 100 0 0 0     * an efreeti noble
+M 0 139100 13 139053 100 0 0 0     * an efreeti noble
+M 0 139100 13 139053 100 0 0 0     * an efreeti noble
+M 0 139100 13 139054 100 0 0 0     * an efreeti noble
+M 0 139100 13 139054 100 0 0 0     * an efreeti noble
+M 0 139100 13 139055 100 0 0 0     * an efreeti noble
+M 0 139105 45 139056 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139056 100 0 0 0     * a guard member of the Illuminated
+M 0 139071 2 139056 100 0 0 0      * a beautiful succubus
+E 1 139068 6 16 100 0 0 0          *   a brass longsword
+E 1 139068 6 17 100 0 0 0          *   a brass longsword
+E 1 139068 6 25 100 0 0 0          *   a brass longsword
+E 1 139045 2 26 100 0 0 0          *   an ethereal blade scimitar
+M 0 139075 10 139056 100 0 0 0     * an efreeti noble
+M 0 139105 45 139057 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139058 100 0 0 0     * a guard member of the Illuminated
+M 0 139100 13 139059 100 0 0 0     * an efreeti noble
+M 0 139100 13 139059 100 0 0 0     * an efreeti noble
+M 0 139090 47 139061 100 0 0 0     * an efreeti commoner
+M 0 139075 10 139061 100 0 0 0     * an efreeti noble
+M 0 139090 47 139062 100 0 0 0     * an efreeti commoner
+M 0 139075 10 139063 100 0 0 0     * an efreeti noble
+M 0 139075 10 139063 100 0 0 0     * an efreeti noble
+M 0 139090 47 139064 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139064 100 0 0 0     * an efreeti commoner
+M 0 139056 2 139064 100 0 0 0      * a drow visitor
+G 1 139055 3 0 100 0 0 0           *    a frosty icicle wand
+M 0 139073 6 139064 100 0 0 0      * a medium fire elemental
+M 0 139105 45 139065 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139066 100 0 0 0     * an efreeti commoner
+M 0 139055 2 139066 100 0 0 0      * a titan disciple
+E 1 139067 1 16 100 0 0 0          *   a massive titan hammer
+M 0 139090 47 139067 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139068 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139068 100 0 0 0     * a guard member of the Illuminated
+M 0 139090 47 139069 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139070 100 0 0 0     * an efreeti commoner
+M 0 139057 2 139070 100 0 0 0      * a grey elf visitor
+E 1 139065 1 5 100 0 0 0           *   a suit of mithril elvish chainmail
+M 0 139090 47 139071 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139071 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139071 100 0 0 0     * a guard member of the Illuminated
+M 0 139054 37 139071 100 0 0 0     * a guard member of the Illuminated
+M 0 139105 45 139072 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139073 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139074 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139074 100 0 0 0     * a guard member of the Illuminated
+M 0 139054 37 139075 100 0 0 0     * a guard member of the Illuminated
+M 0 139105 45 139076 100 0 0 0     * an efreeti commoner
+M 0 139067 2 139076 100 0 0 0      * a githzerai slave
+E 1 139050 1 12 100 0 0 0          *   a long thin green cloak
+M 0 139105 45 139077 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139077 100 0 0 0     * a guard member of the Illuminated
+M 0 139129 1 139078 100 0 0 0      * an efreeti hotel receptionist
+M 0 139090 47 139079 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139080 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139080 100 0 0 0     * a guard member of the Illuminated
+M 0 139068 2 139080 100 0 0 0      * a titan resident
+E 1 139048 2 16 100 0 0 0          *   a titan's whip
+M 0 139130 1 139082 100 0 0 0      * a green basilisk
+M 0 139105 45 139082 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139083 100 0 0 0     * an efreeti commoner
+M 0 139145 1 139085 100 0 0 0      * an elder hydra
+G 1 139127 1 0 80 0 0 0            *    a pile of elder hydra scales
+M 0 139088 1 139087 100 0 0 0      * an angry drider
+M 0 139005 1 139089 100 0 0 0      * a HUGE beholder
+E 1 139008 1 19 70 0 0 0           *   a dead eyestalk
+M 0 139144 1 139091 100 0 0 0      * an ancient chimaera
+G 1 139128 1 0 100 0 0 0           *    a drop of chimaera blood
+M 0 139090 47 139094 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139094 100 0 0 0     * an efreeti commoner
+M 0 139128 1 139095 100 0 0 0      * Talosoa the efreeti banker
+M 0 139090 47 139095 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139096 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139097 100 0 0 0     * a guard member of the Illuminated
+M 0 139064 2 139097 100 0 0 0      * a genasi firesoul
+E 1 139054 2 5 100 0 0 0           *   grey robes with two vertical red stripes
+M 0 139105 45 139098 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139099 100 0 0 0     * an efreeti commoner
+M 0 139074 5 139099 100 0 0 0      * a large fire elemental
+M 0 139054 37 139100 100 0 0 0     * a guard member of the Illuminated
+M 0 139105 45 139101 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139102 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139103 100 0 0 0     * an efreeti commoner
+M 0 139062 2 139103 100 0 0 0      * a stealthy duergar
+E 1 139060 2 16 100 0 0 0          *   a kris fanged dagger
+E 1 139024 6 17 100 0 0 0          *   a flaming dagger
+M 0 139105 45 139104 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139105 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139106 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139107 100 0 0 0     * an efreeti commoner
+M 0 139063 2 139107 100 0 0 0      * a hound archon
+E 1 139058 1 16 100 0 0 0          *   a mithril claymore with a golden hilt
+M 0 139090 47 139108 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139109 100 0 0 0     * an efreeti commoner
+M 0 139069 2 139110 100 0 0 0      * a djinni
+E 1 139046 2 21 100 0 0 0          *   a large polished pearl stud
+M 0 139105 45 139111 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139112 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139114 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139114 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139114 100 0 0 0     * a guard member of the Illuminated
+M 0 139105 45 139115 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139115 100 0 0 0     * a guard member of the Illuminated
+M 0 139065 2 139115 100 0 0 0      * a genasi earthsoul
+E 1 139056 1 18 100 0 0 0          *   a leather spellbook with swirling runes
+M 0 139105 45 139116 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139117 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139118 100 0 0 0     * an efreeti commoner
+M 0 139073 6 139118 100 0 0 0      * a medium fire elemental
+M 0 139001 1 139119 100 0 0 0      * an iron golem
+M 0 139002 4 139120 100 0 0 0      * an efreeti templar
+M 0 139002 4 139120 100 0 0 0      * an efreeti templar
+M 0 139003 5 139121 100 0 0 0      * an efreeti acolyte
+E 1 139006 5 3 100 0 0 0           *   some prayer beads of Kossuth
+M 0 139007 5 139121 100 0 0 0      * an efreeti acolyte
+M 0 139003 5 139122 100 0 0 0      * an efreeti acolyte
+E 1 139006 5 3 100 0 0 0           *   some prayer beads of Kossuth
+M 0 139007 5 139122 100 0 0 0      * an efreeti acolyte
+M 0 139003 5 139123 100 0 0 0      * an efreeti acolyte
+E 1 139006 5 3 100 0 0 0           *   some prayer beads of Kossuth
+M 0 139007 5 139123 100 0 0 0      * an efreeti acolyte
+M 0 139003 5 139124 100 0 0 0      * an efreeti acolyte
+E 1 139006 5 3 100 0 0 0           *   some prayer beads of Kossuth
+M 0 139003 5 139124 100 0 0 0      * an efreeti acolyte
+E 1 139006 5 3 100 0 0 0           *   some prayer beads of Kossuth
+M 0 139007 5 139124 100 0 0 0      * an efreeti acolyte
+M 0 139007 5 139124 100 0 0 0      * an efreeti acolyte
+M 0 139004 1 139125 100 0 0 0      * Latisia the supreme efreeti clerist
+E 1 139133 1 8 80 0 0 0            *   some boots of yellow flames
+F 1 139008 2 139125 100 0 0 0      * an efreeti high priestess guard (following)
+F 1 139008 2 139125 100 0 0 0      * an efreeti high priestess guard (following)
+M 0 139002 4 139125 100 0 0 0      * an efreeti templar
+M 0 139002 4 139125 100 0 0 0      * an efreeti templar
+M 0 139090 47 139129 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139130 100 0 0 0     * an efreeti commoner
+M 0 139073 6 139130 100 0 0 0      * a medium fire elemental
+M 0 139090 47 139131 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139131 100 0 0 0     * an efreeti commoner
+M 0 139100 13 139132 100 0 0 0     * an efreeti noble
+M 0 139100 13 139132 100 0 0 0     * an efreeti noble
+M 0 139100 13 139132 100 0 0 0     * an efreeti noble
+M 0 139105 45 139133 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139134 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139135 100 0 0 0     * an efreeti commoner
+M 0 139058 2 139135 100 0 0 0      * an orc slave
+E 1 139063 1 14 100 0 0 0          *   a slavery marked wrist guard
+M 0 139090 47 139136 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139136 100 0 0 0     * a guard member of the Illuminated
+M 0 139105 45 139137 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139138 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139139 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139139 100 0 0 0     * an efreeti commoner
+M 0 139072 2 139140 100 0 0 0      * an Unquenchable
+M 0 139072 2 139140 100 0 0 0      * an Unquenchable
+M 0 43540 5 139142 100 0 0 0       * (mob type not in this .mob file)
+M 0 94740 5 139143 100 0 0 0       * (mob type not in this .mob file)
+M 0 94740 5 139146 100 0 0 0       * (mob type not in this .mob file)
+M 0 43540 5 139148 100 0 0 0       * (mob type not in this .mob file)
+M 0 43540 5 139154 100 0 0 0       * (mob type not in this .mob file)
+M 0 94740 5 139158 100 0 0 0       * (mob type not in this .mob file)
+M 0 43540 5 139164 100 0 0 0       * (mob type not in this .mob file)
+M 0 139090 47 139165 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139171 100 0 0 0     * an efreeti commoner
+M 0 139059 2 139171 100 0 0 0      * a mountain dwarf priest
+M 0 139074 5 139173 100 0 0 0      * a large fire elemental
+M 0 139105 45 139174 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139174 100 0 0 0     * a guard member of the Illuminated
+M 0 139042 1 139175 100 0 0 0      * a Phoenix
+M 0 139043 4 139175 100 0 0 0      * an efreeti commoner
+M 0 139043 4 139176 100 0 0 0      * an efreeti commoner
+M 0 139044 1 139176 100 0 0 0      * a flaming Azer
+M 0 139041 1 139177 100 0 0 0      * an Efreet shopkeeper
+G 1 139029 1 0 70 0 0 0            *    a flaming mace
+G 1 139032 2 0 70 0 0 0            *    a flaming two-handed sword
+G 1 139120 2 0 70 0 0 0            *    a flaming two-handed hammer
+M 0 139038 1 139178 100 0 0 0      * a fire giant priest
+G 1 139028 1 0 100 0 0 0           *    a golden Surtr coin
+M 0 139039 2 139178 100 0 0 0      * a fire giant
+E 1 139027 4 16 100 0 0 0          *   a huge battle hammer
+E 1 139027 4 17 100 0 0 0          *   a huge battle hammer
+F 1 139039 2 139178 100 0 0 0      * a fire giant (following)
+E 1 139027 4 16 100 0 0 0          *   a huge battle hammer
+E 1 139027 4 17 100 0 0 0          *   a huge battle hammer
+M 0 139054 37 139179 100 0 0 0     * a guard member of the Illuminated
+M 0 139068 2 139179 100 0 0 0      * a titan resident
+E 1 139048 2 16 100 0 0 0          *   a titan's whip
+M 0 139082 1 139180 100 0 0 0      * efreeti alchemist
+G 1 139106 1 0 90 0 0 0            *    a metal flask marked "fire ward"
+G 1 139107 1 0 75 0 0 0            *    a metal flask marked "create sound"
+G 1 139108 1 0 65 0 0 0            *    a metal flask marked "molecular control"
+G 1 139109 1 0 60 0 0 0            *    a metal flask marked "pass without trace"
+G 1 139111 1 0 80 0 0 0            *    a metal flask marked "airy water"
+G 1 139114 1 0 60 0 0 0            *    a metal flask marked "wandering woods"
+G 1 139117 1 0 5 0 0 0             *    a metal flask marked "blur"
+G 1 139110 1 0 10 0 0 0            *    a metal flask marked "word of recall"
+G 1 139112 1 0 15 0 0 0            *    a metal flask marked "reduce"
+G 1 139115 1 0 1 0 0 0             *    a metal flask marked "sneaky ways"
+G 1 139104 1 0 40 0 0 0            *    a metal flask marked "full heal"
+G 1 139103 1 0 12 0 0 0            *    a metal flask marked "battle ecstasy"
+G 1 139113 1 0 65 0 0 0            *    a metal flask marked "lifelust"
+G 1 139105 1 0 50 0 0 0            *    a metal flask marked "teleport"
+G 1 139116 1 0 75 0 0 0            *    a metal flask marked "heal"
+M 0 139090 47 139181 100 0 0 0     * an efreeti commoner
+M 0 139065 2 139181 100 0 0 0      * a genasi earthsoul
+M 0 139083 1 139181 100 0 0 0      * Herl the ranger lord
+M 0 139126 1 139182 100 0 0 0      * Tila Banto
+G 1 139102 999 0 100 0 0 0         *    spicy and salty dragon roast beef
+G 1 1240 999 0 100 0 0 0           *    (object type not in this .obj file)
+G 1 132509 999 0 100 0 0 0         *    (object type not in this .obj file)
+G 1 55150 999 0 100 0 0 0          *    (object type not in this .obj file)
+G 1 14030 999 0 100 0 0 0          *    (object type not in this .obj file)
+G 1 67359 999 0 100 0 0 0          *    (object type not in this .obj file)
+M 0 139123 1 139183 100 0 0 0      * Saladeem the efreeti clothier
+G 1 139096 1 0 60 0 0 0            *    a suit of copper dragonskin armor
+G 1 139097 1 0 60 0 0 0            *    a suit of blue dragonskin armor
+G 1 139100 1 0 60 0 0 0            *    a devil-hide bracer with strange markings
+G 1 139101 1 0 80 0 0 0            *    a leather purse made of purple worms larvae
+G 1 139099 1 0 40 0 0 0            *    a ring made from faerie-skin
+G 1 139098 1 0 40 0 0 0            *    a suit of white dragonskin armor
+M 0 139090 47 139184 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139185 100 0 0 0     * an efreeti commoner
+M 0 139090 47 139186 100 0 0 0     * an efreeti commoner
+M 0 139067 2 139186 100 0 0 0      * a githzerai slave
+E 1 139051 1 8 100 0 0 0           *   a pair of bone sandals
+M 0 139054 37 139187 100 0 0 0     * a guard member of the Illuminated
+M 0 139105 45 139188 100 0 0 0     * an efreeti commoner
+M 0 139073 6 139188 100 0 0 0      * a medium fire elemental
+M 0 139054 37 139189 100 0 0 0     * a guard member of the Illuminated
+M 0 139064 2 139189 100 0 0 0      * a genasi firesoul
+E 1 139054 2 5 100 0 0 0           *   grey robes with two vertical red stripes
+M 0 139090 47 139190 100 0 0 0     * an efreeti commoner
+M 0 139036 1 139192 100 0 0 0      * a dockmaster
+E 1 139024 6 16 100 0 0 0          *   a flaming dagger
+E 1 139024 6 17 100 0 0 0          *   a flaming dagger
+E 1 139025 1 18 100 0 0 0          *   the docks manifest
+E 1 139026 1 18 100 0 0 0          *   a flaming quill
+G 1 139024 6 0 100 0 0 0           *    a flaming dagger
+G 1 139024 6 0 100 0 0 0           *    a flaming dagger
+M 0 139054 37 139192 100 0 0 0     * a guard member of the Illuminated
+M 0 139054 37 139192 100 0 0 0     * a guard member of the Illuminated
+M 0 139035 4 139193 100 0 0 0      * an earth elemental dock hand
+M 0 139035 4 139193 100 0 0 0      * an earth elemental dock hand
+M 0 139035 4 139194 100 0 0 0      * an earth elemental dock hand
+M 0 139035 4 139194 100 0 0 0      * an earth elemental dock hand
+M 0 139087 1 139200 100 0 0 0      * an efreeti customs officer
+M 0 139090 47 139201 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139202 100 0 0 0     * a guard member of the Illuminated
+M 0 139061 2 139202 100 0 0 0      * an illithid slaver
+G 1 139062 1 0 100 0 0 0           *    the jewel of a githyanki
+M 0 139054 37 139203 100 0 0 0     * a guard member of the Illuminated
+M 0 139063 2 139204 100 0 0 0      * a hound archon
+E 1 139057 1 14 100 0 0 0          *   an intricately carved steel bracelet
+M 0 139054 37 139205 100 0 0 0     * a guard member of the Illuminated
+M 0 139090 47 139206 100 0 0 0     * an efreeti commoner
+M 0 139006 2 139207 100 0 0 0      * An efreeti watch tower guard
+G 1 139014 1 0 100 0 0 0           *    a blazing key
+M 0 139006 2 139207 100 0 0 0      * An efreeti watch tower guard
+M 0 139057 2 139207 100 0 0 0      * a grey elf visitor
+E 1 139066 1 16 100 0 0 0          *   an elven-made mithril longsword
+M 0 139105 45 139208 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139209 100 0 0 0     * a guard member of the Illuminated
+M 0 139058 2 139209 100 0 0 0      * an orc slave
+G 1 139064 1 0 100 0 0 0           *    a large sapphire gem
+M 0 139084 1 139209 100 0 0 0      * Filippie the Satyr
+G 1 139085 1 0 70 0 0 0            *    a brass lyre covered in red flames
+G 1 139086 1 0 70 0 0 0            *    a musical horn made from a ogre-magi horn
+G 1 139150 1 0 50 0 0 0            *    a mandolin of Azer bone
+G 1 139168 1 0 60 0 0 0            *    a drum made from a petrified gelatinous cube
+G 1 139169 1 0 80 0 0 0            *    a beautiful succubus harp
+M 0 139054 37 139210 100 0 0 0     * a guard member of the Illuminated
+M 0 139090 47 139211 100 0 0 0     * an efreeti commoner
+M 0 139125 1 139212 100 0 0 0      * Groyana
+G 1 139078 1 0 80 0 0 0            *    an opaque opal
+G 1 139080 1 0 80 0 0 0            *    an amethyst with a single flaw
+G 1 66048 1 0 90 0 0 0             *    (object type not in this .obj file)
+G 1 66045 1 0 90 0 0 0             *    (object type not in this .obj file)
+G 1 58331 1 0 90 0 0 0             *    (object type not in this .obj file)
+M 0 139086 1 139213 100 0 0 0      * Ether
+G 1 139073 1 0 60 0 0 0            *    a deva feather on a copper chain
+G 1 139074 1 0 80 0 0 0            *    a ruby stud earring
+G 1 139071 1 0 80 0 0 0            *    an emerald studded earring
+G 1 139072 1 0 80 0 0 0            *    a sapphire stud
+G 1 139075 1 0 70 0 0 0            *    a brass and copper woven ring
+G 1 139076 1 0 60 0 0 0            *    a silver ring engraved with leaves
+G 1 139077 1 0 80 0 0 0            *    an ivory promise ring
+M 0 139081 1 139215 100 0 0 0      * Shanaanaa
+G 1 139088 1 0 70 0 0 0            *    Shanaanaa's adventuring notes on Apocalypse Castle
+G 1 139091 1 0 70 0 0 0            *    Shanaanaa's adventuring notes on Jotunheim
+G 1 139092 1 0 70 0 0 0            *    Shanaanaa's adventuring notes on The Lair of the Gibberling King
+G 1 139093 1 0 70 0 0 0            *    Shanaanaa's adventuring notes on Mazzolin
+G 1 139094 1 0 70 0 0 0            *    Shanaanaa's adventuring notes on Shadamehr Keep
+G 1 139095 1 0 70 0 0 0            *    Shanaanaa's adventuring notes on Celestial Plane
+G 1 139145 1 0 70 0 0 0            *    Shanaanaa's adventuring notes on The Sky City of Ultarium
+G 1 139146 1 0 70 0 0 0            *    Shanaanaa's adventuring notes on Arachdrathos Guilds
+G 1 139087 1 0 70 0 0 0            *    Shanaanaa's adventuring notes on Githzerai Stronghold
+G 1 139149 1 0 70 0 0 0            *    Shanaanaa's adventuring notes on The Transparent Tower
+M 0 139048 1 139216 100 0 0 0      * a fire giant
+E 1 139032 2 16 100 0 0 0          *   a flaming two-handed sword
+M 0 139073 6 139217 100 0 0 0      * a medium fire elemental
+M 0 139124 1 139217 100 0 0 0      * Yodono the efreeti magi shop owner
+G 1 139084 1 0 60 0 0 0            *    the staff of a frost magus
+G 1 139082 1 0 70 0 0 0            *    a petrified illithids tentacle
+G 1 139055 3 0 80 0 0 0            *    a frosty icicle wand
+G 1 139007 17 0 90 0 0 0           *    a wand of flames
+G 1 139081 1 0 70 0 0 0            *    a large tome engulfed in blue flames
+G 1 139083 1 0 80 0 0 0            *    a wand of power
+G 1 139165 1 0 50 0 0 0            *    a staff of golem creation
+G 1 139166 1 0 60 0 0 0            *    an arcane spellbook covered with runes
+G 1 139167 1 0 80 0 0 0            *    a staff of swirling smoke and flame
+M 0 139055 2 139219 100 0 0 0      * a titan disciple
+M 0 139085 1 139219 100 0 0 0      * the repair man
+M 0 139090 47 139220 100 0 0 0     * an efreeti commoner
+M 0 139056 2 139220 100 0 0 0      * a drow visitor
+G 1 139055 3 0 100 0 0 0           *    a frosty icicle wand
+M 0 139034 1 139224 100 0 0 0      * Telorvehc
+M 0 139037 4 139225 100 0 0 0      * a Watchfire Legion member
+M 0 139037 4 139226 100 0 0 0      * a Watchfire Legion member
+M 0 139032 1 139227 100 0 0 0      * an Illithid Auctioneer
+F 1 139033 2 139227 100 0 0 0      * a Watchfire Legion member (following)
+F 1 139033 2 139227 100 0 0 0      * a Watchfire Legion member (following)
+M 0 139037 4 139228 100 0 0 0      * a Watchfire Legion member
+M 0 139037 4 139229 100 0 0 0      * a Watchfire Legion member
+M 0 139090 47 139230 100 0 0 0     * an efreeti commoner
+M 0 139054 37 139231 100 0 0 0     * a guard member of the Illuminated
+M 0 139090 47 139232 100 0 0 0     * an efreeti commoner
+M 0 139074 5 139232 100 0 0 0      * a large fire elemental
+M 0 139105 45 139233 100 0 0 0     * an efreeti commoner
+M 0 139071 2 139233 100 0 0 0      * a beautiful succubus
+E 1 139068 6 16 100 0 0 0          *   a brass longsword
+E 1 139068 6 17 100 0 0 0          *   a brass longsword
+E 1 139068 6 25 100 0 0 0          *   a brass longsword
+E 1 139045 2 26 100 0 0 0          *   an ethereal blade scimitar
+M 0 139090 47 139234 100 0 0 0     * an efreeti commoner
+M 0 139105 45 139235 100 0 0 0     * an efreeti commoner
+M 0 139066 2 139236 100 0 0 0      * a demon ambassador
+E 1 139053 1 7 100 0 0 0           *   a pair of bronze shinguards
+M 0 94740 5 139238 100 0 0 0       * (mob type not in this .mob file)
+M 0 139132 1 139238 10 0 0 0       * a hidden djinni spy
+M 0 94740 5 139241 100 0 0 0       * (mob type not in this .mob file)
+M 0 43540 5 139242 100 0 0 0       * (mob type not in this .mob file)
+M 0 139127 1 139243 100 0 0 0      * Grand Hurloo
+M 0 139043 4 139244 100 0 0 0      * an efreeti commoner
+M 0 139049 1 139244 100 0 0 0      * a magma elemental
+M 0 139043 4 139245 100 0 0 0      * an efreeti commoner
+M 0 139045 1 139246 100 0 0 0      * an Imix priest
+G 1 139031 1 0 100 0 0 0           *    a flaming Imix coin
+F 1 139046 1 139246 100 0 0 0      * a giant fire elemental (following)
+F 1 139047 1 139246 100 0 0 0      * a noble flame salamander (following)
+M 0 139099 1 139247 70 0 0 0       * Gyrowizniptzzl, the ancient red dragon
+G 1 139012 1 0 100 0 0 0           *    some leggings of red flames
+G 1 139136 3 0 100 0 0 0           *    a pile of platinum coins
+M 0 139101 1 139247 25 0 0 0       * Rikitizzilayn, an ancient brass dragon
+G 1 139136 3 0 100 0 0 0           *    a pile of platinum coins
+G 1 139138 1 0 100 0 0 0           *    a thin dragonskin cloak coated with brass
+M 0 139102 1 139247 60 0 0 0       * a ten-headed pyrohydra
+G 1 139136 3 0 100 0 0 0           *    a pile of platinum coins
+G 1 139142 1 0 100 0 0 0           *    a pile of ancient pyrohydra scales
+M 0 139015 6 139249 100 0 0 0      * an Unquenchable
+F 1 139017 7 139249 100 0 0 0      * a hellhound (following)
+M 0 139015 6 139249 100 0 0 0      * an Unquenchable
+F 1 139017 7 139249 100 0 0 0      * a hellhound (following)
+M 0 139016 3 139249 100 0 0 0      * a member of the Order of Fiery Heart
+M 0 139014 1 139250 100 0 0 0      * the Bronze Phalanx
+M 0 139015 6 139250 100 0 0 0      * an Unquenchable
+F 1 139017 7 139250 100 0 0 0      * a hellhound (following)
+M 0 139015 6 139250 100 0 0 0      * an Unquenchable
+F 1 139017 7 139250 100 0 0 0      * a hellhound (following)
+M 0 139097 2 139252 100 0 0 0      * an efreeti gardener
+M 0 139098 2 139253 100 0 0 0      * a fire troll slave
+M 0 139050 2 139254 100 0 0 0      * a fire elemental
+M 0 139050 2 139255 100 0 0 0      * a fire elemental
+M 0 139098 2 139256 100 0 0 0      * a fire troll slave
+M 0 139096 3 139257 100 0 0 0      * a giant smoke elemental
+M 0 139097 2 139258 100 0 0 0      * an efreeti gardener
+M 0 139018 10 139260 100 0 0 0     * an elite flame salamander
+M 0 139028 4 139263 100 0 0 0      * an Al-Asaf rider
+R 1 139029 6 139263 100 0 0 0      * a nightmare (being ridden)
+M 0 139031 2 139265 100 0 0 0      * an Al-Asaf rider
+R 1 139029 6 139265 100 0 0 0      * a nightmare (being ridden)
+M 0 139018 10 139266 100 0 0 0     * an elite flame salamander
+M 0 139028 4 139267 100 0 0 0      * an Al-Asaf rider
+R 1 139029 6 139267 100 0 0 0      * a nightmare (being ridden)
+M 0 139031 2 139268 100 0 0 0      * an Al-Asaf rider
+R 1 139029 6 139268 100 0 0 0      * a nightmare (being ridden)
+M 0 139028 4 139270 100 0 0 0      * an Al-Asaf rider
+R 1 139029 6 139270 100 0 0 0      * a nightmare (being ridden)
+M 0 139075 10 139271 100 0 0 0     * an efreeti noble
+M 0 139015 6 139273 100 0 0 0      * an Unquenchable
+F 1 139026 3 139273 100 0 0 0      * an Unquenchable (following)
+M 0 139018 10 139274 100 0 0 0     * an elite flame salamander
+M 0 139096 3 139275 100 0 0 0      * a giant smoke elemental
+M 0 139018 10 139276 100 0 0 0     * an elite flame salamander
+M 0 139096 3 139278 100 0 0 0      * a giant smoke elemental
+M 0 139075 10 139279 100 0 0 0     * an efreeti noble
+M 0 139024 3 139280 100 0 0 0      * an Unquenchable
+F 1 139025 1 139280 100 0 0 0      * an Unquenchable (following)
+M 0 139018 10 139282 100 0 0 0     * an elite flame salamander
+M 0 139091 2 139283 100 0 0 0      * the Branded
+G 1 139130 1 0 100 0 0 0           *    a key of green fire
+F 1 139091 2 139283 100 0 0 0      * the Branded (following)
+M 0 139010 1 139286 100 0 0 0      * the efreeti padashaw Artoon Branan
+E 1 139069 1 1 100 0 0 0           *   an amethyst ring
+G 1 139144 1 0 100 0 0 0           *    the flaming head of Artoon Branan
+M 0 139040 4 139288 100 0 0 0      * the harem girl
+M 0 139040 4 139288 100 0 0 0      * the harem girl
+M 0 139040 4 139288 100 0 0 0      * the harem girl
+M 0 139040 4 139288 100 0 0 0      * the harem girl
+M 0 139019 4 139289 100 0 0 0      * the Branded
+M 0 139019 4 139289 100 0 0 0      * the Branded
+M 0 139019 4 139290 100 0 0 0      * the Branded
+M 0 139019 4 139290 100 0 0 0      * the Branded
+M 0 139000 1 139292 100 0 0 0      * the efreeti padashaw Ornon Kasoon
+E 1 139038 1 9 100 0 0 0           *   gloves of sapphire-encrusted brass
+G 1 139129 1 0 100 0 0 0           *    a key of purple fire
+G 1 139017 1 0 100 0 0 0           *    the flaming head of Ornon Kasoon
+M 0 139107 2 139297 100 0 0 0      * an efreeti templar
+M 0 139107 2 139297 100 0 0 0      * an efreeti templar
+M 0 139009 1 139299 100 0 0 0      * a padashaw arch-magi
+E 1 139037 1 1 100 0 0 0           *   a ring of elemental control
+G 1 67245 1 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 139016 1 0 100 0 0 0           *    the flaming head of the arch-magi
+M 0 139106 2 139299 100 0 0 0      * an efreeti magi disciple
+E 1 139009 2 18 100 0 0 0          *   the wand of power
+M 0 139106 2 139299 100 0 0 0      * an efreeti magi disciple
+E 1 139009 2 18 100 0 0 0          *   the wand of power
+M 0 139094 2 139302 100 0 0 0      * a captivating fire mephit magician
+M 0 139095 1 139303 100 0 0 0      * an elder fire elemental
+M 0 139075 10 139304 100 0 0 0     * an efreeti noble
+M 0 139018 10 139305 100 0 0 0     * an elite flame salamander
+M 0 139021 2 139307 100 0 0 0      * a member of the Order of Fiery Heart
+G 1 139021 1 0 100 0 0 0           *    a key of blue fire
+F 1 139016 3 139307 100 0 0 0      * a member of the Order of Fiery Heart (following)
+F 1 139022 2 139307 100 0 0 0      * a member of the Order of Fiery Heart (following)
+F 1 139023 2 139307 100 0 0 0      * a member of the Order of Fiery Heart (following)
+M 0 139108 3 139308 100 0 0 0      * a flaming Azer slave
+M 0 139108 3 139308 100 0 0 0      * a flaming Azer slave
+M 0 139108 3 139308 100 0 0 0      * a flaming Azer slave
+M 0 139080 1 139309 100 0 0 0      * the royal chef
+E 1 139089 1 6 100 0 0 0           *   a red chef's hat
+M 0 139075 10 139311 100 0 0 0     * an efreeti noble
+M 0 139011 1 139312 100 0 0 0      * Shadam Quilen, the Efreeti Sultan
+E 1 139036 1 6 100 0 0 0           *   the crown of might
+G 1 139023 1 0 100 0 0 0           *    the palace vault key
+M 0 139093 2 139314 100 0 0 0      * a magma man
+M 0 139021 2 139315 100 0 0 0      * a member of the Order of Fiery Heart
+G 1 139022 1 0 100 0 0 0           *    a key of blue fire
+F 1 139016 3 139315 100 0 0 0      * a member of the Order of Fiery Heart (following)
+F 1 139022 2 139315 100 0 0 0      * a member of the Order of Fiery Heart (following)
+F 1 139023 2 139315 100 0 0 0      * a member of the Order of Fiery Heart (following)
+M 0 139018 10 139316 100 0 0 0     * an elite flame salamander
+M 0 139075 10 139319 100 0 0 0     * an efreeti noble
+M 0 139094 2 139319 100 0 0 0      * a captivating fire mephit magician
+M 0 139093 2 139320 100 0 0 0      * a magma man
+M 0 139015 6 139324 100 0 0 0      * an Unquenchable
+E 1 139059 1 6 100 0 0 0           *   a black turban of circling flames
+F 1 139024 3 139324 100 0 0 0      * an Unquenchable (following)
+M 0 139026 3 139324 100 0 0 0      * an Unquenchable
+F 1 139027 2 139324 100 0 0 0      * an Unquenchable (following)
+M 0 139104 2 139328 100 0 0 0      * an efreeti templar
+M 0 139104 2 139328 100 0 0 0      * an efreeti templar
+M 0 139012 1 139330 100 0 0 0      * a padashaw high priest
+E 1 139000 2 3 100 0 0 0           *   the medallion of kossuth
+G 1 139139 1 0 100 0 0 0           *    the flaming head of the high priest
+M 0 139103 2 139330 100 0 0 0      * an efreeti disciple
+M 0 139103 2 139330 100 0 0 0      * an efreeti disciple
+M 0 139075 10 139333 100 0 0 0     * an efreeti noble
+M 0 139089 1 139336 100 0 0 0      * the efreeti padashaw Wrinyen Otis
+E 1 139035 1 5 100 0 0 0           *   a suit of flaming ringmail
+G 1 139034 1 0 100 0 0 0           *    a blazing armory key
+G 1 139140 1 0 100 0 0 0           *    the flaming head of Wrinyen Otis
+M 0 139142 1 139339 100 0 0 0      * a raging minotaur slave
+M 0 139020 2 139339 100 0 0 0      * the djinn slave
+M 0 139143 1 139340 100 0 0 0      * a crazy drow elf slave
+M 0 139020 2 139340 100 0 0 0      * the djinn slave
+M 0 139138 1 139341 100 0 0 0      * a fire magus githyanki slave
+M 0 139134 1 139342 100 0 0 0      * a planetbound illithid psionic slave
+M 0 139053 2 139343 100 0 0 0      * a Blaze
+R 1 139017 7 139343 100 0 0 0      * a hellhound (being ridden)
+M 0 139060 1 139344 100 0 0 0      * a flame griffon
+E 1 139079 1 12 100 0 0 0          *   the wings of the griffon
+M 0 139092 1 139344 100 0 0 0      * the efreeti padashaw Hakim Okewonaku
+E 1 139013 1 10 70 0 0 0           *   lengths of pure eldrich fire
+E 1 139131 1 16 100 0 0 0          *   a demon-hide flaming whip
+G 1 139141 1 0 100 0 0 0           *    the flaming head of Hakim Okewonaku
+M 0 139109 2 139344 100 0 0 0      * an immature nightmare
+M 0 139109 2 139344 100 0 0 0      * an immature nightmare
+M 0 139051 4 139346 100 0 0 0      * a manscorpion member of the Black Dart
+E 1 139043 4 16 100 0 0 0          *   a two-handed serrated long spear
+M 0 139018 10 139347 100 0 0 0     * an elite flame salamander
+M 0 139051 4 139348 100 0 0 0      * a manscorpion member of the Black Dart
+E 1 139043 4 16 100 0 0 0          *   a two-handed serrated long spear
+M 0 139053 2 139349 100 0 0 0      * a Blaze
+E 1 139044 2 16 100 0 0 0          *   a flaming lance
+R 1 139017 7 139349 100 0 0 0      * a hellhound (being ridden)
+M 0 139051 4 139350 100 0 0 0      * a manscorpion member of the Black Dart
+E 1 139043 4 16 100 0 0 0          *   a two-handed serrated long spear
+M 0 139013 1 139351 100 0 0 0      * the chief efreeti guard
+E 1 139040 1 13 100 0 0 0          *   a fiery-orange sash
+G 1 139135 1 0 100 0 0 0           *    a flaming skeleton key
+M 0 139051 4 139352 100 0 0 0      * a manscorpion member of the Black Dart
+E 1 139043 4 16 100 0 0 0          *   a two-handed serrated long spear
+M 0 139052 1 139353 100 0 0 0      * a Blaze
+E 1 139044 2 16 100 0 0 0          *   a flaming lance
+R 1 139017 7 139353 100 0 0 0      * a hellhound (being ridden)
+M 0 139018 10 139354 100 0 0 0     * an elite flame salamander
+M 0 139028 4 139356 100 0 0 0      * an Al-Asaf rider
+R 1 139029 6 139356 100 0 0 0      * a nightmare (being ridden)
+M 0 139026 3 139357 100 0 0 0      * an Unquenchable
+F 1 139018 10 139357 100 0 0 0     * an elite flame salamander (following)
+F 1 139024 3 139357 100 0 0 0      * an Unquenchable (following)
+F 1 139027 2 139357 100 0 0 0      * an Unquenchable (following)
+*
+S

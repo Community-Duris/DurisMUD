@@ -1,0 +1,2153 @@
+#139900
+goblin warrior~
+&+ya &+Lskull clan&n&+y goblin warrior~
+&+yA &+Lskull clan&n&+y goblin warrior looks about for signs of trouble.&n
+~
+&+y   The goblin is half a man's height with brownish, &+Lblack&n&+y skin.  The goblin
+&+yhas straight, jet &+Lblack&n&+y hair combed back on his head.  Its small pointy
+&+Yteeth&n&+y could shred a cat in two.  It wears a small &+wskull&+y on its head and
+&+ya cheaply constructed leather jacket.&n
+~
+2156 0 0 0 256 0 0 0 -1000 S
+HG 0 1 0 -1
+7 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139901
+goblin thief scout~
+&+ya &+Lskull clan&n&+y goblin scout~
+&+yA &+Lskull clan&n&+y goblin scout looks about for signs of trouble.&n
+~
+&+y   The goblin is half a man's height with brownish, &+Lblack&n&+y skin.  The goblin
+&+yhas straight, jet &+Lblack&n&+y hair combed back on his head.  Its small pointy
+&+Yteeth&n&+y could shred a cat in two.  It wears a small &+wskull&+y on its head and
+&+ya cheaply constructed leather jacket.&n
+~
+2284 0 0 0 256 0 0 0 -1000 S
+HG 0 13 0 -1
+7 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139902
+goblin female~
+&+ya &+Lskull clan&n&+y goblin female~
+&+yA &+Lskull clan&n&+y goblin female looks frightened.&n
+~
+&+y   The goblin is half a man's height with brownish, &+Lblack&n&+y skin.  The goblin
+&+yhas straight, jet &+Lblack&n&+y hair combed back on his head.  Its small pointy
+&+Yteeth&n&+y could shred a cat in two.  It wears a small &+wskull&+y on its head and
+&+ya cheaply constructed leather jacket.&n
+~
+67111150 0 0 0 256 0 0 0 -1000 S
+HG 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139903
+goblin grnak~
+&+YGrnak &n&+yof &+Lskull clan&n&+y goblin~
+&+YGrnak &n&+yof &+Lskull clan &n&+ygoblin stands here with his arms folded.&n
+~
+&+y   The goblin is half a man's height with brownish, &+Lblack&n&+y skin.  The goblin
+&+yhas straight, jet &+Lblack&n&+y hair combed back on his head.  Its small pointy
+&+Yteeth&n&+y could shred a cat in two.  It wears a small &+wskull&+y on its head and
+&+ya cheaply constructed leather jacket.  This goblin seems a bit stronger
+&+ythan the rest.&n
+~
+1073743980 0 0 0 256 0 0 0 -1000 S
+HG 0 1 0 -1
+13 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139904
+goblin noggle king~
+&+rNoggle &+ythe &+Lskull clan&n&+y goblin king~
+&+rNoggle &+ythe &+Lskull clan &n&+ygoblin king looks surprised.&n
+~
+&+y   The goblin is half a man's height with brownish, &+Lblack&n&+y skin.  The goblin
+&+yhas straight, jet &+Lblack&n&+y hair combed back on his head.  Its small pointy
+&+Yteeth&n&+y could shred a cat in two.&n
+~
+2158 0 0 0 256 0 0 0 -1000 S
+HG 0 9 0 -1
+15 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139905
+guard milita man~
+&+wa militia &+Lguard&n~
+&+wA militia &+Lguard&n&+w keeps an eye out for trouble.&n
+~
+&+w   The guard is a young &+Chuman&n&+w male.  He is very weary of strangers and does
+&+wnot like when he is stared at.  He grumbles something under his breath.&n
+~
+67110990 0 0 0 0 0 0 0 200 S
+PH 0 1 0 -1
+8 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139906
+guard militia man~
+&+wa militia &+Lguard&n~
+&+wA militia &+Lguard&n&+w keeps an eye out for trouble.&n
+~
+&+w   The guard is a young &+Chuman&n&+w male.  He is very weary of strangers and does
+&+wnot like when he is stared at.  He grumbles something under his breath.&n
+~
+67110988 0 0 0 0 0 0 0 200 S
+PH 0 1 0 -1
+8 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139907
+commoner male~
+&+ya simple male &+Ycommoner&n~
+&+yA simple male &+Ycommoner&n&+y goes about their business.&n
+~
+&+g   The commoner is in simple but clean clothes.  A smile glows from his
+&+gface as he notices one's approach.  "Good day" he says.&n
+~
+2184 0 0 0 0 0 0 0 250 S
+PH 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139908
+commoner female~
+&+ya simple female &+Ycommoner&n~
+&+yA simple female &+Ycommoner&n&+y goes about their business.&n
+~
+&+g   The commoner is in simple but clean clothes.  A smile glows from her
+&+gface as she notices one's approach.  "Good day" she says.&n
+~
+2184 0 0 0 0 0 0 0 250 S
+PH 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139909
+wight~
+&+La skinless &n&+rwight&n~
+&+LA skinless &n&+rwight &+Lsniffs the air sensing life nearby.&n
+~
+&+L   The wight was apparently a human before the horid transformation.  It
+&+Lgrowls and sniffs the air sensing the life nearby, it hungers to consume
+&+Lits essence.&n
+~
+1073748072 0 0 0 268435744 0 0 0 -1000 S
+U 0 1 0 -1
+10 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139910
+payvin~
+&+GPayvin&n&+g the sea captain&n~
+&+GPayvin, &n&+gthe sea captain, is here drinking his ale talking to himself.&n
+~
+&+G   Payvin &n&+gis a man in his mid fifties, going to gray but still in good
+&+gphysical shape.  However he currently looks pale, haggard, and slightly drunk.
+&+gHis bloodshot eyes dart about nervously.  He is talking to himself in what
+&+gappears to be gibberish but keeps repeating "my pearl, oh my pearl."&n
+~
+2122 0 0 0 0 0 0 0 50 S
+PH 0 1 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139911
+magonan man~
+&+RMagonan &n&+rthe all knowing&n~
+&+RMagonan &n&+rthe all knowing stands here minding his store.&n
+~
+&+M   Magonan&n&+m is a very tall large man for a sage.  His eyes display a
+&+mkindness and wisdom that does not show in his age.  He smiles, clasps his
+&+mhands and speaks in a soft voice "If there is any information I can provide
+&+mI will do so.  I know a great many things about legend and history of the
+&+marea.  All my maps are for sale, they show a great deal about the local
+&+marea and its surrounding features".&n
+~
+2058 0 0 0 40 0 16777216 0 500 S
+PH 0 12 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139912
+brown bear~
+&+La large &n&+ybrown bear&n~
+&+LA large &n&+ybrown bear &+Lshuffles about.&n
+~
+&+yThis is one of the largest bears one could find in the forest.  It seems
+&+yas if it just came out of hibernation and its hungry.&n
+~
+8411242 0 0 0 32 0 0 0 0 S
+A 0 1 0 -1
+15 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139913
+fred recruiter~
+&+CFred &n&+cthe recruiter&n~
+&+CFred &n&+cthe recruiter is standing here.&n
+~
+&+cFred is a short stocky human that is losing hair on top of his head.  He
+&+chas many scars and the look of a hundred battles.  He awaits one's request
+&+cfor a &+C"job"&n&+c.  It seems he has one in mind.&n
+~
+67110986 0 0 0 0 0 0 0 250 S
+PH 0 1 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139914
+thaegerd farmer~
+&+yThaegerd &+gthe farmer~
+&+yThaegerd &+gthe farmer is here waiting to serve.&n
+~
+&+yThaegerd &n&+gis a tall thin man of the middle ages.  he wears a &+Ystraw hat &n&+gand
+&+gis missing a few &+Wteeth &n&+Gwhen he smiles.  He has heavy &+wgray eyebrows&+g and hands
+&+gthat have seen the field one too many times.  He waits to serve any possible
+&+gbuyers.&n
+~
+8 0 0 0 0 0 0 0 0 S
+PH 0 8 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139915
+seaman human~
+&+ba tired &+cseaman&n~
+&+bA tired &+cseaman &+bsits here staring at his drink.&n
+~
+&+cThis seaman looks like he's been at sea too long.  His skin is tanned and
+&+cwrinkled from the years out at sea, he looks older than his age.  He glances
+&+cup and goes back to his drink.  He snickers something to his shipmates.&n
+~
+67110990 0 0 0 0 0 0 0 0 S
+PH 0 13 0 -1
+10 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139916
+snagger dwarf~
+&+ya barkeep named &+YSnagger&n~
+&+yThe barkeep &+YSnagger &n&+yis tending to his customers.&n
+~
+&+yThe stocky dwarf &+YSnagger &n&+yis is a bit tall for his race.  He has a long
+&+ybraided beard and dark brown eyes.  He seems to enjoy his work and smiles
+&+ya lot when dealing with people.&n
+~
+2250 0 0 0 0 0 0 0 500 S
+PM 0 1 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139917
+bulaba halfling shopkeeper~
+&+YBulaba&n&+y, the shopkeeper~
+&+YBulaba&n&+y, the shopkeeper watches you every move.&n
+~
+&+yThis tallfellow stands about half the size of a human.  His young features
+&+yand golden eyes create an appearance that is hard not to look at.  He wears
+&+ysimple leather pants, a vest, and a fine silk shirt.&n
+~
+33556680 0 0 0 0 0 0 0 250 S
+PF 0 17 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139918
+sather priestess woman~
+&+CSather&n&+c, a priestess&n~
+&+CSather&n&+c is here tending to her plants.&n
+~
+&+CSather &n&+cappears much older than her age.  She looks run down, drained of
+&+cof the beauty she once had.  Her hair is long, thin, and very gray.  It holds
+&+cno color or life, this only adds to her age.  Her clothes, once of good
+&+cquality, are old, dull in color, and do not hide the fact she has only one
+&+cworking leg.  She eyes the area cautiously watching one's every move.&n
+~
+33556554 0 0 0 0 0 0 0 500 S
+PH 0 6 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139919
+priest temple human~
+&+Wa temple priest&n~
+&+WA temple priest is going about his duties.&n
+~
+&+wThe priest wears simple priestly robes that are of good quality.  He is
+&+wrather plain looking and bald on the top of his head.  He glances up for
+&+wa second to smile, then he goes back to his duties.&n
+~
+268435466 0 0 0 0 0 0 0 1000 S
+PH 0 6 0 -1
+30 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139920
+hill giant~
+&+ya hill giant&n~
+&+yA hill giant stands here ready for battle.&n
+~
+&+w   The hill giant is twice the height of a human and thrice as ugly.  His
+&+wbreath has an unbearable stench and his smell ain't to good either.  What
+&+wmakes this giant formidable is his great strength and size.&n
+~
+8390764 0 0 0 16777216 0 0 0 -1000 S
+G 0 1 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139921
+fire elemental~
+&+ra &+Rfire &n&+relemental&n~
+&+rA &+Rfire&n&+r elemental appears out of nowhere.&n
+~
+&+rThe elemental is pure fire with two little gloing spots that seems to be
+&+reyes.&n
+~
+8407146 0 0 0 940572704 12289 0 0 0 S
+EF 0 1 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139922
+giant mountain warrior~
+&+wa &+ywarrior mountain &+wgiant&n~
+&+wA &+ywarrior mountain &+wgiant stands here sharpening his weapon.&n
+~
+&+wThis giant is huge, over three times the size of a human.  His appearance
+&+wis very much of a large human with some small distortions in how his face
+&+wappears.  He wears simple animal hides as clothes.&n
+~
+75499596 0 0 0 16777216 0 0 0 0 S
+G 0 1 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139923
+giant mountain adult~
+&+wan &+yadult mountain &+wgiant&n~
+&+wAn &+yadult mountain &+wgiant stands here looking for trouble.&n
+~
+&+wThis giant is huge, over three times the size of a human.  His appearance
+&+wis very much of a large human with some small distortions in how his face
+&+wappears.  He wears simple animal hides as clothes.&n
+~
+75499598 0 0 0 16777216 0 0 0 0 S
+G 0 1 0 -1
+18 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139924
+troll~
+&+ga large troll&n~
+&+gA large troll stands here scratching himself.&n
+~
+&+wThe troll stands a bit taller than a human, has green skin, warts, and
+&+wvery sharp teeth.  His eyes are as black as night, only his evil is darker.&n
+~
+67110922 0 0 0 0 0 0 8192 -1000 S
+PT 0 1 0 -1
+14 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139925
+shaman giant mountain~
+&+ga &+yshaman mountain&+g giant&n~
+&+gA &+yshaman mountain&+g giant is here chanting to his god.&n
+~
+&+wThe shaman seems to be the leader of the tribe.  He looks like a typical
+&+wgiant save the paint markings on his face.  He wears various hide from
+&+wseveral animals from the nearby areas.&n
+~
+67111118 0 0 0 0 0 0 0 0 S
+G 0 9 0 -1
+30 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139926
+female mountain giant elagor~
+&+WElagor&n&+w, a &+yyoung female mountain &+wgiant&n~
+&+WElagor&n&+w, A &+yyoung female mountain giant&+w stands here giving orders.&n
+~
+&+wElagor appears to be the daughter of the shaman.  She is actually attractive
+&+wfor a giantess.  She has straight black hair and blue eyes.  Her clothes
+&+ware better then the rest of the tribe.&n
+~
+67108874 0 0 0 0 0 0 0 0 S
+G 0 2 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139927
+troll~
+&+ga large troll&n~
+&+gA large troll stands here staring into space.&n
+~
+&+wThe troll stands a bit taller than a human, has green skin, warts, and
+&+wvery sharp teeth.  His eyes are as black as night, only his evil is darker.&n
+~
+67110922 0 0 0 0 0 0 8192 -1000 S
+PT 0 1 0 -1
+14 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139928
+troll~
+&+ga large troll&n~
+&+gA large troll stands here talking to himself.&n
+~
+&+wThe troll stands a bit taller than a human, has green skin, warts, and
+&+wvery sharp teeth.  His eyes are as black as night, only his evil is darker.&n
+~
+67110922 0 0 0 0 0 0 8192 -1000 S
+PT 0 1 0 -1
+14 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139929
+troll~
+&+ga large troll&n~
+&+gA large troll stands here cleaning his sharp claws.&n
+~
+&+wThe troll stands a bit taller than a human, has green skin, warts, and
+&+wvery sharp teeth.  His eyes are as black as night, only his evil is darker.&n
+~
+67110922 0 0 0 0 0 0 8192 -1000 S
+PT 0 1 0 -1
+14 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139930
+grunthar~
+&+RGrunthar &+Lthe strong&n~
+&+RGrunthar &+Lstands here over the grave of &n&+wFalon&+L.&n
+~
+&+wGrunthar, at first glance, is a very strong and there is no doubt that in
+&+whis youth he was a very formidable warrior.  Age has taken some of his
+&+wyouth away along with most of his hair.  He is missing his right hand but
+&+whas an elaborate cover piece to hide the stump from sight.  he does not
+&+wpay any attention to one's approach.&n
+~
+2122 0 0 0 0 0 16384 0 0 S
+PH 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139931
+hill giant female~
+&+ya female hill giant&n~
+&+yA female hill giant is here taking care of her cave.&n
+~
+&+w   The hill giant is twice the height of a human and thrice as ugly.  Her
+&+wbreath has an unbearable stench and her smell ain't to good either.  What
+&+wmakes this giant formidable is her great strength and size.&n
+~
+75499610 0 0 0 16777216 0 0 0 -100 S
+G 0 13 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139932
+mountain giant alchemist~
+&+ya &+Lmountain&n&+y giant alchemist&n~
+&+yA &+Lmountain &n&+ygiant is here brewing new &+Gp&+Co&+Yt&+Ri&+Bo&+Mn&+Ls.&n
+~
+&+w   The mountain giant is thrice the height of a human and thrice as ugly.  He
+&+wis not as strong as the others but has a large front lobe.  It seems he is
+&+wsome sort of wizard.  He is working on potions and has a few on his person.
+&n
+~
+75499594 0 0 0 16777216 0 0 0 -1000 S
+G 0 9 0 -1
+26 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139933
+dog wardog war~
+&+La vicious wardog&n~
+&+LA vicious wardog stands silently waiting for his masters orders.&n
+~
+&+L   The dog just sits there waiting for something to happen.  He is large and
+&+Lvery well trained.  His skin glows with this &n&+mpurple aura &+Lthat seems
+&+Lunnatural.&n
+~
+1140852811 0 0 0 268435458 0 0 0 0 S
+A 0 1 0 -1
+16 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139934
+hill giant~
+&+ya large hill giant&n~
+&+yA large hill giant stands here looking for prey.&n
+~
+&+w   The hill giant is twice the height of a human and thrice as ugly.  His
+&+wbreath has an unbearable stench and his smell ain't to good either.  What
+&+wmakes this giant formidable is his great strength and size.&n
+~
+8390732 0 0 0 16777216 0 0 0 -1000 S
+G 0 1 0 -1
+26 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139935
+bone golem~
+&+Wa gargantuan bone golem&n~
+&+WA gargantuan bone golem is here protecting the &+LSkull City&+W gates.&n
+~
+&+w   The golem stands about twenty feet tall.  It is entirely made from bone and
+&+wone can feel the undead energy emitted from its presence.  The bones are
+&+wthe size a human's body.  Two dark glowing discs become its eyes when it
+&+wlooks down at you.  There are many scratches on the golem of those who tried
+&+wto force their way in.  Suddenly the bone golem speaks in a booming voice
+&+wthat makes all shudder, &+W"What is the sign?"&n&+w.  It stands there waiting one's
+&+wresponse.&n
+~
+8419402 0 0 0 268435896 14528 0 8192 0 S
+OG 0 1 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139936
+ant army~
+&+ran army ant&n~
+&+rAn army ant &+yis busy at work here.&n
+~
+&+w   These ants are about a man's hand in legth with &+rred&+w and &+ybrown&+w coloring.&n
+~
+67110987 0 0 0 0 0 0 0 0 S
+I 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139937
+ant army~
+&+ran army ant&n~
+&+rAn army ant &+yis building a mound here.&n
+~
+&+w   These ants are about a man's hand in legth with &+rred&+w and &+ybrown&+w coloring.&n
+~
+67110987 0 0 0 0 0 0 0 0 S
+I 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139938
+ant army~
+&+ran army ant&n~
+&+rAn army ant &+yis dragging a carcass here.&n
+~
+&+w   These ants are about a man's hand in legth with &+rred&+w and &+ybrown&+w coloring.&n
+~
+67110987 0 0 0 0 0 0 0 0 S
+I 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139939
+ant army~
+&+ran army ant&n~
+&+rAn army ant &+yis making a hole here.&n
+~
+&+w   These ants are about a man's hand in legth with &+rred&+w and &+ybrown&+w coloring.&n
+~
+67110987 0 0 0 0 0 0 0 0 S
+I 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139940
+wight large~
+&+La &+Rgreater &+Lwight&n~
+&+LA &+Rgreater&+L wight prowls here for food.&n
+~
+&+w   The wight is unusually large for his type.  His eyes glow with a fiery
+&+Rred &n&+wcolor.  He appears to be more powerful then an average wight.
+&+wHis body reveals muscle where skin should be.  A foul oder is coming from
+&+wevery part of this hideous creature's body.&n
+~
+301997640 0 0 0 296 0 0 0 -1000 S
+U 0 1 0 -1
+28 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139941
+zombie~
+&+wan animal &+Lzombie&n~
+&+wAn animal &+Lzombie&n&+w stands here blankly.&n
+~
+&+w   The zombie is of one of the slain animals within or around this swamp.  How
+&+wthey would become an undead is a curious question.&n
+~
+33560664 0 0 0 256 0 0 0 0 S
+U 0 13 0 -1
+24 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139942
+zombie~
+&+wan animal &+Lzombie&n~
+&+wAn animal &+Lzombie&n&+w roams aimlessly around the swamp.&n
+~
+&+w   The zombie is of one of the slain animals within or around this swamp.  How
+&+wthey would become an undead is a curious question.&n
+~
+33560664 0 0 0 256 0 0 0 0 S
+U 0 13 0 -1
+24 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139943
+skeleton~
+&+wan animal &+Wskeleton&n~
+&+wAn animal &+Wskeleton&n&+w trudges through the swamp.&n
+~
+&+w   The skeleton is of one of the slain animals within or around this swamp.
+&+wHow they would become an undead is a curious question.&n
+~
+33560664 0 0 0 256 0 0 0 0 S
+U 0 13 0 -1
+24 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139944
+skeleton~
+&+wan animal &+Wskeleton&n~
+&+wAn animal &+Wskeleton&n&+w is wandering aimlessly here.&n
+~
+&+w   The skeleton is of one of the slain animals within or around this swamp.
+&+wHow they would become an undead is a curious question.&n
+~
+33560664 0 0 0 256 0 0 0 0 S
+U 0 13 0 -1
+24 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139945
+old man danele~
+&+wDanele &+Lthe necromancer&n~
+&+LAn old man sits hear chanting, his eyes gouged out.&n
+~
+&+w   The old man is sitting along the wall chanting to himself odd passages that
+&+wmake no sense or are incomprehensible.  He swings back and forth hitting the
+&+wthe wall with his back with each chant.  He is poor and dirty with tattered
+&+wrobes bearing symbols of necromantic magic.  The one feature that strikes
+&+was most odd is that his eyes are gouged out, torn from his skull.  Finger
+&+wmarks appear around his face, it seems he did is himself.  He looks up as
+&+wif he can see and says "at the conclusion, the Devourer awaits your souls."&n
+~
+74 0 0 0 128 262144 0 0 0 S
+PH 0 11 0 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139946
+danzri shopkeeper~
+&+Ma greedy shopkeeper&n~
+&+MDanzri de Morte&n&+m, the shopkeeper is waiting to serve one's every needs.&n
+~
+&+w   Danzri is a tall, thin wisp of a man that is balding on top.  The man almost
+&+wlooks like he is already dead, only his breath tells otherwise.  His clothes
+&+ware of very good quality, fine purple suade, and his shop is well preserved.
+&+wHe awaits one's every desire.&n
+~
+2122 0 0 0 0 0 0 0 -100 S
+PH 0 11 0 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139947
+zombie human~
+&+wa human dressed up as a zombie&n~
+&+LA zombie with blackened skin awaits its master's orders here.&n
+~
+&+w   This zombie looks very freshly made, if that is possible.  There are no
+&+wmarks on the skin or ripped off pieces of flesh.  It is also larger and more
+&+wmassive then regular zombies.  It must serve a special purpose.  Suddenly
+&+wit twitches.&n
+~
+335546698 0 0 0 268435496 0 0 0 500 S
+PH 0 1 0 -1
+30 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139948
+old man~
+&+ba tall thin old man&n~
+&+bA tall thin old man is taking care of the corpses here.&n
+~
+&+w   This person seems to be the mortician.  He is old and fragile but very tall.
+&+wHe has lost some of his hair on his head, but seems to be friendly.&n
+~
+2122 0 0 0 0 0 0 0 0 S
+PH 0 10 0 -1
+26 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139949
+elaron human paladin~
+&+WElaron&n&+C, leader of the order&n~
+&+WElaron&n&+w, stands here looking over maps.&n
+~
+&+w   Even though his height is not great the paladin stands taller and more
+&+wpredominant then any other in the room.  He emits an aura of holiness and
+&+wgoodness that can be felt within the everywhere.  He looks at you, "I hope
+&+wyou are here to help against the &+Lnecromancers&n&+w and the &+LDevourer&n&+w."&n
+~
+335546698 0 0 0 8192 0 0 0 1000 S
+PH 0 4 0 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139950
+santios elf~
+&+rSantios&+R, an &n&+celven&+R fire sorcerer&n~
+&+rSantios&+R, an &n&+celven&+R fire sorcerer stands here ready.&n
+~
+&+w   This is a most unusual elf, one that loves fire.  He appears as a normal
+&+welf except for his artificial hair color of &+Rbright red&n&+w.  One can hear some of
+&+wthe others call him &+r"Fireball"&+w, must be his nickname.  He is very calm for
+&+wa fire mage.  He is an advisor to &+WElaron&n&+w and most intelligent.&n
+~
+335546698 0 0 0 536870920 0 0 0 0 S
+PE 0 10 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139951
+guard~
+&+wa guard of the &+WOrder of Light&n~
+&+wA guard from the &+WOrder of Light&n&+w stands here.&n
+~
+&+w   The guard wears some simple chainmail and wields a longsword.  he is
+&+wdevoted to protect and serve the &+WOrder of Light&n&+w.  He is a human of no
+&+wspecial features.&n
+~
+335546634 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
+15 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139952
+kobold thief~
+&+wa dirty &+Mkobold&n~
+&+wA dirty &+Mkobold &n&+wis here looking for food.&n
+~
+&+w   This kobold is a bit hungary and smiles a lot.  he seems to be friendly.
+&+wThe kobold has an insignia on his vest, one of a &+cdagger &+wwith &+Mpurple poison
+&+wdripping from the end of it.&n
+~
+1073744078 0 0 0 268435456 0 0 0 -50 S
+K 0 13 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139953
+drow merchant~
+&+wa &+mdrow &+wmerchant~
+&+wA &+mdrow &+wmerchant is here counting his money.&n
+~
+&+w   This merchant seems not to care of your presence here and is wondering why
+&+wyou are in his home.&n
+~
+2206 0 0 0 0 0 0 0 -1000 S
+PL 0 13 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139954
+cow small~
+&+Ya small &n&+ycow&n~
+&+YA small &n&+ycow &+Yis here eating.&n
+~
+&+wIt is a healthy cow.&n
+~
+90 0 0 0 0 0 0 0 0 S
+AH 0 13 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139955
+horse~
+&+wa riding &+yhorse&n~
+&+wA riding &+yhorse &+Yis here.&n
+~
+&+wIt is a healthy horse.&n
+~
+90 0 0 0 0 0 0 0 0 S
+AH 0 1 0 -1
+8 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139956
+horse~
+&+wa riding &+yhorse&n~
+&+wA riding &+yhorse &+Yis tied to a post here.&n
+~
+&+wIt is a healthy horse.&n
+~
+90 0 0 0 0 0 0 0 0 S
+AH 0 1 0 -1
+8 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139957
+chicken small~
+&+Wa small &n&+ychicken&n~
+&+WA small &n&+ychicken &+Wis roaming around.&n
+~
+&+wIt is a healthy chicken, looks yummy.&n
+~
+90 0 0 0 0 0 0 0 0 S
+AH 0 13 0 -1
+3 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139958
+fat hog~
+&+ya fat &n&+rhog&n~
+&+yA fat &+rhog &+yis here rolling around.&n
+~
+&+wIt is a healthy hog, but it stinks.&n
+~
+90 0 0 0 0 0 0 0 0 S
+AH 0 13 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139959
+receptionist~
+&+ga receptionist&n~
+&+gA helpful receptionist is here waiting to serve one's every needs.&n
+~
+&+w   She seems to be the only normal one here.  She is very pretty and dressed
+&+win commoner's close.  She smiles and asks in a deep groaning voice "How may
+&+wI help you?".  Obviously from the poor vocal cords she is a very well
+&+wconstructed undead, too bad she was cute too.&n
+~
+2122 0 0 0 268435752 64 2097152 0 0 S
+U 0 1 0 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139960
+guard~
+&+ca Skull City &+Wguard&n~
+&+cA Skull City &+Wguard &n&+cwatches for trouble.&n
+~
+&+w   The city guards are warrior type here to serve the necromancers and
+&+wprotect the city from invaders and non-believers.  They are human and
+&+wprotected with spells from the necromancers themselves.&n
+~
+67110924 0 0 0 8 0 0 0 -500 S
+PH 0 1 0 -1
+15 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139961
+guard~
+&+ca Skull City &+Wguard&n~
+&+cA Skull City &+Wguard &n&+cwatches for trouble.&n
+~
+&+w   The city guards are warrior type here to serve the necromancers and
+&+wprotect the city from invaders and non-believers.  They are human and
+&+wprotected with spells from the necromancers themselves.&n
+~
+67110922 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
+15 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139962
+sergeant~
+&+ca Skull City &+Wsergeant&n~
+&+cA Skull City &+Wsergeant &n&+cwatches for trouble.&n
+~
+&+w   The city guards are warrior type here to serve the necromancers and
+&+wprotect the city from invaders and non-believers.  They are human and
+&+wprotected with spells from the necromancers themselves.&n
+~
+67110920 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139963
+guard elite~
+&+ca Skull City &+Welite guard&n~
+&+cA Skull City &+Welite guard &n&+cwatches for trouble.&n
+~
+&+w   The city guards are warrior type here to serve the necromancers and
+&+wprotect the city from invaders and non-believers.  They are human and
+&+wprotected with spells from the necromancers themselves.&n
+~
+67110920 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139964
+guard~
+&+ca Skull City &+Wguard&n~
+&+cA Skull City &+Wguard &n&+cwatches for trouble.&n
+~
+&+w   The city guards are warrior type here to serve the necromancers and
+&+wprotect the city from invaders and non-believers.  They are human and
+&+wprotected with spells from the necromancers themselves.&n
+~
+67110922 0 0 0 8 0 0 0 -500 S
+PH 0 1 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139965
+guard~
+&+ca Skull City &+Wguard&n~
+&+cA Skull City &+Wguard &n&+cwatches for trouble.&n
+~
+&+w   The city guards are warrior type here to serve the necromancers and
+&+wprotect the city from invaders and non-believers.  They are human and
+&+wprotected with spells from the necromancers themselves.&n
+~
+67110920 0 0 0 8 0 0 0 -500 S
+PH 0 1 0 -1
+15 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139966
+innkeeper pudgy~
+&+ga &+ypudgy&+g innkeeper&n~
+&+gA &+ypudgy &+ginnkeeper is here cleaning up.&n
+~
+&+w   The inkeeper is just another merchant here that is trying to make his
+&+wmoney.  He watches the bar for any signs of trouble but does not seem to
+&+winterfere with "every day things".  He is pleasant and smiles at everybody
+&+wthat walks in.  The only odd thing is that one senses an unusual aura from
+&+wthe innkeeper.&n
+~
+2122 0 0 0 822083752 264384 0 0 -1000 S
+UV 0 10 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139967
+necromancer young~
+&+wa young &+Lnecromancer&n~
+&+wA young &+Lnecromancer&n&+w is here studying.&n
+~
+&+w   This necromancer is young, maybe one of the students of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+200 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+11 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139968
+necromancer assistant~
+&+wan assistant &+Lnecromancer&n~
+&+wAn assistant &+Lnecromancer &n&+wis here drinking.&n
+~
+&+w   This necromancer is older, maybe one of the techers of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+202 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+21 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139969
+zombie~
+&+wan servant &+Lzombie&n~
+&+wA servant &+Lzombie&n&+w is getting something for his master.&n
+~
+&+w   The zombie is a dirt covered corpse that is walking somewhere to do a
+&+wtask for its master.&n
+~
+33560664 0 0 0 256 0 0 0 0 S
+U 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139970
+necromancer young~
+&+wa young &+Lnecromancer&n~
+&+wA young &+Lnecromancer&n&+w is here digging.&n
+~
+&+w   This necromancer is young, maybe one of the students of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+202 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+11 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139971
+necromancer master~
+&+wa master &+Lnecromancer&n~
+&+wA master &+Lnecromancer &n&+wis here instructing his students.&n
+~
+&+w   He is an older necromancer with obious experience in the arts.&n
+~
+67109066 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139972
+creeping claw~
+&+wa wandering &+Wcreeping claw&n~
+&+wA wandering &+Wcreeping claw&n&+w is slowly moving about.&n
+~
+&+w  This is a skeletal humanoid hand that is walking around on its bony finger
+&+wtips to who knows where.&n
+~
+33560664 0 0 0 256 0 0 0 0 S
+U 0 1 0 -1
+3 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139973
+shambling reaper~
+&+ga &+rshambling &+greaper&n~
+&+gA &+rshambling&+g reaper lumbers around angrily.&n
+~
+&+w   This creature is a combined heap of flesh and bone meshed into one awful
+&+wundead creation.  One can see two heads, maybe six eyes protruding from its
+&+wtorso.  It is hideous to look at and its howl is as if some animal is in
+&+wa great deal of pain.&n
+~
+847255624 0 0 0 268435752 0 0 8192 -1000 S
+U 0 1 0 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139974
+ghoul~
+&+wa deformed &+rgh&+Loul&n~
+&+wA deformed &+rgh&+Loul &n&+wis rampaging around in anger.&n
+~
+&+w   The ghoul is a deformed undead, obviously an experiment gone bad.  It
+&+wnow rampages through the swamp in anger and in pain.&n
+~
+301997640 0 0 0 256 0 0 0 -1000 S
+U 0 1 0 -1
+15 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139975
+golem~
+&+wa g&+Wran&n&+wite &+Wgol&n&+wem~
+&+wA g&+Wran&n&+wite &+Wgol&n&+wem stands here motionless.&n
+~
+&+w   The statue is twice the height of a man.  It is completely made from
+&+wgranite and has the face of a horned human face with an open gap for a
+&+wmouth.&n
+~
+302536266 0 0 0 268435848 0 16384 0 0 S
+OG 0 1 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139976
+nhool~
+&+wNhool&+B, the merchant&n~
+&+wNhool&+B, the merchant waits in his &+Gsmall test &+Bfor costumers.&n
+~
+&+w   Nhool is a halfling merchant who came to the city to do business.  He
+&+wappears as a typical halfling but is an obvious skilled negotiator at
+&+wselling goods.  He talks to several of the inhabitants to show them his
+&+wnew goods.  There are several boxes by him that he keeps well within sight.
+&+wEvery once in a while one sees Nhool making some shady deal with one of
+&+wthe city inhabitants.&n
+~
+2122 0 0 0 0 0 0 0 -200 S
+PF 0 12 0 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139977
+dirty dumpy merchant~
+&+ya dumpy, dirty merchant&n~
+&+yA dumpy, dirty merchant is here trying to pawn off his goods.&n
+~
+&+w   The merchant ignores all but those who he can get gold out of.  He is an
+&+wobese unkept &+Lhalf-orc&n&+w that is missing a couple teeth.&n
+~
+2206 0 0 0 0 0 0 0 -1000 S
+HO 0 13 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139978
+sleezy merchant~
+&+Ma sleezy merchant&n~
+&+MA sleezy merchant is here trying to pawn off his goods.&n
+~
+&+w   The merchant ignores all but those who he can get gold out of.  He is a
+&+wthin unshaven &+chuman &+wthat is balding on top.&n
+~
+2206 0 0 0 0 0 0 0 -200 S
+PH 0 13 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139979
+necromancer wide~
+&+wa wide eyed &+Lnecromancer&n~
+&+wa wide eyed &+Lnecromancer&n&+w is looking for goods here.&n
+~
+&+w   This necromancer is young, maybe one of the students of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+202 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+16 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139980
+necromancer obese~
+&+wan obese &+Lnecromancer&n~
+&+wan obese &+Lnecromancer&n&+w is looking for goods here.&n
+~
+&+w   This necromancer is young, maybe one of the students of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+202 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+30 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139981
+necromancer bony~
+&+wa &+Wbony &+Lnecromancer&n~
+&+wa &+Wbony &+Lnecromancer&n&+w is looking for goods here.&n
+~
+&+w   This necromancer is young, maybe one of the students of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+202 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+4 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139982
+necromancer greedy~
+&+wa greedy &+Lnecromancer&n~
+&+wa greedy &+Lnecromancer&n&+w is looking for goods here.&n
+~
+&+w   This necromancer is young, maybe one of the students of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+202 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+19 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139983
+golem~
+&+wa four armed bank golem&n~
+&+wA golem with four arms and a &+Bchest of swirling mist&n&+w is standing here.&n
+~
+&+w   The golem is larger then the biggest &+bogre&+w one can imagine.  Where its
+&+wchest was there is a large &+Bswirl of mist&n&+w.  In here is where one deposits
+&+wor withdraws &+Ycoins&n&+w just by thought alone.&n
+~
+75499530 0 0 0 268435600 262144 262144 8192 0 S
+OG 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139984
+pillar~
+&+La pi&+Wl&+Llar o&+Wf&+L sku&+Wl&+Lls &+Wa&+Lnd darkn&+We&+Lss&n~
+&+wA pillar of &+Wskulls&n&+w and &+Ldarkness&n&+w watches one's every move.
+~
+&+w   The pillar is a living creation of the negative material plane and bones.
+&+wEyes from bony faces haunt every side of the pillar and watch one's every step.
+&n
+~
+369117258 0 0 0 268435464 0 0 0 0 S
+O 0 1 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139985
+leon warrior guard~
+&+bLeon&+L, the academy guard~
+&+bLeon&+L, the academy guard stands here watching for unwanted guests.&n
+~
+&+w   Leon is one of the hired warriors to protect the academy from intruders.
+&+wHe is a tall, strong human with bure eyes.  His skin is very pale while his
+&+whair is black as night.  It seems nothing get past him.&n
+~
+335546378 0 0 0 0 0 0 0 -1000 S
+PH 0 5 0 -1
+26 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139986
+bracos priest~
+&+LBracos&n&+m the priest&n~
+&+LBracos&n&+m, the priest of the &+Msuffering goddess&n&+m is here pacing.&n
+~
+&+w   Bracos is a tall human priest with many scars on his face and arms, each
+&+wtoo perfect to be done within the madness of battle.  The scars appear to
+&+wbe done by the madness of Bracos himself.  He paces here watching the
+&+wstreets as if waiting for something.&n
+~
+8 0 0 0 65552 0 0 0 -1000 S
+PH 0 6 0 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139987
+man guard~
+&+LBracos's &n&+mbodyguard&n~
+&+mA man is here protecting his master, &+LBracos&n&+m, from harm.&n
+~
+&+w   The bodyguard is keeping an eye on all who pass his gaze.  He is not
+&+wlarge or seemingly powerful, but his eyes yield the thought that he has
+&+wyears of experience.&n
+~
+2122 0 0 0 268435456 0 0 0 -1000 S
+PH 0 1 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139988
+merchant visiting~
+&+Ga visiting merchant&n~
+&+GA merchant is her visiting from another town.&n
+~
+&+w   The merchant is here looking over invoices of sales and counting his
+&+wcoins.  He sips a bit from his drink never once looking up, He is human.&n
+~
+2266 0 0 0 0 0 0 0 0 S
+PH 0 13 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139989
+wizard mage portly~
+&+ca portly wizard&n~
+&+cA portly wizard is here practicing his spells.&n
+~
+&+w   The mage is of a young age for an elf.  He is here in amazement of his
+&+wown magical abilities as he practices some simple spells.&n
+~
+2266 0 0 0 0 0 0 0 0 S
+PE 0 10 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139990
+bard~
+&+Ma morbid happy-go-lucky &+Lbard~
+&+MA bard is here playing some &+Lmorbid music.&n
+~
+&+w   The bard is dressed in clothes that seems unusual for a bard.  Where
+&+wgayful images would be on his person there appear grinning skulls and
+&+wdancing skeletons.&n  A large demon with horns is painted on his back as he
+&+wturns around to show all when one looks.  He smiles as if proud to have it
+&+wand continues playing.&n
+~
+2266 0 0 0 0 0 0 0 -300 S
+PH 0 16 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139991
+merchant scrawny~
+&+Ba scrawny merchant&n~
+&+BA scrawny merchant is here setting up shop.&n
+~
+&+w   The merchant is here looking over invoices of sales and counting his
+&+wcoins.  He is trying to set up his tent at the same time.&n
+~
+2266 0 0 0 0 0 0 0 0 S
+PH 0 13 0 -1
+16 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139992
+necromancer young~
+&+wa young &+Lnecromancer&n~
+&+wA young &+Lnecromancer&n&+w is here working on a corpse.&n
+~
+&+w   This necromancer is young, maybe one of the students of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+202 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+11 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139993
+necromancer assistant~
+&+wan assistant &+Lnecromancer&n~
+&+wAn assistant &+Lnecromancer &n&+wis here carving up a corpse.&n
+~
+&+w   This necromancer is older, maybe one of the techers of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+202 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+21 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139994
+necromancer assistant~
+&+wan assistant &+Lnecromancer&n~
+&+wAn assistant &+Lnecromancer &n&+wis here listening to his master speak.&n
+~
+&+w   This necromancer is older, maybe one of the techers of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+67109066 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+21 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139995
+necromancer young~
+&+wa young &+Lnecromancer&n~
+&+wA young &+Lnecromancer&n&+w is here learning from the master.&n
+~
+&+w   This necromancer is young, maybe one of the students of the academy.  He
+&+wlooks up for a second at you wondering what you want, then goes back to what
+&+whe was doing.&n
+~
+67109066 0 0 0 0 0 0 0 -1000 S
+PH 0 11 0 -1
+11 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139996
+necromancer prote~
+&+MProte' de Morte&n~
+&+MProte' de Morte&n&+m, the master necromancer is here instructing his students.&n
+~
+&+w   Prote is the teacher for spells to all necromancers.  He is old and has
+&+wa bit of a hearing problem but the new masters know that his knowledge of
+&+wthe arts is infinite.  He is here instructing some new students their spells.&n
+~
+335595722 0 0 0 268501144 264192 18874368 0 -1000 S
+PH 0 11 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139997
+drake~
+&+MDrake de Morte&n~
+&+MDrake de Morte&n&+m pops out of the closet snarling and clawing.&n
+~
+&+w   Drake is a living man that appears almost as an undead.  He is small
+&+wand fraile looking but has the strength of an ox.  His eyes are beedy and
+&+wsmall, as would be a madman's.  His dealings in the dark magic have given
+&+whim great strength at the cost of other things.&n
+~
+335547978 0 0 0 268501032 64 0 0 -1000 S
+PH 0 11 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139998
+ngise~
+&+MNgise de Morte&n~
+&+MNgise de Morte&n&+m is here studying when he notices your intrusion.&n
+~
+&+w   Ngise is a plump balding man in his mid-years.  He is pale from lack
+&+wof being in the sun and looks awfully annoyed at the intrusion.&n
+~
+335546442 0 0 0 268501032 64 0 0 -1000 S
+PH 0 11 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139999
+skeleton golem judge~
+&+wthe judge of petitioners&n~
+&+LA tall obsidian skeleton stands here with a &+csword&+L and a &n&+yscroll&+L in each hand
+~
+&+w   The skeleton is deep black, made of a dark magical stone that slightly
+&+wglows in this lifeless room.  His eyes empty and his jaw open he looks upon
+&+wyou, judgement has been passed.&n
+~
+276856394 0 0 0 268501416 14528 0 8192 0 S
+OG 0 1 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140000
+vampire blaesing~
+&+wa &+rvampire&n~
+&+LBlaesing&n&+w, an angry &+rvampire &+wappears out of nowhere and attacks.&n
+~
+&+w   The vampire is ghostly white with eyes of blazing red.  His anger at
+&+wyour intrusion only fuels his rage.  He must have been human at one point,
+&+wbut now is a powerful being of darkness.&n
+~
+1073879148 0 0 0 135266336 266304 0 0 -1000 S
+UV 0 1 0 -1
+30 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140001
+vampire absalom~
+&+wa &+rvampire&n~
+&+LAbsalom&n&+w, an angry &+rvampire &+wappears out of nowhere and attacks.&n
+~
+&+w   The vampire is ghostly white with eyes of blazing red.  His anger at
+&+wyour intrusion only fuels his rage.  He must have been human at one point,
+&+wbut now is a powerful being of darkness.&n
+~
+1073879150 0 0 0 135266336 266304 0 0 -1000 S
+UV 0 10 0 -1
+30 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140002
+vampire harrow~
+&+wa &+rvampire&n~
+&+LHarrow&n&+w, an angry &+rvampire &+wappears out of nowhere and attacks.&n
+~
+&+w   The vampire is ghostly white with eyes of blazing red.  His anger at
+&+wyour intrusion only fuels his rage.  He must have been human at one point,
+&+wbut now is a powerful being of darkness.&n
+~
+1073879150 0 0 0 135266336 266304 0 0 -1000 S
+UV 0 13 0 -1
+30 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140003
+human~
+&+wa tortured human&n~
+&+wA human is here with his hands in a set of &+yboxes&n
+~
+&+w   This tortured person has both his hands in some sort of torture box.
+&+wFrom each bload trickled around the outside of the box and hooks keep the
+&+whands from being removed from the box.  Around his head are two screws
+&+wplanted within a head clamp to apply pressure.  He is in obvious pain.&n
+~
+138 0 0 0 0 1024 0 0 250 S
+PH 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140004
+human~
+&+wa tortured human&n~
+&+wA human is here imprisoned in an &+yiron cage&+w with his eyes gouged out.&n
+~
+&+w   The man is contorted in an iron cage in an odd position.  His eyes have
+&+wbeen torn out and left for the maggots to feast upon.  The cage seems a bit
+&+wtoo small for a man his size.&n
+~
+138 0 0 0 0 1024 0 0 250 S
+PH 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140005
+human~
+&+wa tortured human&n~
+&+wA human is here hanging by his skin on &+Lhooks.&n
+~
+&+w   This person is barely alive.  He is being held up only by his skin, which
+&+wis punctured and hung on ny several hooks hanging down from the ceiling.
+&+wBlood is coming out of every wound in such quantities that would kill a
+&+wnormal man, except he is not dead.&n
+~
+138 0 0 0 0 1024 0 0 250 S
+PH 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140006
+human~
+&+wa tortured human&n~
+&+wA hu&+rman is&+w here w&+rith &+wall his ap&+rpenda&+wges cut off.&n
+~
+&+w   This poor soul has had all his limbs chopped off at the body and was
+&+wleft here to rot.&n
+~
+138 0 0 0 0 1024 0 0 250 S
+PH 0 1 0 -1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140007
+golem skeleton iron~
+&+yan iron golem&n~
+&+yAn iron sarcophagus of an &+Welongated skeleton&n&+y is resting against the south wall.&n
+~
+&+w   This sarchopagus is of an elongated skeleton wearing a dark, hodded robe
+&+wand holding a rusty scythe.&n
+~
+67127370 0 0 0 136 192 0 0 0 S
+OG 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140008
+creature~
+&+ya m&+rutat&+yed c&+yrea&+Lture&n~
+&+wLying on the &+ctable &+ya m&+rutat&+yed crea&+Lture &n&+wlooks up, howling in agony.&n
+~
+&+w   The living creature composed of unnatural parts feebly struggles against
+&+wthe chains that bind it.  Perhaps it was once a man...?  The lost flesh has
+&+wapparently been replaced with the tissue if various different types of
+&+wanimals and monsters.  One leg has been replaced with a black tentacle, the
+&+wother with a long, groping, green-tinged arm.  The victim on the table
+&+wstill retains one natural arm, but the other is hidden under a black cloak.&n
+~
+10 0 0 0 0 0 0 8192 1000 S
+H 0 1 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+5 5 1
+#140009
+vampire ferranifer~
+&+wFerranifer, the necromancer &+rvampire~
+&+LFerranifer&n&+w, the head necromancer &+rvampire &+wappears annoyed at one's intrusion.&n
+~
+&+w   The vampire is ghostly white with eyes of blazing red.  Her anger at
+&+wyour intrusion only fuels her rage.  She must have been human at one point,
+&+wbut now is a powerful being of darkness.&n
+~
+1140987948 0 0 0 134217760 266304 0 0 -1000 S
+UV 0 11 0 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#140010
+skull~
+&+Wa &+Rflameskull&n~
+&+WA &+Rflaming skull&+W is burning quietly here.&n
+~
+&+w   This human skull has a small flame that comes out of the top of its head.
+&+wIts eyes glow with anger at one's intrusion.&n
+~
+100796459 0 0 0 402685960 266432 0 8192 -1000 S
+U 0 10 0 -1
+26 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140011
+brine dragon~
+&+La brine dragon&n~
+&+LA brine dragon is here curled up in the &+Wsalt&+L rearing his head back.&n
+~
+&+w   The dragon is a massive beast at least twenty meters long!  It is a
+&+wcolossal serpent, with a thickened central body bearing huge flippers.  Its
+&+whead is unmistakably draconic, and its oversized teeth make it appear to
+&+wbe grinning even if its eyes were closed.  Its hide is rough and mottled,
+&+wridged and craggy.  The scales are irregular and do not fit together well.
+&+wHuge clumps of salt encrust its saurian length.&n
+~
+8800366 0 0 0 268437608 64 0 0 -1000 S
+D 0 1 0 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140012
+molian zombie statue~
+&+wa &+CMolian &n&+wzombie&n~
+&+wA statue of a man covered in &+Cfrost&n&+w is here.&n
+~
+&+w   The statue is of a man with eyes shut standing upright.  The figure is
+&+wcovered in frost.&n
+~
+33556490 0 0 0 40 64 2097152 8192 0 S
+U 0 1 0 -1
+28 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140013
+wraith spider~
+&+wa &+Wwraith &+Gspider~
+&+wA ghostly &+Wwraith &+Gspider &n&+wis crawling around on the webs.&n
+~
+&+w   The wraith spider is a ghostly vision of a decay and frost.  Its fangs
+&+ware long and as white as the moon on a clear night.  Its eyes, black spheres
+&+wthat reflect the light off any source, are empty and unforgiving.  It app-
+&+wroaches ready to protect its web and destroy all intruders.&n
+~
+33558603 0 0 0 1048616 64 0 0 -1000 S
+U 0 1 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140014
+oak tree~
+&+ya mighty &+goak tree&n~
+&+yA mighty &+goak tree &+yis here with its roots deep within the soil.&n
+~
+&+w   The tree is enormous compared to oaks of its age.  Its roots spread to
+&+wall four corners of the room digging and rooting there way through the soft
+&+wmoist ground.  Its massive branches are animated moving back and forth
+&+wviolently.&n
+~
+33554474 0 0 0 16777272 0 262144 0 0 S
+VT 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140015
+cat~
+&+La ga&+Wrg&+Lantua&+Wn c&+Lat with m&+Wany tails&n~
+&+LA ga&+Wrg&+Lantua&+Wn c&+Lat with m&+Wany &+gsnake-headed&+W tai&+Lls is stalk&+Wing prey h&+Lere.&n
+~
+&+w   This gargantuan cat looks like any other feline, but is twice as massive
+&+was an ogre.  It face has an evil malicious expression of hate and horror as
+&+wits features are distorted with its mouth being full of many razor sharp
+&+wteeth.&n
+~
+1082148968 0 0 0 40 0 0 0 -1000 S
+L 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140016
+wight winter ice skeleton~
+&+Wa &+Cwinter &+Wwight&n~
+&+wAn &+Cice covered &+Wskeleton &n&+wwith a skull of &+Lblack flame &n&+wstands here ready.&n
+~
+&+w   The creature appears as a humanoid skeleton sheathed in thick casings
+&+wof clear ice, save for its skull.  The skull emites a black flame that seems
+&+wattracted to living flesh.  Despite the ice, these creature moves unhindered
+&+wby their frozen shells.&n
+~
+1107560490 0 0 0 40 64 2097152 8192 -1000 S
+U 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140017
+molian zombie statue~
+&+wa &+CMolian &n&+wzombie&n~
+&+wA corpse holding a &+yplanting t&+gool&+w covered in &+Cfrost&n&+w is here.&n
+~
+&+w   The corpse appears to be one of the gardenrers of this place, now a
+&+wvictim of the demise of Moil.&n
+~
+33556490 0 0 0 40 64 2097152 8192 0 S
+U 0 1 0 -1
+28 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140018
+gladiator~
+&+ya &+Lgladiator&n&+y of immense size&n~
+&+yA &+Lgladiator &n&+yof immense size is here ready for battle.&n
+~
+&+w   This human? stands about a troll's height.  He is as massive as an ogre
+&+wand wears a helm of spikes.  He has leather armor and a small buckler.  His
+&+wskin is very tanned and his voice booms throughout the area when he speaks.
+&+wHe wields a massive sword of rusted iron.&n
+~
+41945198 0 0 0 285212712 2048 0 0 0 S
+PH 0 1 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140019
+wight winter ice skeleton~
+&+Wa large &+Cwinter &+Wwight&n~
+&+CA large &+Wskeleton &+Cis forever frozen in the ice wall.&n
+~
+&+w   The creature appears as a humanoid skeleton sheathed in thick casings
+&+wof clear ice, save for its skull.  The skull emites a black flame that seems
+&+wattracted to living flesh.  Despite the ice, these creature moves unhindered
+&+wby their frozen shells.&n
+~
+1115965450 0 0 0 268435496 64 2097152 8192 -1000 S
+U 0 1 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140020
+molian zombie humanoid form~
+&+wa &+CMolian &n&+wzombie&n~
+&+wA humanoid form incased in &+Cice&n&+w is here.&n
+~
+&+c   The humanoid is frozen solid within the ice.&n
+~
+100665354 0 0 0 1048616 64 2097152 8192 0 S
+U 0 1 0 -1
+28 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140021
+molian zombie humanoid form~
+&+wa &+CMolian &n&+wzombie&n~
+&+wA humanoid form incased in &+Cice&n&+w is here.&n
+~
+&+c   The humanoid is frozen solid within the ice.&n
+~
+100665354 0 0 0 40 64 2097152 8192 0 S
+U 0 1 0 -1
+28 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140022
+molian zombie corpse~
+&+wa &+CMolian &n&+wzombie of a wizard&n~
+&+wA withered &+Cfrost&n&+w covered corpse is here.&n
+~
+&+w   The body is of a human wizard.  His face is withered and white in color.
+&+wThe pupils are whitish-blue giving an impresssion that this man had no pupils
+&+wat all.  His robe of runes are frozen and stiff, any attempt to remove them
+&+wwould end in its destruction.  His death must have been a horrid one as the
+&+wsheer appearance of terror on his withered face leads one to believe that his
+&+wvery soul was removed from this corporal form.&n
+~
+33556490 0 0 0 40 64 2097152 8192 0 S
+U 0 1 0 -1
+28 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140023
+wight winter ice skeleton~
+&+Wa &+Cwinter &+Wwight&n~
+&+wAn &+Cice covered &+Wskeleton &n&+wwith a skull of &+Lblack flame &n&+wis wandering about.&n
+~
+&+w   The creature appears as a humanoid skeleton sheathed in thick casings
+&+wof clear ice, save for its skull.  The skull emites a black flame that seems
+&+wattracted to living flesh.  Despite the ice, these creature moves unhindered
+&+wby their frozen shells.&n
+~
+1107560488 0 0 0 40 64 2097152 8192 -1000 S
+U 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140024
+molian zombie humanoid form~
+&+wa &+CMolian &n&+wzombie&n~
+&+wA &+Cfrost&n&+w covered humanoid form is wandering here.&n
+~
+&+c   The humanoid is frozen solid within the ice.&n
+~
+100665352 0 0 0 40 64 2097152 8192 0 S
+U 0 1 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140025
+desatysso human~
+&+cthe old withered mage, &+CDesatysso&n~
+&+cA human shape dangles from the hook on a leather strap.&n
+~
+&+w   The figure wears only the tattered remnants of a robe, and so it is
+&+wpossible to see that its &+Warms&n&+w have been sewn to its sides and that its &+Wlegs
+&+whave been stitched together and, most disquieting of all, the same bulky
+&+Lblack thread &n&+whas also been used to sew the man's &+Weyes&n&+w closed and his &+Wlips
+&+wshut.  A low, inarticulate groan of pain issues from the dangled figure.&n
+~
+4194314 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+6 6 1
+#140026
+beast nightwalker~
+&+rthe Night&+Lwalker&n~
+&+rA beast of pure &+Ldarkness stands here.&n
+~
+&+w   The beast is a vision of utter darkness obviously giving away where its
+&+worigin is.  Only shadows are seen as it moves from one place to another.
+&+wAn intense growl that digs deep into one's chest echoes throughout the
+&+warea causing unease even if the most brave of warriors.&n
+~
+33556526 0 0 0 2346 262208 0 0 -1000 S
+X 0 1 0 -1
+42 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140027
+dretch~
+&+ra &+Rdretch&n~
+&+rA &+Rdretch &n&+ris here bound to the &+wchains&+r whimpering for help.&n
+~
+&+w   This small fiend is the size of a dwarf.  Its skin is a dull brown and
+&+wits teeth small and sharp.  Its eyes are black as night, yet the small
+&+wfellow if frightened and alone.  He begs for you to help him.&n
+~
+207 0 0 0 0 0 0 0 -1000 S
+X 0 1 0 -1
+12 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140028
+demon galzrebru~
+&+rthe demon, &+RGa&+Ll&+Rzre&+Lbr&+Ru~
+&+rA large &+Rdemonic&n&+r looking hulk is here sharpening waiting for prey.&n
+~
+&+w   The demon stands about twice a human's height and twice as wide.  His
+&+whorned dog face reveals sharp teeth when he grins at his pray.  The fiend
+&+whas two small human hands and two pincers that form all four arms.  His
+&+wlegs and feet are of some large muscled creature.  he is brownish-black
+&+win coloring.&n
+~
+1073743914 0 0 0 536871210 64 262144 0 -1000 S
+X 0 1 0 -1
+42 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140029
+demon maraloth~
+&+ra demon named &+GMa&n&+gral&+Got&n&+gh&n~
+&+g&+GA s&n&+gix a&+Grmed &n&+rdemon &n&+wstands here, released from her temporal stasis.&n
+~
+&+w   The demon stands a bit taller than a large man.  She has six arms, each
+&+wwielding weapons of various sorts.  Her large bosom do not hide the fact
+&+wthat the lower half of her body is a large twisting serpent.&n
+~
+1082132520 0 0 0 536871210 64 262144 0 -1000 S
+X 0 1 0 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#140030
+demon nalfashee~
+&+rthe demon, &+yNal&+Rfas&n&+yhe&+Re&n~
+&+ra foul &+Rdemon &n&+ro&+yf th&+re a&+yby&+rss &+wstands here, released from his stasis.&n
+~
+&+w   The demon stands about the height of a troll.  Its goat legs would not
+&+wseem to support its massive pot bellied torso and boars head.  Its hands
+&+ware huge only ending in talon like claws.&n
+~
+1073743912 0 0 0 536871208 64 0 0 -1000 S
+X 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140031
+demon volk~
+&+rthe demon, &+LVolk&n~
+&+LA l&n&+yar&+Lg&n&+ye bi&+Lrd li&n&+yke &+Rdemon&n&+r &+wis standing here, released from stasis.&n
+~
+&+w   This troll sized demon is long and gangly.  Its black and brown seemly
+&+wburnt skin only adds to the disgust of looking at such a creature.  Dozens
+&+bof feathers protrude from the beast's body at various spots.  The only place
+&+wwhere the feathers seem to do something is where its wings are.&n
+~
+1073874984 0 0 0 536871210 0 0 0 -1000 S
+X 0 1 0 -1
+34 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140032
+demon morudaes~
+&+rthe demon, &+LMo&n&+yrud&+La&n&+yes~
+&+rA large dog faced &+Rdemon&n&+r is standing here, released from his stasis.&n
+~
+&+w   The massive demon is as large as an ogre.  It has a hoof as one leg and
+&+wa large clawed dog leg as the other.  Its twisted wolf face combined with
+&+wsecond snake head only adds to its putrid appearance.&n
+~
+1073743912 0 0 0 536871210 64 262144 0 -1000 S
+X 0 1 0 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140033
+pile bone bones~
+&+Wa pile of bones&n~
+&+WA pile of bones moves closer to consume you.&n
+~
+&+w   This is a pile of twisted and fused bone that has animated to attack.  It
+&+wseems stronger then the random piles around, has more unlife.&n
+~
+2154 0 0 0 40 0 0 0 0 S
+U 0 1 0 -1
+25 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140034
+pile bone bones weird~
+&+wa &+Wbone &n&+wweird&n~
+&+wA huge pile of &+Wbones&n&+w rises out of the pit and attacks.&n
+~
+&+w   This is a pile of twisted and fused bone that has animated to attack.  It
+&+wis huge in size and obviously the most powerful creature here.&n
+~
+2154 0 0 0 40 0 0 0 0 S
+U 0 1 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140035
+negative~
+&+Lthe negative energy&n~
+&+LThe darkness of the negative material plane begins to consume one's body.&n
+~
+~
+1107429482 0 0 0 268435640 262144 0 8192 0 S
+U 0 1 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140036
+sphere darkness annihilation~
+&+Lthe sphere of annihilation~
+&+LA sphere of darkness floats here.&n
+~
+&+L   This is a sphere of utter darkness and nothingness.  Anything touched by
+&+Lthis abomination is instantly disintegrated.&n
+~
+2090 0 0 0 402653320 262144 0 8192 0 S
+O 0 10 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140037
+demon fuegar~
+&+rthe demon, &+RFuegar&n~
+&+rA large pointy tail, winged &+Rdemon &n&+ris here waiting for souls.&n
+~
+&+w   The demon stands well above a barbarian and appears as such.  Its hair
+&+wis of a swirling fiery mass.  Its dark red skin only augments the lit flames
+&+wone can call eyes.  Each of its hands erupts in small flames of its own.
+&+wa cave of large jagged teeth appear as it smiles upon its new prey.  It
+&+whas a lenghty tail, forked and rigged along its length.  Its wings expand
+&+wout encompassing thrice its width.  A beast from the abyss it is, no one
+&+wcould mistake it for anything else.&n
+~
+1073743914 0 0 0 570425644 1 0 8192 -1000 S
+X 0 1 0 -1
+44 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140038
+elemental creature~
+&+La negative energy elemental&n~
+&+LA creature of black nothingness floats about the area emitting a chill.&n
+~
+&+w   The creature only has form, a dark form that alters its shape and size.
+&+wIt has no eyes, ears, nose, or mouth.  No arms are present to speak of and
+&+wits movement seems as if it is underwater, yet it floats.&n
+~
+1107449896 0 0 0 403701800 262144 0 0 -1000 S
+U 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140039
+statue~
+&+La dark eyed statue&n~
+&+wA statue depicting a figure in a voluminous robe and cowl is here.&n
+~
+&+w   The statue is of a human male in a robe and cowl.  His face is express-
+&+wionless.&n
+~
+34082922 0 0 0 268435848 0 16384 0 0 S
+OG 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140040
+demon baldzor creature~
+&+rthe demon, &+YBa&+Rl&+Ydz&+Ro&+Yr&n~
+&+CA large &+Rdemonic &+Ccreature is here trapped in a magical cylinder.&n
+~
+&+w   The massive demon stands way above an ogre and is twice as wide.  Its
+&+whorned head and sharp teeth only add to its terror.  Its claws can crush a
+&+whuman with a mere clinch.  The demon is mostly red and black in color with
+&+wpatterned spots of yellow on its side.  It notices one's approach and tele-
+&+wpathically projects &+W"release me and I will help you defeat Mealdrun.  I wish
+&+Whis death as much as you for he is my son.  He imprisoned me here to force
+&+Wall the demons under my order to serve him.  Give me my sword, it is the only
+&+Witem that can release me from my prison, Do this now for I have the only way
+&+Win to his hub!"&n&+w  He shifts in his magical prison.&n
+~
+1107429390 0 0 0 570425640 65 0 8192 -1000 S
+X 0 1 0 -1
+48 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140041
+zombie~
+&+wa headless &+Lzombie&n~
+&+wA headless &+Lzombie&n&+w stands here blankly.&n
+~
+&+w   This is one of Mealdrun's unused undead.  These seem less then adequate
+&+wto do his bidding.  Each have parts missing or are too fragile to be of any
+&+wreal use.  Some appear totally blank or possibly hostile unwilling to listen
+&+wto any commands.  this one is more whole then most of the undead parts roaming
+&+waround the area.&n
+~
+100669512 0 0 0 264 0 0 0 0 S
+U 0 1 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140042
+zombie~
+&+wa twisted &+Lzombie&n~
+&+wA twisted &+Lzombie&n&+w stands here blankly.&n
+~
+&+w   This is one of Mealdrun's unused undead.  These seem less then adequate
+&+wto do his bidding.  Each have parts missing or are too fragile to be of any
+&+wreal use.  Some appear totally blank or possibly hostile unwilling to listen
+&+wto any commands.  this one is more whole then most of the undead parts roaming
+&+waround the area.&n
+~
+100669512 0 0 0 264 0 0 0 0 S
+U 0 1 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140043
+zombie~
+&+wan one armed &+Lzombie&n~
+&+wAn one armed &+Lzombie&n&+w stands here blankly.&n
+~
+&+w   This is one of Mealdrun's unused undead.  These seem less then adequate
+&+wto do his bidding.  Each have parts missing or are too fragile to be of any
+&+wreal use.  Some appear totally blank or possibly hostile unwilling to listen
+&+wto any commands.  this one is more whole then most of the undead parts roaming
+&+waround the area.&n
+~
+100669512 0 0 0 264 0 0 0 0 S
+U 0 1 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140044
+gargoyle mother~
+&+wa &+Whuge &n&+wfour armed gargoyle&n~
+&+wThe &+Wmother&n&+w of all four armed gargoyles is standing motionless here.&n
+~
+&+w   The statue is of a hulking, winged, four-armed monstrosity somewhat
+&+wlarger than a human.  The sculpture looks menacing with its sharp teeth
+&+wand enlarged claws.  It is a statue of a gargoyle.&n
+~
+1107298314 0 0 0 128 0 262144 0 0 S
+OG 0 1 0 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140045
+zombie~
+&+wa torso of a &+Lzombie&n~
+&+wA torso of a &+Lzombie&n&+w stands here blankly.&n
+~
+&+w   This is one of Mealdrun's unused undead.  These seem less then adequate
+&+wto do his bidding.  Each have parts missing or are too fragile to be of any
+&+wreal use.  Some appear totally blank or possibly hostile unwilling to listen
+&+wto any commands.  this one is more whole then most of the undead parts roaming
+&+waround the area.&n
+~
+100669512 0 0 0 264 0 0 0 0 S
+U 0 1 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140046
+skeleton~
+&+wa headless &+Wskeleton&n~
+&+wAn headless &+Wskeleton&n&+w stands here blankly.&n
+~
+&+w   This is one of Mealdrun's unused undead.  These seem less then adequate
+&+wto do his bidding.  Each have parts missing or are too fragile to be of any
+&+wreal use.  Some appear totally blank or possibly hostile unwilling to listen
+&+wto any commands.  this one is more whole then most of the undead parts roaming
+&+waround the area.&n
+~
+100669512 0 0 0 264 0 0 0 0 S
+U 0 1 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140047
+zombie~
+&+wa &+Lzombie&n with its head backward&n~
+&+wA &+Lzombie&n&+w with its head backward stands here blankly.&n
+~
+&+w   This is one of Mealdrun's unused undead.  These seem less then adequate
+&+wto do his bidding.  Each have parts missing or are too fragile to be of any
+&+wreal use.  Some appear totally blank or possibly hostile unwilling to listen
+&+wto any commands.  this one is more whole then most of the undead parts roaming
+&+waround the area.&n
+~
+100669512 0 0 0 264 0 0 0 0 S
+U 0 1 0 -1
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140048
+forge~
+&+LThe negative magic of the forge&n~
+&+wThe power of the forge turns on around one's body.&n
+~
+&+w   The energy of the forge strikes one's body beginning the process of des-
+&+wtroying the soul and making an undead being.&n
+~
+42496042 0 0 0 939524248 274624 0 8192 0 S
+O 0 1 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140049
+demon baldzor creature~
+&+rthe demon, &+YBa&+Rl&+Ydz&+Ro&+Yr&n~
+&+rThe &+Yba&+Rl&+Ydz&+Ro&+Yr &n&+rdemon was summoned here from his &+Ccrystal prison&n&+r to serve &+RMealdrun&n&+r.&n
+~
+&+w   The massive demon stands way above an ogre and is twice as wide.  Its
+&+whorned head and sharp teeth only add to its terror.  Its claws can crush a
+&+whuman with a mere clinch.  The demon is mostly red and black in color with
+&+wpatterned spots of yellow on its side.  It recognises one from before but
+&+wthis time it is in the service of &+RMealdrun &n&+was it is he who knows its true
+&+wname.&n
+~
+33687598 0 0 0 570425640 65 0 8192 -1000 S
+X 0 1 0 -1
+48 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#140050
+wight winter ice skeleton~
+&+Wa &+Cwinter &+Wwight&n~
+&+wAn &+Cice covered &+Wskeleton &n&+wwith a skull of &+Lblack flame &n&+wis here serving &+RMealdrun.&n
+~
+&+w   The creature appears as a humanoid skeleton sheathed in thick casings
+&+wof clear ice, save for its skull.  The skull emites a black flame that seems
+&+wattracted to living flesh.  Despite the ice, these creature moves unhindered
+&+wby their frozen shells.&n
+~
+1107560488 0 0 0 40 64 2097152 8192 -1000 S
+U 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#140051
+mealdrun skull demi lich~
+&+Wthe demi-lich &+RMealdrun&n~
+&+WA skull of &+Rj&+Ce&+yw&+Me&+Bl&+Ge&+Ld &+Wteeth and eyes floats here.&n
+~
+&+w   This is a human skull that has &+Gemeralds &n&+was eyes and assorted other gems
+&+was teeth.  Each gem glows with &+Cmagical power&n&+w giving off an eeire &+rred glow
+&+wthat partially illuminates the room.  This is &+RMealdrun&n&+w his final essence.&n
+~
+33714221 0 0 0 939524140 14400 0 0 -1000 S
+U 0 10 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0

@@ -1,0 +1,1275 @@
+#1
+Skull City and the Fortress of Conclusion~
+140302 2 0 40 50 1
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 139916 1 1 100 0 0 0
+*     east exit from "A Village Intersection" to
+*     "Fred's Recruitment Center" - closed
+*
+D 0 139918 3 1 100 0 0 0
+*     west exit from "Fred's Recruitment Center" to
+*     "A Village Intersection" - closed
+*
+D 0 139916 3 1 100 0 0 0
+*     west exit from "A Village Intersection" to
+*     "The Sea Monster Inn" - closed
+*
+D 0 139917 1 1 100 0 0 0
+*     east exit from "The Sea Monster Inn" to
+*     "A Village Intersection" - closed
+*
+D 0 139919 1 1 100 0 0 0
+*     east exit from "Center of Village" to
+*     "Food Supplies" - closed
+*
+D 0 139921 3 1 100 0 0 0
+*     west exit from "Food Supplies" to
+*     "Center of Village" - closed
+*
+D 0 139919 3 1 100 0 0 0
+*     west exit from "Center of Village" to
+*     "Wood Works Repair Shop" - closed
+*
+D 0 139920 1 1 100 0 0 0
+*     east exit from "Wood Works Repair Shop" to
+*     "Center of Village" - closed
+*
+D 0 139941 8 5 100 0 0 0
+*     northeast exit from "Mountain Passes" to
+*     "Mountain Passes" - closed/secret
+*
+D 0 140020 7 5 100 0 0 0
+*     southwest exit from "Mountain Passes" to
+*     "Mountain Passes" - closed/secret
+*
+D 0 139943 1 2 100 0 0 0
+*     east exit from "A Ruined Stronghold" to
+*     "Foyer" - closed/locked
+*
+D 0 139944 3 2 100 0 0 0
+*     west exit from "Foyer" to
+*     "A Ruined Stronghold" - closed/locked
+*
+D 0 139944 0 1 100 0 0 0
+*     north exit from "Foyer" to
+*     "Guest Room" - closed
+*
+D 0 139945 2 1 100 0 0 0
+*     south exit from "Guest Room" to
+*     "Foyer" - closed
+*
+D 0 139944 1 1 100 0 0 0
+*     east exit from "Foyer" to
+*     "Cavern Access" - closed
+*
+D 0 139949 3 1 100 0 0 0
+*     west exit from "Cavern Access" to
+*     "Foyer" - closed
+*
+D 0 139944 2 1 100 0 0 0
+*     south exit from "Foyer" to
+*     "Dining Room" - closed
+*
+D 0 139946 0 1 100 0 0 0
+*     north exit from "Dining Room" to
+*     "Foyer" - closed
+*
+D 0 139947 9 1 100 0 0 0
+*     southeast exit from "Recreation Chamber" to
+*     "Tower of Sorcery" - closed
+*
+D 0 139948 6 1 100 0 0 0
+*     northwest exit from "Tower of Sorcery" to
+*     "Recreation Chamber" - closed
+*
+D 0 139950 2 1 100 0 0 0
+*     south exit from "Tunnel" to
+*     "Storage" - closed
+*
+D 0 139951 0 1 100 0 0 0
+*     north exit from "Storage" to
+*     "Tunnel" - closed
+*
+D 0 139960 9 2 100 0 0 0
+*     southeast exit from "Lair" to
+*     "Treasure Room" - closed/locked
+*
+D 0 139962 6 2 100 0 0 0
+*     northwest exit from "Treasure Room" to
+*     "Lair" - closed/locked
+*
+D 0 139971 1 1 100 0 0 0
+*     east exit from "Naigo Street" to
+*     "A Commoner's Home" - closed
+*
+D 0 139978 3 1 100 0 0 0
+*     west exit from "A Commoner's Home" to
+*     "Naigo Street" - closed
+*
+D 0 139971 3 1 100 0 0 0
+*     west exit from "Naigo Street" to
+*     "A Commoner's Home" - closed
+*
+D 0 139977 1 1 100 0 0 0
+*     east exit from "A Commoner's Home" to
+*     "Naigo Street" - closed
+*
+D 0 139973 2 1 100 0 0 0
+*     south exit from "Naigo Street" to
+*     "Naigo Street" - closed
+*
+D 0 139975 0 1 100 0 0 0
+*     north exit from "Naigo Street" to
+*     "Naigo Street" - closed
+*
+D 0 139973 3 1 100 0 0 0
+*     west exit from "Naigo Street" to
+*     "A Commoner's Home" - closed
+*
+D 0 139974 1 1 100 0 0 0
+*     east exit from "A Commoner's Home" to
+*     "Naigo Street" - closed
+*
+D 0 139980 0 1 100 0 0 0
+*     north exit from "Bromis Avenue" to
+*     "Commoner's Home" - closed
+*
+D 0 139988 2 1 100 0 0 0
+*     south exit from "Commoner's Home" to
+*     "Bromis Avenue" - closed
+*
+D 0 139981 2 1 100 0 0 0
+*     south exit from "Bromis Avenue" to
+*     "Temple" - closed
+*
+D 0 139987 0 1 100 0 0 0
+*     north exit from "Temple" to
+*     "Bromis Avenue" - closed
+*
+D 0 139982 0 1 100 0 0 0
+*     north exit from "Bromis Avenue" to
+*     "An Abandoned House" - closed
+*
+D 0 139986 2 1 100 0 0 0
+*     south exit from "An Abandoned House" to
+*     "Bromis Avenue" - closed
+*
+D 0 139983 0 1 100 0 0 0
+*     north exit from "Bromis Avenue" to
+*     "Bromis Avenue" - closed
+*
+D 0 139985 2 1 100 0 0 0
+*     south exit from "Bromis Avenue" to
+*     "Bromis Avenue" - closed
+*
+D 0 139983 2 1 100 0 0 0
+*     south exit from "Bromis Avenue" to
+*     "Sather's Home" - closed
+*
+D 0 139984 0 1 100 0 0 0
+*     north exit from "Sather's Home" to
+*     "Bromis Avenue" - closed
+*
+D 0 139990 0 1 100 0 0 0
+*     north exit from "A Grassy Path" to
+*     "A Graveyard" - closed
+*
+D 0 139991 2 1 100 0 0 0
+*     south exit from "A Graveyard" to
+*     "A Grassy Path" - closed
+*
+D 0 139995 1 1 100 0 0 0
+*     east exit from "A Side Street" to
+*     "Southern Guard Post" - closed
+*
+D 0 139996 3 1 100 0 0 0
+*     west exit from "Southern Guard Post" to
+*     "A Side Street" - closed
+*
+D 0 140005 2 2 100 0 0 0
+*     south exit from "A Forest Path" to
+*     "A Cave Tunnel" - closed/locked
+*
+D 0 140006 0 2 100 0 0 0
+*     north exit from "A Cave Tunnel" to
+*     "A Forest Path" - closed/locked
+*
+D 0 140017 2 2 100 0 0 0
+*     south exit from "A Cave Tunnel" to
+*     "The Goblin King's Throne Room" - closed/locked
+*
+D 0 140018 0 2 100 0 0 0
+*     north exit from "The Goblin King's Throne Room" to
+*     "A Cave Tunnel" - closed/locked
+*
+D 0 140040 1 5 100 0 0 0
+*     east exit from "Badlands" to
+*     "Scaldread Swamp" - closed/secret
+*
+D 0 140043 3 5 100 0 0 0
+*     west exit from "Scaldread Swamp" to
+*     "Badlands" - closed/secret
+*
+D 0 140089 2 2 100 0 0 0
+*     south exit from "Gates to Skull City" to
+*     "Bone Way" - closed/locked
+*
+D 0 140107 0 2 100 0 0 0
+*     north exit from "Bone Way" to
+*     "Gates to Skull City" - closed/locked
+*
+D 0 140102 0 5 100 0 0 0
+*     north exit from "A Swampy Cave" to
+*     "Secret Passage" - closed/secret
+*
+D 0 140155 2 5 100 0 0 0
+*     south exit from "Secret Passage" to
+*     "A Swampy Cave" - closed/secret
+*
+D 0 140118 0 1 100 0 0 0
+*     north exit from "Lich Road" to
+*     "The City Morgue" - closed
+*
+D 0 140146 2 1 100 0 0 0
+*     south exit from "The City Morgue" to
+*     "Lich Road" - closed
+*
+D 0 140118 2 1 100 0 0 0
+*     south exit from "Lich Road" to
+*     "Bones and Things" - closed
+*
+D 0 140129 0 1 100 0 0 0
+*     north exit from "Bones and Things" to
+*     "Lich Road" - closed
+*
+D 0 140122 0 1 100 0 0 0
+*     north exit from "Lich Road" to
+*     "A Merchant's Residence" - closed
+*
+D 0 140150 2 1 100 0 0 0
+*     south exit from "A Merchant's Residence" to
+*     "Lich Road" - closed
+*
+D 0 140122 3 1 100 0 0 0
+*     west exit from "Lich Road" to
+*     "A Merchant's Residence" - closed
+*
+D 0 140151 1 1 100 0 0 0
+*     east exit from "A Merchant's Residence" to
+*     "Lich Road" - closed
+*
+D 0 140123 3 1 100 0 0 0
+*     west exit from "Deadway Street" to
+*     "A Small Barn" - closed
+*
+D 0 140128 1 1 100 0 0 0
+*     east exit from "A Small Barn" to
+*     "Deadway Street" - closed
+*
+D 0 140127 2 6 100 0 0 0
+*     south exit from "Back Wall" to
+*     "Secret Passage" - closed/locked/secret
+*
+D 0 140155 0 6 100 0 0 0
+*     north exit from "Secret Passage" to
+*     "Back Wall" - closed/locked/secret
+*
+D 0 140146 9 5 100 0 0 0
+*     southeast exit from "The City Morgue" to
+*     "A Dark Cellar" - closed/secret
+*
+D 0 140147 6 5 100 0 0 0
+*     northwest exit from "A Dark Cellar" to
+*     "The City Morgue" - closed/secret
+*
+D 0 140147 2 5 100 0 0 0
+*     south exit from "A Dark Cellar" to
+*     "A Dark Cellar" - closed/secret
+*
+D 0 140148 0 5 100 0 0 0
+*     north exit from "A Dark Cellar" to
+*     "A Dark Cellar" - closed/secret
+*
+D 0 140160 2 2 100 0 0 0
+*     south exit from "Entrance to Academy" to
+*     "Foyer" - closed/locked
+*
+D 0 140161 0 2 100 0 0 0
+*     north exit from "Foyer" to
+*     "Entrance to Academy" - closed/locked
+*
+D 0 140163 1 1 100 0 0 0
+*     east exit from "The Auditorium Stage" to
+*     "The Necromancer Academy" - closed
+*
+D 0 140180 3 1 100 0 0 0
+*     west exit from "The Necromancer Academy" to
+*     "The Auditorium Stage" - closed
+*
+D 0 140163 3 1 100 0 0 0
+*     west exit from "The Auditorium Stage" to
+*     "The Necromancer Academy" - closed
+*
+D 0 140174 1 1 100 0 0 0
+*     east exit from "The Necromancer Academy" to
+*     "The Auditorium Stage" - closed
+*
+D 0 140164 0 5 100 0 0 0
+*     north exit from "Catacombs" to
+*     "Hall of Petition" - closed/secret
+*
+D 0 140188 2 5 100 0 0 0
+*     south exit from "Hall of Petition" to
+*     "Catacombs" - closed/secret
+*
+D 0 140165 0 13 100 0 0 0
+*     north exit from "Catacombs" to
+*     "A Trio of Coffins" - closed/secret/blocked
+*
+D 0 140190 2 5 100 0 0 0
+*     south exit from "A Trio of Coffins" to
+*     "Catacombs" - closed/secret
+*
+D 0 140165 2 5 100 0 0 0
+*     south exit from "Catacombs" to
+*     "An Experiment" - closed/secret
+*
+D 0 140191 0 5 100 0 0 0
+*     north exit from "An Experiment" to
+*     "Catacombs" - closed/secret
+*
+D 0 140165 3 2 100 0 0 0
+*     west exit from "Catacombs" to
+*     "Live Ones" - closed/locked
+*
+D 0 140166 1 2 100 0 0 0
+*     east exit from "Live Ones" to
+*     "Catacombs" - closed/locked
+*
+D 0 140166 8 5 100 0 0 0
+*     northeast exit from "Live Ones" to
+*     "A Trio of Coffins" - closed/secret
+*
+D 0 140190 7 5 100 0 0 0
+*     southwest exit from "A Trio of Coffins" to
+*     "Live Ones" - closed/secret
+*
+D 0 140167 2 6 100 0 0 0
+*     south exit from "Catacombs" to
+*     "The Hidden Chamber" - closed/locked/secret
+*
+D 0 140192 0 5 100 0 0 0
+*     north exit from "The Hidden Chamber" to
+*     "Catacombs" - closed/secret
+*
+D 0 140168 2 5 100 0 0 0
+*     south exit from "Catacombs" to
+*     "Drawing Room" - closed/secret
+*
+D 0 140169 0 5 100 0 0 0
+*     north exit from "Drawing Room" to
+*     "Catacombs" - closed/secret
+*
+D 0 140171 1 5 100 0 0 0
+*     east exit from "Bedchamber" to
+*     "Ferranifer's Crypt" - closed/secret
+*
+D 0 140195 3 5 100 0 0 0
+*     west exit from "Ferranifer's Crypt" to
+*     "Bedchamber" - closed/secret
+*
+D 0 140173 2 1 100 0 0 0
+*     south exit from "Instructor's Ngise's Quarters" to
+*     "The Necromancer Laboratory" - closed
+*
+D 0 140176 0 1 100 0 0 0
+*     north exit from "The Necromancer Laboratory" to
+*     "Instructor's Ngise's Quarters" - closed
+*
+D 0 140175 3 1 100 0 0 0
+*     west exit from "The Necromancer Academy" to
+*     "The Necromancer Laboratory" - closed
+*
+D 0 140176 1 1 100 0 0 0
+*     east exit from "The Necromancer Laboratory" to
+*     "The Necromancer Academy" - closed
+*
+D 0 140177 1 1 100 0 0 0
+*     east exit from "The Necromancer Academy" to
+*     "Storage of Things Unwanted" - closed
+*
+D 0 140178 3 1 100 0 0 0
+*     west exit from "Storage of Things Unwanted" to
+*     "The Necromancer Academy" - closed
+*
+D 0 140178 0 2 100 0 0 0
+*     north exit from "Storage of Things Unwanted" to
+*     "Necrohazard II" - closed/locked
+*
+D 0 140183 2 2 100 0 0 0
+*     south exit from "Necrohazard II" to
+*     "Storage of Things Unwanted" - closed/locked
+*
+D 0 140178 1 1 100 0 0 0
+*     east exit from "Storage of Things Unwanted" to
+*     "Academician Drake's Lab" - closed
+*
+D 0 140185 3 1 100 0 0 0
+*     west exit from "Academician Drake's Lab" to
+*     "Storage of Things Unwanted" - closed
+*
+D 0 140178 2 1 100 0 0 0
+*     south exit from "Storage of Things Unwanted" to
+*     "The Academy Library" - closed
+*
+D 0 140179 0 1 100 0 0 0
+*     north exit from "The Academy Library" to
+*     "Storage of Things Unwanted" - closed
+*
+D 0 140178 6 2 100 0 0 0
+*     northwest exit from "Storage of Things Unwanted" to
+*     "Necrohazard I" - closed/locked
+*
+D 0 140184 9 2 100 0 0 0
+*     southeast exit from "Necrohazard I" to
+*     "Storage of Things Unwanted" - closed/locked
+*
+D 0 140179 3 1 100 0 0 0
+*     west exit from "The Academy Library" to
+*     "The Necromancer Academy" - closed
+*
+D 0 140181 1 1 100 0 0 0
+*     east exit from "The Necromancer Academy" to
+*     "The Academy Library" - closed
+*
+D 0 140210 5 1 100 0 0 0
+*     down exit from "A Swirl of Mist" to
+*     "The Chamber of Nine Lives" - closed
+*
+D 0 140212 4 2 100 0 0 0
+*     up exit from "The Chamber of Nine Lives" to
+*     "A Swirl of Mist" - closed/locked
+*
+D 0 140231 1 2 100 0 0 0
+*     east exit from "A Challenge of Classes" to
+*     "An Empty Chamber" - closed/locked
+*
+D 0 140232 3 1 100 0 0 0
+*     west exit from "An Empty Chamber" to
+*     "A Challenge of Classes" - closed
+*
+D 0 140232 1 1 100 0 0 0
+*     east exit from "An Empty Chamber" to
+*     "The Arena" - closed
+*
+D 0 140233 3 1 100 0 0 0
+*     west exit from "The Arena" to
+*     "An Empty Chamber" - closed
+*
+D 0 140233 1 2 100 0 0 0
+*     east exit from "The Arena" to
+*     "A Cold Barren Chamber" - closed/locked
+*
+D 0 140234 3 1 100 0 0 0
+*     west exit from "A Cold Barren Chamber" to
+*     "The Arena" - closed
+*
+D 0 140234 1 1 100 0 0 0
+*     east exit from "A Cold Barren Chamber" to
+*     "The Tomb of Frost" - closed
+*
+D 0 140235 3 1 100 0 0 0
+*     west exit from "The Tomb of Frost" to
+*     "A Cold Barren Chamber" - closed
+*
+D 0 140235 1 2 100 0 0 0
+*     east exit from "The Tomb of Frost" to
+*     "The Face of Indecision" - closed/locked
+*
+D 0 140236 3 1 100 0 0 0
+*     west exit from "The Face of Indecision" to
+*     "The Tomb of Frost" - closed
+*
+D 0 140236 1 2 100 0 0 0
+*     east exit from "The Face of Indecision" to
+*     "An End to a Trial" - closed/locked
+*
+D 0 140237 3 1 100 0 0 0
+*     west exit from "An End to a Trial" to
+*     "The Face of Indecision" - closed
+*
+D 0 140242 1 2 100 0 0 0
+*     east exit from "An Icy Room" to
+*     "An Icy Room" - closed/locked
+*
+D 0 140243 3 2 100 0 0 0
+*     west exit from "An Icy Room" to
+*     "An Icy Room" - closed/locked
+*
+D 0 140243 1 2 100 0 0 0
+*     east exit from "An Icy Room" to
+*     "AN Icy Room" - closed/locked
+*
+D 0 140244 3 2 100 0 0 0
+*     west exit from "AN Icy Room" to
+*     "An Icy Room" - closed/locked
+*
+D 0 140244 1 2 100 0 0 0
+*     east exit from "AN Icy Room" to
+*     "On the Edge of the Void" - closed/locked
+*
+D 0 140245 3 2 100 0 0 0
+*     west exit from "On the Edge of the Void" to
+*     "AN Icy Room" - closed/locked
+*
+D 0 140264 3 5 100 0 0 0
+*     west exit from "A Bare Corridor" to
+*     "A Dead End Corner" - closed/secret
+*
+D 0 140283 1 5 100 0 0 0
+*     east exit from "A Dead End Corner" to
+*     "A Bare Corridor" - closed/secret
+*
+D 0 140266 6 5 100 0 0 0
+*     northwest exit from "A Misty Chamber" to
+*     "A Small Twisting Hall" - closed/secret
+*
+D 0 140274 9 1 100 0 0 0
+*     southeast exit from "A Small Twisting Hall" to
+*     "A Misty Chamber" - closed
+*
+D 0 140266 9 1 100 0 0 0
+*     southeast exit from "A Misty Chamber" to
+*     "Overseer of Agony" - closed
+*
+D 0 140267 6 1 100 0 0 0
+*     northwest exit from "Overseer of Agony" to
+*     "A Misty Chamber" - closed
+*
+D 0 140268 0 1 100 0 0 0
+*     north exit from "Hall of Artistic Splender" to
+*     "Stasis Chamber" - closed
+*
+D 0 140271 2 1 100 0 0 0
+*     south exit from "Stasis Chamber" to
+*     "Hall of Artistic Splender" - closed
+*
+D 0 140268 1 9 100 0 0 0
+*     east exit from "Hall of Artistic Splender" to
+*     "The Scroll Chamber" - closed/blocked
+*
+D 0 140273 3 1 100 0 0 0
+*     west exit from "The Scroll Chamber" to
+*     "Hall of Artistic Splender" - closed
+*
+D 0 140268 3 1 100 0 0 0
+*     west exit from "Hall of Artistic Splender" to
+*     "Stasis Chamber" - closed
+*
+D 0 140269 1 1 100 0 0 0
+*     east exit from "Stasis Chamber" to
+*     "Hall of Artistic Splender" - closed
+*
+D 0 140268 6 1 100 0 0 0
+*     northwest exit from "Hall of Artistic Splender" to
+*     "Stasis Chamber" - closed
+*
+D 0 140270 9 1 100 0 0 0
+*     southeast exit from "Stasis Chamber" to
+*     "Hall of Artistic Splender" - closed
+*
+D 0 140268 8 1 100 0 0 0
+*     northeast exit from "Hall of Artistic Splender" to
+*     "Stasis Chamber" - closed
+*
+D 0 140272 7 1 100 0 0 0
+*     southwest exit from "Stasis Chamber" to
+*     "Hall of Artistic Splender" - closed
+*
+D 0 140275 2 1 100 0 0 0
+*     south exit from "A Long Hallway" to
+*     "A Pit of Fire" - closed
+*
+D 0 140277 0 1 100 0 0 0
+*     north exit from "A Pit of Fire" to
+*     "A Long Hallway" - closed
+*
+D 0 140275 3 1 100 0 0 0
+*     west exit from "A Long Hallway" to
+*     "Temple of Elemental Oblivion" - closed
+*
+D 0 140276 1 1 100 0 0 0
+*     east exit from "Temple of Elemental Oblivion" to
+*     "A Long Hallway" - closed
+*
+D 0 140278 0 1 100 0 0 0
+*     north exit from "A Stone Hallway" to
+*     "An 'L' Shaped Chamber" - closed
+*
+D 0 140279 2 2 100 0 0 0
+*     south exit from "An 'L' Shaped Chamber" to
+*     "A Stone Hallway" - closed/locked
+*
+D 0 140283 0 13 100 0 0 0
+*     north exit from "A Dead End Corner" to
+*     "Pit O' Bone" - closed/secret/blocked
+*
+D 0 140282 2 0 100 0 0 0
+*     south exit from "Pit O' Bone" to
+*     "A Dead End Corner" - open
+*
+D 0 140284 0 5 100 0 0 0
+*     north exit from "Another Great Green Face" to
+*     "Magical Archway" - closed/secret
+*
+D 0 140286 2 1 100 0 0 0
+*     south exit from "Magical Archway" to
+*     "Another Great Green Face" - closed
+*
+D 0 140288 0 1 100 0 0 0
+*     north exit from "A Circular Room" to
+*     "Living Quarters" - closed
+*
+D 0 140290 2 1 100 0 0 0
+*     south exit from "Living Quarters" to
+*     "A Circular Room" - closed
+*
+D 0 140288 1 1 100 0 0 0
+*     east exit from "A Circular Room" to
+*     "Living Quarters" - closed
+*
+D 0 140289 3 1 100 0 0 0
+*     west exit from "Living Quarters" to
+*     "A Circular Room" - closed
+*
+D 0 140291 3 1 100 0 0 0
+*     west exit from "A Pentagon Shaped Chamber" to
+*     "Theater of the Dead" - closed
+*
+D 0 140292 1 1 100 0 0 0
+*     east exit from "Theater of the Dead" to
+*     "A Pentagon Shaped Chamber" - closed
+*
+D 0 140298 1 2 100 0 0 0
+*     east exit from "Fortress of Conclusion" to
+*     "The Phylactery of the Apotheosis" - closed/locked
+*
+D 0 140299 3 2 100 0 0 0
+*     west exit from "The Phylactery of the Apotheosis" to
+*     "Fortress of Conclusion" - closed/locked
+*
+D 0 140299 9 2 100 0 0 0
+*     southeast exit from "The Phylactery of the Apotheosis" to
+*     "Mealdrun's Retreat" - closed/locked
+*
+D 0 140300 6 1 100 0 0 0
+*     northwest exit from "Mealdrun's Retreat" to
+*     "The Phylactery of the Apotheosis" - closed
+*
+*
+O 0 139928 1 139951 100 0 0 0      * an obsidian wine shelf
+O 0 139930 1 139962 100 0 0 0      * a long silver and black desk
+P 1 139931 1 139930 100 0 0 0      *   Desatysso's journal
+P 1 139932 1 139930 100 0 0 0      *   a dark and misty vial
+O 0 140061 1 140130 100 0 0 0      * a large obsidian chest
+P 1 140062 1 140061 100 0 0 0      *   ring of fire
+O 0 139987 1 140164 100 0 0 0      * a stone sarcoghagus
+O 0 139985 1 140164 100 0 0 0      * an iron sarcoghagus
+P 1 139990 1 139985 100 0 0 0      *   a tattered mummy
+O 0 139994 1 140165 100 0 0 0      * a stone sarcoghagus
+O 0 139995 1 140165 100 0 0 0      * a stone sarcoghagus
+O 0 139993 1 140167 100 0 0 0      * an iron sarcoghagus
+O 0 139984 1 140168 100 0 0 0      * a stone sarcoghagus
+P 1 139988 2 139984 100 0 0 0      *   a green gem
+P 1 139988 2 139984 100 0 0 0      *   a green gem
+O 0 139986 1 140168 100 0 0 0      * an iron sarcoghagus
+O 0 139992 1 140168 100 0 0 0      * a stone sarcoghagus
+O 0 139996 1 140170 100 0 0 0      * a small tome
+O 0 139972 1 140173 100 0 0 0      * an old scroll
+O 0 139973 1 140176 100 0 0 0      * a corpse
+O 0 139948 1 140178 100 0 0 0      * the libram of Ineffable Damnation
+O 0 139974 1 140182 100 0 0 0      * a corpse
+O 0 139977 1 140183 100 0 0 0      * a skull emitting black smoke
+O 0 139976 1 140184 100 0 0 0      * a heart of a humanoid pulsing
+O 0 139978 1 140188 100 0 0 0      * a giant obsidian statue
+O 0 139979 1 140189 100 0 0 0      * a scroll of spells
+O 0 139980 1 140190 100 0 0 0      * a wooden coffin
+O 0 139981 1 140190 100 0 0 0      * a banded oak coffin
+O 0 139982 1 140190 100 0 0 0      * a black wood coffin
+O 0 139989 1 140192 100 0 0 0      * a green devil face
+O 0 139991 1 140193 100 0 0 0      * a deathly smell
+O 0 139997 1 140195 100 0 0 0      * a cherry wood coffin
+P 1 139998 1 139997 100 0 0 0      *   a pile of coins
+P 1 139999 1 139997 100 0 0 0      *   a sticky scroll
+O 0 140004 1 140195 100 0 0 0      * a bookshelf with two skull endcaps
+P 1 140000 1 140004 100 0 0 0      *   a large gray tome
+P 1 140001 1 140004 100 0 0 0      *   the Blood Codex
+O 0 140006 1 140202 100 0 0 0      * a pile of coins
+O 0 140007 1 140204 100 0 0 0      * a statue of a woman without a head
+O 0 140008 1 140204 100 0 0 0      * a finely made statue of a bard
+O 0 140009 1 140204 100 0 0 0      * a statue of some legs
+O 0 140010 1 140204 100 0 0 0      * a partially complete statue
+O 0 140012 1 140208 100 0 0 0      * a puzzle box
+O 0 140013 1 140208 100 0 0 0      * a sensation of magic
+O 0 140014 1 140208 100 0 0 0      * a sensation of magic
+O 0 140015 1 140208 100 0 0 0      * a sensation of magic
+O 0 140017 1 140228 100 0 0 0      * an illuminated silver stand
+P 1 140018 1 140017 100 0 0 0      *   a tiny key of marble
+O 0 140020 1 140231 100 0 0 0      * a small metal chest
+P 1 140021 1 140020 100 0 0 0      *   a large bone key
+O 0 140026 1 140237 100 0 0 0      * A large stone block
+P 1 140027 1 140026 100 0 0 0      *   a large stone key
+O 0 140019 1 140245 100 0 0 0      * an icy portal of black mist
+O 0 140028 1 140250 100 0 0 0      * the dark void below
+O 0 140030 1 140253 100 0 0 0      * a panel of noon time
+O 0 140032 1 140266 100 0 0 0      * misty gas
+O 0 140034 1 140271 100 0 0 0      * an iron lever
+O 0 140037 1 140273 100 0 0 0      * an obsidian block
+P 1 140036 3 140037 100 0 0 0      *   a scroll
+P 1 140036 3 140037 100 0 0 0      *   a scroll
+P 1 140036 3 140037 100 0 0 0      *   a scroll
+O 0 140040 1 140280 100 0 0 0      * a series of stepping tiles
+O 0 140041 1 140280 100 0 0 0      * a series of stepping tiles
+O 0 140038 1 140283 100 0 0 0      * an iron lever
+O 0 140039 1 140283 100 0 0 0      * an iron plate
+O 0 140042 1 140286 100 0 0 0      * a swirling misty archway
+O 0 140045 1 140287 100 0 0 0      * a swirling misty archway
+O 0 140047 1 140290 100 0 0 0      * a pile of coins
+O 0 140046 1 140290 100 0 0 0      * a silver tipped staff
+O 0 140049 1 140291 100 0 0 0      * a blade of lightning
+O 0 140050 1 140295 100 0 0 0      * the dim forge
+O 0 140052 1 140299 100 0 0 0      * the dark void below
+O 0 140054 1 140300 100 0 0 0      * a large obsidian chest
+P 1 140055 1 140054 100 0 0 0      *   the mask of the Devourer
+P 1 140056 1 140054 100 0 0 0      *   a misty cold cloak
+P 1 140058 1 140054 100 0 0 0      *   a symbol of the Devourer
+P 1 140057 1 140054 100 0 0 0      *   a pile of coins
+P 1 140059 1 140054 100 0 0 0      *   an old scroll
+P 1 140060 1 140054 100 0 0 0      *   boots of the winter wight
+P 1 140063 1 140054 100 0 0 0      *   a red dragon slayer sword
+P 1 140064 1 140054 100 0 0 0      *   a black dragon slayer sword
+*
+M 0 139911 1 139904 100 0 0 0      * Magonan the all knowing
+G 1 139909 999 0 100 0 0 0         *    a map of the local area
+M 0 139917 1 139907 100 0 0 0      * Bulaba, the shopkeeper
+G 1 139916 999 0 100 0 0 0         *    a long steel dagger
+G 1 139922 999 0 100 0 0 0         *    a sturdy broadsword
+G 1 139923 999 0 100 0 0 0         *    an armor of tree bark
+G 1 139924 999 0 100 0 0 0         *    a suit of heavy platemail
+G 1 139925 999 0 100 0 0 0         *    a silvery belt with a leather back
+G 1 139926 999 0 100 0 0 0         *    a leafy covered spellbook.
+G 1 139921 999 0 100 0 0 0         *    a small wooden lamp
+G 1 139912 999 0 100 0 0 0         *    an apple
+G 1 139914 999 0 100 0 0 0         *    a tomato
+G 1 139915 999 0 100 0 0 0         *    a ripe pear
+M 0 139912 1 139910 100 0 0 0      * a large brown bear
+M 0 139907 4 139916 100 0 0 0      * a simple male commoner
+M 0 139910 1 139917 100 0 0 0      * Payvin the sea captain
+M 0 139915 4 139917 100 0 0 0      * a tired seaman
+E 1 139916 999 16 100 0 0 0        *   a long steel dagger
+M 0 139915 4 139917 100 0 0 0      * a tired seaman
+E 1 139916 999 16 100 0 0 0        *   a long steel dagger
+M 0 139915 4 139917 100 0 0 0      * a tired seaman
+M 0 139915 4 139917 100 0 0 0      * a tired seaman
+M 0 139916 1 139917 100 0 0 0      * a barkeep named Snagger
+G 1 139917 999 0 100 0 0 0         *    a light dwarven ale
+G 1 139918 999 0 100 0 0 0         *    a moderate dwarven ale
+G 1 139919 999 0 100 0 0 0         *    a strong dwarven ale
+G 1 139920 999 0 100 0 0 0         *    a powerful dwarven ale
+M 0 139913 1 139918 100 0 0 0      * Fred the recruiter
+M 0 139914 1 139921 100 0 0 0      * Thaegerd the farmer
+G 1 139912 999 0 100 0 0 0         *    an apple
+G 1 139913 999 0 100 0 0 0         *    a banana
+G 1 139914 999 0 100 0 0 0         *    a tomato
+G 1 139915 999 0 100 0 0 0         *    a ripe pear
+M 0 139908 6 139922 100 0 0 0      * a simple female commoner
+M 0 139909 3 139927 100 0 0 0      * a skinless wight
+G 1 139907 1 0 100 0 0 0           *    an amulet with a ship insignia
+M 0 139909 3 139929 100 0 0 0      * a skinless wight
+G 1 139929 1 0 100 0 0 0           *    a shiny emerald
+M 0 139909 3 139930 100 0 0 0      * a skinless wight
+M 0 139920 5 139944 100 0 0 0      * a hill giant
+M 0 139920 5 139944 100 0 0 0      * a hill giant
+M 0 139921 1 139947 100 0 0 0      * a fire elemental
+M 0 139922 1 139957 100 0 0 0      * a warrior mountain giant
+F 1 139923 2 139957 100 0 0 0      * an adult mountain giant (following)
+F 1 139923 2 139957 100 0 0 0      * an adult mountain giant (following)
+M 0 139929 2 139958 100 0 0 0      * a large troll
+M 0 139925 1 139958 100 0 0 0      * a shaman mountain giant
+M 0 139924 1 139960 100 0 0 0      * a large troll
+M 0 139928 2 139960 100 0 0 0      * a large troll
+M 0 139927 1 139960 100 0 0 0      * a large troll
+M 0 139928 2 139960 100 0 0 0      * a large troll
+M 0 139929 2 139960 100 0 0 0      * a large troll
+M 0 139926 1 139960 100 0 0 0      * Elagor, a young female mountain giant
+M 0 139906 3 139971 100 0 0 0      * a militia guard
+M 0 139908 6 139972 100 0 0 0      * a simple female commoner
+M 0 139908 6 139974 100 0 0 0      * a simple female commoner
+M 0 139907 4 139975 100 0 0 0      * a simple male commoner
+M 0 139908 6 139975 100 0 0 0      * a simple female commoner
+M 0 139905 3 139976 100 0 0 0      * a militia guard
+M 0 139907 4 139977 100 0 0 0      * a simple male commoner
+M 0 139906 3 139979 100 0 0 0      * a militia guard
+M 0 139906 3 139983 100 0 0 0      * a militia guard
+M 0 139918 1 139984 100 0 0 0      * Sather, a priestess
+E 1 139969 1 3 100 0 0 0           *   a starfish medallion
+M 0 139908 6 139985 100 0 0 0      * a simple female commoner
+M 0 139919 1 139987 100 0 0 0      * a temple priest
+M 0 139907 4 139988 100 0 0 0      * a simple male commoner
+M 0 139908 6 139988 100 0 0 0      * a simple female commoner
+M 0 139930 1 139991 100 0 0 0      * Grunthar the strong
+M 0 139905 3 139996 100 0 0 0      * a militia guard
+M 0 139905 3 139996 100 0 0 0      * a militia guard
+M 0 139901 3 139999 100 0 0 0      * a skull clan goblin scout
+E 1 139903 8 16 100 0 0 0          *   a pointy wooden stick
+M 0 139901 3 139999 100 0 0 0      * a skull clan goblin scout
+E 1 139903 8 16 100 0 0 0          *   a pointy wooden stick
+M 0 139900 5 140000 100 0 0 0      * a skull clan goblin warrior
+E 1 139903 8 16 100 0 0 0          *   a pointy wooden stick
+M 0 139900 5 140002 100 0 0 0      * a skull clan goblin warrior
+E 1 139903 8 16 100 0 0 0          *   a pointy wooden stick
+G 1 139901 1 0 100 0 0 0           *    a wooden key
+M 0 139900 5 140006 100 0 0 0      * a skull clan goblin warrior
+E 1 139903 8 16 100 0 0 0          *   a pointy wooden stick
+M 0 139903 1 140011 100 0 0 0      * Grnak of skull clan goblin
+E 1 139904 1 6 100 0 0 0           *   a skull helm
+E 1 139905 1 16 100 0 0 0          *   a bloody set of cestus
+G 1 139900 1 0 100 0 0 0           *    a stone key
+M 0 139900 5 140013 100 0 0 0      * a skull clan goblin warrior
+E 1 139903 8 16 100 0 0 0          *   a pointy wooden stick
+M 0 139902 4 140015 100 0 0 0      * a skull clan goblin female
+M 0 139902 4 140015 100 0 0 0      * a skull clan goblin female
+M 0 139902 4 140015 100 0 0 0      * a skull clan goblin female
+M 0 139901 3 140016 100 0 0 0      * a skull clan goblin scout
+E 1 139903 8 16 100 0 0 0          *   a pointy wooden stick
+M 0 139902 4 140018 100 0 0 0      * a skull clan goblin female
+M 0 139904 1 140018 100 0 0 0      * Noggle the skull clan goblin king
+E 1 139927 1 1 100 0 0 0           *   Sather's wooden ring
+E 1 139906 1 16 100 0 0 0          *   a gnarled wood staff
+G 1 139911 1 0 100 0 0 0           *    a goblin king's head
+M 0 139900 5 140019 100 0 0 0      * a skull clan goblin warrior
+E 1 139903 8 16 100 0 0 0          *   a pointy wooden stick
+M 0 139920 5 140021 100 0 0 0      * a hill giant
+M 0 139934 4 140024 100 0 0 0      * a large hill giant
+M 0 139931 2 140029 100 0 0 0      * a female hill giant
+M 0 139934 4 140030 100 0 0 0      * a large hill giant
+M 0 139931 2 140032 100 0 0 0      * a female hill giant
+M 0 139920 5 140033 100 0 0 0      * a hill giant
+M 0 139934 4 140034 100 0 0 0      * a large hill giant
+M 0 139934 4 140036 100 0 0 0      * a large hill giant
+M 0 139920 5 140039 100 0 0 0      * a hill giant
+M 0 139932 1 140042 100 0 0 0      * a mountain giant alchemist
+G 1 139933 999 0 100 0 0 0         *    a milky potion
+G 1 139934 999 0 100 0 0 0         *    a dark potion
+G 1 139935 999 0 100 0 0 0         *    a clear green flask
+G 1 139936 999 0 100 0 0 0         *    a brown potion
+M 0 139933 4 140042 100 0 0 0      * a vicious wardog
+M 0 139933 4 140042 100 0 0 0      * a vicious wardog
+M 0 139933 4 140042 100 0 0 0      * a vicious wardog
+M 0 139933 4 140042 100 0 0 0      * a vicious wardog
+M 0 139941 4 140043 100 0 0 0      * an animal zombie
+M 0 139940 10 140044 100 0 0 0     * a greater wight
+M 0 139943 3 140044 100 0 0 0      * an animal skeleton
+M 0 139942 4 140047 100 0 0 0      * an animal zombie
+M 0 139940 10 140049 100 0 0 0     * a greater wight
+M 0 139941 4 140052 100 0 0 0      * an animal zombie
+M 0 139944 3 140053 100 0 0 0      * an animal skeleton
+M 0 139940 10 140058 100 0 0 0     * a greater wight
+M 0 139943 3 140058 100 0 0 0      * an animal skeleton
+M 0 139942 4 140059 100 0 0 0      * an animal zombie
+M 0 139941 4 140061 100 0 0 0      * an animal zombie
+M 0 139944 3 140064 100 0 0 0      * an animal skeleton
+M 0 139942 4 140067 100 0 0 0      * an animal zombie
+M 0 139943 3 140069 100 0 0 0      * an animal skeleton
+M 0 139940 10 140070 100 0 0 0     * a greater wight
+M 0 139940 10 140075 100 0 0 0     * a greater wight
+M 0 139944 3 140079 100 0 0 0      * an animal skeleton
+M 0 139936 2 140085 100 0 0 0      * an army ant
+M 0 139937 3 140085 100 0 0 0      * an army ant
+M 0 139937 3 140085 100 0 0 0      * an army ant
+M 0 139938 1 140085 100 0 0 0      * an army ant
+M 0 139939 2 140085 100 0 0 0      * an army ant
+M 0 139939 2 140085 100 0 0 0      * an army ant
+M 0 139936 2 140085 100 0 0 0      * an army ant
+M 0 139937 3 140085 100 0 0 0      * an army ant
+M 0 139940 10 140086 100 0 0 0     * a greater wight
+M 0 139941 4 140086 100 0 0 0      * an animal zombie
+M 0 139942 4 140088 100 0 0 0      * an animal zombie
+M 0 139935 1 140089 100 0 0 0      * a gargantuan bone golem
+E 1 139937 1 16 100 0 0 0          *   a giant bone sword
+M 0 139974 12 140093 100 0 0 0     * a deformed ghoul
+M 0 139974 12 140096 100 0 0 0     * a deformed ghoul
+M 0 139974 12 140097 100 0 0 0     * a deformed ghoul
+M 0 139974 12 140097 100 0 0 0     * a deformed ghoul
+M 0 139940 10 140099 100 0 0 0     * a greater wight
+M 0 139974 12 140099 100 0 0 0     * a deformed ghoul
+M 0 139974 12 140099 100 0 0 0     * a deformed ghoul
+M 0 139974 12 140100 100 0 0 0     * a deformed ghoul
+M 0 139940 10 140101 100 0 0 0     * a greater wight
+M 0 139973 1 140102 100 0 0 0      * a shambling reaper
+M 0 139974 12 140102 100 0 0 0     * a deformed ghoul
+M 0 139974 12 140103 100 0 0 0     * a deformed ghoul
+M 0 139974 12 140104 100 0 0 0     * a deformed ghoul
+M 0 139940 10 140105 100 0 0 0     * a greater wight
+M 0 139969 4 140107 100 0 0 0      * an servant zombie
+M 0 139972 13 140107 100 0 0 0     * a wandering creeping claw
+M 0 139963 4 140107 100 0 0 0      * a Skull City elite guard
+M 0 139963 4 140107 100 0 0 0      * a Skull City elite guard
+M 0 139963 4 140107 100 0 0 0      * a Skull City elite guard
+M 0 139963 4 140107 100 0 0 0      * a Skull City elite guard
+M 0 139965 1 140109 100 0 0 0      * a Skull City guard
+M 0 139969 4 140109 100 0 0 0      * an servant zombie
+M 0 139972 13 140109 100 0 0 0     * a wandering creeping claw
+M 0 139974 12 140111 100 0 0 0     * a deformed ghoul
+M 0 139974 12 140111 100 0 0 0     * a deformed ghoul
+M 0 139940 10 140112 100 0 0 0     * a greater wight
+M 0 139961 5 140113 100 0 0 0      * a Skull City guard
+M 0 139969 4 140113 100 0 0 0      * an servant zombie
+M 0 139961 5 140115 100 0 0 0      * a Skull City guard
+M 0 139967 5 140115 100 0 0 0      * a young necromancer
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 139967 5 140117 100 0 0 0      * a young necromancer
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 139961 5 140118 100 0 0 0      * a Skull City guard
+M 0 139945 1 140120 100 0 0 0      * Danele the necromancer
+M 0 139972 13 140121 100 0 0 0     * a wandering creeping claw
+M 0 139967 5 140122 100 0 0 0      * a young necromancer
+M 0 139956 4 140124 100 0 0 0      * a riding horse
+M 0 139956 4 140124 100 0 0 0      * a riding horse
+M 0 139956 4 140124 100 0 0 0      * a riding horse
+M 0 139956 4 140124 100 0 0 0      * a riding horse
+M 0 139960 3 140124 100 0 0 0      * a Skull City guard
+E 1 139966 1 8 100 0 0 0           *   a pair of warthog skin boots
+M 0 139967 5 140125 100 0 0 0      * a young necromancer
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 139972 13 140125 100 0 0 0     * a wandering creeping claw
+M 0 139972 13 140127 100 0 0 0     * a wandering creeping claw
+M 0 139972 13 140127 100 0 0 0     * a wandering creeping claw
+M 0 139986 1 140127 100 0 0 0      * Bracos the priest
+E 1 139967 1 16 100 0 0 0          *   a dark metal mace of purple mist
+F 1 139987 1 140127 100 0 0 0      * Bracos's bodyguard (following)
+E 1 139970 1 16 100 0 0 0          *   a gleaming black axe
+M 0 139954 2 140128 100 0 0 0      * a small cow
+M 0 139954 2 140128 100 0 0 0      * a small cow
+M 0 139955 1 140128 100 0 0 0      * a riding horse
+M 0 139957 2 140128 100 0 0 0      * a small chicken
+M 0 139957 2 140128 100 0 0 0      * a small chicken
+M 0 139958 3 140128 100 0 0 0      * a fat hog
+M 0 139958 3 140128 100 0 0 0      * a fat hog
+M 0 139958 3 140128 100 0 0 0      * a fat hog
+M 0 139972 13 140128 100 0 0 0     * a wandering creeping claw
+M 0 139946 1 140129 100 0 0 0      * a greedy shopkeeper
+E 1 139964 1 6 100 0 0 0           *   a skull emblem hood
+G 1 139938 999 0 100 0 0 0         *    a suit of bone armor
+G 1 139939 999 0 100 0 0 0         *    a bone skull mace
+G 1 139940 999 0 100 0 0 0         *    a Deathtooth dagger
+G 1 139941 999 0 100 0 0 0         *    a drow skin medallion
+G 1 139942 999 0 100 0 0 0         *    a Wraith cloak
+G 1 139943 999 0 100 0 0 0         *    a fine bone quill
+G 1 139944 999 0 100 0 0 0         *    a piece of dried flesh
+G 1 139945 999 0 100 0 0 0         *    a troll water skin
+M 0 139970 5 140132 100 0 0 0      * a young necromancer
+M 0 139970 5 140132 100 0 0 0      * a young necromancer
+M 0 139970 5 140132 100 0 0 0      * a young necromancer
+M 0 139971 4 140132 100 0 0 0      * a master necromancer
+E 1 139965 4 3 100 0 0 0           *   a griffon skin collar
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 139970 5 140133 100 0 0 0      * a young necromancer
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 139970 5 140136 100 0 0 0      * a young necromancer
+E 1 139965 4 3 100 0 0 0           *   a griffon skin collar
+M 0 139971 4 140136 100 0 0 0      * a master necromancer
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 139972 13 140136 100 0 0 0     * a wandering creeping claw
+M 0 139972 13 140136 100 0 0 0     * a wandering creeping claw
+M 0 139967 5 140137 100 0 0 0      * a young necromancer
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 139962 2 140138 100 0 0 0      * a Skull City sergeant
+E 1 139965 4 3 100 0 0 0           *   a griffon skin collar
+F 1 139961 5 140138 100 0 0 0      * a Skull City guard (following)
+M 0 139972 13 140138 100 0 0 0     * a wandering creeping claw
+M 0 139960 3 140140 100 0 0 0      * a Skull City guard
+M 0 139960 3 140141 100 0 0 0      * a Skull City guard
+M 0 139962 2 140143 100 0 0 0      * a Skull City sergeant
+F 1 139961 5 140143 100 0 0 0      * a Skull City guard (following)
+M 0 139972 13 140144 100 0 0 0     * a wandering creeping claw
+M 0 139964 4 140145 100 0 0 0      * a Skull City guard
+M 0 139964 4 140145 100 0 0 0      * a Skull City guard
+M 0 139964 4 140145 100 0 0 0      * a Skull City guard
+M 0 139964 4 140145 100 0 0 0      * a Skull City guard
+M 0 139969 4 140145 100 0 0 0      * an servant zombie
+M 0 139948 1 140146 100 0 0 0      * a tall thin old man
+E 1 139946 1 5 100 0 0 0           *   a blue robe
+M 0 139947 2 140147 100 0 0 0      * a human dressed up as a zombie
+M 0 139947 2 140147 100 0 0 0      * a human dressed up as a zombie
+M 0 139949 1 140148 100 0 0 0      * Elaron, leader of the order
+E 1 139968 1 1 100 0 0 0           *   a gold ring band
+E 1 139924 999 5 100 0 0 0         *   a suit of heavy platemail
+E 1 139950 1 16 100 0 0 0          *   a sturdy broadsword
+M 0 139950 1 140148 100 0 0 0      * Santios, an elven fire sorcerer
+E 1 139952 1 1 100 0 0 0           *   a round purple ring
+M 0 139951 2 140148 100 0 0 0      * a guard of the Order of Light
+E 1 139951 2 16 100 0 0 0          *   a white longsword
+M 0 139951 2 140148 100 0 0 0      * a guard of the Order of Light
+E 1 139951 2 16 100 0 0 0          *   a white longsword
+M 0 139952 1 140149 100 0 0 0      * a dirty kobold
+E 1 139954 1 16 100 0 0 0          *   a small steel stiletto
+E 1 139953 1 18 100 0 0 0          *   a small piece of paper
+M 0 139953 2 140150 100 0 0 0      * a drow merchant
+M 0 139953 2 140151 100 0 0 0      * a drow merchant
+M 0 139966 1 140152 100 0 0 0      * a pudgy innkeeper
+G 1 139917 999 0 100 0 0 0         *    a light dwarven ale
+G 1 139918 999 0 100 0 0 0         *    a moderate dwarven ale
+G 1 139919 999 0 100 0 0 0         *    a strong dwarven ale
+G 1 139920 999 0 100 0 0 0         *    a powerful dwarven ale
+M 0 139968 3 140152 100 0 0 0      * an assistant necromancer
+E 1 139965 4 3 100 0 0 0           *   a griffon skin collar
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 139968 3 140152 100 0 0 0      * an assistant necromancer
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 139972 13 140152 100 0 0 0     * a wandering creeping claw
+M 0 139972 13 140152 100 0 0 0     * a wandering creeping claw
+M 0 139988 1 140152 100 0 0 0      * a visiting merchant
+M 0 139989 1 140152 100 0 0 0      * a portly wizard
+M 0 139990 1 140152 100 0 0 0      * a morbid happy-go-lucky bard
+M 0 139959 1 140153 100 0 0 0      * a receptionist
+M 0 139968 3 140154 100 0 0 0      * an assistant necromancer
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 139975 2 140155 100 0 0 0      * a granite golem
+M 0 139975 2 140155 100 0 0 0      * a granite golem
+M 0 139983 1 140157 100 0 0 0      * a four armed bank golem
+M 0 139991 1 140158 100 0 0 0      * a scrawny merchant
+M 0 139976 1 140159 100 0 0 0      * Nhool, the merchant
+G 1 139956 999 0 100 0 0 0         *    a lucky bone bracelet
+G 1 139957 999 0 100 0 0 0         *    a long stone wand
+G 1 139958 999 0 100 0 0 0         *    a curved wood wand
+G 1 139959 999 0 100 0 0 0         *    a pegasus skull belt
+G 1 139960 999 0 100 0 0 0         *    an elven skull
+M 0 139977 1 140159 100 0 0 0      * a dumpy, dirty merchant
+M 0 139978 1 140159 100 0 0 0      * a sleezy merchant
+M 0 139979 1 140159 100 0 0 0      * a wide eyed necromancer
+M 0 139980 1 140159 100 0 0 0      * an obese necromancer
+M 0 139981 1 140159 100 0 0 0      * a bony necromancer
+M 0 139982 1 140159 100 0 0 0      * a greedy necromancer
+M 0 139984 4 140160 100 0 0 0      * a pillar of skulls and darkness
+M 0 139984 4 140160 100 0 0 0      * a pillar of skulls and darkness
+M 0 139984 4 140160 100 0 0 0      * a pillar of skulls and darkness
+M 0 139984 4 140160 100 0 0 0      * a pillar of skulls and darkness
+M 0 139985 1 140160 100 0 0 0      * Leon, the academy guard
+E 1 139962 1 5 100 0 0 0           *   some bone fused platemail
+E 1 139963 1 16 100 0 0 0          *   a black bladed two handed steel sword
+G 1 139961 11 0 100 0 0 0          *    a small bone key
+M 0 140003 1 140166 100 0 0 0      * a tortured human
+M 0 140004 1 140166 100 0 0 0      * a tortured human
+M 0 140005 1 140166 100 0 0 0      * a tortured human
+M 0 140006 1 140166 100 0 0 0      * a tortured human
+M 0 140007 1 140167 100 0 0 0      * an iron golem
+M 0 139998 1 140173 100 0 0 0      * Ngise de Morte
+M 0 139971 4 140176 100 0 0 0      * a master necromancer
+M 0 139992 3 140176 100 0 0 0      * a young necromancer
+M 0 139992 3 140176 100 0 0 0      * a young necromancer
+M 0 139992 3 140176 100 0 0 0      * a young necromancer
+M 0 139996 1 140179 100 0 0 0      * Prote' de Morte
+M 0 139994 2 140179 100 0 0 0      * an assistant necromancer
+M 0 139994 2 140179 100 0 0 0      * an assistant necromancer
+M 0 139995 1 140179 100 0 0 0      * a young necromancer
+M 0 139993 2 140182 100 0 0 0      * an assistant necromancer
+M 0 139993 2 140182 100 0 0 0      * an assistant necromancer
+M 0 139971 4 140182 100 0 0 0      * a master necromancer
+M 0 139997 1 140185 100 0 0 0      * Drake de Morte
+G 1 139975 1 0 100 0 0 0           *    a metal key
+M 0 139999 1 140189 100 0 0 0      * the judge of petitioners
+M 0 140000 1 140190 100 0 0 0      * a vampire
+F 1 140001 1 140190 100 0 0 0      * a vampire (following)
+F 1 140002 1 140190 100 0 0 0      * a vampire (following)
+E 1 139983 1 16 100 0 0 0          *   a long jagged Deathtooth dagger
+M 0 140008 1 140191 100 0 0 0      * a mutated creature
+M 0 140009 1 140195 100 0 0 0      * Ferranifer, the necromancer vampire
+E 1 140003 1 1 100 0 0 0           *   a silver ring with a sapphire
+E 1 140002 1 3 100 0 0 0           *   the bottom half of an obsidian amulet
+G 1 139955 1 0 100 0 0 0           *    a skeleton key
+F 1 140010 1 140195 100 0 0 0      * a flameskull (following)
+M 0 140024 5 140198 100 0 0 0      * a Molian zombie
+M 0 140011 1 140202 100 0 0 0      * a brine dragon
+G 1 140005 1 0 100 0 0 0           *    a large gold key
+M 0 140024 5 140203 100 0 0 0      * a Molian zombie
+M 0 140012 1 140204 100 0 0 0      * a Molian zombie
+M 0 140013 8 140207 100 0 0 0      * a wraith spider
+E 1 140011 16 16 100 0 0 0         *   a wraith spider fang
+E 1 140011 16 17 100 0 0 0         *   a wraith spider fang
+M 0 140013 8 140207 100 0 0 0      * a wraith spider
+E 1 140011 16 16 100 0 0 0         *   a wraith spider fang
+E 1 140011 16 17 100 0 0 0         *   a wraith spider fang
+M 0 140013 8 140207 100 0 0 0      * a wraith spider
+E 1 140011 16 16 100 0 0 0         *   a wraith spider fang
+E 1 140011 16 17 100 0 0 0         *   a wraith spider fang
+M 0 140013 8 140207 100 0 0 0      * a wraith spider
+E 1 140011 16 16 100 0 0 0         *   a wraith spider fang
+E 1 140011 16 17 100 0 0 0         *   a wraith spider fang
+M 0 140013 8 140207 100 0 0 0      * a wraith spider
+E 1 140011 16 16 100 0 0 0         *   a wraith spider fang
+E 1 140011 16 17 100 0 0 0         *   a wraith spider fang
+M 0 140013 8 140207 100 0 0 0      * a wraith spider
+E 1 140011 16 16 100 0 0 0         *   a wraith spider fang
+E 1 140011 16 17 100 0 0 0         *   a wraith spider fang
+M 0 140013 8 140207 100 0 0 0      * a wraith spider
+E 1 140011 16 16 100 0 0 0         *   a wraith spider fang
+E 1 140011 16 17 100 0 0 0         *   a wraith spider fang
+M 0 140013 8 140207 100 0 0 0      * a wraith spider
+E 1 140011 16 16 100 0 0 0         *   a wraith spider fang
+E 1 140011 16 17 100 0 0 0         *   a wraith spider fang
+M 0 140016 2 140208 100 0 0 0      * a winter wight
+M 0 140014 1 140209 100 0 0 0      * a mighty oak tree
+M 0 140015 1 140219 100 0 0 0      * a gargantuan cat with many tails
+G 1 140016 1 0 100 0 0 0           *    a large ivory key
+M 0 140017 1 140229 100 0 0 0      * a Molian zombie
+M 0 140023 1 140229 100 0 0 0      * a winter wight
+M 0 140024 5 140231 100 0 0 0      * a Molian zombie
+M 0 140018 1 140233 100 0 0 0      * a gladiator of immense size
+E 1 140024 1 11 100 0 0 0          *   a large iron bound shield
+E 1 140023 1 16 100 0 0 0          *   A massive drusus sword of rusted iron
+G 1 140022 1 0 100 0 0 0           *    a twisted bone key
+M 0 140019 1 140235 100 0 0 0      * a large winter wight
+G 1 140025 1 0 100 0 0 0           *    a curved bone key
+M 0 140024 5 140239 100 0 0 0      * a Molian zombie
+M 0 140020 9 140251 100 0 0 0      * a Molian zombie
+M 0 140020 9 140251 100 0 0 0      * a Molian zombie
+M 0 140020 9 140251 100 0 0 0      * a Molian zombie
+M 0 140020 9 140251 100 0 0 0      * a Molian zombie
+M 0 140020 9 140251 100 0 0 0      * a Molian zombie
+M 0 140020 9 140251 100 0 0 0      * a Molian zombie
+M 0 140020 9 140251 100 0 0 0      * a Molian zombie
+M 0 140020 9 140251 100 0 0 0      * a Molian zombie
+M 0 140020 9 140251 100 0 0 0      * a Molian zombie
+M 0 140021 2 140251 100 0 0 0      * a Molian zombie
+M 0 140021 2 140251 100 0 0 0      * a Molian zombie
+M 0 140016 2 140252 100 0 0 0      * a winter wight
+M 0 140022 1 140253 100 0 0 0      * a Molian zombie of a wizard
+G 1 140029 1 0 100 0 0 0           *    a small note
+M 0 140024 5 140258 100 0 0 0      * a Molian zombie
+M 0 140025 1 140261 100 0 0 0      * the old withered mage, Desatysso
+E 1 140031 1 5 100 0 0 0           *   many hundred stitches
+M 0 140026 1 140263 100 0 0 0      * the Nightwalker
+M 0 140027 1 140266 100 0 0 0      * a dretch
+M 0 140028 2 140267 100 0 0 0      * the demon, Galzrebru
+M 0 140029 1 140269 100 0 0 0      * a demon named Maraloth
+G 1 140035 1 0 100 0 0 0           *    a crystal key
+M 0 140030 1 140270 100 0 0 0      * the demon, Nalfashee
+M 0 140031 1 140271 100 0 0 0      * the demon, Volk
+M 0 140032 1 140272 100 0 0 0      * the demon, Morudaes
+E 1 140033 1 16 100 0 0 0          *   a double bladed axe
+M 0 140038 1 140276 100 0 0 0      * a negative energy elemental
+M 0 140037 1 140277 100 0 0 0      * the demon, Fuegar
+M 0 140044 1 140279 100 0 0 0      * a huge four armed gargoyle
+G 1 140043 1 0 100 0 0 0           *    a long obsidian key
+M 0 140034 1 140281 100 0 0 0      * a bone weird
+M 0 140036 1 140284 100 0 0 0      * the sphere of annihilation
+M 0 140033 3 140285 100 0 0 0      * a pile of bones
+M 0 140033 3 140285 100 0 0 0      * a pile of bones
+M 0 140033 3 140285 100 0 0 0      * a pile of bones
+M 0 140028 2 140287 100 0 0 0      * the demon, Galzrebru
+M 0 140039 1 140290 100 0 0 0      * a dark eyed statue
+M 0 140040 1 140291 100 0 0 0      * the demon, Baldzor
+M 0 140041 15 140292 100 0 0 0     * a headless zombie
+M 0 140043 14 140292 100 0 0 0     * an one armed zombie
+M 0 140046 14 140292 100 0 0 0     * a headless skeleton
+M 0 140041 15 140292 100 0 0 0     * a headless zombie
+M 0 140045 8 140292 100 0 0 0      * a torso of a zombie
+M 0 140047 12 140292 100 0 0 0     * a zombie with its head backward
+M 0 140047 12 140292 100 0 0 0     * a zombie with its head backward
+M 0 140041 15 140292 100 0 0 0     * a headless zombie
+M 0 140042 14 140292 100 0 0 0     * a twisted zombie
+M 0 140041 15 140292 100 0 0 0     * a headless zombie
+M 0 140045 8 140292 100 0 0 0      * a torso of a zombie
+M 0 140043 14 140292 100 0 0 0     * an one armed zombie
+M 0 140046 14 140292 100 0 0 0     * a headless skeleton
+M 0 140042 14 140292 100 0 0 0     * a twisted zombie
+M 0 140047 12 140292 100 0 0 0     * a zombie with its head backward
+M 0 140043 14 140292 100 0 0 0     * an one armed zombie
+M 0 140042 14 140293 100 0 0 0     * a twisted zombie
+M 0 140041 15 140293 100 0 0 0     * a headless zombie
+M 0 140042 14 140293 100 0 0 0     * a twisted zombie
+M 0 140043 14 140293 100 0 0 0     * an one armed zombie
+M 0 140046 14 140293 100 0 0 0     * a headless skeleton
+M 0 140047 12 140293 100 0 0 0     * a zombie with its head backward
+M 0 140046 14 140293 100 0 0 0     * a headless skeleton
+M 0 140045 8 140293 100 0 0 0      * a torso of a zombie
+M 0 140047 12 140293 100 0 0 0     * a zombie with its head backward
+M 0 140043 14 140293 100 0 0 0     * an one armed zombie
+M 0 140041 15 140293 100 0 0 0     * a headless zombie
+M 0 140043 14 140293 100 0 0 0     * an one armed zombie
+M 0 140046 14 140293 100 0 0 0     * a headless skeleton
+M 0 140047 12 140293 100 0 0 0     * a zombie with its head backward
+M 0 140042 14 140293 100 0 0 0     * a twisted zombie
+M 0 140042 14 140293 100 0 0 0     * a twisted zombie
+M 0 140041 15 140296 100 0 0 0     * a headless zombie
+M 0 140046 14 140296 100 0 0 0     * a headless skeleton
+M 0 140043 14 140296 100 0 0 0     * an one armed zombie
+M 0 140042 14 140296 100 0 0 0     * a twisted zombie
+M 0 140047 12 140296 100 0 0 0     * a zombie with its head backward
+M 0 140045 8 140296 100 0 0 0      * a torso of a zombie
+M 0 140041 15 140296 100 0 0 0     * a headless zombie
+M 0 140042 14 140296 100 0 0 0     * a twisted zombie
+M 0 140042 14 140296 100 0 0 0     * a twisted zombie
+M 0 140041 15 140296 100 0 0 0     * a headless zombie
+M 0 140043 14 140296 100 0 0 0     * an one armed zombie
+M 0 140046 14 140296 100 0 0 0     * a headless skeleton
+M 0 140047 12 140296 100 0 0 0     * a zombie with its head backward
+M 0 140045 8 140297 100 0 0 0      * a torso of a zombie
+M 0 140041 15 140297 100 0 0 0     * a headless zombie
+M 0 140042 14 140297 100 0 0 0     * a twisted zombie
+M 0 140041 15 140297 100 0 0 0     * a headless zombie
+M 0 140043 14 140297 100 0 0 0     * an one armed zombie
+M 0 140046 14 140297 100 0 0 0     * a headless skeleton
+M 0 140047 12 140297 100 0 0 0     * a zombie with its head backward
+M 0 140045 8 140297 100 0 0 0      * a torso of a zombie
+M 0 140043 14 140297 100 0 0 0     * an one armed zombie
+M 0 140042 14 140297 100 0 0 0     * a twisted zombie
+M 0 140046 14 140297 100 0 0 0     * a headless skeleton
+M 0 140047 12 140297 100 0 0 0     * a zombie with its head backward
+M 0 140042 14 140297 100 0 0 0     * a twisted zombie
+M 0 140041 15 140297 100 0 0 0     * a headless zombie
+M 0 140046 14 140297 100 0 0 0     * a headless skeleton
+M 0 140046 14 140298 100 0 0 0     * a headless skeleton
+M 0 140042 14 140298 100 0 0 0     * a twisted zombie
+M 0 140041 15 140298 100 0 0 0     * a headless zombie
+M 0 140043 14 140298 100 0 0 0     * an one armed zombie
+M 0 140041 15 140298 100 0 0 0     * a headless zombie
+M 0 140043 14 140298 100 0 0 0     * an one armed zombie
+M 0 140046 14 140298 100 0 0 0     * a headless skeleton
+M 0 140046 14 140298 100 0 0 0     * a headless skeleton
+M 0 140047 12 140298 100 0 0 0     * a zombie with its head backward
+M 0 140045 8 140298 100 0 0 0      * a torso of a zombie
+M 0 140043 14 140298 100 0 0 0     * an one armed zombie
+M 0 140046 14 140298 100 0 0 0     * a headless skeleton
+M 0 140041 15 140298 100 0 0 0     * a headless zombie
+M 0 140042 14 140298 100 0 0 0     * a twisted zombie
+M 0 140047 12 140298 100 0 0 0     * a zombie with its head backward
+M 0 140043 14 140298 100 0 0 0     * an one armed zombie
+M 0 140045 8 140298 100 0 0 0      * a torso of a zombie
+M 0 140049 1 140299 100 0 0 0      * the demon, Baldzor
+G 1 140051 1 0 100 0 0 0           *    a blade of lightning
+M 0 140050 3 140299 100 0 0 0      * a winter wight
+M 0 140050 3 140299 100 0 0 0      * a winter wight
+M 0 140051 1 140299 100 0 0 0      * the demi-lich Mealdrun
+G 1 140053 1 0 100 0 0 0           *    an emerald of incredible value
+M 0 140050 3 140300 100 0 0 0      * a winter wight
+M 0 140048 8 140301 100 0 0 0      * The negative magic of the forge
+M 0 140048 8 140301 100 0 0 0      * The negative magic of the forge
+M 0 140048 8 140301 100 0 0 0      * The negative magic of the forge
+M 0 140048 8 140301 100 0 0 0      * The negative magic of the forge
+M 0 140048 8 140301 100 0 0 0      * The negative magic of the forge
+M 0 140048 8 140301 100 0 0 0      * The negative magic of the forge
+M 0 140048 8 140301 100 0 0 0      * The negative magic of the forge
+M 0 140048 8 140301 100 0 0 0      * The negative magic of the forge
+M 0 140035 6 140302 100 0 0 0      * the negative energy
+M 0 140035 6 140302 100 0 0 0      * the negative energy
+M 0 140035 6 140302 100 0 0 0      * the negative energy
+M 0 140035 6 140302 100 0 0 0      * the negative energy
+M 0 140035 6 140302 100 0 0 0      * the negative energy
+M 0 140035 6 140302 100 0 0 0      * the negative energy
+*
+S

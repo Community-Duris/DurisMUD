@@ -1,0 +1,251 @@
+#138908
+M
+robert necromancer zrack school love lover~
+&N   A clouded look comes over her eyes at the mention of that word.
+&N   'Yes, Robert, he came here one day about a year ago, I spoke to him for
+a while. At first he seemed to be cold... unfeeling, but then,' here a smile
+hits her face, 'he began to come more often, bringing me flowers. We would
+walk through the vale for hours, talking, laughing. He said he loved me, and
+gave me his ring, saying that he would return in time, and we would be
+married.
+&N  I think he will not return to me now, but why? Did he leave me? Did Zrack
+find out he was planning to leave the school? Did the art finally pull him
+away... Or did he never really love me?'
+&N  With that she begins crying again, saying nothing more, simply walking away.
+~
+Q
+   Larra stans straigter and sighs, holding the ring to her, then slowly
+slips it on her finger. Turning to you, her smile almost melts your heart.
+  'Ohh thank you kind heart, you know not what this means to me. Where
+did you find it?'
+   After telling her your story she smiles.
+  'Ahh he must have relised how silly his efforts into those arcane arts
+were, if only he might have escaped. Thank you.
+  I do not know if you can use this but you might want to have it, Robert
+gave it to me right before he left, telling me when next he returned he
+would bring a ring for me. This one however was his, he said something
+about "Being truly of his essence". Still maybe in your journeys you
+can take it with him, and use its good to help others as you have helped
+me.'
+  With that she produces a ring from her tunic looks it over a couple
+of times and smiles.
+~
+R I 138914
+G I 138913
+S
+#138921
+M
+hi haldron~
+&N   With the mention of that word you instantly get Dralor's attention.
+His gaze looks apon you for a second, measuring you, then his gruff voice
+begins to speak.
+&N  'Ahh so you have heard of him have you? Hmmm...
+&N   Well, now that you know that much you should know why I am really here.
+I am of the Ironstar clan, the lost clan. Our clan fortresses have been
+lost for over a thousand years and we are now scattered throughout the world.
+In our stories the last great Haldran Ironforger, Last King of Zaldran went to
+those mountains to the east,' he makes a generally eastern gesture, ' and
+tried to take back our fortress from the red dragon Charringsdeath, or Char.
+&n   We never heard from him again.
+&N   Since that time the actual location of the ancient fortress has been
+lost. However we have hope. If someone can return the ancient crown of
+Zaldran Kings to the clan then we might be able to re-form, rebuilding our
+ancient might.'
+~
+M
+ironstar~
+&N  ' Yes the Ironstar, once we were the greatest of the dwarven clans, and our
+art of forging was and still is the greatest. We had mastered the working
+of Darksteel, an alloy of Adamant and Mithril. A combination that was workable
+but gave us a edge so fine only the weapons of gods could match us. Some of
+us still know how to forge the steel, even today.'
+~
+M
+darksteel~
+&N  ' Me, make a darksteel weapon, you really have no idea the kind of work that
+takes do you?? It takes a true master to do that, and it is only done for the
+friends of the dwarves, you would have to prove yourself worthy, even the
+greatest dwarven heroes might not be allowed to wield them. However, if you
+were willing to bring me the lost Crown of Zaldran, I would consider it.'
+~
+M
+scales dragon~
+Dralor says 'Hmmmm yes, if I was brought some dragon scales and say, one
+hundred platinum coins, I could make a fine set of dragon mail for you, the
+older scales the better.'
+~
+M
+key vault mithril~
+&+yDralor suddenly looks surprised at the mention of that.
+
+&+yDralor &nsays 'How did ye know of the Vault? Only a few even know of its
+existence. Hmmmm so you want into the vault do ye?? Well that is not likely,
+I know what is in the vault, and it is a great prize. It would be impossible,
+I would never give you the key. Hell, you would have to give me both the
+lost crown of Zalran, and one of our great lost axes before I would do that.
+Like I said, almost impossible.'
+
+&+yHe winks at you and says &+W'Also, you should give me the axe first!'&n
+~
+M
+maltheas demonic weapon dagger warhammer demon mold~
+&+wDralor says &+W'Hmmmm yes, if I was brought some mithril molding to shape the weapon, an ancient demonic scroll&n
+&+Wto perform the ritual and say 2,500 platinum as payment! Sure, I could re-forge this weapon.'&n
+~
+Q
+   Apon giving him the crown he stands a bit taller and his eyes get a slight
+wet, but he does not cry. Looking right at you he says firmly,'You truly
+are a hero, you do not know what this means to my people. Today you truly
+are a dwarf friend.'
+   Going behind his desk pulls out an anchient metal case and lays it on the
+table, then looks into your eyes.
+  'I was saving this axe for my son, but you can use it better then I, or
+even he.'
+   Opening the case he slowly pulled the large axe out of the case. Looking
+over it a couple of times he similes and says. This axe is even older then
+the crown, guard it wisely, for it is truly priceless.'
+~
+R I 138943
+G I 138942
+Q
+Dralor says 'Excellant, what wonderful scales, here is your armor for the
+money you gave me.
+~
+R I 138945
+G I 138909
+G C 100000
+Q
+&+yDralor &nsays 'Great Clangaddin boy! Where did you find such artifacts?!?!
+You brought be the lost crown of Zaldran AND one of our ancient runic axes!!
+You truly are a great hero of the dwarves, I name you dwarf friend. Here take
+this key and use it to open the vault of the great hold. There are gifts there
+aplenty for you.
+~
+R I 138958
+G I 138943
+G I 138942
+Q
+&+wDralor smiles and says &+W'You are indeed worthy of such a weapon! I shall shape and re-forge it right away.'&n
+&+RDralor begins forging the weapon and re-shaping it with the mithril dagger mold. Performing the final rights&n
+&+Rwith the demon-hide scroll. He produces a weapon of demonic fire and hands it to you.&n
+
+&+wHe winks at you and says &+W'This weapon would be highly valued by warriors known as swashbucklers' &n
+~
+R I 138963
+G I 138944
+G I 138952
+G I 138965
+G C 2500000
+Q
+&+wDralor smiles and says &+W'You are indeed worthy of such a weapon! I shall shape and re-forge it right away.'&n
+&+RDralor begins forging the weapon and re-shaping it with the mithril hammer mold. Performing the final rights&n
+&+Rwith the demon-hide scroll. He produces a weapon of demonic fire and hands it to you.&n
+
+&+wHe winks at you and says &+W'This weapon would be highly valued by warriors known as berserkers' &n
+~
+R I 138964
+G I 138962
+G I 138952
+G I 138965
+G C 2500000
+S
+#138927
+M
+larra~
+&N   With a mention of the name the spirit of Robert emits a blood curdling
+scream of anguish.
+
+&+BRobert &nsays 'Ohhh my lost love you must think that I deserted you, if
+only you knew I had not! I would give anything, even my soul itself to know
+that you are safe.'
+
+&+BRobert &nsuddenly looks up and says 'I shall make a deal with you. If you
+can find Larra's ring that I gave to Zrack and take it to her, I am sure
+that she will give you my ring. She will know what has happened to me if you
+give her my ring. Say nothing of my spirit still forced to walk the plane here
+due to Zrack's magic. It will destroy her if she knows. Bring me the ring and
+I shall give you my &+Wsoul.'
+~
+M
+zrack~
+Robert's form shudders with painful memories at the mention of the name.
+
+&+BRobert &nsays, 'My old master still lives, I can feel him out there in
+the night. He must be destroyed. He has destroyed Fairlock, subverted young
+men and women to the study of the evil arts, and killed me and banished me
+to this life. His magics keep me bound on this plane, making sure that I am
+never reunited with my lost love Larra. Please, kill him, he deserves it.'
+~
+M
+marius~
+&+BRobert &nsays 'Ahhh yes, Marius. One of the ones that would have been a
+powerful force of good, had Zrack not subverted him, he was my friend, yet
+he would not come with me or help me fight Zrack, together we could have
+defeated him. Now he is simply another teacher at the school of the skeletal
+hand.'
+~
+M
+janos~
+&+BRobert&n says 'Janos is insane, it is that simple, he loves the dead things.
+He likes to play with him, put him out of his misery, and everyone elses please
+he deserves that... at least.'
+~
+M
+ezzra~
+&+BRobert says 'Ezzra was never meant to be a necromancer, and could not even
+learn the dark arts. However his soul was tainted by Zrack. Last I heard he
+was consorting with demons. Be careful of him, his magic is strange, yet
+powerful.'
+~
+M
+ali faethor~
+&+BRobert says 'Ahhh yes, Ali & Feathor. You cannot mention one without the
+other. Lovers since our first weeks together the two fit each other well.
+Ali is one of the most beutiful women I have ever seen, but her heart for all
+but Faethor is like ice. Together they make a powerful team, do not fight
+them at the same time, because you will surely die.'
+~
+M
+darksteel dwarf dwarves ironstar~
+&+BRobert&n says 'Hmmmm I know little of that but I can give you some leads.
+I know that Zrack was working on something in the depths of the school. Of
+late he had not been teaching many classes, and his work in the depths of
+the school had taken all his works. All had been banned from going down
+there except Ali and Faethor. That is where Maltheas lives.'
+
+&n&+rAt the mention of Maltheas Robert shivers.
+
+&+BRobert &nsays 'I think the school might have once been a dwarven hold of
+some sort, I do not know, it is simply a guess, who knows what he is searching
+for in those depths, maybe dwarven treasures, maybe more bodies since he has
+taken all the corpses out of the graveyard of Fairhaven, and killed almost
+everyone else in it. Please stop him before he kills my beloved Larra.'
+~
+M
+maltheas angel dark~
+&n&+BRobert &n&+rglances around nervously at the mention of Maltheas's name.
+
+&+BRobert&n says 'Do not mention his name to much, some say that he can here
+his name when spoken. Even now in my death I fear him becuse I believe that
+he can still hurt me, being a spirit of evil itself. Be careful, leave him
+be, or he shall surely slay thee.'
+~
+Q
+&+BRobert &ntakes the ring from you and smiles. Silently he puts it on his
+finger.
+
+&+BRobert &nsays 'So I agreed so shall it be done, I owe you a soul dept, so
+ley my soul help you for eternity to repay it.
+~
+R I 138950
+G I 138914
+D
+&+BRobert entire body begings to flare with power as the ring on his finger
+pulses with light. Lighting flashes from his body to the ring as the metal
+on the ring begins to melt and fall away. Even the two small stones fracure
+and break as the heat of &+BRobert's &n&+rf&+Ri&+Yr&n&+Re &nburns it away.
+Finally there is nothing there except a burning band of white flames and fire
+that slowly condenses into a ring of power and light that slowly comes and
+lays in your hand.
+~
+S

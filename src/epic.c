@@ -606,8 +606,8 @@ void gain_epic(P_char ch, int type, int data, int amount)
   if(GET_LEVEL(ch) >= get_property("exp.maxExpLevel", 46) &&
       GET_LEVEL(ch) < get_property("epic.maxFreeLevel", 50))
   {
-     //epic_free_level(ch);
-     advance_level(ch);//, FALSE); handles leveling for wipe2011
+     epic_free_level(ch);
+     //advance_level(ch);//, FALSE); handles leveling for wipe2011
   }
 
   // feed artifacts

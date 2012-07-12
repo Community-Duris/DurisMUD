@@ -4572,7 +4572,13 @@ void spell_dimension_door(int level, P_char ch, char *arg, int type,
     send_to_char("&+CYou failed.\n", ch);
     return;
   }
-  
+  P_char rider = get_linking_char(victim, LNK_RIDING);
+  if(IS_NPC(victim) && rider)
+  {
+    send_to_char("&+CYou failed.\n", ch);
+    return;
+  }
+
   if(!IS_TRUSTED(ch) &&
      IS_TRUSTED(victim))
   {
@@ -13202,7 +13208,7 @@ void astral_banishment(P_char ch, P_char victim, int hwordtype, int level)
   int new_room, lev = GET_LEVEL(victim), found;
 
   if(GET_RACE(victim) == (hwordtype == BANISHMENT_HOLY_WORD ? RACE_GITHYANKI : RACE_GITHZERAI) &&
-     number(0,100) < 5 + BOUNDED(-2, level-lev, 2) &&
+     number(0,100) < 2 + BOUNDED(-2, level-lev, 2) &&
      !IS_HOMETOWN(ch->in_room) &&
      !IS_SET(world[ch->in_room].room_flags, NO_TELEPORT) &&
      !(world[ch->in_room].sector_type == SECT_OCEAN))

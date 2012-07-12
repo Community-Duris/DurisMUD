@@ -374,7 +374,7 @@ const struct randomeq_slots slot_data[MAX_SLOT + 1] = {
   {49, "&+Lsaddle&N", 0.7, 0.8, ITEM_HORSE_BODY, 1, 0},
   {50, "&+Ltail protector&N", 0.8, 0.2, ITEM_WEAR_TAIL, 1, 0},
   {51, "&+Lnose ring&N", 0.8, 0.0, ITEM_WEAR_NOSE, 1, 0},
-  {52, "&+Lspider armor&N", 0.7, 0.8, ITEM_SPIDER_BODY, 1, 0},
+  {52, "&+Lbelt buckle&N", 0.2, 0.1, ITEM_ATTACH_BELT, 1, 0},
   {53, "&+Lskull&N", 1.4, 0.5, ITEM_WEAR_HEAD, 2, 0},
   {54, "&+Lhorn&N", 1.0, 0.0, ITEM_WEAR_HORN, 1, 0},
   {55, "&+Lchainmail&N", 1.5, 1.3, ITEM_WEAR_BODY, 3, 0},

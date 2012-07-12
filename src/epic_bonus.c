@@ -122,6 +122,9 @@ bool get_epic_bonus_data(P_char ch, EpicBonusData *ebdata)
   if (!ebdata)
     return false;
 
+  if (!IS_PC(ch))
+    return false;
+
   if (!qry("SELECT * FROM epic_bonus where pid = '%i'", GET_PID(ch)))
     return false;
 

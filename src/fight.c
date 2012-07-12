@@ -4958,7 +4958,8 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
   if(!vamped &&
     ch != victim &&
     !IS_AFFECTED4(victim, AFF4_HOLY_SACRIFICE) &&
-    (flags & (RAWDAM_BTXVAMP | RAWDAM_SHRTVMP)) &&
+    ((flags & RAWDAM_BTXVAMP) ||
+    (flags & RAWDAM_SHRTVMP)) &&
     (IS_AFFECTED4(ch, AFF4_BATTLE_ECSTASY) ||
     affected_by_spell(ch, SKILL_SHORT_VAMP)))
   {
@@ -4982,7 +4983,8 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
 // This is battle x vamp for PC group hits and damage spells.
 
   if(dam >= 10 &&
-    (flags & (RAWDAM_BTXVAMP |  PHSDAM_ARROW)))
+    ((flags & RAWDAM_BTXVAMP) ||
+     (flags & PHSDAM_ARROW)))
   {
     if(IS_PC(ch) ||
        IS_PC_PET(ch))
@@ -8397,10 +8399,16 @@ void perform_violence(void)
     }
 
     if(IS_PC(ch) &&
-      IS_PC(opponent) &&
-      !affected_by_spell(ch, TAG_PVPDELAY))
+      IS_PC(opponent))
     {
-      set_short_affected_by(ch, TAG_PVPDELAY, 20 * WAIT_SEC);
+      if (!affected_by_spell(ch, TAG_PVPDELAY))
+      {
+        set_short_affected_by(ch, TAG_PVPDELAY, 20 * WAIT_SEC);
+      }
+      if (!affected_by_spell(opponent, TAG_PVPDELAY))
+      {
+        set_short_affected_by(opponent, TAG_PVPDELAY, 20 * WAIT_SEC);
+      }
     }
     
     if(!FightingCheck(ch, opponent, "perform_violence"))

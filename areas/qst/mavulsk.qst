@@ -1,0 +1,413 @@
+#139517
+M
+gruber~
+&+W Oh, yes my dear son. I told him to go and play outside
+&+W yesterday when I started to clean the house but he has
+&+W been lost ever since. Can you please find him for me?&n
+~
+Q
+&+W I don't know how to thank you!
+&+W Give this letter to my husband and maybe he
+&+W can give you something for your great job!&n
+~
+R I 139602
+G I 139601
+S
+#139521
+M
+skin hide~
+ Yes that's my speciality.. skins of all kinds.
+ Rare and magical skins are the most challenging
+ to work with. But if you have any, see to that
+ it is properly prepared before I work with it.
+~
+Q
+ Ahh the hide of a waterfiend, haven't seen a hide like
+ this in ages. I'll keep most of it but I'll make you
+ a pair of sleeves as a token of my appreciation.
+~
+R I 139549
+G I 139550
+Q
+ He turns away and says:
+ &n&+W I have to work now, so please leave.
+~
+R I 139556
+G I 139558
+Q
+ Alilzalin works with the hide for a couple of hours
+ then turns back to you and says:
+
+&+W    It was a true pleasure to work with
+&+W    this skin. Now leave me I have other
+&+W    work.&n
+~
+R I 139569
+G I 139570
+S
+#139522
+Q
+&+g After an hours work with chemicals of all kinds
+&+g Walgor turns to you with a much smaller, but
+&g cleaner hide and says:
+
+&n&+w That's all I can do asfar as the hide concerns,
+&n&+W now you need to find a skilled tailor to work
+&n&+W with it!&n
+~
+R I 139550
+G I 139547
+Q
+ After been working on it for a while he turns to
+ you and says:
+  &n&+WNow, take this hide and leave me please!
+~
+R I 139558
+G I 139557
+Q
+Walgor says: Here take this hide and get
+             someone to work with it.
+~
+R I 139570
+G I 139568
+S
+#139524
+M
+one-eye eye~
+&+C One-Eye yes, poor fellow lost his eye due
+&+C to sad circumstances. I searched for years
+&+C for a way to replace it and consulted the
+&+C grand spiritfather. The only way to give
+&+C One-Eye his eye back is by a powerful ritual.
+&+C Problem is that you will need the eye of a
+&+C demi-god to complete it so I guess One-Eye
+&+C will have to live without a second eye.&n
+~
+M
+shaman~
+&+W There is a powerful troll shaman hiding somewhere in these
+&+W lands. I was out in the deep forest looking for some rare
+&+W mushrooms I know grow there during the autum when a troll
+&+W shaman and his assistant attacked me. I had luckily enough
+&+W prepared myself with protectionspells before I left and I
+&+W withstood their first attack. After a short fight I killed
+&+W the assistant but the more powerful one got away. He hurt me
+&+W pretty bad though first and what would I not give to see him
+&+W dead.&n
+~
+Q
+&+W  Mighty impressive! Where did you find this?
+&+W I've tried so long to locate where that shaman
+&+W has been hiding. Well anyway, when I killed that
+&+W assistant I got a strange weapon from him. I'd
+&+W say you have earned you're right to it.&n
+~
+R I 139600
+G I 139599
+S
+#139535
+M
+eye~
+&+W Yes, my lost eye, well that story is nothing I wanna talk
+&+W about, especially not to a stranger like yourself. What was
+&+W in the passed should remain in the passed I have already had
+&+W my share of bitterness. I've consulted the doctor about it
+&+W but I'm afraid it's lost.
+
+&+g  He turns around back to his work with a beartankard.
+~
+M
+doctor shaman~
+&+W Oh yes, the dear witchdoctor. We talked about it for
+&+W a long time and he searched for an awnser for several
+&+W years but I've given up on thatone. If you're so
+&+W interested in my lost eye why not go and talk to him youself?
+~
+Q
+&+L I cannot belive this is true!
+&+L The eye of a demi-god!
+
+&+L I had given up on this possibility once the
+&+L Doctor told me what it would take to give me
+&+L my eye back but now it is possible!
+
+&+L As a proof of my gratitute I will hand a very powerful
+&+L item over to you. When they took my eye and my title I
+&+L stole the Dwarfkings most beloved belonging as a small
+&+L revenge. Now it is yours to carry.
+
+&+L Go in peace my friend.
+~
+R I 139551
+G I 139552
+S
+#139547
+M
+fire~
+&+W Ah, yes that fire. The house was burnt out before
+&+W we could do anything. It burnt down to the ground
+&+W with it's owner still inside, indeed a sad story.
+&+W I'm currently investigating the cause of the fire.
+&+W You wouldn't know anything about it?&n
+~
+M
+troll trolls~
+  Those damn Trolls, I've been looking for their lair
+ for over 15 years and not found it. I thought I could
+ stop their raids once and for all but no. I I only
+ could kill their chieftain I bet the rest would split
+ up and leave these lands.
+~
+Q
+&+W Oh well, it lookes like the poor old &n&+mmage&n
+&+W who lived there started the fire himself.
+&+W Now I don't have to spend more time trying
+&+W to figure out what caused it. I found this
+&+W key during my last visit to the burnt out
+&+W house. I don't know where it goes but you're
+&+W welcome to try it anywhere you want.
+~
+R I 139555
+G I 139534
+Q
+&+W  I can't belive you found them!
+
+&+W Oh well, I shall reward you for your
+&+W honourable deeds, take this cloak.&n
+~
+R I 139592
+G I 139593
+S
+#139550
+M
+fish aquarium~
+&+B Oh yes. Can you imagine anything more exiting
+&+B than watch a fish float in it's medium. That
+&+B is my way to relax, just sit and watch my dear
+&+B aquarium. You wouldn't have anything interesting
+&+B with you, would you?&n
+~
+Q
+&+W Where did you find this?
+
+&+W I'll trade it for my crown,
+&+W here take it.&n
+~
+R I 139560
+G I 139548
+S
+#139551
+M
+trouble~
+&+W How am I gonna convince the Baron ?
+&+W Imagine this task yourself..&n
+~
+S
+#139557
+M
+trouble~
+&+W Yes, as if it weren't enough with the constant
+&+W raiding trollclan on the other side of the river
+&+W something horrible roams the former mines.
+~
+M
+mines~
+&+W The mines yes. A long time ago, long before we settled
+&+W down here, a group of duergar dwarves and orcs had a
+&+W miningcamp here. They were very successful and built
+&+W most of what you can see today of the stonemansion.
+&+W Something happened here though, the legend does not
+&+W say what, and they just disappeared. I doubt the stupid
+&+W cavetrolls could erase a whole settlement without a trace.
+&+W No bodies were ever found by the duergarcoucil who sent
+&+W a force here to investigate. The mine was empty and so
+&+W was the stone fort, anyway they found it best to seal
+&+W off the former mines and leave this place.
+
+&+W The mine is said to be very rich of mithril so I decided
+&+W to open it again and hired a skilled little moutaindwarf
+&+W to organize the workforce. The stupid little dwarf didn't
+&+W lead the work to good since he, as I now know, is a drunkard.
+&+W He let the miners enter the mine alone since he was to
+&+W saturated, and they never came back. Do you have it in
+&+W you to investigate this matter for me?&n
+~
+M
+investigate~
+&+W Bring me the scalp from that
+&+W incompetent dwarf and I'll give you
+&+W the key to the mines.&n
+~
+M
+trollclan troll trolls~
+&+W Those damn trolls, well they are no longer
+&+W a major threat to us. Go talk to the Captain
+&+W he is more informed about this subject.&n
+~
+Q
+The baron lookes surprised and raises an eyebrow.
+
+And he says: &+WA so you found that little rat, well
+             take this key and investigate who might
+             have caused the trouble in the mines for
+             me.
+~
+R I 139575
+G I 139574
+Q
+&+W  Oh, I never thought you had it in you!
+
+&+W  Finally we can open up the mines for real!
+
+&+W  As a token of my appreciation, take the
+&+W  key to my treasurechest and take whatever
+&+W  you want from it!&n
+~
+R I 139566
+G I 139586
+S
+#139563
+M
+hysteric daughter~
+ She turns to you and peers at you as she responds:
+ &+W YES WOULDN'T YOU BE ??
+ &+W YOU HAVE NO IDEA WHAT THAT PERVERT DID
+     TO MY DAUGHTER!!
+~
+M
+pervert~
+ She lookes surprised and says:
+  &+W Yes pervert, I'm gonna slice his genitals off
+ &+W when, and i say when not if, I find him. The Baron
+ &+W is WAY to soft on that kind of criminals. I'd love
+ &+W to see that pervet dead.
+
+ She sighs loudly and turns away.&n
+~
+Q
+The woman seems to calm down as you hand
+her the scalp and a smile of revenge comes
+over her lips and she says:
+
+   &+WI don't know how I can thank you but take
+   &+Wmy veil as a token of my gratitude.
+~
+R I 139577
+G I 139573
+S
+#139581
+M
+metal~
+ Metal yes, it's so hard to get hold on raw material.
+ I have to be more of a merchant with all the bargaining
+ with the greedy merchants about their metals. I'm not
+ a merchant I am a smith! If only the Baron could open
+ that old mine so I could concentrate on my work here
+ by my forge.
+~
+M
+baron mine~
+ Go to the Baron and talk some sense into him
+ so he opens up the old mine!
+~
+M
+red-steel~
+ Red-steel ? You said red-steel !
+
+ Where have you found or heard about that metal?
+
+ It is the most rare among metals since it is
+ not of this world. The legend tells that the
+ metal comes from some demon-dimension and can
+ only be brought here by a demon.
+
+ I tell you, if you have it, i'll make a weapon
+ from one part of it and give to you and keep
+ the other part? How does that sound to you?
+
+ But remember bring me some gold to work with
+ to !!
+~
+M
+captain~
+ Oh yes, the dear Captain.
+ He once rescued me from those uncivilized
+ cavetrolls on the other side of the forest,
+ did you know that?
+
+ Quite some story, I've never seen a warrior
+ even close to the rage of the Captain. He basically
+ tore those trolls apart. I was just in my best sleep
+ when the trolls captured me. They had just tied me
+ to a pole they intended to carry me with, when the
+ Captain charged into one of the trolls. The horns
+ went right through the troll's thick skin and then
+ the fight was going. I can't see very well in dark
+ so I didn't catch much of it but they sure were dead
+ once the fight was over.
+~
+Q
+ Ok this morningstar should make it a fair trade.
+ I'm keeping most of the gold and the metal but
+ you got my skilled work now in your hands, and
+ that is worth quite much I guess.
+~
+R I 139590
+G I 139589
+G I 139580
+S
+#139593
+M
+plate~
+&+L Yes this useless piece of steel is getting
+&+L way to overworked. Now I have to melt it again.
+&+L I've been working with steel platemails to the
+&+L guards for a week straight now, I can tell you
+&+L it gets a bit boring after a while.&n
+~
+M
+boring~
+ Steel has it's downsides, if I could get hold on some other
+ materials every now and then it would sure make my work more
+ interesting.
+~
+Q
+&+L As a token of my gratitude for finding my son and bringing me this
+&+L interesting piece of material I'll give you these leggings.&n
+~
+R I 139603
+G I 139602
+G I 139604
+S
+#139597
+M
+travel~
+&+g I've been travelling allower the know world and my
+&+g shoes are getting real worn out. I could for sure
+&+g use a new pair so I can continue with my journey.&n
+~
+M
+journey~
+&+g My journey doesn't seem to have an end. My king sent me
+&+g on a mission to find two stolen treasures of his and the traces
+&+g sofar lead to this town. I seem to have signed my own doom
+&+g when I accepted the kings quest.&n
+~
+M
+treasures~
+&+g A traitor stole the kings shield and his beautiful
+&+g sleeves and left the city before we could track him
+&+g down. I've been looking for him ever since, and that
+&+g was 15 years ago now. If you can find them before me
+&+g bring them to me please and I will reward you.&n
+~
+Q
+&+g I will tell my king about this! Never have I heard nor
+&+g seen a more skilled tracker than you, finding both these
+&+g items in this short time! Here take my leggings, they have
+&+g been a great help to me in my quest.&n
+~
+R I 139606
+G I 139511
+G I 139551
+S

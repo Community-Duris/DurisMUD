@@ -10,8 +10,8 @@ archway golem statue devil carving~
 &+Lwith the knowledge that somebody had to create these monstrosities for a
 &+Lpurpose.&n
 ~
-31818 1 0 412 30 67108864 0 -1000 S
-OG 0 1 4
+31818 1 0 0 412 30 67108864 0 -1000 S
+OG 0 1 0 4
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -25,8 +25,8 @@ earth pixie~
 &+Leasily through the &+munderworld&+L.  Two delicate looking wings blur with
 &+Lmotion, propelling the pixie through the air&n.
 ~
-1073899592 1 0 134742280 30 0 0 -1000 S
-HF 0 256 2
+1073899592 1 0 0 134742280 30 0 0 -1000 S
+HF 0 256 0 2
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -41,8 +41,8 @@ chained adult green wyrm dragon~
 &+gsuited to his underground climate with his long, powerful legs.  Small wisps
 &+gof &+rnoxious&+g gas leak from the corners of its mouth and nose.&n
 ~
-555082 1 0 268 30 0 0 -1000 S
-D 0 1 7
+555082 1 0 0 268 30 0 0 -1000 S
+D 0 1 0 7
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -58,19 +58,19 @@ dungeon trapper~
 &+LSuffocating inside this creature while your &+Wbones&+L are crushed from the
 &+Lpressure is not a fun way to die.&n
 ~
-1073756234 1 0 337117484 0 0 0 -1000 S
-AC 0 1 4
+1073756234 1 0 0 337117484 0 0 0 -1000 S
+AC 0 1 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #22904
 ny'nyeth vault guardian~
-&+La &+BN&+by'&+BN&+beth &+Lvault gaurdian&n~
+&+La &+BN&+by'&+BN&+beth &+Lvault guardian&n~
 &+LA &+BN&+by'&+BN&+beth &+Lvault guardian stands here.&n
 ~
 ~
-2058 1 0 0 0 0 0 0 S
-mg 0 16 -1
+2058 1 0 0 0 0 0 0 0 S
+mg 0 16 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -85,8 +85,8 @@ earth mephit~
 &+ythe will of their master.  In this case it seems that will is to &+Ldestroy&+y,
 &+yand this particular mephit seems rather gleeful with the thought of killing.&n
 ~
-1141010632 1 0 134742284 30 0 0 -1000 S
-EE 0 8192 3
+1141010632 1 0 0 134742284 30 0 0 -1000 S
+EE 0 8192 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -101,8 +101,8 @@ scarecrow golem~
 &+yIts eyes glow from beneath an empty hood, and its movements seem driven more
 &+yby magical means than physical.&n
 ~
-1140881608 1 0 524572 30 0 0 -1000 S
-OG 0 8192 3
+1140881608 1 0 0 524572 30 0 0 -1000 S
+OG 0 8192 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -117,8 +117,8 @@ titan warlord~
 &+Lto hand.  A mighty warrior, a single t&+Bi&+Lt&+Ba&+Ln can turn the tide of a war
 &+Lwith his devastating power.&n
 ~
-1140881736 1 0 412 30 1048576 0 -1000 S
-G 0 16 6
+1140881736 1 0 0 412 30 1048576 0 -1000 S
+G 0 16 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -134,8 +134,8 @@ titan berzerker berserker~
 &+Lhead and howls with insane &+Rfury&+L, filling the air with thunderous cracks
 &+Lof &+Blightning&+L.&n
 ~
-1140881736 1 0 414 262302 67108864 0 -1000 S
-G 0 1048576 6
+1140881736 1 0 0 414 262302 67108864 0 -1000 S
+G 0 1048576 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -150,8 +150,8 @@ titan juggernaut~
 &+LHis kicks have shattered the ribs of dragons, while his &+Blightning &+Lbreath
 &+Lflayed their bodies.&n
 ~
-1140881672 1 0 412 262302 0 0 -1000 S
-G 0 1 6
+1140881672 1 0 0 412 262302 0 0 -1000 S
+G 0 1 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -165,8 +165,8 @@ titan lord~
 &+Lblasting its way into those that seek to violate his purpose.  He never
 &+Lrests, or strays from his duty in any manner, ever.&n
 ~
-67139914 1 0 412 30 0 0 -1000 S
-G 0 16 6
+67139914 1 0 0 412 30 0 0 -1000 S
+G 0 16 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -186,8 +186,8 @@ titan king~
 &+Lmeans of their own destruction, but &+BN&+by'&+BN&+beth &+Lnot only forged these
 &+Labominations but bent them to his own will.&n
 ~
-31050 1 0 268435868 2270 69206016 525312 -1000 S
-G 0 1 6
+31050 1 0 0 268435868 2270 69206016 525312 -1000 S
+G 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -203,8 +203,8 @@ horror~
 &+Lexhibited by the creature.  Existing on several different planes at the same
 &+Ltime, the horror lives only to kill and devour.&n
 ~
-1073756232 1 0 1638668 94 2097152 33562624 -1000 S
-U 0 1 4
+1073756232 1 0 0 1638668 94 2097152 33562624 -1000 S
+U 0 1 0 4
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -220,8 +220,8 @@ banshee~
 &+Lcold surrounds her non-substantial form, and her touch is the touch of the
 &+Lbeyond, bringing pain and suffering to the living.&n
 ~
-1073903688 1 0 134807854 94 2097152 0 -1000 S
-UG 0 4 3
+1073903688 1 0 0 134807854 94 2097152 0 -1000 S
+UG 0 4 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -238,8 +238,8 @@ lifedrinker vampire~
 &+Levery once of suffering and enjoyment from his victims before ending their
 &+Lexistence.&n
 ~
-1140996168 1 0 404226364 262238 2097152 1024 -1000 S
-UV 0 1 4
+1140996168 1 0 0 404226364 262238 2097152 1024 -1000 S
+UV 0 1 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -257,8 +257,8 @@ swarmfish fish~
 &+Land sinew, while its rear teeth are able to grip and hold with an immense
 &+Lamount of pressure.&n
 ~
-67401800 1 0 316 12290 0 0 -1000 S
-F 0 1 2
+67401800 1 0 0 316 12290 0 0 -1000 S
+F 0 1 0 2
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -273,8 +273,8 @@ sahaugin huntress elf~
 &+Lbrutally barbed.  Her skin is a &+gmottled dark green color&+L, slimy looking in
 &+Ltexture.
 ~
-67516488 1 0 28 4190 0 0 -1000 S
-AC 0 16384 3
+67516488 1 0 0 28 4190 0 0 -1000 S
+AC 0 16384 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -289,8 +289,8 @@ sahaugin enchantress elf~
 &+Lit disappears &+ginto the water&+L.  A few thousand &+gyears&+L old, she has had a lot
 &+Lof time to &+gperfect her magical&+L arts.
 ~
-67516488 1 0 402653452 30 0 0 -1000 S
-AC 0 2560 3
+67516488 1 0 0 402653452 30 0 0 -1000 S
+AC 0 2560 0 3
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -309,8 +309,8 @@ vlessus adept drow~
 &+Lthough he were not thousands of years beyond they normal age of passing.
 &+LHis eyes hold wisdom, tempered by &+rhatred&+L beyond reasoning.&n
 ~
-1074149448 1 0 939589948 12510 0 0 -1000 S
-PL 0 2560 3
+1074149448 1 0 0 939589948 12510 0 0 -1000 S
+PL 0 2560 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -326,8 +326,8 @@ tssiss scourge vampire~
 &+LA tatoo of a black &+cscythe&+L marks the side of his face behind his left
 &+Leye and stretching down below the edge of his mouth.&n
 ~
-1073903688 1 0 941097244 94 0 8388608 -1000 S
-UV 0 8193 4
+1073903688 1 0 0 941097244 94 0 8388608 -1000 S
+UV 0 8193 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -346,8 +346,8 @@ drkehn commander drow~
 &+Lof &+rwitchcraft&+L and ties to the &+roccult&+L, drove his faith from him and
 &+Lturned him to a life of evil and &+rhatred&+L.&n
 ~
-1073887304 1 0 134217996 30 0 0 -1000 S
-PL 0 3072 3
+1073887304 1 0 0 134217996 30 0 0 -1000 S
+PL 0 3072 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -365,8 +365,8 @@ nian dread titan~
 &+Lis given to T&+Bi&+Lt&+Ba&+Lns who singlehandly bring about the fall of an army
 &+Lor kingdom.&n
 ~
-1140881736 1 0 412 158 0 0 -1000 S
-G 0 528 6
+1140881736 1 0 0 412 158 0 0 -1000 S
+G 0 528 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -383,8 +383,8 @@ agaroch troll swashbuckler scourge~
 &+Lhas been extensive, and he has traveled across the world to seek out his
 &+Lrivals.&n
 ~
-1140930636 1 0 284 2078 0 0 -1000 S
-PT 0 66 5
+1140930636 1 0 0 284 2078 0 0 -1000 S
+PT 0 66 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -399,8 +399,8 @@ lava golem magma~
 &+rthe hardened chunks of his surface, as well as from what could be called
 &+rhis mouth.&n
 ~
-1140881512 1 0 268 31 67108864 0 -1000 S
-EF 0 1 5
+1140881512 1 0 0 268 31 67108864 0 -1000 S
+EF 0 1 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -415,8 +415,8 @@ earth mephit emissary~
 &+ythe will of their master.  This particular mephit seems to be some kind of
 &+yagent or spy, as he waits for an audience with his master.&n
 ~
-1073903692 1 0 134742284 30 0 0 -1000 S
-EE 0 256 4
+1073903692 1 0 0 134742284 30 0 0 -1000 S
+EE 0 256 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -431,8 +431,8 @@ earthen lord earth elemental greater~
 &+yspecies.  His fists are the size of small &+Lboulders&+y, and can easily smash
 &+ythrough &+Liron &+yor &+bsteel&+y, or whatever else may be in their way.&n
 ~
-1141013576 1 0 268435868 30 67108864 0 -1000 S
-EE 0 1 6
+1141013576 1 0 0 268435868 30 67108864 0 -1000 S
+EE 0 1 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -449,8 +449,8 @@ titan emissary giant~
 &+Lhis skin and shimmers out into a fading spot, only for a new one to flash
 &+Linto existance elsewhere on his body.&n
 ~
-1073903944 1 0 134218140 30 67108864 0 -1000 S
-G 0 64 6
+1073903944 1 0 0 134218140 30 67108864 0 -1000 S
+G 0 64 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -466,8 +466,8 @@ sahaugin emissary~
 &+mwizards&+g their race poseesses, even these masters of the arcane greatly fear
 &+BN&+by'&+BN&+beth&+g.&n
 ~
-1141258316 1 0 402653452 30 0 0 -1000 S
-AC 0 2048 3
+1141258316 1 0 0 402653452 30 0 0 -1000 S
+AC 0 2048 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -484,8 +484,8 @@ magma golem~
 &+Lhis left hand, as the blood of the last creature he stuck sizzles to dust
 &+Lon the skin of his fist.&n
 ~
-1141012584 1 0 412 31 0 0 -1000 S
-EF 0 1 6
+1141012584 1 0 0 412 31 0 0 -1000 S
+EF 0 1 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -502,8 +502,8 @@ azuzaal demon high executioner~
 &+Lexpire, he drinks in the part of their &+csoul&+L that had housed their thoughts
 &+Lof &+rhate&+L, forever to reside as a part of him.&n
 ~
-1210442 1 0 414 2078 67108864 0 -1000 S
-X 0 17 5
+1210442 1 0 0 414 2078 67108864 0 -1000 S
+X 0 17 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -523,8 +523,8 @@ ravelloth wyrm dragon ancient~
 &+Lrecently involved in some kind of assault, as the deep red stain upon it
 &+Lis unmistakable.&n
 ~
-2259016 1 0 402653596 6174 67108864 0 -1000 S
-D 0 65 7
+2259016 1 0 0 402653596 6174 67108864 0 -1000 S
+D 0 65 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 8 1
@@ -545,8 +545,8 @@ construct nyneth ny'neth golem~
 &+Lmere presence here is staggering to comprehend.  When this power is focused
 &+Lon a single point is perhaps limitless.&n
 ~
-161866 1 0 402653630 14559 83886080 0 -1000 S
-OG 0 68 6
+161866 1 0 0 402653630 14559 83886080 0 -1000 S
+OG 0 68 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

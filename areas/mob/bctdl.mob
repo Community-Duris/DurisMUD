@@ -17,8 +17,8 @@ bel pit fiend _ignore_ _no_move_~
 &+rHell, Bel is often called the pretender. It is thought Asmodeus allowed his
 &+rcoup only because it meant one less archduke scheming against his power.
 ~
-51476554 1 0 2952896696 309442 72614048 101725184 -1000 S
-Y 0 16777476 7
+51476554 1 0 0 2952896696 309442 72614048 101725184 -1000 S
+Y 0 16777476 0 7
 62 1 -400 5000d4+24000 12d9+70
 0.0.0.0 0
 8 8 1
@@ -30,8 +30,8 @@ assassin devil~
 &+LThis devil is very difficult to discern from his surroundings. He seems to
 &+Lbe quite adept at stealth, and reeks of death.
 ~
-1107310796 1 0 806952986 47296 69206464 33555456 -1000 S
-Y 0 8192 4
+1107310796 1 0 0 806952986 47296 69206464 33555456 -1000 S
+Y 0 8192 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -44,8 +44,8 @@ white devil~
 &+WIt turns to look at you as you enter, and then charges to attack. It will
 &+Wdo anything to prevent you from entering the lair of Bel&n
 ~
-1073748554 1 0 805306392 262144 0 0 -1000 S
-Y 0 64 4
+1073748554 1 0 0 805306392 262144 0 0 -1000 S
+Y 0 64 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -62,8 +62,8 @@ devil erinyes woman~
 &+Wso powerful, it c&+wan hopefully be used &+rto destroy the tana'ri without
 &+Wany physica&+wl confrontation.&n
 ~
-30826 1 0 805306378 262144 0 0 -1000 S
-Y 0 2048 4
+30826 1 0 0 805306378 262144 0 0 -1000 S
+Y 0 2048 0 4
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -77,8 +77,8 @@ feet
 &+btall, and has huge wings that cover his entire body.  He sits in a deep,
 &+bdeep meditation, but seems to always been aware of his surroundings.&n
 ~
-31050 1 0 805306384 0 0 0 -1000 S
-Y 0 4 4
+31050 1 0 0 805306384 0 0 0 -1000 S
+Y 0 4 0 4
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -94,8 +94,8 @@ scarred pit fiend devil~
 &+Rwith the deniziens of the abyss&+L, for he carries tell tale&+W scars of the
 &+Rblood war. Approach this foe with &+Lcaution.&n
 ~
-67123274 1 0 805306520 2048 262144 0 -1000 S
-Y 0 1 6
+67123274 1 0 0 805306520 2048 262144 0 -1000 S
+Y 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -111,8 +111,8 @@ green pit fiend~
 &+ga pair of pure black, lifeless eyes.  It would not be smart to be in the
 &+gway of this creature.&n
 ~
-1073756234 1 0 2952790040 2048 262144 0 -1000 S
-Y 0 1 6
+1073756234 1 0 0 2952790040 2048 262144 0 -1000 S
+Y 0 1 0 6
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -127,8 +127,8 @@ silver dragon~
 &+Wpitch black, symbolizing its corruption. It roars as you enter, moving to
 &+Wkill anything that threatens its new master.
 ~
-14922 1 0 805830680 0 16777216 0 0 S
-D 0 4 7
+14922 1 0 0 805830680 0 16777216 0 0 S
+D 0 4 0 7
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -143,8 +143,8 @@ goodies
 seem
 &+Lnotice it.&n
 ~
-6344 0 0 538443786 0 0 0 -1000 S
-HG 0 65536 -1
+6344 0 0 0 538443786 0 0 0 -1000 S
+HG 0 65536 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -157,8 +157,8 @@ pitch black devil~
 &+Lis a being there.  It seems to be a humanoid figure, with wings, and two
 &+Llarge horns coming out of its forehead.&n
 ~
-6730 1 0 805306392 262144 0 0 -1000 S
-Y 0 1040 4
+6730 1 0 0 805306392 262144 0 0 -1000 S
+Y 0 1040 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -171,8 +171,8 @@ tan devil~
 &+yand was promoted to greater status.  She wears nothing at all, but always
 &+ykeeps her wings pulled infront of her.&n
 ~
-30826 1 0 805306378 262144 0 0 -1000 S
-Y 0 512 4
+30826 1 0 0 805306378 262144 0 0 -1000 S
+Y 0 512 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -189,8 +189,8 @@ erinyes devil priest~
 &+cwere to discover her treachery, he would sure&+Cly have her killed and gutted
 &+con sight.&n
 ~
-30826 1 0 805306378 262144 0 8388608 -1000 S
-Y 0 32 4
+30826 1 0 0 805306378 262144 0 8388608 -1000 S
+Y 0 32 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -204,8 +204,8 @@ black pit fiend~
 &+Llooking as Bel, he is still a walking nightmare for any mortal.  Unlike most
 &+Lpit fiends, he has no wings, but he seems no less powerful.&n
 ~
-67123274 1 0 805306520 2048 262144 8388608 -1000 S
-Y 0 1 6
+67123274 1 0 0 805306520 2048 262144 8388608 -1000 S
+Y 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -221,8 +221,8 @@ carrying it quickly through the hot corridors . With a blood
 curdling scream of rage the creature attacks with claw and bite to
 torment the lesser creatures unfortunate enough to cross its path.
 ~
-1107310632 1 0 536870912 0 0 0 -1000 S
-Y 0 1048577 -1
+1107310632 1 0 0 536870912 0 0 0 -1000 S
+Y 0 1048577 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -237,8 +237,8 @@ green guard abishai devil~
 &+rhas been ordered here by Bel himself to guard the contents of this
 &+Lprison.&n
 ~
-1107311624 1 0 2684354688 0 0 0 -1000 S
-Y 0 80 -1
+1107311624 1 0 0 2684354688 0 0 0 -1000 S
+Y 0 80 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -255,8 +255,8 @@ wings, a fanged maw and sharp claws. Occasionally, it lets loose a
 chilling scream of rage as it arches its serpentine tail and assesses
 its surroundings.
 ~
-33569032 1 0 536870912 0 0 0 -1000 S
-Y 0 512 -1
+33569032 1 0 0 536870912 0 0 0 -1000 S
+Y 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -269,8 +269,8 @@ goblin thief~
 &+Lgoodies to steal.  The goblin is so small and fast that the devils don't
 &+Lreally seem notice it.&n
 ~
-6344 0 0 538443786 0 0 0 -1000 S
-HG 0 65536 -1
+6344 0 0 0 538443786 0 0 0 -1000 S
+HG 0 65536 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -283,8 +283,8 @@ goblin thief~
 &+Lgoodies to steal.  The goblin is so small and fast that the devils don't
 &+Lreally seem notice it.&n
 ~
-6344 0 0 538443786 0 0 0 -1000 S
-HG 0 65536 -1
+6344 0 0 0 538443786 0 0 0 -1000 S
+HG 0 65536 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -297,8 +297,8 @@ goblin thief~
 &+Lgoodies to steal.  The goblin is so small and fast that the devils don't
 &+Lreally seem notice it.&n
 ~
-6344 0 0 538443786 0 0 0 -1000 S
-HG 0 65536 -1
+6344 0 0 0 538443786 0 0 0 -1000 S
+HG 0 65536 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -314,8 +314,8 @@ dungeonmaster master kocrachon insect~
 &+ginfused this devil with powers to destroy. &+GOr perhaps even the mighty lord
 &+gof this tower himself has granted some&+G of his power to it.&n
 ~
-1142979594 1 0 805380248 32768 0 1024 -1000 S
-Y 0 1048580 4
+1142979594 1 0 0 805380248 32768 0 1024 -1000 S
+Y 0 1048580 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -328,8 +328,8 @@ human paladin~
 &+Wand wields a large admantium two-handed sword.  He seems to be trying to
 &+Wsneak around, and is babbling to himself about something or another.&n
 ~
-14536 0 0 806879386 2049 262144 1024 1000 S
-PH 0 72 -1
+14536 0 0 0 806879386 2049 262144 1024 1000 S
+PH 0 72 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -342,8 +342,8 @@ human cleric~
 &+Wand wields a large admantium heavy mace.  He seems to be trying to
 &+Wsneak around, and is babbling to himself about something or another.&n
 ~
-14536 0 0 806879386 2049 262144 1024 1000 S
-PH 0 96 -1
+14536 0 0 0 806879386 2049 262144 1024 1000 S
+PH 0 96 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -356,8 +356,8 @@ human mercenary~
 &+Wand wields a large admantium long sword.  He seems to be trying to
 &+Wsneak around, and is babbling to himself about something or another.&n
 ~
-14536 0 0 806879386 2049 262144 1024 1000 S
-PH 0 16448 -1
+14536 0 0 0 806879386 2049 262144 1024 1000 S
+PH 0 16448 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -370,8 +370,8 @@ human sorcerer~
 &+Wand wields a large wooden quarter staff.  He seems to be trying to
 &+Wsneak around, and is babbling to himself about something or another.&n
 ~
-14536 0 0 806879386 2049 262144 1024 1000 S
-PH 0 16896 -1
+14536 0 0 0 806879386 2049 262144 1024 1000 S
+PH 0 16896 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -387,8 +387,8 @@ kocrachon sentry insect creature~
 &+gheads are small; their legs are long &+wand thin, ending in claws that &+Lare quite
 &+gadept at wielding scalpels and other terrible ins&+wtruments of torture.&n
 ~
-23626 1 0 403243452 2048 67371008 536870912 -1000 S
-Y 0 1064960 3
+23626 1 0 0 403243452 2048 67371008 536870912 -1000 S
+Y 0 1064960 0 3
 59 0 -100 1d1+1 1d1+1
 128.69.32.4 500000
 8 8 0
@@ -410,8 +410,8 @@ glabrezu demon angered~
 &+Lyou have no choice but to slay the beast, ending its torment once and for
 &+wall&n
 ~
-2122 1 0 941097148 2202 0 537920512 -1000 S
-X 0 2097156 5
+2122 1 0 0 941097148 2202 0 537920512 -1000 S
+X 0 2097156 0 5
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -430,8 +430,8 @@ succubus woman torment~
 &+Levil across the lands. &+rDo not underestimate the abili&+Les of this beast.
 &+LIt is a fearsome foe inde&+red.&n
 ~
-33574984 1 0 270073884 2113 0 0 -1000 S
-X 0 24576 3
+33574984 1 0 0 270073884 2113 0 0 -1000 S
+X 0 24576 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -448,8 +448,8 @@ an &+Le&+wn&+rr&+La&+wg&+re&+wd &+rb&+Ral&+wor &+Ld&+wem&+Lon~
 &+Rin the blood war. Even the pit fiends mus&+rt muster their stamina to route
 &+Rthis foe, so he will be a worthy opponent i&+rndeed.&n
 ~
-18536 1 0 940048572 2049 16777344 0 -1000 S
-X 0 1048576 6
+18536 1 0 0 940048572 2049 16777344 0 -1000 S
+X 0 1048576 0 6
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -465,8 +465,8 @@ zariel human woman lord~
 &+LOr perhaps stranger yet it is her eyes, globes of darkness with no iris. She
 &+Lturns to face you as you enter.&n
 ~
-74 0 0 939524252 0 0 0 -500 S
-PH 0 512 3
+74 0 0 0 939524252 0 0 0 -500 S
+PH 0 512 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -486,8 +486,8 @@ dagos marshall fiend pit~
 &+rPit was a gift granted to him by the &+WLord of the Nine Asmodeus after the great
 &+rReckoning.
 ~
-10 1 0 3104309404 2048 0 550503424 -1000 S
-Y 0 18874880 6
+10 1 0 0 3104309404 2048 0 550503424 -1000 S
+Y 0 18874880 0 6
 60 0 0 300d20+25000 5d10+30
 0.0.0.0 0
 8 8 1
@@ -504,8 +504,8 @@ baalzephon duke fiend~
 &+Wgouges from his countless battles. &+rHe turns to face you as you enter,
 &+Wand lets out a blood-curdling warcry &+ras you enter his private chambers.
 ~
-1073741866 1 0 3104309404 0 0 550503424 -1000 S
-Y 0 3145732 6
+1073741866 1 0 0 3104309404 0 0 550503424 -1000 S
+Y 0 3145732 0 6
 60 0 0 300d20+25000 5d10+30
 0.0.0.0 0
 8 8 1
@@ -519,8 +519,8 @@ chromatic dragon tiamat~
 &+Lbeen trained well by Tiamat in magical arts, and wields them with a fearsome
 &+Lpower. It has come here to discuss the matters of Hell with &+rBel&+L.
 ~
-14922 1 0 805830680 0 16908288 0 0 S
-D 0 2560 7
+14922 1 0 0 805830680 0 16908288 0 0 S
+D 0 2560 0 7
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -536,8 +536,8 @@ fiend devil red pit~
 &+Rwith the representative of Tiamat. &+LHe seems to grow we&+Wary of discussion
 &+Rthough, and looks increasingly bored. Unt&+Lil he notices you.
 ~
-67123274 1 0 805306520 2048 393216 8388608 -1000 S
-Y 0 33 6
+67123274 1 0 0 805306520 2048 393216 8388608 -1000 S
+Y 0 33 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -551,8 +551,8 @@ yeddikadir servant devil~
 &+Lhorns on either side of their head, and a barbed, spikey tail. This one
 &+Lin particular is quite powerful, and stands here to guard his great master.
 ~
-67127338 1 0 805306556 264193 0 0 -1000 S
-Y 0 544 4
+67127338 1 0 0 805306556 264193 0 0 -1000 S
+Y 0 544 0 4
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -567,8 +567,8 @@ nalebranc servant devil~
 &+Lbeen trained in the arts of battle to protect his master, and will likely
 &+Ldie to ensure that this pact is upheld.
 ~
-1140869226 1 0 805306556 264193 0 0 -1000 S
-Y 0 17 5
+1140869226 1 0 0 805306556 264193 0 0 -1000 S
+Y 0 17 0 5
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

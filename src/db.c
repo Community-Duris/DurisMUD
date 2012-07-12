@@ -3129,8 +3129,14 @@ void reset_zone(int zone, int force_item_repop)
           }
 
           obj = read_object(temp, REAL);
-         if (!obj)
+          if (!obj)
+             break;
+          if(IS_ARTIFACT(obj) &&
+             get_property("artifact.respawn", 0) == 0)
+          {
+            extract_obj(obj, TRUE);
             break;
+          }
           obj_to = get_obj_num(ZCMD.arg3);
           if (!obj_to)
             break;
@@ -3174,6 +3180,12 @@ void reset_zone(int zone, int force_item_repop)
         obj = read_object(temp, REAL);
         if (!obj)
           break;
+        if(IS_ARTIFACT(obj) &&
+           get_property("artifact.respawn", 0) == 0)
+        {
+          extract_obj(obj, TRUE);
+          break;
+        }
         obj_to_room(obj, ZCMD.arg3);
         obj->timer[3] = time(NULL);
         last_cmd = 1;
@@ -3204,6 +3216,12 @@ void reset_zone(int zone, int force_item_repop)
           obj = read_object(temp, REAL);
           if (!obj)
             break;
+          if(IS_ARTIFACT(obj) &&
+             get_property("artifact.respawn", 0) == 0)
+          {
+            extract_obj(obj, TRUE);
+            break;
+          }
           if (mob)              /* last mob */
           {
             obj_to_char(obj, mob);
@@ -3287,6 +3305,12 @@ void reset_zone(int zone, int force_item_repop)
               }
               if (obj)
               {
+                if(IS_ARTIFACT(obj) &&
+                   get_property("artifact.respawn", 0) == 0)
+                {
+                  extract_obj(obj, TRUE);
+                  break;
+                }
                 obj_to_room(obj, ZCMD.arg3);
                 obj->timer[3] = time(NULL);
                 last_cmd = 1;
@@ -3340,6 +3364,12 @@ void reset_zone(int zone, int force_item_repop)
               obj_to = get_obj_num(ZCMD.arg3);
               if (obj_to)
               {
+                if(IS_ARTIFACT(obj) &&
+                   get_property("artifact.respawn", 0) == 0)
+                {
+                  extract_obj(obj, TRUE);
+                  break;
+                }
 		obj_to_obj(obj, obj_to);
                 obj->timer[3] = time(NULL);
                 last_cmd = 1;
@@ -3387,6 +3417,12 @@ void reset_zone(int zone, int force_item_repop)
             }
             if (obj)
             {
+              if(IS_ARTIFACT(obj) &&
+                 get_property("artifact.respawn", 0) == 0)
+              {
+                extract_obj(obj, TRUE);
+                break;
+              }
               if (mob)
               {
                 obj_to_char(obj, mob);
@@ -3450,6 +3486,12 @@ void reset_zone(int zone, int force_item_repop)
             }
             if (obj)
             {
+              if(IS_ARTIFACT(obj) &&
+                 get_property("artifact.respawn", 0) == 0)
+              {
+                extract_obj(obj, TRUE);
+                break;
+              }
               obj->timer[3] = time(NULL);
               if (mob && (ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR))
               {

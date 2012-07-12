@@ -1,0 +1,525 @@
+#138900
+skeleton wandering~
+&+Wa wandering skeleton&N~
+&+WA wandering skeleton is here, walking around aimlessly.&N
+~
+&N   This skeleton seems to be very old, it has literally no flesh on it at all,
+and has no direction, wandering into anything before it, as if searching for
+something.
+~
+10 1 0 0 24 0 0 0 -900 S
+U 0 1 1 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138901
+vapor vaporish wight humanoid form~
+&+La guardian &+Wwight&N~
+&+LA vaporish humanoid form levitates here.&N
+~
+&N   The vaporish form before you seems to come in and out of existence. Just
+as the wisping form of an arm appears the head will fade out of view, to
+be replaced be a leg. One thing you can tell is that it is not happy.
+~
+2058 1 0 0 167837738 0 0 0 -1000 S
+uw 0 64 2 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138902
+janos~
+&+rJanos&N~
+&n&+rJanos is here holding a human head.&N
+~
+&N   Janos seems very intent on his duties at the moment, his eyes darting
+around with a mixture of mania and genius. He stinks of death, or at least
+of whatever he is using to try and stop the deterioration of bodies around
+him. He is dressed in a black robe with various blood spatters all over it.
+~
+1073741966 1 0 0 0 0 0 0 -850 S
+u 0 512 1 -1
+53 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138903
+corpse skeleton human~
+&+Wa &+Chuman &+Wskeleton&N~
+&+WA &+Wskeleton &n&+Wof a &+Chuman &+Wstands here unmoving.&N
+~
+&N   It's a corpse, it was human, but now.. it's just a corpse.
+~
+2058 1 0 0 0 0 0 0 -599 S
+U 0 1 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138904
+marius~
+&+LMarius&N~
+&+LMarius, the senior student, stands here giving a lecture.&N
+~
+&N   Marius is a man in his early thirties, his face angular and hawkish,
+but one that looks extremely intelligent. His body is lean as if it has not
+gotten enough sustenance and is beginning to look like the dead he is
+studying. His body has shrunk into itself a little bit, and his face has
+at least a week's growth on it, but he seems still able to teach quite well.
+~
+2188 1 0 0 0 0 0 0 -546 S
+u 0 512 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138905
+apprentice necromancer~
+&+Lan apprentice necromancer&N~
+&+LAn apprentice necromancer is here trying to learn.&N
+~
+&N  This young man could not have been here for more than a year, his body is
+still untouched by his craft. His eyes have yet to take on the cold
+outlook of one obsessed with the dead. However, he seems to have mastered
+enough of his craft to command some might.
+~
+67110920 1 0 0 0 0 0 0 -800 S
+up 0 1024 3 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138906
+maltheas angel master~
+&+LMaltheas&n&+w&N~
+&+LMaltheas&n&+w, &+ran angel of darkness, is here waiting for you.&N
+~
+&+L   Maltheas stands over seventeen feet tall, literally towering over most
+&+Lhumans. His body is made out of black living armor that seems to melt back
+&+Linto itself with the heat of his inner body. His composure is calm, but he
+&+Lputs forth a feeling of absolute terror.
+&+L   One of the dark heroes from the Wars of Light and Shadow, he has been
+&+Lreanimated to serve Zrack. He stands here ready to destroy anything.
+~
+1073875020 1 0 0 805372088 193 0 0 -1000 S
+an 0 16777216 1 4
+53 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138907
+woman kathrine~
+Kathrine&N~
+&+LA &n&+ypeasant woman&+L sobs quietly while making dinner.&N
+~
+&N   She seems very intent on both cooking and crying. She is actually rather
+attractive, but looks like she has not had a bath in a while. Her tears fall
+right off her face into the large stew that she is fixing. When she sees
+you come in she whimpers a bit and says, 'What now?? What do you want me
+to do now?'
+~
+2190 0 0 0 0 0 0 0 600 S
+ug 0 1 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138908
+larra~
+&+WLarra&N~
+&+WLarra stands here ignoring you, in utter despair as to her lost love.&N
+~
+&+W   Larra walks around not following any path, her tearful crying wringing
+&+Wthe hearts of all who hear her. Her dress is old and torn, but she seems to
+&+Wcare little. Her auburn hair unkempt around her head, she suddenly shrieks to
+&+Wthe heavens!
+&+W   'Robert, why did you leave me, did you not love me!'
+&+W   With that she collapses in on herself, silent.
+~
+2126 0 0 0 0 0 0 0 1000 S
+ug 0 1 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138909
+kalzan~
+&+LKalzan&N~
+&+LKalzan is here practising his meager skills.&N
+~
+&N   Kalzan looks fairly new, he still has his peasant's tunic on and actually
+looks a bit of the country bumpkin. However, the small badge over his heart
+indicates that he has been chosen for advanced training; soon he will be a
+true apprentice.
+~
+2062 1 0 0 0 0 0 0 -500 S
+u 0 512 2 -1
+52 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138910
+frog zombie~
+&+ga frog zombie&N~
+&+gA zombie of a frog lays her hopping around.&N
+~
+&N   It was a frog but it has now gone through the asphyxiation of death, and
+is, well.. dead.
+~
+8 1 0 0 0 0 0 0 -240 S
+U 0 1 1 1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138911
+ezzra~
+&+yEzzra&N~
+&+yA very old student named Ezzra sits here carring on a conversation.&N
+~
+&N   Ezzra, or 'Ol' Ezzra' as the students call him, is about fifty. His
+inability to graduate has more to do with what he keeps studying then
+anything else. He just doesn't like dead things. He has turned his magic
+abilities toward the more summonary powers as of late. Conjuring things now,
+that preferably are not dead, has become his avenue to power.
+~
+1073744014 1 0 0 32 28 0 0 -250 S
+PH 0 2048 3 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138912
+demon caldron~
+&+rthe demon, &n&+LCaldron&N~
+&+LCaldron &n&+rthe demon stands in the room listining.&N
+~
+&+r   Caldron looks very.. civilized. He is slightly larger then a normal
+&+rhuman, about seven feet or so. His face looks very calm, but shadowed by the
+&+rlarge black cloak, that seems to ignore the flames around him. It covers
+&+rhis entire body, but leaves his wings free. Around his waist is a small red
+&+rcord of some kind, and at his side is a sheathed sword with different
+&+rdemonic motifs running up and down the sheath and the pommel of the
+&+rblade.
+~
+1107429386 0 0 0 570425384 29 0 0 -1000 S
+X 0 3145728 0 -1
+54 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138913
+xarlin journeyman bloodstone~
+&+LXarlin&N~
+&+LXarlin, a journeyman from &n&+rBloodstone &+Lstands here awaiting an audience.&N
+~
+&+L   Xarlan looks in his late twenties and in good shape. His wide face
+&+Land open features could probably fool the unwary, but the badge on his chest
+&+Lgives him away as a member of the Brotherhood of Sorcerors in Bloodstone.
+&+LOver his other heart is a skeletal hand.
+~
+1073744072 1 0 0 0 24 0 0 -940 S
+uv 0 1536 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138914
+natasha apprentice~
+&+WNatasha&N~
+&+mThe apprentice &n&+WNatasha &n&+mis here looking &n&+Mdemure.&N
+~
+&N   Natasha looks quite young for her chosen profession. Her face has very
+little of color in it at the moment, although she is looking at the floor
+more then anything else. Her apprentice dress however does show her figure
+quite well. Her black tresses fall to her shoulders and make quite a stark
+contrast to her pale features.
+~
+1342177482 1 0 0 33554432 0 0 0 -450 S
+ul 0 512 2 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138915
+vampire luka~
+&+Lthe vampire &+rLuka&N~
+&+LThe vampire &n&+rLuka&n&+L stands before you, tall, &n&+Cpale&n&+L, and dangerous.&N
+~
+&N   Luka is only about six feet, and looks very thin. He has short black
+hair and a small little mustache. His eyes seem to track everything and
+hold it in his sight. His clothes are quite delicate, with frilly sleeves
+and a small vest and black pants. His only weapon is a rapier.
+~
+1073743946 1 0 0 65720 4106 0 0 -990 S
+UV 0 16777232 0 -1
+52 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138916
+joseph mclarun man~
+&+yJoseph McLarun&N~
+&+yA man hides in the rafters, trying to remain unseen.&N
+~
+&N   Joseph looks very on edge. He can barely hold back from trying to hide
+himself, always making sure something is between him and whoever he is talking
+to. He is sort of mumbling to himself, saying something over and over again.
+His eyes are very vacant and he looks slightly mad.
+~
+138 0 0 0 1572864 0 0 0 340 S
+PH 0 65536 0 -1
+15 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138917
+igen henchman small hunchbacked man~
+&+LIgen, the henchman&N~
+&+LA small hunchbacked individual is here trying to hide.&N
+~
+&N   Igen is a small individual, a strage cross of malformed legs and arms.
+His legs look strong and whole, although a bit short, but his left arm is
+huge and muscular, while his right looks lame and almost useless. oddest of
+all is the misshapen way his spine has formed, giving him a huge buldge on
+his left side. His face also tends toward the left, giving him a larger
+left eye but the right side of his face looks like someone either forgot
+about it or burned it.
+~
+1073744074 0 0 0 1572896 0 0 0 -100 S
+uw 0 1 0 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138918
+ali woman blond~
+&+YAli&N~
+&+CA beautiful &+Yblond &+Cwoman named &+YAli &+Cstands here raising the dead.&N
+~
+&N   Truly an awe inspiring figure, Ali stands there, her long blonde hair
+thrown back behind her. Her dress is cut a bit low and a black opal is nestled
+where it can gather the most attention. She wears a tight black dress that
+even in the dust and dirt seems to pick up not a bit of it, remaining black as
+night. Her stance seems to be a challenging one, making a pretty woman totally
+captivating. However her eyes are where her beauty stops, they are almost
+lifeless they are so gray, and just by looking at her she makes people feel
+colder.
+~
+1342179528 1 0 0 296 16 0 0 -1000 S
+su 0 4 1 -1
+53 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138919
+faethor necromancer senior~
+&n&+rFae&+Lthor&N~
+&n&+rFae&+Lthor stands here directing the excavation around him.&N
+~
+&N   Faethor is a handsome man, tall, dark, with a jet black goatee. He stands
+just over six feet tall with an aura of confidence around him. His movements
+seem controlled and confident, with an almost unnatural grace. His dress is
+simple, a white frilly shirt and plain black cloth for pants, definitely
+working clothes. However there is something about him that makes him just look,
+sinister.
+~
+1073741832 1 0 0 33554472 0 0 0 990 S
+uv 0 16 1 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138920
+skeleton dwarf dwarven warrior undead~
+&+Lan &n&+rundead &+Ydwarven &+Lwarrior&N~
+&+LThe &+Wskeleton &n&+Lof an ancient &+Ydwarven &+Lwarrior lays among the rubble.&N
+~
+&N   The thing before you was dwarven, you think, but it's really hard to tell
+because all that is left is the skeleton and some armor and weapons.
+~
+6218 1 0 0 0 0 0 0 -1000 S
+ZO 0 1 1 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138921
+dralor dwarf~
+&+yDralor&N~
+&+yDralor, the Dwarven Trader stands here ready to help you.&N
+~
+&N   Dralor is really an impressive figure for a mere trader of goods. His
+arms look more like tree trunks then anything else, and he looks like he
+could put away his weight in alcohol and laugh it off. Under his tunic you can
+hear the chink of armor and every once in a while a bright shinecan be seen.
+The axe he has in his hand is one of pure wonder, with mithril working and a
+large diamond the size of your fist embedded in the middle.
+&N   As you look at him he smiles and calls out:
+&N   'Now what can I do for ye today friend? Some weapons maybe? Some rare
+spices or diamonds? Or maybe some information... which is free.'
+~
+1073743882 0 0 0 128 2049 0 0 1000 S
+PM 0 1 0 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138922
+zrack master~
+&+LZrack&N~
+&+LZrack, Master of the school of the Skeletal Hand stands here.&N
+~
+&N   Zrack is a really short fellow, only barely coming over five feet or so.
+His hair is really wild and looks unkempt and loose, having gone all over the
+place and he looks like he has a forest on his face. However there seems
+to be a calmness and majesty about him. His eyes are intelligent and appear
+to hold some kind of wisdom in their deep gray orbs.
+~
+1073743946 0 0 0 424 264221 0 0 -1000 S
+ul 0 512 0 -1
+57 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138923
+death charring dragon skeletal charringsdeath red~
+&n&+rCharring&+Ldeath&N~
+&+LThe &+Wskeleton &+Lof the &n&+rred dragon Charring&+Ldeath lays among the rubble, &+Walive!&N
+~
+&N   The skeleton before you is massive, its size is immense, although it seems
+to be missing some of its parts. Most of its bones seem to be in the correct
+place, except the left leg and right wing, which are only half finished. From
+his eyes urn an unholy &+rred&n&+w light that burns into your &+WSoul&n&+w.
+~
+1073748010 1 0 0 570425528 4318 0 0 -900 S
+UD 0 16777728 0 -1
+54 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138924
+knight bloodstone~
+&+La knight of &n&+rBloodstone&N~
+&+LA knight of &n&+rBloodstone &+Lstands here guarding Xarlan.&N
+~
+&+L   This knight has been assigned the duty of guarding Xarlan while he takes
+&+La message to Zrack, the master of the school. Dressed as one of the soldiers
+&+Lof the Baron of Bloodstone, he seems to be rather bored, and spoiling for a
+&+Lfight.
+~
+1073743946 1 0 0 152 0 0 0 -572 S
+uk 0 1 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138925
+angel death~
+&+Wan angel of &+Ldeath&N~
+&+WAn angel of &+Ldeath &+Wstands here guarding the spirit of &+LMaltheas.&N
+~
+&+W   This angel has been sent to guard the spirit of Maltheas by the denizens
+&+Wof the lower plains. Worried that such an evil spirit might die prematurely
+&+Wagain, he is here to aid maltheas and insure that he returns to serve his
+&+Winfernal masters in the deepest of hells.
+~
+6186 0 0 0 135856304 295104 0 0 -959 S
+el 0 1 1 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138926
+baby skeletal dragon~
+&n&+ra &+Wsk&+Cel&net&+Lal &n&+r&+Cbaby &n&+rdragon&N~
+&n&+rA large &+Wsk&+Cel&net&+Lal &+Cbaby &n&+rdragon lays here, knawing at ancient &+Wbo&nn&+Les.&N
+~
+&+r   This creature must have had a huge appetite during its life. It is about
+&+rtwenty feet long, then another ten feet of tail. Its skeletal body still has
+&+ra few ancient scales scattered about its body. It seems to be doing a little
+&+rof what it did in life, gnawing at old bones.
+~
+2154 1 0 0 671088776 12480 67108864 0 -988 S
+UD 0 1 1 3
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138927
+robert spirit man~
+&+Cthe spirit of &+BRobert&N~
+&+CA spirit of a young man wanders here, calling out for someone.&N
+~
+&+C   This spirit in life would have stood at almost six feet tall. WIth brown
+&+Chair and green eyes this spirit form of him wears black robes with blood
+&+Cred lining. His clothes look dark and dangerous, but his face seems sad and
+&+Cforlorn. He seems to be wandering about calling out for someone.
+~
+1073748168 0 0 0 671612954 14528 0 0 768 S
+UG 0 1 0 -1
+53 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138928
+minion nakral~
+&+La minion of &n&+bNakral&N~
+&+LA minion of &n&+bNakral, the Crypt Keeper&+L, stands here dilivering a message.&N
+~
+&+L   This cowled individual is mostly bones. He seems to have been on a long
+&+Ljourney because it seems the sunlight has bleached his bones completely out.
+&+LStanding here in a black robes he brings a message to Nakral's old student,
+&+LZrack. He seems to be in a foul mood.
+~
+1073748040 1 0 0 536936602 309440 0 0 -999 S
+U 0 512 1 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138929
+guardian skeleton nakral~
+&+Wa &+Lguardian &+Wskeleton&N~
+&+WA &+Lguardian &+Wskeleton stands here protecting the messenger of &n&+bNakral.&N
+~
+&+W   This skeleton is made of bleached bone and seems to have been wandering
+&+Win the sun quite a great deal. He has no flesh on him and is simply a moving
+&+Wskeleton. It is impossible to tell quite what type of creature he was in life,
+&+Wbut now he serves the Crypt Keeper.
+~
+67110986 1 0 0 65680 64 0 0 -999 S
+U 0 1 0 -1
+48 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138930
+duergar daxion small miner~
+&n&+LDaxion&n&+r, the duergar miner&N~
+&n&+rA small duergar stands here directing the mining work.&N
+~
+&+r   This small duergar wears chainmail and wields a small old dwarven axe.
+&+rHe stands here directing the work to mine out the old fortress. Zrack is
+&+rpaying for his mining efforts well with the money he has found in the ancient
+&+rdwarven stronghold.
+~
+1073748042 0 0 0 152 131072 0 0 -999 S
+PD 0 16 1 -1
+53 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138931
+iron golem br_a~
+&+La iron golem&N~
+&+LA huge iron golem stands here guarding the ancient treasure.&N
+~
+&+L   This large stone golem has been here guarding the treasures of the dwarves
+&+Lfor over a thousand years now. Its body is made of stone and it seems to be
+&+Lstanding here waiting for any intruders.
+~
+1107364938 1 0 0 805372056 276673 0 0 0 S
+OG 0 1 1 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138932
+apprentice urian~
+&+Lan &n&+rap&+Rpr&+Yen&+Rti&n&+rce&+L of Urian&N~
+&+LAn &n&+rap&+Rpr&+Yen&n&+Rti&n&+rce &+Lof Urian stands here, traveling to the hidden school.&N
+~
+&+L   This messenger for Zrack comes from Lord Urian of the Black Tower. Come
+&+Lall the way from the village of Dubneth he brings an important order from the
+&+Lshadowmaster. He wears robes marking him as a member of the Black Tower.
+~
+1073744104 1 0 0 671612944 2049 0 0 0 S
+ul 0 512 0 -1
+52 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138933
+wraith forgotten dead dwarf~
+&+La &+Wwraith &+Lof the &n&+rforgotten d&+Lea&n&+rd&N~
+&+LA half-visible &+Wwraith &+Lof a &+Ydwarf &+Lstands here, serving a new master.&N
+~
+&+W   This wraith was once one of the great King's Hearth guard, protecting
+&+Whis stronghold. However to a man they all died to the strength and power
+&+Wof the evil dragon Charring. Now they have been raised to serve a new
+&+Wmaster...
+~
+1073743880 1 0 0 135266306 0 0 0 -750 S
+wr 0 512 2 -1
+52 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

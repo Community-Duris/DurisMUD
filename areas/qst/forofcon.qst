@@ -1,0 +1,345 @@
+#139910
+M
+pearl~
+&+G   He looks up and gathers himself in a more orderly fashion.  "Me pearl
+&+Gwas me ship.  I will never sail the seas again", he shudders, "I left the
+&+Gdocks as I saw the eyes of death approaching me.  They wanted to kill me
+&+Gthat is.", he points north.  "Look for yerselves, they took me amulet."
+&+GHe looks down at the drink in his hand and goes on to mutter "I need me
+&+Gpearl back".&n
+~
+Q
+&+G   He graps the amulet and looks at his ship insignia as his fingers run
+&+Gacross its pattern.  "Me ship, gone forever.  I lost me crew four days
+&+Gago up the river.  In a flash o' lightnin' they came aboard.  Flyin' through
+&+Gthe air as vultures, evil grins and &+Rred fiery eyes&+G.  They killed all
+&+Gof me crew and tossed them abroad."  Tears come to his eyes as he remembers.
+&+G"I was frozen in fear.  They did not kill me I know not why.  They came
+&+Gcloser to me looking like the deep of the Abyss.  Like two tobstones rubbin'
+&+Gtogether.  Said "Do you also seek your end, mortal flesh?  We find your
+&+Gblood sweet, but th' &+LDevourer&+G will consume your soul itself!"  "At that
+&+Gsecond I snapped out of my fear and dove over swimming as fast as I could.
+&+GI needed to get away."  An empty look comes over him.  "I never been so
+&+Gscared in all me life.  I swore that I would never board a ship again."&n
+~
+G I 139907
+S
+#139911
+M
+devourer~
+&+W   Maganon&n&+w exclaims "I have only heard that name once in the past."  He
+&+wturns around looks through a shelf in the back of the shop and starts
+&+wdigging through some books.  After several minutes he opens an old book
+&+wa sifts through several pages.  Finally he smiles and taps a page near
+&+wthe end of the book.  He collects the tome and places it on a large oak
+&+wtable in the back of the store and signals to come over.  As one looks
+&+wat the page, he is underlining the word "Devourer".  It reads "Negative
+&+wenergy: where life, light, and knowledge is ultimately drawn to the Final
+&+wVoid."  This description continues for a while as the words are read.  One
+&+wsuch passage that catches the eye is the following "And when the Devourer
+&+wis truely one with the Final Void, all knowledge will be his, and he shall
+&+wbe like unto a god."  The tall large man shudders, he closes the tome and
+&+wbegins searching through scrolls.  He pulls out an old parchment and
+&+wunravels it.  The visage of a &+Ggreen devil's face&n&+w with an open gaping mouth
+&+wis revealed as the the scroll is unrolled.  He points once again and says
+&+win a shaky voice "&+RMealdrun&n&+w, his name is &+RMealdrun&n&+w.  He was a powerful
+&+wwizard that lived a long time ago.  He was facinated by necromancy and
+&+wthe negative energy.  This is his sign, the gaping mouth, possibly what
+&+wthis Devourer is."  Maganon looks disturbed as fear grasps his face.
+&+w"Please, you must find out if he has returned, if one understands the negative
+&+wenergies of the universe one can manifest himself in any undead and that,
+&+wmy friend, would not be good.  You know", he pauses, "now I remember, a
+&+wwizard named &+WDesatysso&n&+w was in search of his tomb.  Unfortunately he never
+&+wreturned from his expedition."&n
+~
+M
+desatysso~
+&+w   He smiles and thinks for a bit.  His eyes light up and he says "yes I
+&+wremember Desatysso, he was a very clever mage", he winks an eye, "we were
+&+wnot friends but more acquaintances.  He was always friendly to the commoners
+&+wbut kept to himself.  He has an old stronghold to the north in the &+WFynhorn&n
+&+WMountains&n&+w.  The last time I saw him was about ten years ago, he was in
+&+wsearch of &+RMealdrun's&n&+w tomb, a location somewhere in the underdark.  He was
+&+wnever found again.  You might ask &+MSather&n&+w, she lives in Environs, she was
+&+wpart of his expedition to the tomb."&n
+~
+M
+fynhorn~
+&+w   he says "The mountain passes lie to the north, north of Kalstrand.  But
+&+wbe weary my friend of giants that lurk within its peaks.&n
+~
+M
+skull~
+&+L   "Skull city is said to lie east from here, not along these paths.  It is
+&+La legendary city where the necromancer go to practice their craft.  I heard
+&+Lit lies in the middle of a swamp, what a dreadful place to put a city" he
+&+Lmakes a face as if he tasted something tart.&n
+~
+M
+kalstrand~
+&+w   He says "the city lies to the north, it is a boating village.  I heard
+&+wa strange thing happened at the docks or on the river a few days ago."&n
+~
+M
+environs~
+&+W  Maganon&n&+w says "That city lies east, it is where &+MSather&n&+w lives."&n
+~
+M
+mealdrun~
+&+L   He says "he was a wizard from long ago.  He was very powerful that delt
+&+Lin the undead arts.  His tomb is said to lie somewhere in the underdark.
+&+LAnother wizard named &+WDesatysso&+L disappeared looking for his tomb."&n
+~
+S
+#139913
+M
+job jobs~
+&+wFred says "I have one job open for worthy adventurers such as yourselves."
+&+wHe looks at a list that he is holding, "There are goblin caves to the
+&+wsouth of Environs, a merchant wants these goblins destroyed.  Bring the
+&+whead of the king back to me and I'll give ya one hundred gold."&n
+~
+Q
+&+cFred reaches behind the desk and says "good work, here is my patron's
+&+creward, spend it well".  Fred then goes about his business.&n
+~
+R I 139910
+G I 139911
+S
+#139918
+M
+desatysso~
+&+wSather trembles violently and falls over dropping her cane.  She looks up
+&+wfrightened and begins to speak.  "I do not speak on this easily.  I lost my
+&+wleg, my friends, and nearly my life in that most accursed of places.  We
+&+wwent into the tomb nigh on twenty years ago now, yet still I have nightmares
+&+wabout it almost every night.  I will repeat this once, and once only.  Then
+&+wyou must go, and trouble me no more with these questions, for I cannot bear
+&+wto think upon it overlong" she sighs, and continues with her tale.
+&n
+&+w"Our company, led by Falon, went into the tomb with a wizard who named himself
+&+was Desatysso.  He said he'd been searching for the place for ten years.  He
+&+wsaid that with the information he possessed, he could find the true tomb of
+&+wMealdrun, whatever that meant.  I don't know what special knowledge he
+&+wthought he had; it didn't save us there at the end, when the demilich
+&+wfeasted on our very souls.  There were seven of us when we went in: Falon,
+&+wAaron, Desatysso, Tiefon, Grunther, Lyla, and myself.  Only Grunther and I
+&+wcame out, the one crippled and the other one-handed.  Empty handed, and
+&+wbereft."  She thinks for a second and touches her leg.
+&n
+&+w"Now, then, that's as much as I can say.  One thing more I can give you.
+&+wDesatysso kept a journal during our time in the tomb.  It tells of the
+&+whorrors we faced in more detail then I care to explore with you.  The key
+&+wto his stronghold in the north lies with my ring.  It was taken from me by
+&+wthe goblins to the south of the town.  Crippled I can't take them on, get
+&+wthe ring for me and I can give you entrance to his stronghold.  This is
+&+wwhere he kept his journal, where within I'm not sure.  I suggest you read it
+&+wcarefully before you decide to go where we should not have."  She sits down
+&+wand stares outside the window in memory of her associates.&n
+~
+Q
+&+wSather looks at her ring, "thank you, it is the only thing I have left of
+&+wvalue."  She hobbles over to a small desk in her room and places the ring
+&+win an indentation.  A small "click" can be heard and the wooden draw opens
+&+w"Now as I promised.  Go to Desatysso's fortress and look, maybe you will
+&+wfind your answers there."  She reaches in the desk and hands you a shiny
+&+wgold key.&n
+~
+R I 139908
+G I 139927
+S
+#139925
+M
+journal~
+&+wThe shaman thinks, and thinks, and thinks... "Um, yes, I think I know what
+&+wyou want.  But I want exchange for paper.  I give paper for shiny glass
+&+wthings, you call it gems i think."  He ponders for a bit "Yes that it gems.
+&+wYou get that and bring to my daughter, she one with trolls, and she give
+&+wyou paper."  He returns to his rituals.&n
+~
+M
+desatysso~
+&+wThe shaman looks around the cave, "he dead yes, we found his fort and caves
+&+wa long time ago.  It ours now, we not leave.  He left some BIG desk but we
+&+wcould not open it."  The shaman smirks, "we strong and not open neither you."
+&n
+~
+S
+#139926
+Q
+&+wThe female giant reluctantly pulls out a crow bar of huge proportions from
+&+wbehind some rocks, where it was hiding was impossible to tell.  She hands
+&+wit to you and says "what your looking for is behind the boulder.  Use the
+&+wbar to pry it, if you can."  She and the trolls all laugh.&n
+~
+R I 139902
+G I 139929
+S
+#139930
+M
+desatysso~
+&+wGrunthar looks at you with a black expression the life enters his face as
+&+whe remembers.  "Yes I remember him, he was the man I lost my hand with."
+&+wHe looks at his stump "The green devil face ate it.  Ask Sather about
+&+wwizard she knows more.  I just came for the gold."  One notices that he
+&+wtalks very slowly.  It seems that where strength is gained intelligence is
+&+wlost.&n
+~
+M
+sather~
+&+wHe looks up unhappy abd says "she in town."  He points south.&n
+~
+S
+#139945
+M
+writing~
+&+wHe responds, "merely the first guide to doom."&n
+~
+M
+woman~
+&+wHe repsonds, "she is who that gave birth to the demon, the father a lord
+&+whimself."&n
+~
+M
+child~
+&+wHe responds in a raspy voice, "we made him what he became.  The scorn of Man
+&+wbirthed the rage of the Devourer."&n
+~
+M
+glowing sphere~
+&+wHe looks up, opens his mouth for a second, the speaks, "The Devourer's
+&+wphylactry holds the souls of the lost.  The souls can only be saved by the
+&+wpure light of the sun; all other roads shall damn these souls eternally."&n
+~
+M
+dragon zombie mist~
+&+wHe speaks in gibberish.
+~
+M
+green devil face~
+&+wHe speaks, "it is he who awaits."&n
+~
+M
+wand~
+&+wHe looks up at the sky and raises his hands, he starts chanting gibberish.&n
+~
+M
+flaming black skull~
+&+wHe starts laughing manically.&n
+~
+S
+#139948
+M
+light resistance rebellion order~
+&+whe peers around the corner.  He stops for a second and casts a spell, looks
+&+wthen speaks.  "You are here to aid us, good, they are waiting for you.  Look
+&+wbehind the &+Wslab&n&+w on the floor, you will find where to go.  May we bring the
+&+wevil that has fallen on our lands down and restore life."&n
+~
+S
+#139949
+M
+yes devourer mealdrun~
+&+w   He look into nothingness for a second, "yes, the Devourer, the scourge
+&+wof man.  He has to be destroyed but I, being a paladin, can't move through
+&+wthe city for long without becoming compromised, you can help though.  Bring
+&+wme the libram of &+LIneffable Damnation&n&+w from the academy so we may study the
+&+wnew spells the necromancers are working on.  My wizard &+rSantios&+w is working
+&+won new magical items that protect and aid against undead.  Get me the book
+&+wand hopefully by then I can at least give you one of his devices."  he goes
+&+wback to attending his officers.&n
+~
+Q
+&+w   He looks at the book, it seems to hurt him just to hold it.  He smiles
+&+wand says "thank you, I hope &+rSantios&+w can decipher this and make use of it."
+&+wHe pulls an amulet from a hidden pocket.  "Here take this, I only have one
+&+wbut I hope it will protect you from harm."  He bows and goes about his
+&+wbusiness.
+~
+R I 139949
+G I 139948
+S
+#139986
+M
+street streets pacing waiting something faith~
+&+w   He turns to you with a quick glace of hatred and annoyance.  He stops,
+&+wthen alters his mood as the night turns to day.  He begins in a pleasant
+&+warticulate voice "It is nice to see someone with concern for others.  I
+&+whope that perhaps you could help me.  A", he stops and thinks for a second,
+&+w"barbarian has destroyed everything I hold dear to my heart and in life.
+&+wI wish him destroyed to avenge my brotherhood's death.  My magic cannot
+&+wlocate this individual.  If you could find him and kill him for me I would
+&+wreward you with the key to a treasure so fabulous you would be ever happy.
+&+wI care not of such things anymore, just revenge.  Bring me his ring as
+&+wproof, his name is Elaron."  He signals you to leave.&n
+~
+Q
+&+w   Bracos looks at the sky and praises his goddess, "Alas he is finally
+&+wdead" he exclaims in a manner of some madness.  He turns to you and says
+&+w"Elaron executed all my followers and my goddess shuned me for it.  Now
+&+wperhaps," he sighs "perhaps she will accept me back."  He looks at you
+&+wwith a glare of irritation, "Oh yes, well here is what I promised you.
+&+wYou will find it more difficult to retrieve this treasure then I to
+&+wrestore my faith." he smirks and laughs out loud "I never said it was my
+&+wtreasure to be had nor that it would be easy, just that it was great."&n
+~
+R I 139971
+G I 139968
+S
+#140025
+M
+fortress~
+&+w   A telepathic message is send by Desatysso, "It is a place of death there
+&+wis no power to gain here only misery.  Please I beg you release me from
+&+wthis prison."&n
+~
+M
+desatysso~
+&+w   Telepatically Desatysso says "I came through the portal and to the city.
+&+wI survived all the trials to come here, to come get the ultimate power.  I
+&+wappeared at the ledge as you did when a gaunt figure was there tending to
+&+wthe lamp.  He said "Only one? I've no use for just one.  The investiture of
+&+wmy conciousness into the Void requires more; I'll have to wait a bit longer,
+&+wI see.  Now, then, what's to be done with you eh?"  The figure raised his
+&+warms to cast a spell but I destroyed it with a bolt of lighting."  he pauses
+&+w"My memory is cloudy over the years of imprisonment, forgive me.  I made my
+&+wway through the fortress to come upon Mealdrun's final resting place, or so
+&+wI thought.  I saw a great sphere of light with many faces and then all went
+&+wblack." Desatysso moves slightly "please release me from this horrible bond-
+&+wage, I beg you; kill me!  I've lost all track of time, but it seems an eter-
+&+wnity since I entered this most accursed of places."&n
+~
+M
+mealdrun~
+&+w   Desatysso pauses for a bit, moaning telepathically he speaks "he is too
+&+wpowerful and you are in his home now.  Go back and save yourselves."&n
+~
+S
+#140040
+Q
+&+w   The demon grasps his sword and swings it round shattering the magic prison.
+&+wHe looks at his sword with a grin and says &+W"free at last after so many years!"&n
+~
+R I 140048
+G I 140049
+D
+&+wAs fast as his freedom came a look of surprise appears on his face.  A feint
+&+wvoice whispers his true name &+L"Tarnhem"&n&+w, the demon bellows &+W"NOOOOOO"&n&+w and
+&+whe suddenly disappears in a poof of smoke.  The only evidence he was here
+&+wis a small key left behind.&n
+~
+S
+#140049
+Q
+&+w   The demon grasps his sword and swings it round shattering the magic prison.
+&+wHe looks at his sword with a grin and says &+W"free at last after so many years!"&n
+~
+R I 140048
+G I 140049
+D
+&+wAs fast as his freedom came a look of surprise appears on his face.  A feint
+&+wvoice whispers his true name &+L"Tarnhem"&n&+w, the demon bellows &+W"NOOOOOO"&n&+w and
+&+whe suddenly disappears in a poof of smoke.  The only evidence he was here
+&+wis a small key left behind.&n
+~
+S

@@ -1,0 +1,1254 @@
+#138900
+bone human~
+&+Wa human bone&N~
+&+WA bone of some kind pokes out of earth here.&N~
+~
+13 13 3 0 7 0 8388608 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 146 100
+E
+bone~
+&+W   The gleaming white bone looks oddly familiar, actually the more you look
+&+Wat it the more you think it must be a humanoid bone of some sort. But...
+&+Wwhere is the rest of it?
+~
+#138901
+skeleton human~
+&+Wa human skeleton&N~
+&+WA human skeleton lies uncovered from the ground.&N~
+~
+15 13 3 0 7 0 4096 0 0 0 0
+3 0 0 0 0 0 0 0
+5 0 100
+E
+skeleton human~
+&+W   The skeleton before you looks human, the flesh having rotted or been eaten
+&+Waway. All that is obvious is a small bag on the figures body it having
+&+Wwithstood the weather for some reason.
+~
+#138902
+scroll human flesh~
+a scroll of &+rhuman flesh&N~
+&+yA scroll of tan color is on the ground.&N~
+~
+2 13 3 0 7 0 4096 16385 0 3584 0
+35 82 136 279 0 0 0 0
+1 13952 100
+E
+scroll human flesh~
+&+r   This scroll has been written on the dead and cured flesh of a human. It
+&+ris very gruesome and disgusting.
+~
+#138903
+book robert roberts diary robert's~
+&+BRobert's&n diary&N~
+&+BA book of some kind has been strew by the way.&N~
+~
+12 13 3 0 7 0 65600 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 52 100
+E
+book robert roberts diary~
+&N   This simple black bound book seems to have been someone's diary at one
+time. It tells the tale of young man, eager for knowledge, regardless of
+the consequences, and his journey toward power. He speaks of the dark arts
+of necromancy, and the raising of undead to do his bidding. It talks of how
+he worked at a school, or college of some sort, rising through the ranks to
+near graduation.
+&N   However here it is almost as if the writer changes. The writer, Robert,
+says that he was visiting the area around his school when he met a young
+woman named Larra. He speaks of emotions and feelings the like of which
+he has never had before. However appearently he was about to graduate,
+and his master, a man named Zrack, was going to send him to Bloodstone, away
+from his love. Finishing up his graduation experiment, something called his
+'Soul Item,' he chances an escape to avoid the dark path itself and the loss
+of his love. Here the diary ends.
+~
+E
+book~
+&N   This simple black bound book seems to have been someone's diary at one
+time. It tells the tale of young man, eager for knowledge, regardless of
+the consequences, and his journey toward power. He speaks of the dark arts
+of necromancy, and the raising of undead to do his bidding. It talks of how
+he worked at a school, or college of some sort, rising through the ranks to
+near graduation.
+&N   However here it is almost as if the writer changes. The writer, Robert,
+says that he was visiting the area around his school when he met a young
+woman named Larra. He speaks of emotions and feelings the like of which
+he has never had before. However appearently he was about to graduate,
+and his master, a man named Zrack, was going to send him to Bloodstone, away
+from his love. Finishing up his graduation experiment, something called his
+'Soul Item,' he chances an escape to avoid the dark path itself and the loss
+of his love. Here the diary ends.
+~
+A
+4 4
+#138904
+globe glowing~
+&+Ya glowing &+Cglobe&N~
+&+YA glowing glass globe is levitating in the air here.&N~
+~
+13 13 3 0 7 0 270401 16385 0 1 0
+0 0 0 0 0 0 0 0
+2 1 100
+E
+globe glowing~
+&N   The glowing orb appears to be made of glass, but emits a clear clean
+light, illuminating the entire area.
+~
+#138905
+badge skeletal sun hand~
+&+ma &+Wsk&+Cel&net&+Lal &n&+mhand&N~
+&n&+mA badge of soe kind lies on the ground.&N~
+~
+11 13 3 0 7 0 512 2113537 0 0 0
+0 0 0 0 0 0 0 0
+1 123 100
+E
+badge skeletal sun~
+&N   This badge has the words 'for the brotherhood' written on the back.
+~
+A
+3 6
+A
+22 -3
+#138906
+ring bone human~
+a ring of &+Chuman &+Wbone&N~
+&+WHere on the ground is ring of some sort.&N~
+~
+11 13 3 0 7 0 68157504 3 0 121205247 0
+0 0 0 0 0 0 0 0
+1 32495 100
+E
+ring bone human~
+&+L   This ring seems to be made of the joints of a human hand that have been
+&+Llinked together in some way. Necromantic runes are inscribed inside of
+&+Lthe ring itself.
+~
+A
+13 20
+#138907
+staff teacher mithril engraved~
+&+Wa m&+wi&+Wt&+wh&+Wr&+wi&+Wl engraved staff&N~
+&+WA long hard staff made of mithril is here on the ground.&N~
+~
+4 13 3 0 7 0 33636416 24577 0 134181375 0
+41 4 2 127 0 0 0 0
+5 15924 100
+E
+staff teacher mithril~
+&+m   This staff was given to Marius by Zrack, as the graduation present for the
+&+mbest student, and his new teacher.
+~
+A
+13 5
+#138908
+blade molten sword fury burning demon demons~
+&n&+ra b&+Rur&+Yn&+Rin&n&+rg &+Cblade &n&+rcalled &+L'&n&+rThe Fury of &+WDe&+Cm&no&+Lns'&N~
+&n&+rA sword of contained molten metal lays on the ground, steaming.&N~
+~
+5 19 3 0 15 0 75513929 8193 3104 32798 0
+5 5 5 3 0 390521277 56 25
+10 50000 100 536870928 0 67109056 100663296
+E
+blade molten sword fury angel angels burning~
+&+r   The sword's hilt is fairly normal, steel with a large crystal in the hilt,
+&+rwrapped in leather, and the crossguard is made of dragon bone. The blade
+&+rhowever is made of seething metal that is held together my some unknown
+&+rmagical means. It emits a slow hissing sound.
+&+r   Made as a weapon by Kossuth, Lord of the Elemental Plane of Fire, for the
+&+rAnti-paladin Maltheas, it served him well during the Wars of Light and Shadow.
+&+rIt was during this war that the old god Sargon walked the surface of the
+&+rworld. Only after many years was he imprisoned in the small village of Dubneth.
+&+rMaltheas survived the forces of darkness well, but was eventually hunted down,
+&+ralong with his dark master, The Master of Nightmares, by Sir Dithyan and the
+&+rElven Prince Amrothlin. Maltheas was killed in the battle by Sir Dithyan,
+&+rwielding the Blade of the Paladins. At this time the blade was banished back
+&+rto the Elemental Plane of Fire. No one knows what happened to the Master of
+&+rNightmares.
+&+r   When Maltheas was reanimated he summoned the blade back from the elemental
+&+rplane again. By this time Kossuth was in his period of exile and Imix was
+&+rthe master of the plane. He had the blade until whatever happened to bring
+&+rit into your hands.
+~
+A
+18 6
+A
+19 6
+T
+2 2 1 60
+#138909
+dragon scales charringsdeath red charring death~
+&n&+rthe scales of Charring &+LDeath&N~
+&+rSome red dragon scales have been left here.&N~
+~
+13 15 3 0 7 0 4096 16385 0 0 0
+0 0 0 0 0 0 0 0
+15 59024 100
+E
+dragon scales charringsdeath~
+&n&+r   These scales once belonged to the ancient dragon Charringsdeath.
+~
+#138910
+desk large morbid~
+a large desk&N~
+&+LA morbid desk with skulls carved into it sits in the room.&N~
+~
+15 13 3 0 7 0 0 0 0 0 0
+20 29 138911 100 0 0 0 0
+0 0 100
+E
+desk large morbid~
+&N   The desk is very big, and must have really hurt to move, being ten feet
+long and five feet wide. The entire outer shell has a very 'skullish' motif
+with different bones and skull carved all over the desk. It is definitely
+master crafted, but a bit morbid.
+~
+#138911
+black skull key~
+&+La black skull key&N~
+&+LA key of some sort is here.&N~
+~
+18 13 3 0 7 0 69632 1 0 0 0
+0 0 0 0 0 0 0 0
+1 95 100
+E
+black skull key~
+&+L   It's a key with the held part of it carved to look lika a skull; a very
+&+Levil looking key, to say the least.
+~
+#138912
+stick rune runed wand lighting~
+a wand of &+Blightning&N~
+&n&+BA rune covered stick is here.&N~
+~
+3 13 3 0 7 0 64 16385 0 96366715 0
+30 30 30 30 0 0 0 0
+1 9520 100
+E
+stick rune runed wand lightning~
+&+B   This wand has been made from an oak tree that was destroyed by a storm.
+&+BCarved into its present shape carefully, it has been given the power to blast
+&+Bapart things with powerful bolts of lightning.
+~
+#138913
+ring wedding band gold~
+&+Ya gold ring&N~
+&+YSomeone has thrown away a gold ring for some reason here.&N~
+~
+13 13 3 0 7 0 8392704 3 0 0 0
+0 0 0 0 0 0 0 0
+1 1000 100
+E
+ring wedding band gold~
+&N   The ring itself is very plain, but on the inner side in clear common it
+says:
+&+Y       For Larra my love, forever.
+~
+#138914
+gold silver ring~
+&+Ca &+Wr&+Ci&nn&+Lg&+C&+C of &+Ygold&n&+w &+Cand &+Wsilver&N~
+&+CA small ring of some sort has been left here.&N~
+~
+11 13 8 0 13 40 16448 3 1025 0 0
+8 0 0 0 0 0 0 0
+1 20052 100
+E
+gold silver ring~
+&+C   The ring is a master crafted work, its gold and silver bands entwined
+&+Ctogether with one small black and red gem. The silver and gld threads almost
+&+Clook like they are keeping the gems imprisoned. On the inside the following
+&+Cwords have been written:
+&+C   'May this &+WSoul&+Cc&+Bat&n&+bch&+Be&+Cr &+Cward the wearer from the fires of Evil'
+~
+A
+20 -3
+A
+24 -3
+#138915
+shield metal molten~
+a shield of &+rmolten metal&N~
+A shield of steaming metal lays on the ground burning the earth.&N~
+~
+37 13 3 0 7 0 65 513 0 268435008 0
+1 2 4 60 4 0 0 0
+24 48205 100
+E
+shield metal molten~
+&N   The shield is truly a marvel of magic, how it keeps its shape as the
+metal burns and boils is amazing. Furthermore, even as someone holds it
+they feel cool and fine, taking no damage from the shield.
+~
+A
+19 2
+A
+18 3
+#138916
+large black cloth robe~
+&+La large black robe&N~
+A black cloth liters the ground here.&N~
+~
+9 13 3 0 7 0 139329 9 0 96039419 0
+13 3 0 3 0 0 0 0
+5 30000 100
+E
+large black cloth robe~
+&N   This large black cloth seems almost indestructable, able to withstand
+fire and heat that would destroy most other cloth. Its black color seems to
+absorb the heat from all around itself.
+~
+A
+3 5
+A
+24 -3
+#138917
+blue lensed monocle~
+&+Wa &n&+Bblue-&n&+Wlensed monocle&N~
+a monocle lies on the ground, discarded.&N~
+~
+11 13 3 0 7 0 33554496 147457 0 0 0
+0 0 0 0 0 0 0 0
+1 2300 100 0 192 0 0
+E
+blue lensed monocle~
+&N   The blue lens is the color of cobalt, with a gold chain that ties to
+your clothes. When worn it seems to make things clearer, especially in combat.
+~
+A
+13 16
+A
+33 2
+#138918
+red cord rope blood sash~
+&+La &+rred &+Lsash of &n&+rblood&N~
+A &n&+rred&n rope of some kind has been thrwon away.&N~
+~
+9 13 3 0 7 0 65600 2049 0 0 0
+8 10 0 3 0 0 0 0
+2 2300 100
+E
+red cord rope blood~
+&N   Whatever the original material of the cloth, it now looks the exact color
+of human blood. When tied around something long enough it even leaves a faint
+red mark as if it is still wet.
+~
+A
+26 8
+A
+13 15
+#138919
+two-handed sword demon demonically red weapon~
+&n&+La &n&+rdemonically &nforged &+Ltwo&+W-&+Lhanded sword&N~
+&n&+rA red bladed weapon lays on the ground emitting a low groan.&N~
+~
+5 13 3 0 7 0 71319616 8193 0 267386854 0
+13 4 5 0 0 0 0 0
+7 20000 100
+E
+weapon sword demon~
+&N   The blade is fairly long, about four feet, but feels relatively weightless.
+Its red blade seems almost alive, and emits a slow moan whenever it is quite
+in an area. The weapon actually seems to have captured souls inside of it.
+~
+A
+18 4
+A
+19 3
+#138920
+black skull earring~
+&+La small black &+Wskull &+Learring&N~
+A small black skull lies discarded in the dirt.&N~
+~
+9 13 3 0 7 0 35651648 524289 0 4000 0
+10 0 0 2 0 0 0 0
+1 14952 100
+E
+black skull~
+&+L   This small black obsidian skull seems to have been painstakingly crafted
+&+Lto look just like a miniature skull.
+~
+A
+22 -3
+A
+19 2
+#138921
+iron small key~
+&+La small iron key&N~
+A small iron key lies on the floor, dicarded.&N~
+~
+12 13 3 0 7 0 0 16385 0 0 0
+0 0 0 0 0 0 0 0
+1 952 100
+E
+iron small key~
+&+L  It's a small iron key that seems like it could be used to open a lock.
+~
+#138922
+iron chest small~
+&+La small iron chest&N~
+&+LA small iron chest is in the back of the room.&N~
+~
+15 13 3 0 7 0 0 0 0 0 0
+100 2 138921 0 0 0 0 0
+60 0 100
+E
+iron chest small~
+&+L   This chest was made by the Duergar of the Underdark. Made of sturdy black
+&+Liron, it was made to last; unlocking it could prove to be a serious problem.
+~
+#138923
+potion bottle yellow~
+&+Ya yellow potion&N~
+&+YA small yellow bottle lays here.&N~
+~
+10 13 3 0 7 0 0 16385 0 1 0
+25 28 66 3 0 0 0 0
+1 10000 100
+E
+potion bottle yellow~
+&+Y   This yellow potion has the word 'Heal' marked clearly on the outside with
+&+Ysome sort of ink. A yellow fluid sloshes about inside the small glass bottle.
+~
+#138924
+scroll red~
+a scroll with &+Rred &n&+wletters&N~
+A scroll has been dropped by the way side.&N~
+~
+2 13 3 0 7 0 0 16385 0 1 0
+51 126 126 103 0 0 0 0
+1 12543 100
+E
+scroll red~
+&N   This small scroll is made out of dragon scale that has been carefully
+cured to make the ink soak into it. The ink itself has been distilled from
+the blood of a small fire drake and a faithful cleric.
+~
+#138925
+cloak patched cloth~
+a &+Yp&+ba&+rt&+gch&+Le&n&+cd cloak&N~
+A &+Rmul&+Btic&+Molo&n&+bre&nd cloak has been thrown on the ground.&N~
+~
+15 13 3 0 7 0 2179136 1025 0 1 0
+50 5 0 100 0 0 0 0
+4 52 100
+E
+cloak patched cloth~
+&N   This cloak is very old, so old that the original fabric has long since
+rotted away. Now it is simply a conglomeration of various patches aimed at
+keeping the cloak together.
+~
+A
+13 10
+#138926
+rapier~
+&+Ca sharp rapier&N~
+&+CA rapier is here stuck in the dirt.&N~
+~
+5 13 3 0 7 0 64 8193 0 1 0
+9 3 5 3 0 0 0 0
+2 26435 100
+E
+rapier~
+&N   Definitely a master crafted rapier.
+~
+A
+18 4
+A
+19 2
+#138927
+board loose~
+&+ya loose board&N~
+&+yA board seems to have become dislodged here.&N~
+~
+15 13 3 0 7 0 4096 0 0 0 0
+10 5 0 0 0 0 0 0
+0 0 100
+E
+board loose~
+&+y   This board seems to be simply a piece of wood that has been pried open
+&+ybefore.
+~
+#138928
+green emerald~
+&+ga green emerald&N~
+&+gA small green stone has been carelessly dropped here.&N~
+~
+8 13 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 93549 100
+E
+green emerald~
+&+g   This emerald is quite beautiful, and would bring a pretty penny from a
+&+gjeweler.
+~
+#138929
+black bladed short sword~
+&+La black bladed short sword&N~
+&+LOn the ground here is a small sword with a black blade.&N~
+~
+5 13 3 0 7 0 64 24577 0 0 0
+9 3 4 0 0 0 0 0
+5 2300 100
+E
+black bladed short sword~
+&+L   This shortsword has been made out of black steel, and seems to have been
+&+Lmade to absorb and not reflect any light that is thrown at it.
+~
+A
+1 2
+A
+26 3
+#138930
+scepter ironstar sovereignty~
+&+Lthe cr&+go&+Cwn&+Wed-pr&+Ci&+gn&+Lce &+Lof Iro&n&+rn&+Rs&+Yt&n&+Ra&n&+rr &+wsc&+Wept&+wer&+L of &+LSov&+ger&+Ceig&+Wnty&n~
+&+LA &+gdwarvern &+Wscepter &+Lwith ancient &+cr&+Wune&+cs&+L and &+Mroyal &+Lflare has been foolishly left here.&n~
+~
+4 18 3 0 15 0 21568 16385 0 37993376 0
+46 2 2 46 0 0 0 0
+2 157249 100 0 32768 0 0
+E
+scepter~
+&+CThis ancient scepter belong to the last ruling leader of the Ironstar Clan.
+&+CLegend lore of the ages have repeatly foretold an unknown prince will return
+&+Cand reclaim their ancient home..
+~
+A
+13 25
+A
+34 3
+#138931
+bone skeletal gauntlets~
+&n&+wa pair of &+Wskeletal &n&+Lgauntlets&N~
+&+LLaying in the dirt is a gauntlet of some type.&N~
+~
+9 10 3 0 10 0 192 129 0 0 0
+10 7 1 4 0 0 0 0
+1 78021 100 0 0 0 1048576
+E
+bone skeletal gauntlets~
+&+W   These gauntlets have been made of a skeleton's hand that has been magicaly
+&+Wsewn together with a black fabric that gives the glove a dire and sinister
+&+Wappearance.
+~
+A
+19 3
+A
+18 3
+#138932
+ancient battleaxe axe~
+an ancient battleaxe&N~
+An anchient battleaxe lies among the dirt.&N~
+~
+5 13 3 0 7 0 0 24577 0 1 0
+1 1 4 3 0 0 0 0
+4 32 100
+E
+ancient battleaxe axe~
+&N   It's an ancient battleaxe of the dwarven peoples.
+~
+A
+13 -25
+#138933
+mail chainmail tattered~
+some tattered chainmail&N~
+A set of almost rusted mail is here, useless.&N~
+~
+9 13 3 0 7 0 0 9 0 1 0
+5 3 1 3 0 0 0 0
+5 205 100
+E
+mail chainmail tattered~
+&N   It's a tattered set of chainmail of the ancient dwarves.
+~
+A
+13 -50
+#138934
+corpse dwarf haldron king~
+&+La dwarven &+Wskeleton&N~
+&+LHere lay the Remains the Haldron, Last King of Zaldran.&N~
+~
+15 13 3 0 7 0 4096 0 0 0 0
+100 0 0 100 0 0 0 0
+0 0 100
+E
+corpse dwarf haldron king~
+&N   This ancient corpse is that of a dwarven king who must have died in these
+halls. The king seems to have been writing on the wall when he died. The
+corpse is unmoving and quiet now.
+~
+#138935
+garlic~
+a rope of &+Wgarlic&N~
+a long rope of garlic sits against the wall.&N~
+~
+19 13 3 0 7 0 256 16389 0 1 0
+1 0 0 0 0 0 0 0
+1 23 100
+E
+garlic~
+&N   It's a rope of garlic.
+~
+A
+28 -2
+A
+20 -1
+#138936
+dwarven wrought axe~
+a &+Ydwarven &nwrought axe&N~
+A well crafted axe lies discarded on the ground.&N~
+~
+5 13 3 0 7 0 256 24577 0 32798 0
+1 2 4 3 0 0 0 0
+5 23349 100
+E
+dwarven wrought axe~
+&N   This axe has been crafted by an expert dwarven craftsman. Its blade is
+unreally sharp, and the balance for such a weapon is nothing short of
+remarkable.
+~
+A
+19 -3
+#138937
+pike long dwarven~
+a dwarven pike&N~
+A long pike of some sort is stabbed in the ground here.&N~
+~
+5 13 3 0 7 0 0 24577 0 1 0
+15 1 11 11 0 0 0 0
+6 11043 100
+E
+pike long dwarven~
+&N   This pike is made of simple steel, except for the blade itself
+which looks like it has a touch of mithril worked into it and a coat of
+blueshine on it as well.
+~
+#138938
+stone iron bread ironbread~
+some &+Liron&n&+wbread&N~
+A loaf of bread that is the color of stone as been tossed on the ground.&N~
+~
+19 13 3 0 7 0 0 16385 0 1 0
+52 0 0 0 0 0 0 0
+1 120 100
+E
+stone iron bread ironbread~
+&N   This famous bread is very hard to get your hands on. Reported to be able
+to keep a person completely full for two days, it is really amazing; however,
+it does taste like you are eating rocks.
+~
+#138939
+small emerald green stone~
+a small &+gemerald&N~
+A green stone lies here, unwanted.&N~
+~
+8 13 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1204 100
+E
+small emerald green stone~
+&N   It is a pretty small emerald, but its quality is very nice even though.
+~
+#138940
+bar gold~
+a bar of &+Ygold&N~
+&+YA bar of &+YGOLD has been left here unwanted.&N~
+~
+8 24 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+7 1000 100
+E
+bar gold~
+&N   It's a bar of GOLD! what more can be said??
+~
+A
+28 5
+#138941
+plow garden~
+a garden plow&N~
+A plow has been left here unused.&N~
+~
+5 13 3 0 7 0 4194304 24577 0 1 0
+18 1 2 3 0 0 0 0
+10 3240 100
+E
+plow garden~
+&N   It's a horse plow, you attach it to a horse, and plow the earth. As a
+secondary tool, you can hit people with it.
+~
+A
+18 -2
+A
+19 1
+#138942
+crown adamantium old _id_~
+&+Lan old crown made of adamantium&N~
+An ancient crown of some kind has been discarded to the earth.&N~
+~
+9 16 3 0 7 0 12608 17 0 57790 0
+15 4 1 3 0 0 0 0
+5 103023 100
+E
+old crown adamantium~
+&N   Lost with the great Dwarven King Haldran IronForger of the Ironstar clan
+on his way to reclaim the ancient Dwarven Hidden Fortress Zaldran that was
+stolen by the dragon Charringsdeath over a millenium ago, the owner of the
+crown is supposed to be the heir to the Ironstar Legacy.
+&N   The crown is made of Adamantium and has the runes of all the dwarven gods
+worked into it, making it a mighty help of protection against all things.
+~
+E
+_id_name_~
+zaldron crown ancient dwarven
+~
+E
+_id_short_~
+&+Lthe &+Wan&+Cci&nen&+Lt crown of the &+YDwarven &+LKings of &+LZaldran
+~
+A
+19 1
+A
+18 3
+#138943
+runed darksteel axe _id_~
+&+Can axe of &n&+rruned &+Ldark&+Wsteel&N~
+a axe lays here in the dust.&N~
+~
+5 18 3 0 15 70 3154241 24577 64 32798 0
+1 4 5 3 0 0 0 0
+4 74504 100 0 16 0 0
+E
+runed darksteel axe~
+&N   This dwarven axe is something more then words. Its blade is always keen and
+sharp and on its blade are runes of power for sharpness and speed. The metal
+of the blade is what is truly amazing however. Something beyond mere metal
+working, it is a blend between the two strongest metals, making this axe
+something else, something more then both. However one thing does catch your
+attention: this is only a warriors' axe. What would a King's look like?
+~
+E
+_id_short_~
+&+Can axe of &+Ldark&+Wsteel &+Cnamed &n&+r'&+LDark&nre&+Cav&+Wer&n&+r'
+~
+E
+_id_name_~
+runed dark darksteel darkreaver
+~
+A
+19 3
+A
+18 5
+#138944
+mold parrying dagger mithril small white dusty~
+&+Wthe mold of a small &+Wmithril&n&+w parrying dagger&N~
+&+WA small dusty white parrying dagger lays under some dirt here.&N~
+~
+5 13 3 0 7 0 8475968 24577 0 1 0
+4 2 4 7 0 0 0 0
+4 23549 100
+E
+hammer mithril small white dusty~
+&N   This small mithril hammer looks to be quite normal, no runes or written
+words grace its white face at all. The hammer itself is about a foot long
+and half a foot wide.
+~
+A
+18 2
+A
+19 2
+#138945
+suit dragonbone plate~
+&+La suit of &+gdr&+Gag&+gon&+W-b&+won&+We pl&+Cat&nem&+Lail&N~
+&+LA moron has dropped some &+rDragon&+WBone &+LPlate here!&N~
+~
+9 35 3 0 15 0 164033 9 0 181321668 0
+50 3 1 5 0 0 0 0
+40 100000 100 536870912 0 0 0
+E
+dragon dragonbone plate suit~
+&N   This huge suit is made of large, sharp plates of &+rDragon&+WBone&n that
+are almost weightless. The whole thing glows a bit with its magical might that
+has been stored in the almost writhing &+Wwhite&n plates.
+~
+A
+19 3
+A
+23 -5
+#138946
+robe black white bones linked~
+&n&+ra blood red &+Lrobe &n&+rof &+Lli&nn&+Ck&+Wed &+Wbo&+Cn&ne&+Ls&N~
+Someone has dropped a black and white robe here.&N~
+~
+9 13 3 0 7 0 33710144 1025 0 87126527 0
+10 9 0 3 0 0 0 0
+4 234959 100 0 0 0 33554432
+E
+robe black white bones linked~
+&+W   This robe is held together by linked bones that have been partially sewn
+&+Win with magic to a black wool robe. It is rather sinister in appearance,
+&+Wand very evil looking.
+~
+A
+13 25
+A
+24 -4
+#138947
+necklace orbiting psi-crystals~
+&+Ca &+cn&+Cecklac&+ce o&+Cf &+co&+Crbiting &+cp&+Cs&+ci&+W-&+cc&+Crystals&n~
+&+CA &+cp&+Csion &+cn&+Cecklace of &+cs&+Cwirling &+cc&+Crystals has been left here floating in mid-air.&n~
+~
+9 50 3 0 10 0 100664384 5 128 8684036 0
+5 2 2 3 0 0 0 0
+3 101021 100
+E
+necklace rabbit feet~
+&+g   It is a necklace of made of gorgeous emeralds. Written onto each one
+&+gis a large rune for 'Soul'. The necklace feels cold to the touch, as if it
+&+gis draining the life energies right out of your hand... how odd.
+~
+A
+37 3
+A
+27 8
+T
+2 5 1 50
+#138948
+black billowing silk pants~
+&+Lsome billowing &+Lblack &+Csilk &+Lpants&N~
+&+LSome black silk pants have been dropped here.&N~
+~
+9 15 3 0 7 0 192 33 0 1 0
+5 5 1 3 0 0 0 0
+2 16924 100
+E
+black billowing silk pants~
+&+L   These silk pants are very well made. Also upon close scrutiny, they have
+&+Lnecromantic runes running down the sides of them. They seem to deal with
+&+Lmagic and something about a soul. The pants are very comfortable and durable.
+~
+A
+23 -3
+#138949
+key small mithril~
+&+Wa silver mithril key&N~
+&+WA silver mithril key lays here.&N~
+~
+13 15 3 0 7 0 8392768 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 8492 100
+E
+key small mithril~
+&+W   This ancient key is clearly of dwarven manufacture. It seems to have once
+&+Wbeen the key to something important, but who can say now?
+~
+#138950
+ring soulcatcher~
+&+Ca &+Wring&+C called&+L '&+WSoul&+Cc&+Bat&n&+bc&+Bhe&+Cr&+L'&N~
+&+WA ring of glowing light lays here.&N~
+~
+9 1 3 0 14 0 50272 3 130 181309408 0
+9 0 0 2 0 0 0 0
+1 232592 100 0 0 64 33554432
+E
+ring soulcatcher~
+&+W   This ring is made of light itself. The words 'Soulcatcher' blaze in the
+&+Winside of the band. The ring is in actuality the trapped soul of Robert
+&+WDu'Lon. For services to him he agreed to enter the ring, to help its wearer
+&+Wto do whatever it was they needed done, as a repayment for a debt rendered.
+~
+A
+13 25
+A
+34 3
+#138951
+note blood~
+&+wa note written in &n&+rblood&N~
+A note written on ancient parchment.&N~
+~
+13 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+note blood~
+&+r   The note is written in some sort of blood solution that works as ink and
+&+rreads:
+
+
+&+r     Zrack,
+
+&+r        My old student, how goes the school that you set up? I have sent one
+&+r     of my messengers to you, feel free to use him as a messenger back to me.
+&+r     How is your research into dracoliches going? I hunger for your text.
+&+r     The crypt has been expanded recently, you should come back and visit.
+&+r     Everyone once in awhile some adventurers come and visit. I occasionally
+&+r     have to create a doppleganger to take my place, they go killing all the
+&+r     guards. Damn the those whom are called Thugan, Recya, Xanan, Tolm and Juv they always in the lead, destroying
+&+r     my minions. You know how hard it is to get good help these days?
+&+r        Did you destroy that student named Robert? I had a feeling he was
+&+r     going to get out of control when he drew the line at the eighth circle
+&+r     of animations.
+&+r        By the way, please send me a copy of the procedure you used to raise
+&+r     Malthease up, the mixture of golem and undead magics I find fascinating.
+
+                                                   Nakral, The Crypt Keeper
+
+&+r       P.S. I sent you some scrolls to help with the Malthease demonic weapon, to make it whole and complete,
+&+r       Dralor can shape it into a hammer or dagger!
+~
+#138952
+scroll demon hide~
+&+Ca scroll of &n&+rdemon&n&+Ghide&N~
+&+gA scroll made from the hides of demon lays here.&N~
+~
+2 15 3 0 7 0 8458305 16385 0 3584 0
+54 145 145 268 0 0 0 0
+1 19582 100
+E
+scroll dragonhide dragon hide~
+&+g   This scroll is made of thick green dragonhide, and has been written in ink
+&+gthat is the color of blood. On the outside of the scroll it says:
+
+&+r  'For Zrack: I hope this helps with the dracoliches.'
+~
+#138953
+bookcases book case bookcase shelf shelves bookshelves~
+&+ysome bookcases&N~
+&+ySome wooden bookcases rise up to the ceiling.~
+~
+15 15 3 0 7 0 4096 0 0 0 0
+100 0 0 100 0 0 0 0
+1 1 100
+E
+bookcases book~
+&+y   These bookcases have many books in them. There seems to be one book on
+&+ythe east side of the shelf that the students haven't touched and that is made
+&+yof black velvet.
+~
+#138954
+book velvet wrapped black~
+&+La black velvet wrapped book&N~
+&+LA book covered in black velvet rests here.&N~
+~
+33 15 3 1 7 0 0 16385 0 1 0
+0 0 150 0 0 0 0 0
+0 958 100
+E
+book velvet wrapped black~
+&N   Flipping open the book there seems to be one page that has been read
+a lot, and has a large amount of writing in it.
+
+&N Day of the Fallen Star, Fourth Month
+
+&N   Hehe, Nakral, you would be proud, I have finally managed to build one of
+&N those magical doors. Quite a step I think. I have coded to door to open
+&N upon the command word 'Datherlion'.
+
+&N Day of the Hunter, Seventh Month
+&N    I had to deal with that pesky apprentice Robert yesterday. He tried to
+&N leave me. I think he tried to get Marius to help rebel, but Marius is not
+&N so stupid. I had to send Maltheus out to destroy him. Maltheas brought me
+&N a ring, although it's not his soul object. I wish I knew what he did with
+&N his soul ring, it could be a powerful object in controlling his spirit,
+&N which I have cursed to wander the plains forever.
+
+
+&N Today's date
+
+&N    Today I animated Charringsdeath. Soon I will be ready. Too much time has
+&N been wasted, finally I can destroy my enemy, it will be a good day soon.
+~
+#138955
+large mithril key~
+&+Wa large mithril key&N~
+&+WA large dwarven made mithril ley lays here.&N~
+~
+12 15 3 0 7 0 8392768 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 9582 100
+E
+large mithril~
+&+W   This key is large and made of solid mithril. It seems to have been dwarven
+&+Wmade.
+~
+#138956
+gravel stones pile~
+a pile of stones and gravel&N~
+A pile of stones and gravel lay here the PC's can't see.&N~
+~
+15 15 3 0 7 0 2 0 0 1 0
+100 0 0 100 0 0 0 0
+1 1 100
+E
+gravel stones pile~
+&N   This pile of stones is very large and has a lot of rocks in it, who knows
+what could have been dug out in these rich old dwarven tunnels.
+~
+#138957
+stone armor zaldran _id_~
+&+Lthe stone ar&nm&+Co&+Wr&+L of Zaldran&N~
+&+LSome full armor made of rock and stone.&N~
+~
+9 19 3 0 15 0 537072704 9 0 83886137 0
+40 0 0 5 1 0 0 0
+20 305928 100 553721856 12480 0 0
+E
+stone armor zaldran stonebreaker ironstar~
+&+L   This ancient armor was forged in the early days of the dwarves. Originally
+&+Lmade by the Ironstar dwarves for many of their most famous warriors, it now
+&+Lis even more rare. Almost none of this powerful armor is known to exist any
+&+Lmore.
+&+L   This set belonged to one of the greatest of Ironstar kings. When
+&+LCharringsdeath came he knew that even with the armor, he would die. So they
+&+Ltook away the money and jewels and left the armor in the vault. He kept a
+&+Lkey, and gave two keys to the vault to his children.
+&+L   One of these children was Haldran. When he came and vanguished Char he
+&+Ldied in the landslide of rock and stone. No one knew what happened to his key.
+&+LThe last key is still rumored to be among the dwarves, and only they know for
+&+Lsure who has it. The armor tells no tales. Many say that the armor itself has
+&+Lanother name, the name of its first wearer.
+~
+E
+_id_short_~
+&+WSword&n&+Cbr&nea&+Lker, &+Lthe &+Wan&+Cci&+gen&+Lt ar&nm&+Co&+Wr &n&+Lof &+LClan Iro&n&+rn&+Rs&+Yt&n&+Ra&n&+rr&n
+~
+E
+_id_name_~
+ironstar stone clan swordbreaker
+~
+A
+19 1
+A
+35 5
+#138958
+mithril key vault~
+&+Wa mithril key of the &+Yvault&N~
+&+WA large dwarven made mithril key lays here.&N~
+~
+12 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 10592 100
+E
+mithril key vault~
+&+L   This key is the last key to the dwarven Ironstar vault.
+~
+#138959
+duergar made adamantine bracelet~
+&+La &n&+rduergar&+W-&+Lm&na&+Cd&+We &+Ladamantine bracelet&N~
+&+La bracelet made of adamantine has been dropped here.&N~
+~
+9 15 3 0 7 30 0 4097 128 32774 0
+10 0 0 4 0 0 0 0
+3 23853 100
+E
+duergar made adamant bracelet~
+&+L   This adamantine is clearly made by the Duergar of the Underdark. It carries
+&+Lthe stamp of Clan Deathhammer on the outside. These are only given to the
+&+Lchildren of the guild master when they leave the house. This one seems to
+&+Lhave gone through quite a lot, who knows what history it could tell.
+~
+A
+19 2
+A
+31 2
+#138960
+letter long sealed~
+&n&+ra long sealed letter&N~
+&n&+rA letter sealed in bloo lays here on the ground.&N~
+~
+13 15 3 0 7 0 64 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 59 100
+E
+letter long sealed~
+&n&+r   This letter is sealed in dried blood and it seems to have used the same
+&n&+rsubstance for the ink. It reads:
+
+&+L    Zrack,
+
+&n&+r       You have taken the great anti-paladin from the pits of hell
+&+r    and raised him as some sort of undead creature. This is the
+&+r    only letter you will recieve from me on this topic. Either
+&+r    give him to us so that he may be with his brethren again,
+&+r    or I will bring the armies of the Black Tower against you
+&+r    and retake our ancient comrade, this is your warning.
+
+
+   &+r                                Urian Shadowborn
+~
+#138961
+tear blood crystal~
+&n&+ra blood-colored &+Ccr&n&+ry&+Rs&n&+rt&+Cal &+Ctear&N~
+&n&+rA blood colored crystal lays here.&N~
+~
+9 15 3 0 7 10 4160 524289 0 49182 0
+4 14 0 3 0 0 0 0
+1 13954 100 33554432 0 0 0
+E
+tear blood crystal~
+&n&+r   This tear seems to be made of pure crystal of some sort. It almost looks
+&n&+rlike someone cried blood and somehow those tears were converted into crystal
+&n&+rform.
+~
+A
+19 1
+A
+13 5
+#138962
+mold hammer mithril small white dusty~
+&+Wthe mold of a small &+Wmithril&n&+w hammer&N~
+&+WA small dusty white hammer lays under some dirt here.&N~
+~
+5 13 3 0 7 0 25252928 24577 0 1 0
+4 2 4 7 0 0 0 0
+4 23549 100
+E
+hammer mithril small white dusty~
+&N   This small mithril hammer looks to be quite normal, no runes or written
+words grace its white face at all. The hammer itself is about a foot long
+and half a foot wide.
+~
+A
+18 2
+A
+19 2
+#138963
+molten dagger fury burning demon demons~
+&n&+ra b&+Rl&+Ya&+Wz&+Yi&+Rn&+rg &+Cdagger &n&+rcalled &+L'&n&+rThe Fury of &+WDe&+Cm&no&+Lns'&N~
+&n&+rA dagger of contained molten metal lays on the ground, steaming.&N~
+~
+5 19 3 0 15 0 67125313 8193 0 268308478 0
+2 3 5 3 0 390 50 30
+10 300000 100 536870912 0 0 0
+E
+blade molten sword fury angel angels burning~
+&+r   The sword's hilt is fairly normal, steel with a large crystal in the hilt,
+&+rwrapped in leather, and the crossguard is made of dragon bone. The blade
+&+rhowever is made of seething metal that is held together my some unknown
+&+rmagical means. It emits a slow hissing sound.
+&+r   Made as a weapon by Kossuth, Lord of the Elemental Plane of Fire, for the
+&+rAnti-paladin Maltheas, it served him well during the Wars of Light and Shadow.
+&+rIt was during this war that the old god Sargon walked the surface of the
+&+rworld. Only after many years was he imprisoned in the small village of Dubneth.
+&+rMaltheas survived the forces of darkness well, but was eventually hunted down,
+&+ralong with his dark master, The Master of Nightmares, by Sir Dithyan and the
+&+rElven Prince Amrothlin. Maltheas was killed in the battle by Sir Dithyan,
+&+rwielding the Blade of the Paladins. At this time the blade was banished back
+&+rto the Elemental Plane of Fire. No one knows what happened to the Master of
+&+rNightmares.
+&+r   When Maltheas was reanimated he summoned the blade back from the elemental
+&+rplane again. By this time Kossuth was in his period of exile and Imix was
+&+rthe master of the plane. He had the blade until whatever happened to bring
+&+rit into your hands.
+~
+E
+_char_msg~
+&+LA wave of &+wsup&+Wern&+watural &+wf&+We&+wa&+Wr&+L washes over you as the sickening awareness of an &+wov&+Wer-whelmi&+wng&+L presence ripples into being.&n
+&+LAn &+Cunseen &+Wvoice&+L of pure &+rma&+Rlevolen&+rce &+Cwhispers&+L a single word of &+rd&+Remoni&+rc p&+Ro&+rw&+Re&+rr.&n
+&+L'&n&+rThe Fury of &+WDe&+Cm&no&+Lns'&+L is wreathed in &+rde&+Rmon&+ric &+rf&+Rl&+Ya&+Wm&+Ye&+Rs&+L of the &+WAb&+wy&+Lss.&n
+~
+E
+_victim_msg~
+&+LA wave of &+wsup&+Wern&+watural &+wf&+We&+wa&+Wr&+L washes over you as the sickening awareness of an &+wov&+Wer-whelmi&+wng&+L presence ripples into being.&n
+&+LAn &+Cunseen &+Wvoice&+L of pure &+rma&+Rlevolen&+rce &+Cwhispers&+L a single word of &+rd&+Remoni&+rc p&+Ro&+rw&+Re&+rr.&n
+&+L'&n&+rThe Fury of &+WDe&+Cm&no&+Lns'&+L is wreathed in &+rde&+Rmon&+ric &+rf&+Rl&+Ya&+Wm&+Ye&+Rs&+L of the &+WAb&+wy&+Lss.&n
+~
+E
+_room_msg~
+&+LA wave of &+wsup&+Wern&+watural &+wf&+We&+wa&+Wr&+L washes over you as the sickening awareness of an &+wov&+Wer-whelmi&+wng&+L presence ripples into being.&n
+&+LAn &+Cunseen &+Wvoice&+L of pure &+rma&+Rlevolen&+rce &+Cwhispers&+L a single word of &+rd&+Remoni&+rc p&+Ro&+rw&+Re&+rr.&n
+&+L'&n&+rThe Fury of &+WDe&+Cm&no&+Lns'&+L is wreathed in &+rde&+Rmon&+ric &+rf&+Rl&+Ya&+Wm&+Ye&+Rs&+L of the &+WAb&+wy&+Lss.&n
+~
+A
+18 4
+A
+19 4
+T
+2 2 1 60
+#138964
+warhammer molten hammer fury burning demon demons~
+&n&+ra b&+Rur&+Yn&+Rin&n&+rg &+Cwarhammer &n&+rcalled &+L'&n&+rThe Fury of &+WDe&+Cm&no&+Lns'&N~
+&n&+rA warhammer of contained molten metal lays on the ground, steaming.&N~
+~
+5 19 3 0 15 0 67109953 8193 66 1572865 0
+4 3 6 3 0 390 50 30
+10 300000 100 536870912 0 0 0
+E
+blade molten sword fury angel angels burning~
+&+r   The sword's hilt is fairly normal, steel with a large crystal in the hilt,
+&+rwrapped in leather, and the crossguard is made of dragon bone. The blade
+&+rhowever is made of seething metal that is held together my some unknown
+&+rmagical means. It emits a slow hissing sound.
+&+r   Made as a weapon by Kossuth, Lord of the Elemental Plane of Fire, for the
+&+rAnti-paladin Maltheas, it served him well during the Wars of Light and Shadow.
+&+rIt was during this war that the old god Sargon walked the surface of the
+&+rworld. Only after many years was he imprisoned in the small village of Dubneth.
+&+rMaltheas survived the forces of darkness well, but was eventually hunted down,
+&+ralong with his dark master, The Master of Nightmares, by Sir Dithyan and the
+&+rElven Prince Amrothlin. Maltheas was killed in the battle by Sir Dithyan,
+&+rwielding the Blade of the Paladins. At this time the blade was banished back
+&+rto the Elemental Plane of Fire. No one knows what happened to the Master of
+&+rNightmares.
+&+r   When Maltheas was reanimated he summoned the blade back from the elemental
+&+rplane again. By this time Kossuth was in his period of exile and Imix was
+&+rthe master of the plane. He had the blade until whatever happened to bring
+&+rit into your hands.
+~
+E
+_char_msg~
+&+LA wave of &+wsup&+Wern&+watural &+wf&+We&+wa&+Wr&+L washes over you as the sickening awareness of an &+wov&+Wer-whelmi&+wng&+L presence ripples into being.&n
+&+LAn &+Cunseen &+Wvoice&+L of pure &+rma&+Rlevolen&+rce &+Cwhispers&+L a single word of &+rd&+Remoni&+rc p&+Ro&+rw&+Re&+rr.&n
+&+L'&n&+rThe Fury of &+WDe&+Cm&no&+Lns'&+L is wreathed in &+rde&+Rmon&+ric &+rf&+Rl&+Ya&+Wm&+Ye&+Rs&+L of the &+WAb&+wy&+Lss.&n
+~
+E
+_victim_msg~
+&+LA wave of &+wsup&+Wern&+watural &+wf&+We&+wa&+Wr&+L washes over you as the sickening awareness of an &+wov&+Wer-whelmi&+wng&+L presence ripples into being.&n
+&+LAn &+Cunseen &+Wvoice&+L of pure &+rma&+Rlevolen&+rce &+Cwhispers&+L a single word of &+rd&+Remoni&+rc p&+Ro&+rw&+Re&+rr.&n
+&+L'&n&+rThe Fury of &+WDe&+Cm&no&+Lns'&+L is wreathed in &+rde&+Rmon&+ric &+rf&+Rl&+Ya&+Wm&+Ye&+Rs&+L of the &+WAb&+wy&+Lss.&n
+~
+E
+_room_msg~
+&+LA wave of &+wsup&+Wern&+watural &+wf&+We&+wa&+Wr&+L washes over you as the sickening awareness of an &+wov&+Wer-whelmi&+wng&+L presence ripples into being.&n
+&+LAn &+Cunseen &+Wvoice&+L of pure &+rma&+Rlevolen&+rce &+Cwhispers&+L a single word of &+rd&+Remoni&+rc p&+Ro&+rw&+Re&+rr.&n
+&+L'&n&+rThe Fury of &+WDe&+Cm&no&+Lns'&+L is wreathed in &+rde&+Rmon&+ric &+rf&+Rl&+Ya&+Wm&+Ye&+Rs&+L of the &+WAb&+wy&+Lss.&n
+~
+A
+18 4
+A
+19 4
+T
+2 2 1 60
+#138965
+broken weapon demonic fury burning demon demons~
+&n&+ra &+cbroken &+rde&+Rmon&+ric &+Cweapon &n&+rcalled &+L'&n&+rThe Fury of &+WDe&+Cm&no&+Lns'&N~
+&n&+rA dagger of contained molten metal lays on the ground, steaming.&N~
+~
+5 19 3 0 15 0 75518017 1 66 268320766 0
+2 3 5 3 0 390521 1 30
+10 300000 100
+E
+blade molten sword fury angel angels burning~
+&+r   The sword's hilt is fairly normal, steel with a large crystal in the hilt,
+&+rwrapped in leather, and the crossguard is made of dragon bone. The blade
+&+rhowever is made of seething metal that is held together my some unknown
+&+rmagical means. It emits a slow hissing sound.
+&+r   Made as a weapon by Kossuth, Lord of the Elemental Plane of Fire, for the
+&+rAnti-paladin Maltheas, it served him well during the Wars of Light and Shadow.
+&+rIt was during this war that the old god Sargon walked the surface of the
+&+rworld. Only after many years was he imprisoned in the small village of Dubneth.
+&+rMaltheas survived the forces of darkness well, but was eventually hunted down,
+&+ralong with his dark master, The Master of Nightmares, by Sir Dithyan and the
+&+rElven Prince Amrothlin. Maltheas was killed in the battle by Sir Dithyan,
+&+rwielding the Blade of the Paladins. At this time the blade was banished back
+&+rto the Elemental Plane of Fire. No one knows what happened to the Master of
+&+rNightmares.
+&+r   When Maltheas was reanimated he summoned the blade back from the elemental
+&+rplane again. By this time Kossuth was in his period of exile and Imix was
+&+rthe master of the plane. He had the blade until whatever happened to bring
+&+rit into your hands.
+~
+A
+18 4
+A
+19 4
+T
+6 12 20 60

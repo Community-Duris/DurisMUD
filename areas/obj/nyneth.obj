@@ -385,7 +385,7 @@ A
 A
 24 -2
 #22964
-key 2nd second~
+key 2nd second _noquest_~
 &+Lthe 2nd key of &+BN&+by'&+BN&+beth&n~
 &+LA black key is here waiting to be taken.&n~
 ~
@@ -393,7 +393,7 @@ key 2nd second~
 0 100 0 0 0 0 0 0
 0 0 100
 #22965
-key vault~
+key vault _noquest_~
 &+Lthe&+B vault&+L key&n~
 &+LA key has been left here.&n~
 ~

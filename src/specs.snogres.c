@@ -422,7 +422,11 @@ int skull_leggings(P_obj leggings, P_char ch, int cmd, char *arg)
        {
           int slot = WEAR_LEGS;
           if (ch->equipment[slot])
+	  {
+            if (obj_index[ch->equipment[slot]->R_num].func.obj != NULL)
+              (*obj_index[ch->equipment[slot]->R_num].func.obj) (ch->equipment[slot], ch, CMD_REMOVE, (char *) "all");
             obj_to_char(unequip_char(ch, slot), ch);
+	  }
           obj_from_char(leggings, TRUE);
           equip_char(ch, leggings, slot, FALSE);
           act("&+LA longing for &+rblood &+Lbegins to &+Rburn &+Lin your &+rheart&+L, and you feel a strange\n"

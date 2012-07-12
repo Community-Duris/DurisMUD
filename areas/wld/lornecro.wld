@@ -1,0 +1,2247 @@
+#138900
+&+gThe Wherston Road~
+&+y   The Wherston road stretches out before you to the east, running on its
+&+ycourse through the small rolling hills around. The ground here is made of
+&+yhard packed clay, and it is amazing that anything at all can grow. The path
+&+yis criss-crossed with tracks leading west from whence you came and east farther
+&+yon the road. The faint sound of water running can be heard also to the east.
+~
+1000000 134250496 4 0
+D1
+&+yTo the east the Wherston Road continues.
+~
+~
+0 0 138901
+D3
+&+yTo the west the Wherston Road continues.
+~
+~
+0 0 138978
+S
+#138901
+&+gThe Wherston Road~
+&+y   The road, with its winding, wagon marked path continues here. The clay
+&+yaround seems to be getting a little more healthy, and a few trees and
+&+yvegetation can be seen growing on ahead. To both the east and the west the
+&+yWherston Road continues. To the east the sound of water becomes much louder,
+&+yand from your vantage on this hill the figure of a fast moving stream can
+&+ybe seen moving south through the valley.
+~
+1000000 134250496 4 0
+D3
+&+yTo the west the Wherston road continues.
+~
+~
+0 0 138900
+D5
+&+yBelow the Wherstone valley begins to open up.
+~
+~
+0 0 138902
+S
+#138902
+&+gThe Wherston Road~
+&+y   The path continues on toward the river, becoming quite nice as the valley
+&+ydown below opens up to your inspection. Its beautiful scenic view is truly
+&+yawe inspiring. From above the small streams flow out of the hills around and
+&+yinto the current below. Closer to the river lovely grasses and trees hang,
+&+ygiving shade and rest to all who pass by.
+~
+1000000 134250496 4 0
+D1
+&+yTo the east a light road leads toward the Wherston &+BRiver.
+~
+~
+0 0 138903
+D4
+&+yAbove the small road leads out of the gorgeous valley.
+~
+~
+0 0 138901
+S
+#138903
+&+gThe Wherston Road~
+&+y   The road now comes right up to the river and turns south following its
+&+ycourse south. Farther down a bridge can be see spanning the river. All
+&+yabout the health of the river seems to have brought the land alive, the
+&+yearth now seems have a life of its own. Farther west and up into the
+&+yhills the Wherston road continues.
+~
+1000000 134250496 2 0
+D1
+&+BTo the east is the Wherston River.
+~
+~
+0 0 138907
+D2
+&+yTo the south is the Wherston Road.
+~
+~
+0 0 138904
+D3
+&+YTo the east the road leads out of the valley.
+~
+~
+0 0 138902
+S
+#138904
+&+gThe Wherston Road~
+&+y   The road follows a definitely southern route here, tracing the winding
+&+ylength of the river to the east. The river has enriched the earth here,
+&+ybringing out the hidden beauty of the land. Not too much farther south a
+&+ybridge spans over the river, while farther north and in the surrounding hills
+&+yis the Wherston Road.
+~
+1000000 134250496 2 0
+D0
+&+yTo the north is the Wherston Road.
+~
+~
+0 0 138903
+D1
+&+BTo the east is the Wherston River.
+~
+~
+0 0 138908
+D2
+&+yTo the south the Wherston Road continues.
+~
+~
+0 0 138905
+S
+#138905
+&+gThe Wherston Road~
+&+y   The Wherston road continues here but bends and moves over the bridge
+&+yspanning the flowing river to the east. All around the valley is lush with
+&+ylife and growth. Bushes bloom and trees grow almost visibly as the river feeds
+&+ylife into the narrow vale. To the north the Wherston trade road heads up
+&+ytowards the mountains.
+~
+1000000 134250496 2 0
+D0
+&+yTo the north is the Wherston road.
+~
+~
+0 0 138904
+D1
+&+yTo the east is the Wherston bridge. Built by the villagers of Fairlock to
+&+yhelp them trading with the outside, it looks in disrepair now, and there seems
+&+yto have been some sort of magical battle on it. From here a few scorth marks
+&+ycan be seen.
+~
+~
+0 0 138906
+S
+#138906
+On the &+gWherston Bridge~
+&+L   The bridge here is made of strong timbers and looks to have been
+&+Lreinforced recently. From this vantage the view of the valley is complete,
+&+Lwith the green vale spreading north and south from here. North the beautiful
+&+Llandscape continues, while south huge mountains rise up, making the river even
+&+Lmore violent. To the west the Wherston trade road continues up into the hills
+&+Lwhile to the east a small settlement can be seen nestled in the valley. The
+&+Ltimbers here are slightly burned, as if some large &+rex&+Yplosi&+rons&+L took place
+&+Lnearby.
+~
+1000000 134250496 1 0
+D1
+&+RThe road to Fairlock extends to the east.
+~
+~
+0 0 138912
+D3
+&+yIts the Wherstone Road.
+~
+~
+0 0 138905
+D5
+&+BOver the bridge is the Wherstone River.
+~
+~
+4 0 138909
+S
+#138907
+&+gThe Wherston&+B River~
+&+B   The valley all around is lush with life from this river that you are now
+&+Bon. Its life sustaining waters rushing in a torrent down toward what looks
+&+Bto be a bridge farther on. The current here is moving fast as bits of logs
+&+Band debris move past.
+~
+1000000 134250496 6 0
+D2
+~
+~
+0 0 138908
+D3
+~
+~
+0 0 138903
+C
+15 2
+S
+#138908
+&+gThe Wherston &+BRiver~
+&+B   The valley all around is lush with life from this river that you are now
+&+Bon. Its life sustaining waters rushing in a torrent down toward what looks
+&+Bto be a bridge that seems to be coming up fairly fast. The current here is
+&+Bmoving fast as bits of logs and debris move past.
+~
+1000000 134250496 6 0
+D0
+&+BYep, you guessed it, its the Wherston River.
+~
+~
+0 0 138907
+D2
+&+BTo the south is the Wherston Bridge.
+~
+~
+0 0 138909
+D3
+&+yWhat a suprise, its the Wherston Road.
+~
+~
+0 0 138904
+C
+15 2
+S
+#138909
+Beneath the &+gWherston Bridge~
+&+B   The valley all around is lush with life from this river that you are now
+&+Bon. Its power rushes through the green landscape as a natural force, bringing
+&+Bits life sustaining waters rushing through the vale. The current here is
+&+Bmoving fast as bits of logs and debris move past. Above the Wherston bridge
+&+Bspans the river, rising like a monolith across the raging river.
+~
+1000000 134250500 6 0
+D0
+   From the north flows a lot of water from the Wheston River.
+~
+~
+0 0 138908
+D2
+   To the south flows the Wherston River.
+~
+~
+0 0 138910
+D4
+   Above is the Wherston Bridge.
+~
+~
+0 0 138906
+C
+10 2
+S
+#138910
+&+gThe Wherston &+BRiver~
+&+B   The valley all around is lush with life from this river that you are now
+&+Bon. Its power rushes through the green landscape as a natural force, bringing
+&+Bits life sustaining waters rushing through the vale. The current here is
+&+Bmoving fast as bits of logs and debris move past. To the north the Wherston
+&+Bbridge is beginning to look a bit smaller. From here south the river begins
+&+Bto move into some serious rapids.
+~
+1000000 134250496 6 0
+D0
+   From the north flows in a lot of water from the Wherston River.
+~
+~
+0 0 138909
+D2
+   The Wherston River flows to the south.
+~
+~
+0 0 138911
+C
+20 2
+S
+#138911
+&+gThe Wherston &+BRiver~
+&+B   The valley all around is lush with life from this river that you are now
+&+Bon. Its power rushes through the green landscape as a natural force, bringing
+&+Bits life sustaining waters rushing through the vale. The current here is
+&+Bmoving fast as bits of logs and debris move past. The river smashes up
+&+Bagainst a huge boulder and now begins moving east, taking everything in the
+&+Bcurrent with it.
+~
+1000000 134250496 6 0
+D0
+   From the noth flows a lot of water from the Wherston River.
+~
+~
+0 0 138910
+D1
+   The Wherston River flows around the boulder to the east.
+~
+~
+0 0 138913
+C
+20 2
+S
+#138912
+The Road to &+RFairlocke~
+&N   The beautiful vale still stretches out around you, however here the land
+looks more organized; someone has definitely been caring for it. Away to the
+east is what looks to be a small village. The trail itself looks like it is
+beginning to decay with lack of use. The the west the bridge to the Wherston
+trade road is still fully visible.
+~
+1000000 134250496 2 0
+D1
+&+RTo the east is more of the path to Fairlock.
+~
+~
+0 0 138920
+D3
+&+LTo the west is the bridge of Fairlock.
+~
+~
+0 0 138906
+S
+#138913
+&+gThe Wherston&+B River~
+&+B   The valley all around is lush with life from this river that you are now
+&+Bon. Its power rushes through the green landscape as a natural force, bringing
+&+Bits life sustaining waters rushing through the vale. The current here is
+&+Bmoving fast as bits of logs and debris move past. The river now begins its
+&+Bnormal again, rushing through the gray granite mountains around it to the
+&+Bsouth.
+~
+1000000 134250496 6 0
+D2
+   The Wherston River flows to the south.
+~
+~
+0 0 138914
+D3
+   From the west flows a lot of water from the Wheston River.
+~
+~
+0 0 138911
+C
+20 2
+S
+#138914
+&+gThe Wherston&+B River~
+&+B   The valley all around is lush with life from this river that you are now
+&+Bon. Its power rushes through the green landscape as a natural force, bringing
+&+Bits life sustaining waters rushing through the vale. The current here is
+&+Bmoving fast as bits of logs and debris move past. Immediately south now a HUGE
+&+Bcrashing sound can be heard, without a doubt there is a waterfall ahead.
+~
+1000000 134250496 6 0
+D0
+   To the north is the Wherston River.
+~
+~
+0 0 138913
+D2
+  To the south there looks to be a waterfall!
+~
+~
+0 0 138915
+C
+20 2
+S
+#138915
+&+gThe Wherston&+L Drop~
+&+B   The valley all around is lush with life from this river that you are now
+&+Bon. Its power rushes through the green landscape as a natural force, bringing
+&+Bits life sustaining waters rushing through the vale. The current here is
+&+Bmoving fast as bits of logs and debris move past. Unfortunately, this is where
+&+Bthe ride ends, as everything plummets over the side of the drop... and falls.
+~
+1000000 134250496 8 0
+D0
+   To the nrth is the Wherston River.
+~
+~
+0 0 138914
+D5
+   Below is a long drop.
+~
+~
+0 0 138916
+F
+100
+S
+#138916
+&+BThe Waterfall~
+&+B   The water from the Wherston river is falling all around, its weight
+&+Bpushing down on you as you aim toward the ground. All vision here is almost
+&+Btotally obscured because of the water all around.
+~
+1000000 134250496 8 0
+D4
+   Above is a lot of water, in your face.
+~
+~
+0 0 138915
+D5
+   Below is AIR!
+~
+~
+0 0 138917
+F
+100
+S
+#138917
+&+BThe Waterfall~
+&+B   The water from the Wherston river is falling all around, its weight
+&+Bpushing down on you as you aim toward the ground. All vision here is almost
+&+Btotally obscured because of the water all around.
+~
+1000000 134250496 8 0
+D0
+   To the north is some kind of cavern.
+~
+~
+4 0 138919
+D4
+   Looking up ou see a lot of water.
+~
+~
+0 0 138916
+D5
+   Below is a lake.
+~
+~
+0 0 138918
+F
+100
+S
+#138918
+&+WA Glittering&n&+B Lake~
+&+B   The water from the Wherston river collides with this beautiful, blue
+&+Blake, creating a rainbow across the whole waterfall. All around the gray
+&+Bgranite mountains rise around you, looking like ominous guardians guarding
+&+Bthis beautiful place. However they are doing one thing, stopping things from
+&+Bleaving, the only out seems to be... up.
+~
+1000000 134250496 6 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138990
+D4
+   Above is a large waterfall.
+~
+~
+0 0 138917
+S
+#138919
+Entrance to a &+LLarge Cave~
+&N   The &+bwaterfall&n to the south still pounds down, making this area very noisy,
+and difficult to make out any other sounds. The &+Lcave&n is very large, and seems
+big enough for almost any creature to get in this far. The whole area is
+rather wet, with water from the fall spraying in every so often. However, the
+entire area seems &+Bcold&n.
+~
+1000000 134254617 0 0
+D0
+   To the north the cavern opens up a bit and continues.
+~
+~
+0 0 138924
+D2
+   To the south a huge waterfall thunders.
+~
+~
+0 0 138917
+S
+#138920
+The Road to &+RFairlocke~
+&N   The beautiful vale still stretches out around you, however here the land
+looks more organized, someone has definitely been caring for it. Away to the
+east the road that leads to the village of Fairlocke seems to bend slightly
+toward the south. The trail itself looks like it is beginning to decay with
+lack of use. The the west the bridge to the Wherston trade road is still
+visible.
+~
+1000000 134250496 2 0
+D2
+&+RTo the south is the road further into Fairlock.
+~
+~
+0 0 138921
+D3
+&+RThe road toward the Wherston Bridge extends toward to the west.
+~
+~
+0 0 138912
+S
+#138921
+The Road to &+RFairlocke~
+&N   The beautiful vale still stretches out around you, however here the land
+looks more organized, someone has definitely been caring for it. Away to the
+east is what looks to be a small village. The trail itself looks like it is
+beginning to decay with lack of use. To te north the barely kept road runs,
+making a snaking movement through the valley.
+~
+1000000 134250496 2 0
+D0
+&+RTo the north is the road out of Fairlock.
+~
+~
+0 0 138920
+D1
+&+RTo the east is the road toward Fairlock.
+~
+~
+0 0 138922
+S
+#138922
+The Road to &+RFairlocke~
+&N   The beautiful vale still stretches out around you, however here the land
+looks more organized, someone has definitely been caring for it. The small
+thatch roofs of Fairlocke village are now beginning to come clearly into
+view. There seem to be about twenty scattered houses from here, but for some
+reason only about three have smoke coming out of the chimneys. Away to the
+west the path continues, heading toward the bridge of Wherston.
+~
+1000000 134250496 2 0
+D1
+&+RTo the east is the road into Fairlock.
+~
+~
+0 0 138923
+D3
+&+RTo the west is the road out of Fairlock.
+~
+~
+0 0 138921
+S
+#138923
+Before &+RFairlocke~
+&N   All around the valley blooms with life; its lovely view of green and gold
+is utterly pure beauty. The beauty here is very organized, with &+Rtomatos&n,
+&+gcucumbers&n, &+Ysquash&n, and many varieties of &+Gpeas&n growing from the cultivated land
+all around. To the the east the village of &+RFairlocke&n is open to view, its
+houses stretched out against the main path. To the west the road leads back
+toward the &+gWherston Bridge&n.
+~
+1000000 134250496 2 0
+D1
+&n&+rTo the east is the village of Fairlock.
+~
+~
+0 0 138955
+D3
+&+RTo the west is the road out of Fairlock toward the valley of the &n&+yWherston
+&+BRiver
+~
+~
+0 0 138922
+S
+#138924
+A Sloping Cave~
+&N   The cave actually widens here, opening up, but also moving up, further
+into the mountain. The sounds of the water are beginning to be muffled a bit
+but the echo of it is still booming agains the wall, making conversation
+difficult. Up ahead the ground seems to flatten out, making the walking
+at least a bit easier.
+~
+1000000 134254609 0 0
+D2
+   To the south the cavern continues.
+~
+~
+0 0 138919
+D4
+   Above the cavern continues.
+~
+~
+0 0 138925
+S
+#138925
+An Open Passage~
+&N   The passage opens up again, making this cavern big enough for at least
+fifteen large men to walk through easily. Even the stalactites and growths
+on the walls have been knocked off by something, making the way very easily
+traversible. The &+bwaterfall&n further on can be heard now but it is not
+deafening. To the north the passage continues, its gray walls leading further
+on into the darkness.
+~
+1000000 134254593 0 0
+D0
+   To the north the cavern comes to an end.
+~
+~
+0 0 138926
+D5
+   Below the cavern continues.
+~
+~
+0 0 138924
+S
+#138926
+The End of the Cave~
+&N   The large &+Lcave&n comes to a halt here to the north, where what looks to have
+been a cave in of some kind destroyed the open area. However a door has been
+erected amongst the huge rubble, its iron looks staunch and hard, able to
+withhold most blows. The rumble of a &+bwaterfall&n can be heard down to the south,
+as it echos from the depths.
+~
+1000000 134254593 0 0
+D0
+   The iron door is about eight feet tall and five feet wide, large enough
+for most things to walk through. Printed in large letters on the front of
+it are the words:
+                 Do You Come Seeking Learning?
+~
+door iron~
+1 0 138927
+D2
+   To the south the large cave extends.
+~
+~
+0 0 138925
+S
+#138927
+&+LThe Black Hall~
+&N   The room before you is of moderate berth, able to support at least four
+people as they move through the hall to the south. The walls here have been
+smoothed out, definitely as living quarters for someone, or something. One
+thing that immediately hits your senses is the smell, of &+Ldecay&n. It is not
+hugely strong, but it's definitely there. In the middle of the room is a small
+table.
+~
+1000000 134254593 0 0
+D0
+   The hall contnues, however the smell of death intensifies.
+~
+~
+0 0 138928
+D2
+   The rear end of a large iron door stands firmly toward the south, the
+following words are printed firmly in common:
+             Let Your Learning Bring Forth Darkness
+~
+door iron~
+1 0 138926
+S
+#138928
+&+WGuard Room of the &+LBlack Hall~
+&+L   This room expands suddenly to make room for the small crevices in the wall.
+&+LThe walls here are starting to take on a rather black tinge and darken as they
+&+Lhead north. The floor is made of stones that have been cut to size and fitted
+&+Lto form a very smooth walking surface. The room here has an even greater smell
+&+Lof death and decay, literally making the air hang in the room.
+~
+1000000 134254593 0 0
+D0
+   To the north the Black Hall continues.
+~
+door black~
+1 0 138929
+D2
+   To the south the Black Hall comes to an end.
+~
+~
+0 0 138927
+S
+#138929
+&+LThe Black Hall~
+&+L   The walls are now almost totally black as they continue down the passageway
+&+Lto the north. To the south the wall begin to fade to a &ngrayer&+L color. To the
+&+Lnorth the hall also looks as if it splits up ahead, becoming some sort of
+&+Ljunction. To the south it looks as if the hall opens a bit. The smell of
+&+Lsomething dead seems to hang in the air all around.
+~
+1000000 134254593 0 0
+D0
+   To the north the hall comes to a junction.
+~
+~
+0 0 138930
+D2
+   To the south the Black Hall continues.
+~
+door black~
+1 0 138928
+S
+#138930
+&+WJunction &nof the &+LBlack Hall~
+&+L   Four passageways come to a junction here forming a sort of crossroad of
+&+Lcorridors. To the south the hall seems to take on a slightly less black look,
+&+Lwhile to the north if anything it looks even darker and more ominous. To the
+&+Least and west the corridors look well traveled and used, even clean.
+~
+1000000 134254593 0 0
+D0
+   To the north the main passage of the Black Hall cotinues.
+~
+~
+0 0 138932
+D1
+   To the east is the Eastern Wing of the Black Hall.
+~
+~
+0 0 138933
+D2
+   To the south the main part of the Black Hall continues.
+~
+~
+0 0 138929
+D3
+   To the west the Western Wing of the black hall.
+~
+~
+0 0 138931
+S
+#138931
+&+WThe West Wing~
+&+L   This western half of the black hall is rather stark, with black glossy
+&+Lwalls, and the smooth stone floor that accompanies so much of the rest of the
+&+Lhall. To the east the western wing comes to an end as it connects to the
+&+Ljunction, while further west the hall opens up, and a few doors can be seen
+&+Lfrom here.
+~
+1000000 134254593 0 0
+D1
+   To the east is a junction in the Black Hall.
+~
+~
+0 0 138930
+D3
+   To te west the Western Wing continues.
+~
+~
+0 0 138934
+S
+#138932
+&+LThe Black Hall~
+&+L   This area seems slightly unused, with a bit of dust on the floor, only
+&+Loccasionally broken by footprints. The smell of death in this area is
+&+Lmixed with a bit of mold creating a totally nauseating atmosphere. The
+&+Lwalls and floor are still made of that immaculate black granite.
+~
+1000000 134254593 0 0
+D0
+   Ahead continues the Black Hall.
+~
+~
+0 0 138964
+D2
+   To the south the Black hall comes to a Junction.
+~
+~
+0 0 138930
+S
+#138933
+&+WThe East Wing~
+&+L   The eastern part of the Black Hall is starkly different from the rest. The
+&+Lsmell of death has strongly receded here and the smell of people and life is
+&+Lquite evident. This area seems to be the quarters for the students. From
+&+Ldown the hall echoes of laughter or some other indication of human activity
+&+Lare constantly heard. The walls and floors however are still reminders that
+&+Lthis place is one of darkness, with its stark blackness. To the north a small
+&+Lplaque is set against the wall.
+~
+1000000 134254593 0 0
+D1
+   To the east the Eastern Wing Contines.
+~
+~
+0 0 138943
+D3
+   To the west is the Junction in the Black Hall.
+~
+~
+0 0 138930
+E
+plaque wall~
+&N   This area is for the use of the students. The following rules are hereby
+enacted to help facilitate life among these premises. If anyone is caught
+breaking them they shall hereby be expelled.
+
+&N    1. There will be no fighting(this also includes having the dead
+&N         fight for you)
+
+&N    2. No betting on the fights of the undead.
+
+&N    3. Do not pick at the guards.
+
+&N    4. No fraternization with the dead.
+~
+S
+#138934
+&+WThe Western Wing~
+&+L   The western wing of the black hall continues all around here. To the east
+&+Land west the wing continues unabated, while north and south are two doors,
+&+Leach bearing some kind of writing. Both doors are made of a rather bland
+&+Lcolored wood, and look fairly old. The smell of decay has intensified here.
+~
+1000000 134254593 0 0
+D0
+   The door here has the words 'Lecture Area' written on it.
+~
+door wood~
+1 0 138939
+D1
+   To the east the Western WIng continues.
+~
+~
+0 0 138931
+D2
+   The door has the words 'Labratory' written out on it.
+~
+door wood wooden~
+1 0 138940
+D3
+   To the west the Western Wing continues.
+~
+~
+0 0 138935
+S
+#138935
+&+WThe Western Wing~
+&+L   The black wall of the hall continues east and west while north a door made
+&+Lof wood opens. All around the smell of rot lingers, putting a deathly pale over
+&+Lthe well made corridors and rooms. To the west a small skull has been inset
+&+Lon the wall, its eyes staring sightlessly at the door.
+~
+1000000 134254593 0 0
+D0
+   The door to the north here has the clearly marked words 'Library' burned
+into the wood.
+~
+door wood wooden~
+1 0 138942
+D1
+   To the east the Western Wing continues.
+~
+~
+0 0 138934
+D3
+   To the west the Western Wing comes to an end.
+~
+~
+0 0 138936
+S
+#138936
+&+WEnd of the Western Wing~
+&+L   The western wing comes to a end here, blunting against the stone wall to
+&+Lthe south. A small figure of a human skeleton is pinned to the western wall,
+&+Lwith all its bones named and numbered, and the name 'Jonathen' written above
+&+Lthe whole thing. To the north and south doors of wood block the entrance into
+&+Lthe adjacent areas.
+~
+1000000 134254593 0 0
+D0
+   The door to the north has the words 'Master's Office' burned into the
+wood.
+~
+door wood wooden~
+1 0 138937
+D1
+   To the east the Western Wing continues back toward the Junction.
+~
+~
+0 0 138935
+D2
+   It is just a wooden door with no lock.
+~
+door wood wooden~
+1 0 138938
+S
+#138937
+&+LZrack's &+WOffice~
+&N  This room looks more like an embodiment of the man then an actual office.
+On the walls are the heads of varius &+rbeasts&n he must have killed at one time
+or another, and a couple of &+Whumans&n. The room has a central desk with two
+chairs facing it and one behind, obviously Zrack's. A large carpet that must
+be worth thousands is in the middle of the room.
+&N   One thing that does catch your attention is the small &+rred&n &+mglobe &nof &+Benergy&n
+that is suspended right over the desk, its red light calling to you.
+~
+1000000 134254593 0 0
+D2
+   To the south is the door leading out to the Western Wing.
+~
+door woodin wood~
+1 0 138936
+E
+ball energy red globe~
+&+r   As you gaze into the ball images are thrown at your mind, imparting
+&+rinformation to you. Suddenly you realize this ball is a sort of book. It
+&+rcontains the work of Zrock on the anatomy of dragons, all their limbs, their
+&+rnames, sizes and how to properly put them back together again. Also a bit on
+&+rthe nature and ecology of dragons and also their innate magic. Any more then
+&+rthat your mind is unable to comprehend.
+&+r   Then the knowledge fades and instead you are flying, winging back over
+&+rthe mountains. Somehow you know that it is at least a thousand years ago, and
+&+rthat you are looking for a home.
+&+r   Time passes.
+&+r   After much searching you have found a home, although you had to drive out
+&+rthe pesky people who lived here first, but they tasted good, dwarves always
+&+rdo. Again a sense of time passing comes over you.
+&+r   Now you see dwarves coming into your cavern, many of them, led by one
+&+rof their kings. A huge battle is fought and you are killed, but you take
+&+rthe dwarves and their king with you bringing the mountain down on all of you...
+&+r   After your mind comes back to itself you are able to shake the globe out
+&+rand almost immediately notice a similar ball of energy on one of the shelves
+&+rin the corner. This one, however looks &+Lblack&N&+r.
+~
+E
+black~
+&+L   Looking over at the black ball images and concepts are thrown at you in
+&+Lrandom sequence as you try to come to grips with this odd communication device.
+&+L   You see a man, or a skeleton and know instantly that it is the one known
+&+Las Maltheas, once a great Anti-Paladin of one of the darkest powers of evil.
+&+L   The image is now one of creation, the skeleton rises from the earth, an
+&+Lunholy glow about its body as the bones literally leap to fire as the spirit
+&+Lof the ancient warrior is thrust back into its mortal shell.
+&+L   Then a robed figure that you know must be Zrack enters the scene. Summoning
+&+Lmighty spells he opens portals to outer planes. Bringing forth metals strange
+&+Land mighty from the rift to the plane of earth he then melts and reforges them
+&+Lwith his art. Finally he casts the molten metal into armor, a sword, and
+&+Lshield for the fallen angel of darkness. Finally with one great spell he
+&+Lbrings forth a circlet of pure gold and places it upon Maltheas's brow,
+&+Lbinding his will and soul forever.
+~
+S
+#138938
+The Dining Room~
+&N   This room is obviously the dining area, with a huge table and various
+plates lined up all along the tables. The smells from the room to the west
+serve to scare away the more putrid smells of decay here, creating actually
+a very nice scent. To the north the door leads out toward the main hall.
+~
+1000000 134254593 0 0
+D0
+   To the north the door leads back out to the Western Wing.
+~
+door wood woodin~
+1 0 138936
+D3
+   To the west is the Kitchen.
+~
+~
+0 0 138941
+S
+#138939
+&+WThe Forum~
+&+L   This area looks just like any other classroom. Their are six chairs and
+&+Ltables that are projected in a circle around a central speaking area. The
+&+Ltables and chairs are all made of fine mahogany wood, each with a small
+&+Lred velvet cushion for the students. The center of the room is slightly
+&+Lelevated while the rest of the room slopes down a bit. On the walls are
+&+Lvarious &+Wrules &+Land &+Wprinciples &+Lof necromancy.
+~
+1000000 134254593 0 0
+D2
+   To the south the door leads back out to the Western Wing.
+~
+door wood wooden~
+1 0 138934
+E
+rule rules principles wall walls~
+   The walls are covered with differant principles for general magic users,
+and necromancers specificly. Also are the requirements for graduation.
+  The one thing that does stick out is final rule that allows change between
+an apprentice, and a senior fellow.
+  'And you shall look into your soul, and with that knowledge and your
+    might in the art you shall bring forth an item of power that shall be
+    yours, and it shall be in power as is your soul.'
+~
+S
+#138940
+The &+LBlack&n &n&+rLaboratory~
+&+r   The first impression of the room is that of a mortuary. Their are five
+&+rlarge tables with different corpses in various stages of anatomical breakdown,
+&+rwhile on the walls there are racks and racks of body parts in jars and other
+&+rcontainers. On the left part of the room is a huge table with utensils that
+&+rlook more like torturers' tools then anything else. The room's black walls and
+&+rceiling cast a chilling view of the room, making the entire area reek of
+&+rdeath.
+~
+1000000 134516737 0 0
+D0
+   It leads back through the a door to the main hall.
+~
+door wood wooden~
+1 0 138934
+E
+racks rack~
+   The racks against the wall hold arms, legs, four heads, and many other
+things that the laymen has no idea of. There is even a bottle that says
+'ground teeth' on it. A truly gristly sight.
+~
+S
+#138941
+Kitchen~
+&N   This is a rather small kitchen in comparision to the dining area. With
+several large pots and pans, but only one oven. Also here are other objects
+such as a wash basin for clothes and food, and a small pallet for sleeping.
+~
+1000000 134254593 0 0
+D1
+   To te east is the Dining Room.
+~
+~
+0 0 138938
+S
+#138942
+The &+LBlack&n Library~
+&N   The library here is not huge, but it is easily big enough to take a
+novice a couple years to read through all the various books. On the left
+side of the room are various spellbooks of different sorts, on the north
+wall books and tomes dealing with anatomy and physiology. While one the
+western wall the books tend to deal with more esoteric subjects in magic
+generally.
+~
+1000000 134254593 0 0
+D2
+   To the south the door leads back out to the Western Wing.
+~
+wood wooden door~
+1 0 138935
+S
+#138943
+&+WThe Eastern Wing~
+&+L   Here actually begins the living quarters of all the students of the school.
+&+LTo the north a rather small wooden door with the words 'recruits' on it, while
+&+Lto the south there is another door that says 'apprentices' on it. This area
+&+Lis cast in the same powerful black granite that characterizes the entire
+&+Lschool. On ahead and all around the small voices of life can be heard.
+~
+1000000 134254593 0 0
+D0
+   To the north the door leads to the Recruits Quarters.
+~
+door wood woodin~
+1 0 138944
+D1
+   To the east the Eastern Wing continues.
+~
+~
+0 0 138946
+D2
+   To the south is the apprenice's quarters.
+~
+door wood woodin~
+1 0 138945
+D3
+   To the west the Eastern Wing continues back toward the Junction.
+~
+~
+0 0 138933
+S
+#138944
+The Recruit's Quarters~
+&N   This room is very bare, only about ten beds lined against the black walls
+of the area. The floors look very cold and the blankets a bit sparse.
+Apparently this is where the new members of the circle come right after they
+have expressed interest in the dark arts. Along the north wall is a small
+sign hanging above the meager fire place.
+~
+1000000 134254593 0 0
+D2
+   To the south is the eastern hall.
+~
+door wood woodin~
+1 0 138943
+E
+sign wall~
+&N    'Serve and be rewarded, disobey and die.'
+~
+S
+#138945
+The Apprentice's Quarters~
+&N   This room is for the more advanced students, who have mastered the basic
+arts of the reanimation of corpses. There are about fifteen beds here,
+definitely a majority of the students here. Each bed has a small table and
+a candle near it, along with whatever tome the student is currently studying.
+The room has a smell of life, not necessarily a pleasant odor, but one that
+is distinctly better then the smell of the dead.
+~
+1000000 134254593 0 0
+D0
+   To the north the door leads out to the Eastern Wing.
+~
+door wood woodin~
+1 0 138943
+S
+#138946
+&+WThe Eastern Wing~
+&+L   The eastern wing continues on here to both the east and the west. Its
+&+Ldark brooding halls create a pall over the carefree noises of the students
+&+Lthat live in the adjacent rooms. To the north the stout wooden door has the
+&+Lsimple words 'Seniors' marked on it while the door to the south says
+&+L'Journeymen'.
+~
+1000000 134254593 0 0
+D0
+   To the north is the door to the Senior's Quarters.
+~
+door woodin wood~
+1 0 138947
+D1
+   To the east the Eastern Wing continues
+~
+~
+0 0 138949
+D2
+   To the south is the door to the Journeymen's Quarters.
+~
+door wood woodin~
+1 0 138948
+D3
+   To the west the Eastern Wing continues.
+~
+~
+0 0 138943
+S
+#138947
+&+WThe Senior's Quarters~
+&+L   This room is basically like all the others, stark black granite walls, with
+&+La chilly atmosphere. However this room has been at least moderately redecorated
+&+Lby its occupants. There are five beds here, each with accompanying desk, chair
+&+Land differant knickknacks to remind the owner of something. To the south the
+&+Ldoor leads out toward the eastern wing.
+~
+1000000 134254593 0 0
+D2
+   The wood door to the south leads to the eastern wing.
+~
+door wood woodin~
+1 0 138946
+S
+#138948
+&+WThe Journeymen's Quarters~
+&+L   This room is relatively small compared to the other students' room. There
+&+Lare only three beds in here, and only one of those looks used. In the back
+&+Lof the room a large fire place is burning, throwing the chill off of the
+&+Lroom. Each bed has an accompanying desk chair, and in the middle of the room
+&+Lis a small couch and chair set, for added comfort.
+~
+1000000 134254593 0 0
+D0
+   To the north the door leads back to the Eastern Wing.
+~
+door wood woodin~
+1 0 138946
+S
+#138949
+&+WThe Eastern Wing~
+&+L   The dark hall continues here, making its way to the east and the west. To
+&+Lthe east the end of the hall can be seen up ahead. To the west the Eastern
+&+LWing continues back toward the main junction. To the north a small door is
+&+Levident, built into the wall. Above it is a small brass sign. To the south
+&+Lis another door, but this door has te words 'Women's Quarters' burned into
+&+Lit.
+~
+1000000 134254593 0 0
+D0
+   To the north is Marius's Office.
+~
+wood woodin door~
+1 0 138950
+D1
+   To the east the Eastern Wing comes to an end.
+~
+~
+0 0 138952
+D2
+   To the south is the Women's Quarters.
+~
+wood wooding door~
+1 0 138951
+D3
+   To the west the Eastern Wing continues.
+~
+~
+0 0 138946
+S
+#138950
+&+LMarius's Quarters~
+&N   This room is very well furnished. The most obvious thing in the room
+is the work desk situated in the middle of the room. On it is a cluster of
+books and an ink well and quill. A &+Lbook &nis open and looks like it has
+been written on recently. The floor is covered with a finely woven elven
+carpet on which two chairs carved to look like dragons sit. In the back
+of the room are a large &+mpicture&n, a &+Wplaque&n, and a framed &+Wlist&n. On the western
+wall is a small bookcase with an assortment of magical texts, while on the
+right is a long list of names. Finally in the back of the room is a small
+chest.
+~
+1000000 134254593 0 0
+D2
+   The door to the south leads out toward the Eastern Hall.
+~
+door woodin wood~
+1 0 138949
+E
+picture~
+&N   The painting before you has six people in it. Above the picture are the
+words, 'Senior Class'. Below it are Marius, surrounded by five other people,
+that must be the current seniors. The First is an older fellow, that looks
+about Marius's age. He seems rather small and frail and has the name Ezzra
+written underneath it. The next is a wiry fellow, that is actually very non-
+descript. His hair is brown, and unkempt, but his eye looks maniacal, almost
+crazy, but intelligent; his name is Janos. Next, on the other side of Marius,
+are a couple. A tall dark man, with black goatee and long black hair, holds
+in his arms a beautiful blonde women with dimples and an almost perfect
+hourglass figure. Something about her eyes is very disturbing. Their names
+are printed as a group, Faethor&Ali. The last fellow bears the humble name of
+Robert, his posture is one of confidence, as if he is standing against all
+the forces of the world, alone. He alone of them seems to have compassion in
+his sky blue eyes.
+~
+E
+plaque~
+&N   The plaque here is a graduation certificate, made out to Marius by the
+grand instructor Zrack. Further, he is ordered as a graduate to now pay
+for his services by staying on and doing the day to day instruction, as part
+of his payment for the instruction he has gained.
+~
+E
+list~
+&N   The List on the Wall seems to be things for Marius to remember:
+
+&N   1. Opinions are like assholes, everyone has one,
+&N      and everyone thinks everybody else's stinks.
+
+&N   2. Never let your ego get to close to your argument.
+
+&N   3. Never let them see you sweat.
+
+&N   4. The dead don't have feelings so don't worry about walking on them.
+
+&N   5. Might inevitably makes right,
+&N      because only the victor writes the histories
+~
+E
+book~
+&N   The book is open, and appears to be a journal of some kind. The page is
+open and looks freshly written in. The Excerpt is the following.
+
+&N   'Ahh Robert my friend. I warned you that your love of the woman in the
+&N  village would be for naught. My friend, I fear for you. I know not if you
+&N  escaped, but the fact that Larra is still in the village mourning for you
+&N  tells me that you most likely came to the same fate as anyone who attempts
+&N  to disobey Zrack. May your soul rest in a better place.
+
+&N                              Marius Quelines'
+~
+S
+#138951
+The Female Quarters~
+&N   These quarters are used by the female minority that lives at the school.
+There are about seven beds here, all have a basic desk and things like the
+apprentices except the one in the back. It as a bit larger then normal, and
+has a nice sized desk beside it, with the picture of a couple on it. The two
+people are quite attractive. The man is tall and strong, with what can only
+be discribed as a very sinister appearance. The woman is amazingly beautiful,
+with long blond hair, and an almost perfect hourglass figure, however her
+eyes seem to hold some kind of hidden secret.
+~
+1000000 134254593 0 0
+D0
+   To the north the door leads back toward the Eastern Wing.
+~
+door woodin wood~
+1 0 138949
+S
+#138952
+&+WEnd of the Eastern Wing~
+&+L   This room marks an end to the eastern wing. From here the only way back
+&+Lis west, to the junction. The back granite walls to the east are unyielding.
+&+LTo the north is just a small door, again wooden, with the words 'toilet'
+&+Lon it. To the south is another door, this one however is iron. It has a
+&+Lsmall sign over it that reads 'Study'.
+~
+1000000 134254593 0 0
+D0
+   To the north is the bathroom.
+~
+door wood woodin~
+1 0 138953
+D2
+   To the south is the door to the study.
+~
+door iron~
+1 0 138954
+D3
+~
+~
+0 0 138949
+S
+#138953
+&+gA Bathroom~
+  This room is really small, but suprisingly for its function is probably
+the nicest smelling place here. In the middle of the small room is one
+toilet, but there is no running water instead it looks like a whole has been
+bored right through the rock, down to the river below. To the left of the
+seat is a small religious book of some kind, it looks like some of the pages
+have ripped out.
+~
+1000000 134254593 0 0
+D2
+   To the south the door leads back out to the Eastern Wing.
+~
+door wood woodin~
+1 0 138952
+S
+#138954
+&+WThe Study~
+&N   This room is crowded with different tables, and looks like the main study
+area for the school. There are over ten different tables around, each with
+a miniature globe embedded in it for light. Besides that the room is totally
+barren.
+~
+1000000 134254593 0 0
+D0
+   The iron door to the north leads out to the Eastern Wing.
+~
+door iron~
+1 0 138952
+S
+#138955
+The Village of &+rFairlocke~
+&+L   The path here looks unused. The buildings look fallen in a bit and the
+&+Lgrowth of the vegetation is beginning to take its toll on the houses. The
+&+Lhouse to the north looks the least affected, but even it is now beginning to
+&+Lshow disrepair. The building to the south seems to have once been some kind
+&+Lof town store.
+~
+1000000 134250496 2 0
+D0
+   To the north is a small home that is beginning to go to disrepair.
+~
+door wood woodin~
+1 0 138958
+D1
+&+LTo the east is the road of &n&+rFairlock.
+~
+~
+0 0 138957
+D2
+To the south is a small old town store.
+~
+door wood~
+1 0 138956
+D3
+&+RTo the west is the road out of Fairlock.
+~
+~
+0 0 138923
+S
+#138956
+&+LO&nl&+Wd &n&+yGoods Store~
+&+y   This building seems to at one time to have supplied the area with its
+&+yneeded goods. Plow parts, hoes, and various other gardening tools can be seen
+&+yrusting all over the building. The roofs seems to have collapsed a while back,
+&+yand now rotting straw is scattered all over the building.
+~
+1000000 134250496 2 0
+D0
+~
+door wood~
+1 0 138955
+S
+#138957
+The Village of &+rFairlocke~
+&+L   The path of the road continues on here bending a bit to the south. All
+&+Laround the houses are in disrepair. No one is in the streets and it looks
+&+Llike all the people have just moved away from this beautiful and lovely
+&+Larea. Grass grows over the pavement and the beginning of trees can be seen
+&+Lpoking though the mortar.
+~
+1000000 134250496 2 0
+D2
+&+LTo the west is the road through &n&+rFairlock.
+~
+~
+0 0 138959
+D3
+   To the west the village of fairlocke continues.
+~
+~
+0 0 138955
+S
+#138958
+&+WLarra's House~
+&+y   This house looks like it has only recently been left to fall apart. Mold
+&+yhas taken root in the pots and pans, and a few insects can be seen moving
+&+yin the grain. The thatch on the room has just a few holes in it and the
+&+ybirds' nests look like they have just been started. To the north the sound of
+&+ya voice can be heard.
+~
+1000000 134250500 2 0
+D0
+~
+~
+0 0 138961
+D2
+~
+door wood woodin~
+1 0 138955
+S
+#138959
+The Village of &+rFairlocke~
+&+L   Here it looks even a bit worse, the houses falling in, as if they have been
+&+Lempty for years. However the house to the east looks fine, although it is
+&+Lboarded up. The lawn is taken care of and the small garden in the back looks
+&+Lwell maintained and taken care of.
+~
+1000000 134250496 2 0
+D0
+&+L   That way leads down the road of the village of Fairlocke.
+~
+~
+0 0 138957
+D1
+&+L   To the east is a small house in decent rapair.
+~
+~
+0 0 138960
+D2
+&+L   To the south is the path to the graveyard.
+~
+~
+0 0 138962
+S
+#138960
+&+YThe McLaruns Home~
+&N   The inside of this house looks like it has been set for war. All the
+windows are boarded up, making the area dark almost all of the time. However
+it does look taken care of, as if someone has lived here at one time. Actually
+the table still has what looks like a few recently used dishes on them.
+~
+1000000 134250496 2 0
+D3
+   To the west the door leads back to the village road.
+~
+~
+0 0 138959
+S
+#138961
+&+YAn Overgrown Garden~
+&N   Even though not actively taken care of, this garden is thriving, its many
+&+gfruits&n and &+Gvegetables&n alive with life and attempting to outdo each other
+in the amount of growth they can each put out. Many of them appear to have
+been eaten, with seeds scattered all over the place. The entire area is
+fenced in with a small &+Wwhite&n fence and there is a beautiful figure of a
+small &+Rcherub&n in the middle of the area that seems to be spreading out calmness.
+~
+1000000 142770304 2 0
+D2
+~
+~
+0 0 138958
+S
+#138962
+&+LA Faint Trail~
+&+L   This faint trail runs through an unused field to the south of the village.
+&+LTo the north the village proper is located while to the south it looks like
+&+Lthere is a small hill with a gate of some kind around it. The field all
+&+Laround looks healthy, but in parts it looks like there is nothing growing at
+&+Lall.
+~
+1000000 134250496 2 0
+D0
+&+LTo the north is the village of &n&+rFairlock.
+~
+~
+0 0 138959
+D2
+&+LTo the south is an old graveyard.
+~
+~
+0 0 138963
+S
+#138963
+The Graveyard of &+LFairlock~
+&+L   This area is a stark contrast to the beautiful land all around it. The
+&+Lvalley looks like it is perpetual summer, but here winter has come. The trees
+&+Lare leafless and look almost dead and grass has literally ceased to grow here.
+&+LThe strangest thing is that all but one of the graves are open, each has been
+&+Ldug up and looks to be empty.
+~
+1000000 134250496 2 0
+D0
+&+LTo the north is the path to &n&+rFairlocke.
+~
+~
+0 0 138962
+S
+#138964
+&+LThe Black Hall~
+&+L   The black granite of the hall continues on ahead here, coming to a stout
+&+Liron door with a &+WLARGE&+L sign covering its front. All around the smooth black
+&+Lrock looks slightly less held together, almost as if the hall was breaking
+&+Lapart on ahead. To the south the hall continues back toward the junction.
+~
+1000000 134254593 0 0
+D0
+   To the north is an iron door with a small sign on it.
+~
+door iron~
+1 0 138965
+D2
+   To the south the Black Hall continues.
+~
+~
+0 0 138932
+E
+sign large~
+&N   Unless told otherwise by me personally this area is off limits to all
+students. But if you choose to go ahead and chance my wrath, I will do
+nothing. But be warned. I have let Maltheas free down here to wander, if
+he finds anyone, he will kill them. You are warned.
+
+&N                          Master Zrack
+~
+S
+#138965
+End of the &+LBlack Hall~
+&+L   The black hall comes to an end here, its black granite walls continue back
+&+Ltoward the south and the rest of the school through the iron door. Down
+&+Lhowever looks like it has been dug out by unskilled hands. A bit of rubble is
+&+Lstrewn around the whole and an iron ladder provides support for those who
+&+Lwish to go down.
+~
+1000000 1216385025 0 0
+D2
+   To the south is the entrance to the Black Hall.
+~
+iron door~
+1 0 138964
+D5
+   Below descends an iron ladder.
+~
+~
+0 0 138966
+S
+#138966
+On the &+LIron&n&+w Ladder~
+&+L   The iron ladder here descends down and also continues up, the granite
+&+Lbecoming much less solid. It looks like this area is not one big rock but
+&+Lactually lots of small boulders. This whole area must have been a large
+&+Lcavern structure at one time. As you climb down a bit of rubble and dust
+&+Laccompany you.
+~
+1000000 1216385025 0 0
+D4
+   Above the iron ladder continues.
+~
+~
+0 0 138965
+D5
+   Below the iron ladder decends.
+~
+~
+0 0 138967
+S
+#138967
+On the &+LIron&n&+w Ladder~
+&+L   The iron ladder you are currently on still goes up into the darkness above
+&+Land below. To the north a hole about ten feet across has opened up and
+&+Llooks like recent work. Bits of loose dirt and dust still hang in the air
+&+Lall around and then descend into the sightless depths below. The air here
+&+Lis a bit musty but easily breathable.
+~
+1000000 1216385025 0 0
+D0
+   To the noth there seems to be an excavated area.
+~
+~
+0 0 138968
+D4
+   Above the iron ladder continues.
+~
+~
+0 0 138966
+D5
+   Below the iron ladder decends.
+~
+~
+0 0 138972
+S
+#138968
+&+WAn Excavated Area~
+&N   This entire area looks recently excavated and to the west new dust and
+rock looks like it has been worked on very recently. The rock here looks
+very loose, and you are glad that huge beams have been set up to hold up
+the granite above. To the east and north corridors open up but then drop
+off into darkness again.
+~
+1000000 1216385025 0 0
+D0
+   Its to dark to tell.
+~
+~
+0 0 138969
+D1
+  It's to dark to tell.
+~
+~
+0 0 138971
+D2
+   To the south is an iron ladder.
+~
+~
+0 0 138967
+D3
+   There seems to be some excavation going on eithe no or recently.
+~
+~
+0 0 138970
+S
+#138969
+&+WSolid Rock~
+&N   Here the rubble and loose rock ends. Ahead against the north wall the
+granite becomse all one piece and it appears the excavation work stopped here
+and decided to go another way. The beams here are quite safe and look like
+they are having no problem supporting the weight. All around are a few bits
+of bone and armor, but not enough to figure out what it was.
+~
+1000000 1216385025 0 0
+D2
+   To the south is the area of excavation.
+~
+~
+0 0 138968
+S
+#138970
+&+WRecently Excavated Area~
+&+L   This room is much like the last, with large areas that look to have been
+&+Ldug out of the mountain recently. All around the faint tinge of dust gathers
+&+Lin everyones nostrils. All around bits of bone are evident, mixed with the
+&+Loccasional metal parts that look like ancient weapons and armor of some kind.
+&+LThe beams above look only half finished, and this entire area looks rather
+&+Lunstable, like it might collapse at any time. To the east the excavated area
+&+Lopens up again into a cleaner, safer area.
+~
+1000000 1216385025 0 0
+D1
+   To the east is the safer area of excavation.
+~
+~
+0 0 138968
+S
+#138971
+&+WNewly Excavated Area~
+&N   This area also looks newly excavated, with rocks all over the place. To
+the west the way leads back to the safer area. All around the rubble looks
+very strong. Bits of metal and splintered bone are scattered all over the
+area.
+~
+1000000 1216385025 0 0
+D3
+   To the west is the main excvation area.
+~
+~
+0 0 138968
+D5
+   Below you find a small mithril door amongst the rubble.
+~
+runed rune door mithril~
+15 138944 138975
+E
+small door mithril~
+   The door looks very anchient, but has withstood the test of time. Its
+mithril inscription and door still there although now unable to be understood.
+On the right side of it is a small whole about one foot long and half a foot
+wide.
+~
+S
+#138972
+On the &+LIron&n&+w Ladder~
+&+L   The iron ladder continues up and down from here, continuing into the
+&+Ldark depths. The rocks here looks a bit unstable, with bits of rock and dirt
+&+Lfalling of the ledge here and disappearing below. The rock all around
+&+Lis still black but is beginning to look like it has a bit a basalt in it.
+~
+1000000 1216385025 0 0
+D2
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138986
+D4
+   Above the iron ladder continues.
+~
+~
+0 0 138967
+D5
+   Below the iron ladder decends.
+~
+~
+0 0 138973
+S
+#138973
+End of the &+LIron&n&+w Ladder~
+&+L   The iron ladder comes to an end here, landing on a rough bit of ground
+&+Lthat looks like it was once the bottom of a true floor. Its evenly cut
+&+Lrocks have been put together with expert care, much like the ones above
+&+Lin the black hall. The the south a dug out cavern opens up, while above the
+&+Liron ladder continues upward into darkness. To the west is another passageway
+&+Lthat branches out into the darkness.
+~
+1000000 1216385025 0 0
+D1
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138995
+D2
+   To the south this small cavern looks to open up.
+~
+~
+0 0 138974
+D3
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138982
+D4
+   Above the iron ladder continues.
+~
+~
+0 0 138972
+S
+#138974
+Carved out &+LCavern~
+&+L   This small cavern looks like it has been dug out for a while, the beams
+&+Lsupporting the ceiling having bent in a bit, to conform to the wall. The
+&+Lfloor however looks like it has been carefully constructed, its interlocking
+&+Lstones put together with meticulous care. To the south the cavern continues,
+&+Lwhile to the north it ends and a there seems to be a ladder.
+~
+1000000 1216385025 0 0
+D0
+~
+~
+0 0 138973
+D2
+~
+~
+0 0 138976
+S
+#138975
+A &+LDwarven &n&+wResting Place~
+&N   This room is very small, only big enough for a couple of people. Somehow
+when this mountain collapsed this area was saved and survived the destruction.
+All over the &+Wwalls&n are dwarven &+rrunes&n inscribing a tale of some kind. In the
+middle of the room is the figure of a lone skeleton lying aginst the back
+wall.
+~
+1000000 134254721 0 0
+D4
+   Above is a mirthril door that leads to the area of excavation.
+~
+door mithril~
+3 138944 138971
+E
+wall dwarven inscription walls rune runes~
+&N   Looking over the inscriptions on the wall you are able to piece together
+what it says:
+&N   'Ye that read this, know that I am King Haldron Ironforger of the Ironstar
+dwarven clan, and last of the Kings of Hidden Fortress.
+&N   It seems fitting that I am to be the last king to die in this fortress of
+his forefathers, although most likely I will be the last dwarf ever to see
+these halls again.
+&N   Ye that read this, know that I put you under a baleful duty. Take my crown
+back to my clan, they shall know what to do with it. This I would have of you
+if you are honorable souls.
+&N   May Your Axes be Sharp & Your Anvil Never Break!
+&N   HAIL!
+
+&N                               Haldron Ironforger,
+&N                               Last King of the Zaldron, The Hidden Fortress
+~
+S
+#138976
+Turn of the &+LCavern~
+&+L   This area looks like the excavation has been complete, and a large cavern
+&+Lbegins to open up here that continues to the west. The area looks to have
+&+Lonce been some kind of massive open air area, but now only a bit of it is
+&+Lopen to sight, most of it still hidden under the rubble of the fallen
+&+Lcavern. To the north the cavern continues while to the west the open air
+&+Larea opens up into its full glory.
+~
+1000000 1216385029 0 0
+D0
+   To the north the cavern closes in on itself a bit.
+~
+~
+0 0 138974
+D3
+   To the west the large open ir cavern looks to come to an end.
+~
+~
+0 0 138977
+S
+#138977
+The &+rDragon's&n&+w Rest~
+&+L   Here the cavern ends, its massive walls fully excavated and a huge room
+&+Lrevealed. The walls are full of written runes and symbols that look quite
+&+Lclearly dwarven in origin. The floor here is still made of the interconnecting
+&+Lstones, but they all look like they have massive gouges in them. Bones of many
+&+Lcreatures are strewn throughout the room, some humanoid, most totally
+&+Lindistiguishable.
+~
+1000000 1216385029 0 0
+D1
+   The large open cavern continues to the east.
+~
+~
+0 0 138976
+S
+#138978
+&+gThe Wherston Road~
+&+y   The Wherston road continues into the hills here, rolling between the
+&+yvalleys, making the easiest route. The growth here is almost negligible
+&+ybecause of the clay. To the east the road continues into the rather desolate
+&+yhills. To the west a small building can be seen from here on a distant hill.
+~
+1000000 134250496 4 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 1893
+D1
+&+y   To the east the Wherston Road continues.
+~
+~
+0 0 138900
+D3
+&+y   To the west is the Wherston Road.
+~
+~
+0 0 138979
+S
+#138979
+&+gThe Wherston Road~
+&+y   This desolate road is really not the place most travelers want to see. The
+&+yview is awful, barely a tree in sight; those that are in sight are off to the
+&+ywest, somewhere. To the east the road continues among the clay hills, makings
+&+yits journey to what looks to be some mountains far in the distance. To the
+&+ywest a small building can been seen on a hill not to far away.
+~
+1000000 134250496 2 0
+D1
+&+y   To the east is the Wherston Road.
+~
+~
+0 0 138978
+D3
+&+y   To the west is the Wherston Road.
+~
+~
+0 0 138980
+S
+#138980
+Beginning of the &+gWherston Road~
+&+y   Here begins what must be a trade road of some kind. To the east the road
+&+yseems to head into some hills that really don't look all that becoming,
+&+ywith the sparse lack of plants and all. To the south is a small building that
+&+yhas a large &+Wsign &n&+yout front. Even from here it is obvious that it is a
+&+ytrading station of some kind.
+~
+1000000 4 4 0
+D1
+&+y   To the east the Wherston road continues.
+~
+~
+0 0 138979
+D2
+&+Y   To the south is a small trading station.
+~
+door wood~
+5 0 138981
+E
+sign building~
+&N   The sign, which is quite readable even at this distance, reads 'Dralor's
+Dwarven Trading Co.'. The building does not look large but definitely suits
+its job as a trading post.
+~
+S
+#138981
+Dralor's Trading Co.~
+&N   Upon walking into the place you realize what a good idea it was. The entire
+place smells of sweet spices and is a pleasant reprieve from nature outside.
+All around are various tools from weapons, to hoes, spices and dresses. There
+is even a collection of gems and such in a case in the back. On the south wall
+is a large picture of a dwarf decked out for war, with a huge crown on his
+head; under it it says '&+LHaldron, Last King of Zaldran&n'. All this lies
+under the eye of the only individual in the room, who must be Dralor, the
+trader.
+~
+1000000 134254600 0 0
+D0
+&+y   To the north is the Wherston road.
+~
+door wood~
+5 0 138980
+S
+#138982
+&+LAn &+WAn&+Cci&nen&+Lt &+YDwarven &+LHallway~
+&+L   This area seems to have been finished excavated a while back. The undead
+&+Lservants of Zrack must have cleaned out the rubble. The walls here are clean
+&+Land the &ngranite &+Lrock and &+Wm&na&+Wrb&nl&+We &+Lflagstones make the entire area look rich.
+&+LA few runes and markings line the wall here. Appearantly whatver happened
+&+Lto make this place collapse into itself must have barely affected this area.
+~
+1000000 1216385025 0 0
+D1
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138973
+D3
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138983
+E
+runes written~
+&+r   The dwarven runes say, 'Bless this, the house of the Ironstar clan. And
+&+rmay ye dwarves be blessed that venture down these dark tunnels.'
+~
+S
+#138983
+&+LAn &+WAn&+Cci&nen&+Lt &+YDwarven &+LHallway~
+&+L   The dwarven hallway bends here and heads to the north just a bit here.
+&+LAn old &+Wmithril &+Ldoor is here to the south that seems to have been unaffected
+&+Lby the debris and the years. The door seems to have dwarven written all along
+&+Lits surface. To the north the hallway extends just a bit, and from here it
+&+Lseems that it opens up.
+~
+1000000 1216385025 0 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138984
+D1
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138982
+D2
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+door mithril~
+3 138949 138985
+S
+#138984
+&+LAn O&nl&+Wd &+YDwarven &n&+rBattle &+LChamber~
+&+L   This old chamber must have been where many &+Ydwarves &+Lmet their final days.
+&+LThe floor is covered with &+Wbones &+Land the &n&+ydust &+Lof &+Wsk&nu&+Llls &+Lof the &+Ydwarves&+L. Also
+&+Lit looks like other creatures must have died here, many &+Wskeletons &+Lcover the
+&+Larea, some &+Chuman&+L, some animal. It seems like this ancient room was a feeding
+&+Lroom for a pack of huge &n&+rcarnivores&+L, but what could have eaten so much to
+&+Lcreate all these &+Wbones&+L?
+~
+1000000 1216385025 0 0
+D2
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138983
+S
+#138985
+&+LThe First Doorway~
+&+W   This room is very small. It serves only as a way to get to the door to the
+&+Wsouth. The door there is also made of mithril, much like the door to the
+&+Wnorth. Apperantly this is halfway toward the ancient dwarven treasure vault.
+&+WIt seems like no one has been here in ages, the dust is thick on the floor.
+~
+1000000 1216385025 1 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+door mithril~
+3 0 138983
+D2
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+door mithril~
+3 138955 138993
+S
+#138986
+&+WA Long Thin Tunnel~
+&+L   This tunnel that extends to the south and then the southeast is very small,
+&+Lonly about one person at a time could fit in here. It seems that this tunnel
+&+Lis newly dug, a few stones here and there seem to have been part of a larger
+&+Lconstruction, but most of this tunnel is held up by thick supports made of
+&+Loak. There are marks on the ground of wheelbarrow tracks of some sort.
+~
+1000000 1216385025 0 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138972
+D2
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138987
+S
+#138987
+&+LBefore an Underground &+BRiver~
+&+L   To the south here is an underground river that comes in from the east and
+&+Lflows to the south. To the south the river goes directly underneath the rock,
+&+Land anything that went that way would be unable to breath. To the east the
+&+Lcurrent seems to be moving extremely quickly. It seems that dirt and rock
+&+Lhave been dumped into the river here, there are small buildups all along
+&+Lthe area. Clumps of &nstones &+Land &ngravel &+Llie here at the bank.
+~
+1000000 1216385029 0 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138986
+D2
+&+BIn that direction is more the underground river.
+~
+~
+0 0 138988
+S
+#138988
+&+LBeneath an Underground &+BRiver~
+&+B   There is water all about, and it seems to be moving quite quickly southward.
+&+BTo the north there seems to be an opening in the river, while here there is
+&+Bno air, and no place to catch anything, the current is to strong. To the south
+&+Bthere is a large adamantium grate that has been positioned over the opening
+&+Bof the river, stopping anyone from going in, or out.
+~
+1000000 1216385061 9 0
+D0
+&+L   In that direction is more of the underground river.
+~
+~
+0 0 138987
+D2
+&+L   In that direction is a large admantium grate.
+~
+grate adamant datherlion~
+3 -2 138989
+C
+60 2
+S
+#138989
+&+LBefore an Adamantium Grate~
+&+B   This area of the underground river seems to be heading swiftly southward.
+&+BTo the north is a large adamantium grate with a powerful lock on it, that seems
+&+Blarge enough not to stop the fish and debris, but easily large enough to stop
+&+Banything more then a foot long. The walls of this large tunnel is filled with
+&+Bwater, and the water seems to be moving quickly south.
+~
+1000000 1216385057 9 0
+D0
+&+L   In that direction is a large admantium grate.
+~
+grate adamant datherlion~
+3 -2 138988
+D2
+&+BIn that direction is more of the underground river.
+~
+~
+0 0 138990
+C
+70 2
+S
+#138990
+&+BComing to the &+LSurface~
+&+B   To the south the water seems to spurt out into some sort of lake. The
+&+Bcurrent to the north seems to force it out into the churning mass to the
+&+Bnorth. The water here is cold, and dirt seems to be mixed up in it. To the
+&+Bnorth the fast current moves the water south very quickly.
+~
+1000000 1216385057 9 0
+D0
+&+B   In that direction is more of the ruins of the underground river.
+~
+~
+0 0 138989
+D2
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138918
+C
+70 2
+S
+#138991
+The Random Load Room~
+&N   This is where the mobs start out at, that are random load.
+~
+1000000 1216385025 0 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138992
+D1
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138992
+D2
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138992
+D3
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138992
+D4
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138992
+D5
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138900
+S
+#138992
+Random Mob Holding Room~
+&N   This is the room that holds the random load mobs if they do not load.
+~
+1000000 1216385025 0 0
+S
+#138993
+&+LThe Second Doorway~
+&+W   This room is very small. It serves only as a way to get to the door to the
+&+Wsouth. The door there is also made of mithril, much like the door to the
+&+Wnorth. Apperantly this is halfway toward the ancient dwarven treasure vault.
+&+WIt seems like no one has been here in ages, the dust is thick on the floor.
+~
+1000000 1216385025 1 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+door mithril~
+3 0 138985
+D2
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+door mithril~
+3 138958 138994
+S
+#138994
+&+WThe &+YTreasure &+WChamber of the &+LIronstar &+YDwarves~
+&+W   This entire chamber is carved out of pure marble. The marble has been runed
+&+Wby the greatest of dwarven smiths to create this small blessed chamber. The
+&+Wfloor is covered with runes as well. The room has almost nothing in it. A
+&+Wpale radiance seems to flow and make the walls radiate a nice warm light.
+~
+1000000 1220710528 1 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+door mithril~
+1 0 138993
+S
+#138995
+&+LAn &+WAn&+Cci&nen&+Lt &+YDwarven &+LHallway~
+&+L   This area seems to have been finished excavated a while back. The undead
+&+Lservants of Zrack must have cleaned out the rubble. The walls here are clean
+&+Land the &ngranite &+Lrock and &+Wm&na&+Wrb&nl&+We &+Lflagstones make the entire area look rich.
+&+LA few runes and markings line the wall here. Appearantly whatever happened
+&+Lto make this place collapse into itself must have barely affected this area.
+~
+1000000 1216385025 0 0
+D1
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138996
+D3
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138973
+S
+#138996
+&+LAn &+WIntersection &+Lin an &+WAn&+Cci&nen&+Lt &+YDwarven &+LHold~
+&+L   This area seems to have been completely excavated a while back. The undead
+&+Lservants of Zrack must have cleaned out the rubble. The walls here are clean
+&+Land the &ngranite &+Lrock and &+Wm&na&+Wrb&nl&+We &+Lflagstones make the entire area look rich.
+&+LA few runes and markings line the wall here. Apparently whatever happened
+&+Lto make this place collapse into itself must have barely affected this area.
+~
+1000000 1216385025 0 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138997
+D2
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138998
+D3
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138995
+S
+#138997
+&+LThe End of a &+WAn&+Cci&nen&+Lt &+YDwarven &+LHallway~
+&+L   This area seems to have been completely excavated a while back. The undead
+&+Lservants of Zrack must have cleaned out the rubble. The walls here are clean
+&+Land the &ngranite &+Lrock and &+Wm&na&+Wrb&nl&+We &+Lflagstones make the entire area look rich.
+&+LA few runes and markings line the wall here. Apparently whatever happened
+&+Lto make this place collapse into itself must have barely affected this area.
+&+LTo the north the hallway would extend but it seems like Zrack has yet to
+&+Lclear that area out.
+~
+1000000 1216385025 0 0
+D2
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138996
+S
+#138998
+&+LAn &+WAn&+Cci&nen&+Lt &+YDwarven &+LHallway~
+&+L   This area seems to have been completely excavated a while back. The undead
+&+Lservants of Zrack must have cleaned out the rubble. The walls here are clean
+&+Land the &ngranite &+Lrock and &+Wm&na&+Wrb&nl&+We &+Lflagstones make the entire area look rich.
+&+LA few runes and markings line the wall here. Apparently whatever happened
+&+Lto make this place collapse into itself must have barely affected this area.
+&+LTo the east is a large stone door.
+~
+1000000 1216385025 0 0
+D0
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+~
+0 0 138996
+D1
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+door stone~
+1 0 138999
+S
+#138999
+&+LThe &+WAudience &+LChamber of the Iron&+Wstar &+LClan~
+&+L   This room must have once been the King of the Ironstar Dwarves' audience
+&+Lchamber. The room extends about a hundred and fifty feet to the east. Four
+&+Lhuge columns hold up the ceiling. To the far east is a massive dais with
+&+La large throne upon it. The entire area is covered with dust and small
+&+Lbits of rack. Bones of long dead dwarves litter the area. To the west is
+&+La large stone door that leads out of the room.
+~
+1000000 1216385025 0 0
+D3
+&+L   In that direction is more of the ruins of the ancient dwarven hold.
+~
+door stone~
+1 0 138998
+S

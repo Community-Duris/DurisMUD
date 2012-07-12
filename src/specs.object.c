@@ -2447,7 +2447,11 @@ void event_revenant_crown(P_char ch, P_char victim, P_obj obj, void *data)
     {
       temp_obj = ch->equipment[k];
       if(temp_obj)
+      {
+        if (obj_index[temp_obj->R_num].func.obj != NULL)
+          (*obj_index[temp_obj->R_num].func.obj) (temp_obj, ch, CMD_REMOVE, (char *) "all");
         obj_to_char(unequip_char(ch, k), ch);
+      }
     }
     send_to_char
       ("Brr, you suddenly feel very naked.\r\n",
@@ -2490,7 +2494,11 @@ int revenant_helm(P_obj obj, P_char ch, int cmd, char *arg)
       {
         temp_obj = temp_ch->equipment[k];
         if(temp_obj && (obj != temp_obj))
+	{
+        if (obj_index[temp_obj->R_num].func.obj != NULL)
+          (*obj_index[temp_obj->R_num].func.obj) (temp_obj, temp_ch, CMD_REMOVE, (char *) "all");
           obj_to_char(unequip_char(temp_ch, k), temp_ch);
+	}
       }
 
       CharWait(temp_ch, 5 * WAIT_SEC);
@@ -2588,7 +2596,11 @@ void event_dragonlord_check(P_char ch, P_char victim, P_obj obj, void *data)
     {
       temp_obj = ch->equipment[k];
       if(temp_obj)
+      {
+        if (obj_index[temp_obj->R_num].func.obj != NULL)
+          (*obj_index[temp_obj->R_num].func.obj) (temp_obj, ch, CMD_REMOVE, (char *) "all");
         obj_to_char(unequip_char(ch, k), ch);
+      }
     }
     send_to_char
       ("Brr, you suddenly feel very naked.\r\n",
@@ -2643,6 +2655,8 @@ int dragonlord_plate(P_obj obj, P_char ch, int cmd, char *arg)
         if(temp_obj &&
           (obj != temp_obj))
         {
+          if (obj_index[temp_obj->R_num].func.obj != NULL)
+            (*obj_index[temp_obj->R_num].func.obj) (temp_obj, temp_ch, CMD_REMOVE, (char *) "all");
           obj_to_char(unequip_char(temp_ch, k), temp_ch);
         }
       }

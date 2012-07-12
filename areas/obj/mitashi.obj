@@ -1097,7 +1097,7 @@ katana sword shadows breath~
 ~
 5 16 3 0 15 0 81984 24577 0 32774 0
 5 3 4 3 0 0 0 0
-8 99880 100 32800 0 0 0
+8 99880 100 32 0 0 0
 E
 katana sword shadows breath~
 This magical sword is called 'Shadows Breath', and it is one of the seven
@@ -1169,7 +1169,7 @@ katana sword lotus blossom~
 ~
 5 16 3 0 15 0 81984 24577 0 32774 0
 5 3 4 3 0 0 0 0
-8 98888 100 524288 0 0 0
+8 98888 100
 E
 katana sword lotus blossom~
 This magical sword is called 'The Lotus Blossom', and it is one of the seven
@@ -1217,7 +1217,7 @@ katana sword torrential rain~
 ~
 5 16 3 0 15 0 81984 24577 0 32774 0
 5 3 4 3 0 0 0 0
-8 90000 100 268435456 0 0 0
+8 90000 100
 E
 katana sword torrential rain~
 This magical sword is called 'Torrential Rain', and it is one of the seven
@@ -1335,12 +1335,12 @@ A
 18 2
 #138279
 katana sword retribution~
-&+La &+Wk&+Latana &+Wc&+Lalled '&n&+LRet&n&+rribut&n&+Lion&n&+c'&n~
+&+La &+Wk&+Latana &+Wc&+Lalled &+C'&n&+LRet&n&+rribut&n&+Lion&n&+C'&n~
 &+cThe magical katana '&n&+LRet&n&+rribut&n&+Lion&n&+c' has been mistakenly dropped.&n~
 ~
-5 16 3 0 15 0 16448 24577 0 32774 0
-5 3 4 3 115057 45 30 0
-8 100000 100 269484032 0 0 0
+5 16 3 0 15 0 16384 24577 1 32774 0
+5 4 5 3 0 115015015 30 25
+8 100000 100 268435456 0 0 0
 E
 katana sword retribution~
 This magical sword is called 'Retribution', and it is one of the seven
@@ -1353,7 +1353,19 @@ Since that time, the seven swords have been given out to the six leaders
 of the most powerful clans, while the seventh and most powerful sword
 had been hidden away.  'Retribution' is that seventh weapon.
 ~
+E
+_room_msg~
+&+LThe power of the &+gJ&+Gad&+ge &+LEm&+wpi&+Wre &+Yinfuses &+La &+Wk&+Latana &+Wc&+Lalled &+C'&+LRet&+rribut&+Lion&+C' &+Lwith an enveloping &+gg&+Gree&+gn &+Wlight&+L.&n
+~
+E
+_victim_msg~
+&+LAs a &+Wk&+Latana &+Wc&+Lalled &+C'&+LRet&+rribut&+Lion&+C' &+Lslices through the &+Cair &+Ltowards you, a &+Gg&+gr&+Ge&+ge&+Gn &+Yg&+ylo&+Yw &+Linfuses the blade!&n
+~
+E
+_char_msg~
+&+LYour &+Wk&+Latana &+Wc&+Lalled &+C'&+LRet&+rribut&+Lion&+C' &+Yshimmers &+Lwith a &+Whealing &+Ggreen &+Ylight &+Las a &+rwarm &+Lsensation fills your body.&n
+~
 A
-18 3
+18 4
 A
-19 3
+19 4

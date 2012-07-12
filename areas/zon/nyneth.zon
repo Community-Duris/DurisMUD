@@ -114,7 +114,7 @@ M 0 22901 3 22902 100 0 0 0        * an earth pixie
 M 0 22901 3 22903 100 0 0 0        * an earth pixie
 M 0 22901 3 22903 100 0 0 0        * an earth pixie
 M 0 22902 1 22905 100 0 0 0        * a chained wyrm
-G 1 22901 9999 0 100 0 0 0         *    a black key shaped like a green wyrm.
+G 1 22901 9999 0 100 0 0 0         *    a black key shaped like a green wyrm
 M 0 22903 6 22906 100 0 0 0        * a dungeon trapper
 M 0 22903 6 22906 100 0 0 0        * a dungeon trapper
 M 0 22903 6 22906 100 0 0 0        * a dungeon trapper
@@ -144,7 +144,7 @@ G 1 22936 8 0 100 0 0 0            *    a dusty potion
 M 0 22931 1 22936 100 0 0 0        * a scarecrow
 E 1 22932 12 16 100 0 0 0          *   a shard of volcanic stone
 E 1 22932 12 17 100 0 0 0          *   a shard of volcanic stone
-G 1 22937 1 0 100 0 0 0            *    elixer of hunting
+G 1 22937 1 0 100 0 0 0            *    elixir of hunting
 G 1 22930 1 0 100 0 0 0            *    a straw key
 G 1 22946 1 0 100 0 0 0            *    a thin piece of straw
 M 0 22932 5 22938 100 0 0 0        * a Titan warlord
@@ -216,7 +216,7 @@ M 0 22939 5 22949 100 0 0 0        * a lifedrinker
 M 0 22937 5 22950 100 0 0 0        * a horror
 M 0 22938 3 22950 100 0 0 0        * a banshee
 G 1 22949 2 0 100 0 0 0            *    a staff of dark alliance
-G 1 22941 3 0 100 0 0 0            *    a translucent elixer
+G 1 22941 3 0 100 0 0 0            *    a translucent elixir
 M 0 22939 5 22951 100 0 0 0        * a lifedrinker
 G 1 22939 3 0 100 0 0 0            *    a vial of vampiric rage
 M 0 22937 5 22952 100 0 0 0        * a horror
@@ -226,13 +226,13 @@ G 1 22940 3 0 100 0 0 0            *    a jar of rotting flesh
 M 0 22939 5 22954 100 0 0 0        * a lifedrinker
 G 1 22939 3 0 100 0 0 0            *    a vial of vampiric rage
 M 0 22938 3 22955 100 0 0 0        * a banshee
-G 1 22941 3 0 100 0 0 0            *    a translucent elixer
+G 1 22941 3 0 100 0 0 0            *    a translucent elixir
 M 0 22939 5 22956 100 0 0 0        * a lifedrinker
 G 1 22939 3 0 100 0 0 0            *    a vial of vampiric rage
 M 0 22937 5 22957 100 0 0 0        * a horror
 M 0 22938 3 22957 100 0 0 0        * a banshee
 G 1 22949 2 0 100 0 0 0            *    a staff of dark alliance
-G 1 22941 3 0 100 0 0 0            *    a translucent elixer
+G 1 22941 3 0 100 0 0 0            *    a translucent elixir
 M 0 22940 27 22959 100 0 0 0       * a swarmfish
 F 1 22940 27 22959 100 0 0 0       * a swarmfish (following)
 F 1 22940 27 22959 100 0 0 0       * a swarmfish (following)
@@ -246,7 +246,7 @@ M 0 22941 3 22960 100 0 0 0        * a sahaugin huntress
 E 1 22934 6 16 100 0 0 0           *   a reed spear
 E 1 22934 6 17 100 0 0 0           *   a reed spear
 M 0 22942 3 22961 100 0 0 0        * a sahaugin enchantress
-G 1 22942 3 0 100 0 0 0            *    an elixer of arcane resistance
+G 1 22942 3 0 100 0 0 0            *    an elixir of arcane resistance
 M 0 22940 27 22962 100 0 0 0       * a swarmfish
 F 1 22940 27 22962 100 0 0 0       * a swarmfish (following)
 F 1 22940 27 22962 100 0 0 0       * a swarmfish (following)
@@ -260,7 +260,7 @@ M 0 22941 3 22963 100 0 0 0        * a sahaugin huntress
 E 1 22934 6 16 100 0 0 0           *   a reed spear
 E 1 22934 6 17 100 0 0 0           *   a reed spear
 M 0 22942 3 22964 100 0 0 0        * a sahaugin enchantress
-G 1 22942 3 0 100 0 0 0            *    an elixer of arcane resistance
+G 1 22942 3 0 100 0 0 0            *    an elixir of arcane resistance
 M 0 22940 27 22965 100 0 0 0       * a swarmfish
 F 1 22940 27 22965 100 0 0 0       * a swarmfish (following)
 F 1 22940 27 22965 100 0 0 0       * a swarmfish (following)
@@ -361,7 +361,7 @@ E 1 22935 32 16 100 0 0 0          *   a smooth boulder of lava rock
 E 1 22935 32 17 100 0 0 0          *   a smooth boulder of lava rock
 M 0 22952 4 22990 100 0 0 0        * a sahaugin emissary
 G 1 22952 3 0 100 0 0 0            *    a figurine of elemental command
-G 1 22942 3 0 100 0 0 0            *    an elixer of arcane resistance
+G 1 22942 3 0 100 0 0 0            *    an elixir of arcane resistance
 M 0 22953 4 22991 100 0 0 0        * a magma golem
 E 1 22935 32 16 100 0 0 0          *   a smooth boulder of lava rock
 E 1 22935 32 17 100 0 0 0          *   a smooth boulder of lava rock
@@ -372,11 +372,11 @@ F 1 22954 1 22993 100 0 0 0        * Azuzaal the executioner (following)
 G 1 22954 1 0 100 0 0 0            *    a wand of demonic hatred
 F 1 22955 1 22993 100 0 0 0        * Ravelloth (following)
 G 1 22955 1 0 100 0 0 0            *    the claw of Ravelloth
-M 0 22904 1 22994 100 0 0 0        * a Ny'Neth vault gaurdian
+M 0 22904 1 22994 100 0 0 0        * a Ny'Neth vault guardian
 M 0 22943 1 22995 100 0 0 0        * Vlessus
 G 1 22967 1 0 100 0 0 0            *    the horn of the harbringer of destruction
 M 0 22944 1 22995 100 0 0 0        * Tssiss
-G 1 22971 1 0 100 0 0 0            *    the elixer from the beyond
+G 1 22971 1 0 100 0 0 0            *    the elixir from the beyond
 M 0 22945 1 22995 100 0 0 0        * Drkehn
 E 1 22970 1 5 100 0 0 0            *   the ringmail of enhanced lifeforce
 M 0 22946 1 22995 100 0 0 0        * Nian

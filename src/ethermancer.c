@@ -485,6 +485,12 @@ void spell_windwalk(int level, P_char ch, char *arg, int type, P_char victim,
     send_to_char("&+yYou failed.\r\n", ch);
     return;
   }
+  P_char rider = get_linking_char(victim, LNK_RIDING);
+  if(IS_NPC(victim) && rider)
+  {
+    send_to_char("&+CYou failed.\n", ch);
+    return;
+  }
 
   location = victim->in_room;
 

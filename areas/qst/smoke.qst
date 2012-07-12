@@ -1,0 +1,146 @@
+#139811
+MA
+ehkahk prince~
+&+LRijak pauses for a moment.
+
+&+L'&+WWhat of him? Is that wretched excuse of a prince &+wdead&+L, or have you just come here to waste my time?&+W'
+~
+MA
+dead~
+&+LRijak's attention suddenly sharpens.  His eyes sparkle with &+rf&+Rer&+roci&+Rty&+L.
+
+&+W'&+LHe's.... Dead?&+W'
+
+&+W'&+LI don't believe it... You must bring me &+wproof&+L!&+W'
+~
+MA
+proof~
+&+LRijak chuckles.
+
+&+W'&+LBring me his &+rheart&+L, you FOOL!&+W'
+~
+M
+hi~
+&+LThe &+Msorcerer&+L glares at you and says,
+
+&+W'&+LWhat news do you have of the great fool, &+REhkahk&+L?&+W'
+~
+QA
+&+LRijak's eyes glow bright with &+rfire&+L as he grasps the heart.
+
+&+LThe heart crumbles into ash in his hands.
+
+&+LRijak cackles demonically as he absorbs the remaining lifeforce &+Lof Ehkahk. His body seems to swell with power.
+
+&+RRijak&+w, &+Lthe exiled &+MSorcerer&+L of Smoke grins, and produces &+La veil of &+Ws&+wm&+Lo&+wk&+We&+L and a tiny key.
+
+&+RRijak&+w crumbles into dust and melds in with the surrounding &+Lsmoke&+w.
+~
+R I 139809
+R I 139818
+G I 139808
+D
+&+W'&+LThat wretch is finally gone.  Good Riddance.  Now I can rest in peace.&+W'
+
+&+RRijak&+w, &+Lthe exiled &+MSorcerer&+L of Smoke&+w crumbles into dust and blows away.
+~
+S
+#139813
+M
+default hi hello korli halfling~
+Korli breathes a sigh of relief.
+
+'&+WI thought you might have been another one of those horrible mephits&+w'
+
+'&+WI don't think I could handle anymore of them...&+w'
+
+'&+WIt wouldn't be so bad, if I could actually see anything!&+w'
+~
+M
+see~
+'&+WOh, yes... It's been horrible... I came here looking to examine the new
+&+Wrifts that opened up between the planes.  Unfortunately, I bumped into
+&+Wone of those horrid mephit patrols.  I killed a few of them but had to
+&+Wrun and hide.  In my haste, I managed to drop my spectacles.  Luckily,
+&+WI found this pocket of fresh air.  I've been hiding here ever since.&+w'
+~
+M
+spectacles~
+'&+WYes, I'm blind without them... Have you found them?&+w'
+~
+QA
+'&+WYOU FOUND THEM!  Oh, thank you so much!  I don't know how to repay you!&+w'
+
+Korli pauses briefly, and then suddenly appears joyful.
+
+'&+WHere! I had almost forgotten, I found this key on one of those mephits,
+&+WI lost my spectacles before I could figure out what it went to, but perhaps
+&+Wit may be of more use to you.  Thank you again.&+w'
+~
+R I 139812
+G I 139813
+D
+Korli places his spectacles gently on his nose.
+
+Korli claps loudly.
+
+Korlia disappears into the shadows.
+
+You faintly hear Korli say, '&+WBe safe, adventurer&+w'
+~
+S
+#139823
+M
+default hi hello forge~
+&+LThe forgemaster grins wickedly.
+
+&+W'&+RIf you bring me two broadswords, I will make them into a greatsword.&+W'
+
+&+W'&+RIf you bring me a jeweled ring, I will melt it into an earring.&+W'
+
+&+W'&+RIf you bring me a jeweled earring, I will melt it into a ring.&+W'
+
+&+W'&+RIf you bring me a staff and a ring, I will make it into a better staff.&+W'
+~
+QA
+&+LWithout a word, Erk grabs the two blades and plunges them deep into the
+&+Lflames of the forge.  He pulls out a hunk of molten metal and begins to
+&+Lpound on it at a fevorish pace.  In nearly no time at all, he completes
+&+Lhis task, and proceeds to plunge the newly fashioned blade into a bucket
+&+Lof water.
+
+&+CThe room erupts in a violent burst of steam&+w!
+
+&+LAs Erk withdrawls the sword from the water, he quickly hones down a sharp
+&+Ledge on both sides, and presents it to its new owner.
+~
+R I 139831
+G I 139829
+G I 139814
+Q
+&+LErk plunges the ring into the flames of the forge and quickly
+&+Lretrieves it.
+
+&+LHe hastily fiddles with it, changing it's shape!
+~
+R I 139823
+G I 139822
+Q
+&+LErk briefly looks at the earring, and then suddenly plunges
+&+Lit deep into the heart of the forge.  Quickly, he retrieves
+&+Lthe earring, and proceeds to attack it with a series of small
+&+Lclamps and pliers.
+~
+R I 139822
+G I 139823
+QA
+&+LThe forgemaster dips the crest of the staff into the flames of the forge.
+
+&+LIt emerges with a &+Rmolten&+L tip.  Erk quickly goes to work pounding and smashing the ring to pieces.
+
+&+LHe collects the gems and procedes to roll the molten staff around, &+ce&+Gn&+Yc&+Mr&+Yu&+Cs&+Mt&+Gi&+Yn&+Cg&+L it with vibrancy!
+~
+R I 139832
+G I 139825
+G I 139822
+S

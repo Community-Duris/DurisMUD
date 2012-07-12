@@ -1,0 +1,6920 @@
+#139100
+&+yThe Mighty Gates Of The City Of Brass&n~
+   The massive brass gates to the city rise above you some one thousand
+feet into the blazing sky.  They gleam of solid brass some twenty feet
+thick with huge glowing bars across them.   The legendary city of brass
+home of the mighty efreeti race lies beyond these imposing gates.
+~
+252 167809088 11 0
+D0
+You can see the mighty city of brass past the gates in that direction.
+~
+gates brass~
+1 0 139101
+D2
+The elemental plane of fire is that way.
+~
+~
+0 0 25455
+S
+#139101
+&+yRoyal Way&n~
+   This huge street made of solid brass runs to the north here.  It ends at
+the city gates.  To the north a city intersection can be seen while the city
+walls and huge buildings can be seen to the west and east.
+~
+252 167809088 11 0
+D0
+An intersection can be seen in that direction.
+~
+~
+0 0 139102
+D2
+The city gates can be seen in that direction.
+~
+gates brass~
+1 0 139100
+S
+#139102
+&+yIntersection of Royal Way and Imix Avenue&n~
+   This massive intersection runs to the north, south east and west.  To the
+north Royal Way continues, the city gates are to the south and Imix Ave.
+runs to the west and east here.
+~
+252 167809088 11 0
+D0
+Royal Way keeps going in that direction.
+~
+~
+0 0 139177
+D1
+Imix Ave runs in that direction.
+~
+~
+0 0 139179
+D2
+Royal Way and the city gates are in that direction.
+~
+~
+0 0 139101
+D3
+Imix Ave. runs in that direction, and some large building can be seen as well.
+~
+~
+0 0 139103
+S
+#139103
+&+yImix Avenue&n~
+   Imix Ave. runs east and west here, a large buildings are now all
+around you to the north and south, most made of solid brass.
+~
+252 167809088 11 0
+D1
+The intersection of Royal Way and Imix Ave. is in that direction.
+~
+~
+0 0 139102
+D3
+Imix Ave. continues in that direction.
+~
+~
+0 0 139104
+S
+#139104
+&+yImix Avenue&n~
+   The road keeps going to the west and east here, and the entrance to
+two very large buildings can be seen to the north and south.
+~
+252 167809088 11 0
+D0
+The entrance to the guild house of the efreeti magi can be seen that way.
+~
+door~
+1 0 139132
+D1
+Imix Ave. runs in that direction.
+~
+~
+0 0 139103
+D2
+The entrance to the Royal warriors guild house can be seen in that direction.
+~
+door~
+1 0 139105
+D3
+Imix Ave runs in that direction.
+~
+~
+0 0 139115
+S
+#139105
+&+yEntrance to the Royal Efreeti Warriors Guild&n~
+  This flaming building composed of blue fire stands as the training
+grounds of the efreeti warriors.
+~
+252 167809092 11 0
+D0
+Imix Ave is back that way
+~
+door~
+1 0 139104
+D1
+The warriors bar can be seen in that direction.
+~
+~
+0 0 139106
+S
+#139106
+&+yWarriors Bar&n~
+   The bar of the efreeti warriors is loaded with several efreeti sitting
+around drinking fiery brews.  A heavy smell of some sort of rotting fruit
+hangs in the air here.  A large bar stocked with all manor of strange
+drink runs some fifty feet along the east wall.  A door to the south can
+be seen here as well.
+~
+252 167809088 11 0
+D2
+Another large glowing door can be seen in that direction.
+~
+door glowing~
+1 0 139107
+D3
+The way out can be seen that way.
+~
+~
+0 0 139105
+S
+#139107
+&+yThe Royal Practice Room&n~
+   All sorts of efreeti warriors devices are in this room.  From practice
+dummies to odd glowing spheres that dart around the room.  Full suites
+of padded armor of various sizes and shapes are in the room as well.
+A flight of stairs runs up the east wall here.
+~
+252 167809088 11 0
+D0
+The bar is in that direction.
+~
+door~
+1 0 139106
+D4
+A flight of stairs runs up here.
+~
+~
+0 0 139108
+S
+#139108
+&+yStairway&n~
+   The stairs end at a landing to the west here.   The steps seem to be
+made of glowing red marble.  Downward the practice room can be seen.
+~
+252 167809088 11 0
+D3
+A landing can be seen in that direction.
+~
+~
+0 0 139109
+D5
+The practice room is in that direction.
+~
+~
+0 0 139107
+S
+#139109
+&+yA Landing&n~
+   A landing at the top of the stairs is here, a large barracks room can
+be seen to the north of here and the stairs run down to the east.
+~
+252 167809088 11 0
+D0
+A large room can be seen in that direction
+~
+~
+0 0 139110
+D1
+A flight of stairs can be seen in that direction.
+~
+~
+0 0 139108
+S
+#139110
+&+yThe Royal Barracks of the Efreeti&n~
+   This room some four hundred feet in diameter holds several bunks
+that the efreeti warriors sleep on while at the guild.  Foot lockers and
+other odds and ends belonging to mighty efreeti warriors are in this
+room as well.
+~
+252 167809088 11 0
+D2
+a landing can be seen in that direction.
+~
+~
+0 0 139109
+D3
+a long hallway can be seen in that direction.
+~
+~
+0 0 139111
+S
+#139111
+&+yLong Hallway&n~
+   This long hallway runs north and south here, for some fifty feet all
+one can see is hallway, with doors and rooms every 10 feet or so, more
+then likely belonging to the more powerful guild members.
+~
+252 167809088 11 0
+D1
+The barracks can be seen in that direction.
+~
+~
+0 0 139110
+D2
+the long hallway keeps going in that direction.
+~
+~
+0 0 139112
+S
+#139112
+&+yLong Hallway&n~
+   The hallway keeps going to the west and north here.  Every ten feet
+or so a glowing door can be seen in the walls.  No amount of magic or
+force can seem to open these doors.  You can see a huge glowing door
+at the end of the hallway.
+~
+252 167809088 11 0
+D0
+The hallway keeps going in that direction
+~
+~
+0 0 139111
+D3
+a glowing door is in that direction.
+~
+door glowing~
+1 0 139113
+S
+#139113
+&+yThe Guild-Masters Quarters&n~
+   This golden room is where the master of the guild lives.  Armor of
+solid brass hangs on the wall, along with a huge assortment of weapons
+of all types.  None of which are usable by humans due to the massive size
+and magical nature.   A large bed of brass floats in the center of the room.
+~
+252 167809088 11 0
+D0
+A locked glowing door of brass can be seen in that direction.
+~
+door glowing~
+1 0 139114
+D1
+The doorway can be seen in that direction.
+~
+door doorway~
+1 0 139112
+S
+#139114
+&+yGuild Armory&n~
+   This room contains all the armor and weapons the guild has to offer
+it is a stash of pride, with weapons collected by the guild members over
+the millennia.
+~
+252 167809088 11 0
+D2
+The door can be seen in that direction.
+~
+door~
+1 0 139113
+S
+#139115
+&+yImix Avenue&n~
+   Imix avenue runs to the east and west here.  You can see the buildings
+of the warriors guild to the south and gleaming walls of other buildings
+to the north.
+~
+252 167809088 11 0
+D1
+Imix Ave keeps going in that direction.
+~
+~
+0 0 139104
+D3
+Imix Ave keeps running in that direction.
+~
+~
+0 0 139116
+S
+#139116
+&+yImix Avenue&n~
+   Imix Ave runs to the west and east here.  The walls of large buildings
+can be seen to the north and south.
+~
+252 167809088 11 0
+D1
+Imix Ave runs to the east that way.
+~
+~
+0 0 139115
+D2
+~
+~
+1 0 139316
+D3
+Imix Ave runs to the west in that direction.
+~
+~
+0 0 139117
+S
+#139117
+&+yImix Avenue&n~
+   Imix Ave runs to the west and east here, while great buildings of
+polished brass are to the north and south of here.
+~
+252 167809088 11 0
+D1
+Imix Ave runs to the west in that direction.
+~
+~
+0 0 139116
+D3
+An intersection can be seen in that direction.
+~
+~
+0 0 139118
+S
+#139118
+&+yIntersection of Imix Avenue and Merchants Street&n~
+   This intersection seems to be the main junction in this part
+of the city between the guilds and the bazaar section.  A massive tower
+of glowing brass can be seen to the south.  While Merchants street
+runs to the north, and Imix Ave runs to the east.
+~
+252 167809088 11 0
+D0
+Merchants street is in that direction.
+~
+~
+0 0 139122
+D1
+Imix Ave is in that direction.
+~
+~
+0 0 139117
+D2
+The south-west watch tower is in that direction.
+~
+door~
+1 0 139119
+D3
+The royal tax office can be seen in that direction.
+~
+door~
+1 0 139120
+S
+#139119
+&+ySouth West Watch Tower&n~
+   This huge tower some one thousand five hundred feet high overlooks
+the city and the surrounding areas of the plane of fire.  There are no stairs
+here to clime, and the tower seem hollow except for a huge platform
+barely visible from this distance at the top of the tower.
+~
+252 167809088 11 0
+D0
+The intersection of Imix Ave and merchants street is that way.
+~
+door~
+1 0 139118
+S
+#139120
+&+yThe Royal Tax Office&n~
+   This rather odd shaped building has a large counter toward the
+far north wall.  A sign on the counter can be seen and several chairs
+far too large for humans are aligned along the counter bar stool fashion.
+~
+252 167809088 11 0
+D1
+The doorway is in that direction.
+~
+door~
+1 0 139118
+S
+#139121
+&+yCensus Bureau&n~
+   This building houses the royal efreeti census offices, as well as
+other statistical information on various matters of state.  The last census
+was done last year, and the total number of efreeti living within the city
+of brass was at that time exactly 42,638,943.  The population has went up
+a bit since then.
+~
+252 167809088 11 0
+D1
+Merchant Street can be seen in that direction.
+~
+door~
+1 0 139122
+S
+#139122
+&+yMerchants Street&n~
+   This busy street is not the main thoroughfare but if travelers have
+business in the city of brass they may be found here. Its wide streets
+are enough to allow easy access to the various shops set up in the bazaar
+near here. The Keffinspire District can be found to the east of here
+home to one of the many bazaar's in the City of Brass.
+~
+252 167809088 11 0
+D0
+Merchants street keeps going in that direction.
+~
+~
+0 0 139149
+D1
+The entrance to the grand bizarre of the city is in that direction.
+~
+~
+0 0 139123
+D2
+The intersection of Merchants Street and Imix Ave. is in that direction.
+~
+~
+0 0 139118
+D3
+The census office is in that direction.
+~
+door~
+1 0 139121
+S
+#139123
+&+yKeffinspires District Bazaar~
+   This amazing place is unlike any seen on earth.  For what seems like
+an eternity one can walk the floor of the bazaar and still not find an end
+to all the shops, and other businesses that are set up in this section
+of the city. The smithe's make this district their home and are the main
+businesses found here.
+~
+252 167809092 11 0
+D0
+~
+~
+0 0 139128
+D1
+The royal armorer of the city of brass is in that direction.
+~
+~
+0 0 139124
+D3
+Merchants street is in that direction.
+~
+~
+0 0 139122
+S
+#139124
+&+yThe Keffinspire Armorer&n~
+   This shop has all sorts of armor for sale, from simple iron worked
+armor to royal brass armor. The furnace to the north provides the
+necessary forge for the armorsmithy.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139127
+D1
+The weapons smithy is in that direction.
+~
+~
+0 0 139125
+D3
+The entrance to the bizarre is in that direction.
+~
+~
+0 0 139123
+S
+#139125
+&+yThe Keffinspire Weapon Smithy&n~
+   Many various types of weapons can be found in this glowing building
+of solid brass.  A display case showing several weapons is on display in
+the center of the floor, as well as smaller cases here and there. The
+massive furnace is to the northwest allowing easy access for this shop.
+~
+252 167809088 11 0
+D0
+A clothier shop can be seen in that direction.
+~
+~
+0 0 139126
+D3
+The royal armorer is in that direction.
+~
+~
+0 0 139124
+D6
+~
+~
+0 0 139127
+S
+#139126
+&+yGlittermaker's Room, Tinker and Brownsmith&n~
+   This is just a small corner of the Keffinspire Bazaar and is fitting
+for the size of the propiertor. The tables are set just away from the
+wall to allow him to work behind them and are just three feet off the
+ground. There are many tin and copper works lining the wall displaying
+the type of craft performed here. To the west is a massive furnace used
+by this shop as well as all the others in the bazaar.
+~
+252 167809088 11 0
+D2
+The weapon smithy is in that direction.
+~
+~
+0 0 139125
+D3
+a magic shop can be seen in that direction
+~
+~
+0 0 139127
+S
+#139127
+&+yKeffinspires Community Forge Furnace&n~
+Placed in the center of the bazaar is a massive furnace. There are
+several openings around it allowing each shop surrounding it to use
+the fires for their craft. The furnace is made of a covering of brass
+and is highly decorated with impressions of hammers, anvils, and faces
+of smithy's past.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139130
+D1
+The cloths shop is in that direction.
+~
+~
+0 0 139126
+D2
+~
+~
+0 0 139124
+D3
+The entrance to the gem shop is that way.
+~
+~
+0 0 139128
+D6
+~
+~
+0 0 139129
+D9
+~
+~
+0 0 139125
+S
+#139128
+&+yStone Mason's Shop in the Keffinspires District&n~
+  This area in the market is designated for the stone mason. There is
+a furnace to the east utiziling the planes heat source when it is needed. Most
+of the work however is done with chisel and hammer on the the massive table
+set up near the southern exit.
+~
+252 167809088 11 0
+D0
+A bakery can be seen in that direction
+~
+~
+0 0 139129
+D1
+The magi shop is that way.
+~
+~
+0 0 139127
+D2
+~
+~
+0 0 139123
+S
+#139129
+&+yKeffinspire's Bit and Tackle Shop~
+This shops main customers are those in need of riding harnesses and
+accessories. The counters are set up into a quarter moon shape near
+the center of the room to keep people away from the products hanging
+on pegs on the walls behind.
+~
+252 167809104 11 0
+D1
+A strange looking building is in that direction.
+~
+~
+0 0 139130
+D2
+The gem shop is in that direction.
+~
+~
+0 0 139128
+D9
+~
+~
+0 0 139127
+S
+#139130
+&+yLucky Lokke's Locksmithy&n~
+A small tent set up in the center of this area covers just a singular
+table. The table has two cabinets set into it which hold either the
+products of the shop or the tools to craft them. Laying on the work
+table are many different pieces to various locks. To the south is the
+massive furnace used for his crafting of the pieces needed.
+~
+252 167809088 11 0
+D1
+A pub of some sort is in that direction
+~
+~
+0 0 139131
+D2
+~
+~
+0 0 139127
+D3
+A bakery is in that direction.
+~
+~
+0 0 139129
+S
+#139131
+&+yThe Salamanders Shade Tavern&n~
+   This pub seems to be the most busy in all the city.  Hundreds
+of efreeti are here drinking themselves into a stupor.
+~
+252 167809088 11 0
+D3
+an odd looking building is in that direction
+~
+~
+0 0 139130
+S
+#139132
+&+yThe Royal Magi Guild&n~
+   The entrance to the royal magi guild of the city of brass is guarded
+by a huge glowing door with mystic runes of power on it.  A faint
+humming sound comes from the door as well.  This building is very
+tall arching upwards as a great spiral tower.
+~
+252 167809092 11 0
+D1
+An entry foyer can bee seen in that direction
+~
+~
+0 0 139133
+D2
+The doorway is in that direction, with Imix Ave. past that.
+~
+door brass glowing~
+1 0 139104
+S
+#139133
+&+yGrand Foray&n~
+   This rounded room acts as a reception room for people with business
+within the guild.  A flight of stairs can be seen in the north wall.  Strange
+glowing sphere of energy float around in here lighting the room.
+~
+252 167809088 11 0
+D3
+The Entrance to the guild is in that direction.
+~
+~
+0 0 139132
+D4
+The stairs run up in that direction.
+~
+~
+0 0 139134
+S
+#139134
+&+yGrand Stairway&n~
+   These wide glowing stairs of brass glow with an internal light
+and a pulsing sound can be heard from below.  They run upwards
+toward another room.
+~
+252 167809088 11 0
+D4
+The stairs continue up in that direction.
+~
+~
+0 0 139135
+D5
+The stairs run down in that direction
+~
+~
+0 0 139133
+S
+#139135
+&+yGrand Stairway&n~
+   These wide glowing stairs of brass glow with an internal light
+and a pulsing sound can be heard from below.  They end at two double
+doors to the north and run back downwards as well.
+~
+252 167809088 11 0
+D0
+A set of double doors is in that direction.
+~
+doors double~
+1 0 139136
+D5
+The stairs run down in that direction
+~
+~
+0 0 139134
+S
+#139136
+&+yThe Great Magi Library&n~
+   This room holds perhaps millions of books that all seem to glow
+and pulse with an amazing internal light.  Any book that is looked at
+for too long floats off the shelf and flies over to whoever is looking
+at it and starts to open tilting so that the metal pages can be read
+with relative ease.  Assuming one can read magic that is.
+~
+252 167809088 11 0
+D1
+Another set of double doors can be seen in that direction
+~
+doors~
+1 0 139137
+D2
+The grand stairway can be seen in that direction
+~
+door~
+1 0 139135
+S
+#139137
+&+yMagi Observation Tower&n~
+   This odd room has glowing panels on the walls, in fact the walls
+seem to be composed mostly of these panels.  After looking at one
+for a few moments, a view of somewhere in the plane of fire can be
+seen, reflected in the panel.  A somewhat smaller room can be seen
+to the north as well.
+~
+252 167809088 11 0
+D0
+Another room can be seen in that direction
+~
+~
+0 0 139138
+D3
+The library can be seen in that direction
+~
+doors~
+1 0 139136
+S
+#139138
+&+yLower Tower&n~
+   This tower is in fact higher up then the preceding room, but
+its name comes from the magi who study here within.  As they
+are acolyte magi, who use this room as both personal quarters
+and study chamber.
+~
+252 167809088 11 0
+D0
+A large glowing pool can be seen in that direction
+~
+~
+0 0 139139
+D2
+The Magi tower can be seen in that direction
+~
+~
+0 0 139137
+S
+#139139
+&+yPool of Dreams&n~
+   There is a huge glowing pool in the center of this room.  Several
+efreeti magi acolytes are bathing therein glowing with some sort
+of strange mystic power.
+~
+252 167809088 11 0
+D2
+The lower tower is in that direction
+~
+~
+0 0 139138
+D3
+Another room can be seen in that direction
+~
+~
+0 0 139140
+S
+#139140
+&+yGrand Magi's Laboratory&n~
+   This room contains several odd canisters, glowing beakers of
+crystal, as well as other odd paraphnila.  Small odd critters run
+here and there when someone enters this room.  And the entire
+place is bathed in a strange light.
+~
+252 167809088 11 0
+D1
+The pool of dreams is in that direction
+~
+~
+0 0 139139
+D2
+A set of closed doors is in that direction
+~
+doors~
+1 0 139141
+S
+#139141
+&+yGrand Magi's Chamber&n~
+   This room is amazing.  Entire planes of existence seem to form
+and disappear in the blink of an eye.  Horrific sounds can be heard
+from all directions, and lights pulse and flash everywhere.
+~
+252 167809088 11 0
+D0
+~
+doors~
+1 0 139140
+S
+#139142
+&+yThe Road of Wisdom&n~
+   The road runs to the east and west here.  The towers of the magi
+guild can be seen to the north and south, and the city center can be
+seen to the east.
+~
+252 167809088 11 0
+D1
+The city center is in that direction
+~
+~
+0 0 139174
+D3
+The road of wisdom keeps going in that direction
+~
+~
+0 0 139143
+S
+#139143
+&+yThe Road of Wisdom&n~
+   The road runs to the east and west here.  The towers of the magi
+guild can be seen to the north and south, and the city center can be
+seen to the east still some ways off.
+~
+252 167809088 11 0
+D1
+The road keeps going in that direction
+~
+~
+0 0 139142
+D3
+The road keeps going in that direction
+~
+~
+0 0 139144
+S
+#139144
+&+yThe Road of Wisdom&n~
+   The road runs both east and west here, magnificent buildings of
+solid brass can be seen to the north and south.  Many strange sounds
+and noises can be heard and smelt here.
+~
+252 167809088 11 0
+D0
+Magma Lake is that way
+~
+~
+0 0 139164
+D1
+The road keeps going in that direction
+~
+~
+0 0 139143
+D3
+The road runs to the west in that direction
+~
+~
+0 0 139145
+S
+#139145
+&+yThe Road of Wisdom&n~
+   The road runs both east and west here, magnificent buildings of
+solid brass can be seen to the north and south.  Many strange sounds
+and noises can be heard and smelt here.
+~
+252 167809088 11 0
+D1
+The road runs to the east in that direction
+~
+~
+0 0 139144
+D3
+The road runs to the west in that direction
+~
+~
+0 0 139146
+S
+#139146
+&+yThe Road of Wisdom&n~
+   The road runs into an intersection here to the west, it also runs
+to the east as far as the eye can see.  To the north the Royal Library
+can be seen, and to the south the bizarre can be seen.
+~
+252 167809088 11 0
+D1
+The road keeps going in that direction
+~
+~
+0 0 139145
+D3
+The intersection of the road of wisdom and Merchants Ave is that way
+~
+~
+0 0 139147
+S
+#139147
+&+yIntersection of Merchants Street and the Road of Wisdom&n~
+   The road splits here in an intersection, to the east the road of
+wisdom runs on forever.  To the west a huge nobles house can
+be seen, the north Merchants Street continues and to the south as well.
+~
+252 167809088 11 0
+D0
+Merchants street runs to the north there
+~
+~
+0 0 139156
+D1
+The road of wisdom runs in that direction
+~
+~
+0 0 139146
+D2
+Merchants street runs in that direction
+~
+~
+0 0 139148
+D3
+A noble efreeti house is in that direction
+~
+door~
+1 0 139152
+S
+#139148
+&+yMerchants Street&n~
+   The wide and mighty merchants street comes to an intersection
+here with the road of wisdom.  To the west a noble house, to the
+east the bizarre continues, and to the south Merchants street runs on.
+~
+252 167809088 11 0
+D0
+The intersection can be seen in that direction
+~
+~
+0 0 139147
+D2
+Merchants street runs that way
+~
+~
+0 0 139149
+D3
+A noble house is in that direction
+~
+door~
+1 0 139151
+S
+#139149
+&+yMerchants Street&n~
+   Merchants street runs to the north and south here.  To the
+east is the bizarre, to the west a noble house of a might efreeti
+family.
+~
+252 167809088 11 0
+D0
+Merchants street keeps going in that direction
+~
+~
+0 0 139148
+D2
+Merchants street continues in that direction
+~
+~
+0 0 139122
+D3
+A noble house is in that direction
+~
+door~
+1 0 139150
+S
+#139150
+&+yHouse Saranti&n~
+   This is the noble house dwelling of the house of Saranti, a powerful
+family that is of royal blood.  This is the common room, and the only one
+that seem to be accessible.
+~
+252 167809088 11 0
+D1
+You see merchants street in that direction
+~
+door~
+1 0 139149
+S
+#139151
+&+yHouse Flamnari&n~
+   This is the noble house dwelling of the house of Flamnari, a powerful
+family that is of royal blood.  This is the common room, and the only one
+that seems to be accessible.
+~
+252 167809088 11 0
+D1
+You see the doorway in that direction
+~
+door~
+1 0 139148
+S
+#139152
+&+yHouse Anone&n~
+   This is the noble house dwelling of the house of Anone, a powerful
+family that is of royal blood.  This is the common room, and the only one
+that seems to be accessible.
+~
+252 167809088 11 0
+D1
+You see the doorway in that direction
+~
+door~
+1 0 139147
+S
+#139153
+&+yHouse Tilama&n~
+   This is the noble house dwelling of the house of Tilama, a powerful
+family that is of royal blood.  This is the common room, and the only one
+that seems accessible.
+~
+252 167809088 11 0
+D1
+You see the door in that direction
+~
+door~
+1 0 139156
+S
+#139154
+&+yHouse Onitalri&n~
+   This is the noble house dwelling of the house of Onitalri, a powerful
+family that is of royal blood.  This is the common room, and the only one
+that seems accessible.
+~
+252 167809088 1 0
+D1
+The doorway is in that direction
+~
+door~
+1 0 139157
+S
+#139155
+&+yHouse Wujalia&n~
+   This is the noble house dwelling of the house of Wujalia, a powerful
+family that is of royal blood.  This is the common room, and the only one
+that seems accessible.
+~
+252 167809088 11 0
+D1
+The door is in that direction
+~
+door~
+1 0 139158
+S
+#139156
+&+yMerchants Street&n~
+   Merchants street runs to the north and south here, a noble house can
+be seen to the west, and the royal library is to the east.  To the south is
+the intersection of Merchants street and the road of wisdom.
+~
+252 167809088 11 0
+D0
+Merchants street keeps going in that direction
+~
+~
+0 0 139157
+D1
+The royal library is in that direction
+~
+~
+0 0 139160
+D2
+The intersection of merchants street and the road of wisdom is that way
+~
+~
+0 0 139147
+D3
+A door to a noble house is in that direction
+~
+door~
+1 0 139153
+S
+#139157
+&+yMerchants Street&n~
+  The street runs north and south, to the north is the intersection of merchants
+street and the way of the heroes.  A door to a noble house is to the west and
+the buildings of the royal library is to the east.
+~
+252 167809088 11 0
+D0
+An intersection can be seen in that direction
+~
+~
+0 0 139158
+D2
+Merchants street runs that way
+~
+~
+0 0 139156
+D3
+The door to a noble house is in that direction
+~
+door~
+1 0 139154
+S
+#139158
+&+yIntersection of the Way of Heroes and Merchants Street&n~
+   This intersection runs ends at a huge glowing tower to the north,
+a noble house to the west and Heroes Way to the east.  To the south
+Merchants street continues.
+~
+252 167809088 11 0
+D0
+The north west watch tower is in that direction
+~
+door~
+0 0 139270
+D1
+The road of heroes lies in that direction
+~
+~
+0 0 139166
+D2
+Merchants street is in that direction
+~
+~
+0 0 139157
+D3
+~
+door~
+1 0 139155
+S
+#139159
+&+yNorth West Watch Tower&n~
+   This huge tower some one thousand five hundred feet high overlooks the
+city and the surrounding areas of the plane of fire.  There are no stairs
+here to clime, and the tower seem hollow except for a huge platform barely
+visible from this distance at the top of the tower.
+~
+252 167809088 11 0
+D2
+A door is in that direction
+~
+door~
+1 0 139285
+S
+#139160
+&+yRoyal Library&n~
+   This building is some two hundred feet tall, and seems to be made up
+of antique brass, as it has a far duller hue to it then most of the other
+buildings of the city.  Great doors over one hundred feet tall make up
+the entrance to the building.  And the great symbol of the Sultan of the
+efreeti is encrusted upon the doors.
+~
+252 167809092 11 0
+D1
+Another room in the library can be seen that way
+~
+~
+0 0 139161
+D3
+Merchants street is in that direction
+~
+~
+0 0 139156
+S
+#139161
+&+yRoyal Library Main Rooms&n~
+    Row after row of endless book shelves line this room for over one
+thousand feet.  Each shelf contains hundreds of thousands of metallic
+books of all sizes shapes and colors.  The entire knowledge of the efreeti
+race can be found within this library.  Such a storehouse of information
+would be priceless if it could be returned to the prime materiel plane.
+~
+252 167809088 11 0
+D0
+The library continues that way.
+~
+~
+0 0 139162
+D3
+The entrance to the library can be seen in that direction.
+~
+~
+0 0 139160
+S
+#139162
+&+yRoyal Library Main Rooms&n~
+   This building is some two hundred feet tall, and seems to be made up
+of antique brass, as it has a far duller hue to it then most of the other
+buildings of the city.  Great doors over one hundred feet tall make up
+the entrance to the building.  And the great symbol of the Sultan of the
+efreeti is encrusted upon the doors.
+~
+252 167809088 11 0
+D2
+The library keeps going in that direction.
+~
+~
+0 0 139161
+D3
+The library study is that way.
+~
+~
+0 0 139163
+S
+#139163
+&+yStudy Room&n~
+   This room is quite, in fact no noise can be heard within at all.  This
+is where the efreeti come to read the books of the library and or do
+research.  Several brass tables are here with huge high back chairs.
+~
+252 167809088 11 0
+D1
+The main rooms of the library run in that direction.
+~
+~
+0 0 139162
+S
+#139164
+&+yRoad of Wisdom&n~
+   The road runs to the north and south here.  The royal library can
+be seen to the west, and the towers of the magi guild is to the east.
+An intersection lies to the south.
+~
+252 167809088 11 0
+D0
+The road continues in that direction.
+~
+~
+0 0 139165
+D2
+The road keeps going in that direction.
+~
+~
+0 0 139144
+S
+#139165
+&+yRoad of Wisdom&n~
+   The road runs to the north and south here.  To the west the buildings
+of the royal library can be seen, and to the east the towers of the mage
+guild rise from the street toward the sky.
+~
+252 167809088 11 0
+D0
+The intersection of the way of the heroes and the road of wisdom is that way.
+~
+~
+0 0 139168
+D2
+The road of wisdom runs on that way.
+~
+~
+0 0 139164
+S
+#139166
+&+yWay of the Heroes&n~
+   To the east is the intersection of merchants way and the road of heroes
+and to the east the way of the heroes continues.  The great magma lake is
+to the north, and the buildings of the royal library lies to the south.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139241
+D1
+The way of the heroes keeps going in that direction.
+~
+~
+0 0 139167
+D3
+The intersection of merchants street and the way of heroes is that way.
+~
+~
+0 0 139158
+S
+#139167
+&+yHeroes Way&n~
+   The road here runs to the west and east.  Magma lake is north and to
+the south the royal library can be seen.
+~
+252 167809088 11 0
+D1
+The intersection of Heroes way and the road of wisdom can be seen.
+~
+~
+0 0 139168
+D3
+Heroes way continues in that direction.
+~
+~
+0 0 139166
+S
+#139168
+&+yIntersection of Heroes Way and the Road of Wisdom&n~
+   This intersection, like so many others in this city is vast.  Buildings
+can be seen to the west and east, and the great magma lake is to the
+north.
+~
+252 167809088 11 0
+D1
+Heroes Way runs on in that direction.
+~
+~
+0 0 139169
+D2
+The road of wisdom is that way.
+~
+~
+0 0 139165
+D3
+Heroes way runs in that direction.
+~
+~
+0 0 139167
+S
+#139169
+&+yHeroes Way&n~
+   The road runs to the west and east here.  Magma lake is north and
+the towers of the mage guild are to the south.
+~
+252 167809088 11 0
+D1
+Heroes Way keeps going that way.
+~
+~
+0 0 139170
+D3
+The intersection of heroes way and the road of wisdom lies that way.
+~
+~
+0 0 139168
+S
+#139170
+&+yHeroes Way&n~
+   The road runs to the west and east here.  The great magma lake
+lies to the north, and to the south are the massive towers of the mage
+guild.  To the east a huge intersection can be seen.
+~
+252 167809088 11 0
+D1
+The intersection of heroes way and royal way can be seen.
+~
+~
+0 0 139171
+D3
+Heroes way continues on in that direction.
+~
+~
+0 0 139169
+S
+#139171
+&+yIntersection of Royal Way and Heroes Way&n~
+   This intersection is runs to the north, south east and west, and a huge
+bridge can be seen to the north crossing the grate magma lake.
+~
+252 167809088 11 0
+D0
+The glowing brass bridge over the magma lake can be seen in that
+direction.
+~
+~
+0 0 139238
+D1
+Heroes Way keeps going in that direction.
+~
+~
+0 0 139237
+D2
+Royal Way lies in that direction.
+~
+~
+0 0 139172
+D3
+Heroes way is in that direction.
+~
+~
+0 0 139170
+S
+#139172
+&+yRoyal Way&n~
+   The street here runs to the north and south.  Looking east one can
+see the entrance to the grand temple of the gods.  To the west the
+mighty towers of the mage guild rise into the blood red sky.
+~
+252 167809088 11 0
+D0
+The intersection of royal way an heroes way can be seen that way.
+~
+~
+0 0 139171
+D2
+Royal way keeps going in that direction.
+~
+~
+0 0 139173
+S
+#139173
+&+yRoyal Way&n~
+   The street runs both north and south here.  Mage guild to the west
+and the holy temple to the east are the close buildings to this section
+of the street.  To the south lies the city center.
+~
+252 167809088 11 0
+D0
+Royal way runs in that direction.
+~
+~
+0 0 139172
+D1
+~
+~
+0 0 139219
+S
+#139174
+&+yIntersection of Royal Way and The Road of Wisdom&n~
+   This intersection, in the heart of the city is VERY busy with
+efreeti of all types going about their business.  Most seem to have
+a sure purpose in mind as they travel in all direction from here.
+~
+252 167809088 11 0
+D1
+The road of wisdom is in that direction.
+~
+~
+0 0 139196
+D2
+Royal way is in that direction.
+~
+~
+0 0 139175
+D3
+The road of wisdom is in that direction.
+~
+~
+0 0 139142
+S
+#139175
+&+yRoyal Way&n~
+   The street runs to the north and south here.  To the west, the mage
+guild can be seen, to the west is the royal bank.
+~
+252 167809088 11 0
+D0
+The intersection can be seen in that direction.
+~
+~
+0 0 139174
+D1
+The royal bank is in that direction
+~
+~
+0 0 139195
+D2
+Royal Way runs in that direction.
+~
+~
+0 0 139176
+S
+#139176
+&+yRoyal Way&n~
+   The street runs to the north and south here.  To the west is one
+can see the towers of the mage guild.  To the east lies a pub and
+royal way keeps going south toward the city gates.
+~
+252 167809088 11 0
+D0
+Royal way keeps going in that direction.
+~
+~
+0 0 139175
+D2
+Royal way keeps going in that direction.
+~
+~
+0 0 139177
+S
+#139177
+&+yRoyal Way&n~
+   The street runs to the north and south here.  To the east is the
+entrance to the flaming dragon inn.  To the west the towers of the
+mage guild can be seen, and an intersection lies to the south.
+~
+252 167809088 11 0
+D0
+Royal way keeps going in that direction.
+~
+~
+0 0 139176
+D1
+The flaming dragon inn is in that direction.
+~
+~
+0 0 139178
+D2
+The intersection of Royal way and Imix ave is that way.
+~
+~
+0 0 139102
+S
+#139178
+&+yThe Flaming Dragon Inn&n~
+   The flaming dragon in is a favorite hangout of the efreeti elite
+who prefer a bit of the drink from time to time.
+~
+252 167809088 11 0
+D0
+The Pub is that way
+~
+~
+0 0 139194
+D3
+Royal way is in that direction.
+~
+~
+0 0 139177
+S
+#139179
+&+yImix Avenue&n~
+   Imix avenues runs to the west and east here, to the east is the
+intersection of Imix Ave. and Kossuth Ave.  To the south the Zoo
+can be seen.
+~
+252 167809088 11 0
+D1
+You can see the intersection of Kossuth Ave and Imix Ave in that direction.
+~
+~
+0 0 139180
+D3
+You can see the intersection of Imix ave. and Royal Way in that direction.
+~
+~
+0 0 139102
+S
+#139180
+&+yIntersection of Kossuth Avenue and Imix Avenue&n~
+   This intersection runs along Kossuth Ave to the north, and Imix to
+the west.  The Entrance to the Royal Zoo is to the east.
+~
+252 167809088 11 0
+D0
+You can see Kossuth Avenue in that direction.
+~
+~
+0 0 139200
+D1
+You can see the Royal Zoo in that direction.
+~
+~
+0 0 139181
+D3
+You can see Imix Ave. in that direction.
+~
+~
+0 0 139179
+S
+#139181
+&+yThe Royal Zoo&n~
+   This is the entrance to the royal zoo of the city of brass.
+All sorts of odd noises and smells can be detected coming from within
+~
+252 167809092 11 0
+D2
+A Zoo animal can be seen in that direction.
+~
+~
+0 0 139182
+D3
+The intersection is in that direction.
+~
+~
+0 0 139180
+S
+#139182
+&+yZoo Cage One&n~
+   It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D0
+The zoo entrance is in that direction.
+~
+~
+0 0 139181
+D2
+Another cage is in that direction.
+~
+~
+0 0 139183
+D3
+Another cage is in that direction.
+~
+cell door~
+1 0 139193
+S
+#139183
+&+yCage Number Two&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D0
+Another cage can be seen in that direction.
+~
+~
+0 0 139182
+D1
+Another cage can be seen in that direction.
+~
+~
+0 0 139184
+D3
+Another cage is that way.
+~
+cell door~
+1 0 139190
+S
+#139184
+&+yCage Number Three&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D0
+Another cage can be seen in that direction.
+~
+~
+0 0 139186
+D1
+Another cage is that way.
+~
+cell door~
+1 0 139185
+D3
+Another cage can be seen that way.
+~
+~
+0 0 139183
+S
+#139185
+&+yCage Number Four&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D3
+You can see another cage in that direction.
+~
+cell door~
+1 0 139184
+S
+#139186
+&+yCage Number Five&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D1
+Another cage is that way.
+~
+cell door~
+1 0 139187
+D2
+Another cage is that way.
+~
+~
+0 0 139184
+S
+#139187
+&+yCage Number Six&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D0
+Another cage is that way.
+~
+~
+0 0 139188
+D3
+Another cage is that way.
+~
+cell door~
+1 0 139186
+S
+#139188
+&+yCage Number Seven&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D2
+Another cage is in that direction.
+~
+~
+0 0 139187
+D3
+Another cage can be seen in that direction.
+~
+cell door~
+1 0 139189
+S
+#139189
+&+yCage Number Eight&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D1
+Another cage is that way.
+~
+cell door~
+1 0 139188
+S
+#139190
+&+yCage Number Nine&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D1
+Another cage is that way.
+~
+cell door~
+1 0 139183
+D3
+Another cage is that way.
+~
+cell door~
+1 0 139191
+S
+#139191
+&+yCage Number Ten&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D0
+Another cage is that way.
+~
+~
+0 0 139192
+D1
+Another cage is that way.
+~
+cell door~
+1 0 139190
+S
+#139192
+&+yCage Number Eleven&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D1
+Another cage is that way.
+~
+cell door~
+1 0 139193
+D2
+Another cage is that way.
+~
+~
+0 0 139191
+S
+#139193
+&+yCage Number Twelve&n~
+    It becomes another obvious after a few moments that this must be
+a petting zoo for the efreeti, for the bars of the cages are made of wispy
+flames that part allowing the monster within to come out and attack!
+~
+252 167809088 11 0
+D1
+Another cage is that way.
+~
+cell door~
+1 0 139182
+D3
+Another cage is that way.
+~
+cell door~
+1 0 139192
+S
+#139194
+&+yDead Dao Pub&n~
+   This place leaves one with the notion that efreeti don't think too
+highly of other Genie kind.  A dead dao hangs from a sign outside
+and several stuff genie of all sorts, djinn, madraid, dao etc. line the
+walls of this place.  A number of efreeti seem to hang out here, thus
+one gets the feeling that few are offended by the decor.
+~
+252 167809088 11 0
+D2
+The inn can be seen in that direction.
+~
+~
+0 0 139178
+S
+#139195
+&+yThe Royal Bank&n~
+   This is the royal bank of the efreeti, where they come to do their
+financial transactions.  A huge glowing safe can be seen behind bars
+of glowing magic brass.
+~
+252 167809088 11 0
+D3
+Royal way can be seen in that direction.
+~
+~
+0 0 139175
+S
+#139196
+&+yRoad of Wisdom&n~
+   The road runs to the west and east here.  To the west, the intersection
+of Royal Way and the Road of Wisdom can be seen.  To the north are
+the buildings of the temple of brass, and to the south  is the royal bank.
+~
+252 167809088 11 0
+D1
+The road of wisdom keeps going in that direction.
+~
+~
+0 0 139197
+D3
+The intersection of royal way and this road is that way.
+~
+~
+0 0 139174
+S
+#139197
+&+yIntersection of the Road of Wisdom and Kossuth Avenue&n~
+   This busy intersection seem to have alot of efreeti dressed in
+religious garb passing by, probably due to the close location of
+the temple of brass.
+~
+252 167809088 11 0
+D1
+The road of wisdom is that way.
+~
+~
+0 0 139218
+D2
+Kossuth Avenue is that way.
+~
+~
+0 0 139198
+D3
+The Road of Wisdom is that way.
+~
+~
+0 0 139196
+S
+#139198
+&+yKossuth Avenue&n~
+   The street runs north and south here.  Up to an intersection north
+and toward the low quarter south.
+~
+252 167809088 11 0
+D0
+An intersection is that way.
+~
+~
+0 0 139197
+D2
+Kossuth Avenue keeps going that way.
+~
+~
+0 0 139199
+S
+#139199
+&+yKossuth Avenue&n~
+   The street runs north and south here.  The low quarter starts in this
+part of town.  To the west the inn and pub can be seen.
+~
+252 167809088 11 0
+D0
+Kossuth ave. is that way.
+~
+~
+0 0 139198
+D2
+Kossuth ave is that way.
+~
+~
+0 0 139200
+S
+#139200
+&+yKossuth Avenue&n~
+   The street runs to the north and south here.  To the east, is the
+entrance to the low quarter, that section of the city occupied by
+the common efreeti.  To the south is the intersection of Kossuth and
+Imix, the buildings of the inn are to the west.
+~
+252 167809088 11 0
+D0
+Kossuth ave. keeps going that way.
+~
+~
+0 0 139199
+D1
+The low quarter is in that direction.
+~
+~
+0 0 139201
+D2
+Imix ave. is that way.
+~
+~
+0 0 139180
+S
+#139201
+&+yEntrance to the Low Quarter&n~
+   This area of the city is home to the common efreeti, those few who
+do not claim to be of royal blood, or former nobles who have fallen on
+hard times, politically or financially.  This is indeed the slum area of the
+city of brass, which would still make any prime plane city look like a
+dump in comparison.  This area also houses those non-efreeti who call
+the city of brass home.
+~
+252 167809088 11 0
+D1
+The low quarter keeps going that way.
+~
+~
+0 0 139202
+D3
+Kossuth Avenue is back that way.
+~
+~
+0 0 139200
+S
+#139202
+&+yLow Quarter&n~
+   The buildings in this part of the city are less grand then those elsewhere,
+they are still however far and away better then any earthly dwelling, save
+perhaps the most grand palaces.  A vast number of non-efreeti wander the
+streets of this section of the city, not all of them friendly.
+~
+252 167809088 11 0
+D1
+The low quarter continues that way.
+~
+~
+0 0 139203
+D3
+The entrance to low quarter is that way.
+~
+~
+0 0 139201
+S
+#139203
+&+yLow Quarter&n~
+   The buildings in this part of the city are less grand then those elsewhere,
+they are still however far and away better then any earthly dwelling, save
+perhaps the most grand palaces.  A vast number of non-efreeti wander the
+streets of this section of the city, not all of them friendly.
+~
+252 167809088 11 0
+D0
+Low quarter keeps going that way.
+~
+~
+0 0 139204
+D3
+Low quarter keeps going that way.
+~
+~
+0 0 139202
+S
+#139204
+&+yLow Quarter&n~
+   The buildings in this part of the city are less grand then those elsewhere,
+they are still however far and away better then any earthly dwelling, save
+perhaps the most grand palaces.  A vast number of non-efreeti wander the
+streets of this section of the city, not all of them friendly.
+~
+252 167809088 11 0
+D2
+Low quarter runs onward that way.
+~
+~
+0 0 139203
+D3
+Low quarter keeps going in that direction.
+~
+~
+0 0 139205
+S
+#139205
+&+yLow Quarter&n~
+   The buildings in this part of the city are less grand then those elsewhere,
+they are still however far and away better then any earthly dwelling, save
+perhaps the most grand palaces.  A vast number of non-efreeti wander the
+streets of this section of the city, not all of them friendly.
+~
+252 167809088 11 0
+D1
+Low quarter runs that way.
+~
+~
+0 0 139204
+D3
+Low quarter runs on that way.
+~
+~
+0 0 139206
+S
+#139206
+&+yLow Quarter&n~
+   The buildings in this part of the city are less grand then those elsewhere,
+they are still however far and away better then any earthly dwelling, save
+perhaps the most grand palaces.  A vast number of non-efreeti wander the
+streets of this section of the city, not all of them friendly.
+~
+252 167809088 11 0
+D0
+Low quarter runs on in that direction.
+~
+~
+0 0 139207
+D1
+Low quarter keeps going that way.
+~
+~
+0 0 139205
+S
+#139207
+&+yLow Quarter&n~
+   The buildings in this part of the city are less grand then those elsewhere,
+they are still however far and away better then any earthly dwelling, save
+perhaps the most grand palaces.  A vast number of non-efreeti wander the
+streets of this section of the city, not all of them friendly.
+~
+252 167809088 11 0
+D1
+Low quarter runs on in that direction.
+~
+~
+0 0 139208
+D2
+Low quarter runs onward in that direction
+~
+~
+0 0 139206
+S
+#139208
+&+yLow Quarter&n~
+   The buildings in this part of the city are less grand then those elsewhere,
+they are still however far and away better then any earthly dwelling, save
+perhaps the most grand palaces.  A vast number of non-efreeti wander the
+streets of this section of the city, not all of them friendly.
+~
+252 167809088 11 0
+D1
+Low quarter keeps going in that direction.
+~
+~
+0 0 139209
+D3
+Low quarter keeps going in that direction.
+~
+~
+0 0 139207
+S
+#139209
+&+yLow Quarter&n~
+   The buildings in this part of the city are less grand then those elsewhere,
+they are still however far and away better then any earthly dwelling, save
+perhaps the most grand palaces.  A vast number of non-efreeti wander the
+streets of this section of the city, not all of them friendly.
+~
+252 167809088 11 0
+D1
+Low street is that way.
+~
+~
+0 0 139214
+D3
+Low quarter runs onward in that direction.
+~
+~
+0 0 139208
+S
+#139210
+&+yLow Street&n~
+   This street runs from the south east watch tower north along the city's
+east wall.  The more shady dealings that take place within the low quarter
+often go down on low street.  The city zoo walls can barely been seen
+off to the west and south.
+~
+252 167809088 11 0
+D0
+Low street keeps going in that direction.
+~
+~
+0 0 139212
+D2
+The city's south east watch tower is in that direction.
+~
+~
+0 0 139211
+S
+#139211
+&+ySouth East Watch Tower&n~
+   This huge tower some one thousand five hundred feet high overlooks
+the city and the surrounding areas of the plane of fire.  There are no stairs
+here to clime, and the tower seem hollow except for a huge platform
+barely visible from this distance at the top of the tower.
+~
+252 167809088 11 0
+D0
+Low street runs in that direction.
+~
+~
+0 0 139210
+S
+#139212
+&+yLow Street&n~
+   Low street runs to the north and south along the east wall of the city.
+The buildings of the low quarter are to the west.
+~
+252 167809088 11 0
+D0
+Low street keeps going in that direction.
+~
+~
+0 0 139213
+D2
+Low street keeps going in that direction.
+~
+~
+0 0 139210
+S
+#139213
+&+yLow Street&n~
+   Low street runs to the north and south along the east wall of the city.
+The buildings of the low quarter are to the west.
+~
+252 167809088 11 0
+D0
+Low street keeps going in that direction.
+~
+~
+0 0 139214
+D2
+Low street keeps going in that direction.
+~
+~
+0 0 139212
+S
+#139214
+&+yLow Street&n~
+   Low street runs to the north and south along the east wall of the city.
+The buildings of the low quarter are to the west.
+~
+252 167809088 11 0
+D0
+An intersection can be seen in that direction.
+~
+~
+0 0 139215
+D2
+Low street keeps going in that direction.
+~
+~
+0 0 139213
+D3
+The low quarter is that way.
+~
+~
+0 0 139209
+S
+#139215
+&+yIntersection of Low Street, High Street and the Road of Wisdom&n~
+   This T intersection connected low and high streets north and south
+as well as the Road of Wisdom to the west.
+~
+252 167809088 11 0
+D0
+High street is in that direction.
+~
+~
+0 0 139229
+D2
+Low street is that way.
+~
+~
+0 0 139214
+D3
+You can see the road of wisdom and the royal temple buildings that way.
+~
+~
+0 0 139216
+S
+#139216
+&+yThe Road of Wisdom&n~
+   The road runs east and west here, to the west the road runs as far
+as the eye can see,.  To the east is the intersection, and the buildings
+of the temple can be seen to the north.
+~
+252 167809088 11 0
+D1
+The intersection of Low and high streets are that way.
+~
+~
+0 0 139215
+D3
+The road keeps going in that direction.
+~
+~
+0 0 139217
+S
+#139217
+&+yThe Road of Wisdom&n~
+   The road here runs west and east.  To the west is the intersection
+of Royal way and the Road of Wisdom, to the east the road of wisdom
+continues.  The buildings of the Grand Temple can be seen to the north,
+and to the south is the low quarter.
+~
+252 167809088 11 0
+D1
+The road of wisdom runs on that way.
+~
+~
+0 0 139216
+D3
+The road keeps going toward the intersection that way.
+~
+~
+0 0 139218
+S
+#139218
+&+yThe Road of Wisdom&n~
+   The road here runs west and east.  To the west is the intersection
+of Royal way and the Road of Wisdom, to the east the road of wisdom
+continues.  The buildings of the Grand Temple can be seen to the north,
+and to the south is the low quarter.
+~
+252 167809088 11 0
+D1
+The road of wisdom keeps going that way.
+~
+~
+0 0 139217
+D3
+The intersection of royal way and the road of wisdom is that way.
+~
+~
+0 0 139197
+S
+#139219
+&+yEntrance to the Temple of the Gods&n~
+   This massive building, reaching far into the flaming sky, fairly glows
+with the power of the efreeti gods.  An overwhelming sense of fear comes
+over all who behold these magnificent buildings.  Great guardian statues of
+brass stand as everlasting sentinels preventing all who are un-holy from
+access to this the most sacred of efreeti shrines.
+~
+252 167809092 11 0
+D2
+The outer rooms can be seen that way.
+~
+~
+0 0 139220
+D3
+Royal Way is in that direction, as well as the door is in that direction.
+~
+doors brass~
+0 0 139173
+S
+#139220
+&+yOuter Chambers and Foyer&n~
+   This receiving room is huge, domed and gives off a blinding light, almost
+as if it were reaching deep into the soul of any who stand within.  A set of
+huge double arched doors stand to the east.
+~
+252 167809088 11 0
+D0
+The entrance can be seen in that direction.
+~
+~
+0 0 139219
+D1
+The doors to the main chapel are that way.
+~
+doors~
+0 0 139221
+S
+#139221
+&+yMain Chapel&n~
+   This enormous room, some ten thousand feet around is shaped like
+the flames of some mad god gone wild.  Seats or pews of solid brass
+seem to melt and flow into the floor with each passing second, the statue
+of some great being rises in a dais in the center of the room, well over
+a thousand feet tall, this statue seems to almost be alive with and gives
+off an erie humming sound.
+~
+252 167809088 11 0
+D0
+The inner chambers are that way.
+~
+~
+0 0 139223
+D3
+The outer chambers can be seen that way.
+~
+doors~
+0 0 139220
+D4
+A set of stairs can be seen that way.
+~
+~
+0 0 139222
+S
+#139222
+&+yOn the Glowing Stairs&n~
+   These stairs glow from below and feel odd below the feet of anyone
+standing on them.  Strange flashing and pulsing lights come from all
+over the walls and ceiling.
+~
+252 167809088 11 0
+D4
+The entrance to another room can be seen up there.
+~
+~
+0 0 139224
+D5
+You can see the Main Chapel back down in that direction.
+~
+~
+0 0 139221
+S
+#139223
+&+yTemple Inner Chambers&n~
+   This looks to be some sort of preparation room used by the temples
+priest before they hold whatever religious ceremonies in the previous
+room.
+~
+252 167809088 11 0
+D2
+The main chapel is back that way.
+~
+~
+0 0 139221
+S
+#139224
+&+yAcolytes Chambers&n~
+   This is where the lower clerics of the temple live, stay and study
+while in the temple.  It would seem that spartan is not the word used
+to describe the life style of these lowly priest, as this room is grand by
+anyones standards.
+~
+252 167809088 11 0
+D1
+Another room can be seen that way.
+~
+~
+0 0 139225
+D5
+The stairs are in that direction.
+~
+~
+0 0 139222
+S
+#139225
+&+yThe Supreme Cleric's Chamber&n~
+   This is the room of the pontiff of the temple of the gods.  The great and
+power efreeti El'Quilan hands down the edicts of the gods from this
+room, where it is said he has personal visions given to him by Imix and
+Kossuth.  Anyone entering this room had better have a personal invitation
+of be prepared to give up their life.
+~
+252 167809088 11 0
+D1
+A closed door is that way.
+~
+door~
+0 0 139226
+D2
+Another room can be seen that way.
+~
+~
+0 0 139227
+D3
+The acolyte rooms are that way.
+~
+~
+0 0 139224
+S
+#139226
+&+yThe Supreme Clerics Bedroom&n~
+   This is the private rooms of the leader of the efreeti church.
+His personal items are all within as well as holy artifacts belonging
+to the everlasting church of the efreeti.
+~
+252 167809088 11 0
+D3
+The doorway is in that direction.
+~
+door~
+0 0 139225
+S
+#139227
+&+yTemple Holy Room&n~
+   This room houses most of the sacred artifacts of the church.
+Anyone who removes an artifact from this room, is said to be forever
+cursed to a life of misery and failure.
+~
+252 167809088 11 0
+D0
+The Supreme Clerics room is back that way.
+~
+~
+0 0 139225
+D1
+A strange glowing pool can be seen that way.
+~
+~
+0 0 139228
+S
+#139228
+&+yPool of Meditation and Prayer&n~
+   This room contains a massive color pool of light that is said to grant
+the prayers of anyone loyal to an efreeti god.  And also to destroy anyone
+who lacks faith.  There are some who say new worlds can be seen if one
+looks within for too long.
+~
+252 167809088 11 0
+D3
+The Holy Room is back in that direction.
+~
+~
+0 0 139227
+S
+#139229
+&+yHigh Street&n~
+   This street leading off of low street, runs north to the North-East
+watch tower.  To the South is the intersection of Low, High and The
+Road of Wisdom streets.
+~
+252 167809088 11 0
+D0
+High street keeps going that way.
+~
+~
+0 0 139230
+D2
+The intersection of low, high and the road of wisdom is that way.
+~
+~
+0 0 139215
+S
+#139230
+&+yHigh Street&n~
+   The great towers of the Temple of the Gods can be seen to the west,
+to the north is an intersection, and to the south high street runs on.
+~
+252 167809088 11 0
+D0
+The intersection of high street and the way of heroes is that way.
+~
+~
+0 0 139231
+D2
+~
+~
+0 0 139229
+S
+#139231
+&+yIntersection of High Street and The Way of Heroes&n~
+   This intersection breaks to the west and still runs both north
+and south. There is a bridge over magma lake to the north and to
+the west, the Way of the Heroes lies.
+~
+252 167809088 11 0
+D0
+The North-East watch tower is that way.
+~
+door~
+0 139114 139336
+D2
+High street is that way.
+~
+~
+0 0 139230
+D3
+The way of heroes is that way.
+~
+~
+0 0 139233
+S
+#139232
+&+yNorth East Watch Tower&n~
+      This huge tower some one thousand five hundred feet high overlooks
+the city and the surrounding areas of the plane of fire.  There are no stairs
+here to clime, and the tower seem hollow except for a huge platform
+barely visible from this distance at the top of the tower.
+~
+252 167776320 11 0
+D2
+The intersection is that way.
+~
+door~
+3 139114 139307
+S
+#139233
+&+yWay of the Heroes&n~
+   The road runs east toward an intersection, and west as far as the
+eye can see.  Magma lake is directly to the north.
+~
+252 167809088 11 0
+D1
+The intersection of High Street and the Way of the Heroes is that way.
+~
+~
+0 0 139231
+D3
+The way of the heroes keeps going that way.
+~
+~
+0 0 139234
+S
+#139234
+&+yWay of the Heroes&n~
+   This road runs to the east and west here in both direction for almost
+as far as one can see.  The buildings of the Temple of the Gods is to the
+south, while magma lake is directly north.
+~
+252 167809088 11 0
+D1
+The way of heroes keeps going that way.
+~
+~
+0 0 139233
+D3
+The way of heroes keeps going that way.
+~
+~
+0 0 139235
+S
+#139235
+&+yWay of the Heroes&n~
+   This road runs to the east and west here in both direction for almost
+as far as one can see.  The buildings of the Temple of the Gods is to the
+south, while magma lake is directly north.
+~
+252 167809088 11 0
+D1
+The way of heroes keeps going that way.
+~
+~
+0 0 139234
+D3
+The way of heroes keeps going that way.
+~
+~
+0 0 139236
+S
+#139236
+&+yWay of the Heroes&n~
+   This road runs to the east and west here in both direction for almost
+as far as one can see.  The buildings of the Temple of the Gods is to the
+south, while magma lake is directly north.
+~
+252 167809092 11 0
+D0
+Magna lake is that way.
+~
+~
+0 0 139264
+D1
+The way of heroes keeps going that way.
+~
+~
+0 0 139235
+D3
+The way of heroes keeps going that way.
+~
+~
+0 0 139237
+S
+#139237
+&+yWay of the Heroes&n~
+   This road runs to the east and west here in both direction for almost
+as far as one can see.  The buildings of the Temple of the Gods is to the
+south, while magma lake is directly north.  Directly to the west is the
+intersection of Royal Way and the Way of the Heroes.
+~
+252 167809088 11 0
+D1
+The way of heroes runs on that way.
+~
+~
+0 0 139236
+D3
+The intersection of Royal Way and the Way of the Heroes can be seen there.
+~
+~
+0 0 139171
+S
+#139238
+&+WThe Grand Bridge of the Palace&n~
+   This vast expanse crosses the great magma lake, and leads to the
+mighty royal palace of the sultan of all the efreeti.  To cross this bridge
+is to invite doom and destruction of both the body and soul.
+~
+252 167809088 11 0
+D0
+The bridge keeps going in that direction.
+~
+~
+0 0 139239
+D2
+The intersection can be seen back in that direction.
+~
+~
+0 0 139171
+S
+#139239
+&+WThe Grand Bridge of the Palace&n~
+   This vast expanse crosses the great magma lake, and leads to the
+mighty royal palace of the sultan of all the efreeti.  To cross this bridge
+is to invite doom and destruction of both the body and soul.
+~
+252 167809088 11 0
+D0
+The gates of the palace can be seen in that direction.
+~
+~
+0 0 139240
+D2
+The bridge runs on in that direction.
+~
+~
+0 0 139238
+S
+#139240
+&+yThe Gates of the Royal Palace of the Sultan&n~
+   These massive gates some thousand feet high glow with power!
+Anyone foolish enough to attempt to enter should think twice before
+their life is forfeit.
+~
+252 167809092 11 0
+D0
+The palace gates are that way.
+~
+gates brass~
+3 139170 139348
+D2
+The bridge is in that direction.
+~
+~
+0 0 139239
+S
+#139241
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809092 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139242
+D2
+The way of the heroes is that way.
+~
+~
+0 0 139166
+S
+#139242
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+Magma lake keeps going that way.
+~
+~
+0 0 139243
+D2
+Magma lake keeps going that way.
+~
+~
+0 0 139241
+S
+#139243
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D1
+Magma Lake keeps going that way.
+~
+~
+0 0 139244
+D2
+Magma lakes keeps going that way.
+~
+~
+0 0 139242
+S
+#139244
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D1
+Magma Lake keeps going that way.
+~
+~
+0 0 139249
+D2
+Magma Lake keeps going in that direction.
+~
+~
+0 0 139245
+D3
+The Lake keeps going that way.
+~
+~
+0 0 139243
+S
+#139245
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139244
+D1
+The lake keeps going that way.
+~
+~
+0 0 139248
+D2
+The lake going on that way.
+~
+~
+0 0 139246
+S
+#139246
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going in that direction.
+~
+~
+0 0 139245
+S
+#139247
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139248
+D1
+The lake keeps going that way.
+~
+~
+0 0 139252
+S
+#139248
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139249
+D1
+The lake keeps going that way.
+~
+~
+0 0 139251
+D2
+The lake keeps going that way.
+~
+~
+0 0 139247
+D3
+~
+~
+0 0 139245
+S
+#139249
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139295
+D2
+The lake keeps going that way.
+~
+~
+0 0 139248
+D3
+The lake keeps going that way.
+~
+~
+0 0 139244
+S
+#139250
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809092 11 0
+D0
+~
+~
+0 0 139294
+D2
+The lake keeps going that way.
+~
+~
+0 0 139251
+S
+#139251
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139250
+D1
+The lake keeps going that way.
+~
+~
+0 0 139254
+D2
+The lake keeps going that way.
+~
+~
+0 0 139252
+D3
+The lake keeps going that way.
+~
+~
+0 0 139248
+S
+#139252
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139251
+D1
+The lake keeps going that way.
+~
+~
+0 0 139253
+D3
+The lake keeps going that way.
+~
+~
+0 0 139247
+S
+#139253
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D1
+The bridge can be seen that way, and the lake goes on.
+~
+~
+0 0 139258
+D3
+The lake keeps going that way.
+~
+~
+0 0 139252
+S
+#139254
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139255
+D1
+The bridge as well as the lake are in that direction.
+~
+~
+0 0 139257
+D3
+The lake keeps going that way.
+~
+~
+0 0 139251
+S
+#139255
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139297
+D1
+The bridge as well as the lake are in that direction.
+~
+~
+0 0 139256
+D2
+The lake keeps going that way.
+~
+~
+0 0 139254
+S
+#139256
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D2
+The lake keeps going that way.
+~
+~
+0 0 139257
+D3
+The bridge as well as the lake can be seen that way.
+~
+~
+0 0 139255
+S
+#139257
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139256
+D2
+The lake keeps going that way.
+~
+~
+0 0 139258
+D3
+The lake keeps going that way.
+~
+~
+0 0 139254
+S
+#139258
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139257
+D1
+The lake keeps going that way.
+~
+~
+0 0 139259
+D3
+The bridge as well as the lake are in that direction.
+~
+~
+0 0 139253
+S
+#139259
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139260
+D1
+The lake keeps going that way.
+~
+~
+0 0 139264
+D3
+The lake keeps going that way.
+~
+~
+0 0 139258
+S
+#139260
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139261
+D2
+The lake keeps going that way.
+~
+~
+0 0 139259
+S
+#139261
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D1
+The lake keeps going in that direction.
+~
+~
+0 0 139262
+D2
+The lake keeps going in that direction.
+~
+~
+0 0 139260
+S
+#139262
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D1
+The lake keeps going that way.
+~
+~
+0 0 139267
+D2
+~
+~
+0 0 139263
+D3
+The lake keeps going that way.
+~
+~
+0 0 139261
+S
+#139263
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139262
+D2
+The lake keeps going that way.
+~
+~
+0 0 139264
+S
+#139264
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139263
+D1
+The lake keeps going that way.
+~
+~
+0 0 139269
+D2
+~
+~
+0 0 139236
+D3
+The lake keeps going that way.
+~
+~
+0 0 139259
+S
+#139265
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139264
+D2
+The lake keeps going that way.
+~
+~
+0 0 139266
+S
+#139266
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D2
+The lake keeps going that way.
+~
+~
+0 0 139267
+D3
+The lake keeps going that way.
+~
+~
+0 0 139262
+S
+#139267
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D2
+The lake keeps going in that direction.
+~
+~
+0 0 139268
+D3
+~
+~
+0 0 139262
+S
+#139268
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139267
+D1
+~
+~
+0 0 139342
+D2
+The lake keeps going that way.
+~
+~
+0 0 139269
+S
+#139269
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+The lake keeps going that way.
+~
+~
+0 0 139268
+D1
+~
+~
+0 0 139337
+D3
+The lake keeps going that way.
+~
+~
+0 0 139264
+S
+#139270
+&+yMerchants Street Bridge~
+Merchants street continues to the north and south from here. To the
+north is the beginning of a bridge that expands over Magma Lake. Waves
+of heat can be seen as the steam is released from the rock as cracks
+are created in the slowly moving magma.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139271
+D2
+~
+~
+0 0 139158
+S
+#139271
+&+yMiddle of Merchants Street Bridge~
+Merchants street continues north and south of here as it expands over
+Magma Lake. Waves of heat can be felt as the steam is released from
+the rock as cracks are created in the slowly moving magma.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139272
+D2
+~
+~
+0 0 139270
+S
+#139272
+&+yMerchants Street Bridge~
+Merchants street continues to the north and south from here. To the
+south is the beginning of a bridge that expands over Magma Lake. Waves
+of heat can be seen as the steam is released from the rock as cracks
+are created in the slowly moving magma.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139273
+D2
+~
+~
+0 0 139271
+S
+#139273
+&+yMerchants Street~
+Merchants street continues north and south from here. The city wall is
+to your west and rises hundreds of feet into the sky. On the east side
+of the street is a building blocking your vision from looking on.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139274
+D2
+Merchants Street Bridge is to the south.
+~
+~
+0 0 139272
+S
+#139274
+&+yOutside the Smoking Hammer Shrine~
+Merchants street continues to the north and south from here. To the east
+is the entrance to the Smoking Hammer Shrine. The entrance is shaped like
+a hammer standing on its head and the shaft makes up the vertical opening.
+The city wall is west of here and rises hundreds of feet into the sky.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139279
+D1
+~
+~
+1 0 139275
+D2
+~
+~
+0 0 139273
+S
+#139275
+&+yEntryway of the Smoking Hammer Shrine~
+This giant room is lite by large braziers on the red brick walls that
+can barely illuminate the ceilings 20 feet above. The black marble
+floor is engraved with one large battle hammer taking up a majority
+of the space leaving just enough for four pedestals burning incense.
+Exits lead to the east that opens up to the main chamber, south to
+the armory, and west leaving the building to the street.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139276
+D2
+~
+~
+0 0 139277
+D3
+~
+~
+1 0 139274
+S
+#139276
+&+yMain Chamber of the Smoking Hammer Shrine~
+This giant room is lite by large braziers on the red brick walls that
+can barely illuminate the ceilings 20 feet above. This black marble
+floor is engraved with a picture of the god Surtr and hanging from the
+ceiling are chains all supporting one single chandelier. The room
+continues to the south where you can see the shrine.
+~
+252 167809096 11 0
+D2
+~
+~
+0 0 139278
+D3
+~
+~
+0 0 139275
+S
+#139277
+&+yPriest's of Surtr Armory~
+This giant room is lite by large braziers on the red brick walls that
+can barely illuminate the ceilings 20 feet above. The black marble
+floor is engraved with one large battle hammer taking up a majority
+of the space. On the south wall are the wares of the armory, small to
+huge hammers along with two-handed swords.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139275
+S
+#139278
+&+yShrine Room to Surtr~
+This giant room is lite by large braziers on the red brick walls that
+can barely illuminate the ceilings 20 feet above. The black marble
+floor is engraved with two battle hammers in the northern corners. In
+the southern end of the room is a shrine in the shape of hammer-head.
+It has been hollowed out and filled with a fire to burn the offerings
+made to Surtr.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139276
+S
+#139279
+&+yMerchants Street~
+Merchants street continues to the north and south from here. To the
+east there is a market place labeled by a bronze sign set on the wall
+reading "Commoners Market." The city wall is to the west and rises
+into the sky hundreds of feet.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139284
+D1
+~
+~
+0 0 139280
+D2
+~
+~
+0 0 139274
+S
+#139280
+&+yCommoners Marketplace~
+Many different potions can be seen lining the walls here onto shelves
+that reach fifteen feet high. There are labels on each one and between
+you and the wall is a display case with even more elixers that are ready
+for sale. A small circular table is set up on the east side of the room
+where the brewing equipment is placed.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139282
+D1
+~
+~
+0 0 139281
+D3
+~
+~
+0 0 139279
+S
+#139281
+&+yCommoners Marketplace~
+This room is decorated with demon heads, dragon teeth, owlbear pelts,
+and similar trophies alike. They have been collected and put on display
+here in this shop corner. A canopy extends away from the eastern wall to
+give some cover from the ash that occasionally falls and the southern
+wall is polished to help highlight the trophies.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139283
+D3
+~
+~
+0 0 139280
+S
+#139282
+&+yTila's Bakery amongst the Commoners Marketplace~
+A refreshing smell to nearly all races can be found here expelling from
+the ovens in this small corner shop. Strangely there is no smoke coming
+from them even though they are glowing as if they are lite. A small
+display case is located on the north and west wall and a stand alone one
+is in the opposite corner containing the different treats sold here.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139283
+D2
+~
+~
+0 0 139280
+S
+#139283
+&+yCommoners Marketplace~
+This section of the bazaar houses the shop of the royal clothier of the
+city, Saladeem Karontoo.  He is more well known however for the exotic
+leatherworks he has crafted in the past and possibly in the future.
+Saladeem is a gentle fellow for an efreeti and seems happy to server any
+customer that walks in the door.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139287
+D2
+~
+~
+0 0 139281
+D3
+~
+~
+0 0 139282
+S
+#139284
+&+yMerchants Street~
+Merchants street continues to the north and south of here. To the
+west are the exterior city walls expanding hundreds of feet into
+the sky. Off to the east is an open air marketplace but there is
+no entrance to it from here.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139285
+D2
+~
+~
+0 0 139279
+S
+#139285
+&+yIntersection of Merchants Street and Street of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue. The
+intersection turns to the south here as it melds with the Merchants
+Street. The northwest tower entrance of the city is to the north
+from here and the city wall blocks any further movement west.
+~
+252 167809088 11 0
+D0
+~
+~
+1 0 139159
+D1
+~
+~
+0 0 139286
+D2
+~
+~
+0 0 139284
+S
+#139286
+&+yStreet of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue.
+The Street of Steale is the major thoroughfare of the city. Running
+west of here it intersects with Merchants Street and to the east it
+stretches off out of sight. The city wall is directly to the north
+reaching into the sky and to the south is a marketplace but no access
+can be made from here.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139287
+D3
+~
+~
+0 0 139285
+S
+#139287
+&+yStreet of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue.
+Street of Steale continues to the east and west from here. To the
+south there is a market place labeled by a bronze sign set on the wall
+reading "Commoners Market." The city wall is to the north and rises
+into the sky hundreds of feet.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139288
+D2
+~
+~
+0 0 139283
+D3
+~
+~
+0 0 139286
+S
+#139288
+&+yStreet of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue.
+The Street of Steale continues to the east and west. To the north is
+the city wall which reaches into the sky for hundreds of feet. To the
+south there are ships of different shapes and sizes resting in the
+lake. The entrance to the docks rests to the east.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139289
+D3
+~
+~
+0 0 139287
+S
+#139289
+&+yIntersection of Street of Steale and Brass Harbor Way~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue.
+By far the busiest section of the Street of Steale as it intersects
+with the harbor. Many of the city's goods are transported through
+the docks and moved to the nearby markets. The city wall is to the
+north and to the south the street narrows just a little as forms
+the Brass Harbor way. The street of Steale continues out of sight to
+both the east and west of here.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139290
+D2
+~
+~
+0 0 139291
+D3
+~
+~
+0 0 139288
+S
+#139290
+&+yStreet of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue.
+The Street of Steale continues to the east and west. To the north is
+the city wall which reaches into the sky for hundreds of feet. To the
+south there are ships of different shapes and sizes resting in the
+lake. The entrance to the docks rests to the west.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139301
+D3
+~
+~
+0 0 139289
+S
+#139291
+&+yBrass Harbor Way~
+Loaded with crates, boxes, and cages containing different commodities
+the docks are bustling with business. The docks are made of a tough
+medal, possibily bronze, and continue north and south.
+~
+252 167809092 11 0
+D0
+~
+~
+0 0 139289
+D2
+~
+~
+0 0 139292
+S
+#139292
+&+yBrass Harbor Way~
+Loaded with crates, boxes, and cages containing different commodities
+the docks are bustling with business. The docks are made of a tough
+medal, possibily bronze, and continue north and south.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139291
+D1
+~
+~
+1 0 139299
+D2
+~
+~
+0 0 139293
+D3
+~
+~
+1 0 139300
+S
+#139293
+&+yBrass Harbor Way~
+Loaded with crates, boxes, and cages containing different commodities
+the docks are bustling with business. The docks are made of a tough
+medal, possibily bronze, and continue north and south.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139292
+D1
+~
+~
+0 0 139298
+D2
+~
+~
+0 0 139294
+D3
+~
+~
+0 0 139296
+S
+#139294
+&+yBrass Harbor Way~
+Loaded with crates, boxes, and cages containing different commodities
+the docks are bustling with business. The docks are made of a tough
+medal, possibily bronze, and continue north and south.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139293
+D1
+~
+~
+0 0 139297
+D2
+~
+~
+0 0 139250
+D3
+~
+~
+0 0 139295
+S
+#139295
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809092 11 0
+D0
+~
+~
+0 0 139296
+D1
+~
+~
+0 0 139294
+D2
+~
+~
+0 0 139249
+S
+#139296
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809092 11 0
+D1
+~
+~
+0 0 139293
+D2
+~
+~
+0 0 139295
+S
+#139297
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809092 11 0
+D0
+~
+~
+0 0 139298
+D2
+~
+~
+0 0 139255
+D3
+~
+~
+0 0 139294
+S
+#139298
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809092 11 0
+D2
+~
+~
+0 0 139297
+D3
+~
+~
+0 0 139293
+S
+#139299
+&+yBrass Harbor Shop~
+This room is filled with various seafares objects such as anchors made of
+brass, chains of harden metals, huge lanterns, and a massive sail. All
+these objects have little use on this plane or for any of the ships that
+make their way through the docks. Most of the ships are spelljammers and
+have no need for the more common ship equipment. The owner of the shop has
+been gone for quite sometime.
+~
+252 167809096 11 0
+D3
+~
+~
+1 0 139292
+S
+#139300
+&+yBrass Harbor Customs Office~
+Bustling with traders the City's custom office is constantly filled with
+traffic. There is a system where people can been seen in a timely manner
+and the office workers are consistantly moving. The papers are shuffled
+and filed into boxes in the western corner and the products are stored
+and visually checked along the eastern wall and outside the building.
+~
+252 167809096 11 0
+D1
+~
+~
+1 0 139292
+S
+#139301
+&+yStreet of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue. The
+city wall is to the north and reaches into the sky for hundreds of
+feet. The Street of Steale continues to the east and west.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139302
+D3
+~
+~
+0 0 139290
+S
+#139302
+&+yStreet of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue. The
+city wall is to the north and reaches into the sky for hundreds of
+feet. The Street of Steale continues to the east and west.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139303
+D2
+~
+~
+0 0 139322
+D3
+~
+~
+0 0 139301
+S
+#139303
+&+yStreet of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue. The
+city wall is to the north and reaches into the sky for hundreds of
+feet. The Street of Steale continues to the east and west. North
+Kossuth Avenue connects here leading to the south.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139304
+D2
+~
+~
+0 0 139321
+D3
+~
+~
+0 0 139302
+S
+#139304
+&+yStreet of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue. The
+city wall is to the north and reaches into the sky for hundreds of
+feet. The Street of Steale continues to the east and west.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139305
+D3
+~
+~
+0 0 139303
+S
+#139305
+&+yStreet of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue. The
+city wall is to the north and reaches into the sky for hundreds of
+feet. The Street of Steale continues to the east and west. There
+is a major marketplace called the Pyraculum to the south.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139306
+D2
+~
+~
+0 0 139308
+D3
+~
+~
+0 0 139304
+S
+#139306
+&+yStreet of Steale~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue. The
+city wall is to the north and reaches into the sky for hundreds of
+feet. The Street of Steale continues to the east and west.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139307
+D3
+~
+~
+0 0 139305
+S
+#139307
+&+yIntersection of Street of Steale and High Street~
+The streets are constructed in a cobblestone pattern but made of
+some redish tint marble. Lights line the streets in lanterns that
+hover over the walkways and glow yellow with a magical hue. The
+intersection turns south forming High Street and to the north you
+can see the northeast tower entrance. The city wall blocks any
+further passage to the east as it reaches hundreds of feet into
+the sky. The Street of Steale is the major thoroughfare of the
+city and leads to the west.
+~
+252 167809088 11 0
+D0
+~
+~
+3 139114 139232
+D2
+~
+~
+0 0 139330
+D3
+~
+~
+0 0 139306
+S
+#139308
+&+yThe Pyraculum Marketplace~
+This is a massive bazaar with large copper paved roads in a circle
+pattern in two layers, inner and outer, as it directs its passengers
+around to its shops. The businesses line both sides of the road and
+each business has a booth that has its own canopy covering with a small
+tabletop counter. The larger shops are much more elaborant and some
+have made themselves a more permenant building. The Pyraculum market is
+reknown for the high quality goods that move through.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139305
+D1
+~
+~
+0 0 139319
+D2
+~
+~
+0 0 139309
+D3
+~
+~
+0 0 139315
+S
+#139309
+&+yThe Pyraculum Marketplace~
+You can hear musicial sounds throughout the marketplace but this area
+is definitely where the music was coming from. There is a Satyr who is
+skipping around in an undefined pattern playing various instruments
+keeping those who are interested entertained. He has a small circular
+tent set up in what would be considered the center of the bazaar with
+many instruments that are made of mostly medals or of some speciality
+woods.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139308
+D1
+~
+~
+0 0 139318
+D2
+~
+~
+0 0 139310
+D3
+~
+~
+0 0 139314
+S
+#139310
+&+yThe Pyraculum Marketplace~
+This is a massive bazaar with large copper paved roads in a circle
+pattern in two layers, inner and outer, as it directs its passengers
+around to its shops. The businesses line both sides of the road and
+each business has a booth that has its own canopy covering with a small
+tabletop counter. The larger shops are much more elaborant and some
+have made themselves a more permenant building. The Pyraculum market is
+reknown for the high quality goods that move through.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139309
+D1
+~
+~
+0 0 139317
+D2
+~
+~
+0 0 139311
+D3
+~
+~
+0 0 139313
+S
+#139311
+&+yThe Pyraculum Marketplace~
+This is a massive bazaar with large copper paved roads in a circle
+pattern in two layers, inner and outer, as it directs its passengers
+around to its shops. The businesses line both sides of the road and
+each business has a booth that has its own canopy covering with a small
+tabletop counter. The larger shops are much more elaborant and some
+have made themselves a more permenant building. The Pyraculum market is
+reknown for the high quality goods that move through.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139310
+D1
+~
+~
+0 0 139343
+D3
+~
+~
+0 0 139312
+S
+#139312
+&+yThe Pyraculum Marketplace~
+This glowing corner of the Pyraculum Marketplace houses the shop of
+the famous gem cutters of the city of brass.  All sorts of wondrous
+gem stones can be found within, as well as cut and set jewels.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139313
+D1
+~
+~
+0 0 139311
+S
+#139313
+&+yThe Pyraculum Marketplace~
+In these rows of the marketplace visitors or residents can rent a tent
+for the day or longer and sell their goods. The tents are not as private
+as the others you see here in the bazaar but are more elongated to pro-
+vide a greater amount of vendors to fit under one roof. They are well
+maintained and are currently all in use for the day.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139314
+D1
+~
+~
+0 0 139310
+D2
+~
+~
+0 0 139312
+S
+#139314
+&+yThe Pyraculum Marketplace~
+This is a massive bazaar with large copper paved roads in a circle
+pattern in two layers, inner and outer, as it directs its passengers
+around to its shops. The businesses line both sides of the road and
+each business has a booth that has its own canopy covering with a small
+tabletop counter. The larger shops are much more elaborant and some have
+made themselves a more permenant building. The Pyraculum market is
+reknown for the high quality goods that move through.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139315
+D1
+~
+~
+0 0 139309
+D2
+~
+~
+0 0 139313
+D3
+~
+~
+0 0 139320
+S
+#139315
+&+yPyraculum Information Emporium~
+A single desk stands in the corner about five feet from each wall.
+Behind is a single chair which Shanaanaa sits. The wall to the north
+is a bit marred from the constant contact with the ball that is bounced
+against it. On the opposing wall is a sign that reads,
+                       "Information for Sale"
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139308
+D2
+~
+~
+0 0 139314
+S
+#139316
+&+yThe Entrance to the Shrine of Imix~
+Just inside the door to this room are two pillars made solely of fire.
+The fire seems to be moving downwards into to bronze shafts running
+along the base of the walls that are filled with some flaming liquid that
+continues to the next room. There is a well marked path in the middle of
+the room leading from one to the next made of redish orange cobblestone.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139116
+D2
+~
+~
+0 0 139344
+S
+#139317
+&+yThe Pyraculum Marketplace~
+This odd round tent seems most odd, the walls part as people get close
+to it to allow access to the inside.  This tends to be un-nerving to the
+faint of heart.  All sorts off magic devices and items are to be found
+within.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139318
+D2
+~
+~
+0 0 139343
+D3
+~
+~
+0 0 139310
+S
+#139318
+&+yThe Pyraculum Marketplace~
+This is a massive bazaar with large copper paved roads in a circle
+pattern in two layers, inner and outer, as it directs its passengers
+around to its shops. The businesses line both sides of the road and
+each business has a booth that has its own canopy covering with a small
+tabletop counter. The larger shops are much more elaborant and some
+have made themselves a more permenant building. The Pyraculum market is
+reknown for the high quality goods that move through.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139319
+D1
+~
+~
+0 0 139331
+D2
+~
+~
+0 0 139317
+D3
+~
+~
+0 0 139309
+S
+#139319
+&+yThe Pyraculum Marketplace~
+A very dusty and not well travelled corner of the bazaar is tucked away
+in the corner here. Just a single being resides here, the construct
+called "the repair man". Flakes of its flesh forms layers upon layers of
+dust as it stands motionless until needed. Several vacant shops are
+adjacent nearby as their inhabitents probably found it a bit creepy as
+did the bazaar traffic since not many visit here.
+~
+252 167809088 11 0
+D2
+~
+~
+0 0 139318
+D3
+~
+~
+0 0 139308
+S
+#139320
+&+yNorth Kossuth Avenue~
+This narrow path is made of the same material as the rest of the roads
+here, bronze and brass mixture. Not as shiny or as well maintained as
+the rest of the roads here, there is a greenish tint forming on the
+edges of the street. The road leads north towards the Street of Steale
+and to the east lies the Pyraculum market.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139321
+D1
+~
+~
+0 0 139314
+S
+#139321
+&+yNorth Kossuth Avenue~
+This narrow path is made of the same material as the rest of the roads
+here, bronze and brass mixture. Not as shiny or as well maintained as
+the rest of the roads here, there is a greenish tint forming on the
+edges of the street. The road leads north towards the Street of Steale
+and to the east lies the Pyraculum market.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139303
+D2
+~
+~
+0 0 139320
+S
+#139322
+&+ySlave Market Entrance~
+The light here seems a bit deminished due to the all the various
+different banners stretched across the room from one wall to the
+opposite creating a ceiling of sorts. All the colors symbolize
+the accepted tradable races within the market and is defined on
+the signs posted in front of the receptionist desk. North leads
+to the Street of Steale and to the south is the markets gateway.
+~
+252 167809092 11 0
+D0
+~
+~
+0 0 139302
+D2
+~
+~
+0 0 139323
+S
+#139323
+&+yThe Slave Market Gateway~
+Counters and tables line the walls and are used for checking in and
+out of the slaves that are bought and solid in the market. Each have
+their own purpose and are labeled accordingly with a bright red glow
+engraved into them. To the north is the entrance of the slave market
+and the Street of Steale. To the south is the slave market proper and
+its main stage beyond that.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139322
+D2
+~
+~
+0 0 139324
+S
+#139324
+&+yThe Slave Market~
+This area is filled with cages of all different sizes around the
+edges of the room and poles in the center with shackles attached.
+The smell is rancid likely from all the sweat and hygene of the
+humanoids that visit here. Only relief is the open air from above
+but is stale in such a hot place. The slave market continues on
+in all directions save to the north that leads back towards the
+Street of Steale.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139323
+D1
+~
+~
+0 0 139325
+D2
+~
+~
+0 0 139327
+D3
+~
+~
+0 0 139329
+S
+#139325
+&+yThe Slave Market~
+This area is filled with cages of all different sizes around the
+edges of the room and poles in the center with shackles attached.
+The smell is rancid likely from all the sweat and hygene of the
+humanoids that visit here. Only relief is the open air from above
+but is stale in such a hot place. The slave market continues on
+to the south and west.
+~
+252 167809088 11 0
+D2
+~
+~
+0 0 139326
+D3
+~
+~
+0 0 139324
+S
+#139326
+&+yThe Slave Market~
+This area is filled with cages of all different sizes around the
+edges of the room and poles in the center with shackles attached.
+The smell is rancid likely from all the sweat and hygene of the
+humanoids that visit here. Only relief is the open air from above
+but is stale in such a hot place. The slave market continues on
+to the north and west.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139325
+D3
+~
+~
+0 0 139327
+S
+#139327
+&+yThe Slave Market Stage~
+This area is filled with cages of all different sizes around the
+edges of the room and poles in the center with shackles attached.
+The smell is rancid likely from all the sweat and hygene of the
+humanoids that visit here. Only relief is the open air from above
+but is stale in such a hot place. Along the south wall is a huge
+stage made of copper and trimmed in silver. This is the center
+focus of this room as all the attention is drawn to the activities
+taking place there. The slave market continues on to the north,
+east and west.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139324
+D1
+~
+~
+0 0 139326
+D3
+~
+~
+0 0 139328
+S
+#139328
+&+yThe Slave Market~
+This area is filled with cages of all different sizes around the
+edges of the room and poles in the center with shackles attached.
+The smell is rancid likely from all the sweat and hygene of the
+humanoids that visit here. Only relief is the open air from above
+but is stale in such a hot place. The slave market continues on
+to the north and east.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139329
+D1
+~
+~
+0 0 139327
+S
+#139329
+&+yThe Slave Market~
+This area is filled with cages of all different sizes around the
+edges of the room and poles in the center with shackles attached.
+The smell is rancid likely from all the sweat and hygene of the
+humanoids that visit here. Only relief is the open air from above
+but is stale in such a hot place. The slave market continues on
+to the south and east.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139324
+D2
+~
+~
+0 0 139328
+S
+#139330
+&+yHigh Street~
+Floating laterns glow with a yellowish hue hovering over the convex
+road while the walks are barely lite. The city wall reaches into the
+sky to the east. To the north there is a tower and the road intersects
+turning west. High street runs on to the south from here.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139307
+D2
+~
+~
+0 0 139331
+S
+#139331
+&+yHigh Street~
+Floating laterns glow with a yellowish hue hovering over the convex
+road while the walks are barely lite. The city wall reaches into the
+sky to the east and the Pyraculum Marketplace opens up to the west of
+here. High street runs on to the south.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139330
+D2
+~
+~
+0 0 139332
+D3
+~
+~
+0 0 139318
+S
+#139332
+&+yHigh Street~
+Floating laterns glow with a yellowish hue hovering over the convex
+road while the walks are barely lite. The city wall reaches into the
+sky to the east. To the north there is a tower and the road intersects
+turning west. High street runs on to the south from here.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139331
+D2
+~
+~
+0 0 139333
+S
+#139333
+&+yHigh Street~
+Floating laterns glow with a yellowish hue hovering over the convex
+road while the walks are barely lite. The city wall reaches into the
+sky to the east. To the north there is a tower and the road intersects
+turning west. High street runs on to the south from here.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139332
+D2
+~
+~
+0 0 139334
+S
+#139334
+&+yThe High Street Bridge~
+Floating laterns glow with a yellowish hue hovering over the convex
+road while the walks are barely lite. To the south is the beginning
+of a bridge that expands over Magma Lake. Waves of heat can be seen
+as the steam is released from the rock as cracks are created in the
+slowly moving magma. The city wall reaches into the sky to the east
+otherwise the street continues north.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139333
+D2
+~
+~
+0 0 139335
+S
+#139335
+&+yThe Middle of the High Street Bridge~
+Floating laterns glow with a yellowish hue hovering over the convex
+road while the walks are barely lite. The bridge stretches north and
+south rising over the Magma Lake. Waves of heat can be seen as the
+steam is released from the rock as cracks are created in the slowly
+moving magma. The city wall reaches into the sky to the east otherwise
+the street continues north and south.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139334
+D2
+~
+~
+0 0 139336
+S
+#139336
+&+yThe High Street Bridge~
+Floating laterns glow with a yellowish hue hovering over the convex
+road while the walks are barely lite. To the north is the beginning
+of a bridge that expands over Magma Lake. Waves of heat can be seen
+as the steam is released from the rock as cracks are created in the
+slowly moving magma. The city wall reaches into the sky to the east
+otherwise the street continues south.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139335
+D2
+~
+~
+0 0 139231
+S
+#139337
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139342
+D3
+~
+~
+0 0 139269
+S
+#139338
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139339
+S
+#139339
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139340
+D2
+~
+~
+0 0 139338
+D3
+~
+~
+0 0 139342
+S
+#139340
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D2
+~
+~
+0 0 139339
+D3
+~
+~
+0 0 139341
+S
+#139341
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139340
+D2
+~
+~
+0 0 139342
+S
+#139342
+&+rMagma Lake&n~
+   This great lake of molten lava flows from a huge river that cuts through
+the center of the plane of fire.  The heat is more intense here then most
+other places in the city.  Strange looking objects or creatures can be seen
+swimming in the lava from time to time.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139341
+D1
+~
+~
+0 0 139339
+D2
+~
+~
+0 0 139337
+D3
+~
+~
+0 0 139268
+S
+#139343
+&+yThe Grand Hurloos Fortunes&n~
+   This corner shop is the home of a strange and powerful efreeti
+said to be able to see the future of all.  Some leave the place
+with shocked looks on their faces, others seem over joyed.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139317
+D3
+~
+~
+0 0 139311
+S
+#139344
+&+yA Hallway Inside the Imix Temple~
+Running along the base of the walls are bronze shafts that are filled
+with some flaming liquid that continue between the two connecting rooms.
+There is a well marked path in the middle of the room leading from one
+to the next made of redish orange cobblestone. To the west it looks as
+if the room is on fire. Back to the north is the entrance.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139316
+D3
+~
+~
+0 0 139345
+S
+#139345
+&+yThe Burning Chamber~
+The walls of this room are on fire. There is a huge circular pit in the
+middle of the room filled with ash and other debre. There is an opening
+in the ceiling allowing all the smoke to leave but the room is still
+very difficult to breath in and your eyes burn from all the smoke.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139346
+D1
+~
+~
+0 0 139344
+S
+#139346
+&+yThe Shrine Room to Imix~
+This room is emaculate and contains just 1 singular object which is
+located in the center of the room, a flame. The flame comes right out
+of the floor by some magical means. It is not consuming any sort of
+fuel source that you can tell with a closer look and is giving off no
+heat or smoke. The wall and floors are made of a mirror like surface
+reflecting the light from the flame casting shadows of anyone who enters
+the room.
+~
+252 167809096 11 0
+D2
+~
+~
+0 0 139345
+S
+#139347
+&+WRare Load Room for Brass Palace~
+~
+252 176193608 11 0
+D0
+~
+~
+0 0 139401
+D3
+~
+~
+0 0 139351
+S
+#139348
+&+yAn Entryway Inside the Palace Gates~
+The entryway is over forty feet high with massive supporting columns
+of solid flame that seem to be formed out of some sort of mystical
+force that holds them in place. Heat can be felt radiating from them
+giving you a sense of their intensity considering your on the Plane
+of Elemental Fire.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139349
+D2
+~
+~
+1 0 139240
+S
+#139349
+&+yA Great Arch~
+This room is a huge flaming arch that separates the palace from the
+entryway. There is some mystical force which holds the flames of
+this arch in place and is radiating with intense heat.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139350
+D2
+~
+~
+0 0 139348
+S
+#139350
+&+ySouthern Entrance to the Palace Courtyard~
+This is a vast courtyard running for hundreds of feet in all
+directions. A huge flaming fountain of fire can be seen to
+the north, and strange trees of solid flame are growing here
+in neat little rows along the edge of the yard. The main
+building of the palace can be seen far to the north but an
+imposing wall seperates you from it. Above, the flaming sky
+can be seen with ease in this open space.
+~
+252 167809092 11 0
+D0
+~
+~
+0 0 139351
+D1
+~
+~
+0 0 139353
+D2
+~
+~
+0 0 139349
+D3
+~
+~
+0 0 139355
+S
+#139351
+&+yThe Center of the Palace Courtyard~
+The courtyard spans out here for hundreds of feet in all
+directions. A large fountain of shooting flames rest here.
+Different colors of flame shoot forth from its fiery base.
+Large trees of fire and smaller bushes line the huge wall
+of brass writhed in flames to the north and form a semi-
+circle near the fountain. Extremely large benches litter
+this area all facing the fountain.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139352
+D2
+~
+~
+0 0 139350
+D3
+~
+~
+0 0 139354
+S
+#139352
+&+yNortheastern Corner of the Palace Courtyard~
+The courtyard ends here at a great wall that runs up far into
+the sky. A large fountain can be seen off to the west and many
+more trees and bushes of fiery colors line the nearby wall.
+~
+252 167809088 11 0
+D2
+~
+~
+0 0 139353
+D3
+~
+~
+0 0 139351
+S
+#139353
+&+yEastern Entrance to the Palace Courtyard~
+The huge courtyard continues here covering almost an acre.
+Flaming bushes and trees parkway to provide neat access to
+the landing east of here. To the north the courtyard
+continues toward the main structure and to the south a large
+wall of some one hundred feet high rises upward into the sky.
+The courtyard goes west of here leading to the great arch.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139352
+D1
+~
+~
+0 0 139360
+D3
+~
+~
+0 0 139350
+S
+#139354
+&+yThe Palace Courtyard~
+The courtyard runs along for several more hundred feet in all
+directions from here except to the north where a huge wall of
+solid brass and writhed in flame reaches high into the sky.
+More trees and bushes of living flame are neatly lining the wall.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139351
+D2
+~
+~
+0 0 139355
+D3
+~
+~
+0 0 139356
+S
+#139355
+&+yThe Palace Courtyard~
+The courtyard runs along for several more hundred feet in all
+directions from here except to the south where a huge wall of
+solid brass and writhed in flame reaches high into the sky.
+More trees and bushes of living flame are neatly lining the wall.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139354
+D1
+~
+~
+0 0 139350
+D3
+~
+~
+0 0 139357
+S
+#139356
+&+yNorthwest Corner of the Palace Courtyard~
+The courtyard continues on for several hundred feet more ending
+here in the northwest corner of the yard. Many more of the
+flaming trees and bushes are here along the palace walls.
+~
+252 167809088 11 0
+D1
+~
+~
+0 0 139354
+D2
+~
+~
+0 0 139357
+S
+#139357
+&+yThe Palace Courtyard~
+The courtyard runs along for several more hundred feet in all
+directions from here except to the south where a huge wall of
+solid brass and writhed in flame reaches high into the sky.
+More trees and bushes of living flame are neatly lining the wall.
+~
+252 167809088 11 0
+D0
+~
+~
+0 0 139356
+D1
+~
+~
+0 0 139355
+D3
+~
+~
+0 0 139358
+S
+#139358
+&+yAn Entryway~
+An entryway to the palace is in the west wall, allowing access
+to a flight of glowing and blazing stairs. The entryway is some
+forty feet high and has intricate carvings set into the glowing
+brass walls. The heat is still amazing in this place, far hotter
+still then the city was and much hotter the Plane itself.
+~
+252 167809100 11 0
+D1
+~
+~
+0 0 139357
+D3
+~
+~
+0 0 139359
+S
+#139359
+&+yA Landing~
+The landing here gives one an eerie feeling when standing on it.
+The floor below seems to be made of some soft flowing fire-marble
+that shifts and moves making anyone looking at it sick to their
+stomach within a few moments.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139358
+D4
+~
+~
+0 0 139361
+S
+#139360
+&+yA Landing~
+The landing here gives one an eerie feeling when standing on it.
+The floor below seems to be made of some soft flowing fire-marble
+that shifts and moves making anyone looking at it sick to their
+stomach within a few moments.
+~
+252 167809100 11 0
+D3
+~
+~
+0 0 139353
+D4
+~
+~
+0 0 139365
+S
+#139361
+&+y A Grand Stairway~
+A regal grand staircase running up and down here composed
+of moving flames gives one an uneasy feeling as its walked
+upon.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139362
+D5
+~
+~
+0 0 139359
+S
+#139362
+&+y A Grand Stairway~
+A regal grand staircase running up and down here composed
+of moving flames gives one an uneasy feeling as its walked
+upon.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139363
+D5
+~
+~
+0 0 139361
+S
+#139363
+&+y A Grand Stairway~
+A regal grand staircase running up and down here composed
+of moving flames gives one an uneasy feeling as its walked
+upon.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139364
+D5
+~
+~
+0 0 139362
+S
+#139364
+&+y A Grand Stairway~
+A regal grand staircase running up and down here composed
+of moving flames gives one an uneasy feeling as its walked
+upon.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139366
+D5
+~
+~
+0 0 139363
+S
+#139365
+&+y A Grand Stairway~
+A regal grand staircase running up and down here composed
+of moving flames gives one an uneasy feeling as its walked
+upon.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139455
+D5
+~
+~
+0 0 139360
+S
+#139366
+&+yA Landing~
+The landing here gives one an eerie feeling when standing on it.
+The floor below seems to be made of some soft flowing fire-marble
+that shifts and moves making anyone looking at it sick to their
+stomach within a few moments.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139368
+D3
+~
+~
+0 0 139364
+S
+#139367
+&+yA Landing~
+The landing here gives one an eerie feeling when standing on it.
+The floor below seems to be made of some soft flowing fire-marble
+that shifts and moves making anyone looking at it sick to their
+stomach within a few moments.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139369
+D3
+~
+~
+0 0 139368
+S
+#139368
+&+yA Grand Staircase~
+An short set of stairs head off even higher yet into the palace to
+the north of here. They seem to be moving of their own accord just
+as the other staircases here in the palace.
+~
+252 167809100 11 0
+D1
+~
+~
+0 0 139367
+D3
+~
+~
+0 0 139366
+D4
+~
+~
+0 0 139370
+S
+#139369
+&+y A Grand Stairway~
+A regal grand staircase running up and down here composed
+of moving flames gives one an uneasy feeling as its walked
+upon.
+~
+252 167809096 11 0
+D3
+~
+~
+0 0 139367
+D5
+~
+~
+0 0 139454
+S
+#139370
+&+yIntersection on the Grand Stairs~
+The stairs pause here, and a long hallway can be seen running
+both west and east from here. This seems to be an intersection
+for various other areas of the palace. This stairs continue
+up from here just to the north across the hall.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139372
+D3
+~
+~
+0 0 139375
+D4
+~
+~
+0 0 139371
+D5
+~
+~
+0 0 139368
+S
+#139371
+&+yA Grand Stairway~
+This stairway is much like the one before, only is far larger
+in its height and width. The stairs take on an almost flowing
+like quality to them and the heat seems to be more intense here.
+~
+252 167809096 11 0
+D2
+~
+~
+0 0 139423
+D4
+~
+~
+0 0 139422
+D5
+~
+~
+0 0 139370
+S
+#139372
+&+yA Long Hallway~
+What seems like an endless hallway runs along here to the east and west.
+The ceiling is some fifty feet or more overhead with a curved shape to
+it. Red marble or a marble like substance composes the floor of this
+hall, and several murals line the walls. Every so often an arched window
+too high for a human to see out of is cut in the wall with two braziers,
+one on each side of the window, glow bright orange to light the hall.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139373
+D3
+~
+~
+0 0 139370
+S
+#139373
+&+yA Long Hallway~
+What seems like an endless hallway runs along here to the east and west.
+The ceiling is some fifty feet or more overhead with a curved shape to
+it. Red marble or a marble like substance composes the floor of this
+hall, and several murals line the walls. Every so often an arched window
+too high for a human to see out of is cut in the wall with two braziers,
+one on each side of the window, glow bright orange to light the hall.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139374
+D3
+~
+~
+0 0 139372
+S
+#139374
+&+yA Long Hallway~
+What seems like an endless hallway runs along here to the east and west.
+The ceiling is some fifty feet or more overhead with a curved shape to
+it. Red marble or a marble like substance composes the floor of this
+hall, and several murals line the walls. Every so often an arched window
+too high for a human to see out of is cut in the wall with two braziers,
+one on each side of the window, glow bright orange to light the hall.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139431
+D3
+~
+~
+0 0 139373
+S
+#139375
+&+yA Long Hallway~
+What seems like an endless hallway runs along here to the east and west.
+The ceiling is some fifty feet or more overhead with a curved shape to
+it. Red marble or a marble like substance composes the floor of this
+hall, and several murals line the walls. Every so often an arched window
+too high for a human to see out of is cut in the wall with two braziers,
+one on each side of the window, glow bright orange to light the hall.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139370
+D3
+~
+~
+0 0 139376
+S
+#139376
+&+yA Long Hallway~
+What seems like an endless hallway runs along here to the east and west.
+The ceiling is some fifty feet or more overhead with a curved shape to
+it. Red marble or a marble like substance composes the floor of this
+hall, and several murals line the walls. Every so often an arched window
+too high for a human to see out of is cut in the wall with two braziers,
+one on each side of the window, glow bright orange to light the hall.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139375
+D3
+~
+~
+0 0 139377
+S
+#139377
+&+yA Long Hallway~
+What seems like an endless hallway runs along here to the east and west.
+The ceiling is some fifty feet or more overhead with a curved shape to
+it. Red marble or a marble like substance composes the floor of this
+hall, and several murals line the walls. Every so often an arched window
+too high for a human to see out of is cut in the wall with two braziers,
+one on each side of the window, glow bright orange to light the hall.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139376
+D3
+~
+~
+0 0 139378
+S
+#139378
+&+yA Long Hallway~
+What seems like an endless hallway runs along here to the east and west.
+The ceiling is some fifty feet or more overhead with a curved shape to
+it. Red marble or a marble like substance composes the floor of this
+hall, and several murals line the walls. Every so often an arched window
+too high for a human to see out of is cut in the wall with two braziers,
+one on each side of the window, glow bright orange to light the hall.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139377
+D3
+~
+~
+0 0 139379
+S
+#139379
+&+yA Long Hallway~
+What seems like an endless hallway runs along here to the east and west.
+The ceiling is some fifty feet or more overhead with a curved shape to
+it. Red marble or a marble like substance composes the floor of this
+hall, and several murals line the walls. Every so often an arched window
+too high for a human to see out of is cut in the wall with two braziers,
+one on each side of the window, glow bright orange to light the hall.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139378
+D3
+~
+~
+0 0 139380
+S
+#139380
+&+yA Long Hallway~
+What seems like an endless hallway runs along here to the east and west.
+The ceiling is some fifty feet or more overhead with a curved shape to
+it. Red marble or a marble like substance composes the floor of this
+hall, and several murals line the walls. Every so often an arched window
+too high for a human to see out of is cut in the wall with two braziers,
+one on each side of the window, glow bright orange to light the hall.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139381
+D1
+~
+~
+0 0 139379
+S
+#139381
+&+yA Long Hallway~
+What seems like an endless hallway runs along here to the north and
+south. The ceiling is some fifty feet or more overhead with a curved
+shape to it. Red marble or a marble like substance composes the floor
+of this hall, and several murals line the walls. No windows are here
+but the same glowing braziers continue to lite the hall.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139382
+D2
+~
+~
+0 0 139380
+S
+#139382
+&+yIntersection in the Hallway~
+The hallway turns here to the east, and also goes to the north where
+it ends at a door. Another larger door can be seen in the distance
+to the east.
+~
+252 167809096 11 0
+D0
+~
+~
+2 139230 139389
+D1
+~
+~
+0 0 139383
+D2
+~
+~
+0 0 139381
+S
+#139383
+&+yA Long Hallway~
+The hallway ends here at a huge door made of solid purple flames.
+Some sort of a royal seal is emblazed on the door, and a rather
+large ornate keyhole is also cut into the door.
+~
+252 167809096 11 0
+D1
+~
+~
+2 139230 139384
+D3
+~
+~
+0 0 139382
+S
+#139384
+&+yA Grand Foyer~
+This room is very large, very hot and contains all several types
+of large bench type seats. It would seem that it is a waiting
+room of sorts for those who have business with whoever is in the
+next room. Another door can be seen to the east, this one of the
+same color as the last, with the same odd seal upon it.
+~
+252 167809096 11 0
+D1
+~
+~
+1 0 139385
+D3
+~
+~
+1 0 139383
+S
+#139385
+&+yArtoon's Room~
+This immense room obviously belongs to a god, at least that is the
+impression anyone would get from walking into here. Huge flaming
+columns of purple and blue flames run well over one hundred feet
+from floor to ceiling and an air of energy can be felt everywhere
+in here. The floor is of polished brass and there is a huge rounded
+window overlooking the courtyard and fountains. The ceiling has
+various paintings on it, depicting all sorts of efreeti activities.
+These seem far less warlike than those enchanted elsewhere in the
+palace. A bejeweled throne is in the far eastern part of the room.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139386
+D3
+~
+~
+1 0 139384
+S
+#139386
+&+yPadashaw's Bedroom~
+This bedroom is lavishly furnished with a huge flaming bed and a
+pile of fiery pillows to go along with it. A mirrored wall allows
+the Padashaw to gaze upon himself at will. There is a huge glowing
+brass chest in the corner and a dresser in another.
+Several paintings hang on the walls...obviously not your normal
+sort of paintings. The depict the Padashaw in various acts of battle,
+love making and pageantry.
+~
+252 167809100 11 0
+D2
+~
+~
+0 0 139385
+D3
+~
+~
+0 0 139387
+S
+#139387
+&+yThe Harem~
+Several pillows of flame are all about the floor, in fact on closer
+inspection the floor intself is made up of several pillow-like mats
+or other similar material. There are small rooms inside this one,
+where the ladies must live when they are not attending to the needs
+of the royal family. All sorts of love-making paraphernalia lies
+around in here, none of which looks usable by humans. A small
+fountain is in the center of this two hundred plus foot room.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139386
+D3
+~
+~
+0 0 139388
+S
+#139388
+&+yPool of Scrying~
+A large pool of flaming water is here. It gives off an almost cool
+wave of energy, at least cool by the standards of the rest of the
+palace. It looks as if one can see far beyond the flames alone when
+looking at the pool.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139387
+D3
+~
+~
+0 0 139389
+S
+#139389
+&+yThe Guards Room~
+This is the guards room where the contingent of guards that protect
+the padashaw and the harem and caliph are. It might not be a wise
+idea to hang out in this room too long.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139390
+D1
+~
+~
+0 0 139388
+D2
+~
+~
+1 0 139382
+S
+#139390
+&+yThe Amir's Outer Chamber~
+This huge chamber seems to be used as a waiting room, perhaps
+for those who have business with the Amir. Grand bookshelves
+line the walls and a huge spinning globe of the plane sits on
+a dias in the center of the room. Two large doors seperate this
+room from the rooms to the south and east.
+~
+252 167809096 11 0
+D1
+~
+~
+2 139229 139391
+D2
+~
+~
+1 0 139389
+S
+#139391
+&+yOrnon's Main Chamber~
+This is the Amir's main room, where he sees all those who have
+appointments with him. Anyone who does not have one, he tends to
+eat for lunch, dinner, or breakfast depending on the time of the
+day when the intrusion occurs.
+~
+252 167809096 11 0
+D1
+~
+~
+1 0 139392
+D3
+~
+~
+2 139229 139390
+S
+#139392
+&+yAmir's Spiritual Meditation Room~
+This is obviously where the Amir goes to meditate or perhaps just
+get away from it all. A full bedroom setup is here, as well as
+several more bookshelves and a huge window overlooking the court-
+yard. A statue to some sort of god-like being can be seen here in
+the center of the room. It seems to glow with a life of its own.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139393
+D3
+~
+~
+1 0 139391
+S
+#139393
+&+yWest Hallway~
+The hallway ends here at a flight of stairs to the north leading up.
+The hall stretches off to the east and there is a unique door to the
+south.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139403
+D2
+~
+~
+1 0 139392
+D4
+~
+~
+0 0 139394
+S
+#139394
+&+yThe Western Stairway~
+The stairs here continue upward and downward near the western edge
+of the room. There is an exit leading away from the stairs to the
+east.
+~
+252 167809100 11 0
+D1
+~
+~
+0 0 139400
+D4
+~
+~
+0 0 139395
+D5
+~
+~
+0 0 139393
+S
+#139395
+&+yOutside the Entrance to the Tower of Magic~
+The stairs end here into a landing that is decorated by a massive
+tower. The tower is off the the west and made of the same material
+as the rest of the palace as it writhed in glowing flames.
+~
+252 167809088 11 0
+D3
+~
+~
+0 0 139396
+D5
+~
+~
+0 0 139394
+S
+#139396
+&+yThe Tower of Magic~
+This huge domed room some four hundred feet around is the waiting
+room of the tower of magic. Strange flying globes of power can be
+seen here as well. The ceiling is translucent and composed of some
+sort of odd crystal.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139395
+D2
+~
+~
+1 0 139397
+S
+#139397
+&+yCentral Chamber of the Tower of Magic~
+The tower here glows with a raidiance of blue-green energy, and
+mystic fire flows like molten lava everywhere in this room. A
+small flight of stairs can be seen to the left leading upward.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139396
+D4
+~
+~
+0 0 139398
+S
+#139398
+&+yThe Laboratory of the Efreeti Arch-Magi~
+This is the laboratory of the arch-magi of all the efreeti. The air
+reeks of arcane power and all sorts of fiery demons seem to be run-
+ning in here. Huge networks of red glasswork is setup here with odd
+potions bubbling in them. A large book floats in the center of the
+room with the pages turning themselves.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139399
+D5
+~
+~
+0 0 139397
+S
+#139399
+&+yTop of the Tower of Magic~
+Here at the top of the tower, one can see the entire palace and
+city of brass beyond. The entire room is composed of a clear
+crystal-like material allowing anyone in this room to be able to
+see outside. Its very likely that this room is some sort of focal
+point of magic for the entire city. A glowing pool swirling with
+colors is in the center of the room giving off a shower of sparks.
+~
+252 167809096 11 0
+D5
+~
+~
+0 0 139398
+S
+#139400
+&+yA Grand Hallway~
+This magnificent hallway is constructed of diamonds melded together by
+copper. The diamonds are of serveral different colors giving off rays
+of light that move around the walls and sparkling off the various pieces
+of decore that decorate this grand hall. The hallway stretches off in
+hundreds feet to the east and west.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139401
+D2
+~
+~
+0 0 139403
+D3
+~
+~
+0 0 139394
+S
+#139401
+&+yA Grand Hallway~
+This magnificent hallway is constructed of diamonds melded together by
+copper. The diamonds are of serveral different colors giving off rays
+of light that move around the walls and sparkling off the various pieces
+of decore that decorate this grand hall. The hallway stretches off in
+hundreds feet to the east and west.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139406
+D1
+~
+~
+0 0 139402
+D2
+~
+~
+0 0 139404
+D3
+~
+~
+0 0 139400
+S
+#139402
+&+yA Grand Hallway~
+This magnificent hallway is constructed of diamonds melded together by
+copper. The diamonds are of serveral different colors giving off rays
+of light that move around the walls and sparkling off the various pieces
+of decore that decorate this grand hall. The hallway stretches off in
+hundreds feet to the east and west.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139407
+D1
+~
+~
+0 0 139410
+D2
+~
+~
+0 0 139405
+D3
+~
+~
+0 0 139401
+S
+#139403
+&+ySouthwest End of the Grand Hallway~
+This magnificent hallway is constructed of diamonds melded together by
+copper. The diamonds are of serveral different colors giving off rays
+of light that move around the walls and sparkling off the various pieces
+of decore that decorate this grand hall. The hallway stretches off in
+hundreds feet to the east and west.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139400
+D1
+~
+~
+0 0 139404
+D3
+~
+~
+0 0 139393
+S
+#139404
+&+yA Grand Hallway~
+This magnificent hallway is constructed of diamonds melded together by
+copper. The diamonds are of serveral different colors giving off rays
+of light that move around the walls and sparkling off the various pieces
+of decore that decorate this grand hall. The hallway stretches off in
+hundreds feet to the east and west.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139401
+D1
+~
+~
+0 0 139405
+D3
+~
+~
+0 0 139403
+S
+#139405
+&+yA Grand Hallway~
+This magnificent hallway is constructed of diamonds melded together by
+copper. The diamonds are of serveral different colors giving off rays
+of light that move around the walls and sparkling off the various pieces
+of decore that decorate this grand hall. The hallway stretches off in
+hundreds feet to the east and west.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139402
+D1
+~
+~
+0 0 139419
+D3
+~
+~
+0 0 139404
+S
+#139406
+&+yRoyal Palace Guard Room~
+This room houses the Sultan's personal guards, ever ready to defend
+the all powerful sultan from attacks. The guards must never sleep
+for no beds of any type can be seen in this room.  Only massive
+glowing weapons of all sorts can be seen here, along with strange
+indentations in the west wall.
+~
+252 167809096 11 0
+D2
+~
+~
+1 0 139401
+S
+#139407
+&+yA Lavish Dinning Room~
+This is the grand dinning room of the Sultan. A massive table,
+some five hundred feet long and made of solid brass is here set
+with enough places to feed an army. All sorts of odd food can
+be seen on the table, as well as fancy table arrangements.
+The smell in this room would make anyone hungry.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139408
+D2
+~
+~
+1 0 139402
+S
+#139408
+&+yThe Royal Kitchen~
+This is the kitchen for the palace. All manor of cookware can be
+found in this room, as well as endless supplies of food. Most of
+it does not look familar to anyone not native to this plane, but
+the smell is enticing nonetheless. Several cupboards are here,
+as well as ovens, stoves, and other cooking implementations.
+~
+252 167809096 11 0
+D2
+~
+~
+1 0 139407
+D3
+~
+~
+0 0 139409
+S
+#139409
+&+yThe Waste Room~
+A huge burning pit is in the center of this room. One gets the
+idea rather quickly that this room is used to dispose all the
+excessive leftovers from the kitchen.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139408
+S
+#139410
+&+yIntersection in the Grand Hallway~
+The grand hallway splits here, running to the east and west. A massive
+set of double doors, made of solid brass is to the north. The doors are
+secured with huge glowing bands of power around them.
+~
+252 167809096 11 0
+D0
+~
+~
+3 139121 139456
+D1
+~
+~
+0 0 139413
+D2
+~
+~
+0 0 139419
+D3
+~
+~
+0 0 139402
+S
+#139411
+&+yThrone Room of the Sultan~
+This massive room some one thousand feet square contains the throne
+of the mighty Sultan of the City of Brass. Shadam Quilen, rules here
+from his massive glowing throne made of solid brass. These is a huge
+statue of Kossuth here, bending down to set the crown of might upon
+Shadam's head. Massive supporting columns of brass and fire hold the
+huge vaulted ceiling up high above. Balconies overlook the grand floor
+from on high and the ever present royal guard of the Sultan are here
+in force. Huge murals depicting Shadam and his family attending affairs
+of state as well as battles personally lead by the Sultan himself are
+hung on the walls. The floor is of polished brass, and this entire room
+glows with a radiance that causes pain to any who stand within that
+area not of this plane. To the north is a poorly concealed vault door.
+~
+252 167809096 11 0
+D0
+~
+~
+3 139123 139412
+D2
+~
+~
+1 0 139456
+S
+#139412
+&+yTreasure Room of the Efreet~
+This massive room holds the combined hoard of the efreet ruling
+family. Gold, Silver, Platinum, and gems of all sizes shapes and
+colors are here as well as various artworks.
+~
+252 167809096 11 0
+D2
+~
+~
+3 0 139411
+S
+#139413
+&+yThe Grand Hallway~
+The grand hallway continues here and ends at the entrance to the library
+to the east. Another room can be seen to the north and the hallway
+extends far off to the west and south.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139414
+D1
+~
+~
+0 0 139416
+D2
+~
+~
+0 0 139418
+D3
+~
+~
+0 0 139410
+S
+#139414
+&+yRoyal Palace Guard Room~
+This room houses the Sultan's personal guards, ever ready to defend
+the all powerful sultan from attacks. The guards must never sleep
+for no beds of any type can be seen in this room.  Only massive
+glowing weapons of all sorts can be seen here, along with strange
+indentations in the west wall.
+~
+252 167809096 11 0
+D2
+~
+~
+1 0 139413
+S
+#139415
+&+yA Grand Library~
+This massive room holds hundreds of thousands of metallic books
+of all sizes, shapes, and colors. Several desks and tables are
+set up in here. The libraray continues to the south from here
+and seems to be almost without end.
+~
+252 167809096 11 0
+D2
+~
+~
+0 0 139416
+S
+#139416
+&+yA Grand Library~
+This massive room hold hundreds of thousands of metallic books
+of all sizes, shapes, and colors. Several desks and tables are
+set up in here. The library continues ot the north from here and
+seems to be almost without end. A huge globe of the plane of fire
+sits in the center of the room, slowly rotating, never showing
+the same place twice, almost as if there is no end to this plane.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139415
+D1
+~
+~
+1 0 139425
+D2
+~
+~
+1 0 139417
+D3
+~
+~
+0 0 139413
+S
+#139417
+&+yThe East Hallway~
+This hall is decorated with many braziers making it the brightest of
+all the hallways in the palace. To the east the hallway ends at the
+base of the Tower of Prayer. Off to the west the hallway opens up.
+There is a door here in the northern wall made of some redish-marble.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139416
+D1
+~
+~
+0 0 139424
+D3
+~
+~
+0 0 139418
+S
+#139418
+&+yThe East Hallway~
+The hallway here runs to the east, west and north. This hall is well
+lite as it filled with braziers all burning with an orange hue. The
+hallway opens into a grand hallway just to the west and north of here.
+The hallway continues east towards the Tower of Prayer.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139413
+D1
+~
+~
+0 0 139417
+D3
+~
+~
+0 0 139419
+S
+#139419
+&+yIntersection in the Grand Hallway~
+The hallway runs in four directions here. The larger hallway is to
+the north and south. To the east and west are smaller halls that
+connect some of the many rooms in the palace.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139410
+D1
+~
+~
+0 0 139418
+D2
+~
+~
+0 0 139420
+D3
+~
+~
+0 0 139405
+S
+#139420
+&+yA Grand Hallway~
+This hallway is FAR larger then the ones on the lower lever. It has
+huge supporting columns all along its length, no windows can be seen
+here, and the floor takes on a pure brass nature. The hall runs in
+two directions here and seems to be lit from a natural light source
+that is set into the walls themselves.
+~
+252 167809100 11 0
+D0
+~
+~
+0 0 139419
+D2
+~
+~
+0 0 139421
+S
+#139421
+&+yA Grand Hallway~
+This hallway is FAR larger then the ones on the lower lever. It has
+huge supporting columns all along its length, no windows can be seen
+here, and the floor takes on a pure brass nature. The hall runs in
+two directions here and seems to be lit from a natural light source
+that is set into the walls themselves.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139420
+D2
+~
+~
+0 0 139422
+S
+#139422
+&+yA Grand Hallway~
+This hallway is FAR larger then the ones on the lower lever. It has
+huge supporting columns all along its length, no windows can be seen
+here, and the floor takes on a pure brass nature. The hall runs in
+two directions here and seems to be lit from a natural light source
+that is set into the walls themselves.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139421
+D5
+~
+~
+0 0 139371
+S
+#139423
+&+yA Guard Post~
+The room is well organized and set with many beds lining the walls with
+foot chests at the end of each. There are three different weapon racks
+loaded with several different pole arms. The north exit is the only way
+out of this room and leads back to the stairway.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139371
+S
+#139424
+&+yThe East Hallway~
+The hallway turns here to the north where a flight of stairs can be
+found leading upward. There is a well adorned archway marking the
+stairway that has a symbol of two hands pressed together at their
+palms. The hallway heads west from here and is well lit by the many
+braziers lining the walls.
+~
+252 167809100 11 0
+D3
+~
+~
+0 0 139417
+D4
+~
+~
+0 0 139425
+S
+#139425
+&+yThe Lower Stairway Landing~
+These stairs come to an end here on this landing and continue their
+direction up and down the tower across the room. On the western wall
+of the room is a red marble-like door leading into the Grand Library.
+~
+252 167809096 11 0
+D3
+~
+~
+1 0 139416
+D4
+~
+~
+0 0 139426
+D5
+~
+~
+0 0 139424
+S
+#139426
+&+yThe Upper Stairway~
+The stairs continue on here running up and down the Tower of Prayer.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139427
+D5
+~
+~
+0 0 139425
+S
+#139427
+&+yThe Tower of Prayer~
+You go through a large archway here at the top of the stairs and come
+into a huge domed room some three hundred feet high. Glowing spinning
+globs of fire in a multitude of colors float in the air at different
+leves. Efreet holy symbols are etched in flame on the walls here, and
+far up in the domed ceiling there is a somewhat clear glass-like
+substance that gives off a rainbow of light. An archway can be seen
+to the south and a small flight of stairs beyond that.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139428
+D5
+~
+~
+0 0 139426
+S
+#139428
+&+yThe Main Meditation Room~
+This looks like some sort of meditation or prayer room used by
+efreeti clerics. A small altar is set into the south wall, and
+strange symbols can be seen upon it. Several huge pews are setup
+along the west wall and the air is heavy with the smell of
+burning incense.
+~
+252 167809096 11 0
+D1
+~
+~
+1 0 139429
+D5
+~
+~
+0 0 139427
+S
+#139429
+&+yThe High Priests Chamber~
+The high priest of all Efreeti lives in this room, a magnificent throne
+is here with a crest of flame behind it. Several smaller chairs are set
+up in front of the throne and the never ending gaze of Kossuth looks down
+at all who enter from above the mighty throne. The room slopes upwards
+to the north, and shooting flames can be seen in that direction from time
+to time. Strange books seem to float in the air, opening and closing by
+themselves. More floating globs of various colors dance here and there
+around the room, giving off a rainbow of light.
+~
+252 167809096 11 0
+D3
+~
+~
+1 0 139428
+D4
+~
+~
+0 0 139430
+S
+#139430
+&+yTop of the Tower of Prayer~
+This huge domed room is some five hundred feet in diameter. The
+ceiling is about one hundred feet high and a huge statue of Kossuth
+the tyrant king, supreme ruler of the Elemental Plane of Fire is
+protruding out of the north wall. The statue is immersed in living
+flames and the eyes seem to have a life like quality to them. A huge
+glowing window sets in the far eastern wall spewing forth fire every
+then seconds covering the room in fire.
+~
+252 167809096 11 0
+D5
+~
+~
+0 0 139429
+S
+#139431
+&+yIntersection in the Hallway~
+What seems like an endless hallway runs to the west here as well
+but this time it branches to the north and south. The ceiling is
+some fifty feet or more overhead with a curved shape to it. Red
+marble or a marble like substance composes the floor of this hall,
+and several murals line the walls. Every so often an arched window,
+too high for a human to see out of, is here along the walls and
+glowing braziers of bright orange fire are set into the walls.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139436
+D2
+~
+~
+0 0 139432
+D3
+~
+~
+0 0 139374
+S
+#139432
+&+yA Long Hallway~
+The hallway runs to the north and south here. Strange sounds,
+the likes of which mortal man has seldom if ever heard, can be
+detected coming from the south.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139431
+D2
+~
+~
+1 0 139433
+S
+#139433
+&+yA Warriors Lounge~
+This huge room some one hundred feet in diameter contains several
+practice dummies of enormous size. Strange looking devices that
+float in and about the room darting here and there seem to move with
+a will of their own. Huge benches and tables are also here with
+chairs, mats and other items that depict this as some sort of lounge
+or training room used by the Efreeti warriors.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139432
+D1
+~
+~
+0 0 139435
+D2
+~
+armory door~
+2 139134 139434
+S
+#139434
+&+yAn Armory~
+The palace armory is decorated with unused and captured equipment hanging on
+the walls. In the weapon racks and upon the shelves are all sorts of oversized
+pieces of equipment ranging from weapons and armor to human-sized pieces
+unsuitable for the efreeti. An armoire is mounted against the southern wall
+completing the decore of the room.
+~
+252 167809096 11 0
+D0
+~
+~
+1 0 139433
+S
+#139435
+&+yEfreeti Royal Training Room~
+This room, even larger than the one previous, contains more of the
+odd training devices that dart in and out all over. Some of them
+seem to be firing rays of some sort through the room.
+~
+252 167809096 11 0
+D3
+~
+~
+0 0 139433
+S
+#139436
+&+yA Long Hallway~
+What seems like an endless hallway runs along here, the ceiling
+is some fifty feet or more overhead with a curved shape to it.
+Red marble or marble like substance composes the floor of this
+hall, and several murals line the walls. Every so often an arched
+window, too high for a human to see out of, is here along the walls
+and some glowing braziers of bright orange fire are set in the wall.
+~
+252 167809100 11 0
+D0
+~
+~
+0 0 139437
+D1
+~
+~
+0 0 139448
+D2
+~
+~
+0 0 139431
+S
+#139437
+&+yAn Intersection~
+The hall opens up and branches out in all directions here. To the north
+you can see a flight of stairs heading upward. To the south the hall
+narrows and to the east and west are what look to be guard barracks.
+~
+252 167809100 11 0
+D1
+~
+~
+0 0 139445
+D2
+~
+~
+0 0 139436
+D3
+~
+door~
+2 139134 139438
+D4
+~
+~
+0 0 139442
+S
+#139438
+&+yThe Slave Quarters~
+A dark grungy room filled with slaves of all types not just those
+from this plane are housed here. You can see all sorts of cots,
+beds, mats, and other sleeping places in this room which spans
+over five hundred feet in size.
+~
+252 167809096 11 0
+D1
+~
+door~
+1 139134 139437
+D2
+~
+door~
+2 139134 139441
+D3
+~
+door~
+2 139134 139439
+S
+#139439
+&+yA Prison~
+This room holds those slaves who have been less then cooperative.
+Some of them seem to be in a trance like state while others look
+around with surprised expressions on their faces.
+~
+252 167809096 11 0
+D1
+~
+door~
+1 0 139438
+D2
+~
+~
+0 0 139440
+S
+#139440
+&+yThe Torture Chamber~
+All manner of torture devices are in this room varying in size
+and shape. There are racks, iron maidens, wall chains, and a
+host of other devices the like of which are not to be found in
+the realms of mankind.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139439
+S
+#139441
+&+yThe Slave Quarters~
+A dark grungy room filled with slaves of all types not just those
+from this plane are housed here. You can see all sorts of cots,
+beds, mats, and other sleeping places in this room which spans
+over five hundred feet in size.
+~
+252 167809096 11 0
+D0
+~
+door~
+1 0 139438
+S
+#139442
+&+yAir patrol Guard Room~
+This room is where the guards of the watch stand who control the
+flying mounts of that guard the palace and City of Brass. Anyone
+coming in here had better have an invitation of a death wish.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139443
+D5
+~
+~
+0 0 139437
+S
+#139443
+&+yFlying Mount Pen~
+This room holds the various flying mounts used by the elite
+guards of the palace and City of Brass. The horrid smells of
+strange beasts almost overwhelm anyone who enters.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139444
+D5
+~
+~
+0 0 139442
+S
+#139444
+&+yThe Landing Pad~
+This landing pad is used by the flying mounts of the city. A fantistic
+view of the palace and east side of the city can be seen from here.
+This room is well over five hundred feet in the sky. Various devices
+used to hitch the flying mounts are strewn about in this room.
+~
+252 33591360 11 0
+D5
+~
+~
+0 0 139443
+S
+#139445
+&+yThe Palace Barracks~
+This room is the largest in this area as it is used to house a
+majority of the palace guards. There are many large tables, beds,
+cabinets, and foot lockers placed throughout the room. The walls
+have weapons and shields stored or used as decore covering its
+vast surface. To the east the barracks continues and the west and
+south lead back into hallways.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139446
+D2
+~
+~
+0 0 139448
+D3
+~
+~
+0 0 139437
+S
+#139446
+&+yThe Palace Barracks~
+This room is the largest in this area as it is used to house a
+majority of the palace guards. There are many large tables, beds,
+cabinets, and foot lockers placed throughout the room. The walls
+have weapons and shields stored or used as decore covering its
+vast surface. To the east and west the barracks continues and to
+the south lead back into a hallway.
+~
+252 167809096 11 0
+D1
+~
+~
+0 0 139447
+D2
+~
+~
+0 0 139449
+D3
+~
+~
+0 0 139445
+S
+#139447
+&+yThe Palace Barracks~
+This room is the largest in this area as it is used to house a
+majority of the palace guards. There are many large tables, beds,
+cabinets, and foot lockers placed throughout the room. The walls
+have weapons and shields stored or used as decore covering its
+vast surface. To the west the barracks continues.
+~
+252 167809096 11 0
+D3
+~
+~
+0 0 139446
+S
+#139448
+&+yA Hallway in the Palace Barracks~
+This hallway cuts through the palace barracks not with walls but many
+columns of flames like those seen throughout the rest of the palace.
+The floors here are less brilliant due to the large amount of tracks
+from the numerous of palace guards moving around. To the north and south
+there are the barracks proper and the rest of the hallway continues to
+the east.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139445
+D1
+~
+~
+0 0 139449
+D2
+~
+~
+0 0 139451
+D3
+~
+~
+0 0 139436
+S
+#139449
+&+yA Hallway in the Palace Barracks~
+This hallway cuts through the palace barracks not with walls but many
+columns of flames like those seen throughout the rest of the palace.
+The floors here are less brilliant due to the large amount of tracks
+from the numerous of palace guards moving around. To the north and south
+there are the barracks proper and a pair of flaming doors are east.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139446
+D1
+~
+door~
+1 0 139450
+D2
+~
+~
+0 0 139452
+D3
+~
+~
+0 0 139448
+S
+#139450
+&+yThe Chief of the Guard's Room~
+A huge pile of pillows is in the center of this massive room. Glowing
+orbs are suspended in mid-air and braziers of incense are smoking here.
+A huge two-handed sword is on the far wall along with a massive window
+that over looks the city. This room is obviously used by someone of
+importance.
+~
+252 167809096 11 0
+D3
+~
+door~
+1 0 139449
+S
+#139451
+&+yThe Palace Barracks~
+This room is the largest in this area as it is used to house a
+majority of the palace guards. There are many large tables, beds,
+cabinets, and foot lockers placed throughout the room. The walls
+have weapons and shields stored or used as decore covering its
+vast surface. To the east the barracks continues and to the north
+there is a hallway.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139448
+D1
+~
+~
+0 0 139452
+S
+#139452
+&+yThe Palace Barracks~
+This room is the largest in this area as it is used to house a
+majority of the palace guards. There are many large tables, beds,
+cabinets, and foot lockers placed throughout the room. The walls
+have weapons and shields stored or used as decore covering its
+vast surface. To the east and west the barracks continues and to
+the north there is a hallway.
+~
+252 167809096 11 0
+D0
+~
+~
+0 0 139449
+D1
+~
+~
+0 0 139453
+D3
+~
+~
+0 0 139451
+S
+#139453
+&+yThe Palace Barracks~
+This room is the largest in this area as it is used to house a
+majority of the palace guards. There are many large tables, beds,
+cabinets, and foot lockers placed throughout the room. The walls
+have weapons and shields stored or used as decore covering its
+vast surface. To the west the barracks continues.
+~
+252 167809096 11 0
+D3
+~
+~
+0 0 139452
+S
+#139454
+&+y A Grand Stairway~
+A regal grand staircase running up and down here composed
+of moving flames gives one an uneasy feeling as its walked
+upon.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139369
+D5
+~
+~
+0 0 139455
+S
+#139455
+&+y A Grand Stairway~
+A regal grand staircase running up and down here composed
+of moving flames gives one an uneasy feeling as its walked
+upon.
+~
+252 167809096 11 0
+D4
+~
+~
+0 0 139454
+D5
+~
+~
+0 0 139365
+S
+#139456
+&+yA Grand Archway to the Palace's Throne Room~
+This room is emaculate and brillant in design. There are vases, paintings,
+tapestries, and other pieces of decore organized throughout the room that
+move your eyes from one to then next in an appealing fashion. The columns
+are hundreds of feet high and each are carved and look to be made of solid
+brass forming an enormous archway. The floor has some sort of rug that goes
+from door to door and you are sure it is made of magma as it is moving with
+an uneasy motion. North is a double door leading into the main throne room
+and to the south leads into a great hallway.
+~
+252 167809096 11 0
+D0
+~
+~
+3 139122 139411
+D2
+~
+~
+1 0 139410
+S

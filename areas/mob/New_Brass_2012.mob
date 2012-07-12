@@ -1,0 +1,2126 @@
+#139000
+efreeti padashaw ornon kasoon~
+the &+ref&+Rre&+ret&+Ri&n pa&+Lda&nshaw&n &+MO&+mrnon &+MK&+masoon&n~
+&+LThe &npa&+Lda&nshaw &+MO&+mrnon &+MK&+masoon &+Lis standing here looking upset&n.
+~
+The Amir of the efreeti of the royal palace, Ornon Kasoon seem
+non to happy to see you looking at him.  So he has decided to kill you.
+~
+50399246 1 0 0 536871048 432345 0 0 -1000 S
+e 0 33554448 0 -1
+60 -10 -142 60d132+6240 7d6+35
+0.0.0.0 243000
+8 8 1
+#139001
+iron golem _no_move_~
+&+yan iron golem&N~
+&+yAn iron golem stands here guarding the entrance.&N
+~
+&+yThis mighty iron golem, given life by the efreeti engineers
+&+yof the City of Brass, refuse to allow ANY to pass who arn't
+&+yfollowers of the faith.
+~
+33556523 0 0 0 805314712 47297 0 0 -1000 S
+OG 0 160 0 -1
+60 -10 -120 100d100+25000 5d5+50
+0.0.0.0 1000000
+8 8 0
+#139002
+efreeti templar guard~
+&+Man &+ref&+Rre&+ret&+Ri &+Mtemplar&N~
+&+MAn &+ref&+Rre&+ret&+Ri &+Mtemplar celebrates his faith.&N
+~
+&+MThis guard dressed with the royal insignia of the Sultan, and
+&+Mwearing the holy markings of Kossuth, watches for any who
+&+Mwould disturb the peace of the temple.&N
+~
+67110920 0 2153768432 56832 536944664 32833 0 0 -500 S
+e 0 32 0 -1
+52 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139003
+efreeti acolyte~
+&+Man &+ref&+Rre&+ret&+Ri &+Macolyte&N~
+&+MAn &+ref&+Rre&+ret&+Ri &+Macolyte stands here in a trance.&N
+~
+&+MThis efreeti, dressed in long glowing holy robes to Kossuth
+&+Mdoes not find you being here amusing in the least.
+~
+100665480 0 2153768432 56832 536944664 32833 0 0 -1000 S
+e 0 32 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139004
+latisia efreeti clerist _no_lure_~
+&+mLatisia the supreme efreeti clerist&N~
+&+mLatisia the supreme &+ref&+Rre&+ret&+Ri &+mclerist stands here.&N
+~
+&+mDressed in extreamly detailed robes with the markings of the
+&+mmighty efreeti god Kossuth, this being is the supreme holy
+&+mfigure, and head of the efreeti church.
+~
+100730891 0 2153768432 56832 805380120 47297 0 0 -1000 S
+e 0 416 0 -1
+61 -10 -120 100d100+10000 5d5+40
+0.0.0.1000 1000000
+8 8 2
+#139005
+huge beholder~
+&+ma HUGE beholder~
+&+mA HUGE beholder floats here.
+~
+&+mThis great beholder, is far larger then most, and twice as deadly.
+&+mthe 10 eye stalks flash and whip around fireing their deadly rays
+&+mat anything and anything that gets in the way of this beast
+&+mthe great central eye flashes as it negates magic, and the many
+&+Mrows of sharp teeth insure that no one will leave unharmed.
+~
+1107761165 760 0 0 1008279800 309441 0 0 -1000 S
+X 0 768 0 7
+61 150 -100 1d1+29999 20d10+90
+0.0.0.0 400000
+8 8 0
+#139006
+guard efreeti~
+&+rAn efreeti watch tower guard&N~
+&+rAn efreeti watch tower guard stands ready for an attack.&N
+~
+&+rThis huge efreeti stands watch over the guard tower,
+&+rready to repel any attack.&N
+~
+67108874 1 0 0 402653246 2049 0 0 -1000 S
+EF 0 1 0 5
+60 -7 -138 59d143+6195 7d6+35
+0.0.8.8 240000
+8 8 0
+#139007
+efreeti acolyte~
+&+Man &+ref&+Rre&+ret&+Ri &+Macolyte&N~
+&+MAn &+ref&+Rre&+ret&+Ri &+Macolyte stands here in a trance.&N
+~
+&+MThis efreeti, dressed in long glowing holy robes to Kossuth
+&+Mdoes not find you being here amusing in the least.
+~
+100665480 0 2153768432 56832 536944664 32833 0 0 1000 S
+e 0 32 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139008
+efreeti temple guard~
+&+Man &+ref&+Rre&+ret&+Ri &+Mhigh priestess guard&N~
+&+MAn &+ref&+Rre&+ret&+Ri &+Mhigh priestess guard stands here.&N
+~
+&+MThis guard dressed with the royal insignia of the Sultan, and
+&+Mwearing the holy markings of Kossuth, watches for any who
+&+Mwould disturb the peace of the temple.&N
+~
+67110922 0 2153768432 56832 536944664 32833 0 0 1000 S
+e 0 384 0 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139009
+efreeti arch-magi magi padashaw arch~
+&+ra &Npa&+Lda&Nshaw &+rarch-magi~
+&+LA &+ref&+Rre&+ret&+Ri &Npa&+Lda&Nshaw &+Ra&+rrch-&+Rm&+ragi&n &+Lof the palace paces about the room.
+~
+The Arch-Magi of all the efreeti is surrounded in green fire that seems
+to weave odd patterns around his form.  His eyes are aflame and his
+gaze strikes fear into the hearts of all who look upon him.
+~
+1191381006 1 0 0 536871082 276673 0 0 -1000 S
+e 0 512 1 -1
+60 -10 -142 60d96+6180 7d6+35
+0.0.0.0 243000
+8 8 1
+#139010
+padashaw efreeti artoon branan~
+the &+ref&+Rre&+ret&+Ri&n pa&+Lda&nshaw &+GA&+grtoon &+GB&+granan&n~
+&+LThe &npa&+Lda&nshaw &+GA&+grtoon &+GB&+granan &+Lstands here glowing with the fire of the gods.&n
+~
+The Padashaw of the efreeti of the royal palace, Artoon Branan is
+lost in his thoughts until he sees you starting at him.  His face then
+turns grim.
+~
+50333710 1 0 0 536870936 47296 0 0 -1000 S
+e 0 2304 0 -1
+60 -10 -142 60d132+6240 7d6+35
+0.0.0.0 243000
+8 8 1
+#139011
+sultan shadam quilen efreeti~
+&+YShadam Quilen, the Efreeti Sultan~
+&+YThe Sultan of the City of Brass, Shadam Quilen, rests on his throne.
+~
+The Sultan of all the efreeti Shadam Quilen is here sitting on his great
+throne of brass.  Shadam is well over fifty feet tall emulated in flames
+and does not seem to happy to see you here.
+~
+1124206635 1 0 0 671613112 47296 0 512 -1000 S
+e 0 320 0 -1
+60 -10 -152 25000d1+500 7d7+45
+0.0.0.500 1000000
+8 8 1
+#139012
+priest high efreeti cleric padashaw~
+&+ya &Npa&+Lda&nshaw &+Yh&+yigh &+Yp&+yriest&n~
+&+LA &Npa&+Lda&Nshaw &+Yh&+yigh &+Yp&+yriest&n &+Lof the palace stands behind the podium giving service.&n
+~
+The High Priest of all the efreeti glows with bright lights and flames
+of searing fire.  He is well over forty feet tall and looks to have the
+strength of a storm giant.
+~
+1124075598 1 0 0 671162536 309441 0 0 -1000 S
+e 0 32800 0 -1
+58 -10 -142 60d123+6240 7d6+35
+0.0.0.0 243000
+8 8 1
+#139013
+chief guard efreeti~
+&+Ythe chief &+ref&+Rre&+ret&+Ri &+Yguard~
+&+YAn enormous &+ref&+Rre&+ret&+Ri &+Yguard is here looking rather upset.&n
+~
+This huge efreeti guard is dressed in full brass plate mail armor
+with a royal red cloak over his shoulders.  He peers down at you
+with hate in his eyes.
+~
+1073743884 1 0 0 73904 2077 0 33554432 -1000 S
+e 0 18 0 -1
+60 -10 -135 58d143+6090 7d6+35
+0.0.0.500 234900
+8 8 1
+#139014
+guard bronze phalanx member elite~
+&+ythe Bronze&n &+rPh&+Ral&n&+ranx&n~
+&+LAn elite member of the &+yBronze &+rPh&+Ral&+ranx&n &+Lguards passage through the arch.
+~
+A celestial being these Azer's are known as the Bronze Phalanx. They are
+reknown for there abilities to defend castles using different types of
+weaponry including siege weapons. His skin is a pinkish-red and has diamond
+shaped eye sockets filled with black eyes that are difficult to tell which
+way exactly he may be looking. He takes his employment very seriously and
+will defend the Palace to the death.
+~
+153642 1 0 0 939598008 14556 0 37752832 0 S
+ar 0 67108896 0 5
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139015
+unquenchable efreeti efreet guard black turban~
+an &+LUnq&nu&+Lenchable&n~
+A &+Lblack turban&n &+ref&+Rre&+ret&+Ri&n known as the &+LUnq&nu&+Lenchable&n protects the Palace.
+~
+Only an Efreet who was born and bread to protect the Palace is called
+an Unquenchable. They are easily marked by their black turbans and
+their incrediable size. The focus in their eyes gives the impression
+that they are a formitable opponent and will stop at nothing to do their
+duty of protecting the palace and Sultan.
+~
+1140852744 1 0 0 134217784 2141 128 33558528 -1000 S
+e 0 3 0 5
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139016
+order fiery heart member efreet efreeti~
+a member of the &+LOrd&ne&+Lr of &+RFi&+re&+Rry He&+ra&+Rrt~
+An &+ref&+Rre&+ret&+Ri&n of the &+LOrd&ne&+Lr of &+RFi&+re&+Rry He&+ra&+Rrt&n is here patrolling the Palace.
+~
+This Efreet is dressed in formal yellow robes trimmed in orange that
+is emblazed with a crest on the abdomen. The crest is a symbol of a
+human heart drenched in flames and is marked with stars circling it.
+~
+2056 1 0 0 73784 93 128 0 -1000 S
+e 0 2048 0 5
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139017
+hellhound hound black dog~
+&+La &+rh&+Re&+rll&+Lho&nu&+Lnd~
+A &+Lblack-haired&n dog covered in ash with glowing &+rr&+re&+rd&n eyes drools &+rfl&+Ra&+rme&n here.
+~
+This beast has the body of a dog but its eyes are blood shot red and
+has flames dripping from its razor sharp teeth. It's coat is all black
+except on the end of its tail which is as grey as ash. The bulk of
+this beast is that of a warg and looks to be extremely strong.
+~
+1107298344 1 0 0 805306392 2 0 4096 -1000 S
+ae 0 1048576 0 3
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139018
+flame salamander elite muscular jackal~
+an elite &+rfl&+Ra&+rme salamander~
+A muscular &+rfl&+Ra&+rme salamander&n slithers about the room waiting for orders.
+~
+The size of this salamander is amazing. Its body is thick and brawn.
+It is coated in flames and slithers about ready to strike. It wears
+a circlet upon its head that denotes its affiliation as one of the
+"Jackal's" renowned for their cruelty and sadism.
+~
+1073874988 1 0 0 184 14403 0 33554432 -1000 S
+ef 0 528 0 5
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139019
+branded guard efreeti~
+the &+mBra&+Mnd&+med&n~
+An &+ref&+Rre&+ret&+Ri&n guard known as the &+mBra&+Mn&+mded&n patrols the harem.
+~
+This Efreet is known as the Branded. He is an eunuch and is considered
+by the Sultan to be safe to protect his harem since the Branded have all
+had their testicles removed. Do not underestimate his battle prowess however
+he is marked with scar's from many wounds over time.
+~
+33554444 1 0 0 536944648 0 0 0 -500 S
+e 0 16384 0 4
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139020
+female slave djinn~
+&+Cthe djinn slave&n~
+&+CA female djinn slave is floating here, looking sad&n.
+~
+This djinn slave does not look to be in the best of shape, her
+eyes are sad and she seems to have lost most of her will to live.
+~
+10 0 0 0 10 0 0 0 0 S
+ea 0 8 0 -1
+51 -7 -124 56d143+5880 7d6+35
+0.0.0.0 226800
+8 8 2
+#139021
+order fiery heart member efreet efreeti~
+a member of the &+LOrd&ne&+Lr of &+RFi&+re&+Rry He&+ra&+Rrt~
+An &+rEf&+Rre&+ret&+Ri&n of the &+LOrd&ne&+Lr of &+RFi&+re&+Rry He&+ra&+Rrt&n is here patrolling the Palace.
+~
+This Efreet is dressed in formal yellow robes trimmed in orange that
+is emblazed with a crest on the abdomen. The crest is a symbol of a
+human heart drenched in flames and is marked with stars circling it.
+~
+2058 1 0 0 73784 93 128 0 -1000 S
+e 0 16 0 5
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139022
+order fiery heart member efreet efreeti~
+a member of the &+LOrd&ne&+Lr of &+RFi&+re&+Rry He&+ra&+Rrt~
+An &+rEf&+Rre&+ret&+Ri&n of the &+LOrd&ne&+Lr of &+RFi&+re&+Rry He&+ra&+Rrt&n is here patrolling the Palace.
+~
+This Efreet is dressed in formal yellow robes trimmed in orange that
+is emblazed with a crest on the abdomen. The crest is a symbol of a
+human heart drenched in flames and is marked with stars circling it.
+~
+2056 1 0 0 73784 93 128 0 -1000 S
+e 0 512 0 5
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139023
+order fiery heart member efreet efreeti~
+a member of the &+LOrd&ne&+Lr of &+RFi&+re&+Rry He&+ra&+Rrt~
+An &+rEf&+Rre&+ret&+Ri&n of the &+LOrd&ne&+Lr of &+RFi&+re&+Rry He&+ra&+Rrt&n is here patrolling the Palace.
+~
+This Efreet is dressed in formal yellow robes trimmed in orange that
+is emblazed with a crest on the abdomen. The crest is a symbol of a
+human heart drenched in flames and is marked with stars circling it.
+~
+2056 1 0 0 73784 93 128 0 -1000 S
+e 0 288 0 5
+58 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139024
+unquenchable efreeti efreet guard black turban~
+an &+LUnq&nu&+Lenchable&n~
+A &+Lblack turban&n &+ref&+Rre&+ret&+Ri&n known as the &+LUnq&nu&+Lenchable&n protects the Palace.
+~
+Only an Efreet who was born and bread to protect the Palace is called
+an Unquenchable. They are easily marked by their black turbans and
+their incrediable size. The focus in their eyes gives the impression
+that they are a formitable opponent and will stop at nothing to do their
+duty of protecting the palace and Sultan.
+~
+1140852744 1 0 0 134217784 2141 128 33558528 -1000 S
+e 0 1 0 5
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139025
+unquenchable efreeti efreet guard black turban~
+an &+LUnq&nu&+Lenchable&n~
+A &+Lblack turban&n &+ref&+Rre&+ret&+Ri&n known as the &+LUnq&nu&+Lenchable&n protects the Palace.
+~
+Only an Efreet who was born and bread to protect the Palace is called
+an Unquenchable. They are easily marked by their black turbans and
+their incrediable size. The focus in their eyes gives the impression
+that they are a formitable opponent and will stop at nothing to do their
+duty of protecting the palace and Sultan.
+~
+1140852744 1 0 0 134217784 2141 128 33558528 -1000 S
+e 0 1048576 0 5
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139026
+unquenchable efreeti efreet guard black turban~
+an &+LUnq&nu&+Lenchable&n~
+A &+Lblack turban&n &+ref&+Rre&+ret&+Ri&n known as the &+LUnq&nu&+Lenchable&n protects the Palace.
+~
+Only an Efreet who was born and bread to protect the Palace is called
+an Unquenchable. They are easily marked by their black turbans and
+their incrediable size. The focus in their eyes gives the impression
+that they are a formitable opponent and will stop at nothing to do their
+duty of protecting the palace and Sultan.
+~
+1140852744 1 0 0 134217784 2141 128 33558528 -1000 S
+e 0 32800 0 5
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139027
+unquenchable efreeti efreet guard black turban~
+an &+LUnq&nu&+Lenchable&n~
+A &+Lblack turban&n &+ref&+Rre&+ret&+Ri&n known as the &+LUnq&nu&+Lenchable&n protects the Palace.
+~
+Only an Efreet who was born and bread to protect the Palace is called
+an Unquenchable. They are easily marked by their black turbans and
+their incrediable size. The focus in their eyes gives the impression
+that they are a formitable opponent and will stop at nothing to do their
+duty of protecting the palace and Sultan.
+~
+1140852744 1 0 0 134217784 2141 128 33558528 -1000 S
+e 0 1536 0 5
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139028
+rider al-asaf al asaf~
+an &+YA&+yl-&+RAs&+raf&n rider~
+An &+YA&+yl-&+RAs&+raf&n rider patrols the upper walls overlooking the courtyard.
+~
+Al-Asaf or better known as the Sorrowful are Efreeti horseman who are
+either horse archers or lancers. They exist only to die defending the
+efreeti empire. This Efreet is smaller in size compared to the others
+that have been found nearby which allows them to easily mount their
+chose ride.
+~
+1073743884 1 0 0 671088696 2 0 0 0 S
+e 0 16 0 4
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139029
+nightmare horse mount~
+a &+Lni&ngh&+Ltmare&n~
+A muscular &+Lni&ngh&+Ltmare&n looks at unease troting nearby here.
+~
+This muscular horse is dark grey all over its main body with an occasional
+black streak of hair running down its legs. It is of an abnormal size what
+could be considered of a magical in nature.
+~
+201459720 0 0 0 671088664 2050 0 0 -500 S
+ae 0 1 0 5
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139030
+male slave djinn~
+&+Cthe djinn slave&n~
+&+CA male djinn slave is flying here.  He seems very upset&n.
+~
+This djinn would give anything for a chance at revenge on the
+efreeti who captured him and placed him into servitude all these
+years.
+~
+10 0 0 0 10 0 0 0 1000 S
+EF 0 8 0 -1
+56 -7 -124 56d143+5880 7d6+35
+0.0.0.0 226800
+8 8 1
+#139031
+rider al-asaf al asaf~
+an &+YA&+yl-&+RAs&+raf&n rider~
+An &+YA&+yl-&+RAs&+raf&n rider patrols the upper walls overlooking the courtyard.
+~
+Al-Asaf or better known as the Sorrowful are Efreeti horseman who are
+either horse archers or lancers. They exist only to die defending the
+efreeti empire. This Efreet is smaller in size compared to the others
+that have been found nearby which allows them to easily mount their
+chose ride.
+~
+1073743884 1 0 0 671088696 2 0 0 -500 S
+e 0 8 0 4
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139032
+illithid auctioneer~
+an &+MIllithid&n &+YAuctioneer&n~
+&+bAn&n &+Millithid&n &+Yauctioneer&n &+bstands on the stage making eye contact with you.
+~
+What could be mistaken as a twitch in the next the auctioneer makes
+quick movements all around the room recognizing bids from those who
+are participating in the current auction. No sounds comes from this
+being but people are responding to his actions giving you the
+impression it is using some form of mind communication. This illithid
+is very scrawny in its build but is highly decorated in its clothes
+as they are of the highest quality.
+~
+1140852750 0 0 0 73752 2050 0 4198400 0 S
+mf 0 4 0 5
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139033
+watchfire legion member efreet efreeti~
+&+ba&n &+WWa&ntch&+Rf&+ri&+Rre&n Leg&+Lion&n &+bmember&n~
+&+bA &+ref&+Rre&+ret&+Ri &+WWa&ntch&+Rf&+ri&+Rre&n Leg&+Lion&n &+bmember stands behind and to the side of the&n &+Yauctioneer&+b.
+~
+As an efreet irregular his troop is known as the Watchfire Legion.
+Their current charge is the protection of the highly profitable
+slave trade here in the City of Brass. He is well built and dressed
+in some form of metal armor which is difficult to make out under his
+tabbord worn over his chest.
+~
+1140852746 0 0 0 805380152 2050 0 0 0 S
+e 0 16384 0 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139034
+overweight minotaur telorvehc~
+&+LTelorvehc~
+&+LTelorvehc&n the overweight &+Lmino&+rtaur&n opperates as the slavemaster here.
+~
+A brawny overweight minotaur stands nearly 9 feet tall with freakish
+long arms. His face has a scar cutting from above his left eye across
+the bridge of his nose and finishing into his brown mangely beard.
+~
+67110926 0 0 0 671088664 14528 67108864 33559552 0 S
+mt 0 16777216 0 5
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139035
+earth elemental dock hand~
+&+yan earth elemental dock hand~
+&+yA earth elemental working as a dock hand assists the dockmaster.
+~
+A man-sized earth elemental handles his duties considerably well considering
+his lack of dexterity and the fragility of the products passing through this
+area. He pays no attention to anything but his work.
+~
+393226 0 0 0 671088648 0 0 0 -500 S
+ee 0 1 0 3
+30 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139036
+dockmaster thri thrikreen thri-kreen~
+a dockmaster~
+&+yAn unusual&n dockmaster &+ygoes about his business along the docks.
+~
+A very active humanoid bug clitters about the docks keeping tabs on
+all that goes on on her docks. She seems very alert about all the
+different merchandise that moves around the docks.
+~
+1140852872 1073741824 0 0 939524152 0 2097152 1048576 -500 S
+tk 0 73728 0 3
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139037
+watchfire legion member efreet efreeti~
+&+ba&n &+WWa&ntch&+Rf&+ri&+Rre&n Leg&+Lion&n &+bmember&n~
+&+bA &+ref&+Rre&+ret&+Ri &+WWa&ntch&+Rf&+ri&+Rre&n Leg&+Lion&n &+bmember slowly patrols the slave market.
+~
+As an efreet irregular his troop is known as the Watchfire Legion.
+Their current charge is the protection of the highly profitable
+slave trade here in the City of Brass. He is well built and dressed
+in some form of metal armor which is difficult to make out under his
+tabbord worn over his chest.
+~
+1140852744 0 0 0 805380152 2050 0 0 -500 S
+e 0 1 0 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139038
+fire giant priest~
+&+La &+rfi&+Rre gi&+rant&n &+Lpriest~
+&+LA &+rfi&+Rre gi&+rant &+Lpriest accepts offerings as she worships here.
+~
+This female fire giant is wearing priestly robes and a black circlet
+upon her brow covered ever so slightly by her bright orange hair. She
+stands just over twelve feet tall and has bronze shin guards worn just
+above her sandaled feet. She is engrossed in her duties as one of the
+priests of Surtr and gives little notice to you unless you have an
+offering in your hand.
+~
+100681738 0 0 0 939524152 2049 0 4096 -500 S
+fg 0 288 0 6
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139039
+fire giant~
+&+La &+rfi&+Rre gi&+rant&n~
+&+LA &+rfi&+Rre gi&+rant &+Lmoves about the room worshiping.
+~
+This fire giant is wearing bronze half-plate and a black circlet
+upon his brow. He stands just over twelve feet tall and has bronze
+shin guards and forearm bracers emblazed with a symbol of Surtr. He
+has bright orange hair braided in the back into a long pony tail.
+~
+1174423562 0 0 0 939524152 2049 0 4096 -500 S
+fg 0 18 0 6
+59 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139040
+harem girl efreeti~
+&+Ythe harem girl&n~
+&+YThis harem girl resting on a magic pillow that forms under her.&n
+~
+The harem efreeti girl does not seem to be in any rush to do
+anything, as a magic pillow always forms under her.
+~
+2188 0 0 0 536870920 0 0 0 -501 S
+e 0 1 0 -1
+31 -7 -124 1d1+1 1d1+1
+0.0.200.0 10000
+8 8 2
+#139041
+shopkeeper efreet efreeti~
+&+Lan &+rEf&+Rre&+ret &+Lshopkeeper~
+&+LA shopkeeper is sitting here minding his shop.
+~
+This Efreet has made his living working his armory inside the shrine
+to Surtr. He displays his affiliation with pride as a fellow member
+on his belt buckle. If standing he would reach about 9 feet tall,
+not tall enough to reach the highest items on the 20 foot wall. He
+greets each humanoid as they enter his establishment with a friendly
+"Hail Traveler!"
+~
+10 0 0 0 8 0 0 0 0 S
+e 0 1 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139042
+phoenix~
+&+La &+rP&+Rh&+Yo&+We&+Yn&+Ri&n&+rx&N~
+&+LA &+rp&+Rh&+Yo&+We&+Yn&+Ri&n&+rx&n &+Lsits upon one of the pedestals in the corner of the room.
+~
+This beautiful bird is as large as a hefty humanoid male. When she
+spreads her wings they span to approximately 10 feet from end to end.
+Her feathers are orange, white and red but can be difficult to make
+out as it appears as though she is on fire. She has made her nest in
+one of the braziers that are burning here in the Surtr shrine and
+watches closely as each person enters the room.
+~
+1140983850 2304 0 0 671088698 65 0 8396800 -500 S
+px 0 512 0 4
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139043
+efreeti commoner~
+&+Yan &+ref&+Rre&+ret&+Ri &+Ycommoner&N~
+&+YAn &+ref&+Rre&+ret&+Ri &+Ycommoner visits the shrine.&N
+~
+This efreeti is of average build and stands 10 feet tall. He has spiked
+black hair and orange colored eyes. His redish skin is highlighted by the
+red flames surrounding him and seems a bit snobby towards the shorter
+beings in the room.
+~
+33568780 2148532224 0 0 939524144 2113 0 0 -500 S
+e 0 1 0 5
+45 0 0 1d1+1 1d1+1
+0.0.8.6 0
+8 8 1
+#139044
+flaming azer stocky humanoid~
+&+ra fl&+Ra&+rming &+RA&+Yz&+rer&n~
+&+rA short stocky fl&+Ra&+rming humanoid is moving about here.
+~
+This Azer has the look of small demon child. His skin seems to be made
+from magma and glows with a fiery aura. He has eye sockets but no sign
+of eyes are present. There is no skin on his body anywhere to be seen
+and stands just under 4 feet tall.
+~
+1140852874 786432 0 0 671621144 2049 0 0 -500 S
+ef 0 64 0 2
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139045
+imix priest~
+&+ran &+LI&+rmi&+Lx&n &+rpriest~
+&+rA priest of &+LI&+rmi&+Lx &+rkneels around the f&+Rl&+Ya&+Rm&+re linking hands with others.
+~
+The Efreet priest is dressed in all black robes that cover even his
+feet. His sleeves are rolled up above the elbows exposing his bronze
+bracers. He is linked hands with two fellow worshipers as you enter
+and does not look happy that you have interupted his prayers.
+~
+2058 1 0 0 268509208 2049 0 0 -1000 S
+e 0 320 0 6
+63 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139046
+fire giant elemental~
+&+ra giant fire elemental~
+&+rA&n giant &+rfire elemental hovers near the f&+Rl&+Ya&+Rm&+re.
+~
+This fire elemental is gigantic. Made of pure flame held together by
+some magical means its heat is more intense than any of its smaller
+counterparts.
+~
+100665354 0 0 0 671162392 4196355 32768 33559040 -1000 S
+ef 0 1 1 6
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139047
+flame salamander noble~
+&+ra &+Ynoble&n &+rfl&+Ra&+rme salamander~
+&+rA &+Ynoble&n &+rfl&+Ra&+rme salamander&n &+rlinks hands with the priest here.
+~
+The size of this salamander is amazing. Its body is thick and brawn.
+It is coated in flames and is curled up linking its hands with the
+priest.
+~
+67110958 0 0 0 536871096 14403 0 0 -1000 S
+ef 0 512 0 5
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139048
+fire giant~
+a &+rfi&+Rre gia&+rnt~
+A &+rfi&+Rre gia&+rnt&n coming to pay his tithes to &+LI&+rmi&+Lx&n wanders nearby.
+~
+This giant stands nearly 12 feet tall and is not wearing any foot wear.
+His hair is a smokey grey with a dark greyish black mustache and beard
+that is split into two strands and tied off at the bottom.
+~
+1140852744 0 0 0 671088664 64 0 0 -1000 S
+fg 0 16777216 0 6
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139049
+magma elemental~
+&+La m&+rag&+Lm&+ra &+Lelemental~
+&+LAn elemental made entirely of m&+rag&+Lm&+ra &+Lmoves about crunching noisely.
+~
+Living magma is what this creature reminds you of as it slowly moves
+around making crunching noises as its earthy parts rustle together.
+It stands about 9 feet tall with a chest nearly 4 feet across. The
+creature is surrounded in soft glowing flames and has beady eyes.
+~
+1140852744 0 0 0 536871064 1050625 0 0 0 S
+ef 0 1048576 0 5
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139050
+fire elemental~
+&+ra fire elemental&n~
+&+rA fire elemental is standing here&n.
+~
+This fire elemental is composed of living flames of orange and yellow.  Heat
+seems to flow from it in waves that burn anything they come in contact with.
+~
+1140852876 0 0 0 536870920 0 0 0 0 S
+EF 0 1 0 -1
+43 -5 -101 52d131+4420 7d6+30
+7.9.5.6 210600
+8 8 0
+#139051
+scorpion manscorpion member black dart~
+a &+Lm&na&+Ln&+Yscorp&+yion&n member of the &+LBl&+ra&+Lck D&+ra&+Lrt~
+A member of the &+LBl&+ra&+Lck D&+ra&+Lrt&n chitters around on its &+Yscorp&+yion&n legs.
+~
+This half man half scorpion has the torso of a human male and the
+lower body of a giant scorpion. He wields in his humanoid hands a long
+two-handed spear working his thrusting attacks with it in cohersion
+with his two large scorpion pinchers. His stinger rises just above his
+head coiled and ready to strike.
+~
+1107298312 1 0 0 687865880 0 262176 34607104 -500 S
+i 0 1 0 5
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139052
+blaze efreet~
+&+Ya &+RBl&+Ya&+Rze~
+An &+ref&+Rre&+ret&n known as a &+RBl&+Ya&+Rze&n rides around upon his &+rh&+Re&+rll&+Lho&nu&+Lnd&n.
+~
+A muscular efreet is dressed an bronze-plate and bares the symbol of the
+group known as the Blaze. The Blaze are a group of horseman lancers that
+fight as calvary for the city. They are rarely seen except in times of
+battle and are expert riders and have seldom been seen riding hellhounds.
+~
+1073743880 1 0 0 536870936 0 1073741824 4194560 500 S
+e 0 8 0 4
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139053
+blaze efreet~
+&+Ya &+RBl&+Ya&+Rze~
+An &+ref&+Rre&+ret&n known as a &+RBl&+Ya&+Rze&n rides around upon his &+rh&+Re&+rll&+Lho&nu&+Lnd&n.
+~
+A muscular efreet is dressed an bronze-plate and bares the symbol of the
+group known as the Blaze. The Blaze are a group of horseman lancers that
+fight as calvary for the city. They are rarely seen except in times of
+battle and are expert riders and have seldom been seen riding hellhounds.
+~
+1073743880 1 0 0 536870936 0 1073741824 8389120 -500 S
+e 0 16 0 4
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139054
+guard member illuminated efreet efreeti~
+&+Ya &+yguard&n &+Wme&nm&+Wbe&nr &+Yof the &nI&+Wll&nu&+Wmi&nn&+Wat&ne&+Wd~
+&+YA &+Wme&nm&+Wbe&nr &+Yof the city guard known as the &nI&+Wll&nu&+Wmi&nn&+Wat&ne&+Wd&n&+Y, patrols nearby.
+~
+An average size efreet built and breed for service stands before you.
+Illuminated are the standard city guard and are known for once being
+slaves and born into servitude for the great city. His garb drapes
+over what little armor he was given and his weapon of choice looks to
+be of an average quality but is ready to defend his city to the death.
+~
+1140852808 0 0 0 939524120 1 0 0 -500 S
+e 0 1 2 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139055
+titan disciple~
+a &+Ct&+Wi&+Ct&+Wa&+Cn&n disciple~
+&+LVisiting the &+ycity&N, &+Lthis &+Cdisciple&n &+Lmoves through the streets.
+~
+A visitor to the City of Brass this titan is head and shoulders above
+a greater majority of the population here. She is dressed in a form
+of bandedmail armor and has a huge hammer at the ready.
+~
+1140852808 8421376 0 0 536870936 32768 0 0 -500 S
+tt 0 32 1 6
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139056
+drow visitor~
+&+La &+mdrow&n &+Lvisitor~
+&+LAs a visitor to the &+ycity&n, &+Lthe &+mdrow elf&n &+Lminds his wares as he passes through.
+~
+This Drow Elf is dressed in blood red robes trimmed in a firey gold.
+He holds himself extremely confident as he moves through the city.
+~
+1073744008 16908288 0 16 805371904 0 0 0 -1000 S
+pl 0 512 2 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139057
+grey visitor~
+a &+cgrey elf&n visitor~
+A confident &+cgrey elf&n visitor of the &+ycity&n looks around for a merchant.
+~
+Dressed in blacks, greys, and deep greens this Grey Elf leaves little
+of any details to be discovered through sheer visual identification.
+Being very fleet a foot your pretty sure if you dont keep an eye on him
+he would quickly blend into his surroundings.
+~
+1073743880 65536 0 0 939524104 0 0 0 800 S
+pe 0 2 2 -1
+53 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139058
+orc slave~
+an &+Lorc&n slave~
+&+LAn orc slave hustles through the &+ystreets&n &+Lrunning an errand.
+~
+A very average looking orc wearing nothing but a slave band, loin cloth,
+and some sandals looks like he belongs in this city. He is very fit however
+probably from all the labor he does for his master.
+~
+1073744012 1048576 0 0 536870936 12352 0 0 -1000 S
+ho 0 64 2 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139059
+mountain dwarf priest~
+a &+Ymountain dwarf&n priest~
+A &+Ydwarf&n priest admires the sights as he moves through &+ytown&n.
+~
+This mountain dwarf priest spends most of his time admiring the different
+sights and citizens of this great city. He is standing just over four feet
+tall with blonde hair and long beard braided all the way down to his waist.
+~
+1073743884 2147483648 0 4 671088664 32768 0 0 1000 S
+pm 0 32 3 -1
+52 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139060
+flame griffon mount~
+&+ra flame griffon&n~
+&+rA flame griffon is standing here, surrounded in fire&n.
+~
+This odd beast, looks much like an earthly griffin only if body seems
+to be made of fire.  It's huge wings are over one hundred feet in length
+and its some fifty feet tall from head to claw.
+~
+1073874952 1 0 0 536870936 2049 0 0 -1000 S
+D 0 1 0 -1
+57 -7 -137 57d143+6555 7d6+35
+2.4.6.19 461700
+8 8 0
+#139061
+illithid slaver~
+&+can &+Millithid&n &+cslaver~
+&+cA hooded &+Millithid&n &+cflies inches above the street moving past you.
+~
+A hooded figure with tentacles where his face would be stands at five
+feet tall and seems quite frail. With a closer look you can see this
+being is an illithid with large buggy eyes and four tentacles.
+~
+1073744008 536870912 1073741824 0 671088664 0 0 0 -500 S
+mf 0 262144 0 3
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139062
+duergar stealthy~
+&+La stealthy &+rduergar~
+&+LA stealthy &+rduergar &+Lslips in and out of sight as you pass by.
+~
+Dressed in black leather this old bearded and stocky duergar keeps a
+close eye on his surroundings. His movements are careful as if he is
+looking for someone.
+~
+1073744008 2359296 0 0 536870936 0 0 0 -1000 S
+pd 0 4096 1 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139063
+archon hound dog-face humanoid~
+a &+Lhound &+Rarch&+Wo&+Rn~
+A large humanoid with a &+Ldog-face&n moves through the &+ycity&n with confidence.
+~
+With red-skin and boldging muscles this being looks much like a dog walking
+on two feet. It wears a kilt around his waist and large bracers covering his
+forearms while his main features is its pointy ears and chin.
+~
+1140852744 10496 1006632974 0 939532312 0 0 0 1000 S
+ar 0 8 1 4
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139064
+genasi firesoul~
+a &+Wg&ne&+cna&Ns&+Wi&n &+rf&+Ri&+rre&+Ws&nou&+Wl&n~
+&+LA &+Ytattooed &+Wg&ne&+cna&ns&+Wi&n &+Ltwirls a small&n &+rfl&+Ra&+rme&n &+Lbetween his fingers nearby here.
+~
+A humanoid body covered in runes enhanced with tattoos are just a couple of
+the noticeable attributes of this creature. His robes are solid grey with two
+red stripes that run over his shoulders. He is just over five feet tall, has
+no hair, and is average build.
+~
+1140852744 268435456 0 32 671154176 0 0 0 -500 S
+ph 0 768 0 3
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139065
+genasi slave earthsoul~
+a &+Wg&ne&+cna&ns&+Wi &+ye&+La&+yrth&n&+Ws&nou&+Wl&n~
+A &+Wg&ne&+cna&ns&+Wi&n slave wanders the &+ycity&n streets.
+~
+Grey skinned humanoid with runes covering his body has an average build and
+his right wrist is covered with an efreeti's slave marker. He has no clothing
+or any genitalia visible.
+~
+1140852872 524288 0 8 536871040 0 0 0 -500 S
+PH 0 2048 4 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139066
+demon ambassador~
+a &+Ld&ne&+Lm&no&+Ln&n &+mambassador~
+&+YA &+Ld&ne&+Lm&no&+Ln &+mambassador &+Yfrom Hell &+Ycarries out his business in the city.
+~
+This demon bares markings of those found on the Nine Hells upon his
+chestplate. He demon face has no nose but just two nostril holes above his
+mouth and two tiny horns like those found on a baby goat. His skin is
+charcoal color which can be seen easily in the seperations of his piece mail
+armor.
+~
+1073743880 0 0 128 671088664 0 0 0 -1000 S
+x 0 16 1 4
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139067
+githzerai slave~
+a &+Wgith&+Gzerai&n &+Lslave&n~
+An &+Lenslaved &+Wgith&+Gzerai&n looks to be on an errand for his master.
+~
+A common looking githzerai with the markings of enslavement on her wrist wears
+only a loin cloth bikini, a cloak, and a pair of sandals. She holds herself as
+if she has no care in the world.
+~
+1140852744 33554432 0 256 536870936 0 0 0 0 S
+gz 0 64 1 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139068
+titan resident~
+a &+Ct&+Wi&+Ct&+Wa&+Cn&n &+cresident~
+A &+Ct&+Wi&+Ct&+Wa&+Cn &+cresident&n moves through the &+ycity&n with a watchful eye.
+~
+This titan is anything but common. He has made the City of Brass his home. He
+is towering at twenty feet in height and wears a kilt on his waist covering
+his knees. The upper part of the kilt covers over his left torso and is made
+of some fine quality threads.
+~
+1140852744 1077936128 0 0 536870936 0 0 0 -500 S
+tt 0 1048576 2 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139069
+djinni~
+a &+Wdj&nin&+Wni&n~
+A &+Wdj&nin&+Wni&n hovers effortlessly over head to avoid the &+ycity&n crowds.
+~
+A Djinn is a genie from the Elemental Plane of Air. He is visiting the City
+Brass to conduct some business. His lower body is almost impossible to make
+out as it seems to be inside a swirling tornado of air. His upper torso is
+only covered by a sash.
+~
+1073743880 134217728 0 2 671088666 8388608 0 0 500 S
+dv 0 33554432 1 4
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139070
+barracks guard efreeti~
+&+Ybarracks guard&n~
+&+YA barracks guard is patrolling here&n.
+~
+The guard is Very large and looks quite mean.
+~
+2056 1 0 0 536870920 0 0 0 -800 S
+EF 0 16384 0 -1
+38 8 0 28d65+364 3d6+4
+0.0.0.0 24948
+8 8 1
+#139071
+beautiful succubus woman~
+a &+Lb&+ce&+Cautif&+cu&n&+Ll s&+ru&+Rccub&+ru&+Ls&n~
+&+rA &+Rvolupuous&+r &+Lb&+ce&+Cautif&+cu&+Ll&n &+rwoman draws your attention onto her.
+~
+This beautiful woman is some form of a demon. She has four arms which was not
+apparent from far away. She has long flowing black hair and redish pink skin.
+Her breasts are uncovered and surrounded by a weapon harness. The yellowish
+orange kilt shows off her toned legs and sandaled feet.
+~
+1140852744 67125248 0 0 671088664 0 262144 0 -500 S
+su 0 2 1 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139072
+unquenchable efreeti efreet guard black turban~
+an &+LUnq&nu&+Lenchable&n~
+A &+Lblack turban&n &+rEf&+Rre&+ret&+Ri&n known as the &+LUnq&nu&+Lenchable&n protects the Palace.
+~
+Only an Efreet who was born and bread to protect the Palace is called
+an Unquenchable. They are easily marked by their black turbans and
+their incrediable size. The focus in their eyes gives the impression
+that they are a formitable opponent and will stop at nothing to do their
+duty of protecting the palace and Sultan.
+~
+1140852746 0 0 0 134217784 2141 128 33558528 -1000 S
+e 0 3 0 5
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139073
+fire elemental medium~
+&+ra medium fire elemental~
+A &+rfire elemental&n shaped like a humanoid wanders the &+ytown&n.
+~
+Looking more like a man in shape but still made of wisping fire this creature
+moves effortlessly on this plane. It has two appendages that resemble arms
+and something you would consider to be its head. Unlike other fire elementals
+it is attempting to look humanoid here in the city.
+~
+67110920 0 0 0 536870968 1 0 0 -250 S
+ef 0 4096 0 3
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139074
+large fire elemental~
+&+ra large fire elemental~
+A &+rfire elemental&n resembling a large humanoid looks around &+ytown&n.
+~
+Looking more like a man in shape but still made of wisping fire this creature
+moves effortlessly on this plane. It has two appendages that resemble arms
+and something you would consider to be its head. Unlike other fire elementals
+it is attempting to look humanoid here in the city.
+~
+67110920 0 0 0 536870968 1 0 0 -250 S
+ef 0 1 0 4
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139075
+efreeti noble~
+&+Yan &+ref&+Rre&+ret&+Ri &+Ynoble&n~
+&+YAn &+ref&+Rre&+ret&+Ri &+Ynoble is standing here glowing with power.
+~
+This efreeti noble has a more regal standing then most, he is working on his
+studies of magic utilizing the library and its massive collection of books.
+~
+1140852746 0 0 0 536870968 0 0 0 -800 S
+e 0 2 3 -1
+55 -7 -127 57d143+5985 7d6+35
+0.0.0.0 230850
+8 8 1
+#139076
+hellspiniger centaur~
+&+gHellspin&+Liger &+Ythe unjust~
+&+YA &+gcen&+Ltaur &+Ynamed &+gHellspin&+Liger &+Yruns the bit and tackle store.
+~
+A large centaur who has a two-handed sword sheathed along his left flank looks
+very comfortable running his shop here in the City of Brass.
+~
+2058 0 0 0 671088696 0 0 0 0 S
+ct 0 16 1 -1
+52 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139077
+dwarf fingers locksmith chubby dwarven~
+&+MFingers~
+&+cThe chubby &+Ydwarven&n &+clocksmith named &+MFingers&n &+csits at his work station.
+~
+This chubby mountain dwarf is just under five feet tall and has tiny hands. As
+he works the lock his skills shine through with great dexterity and
+precishion. He has green eyes and blonde hair with streaks of red running
+through his shoulder length beard.
+~
+2186 0 0 0 805306424 28 0 0 500 S
+pm 0 4096 2 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139078
+halfling glittermaker oto~
+&+GOto Glittermaker&n~
+&+GOto Glittermaker&n &+gmoves from one side to the other helping customers.&n
+~
+This small halfling carries himself proudly as he seems to enjoy everything he
+is doing. His skin is a deep tan and wears overalls without a shirt or shoes.
+As you approach he greets you with a smile.
+~
+2058 0 0 0 939524152 0 0 0 1000 S
+pf 0 32800 0 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139079
+efreeti hutzparoon mason~
+&+RH&+rut&+Rz&+rpar&+Ro&+ron&n &+rthe mason&n~
+An &+ref&+Rre&+ret&+Ri &nnamed &+RH&+rut&+Rz&+rpar&+Ro&+ron&n works his masonry and looks to you as you enter.
+~
+With hair that looks like a deep red and orange flame and pink pigmentation
+covered skin this efreeti gives you a once over as you enter his shop. He
+stands and turns to you stopping what he was doing.
+~
+10 0 0 0 536870968 0 0 0 -500 S
+e 0 1 0 5
+54 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139080
+efreeti chef royal~
+&+Ythe royal chef&n~
+&+YThe royal &+ref&+Rre&+ret&+Ri&n &+Ychef is here preparing a multitude of grand food for the sultans table&n.
+~
+This huge efreeti is some forty feet tall, and is covered in white fire.
+he looks as if he is rather disturbed to find someone in his kitchen.
+~
+67110926 0 0 0 536870920 0 0 0 -1000 S
+e 0 512 0 -1
+58 -7 -135 58d96+5974 7d6+35
+0.0.0.0 234900
+8 8 1
+#139081
+shanaanaa~
+&+bSha&+Bnaa&+bna&+Ba~
+&+BSha&+bnaa&+bna&+Ba&n &+Ysits behind his desk bouncing a ball off a wall.
+~
+Enjoying himself as he bounces the ball against the wall this human is
+of average size and a bit over weight. He is dressed in t-shirt and
+shorts that are a bit tattered but not torn. As you approach he catches
+the ball from the last bounce and turns to you waiting to sell you some
+of his information.
+~
+2058 0 0 0 536870920 32768 0 0 -1000 S
+PH 0 8 1 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+6 6 1
+#139082
+efreeti alchemist~
+&+ref&+Rre&+ret&+Ri &+Calc&+chem&+Cist&n~
+&+YMixing a fresh batch this &+ref&+Rre&+ret&+Ri &+Calc&+chem&+Cist&n &+Ystirs slowly and carefully.
+~
+A huge efreeti female with long flowing fire red hair and dressed in a cut
+blouse works patiently with her agents mixing her potions. She wears a belt
+that was specially made to hold several ready to use potions at a moments
+notice.
+~
+10 0 0 0 671088648 0 0 0 -500 S
+e 0 4096 2 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139083
+herl ranger~
+&+CHe&+crl&n &+Lthe &+granger&n &+Llord&n~
+&+CHe&+crl&n &+Wthe known &+granger&n &+Wattends to his shop retired from adventure.
+~
+Old and greying this half-elf man is a well seasoned adventurer who
+is retirement and now works his shop here in the City of Brass. His
+skills as a ranger are unsurpassed and is known for being able to
+find any rare herbs, of course for a substantial price. He carries
+a two-handed sword and has traded in his chainmail for some more
+common cloths.
+~
+2058 0 0 0 536870968 0 0 0 500 S
+p2 0 2 2 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139084
+satyr musician filippie~
+&+YFil&+yip&+Ypie&n the &+gSa&+ytyr~
+Singing and dancing a tune, &+YFil&+yip&+Ypie &nthe &+gSa&+ytyr &nentertains those around his shop.
+~
+This half-human half-goat humanoid prances around on his two goat hooves
+playing a Y-shaped flute with his human hands. His head has a small pair
+of horns no bigger than a thumb on a human and are dull and rounded at
+their tip. His legs look extremely muscular and are coated with a brown
+fur. His torso is only covered in a single strap backpack leaving his
+humanoid toned chest to bear. He seems quite happy entertaining people
+who visit the marketplace and attend his shop.
+~
+10 0 0 0 570425352 2 0 0 500 S
+h 0 32768 3 3
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139085
+repair flesh golem~
+&+Lthe &+Bre&+bpair &+Lm&+Ba&+bn&n~
+&+BA flesh golem leans in the corner arms crossed and one foot pressed against the wall.&n
+~
+A massive flesh golem made of different forms of flesh has been sewn
+together with the additions of magics to make up this construct that
+stands before you. This renown golem known through the City of Brass
+is called the "repair man". It can not create but can only magically
+fix damaged pieces of equipment and some repairs to flesh as well.
+~
+10 0 0 0 570425628 2 0 0 0 S
+cn 0 32 0 5
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139086
+ether fire giant~
+&+RE&+Yth&+ye&+rr~
+&+RE&+Yth&+ye&+rr &+ythe &+rfi&+Rre gia&+rnt &+ylooks to pawn his magical wears.
+~
+A seasoned fire giant standing twenty five feet tall with massive biceps
+and extremely large hands to match is acting as a vendor in one of the
+daily rental tents trying to sell his wares. Looking closely you can see
+he has no ears anymore as both have been cut off by a blade. He has two
+large scimitars sheathed around his waist and wears a suit of dull bronze
+half-plate covered in battle scars of many types.
+~
+10 0 0 0 939524156 2078 0 0 -500 S
+fg 0 1 1 6
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139087
+efreeti customs officer~
+&+Yan &+ref&+Rre&+ret&+Ri &+Ycustoms officer~
+&+YAn &+ref&+Rre&+ret&+Ri &+Ycustoms officer deals with several crates of goods.
+~
+A large efreeti wearing a tunic and trousers carrying a quill and paper spends his time checking each crate that enters through the docks. He pays strick attention to his current task and moves onto the next with little hesitation.
+~
+2058 0 0 0 536870936 0 0 0 -500 S
+e 0 1 3 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139088
+angry drider pissed~
+&+Lan &+ran&+Rgr&+ry&n &+mdri&+Lder&n~
+&+LA p&nisse&+Ld&n off &+mdri&+Lder&n &+Lcharges towards the exit.
+~
+A Lloth abomination that is a drider is angry at being a cross breed and even
+more so at being captured and put on display here in the City of Brass. He is
+half-man half-spider and looks for ways to escape.
+~
+2060 1 0 0 671088664 2048 0 0 -1000 S
+dr 0 2097152 3 4
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139089
+efreeti padashaw wrinyen otis~
+the &+ref&+Rre&+ret&+Ri&n pa&+Lda&nshaw&n &+CW&+crinyen &+CO&+ctis~
+&+LThe &npa&+Lda&nshaw &+CW&+crinyen &+CO&+ctis&n &+Lhelps instruct the new recruits in battle techniques.
+~
+As one of the six padashaw's in the palace he has been assigned to oversee
+the guard chief's education of the palace's private troops. He is a massive
+efreeti and well dressed with a decorated tunic and what looks to be a kilt
+around his waist. He does not look happy to see someone is disturbing him
+and turns to charge you.
+~
+1124075532 1 0 0 671088696 2048 0 0 -500 S
+e 0 1 1 -1
+58 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139090
+efreeti commoner efreet~
+&+ran ef&+Rre&+ret&+Ri &+rcommoner&n~
+&+rA common &+ref&+Rre&+ret strolls through the city minding his business&n.
+~
+This efreeti is a huge nearly twelve feet tall and is a form of molten
+substance with a mixture of bronze, copper, and flame. This being is
+magical in nature but pays no attention to anything but his business.
+~
+1140852748 0 0 0 939524152 0 0 0 -500 S
+e 0 512 1 -1
+45 -7 -124 56d96+5768 7d6+35
+0.0.0.0 226800
+8 8 1
+#139091
+branded guard efreeti~
+the &+mBra&+Mnd&+med&n~
+An &+ref&+Rre&+ret&+Ri&n guard known as the &+mBra&+Mn&+mded&n guards the harem entrance.
+~
+This Efreet is known as the Branded. He is an eunuch and is considered
+by the Sultan to be safe to protect his harem since the Branded have all
+had their testicles removed. Do not underestimate his battle prowess however
+he is marked with scar's from many wounds over time.
+~
+33556494 1 0 0 536944664 0 0 0 -500 S
+e 0 16 1 4
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139092
+efreeti padashaw hakim okewonaku~
+the &+ref&+Rre&+ret&+Ri&n pa&+Lda&nshaw&n H&+Lakim&n O&+Lkewonaku&n~
+&+LThe &npa&+Lda&nshaw H&+Lakim&n O&+Lkewonaku&n &+Lis maintaining the unique mounts&n.
+~
+The padashaw of the efreet royal palaces' flying brigade, Hakim Okewonaku
+works with the mounts. He turns as he hears your enter and moves to see why
+he is being interupted.
+~
+117508108 1 0 0 671088824 399577 0 536870912 -1000 S
+e 0 16384 2 4
+60 -10 -142 60d132+6240 7d6+35
+0.0.0.0 243000
+8 8 1
+#139093
+magma magmaman man~
+&+ra m&+La&+rg&+Lm&+ra man~
+A &+rm&+La&+rg&+Lm&+ra&n shaped into a &+rman&n moves through the hallway on an errand.
+~
+A humanoid shaped being made entirely from hardened magma moves slowly and
+loudly through the area. The cracks in its rocky skin shin bright as you can
+see what looks to be molten lava as his core.
+~
+1141114888 0 0 0 24 0 0 0 -200 S
+ef 0 1 2 3
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139094
+fire mephit magician~
+a captivating &+Rf&+Yi&+Rre&n &+rme&+Rph&+rit&n &+ym&+Yagicia&+yn&n~
+This tiny &+rme&+Rph&+rit&n &+ym&+Yagicia&+yn&n captivates the crowds attention.
+~
+Hovering around the room looking to capture someones eye this fire mephit is
+an entertainer. He uses his magics in unique ways that can cause a chuckle
+from almost anyone.
+~
+1140852776 0 0 0 0 0 0 0 -200 S
+ef 0 2048 3 1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139095
+elder fire elemental~
+&+ran &+Relder &+rfire elemental~
+&+LThe largest &+rfire elemental&n &+Lyou have ever seen moves around the &+ypalace&n &+Lignoring you.
+~
+This fire elemental is giant in size and doesnt burn nearly as bright as a
+smaller one of its cousins. It has the shape of a giant above the area which
+you would think would be its torso and the lower flows into a blend of fire.
+Seeing this massive elemental gives you the impression that it is extremely
+powerful.
+~
+1140852780 0 0 0 939597880 34816 32896 33562624 -500 S
+ef 0 1048576 1 6
+59 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139096
+giant smoke elemental~
+&+La g&nian&+Lt&n s&nm&+Wo&nk&+Le elemental~
+&+LA g&nian&+Lt elemental made entirely of misty s&nm&+Wo&nk&+Le swirls through the hall.
+~
+A elemental made of smoke is shaped into a humanoid creature and hovers
+above the ground. It moves through the area and can easily disperse its
+shape to move into and through tight spaces. It pays no attention to the
+visitors here as it is moving with some purpose.
+~
+1140852876 0 0 0 671162392 0 128 0 -500 S
+ve 0 1 3 6
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139097
+efreeti gardener~
+an &+ref&+Rre&+ret&+Ri &+Gg&+gardene&+Gr&n~
+Helping maintain the courtyard this &+ref&+Rre&+ret&+Ri&n &+Gg&+gardene&+Gr&n kneels nearby.
+~
+An efreeti female carrying snips in here hand and some sort of apron
+around her waist looks to be busy at work. Maintaining a garden that
+is made mostly of fire and different shapes of them she somehow keeps
+herself busy and busy enough to pay no attention to you.
+~
+1140852744 0 0 0 671088664 0 0 0 -500 S
+e 0 128 2 4
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139098
+fire troll slave~
+&+La &+rfir&+Re tr&+roll&n &+Lslave~
+&+LA &+rfir&+Re tr&+roll &+Lsl&na&+Lve assists with maintance of the garden.
+~
+This troll resembles a very skinny and tall humanoid but unlike other trolls
+you would see in swamps this one has deep red skin. He has a red aura around
+him and does not seem too nervous about working around fire. Captured and
+sold into slavery he now spends his time in the palace working in hot places.
+~
+1140852744 0 0 0 402726936 4202496 0 0 -500 S
+pt 0 32 1 5
+42 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139099
+gyrowizniptzzl ancient red dragon~
+&+rGyrowizniptzzl, the &+Lancient&n &+Rred dragon&n~
+&+rGyrowizniptzzl, the &+Lancient&n &+Rred dragon&n awaits audience with the Sultan.
+~
+&+rBorn eons ago in the time before time, this red dragon has lived longer than
+&+rnearly any other creature on the planet.  His scales are iridescent red, throwing
+&+roff purplish-red hues as he breathes.  His eyes are coal black, set beneath hard
+&+rridges of bone and scale.  Several spear-like protrusions crown his head, and
+&+rwould probably make for formidible improvised weapons.  His body is immense, but
+&+rfinely muscled beneath its hard exterior.  The underside of his body is covered
+&+rin blood red plates of chitinous armor.  Black claws and black spines along his
+&+rtail complete the overall fearsome appearance of the creature.
+~
+1358960684 0 0 0 671162392 14531 0 33554432 -500 S
+d 0 516 0 7
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139100
+efreeti noble~
+&+Yan &+ref&+Rre&+ret&+Ri &+Ynoble&n~
+&+YAn &+ref&+Rre&+ret&+Ri &+Ynoble is standing here glowing with power.
+~
+This efreeti noble has a more regal standing then most, he
+seems to be upset to see you here.
+~
+2058 1 0 0 536870968 0 0 0 -800 S
+e 0 1 1 -1
+55 -7 -127 57d143+5985 7d6+35
+0.0.0.0 230850
+8 8 1
+#139101
+rikitizzilayn ancient brass dragon~
+&+YRikitizzilayn, &nan &+Lancient &+ybrass dragon&n~
+&+YRikitizzilayn, &nan &+Lancient&n &+ybrass dragon &nawaits audience with the Sultan.
+~
+&+yBorn eons ago in the time before time, this red dragon has lived longer than
+&+ynearly any other creature on the planet.  His scales are iridescent red, throwing
+&+yoff purplish-red hues as he breathes.  His eyes are coal black, set beneath hard
+&+yridges of bone and scale.  Several spear-like protrusions crown his head, and
+&+ywould probably make for formidible improvised weapons.  His body is immense, but
+&+yfinely muscled beneath its hard exterior.  The underside of his body is covered
+&+yin blood red plates of chitinous armor.  Black claws and black spines along his
+&+ytail complete the overall fearsome appearance of the creature.
+~
+1090522156 0 0 0 672211096 14402 0 33554432 500 S
+d 0 392 0 7
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139102
+ten ten-headed headed pyrohydra hydra~
+&+La t&Ne&+Ln&n-&+Lh&ne&+Wa&nd&+Led&n &+rpy&+Rro&+Yhy&+Wdra~
+&+yA head of a &+Lt&ne&+Ln&n-&+Lh&ne&+Wa&nd&+Led&n &+rpy&+Rro&+Yhy&+Wdra&n &+ysee's you and &+Wroars &+yas the beast turns to attack!
+~
+&+LFour immense claws noisely clank as they scratch the hardened brass floor
+&+Las the pyrohydra moves about.  Each of the claws is attached to a muscular
+&+Llimb which leads &+Lback to the rather small torso.  Ten stalk-like necks
+&+Lextend outward from the torso ending in identical draconian heads.  Each of
+&+Lthe heads swings about from side to side, surveying the surroundings and
+&+Lsearching for prey or danger.  The scales of the beast are a wonder in
+&+Lthemselves, seemingly blending into the brass walls and &+Lshimmering with
+&+Lthe fire throughout the area. The heads work in concert with each other in
+&+Lcombat making this foe extremely dangerous.
+~
+1124605736 1 0 0 671162392 14528 67371008 33554432 -1000 S
+d 0 80 0 7
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139103
+efreeti disciple~
+&+Yan &+ref&+Rre&+ret&+Ri &+Ydisciple~
+&+YAn &+ref&+Rre&+ret&+Ri&n &+Ydisciple listens intently to the high priest.
+~
+This efreeti is devoted to the worship of his god and inspires to be a great
+servant in the near future. In the meantime he learns what he can from the
+high priest of the efreeti palace.
+~
+67110922 0 0 0 671088648 0 0 0 0 S
+e 0 32 3 -1
+32 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139104
+efreeti templar guard~
+&+Yan &+ref&+Rre&+ret&+Ri &+Ytemplar&N~
+&+YAn &+ref&+Rre&+ret&+Ri &+Ytemplar guards the priests tower.&N
+~
+&+MThis guard dressed with the royal insignia of the Sultan, and
+&+Mwearing the holy markings of Kossuth, watches for any who
+&+Mwould disturb the peace of the temple.&N
+~
+1073743880 1 0 0 536944664 64 0 0 -500 S
+e 0 16 1 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139105
+efreeti commoner~
+&+Yan &+ref&+Rre&+ret&+Ri &+Ycommoner&N~
+&+YAn &+ref&+Rre&+ret&+Ri &+Ycommoner travels the city on an unknown errand.&N
+~
+This efreeti is of average build and stands 10 feet tall. He has spiked
+black hair and orange colored eyes. His redish skin is highlighted by the
+red flames surrounding him and seems a bit snobby towards the shorter
+beings in the room.
+~
+33568780 2148532224 0 0 939524144 2113 0 0 -500 S
+e 0 1 0 5
+45 0 0 1d1+1 1d1+1
+0.0.8.6 0
+8 8 1
+#139106
+efreeti magi disciple~
+an &+ref&+Rre&+ret&+Ri&n &+Lma&ng&+Wi&n &+rdis&+Rci&+rple~
+&+rAn ef&+Rre&+ret&+Ri&n &+Lma&ng&+Wi&n &+ris standing here pondering the aspects of magic.
+~
+An efreeti dressed in robes and holding a wand in one hand and a glass vial
+in the other listens to the arch-magi as he gives instructions. He looks
+focused on the task and pays little attention to you as you enter.
+~
+67110922 0 0 0 671162368 28 0 0 -500 S
+e 0 512 2 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139107
+efreeti templar guard~
+&+ran &+ref&+Rre&+ret&+Ri &+Lte&nm&+Wp&nl&+Lar&N~
+&+rAn &+ref&+Rre&+ret&+Ri &+Lte&nm&+Wp&nl&+Lar &+rguards the &+Rm&+ragi tower.&N
+~
+&+MThis guard dressed with the royal insignia of the Sultan, and
+&+Mwearing the holy markings of Kossuth, watches for any who
+&+Mwould disturb the peace of the temple.&N
+~
+1073743882 1 0 0 536944664 64 0 0 -500 S
+e 0 16 1 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139108
+flaming azer stocky humanoid slave~
+&+ra fl&+Ra&+rming &+RA&+Yz&+rer&n &+rslave~
+&+rA short stocky fl&+Ra&+rming humanoid slave carries food to the table.
+~
+This Azer has the look of small demon child. His skin seems to be made
+from magma and glows with a fiery aura. He has eye sockets but no sign
+of eyes are present. There is no skin on his body anywhere to be seen
+and stands just under 4 feet tall.
+~
+1140852872 0 0 0 671621128 2049 0 0 -500 S
+ef 0 1 0 2
+32 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139109
+immature nightmare~
+an &+Wimm&natur&+We &+Lni&ngh&+Ltmare&n~
+A &+Wyo&nun&+Wg &+Lni&ngh&+Ltmare&n is stabled here awaiting next training lesson.
+~
+A colt nightmare is stabled here in the flight pad of the palace. Here it is
+trained in both flight with a rider as well as combat. She is all black with
+a small patch of ash color in her mane.  It is protective of its master and
+the hand thats feeds her.
+~
+67110922 0 0 0 671088640 2048 0 0 0 S
+ae 0 1 0 -1
+32 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139110
+dying djinn~
+&+ba dying djinn~
+&+bthe corpse of a dying djinn slave is here.
+~
+You see the rotting corpse of a dead djinn slave on the floor here.
+It looks as if he was tortured to death.  A horrid smell comes from
+the corpse.
+~
+8 0 0 0 0 0 0 0 1000 S
+EF 0 0 0 -1
+55 -5 -121 55d110+4565 7d6+30
+0.0.0.0 222750
+8 8 1
+#139111
+guild guardian guard golem~
+&+Ythe warrior guild guardian&N~
+&+YThe guardian to the &+ref&+Rre&+ret&+Ri &+Ywarriors guild is here.
+~
+This massive golem stands guard over the warriors entrance allowing
+only the guild members of that discipline passage. It was created
+by the efreet engineers for this one purpose.
+~
+67110955 0 0 0 553722008 2049 0 0 -1000 S
+og 0 1 0 -1
+60 -7 -135 58d143+6090 7d6+35
+0.0.0.0 234900
+8 8 1
+#139112
+efreeti bartender~
+&+raltona the bartend~
+&+rAltona the bartender stands here serving up fiery drinks!
+~
+Altona is a large efreeti with bottles of various mixtures
+always floating around the room near his head.  He seems to
+be always watching everything going on around him.
+~
+2058 0 2155871808 12800 536870920 0 0 0 -500 S
+e 0 16384 0 -1
+52 -5 -111 52d131+4420 7d6+30
+0.0.0.0 210600
+8 8 1
+#139113
+efreeti warrior~
+&+Yan &+ref&+Rre&+ret&+Ri &+Ywarrior&N~
+&+YAn &+ref&+Rre&+ret&+Ri &+Ywarrior is here practicing his combat skills.
+~
+This efreeti warrior, dressed in the regalia if the city of brass
+stands ever ready to commit himself to the defense of the fabled city.
+~
+100665352 0 2155413056 12800 671088664 12481 0 0 -500 S
+e 0 1 0 -1
+51 -7 -138 59d143+6195 7d6+35
+0.0.0.0 238950
+8 8 1
+#139114
+katrais efreeti warrior master _no_lure_~
+&+rthe warrior master of the ef&+Rre&+ret&+Ri&N~
+&+rKatrais, master of the guild stands here pissed.&N
+~
+This amazingly large efreeti warrior looks like he is ready to
+kick the living crap out of anything that dares disturb his rest.
+~
+100730922 0 2154364480 12800 671088792 14529 0 0 -1000 S
+e 0 16387 0 -1
+61 -10 -142 60d200+9000 7d6+35
+0.0.0.0 243000
+8 8 1
+#139115
+golem magi guardian guard~
+&+Gthe magi guild guardian&N~
+&+GThe &+ref&+Rre&+ret&+Ri &+Gmagi guild guardian blocks passage east.
+~
+This massive golem stands guard over the magi entrance allowing
+only the guild members of that discipline passage. It was created
+by the efreet engineers for this one purpose.
+~
+100665387 0 0 0 687939736 407745 0 0 0 S
+og 0 512 0 -1
+60 -10 -142 20d20+15000 7d6+35
+0.0.0.0 243000
+8 8 0
+#139116
+efreeti magi~
+&+ref&+Rre&+ret&+Ri &+Gmagi&N~
+&+GAn &+ref&+Rre&+ret&+Ri &+Gmagi stands here, awash in magic power.
+~
+This efreeti magi seems a tad upset by your presence.
+Dressed in long flowing greenish burning robes of fire,
+this efreeti seems to have some inner power that could
+be unleaded at anytime.
+~
+1174538252 0 8331248 60928 671088696 14528 0 0 -1000 S
+e 0 512 0 -1
+56 -7 -124 56d96+5768 7d6+35
+0.0.0.0 226800
+8 8 1
+#139117
+efreeti acolyte conjurer~
+&+Gan &+ref&+Rre&+ret&+Ri &+Gacolyte conjurer&N~
+&+GAn &+ref&+Rre&+ret&+Ri &+Gacolyte conjurer stands here studying.
+~
+This magi student seems surprised to see a human here.
+nonetheless he is quick to recover from his initial
+shock.
+~
+1174407304 0 8331248 60928 536870952 145537 0 0 -500 S
+e 0 2048 0 -1
+52 -3 -105 50d80+2650 6d6+25
+0.0.0.0 121500
+8 8 1
+#139118
+caltoon efreeti arch-magi _no_lure_~
+&+BCaltoon the efreeti magi master&N~
+&+BCaltoon, the arch-magi of all efreeti stands here.&N
+~
+This magi personifies efreeti magic. master of the guild and tower
+he has ruled over the efreeti magi for millions of years.  This is
+one magi that should be left alone!
+~
+100731022 0 8331248 60928 671088824 407745 0 0 -1000 S
+e 0 3584 0 -1
+60 -10 -142 100d100+10000 7d6+35
+0.0.0.1000 243000
+8 8 1
+#139119
+efreeti tax collector~
+&+Ythe &+ref&+Rre&+ret&+Ri &+Ytax collector&N~
+&+YThe &+ref&+Rre&+ret&+Ri &+Ytax collector stands here with his hand out.
+~
+This efreeti stands here an average height at twelve feet tall and is
+a bit over weight with his pot belly bulging his shirt out just slightly.
+He wears a pair of spectacles at the very tip of his nose as he looks
+over his book with a pondering look on his face. His face changes as he
+sees you enter to more of an enquiring look and closes his book waiting
+to speak with you.
+~
+142 0 0 0 536870952 0 0 0 -1000 S
+e 0 1 0 -1
+59 -5 -121 55d131+4675 7d6+30
+0.0.0.0 222750
+8 8 1
+#139120
+efreeti census taker~
+&+ref&+Rre&+ret&+Ri &+Ycensus taker&N~
+&+YThe &+ref&+Rre&+ret&+Ri &+Ycensus taker is here counting.
+~
+This efreeti loves to count numbers, he starts to count you
+when you walk in, but then does a double take and decides to
+count your heads instead.
+~
+67111054 0 0 0 536870968 0 0 0 -1000 S
+e 0 256 1 -1
+55 -5 -121 55d131+4675 7d6+30
+0.0.0.0 222750
+8 8 1
+#139121
+efreeti armorer~
+&+Yan &+ref&+Rre&+ret&+Ri &+Yarmorer&N~
+&+YAn &+ref&+Rre&+ret&+Ri &+Yarmorer works on his anvil and sells his wares.
+~
+This efreeti has huge budging muscles and as impossible as it may seem, it
+almost looks as if he is sweating.
+~
+2190 0 0 0 536870952 0 0 0 -1000 S
+e 0 34816 0 6
+55 -5 -121 55d131+4675 7d6+30
+0.0.0.0 222750
+8 8 1
+#139122
+efreeti weapon-smith weapon smith~
+&+Yan &+ref&+Rre&+ret&+Ri &+Yweapon-smith&N~
+&+YBanging away, the &+ref&+Rre&+ret&+Ri &+Yweapon-smith stands here.
+~
+This efreeti, dressed all in metal armor and wielding
+a huge hammer creates the powerful weapons of the efreeti.
+~
+2190 0 0 0 536870952 0 0 0 -1000 S
+e 0 16384 1 -1
+55 -5 -121 55d131+4675 7d6+30
+0.0.0.0 222750
+8 8 1
+#139123
+efreeti saladeem clothier~
+&+YSaladeem the &+ref&+Rre&+ret&+Ri &+Yclothier&N~
+&+YSaladeem stands here selling his exotic leather goods.
+~
+This noble efreeti makes the fine clothes that the efreeti
+wear.  He seems to almost have a kind look in his eyes...for
+an efreeti.
+~
+142 0 0 0 536870952 0 0 0 -1000 S
+e 0 4194304 1 -1
+55 -5 -121 55d131+4675 7d6+30
+0.0.0.0 222750
+8 8 1
+#139124
+efreeti yodono magi~
+&+GYodono the &+ref&+Rre&+ret&+Ri &+Gmagi shop owner&N~
+&+GYodono stands here selling his magic goods.&N
+~
+This efreeti dressed in long flowing flaming green and
+white robes is where many of the efreeti magi come to acquire the
+material components they require for their spells.
+~
+142 0 0 0 536870952 0 0 0 -1000 S
+e 0 512 2 -1
+55 -5 -121 55d88+4565 7d6+30
+0.0.0.0 222750
+8 8 1
+#139125
+gnome groyana~
+&+YGroyana&n~
+&+YGroyana the &+Rgnome &+Ygemologist stands here.
+~
+This female efreeti sells many strange gems that can not
+be found on the prime plane.  Of of which are resistant
+to the amazing heat of this plane.
+~
+142 0 0 0 536870952 0 0 0 -1000 S
+pg 0 33554432 3 -1
+55 -5 -121 55d131+4675 7d6+30
+0.0.0.0 222750
+8 8 2
+#139126
+tila banto baker~
+&+YTila Banto&N~
+&+YA beautiful baker known as Tila Banto stands here minding her shop.
+~
+This female efreeti sure has something that smells good
+for sale here.
+~
+2190 0 0 0 536870952 0 0 0 0 S
+su 0 512 0 -1
+46 -5 -121 55d88+4565 7d6+30
+0.0.0.0 222750
+8 8 2
+#139127
+grand hurloo efreeti~
+&+bGrand Hurloo&N~
+&+bGrand Hurloo the fortune teller of the efreeti.
+~
+This Efreeti mystic knows all and sees all.  Do you
+wish him to see your future for you as well?
+~
+2190 0 0 0 536870952 0 0 0 -1000 S
+e 0 32769 0 -1
+61 -7 -138 59d143+6195 7d6+35
+0.0.0.0 238950
+8 8 1
+#139128
+talosoa effreeti banker~
+&+YTalosoa the &+ref&+Rre&+ret&+Ri &+Ybanker&N~
+&+YTalosoa the &+ref&+Rre&+ret&+Ri &+Ybanker stands here.
+~
+This efreeti wears glasses over his eyes made of flaming coins, he seems to be
+able to tell just how much money your worth just by looking at you.
+~
+2190 0 0 0 536870968 0 0 0 -1000 S
+e 0 544 0 6
+55 -5 -121 55d88+4565 7d6+30
+0.0.0.2000 222750
+8 8 1
+#139129
+efreeti receptionist hotel~
+&+Yan &+ref&+Rre&+ret&+Ri &+Yhotel receptionist&N~
+&+YAn &+ref&+Rre&+ret&+Ri &+Yhotel receptionist is here waiting to rent rooms.
+~
+This efreeti is making a great living opperating as this hotels receptionist.
+She is a large woman standing just under twelve feet tall with reddish pink
+skin with some darkening spots on her arms and legs. Her breasts are presented
+to be inviting as she flaunts her self as a beautiful woman.
+~
+67111055 0 0 0 536870952 0 0 0 -1000 S
+e 0 512 1 -1
+60 -10 -142 60d96+6180 7d6+35
+0.0.0.0 243000
+8 8 2
+#139130
+basilisk green~
+&+ga green basilisk&N~
+&+ga green basilisk shuffles around here.&N
+~
+This large reptilian monster has glowing green eyes that
+give you an odd feeling as you stare into them.
+~
+1073741835 1 0 0 268435516 2049 0 0 -1000 S
+R 0 1 0 -1
+60 -5 -121 55d110+4565 7d6+30
+0.0.0.0 222750
+8 8 0
+#139131
+a gelintinous cube~
+&+Wa gelatinous cube&N~
+&+WA gelatinous cube is slowly oozing along here.&N
+~
+This monster is translustant and very hard to see, it moves along
+the floor picking up everything in its path for ingestion.
+~
+11 0 0 0 0 0 0 0 0 S
+EF 0 0 0 -1
+50 -3 -105 50d100+2650 6d6+25
+0.0.0.0 121500
+8 8 0
+#139132
+hidden djinni spy~
+a &+Lhi&ndd&+Len&n &+Cdjinni&n &+Ls&np&+Ly&n~
+&+LTrying to go unnoticed a &+Cdjinni&n &+Lhides in the steam spouts nearby.
+~
+&+CA scout from the Elemental Plane of Air he is hiding here on the magma lake
+&+Cusing the steam spouts as cover. His upper body is of a humanoid and lower
+&+Cis a vortex of air. Looking upon his face he is looking directly back and
+&+Cthen cautiously beckons you towards him with a head movement.
+~
+2442 0 0 0 940574746 8388608 131072 4096 500 S
+ea 0 5120 0 4
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139133
+slave efreeti priest priestly~
+&+La &+Wpr&+Ciest&+Wly &+ref&+Rre&+ret&+Ri &+Lslave~
+&+LAn &+ref&+Rre&+ret&+Ri&n &+Lslave stands nearby waiting for his masters command.
+~
+Born into slavery this efreet obeys without question. He has training as
+a priest and is battle ready and awaits orders.
+~
+264204 0 0 0 0 0 0 0 -500 S
+e 0 32 1 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139134
+illithid slave psionicist psionic planetbound~
+&+La pl&nane&+Ltbou&nnd &+Millithid&n &+bps&+Bion&+bic&n &+Lslave&n~
+&+LAn &+Millithid&n &+Lslave stands nearby awaiting orders from its master.
+~
+This illithid has been captured and forced into slavery. It will obey its
+masters bidding until the bonds of servitude are broken or complete.
+~
+264204 0 0 0 0 0 0 0 -1000 S
+pi 0 4 1 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139135
+battle battle-hardened fire giant slave~
+&+La ba&ntt&+Lle&n-&+Lhar&nden&+Led&n &+rfi&+Rre gia&+rnt&n &+Lslave&n~
+&+LA &+rfi&+Rre gia&+rnt&n &+Lslave stands here awaiting orders from his master.
+~
+This fire giant slave was born into slavery and has been through various
+masters over the years. He is battle ready and will perform his masters
+bidding without question.
+~
+264204 0 0 0 0 0 0 0 -750 S
+fg 0 1 1 6
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139136
+demon sorceress slave~
+&+La d&ne&+Lm&no&+Ln&n &+Msor&+mcer&+Mess&n &+Lslave&n~
+&+LA d&ne&+Lm&no&+Ln slave stands here awaiting her masters bidding.
+~
+Captured and forced into slavery this demon regrets coming to the City of
+Brass and violating the laws. It is now bound to complete its servitude
+and will follow its masters bidding until then.
+~
+264204 0 0 0 0 0 0 0 0 S
+x 0 512 2 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139137
+hellhound hound~
+&+La &+rh&+Re&+rll&+Lho&nu&+Lnd~
+A &+Lblack-haired&n dog covered in ash with glowing &+rr&+re&+rd&n eyes drools &+rfl&+Ra&+rme&n here.
+~
+This beast has the body of a dog but its eyes are blood shot red and
+has flames dripping from its razor sharp teeth. It's coat is all black
+except on the end of its tail which is as grey as ash. The bulk of
+this beast is that of a warg and looks to be extremely strong.
+~
+264232 0 0 0 0 2 0 0 -1000 S
+ae 0 1048576 0 3
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139138
+magus githyanki slave~
+&+La&n &+rf&+Ri&+rre&n &+rm&+Ra&+rgus&n &+Ggith&+Wyanki &+Lslave~
+&+LA &+Ggith&+Wyanki&n &+Lslave stands waiting for his masters commands.
+~
+This captured githyanki has been forced into slavery and sold in the
+City of Brass. He has magical abilities but will use them as instructed
+by his master.
+~
+264204 0 0 0 0 0 0 0 -800 S
+gi 0 2048 3 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139139
+githzerai minstrel slave~
+&+La &+Wgith&+Gzerai&n &+Ymin&+ystr&+Yel &+Lslave~
+&+LA &+Wgith&+Gzerai &+Lslave stands waiting for his masters commands.
+~
+Captured and forced into slavery this githzerai is as happy as can be
+and will break into song at a moments notice. He will follow his masters
+orders however at a moments notice.
+~
+264204 0 0 0 0 0 0 0 800 S
+gz 0 32768 3 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139140
+large fire elemental slave~
+&+La large &+rf&+Ri&+rre&n &+relemental &+Lslave~
+&+LA large &+rfire elemental &+Lslave hovers nearby waiting for its masters bidding.
+~
+Born and bread for slavery this fire elemental will do its masters
+bidding without question.
+~
+2056 0 0 0 0 0 0 0 0 S
+ef 0 1 2 4
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139141
+human female priestess slave~
+&+La &+Chuman&n &+Lfemale&n &+Ypri&+yest&+Yess&n &+Lslave~
+&+LA &+Chuman&n &+Lslave stands waiting for her masters next command.
+~
+Captured very young this woman has been taught the ways of her diety and
+can harness her energy. She will follow her masters bidding until death
+or completion of her contract.
+~
+264204 0 0 0 0 0 0 0 500 S
+PH 0 32 2 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139142
+raging minotaur slave~
+&+La &+Rra&+rgi&+Rng &+Lmino&+rtaur&n &+Lslave&n~
+A &+Lmino&+rtaur&n &+Lslave&n stands waiting for his masters next order.
+~
+Angry at his capture and current arrangment this minotaur grinds his teeth
+at each of his masters order.
+~
+264204 0 0 0 0 0 0 0 -1000 S
+mt 0 1048576 2 -1
+38 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139143
+crazy drow elf slave~
+&+La &+Mcra&+mz&+My &+mdrow&n &+melf&n &+Lslave&n~
+&+LA &+mdrow elf&n &+Lslave waits for his masters next command.
+~
+A bit wild and crazy this drow elf wields magic to the point
+uncontrollable. He waits for his final day and freedom from
+his boundment to his master.
+~
+264204 0 0 0 0 0 0 0 -500 S
+PL 0 512 1 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139144
+ancient chimaera~
+&+Lan &nancient &+mchim&+bae&+mra&n~
+&+LAn &nancient &+mchim&+bae&+mra&n &+Lwith a &ngrey &+Lbird circles in the corner.&n
+~
+&+mThis beast is a massive lion with a grey beard with the remainder of her body covered in golden fur.
+&+mOn its back is a goat's head extenting from the lion's spine and has black horns forming to a sharp point.
+&+mIts tail ends into the head of a snake which carefully watches you as you approach.
+~
+1092765736 1 0 0 671088664 0 0 33554432 -1000 S
+x 0 4194560 0 5
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139145
+hydra elder~
+&+Lan &+ye&+Yld&+yer&n &+Gh&+gydr&+Ga&n~
+&+LA s&ni&+Lx&n-&+yhe&+Yad&+yed&n &+Gh&+gydr&+Ga&n &+Lrises to its feet as you approach.&n
+~
+&+gThis massive six-headed hydra has darken scaled with yellowish green tint glistening&n
+&+gfrom the light of the flames given off from nearby. His heads are mesmorizing as they&n
+&+gcircle amongst each other seeming to ponder its decision to attack.&n
+~
+1050632 1 0 0 687865880 1 67371008 33554432 -1000 S
+d 0 16777218 0 -1
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

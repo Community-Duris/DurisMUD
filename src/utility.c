@@ -2144,6 +2144,7 @@ bool aggressive_to(P_char ch, P_char target)
 
     if ((GET_LEVEL(ch) <= (GET_LEVEL(target) - 10)) && \
         has_innate(target, INNATE_UNDEAD_FEALTY) && \
+	IS_UNDEADRACE(ch) && \
 	!affected_by_spell(ch, TAG_CTF) && \
         !CheckFor_remember(ch, target))
       return FALSE;  // Liches are revered/feared by lower level undead - Jexni 8/18/08
@@ -4143,7 +4144,6 @@ int GET_CHAR_SKILL_P(P_char ch, int skl)
      af = af->next;
        } */
 
-  
 #ifdef STANCES_ALLOWED
   if(skllvl > 0 && IS_PC(ch) && (ch->only.pc->frags > 0))
    mod = (int) (ch->only.pc->frags / 500);

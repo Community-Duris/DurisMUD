@@ -1,0 +1,354 @@
+#1000000
+&+LThe &+WAn&+Cci&nen&+Lt Halls of &+LIron&+Wstar&n~
+138999 1 0 0 5 1
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 138926 0 0 100 0 0 0
+*     north exit from "The End of the Cave" to
+*     "The Black Hall" - open
+*
+D 0 138927 2 0 100 0 0 0
+*     south exit from "The Black Hall" to
+*     "The End of the Cave" - open
+*
+D 0 138928 0 0 100 0 0 0
+*     north exit from "Guard Room of the Black Hall" to
+*     "The Black Hall" - open
+*
+D 0 138929 2 0 100 0 0 0
+*     south exit from "The Black Hall" to
+*     "Guard Room of the Black Hall" - open
+*
+D 0 138934 0 1 100 0 0 0
+*     north exit from "The Western Wing" to
+*     "The Forum" - closed
+*
+D 0 138939 2 1 100 0 0 0
+*     south exit from "The Forum" to
+*     "The Western Wing" - closed
+*
+D 0 138934 2 1 100 0 0 0
+*     south exit from "The Western Wing" to
+*     "The Black Laboratory" - closed
+*
+D 0 138940 0 1 100 0 0 0
+*     north exit from "The Black Laboratory" to
+*     "The Western Wing" - closed
+*
+D 0 138935 0 1 100 0 0 0
+*     north exit from "The Western Wing" to
+*     "The Black Library" - closed
+*
+D 0 138942 2 1 100 0 0 0
+*     south exit from "The Black Library" to
+*     "The Western Wing" - closed
+*
+D 0 138936 0 1 100 0 0 0
+*     north exit from "End of the Western Wing" to
+*     "Zrack's Office" - closed
+*
+D 0 138937 2 1 100 0 0 0
+*     south exit from "Zrack's Office" to
+*     "End of the Western Wing" - closed
+*
+D 0 138936 2 0 100 0 0 0
+*     south exit from "End of the Western Wing" to
+*     "The Dining Room" - open
+*
+D 0 138938 0 0 100 0 0 0
+*     north exit from "The Dining Room" to
+*     "End of the Western Wing" - open
+*
+D 0 138943 0 1 100 0 0 0
+*     north exit from "The Eastern Wing" to
+*     "The Recruit's Quarters" - closed
+*
+D 0 138944 2 1 100 0 0 0
+*     south exit from "The Recruit's Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 138943 2 1 100 0 0 0
+*     south exit from "The Eastern Wing" to
+*     "The Apprentice's Quarters" - closed
+*
+D 0 138945 0 1 100 0 0 0
+*     north exit from "The Apprentice's Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 138946 0 1 100 0 0 0
+*     north exit from "The Eastern Wing" to
+*     "The Senior's Quarters" - closed
+*
+D 0 138947 2 1 100 0 0 0
+*     south exit from "The Senior's Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 138946 2 1 100 0 0 0
+*     south exit from "The Eastern Wing" to
+*     "The Journeymen's Quarters" - closed
+*
+D 0 138948 0 1 100 0 0 0
+*     north exit from "The Journeymen's Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 138949 0 1 100 0 0 0
+*     north exit from "The Eastern Wing" to
+*     "Marius's Quarters" - closed
+*
+D 0 138950 2 1 100 0 0 0
+*     south exit from "Marius's Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 138949 2 1 100 0 0 0
+*     south exit from "The Eastern Wing" to
+*     "The Female Quarters" - closed
+*
+D 0 138951 0 1 100 0 0 0
+*     north exit from "The Female Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 138952 0 0 100 0 0 0
+*     north exit from "End of the Eastern Wing" to
+*     "A Bathroom" - open
+*
+D 0 138953 2 0 100 0 0 0
+*     south exit from "A Bathroom" to
+*     "End of the Eastern Wing" - open
+*
+D 0 138952 2 0 100 0 0 0
+*     south exit from "End of the Eastern Wing" to
+*     "The Study" - open
+*
+D 0 138954 0 0 100 0 0 0
+*     north exit from "The Study" to
+*     "End of the Eastern Wing" - open
+*
+D 0 138955 0 0 100 0 0 0
+*     north exit from "The Village of Fairlocke" to
+*     "Larra's House" - open
+*
+D 0 138958 2 0 100 0 0 0
+*     south exit from "Larra's House" to
+*     "The Village of Fairlocke" - open
+*
+D 0 138955 2 0 100 0 0 0
+*     south exit from "The Village of Fairlocke" to
+*     "Old Goods Store" - open
+*
+D 0 138956 0 0 100 0 0 0
+*     north exit from "Old Goods Store" to
+*     "The Village of Fairlocke" - open
+*
+D 0 138964 0 1 100 0 0 0
+*     north exit from "The Black Hall" to
+*     "End of the Black Hall" - closed
+*
+D 0 138965 2 1 100 0 0 0
+*     south exit from "End of the Black Hall" to
+*     "The Black Hall" - closed
+*
+D 0 138971 5 0 100 0 0 0
+*     down exit from "Newly Excavated Area" to
+*     "A Dwarven Resting Place" - open
+*
+D 0 138975 4 0 100 0 0 0
+*     up exit from "A Dwarven Resting Place" to
+*     "Newly Excavated Area" - open
+*
+D 0 138980 2 5 100 0 0 0
+*     south exit from "Beginning of the Wherston Road" to
+*     "Dralor's Trading Co." - closed/secret
+*
+D 0 138981 0 5 100 0 0 0
+*     north exit from "Dralor's Trading Co." to
+*     "Beginning of the Wherston Road" - closed/secret
+*
+D 0 138983 2 2 100 0 0 0
+*     south exit from "An Ancient Dwarven Hallway" to
+*     "The First Doorway" - closed/locked
+*
+D 0 138985 0 1 100 0 0 0
+*     north exit from "The First Doorway" to
+*     "An Ancient Dwarven Hallway" - closed
+*
+D 0 138985 2 2 100 0 0 0
+*     south exit from "The First Doorway" to
+*     "The Second Doorway" - closed/locked
+*
+D 0 138993 0 1 100 0 0 0
+*     north exit from "The Second Doorway" to
+*     "The First Doorway" - closed
+*
+D 0 138988 2 0 100 0 0 0
+*     south exit from "Beneath an Underground River" to
+*     "Before an Adamantium Grate" - open
+*
+D 0 138989 0 0 100 0 0 0
+*     north exit from "Before an Adamantium Grate" to
+*     "Beneath an Underground River" - open
+*
+D 0 138993 2 2 100 0 0 0
+*     south exit from "The Second Doorway" to
+*     "The Treasure Chamber of the Ironstar Dwarves" - closed/locked
+*
+D 0 138994 0 1 100 0 0 0
+*     north exit from "The Treasure Chamber of the Ironstar Dwarves" to
+*     "The Second Doorway" - closed
+*
+D 0 138998 1 0 100 0 0 0
+*     east exit from "An Ancient Dwarven Hallway" to
+*     "The Audience Chamber of the Ironstar Clan" - open
+*
+D 0 138999 3 0 100 0 0 0
+*     west exit from "The Audience Chamber of the Ironstar Clan" to
+*     "An Ancient Dwarven Hallway" - open
+*
+*
+O 0 138900 1 138904 100 0 0 0      * a human bone
+O 0 138901 1 138904 100 0 0 0      * a human skeleton
+P 1 138902 1 138901 100 0 0 0      *   a scroll of human flesh
+P 1 138903 1 138901 100 0 0 0      *   Robert's diary
+O 0 138904 3 138936 100 0 0 0      * a glowing globe
+O 0 138910 1 138937 100 0 0 0      * a large desk
+P 1 138912 1 138910 100 0 0 0      *   a wand of lightning
+P 1 138913 1 138910 100 0 0 0      *   a gold ring
+O 0 138904 3 138939 100 0 0 0      * a glowing globe
+O 0 138904 3 138940 100 0 0 0      * a glowing globe
+O 0 138911 1 138941 100 0 0 0      * a black skull key
+O 0 138953 1 138942 100 0 0 0      * some bookcases
+P 1 138954 1 138953 100 0 0 0      *   a black velvet wrapped book
+O 0 138922 1 138950 100 0 0 0      * a small iron chest
+P 1 138923 1 138922 100 0 0 0      *   a yellow potion
+P 1 138924 1 138922 100 0 0 0      *   a scroll with red letters
+P 1 138925 1 138922 100 0 0 0      *   a patched cloak
+O 0 138927 1 138956 100 0 0 0      * a loose board
+P 1 138928 1 138927 100 0 0 0      *   a green emerald
+O 0 138929 3 138967 100 0 0 0      * a black bladed short sword
+O 0 138934 1 138975 100 0 0 0      * a dwarven skeleton
+P 1 138942 1 138934 100 0 0 0      *   an old crown made of adamantium
+P 1 138932 5 138934 100 0 0 0      *   an ancient battleaxe
+P 1 138933 5 138934 100 0 0 0      *   some tattered chainmail
+O 0 138956 1 138987 100 0 0 0      * a pile of stones and gravel
+P 1 138955 1 138956 100 0 0 0      *   a large mithril key
+O 0 138944 1 138994 100 0 0 0      * the mold of a small mithril parrying dagger
+O 0 138962 1 138994 100 0 0 0      * the mold of a small mithril hammer
+O 0 138957 1 138994 25 0 0 0       * the stone armor of Zaldran
+O 0 225 3 138994 100 0 0 0         * (object type not in this .obj file)
+O 0 225 3 138994 100 0 0 0         * (object type not in this .obj file)
+O 0 225 3 138994 100 0 0 0         * (object type not in this .obj file)
+O 0 230 3 138994 100 0 0 0         * (object type not in this .obj file)
+O 0 230 3 138994 100 0 0 0         * (object type not in this .obj file)
+O 0 230 3 138994 100 0 0 0         * (object type not in this .obj file)
+O 0 233 3 138994 100 0 0 0         * (object type not in this .obj file)
+O 0 233 3 138994 100 0 0 0         * (object type not in this .obj file)
+O 0 233 3 138994 100 0 0 0         * (object type not in this .obj file)
+O 0 138930 1 138994 35 0 0 0       * the crowned-prince of Ironstar scepter of Sovereignty
+*
+M 0 138932 1 138900 80 0 0 0       * an apprentice of Urian
+E 1 138960 1 18 100 0 0 0          *   a long sealed letter
+E 1 138961 1 21 100 0 0 0          *   a blood-colored crystal tear
+M 0 138927 1 138900 35 0 0 0       * the spirit of Robert
+M 0 138900 2 138927 100 0 0 0      * a wandering skeleton
+M 0 138901 9 138928 100 0 0 0      * a guardian wight
+M 0 138901 9 138928 100 0 0 0      * a guardian wight
+M 0 138905 12 138930 100 0 0 0     * an apprentice necromancer
+M 0 138901 9 138933 100 0 0 0      * a guardian wight
+M 0 138901 9 138934 100 0 0 0      * a guardian wight
+M 0 138905 12 138938 100 0 0 0     * an apprentice necromancer
+M 0 138904 1 138939 100 0 0 0      * Marius
+E 1 138907 1 16 100 0 0 0          *   a mithril engraved staff
+M 0 138905 12 138939 100 0 0 0     * an apprentice necromancer
+M 0 138905 12 138939 100 0 0 0     * an apprentice necromancer
+M 0 138905 12 138939 100 0 0 0     * an apprentice necromancer
+M 0 138901 9 138939 100 0 0 0      * a guardian wight
+M 0 138902 1 138940 100 0 0 0      * Janos
+E 1 138906 1 1 100 0 0 0           *   a ring of human bone
+E 1 138905 1 24 100 0 0 0          *   a skeletal hand
+M 0 138900 2 138940 100 0 0 0      * a wandering skeleton
+M 0 138901 9 138940 100 0 0 0      * a guardian wight
+M 0 138907 1 138941 100 0 0 0      * Kathrine
+M 0 138905 12 138942 100 0 0 0     * an apprentice necromancer
+M 0 138905 12 138942 100 0 0 0     * an apprentice necromancer
+M 0 138905 12 138943 100 0 0 0     * an apprentice necromancer
+M 0 138909 1 138944 100 0 0 0      * Kalzan
+F 1 138910 1 138944 100 0 0 0      * a frog zombie (following)
+M 0 138905 12 138944 100 0 0 0     * an apprentice necromancer
+M 0 138905 12 138944 100 0 0 0     * an apprentice necromancer
+M 0 138905 12 138945 100 0 0 0     * an apprentice necromancer
+M 0 138905 12 138945 100 0 0 0     * an apprentice necromancer
+M 0 138911 1 138947 100 0 0 0      * Ezzra
+E 1 138917 1 19 100 0 0 0          *   a blue-lensed monocle
+M 0 138912 1 138947 100 0 0 0      * the demon, Caldron
+E 1 138918 1 13 100 0 0 0          *   a red sash of blood
+E 1 138919 1 16 100 0 0 0          *   a demonically forged two-handed sword
+M 0 138913 1 138948 100 0 0 0      * Xarlin
+E 1 138920 1 21 100 0 0 0          *   a small black skull earring
+F 1 138924 1 138948 100 0 0 0      * a knight of Bloodstone (following)
+M 0 138915 1 138951 100 0 0 0      * the vampire Luka
+E 1 138926 1 16 100 0 0 0          *   a sharp rapier
+M 0 138914 1 138951 100 0 0 0      * Natasha
+M 0 138916 1 138960 100 0 0 0      * Joseph McLarun
+E 1 138929 3 16 100 0 0 0          *   a black bladed short sword
+M 0 138908 1 138961 100 0 0 0      * Larra
+M 0 138917 1 138963 100 0 0 0      * Igen, the henchman
+E 1 138929 3 16 100 0 0 0          *   a black bladed short sword
+M 0 138919 1 138967 100 0 0 0      * Faethor
+E 1 138948 1 7 100 0 0 0           *   some billowing black silk pants
+E 1 138931 1 9 100 0 0 0           *   a pair of skeletal gauntlets
+F 1 138920 12 138967 100 0 0 0     * an undead dwarven warrior (following)
+F 1 138920 12 138967 100 0 0 0     * an undead dwarven warrior (following)
+F 1 138920 12 138967 100 0 0 0     * an undead dwarven warrior (following)
+F 1 138901 9 138967 100 0 0 0      * a guardian wight (following)
+M 0 138918 1 138970 100 0 0 0      * Ali
+E 1 138947 1 3 100 0 0 0           *   a necklace of orbiting psi-crystals
+F 1 138920 12 138970 100 0 0 0     * an undead dwarven warrior (following)
+E 1 138933 5 5 100 0 0 0           *   some tattered chainmail
+E 1 138932 5 16 100 0 0 0          *   an ancient battleaxe
+F 1 138920 12 138970 100 0 0 0     * an undead dwarven warrior (following)
+E 1 138933 5 5 100 0 0 0           *   some tattered chainmail
+E 1 138932 5 16 100 0 0 0          *   an ancient battleaxe
+F 1 138920 12 138970 100 0 0 0     * an undead dwarven warrior (following)
+E 1 138933 5 5 100 0 0 0           *   some tattered chainmail
+E 1 138932 5 16 100 0 0 0          *   an ancient battleaxe
+F 1 138901 9 138970 100 0 0 0      * a guardian wight (following)
+M 0 138923 1 138977 100 0 0 0      * Charringdeath
+G 1 138909 1 0 100 0 0 0           *    the scales of Charring Death
+M 0 138922 1 138977 100 0 0 0      * Zrack
+E 1 138946 1 12 100 0 0 0          *   a blood red robe of linked bones
+E 1 138921 1 18 100 0 0 0          *   a small iron key
+F 1 138920 12 138977 100 0 0 0     * an undead dwarven warrior (following)
+E 1 138933 5 5 100 0 0 0           *   some tattered chainmail
+E 1 138932 5 16 100 0 0 0          *   an ancient battleaxe
+F 1 138901 9 138977 100 0 0 0      * a guardian wight (following)
+M 0 138921 1 138981 100 0 0 0      * Dralor
+M 0 138926 4 138984 100 0 0 0      * a skeletal baby dragon
+M 0 138926 4 138984 100 0 0 0      * a skeletal baby dragon
+M 0 138926 4 138984 100 0 0 0      * a skeletal baby dragon
+G 1 138949 1 0 100 0 0 0           *    a silver mithril key
+M 0 138926 4 138984 100 0 0 0      * a skeletal baby dragon
+M 0 138930 1 138987 100 0 0 0      * Daxion, the duergar miner
+E 1 138959 1 14 100 0 0 0          *   a duergar-made adamantine bracelet
+F 1 138920 12 138987 100 0 0 0     * an undead dwarven warrior (following)
+F 1 138920 12 138987 100 0 0 0     * an undead dwarven warrior (following)
+F 1 138920 12 138987 100 0 0 0     * an undead dwarven warrior (following)
+M 0 138928 1 138991 100 0 0 0      * a minion of Nakral
+G 1 138952 1 0 100 0 0 0           *    a scroll of demonhide
+G 1 138951 1 0 100 0 0 0           *    a note written in blood
+F 1 138929 2 138991 100 0 0 0      * a guardian skeleton (following)
+F 1 138929 2 138991 100 0 0 0      * a guardian skeleton (following)
+M 0 138906 1 138991 50 0 0 0       * Maltheas
+E 1 138915 1 11 100 0 0 0          *   a shield of molten metal
+E 1 138908 1 16 100 0 0 0          *   a burning blade called 'The Fury of Demons'
+G 1 138965 1 0 100 0 0 0           *    a broken demonic weapon called 'The Fury of Demons'
+F 1 138925 2 138991 100 0 0 0      * an angel of death (following)
+F 1 138925 2 138991 100 0 0 0      * an angel of death (following)
+M 0 138931 2 138993 100 0 0 0      * a iron golem
+M 0 138931 2 138993 100 0 0 0      * a iron golem
+M 0 138933 2 138999 100 0 0 0      * a wraith of the forgotten dead
+F 1 138920 12 138999 100 0 0 0     * an undead dwarven warrior (following)
+M 0 138933 2 138999 100 0 0 0      * a wraith of the forgotten dead
+F 1 138920 12 138999 100 0 0 0     * an undead dwarven warrior (following)
+*
+S

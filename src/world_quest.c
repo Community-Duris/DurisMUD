@@ -820,11 +820,18 @@ int getItemFromZone(int zone)
             t_obj->type == ITEM_POTION ||
             !IS_SET(t_obj->wear_flags, ITEM_TAKE) ||
             IS_SET(t_obj->extra_flags, ITEM_TRANSIENT) ||
-            t_obj->type == ITEM_MONEY ||
-            t_obj->type == ITEM_TRASH ||
-            t_obj->type == ITEM_VEHICLE ||
-            t_obj->type == ITEM_BOAT ||
-            t_obj->type == ITEM_TELEPORT||
+	    (t_obj->type != ITEM_WAND &&
+	     t_obj->type != ITEM_STAFF &&
+	     t_obj->type != ITEM_WEAPON &&
+	     t_obj->type != ITEM_ARMOR &&
+	     t_obj->type != ITEM_WORN &&
+	     t_obj->type != ITEM_BOOK &&
+	     t_obj->type != ITEM_QUIVER &&
+	     t_obj->type != ITEM_INSTRUMENT &&
+	     t_obj->type != ITEM_SPELLBOOK &&
+	     t_obj->type != ITEM_TOTEM &&
+	     t_obj->type != ITEM_SHIELD &&
+	     t_obj->type != ITEM_FIREWEAPON ) ||
             IS_SET(t_obj->bitvector, AFF_STONE_SKIN) ||
             IS_SET(t_obj->bitvector, AFF_HIDE) ||
             IS_SET(t_obj->bitvector, AFF_SNEAK) ||

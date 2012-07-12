@@ -1,0 +1,199 @@
+#139072
+MA
+hi hello~
+&+LThe Unq&nu&+Lenchable guard member says aloud, &+WStand Back! You do not
+&+Wlook like an emissary and your not the &+ytax man&+W, so get lost!&n
+~
+S
+#139083
+M
+hi hello hey~
+&+CHe&+crl&n slowly turns towards you somewhat annoyed at being bothered.
+
+&+CHe&+crl&n says, "&+WYeah? I sell and pay well for exotic items. Particularly
+   &+Wthose from rare beasts.&n"
+~
+M
+rare chimaera drop exotic~
+&+CHe&+crl&n ponders for a moment and clears his throat and says, "&+WSure.
+   &+WHow about you bring me a &+Ldrop&n of &+mch&+Mi&+mmaer&+Ma&n &+rblood&n &+Wand I will pay
+   &+Wyou well for it.&n"
+~
+Q
+&+CHe&+crl&n takes the &+Ldrop&n and puts it into his &+Wbag of holding&n and in the same
+motion pulls coins out and hands them to you. &+CHe&+crl&n says, "&+WAs we agreed.&n"
+~
+R C 2000000
+G I 139128
+S
+#139110
+M
+hi hello hey howdy~
+~
+Q
+~
+G I 139018
+S
+#139119
+M
+hi hello hey~
+&+YThe &+ref&+Rre&+ret&+Ri&n &+Ytax collector&n approaches you and speaks,
+  "&+yHail outsiders. What brings you to my city, to my office? Are you
+&+yexplorers, shoppers, slavers, or just looking for a new &+Wquest&n &+yin the
+&+yvarious corners of the city?&n"
+~
+M
+quest key palace~
+&+YThe &+ref&+Rre&+ret&+Ri&n &+Ytax collector&n ponders for a moment.
+
+&+YThe tax collector&n smiles then says,
+   "&+ySo you are interested in that are you. Well then I shall send you on
+&+ya quest around the city. There are some pieces I have had my eye on for
+&+ysome time now and would gladly give you the &+rpa&+Rla&+rce &+Lg&nat&+Le k&ne&+Ly &+yin trade.&n
+
+&+yFirst, I want the specialty &+Ycoin's &+ythat the priests to the shrines of &+LI&+rmi&+Lx&n
+&+yand &+RSu&+rrt&+Rr&n &+ycarry. Those are for my coin collection. Second, there is a &+rquill&n
+&+yused by the dock master that has some &+rf&+Rl&+Yam&+Re&+rs&n &+ythat ignite from its end that
+&+ygive off some flamboyant colors. I want it! Lastly, there is a &+Wcrystal&n &+ythat
+&+yis only created by the forces of pressure and heat found in magma. Search
+&+yaround for it and bring that to me as well and you will have your reward.&n"
+~
+M
+slave slavery slaver~
+&+YThe tax collector&n says, "&+yYes the city is renown for its slave trade.
+&+yYou will find many fine options and all are broken here in town so
+&+ytheir loyality is never questionable. The slave market is located on
+&+ythe Street of Steale.&n"
+~
+M
+shop shops shopping stores~
+&+YThe tax collector&n smiles and says, "&+yOhh yes we have several shops to
+&+ychoose from. The quality of the goods sold here in the city are far
+&+ysuperior to anything else I have ever seen. The products seem to be
+&+yever changing so you will likely find something new for sale from one
+&+yvisit to the next.
+   &+yThere are three main bazaar's or marketplaces and each one differs
+&+yfrom the other. The Keffinspire's District is where you will find the
+&+ysmithy's. The Pyraculum is known for its high quality goods. And then
+&+ythere is the Commoners Market which sells the more exotic pieces.
+~
+M
+explore explorer explorers wander wanderers~
+&+YThe tax collecter&n nods and says, "&+yVery well then, I would suggest you take
+&+ya look at our zoo, the docks, and the magma lake. The zoo has a variety of
+&+yexotic animals but I should warn you they are not all friendly. The docks
+&+yare a sight to see for people from the Prime Material with the spelljammer
+&+yships that frequently make port. And the magma lake is an adventure with
+&+yits terrain that is ever changing and the surface is hard enough to walk on.
+~
+QA
+&+YThe &+ref&+Rre&+ret&+Ri&n &+Ytax collector&n grins widely.
+&+YThe tax collector&n says to you, "&+yWonderful! Just Wonderful. These pieces
+&+ywill add to my collection just beautifully. Ohh, and this new quill. I
+&+ywill be new envy of all my colleagues. Here take the key I promised you.
+
+&+yI will warn you though, the guards inside will not be socialable with you
+&+youtsiders. The rest of the population inside will just go about their
+&+ybusiness I'd suspect.&n"
+
+&+YThe &+ref&+Rre&+ret&+Ri&n &+Ytax collector&n turns away to store his new collection pieces.
+~
+R I 139070
+G I 139028
+G I 139031
+G I 139026
+G I 139033
+S
+#139121
+M
+hydra pyrohydra scales scale~
+&+YThe &+ref&+Rre&+ret&+Ri&n &+Yarmorer&n removes one of his gloves and scratches his nose.
+
+&+YThe armorer&n says, "&+WHydra scales you say? Yeah I could craft a solid
+&+Wpiece of equipment with the right age. The age affects the power of
+&+Wmagic that it can hold. And I do not want to waste my time with any
+&+Wthat are not at least elder or ancient. Bring me what you find and
+&+WI'll do what I can. I can tell you it will cost 7500 platinum though.
+~
+Q
+&+YThe &+ref&+Rre&+ret&+Ri&n &+Yarmorer&n sighs.
+
+&+YThe armorer&n turns to you and says, "&+WThese won't be enough. They are the
+&+Wright type but I need more &+Lscales &+Wto add to them. Find me some &+Lan&nc&+Wi&ne&+Lnt
+&+rpy&+Rro&+Yhy&+Wdra &+Lsc&na&+Lles &+Wto add with these &+ye&+Yld&+yer&n &+Lscales &+Wand we make it work.
+&+WGive me the &+rpy&+Rro&+Yhy&+Wdra &+Lsc&na&+Lles &+Wfirst then the &+ye&+Yld&+yer&n &+Lscales&n. &+WAnd do not
+forget to bring me the &n7500 &+Wplatinum as well.&n"
+~
+R I 139127
+R C 7500000
+G I 139127
+G C 7500000
+Q
+&+YThe &+ref&+Rre&+ret&+Ri &+Yarmorer&n sets his hammer down and removes his gloves.
+   He takes the scales and examines them and then nods. The armorer
+   puts on his gloves and heads north to the furnace and returns
+   shortly to begin the hammering on the scales. He forms the scales
+   into a bracer that &+cs&+Chi&+Wmm&+Cer&+cs&n from the light coming from the furnace
+   to the north. He then mutters some incantation under his breath,
+   wipes the bracers clean, and hands them to you.
+
+&+YThe &+ref&+Rre&+ret&+Ri&n &+Yarmorer&n says, "&+WNice doing business with you.&n"
+~
+R I 139137
+G C 7500000
+G I 139127
+G I 139142
+S
+#139124
+M
+qc_action~
+&+GYodono grins at you and says hello.&n
+~
+M
+hi hello hey howdy~
+&+GYodono says to you, '&+WHello young mortal. Fortune shines upon you today.
+&+WYou must complete two important tasks for me. First, you must bring me the
+&+Wheads of the following imposters. The false Magi, Caltoon. The foul, Amir.
+&+WAnd finally, the vile Arch-Magi.'&n
+~
+Q
+&+GYodono says to you, '&+WPlease take this as a token of my appreciation. You have
+&+Wearned this.
+~
+R I 139018
+G I 139011
+G I 139016
+G I 139017
+S
+#139132
+M
+hi hello hey quest~
+&+LA hi&ndd&+Len &+Cdjinni&n &+Ls&np&+Ly&n floats closer to you.
+
+&+LA hi&ndd&+Len &+Cdjinni&n &+Ls&np&+Ly&n whispers, "&+cWow just my luck, creatures from the Prime.
+  &+cI would like to hire you as my agent. Your mission will be to infiltrate
+  &+cthe Palace and to excute the six &npa&+Lda&nshaw&+c's. Bring me their &+rheads&n &+cso
+  &+cthere is no doubt of their destruction and I will reward you a piece
+  &+cof my own essence. Go now and tell no one of my location."
+
+&+LA hi&ndd&+Len &+Cdjinni&n &+Ls&np&+Ly&n move towards and blends into a nearby steam spout.
+~
+Q
+&+LA hi&ndd&+Len &+Cdjinni&n &+Ls&np&+Ly&n&+W's face slowly changes from a look of being on edge
+&+Wto a look of confusion then excitement. He drops each of the heads in
+&+Wthe v&no&+Lrt&ne&+Wx that makes up his lower body entrapping them within. He then
+&+Wcups his hand near his waist drawing forth some of his &+Ca&+cir&+Cy&n &+Wessence and
+&+Wforming a small circle in it. The circle shapes into a &+Cs&+ca&+Csh&n &+Wmade of &+Ca&+ci&+Cr&n
+&+Wand then hands it to you.
+~
+R I 139143
+G I 139144
+G I 139016
+G I 139017
+G I 139139
+G I 139140
+G I 139141
+D
+&+LThe &+Cdjinni &+Lcreates a &+Lwh&+ci&+Crlw&+ci&+Lnd&n &+Land ascends into the &+Wsky&n &+Ldisappearing from sight&n.
+~
+S

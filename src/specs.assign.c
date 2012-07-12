@@ -2271,7 +2271,7 @@ void assign_rooms(void)
   
 // Dwarf and duergar berserkers
 // Gilaxi's Hidden Chamber in Torgs
-  world[real_room0(29181)].funct = berserker_proc_room;
+//world[real_room0(29181)].funct = berserker_proc_room;
   
   /* squid arena */
   for (x = 11200; x <= 11217; x++)

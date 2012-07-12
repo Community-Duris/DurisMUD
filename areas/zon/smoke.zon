@@ -1,0 +1,193 @@
+#1
+&+LThe &+CPara&+L-&+rElemental&+L Plane of Smoke~
+139952 2 0 40 50 1
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 139941 0 2 100 0 0 0
+*     north exit from "Ehkah's Antechamber" to
+*     "Ehkahk's Vault" - closed/locked
+*
+D 0 139942 2 2 100 0 0 0
+*     south exit from "Ehkahk's Vault" to
+*     "Ehkah's Antechamber" - closed/locked
+*
+D 0 139942 0 1 100 0 0 0
+*     north exit from "Ehkahk's Vault" to
+*     "The great Forge of Smoke" - closed
+*
+D 0 139945 2 1 100 0 0 0
+*     south exit from "The great Forge of Smoke" to
+*     "Ehkahk's Vault" - closed
+*
+*
+O 0 139821 2 139832 100 0 0 0      * A Blue Portal
+O 0 139802 1 139863 100 0 0 0      * A swirling nether of smoke
+O 0 139811 1 139894 100 0 0 0      * A massive box of solid obsidian
+P 1 139814 1 139811 100 0 0 0      *   A wretched broadsword named 'Hate'
+P 1 139816 1 139811 100 0 0 0      *   An viscous potion called 'Escape'
+P 1 139815 3 139811 100 0 0 0      *   An ancient script called 'Fortitude'
+P 1 139815 3 139811 100 0 0 0      *   An ancient script called 'Fortitude'
+P 1 139815 3 139811 100 0 0 0      *   An ancient script called 'Fortitude'
+P 1 139817 1 139811 100 0 0 0      *   Cael-drzk's treads of mobility
+O 0 139820 2 139894 100 0 0 0      * A Red Portal
+O 0 139807 1 139937 100 0 0 0      * A swirling nether of smoke
+O 0 139819 1 139940 100 0 0 0      * A swirling portal of smoke and ash
+O 0 139820 2 139944 100 0 0 0      * A Red Portal
+O 0 139821 2 139944 100 0 0 0      * A Blue Portal
+O 0 139830 1 139945 100 0 0 0      * The massive forge of the Plane of Smoke
+*
+M 0 139807 3 139801 100 0 0 0      * A powerful conjurer of smoke and ash
+E 1 139803 1 18 100 0 0 0          *   A red staff of fluxing energy
+F 1 139805 32 139801 100 0 0 0     * A smoke elemental (following)
+F 1 139805 32 139801 100 0 0 0     * A smoke elemental (following)
+F 1 139805 32 139801 100 0 0 0     * A smoke elemental (following)
+F 1 139806 12 139801 100 0 0 0     * A MASSIVE smoke elemental (following)
+M 0 139807 3 139806 100 0 0 0      * A powerful conjurer of smoke and ash
+F 1 139806 12 139806 100 0 0 0     * A MASSIVE smoke elemental (following)
+F 1 139805 32 139806 100 0 0 0     * A smoke elemental (following)
+F 1 139805 32 139806 100 0 0 0     * A smoke elemental (following)
+F 1 139805 32 139806 100 0 0 0     * A smoke elemental (following)
+M 0 139807 3 139811 100 0 0 0      * A powerful conjurer of smoke and ash
+F 1 139805 32 139811 100 0 0 0     * A smoke elemental (following)
+F 1 139805 32 139811 100 0 0 0     * A smoke elemental (following)
+F 1 139805 32 139811 100 0 0 0     * A smoke elemental (following)
+F 1 139806 12 139811 100 0 0 0     * A MASSIVE smoke elemental (following)
+M 0 139806 12 139821 100 0 0 0     * A MASSIVE smoke elemental
+M 0 139806 12 139821 100 0 0 0     * A MASSIVE smoke elemental
+M 0 139806 12 139821 100 0 0 0     * A MASSIVE smoke elemental
+M 0 139806 12 139821 100 0 0 0     * A MASSIVE smoke elemental
+M 0 139806 12 139821 100 0 0 0     * A MASSIVE smoke elemental
+M 0 139806 12 139821 100 0 0 0     * A MASSIVE smoke elemental
+M 0 139803 9 139825 100 0 0 0      * A smoke mephit
+F 1 139803 9 139825 100 0 0 0      * A smoke mephit (following)
+F 1 139803 9 139825 100 0 0 0      * A smoke mephit (following)
+F 1 139804 8 139825 100 0 0 0      * A smoke mephit (following)
+M 0 139813 1 139832 100 0 0 0      * Korli, the Halfling adventurer
+M 0 139803 9 139850 100 0 0 0      * A smoke mephit
+F 1 139803 9 139850 100 0 0 0      * A smoke mephit (following)
+F 1 139803 9 139850 100 0 0 0      * A smoke mephit (following)
+F 1 139804 8 139850 100 0 0 0      * A smoke mephit (following)
+M 0 139809 1 139863 100 0 0 0      * Ehkahk, the Prince of the Para-Elemental Plane of Smoke
+E 1 139805 1 12 100 0 0 0          *   A swirling mass of black smoke and hot ash
+G 1 139808 1 0 100 0 0 0           *    The charred remains of the heart of Ehkahk
+M 0 139822 1 139863 40 0 0 0       * Charzzlk, the ash elemental
+G 1 139829 1 0 100 0 0 0           *    A wretched broadsword named 'Discontent'
+M 0 139804 8 139875 100 0 0 0      * A smoke mephit
+F 1 139804 8 139875 100 0 0 0      * A smoke mephit (following)
+F 1 139804 8 139875 100 0 0 0      * A smoke mephit (following)
+G 1 139813 1 0 100 0 0 0           *    A dusty pair of spectacles
+F 1 139804 8 139875 100 0 0 0      * A smoke mephit (following)
+M 0 139802 6 139901 100 0 0 0      * A Swirling Mass of Smoke and Fire
+G 1 139801 1 0 100 0 0 0           *    A mystical robe of flame and ash
+M 0 139802 6 139901 100 0 0 0      * A Swirling Mass of Smoke and Fire
+M 0 139802 6 139901 100 0 0 0      * A Swirling Mass of Smoke and Fire
+M 0 139802 6 139901 100 0 0 0      * A Swirling Mass of Smoke and Fire
+M 0 139802 6 139901 100 0 0 0      * A Swirling Mass of Smoke and Fire
+M 0 139802 6 139901 100 0 0 0      * A Swirling Mass of Smoke and Fire
+M 0 139805 32 139905 100 0 0 0     * A smoke elemental
+M 0 139805 32 139905 100 0 0 0     * A smoke elemental
+M 0 139805 32 139905 100 0 0 0     * A smoke elemental
+M 0 139805 32 139905 100 0 0 0     * A smoke elemental
+M 0 139805 32 139905 100 0 0 0     * A smoke elemental
+M 0 139805 32 139905 100 0 0 0     * A smoke elemental
+M 0 139806 12 139905 100 0 0 0     * A MASSIVE smoke elemental
+M 0 139806 12 139905 100 0 0 0     * A MASSIVE smoke elemental
+M 0 139806 12 139905 100 0 0 0     * A MASSIVE smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139805 32 139921 100 0 0 0     * A smoke elemental
+M 0 139808 7 139925 100 0 0 0      * An eyeless smoke beast
+G 1 139804 1 0 100 0 0 0           *    a ring of mind-control
+M 0 139808 7 139925 100 0 0 0      * An eyeless smoke beast
+M 0 139808 7 139925 100 0 0 0      * An eyeless smoke beast
+M 0 139808 7 139925 100 0 0 0      * An eyeless smoke beast
+M 0 139808 7 139925 100 0 0 0      * An eyeless smoke beast
+M 0 139808 7 139925 100 0 0 0      * An eyeless smoke beast
+M 0 139808 7 139925 100 0 0 0      * An eyeless smoke beast
+M 0 139801 7 139927 100 0 0 0      * A Corrupted air elemental
+E 1 139800 14 16 100 0 0 0         *   A swirling spike of ash and air
+E 1 139800 14 17 100 0 0 0         *   A swirling spike of ash and air
+M 0 139801 7 139927 100 0 0 0      * A Corrupted air elemental
+E 1 139800 14 16 100 0 0 0         *   A swirling spike of ash and air
+E 1 139800 14 17 100 0 0 0         *   A swirling spike of ash and air
+M 0 139801 7 139927 100 0 0 0      * A Corrupted air elemental
+E 1 139800 14 16 100 0 0 0         *   A swirling spike of ash and air
+E 1 139800 14 17 100 0 0 0         *   A swirling spike of ash and air
+M 0 139801 7 139929 100 0 0 0      * A Corrupted air elemental
+G 1 139800 14 0 100 0 0 0          *    A swirling spike of ash and air
+G 1 139800 14 0 100 0 0 0          *    A swirling spike of ash and air
+M 0 139801 7 139930 100 0 0 0      * A Corrupted air elemental
+E 1 139800 14 16 100 0 0 0         *   A swirling spike of ash and air
+E 1 139800 14 17 100 0 0 0         *   A swirling spike of ash and air
+M 0 139801 7 139931 100 0 0 0      * A Corrupted air elemental
+E 1 139800 14 16 100 0 0 0         *   A swirling spike of ash and air
+E 1 139800 14 17 100 0 0 0         *   A swirling spike of ash and air
+M 0 139801 7 139931 100 0 0 0      * A Corrupted air elemental
+E 1 139800 14 16 100 0 0 0         *   A swirling spike of ash and air
+E 1 139800 14 17 100 0 0 0         *   A swirling spike of ash and air
+M 0 139800 2 139932 100 0 0 0      * A MASSIVE air elemental
+M 0 139800 2 139932 100 0 0 0      * A MASSIVE air elemental
+M 0 139810 1 139935 20 0 0 0       * The great smoke dragon, 'Etrita'
+G 1 139810 1 0 100 0 0 0           *    the still-beating heart of Etrita
+M 0 139812 1 139935 60 0 0 0       * A smoke mephit commander
+E 1 139806 1 24 100 0 0 0          *   Ehkahk's badge of Honor
+F 1 139803 9 139935 100 0 0 0      * A smoke mephit (following)
+F 1 139803 9 139935 100 0 0 0      * A smoke mephit (following)
+F 1 139803 9 139935 100 0 0 0      * A smoke mephit (following)
+F 1 139804 8 139935 100 0 0 0      * A smoke mephit (following)
+F 1 139804 8 139935 100 0 0 0      * A smoke mephit (following)
+M 0 139811 1 139940 100 0 0 0      * Rijak, the exiled Sorcerer of Smoke
+M 0 139814 1 139941 100 0 0 0      * Roj'lik
+M 0 139815 1 139942 40 0 0 0       * A Human Concubine
+E 1 139822 1 1 100 0 0 0           *   A jewel-encrusted ring
+M 0 139816 1 139942 40 0 0 0       * A Drow Concubine
+E 1 139824 1 27 100 0 0 0          *   A mystical backpack made of solid smoke
+M 0 139818 1 139942 40 0 0 0       * A Half-Elf Concubine
+E 1 139823 1 1 100 0 0 0           *   A jewel-encrusted earring
+M 0 139819 1 139942 40 0 0 0       * An Orc Concubine
+E 1 139826 1 19 100 0 0 0          *   Some Disgusting Make-up
+M 0 139820 1 139942 40 0 0 0       * A Gnome Concubine
+E 1 139827 1 7 100 0 0 0           *   The cursed legplates of Kerzuled the Destroyer
+M 0 139821 1 139942 40 0 0 0       * A Troll Concubine
+E 1 139828 1 23 100 0 0 0          *   the bottomless quiver 'Alacrity'
+M 0 139817 1 139942 40 0 0 0       * A Grey Elf Concubine
+E 1 139825 1 18 100 0 0 0          *   A staff of smoke and fire
+M 0 139823 1 139945 100 0 0 0      * Erk, the forgemaster
+M 0 139824 6 139947 100 0 0 0      * A Corrupted fire elemental
+E 1 139834 12 16 100 0 0 0         *   A swirling spike of ash and fire
+E 1 139834 12 17 100 0 0 0         *   A swirling spike of ash and fire
+M 0 139824 6 139947 100 0 0 0      * A Corrupted fire elemental
+E 1 139834 12 16 100 0 0 0         *   A swirling spike of ash and fire
+E 1 139834 12 17 100 0 0 0         *   A swirling spike of ash and fire
+M 0 139824 6 139948 100 0 0 0      * A Corrupted fire elemental
+E 1 139834 12 16 100 0 0 0         *   A swirling spike of ash and fire
+E 1 139834 12 17 100 0 0 0         *   A swirling spike of ash and fire
+M 0 139824 6 139949 100 0 0 0      * A Corrupted fire elemental
+E 1 139834 12 16 100 0 0 0         *   A swirling spike of ash and fire
+E 1 139834 12 17 100 0 0 0         *   A swirling spike of ash and fire
+M 0 139824 6 139950 100 0 0 0      * A Corrupted fire elemental
+E 1 139834 12 16 100 0 0 0         *   A swirling spike of ash and fire
+E 1 139834 12 17 100 0 0 0         *   A swirling spike of ash and fire
+M 0 139824 6 139951 100 0 0 0      * A Corrupted fire elemental
+E 1 139834 12 16 100 0 0 0         *   A swirling spike of ash and fire
+E 1 139834 12 17 100 0 0 0         *   A swirling spike of ash and fire
+M 0 139825 2 139952 100 0 0 0      * A MASSIVE fire elemental
+M 0 139825 2 139952 100 0 0 0      * A MASSIVE fire elemental
+*
+S

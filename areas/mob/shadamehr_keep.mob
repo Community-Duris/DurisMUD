@@ -10,8 +10,8 @@ death knight merkus~
 &+Lknights skeletal face. Through the visor one can see the fiery red eyes
 &+Lof the death knight. Merkus Nightblade seems annoyed at you.
 ~
-1124214955 1 0 838926588 276675 67764224 4194816 -1000 S
-X 0 2097408 -1
+1124214955 1 0 0 838926588 276675 67764224 4194816 -1000 S
+X 0 2097408 0 -1
 61 175 -126 25000d1+500 7d7+40
 0.2.0.9 334125
 8 8 0
@@ -27,8 +27,8 @@ shadow dragon~
 &+Lits side, large razor sharp talons and teeth are one of its weapons. The
 &+Lshadow dragons eyes glows red seemingly annoyed at you.
 ~
-133130 1 0 838926588 0 0 0 -1000 S
-D 0 1 -1
+133130 1 0 0 838926588 0 0 0 -1000 S
+D 0 1 0 -1
 55 -5 -131 55d131+5225 7d6+30
 0.2.3.19 445500
 8 8 0
@@ -44,8 +44,8 @@ undead beholder~
 &+btenticals with white sightless eyes at the ends of each tentical. Large
 &+bgaping maws with several still sharp teeth adorn its face.
 ~
-2058 1 0 301990140 0 0 0 -1000 S
-BH 0 32 -1
+2058 1 0 0 301990140 0 0 0 -1000 S
+BH 0 32 0 -1
 54 -5 -122 54d121+4914 7d6+30
 9.1.0.9 328050
 8 8 0
@@ -60,8 +60,8 @@ white hair and a pale bluish colored skin. Her eyes and face are frozen in
 a sad cry of pain. She sings the song of an abused life and after life. The
 banshee is doomed to sing her song for all time.
 ~
-33556552 1 0 152 0 0 0 -1000 S
-U 0 256 -1
+33556552 1 0 0 152 0 0 0 -1000 S
+U 0 256 0 -1
 52 -5 -101 52d121+4368 7d6+30
 0.0.0.0 210600
 8 8 2
@@ -76,8 +76,8 @@ around it. It has large glowing red eyes and sharp teeth and claws to make
 tearing and eating flesh easier. The wraith has a very large vaguely human
 form with broad shoulders. It has a pitch black body with no features.
 ~
-33556552 1 0 152 0 0 0 -1000 S
-U 0 256 -1
+33556552 1 0 0 152 0 0 0 -1000 S
+U 0 256 0 -1
 53 -5 -104 53d121+4452 7d6+30
 0.0.0.0 214650
 8 8 0
@@ -92,8 +92,8 @@ shoulders, arms and legs. Large sharp fangs and claws are what the shadow
 uses to fight. The shadow keeps getting distorted in the flickering lights.
 In raw anger the shadows eyes glow red with a fiery hatred.
 ~
-33556552 1 0 152 0 0 0 -1000 S
-U 0 256 -1
+33556552 1 0 0 152 0 0 0 -1000 S
+U 0 256 0 -1
 52 -5 -101 52d121+4368 7d6+30
 0.0.0.0 210600
 8 8 0

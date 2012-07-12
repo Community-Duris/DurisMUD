@@ -1,0 +1,2327 @@
+#139100
+medallion kossuth~
+&+Wthe medallion of kossuth&N~
+The &+Wmedallion of kossuth&N has been left here.~
+~
+9 8 3 2 13 0 1024 5 64 33685920 0
+8 2 1 3 0 0 0 0
+1 100000 100
+E
+medallion kossuth~
+This is a large golden medallion set with a number of sapphires rubies
+diamonds and emeralds all set in a circular fashion.
+~
+A
+34 4
+A
+22 -5
+#139101
+flaming saber~
+&+ra fl&+Ra&+rming saber&N~
+&+rsome idiot has left a flaming saber here.&N~
+~
+5 26 3 0 14 0 271361 8193 64 87572571 0
+9 5 5 3 0 0 0 0
+1 150000 100 536870912 0 0 0
+E
+flaming saber~
+   &+rThis might saber of pure flame sizzles and crackles with a
+&+rcombination of fire and awesome power.  Just by being near it
+&+ryou can sense its awesome power.&N
+~
+A
+18 5
+A
+19 5
+#139102
+staff blue flames unique~
+&+cthe staff&N &+Cof&N &+Bblue&N &+bflames&N~
+The almighty &+cstaff&N &+Cof&N &+Bblue&N &+bflames&N burns the ground here!~
+~
+5 17 3 10 15 0 271983617 8193 64 3588 0
+12 4 6 0 0 0 0 0
+1 1000000 100 134217736 0 0 0
+E
+staff blue flames~
+   &+BThis staff is legendary for its incredible potency.  It is
+&+Bsurrounded in flickering blue flame and a glowing aura.&N
+~
+A
+57 -1
+#139103
+holy flaming mace~
+&+Ga holy &+rf&+Rla&+Ym&+Rin&+rg&n &+Gmace&N~
+&+GSome moron has left a holy flaming mace here!&N~
+~
+5 1 3 8 13 0 134226944 8193 0 33685920 0
+6 5 5 7 0 0 0 0
+5 700000 100 536870912 32768 0 0
+E
+holy flaming mace~
+   &+GThe mace flickers with green and yellow fire, and surrounds
+&+Gyou with a holy aura.&N
+~
+A
+18 4
+A
+19 4
+#139104
+holy mace efreeti~
+&+Gthe holy mace of the efreeti&N~
+&+GSome total idiot has left the holy mace of the efreeti here!&N~
+~
+5 8 4 8 15 0 268575745 8193 64 33685920 0
+6 5 7 6 0 0 0 0
+10 1000000 100 536870960 32768 0 0
+E
+holy mace efreeti~
+&+GThis mighty mace was given to the leader of the effretti church
+&+Gby Kossuth himself over ten thousand years ago.  Its power if
+&+Gwithout peer, and its energy comes from the god itself.
+~
+A
+5 20
+A
+31 20
+#139105
+glowing potion 52potion~
+&+Ya glowing potion~
+&+Ya glowing potion is here.~
+~
+10 7 2 4 15 0 8716289 16385 0 0 0
+52 9 35 56 0 0 0 0
+1 10000000 100
+E
+glowing potion~
+   &+YA highly sought after commodity, this powerful potion will
+&+Yadvance its imbiber to a higher level of power...if he is ready.&N
+~
+A
+8 52
+A
+8 52
+#139106
+beads prayer kossuth~
+&+Msome prayer beads of Kossuth&N~
+a set of the &+Mprayer beads of kossuth&N is piled here.~
+~
+9 10 3 2 11 0 1025 16389 2 33685920 0
+6 2 1 3 0 0 0 0
+1 40000 100 536870912 0 0 0
+E
+beads prayer kossuth~
+   &+MThese holy beads are used by the worshippers of Kossuth.&N
+~
+A
+4 10
+A
+23 -2
+#139107
+wand of flames~
+&+ra wa&+Rnd&+Y of &+Rfla&+rmes&N~
+a &+rwa&+Rnd&N &+Yof&N &+Rfla&+rmes&N lies here.~
+~
+3 1 2 4 11 0 134480896 16385 64 4197892 0
+50 3 3 47 0 0 0 0
+0 33000 100
+E
+wand of flames~
+   &+RIt flickers with tougues of flame.&N
+~
+#139108
+dead eyestalk _id_~
+&+ga dead eyestalk&N~
+The &+Meye of the beholder&N blinks on its own here.~
+~
+11 2 4 0 14 100 103821313 131073 64 0 0
+0 0 0 0 0 0 0 0
+5 100000 100 268435460 28 0 0
+E
+_id_short_~
+&+Meye of the beholder&N
+~
+E
+_id_name_~
+eye beholder
+~
+E
+_id_desc_~
+&+Mthe mystic eye of the beholder lies here.&N
+~
+E
+eye beholder~
+&+Mthis great glowing eye gives off an odd light
+~
+A
+13 25
+A
+20 -4
+#139109
+wand power~
+&+rthe wand of power&N~
+The wand of power has been left here.~
+~
+3 16 2 4 7 0 1024 16385 0 4197888 0
+25 3 3 277 0 0 0 0
+1 20000 100
+E
+wand power~
+   &+RLooks like one powerful wand!&N
+~
+#139110
+bracelet blue flames~
+&+ca bracelet&n &+Cof&N &+Bblue&N &+bflames&N~
+a &+cbracelet&N &+Cof&N &+Bblue&N &+bflames&N sizzles on the ground here.~
+~
+9 17 3 0 14 0 41984 4097 64 46305252 0
+10 0 0 3 0 0 0 0
+1 100000 100
+E
+bracelet blue flames~
+   &+CThis bracelet burns with blue flame, yet it does not
+&+Cburn you.&N
+~
+A
+13 20
+A
+33 5
+#139111
+flaming head caltoon~
+&+rthe &+Rflaming &+rhead of &+bCaltoon&n~
+&+rThe &+Rflaming &+rhead of &+bCaltoon &+rlies here.&n~
+~
+13 11 3 0 7 0 8388608 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139112
+leggings flames~
+&+csome leggings&N &+Cof&N &+rred&N &+bflames&N~
+a pair of &+cleggings&N &+Cof&N &+rred&N &+bflames&N crackle away here.~
+~
+9 1 3 0 13 0 8192 33 64 0 0
+10 0 0 3 0 0 0 0
+1 100000 100
+E
+leggings flames~
+   &+rThese flaming leggings burn with intense red and blue flame,
+&+ryet they do not burn you.&N
+~
+A
+23 -5
+A
+35 7
+#139113
+lengths fire eldrich~
+&+Glengths of pure&N &+Meldrich&N &+Gfire&N~
+&+Glengths of pure&N &+Meldrich&N &+Gfire&N~
+~
+9 32 3 0 14 0 1 257 64 0 0
+9 0 0 2 0 0 0 0
+0 85000 100 536870912 0 0 0
+E
+lengths fire eldrich~
+   &+MThese bands of fire are borne of the ancient flame that
+&+Mforged the cosmos itself.&N
+~
+A
+13 25
+A
+19 3
+#139114
+key~
+a &+Rblazing&N key~
+A &+rblazing&N key sizzles on the ground.~
+~
+18 15 3 0 7 0 8388616 16385 0 0 0
+0 100 0 0 0 0 0 0
+0 1 100
+E
+key~
+&+rAlthough made of iron, this key burns with eternal fire.&N
+~
+#139115
+collar flames dark~
+&+ca collar&N &+Cof&N &+Ldark&N &+bflames&N~
+&+Ca collar&N &+Cof&N &+Ldark&N &+bflames&N &+Lcasts shadows all around it here.&N~
+~
+9 1 3 0 14 0 131072 16389 0 0 0
+10 9 0 2 0 0 0 0
+0 85 100
+E
+collar flames dark~
+&+LPitch black flames flicker in a circular pattern,
+&+Lforming a collar-shaped ring of shadow flame.&N
+~
+A
+19 4
+A
+18 4
+#139116
+flaming head arch-magi~
+&+rthe &+Rflaming &+rhead of the &+Ra&+rrch-&+Rm&+ragi&n~
+&+rThe &+Rflaming &+rhead of the Arch-Magi lies here.&n~
+~
+13 11 3 0 7 0 8388608 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139117
+flaming head amir ornon kasoon~
+&+rthe &+Rflaming &+rhead of &+MO&+mrnon &+MK&+masoon&n~
+&+rThe &+Rflaming &+rhead of &+mAmir &+rlies here.&n~
+~
+13 11 3 0 7 0 8388608 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139118
+cold strange blue vial flames~
+&+La &+bcold &+Lvial of &+bblue &+rflames&n~
+&+LA strange &+bblue &+Lvial lies here.&n~
+~
+10 11 3 0 7 0 0 1 0 0 0
+55 267 0 0 0 0 0 0
+0 0 100
+#139119
+shield dancing flames~
+&+ca shield &+Cof&n &+Gdancing&n &+bflames&n~
+A &+Bblue&n &+bflaming&n &+cshield&N has been left here.~
+~
+37 19 3 15 13 0 9217 513 64 8503353 0
+2 1 3 30 3 1 0 0
+11 40000 100 0 1 0 1024
+E
+shield blue fire~
+This is a blue metallic shield totally engulfed in flames.
+~
+A
+5 9
+A
+1 9
+#139120
+pile coins platinum~
+a pile of platinum coins~
+A huge pile of &+Wplatinum&n coins are in the corner.~
+~
+20 25 3 0 7 0 0 1 0 0 0
+0 0 0 2500 0 0 0 0
+50 0 100
+#139121
+key~
+&+Ya key of &+cbl&+Cu&+ce&n &+Rf&+ri&+Rre&n~
+&+YA &+cbl&+Cu&+ce&n &+Rfl&+ra&+Rme&n &+Yresembling a key lies here.~
+~
+18 1 1 0 12 0 8400897 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139122
+key blue flame fire~
+&+Ya key of &+Bbl&+Cu&+Be&n &+Rf&+ri&+Rre~
+&+YA &+Bbl&n&+Cu&n&+Be&n &+Rfl&+ra&+Rme&n &+Yresembling a key lays here.~
+~
+18 1 0 0 12 0 8400897 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139123
+key vault~
+the &+Ypalace &+yvault&n &+Lkey~
+The &+Lkey&n to the &+YSultan's &+yvault&n lies here.~
+~
+18 17 0 0 12 0 8400897 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139124
+flaming dagger~
+&+ra flaming dagger&N~
+&+rsome idiot has left a flaming dagger here.&N~
+~
+5 26 3 0 14 0 271361 8193 64 11140639 0
+2 3 5 3 0 0 0 0
+1 150000 100 536870912 0 0 0
+E
+flaming saber~
+   &+rThis might saber of pure flame sizzles and crackles with a
+&+rcombination of fire and awesome power.  Just by being near it
+&+ryou can sense its awesome power.&N
+~
+A
+18 3
+A
+19 3
+#139125
+papers paper manifest docks~
+the docks manifest~
+A stack of papers lie here.~
+~
+16 28 0 0 7 0 8192 16385 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+papers paper manifest docks~
+The docks manifest of the ships coming and going.
+~
+#139126
+flaming quill~
+&+ra f&+Rl&+Ya&+Wm&+Yi&+Rn&+rg quill&n~
+&+rA flaming quill is stuck in the ground.&n~
+~
+21 10 0 0 11 0 8193 8404993 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100 536870912 1 0 0
+A
+3 4
+#139127
+battle hammer~
+a huge battle hammer~
+A battle hammer is lying here.~
+~
+5 20 3 0 9 0 0 8193 64 0 0
+4 4 5 0 0 0 0 0
+4 8000 100
+A
+18 5
+A
+1 8
+#139128
+golden coin surtr~
+&+Ya golden &+RSu&+rrt&+Rr&N &+Ycoin&n~
+&+YA shiny coin made of gold sits here looking of significant value.~
+~
+8 24 0 0 15 0 8409089 16385 0 0 0
+0 0 0 0 0 0 0 0
+1 1000000 100 2 0 0 0
+#139129
+mace flaming~
+&+ra fl&+Ra&+rming mace&n~
+&+ra flaming mace&N has been left here.~
+~
+5 1 3 8 11 0 134217728 8193 0 4173708804 0
+6 3 8 7 0 0 0 0
+1 149899 100
+E
+mace flaming~
+This is a rather large mace which is burning soft flames.
+~
+A
+1 3
+A
+19 4
+#139130
+flame~
+&+ra F&+Rl&+Ya&+Rm&+re~
+A &+rF&+Rl&+Ya&+Rm&+re&n erupting from the ground flickers in the center of the room.~
+~
+17 1 1 0 15 0 327681 0 64 0 0
+200 200 16 0 0 0 0 0
+0 0 100
+#139131
+imix coin flaming~
+&+ra&n &+rf&+Rl&+Ya&+Wm&+Yi&+Rn&+rg&n &+LI&+rmi&n&+Lx&n &+rcoin~
+Marked with the symbol of &+RImix&n, a flaming coin lies here.~
+~
+8 31 0 0 15 0 274432 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 500000 100
+A
+25 0
+#139132
+flaming sword two two-handed~
+&+ra fl&+Ra&+rming &+Ltwo-handed &+rsword~
+&+ra fl&+Ra&+rming &+Ltwo-handed&n &+rsword is left here.~
+~
+5 16 4 0 10 0 138412032 8193 64 182452196 0
+13 5 7 0 0 0 0 0
+0 250000 100
+A
+18 5
+A
+19 3
+#139133
+quartz crystal~
+&+Wa &nquartz &+Wcrystal~
+&+rA &npiece of &+Wcrystal &+rprotrudes from the harden magma.~
+~
+8 8 0 0 9 0 45056 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 550000 100
+#139134
+key blazing armory~
+a &+Lbl&naz&+Ling &+Yar&+ymo&+Yry&n &+rk&+Re&+ry&n~
+&+YThe &+rk&+Re&+ry&n &+Yto the palace's ar&+ymo&+Yry was dropped here.~
+~
+18 17 0 0 10 0 8200 1 0 0 0
+0 0 0 0 0 0 0 0
+0 10000 100
+#139135
+suit flaming ring mail ringmail~
+&+ra suit of fl&+Ra&+rming ringmail~
+A suit of &+rflaming ringmail&n has been left here.~
+~
+9 19 4 5 12 25 0 9 0 172363684 0
+40 3 1 4 0 0 0 0
+5 60000 100
+E
+suit flaming ring mail ringmail~
+This is a large suit of armor made from tiny rings meshed together.  The
+entire suit flames brightly.
+~
+A
+18 4
+A
+19 4
+#139136
+crown might~
+&+ythe crown of might~
+&+yThe crown of might&N lays here!~
+~
+9 19 3 2 14 50 0 17 66 172363684 0
+12 0 0 3 0 0 0 0
+5 135000 100 536870912 0 0 0
+E
+crown might~
+This glowing brass crown with several large rubies embedded in
+it seems to call out to you to place it on your head.
+~
+A
+31 4
+A
+19 3
+#139137
+ring elemental control~
+&+ra ring of elemental control~
+A &+rring of elemental control&n pulses here.~
+~
+3 27 0 10 14 0 1180673 3 64 4197888 0
+56 8 8 69 0 0 0 0
+1 120000 100
+E
+ring elemental control~
+This is a large ring made from a fiery-red metal with a large unidentifiable
+stone on the top encrusted with a large letter E.
+~
+A
+13 55
+A
+20 -5
+#139138
+gloves brass sapphire~
+&+ygloves of&n &+Bs&+ba&+Bp&+bp&+Bh&+bi&+Br&+be&n-&+Ge&+gn&+Gc&+gr&+Gu&+gs&+Gt&+ge&+Gd&n &+Ybrass&n~
+&+ya pair of spectacular&n &+Ybrass gloves catch your eye&n.~
+~
+9 17 3 0 14 0 32768 16513 66 0 0
+9 0 0 3 0 0 0 0
+0 100000 100 32 0 0 0
+E
+gloves brass sapphire~
+  &+yThese spectacular gloves sparkle with brilliance from
+&+ywithin.&N
+~
+A
+19 4
+A
+13 10
+#139139
+cloak fiery~
+&+ra f&+Ri&+Ye&+Rr&+ry cloak&n~
+A &+Rfiery cloak&N has been left here.~
+~
+9 1 3 8 13 0 9216 1025 64 180522980 0
+13 0 0 2 0 0 0 0
+3 60000 100 805306368 0 0 0
+E
+cloak fiery~
+This is a cloak made from a material unknown to you and is totally
+ungulfed in orange flames.
+~
+A
+38 5
+A
+40 3
+#139140
+sash fiery orange~
+&+ra f&+Ri&+Ye&+Rr&+ry-orange &+rsash~
+A &+rsash burning with orange fire&n has been left here.~
+~
+9 3 3 3 7 0 0 2049 64 172396420 0
+9 10 0 3 0 0 0 0
+1 20000 100 536870912 0 0 0
+E
+sash fiery orange~
+This is a silky sash which is flaming with bright orange fire.
+~
+A
+24 4
+A
+18 4
+#139141
+flaming stiletto~
+&+ra fl&+Ra&+rming stiletto~
+A &+rflaming stiletto&n has been left here.~
+~
+5 19 3 0 14 0 1024 8193 0 8515584 0
+2 3 4 11 0 0 0 0
+1 20000 100
+E
+flaming stiletto~
+This is a dull black stiletto with a long thin blade.  The handle has been
+wrapped in a fine magical leather.  The entire weapon is on fire.
+~
+A
+18 3
+A
+19 3
+#139142
+scimitar glowing~
+&+Wa glowing scimitar~
+A &+Wglowing scimitar&n has been tossed on the ground here.~
+~
+5 18 3 10 13 0 1 8193 64 172363684 0
+9 4 4 3 0 0 0 0
+13 50000 100
+E
+scimitar glowing~
+This is a long bladed scimitar which glows rather brightly.
+~
+A
+18 4
+A
+19 5
+#139143
+two two-handed serrated long spear~
+a two&+L-&nhanded &+Lserrated&n &+ylong spear~
+A &+Lserrated &+ylong spear&n is lies here.~
+~
+5 16 4 0 7 0 4202496 8193 64 41009124 0
+15 7 3 0 2 0 0 0
+5 25000 100
+A
+18 3
+A
+19 3
+#139144
+lance flaming~
+&+La &+rfl&+Ra&+rming&n &+Llance~
+A &+Llance&n writhed in &+rfl&+Ra&+rme&ns burns here.~
+~
+5 20 4 0 10 0 4194816 8193 64 24 0
+16 8 2 0 0 0 0 0
+10 100000 100
+A
+18 6
+#139145
+whispy blade scimitar ethereal _id_~
+an &+Lethereal&n blade sci&+Wmi&+Ytar&n~
+An &+Lwhispy&n blade shaped into a sci&+Wmi&+Ytar&n is left here.~
+~
+5 1 3 0 14 0 1024 8193 64 20635 0
+9 3 7 0 0 0 0 0
+1 50000 100
+E
+whispy blade scimitar ethereal _id_~
+A blackened blade made from steel and materials found on the ethereal plane
+forged into a blade shaped as a scimitar.
+~
+A
+18 3
+A
+19 3
+#139146
+pearl stud~
+&+Wa large &+cpolished&n &+Wpearl stud~
+A large &+Wpearl&n glistens on the floor.~
+~
+9 52 0 0 9 0 4128 524289 0 0 0
+2 0 0 1 0 0 0 0
+1 25000 100 0 128 0 0
+A
+4 4
+A
+23 3
+#139147
+stone glasses~
+&+Lstone glasses&n with a &+gemerald&n and &+rruby&n lens~
+A pair of &+Lglasses&n made from &+Lstone&n were left here.~
+~
+9 15 3 0 7 0 1024 131073 64 33554848 0
+1 0 0 4 0 0 0 0
+0 0 100 0 32788 0 0
+E
+stone glasses~
+Made of polished stone these glasses seem unusually lite. There is a thin emerald and ruby crystal placed one in each of the eye holes.
+~
+A
+35 2
+A
+4 6
+#139148
+whip titan~
+&+La &+Ct&+Wi&+Ct&+Wa&+Cn&+L's whip~
+A thick &+Lwhip&n with three &+csteel&n tips was left here.~
+~
+5 12 3 0 10 0 9216 8193 64 3162112 0
+14 5 3 0 0 0 0 0
+4 5000 100
+E
+whip titan~
+A tightly woven whip tipped with three blunted steel ends. Its 25% longer than
+any normal whip.
+~
+A
+18 2
+A
+19 5
+#139149
+boots fiery~
+&+ra pair of f&+Ri&+Ye&+Rr&+ry boots&n~
+&+Ra pair of fiery red boots&N have been left here.~
+~
+9 1 3 8 7 0 33792 65 64 96071707 0
+8 6 1 3 0 0 0 0
+1 100000 100 536870912 0 0 0
+E
+boots fiery~
+These boots are very comfortable and made from a material unknown to you.
+The boots are on fire yet they do not seem to burn your feet.
+~
+A
+19 4
+A
+2 8
+#139150
+thin green cloak~
+&+ga long &+Gthin &+ggreen cloak~
+&+gA green cloak was dropped here.~
+~
+9 3 3 0 14 0 9729 1025 64 32832 32768
+10 0 0 2 0 0 0 0
+1 75000 100 285212672 0 0 0
+E
+thin green cloak~
+This plain looking green cloak seems as though it is almost in tatters but has
+an erie but safe feel to it.
+~
+A
+17 50
+A
+2 4
+#139151
+bone sandals~
+a pair of &+Wbone&n sandals~
+&+WSandals crafted from healthy &nbone &+Wrest here.~
+~
+9 10 1 0 11 0 9217 65 64 3652 0
+3 0 0 1 0 0 0 0
+0 25000 100
+E
+bone sandals~
+Made from the small bones of a troll these sandals seem in excellent condition.
+~
+A
+18 3
+A
+54 10
+#139152
+chest plate hellish~
+&+ya chest plate with &+Lh&+re&+Llli&+rs&+Lh &+ymarkings~
+&+yA chest plate marked with odd&n symbols &+ywas left behind here.~
+~
+9 20 3 0 9 0 1024 9 64 27 0
+30 0 0 4 0 0 0 0
+25 45000 100 536870912 0 0 0
+E
+chest plate hellish~
+The bronze chest plate is marked by unreadable symbols and are highlighted by all the black grim that has filled them.
+~
+A
+22 4
+A
+5 8
+#139153
+bronze shinguards shin~
+&+ya pair of bronze &nshin&+Lguards~
+&+yA pair of bronze &nshin&+Lguards &+ywere tied together and left here.~
+~
+9 20 2 0 9 0 1024 33 64 57 0
+20 0 0 4 0 0 0 0
+8 20000 100 8192 0 0 0
+E
+bronze shinguards shin~
+A pair of bronze shinguards with leather straps cover from knee to ankle for an average humanoid.
+~
+A
+1 6
+A
+13 10
+#139154
+grey robes~
+grey &+Lrobes&n with two vertical &+rred&n stripes~
+Left on the floor is a set of grey &+Lrobes&n.~
+~
+9 3 3 0 7 0 9216 9 64 138415872 0
+5 0 0 0 0 0 0 0
+3 5000 100 0 0 0 33554432
+E
+grey robes~
+These are average grey robes which are decorated with just two red stripes that go over the shoulder from the front to the back.
+~
+A
+3 4
+A
+4 4
+#139155
+frosty icicle wand~
+&+Wa &+Cf&+cr&+Wos&+ct&+Cy &+Wi&+Cc&+Wi&+Cc&+Wl&+Ce &+Wwand~
+&+WAn i&+Cc&+Wi&+Cc&+Wl&+Ce &+Wlays on the ground here not even melting.~
+~
+3 40 1 0 13 0 134230016 16385 64 0 0
+46 5 5 254 0 0 0 0
+1 50000 100
+#139156
+spellbook leather runes swirling book~
+&+La &+yleather &+Lspellbook with &+Ms&+mwi&nrl&+min&+Mg&n &+mr&+Mu&nn&+Me&+ms&n~
+&+LA &+yleather &+Lspellbook with unique &+mr&+Mu&nn&+Me&+ms&+L was left here.~
+~
+33 14 2 0 11 0 33567744 8404993 64 140545536 0
+0 0 200 0 0 0 0 0
+3 20000 100 0 32768 0 0
+A
+26 8
+#139157
+bracelet steel~
+an &+Cin&+ct&+Wr&+ci&nc&+ca&+Wt&+ce&+Cly&n carved &+Csteel&n &+cbracelet~
+A &+Csteel &+cbracelet&n with carvings was left here.~
+~
+9 16 2 0 9 0 33555456 4097 0 87052379 0
+10 0 0 3 0 0 0 0
+3 15000 100
+A
+1 7
+A
+19 2
+#139158
+sword claymore mithril~
+&+La &+mmithril&n &+Lclaymore with a &+Ygo&+ylden hi&+Ylt~
+&+LA large claymore made of &+mmithril &+Lsits upon the floor.~
+~
+5 18 4 0 11 0 4195328 8193 64 83886105 0
+13 5 7 0 0 0 0 0
+8 75000 100 0 0 64 0
+E
+sword claymore mithril~
+This large claymore was constructed with special care and finished with a golden hilt.
+~
+A
+18 5
+A
+19 3
+#139159
+turban black flames unquenchables unquenchable~
+&+La bl&na&+Lck &+bturban&n of &+bcir&+Lcl&+bing&n &+Lfl&na&+Lmes&n~
+Some fool has left &+Lthe turban of the Unquenchables&n here!~
+~
+9 1 3 0 13 0 33792 17 64 127067 0
+12 4 1 3 0 0 0 0
+1 85000 100 134291456 0 0 0
+E
+turban flames blue~
+&+bThis turban is made from a thick sturdy material unknown to you.  The whole
+&+bheadpiece burns with soft blue flames.&N
+~
+A
+32 3
+A
+36 4
+#139160
+dagger kris fanged~
+&+ra &+Gk&+gri&+Gs &+Lfanged &+rdagger~
+&+rA &+Gk&+gri&+Gs &+rdagger is stuck into a surface nearby&n.~
+~
+5 15 3 0 7 0 1296 8193 64 61440 0
+2 2 8 0 2 0 0 0
+2 10000 100 0 12 0 0
+E
+dagger kris fanged~
+A double fanged dagger that kris cross three times before ending in very sharp tips.
+~
+A
+18 4
+A
+32 2
+#139161
+finger band purple~
+a &+cfinger band&n made from an &+Millithids &+mtentacle~
+A slimy &+mpurple&n &+cband &nwas left here.~
+~
+9 2 1 0 9 0 9216 3 64 4460036 0
+5 0 0 1 0 0 0 0
+0 10000 100 33554464 0 0 0
+E
+finger band purple~
+Made from an illithids tentacle, this ring holds its slimey feel.
+~
+A
+13 23
+A
+37 2
+#139162
+jewel ruby~
+the &+Rj&+re&+Rw&+re&+Rl&n of a &+Ggith&+Wyanki~
+&+LSomeone left a sparkling &+Rr&+ru&+Rb&+ry&n here&+L!~
+~
+8 31 1 0 10 0 4096 1 0 0 0
+0 0 0 0 0 0 0 0
+0 700000 100
+#139163
+wrist guard~
+&+La &+Lsl&+cav&+Cery &+Lmarked &+gw&+Gr&+gi&+Gs&+gt &+Lguard~
+&+LA slaves &+gw&+Gr&+gi&+Gs&+gt &+Lguard was dropped here.~
+~
+9 14 2 0 8 0 9216 4097 0 64 0
+4 0 0 2 0 0 0 0
+1 10000 100 536870912 0 0 0
+A
+18 4
+#139164
+large sapphire gem~
+&+ba large &+Bs&+ba&+Bp&+bp&+Bh&+bi&+Br&+be &+Bgem~
+&+LSomeone left a sparkling &+Bgem&n &+Lhere&n!~
+~
+8 33 1 0 10 0 4096 1 0 0 0
+0 0 0 0 0 0 0 0
+0 700000 100
+#139165
+mithril elvish chain chainmail~
+a s&+Lui&nt of &+mmi&+Mthr&+mil&n &+Mel&+mvi&+Msh&n &+Lcha&ninm&+Lail~
+&+LSomeone has left cha&ninm&+Lail made of &+mmi&+Mthr&+mil &+Lon the floor.~
+~
+9 18 3 0 7 0 12801 9 64 0 1036
+60 0 0 4 0 0 0 0
+4 800000 100 0 0 0 33554432
+A
+24 3
+A
+55 15
+#139166
+mithril longsword~
+&+Lan &+Melv&+men&n-&+mma&+Mde &+mmi&+Mthr&+mil &+Llon&ngsw&+Lord~
+&+LA lon&ngsw&+Lord made of &+mmi&+Mthr&+mil &+Lwas left on the floor.~
+~
+5 18 3 0 14 0 1025 8193 64 2113539 0
+5 4 5 0 0 0 0 0
+4 25000 100 0 12 0 0
+E
+mithril longsword~
+Made by an elven craftsman its quality can only be surpassed by a few. The mithril blade keeps its edge better than any steel blade and it is much lighter as well.
+~
+A
+18 3
+A
+19 3
+#139167
+massive titan hammer~
+a massive &+Ct&+Wi&+Ct&+Wa&+Cn&n &+Lha&nmm&+Ler&n~
+&+LA big ass ha&nmm&+Ler was left behind here.~
+~
+5 16 4 0 9 0 4195328 8193 64 17842233 0
+4 5 7 0 0 0 0 0
+10 25000 100 73728 0 0 0
+E
+massive titan hammer~
+Made of steel this hammer is massive yet is easily wielded by a titan with one hand. The handle is wrapped in a leather hide and has a spike on its pommel.
+~
+A
+18 4
+A
+19 2
+#139168
+brass longsword sword~
+a &+ybrass&n longsword~
+A &+ybrass&n longsword was left on the ground.~
+~
+5 17 3 0 5 0 0 8193 64 0 0
+9 3 5 0 0 0 0 0
+7 5000 100
+A
+18 2
+A
+19 2
+#139169
+ring amethyst~
+&+Man amethyst ring&n~
+An &+Mamethyst ring&N has been left here.~
+~
+9 26 1 1 13 0 0 3 64 0 0
+4 0 0 1 0 0 0 0
+1 140000 100
+E
+ring amethyst~
+This is a beautiful amethyst stone set in a ring made from a combination of
+gold silver and platinum.
+~
+A
+13 40
+A
+27 5
+#139170
+palace key gate~
+&+LT&nh&+Le&n &+yCi&+Yty&n &+yo&+Yf &+yBra&+Yss&n &+rPa&+Rla&+rce&n &+LG&nat&+Le K&ne&+Ly&n~
+&+LThe &+rpa&+Rla&+rce &+Lgate key was left here.~
+~
+18 17 0 0 15 0 8396800 16385 0 0 0
+0 100 0 0 0 0 0 0
+0 0 100
+E
+palace key gate~
+A brass key engraved with the shape of the palace building in its handle.
+~
+#139171
+emerald earring~
+&+ya&+Ln &+Gem&+ger&+Lald&n &+ystud&+Lded &+Gea&+grr&+Ling~
+&+gAn earring with emeralds was left here.~
+~
+9 32 1 0 7 0 134217728 524289 64 0 0
+0 0 0 0 0 0 0 0
+0 100010 100
+A
+20 2
+A
+28 5
+#139172
+blue sapphire stud earring~
+a &+bsapphire&n stud~
+&+bA blue sapphire stud earring was left here.~
+~
+9 33 1 0 7 0 134217728 524289 64 0 0
+0 0 0 0 0 0 0 0
+0 200100 100
+A
+19 2
+A
+2 5
+#139173
+feather white deva copper chain~
+&+Wa deva feather&n on a &+ycopper&n chain~
+&+WA white feather rests here.&n~
+~
+9 50 1 0 7 0 134217728 524289 0 0 0
+0 0 0 0 0 0 0 0
+0 899101 100 134217728 0 0 0
+#139174
+ruby stud earring~
+&+La &+Rruby&n &+Lstud earring~
+&+LAn earring was left behind here.~
+~
+9 31 1 0 7 0 134217728 524289 0 0 0
+0 0 0 0 0 0 0 0
+0 301000 100
+A
+3 5
+A
+13 15
+#139175
+brass copper ring metal~
+a &+ybrass&n and &+ycopper&n woven ring~
+&+yA metal ring made of copper and brass is lying here.~
+~
+9 17 1 0 7 0 134217728 3 64 0 0
+0 0 0 0 0 0 0 0
+0 725010 100
+A
+18 3
+A
+19 3
+#139176
+silver ring leaves~
+&+La &nsilver ring &+Lengraved with &+Gleaves~
+&+LA silver ring with engravings was left here.~
+~
+9 22 1 0 13 0 134217729 3 64 0 0
+0 0 0 0 0 0 0 0
+0 899999 100 0 0 160 0
+#139177
+ivory promise ring~
+&+Wan ivory &+cpromise &+Wring~
+&+YAn ivory promise ring sits unnoticed here.~
+~
+9 34 1 0 7 0 134217729 3 0 0 0
+0 0 0 0 0 0 0 0
+0 490010 100
+A
+5 8
+A
+13 10
+#139178
+opal opaque~
+&+Wan &nopaque &+Wopal~
+A three inch &+Wopal&n glitters on the ground nearby.~
+~
+3 52 1 0 13 0 134217729 16385 0 0 0
+50 1 1 414 0 0 0 0
+1 100000 100
+#139179
+wings griffon~
+&+Ythe wings of the griffon&N~
+A pair of &+Ygriffon wings&N lay here in a folded heap.~
+~
+9 2 3 0 13 0 0 1025 64 0 0
+11 9 1 3 0 0 0 0
+1 65000 100 671088640 0 0 0
+E
+wings griffon~
+   &+YThese griffon wings have been severed from their former
+&+Yowner, but yet they seem to be alive!&N
+~
+A
+14 40
+A
+1 5
+#139180
+amethyst flaw~
+&+man &+Mamethyst &+mwith a single flaw~
+&+mAn &+Mamethyst &+mwas foolishly dropped here.~
+~
+3 26 1 0 8 0 134217729 16385 0 0 0
+45 3 3 176 0 0 0 0
+1 75000 100
+#139181
+tome flames blue bluish large~
+&+La l&na&+Lrge t&no&+Lme &+Ben&+bg&+cul&+bf&+Bed&n &+Lin &+Bb&+bl&+cu&+Be &+Bf&+bl&+cam&+be&+Bs~
+&+bA tome lies engulfed in &+Bbluish&n &+bflames on the ground here.~
+~
+33 28 2 0 11 0 167773184 8404993 64 140545538 0
+0 0 275 0 0 0 0 0
+5 850850 100 536870946 0 0 0
+A
+3 7
+A
+23 2
+#139182
+illithid illithids tentacle petrified stick purple~
+&+La pe&ntrifi&+Led &+Millithids &+mtentacle~
+&+mA &+Mpurple &+mstick lies undisturbed on the ground here.~
+~
+3 2 1 0 6 0 134217729 8404993 64 0 0
+41 3 3 260 0 0 0 0
+0 200000 100
+E
+illithid illithids tentacle petrified stick purple~
+This wand is made from an illithids tentacle that has been magically enchanted.
+~
+#139183
+wand power~
+&+ra wand of &+rp&+Ro&+Yw&+Re&+rr~
+&+rA small red wand &+Mglowing &+rwith p&+Ro&+Yw&+Re&+rr lies here.~
+~
+3 17 1 0 12 0 134218753 16385 0 138493440 0
+51 3 3 277 0 0 0 0
+1 50000 100
+E
+wand power~
+A reddish one foot long smooth piece of brass has been crafted into a glowing wand.
+~
+#139184
+blue staff cold frost magus~
+&+Lthe &+Ws&+cta&+Cff &+Lof a &+Wfro&+cst &+Cmagus~
+&+cA long blue &+Ws&+cta&+Cff &+cgiving off a cold mist lies here.~
+~
+4 7 3 0 15 0 167773184 16385 64 33632672 0
+51 1 1 471 0 0 0 0
+2 399999 100
+E
+blue staff cold frost magus~
+This staff is blue and white. It has an occasional vibration when held and is cold to touch.
+~
+#139185
+brass lyre red flames~
+&+La &+ybrass&n &+Ylyre&n &+Lcovered in &+rre&+Rd f&+Yla&+Rme&+rs&n~
+&+LA &+Ylyre&+L has been set a flame but doesnt seem to burn here.~
+~
+32 17 2 0 14 0 167773184 16385 0 8421376 0
+185 58 0 41 0 0 0 0
+3 330500 100 536870912 0 0 0
+E
+brass lyre red flames~
+This lyre is made of brass which highlights the sounds coming from it. The strings are made of demon fur and are uneffected by the magical burning of the brass frame.
+~
+A
+28 8
+A
+22 4
+#139186
+musical horn ogre ogre-magi magi instrument~
+&+La &+mmu&+Msic&+mal&n horn &+Lmade from a &+bogre&+L-&+mm&+Mag&+mi&n horn~
+&+LA &+mmu&+Msic&+mal &+Lhorn is stuck in the ground ever so slightly.~
+~
+32 10 2 0 14 0 134218753 16385 64 8421376 0
+189 57 0 41 0 0 0 0
+1 220220 100 0 2 0 0
+E
+musical horn ogre ogre-magi magi instrument~
+This unique horn was made from an ogre-magi's horn. As the center of their magic this instrument must contain strong magic.
+~
+A
+5 8
+A
+1 8
+#139187
+githzerai stronghold shanaanaa parchment piece paper note notes~
+&+BSha&+bnaana&+Ba's&n adventuring notes on &+gGith&+yzerai&n &+LStronghold~
+A piece of parchment labelled "&+gGith&+yzerai &+LStronghold&n" is crumbled here.~
+~
+16 28 1 0 11 0 134225920 1 0 0 0
+0 0 0 0 0 0 0 0
+0 25050 100
+E
+githzerai stronghold shannanna parchment piece paper~
+At 1st you will need to find the captain because he has the key to the magical door that hides the rift into their realm. He can be bribed for around 500 platinum pieces. Otherwise you will need to complete what other mundane task he needs.
+Once you have entered the rift to their realms it will lead you to Limbo. Limbo can be a maze but I just headed east and find the air pocket. Once there looked ahead. Looking ahead will give you hints as to which direction to go next and eventually to the massive red and green Slaad blocking the exit up and out of Limbo.
+After you defeat the Slaad take the relic he holds up and into the stronghold. The path is littered with creatures that protect the stronghold but you need to find the choosen one. Defeat him and move through the tunnels which can be a bit tricky and annoying. The stairs continue to a huge shadow monster guarding the second relic. Pick up the 2nd relic and move into the rift at the end of the stairs.
+Now you are just outside the fortress of the githzerai. The watch leader guards the gates but does not hold the key. He holds the 3rd and last relic needed to trade for the fortress gate key. The spirit of Zerthimon will trade for the key and can be found wandering the black land mass.
+After you have gained the key from the spirit he is of no more use so is best to slay him since you will need his heart as a sacrifice for final entrance.
+Once inside you will be in the foyer with 3 directions to choose from. I prefer left to right as I am left handed. So the west past has 1 switch you must get to, then move on to the north path. On the north path there are 3 switches to pull, then move onto the last path to the east.
+After you have headed east there is a fork you will want to stay west on. Find the statue and bow before it. It moves you to a tunnel with rooms of the old kings. Inside you will need to take the rings from their graves, 5 in all. Those goto the prophet for key. You will find 4 levers inside and suggest you pull each 1 on your way out of the tunnels.
+Once you have gained the key from the prophet continue to the east path and find the mirror.
+Stare into the mirror and move north, two west, and three north for the Vortex. Go down and finish that area and pull the final lever inside the orb. Return to the foyer for the final battle.
+Head down from the foyer to Tayr-dryn and he requires the heartstone for access to his Throne Room. Ya will need to bleed on the altar to get it to move and unlock it with the shadow.
+
+Good Luck!
+
+P.S. You need to know these names at some point, Rrakkma, Raylen, Kraange, Tayr-dryn.
+~
+#139188
+apocalypse castle shanaanaa parchment piece paper note notes~
+&+BSha&+bnaana&+Ba's&n adventuring notes on &+LApocalypse &+mCastle~
+A piece of parchment labelled "&+LApocalypse &+mCastle&n" is crumbled here.~
+~
+16 28 1 0 11 0 134225920 1 0 0 0
+0 0 0 0 0 0 0 0
+0 25050 100
+E
+apocalypse castle shanaanaa parchment piece paper note notes~
+Apocalypse Castle
+
+Special Note: Its highly suggested that you have a conjurer who can prismatic cube, or two people who can make walls will surfice.
+
+The Keeper at the entrance to the castle wants the skulls of the horsemen.
+
+There is a portal you enter to get to the castle which puts you at the center of the Scorched Plains, and the 1st room is safe. Upon the plains is a blue slab that is four west and five south of the safe room. It will be hidden and needs to be pushed to move forward.
+
+The signpost marks another safe room and east/southeast of it is a zombie who is looking for a old bracelet if you find it. North of the signpost is a deadly vampire who guards the center of town and access to the only portable room inside. The old bracelet is in the rocks just below the center of town.
+
+There is many different items that can be collected but to move towards the end you will need to find 2 keys to the castle. These two keys are found on the warmaster west of center in the training center and one of the patrol leaders carries the other to the north.
+
+Once you have collected the two keys head straight north to the castle from the center of town. The spectral knight holds the next key to the inner castle. You may have to provoke them to follow you.
+
+Now that your in the castle find the Garden and the groundskeeper with the keys the four towers where each horsemen resides. It is guarded by wyrms and hydra's so watch your step. Take the keys and head to the towers which are on the east and west side.
+
+Once inside and looking to slay the horsemen you should know that the horsemen do not chase but his dragon-horse does, so better to seperate them. Slay each of the four horsemen and just east of the garden is a secret path back to the keeper and the reward.
+
+Good Luck!
+
+P.S. Inside the castle you may find some unordinary visitors.
+~
+#139189
+hat red chef's~
+&+ra red chef's hat&n~
+A red chef's hat has been left here.~
+~
+9 3 3 3 7 0 0 17 64 0 0
+5 4 16 3 0 0 0 0
+1 1 100
+E
+hat red chef's~
+This is a normal chef's hat made from a red material.
+~
+A
+4 5
+A
+18 2
+#139190
+ring protection fire~
+&+ra r&+Rin&+rg o&+Rf&+r f&+Ri&+rre &+rp&+Rro&+rtec&+Rti&+ron&n~
+A &+rring of fire protection&N has been left here.~
+~
+9 34 2 1 10 0 0 3 64 0 0
+5 0 0 2 0 0 0 0
+1 40000 100 536870912 0 0 0
+E
+ring fire protection~
+This ring glows softly with a red gem set in the center.
+The ring feels cold in your hand.
+~
+A
+24 -4
+A
+23 -5
+#139191
+jotunheim jot shanaanaa parchment piece paper note notes~
+&+BSha&+bnaana&+Ba's&n adventuring notes on &+CJotunheim&n~
+A piece of parchment labelled "&+CJotunheim&n" is crumbled here.~
+~
+16 28 1 0 11 0 134225920 1 0 0 0
+0 0 0 0 0 0 0 0
+0 25050 100
+E
+jotunheim jot shanaanaa parchment piece paper note notes~
+Jotunheim
+
+Quests:
+   Olaf: hideous redmask
+   Brunnhilde: Belt of Skulls or Cloak of Deva Feathers
+   Grishnar: Scared Totem
+   Rashnik: Standard of trolls
+   Quelranor: Lightning Sword
+   Sarimar: Valkyerie Sword
+   Mimir: Golden Amulet
+   Drow Emissary: Tankard of Ale
+   Alchemist: Clump of Fireweed
+
+Jotunheim can be found off Astral Plane.
+
+Once you have entered the cold mountainous area you want to find the Icy Waterfall to the east. After going up the waterfall to the north is the Thyrm castle but you will need the key from Loki to gain access to his throne room. To the south is the mages camp which you need to know their dieties name, Kostchtchie, to gain access here.
+
+To the east are the walls of Utgard. On the west side is a secret entrance I always use. The password is silverwing. Head east through and pay no attention to the fake Loki but instead find the hidden area above him where he is truely hidden. Claim the key from him and return to the castle of Thyrm.
+
+Now that you have the key to the throne area just kill his guards and jarls then deal with his high priest. The God Thyrm can freeze you if he is directly engaged with you but its only temperary so be careful! He is cocky and will not chase you but instead mock you.
+
+Good Luck!
+
+P.S. Explore all of the hills for the out of the ordinary creatures.
+~
+#139192
+lair gibberling king shanaanaa parchment piece paper note notes~
+&+BSha&+bnaana&+Ba's&n adventuring notes on The Lair of the Gibberling King~
+A piece of parchment labelled "The Lair of the Gibberling King" is crumbled here.~
+~
+16 28 1 0 11 0 134225920 1 0 0 0
+0 0 0 0 0 0 0 0
+0 25050 100
+E
+lair gibberling king shanaanaa parchment piece paper note notes~
+The Lair of the Gibberling King
+
+Hidden at the door to the entrance is its own key. If you can, move through the 1st area invisible, it will make it much easier. Regardless you will need to move south/southeast and find the high priest G'graz. He holds a key to a secret entrance in his room. Follow through that secret to and up the Waterfall.
+
+Once at the top of the waterfall you enter a Grotto. Head four north and two west to find the troll corpse that marks the hidden entrance towards the kings room.
+
+There are numberous ropers and elementals that wander the grotto so you may consider clearing many of them because they can become overwelming at times. From the hidden entrance in the grotto you will need to continue down. Before you move on however you will need to know the following:
+
+All of creatures here will chase you if you attack them in any way so its best to use this to your advantage because they are a strong horde in numbers but are weak alone.
+
+When standing at the boulder below the grotto you must push it out of your way.
+The next few rooms are packed with the Blood Horde. I like to have my conjurer send a couple elementals to block for another person who can cast a quick spell, like magic missile, onto one of the Horde members and return before getting attacked. He is instructed to die and not to flee if he does get engaged as he could flee further inside and make it difficult to move on.
+
+Continue this pattern through the remainder of the tunnels including the room with the dracolich Crymson.
+
+Once you have defeated Crymson you will need to return to the Entrance of the Grotto to portal if needed.
+
+Good Luck!
+
+P.S. Assign each of the people who have a takedown skill onto different numbers of the horde to avoid them casting spells.
+
+P.S.S. Roshen sometimes visits the Grotto and carries a wand of dismissal. Claim it and quest it with Crymson's essence to the elemental noble south of the boulder.
+~
+#139193
+mazzolin shanaanaa parchment piece paper note notes~
+&+BSha&+bnaana&+Ba's&n adventuring notes on &+BMazzolin&n~
+A piece of parchment labelled "&+BMazzolin&n" is crumbled here.~
+~
+16 28 1 0 11 0 134225920 1 0 0 0
+0 0 0 0 0 0 0 0
+0 25050 100
+E
+mazzolin shanaanaa parchment piece paper note notes~
+Mazzolin
+
+Find the Throne Room of Mazzolin, it is north through the hallway and up the grad stairs. The king, queen, and warlord will not attack you so do not worry. There is a hidden entrance in the throne room behind the large map. To unlock it say, Mazzolin.
+
+Head below the throne room and deal with the stormtroopers there. You will need a thief to pick the lock down into the sewers or someone large enough to bash the door.
+
+When you enter the sewers you will come to a just a couple forks in the path. The 1st one you come to, stay south.
+The 2nd one you come to, stay south.
+The 3rd one you come to, stay east.
+The 4th one you come to, stay south.
+
+This path will take you directly to the end with a dragon who guards the rune stone.
+
+The other paths are dead ends but may have hematite shards. The shards were pieces of a star that belong to Aeirayne. She is a Grey Elf who was captured and resides north of the stormtroopers. She will reward you if you return all five shards for the sleeves of zephyrs.
+
+If you end up on the Blasted Plain of Rock find the pool of tar, not the pool of acid, and it will return you to the entrance of the hallway you began in.
+
+Good Luck!
+
+P.S. In the sewers are blugrul of various spellcasting abilities. They can overwelm you and need to be taken down so procede with caution.
+
+P.S.S. The hematite orbs are hidden in area's that seem that there is no escape. Rub them to escape.
+~
+#139194
+shadamehr keep shanaanaa parchment piece paper note notes~
+&+BSha&+bnaana&+Ba's&n adventuring notes on &+mShadamehr Keep&n~
+A piece of parchment labelled "&+mShadamehr Keep&n" is crumbled here.~
+~
+16 28 1 0 11 0 134225920 1 0 0 0
+0 0 0 0 0 0 0 0
+0 25050 100
+E
+shadamehr keep shanaanaa parchment piece paper note notes~
+Shadamehr Keep
+
+It can be found on the Ethereal Plane near the Void in Time inside the Dreggan Woods.
+
+From the Void in Time you need to move east, two north, and 1 west to enter the Dreggan Woods.
+
+From the Entrance to Dreggan Woods follow these directions as you can easily get lost in them:
+
+Eight North
+Two East
+Five North
+One West
+Two East
+Two North
+Six East
+Three North
+Two East
+Two North
+
+This will get you to the Entrance to Shadamehr Keep. It is very vacant due to the beholder who holds the key to the formal hallway. Behind the door is a shadow dragons lair who guards the key for Merkus the death knights abode.
+
+Merkus is protected by two banshee who follow him if he is chases his attacker but can be lured into chasing someone who can use a damage over time type spell against them.
+
+If someone is huge or bigger they maybe have some success bashing Merkus but his abode is a specially designed room and has the same elements of the plane of fire.
+
+Good Luck!
+
+P.s. Try to disarm him if he is wielding, and search his vault for treasure.
+~
+#139195
+celestial plane shanaanaa parchment piece paper note notes~
+&+BSha&+bnaana&+Ba's&n adventuring notes on &+WCel&+Ces&+ctia&+Cl Pl&+Wane&n~
+A piece of parchment labelled "&+WCel&+Ces&+ctia&+Cl Pl&+Wane&n" is crumbled here.~
+~
+16 28 1 0 11 0 134225920 1 0 0 0
+0 0 0 0 0 0 0 0
+0 25050 100
+E
+celestial plane shanaanaa parchment piece paper note notes~
+Celestial Plane
+
+There is access to Celestial Plane on both the Astral Plane and Ethereal Plane. You will need to find the portal blazing with brilliant divine energy that moves about the planes.
+
+Things you need to know beforehand:
+The creatures are color coded to help you recognize which ones you will need to slay. If you are a part of Good Races then you will want to slay the red and black creatures, and if you are part of Evil Races you will want to slay the blue and white creatures.
+
+There is one portable room named Cosmic Storm.
+There is a glowing portal that will send you to the Astral Plane.
+
+These are the Directions from the different Landmarks found on the Plane:
+FROM PORTAL: To Cosmic 2nw,To Tear n2wu, To Vortex d2en, To Stream 2n3end, To Rift de.
+FROM COSMIC: to portal e2s, To Tear wsu, to vortex 2wds, To Stream 4end, To Rift 2e2sd
+FROM TEAR: to portal d2es, to cosmic dne, to vortex wu, to rift s2wu
+FROM VORTEX: to portal s2wu, to cosmic nu3e, to tear ed, to rift sw
+FROM STREAM: to portal us3w2s, to cosmic us4w
+FROM RIFT: to portal wu, to cosmic u2w2n
+
+To begin you will need to find 1 of 2 white devils that has a hellish crystal. This crystal unlocks the door hidden in A Tear in Celestia which can be uncovered by entering the rift in the room. Continue Up into the rift with caution.
+   The rift has many devils and at its end is Cerberus who holds the next key a sliver of anti-matter. After claiming the sliver move north and up to return to the grid.
+
+Next you will want to move to the Vortex of Dark Matter which is west and up from the Tear room. By entering vortex it will uncover the door you will unlock with the sliver. Some of the rooms in this section are underwater and some are magic dead areas. Take your time moving down through this area as it can be difficult. You need to kill Saggitarius A* for a splintered life shard to unlock the next area. To leave this area you move 3 down and 1 up after slaying him to get to the grid.
+
+Return to the Cosmic Storm which is east, north, up, 3 east after returning to grid. From there you need to reach the A Variance in the Life Stream. This is four east, north, and down from the Cosmic Storm.
+
+Once at the Life Stream begin by entering lifestream to reveal the door you will use the shard to unlock with. In this area there are some creatures that are not aggressive and none of them will chase you so take your time moving through. At the end of the current is a group of creatures you can slay that protect a door to their south. Enter the room through the door and each person in your group will need to manually move down to get to the next section even though a exit does not exist.
+
+You should now be in the Palace of the Titans. Here you will need to collect keys moving back and forth from one area and back to the same one. There are 4 towers on the outer wall and they will be opened in the following order, NW, SE, SW, and NE.
+
+The key for the NW tower is on a titan all north from the room you entered from the Stream. Collect the key from the tower guardian and return to the door that the titan who had the key for the NW Tower was standing in front of. Unlock and move inside to slay Atlas. Up and West of Atlas is a guard post where 1 of the guards holds the next key for the SE tower. Collect that key and get the key from the SE tower guardian and return to Atlas' room.
+After the SE tower take its key to the room Up, South, Up, East from Atlas' room and slay the statue and collect its key. Take the statue's key to the SW tower and slay its guardian.
+Once you have collected the SW tower guardian's key return to Atlas' room and move Up, South, Up, and North. Destroy the titan magistrate, Metatron to the west, and Cronus to the north. Take the key and collect the NE tower guardian's key and return to Metatron's room to unlock the last door. Inside the room north of Metatron's is a statue you need to rub to return to the Celestia Wargrounds grid.
+
+The last section is the Deep Blue Rift which is South, East, and Down after rubbing the statue. You need to enter the rift to reveal the hidden entrance and use the blue shard to unlock it. Continue down into the rift killing the different souls that are disguised as common creatures. You will find the creature Malevolence behind a door at its ends. He is not difficult but can transport those who are engaged on it back onto the Wargrounds grid. Once he is destroyed search for the final room.
+
+Good Luck!
+
+P.S. It is highly suggested that you clear as many of your opposing creatures off the wargrounds grid as you can.
+~
+#139196
+copper dragonskin armor leather suit~
+&+La s&nu&+Lit of &+yc&no&+ypper &+rdr&+Lag&non&+Lsk&+rin &+Larm&no&+Lr~
+&+LA suit of armor made of hardened &+ycopper&n-&+Lcolored leather is piled here.~
+~
+9 12 3 0 15 0 134226944 9 64 651328 0
+50 0 0 4 0 0 0 0
+5 880150 100 16777216 8192 0 0
+E
+copper dragonskin armor leather suit~
+Crafted from the hide of a great copper wyrm this exotic leather armor is excellently made. It is extremely light and allows for easy movement for the wearer.
+~
+A
+14 50
+A
+2 12
+#139197
+blue dragonskin armor suit~
+&+La s&nu&+Lit of &+Bb&+blu&+Be&n &+bdr&+Lag&non&+Lsk&+bin &+Larm&no&+Lr~
+&+LA suit of armor made of &+Bb&+blu&+Be&n-&+Lcolored hardened leather is piled here.~
+~
+9 12 3 0 15 0 134226944 9 64 138448384 0
+50 0 0 4 0 0 0 0
+5 880180 100 0 128 0 0
+A
+33 3
+A
+30 8
+#139198
+white dragonskin armor suit~
+&+La s&nu&+Lit of &+Wwhi&nt&+We d&nr&+Lag&non&+Lsk&ni&+Wn &+Larm&no&+Lr~
+&+LA suit of armor made with &+Wwhite&n-&+Lcolored hardened leather is piled here.~
+~
+9 12 3 0 15 0 134226944 9 64 33554848 0
+50 0 0 4 0 0 0 0
+5 880108 100 0 64 0 4096
+E
+white dragonskin armor suit~
+Made from the hide of a great white wyrm this leather armor is of the highest quality. It is extremely light and hardened to protect its wearer against both physical attacks and attacks made by a wyrm of its color.
+~
+A
+4 8
+A
+23 3
+#139199
+ring faerie faerie-skin~
+a &+Lri&nn&+Lg&n made from &+Mfa&+mer&+Mie&n-&+Lsk&ni&+Ln&n~
+What looks to be skin from a &+Mfa&+mer&+Mie&n is formed into a ring lays here.~
+~
+9 12 1 0 15 0 134225921 3 0 0 0
+0 0 0 0 0 0 0 0
+0 757777 100 134217728 0 0 0
+A
+26 8
+#139200
+bracer devil devil-hide strange markings~
+&+La &+Rd&+re&+Rv&+ri&+Rl&n-&+Lhi&nd&+Le brac&ne&+Lr with &+Yst&+yran&+Yge&n &+Lm&na&+Lrki&nn&+Lgs~
+A small bracer made of &+Rd&+re&+Rv&+ri&+Rl&n-&+Lhi&nd&+Le&n was left behind.~
+~
+9 12 2 0 13 0 134225920 4097 64 0 0
+0 0 0 3 0 0 0 0
+1 660000 100 536870912 0 0 0
+E
+bracer devil devil-hide strange markings~
+Made from the skin of a devil and hardened by a skilled leather worker this bracer is covered with magical markings. Its a deep red and laced with devilish hair.
+~
+A
+24 3
+A
+19 3
+#139201
+purse purple worm worms larvae leather material large~
+a &+Lleather &npurse made of &+mpurple &+Lworms&n &+clarvae~
+&+LA large&n purse &+Lmade of an unusual material was dropped here.~
+~
+15 12 10 0 13 0 134225920 16385 64 0 0
+600 1 0 300 0 0 0 0
+-300 787500 100
+E
+purse purple worm worms larvae leather material large~
+A highly skilled leather worker has sewn together the hide of purple worms larvae to create a very stretchable container.
+~
+#139202
+spicy salty dragon roast beef~
+&+rsp&+Yic&+ry &+Land &+cs&+Wal&+cty&n &+rdr&+Rag&+ron &+Lr&no&+Wa&ns&+Lt b&nee&+Lf~
+&+LA piece of roast beef made of &+rdr&+Rag&+ron&+L meat is left here.~
+~
+19 48 1 0 11 0 134225920 1 0 0 0
+14 0 0 0 0 0 0 0
+1 2500 100
+E
+spicy salty dragon roast beef~
+Made of different types of dragon meat and marinated into fireweed and peppered to perfection this roast beef is delightful.
+~
+#139203
+metal flask battle ecstasy~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cbattle ecstasy&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 292 0 0 0 0 0 0
+1 450000 100
+E
+metal flask battle ecstasy~
+A metal flask made of tin and a single stopper is marked with a label "battle ecstasy"
+~
+#139204
+metal flask full heal~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cfull heal&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 9 0 0 0 0 0 0
+1 300000 100
+E
+metal flask full heal~
+A metal flask made of tin and a single stopper is marked with a label "full heal"
+~
+#139205
+metal flask teleport~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cteleport&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 2 0 0 0 0 0 0
+1 500000 100
+E
+metal flask teleport~
+A metal flask made of tin and a single stopper is marked with a label "teleport"
+~
+#139206
+metal flask fire ward~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cfire ward&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+65 233 0 0 0 0 0 0
+1 25000 100
+E
+metal flask fire ward~
+A metal flask made of tin and a single stopper is marked with a label "fire ward"
+~
+#139207
+metal flask create sound~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+ccreate sound&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 165 0 0 0 0 0 0
+1 35000 100
+E
+metal flask create sound~
+A metal flask made of tin and a single stopper is marked with a label "create sound"
+~
+#139208
+metal flask molecular control~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cmolecular control&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 155 0 0 0 0 0 0
+1 180000 100
+E
+metal flask molecular control~
+A metal flask made of tin and a single stopper is marked with a label "molecular control"
+~
+#139209
+metal flask pass without trace~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cpass without trace&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 280 0 0 0 0 0 0
+1 550000 100
+E
+metal flask pass without trace~
+A metal flask made of tin and a single stopper is marked with a label "pass without trace"
+~
+#139210
+metal flask word of recall~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cword of recall&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 42 0 0 0 0 0 0
+1 1100000 100
+E
+metal flask word of recall~
+A metal flask made of tin and a single stopper is marked with a label "word of recall"
+~
+#139211
+metal flask airy water~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cairy water&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+65 274 0 0 0 0 0 0
+1 50000 100
+E
+metal flask airy water~
+A metal flask made of tin and a single stopper is marked with a label "airy water"
+~
+#139212
+metal flask reduce~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+creduce&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+65 249 0 0 0 0 0 0
+1 100000 100
+E
+metal flask reduce~
+A metal flask made of tin and a single stopper is marked with a label "reduce"
+~
+#139213
+metal flask lifelust~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+clifelust&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 321 0 0 0 0 0 0
+1 130000 100
+E
+metal flask lifelust~
+A metal flask made of tin and a single stopper is marked with a label "lifelust"
+~
+#139214
+metal flask wandering woods~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cwandering woods&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 349 0 0 0 0 0 0
+1 430000 100
+E
+metal flask wandering woods~
+A metal flask made of tin and a single stopper is marked with a label "wandering woods"
+~
+#139215
+metal flask sneaky ways~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+csneaky ways&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 393 0 0 0 0 0 0
+1 300000 100
+E
+metal flask sneaky ways~
+A metal flask made of tin and a single stopper is marked with a label "sneaky ways"
+~
+#139216
+metal flask healing salve~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+chealing salve&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 438 0 0 0 0 0 0
+1 300000 100
+E
+metal flask healing salve~
+A metal flask made of tin and a single stopper is marked with a label "healing salve"
+~
+#139217
+metal flask blur~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cblur&+L"&n~
+A metal flask with a small label was left here.~
+~
+10 15 1 0 7 0 8193 8388609 0 0 0
+41 263 0 0 0 0 0 0
+1 410000 100
+E
+metal flask blur~
+A metal flask made of tin and a single stopper is marked with a label "blur"
+~
+#139218
+saddle flaming medal decore~
+&+La&n saddle &+Lwith&n &+rf&+Rl&+Yam&+Ri&+rng&n &+Lm&ne&+Ld&na&+Ll &+rde&+Rco&+rre&n~
+&+LA saddle with medal decore was tossed to the ground here.~
+~
+9 14 8 0 12 0 134226433 553648129 64 0 1073758208
+30 0 0 4 0 0 0 0
+8 300000 100 536870912 0 0 0
+E
+saddle flaming medal decore~
+This saddle is excellently made with leather and barding coverings that are designed to look like flames. The leather is dyed a deep red and the metal is polished bright.
+~
+A
+13 10
+A
+5 5
+#139219
+bronze bronze-made barding spikes~
+&+ybronze&N-&+Lm&na&+Lde&n &+cbarding &+Lwith &+Wsp&nik&+Wes&n~
+&+yBronze pieces of barding were left behind here.~
+~
+9 20 8 0 12 0 134218240 553648129 64 0 1073758208
+25 0 0 5 1 0 0 0
+8 675000 100 0 2 0 0
+E
+bronze bronze-made barding spikes~
+Forged here in the city these bronze bardings are made of a high quality and magically enchanted as well as being adorned with spikes.
+~
+A
+18 2
+A
+19 2
+#139220
+flaming hammer two two-handed~
+&+ra fl&+Ra&+rming &+Ltwo-handed &+rhammer~
+&+ra fl&+Ra&+rming &+Ltwo-handed&n &+rhammer is left here.~
+~
+5 16 4 0 10 0 138412032 8193 64 182452196 0
+4 5 7 0 0 0 0 0
+0 250010 100
+A
+18 4
+A
+19 3
+#139221
+flaming demon claw club~
+&+ra f&+Rla&+Ym&+Rin&+rg &nd&+Le&nm&+Lo&nn claw &+Lclub~
+A &+Lclub&n made from a d&+Le&nm&+Lo&nn&+L's&n claw rests on the ground &+raflame&n.~
+~
+5 18 3 0 14 0 134225921 8193 64 0 0
+11 4 5 0 0 0 0 0
+3 550010 100 0 1 0 0
+E
+flaming demon claw club~
+Made from a demon's lower arm and hardened with metal this club is unique as it has been magically set aflame.
+~
+A
+18 3
+A
+19 4
+#139222
+sword two two-handed mithril~
+&+La &ntwo-handed &+mmithril&n sword &+Lwith a &+Wsp&nik&+Wed &+Lpo&nmm&+Lel~
+&+LA large two-handed sword made of &+mmithril &+Lsits upon the floor.~
+~
+5 18 4 0 11 0 171967488 8193 64 83886105 0
+13 5 7 0 0 0 0 0
+8 250000 100
+E
+sword two two-handed mithril~
+A two-handed sword is excellently made and crafted of mithril. It radiates magic and hums from it.
+~
+A
+18 3
+A
+19 4
+#139223
+fire suit salamander scalemail~
+a suit of &+rf&+Ri&+Yr&+re&n &+rsal&+Ra&+rman&+Rde&+rr&n &+Lsca&nlem&+Lail~
+&+LSca&nlem&+Lail&n made from &+rf&+Ri&+Yre&+ry&n scales is piled here.~
+~
+9 47 3 0 11 0 134225920 9 64 138415620 0
+30 0 0 5 0 0 0 0
+5 750075 100 536870912 0 0 0
+E
+fire suit salamander scalemail~
+This suit of scalemail was crafted using the scales of a fire salamander. It is warm when worn.
+~
+A
+17 50
+A
+18 3
+#139224
+glass ring smoke mephit~
+&+La &+Wg&nl&+Wa&ns&+Ws&n &+Lr&ni&+Lng&n filled with the &+messence&n of a &+Lsm&no&+Lke&n &+Mm&+me&+Mph&+mi&+Mt&n~
+A &+Wglass&n ring with swirling &+Lsmoke&n inside was left here.~
+~
+9 7 1 0 11 0 134218753 3 0 138939908 0
+0 0 0 2 0 0 0 0
+0 350500 100 0 4096 0 262144
+E
+glass ring smoke mephit~
+Filled with the essence of a smoke mephit this glass ring holds strong magic. The smoke moves as if it is alive and trying to escape the clutches of the ring.
+~
+A
+3 6
+A
+26 8
+#139225
+quartz crystal leg plates~
+&+Cq&+cuar&+Ctz &+Wcr&nyst&+Wal&n &+Lleg plates~
+&+LA set of leg plates made of &+Cq&+cuar&+Ctz&n were left behind here.~
+~
+9 16 2 0 11 0 134218753 33 0 34079160 0
+10 0 0 4 0 0 0 0
+4 200100 100 0 4096 0 0
+E
+quartz crystal leg plates~
+Hardened crystals by magma then crafted by an excellently skilled armorer these quartz leg plates are very durable.
+~
+A
+13 10
+A
+22 3
+#139226
+furnace massive~
+&+RA &+rMASSIVE &+RFURNACE~
+&+LA &+rmassive &+Rfurnace&n &+Lthat has several openings fills the center of the &+ybazaar&n.~
+~
+12 11 7 0 15 0 1 0 64 0 0
+0 0 0 0 0 0 0 0
+10000 10000000 100
+E
+furnace massive~
+This massive furnace has been built over an large opening that must run to the
+planes hottest area. There are several access points to allow all the
+different smiths to use it. The outside of the furnace has been decorated with
+plated pieces of brass that have different designs of all the crafts
+surrounding its structure.
+~
+#139227
+pile elder hydra scales scale~
+&+La p&ni&+Lle of &+ye&+Yld&+yer&n &+Gh&+gydr&+Ga&n &+Lscales~
+&+LA pile of &+ye&+Yld&+yer&n &+Gh&+gydr&+Ga&n &+Lscales are scattered on the floor.~
+~
+8 35 2 0 15 0 12289 16385 0 0 0
+0 0 0 0 0 0 0 0
+11 550000 100
+E
+pile elder hydra scales scale~
+A pile of hydra scales have been removed from an elder wyrm and are very valuable. These are useful to an exotic collector or can be crafted into some form of armor.
+~
+#139228
+drop chimaera blood~
+a &+Ldrop&n of &+mch&+Mi&+mmaer&+Ma&n &+rblood&n~
+&+LA single drop of &+rblood &+Lbegins to harden.~
+~
+8 40 1 0 12 0 8192 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 550000 100
+E
+drop chimera chimera's blood~
+The blood is a deep red and very valuable.
+~
+#139229
+key fire purple~
+&+Ya key of &+Mpu&+mrp&+Mle&n &+Rf&+ri&+Rre~
+&+YA key of &+Mpu&+mrp&+Mle&n &+Yfire was dropped here.~
+~
+18 1 0 0 11 0 8200 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 10000 100
+E
+key fire purple~
+This key looks to match the door in the room leaving the Amir's chambers.
+~
+#139230
+key green fire~
+&+Ya key of &+Ggr&+gee&+Gn&n &+Rf&+ri&+Rre&n~
+&+YA key of &+Ggr&+gee&+Gn&n &+Rf&+ri&+Rre&n &+Ywas left behind here.~
+~
+18 17 0 0 10 0 8200 16385 0 0 0
+0 0 0 0 0 0 0 0
+1 10000 100
+E
+key green fire~
+The key to the harem.
+~
+#139231
+whip flaming green demon demon-hide~
+a &+Ld&Ne&+Lm&No&+Ln&N-&+Lhide&n &+Gfl&+gami&+Gng&n whip&n~
+&+LA whip enshrouded in &+Ggr&+ge&+Gen fl&+gam&+Ges&n &+Lis coiled neatly in a pile.~
+~
+5 12 3 0 11 0 9217 8193 64 3264514 0
+14 4 5 0 0 0 0 0
+3 55000 100 8192 12288 0 0
+E
+whip flaming green demon demon-hide~
+Made from demon-hide this highly resiliant whip was made to hurt. Used mostly by the efreeti to tame and train their beasts it could easily be used in combat to cause great pain.
+~
+A
+26 8
+A
+18 4
+#139232
+fountain flames~
+&+ra &+Wfountain&n &+rof f&+Rl&+Yam&+Re&+rs&n~
+&+YPlaced at the center of a row of chairs this massive &+Wfountain&n &+Ydrips &+rf&+Rl&+Yam&+Re&+rs&n.~
+~
+17 17 5 0 12 0 0 0 64 0 0
+0 999 16 0 0 0 0 0
+300 0 100
+#139233
+boots yellow flames~
+&+csome boots &+Cof&n &+Yy&+yello&+Yw&n &+bflames&n~
+&+cA pair of boots enshrouded in &+Yy&+yello&+Yw &+bflames&n &+ccatch your eye here.~
+~
+9 14 2 0 13 0 9217 65 64 171970464 0
+15 0 0 0 0 0 0 0
+3 220000 100 33554436 0 0 0
+E
+boots yellow flames~
+These boots are made of a comfortable leather and have been enchanted with magics that enshroud them in yellow flames.
+~
+A
+13 20
+A
+26 10
+#139234
+armoire~
+&+cchief of the guard's &+Yar&+ymoi&+Yre&n~
+&+cA large &+Yar&+ymoi&+Yre&n &+cwith the symbol of the guards.~
+~
+15 15 3 0 7 0 0 0 0 0 0
+0 28 139235 0 0 0 0 0
+0 0 100
+E
+armoire~
+A large brass armoire with two doors are adorned with a lock and emblazed
+with a circular symbol of the palace's chief of the guard.
+~
+#139235
+flaming skeleton key~
+&+La&n &+rf&+Rl&+Ya&+Wm&+Yi&+Rn&+rg&n &+Wske&nle&+Wton&n &+Lk&ne&+Ly&n~
+A &+rf&+Rl&+Ya&+Wm&+Yi&+Rn&+rg&n &+Wske&nle&+Wton&n &+Lk&ne&+Ly&n shines bright from the ground here.~
+~
+18 10 0 0 9 0 0 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+flaming skeleton key~
+A key made from the bones of a lich and crafted to work the lock of the chief's armoire.
+~
+#139236
+pile coins platinum~
+a pile of platinum coins~
+A huge pile of &+Wplatinum&n coins are in the corner.~
+~
+20 25 3 0 7 0 0 1 0 0 0
+0 0 0 1000 0 0 0 0
+50 0 100
+#139237
+shimmering pyrohydra bracer pyro hydra~
+&+La&n &+csh&+Cim&+Wme&+Cri&+cng&n &+rpy&+Rro&+Yhy&+Wdra &nsc&+Lal&ned &+Lbr&nac&+Ler&n~
+&+cSh&+Cim&+Wme&+Cri&+cng&n on the ground in the room is a sc&+Lal&ned &+Lbr&nac&+Ler&n.~
+~
+9 35 2 0 14 0 1 4097 64 0 0
+15 0 0 0 0 0 0 0
+3 250000 100 536870928 0 0 0
+A
+20 4
+A
+24 4
+#139238
+thin dragonskin cloak brass~
+&+Wa t&nhi&+Wn &+ydr&+La&ngon&+Lsk&+yin &+Lcl&noa&+Lk&n &+Wc&noate&+Wd with &+ybrass&n~
+&+WA t&nhi&+Wn&n &+Lcl&noa&+Lk&n &+Wcovered in&n &+ybrass&n &+Wglistens in the light lying on the floor.~
+~
+9 35 3 0 15 0 9216 1025 64 138677764 0
+30 0 0 0 0 0 0 0
+4 750000 100 537919488 0 0 0
+A
+27 9
+A
+35 5
+#139239
+flaming head high priest~
+&+rthe &+Rflaming &+rhead of the &+Yh&+yigh &+Yp&+yriest&n~
+&+rThe &+Rflaming &+rhead of the &+Yh&+yigh &+Yp&+yriest &+rlies here.&n~
+~
+13 11 3 0 7 0 8388608 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139240
+flaming head wrinyan otis~
+&+rthe &+Rflaming &+rhead of &+CW&+crinyen &+CO&+ctis&n~
+&+rThe &+Rflaming &+rhead of the &+CW&+crinyen &+CO&+ctis &+rlies here.&n~
+~
+13 11 3 0 7 0 8388608 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139241
+flaming head hakim okewonaku~
+&+rthe &+Rflaming &+rhead of &nH&+Lakim &nO&+Lkewonaku&n~
+&+rThe &+Rflaming &+rhead of the &nH&+Lakim &nO&+Lkewonaku&n &+rlies here.&n~
+~
+13 11 3 0 7 0 8388608 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139242
+pile ancient pyro pyrohydra hydra scales scale~
+&+La p&ni&+Lle of &+Lan&nci&+Lent &+rpy&+Rro&+Yhy&+Wdra&n &+Lsc&na&+Lles~
+&+LA pile of ancient &+rpy&+Rro&+Yhy&+Wdra&n &+Lscales are scattered on the floor.~
+~
+8 35 2 0 15 0 12289 16385 0 0 0
+0 0 0 0 0 0 0 0
+11 550000 100
+E
+pile elder hydra scales scale~
+A pile of hydra scales have been removed from an elder wyrm and are very valuable. These are useful to an exotic collector or can be crafted into some form of armor.
+~
+#139243
+air vortex sash~
+&+m&+ma &+Wv&no&+Lrt&ne&+Wx&n &+mof &+Ca&+ci&+Cr &+Mfo&+mrmi&+Mng &+ma&n &+Cs&+ca&+Csh&n~
+&+mAn &+Me&+mdd&+My &+mof &+Ca&+ci&+Cr&n &+mcreates the shape of a &+Cs&+ca&+Csh&n &+mnear the ground.&n~
+~
+9 1 10 0 15 0 0 2049 0 146836992 0
+0 0 0 1 0 0 0 0
+0 0 100 0 8388608 0 0
+E
+air vortex sash~
+&+CNo desernable front to this sash made of air the owner just simply
+&+Chas to concentrate on wearing it around ones waist and it moves to
+&+Cencompass them. Once in place the wearing seems to displaced or
+&+Cdifficult to make out.
+~
+#139244
+flaming head artoon branan~
+&+rthe &+Rflaming &+rhead of &+GA&+grtoon &+GB&+granan&n~
+&+rThe &+Rflaming &+rhead of the &+GA&+grtoon &+GB&+granan&n &+rlies here.&n~
+~
+13 11 3 0 7 0 8388608 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#139245
+shanaanaa parchment piece paper note notes ultarium city sky~
+&+BSha&+bnaana&+Ba's&n adventuring notes on &+WThe &+bSky&n &+WCity of Ultarium&n~
+A piece of parchment labelled "&+WThe &+bSky&n &+WCity of Ultarium&n" is crumbled here.~
+~
+16 28 1 0 11 0 134225920 1 0 0 0
+0 0 0 0 0 0 0 0
+0 25050 100
+E
+shanaanaa parchment piece paper note notes sky ultarium city~
+The Sky city of Ultarium
+
+What you need to know:
+  This place will repopulate while you are still inside.
+  Bring atleast 200 platinum.
+
+Begin by finding the Heavens Plaza with its beautiful sparkling fountain.
+From there you will need to search the room two south of it for a secret
+entrance. Use the entrance and head into Grudat's Storeroom and purchase
+the sunstone key. Then return to the Plaza.
+
+The Gates of Appollyon Fortress is three south and far to the east from
+the plaza. Use the key to obtain entrance to the fortress. The entry hall
+has several agressive guards and dogs so use caution. Straight to your
+east are the stairs to the next level but you will need to gain the key
+from the lieutenant who resides in his room in the southeast corner of
+the hall.
+
+Upon claiming the second floor key you should still use caution moving
+onto the second floor as it is packet with more guards. the bottom of the
+third floor stairwell is just to your east. Once you have gained access
+to the third story the number of guards are sparce, however Blaze the
+council guardian is a very capable fighter. He is known for his whip
+named "Cometstrike."
+
+Above him is Plume Meteorhand the siegemaster who holds the key to the
+councilors hallway. Deal with him and return to the guardians room where
+Blaze stands. Use caution continuing east from here. There are some
+attendants and councilors who can be a tough fight if they swarm you.
+You will want to claim each soul from Ignor, Strata, Zeenium, and Omoona.
+
+When you are ready to leave the council chambers you can stomp the pad on
+the balcony.
+
+Good Luck!
+
+P.S. There are a few people who want the souls of those four. The most
+popular is the Pandora Box. The creature can be found behind a statue
+that is at the end of a mountain trail that is just south of the Gates
+of Appollyon Fortress. You will need to touch the statue to gain access.
+~
+#139246
+shanaanaa parchment piece paper note notes arachdrathos guilds drow _id_~
+&+BSha&+bnaana&+Ba's&n adventuring notes on &+mArachdrathos Guilds&n~
+A piece of parchment labelled "&+mArachdrathos Guilds&n" is crumbled here.~
+~
+16 28 1 0 11 0 134225920 1 0 0 0
+0 0 0 0 0 0 0 0
+0 25050 100
+E
+shanaanaa parchment piece paper note notes arachdrathos guilds drow~
+Arachdrathos Guilds (Drow)
+
+Well how you begin this can be interesting and require some understanding
+on the layout of the Drow's hometown but the actual guilds are located
+in the web's below the town. Once you have gained access to the webs try
+and get a feel for them. They do repeat and seem endless. For example, if
+you move east or west continuously you will be moving up or down layers
+of the web. There are intersections in the web that allow quicker access
+up and down the web and act as short cuts when moving from one house to
+the other. Inside the web are drow teachers which can be a challenge to
+fight but are avoidable using the intersections.
+
+Things you need to know:
+   There are five houses you need to visit, and each have two switches
+   that you must activate. There is an order to the houses as well which
+   I will pass onto you but so you know the switches open up rooms inside
+   the other houses that hold the switches for other houses and so forth.
+
+   Also, there are traps in place in certain objects, like chests, that
+   can put everything in the room to sleep. I have not found anything
+   worthwhile inside so do as you will with them.
+
+&+CThe first house you must find is the House Olipth. These are sorcerer and
+&+Cconjurers who make residance here and will fight be defend it. They have
+&+Cmade a series of keys to ensure the saftey of the switches so you must
+&+Copen each door with the previous key to gain the next. Find and push the
+&+Ctwo switches then move on to the next house.
+
+&+rThe second house you visit is that of warriors and the Zochra Keep. It is
+&+rguarded by two golems and once you enter past the golems you can not
+&+rreturn the way you came. They too have several keys, many are false, but
+&+ryou need to claim the right one to move forward toward the switches at
+&+rthe top of the keep. You can leave the keep one of two ways, the easiest
+&+ris all down at the Adamantine Stairs. The second is past the Warmaster
+&+rand his trap room south of the Landing. Just east of the warmaster is an
+&+ralcove with a pool. Enter it and return to the front gates of the house.
+
+&+mNext is the House Ilith filled with priests. The high priest holds the
+&+mkey to the tower on the west side with a switch and on the east side is
+&+manother switch you must push. Here with a bit of stealth and magic you
+&+mcan avoid many of the inhabitants.
+
+&+gHouse of Slin holds the masters of assassins and his followers. His chef
+&+ghides the key to the masters chambers and can be found on the west side
+&+gof the Commons. To the east is a forgotten room in the recreation area
+&+gwhich holds the next switch. After you pressed both move to the next house.
+
+&+WHere can be the most difficult of the houses. Necromancers call this place
+&+Whome in the house of Sa'Zarn. The drows inside do not move around but will
+&+Wchase you if you make them angry. This could be used to your advantage.
+&+WUp into the house are the two switches your looking for as well as the
+&+Wthrone room of Zargenenon the vampire.
+*SPECIAL NOTE* You should avoid at all costs going all down inside this
+house as it leads to the Dungeons of Abominations and mostlikely certain
+death. If you get stuck in the dungeons and survive the tentamorts your
+only path to freedom rests further down.
+
+&+yAfter you have visited all five houses your final destination is the House
+&+yof Zarbonesti. It has two entrances an east and west which both lead to
+&+ythe same end so it matters not which one you find first. Using some form
+&+yof invisibility you can avoid some of the first few guards but you eventually
+&+ywill need to find the Shrine of Lolth and kill the cleric with the key to
+&+ythe door to the east and the final battle. After dispatching the arch cleric
+&+ythere is a narrow tunnel where a shade hides and is renown for being the
+&+ypossessor of the jewel of the spider queen.
+
+Good Luck!
+
+P.S. The Warmaster wears the platemail of might and can be challenging to gain.
+
+P.S.S. There is a room you can cast Gate from near the web near the backdoor.
+~
+#139247
+brass tail ring rubies~
+&+La &+yb&+Yr&+ya&+Ys&+ys &+Ltail &+yring&n &+Lwith &ntwo &+Ldangling &+Rr&+ru&+Rb&+ri&+Re&+rs&n~
+Two &+Rr&+ru&+Rb&+ri&+Re&+rs&n are attached to a thick &+yb&+Yr&+ya&+Ys&+ys&n ring is just lying on the ground.~
+~
+9 17 1 0 11 0 134217729 33554433 64 0 0
+0 0 0 0 0 0 0 0
+1 750000 100 0 0 128 0
+E
+brass tail ring rubies~
+Two beautiful rubies are attached with their own seperate chain to a thick
+brass ring. The thickness of the band is perfect to secure the course hair of
+a tail.
+~
+A
+17 -50
+A
+22 5
+#139248
+toy box tin~
+a &+Ltin &+Wt&+Yo&+Gy&n &+Cb&+Mo&+Rx~
+A &+Ltin &+Wt&+Yo&+Gy &+Cb&+Mo&+Rx&n with a &+ycopper&n latch rests here.~
+~
+15 17 3 0 10 0 33816577 16385 64 0 0
+150 1 0 150 0 0 0 0
+1 5390 100
+#139249
+shanaanaa parchment piece paper note notes transparent tower~
+&+BSha&+bnaana&+Ba's&n adventuring notes on &+CThe Transparent Tower&n~
+A piece of parchment labelled "&+CThe Transparent Tower&n" is crumbled here.~
+~
+16 28 1 0 11 0 134225920 1 0 0 0
+0 0 0 0 0 0 0 0
+0 25050 100
+E
+shanaanaa parchment piece paper note notes transparent tower~
+The Transparent Tower
+
+Things you need to know:
+  Inside the Tower are teleporter traps that are between rooms which send
+you to different places within the Tower.
+  Most of the creatures inside the Tower are undead so use apprioate spells.
+  There is a librarian who is looking for 3 &+mpurple tokens&n and a &+Wscepter&n and
+will trade you these for a key to the Storage Closet with a lot of gear.
+However, to obtain the tokens you need you have to take the scepter hidden
+by Aceralde to each of the three Lords of the Tower.
+  When give a Lord the scepter they return it to you hidden with a token
+as well so you can put all of your inventory into a container to search for
+it so that you can give it to the next Lord.
+
+Once you enter into the Tower you have a difficult time leaving as it
+begins in a Maze with Strange Lights and Prisms. But if you are brave
+enough to venture inside you will want to head to the south and find
+a &+bstrange blue prism&n. To move forward you need to stare into the prism.
+
+Now you have reached the Tranlucent grid where there may be some mists
+that can be waiting for you. Depending on what abilities in your group
+you have you can either try to wall quickly north, south, east, and
+west, or immediately after you stare into the prism move up one room.
+Either way you will want to avoid moving up into the Illithid above
+and clear out some of the mists on the grid, just do not enter doors.
+For now!
+
+Next there is an &+Millithid&n and a &+Gmisty fog&n who stand guard of the next
+passage just above. I prefer to seperate them since they are both
+agressive and will chase you. I like to do this by sending a summoned
+pet into them and have a quick spell caster use magic missile upon the
+misty fog and then move back down to our group. He chases and we slay.
+After that I like to lure the illithid away from his room because there
+is a trapped room to the east of him. This way incase my members need
+to flee and memorize they can do it without going into the trap.
+
+Collect the key from the illithid and the nice visor made of misty on
+the fog and go south of the Landing of Green Mist to the door east.
+Use the key and slay the mist inside the room. This comfortable room
+allows people to use portal spells to gain or leave as necessary. A key
+is left by the mist found here and opens a door to Aceralde's Room.
+
+Next is dealing with aceralde and his followers. His room is up above
+the Landing of Green Mist. This is another place using a summoned pet
+can be of use. It is a good idea to seperate aceralde's lich and vampire
+followers from him and bringing them one at a time. Each of them can
+be knocked down to prevent them from casting spells so use this to your
+advantage. Aceralde can also be knocked down and sometimes has some
+dracolich pets so deal with these how best fits for your group but he
+will track you down if you do not kill him so be careful.
+
+Once you have defeated aceralde collect his key and unlock his desk
+that is east of his Sitting Room. There is a &+Wscepter&n hidden inside and
+is sought after by three seperate Lords.
+
+&+MTaking the scepter to Lisa is the easist and is on the east path from the
+&+MLanding of Green Mist. At the end of Lady Lisa's path you are teleported
+&+Mback to the Pillars grid below the Landing of Green Mist.
+
+There are two doors on the east side of this grid which both lead to more
+difficult places.
+
+&+GThe Green door is the southern most of the two and is the least difficult
+&+Gof the two. Lord Gullivier resides inside and is protected by shadowy
+&+Gmonsters and a blue dragon. Once you have entered the Green Door and move
+&+Gwest through the teleporter trap you end up in an open field that has a
+&+Ggreen pedestal at its center. This pedestal can give you an escape from
+&+Ghere if needed just by crying upon it. If your strength is strong you can
+&+Gdefeat the shadowy monsters and find the hidden passage to the north. Past
+&+Gthe blue dragon you will find the Lord and a teleporter back to the Pillar
+&+Ggrid.
+
+&+rThe Red Door leads to a small Plane of Avernus and is loaded with devils,
+&+rblobs, and pit fiends. Only the blobs can be knocked down and are very
+&+rdangerous. I highly suggest having a conjurer with you who can make walls.
+&+rMove through here carefully, but once you have fought your way onto the Plane
+&+ryou need to find the Lord who resides just north, east, and down. He  too
+&+rwants the scepter orginating from Aceralde's desk. After you have turned the
+&+rscepter over to Lord Devilish head as far east as you can to a door. The
+&+rdoor requires a password, ILLUSION. Open and go through it. You will need
+&+rto move back east which will teleport you back onto the Pillar grid.
+
+&+mLastly you need to visit the librarian. There is a short cut teleporter
+&+mand it is found two south of the center of the Pillar grid. Make your way
+&+mdown to the librarian and complete the quest by given him the 3 tokens
+&+mand the scepter. To leave the librarian just move north and read the book
+&+mtitled &+Y"Light and Illusion&n."
+
+The door given by the librarian goes to the door locked north at the Landing
+of Green Mist. Defeat the two mists inside and find the secret door inside.
+Speak the word REALITY to unlock it, and you will gain access to the closet
+full of treasure.
+
+Good Luck!
+
+P.S. Many of the equipment is hidden so search, and find the belt west of
+of the Landing of Green Mist behind the door.
+~

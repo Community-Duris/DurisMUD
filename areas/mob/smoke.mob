@@ -1,0 +1,399 @@
+#139800
+massive air elemental~
+&+CA MASSIVE air elemental~
+&+CA MASSIVE air elemental stands here, ready to protect its domain
+~
+&+CThis tremendous swirling mass of air fights constantly to purge
+its body of the chunks of &+Lash &+Cand &+Lsoot&+C that float in periodically
+from the Southeast.  It appears to be ready and willing to defend
+its homeland from any invaders from the smoke.
+~
+17201418 1 0 0 402726974 8435904 0 0 0 S
+ea 0 2048 1 7
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139801
+corrupt corrupted air elemental~
+&+CA &+LCorrupted &+Cair elemental~
+&+CAn air elemental with a massive amount of &+Lash &+Cin its body stands here
+~
+Once a proud denizen of the &+CElemental Plane of Air&+w, this
+elemental has been outcasted to the Quasi realms after
+being corrupted by large amounts of &+Lash and smoke&+c.
+~
+72 1 0 0 0 0 0 0 0 S
+ea 0 4096 1 3
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139802
+swirling mass smoke fire~
+&+LA Swirling Mass of Smoke and &+rFire~
+&+LA swirling mass of smoke and &+rfire&+L blows throughout the area
+~
+&+LThis entity phases in and out of existance as it swirls
+about.  It seems to be at peace in this harsh plane of
+existance, and the firey ash and winds which blow from
+the Southeast seem to give it strength and resilience.
+~
+1181768 1 0 0 940122138 4196353 0 0 0 S
+EF 0 64 1 4
+58 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139803
+black smoke mephit~
+&+LA smoke mephit~
+&+LA black smoke mephit patrols the area looking for trouble
+~
+&+LThis winged creature patrols the Plane of Smoke searching
+&+Lfor trouble to get into.  It's sullen &+rred&+L eyes poke
+&+Lthrough an otherwise pitch-black face.  It's gaping mouth
+&+Lreveals razor-sharp &+yteeth&+L.  It has a set of large wings
+&+Lwhich keep it in a constant state of flight.
+~
+133192 1 0 0 940122138 4196353 0 262144 0 S
+y 0 4096 1 2
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139804
+black smoke mephit~
+&+LA smoke mephit~
+&+LA black smoke mephit patrols the area looking for trouble
+~
+&+LThis winged creature patrols the Plane of Smoke searching
+&+Lfor trouble to get into.  It's sullen &+rred&+L eyes poke
+&+Lthrough an otherwise pitch-black face.  It's gaping mouth
+&+Lreveals razor-sharp &+yteeth&+L.  It has a set of large wings
+&+Lwhich keep it in a constant state of flight.
+~
+133192 1 0 0 940122138 4196353 0 262144 0 S
+y 0 32 2 2
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139805
+elemental smoke ash~
+&+LA smoke elemental~
+&+LAn elemental comprised of smoke and ash wanders the plane
+~
+&+LThis elemental is comprised almost entirely of smoke and ash.
+&+LIts 'body' is a swirling ether of hazy black smoke with the
+&+Lintermittent chunk of &+rflaming&+R-&+rhot&+L ashy material.  It's shape
+&+Lis in a constant state of &+Cf&+cl&+Bu&+Cx&+L, often twisting and writing as
+&+Lit shifts between humanoid and ghostlike forms.
+~
+131144 1 0 0 940122138 4196353 0 0 0 S
+ve 0 1 2 3
+54 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139806
+massive smoke elemental~
+&+LA MASSIVE smoke elemental~
+&+LAn absolutely MASSIVE smoke elemental phases in and out of existance
+~
+&+LThis elemental construct of smoke and ash is absolutely
+&+Lmassive.  It's body &+Csw&+cir&+wls &+Wan&+wd f&+clux&+Ces&+L, constantly shifting
+&+Lin and out of physical forms.  It flares in and out from
+&+Lbeing covered in &+rfl&+Ra&+rmes&+L and eventually back to ash. It
+&+Lappears to be torn between the elements of &+Cair&+L and &+rfire&+L.
+~
+1181768 1 0 0 939597850 4196353 262272 0 0 S
+ve 0 33554432 1 4
+59 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139807
+robed figure conjurer smoke ash powerful~
+&+LA powerful &+Yconjurer&+L of smoke and &+rash~
+&+LA &+Yrobed figure&+L stands here conjuring smoke and &+rash
+~
+&+LThis entity phases in and out of existance as it swirls
+about.  It seems to be at peace in this harsh plane of
+existance, and the firey ash and winds which blow from
+the Southeast seem to give it strength and resilience.
+~
+1210440 1 0 0 939597850 4196353 0 537133056 0 S
+sw 0 512 3 4
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139808
+mass flesh smoke beast eyeless~
+&+mAn &+Meye&+mless &+Lsm&+wok&+We b&+wea&+Lst~
+&+mAn eyeless mass of deep-purple flesh writhes in agony
+~
+&+mThis disgusting creature is a blob of rotten flesh that eminates
+&+msmoke from large pores in the surface of its swollen fleshy body.
+&+mIt's 'face' is only discernable from the rest of it's body because
+&+mof a gaping mouth filled with &+Lrazor&+w-&+Wsharp&+m fangs.  It has large
+&+mtentacles near its mouth that make it vaguely resemble an &+Millithid&+m.
+~
+1181768 1 0 0 939597978 4491267 22544520 276480 0 S
+x 0 4 2 4
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139809
+swirling mass smoke fire ehkahk prince~
+&+WEhkahk&+L, the &+RPrince &+Lof the &+CPara&+L-&+rElemental&+L Plane of Smoke~
+&+WEhkahk&+L, the &+RPrince&+L of the &+CPara&+L-&+rElemental&+L Plane of Smoke&+w
+~
+&+LHalf &+Cair elemental&+L, half &+rfire elemental&+L, this massive demon-like
+&+Lentity reigns supreme over the Quasi Plane of Smoke.  His jet black
+&+Lskin writhes with &+Rhot &+rred &+Ra&+rs&+rh&+L.  With every breath he takes, deep
+&+Lblack clouds of smoke eminate from his nostrils and &+rf&+Rla&+rm&+Rin&+rg &+Rem&+rb&+Rer&+rs
+&+Lpour from his mouth.  His eyes dart constantly to the Northwest and
+&+LSoutheast, as if he is wary of something in either direction.
+~
+1181768 1 0 0 940122270 4196353 16777216 579076608 0 S
+ar 0 16 1 6
+60 0 0 4000d2+1000 1d1+1
+0.0.0.0 0
+8 8 1
+#139810
+smoke dragon etrita~
+&+LThe great smoke dragon, '&+WEtrita&+L'~
+&+LA massive cloud of smoke shaped like a dragon phases in and out of existance
+~
+&+LAlthough this massive beast takes the shape of a black dragon,
+&+Lit has no visible scales to speak of.  The only discernable
+&+Lphysical feature is the massive beating &+Rheart &+Lwhich can be
+&+Lseen occasionally as the smoke swirls around her massive body.
+~
+28473449 1 0 0 940122138 4196353 0 0 0 S
+ud 0 1 2 7
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139811
+massive sorcerer rijak~
+&+RRijak&+w, &+Lthe exiled &+MSorcerer&+L of Smoke~
+&+LA massive &+MSorcerer&+L in black robes floats here
+~
+&+LThis foul-eyed sorcerer stands here in perfect tune with the Plane
+&+Lof Smoke.  He scowls at the presence of outsiders, but tolerates
+&+Lthem with only minor aggression.  His overall appearance is that
+&+Lof a rotting &+Chuman&+L, with wisps of smoke and &+rash&+L swirling in and
+&+Lout of the gaps between his rotten flesh.
+~
+1181768 0 0 0 941170714 4196353 0 0 0 S
+ul 0 512 3 4
+59 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139812
+smoke mephit commander~
+&+LA smoke mephit commander~
+&+La smoke mephit commander leads his squad on patrol
+~
+&+LTaking charge of a squad of smoke mephits, this commander
+&+Lbarks orders as he patrols his plane of existance.  He
+&+Lseems to have little care for the wellbeing of his minions
+&+Land only seeks to find and destroy the 'guests' of this
+&+Lplane.
+~
+1181768 1 0 0 940122138 4196353 262144 512 0 S
+sh 0 112 1 4
+59 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139813
+korli halfling~
+Korli, the &+yHalfling&+w adventurer~
+&+LA &+yHalfling&+L stands here, trying not to be noticed
+~
+This tiny &+yHalfling &+wadventurer tries his best to be unnoticed.
+He appears terrified and grasps around almost blindly as he
+attempts to stay hidden in this &+Lsmokey&+w void.
+
+Quietly, he whispers, '&+WWhat... what's that... Who's there?&+w'
+~
+131146 0 0 0 940646426 0 0 0 0 S
+pf 0 4096 1 1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139814
+roj lik emissary~
+&+rRoj&+w'&+Rlik~
+&+rRoj&+w'&+Rlik&+w, &+WEhkahk&+w's &+yemissary
+~
+&+rThis MASSIVE humanoid stands here, spewing out smoke and fire
+&+rfrom his mouth and nostrils.  He seems to be a combination of
+&+ra Minotaur and a fire elemental.  His eyes are blood red and
+&+rglow hot with fire and ash. He seems intent on ensuring that
+&+rno mortal steps foot in Ehkahk's vault.
+~
+53639274 1 0 0 990453950 4196353 84934784 8389120 0 S
+mt 0 1048624 1 7
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139815
+concubine human~
+&+wA &+CHuman&+w Concubine~
+A depressed &+CHuman&+w concubine stands here
+~
+This poor soul has been trapped and forced into Ehkahk's
+harem.  Her face shows the signs of a brutal lifestyle,
+her skin is covered in sut from the harsh plane.  There
+is little life in her eyes.
+~
+133192 0 0 0 0 0 0 0 0 S
+ph 0 1 1 3
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139816
+drow concubine~
+&+wA &+mDrow &+wConcubine~
+A sut-covered &+mDrow&+w concubine stands here
+~
+This poor soul has been trapped and forced into Ehkahk's
+harem.  Her face shows the signs of a brutal lifestyle,
+her skin is covered in sut from the harsh plane.  There
+is little life in her eyes.
+~
+133192 0 0 0 0 0 0 0 0 S
+pl 0 1 1 3
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139817
+grey bruised concubine~
+&+wA &+cGrey Elf &+wConcubine~
+A bruised &+cGrey Elf &+wconcubine stands here
+~
+This poor soul has been trapped and forced into Ehkahk's
+harem.  Her face shows the signs of a brutal lifestyle,
+her skin is covered in sut from the harsh plane.  There
+is little life in her eyes.
+~
+133192 0 0 0 0 0 0 0 0 S
+pe 0 1 1 3
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139818
+half elf concubine half-elf~
+&+wA &+CHalf&+w-&+cElf &+wConcubine~
+A &+CHalf&+w-&+cElf&+w concubine averts her eyes
+~
+This poor soul has been trapped and forced into Ehkahk's
+harem.  Her face shows the signs of a brutal lifestyle,
+her skin is covered in sut from the harsh plane.  There
+is little life in her eyes.
+~
+133192 0 0 0 0 0 0 0 0 S
+p2 0 1 1 3
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139819
+orc disgusting concubine~
+An &+LOrc&+w Concubine~
+A disgusting &+LOrc&+w concubine stands here, looking fairly content
+~
+This poor soul has been trapped and forced into Ehkahk's
+harem.  Her face shows the signs of a brutal lifestyle,
+her skin is covered in sut from the harsh plane.  She
+actually doesn't seem to mind her situation very much.
+~
+133192 0 0 0 0 0 0 0 0 S
+ho 0 1 1 3
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139820
+battered gnome concubine~
+A &+RGnome&+w Concubine~
+A battered &+RGnome&+w concubine stands here, tending her wounds
+~
+This poor soul has been trapped and forced into Ehkahk's
+harem.  Her face shows the signs of a brutal lifestyle,
+her skin is covered in sut from the harsh plane.  There
+is little life left in her eyes.
+~
+133192 0 0 0 0 0 0 0 0 S
+pg 0 1 1 2
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139821
+putrid troll concubine~
+&+wA &+gTroll &+wConcubine~
+A putrid &+gTroll&+w concubine stands here, picking at her open sores
+~
+This poor soul has been trapped and forced into Ehkahk's
+harem.  Her face shows the signs of a brutal lifestyle,
+her skin is covered in sut from the harsh plane.  There
+is little life in her eyes.
+~
+133192 0 0 0 0 0 0 0 0 S
+pt 0 1 1 3
+20 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139822
+ash elemental charrzlk~
+&+LCharzzlk&+w, the ash elemental~
+&+La massive swirling nether of ash floats here
+~
+&+LThis massive beast is comprised of a swirling nether of &+rh&+Lo&+Rt
+&+Lblack ash.  It's 'face' is a rotating blob of &+Rmolten lava&+L.
+&+LIt stares emotionless across the plane as it travels seeking
+&+Lout mortals to feast upon.
+~
+1181768 1 0 0 1572890 4227075 0 0 0 S
+PX 0 36 1 3
+58 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#139823
+forgemaster erk~
+&+LErk, the forgemaster~
+&+LErk, the Forgemaster of the Plane of Smoke stands here smelting iron
+~
+This massive beast of a man is covered head to toe in &+Lthick black
+&+Lsut&+w.  His eyesockets are deep and his face is worn.  He gives no
+care to any disturbances and works heartily on forging metal into
+weapons and armor.
+~
+1181768 0 0 0 0 0 0 0 0 S
+uk 0 1 1 3
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#139824
+corrupt corrupted fire elemental~
+&+rA &+LCorrupted &+rfire elemental~
+&+rA fire elemental with a massive amount of &+Ls&+wm&+Wo&+wk&+Le&+r and &+Lash&+r in its body stands here
+~
+Once a proud denizen of the &+rElemental Plane of Fire&+w, this
+elemental has been outcasted to the Quasi realms after
+being corrupted by large amounts of &+Lash and smoke&+c.
+~
+72 1 0 0 0 0 0 0 0 S
+ef 0 4096 1 3
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#139825
+massive fire elemental~
+&+rA MASSIVE fire elemental~
+&+rA MASSIVE fire elemental stands here, ready to protect its domain
+~
+&+CThis tremendous swirling mass of air fights constantly to purge
+its body of the chunks of &+Lash &+Cand &+Lsoot&+C that float in periodically
+from the Southeast.  It appears to be ready and willing to defend
+its homeland from any invaders from the smoke.
+~
+17201418 1 0 0 402726974 4241600 0 0 0 S
+ef 0 2048 3 7
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0

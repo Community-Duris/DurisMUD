@@ -2928,6 +2928,7 @@ void member_list(P_char member)
   char     Gbuf2[MAX_STR_NORMAL];
   char     Gbuf3[MAX_STR_NORMAL];
   char     Gbuf4[MAX_STR_NORMAL];
+  char	   cash[MAX_STR_NORMAL];
   char     ostra[MAX_STR_NORMAL];
   char     buf[MAX_STRING_LENGTH];
   char     rank_names[8][MAX_STR_RANK];
@@ -3044,10 +3045,9 @@ void member_list(P_char member)
   fscanf(f, "%i %i %i %i\n", &dummy2, &dummy3, &dummy4, &dummy5);
   if (GT_NORMAL(temp))
   {
-    sprintf(Gbuf2,
+    sprintf(cash,
             "Cash: &+W%i platinum&n, &+Y%i gold&n, %i silver, &+y%i copper&n\r\n\r\n",
             dummy2, dummy3, dummy4, dummy5);
-    strcat(buf, Gbuf2);
   }
     
   i = os = 0;
@@ -3100,6 +3100,11 @@ void member_list(P_char member)
     }
   }
   fclose(f);
+  
+  sprintf(Gbuf2, "Current members: %d\r\n", i);
+  strcat(buf, Gbuf2);
+  strcat(buf, cash);
+  
   /* now add the info string sorted by rank to buf */
   for (k = 7; k >= 0; k--)
     for (j = 0; j < i; j++)
