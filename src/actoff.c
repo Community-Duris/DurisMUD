@@ -3994,6 +3994,9 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
   int      dam = 0;
   int      skill = 0;
   P_obj    weapon;
+  int      skl_lvl = 0, sect;
+  int      i = 0;
+  struct affected_type *af, afs;
 
   struct damage_messages messages = {
     "You find weakness in $N's defenses and land a sneaky surprise attack!",
@@ -4057,14 +4060,78 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
            (1 +
             ((double) GET_LEVEL(ch)) / MAXLVLMORTAL) * (((double) skill) /
                                                         100));
-  dam /= 17;
 
+	//dambonus for thiefs - roughly 10-15 damage more at 12
+	if(GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF)) //proc skill for thief - possibility to blind on sneaky strike
+    	{
+  	  dam /= 12;
+	}
+	else
+	{
+	  dam /= 16;
+	}
+  
   melee_damage(ch, victim, dam, PHSDAM_NOREDUCE | PHSDAM_NOPOSITION,
                &messages);
+  if(GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF)) //proc skill for thief - possibility to blind on sneaky strike
+    {
+	skl_lvl = (int) (GET_CHAR_SKILL(ch, SKILL_SNEAKY_STRIKE));
+	i = skl_lvl - (GET_C_AGI(victim) / 6);
+	if (number(1, 100) < i)
+	 {
+	  act
+    ("&+LYou lash out from the sh&+wad&+Wows&+L, hitting $N right in the &+Wface&+L, causing them to temporarily black out.",
+     FALSE, ch, 0, victim, TO_CHAR);
+	act
+    ("$n &+Lsteps quickly into the sh&+wad&+Wows&+L and darts quickly at your &+Wface&+L, causing you to temporarily black out.",
+     TRUE, ch, 0, victim, TO_VICT);
+	act
+    ("$n &+Lfades into the sh&+wad&+Wows&+L and quickly strikes at $N's &+Wface&+L, causing them to see stars.",
+     TRUE, ch, 0, victim, TO_NOTVICT);
+	 blind(ch, victim, 6 * PULSE_VIOLENCE);
+	 }
+    
+    } //endthiefspeccheck
+	
+if(GET_CLASS(ch, CLASS_MERCENARY)) //proc skill for mercenary - sucks moves
+    {
+	skl_lvl = (int) (GET_CHAR_SKILL(ch, SKILL_SNEAKY_STRIKE));
+	i = skl_lvl - (GET_C_AGI(victim) / 6);
+	if (number(1, 100) < i)
+	 {
+	  act
+    	  ("&+yYou tighten up and skillfully hit $N right in the &+Ystomach&+y! $N appears a bit less energetic after that hit.",
+     	  FALSE, ch, 0, victim, TO_CHAR);
+	  act
+    	  ("$n &+yseems to tense up before unleasing a &+Ypowerful &+ystrike to your abdomen! You feel the a lot less &+Yenergetic&+y.",
+     	  TRUE, ch, 0, victim, TO_VICT);
+	  act
+    	  ("$n &+yseems to tense up before unleasing a &+Ypowerful &+ystrike to $N's &+yabdomen&+y, knocking the &+Cwind &+yout of them!",
+     	  TRUE, ch, 0, victim, TO_NOTVICT);
+	  i = number(20, 45);
+    	  if ((GET_VITALITY(victim) - i) < 20)
+      	  i = GET_VITALITY(victim) - 20;
+
+    	  GET_VITALITY(victim) -= i;
+
+    	  StartRegen(victim, EVENT_MOVE_REGEN);
+
+    	if (!affected_by_spell(victim, SKILL_AWARENESS))
+    	 {
+      	  bzero(&afs, sizeof(afs));
+      	  afs.type = SKILL_AWARENESS;
+      	  afs.duration = 5;
+      	  afs.bitvector = AFF_AWARE;
+      	  affect_to_char(victim, &afs);
+    	 }
+
+	}
+    
+    } //endmercclasscheck
+
 
   CharWait(ch, PULSE_VIOLENCE * number(1, 2));
-}
-
+} //drantemp
 
 bool is_preparing_for_sneaky_strike(P_char ch)
 {
