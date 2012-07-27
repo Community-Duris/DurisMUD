@@ -7520,19 +7520,76 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       
       do_simple_move_skipping_procs(ch, dircmd, 0);
     }
-    else
+     if(IS_PC(ch) && GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF) && GET_LEVEL(ch) >= 56)
+     {
+      int rand1 = number(1, 100);
+      if (rand1 > 60)
+       {
+        act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
+      	 act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+	 do_simple_move_skipping_procs(ch, dircmd, 0);
+       }
+    	else
+    	{
+      act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
+      act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
+    	}
+    }
+    
+else
     {
       act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
       act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     }
-    return TRUE;
+return TRUE;
   case WALL_OUTPOST:
   case WATCHING_WALL:
   case WALL_OF_IRON:
+    if(IS_PC(ch) && GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF) && GET_LEVEL(ch) >= 56)
+     {
+      int rand1 = number(1, 100);
+      if (rand1 > 60)
+       {
+        act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
+      	 act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+	 do_simple_move_skipping_procs(ch, dircmd, 0);
+       }
+    	else
+    	{
+      act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
+      act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
+    	}
+    }
+    
+else
+    {
+      act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
+      act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
+    }
+return TRUE;
   case WALL_OF_STONE:
-    act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
-    act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
-    return TRUE;
+    if(IS_PC(ch) && GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF) && GET_LEVEL(ch) >= 56)
+     {
+      int rand1 = number(1, 100);
+      if (rand1 > 60)
+       {
+        act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
+      	 act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+	 do_simple_move_skipping_procs(ch, dircmd, 0);
+       }
+    	else
+    	{
+      act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
+      act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
+    	}
+    }
+    
+else
+    {
+      act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
+      act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
+    }
+return TRUE;
   case WALL_OF_BONES:
     if (obj->value[2] < 10) /* Hackich assumption that if strength < 10 it's a thin dragonscale sheath */
 	  {
