@@ -20034,12 +20034,14 @@ bool can_do_general_portal( int level, P_char ch, P_char victim,
       return FALSE;
    }
   
+/* We are allowing non-raidable ppl to port again. - Lohrr 7/29/2012
   if((ch && !is_Raidable(ch, 0, 0)) ||
      (victim && !is_Raidable(victim, 0, 0)))
   {
     send_to_char("&+WYou or your target is not raidable. The spell fails!\r\n", ch);
     return false;
   }
+*/
 
    return TRUE;
 }
