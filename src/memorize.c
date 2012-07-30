@@ -634,8 +634,8 @@ int get_circle_memtime(P_char ch, int circle, bool bStatOnly)
   {
     return calculate_undead_time(ch, circle, bStatOnly);
   }
-  else if(IS_HARPY(ch) ||
-         GET_CLASS(ch, CLASS_ETHERMANCER))
+  else if(IS_HARPY(ch)) //||
+   //      GET_CLASS(ch, CLASS_ETHERMANCER))
   {
     return calculate_harpy_time(ch, circle, bStatOnly);
   }

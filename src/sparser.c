@@ -2345,8 +2345,9 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
       else
         skl = SKILL_SPELL_KNOWLEDGE_MAGICAL;
      
-      if (GET_CLASS(ch, CLASS_PSIONICIST | CLASS_DRUID | CLASS_ETHERMANCER) ||
-          number(1, 100) <= GET_CHAR_SKILL(ch, skl))
+      //if (GET_CLASS(ch, CLASS_PSIONICIST | CLASS_DRUID | CLASS_ETHERMANCER) ||
+      if (GET_CLASS(ch, CLASS_PSIONICIST | CLASS_DRUID) ||
+	    number(1, 100) <= GET_CHAR_SKILL(ch, skl))
       {
         sprintf(buf, "Casting: %s ", skills[arg->spell].name);
         for (i = 0; i < (arg->timeleft / 4); i++)
