@@ -986,22 +986,26 @@ void spell_greater_spirit_anguish(int level, P_char ch, char *arg, int type,
   act("$N &+LSCREAMS&N in utter anguish, caused by $n's &+Wspiritual&N assault!",
      TRUE, ch, 0, victim, TO_NOTVICT);
   
-  if(spell_damage(ch, victim, dam, SPLDAM_PSI, SPLDAM_NOSHRUG, 0) == DAM_NONEDEAD)
+  if(spell_damage(ch, victim, dam, SPLDAM_PSI, SPLDAM_NOSHRUG, 0) == DAM_NONEDEAD && GET_SPEC(ch, CLASS_SHAMAN, SPEC_SPIRITUALIST))
   {
-    if(!IS_SET(victim->specials.affected_by2, AFF2_SLOW) &&
-       dam > 200)
-    {
-      bzero(&af, sizeof(af));
-      af.type = SPELL_SLOW;
-      af.duration = 1;
-      af.modifier = 2;
-      af.bitvector2 = AFF2_SLOW;
+    int rand1 = number(1, 100);
+    if(rand1 > 70)
+	{
+	if((dam > 200) && !IS_AFFECTED2(victim, AFF2_SLOW))
+   	 	{
+      		bzero(&af, sizeof(af));
+      		af.type = SPELL_SLOW;
+      		af.duration = .0001;
+      		af.modifier = .01;
+      		af.bitvector2 = AFF2_SLOW;
 
-      affect_to_char(victim, &af);
+      		affect_to_char(victim, &af);
 
-      act("$n &+mbegins to sllooowwww down.", TRUE, victim, 0, 0, TO_ROOM);
-      send_to_char("&+WYour will to live wavers! &+mYou feel yourself slowing&n down.\r\n", victim);
-    }
+
+      		act("$n &+mbegins to sllooowwww down.", TRUE, victim, 0, 0, TO_ROOM);
+      		send_to_char("&+WYour will to live wavers! &+mYou feel yourself slowing&n down.\r\n", victim);
+   	       }
+	}
   }
 }
 
