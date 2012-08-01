@@ -1082,16 +1082,16 @@ void spell_energy_drain(int level, P_char ch, char *arg, int type,
   else
   {
     if(!IS_AFFECTED4(victim, AFF4_NEG_SHIELD) &&
-       !IS_UNDEADRACE(victim))
+       !IS_UNDEADRACE(victim) && (!GET_CLASS(ch, CLASS_NECROMANCER)))
     {
-     /* if(IS_PC(ch) || //disabling vamp
+      if(IS_PC(ch) || //disabling vamp
          IS_PC_PET(ch))
       {
-        vamp(ch, (int)(dam / 5), (int) (GET_MAX_HIT(ch) * 1.25));
+        vamp(ch, (int)(dam / 5), (int) (GET_MAX_HIT(ch) * 1.10));
       }
       else
-        vamp(ch, (int)(dam / 2), (int) (GET_MAX_HIT(ch) * 1.25));
-	*/ 
+        vamp(ch, (int)(dam / 2), (int) (GET_MAX_HIT(ch) * 1.10));
+	 
     }
 
     send_to_char("&+LYour life energy is &+rtapped&+L.\n", victim);
@@ -17492,11 +17492,16 @@ void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
 
   act("&+LA &+gpl&+Lag&+gue &+Lof &+minsects and arachnids&+L flow like an ocean.", TRUE, ch, 0, victim, TO_ROOM);
   act("&+LYou send out a &+mwave of &+Linsects &+mand &+Larachnids&+m!", TRUE, ch, 0, victim, TO_CHAR);
+  
   //engage(ch, victim);
   if (victim)
     add_event(event_cdoom, 0, ch, victim, NULL, 0, &cDoomData, sizeof(CDoomData));
   else
-    add_event(event_cdoom, 0, ch, 0, NULL, 0, &cDoomData, sizeof(CDoomData));
+	{
+    	add_event(event_cdoom, 0, ch, 0, NULL, 0, &cDoomData, sizeof(CDoomData));
+	zone_spellmessage(ch->in_room,
+                    "&+LThe &+minsects &+Lof the &+yarea&+L seem to be called away...&n\r\n");
+	}
 }
 
 void spell_sense_follower(int level, P_char ch, char *arg, int type,
@@ -19962,6 +19967,7 @@ void spell_moonstone(int level, P_char ch, char *arg, int type,
     memset(&af, 0, sizeof(af));
     af.type = SPELL_MOONSTONE;
     af.flags = /*AFFTYPE_NOSHOW |*/ AFFTYPE_NOSAVE | AFFTYPE_NODISPEL | AFFTYPE_NOAPPLY;
+    //af.flags = /*AFFTYPE_NOSHOW |*/ AFFTYPE_NOSAVE | AFFTYPE_NOAPPLY;
     af.modifier = ch->in_room;
     af.duration = duration / PULSES_IN_TICK;
 
