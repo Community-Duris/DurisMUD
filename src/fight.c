@@ -7792,6 +7792,10 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
     !IS_ALIVE(victim) ||
     !IS_ALIVE(attacker))
       return false;
+ 
+  if(GET_POS(victim) != POS_STANDING)
+	return false;
+
   
   if(affected_by_spell(victim, SPELL_COMBAT_MIND) &&
      GET_CLASS(victim, CLASS_PSIONICIST))
