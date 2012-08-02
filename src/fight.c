@@ -592,7 +592,7 @@ bool soul_trap(P_char ch, P_char victim)
       return false;
   }
 
-  vamp(ch, hps, (int)(GET_MAX_HIT(ch) * 1.3));
+  vamp(ch, hps, (int)(GET_MAX_HIT(ch) * 1.1));
 
   if (himself)
   {
@@ -4935,7 +4935,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     }
     else
     {
-      vamped = vamp(ch, dam * dam_factor[DF_TOUCHVAMP], GET_MAX_HIT(ch) * 113);
+      vamped = vamp(ch, dam * dam_factor[DF_TOUCHVAMP], GET_MAX_HIT(ch) * 1.10); //113?
     }
   }
 
@@ -4998,7 +4998,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
            tch->in_room == ch->in_room &&
            tch != ch)
         {
-          vamp(tch, dam * get_property("vamping.battleEcstasy", .140), GET_MAX_HIT(ch) * 1.1);
+          vamp(tch, dam * get_property("vamping.battleEcstasy", .140), GET_MAX_HIT(tch) * 1.10 );
         }
       }
     }
@@ -6623,7 +6623,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
         FALSE, ch, 0, victim, TO_VICT);
     damage(ch, victim, to_hit, SPELL_VAMPIRIC_TOUCH);
     affect_from_char(ch, SPELL_VAMPIRIC_TOUCH);
-    vamp(ch, to_hit, GET_MAX_HIT(ch) * 1.5);
+    vamp(ch, to_hit, GET_MAX_HIT(ch) * 1.1);
     return FALSE;
   }
 

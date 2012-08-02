@@ -4546,7 +4546,7 @@ void holy_crusade_check(P_char ch, P_char victim)
   if (!has_innate(ch, INNATE_HOLY_CRUSADE) || !IS_EVIL(victim))
     return;
 
-  if (vamp(ch, 2 * GET_LEVEL(victim), 1.2 * GET_MAX_HIT(ch))) {
+  if (vamp(ch, 2 * GET_LEVEL(victim), 1.1 * GET_MAX_HIT(ch))) {
     act("As you execute the killing blow on the evil being, you feel the \n"
         "hand of your God reach down and imbue with heavenly might!",
         FALSE, ch, 0, 0, TO_CHAR);

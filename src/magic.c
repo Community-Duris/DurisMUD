@@ -867,7 +867,7 @@ void spell_restore_spirit(int level, P_char ch, char *arg, int type,
     dam <<= 1;
   }
   
-  vamp(ch, (int)(dam / 4), (int) (GET_MAX_HIT(ch) * 1.25));
+  vamp(ch, (int)(dam / 4), (int) (GET_MAX_HIT(ch) * 1.10));
 
   if(GET_VITALITY(victim) >= 10 &&
      !IS_AFFECTED2(victim, AFF2_SOULSHIELD))
@@ -978,7 +978,7 @@ void spell_enervation(int level, P_char ch, char *arg, int type,
     dam <<= 1;
   }
   
-  vamp(ch, (int)(dam / 4), (int) (GET_MAX_HIT(ch) * 1.25));
+  vamp(ch, (int)(dam / 4), (int) (GET_MAX_HIT(ch) * 1.10));
 
   if(GET_VITALITY(victim) >= 10 &&
      !IS_AFFECTED4(victim, AFF4_NEG_SHIELD))
@@ -20742,7 +20742,7 @@ void spell_life_bolt(int level, P_char ch, char *arg, int type,
     {
       send_to_char("&+WYou send a quick prayer to your Deity, offering your &+Rlifeforce&+W and asking for divine energy to flow through you!\r\n", ch);
 
-      vamp(ch, self_dam/6, GET_MAX_HIT(ch) * 1.5);
+      vamp(ch, self_dam/6, GET_MAX_HIT(ch) * 1.1);
       //if (spell_damage(ch, ch, self_dam, SPLDAM_HOLY, RAWDAM_NOKILL | SPLDAM_NOSHRUG, 0) != DAM_NONEDEAD)
 	//        return;
     }
