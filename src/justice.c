@@ -1780,14 +1780,18 @@ void justice_action_invader(P_char ch)
   if (IS_TRUSTED(ch))
     return;
 
+
+/*
 #if 1
 return;
 #endif
+*/
 
 /*
   if (mini_mode)
-    return;
+   return;
 */
+
 
   if (!CHAR_IN_TOWN(ch))
     return;
@@ -1795,11 +1799,16 @@ return;
   if (!IS_INVADER(ch) && !IS_OUTCAST(ch))
     return;
 
-/*  Original Justice 
+
+  //Original Justice 
   if (!justice_send_guards(NOWHERE, ch, MOB_SPEC_J_OUTCAST,
                            (MAX(11, GET_LEVEL(ch)) / 11) + 1))
-    return;
-*/
+   {
+    //return;
+   }
+
+
+
 
   zone_struct = &zone_table[world[ch->in_room].zone];
   room = ch->in_room;  
@@ -1831,19 +1840,21 @@ return;
     if (!number(0, 2))
       justice_send_guards(NOWHERE, ch, MOB_SPEC_J_OUTCAST, 1);
   
-    if((GET_RACEWAR(ch) == RACEWAR_EVIL) &&
+    /*if((GET_RACEWAR(ch) == RACEWAR_EVIL) &&
         !(number(0, 15)) &&
         get_property("justice.alarms.good", 1.000))
+    */
+    if(GET_RACEWAR(ch) == RACEWAR_EVIL)
     { 
       int rnum = number(1, 4);
       if(rnum == 1)
         justice_hometown_echo(CHAR_IN_TOWN(ch), "&+RAlarm bells sound, &+rsignalling an invasion!&n");
       if(rnum == 2)
-        justice_hometown_echo(CHAR_IN_TOWN(ch), "&+YThe bells from all the shrines erupt in a thundering chorus!&n");
+        justice_hometown_echo(CHAR_IN_TOWN(ch), "&+LMilitia forces muster to bolster the town's defenses against the &=Lrinvaders!!!&n");
       if(rnum == 3)
         justice_hometown_echo(CHAR_IN_TOWN(ch), "&+LMilitia forces muster to bolster the town's defenses against the &=Lrinvaders!!!&n");
       if(rnum == 4)
-        justice_hometown_echo(CHAR_IN_TOWN(ch), "&+WThere is a stillness in the air before the storm of battle...&n");
+        justice_hometown_echo(CHAR_IN_TOWN(ch), "&+RAlarm bells sound, &+rsignalling an invasion!&n");
       
       return;
     }
