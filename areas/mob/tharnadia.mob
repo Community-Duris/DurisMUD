@@ -11,8 +11,8 @@ across his lips.  A &+Rpink&n chef's hat rests upon his perfectly combed hair, h
 in place by two &+Lbobby-pins&n.  He rests one of his hands on his hip, and the
 other he lets hang loosly at the wrist.
 ~
-33556490 128 0 33554432 0 0 0 500 S
-PE 1 2 -1
+33556490 128 0 0 33554432 0 0 0 500 S
+PE 1 2 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -26,8 +26,8 @@ long platinum hair is hidden from view.  When you look into the shadows of her
 cowl, you think you see two glowing blue eyes, but when u blink the light is
 gone.
 ~
-33556490 0 0 33554432 0 0 0 0 S
-PH 1 512 -1
+33556490 0 0 0 33554432 0 0 0 0 S
+PH 1 512 0 -1
 45 -1 -69 45d72+1935 6d6+12
 5.9.8.4 109350
 8 8 2
@@ -42,8 +42,8 @@ he had served in the city militia.  He spends most of his time infront of the
 forge, bent diligently to his most favorite of passtimes.  His head is
 completely shaved, and a slight grey beard impresses itself upon his face.
 ~
-1107298314 640 0 0 0 0 0 1000 S
-PH 1 8 -1
+1107298314 640 0 0 0 0 0 0 1000 S
+PH 1 8 0 -1
 46 -3 -72 46d119+2530 6d6+25
 6.0.9.4 111780
 8 8 1
@@ -59,8 +59,8 @@ a &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd &+Lgar&n~
 &+Bspans the fishes back, and two smaller pectoral fins jut from just behind
 &+Bthe &+Lgar's&n &+bblue&+B gills.&n
 ~
-262154 0 0 33556480 0 0 0 0 S
-F 0 0 -1
+262154 0 0 0 33556480 0 0 0 0 S
+F 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -76,8 +76,8 @@ a &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd &+Lgar&n~
 &+Bspans the fishes back, and two smaller pectoral fins jut from just behind
 &+Bthe &+Lgar's&n &+bblue&+B gills.&n
 ~
-67371018 0 0 33556480 0 0 0 0 S
-F 0 0 -1
+67371018 0 0 0 33556480 0 0 0 0 S
+F 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -93,8 +93,8 @@ a &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd &+Lgar&n~
 &+Bspans the fishes back, and two smaller pectoral fins jut from just behind
 &+Bthe &+Lgar's&n &+bblue&+B gills.&n
 ~
-262154 0 0 33556480 0 0 0 0 S
-F 0 0 -1
+262154 0 0 0 33556480 0 0 0 0 S
+F 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -109,8 +109,8 @@ a &+Wdea&+wth&+Lhead &+madder&n~
 &+Cthe tip of its tail.  Lighter scales on its head form the likeness of a &+Wskull&+C,
 &+Cgiving the &+msnake&+C its name.&n
 ~
-1074004104 1 0 0 0 0 0 0 S
-RS 0 0 -1
+1074004104 1 0 0 0 0 0 0 0 S
+RS 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -123,8 +123,8 @@ a &+Ydeep-billed &+Wpelican&n~
 interest.  The deep pocket of its bill hangs down its chest, and you wonder
 more than once what it has stuffed in there.
 ~
-8 0 0 0 0 0 0 0 S
-B 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 1
@@ -137,8 +137,8 @@ a &+Wseagull&n~
 that might be stuck in tidepools along the barricade.  Occaisonally is lets
 out a high-pitched caw and dives into the water.
 ~
-131080 0 0 0 0 0 0 0 S
-B 0 0 -1
+131080 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -153,8 +153,8 @@ eye out for rabble rousers and other such hooligans.  Although she is in prime
 condition, something in her eyes tells you she is not as experienced as the
 elite of Tharnadia's defensive team.
 ~
-1140852876 640 0 0 0 0 0 1000 S
-PH 1 1 -1
+1140852876 640 0 0 0 0 0 0 1000 S
+PH 1 1 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -169,8 +169,8 @@ short ebon hair, that sticks up in a myriad of different directions, and two
 deep blue eye.  A quick glance at his hands reveals the many callouses earned
 by hard manual labor.
 ~
-2184 0 0 0 0 0 0 500 S
-PH 1 0 -1
+2184 0 0 0 0 0 0 0 500 S
+PH 1 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -184,8 +184,8 @@ for her family's dinner.  Her ratty brunette hair is tied back by an old
 handkerchief, and her face is colored by soot.  A quick glance at her hands
 reveals the many callouses earned by hard manual labor.
 ~
-2184 0 0 0 0 0 0 500 S
-PH 1 0 -1
+2184 0 0 0 0 0 0 0 500 S
+PH 1 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 2
@@ -200,8 +200,8 @@ expressions cold.   The only thing that convinces you he is alive, is the
 rythmic rise and fall of his ribs, along with the perpetual shifting of his
 blue eyes.
 ~
-100665358 640 0 200 0 0 0 1000 S
-PH 1 1 -1
+100665358 640 0 0 200 0 0 0 1000 S
+PH 1 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -220,8 +220,8 @@ had turned its back on him.  He stands nearly four feet tall, his legs bowed
 and misshapen, and one of his arms devoid of all musculature.  His hair grows
 in dark tufts, offset by patches of hairless gooselike flesh.
 ~
-1174669454 672 0 33554632 0 0 0 1000 S
-H 1 2 -1
+1174669454 672 0 0 33554632 0 0 0 1000 S
+H 1 2 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -234,8 +234,8 @@ a &+Wlighthouse attendant&n~
 clean and in operating order.  He is wearing a pair of thick white dungaree
 overalls, the huge pockets of which are filled with various tools.
 ~
-1073744012 640 0 0 0 0 0 1000 S
-PH 1 0 -1
+1073744012 640 0 0 0 0 0 0 1000 S
+PH 1 0 0 -1
 4 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 1
@@ -249,8 +249,8 @@ a &+Wbone &+Wsc&+Yor&+Rpi&+ron&n~
 &+Lthe soft abdomen of its owner's prey.  Its &+Wbone-polished&+L shell smells faintly
 &+Lof &+Rblood&+L, the acrid odor of decay long ground into its fibers.&n
 ~
-1073741833 1 0 33554432 0 0 0 0 S
-AS 0 0 -1
+1073741833 1 0 0 33554432 0 0 0 0 S
+AS 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -264,8 +264,8 @@ looks as though she has seen a hard life.  Her eyes show a great compassion
 for her animals.  She has long black hair that is shaved on the left side of
 her head, and deep penetrating blue eyes.
 ~
-1107298318 0 0 0 0 0 0 -250 S
-PH 1 2 -1
+1107298318 0 0 0 0 0 0 0 -250 S
+PH 1 2 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 2
@@ -278,8 +278,8 @@ a &+Lblack wolf&n~
 &+Land sharp &+Wwhite&+L fangs.  Its crystalline &+Bblue&+L eyes speak of deep intelligence,
 &+Lwhile its large &+Rclaws&+L denote its lethal nature.  &n
 ~
-1074006026 0 0 34078720 0 0 0 0 S
-AC 0 0 -1
+1074006026 0 0 0 34078720 0 0 0 0 S
+AC 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -293,8 +293,8 @@ a &+gp&+Ga&+Yrr&+Ro&+rt&n~
 &+Was you move.   Occassionally the bird's head disappears beneath its wings as it
 &+Wprunes itself.&n
 ~
-133258 0 0 0 0 0 0 0 S
-B 0 0 -1
+133258 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -308,8 +308,8 @@ sarn banker~
 &+cHe wears a pair of half-spectacles upon the lower bridge of his nose, and
 &+cpeers over them at you.&n
 ~
-33554442 128 0 216 0 0 67108864 1000 S
-PH 1 20480 -1
+33554442 128 0 0 216 0 0 67108864 1000 S
+PH 1 20480 0 -1
 55 -3 -95 50d100+2650 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -322,8 +322,8 @@ a &+Lmilitia &+Wguard&n~
 &+WTharnadia's&+L militia.  The serious look in his eyes shows his pride as a guard
 &+Lin the city's militia, and his dedication to defending its people.&n
 ~
-67111113 128 0 0 0 0 0 0 S
-PH 1 1 -1
+67111113 128 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -337,8 +337,8 @@ an &+Lelite &+Wguard&n~
 &+Lrespect from his men.  He bears the insignia of the &+WTharnadian&+R Elite&+L upon his
 &+Lbreastplate.&n
 ~
-100665355 128 0 8 0 0 0 0 S
-PH 1 1 -1
+100665355 128 0 0 8 0 0 0 0 S
+PH 1 1 0 -1
 53 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -356,8 +356,8 @@ a small &+rf&+Ri&+Yr&+Weliz&+Ma&+mr&+Ld~
 &+Bblue&+L.  A native to the small islands surrounding the &+WTharnadian&+L region, this
 &+Lcreature was has only recently been somewhat domesticated.&n
 ~
-1073875080 0 0 0 0 0 0 -250 S
-DK 0 0 2
+1073875080 0 0 0 0 0 0 0 -250 S
+DK 0 0 0 2
 7 18 67 7d18+73 2d3+1
 3.2.0.0 907
 8 8 0
@@ -369,8 +369,8 @@ a &+Lr&+Wa&+Lc&+Wc&+Lo&+Wo&+Ln&n~
   This mischievous little fellow is busy grooming himself.  It looks at you
 with its small glassy ebon eyes, then goes back to its chore.
 ~
-1073741832 0 0 33554432 0 0 0 0 S
-AC 0 0 -1
+1073741832 0 0 0 33554432 0 0 0 0 S
+AC 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -383,8 +383,8 @@ a &+ysquirrel&n~
 &+yseems to take no notice of you.  His fur is a deep tawny color, his bushy tail
 &+yleaning toward the &+Lebon&+y hue.&n
 ~
-1073741832 0 0 0 0 0 0 0 S
-AH 0 0 -1
+1073741832 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -397,8 +397,8 @@ hernic tastsgud jeweler~
 &+Ldressed in fine &+msilks&+L with a wide &+Mplumed&+L hat.  His &+Wsmile&+L is charming, and his
 &+Beyes&+L seem to melt away any suspicions you harbor.&n
 ~
-33556490 0 0 0 0 0 0 1000 S
-H 1 4096 -1
+33556490 0 0 0 0 0 0 0 1000 S
+H 1 4096 0 -1
 45 -1 -69 45d90+1935 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -412,8 +412,8 @@ a &+Lblack arabian mount&n~
 &+Land his mane and tail are long and full.  Long legs and a short back indicate
 &+Lgreat speed and stamina.&n
 ~
-134217738 0 0 0 0 0 0 0 S
-A 0 0 -1
+134217738 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -427,8 +427,8 @@ a magnificient medium &+ywarhorse&n~
 &+yspread evenly over his seventeen-hand frame, and his confident demeanor, speak
 &+ywell of his battle prowess and excellent training.&n
 ~
-134217736 0 0 0 0 0 0 0 S
-A 0 0 -1
+134217736 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 1
@@ -442,8 +442,8 @@ a powerful &+cv&+Co&+Wr&n~
 &+Wside of its body.  Its coat is a beautiful dappled &+ccyan&+W, highlighted with a
 &+Wdark, &+Lsmoky-&+wgray&+W on its muzzle and legs.&n
 ~
-134217738 0 0 0 0 0 0 0 S
-A 0 0 -1
+134217738 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
@@ -457,8 +457,8 @@ the powerful &+Wgri&+Yff&+yon&n~
 &+Lfeathers all along its coat hint an the presence of &+rp&+Rh&+Yo&+Wenix&+L mixed in as well.
 &+LTaken as a whole, this mighty creature would make an awesome mount indeed.&n
 ~
-134350856 0 0 671088664 0 0 0 0 S
-G 0 0 -1
+134350856 0 0 0 671088664 0 0 0 0 S
+G 0 0 0 -1
 25 11 29 25d40+325 3d5+3
 6.2.6.1 22275
 10 10 0
@@ -472,8 +472,8 @@ the &+Wbaker&n~
 &+Lwalls.  He has a giant floppy chef's &+What&+L upon his head, which makes his ears
 &+Lappear more prominent then they already are.&n
 ~
-33556490 640 0 208 0 0 0 900 S
-PH 1 2 -1
+33556490 640 0 0 208 0 0 0 900 S
+PH 1 2 0 -1
 37 2 -18 37d95+851 4d7+10
 0.1.2.2 47952
 8 8 1
@@ -486,8 +486,8 @@ the &+ctown &+Ccrier&n~
 &+Weasily understandable.  He stands here at attention, eagerly awaiting the turn
 &+Wof the hour, so he may perform his duties.&n
 ~
-33556622 640 0 0 0 0 0 1000 S
-PH 1 1 -1
+33556622 640 0 0 0 0 0 0 1000 S
+PH 1 1 0 -1
 56 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -500,8 +500,8 @@ a &+Chuman &+ymerchant&n~
 &+Lrimmed boots and a traveling &+gcloak&+L.  &+yMud&+L is caked on his lower-legs, and his
 &+Lface seems no less soiled.&n
 ~
-1073743948 0 0 0 0 0 0 0 S
-PH 1 16384 -1
+1073743948 0 0 0 0 0 0 0 0 S
+PH 1 16384 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -514,8 +514,8 @@ a &+ypeasant &+gfarmer&n~
 &+Woff the &+Yfields&+W and into town on some business.  His ruddy complexion and wide
 &+Whands bear witness to the life he has lead.&n
 ~
-2124 0 0 0 0 0 0 800 S
-PH 1 0 -1
+2124 0 0 0 0 0 0 0 800 S
+PH 1 0 0 -1
 9 18 71 9d18+31 2d3+1
 4.3.0.0 1166
 8 8 1
@@ -528,8 +528,8 @@ the &+Wbaker's&+R wife&n~
 &+Wof life.  Her wide hips and lush &+Rlips&+W, along with her four children, are
 &+Wall signs of fertility.  She is busy cleaning the house for her husband.&n
 ~
-2190 0 0 0 0 0 0 1000 S
-PH 1 0 -1
+2190 0 0 0 0 0 0 0 1000 S
+PH 1 0 0 -1
 9 18 71 9d18+31 2d3+1
 4.3.0.0 1166
 8 8 2
@@ -542,8 +542,8 @@ the &+Wbaker's &+Ckid&n~
 in his eyes.  He sticks his tongue out at you and giggles, then returns to his
 play.
 ~
-2190 0 0 0 0 0 0 1000 S
-PH 1 0 -1
+2190 0 0 0 0 0 0 0 1000 S
+PH 1 0 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
@@ -557,8 +557,8 @@ A &+Lworking &+ycommoner&n is here, sleeping after a long day at the job.
 &+yhair clinging tentatively to his scalp.  His cheeks and nose are rose colored,
 &+ypossibly from a drink or two before bed.&n
 ~
-1073744076 0 0 0 0 0 0 400 S
-PH 1 1 -1
+1073744076 0 0 0 0 0 0 0 400 S
+PH 1 1 0 -1
 7 18 77 7d21+38 2d3+1
 3.2.0.0 907
 4 5 1
@@ -572,8 +572,8 @@ a &+Cfemale &+Lcommoner&n~
 &+crising and falling with each breath she takes.  You notice that her legs
 &+care unshaven, the hair knotting up in some spots.&n
 ~
-2254 0 0 0 0 0 0 400 S
-PH 1 4096 -1
+2254 0 0 0 0 0 0 0 400 S
+PH 1 4096 0 -1
 14 15 55 14d23+56 2d5+2
 7.5.2.0 6804
 4 5 2
@@ -585,8 +585,8 @@ a &+Cmale &+Lworker&n~
    Wearing the simple clothing of a working peasant, this man looks physically
 exhausted.  He looks back at you, curiosity coloring his ruddy complexion.
 ~
-2062 0 0 0 0 0 0 800 S
-PH 1 1 -1
+2062 0 0 0 0 0 0 0 800 S
+PH 1 1 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -600,8 +600,8 @@ very tired from a long day's work.  She looks at you with a mixture of
 curiosity and annoyance.  You almost ask her if she whores for a living, but
 decide against it.
 ~
-1073743886 128 0 0 0 0 0 800 S
-PH 1 32 -1
+1073743886 128 0 0 0 0 0 0 800 S
+PH 1 32 0 -1
 18 13 42 18d33+108 3d4+2
 9.7.3.0 8748
 8 8 2
@@ -614,8 +614,8 @@ an &+Wold &+Bman&n~
 &+Lhow much longer he is bound to this &+yearth&+L.  His &+Whair&+L falls away in wisps, and
 &+Lhe wears the &+Wgrin&+L of senility upon his &+Rlips&+L.&n
 ~
-14 0 0 0 0 0 0 800 S
-PH 1 8 -1
+14 0 0 0 0 0 0 0 800 S
+PH 1 8 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -629,8 +629,8 @@ the &+rdangerous&n looking &+Lrogue&n~
 &+Lsay he is waiting for someone.  He appears very jumpy, and snarls at you every
 &+Lso often.&n
 ~
-1073743884 0 0 128 0 0 0 -1000 S
-PH 1 16384 -1
+1073743884 0 0 0 128 0 0 0 -1000 S
+PH 1 16384 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -643,8 +643,8 @@ a &+Lshady &+ymercenary&n~
 &+Lcustomer, with big arms and a well muscled physique.  He squints at you, then
 &+Lhawks a large &+Ywad&+L of &+Wspit&+L in your direction.&n
 ~
-2124 0 0 0 0 0 0 -500 S
-PH 1 16384 -1
+2124 0 0 0 0 0 0 0 -500 S
+PH 1 16384 0 -1
 14 15 55 14d27+84 2d5+2
 7.5.2.0 6804
 8 8 1
@@ -657,8 +657,8 @@ the &+Lshady &+Cyouth&n~
 &+Land corrupt.  You can't help but think that in two years time he'll either be
 &+Ldead or in prison.&n
 ~
-2124 0 0 0 0 0 0 -200 S
-PH 1 1 -1
+2124 0 0 0 0 0 0 0 -200 S
+PH 1 1 0 -1
 5 20 83 5d17+27 1d5+0
 3.1.0.0 648
 8 8 1
@@ -671,8 +671,8 @@ a jailor~
 &+Lall business.  His stern gaze alone is enough to elicit respect from his men.
 &+LHe bears the insignia of the &+WTharnadian&+L court upon his tunic.&n
 ~
-100665354 640 0 8 0 0 0 800 S
-PH 1 2 -1
+100665354 640 0 0 8 0 0 0 800 S
+PH 1 2 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -685,8 +685,8 @@ Although he bears the emblems of a city militia guard, his happy-go-lucky
 expression and drunken nature do not do much for his aura of respect.  His
 cheeks have taken on a reddish hue due to all the alcohol in his system.
 ~
-67110986 640 0 0 0 0 0 1000 S
-PH 1 8 -1
+67110986 640 0 0 0 0 0 0 1000 S
+PH 1 8 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -699,8 +699,8 @@ a &+Bhonor &+Wguard&n~
 has taken residency here to rest his weary bones.  He looks at you, smiles,
 and turns back to his copy of 'Modern Guardsman'.
 ~
-1174538312 128 0 33554604 30 0 0 1000 S
-PH 1 2 -1
+1174538312 128 0 0 33554604 30 0 0 1000 S
+PH 1 2 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -713,8 +713,8 @@ a &+ystray dog&n~
 &+yaround his teeth.  Its coat is knotted and covered in muck, having obviously
 &+y been on its own a long time.&n
 ~
-1073744072 0 0 0 0 0 0 -200 S
-AC 0 0 -1
+1073744072 0 0 0 0 0 0 0 -200 S
+AC 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 1
@@ -727,8 +727,8 @@ a &+Lstray cat&n~
 &+yaround his teeth.  Its coat is knotted and covered in muck, having obviously
 &+y been on its own a long time.&n
 ~
-262344 0 0 0 0 0 0 -200 S
-A 0 0 -1
+262344 0 0 0 0 0 0 0 -200 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 1
@@ -742,8 +742,8 @@ the &+bbailiff&n~
 &+LObviously he is used to dealing with the most violent criminals Tharnadia has
 &+Lto offer.&n
 ~
-1174407179 0 0 56 2049 0 0 0 S
-PH 1 1 -1
+1174407179 0 0 0 56 2049 0 0 0 S
+PH 1 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -758,8 +758,8 @@ the &+RHigh Justice&n of &+WTharnadia&n~
 &+cunblinded truth.  She wears as flaming &+rred&+c robe, a &+Lblack&+c glove on her left
 &+chand, and a &+Wwhite&+c glove on her right.&n
 ~
-1174407179 0 0 56 2049 0 0 0 S
-PH 1 512 -1
+1174407179 0 0 0 56 2049 0 0 0 S
+PH 1 512 0 -1
 50 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 2
@@ -771,8 +771,8 @@ the &+gbartender&n~
 &+g   Dressed in gross looking clothes, and producing a dreadful stench, most
 &+gpeople would be careful in accepting a drink from this dangerous looking man.&n
 ~
-33556490 0 0 0 0 0 0 -1000 S
-PH 1 16 -1
+33556490 0 0 0 0 0 0 0 -1000 S
+PH 1 16 0 -1
 48 -3 -78 48d119+2640 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -784,8 +784,8 @@ a &+Lfilthy &+ydrunk&n~
    He is probably a homeless person who gathered enough money together to
 drink himself into a stupor, and get thrown in the hole for it.
 ~
-143 0 0 0 0 0 0 400 S
-PH 1 0 -1
+143 0 0 0 0 0 0 0 400 S
+PH 1 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -798,8 +798,8 @@ a &+gsc&+Gu&+Ym&+Wb&+wa&+Lg &+ydrunk&n~
 &+Ldrink himself into a stupor.  His breath reaks, and his hygene habits send
 &+Lyour eyes tearing.  You want to get as far from this guy as mortally possible.&n
 ~
-14 0 0 0 0 0 0 400 S
-PH 1 0 -1
+14 0 0 0 0 0 0 0 400 S
+PH 1 0 0 -1
 2 20 93 2d15+7 1d5+0
 1.0.0.0 259
 8 8 1
@@ -810,8 +810,8 @@ a &+Wwaiter&n~
 ~
 &+c   Wearing loose fitting clothes, he looks like a very peaceful fellow.&n
 ~
-33556490 640 0 0 0 0 0 600 S
-PH 1 1 -1
+33556490 640 0 0 0 0 0 0 600 S
+PH 1 1 0 -1
 43 -1 -62 43d107+1935 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -823,8 +823,8 @@ the bartender~
 &+M   Wearing a magenta jumpsuit, this man looks very friendly.  Despite his
 &+Mtaste in clothing, he looks tough enough to handle himself in a rough spot.&n
 ~
-100665358 0 0 0 0 0 0 0 S
-PH 1 1 -1
+100665358 0 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 41 -1 -56 41d107+1845 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -835,8 +835,8 @@ the &+Wwaiter&n~
 ~
   Dressed very formally, this fellow looks like a rather stuck up person.
 ~
-67110927 0 0 0 0 0 0 0 S
-PH 1 1 -1
+67110927 0 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -849,8 +849,8 @@ a &+Wmilitia &+Lguard&n~
 guarding over the hustle and bustle of the bazaar. His gaze continuously
 shifts from side to side, looking for trouble.
 ~
-67110989 640 0 0 0 0 0 1000 S
-PH 1 2 -1
+67110989 640 0 0 0 0 0 0 1000 S
+PH 1 2 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -862,8 +862,8 @@ an old lady~
    Wearing ragged garments and thick boots, she appears to be nearly thousand
 years old.  Her eyes hold a deep wisdom that penetrates her soul.
 ~
-2062 0 0 0 0 0 0 1000 S
-H 1 0 -1
+2062 0 0 0 0 0 0 0 1000 S
+H 1 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -875,8 +875,8 @@ the &+Cyoung&+W woman&n~
 &+W   Wearing a common dress with her &+Yblonde&+W hair pulled back functionally, this
 &+Cyoung &+Wwoman appears to be about twenty to twenty five years of age.&n
 ~
-2254 0 0 0 0 0 0 1000 S
-PH 1 0 -1
+2254 0 0 0 0 0 0 0 1000 S
+PH 1 0 0 -1
 16 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 8 8 2
@@ -888,8 +888,8 @@ the &+Lcommoner&n~
 &+M   Dressed in the clothes of a lower to middle class citizen, this working
 &+Mfellow looks as though he's an honest man.&n
 ~
-2254 640 0 0 0 0 0 1000 S
-PH 1 0 -1
+2254 640 0 0 0 0 0 0 1000 S
+PH 1 0 0 -1
 16 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -902,8 +902,8 @@ a &+mpeddler&n~
 woman looks as though she knows how to wheel and deal.  She grins at you
 insanely as she occaisonally pats your ass with the flat of her hand.
 ~
-33556494 0 0 0 0 0 0 500 S
-PH 1 1 -1
+33556494 0 0 0 0 0 0 0 500 S
+PH 1 1 0 -1
 41 -1 -56 41d107+1845 6d6+12
 1.7.6.3 99630
 8 8 2
@@ -917,8 +917,8 @@ a &+Lgiant tarantula&n~
 &+Lhairs, which hide sharp serrated hooks.  Its mandibles clack lowly, in
 &+Lanticipation of a feast.&n
 ~
-1073743882 1 0 524288 0 0 0 0 S
-AS 0 1 -1
+1073743882 1 0 0 524288 0 0 0 0 S
+AS 0 1 0 -1
 13 15 58 13d27+78 2d5+2
 0.0.0.0 6318
 8 8 0
@@ -929,8 +929,8 @@ the &+mreceptionist&n~
 ~
    You notice a tired look in her face. She beams a pretty smile at you!
 ~
-2058 0 0 0 0 0 0 900 S
-PH 1 32 -1
+2058 0 0 0 0 0 0 0 900 S
+PH 1 32 0 -1
 11 15 64 11d25+55 2d5+2
 5.4.1.0 5346
 8 8 2
@@ -941,8 +941,8 @@ A tavern patron is singing here, drunk out of his mind.
 ~
    A drunk who seems to be too happy, and carrying too much money.
 ~
-14 0 0 0 0 0 0 400 S
-PH 1 0 -1
+14 0 0 0 0 0 0 0 400 S
+PH 1 0 0 -1
 2 20 93 2d15+7 1d5+0
 1.0.0.0 259
 8 8 1
@@ -954,8 +954,8 @@ a &+Lhomeless &+cpeasant&n~
    He looks as though he hasn't eaten in days, without the means to buy
 so much as a bread loaf.
 ~
-2060 0 0 0 0 0 0 400 S
-PH 1 0 -1
+2060 0 0 0 0 0 0 0 400 S
+PH 1 0 0 -1
 1 20 96 1d15+4 1d5+0
 1.0.0.0 129
 8 8 2
@@ -967,8 +967,8 @@ brinn shopkeeper smith warrior~
    His arms are coated with grime and carbon from endless hours over his
 forge.  His features are very hard and chiseled.
 ~
-33556494 0 0 208 0 0 0 0 S
-PH 1 1 -1
+33556494 0 0 0 208 0 0 0 0 S
+PH 1 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 2
@@ -979,8 +979,8 @@ a warrior in training~
 ~
    Large for a human, this man's ego far out surpasses his fighting skill.
 ~
-2060 640 0 0 0 0 0 250 S
-PH 1 1 -1
+2060 640 0 0 0 0 0 0 250 S
+PH 1 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -994,8 +994,8 @@ Faith.  His duty is to protect the faithful from persecution and infidel
 attacks and his religious devotion combined with his superior skill makes him
 a deadly opponent.
 ~
-67110922 640 0 24 0 0 0 800 S
-PH 1 8 -1
+67110922 640 0 0 24 0 0 0 800 S
+PH 1 8 0 -1
 27 8 13 27d65+351 3d6+4
 8.3.7.1 24057
 8 8 1
@@ -1007,8 +1007,8 @@ a young &+Ccleric&n~
 &+WDressed in thick white hooded robes, her long hair and look of deep peace
 &+Win her eyes, shows her deep conviction to her faith.
 ~
-2204 0 0 0 0 0 0 1000 S
-PH 1 32 -1
+2204 0 0 0 0 0 0 0 1000 S
+PH 1 32 0 -1
 9 18 71 9d19+40 2d3+1
 4.3.0.0 1166
 8 8 2
@@ -1020,8 +1020,8 @@ jelian shopkeeper~
    He is a very old looking man, probably in his seventies, with hundreds of
 spidery lines crossing his cracked and weathered face.
 ~
-33556490 0 0 216 0 0 0 0 S
-PH 1 32 -1
+33556490 0 0 0 216 0 0 0 0 S
+PH 1 32 0 -1
 35 6 -12 35d77+560 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -1033,8 +1033,8 @@ a &+ccommoner&n~
    Wearing the simple clothes of a working man, he is rather ordinary in most
 respects, and carefully avoids your gaze.
 ~
-2124 0 0 0 0 0 0 0 S
-PH 1 0 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 1 0 0 -1
 7 18 77 7d18+24 2d3+1
 3.2.0.0 907
 8 8 1
@@ -1046,8 +1046,8 @@ a &+mwoman&n~
    Dressed in a simple garment, she smiles warmly at you as she makes her way
 across &+WTharnadia&n.
 ~
-2124 0 0 0 0 0 0 0 S
-PH 1 0 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 1 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 2
@@ -1063,8 +1063,8 @@ yelling about his religious craze.
    '&+RSTOP THE MADNESS!  Befriend the Evils!  They are our wayward brothers!&n' he
 commences to set himself ablaze.&n
 ~
-72 0 0 0 1 0 0 500 S
-PH 1 32 -1
+72 0 0 0 0 1 0 0 500 S
+PH 1 32 0 -1
 15 15 51 15d25+75 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -1075,8 +1075,8 @@ the &+Lbeggar&n~
 ~
    The beggar looks like she is fed up with life.
 ~
-2060 0 0 0 0 0 0 400 S
-PH 1 0 -1
+2060 0 0 0 0 0 0 0 400 S
+PH 1 0 0 -1
 1 20 96 1d15+4 1d5+0
 1.0.0.0 129
 8 8 2
@@ -1088,8 +1088,8 @@ a &+Lcontroller~
    The controller is alert and ready to prevent mischief and arrest those who
 break the laws of the city.
 ~
-100665418 640 0 216 0 0 0 1000 S
-PH 1 1 -1
+100665418 640 0 0 216 0 0 0 1000 S
+PH 1 1 0 -1
 36 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -1102,8 +1102,8 @@ a &+Lblack panther&n~
 &+Lfeline has eyes of &+Ggreen&+L fire.  Its massive paws neatly hide the fearsome
 &+Lclaws underneath, and its fur is as black as the night.&n
 ~
-264200 0 0 524320 0 0 0 0 S
-A 0 0 -1
+264200 0 0 0 524320 0 0 0 0 S
+A 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 0
@@ -1115,8 +1115,8 @@ a &+Ltough &+ymercenary&n~
    Standing about five ten with bulging muscles and a tough look about his
 features, this one appears to have survived many a fight.
 ~
-1073743948 0 0 0 0 0 0 0 S
-PH 1 16384 -1
+1073743948 0 0 0 0 0 0 0 0 S
+PH 1 16384 0 -1
 21 11 32 21d47+210 3d5+3
 4.0.5.0 18711
 8 8 1
@@ -1128,8 +1128,8 @@ a &+Lbattle &+rscarred &+ymercenary&n~
    &+yMany scars and nicks mark the tough looking skin of this mercenary, who
 &+yobviously knows his way around with a sword.&n
 ~
-1073743948 128 0 8 0 0 0 0 S
-PH 1 16384 -1
+1073743948 128 0 0 8 0 0 0 0 S
+PH 1 16384 0 -1
 27 8 13 27d65+351 3d6+4
 8.3.7.1 24057
 8 8 1
@@ -1141,8 +1141,8 @@ A &+Lpoor&n looking &+Ccommoner&n is standing here, wearing a mean expression.
    Very poor looking, though with lean muscles and a mean glare, this commoner
 looks to have survived many a rough time in his life.
 ~
-2125 0 0 0 0 0 0 0 S
-PH 1 0 -1
+2125 0 0 0 0 0 0 0 0 S
+PH 1 0 0 -1
 12 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -1155,8 +1155,8 @@ a slutty whore~
 perfumes, this female looks very much her profession.  She isn't exactly
 unattractive, but something about her is very gross.
 ~
-2252 0 0 0 0 0 0 0 S
-PH 1 0 -1
+2252 0 0 0 0 0 0 0 0 S
+PH 1 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 2
@@ -1168,8 +1168,8 @@ a &+Lhomeless &+Cchild&n~
    Dressed in rags and looking very miserable, this poor child is obviously
 starving.  He looks so pathetic that you just have to feel sorry for him.
 ~
-204 0 0 0 0 0 0 0 S
-PH 1 0 -1
+204 0 0 0 0 0 0 0 0 S
+PH 1 0 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
@@ -1180,8 +1180,8 @@ a &+ylarge rat&n~
 ~
    &+yIt looks slimy and gross, with &+Lgrey&+y skin and &+rred&+y eyes.&n
 ~
-200 0 0 0 0 0 0 0 S
-A 1 0 -1
+200 0 0 0 0 0 0 0 0 S
+A 1 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -1193,8 +1193,8 @@ a &+yhuge rat&n~
    &+yStanding nearly a foot high at the shoulder and three feet long, this
 &+yhuge rat looks very dangerous.&n
 ~
-200 0 0 0 0 0 0 0 S
-AC 1 0 -1
+200 0 0 0 0 0 0 0 0 S
+AC 1 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -1206,8 +1206,8 @@ a rogue in training~
    Very young looking and prideful looking, this assassin is obviously not
 fully trained.
 ~
-2124 0 0 0 0 0 0 -350 S
-PH 1 8192 -1
+2124 0 0 0 0 0 0 0 -350 S
+PH 1 8192 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -1219,8 +1219,8 @@ the &+Lshop&+rke&+Rep&+Wer&n~
    Dressed rather casually for such a dark and evil place, the look in this
 woman's eye is strong and fierce.  She obviously fears nothing and no one.
 ~
-33556494 0 0 0 0 0 0 -1000 S
-PH 1 16384 -1
+33556494 0 0 0 0 0 0 0 -1000 S
+PH 1 16384 0 -1
 39 2 -24 39d95+897 4d7+10
 2.2.3.2 50544
 8 8 2
@@ -1236,8 +1236,8 @@ chastity lafey shopkeeper~
 &+LHer long &+Yblonde&+L hair falls in cascades around her face, framing her &+Bazure&+L eyes
 &+Land aqualine nose.&n
 ~
-33556490 640 0 24 0 0 0 0 S
-PH 1 8 -1
+33556490 640 0 0 24 0 0 0 0 S
+PH 1 8 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 2
@@ -1253,8 +1253,8 @@ facial blemishes.
    '&+RDid you get yer ticket from the bartender?  I don't do this for free&n,' she
 says throatily.
 ~
-2190 0 0 0 0 0 0 -670 S
-PH 1 4096 -1
+2190 0 0 0 0 0 0 0 -670 S
+PH 1 4096 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 2
@@ -1266,8 +1266,8 @@ a &+yshitting &+Cyouth&n~
 &+L   His face is bright &+Rred&+L, and he is hunched over as if trying to conceil
 &+Lsomething.  He is busy &+ycrapping&+L.&n
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 17 13 45 17d30+85 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -1280,8 +1280,8 @@ a &+Lgrim &+ymercenary&n~
 &+Lfeatures, this one appears to have survived many a fight.  He is hunched over
 &+La table planning something with his comrades.&n
 ~
-1140852814 0 0 0 0 0 0 0 S
-PH 1 16384 -1
+1140852814 0 0 0 0 0 0 0 0 S
+PH 1 16384 0 -1
 34 6 -8 34d83+578 4d6+7
 8.9.0.2 44064
 8 8 1
@@ -1294,8 +1294,8 @@ tarn bloodblade outlaw~
 &+Lobviously knows his way around with a sword.  He looks at you with the icy
 &+Lstare of hatred, and spits in your direction.&n
 ~
-1107298382 640 0 8 0 0 0 0 S
-PH 1 16384 -1
+1107298382 640 0 0 8 0 0 0 0 S
+PH 1 16384 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -1309,8 +1309,8 @@ walking about with the aire of snobbery.  His nose points delicately toward
 the sky, he carries one hand on his hip and the other pinky raised in the air.
 He glances at you, snorts and averts his gaze.
 ~
-100665420 0 0 0 0 0 0 0 S
-PH 1 512 -1
+100665420 0 0 0 0 0 0 0 0 S
+PH 1 512 0 -1
 37 2 -18 37d64+777 4d7+10
 0.1.2.2 47952
 8 8 1
@@ -1324,8 +1324,8 @@ her nails painted a deep fusia.  She pouts her lips with the practiced skill
 of an actress, and walks with a slight sway to her hips.  She carries a small
 camisol and has a bonnet upon her head.
 ~
-33556686 0 0 0 0 0 0 0 S
-PH 1 2048 -1
+33556686 0 0 0 0 0 0 0 0 S
+PH 1 2048 0 -1
 36 2 -15 36d64+756 4d7+10
 0.1.2.2 46656
 8 8 2
@@ -1338,8 +1338,8 @@ a &+Lstreet &+Wsweeper&n~
 &+Wfreedom and redemption.  He looks as if hes been singing for a few years, but
 &+Wit hasn't changed the fact that he sweeps up other peoples crap for a living.&n
 ~
-2248 0 0 0 0 0 0 900 S
-PH 1 0 -1
+2248 0 0 0 0 0 0 0 900 S
+PH 1 0 0 -1
 4 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 1
@@ -1352,8 +1352,8 @@ a &+Lcat burglar&n~
 &+Lthe perfect thief.  His strong arms and piercing eyes give away just how
 &+Ldangerous this rogue must be.&n
 ~
-1073743949 4 0 524296 0 0 0 -900 S
-PH 1 16384 -1
+1073743949 4 0 0 524296 0 0 0 -900 S
+PH 1 16384 0 -1
 25 6 -8 34d83+578 4d6+7
 8.9.0.2 44064
 8 8 1
@@ -1366,8 +1366,8 @@ a &+Wmilitia &+Rarcher&n~
 guarding over the hustle and bustle of the city gates. His gaze continuously
 shifts from side to side, looking for trouble.
 ~
-100665423 640 0 0 0 0 0 1000 S
-PH 1 2 -1
+100665423 640 0 0 0 0 0 0 1000 S
+PH 1 2 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -1380,8 +1380,8 @@ a &+Lmilitia &+Wguard&n~
 &+WTharnadia's&+L militia.  The serious look in his eyes shows his pride as a guard
 &+Lin the city's militia, and his dedication to defending its people.&n
 ~
-67111113 640 0 0 0 0 0 0 S
-PH 1 1 -1
+67111113 640 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -1393,8 +1393,8 @@ mailman postmaster master postal~
 &+w   Just a skinny and tall man, he has no really distinguishing features, other&N
 &+wthan numerous paper cuts upon both hands.&N
 ~
-33556554 0 0 88 0 0 0 0 S
-G 1 512 -1
+33556554 0 0 0 88 0 0 0 0 S
+G 1 512 0 -1
 60 -1 -69 45d90+1935 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -1405,8 +1405,8 @@ A fast talking auctioneer stands behind the podium.
 ~
 Slightly portly, and a tad short, this man appears jovial enough.
 ~
-33622026 0 0 570499320 47325 0 0 0 S
-PH 1 1 -1
+33622026 0 0 0 570499320 47325 0 0 0 S
+PH 1 1 0 -1
 61 -1 -100 100d100+7500 10d10+50
 5.9.8.4 10
 8 8 1
@@ -1417,8 +1417,8 @@ The doctor on duty reads a current medical journal.
 ~
 She may be a doctor, but she means business.
 ~
-33622107 0 0 536944888 47325 0 0 1000 S
-PH 1 256 -1
+33622107 0 0 0 536944888 47325 0 0 1000 S
+PH 1 256 0 -1
 61 0 -100 100d100+7500 10d10+30
 3.3.3.3 10
 8 8 2
@@ -1432,8 +1432,8 @@ a magnificient medium &+ywarhorse&n~
 &+yspread evenly over his seventeen-hand frame, and his confident demeanor, speak
 &+ywell of his battle prowess and excellent training.&n
 ~
-134217736 0 0 0 0 0 0 0 S
-A 0 0 -1
+134217736 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 1
@@ -1447,8 +1447,8 @@ the powerful &+Wgri&+Yff&+yon&n~
 &+Lfeathers all along its coat hint an the presence of &+rp&+Rh&+Yo&+Wenix&+L mixed in as well.
 &+LTaken as a whole, this mighty creature would make an awesome mount indeed.&n
 ~
-134350856 0 0 671088664 0 0 0 0 S
-G 0 0 -1
+134350856 0 0 0 671088664 0 0 0 0 S
+G 0 0 0 -1
 25 11 29 25d40+325 3d5+3
 6.2.6.1 22275
 10 10 0
@@ -1462,8 +1462,8 @@ a powerful &+cv&+Co&+Wr&n~
 &+Wside of its body.  Its coat is a beautiful dappled &+ccyan&+W, highlighted with a
 &+Wdark, &+Lsmoky-&+wgray&+W on its muzzle and legs.&n
 ~
-134217738 0 0 0 0 0 0 0 S
-A 0 0 -1
+134217738 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
@@ -1477,8 +1477,8 @@ a &+Lblack arabian mount&n~
 &+Land his mane and tail are long and full.  Long legs and a short back indicate
 &+Lgreat speed and stamina.&n
 ~
-134217738 0 0 0 0 0 0 0 S
-A 0 0 -1
+134217738 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -1492,8 +1492,8 @@ a &+gp&+Ga&+Yrr&+Ro&+rt&n~
 &+Was you move.   Occassionally the bird's head disappears beneath its wings as it
 &+Wprunes itself.&n
 ~
-133258 0 0 0 0 0 0 0 S
-B 0 0 -1
+133258 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -1506,8 +1506,8 @@ a &+Lblack wolf&n~
 &+Land sharp &+Wwhite&+L fangs.  Its crystalline &+Bblue&+L eyes speak of deep intelligence,
 &+Lwhile its large &+Rclaws&+L denote its lethal nature.  &n
 ~
-1074006026 0 0 34078720 0 0 0 0 S
-AC 0 0 -1
+1074006026 0 0 0 34078720 0 0 0 0 S
+AC 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -1525,8 +1525,8 @@ a small &+rf&+Ri&+Yr&+Weliz&+Ma&+mr&+Ld~
 &+Bblue&+L.  A native to the small islands surrounding the &+WTharnadian&+L region, this
 &+Lcreature was has only recently been somewhat domesticated.&n
 ~
-1073875080 0 0 0 0 0 0 -250 S
-DK 0 0 2
+1073875080 0 0 0 0 0 0 0 -250 S
+DK 0 0 0 2
 7 18 67 7d18+73 2d3+1
 3.2.0.0 907
 8 8 0
@@ -1538,8 +1538,8 @@ a &+Lr&+Wa&+Lc&+Wc&+Lo&+Wo&+Ln&n~
   This mischievous little fellow is busy grooming himself.  It looks at you
 with its small glassy ebon eyes, then goes back to its chore.
 ~
-1073741832 0 0 33554432 0 0 0 0 S
-AC 0 0 -1
+1073741832 0 0 0 33554432 0 0 0 0 S
+AC 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -1552,8 +1552,8 @@ a &+Lblack panther&n~
 &+Lfeline has eyes of &+Ggreen&+L fire.  Its massive paws neatly hide the fearsome
 &+Lclaws underneath, and its fur is as black as the night.&n
 ~
-264200 0 0 524320 0 0 0 0 S
-A 0 1 -1
+264200 0 0 0 524320 0 0 0 0 S
+A 0 1 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 0
@@ -1567,8 +1567,8 @@ clerk justice~
 &+cHe hold in one hand a large book bound with iron and in the other a beautiful
 &+ceagle quill. He is here to take care of all the justice paper work.
 ~
-100665419 0 0 168 2077 0 0 0 S
-PH 1 32 -1
+100665419 0 0 0 168 2077 0 0 0 S
+PH 1 32 0 -1
 50 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -1581,8 +1581,8 @@ a &+Lmilitia &+Wguard&n~
 &+LCaer Tannad's&+w militia.  The look in his eyes shows his pride as a guard in the
 &+wkeep's militia, and his dedication to defending its people.&n
 ~
-67111115 128 0 0 0 0 0 0 S
-PH 1 1 -1
+67111115 128 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 26 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -1596,8 +1596,8 @@ pacing the room when things become too slow.  Unlike his brother Zehrim,
 he doesn't enjoy being indoors all day long and longs for the battles of
 his youth.
 ~
-2122 0 0 0 0 0 0 1000 S
-PH 1 2 -1
+2122 0 0 0 0 0 0 0 1000 S
+PH 1 2 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1610,8 +1610,8 @@ malrik illusionist master teacher~
 &+Lhair flows past sinister mishapen shoulders.  Cloaked in a mysterious robe that&N
 &+Lseems to flicker into and out of sight.&N
 ~
-231626 0 0 268509436 14529 0 0 1000 S
-PH 1 4194304 -1
+231626 0 0 0 268509436 14529 0 0 1000 S
+PH 1 4194304 0 -1
 56 6 -12 35d56+525 4d6+7
 9.9.1.2 1
 8 8 1
@@ -1627,8 +1627,8 @@ za zaberetornaz shopkeeper keeper~
 &+Lmassive shoulders.  He seems to be a &+bmerchant &+Lof some kind, peddling his wares&N
 &+Lto any that have the money to buy them.&N
 ~
-1108769354 0 0 2416541884 309450 84148224 9970176 0 S
-PH 1 65 3
+1108769354 0 0 0 2416541884 309450 84148224 9970176 0 S
+PH 1 65 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1643,8 +1643,8 @@ illusionist~
 &+Wto protect the towns citizens from the increasing number of raids by
 &+Wevil illusionists.
 ~
-1174550602 2432 0 704643128 0 0 67108864 0 S
-PH 0 4194305 3
+1174550602 2432 0 0 704643128 0 0 67108864 0 S
+PH 0 4194305 0 3
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1655,8 +1655,8 @@ human alchemist~
 ~
 'What can I get for you?'
 ~
-10 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+10 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1666,8 +1666,8 @@ thief hunter~
 &+wA &+Wtharnadian&+L thief-hunter&+w watches over the town streets intently.&n
 ~
 ~
-1073743880 384 0 24 0 0 67108864 1000 S
-PH 0 8 -1
+1073743880 384 0 0 24 0 0 67108864 1000 S
+PH 0 8 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1683,8 +1683,8 @@ kieta shopkeeper~
 &+LHer long &+Yblonde&+L hair falls in cascades around her face, framing her &+Bazure&+L eyes
 &+Land aqualine nose.&n
 ~
-33556490 640 0 24 0 0 0 0 S
-PH 0 8 -1
+33556490 640 0 0 24 0 0 0 0 S
+PH 0 8 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 2
@@ -1697,8 +1697,8 @@ Although he bears the emblems of a city militia guard, his happy-go-lucky
 expression and drunken nature do not do much for his aura of respect.  His
 cheeks have taken on a reddish hue due to all the alcohol in his system.
 ~
-67110986 640 0 0 0 0 0 1000 S
-PH 1 8 -1
+67110986 640 0 0 0 0 0 0 1000 S
+PH 1 8 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -1712,8 +1712,8 @@ an &+Lelite &+Wguard&n~
 &+Lrespect from his men.  He bears the insignia of the &+WTharnadian&+R Elite&+L upon his
 &+Lbreastplate.&n
 ~
-100665355 128 0 8 0 0 0 0 S
-PH 1 1 -1
+100665355 128 0 0 8 0 0 0 0 S
+PH 1 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -1727,8 +1727,8 @@ an &+Lelite &+Wguard&n~
 &+Lrespect from his men.  He bears the insignia of the &+WTharnadian&+R Elite&+L upon his
 &+Lbreastplate.&n
 ~
-100665355 128 0 8 0 0 0 0 S
-PH 1 1 -1
+100665355 128 0 0 8 0 0 0 0 S
+PH 1 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -1742,8 +1742,8 @@ an &+Lelite &+Wguard&n~
 &+Lrespect from his men.  He bears the insignia of the &+WTharnadian&+R Elite&+L upon his
 &+Lbreastplate.&n
 ~
-100665355 128 0 8 0 0 0 0 S
-PH 1 1 -1
+100665355 128 0 0 8 0 0 0 0 S
+PH 1 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -1753,8 +1753,8 @@ ticket handler~
 &+yThe ferry &+Wticket&+y handler stands here, checking his list.&n
 ~
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1764,8 +1764,8 @@ thief hunter~
 &+wA &+Wtharnadian&+L thief-hunter&+w patrols the ship here vigilantly.&n
 ~
 ~
-1073743880 384 0 24 0 0 67108864 1000 S
-PH 0 8 -1
+1073743880 384 0 0 24 0 0 67108864 1000 S
+PH 0 8 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1778,8 +1778,8 @@ a &+ydock &+Lguard&n~
 guarding over the hustle and bustle of the city docks. His gaze continuously
 shifts from side to side, looking for trouble.
 ~
-67110989 640 0 0 0 0 0 1000 S
-PH 0 2 -1
+67110989 640 0 0 0 0 0 0 1000 S
+PH 0 2 0 -1
 41 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -1793,8 +1793,8 @@ an &+Lelite &+Wguard&n~
 &+Lrespect from his men.  He bears the insignia of the &+WTharnadian&+R Elite&+L upon his
 &+Lbreastplate.&n
 ~
-100665355 128 0 8 0 0 0 0 S
-PH 0 1 -1
+100665355 128 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -1804,8 +1804,8 @@ young soldier~
 &+yA young &+Lsoldier&+y sells out his services.&n
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 500
 8 8 0
@@ -1815,8 +1815,8 @@ young mercenary~
 &+yA young mercenary has been hired out here.&n
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 1500
 8 8 0
@@ -1826,8 +1826,8 @@ experienced tracker~
 &+yAn &+Lexperienced&+y tracker has sold his services out.&n
 ~
 ~
-8 0 0 402653272 0 0 0 0 S
-PH 0 2 -1
+8 0 0 0 402653272 0 0 0 0 S
+PH 0 2 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 4500
 8 8 1
@@ -1837,8 +1837,8 @@ veteran soldier~
 &+yA veteran &+Lsoldier&+y has been hired out.&n
 ~
 ~
-8 0 0 268435472 2048 0 33562624 0 S
-PH 0 1 -1
+8 0 0 0 268435472 2048 0 33562624 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 15000
 8 8 1
@@ -1848,8 +1848,8 @@ elite mercenary experienced~
 &+LAn &+Welite&+L and experienced &+ymercenary&+L has been hired here.&n
 ~
 ~
-8 0 0 134217880 2049 0 1024 0 S
-PH 0 16384 -1
+8 0 0 0 134217880 2049 0 1024 0 S
+PH 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 45000
 8 8 1
@@ -1876,8 +1876,8 @@ his round melon head.  He pauses in his writing and looks up at you.
 &+Lyou want a map?  I may have those, too&n,' Kabanon winks then looks back at his
 pad.
 ~
-100698120 0 0 33554432 0 0 0 0 S
-PH 1 4 -1
+100698120 0 0 0 33554432 0 0 0 0 S
+PH 1 4 0 -1
 45 -1 -69 45d99+1980 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -1888,8 +1888,8 @@ the &+Wswan&n~
 ~
    &+WThe white swan is very elegant, with long neck and regal bill.&n
 ~
-2058 0 0 0 0 0 0 1000 S
-A 0 0 -1
+2058 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -1902,8 +1902,8 @@ the &+gma&+Wl&+Llard&n~
 &+Bwhite collar.  This is not the first time you have felt envious of its
 &+Bwonderful markings.&n
 ~
-10 0 0 0 0 0 0 1000 S
-A 0 0 -1
+10 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -1915,8 +1915,8 @@ the &+ysparrow&n~
    &+yThe sparrow looks like it is enjoying life.  If it had hands, you could
 &+yimagine it holding a cigarette and a beer.&
 ~
-131273 0 0 0 0 0 0 1000 S
-B 0 0 -1
+131273 0 0 0 0 0 0 0 1000 S
+B 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -1927,8 +1927,8 @@ the &+Yduck&n~
 ~
    &+YThe duck is quite fat, its feet barely visible as it waddles around here.&n
 ~
-72 0 0 0 0 0 0 1000 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -1940,8 +1940,8 @@ a &+Lsquirrel&n~
    &+LWith black fur and a busy tail, this creature chitters nervously as you
 &+Lapproach.&n
 ~
-1073744072 0 0 0 0 0 0 1000 S
-A 0 0 -1
+1073744072 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -1953,8 +1953,8 @@ a &+wrabbit&n~
    Small with grey fur, this little guy is busy looking for food.  If not for
 those sharp teeth he would actually look quite timid.
 ~
-72 0 0 0 0 0 0 1000 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -1965,8 +1965,8 @@ a &+ychipmunk&n~
 ~
    &+yVery small with tiny eyes and a little tail, it looks very harmless.&n
 ~
-72 0 0 0 0 0 0 1000 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -1980,8 +1980,8 @@ a &+ymesa &+Lscorpion&n~
 &+ythe soft abdomen of its owner's prey.  Its &+Lebon-polished&+y shell smells faintly
 &+yof &+Rblood&+y, the acrid odor of decay long ground into its fibers.&n
 ~
-9 0 0 33554432 0 0 0 0 S
-AS 0 0 -1
+9 0 0 0 33554432 0 0 0 0 S
+AS 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -1994,8 +1994,8 @@ a &+Lmilitia &+Wguard&n~
 &+LCaer Tannad's&+w militia.  The look in his eyes shows his pride as a guard in the
 &+wkeep's militia, and his dedication to defending its people.&n
 ~
-67111113 128 0 0 0 0 0 0 S
-PH 1 1 -1
+67111113 128 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 35 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -2009,8 +2009,8 @@ an &+Lelite &+Wkeepguard&n~
 &+wrespect from his men.  He bears the insignia of the &+LCaer Tannad&+R Elite&+w upon
 &+whis breastplate.&n
 ~
-67110923 128 0 8 0 0 0 1000 S
-PH 1 1 -1
+67110923 128 0 0 8 0 0 0 1000 S
+PH 1 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -2023,8 +2023,8 @@ kyle englis~
 &+Lall business.  His hard gaze alone is enough to elicit respect from his men.
 &+LHe bears the insignia of the &+WTharnadian&+L court upon his tunic.&n
 ~
-67110922 640 0 73964 12480 0 0 -1000 S
-G 1 1 -1
+67110922 640 0 0 73964 12480 0 0 -1000 S
+G 1 1 0 -1
 50 -3 -85 50d119+3000 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -2037,8 +2037,8 @@ a &+ydock &+Lguard&n~
 guarding over the hustle and bustle of the city docks. His gaze continuously
 shifts from side to side, looking for trouble.
 ~
-67110989 640 0 0 0 0 0 1000 S
-PH 1 2 -1
+67110989 640 0 0 0 0 0 0 1000 S
+PH 1 2 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -2051,8 +2051,8 @@ a &+ggrounds &+Gkeeper&n~
 &+gsings songs to his god to occupy himself.  He looks about twenty years old,
 &+gand has a warm smile and gentle demeanor.&n
 ~
-2248 0 0 0 0 0 0 900 S
-PH 1 2 -1
+2248 0 0 0 0 0 0 0 900 S
+PH 1 2 0 -1
 4 20 87 4d17+22 1d5+0
 2.1.0.0 518
 8 8 1
@@ -2065,8 +2065,8 @@ a &+Wmilitia &+Rarcher&n~
 guarding over the hustle and bustle of the city gates. His gaze continuously
 shifts from side to side, looking for trouble.
 ~
-100673615 640 0 0 0 0 0 1000 S
-PH 1 2 -1
+100673615 640 0 0 0 0 0 0 1000 S
+PH 1 2 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -2079,8 +2079,8 @@ a &+Lmilitia &+Wguard&n~
 &+LCaer Tannad's&+w militia.  The look in his eyes shows his pride as a guard in the
 &+wkeep's militia, and his dedication to defending its people.&n
 ~
-67111113 640 0 0 0 0 0 0 S
-PH 1 1 -1
+67111113 640 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -2093,8 +2093,8 @@ a &+Ldungeon jailor&n~
 &+Lall business.  His hard gaze alone is enough to elicit respect from his men.
 &+LHe bears the insignia of the &+WTharnadian&+L court upon his tunic.&n
 ~
-67110938 640 0 8 0 0 0 800 S
-PH 1 2 -1
+67110938 640 0 0 8 0 0 0 800 S
+PH 1 2 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -2109,8 +2109,8 @@ alanan sorcerer master teacher~
 &+Ldeformed shoulders.  It seems that magic and age have taken their toll on this&N
 &+Lmystical &+Cs&+co&+Cu&+cl&+L.&N
 ~
-231626 0 0 268509436 14529 0 0 1000 S
-PH 1 512 -1
+231626 0 0 0 268509436 14529 0 0 1000 S
+PH 1 512 0 -1
 56 6 -12 35d56+525 4d6+7
 9.9.1.2 1
 8 8 1
@@ -2123,8 +2123,8 @@ khira conjurer master teacher~
 &+Lher impressive storehouse of spells.  Tall and statuesque, she is actually&N
 &+Lquite beautiful.&N
 ~
-100554 0 0 73980 2048 0 0 1000 S
-PH 1 2048 -1
+100554 0 0 0 73980 2048 0 0 1000 S
+PH 1 2048 0 -1
 50 6 -12 10d10+15000 4d6+7
 9.9.1.2 1
 8 8 2
@@ -2137,8 +2137,8 @@ Dressed in a fine black robes, Aryan is here preparing a display
 of items available for purchase in this store.  Aryan welcomes
 you into his establishment with a smile.
 ~
-67802 0 0 73980 14528 0 0 1000 S
-PH 1 1 -1
+67802 0 0 0 73980 14528 0 0 1000 S
+PH 1 1 0 -1
 50 6 -12 35d56+525 4d6+7
 9.9.1.2 1
 8 8 1
@@ -2152,8 +2152,8 @@ attempts to get a brief period of rest.  This tired soul is asleep
 on a bed covered with quilts.  The tired soul twitches in a jerky
 manner in his sleep.
 ~
-2250 0 0 73836 12480 0 0 1000 S
-PH 1 1 -1
+2250 0 0 0 73836 12480 0 0 1000 S
+PH 1 1 0 -1
 41 -1 -56 41d107+1845 6d6+12
 1.7.6.3 99630
 4 4 1
@@ -2168,8 +2168,8 @@ his next voyage across the seas.  With a book in hand, he scribbles
 down notes.  The seaman has a dark blue tattoo on his arm and stands
 over six feet tall.
 ~
-2250 0 0 73768 12480 0 0 750 S
-PH 1 4 -1
+2250 0 0 0 73768 12480 0 0 750 S
+PH 1 4 0 -1
 36 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -2183,8 +2183,8 @@ zehrim ranger master teacher~
 &+gHe has dedicated his life to spreading his skills and ways of life to initiates&N
 &+ginto the &+Granger &+gfield.&N
 ~
-67209418 0 0 285810728 14528 0 0 1000 S
-PH 1 2 -1
+67209418 0 0 0 285810728 14528 0 0 1000 S
+PH 1 2 0 -1
 51 -3 -95 50d119+2750 6d6+25
 0.3.1.5 1
 8 8 1
@@ -2198,8 +2198,8 @@ attempts to get a brief period of rest.  This tired soul is tosses
 and turns on a bed covered with quilts.  The citizen consistantly
 mumbles about the presence of unwelcomed visitors.
 ~
-2250 0 0 73836 12480 0 0 -400 S
-PH 1 1 -1
+2250 0 0 0 73836 12480 0 0 -400 S
+PH 1 1 0 -1
 39 2 -24 39d95+897 4d7+10
 2.2.3.2 50544
 5 5 1
@@ -2213,8 +2213,8 @@ final preparations within this shop for occupancy by a mage
 shopkeeper.  Kyrtan is a tall man with dark brown hair. He has
 a strange scar below his right eye.
 ~
-67786 0 0 16851048 14528 0 0 -1000 S
-PH 1 1 -1
+67786 0 0 0 16851048 14528 0 0 -1000 S
+PH 1 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 1
 8 8 1
@@ -2230,8 +2230,8 @@ melmba redeemed theurgist _teacher_~
 &+LIn a recent revelation, &+BMelmba &+Lhas been redeemed by the celestial powers and
 &+Lbrought into the revered force of theurgists by &+WS&+Cen&+Wi&+L, the planeswalking &+cE&+Cl&+Wadr&+Ci&+cn&+L.&n
 ~
-100554 0 0 268509244 276672 0 0 1000 S
-PH 1 134217728 -1
+100554 0 0 0 268509244 276672 0 0 1000 S
+PH 1 134217728 0 -1
 52 -5 -101 52d88+4316 7d6+30
 7.9.5.6 1
 8 8 2
@@ -2245,8 +2245,8 @@ appearing bored.  He appears to be an anti-paladin who has been
 behind these bars for a long time. He mumbles to himself and
 turns to face you as the cell bars swing open.
 ~
-2250 0 0 73736 12288 0 0 -1000 S
-PH 1 16 -1
+2250 0 0 0 73736 12288 0 0 -1000 S
+PH 1 16 0 -1
 36 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -2260,8 +2260,8 @@ appearing bored.  He appears to be an anti-paladin who has been
 behind these bars for a long time. He mumbles to himself and
 turns to face you as the cell bars swing open.
 ~
-2250 0 0 73736 12288 0 0 -1000 S
-PH 1 1 -1
+2250 0 0 0 73736 12288 0 0 -1000 S
+PH 1 1 0 -1
 36 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -2286,8 +2286,8 @@ again, on another adventure.  Hearing your approach he turns and smiles warmly,
 	&+Wdon't have any instruments you can &+Ysearch&+W one out of my &+Ybag&+W,
 	&+Wthe more the merrier!"&n
 ~
-34826 384 0 0 0 0 0 0 S
-PF 7 32768 -1
+34826 384 0 0 0 0 0 0 0 S
+PF 7 32768 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2319,8 +2319,8 @@ He pauses for a second looking at you intently.
 	&+Wfact, &+Ygive me your sword or dagger&+W, and I'll see if I
 	&+Wcan sharpen it a bit for you.
 ~
-34826 384 0 0 0 0 0 0 S
-PM 5 1 -1
+34826 384 0 0 0 0 0 0 0 S
+PM 5 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2343,8 +2343,8 @@ and muttering something you can't quite catch.  Upon noticing you he stops and b
 
 With that, the frustrated monk continues his pacing and mumbling.
 ~
-32778 384 0 0 0 0 0 0 S
-PH 0 64 -1
+32778 384 0 0 0 0 0 0 0 S
+PH 0 64 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2359,8 +2359,8 @@ over and over again.  It is hard to tell if the adult in charge of supervising
 these children is simply out, or if they made a break for the peaceful
 tranquility of the countryside.
 ~
-10 0 0 0 0 0 0 0 S
-PF 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PF 0 1 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2376,8 +2376,8 @@ a never-ending game of tag, chasing each other in an endless spiral.  As he runs
 he strikes the same 2 chords repeatedly on his miniature mandolin, grinning and
 cheering incessently, as if he'd discovered some clever rhythm.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2392,8 +2392,8 @@ blowing random notes through her lyre.  Occasionally she stops her playing to la
 and shout at her comrades, but the brevity of her music breaks serves only to make
 your head ache even more when she begins again.
 ~
-10 0 0 0 0 0 0 0 S
-PE 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PE 0 1 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2430,8 +2430,8 @@ Suddenly his warm smiles fades as he begins to speak again.
 	&+Wto grab &+Ysomething to eat&n.  After a few more I might check and see if the
 	&+Wkitchen is still open."&n
 ~
-34826 384 0 0 0 0 0 0 S
-PB 0 16384 -1
+34826 384 0 0 0 0 0 0 0 S
+PB 0 16384 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2466,8 +2466,8 @@ He sighs again, then seems to perk up while studying you.
 	&+Ydesk&+W for an unused book I could use.  If you could do that for me I'd be only too happy
 	&+Wto give you the smaller book I conjured, and even autograph it for you!"&n
 ~
-34826 384 0 0 0 0 0 0 S
-PG 0 2048 -1
+34826 384 0 0 0 0 0 0 0 S
+PG 0 2048 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2486,8 +2486,8 @@ Should you &+Yhelp&n him, or put him out of his misery?  As you contemplate what
 to do, the halfling's eyes widen as he notices you for the first time, and
 scrutinizes you to determine if you are friend or foe.
 ~
-34842 384 0 0 0 0 0 0 S
-PF 0 4096 -1
+34842 384 0 0 0 0 0 0 0 S
+PF 0 4096 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2523,8 +2523,8 @@ as green as the forest foliage, she sees your approach and smiles warmly.
 	&+Wdon't hesitate to &+Yask me&+W about &+Ydruids&+W, different &+Yraces&+W,
 	&+Wor anything else you would like to know!"&n
 ~
-34826 384 0 0 0 0 0 0 S
-CT 0 128 -1
+34826 384 0 0 0 0 0 0 0 S
+CT 0 128 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2554,8 +2554,8 @@ The &+Rgnome&n slaps himself in the forehead.
 	&+Wbut I'll hang around another few days just to make sure my services are
 	&+Wno longer needed."&n
 ~
-34826 384 0 0 0 0 0 0 S
-PG 0 524288 -1
+34826 384 0 0 0 0 0 0 0 S
+PG 0 524288 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2570,8 +2570,8 @@ support such attire and company.  As he hears your approach he regards you
 suspiciously, and orders his guards to draw their swords in case you mean to
 cause him harm.
 ~
-2058 384 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 384 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2585,8 +2585,8 @@ he is paid to protect.  The massive two-handed claymore he wields glints in the 
 light, and the blade combined with his obvious strength leaves little doubt that you
 do not want to fight him if it is avoidable.
 ~
-1140852746 384 0 0 0 0 0 0 S
-PB 0 1 -1
+1140852746 384 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2618,8 +2618,8 @@ She grins at you mischievously.
 	&+Wto buy some bread with to last a week or so.  I hate to beg though, so I'll give you
 	&+Wone of my practice wands in return."&n
 ~
-34826 384 0 0 0 0 0 0 S
-PG 0 512 -1
+34826 384 0 0 0 0 0 0 0 S
+PG 0 512 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2641,8 +2641,8 @@ gives you a slight nod.
 	&+Wwonder where he made off to.  Nobody else has seen him, so I suspect he found a nice
 	&+Wsoft place to take a nap.  If you happen upon him please bring him back to me."&n
 ~
-36874 384 0 0 0 0 0 0 S
-PE 0 2 -1
+36874 384 0 0 0 0 0 0 0 S
+PE 0 2 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

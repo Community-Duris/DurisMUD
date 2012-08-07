@@ -1040,6 +1040,15 @@ int justice_send_guards(int to_rroom, P_char victim, int type, int how_many)
   int      i, town;
   int      hunt_type;
   hunt_data data;
+  int ht = CHAR_IN_TOWN(victim);
+
+  // Only good hts get guards atm.
+  if( ht <= 0 || ht > LAST_HOME
+    || !IS_SET( hometowns[ht-1].flags, JUSTICE_GOODHOME ))
+  {
+    wizlog(56, "Justice: %s not in good ht %d; no guards dispensed.", GET_NAME(victim), ht );
+    return FALSE;
+  }
 
   if ((to_rroom == NOWHERE) && !victim)
     return FALSE;
@@ -1116,6 +1125,10 @@ int justice_send_guards(int to_rroom, P_char victim, int type, int how_many)
     else
       hunt_type = HUNT_JUSTICE_SPECROOM;
   }
+
+  // Can comment this out later.
+  wizlog(56, "Justice: Dispatching %d guard(s) for %s.", how_many, 
+    GET_NAME(victim) );
 
   /* now send them out! */
   while (how_many)

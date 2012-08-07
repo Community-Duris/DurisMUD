@@ -59,11 +59,6 @@ D2
 ~
 ~
 0 0 132715
-D3
-   The great city gates of Tharnadia lie to the west.
-~
-~
-0 0 132503
 S
 #132503
 &+GOutside the Eastern City Gates&n~
@@ -80,7 +75,7 @@ D1
    This road leads away from Tharnadia to the east.
 ~
 ~
-0 0 132502
+0 0 570424
 D3
    The gates are heavily fortified and made from iron.
 ~
@@ -13810,7 +13805,7 @@ iron gate gates~
 D2
 ~
 ~
-0 0 133058
+0 0 570823
 E
 gate gates iron~
    The gates are enormous, made from bound planks of thick iron.  They look
@@ -13858,10 +13853,6 @@ east and west. The road continues north toward the city gates, and
 south towards the open road.
 ~
 1325 134250564 2 0
-D0
-~
-~
-0 0 133056
 D2
 ~
 ~
@@ -13976,10 +13967,6 @@ D0
 ~
 ~
 0 0 133063
-D2
-~
-~
-0 0 570823
 S
 #133065
 Inside the Northern Gates~
@@ -14016,7 +14003,7 @@ S
 D0
 ~
 ~
-0 0 133067
+0 0 570023
 D2
 ~
 gate gates northern~
@@ -14036,10 +14023,6 @@ D0
 ~
 ~
 0 0 133068
-D2
-~
-~
-0 0 133066
 S
 #133068
 The Road Leading Away From Tharnadia~
@@ -14089,10 +14072,6 @@ east and west. The road continues south toward the city gates, and
 north towards the open road.
 ~
 1325 142639168 2 0
-D0
-~
-~
-0 0 570023
 D2
 ~
 ~
