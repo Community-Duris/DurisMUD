@@ -1813,13 +1813,13 @@ return;
     return;
 
 
-  //Original Justice 
+  /*Original Justice 
   if (!justice_send_guards(NOWHERE, ch, MOB_SPEC_J_OUTCAST,
                            (MAX(11, GET_LEVEL(ch)) / 11) + 1))
    {
-    //return;
+    return;
    }
-
+*/
 
 
 
@@ -1853,10 +1853,10 @@ return;
     if (!number(0, 2))
       justice_send_guards(NOWHERE, ch, MOB_SPEC_J_OUTCAST, 1);
   
-    /*if((GET_RACEWAR(ch) == RACEWAR_EVIL) &&
+    if((GET_RACEWAR(ch) == RACEWAR_EVIL) &&
         !(number(0, 15)) &&
         get_property("justice.alarms.good", 1.000))
-    */
+    
     if(GET_RACEWAR(ch) == RACEWAR_EVIL)
     { 
       int rnum = number(1, 4);

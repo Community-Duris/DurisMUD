@@ -1948,21 +1948,22 @@ void do_yell(P_char ch, char *argument, int cmd)
         if (IS_MAP_ROOM(ch->in_room) && 
             calculate_map_distance(ch->in_room, i->character->in_room) > range)
           continue;
-
+/*
         if (racewar(ch, i->character))
         {
           act("$n shouts something but you can't understand.", FALSE, ch, 0,
               i->character, TO_VICT);
         }
         else
-        {
+*/
+        //{
           sprintf(Gbuf1, "$n shouts %s'%s'",
               language_known(ch, i->character), language_CRYPT(ch,
                 i->
                 character,
                 argument));
           act(Gbuf1, 0, ch, 0, i->character, TO_VICT | ACT_SILENCEABLE);
-        }
+        //}
         /* zone to zone method */
       }
     }
