@@ -62,6 +62,8 @@ long      new_exp_table[TOTALLVLS];
 long     global_exp_limit;
 
 void     checkPeriodOfFame(P_char ch, char killer[1024]);
+void     advance_skillpoints( P_char ch );
+void     demote_skillpoints( P_char ch );
 
 #if 0
 #   define READ_TITLE(ch) (GET_SEX(ch) == SEX_MALE ?   \
@@ -609,7 +611,12 @@ void advance_level(P_char ch)
   }
   
   /* level out skills */
+#ifdef SKILLPOINTS
+  advance_skillpoints( ch );
+#else
   update_skills(ch);
+#endif
+
 
   if (GET_LEVEL(ch) == 21 && !IS_NEWBIE(ch) ) {
     REMOVE_BIT(ch->specials.act2, PLR2_NCHAT);
@@ -694,7 +701,11 @@ void lose_level(P_char ch)
   ch->player.level = MAX(1, ch->player.level - 1);
   sql_update_level(ch);
 
+#ifdef SKILLPOINTS
+  demote_skillpoints(ch);
+#else
   update_skills(ch);
+#endif
 
   if (GET_LEVEL(ch) < MINLVLIMMORTAL)
     for (i = 0; i < 3; i++)

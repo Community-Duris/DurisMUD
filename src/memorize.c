@@ -61,6 +61,7 @@ extern int is_wearing_necroplasm(P_char);
 void     event_memorize(P_char, P_char, P_obj, void *);
 void     event_scribe(P_char, P_char, P_obj, void *);
 void     affect_to_end(P_char ch, struct affected_type *af);
+void     prac_all_spells(P_char ch);
 
 char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH],
   Gbuf3[MAX_STRING_LENGTH];
@@ -1024,7 +1025,8 @@ void handle_memorize(P_char ch)
         if (book_class(ch) &&
           !(SpellInSpellBook(ch, af->modifier, SBOOK_MODE_IN_INV +
                                                SBOOK_MODE_AT_HAND + 
-                                               SBOOK_MODE_ON_BELT)))
+                                               SBOOK_MODE_ON_BELT + 
+                                               SBOOK_MODE_ON_GROUND)))
         {
           send_to_char("You have managed to misplace your spellbook!\n", ch);
           show_stop_memorizing(ch);
@@ -1385,7 +1387,8 @@ void do_memorize(P_char ch, char *argument, int cmd)
                   (circle == 2) ? "nd" : (circle == 3) ? "rd" :
                   "th", skills[af->modifier].name, 
                   book_class(ch) ? (SpellInSpellBook(ch, af->modifier,
-                  (SBOOK_MODE_IN_INV+SBOOK_MODE_AT_HAND+SBOOK_MODE_ON_BELT)) ? "" : "  [not in spell book]") : "");
+                  (SBOOK_MODE_IN_INV+SBOOK_MODE_AT_HAND+SBOOK_MODE_ON_BELT
+                   +SBOOK_MODE_ON_GROUND)) ? "" : "  [not in spell book]") : "");
         }
       }
     }
@@ -1435,7 +1438,7 @@ void do_memorize(P_char ch, char *argument, int cmd)
       {
         sbook = SpellInSpellBook(ch, first_to_mem,
                                  SBOOK_MODE_IN_INV + SBOOK_MODE_AT_HAND +
-                                 SBOOK_MODE_ON_BELT);
+                                 SBOOK_MODE_ON_BELT + SBOOK_MODE_ON_GROUND);
         send_to_char("You continue your study.\n", ch);
         strcpy(Gbuf1, "$n opens $p and begins studying it intently.");
       }
@@ -1474,7 +1477,8 @@ void do_memorize(P_char ch, char *argument, int cmd)
 
   if (book_class(ch))
   {
-    sbook = SpellInSpellBook(ch, spl, SBOOK_MODE_IN_INV + SBOOK_MODE_AT_HAND + SBOOK_MODE_ON_BELT);
+    sbook = SpellInSpellBook(ch, spl, SBOOK_MODE_IN_INV + SBOOK_MODE_AT_HAND
+      + SBOOK_MODE_ON_BELT + SBOOK_MODE_ON_GROUND);
   }
 
   circle = get_spell_circle(ch, spl);
@@ -1835,7 +1839,7 @@ P_obj FindSpellBookWithSpell(P_char ch, int spl, int mode)
 {
   P_obj    foo, foo2;
 
-  if( foo = find_gh_library_book_obj(ch) )
+  if( (foo = find_gh_library_book_obj(ch)) && IS_SET(mode, SBOOK_MODE_ON_GROUND))
   {
     return foo;
   }
@@ -2244,6 +2248,16 @@ void do_scribe(P_char ch, char *arg, int cmd)
     return;
   }
   arg = skip_spaces(arg);
+
+  // Added the scribe all option
+  if( !str_cmp(arg, "all") )
+  {
+    send_to_char( "Scribing all spells:\n", ch );
+    // This requires a check for the book in the room of knowledge.
+    prac_all_spells(ch);
+    return;
+  }
+
   spl = old_search_block(arg, 0, strlen(arg), (const char **) spells, 0);
   if (spl != -1)
     spl--;
