@@ -95,9 +95,9 @@ const int allowed_secondary_classes[CLASS_COUNT + 1][5] = {
  {-1}, 
  
   {CLASS_MERCENARY, CLASS_CLERIC, CLASS_PSIONICIST, -1},      /* War */
-  {CLASS_WARRIOR, CLASS_DRUID, -1},              /* Ran */
+  {CLASS_WARRIOR, CLASS_DRUID, CLASS_ROGUE, -1},              /* Ran */
   {-1},                         		              /* Psi */
-  {CLASS_WARRIOR, -1},          		              /* Pal */
+  {CLASS_WARRIOR, -1},          		      /* Pal */
   {CLASS_WARRIOR, -1},          		              /* APa */
   {CLASS_DRUID, CLASS_BARD, CLASS_WARRIOR, CLASS_SHAMAN, -1}, /* Cle */
   {-1},                        	 		              /* Mon */
