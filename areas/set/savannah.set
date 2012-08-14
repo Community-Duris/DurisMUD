@@ -1,8 +1,8 @@
 alias er edit room
 alias ee edit room
 set MainZoneName savannah
-set lastcommand w
-set startroom 138583
+set lastcommand ed r
+set startroom 138584
 set menuprompt &+GYour choice, O mighty Ike? &N
 set objaffect true
 set IsMapZone true
