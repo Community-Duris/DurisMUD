@@ -2572,11 +2572,13 @@ void enter_game(P_desc d)
 
   send_offline_messages(ch);
 
+/*
 if(d->character->player.time.played <  10000000  && !IS_TRUSTED(d->character))
   {
   perform_eq_wipe(ch);
   ch->player.time.played = 10000000;
   }
+*/
  
 }
 
