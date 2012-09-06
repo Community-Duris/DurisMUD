@@ -863,7 +863,8 @@ bool set_ship_physical_layout(P_ship ship)
     ship->bridge = SHIP_ROOM_NUM(ship, 0);
     ship->entrance = SHIP_ROOM_NUM(ship, ship->entrance);
     name_ship_rooms(ship);
-// LOHRR - SET ROOM HERE.
+
+    // Set entrance to/exit from zone to ship to zone here.
     if( ship == zone_ship )
     {
       int to_room = real_room( ZONE_SHIP_ZONE_ENTRANCE );
