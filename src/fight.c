@@ -8219,7 +8219,7 @@ int calculate_attacks(P_char ch, int attacks[])
       // else
         num_atts -= MIN(num_atts - 1, (int) ((IS_CARRYING_W(ch) - 30) / 10));
 
-      if (!number(0, 4))
+      //if (!number(0, 4))
         send_to_char("&+LYou feel weighed down, which is causing you to lose attacks.&n\r\n", ch);
     }
 

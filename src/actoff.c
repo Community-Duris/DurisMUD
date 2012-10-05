@@ -6364,7 +6364,7 @@ void maul(P_char ch, P_char victim)
   else if(percent_chance == TAKEDOWN_PENALTY)
   {
     SET_POS(ch, POS_SITTING + GET_STAT(ch));
-    CharWait(ch, (int) (PULSE_VIOLENCE * 2));
+    CharWait(ch, (PULSE_VIOLENCE * 2));
     return;
   }
   else
@@ -6374,19 +6374,19 @@ void maul(P_char ch, P_char victim)
   ch_size = get_takedown_size(ch);
   
   dam = dice(MIN(30, GET_LEVEL(ch)), 6) *
-    (int) (get_property("skill.maul.damfactor", 1.000));
+    (get_property("skill.maul.damfactor", 1.000));
   
   if (GET_SPEC(ch, CLASS_BERSERKER, SPEC_MAULER))
     dam *= 1.5;
   
   percent_chance = (int) (percent_chance * 
-    (int) (get_property("skill.maul.hitchance", 1.000)));
+    (get_property("skill.maul.hitchance", 1.000)));
  
   if(IS_AFFECTED(victim, AFF_AWARE))
-    percent_chance = (int) (percent_chance * 0.84);
+    percent_chance = (percent_chance * 0.84);
     
   if(IS_ELITE(ch) || GET_SPEC(ch, CLASS_BERSERKER, SPEC_MAULER))
-    percent_chance = (int) (percent_chance * 1.25);
+    percent_chance = (percent_chance * 1.25);
 
   if(GET_POS(victim) != POS_STANDING)
     percent_chance = 0;
@@ -6400,7 +6400,7 @@ void maul(P_char ch, P_char victim)
     !GET_SPEC(ch, CLASS_BERSERKER, SPEC_MAULER))
   {
     send_to_char("You are fighting something else! Nevertheless, you attempt the maul...\n", ch);
-    percent_chance = (int) (percent_chance * 0.7);
+    percent_chance = (percent_chance * 0.7);
   }
 
   if((has_innate(victim, INNATE_HORSE_BODY) ||
@@ -6433,7 +6433,7 @@ void maul(P_char ch, P_char victim)
     }
     
     SET_POS(ch, POS_SITTING + GET_STAT(ch));
-    CharWait(ch, (int) (PULSE_VIOLENCE * 
+    CharWait(ch, (PULSE_VIOLENCE * 
       get_property("skill.maul.failedmaul.lag", 1.500)));
 
   }
@@ -6460,7 +6460,7 @@ void maul(P_char ch, P_char victim)
     }
     
     SET_POS(ch, POS_SITTING + GET_STAT(ch));
-    CharWait(ch, (int) (PULSE_VIOLENCE * 
+    CharWait(ch, (PULSE_VIOLENCE * 
       get_property("skill.maul.failedmaul.lag", 1.500)));
   }
   else if(percent_chance > percentroll)
@@ -6476,23 +6476,23 @@ void maul(P_char ch, P_char victim)
 
     SET_POS(victim, POS_KNEELING + GET_STAT(victim));
 
-    if((percent_chance / 5) > percentroll && !IS_STUNNED(victim))
+   // if((percent_chance / 5) > percentroll && !IS_STUNNED(victim))
          // Stun(victim, ch, PULSE_VIOLENCE, TRUE); //removing stun from maul - should not be better than regular takedown
     
     if(GET_SPEC(ch, CLASS_BERSERKER, SPEC_MAULER) ||
        IS_ELITE(ch))
     { 
-      CharWait(victim, (int) (PULSE_VIOLENCE * 1.200));
-      CharWait(ch, (int) (PULSE_VIOLENCE * 1.800));
-      set_short_affected_by(ch, SKILL_BASH, (int) (PULSE_VIOLENCE * 
-        get_property("skill.maul.IsMauler.ShieldBashlag", 1.800)));
+      CharWait(victim, (PULSE_VIOLENCE * 1.200));
+      CharWait(ch, (PULSE_VIOLENCE * 1.800));
+      set_short_affected_by(ch, SKILL_BASH, (PULSE_VIOLENCE * 
+        get_property("skill.maul.IsMauler.ShieldBashlag", 2.000)));
     }
     else
     {
-      CharWait(victim, (int) (PULSE_VIOLENCE * 1.000));
-      CharWait(ch, (int) (PULSE_VIOLENCE * 2.000));
-      set_short_affected_by(ch, SKILL_BASH, (int) (PULSE_VIOLENCE * 
-        get_property("skill.maul.IsNotMauler.ShieldBashlag", 2.000)));
+      CharWait(victim, (PULSE_VIOLENCE * 1.000));
+      CharWait(ch, (PULSE_VIOLENCE * 2.000));
+      set_short_affected_by(ch, SKILL_BASH, (PULSE_VIOLENCE * 
+        get_property("skill.maul.IsNotMauler.ShieldBashlag", 2.200)));
     }
     
     melee_damage(ch, victim, dam, PHSDAM_TOUCH, 0);
@@ -6516,7 +6516,7 @@ void maul(P_char ch, P_char victim)
       FALSE, ch, 0, victim, TO_CHAR);
     SET_POS(ch, POS_KNEELING + GET_STAT(ch));
 
-    CharWait(ch, (int) (PULSE_VIOLENCE * 
+    CharWait(ch, (PULSE_VIOLENCE * 
       get_property("skill.maul.failedmaul.lag", 1.500)));
   }
 }
