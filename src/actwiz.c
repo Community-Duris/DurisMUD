@@ -145,6 +145,7 @@ extern const char *spldam_types[];
 extern const char *craftsmanship_names[];
 extern int number_of_quests;
 extern struct quest_data quest_index[];
+extern const struct hold_data hold_index[];
 
 void apply_zone_modifier(P_char ch);
 static P_char load_locker_char(P_char ch, char *locker_name, int bValidateAccess);
@@ -4830,7 +4831,7 @@ int rolls[8];
       total += rolls[i];
     }
   } while (total != 8*75);
-
+/*
   ch->base_stats.Str = ch->curr_stats.Str = rolls[0];
   ch->base_stats.Dex = ch->curr_stats.Dex = rolls[1];
   ch->base_stats.Agi = ch->curr_stats.Agi = rolls[2];
@@ -4839,6 +4840,17 @@ int rolls[8];
   ch->base_stats.Int = ch->curr_stats.Int = rolls[5];
   ch->base_stats.Wis = ch->curr_stats.Wis = rolls[6];
   ch->base_stats.Cha = ch->curr_stats.Cha = rolls[7];
+*/
+  ch->base_stats.Str = ch->curr_stats.Str = 85;
+  ch->base_stats.Dex = ch->curr_stats.Dex = 85;
+  ch->base_stats.Agi = ch->curr_stats.Agi = 85;
+  ch->base_stats.Con = ch->curr_stats.Con = 85;
+  ch->base_stats.Pow = ch->curr_stats.Pow = 85;
+  ch->base_stats.Int = ch->curr_stats.Int = 85;
+  ch->base_stats.Wis = ch->curr_stats.Wis = 85;
+  ch->base_stats.Cha = ch->curr_stats.Cha = 85;
+
+  //drannak working
   ch->base_stats.Karma = ch->curr_stats.Karma = number(50, 110); //  These two rolls are invisible
   ch->base_stats.Luck = ch->curr_stats.Luck = number(50, 110);   //  to players during creation on purpose - Jexni
 
