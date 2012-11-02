@@ -1071,6 +1071,9 @@ void show_visual_status(P_char ch, P_char tar_char)
       IS_AFFECTED2(tar_char, AFF2_GLOBE))
     SVS("&+r$E's encased in a shimmering globe!");
 
+   if (IS_AFFECTED5(tar_char, AFF5_DECAYING_FLESH))
+    SVS("&nTheir &+rflesh &nappears to be &+gdec&+Gay&+ging &nrapidly!");
+
   if (IS_AFFECTED3(tar_char, AFF3_SPIRIT_WARD) ||
       IS_AFFECTED3(tar_char, AFF3_GR_SPIRIT_WARD))
     SVS("&+W$E's surrounded by a diffuse globe of light!");
