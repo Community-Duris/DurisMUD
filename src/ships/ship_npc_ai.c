@@ -461,7 +461,9 @@ bool NPCShipAI::find_new_target()
     int i = 0;
     if (ship == cyrics_revenge)
     {
-        for (i = 0; i < contacts_count; i++) 
+       return false; //disabling aggro
+/* 
+	for (i = 0; i < contacts_count; i++) 
         {
             if (!IS_NPC_SHIP(contacts[i].ship))
                 continue;
@@ -496,7 +498,7 @@ bool NPCShipAI::find_new_target()
             }
             if (is_valid_target(contacts[i].ship))
                 goto found;
-        }
+        } */
     }
     else
     {

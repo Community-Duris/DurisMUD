@@ -584,16 +584,17 @@ void bard_healing(int l, P_char ch, P_char victim, int song)
   int healed, old_hits = GET_HIT(ch);
 
   healed = l * 3 * number(40, 80) / 100;
+  //spell_heal(l, ch, 0, 0, victim, NULL);
+  heal(victim, ch, healed , GET_MAX_HIT(victim) - number(1, 4));
+   act("&+WYour body feels restored by the power of $n's soothing song!", FALSE, ch, 0, victim, TO_VICT);
+  if(ch == victim)
+  {
+    act("&+WYour body feels restored by the power of your soothing song!", FALSE, ch, 0, victim, TO_CHAR);
+  }
 
-//  if (IS_THRIKREEN(victim)) healed >>= 1;
+
+  update_pos(victim);
   
-  if(GET_HIT(ch) < GET_MAX_HIT(ch))
-    GET_HIT(ch) = MIN(GET_MAX_HIT(ch), healed + GET_HIT(ch));
-
-
-  if (old_hits < GET_HIT(ch))
-    send_to_char("You are soothed by the power of music!\r\n", ch);
-  update_pos(ch);
 
    if(GET_SPEC(ch, CLASS_BARD, SPEC_MINSTREL))
   {
@@ -622,24 +623,7 @@ void bard_healing(int l, P_char ch, P_char victim, int song)
       affect_from_char(ch, SPELL_SILENCE);
     }
   }
-
-  if(ch->group)
-  {
-    for (struct group_list *gl = ch->group; gl; gl = gl->next)
-    {
-      if(ch != gl->ch && gl->ch->in_room == ch->in_room)
-      {
-        if( GET_HIT(gl->ch) < GET_MAX_HIT(gl->ch) )
-        {
-          heal(gl->ch, ch, healed, GET_MAX_HIT(gl->ch) - number(1,4));
-          send_to_char("You are soothed by the power of music!\r\n", ch);
-          update_pos(gl->ch);
-          //send_to_char("&+WA warm feeling of peace fills your body.\n", gl->ch);
-        }
-      }
-    }
-  }
-
+  
 
 }
 
