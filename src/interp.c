@@ -2323,7 +2323,7 @@ void assign_command_pointers(void)
   // old guildhalls (deprecated)
 //  CMD_N(CMD_SACK, STAT_NORMAL + POS_STANDING, do_sack, 25);
   CMD_N(CMD_FRAGLIST, STAT_DEAD + POS_PRONE, displayFragList, 0);
-//  CMD_N(CMD_HARDCORE, STAT_DEAD + POS_PRONE, displayHardCore, 0);
+  CMD_N(CMD_HARDCORE, STAT_DEAD + POS_PRONE, displayHardCore, 0);
 //  CMD_N(CMD_RELIC, STAT_DEAD + POS_PRONE, displayRelic, 0);
   CMD_N(CMD_EPIC, STAT_DEAD + POS_PRONE, do_epic, 0);
   CMD_N(CMD_NEXUS, STAT_DEAD + POS_PRONE, do_nexus, 0);
