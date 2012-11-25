@@ -55,6 +55,7 @@ struct allowed_race_spec_struct {
 	{RACE_HUMAN, CLASS_ETHERMANCER, SPEC_ALL},
 	{RACE_HUMAN, CLASS_THEURGIST,   SPEC_ALL},
  	{RACE_HUMAN, CLASS_MONK,        SPEC_ALL},
+	{RACE_HUMAN, CLASS_NECROMANCER, SPEC_ALL},
 	/* End Human Options */
 
 	/* Start Barbarian Options */
@@ -130,6 +131,7 @@ struct allowed_race_spec_struct {
 	{RACE_GNOME, CLASS_CONJURER,    SPEC_ALL},
 	{RACE_GNOME, CLASS_MERCENARY,   SPEC_ALL},
        {RACE_GNOME, CLASS_ANTIPALADIN, SPEC_ALL},
+       {RACE_GNOME, CLASS_NECROMANCER, SPEC_ALL},
 	/* End Gnome Options */
 
 	/* Start Ogre Options */
@@ -182,6 +184,7 @@ struct allowed_race_spec_struct {
         {RACE_ORC, CLASS_REAVER,        SPEC_SHOCK_REAVER},
         {RACE_ORC, CLASS_REAVER,        SPEC_FLAME_REAVER},
 	{RACE_ORC, CLASS_ETHERMANCER,   SPEC_ALL},
+	{RACE_ORC, CLASS_NECROMANCER,   SPEC_ALL},
 	/* End Orc Options */
 
 	/* Start Thri-Kreen Options */
