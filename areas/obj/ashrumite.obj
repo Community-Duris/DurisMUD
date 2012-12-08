@@ -192,7 +192,7 @@ fried lizard~
 19 48 3 0 5 0 0 0 0 0 0
 10 3 3 0 1 1 0 0
 0 350 100
-#66024
+#66022
 firebreather bottle spirits~
 a bottle of gnome spirits~
 A bottle of fine gnome spirits lie here.~
@@ -200,7 +200,7 @@ A bottle of fine gnome spirits lie here.~
 17 7 1 2 7 0 0 1 0 0 0
 4 4 7 0 0 0 0 0
 6 250 100
-#66025
+#66023
 beer barrel~
 a barrel of gnomish beer~
 There is a barrel of fine gnome beer lying here.~
@@ -208,7 +208,7 @@ There is a barrel of fine gnome beer lying here.~
 17 6 3 10 7 0 0 1 0 0 0
 50 50 1 0 0 0 0 0
 40 350 100
-#66026
+#66024
 ale bottle~
 a bottle of ale~
 A small bottle of ale has been left here.~
@@ -216,7 +216,7 @@ A small bottle of ale has been left here.~
 17 7 1 2 7 0 0 1 0 0 0
 4 4 3 0 0 0 0 0
 6 200 100
-#66027
+#66025
 workmans leather~
 a suit of gnomish workmans leather amor~
 There is a suit of leather armor with many small pockets lying here.~
@@ -226,7 +226,7 @@ There is a suit of leather armor with many small pockets lying here.~
 4 20000 100
 A
 17 12
-#66028
+#66026
 sword short~
 a gnomish short sword~
 A fine gnomish short sword has been dropped here.~
@@ -238,7 +238,7 @@ A
 18 1
 A
 19 1
-#66029
+#66027
 mace~
 a gnomish mace~
 A steel mace with gnome designs lie here.~
@@ -250,7 +250,7 @@ A
 18 1
 A
 19 1
-#66030
+#66028
 dagger~
 a gnomish dagger~
 Someone has left a dagger here on the floor.~
@@ -262,7 +262,7 @@ A
 18 1
 A
 19 1
-#66031
+#66029
 staff~
 a gnomish staff~
 A long wooden staff has been dropped here.~
@@ -274,7 +274,7 @@ A
 18 1
 A
 19 1
-#66032
+#66030
 nugget silver ore~
 a chunk of silver ore~
 A large chunk of ore containing &+Wsilver&N is deposited here.~
@@ -282,7 +282,7 @@ A large chunk of ore containing &+Wsilver&N is deposited here.~
 8 22 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 15 10 100
-#66033
+#66031
 nugget silver~
 a bar of &+Wpure silver&N~
 A bar of &+Wpure silver&N has been carelessly dropped here.~
@@ -290,39 +290,39 @@ A bar of &+Wpure silver&N has been carelessly dropped here.~
 8 22 0 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 1000 100
-#66034
+#66032
 gem glassstone~
 &+Ra raw gem&N~
 &+RA raw gem&N is deposited here.~
+~
+8 26 0 0 7 0 4096 16385 0 0 0
+0 0 0 0 0 0 0 0
+1 1 100
+#66033
+gem glassstone~
+&+Ga raw gem&N~
+&+GA raw gem&N is caught between two rocks.~
+~
+8 26 0 0 7 0 4096 16385 0 0 0
+0 0 0 0 0 0 0 0
+1 1 100
+#66034
+gem glassstone~
+&+Ma raw gem&N~
+&+MA raw gem&N awaits your plucking.~
 ~
 8 26 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 #66035
 gem glassstone~
-&+Ga raw gem&N~
-&+GA raw gem&N is caught between two rocks.~
-~
-8 26 0 0 7 0 4096 16385 0 0 0
-0 0 0 0 0 0 0 0
-1 1 100
-#66036
-gem glassstone~
-&+Ma raw gem&N~
-&+MA raw gem&N awaits your plucking.~
-~
-8 26 0 0 7 0 4096 16385 0 0 0
-0 0 0 0 0 0 0 0
-1 1 100
-#66037
-gem glassstone~
 &+Ya raw gem&N~
 &+YA raw gem&N has rolled out here.~
 ~
 8 26 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 1 100
-#66038
+#66036
 gem glassstone~
 &+Wa raw gem&N~
 &+WA raw gem&N has been exposed here.~
@@ -330,7 +330,7 @@ gem glassstone~
 8 26 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 1 100
-#66039
+#66037
 gem glassstone~
 &+Ra raw gem&N~
 &+RA raw gem&N is deposited here.~
@@ -338,7 +338,7 @@ gem glassstone~
 8 26 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 10 100
-#66040
+#66038
 gem glassstone~
 &+Ga raw gem&N~
 &+GA raw gem&N is caught between two rocks.~
@@ -346,7 +346,7 @@ gem glassstone~
 8 26 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 10 100
-#66041
+#66039
 gem glassstone~
 &+Ma raw gem&N~
 &+MA raw gem&N awaits your plucking.~
@@ -354,7 +354,7 @@ gem glassstone~
 8 26 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 10 100
-#66042
+#66040
 gem glassstone~
 &+Ya raw gem&N~
 &+YA raw gem&N has rolled out here.~
@@ -362,7 +362,7 @@ gem glassstone~
 8 26 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 10 100
-#66043
+#66041
 gem glassstone~
 &+Wa raw gem&N~
 &+WA raw gem&N has been exposed here.~
@@ -370,7 +370,7 @@ gem glassstone~
 8 26 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 10 100
-#66044
+#66042
 gem sapphire~
 &+Ra beautiful sapphire&N~
 &+RA beautiful sapphire&N awaits an owner.~
@@ -378,7 +378,7 @@ gem sapphire~
 8 33 0 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 1000 100
-#66045
+#66043
 gem emerald~
 &+Ga brilliant emerald&N~
 &+GA brilliant emerald&N is caught between two rocks.~
@@ -386,7 +386,7 @@ gem emerald~
 8 32 0 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 500 100
-#66046
+#66044
 gem amethyst~
 &+Man amethyst&N~
 &+MAn amethyst&N has been dropped here.~
@@ -394,7 +394,7 @@ gem amethyst~
 8 26 0 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 425 100
-#66047
+#66045
 gem tigerseye eye~
 &+Yan exotic tigers-eye gem&N~
 &+YAn exotic tigers-eye gem&N is sitting here.~
@@ -402,7 +402,7 @@ gem tigerseye eye~
 8 26 0 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 650 100
-#66048
+#66046
 gem diamond~
 &+Wa lustrous diamond&N~
 &+WA lustrous diamond&N of many facets lies here.~
@@ -410,7 +410,7 @@ gem diamond~
 8 8 0 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 1555 100
-#66049
+#66047
 necklace jewelry~
 &+Wa necklace of fine silver&N~
 &+WA necklace of fine Ashrumite silver&N is here.~
@@ -418,7 +418,7 @@ necklace jewelry~
 8 22 3 2 7 0 0 16389 0 0 0
 0 0 0 0 0 0 0 0
 2 5000 100
-#66050
+#66048
 necklace jewelry~
 &+Wa ne&+Rc&+Wkla&+Gc&+We of s&+Mi&+Wlve&+Yr&N set with gems~
 &+WA necklace of silver fitted with gems&N is here.~
@@ -426,7 +426,7 @@ necklace jewelry~
 8 22 3 2 7 0 0 16389 0 0 0
 0 0 0 0 0 0 0 0
 2 25000 100
-#66051
+#66049
 necklace jewelry~
 &+Wa ne&+Rc&+Wkla&+Gc&+We of s&+Mi&+Wlve&+Yr&N set with gems~
 &+WA necklace of silver fitted with gems&N is here.~
@@ -443,7 +443,7 @@ A
 13 10
 A
 24 -4
-#66052
+#66050
 nugget gold ore~
 &+Ya small gold nugget&N~
 &+Ya small nugget of gold ore&N awaits your miners pick.~
@@ -451,7 +451,7 @@ nugget gold ore~
 8 24 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 600 100
-#66053
+#66051
 nugget foolsgold ore pyrite~
 &+Ya small gold nugget&N~
 &+Ya small nugget of gold ore&N awaits your miners pick.~
@@ -459,7 +459,7 @@ nugget foolsgold ore pyrite~
 8 24 0 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 0 100
-#66054
+#66052
 pick~
 a miners pick~
 A miners pick has been set against the wall.~
@@ -467,7 +467,7 @@ A miners pick has been set against the wall.~
 5 16 3 2 7 0 0 24577 0 0 0
 8 1 4 11 0 0 0 0
 10 50 100
-#66055
+#66053
 canteen~
 a brushed steel canteen~
 A canteen made of brushed steel lies here.~
@@ -475,7 +475,7 @@ A canteen made of brushed steel lies here.~
 17 16 0 0 7 0 0 16385 0 0 0
 20 20 0 0 0 0 0 0
 15 45 100
-#66056
+#66054
 fruit produce bunch~
 a bunch of fruit~
 A pile of fruit, bunched together has been dropped here.~
@@ -483,7 +483,7 @@ A pile of fruit, bunched together has been dropped here.~
 19 2 2 2 7 0 0 16385 0 0 0
 2 0 0 0 0 0 0 0
 2 13 100
-#66057
+#66055
 vegetables vegetable produce handful~
 a handful of vegetables~
 Enough vegetables to make a dinner lie here.~
@@ -491,7 +491,7 @@ Enough vegetables to make a dinner lie here.~
 19 2 2 2 7 0 0 16385 0 0 0
 2 0 0 0 0 0 0 0
 2 16 100
-#66058
+#66056
 jerky meat~
 a large strip of beef jerky~
 A large strip of beef jerky.~
@@ -499,7 +499,7 @@ A large strip of beef jerky.~
 19 2 2 2 7 0 0 16385 0 0 0
 8 0 0 0 0 0 0 0
 0 22 100
-#66059
+#66057
 scroll parchment~
 a piece of parchment~
 A piece of parchment containing magical writing has been dropped.~
@@ -511,7 +511,7 @@ E
 scroll spell~
 A scroll inscribed with the symbol of a bright torch.
 ~
-#66060
+#66058
 scroll parchment~
 a piece of parchment~
 A piece of parchment containing magical writing has been dropped.~
@@ -523,7 +523,7 @@ E
 scroll spell~
 A scroll inscribed with an ancient rune symbolizing health.
 ~
-#66061
+#66059
 scroll parchment~
 a piece of parchment~
 A piece of parchment containing magical writing has been dropped.~
@@ -537,7 +537,7 @@ A scroll inscribed with two symbols. One, you recognize as that of a poisonous
 mushroom indigenous to the forest of Tethir, and the other seems to symbolize
 negativity...
 ~
-#66062
+#66060
 scroll parchment~
 a piece of parchment~
 A piece of parchment containing magical writing has been dropped.~
@@ -549,7 +549,7 @@ E
 spell scroll~
 A scroll inscribed with an ancient gnomish symbol for birds.
 ~
-#66063
+#66061
 potion~
 &+Ya beaker of bubbly, yellow ichor&N~
 &+YA beaker of bubbly, yellow ichor&N lies here.~
@@ -557,7 +557,7 @@ potion~
 10 7 2 4 7 0 0 16385 0 0 0
 25 39 -1 -1 0 0 0 0
 0 10000 100
-#66064
+#66062
 ring~
 &+Wa silver ring&N~
 &+WA ring of fine silver&N has been discarded.~
@@ -565,7 +565,7 @@ ring~
 8 16 1 1 7 0 0 16387 0 0 0
 0 0 0 0 0 0 0 0
 0 500 100
-#66065
+#66063
 earring~
 &+Wa silver earring&N~
 &+WAn earring of purest silver&N awaits an owner.~
@@ -573,7 +573,7 @@ earring~
 8 22 1 1 7 0 0 540673 0 0 0
 0 0 0 0 0 0 0 0
 0 350 100
-#66066
+#66064
 ring~
 &+Wa silver ring&N set with &+Ma small gem&N~
 &+WA ring of fine silver&N set with &+Ma small gem&N has been discarded.~
@@ -581,7 +581,7 @@ ring~
 8 16 1 1 7 0 0 16387 0 0 0
 0 0 0 0 0 0 0 0
 0 2500 100
-#66067
+#66065
 earring~
 &+Wa silver and diamond earring&N~
 &+WAn earring of silver, set with a diamond&N awaits an owner.~

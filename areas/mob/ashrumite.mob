@@ -7,8 +7,8 @@ This stout looking gnome seems a bit out of place up here, out of the mines. He
 holds a slightly dejected look, but still maintains himself enough to do his
 job.
 ~
-1073741836 384 0 33554472 0 0 0 1 S
-PG 8 1 -1
+1073741836 384 0 0 33554472 0 0 0 1 S
+PG 8 1 0 -1
 50 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -19,8 +19,8 @@ gateguard guard warrior gnome~
 ~
 This largish gnome looks well able to handle his job.
 ~
-67110922 128 0 33554472 0 0 0 1 S
-PG 8 1 -1
+67110922 128 0 0 33554472 0 0 0 1 S
+PG 8 1 0 -1
 52 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -31,8 +31,8 @@ mineguard justice guard patrol~
 ~
 A happy looking gnome, he patrols the shafts and tunnels with a broad smile.
 ~
-67110924 128 0 33554472 0 0 0 1 S
-PG 8 1 -1
+67110924 128 0 0 33554472 0 0 0 1 S
+PG 8 1 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -45,8 +45,8 @@ This variety of spider stands about 1 span tall, and is perhaps 2 spans long.
 It looks plenty strong enough to carry a person or two, should one be brave
 enough to attempt.
 ~
-134219785 0 0 33554472 0 0 0 0 S
-AE 0 0 -1
+134219785 0 0 0 33554472 0 0 0 0 S
+AE 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -57,8 +57,8 @@ bat~
 ~
 This bat has tiny fangs protruding from its mouth.
 ~
-131080 1 0 134217768 0 0 0 0 S
-A 0 0 -1
+131080 1 0 0 134217768 0 0 0 0 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 4 8 0
@@ -69,8 +69,8 @@ bat~
 ~
 This bat has tiny fangs protruding from its mouth.
 ~
-131080 1 0 134217768 0 0 0 0 S
-A 0 0 -1
+131080 1 0 0 134217768 0 0 0 0 S
+A 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 4 8 0
@@ -81,8 +81,8 @@ bat~
 ~
 This bat has tiny fangs protruding from its mouth.
 ~
-131080 1 0 134217768 0 0 0 0 S
-A 0 0 -1
+131080 1 0 0 134217768 0 0 0 0 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 4 8 0
@@ -94,8 +94,8 @@ lizard iguana~
 This is your typical, rock climbing, mountain iguana. It is almost 15 inches
 long, with a nastly looking set of teeth.
 ~
-136 0 0 0 0 0 0 0 S
-R 0 0 -1
+136 0 0 0 0 0 0 0 0 S
+R 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -108,8 +108,8 @@ This gnome guildmaster is rather tall, almost four feet tall. Large sapphire
 eyes and long sagging white eye brows show a sign of the gnomes age. He has a
 long blue robe with many magical runes on them.
 ~
-2147516427 0 0 216 0 0 0 0 S
-PG 8 4194304 -1
+2147516427 0 0 0 216 0 0 0 0 S
+PG 8 4194304 0 -1
 56 8 3 30d44+330 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -120,8 +120,8 @@ miner~
 ~
 A hearty soul, he looks very happy in his natural environment.
 ~
-2056 1 0 33554432 0 0 0 0 S
-PG 8 4096 -1
+2056 1 0 0 33554432 0 0 0 0 S
+PG 8 4096 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -132,8 +132,8 @@ miner~
 ~
 A hearty soul, she looks very happy in his natural environment.
 ~
-2184 1 0 33554432 0 0 0 0 S
-PG 8 4096 -1
+2184 1 0 0 33554432 0 0 0 0 S
+PG 8 4096 0 -1
 7 18 77 7d18+24 2d3+1
 3.2.0.0 907
 8 8 2
@@ -147,8 +147,8 @@ tan on his skin. He has nice blue eyes that can probably charm any gnome
 women. He is wearing is nice clothes today, probably going to the local bar to
 try to pick up some woman and get drunk.
 ~
-2056 0 0 33554432 0 0 0 0 S
-PG 8 0 -1
+2056 0 0 0 33554432 0 0 0 0 S
+PG 8 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -163,8 +163,8 @@ normal gnomish cotton dress with a nice cotton apron with the symbol of Garl
 Glittergold on it. Her eyes have a bit of sadness in them because she cant
 find her child.
 ~
-2056 0 0 33554432 0 0 0 0 S
-PG 8 0 -1
+2056 0 0 0 33554432 0 0 0 0 S
+PG 8 0 0 -1
 4 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 2
@@ -178,8 +178,8 @@ hair with a rather pale colored skin, compared to all the other gnomes. He has
 deep brown eyes that seem to be filled with tears, for he cannot find his mom
 or dad.
 ~
-2060 0 0 33554432 0 0 0 0 S
-PG 8 0 -1
+2060 0 0 0 33554432 0 0 0 0 S
+PG 8 0 0 -1
 2 20 93 2d15+7 1d5+0
 1.0.0.0 259
 8 8 1
@@ -193,8 +193,8 @@ small pony-tail. He has a deep brownish tan with sapphire green eyes. He has
 many wrinkles on his face showing you he is rather old. On his face there is a
 small scar from his youth.
 ~
-2058 0 0 0 0 0 0 0 S
-PG 8 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -207,8 +207,8 @@ The weaponsmith is a rather large gnome. He stands about three and a half feet
 tall. Hes bald but bas a thick white beard on his bronze tanned face. He seems
 to be an experienced warrior, and seems to be sizing you up for a fight.
 ~
-2058 0 0 0 0 0 0 0 S
-PG 8 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -223,8 +223,8 @@ wrinkles. This mage maybe be one of the oldest gnomes in the village. He wears
 a nice blue robe with a belt full of spell componants. Dont let the age fool
 you, the mage is a very good fighter. He looks like he'd like to talk to you.
 ~
-2058 0 0 88 0 0 0 0 S
-PG 8 2048 -1
+2058 0 0 0 88 0 0 0 0 S
+PG 8 2048 0 -1
 54 -5 -107 54d88+4482 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -238,8 +238,8 @@ braided. Her eyes are the most beautiful deep green, and she has a very nice
 smile. With her charm she could probably sell a barrel to anyone, even if they
 didnt need it.
 ~
-2058 0 0 0 0 0 0 0 S
-PG 8 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 2
@@ -253,8 +253,8 @@ weight gnome, probably been eating more bread then he sells. He has deep brown
 eyes and a flat button nose. He wears normal gnomish clothes with an apron that
 reads: Please try our bread.
 ~
-2058 0 0 0 0 0 0 0 S
-PG 8 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -268,8 +268,8 @@ little hair on his head with a large bald spot. He wears a thick white beard
 on his face. He has deep brown skin with crystal clear blue eyes. On his left
 hand there are only four fingers.
 ~
-2058 0 0 0 0 0 0 0 S
-PG 8 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -283,8 +283,8 @@ of the gnome nobles. He has long white hair and a long beard to match. His
 bright emerald eyes seem to glimmer with an inner beauty. He wears the
 traditional clothes for a gnome store owner rather than the clothes of a noble.
 ~
-32779 0 0 0 0 0 0 0 S
-PG 8 1 -1
+32779 0 0 0 0 0 0 0 0 S
+PG 8 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -298,8 +298,8 @@ scars all over his face and body shows that he is a very powerful warrior. He
 wears armor that seems to be a bit too tight for him, but once probably did
 fit well. His dark brown eyes seem to almost invite you to attack.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 1 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -313,8 +313,8 @@ wears this black leather outfit that covers his whole body and even his face,
 all that can be seen are a pair of small dark brown eyes. He is much skinner
 than the other gnomes in the village.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 4096 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 4096 0 -1
 54 -5 -107 54d110+4482 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -328,8 +328,8 @@ thinning white hair. He wears a long cotton robe with some small runes on it.
 His sky blue eyes seem to be trying to recall something, maybe a spell from
 his spellbook.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 256 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 256 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -342,8 +342,8 @@ This is a small gnome with a long thick white beard but he has no hair on his
 head. He wears a long blue robe of the gnome mages of his guild. Long eyebrows
 hang down from deep green eyes that show a life of hardship.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 1 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -357,8 +357,8 @@ here, he's much rather be in the temple praying to his patron god. He wears
 the traditional robe of all Garl's cleric and wears a symbol on his neck of
 his god.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 32 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 32 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -372,8 +372,8 @@ balding on top of his head with a long white thinning beard as well. He is
 wearing the old gnome ceremonial armor. His battle scars show that he could
 still probably fight very well.
 ~
-32779 0 0 216 0 0 0 0 S
-PG 8 1 -1
+32779 0 0 0 216 0 0 0 0 S
+PG 8 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -387,8 +387,8 @@ all tied as so it cannot be used against her. A black suit of black leather
 claps her and sharp daggers decorate her belt and her boot. Large green eyes
 tell you she is still very sneaky.
 ~
-32779 0 0 216 0 0 0 0 S
-PG 8 4096 -1
+32779 0 0 0 216 0 0 0 0 S
+PG 8 4096 0 -1
 30 8 3 30d55+330 3d6+4
 0.5.7.1 26730
 8 8 2
@@ -402,8 +402,8 @@ hair with large blue eyes with a nice brown tan. Large robe with silver runes
 is his typical clothing. Even though he is young and rather short, he is very
 powerful none the less.
 ~
-32779 0 0 216 0 0 0 0 S
-PG 8 256 -1
+32779 0 0 0 216 0 0 0 0 S
+PG 8 256 0 -1
 30 8 3 30d60+360 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -416,8 +416,8 @@ This gnome guildmaster is rather tall, almost four feet tall. Large sapphire
 eyes and long sagging white eye brows show a sign of the gnomes age. He has a
 long blue robe with many magical runes on them.
 ~
-32779 0 0 216 0 0 0 0 S
-PG 8 512 -1
+32779 0 0 0 216 0 0 0 0 S
+PG 8 512 0 -1
 30 8 3 30d44+330 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -430,8 +430,8 @@ This is an average size gnome with thick curly white hair and deep green eyes.
 He is wearing a white robe with the every holy symbol of the gnome patron god
 Garl. Even this is a very holy cleric of Garl he will fight if prevoked.
 ~
-32779 0 0 216 0 0 0 0 S
-PG 8 32 -1
+32779 0 0 0 216 0 0 0 0 S
+PG 8 32 0 -1
 30 8 3 30d60+360 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -444,8 +444,8 @@ This is a young gnome with short hair and dark brown eyes. He is wearing normal
 gnomish clothes and a cotton apron. He is quiet a pleasent fellow to be around,
 a large smile crosses his face as he tries to sell his items.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 512 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 512 0 -1
 54 -5 -107 54d88+4482 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -458,8 +458,8 @@ This is an old gnome bartender with the signs of old age to show it. He is bald
 with a long white moustach and a very brown tan. Large blue eyes show you his
 many years in his joint. Many scars are on his face from several bar fights.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 32 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 32 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -473,8 +473,8 @@ large emerald eyes. She wears a nice gnomish dress with a label on her sleeve
 that reads: welcome. She smiles and is ready to rent travelers a room for the
 night.
 ~
-2058 0 0 268435496 0 0 0 0 S
-PG 8 1 -1
+2058 0 0 0 268435496 0 0 0 0 S
+PG 8 1 0 -1
 57 -7 -117 57d143+5985 7d6+35
 2.4.8.6 230850
 8 8 1
@@ -487,8 +487,8 @@ This is one of many gnome nobles, he is tall, about four feet in height with
 long white hair. A nice brownish tan and deep green eyes add to his charisma.
 He wears a long finely made robe with gold trimmings.
 ~
-2056 0 0 0 0 0 0 0 S
-PG 8 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PG 8 0 0 -1
 12 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -502,8 +502,8 @@ beard and no hair. He has a very deep bronze tan from being out under the sun
 all day. Deep brown eyes round out his old face. He wears a pair of overalls
 as to keep his clothes clean.
 ~
-2060 0 0 33554432 0 0 0 0 S
-PG 8 0 -1
+2060 0 0 0 33554432 0 0 0 0 S
+PG 8 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 1
@@ -516,8 +516,8 @@ This is a disgustingly fat gnome with blood shot blue eyes. He wears normal
 gnomish clothing, but very dirty. His balance isnt too good for he staggers
 all over the place, tell you hes been in one too many taverns.
 ~
-2059 0 0 0 0 0 0 0 S
-PG 8 0 -1
+2059 0 0 0 0 0 0 0 0 S
+PG 8 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 1
@@ -531,8 +531,8 @@ over weight. His brown eyes and crooked smile tells you theres something funny
 about him. He rubs his hands in a greedy manner waiting for you to give him
 your money.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 32 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 32 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -545,8 +545,8 @@ The jailkeeper is a very large gnome, about four feet tall. He has long white
 hair and a long white beard and a very nice deep tan. He has deep blue eyes
 and has many scars on his face from many outlaws trying to escape.
 ~
-67110923 0 0 216 0 0 0 0 S
-PG 8 512 -1
+67110923 0 0 0 216 0 0 0 0 S
+PG 8 512 0 -1
 54 -5 -107 54d88+4482 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -560,8 +560,8 @@ one of the gnome nobles. He has long white hair and a long beard to match. His
 bright emerald eyes seem to glimmer with an inner beauty. He wears the
 traditional clothes for a gnome store owner rather than the clothes of a noble.
 ~
-2059 0 0 33554432 0 0 0 0 S
-PG 8 1 -1
+2059 0 0 0 33554432 0 0 0 0 S
+PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -573,8 +573,8 @@ the bartender~
 A largish gnome, the bartender must wiegh 150 stones. Still, he looks quit
 jovial, as he serves the many happy customers.
 ~
-2058 0 0 268435496 0 0 0 0 S
-PG 8 1 -1
+2058 0 0 0 268435496 0 0 0 0 S
+PG 8 1 0 -1
 57 -7 -117 57d143+5985 7d6+35
 2.4.8.6 230850
 8 8 1
@@ -587,8 +587,8 @@ This is a young gnome with short hair and dark brown eyes. He is wearing normal
 gnomish clothes and a cotton apron. He is quiet a pleasent fellow to be around,
 a large smile crosses his face as he tries to sell his items.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 32 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 32 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -601,8 +601,8 @@ This is a young gnome with short hair and dark brown eyes. He is wearing normal
 gnomish clothes and a cotton apron. He is quiet a pleasent fellow to be around,
 a large smile crosses his face as he tries to sell his items.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 1 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -615,8 +615,8 @@ This is a young gnome with short hair and dark brown eyes. He is wearing normal
 gnomish clothes and a cotton apron. He is quiet a pleasent fellow to be around,
 a large smile crosses his face as he tries to sell his items.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 32 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 32 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -629,8 +629,8 @@ This is a young gnome with short hair and dark brown eyes. He is wearing normal
 gnomish clothes and a cotton apron. He is quiet a pleasent fellow to be around,
 a large smile crosses his face as he tries to sell his items.
 ~
-2059 0 0 216 0 0 0 0 S
-PG 8 32 -1
+2059 0 0 0 216 0 0 0 0 S
+PG 8 32 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -644,8 +644,8 @@ clerk justice~
 &+cHe hold in one hand a large book bound with iron and in the other a beautiful
 &+ceagle quill. He is here to take care of all the justice paper work.
 ~
-67110923 0 0 168 2077 0 0 0 S
-PH 1 32 -1
+67110923 0 0 0 168 2077 0 0 0 S
+PH 1 32 0 -1
 50 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -661,8 +661,8 @@ brown robe covered by all sorts of magical runes. Attached to his wide
 leather belt are numerous pouches of all sizes crammed with vials,
 potions and foul-smelling ingredients of all sorts.
 ~
-1073887240 2432 0 973078584 0 0 0 500 S
-PG 0 524288 2
+1073887240 2432 0 0 973078584 0 0 0 500 S
+PG 0 524288 0 2
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -676,8 +676,8 @@ most gnomes. Ever watchful he gazes over the rolling hills scanning for anyone
 who might cause trouble to this peaceful part of the world. Scars on his body
 mark him as a seasoned warrior.
 ~
-1073887240 384 0 671088696 12 67108864 0 500 S
-PG 0 1 3
+1073887240 384 0 0 671088696 12 67108864 0 500 S
+PG 0 1 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -692,8 +692,8 @@ The gnome lords of Ashrumite asked the illusionist guild to help protect the cit
 against rogue spellcasters who pray on its citizens. The illusionist stands here
 with a slightly bored expression on his face wondering what he did to deserve this.
 ~
-1174550538 384 0 0 0 0 0 1000 S
-PG 7 4194304 2
+1140996106 384 0 0 0 0 0 0 1000 S
+PG 7 4194304 0 2
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -704,8 +704,8 @@ gateguard guard~
 ~
 This largish gnome looks well able to handle his job.
 ~
-67110922 128 0 33554472 0 0 0 1 S
-PG 8 1 -1
+67110922 128 0 0 33554472 0 0 0 1 S
+PG 8 1 0 -1
 52 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -716,8 +716,8 @@ gateguard guard~
 ~
 This largish gnome looks well able to handle his job.
 ~
-67110922 128 0 33554472 0 0 0 1 S
-PG 8 1 -1
+67110922 128 0 0 33554472 0 0 0 1 S
+PG 8 1 0 -1
 52 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -732,8 +732,8 @@ The gnome lords of Ashrumite asked the illusionist guild to help protect the cit
 against rogue spellcasters who pray on its citizens. The illusionist stands here
 with a slightly bored expression on his face wondering what he did to deserve this.
 ~
-1174550538 384 0 0 0 0 0 1000 S
-PG 7 4194304 2
+1140996106 384 0 0 0 0 0 0 1000 S
+PG 7 4194304 0 2
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -747,8 +747,8 @@ most gnomes. Ever watchful he gazes over the rolling hills scanning for anyone
 who might cause trouble to this peaceful part of the world. Scars on his body
 mark him as a seasoned warrior.
 ~
-1073887240 384 0 671088696 12 67108864 0 500 S
-PG 0 1 3
+1073887240 384 0 0 671088696 12 67108864 0 500 S
+PG 0 1 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

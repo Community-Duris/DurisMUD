@@ -465,7 +465,7 @@ hills.
 D1
 ~
 ~
-0 0 66146
+0 0 66141
 D2
 ~
 ~
@@ -2548,6 +2548,113 @@ D3
 ~
 0 0 550080
 S
+#66141
+&+yCalan Road&n~
+The road gains a bit more integrity here, as it passes through
+increasingly denser surroundings. The cliff walls bordering the street,
+are more than enough to keep unsavory gem thieves at bay. Further to
+the west, the road takes a sharp turn south, and disappears from sight.
+To the east, the cliff walls begin to subside to mere rock strewn
+hills.
+~
+660 134250560 1
+D1
+~
+~
+0 0 66142
+D3
+~
+~
+0 0 66024
+S
+#66142
+&+yCalan Road&n~
+The road gains a bit more integrity here, as it passes through
+increasingly denser surroundings. The cliff walls bordering the street,
+are more than enough to keep unsavory gem thieves at bay. Further to
+the west, the road takes a sharp turn south, and disappears from sight.
+To the east, the cliff walls begin to subside to mere rock strewn
+hills.
+~
+660 134250560 1
+D0
+~
+~
+0 0 66153
+D1
+~
+~
+0 0 66143
+D3
+~
+~
+0 0 66141
+S
+#66143
+&+yCalan Road&n~
+The road gains a bit more integrity here, as it passes through
+increasingly denser surroundings. The cliff walls bordering the street,
+are more than enough to keep unsavory gem thieves at bay. Further to
+the west, the road takes a sharp turn south, and disappears from sight.
+To the east, the cliff walls begin to subside to mere rock strewn
+hills.
+~
+660 134250560 1
+D1
+~
+~
+0 0 66144
+D3
+~
+~
+0 0 66142
+S
+#66144
+&+yCalan Road&n~
+The road gains a bit more integrity here, as it passes through
+increasingly denser surroundings. The cliff walls bordering the street,
+are more than enough to keep unsavory gem thieves at bay. Further to
+the west, the road takes a sharp turn south, and disappears from sight.
+To the east, the cliff walls begin to subside to mere rock strewn
+hills.
+~
+660 134250560 1
+D1
+~
+~
+0 0 66145
+D2
+~
+~
+0 0 66152
+D3
+~
+~
+0 0 66143
+S
+#66145
+&+yCalan Road&n~
+The road gains a bit more integrity here, as it passes through
+increasingly denser surroundings. The cliff walls bordering the street,
+are more than enough to keep unsavory gem thieves at bay. Further to
+the west, the road takes a sharp turn south, and disappears from sight.
+To the east, the cliff walls begin to subside to mere rock strewn
+hills.
+~
+660 134250560 1
+D0
+~
+~
+0 0 66151
+D1
+~
+~
+0 0 66146
+D3
+~
+~
+0 0 66144
+S
 #66146
 &+yCalan Road&n~
 The road gains a bit more integrity here, as it passes through
@@ -2565,7 +2672,7 @@ D1
 D3
 ~
 ~
-0 0 66024
+0 0 66145
 S
 #66147
 &+yCalan Road&n~
@@ -2580,7 +2687,7 @@ hills.
 D0
 ~
 ~
-0 0 66158
+0 0 66150
 D1
 ~
 ~
@@ -2591,113 +2698,6 @@ D3
 0 0 66146
 S
 #66148
-&+yCalan Road&n~
-The road gains a bit more integrity here, as it passes through
-increasingly denser surroundings. The cliff walls bordering the street,
-are more than enough to keep unsavory gem thieves at bay. Further to
-the west, the road takes a sharp turn south, and disappears from sight.
-To the east, the cliff walls begin to subside to mere rock strewn
-hills.
-~
-660 134250560 1
-D1
-~
-~
-0 0 66149
-D3
-~
-~
-0 0 66147
-S
-#66149
-&+yCalan Road&n~
-The road gains a bit more integrity here, as it passes through
-increasingly denser surroundings. The cliff walls bordering the street,
-are more than enough to keep unsavory gem thieves at bay. Further to
-the west, the road takes a sharp turn south, and disappears from sight.
-To the east, the cliff walls begin to subside to mere rock strewn
-hills.
-~
-660 134250560 1
-D1
-~
-~
-0 0 66150
-D2
-~
-~
-0 0 66157
-D3
-~
-~
-0 0 66148
-S
-#66150
-&+yCalan Road&n~
-The road gains a bit more integrity here, as it passes through
-increasingly denser surroundings. The cliff walls bordering the street,
-are more than enough to keep unsavory gem thieves at bay. Further to
-the west, the road takes a sharp turn south, and disappears from sight.
-To the east, the cliff walls begin to subside to mere rock strewn
-hills.
-~
-660 134250560 1
-D0
-~
-~
-0 0 66156
-D1
-~
-~
-0 0 66151
-D3
-~
-~
-0 0 66149
-S
-#66151
-&+yCalan Road&n~
-The road gains a bit more integrity here, as it passes through
-increasingly denser surroundings. The cliff walls bordering the street,
-are more than enough to keep unsavory gem thieves at bay. Further to
-the west, the road takes a sharp turn south, and disappears from sight.
-To the east, the cliff walls begin to subside to mere rock strewn
-hills.
-~
-660 134250560 1
-D1
-~
-~
-0 0 66152
-D3
-~
-~
-0 0 66150
-S
-#66152
-&+yCalan Road&n~
-The road gains a bit more integrity here, as it passes through
-increasingly denser surroundings. The cliff walls bordering the street,
-are more than enough to keep unsavory gem thieves at bay. Further to
-the west, the road takes a sharp turn south, and disappears from sight.
-To the east, the cliff walls begin to subside to mere rock strewn
-hills.
-~
-660 134250560 1
-D0
-~
-~
-0 0 66155
-D1
-~
-~
-0 0 66153
-D3
-~
-~
-0 0 66151
-S
-#66153
 &+RThe East Gates of Ashrumite&n~
 The road gains a bit more integrity here, as it passes through
 increasingly denser surroundings. The cliff walls bordering the street,
@@ -2710,13 +2710,13 @@ hills.
 D1
 ~
 ~
-0 0 66154
+0 0 66149
 D3
 ~
 ~
-0 0 66152
+0 0 66147
 S
-#66154
+#66149
 &+yBeginning of Calan Road&n~
 The road gains a bit more integrity here, as it passes through
 increasingly denser surroundings. The cliff walls bordering the street,
@@ -2733,9 +2733,9 @@ D1
 D3
 ~
 ~
-0 0 66153
+0 0 66148
 S
-#66155
+#66150
 &+LA Guard House&n~
 Simply a chunk of the cliff wall surgically removed, this room
 barely qualifes as a "guardhouse". It does, however provide all
@@ -2746,9 +2746,9 @@ mauraders entering the village.
 D2
 ~
 ~
-0 0 66152
+0 0 66147
 S
-#66156
+#66151
 &+RA Gnome Home&n~
 This home belongs to one of the many gnomes from the
 town of Ashrumite.  The gnomes live in hut, some made
@@ -2760,9 +2760,9 @@ tables in the home are made of jodani wood.
 D2
 ~
 ~
-0 0 66150
+0 0 66145
 S
-#66157
+#66152
 &+RA Gnome Home&n~
 This home belongs to one of the many gnomes from the
 town of Ashrumite.  The gnomes live in hut, some made
@@ -2774,9 +2774,9 @@ tables in the home are made of jodani wood.
 D0
 ~
 ~
-0 0 66149
+0 0 66144
 S
-#66158
+#66153
 &+RA Gnome Home&n~
 This home belongs to one of the many gnomes from the
 town of Ashrumite.  The gnomes live in hut, some made
@@ -2788,5 +2788,5 @@ tables in the home are made of jodani wood.
 D2
 ~
 ~
-0 0 66147
+0 0 66142
 S

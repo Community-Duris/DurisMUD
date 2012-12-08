@@ -1,6 +1,6 @@
 #660
 &+RAshrumite Village&n~
-66158 2 4 15 25 1
+66153 2 4 15 25 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -24,26 +24,26 @@ D 0 66074 3 2 100 0 0 0
 *
 O 0 90 999 66001 100 0 0 0         * (object type not in this .obj file)
 O 0 66010 1 66001 100 0 0 0        * a large fountain
+O 0 66034 25 66031 100 0 0 0       * a raw gem
 O 0 66036 25 66031 100 0 0 0       * a raw gem
-O 0 66038 25 66031 100 0 0 0       * a raw gem
-O 0 66042 25 66032 100 0 0 0       * a raw gem
-O 0 66037 25 66032 100 0 0 0       * a raw gem
-O 0 66041 25 66033 100 0 0 0       * a raw gem
-O 0 66036 25 66033 100 0 0 0       * a raw gem
-O 0 66043 25 66034 100 0 0 0       * a raw gem
-O 0 66040 25 66034 100 0 0 0       * a raw gem
-O 0 66035 25 66034 100 0 0 0       * a raw gem
-O 0 66039 25 66035 100 0 0 0       * a raw gem
-O 0 66034 25 66035 100 0 0 0       * a raw gem
-O 0 66032 25 66061 100 0 0 0       * a chunk of silver ore
-O 0 66032 25 66062 100 0 0 0       * a chunk of silver ore
-O 0 66032 25 66070 100 0 0 0       * a chunk of silver ore
+O 0 66040 25 66032 100 0 0 0       * a raw gem
+O 0 66035 25 66032 100 0 0 0       * a raw gem
+O 0 66039 25 66033 100 0 0 0       * a raw gem
+O 0 66034 25 66033 100 0 0 0       * a raw gem
+O 0 66041 25 66034 100 0 0 0       * a raw gem
+O 0 66038 25 66034 100 0 0 0       * a raw gem
+O 0 66033 25 66034 100 0 0 0       * a raw gem
+O 0 66037 25 66035 100 0 0 0       * a raw gem
+O 0 66032 25 66035 100 0 0 0       * a raw gem
+O 0 66030 25 66061 100 0 0 0       * a chunk of silver ore
+O 0 66030 25 66062 100 0 0 0       * a chunk of silver ore
+O 0 66030 25 66070 100 0 0 0       * a chunk of silver ore
 O 0 361 2 66071 100 0 0 0          * (object type not in this .obj file)
-O 0 66053 25 66111 100 0 0 0       * a small gold nugget
-O 0 66052 25 66111 100 0 0 0       * a small gold nugget
-O 0 66053 25 66112 100 0 0 0       * a small gold nugget
-O 0 66052 25 66112 100 0 0 0       * a small gold nugget
-O 0 66054 2 66112 100 0 0 0        * a miners pick
+O 0 66051 25 66111 100 0 0 0       * a small gold nugget
+O 0 66050 25 66111 100 0 0 0       * a small gold nugget
+O 0 66051 25 66112 100 0 0 0       * a small gold nugget
+O 0 66050 25 66112 100 0 0 0       * a small gold nugget
+O 0 66052 2 66112 100 0 0 0        * a miners pick
 O 0 3097 999 66118 100 0 0 0       * (object type not in this .obj file)
 O 0 361 2 66120 100 0 0 0          * (object type not in this .obj file)
 *
@@ -69,18 +69,18 @@ M 0 66001 6 66012 100 0 0 0        * a gnomish peacekeeper
 E 1 66020 999 16 100 0 0 0         *   a long sword
 M 0 66037 5 66012 100 0 0 0        * a drunk
 M 0 66041 1 66012 100 0 0 0        * the bartender
-G 1 66025 1 0 100 0 0 0            *    a barrel of gnomish beer
-G 1 66026 1 0 100 0 0 0            *    a bottle of ale
-G 1 66024 999 0 100 0 0 0          *    a bottle of gnome spirits
+G 1 66023 1 0 100 0 0 0            *    a barrel of gnomish beer
+G 1 66024 1 0 100 0 0 0            *    a bottle of ale
+G 1 66022 999 0 100 0 0 0          *    a bottle of gnome spirits
 M 0 66017 1 66013 100 0 0 0        * the mage shopkeeper
 G 1 101 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 66003 1 0 100 0 0 0            *    a sapphire potion
 G 1 66004 1 0 100 0 0 0            *    an ebony wand
 G 1 66005 1 0 100 0 0 0            *    a neatly rolled scroll
+G 1 66057 1 0 100 0 0 0            *    a piece of parchment
+G 1 66058 1 0 100 0 0 0            *    a piece of parchment
 G 1 66059 1 0 100 0 0 0            *    a piece of parchment
-G 1 66060 1 0 100 0 0 0            *    a piece of parchment
-G 1 66061 1 0 100 0 0 0            *    a piece of parchment
-G 1 66063 1 0 100 0 0 0            *    a beaker of bubbly, yellow ichor
+G 1 66061 1 0 100 0 0 0            *    a beaker of bubbly, yellow ichor
 G 1 835 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 188 1 0 100 0 0 0              *    (object type not in this .obj file)
 G 1 189 999 0 100 0 0 0            *    (object type not in this .obj file)
@@ -130,8 +130,8 @@ M 0 66001 6 66050 100 0 0 0        * a gnomish peacekeeper
 E 1 66020 999 16 100 0 0 0         *   a long sword
 M 0 66013 10 66052 100 0 0 0       * a gnome woman
 M 0 66020 1 66052 100 0 0 0        * Jondal
-G 1 66056 1 0 100 0 0 0            *    a bunch of fruit
-G 1 66057 1 0 100 0 0 0            *    a handful of vegetables
+G 1 66054 1 0 100 0 0 0            *    a bunch of fruit
+G 1 66055 1 0 100 0 0 0            *    a handful of vegetables
 M 0 66019 1 66053 100 0 0 0        * Crandin
 G 1 66011 1 0 100 0 0 0            *    a piece of bread
 G 1 66012 1 0 100 0 0 0            *    a roll
@@ -139,11 +139,11 @@ M 0 66006 50 66058 100 0 0 0       * a bat
 M 0 66005 50 66058 100 0 0 0       * a bat
 M 0 66005 50 66059 100 0 0 0       * a bat
 M 0 66021 1 66060 100 0 0 0        * the jeweler
-G 1 66044 1 0 100 0 0 0            *    a beautiful sapphire
-G 1 66045 1 0 100 0 0 0            *    a brilliant emerald
-G 1 66046 1 0 100 0 0 0            *    an amethyst
-G 1 66047 1 0 100 0 0 0            *    an exotic tigers-eye gem
-G 1 66048 1 0 100 0 0 0            *    a lustrous diamond
+G 1 66042 1 0 100 0 0 0            *    a beautiful sapphire
+G 1 66043 1 0 100 0 0 0            *    a brilliant emerald
+G 1 66044 1 0 100 0 0 0            *    an amethyst
+G 1 66045 1 0 100 0 0 0            *    an exotic tigers-eye gem
+G 1 66046 1 0 100 0 0 0            *    a lustrous diamond
 M 0 66005 50 66062 100 0 0 0       * a bat
 M 0 66014 10 66063 100 0 0 0       * a gnome child
 M 0 66003 5 66063 100 0 0 0        * a mineguard
@@ -180,8 +180,8 @@ M 0 66007 50 66072 100 0 0 0       * a bat
 M 0 66006 50 66075 100 0 0 0       * a bat
 M 0 66007 50 66076 100 0 0 0       * a bat
 M 0 66040 1 66081 100 0 0 0        * the silversmith
-G 1 66064 1 0 100 0 0 0            *    a silver ring
-G 1 66065 1 0 100 0 0 0            *    a silver earring
+G 1 66062 1 0 100 0 0 0            *    a silver ring
+G 1 66063 1 0 100 0 0 0            *    a silver earring
 M 0 66009 1 66084 100 0 0 0        * the illusionist guildmaster
 E 1 66006 1 6 100 0 0 0            *   a magical circlet
 M 0 66002 9 66087 100 0 0 0        * a gnome gateguard
@@ -199,50 +199,50 @@ M 0 66045 1 66101 100 0 0 0        * a storekeeper
 G 1 390 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 396 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 399 9999 0 100 0 0 0           *    (object type not in this .obj file)
-G 1 66024 999 0 100 0 0 0          *    a bottle of gnome spirits
-G 1 66055 999 0 100 0 0 0          *    a brushed steel canteen
-G 1 66058 999 0 100 0 0 0          *    a large strip of beef jerky
+G 1 66022 999 0 100 0 0 0          *    a bottle of gnome spirits
+G 1 66053 999 0 100 0 0 0          *    a brushed steel canteen
+G 1 66056 999 0 100 0 0 0          *    a large strip of beef jerky
 G 1 203 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 204 999 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 66030 1 66103 100 0 0 0        * the mage guildmaster
-E 1 66031 1 16 100 0 0 0           *   a gnomish staff
+E 1 66029 1 16 100 0 0 0           *   a gnomish staff
 M 0 66044 1 66105 100 0 0 0        * a storekeeper
 G 1 390 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 396 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 399 9999 0 100 0 0 0           *    (object type not in this .obj file)
-G 1 66024 999 0 100 0 0 0          *    a bottle of gnome spirits
-G 1 66055 999 0 100 0 0 0          *    a brushed steel canteen
-G 1 66058 999 0 100 0 0 0          *    a large strip of beef jerky
+G 1 66022 999 0 100 0 0 0          *    a bottle of gnome spirits
+G 1 66053 999 0 100 0 0 0          *    a brushed steel canteen
+G 1 66056 999 0 100 0 0 0          *    a large strip of beef jerky
 G 1 66021 999 0 100 0 0 0          *    a fried lizard
 M 0 66028 1 66106 100 0 0 0        * the thief guildmaster
-E 1 66030 1 16 100 0 0 0           *   a gnomish dagger
+E 1 66028 1 16 100 0 0 0           *   a gnomish dagger
 G 1 6089 1 0 100 0 0 0             *    (object type not in this .obj file)
 M 0 66027 1 66107 100 0 0 0        * the warrior guildmaster
 E 1 66007 1 13 100 0 0 0           *   a thick leather belt
-E 1 66028 1 16 100 0 0 0           *   a gnomish short sword
+E 1 66026 1 16 100 0 0 0           *   a gnomish short sword
 M 0 66043 1 66109 100 0 0 0        * a storekeeper
 G 1 390 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 396 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 399 9999 0 100 0 0 0           *    (object type not in this .obj file)
-G 1 66024 999 0 100 0 0 0          *    a bottle of gnome spirits
-G 1 66055 999 0 100 0 0 0          *    a brushed steel canteen
-G 1 66058 999 0 100 0 0 0          *    a large strip of beef jerky
+G 1 66022 999 0 100 0 0 0          *    a bottle of gnome spirits
+G 1 66053 999 0 100 0 0 0          *    a brushed steel canteen
+G 1 66056 999 0 100 0 0 0          *    a large strip of beef jerky
 M 0 66007 50 66110 100 0 0 0       * a bat
 M 0 66007 50 66111 100 0 0 0       * a bat
 M 0 66011 2 66112 100 0 0 0        * a gnome miner
 E 1 256 99999 16 100 0 0 0         *   (object type not in this .obj file)
-G 1 66062 4 0 100 0 0 0            *    a piece of parchment
+G 1 66060 4 0 100 0 0 0            *    a piece of parchment
 M 0 66010 2 66112 100 0 0 0        * a gnome miner
 E 1 256 99999 16 100 0 0 0         *   (object type not in this .obj file)
-G 1 66054 2 0 100 0 0 0            *    a miners pick
-G 1 66062 4 0 100 0 0 0            *    a piece of parchment
+G 1 66052 2 0 100 0 0 0            *    a miners pick
+G 1 66060 4 0 100 0 0 0            *    a piece of parchment
 M 0 66042 1 66115 100 0 0 0        * a storekeeper
 G 1 390 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 396 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 399 9999 0 100 0 0 0           *    (object type not in this .obj file)
-G 1 66024 999 0 100 0 0 0          *    a bottle of gnome spirits
-G 1 66055 999 0 100 0 0 0          *    a brushed steel canteen
-G 1 66058 999 0 100 0 0 0          *    a large strip of beef jerky
+G 1 66022 999 0 100 0 0 0          *    a bottle of gnome spirits
+G 1 66053 999 0 100 0 0 0          *    a brushed steel canteen
+G 1 66056 999 0 100 0 0 0          *    a large strip of beef jerky
 M 0 66004 1 66117 100 0 0 0        * a cavespider
 M 0 66038 1 66118 100 0 0 0        * the banker
 M 0 66035 5 66119 100 0 0 0        * a noble
@@ -252,25 +252,25 @@ M 0 66014 10 66120 100 0 0 0       * a gnome child
 M 0 66008 25 66125 100 0 0 0       * a large iguana
 M 0 66008 25 66126 100 0 0 0       * a large iguana
 M 0 66029 1 66131 100 0 0 0        * the shaman guildmaster
-E 1 66027 1 5 100 0 0 0            *   a suit of gnomish workmans leather amor
+E 1 66025 1 5 100 0 0 0            *   a suit of gnomish workmans leather amor
 M 0 66032 4 66132 100 0 0 0        * a storekeeper
 G 1 390 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 396 9999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 399 9999 0 100 0 0 0           *    (object type not in this .obj file)
-G 1 66024 999 0 100 0 0 0          *    a bottle of gnome spirits
-G 1 66055 999 0 100 0 0 0          *    a brushed steel canteen
-G 1 66058 999 0 100 0 0 0          *    a large strip of beef jerky
-M 0 66013 10 66146 100 0 0 0       * a gnome woman
-M 0 66013 10 66146 100 0 0 0       * a gnome woman
-M 0 66001 6 66147 100 0 0 0        * a gnomish peacekeeper
-M 0 66008 25 66148 100 0 0 0       * a large iguana
-M 0 66008 25 66148 100 0 0 0       * a large iguana
-M 0 66014 10 66149 100 0 0 0       * a gnome child
-M 0 66014 10 66149 100 0 0 0       * a gnome child
-M 0 66052 1 66151 100 0 0 0        * A gnome illusionist
-M 0 66050 3 66153 100 0 0 0        * a gnome gateguard
-M 0 66050 3 66153 100 0 0 0        * a gnome gateguard
-M 0 66050 3 66153 100 0 0 0        * a gnome gateguard
-M 0 66051 1 66155 100 0 0 0        * a gnome gateguard
+G 1 66022 999 0 100 0 0 0          *    a bottle of gnome spirits
+G 1 66053 999 0 100 0 0 0          *    a brushed steel canteen
+G 1 66056 999 0 100 0 0 0          *    a large strip of beef jerky
+M 0 66013 10 66141 100 0 0 0       * a gnome woman
+M 0 66013 10 66141 100 0 0 0       * a gnome woman
+M 0 66001 6 66142 100 0 0 0        * a gnomish peacekeeper
+M 0 66008 25 66143 100 0 0 0       * a large iguana
+M 0 66008 25 66143 100 0 0 0       * a large iguana
+M 0 66014 10 66144 100 0 0 0       * a gnome child
+M 0 66014 10 66144 100 0 0 0       * a gnome child
+M 0 66052 1 66146 100 0 0 0        * A gnome illusionist
+M 0 66050 3 66148 100 0 0 0        * a gnome gateguard
+M 0 66050 3 66148 100 0 0 0        * a gnome gateguard
+M 0 66050 3 66148 100 0 0 0        * a gnome gateguard
+M 0 66051 1 66150 100 0 0 0        * a gnome gateguard
 *
 S
