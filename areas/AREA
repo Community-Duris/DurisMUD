@@ -350,6 +350,7 @@ blackpearl		  *1422
 Voluntown                 *1424
 *surf                     *2000
 *underdark                *2100
+tradeskills		  *4000
 surface                   *5000
 underdark		  *7000
 *    end zone adds top_of_world marker
