@@ -380,6 +380,17 @@ bool rapier_dirk(P_char victim, P_char attacker)
     victim->specials.fighting == attacker)
   {
     if(number(0, 1))
+     {
+      if(GET_CLASS(ch, CLASS_BARD))
+    {
+      act("$n's $q &=LCflashes&n into the path of $N's attack, then $n delivers a graceful counter-attack!",
+        TRUE, victim, wep1, attacker, TO_NOTVICT);
+      act("With &=LWunbelievable speed&n, $n's $q intercepts your attack, and then $n steps wide to deliver a graceful counter-attack!",
+        TRUE, victim, wep1, attacker, TO_VICT);
+      act("With superb grace and ease, you intercept $N's attack with $q and counter-attack!",
+        TRUE, victim, wep1, attacker, TO_CHAR);
+    }
+    else
     {
       act("$n's $q &=LCflashes&n into the path of $N's attack, then $n delivers a graceful counter-attack!",
         TRUE, victim, wep2, attacker, TO_NOTVICT);
@@ -388,6 +399,7 @@ bool rapier_dirk(P_char victim, P_char attacker)
       act("With superb grace and ease, you intercept $N's attack with $q and counter-attack!",
         TRUE, victim, wep2, attacker, TO_CHAR);
     }
+     }
     else
     {
       act("$n's intercepts $N's attack with $q with eloquent ease.",
@@ -421,7 +433,7 @@ bool rapier_dirk(P_char victim, P_char attacker)
     }
     else
     {
-      hit(victim, attacker, wep2);
+      hit(victim, attacker, wep1);
     }
     
     return true;
