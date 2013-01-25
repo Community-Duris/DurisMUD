@@ -336,9 +336,8 @@ void do_forge(P_char ch, char *argument, int cmd)
   char     first[MAX_INPUT_LENGTH];
   char     second[MAX_INPUT_LENGTH];
   char     rest[MAX_INPUT_LENGTH];
- 
   int i = 0;  
-  int      choice = 0;  
+  int choice = 0;  
   P_obj hammer, foundry;
 
 /***DISPLAYRECIPES STUFF***/
@@ -348,9 +347,11 @@ void do_forge(P_char ch, char *argument, int cmd)
   char buffer[256];
   FILE    *f;
   FILE    *recipelist;
-  int line, recfind, recnum2;
+  int line, recfind;
   unsigned long	linenum = 0;
-  long recnum;
+  long recnum, choice2;
+  long selected = 0;
+  P_obj tobj;
  
 	
   //Create buffers for name
@@ -366,27 +367,103 @@ void do_forge(P_char ch, char *argument, int cmd)
     send_to_char("You dont know any recipes yet.\r\n", ch);
     return;
   }
-  
-     // while ( (line=fgetc(recipelist)) != EOF ) 
-      while((fscanf(recipelist, "%i", &recnum)) != EOF )
-	{
-	P_obj tobj;
-	tobj = read_object(recnum, VIRTUAL);
-       sprintf(buffer, "%s&n\n", tobj->short_description);
-	//stores the actual vnum written in file into rbuf
-       sprintf(rbuf, "%d\n", recnum);
-	page_string(ch->desc, buffer, 1);
-       linenum++;
-   	}
+       half_chop(argument, first, rest);
+       half_chop(rest, second, rest);
+       choice2 = atoi(second);
 
  
-  
-    //printf("%lu newline characters\n", newline_count); 
-    //sprintf(buf2, "%lu newline characters\n", newline_count); 
-    //page_string(ch->desc, buf2, 1);
-  fclose(recipelist);
-  
+ if (!*argument)
+  {
+  send_to_char("&+wForge Syntax:\n&n", ch);
+  send_to_char("&+w(forge info <number> - list required materials to forge the item.)\n&n", ch);
+  send_to_char("&+w(forge stat <number> - display properties of the item.)\n&n", ch);
+  send_to_char("&+w(forge make <number> - create the item.)\n&n", ch);
+  send_to_char("&+yYou know the following recipes:\n&n", ch);
+  send_to_char("----------------------------------------------------------------------------\n", ch);
+  send_to_char("&+BRecipe Number		              &+MItem&n\n\r", ch);
+      while((fscanf(recipelist, "%i", &recnum)) != EOF )
+	{  
+       /* debug
+       char bufbug[MAX_STRING_LENGTH];
+       */
+       if(recnum == choice2)
+       selected = choice2;
+       /* debug
+       sprintf(bufbug, "choice is: %d\r\n", selected);
+       send_to_char(bufbug, ch);
+       if(recnum == choice2)
+	send_to_char("The one below here is selected.\r\n", ch);
+	*/
+	tobj = read_object(recnum, VIRTUAL);
+ 	sprintf(rbuf, "%d\n", recnum);
+    sprintf(buffer, "   &+W%-22d&n%s&n\n", recnum, tobj->short_description);
+	//stores the actual vnum written in file into rbuf 
+	page_string(ch->desc, buffer, 1);
+    send_to_char("----------------------------------------------------------------------------\n", ch);
+   	}
+     fclose(recipelist);
   /***ENDDISPLAYRECIPES***/
+  return;
+  }
+
+  while((fscanf(recipelist, "%i", &recnum)) != EOF )
+	{  
+       /* debug
+       char bufbug[MAX_STRING_LENGTH];
+       */
+       if(recnum == choice2)
+       selected = choice2;
+       /* debug
+       sprintf(bufbug, "choice is: %d\r\n", selected);
+       send_to_char(bufbug, ch);
+       if(recnum == choice2)
+	send_to_char("The one below here is selected.\r\n", ch);
+	*/
+	tobj = read_object(recnum, VIRTUAL);
+ 	sprintf(rbuf, "%d\n", recnum);
+	}
+  fclose(recipelist);
+ 
+
+  if (is_abbrev(first, "stat"))
+  {
+    if(choice2 == 0)
+     {
+      send_to_char("What &+Wrecipe&n would you like &+ystatistics&n about?\n", ch);
+      return;
+     }
+    if(selected == 0)
+     {
+      send_to_char("You dont appear to have that &+Wrecipe&n in your list.&n\n", ch);
+      return;
+     }
+    tobj = read_object(selected, VIRTUAL);
+    send_to_char("&+yYou open your &+Ltome &+yof &+Ycra&+yftsm&+Lanship &+yand examine the &+Litem&n.\n", ch);
+    spell_identify(GET_LEVEL(ch), ch, 0, 0, 0, tobj);
+    return;
+  }
+  else if(is_abbrev(first, "info"))
+  {
+    if(choice2 == 0)
+     {
+      send_to_char("What &+Wrecipe&n would you like &+yinformation&n about?\n", ch);
+      return;
+     }
+    if(selected == 0)
+     {
+      send_to_char("You dont appear to have that &+Wrecipe&n in your list.&n\n", ch);
+      return;
+     }
+   tobj = read_object(selected, VIRTUAL);
+   //First - See if there's a magical affect that we need a component for.
+
+  //Second - See what material it is.
+   send_to_char("RECIPE CRAP IN THIS\r\n", ch);
+   return;
+  }
+
+
+
 /*
   if (GET_CHAR_SKILL(ch, SKILL_FORGE) == 0){
     send_to_char("&+LYou dont know how to forge.\r\n", ch);
@@ -395,10 +472,11 @@ void do_forge(P_char ch, char *argument, int cmd)
 
   foundry = check_foundry(ch);
 
-  if (!foundry) { // No furnace/foundry/forge in room
+  if (!foundry) 
+   { // No furnace/foundry/forge in room
 	act("&+LYou need to be by your foundry to forge...&n", FALSE, ch, 0, 0, TO_CHAR);
 	return;
-  }
+   }
 
   *buf1 = '\0';
   if (!*argument){
