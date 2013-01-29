@@ -766,7 +766,7 @@ void initialize_skills()
                 TAR_CHAR_WORLD | TAR_NOCOMBAT, spell_ethereal_rift);
 //  SPELL_ADD(CLASS_MINDFLAYER, 10);
 
-  SPELL_CREATE("wormhole", SPELL_WORMHOLE, PULSE_SPELLCAST * 3,
+  SPELL_CREATE("wormhole", SPELL_WORMHOLE, PULSE_SPELLCAST * 7,
                 TAR_CHAR_WORLD | TAR_NOCOMBAT, spell_wormhole);
   SPELL_ADD(CLASS_PSIONICIST, 10);
   SPELL_ADD(CLASS_MINDFLAYER, 9);
@@ -2977,7 +2977,7 @@ SPELL_ADD(CLASS_NONE, 1);
                 spell_greater_spirit_ward, "The dim aura around you fades.");
   SPELL_ADD(CLASS_SHAMAN, 9);
 
-  SPELL_CREATE("etherportal", SPELL_ETHERPORTAL, PULSE_SPELLCAST * 3,
+  SPELL_CREATE("etherportal", SPELL_ETHERPORTAL, PULSE_SPELLCAST * 7,
                 TAR_CHAR_WORLD | TAR_NOCOMBAT | TAR_SPIRIT,
                 spell_etherportal);
   SPELL_ADD(CLASS_SHAMAN, 10);
@@ -4185,7 +4185,7 @@ SPELL_ADD(CLASS_NONE, 1);
 //  SPELL_ADD(CLASS_DRUID, 10);
 //  SPELL_ADD(CLASS_RANGER, 11);
 
-  SPELL_CREATE("moonwell", SPELL_MOONWELL, PULSE_SPELLCAST * 3,
+  SPELL_CREATE("moonwell", SPELL_MOONWELL, PULSE_SPELLCAST * 7,
                 TAR_CHAR_WORLD | TAR_NOCOMBAT, spell_moonwell);
   SPELL_ADD(CLASS_DRUID, 10);
 

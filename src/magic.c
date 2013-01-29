@@ -1676,7 +1676,7 @@ bool can_conjure_lesser_elem(P_char ch, int level)
         j++;
       }
     }*/
-    if(IS_ELEMENTAL(victim))
+    if(IS_ELEMENTAL(victim) || IS_GREATER_ELEMENTAL(victim))
     i++;
   }
 /*
@@ -2255,6 +2255,7 @@ bool can_conjure_greater_elem(P_char ch, int level)
   for (k = ch->followers, j = 0; k; k = k->next)
   {
     victim = k->follower;
+      if(IS_ELEMENTAL(victim) || IS_GREATER_ELEMENTAL(victim))
       j++;
     
   }
