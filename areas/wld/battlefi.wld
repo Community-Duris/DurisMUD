@@ -135,7 +135,7 @@ the temple further will reveal many things kept hidden to the outside world.
 D1
 ~
 ~
-0 0 66531
+0 0 66529
 D3
 ~
 doors door wooden~
@@ -396,7 +396,7 @@ D0
 D7
 ~
 ~
-0 0 66539
+0 0 66537
 E
 view~
 &+LIt looks to have been some sort of battlefield.  Many corpses and burning
@@ -421,7 +421,7 @@ of burning flesh is in the air. More battlefields are sure to come.
 D0
 ~
 ~
-0 0 66470
+0 0 66468
 D2
 ~
 ~
@@ -518,7 +518,7 @@ S
 D3
 ~
 ~
-0 0 66453
+0 0 66451
 D4
 ~
 ~
@@ -735,7 +735,7 @@ races with but one intent, to destroy the good in all this land.
 D0
 ~
 ~
-0 0 66454
+0 0 66452
 D1
 ~
 ~
@@ -811,7 +811,7 @@ races with but one intent, to destroy the good in all this land.
 D1
 ~
 gate gates~
-1 0 66456
+1 0 66454
 D2
 ~
 ~
@@ -890,11 +890,37 @@ D0
 D1
 ~
 ~
-0 0 66451
+0 0 66449
 D3
 ~
 flap~
-1 0 66438
+1 0 66437
+S
+#66437
+&+LWithin the So&+cl&+Cd&+ci&+Ler's Barracks~
+&+L   These barracks house the dawgs of war, the soldiers that are needed to wage
+&+Lany war. Without these soldiers the officers would have to fight their own wars
+&+Land would ultimately lose. Bunks as far as the eye can see run this way and
+&+Lthat with no apparent organization. Whomever said that life was fair, simply
+&+Lwasn't telling to the truth or was on some sort of drug. The soldiers that
+&+Lbunk in these barracks realize that they have little choice whether or not they
+&+Llive so they simply follow orders or else. The minotaurs here have seen many
+&+Lbattles in the past and would no doubt come to eachothers aid if they were
+&+Lattacked. There are very few windows here and this place stinks.
+~
+664 8 0
+D0
+~
+~
+0 0 66439
+D1
+~
+flap~
+1 0 66436
+D3
+~
+~
+0 0 66438
 S
 #66438
 &+LWithin the So&+cl&+Cd&+ci&+Ler's Barracks~
@@ -915,40 +941,14 @@ D0
 0 0 66440
 D1
 ~
-flap~
-1 0 66436
+~
+0 0 66437
 D3
-~
-~
-0 0 66439
-S
-#66439
-&+LWithin the So&+cl&+Cd&+ci&+Ler's Barracks~
-&+L   These barracks house the dawgs of war, the soldiers that are needed to wage
-&+Lany war. Without these soldiers the officers would have to fight their own wars
-&+Land would ultimately lose. Bunks as far as the eye can see run this way and
-&+Lthat with no apparent organization. Whomever said that life was fair, simply
-&+Lwasn't telling to the truth or was on some sort of drug. The soldiers that
-&+Lbunk in these barracks realize that they have little choice whether or not they
-&+Llive so they simply follow orders or else. The minotaurs here have seen many
-&+Lbattles in the past and would no doubt come to eachothers aid if they were
-&+Lattacked. There are very few windows here and this place stinks.
-~
-664 8 0
-D0
 ~
 ~
 0 0 66441
-D1
-~
-~
-0 0 66438
-D3
-~
-~
-0 0 66442
 S
-#66440
+#66439
 &+LWithin the So&+cl&+Cd&+ci&+Ler's Barracks~
 &+L   These barracks house the dawgs of war, the soldiers that are needed to wage
 &+Lany war. Without these soldiers the officers would have to fight their own wars
@@ -964,11 +964,33 @@ S
 D2
 ~
 ~
-0 0 66438
+0 0 66437
 D3
 ~
 ~
-0 0 66441
+0 0 66440
+S
+#66440
+&+LWithin the So&+cl&+Cd&+ci&+Ler's Barracks~
+&+L   These barracks house the dawgs of war, the soldiers that are needed to wage
+&+Lany war. Without these soldiers the officers would have to fight their own wars
+&+Land would ultimately lose. Bunks as far as the eye can see run this way and
+&+Lthat with no apparent organization. Whomever said that life was fair, simply
+&+Lwasn't telling to the truth or was on some sort of drug. The soldiers that
+&+Lbunk in these barracks realize that they have little choice whether or not they
+&+Llive so they simply follow orders or else. The minotaurs here have seen many
+&+Lbattles in the past and would no doubt come to eachothers aid if they were
+&+Lattacked. There are very few windows here and this place stinks.
+~
+664 8 0
+D1
+~
+~
+0 0 66439
+D2
+~
+~
+0 0 66438
 S
 #66441
 &+LWithin the So&+cl&+Cd&+ci&+Ler's Barracks~
@@ -986,11 +1008,11 @@ S
 D1
 ~
 ~
-0 0 66440
-D2
+0 0 66438
+D3
 ~
 ~
-0 0 66439
+0 0 66442
 S
 #66442
 &+LWithin the So&+cl&+Cd&+ci&+Ler's Barracks~
@@ -1005,10 +1027,14 @@ S
 &+Lattacked. There are very few windows here and this place stinks.
 ~
 664 8 0
+D0
+~
+~
+0 0 66445
 D1
 ~
 ~
-0 0 66439
+0 0 66441
 D3
 ~
 ~
@@ -1030,15 +1056,11 @@ S
 D0
 ~
 ~
-0 0 66447
+0 0 66444
 D1
 ~
 ~
 0 0 66442
-D3
-~
-~
-0 0 66444
 S
 #66444
 &+LWithin the So&+cl&+Cd&+ci&+Ler's Barracks~
@@ -1053,16 +1075,16 @@ S
 &+Lattacked. There are very few windows here and this place stinks.
 ~
 664 8 0
-D0
-~
-~
-0 0 66446
 D1
+~
+~
+0 0 66445
+D2
 ~
 ~
 0 0 66443
 S
-#66446
+#66445
 &+LWithin the So&+cl&+Cd&+ci&+Ler's Barracks~
 &+L   These barracks house the dawgs of war, the soldiers that are needed to wage
 &+Lany war. Without these soldiers the officers would have to fight their own wars
@@ -1075,38 +1097,16 @@ S
 &+Lattacked. There are very few windows here and this place stinks.
 ~
 664 8 0
-D1
-~
-~
-0 0 66447
 D2
+~
+~
+0 0 66442
+D3
 ~
 ~
 0 0 66444
 S
-#66447
-&+LWithin the So&+cl&+Cd&+ci&+Ler's Barracks~
-&+L   These barracks house the dawgs of war, the soldiers that are needed to wage
-&+Lany war. Without these soldiers the officers would have to fight their own wars
-&+Land would ultimately lose. Bunks as far as the eye can see run this way and
-&+Lthat with no apparent organization. Whomever said that life was fair, simply
-&+Lwasn't telling to the truth or was on some sort of drug. The soldiers that
-&+Lbunk in these barracks realize that they have little choice whether or not they
-&+Llive so they simply follow orders or else. The minotaurs here have seen many
-&+Lbattles in the past and would no doubt come to eachothers aid if they were
-&+Lattacked. There are very few windows here and this place stinks.
-~
-664 8 0
-D2
-~
-~
-0 0 66443
-D3
-~
-~
-0 0 66446
-S
-#66448
+#66446
 The &+yHalfling &+mCaptain Quarters~
 &+m   The halfling that resides here controls the halfling regiment of the good
 &+marmy. He stands just above four feet tall, a moderate size for this guy. His
@@ -1129,9 +1129,9 @@ The &+yHalfling &+mCaptain Quarters~
 D2
 ~
 ~
-0 0 66473
+0 0 66471
 S
-#66449
+#66447
 &+WThe Observatory~
 &+W   Total blackness surrounds a silver sphere in the center of the room.
 &+WFlowing in too many directions to count and in so few to notice, the sphere
@@ -1143,7 +1143,7 @@ S
 ~
 664 8 0
 S
-#66450
+#66448
 &+WA Recession Room~
 &+W   It is here that visitors are accosted and treated as guests.  For there is
 &+Wno doubt that those who enter this tower are watched with more than just eyes.
@@ -1159,9 +1159,9 @@ S
 D0
 ~
 ~
-0 0 66559
+0 0 66557
 S
-#66451
+#66449
 Nearing the&+L Outhouse~
    A horrific stinch fills the air. A scathouse to the east seems to be the
 source of the foul odor. Soldiers need three things to function in this
@@ -1178,13 +1178,13 @@ enemy at all times so they don't turn on one another.
 D1
 ~
 ~
-0 0 66452
+0 0 66450
 D3
 ~
 ~
 0 0 66436
 S
-#66452
+#66450
 &+LWithin the Outhouse~
    The walls are covered in feces and urine. The stools look like they've been
 dragged in the mud and hammered by rapiers. An open window does little to
@@ -1200,9 +1200,9 @@ scathouse, a responsibility they don't take seriously.
 D3
 ~
 ~
-0 0 66451
+0 0 66449
 S
-#66453
+#66451
 &+LA large Tunnel~
 &+L   It is here where the monks that built the temple created the other portion
 &+Lof their temple in hopes of preventing valuables from being stolen, by hiding
@@ -1220,9 +1220,9 @@ D1
 D4
 ~
 ~
-0 0 66457
+0 0 66455
 S
-#66454
+#66452
 Before a Large &+gMes&+Gsh&+gall~
    A large superstructure to the west has a feint smell emitting from it, the
 smell of grub. It is obvious from the amount of trash littering the entrance
@@ -1242,9 +1242,9 @@ D2
 D3
 ~
 flap~
-1 0 66455
+1 0 66453
 S
-#66455
+#66453
 Within a Large &+gMes&+Gsh&+gall~
    From the time a soldier steps into this place, he is doused with food from
 all angles. New soldiers often fall victim to this sort of treatment, whether
@@ -1260,9 +1260,9 @@ feast on things that any ordinary surface dweller wouldn't even consider.
 D1
 ~
 flap~
-1 0 66454
+1 0 66452
 S
-#66456
+#66454
 &+LA F&nort&+Lified G&+ca&+Ct&+ce~
 &+L   This parapet protects the encampment from foreign troops with foreign
 &+Lallegiances. At any given point there are at least a platoon of soldiers
@@ -1281,13 +1281,13 @@ S
 D0
 ~
 gates gate~
-1 0 66461
+1 0 66459
 D3
 ~
 gates gate~
 1 0 66433
 S
-#66457
+#66455
 A &nWhi&+Ltewas&nhed Hallway~
    Monks from a century ago once lived here. It is here that the secret
 path they dug through the dirt opens up onto the surface. This path was meant
@@ -1305,13 +1305,13 @@ and stumbled onto something most terrible.
 D3
 ~
 ~
-0 0 66458
+0 0 66456
 D5
 ~
 ~
-0 0 66453
+0 0 66451
 S
-#66458
+#66456
 A Whi&+Ltewas&nhed Hallway~
    Monks from a century ago once lived here. It is here that the secret
 path they dug through the dirt opens up onto the surface. This path was meant
@@ -1329,17 +1329,17 @@ and stumbled onto something most terrible.
 D0
 ~
 ~
-0 0 66459
+0 0 66457
 D1
 ~
 ~
-0 0 66457
+0 0 66455
 D3
 ~
 ~
-0 0 66460
+0 0 66458
 S
-#66459
+#66457
 &+LAbandoned Sle&nepi&+Lng &nChambers~
 &+L   This stone room was onced used by the monks as a sleeping room. There isn't
 &+Lmuch to see here except the cold vine covered stone of the floors and walls.
@@ -1356,9 +1356,9 @@ S
 D2
 ~
 ~
-0 0 66458
+0 0 66456
 S
-#66460
+#66458
 Ove&+Lrloo&nking a Large &+LCa&+yve&+Lrn~
    It is from this vantage point that one can see what the monks who lived in
 these runes had next on their agenda. To the north and some distance down a
@@ -1374,17 +1374,17 @@ access to this work site or one could run north and fall flat on his ass.
 D0
 ~
 ~
-0 0 66484
+0 0 66482
 D1
 ~
 ~
-0 0 66458
+0 0 66456
 D5
 ~
 ~
-0 0 66485
+0 0 66483
 S
-#66461
+#66459
 Along a the&+L E&+yd&+gg&+Le of a &+bRiver~
    The river runs through the hills and plains. Is brings fresh water from
 the mountains above. The mountain caps rise thousands feet into the air and
@@ -1402,13 +1402,13 @@ within this section, for booted feet are visible in the mud below the water.
 D2
 ~
 gates gate~
-1 0 66456
+1 0 66454
 D8
 ~
 ~
-0 0 66462
+0 0 66460
 S
-#66462
+#66460
 &+bA River Crossing~
 &+B   This section of the river looks to be well traveled. On either side of the
 &+Bof of it, paths created by caravans, booted feet, and war-horses. Algae
@@ -1420,17 +1420,17 @@ S
 D1
 ~
 ~
-0 0 66464
+0 0 66462
 D7
 ~
 ~
-0 0 66461
+0 0 66459
 D8
 ~
 ~
-0 0 66463
+0 0 66461
 S
-#66463
+#66461
 &nAlong a the &+LE&+yd&+gg&+Le of a &+bRiver~
    The river runs through the hills and plains. Is brings fresh water from
 the mountains above. The mountain caps rise thousands feet into the air and
@@ -1448,13 +1448,13 @@ within this section, for booted feet are visible in the mud below the water.
 D0
 ~
 ~
-0 0 66535
+0 0 66533
 D7
 ~
 ~
-0 0 66462
+0 0 66460
 S
-#66464
+#66462
 &+bOn &+bRapid River~
 &+B   Perhaps many of the travelers that happened to attempt a navigation of this
 &+Briver found out the hard way that this river isn't to be taken lightly. It's
@@ -1466,13 +1466,13 @@ S
 D1
 ~
 ~
-0 0 66465
+0 0 66463
 D3
 ~
 ~
-0 0 66462
+0 0 66460
 S
-#66465
+#66463
 &+bBefore a Waterfall~
 &+B   Perhaps many of the travelers that happened to attempt a navigation of this
 &+Briver found out the hard way that this river isn't to be taken lightly. It's
@@ -1485,13 +1485,13 @@ S
 D1
 ~
 ~
-0 0 66481
+0 0 66479
 D3
 ~
 ~
-0 0 66464
+0 0 66462
 S
-#66466
+#66464
 Before a &+LStone Gate~
    This seems to have been a battlefield at one point in time because many
 corpses cover this hill. The hilly grassland that once was this region is
@@ -1513,13 +1513,13 @@ It is only a matter of time before the forces of good conquer the evil within.
 D0
 ~
 ~
-0 0 66468
+0 0 66466
 D2
 ~
 gates gate~
-1 0 66471
+1 0 66469
 S
-#66467
+#66465
 &+RP&+rl&+Ba&+bn&+Me&+mr &+WN&+we&+Cx&+cu&+Ls~
 &+W   Perhaps, amongst the h&+weaven&+Lly bodies, m&+wagnan&+Wimous beings reign supreme,
 &+CCould this be such a place?  E&+cach&+L race worsh&+cips th&+Ceir own gods, but where, if
@@ -1537,13 +1537,13 @@ S
 D0
 ~
 ~
-0 0 66469
+0 0 66467
 D2
 ~
 ~
-0 0 66472
+0 0 66470
 S
-#66468
+#66466
 A &+rBu&+Rrn&+Wi&+Yn&+Wg &+LBat&+gt&+Ll&+Le&+gfi&+Leld~
 &+r   What remains of this battlefield is horrific. Just remaining in the
 &+Lvicinity is a sheer test of willpower. The monstrousities visible within this
@@ -1567,13 +1567,13 @@ A &+rBu&+Rrn&+Wi&+Yn&+Wg &+LBat&+gt&+Ll&+Le&+gfi&+Leld~
 D2
 ~
 ~
-0 0 66466
+0 0 66464
 D3
 ~
 ~
-0 0 66474
+0 0 66472
 S
-#66469
+#66467
 &+WSome Heavenly Gates~
 &+W   The air swells with the smell of roses, a pleasant feeling fills the air.
 &+WThe white washed walls protecting the city seem to stretch for an eternity in
@@ -1594,9 +1594,9 @@ S
 D0
 ~
 ~
-0 0 66501
+0 0 66499
 S
-#66470
+#66468
 &nApproaching a &+LSentry Outpost&n~
    A moutain range is visible to the far north east, and the sounds of battle
 echo in the air. Shouts from the distance are audible but not understandable.
@@ -1614,13 +1614,13 @@ however, they more than make up for that in brute strength.
 D0
 ~
 gates gate~
-1 0 66471
+1 0 66469
 D2
 ~
 ~
 0 0 66417
 S
-#66471
+#66469
 &+LA F&nort&+Lified G&+ca&+Ct&+ce~
 &+L   This parapet protects the encampment from foreign troops with foreign
 &+Lallegiances. At any given point there are at least a platoon of soldiers
@@ -1639,13 +1639,13 @@ S
 D0
 ~
 gate gates~
-1 0 66466
+1 0 66464
 D2
 ~
 gates gate~
-1 0 66470
+1 0 66468
 S
-#66472
+#66470
 &+RGates of the Demonic Demi-Gods~
 &+R   Only from the depths of hell could such a place have been spawned.  Most of
 &+Rthe terrors of hell would drive one insane but the evil forces at work here
@@ -1662,12 +1662,12 @@ S
 D2
 ~
 ~
-0 0 66475
+0 0 66473
 E
 sign~
 ~
 S
-#66473
+#66471
 &+yAn Encampment&n~
    A camp fire burns steadily in the center of this camp. There are tents set
 up in a circle formation. Logs for soldiers to sit upon are sprawled around
@@ -1686,13 +1686,13 @@ A great many of them have died in this conflict with no end in sight.
 D0
 ~
 ~
-0 0 66448
+0 0 66446
 D2
 ~
 ~
-0 0 66474
+0 0 66472
 S
-#66474
+#66472
 Top of a &+yHill~
    This seems to have been a battlefield at one point in time, for many
 corpses litter this hill. The hilly grassland that once was this region is
@@ -1710,17 +1710,17 @@ killed a great many halflings and barbarians. Clouds of smoke rise.
 D0
 ~
 ~
-0 0 66473
+0 0 66471
 D1
 ~
 ~
-0 0 66468
+0 0 66466
 D4
 ~
 ~
-0 0 66477
+0 0 66475
 S
-#66475
+#66473
 &+RA Burning Courtyard~
 &+R   Minions float above this gigantic courtyard, for it is their domain.  Souls
 &+Rdamned for all eternity nest within the sky above, accosting intruders with
@@ -1735,17 +1735,17 @@ S
 D1
 ~
 ~
-0 0 66483
+0 0 66481
 D2
 ~
 ~
-0 0 66480
+0 0 66478
 D3
 ~
 ~
-0 0 66492
+0 0 66490
 S
-#66476
+#66474
 &+RThe Pit of Eternal Suffering~
 &+R   Souls scream with despair, for their existence is none less than tormenting.
 &+RAnything that passes through these walls goes through an unnerving affect, for
@@ -1758,13 +1758,13 @@ S
 D0
 ~
 gate~
-1 0 66505
+1 0 66503
 D1
 ~
 ~
-0 0 66492
+0 0 66490
 S
-#66477
+#66475
 &+LA Mou&+ytain&+Lside Cliff~
 &+L   The cliff is very steep, very treacherous.  The jagged edges make scaling
 &+Lit incredibly difficult, hazardous at best.  Most of the birds that nest
@@ -1777,13 +1777,13 @@ S
 D4
 ~
 ~
-0 0 66478
+0 0 66476
 D5
 ~
 ~
-0 0 66474
+0 0 66472
 S
-#66478
+#66476
 &+LA Mou&+ytain&+Lside Cliff~
 &+L   The cliff has many jagged rocks lingering in it's presence, making a climb
 &+Ldown very dangerous.  Many different bones are visible to the east, bones
@@ -1795,13 +1795,13 @@ S
 D1
 ~
 ~
-0 0 66479
+0 0 66477
 D5
 ~
 ~
-0 0 66477
+0 0 66475
 S
-#66479
+#66477
 &+LA Dark Ca&nv&+Le~
 &+L&+L   This cave seems to have an enchantment placed upon it, for there is a
 &+Lstrange aura emanating from its walls.  The height of this cave is adequate
@@ -1813,9 +1813,9 @@ S
 D3
 ~
 ~
-0 0 66478
+0 0 66476
 S
-#66480
+#66478
 &+RTower of the Demi-God Yar'Kalisteritax~
 &+R   The dread demon lord himself resides within these walls. This dragon is the
 &+Reldest of the three demi-gods, therefore, he is the most powerful. The better
@@ -1830,13 +1830,13 @@ S
 D0
 ~
 ~
-0 0 66475
+0 0 66473
 D2
 ~
 ~
-0 0 66499
+0 0 66497
 S
-#66481
+#66479
 &+bAt the Base of a &+bW&+wat&+Wer&+wfa&+bll~
 &+b   The land above comes to an abrupt end and the water above falls steadily
 &+bto the ground. When &+Ysun&+Wlight&+b touches the outer rims of the falls, a small,
@@ -1851,13 +1851,13 @@ S
 D0
 ~
 ~
-0 0 66482
+0 0 66480
 D4
 ~
 ~
-0 0 66465
+0 0 66463
 S
-#66482
+#66480
 &nBefore a &+bW&+wat&+Wer&+wfa&+bll&n~
    There is a roaring waterfall to the south. The water runs off a small cliff
 and lands into a lake. The animals like to go there for fresh water and hunters
@@ -1873,13 +1873,13 @@ minotaur warriors. These warriors must be scouting the forest to the north.
 D0
 ~
 ~
-0 0 66491
+0 0 66489
 D2
 ~
 ~
-0 0 66481
+0 0 66479
 S
-#66483
+#66481
 &+RTower of the Demi-God Nar'Minanupoli~
 &+R   The demon that resides in this tower has more strength than an army of
 &+Rundead, &+Ra fleet of dragons, or any standing army. His power is only surpassed
@@ -1894,13 +1894,13 @@ S
 D1
 ~
 ~
-0 0 66493
+0 0 66491
 D3
 ~
 ~
-0 0 66475
+0 0 66473
 S
-#66484
+#66482
 &+LIn Mid-Air~
    Whee!  There is no ground here!  Happy flying! Hoot Hoot!!!
 
@@ -1923,15 +1923,15 @@ S
 D2
 ~
 ~
-0 0 66460
+0 0 66458
 D5
 ~
 ~
-0 0 66486
+0 0 66484
 F
 100
 S
-#66485
+#66483
 An&+L Abandoned Worksite~
    Many tools that were carelessly left out in the open have been overtaken
 by the forest. The owners of the tools must have left in haste because they
@@ -1946,13 +1946,13 @@ abandon their place of worship and work must have been extraordinary.
 D0
 ~
 ~
-0 0 66486
+0 0 66484
 D4
 ~
 ~
-0 0 66460
+0 0 66458
 S
-#66486
+#66484
 A Large &+LCavern Opening~
    Sounds echo within these chambers easily. It is here where the cavern is
 not quite a cavern and not quite a forest. This is where the forest and the
@@ -1969,13 +1969,13 @@ as well.
 D2
 ~
 ~
-0 0 66485
+0 0 66483
 D5
 ~
 ~
-0 0 66487
+0 0 66485
 S
-#66487
+#66485
 A &+LNarrow Landing~
 &+L   Rising over forty feet in height, the obsidian pillars are completely awe
 &+Linspiring. Poles give support to the domed shaped ceiling. Puddles of blood
@@ -1991,13 +1991,13 @@ A &+LNarrow Landing~
 D1
 ~
 ~
-0 0 66488
+0 0 66486
 D4
 ~
 ~
-0 0 66486
+0 0 66484
 S
-#66488
+#66486
 A &+LTurning~
 &+L   The corridor splits into two paths of travel, southward and northward.
 &+LWalls rise over thirty feet high, while supporting the domed shape ceiling.
@@ -2013,17 +2013,17 @@ A &+LTurning~
 D0
 ~
 ~
-0 0 66534
+0 0 66532
 D2
 ~
 ~
-0 0 66515
+0 0 66513
 D3
 ~
 ~
-0 0 66487
+0 0 66485
 S
-#66489
+#66487
 Before a Small &+yHut~
    This is where the small trail in the forest splits into two paths of travel;
 to the west a small hut is visible, while to the east nothing but forest. A
@@ -2038,13 +2038,13 @@ off your backs and can be even lonelier still.
 D1
 ~
 ~
-0 0 66491
+0 0 66489
 D3
 ~
 door~
-1 0 66490
+1 0 66488
 S
-#66490
+#66488
 &+LA Small &+yHut~
 &+L   This small &+yhut&n &+Llooks to be abandoned. Dust covers all of the item
 &+Lon the tables, the couch near the window, and the pictures along the walls.
@@ -2059,9 +2059,9 @@ S
 D1
 ~
 door~
-1 0 66489
+1 0 66487
 S
-#66491
+#66489
 A &+LDense &+gForest~
    The trees prevent any sunlight to shine here. Tall evergreens have grown
 hundreds of feet into the air. They are hundreds of years old. There are
@@ -2076,17 +2076,17 @@ here, as if something is not quite right. It seems as if something is waiting.
 D1
 ~
 ~
-0 0 66495
+0 0 66493
 D2
 ~
 ~
-0 0 66482
+0 0 66480
 D3
 ~
 ~
-0 0 66489
+0 0 66487
 S
-#66492
+#66490
 &+RTower of the Demi-God Bor'Vongonkiliu~
 &+R   Pure evil permeates from the tower. These demi-gods have nothing within them
 &+Rbut a lust for vegeance upon the outside world, for merely existing. One
@@ -2101,13 +2101,13 @@ S
 D1
 ~
 ~
-0 0 66475
+0 0 66473
 D3
 ~
 ~
-0 0 66476
+0 0 66474
 S
-#66493
+#66491
 &+RDomain of Lost Souls~
 &+R   The sentries of the tower are kept here. These keepers are servants of the
 &+Rlord that resides within this tower and obey only his bidding. Some beasts
@@ -2121,13 +2121,13 @@ S
 D0
 ~
 ~
-0 0 66494
+0 0 66492
 D3
 ~
 ~
-0 0 66483
+0 0 66481
 S
-#66494
+#66492
 &+RAn Observatory~
 &+R   The walls are ablaze and the heat of which could melt rock. These flames
 &+Rspew sporadically through the room, scorching all within proximity. In
@@ -2143,13 +2143,13 @@ S
 D2
 ~
 ~
-0 0 66493
+0 0 66491
 D4
 ~
 ~
-0 0 66500
+0 0 66498
 S
-#66495
+#66493
 An &+yAbandoned Sentry &+LPost~
    A long time ago this was once some sort of post. There are two small
 bamboo towers on either side of the forest path. It must have been some sort
@@ -2165,13 +2165,13 @@ station. Squirrels race in the tree branches above.
 D1
 ~
 ~
-0 0 66496
+0 0 66494
 D3
 ~
 ~
-0 0 66491
+0 0 66489
 S
-#66496
+#66494
 Approaching an&+L Village Gate~
    The trail is headed to a small gate of some sort. The gate is totally
 covered with vines and moss, henceforth, it blends in perfectly with the
@@ -2187,13 +2187,13 @@ rustle in the trees above. A gentle breeze stirs the branches.
 D1
 ~
 ~
-0 0 66497
+0 0 66495
 D3
 ~
 ~
-0 0 66495
+0 0 66493
 S
-#66497
+#66495
 Gates of a &+LLost Village~
    The gates were constructed using bamboo and some type of tough bark. The
 gates stand a little over six feet up in the air with vines covering them
@@ -2209,13 +2209,13 @@ about it soon. The night is lonely here.
 D3
 ~
 ~
-0 0 66496
+0 0 66494
 D8
 ~
 gates gate~
-1 0 66498
+1 0 66496
 S
-#66498
+#66496
 &+LBefore a Vi&+yl&+gl&+ya&+Lge &+yGa&+Lt&+ye~
 &+L   The village's gates remain dormant to the southwest. The bark that covers
 &+Lthe bamboo frame is totally molded and covered with vines. The moisture seems
@@ -2228,17 +2228,17 @@ S
 D0
 ~
 ~
-0 0 66504
+0 0 66502
 D1
 ~
 ~
-0 0 66503
+0 0 66501
 D7
 ~
 gates gate~
-1 0 66497
+1 0 66495
 S
-#66499
+#66497
 &+RThrown Room of the Demi-God Yar'Kalisteritax~
 &+R   Why why why would someone enter his domain uninvited. Even if you were a
 &+Rsmall cricket in the jungle in some distant land, he would find you and evoke
@@ -2253,9 +2253,9 @@ S
 D0
 ~
 ~
-0 0 66480
+0 0 66478
 S
-#66500
+#66498
 &+RChamber of the Demi-God Minanupoli~
 &+R   Flames shoot up through the floor, lightning cackles though the air, and
 &+Rthe thrown of the Demi-Lord glows brilliantly. Indeed, mortal men have never
@@ -2270,9 +2270,9 @@ S
 D5
 ~
 ~
-0 0 66494
+0 0 66492
 S
-#66501
+#66499
 &+WAn Open Courtyard~
 &+W   Spirits from another time, another place hover around. The sky is filled
 &+Wwith an unending number of them, they appear to be such at ease with existence.
@@ -2287,9 +2287,9 @@ S
 D0
 ~
 ~
-0 0 66502
+0 0 66500
 S
-#66502
+#66500
 &+WA Holy Cathedral~
 &+W   A form of light pertrudes through the glass stained windows, if this wasn't
 &+Wthe spirit world, it could the sun. Perhaps it is, infact, a star.  The
@@ -2304,9 +2304,9 @@ S
 D2
 ~
 ~
-0 0 66501
+0 0 66499
 S
-#66503
+#66501
 &+LNearing a Small &+bSt&+Brea&+bm~
 &+L   The trail runs downhill a little bit, creating hazardous footing conditions.
 &+LA stream flows freely into what it looks like a windmill to the east. The
@@ -2318,13 +2318,13 @@ S
 D1
 ~
 ~
-0 0 66514
+0 0 66512
 D3
 ~
 ~
-0 0 66498
+0 0 66496
 S
-#66504
+#66502
 &+LAn Inter&+ws&ne&+Wc&+Ltion of&+y Pa&+Lt&+yhs~
 &+L   Two paths converge to form an intersection of sorts. One path stretches to
 &+Lthe west, while the one other runs south. There seems to be very little
@@ -2337,17 +2337,17 @@ S
 D0
 ~
 ~
-0 0 66530
+0 0 66528
 D2
 ~
 ~
-0 0 66498
+0 0 66496
 D3
 ~
 ~
-0 0 66528
+0 0 66526
 S
-#66505
+#66503
 &+RThe Beholder's Chamber~
 &+R   Beholders usually behold something, just what they guard and keep from the
 &+Routside world varies. If a magi was powerful enough, he could summon and
@@ -2360,13 +2360,13 @@ S
 D2
 ~
 gate~
-1 0 66476
+1 0 66474
 D4
 ~
 ~
-0 0 66506
+0 0 66504
 S
-#66506
+#66504
 &+RChamber of the Demi-God Bor'Vongonkiliu~
 &+R   His chamber comes alive. It is a living inferno. It is a prevailent
 &+Rfeeling to any unwelcomed visitor to feel intimidated. It is here that
@@ -2380,9 +2380,9 @@ S
 D5
 ~
 ~
-0 0 66505
+0 0 66503
 S
-#66507
+#66505
 &+LA Vi&+yl&+gl&+ya&+Lge &+yTr&+Lai&+yl Curve~
 &+y   This trail seems not to have been traveled upon in many years. Many
 &+ybranches and moss cover the trail. The thickness of the trees prevent
@@ -2397,17 +2397,17 @@ S
 D0
 ~
 ~
-0 0 66508
+0 0 66506
 D1
 ~
 ~
-0 0 66512
+0 0 66510
 D2
 ~
 ~
-0 0 66530
+0 0 66528
 S
-#66508
+#66506
 &+LA Small Sidepath~
 &+L   This path is very narrow and traveling. The forest is all but an
 &+Limpregnable fortress in some places. Moss, undergrowth, and various other
@@ -2424,13 +2424,13 @@ S
 D0
 ~
 ~
-0 0 66509
+0 0 66507
 D2
 ~
 ~
-0 0 66507
+0 0 66505
 S
-#66509
+#66507
 &+LA Small Sidepath~
 &+L   This path is very narrow and traveling. The forest is all but an
 &+Limpregnable fortress in some places. Moss, undergrowth, and various other
@@ -2447,13 +2447,13 @@ S
 D2
 ~
 ~
-0 0 66508
+0 0 66506
 D3
 ~
 ~
-0 0 66510
+0 0 66508
 S
-#66510
+#66508
 Near a large &+yCottage~
 &+L   The forest seems to be thickening at an ever increasing rate. Its almost
 &+Limpossible now to work a way throught the thickening brush. One cannot stray
@@ -2470,13 +2470,13 @@ Near a large &+yCottage~
 D1
 ~
 ~
-0 0 66509
+0 0 66507
 D3
 ~
 door~
-1 0 66511
+1 0 66509
 S
-#66511
+#66509
 &+LWithin a Cottage~
 &+L   This cottage looks to have been abandoned for many years.  Most everything
 &+Lattests to this; the &+rfire&+Lplace&+L has not been used in some time, dust covers most
@@ -2490,9 +2490,9 @@ S
 D1
 ~
 door~
-1 0 66510
+1 0 66508
 S
-#66512
+#66510
 &+LA Small Vi&+yl&+gl&+ya&+Lge &+yTr&+Lai&+yl~
 &+L   This trail seems not to have been traveled upon in many years. Many
 &+Lbranches and moss cover the trail. The thickness of the trees prevent
@@ -2506,17 +2506,17 @@ S
 D0
 ~
 door~
-1 0 66513
+1 0 66511
 D1
 ~
 ~
-0 0 66518
+0 0 66516
 D3
 ~
 ~
-0 0 66507
+0 0 66505
 S
-#66513
+#66511
 &+LA Crudely Built &+yHut&n~
 &+L   This hut seems to have decayed over the years and due to the builders poor
 &+Lcraftsmanship the process was only hastened. There aren't many &+mde&+ccorati&+mve&n
@@ -2528,9 +2528,9 @@ S
 D2
 ~
 door~
-1 0 66512
+1 0 66510
 S
-#66514
+#66512
 &+LAlong a Small &+bSt&+Brea&+bm &+Lnext to a Wind&+ymill~
 &+L   The humidity in the air is horrifying, making it difficult to breath. Some
 &+Lanimals stir in the underbruss. The animals are well hidden and it's difficult
@@ -2542,17 +2542,17 @@ S
 D0
 ~
 door~
-1 0 66516
+1 0 66514
 D1
 ~
 ~
-0 0 66517
+0 0 66515
 D3
 ~
 ~
-0 0 66503
+0 0 66501
 S
-#66515
+#66513
 A &+LDead End~
 &+L   There are rumors in the outside world of a long forgotten portal to another
 &+Ldimension. This dimension is said to be that of the gods. It was said that
@@ -2571,9 +2571,9 @@ A &+LDead End~
 D0
 ~
 ~
-0 0 66488
+0 0 66486
 S
-#66516
+#66514
 &+yHut&+L of the &+bBo&+Bttl&+bers~
 &+L   This is where the village got its&+W fresh&n &+Lsupply of&+b water&+L. A few of the
 &+Linhabitants were charged with collecting fresh water each day and processing it
@@ -2588,9 +2588,9 @@ S
 D2
 ~
 door~
-1 0 66514
+1 0 66512
 S
-#66517
+#66515
 &+LWithin a Wind&+ymill~
 &+L   This is how the village got its supply of &+bwater&+L. The &+Lwind&+ymill&+L also is used
 &+Lto power the machines to process the water to get the impurities out. The
@@ -2605,9 +2605,9 @@ S
 D3
 ~
 ~
-0 0 66514
+0 0 66512
 S
-#66518
+#66516
 &+LThe Vi&+yl&+gl&+ya&+Lge Center~
 &+L   This is where the village trail takes to a fork. Towards the north a few
 &+Llarge huts are visible through the vines and tree branches. Towards the east
@@ -2619,17 +2619,17 @@ S
 D0
 ~
 ~
-0 0 66519
+0 0 66517
 D1
 ~
 ~
-0 0 66521
+0 0 66519
 D3
 ~
 ~
-0 0 66512
+0 0 66510
 S
-#66519
+#66517
 &+LThe Northern &+yTr&+Lai&+yl~
 &+L   This trail leads into graveyard section of the village. Graves of all
 &+Lshapes and sizes have been constructed to house the greater majority of the
@@ -2642,13 +2642,13 @@ S
 D0
 ~
 iron gate~
-1 0 66520
+1 0 66518
 D2
 ~
 ~
-0 0 66518
+0 0 66516
 S
-#66520
+#66518
 &+LA Graveyard~
 &+L   The sun doesn't seem to find its way into this graveyard even during the
 &+Lday. Maybe this place has a curse placed upon it, for what else could explain
@@ -2662,13 +2662,13 @@ S
 D0
 ~
 ~
-0 0 66526
+0 0 66524
 D2
 ~
 iron gate~
-1 0 66519
+1 0 66517
 S
-#66521
+#66519
 &+LSplit in the Eastern &+yTr&+Lai&+yl~
 &+L   The trail comes to a split. A large cabin of some sort is built to the
 &+Lnorth with a wooden gate surrounding it. The cabin was built using bamboo
@@ -2682,17 +2682,17 @@ S
 D0
 ~
 doors door~
-1 0 66522
+1 0 66520
 D2
 ~
 ~
-0 0 66523
+0 0 66521
 D3
 ~
 ~
-0 0 66518
+0 0 66516
 S
-#66522
+#66520
 &+LWithin a Large &+YCa&+ybi&+Yn~
 &+L   This &+Yca&+ybi&+Yn&n &+Llooks have to housed a great number of people. There are a great
 &+Lmany bunks and beds in the far side of the room, where there are no windows.
@@ -2704,9 +2704,9 @@ S
 D2
 ~
 doors door~
-1 0 66521
+1 0 66519
 S
-#66523
+#66521
 &+LThe Eastern &+yTr&+Lai&+yl~
 &+L   The plant life takes hold of the forest. Vines dangle down from fully grown
 &+Ltrees with leaves as thick as rocks on their branches. Bark harder than the
@@ -2720,13 +2720,13 @@ S
 D0
 ~
 ~
-0 0 66521
+0 0 66519
 D1
 ~
 ~
-0 0 66524
+0 0 66522
 S
-#66524
+#66522
 &+LNearing a Large &+gWooden&+L Building~
 &+g   The building to the east seem &+Lto&+g have been some sort of storage facility.
 &+gSmall pods and large barrels cent&+Lere&+gd around a doubled door cellar door seems
@@ -2739,13 +2739,13 @@ S
 D1
 ~
 door~
-1 0 66525
+1 0 66523
 D3
 ~
 ~
-0 0 66523
+0 0 66521
 S
-#66525
+#66523
 &+LThe &nHu&+rnte&+Lrs Forum~
 &+L   This building was used for the village's hunters to store their &ntools&+L, their
 &+rwe&+Lapo&+rns&+L, and their kills. Pods full of packed, rotten meat lay on counters
@@ -2757,9 +2757,9 @@ S
 D3
 ~
 door~
-1 0 66524
+1 0 66522
 S
-#66526
+#66524
 &+LA Large Open Vi&+cewi&+Lng Sq&+bua&+Lre~
 &+L   This is the part of the village where viewings are held. A large circle of
 &+Lstones creates the area where the speakers will be heard by the masses. In the
@@ -2775,9 +2775,9 @@ S
 D2
 ~
 ~
-0 0 66520
+0 0 66518
 S
-#66527
+#66525
 A &+ySli&+gmy Pathway~
 &+L   The path slopes downhill to the west, and remains at an incline to the east.
 &+LThe brush is thick, the air is damp, and the moss and slime covered ground
@@ -2790,13 +2790,13 @@ A &+ySli&+gmy Pathway~
 D1
 ~
 ~
-0 0 66504
+0 0 66502
 D3
 ~
 ~
-0 0 66528
+0 0 66526
 S
-#66528
+#66526
 A &+gSlimy Pathway~
    The trees prevent any sunlight to shine here. Tall evergreens rise
 hundreds of feet into the air. They are hundreds of years old. There are
@@ -2811,13 +2811,13 @@ here, as if something is not quite right. It seems as if something is waiting.
 D1
 ~
 ~
-0 0 66504
+0 0 66502
 D3
 ~
 ~
-0 0 66531
+0 0 66529
 S
-#66529
+#66527
 Inside &+GHerbal &+yLure~
 &+L   During the course of this tiny village's history, they must have deemed it
 &+Lwise to build shops out of sheer necessity. Without some sort of enterprise
@@ -2834,9 +2834,9 @@ Inside &+GHerbal &+yLure~
 D3
 ~
 ~
-0 0 66532
+0 0 66530
 S
-#66530
+#66528
 &+LA Small Sidepath~
 &+L   This path is very narrow and traveling. The forest is all but an
 &+Limpregnable fortress in some places. Moss, undergrowth, and various other
@@ -2853,17 +2853,17 @@ S
 D0
 ~
 ~
-0 0 66507
+0 0 66505
 D1
 ~
 ~
-0 0 66532
+0 0 66530
 D2
 ~
 ~
-0 0 66504
+0 0 66502
 S
-#66531
+#66529
 A &+LThick Forest~
    The trees prevent any sunlight to shine here. Tall evergreens rise
 hundreds of feet into the air. They are hundreds of years old. There are
@@ -2878,13 +2878,13 @@ here, as if something is not quite right. It seems as if something is waiting.
 D1
 ~
 ~
-0 0 66528
+0 0 66526
 D3
 ~
 ~
 0 0 66405
 S
-#66532
+#66530
 &+LAn &+yOld&+L Pathway~
 &+L   At one time long ago this pathway may have been an easily accessed, however,
 &+L&+Lsince the underbrush and tree's alike have gone unchecked for quite some time
@@ -2900,17 +2900,17 @@ S
 D1
 ~
 ~
-0 0 66529
+0 0 66527
 D2
 ~
 ~
-0 0 66533
+0 0 66531
 D3
 ~
 ~
-0 0 66530
+0 0 66528
 S
-#66533
+#66531
 &+LAn Old &+yTown&+yhall~
 &+L   This old building once served to inform the vllage residents of up
 &+Lcoming events and relevant news. But its vital roll was as a town hall, the
@@ -2929,9 +2929,9 @@ S
 D0
 ~
 ~
-0 0 66532
+0 0 66530
 S
-#66534
+#66532
 A &+rBloodstained &+LCorridor~
 &+L   Huge walls on either side of the path of travel give only two visible
 &+Lexits. To the east the corridor opens up to form a huge chamber of sorts with
@@ -2947,13 +2947,13 @@ A &+rBloodstained &+LCorridor~
 D1
 ~
 ~
-0 0 66536
+0 0 66534
 D2
 ~
 ~
-0 0 66488
+0 0 66486
 S
-#66535
+#66533
 &+gThe &+gGra&+Gssla&+gnds~
 &+g   The grass rises nearl&+Gy three feet high  It is obvious tha&+gt there has
 &+gbeen a lot of activity in this&+G grassland, for in many spots t&+ghe grass has been
@@ -2970,11 +2970,11 @@ S
 D0
 ~
 ~
-0 0 66539
+0 0 66537
 D2
 ~
 ~
-0 0 66463
+0 0 66461
 E
 view~
 &+LIt looks as the plains to the north have been used as a battlefield. Smoke
@@ -2982,7 +2982,7 @@ view~
 &+Llitter the place.
 ~
 S
-#66536
+#66534
 &+LA Huge &+rCham&+Lber~
 &+L   Huge pillars made of granite rise well over forty feet meeting the ceiling
 &+Land giving support. These pillars number well over twenty, while the room
@@ -3000,9 +3000,9 @@ S
 D3
 ~
 ~
-0 0 66534
+0 0 66532
 S
-#66537
+#66535
 &+MA Majestic Corridor~
 &+m   Many types of crystals are encrusted in the walls, not to mention the
 &+mmultitude of diamonds also. Reflections from light send an array of colors
@@ -3018,9 +3018,9 @@ S
 D0
 ~
 ~
-0 0 66538
+0 0 66536
 S
-#66538
+#66536
 &+MA Majestic Corridor~
 &+m   Glowing prisms light the path of corridor. Crystals embedded into the
 &+mwalls are the source. These crystals are mixed with various other types of
@@ -3034,13 +3034,13 @@ S
 D0
 ~
 ~
-0 0 66540
+0 0 66538
 D2
 ~
 ~
-0 0 66537
+0 0 66535
 S
-#66539
+#66537
 The &+gBat&+Gtlefi&+geld &nof &+LDeath &nand &+rCa&+Rrna&+rge~
 &+L   An odd stinch fills the ai&+Wr. Vultures circl&+Le above this arena of death,
 &+Lwatching, waiting for thei&+Wr time to devour what is&+L left of the contestants.
@@ -3068,17 +3068,17 @@ The &+gBat&+Gtlefi&+geld &nof &+LDeath &nand &+rCa&+Rrna&+rge~
 D0
 ~
 ~
-0 0 66541
+0 0 66539
 D2
 ~
 ~
-0 0 66535
+0 0 66533
 D8
 ~
 ~
 0 0 66416
 S
-#66540
+#66538
 &+MA Majestic Corridor~
 &+m   The walls on either side of the path rise well over tent feet and have
 &+mmany jewels embedded into them. White crystals reflect all of the colors of
@@ -3093,17 +3093,17 @@ S
 D1
 ~
 ~
-0 0 66556
+0 0 66554
 D2
 ~
 ~
-0 0 66538
+0 0 66536
 D3
 ~
 ~
-0 0 66563
+0 0 66561
 S
-#66541
+#66539
 Along the &+YS&+bho&+Yre&n~
 &+Y   The shore has many t&+bypes of plant life among it&+Y. Weeds outline the water's
 &+Yedge and snakesholes are a&+bbundant. The tower t&+Yhat lays on the otherside of the
@@ -3120,13 +3120,13 @@ Along the &+YS&+bho&+Yre&n~
 D0
 ~
 ~
-0 0 66542
+0 0 66540
 D2
 ~
 ~
-0 0 66539
+0 0 66537
 S
-#66542
+#66540
 On a Small &+bMoat~
 &+b   This moat is only eight feet deep, yet it prevents heavy machinery from
 &+bentering the tower's defense. It's strong walls have been magically enhanced
@@ -3142,13 +3142,13 @@ On a Small &+bMoat~
 D0
 ~
 ~
-0 0 66543
+0 0 66541
 D2
 ~
 ~
-0 0 66541
+0 0 66539
 S
-#66543
+#66541
 &+LThe Tower Entrance~
 &+r   This is where the portcullis lifts and allows entry way into the keep.
 &+rwhat is on the otherside is left to the imagination. The portcullis has many
@@ -3162,13 +3162,13 @@ S
 D0
 ~
 ~
-0 0 66544
+0 0 66542
 D2
 ~
 ~
-0 0 66542
+0 0 66540
 S
-#66544
+#66542
 &+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
 &+M   The haze that is &+Wthis t&nower&+W is no&+Wt only dazz&+Mling, but daunting. &+MThere is no
 &+Wapparent way to exi&+Mt the mis&+mt, on&+Me would w&+Wander for hours to &+Wno avail. Moving
@@ -3185,15 +3185,61 @@ S
 D0
 ~
 ~
-0 0 66546
+0 0 66544
 D1
 ~
 ~
-0 0 66547
+0 0 66545
 D3
 ~
 ~
+0 0 66546
+S
+#66543
+&+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
+&+M   The haze that is &+Wthis t&nower&+W is no&+Wt only dazz&+Mling, but daunting. &+MThere is no
+&+Wapparent way to exi&+Mt the mis&+mt, on&+Me would w&+Wander for hours to &+Wno avail. Moving
+&+Mto and fro, without or&+Wder of moti&non, th&+We mist re&+Mpresents the chaotic world.
+&+WThe mages who built t&+Mhis keep c&+mould e&+Masily nav&+Wigate through its deceptions.
+&+MIt's existence is sole&+Wly do to ke&nep all o&+Wf those &+Mwho are not their brethren, at
+&+Wbay for the magi to de&+Mal with t&+mhem at&+M their &+Wleisure.  To successfully walk
+&+Mthis haze would unwrav&+Wel their m&nany mys&+Wteries. This haze has taken many
+&+Madventurers that have been caught unaware. There seems to be no end to this
+&+Whaze and one would die of thirst before reaching its end. This is a potent
+&+Mmagic summoned by some sort of sorcerer to keep out the unwelcome.
+~
+664 8 0
+D0
+~
+~
 0 0 66548
+D3
+~
+~
+0 0 66547
+S
+#66544
+&+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
+&+M   The haze that is &+Wthis t&nower&+W is no&+Wt only dazz&+Mling, but daunting. &+MThere is no
+&+Wapparent way to exi&+Mt the mis&+mt, on&+Me would w&+Wander for hours to &+Wno avail. Moving
+&+Mto and fro, without or&+Wder of moti&non, th&+We mist re&+Mpresents the chaotic world.
+&+WThe mages who built t&+Mhis keep c&+mould e&+Masily nav&+Wigate through its deceptions.
+&+MIt's existence is sole&+Wly do to ke&nep all o&+Wf those &+Mwho are not their brethren, at
+&+Wbay for the magi to de&+Mal with t&+mhem at&+M their &+Wleisure.  To successfully walk
+&+Mthis haze would unwrav&+Wel their m&nany mys&+Wteries. This haze has taken many
+&+Madventurers that have been caught unaware. There seems to be no end to this
+&+Whaze and one would die of thirst before reaching its end. This is a potent
+&+Mmagic summoned by some sort of sorcerer to keep out the unwelcome.
+~
+664 8 0
+D1
+~
+~
+0 0 66542
+D3
+~
+~
+0 0 66551
 S
 #66545
 &+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
@@ -3212,11 +3258,11 @@ S
 D0
 ~
 ~
-0 0 66550
-D3
+0 0 66552
+D2
 ~
 ~
-0 0 66549
+0 0 66542
 S
 #66546
 &+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
@@ -3232,11 +3278,11 @@ S
 &+Mmagic summoned by some sort of sorcerer to keep out the unwelcome.
 ~
 664 8 0
-D1
+D0
 ~
 ~
-0 0 66544
-D3
+0 0 66542
+D2
 ~
 ~
 0 0 66553
@@ -3258,11 +3304,11 @@ S
 D0
 ~
 ~
-0 0 66554
+0 0 66543
 D2
 ~
 ~
-0 0 66544
+0 0 66549
 S
 #66548
 &+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
@@ -3278,14 +3324,14 @@ S
 &+Mmagic summoned by some sort of sorcerer to keep out the unwelcome.
 ~
 664 8 0
-D0
+D1
 ~
 ~
-0 0 66544
-D2
+0 0 66543
+D3
 ~
 ~
-0 0 66555
+0 0 66550
 S
 #66549
 &+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
@@ -3304,34 +3350,31 @@ S
 D0
 ~
 ~
-0 0 66545
-D2
+0 0 66547
+D1
 ~
 ~
-0 0 66551
+0 0 66556
+D3
+~
+~
+0 0 66542
 S
 #66550
 &+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
-&+M   The haze that is &+Wthis t&nower&+W is no&+Wt only dazz&+Mling, but daunting. &+MThere is no
-&+Wapparent way to exi&+Mt the mis&+mt, on&+Me would w&+Wander for hours to &+Wno avail. Moving
+&+M   The haze that is &+Wthis t&nower&+W is no&+Wt only dazz&+Mling, but daunting.  &+MThere is no
+&+Wapparent way to exi&+Mt the mis&+mt, on&+Me would w&+Wander for hours to &+Wno avail.  Moving
 &+Mto and fro, without or&+Wder of moti&non, th&+We mist re&+Mpresents the chaotic world.
 &+WThe mages who built t&+Mhis keep c&+mould e&+Masily nav&+Wigate through its deceptions.
-&+MIt's existence is sole&+Wly do to ke&nep all o&+Wf those &+Mwho are not their brethren, at
-&+Wbay for the magi to de&+Mal with t&+mhem at&+M their &+Wleisure.  To successfully walk
-&+Mthis haze would unwrav&+Wel their m&nany mys&+Wteries. This haze has taken many
-&+Madventurers that have been caught unaware. There seems to be no end to this
-&+Whaze and one would die of thirst before reaching its end. This is a potent
-&+Mmagic summoned by some sort of sorcerer to keep out the unwelcome.
+&+MIt's existence is sole&+Wly to ke&nep all o&+Wf those &+Mwho are not their brethren at
+&+Wbay for the magi to de&+Mal with t&+mhem at&+M their &+Wleisure.  To successfully navigate
+&+Mthis haze would unwrav&+Wel their m&nany mys&+Wteries.
 ~
 664 8 0
 D1
 ~
 ~
-0 0 66545
-D3
-~
-~
-0 0 66552
+0 0 66548
 S
 #66551
 &+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
@@ -3347,55 +3390,12 @@ S
 &+Mmagic summoned by some sort of sorcerer to keep out the unwelcome.
 ~
 664 8 0
-D0
-~
-~
-0 0 66549
 D1
-~
-~
-0 0 66558
-D3
 ~
 ~
 0 0 66544
 S
 #66552
-&+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
-&+M   The haze that is &+Wthis t&nower&+W is no&+Wt only dazz&+Mling, but daunting.  &+MThere is no
-&+Wapparent way to exi&+Mt the mis&+mt, on&+Me would w&+Wander for hours to &+Wno avail.  Moving
-&+Mto and fro, without or&+Wder of moti&non, th&+We mist re&+Mpresents the chaotic world.
-&+WThe mages who built t&+Mhis keep c&+mould e&+Masily nav&+Wigate through its deceptions.
-&+MIt's existence is sole&+Wly to ke&nep all o&+Wf those &+Mwho are not their brethren at
-&+Wbay for the magi to de&+Mal with t&+mhem at&+M their &+Wleisure.  To successfully navigate
-&+Mthis haze would unwrav&+Wel their m&nany mys&+Wteries.
-~
-664 8 0
-D1
-~
-~
-0 0 66550
-S
-#66553
-&+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
-&+M   The haze that is &+Wthis t&nower&+W is no&+Wt only dazz&+Mling, but daunting. &+MThere is no
-&+Wapparent way to exi&+Mt the mis&+mt, on&+Me would w&+Wander for hours to &+Wno avail. Moving
-&+Mto and fro, without or&+Wder of moti&non, th&+We mist re&+Mpresents the chaotic world.
-&+WThe mages who built t&+Mhis keep c&+mould e&+Masily nav&+Wigate through its deceptions.
-&+MIt's existence is sole&+Wly do to ke&nep all o&+Wf those &+Mwho are not their brethren, at
-&+Wbay for the magi to de&+Mal with t&+mhem at&+M their &+Wleisure.  To successfully walk
-&+Mthis haze would unwrav&+Wel their m&nany mys&+Wteries. This haze has taken many
-&+Madventurers that have been caught unaware. There seems to be no end to this
-&+Whaze and one would die of thirst before reaching its end. This is a potent
-&+Mmagic summoned by some sort of sorcerer to keep out the unwelcome.
-~
-664 8 0
-D1
-~
-~
-0 0 66546
-S
-#66554
 &+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
 &+M   The haze that is &+Wthis t&nower&+W is no&+Wt only dazz&+Mling, but daunting. &+MThere is no
 &+Wapparent way to exi&+Mt the mis&+mt, on&+Me would w&+Wander for hours to &+Wno avail. Moving
@@ -3412,9 +3412,9 @@ S
 D2
 ~
 ~
-0 0 66547
+0 0 66545
 S
-#66555
+#66553
 &+CS&+Lwir&+Cl &+Wo&nf &nC&+Ro&+bl&+bo&+rr&ns~
 &+M   The haze that is &+Wthis t&nower&+W is no&+Wt only dazz&+Mling, but daunting. &+MThere is no
 &+Wapparent way to exi&+Mt the mis&+mt, on&+Me would w&+Wander for hours to &+Wno avail. Moving
@@ -3431,63 +3431,63 @@ S
 D0
 ~
 ~
-0 0 66548
+0 0 66546
 D1
 ~
 ~
-0 0 66544
+0 0 66542
 D3
 ~
 ~
-0 0 66555
+0 0 66553
 D4
 ~
 ~
-0 0 66545
+0 0 66543
+S
+#66554
+&+MA Majestic Corridor~
+&+m   The walls on either side of the path rise well over tent feet and have
+&+mmany jewels embedded into them. White crystals reflect all of the colors of
+&+mthe spectrum about the area, which could create nausea and fatigue. Huge
+&+mdiamonds are embedded along the walls and shine with the strength of ten
+&+mstars. Runes of warding to protect them from would be looters. Runes of
+&+manother sort are here too. Runes of preservation protect the corridor from
+&+mever crumbling. This corridor has magic flooding through it. Its very nature
+&+mhints at somesort of grand design by a higher power. There is a soft hum.
+~
+664 142606408 0
+D1
+~
+~
+0 0 66555
+D3
+~
+~
+0 0 66538
+S
+#66555
+&+MA Majestic Corridor~
+&+m   The walls on either side of the path rise well over tent feet and have
+&+mmany jewels embedded into them. White crystals reflect all of the colors of
+&+mthe spectrum about the area, which could create nausea and fatigue. Huge
+&+mdiamonds are embedded along the walls and shine with the strength of ten
+&+mstars. Runes of warding to protect them from would be looters. Runes of
+&+manother sort are here too. Runes of preservation protect the corridor from
+&+mever crumbling. This corridor has magic flooding through it. Its very nature
+&+mhints at somesort of grand design by a higher power. There is a soft hum.
+~
+664 142606408 0
+D1
+~
+~
+0 0 66560
+D3
+~
+~
+0 0 66554
 S
 #66556
-&+MA Majestic Corridor~
-&+m   The walls on either side of the path rise well over tent feet and have
-&+mmany jewels embedded into them. White crystals reflect all of the colors of
-&+mthe spectrum about the area, which could create nausea and fatigue. Huge
-&+mdiamonds are embedded along the walls and shine with the strength of ten
-&+mstars. Runes of warding to protect them from would be looters. Runes of
-&+manother sort are here too. Runes of preservation protect the corridor from
-&+mever crumbling. This corridor has magic flooding through it. Its very nature
-&+mhints at somesort of grand design by a higher power. There is a soft hum.
-~
-664 142606408 0
-D1
-~
-~
-0 0 66557
-D3
-~
-~
-0 0 66540
-S
-#66557
-&+MA Majestic Corridor~
-&+m   The walls on either side of the path rise well over tent feet and have
-&+mmany jewels embedded into them. White crystals reflect all of the colors of
-&+mthe spectrum about the area, which could create nausea and fatigue. Huge
-&+mdiamonds are embedded along the walls and shine with the strength of ten
-&+mstars. Runes of warding to protect them from would be looters. Runes of
-&+manother sort are here too. Runes of preservation protect the corridor from
-&+mever crumbling. This corridor has magic flooding through it. Its very nature
-&+mhints at somesort of grand design by a higher power. There is a soft hum.
-~
-664 142606408 0
-D1
-~
-~
-0 0 66562
-D3
-~
-~
-0 0 66556
-S
-#66558
 A &+CS&+Lwir&+Cl&n of C&+Ro&+bl&+Bo&+Rr&+rs~
 &+M   The haze that is &+Wthis t&nower&+W is no&+Wt only dazz&+Mling, but daunting. &+MThere is no
 &+Wapparent way to exi&+Mt the mis&+mt, on&+Me would w&+Wander for hours to &+Wno avail. Moving
@@ -3504,9 +3504,9 @@ A &+CS&+Lwir&+Cl&n of C&+Ro&+bl&+Bo&+Rr&+rs~
 D3
 ~
 ~
-0 0 66551
+0 0 66549
 S
-#66559
+#66557
 A &+WStudy~
    There are no chairs and no tables in this library. There are, however,
 books. Rows and rows of books lined up into columns in the northern corner
@@ -3527,21 +3527,21 @@ the chance to study here.
 D0
 ~
 ~
-0 0 66560
+0 0 66558
 D1
 ~
 ~
-0 0 66561
+0 0 66559
 D2
 ~
 ~
-0 0 66450
+0 0 66448
 D3
 ~
 ~
-0 0 66449
+0 0 66447
 S
-#66560
+#66558
 A &+WChamber~
    It is here that the master of this tower slept. It is unclear whether
 this master studied the dark arts or just dabbled into everything he could.
@@ -3561,9 +3561,9 @@ appears that at any given moment.
 D2
 ~
 ~
-0 0 66559
+0 0 66557
 S
-#66561
+#66559
 A &+WLaboratory~
    This is the concoction chamber. Anything and everything can be created
 within these walls. Racks and racks of potions are lined up according to
@@ -3578,9 +3578,9 @@ even glow. There are big ones little ones. It is a mystery.
 D3
 ~
 ~
-0 0 66559
+0 0 66557
 S
-#66562
+#66560
 &+MA Majestic Corridor~
 &+m   The walls on either side of the path rise well over tent feet and have
 &+mmany jewels embedded into them. White crystals reflect all of the colors of
@@ -3595,13 +3595,13 @@ S
 D1
 ~
 ~
-0 0 66564
+0 0 66562
 D3
 ~
 ~
-0 0 66557
+0 0 66555
 S
-#66563
+#66561
 &+MA Majestic Corridor~
 &+m   The walls on either side of the path rise well over tent feet and have
 &+mmany jewels embedded into them. White crystals reflect all of the colors of
@@ -3616,9 +3616,9 @@ S
 D1
 ~
 ~
-0 0 66540
+0 0 66538
 S
-#66564
+#66562
 The &+WAltar &nof &+CLife&n and &+LDeath~
 &+W   Two cylinder columns outline the area, with a large altar in the center.
 &+WThis altar is made of granite and has a width of about five feet and a total
@@ -3634,5 +3634,5 @@ The &+WAltar &nof &+CLife&n and &+LDeath~
 D3
 ~
 ~
-0 0 66562
+0 0 66560
 S

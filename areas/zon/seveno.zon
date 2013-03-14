@@ -1,6 +1,6 @@
 #386
 &+BSevenoaks&n~
-38676 0 0 40 50 1
+38676 0 0 40 50 2
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -172,12 +172,13 @@ O 0 359 1 38632 100 0 0 0          * (object type not in this .obj file)
 O 0 38632 3 38632 100 0 0 0        * some copper coins
 O 0 38631 1 38632 100 0 0 0        * a long black satin robe
 O 0 38632 3 38632 100 0 0 0        * some copper coins
-O 0 38644 1 38632 100 0 0 0        * a shiny ring of the faeries
 O 0 38632 3 38632 100 0 0 0        * some copper coins
 O 0 38633 1 38632 100 0 0 0        * a crack in the floor
 O 0 38647 1 38632 100 0 0 0        * the ice mace of Sevenoaks
-O 0 38634 1 38632 100 0 0 0        * a dagger of despair
+O 0 38634 1 38632 50 0 0 0         * the ice dagger of Sevenoaks
 O 0 38649 1 38632 100 0 0 0        * a longsword of Sevenoaks
+O 0 38644 1 38632 100 0 0 0        * a shiny ring of the faeries
+O 0 38660 1 38632 50 0 0 0         * the ancestral bracelet of Sevenoaks
 O 0 38625 2 38641 100 0 0 0        * a large mirror
 O 0 38625 2 38645 100 0 0 0        * a large mirror
 O 0 38612 3 38650 100 0 0 0        * a large skylight
@@ -214,7 +215,7 @@ M 0 38652 1 38621 100 0 0 0        * Oslero
 E 1 38663 1 3 100 0 0 0            *   an amulet of chaos
 F 1 38609 1 38621 100 0 0 0        * Oslyra (following)
 E 1 38630 1 3 100 0 0 0            *   the medallion of Oslyra
-G 1 38650 1 0 100 0 0 0            *    a silver pendant of dragon teeth
+G 1 38650 1 0 100 0 0 0            *    a silver belt-buckle of dragon teeth
 G 1 38655 1 0 100 0 0 0            *    an ice ring
 F 1 38644 7 38621 100 0 0 0        * a snow bobcat (following)
 F 1 38644 7 38621 100 0 0 0        * a snow bobcat (following)

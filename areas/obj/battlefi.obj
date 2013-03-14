@@ -69,7 +69,7 @@ spiraling portal~
 &+WA portal s&+cp&+Cira&+cl&+Ws into nothingness.~
 ~
 25 15 3 0 7 0 0 0 0 0 0
-66450 7 -1 0 0 0 0 0
+66448 7 -1 0 0 0 0 0
 5 0 100
 E
 spiraling portal~
@@ -81,7 +81,7 @@ portal spiraling sphere~
 &+WA sphere s&+cp&+Cira&+cl&+Ws into nothingness.~
 ~
 25 15 3 0 7 0 1024 0 0 0 0
-66543 7 -1 0 0 0 0 0
+66541 7 -1 0 0 0 0 0
 0 0 100
 E
 portal spiraling~
@@ -100,9 +100,9 @@ crystal bracer solid~
 &+WIt hums softly and is totally transparent.
 ~
 A
-24 -2
+24 -3
 A
-19 2
+19 3
 #66406
 solid crystal sleeves~
 &+Wsome solid crystal sleeves~
@@ -116,9 +116,9 @@ solid crystal sleeves~
 &+WNearly tansparent, yet strong as steel.
 ~
 A
-19 2
+19 3
 A
-24 -2
+24 -3
 #66407
 collar solid crystal~
 &+Wa solid crystal collar~
@@ -132,9 +132,9 @@ collar solid crystal~
 &+WNearly totally transparent, yet strong as steel.
 ~
 A
-19 2
+19 3
 A
-26 3
+26 8
 #66408
 key steel~
 &+ca solid steel key~
@@ -160,9 +160,9 @@ solid solid-steel steel leggings~
 &+LThese leggings look like they can take a beating.
 ~
 A
-18 3
+18 4
 A
-2 7
+2 9
 #66410
 table circular~
 &+ya circular table~
@@ -301,7 +301,7 @@ a &+Wholy gleaming longsword &+L'&+WRi&+wg&+ch&+Ct&+ce&+wo&+Wus&+L'~
 &+LA &+Wskull&+L handled flail rests here.~
 ~
 5 23 3 0 15 10 1024 8193 66 87572483 0
-5 5 3 0 0 0 0 0
+5 6 3 0 0 0 0 0
 15 282832 100 536879136 12480 0 0
 E
 skull flail blood zerker~
@@ -320,9 +320,9 @@ skull flail blood zerker~
 &+Wadamantite.
 ~
 A
-19 3
+19 4
 A
-18 3
+18 4
 #66420
 sheathe belt~
 &+La sh&ne&+Wa&nt&+Lhe~
@@ -336,9 +336,9 @@ sheathe belt~
 It should fit loosely about one's waste.
 ~
 A
-18 3
+18 4
 A
-26 7
+26 9
 #66421
 leather studded sentry boots~
 &+Lsome &+yleather&n-&+Ystudded &+gse&+Gntr&+gy &+Lboots~
@@ -356,7 +356,7 @@ leather studded sentry boots~
 A
 14 30
 A
-18 2
+18 3
 #66422
 horn ring~
 &+Ya &+yhorn&+Y ring~
@@ -371,7 +371,7 @@ horn ring~
 &+Yglass steel, which makes it very durable.
 ~
 A
-18 2
+18 3
 A
 19 2
 #66423
@@ -404,9 +404,9 @@ drow earring unholy~
 &+mearring must be magic of some sort, for drows are a magical race.
 ~
 A
-13 20
+13 25
 A
-20 -2
+20 -3
 #66425
 skull~
 &+Wa skull&n~
@@ -433,7 +433,7 @@ snakeskin vest~
 &+LThis vest covers the upper torso, and is made of snakeskin.
 ~
 A
-2 7
+2 10
 A
 19 3
 #66427
@@ -464,6 +464,8 @@ orb crystal~
 ~
 A
 13 30
+A
+33 3
 #66429
 eyepatch halfling~
 a &+yhalfling&+Y captain&+y eye&+Ypatch&n~
@@ -481,9 +483,9 @@ eyepatch halfling~
 &+Gitself perfectly to whomever wears it, for it fits most pefectly well.
 ~
 A
-13 18
+13 20
 A
-24 -3
+24 -4
 #66430
 scalp~
 scalp of a soldier~
@@ -583,9 +585,9 @@ battered war helm warhelm~
 &+Lthere is some secret power unrevealed.
 ~
 A
-1 9
+1 10
 A
-2 9
+2 10
 #66435
 stone drawbridge~
 &+La stone &+ydraw&+Lbridge&n~
@@ -626,6 +628,8 @@ mask lazy~
 ~
 A
 38 5
+A
+5 6
 #66438
 white fur gloves skin~
 &+Lsome &+Wwhite&n &+Yfur sk&+Lin glo&+Wves~
@@ -641,7 +645,9 @@ white fur gloves skin~
 &+Lbeasts, and ripped apart.
 ~
 A
-19 2
+19 3
+A
+32 3
 #66439
 linin badge~
 &+Ya &+Yli&+Lni&+b&+Yn&n &+Ybadge~
@@ -669,14 +675,16 @@ transparent ring~
 It fades in and out of reality, and appears to be made of electrum.
 ~
 A
-13 18
+13 20
+A
+3 5
 #66441
 statue lord demon~
 &+La statue of a &+rdemon&n &+Llord~
 &+LA statue of a &+rdemon&n &+Llord emanates a &+Rpowerful&+L aura.~
 ~
 25 15 3 0 7 0 0 0 64 0 0
-66537 320 -1 0 0 0 0 0
+66535 320 -1 0 0 0 0 0
 0 0 100
 E
 demon lord~
@@ -708,7 +716,7 @@ altar life death~
 &+WThe altar of &+Clife&+W and &+Ldeath&+W channels energies into the spirt realm.~
 ~
 25 15 3 9999 7 0 1024 0 0 0 0
-66467 320 -1 0 0 0 0 0
+66465 320 -1 0 0 0 0 0
 0 1 100
 E
 altar life death~
@@ -722,7 +730,7 @@ beam light~
 &+WA beam of light shoots directly at the sky.~
 ~
 25 15 3 0 7 0 1024 0 0 0 0
-66467 7 -1 0 0 0 0 0
+66465 7 -1 0 0 0 0 0
 0 0 100
 E
 beem light~
@@ -734,7 +742,7 @@ orb cosmic~
 &+LA &+Wc&+Bo&+Ws&+Cm&+Mi&+Rc &+Lorb radiates aether energy throughout the room.~
 ~
 25 23 3 0 7 0 1024 0 0 0 0
-66467 320 -1 0 0 0 0 0
+66465 320 -1 0 0 0 0 0
 0 0 100
 E
 fiery pit lava cosmic orb~
@@ -747,7 +755,7 @@ vortex temporal~
 &+WA temporal vortex spirals into the &+bco&+Bs&+Wmos continuously.~
 ~
 25 15 3 0 7 0 0 0 0 0 0
-66564 7 -1 0 0 0 0 0
+66562 7 -1 0 0 0 0 0
 0 0 100
 E
 vortex temporal~
@@ -768,14 +776,14 @@ python eye~
 A
 19 2
 A
-18 1
+18 3
 #66448
 demon lord statue~
 &+La statue of a &+rdemon&+L lord~
 &+LA statue of a &+rdemon&+L lord emanates a &+Rpowerful&+L aura.~
 ~
 25 15 3 0 7 0 1024 0 64 0 0
-66536 320 -1 0 0 0 0 0
+66534 320 -1 0 0 0 0 0
 0 0 100
 E
 demon lord statue~
@@ -802,7 +810,7 @@ shimmering shawl~
 A
 24 -3
 A
-13 15
+13 20
 #66450
 broad broadsword sword long~
 &+Wa long broadsword~
@@ -834,7 +842,7 @@ white magic book~
 &+Wa white magic book&n~
 &+WA white magic book rests here.~
 ~
-9 15 3 0 7 0 1025 16385 64 100794872 0
+9 15 3 0 7 0 1025 8404993 64 100794872 0
 1 0 0 3 0 0 0 0
 4 9090 100
 E
@@ -853,7 +861,7 @@ unholy crystal medallion~
 ~
 8 15 3 0 7 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
-1 4929 100
+1 300929 100
 E
 unholy crystal medallion~
 &+LThis medallion is in the shape of an octagon, resembling a flat prism in every
@@ -873,7 +881,7 @@ holy crystal medallion~
 &+Wprism.
 ~
 A
-19 3
+19 4
 A
 54 20
 #66455
@@ -897,7 +905,7 @@ skullsplitter skull splitter hammer huge~
 &+ga huge hammer named &+w'&+GSkullSplitter&+w'&n~
 &+GA huge hammer lies here, discarded.&n~
 ~
-5 19 5 0 7 0 20972801 8193 64 87048635 0
+5 19 5 0 7 0 20972801 8396801 64 87048635 0
 4 5 3 6 0 0 0 0
 20 190282 100 16 28 0 0
 E
@@ -925,9 +933,9 @@ black ring etched runes~
 &+Mfor if it reflected sunlight of any kind, it could blind.
 ~
 A
-13 10
+32 4
 A
-19 2
+19 3
 #66458
 bloody scalp~
 &+ra bloody &+Yscalp&n~
@@ -945,13 +953,13 @@ bloody scalp~
 A
 28 16
 A
-30 8
+30 10
 #66459
 battle axe razor razor-edged edged~
 &+La &+brazor&+w-&+Ledged &+rmino&+Ltaur &+Lbattle&n-&+raxe&n~
 &+LA battle axe lays here.&n~
 ~
-5 16 3 0 7 0 1024 8193 64 87572483 0
+5 16 3 0 7 0 1024 8396801 64 87572483 0
 1 4 3 3 0 0 0 0
 15 28382 100
 E
@@ -980,7 +988,7 @@ adamantium etched~
 &+mPok'&+M.
 ~
 A
-27 5
+27 10
 A
 13 25
 #66461
@@ -1010,4 +1018,4 @@ halfling quilt halfling-made made soft~
 A
 13 17
 A
-5 4
+5 10

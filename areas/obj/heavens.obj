@@ -4571,6 +4571,14 @@ canoe~
 22 6 4 30 7 0 8200 1 0 0 0
 0 0 0 0 0 0 0 0
 65 4000 100
+#430
+mirthil easter egg~
+&+La &+mmithril &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&n~
+&+La &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&+L has been left here.&n~
+~
+8 15 3 0 7 0 67121152 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
 #431
 raft~
 &+ya small wooden raft&n~
@@ -4775,6 +4783,86 @@ disguise kit _disguise_kit_~
 12 13 2 5 7 0 134217728 8404993 0 0 0
 0 0 0 0 0 0 0 0
 5 25000 100
+#501
+phased quest potion~
+&+La &+Wp&+Ch&+ca&+bs&+ced &+cq&+gue&+Cst &+Wpotion&n~
+&+La &+mDuris &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&+L is here, really here and on the freakin ground!!!~
+~
+10 7 2 4 7 0 0 8404993 0 0 0
+56 2 0 0 0 0 0 0
+5 5000 100
+#502
+mirrored aster quest potion~
+&+La &+Cmirrored &+be&+Ba&+Ms&+Yt&+ce&+Mr &+cq&+gue&+Cst &+Wpotion~
+&+La &+Cmirrored &+be&+Ba&+Ms&+Yt&+ce&+Mr &+cq&+gue&+Cst &+Wpotion~
+~
+10 7 2 4 7 0 0 8404993 0 0 0
+56 301 0 0 0 0 0 0
+5 5000 100
+#503
+misty green quest potion~
+&+La &+Ym&+yisty &+Yg&+yreen &+cq&+gue&+Cst &+Wpotion&n~
+&+La &+mDuris &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&+L is here, really here and on the freakin ground!!!~
+~
+10 7 2 4 7 0 0 8404993 0 0 0
+56 180 0 0 0 0 0 0
+5 5000 100
+#504
+earthwrought quest potion~
+&+Lan &+gearth&+Gwrought &+cq&+gue&+Cst &+Wpotion&n~
+&+La &+mDuris &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&+L is here, really here and on the freakin ground!!!~
+~
+10 7 2 4 7 0 0 8404993 0 0 0
+56 36 247 0 0 0 0 0
+5 5000 100
+#505
+prismatic quest potion~
+&+La &+rp&+Rr&+Yi&+Ws&+Ym&+Ga&+Ct&+ci&+bc &+cq&+gue&+Cst &+Wpotion &n~
+&+La &+mDuris &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&+L is here, really here and on the freakin ground!!!~
+~
+10 7 2 4 7 0 0 8404993 0 0 0
+56 362 0 0 0 0 0 0
+5 5000 100
+#506
+phased easter egg~
+&+La &+Wp&+Ch&+ca&+bs&+ced &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&n~
+&+La &+mDuris &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&+L is here, really here and on the freakin ground!!!&n~
+~
+11 15 3 0 7 0 67186688 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#507
+mirrored easter egg~
+&+La &+Cmirrored &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&n~
+&+La &+mDuris &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&+L is here, really here and on the freakin ground!!!&n~
+~
+11 15 3 0 7 0 67186688 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#508
+misty easter egg~
+&+La &+Ym&+yisty &+Yg&+yreen &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&n~
+&+La &+mDuris &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&+L is here, really here and on the freakin ground!!!&n~
+~
+11 15 3 0 7 0 67186688 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#509
+earth wrought earthwrought easter egg~
+&+Lan &+gearth&+Gwrought &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&n~
+&+La &+mDuris &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&+L is here, really here and on the freakin ground!!!&n~
+~
+11 15 3 0 7 0 67186688 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#510
+prismatic easter egg~
+&+La &+rp&+Rr&+Yi&+Ws&+Ym&+Ga&+Ct&+ci&+bc &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&n~
+&+La &+mDuris &+be&+Ba&+Ms&+Yt&+ce&+Mr &+Be&+bg&+Bg&+L is here, really here and on the freakin ground!!!&n~
+~
+11 15 3 0 7 0 67186688 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
 #560
 hide deerskin glyph piece~
 &+ya glyph covered deerskin hide&N~

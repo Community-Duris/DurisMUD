@@ -8,8 +8,8 @@ town.  Trained by the highest teachers in all the realms,
 this elite guard stands here on post in front of the ice
 gates.  He stares at you coldly as you approach.
 ~
-67110922 0 0 56 2049 32768 0 0 S
-PD 0 1 -1
+67110922 0 0 0 56 2049 32768 0 0 S
+PD 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -24,8 +24,8 @@ this elite guard stands here on post in front of the ice
 gates.  She stares at you coldly as you approach.  She
 looks all over for signs of trouble.
 ~
-67110922 0 0 56 2049 32768 0 0 S
-PL 0 32 -1
+67110922 0 0 0 56 2049 32768 0 0 S
+PL 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -38,8 +38,8 @@ demon archdemon glowing~
 by something or someperson.  It howls loudly as it continues flying
 through the room.  It notices you and quickly charges at your soul.
 ~
-1073875146 56 0 134291624 12288 0 0 -1000 S
-X 0 1024 -1
+1073875146 56 0 0 134291624 12288 0 0 -1000 S
+X 0 1024 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -51,8 +51,8 @@ A &+Wwind devil&N flies here and growls loudly.
   This blood thirsty devil howls loudly as it notices your presence.
 With glowing eyes, it drools and charges you.
 ~
-133322 56 0 73980 307392 0 0 -1000 S
-Y 0 256 -1
+133322 56 0 0 73980 307392 0 0 -1000 S
+Y 0 256 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -66,8 +66,8 @@ goddess of air and flight.  This dragon of wind stands here
 ignoring your puny presence. Covered in shiny white scales,
 she clearly is a force to be taken seriously.
 ~
-1210570 56 0 941170940 307392 262144 0 -1000 S
-D 0 524288 -1
+1210570 56 0 0 941170940 307392 262144 0 -1000 S
+D 0 524288 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -83,8 +83,8 @@ hair is tied up in a golden hair piece.  Completing her spell, she
 mutters and appears puzzled why her spell failed.  She seems very
 displeased by your presence.
 ~
-104495306 448 0 402653436 14529 0 0 -1000 S
-PL 0 4194304 -1
+104495306 448 0 0 402653436 14529 0 0 -1000 S
+PL 0 4194304 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 2
@@ -98,8 +98,8 @@ here in the study.  It has white leaves and small red spines
 all over its body.  The spines of plant pulsate with a
 magical blue energy.
 ~
-67110986 248 0 16777256 264192 0 0 -1000 S
-EF 0 4 -1
+67110986 248 0 0 16777256 264192 0 0 -1000 S
+EF 0 4 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -111,8 +111,8 @@ Visibly quite bored, this &+Wwind devil&N stands here howling.
   This blood thirsty devil howls loudly as it notices your presence.
 With glowing eyes, it drools and charges you.
 ~
-133322 248 0 268509436 307392 0 0 -1000 S
-Y 0 192 -1
+133322 248 0 0 268509436 307392 0 0 -1000 S
+Y 0 192 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -124,8 +124,8 @@ Visibly quite bored, this &+Wwind devil&N stands here howling.
   This blood thirsty devil howls loudly as it notices your presence.
 With glowing eyes, it drools and charges you.
 ~
-133322 248 0 268509436 307392 0 0 -1000 S
-Y 0 256 -1
+133322 248 0 0 268509436 307392 0 0 -1000 S
+Y 0 256 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -140,8 +140,8 @@ come challenge her very existence.  Those who try find quite
 a surprise when they do manage the courage to face Oslyra.
 She feasts upon the carcasses of the brave.
 ~
-2058 1 0 598252 45248 262144 0 -1000 S
-D 0 260 -1
+2058 1 0 0 598252 45248 262144 0 -1000 S
+D 0 260 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -153,8 +153,8 @@ A giant &+Wice golem&N stands here looking lifeless.
   A magically formed animation of several armors, it mumbles
 strange sounds over and over.  It shines in the light of the room.
 ~
-30794 1 0 536944860 0 262144 0 -1000 S
-OG 0 1 6
+30794 1 0 0 536944860 0 262144 0 -1000 S
+OG 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -167,8 +167,8 @@ beholder~
 floats about hoping for any sort of company that might
 come.
 ~
-1073743882 56 0 269484190 0 32768 0 0 S
-BH 0 262656 -1
+1073743882 56 0 0 269484190 0 32768 0 0 S
+BH 0 262656 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -182,8 +182,8 @@ reflection has taken form within this hall.  With your
 attitude and your body, the golden reflection peers back
 at you.  It mumbles something incoherent.
 ~
-67110986 56 0 73964 274624 0 0 0 S
-EA 0 1 -1
+67110986 56 0 0 73964 274624 0 0 0 S
+EA 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -197,8 +197,8 @@ has taken form within this hall.  With your attitude and your body,
 the dark reflection growls back at you.  It mumbles something
 incoherent.  It looks very upset.
 ~
-2122 56 0 73964 274624 0 0 -1000 S
-SH 0 512 -1
+2122 56 0 0 73964 274624 0 0 -1000 S
+SH 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -214,8 +214,8 @@ as it completes a complete round.  It growls and screams loudly
 every few minutes.  The spectre is almost transparent. It looks
 quite troubled for some reason.
 ~
-133130 56 0 134291480 307392 0 0 -1000 S
-SP 0 1 -1
+133130 56 0 0 134291480 307392 0 0 -1000 S
+SP 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -229,8 +229,8 @@ has taken form within this hall.  With a humanoid attitude and
 an amorphous body, the dark reflection growls back at you.  It
 mumbles something incoherent.  It looks very upset.
 ~
-2250 56 0 73964 274624 0 0 -1000 S
-SH 0 1024 -1
+2250 56 0 0 73964 274624 0 0 -1000 S
+SH 0 1024 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -244,8 +244,8 @@ reflection has taken form within this hall.  With your
 attitude and your body, the golden reflection peers back
 at you.  It mumbles something incoherent.
 ~
-67110986 56 0 73964 274624 0 0 0 S
-EA 0 1 -1
+67110986 56 0 0 73964 274624 0 0 0 S
+EA 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -260,8 +260,8 @@ attitude and an amorphous body, the dark reflection growls
 back at you.  It mumbles something incoherent.  It looks
 very upset.
 ~
-2250 56 0 73964 274624 0 0 -1000 S
-SH 0 4 -1
+2250 56 0 0 73964 274624 0 0 -1000 S
+SH 0 4 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -275,8 +275,8 @@ reflection has taken form within this hall.  With your
 attitude and your body, the golden reflection peers back
 at you.  It mumbles something incoherent.
 ~
-1140983884 56 0 134291692 274624 0 0 0 S
-SH 0 1 -1
+1140983884 56 0 0 134291692 274624 0 0 0 S
+SH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -290,8 +290,8 @@ reflection has taken form within this hall.  With your
 attitude and your body, the golden reflection peers back
 at you.  It mumbles something incoherent.
 ~
-67110988 56 0 73836 12480 0 0 -1000 S
-SH 0 32 -1
+67110988 56 0 0 73836 12480 0 0 -1000 S
+SH 0 32 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -307,8 +307,8 @@ of the barbarians.  She has long black hair and eyes of
 forest color.  She looks quite upset as you have intruded
 into her laboratory.
 ~
-2058 56 0 268959896 262145 0 0 -1000 S
-PL 0 512 -1
+2058 56 0 0 268959896 262145 0 0 -1000 S
+PL 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -321,8 +321,8 @@ A &+Ystrange yellow plant&N grows against the wall here.
 hallway here.  It has yellow leaves and yellow spines all
 over its body.  It bears a large red blossom.
 ~
-67110986 0 0 16777256 2048 0 0 -1000 S
-VT 0 4 -1
+67110986 0 0 0 16777256 2048 0 0 -1000 S
+VT 0 4 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -336,8 +336,8 @@ the hallway.  She admires the artistic effort in the frame of
 one of the large mirrors.  She ignores your presence and moves
 on towards another mirror.
 ~
-2122 0 0 73752 45248 0 0 0 S
-PH 0 32 -1
+2122 0 0 0 73752 45248 0 0 0 S
+PH 0 32 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -352,8 +352,8 @@ battle armor.  Standing over six feet tall, he watches with keen
 interest over the surrounding area.  He is marked with a dark
 tattoo on his forehead that glows blood red.
 ~
-100665418 0 0 16851068 12480 0 0 -1000 S
-PH 0 1 -1
+100665418 0 0 0 16851068 12480 0 0 -1000 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -365,8 +365,8 @@ morlena~
    Morlena circles the chamber very upset about one
 thing or another.  She pulses with a dark aura about here.
 ~
-2250 56 0 134217854 307392 0 0 -1000 S
-X 0 32 -1
+2250 56 0 0 134217854 307392 0 0 -1000 S
+X 0 32 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 2
@@ -382,8 +382,8 @@ room. Howling loudly, it continues flying the area in
 a faster.  It notices you and quickly charges
 at your soul.
 ~
-133194 56 0 134291512 274432 0 0 -1000 S
-X 0 1 -1
+133194 56 0 0 134291512 274432 0 0 -1000 S
+X 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -399,8 +399,8 @@ as it completes a complete round.  It growls and screams loudly
 every few minutes.  The spectre is almost transparent. It looks
 quite troubled for some reason.
 ~
-133130 56 0 134291480 307392 0 0 -1000 S
-SP 0 32 -1
+133130 56 0 0 134291480 307392 0 0 -1000 S
+SP 0 32 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -414,8 +414,8 @@ the midst of casting another spell.  He looks like an advanced
 apprentice to the archmage, but is very young.  He appears
 devoted to his class and his race.
 ~
-426186 0 0 73964 12288 0 0 -1000 S
-UL 0 2048 -1
+426186 0 0 0 73964 12288 0 0 -1000 S
+UL 0 2048 0 -1
 42 20 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -429,8 +429,8 @@ mage of the tower.  He has been appointed to keep all who do not
 belong out of the tower.   Trained by Caledan, this guard displays
 proper form and technique in his actions.
 ~
-67110988 56 0 8236 8192 0 0 -1000 S
-OR 0 1 -1
+67110988 56 0 0 8236 8192 0 0 -1000 S
+OR 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -444,8 +444,8 @@ new skills within these halls.  This guard has a somewhat bulky
 appearance.  He moves with great agility as he dashes across the
 room.
 ~
-67111114 0 0 73836 0 0 0 -1000 S
-OR 0 1 -1
+67111114 0 0 0 73836 0 0 0 -1000 S
+OR 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -459,8 +459,8 @@ in battle equipment, Mekel, the chief guard, is here on duty
 He stands here with one job on his mind.  He needs to protect
 the tower from unlawful entry.  He stares at you coldly.
 ~
-67110986 0 0 73980 14528 67108864 0 -1000 S
-G 0 1 -1
+67110986 0 0 0 73980 14528 67108864 0 -1000 S
+G 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -475,8 +475,8 @@ Oslyra.  He has searched high and low for her wretched soul
 and now is quite disturbed that his other friends have died
 trying to slay this dragon.
 ~
-1140881994 1 0 536944780 12480 2097152 0 -1000 S
-G 0 2049 -1
+1140881994 1 0 0 536944780 12480 2097152 0 -1000 S
+G 0 2049 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -489,8 +489,8 @@ A &+Bdark cloaked imp&N is standing here, looking fiendish.
 your appearence.  With a flash of white light, its hands crackle with
 a red energy.
 ~
-2252 56 0 1122430 14528 0 0 -1000 S
-X 0 2 -1
+2252 56 0 0 1122430 14528 0 0 -1000 S
+X 0 2 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -502,8 +502,8 @@ fiendish devil dark red beast~
   This blood thirsty devil howls loudly as it notices your presence.
 With glowing eyes, it drools and charges you.
 ~
-133322 56 0 73852 307392 0 0 -1000 S
-Y 0 1 -1
+133322 56 0 0 73852 307392 0 0 -1000 S
+Y 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -515,8 +515,8 @@ A large &+Wiron golem&N stands here looking lifeless.
   A magically formed animation of several armors, it mumbles
 strange sounds over and over.  It shines in the light of the room.
 ~
-2122 1 0 536944844 0 0 0 -1000 S
-OG 0 1 -1
+2122 1 0 0 536944844 0 0 0 -1000 S
+OG 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -530,8 +530,8 @@ been formed from the many corpses of trespassers.  Those corpses
 have been magically animated into this guardian of this plane.
 It smells strongly of rotten flesh.
 ~
-395468 192 0 537469052 307392 0 0 -1000 S
-OG 0 1024 -1
+395468 192 0 0 537469052 307392 0 0 -1000 S
+OG 0 1024 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.1 0
 8 8 0
@@ -545,8 +545,8 @@ dark leather suit.  He looks like a seasoned adventurer, with his
 many battle scars. Moving quickly through the room, Osmirim appears
 to be a very adept rogue.
 ~
-1073744076 0 0 598254 45248 0 0 -1000 S
-RA 0 16384 -1
+1073744076 0 0 0 598254 45248 0 0 -1000 S
+RA 0 16384 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -561,8 +561,8 @@ fire red scales which sparkle in the light of the room. She
 looks to have found a new inner strength and roars loudly
 sending chills into souls everywhere from her voice.
 ~
-1050714 0 0 2108 276672 0 0 0 S
-D 0 768 -1
+1050714 0 0 0 2108 276672 0 0 0 S
+D 0 768 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -575,8 +575,8 @@ demon archdemon glowing~
 by something or someperson.  It howls loudly as it continues flying
 through the room.  It notices you and quickly charges at your soul.
 ~
-1073875146 56 0 134291624 12288 0 0 -1000 S
-X 0 1024 -1
+1073875146 56 0 0 134291624 12288 0 0 -1000 S
+X 0 1024 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -589,8 +589,8 @@ A &+Bhooded sentry&N is here, keeping watch.
 stands on his post looking for signs of danger.  He is
 dressed in a ragged leather armor.
 ~
-67111114 0 0 73836 128 0 0 -1000 S
-HO 0 1 -1
+67111114 0 0 0 73836 128 0 0 -1000 S
+HO 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -603,8 +603,8 @@ An &+capprentice mage&N is here, practicing his spells.
 spell.  He stops abruptly short of completion and frowns.  He
 pulls out a tome and tries again.
 ~
-133324 56 0 67109068 4096 0 0 -1000 S
-RA 0 2048 -1
+133324 56 0 0 67109068 4096 0 0 -1000 S
+RA 0 2048 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -617,8 +617,8 @@ A &+Bdark cloaked imp&N is standing here, looking fiendish.
 your appearence.  With a flash of white light, its hands crackle with
 a red energy.
 ~
-2250 56 0 1122430 14528 0 0 -1000 S
-MG 0 1 -1
+2250 56 0 0 1122430 14528 0 0 -1000 S
+MG 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -632,8 +632,8 @@ here within the dark tower of Aerlyn keeping the peace.  He
 stands over six feet tall and glances over the surrounding
 area with cold eyes.
 ~
-1140869322 1 0 285286526 12480 0 0 -1000 S
-OR 0 16 -1
+1140869322 1 0 0 285286526 12480 0 0 -1000 S
+OR 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -647,8 +647,8 @@ He stands over six feet in height and wears equipment ready for
 battle.  This guardsman keeps watch here fighting off resistance
 to his work.
 ~
-67110986 56 0 74108 12480 0 0 -1000 S
-SK 0 1 6
+67110986 56 0 0 74108 12480 0 0 -1000 S
+SK 0 1 0 6
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -661,8 +661,8 @@ A &+Wsnow&N bobcat silently hunts her prey.
 unsuspecting prey.  Her heavy white coat helps her in this
 harsh environment.
 ~
-2570 56 0 1646734 0 0 0 0 S
-AC 0 1 -1
+2570 56 0 0 1646734 0 0 0 0 S
+AC 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -678,8 +678,8 @@ room. Howling loudly, it continues flying the area in
 a faster.  It notices you and quickly charges
 at your soul.
 ~
-1073875018 56 0 402726968 274432 0 0 -1000 S
-X 0 4 -1
+1073875018 56 0 0 402726968 274432 0 0 -1000 S
+X 0 4 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -693,8 +693,8 @@ here in the study.  It has red leaves and small red spines
 all over its body.  The spines of plant pulsate with a
 magical blue energy.  The plant bears a large red blossom.
 ~
-67110986 192 0 16777256 264192 0 0 -1000 S
-EF 0 4 -1
+67110986 192 0 0 16777256 264192 0 0 -1000 S
+EF 0 4 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -708,8 +708,8 @@ wyrina druid~
 &+Wpurpose of keeping the unwanted out of this zone.  She and her
 &+Wother sisters are the masters of Sevenoaks.
 ~
-1144549386 0 0 285212824 2049 0 0 0 S
-PH 0 2176 -1
+1144549386 0 0 0 285212824 2049 0 0 0 S
+PH 0 2176 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -721,8 +721,8 @@ A &+merow elf&n stands here.
    This Drow Elf is here looking clueless.  The rest of the members of his ground are
 arguing over one thing or the other.
 ~
-67139722 64 0 134291736 2057 0 0 -1000 S
-PL 0 512 -1
+67139722 64 0 0 134291736 2057 0 0 -1000 S
+PL 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -734,8 +734,8 @@ An &+bogre&N stands here.
    This Ogre looks at you.  He raises his eyebrow at you.  Completely upset, he raises
 his fist to strike you down.
 ~
-67139722 64 0 134291736 2056 0 0 -1000 S
-PO 0 1 -1
+67139722 64 0 0 134291736 2056 0 0 -1000 S
+PO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -747,8 +747,8 @@ An &+bogre&N stands here.
    This Ogre holds 2 totems in his hands.  He is a shaman by trade and seems very adept in his
 skills.  He wears a long bearskin robe.
 ~
-67139722 64 0 134291736 2056 0 0 -1000 S
-PO 0 256 -1
+67139722 64 0 0 134291736 2056 0 0 -1000 S
+PO 0 256 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -761,8 +761,8 @@ A &+Wsnow&N bobcat eyes the surroundings carefully.
 unsuspecting prey.  Her heavy white coat helps her in this
 harsh environment.
 ~
-67111434 0 0 1646734 0 0 0 0 S
-AC 0 1 -1
+67111434 0 0 0 1646734 0 0 0 0 S
+AC 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -777,8 +777,8 @@ come challenge their very existence.  Those who try find quite
 a surprise when they do manage the courage to face the pair.
 They both feast upon the carcasses of the brave.
 ~
-3176970 1 0 805904620 45248 2359296 0 -1000 S
-D 0 512 -1
+3176970 1 0 0 805904620 45248 2359296 0 -1000 S
+D 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -791,8 +791,8 @@ beholder~
 floats about hoping for any sort of company that might
 come.
 ~
-1073743882 56 0 270008478 0 294912 0 0 S
-BH 0 128 -1
+1073743882 56 0 0 270008478 0 294912 0 0 S
+BH 0 128 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

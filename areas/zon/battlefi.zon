@@ -1,6 +1,6 @@
 #664
 &+LThe &+gBat&+Gtlefi&+geld&n~
-66564 1 0 40 50 1
+66562 1 0 40 50 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -57,7 +57,7 @@ D 0 66433 1 1 100 0 0 0
 *     east exit from "A Sidepath" to
 *     "A Fortified Gate" - closed
 *
-D 0 66456 3 1 100 0 0 0
+D 0 66454 3 1 100 0 0 0
 *     west exit from "A Fortified Gate" to
 *     "A Sidepath" - closed
 *
@@ -65,133 +65,133 @@ D 0 66436 3 1 100 0 0 0
 *     west exit from "Before a Tent Entrance" to
 *     "Within the Soldier's Barracks" - closed
 *
-D 0 66438 1 1 100 0 0 0
+D 0 66437 1 1 100 0 0 0
 *     east exit from "Within the Soldier's Barracks" to
 *     "Before a Tent Entrance" - closed
 *
-D 0 66454 3 1 100 0 0 0
+D 0 66452 3 1 100 0 0 0
 *     west exit from "Before a Large Messhall" to
 *     "Within a Large Messhall" - closed
 *
-D 0 66455 1 1 100 0 0 0
+D 0 66453 1 1 100 0 0 0
 *     east exit from "Within a Large Messhall" to
 *     "Before a Large Messhall" - closed
 *
-D 0 66456 0 1 100 0 0 0
+D 0 66454 0 1 100 0 0 0
 *     north exit from "A Fortified Gate" to
 *     "Along a the Edge of a River" - closed
 *
-D 0 66461 2 1 100 0 0 0
+D 0 66459 2 1 100 0 0 0
 *     south exit from "Along a the Edge of a River" to
 *     "A Fortified Gate" - closed
 *
-D 0 66466 2 1 100 0 0 0
+D 0 66464 2 1 100 0 0 0
 *     south exit from "Before a Stone Gate" to
 *     "A Fortified Gate" - closed
 *
-D 0 66471 0 1 100 0 0 0
+D 0 66469 0 1 100 0 0 0
 *     north exit from "A Fortified Gate" to
 *     "Before a Stone Gate" - closed
 *
-D 0 66470 0 1 100 0 0 0
+D 0 66468 0 1 100 0 0 0
 *     north exit from "Approaching a Sentry Outpost" to
 *     "A Fortified Gate" - closed
 *
-D 0 66471 2 1 100 0 0 0
+D 0 66469 2 1 100 0 0 0
 *     south exit from "A Fortified Gate" to
 *     "Approaching a Sentry Outpost" - closed
 *
-D 0 66476 0 1 100 0 0 0
+D 0 66474 0 1 100 0 0 0
 *     north exit from "The Pit of Eternal Suffering" to
 *     "The Beholder's Chamber" - closed
 *
-D 0 66505 2 1 100 0 0 0
+D 0 66503 2 1 100 0 0 0
 *     south exit from "The Beholder's Chamber" to
 *     "The Pit of Eternal Suffering" - closed
 *
-D 0 66489 3 1 100 0 0 0
+D 0 66487 3 1 100 0 0 0
 *     west exit from "Before a Small Hut" to
 *     "A Small Hut" - closed
 *
-D 0 66490 1 1 100 0 0 0
+D 0 66488 1 1 100 0 0 0
 *     east exit from "A Small Hut" to
 *     "Before a Small Hut" - closed
 *
-D 0 66497 8 1 100 0 0 0
+D 0 66495 8 1 100 0 0 0
 *     northeast exit from "Gates of a Lost Village" to
 *     "Before a Village Gate" - closed
 *
-D 0 66498 7 1 100 0 0 0
+D 0 66496 7 1 100 0 0 0
 *     southwest exit from "Before a Village Gate" to
 *     "Gates of a Lost Village" - closed
 *
-D 0 66510 3 1 100 0 0 0
+D 0 66508 3 1 100 0 0 0
 *     west exit from "Near a large Cottage" to
 *     "Within a Cottage" - closed
 *
-D 0 66511 1 1 100 0 0 0
+D 0 66509 1 1 100 0 0 0
 *     east exit from "Within a Cottage" to
 *     "Near a large Cottage" - closed
 *
-D 0 66512 0 1 100 0 0 0
+D 0 66510 0 1 100 0 0 0
 *     north exit from "A Small Village Trail" to
 *     "A Crudely Built Hut" - closed
 *
-D 0 66513 2 1 100 0 0 0
+D 0 66511 2 1 100 0 0 0
 *     south exit from "A Crudely Built Hut" to
 *     "A Small Village Trail" - closed
 *
-D 0 66514 0 1 100 0 0 0
+D 0 66512 0 1 100 0 0 0
 *     north exit from "Along a Small Stream next to a Windmill" to
 *     "Hut of the Bottlers" - closed
 *
-D 0 66516 2 1 100 0 0 0
+D 0 66514 2 1 100 0 0 0
 *     south exit from "Hut of the Bottlers" to
 *     "Along a Small Stream next to a Windmill" - closed
 *
-D 0 66519 0 1 100 0 0 0
+D 0 66517 0 1 100 0 0 0
 *     north exit from "The Northern Trail" to
 *     "A Graveyard" - closed
 *
-D 0 66520 2 1 100 0 0 0
+D 0 66518 2 1 100 0 0 0
 *     south exit from "A Graveyard" to
 *     "The Northern Trail" - closed
 *
-D 0 66521 0 1 100 0 0 0
+D 0 66519 0 1 100 0 0 0
 *     north exit from "Split in the Eastern Trail" to
 *     "Within a Large Cabin" - closed
 *
-D 0 66522 2 1 100 0 0 0
+D 0 66520 2 1 100 0 0 0
 *     south exit from "Within a Large Cabin" to
 *     "Split in the Eastern Trail" - closed
 *
-D 0 66524 1 1 100 0 0 0
+D 0 66522 1 1 100 0 0 0
 *     east exit from "Nearing a Large Wooden Building" to
 *     "The Hunters Forum" - closed
 *
-D 0 66525 3 1 100 0 0 0
+D 0 66523 3 1 100 0 0 0
 *     west exit from "The Hunters Forum" to
 *     "Nearing a Large Wooden Building" - closed
 *
 *
 O 0 66410 1 66425 100 0 0 0        * a circular table
-O 0 66404 1 66449 100 0 0 0        * a spiraling sphere
-O 0 66413 1 66458 100 0 0 0        * a static charge
+O 0 66404 1 66447 100 0 0 0        * a spiraling sphere
+O 0 66413 1 66456 100 0 0 0        * a static charge
 P 1 66416 1 66413 100 0 0 0        *   a holy cross
-O 0 66446 1 66467 100 0 0 0        * a temporal vortex
-O 0 66445 1 66494 100 0 0 0        * a cosmic orb
-O 0 72 100 66500 100 0 0 0         * (object type not in this .obj file)
-O 0 66444 1 66501 100 0 0 0        * a beam of light
-O 0 358 1 66506 100 0 0 0          * (object type not in this .obj file)
-O 0 66417 1 66526 100 0 0 0        * some abominable cloth
-O 0 66433 1 66528 100 0 0 0        * an old posted sign
-O 0 66432 1 66533 100 0 0 0        * a board
-O 0 66441 1 66536 100 0 0 0        * a statue of a demon lord
-O 0 66448 1 66537 100 0 0 0        * a statue of a demon lord
-O 0 66435 1 66542 100 0 0 0        * a stone drawbridge
-O 0 66402 1 66543 100 0 0 0        * a large marble sign
-O 0 66403 1 66558 100 0 0 0        * a spiraling portal
-O 0 66443 1 66564 100 0 0 0        * the altar of life and Death
+O 0 66446 1 66465 100 0 0 0        * a temporal vortex
+O 0 66445 1 66492 100 0 0 0        * a cosmic orb
+O 0 72 100 66498 100 0 0 0         * (object type not in this .obj file)
+O 0 66444 1 66499 100 0 0 0        * a beam of light
+O 0 358 1 66504 100 0 0 0          * (object type not in this .obj file)
+O 0 66417 1 66524 100 0 0 0        * some abominable cloth
+O 0 66433 1 66526 100 0 0 0        * an old posted sign
+O 0 66432 1 66531 100 0 0 0        * a board
+O 0 66441 1 66534 100 0 0 0        * a statue of a demon lord
+O 0 66448 1 66535 100 0 0 0        * a statue of a demon lord
+O 0 66435 1 66540 100 0 0 0        * a stone drawbridge
+O 0 66402 1 66541 100 0 0 0        * a large marble sign
+O 0 66403 1 66556 100 0 0 0        * a spiraling portal
+O 0 66443 1 66562 100 0 0 0        * the altar of life and Death
 *
 M 0 66471 1 66401 100 0 0 0        * a minotaur captain
 F 1 66403 4 66401 100 0 0 0        * an orc sentry (following)
@@ -234,143 +234,145 @@ E 1 66422 1 40 100 0 0 0           *   a horn ring
 M 0 66416 1 66425 100 0 0 0        * a carrier
 M 0 66437 3 66427 100 0 0 0        * a patrolling guard
 M 0 66437 3 66436 100 0 0 0        * a patrolling guard
-M 0 66417 20 66438 100 0 0 0       * a sleepy soldier
+M 0 66417 20 66437 100 0 0 0       * a sleepy soldier
+M 0 66417 20 66437 100 0 0 0       * a sleepy soldier
+M 0 66417 20 66437 100 0 0 0       * a sleepy soldier
+M 0 66470 9 66437 100 0 0 0        * a disgruntled soldier
 M 0 66417 20 66438 100 0 0 0       * a sleepy soldier
 M 0 66417 20 66438 100 0 0 0       * a sleepy soldier
 M 0 66470 9 66438 100 0 0 0        * a disgruntled soldier
 M 0 66417 20 66439 100 0 0 0       * a sleepy soldier
-M 0 66417 20 66439 100 0 0 0       * a sleepy soldier
 M 0 66470 9 66439 100 0 0 0        * a disgruntled soldier
+M 0 66417 20 66439 100 0 0 0       * a sleepy soldier
+M 0 66417 20 66440 100 0 0 0       * a sleepy soldier
 M 0 66417 20 66440 100 0 0 0       * a sleepy soldier
 M 0 66470 9 66440 100 0 0 0        * a disgruntled soldier
-M 0 66417 20 66440 100 0 0 0       * a sleepy soldier
 M 0 66417 20 66441 100 0 0 0       * a sleepy soldier
 M 0 66417 20 66441 100 0 0 0       * a sleepy soldier
 M 0 66470 9 66441 100 0 0 0        * a disgruntled soldier
 M 0 66417 20 66442 100 0 0 0       * a sleepy soldier
 M 0 66417 20 66442 100 0 0 0       * a sleepy soldier
 M 0 66470 9 66442 100 0 0 0        * a disgruntled soldier
-M 0 66417 20 66443 100 0 0 0       * a sleepy soldier
-M 0 66417 20 66443 100 0 0 0       * a sleepy soldier
 M 0 66470 9 66443 100 0 0 0        * a disgruntled soldier
+M 0 66417 20 66443 100 0 0 0       * a sleepy soldier
+M 0 66417 20 66443 100 0 0 0       * a sleepy soldier
+M 0 66417 20 66443 100 0 0 0       * a sleepy soldier
+M 0 66417 20 66444 100 0 0 0       * a sleepy soldier
 M 0 66470 9 66444 100 0 0 0        * a disgruntled soldier
 M 0 66417 20 66444 100 0 0 0       * a sleepy soldier
-M 0 66417 20 66444 100 0 0 0       * a sleepy soldier
-M 0 66417 20 66444 100 0 0 0       * a sleepy soldier
-M 0 66417 20 66446 100 0 0 0       * a sleepy soldier
-M 0 66470 9 66446 100 0 0 0        * a disgruntled soldier
-M 0 66417 20 66446 100 0 0 0       * a sleepy soldier
-M 0 66417 20 66447 100 0 0 0       * a sleepy soldier
-M 0 66417 20 66447 100 0 0 0       * a sleepy soldier
-M 0 66470 9 66447 100 0 0 0        * a disgruntled soldier
-M 0 66444 1 66448 100 0 0 0        * a halfling captain
+M 0 66417 20 66445 100 0 0 0       * a sleepy soldier
+M 0 66417 20 66445 100 0 0 0       * a sleepy soldier
+M 0 66470 9 66445 100 0 0 0        * a disgruntled soldier
+M 0 66444 1 66446 100 0 0 0        * a halfling captain
 E 1 66429 1 19 100 0 0 0           *   a halfling captain eyepatch
-M 0 66419 1 66452 100 0 0 0        * a smelly minotaur
-M 0 66420 1 66452 100 0 0 0        * a crapping orc
-M 0 66421 1 66452 100 0 0 0        * a crapping goblin
-M 0 66422 4 66455 100 0 0 0        * a grub eater
-M 0 66422 4 66455 100 0 0 0        * a grub eater
-M 0 66422 4 66455 100 0 0 0        * a grub eater
-M 0 66422 4 66455 100 0 0 0        * a grub eater
-M 0 66434 8 66456 100 0 0 0        * an orc soldier
-M 0 66434 8 66456 100 0 0 0        * an orc soldier
-M 0 66434 8 66456 100 0 0 0        * an orc soldier
-M 0 66434 8 66456 100 0 0 0        * an orc soldier
-M 0 66427 1 66459 100 0 0 0        * zombie of a halfling cleric
+M 0 66419 1 66450 100 0 0 0        * a smelly minotaur
+M 0 66420 1 66450 100 0 0 0        * a crapping orc
+M 0 66421 1 66450 100 0 0 0        * a crapping goblin
+M 0 66422 4 66453 100 0 0 0        * a grub eater
+M 0 66422 4 66453 100 0 0 0        * a grub eater
+M 0 66422 4 66453 100 0 0 0        * a grub eater
+M 0 66422 4 66453 100 0 0 0        * a grub eater
+M 0 66434 8 66454 100 0 0 0        * an orc soldier
+M 0 66434 8 66454 100 0 0 0        * an orc soldier
+M 0 66434 8 66454 100 0 0 0        * an orc soldier
+M 0 66434 8 66454 100 0 0 0        * an orc soldier
+M 0 66427 1 66457 100 0 0 0        * zombie of a halfling cleric
 G 1 66414 1 0 100 0 0 0            *    an electric key
-M 0 66403 4 66461 100 0 0 0        * an orc sentry
-M 0 66403 4 66461 100 0 0 0        * an orc sentry
-M 0 66438 1 66466 100 0 0 0        * a human paladin
+M 0 66403 4 66459 100 0 0 0        * an orc sentry
+M 0 66403 4 66459 100 0 0 0        * an orc sentry
+M 0 66438 1 66464 100 0 0 0        * a human paladin
 E 1 66461 1 16 100 0 0 0           *   a two-handed longsword
-M 0 66439 2 66466 100 0 0 0        * a halfling warrior
-M 0 66439 2 66466 100 0 0 0        * a halfling warrior
-M 0 66447 1 66468 100 0 0 0        * a ballista
-M 0 66434 8 66471 100 0 0 0        * an orc soldier
-M 0 66434 8 66471 100 0 0 0        * an orc soldier
-M 0 66434 8 66471 100 0 0 0        * an orc soldier
-M 0 66434 8 66471 100 0 0 0        * an orc soldier
-M 0 66441 4 66473 100 0 0 0        * a halfling soldier
-M 0 66441 4 66473 100 0 0 0        * a halfling soldier
-M 0 66441 4 66473 100 0 0 0        * a halfling soldier
-M 0 66441 4 66473 100 0 0 0        * a halfling soldier
-M 0 66457 1 66475 100 0 0 0        * a lost soul
-M 0 66460 2 66476 100 0 0 0        * a basilisk
-M 0 66460 2 66476 100 0 0 0        * a basilisk
-M 0 66440 1 66479 100 0 0 0        * Ssor
+M 0 66439 2 66464 100 0 0 0        * a halfling warrior
+M 0 66439 2 66464 100 0 0 0        * a halfling warrior
+M 0 66447 1 66466 100 0 0 0        * a ballista
+M 0 66434 8 66469 100 0 0 0        * an orc soldier
+M 0 66434 8 66469 100 0 0 0        * an orc soldier
+M 0 66434 8 66469 100 0 0 0        * an orc soldier
+M 0 66434 8 66469 100 0 0 0        * an orc soldier
+M 0 66441 4 66471 100 0 0 0        * a halfling soldier
+M 0 66441 4 66471 100 0 0 0        * a halfling soldier
+M 0 66441 4 66471 100 0 0 0        * a halfling soldier
+M 0 66441 4 66471 100 0 0 0        * a halfling soldier
+M 0 66457 1 66473 100 0 0 0        * a lost soul
+M 0 66460 2 66474 100 0 0 0        * a basilisk
+M 0 66460 2 66474 100 0 0 0        * a basilisk
+M 0 66440 1 66477 100 0 0 0        * Ssor
 G 1 66401 1 0 100 0 0 0            *    a golden shell
-M 0 66461 1 66480 100 0 0 0        * an illithid
+M 0 66461 1 66478 100 0 0 0        * an illithid
 E 1 66460 1 3 100 0 0 0            *   an etched piece of adamantium
-M 0 66448 4 66481 100 0 0 0        * a vicious pike
-M 0 66448 4 66481 100 0 0 0        * a vicious pike
-M 0 66448 4 66481 100 0 0 0        * a vicious pike
-M 0 66448 4 66481 100 0 0 0        * a vicious pike
-M 0 66426 1 66486 100 0 0 0        * a red spider
-M 0 66432 1 66486 100 0 0 0        * a spider
-M 0 66433 1 66487 100 0 0 0        * a skeleton warrior
+M 0 66448 4 66479 100 0 0 0        * a vicious pike
+M 0 66448 4 66479 100 0 0 0        * a vicious pike
+M 0 66448 4 66479 100 0 0 0        * a vicious pike
+M 0 66448 4 66479 100 0 0 0        * a vicious pike
+M 0 66426 1 66484 100 0 0 0        * a red spider
+M 0 66432 1 66484 100 0 0 0        * a spider
+M 0 66433 1 66485 100 0 0 0        * a skeleton warrior
 G 1 66425 1 0 100 0 0 0            *    a skull
-M 0 66449 4 66489 100 0 0 0        * a small squirrel
-M 0 66400 1 66490 100 0 0 0        * a halfling
-M 0 66459 2 66493 100 0 0 0        * a hell hound
-M 0 66459 2 66493 100 0 0 0        * a hell hound
-M 0 66424 2 66498 100 0 0 0        * a chimp
-M 0 66468 4 66498 100 0 0 0        * a small snake
-M 0 66401 1 66498 100 0 0 0        * a minotaur soldier
+M 0 66449 4 66487 100 0 0 0        * a small squirrel
+M 0 66400 1 66488 100 0 0 0        * a halfling
+M 0 66459 2 66491 100 0 0 0        * a hell hound
+M 0 66459 2 66491 100 0 0 0        * a hell hound
+M 0 66424 2 66496 100 0 0 0        * a chimp
+M 0 66468 4 66496 100 0 0 0        * a small snake
+M 0 66401 1 66496 100 0 0 0        * a minotaur soldier
 G 1 66400 1 0 100 0 0 0            *    a dead rat named 'Parka'
-M 0 66465 1 66499 100 0 0 0        * Kalisteritax
+M 0 66465 1 66497 100 0 0 0        * Kalisteritax
 E 1 66455 1 16 100 0 0 0           *   a large war hammer
-M 0 66466 1 66499 100 0 0 0        * Xillianith
-M 0 66458 1 66500 100 0 0 0        * Minanupoli
+M 0 66466 1 66497 100 0 0 0        * Xillianith
+M 0 66458 1 66498 100 0 0 0        * Minanupoli
 G 1 66451 1 0 100 0 0 0            *    Minanupoli's black magic book
-M 0 66464 1 66502 100 0 0 0        * Justunian
-M 0 66469 1 66505 100 0 0 0        * the beholder
-M 0 66462 1 66506 100 0 0 0        * Vongonkiliu
+M 0 66464 1 66500 100 0 0 0        * Justunian
+M 0 66469 1 66503 100 0 0 0        * the beholder
+M 0 66462 1 66504 100 0 0 0        * Vongonkiliu
 G 1 66453 1 0 100 0 0 0            *    an unholy crystal medallion
-M 0 66449 4 66507 100 0 0 0        * a small squirrel
-M 0 66468 4 66509 100 0 0 0        * a small snake
-M 0 66445 1 66511 100 0 0 0        * a deserting soldier
+M 0 66449 4 66505 100 0 0 0        * a small squirrel
+M 0 66468 4 66507 100 0 0 0        * a small snake
+M 0 66445 1 66509 100 0 0 0        * a deserting soldier
 G 1 66430 1 0 100 0 0 0            *    scalp of a soldier
-M 0 66424 2 66512 100 0 0 0        * a chimp
-M 0 66456 1 66513 100 0 0 0        * a large python
+M 0 66424 2 66510 100 0 0 0        * a chimp
+M 0 66456 1 66511 100 0 0 0        * a large python
 G 1 66447 1 0 100 0 0 0            *    a writhing python eye
-M 0 66425 1 66515 100 0 0 0        * an ancient twisted skeleton
+M 0 66425 1 66513 100 0 0 0        * an ancient twisted skeleton
 E 1 66420 1 13 100 0 0 0           *   a sheathe
 E 1 66450 1 16 100 0 0 0           *   a long broadsword
-M 0 66467 1 66516 100 0 0 0        * a zombie of a small halfling
+M 0 66467 1 66514 100 0 0 0        * a zombie of a small halfling
 G 1 66457 1 0 100 0 0 0            *    a black ring etched with runes
-M 0 66463 1 66517 100 0 0 0        * a ghost
+M 0 66463 1 66515 100 0 0 0        * a ghost
 E 1 66449 1 18 100 0 0 0           *   a shimmering crystal
-M 0 66423 2 66518 100 0 0 0        * a gorilla
-M 0 66443 4 66520 100 0 0 0        * undead halfling zombie
-M 0 66443 4 66520 100 0 0 0        * undead halfling zombie
-M 0 66443 4 66520 100 0 0 0        * undead halfling zombie
-M 0 66443 4 66520 100 0 0 0        * undead halfling zombie
-M 0 66449 4 66521 100 0 0 0        * a small squirrel
-M 0 66468 4 66521 100 0 0 0        * a small snake
-M 0 66455 1 66522 100 0 0 0        * a large serpent
+M 0 66423 2 66516 100 0 0 0        * a gorilla
+M 0 66443 4 66518 100 0 0 0        * undead halfling zombie
+M 0 66443 4 66518 100 0 0 0        * undead halfling zombie
+M 0 66443 4 66518 100 0 0 0        * undead halfling zombie
+M 0 66443 4 66518 100 0 0 0        * undead halfling zombie
+M 0 66449 4 66519 100 0 0 0        * a small squirrel
+M 0 66468 4 66519 100 0 0 0        * a small snake
+M 0 66455 1 66520 100 0 0 0        * a large serpent
 G 1 66442 1 0 100 0 0 0            *    a serpent fang
-M 0 66452 1 66525 100 0 0 0        * a ghostly spectre
+M 0 66452 1 66523 100 0 0 0        * a ghostly spectre
 E 1 66440 1 2 100 0 0 0            *   a transparent ring
-M 0 66442 1 66526 100 0 0 0        * a foul ghoul
+M 0 66442 1 66524 100 0 0 0        * a foul ghoul
 G 1 66418 1 0 100 0 0 0            *    a chronicles book
-M 0 66429 1 66529 100 0 0 0        * an angry gorilla
+M 0 66429 1 66527 100 0 0 0        * an angry gorilla
 E 1 66438 1 9 100 0 0 0            *   some white fur skin gloves
-M 0 66468 4 66530 100 0 0 0        * a small snake
+M 0 66468 4 66528 100 0 0 0        * a small snake
+M 0 66446 2 66528 100 0 0 0        * an elite soldier
+E 1 66431 2 16 100 0 0 0           *   a razorsharp longsword
+M 0 66449 4 66529 100 0 0 0        * a small squirrel
+M 0 66423 2 66530 100 0 0 0        * a gorilla
 M 0 66446 2 66530 100 0 0 0        * an elite soldier
 E 1 66431 2 16 100 0 0 0           *   a razorsharp longsword
-M 0 66449 4 66531 100 0 0 0        * a small squirrel
-M 0 66423 2 66532 100 0 0 0        * a gorilla
-M 0 66446 2 66532 100 0 0 0        * an elite soldier
-E 1 66431 2 16 100 0 0 0           *   a razorsharp longsword
-M 0 66451 1 66533 100 0 0 0        * the corporal
+M 0 66451 1 66531 100 0 0 0        * the corporal
 E 1 66437 1 20 100 0 0 0           *   a mask of the lazy
-M 0 66453 2 66533 100 0 0 0        * a bodyguard
-M 0 66453 2 66533 100 0 0 0        * a bodyguard
-M 0 66402 1 66539 100 0 0 0        * lieutenant Ohora
+M 0 66453 2 66531 100 0 0 0        * a bodyguard
+M 0 66453 2 66531 100 0 0 0        * a bodyguard
+M 0 66402 1 66537 100 0 0 0        * lieutenant Ohora
 E 1 66428 1 18 100 0 0 0           *   a warped crystal orb
-M 0 66414 1 66539 100 0 0 0        * General Yax'Vigarn
+M 0 66414 1 66537 100 0 0 0        * General Yax'Vigarn
 G 1 66434 1 0 100 0 0 0            *    a battered warhelm
-F 1 66413 2 66539 100 0 0 0        * a loyal bodyguard (following)
-F 1 66413 2 66539 100 0 0 0        * a loyal bodyguard (following)
+F 1 66413 2 66537 100 0 0 0        * a loyal bodyguard (following)
+F 1 66413 2 66537 100 0 0 0        * a loyal bodyguard (following)
+M 0 66407 12 66543 100 0 0 0       * a dark sphere
+M 0 66407 12 66544 100 0 0 0       * a dark sphere
 M 0 66407 12 66545 100 0 0 0       * a dark sphere
 M 0 66407 12 66546 100 0 0 0       * a dark sphere
 M 0 66407 12 66547 100 0 0 0       * a dark sphere
@@ -380,18 +382,16 @@ M 0 66407 12 66550 100 0 0 0       * a dark sphere
 M 0 66407 12 66551 100 0 0 0       * a dark sphere
 M 0 66407 12 66552 100 0 0 0       * a dark sphere
 M 0 66407 12 66553 100 0 0 0       * a dark sphere
-M 0 66407 12 66554 100 0 0 0       * a dark sphere
-M 0 66407 12 66555 100 0 0 0       * a dark sphere
-M 0 66407 12 66558 100 0 0 0       * a dark sphere
-M 0 66406 3 66559 100 0 0 0        * a stone golem
+M 0 66407 12 66556 100 0 0 0       * a dark sphere
+M 0 66406 3 66557 100 0 0 0        * a stone golem
 G 1 66406 1 0 100 0 0 0            *    some solid crystal sleeves
-M 0 66406 3 66560 100 0 0 0        * a stone golem
+M 0 66406 3 66558 100 0 0 0        * a stone golem
 G 1 66405 1 0 100 0 0 0            *    a solid crystal bracer
-M 0 66406 3 66561 100 0 0 0        * a stone golem
+M 0 66406 3 66559 100 0 0 0        * a stone golem
 G 1 66407 1 0 100 0 0 0            *    a solid crystal collar
 G 1 66412 1 0 100 0 0 0            *    a swirling potion
-M 0 66430 1 66563 100 0 0 0        * a humming orb
+M 0 66430 1 66561 100 0 0 0        * a humming orb
 G 1 66415 1 0 100 0 0 0            *    some swirling mist
-M 0 66428 1 66564 100 0 0 0        * a shimmering spirit
+M 0 66428 1 66562 100 0 0 0        * a shimmering spirit
 *
 S
