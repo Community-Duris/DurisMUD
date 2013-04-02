@@ -4348,10 +4348,10 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
 
   affect_from_char(ch, SKILL_SNEAKY_STRIKE);
 
-   if(!(weapon = ch->equipment[WIELD]))
+   if(!(weapon = ch->equipment[WIELD]))/*
     if(!weapon && !(weapon = ch->equipment[WIELD2]))
       if(!weapon && !(weapon = ch->equipment[WIELD3]))
-        if(!weapon && !(weapon = ch->equipment[WIELD4]))
+        if(!weapon && !(weapon = ch->equipment[WIELD4]))*/
         {
           send_to_char("You must be wielding a weapon.\r\n", ch);
           return;
@@ -4575,10 +4575,10 @@ void sneaky_strike(P_char ch, P_char victim)
   struct affected_type af;
   P_obj weapon;
 
-    if(!(weapon = ch->equipment[WIELD]))
+    if(!(weapon = ch->equipment[WIELD]))/*
     if(!weapon && !(weapon = ch->equipment[WIELD2]))
       if(!weapon && !(weapon = ch->equipment[WIELD3]))
-        if(!weapon && !(weapon = ch->equipment[WIELD4]))
+        if(!weapon && !(weapon = ch->equipment[WIELD4]))*/
         {
           send_to_char("You must be wielding a weapon.\r\n", ch);
           return;
