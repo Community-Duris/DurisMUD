@@ -4346,8 +4346,16 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
     "$n finishes $N off with a sudden surprise attack!", 0, 0
   };
 
-
   affect_from_char(ch, SKILL_SNEAKY_STRIKE);
+
+   if(!(weapon = ch->equipment[WIELD]))
+    if(!weapon && !(weapon = ch->equipment[WIELD2]))
+      if(!weapon && !(weapon = ch->equipment[WIELD3]))
+        if(!weapon && !(weapon = ch->equipment[WIELD4]))
+        {
+          send_to_char("You must be wielding a weapon.\r\n", ch);
+          return;
+        }
 
   if(!victim || (ch->in_room != victim->in_room))
   {
@@ -4364,16 +4372,7 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
-  if(!(weapon = ch->equipment[WIELD]))
-    if(!weapon && !(weapon = ch->equipment[WIELD2]))
-      if(!weapon && !(weapon = ch->equipment[WIELD3]))
-        if(!weapon && !(weapon = ch->equipment[WIELD4]))
-        {
-          send_to_char("You must be wielding a weapon.\r\n", ch);
-          return;
-        }
-
-   if(has_innate(victim, INNATE_DRAGONMIND)&& !number(0,1))
+    if(has_innate(victim, INNATE_DRAGONMIND)&& !number(0,1))
      {
        send_to_char("Your victim notice your attempt and rolls out of the way!\n", ch);
        send_to_char("You sidestep $N's attack.\n", victim);
@@ -4574,7 +4573,16 @@ bool is_preparing_for_sneaky_strike(P_char ch)
 void sneaky_strike(P_char ch, P_char victim)
 {
   struct affected_type af;
+  P_obj weapon;
 
+    if(!(weapon = ch->equipment[WIELD]))
+    if(!weapon && !(weapon = ch->equipment[WIELD2]))
+      if(!weapon && !(weapon = ch->equipment[WIELD3]))
+        if(!weapon && !(weapon = ch->equipment[WIELD4]))
+        {
+          send_to_char("You must be wielding a weapon.\r\n", ch);
+          return;
+        }
   send_to_char
     ("You think you noticed an opening in your victim defenses...\n", ch);
 
