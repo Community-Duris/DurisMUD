@@ -2292,11 +2292,17 @@ void do_open(P_char ch, char *argument, int cmd)
 		 }
 
 	  }
-       REMOVE_BIT(robj->extra_flags, ITEM_SECRET);
+       if (IS_SET(robj->extra_flags, ITEM_SECRET))
+	{
+	  REMOVE_BIT(robj->extra_flags, ITEM_SECRET);
+	}
 	act("&+mWhen at last it clears the &+Mbag&+m is gone, and all that remains is &n$p&+m!\r\n", FALSE, ch, robj, 0, TO_CHAR);
 	P_obj reward;
 	reward = read_object(robjint, VIRTUAL);
-	REMOVE_BIT(reward->extra_flags, ITEM_SECRET);
+       if (IS_SET(reward->extra_flags, ITEM_SECRET))
+	{
+	  REMOVE_BIT(reward->extra_flags, ITEM_SECRET);
+	}
 	obj_to_char(reward, ch);       
 	obj_from_char(obj, TRUE);
 	 statuslog(ch->player.level,
