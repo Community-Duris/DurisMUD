@@ -2038,6 +2038,8 @@ int learn_tradeskill(P_char ch, P_char pl, int cmd, char *arg)
   return FALSE;
 }
 
+
+
 int itemvalue(P_char ch, P_obj obj)
 {
  long workingvalue = 0;
@@ -2047,141 +2049,145 @@ int itemvalue(P_char ch, P_obj obj)
 	{
 	 send_to_char("Item has stone skin.", ch);
 	}
-    if (IS_SET(obj->bitvector, AFF_HIDE)) 
-			{
-	 send_to_char("Item has hide.", ch);
-	}
-    if (IS_SET(obj->bitvector, AFF_SNEAK)) 
-			{
-	 send_to_char("Item has sneak.", ch);
-	}
-    if (IS_SET(obj->bitvector, AFF_FLY)) 
-			{
-	 send_to_char("Item has fly.", ch);
-	}
-    if (IS_SET(obj->bitvector, AFF_HASTE)) 
-			{
-	 send_to_char("Item has haste.", ch);
-	}
-    if (IS_SET(obj->bitvector, AFF_DETECT_INVISIBLE)) 
-	{
-	 send_to_char("Item has det invis.", ch);
-	}     
-    if (IS_SET(obj->bitvector, AFF_SKILL_AWARE)) 
-	{
-	 send_to_char("Item has aware.", ch);
-	}      
-    if (IS_SET(obj->bitvector, AFF_BARKSKIN)) 
-	{
-	 send_to_char("Item has barkskin.", ch);
-	}  
-    if (IS_SET(obj->bitvector, AFF_INVIS)) 
-	{
-	 send_to_char("Item has invis.", ch);
-	}     
-    if (IS_SET(obj->bitvector, AFF_BIOFEEDBACK)) 
-	{
-	 send_to_char("Item has bio.", ch);
-	}      
-    if (IS_SET(obj->bitvector, AFF_FARSEE)) 
-	{
-	 send_to_char("Item has farsee.", ch);
-	}   
-    if (IS_SET(obj->bitvector, AFF_SENSE_LIFE)) 
-	{
-	 send_to_char("Item has sense life.", ch);
-	}   
-    if (IS_SET(obj->bitvector, AFF_UD_VISION)) 
-	{
-	 send_to_char("Item has ud vision.", ch);
-	}   
-    if (IS_SET(obj->bitvector, AFF_WATERBREATH)) 
-	{
-	 send_to_char("Item has wb.", ch);
-	}  
-    if (IS_SET(obj->bitvector, AFF_LEVITATE)) 
-	{
-	 send_to_char("Item has levi.", ch);
-	}  
-    if (IS_SET(obj->bitvector, AFF_PROT_FIRE)) 
-	{
-	 send_to_char("Item has prot fire.", ch);
-	}  
-    if (IS_SET(obj->bitvector, AFF_INFRAVISION)) 
-	{
-	 send_to_char("Item has infra.", ch);
-	}  
 
-  //------- AFF2 --------------
-  if (IS_SET(obj->bitvector2, AFF2_FIRESHIELD)) 
-			{
-	 send_to_char("Item has fireshield.", ch);
-	}
-  if (IS_SET(obj->bitvector2, AFF2_DET_GOOD)) 
-			{
-	 send_to_char("Item has det good.", ch);
-	}
-  if (IS_SET(obj->bitvector2, AFF2_PROT_GAS)) 
-			{
-	 send_to_char("Item has prot gas.", ch);
-	}
-  if (IS_SET(obj->bitvector2, AFF2_SOULSHIELD)) 
-			{
-	 send_to_char("Item has soulshield.", ch);
-	}
-  if (IS_SET(obj->bitvector2, AFF2_VAMP_TOUCH)) 
-			{
-	 send_to_char("Item has vampiric touch.", ch);
-	}
-  if (IS_SET(obj->bitvector2, AFF2_ULTRA)) 
-			{
-	 send_to_char("Item has ultra.", ch);
-	}
-  if (IS_SET(obj->bitvector2, AFF2_DET_MAGIC)) 
-			{
-	 send_to_char("Item has DM.", ch);
-	}
-  if (IS_SET(obj->bitvector2, AFF2_PROT_LIGHT)) 
-			{
-	 send_to_char("Item has prot light.", ch);
-	}
-  if (IS_SET(obj->bitvector2, AFF2_WATER_AURA)) 
-			{
-	 send_to_char("Item has water aura.", ch);
-	}
-    if (IS_SET(obj->bitvector2, AFF2_AIR_AURA)) 
-			{
-	 send_to_char("Item has aura aura.", ch);
-	}
-    if (IS_SET(obj->bitvector2, AFF2_EARTH_AURA)) 
-			{
-	 send_to_char("Item has earth aura.", ch);
-	}
-    if (IS_SET(obj->bitvector2, AFF2_GLOBE)) 
-			{
-	 send_to_char("Item has globe.", ch);
-	}
+#define AFF_BLIND             BIT_1
+#define AFF_INVISIBLE         BIT_2
+#define AFF_FARSEE            BIT_3
+#define AFF_DETECT_INVISIBLE  BIT_4
+#define AFF_HASTE             BIT_5
+#define AFF_SENSE_LIFE        BIT_6
+#define AFF_MINOR_GLOBE       BIT_7
+#define AFF_STONE_SKIN        BIT_8
+#define AFF_UD_VISION         BIT_9
+#define AFF_ARMOR             BIT_10
+#define AFF_WRAITHFORM        BIT_11
+#define AFF_WATERBREATH       BIT_12
+#define AFF_KNOCKED_OUT       BIT_13
+#define AFF_PROTECT_EVIL      BIT_14
+#define AFF_BOUND             BIT_15
+#define AFF_SLOW_POISON       BIT_16
+#define AFF_PROTECT_GOOD      BIT_17
+#define AFF_SLEEP             BIT_18
+#define AFF_SKILL_AWARE       BIT_19   
+#define AFF_SNEAK             BIT_20
+#define AFF_HIDE              BIT_21
+#define AFF_FEAR              BIT_22
+#define AFF_CHARM             BIT_23
+#define AFF_MEDITATE          BIT_24
+#define AFF_BARKSKIN          BIT_25
+#define AFF_INFRAVISION       BIT_26
+#define AFF_LEVITATE          BIT_27
+#define AFF_FLY               BIT_28
+#define AFF_AWARE             BIT_29
+#define AFF_PROT_FIRE         BIT_30
+#define AFF_CAMPING           BIT_31
+#define AFF_BIOFEEDBACK       BIT_32
 
-  //------- AFF3 --------------
-    if (IS_SET(obj->bitvector3, AFF3_INERTIAL_BARRIER)) 
-			{
-	 send_to_char("Item has inert barrier.", ch);
-	}
-    if (IS_SET(obj->bitvector3, AFF3_REDUCE)) 
-			{
-	 send_to_char("Item has reduce.", ch);
-	}
+// affected_by2 
 
-  //------- AFF4 --------------
-   if (IS_SET(obj->bitvector, AFF4_NOFEAR)) 
-			{
-	 send_to_char("Item has nofear.", ch);
-	}
-    if (IS_SET(obj->bitvector4, AFF4_DETECT_ILLUSION))
-	{
-	 send_to_char("Item has det illus.", ch);
-	}
-  //------- AFF5 --------------
+#define AFF2_FIRESHIELD       BIT_1
+#define AFF2_ULTRAVISION      BIT_2
+#define AFF2_DETECT_EVIL      BIT_3
+#define AFF2_DETECT_GOOD      BIT_4
+#define AFF2_DETECT_MAGIC     BIT_5
+#define AFF2_MAJOR_PHYSICAL   BIT_6
+#define AFF2_PROT_COLD        BIT_7
+#define AFF2_PROT_LIGHTNING   BIT_8
+#define AFF2_MINOR_PARALYSIS  BIT_9
+#define AFF2_MAJOR_PARALYSIS  BIT_10
+#define AFF2_SLOW             BIT_11
+#define AFF2_GLOBE            BIT_12
+#define AFF2_PROT_GAS         BIT_13
+#define AFF2_PROT_ACID        BIT_14
+#define AFF2_POISONED         BIT_15
+#define AFF2_SOULSHIELD       BIT_16
+#define AFF2_SILENCED         BIT_17
+#define AFF2_MINOR_INVIS      BIT_18
+#define AFF2_VAMPIRIC_TOUCH   BIT_19
+#define AFF2_STUNNED          BIT_20
+#define AFF2_EARTH_AURA       BIT_21
+#define AFF2_WATER_AURA       BIT_22
+#define AFF2_FIRE_AURA        BIT_23
+#define AFF2_AIR_AURA         BIT_24
+#define AFF2_HOLDING_BREATH   BIT_25    
+#define AFF2_MEMORIZING       BIT_26
+#define AFF2_IS_DROWNING      BIT_27    
+#define AFF2_PASSDOOR         BIT_28
+#define AFF2_FLURRY           BIT_29
+#define AFF2_CASTING          BIT_30
+#define AFF2_SCRIBING         BIT_31
+#define AFF2_HUNTER           BIT_32
+
+// affected_by 3 
+
+#define AFF3_TENSORS_DISC       BIT_1
+#define AFF3_TRACKING           BIT_2
+#define AFF3_SINGING            BIT_3
+#define AFF3_ECTOPLASMIC_FORM   BIT_4
+#define AFF3_ABSORBING          BIT_5
+#define AFF3_PROT_ANIMAL        BIT_6
+#define AFF3_SPIRIT_WARD        BIT_7
+#define AFF3_GR_SPIRIT_WARD     BIT_8
+#define AFF3_NON_DETECTION      BIT_9
+#define AFF3_SILVER             BIT_10   
+#define AFF3_PLUSONE            BIT_11   
+#define AFF3_PLUSTWO            BIT_12   
+#define AFF3_PLUSTHREE          BIT_13   
+#define AFF3_PLUSFOUR           BIT_14  
+#define AFF3_PLUSFIVE           BIT_15   
+#define AFF3_ENLARGE            BIT_16
+#define AFF3_REDUCE             BIT_17
+#define AFF3_COVER              BIT_18
+#define AFF3_FOUR_ARMS          BIT_19
+#define AFF3_INERTIAL_BARRIER   BIT_20
+#define AFF3_LIGHTNINGSHIELD    BIT_21
+#define AFF3_COLDSHIELD         BIT_22
+#define AFF3_CANNIBALIZE        BIT_23
+#define AFF3_SWIMMING           BIT_24
+#define AFF3_TOWER_IRON_WILL    BIT_25
+#define AFF3_UNDERWATER         BIT_26
+#define AFF3_BLUR               BIT_27
+#define AFF3_ENHANCE_HEALING    BIT_28
+#define AFF3_ELEMENTAL_FORM     BIT_29
+#define AFF3_PASS_WITHOUT_TRACE BIT_30
+#define AFF3_PALADIN_AURA       BIT_31
+#define AFF3_FAMINE             BIT_32
+
+
+//aff4
+#define AFF4_LOOTER                   BIT_1 
+#define AFF4_CARRY_PLAGUE             BIT_2
+#define AFF4_SACKING                  BIT_3 
+#define AFF4_SENSE_FOLLOWER           BIT_4
+#define AFF4_STORNOGS_SPHERES         BIT_5
+#define AFF4_STORNOGS_GREATER_SPHERES BIT_6
+#define AFF4_VAMPIRE_FORM             BIT_7
+#define AFF4_NO_UNMORPH               BIT_8 
+#define AFF4_HOLY_SACRIFICE           BIT_9
+#define AFF4_BATTLE_ECSTASY     BIT_10
+#define AFF4_DAZZLER            BIT_11
+#define AFF4_PHANTASMAL_FORM    BIT_12
+#define AFF4_NOFEAR             BIT_13
+#define AFF4_REGENERATION       BIT_14
+#define AFF4_DEAF               BIT_15
+#define AFF4_BATTLETIDE         BIT_16
+#define AFF4_EPIC_INCREASE      BIT_17
+#define AFF4_MAGE_FLAME         BIT_18 
+#define AFF4_GLOBE_OF_DARKNESS  BIT_19 
+#define AFF4_DEFLECT            BIT_20
+#define AFF4_HAWKVISION         BIT_21
+#define AFF4_MULTI_CLASS        BIT_22
+#define AFF4_SANCTUARY          BIT_23
+#define AFF4_HELLFIRE           BIT_24
+#define AFF4_SENSE_HOLINESS     BIT_25
+#define AFF4_PROT_LIVING        BIT_26
+#define AFF4_DETECT_ILLUSION    BIT_27
+#define AFF4_ICE_AURA           BIT_28
+#define AFF4_REV_POLARITY       BIT_29
+#define AFF4_NEG_SHIELD         BIT_30
+#define AFF4_TUPOR              BIT_31
+#define AFF4_WILDMAGIC          BIT_32
+
 
  */
   //------- A0/A1 -------------   
