@@ -888,6 +888,7 @@ struct room_data {
 /* For players : specials.act3 */
 #define PLR3_FRAGLEAD      BIT_1  /* FragList Leader */
 #define PLR3_FRAGLOW       BIT_2  /* Lowest Fragger */
+#define PLR3_RACIAL_SKILLS BIT_3
 
 /* For players : Prompt flags (16 bits max) */
 #define PROMPT_NONE        BIT_1

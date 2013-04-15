@@ -4583,12 +4583,6 @@ void sneaky_strike(P_char ch, P_char victim)
           send_to_char("You must be wielding a weapon.\r\n", ch);
           return;
         }
-   if(GET_SPEC(ch, CLASS_ROGUE, SPEC_SHARPSHOOTER))
-    {
-      send_to_char("Lets leave this skill to weapon wielding rogues.\r\n", ch);
-      return;
-    }
-
   send_to_char
     ("You think you noticed an opening in your victim defenses...\n", ch);
 

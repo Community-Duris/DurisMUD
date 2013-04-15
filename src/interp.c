@@ -1692,6 +1692,7 @@ void command_interpreter(P_char ch, char *argument)
             else
             {
               send_to_char("You continue your meditation uninterrupted.\n", ch);
+             notch_skill(ch, SKILL_ADVANCED_MEDITATION, 50);
             }
           }
         }
@@ -2175,7 +2176,7 @@ void assign_command_pointers(void)
   CMD_GRT(CMD_RENAME, STAT_DEAD + POS_PRONE, do_rename, IMMORTAL);
   CMD_GRT(CMD_REROLL, STAT_DEAD + POS_PRONE, do_reroll, GREATER_G);
   CMD_GRT(CMD_RESTORE, STAT_DEAD + POS_PRONE, do_restore, GREATER_G);
-  CMD_GRT(CMD_EPICRESET, STAT_DEAD + POS_PRONE, do_epic_reset, GREATER_G);
+ // CMD_GRT(CMD_EPICRESET, STAT_DEAD + POS_PRONE, do_epic_reset, GREATER_G);
  
   CMD_GRT(CMD_SQL, STAT_DEAD + POS_PRONE, do_sql, OVERLORD);
   CMD_GRT(CMD_MAKEEXIT, STAT_DEAD + POS_PRONE, do_makeexit, GREATER_G);
@@ -2328,7 +2329,7 @@ void assign_command_pointers(void)
   CMD_N(CMD_HARDCORE, STAT_DEAD + POS_PRONE, displayHardCore, 0);
   CMD_N(CMD_LEADERBOARD, STAT_DEAD + POS_PRONE, displayLeader, 0);
 //  CMD_N(CMD_RELIC, STAT_DEAD + POS_PRONE, displayRelic, 0);
-  CMD_N(CMD_EPIC, STAT_DEAD + POS_PRONE, do_epic, 0);
+ // CMD_N(CMD_EPIC, STAT_DEAD + POS_PRONE, do_epic, 0); - no longer doing epic skills like this - Drannak
   CMD_N(CMD_NEXUS, STAT_DEAD + POS_PRONE, do_nexus, 0);
   CMD_N(CMD_TEST, STAT_DEAD + POS_PRONE, do_test, FORGER);
   CMD_Y(CMD_TRANQUILIZE, STAT_DEAD, do_tranquilize, 59);

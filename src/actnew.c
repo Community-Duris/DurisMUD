@@ -1516,11 +1516,13 @@ void event_meditation(P_char ch, P_char victim, P_obj obj, void *data)
   if (GET_CHAR_SKILL(ch, SKILL_ADVANCED_MEDITATION)/2 > number(0,100)) {
     if (IS_AFFECTED(ch, AFF_BLIND)) {
       spell_cure_blind(50, ch, 0, 0, ch, 0);
+             notch_skill(ch, SKILL_ADVANCED_MEDITATION, 50);
       return;
     }
     if (GET_CHAR_SKILL(ch, SKILL_ADVANCED_MEDITATION) > 50 && !number(0,2) &&
         IS_AFFECTED2(ch, AFF2_POISONED)) {
       poison_common_remove(ch);
+             notch_skill(ch, SKILL_ADVANCED_MEDITATION, 50);
       send_to_char("You were able to fight the poison in your body!\n", ch);
       return;
     }
@@ -1528,6 +1530,7 @@ void event_meditation(P_char ch, P_char victim, P_obj obj, void *data)
       (affected_by_spell(ch, SPELL_DISEASE) || affected_by_spell(ch, SPELL_PLAGUE)))
      {
      spell_cure_disease (GET_LEVEL(ch), ch, NULL, SPELL_TYPE_SPELL, ch, NULL); 
+             notch_skill(ch, SKILL_ADVANCED_MEDITATION, 50);
      return;
      }  
   }

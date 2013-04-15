@@ -2292,9 +2292,11 @@ void do_steal(P_char ch, char *argument, int cmd)
 
   if (IS_NPC(ch))
     return;
-
-  send_to_char("The babies have won for now... disabled until further work.\r\n", ch);
+  if(!IS_TRUSTED(ch))
+  {
+  send_to_char("Steal is temporarily disabled for rework. Go stab something.\r\n", ch);
   return;
+  }
 
   if (GET_LEVEL(ch) < 10)
   {

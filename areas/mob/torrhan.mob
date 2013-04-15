@@ -7,8 +7,8 @@ halfling vendor smiling~
 &+yselling his fruits.  He sees you and giggles joyously, showing you a
 &+yripe grape before stuffing it into his little mouth.&n
 ~
-8202 0 0 0 0 0 0 1000 S
-PF 0 1 -1
+8202 0 0 0 0 0 0 0 1000 S
+PF 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -22,8 +22,8 @@ human gloomy~
 &+ccontempt.  He stares off towards the sea with a wistful look in his
 &+cdark eyes.&n
 ~
-10314 0 0 0 0 0 0 0 S
-PH 0 1 -1
+10314 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -36,8 +36,8 @@ woman elven elf grey shopper~
 &+Cstopping now and then to talk to a friend.  She appears to be in no
 &+Crush, walking slowly and taking her time.&n
 ~
-2252 0 0 0 0 0 0 500 S
-PE 0 2 -1
+2252 0 0 0 0 0 0 0 500 S
+PE 0 2 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -50,8 +50,8 @@ woman elven elf grey shopper~
 &+Cstopping now and then to talk to a friend.  She appears to be in no
 &+Crush, walking slowly and taking her time.&n
 ~
-2252 0 0 0 0 0 0 500 S
-PE 0 2 -1
+2252 0 0 0 0 0 0 0 500 S
+PE 0 2 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -64,8 +64,8 @@ woman elven elf grey shopper~
 &+Cstopping now and then to talk to a friend.  She appears to be in no
 &+Crush, walking slowly and taking her time.&n
 ~
-2252 0 0 0 0 0 0 500 S
-PE 0 2 -1
+2252 0 0 0 0 0 0 0 500 S
+PE 0 2 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -79,8 +79,8 @@ guard huge barbarian massive~
 &+wautomatically, as if programmed to do so, keeping all invaders out
 &+wand doing a good job of it.&n
 ~
-67512398 0 0 33556952 3 0 0 0 S
-PB 0 1 -1
+67512398 0 0 0 33556952 3 0 0 0 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -94,8 +94,8 @@ guard huge barbarian massive~
 &+Lautomatically, as if programmed to do so, keeping all invaders out
 &+Land doing a good job of it.&n
 ~
-67512398 0 0 33556952 3 0 0 0 S
-PB 0 1 -1
+67512398 0 0 0 33556952 3 0 0 0 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -109,8 +109,8 @@ guard huge barbarian massive~
 &+Lautomatically, as if programmed to do so, keeping all invaders out
 &+Land doing a good job of it.&n
 ~
-67512398 0 0 33556952 3 0 0 0 S
-PB 0 1 -1
+67512398 0 0 0 33556952 3 0 0 0 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -124,8 +124,8 @@ dwarf dwarven merchant~
 &+ya grin on his face.  Still just a child approaching adulthood, he
 &+yenjoys his days here in the market observing the people around him.&n
 ~
-10314 0 0 0 0 0 0 0 S
-PM 0 15 -1
+10314 0 0 0 0 0 0 0 0 S
+PM 0 15 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -139,8 +139,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -154,8 +154,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -169,8 +169,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -184,8 +184,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -199,8 +199,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -214,8 +214,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -229,8 +229,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -244,8 +244,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -259,8 +259,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -274,8 +274,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -289,8 +289,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -304,8 +304,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -319,8 +319,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -334,8 +334,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -349,8 +349,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -364,8 +364,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -379,8 +379,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -394,8 +394,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -409,8 +409,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -424,8 +424,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -439,8 +439,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -454,8 +454,8 @@ sailor young~
 &+bthat will soon be dimished.  Every few minutes he looks up and stares
 &+binto the distance of the ocean.&n
 ~
-264204 0 0 0 0 0 0 0 S
-PH 0 1 -1
+264204 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -470,8 +470,8 @@ aineila woman young grey bard elf mermaid~
 &+gcall her a mermaid without her fins.  Noticing you, she smiles softly
 &+gbefore returning to her sad song, a loss apparent in her eyes.&n
 ~
-3288729674 0 0 402655432 2 0 0 -1000 S
-PL 0 8421376 4
+3288729674 0 0 0 402655432 2 0 0 -1000 S
+PL 0 8421376 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -485,8 +485,8 @@ tower guard~
 &+wgoes on within the tower and appears to enjoy learning from all that
 &+wcan be taught here, rather than guarding the tower itself.&n
 ~
-1140852808 0 0 436314172 0 0 0 0 S
-PB 0 1 -1
+1140852808 0 0 0 436314172 0 0 0 0 S
+PB 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -500,8 +500,8 @@ the town's resources.  This man doesn't fish for commercial use, though,
 he appears to find it very relaxing.  Humming quietly to himself in his
 damp garb, he waits patiently for his line to tug.
 ~
-2126 0 0 0 0 0 0 100 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 100 S
+PH 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -515,8 +515,8 @@ the town's resources.  This man doesn't fish for commercial use, though,
 he appears to find it very relaxing.  Humming quietly to himself in his
 damp garb, he waits patiently for his line to tug.
 ~
-2126 0 0 0 0 0 0 100 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 100 S
+PH 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -530,8 +530,8 @@ the town's resources.  This man doesn't fish for commercial use, though,
 he appears to find it very relaxing.  Humming quietly to himself in his
 damp garb, he waits patiently for his line to tug.
 ~
-2126 0 0 0 0 0 0 100 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 100 S
+PH 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -545,8 +545,8 @@ elemak captain guard guards~
 &+wthe streets himself, he chooses to anyway, keeping a look out and
 &+wdiscussing important matters with the other members of the guard.&n
 ~
-1141246024 0 0 0 0 0 0 1000 S
-PH 0 8 -1
+1141246024 0 0 0 0 0 0 0 1000 S
+PH 0 8 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -561,8 +561,8 @@ elite guard city~
 &+wpatrolling the area, crowds move away and make a path for him.  A
 &+wperpetual scowl marks his features.&n
 ~
-67110984 0 0 0 0 0 0 0 S
-PB 0 1 -1
+67110984 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -576,8 +576,8 @@ the town's resources.  This man doesn't fish for commercial use, though,
 he appears to find it very relaxing.  Humming quietly to himself in his
 damp garb, he waits patiently for his line to tug.
 ~
-2126 0 0 0 0 0 0 100 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 100 S
+PH 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -592,8 +592,8 @@ boat inspector~
 &+YHis first real job, he hurries about often spilling his paperwork
 &+Yonto the dock.&n
 ~
-2248 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2248 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -608,8 +608,8 @@ boat inspector~
 &+YHis first real job, he hurries about often spilling his paperwork
 &+Yonto the dock.&n
 ~
-2248 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2248 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -624,8 +624,8 @@ boat inspector~
 &+YHis first real job, he hurries about often spilling his paperwork
 &+Yonto the dock.&n
 ~
-2248 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2248 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -640,8 +640,8 @@ boat inspector~
 &+YHis first real job, he hurries about often spilling his paperwork
 &+Yonto the dock.&n
 ~
-2248 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2248 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -659,8 +659,8 @@ figure woman marthona~
 &+w"Come, child, there is much you can do for me.  Would you like to hear a
 &+wstory?"&n
 ~
-403530 0 0 33554504 2 0 0 0 S
-PH 0 512 -1
+403530 0 0 0 33554504 2 0 0 0 S
+PH 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -674,8 +674,8 @@ guard huge barbarian massive~
 &+Lautomatically, as if programmed to do so, keeping all invaders out
 &+Land doing a good job of it.&n
 ~
-67512398 0 0 33556952 3 0 0 0 S
-PB 0 1 -1
+67512398 0 0 0 33556952 3 0 0 0 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -688,8 +688,8 @@ dragon green~
 &+gis not to be messed with.  His scales are a glimmering green in color.
 &+gNot happy at being disturbed he swishes his tail violently around.&n
 ~
-395336 0 0 134217816 1 0 0 -1000 S
-D 0 1 -1
+395336 0 0 0 134217816 1 0 0 -1000 S
+D 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -704,8 +704,8 @@ elite guard city~
 &+wpatrolling the area, crowds move away and make a path for him.  A
 &+wperpetual scowl marks his features.&n
 ~
-67110984 0 0 0 0 0 0 0 S
-PB 0 1 -1
+67110984 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -720,8 +720,8 @@ girl young~
 &+mas she sees you looking her way, she gives you the bird before running
 &+moff.&n
 ~
-204 0 0 0 0 0 0 0 S
-P2 0 1 -1
+204 0 0 0 0 0 0 0 0 S
+P2 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -735,8 +735,8 @@ crazy man insane~
 &+Yyellow&n &+Wshirt with a dark &+ggreen&n &+Wtrousers.  Over this a &+Ldark&n
 &+Wcloak flows about his frail body.&n
 ~
-2252 0 0 4 0 0 0 -100 S
-PH 0 2 -1
+2252 0 0 0 4 0 0 0 -100 S
+PH 0 2 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -751,8 +751,8 @@ captain~
 &+Bto pass by.  His stature is tall and well muscled - a five mile run
 &+Bin the morning never hurt anyone!&n
 ~
-2122 0 0 0 0 0 0 10 S
-PB 0 1 -1
+2122 0 0 0 0 0 0 0 10 S
+PB 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -765,8 +765,8 @@ seaman old~
 &+ymuscled and tall he isn't someone to be easily messed with.  This
 &+bbarbarian&n &+yis one of the finest seamen around.  He winks at you.&n
 ~
-264264 0 0 0 0 0 0 10 S
-PB 0 1 -1
+264264 0 0 0 0 0 0 0 10 S
+PB 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -779,8 +779,8 @@ seaman old~
 &+ymuscled and tall he isn't someone to be easily messed with.  This
 &+bbarbarian&n &+yis one of the finest seamen around.  He winks at you.&n
 ~
-264264 0 0 0 0 0 0 10 S
-PB 0 1 -1
+264264 0 0 0 0 0 0 0 10 S
+PB 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -793,8 +793,8 @@ seaman old~
 &+ymuscled and tall he isn't someone to be easily messed with.  This
 &+bbarbarian&n &+yis one of the finest seamen around.  He winks at you.&n
 ~
-264264 0 0 0 0 0 0 10 S
-PB 0 1 -1
+264264 0 0 0 0 0 0 0 10 S
+PB 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -807,8 +807,8 @@ seaman old~
 &+ymuscled and tall he isn't someone to be easily messed with.  This
 &+bbarbarian&n &+yis one of the finest seamen around.  He winks at you.&n
 ~
-264264 0 0 0 0 0 0 10 S
-PB 0 1 -1
+264264 0 0 0 0 0 0 0 10 S
+PB 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -821,8 +821,8 @@ seaman old~
 &+ymuscled and tall he isn't someone to be easily messed with.  This
 &+bbarbarian&n &+yis one of the finest seamen around.  He winks at you.&n
 ~
-264264 0 0 0 0 0 0 10 S
-PB 0 1 -1
+264264 0 0 0 0 0 0 0 10 S
+PB 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -835,8 +835,8 @@ seaman old~
 &+ymuscled and tall he isn't someone to be easily messed with.  This
 &+bbarbarian&n &+yis one of the finest seamen around.  He winks at you.&n
 ~
-264264 0 0 0 0 0 0 10 S
-PB 0 1 -1
+264264 0 0 0 0 0 0 0 10 S
+PB 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -849,8 +849,8 @@ seaman old~
 &+ymuscled and tall he isn't someone to be easily messed with.  This
 &+bbarbarian&n &+yis one of the finest seamen around.  He winks at you.&n
 ~
-264264 0 0 0 0 0 0 10 S
-PB 0 1 -1
+264264 0 0 0 0 0 0 0 10 S
+PB 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -863,8 +863,8 @@ seaman old~
 &+ymuscled and tall he isn't someone to be easily messed with.  This
 &+bbarbarian&n &+yis one of the finest seamen around.  He winks at you.&n
 ~
-264264 0 0 0 0 0 0 10 S
-PB 0 1 -1
+264264 0 0 0 0 0 0 0 10 S
+PB 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -877,8 +877,8 @@ seaman old~
 &+ymuscled and tall he isn't someone to be easily messed with.  This
 &+bbarbarian&n &+yis one of the finest seamen around.  He winks at you.&n
 ~
-1141114952 0 0 0 0 0 0 10 S
-PB 0 1 -1
+1141114952 0 0 0 0 0 0 0 10 S
+PB 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -893,8 +893,8 @@ dwarven boy dwarf~
 
 "Watch out for the owl lady, rumors have it she likes to eat young boys."
 ~
-78 0 0 0 0 0 0 1000 S
-PM 0 1 -1
+78 0 0 0 0 0 0 0 1000 S
+PM 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -908,8 +908,8 @@ guard huge barbarian massive~
 &+Lautomatically, as if programmed to do so, keeping all invaders out
 &+Land doing a good job of it.&n
 ~
-67512398 0 0 33556952 3 0 0 0 S
-PB 0 1 -1
+67512398 0 0 0 33556952 3 0 0 0 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -923,8 +923,8 @@ guard huge barbarian massive~
 &+Lautomatically, as if programmed to do so, keeping all invaders out
 &+Land doing a good job of it.&n
 ~
-67512398 0 0 33556952 3 0 0 0 S
-PB 0 1 -1
+67512398 0 0 0 33556952 3 0 0 0 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -943,8 +943,8 @@ dwarf thurdorf mountain~
 &+Wperhaps if you have any old brass, silver, or gold objects that could use
 &+Wa good polish?"&n
 ~
-2122 0 0 0 0 0 0 1000 S
-PM 0 1 -1
+2122 0 0 0 0 0 0 0 1000 S
+PM 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -957,8 +957,8 @@ drunken sailor drunk~
 &+bis enjoying his time back on land, downing beer after beer.
 &+bHe hoots wildly at the dancing women and waitresses.&n
 ~
-74 0 0 0 0 0 0 0 S
-PH 0 0 -1
+74 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -971,8 +971,8 @@ drunken sailor drunk~
 &+bis enjoying his time back on land, downing beer after beer.
 &+bHe hoots wildly at the dancing women and waitresses.&n
 ~
-74 0 0 0 0 0 0 0 S
-PH 0 0 -1
+74 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -985,8 +985,8 @@ drunken sailor drunk~
 &+bis enjoying his time back on land, downing beer after beer.
 &+bHe hoots wildly at the dancing women and waitresses.&n
 ~
-74 0 0 0 0 0 0 0 S
-PH 0 0 -1
+74 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -999,8 +999,8 @@ drunken sailor drunk~
 &+bis enjoying his time back on land, downing beer after beer.
 &+bHe hoots wildly at the dancing women and waitresses.&n
 ~
-74 0 0 0 0 0 0 0 S
-PH 0 0 -1
+74 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1013,8 +1013,8 @@ drunken sailor drunk~
 &+bis enjoying his time back on land, downing beer after beer.
 &+bHe hoots wildly at the dancing women and waitresses.&n
 ~
-74 0 0 0 0 0 0 0 S
-PH 0 0 -1
+74 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1028,8 +1028,8 @@ tilby halfling~
 &+Lrelaxing after a long day of dealing with the multiple
 &+Lproblems within the tavern.&n
 ~
-8 0 0 0 0 0 0 -100 S
-PF 0 1 -1
+8 0 0 0 0 0 0 0 -100 S
+PF 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1046,8 +1046,8 @@ halfling curious hunter~
 &+LNoticing you, he whispers quietly,&n
 &+W"Shh, get out of here, I'm in search of that they call the owl lady." &n
 ~
-1073875020 0 0 437780572 0 0 0 -100 S
-PF 0 4096 -1
+1073875020 0 0 0 437780572 0 0 0 -100 S
+PF 0 4096 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1060,8 +1060,8 @@ centaur fearsome warrior horse~
 &+geasily.  It appears he is meant to stand guard, and is
 &+glarge even for a centaur.&n
 ~
-2122 0 0 268435576 0 0 0 1000 S
-CT 0 2 -1
+2122 0 0 0 268435576 0 0 0 1000 S
+CT 0 2 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1075,8 +1075,8 @@ grey grey elf warrior~
 &+LShe appears quite tense and alert, never letting her focus
 &+Lfalter.  She stands here guarding any from passing.&n
 ~
-67110922 0 0 88 0 0 0 1000 S
-PE 4 2 -1
+67110922 0 0 0 88 0 0 0 1000 S
+PE 4 2 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1091,8 +1091,8 @@ guard young city member~
 &+Lcausing a little trouble.  He nods at you and continues
 &+Ldown the streets trying to look important.&n
 ~
-67110984 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110984 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1105,8 +1105,8 @@ raccoon~
 &+Lthe forest's underbrush, making noises that raccoons
 &+Lmake.  Noticing you, he darts into a bush.&n
 ~
-200 0 0 0 0 0 0 0 S
-A 0 0 2
+200 0 0 0 0 0 0 0 0 S
+A 0 0 0 2
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1120,8 +1120,8 @@ mage angry~
 &+LHe curses and yells angrily, sending a bolt of lightning
 &+Lto shatter the walls, only to not even cause a dent.&n
 ~
-1073883210 1 0 167772472 2050 0 0 -1000 S
-PH 0 1024 -1
+1073883210 1 0 0 167772472 2050 0 0 -1000 S
+PH 0 1024 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1135,8 +1135,8 @@ warrior fearsome~
 &+Lin shape, having been stuck here for years with little else
 &+Lto do, and growls angrily as he slams against the wall.&n
 ~
-1073752138 1 0 268435576 0 0 0 -1000 S
-PO 0 16 6
+1073752138 1 0 0 268435576 0 0 0 -1000 S
+PO 0 16 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1149,8 +1149,8 @@ rogue devious thief assassin~
 &+Lfor his chance to escape.  He silently moves about, inspecting
 &+Lthe doors and the walls.&n
 ~
-1073752138 1 0 303563068 2050 0 0 -1000 S
-PF 0 8192 3
+1073752138 1 0 0 303563068 2050 0 0 -1000 S
+PF 0 8192 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1164,8 +1164,8 @@ priest powerful cleric~
 &+Lhas gone a bit insane.  He rests here, continuously
 &+Lpracticing his spells.&n
 ~
-1073752138 1 0 134218044 32770 0 0 -1000 S
-PL 0 128 4
+1073752138 1 0 0 134218044 32770 0 0 -1000 S
+PL 0 128 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1180,8 +1180,8 @@ zrilxa demon illithid psi~
 &+rpowers to control the palace as she hides here, ready to strike when
 &+rthe right time arises.&n
 ~
-101066826 1 0 167772440 0 0 0 -1000 S
-X 0 512 7
+101066826 1 0 0 167772440 0 0 0 -1000 S
+X 0 512 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1195,8 +1195,8 @@ guard huge barbarian massive~
 &+Lautomatically, as if programmed to do so, keeping all invaders out
 &+Land doing a good job of it.&n
 ~
-67512398 1 0 33556952 3 0 0 0 S
-PB 0 1 -1
+67512398 1 0 0 33556952 3 0 0 0 S
+PB 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1210,8 +1210,8 @@ guard huge barbarian massive~
 &+Lautomatically, as if programmed to do so, keeping all invaders out
 &+Land doing a good job of it.&n
 ~
-67512398 1 0 33556952 3 0 0 0 S
-PB 0 1 -1
+67512398 1 0 0 33556952 3 0 0 0 S
+PB 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1225,8 +1225,8 @@ guard huge barbarian massive~
 &+Lautomatically, as if programmed to do so, keeping all invaders out
 &+Land doing a good job of it.&n
 ~
-67512398 1 0 33556952 3 0 0 0 S
-PB 0 1 -1
+67512398 1 0 0 33556952 3 0 0 0 S
+PB 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1240,8 +1240,8 @@ guard huge barbarian massive~
 &+Lautomatically, as if programmed to do so, keeping all invaders out
 &+Land doing a good job of it.&n
 ~
-67512398 1 0 33556952 3 0 0 0 S
-PB 0 1 -1
+67512398 1 0 0 33556952 3 0 0 0 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1258,8 +1258,8 @@ king torrhan~
 &+bHe nods briefly at all who enter the room and says, &+W"Hello, welcome.
 &+WHello, welcome. Hello, welcome," &+bdroning on and on...&n
 ~
-10314 0 0 24 0 0 0 0 S
-PM 0 1 -1
+10314 0 0 0 24 0 0 0 0 S
+PM 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1274,8 +1274,8 @@ scowling half elf half-elf~
 &+ca perpetual sneer across his face.  He curses under his breath,
 &+cintent on completing his work quicker than his &+mdrow elf&+c friend.&n
 ~
-1073752138 0 0 28 0 0 0 -100 S
-P2 0 2048 2
+1073752138 0 0 0 28 0 0 0 -100 S
+P2 0 2048 0 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1290,8 +1290,8 @@ drow elf watchful~
 &+mpotions and scrolls.  Now and again she glances over at her companion,
 &+mperhaps in an attempt to keep ahead of him.&n
 ~
-1073752138 0 0 524312 0 0 0 -1000 S
-PL 0 512 4
+1073752138 0 0 0 524312 0 0 0 -1000 S
+PL 0 512 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1305,8 +1305,8 @@ elite guard patrol patrolling~
 &+wbarbarian, though, swinging his large sword in hand.  His eyes hold
 &+wno expression, though, and appear dulled.&n
 ~
-1140861000 1 0 24 0 0 0 -1000 S
-PB 0 1 5
+1140861000 1 0 0 24 0 0 0 -1000 S
+PB 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1320,8 +1320,8 @@ advisor king's bard assistant~
 &+Lwhispering in the &+WKing&+L's ear.  Peerig at you
 &+Lcuriously, he charges to attack!&n
 ~
-1073752138 1 0 1572988 2 0 0 -1000 S
-UG 0 32768 3
+1073752138 1 0 0 1572988 2 0 0 -1000 S
+UG 0 32768 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1334,8 +1334,8 @@ guard palace~
 &+bsteadily here, appearing to protect the king.  His eyes
 &+bpeer around the surrounding areas, alert for any trouble.&n
 ~
-1140861002 0 0 24 0 0 0 -1000 S
-PO 0 1 -1
+1140861002 0 0 0 24 0 0 0 -1000 S
+PO 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1350,8 +1350,8 @@ man odd tailor king's~
 &+ycommunity.  Noticing you, he nods briefly, then lowers his
 &+ygaze once again, almost as if avoiding something.&n
 ~
-1073752138 0 0 24 0 0 0 1000 S
-PH 0 2048 -1
+1073752138 0 0 0 24 0 0 0 1000 S
+PH 0 2048 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1366,8 +1366,8 @@ dragon translucent~
 &+wmystery.  Perhaps he's been here for several years, and he certainly
 &+wdoes not look happy at the instrusion.&n
 ~
-1073756232 1 0 0 0 0 0 -100 S
-D 0 512 7
+1073756232 1 0 0 0 0 0 0 -100 S
+D 0 512 0 7
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1380,8 +1380,8 @@ guardian guard enchanter enchantress~
 &+wpalace guards with her powerful magic.  She keeps a watchful eye
 &+wout for any invaders, ready to strike them down without warning.&n
 ~
-1140992076 1 0 28 0 0 0 -1000 S
-PL 0 512 1
+1140992076 1 0 0 28 0 0 0 -1000 S
+PL 0 512 0 1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1396,8 +1396,8 @@ owl lady owl-like owllady~
 &+wbrown feathers cover its body, while two large black eyes peer about. The
 &+wcreature appears to be trying to say something.&n
 ~
-10314 0 0 135266328 0 0 0 1000 S
-H 0 256 4
+10314 0 0 0 135266328 0 0 0 1000 S
+H 0 256 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1411,8 +1411,8 @@ merchant boat~
 &+Bthe water.  He seems to enjoy simply listening to the
 &+Bsounds of the ocean.&n
 ~
-2122 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1425,8 +1425,8 @@ waiter~
 &+Ljoyously, taking down orders and serving food and drinks.
 &+LHe smiles at you, "What can I get you?"&n
 ~
-74 0 0 0 0 0 0 1000 S
-PM 0 0 3
+74 0 0 0 0 0 0 0 1000 S
+PM 0 0 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1439,8 +1439,8 @@ noble~
 &+bface completely expressionless.  He stands here doing
 &+bnothing but staring off without any focus.&n
 ~
-1073752138 0 0 24 0 0 0 -1000 S
-PM 0 32 -1
+1073752138 0 0 0 24 0 0 0 -1000 S
+PM 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1455,8 +1455,8 @@ decorated ambassador human~
 &+whis wealth about.  He rests quietly here after just arriving, awaiting
 &+whis audience with the king.&n
 ~
-67119182 0 0 268435480 0 0 0 500 S
-PH 0 32 -1
+67119182 0 0 0 268435480 0 0 0 500 S
+PH 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1470,8 +1470,8 @@ minotaur mino diplomat~
 &+Lthe strangeness within the palace and not liking it one
 &+Lbit. &n
 ~
-67119182 0 0 33554488 0 0 0 -100 S
-MT 0 1 3
+67119182 0 0 0 33554488 0 0 0 -100 S
+MT 0 1 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1484,8 +1484,8 @@ rogue silent~
 &+wassinate the king or to steal something.  He moves very quickly and
 &+wsilently, blending in with the shadows.&n
 ~
-1073743946 1 0 1572888 0 0 0 -1000 S
-PH 0 8192 -1
+1073743946 1 0 0 1572888 0 0 0 -1000 S
+PH 0 8192 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1499,8 +1499,8 @@ fisherman old retired~
 &+wthe warm sun.  On his free time, he can be seen polishing up old seashells,
 &+wrocks, and the rare shark tooth that has washed up onto the beach.&n
 ~
-2058 0 0 0 0 0 0 100 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 100 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1514,8 +1514,8 @@ spoiled elf grey~
 &+mwhining makes you want to slap her, as she flaunts her
 &+mexpensive clothing.&n
 ~
-2122 0 0 0 0 0 0 0 S
-PE 0 0 -1
+2122 0 0 0 0 0 0 0 0 S
+PE 0 0 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1530,8 +1530,8 @@ massive ogre warrior~
 &+Lout over the tables, grunting vulgarly as he swallows a whole
 &+Lchicken, pounding his hand against the table.&n
 ~
-67119178 1 0 973078840 2050 0 0 -1000 S
-PO 0 1 5
+67119178 1 0 0 973078840 2050 0 0 -1000 S
+PO 0 1 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1546,8 +1546,8 @@ massive ogre warrior~
 &+Lout over the tables, grunting vulgarly as he swallows a whole
 &+Lchicken, pounding his hand against the table.&n
 ~
-67119178 1 0 973078840 2050 0 0 -1000 S
-PO 0 1 5
+67119178 1 0 0 973078840 2050 0 0 -1000 S
+PO 0 1 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1560,8 +1560,8 @@ troll guard uneasy~
 &+Lrestlessly, he appears uneasy, perhaps because of the strange
 &+Lsounds which can be heard from the ajoining rooms.&n
 ~
-67119114 1 0 24 0 0 0 -1000 S
-PT 0 1 4
+67119114 1 0 0 24 0 0 0 -1000 S
+PT 0 1 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1576,8 +1576,8 @@ goblin deformed small~
 &+gHe moves about slowly, pain wrinkling his face, and lets
 &+gout small moans of agony.&n
 ~
-1073752140 1 0 268435752 0 0 0 -1000 S
-HG 0 256 1
+1073752140 1 0 0 268435752 0 0 0 -1000 S
+HG 0 256 0 1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1590,8 +1590,8 @@ demon lesser~
 &+Lits way.  He growls disturbingly, pounding against the
 &+Lwalls and floor.  Noticing you, he charges to attack!&n
 ~
-1073752140 1 0 24 0 0 0 -1000 S
-X 0 1 6
+1073752140 1 0 0 24 0 0 0 -1000 S
+X 0 1 0 6
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1607,8 +1607,8 @@ creature unrecognizeable awful~
 &+rstench wafts up from it.  Gurgling noises exit his beaky
 &+rmouth.&n
 ~
-1073752140 1 0 268435496 0 0 0 -1000 S
-H 0 4 2
+1073752140 1 0 0 268435496 0 0 0 -1000 S
+H 0 4 0 2
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1622,8 +1622,8 @@ red spider huge~
 &+rfat red body.  It crawls upon the walls, ceiling, and
 &+rfloor.&n
 ~
-1073752140 1 0 24 0 0 0 -1000 S
-AS 0 1 4
+1073752140 1 0 0 24 0 0 0 -1000 S
+AS 0 1 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1636,8 +1636,8 @@ spider black small~
 &+Laround on its little legs anywhere it can.  Up onto the
 &+Lwalls, the ceiling, the ground!&n
 ~
-1140852814 1 0 0 0 0 0 -1000 S
-AS 0 1 2
+1140852814 1 0 0 0 0 0 0 -1000 S
+AS 0 1 0 2
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1650,8 +1650,8 @@ demon greater~
 &+Land then.  His huge form causes the ground to shake as
 &+Lhe walks.&n
 ~
-1073743948 1 0 402653240 0 0 0 -1000 S
-X 0 1 7
+1073743948 1 0 0 402653240 0 0 0 -1000 S
+X 0 1 0 7
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1668,8 +1668,8 @@ faerie broken tiny~
 &+cNoticing you, she winces in agony, "Please.. please put me out of
 &+cthis misery."
 ~
-141388 0 0 134217754 0 0 0 1000 S
-HF 0 32 1
+141388 0 0 0 134217754 0 0 0 1000 S
+HF 0 32 0 1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1683,8 +1683,8 @@ gnome frightened~
 &+won the floor.  Drops of blood cover his arms and legs and his
 &+wclothes are stained with dark liquids.&n
 ~
-1073743948 1 0 24 0 0 0 -1000 S
-PG 0 512 -1
+1073743948 1 0 0 24 0 0 0 -1000 S
+PG 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1704,8 +1704,8 @@ torrok barbarian burly~
 &+byou up and down, he continues, &+W"You wouldn't happen to have seen my
 &+Wlongsword, have you?"&n
 ~
-2122 0 0 0 0 0 0 0 S
-PB 0 1 4
+2122 0 0 0 0 0 0 0 0 S
+PB 0 1 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1719,8 +1719,8 @@ fisherman~
 &+ysunburned like most other fisherman, and he grows a scraggly
 &+ybeard to keep warm.  He spends his days catching fish.&n
 ~
-10312 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10312 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1733,8 +1733,8 @@ barbarian assistant torrok's young~
 &+gthe shop, stacking shelves, selling things, and cleaning up.  He beams
 &+ga smile at those who enter, helping in any way he can.&n
 ~
-2122 0 0 8 0 0 0 1000 S
-PB 0 1 -1
+2122 0 0 0 8 0 0 0 1000 S
+PB 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1748,8 +1748,8 @@ halfling fat~
 &+yeats more than he sells, stuffing a delicious strawberry filled
 &+ypastry into his mouth as he smiles at the customers.&n
 ~
-2122 0 0 8 0 0 0 1000 S
-PF 0 0 -1
+2122 0 0 0 8 0 0 0 1000 S
+PF 0 0 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1762,8 +1762,8 @@ tirila woman elderly~
 &+bnow spends her days teaching and selling items to help other mages.
 &+bWhite hair frames a once beautiful face.&n
 ~
-2122 0 0 8 0 0 0 1000 S
-PE 0 512 -1
+2122 0 0 0 8 0 0 0 1000 S
+PE 0 512 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1776,8 +1776,8 @@ guard city~
 &+Lafter a long day on the job.  He seems a bit drowsy, as if
 &+Lhe's ready to doze off at any second.&N
 ~
-67119178 0 0 0 0 0 0 0 S
-PH 0 1 3
+67119178 0 0 0 0 0 0 0 0 S
+PH 0 1 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1792,8 +1792,8 @@ burly guard watcher~
 &+bthat may come.  He doesn't notice you, his eyes intent on the
 &+bcity below.&n
 ~
-1140852810 0 0 33554488 0 0 0 0 S
-PB 0 1 4
+1140852810 0 0 0 33554488 0 0 0 0 S
+PB 0 1 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1807,8 +1807,8 @@ shahala ranger master~
 &+gthe ways of a ranger.  She still shows great dexterity as
 &+gshe moves around quickly.&n
 ~
-1073776714 0 0 8 0 0 0 1000 S
-PE 0 2 -1
+3221260362 0 0 0 8 0 0 0 1000 S
+PE 0 2 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1823,8 +1823,8 @@ plaron paladin mighty~
 &+wthose who come to visit.  He stands steadily, teaching all he
 &+wcan.&n
 ~
-34890 0 0 24 0 0 0 1000 S
-PH 0 8 -1
+2147518538 0 0 0 24 0 0 0 1000 S
+PH 0 8 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1838,8 +1838,8 @@ draloth barbarian warrior~
 &+wfor all to see, and slams himself into a wall in his attempts to impress
 &+wsomeone.  He beats his chest and yells like an animal.&n
 ~
-34890 0 0 24 0 0 0 0 S
-PB 0 1 -1
+2147518538 0 0 0 24 0 0 0 0 S
+PB 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1854,8 +1854,8 @@ mercenary master xilarin mino minotaur~
 &+yscar that runs across his forehead.  He now spends his time teaching
 &+yothers the ways of a mercenary.&n
 ~
-3221260362 0 0 8 0 0 0 -100 S
-MT 0 16384 4
+3221260362 0 0 0 8 0 0 0 -100 S
+MT 0 16384 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1870,8 +1870,8 @@ derm human anti anti-paladin~
 &+Lreason he is no longer out in those battles.  He distractedly nods at
 &+La student.&n
 ~
-3221260362 0 0 24 0 0 0 -1000 S
-PH 0 16 -1
+3221260362 0 0 0 24 0 0 0 -1000 S
+PH 0 16 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1884,8 +1884,8 @@ rhogrim hiding shadows rogue dwarf mountain~
 &+Lof not being seen.  Although age is evident upon his face, he
 &+Lstill moves about silently, making no sound.&n
 ~
-1073774666 0 0 268435464 0 0 0 -100 S
-PM 0 4096 -1
+3221258314 0 0 0 268435464 0 0 0 -100 S
+PM 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1899,8 +1899,8 @@ bard master centaur slilatel~
 &+Lwith a gracefulness which matches her song.  She smiles
 &+Lsoftly at the students, giving them pointers now and then.&n
 ~
-1073776714 0 0 56 0 0 0 -10 S
-CT 0 32768 -1
+3221260362 0 0 0 56 0 0 0 -10 S
+CT 0 32768 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1914,8 +1914,8 @@ durgen druid half-elf elf famous~
 &+gsome age since then, and now teaches others the secret ways
 &+gof the druids, and how to best use such power. &n
 ~
-1073776650 0 0 8 0 0 0 1000 S
-P2 0 128 -1
+3221260298 0 0 0 8 0 0 0 1000 S
+P2 0 128 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1929,8 +1929,8 @@ ona shaman master barbarian~
 &+bup inside a room, and would rather be outside twisting nature
 &+bto her liking.&n
 ~
-3221260298 0 0 8 0 0 0 -1000 S
-PB 0 256 -1
+3221260298 0 0 0 8 0 0 0 -1000 S
+PB 0 256 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1944,8 +1944,8 @@ twyglyroo gnome psi psionicist master~
 &+Leyes focused and alert.  Pacing the room back and forth, he
 &+Lunleashes his teachings to only those who are worthy.&n
 ~
-1073776714 0 0 8 0 0 0 0 S
-PG 0 4 -1
+3221260362 0 0 0 8 0 0 0 0 S
+PG 0 4 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1960,8 +1960,8 @@ llyren grey elf conjurer~
 &+yseems to enjoy showing off more than anything, and smiles broadly
 &+yat those who enter.&n
 ~
-1073776650 0 0 8 0 0 0 0 S
-PE 0 2048 -1
+3221260298 0 0 0 8 0 0 0 0 S
+PE 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1976,8 +1976,8 @@ tibbe halfling cleric great~
 &+cdanger, the way of goodies!  Noticing you he smiles, and
 &+cshows you how to armor a person with expertise.&n
 ~
-34826 0 0 8 0 0 0 1000 S
-PF 0 32 -1
+2147518474 0 0 0 8 0 0 0 1000 S
+PF 0 32 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1991,8 +1991,8 @@ nirrel halfling sorcerer~
 &+mstudents, looking for greatness, and teaches them the arts
 &+mof a true sorcerer.  He now uses a staff in his old age.&n
 ~
-1073776714 0 0 24 0 0 0 -10 S
-PF 0 512 -1
+3221260362 0 0 0 24 0 0 0 -10 S
+PF 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2006,8 +2006,8 @@ tamor necromancer human powerful~
 &+Levery now and then.  This cloaked figure looks ancient, streaks
 &+Lof white hair flow from within his cloak.&n
 ~
-1073776650 0 0 24 0 0 0 -1000 S
-PH 0 1024 -1
+1073776650 0 0 0 24 0 0 0 -1000 S
+PH 0 1024 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2021,8 +2021,8 @@ riralin innkeeper keeper~
 &+bgaunt.  She smiles softly at those who come to rent a room,
 &+bshowing them down the hallways.&n
 ~
-2122 0 0 0 0 0 0 0 S
-PE 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+PE 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2037,8 +2037,8 @@ gnome tiny sleep~
 &+rHis attire shows that he is a sailor of some sort, which is
 &+runusual.&n
 ~
-2122 0 0 0 0 0 0 -100 S
-PG 0 1 -1
+2122 0 0 0 0 0 0 0 -100 S
+PG 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -2053,8 +2053,8 @@ cook chef palace~
 &+bWhy he has gone insane might have to do with being forced
 &+bto serve ogres and other unspeakable creatures.&n
 ~
-1073752138 1 0 56 0 0 0 -1000 S
-PH 0 256 -1
+1073752138 1 0 0 56 0 0 0 -1000 S
+PH 0 256 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2068,8 +2068,8 @@ rat brown large~
 &+ynothing, darting about in a quickness.  It continues down
 &+ythe tunnels chewing on anything edible.&n
 ~
-76 0 0 0 0 0 0 -1000 S
-A 0 0 1
+76 0 0 0 0 0 0 0 -1000 S
+A 0 0 0 1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2082,8 +2082,8 @@ brown small bear~
 &+Lin search of food.  His thick brown fur is soft to the touch.
 &+LHe appears a bit lost as he wanders without any set path.&n
 ~
-2124 0 0 0 0 0 0 -100 S
-A 0 0 3
+2124 0 0 0 0 0 0 0 -100 S
+A 0 0 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2096,8 +2096,8 @@ guard palace~
 &+bsteadily here, appearing to protect the king.  His eyes
 &+bpeer around the surrounding areas, alert for any trouble.&n
 ~
-1140861002 1 0 24 0 0 0 -1000 S
-PO 0 1 -1
+1140861002 1 0 0 24 0 0 0 -1000 S
+PO 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2110,8 +2110,8 @@ tired duergar~
 &+Lcircles are under his squinty eyes.  He relaxes on a chair
 &+Lattemping to sleep, twitching strangely every so often.&n
 ~
-67119114 0 0 524316 0 0 0 -1000 S
-PD 0 32 -1
+67119114 0 0 0 524316 0 0 0 -1000 S
+PD 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2124,8 +2124,8 @@ bird seagull~
 &+wand other food he can find, flying low on the beach.
 &+wTwo large winds spread out as he takes flight.&n
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2140,8 +2140,8 @@ man wealthy wealth~
 &+Lthinking of something to say, but nothing comes to mind, so
 &+Lhe simply turns away and stares at a wall.&n
 ~
-1073743946 0 0 0 0 0 0 -100 S
-PH 0 0 -1
+1073743946 0 0 0 0 0 0 0 -100 S
+PH 0 0 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2155,8 +2155,8 @@ sailor retired old~
 &+wa slight limp and scars can be see upon his arms.  He wanders about,
 &+wattempting to get acquainted with the land.&n
 ~
-1073752136 0 0 0 0 0 0 -100 S
-PH 0 1 -1
+1073752136 0 0 0 0 0 0 0 -100 S
+PH 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2171,8 +2171,8 @@ fish merchant lazy~
 &+bseeing them, and continues to sit staring at nothing in
 &+bpaticular.&n
 ~
-1073743946 0 0 8 0 0 0 -100 S
-PH 0 1 -1
+1073743946 0 0 0 8 0 0 0 -100 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2185,8 +2185,8 @@ wraith angry undead~
 &+Lsees, screaming with a loud anger.  It fades in and out of
 &+Lreality, never taking on a solid form.&n
 ~
-1073768522 1 0 24 0 0 0 -1000 S
-U 0 512 3
+1073768522 1 0 0 24 0 0 0 -1000 S
+U 0 512 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2201,8 +2201,8 @@ grey wounded elf~
 &+wa sailor.  He mutters a name under his breath as he sleeps, his hand
 &+wtouching a small box that rests on the floor.&n
 ~
-2122 0 0 24 0 0 0 1000 S
-PE 0 2 -1
+2122 0 0 0 24 0 0 0 1000 S
+PE 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2215,8 +2215,8 @@ troll guard uneasy~
 &+Lrestlessly, he appears uneasy, perhaps because of the strange
 &+Lsounds which can be heard from the ajoining rooms.&n
 ~
-67119114 1 0 24 0 0 0 -1000 S
-PT 0 256 4
+67119114 1 0 0 24 0 0 0 -1000 S
+PT 0 256 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2230,8 +2230,8 @@ ogre enormous giant~
 &+bthe stone walls around you.  He attacks anything on sight,
 &+bsaliva dripping from his large mouth.&n
 ~
-1073752140 1 0 134217752 2 0 0 -1000 S
-PO 0 1 -1
+1073752140 1 0 0 134217752 2 0 0 -1000 S
+PO 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2245,8 +2245,8 @@ servant~
 &+wto pass the time and keeping an eye out for any danger that might come
 &+wto his master. &n
 ~
-67119178 0 0 301989948 0 0 0 100 S
-PH 0 8 -1
+67119178 0 0 0 301989948 0 0 0 100 S
+PH 0 8 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2260,8 +2260,8 @@ elite guard patrol patrolling~
 &+wbarbarian, though, swinging his large sword in hand.  His eyes hold
 &+wno expression, though, and appear dulled.&n
 ~
-1140861000 1 0 24 0 0 0 -1000 S
-PB 0 1 5
+1140861000 1 0 0 24 0 0 0 -1000 S
+PB 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2276,8 +2276,8 @@ aging woman~
 &+bher life in Torrhan and seen it grow and change.  Right now, though, she
 &+bwears a very worried look upon her features.&n
 ~
-2122 0 0 0 0 0 0 1000 S
-PH 0 9 -1
+2122 0 0 0 0 0 0 0 1000 S
+PH 0 9 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2289,8 +2289,8 @@ demon greater~
 &+L   This demon roams about menacingly, howling in anger now and
 &+Lthen.  His huge form causes the ground to shake as he walks.&n
 ~
-2122 1 0 402653240 0 0 0 -1000 S
-X 0 1 7
+2122 1 0 0 402653240 0 0 0 -1000 S
+X 0 1 0 7
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

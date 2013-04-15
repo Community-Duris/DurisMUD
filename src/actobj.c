@@ -3199,7 +3199,6 @@ void do_taste(P_char ch, char *argument, int cmd)
 void perform_wear(P_char ch, P_obj obj_object, int keyword)
 {
   struct affected_type af;
-
   switch (keyword)
   {
   case 0:
@@ -4561,6 +4560,9 @@ void do_wear(P_char ch, char *argument, int cmd)
     send_to_char("DUH!\r\n", ch);
     return;
   }
+
+
+
   argument_interpreter(argument, Gbuf1, Gbuf2);
   if (*Gbuf1 && str_cmp(Gbuf1, "all"))
   {
@@ -4600,6 +4602,11 @@ void do_wear(P_char ch, char *argument, int cmd)
           return;
         }
         // Wear the Object
+              if (obj_index[obj_object->R_num].virtual_number == 400218 && IS_MULTICLASS_PC(ch))
+    {
+	send_to_char("&nThe power of this item is too great for a multiclassed character!&n\r\n", ch);
+	return;
+    }
         wear(ch, obj_object, keyword, 1);
       }
     }
@@ -4624,8 +4631,14 @@ void do_wear(P_char ch, char *argument, int cmd)
     for (loop = 0; loop < CUR_MAX_WEAR; loop++) 
     { // Outer Loop
       if (!(ch->equipment[equipment_pos_table[loop][2]]))
+
         for (obj_object = ch->carrying; obj_object; obj_object = next_obj)
         { // Inner Loop
+	            if (obj_index[obj_object->R_num].virtual_number == 400218 && IS_MULTICLASS_PC(ch))
+    		{
+			send_to_char("&nThe power of this item is too great for a multiclassed character!&n\r\n", ch);
+			return;
+  		  }
           next_obj = obj_object->next_content;
           if (obj_object->type != ITEM_SPELLBOOK)
           {
@@ -4706,6 +4719,11 @@ void do_grab(P_char ch, char *argument, int cmd)
   if (*Gbuf1)
   {
     obj_object = get_obj_in_list(Gbuf1, ch->carrying);
+     	            if (obj_index[obj_object->R_num].virtual_number == 400218 && IS_MULTICLASS_PC(ch))
+    		{
+			send_to_char("&nThe power of this item is too great for a multiclassed character!&n\r\n", ch);
+			return;
+  		  }  
     if (obj_object)
     {
       wear(ch, obj_object, 13, 1);

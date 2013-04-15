@@ -80,6 +80,7 @@ extern int top_of_mobt;
 extern P_index mob_index;
 extern int exp_table[];
 extern int new_exp_table[];
+extern void assign_racial_skills(P_char ch);
 
 #define TOGGLE_BIT(var, bit) ((var) = (var) ^ (bit))
 #define PLR_FLAGS(ch)          ((ch)->specials.act)
@@ -2101,6 +2102,7 @@ void enter_game(P_desc d)
   if (GET_LEVEL(ch))
   {
     ch->desc = d;
+
     reset_char(ch);
 
     cost = 0;
@@ -2222,6 +2224,8 @@ void enter_game(P_desc d)
     set_char_size(ch);
 
     update_skills(ch);
+
+
 
   }
   /* don't do any of above for new chars */
@@ -2610,7 +2614,8 @@ if(d->character->base_stats.Wis < 80)
   {
   d->character->base_stats.Cha = 80;
   }
-
+   //Drannak - set racial skills
+    assign_racial_skills(ch);
 
 /*
 if(d->character->player.time.played <  10000000  && !IS_TRUSTED(d->character))

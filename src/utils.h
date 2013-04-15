@@ -281,10 +281,13 @@ int IS_TWILIGHT_ROOM(int r);
 #define TOGGLE_BIT(var, bit) ((var) = (var) ^ (bit))
 #define PLR_FLAGS(ch)          ((ch)->specials.act)
 #define PLR2_FLAGS(ch)          ((ch)->specials.act2)
+#define PLR3_FLAGS(ch)	    ((ch)->specials.act3)
 #define PLR_FLAGGED(ch, flag)  (IS_SET(PLR_FLAGS(ch), flag))
 #define PLR2_FLAGGED(ch, flag)  (IS_SET(PLR2_FLAGS(ch), flag))
+#define PLR3_FLAGGED(ch, flag)  (IS_SET(PLR3_FLAGS(ch), flag))
 #define PLR_TOG_CHK(ch, flag)  ((TOGGLE_BIT(PLR_FLAGS(ch), (flag))) & (flag))
 #define PLR2_TOG_CHK(ch, flag)  ((TOGGLE_BIT(PLR2_FLAGS(ch), (flag))) & (flag))
+#define PLR3_TOG_CHK(ch, flag)  ((TOGGLE_BIT(PLR3_FLAGS(ch), (flag))) & (flag))
 
 /* Can subject see character "obj"? */
 
@@ -818,6 +821,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define IS_MULTICLASS_NPC(ch) (IS_NPC(ch) && IS_AFFECTED4(ch, AFF4_MULTI_CLASS))
 
 #define IS_HARDCORE(ch) (IS_PC(ch) && IS_SET(ch->specials.act2, PLR2_HARDCORE_CHAR))
+
 
 #define IS_MULTICLASS_PC(ch) (IS_PC(ch) && ((ch)->player.secondary_class > 0) && ((ch)->player.secondary_class != BIT_32))
 

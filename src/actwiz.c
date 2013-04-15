@@ -89,6 +89,7 @@ extern const char *missileweapons[];
 extern const char *shot_types[];
 extern const char *player_bits[];
 extern const char *player2_bits[];
+extern const char *player3_bits[];
 extern const char *player_prompt[];
 extern const char *position_types[];
 extern struct race_names race_names_table[];
@@ -2848,6 +2849,7 @@ void do_stat(P_char ch, char *argument, int cmd)
       sprintbit(k->specials.act, player_bits, buf2);
       sprintf(buf, "&+YFlags (Specials Act): &N%s ", buf2);
       sprintbit(k->specials.act2, player2_bits, buf2);
+      sprintbit(k->specials.act3, player3_bits, buf2);
       strcat(buf, buf2);
       strcat(buf, "\n");
       strcat(o_buf, buf);
@@ -4969,6 +4971,7 @@ void do_start(P_char ch, int nomsg)
   /* preserve hardcore and newbie bits */
   ch->specials.act2 &= (PLR2_HARDCORE_CHAR | PLR2_NEWBIE);
 
+
   SET_BIT(ch->specials.act2, PLR2_NCHAT);
   SET_BIT(ch->specials.act2, PLR2_QUICKCHANT);
   SET_BIT(ch->specials.act2, PLR2_SPEC);
@@ -4996,6 +4999,9 @@ void do_start(P_char ch, int nomsg)
 
   ch->player.time.played = 0;
   ch->player.time.logon = time(0);
+
+  //Drannak - preserve already set racial skills
+  assign_racial_skills_norefund(ch);
 }
 
 void do_advance(P_char ch, char *argument, int cmd)

@@ -226,6 +226,7 @@ int apply_ac(P_char ch, int eq_pos)
         value += (int) ( GET_CHAR_SKILL(ch, SKILL_SHIELD_COMBAT) * (float) get_property("skill.shieldCombat.ACBonusMultiplier", 1.00) );
         if (GET_CLASS(ch, CLASS_WARRIOR | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_MERCENARY))
 	  value *= 2;
+                    notch_skill(ch, SKILL_SHIELD_COMBAT, 50);
       }
       break;
     case WEAR_BODY:

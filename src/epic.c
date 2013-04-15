@@ -191,10 +191,10 @@ struct epic_teacher_skill {
   int deny_skill;
   int pre_req_lvl;
 } epic_teachers[] = {
-  {67103, SKILL_ADVANCED_MEDITATION, 0, 100, 0, 0, 0},
+ /* {67103, SKILL_ADVANCED_MEDITATION, 0, 100, 0, 0, 0},
   {96013, SKILL_SUMMON_BLIZZARD, 0, 100, 0, 0, 0},
   {19141, SKILL_ANATOMY, 0, 100, 0, 0, 0},
-  //{75500, SKILL_CHANT_MASTERY, 0, 100, 0, 0, 0},
+  {75500, SKILL_CHANT_MASTERY, 0, 100, 0, 0, 0},
   {34446, SKILL_SUMMON_FAMILIAR, 0, 100, 0, 0, 0},
   {41327, SKILL_DEVOTION, 0, 100, 0, 0, 0},
   {36720, SKILL_SCRIBE_MASTERY, 0, 100, 0, 0, 0},
@@ -216,16 +216,16 @@ struct epic_teacher_skill {
   {20242, SKILL_IMPROVED_TRACK, 0, 100, SKILL_TRACK, 0, 95},
   {99548, SKILL_EMPOWER_SONG, 0, 100, 0, 0},
   {22436, SKILL_FIX, 0, 100, 0, 0, 0}, //smith in stormport
-  //{9454,  SKILL_CRAFT, 0, 100, 0, 0, 0}, //Rjinal in Samirz
+  {9454,  SKILL_CRAFT, 0, 100, 0, 0, 0}, //Rjinal in Samirz
   {40760, SKILL_ENCRUST, 0, 100, SKILL_CRAFT, 0, 100}, //Snent in Divine Home
-  //{78006, SKILL_ENCHANT, 0, 100, 0, SKILL_SPELLBIND, 0}, //Bargor in Oasis
-  //{94017, SKILL_SPELLBIND, 0, 100, 0, SKILL_ENCHANT, 0}, //Kalroh in Maze of Undead Army
+  {78006, SKILL_ENCHANT, 0, 100, 0, SKILL_SPELLBIND, 0}, //Bargor in Oasis
+  {94017, SKILL_SPELLBIND, 0, 100, 0, SKILL_ENCHANT, 0}, //Kalroh in Maze of Undead Army
   {37145, SKILL_SMELT, 0, 100, 0, 0, 0}, //Carmotee in Dumaathe
-  //{21618, SKILL_FORGE, 0, 100, 0, 0, 0}, //Tenkuss in Aravne
+  {21618, SKILL_FORGE, 0, 100, 0, 0, 0}, //Tenkuss in Aravne
   {49162, SKILL_TOTEMIC_MASTERY, 0, 100, 0, 0, 0},
   {76008, SKILL_INFUSE_MAGICAL_DEVICE, 0, 100, 0, 0, 0},  //Deathium in Ultarium
   {28975, SKILL_INDOMITABLE_RAGE, 0, 100, 0, 0, 0},
-  //{70806, SKILL_NATURES_SANCTITY, 0, 100, 0, 0, 0},
+  {70806, SKILL_NATURES_SANCTITY, 0, 100, 0, 0, 0},
   {6013,  SKILL_EXPERT_PARRY, 0, 100, 0, 0, 0}, //Bemon in Clavikord Swamp
   {75615, SKILL_EXPERT_RIPOSTE, 0, 100, 0, 0, 0}, //Rolart in Obsidian Citadel
   {98534, SKILL_EPIC_STRENGTH, 0, 100, 0, 0, 0}, //Olat in Bandit Canyon
@@ -237,7 +237,7 @@ struct epic_teacher_skill {
   {66671, SKILL_EPIC_CONSTITUTION, 0, 100, 0, 0, 0}, //Thurdorf in Torrhan
   {82408, SKILL_EPIC_CHARISMA, 0, 100, 0, 0, 0}, //Frolikk in Temple of Sun
   {21535, SKILL_EPIC_LUCK, 0, 100, 0, 0, 0}, //Babedo in Aravne
-//  {2733, SKILL_SHIP_DAMAGE_CONTROL, 0, 100, 0, 0, 0}, // Commodore in Headless
+  {2733, SKILL_SHIP_DAMAGE_CONTROL, 0, 100, 0, 0, 0}, // Commodore in Headless */
   {0}
 };
 
@@ -2294,7 +2294,8 @@ void do_epic_reset(P_char ch, char *arg, int cmd)
   {
     int learned = t_ch->only.pc->skills[skill_id].learned;
     
-    if(IS_EPIC_SKILL(skill_id) && learned)
+    if((IS_EPIC_SKILL(skill_id) && learned) && (strcmp(skills[skill_id].name, "forge")) && (strcmp(skills[skill_id].name, "mine")) && (strcmp(skills[skill_id].name, "craft")))
+     //  (skills[skill_id].name != ("forge" || "mine" || "craft")))
     {
       // find in epic_rewards
       int s;
@@ -2905,3 +2906,111 @@ void do_infuse(P_char ch, char *arg, int cmd)
 
   CharWait(ch, (PULSE_VIOLENCE * 5));
 }
+
+//referenced in actwiz.c for existing chars - Drannak
+void do_epic_reset_norefund(P_char ch, char *arg, int cmd)
+{
+  char buff2[MAX_STRING_LENGTH];
+  char buff3[MAX_STRING_LENGTH];
+  
+  argument_interpreter(arg, buff2, buff3);
+  
+  if(!ch || !IS_PC(ch))
+    return;
+  
+  P_char t_ch = ch;
+
+// Disabling for equipment wipe - re-enable at a later time - Drannak 8/9/2012
+//  send_to_char("&+YEpic point resetting has been temporarily &+Rdisabled &+Ywhile we equipment wipe.&n\r\n", ch);
+//  return;
+// end disable
+  
+  if(IS_TRUSTED(ch) && strlen(buff3))
+  {
+    if(!(t_ch = get_char_vis(ch, buff3)) || !IS_PC(t_ch))
+    {
+      send_to_char("They don't appear to be in the game.\n", ch);
+      return;
+    }
+  }
+  
+  // run through skills
+  // for each skill that is epic:
+  //    for each skill point:
+  //      calculate epic pointcost / plat cost
+  //      reimburse points / plat
+  
+ /* send_to_char("&+WResetting epic skills:\n", ch); */
+  
+  int point_refund = 0;
+  int coins_refund = 0;
+  
+  for (int skill_id = 0; skill_id <= MAX_AFFECT_TYPES; skill_id++)
+  {
+    int learned = t_ch->only.pc->skills[skill_id].learned;
+    
+    if((IS_EPIC_SKILL(skill_id) && learned) && (strcmp(skills[skill_id].name, "forge")) && (strcmp(skills[skill_id].name, "mine")) && (strcmp(skills[skill_id].name, "craft")))
+     //  (skills[skill_id].name != ("forge" || "mine" || "craft")))
+    {
+      // find in epic_rewards
+      int s;
+      
+      bool found = false;
+      for(s = 0; epic_rewards[s].type; s++)
+      {
+        if(epic_rewards[s].value == skill_id)
+        {
+          found = true;
+          break;
+        }
+      }
+      
+      if(!found)
+      {
+        continue;
+      }
+      
+      int points = 0;
+      int coins = 0;
+      
+      for(int skill_level = 0; skill_level < learned; skill_level += (int) get_property("epic.skillGain", 10))
+      {
+        float cost_f = 1 + skill_level / get_property("epic.progressFactor", 30);
+        int points_cost = (int) (cost_f * epic_rewards[s].points_cost);
+        int coins_cost = (int) (cost_f * epic_rewards[s].coins);
+        
+        if(IS_MULTICLASS_PC(t_ch) &&
+           !IS_SET(epic_rewards[s].classes, t_ch->player.m_class) &&
+           IS_SET(epic_rewards[s].classes, t_ch->player.secondary_class))
+        {
+          points_cost *= (int) (get_property("epic.multiclass.EpicSkillCost", 2));
+          coins_cost *= (int) (get_property("epic.multiclass.EpicPlatCost", 3));
+        }
+        
+        points += points_cost;
+        coins += coins_cost;
+      }      
+      
+    
+      point_refund += points;
+      coins_refund += coins;
+      
+      t_ch->only.pc->skills[skill_id].learned = t_ch->only.pc->skills[skill_id].taught = 0;
+    }
+  }
+/*  
+  sprintf(buff2, "Total: &+W%d&n esp, %s&n refunded\r\n", point_refund, coin_stringv(coins_refund));
+  send_to_char(buff2, ch);
+  
+  insert_money_pickup(GET_PID(t_ch), coins_refund);
+  t_ch->only.pc->epic_skill_points += point_refund;
+
+  sprintf(buff2, "\r\n&+GYour epic skills have been reset: your skill points have been refunded, \r\n&+Gand %s&+G has been reimbursed and is waiting for you at the nearest auction house.\r\n\r\n", coin_stringv(coins_refund));
+*/
+  if(!send_to_pid(buff2, GET_PID(t_ch)))
+    send_to_pid_offline(buff2, GET_PID(t_ch));
+  
+  do_save_silent(t_ch, 1);  
+}
+
+

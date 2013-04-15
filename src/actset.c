@@ -206,6 +206,18 @@ void do_setbit(P_char ch, char *arg, int cmd)
       return;
     }
     setbit_char(ch, name, flag, value, on_off);
+    if(!strcmp(flag, "race"))
+    {
+     P_char   target;
+     target = get_char_vis(ch, name);
+       if (target == NULL)
+       {
+        send_to_char("No one by that name here.\r\n", ch);
+        return;
+       }
+     affect_from_char(target, TAG_RACIAL_SKILLS);
+     assign_racial_skills_norefund(target); //We now need to set specific racial skills whenever we change race - Drannak
+    }
     break;
 
   case SETBIT_OBJ:

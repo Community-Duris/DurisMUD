@@ -75,6 +75,7 @@ void init_guild_frags();
 void epic_feed_artifacts(P_char ch, int epics, int epic_type);
 void do_epic_skills(P_char ch, char *arg, int cmd);
 void do_epic_reset(P_char ch, char *arg, int cmd);
+void do_epic_reset_norefund(P_char ch, char *arg, int cmd);
 void do_infuse(P_char ch, char *arg, int cmd);
 struct affected_type *get_epic_task(P_char ch);
 bool has_epic_task(P_char ch);

@@ -15,6 +15,9 @@
 #   include "reavers.h"
 #   include "rogues.h"
 #   include "avengers.h"
+
+extern void do_epic_reset(P_char ch, char *arg, int cmd);
+extern void do_epic_reset_norefund(P_char ch, char *arg, int cmd);
 int      numSkills;
 #endif
 
@@ -4838,7 +4841,7 @@ SPELL_ADD(CLASS_NONE, 1);
   //SKILL_CREATE("spell mastery", SKILL_SPELL_MASTERY, TAR_MENTAL | TAR_EPIC);
   //SKILL_CREATE("chant mastery", SKILL_CHANT_MASTERY, TAR_MENTAL | TAR_EPIC);
   //SKILL_CREATE("anatomy", SKILL_ANATOMY, TAR_MENTAL | TAR_EPIC);
- // SKILL_CREATE("anatomy", SKILL_ANATOMY, TAR_MENTAL);
+ SKILL_CREATE("anatomy", SKILL_ANATOMY, TAR_EPIC);
  // SKILL_ADD(RACE_HALFLING, 1, 100);
   SKILL_CREATE("summon blizzard", SKILL_SUMMON_BLIZZARD, TAR_MENTAL | TAR_EPIC);
   SKILL_CREATE("summon familiar", SKILL_SUMMON_FAMILIAR, TAR_MENTAL | TAR_EPIC);
@@ -4865,7 +4868,7 @@ SPELL_ADD(CLASS_NONE, 1);
   SKILL_CREATE("infuse magical device", SKILL_INFUSE_MAGICAL_DEVICE, TAR_PHYS |TAR_EPIC);
   SKILL_CREATE("indomitable rage", SKILL_INDOMITABLE_RAGE, TAR_PHYS | TAR_EPIC);
   // Ripped from the alchemist class, for use as epic skills. What a copout!
-  SKILL_CREATE("fix", SKILL_FIX, TAR_PHYS | TAR_EPIC);
+  SKILL_CREATE("fix", SKILL_FIX, TAR_EPIC);
   //SKILL_CREATE("craft", SKILL_CRAFT, TAR_PHYS | TAR_EPIC);
   SKILL_CREATE("encrust", SKILL_ENCRUST, TAR_PHYS | TAR_EPIC);
   SKILL_CREATE("enchant", SKILL_ENCHANT, TAR_PHYS | TAR_EPIC);
@@ -4906,6 +4909,7 @@ SPELL_ADD(CLASS_NONE, 1);
   TAG_CREATE("orig", TAG_ALTERED_EXTRA2);
   TAG_CREATE("no misfire", TAG_NOMISFIRE);
   TAG_CREATE("witch spell", TAG_WITCHSPELL);
+  TAG_CREATE("racial skills", TAG_RACIAL_SKILLS);
   TAG_CREATE("recent frag obj", TAG_OBJ_RECENT_FRAG);
   TAG_CREATE_WITH_MESSAGES("phantasmal form", TAG_PHANTASMAL_FORM,
                            "&+WYou feel yourself return to normal as you leave your phantasmal form.&n",
@@ -5264,3 +5268,192 @@ void initialize_skills_new()
 
 }
 #endif
+
+
+
+void assign_racial_skills(P_char ch)
+{
+  struct affected_type af;
+  //if(!IS_SET(PLR3_FLAGS(ch), PLR3_RACIAL_SKILLS)) 
+
+     // if ((af = get_spell_from_char(ch, TAG_RACIAL_SKILLS)) == NULL)
+   if(!affected_by_spell(ch, TAG_RACIAL_SKILLS))
+     {
+	 do_epic_reset(ch, 0, 1); //player has never had their new racial skills set clear out ALL EPIC SKILLS
+  
+        memset(&af, 0, sizeof(struct affected_type));
+        af.type = TAG_RACIAL_SKILLS;
+        af.flags = AFFTYPE_NOSHOW | AFFTYPE_PERM | AFFTYPE_NODISPEL;
+        af.duration = -1;
+        affect_to_char(ch, &af);
+
+	  int currrace;
+ 
+         currrace = GET_RACE(ch);
+	  switch (currrace)
+		 {
+			case RACE_GNOME:
+			//assign gnome racial epic skills
+			ch->only.pc->skills[SKILL_FIX].taught = 100;
+			ch->only.pc->skills[SKILL_FIX].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_HALFLING:
+			ch->only.pc->skills[SKILL_EXPERT_PARRY].taught = 100;
+			ch->only.pc->skills[SKILL_EXPERT_PARRY].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_GOBLIN:
+			ch->only.pc->skills[SKILL_EXPERT_PARRY].taught = 100;
+			ch->only.pc->skills[SKILL_EXPERT_PARRY].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_GITHYANKI:
+			ch->only.pc->skills[SKILL_ADVANCED_MEDITATION].taught = 100;
+			ch->only.pc->skills[SKILL_ADVANCED_MEDITATION].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_HUMAN:
+			ch->only.pc->skills[SKILL_SHIELD_COMBAT].taught = 100;
+			ch->only.pc->skills[SKILL_SHIELD_COMBAT].learned = 10;
+			ch->only.pc->skills[SKILL_IMPROVED_SHIELD_COMBAT].taught = 100;
+			ch->only.pc->skills[SKILL_IMPROVED_SHIELD_COMBAT].learned = 10;
+			ch->only.pc->skills[SKILL_SCRIBE_MASTERY].taught = 100;
+			ch->only.pc->skills[SKILL_SCRIBE_MASTERY].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_ORC:
+			ch->only.pc->skills[SKILL_SHIELD_COMBAT].taught = 100;
+			ch->only.pc->skills[SKILL_SHIELD_COMBAT].learned = 10;
+			ch->only.pc->skills[SKILL_IMPROVED_SHIELD_COMBAT].taught = 100;
+			ch->only.pc->skills[SKILL_IMPROVED_SHIELD_COMBAT].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_CENTAUR:
+			ch->only.pc->skills[SKILL_EXPERT_RIPOSTE].taught = 100;
+			ch->only.pc->skills[SKILL_EXPERT_RIPOSTE].learned = 10;
+			ch->only.pc->skills[SKILL_TWOWEAPON].taught = 100;
+			ch->only.pc->skills[SKILL_TWOWEAPON].learned = 10;
+			ch->only.pc->skills[SKILL_IMPROVED_TWOWEAPON].taught = 100;
+			ch->only.pc->skills[SKILL_IMPROVED_TWOWEAPON].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_BARBARIAN:
+			ch->only.pc->skills[SKILL_ANATOMY].taught = 100;
+			ch->only.pc->skills[SKILL_ANATOMY].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_TROLL:
+			ch->only.pc->skills[SKILL_ANATOMY].taught = 100;
+			ch->only.pc->skills[SKILL_ANATOMY].learned = 10;
+			ch->only.pc->skills[SKILL_TOTEMIC_MASTERY].taught = 100;
+			ch->only.pc->skills[SKILL_TOTEMIC_MASTERY].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_OGRE:
+			ch->only.pc->skills[SKILL_DEVASTATING_CRITICAL].taught = 100;
+			ch->only.pc->skills[SKILL_DEVASTATING_CRITICAL].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			default:
+			//do nothing - not a race that has skills
+			return;
+			break;
+		}
+            }
+ 
+}
+
+void assign_racial_skills_norefund(P_char ch)
+{
+  struct affected_type af;
+  //if(!IS_SET(PLR3_FLAGS(ch), PLR3_RACIAL_SKILLS)) 
+
+     // if ((af = get_spell_from_char(ch, TAG_RACIAL_SKILLS)) == NULL)
+   if(!affected_by_spell(ch, TAG_RACIAL_SKILLS))
+     {
+	 do_epic_reset_norefund(ch, 0, 1); //player has never had their new racial skills set clear out ALL EPIC SKILLS
+  
+        memset(&af, 0, sizeof(struct affected_type));
+        af.type = TAG_RACIAL_SKILLS;
+        af.flags = AFFTYPE_NOSHOW | AFFTYPE_PERM | AFFTYPE_NODISPEL;
+        af.duration = -1;
+        affect_to_char(ch, &af);
+
+	  int currrace;
+ 
+         currrace = GET_RACE(ch);
+	  switch (currrace)
+		 {
+			case RACE_GNOME:
+			//assign gnome racial epic skills
+			ch->only.pc->skills[SKILL_FIX].taught = 100;
+			ch->only.pc->skills[SKILL_FIX].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_HALFLING:
+			ch->only.pc->skills[SKILL_EXPERT_PARRY].taught = 100;
+			ch->only.pc->skills[SKILL_EXPERT_PARRY].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_GOBLIN:
+			ch->only.pc->skills[SKILL_EXPERT_PARRY].taught = 100;
+			ch->only.pc->skills[SKILL_EXPERT_PARRY].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_GITHYANKI:
+			ch->only.pc->skills[SKILL_ADVANCED_MEDITATION].taught = 100;
+			ch->only.pc->skills[SKILL_ADVANCED_MEDITATION].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_HUMAN:
+			ch->only.pc->skills[SKILL_SHIELD_COMBAT].taught = 100;
+			ch->only.pc->skills[SKILL_SHIELD_COMBAT].learned = 10;
+			ch->only.pc->skills[SKILL_IMPROVED_SHIELD_COMBAT].taught = 100;
+			ch->only.pc->skills[SKILL_IMPROVED_SHIELD_COMBAT].learned = 10;
+			ch->only.pc->skills[SKILL_SCRIBE_MASTERY].taught = 100;
+			ch->only.pc->skills[SKILL_SCRIBE_MASTERY].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_ORC:
+			ch->only.pc->skills[SKILL_SHIELD_COMBAT].taught = 100;
+			ch->only.pc->skills[SKILL_SHIELD_COMBAT].learned = 10;
+			ch->only.pc->skills[SKILL_IMPROVED_SHIELD_COMBAT].taught = 100;
+			ch->only.pc->skills[SKILL_IMPROVED_SHIELD_COMBAT].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_CENTAUR:
+			ch->only.pc->skills[SKILL_EXPERT_RIPOSTE].taught = 100;
+			ch->only.pc->skills[SKILL_EXPERT_RIPOSTE].learned = 10;
+			ch->only.pc->skills[SKILL_TWOWEAPON].taught = 100;
+			ch->only.pc->skills[SKILL_TWOWEAPON].learned = 10;
+			ch->only.pc->skills[SKILL_IMPROVED_TWOWEAPON].taught = 100;
+			ch->only.pc->skills[SKILL_IMPROVED_TWOWEAPON].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_BARBARIAN:
+			ch->only.pc->skills[SKILL_ANATOMY].taught = 100;
+			ch->only.pc->skills[SKILL_ANATOMY].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_TROLL:
+			ch->only.pc->skills[SKILL_ANATOMY].taught = 100;
+			ch->only.pc->skills[SKILL_ANATOMY].learned = 10;
+			ch->only.pc->skills[SKILL_TOTEMIC_MASTERY].taught = 100;
+			ch->only.pc->skills[SKILL_TOTEMIC_MASTERY].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			case RACE_OGRE:
+			ch->only.pc->skills[SKILL_DEVASTATING_CRITICAL].taught = 100;
+			ch->only.pc->skills[SKILL_DEVASTATING_CRITICAL].learned = 10;
+			do_save_silent(ch, 1); // racial skills require a save.
+			break;
+			default:
+			//do nothing - not a race that has skills
+			return;
+			break;
+		}
+            }
+ 
+}
+

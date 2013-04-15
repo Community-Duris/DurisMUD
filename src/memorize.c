@@ -285,6 +285,7 @@ int GetSpellPages(P_char ch, int spl)
   {
     int skill = GET_CHAR_SKILL(ch, SKILL_SCRIBE_MASTERY);
     int mod = MAX(1, (int) (skill / 5));
+    notch_skill(ch, SKILL_SCRIBE_MASTERY, 50);
     pages -= mod;
   }
   
@@ -2423,6 +2424,7 @@ void event_scribe(P_char ch, P_char victim, P_obj obj, void *data)
      */
     add_event(event_scribe, MAX(1, (int) 4 - (GET_CHAR_SKILL(ch, SKILL_SCRIBE) / 33) - (GET_CHAR_SKILL(ch, SKILL_SCRIBE_MASTERY) / 20)), ch, 0,
               0, 0, s_data, sizeof(*s_data));
+                        notch_skill(ch, SKILL_SCRIBE_MASTERY, 50);
     return;
   }
   if (s_data->done_func) s_data->done_func(ch);

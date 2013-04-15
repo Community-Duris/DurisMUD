@@ -2011,6 +2011,7 @@ int learn_tradeskill(P_char ch, P_char pl, int cmd, char *arg)
                       "&+cYou feel your skill in %s improving.&n\n",
               skills[SKILL_FORGE].name, skills[SKILL_FORGE].name);
       act(buffer, FALSE, ch, 0, pl, TO_VICT);
+        pl->only.pc->skills[SKILL_FORGE].learned = 10;
       pl->only.pc->skills[SKILL_FORGE].taught = 100;
         pl->only.pc->skills[SKILL_FORGE].learned = 10;
         //MIN(100, pl->only.pc->skills[SKILL_FORGE].learned + 10);
