@@ -661,7 +661,7 @@ void do_get(P_char ch, char *argument, int cmd)
           send_to_char("It seems to be closed.\r\n", ch);
           return;
         }
-        if (IS_FIGHTING(ch))
+        if (IS_FIGHTING(ch) && !GET_CLASS(ch, CLASS_ALCHEMIST) && (GET_ITEM_TYPE(s_obj) == ITEM_CORPSE))
         {
           send_to_char
             ("You're too busy fighting to be pulling things out of bags!\r\n",
@@ -887,7 +887,7 @@ void do_get(P_char ch, char *argument, int cmd)
           return;
         }
 
-        if (IS_FIGHTING(ch))
+        if (IS_FIGHTING(ch) && !GET_CLASS(ch, CLASS_ALCHEMIST) && (GET_ITEM_TYPE(s_obj) == ITEM_CORPSE))
         {
           send_to_char
             ("You're too busy fighting to be pulling things out of bags!\r\n",
