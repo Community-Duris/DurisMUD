@@ -309,7 +309,7 @@ int getLeaderBoardPts(P_char ch)
   
  int hardcorepts =
        (GET_LEVEL(ch) * 1000) + (ch->points.curr_exp / 10000) +
-             (ch->only.pc->frags * 100);
+             (ch->only.pc->frags * 100) - (ch->only.pc->numb_deaths * 25);
   /*
  if(IS_MULTICLASS_NPC(ch))
    hardcorepts = hardcorepts * 2;
