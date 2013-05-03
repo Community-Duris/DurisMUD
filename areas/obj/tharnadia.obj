@@ -1941,7 +1941,7 @@ spellbook book~
 &+La &+yspellbook&N~
 &+LA &+yspellbook &+Lrests upon the gloomy ground here.&N~
 ~
-33 43 3 0 11 18 8192 8404993 0 0 0
+33 43 3 0 11 18 8200 8404993 0 0 0
 0 0 81 0 0 0 0 0
 0 1458 100
 E
@@ -1957,7 +1957,7 @@ quill glowing~
 &+La &+Cg&+clo&+Cw&+cin&+Cg &+Lquill&N~
 &+LA &+Cg&+clo&+Cw&+cin&+Cg &+Lquill rests upon the ghastly ground here.&N~
 ~
-21 50 3 0 10 9 8193 8404993 0 0 0
+21 50 3 0 10 9 8201 8404993 0 0 0
 0 0 0 0 0 0 0 0
 0 8 100
 E

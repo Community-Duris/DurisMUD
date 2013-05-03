@@ -5359,6 +5359,9 @@ void update_racial_skills(P_char ch)
 			case RACE_GOBLIN:
 			ch->only.pc->skills[SKILL_EXPERT_PARRY].taught = BOUNDED(10, GET_LEVEL(ch) *2, 100);
 			ch->only.pc->skills[SKILL_EXPERT_PARRY].learned = BOUNDED(10, GET_LEVEL(ch) *2, 100);
+			ch->only.pc->skills[SKILL_FIX].taught = BOUNDED(10, GET_LEVEL(ch) *2, 100);
+			ch->only.pc->skills[SKILL_FIX].learned = BOUNDED(10, GET_LEVEL(ch) *2, 100);
+
 			do_save_silent(ch, 1); // racial skills require a save.
 			break;
 			case RACE_GITHYANKI:

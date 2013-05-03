@@ -5021,6 +5021,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
   int	rolled;
   
   int reciperoll = (number(1, 10000));
+
   int playerroll = (GET_C_LUCK(ch) + (GET_LEVEL(ch)*2) + GET_CHAR_SKILL(ch, SKILL_SALVAGE));
   int rand2 = number(1, 3);
 
@@ -5972,7 +5973,13 @@ void do_salvage(P_char ch, char *argument, int cmd)
 		}
         
        notch_skill(ch, SKILL_SALVAGE, 25);
-       
+      if (objchance <= 5)
+      reciperoll *= .4;
+      if ((objchance > 5) && (objchance <= 10))
+      reciperoll *= .6;
+      if ((objchance > 10) && (objchance <= 15))
+      reciperoll *= .8;
+      debug("reciperoll: %d playerroll: %d", reciperoll, playerroll);
       if((reciperoll < playerroll))
       {
        /***RECIPE CREATE***/

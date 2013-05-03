@@ -2750,6 +2750,7 @@ void kill_gain(P_char ch, P_char victim)
   {
     send_to_char("You receive your share of experience.\r\n", ch);
     gain_exp(ch, victim, gain, EXP_KILL);
+    update_achievements(ch, victim, 0, 2);//this is for all kinds of kill-type quests
     if(GET_LEVEL(victim) > 30)
 	{
 	  if(number(1, 5000) < GET_C_LUCK(ch))
@@ -4911,7 +4912,7 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags,
       attack_back(ch, victim, TRUE);
 
         if(affected_by_spell(ch, ACH_DRAGONSLAYER) && (GET_RACE(victim) == RACE_DRAGON))
-        dam *=1.10; 
+        dam *= 1.10; 
 
     return result;
   }

@@ -1050,12 +1050,40 @@ void do_fix(P_char ch, char *argument, int cmd)
         ch, 0, 0, TO_CHAR);
     return;
   }
+
+  //fix now requires a salvaged material piece from same material to fix
+  P_obj t_obj, nextobj;
+  char gbuf1[MAX_STRING_LENGTH];
+  int i = 0;
+  int imat = get_matstart(item);
+  for (t_obj = ch->carrying; t_obj; t_obj = nextobj)
+  {
+    nextobj = t_obj->next_content;
+
+    if(GET_OBJ_VNUM(t_obj) == imat)
+    {
+      i++;
+    }
+
+  }
+  P_obj needed = read_object(imat, VIRTUAL);
+  if (i < 1);
+   {
+    sprintf(gbuf1, "You must have %s in your inventory to repair that item.\r\n", needed->short_description);
+    extract_obj(needed, TRUE);
+    send_to_char(gbuf1, ch);
+    return;
+   }
+  //endmaterial check
+
   if(skill > number(0, 105))
   {
+
     act("$N fiddles with $p, fixing it quickly!", TRUE, ch, item, ch,
         TO_ROOM);
     act("You fiddle with $p, fixing it quickly!", TRUE, ch, item, 0, TO_CHAR);
     item->condition = 100 - number(0, 10);
+
   }
   else
   {
@@ -1075,6 +1103,7 @@ void do_fix(P_char ch, char *argument, int cmd)
           item, 0, TO_CHAR);
     }
     //notch_skill(ch, SKILL_FIX, 15);
+    obj_from_char(needed, TRUE);
   }
 }
 

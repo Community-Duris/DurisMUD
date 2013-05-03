@@ -2529,7 +2529,7 @@ int itemvalue(P_char ch, P_obj obj)
    if(workingvalue < 1)
    workingvalue = 1;
 
-   //debug("&+YItem value is: &n%d", workingvalue); 
+   debug("&+YItem value is: &n%d", workingvalue); 
    return workingvalue;
 }
 
@@ -2598,12 +2598,23 @@ void display_achievements(P_char ch, char *arg, int cmd)
   //-----Achievement: The Journey Begins
   if(affected_by_spell(ch, ACH_JOURNEYBEGINS))
   sprintf(buf3, "   &+L%-33s&+L%-45s&+L%s\r\n",
-          "&+gThe Jou&+Grney Beg&+gins&n", "&+BGain a level", "&+B&+ya rugged a&+Yd&+yv&+Ye&+yn&+Yt&+yu&+Yr&+ye&+Yr&+ys &+Lsatchel");
+          "&+gThe Jou&+Grney Beg&+gins&n", "&+BGain level 5", "&+B&+ya rugged a&+Yd&+yv&+Ye&+yn&+Yt&+yu&+Yr&+ye&+Yr&+ys &+Lsatchel");
   else
   sprintf(buf3, "   &+L%-33s&+L%-45s&+L%s\r\n",
-          "&+gThe Jou&+Grney Beg&+gins&n", "&+wGain a level", "&+wan Unknown Item");
+          "&+gThe Jou&+Grney Beg&+gins&n", "&+wGain level 5", "&+wan Unknown Item");
   strcat(buf, buf3);
   //-----The Journey Begins
+
+  //-----Achievement: Dragonslayer
+  if(affected_by_spell(ch, ACH_DRAGONSLAYER))
+  sprintf(buf3, "   &+L%-33s&+L%-45s&+L%s\r\n",
+          "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+BKill 1000 Dragons", "&+B10% damage increase vs Dragons");
+  else
+  sprintf(buf3, "   &+L%-33s&+L%-45s&+L%s\r\n",
+          "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+wKill 1000 Dragons", "&+w10% damage increase vs Dragons");
+  strcat(buf, buf3);
+  //-----DRagonslayer
+
 
   //-----Achievement: May I Heals You
   if(affected_by_spell(ch, ACH_MAYIHEALSYOU))
@@ -2624,6 +2635,7 @@ void display_achievements(P_char ch, char *arg, int cmd)
 
 }
 
+//
 void update_achievements(P_char ch, P_char victim, int cmd, int ach)
 {
   char     argument[MAX_STRING_LENGTH];
@@ -2631,6 +2643,7 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
 
   /* Achievement int ach list:
   1 - may i heals you
+  2 - kill type quest where victim is passed
   */
 
   if (IS_NPC(ch))
@@ -2639,6 +2652,9 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
   //assign accumulation affects if missing and ach is of type.
   if ((ach == 1) && !affected_by_spell(ch, AIP_MAYIHEALSYOU))
   apply_achievement(ch, AIP_MAYIHEALSYOU);
+
+  if ((ach == 2) && !affected_by_spell(ch, AIP_DRAGONSLAYER))
+  apply_achievement(ch, AIP_DRAGONSLAYER);
  
   //PvP Achievements
   int frags;
@@ -2672,7 +2688,7 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
    }
 
   /* The Journey Begins */
-  if((GET_LEVEL(ch) >= 2) && !affected_by_spell(ch, ACH_JOURNEYBEGINS))
+  if((GET_LEVEL(ch) >= 5) && !affected_by_spell(ch, ACH_JOURNEYBEGINS))
     {
       send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RThe Journey Begins&+r achievement!&n\r\n", ch);
       send_to_char("&+yThis &+Yachievement&+y rewards an &+Yitem&+y! Check your &+Winventory &+yby typing &+Wi&+y!&n\r\n", ch);
@@ -2708,6 +2724,25 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
            }
       }
     /* end may i heals you */
+
+    /* Dragonslayer */
+    if((findaf && findaf->type == AIP_DRAGONSLAYER) && !affected_by_spell(ch, ACH_DRAGONSLAYER) && (ach == 2) && (GET_RACE(victim) == RACE_DRAGON) )
+      {
+       //check to see if we've hit 1000 kills
+	  int result = findaf->modifier;
+         if(result >= 1000)
+          {
+         affect_remove(ch, findaf);
+         apply_achievement(ch, ACH_DRAGONSLAYER);
+         send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RDragonslayer&+r achievement!&n\r\n", ch);
+         send_to_char("&+yYou will now do 10 percent more damage to dragon races!&n\r\n", ch);
+          }
+           if(GET_VNUM(victim) != 1108)
+           {
+	    findaf->modifier += 1;
+           }
+      }
+    /* end Dragonslayer */
   }
 }
 void apply_achievement(P_char ch, int ach)

@@ -833,7 +833,8 @@ void balance_align(P_char ch)
 
   c_al = GET_ALIGNMENT(ch);
 
-  if (c_al >= -10 && c_al <=10) {
+  if ((c_al >= -10 && c_al <=10) || (GET_RACEWAR(ch) == RACEWAR_EVIL))
+	 {
       GET_ALIGNMENT(ch) = 0;
       return;
   }
@@ -925,7 +926,7 @@ void handle_undead_mem(P_char ch)
 		/* Druids memming in forets will ever so slowly regain balance 
 		 * with nature.
 		 */
-    balance_align(ch);
+    balance_align(ch);//drannak
 		
     if (ch->specials.undead_spell_slots[i] < max_spells_in_circle(ch, i))
     {
