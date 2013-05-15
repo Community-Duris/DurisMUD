@@ -17845,10 +17845,12 @@ void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
     add_event(event_cdoom, 0, ch, victim, NULL, 0, &cDoomData, sizeof(CDoomData));
   else
     {
-     send_to_char("&+WWho should the target of the spell be?\r\n", ch);
-     return;
+        cast_as_damage_area(ch, spell_single_doom_aoe, level, victim,
+                      get_property("spell.area.minChance.creepingDoom", 50),
+                      get_property("spell.area.chanceStep.creepingDoom", 20));
+
     }
-  /*else This is now target only.
+  /*else This is now target only. DRANNAK
 	{
     	add_event(event_cdoom, 0, ch, 0, NULL, 0, &cDoomData, sizeof(CDoomData));
 	
@@ -17856,6 +17858,22 @@ void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
     "&+LThe &+minsects &+Lof the &+yarea&+L seem to be called away...&n\r\n",
     "&+LThe &+minsects &+Lof the &+yarea&+L seem to be called away to the %s...&n\r\n");
 	}*/
+}
+
+void spell_single_doom_aoe(int level, P_char ch, char *args, int type,
+                              P_char victim, P_obj obj)
+{
+  int      dam;
+  struct damage_messages messages = {
+    "", "", "",
+    "$N's body turns to &+Wbone&n as the &+yinsects&n consume $M.",
+    "Your body succumbs to the overwhelming &+yplague&n of &+ginsects&n.",
+    "$N's body turns to &+Wbone&n as the &+yinsects&n consume $M.", 0
+  };
+  dam = 110 + level * 3 + number(1, 10);
+
+
+  spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
 }
 
 void spell_sense_follower(int level, P_char ch, char *arg, int type,

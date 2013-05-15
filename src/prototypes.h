@@ -2724,6 +2724,7 @@ void spell_negative_feedback_barrier(int, P_char, char *, int, P_char, P_obj);
 void spell_etheric_gust(int, P_char, char *, int, P_char, P_obj);
 
 /* sspells.c */
+void spell_single_doom_aoe(int, P_char, char *, int, P_char, P_obj);
 
 void cast_restore_item(int, P_char, char *, int, P_char, P_obj);
 /* sillusionist.c */
