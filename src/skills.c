@@ -1169,7 +1169,7 @@ void initialize_skills()
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                 spell_bigbys_clenched_fist);
   SPELL_ADD(CLASS_SORCERER, 7);
-  //SPELL_ADD(CLASS_BARD, 8);
+  SPELL_ADD(CLASS_BARD, 8);
   SPELL_ADD(CLASS_REAVER, 11);
 
   SPELL_CREATE("solbeeps missile barrage", SPELL_MISSILE_BARRAGE, PULSE_SPELLCAST * 2,
