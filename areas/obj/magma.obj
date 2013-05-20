@@ -15,29 +15,35 @@ shard jagged obsidian~
 2 3 3 0 0 0 0 0
 0 0 100 0 32768 0 0
 #142002
-object unnamed~
+wand writhing magma~
+&+La wand of &+ww&n&+Wr&+wi&n&+Wt&n&+wh&n&+Wi&n&+wn&n&+Wg&n &+rm&+Ra&+rg&+Rm&+ra&n~
+&+LA strange wand shaped mass of magma lies here.&n~
 ~
-An unnamed object lies here, looking lonely and forelorn.~
-~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
+3 36 3 0 14 0 73729 16385 64 0 0
+58 4 4 394 0 0 0 0
+1 43211 100
 #142003
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
+palenians pipe never ending neverending flavor~
+&+CPalenian's &+Lpipe of &+rnever&+Lending &+Gflavors&n~
+&+LA falvorful pipe sits here, emitting a stream of constantly changing flavors.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
+9 35 3 0 14 0 8193 2113537 64 0 0
+3 0 0 0 0 0 0 0
+1 133464 100
+A
+14 35
+A
+13 18
 #142004
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
+vambraces greater elemental defense~
+&+Lthe &+Wv&+wa&+Wm&+wb&+Wr&+wa&+Wc&+we&+Ws &+Lof greater &+relemental &+Cde&+cf&+Ce&+cn&+Cse&n~
+&+LSome wickedly barbed vambraces lie here, emitting a powerful elemental aura.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
+9 44 3 0 7 0 1 257 64 0 0
+15 0 0 0 0 0 0 0
+1 123121 100 0 2048 0 0
+A
+24 3
 #142005
 object unnamed~
 an unnamed object~

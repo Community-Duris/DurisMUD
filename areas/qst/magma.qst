@@ -1,0 +1,54 @@
+#142014
+MA
+hi~
+&+LLooking at you through a pair of magically enhanced spectacles, this
+&+Lplaneswalker sizes you up and down before removing his pipe and
+&+Lspeaking to you in a slightly surprised manner...
+
+&+W"Why hello there young travellers... I see you have found a way
+&+Wto keep yourselves from burning up on this delightful plane of
+&+Wmagma... Have you come to help me with my &+Ltask&+W?"&n
+
+&+LAn eyebrow skyrockets up as he continues to measure up you and your
+&+Lcompanions.&n
+~
+M
+task~
+&+LAs you inquire about the task, a bright smile crosses the aged face of
+&+Lthis planeswalker.
+
+&+W"Ahhh, excellent, I was really hoping I would be able to find some young
+&+Wadventurers who would wish to help me. You see, I've been traveling
+&+Wthe realms looking to better understand the powers that the elemental
+&+Wdragons and drakes have come to master. I have concluded that many
+&+Wof them have within themselves a core of magic that encases their hearts
+&+Wand grants them powers that I would love to study. I have been tracking a
+&+Wvery angry drake across the planes of earth and fire and wish to bring
+&+Whis evil ways to a stop, and study the core of his power. Please return
+&+Wto me with his heart of magic and I'll reward you with an item of great
+&+Wpower that will help in further adventures you may come across."&n
+
+&+LPlacing his pipe back in his mouth, the aged planeswalker returns to
+&+Lsurveying the lands before him, keen eyes reaching far into the plane.&n
+~
+QA
+&+LAs you hand over the smoldering heart of the ancient drake, the
+&+Lface of the planes walker takes on an excited look...&n
+
+&+W"Ah, my friends, I am amazed... I thank you greately for your effort and
+&+Whope that these rewards will make up for your effort... please...
+&+Wenjoy these magic items, you have more than earned it!"
+~
+R I 142002
+R I 142003
+R I 142004
+G I 142000
+D
+&+LTaking the heart and opening a small dimensional rift, the planes walker
+&+Lplaces the heart within the void then smiles happily as it pops closed...
+
+&+LWaving farewell, the planes walker speaks words of an ancient magic
+&+Land begins to fade out of existance to return to his workshop on the
+&+Lprime material plane.&n
+~
+S

@@ -63,6 +63,11 @@ ancient red dragon sainafinalil~
 &+rSainafinalil &+Lthe ancient &+rr&+Re&+rd &+Ldragon&N~
 &+rA &+RHUGE &+rred dragon flies here, basking in the &+Lsm&+wol&+Lde&+wri&+Lng &+rheat of the elemental plane.&n
 ~
+&+L   Before you stands an ancient beast of legend. Known as the &+WScourge &+Lof &+yMount &+rSiva&+L,
+&+Lthis massive red dragon embodies the power and destruction that their kind is known
+&+Lfor. &+rBlood red &+Lscales cover this dragons form as they reflect the withering heat of
+&+Lthe para elemental plane. Wicked black eyes survey everything around him as he basks
+&+Lin the glorious fires that surround him.
 ~
 16777256 0 0 0 939524148 5242880 0 0 -1000 S
 D 0 16777728 0 -1
@@ -75,11 +80,11 @@ efreeti patrol leader~
 &+LAn offical looking &+re&+Rfr&+re&+Ret&+ri &+Lstands here, leading his &+Ypatrol &+Lgroup.&n
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
-1 0 0 1d1+1 1d1+1
+2088 1 0 0 402653208 2048 0 0 -1000 S
+E 0 1 1 -1
+58 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #142005
 efreeti soldier mean~
 &+Yan &+re&+Rfr&+re&+Ret&+ri &+Ysoldier&n~
@@ -180,16 +185,16 @@ PH 0 0 0 -1
 0.0.0.0 0
 8 8 0
 #142014
-mob unnamed~
+plaenian legendary planes walker human~
 &+CPalenian&+L, the &+ylegendary &+Cplanes&+Wwalker&n~
 &+LA well dressed &+Cplanes &+Wwalker &+Lfloats here, observing the harsh climate of the plane.&n
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
+268859464 0 0 0 940056728 8402944 0 0 0 S
 PH 0 0 0 -1
-1 0 0 1d1+1 1d1+1
+60 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #142015
 mob unnamed~
 &+La &+Wcaptive &+bwater &+Lelemental&n~
@@ -224,13 +229,13 @@ PH 0 0 0 -1
 0.0.0.0 0
 8 8 0
 #142018
-mob unnamed~
+greater magma drake cypheral~
 &+Lthe greater &+rm&+Ra&+rg&+Rm&+ra &+Ldrake &+rCypheral&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+LA MASSIVE drake of smoldering magma stalks the plane, devouring all in sight.&n
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
-1 0 0 1d1+1 1d1+1
+268437544 1 0 0 1006633112 0 0 0 -1000 S
+d 0 513 0 -1
+61 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
