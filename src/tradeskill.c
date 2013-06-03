@@ -2784,10 +2784,10 @@ void display_achievements(P_char ch, char *arg, int cmd)
 
   //-----Achievement: You Strahd Me
   if(affected_by_spell(ch, ACH_YOUSTRAHDME))
-  sprintf(buf3, "   &+L%s&+L%-45s     &+L%s\r\n",
+  sprintf(buf3, "   &+L%s&+L%-50s&+L%s\r\n",
           "&+LYou &+rStrahd &+LMe At Hello&n", "&+Bsee &+chelp achievements&n", "&+Bsee &+chelp you strahd me&n");
   else
-  sprintf(buf3, "   &+L%s&+L%-45s&+L%s\r\n",
+  sprintf(buf3, "   &+L%s&+L%-50s&+L%s\r\n",
           "&+LYou &+rStrahd &+LMe At Hello&n", "&+wsee &+chelp achievements&n", "&+wan unknown reward&n");
   strcat(buf, buf3);
   //-----You Strahd Me
