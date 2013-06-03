@@ -5851,31 +5851,7 @@ void do_who(P_char ch, char *argument, int cmd)
         {
           strcat(who_output, "[&+L - Anonymous -  &N] ");
         }
-	//Surtitles - Drannak
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURSERF))
-        strcat(who_output, "&+ySerf&n ");
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURCOMMONER))
-        strcat(who_output, "&+YCommoner&n ");
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURKNIGHT))
-        strcat(who_output, "&+LK&+wn&+Wig&+wh&+Lt&n ");
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURNOBLE))
-        strcat(who_output, "&+mN&+Yo&+mb&+Yl&+me&n ");
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURLORD))
-        strcat(who_output, "&+rL&+Ror&+rd&n ");
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURKING))
-        strcat(who_output, "&+yK&+Yin&+yg&n ");
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURLIGHT))
-        strcat(who_output, "&+WLight&+wbri&+Lnger&n ");
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURDRAGON))
-        strcat(who_output, "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n ");
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURHEALS))
-        strcat(who_output, "&+WD&+Ro&+rct&+Ro&+Wr&n ");
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURSERIAL))
-        strcat(who_output, "&+LSe&+wr&+Wi&+wa&+Ll &+rKiller&n ");
-        if(IS_SET((who_list[j])->specials.act3, PLR3_SURREAPER))
-        strcat(who_output, "&+LGr&+wi&+Wm Rea&+wp&+Ler&n ");
-
-
+	
         strcat(who_output, GET_NAME(who_list[j]));
         strcat(who_output, " ");
         if (GET_TITLE(who_list[j]))
@@ -5902,6 +5878,30 @@ void do_who(P_char ch, char *argument, int cmd)
 
                 if (IS_SET((who_list[j])->specials.act3, PLR3_FRAGLEAD))
 		  strcat(who_output, " (&+rF&+Rr&+ra&+Rg &+rL&+Ro&+rr&+Rd&n&N)");
+
+//Surtitles - Drannak
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURSERF))
+        strcat(who_output, "&n[&+ySerf&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURCOMMONER))
+        strcat(who_output, "&n[&+YCommoner&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURKNIGHT))
+        strcat(who_output, "&n[&+LK&+wn&+Wig&+wh&+Lt&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURNOBLE))
+        strcat(who_output, "&n[&+mN&+Mobl&+me&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURLORD))
+        strcat(who_output, "&n[&+rL&+Ror&+rd&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURKING))
+        strcat(who_output, "&n[&+yAl&+Ymigh&+yty &+yK&+Yin&+yg&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURLIGHT))
+        strcat(who_output, "&n[&+WLight&+wbri&+Lnger&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURDRAGON))
+        strcat(who_output, "&n[&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURHEALS))
+        strcat(who_output, "&n[&+WD&+Ro&+rct&+Ro&+Wr&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURSERIAL))
+        strcat(who_output, "&n[&+LSe&+wr&+Wi&+wa&+Ll &+rKiller&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURREAPER))
+        strcat(who_output, "&n[&+LGr&+wi&+Wm Rea&+wp&+Ler&n]");
 
                /* if (IS_SET((who_list[j])->specials.act3, PLR3_FRAGLOW))
 		  strcat(who_output, " (&+yFrag &+YFood&n&N)"); */
