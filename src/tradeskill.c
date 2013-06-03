@@ -2785,7 +2785,7 @@ void display_achievements(P_char ch, char *arg, int cmd)
   //-----Achievement: You Strahd Me
   if(affected_by_spell(ch, ACH_DRAGONSLAYER))
   sprintf(buf3, "   &+L%-42s&+L%-45s&+L%s\r\n",
-          "&+LYou &+rStrahd &+LMe At Hello&n", "&+Bsee &+chelp achievements&n", "&+B10% increased undead damage, 1000 epics&n");
+          "&+LYou &+rStrahd &+LMe At Hello&n", "&+Bsee &+chelp achievements&n", "&+Bsee &+chelp you strahd me&n");
   else
   sprintf(buf3, "   &+L%-42s&+L%-45s&+L%s\r\n",
           "&+LYou &+rStrahd &+LMe At Hello&n", "&+wsee &+chelp achievements&n", "&+wan unknown reward&n");
@@ -2950,7 +2950,7 @@ strahd = 58383
 	apply_achievement(ch, ACH_YOUSTRAHDME);
        send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RYou Strahd Me At Hello&+r achievement!&n\r\n", ch);
        send_to_char("&+yPlease see &+chelp you strahd me &+yfor reward details!&n\r\n", ch);
-
+       ch->only.pc->epics += 1000;
     }
     /* end You Strahd Me2 */
   }
