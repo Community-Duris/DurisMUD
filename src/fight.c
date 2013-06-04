@@ -4194,7 +4194,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
     if(affected_by_spell(victim, SPELL_SOULSHIELD) && GET_CLASS(victim, CLASS_PALADIN))
         dam *= .75;
 
-    if(!IS_PC(victim))
+    if(IS_NPC(victim))
     {
      if(GET_VNUM(victim) >= 48000 && GET_VNUM(victim) <= 48002)
      {
@@ -4787,7 +4787,7 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags,
    if(GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF))
        dam *= 1.3;
 
-     if(!IS_PC(victim))
+     if(IS_NPC(victim))
     {
      if(GET_VNUM(victim) >= 48000 && GET_VNUM(victim) <= 48002)
      {
