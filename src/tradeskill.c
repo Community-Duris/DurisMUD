@@ -2833,8 +2833,11 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
   if ((ach == 2) && !affected_by_spell(ch, AIP_DRAGONSLAYER))
   apply_achievement(ch, AIP_DRAGONSLAYER);
 
+  if(!IS_PC(victim))
+  {
   if ((ach == 2) && (GET_VNUM(victim) == 91031) && !affected_by_spell(ch, AIP_YOUSTRAHDME2) && !affected_by_spell(ch, AIP_YOUSTRAHDME))
   apply_achievement(ch, AIP_YOUSTRAHDME);
+  }
 
 
 
@@ -2932,7 +2935,7 @@ doru = 91031
 cher = 58835
 strahd = 58383
 */
-    if((findaf && findaf->type == AIP_YOUSTRAHDME) && !affected_by_spell(ch, AIP_YOUSTRAHDME2) && (ach == 2) && (GET_VNUM(victim) == 58835) )
+    if((findaf && findaf->type == AIP_YOUSTRAHDME) && !IS_PC(victim) && !affected_by_spell(ch, AIP_YOUSTRAHDME2) && (ach == 2) && (GET_VNUM(victim) == 58835) )
     {
 	affect_remove(ch, findaf);
 	apply_achievement(ch, AIP_YOUSTRAHDME2);
@@ -2944,7 +2947,7 @@ doru = 91031
 cher = 58835
 strahd = 58383
 */
-    if((findaf && findaf->type == AIP_YOUSTRAHDME2) && !affected_by_spell(ch, ACH_YOUSTRAHDME) && (ach == 2) && (GET_VNUM(victim) == 58383) )
+    if((findaf && findaf->type == AIP_YOUSTRAHDME2) && !IS_PC(victim) &&  !affected_by_spell(ch, ACH_YOUSTRAHDME) && (ach == 2) && (GET_VNUM(victim) == 58383) )
     {
 	affect_remove(ch, findaf);
 	apply_achievement(ch, ACH_YOUSTRAHDME);

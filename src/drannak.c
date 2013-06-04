@@ -80,25 +80,25 @@ void set_surname(P_char ch, int num)
   points *= .01;
   debug("points: %d", points);
   clear_surname(ch);
-  if(points < 500)
+  if(points < 200)
   {
   SET_BIT(ch->specials.act3, PLR3_SURSERF);
   return;
   }
 
-  if(points < 1000)
+  if(points < 500)
   {
   SET_BIT(ch->specials.act3, PLR3_SURCOMMONER);
   return;
   }
 
-  if(points < 2000)
+  if(points < 1500)
   {
   SET_BIT(ch->specials.act3, PLR3_SURKNIGHT);
   return;
   }
 
-  if(points < 3000)
+  if(points < 2800)
   {
   SET_BIT(ch->specials.act3, PLR3_SURNOBLE);
   return;
