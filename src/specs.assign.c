@@ -1737,7 +1737,7 @@ void assign_objects(void)
   obj_index[real_object0(80569)].func.obj = dragonarmor;
 
   /* highway */
-  obj_index[real_object0(70924)].func.obj = lobos_jacket; 
+ // obj_index[real_object0(70924)].func.obj = lobos_jacket; 
   obj_index[real_object0(41304)].func.obj = kearonor_hide;
   obj_index[real_object0(41349)].func.obj = hewards_mystical_organ;
   obj_index[real_object0(42235)].func.obj = amethyst_orb;
