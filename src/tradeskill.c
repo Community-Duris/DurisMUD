@@ -34,8 +34,11 @@
 #include "tradeskill.h"
 #include "map.h"
 #include "specs.prototypes.h"
+#include "assocs.h"
+
 
 #define SMITH_MAX_ITEMS   20
+
 
 /*
  * external variables
@@ -3355,6 +3358,7 @@ int assoc_founder(P_char ch, P_char victim, int cmd, char *arg)
 {
   char buffer[MAX_STRING_LENGTH] = "";
   char buffer2[MAX_STRING_LENGTH], bufbug[256], buf[MAX_STRING_LENGTH];
+  uint temp;
   int qend;
 
   if(cmd == CMD_LIST)
@@ -3404,6 +3408,14 @@ int assoc_founder(P_char ch, P_char victim, int cmd, char *arg)
 
   if(cmd == CMD_BUY)
    {
+
+    temp = GET_A_BITS(victim);
+    if (IS_MEMBER(temp))
+    {
+     send_to_char("You cannot form a guild if you are currently a member of a guild.\r\n", victim);
+     return TRUE;
+    }
+
     arg = skip_spaces(arg);
     if (*arg != '\'')
      {
