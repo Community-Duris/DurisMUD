@@ -146,7 +146,7 @@ string wiki_help(string str)
 string wiki_racial_stats(string title)
 {
   string return_str, race_str;
-  char race[MAX_STRING_LENGTH], value[MAX_STRING_LENGTH], helout[MAX_STRING_LENGTH] = "", finalout[MAX_STRING_LENGTH] = "";
+  char race[MAX_STRING_LENGTH];//, value[MAX_STRING_LENGTH], helout[MAX_STRING_LENGTH] = "", finalout[MAX_STRING_LENGTH] = "";
   int i;
 
   for (i = 0; i <= RACE_PLAYER_MAX; i++)
@@ -158,7 +158,7 @@ string wiki_racial_stats(string title)
     }
   }
 
-  //return_str += "==Statistics==\n";
+  return_str += "==Statistics==\n";
   
   if (i > RACE_PLAYER_MAX)
   {
@@ -168,121 +168,124 @@ string wiki_racial_stats(string title)
     return return_str;
   }
 
-  //return_str += "Strength    : &+c";
- // sprintf(race, "stats.str.%s", race_str.c_str());
+  return_str += "Strength    : &+c";
+  sprintf(race, "stats.str.%s", race_str.c_str());
+
+/*
   sprintf(helout, "Strength    : &+c");
   sprintf(race, "stats.str.%s", race_names_table[i].no_spaces);
-  sprintf(value, "%f\r\n", get_property(race, 100));
+  sprintf(value, "%.3f\r\n", (double)get_property(race, 100));
   strcat(helout, value);
   strcat(finalout, helout);
 
   sprintf(helout, "Agility    : &+c");
   sprintf(race, "stats.agi.%s", race_names_table[i].no_spaces);
-  sprintf(value, "%f\r\n", get_property(race, 100));
+  sprintf(value, "%.3f\r\n", (double)get_property(race, 100));
   strcat(helout, value);
   strcat(finalout, helout);
 
   sprintf(helout, "Dexterity    : &+c");
   sprintf(race, "stats.dex.%s", race_names_table[i].no_spaces);
-  sprintf(value, "%f\r\n", get_property(race, 100));
+  sprintf(value, "%.3f\r\n", (double)get_property(race, 100));
   strcat(helout, value);
   strcat(finalout, helout);
 
   sprintf(helout, "Constitution    : &+c");
   sprintf(race, "stats.con.%s", race_names_table[i].no_spaces);
-  sprintf(value, "%f\r\n", get_property(race, 100));
+  sprintf(value, "%.3f\r\n", (double)get_property(race, 100));
   strcat(helout, value);
   strcat(finalout, helout);
 
   sprintf(helout, "Power    : &+c");
   sprintf(race, "stats.pow.%s", race_names_table[i].no_spaces);
-  sprintf(value, "%f\r\n", get_property(race, 100));
+  sprintf(value, "%.3f\r\n", (double)get_property(race, 100));
   strcat(helout, value);
   strcat(finalout, helout);
 
   sprintf(helout, "Intelligence    : &+c");
   sprintf(race, "stats.int.%s", race_names_table[i].no_spaces);
-  sprintf(value, "%f\r\n", get_property(race, 100));
+  sprintf(value, "%.3f\r\n", (double)get_property(race, 100));
   strcat(helout, value);
   strcat(finalout, helout);
 
   sprintf(helout, "Wisdom    : &+c");
   sprintf(race, "stats.wis.%s", race_names_table[i].no_spaces);
-  sprintf(value, "%f\r\n", get_property(race, 100));
+  sprintf(value, "%.3f\r\n", (double)get_property(race, 100));
   strcat(helout, value);
   strcat(finalout, helout);
 
   sprintf(helout, "Charisma    : &+c");
   sprintf(race, "stats.cha.%s", race_names_table[i].no_spaces);
-  sprintf(value, "%f\r\n", get_property(race, 100));
+  sprintf(value, "%.3f\r\n", (double)get_property(race, 100));
   strcat(helout, value);
   strcat(finalout, helout);
 
   sprintf(helout, "Combat Pulse    : &+c");
   sprintf(race, "damage.pulse.racial.%s", race_names_table[i].no_spaces);
-  sprintf(value, "%f\r\n", get_property(race, 100));
+  sprintf(value, "%.3f\r\n", (double)get_property(race, 100));
   strcat(helout, value);
   strcat(finalout, helout);
 
   sprintf(helout, "Spell Pulse    : &+c");
   sprintf(race, "spellcast.pulse.racial.%s", race_names_table[i].no_spaces);
-  sprintf(value, "%f\r\n", get_property(race, 100));
+  sprintf(value, "%.3f\r\n", (double)get_property(race, 100));
   strcat(helout, value);
   strcat(finalout, helout);
 
   return finalout;
+*/
 
-/*
- // return_str += stat_to_string3((int)get_property(race, 100));
+
+  return_str += stat_to_string3((int)get_property(race, 100));
   return_str += "&n\n";
   return_str += "Agility     : &+c";
   sprintf(race, "stats.agi.%s", race_str.c_str());
- // return_str += stat_to_string3((int)get_property(race, 100));
+  return_str += stat_to_string3((int)get_property(race, 100));
   return_str += get_property(race, 100);
   return_str += "&n\n";
   return_str += "Dexterity   : &+c";
   sprintf(race, "stats.dex.%s", race_str.c_str());
- // return_str += stat_to_string3((int)get_property(race, 100));
+  return_str += stat_to_string3((int)get_property(race, 100));
   return_str += get_property(race, 100);
   return_str += "&n\n";
   return_str += "Constitution: &+c";
   sprintf(race, "stats.con.%s", race_str.c_str());
- // return_str += stat_to_string3((int)get_property(race, 100));
+  return_str += stat_to_string3((int)get_property(race, 100));
   return_str += get_property(race, 100);
   return_str += "&n\n";
   return_str += "Power       : &+c";
   sprintf(race, "stats.pow.%s", race_str.c_str());
- // return_str += stat_to_string3((int)get_property(race, 100));
+  return_str += stat_to_string3((int)get_property(race, 100));
   return_str += get_property(race, 100);
   return_str += "&n\n";
   return_str += "Intelligence: &+c";
   sprintf(race, "stats.int.%s", race_str.c_str());
- // return_str += stat_to_string3((int)get_property(race, 100));
+  return_str += stat_to_string3((int)get_property(race, 100));
   return_str += get_property(race, 100);
   return_str += "&n\n";
   return_str += "Wisdom      : &+c";
   sprintf(race, "stats.wis.%s", race_str.c_str());
- // return_str += stat_to_string3((int)get_property(race, 100));
+  return_str += stat_to_string3((int)get_property(race, 100));
   return_str += get_property(race, 100);
   return_str += "&n\n";
   return_str += "Charisma    : &+c";
   sprintf(race, "stats.cha.%s", race_str.c_str());
- // return_str += stat_to_string3((int)get_property(race, 100));
+  return_str += stat_to_string3((int)get_property(race, 100));
   return_str += get_property(race, 100);
   return_str += "&n\n";
   return_str += "Luck        : &+c";
   sprintf(race, "stats.luc.%s", race_str.c_str());
- // return_str += stat_to_string3((int)get_property(race, 100));
+  return_str += stat_to_string3((int)get_property(race, 100));
   return_str += get_property(race, 100);
   return_str += "&n\n";
   return_str += "Karma       : &+c";
   sprintf(race, "stats.kar.%s", race_str.c_str());
- // return_str += stat_to_string3((int)get_property(race, 100));
+  return_str += stat_to_string3((int)get_property(race, 100));
   return_str += get_property(race, 100);
   return_str += "&n\n";
   return_str += "\n==Racial Traits==\n";
-  // Removing damage output because this is more of a fine tuning function
-  // for imm's, and will only confuse players.
+ //  Removing damage output because this is more of a fine tuning function
+ //  for imm's, and will only confuse players.
   //return_str += "Damage Output: &+c";
   //sprintf(race, "damage.totalOutput.racial.%s", race_str.c_str());
   //return_str += stat_to_string_spell_pulse(get_property(race, 1.000));
@@ -296,7 +299,7 @@ string wiki_racial_stats(string title)
   return_str += stat_to_string_spell_pulse(get_property(race, 1.000));
   return_str += "&n\n";
   return return_str;
-*/
+
 }
 
 // Display Classes and specs based on whats allowed in the code.
