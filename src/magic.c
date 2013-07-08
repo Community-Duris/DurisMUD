@@ -21547,5 +21547,9 @@ void load_soulbind(P_char ch)
   SET_BIT(obj->extra_flags, ITEM_NORENT);
   SET_BIT(obj->extra2_flags, ITEM2_CRUMBLELOOT);
   SET_BIT(obj->extra2_flags, ITEM2_SOULBIND); 
+    REMOVE_BIT(obj->extra_flags, ITEM_SECRET);
+    REMOVE_BIT(obj->extra_flags, ITEM_INVISIBLE);
+    SET_BIT(obj->extra_flags, ITEM_NOREPAIR);
+    REMOVE_BIT(obj->extra_flags, ITEM_NODROP);
 
 }

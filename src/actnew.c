@@ -3895,7 +3895,7 @@ if(difference == 0)
    return;
   }
 
-
+  int expgain = itemvalue(ch, tobj);
  //drannak - make the item
    int obj1 = startmat + 4;
    int obj2 = (startmat + ((int)difference -1));
@@ -3903,6 +3903,7 @@ if(difference == 0)
    i = 0;
    z = 0;
    y = 0;
+   o = 0;
 
    for (t_obj = ch->carrying; t_obj; t_obj = nextobj)
      {
@@ -3913,7 +3914,7 @@ if(difference == 0)
 	   obj_from_char(t_obj, TRUE);
           i++;
          }
-       if((GET_OBJ_VNUM(t_obj) == obj2) && (o > difference))
+       if((GET_OBJ_VNUM(t_obj) == obj2) && (o < difference))
          {
 	   obj_from_char(t_obj, TRUE);
           o++;
@@ -3950,7 +3951,7 @@ if(difference == 0)
     extract_obj(tobj, FALSE);
     extract_obj(material2, FALSE);
     extract_obj(material, FALSE);
-
+    gain_exp(ch, NULL, (expgain * 10000), EXP_QUEST);
   }
 
 

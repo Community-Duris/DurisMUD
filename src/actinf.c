@@ -5287,7 +5287,7 @@ void do_time(P_char ch, char *argument, int cmd)
  
 
   //Auto Reboot - Drannak
-  if((uptime.day * 24 + uptime.hour) > 60)
+  if((uptime.day * 24 + uptime.hour) > 65)
   {
    do_shutdown(ch, "autoreboot 60", 1); 
   }

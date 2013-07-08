@@ -645,7 +645,7 @@ void checkFragList_internal(P_char ch, char type)
         REMOVE_BIT(ch->specials.act3, PLR3_FRAGLEAD);
       }
 
-     debug("&+gKick&n (%s) chance (%d) at (%s).", GET_NAME(ch), highPlayerName[0], highPlayerName[i]);
+     //debug("&+gKick&n (%s) chance (%d) at (%s).", GET_NAME(ch), highPlayerName[0], highPlayerName[i]);
 
     //highPlayerName[1]->player.title = "&+WVICTORY!&n";
     }
