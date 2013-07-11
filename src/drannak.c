@@ -1241,6 +1241,7 @@ void learn_conjure_recipe(P_char ch, P_char victim)
 void do_dismiss(P_char ch, char *argument, int cmd)
 {
   struct follow_type *k;
+  struct follow_type *x;
   P_char   victim;
   int i, j, count = 0, desired = 0;
 
@@ -1250,19 +1251,12 @@ void do_dismiss(P_char ch, char *argument, int cmd)
    return;
   }
   
-  return;
-  
   for (k = ch->followers, i = 0, j = 0; k; k = k->next)
   {
     victim = k->follower;
 
     if(!IS_PC(victim))
     {
-    act("$n makes a &+Mmagical &+mgesture&n, sending $N back to the &+Lnether plane&n.'", TRUE, ch, 0,
-        victim, TO_ROOM);
-    act("You make a &+Mmagical &+mgesture&n, sending $N back to the &+Lnether plane&n.'", TRUE, ch, 0,
-        victim, TO_CHAR);
-     extract_char(victim);
     count++;
     }
   }
@@ -1274,5 +1268,22 @@ void do_dismiss(P_char ch, char *argument, int cmd)
     return;
     }
 	
+	
+  for (x = ch->followers, i = 0, j = 0; x; x = x->next)
+  {
+    victim = x->follower;
+
+    if(!victim)
+    break;
+
+    if(!IS_PC(victim))
+    {
+    act("$n makes a &+Mmagical &+mgesture&n, sending $N back to the &+Lnether plane&n.", TRUE, ch, 0,
+        victim, TO_ROOM);
+    act("You make a &+Mmagical &+mgesture&n, sending $N back to the &+Lnether plane&n.", TRUE, ch, 0,
+        victim, TO_CHAR);
+     extract_char(victim);
+    }
+  }
 
 }
