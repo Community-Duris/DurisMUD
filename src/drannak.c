@@ -866,7 +866,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
       
     tobj = read_mobile(recnum, VIRTUAL);
  	sprintf(rbuf, "%d\n", recnum);
-    sprintf(buffer, "   &+W%-22d&n%-41s%-30d%-60d&n\n", recnum, tobj->player.short_descr, GET_LEVEL(tobj), tobj->points.base_hit);
+    sprintf(buffer, "   &+W%-22d&n%-41s&n\n", recnum, tobj->player.short_descr);
 	//stores the actual vnum written in file into rbuf 
 	page_string(ch->desc, buffer, 1);
     send_to_char("----------------------------------------------------------------------------\n", ch);
