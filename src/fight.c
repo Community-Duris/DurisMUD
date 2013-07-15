@@ -2815,21 +2815,18 @@ void kill_gain(P_char ch, P_char victim)
 
    if(!IS_PC(victim) && affected_by_spell(victim, SPELL_CONTAIN_BEING) && GET_CLASS(ch, CLASS_CONJURER) && IS_SPECIALIZED(ch) && IS_PC(ch))
   {
-   int chance = GET_C_CHA(ch);
-   chance -= GET_LEVEL(victim);
-   debug("affected by contain being\r\n");
-
-   if((GET_SPEC(ch, CLASS_CONJURER, SPEC_AIR) && !IS_HUMANOID(victim)) ||
-	(GET_SPEC(ch, CLASS_CONJURER, SPEC_WATER) && !IS_ELEMENTAL(victim)) ||
-	    (GET_SPEC(ch, CLASS_CONJURER, SPEC_EARTH) && !IS_ANIMAL(victim)) 
-     )
+   if(!valid_conjure(ch, victim)) 
     {
      send_to_char("You cannot learn to summon a being outside of your area of expertise.\r\n", ch);
      return;
     }
     else
-     if((number(1, GET_C_INT(victim)) < chance) && (GET_VNUM(victim) != 1255))
-     learn_conjure_recipe(ch, victim);
+     {
+      int chance = GET_C_CHA(ch);
+      chance -= GET_LEVEL(victim);
+      if((number(1, GET_C_INT(victim)) < chance) && (GET_VNUM(victim) != 1255))
+      learn_conjure_recipe(ch, victim);
+     }
    
   }
 
@@ -2915,26 +2912,20 @@ void kill_gain(P_char ch, P_char victim)
       change_alignment(gl->ch, victim);
 
    if(!IS_PC(victim) && affected_by_spell(victim, SPELL_CONTAIN_BEING) && GET_CLASS(gl->ch, CLASS_CONJURER) && IS_SPECIALIZED(gl->ch) && IS_PC(gl->ch))
-  {
-   int chance = GET_C_CHA(gl->ch);
-   chance -= GET_LEVEL(victim);
-   debug("affected by contain being\r\n");
-
-   if((GET_SPEC(gl->ch, CLASS_CONJURER, SPEC_AIR) && !IS_HUMANOID(victim)) ||
-	(GET_SPEC(gl->ch, CLASS_CONJURER, SPEC_WATER) && !IS_ELEMENTAL(victim)) ||
-	    (GET_SPEC(gl->ch, CLASS_CONJURER, SPEC_EARTH) && !IS_ANIMAL(victim)) 
-     )
+   {
+   if(!valid_conjure(gl->ch, victim))
     {
      send_to_char("You cannot learn to summon a being outside of your area of expertise.\r\n", gl->ch);
     }
     else
      {
-     if((number(1, GET_C_INT(victim)) < chance) && (GET_VNUM(victim) != 1255))
-     learn_conjure_recipe(gl->ch, victim);
+      int chance = GET_C_CHA(gl->ch);
+      chance -= GET_LEVEL(victim);
+      if((number(1, GET_C_INT(victim)) < chance) && (GET_VNUM(victim) != 1255))
+      learn_conjure_recipe(gl->ch, victim);
      }
-   
-  }
     }
+   }
   }
 }
 

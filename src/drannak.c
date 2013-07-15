@@ -924,28 +924,11 @@ void do_conjure(P_char ch, char *argument, int cmd)
     int duration;
     tobj = read_mobile(selected, VIRTUAL);
 
-    if(selected != 400003)
+    if(!valid_conjure(ch, tobj))
     {
-    if(GET_SPEC(ch, CLASS_CONJURER, SPEC_AIR) && !IS_HUMANOID(tobj))
-    {
-     send_to_char("You cannot summon a being outside of your area of expertise.\r\n", ch);
-    extract_char(tobj);
+     send_to_char("Your character does not have &+Ldominion&n over this race of &+Lmonster&n.\r\n", ch);
+     extract_char(tobj);
      return;
-    }
-
-    if(GET_SPEC(ch, CLASS_CONJURER, SPEC_WATER) && !IS_ELEMENTAL(tobj))
-    {
-     send_to_char("You cannot summon a being outside of your area of expertise.\r\n", ch);
-    extract_char(tobj);
-     return;
-    }
-
-    if(GET_SPEC(ch, CLASS_CONJURER, SPEC_EARTH) && !IS_ANIMAL(tobj))
-    {
-     send_to_char("You cannot summon a being outside of your area of expertise.\r\n", ch);
-    extract_char(tobj);
-     return;
-    }
     }
 
     if(!new_summon_check(ch, tobj))
@@ -963,7 +946,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
      return;
     }
 
-    if((GET_LEVEL(tobj) > 56) && !vnum_in_inv(ch, 400231) && !IS_TRUSTED(ch))
+    if((GET_LEVEL(tobj) > 51) && !vnum_in_inv(ch, 400231) && !IS_TRUSTED(ch))
     {
      send_to_char("You must have a &+Ya &+Mgreater&+Y o&+Mr&+Bb &+Yof &+YConjuring&n in your &+Winventory&n in order to &+Ysummon&n a being of such &+Mgreat&+M power&n.\r\n", ch);
     extract_char(tobj);
@@ -1051,6 +1034,43 @@ void create_spellbook_file(P_char ch)
   fclose(f);
 }
 
+bool valid_conjure(P_char ch, P_char victim)
+{
+   if(!victim)
+   return FALSE;
+
+   if(!ch)
+   return FALSE;
+
+   if(IS_PC(victim))
+   return FALSE;
+
+   if(GET_VNUM(victim) != 400003)
+    {
+      if(GET_SPEC(ch, CLASS_CONJURER, SPEC_AIR) && !IS_HUMANOID(victim) || IS_UNDEADRACE(victim))
+      {
+       return FALSE;
+      }
+
+      if(GET_SPEC(ch, CLASS_CONJURER, SPEC_WATER) && !IS_ELEMENTAL(victim))
+      {
+       return FALSE;
+      }
+
+      if(GET_SPEC(ch, CLASS_CONJURER, SPEC_EARTH) && !IS_ANIMAL(victim))
+      {
+       return FALSE;
+      }
+
+      if((GET_LEVEL(victim) - (GET_LEVEL(ch)) > 4) && (GET_LEVEL(ch) < 51))
+      return FALSE;
+    
+    }
+
+  return TRUE;
+
+}
+
 bool new_summon_check(P_char ch, P_char selected)
 {
   struct follow_type *k;
@@ -1058,6 +1078,9 @@ bool new_summon_check(P_char ch, P_char selected)
   int i, j, count = 0, desired = 0;
   
   desired = GET_LEVEL(selected);
+
+  if((desired - (GET_LEVEL(ch)) > 4) && (GET_LEVEL(ch) < 51))
+  return FALSE;
 
   for (k = ch->followers, i = 0, j = 0; k; k = k->next)
   {

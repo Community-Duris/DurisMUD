@@ -929,6 +929,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define IS_INSTRUMENT_SKILL(n) (n>=FIRST_INSTRUMENT && n<=LAST_INSTRUMENT)
 #define IS_BARD_SONG(n) (n>=FIRST_SONG && n<=LAST_SONG)
 
+
 #define POW_DIFF(att, def) (STAT_INDEX(GET_C_POW(def)) - STAT_INDEX(GET_C_POW(att)))
 
 /* terminal stuff */

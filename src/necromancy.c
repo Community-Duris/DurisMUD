@@ -397,6 +397,9 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
     return;
   }
 
+  if(IS_NPC(ch) && IS_PC_PET(ch))
+   return;
+
   if ((IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM) &&
       !is_wearing_necroplasm(ch) &&
       !IS_NPC(ch)) ||

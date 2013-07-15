@@ -136,6 +136,9 @@ bool can_relocate_to(P_char ch, P_char victim)
     return false;
   }
 
+  if(IS_NPC(ch) && IS_PC_PET(ch))
+   return false;
+
   if(!IS_TRUSTED(ch) &&
      IS_TRUSTED(victim))
   {
@@ -8076,6 +8079,9 @@ void spell_word_of_recall(int level, P_char ch, char *arg, int type,
   if(IS_NPC(victim) && (!GET_BIRTHPLACE(victim)))
     return;
 
+  if(IS_NPC(victim) && IS_PC_PET(victim))
+   return;
+
   if(IS_SET(world[ch->in_room].room_flags, ROOM_SILENT))
   {
     send_to_char("No sound can be heard.\n", ch);
@@ -8232,6 +8238,10 @@ void spell_group_recall(int level, P_char ch, char *arg, int type,
       send_to_char("You are fighting for your life!\n", ch);
       return;
     }
+
+  if(IS_NPC(ch) && IS_PC_PET(ch))
+   return;
+
     for (gl = /*gl->next */ ch->group; gl; gl = gl->next)
     {
       if((gl->ch->in_room == ch->in_room) &&
@@ -14882,6 +14892,9 @@ void spell_resurrect(int level, P_char ch, char *arg, int type, P_char victim,
         CharWait(ch, 100);
   else
     CharWait(ch, 10);
+
+  if(IS_NPC(ch) && IS_PC_PET(ch))
+   return;
 
   if(IS_SET(obj->value[1], NPC_CORPSE))
   {
