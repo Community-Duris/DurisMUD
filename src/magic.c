@@ -20346,6 +20346,12 @@ void spell_moonwell(int level, P_char ch, char *arg, int type, P_char victim,
   if(!victim)
     victim = ch;
 
+  if(IS_NPC(ch))
+  return;
+
+  if(IS_NPC(victim))
+  return;
+
   if(victim == ch)
   {
     if(affected_by_spell(ch, SPELL_MOONSTONE))

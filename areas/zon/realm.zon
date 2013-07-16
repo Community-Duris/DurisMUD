@@ -376,6 +376,7 @@ M 0 14025 3 14109 100 0 0 0        * a colossal root
 M 0 14025 3 14109 100 0 0 0        * a colossal root
 M 0 14072 1 14112 100 0 0 0        * a colossal root
 G 1 14046 1 0 100 0 0 0            *    a cuendillar, heartstone of magic
+G 1 67250 1 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 14059 6 14113 100 0 0 0        * a little sparrow
 M 0 14061 3 14114 100 0 0 0        * a black raven
 M 0 14053 6 14115 100 0 0 0        * a grey squirrel

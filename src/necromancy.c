@@ -1239,6 +1239,9 @@ void spell_create_dracolich(int level, P_char ch, char *arg, int type, P_char vi
     send_to_char("But you can barely move!\r\n", ch);
     return;
   }
+
+  if(IS_NPC(ch) && affected_by_spell(ch, TAG_CONJURED_PET))
+  return;
   
   if (CHAR_IN_SAFE_ZONE(ch))
   {
