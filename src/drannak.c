@@ -973,6 +973,10 @@ void do_conjure(P_char ch, char *argument, int cmd)
     {
       SET_BIT(tobj->specials.affected_by, AFF_INFRAVISION);
     }
+    if(IS_SET(tobj->specials.affected_by4, AFF4_DEFLECT))
+    {
+      REMOVE_BIT(tobj->specials.affected_by, AFF4_DEFLECT);
+    }
    REMOVE_BIT(tobj->specials.act, ACT_SPEC); 
    REMOVE_BIT(tobj->specials.act, ACT_BREAK_CHARM);
 

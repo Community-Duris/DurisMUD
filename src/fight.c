@@ -2361,7 +2361,7 @@ void die(P_char ch, P_char killer)
     {
 	P_obj teobj = read_object(400230, VIRTUAL);
        obj_to_char(teobj, ch);
-       act("&+LAs &+R$n falls to the ground, &+L.&N",
+       act("&+LAs &+R$n &+Lfalls to the ground, a small shard of their &+rlifeforce&n manifests&+L.&N",
            FALSE, ch, 0, 0, TO_ROOM);
     }
 
@@ -4246,6 +4246,8 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
         dam *= dam_factor[DF_IRONWILL];
       if (get_spell_from_char(victim, SKILL_TIGER_PALM))
 	dam *= dam_factor[DF_TIGERPALM];
+      if(GET_RACE(victim) == RACE_THRIKREEN)
+       dam *= .7;
       break;
     case SPLDAM_NEGATIVE:
       if (victim && IS_ANGEL(victim))
