@@ -1,0 +1,8 @@
+git checkout master
+git add .
+git commit -m 'automated compile'
+git push origin master
+git checkout livemud
+git merge master
+git push
+git checkout master
