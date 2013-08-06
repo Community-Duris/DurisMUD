@@ -4638,6 +4638,7 @@ SPELL_ADD(CLASS_NONE, 1);
   SKILL_ADD(CLASS_THIEF, 1, 90);
   SKILL_ADD(CLASS_SHAMAN, 1, 90);
   SKILL_ADD(CLASS_ASSASSIN, 1, 90);
+  SKILL_ADD(CLASS_ETHERMANCER, 1, 90);
   SKILL_ADD(CLASS_BARD, 1, 90);
   SKILL_ADD(CLASS_ALCHEMIST, 1, 70);
   SKILL_ADD(CLASS_REAVER, 1, 90);
@@ -5422,6 +5423,8 @@ void update_racial_skills(P_char ch)
 			ch->only.pc->skills[SKILL_SCRIBE_MASTERY].learned = BOUNDED(10, GET_LEVEL(ch) *2, 100);
 			ch->only.pc->skills[SKILL_DEVOTION].taught = BOUNDED(10, GET_LEVEL(ch) *2, 100);
 			ch->only.pc->skills[SKILL_DEVOTION].learned = BOUNDED(10, GET_LEVEL(ch) *2, 100);
+			ch->only.pc->skills[SKILL_IMPROVED_ENDURANCE].taught = BOUNDED(10, GET_LEVEL(ch) *2, 100);
+			ch->only.pc->skills[SKILL_IMPROVED_ENDURANCE].learned = BOUNDED(10, GET_LEVEL(ch) *2, 100);
 			do_save_silent(ch, 1); // racial skills require a save.
 			break;
 			case RACE_ORC:
@@ -5433,6 +5436,8 @@ void update_racial_skills(P_char ch)
 			ch->only.pc->skills[SKILL_SCRIBE_MASTERY].learned = BOUNDED(10, GET_LEVEL(ch) *2, 100);
 			ch->only.pc->skills[SKILL_DEVOTION].taught = BOUNDED(10, GET_LEVEL(ch) *2, 100);
 			ch->only.pc->skills[SKILL_DEVOTION].learned = BOUNDED(10, GET_LEVEL(ch) *2, 100);
+			ch->only.pc->skills[SKILL_IMPROVED_ENDURANCE].taught = BOUNDED(10, GET_LEVEL(ch) *2, 100);
+			ch->only.pc->skills[SKILL_IMPROVED_ENDURANCE].learned = BOUNDED(10, GET_LEVEL(ch) *2, 100);
 			do_save_silent(ch, 1); // racial skills require a save.
 			break;
 			case RACE_CENTAUR:

@@ -880,6 +880,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
   FILE    *recipelist;
   int line, recfind; 
   unsigned long	linenum = 0;
+  struct affected_type af;
   long recnum, choice2;
   long selected = 0;
   P_char tobj;
@@ -990,8 +991,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
 
     if(!new_summon_check(ch, tobj) && !IS_TRUSTED(ch))
     {
-     send_to_char("You have too many, or too powerful followers to summon this minion.\r\n", ch);
-    extract_char(tobj);
+     extract_char(tobj);
      return;
     }
 
@@ -1001,6 +1001,20 @@ void do_conjure(P_char ch, char *argument, int cmd)
      send_to_char("You must wait a short time before calling another &+Yminion&n into existence.\r\n", ch);
     extract_char(tobj);
      return;
+    }
+
+    if(number(1, GET_C_CHA(ch)) < number(1, 30))
+    {
+    if(!IS_TRUSTED(ch))
+    { 
+    memset(&af, 0, sizeof(af));
+    af.type = SPELL_CONJURE_ELEMENTAL;
+    af.duration = 2;
+    affect_to_char(ch, &af);
+    }
+    extract_char(tobj);
+    send_to_char("You feel a brief &+mtinge&n of &+Mmagical power&n engulf you as you &+rfail&n to call forth your &+Lminion&n.\r\n", ch);
+    return;
     }
 
 
@@ -1041,20 +1055,22 @@ void do_conjure(P_char ch, char *argument, int cmd)
     if(tobj->points.base_hit > 8000)
     GET_MAX_HIT(tobj) = GET_HIT(tobj) = tobj->points.base_hit = 8000;
 	 
-     REMOVE_BIT(tobj->specials.affected_by, AFF_SLEEP);
      //REMOVE_BIT(tobj->specials.act, ACT_SENTINEL); Needed for mob to follow.
+
+     REMOVE_BIT(tobj->specials.affected_by, AFF_SLEEP);
      REMOVE_BIT(tobj->specials.act, ACT_ELITE);
      REMOVE_BIT(tobj->specials.act, ACT_HUNTER);
+     REMOVE_BIT(tobj->specials.act, ACT_PROTECTOR);
      GET_EXP(tobj) = 0;
      apply_achievement(tobj, TAG_CONJURED_PET);
-      SET_BIT(tobj->specials.affected_by, AFF_INFRAVISION);
-      REMOVE_BIT(tobj->specials.affected_by4, AFF4_DEFLECT);
-      REMOVE_BIT(tobj->specials.act, ACT_SCAVENGER);
-    REMOVE_BIT(tobj->specials.act, ACT_PATROL);
-   REMOVE_BIT(tobj->specials.act, ACT_SPEC); 
-   REMOVE_BIT(tobj->specials.act, ACT_BREAK_CHARM);
+     SET_BIT(tobj->specials.affected_by, AFF_INFRAVISION);
+     REMOVE_BIT(tobj->specials.affected_by4, AFF4_DEFLECT);
+     REMOVE_BIT(tobj->specials.act, ACT_SCAVENGER);
+     REMOVE_BIT(tobj->specials.act, ACT_PATROL);
+     REMOVE_BIT(tobj->specials.act, ACT_SPEC); 
+     REMOVE_BIT(tobj->specials.act, ACT_BREAK_CHARM);
 
-   //mob_index[tobj->only.npc->idnum].func.mob = 0;
+
 
 
 
@@ -1155,7 +1171,7 @@ bool new_summon_check(P_char ch, P_char selected)
 {
   struct follow_type *k;
   P_char   victim;
-  int i, j, count = 0, desired = 0;
+  int i, j, count = 0, desired = 0, greater = 0;
   
   desired = GET_LEVEL(selected);
 
@@ -1169,17 +1185,33 @@ bool new_summon_check(P_char ch, P_char selected)
     if(!IS_PC(victim))
     {
     i += GET_LEVEL(victim);
+    if(GET_LEVEL(victim) >= 50)
+    greater = 1;
+
     count++;
     }
   }
   i += desired;
 
   if(count >= 4)
-  return FALSE;
+  {
+   send_to_char("You have too many followers already.\r\n", ch);
+   return FALSE;
+  }
+
+
+  if(greater == 1)
+  {
+   send_to_char("You may not summon an additional being of such great power.\r\n", ch);
+   return FALSE;
+  }
 
 
   if(i > 120)
-  return FALSE;
+  {
+   send_to_char("Your current pets are too powerful to summon that being.\r\n", ch);
+   return FALSE;
+  }
 
 
   return TRUE;
@@ -1296,7 +1328,8 @@ void do_dismiss(P_char ch, char *argument, int cmd)
    return;
   }
   
-
+  if(!argument || !*argument)
+  {
     for (k = ch->followers; k; k = x)
     {
       x = k->next;
@@ -1311,6 +1344,33 @@ void do_dismiss(P_char ch, char *argument, int cmd)
     count++;
       }
     }
+   return;
+  }
+
+
+
+   victim = parse_victim(ch, argument, 0);
+    if(!victim)
+    {
+	 send_to_char("Who?\r\n", ch);
+        return;
+    }
+    if(ch->in_room != victim->in_room ||
+     ch->specials.z_cord != victim->specials.z_cord)
+    {
+    send_to_char("Who?\r\n", ch);
+    return;
+    }
+  if(get_linked_char(victim, LNK_PET) == ch)
+   {
+     extract_char(victim);
+    act("$n makes a &+Mmagical &+mgesture&n, sending $N back to the &+Lnether plane&n.", TRUE, ch, 0,
+        victim, TO_ROOM);
+    act("You make a &+Mmagical &+mgesture&n, sending $N back to the &+Lnether plane&n.", TRUE, ch, 0,
+        victim, TO_CHAR);
+    }
+
+
 
 
   if(count == 0)

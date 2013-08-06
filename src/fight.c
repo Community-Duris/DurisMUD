@@ -2806,7 +2806,7 @@ void kill_gain(P_char ch, P_char victim)
     gain_exp(ch, victim, gain, EXP_KILL);
 
     update_achievements(ch, victim, 0, 2);//this is for all kinds of kill-type quests
-    if((GET_LEVEL(victim) > 30) && !IS_PC(victim))
+    if((GET_LEVEL(victim) > 30) && !IS_PC(victim) && !affected_by_spell(victim, TAG_CONJURED_PET))
 	{
 	    if((number(1, 5000) < GET_C_LUCK(ch)) || (GET_RACE(victim) == RACE_DRAGON && (GET_VNUM(victim) > 10) && (GET_VNUM(victim) != 1108) && (GET_LEVEL(victim) > 49)))
 	   {
@@ -2905,7 +2905,7 @@ void kill_gain(P_char ch, P_char victim)
       send_to_char("You receive your share of experience.\r\n", gl->ch);
       gain_exp(gl->ch, victim, (XP + (XP*(group_size*.25))), EXP_KILL);
     update_achievements(gl->ch, victim, 0, 2);//this is for all kinds of kill-type quests
-    if((GET_LEVEL(victim) > 30) && !IS_PC(victim))
+    if((GET_LEVEL(victim) > 30) && !IS_PC(victim) && !affected_by_spell(victim, TAG_CONJURED_PET))
 	{
 	  if((number(1, 5000) < GET_C_LUCK(gl->ch)) || (GET_RACE(victim) == RACE_DRAGON && (GET_VNUM(victim) != 1108) && (GET_VNUM(victim) > 10) && (GET_LEVEL(victim) > 49)))
 	   {
@@ -7097,7 +7097,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
 	GET_CLASS(victim, CLASS_MERCENARY) &&
 	!affected_by_spell(ch, TAG_MERC_DEFENSE) &&
 	MIN_POS(victim, POS_STANDING + STAT_NORMAL) &&
-	(number(1, GET_C_LUCK(victim)) > number(1, 900)))
+	(number(1, GET_C_LUCK(victim)) > number(1, 1600)))
   {
   struct affected_type af;
 

@@ -47,6 +47,7 @@ using namespace std;
 
 /* * external variables */
 
+extern float spell_pulse_data[LAST_RACE + 1];
 extern char *target_locs[];
 extern char *set_master_text[];
 extern int mini_mode;
@@ -5019,8 +5020,11 @@ void do_score(P_char ch, char *argument, int cmd)
 
   if(IS_PC(ch))
   {
-        sprintf(buf, "&+YCombat Pulse: &N%4d&+Y  ",
-            ch->specials.base_combat_round);
+  
+        sprintf(buf, "&+YCombat Pulse: &N%4d&+Y &+MSpell Pulse&n:  %.2f&+Y ",
+//            ch->specials.base_combat_round, ch->points.spell_pulse);
+         ch->specials.base_combat_round, (spell_pulse_data[GET_RACE(ch)] * ((12.0 + ch->points.spell_pulse)/12)));
+
 
 
     strcat(buf, "\n");

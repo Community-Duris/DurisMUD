@@ -581,9 +581,11 @@ void bard_healing(int l, P_char ch, P_char victim, int song)
 
 void bard_healing(int l, P_char ch, P_char victim, int song)
 {
+  struct affected_type af;
+ if(!affected_by_spell(victim, SONG_HEALING) ||
+     (affected_by_spell(victim, SONG_HEALING) &&  (get_linked_char(victim, LNK_SONG) == ch)))
+  {
   int healed, old_hits = GET_HIT(ch);
-
-
   //healed = l * 3 * number(40, 80) / 100;
   //spell_heal(l, ch, 0, 0, victim, NULL);
   healed = GET_C_CHA(ch) / 3;
@@ -632,7 +634,20 @@ void bard_healing(int l, P_char ch, P_char victim, int song)
       affect_from_char(ch, SPELL_SILENCE);
     }
   }
-  
+
+     memset(&af, 0, sizeof(af));
+    af.type = SONG_HEALING;
+    af.location = APPLY_HIT_REG;
+    af.modifier = (int) (PULSE_VIOLENCE);
+
+    linked_affect_to_char(victim, &af, ch, LNK_SONG);
+
+  }
+  else
+  {
+   send_to_char("Your song has no power, as they are already affected by a healing song!\r\n", ch);
+   return;
+  }
 
 }
 
