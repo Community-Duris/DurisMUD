@@ -290,7 +290,7 @@ const mcname multiclass_names[] = {
   {CLASS_SHAMAN, CLASS_ETHERMANCER,      "&+yGeo&nmancer&n"},
   {CLASS_SHAMAN, CLASS_AVENGER,          "Vengeance&n"},
   {CLASS_SHAMAN, CLASS_THEURGIST,        "Holy Totem"},
-  {CLASS_SORCERER, CLASS_NECROMANCER,    "Warlock"},
+  {CLASS_SORCERER, CLASS_NECROMANCER,    "&+LDe&+rat&+Rh Ma&+rgu&+Ls&n"},
   {CLASS_SORCERER, CLASS_CONJURER,       "&+RArchmagi&n"},
   {CLASS_SORCERER, CLASS_ROGUE,          "Trapbreaker"},
   {CLASS_SORCERER, CLASS_MERCENARY,      "Spelltackler"},

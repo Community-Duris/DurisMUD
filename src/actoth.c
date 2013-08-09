@@ -6143,6 +6143,10 @@ void do_descend(P_char ch, char *arg, int cmd)
     GET_SIZE(ch) = SIZE_MEDIUM;
     GET_RACE(ch) = RACE_PLICH;
     ch->player.m_class = CLASS_NECROMANCER;
+   ch->player.secondary_class = CLASS_SORCERER;
+    secede_asc(ch); //leave your guild!
+    ch->only.pc->frags = 0;
+    ch->only.pc->epics = 0;
 
   for (i = 0; i < MAX_SKILLS; i++)
   {
