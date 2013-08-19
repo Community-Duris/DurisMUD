@@ -5,6 +5,14 @@
 * Zone edited with durisEdit v2.99de
 *
 *
+D 0 142400 3 2 100 0 0 0
+*     west exit from "A Snowy Mountain Trail" to
+*     "A Mountain Trail" - closed/locked
+*
+D 0 142401 1 2 100 0 0 0
+*     east exit from "A Mountain Trail" to
+*     "A Snowy Mountain Trail" - closed/locked
+*
 D 0 142402 0 1 100 0 0 0
 *     north exit from "Before a Run Down Shack" to
 *     "The Caretaker's Shack" - closed

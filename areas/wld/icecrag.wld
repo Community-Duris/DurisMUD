@@ -988,7 +988,7 @@ S
 D0
 ~
 door backdoor gate~
-3 97018 97132
+0 0 97132
 D1
 You see the guards walk continue.
 ~
@@ -3416,7 +3416,7 @@ D0
 D2
 ~
 ~
-3 97018 97042
+0 0 97042
 S
 #97133
 Rareload traproom~

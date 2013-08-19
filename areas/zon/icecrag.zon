@@ -69,14 +69,6 @@ D 0 97041 1 1 100 0 0 0
 *     east exit from "Eastern Guard's Walk, North Wall" to
 *     "A Corner in the Guards Walk" - closed
 *
-D 0 97042 0 2 100 0 0 0
-*     north exit from "Eastern Guard's Walk, North Wall" to
-*     "The Rear Exit of the Castle" - closed/locked
-*
-D 0 97132 2 2 100 0 0 0
-*     south exit from "The Rear Exit of the Castle" to
-*     "Eastern Guard's Walk, North Wall" - closed/locked
-*
 D 0 97044 2 1 100 0 0 0
 *     south exit from "Eastern Guard's Walk, North Wall" to
 *     "A Corner In the Ice Garden" - closed

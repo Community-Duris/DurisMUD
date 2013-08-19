@@ -228,6 +228,7 @@ O 0 34564 1 34804 100 0 0 0        * a darkmail breastplate
 O 0 34565 1 34804 50 0 0 0         * a pair of darkmail gauntlets
 O 0 34568 1 34804 100 0 0 0        * an enormous ruby
 O 0 360 1 34804 100 0 0 0          * (object type not in this .obj file)
+O 0 51401 1 34804 100 0 0 0        * (object type not in this .obj file)
 *
 M 0 34500 1 34502 100 0 0 0        * an enormous silver golem
 E 1 34500 1 16 100 0 0 0           *   a huge silver mace
@@ -558,7 +559,6 @@ M 0 34562 4 34787 100 0 0 0        * a skeletal worshiper
 M 0 34544 1 34791 100 0 0 0        * The Horseman of Death
 E 1 34556 1 2 100 0 0 0            *   a ring of tortured souls
 G 1 34549 1 0 100 0 0 0            *    the skull of death
-G 1 25018 1 0 100 0 0 0            *    (object type not in this .obj file)
 F 1 34560 4 34791 100 0 0 0        * an enormous black steed (following)
 M 0 34563 4 34792 100 0 0 0        * a skeletal mage
 M 0 34562 4 34793 100 0 0 0        * a skeletal worshiper

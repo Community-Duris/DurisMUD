@@ -311,7 +311,6 @@ M 0 81454 1 81676 100 0 0 0        * The Chronomancer
 G 1 81423 1 0 100 0 0 0            *    a thread of time
 G 1 55238 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 16262 1 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 77738 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 900 1 0 100 0 0 0              *    (object type not in this .obj file)
 *
 S

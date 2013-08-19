@@ -942,7 +942,6 @@ P 1 92031 1 92030 100 0 0 0        *   the corpse of a paladin
 P 1 92124 1 92030 100 0 0 0        *   the blade of paladins
 O 0 92037 1 92225 100 0 0 0        * a warrior's coffin
 P 1 92038 1 92037 100 0 0 0        *   the corpse of a warrior
-P 1 92121 1 92037 25 0 0 0         *   a longsword called 'Flame of the North'
 O 0 359 1 92225 100 0 0 0          * (object type not in this .obj file)
 O 0 92001 2 92229 100 0 0 0        * a gnarled wooden stick
 O 0 92106 1 92246 100 0 0 0        * an iron-bound chest

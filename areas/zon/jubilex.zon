@@ -409,7 +409,7 @@ M 0 87543 1 87625 100 0 0 0        * Jubilex, the demon prince
 M 0 87544 1 87626 100 0 0 0        * Jubilex, the demon prince
 G 1 87520 1 0 100 0 0 0            *    a circular seal pattern
 G 1 922 1 0 100 0 0 0              *    (object type not in this .obj file)
-G 1 51401 1 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 25018 1 0 100 0 0 0            *    (object type not in this .obj file)
 F 1 87561 1 87626 100 0 0 0        * Zuggtmoy, the Lady of Fungus (following)
 G 1 87502 1 0 100 0 0 0            *    the invisible prison key
 F 1 87545 2 87626 100 0 0 0        * a massive slime bubble (following)

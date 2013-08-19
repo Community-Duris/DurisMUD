@@ -9,8 +9,8 @@ golem silverr enormous~
 &+crecesses beside the gate.  The golem knows no remorse and no mercy.  Its
 &+conly purpose is to kill.
 ~
-33556586 1 0 268435644 1 0 8192 0 S
-X 0 32 -1
+33556586 1 0 0 268435644 1 0 8192 0 S
+X 0 32 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -25,8 +25,8 @@ golem silverr enormous~
 &+crecesses beside the gate.  The golem knows no remorse and no mercy.  Its
 &+conly purpose is to kill.
 ~
-33557066 1 0 268435644 1 0 8192 0 S
-X 0 512 -1
+33557066 1 0 0 268435644 1 0 8192 0 S
+X 0 512 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -42,8 +42,8 @@ When he sees your approach, he looks up quizically.
 
         "Have you come to challenge the horsemen?" he states.
 ~
-18506 0 0 2415919292 1 524288 0 0 S
-UG 0 4 -1
+18506 0 0 0 2415919292 1 524288 0 0 S
+UG 0 4 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -56,8 +56,8 @@ This female zombie seems far less aggressive than the other creatures in the
 destroyed town.  She is crying but no moisture can come forth from the dried
 undead monster.
 ~
-33556554 0 0 268435516 0 0 8192 0 S
-U 0 32 -1
+33556554 0 0 0 268435516 0 0 8192 0 S
+U 0 32 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -70,8 +70,8 @@ This powerful undead sorcerer was once the town scribe.  His body has been
 stripped of flesh and his mind of reasoning.  He lives on tormented by his
 death.  Quenching his thirst for revenge, he attacks all living beings.
 ~
-1107298378 1 0 268435644 1 0 0 0 S
-U 0 512 -1
+1107298378 1 0 0 268435644 1 0 0 0 S
+U 0 512 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -85,8 +85,8 @@ living counterparts.  Only very intelligent zombies can ever hope to retain
 spellcasting ability.  This former shopkeeper still posesses the power and
 ability to control nature.
 ~
-1107298378 1 0 268435644 0 0 0 0 S
-U 0 256 -1
+1107298378 1 0 0 268435644 0 0 0 0 S
+U 0 256 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -99,8 +99,8 @@ Battered platemail covers the body of this large undead armorer.  The monster
 seems oblivious to the area around him, but he's compelled to attack all who
 are foolish enough to walk into his destroyed shop.
 ~
-1107314762 1 0 268435644 32768 0 8192 999 S
-U 0 8 4
+1107314762 1 0 0 268435644 32768 0 8192 999 S
+U 0 8 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -113,8 +113,8 @@ This skeleton is rather large.  It has a rusted suit of chainmail dangling off
 of its gaunt torso for protection.  The skeleton is quite powerful and its
 hatred for the living is unmatched.
 ~
-1107298378 1 0 268435644 1 0 8192 -950 S
-U 0 2 4
+1107298378 1 0 0 268435644 1 0 8192 -950 S
+U 0 2 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -128,8 +128,8 @@ stealthy movement makes this formet baker an incredible assassin.  The ghost
 is able to magically wield substantial objects and inflict massive amounts
 of pain with his weapons of choice.
 ~
-1107298378 1 0 268959932 0 0 8192 -250 S
-UG 0 8192 -1
+1107298378 1 0 0 268959932 0 0 8192 -250 S
+UG 0 8192 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -142,8 +142,8 @@ This zombie is big.. real big.  Most of the flesh from this man still clings
 defiantly to the rotting bones.  The butcher has seen you enter and moves to
 attack.  Although, he is huge, he moves with the quickness of a rabbit.
 ~
-1107298378 1 0 268435644 0 0 8192 -1000 S
-U 0 65 5
+1107298378 1 0 0 268435644 0 0 8192 -1000 S
+U 0 65 0 5
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -156,8 +156,8 @@ druid demented~
 &+gnature remains intact, but its hatred for humanoids has been increased
 &+gimmensely.
 ~
-1107298378 1 0 285212860 0 0 8192 0 S
-U 0 128 4
+1107298378 1 0 0 285212860 0 0 8192 0 S
+U 0 128 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -170,8 +170,8 @@ treant vicious~
 &+glooks strong enough to break a human in half.  The tree lumbers about the
 &+ggarden, looking for victims.
 ~
-1107314760 1 0 285212860 0 0 8192 0 S
-VT 0 128 6
+1107314760 1 0 0 285212860 0 0 8192 0 S
+VT 0 128 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -184,8 +184,8 @@ This ghost appears to be dressed in the garb of a wealthy man.  The clothes,
 much like the ghost are transparent and the ghost only appears to be an image
 of a man.
 ~
-1107298376 1 0 268435644 1 0 8192 -1000 S
-UG 0 576 4
+1107298376 1 0 0 268435644 1 0 8192 -1000 S
+UG 0 576 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -199,8 +199,8 @@ the presence of living beings, the ghost attacks with passionate fervor.  The
 ghost may only be partially present, it is able to cause great physical and
 magical pain.
 ~
-1107298376 1 0 285212860 1 0 9216 -1000 S
-UG 0 514 4
+1107298376 1 0 0 285212860 1 0 9216 -1000 S
+UG 0 514 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -213,8 +213,8 @@ This undead monster is covered in robes doused in dried blood.  The beasts
 here have converted a once reverant locale into a place to woship evil.  The
 acolyte stands before the altar, disgusted by your entrusion.
 ~
-33556554 1 0 268435644 0 0 8192 -1000 S
-U 0 48 3
+33556554 1 0 0 268435644 0 0 8192 -1000 S
+U 0 48 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -226,8 +226,8 @@ cleric undead~
 This zombie appears to be a cleric of some sort.  He assists the acolyte with
 his incantations.
 ~
-33556554 1 0 268435628 32768 0 8192 -1000 S
-U 0 32 3
+33556554 1 0 0 268435628 32768 0 8192 -1000 S
+U 0 32 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -241,8 +241,8 @@ massive demon horned~
 &+ron its head is large and well-developed.  This monster is very intelligent
 &+rand very, very aggressive.
 ~
-1107298376 1 0 404226236 32768 0 8397312 -1000 S
-X 0 528 -1
+1107298376 1 0 0 404226236 32768 0 8397312 -1000 S
+X 0 528 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -255,8 +255,8 @@ This scarecrow, once used to protect crops, has now taken on a sinister life
 of its own.  It guards the field, like it once did, but now it attacks
 anything in its path.
 ~
-1107298376 1 0 270008508 0 0 8192 -1000 S
-U 0 8192 3
+1107298376 1 0 0 270008508 0 0 8192 -1000 S
+U 0 8192 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -269,8 +269,8 @@ innkeeper keeper inn~
 greenish skin, and holes in the face identify it as a zombie.  When the keeper
 sees you, instead of offering a room, he attacks.
 ~
-1107298378 1 0 268435644 1 0 8192 -1000 S
-U 0 16384 3
+1107298378 1 0 0 268435644 1 0 8192 -1000 S
+U 0 16384 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -283,8 +283,8 @@ These skeletons are training for a purpose.  The mindless beasts must be under
 the control of a much more powerful entity.  Only a lich or deathlord of
 incredible power would be able to control this many skeletons at once.
 ~
-1174407240 1 0 268435516 0 67108864 8192 -1000 S
-U 0 1 3
+1174407240 1 0 0 268435516 0 67108864 8192 -1000 S
+U 0 1 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -299,8 +299,8 @@ of armor which clangs against his bones with an eerie sound.  The skeleton
 warmaster looks far more skilled than the trainees, and should be treated
 with respect.
 ~
-1174407242 1 0 268435644 0 0 8192 -1000 S
-U 0 16 3
+1174407242 1 0 0 268435644 0 0 8192 -1000 S
+U 0 16 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -313,8 +313,8 @@ A decomposing figure stumbles about the town angrily.  The zombie posseses
 great strength in its undead state.  Care should be taken in dealing with
 this slow, but very powerful beast.
 ~
-1107298376 1 0 268435468 12480 0 8192 -1000 S
-U 0 1 3
+1107298376 1 0 0 268435468 12480 0 8192 -1000 S
+U 0 1 0 3
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -327,8 +327,8 @@ These beasts resemble red dogs.  They are much larger, and far, far more
 powerful.  Hellhounds are often covered in magical flames and will attack
 anything living.
 ~
-1107298376 1 0 805306396 12481 0 8192 -1000 S
-X 0 1 3
+1107298376 1 0 0 805306396 12481 0 8192 -1000 S
+X 0 1 0 3
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -340,8 +340,8 @@ A small &+Wskeleton&n walks here, aimlessly.
 This small skeleton has no distinguishing features.  It's rather short, but it
 can still cause heavy damage using its bony limbs as weapons.
 ~
-1107298376 1 0 268435468 12480 0 8192 -1000 S
-U 0 1 2
+1107298376 1 0 0 268435468 12480 0 8192 -1000 S
+U 0 1 0 2
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -354,8 +354,8 @@ This ghoul is a terrifying vision of undead power.  The beast does not appear
 very tall because it is haunched forward as if its head is too heavy for the
 body.  The ghoul is very strong and capable of removing limbs with ease.
 ~
-1107298376 1 0 268435468 12480 0 8192 -1000 S
-U 0 1 3
+1107298376 1 0 0 268435468 12480 0 8192 -1000 S
+U 0 1 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -368,8 +368,8 @@ This undead creature maintains the ability to cast devastating spells.  The
 wraith is very aggressive and will attack anything that comes across its
 path - especially humanoids.
 ~
-1107298376 1 0 268435484 12481 0 8192 -1000 S
-UG 0 512 3
+1107298376 1 0 0 268435484 12481 0 8192 -1000 S
+UG 0 512 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -382,8 +382,8 @@ This zombie shows signs of intelligence.  The zombie is far more gifted than
 its warrior counterparts.  This zombie maintains the ability of an evil
 acolyte.
 ~
-1107298376 1 0 268435468 45248 0 8192 -1000 S
-U 0 32 3
+1107298376 1 0 0 268435468 45248 0 8192 -1000 S
+U 0 32 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -396,8 +396,8 @@ This creature has very thick black skin, and it seems to be sneering from its
 undead mouth.  The monster shuffles along, twisting its disgusting head to
 and fro taking in the surrounding area.
 ~
-1107298376 1 0 268435484 12480 128 8192 -1000 S
-U 0 256 3
+1107298376 1 0 0 268435484 12480 128 8192 -1000 S
+U 0 256 0 3
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -410,8 +410,8 @@ The pitch black horse has gleeming &+rred&n eys that stare out defiantly.
 The large steed is muscular and stands nearly eight feet high at its
 broad shoulders.  Smoke billows from the nostrils of the horse as it breathes.
 ~
-1140852808 1 0 268435484 12480 0 8192 -1000 S
-AE 0 1 3
+1140852808 1 0 0 268435484 12480 0 8192 -1000 S
+AE 0 1 0 3
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -424,8 +424,8 @@ This thing appears to be a cloud of negative energy.  It feeds on the ideas
 and thoughts of the living.  It can regenerate itself simply in the presence
 of mortals who do not hide their intentions.
 ~
-1174407240 1 0 2415919132 12480 524288 8192 -1000 S
-UG 0 4 4
+1174407240 1 0 0 2415919132 12480 524288 8192 -1000 S
+UG 0 4 0 4
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -438,8 +438,8 @@ This strange creature is composed of bright flourescent lights that shift and
 swirl at will.  The beautiful and mesmerizing cloud doesn't seem very friendly
 as it seems very content at causing great anguish.
 ~
-1140852808 1 0 2416443420 12480 524288 8192 -1000 S
-UG 0 4 0
+1140852808 1 0 0 2416443420 12480 524288 8192 -1000 S
+UG 0 4 0 0
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -452,8 +452,8 @@ This small little creature appears to be somewhat playful.  It floats about
 poking and prodding any who come across it.  The strange creature seems to
 enjoy pestering anyone.
 ~
-1140852824 0 0 268959772 12480 0 8192 -1000 S
-HF 0 65536 2
+1140852824 0 0 0 268959772 12480 0 8192 -1000 S
+HF 0 65536 0 2
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -466,8 +466,8 @@ Energy crackles about inside this strange cloud.  It floats effortlessy above
 the ground.  Yellow bolts of lightning seem to be crackling within the center
 of this strange creature.
 ~
-1140853064 1 0 268435484 45248 0 8192 -1000 S
-UG 0 32 4
+1140853064 1 0 0 268435484 45248 0 8192 -1000 S
+UG 0 32 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -480,8 +480,8 @@ This miniature devil is small in stature, but it is a devil nonetheless and
 should be treated with the respect a mature devil receives.  The small beast
 is quick and very strong.  It also posseses the abilities of a spellcaster.
 ~
-1140852808 1 0 268435484 12480 0 8192 -1000 S
-Y 0 256 2
+1140852808 1 0 0 268435484 12480 0 8192 -1000 S
+Y 0 256 0 2
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -494,8 +494,8 @@ A clump of negative energy in the shape of a humanoid wanders the plains here.
 The creature seems to be only have tangible.  50% of the mass for this creature
 is likely residing in the negative plane.
 ~
-1140852936 1 0 268435484 12480 67108864 9216 -1000 S
-EA 0 2 4
+1140852936 1 0 0 268435484 12480 67108864 9216 -1000 S
+EA 0 2 0 4
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -509,8 +509,8 @@ appears to be guarding entry to the castle to the north.  These undead appear
 to be much smarter than most.  They walk in formation and seem to have a sense
 of purpose.
 ~
-100665418 1 0 268435484 14528 0 8192 -1000 S
-U 0 1 3
+100665418 1 0 0 268435484 14528 0 8192 -1000 S
+U 0 1 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -524,8 +524,8 @@ appears to be guarding entry to the castle to the north.  The strong skeleton
 appears to be controlling the others.  It motions for the other skeletons to
 attack.
 ~
-100665416 1 0 268959900 14528 0 8192 -1000 S
-U 0 16 4
+100665416 1 0 0 268959900 14528 0 8192 -1000 S
+U 0 16 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -539,8 +539,8 @@ appears to be guarding entry to the castle to the north.  The strong skeleton
 appears to be controlling the others.  It motions for the other skeletons to
 attack.
 ~
-100665416 1 0 268435612 14528 0 1056768 -1000 S
-U 0 256 4
+100665416 1 0 0 268435612 14528 0 1056768 -1000 S
+U 0 256 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -554,8 +554,8 @@ appears to be guarding entry to the castle to the north.  The strong skeleton
 appears to be controlling the others.  It motions for the other skeletons to
 attack.
 ~
-100665416 1 0 268435612 14529 0 8192 -1000 S
-U 0 512 4
+100665416 1 0 0 268435612 14529 0 8192 -1000 S
+U 0 512 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -569,8 +569,8 @@ completely concealed, and bright red eyes glare out of a battle helm.  The
 knight seems to hover just barely above the ground.  The vicious warrior
 prepares for battle with deadly intensity.
 ~
-100665416 1 0 805306524 47296 0 8397312 -1000 S
-Y 0 16 4
+100665416 1 0 0 805306524 47296 0 8397312 -1000 S
+Y 0 16 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -584,8 +584,8 @@ completely concealed, and bright red eyes glare out of a battle helm.  The
 knight seems to hover just barely above the ground.  The vicious warrior
 prepares for battle with deadly intensity.
 ~
-1174407240 1 0 805306524 47296 0 8397312 -1000 S
-Y 0 16 4
+1174407240 1 0 0 805306524 47296 0 8397312 -1000 S
+Y 0 16 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -599,8 +599,8 @@ completely concealed, and bright red eyes glare out of a battle helm.  The
 knight seems to hover just barely above the ground.  The vicious warrior
 prepares for battle with deadly intensity.
 ~
-100665416 1 0 805306524 47296 0 8397312 -1000 S
-Y 0 16 4
+100665416 1 0 0 805306524 47296 0 8397312 -1000 S
+Y 0 16 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -614,8 +614,8 @@ completely concealed, and bright red eyes glare out of a battle helm.  The
 knight seems to hover just barely above the ground.  The vicious warrior
 prepares for battle with deadly intensity.
 ~
-1174407240 1 0 805306524 47296 0 8397312 -1000 S
-Y 0 16 4
+1174407240 1 0 0 805306524 47296 0 8397312 -1000 S
+Y 0 16 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -629,8 +629,8 @@ completely concealed, and bright red eyes glare out of a battle helm.  The
 knight seems to hover just barely above the ground.  The vicious warrior
 prepares for battle with deadly intensity.
 ~
-100665416 1 0 805306524 47296 0 8397312 -1000 S
-Y 0 80 4
+100665416 1 0 0 805306524 47296 0 8397312 -1000 S
+Y 0 80 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -646,8 +646,8 @@ horseman death~
 &+Lof destruction.  All around him is carnage, with War, Famine and Pestilence at
 &+Lhis side or following in his footsteps.
 ~
-51398728 1 0 805830844 47296 0 8704 -1000 S
-X 0 17825792 6
+51398728 1 0 0 805830844 47296 0 8704 -1000 S
+X 0 17825792 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -668,8 +668,8 @@ supply and suggesting that a neighboring village has plenty, but won't share.
 These kinds of tactics can lead to theft, vandalism and war which means more
 suffering and death. Famine loves these games.
 ~
-50350408 1 0 805830844 45248 128 9445888 -1000 S
-X 0 272 6
+50350408 1 0 0 805830844 45248 128 9445888 -1000 S
+X 0 272 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -693,8 +693,8 @@ horseman pestilence~
 &+gmosquitoes, ants, wasps, bees, a variety of beetles, grasshoppers, spiders,
 &+gscorpions, and larvae.
 ~
-50334792 1 0 805830844 47296 0 8397312 -1000 S
-X 0 144 6
+50334792 1 0 0 805830844 47296 0 8397312 -1000 S
+X 0 144 0 6
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -715,8 +715,8 @@ so he will fight dirty, cheat, lie and do anything to eliminate a foe.
 Furthermore, the monster murders young and old, male and female, the sick,
 sleeping and helpless, without hesitation or regret.
 ~
-50350184 1 0 805830716 14529 0 8397312 -1000 S
-X 0 528 6
+50350184 1 0 0 805830716 14529 0 8397312 -1000 S
+X 0 528 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -730,8 +730,8 @@ dracolich draco~
 &+Land pain.  The large undead beast is as large as a house and as strong as
 &+Lthirty men.
 ~
-1107298376 1 0 805306412 14529 0 8192 -1000 S
-UD 0 1 -1
+1107298376 1 0 0 805306412 14529 0 8192 -1000 S
+UD 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -745,8 +745,8 @@ dracolich draco intelligent~
 &+Land pain.  The large undead beast is as large as a house and as strong as
 &+Lthirty men.
 ~
-1107314760 1 0 805830716 14528 128 8192 -1000 S
-UD 0 256 -1
+1107314760 1 0 0 805830716 14528 128 8192 -1000 S
+UD 0 256 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -759,8 +759,8 @@ Doomguards are ultra-intelligent undead.  The doomguards are the equivalent of
 the mercenarys of the living.  The intelligent monsters contract themselves
 to powerful creatures in return for power and the spoils of war.
 ~
-1174407240 1 0 268959916 0 67108864 8192 -1000 S
-PL 0 32770 3
+1174407240 1 0 0 268959916 0 67108864 8192 -1000 S
+PL 0 32770 0 3
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -775,8 +775,8 @@ of the beholder posess the ability to cast powerful magic.  The seer is a
 fearsome foe, with the ability to conquer small bands of adventurers with
 ease.
 ~
-1174407240 1 0 268435516 32768 0 8192 -1000 S
-BH 0 33 5
+1174407240 1 0 0 268435516 32768 0 8192 -1000 S
+BH 0 33 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -789,8 +789,8 @@ Doomguards are ultra-intelligent undead.  The doomguards are the equivalent of
 the mercenarys of the living.  The intelligent monsters contract themselves
 to powerful creatures in return for power and the spoils of war.
 ~
-1174407240 1 0 268959932 0 0 8192 -1000 S
-PL 0 8192 4
+1174407240 1 0 0 268959932 0 0 8192 -1000 S
+PL 0 8192 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -807,8 +807,8 @@ izykyzz enslaver illithid humanoid~
 &+Mthrill of conquering humanoids, but also the chance to inflict massive amounts
 &+Mof pain upon them.
 ~
-1107298376 1 0 2415919292 2048 524288 8192 -1000 S
-MF 0 4 3
+1107298376 1 0 0 2415919292 2048 524288 8192 -1000 S
+MF 0 4 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -823,8 +823,8 @@ temptress succubus vex~
 &+rgiant-sized, but the succubi are only huge.  Succubi are often powerful
 &+rsorceress' or assassins.  Vex, however, is both.
 ~
-1107298376 0 8388608 270008508 264193 0 8192 -1000 S
-UV 0 8448 5
+1107298376 0 8388608 0 270008508 264193 0 8192 -1000 S
+UV 0 8448 0 5
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -838,8 +838,8 @@ wyrm enormous~
 &+rthe enormous dragon has been enslaved.  The wyrm is very agressive and
 &+rit thrashes about angrily.
 ~
-1174423624 1 0 805306428 14529 0 0 0 S
-D 0 1 -1
+1174423624 1 0 0 805306428 14529 0 0 0 S
+D 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -853,8 +853,8 @@ charged with keeping both the garden and the castle grounds in good condition.
 The demons of the apocalypse would not entrust such an important task to a
 weakling.  This skeletal monster is a strong opponent.
 ~
-100665418 1 0 268435484 12481 67108864 9216 -1000 S
-X 0 130 4
+100665418 1 0 0 268435484 12481 67108864 9216 -1000 S
+X 0 130 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -868,8 +868,8 @@ hydra enormous ravenous~
 &+Gopponent at a time with east.  The hydra is almost as big as a dragon,
 &+Gbut just as vicious in combat.
 ~
-1107315784 1 0 805306428 14529 0 0 0 S
-D 0 1 -1
+1107315784 1 0 0 805306428 14529 0 0 0 S
+D 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -883,8 +883,8 @@ to be praying before an altar dedicated to the apocalypse demons.  This strange
 creature hovers slightly above the ground, and its head is rotating in a
 slight circular motion with its hands raised.
 ~
-1140852808 1 0 268435644 32768 0 8192 -1000 S
-UV 0 33 4
+1140852808 1 0 0 268435644 32768 0 8192 -1000 S
+UV 0 33 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -900,8 +900,8 @@ argorax angelhunter hunter devil~
 &+chunts all angels and other "good" creatures.  The angelhunter is relentless
 &+cin his pursuit to further evil.
 ~
-1174423752 1 0 2417492156 0 0 8192 -1000 S
-Y 0 8192 4
+1174423752 1 0 0 2417492156 0 0 8192 -1000 S
+Y 0 8192 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -914,8 +914,8 @@ horse steed enormous black~
 &+Lstands well over fifty feet high.  The steed of the horsemen is a fantastic
 &+Lbeast and more than capable of destroying small villages by itself.
 ~
-234899530 1 0 536870956 12481 0 0 -1000 S
-D 0 1 -1
+234899530 1 0 0 536870956 12481 0 0 -1000 S
+D 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -928,8 +928,8 @@ This skeleton protects the Horseman.  Its job is to attack any that dare
 the unthinkable and challenge the Horsemen.  The powerful skeleton will
 die(again) for the demon.
 ~
-1174407242 1 0 268435484 12480 0 8192 -1000 S
-U 0 1 4
+1174407242 1 0 0 268435484 12480 0 8192 -1000 S
+U 0 1 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -942,8 +942,8 @@ This skeleton protects the Horseman.  Its job is to attack any that dare
 the unthinkable and challenge the Horsemen.  The powerful skeleton will
 die(again) for the demon.
 ~
-1174407242 1 0 268435468 45248 0 8192 -1000 S
-U 0 32 4
+1174407242 1 0 0 268435468 45248 0 8192 -1000 S
+U 0 32 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -956,8 +956,8 @@ This skeleton protects the Horseman.  Its job is to attack any that dare
 the unthinkable and challenge the Horsemen.  The powerful skeleton will
 die(again) for the demon.
 ~
-1174407242 1 0 268435612 14529 0 8192 -1000 S
-U 0 512 4
+1174407242 1 0 0 268435612 14529 0 8192 -1000 S
+U 0 512 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -971,8 +971,8 @@ to be praying before an altar dedicated to the apocalypse demons.  This strange
 creature hovers slightly above the ground, and its head is rotating in a
 slight circular motion with its hands raised.
 ~
-1140852808 1 0 268435644 32768 0 8192 -1000 S
-UV 0 33 4
+1140852808 1 0 0 268435644 32768 0 8192 -1000 S
+UV 0 33 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -986,8 +986,8 @@ to be praying before an altar dedicated to the apocalypse demons.  This strange
 creature hovers slightly above the ground, and its head is rotating in a
 slight circular motion with its hands raised.
 ~
-1140852808 1 0 268435516 32768 0 8192 -1000 S
-UV 0 33 4
+1140852808 1 0 0 268435516 32768 0 8192 -1000 S
+UV 0 33 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1001,8 +1001,8 @@ to be praying before an altar dedicated to the apocalypse demons.  This strange
 creature hovers slightly above the ground, and its head is rotating in a
 slight circular motion with its hands raised.
 ~
-1140852808 1 0 268435516 32768 0 8192 -1000 S
-UV 0 33 4
+1140852808 1 0 0 268435516 32768 0 8192 -1000 S
+UV 0 33 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1018,8 +1018,8 @@ sslinthssz rakshasa prowler~
 &+rrak&+Yshasa&+L appears to be a very adept prowler.  The &+rrak&+Yshasa&+L is likely here
 &+Lto speak with one of the Horsemen.
 ~
-1174423624 1 0 270008492 0 0 8192 -1000 S
-RA 0 64 4
+1174423624 1 0 0 270008492 0 0 8192 -1000 S
+RA 0 64 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1033,8 +1033,8 @@ platinum dragon majestic~
 &+Cbeast is here, but it doesn't seem interested in the party.  Perhaps it
 &+Cis here to investigate the activities of the Horsemen.
 ~
-1174423880 0 0 805306556 14529 0 0 1000 S
-D 0 512 -1
+1174423880 0 0 0 805306556 14529 0 0 1000 S
+D 0 512 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1050,8 +1050,8 @@ deadly vampire~
 &+Lhe chants softly, calling upon the perverted
 &+Lnatural forces.
 ~
-33585226 1 0 268435772 0 0 0 -1000 S
-UV 0 256 6
+33585226 1 0 0 268435772 0 0 0 -1000 S
+UV 0 256 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1064,8 +1064,8 @@ This sturdy man is scarred from a lifetime of battles, struggles, and
 angry fights that held little purpose.  He now keeps watch over the vault,
 happily teaching those that this is not a place to tread lightly.
 ~
-31308 1 0 939597884 14556 0 0 -1000 S
-PO 0 17 6
+31308 1 0 0 939597884 14556 0 0 -1000 S
+PO 0 17 0 6
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -462,6 +462,7 @@ E 1 77734 1 9 30 0 0 0             *   the sacred stone claws of Aan
 E 1 77740 1 19 100 0 0 0           *   a frost dragon's eye
 G 1 360 1 0 100 0 0 0              *    (object type not in this .obj file)
 G 1 67201 1 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 77738 1 0 100 0 0 0            *    Illesarus, the Sword of Sharpness
 M 0 77735 1 77899 100 0 0 0        * the manifestation of Jadem
 M 0 77736 1 77903 100 0 0 0        * the angry beholder
 M 0 77737 5 77904 100 0 0 0        * the carrion spider

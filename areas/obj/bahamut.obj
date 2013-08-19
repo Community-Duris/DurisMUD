@@ -514,7 +514,7 @@ thin rune bracelet jade~
 ~
 9 38 3 0 14 75 9728 4097 64 85458945 533078016
 10 11 1 4 0 0 0 0
-1 100000 100 0 64 0 0
+1 100000 100 536870912 64 0 0
 E
 thin rune bracelet jade~
 This otherwise unremarkable jade bracelet
@@ -522,9 +522,9 @@ has a special rune of power inscribed on
 it that makes it glow with a soft light.
 ~
 A
-19 3
+19 5
 A
-13 20
+13 25
 #25731
 book~
 &+ra small book bound in red dragon hatchling hide&n~

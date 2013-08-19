@@ -237,7 +237,7 @@ sword tormenting _noquest_~
 &+LAn ebony blade lies on the floor&N &+Wshimmering&N &+Llightly.&N~
 ~
 5 16 3 10 7 0 5383168 8193 66 87572507 0
-5 3 5 3 0 0 0 0
+5 7 5 3 0 0 0 0
 30 76393 100
 E
 sword tormenting~
@@ -442,7 +442,7 @@ leather mask~
 have been etched on it.
 ~
 A
-23 -3
+23 -5
 A
 19 2
 #15141

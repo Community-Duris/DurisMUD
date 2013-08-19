@@ -4164,7 +4164,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
           TRUE, ch, 0, victim, TO_VICT);
          act("$n's &+Bicy spell causes&n $N to writhe in agony!&n",
           TRUE, ch, 0, victim, TO_NOTVICT);
-         dam *= (int) (IS_EFREET(victim) ? (.75 * dam_factor[DF_VULNCOLD]) : (dam_factor[DF_VULNCOLD]));
+         dam *= (IS_EFREET(victim) ? (.75 * dam_factor[DF_VULNCOLD]) : (dam_factor[DF_VULNCOLD]));
        }
        else if ( IS_AFFECTED2(victim, AFF2_FIRE_AURA) )
        {

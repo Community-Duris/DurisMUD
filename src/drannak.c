@@ -356,15 +356,15 @@ int pvp_store(P_char ch, P_char pl, int cmd, char *arg)
 	else if(strstr(arg, "1"))
     {//buy1
 	//check for 50 soul shards
-	if (vnum_in_inv(pl, 400230) < 6)
+	if (vnum_in_inv(pl, 400230) < 2)
 	{
 	  send_to_char("&+LThe Harvester&+L &+wsays '&nI'm sorry, but you do not seem to have the 6 e&+Wt&+Lh&+rer&+Le&+Wa&+wl &+Wsoul &+rshards&n required to purchase that item.\r\n&n", pl);
 	  return TRUE;
         }
-	//subtract 6 soul shards
+	//subtract 2 soul shards
        P_obj obj;
 	obj = read_object(400231, VIRTUAL);
-	vnum_from_inv(pl, 400230, 6);
+	vnum_from_inv(pl, 400230, 2);
        send_to_char("&+LThe Harvester&+L &+wsays '&nExcellent, mortal.'\n", pl);
 	send_to_char("&+LThe Harvester &ntakes the &+rshards&n from you and tightly grasps them with his hands. After a moment, a large grin appears across it's face.\r\n&n", pl);
 	send_to_char("Moments later, &+LThe Harvester &nmakes a strange gesture about your body.\r\n&n", pl);

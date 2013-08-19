@@ -7,8 +7,8 @@ rat large fat~
 &+yfor food adventurers have left in their attempt to escape the horrors of
 &+ythe dark dungeon.
 ~
-142 0 0 33554432 0 0 0 0 S
-A 0 0 -1
+142 0 0 0 33554432 0 0 0 0 S
+A 0 0 0 -1
 19 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -21,8 +21,8 @@ orc robust~
 &+gHe waits for intruders with anticipation and glee, for only then can he pacify
 &+hhis urges to murder and steal.
 ~
-1140852814 1 0 33554488 0 0 0 -500 S
-HO 0 1 -1
+1140852814 1 0 0 33554488 0 0 0 -500 S
+HO 0 1 0 -1
 43 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -38,8 +38,8 @@ durnan wanderer bartender~
 &+Bbe magical. He seems to be very friendly, though wary of those who would do him
 &+Bharm.  He is always ready to share information of the dark dungeon Undermountain.
 ~
-33554506 0 0 570433560 12483 0 0 700 S
-PH 0 1 -1
+33554506 0 0 0 570433560 12483 0 0 700 S
+PH 0 1 0 -1
 59 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -54,8 +54,8 @@ She is dressed in a comfortable dress and carries no weapons openly.
 Occassionally she will stop and speak with a tavern regular about the latest
 gossip in the Realms.
 ~
-100663386 0 0 73736 0 0 0 700 S
-PH 0 32 -1
+100663386 0 0 0 73736 0 0 0 700 S
+PH 0 32 0 -1
 30 8 3 30d60+360 3d6+4
 0.5.7.1 26730
 8 8 2
@@ -68,8 +68,8 @@ drunk regular~
 &+Lat jokes from his friends. He would probably be a strong and able man if he
 &+Lwere sober. He appears to be unarmed and sits with his back against the wall.
 ~
-67108938 0 0 8 0 0 0 700 S
-PH 0 1 -1
+67108938 0 0 0 8 0 0 0 700 S
+PH 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -83,8 +83,8 @@ quiet patron~
 &+bher readings. She wears long flowing blue robes with a hood, which is pulled
 &+bover her head. She is aloof and seems to care little of her surroundings.
 ~
-67108938 0 0 132 0 0 0 0 S
-PH 0 2048 -1
+67108938 0 0 0 132 0 0 0 0 S
+PH 0 2048 0 -1
 15 15 51 15d18+60 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -98,8 +98,8 @@ lucky gambler~
 &+Wanother hand. Around his neck is a softly glowing Holy Symbol of Tymora, the
 &+WGoddess of Luck.
 ~
-67108938 0 0 0 0 0 0 1000 S
-PH 0 32 -1
+67108938 0 0 0 0 0 0 0 1000 S
+PH 0 32 0 -1
 15 15 51 15d25+75 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -113,8 +113,8 @@ shadowbeast deadly shadow~
 &+Land a massive mouth with razor sharp teeth. It watches intently, waiting for
 &+Lprospective prey to pass by.
 ~
-1107429452 1 0 167837758 0 0 0 -1000 S
-U 0 1 -1
+1107429452 1 0 0 167837758 0 0 0 -1000 S
+U 0 1 0 -1
 40 -1 -84 45d107+2340 6d6+12
 5.9.4.6 164025
 8 8 0
@@ -127,8 +127,8 @@ orc guard~
 &+gwields a short sword. Occasionally he'll grunt something under his breath in
 &+gOrc.
 ~
-1140852814 1 0 33554552 0 0 0 -500 S
-HO 0 1 -1
+1140852814 1 0 0 33554552 0 0 0 -500 S
+HO 0 1 0 -1
 40 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -142,8 +142,8 @@ owlbear male~
 &+Lcolor. The red-rimmed eyes of this beast watches its lair with a ravenous
 &+Lgaze.
 ~
-1073743882 1 0 120 0 0 0 0 S
-AC 0 0 4
+1073743882 1 0 0 120 0 0 0 0 S
+AC 0 0 0 4
 45 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 1
@@ -157,8 +157,8 @@ owlbear female~
 &+ysomewhat light in color and the fur is a solid black color. She appears to
 &+ybe pregnant which causes a slighly aggressive attitude to intruders.
 ~
-1073743882 1 0 56 0 0 0 0 S
-AC 0 0 3
+1073743882 1 0 0 56 0 0 0 0 S
+AC 0 0 0 3
 30 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 2
@@ -172,8 +172,8 @@ bugbear weary~
 &+yancestry of this creature is quite evident with a quick glance in its eye.
 &+yThis particular bugbear appears worn out after a recent battle.
 ~
-1073744074 1 0 33554552 0 0 0 -500 S
-H 0 1 -1
+1073744074 1 0 0 33554552 0 0 0 -500 S
+H 0 1 0 -1
 47 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -187,8 +187,8 @@ stirge hungry~
 &+rclamp fimly upon their victims. The stirge is a rusty-brown color and its beak
 &+ris a faded gray shade.
 ~
-1073874954 1 0 134217768 0 0 0 0 S
-B 0 0 -1
+1073874954 1 0 0 134217768 0 0 0 0 S
+B 0 0 0 -1
 30 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -202,8 +202,8 @@ nnesk cowardly goblin~
 &+Rmurder and steal from. He is however, not an opponent to be taken lightly,
 &+Rfor when roused he can be a formidable opponent.
 ~
-2190 1 0 33554456 0 0 0 -1000 S
-HG 0 1 -1
+2190 1 0 0 33554456 0 0 0 -1000 S
+HG 0 1 0 -1
 38 15 64 11d27+66 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -217,8 +217,8 @@ baneguard skeletal guard~
 &+Lused to keep watch over important areas by mages and clerics working together.
 &+LIn this case, the baneguard watches over the temple to Gulkulath.
 ~
-1140852746 1 0 33620024 4160 0 0 -1000 S
-SK 0 512 -1
+1140852746 1 0 0 33620024 4160 0 0 -1000 S
+SK 0 512 0 -1
 50 11 32 21d32+168 3d5+3
 0.0.0.0 18711
 8 8 1
@@ -231,8 +231,8 @@ saurogh orc stealthy~
 &+genough to enter his territory. He watches with gleaming black eyes intently,
 &+gwaiting for the perfect time to launch his deadly offensive.
 ~
-1073744014 1 0 35127356 0 0 0 -1000 S
-HO 0 16384 -1
+1073744014 1 0 0 35127356 0 0 0 -1000 S
+HO 0 16384 0 -1
 46 -3 -72 46d119+2530 6d6+25
 6.0.9.4 111780
 8 8 1
@@ -246,8 +246,8 @@ giant hill~
 &+yale within this old storeroom, and now is sleeping like a baby upon his make-
 &+yshift bed.
 ~
-1073743882 1 0 124 0 0 0 -700 S
-G 0 1 -1
+1073743882 1 0 0 124 0 0 0 -700 S
+G 0 1 0 -1
 45 2 -18 40d95+1120 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -261,8 +261,8 @@ troll deadly~
 &+gtappering to the center of its back. The trolls long pointed, warty nose is
 &+ga hideous sight coupled with its elongated finger and sharp claws.
 ~
-1073743882 1 0 33554556 0 0 0 -1000 S
-PT 0 1 -1
+1073743882 1 0 0 33554556 0 0 0 -1000 S
+PT 0 1 0 -1
 38 2 -21 38d95+874 4d7+10
 1.2.2.2 49248
 8 8 1
@@ -277,8 +277,8 @@ wererat mad~
 &+Lran rampant in Verzanan, but since law and order has been established, they
 &+Lhave been forced underground for the most part.
 ~
-1073743884 1 0 35127356 262144 0 0 -1000 S
-L 0 20480 -1
+1073743884 1 0 0 35127356 262144 0 0 -1000 S
+L 0 20480 0 -1
 56 -1 -56 41d90+1763 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -292,8 +292,8 @@ its skin is a dull yellow shade with various colors of disgusting warts all
 over. This particular ogre carries a big stick and has a murderous glee within
 its eyes.
 ~
-1073744014 1 0 33554492 0 0 0 -1000 S
-PO 0 1 -1
+1073744014 1 0 0 33554492 0 0 0 -1000 S
+PO 0 1 0 -1
 46 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -308,8 +308,8 @@ kevlar mysterious man~
 &+Lmagnificient weapon, which he wields reveals otherwise. He watches warily with
 &+La stoic expression upon his battle weary face.
 ~
-1073743948 0 0 98428 0 0 0 1000 S
-PH 0 16384 -1
+1073743948 0 0 0 98428 0 0 0 1000 S
+PH 0 16384 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -323,8 +323,8 @@ thorn huge barbarian~
 &+BRed Dragon Armor proves his prowess in battle and the kill notches upon each
 &+Bof his many weapons reveal the constant struggles which he has endured.
 ~
-1107298380 0 0 8192 0 0 0 500 S
-PB 0 1 -1
+1107298380 0 0 0 8192 0 0 0 500 S
+PB 0 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -339,8 +339,8 @@ korelar wary woodsman~
 &+yscimitar, in the other an intricate short sword. His deep black eyes are hazed
 &+yover with an ambiance of fearlessness.
 ~
-1107298382 0 0 134226156 0 0 0 700 S
-PH 0 2 -1
+1107298382 0 0 0 134226156 0 0 0 700 S
+PH 0 2 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -354,8 +354,8 @@ kobold ugly~
 &+Lcap which it likely stole. Its glowing, bulging red eyes stare menacingly
 &+Linto the darkness.
 ~
-1073744012 1 0 33554556 0 0 0 -700 S
-HG 0 1 -1
+1073744012 1 0 0 33554556 0 0 0 -700 S
+HG 0 1 0 -1
 39 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -369,8 +369,8 @@ orc timid~
 &+yarray of mismatched clothing all of which are in the earth tones. His piercing
 &+yeyes penetrate the darkness with a glowing red aura.
 ~
-1073744012 0 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+1073744012 0 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 35 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -384,8 +384,8 @@ goblin menacing~
 &+Rmanacing glare and ravenous look, causes a little bit of wariness in all which
 &+Rsee him.
 ~
-1073744012 1 0 33554556 0 0 0 -1000 S
-HG 0 1 -1
+1073744012 1 0 0 33554556 0 0 0 -1000 S
+HG 0 1 0 -1
 38 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 0
@@ -399,8 +399,8 @@ centipede large~
 &+Lrevulsion in all who approach it. Its tentacles move about wildly as it
 &+Lsearches for its next victim.
 ~
-1073744008 1 0 24 0 0 0 0 S
-I 0 0 -1
+1073744008 1 0 0 24 0 0 0 0 S
+I 0 0 0 -1
 38 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 1
@@ -413,8 +413,8 @@ skeleton~
 &+Wwatches time pass. The highly polished bones and dull red glow of eyes within
 &+Wthe skull show this to be the horrible creation of a evil wizard or cleric.
 ~
-67110926 1 0 33554684 4160 0 0 -1000 S
-SK 0 1 -1
+67110926 1 0 0 33554684 4160 0 0 -1000 S
+SK 0 1 0 -1
 50 11 26 23d47+230 3d5+3
 0.0.0.0 20493
 8 8 1
@@ -427,8 +427,8 @@ zombie~
 &+Gthe carcass of a rotting corpse. The zombie wanders both aimlessly and
 &+Gcarelessly as it now, no longer has a master to control it.
 ~
-2058 1 0 248 6210 0 0 -1000 S
-ZO 0 1 -1
+2058 1 0 0 248 6210 0 0 -1000 S
+ZO 0 1 0 -1
 51 18 71 9d18+31 2d3+1
 0.0.0.0 1166
 8 8 1
@@ -441,8 +441,8 @@ spider large brown~
 &+yfangs of the spider click together making both an annoying and distracting
 &+ysound which further aids the foul creature in capturing its prey.
 ~
-1073744010 1 0 67108924 0 0 0 0 S
-AS 0 0 -1
+1073744010 1 0 0 67108924 0 0 0 0 S
+AS 0 0 0 -1
 31 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -455,8 +455,8 @@ hobgoblin large~
 &+yone hand he wields a large shield and in the other a massive club. The
 &+yhobgoblin regards his enemies intently, while waiting to make a move.
 ~
-1140852744 1 0 33554492 0 0 0 -700 S
-HG 0 1 -1
+1140852744 1 0 0 33554492 0 0 0 -700 S
+HG 0 1 0 -1
 40 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -469,8 +469,8 @@ carrion crawler~
 &+Bencircled by a row of teeth proves otherwise. It scavenges the ground for
 &+Bprey and carrion, for it will eat almost anything.
 ~
-2184 1 0 60 0 0 0 0 S
-I 0 1 -1
+2184 1 0 0 60 0 0 0 0 S
+I 0 1 0 -1
 39 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 1
@@ -483,8 +483,8 @@ hell hound~
 &+Rand fiery eyes stare down its prey. It breaths short spurts of fire as its
 &+Rpulse quickens and it readies for the attack.
 ~
-1174407210 1 0 570949688 0 0 0 -1000 S
-X 0 1 -1
+1174407210 1 0 0 570949688 0 0 0 -1000 S
+X 0 1 0 -1
 38 6 -27 35d83+840 4d6+7
 9.9.1.3 68040
 8 8 1
@@ -497,8 +497,8 @@ hobgoblin smelt tong~
 &+yto strike out at any unwary intruders. Perhaps he works along, or perhaps he
 &+yworks for someone. Only Tong knows and he is too busy to tell.
 ~
-1073744076 0 0 34603032 2048 0 0 -1000 S
-HG 0 1 -1
+1073744076 0 0 0 34603032 2048 0 0 -1000 S
+HG 0 1 0 -1
 53 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -511,8 +511,8 @@ wyvern annoyed~
 &+Lclaws strike at its victims with a fury very few men can endure. It glides
 &+Labout the room as it tries to discover an escape route from the dreary dungeon.
 ~
-1073874954 1 0 134217784 0 0 0 0 S
-R 0 1 4
+1073874954 1 0 0 134217784 0 0 0 0 S
+R 0 1 0 4
 40 8 3 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 1
@@ -525,8 +525,8 @@ plant carnivorous~
 &+Gthat the plant has prehensile limbs and after strangling its victims it wraps
 &+Gthe victim up and squeezes the internal juices from the dead carcass.
 ~
-67110922 0 0 1048616 0 0 0 0 S
-VT 0 0 -1
+67110922 0 0 0 1048616 0 0 0 0 S
+VT 0 0 0 -1
 42 11 19 25d40+450 3d5+3
 0.0.0.0 22275
 8 8 1
@@ -539,8 +539,8 @@ wereboar angry~
 &+yand a man. The new creature is vile and evil, seeking only to benefit itself
 &+ythrough murder, treachery and thievery.
 ~
-1140852750 1 0 33554552 0 0 0 -1000 S
-L 0 1 -1
+1140852750 1 0 0 33554552 0 0 0 -1000 S
+L 0 1 0 -1
 51 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -554,8 +554,8 @@ salamander fiery~
 &+RIt stands erect and stares at intruders with fiery yellow eyes. It looks quite
 &+Rhostile.
 ~
-1073743886 0 0 536870972 1 0 0 -1000 S
-EF 0 1 -1
+1073743886 0 0 0 536870972 1 0 0 -1000 S
+EF 0 1 0 -1
 40 -1 -75 44d107+1980 6d6+12
 0.0.0.0 106920
 8 8 1
@@ -569,8 +569,8 @@ goblin devious~
 &+Rstrain of goblin is very intelligent and highly devious. It waits in
 &+Rambush for unsuspecting victims.
 ~
-1140852750 1 0 34078844 0 0 0 -1000 S
-HG 0 16384 -1
+1140852750 1 0 0 34078844 0 0 0 -1000 S
+HG 0 16384 0 -1
 40 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -584,8 +584,8 @@ large goblin leader~
 &+ra grip on his servants with an iron wit and fist. He stands nearly six feet
 &+rtall and silently watches his warriors.
 ~
-1073743886 1 0 33554616 2049 0 0 -1000 S
-HG 0 1 -1
+1073743886 1 0 0 33554616 2049 0 0 -1000 S
+HG 0 1 0 -1
 60 2 -24 39d95+897 4d7+10
 2.2.3.2 50544
 8 8 1
@@ -599,8 +599,8 @@ drow warrior guard~
 &+mthe way during battle. He is fierce warrior and is notably skilled in both
 &+mstealth and killing.
 ~
-1140852750 1 0 101187704 0 0 0 -1000 S
-PL 0 1 -1
+1140852750 1 0 0 101187704 0 0 0 -1000 S
+PL 0 1 0 -1
 45 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -613,8 +613,8 @@ drow honor guard~
 &+mSalvetarn, a lesser Drow god. The honor guard are formidable opponents and
 &+mare not warriors to be taken lightly.
 ~
-67110926 1 0 101187644 2049 0 0 -1000 S
-PL 0 1 -1
+67110926 1 0 0 101187644 2049 0 0 -1000 S
+PL 0 1 0 -1
 50 2 -24 39d95+897 4d7+10
 2.2.3.2 50544
 8 8 1
@@ -627,8 +627,8 @@ spider large black~
 &+LSalvetarm. It hangs high in the rafters and awaits for intruders so it may
 &+Lfeast upon the unwary.
 ~
-67110926 1 0 101712152 0 0 0 -1000 S
-AS 0 0 -1
+67110926 1 0 0 101712152 0 0 0 -1000 S
+AS 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -642,8 +642,8 @@ essra drow priestess~
 &+madvantage she can make. Her powerful whip snaps as she orders about her
 &+mservants.
 ~
-30730 1 0 100728968 35036 0 0 -1000 S
-PL 0 32 -1
+30730 1 0 0 100728968 35036 0 0 -1000 S
+PL 0 32 0 -1
 59 -1 -59 42d99+1848 6d6+12
 2.8.7.3 102060
 8 8 2
@@ -658,8 +658,8 @@ grimlock warrior~
 &+Lthe sides of their mouth. They communicate silently is seems. They are fierce
 &+Lwarriors and fight to the death for glory and conquest.
 ~
-2062 1 0 34078844 0 0 0 -1000 S
-H 0 1 -1
+2062 1 0 0 34078844 0 0 0 -1000 S
+H 0 1 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -673,8 +673,8 @@ grimlock leader~
 &+Lorders his warriors into battle and prepares them for any encounters they may
 &+Lendure.
 ~
-1073743886 1 0 35127356 14337 0 0 -1000 S
-H 0 1 -1
+1073743886 1 0 0 35127356 14337 0 0 -1000 S
+H 0 1 0 -1
 60 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -687,8 +687,8 @@ grimlock shaman~
 &+Lmen in battle. He is well equipped and highly proficient in the arcane arts.
 &+LHis silent vigil serves its own agenda however, what this is, noone knows.
 ~
-2058 1 0 34668552 0 0 0 -1000 S
-H 0 256 -1
+2058 1 0 0 34668552 0 0 0 -1000 S
+H 0 256 0 -1
 56 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -701,8 +701,8 @@ flying dagger~
 &+Croom attacking anyone who enters. What this abominations purpose is, only its
 &+Ccreator knows.
 ~
-75630602 1 0 134217736 0 0 0 0 S
-G 0 1 -1
+75630602 1 0 0 134217736 0 0 0 0 S
+G 0 1 0 -1
 43 13 45 20d30+200 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -715,8 +715,8 @@ baneguard skeletal guard~
 &+Wevil cleric working together. Sometimes, however, the binding magic goes awry
 &+Wand the baneguard becomes a terrible monster, which kills indiscrimanantly.
 ~
-67110922 1 0 65596 6208 2097152 0 -1000 S
-SK 0 1 -1
+67110922 1 0 0 65596 6208 2097152 0 -1000 S
+SK 0 1 0 -1
 50 6 -12 35d56+525 4d6+7
 0.0.0.0 45360
 8 8 1
@@ -729,8 +729,8 @@ brown mold~
 &+yyellow and its ravenous appetite is never satiated. This is one of the more
 &+ydeadly forms of mold in the realms.
 ~
-1073743882 1 0 34603050 0 0 0 0 S
-AP 0 0 -1
+1073743882 1 0 0 34603050 0 0 0 0 S
+AP 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -744,8 +744,8 @@ ettercap~
 &+yback. Its long arms reach to its ankles and its razor sharp claws form awesome
 &+yweapons when in battle.
 ~
-1073743886 1 0 33554488 0 0 0 -1000 S
-G 0 1 -1
+1073743886 1 0 0 33554488 0 0 0 -1000 S
+G 0 1 0 -1
 55 2 -18 40d95+1120 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -758,8 +758,8 @@ spider~
 &+Lare constantly clicking together. The sight of this hairy beast is enough to
 &+Lmake even the most stout dwarf run for cover in the sunlight.
 ~
-67110926 1 0 68157464 0 0 0 0 S
-AS 0 1 -1
+67110926 1 0 0 68157464 0 0 0 0 S
+AS 0 1 0 -1
 33 13 39 19d30+95 3d4+2
 0.0.0.0 9234
 8 8 1
@@ -774,8 +774,8 @@ malodin demilich~
 &+Whave not dimished and he still maintains a powerful repertoire of offensive
 &+Wand defensive spells.
 ~
-1107458058 1 0 167837950 276673 0 0 -1000 S
-UL 0 512 -1
+1107458058 1 0 0 167837950 276673 0 0 -1000 S
+UL 0 512 0 -1
 60 -3 -85 50d80+2900 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -788,8 +788,8 @@ red huge spider~
 &+rof short swords. Its chitinous armor is dark red and its many eyes watch
 &+rfor prey carefully.
 ~
-1107298314 1 0 638582812 0 0 0 -1000 S
-AS 0 1 4
+1107298314 1 0 0 638582812 0 0 0 -1000 S
+AS 0 1 0 4
 54 -1 -69 45d107+2025 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -802,8 +802,8 @@ kobold leader~
 &+Lenhanced by someone in an attempt to produce a more reliable kobold leader,
 &+Las the normal strains of kobold are very unpredictable and lack serious morale.
 ~
-2062 1 0 33554492 2048 0 0 -1000 S
-HG 0 1 -1
+2062 1 0 0 33554492 2048 0 0 -1000 S
+HG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -816,8 +816,8 @@ ghoul hungry~
 &+gof the living. They are, however, not mindless creatures like zombies and
 &+gskeletons. They are cunning and hunt their prey very effectively.
 ~
-2058 0 0 33554488 64 0 0 -1000 S
-U 0 1 -1
+2058 0 0 0 33554488 64 0 0 -1000 S
+U 0 1 0 -1
 35 2 -21 38d95+874 4d7+10
 0.0.0.0 49248
 8 8 1
@@ -830,8 +830,8 @@ ghast rancid~
 &+Gthat ghasts exude a rancid, nauseating stench. The smell is often so unbearable
 &+Gas to provoke vomiting in many of the most stalwart adventurers.
 ~
-2058 1 0 56 64 0 0 -1000 S
-U 0 0 -1
+2058 1 0 0 56 64 0 0 -1000 S
+U 0 0 0 -1
 40 -1 -69 45d90+1935 6d6+12
 0.0.0.0 109350
 8 8 1
@@ -845,8 +845,8 @@ spectre haunting~
 &+LGod of the Dead and his payment for this was immortality in the form of a
 &+Lspectre.
 ~
-1073764426 1 0 559322 192 0 0 -1000 S
-SP 0 32 -1
+1073764426 1 0 0 559322 192 0 0 -1000 S
+SP 0 32 0 -1
 40 -3 -72 46d110+2484 6d6+25
 0.0.0.0 111780
 8 8 1
@@ -859,8 +859,8 @@ ochre jelly~
 &+Beverything from metal to flesh. Its amorphous form allows it to travel on
 &+Bwalls and ceilings where it can drop upon unsuspecting victims.
 ~
-1073743882 1 0 56 0 0 0 0 S
-AP 0 0 -1
+1073743882 1 0 0 56 0 0 0 0 S
+AP 0 0 0 -1
 36 15 58 13d23+52 2d5+2
 0.0.0.0 6318
 8 8 1
@@ -873,8 +873,8 @@ animated sword~
 &+Yintelligence and its dancing avoidance makes it make to strike. One wonders
 &+Yis perhaps this ancient blade is the trapped soul of a long dead mortal.
 ~
-67270666 1 0 251658488 0 0 0 -200 S
-OG 0 1 -1
+67270666 1 0 0 251658488 0 0 0 -200 S
+OG 0 1 0 -1
 48 -3 -85 50d119+3000 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -887,8 +887,8 @@ trapper~
 &+Lexactly like the floor here. It obviously created the box-looking proturbance
 &+Lto lure unsuspecting victims into its reach, where it can then devour them.
 ~
-18446 1 0 1048616 0 0 0 -1000 S
-AP 0 1 -1
+18446 1 0 0 1048616 0 0 0 -1000 S
+AP 0 1 0 -1
 41 11 23 24d40+192 3d5+3
 0.0.0.0 21384
 8 8 1
@@ -901,8 +901,8 @@ guardian skeleton guard~
 &+Wthat it is a more formidable warrior and has several unique abilities which
 &+Waid it in its guarding purpose.
 ~
-6154 1 0 184 264259 0 0 -1000 S
-SK 0 1 -1
+6154 1 0 0 184 264259 0 0 -1000 S
+SK 0 1 0 -1
 56 6 -5 33d83+561 4d6+7
 0.0.0.0 42768
 8 8 1
@@ -915,8 +915,8 @@ armor suit horror helm~
 &+Rnot seem right. Its almost as if the armor stood watch over something or
 &+Rsomeone.
 ~
-75503626 1 0 637567032 64 0 0 0 S
-OG 0 1 -1
+75503626 1 0 0 637567032 64 0 0 0 S
+OG 0 1 0 -1
 54 6 0 31d83+527 4d6+7
 0.0.0.0 40176
 8 8 1
@@ -928,8 +928,8 @@ giant bat~
 &+LThis giant bat appears as a winged rodent with leathery wings. It flies about
 &+Lthe room making considerable noise, but seems fairly harmless otherwise.
 ~
-131080 0 0 567560 0 0 0 0 S
-AH 0 0 -1
+131080 0 0 0 567560 0 0 0 0 S
+AH 0 0 0 -1
 14 15 55 14d23+56 2d5+2
 0.0.0.0 6804
 8 8 1
@@ -942,8 +942,8 @@ manticore massive~
 &+yIts tail contains a series of deadly spikes. Its mouth drips hot saliva as it
 &+yeagerly searches for flesh to consume.
 ~
-1073743884 1 0 56 0 0 0 -1000 S
-AC 0 1 -1
+1073743884 1 0 0 56 0 0 0 -1000 S
+AC 0 1 0 -1
 42 -3 -75 47d119+2585 6d6+25
 0.0.0.0 114210
 8 8 1
@@ -957,8 +957,8 @@ leucrotta huge~
 &+yof prey and can grow to nine feet in length and stands seven feet tall at the
 &+yshoulders.
 ~
-1073743884 1 0 56 0 0 0 -1000 S
-AC 0 0 -1
+1073743884 1 0 0 56 0 0 0 -1000 S
+AC 0 0 0 -1
 50 8 10 28d55+308 3d6+4
 0.0.0.0 24948
 8 8 1
@@ -971,8 +971,8 @@ living web~
 &+Lweb. The creature is actually a dangerous predator and its deceptive nature
 &+Lcan cause some confusion in identifying it as such.
 ~
-1073743880 0 0 67108922 0 0 0 0 S
-AP 0 0 -1
+1073743880 0 0 0 67108922 0 0 0 0 S
+AP 0 0 0 -1
 32 13 48 16d30+80 3d4+2
 0.0.0.0 7776
 8 8 1
@@ -985,8 +985,8 @@ heucuva~
 &+Wdangerous. The heucuva bears not weapons and no other items, save its once
 &+Wflowing robe.
 ~
-1073743880 1 0 33661052 1216 0 0 -1000 S
-U 0 1024 -1
+1073743880 1 0 0 33661052 1216 0 0 -1000 S
+U 0 1024 0 -1
 41 -1 -56 41d72+1763 6d6+12
 0.0.0.0 99630
 8 8 1
@@ -999,8 +999,8 @@ fire beetle~
 &+Rwith a large protruding mandible which it eagerly clicks together as it nears
 &+Rits prey.
 ~
-1073743880 1 0 56 1 0 0 0 S
-I 0 0 -1
+1073743880 1 0 0 56 1 0 0 0 S
+I 0 0 0 -1
 13 15 58 13d23+52 2d5+2
 0.0.0.0 6318
 8 8 1
@@ -1014,8 +1014,8 @@ jackelwere savage~
 &+yand waits in ambush for unsuspecting travellers. It is simply a cross between
 &+ya man and a jackel, with the ability to assume the forms of both.
 ~
-1073743884 1 0 56 0 0 0 -900 S
-AC 0 1 -1
+1073743884 1 0 0 56 0 0 0 -900 S
+AC 0 1 0 -1
 42 8 13 27d65+351 3d6+4
 0.0.0.0 24057
 8 8 1
@@ -1029,8 +1029,8 @@ cave fisher~
 &+Lsubterranean areas. Its long snout exudes an adhesive trapline which it uses
 &+Lto snare its victims.
 ~
-1073744012 1 0 56 0 0 0 0 S
-I 0 0 -1
+1073744012 1 0 0 56 0 0 0 0 S
+I 0 0 0 -1
 44 15 55 14d23+56 2d5+2
 0.0.0.0 6804
 8 8 1
@@ -1046,8 +1046,8 @@ umber hulk~
 &+Bof a different species. One set of eyes is merely a set of black dots, while
 &+Bthe other set appear to be those of a compound insect's.
 ~
-18444 1 0 33554492 0 0 0 -500 S
-AC 0 1 -1
+18444 1 0 0 33554492 0 0 0 -500 S
+AC 0 1 0 -1
 42 2 -28 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 1
@@ -1062,8 +1062,8 @@ sharn deadly~
 &+Lpurplish aura. It also has many multiple jointed arms which it strikes its
 &+Lopponents with.
 ~
-1073874952 1 0 134217786 64 0 0 -1000 S
-U 0 1024 -1
+1073874952 1 0 0 134217786 64 0 0 -1000 S
+U 0 1024 0 -1
 36 2 -15 36d64+756 4d7+10
 0.0.0.0 46656
 8 8 1
@@ -1077,8 +1077,8 @@ gnoll vicious~
 &+cstand erect. Their greenish-grey skin darkens to a fine black coat at its
 &+cmuzzle. The gnoll is a formidable opponent.
 ~
-2188 1 0 33554488 0 0 0 -1000 S
-H 0 1 -1
+2188 1 0 0 33554488 0 0 0 -1000 S
+H 0 1 0 -1
 38 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -1093,8 +1093,8 @@ fomorian giant-kin giant~
 &+gwarty bulbous skin and horrible stench cause renching and nausea in even the
 &+ghardiest adventurer.
 ~
-2060 0 0 40 0 0 0 -1000 S
-G 0 1 -1
+2060 0 0 0 40 0 0 0 -1000 S
+G 0 1 0 -1
 50 6 -2 35d83+770 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -1110,8 +1110,8 @@ mind flayer illithid~
 &+Mwould go, with which they bore into the skull of their victims to dine on
 &+Mhis or her brain. They are feared throughout the realms.
 ~
-1107298316 1 0 216 0 0 0 -1000 S
-MF 0 4 -1
+1107298316 1 0 0 216 0 0 0 -1000 S
+MF 0 4 0 -1
 47 2 -15 36d64+756 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -1124,8 +1124,8 @@ shadow~
 &+Lblack and very hard to see. Its motives and sustenance are unknown, but it
 &+Ldoes love to kill, possibly out of jealosy or possibly for pleasure.
 ~
-1073891336 1 0 135332030 64 0 0 -1000 S
-SW 0 1 -1
+1073891336 1 0 0 135332030 64 0 0 -1000 S
+SW 0 1 0 -1
 33 8 3 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 1
@@ -1139,8 +1139,8 @@ hostile dungeon. Its sole purpose is to clear away carrion and keep the dungeon
 clean. The gelatinuous cube is exactly ten by ten by ten, but many forms of the
 cube have been know to grow larger.
 ~
-1073764364 1 0 524350 4096 0 0 0 S
-sl 0 0 -1
+1073764364 1 0 0 524350 4096 0 0 0 S
+sl 0 0 0 -1
 37 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 1
@@ -1153,8 +1153,8 @@ spirit naga~
 &+LThe head has deep brown eyes and stringy coarse black hair. They are highly
 &+Lproficient in magic and are formidable foes.
 ~
-1073743884 1 0 60 0 0 0 -1000 S
-RS 0 16 -1
+1073743884 1 0 0 60 0 0 0 -1000 S
+RS 0 16 0 -1
 35 8 7 29d65+377 3d6+4
 0.0.0.0 25839
 8 8 1
@@ -1168,8 +1168,8 @@ cambion demon~
 &+rmane of yellow hair. Their sickly fangs protrude from their mouths as their
 &+rcunning eyes pierce the darkness.
 ~
-1073743884 1 0 156 8320 0 0 -1000 S
-X 0 1 -1
+1073743884 1 0 0 156 8320 0 0 -1000 S
+X 0 1 0 -1
 60 -1 -84 45d107+2340 6d6+12
 5.9.4.6 164025
 8 8 1
@@ -1183,8 +1183,8 @@ otyugh neo neo-otyugh~
 &+ytwo massive tentacles which it grasps its food with. Upon the top of the
 &+ybulbous creature is a protrusion bearing two verticle eyes.
 ~
-1073743886 1 0 56 0 0 0 0 S
-AP 0 1 -1
+1073743886 1 0 0 56 0 0 0 0 S
+AP 0 1 0 -1
 50 8 3 30d65+390 3d6+4
 0.0.0.0 26730
 8 8 1
@@ -1200,8 +1200,8 @@ mezzoloth mercenary~
 &+rhighest bidder for their formidable skills at warfare, strategy, and
 &+rassassination.
 ~
-1107298381 1 0 570490940 12288 0 0 -1000 S
-X 0 16384 -1
+1107298381 1 0 0 570490940 12288 0 0 -1000 S
+X 0 16384 0 -1
 50 -3 -110 50d119+3100 6d6+25
 0.3.9.6 182250
 8 8 1
@@ -1215,8 +1215,8 @@ has an adventurer's gleam in her eyes. She has been well trained by both of
 her parents so that she may protect herself and perhaps oneday follow in her
 parent's footsteps as a successful adventurer.
 ~
-2058 0 0 8224 0 0 0 1000 S
-PH 0 4096 -1
+2058 0 0 0 8224 0 0 0 1000 S
+PH 0 4096 0 -1
 54 -5 -107 54d110+4482 7d6+30
 9.1.7.6 218700
 8 8 2
@@ -1230,8 +1230,8 @@ treant undead evil~
 &+LThey appear as a normal leafless deciduous tree in the winter, yet are far from
 &+Lhelpless like normal trees.
 ~
-33556490 1 0 34668600 64 0 0 -1000 S
-UV 0 128 -1
+33556490 1 0 0 34668600 64 0 0 -1000 S
+UV 0 128 0 -1
 50 -1 -59 42d99+1848 6d6+12
 2.8.7.3 102060
 8 8 1
@@ -1246,8 +1246,8 @@ zombie lord vile~
 &+Lis littered with half eaten bodies and the corpses of creatures which
 &+Lconfronted the Zombie Lord at one time.
 ~
-30734 1 0 33620156 6208 2097152 0 -1000 S
-ZO 0 1024 -1
+30734 1 0 0 33620156 6208 2097152 0 -1000 S
+ZO 0 1024 0 -1
 60 -1 -56 41d72+1763 6d6+12
 0.0.0.0 99630
 8 8 1
@@ -1262,8 +1262,8 @@ zombie golem~
 &+gpursuit. The horrible stench which surrounds this terrible monster is due to
 &+gits decomposing body parts and nausea comes quickly for most it encounters.
 ~
-67110922 1 0 268435640 2242 0 0 0 S
-OG 0 1 -1
+67110922 1 0 0 268435640 2242 0 0 0 S
+OG 0 1 0 -1
 53 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 0
@@ -1277,8 +1277,8 @@ flind vicious~
 &+Rcoarse fur and stand erect. Their fur is a reddish color which  darkens to a
 &+Rfine black coat at its muzzle. The flind is a formidable opponent.
 ~
-1073744014 1 0 34078844 0 0 0 -1000 S
-H 0 1 -1
+1073744014 1 0 0 34078844 0 0 0 -1000 S
+H 0 1 0 -1
 44 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -1291,8 +1291,8 @@ orc guard~
 &+gwields a short sword. Occasionally he'll grunt something under his breath in
 &+gOrcish.
 ~
-67110990 1 0 33554488 0 0 0 -500 S
-HO 0 1 -1
+67110990 1 0 0 33554488 0 0 0 -500 S
+HO 0 1 0 -1
 45 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -1306,8 +1306,8 @@ worm tenebrous~
 &+LThe head and the forebody of this creature are covered with bristles which form
 &+La protective covering over the beast's delicate hide.
 ~
-2058 1 0 1048600 8192 0 0 0 S
-I 0 0 -1
+2058 1 0 0 1048600 8192 0 0 0 S
+I 0 0 0 -1
 55 -1 -69 45d90+1935 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -1320,8 +1320,8 @@ bugbear warrior~
 &+ywedge-shaped eyes of this creature provide excellent hearing and the bestial
 &+yancestry of this creature is quite evident with a quick glance in its eye.
 ~
-1073744014 1 0 33554492 0 0 0 0 S
-HG 0 1 -1
+1073744014 1 0 0 33554492 0 0 0 0 S
+HG 0 1 0 -1
 50 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -1335,8 +1335,8 @@ drow scout deadly~
 &+mthe way during battle. He is fierce warrior and is notably skilled in both
 &+mstealth and killing.
 ~
-67110926 1 0 67633212 0 0 0 -1000 S
-PL 0 1 -1
+67110926 1 0 0 67633212 0 0 0 -1000 S
+PL 0 1 0 -1
 51 6 -8 34d83+578 4d6+7
 8.9.0.2 44064
 8 8 1
@@ -1349,8 +1349,8 @@ living web~
 &+Lweb. The creature is actually a dangerous predator and its deceptive nature
 &+Lcan cause some confusion in identifying it as such.
 ~
-2062 1 0 67108922 0 0 0 0 S
-AP 0 0 -1
+2062 1 0 0 67108922 0 0 0 0 S
+AP 0 0 0 -1
 31 13 48 16d30+80 3d4+2
 0.0.0.0 7776
 8 8 1
@@ -1363,8 +1363,8 @@ dragon blue~
 with the mightiest of adventurers. With devious cunning and intelligence,
 it hunts for fresh blood and booty to take back to its lair.
 ~
-1174538504 0 0 839491692 192 0 0 -1000 S
-D 0 2 -1
+1174538504 0 0 0 839491692 192 0 0 -1000 S
+D 0 2 0 -1
 60 -3 -95 47d119+3055 6d6+25
 7.0.4.14 228420
 8 8 1
@@ -1379,8 +1379,8 @@ grimlock special scout~
 &+Lthe sides of their mouth. They communicate silently is seems. They are fierce
 &+Lwarriors and fight to the death for glory and conquest.
 ~
-1073743886 1 0 35127420 0 0 0 -1000 S
-H 0 4096 -1
+1073743886 1 0 0 35127420 0 0 0 -1000 S
+H 0 4096 0 -1
 41 8 3 30d55+330 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -1393,8 +1393,8 @@ goblin smelly large~
 &+rquite tall. This goblin stands nearly six feet tall and silently watches the
 &+rpassageways for anyone who is not completely aware of their surroundings.
 ~
-1073743886 1 0 33554488 0 0 0 -1000 S
-HG 0 1 -1
+1073743886 1 0 0 33554488 0 0 0 -1000 S
+HG 0 1 0 -1
 43 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1

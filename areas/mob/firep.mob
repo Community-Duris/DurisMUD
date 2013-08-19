@@ -12,8 +12,8 @@ large fire elemental being~
 &+rcreature's means of sight would go.  The creature is all but silent as
 &+rit goes about whatever task a fire elemental needs to do.&N
 ~
-67108936 1 0 571998220 17 0 0 0 S
-EF 0 0 4
+67108936 1 0 0 571998220 17 0 0 0 S
+EF 0 0 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -33,8 +33,8 @@ fire elemental huge~
 &+rWhether this is due to some special status, or just random chance, isn't
 &+rreadily discernable.&N
 ~
-67110984 1 0 536870940 1 0 0 0 S
-EF 0 1 5
+67110984 1 0 0 536870940 1 0 0 0 S
+EF 0 1 0 5
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -53,8 +53,8 @@ warrior efreeti~
 &+Rincreasingly less visible mist.  The ability for the being to hover over the
 &+Rground might be enhanced by this rather curious adaptation.&N
 ~
-1140852840 1 0 536871064 1 0 0 0 S
-E 0 16385 -1
+1140852840 1 0 0 536871064 1 0 0 0 S
+E 0 16385 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -72,8 +72,8 @@ efreeti magi robed figure~
 &+min some otherworldly beautiful way.  Long black hair trails down the back of
 &+mits head, tied back with thick thongs of what appears to be flayed skin.&N
 ~
-1140852808 1 0 536871028 1 0 0 0 S
-E 0 2048 -1
+1140852808 1 0 0 536871028 1 0 0 0 S
+E 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -87,8 +87,8 @@ efreeti fire strong berserker~
 &+rbattle, he treats you as an equal.  He prefers to use magic and sword play
 &+rto fight his enemys.
 ~
-1140852840 1 0 536871000 1 0 0 -1000 S
-E 0 1048576 -1
+1140852840 1 0 0 536871000 1 0 0 -1000 S
+E 0 1048576 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -104,8 +104,8 @@ efreeti fire magi sharp mage~
 &+rthe toned skin upon her torso, gathering and spinning away
 &+rtowards some random location.&n
 ~
-1073743976 1 0 536871040 1 0 0 -950 S
-E 0 512 -1
+1073743976 1 0 0 536871040 1 0 0 -950 S
+E 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -118,8 +118,8 @@ fire minion creature~
 &+rits master, Kossuth.  Its existance seems boring at most, standing around
 &+rforever waiting for something to kill.  It looks straight at, and through, you.
 ~
-67110986 1 0 536871064 2049 0 0 0 S
-EF 0 64 -1
+67110986 1 0 0 536871064 2049 0 0 0 S
+EF 0 64 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -135,8 +135,8 @@ golem flaming _no_move_~
 &+rbut one purpose in this world, and that is preventing anyone unasked
 &+rfrom entering the Palace.&n
 ~
-67139658 1 0 939597976 272644316 131072 0 0 S
-OG 0 1 -1
+67139658 1 0 0 939597976 272644316 131072 0 0 S
+OG 0 1 0 -1
 62 -1 -500 7500d2+5000 20d4+40
 0.0.0.0 750000
 8 8 0
@@ -149,8 +149,8 @@ magma man guard fire~
 &+rhieght for a human but gives off incredible heat.  He patrols this floor of
 &+rthe Palace making sure none get through that should not.
 ~
-1140852812 1 0 536871064 0 0 0 0 S
-EF 0 16 7
+1140852812 1 0 0 536871064 0 0 0 0 S
+EF 0 16 0 7
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -164,8 +164,8 @@ fire strong minion guard~
 &+rright at you, not looking at you, but focusing on you.  Then it rears back
 &+rto attack.
 ~
-1140852842 1 0 805830808 4194304 0 4096 -970 S
-EF 0 16777232 7
+1140852842 1 0 0 805830808 4194304 0 4096 -970 S
+EF 0 16777232 0 7
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -179,8 +179,8 @@ huge fire minion guard massive~
 &+rthe Captain himself.  It does not even bother to look at you to know you are
 &+rthere, it simply just performs its task, destroy intruders.
 ~
-1140852842 1 0 536871064 4194304 0 4096 -1000 S
-EF 0 1048592 7
+1140852842 1 0 0 536871064 4194304 0 4096 -1000 S
+EF 0 1048592 0 7
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -194,8 +194,8 @@ khoe earth emissary~
 &+ymade of pure rock, and seems to be very strong.  He grins evily as he knows
 &+yyour not his regular escort.
 ~
-1142951112 1 0 140 1062108 18350208 89133568 0 S
-EE 0 2560 5
+1142951112 1 0 0 140 1062108 18350208 89133568 0 S
+EE 0 2560 0 5
 62 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -208,8 +208,8 @@ air aeolyn emissary~
 &+Cthrough her, she just floats through the room like air.  She glares at you,
 &+Cthen a gust of wind as she attacks.
 ~
-1140984648 1 0 536871040 2048 262304 5772800 1000 S
-EA 0 10 0
+1140984648 1 0 0 536871040 2048 262304 5772800 1000 S
+EA 0 10 0 0
 62 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -223,8 +223,8 @@ borren emissary dragon red~
 &+rby most of the other emissarys because he has a very mean temper and tends
 &+rto pick many fights.
 ~
-1409814376 1 0 536871064 268712156 18612224 92274688 -1000 S
-D 0 37748752 7
+1409814376 1 0 0 536871064 268712156 18612224 92274688 -1000 S
+D 0 37748752 0 7
 62 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -240,8 +240,8 @@ drooz drow dark figure shadows~
 &+mmade a fortune carrying out the dirty deeds of his employers... and he enjoys
 &+mevery minute of it.&n
 ~
-1090680909 1 0 974758078 276838622 524544 101979648 -1000 S
-PL 0 2105344 1
+1090680909 1 0 0 974758078 276838622 524544 101979648 -1000 S
+PL 0 2105344 0 1
 61 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -256,8 +256,8 @@ captain fire elemental guard~
 &+rpracticed the art of war to serve his master, Kossuth.  Therefore Kossuth has
 &+rplaced him nearest his side with his best guards.
 ~
-1140852842 1 0 805306552 2049 0 0 -1000 S
-EF 0 33554452 7
+1140852842 1 0 0 805306552 2049 0 0 -1000 S
+EF 0 33554452 0 7
 61 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -275,8 +275,8 @@ fire kossuth lord master~
 &+rbut each must be imbued with powerful magic to withstand the harsh conditions
 &+rhere within the &+LCharcoal Palace&+r.&N
 ~
-1124169834 1 0 973078716 296989 67633280 13312 -1000 S
-e 0 2099968 7
+1124169834 1 0 0 973078716 296989 67633280 13312 -1000 S
+e 0 2099968 0 7
 62 149 -400 10000d2+5000 40d8+80
 0.0.0.0 1000000
 8 8 1
@@ -288,8 +288,8 @@ servant fire~
    This man of fire has the lowest of jobs.  He is too serve the guests of the
 Palace.  He stands of human hieght, blazing through the hallways.
 ~
-2252 1 0 536870912 1 0 0 -466 S
-EF 0 288 6
+2252 1 0 0 536870912 1 0 0 -466 S
+EF 0 288 0 6
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -307,8 +307,8 @@ hephaestus blacksmith man god~
 &+man eternity.  He seems fully without malice, merely intent on finishing his
 &+mlatest creation.
 ~
-16873579 0 0 536870912 1 67895296 43005440 0 S
-H 0 4456512 3
+16873579 0 0 0 536870912 1 67895296 43005440 0 S
+H 0 4456512 0 3
 62 0 -500 9999d10+9999 20d10+100
 0.0.0.0 0
 8 8 1
@@ -326,8 +326,8 @@ important figure fruaack fire minion captain _block_up_~
 &+Lon the winds of the Durian surface world.  It might not be wise to attack
 &+Lhim without first paring down his impressive force of minions.&n
 ~
-117471338 0 0 805306428 4194397 0 33559040 0 S
-EF 0 16777216 7
+117471338 0 0 0 805306428 4194397 0 33559040 0 S
+EF 0 16777216 0 7
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -341,8 +341,8 @@ amorphous flame shifting~
 &+rand twists in the air.  For the most part, the flame occupies the
 &+rthe same general area, not moving far from the side of the captain.&n
 ~
-67270730 0 0 939524108 4194333 0 8393728 0 S
-EF 0 4 0
+67270730 0 0 0 939524108 4194333 0 8393728 0 S
+EF 0 4 0 0
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -357,8 +357,8 @@ flaming maelstrom whirling blaze _spec1_~
 &+YThe everpresent smell of sulfur that surrounds the thing is incredibly
 &+Ypotent.&n
 ~
-268466282 0 0 939524156 4194333 786432 5120 0 S
-EF 0 4 7
+268466282 0 0 0 939524156 4194333 786432 5120 0 S
+EF 0 4 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -374,8 +374,8 @@ efreeti fire magi ancient mage _spec3_~
 &+rHis garb is simple and unadorned, which seems quite peculiar considering
 &+rthe station where he is employed.&n
 ~
-1073743976 1 0 1006633148 4196353 0 4198912 -950 S
-E 0 512 -1
+1073743976 1 0 0 1006633148 4196353 0 4198912 -950 S
+E 0 512 0 -1
 61 200 -500 5500d3+7500 90d3+100
 0.0.0.0 0
 8 8 1
@@ -388,8 +388,8 @@ fire minion creature~
 &+rits master, Kossuth.  Its existance seems boring at most, standing around
 &+rforever waiting for something to kill.  It looks straight at, and through, you.
 ~
-67110984 1 0 536871064 2049 0 0 0 S
-EF 0 64 6
+67110984 1 0 0 536871064 2049 0 0 0 S
+EF 0 64 0 6
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -402,8 +402,8 @@ fire minion creature~
 &+rits master, Kossuth.  Its existance seems boring at most, standing around
 &+rforever waiting for something to kill.  It looks straight at, and through, you.
 ~
-67110984 1 0 538443928 2049 0 0 0 S
-EF 0 8192 6
+67110984 1 0 0 538443928 2049 0 0 0 S
+EF 0 8192 0 6
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -421,8 +421,8 @@ efreeti magi robed figure captain~
 &+min some otherworldly beautiful way.  Long black hair trails down the back of
 &+mits head, tied back with thick thongs of what appears to be flayed skin.&N
 ~
-67110984 1 0 536871028 1 0 536576 0 S
-E 0 2560 -1
+67110984 1 0 0 536871028 1 0 536576 0 S
+E 0 2560 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -442,8 +442,8 @@ fire elemental huge~
 &+rWhether this is due to some special status, or just random chance, isn't
 &+rreadily discernable.&N
 ~
-67110984 1 0 536870940 1 0 0 0 S
-EF 0 1 5
+67110984 1 0 0 536870940 1 0 0 0 S
+EF 0 1 0 5
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -461,8 +461,8 @@ efreeti magi robed figure _spec1_~
 &+min some otherworldly beautiful way.  Long black hair trails down the back of
 &+mits head, tied back with thick thongs of what appears to be flayed skin.&N
 ~
-67110984 1 0 536871028 1 0 0 0 S
-E 0 512 -1
+67110984 1 0 0 536871028 1 0 0 0 S
+E 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -476,8 +476,8 @@ fire strong minion guard~
 &+rright at you, not looking at you, but focusing on you.  Then it rears back
 &+rto attack.
 ~
-1140852842 1 0 805830808 4194305 0 4096 -970 S
-EF 0 1 6
+1140852842 1 0 0 805830808 4194305 0 4096 -970 S
+EF 0 1 0 6
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -491,8 +491,8 @@ huge fire minion guard massive~
 &+rthe Captain himself.  It does not even bother to look at you to know you are
 &+rthere, it simply just performs its task, destroy intruders.
 ~
-1140852842 1 0 536871064 4195329 0 4096 -1000 S
-ef 0 1 7
+1140852842 1 0 0 536871064 4195329 0 4096 -1000 S
+ef 0 1 0 7
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

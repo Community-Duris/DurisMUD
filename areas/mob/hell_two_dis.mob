@@ -7,8 +7,8 @@ dispator arch devil~
 &+Ysome 9 feet tall.  With small horns and a small forked tail
 &+YDiapator seems to radiate diabolic power&N
 ~
-1107327052 192 0 1646746 309441 262144 0 -1000 S
-Y 0 512 -1
+1107327052 192 0 0 1646746 309441 262144 0 -1000 S
+Y 0 512 0 -1
 60 100 -100 100d100+10000 10d100+100
 0.0.0.10000 4294967295
 8 8 1

@@ -1261,12 +1261,12 @@ flame north longsword sword~
 &+rA longsword called the &+R'Flame of the North'&N &+rlies upon the ground.&N~
 ~
 5 22 3 6 11 0 262144 8193 66 4198895524 0
-5 1 8 0 0 0 0 0
-24 250000 100
+5 5 5 0 0 0 0 0
+25 250000 100
 A
-18 4
+18 5
 A
-19 2
+32 5
 #92122
 painting picture~
 &+Ga picturesque painting of a woodland scene&N~

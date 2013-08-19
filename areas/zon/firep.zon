@@ -102,6 +102,7 @@ O 0 88315 1 88398 100 0 0 0        * a fire-imbued totem of Kossuth
 O 0 88316 1 88398 100 0 0 0        * the bracers of immolation
 O 0 88323 1 88398 80 0 0 0         * a pair of battered and worn gauntlets
 O 0 61 1 88398 100 0 0 0           * (object type not in this .obj file)
+O 0 92121 1 88398 100 0 0 0        * (object type not in this .obj file)
 *
 M 0 88324 15 88307 100 0 0 0       * a fire minion
 E 1 88326 22 16 100 0 0 0          *   a thin spike
