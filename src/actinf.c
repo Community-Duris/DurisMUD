@@ -1181,7 +1181,7 @@ void create_in_room_status(P_char ch, P_char i, char buffer[])
   if (IS_AFFECTED5(i, AFF5_IMPRISON))
     strcat(buffer, " (&+cim&+Cpr&+cis&+Con&+ced&n) ");
 
-  if(IS_PC_PET(i))
+  if(IS_PC_PET(i) && (!isname("image", GET_NAME(i))))
    strcat(buffer, " &+w(&+Yminion&+w) ");
 
   if (IS_CASTING(i))

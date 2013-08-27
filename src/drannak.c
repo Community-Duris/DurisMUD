@@ -1182,7 +1182,7 @@ bool new_summon_check(P_char ch, P_char selected)
   {
     victim = k->follower;
 
-    if(!IS_PC(victim))
+    if(!IS_PC(victim) && (!isname("image", GET_NAME(victim))))
     {
     i += GET_LEVEL(victim);
     if(GET_LEVEL(victim) >= 50)

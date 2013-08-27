@@ -1052,6 +1052,7 @@ M 0 139011 1 139312 100 0 0 0      * Shadam Quilen, the Efreeti Sultan
 E 1 139036 1 6 100 0 0 0           *   the crown of might
 G 1 139023 1 0 100 0 0 0           *    the palace vault key
 G 1 430 1 0 100 0 0 0              *    (object type not in this .obj file)
+G 1 360 1 0 100 0 0 0              *    (object type not in this .obj file)
 M 0 139093 2 139314 100 0 0 0      * a magma man
 M 0 139021 2 139315 100 0 0 0      * a member of the Order of Fiery Heart
 G 1 139022 1 0 100 0 0 0           *    a key of blue fire

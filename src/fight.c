@@ -4384,6 +4384,25 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
       }
     }*/
 
+    if(!NewSaves(victim, SAVING_PARA, 2))
+      {
+        struct affected_type af;
+
+        send_to_char("&+CThe intense cold causes your entire body slooooow doooowwwnn!\n", victim);
+        act("&+CThe intense cold causes&n $n&+C's entire body to slooooow doooowwwnn!&n",
+          FALSE, victim, 0, 0, TO_ROOM);
+
+        bzero(&af, sizeof(af));
+        af.type = SPELL_SLOW;
+        af.flags = AFFTYPE_SHORT;
+        af.duration = 25;
+        af.bitvector2 = AFF2_SLOW;
+
+        affect_to_char(victim, &af);
+
+      }
+
+
     if (parse_chaos_shield(ch, victim))
     {
       dam *= dam_factor[DF_CHAOSSHIELD];
@@ -5527,6 +5546,13 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
       if(IS_AFFECTED4(victim, AFF4_SANCTUARY) &&
         (flags & RAWDAM_SANCTUARY) &&
         (GET_CLASS(victim, CLASS_CLERIC)))
+      {
+        dam *= dam_factor[DF_SANC];
+      }
+
+      if(IS_AFFECTED4(victim, AFF4_SANCTUARY) &&
+        (flags & RAWDAM_SANCTUARY) &&
+	(!GET_CLASS(victim, CLASS_CLERIC) && !GET_CLASS(victim, CLASS_PALADIN)))
       {
         dam *= dam_factor[DF_SANC];
       }

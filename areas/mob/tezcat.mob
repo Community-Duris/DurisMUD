@@ -8,8 +8,8 @@ night crawler beast gargantuan~
 &+Llike arms petrude from its side.  This creature is not from this world, most&n
 &+Llikely some dark servitor of &+bT&+Le&+bz&+bc&+La&+bt&+Llipoca.&n
 ~
-1108490314 1 0 906068476 276675 0 8192 0 S
-AC 0 1 7
+1108490314 1 0 0 906068476 276675 0 8192 0 S
+AC 0 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -23,8 +23,8 @@ night crawler beast hideous~
 &+Llike arms petrude from its side.  This creature is not from this world, most&n
 &+Llikely some dark servitor of &+rT&+Le&+rz&+bc&+La&+bt&+rl&+Li&+rp&+Lo&+bc&+La.&n
 ~
-34748490 1 0 906068476 309443 0 34086912 0 S
-AC 0 1 7
+34748490 1 0 0 906068476 309443 0 34086912 0 S
+AC 0 1 0 7
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -38,8 +38,8 @@ night crawler beast worm~
 &+Llike arms petrude from its side.  This creature is not from this world, most&n
 &+Llikely some dark servitor of &+rT&+Le&+rz&+bc&+La&+bt&+rl&+Li&+rp&+Lo&+bc&+La.&n
 ~
-33697866 1 0 906068412 12482 0 0 0 S
-AC 0 1 7
+33697866 1 0 0 906068412 12482 0 0 0 S
+AC 0 1 0 7
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -53,8 +53,8 @@ night crawler beast creature~
 &+Llike arms petrude from its side.  This creature is not from this world, most&n
 &+Llikely some dark servitor of &+rT&+Le&+rz&+bc&+La&+bt&+rl&+Li&+rp&+Lo&+bc&+La.&n
 ~
-33699914 1 0 906068412 12482 0 0 0 S
-AC 0 1 7
+33699914 1 0 0 906068412 12482 0 0 0 S
+AC 0 1 0 7
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -68,8 +68,8 @@ night crawler beast large~
 &+Larms petrude from the side of the creature.  This abomination does not seem to&n
 &+Lbe from this world.  Most likely some sort of dark servant of the &+rancient &+LGod.&n
 ~
-1107441738 1 0 906068412 12482 0 0 0 S
-AC 0 8192 4
+1107441738 1 0 0 906068412 12482 0 0 0 S
+AC 0 8192 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -83,8 +83,8 @@ night crawler beast~
 &+Lextremeties emanate from this monsters back.  This creature most asuredly is  &n
 &+Lnot from this world.  This being is probly a dark servant of the &+rancient &+LGod.&n
 ~
-33700170 1 0 906068412 12482 0 0 0 S
-AC 0 1 5
+33700170 1 0 0 906068412 12482 0 0 0 S
+AC 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -98,8 +98,8 @@ night crawler beast spawn~
 &+Lextremeties emanate from this monsters back.  This creature most asuredly is  &n
 &+Lnot from this world.  This being is another dark servant of the &+rancient &+LGod.&n
 ~
-1107442762 1 0 906068412 12482 0 0 0 S
-AC 0 1 6
+1107442762 1 0 0 906068412 12482 0 0 0 S
+AC 0 1 0 6
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -113,8 +113,8 @@ night crawler beast~
 &+Lextremeties emanate from this monsters back.  This creature most asuredly is  &n
 &+Lnot from this world.  This being is another dark minion of the &+rancient &+LGod.&n
 ~
-1107966026 1 0 906068412 12482 0 0 0 S
-AC 0 1 3
+1107966026 1 0 0 906068412 12482 0 0 0 S
+AC 0 1 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -128,8 +128,8 @@ night crawler beast~
 &+Lextremeties emanate from this monsters back.  This creature most asuredly is  &n
 &+Lnot from this world.  This being is probly a dark servant of the &+rancient &+LGod.&n
 ~
-1107442762 1 0 906068412 12482 0 0 0 S
-AC 0 0 4
+1107442762 1 0 0 906068412 12482 0 0 0 S
+AC 0 0 0 4
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -143,8 +143,8 @@ blodzul large being~
 &+LGod.  Raised from the grave and forced to serve, in torture and torment for all&n
 &+reternity&+L.&n
 ~
-1107441736 1 0 33653016 307202 0 0 -1000 S
-UV 0 1 4
+1107441736 1 0 0 33653016 307202 0 0 -1000 S
+UV 0 1 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -158,8 +158,8 @@ blodzul large hideous~
 &+LGod.  Raised from the grave and forced to serve, in torture and torment for all&n
 &+reternity&+L.&n
 ~
-1174538312 1 0 838959420 309443 0 0 -1000 S
-UV 0 1 4
+1174538312 1 0 0 838959420 309443 0 0 -1000 S
+UV 0 1 0 4
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -174,8 +174,8 @@ blodzul hideous large~
 &+Lall that enter.  Condemned to live in &+rdeath&+L with no hope of escape.  This being&n
 &+Llunges for you wildly, &+Wclaws&+L extended.&n
 ~
-33554504 1 0 33652992 12290 0 0 -1000 S
-U 0 1 4
+33554504 1 0 0 33652992 12290 0 0 -1000 S
+U 0 1 0 4
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -190,8 +190,8 @@ blodzul large hideous~
 &+Lall that enter.  Condemned to live in &+rdeath&+L with no hope of escape.  This being&n
 &+Llunges for you wildly, &+Wclaws&+L extended.&n
 ~
-33554504 1 0 33652992 12290 0 0 -1000 S
-U 0 1 4
+33554504 1 0 0 33652992 12290 0 0 -1000 S
+U 0 1 0 4
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -205,8 +205,8 @@ zombie priest~
 &+Llooks as though he once was some sort of a &+Bpriest&+L, now simply another &+rpawn &+Lof&n
 &+Lthe &+rancient &+LGod.&n
 ~
-1107298376 1 0 570525992 307394 0 0 -1000 S
-zo 0 32 -1
+1107298376 1 0 0 570525992 307394 0 0 -1000 S
+zo 0 32 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -220,8 +220,8 @@ zombie priest~
 &+rburned &+Linto his forehead.  Glazed red &+reyes &+Lstare at you with a strange hatred.
 &+LIt would seem that this creature is some sort of unholy &+Wpriest&+L.&n
 ~
-1107298378 1 0 570525992 307394 0 0 -1000 S
-zo 0 32 -1
+1107298378 1 0 0 570525992 307394 0 0 -1000 S
+zo 0 32 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -235,8 +235,8 @@ priestess zombie~
 &+LA servant of the dark &+Lone, now bound &+reternally&+L.  Chants from the grave echo&n
 &+Lwithin your head.  This entity seems to be some sort of &+rpriestess&+L.&n
 ~
-1107298378 1 0 570525992 307394 0 0 -1000 S
-zo 0 32 -1
+1107298378 1 0 0 570525992 307394 0 0 -1000 S
+zo 0 32 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -250,8 +250,8 @@ priestess zombie~
 &+Lrobe.  A servant of the &+rancient &+Lone, bound to Immortality.  This being seems to&n
 &+Lresemble some sort of unholy &+cpriestess&+L.&n
 ~
-1107298376 1 0 570525992 307394 0 0 -1000 S
-zo 0 32 -1
+1107298376 1 0 0 570525992 307394 0 0 -1000 S
+zo 0 32 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -267,8 +267,8 @@ worshipper zombie~
 &+rpawn&+L controlled by the &+rancient &+Lone.  All this lost &+Cso&+cul&+L can do now is simply&n
 &+Lfeel pain.&n
 ~
-33554504 1 0 33652992 12482 0 0 -1000 S
-zo 0 0 -1
+33554504 1 0 0 33652992 12482 0 0 -1000 S
+zo 0 0 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -284,8 +284,8 @@ worshipper zombie~
 &+rpawn&+L controlled by the &+rancient &+Lone.  All this lost &+Cso&+cul&+L can do now is simply&n
 &+Lfeel pain.&n
 ~
-33554504 1 0 33652992 12482 0 0 -1000 S
-zo 0 1 -1
+33554504 1 0 0 33652992 12482 0 0 -1000 S
+zo 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -299,8 +299,8 @@ tezcazul monstrous beast vampire~
 &+Ldrip fresh &+rcrimson &+Rblood &+Lon the &+rancient &+yground&+L.  &+WFangs&+L of a beast no longer &n
 &+Lfrom this world lunge for you.&n
 ~
-1107441738 1 0 838959384 309443 0 0 -1000 S
-UV 0 1 -1
+1107441738 1 0 0 838959384 309443 0 0 -1000 S
+UV 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -314,8 +314,8 @@ tezcazul ghastly beast vampire~
 &+LWillingly raised from the dead to serve, by evil necromancy.  &+rEternal &+Lhunter&n
 &+Lof the &+rancient&+L God, this entity lunges for you with reckless abandonment.&n
 ~
-1107441736 1 0 838959388 309443 0 0 -1000 S
-UV 0 1 -1
+1107441736 1 0 0 838959388 309443 0 0 -1000 S
+UV 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -327,8 +327,8 @@ rat blood hideous~
 &+r   Evil &+Leyes from a world not from this stare at you.  &+WTeeth &+Lstained with &+rblood&n
 &+Llunge at your throat.  Many scars adorn the face of this rat.&n
 ~
-1107296456 1 0 840532280 8194 0 0 -1000 S
-AC 0 0 4
+1107296456 1 0 0 840532280 8194 0 0 -1000 S
+AC 0 0 0 4
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -343,8 +343,8 @@ raism blood devil~
 &+Ldolled out by seconds of action.  This &+rDevil&+L serves &+RA&+rrkt&+Ru&+rras &+Lthe right hand of&n
 &+Lthe &+rancient &+LEvil.  He is bound to guard the c&+ba&+Lt&+ba&+Lc&+bo&+Lmbs till the end of &+reternity&+L.&n
 ~
-33962090 1 0 840008120 309443 0 0 -1000 S
-Y 0 16 7
+33962090 1 0 0 840008120 309443 0 0 -1000 S
+Y 0 16 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -359,8 +359,8 @@ arkturas ancient blood priest~
 &+Lnotice grand robes adorning the &+rancient &+Lbody.  The &+Wu&+wnh&+Wo&+wl&+Wy &+wr&+Wo&+wb&+We&+ws &+Lare bearring&n
 &+Lthe symbol of the &+rancient &+LGod &+WT&+we&+Wz&+wc&+Wa&+wt&+Wl&+wi&+Wp&+wo&+Wc&+wa&+L.&n
 ~
-33961034 1 0 838967740 309443 0 0 -1000 S
-Y 0 32 -1
+33961034 1 0 0 838967740 309443 0 0 -1000 S
+Y 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -375,8 +375,8 @@ zombie priest~
 &+LCarrying on in death as it once did when &+rbl&+Loo&+rd &+Lpulsed in his veins.  Still&n
 &+Lloyal to the &+rancient &+LGod.&n
 ~
-33556554 1 0 570525992 307394 0 0 -1000 S
-zo 0 32 -1
+33556554 1 0 0 570525992 307394 0 0 -1000 S
+zo 0 32 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -391,8 +391,8 @@ zombie priestess~
 &+Land crafted from the &+yTree &+Lof &+CSo&+cul&+Cs &+Ladorn a timeless body.  This being seems to&n
 &+Lbe a &+Rpriestess &+Lof some sort.&n
 ~
-100665418 1 0 570526012 307394 0 0 -1000 S
-zo 0 32 -1
+100665418 1 0 0 570526012 307394 0 0 -1000 S
+zo 0 32 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -406,8 +406,8 @@ blodzul large hideous~
 &+LGod.  Raised from the grave and forced to serve, in torture and torment for all&n
 &+reternity&+L.&n
 ~
-100796490 1 0 838959548 309443 0 0 -1000 S
-UV 0 1 4
+100796490 1 0 0 838959548 309443 0 0 -1000 S
+UV 0 1 0 4
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -422,8 +422,8 @@ blodzul large hideous being~
 &+Lall that enter.  Condemned to live in &+rdeath&+L with no hope of escape.  This being&n
 &+Llunges for you wildly, &+Wclaws&+L extended.&n
 ~
-100665418 1 0 33653064 12290 0 0 -1000 S
-U 0 1 4
+100665418 1 0 0 33653064 12290 0 0 -1000 S
+U 0 1 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -438,8 +438,8 @@ tezcazul ghastly beast vampire~
 &+Lone, brought back to life to serve his will &+reternally&+L.  The &+rclaws &+Lof this beast&n
 &+Llunge for your throat.&n
 ~
-100808778 1 0 838959516 309443 0 0 -1000 S
-UV 0 16 -1
+100808778 1 0 0 838959516 309443 0 0 -1000 S
+UV 0 16 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -454,8 +454,8 @@ tezcazul monstrous beast vampire~
 &+Wfangs &+Lspotted by dried &+rblood &+Lfrom centuries past.  This creature extends its&n
 &+rclaws &+Ltrying to slash your neck.&n
 ~
-100808778 1 0 838959388 309443 0 0 -1000 S
-UV 0 1 -1
+100808778 1 0 0 838959388 309443 0 0 -1000 S
+UV 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -469,8 +469,8 @@ tezcazul sinister beast vampire~
 &+Lloyal servant of the dark one in life and stronger in death.  A willing gift of&n
 &+rsacrifice &+Land raised from the beyond.&n
 ~
-100808778 1 0 838959384 309443 0 0 -1000 S
-UV 0 1 -1
+100808778 1 0 0 838959384 309443 0 0 -1000 S
+UV 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -484,8 +484,8 @@ vampire shadow cultist anti~
 &+Lcraving the soft flesh of your neck.  A massive form stands before you its skin&n
 &+Lthat of shifting and swirling sh&+ba&+Ld&+bo&+Lws.&n
 ~
-33699914 1 0 570526008 307394 0 0 -1000 S
-UV 0 16 -1
+33699914 1 0 0 570526008 307394 0 0 -1000 S
+UV 0 16 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -500,8 +500,8 @@ shadow undead priestess female~
 &+Lis cursed with &+reternity&+L.  She seems to be some sort of priestess to the &+rancient&n
 &+Lone.&N
 ~
-100796490 1 0 570525992 307394 0 0 -1000 S
-U 0 32 -1
+100796490 1 0 0 570525992 307394 0 0 -1000 S
+U 0 32 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -515,8 +515,8 @@ cultist zombie~
 &+Lslivers of &+rrancid&+L flesh clinging to them.  This abomination stares coldly into&N
 &+Lyour tainted &+Cso&+cul&+L.                                                          &N
 ~
-1107429448 1 0 570525992 307394 0 0 -1000 S
-zo 0 1 -1
+1107429448 1 0 0 570525992 307394 0 0 -1000 S
+zo 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -530,8 +530,8 @@ cultist large vampire~
 &+Lhead. Raven black skin that bears past stains of victorius battles.  This &n
 &+rvampire&+L surely is a master of many an altercation.&n
 ~
-1107441738 1 0 570525992 307394 0 0 -1000 S
-UV 0 1 4
+1107441738 1 0 0 570525992 307394 0 0 -1000 S
+UV 0 1 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -545,8 +545,8 @@ cultist large vampire~
 &+LRaven black hair that flows past brawd muscular shoulders.  This &+rvampire&+L glares&N
 &+Lat you hatred in its eyes.&n
 ~
-1107441738 1 0 570525992 307394 0 0 -1000 S
-UV 0 1 4
+1107441738 1 0 0 570525992 307394 0 0 -1000 S
+UV 0 1 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -560,8 +560,8 @@ cultist large zombie~
 &+Land chunks of rancid flesh hang from them.  This large creature glares at you&n
 &+Lwith a look of utter disdain.&n
 ~
-1107429448 1 0 570525992 45250 0 0 -1000 S
-zo 0 1 4
+1107429448 1 0 0 570525992 45250 0 0 -1000 S
+zo 0 1 0 4
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -575,8 +575,8 @@ tezcazul monstrous beast vampire~
 &+Lsacrifice to the &+rancient &+Lone.  Raised from death and destined to walk in his&n
 &+Lservice for &+reternity&+L.&n
 ~
-1174550602 1 0 838959388 309443 0 0 -1000 S
-UV 0 1 -1
+1174550602 1 0 0 838959388 309443 0 0 -1000 S
+UV 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -590,8 +590,8 @@ blodzul large hideous~
 &+Cso&+cul&+L trapped in a ring, worn by &+RA&+rrkt&+Ru&+rras &+Lhimself.  Once this being was a&n
 &+Lholy crusader a grand &+WPaladin&+L, now its &+rdamned&+L to serve for all &+reternity&+L.&n
 ~
-1174550602 1 0 838959548 309443 0 0 -1000 S
-UV 0 1 4
+1174550602 1 0 0 838959548 309443 0 0 -1000 S
+UV 0 1 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -603,8 +603,8 @@ blood rat hideous~
 &+L   Red &+reyes&+L burn a cold stare into your &+Cso&+cul&+L.  Black fur and sharp &+Wfangs&+L that&n
 &+Lcrave the taste of &+rblood&+L.  This hideous rat lunges at you wildly.&N
 ~
-1107298504 1 0 840532280 270338 0 0 -1000 S
-AC 0 0 4
+1107298504 1 0 0 840532280 270338 0 0 -1000 S
+AC 0 0 0 4
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -621,8 +621,8 @@ vargher shadow spawn~
 &+Loddly pleased at your arrival.  He smiles an &+revil &+Lunearthly grin and lunges for&n
 &+Lyour throat.&n
 ~
-101071434 1 0 840540602 309443 0 0 -1000 S
-X 0 16 -1
+101071434 1 0 0 840540602 309443 0 0 -1000 S
+X 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -636,8 +636,8 @@ vampire shadow cultist anti~
 &+Lcraving the soft flesh of your neck.  A massive form stands before you its skin&n
 &+Lthat of shifting and swirling sh&+ba&+Ld&+bo&+Lws.&n
 ~
-1107441736 1 0 838969784 309443 0 0 -1000 S
-UV 0 16 -1
+1107441736 1 0 0 838969784 309443 0 0 -1000 S
+UV 0 16 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -651,8 +651,8 @@ drow shadow reaper shaman~
 &+Lhis &+Cso&+cul&+L.  This being holds a strange totem and moves toward you rapidly.  The&n
 &+Bchill &+Lof beyond washes down your mortal &+Wspine&+L.&N
 ~
-1107441738 1 0 570526008 307394 0 0 -1000 S
-PL 0 256 -1
+1107441738 1 0 0 570526008 307394 0 0 -1000 S
+PL 0 256 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -668,8 +668,8 @@ worshipper zombie~
 &+rpawn&+L controlled by the &+rancient &+LGod.  All this lost &+Cso&+cul&+L can do now is simply&n
 &+Lfeel pain.&n
 ~
-1174415432 1 0 33652992 12482 0 0 -1000 S
-zo 0 0 -1
+1174415432 1 0 0 33652992 12482 0 0 -1000 S
+zo 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -683,8 +683,8 @@ worshipper vampire~
 &+Land chunks of decayed flesh hang from them.  This creature lunges forward at&n
 &+Lyour neck &+rfangs &+Lexposed.&n
 ~
-1107441736 1 0 570525992 307394 0 0 -1000 S
-UV 0 1 -1
+1107441736 1 0 0 570525992 307394 0 0 -1000 S
+UV 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -698,8 +698,8 @@ cultist zombie~
 &+Lslivers of &+rrancid&+L flesh clinging to them.  This abomination stares &+Bcoldly &+Linto&N
 &+Lyour tainted &+Cso&+cul&+L.&N
 ~
-1174550602 1 0 570526008 45250 0 0 -1000 S
-zo 0 1 -1
+1174550602 1 0 0 570526008 45250 0 0 -1000 S
+zo 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -713,8 +713,8 @@ worshipper vampire fangs ghastly~
 &+Lsince dead fills your mortal &+Cso&+cul &+Lwith dread.  This ghastly looking &+Rworshipper&n
 &+Llunges at you wildly.&N
 ~
-1174550600 1 0 838959516 309442 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 838959516 309442 0 0 -1000 S
+UV 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -728,8 +728,8 @@ death fiend~
 &+Lbreath.  Raven black flesh of a creature once alive.  Flowing hair infested by&n
 &+Wmaggots &+Land &+cticks&+L.  This unholy &+rfiend &+Lstarts to move towards you rapidly.&n
 ~
-1174550600 1 0 536969496 307394 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 536969496 307394 0 0 -1000 S
+UV 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -743,8 +743,8 @@ fiend ghastly death~
 &+Lbreath.  Raven black flesh of a creature once alive.  Ghastly hair infested by&n
 &+Wmaggots &+Land spiders.  This unholy &+rfiend &+Lstarts to move towards you rapidly.&n
 ~
-1174550600 1 0 536969496 307394 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 536969496 307394 0 0 -1000 S
+UV 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -758,8 +758,8 @@ deformed warrior fiend death~
 &+Lservant of the dark one, destined to walk for all &+reternity&+L.  A &+Rfiend &+Lto bring&N
 &+Ldeath to all who have life.&n
 ~
-1174550600 1 0 536969496 299202 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 536969496 299202 0 0 -1000 S
+UV 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -773,8 +773,8 @@ decayed warrior fiend death~
 &+Lservant of the &+revil &+Lone, doomed to walk for all &+reternity&+L.  A &+Rfiend &+Lto bring&N
 &+Ldeath to all who have life.&n
 ~
-1174550600 1 0 536969496 299202 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 536969496 299202 0 0 -1000 S
+UV 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -788,8 +788,8 @@ death fiend moldy warrior~
 &+Bchill &+Ldown your &+Wspine&+L.  A warrior long since dead walks, defiant of death.  A&N
 &+Lservant of the dark one destined to roam this place for &+reternity&+L.&n
 ~
-1140996168 1 0 98584 37058 0 0 -1000 S
-U 0 1 -1
+1140996168 1 0 0 98584 37058 0 0 -1000 S
+U 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -803,8 +803,8 @@ ghastly fiend death~
 &+Lchunks of &+rrancid&+L flesh clinging to them.  This unholy &+gfiend &+Lstares coldly into&N
 &+Lyour tainted &+Cso&+cul&+L.&N
 ~
-1107441736 1 0 570523912 45250 0 0 -1000 S
-U 0 1 -1
+1107441736 1 0 0 570523912 45250 0 0 -1000 S
+U 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -818,8 +818,8 @@ death fiend~
 &+Lbreath.  Raven black flesh of a creature once alive.  Flowing hair infested by&n
 &+Wmaggots &+Land &+cticks&+L.  This unholy &+rfiend &+Lstarts to move towards you rapidly.&n
 ~
-1174550600 1 0 536969496 307394 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 536969496 307394 0 0 -1000 S
+UV 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -833,8 +833,8 @@ cultist large vampire~
 &+LRaven black hair that flows past brawd muscular shoulders.  This &+rvampire&+L glares&N
 &+Lat you hatred in its eyes.&n
 ~
-1107441736 1 0 570525992 307394 0 0 -1000 S
-UV 0 1 4
+1107441736 1 0 0 570525992 307394 0 0 -1000 S
+UV 0 1 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -848,8 +848,8 @@ cultist large vampire~
 &+Lhead. Raven black skin that bears past stains of victorius battles.  This &n
 &+rvampire&+L surely is a master of many an altercation.&n
 ~
-1107441736 1 0 570526008 307394 0 0 -1000 S
-UV 0 1 4
+1107441736 1 0 0 570526008 307394 0 0 -1000 S
+UV 0 1 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -863,8 +863,8 @@ ghastly fiend death~
 &+Lchunks of &+rrancid&+L flesh clinging to them.  This unholy &+gfiend &+Lstares coldly into&N
 &+Lyour tainted &+Cso&+cul&+L.&N
 ~
-1107441736 1 0 570523912 45250 0 0 -1000 S
-U 0 1 -1
+1107441736 1 0 0 570523912 45250 0 0 -1000 S
+U 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -878,8 +878,8 @@ death fiend moldy warrior~
 &+Bchill &+Ldown your &+Wspine&+L.  A warrior long since dead walks, defiant of death.  A&N
 &+Lservant of the dark one destined to roam this place for &+reternity&+L.&n
 ~
-1140996168 1 0 98584 37058 0 0 -1000 S
-U 0 1 -1
+1140996168 1 0 0 98584 37058 0 0 -1000 S
+U 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -895,8 +895,8 @@ taurtheim thrice damned image~
 &+Ldoubt another servant of the dark one granted &+reternity &+Lfor servitude.  This&n
 &+Lbeing starts to chant in a strange voice.  Perhaps an incantation of some sort.&N
 ~
-1073756234 1 0 167838108 32771 0 0 -1000 S
-MT 0 16 -1
+1073756234 1 0 0 167838108 32771 0 0 -1000 S
+MT 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -914,8 +914,8 @@ bard faust lord evil~
 &+Llike it is moving d&+barkne&+Lss.  His image seems to flicker and fade out of sight&n
 &+Lthen appear again solid.  He glares at you with a horrid grisly stare.&N
 ~
-33700424 1 0 536969496 309441 0 0 -1000 S
-Y 0 1 -1
+33700424 1 0 0 536969496 309441 0 0 -1000 S
+Y 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -932,8 +932,8 @@ vorphalack souls consumer~
 &+LThis being is not of this world of man.  Most likely he is another servant of&n
 &+Lthe dark and &+revil &+LGod.&n
 ~
-1174812778 1 0 570523928 47299 0 0 -1000 S
-X 0 1 -1
+1174812778 1 0 0 570523928 47299 0 0 -1000 S
+X 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -949,8 +949,8 @@ diabolus dragon darkness~
 &+Lof fear.  He glares at you with a strange almost happy look in his eyes.&n
 &+LPerhaps he is thinking of dinner, and perhaps you are his meal.&n
 ~
-1140996682 1 0 570523928 47299 0 0 -1000 S
-D 0 1 -1
+1140996682 1 0 0 570523928 47299 0 0 -1000 S
+D 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -964,8 +964,8 @@ spectre nocturnal vampire priest~
 &+LRaven black hair that flows past brawd muscular shoulders.  This &+rvampire&+L glares&N
 &+Lat you hatred in its eyes.  This creature seems to be some sort of priest.&n
 ~
-1107441736 1 0 570525992 307394 0 0 -1000 S
-UV 0 32 -1
+1107441736 1 0 0 570525992 307394 0 0 -1000 S
+UV 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -979,8 +979,8 @@ fiend warrior fangs death~
 &+Lservant of the &+revil &+Lone, doomed to walk for all &+reternity&+L.  A &+Rfiend &+Lto bring&N
 &+Ldeath to all who have life.&n
 ~
-1174550600 1 0 536969496 299202 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 536969496 299202 0 0 -1000 S
+UV 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -994,8 +994,8 @@ spectre nocturnal vampire priest~
 &+LRaven black hair that flows past brawd muscular shoulders.  This &+rvampire&+L glares&N
 &+Lat you hatred in its eyes.  This creature seems to be some sort of &+Rpriest.&n
 ~
-1107441736 1 0 570525992 307394 0 0 -1000 S
-UV 0 32 -1
+1107441736 1 0 0 570525992 307394 0 0 -1000 S
+UV 0 32 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1009,8 +1009,8 @@ vampire priest~
 &+Lhead. Raven black skin that bears past stains of victorius battles.  This &n
 &+rvampire&+L seems to be some sort of a &+mpriest&+L.&n
 ~
-1107441736 1 0 570525992 307394 0 0 -1000 S
-UV 0 32 -1
+1107441736 1 0 0 570525992 307394 0 0 -1000 S
+UV 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1024,8 +1024,8 @@ lost soul~
 &+Lwho sought to destroy the dark one.  Now a hapless slave to the power of death.&N
 &+LCursed to walk till the ends of time in the service of the &+rancient &+Lone.&N
 ~
-1174550600 1 0 65816 32770 0 0 -1000 S
-sw 0 1 -1
+1174550600 1 0 0 65816 32770 0 0 -1000 S
+sw 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1039,8 +1039,8 @@ lost soul~
 &+Lwho sought to destroy the dark one.  Now a hapless slave to the power of death.&N
 &+LCursed to walk till the ends of time in the service of the &+rancient &+Lone.&N
 ~
-1174550600 1 0 65816 32770 0 0 -1000 S
-sp 0 1 -1
+1174550600 1 0 0 65816 32770 0 0 -1000 S
+sp 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1054,8 +1054,8 @@ lost soul~
 &+Lslivers of &+rrancid&+L flesh clinging to them.  This abomination stares &+Bcoldly &+Linto&N
 &+Lyour tainted &+Cso&+cul&+L.&N
 ~
-1174550600 1 0 570523960 45250 0 0 -1000 S
-wr 0 1 -1
+1174550600 1 0 0 570523960 45250 0 0 -1000 S
+wr 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1069,8 +1069,8 @@ spectre nocturnal vampire cultist~
 &+LRaven black hair that flows past brawd muscular shoulders.  This &+rvampire&+L glares&N
 &+Lat you hatred in his eyes.&n
 ~
-1107441736 1 0 570525992 307394 0 0 -1000 S
-UV 0 1 -1
+1107441736 1 0 0 570525992 307394 0 0 -1000 S
+UV 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1085,8 +1085,8 @@ stalker death~
 &+rancient &+Lone bound to walk forever in death.  This creature does not seem like&n
 &+Lhe can be reasoned with.  He lashes out for your neck &+rfangs &+Lextended.&N
 ~
-1174550600 1 0 570524056 309443 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 570524056 309443 0 0 -1000 S
+UV 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1101,8 +1101,8 @@ stalker death~
 &+rancient &+Lone bound to walk forever in death.  This creature does not seem like&n
 &+Lhe can be reasoned with.  He lashes out for your neck &+rfangs &+Lextended.&N
 ~
-1174550600 1 0 570524056 309443 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 570524056 309443 0 0 -1000 S
+UV 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1117,8 +1117,8 @@ stalker death~
 &+rancient &+Lone bound to walk forever in death.  This creature does not seem like&n
 &+Lhe can be reasoned with.  He lashes out for your neck &+rfangs &+Lextended.&N
 ~
-1174550600 1 0 570524056 309443 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 570524056 309443 0 0 -1000 S
+UV 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1133,8 +1133,8 @@ stalker death~
 &+rancient &+Lone bound to walk forever in death.  This creature does not seem like&n
 &+Lhe can be reasoned with.  He lashes out for your neck &+rfangs &+Lextended.&N
 ~
-1174550600 1 0 570524056 309443 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 570524056 309443 0 0 -1000 S
+UV 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1148,8 +1148,8 @@ tezcazul monstrous beast vampire~
 &+Lsacrifice to the &+rancient &+Lone.  Raised from death and destined to walk in his&n
 &+Lservice for &+reternity&+L.&n
 ~
-1174550600 1 0 838959388 309443 0 0 -1000 S
-UV 0 1 -1
+1174550600 1 0 0 838959388 309443 0 0 -1000 S
+UV 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1164,8 +1164,8 @@ tezcazul ghastly beast vampire~
 &+Lone, brought back to life to serve his will &+reternally&+L.  The &+rclaws &+Lof this beast&n
 &+Llunge for your throat.&n
 ~
-100808776 1 0 838959516 309443 0 0 -1000 S
-UV 0 1 -1
+100808776 1 0 0 838959516 309443 0 0 -1000 S
+UV 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1180,8 +1180,8 @@ tezcazul monstrous beast vampire~
 &+Wfangs &+Lspotted by dried &+rblood &+Lfrom centuries past.  This creature extends its&n
 &+rclaws &+Ltrying to slash your neck.&n
 ~
-100808776 1 0 838959388 309443 0 0 -1000 S
-UV 0 1 -1
+100808776 1 0 0 838959388 309443 0 0 -1000 S
+UV 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1195,8 +1195,8 @@ sinister beast tezcazul vampire~
 &+Lloyal servant of the dark one in life and stronger in death.  A willing gift of&n
 &+rsacrifice &+Land raised from the beyond.&n
 ~
-100808776 1 0 838959384 309443 0 0 -1000 S
-UV 0 1 -1
+100808776 1 0 0 838959384 309443 0 0 -1000 S
+UV 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1210,8 +1210,8 @@ tortured soul~
 &+Lwho sought to destroy the dark one.  Now a hapless slave to the power of death.&N
 &+LCursed to walk till the ends of time in the service of the &+rancient &+Lone.&N
 ~
-1174550600 1 0 65816 32770 0 0 -1000 S
-wr 0 1 2
+1174550600 1 0 0 65816 32770 0 0 -1000 S
+wr 0 1 0 2
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1225,8 +1225,8 @@ tortured soul~
 &+Lwho tried to destroy the dark one.  Now a hapless slave to the power of death.&N
 &+LCursed to walk till the ends of time in the service of the &+rancient &+Lone.&N
 ~
-1174550600 1 0 65816 32770 0 0 -1000 S
-sp 0 1 2
+1174550600 1 0 0 65816 32770 0 0 -1000 S
+sp 0 1 0 2
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1240,8 +1240,8 @@ tortured soul~
 &+Lwho tried to destroy the dark God.  Now a bound slave to the power of death.&N
 &+LDoomed to walk till the ends of time in the service of the &+rancient &+Lone.&N
 ~
-1174550600 1 0 65816 32770 0 0 -1000 S
-sw 0 1 2
+1174550600 1 0 0 65816 32770 0 0 -1000 S
+sw 0 1 0 2
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1259,8 +1259,8 @@ verethorn daemon greater~
 &+Lnocturnal night.  Feeding off fear, dining on death, making enemies gasp their&N
 &+Llast feeble breath.&N
 ~
-1107704330 1 0 538479000 47298 18874368 34603008 -1000 S
-X 0 8192 6
+1107704330 1 0 0 538479000 47298 18874368 34603008 -1000 S
+X 0 8192 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

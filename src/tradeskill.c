@@ -2510,7 +2510,7 @@ int itemvalue(P_char ch, P_obj obj)
 	 workingvalue += 2;
 
  if (IS_SET(obj->bitvector2, AFF2_SOULSHIELD))
-	 workingvalue += 5;
+    	 workingvalue += 8;
 
  if (IS_SET(obj->bitvector2, AFF2_MINOR_INVIS))
 	 workingvalue += 5;
@@ -2669,6 +2669,17 @@ int itemvalue(P_char ch, P_obj obj)
     workingvalue += 30;
    }
 
+  //obj procs
+   if(obj_index[obj->R_num].func.obj)
+   {
+    workingvalue += 20;
+   }
+
+   //ghetto procs
+   if((obj->value[4] > 0) && (obj->type == ITEM_WEAPON))
+   workingvalue += 20;
+  
+
   //AC negative is good
    if (
 	(obj->affected[i].location == APPLY_AC)
@@ -2696,7 +2707,7 @@ int itemvalue(P_char ch, P_obj obj)
 
 	)
    {
-    workingvalue += (int)(obj->affected[i].modifier * -25);
+    workingvalue += (int)(obj->affected[i].modifier * -50);
    }
 
 

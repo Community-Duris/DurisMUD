@@ -5113,6 +5113,13 @@ void do_salvage(P_char ch, char *argument, int cmd)
     return;
    }
 
+  if (temp->type == ITEM_WAND)
+   {
+    send_to_char("This item is too powerful for you to salvage.\r\n", ch);
+    return;
+   }
+
+
   if (temp->type == ITEM_FOOD)
    {
     act("Why would you want to salvage anything from your &+Ydinner&n?", FALSE, ch, 0, 0, TO_CHAR);
@@ -6031,7 +6038,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
 
       if(scitools > 0)
       {
-	send_to_char("&+LYour &+cset of &+rLantan &+CScientific &+LTools &+yallows you to delicately extract material without harming your item...\r\n", ch);
+	send_to_char("&+yYou make sure to utilize your &+cset of &+rLantan &+CScientific &+LTools &+yas you break apart your item...\r\n", ch);
        reciperoll *= .5;
        playerroll *= 2;
        vnum_from_inv(ch, 400227, 1);
@@ -6085,7 +6092,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
           (ch->in_room == NOWHERE) ? -1 : world[ch->in_room].number);
 	char_light(ch);
 	room_light(ch->in_room, REAL);
-       if(scitools < 1)
+       //if(scitools < 1)
 	extract_obj(temp, !IS_TRUSTED(ch));
   } 
   //end do_salvage

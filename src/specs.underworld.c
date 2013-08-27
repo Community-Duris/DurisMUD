@@ -755,12 +755,14 @@ int flamberge(P_obj obj, P_char ch, int cmd, char *arg)
 {
   P_char vict;
   int room;
+  P_char   temp_ch;
 
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
   if (cmd == 0)
     hummer(obj);
+
 
   if (cmd != CMD_MELEE_HIT || !ch || number(0, 30))
     return FALSE;

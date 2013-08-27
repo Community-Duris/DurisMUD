@@ -9,6 +9,7 @@
 #include <string.h>
 #include <math.h>
 
+
 #include "structs.h"
 #include "guildhall.h"
 #include "guildhall_db.h"
@@ -17,6 +18,8 @@
 #include "utils.h"
 #include "utility.h"
 #include "map.h"
+#include "db.h"
+#include "justice.h"
 
 #define CAN_CONSTRUCT_CMD(ch) ( GET_A_NUM(ch) && (IS_LEADER(GET_M_BITS(GET_A_BITS(ch), A_RK_MASK)) || GT_LEADER(GET_M_BITS(GET_A_BITS(ch), A_RK_MASK))) )
 #define CAN_GUILDHALL_CMD(ch) ( GET_A_NUM(ch) && (IS_OFFICER(GET_M_BITS(GET_A_BITS(ch), A_RK_MASK)) || GT_OFFICER(GET_M_BITS(GET_A_BITS(ch), A_RK_MASK))) )
@@ -24,6 +27,7 @@
 // global variable declarations
 extern P_room world;
 extern const int rev_dir[];
+extern struct zone_data *zone_table;
 
 // function declarations
 void do_construct_overmax(P_char ch, char *arg);
@@ -114,7 +118,7 @@ const char CONSTRUCT_SYNTAX[] =
 "&+BConstruct syntax                                  \r\n"
 "&+b----------------------------------------------------------------------------------\r\n"
 "&+Wconstruct guildhall&n - construct a guildhall in the current room on map\r\n"
-"&+Wconstruct golem    &n - construct a golem in the entrance room\r\n"
+//"&+Wconstruct golem    &n - construct a golem in the entrance room\r\n"
 "&+Wconstruct room     &n - construct a new room\r\n"
 "&+Wconstruct upgrade  &n - upgrade the current room\r\n"
 "&+Wconstruct rename   &n - rename the current room\r\n"
@@ -148,10 +152,10 @@ void do_construct(P_char ch, char *arg, int cmd)
   {
     do_construct_room(ch, arg);
   }
-  else if( is_abbrev(buff, "golem") )
+ /* else if( is_abbrev(buff, "golem") )
   {
     do_construct_golem(ch, arg);
-  }
+  }*/
   else if( is_abbrev(buff, "upgrade") )
   {
     do_construct_upgrade(ch, arg);
@@ -1282,14 +1286,33 @@ bool guildhall_map_check(P_char ch)
   
   if(!rroom)
     return FALSE;
-  
+
+  //making guildhalls only avail in towns - 8/22/13 Drannak
+  if (RACE_GOOD(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_EVILHOME))
+  {
+    send_to_char("Sure, call in the contractors!... Try to find a good hometown to build in.\n", ch);
+    return FALSE;
+  }
+  else if (RACE_EVIL(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_GOODHOME))
+  {
+    send_to_char("Sure, call in the contractors!... Try to find an evil hometown to build in.\n", ch);
+    return FALSE;
+  }
+
+ //dranfat 
   if( Guildhall::find_by_vnum(world[rroom].number) )
   {
     send_to_char("There is already a guildhall here.\r\n", ch);
     return FALSE;
   }
+
+  if((!IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_EVILHOME)) && (!IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_GOODHOME)))
+  {
+    send_to_char("Guildhalls can only be built within the confines of a city.\r\n", ch);
+    return FALSE;
+  }
   
-  if( GET_RACEWAR(ch) == RACEWAR_GOOD )
+ /* if( GET_RACEWAR(ch) == RACEWAR_GOOD )
   {
     if( !IS_CONTINENT(rroom, CONT_GC) )
     {
@@ -1341,7 +1364,7 @@ bool guildhall_map_check(P_char ch)
       send_to_char("You can only build a guildhall on the &+LEvil Continent&n or Underdark.\r\n", ch);
       return FALSE;
     }
-  }
+  }*/
   
   for( int i = 0; i < Guildhall::guildhalls.size(); i++ )
   {
@@ -1359,16 +1382,19 @@ bool guildhall_map_check(P_char ch)
     }
   }  
   
-  if( world[rroom].sector_type == SECT_FOREST ||
+ /* if( world[rroom].sector_type == SECT_FOREST ||
       world[rroom].sector_type == SECT_HILLS ||
       world[rroom].sector_type == SECT_FIELD ||
-      IS_UD_MAP(rroom))
+      IS_UD_MAP(rroom))*/
+  if(((IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_EVILHOME)) || (IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_GOODHOME)))
+	&& (world[rroom].sector_type == SECT_CITY || world[rroom].sector_type == SECT_INSIDE))
   {
     return TRUE;
   }
   else
   {
-    send_to_char("You can't build your guildhall on this terrain.\r\n", ch);
+   // send_to_char("You can't build your guildhall on this terrain.\r\n", ch);
+    send_to_char("You can only construct a guildhall within the confines of a town.\r\n", ch);
     return FALSE;
   }
   

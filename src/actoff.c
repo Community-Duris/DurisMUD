@@ -1400,7 +1400,7 @@ void do_charge(P_char ch, char *argument, int cmd)
     
     return;
   }
-  if(get_takedown_size(victim) < (get_takedown_size(ch) - 4))
+  if(get_takedown_size(victim) < (get_takedown_size(ch) - 2))
   {
     act("$n topples over $mself as $e tries to charge into $N.",
       FALSE, ch, 0, victim, TO_ROOM);
@@ -8122,7 +8122,7 @@ void bodyslam(P_char ch, P_char victim)
 
   if(IS_AFFECTED(victim, AFF_AWARE))
   {
-    percent_chance *= .90;
+    percent_chance *= .80;
   }
 
   percent_chance =
@@ -8144,7 +8144,7 @@ void bodyslam(P_char ch, P_char victim)
        FALSE, ch, 0, victim, TO_CHAR);
     act("$n trips over you, in a futile attempt to slam you down even further.",
        FALSE, ch, 0, victim, TO_VICT);
-    CharWait(ch, 2 * PULSE_VIOLENCE);
+    CharWait(ch, 3 * PULSE_VIOLENCE);
   }
   else if(get_takedown_size(victim) > get_takedown_size(ch))
   {
@@ -8153,7 +8153,7 @@ void bodyslam(P_char ch, P_char victim)
     act("$N is too huge for you to bodyslam!", FALSE, ch, 0, victim, TO_CHAR);
     act("$n tries to bodyslam you but merely bounces off your huge girth.",
         FALSE, ch, 0, victim, TO_VICT);
-    CharWait(ch, 2 * PULSE_VIOLENCE);
+    CharWait(ch, 3 * PULSE_VIOLENCE);
   }
   else if(get_takedown_size(victim) < get_takedown_size(ch) - 2)
   {
@@ -8164,7 +8164,7 @@ void bodyslam(P_char ch, P_char victim)
     send_to_char
       ("You may as well try and bodyslam a speck of dust!  Too small..\n",
        ch);
-    CharWait(ch, 2 * PULSE_VIOLENCE);
+    CharWait(ch, 3 * PULSE_VIOLENCE);
   }
   else if(percent_chance > number(1, 100))
   {
