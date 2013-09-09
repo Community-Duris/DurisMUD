@@ -1536,11 +1536,11 @@ Made of different types of dragon meat and marinated into fireweed and peppered 
 ~
 #139103
 metal flask battle ecstasy~
-a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cbattle ecstasy&+L"&n~
+a &+Lm&ne&+Ltal&n &+Wfl&na&+Wsk&n marked &+L"&+cvitality&+L"&n~
 A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8201 8388609 0 0 0
-41 292 0 0 0 0 0 0
+41 56 0 0 0 0 0 0
 1 800000 100
 E
 metal flask battle ecstasy~
@@ -1565,7 +1565,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8201 8388609 0 0 0
 41 2 0 0 0 0 0 0
-1 500000 100
+1 2000000 100
 E
 metal flask teleport~
 A metal flask made of tin and a single stopper is marked with a label "teleport"
@@ -1625,7 +1625,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8201 8388609 0 0 0
 41 42 0 0 0 0 0 0
-1 800000 100
+1 8000000 100
 E
 metal flask word of recall~
 A metal flask made of tin and a single stopper is marked with a label "word of recall"
@@ -1649,7 +1649,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8193 8388609 0 0 0
 65 249 0 0 0 0 0 0
-1 80000 100
+1 2000000 100
 E
 metal flask reduce~
 A metal flask made of tin and a single stopper is marked with a label "reduce"
@@ -1685,7 +1685,7 @@ A metal flask with a small label was left here.~
 ~
 10 15 1 0 7 0 8201 8388609 0 0 0
 41 393 0 0 0 0 0 0
-1 1000000 100
+1 10000000 100
 E
 metal flask sneaky ways~
 A metal flask made of tin and a single stopper is marked with a label "sneaky ways"

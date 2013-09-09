@@ -3676,13 +3676,13 @@ void select_name(P_desc d, char *arg, int flag)
   }
 
   //WIPE2013 - Drannak
-  if (!pfile_exists("Players", tmp_name))
+ /* if (!pfile_exists("Players", tmp_name))
   {
     SEND_TO_Q
       ("Duris is currently undergoing a player wipe. We will re-open our doors on Monday, Sept. 9th at 9:00AM MST.\r\n Please see the DurisMUD forums for information at www.durismud.com.\r\nName:",
        d);
     return;
-  }
+  }*/
 
 
   if (!pfile_exists("Players", tmp_name) &&

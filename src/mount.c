@@ -56,6 +56,7 @@ void do_mount(P_char ch, char *argument, int cmd)
     send_to_char("Whom do you wish to ride?\r\n", ch);
     return;
   }
+
   if (mount == ch)
   {
     send_to_char("Ride on your own back?  How?\r\n", ch);
@@ -104,6 +105,12 @@ void do_mount(P_char ch, char *argument, int cmd)
     act("It's too difficult to ride on $N.", FALSE, ch, 0, mount, TO_CHAR);
     return;
   }
+  if (GET_SIZE(ch) > (GET_SIZE(mount) + 1))
+  {
+    act("$N is too small for you to ride, find something bigger.", FALSE, ch, 0, mount, TO_CHAR);
+    return;
+  }
+
   if (IS_PC(mount) && IS_CENTAUR(mount))
   {
     if (IS_CENTAUR(ch))
@@ -127,6 +134,12 @@ void do_mount(P_char ch, char *argument, int cmd)
   }
   else if(IS_CENTAUR(ch) ||
           has_innate(ch, INNATE_HORSE_BODY))
+  {
+    send_to_char("It's a tad hard for you to mount much of anything.\r\n",
+                 ch);
+    return;
+  }
+  else if(GET_SIZE(ch) < GET_SIZE(mount))
   {
     send_to_char("It's a tad hard for you to mount much of anything.\r\n",
                  ch);

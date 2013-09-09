@@ -1042,6 +1042,9 @@ int justice_send_guards(int to_rroom, P_char victim, int type, int how_many)
   hunt_data data;
   int ht = CHAR_IN_TOWN(victim);
 
+  //WIPE2013 - Drannak
+  return FALSE; //disabling
+
   // Only good hts get guards atm.
   if( ht <= 0 || ht > LAST_HOME
     || !IS_SET( hometowns[ht-1].flags, JUSTICE_GOODHOME ))

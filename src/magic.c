@@ -6617,6 +6617,8 @@ void spell_full_heal(int level, P_char ch, char *arg, int type, P_char victim,
   if(!NewSaves(victim, SAVING_SPELL, 0))
     dam = (int) (dam * 2.0);
 
+  dam = (int) (dam * .75);
+
   spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
 
  }
@@ -6727,7 +6729,7 @@ void spell_heal(int level, P_char ch, char *arg, int type, P_char victim, P_obj 
   if(!NewSaves(victim, SAVING_SPELL, 0))
     dam = (int) (dam * 2);
 
-
+  dam = (int) (dam * .75);
 
   spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
  }

@@ -2315,6 +2315,7 @@ void die(P_char ch, P_char killer)
   /* count xp loss for victim and apply */
   if(IS_PC(ch) &&
     !CHAR_IN_ARENA(ch) &&
+    (GET_LEVEL(ch) > 1) &&
     !IS_TRUSTED(ch)) // &&
    //    (GET_RACEWAR(ch) != 1)) Goods lose exp again.
   {
