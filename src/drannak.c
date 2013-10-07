@@ -1391,7 +1391,7 @@ void do_dismiss(P_char ch, char *argument, int cmd)
 
 int calculate_shipfrags(P_char ch)
 {
-  for (int i = 0; i < 1000; i++)
+  for (int i = 0; i < 20; i++)
   {
      if (shipfrags[i].ship == NULL)
     {

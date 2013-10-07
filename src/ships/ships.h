@@ -541,7 +541,7 @@ struct VolleyData
 
 extern struct ShipMap tactical_map[101][101];
 extern struct ContactData contacts[MAXSHIPS];
-extern struct ShipFragData shipfrags[10];
+extern struct ShipFragData shipfrags[20];
 extern const char *ship_symbol[NUM_SECT_TYPES];
 
 /* ship variable access macros */

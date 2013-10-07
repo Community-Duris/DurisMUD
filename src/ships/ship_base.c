@@ -40,7 +40,7 @@ char arg2[MAX_STRING_LENGTH];
 char arg3[MAX_STRING_LENGTH];
 char tmp_str[MAX_STRING_LENGTH];
 int    shiperror;
-struct ShipFragData shipfrags[10];
+struct ShipFragData shipfrags[20];
 
 //--------------------------------------------------------------------
 // load all ships from file into the world
@@ -2250,7 +2250,7 @@ int read_ships()
 //--------------------------------------------------------------------
 void update_shipfrags()
 {
-    for (int i = 0; i < 200; i++)
+    for (int i = 0; i < 20; i++)
     {
         int max = 0;
         shipfrags[i].ship = 0;
