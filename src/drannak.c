@@ -734,32 +734,8 @@ void create_recipe(P_char ch, P_obj temp)
     return;
    }
 
-  if (IS_SET(temp->extra_flags, ITEM_NOSELL))
-    {
-        return;
-	}
-
-  if(GET_OBJ_VNUM(temp) == 366)
-   {
-    return;
-   }
-
-  if (temp->type == ITEM_FOOD)
-   {
-    return;
-   }
-  if (temp->type == ITEM_TREASURE || temp->type == ITEM_POTION || temp->type == ITEM_MONEY || temp->type == ITEM_KEY)
-   {
-    return;
-   }
-  if (IS_OBJ_STAT2(temp, ITEM2_STOREITEM))
-   {
-    return;
-   }
-  if (IS_SET(temp->extra_flags, ITEM_ARTIFACT))
-  {
-    return;
-  }
+ if(!is_salvageable(temp))
+ return;
        
 
        

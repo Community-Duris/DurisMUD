@@ -5036,6 +5036,65 @@ bool find_chance(P_char ch)
   return FALSE;
 }
 
+bool is_salvageable(P_obj temp)
+{
+if(obj_index[temp->R_num].virtual_number == 1252)
+      {
+    return FALSE;
+   }
+
+
+//make sure its not food or container
+  if ((temp->type == ITEM_CONTAINER ||
+       temp->type == ITEM_STORAGE) && temp->contains)
+   {
+    return FALSE;
+   }
+
+  if (IS_SET(temp->extra_flags, ITEM_NOSELL))
+    {
+        return FALSE;
+	}
+
+  if(GET_OBJ_VNUM(temp) == 366)
+   {
+    return FALSE;
+   }
+
+  if (temp->type == ITEM_WAND)
+   {
+    return FALSE;
+   }
+   
+     if(GET_OBJ_VNUM(temp) == 352)
+  {
+    return FALSE;
+  }
+
+
+  if (temp->type == ITEM_FOOD)
+   {
+    return FALSE;
+   }
+  if (temp->type == ITEM_TREASURE || temp->type == ITEM_POTION || temp->type == ITEM_MONEY || temp->type == ITEM_KEY)
+   {
+    return FALSE;
+   }
+  if (IS_OBJ_STAT2(temp, ITEM2_STOREITEM))
+   {
+    return FALSE;
+   }
+  if (IS_SET(temp->extra_flags, ITEM_ARTIFACT))
+  {
+    return FALSE;
+  }
+  if((temp->type == ITEM_STAFF) && (temp->value[3] > 0))
+  return FALSE;
+
+return TRUE;
+}
+
+
 void do_salvage(P_char ch, char *argument, int cmd)
 {
   P_obj    temp;
@@ -5085,73 +5144,12 @@ void do_salvage(P_char ch, char *argument, int cmd)
     return;
    }
 
-  if(GET_OBJ_VNUM(temp) == 352)
+  if (!is_salvageable(temp))
   {
-    act("$n &+Ltries to break down their $p &+Lbut suddenly &+rDrannak&+L appears from the skies!", TRUE, ch, temp, 0, TO_ROOM);
-    act("You attempt to break down your $p but suddenly &+rDrannak&n appears from the skies!", FALSE, ch, temp, 0, TO_CHAR);
-    act("&+rDrannak&n makes a strange gesture, causing a large brick of &+Ycheese&n the size of a whale to suddenly fall on $n, crushing them completely!", TRUE, ch, temp, 0, TO_ROOM);
-    act("&+rDrannak&n makes a strange gesture, causing a large brick of &+Ycheese&n the size of a whale to suddenly fall on you, crushing you completely!", FALSE, ch, temp, 0, TO_CHAR);
-    die(ch, ch);
-    return;
-  }
-
-  if(obj_index[temp->R_num].virtual_number == 1252)
-      {
     act("That item cannot be &+ysalvaged&n.", FALSE, ch, 0, 0, TO_CHAR);
-    return;
-   }
-
-
-//make sure its not food or container
-  if ((temp->type == ITEM_CONTAINER ||
-       temp->type == ITEM_STORAGE) && temp->contains)
-   {
-    act("You may want to empty that container before you try to &+ysalvage &nit.", FALSE, ch, 0, 0, TO_CHAR);
-    return;
-   }
-
-  if (IS_SET(temp->extra_flags, ITEM_NOSELL))
-    {
-	 act("There is apparently no &+Yworth &nto that item.", FALSE, ch, 0, 0, TO_CHAR); 
-        return;
-	}
-
-  if(GET_OBJ_VNUM(temp) == 366)
-   {
-    send_to_char("You cheezy swine, no salvaging this.&n\r\n", ch);
-    return;
-   }
-
-  if (temp->type == ITEM_WAND)
-   {
-    send_to_char("This item is too powerful for you to salvage.\r\n", ch);
-    return;
-   }
-
-
-  if (temp->type == ITEM_FOOD)
-   {
-    act("Why would you want to salvage anything from your &+Ydinner&n?", FALSE, ch, 0, 0, TO_CHAR);
-    return;
-   }
-  if (temp->type == ITEM_TREASURE || temp->type == ITEM_POTION || temp->type == ITEM_MONEY || temp->type == ITEM_KEY)
-   {
-    act("That's probably more valuable than what you could break it down into... lets not.", FALSE, ch, 0, 0, TO_CHAR);
-    return;
-   }
-  if (IS_OBJ_STAT2(temp, ITEM2_STOREITEM))
-   {
-    act("This appears to be from a store or minor created... no dice.", FALSE, ch, 0, 0, TO_CHAR);
-    return;
-   }
-  if (IS_SET(temp->extra_flags, ITEM_ARTIFACT))
-  {
-    send_to_char
-      ("&+LYou decide against destroying an &+RARTIFACT&+L!\r\n",
-       ch);
-    return;
+  return;
   }
-  
+
   rolled = number(1, 105);
   if  ((GET_CHAR_SKILL(ch, SKILL_SALVAGE) < rolled) && (scitools < 1))
    {
