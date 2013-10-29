@@ -322,14 +322,14 @@ void feed_artifact(P_char ch, P_obj obj, int feed_seconds, int bypass)
 
   int time_now = time(NULL);
 
-  time_now += (5 * 86400);
+  //time_now += (5 * 86400); //old 205 hours - drannak
   
   if( obj->timer[3] < ( time_now - (5 * 86400) ) )
     obj->timer[3] = ( time_now - (5 * 86400) );
   
   obj->timer[3] += feed_seconds;
-  if( obj->timer[3] > time_now )
-    obj->timer[3] = time_now; //allowing people to feed over current limit (drannak)
+  if( obj->timer[3] > (time_now + (5 * 86400)))
+    obj->timer[3] = (time_now + 432000); //allowing people to feed over current limit (drannak)
     
   statuslog(56, "Artifact: %s [%d] on %s fed [&+G%ld&+Lh &+G%ld&+Lm &+G%ld&+Ls&n]", 
             obj->short_description, GET_OBJ_VNUM(obj), GET_NAME(ch),

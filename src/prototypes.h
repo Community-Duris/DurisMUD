@@ -783,6 +783,7 @@ void init_cmdlog(void);
 void loop_debug(void);
 
 /* drannak.c */
+bool quested_spell(P_char ch, int spl);
 int vnum_in_inv(P_char ch, int cmd);
 void vnum_from_inv(P_char ch, int item, int count);
 void set_surname(P_char ch, int num);

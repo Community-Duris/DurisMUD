@@ -5149,6 +5149,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
     act("$n breaks down their $p into its &+ylesser&n material...", TRUE, ch, temp, 0, TO_ROOM);
     act("You break down your $p into its &+ylesser &+Ymaterial&n...", FALSE, ch, temp, 0, TO_CHAR);
     obj_from_char(temp, TRUE); 
+    extract_obj(temp, TRUE);
     return;
    }
 

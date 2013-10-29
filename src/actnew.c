@@ -3772,6 +3772,8 @@ void do_craft(P_char ch, char *argument, int cmd)
 
    float tobjvalue = itemvalue(ch, tobj);
 
+   tobjvalue += 4; //minimum craft start value.
+
    int startmat = get_matstart(tobj);
 
    tobjvalue = (float)tobjvalue / (float)5;
@@ -3834,6 +3836,8 @@ if(difference == 0)
    tobj = read_object(selected, VIRTUAL);
 
    float tobjvalue = itemvalue(ch, tobj);
+
+   tobjvalue += 4;
 
    int startmat = get_matstart(tobj);
 
@@ -3947,7 +3951,7 @@ if(difference == 0)
   SET_BIT(reward->extra2_flags, ITEM2_CRAFTED);
   SET_BIT(reward->extra_flags, ITEM_NOREPAIR);
   randomizeitem(ch, reward);
-  sprintf(keywords, "%s %s", reward->name, GET_NAME(ch));
+  sprintf(keywords, "%s %s tradeskill", reward->name, GET_NAME(ch));
 
   sprintf(tempdesc, "%s", reward->short_description);
   sprintf(short_desc, "%s &+ymade by&n &+r%s&n", tempdesc, GET_NAME(ch));

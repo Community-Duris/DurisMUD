@@ -261,6 +261,20 @@ void display_surnames(P_char ch)
  page_string(ch->desc, buf, 1);
 }
 
+bool quested_spell(P_char ch, int spl)
+{
+
+ //debug("spell: %d\r\n");
+ if(IS_NPC(ch))
+ return FALSE;
+
+ /*if(spl == 56)
+ return TRUE;*/
+
+ return FALSE;
+}
+
+
 void clear_surname(P_char ch)
 {
   REMOVE_BIT(ch->specials.act3, PLR3_SURLIGHT);
@@ -932,7 +946,7 @@ while (i < 2)
 		{
 	  	 SET_BIT(obj->bitvector, AFF_HASTE);
   	 	 send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-               sprintf(emsg, " &+Lof &+rh&+Ra&+rs&+Rt&+re&n");
+               sprintf(emsg, " &+Lof &+rs&+Rp&+re&+Re&+rd&n");
 		}
  	   else if(rchance < 76)
 		{  
@@ -959,7 +973,7 @@ while (i < 2)
 		{
 	  	 SET_BIT(obj->bitvector4, AFF4_NOFEAR);
   	 	 send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-               sprintf(emsg, " &+Lof the se&+yn&+Yti&+yn&+Lel&n");
+               sprintf(emsg, " &+Lof the Se&+yn&+Yti&+yn&+Lel&n");
 		}
  	   else if(rchance < 25)
 		{
@@ -1130,13 +1144,13 @@ while (i < 2)
 		{
 	  	 SET_BIT(obj->bitvector2, AFF2_SOULSHIELD);
   	 	 send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-               sprintf(emsg, " &+Lof the &+WSoul&n");
+               sprintf(emsg, " &+Lof the &+Wsoul&n");
 		}
  	   else if(rchance < 76)
 		{  
 	  	 SET_BIT(obj->bitvector, AFF_UD_VISION);
   	 	 send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-               sprintf(emsg, " &+Lof the &+mUnderdark&n");
+               sprintf(emsg, " &+Lof the &+munderdark&n");
 		}
  	   else
 		{  

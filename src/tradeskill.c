@@ -475,6 +475,8 @@ void do_forge(P_char ch, char *argument, int cmd)
 
    float tobjvalue = itemvalue(ch, tobj);
 
+   tobjvalue += 4; //add minimum crafting requirement of value 4.
+
    int startmat = get_matstart(tobj);
 
    tobjvalue = (float)tobjvalue / (float)5;
@@ -544,6 +546,8 @@ void do_forge(P_char ch, char *argument, int cmd)
    tobj = read_object(selected, VIRTUAL);
 
    float tobjvalue = itemvalue(ch, tobj);
+
+   tobjvalue += 4;
 
    int startmat = get_matstart(tobj);
 
@@ -654,7 +658,7 @@ void do_forge(P_char ch, char *argument, int cmd)
 
   randomizeitem(ch, reward);
 
-  sprintf(keywords, "%s %s", reward->name, GET_NAME(ch));
+  sprintf(keywords, "%s %s tradeskill", reward->name, GET_NAME(ch));
 
   sprintf(tempdesc, "%s", reward->short_description);
   sprintf(short_desc, "%s &+ymade by&n &+r%s&n", tempdesc, GET_NAME(ch));
