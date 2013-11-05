@@ -1,8 +1,4 @@
-git checkout master
+git checkout wipe2011
 git add .
 git commit -m 'automated compile'
-git push origin master
-git checkout livemud
-git merge master
-git push
-git checkout master
+git push origin wipe2011
