@@ -380,6 +380,69 @@ void insertLeaderEntry(char names[MAX_HALLOFFAME_SIZE][MAX_STRING_LENGTH],
   strcpy(killers[pos], killer);
 }
 
+ void newLeaderBoard(P_char ch, char *arg, int cmd)
+{
+  FILE    *halloffamelist, *f, *newleaderlist;
+  char     highPlayerName[MAX_HALLOFFAME_SIZE][MAX_STRING_LENGTH],
+    lowPlayerName[MAX_HALLOFFAME_SIZE][MAX_STRING_LENGTH], change = FALSE;
+	  char     killer[MAX_STRING_LENGTH], name[MAX_STRING_LENGTH];
+  int      highHardcore[MAX_HALLOFFAME_SIZE],
+    lowHardcore[MAX_HALLOFFAME_SIZE], i;
+	  int      halloffames, x;
+  long     phalloffames;
+  float    pts = 0;
+  char     killerName[MAX_HALLOFFAME_SIZE][MAX_STRING_LENGTH];
+  char     halloffamelist_file[1024], newleader_file[1024], buf2[MAX_STRING_LENGTH];
+  char     buffer[1024], *ptr;
+
+ 
+ sprintf(halloffamelist_file, "lib/information/leaderboard");
+ sprintf(newleader_file, "lib/information/leaderboardprod");
+
+  ptr = halloffamelist_file;
+  for (ptr = halloffamelist_file; *ptr != '\0'; ptr++)
+  {
+    *ptr = LOWER(*ptr);
+    if (*ptr == ' ')
+      *ptr = '_';
+  }
+
+
+    newleaderlist = fopen(newleader_file, "wt");
+    if (!newleaderlist)
+    {
+      send_to_char("error: couldn't open newleaderlist for writing.\r\n",
+                   ch);
+      return;
+    }
+	
+	halloffamelist = fopen(halloffamelist_file, "rt");
+	    if (!halloffamelist)
+    {
+      send_to_char("error: couldn't open oldhalloffamelist for writing.\r\n",
+                   ch);
+      return;
+    }
+  
+    while(fscanf(halloffamelist, "%s %d %s\n", name, &halloffames, killer) != EOF)
+  {
+    pts = halloffames;
+  /*  pts /= 100.0;*/
+    if(!strcmp(name, "none"))
+    break;
+    sprintf(buf2, "%s %d\t\r\n",
+            name, (int)pts);
+        fprintf(newleaderlist, buf2);
+
+  }
+
+
+  
+    fclose(halloffamelist);
+	fclose(newleaderlist);
+}
+  
+
 void displayLeader(P_char ch, char *arg, int cmd)
 {
 
@@ -394,23 +457,18 @@ void displayLeader(P_char ch, char *arg, int cmd)
 
 
   
-  sprintf(filename, "lib/information/leaderboard");
+  sprintf(filename, "lib/information/leaderboardprod");
 
   if (!(halloffameList = fopen(filename, "rt")))
   {
    /*sprintf(name, "Couldn't open leaderboard: %s\r\n", filename);
    send_to_char(name, ch);*/
     return;
-  /* will imp below as a create function later - Drannak
-    f = fopen("lib/information/leaderboard", "w");
-    fprintf(f, "none 0 0\n");
-    fclose(f);
-    return;*/
   }
 
   int actualrecords = 0;
  
-  while(fscanf(halloffameList, "%s %d %s\n", name, &halloffames, killer) != EOF)
+  while(fscanf(halloffameList, "%s %d\n", name, &halloffames) != EOF)
   {
    actualrecords++;
   }
@@ -432,12 +490,12 @@ void displayLeader(P_char ch, char *arg, int cmd)
   strcat(buf, tempbuf2);
   for (i = 0; i < actualrecords; i++)
   {
-    fscanf(halloffameList, "%s %d %s\n", name, &halloffames, killer);
+    fscanf(halloffameList, "%s %d\n", name, &halloffames);
     name[0] = toupper(name[0]);
     pts = halloffames;
     pts /= 100.0;
 
-    sprintf(buf2, "   &+w%-15s          &+Y% 6.2f\t\r\n",
+    sprintf(buf2, "   &+w%-15s          &+Y%6.2f\t\r\n",
             name, pts);
     strcat(buf, buf2);
   }

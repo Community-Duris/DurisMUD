@@ -384,6 +384,9 @@ void run_the_game(int port)
 
   fprintf(stderr, "-- Loading alliances\r\n");
   load_alliances();
+
+  fprintf(stderr, "-- Updating leaderboard\r\n");
+  newLeaderBoard(NULL, NULL, NULL);
   
   init_ctf();
 
