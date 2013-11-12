@@ -509,7 +509,7 @@ void writeLeaderBoard(P_char ch, char thekiller[1024])
   /* read ten highest */
  
   // for (i = 0; i < MAX_HALLOFFAME_SIZE; i++)
-  int highx, actualrecords;
+  int highx, actualrecords=0;
   char namex[MAX_STRING_LENGTH], killx[MAX_STRING_LENGTH], debugbuf[MAX_STRING_LENGTH];
   
   while((fscanf(halloffamelist, "%s %d %s\n", namex, &highx, killx)) != EOF && actualrecords < MAX_HALLOFFAME_SIZE)

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 RESULT=53
 STOP_REASON="initial bootup"
@@ -36,7 +36,7 @@ while [ $RESULT != 0 ]; do
 	fi
 
   echo "Starting duris..."
-  ./dms 7777 > dms.out
+  ./dms 7777 # > dms.out
 
 	# capture the exit code
   RESULT=${PIPESTATUS[0]}
