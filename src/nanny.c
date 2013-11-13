@@ -4736,6 +4736,7 @@ void select_reroll(P_desc d, char *arg)
   case 'n':
     SEND_TO_Q("\r\n\r\nAccepting these stats.\r\n\r\n", d);
     STATE(d) = CON_BONUS1;
+    //STATE(d) = CON_REROLL;
     break;
   default:
     SEND_TO_Q("\r\n\r\nRerolling this character.\r\n\r\n", d);
@@ -5006,8 +5007,8 @@ void select_class(P_desc d, char *arg)
   roll_basic_abilities(d->character, 0);
   display_characteristics(d);
 
-    //display_stats(d);
-  //SEND_TO_Q(reroll, d);
+    display_stats(d);//
+  SEND_TO_Q(reroll, d);//
   SEND_TO_Q("\r\nPress return to continue with adding stat bonuses.\r\n", d);
 }
 
@@ -5119,17 +5120,12 @@ void select_alignment(P_desc d, char *arg)
   GET_BIRTHPLACE(d->character) = home;
   GET_ORIG_BIRTHPLACE(d->character) = home;
 
-  //STATE(d) = CON_REROLL;
+    STATE(d) = CON_REROLL;
   roll_basic_abilities(d->character, 0);
   display_characteristics(d);
-  //display_stats(d);
-  //SEND_TO_Q(reroll, d);
-  //SEND_TO_Q("Do you want to reroll this char (y/n) [y]:  ", d);
-
-    //display_stats(d);
-  //SEND_TO_Q(reroll, d);
-   STATE(d) = CON_BONUS1;
-  SEND_TO_Q("\r\nPress return to continue adding stat bonuses.\r\n", d);
+  display_stats(d);
+  SEND_TO_Q(reroll, d);
+  SEND_TO_Q("Do you want to reroll this char (y/n) [y]:  ", d);
 }
 
 
@@ -5182,12 +5178,12 @@ void select_hometown(P_desc d, char *arg)
   GET_BIRTHPLACE(d->character) = home;
   GET_ORIG_BIRTHPLACE(d->character) = home;
 
-  STATE(d) = CON_BONUS1;
+  STATE(d) = CON_REROLL;
   roll_basic_abilities(d->character, 0);
   display_characteristics(d);
-  //display_stats(d);
-  //SEND_TO_Q(reroll, d);
-  SEND_TO_Q("\r\nPress return to continue adding stat bonuses.\r\n", d);
+  display_stats(d);
+  SEND_TO_Q(reroll, d);
+  SEND_TO_Q("Do you want to reroll this char (y/n) [y]:  ", d);
 }
 
 void select_keepchar(P_desc d, char *arg)

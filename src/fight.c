@@ -4317,12 +4317,30 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
       redmod -= (number(1, modifier));
       else if (modifier <= 40)
       redmod -= (number(20, modifier));
-      else if (modifier <= 60)
+      else 
       redmod -= (number(40, modifier));
       if(redmod < 25)
       redmod = 25;
       redmod *= .01;
       dam *= redmod;
+      }
+
+      //statupdate2013 - drannak - imp spell damage
+      int rsmod = GET_C_STR(ch);
+      double mdifier = resmod - 120;
+      if(mdifier >=1)
+      {
+      float rdmod = 100;
+      if (mdifier <= 20)
+      rdmod += (number(1, 10));
+      else if (mdifier <= 40)
+      rdmod += (number(10, 20));
+      else
+      rdmod += (number(20, 30));
+      if(rdmod > 130)
+      rdmod = 130;
+      rdmod *= .01;
+      dam *= rdmod;
       }
 
      

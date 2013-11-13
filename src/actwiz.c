@@ -4715,40 +4715,39 @@ void do_purge(P_char ch, char *argument, int cmd)
 
 void roll_basic_abilities(P_char ch, int flag)
 {
-  int stat_base = 30;
+
+/* screw 'bell curves' and stat totalling, let's keep it simple */
 
 #if 0
-  int      i, rolls[10], statp, temp, total, sides;
-
+  int i, rolls[10], statp, temp, total, sides;
   /* this gives the total points distributed on _10_ stats,
      according to flag+1 */
-  static int totlim[5] = {
+  static int totlim[5] =
+  {
     250, 550, 600, 650, 700
   };
 
   /* set minimum of points for class, 25 min in all stats,
      except for luck&karma (invis to player) */
   temp = 0;
-  for (i = 0; i < 8; i++)
-  {
+  for (i = 0; i < 8; i++) {
     /* class requirements? */
     rolls[i] = min_stats_for_class[GET_CLASS(ch)][i];
     /* min stat */
-    if(rolls[i] < 25)
+    if (rolls[i] < 25)
       rolls[i] = 25;
     temp += rolls[i];
   }
 
   /* determine how many points will be distributed */
-  if(flag >= 4)
+  if (flag >= 4)
     total = number(temp, 800);
-  else
-  {
+  else {
     total = totlim[flag + 1];
     total += (dice(3, 21) + 17);
   }
 
-  if(temp > total)
+  if (temp > total)
     /* probably punished, no additional points */
     total = 0;
   else
@@ -4756,21 +4755,17 @@ void roll_basic_abilities(P_char ch, int flag)
 
   /* distribute the rest of the points, choose random
      stat and add with a pseudo-bell made by 3 dices */
-  while (total)
-  {
+  while (total) {
     temp = number(0, 7);
     sides = (100 - rolls[temp]) / 3;
-    if(sides)
+    if (sides)
       statp = dice(3, sides);
     else
       statp = 100 - rolls[temp];
-    if(statp < total)
-    {
+    if (statp < total) {
       rolls[temp] += statp;
       total -= statp;
-    }
-    else
-    {
+    } else {
       rolls[temp] += total;
       total = 0;
     }
@@ -4786,108 +4781,18 @@ void roll_basic_abilities(P_char ch, int flag)
   ch->base_stats.Cha = ch->curr_stats.Cha = rolls[7];
   ch->base_stats.Karma = ch->curr_stats.Karma = number(1, 100);
   ch->base_stats.Luck = ch->curr_stats.Luck = number(1, 100);
-
-  if(IS_NPC(ch))
-  {
-    if(GET_LEVEL(ch) > 40)
-      flag = 1;
-    else if(GET_LEVEL(ch) < 10)
-      flag = 2;
-    else
-      flag = 0;
-  }
-  else
-   flag = -1;
-
-  if(flag == -1)
-  {
-    ch->base_stats.Str = ch->curr_stats.Str = stat_base;
-    ch->base_stats.Dex = ch->curr_stats.Dex = stat_base;
-    ch->base_stats.Agi = ch->curr_stats.Agi = stat_base;
-    ch->base_stats.Con = ch->curr_stats.Con = stat_base;
-    ch->base_stats.Pow = ch->curr_stats.Pow = stat_base;
-    ch->base_stats.Int = ch->curr_stats.Int = stat_base;
-    ch->base_stats.Wis = ch->curr_stats.Wis = stat_base;
-    ch->base_stats.Cha = ch->curr_stats.Cha = stat_base;
-    ch->base_stats.Karma = ch->curr_stats.Karma = 50;
-    ch->base_stats.Luck = ch->curr_stats.Luck = 50 + number(0, 70);
-  }
-  else if(flag == 0)
-  {
-    ch->base_stats.Str = ch->curr_stats.Str = stat_base + number(1, GET_LEVEL(ch));
-    ch->base_stats.Dex = ch->curr_stats.Dex = stat_base + number(1, GET_LEVEL(ch));
-    ch->base_stats.Agi = ch->curr_stats.Agi = stat_base + number(1, GET_LEVEL(ch));
-    ch->base_stats.Con = ch->curr_stats.Con = stat_base + number(1, GET_LEVEL(ch));
-    ch->base_stats.Pow = ch->curr_stats.Pow = stat_base + number(1, GET_LEVEL(ch));
-    ch->base_stats.Int = ch->curr_stats.Int = stat_base + number(1, GET_LEVEL(ch));
-    ch->base_stats.Wis = ch->curr_stats.Wis = stat_base + number(1, GET_LEVEL(ch));
-    ch->base_stats.Cha = ch->curr_stats.Cha = stat_base + number(1, GET_LEVEL(ch));
-    ch->base_stats.Karma = ch->curr_stats.Karma = number(50, 100);
-    ch->base_stats.Luck = ch->curr_stats.Luck = number(60, 120);
-  }
-  else if(flag == 1)
-  {
-    ch->base_stats.Str = ch->curr_stats.Str = stat_base + number(20, GET_LEVEL(ch) + 10);
-    ch->base_stats.Dex = ch->curr_stats.Dex = stat_base + number(20, GET_LEVEL(ch) + 10);
-    ch->base_stats.Agi = ch->curr_stats.Agi = stat_base + number(20, GET_LEVEL(ch) + 10);
-    ch->base_stats.Con = ch->curr_stats.Con = stat_base + number(20, GET_LEVEL(ch) + 10);
-    ch->base_stats.Pow = ch->curr_stats.Pow = stat_base + number(20, GET_LEVEL(ch) + 10);
-    ch->base_stats.Int = ch->curr_stats.Int = stat_base + number(20, GET_LEVEL(ch) + 10);
-    ch->base_stats.Wis = ch->curr_stats.Wis = stat_base + number(20, GET_LEVEL(ch) + 10);
-    ch->base_stats.Cha = ch->curr_stats.Cha = stat_base + number(20, GET_LEVEL(ch) + 10);
-    ch->base_stats.Karma = ch->curr_stats.Karma = number(50, 100);
-    ch->base_stats.Luck = ch->curr_stats.Luck = number(90, 110);
-  }
-  else if(flag == 2)
-  {
-    ch->base_stats.Str = ch->curr_stats.Str = stat_base + number(-10, GET_LEVEL(ch));
-    ch->base_stats.Dex = ch->curr_stats.Dex = stat_base + number(-10, GET_LEVEL(ch));
-    ch->base_stats.Agi = ch->curr_stats.Agi = stat_base + number(-10, GET_LEVEL(ch));
-    ch->base_stats.Con = ch->curr_stats.Con = stat_base + number(-10, GET_LEVEL(ch));
-    ch->base_stats.Pow = ch->curr_stats.Pow = stat_base + number(-10, GET_LEVEL(ch));
-    ch->base_stats.Int = ch->curr_stats.Int = stat_base + number(-10, GET_LEVEL(ch));
-    ch->base_stats.Wis = ch->curr_stats.Wis = stat_base + number(-10, GET_LEVEL(ch));
-    ch->base_stats.Cha = ch->curr_stats.Cha = stat_base + number(-10, GET_LEVEL(ch));
-    ch->base_stats.Karma = ch->curr_stats.Karma = number(50, 70);
-    ch->base_stats.Luck = ch->curr_stats.Luck = number(30, 70);
-  }
- 
-}
 #endif
-int rolls[8];
-  int total, i;
-
-  do {
-    for (i = 0, total = 0; i < 8; i++) {
-      rolls[i] = 70 + number(1,15);
-      total += rolls[i];
-    }
-  } while (total != 8*75);
-/*
-  ch->base_stats.Str = ch->curr_stats.Str = rolls[0];
-  ch->base_stats.Dex = ch->curr_stats.Dex = rolls[1];
-  ch->base_stats.Agi = ch->curr_stats.Agi = rolls[2];
-  ch->base_stats.Con = ch->curr_stats.Con = rolls[3];
-  ch->base_stats.Pow = ch->curr_stats.Pow = rolls[4];
-  ch->base_stats.Int = ch->curr_stats.Int = rolls[5];
-  ch->base_stats.Wis = ch->curr_stats.Wis = rolls[6];
-  ch->base_stats.Cha = ch->curr_stats.Cha = rolls[7];
-*/
-  ch->base_stats.Str = ch->curr_stats.Str = 80;
-  ch->base_stats.Dex = ch->curr_stats.Dex = 80;
-  ch->base_stats.Agi = ch->curr_stats.Agi = 80;
-  ch->base_stats.Con = ch->curr_stats.Con = 80;
-  ch->base_stats.Pow = ch->curr_stats.Pow = 80;
-  ch->base_stats.Int = ch->curr_stats.Int = 80;
-  ch->base_stats.Wis = ch->curr_stats.Wis = 80;
-  ch->base_stats.Cha = ch->curr_stats.Cha = 80;
-
-  //drannak working
-  ch->base_stats.Karma = ch->curr_stats.Karma = number(50, 110); //  These two rolls are invisible
-  ch->base_stats.Luck = ch->curr_stats.Luck = number(50, 110);   //  to players during creation on purpose - Jexni
-
+  ch->base_stats.Str = ch->curr_stats.Str = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Dex = ch->curr_stats.Dex = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Agi = ch->curr_stats.Agi = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Con = ch->curr_stats.Con = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Pow = ch->curr_stats.Pow = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Int = ch->curr_stats.Int = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Wis = ch->curr_stats.Wis = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Cha = ch->curr_stats.Cha = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Karma = ch->curr_stats.Karma = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Luck = ch->curr_stats.Luck = MIN(dice(5, 8) + 53, 95);
 }
-
 void NewbySkillSet(P_char ch)
 {
   int      i;
