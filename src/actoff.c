@@ -2435,15 +2435,15 @@ void do_flee(P_char ch, char *argument, int cmd)
       StartRegen(ch, EVENT_MOVE_REGEN);
       
       if(GET_VITALITY(ch) > 0)
-        GET_VITALITY(ch) = MAX(0, (GET_VITALITY(ch) - (number(10, 15))));
+        GET_VITALITY(ch) = MAX(0, (GET_VITALITY(ch) - (number(20, 50))));
     }
     else if(GET_CLASS(ch, CLASS_ROGUE) &&
            GET_VITALITY(ch) > 0)
-              GET_VITALITY(ch) = MAX(0, (GET_VITALITY(ch) - number(2, 5)));
+              GET_VITALITY(ch) = MAX(0, (GET_VITALITY(ch) - number(15, 25)));
     else if(rider &&
             mount &&
             GET_VITALITY(mount) > 0)
-              GET_VITALITY(mount) = MAX(0, (GET_VITALITY(mount) - (number(10, 20))));
+              GET_VITALITY(mount) = MAX(0, (GET_VITALITY(mount) - (number(30, 50))));
               
     sprintf(buf, "You flee %sward!\n", dirs[attempted_dir]);
     send_to_char(buf, ch);
