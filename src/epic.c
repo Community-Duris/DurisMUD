@@ -946,11 +946,11 @@ void epic_stone_one_touch(P_obj obj, P_char ch, int epic_value)
 
   //Characters can now level up to 55 by epics and exp alone - 11/13/12 Drannak
   if((GET_LEVEL(ch) == (obj->value[3] - 1)) ||
-    (curr_epics > 3000 && GET_LEVEL(ch) == 50) ||
-    (curr_epics > 4500 && GET_LEVEL(ch) == 51) ||
-    (curr_epics > 5000 && GET_LEVEL(ch) == 52) ||
-    (curr_epics > 7500 && GET_LEVEL(ch) == 53) ||
-    (curr_epics > 8000 && GET_LEVEL(ch) == 54))
+    (curr_epics > 4000 && GET_LEVEL(ch) == 50) ||
+    (curr_epics > 7000 && GET_LEVEL(ch) == 51) ||
+    (curr_epics > 8000 && GET_LEVEL(ch) == 52) ||
+    (curr_epics > 13000 && GET_LEVEL(ch) == 53) ||
+    (curr_epics > 14000 && GET_LEVEL(ch) == 54))
   {
     epic_stone_level_char(obj, ch);
   }
