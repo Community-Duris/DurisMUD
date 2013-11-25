@@ -2108,5 +2108,8 @@ int get_progress(P_char ch, int ach, long required)
   percentage = prog / required;
   }
 
+  if(prog < 0)
+  prog = 0;
+
  return percentage;
 }
