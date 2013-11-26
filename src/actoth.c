@@ -3431,6 +3431,7 @@ void do_quaff(P_char ch, char *argument, int cmd)
   memset(&af, 0, sizeof(af));
   af.type = TAG_POTION_TIMER;
   af.duration = 6;
+  af.flags = AFFTYPE_NODISPEL;
   affect_to_char(ch, &af);
 
 

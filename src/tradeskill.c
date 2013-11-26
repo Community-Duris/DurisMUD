@@ -2666,7 +2666,7 @@ int itemvalue(P_char ch, P_obj obj)
  if (IS_SET(obj->bitvector4, AFF4_WILDMAGIC))
 	 workingvalue += 50;
 
- if(IS_SET(obj->wear_flags, ITEM_WIELD) && (obj->value[5] > 1000)) //has a ghetto proc
+ if(IS_SET(obj->wear_flags, ITEM_WIELD) && (obj->value[5] > 1)) //has a ghetto proc
   {
    workingvalue +=50;
    //send_to_char("ghetto proc\r\n", ch);

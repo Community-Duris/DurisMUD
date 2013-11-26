@@ -1966,32 +1966,37 @@ void enhance(P_char ch, P_obj source, P_obj material)
 		  validobj = 0;
                 extract_obj(robj, FALSE);
                }
-              else if( (IS_SET(source->wear_flags, ITEM_WIELD) && !IS_SET(robj->wear_flags, ITEM_WIELD)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_BODY) && !IS_SET(robj->wear_flags, ITEM_WEAR_BODY)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_LEGS) && !IS_SET(robj->wear_flags, ITEM_WEAR_LEGS)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_ARMS) && !IS_SET(robj->wear_flags, ITEM_WEAR_ARMS)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_HEAD) && !IS_SET(robj->wear_flags, ITEM_WEAR_HEAD)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_EYES) && !IS_SET(robj->wear_flags, ITEM_WEAR_EYES)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_EARRING) && !IS_SET(robj->wear_flags, ITEM_WEAR_EARRING)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_NOSE) && !IS_SET(robj->wear_flags, ITEM_WEAR_NOSE)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_FACE) && !IS_SET(robj->wear_flags, ITEM_WEAR_FACE)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_QUIVER) && !IS_SET(robj->wear_flags, ITEM_WEAR_QUIVER)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_FINGER) && !IS_SET(robj->wear_flags, ITEM_WEAR_FINGER)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_WRIST) && !IS_SET(robj->wear_flags, ITEM_WEAR_WRIST)) ||
-		(IS_SET(source->wear_flags, ITEM_GUILD_INSIGNIA) && !IS_SET(robj->wear_flags, ITEM_GUILD_INSIGNIA)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_TAIL) && !IS_SET(robj->wear_flags, ITEM_WEAR_TAIL)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_NECK) && !IS_SET(robj->wear_flags, ITEM_WEAR_NECK)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_WAIST) && !IS_SET(robj->wear_flags, ITEM_WEAR_WAIST)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_ABOUT) && !IS_SET(robj->wear_flags, ITEM_WEAR_ABOUT)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_FEET) && !IS_SET(robj->wear_flags, ITEM_WEAR_FEET)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_SHIELD) && !IS_SET(robj->wear_flags, ITEM_WEAR_SHIELD)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_HANDS) && !IS_SET(robj->wear_flags, ITEM_WEAR_HANDS)) ||
-		(IS_SET(source->wear_flags, ITEM_WEAR_BACK) && !IS_SET(robj->wear_flags, ITEM_WEAR_BACK))
+              else if( (IS_SET(source->wear_flags, ITEM_WIELD) && IS_SET(robj->wear_flags, ITEM_WIELD)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_BODY) && IS_SET(robj->wear_flags, ITEM_WEAR_BODY)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_LEGS) && IS_SET(robj->wear_flags, ITEM_WEAR_LEGS)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_ARMS) && IS_SET(robj->wear_flags, ITEM_WEAR_ARMS)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_HEAD) && IS_SET(robj->wear_flags, ITEM_WEAR_HEAD)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_EYES) && IS_SET(robj->wear_flags, ITEM_WEAR_EYES)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_EARRING) && IS_SET(robj->wear_flags, ITEM_WEAR_EARRING)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_NOSE) && IS_SET(robj->wear_flags, ITEM_WEAR_NOSE)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_FACE) && IS_SET(robj->wear_flags, ITEM_WEAR_FACE)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_QUIVER) && IS_SET(robj->wear_flags, ITEM_WEAR_QUIVER)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_FINGER) && IS_SET(robj->wear_flags, ITEM_WEAR_FINGER)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_WRIST) && IS_SET(robj->wear_flags, ITEM_WEAR_WRIST)) ||
+		(IS_SET(source->wear_flags, ITEM_GUILD_INSIGNIA) && IS_SET(robj->wear_flags, ITEM_GUILD_INSIGNIA)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_TAIL) && IS_SET(robj->wear_flags, ITEM_WEAR_TAIL)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_NECK) && IS_SET(robj->wear_flags, ITEM_WEAR_NECK)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_WAIST) && IS_SET(robj->wear_flags, ITEM_WEAR_WAIST)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_ABOUT) && IS_SET(robj->wear_flags, ITEM_WEAR_ABOUT)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_FEET) && IS_SET(robj->wear_flags, ITEM_WEAR_FEET)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_SHIELD) && IS_SET(robj->wear_flags, ITEM_WEAR_SHIELD)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_HANDS) && IS_SET(robj->wear_flags, ITEM_WEAR_HANDS)) ||
+		(IS_SET(source->wear_flags, ITEM_WEAR_BACK) && IS_SET(robj->wear_flags, ITEM_WEAR_BACK))
 		)
                {  
+		  validobj = 1;
+               }
+		else
+	          {  
 		  validobj = 0;
                 extract_obj(robj, FALSE);
                }
+              
 	   searchcount ++;
           if(searchcount >  20000)
           {
