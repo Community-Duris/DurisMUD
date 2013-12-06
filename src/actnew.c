@@ -418,7 +418,7 @@ void do_stampede(P_char ch, char *arg, int cmd)
 {
   int      missed;
   int      count;
-  P_char   mob, next_mob = 0;
+  P_char   vict, next_vict = 0;
 
 /*  struct group_list *gl; */
 
@@ -449,36 +449,36 @@ void do_stampede(P_char ch, char *arg, int cmd)
   send_to_char("You go madly crashing around the room!\r\n", ch);
   act("$n crashes wildly around!", TRUE, ch, 0, 0, TO_ROOM);
 
-  for (mob = world[ch->in_room].people; mob; mob = next_mob)
+  for (vict = world[ch->in_room].people; vict; vict = next_vict)
   {
-    next_mob = mob->next_in_room;
+    next_vict = vict->next_in_room;
     if (count >= number(2, 3))
       continue;
-    if (mob == ch)
+    if (vict == ch)
       continue;
-    if (!CAN_SEE(ch, mob))
+    if (!CAN_SEE(ch, vict))
       continue;
 
 /*  replaced with more proper check below
-    if ((mob->following == ch) || (ch->following == mob))
+    if ((vict->following == ch) || (ch->following == vict))
       continue;
 
-    if (mob->group == ch->group)
+    if (vict->group == ch->group)
       continue;*/
     
-    if (!should_area_hit(ch, mob))
+    if (!should_area_hit(ch, vict))
       continue;
     
     /* can't stampede some beings */
 
-    if ((GET_RACE(mob) == RACE_GHOST) ||
-        (GET_RACE(mob) == RACE_A_ELEMENTAL) ||
-        (GET_RACE(mob) == RACE_EFREET) ||
-        (IS_ELITE(mob)) ||
-        (IS_AFFECTED4(mob, AFF4_PHANTASMAL_FORM)))
+    if ((GET_RACE(vict) == RACE_GHOST) ||
+        (GET_RACE(vict) == RACE_A_ELEMENTAL) ||
+        (GET_RACE(vict) == RACE_EFREET) ||
+        (IS_ELITE(vict)) ||
+        (IS_AFFECTED4(vict, AFF4_PHANTASMAL_FORM)))
       continue;
 
-    if (mob->specials.fighting)
+    if (vict->specials.fighting)
       continue;
 
     missed = 0;
@@ -486,25 +486,25 @@ void do_stampede(P_char ch, char *arg, int cmd)
     if(!number(0, 9))
     { }
     else if (number(1, 100) >
-        (GET_LEVEL(ch) - GET_LEVEL(mob) - STAT_INDEX(GET_C_AGI(mob)) +
-         dice(10, IS_AFFECTED(mob, AFF_AWARE) ? 5 : 10)) ||
-        !on_front_line(mob))
+        (GET_LEVEL(ch) - GET_LEVEL(vict) - STAT_INDEX(GET_C_AGI(vict)) +
+         dice(10, IS_AFFECTED(vict, AFF_AWARE) ? 5 : 10)) ||
+        !on_front_line(vict))
     {
       missed = 1;
-      act("$n jumps nimbly out of the way!", 0, mob, 0, 0, TO_ROOM);
-      act("You jump out of the way of $n's stampede!", 0, ch, 0, mob,
+      act("$n jumps nimbly out of the way!", 0, vict, 0, 0, TO_ROOM);
+      act("You jump out of the way of $n's stampede!", 0, ch, 0, vict,
           TO_VICT);
     }
     if (!missed)
     {
-      act("$n crashes wildly into $N!", 0, ch, 0, mob, TO_ROOM);
-      act("You crash wildly into $N!", 0, ch, 0, mob, TO_CHAR);
-      act("$n crashes wildly into you!", 0, ch, 0, mob, TO_VICT);
-      SET_POS(mob, POS_PRONE + GET_STAT(mob));
-      Stun(mob, ch, PULSE_VIOLENCE / 2, TRUE);
+      act("$n crashes wildly into $N!", 0, ch, 0, vict, TO_ROOM);
+      act("You crash wildly into $N!", 0, ch, 0, vict, TO_CHAR);
+      act("$n crashes wildly into you!", 0, ch, 0, vict, TO_VICT);
+      SET_POS(vict, POS_PRONE + GET_STAT(vict));
+      Stun(vict, ch, PULSE_VIOLENCE / 2, TRUE);
       count++;
     }
-    set_fighting(mob, ch);
+    set_fighting(vict, ch);
   }
 
   count = MIN(2, count);
@@ -1153,7 +1153,7 @@ void do_trap(P_char ch, char *arg, int cmd)
 
 /* SET_TRAP(ch, room); */
 
-/*    LOOP_THRU_PEOPLE(monster, ch) { */
+/*    LOOP_THRU_PEOPLE(monster, ch)  */
 
     int      dice;
 
@@ -2382,7 +2382,7 @@ void do_shapechange(P_char ch, char *arg, int cmd)
     return;
   }
 
-/*  if (GET_SIZE(mob) != GET_SIZE(ch)) {  // This check is already performed at learning stage
+/*  if (GET_SIZE(mob) != GET_SIZE(ch))  // This check is already performed at learning stage
     send_to_char("You are not of appropriate size to take on shape of this creature now.\n", ch);
     goto cleanup;
   }*/
@@ -3175,7 +3175,7 @@ void do_throat_crush(P_char ch, char *arg, int cmd)
     i = (int) (i * 0.9);
   }
 
-  if (GET_C_LUCK(ch) > GET_C_LUCK(vict))
+  if (GET_C_LUK(ch) > GET_C_LUK(vict))
   {
     i = (int) (i * 1.1);
   }

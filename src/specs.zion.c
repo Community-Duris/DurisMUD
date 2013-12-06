@@ -486,7 +486,7 @@ int zion_light_dark(P_obj obj, P_char ch, int cmd, char *arg)
       act("$n's $q &+Wflares with pure light, unleashing the virtue of the gods at _YOU_!&n",
        TRUE, ch, obj, vict, TO_VICT);
       spell_damage(ch, vict, 480, SPLDAM_HOLY, SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &messages);
-      if(GET_C_LUCK(ch) > number(0, 500))
+      if(GET_C_LUK(ch) > number(0, 500))
       {
        spell_mending(40, ch, 0, 0, ch, 0);
       }
@@ -500,7 +500,7 @@ int zion_light_dark(P_obj obj, P_char ch, int cmd, char *arg)
         act("$n's $q &+Lflares with darkness, unleashing the wrath of the underworld upon _YOU_!&n",
          TRUE, ch, obj, vict, TO_VICT);
         spell_damage(ch, vict, 480, SPLDAM_COLD, SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &messages);
-      if(GET_C_LUCK(ch) > number(0, 500))
+      if(GET_C_LUK(ch) > number(0, 500))
       {
         spell_mending(40, ch, 0, 0, ch, 0);
       }

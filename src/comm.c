@@ -21,6 +21,7 @@
 #include <unistd.h>
 #include <stdarg.h> 
 
+#include "helpfile.h"
 #include "comm.h"
 #include "db.h"
 #include "events.h"
@@ -362,6 +363,9 @@ void run_the_game(int port)
 
   initialize_tradeskills();
   fprintf(stderr, "--  Done loading tradeskills/mines.\r\n");
+
+  load_cmd_attributes();
+  fprintf(stderr, "--  Done loading command attributes.\r\n");
 
   if ( no_ferries == 0 ) 
     init_ferries();

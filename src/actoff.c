@@ -559,12 +559,12 @@ int takedown_check(P_char ch, P_char victim, int chance, int skill,
     chance = (int) (chance * get_property("skill.bash.NPC_Modifier", 1.2));
   }
   
-  if(GET_C_LUCK(ch) / 10 > number(0, 100))
+  if(GET_C_LUK(ch) / 10 > number(0, 100))
   {
     chance = (int) (chance * 1.1);
   }
 
-  if(GET_C_LUCK(victim) / 10 > number(0, 100))
+  if(GET_C_LUK(victim) / 10 > number(0, 100))
   {
     chance = (int) (chance * 0.9);
   }
@@ -901,10 +901,10 @@ void lance_charge(P_char ch, char *argument)
   percent_chance =
     (int) (0.9 * MAX(70, GET_CHAR_SKILL(ch, SKILL_LANCE_CHARGE)));
 
-  if(GET_C_LUCK(ch) / 10 > number(0, 100))
+  if(GET_C_LUK(ch) / 10 > number(0, 100))
     percent_chance = (int) (percent_chance * 1.1);
 
-  if(GET_C_LUCK(victim) / 10 > number(0, 100))
+  if(GET_C_LUK(victim) / 10 > number(0, 100))
     percent_chance = (int) (percent_chance * 0.9);
 
   percent_chance =
@@ -1020,7 +1020,7 @@ void lance_charge(P_char ch, char *argument)
     else
       effect = number(0, 8);
 
-    if(GET_C_LUCK(ch) / 2 > number(0, 100))
+    if(GET_C_LUK(ch) / 2 > number(0, 100))
       effect++;
 
     if(effect == 0)
@@ -1432,12 +1432,12 @@ void do_charge(P_char ch, char *argument, int cmd)
 
   percent_chance = 95;
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 1.1);
   }
 
-  if(GET_C_LUCK(victim) / 2 > number(0, 100))
+  if(GET_C_LUK(victim) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 0.9);
   }
@@ -1694,7 +1694,7 @@ void circling_broken(struct char_link_data *cld)
       cld->linked, TO_CHAR);
 }
 
-int circle(P_char ch, P_char victim)
+bool circle(P_char ch, P_char victim)
 {
   P_char   tch;
   P_char   t;
@@ -2618,7 +2618,7 @@ void event_combination(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent = (int) (percent * 1.05);
   }
@@ -2789,7 +2789,7 @@ void event_barrage(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent = (int) (percent * 1.05);
   }
@@ -3347,12 +3347,12 @@ int chance_kick(P_char ch, P_char victim)
           ((int) BOUNDED(80, GET_C_STR(ch) + GET_C_AGI(ch) -
           GET_C_AGI(victim), 125)) / 100);
 
-  if((int) (GET_C_LUCK(ch) / 10) > number(1, 100))
+  if((int) (GET_C_LUK(ch) / 10) > number(1, 100))
   {
     percent_chance = (int) (percent_chance * 1.05);
   }
   
-  if((int)(GET_C_LUCK(victim) / 10) > number(1, 100))
+  if((int)(GET_C_LUK(victim) / 10) > number(1, 100))
   {
     percent_chance = (int) (percent_chance * 0.95);
   }
@@ -3376,7 +3376,7 @@ int chance_kick(P_char ch, P_char victim)
   return (int) percent_chance;
 }
 
-bool kick(P_char ch, P_char victim)
+void kick(P_char ch, P_char victim)
 {
   struct damage_messages messages;
   int takedown_chance = 0, dam = 0, door, target_room;
@@ -3397,12 +3397,12 @@ bool kick(P_char ch, P_char victim)
     if(!IS_ALIVE(ch) ||
       !IS_ALIVE(victim))
     {
-      return false;
+      return;
     }
     
     if((percent_chance = chance_kick(ch, victim)) == 0)
     {
-      return false;
+      return;
     }
     
     dam = MAX((int) (GET_C_STR(ch) / 2),
@@ -3440,25 +3440,26 @@ bool kick(P_char ch, P_char victim)
       act(messages.room, FALSE, ch, 0, victim, TO_NOTVICT);
       
       engage(ch, victim);
-      return false;
+
+      return;
     }
 
     kick_messages(ch, victim, TRUE, &messages);
     
     if(melee_damage(ch, victim, dam , PHSDAM_TOUCH, &messages) != DAM_NONEDEAD)
     {
-      return false;
+      return;
     }
     
     if(!IS_ALIVE(ch))
     {
-      return false;
+      return;
     }
     
     if(LEGLESS(ch) ||
       !IS_ALIVE(victim))
     {
-      return false;
+      return;
     }
     
     if(csize <= (vsize - 2))
@@ -3471,7 +3472,7 @@ bool kick(P_char ch, P_char victim)
     }
     else 
     {
-      return true;
+      return;
     }
     
     if(IS_NPC(ch) &&
@@ -3492,7 +3493,7 @@ bool kick(P_char ch, P_char victim)
     if(takedown_chance == TAKEDOWN_CANCELLED ||
       takedown_chance == TAKEDOWN_PENALTY)
     {
-      return TRUE;
+      return;
     }
     
     if(GET_POS(victim) !=  POS_STANDING)
@@ -3557,7 +3558,7 @@ bool kick(P_char ch, P_char victim)
         CharWait(victim, (int) (PULSE_VIOLENCE *
           get_property("kick.wallkick.victimlag", 1.5)));
       }
-      return true;
+      return;
     }
     if(IS_HUMANOID(victim) &&
       takedown_chance > random_number &&
@@ -3579,7 +3580,7 @@ bool kick(P_char ch, P_char victim)
       stop_fighting(victim);
       CharWait(victim, (int) (PULSE_VIOLENCE * get_property("kick.groinkick.victimlag", 1.000)));
     }
-    return TRUE;
+    return;
   }
 }
 
@@ -3709,12 +3710,12 @@ int chance_roundkick(P_char ch, P_char victim)
    ((double)
    BOUNDED(20, 100 + (int) (1.5 * (GET_C_DEX(ch) - GET_C_AGI(victim))), 150)) / 100);
 
-  if(GET_C_LUCK(ch) / 10 > number(0, 10))
+  if(GET_C_LUK(ch) / 10 > number(0, 10))
   {
     percent_chance = (int) (percent_chance * 1.05);
   }
   
-  if(GET_C_LUCK(victim) / 10 > number(0, 100))
+  if(GET_C_LUK(victim) / 10 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 0.95);
   }
@@ -4170,11 +4171,11 @@ void do_headbutt(P_char ch, char *argument, int cmd)
 
   /*  maybe the attacker or victim are lucky */
 
-  if ((GET_C_LUCK(ch) / 2) > number(0, 80)) {
+  if ((GET_C_LUK(ch) / 2) > number(0, 80)) {
      success = (int) (success * 1.1);
   }
 
-  if ((GET_C_LUCK(victim) / 2) > number(0, 80)) {
+  if ((GET_C_LUK(victim) / 2) > number(0, 80)) {
      success = (int) (success * 0.9);
   }
 
@@ -4742,7 +4743,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
 
   dam += (GET_C_DEX(ch) + GET_C_STR(ch)) * strdex_mod; 
 
-  dam += (number (10, GET_C_LUCK(ch)) / 10);
+  dam += (number (10, GET_C_LUK(ch)) / 10);
   
   dam =  (int)((float)dam * ((float)skill / (float)100)); //(goes to 0)
 
@@ -4922,7 +4923,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
  * used by MobStartFight and AggAttack.  JAB
  */
 
-int backstab(P_char ch, P_char victim)
+bool backstab(P_char ch, P_char victim)
 {
   struct affected_type af, *af_ptr;
   int      learned, old_pos, old_victhp, duergarcrit = 0;
@@ -5022,12 +5023,12 @@ int backstab(P_char ch, P_char victim)
 
   percent_chance = (int) (0.9 * GET_CHAR_SKILL(ch, SKILL_BACKSTAB));
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 1.1);
   }
 
-  if(GET_C_LUCK(victim) / 2 > number(0, 100))
+  if(GET_C_LUK(victim) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 0.9);
   }
@@ -5942,7 +5943,7 @@ void parlay(P_char ch, P_char victim)
     return;
   }
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100)) {
+  if(GET_C_LUK(ch) / 2 > number(0, 100)) {
     skl_lvl = (int) (skl_lvl * 1.1);
   }
 
@@ -6090,10 +6091,10 @@ void do_tackle(P_char ch, char *arg, int cmd)
     percent_chance = (int) (percent_chance * 0.5);
   }
 
-  if(GET_C_LUCK(ch) / 2 > number(1, 100))
+  if(GET_C_LUK(ch) / 2 > number(1, 100))
     percent_chance = (int) (percent_chance * 1.1);
   
-  if(GET_C_LUCK(vict) / 2 > number(1, 100))
+  if(GET_C_LUK(vict) / 2 > number(1, 100))
     percent_chance = (int) (percent_chance * 0.90);
 
   if(IS_AFFECTED(vict, AFF_AWARE))
@@ -6576,7 +6577,7 @@ void do_retreat(P_char ch, char *arg, int cmd)
         {
           // Mirror image stuff broken, as is MoveAllAttackers
           //  So now, we'll just let them retreat
-          //if(newvict = make_mirror(ch)) {
+          //if(newvict = make_mirror(ch))
           StopAllAttackers(ch);
           //MoveAllAttackers(ch,newvict);
           stop_fighting(ch);
@@ -7128,11 +7129,11 @@ void shieldpunch(P_char ch, P_char victim)
   {
     percent_chance = GET_CHAR_SKILL(ch, SKILL_SHIELDPUNCH);
   }
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 1.1);
   }
-  if(GET_C_LUCK(victim) / 2 > number(0, 100))
+  if(GET_C_LUK(victim) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 0.9);
   }
@@ -8875,7 +8876,7 @@ void flanking_broken(struct char_link_data *cld)
       cld->linked, TO_ROOM);
 }
 
-int flank(P_char ch, P_char victim)
+bool flank(P_char ch, P_char victim)
 {
   P_char   tch;
 
@@ -8889,7 +8890,7 @@ int flank(P_char ch, P_char victim)
   {
     send_to_char("You haven't reoriented yet enough for another attempt!\n",
                  ch);
-    return 0;
+    return FALSE;
   }
 
   if(ch == victim)
@@ -8916,7 +8917,7 @@ int flank(P_char ch, P_char victim)
         FALSE, ch, 0, victim, TO_NOTVICT);
     act("You notice $n's clumsy attempt to flank you and turn to face $m.",
         FALSE, ch, 0, victim, TO_VICT);
-    return 0;
+    return FALSE;
   }
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
@@ -9145,7 +9146,7 @@ void battle_orders(P_char ch, P_char victim)
 
   percent_chance = GET_CHAR_SKILL(ch, SKILL_BATTLE_ORDERS);
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 1.1);
   }
@@ -9385,12 +9386,12 @@ void gaze(P_char ch, P_char victim)
     percent_chance = (int) (percent_chance * 0.6);
   }
   
-  if(GET_C_LUCK(ch) / 2 > number(0, 110))
+  if(GET_C_LUK(ch) / 2 > number(0, 110))
   {
     percent_chance = (int) (percent_chance * 1.05);
   }
   
-  if(GET_C_LUCK(victim) / 2 > number(0, 90))
+  if(GET_C_LUK(victim) / 2 > number(0, 90))
   {
     percent_chance = (int) (percent_chance * 0.95);
   }
@@ -9643,12 +9644,12 @@ void restrain(P_char ch, P_char victim)
     percent_chance = (int) (percent_chance * 0.6);
   }
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 110))
+  if(GET_C_LUK(ch) / 2 > number(0, 110))
   {
     percent_chance = (int) (percent_chance * 1.05);
   }
   
-  if(GET_C_LUCK(victim) / 2 > number(0, 90))
+  if(GET_C_LUK(victim) / 2 > number(0, 90))
   {
     percent_chance = (int) (percent_chance * 0.95);
   }

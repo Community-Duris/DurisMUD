@@ -5040,7 +5040,7 @@ bool find_chance(P_char ch)
    if (has_innate(ch, INNATE_DRAGONMIND) && number(0,1))
      return TRUE;
      
-  if (((GET_C_INT(ch) + GET_C_WIS(ch) + GET_C_LUCK(ch)) / 3) > number(1, 101))
+  if (((GET_C_INT(ch) + GET_C_WIS(ch) + GET_C_LUK(ch)) / 3) > number(1, 101))
     return TRUE;
   return FALSE;
 }
@@ -5112,7 +5112,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
   
   int reciperoll = (number(1, 10000));
 
-  int playerroll = (GET_C_LUCK(ch) + (GET_LEVEL(ch)*2) + GET_CHAR_SKILL(ch, SKILL_SALVAGE));
+  int playerroll = (GET_C_LUK(ch) + (GET_LEVEL(ch)*2) + GET_CHAR_SKILL(ch, SKILL_SALVAGE));
   int rand2 = number(1, 3);
 
   one_argument(argument, Gbuf4);
@@ -5179,11 +5179,11 @@ void do_salvage(P_char ch, char *argument, int cmd)
 	byte objmat = temp->material;
 	int matvnum, objchance;
        
-         if(number(60, 400) < GET_C_LUCK(ch)) //get lucky, get tier 4
+         if(number(60, 400) < GET_C_LUK(ch)) //get lucky, get tier 4
            {
-	    if(number(70, 400) < GET_C_LUCK(ch))
+	    if(number(70, 400) < GET_C_LUK(ch))
             {
-             if(number(80, 500) < GET_C_LUCK(ch))
+             if(number(80, 500) < GET_C_LUK(ch))
              {
               obj_to_char(read_object(400211, VIRTUAL), ch);
               send_to_char("...as you work, a small &+Mm&+Ya&+Mg&+Yi&+Mc&+Ya&+Ml&n object gently separates from your item!\r\n", ch);
@@ -5212,7 +5212,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
 
 	objchance = itemvalue(ch, temp);           
 
-        if((objchance <= 5) && (number(1, 1000) > GET_C_LUCK(ch)))
+        if((objchance <= 5) && (number(1, 1000) > GET_C_LUK(ch)))
           {
            send_to_char("The &+ypoor &nquality and &+Lcraftsmanship&n of the item yield to your force, &+Rbreaking&n the item into unusable bits.\r\n", ch);
            extract_obj(temp, !IS_TRUSTED(ch));
@@ -5987,7 +5987,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
  		   {
   		   newcost = (newcost * 8) / 10; 
         	  }
-      		if(number(80, 140) < GET_C_LUCK(ch))
+      		if(number(80, 140) < GET_C_LUK(ch))
   		 {
   		   newcost *= 1.3;
    		  send_to_char("&+mYou &+Ygently&+m break the &+Mmaterial &+mfree, preserving its natural form.&n\r\n", ch);
@@ -6009,7 +6009,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
   		   newcost = (newcost * 8) / 10; //anything less than gold gets a little bit of a reduction in price
         	  }
 
-      		if(number(80, 140) < GET_C_LUCK(ch))
+      		if(number(80, 140) < GET_C_LUK(ch))
   		 {
   		   newcost *= 1.3;
    		  send_to_char("&+mYou &+Ygently&+m break the &+Mmaterial &+mfree, preserving its natural form.&n\r\n", ch);
@@ -6036,7 +6036,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
   		   newcost = (newcost * 8) / 10; //anything less than gold gets a little bit of a reduction in price
         	  }
 
-      		if(number(80, 140) < GET_C_LUCK(ch))
+      		if(number(80, 140) < GET_C_LUK(ch))
   		 {
   		   newcost *= 1.3;
    		  send_to_char("&+mYou &+Ygently&+m break the &+Mmaterial &+mfree, preserving its natural form.&n\r\n", ch);

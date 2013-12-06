@@ -725,7 +725,7 @@ void do_fire(P_char ch, char *argument, int cmd)
           int s_blk = (int) (GET_CHAR_SKILL(victim, SKILL_SHIELD_BLOCK) +
                        (GET_C_AGI(victim) / 2) + (GET_C_DEX(victim) / 5) +
                        (GET_CHAR_SKILL(victim, SKILL_SHIELD_COMBAT) / 2) +
-                       (GET_C_LUCK(victim) / 5));
+                       (GET_C_LUK(victim) / 5));
                        
           debug("shield block value (%d).", s_blk);
           
@@ -795,7 +795,7 @@ void do_fire(P_char ch, char *argument, int cmd)
                 * (get_property("archery.damrollFactor", 2.000) + (double)number(0, GET_C_DEX(ch))/1000);
          // hitroll bonus: 1/3 of hitroll + minor mod by luck
          dam += (double)GET_HITROLL(ch)
-                * (get_property("archery.hitrollFactor", 1.000) + (double)number(0, GET_C_LUCK(ch))/1000);
+                * (get_property("archery.hitrollFactor", 1.000) + (double)number(0, GET_C_LUK(ch))/1000);
          // weapon bonus, 1/5 of val2 + minor mod by skill
          dam += (double)weapon->value[2]
                 * (get_property("archery.weaponFactor", 0.500) + (double)number(0, (int)GET_CHAR_SKILL(ch, SKILL_ARCHERY))/1000);
@@ -825,7 +825,7 @@ void do_fire(P_char ch, char *argument, int cmd)
 // lowered the damage bonus from 75 percent to 50 percent.
          
          if((GET_CHAR_SKILL(ch, SKILL_CRITICAL_SHOT) > 0 &&
-            GET_CHAR_SKILL(ch, SKILL_CRITICAL_SHOT) + (GET_C_LUCK(ch) - 100)) > number(1, 3000))
+            GET_CHAR_SKILL(ch, SKILL_CRITICAL_SHOT) + (GET_C_LUK(ch) - 100)) > number(1, 3000))
          {
             send_to_char("&=LWYou score a CRITICAL SHOT!!!&N\n", ch);
             dam *= get_property("archery.crit.bonus", 1.500);
@@ -1198,7 +1198,7 @@ void do_throw(P_char ch, char *argument, int cmd)
  to_hit = chance_to_hit(ch, vict, GET_CHAR_SKILL(ch, SKILL_RANGE_WEAPONS), 0);
  to_hit += dex_app[STAT_INDEX(GET_C_DEX(ch))].miss_att * 5;
 
- if (GET_C_LUCK(ch) / 2 > number(0, 100)) {
+ if (GET_C_LUK(ch) / 2 > number(0, 100)) {
          to_hit = (int) (to_hit * 1.1);
        }
 

@@ -1141,7 +1141,7 @@ void do_forage(P_char ch, char *arg, int cmd)
   if (GET_CLASS(ch, CLASS_ALCHEMIST))
     chance += 50;
 
-  if (GET_C_LUCK(ch) / 2 > number(0, 100)) {
+  if (GET_C_LUK(ch) / 2 > number(0, 100)) {
     chance += 25;
   }
 
@@ -2002,7 +2002,7 @@ void do_hide(P_char ch, char *argument, int cmd)
                                  * 101% is a complete failure
                                  */
 
-    if (GET_C_LUCK(ch) / 2 > number(0,100)) {
+    if (GET_C_LUK(ch) / 2 > number(0,100)) {
       percent = (int) (percent * 0.90);
     }
 
@@ -2223,7 +2223,7 @@ void do_listen(P_char ch, char *argument, int cmd)
   }
   percent = number(1, 101);
 
-  if (GET_C_LUCK(ch) /2 > number(0, 100)) {
+  if (GET_C_LUK(ch) /2 > number(0, 100)) {
     percent = (int) (percent * 0.9);
   }
 
@@ -2453,9 +2453,9 @@ void do_steal(P_char ch, char *argument, int cmd)
   percent -=
     (STAT_INDEX(GET_C_WIS(victim)) + STAT_INDEX(GET_C_INT(victim))) - 19;
   // both thief and victim luck
-  if (GET_C_LUCK(victim) / 2 > number(0, 100))
+  if (GET_C_LUK(victim) / 2 > number(0, 100))
     percent = (int) (percent * 0.85);
-  if (GET_C_LUCK(ch) / 2 > number(0, 100))
+  if (GET_C_LUK(ch) / 2 > number(0, 100))
     percent = (int) (percent * 1.05);
   // modifier for level differences
   percent += (GET_LEVEL(ch) - GET_LEVEL(victim)) / 2;
@@ -3277,23 +3277,6 @@ void do_cheat(P_char ch, char *argument, int cmd)
     }
 }
 
-void do_brief(P_char ch, char *argument, int cmd)
-{
-  if (IS_NPC(ch))
-    return;
-
-  if (IS_SET(ch->specials.act, PLR_BRIEF))
-  {
-    send_to_char("Brief mode off.\r\n", ch);
-    REMOVE_BIT(ch->specials.act, PLR_BRIEF);
-  }
-  else
-  {
-    send_to_char("Brief mode on.\r\n", ch);
-    SET_BIT(ch->specials.act, PLR_BRIEF);
-  }
-}
-
 void do_area(P_char ch, char *argument, int cmd)
 {
   char  buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
@@ -3322,40 +3305,6 @@ void do_area(P_char ch, char *argument, int cmd)
   send_to_char(buf, ch);
   send_to_char(buf2, ch);
   
-}
-
-void do_anonymous(P_char ch, char *argument, int cmd)
-{
-  if (IS_NPC(ch))
-    return;
-
-  if (IS_SET(ch->specials.act, PLR_ANONYMOUS))
-  {
-    send_to_char("You will no longer be anonymous to other players.\r\n", ch);
-    REMOVE_BIT(ch->specials.act, PLR_ANONYMOUS);
-  }
-  else
-  {
-    send_to_char("You will now be anonymous to other players.\r\n", ch);
-    SET_BIT(ch->specials.act, PLR_ANONYMOUS);
-  }
-}
-
-void do_compact(P_char ch, char *argument, int cmd)
-{
-  if (IS_NPC(ch))
-    return;
-
-  if (IS_SET(ch->specials.act, PLR_COMPACT))
-  {
-    send_to_char("You are now in the uncompacted mode.\r\n", ch);
-    REMOVE_BIT(ch->specials.act, PLR_COMPACT);
-  }
-  else
-  {
-    send_to_char("You are now in compact mode.\r\n", ch);
-    SET_BIT(ch->specials.act, PLR_COMPACT);
-  }
 }
 
 void do_quaff(P_char ch, char *argument, int cmd)
@@ -3404,7 +3353,7 @@ void do_quaff(P_char ch, char *argument, int cmd)
 
     chance += ((GET_C_DEX(ch) + (GET_C_AGI(ch) / 2)) - 75) / 4;
 
-    if (GET_C_LUCK(ch) / 2 > number(0, 100))
+    if (GET_C_LUK(ch) / 2 > number(0, 100))
        chance = (int) (chance * 1.1);
        
     if(has_innate(ch, INNATE_QUICK_THINKING) ||
@@ -5083,7 +5032,7 @@ void do_dig(P_char ch, char *argument, int cmd)
   for (; k && (!found_something || IS_TRUSTED(ch)); k = k->next_content)
   {
     if (IS_SET(k->extra_flags, ITEM_BURIED) &&
-        (number(1, 100) < ((GET_C_LUCK(ch) / 2) + number(1, 50))))
+        (number(1, 100) < ((GET_C_LUK(ch) / 2) + number(1, 50))))
     {
       REMOVE_BIT(k->extra_flags, ITEM_BURIED);
 /*      PurgeSavedItemFile(k);*/

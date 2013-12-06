@@ -284,8 +284,7 @@ void do_absorbe(P_char ch, char *arg, int cmd)
      FALSE, ch, 0, victim, TO_VICT);
 }
 
-void
-spell_molecular_control(int level, P_char ch, char *arg, int type,
+void spell_molecular_control(int level, P_char ch, char *arg, int type,
                         P_char victim, P_obj obj)
 {
   struct affected_type af;

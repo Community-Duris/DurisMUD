@@ -492,3 +492,182 @@ string wiki_help_single(string str)
 
 #endif
 
+struct cmd_attrib_data cmd_attribs [400];
+
+void load_cmd_attributes()
+{
+  FILE *cmd_file;
+  char  line[ MAX_STRING_LENGTH ];
+  char  attributes[ MAX_STRING_LENGTH ];
+  int   count = 0, i = 0;
+  bool  ch_attributes[ ATT_MAX];
+  bool  vi_attributes[ ATT_MAX ];
+
+  for( count = 0; count < 400; count++ )
+  {
+    cmd_attribs[count].name = cmd_attribs[count].attributes = NULL;
+  }
+
+  cmd_file = fopen( "command_attributes.txt", "r" );
+  if( !cmd_file )
+  {
+    logit( LOG_DEBUG, "Could not open command_attributes.txt." );
+    return;
+  }
+
+  count = 0;
+  while( fgets( line, sizeof line, cmd_file ) != NULL )
+  {
+    // First line is the name.
+    cmd_attribs[count].name = strdup( line );
+    // Set all attributes to false
+    for(i = 0; i < ATT_MAX;i++)
+    {
+      ch_attributes[i] = FALSE;
+      vi_attributes[i] = FALSE;
+    }
+    // Following lines are attributes until '~' is encountered.
+    fgets( line, sizeof line, cmd_file);
+    while( line[0] != '~' )
+    {
+      // If GET_C_STR
+      if( line[6] == 'S' )
+      {
+        if( line[10] == 'v' )
+          vi_attributes[ATT_STR] = TRUE;
+        else
+          ch_attributes[ATT_STR] = TRUE;
+      }
+      else if( line[6] == 'D' )
+      {
+        if( line[10] == 'v' )
+          vi_attributes[ATT_DEX] = TRUE;
+        else
+          ch_attributes[ATT_DEX] = TRUE;
+      }
+      else if( line[6] == 'A' )
+      {
+        if( line[10] == 'v' )
+          vi_attributes[ATT_AGI] = TRUE;
+        else
+          ch_attributes[ATT_AGI] = TRUE;
+      }
+      else if( line[6] == 'C' && line[7] == 'O' )
+      {
+        if( line[10] == 'v' )
+          vi_attributes[ATT_CON] = TRUE;
+        else
+          ch_attributes[ATT_CON] = TRUE;
+      }
+      else if( line[6] == 'P' )
+      {
+        if( line[10] == 'v' )
+          vi_attributes[ATT_POW] = TRUE;
+        else
+          ch_attributes[ATT_POW] = TRUE;
+      }
+      else if( line[6] == 'I' )
+      {
+        if( line[10] == 'v' )
+          vi_attributes[ATT_INT] = TRUE;
+        else
+          ch_attributes[ATT_INT] = TRUE;
+      }
+      else if( line[6] == 'W' )
+      {
+        if( line[10] == 'v' )
+          vi_attributes[ATT_WIS] = TRUE;
+        else
+          ch_attributes[ATT_WIS] = TRUE;
+      }
+      else if( line[6] == 'C' && line[7] == 'H' )
+      {
+        if( line[10] == 'v' )
+          vi_attributes[ATT_CHA] = TRUE;
+        else
+          ch_attributes[ATT_CHA] = TRUE;
+      }
+      else if( line[6] == 'K' )
+      {
+        if( line[10] == 'v' )
+          vi_attributes[ATT_KAR] = TRUE;
+        else
+          ch_attributes[ATT_KAR] = TRUE;
+      }
+      else if( line[6] == 'L' )
+      {
+        if( line[10] == 'v' )
+          vi_attributes[ATT_LUK] = TRUE;
+        else
+          ch_attributes[ATT_LUK] = TRUE;
+      }
+      else
+      {
+        logit( LOG_DEBUG, "Bad line in command_attributes.txt: " );
+        logit( LOG_DEBUG, line );
+      }
+      fgets( line, sizeof line, cmd_file );
+    }
+    // create the list of attributes.
+    attributes[0] = '\0';
+    if( ch_attributes[ATT_STR] )
+       strcat( attributes, "Char's Str.\n" );
+    if( vi_attributes[ATT_STR] )
+       strcat( attributes, "Victim's Str.\n" );
+    if( ch_attributes[ATT_DEX] )
+       strcat( attributes, "Char's Dex.\n" );
+    if( vi_attributes[ATT_DEX] )
+       strcat( attributes, "Victim's Dex.\n" );
+    if( ch_attributes[ATT_AGI] )
+       strcat( attributes, "Char's Agi.\n" );
+    if( vi_attributes[ATT_AGI] )
+       strcat( attributes, "Victim's Agi.\n" );
+    if( ch_attributes[ATT_CON] )
+       strcat( attributes, "Char's Con.\n" );
+    if( vi_attributes[ATT_CON] )
+       strcat( attributes, "Victim's Con.\n" );
+    if( ch_attributes[ATT_POW] )
+       strcat( attributes, "Char's Pow.\n" );
+    if( vi_attributes[ATT_POW] )
+       strcat( attributes, "Victim's Pow.\n" );
+    if( ch_attributes[ATT_INT] )
+       strcat( attributes, "Char's Int.\n" );
+    if( vi_attributes[ATT_INT] )
+       strcat( attributes, "Victim's Int.\n" );
+    if( ch_attributes[ATT_WIS] )
+       strcat( attributes, "Char's Wis.\n" );
+    if( vi_attributes[ATT_WIS] )
+       strcat( attributes, "Victim's Wis.\n" );
+    if( ch_attributes[ATT_CHA] )
+       strcat( attributes, "Char's Cha.\n" );
+    if( vi_attributes[ATT_CHA] )
+       strcat( attributes, "Victim's Cha.\n" );
+    if( ch_attributes[ATT_KAR] )
+       strcat( attributes, "Char's Kar.\n" );
+    if( vi_attributes[ATT_KAR] )
+       strcat( attributes, "Victim's Kar.\n" );
+    if( ch_attributes[ATT_STR] )
+       strcat( attributes, "Char's Luk.\n" );
+    if( vi_attributes[ATT_STR] )
+       strcat( attributes, "Victim's Luk.\n" );
+
+    // add list to the array.
+    cmd_attribs[count++].attributes = strdup( attributes );
+  }
+}
+
+char *attrib_help( char *arg)
+{
+  int count = 0;
+
+logit( LOG_DEBUG, "The search string is '%s'.", arg );
+
+  while( cmd_attribs[count].name != NULL )
+  {
+    if( strstr( cmd_attribs[count].name, arg ) )
+      return cmd_attribs[count].attributes;
+    count++;
+  }
+
+  return NULL;
+}

@@ -466,7 +466,7 @@ bool mercenary_defensiveproc(P_char victim, P_char ch) //victim is the merc bein
   if(!MIN_POS(victim, POS_STANDING + STAT_NORMAL))
   return false;
 
-  int num1 = number(1, GET_C_LUCK(victim));
+  int num1 = number(1, GET_C_LUK(victim));
   int num2 = number(1, 1000);
 
   debug("mercproc: num1: %d num2: %d", num1, num2);
@@ -817,7 +817,7 @@ while (i < 2)
 	if(obj->affected[i].location != 0)
 	//debug("obj->affected[i].location: %d\r\n", obj->affected[i].location);
 	{
-	 luckroll = (number(1, GET_C_LUCK(ch)));
+	 luckroll = (number(1, GET_C_LUK(ch)));
          
 	    //initialize workingvalue
 	 workingvalue = 0;
@@ -1916,7 +1916,7 @@ void enhance(P_char ch, P_obj source, P_obj material)
 
 	 mod = 1;
 	 
-	 int chluck = (GET_C_LUCK(ch));
+	 int chluck = (GET_C_LUK(ch));
 	 if(number(1, 1200) < chluck)
 	 {
 	  mod += 3;

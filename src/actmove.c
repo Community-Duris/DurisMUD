@@ -3367,7 +3367,7 @@ void do_drag(P_char ch, char *argument, int cmd)
           TRUE, ch, 0, tch, TO_ROOM);
       return;
     }
-/*    if (ch->points.delay_move + move_cost(ch, cmd) > 10) { */
+/*    if (ch->points.delay_move + move_cost(ch, cmd) > 10) */
     if(((GET_VITALITY(ch) - DRAG_COST) < 0) &&
       !IS_TRUSTED(ch))
     {
@@ -3490,7 +3490,7 @@ void do_drag(P_char ch, char *argument, int cmd)
           TRUE, ch, obj, 0, TO_ROOM);
       return;
     }
-/*    if (ch->points.delay_move + move_cost(ch, cmd) > 10) { */
+/*    if (ch->points.delay_move + move_cost(ch, cmd) > 10)  */
     if (((GET_VITALITY(ch) - DRAG_COST) < 0) && !IS_TRUSTED(ch))
     {
       act("$n tries to drag $p out of the room, but is too tired!",

@@ -697,13 +697,13 @@ void apply_affs(P_char ch, int mode)
   t1 = (!mode || !TmpAffs.r_Kar) ? (int) GET_RACE(ch) : TmpAffs.r_Kar;
   t3 = (mode) ? (100 + TmpAffs.m_Kar) : 100;
   t2 = BOUNDED(1, (ch->base_stats.Karma + ((mode) ? TmpAffs.c_Kar : 0)), t3);
-  GET_C_KARMA(ch) =
+  GET_C_KAR(ch) =
     BOUNDED(1, (int) (stat_factor[t1].Karma * t2 / 100. + .55), 511);
 
   t1 = (!mode || !TmpAffs.r_Luc) ? (int) GET_RACE(ch) : TmpAffs.r_Luc;
   t3 = (mode) ? (100 + TmpAffs.m_Luc) : 100;
   t2 = BOUNDED(1, (ch->base_stats.Luck + ((mode) ? TmpAffs.c_Luc : 0)), t3);
-  GET_C_LUCK(ch) =
+  GET_C_LUK(ch) =
     BOUNDED(1, (int) (stat_factor[t1].Luck * t2 / 100. + .55), 511);
 
   /*
@@ -814,7 +814,7 @@ void apply_affs(P_char ch, int mode)
   
   if (has_innate(ch, INNATE_GAMBLERS_LUCK))
   {
-    GET_C_LUCK(ch) = GET_C_LUCK(ch) + 10;
+    GET_C_LUK(ch) = GET_C_LUK(ch) + 10;
   }
 
   // sure best if we store max_hp in pfile :(

@@ -348,7 +348,7 @@ int bard_calc_chance(P_char ch, int song)
   {
     c = (int) (c * 1.3);
   }
-  if(GET_C_LUCK(ch) > number(0, 100))
+  if(GET_C_LUK(ch) > number(0, 100))
   {
     c = (int) (c * 1.1);
   }
@@ -1418,7 +1418,7 @@ void bard_dissonance(int l, P_char ch, P_char victim, int song)
     return;
   }
 
-  c_roll = empower / 3 + GET_LEVEL(ch) + GET_C_CHA(ch) / 2 + GET_C_LUCK(ch) / 5;
+  c_roll = empower / 3 + GET_LEVEL(ch) + GET_C_CHA(ch) / 2 + GET_C_LUK(ch) / 5;
   
   for (t = world[ch->in_room].people; t; t = t_next)
   {
@@ -1446,7 +1446,7 @@ void bard_dissonance(int l, P_char ch, P_char victim, int song)
       t_roll =  (GET_CHAR_SKILL(t, SKILL_EMPOWER_SONG) / 3) +
                 GET_LEVEL(t) +
                 (GET_C_CHA(t) / 2) +
-                (GET_C_LUCK(t) / 5);
+                (GET_C_LUK(t) / 5);
                
   
       if(c_roll + number(0, 50) > t_roll + number(0, 50))

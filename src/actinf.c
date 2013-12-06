@@ -3892,12 +3892,12 @@ void do_attributes(P_char ch, char *argument, int cmd)
                     (int) ((GET_C_CON(ch) * 100 /
                             stat_factor[(int) GET_RACE(ch)].Con) + .55)));
 
-      if (GET_C_LUCK(ch) > stat_factor[(int) GET_RACE(ch)].Luck)
+      if (GET_C_LUK(ch) > stat_factor[(int) GET_RACE(ch)].Luck)
         sprintf(buf + strlen(buf), "  &+cLUCK: &+Y***&n\n");
       else
         sprintf(buf + strlen(buf), "  &+cLUCK: &+Y%3d&n\n",
                 MAX(1,
-                    (int) ((GET_C_LUCK(ch) * 100 /
+                    (int) ((GET_C_LUK(ch) * 100 /
                             stat_factor[(int) GET_RACE(ch)].Luck) + .55)));
 
       if (GET_C_POW(ch) > stat_factor[(int) GET_RACE(ch)].Pow)
@@ -3952,7 +3952,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
                           stat_factor[(int) GET_RACE(ch)].Con) + .55)));
       sprintf(buf + strlen(buf), "  &+cLUCK: &+Y%3d&n\n",
               MAX(1,
-                  (int) ((GET_C_LUCK(ch) * 100 /
+                  (int) ((GET_C_LUK(ch) * 100 /
                           stat_factor[(int) GET_RACE(ch)].Luck) + .55)));
       sprintf(buf + strlen(buf), "&+cPOW: &+Y%3d&n",
               MAX(1,
@@ -4019,16 +4019,16 @@ void do_attributes(P_char ch, char *argument, int cmd)
                   (int) ((GET_C_CON(ch) * 100 /
                           stat_factor[(int) GET_RACE(ch)].Con) + .55)), GET_C_CHA(k), MAX(1,
                   (int) ((GET_C_CHA(ch) * 100 /
-                          stat_factor[(int) GET_RACE(ch)].Cha) + .55)), GET_C_LUCK(k),
+                          stat_factor[(int) GET_RACE(ch)].Cha) + .55)), GET_C_LUK(k),
             MAX(1,
-                  (int) ((GET_C_LUCK(ch) * 100 /
+                  (int) ((GET_C_LUK(ch) * 100 /
                           stat_factor[(int) GET_RACE(ch)].Luck) + .55)),
             i3, IS_CARRYING_W(k));
     strcat(o_buf, buf);
 
    /* sprintf(buf,
             "&+YKar: &n%3d&+Y (&n%3d&+Y)    Luc: &n%3d&+Y (&n%3d&+Y)    Carried Items: &n%3d&+Y   Max Carry Weight:&n%5d\n",
-            GET_C_KARMA(k), k->base_stats.Karma, GET_C_LUCK(k),
+            GET_C_KARMA(k), k->base_stats.Karma, GET_C_LUK(k),
             k->base_stats.Luck, IS_CARRYING_N(k), CAN_CARRY_W(k));
     strcat(o_buf, buf);*/
 
@@ -4080,7 +4080,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
                               ((GET_C_CHA(ch) * 100 /
                                 stat_factor[(int) GET_RACE(ch)].Cha) + .55)),
               stat_to_string2((int)
-                              ((GET_C_LUCK(ch) * 100 /
+                              ((GET_C_LUK(ch) * 100 /
                                 stat_factor[(int) GET_RACE(ch)].Luck) +
                                .55)));
     }
@@ -4103,7 +4103,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
                             ((GET_C_CON(ch) * 100 /
                               stat_factor[(int) GET_RACE(ch)].Con) + .55)),
             stat_to_string1((int)
-                            ((GET_C_LUCK(ch) * 100 /
+                            ((GET_C_LUK(ch) * 100 /
                               stat_factor[(int) GET_RACE(ch)].Luck) + .55)),
             stat_to_string1((int)
                             ((GET_C_POW(ch) * 100 /
@@ -5711,8 +5711,14 @@ void do_weather(P_char ch, char *argument, int cmd)
 
 void do_help(P_char ch, char *argument, int cmd)
 {
+  char *attribs;
+
   send_to_char( wiki_help(string(argument)).c_str(), ch );
-  send_to_char("\n", ch);
+  send_to_char( "\n", ch );
+
+  attribs = attrib_help(argument);
+  if( attribs )
+    send_to_char( attribs, ch );
 }
 
 void do_wizhelp(P_char ch, char *argument, int cmd)
@@ -6233,7 +6239,7 @@ void do_who(P_char ch, char *argument, int cmd)
             "      Stats: STR = %d, DEX = %d, AGI = %d, CON = %d, LUCK = %d\n"
             "             POW = %d, INT = %d, WIS = %d, CHA = %d\n",
             GET_C_STR(tch), GET_C_DEX(tch), GET_C_AGI(tch), GET_C_CON(tch),
-            GET_C_LUCK(tch), GET_C_POW(tch), GET_C_INT(tch), GET_C_WIS(tch),
+            GET_C_LUK(tch), GET_C_POW(tch), GET_C_INT(tch), GET_C_WIS(tch),
             GET_C_CHA(tch));
     strcat(buf, buf3);
     playing_time =

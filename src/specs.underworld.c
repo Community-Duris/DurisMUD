@@ -3281,7 +3281,7 @@ int barb(P_obj obj, P_char ch, int cmd, char *arg)
 
       if(IS_ALIVE(ch) &&
         !number(0, 19) &&
-        GET_C_LUCK(ch) < number(0, 500))
+        GET_C_LUK(ch) < number(0, 500))
       {
         spell_restoration((int) (GET_LEVEL(ch) - 5), ch, 0,
           SPELL_TYPE_SPELL, ch, 0);

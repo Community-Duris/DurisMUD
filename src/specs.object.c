@@ -4132,7 +4132,7 @@ int sunblade(P_obj obj, P_char ch, int cmd, char *arg)
     else
       spell_immolate(GET_LEVEL(ch), ch, NULL, 0, victim, 0);
    */
-    //if(GET_C_LUCK(ch) > number(1, 1000))
+    //if(GET_C_LUK(ch) > number(1, 1000))
    // {
       act("$p &+memits a &+Msoft glow&n&+m.&n", TRUE, ch, obj, victim, TO_CHAR);
       act("$p &+memits a &+Msoft glow&n&+m.&n", TRUE, ch, obj, victim, TO_NOTVICT);
@@ -5155,7 +5155,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
        act("$n's $q &+Wflares with pure light, unleashing the virtue of the gods at _YOU_!&n",
         TRUE, ch, obj, vict, TO_VICT);
        spell_damage(ch, vict, 360, SPLDAM_HOLY, SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &goodmessages);
-       if(GET_C_LUCK(ch) > number(0, 500))
+       if(GET_C_LUK(ch) > number(0, 500))
        {
         spell_mending(51, ch, 0, 0, ch, 0);
        }
@@ -5169,7 +5169,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
        act("$n's $q &+Lflares with darkness, unleashing the wrath of the underworld upon _YOU_!&n",
         TRUE, ch, obj, vict, TO_VICT);
        spell_damage(ch, vict, 360, SPLDAM_NEGATIVE, SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &evilmessages);
-       if(GET_C_LUCK(ch) > number(0, 500))
+       if(GET_C_LUK(ch) > number(0, 500))
        {
          spell_malison(56, ch, 0, 0, vict, 0);
        }

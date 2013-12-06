@@ -242,7 +242,7 @@ P_char guard_check(P_char attacker, P_char victim)
     if( IS_AFFECTED(guard, AFF_AWARE) || IS_AFFECTED(guard, AFF_SKILL_AWARE) )
       sneak_chance -= 25;
 
-    if( GET_C_LUCK(victim) / 2 > number(0, 100) )
+    if( GET_C_LUK(victim) / 2 > number(0, 100) )
       sneak_chance -= 10;
   
     if( guard->specials.fighting )
@@ -281,10 +281,10 @@ P_char guard_check(P_char attacker, P_char victim)
   //  chance -= get_property("skill.guard.guardFightingPenalty", 5);
   
   // and if the victim is lucky, they stay a bit safer :)
-  if( GET_C_LUCK(victim) / 2 > number(0, 100) )
+  if( GET_C_LUK(victim) / 2 > number(0, 100) )
     chance += 5;
   
-  if( GET_C_LUCK(attacker) / 2 > number(0, 100) )
+  if( GET_C_LUK(attacker) / 2 > number(0, 100) )
     chance -= 5;
 
   if( IS_AFFECTED(guard, AFF_AWARE) || IS_AFFECTED(guard, AFF_SKILL_AWARE) )

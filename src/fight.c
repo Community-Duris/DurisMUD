@@ -2824,7 +2824,7 @@ void kill_gain(P_char ch, P_char victim)
     update_achievements(ch, victim, 0, 2);//this is for all kinds of kill-type quests
     if((GET_LEVEL(victim) > 30) && !IS_PC(victim) && !affected_by_spell(victim, TAG_CONJURED_PET))
 	{
-	    if((number(1, 5000) < GET_C_LUCK(ch)) || (GET_RACE(victim) == RACE_DRAGON && (GET_VNUM(victim) > 10) && (GET_VNUM(victim) != 1108) && (GET_LEVEL(victim) > 49)))
+	    if((number(1, 5000) < GET_C_LUK(ch)) || (GET_RACE(victim) == RACE_DRAGON && (GET_VNUM(victim) > 10) && (GET_VNUM(victim) != 1108) && (GET_LEVEL(victim) > 49)))
 	   {
 		send_to_char("&+cAs your body absorbs the &+Cexperience&+c, you seem to feel a bit more epic!\r\n", ch);
 		ch->only.pc->epics += 1;
@@ -2923,7 +2923,7 @@ void kill_gain(P_char ch, P_char victim)
     update_achievements(gl->ch, victim, 0, 2);//this is for all kinds of kill-type quests
     if((GET_LEVEL(victim) > 30) && !IS_PC(victim) && !affected_by_spell(victim, TAG_CONJURED_PET))
 	{
-	  if((number(1, 5000) < GET_C_LUCK(gl->ch)) || (GET_RACE(victim) == RACE_DRAGON && (GET_VNUM(victim) != 1108) && (GET_VNUM(victim) > 10) && (GET_LEVEL(victim) > 49)))
+	  if((number(1, 5000) < GET_C_LUK(gl->ch)) || (GET_RACE(victim) == RACE_DRAGON && (GET_VNUM(victim) != 1108) && (GET_VNUM(victim) > 10) && (GET_LEVEL(victim) > 49)))
 	   {
 		send_to_char("&+cAs your body absorbs the &+Cexperience&+c, you seem to feel a bit more epic!\r\n", gl->ch);
               P_char recipient = gl->ch;
@@ -3294,7 +3294,7 @@ int try_riposte(P_char ch, P_char victim, P_obj wpn)
     skl *= 1.10;
 
   /* lucky or unlucky? */
-  if(number(0, GET_C_LUCK(ch)) > number(0, GET_C_LUCK(victim)))
+  if(number(0, GET_C_LUK(ch)) > number(0, GET_C_LUK(victim)))
     skl *= 1.05;
   else
     skl *= 0.95;
@@ -3945,7 +3945,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
       {
         if(dam > 15 &&
           (notch_skill(victim, SKILL_ARCANE_BLOCK, get_property("skill.notch.arcane", 100)) ||
-          number(1, 200) <= (GET_LEVEL(victim) + GET_C_LUCK(victim) / 10) ||
+          number(1, 200) <= (GET_LEVEL(victim) + GET_C_LUK(victim) / 10) ||
           ((IS_ELITE(victim) || IS_GREATER_RACE(victim)) && !number(0, 4))))
         {
           act("$N raises hands performing an &+Marcane gesture&n and some of $n's &+mspell energy&n is dispersed.",
@@ -6164,7 +6164,7 @@ int calculate_thac_zero(P_char ch, int skill)
     to_hit = (int) (to_hit * get_property("to.hit.BlessBonus", 1.100));
   }
   
-  if (GET_C_LUCK(ch) / 2 > number(0, 100))
+  if (GET_C_LUK(ch) / 2 > number(0, 100))
   {
     to_hit = (int) (to_hit * get_property("to.hit.LuckBonus", 1.100));
   }
@@ -6815,7 +6815,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
 
   wpn_skill = BOUNDED(GET_LEVEL(ch) / 2, wpn_skill, 95);
 
-  if (sic == -1 && number(30, 101) > wpn_skill + (GET_C_LUCK(ch) / 4) &&
+  if (sic == -1 && number(30, 101) > wpn_skill + (GET_C_LUK(ch) / 4) &&
       !GET_CLASS(ch, CLASS_MONK))
     sic = 0;
   if (sic == 1 && number(1, 101) <= wpn_skill + (GET_C_AGI(ch) / 2))
@@ -7208,7 +7208,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
 	GET_CLASS(victim, CLASS_MERCENARY) &&
 	!affected_by_spell(ch, TAG_MERC_DEFENSE) &&
 	MIN_POS(victim, POS_STANDING + STAT_NORMAL) &&
-	(number(1, GET_C_LUCK(victim)) > number(1, 1600)))
+	(number(1, GET_C_LUK(victim)) > number(1, 1600)))
   {
   struct affected_type af;
 
@@ -8069,7 +8069,7 @@ int blockSucceed(P_char victim, P_char attacker, P_obj wpn)
   if(!MIN_POS(attacker, POS_STANDING + STAT_NORMAL))
     percent = (int) (learned * 1.1);
     
-  if(GET_C_LUCK(victim) / 10 > number (0, 100))
+  if(GET_C_LUK(victim) / 10 > number (0, 100))
     percent += number(1, 4);
 
   /* Bless spell modifier can be adjusted on the fly - Lucrot */
@@ -8400,7 +8400,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
     learnedattacker = (int) (learnedattacker * 0.80);
   
   // Random 5% change based on random luck comparison.
-  if(number(0, GET_C_LUCK(victim)) > number(0, GET_C_LUCK(attacker)))
+  if(number(0, GET_C_LUK(victim)) > number(0, GET_C_LUK(attacker)))
     learnedvictim = (int) (learnedvictim * 1.05);
   
   // Dragons are more difficult to parry, but not impossible.

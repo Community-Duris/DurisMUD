@@ -19063,7 +19063,7 @@ void spell_chaos_volley(int level, P_char ch, char *arg, int type,
   dam = dam + cvdam; // Adding in current health modifier
   
   // Luck influences chaos
-  luckmod = BOUNDED(-2, (GET_C_LUCK(ch) - GET_C_LUCK(victim)) / 10, 2);
+  luckmod = BOUNDED(-2, (GET_C_LUK(ch) - GET_C_LUK(victim)) / 10, 2);
 
   if(!NewSaves(victim, SAVING_SPELL, luckmod))
     dam *= 2; // Failed bigby's clenched and cruahsing do * 2 dam

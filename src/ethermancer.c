@@ -1356,7 +1356,7 @@ int door, target_room;
   }
   
   /* Victim might get lucky */
-  if((GET_C_LUCK(victim) / 10) < number(1, 100))
+  if((GET_C_LUK(victim) / 10) < number(1, 100))
     takedown_chance /= 2;
 
   dam = dam * get_property("spell.area.damage.factor.squallTempest", 1.000);

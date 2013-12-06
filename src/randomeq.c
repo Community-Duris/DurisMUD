@@ -682,7 +682,7 @@ int check_random_drop(P_char ch, P_char mob, int piece)
 //  else
     trophy_mod = 0;
 
-  int luck = (int) GET_C_LUCK(ch);
+  int luck = (int) GET_C_LUK(ch);
   int chance;
   int charmobdiv = (mob_lvl / char_lvl);
 
@@ -783,7 +783,7 @@ P_obj create_random_eq_new(P_char killer, P_char mob, int object_type,
 
     /*      Set the items name!   */
   
-  if (!number(0, (int) (400 / (GET_LEVEL(killer) + GET_C_LUCK(killer) + GET_LEVEL(mob)))) && \
+  if (!number(0, (int) (400 / (GET_LEVEL(killer) + GET_C_LUK(killer) + GET_LEVEL(mob)))) && \
        material_type == -1 && ansi_n && (IS_PC(killer) || mob_index[GET_RNUM(killer)].func.mob != shop_keeper))
   {     
     sprintf(buf1, "random _noquest_ %s %s %s %s", strip_ansi(prefix_data[prefix].m_name).c_str(),
@@ -862,7 +862,7 @@ P_obj create_random_eq_new(P_char killer, P_char mob, int object_type,
       }
     }
   }
-  else if(!number(0, BOUNDED(1, 150 - GET_CHAR_SKILL(killer, SKILL_CRAFT) - (GET_C_LUCK(killer) - 90), 150)) &&
+  else if(!number(0, BOUNDED(1, 150 - GET_CHAR_SKILL(killer, SKILL_CRAFT) - (GET_C_LUK(killer) - 90), 150)) &&
          material_type != -1)
   {
     sprintf(buf1, "random _noquest_ %s %s %s %s", strip_ansi(prefix_data[prefix].m_name).c_str(),

@@ -1266,7 +1266,7 @@ void event_mine_check(P_char ch, P_char victim, P_obj, void *data)
 
    newcost = (newcost * ((float)GET_OBJ_VNUM(ore) / (float)230)); //since the vnum's are sequential, the greatest rarity gets a 1.3 modifier, lowest gets 83% of value.
  
-  if(number(80, 140) < GET_C_LUCK(ch))
+  if(number(80, 140) < GET_C_LUK(ch))
    {
      newcost *= 1.3;
      send_to_char("&+yYou &+Ygently&+y break the &+Lore &+yfree from the &+Lrock&+y, preserving its natural form.&n\r\n", ch);

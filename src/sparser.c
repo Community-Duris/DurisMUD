@@ -224,7 +224,7 @@ void perform_chaos_check(P_char ch, P_char tar,
         && (!controlled || !grouped(ch, tch)))
     {
       // Luck influences chaos - Lucrot
-      if (!controlled && grouped(ch, tch) && (int) (number(1, 100) < GET_C_LUCK(ch) / 2))
+      if (!controlled && grouped(ch, tch) && (int) (number(1, 100) < GET_C_LUK(ch) / 2))
         return;
       else
         ((*skills[arg->spell].spell_pointer) ((int) GET_LEVEL(ch), ch, NULL,

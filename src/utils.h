@@ -380,8 +380,8 @@ int race_size(int race);
 #define GET_C_INT(ch)     ((ch)->curr_stats.Int)
 #define GET_C_WIS(ch)     ((ch)->curr_stats.Wis)
 #define GET_C_CHA(ch)     ((ch)->curr_stats.Cha)
-#define GET_C_KARMA(ch)   ((ch)->curr_stats.Karma)
-#define GET_C_LUCK(ch)    ((ch)->curr_stats.Luck)
+#define GET_C_KAR(ch)     ((ch)->curr_stats.Karma)
+#define GET_C_LUK(ch)     ((ch)->curr_stats.Luck)
 
 #define GET_WIMPY(ch)   ((ch)->only.pc->wimpy)
 

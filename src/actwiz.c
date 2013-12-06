@@ -2640,7 +2640,7 @@ void do_stat(P_char ch, char *argument, int cmd)
 
     sprintf(buf,
             "&+YKar: &n%3d&+Y (&n%3d&+Y)    Luc: &n%3d&+Y (&n%3d&+Y)    Carried Items: &n%3d&+Y   Max Carry Weight:&n%5d\n",
-            GET_C_KARMA(k), k->base_stats.Karma, GET_C_LUCK(k),
+            GET_C_KAR(k), k->base_stats.Karma, GET_C_LUK(k),
             k->base_stats.Luck, IS_CARRYING_N(k), CAN_CARRY_W(k));
     strcat(o_buf, buf);
 
