@@ -59,7 +59,7 @@ FUNCTIONNAME="void do_awareness"
 parsefile
 
 echo "backstab" >> command_attributes.txt
-FUNCTIONNAME="bool backstab"
+FUNCTIONNAME="bool single_stab"
 parsefile
 
 echo "barrage" >> command_attributes.txt
