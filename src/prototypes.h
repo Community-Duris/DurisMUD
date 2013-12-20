@@ -1025,8 +1025,8 @@ void writeHallOfFame(P_char ch, char thekiller[1024]);
 long getLeaderBoardPts(P_char);
 void deleteLeaderEntry(char names[15][MAX_STRING_LENGTH], int frags[15], int pos, char killer[15][MAX_STRING_LENGTH]);
 void insertLeaderEntry(char names[15][MAX_STRING_LENGTH], int frags[15], char *name, int newFrags, int pos, char killer[15][MAX_STRING_LENGTH], char *killername);
-void checkLeaderBoard(P_char ch, char thekiller[1024]);
-void writeLeaderBoard(P_char ch, char thekiller[1024]);
+void checkLeaderBoard(P_char ch);
+void writeLeaderBoard(P_char ch);
 void newLeaderBoard(P_char ch, char *arg, int cmd);
 
 

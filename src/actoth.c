@@ -1408,10 +1408,7 @@ void do_save_silent(P_char ch, int type)
     checkHallOfFame(ch, tmp_buf);
   }
   if (!IS_TRUSTED(ch))
-   {
-    sprintf(tmp_buf, "%d", ch->only.pc->numb_deaths);
-    checkLeaderBoard(ch, tmp_buf);
-   }
+    checkLeaderBoard(ch);
 
   update_achievements(ch, 0, 0, 0);
   set_surname(ch, 0);
@@ -1487,10 +1484,7 @@ void do_save(P_char ch, char *argument, int cmd)
 
   }
   if (!IS_TRUSTED(ch))
-   {
-    sprintf(tmp_buf, "%d", ch->only.pc->numb_deaths);
-    checkLeaderBoard(ch, tmp_buf);
-   }
+    checkLeaderBoard(ch);
 
   update_achievements(ch, 0, 0, 0);
   set_surname(ch, 0);
