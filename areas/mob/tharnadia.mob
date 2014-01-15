@@ -2671,3 +2671,14 @@ PH 0 1 2 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
+#132676
+mob unnamed~
+&+Lthe &+WTharnadia &+yQuartersmaster&n~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
