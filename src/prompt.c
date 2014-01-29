@@ -554,7 +554,19 @@ void make_prompt(void)
         {
           strcat(promptbuf, "\033[32m E: ");
           strcat(promptbuf, FirstWord(t_obj_f->name) );
-          sprintf(promptbuf + strlen(promptbuf), " EC: %d ",
+          strcat(promptbuf, " EC: " );
+          if(t_obj_f->condition > 90)
+            strcat(promptbuf, "\033[1;32m");
+          else if(t_obj_f->condition > 70)
+            strcat(promptbuf, "\033[32m");
+          else if(t_obj_f->condition > 50)
+            strcat(promptbuf, "\033[0;33m");
+          else if(t_obj_f->condition > 20)
+            strcat(promptbuf, "\033[0;31m");
+          else
+            strcat(promptbuf, "\033[1;31m");
+
+          sprintf(promptbuf + strlen(promptbuf), "%d ",
             t_obj_f->condition );
         }
         else

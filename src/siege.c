@@ -15,6 +15,7 @@
 extern P_room world;
 extern int top_of_objt;
 extern P_town towns;
+extern P_char destroying_list;
 
 void explode_ammo( P_char ch, P_obj ammo );
 bool is_siege( P_obj weapon );
@@ -1315,12 +1316,13 @@ void kill_siege( P_char ch, P_obj obj )
 
 void multihit_siege( P_char ch )
 {
-  P_obj siege, scraps, weapon;
-  bool  destroy = FALSE;
-  char  buf[MAX_STRING_LENGTH];
-  int   number_attacks, num_attacks;
-  int   damage;
-  int   attacks[256];
+  P_char other_attacker;
+  P_obj  siege, scraps, weapon;
+  bool   destroy = FALSE;
+  char   buf[MAX_STRING_LENGTH];
+  int    number_attacks, num_attacks;
+  int    damage;
+  int    attacks[256];
 
   if( !ch )
     return;
@@ -1371,6 +1373,12 @@ void multihit_siege( P_char ch )
   if( destroy )
   {
     stop_destroying( ch );
+    for( other_attacker = destroying_list; other_attacker; 
+      other_attacker = other_attacker->specials.next_destroying )
+    {
+      if( other_attacker->specials.destroying_obj == siege )
+        stop_destroying( other_attacker );
+    }
 
     act("$p collapses into scraps.", TRUE, NULL, siege, 0, TO_ROOM);
     scraps = read_object(9, VIRTUAL);
