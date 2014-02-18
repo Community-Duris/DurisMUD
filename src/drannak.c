@@ -2538,7 +2538,10 @@ void add_bloodlust(P_char ch, P_char victim)
   memset(&af, 0, sizeof(struct affected_type));
   	af.type = TAG_BLOODLUST;
   	af.modifier = 1;
-  	af.duration = 5;
+       if(GET_RACE(ch) == RACE_OGRE)
+  	af.duration = 10;
+       else
+       af.duration = 5;
     af.location = 0;
     af.flags = AFFTYPE_NODISPEL;
 	affect_to_char(ch, &af);
@@ -2552,17 +2555,66 @@ void add_bloodlust(P_char ch, P_char victim)
 	 if((findaf && findaf->type == TAG_BLOODLUST) && findaf->modifier < 20)
 	 {
 	 findaf->modifier += 1;
-        findaf->duration = 5;
+       if(GET_RACE(ch) == RACE_OGRE)
+  	af.duration = 10;
+       else
+       af.duration = 5;
 	 }
 	 else if(findaf && findaf->type == TAG_BLOODLUST)
         {
 	 findaf->modifier = 20;
-  	 findaf->duration = 5;
+       if(GET_RACE(ch) == RACE_OGRE)
+  	af.duration = 10;
+       else
+       af.duration = 5;
         }
 	}
 
    }
-
-
 }
 
+bool add_epiccount(P_char ch, int gain)
+{
+ if (!ch)
+ return FALSE;
+ 
+ if (IS_PC_PET(ch))
+ return FALSE;
+ 
+ if (IS_NPC(ch))
+ return FALSE;
+ 
+  struct affected_type af;
+  if(!affected_by_spell(ch, TAG_EPICS))
+  {
+  memset(&af, 0, sizeof(struct affected_type));
+  	af.type = TAG_EPICS;
+  	af.modifier = gain;
+    af.duration = -1;
+    af.location = 0;
+    af.flags = AFFTYPE_NODISPEL, AFFTYPE_PERM;
+	affect_to_char(ch, &af);
+	return FALSE;
+   }
+   else
+   {
+    struct affected_type *findaf, *next_af;  //initialize affects
+    for(findaf = ch->affected; findaf; findaf = next_af)
+	{
+    next_af = findaf->next;
+	 if((findaf && findaf->type == TAG_EPICS) && findaf->modifier < 100)
+	 {
+	 findaf->modifier += gain;
+	 return FALSE;
+	 }
+	 else if(findaf && findaf->type == TAG_EPICS)
+        {
+	 //has over 100 - gain a skill point. modifier needs to equal 100 - gain
+	 findaf->modifier += gain;
+	 findaf->modifier -= 100;
+	 //gain epic skill point;
+	 return TRUE;
+        }
+	}
+   }
+}

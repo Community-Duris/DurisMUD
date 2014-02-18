@@ -3144,7 +3144,7 @@ void reset_zone(int zone, int force_item_repop)
             break;
           obj_to_obj(obj, obj_to);
  
-          obj->timer[3] = time(NULL);
+          obj->timer[3] = time(NULL) + 1290600;
  	  last_cmd = 1;
           break;
         }
@@ -3189,7 +3189,7 @@ void reset_zone(int zone, int force_item_repop)
           break;
         }
         obj_to_room(obj, ZCMD.arg3);
-        obj->timer[3] = time(NULL);
+        obj->timer[3] = time(NULL) + 1290600;
         last_cmd = 1;
 
         break;
@@ -3227,7 +3227,7 @@ void reset_zone(int zone, int force_item_repop)
           if (mob)              /* last mob */
           {
             obj_to_char(obj, mob);
-            obj->timer[3] = time(NULL);
+            obj->timer[3] = time(NULL) + 1290600;
             last_cmd = 1;
             break;
           }
@@ -3314,7 +3314,7 @@ void reset_zone(int zone, int force_item_repop)
                   break;
                 }
                 obj_to_room(obj, ZCMD.arg3);
-                obj->timer[3] = time(NULL);
+                obj->timer[3] = time(NULL) + 1290600; //artis now last 2 full weeks before poofing Drannak (remove the 1290600 if default)
                 last_cmd = 1;
                 break;
               }
@@ -3373,7 +3373,7 @@ void reset_zone(int zone, int force_item_repop)
                   break;
                 }
 		obj_to_obj(obj, obj_to);
-                obj->timer[3] = time(NULL);
+                obj->timer[3] = time(NULL) + 1290600;
                 last_cmd = 1;
                 break;
               }
@@ -3428,7 +3428,7 @@ void reset_zone(int zone, int force_item_repop)
               if (mob)
               {
                 obj_to_char(obj, mob);
-                obj->timer[3] = time(NULL);
+                obj->timer[3] = time(NULL) + 1290600;
                 last_cmd = 1;
 		break;
               }
@@ -3494,7 +3494,7 @@ void reset_zone(int zone, int force_item_repop)
                 extract_obj(obj, TRUE);
                 break;
               }
-              obj->timer[3] = time(NULL);
+              obj->timer[3] = time(NULL) + 1290600;
               if (mob && (ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR))
               {
                 if (mob->equipment[ZCMD.arg3])

@@ -454,6 +454,9 @@ int sell_cargo_slot(P_char ch, P_ship ship, int slot, int rroom)
         int crates = ship->slot[slot].val0;
         int cost = crates * cargo_buy_price(rroom, type);
         int profit = 100;
+
+       cost *= 0.7; //reducing cargo benefit
+
 	if(has_eq_diplomat(ship))
 	{
 	  cost *= 0.9;

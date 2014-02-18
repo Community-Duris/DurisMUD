@@ -815,6 +815,7 @@ void thanksgiving_proc(P_char ch);
 void christmas_proc(P_char ch);
 void enhancematload(P_char ch);
 void add_bloodlust(P_char ch, P_char victim);
+bool add_epiccount(P_char ch, int gain);
 
 
 /* editor.c */
