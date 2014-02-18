@@ -2551,22 +2551,16 @@ void add_bloodlust(P_char ch, P_char victim)
     struct affected_type *findaf, *next_af;  //initialize affects
     for(findaf = ch->affected; findaf; findaf = next_af)
 	{
-    next_af = findaf->next;
+        next_af = findaf->next;
 	 if((findaf && findaf->type == TAG_BLOODLUST) && findaf->modifier < 20)
 	 {
-	 findaf->modifier += 1;
-       if(GET_RACE(ch) == RACE_OGRE)
-  	af.duration = 10;
-       else
+	findaf->modifier += 1;
        af.duration = 5;
 	 }
 	 else if(findaf && findaf->type == TAG_BLOODLUST)
         {
 	 findaf->modifier = 20;
-       if(GET_RACE(ch) == RACE_OGRE)
-  	af.duration = 10;
-       else
-       af.duration = 5;
+        af.duration = 5;
         }
 	}
 
