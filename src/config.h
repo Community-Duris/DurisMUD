@@ -78,7 +78,7 @@
 #define PULSE_BARD_UPDATE        35     /* 15 sec */
 #define PULSE_MOBILE             30     /* 10 seconds */
 #define PULSE_VEHICLE             2     /* for ships, 1 second */
-#define PULSE_VIOLENCE           12     /* combat round, 3 seconds */
+#define PULSE_VIOLENCE           16     /* combat round, 4 seconds - upped from 3 on 3/6/14 Drannak */
 #define PULSE_SPELLCAST           9     /* casting crap about 2 seconds */
 #define PULSE_MOB_HUNT            6     /* how often a HUNTER mob moves */
 #define PULSE_AUCTION             8
