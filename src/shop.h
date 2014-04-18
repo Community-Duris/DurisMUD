@@ -21,8 +21,6 @@
 #define SHOP_PRODUCT(i, num)  (shop_index[(i)].producing[(num)])
 #define SHOP_BUYPROFIT(i) (shop_index[(i)].profit_buy)
 #define SHOP_SELLPROFIT(i)  (shop_index[(i)].profit_sell)
-#define MIN_OUTSIDE_BANK  5000
-#define MAX_OUTSIDE_BANK  15000
 #define MSG_NOT_OPEN_YET  "Come back later!"
 #define MSG_NOT_REOPEN_YET  "Sorry, we have closed, but come back later."
 #define MSG_CLOSED_FOR_DAY  "Sorry, come back tomorrow."

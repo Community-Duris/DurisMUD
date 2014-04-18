@@ -133,7 +133,6 @@
 #define MAX_TRADE             10    /* shops, max number of item types they trade in  */
 #define MAX_WHO_PLAYERS      512    /* for do_who, max number of players it can handle */
 #define MAX_ZONES            512    /* mob memory shortcut, 'remembers' what zone player is in */
-#define SHIP_MAX_SPEED        80    /* Ah canna push her ana faster cap'n! */
 
 /* room in heavens to store corpses if room is invalid */
 #define CORPSE_STORAGE 40
