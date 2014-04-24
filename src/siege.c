@@ -13,10 +13,11 @@
 #include "siege.h"
 #include <string.h>
 
+P_siege  siege_objects;         /* List of siege objects to save   */
+
 extern P_room world;
 extern int top_of_objt;
 extern P_town towns;
-extern P_siege siege_objects;
 extern P_char destroying_list;
 extern int top_of_zone_table;
 

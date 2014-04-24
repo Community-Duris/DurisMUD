@@ -52,6 +52,7 @@
 #include "grapple.h"
 #include "guildhall.h"
 #include "buildings.h"
+#include "siege.h"
 
 /*
  * external variables
@@ -78,8 +79,6 @@ extern P_char misfire_check(P_char ch, P_char spell_target, int flag);
 extern void event_mob_mundane(P_char, P_char, P_obj, void *);
 extern void disarm_char_events(P_char, event_func);
 extern P_char make_mirror(P_char);
-void kill_siege( P_char ch, P_obj obj );
-P_obj get_siege_room( P_char ch, char *arg );
 
 struct failed_takedown_messages
 {

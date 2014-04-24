@@ -689,13 +689,6 @@ struct town {
 
 typedef struct town *P_town;
 
-struct siege {
-  P_obj obj;
-  siege *next_siege;
-};
-
-typedef struct siege *P_siege;
-
 struct table_element {
    int weight;
    int virtual_number;

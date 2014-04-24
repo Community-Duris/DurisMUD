@@ -924,16 +924,10 @@ void spell_storm_empathy(int level, P_char ch, char *arg, int type,
   send_to_char("You feel protected from the storms!\r\n", victim);
 }
 
-void spell_greater_ethereal_recharge(int level, P_char ch, char *arg,
-                                     int type, P_char victim, P_obj tar_obj)
+void spell_greater_ethereal_recharge(int level, P_char ch, char *arg, int type, P_char victim, P_obj tar_obj)
 {
-  int      healpoints;
+  int healpoints;
 
-  if (!IS_PC_PET(victim))
-  {
-    send_to_char("The power of this spell can only be used on beings of the ethereal plane.\r\n", ch);
-    return;
-  }
   if (IS_PC_PET(victim) && GET_RACE(victim) != RACE_A_ELEMENTAL)
   {
     send_to_char("They are not composed of ethereal matter...\r\n", ch);
@@ -949,34 +943,26 @@ void spell_greater_ethereal_recharge(int level, P_char ch, char *arg,
   spell_cure_blind(level, ch, NULL, SPELL_TYPE_SPELL, victim, tar_obj);
 
   healpoints = number(150, (GET_LEVEL(ch) * 5));
-
   heal(victim, ch, healpoints, GET_MAX_HIT(victim));
 
   healCondition(victim, healpoints);
-  if (healpoints)
-    send_to_char
-      ("&+WYou feel the powers of greater ethereal matter recharge you..!\r\n",
-       victim);
 
-  if (victim != ch && healpoints)
+  if (victim != ch)
   {
-    act("$n reaches out at $N, touching $M. ", FALSE, ch, 0, victim,
-        TO_NOTVICT);
-    act
-      ("You reach out your hand and touch $N, greatly healing $s ethereal body.",
-       TRUE, ch, 0, victim, TO_CHAR);
-    act
-      ("$N's ethereal form shimmers and seems to glow with renewed strength.",
-       FALSE, victim, 0, 0, TO_ROOM);
+    act("$n reaches out at $N, touching $M. ", FALSE, ch, 0, victim, TO_NOTVICT);
+    act("You reach out your hand and touch $N, greatly healing $s ethereal body.", TRUE, ch, 0, victim, TO_CHAR);
   }
+  
+  send_to_char("&+WYou feel the powers of greater ethereal matter recharge you..!\r\n", victim);
+  act("$N's ethereal form shimmers and seems to glow with renewed strength.", FALSE, victim, 0, 0, TO_ROOM);
+
   update_pos(victim);
 }
 
 
-void spell_ethereal_recharge(int level, P_char ch, char *arg, int type,
-                             P_char victim, P_obj tar_obj)
+void spell_ethereal_recharge(int level, P_char ch, char *arg, int type, P_char victim, P_obj tar_obj)
 {
-  int      healpoints;
+  int healpoints;
 
   if (IS_PC_PET(victim) && GET_RACE(victim) != RACE_A_ELEMENTAL)
   {
@@ -993,23 +979,18 @@ void spell_ethereal_recharge(int level, P_char ch, char *arg, int type,
   spell_cure_blind(level, ch, NULL, SPELL_TYPE_SPELL, victim, tar_obj);
 
   healpoints = MIN(150, dice(5, level));
-
   heal(victim, ch, healpoints, GET_MAX_HIT(victim));
 
   healCondition(victim, healpoints);
-  if (healpoints)
-    send_to_char
-      ("&+WYou feel the powers of ethereal matter recharge you..!\r\n",
-       victim);
-
-  if (victim != ch && healpoints)
+  
+  if (victim != ch )
   {
-    act("$n reaches out at $N, touching $M. ", FALSE, ch, 0, victim,
-        TO_NOTVICT);
+    act("$n reaches out at $N, touching $M.", FALSE, ch, 0, victim, TO_NOTVICT);
     act("You reach out at $N and touch $M.", TRUE, ch, 0, victim, TO_CHAR);
-    act("$n appears to gain strength from a cloud of ethereal matter.", FALSE,
-        victim, 0, 0, TO_ROOM);
   }
+  
+  send_to_char("&+WYou feel ethereal power recharge you!\r\n", victim);
+  act("$n appears to gain strength from a cloud of ethereal matter.", FALSE, victim, 0, 0, TO_ROOM);
 
   update_pos(victim);
 }

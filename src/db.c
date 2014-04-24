@@ -80,7 +80,6 @@ struct reset_q_type reset_q;
 
 P_room   world;                 /* dyn alloc'ed array of rooms     */
 P_town   towns;                 /* List of towns for defenses      */
-P_siege  siege_objects;         /* List of siege objects to save   */
 int      top_of_world = 0;      /* ref to the top element of world */
 P_obj    object_list = 0;       /* the global linked list of obj's */
 P_char   character_list = 0;    /* global l-list of chars */

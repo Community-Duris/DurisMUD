@@ -47,6 +47,7 @@
 #include "ctf.h"
 #include "tether.h"
 #include "achievements.h"
+#include "siege.h"
 
 /*
  * external variables //
@@ -97,7 +98,6 @@ extern int get_honing(P_obj);
 extern void apply_honing(P_obj, int);
 extern void holy_crusade_check(P_char, P_char);
 extern int is_wearing_necroplasm(P_char);
-extern void multihit_siege( P_char ch );
 
 /* Structures */
 
