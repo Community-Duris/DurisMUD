@@ -1507,6 +1507,17 @@ void init_towns()
 
   fclose(town_file);
 
+  /* initialize warmaster specs */
+  mob_index[real_mobile0(401000)].func.mob = warmaster;
+  mob_index[real_mobile0(401010)].func.mob = warmaster;
+  mob_index[real_mobile0(401020)].func.mob = warmaster;
+  mob_index[real_mobile0(401030)].func.mob = warmaster;
+  mob_index[real_mobile0(401040)].func.mob = warmaster;
+  mob_index[real_mobile0(401050)].func.mob = warmaster;
+  mob_index[real_mobile0(401060)].func.mob = warmaster;
+  mob_index[real_mobile0(401070)].func.mob = warmaster;
+  mob_index[real_mobile0(401080)].func.mob = warmaster;
+  mob_index[real_mobile0(401090)].func.mob = warmaster;
 }
 
 void save_towns()
@@ -1819,7 +1830,7 @@ void list_siege( P_char ch )
 }
 
 // Loads the siege objects.
-void init_siege_list( )
+void init_siege()
 {
 
   FILE   *siege_file;
@@ -1863,5 +1874,11 @@ void init_siege_list( )
     siege->next_siege = siege_objects;
     siege_objects = siege;
   }
+
+  // assign specs
+  obj_index[real_object0(461)].func.obj = ballista;
+  obj_index[real_object0(462)].func.obj = battering_ram;
+  obj_index[real_object0(463)].func.obj = catapult;
+  obj_index[real_object0(464)].func.obj = castlewall;
 }
 

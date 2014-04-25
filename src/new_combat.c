@@ -25,7 +25,10 @@
 #include "spells.h"
 #include "structs.h"
 #include "utils.h"
+
+#ifdef SIEGE_ENABLED
 #include "siege.h"
+#endif
 
 extern const struct str_app_type str_app[52];
 extern P_room world;
@@ -2157,7 +2160,9 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
        */
       stop_fighting(ch);
       if( IS_DESTROYING(ch) )
+      {
         stop_destroying(ch);
+      }
       sic = 1;
       for (tch = world[ch->in_room].people; (tch && sic);
            tch = tch->next_in_room)
@@ -2361,10 +2366,12 @@ void perform_violence(void)
 
   bool     no_dodge;
 
+#ifdef SIEGE_ENABLED
   for( ch = destroying_list; ch; ch = ch->next_destroying )
   {
     multihit_siege( ch );
   }
+#endif
 
   for (ch = combat_list; ch; ch = combat_next_ch)
   {

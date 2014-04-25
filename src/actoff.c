@@ -52,7 +52,10 @@
 #include "grapple.h"
 #include "guildhall.h"
 #include "buildings.h"
+
+#ifdef SIEGE_ENABLED
 #include "siege.h"
+#endif
 
 /*
  * external variables
@@ -759,12 +762,17 @@ void do_hit(P_char ch, char *argument, int cmd)
 
   if(!victim)
   {
+#ifdef SIEGE_ENABLED
     // Allow attacking of siege objects.
     P_obj obj = get_siege_room( ch, argument );
+
     if( obj )
+    {
       kill_siege( ch, obj );
-    else
-      send_to_char("Slay whom?\n", ch);
+    }
+#endif
+
+    send_to_char("Slay whom?\n", ch);
     return;
   }
 
@@ -1599,28 +1607,47 @@ void do_kill(P_char ch, char *argument, int cmd)
   one_argument(argument, Gbuf1);
 
   if(!*Gbuf1)
+  {
     send_to_char("Slay whom?\n", ch);
+  }
   else
   {
-    if(!(victim = get_char_room_vis(ch, Gbuf1)))
+    victim = get_char_room_vis(ch, Gbuf1);
+
+    if(!victim)
     {
+#ifdef SIEGE_ENABLED
       // Allow attacking of siege objects.
       P_obj obj = get_siege_room( ch, argument );
+
       if( obj )
+      {
         kill_siege( ch, obj );
+      }
       else
+      {
         send_to_char("He/she/it isn't here.\n", ch);
+      }
+#else
+      send_to_char("He/she/it isn't here.\n", ch);
+#endif
     }
     else if(ch == victim)
+    {
       send_to_char("Your mother would be so sad... \n", ch);
+    }
     else if(IS_TRUSTED(victim))
+    {
       send_to_char("Not a chance...\n", ch);
+    }
     else
     {
       if(IS_PC(victim))
+      {
         statuslog(victim->player.level, "%s killed by %s at %s [%d]",
                   GET_NAME(victim), GET_NAME(ch), world[victim->in_room].name,
                   world[victim->in_room].number);
+      }
 
       act("You grab $M by the throat and rip out $S still beating heart!",
           FALSE, ch, 0, victim, TO_CHAR);

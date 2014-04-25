@@ -25,6 +25,10 @@
 #include "graph.h"
 #include "disguise.h"
 
+#ifdef SIEGE_ENABLED
+#include "siege.h"
+#endif
+
 /*
  * external variables
  */
@@ -52,7 +56,6 @@ extern int top_of_world;
 extern int get_number_allies_in_room(P_char ch, int room_index);
 extern int get_weight_allies_in_room(P_char ch, int room_index);
 void send_movement_noise(P_char ch, int num);
-bool check_gates( P_char ch, int room );
 
 int is_ice(P_char ch, int room)
 {
@@ -725,13 +728,19 @@ int can_enter_room(P_char ch, int room, int show_msg)
     return FALSE;
   }
 
+#ifdef SIEGE_ENABLED
   if( IS_INVADER( ch ) )
+  {
     if( check_gates( ch, room) )
     {
       if (show_msg)
+      {
         send_to_char("You can not pass through the gates!\n", ch);
+      }
       return FALSE;
     }
+  }
+#endif
 
   if(world[room].sector_type == SECT_UNDRWLD_MOUNTAIN &&
      IS_MAP_ROOM(ch->in_room) &&

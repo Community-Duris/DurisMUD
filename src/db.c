@@ -32,6 +32,10 @@
 #include "ships.h"
 #include "assocs.h"
 #include "objmisc.h"
+#ifdef SIEGE_ENABLED
+#include "siege.h"
+#endif
+
 /*
  * external variables
  */
@@ -70,7 +74,6 @@ extern struct social_messg *soc_mess_list;
 void recalc_zone_numbers();
 void ne_init_events();
 extern void event_reset_zone(P_char, P_char, P_obj, void*);
-extern void check_deploy( struct zone_data *zone );
 
 /**************************************************************************
 *  declarations of most of the 'global' variables                         *
@@ -3692,8 +3695,11 @@ void reset_zone(int zone, int force_item_repop)
     zone_table[zone].lifespan = zone_table[zone].lifespan_min;
 
   zone_table[zone].age = 0;
+
+#ifdef SIEGE_ENABLED
   // Check and deploy troops if applicable.
   check_deploy( &zone_table[zone] );
+#endif
 }
 
 #undef ZCMD

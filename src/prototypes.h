@@ -528,7 +528,6 @@ struct obj_data *clone_obj(P_obj);
 void NewbySkillSet(P_char);
 void clone_container_obj(P_obj, P_obj);
 void stat_game(P_char);
-void do_add(P_char, char *, int);
 void do_reload_help(P_char, char *, int);
 void do_tedit(P_char, char *, int);
 void do_depiss(P_char, char *, int);

@@ -1148,8 +1148,12 @@ bool check_reincarnate(P_char ch)
 
       if (ch->specials.fighting)
         stop_fighting(ch);
+#ifdef SIEGE_ENABLED
       if( IS_DESTROYING(ch) )
+      {
         stop_destroying(ch);
+      }
+#endif
 
       for (t = world[ch->in_room].people; t; t = t_next)
       {

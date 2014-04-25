@@ -740,17 +740,6 @@ void assign_mobiles(void)
  
  mob_index[real_mobile0(53670)].func.mob = world_quest; // Sunwell
 
-  /* Town code */
-  mob_index[real_mobile0(401000)].func.mob = warmaster;
-  mob_index[real_mobile0(401010)].func.mob = warmaster;
-  mob_index[real_mobile0(401020)].func.mob = warmaster;
-  mob_index[real_mobile0(401030)].func.mob = warmaster;
-  mob_index[real_mobile0(401040)].func.mob = warmaster;
-  mob_index[real_mobile0(401050)].func.mob = warmaster;
-  mob_index[real_mobile0(401060)].func.mob = warmaster;
-  mob_index[real_mobile0(401070)].func.mob = warmaster;
-  mob_index[real_mobile0(401080)].func.mob = warmaster;
-  mob_index[real_mobile0(401090)].func.mob = warmaster;
 
   /* Hall of the Ancients */
   mob_index[real_mobile0(77714)].func.mob = morkoth_mother;
@@ -1177,10 +1166,6 @@ void assign_mobiles(void)
   /* Heaven */
   
   obj_index[real_object0(1270)].func.obj = treasure_chest;
-  obj_index[real_object0(461)].func.obj = ballista;
-  obj_index[real_object0(462)].func.obj = battering_ram;
-  obj_index[real_object0(463)].func.obj = catapult;
-  obj_index[real_object0(464)].func.obj = castlewall;
 
   /*
      torg
