@@ -3300,7 +3300,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     send_to_char("\n", ch);
     stat_spldam(ch, arg2);
   }
-  if((*arg1 == 'q') || (*arg1 == 'Q'))
+  else if((*arg1 == 'q') || (*arg1 == 'Q'))
   {
     if( !(mob = get_char_vis(ch, arg2)) || !IS_NPC(mob) )
     {
