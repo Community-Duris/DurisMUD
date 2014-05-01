@@ -614,7 +614,7 @@ char get_alias(P_char ch, char *argument)
   while((fscanf(aliaslist, "%s", charalias) != EOF))
   {
     int i = 0;
-    sprintf(bufbug, charalias);
+    sprintf(bufbug, "%s", charalias);
     int times = 0;
     char buffer[MAX_STRING_LENGTH] = "";
 
@@ -638,7 +638,7 @@ char get_alias(P_char ch, char *argument)
       int i = 0;
       int times = 0;
 
-      sprintf(bfbug, charalias);
+      sprintf(bfbug, "%s", charalias);
 
       while(times < 2)
       {
@@ -2080,6 +2080,9 @@ void do_enhance(P_char ch, char *argument, int cmd)
   half_chop(argument, first, rest);
   half_chop(rest, second, rest);
   //material = atoi(second);
+
+  if( IS_NPC(ch) )
+    return;
 
   if(!argument || !*argument)
   {
