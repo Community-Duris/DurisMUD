@@ -2251,7 +2251,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
       if (source->affected[2].location == APPLY_DEX_MAX)
         loctype = 1; 
       else
-        source->affected[2].location = APPLY_CON;
+        source->affected[2].location = APPLY_DEX_MAX;
       sprintf(modstring, "&+wof &+ggreater dexterity&n");
       mod = 1;
       break;
@@ -2348,7 +2348,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_HIT_REG;
-      sprintf(modstring, "&+wof &+cconstitution&n");
+      sprintf(modstring, "&+wof &+gregeneration&n");
       mod = 3;
       break;
     case 400258:
@@ -2356,7 +2356,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_MOVE_REG;
-      sprintf(modstring, "&+wof &+cconstitution&n");
+      sprintf(modstring, "&+wof &+Gendurance&n");
       mod = 3;
       break;
 
@@ -2365,7 +2365,18 @@ void modenhance(P_char ch, P_obj source, P_obj material)
   }
 
   if (loctype == 1)
-    source->affected[2].modifier += mod;
+  {
+    // IF they've been modified less than 3 times.
+    if( source->affected[2].modifier/mod < 3 )
+      source->affected[2].modifier += mod;
+    else
+    {
+      send_to_char( "Your enhancement was a failure.  Too much magic.\n", ch );
+      obj_from_char(material, TRUE);
+      extract_obj(material, FALSE);
+      return;
+    }
+  }
   else
     source->affected[2].modifier = mod;
 
