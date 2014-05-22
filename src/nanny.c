@@ -3598,7 +3598,7 @@ void select_name(P_desc d, char *arg, int flag)
   for (; isspace(*arg); arg++) ;
   if (!*arg)
   {
-	SEND_TO_Q("Illegal name, please try another.\r\n", d);
+	SEND_TO_Q("Bad name, please try another.\r\n", d);
 	SEND_TO_Q("Name: ", d);
 
   //  close_socket(d);

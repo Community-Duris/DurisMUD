@@ -1555,7 +1555,7 @@ bool rename_character(P_char ch, char *old_name, char *new_name)
   // validate new name
   if (_parse_name(new_name, new_name))
   {
-    send_to_char("Illegal name, please try another.\r\n", ch);
+    send_to_char("Illegal name, please try again.\r\n", ch);
     return FALSE;
   }
 
