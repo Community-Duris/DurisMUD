@@ -3084,9 +3084,9 @@ void reset_zone(int zone, int force_item_repop)
           last_cmd = 0;
           break;
         }
-        
-        mob_index[real_mobile(temp)].limit = ZCMD.arg2; // set the mob limit from zone file
-        
+        // set the mob limit from zone file
+        mob_index[real_mobile(temp)].limit = ZCMD.arg2;
+
         if (mob_index[real_mobile(temp)].number < ZCMD.arg2)
         {
           mob = read_mobile(temp, VIRTUAL);
@@ -3115,7 +3115,7 @@ void reset_zone(int zone, int force_item_repop)
         temp = real_object(temp);
         if (temp == -1)
           break;
-          
+
         obj_index[temp].limit = ZCMD.arg2; // set the mob limit from zone file
 
         if ((ZCMD.arg3 >= 0) && (obj_index[temp].number < ZCMD.arg2))
@@ -3145,9 +3145,9 @@ void reset_zone(int zone, int force_item_repop)
           if (!obj_to)
             break;
           obj_to_obj(obj, obj_to);
- 
-          obj->timer[3] = time(NULL) + 1290600;
- 	  last_cmd = 1;
+          // Artifact poof timer to 2 weeks
+          obj->timer[3] = time(NULL) + ARTIFACT_TIMER_SEC;
+ 	        last_cmd = 1;
           break;
         }
 
@@ -3192,7 +3192,8 @@ void reset_zone(int zone, int force_item_repop)
           break;
         }
         obj_to_room(obj, ZCMD.arg3);
-        obj->timer[3] = time(NULL) + 1290600;
+        // Artifact poof timer to 2 weeks
+        obj->timer[3] = time(NULL) + ARTIFACT_TIMER_SEC;
         last_cmd = 1;
 
         break;
@@ -3231,7 +3232,8 @@ void reset_zone(int zone, int force_item_repop)
           if (mob)              /* last mob */
           {
             obj_to_char(obj, mob);
-            obj->timer[3] = time(NULL) + 1290600;
+            // Artifact poof timer to 2 weeks
+            obj->timer[3] = time(NULL) + ARTIFACT_TIMER_SEC;
             last_cmd = 1;
             break;
           }
@@ -3319,7 +3321,8 @@ void reset_zone(int zone, int force_item_repop)
                   break;
                 }
                 obj_to_room(obj, ZCMD.arg3);
-                obj->timer[3] = time(NULL) + 1290600; //artis now last 2 full weeks before poofing Drannak (remove the 1290600 if default)
+                // Artifact poof timer to 2 weeks
+                obj->timer[3] = time(NULL) + ARTIFACT_TIMER_SEC;
                 last_cmd = 1;
                 break;
               }
@@ -3378,8 +3381,9 @@ void reset_zone(int zone, int force_item_repop)
                   extract_obj(obj, TRUE);
                   break;
                 }
-		obj_to_obj(obj, obj_to);
-                obj->timer[3] = time(NULL) + 1290600;
+            		obj_to_obj(obj, obj_to);
+                // Artifact poof timer to 2 weeks
+                obj->timer[3] = time(NULL) + ARTIFACT_TIMER_SEC;
                 last_cmd = 1;
                 break;
               }
@@ -3435,9 +3439,11 @@ void reset_zone(int zone, int force_item_repop)
               if (mob)
               {
                 if(!IS_ARTIFACT(obj))
-                randomizeitem(mob, obj); //Drannak trying out item stat randomization 3/28/14
+                //Drannak trying out item stat randomization 3/28/14
+                randomizeitem(mob, obj);
                 obj_to_char(obj, mob);
-                obj->timer[3] = time(NULL) + 1290600;
+                // Artifact poof timer to 2 weeks
+                obj->timer[3] = time(NULL) + ARTIFACT_TIMER_SEC;
                 last_cmd = 1;
 		break;
               }
@@ -3504,7 +3510,8 @@ void reset_zone(int zone, int force_item_repop)
                 extract_obj(obj, TRUE);
                 break;
               }
-              obj->timer[3] = time(NULL) + 1290600;
+              // Artifact poof timer to 2 weeks
+              obj->timer[3] = time(NULL) + ARTIFACT_TIMER_SEC;
               if (mob && (ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR))
               {
                 if(!IS_ARTIFACT(obj))
