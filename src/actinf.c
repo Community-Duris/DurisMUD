@@ -4144,8 +4144,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
   	int calmroll = (int) (GET_C_INT(ch) / rollmod);
 	
 	// Magic Res:
-      int resmod = GET_C_WIS(ch);
-      double modifier = resmod - 120;
+      double modifier = (GET_C_WIS(ch) - 110)/2;
       if (modifier > 75)
       modifier = 75;
       if (modifier < 0)

@@ -4395,19 +4395,21 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
     dam *= .85;
 
   //statupdate2013 - drannak
-  int resmod = GET_C_WIS(victim);
-  double modifier = resmod - 120;
+  double modifier = (GET_C_WIS(victim) - 110)/2;
   if(modifier >=1 && !(flags & SPLDAM_NOSHRUG))
   {
     float redmod = 100;
+
     if (modifier <= 20)
       redmod -= (number(1, modifier));
     else if (modifier <= 40)
       redmod -= (number(20, modifier));
-    else 
+    else
       redmod -= (number(40, modifier));
+
     if(redmod < 25)
       redmod = 25;
+
     redmod *= .01;
     dam *= redmod;
   }
