@@ -1400,9 +1400,13 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data,
             (GET_STAT(ch->specials.fighting) != STAT_DEAD) &&
             (ch->specials.fighting->in_room == ch->in_room))
         {
-          /* WARNING, MAKE INTO POINTER  */
-          vict = ch->specials.fighting;
-          target_ok = TRUE;
+          if( GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN)
+            || ( spl != SPELL_HEAL && spl != SPELL_FULL_HEAL ) )
+          {
+            /* WARNING, MAKE INTO POINTER  */
+            vict = ch->specials.fighting;
+            target_ok = TRUE;
+          }
         }
     }
   }
@@ -1516,21 +1520,21 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data,
   return TRUE;
 }
 
-bool parse_spell(P_char ch, char *argument, 
-    struct spell_target_data* target_data, int cmd)
+bool parse_spell(P_char ch, char *argument, struct spell_target_data* target_data, int cmd)
 {
   int      qend;
   int      free_slots;
   int      circle;
   char     Gbuf1[MAX_STRING_LENGTH], ranged_arg[MAX_STRING_LENGTH];
-  int spl = 0;
-  P_obj tar_obj = 0;
-  P_char tar_char = 0;
-  char *tar_arg = 0;
+  int      spl = 0;
+  P_obj    tar_obj = 0;
+  P_char   tar_char = 0;
+  char    *tar_arg = 0;
 
   argument = skip_spaces(argument);
 
-  if (IS_DISGUISE_SHAPE(ch)) {
+  if( IS_DISGUISE_SHAPE(ch) )
+  {
     send_to_char("You cannot use magic in that form!\n", ch);
     return FALSE;
   }
@@ -1573,8 +1577,7 @@ bool parse_spell(P_char ch, char *argument,
        ch);
     return FALSE;
   }
-  spl = 
-    old_search_block(argument, 1, (uint) (MAX(0, (qend - 1))), spells, 0) - 1;
+  spl = old_search_block(argument, 1, (uint) (MAX(0, (qend - 1))), spells, 0) - 1;
 
   if (spl < 0 || (!IS_SPELL(spl) && !(IS_TRUSTED(ch) && IS_POISON(spl))))
   {
@@ -1607,12 +1610,9 @@ bool parse_spell(P_char ch, char *argument,
   memset(target_data, 0, sizeof(struct spell_target_data));
   target_data->ttype = spl;
 
-  
-  if (IS_TRUSTED(ch))
-  {
-  }
-  
-  else if (USES_MANA(ch))
+  if( IS_TRUSTED(ch) )
+    ;
+  else if( USES_MANA(ch))
 //else if (GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
   {
     if (GET_MANA(ch) < 1 && circle != -1)
@@ -1622,7 +1622,6 @@ bool parse_spell(P_char ch, char *argument,
       return FALSE;
     }
   }
-  
   else if (USES_SPELL_SLOTS(ch))
   {
     if (circle != -1 && !ch->specials.undead_spell_slots[circle])
@@ -1638,11 +1637,10 @@ bool parse_spell(P_char ch, char *argument,
 */
       else if (IS_ANGEL(ch))
       {
-	send_to_char("&+WYour illumination is not sufficient enough to cast that spell.&n\n", ch);
+	      send_to_char("&+WYour illumination is not sufficient enough to cast that spell.&n\n", ch);
       }
       else
-        send_to_char("&+LYour power reserves are not sufficient to "
-                     "cast that spell!\n", ch);
+        send_to_char("&+LYour power reserves are not sufficient to cast that spell!\n", ch);
       return FALSE;
     }
   }
@@ -1662,29 +1660,23 @@ bool parse_spell(P_char ch, char *argument,
 
   /* check for shaman's totem */
 
-  if(ch &&
-    GET_CLASS(ch, CLASS_SHAMAN) &&
-    !IS_NPC(ch) &&
-    !hasTotem(ch, spl))
+  if(ch && GET_CLASS(ch, CLASS_SHAMAN) && !IS_NPC(ch) && !hasTotem(ch, spl))
   {
     if (IS_TRUSTED(ch))
     {
-      send_to_char
-        ("You don't have the right totem, but since you're a god..\n", ch);
+      send_to_char("You don't have the right totem, but since you're a god..\n", ch);
     }
     else if(IS_MULTICLASS_PC(ch))
-        {
-        ; //try to handle  totems for shaman spells..
-        }
+    {
+      ; //try to handle  totems for shaman spells..
+    }
     else if(GET_CHAR_SKILL(ch, SKILL_TOTEMIC_MASTERY) > number(1, 100))
     {
-      send_to_char
-      ("Using your mastery of the spirit realm, you prepare your spell without the aid of a focus...\n", ch);
+      send_to_char("Using your mastery of the spirit realm, you prepare your spell without the aid of a focus...\n", ch);
     }
-    else 
+    else
     {
-      send_to_char
-        ("You aren't holding the correct totem to cast that spell.\n", ch);
+      send_to_char("You aren't holding the correct totem to cast that spell.\n", ch);
       // CharWait(ch, PULSE_VIOLENCE);
       return FALSE;
     }
@@ -1698,8 +1690,7 @@ bool parse_spell(P_char ch, char *argument,
   return true;
 }
 
-bool parse_spell(P_char ch, char *argument, 
-    struct spell_target_data* target_data)
+bool parse_spell(P_char ch, char *argument,  struct spell_target_data* target_data)
 {
   return parse_spell(ch, argument, target_data, CMD_CAST);
 }
@@ -1858,7 +1849,7 @@ void do_will(P_char ch, char *argument, int cmd)
 
   orig_arg = argument;
 
-  if (!parse_spell(ch, argument, &common_target_data))
+  if( !parse_spell(ch, argument, &common_target_data) )
     return;
 
   // parse_spell parses argument and sets values on a global struct
@@ -2157,17 +2148,17 @@ void do_cast(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (!parse_spell(ch, argument, &common_target_data, cmd))
+  if( !parse_spell(ch, argument, &common_target_data, cmd) )
     return;
-    
+
 
   if ((weave_af = get_spell_from_char(ch, SKILL_SPELLWEAVE)) &&
       weave_af->modifier == common_target_data.ttype)
   {
     send_to_char("You call forth your prepared spell...\n", ch);
     weaved = true;
-  } 
-  else 
+  }
+  else
   {
     if(is_silent(ch, FALSE))
     {
@@ -2178,13 +2169,13 @@ void do_cast(P_char ch, char *argument, int cmd)
       else
       {
         CharWait(ch, PULSE_VIOLENCE);
-        return;        
+        return;
       }
     }
     else
     {
       send_to_char("You start chanting...\n", ch);
-    }  
+    }
   }
 
   // parse_spell parses argument and sets values on a global struct
@@ -2251,7 +2242,7 @@ void do_cast(P_char ch, char *argument, int cmd)
   else if (GET_CLASS(ch, CLASS_DRUID) && !IS_MULTICLASS_PC(ch))
     CharWait(ch, (dura >> 1) + 6);
   else if (affected_by_spell(ch, SKILL_BERSERK))
-  {  
+  {
     dura = (int) (dura * get_property("spell.berserk.casting.starMod", 1.500));
     CharWait(ch, dura);
   }
@@ -2263,7 +2254,7 @@ void do_cast(P_char ch, char *argument, int cmd)
   if(IS_AGG_SPELL(spl))
   {
     appear(ch);
-    
+
     if(check_mob_retaliate(ch, tar_char, spl))
     {
       return;
@@ -2313,7 +2304,7 @@ void do_cast(P_char ch, char *argument, int cmd)
     tmp_spl.arg = str_dup(common_target_data.arg);
 
   SET_BIT(ch->specials.affected_by2, AFF2_CASTING);
-  add_event(event_spellcast, BOUNDED(1, dura, 4), ch, 
+  add_event(event_spellcast, BOUNDED(1, dura, 4), ch,
       common_target_data.t_char, 0, 0, &tmp_spl,
       sizeof(struct spellcast_datatype));
 
