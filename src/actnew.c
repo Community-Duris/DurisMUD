@@ -2640,7 +2640,7 @@ void do_lore(P_char ch, char *arg, int cmd)
       send_to_char("That's all you can recall about this item.\r\n", ch);
     else
       send_to_char("You can't recall any legends or stories ever told about that!\r\n", ch);
-    CharWait(ch, 2);
+    CharWait(ch, 1);
     return;
   }
 
@@ -2671,13 +2671,13 @@ void do_lore(P_char ch, char *arg, int cmd)
     }
     if (target)
       free_char(target);
-    CharWait(ch, 5);
+    CharWait(ch, 3);
     return;
   }
   if (obj)
   {
     lore_item( ch, obj );
-    CharWait(ch, 5);
+    CharWait(ch, 3);
   }
 }
 
@@ -2860,6 +2860,8 @@ void lore_item( P_char ch, P_obj obj )
   }
   if( found )
     send_to_char( ".\n\r", ch );
+  sprintf(Gbuf2, "$p &nhas an item value of &+W%d&n.", itemvalue(ch, obj));
+  act(Gbuf2, FALSE, ch, obj, 0, TO_CHAR);
 }
 
 const char *MAKE_FORMAT =
