@@ -3373,9 +3373,9 @@ void spell_cyclone(int level, P_char ch, char *arg, int type, P_char victim,
   if(IS_AFFECTED(victim, AFF_FLY) &&
     !NewSaves(victim, SAVING_PARA, svchance) &&
     !IS_ELITE(victim))
-  { 
+  {
     affchance = number(1, 100);
-    
+
     if(affchance <= 50)         /* && (!check_wall(tch->in_room, door)) */
     {
       act("The gail force of your spell sends $N flying through the room!",
@@ -3393,16 +3393,16 @@ void spell_cyclone(int level, P_char ch, char *arg, int type, P_char victim,
     }
     else if(affchance <= 5)
     {
-      act("Your gail force sends $N flying through the room", FALSE,
+      act("Your gail force sends $N flying through the room.", FALSE,
           ch, 0, victim, TO_CHAR);
-      act("The gail force of $n's spell sends you flying through the room",
+      act("The gail force of $n's spell sends you flying through the room.",
           FALSE, ch, 0, victim, TO_VICT);
-      act("The gail force of $n's spell sends $N flying through the room",
+      act("The gail force of $n's spell sends $N flying through the room.",
           FALSE, ch, 0, victim, TO_NOTVICT);
       //SET_POS(victim, POS_PRONE + GET_STAT(victim));
 
       if(!IS_STUNNED(victim) && !number(0, 2))
-      {                      
+      {
         Stun(victim, ch, PULSE_VIOLENCE, TRUE);
       }
     }
