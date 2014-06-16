@@ -2438,7 +2438,7 @@ void event_revenant_crown(P_char ch, P_char victim, P_obj obj, void *data)
   {
     ch->player.race = af->modifier;
     affect_remove(ch, af);
-    ch->player.time.birth = time(NULL) - racial_data[(int) GET_RACE(ch)].base_age*2;
+    ch->player.time.birth = time(NULL) - (racial_data[GET_RACE(ch)].base_age) * 2;
 //    GET_AGE(ch) = racial_data[(int) GET_RACE(ch)].base_age*2;
     send_to_char
       ("The curse of the dark powers fade and your soul restores the body.\r\n",
@@ -2521,7 +2521,8 @@ int revenant_helm(P_obj obj, P_char ch, int cmd, char *arg)
           FALSE, temp_ch, obj, 0, TO_CHAR);
 
       temp_ch->player.race = RACE_REVENANT;
-      ch->player.time.birth = time(NULL) - racial_data[RACE_REVENANT].base_age*2;
+      temp_ch->player.time.birth = time(NULL);
+      temp_ch->player.time.birth -= (racial_data[RACE_REVENANT].base_age) * 2;
 //      GET_AGE(temp_ch) += racial_data[RACE_REVENANT].base_age*2;
       return TRUE;
 
@@ -2589,7 +2590,7 @@ void event_dragonlord_check(P_char ch, P_char victim, P_obj obj, void *data)
   {
     ch->player.race = af->modifier;
     affect_remove(ch, af);
-    ch->player.time.birth = time(NULL) - racial_data[(int) GET_RACE(ch)].base_age*2;
+    ch->player.time.birth = time(NULL) - (racial_data[GET_RACE(ch)].base_age) * 2;
 //    GET_AGE(ch) = racial_data[(int) GET_RACE(ch)].base_age*2;
     send_to_char
       ("The curse of the dark powers fade and your soul restores the body.\r\n",
@@ -2685,7 +2686,7 @@ int dragonlord_plate_old(P_obj obj, P_char ch, int cmd, char *arg)
 
       temp_ch->player.race = RACE_DRAGONKIN;
 
-      ch->player.time.birth = time(NULL) - racial_data[RACE_DRAGONKIN].base_age*2;
+      temp_ch->player.time.birth = time(NULL) - (racial_data[RACE_DRAGONKIN].base_age) * 2;
 //      GET_AGE(temp_ch) += racial_data[RACE_DRAGONKIN].base_age * 2;
     
       return TRUE;
