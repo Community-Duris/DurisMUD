@@ -2080,6 +2080,10 @@ static void check_for_artisInRoom(P_char ch, int rroom)
       act
         ("&+LThe overpowering will of $p &+Ldefies you as it flies back into your hands.",
          TRUE, ch, tmp_object, 0, TO_CHAR);
+      wizlog( 56, "Artifact %s (%d) returns to %s's hands in room %d.",
+        tmp_object->short_description, obj_index[tmp_object->R_num].virtual_number, J_NAME(ch), world[ch->in_room].number );
+      logit(LOG_OBJ, "Artifact %s (%d) returns to %s's hands in room %d.",
+        tmp_object->short_description, obj_index[tmp_object->R_num].virtual_number, J_NAME(ch), world[ch->in_room].number );
     }
   }
 }
