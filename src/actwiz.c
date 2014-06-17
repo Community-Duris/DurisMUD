@@ -2635,7 +2635,6 @@ void do_stat(P_char ch, char *argument, int cmd)
     i =  i2 / 12;
     i2 -= i * 12;
 
-// PENIS
     sprintf(buf,
             "&+YStr: &n%3d&+Y (&n%3d&+Y)    Pow: &n%3d&+Y (&n%3d&+Y)    Height: &n%3d&+Y\' &n%2d&+Y\" (&n%d&+Yin)\n",
             GET_C_STR(k), k->base_stats.Str, GET_C_POW(k), k->base_stats.Pow, i, i2, GET_HEIGHT(k));

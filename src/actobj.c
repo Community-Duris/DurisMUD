@@ -3796,7 +3796,8 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     break;
 
   case 3: /* Body */
-    if (CAN_WEAR(obj_object, ITEM_WEAR_BODY) && !IS_THRIKREEN(ch))
+    if (CAN_WEAR(obj_object, ITEM_WEAR_BODY) && !IS_THRIKREEN(ch)
+      && !IS_DRIDER(ch))
     {
       if (IS_SET(obj_object->extra_flags, ITEM_WHOLE_BODY))
       {
@@ -3882,7 +3883,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
        !IS_CENTAUR(ch) &&
        !IS_HARPY(ch) &&
        !IS_OGRE(ch) &&
-       !(GET_RACE(ch) == RACE_FIRBOLG))
+       !IS_FIRBOLG(ch) )
     {
       if (ch->equipment[WEAR_BODY] &&
           IS_SET(ch->equipment[WEAR_BODY]->extra_flags, ITEM_WHOLE_BODY))
@@ -3958,9 +3959,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
 
   case 8: /* Arms */
     if(CAN_WEAR(obj_object, ITEM_WEAR_ARMS)
-       &&
-       !IS_OGRE(ch) &&
-       !(GET_RACE(ch) == RACE_FIRBOLG)
+      && !IS_OGRE(ch) && !IS_FIRBOLG(ch)
       // !IS_SGIANT(ch) &&
       // !(GET_RACE(ch) == RACE_SNOW_OGRE)
       )

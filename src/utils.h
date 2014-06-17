@@ -887,6 +887,8 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_DRIDER(ch) (GET_RACE(ch) == RACE_DRIDER)
 
+#define IS_FIRBOLG(ch) (GET_RACE(ch) == RACE_FIRBOLG)
+
 #define IS_ARCHON(ch) (GET_RACE(ch) == RACE_ARCHON)
 
 #define IS_ASURA(ch) (GET_RACE(ch) == RACE_ASURA)

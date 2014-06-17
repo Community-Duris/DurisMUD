@@ -6718,6 +6718,159 @@ void do_inventory(P_char ch, char *argument, int cmd)
   }
 }
 
+// Returns true iff ch can wear something in wear_slot slot.
+bool has_eq_slot( P_char ch, int wear_slot )
+{
+  switch (wear_slot)
+  {
+    case WEAR_FINGER_R:
+    case WEAR_FINGER_L:
+      if( IS_THRIKREEN(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_NECK_1:
+    case WEAR_NECK_2:
+      return TRUE;
+      break;
+    case WEAR_BODY:
+      if( !has_innate( ch, INNATE_SPIDER_BODY )
+        || !has_innate( ch, INNATE_HORSE_BODY ) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_HEAD:
+      if( IS_MINOTAUR(ch) || IS_ILLITHID(ch) || IS_PILLITHID(ch))
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_LEGS:
+      if( IS_DRIDER(ch) || IS_CENTAUR(ch) || IS_HARPY(ch)
+        || IS_OGRE(ch) || IS_FIRBOLG(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_FEET:
+      if( IS_DRIDER(ch) || IS_THRIKREEN(ch)
+        || IS_HARPY(ch) || IS_MINOTAUR(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_HANDS:
+      return TRUE;
+      break;
+    case WEAR_ARMS:
+      if( IS_OGRE(ch) || IS_FIRBOLG(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_SHIELD:
+    case WEAR_ABOUT:
+    case WEAR_WAIST:
+    case WEAR_WRIST_L:
+    case WEAR_WRIST_R:
+    case PRIMARY_WEAPON:
+      return TRUE;
+      break;
+    case SECONDARY_WEAPON:
+      if( GET_CHAR_SKILL(ch, SKILL_DUAL_WIELD) <= 0 )
+      {
+        return FALSE;
+      }
+      break;
+    case HOLD:
+    case WEAR_EYES:
+    case WEAR_FACE:
+      return TRUE;
+      break;
+    case WEAR_EARRING_R:
+    case WEAR_EARRING_L:
+      if( IS_THRIKREEN(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_QUIVER:
+    case GUILD_INSIGNIA:
+      return TRUE;
+      break;
+    case THIRD_WEAPON:
+    case FOURTH_WEAPON:
+      if( !HAS_FOUR_HANDS( ch ) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_BACK:
+    case WEAR_ATTACH_BELT_1:
+    case WEAR_ATTACH_BELT_2:
+    case WEAR_ATTACH_BELT_3:
+      return TRUE;
+      break;
+    case WEAR_ARMS_2:
+    case WEAR_HANDS_2:
+    case WEAR_WRIST_LR:
+    case WEAR_WRIST_LL:
+      if( !HAS_FOUR_HANDS( ch ) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_HORSE_BODY:
+      if( !has_innate(ch, INNATE_HORSE_BODY ) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_LEGS_REAR:
+      return FALSE;
+      break;
+    case WEAR_TAIL:
+      if( !IS_CENTAUR(ch) && !IS_MINOTAUR(ch) && !IS_PSBEAST(ch)
+        && !IS_KOBOLD(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_FEET_REAR:
+      return FALSE;
+      break;
+    case WEAR_NOSE:
+      if( !IS_MINOTAUR(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_HORN:
+      if( !IS_MINOTAUR(ch) && !IS_HARPY(ch) && !IS_PSBEAST(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_IOUN:
+      return TRUE;
+      break;
+    case WEAR_SPIDER_BODY:
+      if( !has_innate( ch, INNATE_SPIDER_BODY ) )
+      {
+        return FALSE;
+      }
+      break;
+    default:
+      wizlog(56, "has_eq_slot: Bad wear slot %d", wear_slot );
+      logit(LOG_WIZ, "has_eq_slot: Bad wear slot %d", wear_slot );
+      return FALSE;
+      break;
+  }
+  return TRUE;
+}
+
 bool get_equipment_list(P_char ch, char *buf, int list_only)
 {
   int      j;
@@ -6734,7 +6887,13 @@ bool get_equipment_list(P_char ch, char *buf, int list_only)
   buf[0] = '\0';
   found = FALSE;
   if (!list_only)
+  {
     strcpy(buf, "You are using:\n");
+  }
+  else if( list_only == 2 )
+  {
+    strcpy(buf, "Your eq slots are (beta):\n");
+  }
 
   for (j = 0; wear_order[j] != -1; j++)
   {
@@ -6866,6 +7025,14 @@ bool get_equipment_list(P_char ch, char *buf, int list_only)
         strcat(buf, "Something.\n");
       }
     }
+    else if( list_only == 2 )
+    {
+      if( has_eq_slot( ch, wear_order[j] ) )
+      {
+        strcat( buf, where[wear_order[j]] );
+        strcat( buf, "\n" );
+      }
+    }
   }
 
   if (affected_by_spell(ch, TAG_SET_MASTER))
@@ -6879,14 +7046,20 @@ void do_equipment(P_char ch, char *argument, int cmd)
   bool     found;
   char     buf[MAX_STRING_LENGTH];
 
-  if IS_AFFECTED
-    (ch, AFF_WRAITHFORM)
+  argument = one_argument(argument, buf);
+  if IS_AFFECTED(ch, AFF_WRAITHFORM)
   {
     send_to_char("You have no body to wear anything upon!\n", ch);
     return;
   }
-
-  found = get_equipment_list(ch, buf, 0);
+  if( isname( buf, "list" ) || isname( buf, "slots" ) )
+  {
+    found = get_equipment_list(ch, buf, 2);
+  }
+  else
+  {
+    found = get_equipment_list(ch, buf, 0);
+  }
 
   if (!found)
     send_to_char("You aren't wearing anything!\n", ch);
