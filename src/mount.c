@@ -89,8 +89,8 @@ void do_mount(P_char ch, char *argument, int cmd)
     send_to_char("Are you crazy? You might slip and drown!\r\n", ch);
     return;
   }
-  
-  if (IS_THRIKREEN(ch))
+
+  if( IS_THRIKREEN(ch) || IS_DRIDER(ch) )
   {
     send_to_char("You cannot ride.\r\n", ch);
     return;
@@ -132,8 +132,8 @@ void do_mount(P_char ch, char *argument, int cmd)
       return;
     }
   }
-  else if(IS_CENTAUR(ch) ||
-          has_innate(ch, INNATE_HORSE_BODY))
+  else if(IS_CENTAUR(ch) || has_innate(ch, INNATE_HORSE_BODY)
+    || has_innate(ch, INNATE_SPIDER_BODY) )
   {
     send_to_char("It's a tad hard for you to mount much of anything.\r\n",
                  ch);
