@@ -7949,7 +7949,7 @@ PROFILE_START(mundane_track);
   { // 85%
     if(IS_SET(ch->specials.act, ACT_HUNTER)) 
     { // 38%
-      if (GET_MEMORY(ch) != NULL) // guardcheck (no hunt will happen if mob has no memory)  -Odorf
+      if ( ch->only.npc != NULL && GET_MEMORY(ch) != NULL) // guardcheck (no hunt will happen if mob has no memory)  -Odorf
       {
 PROFILE_START(mundane_track_1);
         if(InitNewMobHunt(ch))

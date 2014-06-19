@@ -5044,10 +5044,6 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags,
     if(rapier_dirk_check(ch))
       dam *= dam_factor[DF_SWASHBUCKLER_OFFENSE];
 
-    if(GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF))
-      dam *= 1.3;
-
-
     if(IS_RIDING(ch) && GET_SPEC(ch, CLASS_ANTIPALADIN, SPEC_DEMONIC))
       dam *= 1.20;
 
@@ -5189,7 +5185,6 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags,
     decrease_skin_counter(victim, skin);
   }
 
-
   if(affected_by_spell(ch, ACH_DRAGONSLAYER) && (GET_RACE(victim) == RACE_DRAGON))
     dam *= 1.10; 
 
@@ -5202,6 +5197,7 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags,
   dam = MAX(1, dam);
 
   messages->type |= 1 << 24;
+
   result = raw_damage(ch, victim, dam, RAWDAM_DEFAULT | flags, messages);
 
   if(result != DAM_NONEDEAD)
@@ -5660,7 +5656,6 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
         dam = (int) (dam * (1 + (dammod * .1)));
       }
 
-
       if (IS_HARDCORE(ch))
         dam = (int) dam *1.09;
 
@@ -5758,9 +5753,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
     loss = MIN(dam, (10 + GET_HIT(victim)) * 4);
     damage_dealt = (int) dam;
 
-
     dam = ((int) dam) >> 1;
-
 
     if(IS_NPC(ch) &&
         !IS_PC_PET(ch) &&
@@ -7220,11 +7213,15 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   /* calculate the damage */
 
   if (IS_NPC(ch))
+  {
     dam = dice(ch->points.damnodice, ch->points.damsizedice);
+  }
   else if (GET_CLASS(ch, CLASS_MONK))
-    dam = MonkDamage(ch);
+  {
+    dam = MonkDamage( ch );
+  }
   else if (GET_CLASS(ch, CLASS_PSIONICIST) &&
-      affected_by_spell(ch, SPELL_COMBAT_MIND))
+    affected_by_spell(ch, SPELL_COMBAT_MIND))
   {
     dam = dice(ch->points.damnodice, ch->points.damsizedice);
   }
