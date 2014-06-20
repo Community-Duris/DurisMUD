@@ -90,13 +90,3 @@ void spell_thornskin(int level, P_char ch, char *arg, int type, P_char victim, P
     }
   }
 }
-
-
-
-/*
-
-"As you strike <target>, you are &+rscratched&n by the <targets>'s &+ythorny skin&n!"
-"As <attacker> strikes you, you smile as <he|she|it> tears their &+Rfl&+res&+Rh&n as <he|she|it> hits you!"
-
-
-*/
