@@ -219,6 +219,10 @@ void do_setbit(P_char ch, char *arg, int cmd)
         affect_from_char(target, TAG_RACIAL_SKILLS);
         reset_racial_skills(target); //We now need to set specific racial skills whenever we change race - Drannak
       }
+      if(!strcmp(flag, "spec"))
+      {
+        update_skills(target);
+      }
       break;
 
     case SETBIT_OBJ:
