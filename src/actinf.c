@@ -2782,6 +2782,18 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
               "&+CA series of magical runes are dispersed about this area.&n\n");
       send_to_char(Gbuf5, ch);
     }
+    if (get_spell_from_room(&world[ch->in_room], SPELL_DESECRATE_LAND))
+    {
+      sprintf(Gbuf5,
+              "&+LA series of &+Revil&+L runes are dispersed about this area.&n\n");
+      send_to_char(Gbuf5, ch);
+    }
+    if (get_spell_from_room(&world[ch->in_room], SPELL_FORBIDDANCE))
+    {
+      sprintf(Gbuf5,
+              "&+LA strange unwelcoming energy flows through the area.&n\n");
+      send_to_char(Gbuf5, ch);
+    }
 		if (get_spell_from_room(&world[ch->in_room], SPELL_BINDING_WIND)) 
 		{
 			sprintf(Gbuf5,

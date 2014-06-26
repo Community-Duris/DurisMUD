@@ -926,10 +926,8 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define IS_MEMING_CLASS(cls) (IS_BOOK_CLASS(cls) || ((cls) & CLASS_SHAMAN))
 
 #define USES_COMMUNE(ch) ((IS_NPC(ch) || GET_PRIME_CLASS(ch, CLASS_DRUID) || GET_PRIME_CLASS(ch, CLASS_RANGER) \
-|| GET_PRIME_CLASS(ch, CLASS_BLIGHTER) \
 || (!(IS_PRAYING_CLASS(ch->player.m_class) || IS_MEMING_CLASS(ch->player.m_class) || USES_MANA(ch)) \
-&& ( GET_SECONDARY_CLASS(ch, CLASS_DRUID) || GET_SECONDARY_CLASS( ch, CLASS_BLIGHTER) \
-|| GET_SECONDARY_CLASS( ch, CLASS_RANGER) )) ))
+&& ( GET_SECONDARY_CLASS(ch, CLASS_DRUID) || GET_SECONDARY_CLASS( ch, CLASS_RANGER) )) ))
 
 #define USES_MANA(ch) ((GET_RACE(ch) == RACE_PILLITHID) || \
 						(GET_RACE(ch) == RACE_ILLITHID)  || \
@@ -947,6 +945,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
         IS_PUNDEAD(ch) || \
         IS_HARPY(ch) || \
 	 (GET_CLASS(ch, CLASS_ETHERMANCER)) || \
+	 (GET_CLASS(ch, CLASS_BLIGHTER)) || \
         USES_FOCUS(ch) || \
         IS_ANGEL(ch))
 

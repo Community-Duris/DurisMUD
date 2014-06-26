@@ -660,7 +660,7 @@ void bard_charm(int l, P_char ch, P_char victim, int song)
   /* re-enable charm */
   /* return; *//* charm shouldn't be working .. */
 
-  if(GET_MASTER(victim))
+  if( GET_MASTER(victim) || GET_MASTER(ch) )
     return;
 
 

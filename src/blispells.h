@@ -1,1 +1,13 @@
 void spell_thornskin(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_flame_sphere(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_desecrate_land(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_contagion(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_forbiddance(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_waves_fatigue(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_acid_rain(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_horrid_wilting(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_shambler(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_implosion(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_blight(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_sandstorm(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_firelance(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);

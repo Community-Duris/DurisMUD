@@ -1077,6 +1077,7 @@ const char *command[] = {
   "add",
   "deploy",
   "blood",
+  "deforest",
   "\n"                          /* MAX_CMD_LIST is now 1000 */
 };
 
@@ -2587,6 +2588,7 @@ void assign_command_pointers(void)
   CMD_Y(CMD_MEMORIZE, STAT_RESTING + POS_KNEELING, do_memorize, 0);
   CMD_Y(CMD_ASSIMILATE, STAT_RESTING + POS_KNEELING, do_assimilate, 0);
   CMD_Y(CMD_COMMUNE, STAT_RESTING + POS_KNEELING, do_assimilate, 0);
+  CMD_Y(CMD_DEFOREST, STAT_RESTING + POS_KNEELING, do_assimilate, 0);
   CMD_Y(CMD_PROJECT, STAT_RESTING + POS_PRONE, do_project, 0);
   CMD_Y(CMD_MURDER, STAT_NORMAL + POS_STANDING, do_murder, 0);
   CMD_Y(CMD_NECKBITE, STAT_NORMAL + POS_STANDING, do_gith_neckbite, 0);

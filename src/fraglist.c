@@ -282,6 +282,10 @@ void displayFragList(P_char ch, char *arg, int cmd)
     {
       sprintf(filename, "Fraglists/fraglist.troll");
     }
+    else if (strstr("drider", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.drider");
+    }
     else if (strstr("half elf", arg))
     {
       sprintf(filename, "Fraglists/fraglist.half-elf");

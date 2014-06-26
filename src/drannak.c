@@ -1472,7 +1472,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
 
     //set up stats
     int chance = number(1, GET_C_CHA(ch));
-    debug("chance %d", chance);
+//    debug("Conjure chance %d", chance);
 
     if(chance > 70)
     {    

@@ -613,8 +613,8 @@
 #define SPELL_PEBBLE                564
 #define SPELL_BLOOD_SIROCCO         565
 #define SPELL_EXTRACT_WATER_ELEMENTAL 566
-#define SPELL_DEADFALL              567 
-#define SPELL_HORRID_WILTING        568
+#define SPELL_DEADFALL              567
+//#define SPELL_                    568 Unused.
 #define SPELL_EXPLOSIVE_CASCADE     569
 #define SPELL_CELESTIAL_AURA        570
 #define SPELL_SUMMON_GHASTS         571
@@ -673,7 +673,19 @@
 #define SPELL_CONTAIN_BEING		       624
 /* Blighter spells */
 #define SPELL_THORNSKIN              625
-#define LAST_SPELL  SPELL_THORNSKIN
+#define SPELL_FLAME_SPHERE           626
+#define SPELL_DESECRATE_LAND         627
+#define SPELL_CONTAGION              628
+#define SPELL_FORBIDDANCE            629
+#define SPELL_WAVES_FATIGUE          630
+#define SPELL_ACID_RAIN              631
+#define SPELL_HORRID_WILTING         632
+#define SPELL_SHAMBLER               633
+#define SPELL_IMPLOSION              634
+#define SPELL_BLIGHT                 635
+#define SPELL_SANDSTORM              636
+#define SPELL_FIRELANCE              637
+#define LAST_SPELL  SPELL_FIRELANCE
 
 #define FIRST_SKILL                  1000  /* should be a decent split point */
 #define SKILL_SNEAK                  1000

@@ -2732,7 +2732,8 @@ void do_eat(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if(temp->value[1] < 0 || (temp->timer[0] && (time(NULL) - temp->timer[0] > 1 * 60 * 10)) )
+  if( (temp->value[1] < 0 || (temp->timer[0] && (time(NULL) - temp->timer[0] > 1 * 60 * 10)) )
+    && !IS_TRUSTED(ch) )
   {
     act("That stinks, find some fresh food instead.", FALSE, ch, 0, 0, TO_CHAR);
     return;

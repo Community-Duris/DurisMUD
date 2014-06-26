@@ -1093,6 +1093,17 @@ X 0 128 0 -1
 60 -7 -143 59d132+6549 3d8+20
 4.5.4.9 358425
 8 8 0
+#100
+shambling mound~
+&+yA s&+gh&+ya&+gm&+yb&+gl&+yi&+gn&+yg &+gm&+yo&+gu&+yn&+gd&n~
+&+yA s&+gh&+ya&+gm&+yb&+gl&+yi&+gn&+yg &+gm&+yo&+gu&+yn&+gd&+g stands here.&n
+~
+~
+67530760 0 0 0 35080 4098 0 4096 -1000 S
+VT 0 1 0 3
+25 -7 -143 25d10+100 3d8+10
+0.0.0.0 358425
+8 8 0
 #200
 dark shadow demon shape~
 &+La dark shadow&n~

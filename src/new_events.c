@@ -122,9 +122,7 @@ void disarm_obj_events(P_obj obj, event_func_type func) {
   }
 }
 
-void add_event(event_func func, int delay,
-               P_char ch, P_char victim, P_obj obj,
-               int flag, void *data, int data_size) 
+void add_event(event_func func, int delay, P_char ch, P_char victim, P_obj obj, int flag, void *data, int data_size)
 {
   P_nevent event = NULL;
   struct char_link_data *cld;

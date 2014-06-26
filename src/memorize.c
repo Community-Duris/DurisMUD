@@ -33,6 +33,7 @@ extern const struct stat_data stat_factor[];
 extern const struct racial_data_type racial_data[];
 extern int pulse;
 extern const float druid_memtime_terrain_mod[];
+extern const float blighter_memtime_terrain_mod[];
 extern Skill skills[];
 extern char *spells[];
 P_nevent  get_scheduled(P_char, event_func);
@@ -701,11 +702,11 @@ int get_circle_memtime(P_char ch, int circle, bool bStatOnly)
     // multiclass druids have longer forest modifiers, but smaller UD city modifiers
     if(IS_MULTICLASS_PC(ch))
     {
-      modifier = (modifier / get_property("memorize.factor.multi.commune", 2.0) ) + 0.75;
+      modifier = (modifier * get_property("memorize.factor.multi.commune", 2.0) );
     }
-    
+
     time = time * modifier;
-      
+
     // modify based on property tweak
     time = time * get_property("memorize.factor.commune", 1.0);
 
@@ -747,6 +748,33 @@ int get_circle_memtime(P_char ch, int circle, bool bStatOnly)
        time = time * 2.0;  // everyone else has time doubled
     }
     
+    // cant commune while in command lag, this makes sure they will
+    // not regain spells while spamming cast
+    if(!bStatOnly && (e = get_scheduled(ch, event_wait)))
+    {
+      time += ne_event_time(e);  // adding the time ensures that the event will not complete
+                                 // instantly after a fight or spell is cast
+    }
+  }
+  else if( ch->player.m_class && GET_PRIME_CLASS(ch, CLASS_BLIGHTER) )
+  {
+    // modify for terrain
+    float modifier = blighter_memtime_terrain_mod[world[ch->in_room].sector_type];
+
+    // multiclass druids have longer forest modifiers, but smaller UD city modifiers
+    if(IS_MULTICLASS_PC(ch))
+    {
+      modifier = (modifier * get_property("memorize.factor.multi.deforest", 2.0) );
+    }
+
+    time = time * modifier;
+
+    // randomly reduce the time by 1/3 based on level of caster
+    if(!bStatOnly && !GET_OPPONENT(ch) && GET_LEVEL(ch) > number(0, 65))
+    {
+      time = time / 1.5;
+    }
+
     // cant commune while in command lag, this makes sure they will
     // not regain spells while spamming cast
     if(!bStatOnly && (e = get_scheduled(ch, event_wait)))
@@ -844,6 +872,7 @@ void handle_undead_mem(P_char ch)
   if(!USES_COMMUNE(ch) &&
      !USES_FOCUS(ch) &&
      !GET_CLASS(ch, CLASS_WARLOCK) &&
+     !GET_CLASS(ch, CLASS_BLIGHTER) &&
      !((IS_UNDEADRACE(ch) ||
         is_wearing_necroplasm(ch) ||
         IS_PUNDEAD(ch) ||
@@ -899,6 +928,9 @@ void handle_undead_mem(P_char ch)
       sprintf(gbuf, "&+WYou feel illuminated with a %d%s circle spell.\n",
 	     i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     }
+    else if( GET_CLASS(ch, CLASS_BLIGHTER) )
+      sprintf(gbuf, "&+yYou draw a %d%s circle of energy from your surroundings.\n",
+              i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     else
       sprintf(gbuf, "&+GYou feel nature's energy flow into your %d%s "
               "circle of knowledge.\n",
@@ -925,7 +957,7 @@ void handle_undead_mem(P_char ch)
     time = get_circle_memtime(ch, highest_empty);
     add_event(event_memorize, time, ch, 0, 0, 0, &time, sizeof(time));
   }
-  else if (!(USES_COMMUNE(ch) || USES_FOCUS(ch)))
+  else if (!(USES_COMMUNE(ch) || USES_FOCUS(ch) || GET_CLASS(ch, CLASS_BLIGHTER)))
   {
     send_to_char("&+rYou feel fully infused...\n", ch);
 
@@ -960,6 +992,10 @@ void handle_undead_mem(P_char ch)
     send_to_char("&+mThe energies in your mind converge into full cohesion...\n", ch);
   }
   */
+  else if( GET_CLASS(ch, CLASS_BLIGHTER) )
+  {
+    send_to_char( "&+yYour consumption of nature's energy is complete.&n\n", ch);
+  }
   else
     send_to_char("&+GYour communion with nature is now complete...\n", ch);
 }
@@ -1098,6 +1134,7 @@ void event_memorize(P_char ch, P_char victim, P_obj obj, void *data)
   if(GET_CLASS(ch, CLASS_WARLOCK) ||
      IS_PUNDEAD(ch) ||
      USES_COMMUNE(ch) ||
+     GET_CLASS(ch, CLASS_BLIGHTER) ||
      IS_HARPY(ch) ||
      GET_CLASS(ch, CLASS_ETHERMANCER) ||
      IS_UNDEADRACE(ch) ||
@@ -1133,6 +1170,11 @@ void do_assimilate(P_char ch, char *argument, int cmd)
     send_to_char("&+GThe forces of nature ignore you...\n", ch);
     return;
   }
+  else if (cmd == CMD_DEFOREST && !GET_CLASS(ch, CLASS_BLIGHTER))
+  {
+    send_to_char("&+yYou wave your hands trying to absorb the forces of nature.\n", ch);
+    return;
+  }
   else if (cmd == CMD_TUPOR && !IS_HARPY(ch) && !GET_CLASS(ch, CLASS_ETHERMANCER))
   {
     send_to_char("You have no idea how to even begin.\n", ch);
@@ -1163,11 +1205,10 @@ void do_assimilate(P_char ch, char *argument, int cmd)
   }
   send_to_char(Gbuf1, ch);
 
-  if ((USES_COMMUNE(ch) || USES_FOCUS(ch)) && need_mem && !get_scheduled(ch, event_memorize))
-    add_event(event_memorize, get_circle_memtime(ch, need_mem), ch, 0, 0, 0,
-              0, 0);
+  if ((USES_COMMUNE(ch) || USES_FOCUS(ch) || GET_CLASS(ch, CLASS_BLIGHTER)) && need_mem && !get_scheduled(ch, event_memorize))
+    add_event(event_memorize, get_circle_memtime(ch, need_mem), ch, 0, 0, 0, 0, 0);
 
-  if (!need_mem || USES_COMMUNE(ch) || USES_FOCUS(ch))
+  if (!need_mem || USES_COMMUNE(ch) || USES_FOCUS(ch) || GET_CLASS(ch, CLASS_BLIGHTER))
     return;
 
   if (cmd == CMD_TUPOR)
@@ -1255,7 +1296,8 @@ void do_memorize(P_char ch, char *argument, int cmd)
   P_obj    sbook = NULL;
   P_nevent  e1;
 
-  if (cmd == CMD_ASSIMILATE || cmd == CMD_COMMUNE || cmd == CMD_TUPOR || cmd == CMD_FOCUS)
+  if (cmd == CMD_ASSIMILATE || cmd == CMD_COMMUNE || cmd == CMD_TUPOR
+    || cmd == CMD_FOCUS || cmd == CMD_DEFOREST)
   {
     do_assimilate(ch, argument, cmd);
     return;

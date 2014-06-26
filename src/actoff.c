@@ -4491,12 +4491,12 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
-    if(has_innate(victim, INNATE_DRAGONMIND)&& !number(0,1))
-     {
-       send_to_char("Your victim notice your attempt and rolls out of the way!\n", ch);
-       send_to_char("You sidestep $N's attack.\n", victim);
-       return;
-     }
+  if(has_innate(victim, INNATE_DRAGONMIND)&& !number(0,1))
+  {
+    send_to_char("Your victim notice your attempt and rolls out of the way!\n", ch);
+    send_to_char("You sidestep $N's attack.\n", victim);
+    return;
+  }
   if(!can_hit_target(ch, victim))
   {
     send_to_char("Seems that it's too crowded!\n", ch);
@@ -4530,161 +4530,140 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
 
 	//dambonus for thiefs - roughly 10-15 damage more at 12
 	if(GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF)) //proc skill for thief - possibility to blind on sneaky strike
-    	{
-  	  dam /= 12;
-	}
+  {
+    dam /= 12;
+  }
 	else
 	{
 	  dam /= 16;
 	}
-  
+
   melee_damage(ch, victim, dam, PHSDAM_NOREDUCE | PHSDAM_NOPOSITION,
                &messages);
   if(GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF)  || (GET_CLASS(ch, CLASS_BARD))) //proc skill for thief - possibility to blind on sneaky strike
+  {
+    skl_lvl = (int) (GET_CHAR_SKILL(ch, SKILL_SNEAKY_STRIKE));
+    i = skl_lvl - (GET_C_AGI(victim) / 6);
+    if (number(1, 100) < i)
     {
-	skl_lvl = (int) (GET_CHAR_SKILL(ch, SKILL_SNEAKY_STRIKE));
-	i = skl_lvl - (GET_C_AGI(victim) / 6);
-	if (number(1, 100) < i)
-	 {
-	  if(IS_NPC(victim)  && (GET_CLASS(ch, CLASS_ROGUE)))
-	    {
-	      act
-    	      ("&+LYou quickly step into the sh&+wad&+Wows&+L, and suddenly appear behind $N &+Lstriking violently...",
-     	      FALSE, ch, 0, victim, TO_CHAR);
-	      act
-    	  	("$n &+Lquickly steps into the sh&+wad&+Wows&+L, and suddenly appears behind $N &+Lstriking violently...",
+      if(IS_NPC(victim)  && (GET_CLASS(ch, CLASS_ROGUE)))
+      {
+        act("&+LYou quickly step into the sh&+wad&+Wows&+L, and suddenly appear behind $N &+Lstriking violently...",
+     	    FALSE, ch, 0, victim, TO_CHAR);
+	      act("$n &+Lquickly steps into the sh&+wad&+Wows&+L, and suddenly appears behind $N &+Lstriking violently...",
      	  	TRUE, ch, 0, victim, TO_NOTVICT);
-		single_stab(ch, victim, weapon);
-		act
-    	      ("&+L...you then meld into your victim's sh&+wad&+Wow&+L, only to attack again!",
+    		single_stab(ch, victim, weapon);
+		    act("&+L...you then meld into your victim's sh&+wad&+Wow&+L, only to attack again!",
      	      FALSE, ch, 0, victim, TO_CHAR);
-		act
-	       ("&+L...$n &+Lthen quickly fades into the sh&+wad&+Wow&+L, re-appearing only to attack again!",
+		    act("&+L...$n &+Lthen quickly fades into the sh&+wad&+Wow&+L, re-appearing only to attack again!",
      	  	TRUE, ch, 0, victim, TO_NOTVICT);
-		single_stab(ch, victim, weapon);
+		    single_stab(ch, victim, weapon);
 	    }
-	  else if(GET_CLASS(ch, CLASS_BARD))
+	    else if(GET_CLASS(ch, CLASS_BARD))
 	    {
-    	      ("&+LYou quickly step into the sh&+wad&+Wows&+L, and suddenly appear behind $N &+Lstriking violently...",
-     	      FALSE, ch, 0, victim, TO_CHAR);
-	      act
-    	  	("$n &+Lquickly steps into the sh&+wad&+Wows&+L, and suddenly appears behind $N &+Lstriking violently...",
-     	  	TRUE, ch, 0, victim, TO_NOTVICT);
-		single_stab(ch, victim, weapon);
+        act("&+LYou quickly step into the sh&+wad&+Wows&+L, and suddenly appear behind $N &+Lstriking violently...",
+          FALSE, ch, 0, victim, TO_CHAR);
+	      act("$n &+Lquickly steps into the sh&+wad&+Wows&+L, and suddenly appears behind $N &+Lstriking violently...",
+     	    TRUE, ch, 0, victim, TO_NOTVICT);
+        single_stab(ch, victim, weapon);
 	    }
-	  else if(!IS_AFFECTED(victim, AFF_BLIND))
-	    {
-	      act
-    	  	("&+LYou lash out from the sh&+wad&+Wows&+L, hitting $N right in the &+Wface&+L, causing them to temporarily black out.",
+      else if(!IS_AFFECTED(victim, AFF_BLIND))
+      {
+	      act("&+LYou lash out from the sh&+wad&+Wows&+L, hitting $N right in the &+Wface&+L, causing them to temporarily black out.",
      	  	FALSE, ch, 0, victim, TO_CHAR);
-	  	act
-    	  	("$n &+Lsteps quickly into the sh&+wad&+Wows&+L and darts quickly at your &+Wface&+L, causing you to temporarily black out.",
-     	  	TRUE, ch, 0, victim, TO_VICT);
-	  	act
-    	  	("$n &+Lfades into the sh&+wad&+Wows&+L and quickly strikes at $N's &+Wface&+L, causing them to see stars.",
+        act("$n &+Lsteps quickly into the sh&+wad&+Wows&+L and darts quickly at your &+Wface&+L, causing you to temporarily black out.",
+          TRUE, ch, 0, victim, TO_VICT);
+	  	  act("$n &+Lfades into the sh&+wad&+Wows&+L and quickly strikes at $N's &+Wface&+L, causing them to see stars.",
      	  	TRUE, ch, 0, victim, TO_NOTVICT);
-	   	blind(ch, victim, 1 * PULSE_VIOLENCE);
-          }
-	 }
-    
-    } //endthiefspeccheck
+     	  blind(ch, victim, 1 * PULSE_VIOLENCE);
+      }
+    }
+  } //end thief|bard spec check
 
   if(GET_SPEC(ch, CLASS_ROGUE, SPEC_ASSASSIN)) //proc skill for assassin and bard
+  {
+    skl_lvl = (int) (GET_CHAR_SKILL(ch, SKILL_SNEAKY_STRIKE));
+    i = skl_lvl - (GET_C_AGI(victim) / 6);
+    if (number(1, 100) < i)
     {
-	skl_lvl = (int) (GET_CHAR_SKILL(ch, SKILL_SNEAKY_STRIKE));
-	i = skl_lvl - (GET_C_AGI(victim) / 6);
-	if (number(1, 100) < i)
-	 {
-	  if(IS_NPC(victim))
+	    if(IS_NPC(victim))
 	    {
-			int      numb;
-			numb = number(4, 7);
-			act("&+rYou sneak up on $N &+rand drive your &+Lweapon &+rdeep into a vital organ!&N", TRUE,
-				ch, obj, victim, TO_CHAR);
-			act("&+L$n &+rsneaks up on $N&+r driving their &+Lweapon &+rdeep into a vital organ!&N", TRUE,
-				ch, obj, victim, TO_NOTVICT);
-			act("&+L$n&+r appears behind you and drives their &+Lweapon &+rdeep into one of your vital organs!&N", TRUE, ch,
-				obj, victim, TO_VICT);
-			numb = number(4, 7);
-			add_event(event_bleedproc, PULSE_VIOLENCE, victim, 0, 0, 0, &numb, sizeof(numb));
-		act
-	       ("&+L...$n &+Lthen quickly fades into the sh&+wad&+Wow&+L, re-appearing only to attack again!",
-     	  	TRUE, ch, 0, victim, TO_NOTVICT);
-		single_stab(ch, victim, weapon);
-	   }
+        int numb = number(4, 7);
+        act("&+rYou sneak up on $N &+rand drive your &+Lweapon &+rdeep into a vital organ!&N", TRUE,
+          ch, obj, victim, TO_CHAR);
+        act("&+L$n &+rsneaks up on $N&+r driving their &+Lweapon &+rdeep into a vital organ!&N", TRUE,
+          ch, obj, victim, TO_NOTVICT);
+        act("&+L$n&+r appears behind you and drives their &+Lweapon &+rdeep into one of your vital organs!&N", TRUE, ch,
+          obj, victim, TO_VICT);
+			  add_event(event_bleedproc, PULSE_VIOLENCE, victim, 0, 0, 0, &numb, sizeof(numb));
+        act("&+L...$n &+Lthen quickly fades into the sh&+wad&+Wow&+L, re-appearing only to attack again!",
+          TRUE, ch, 0, victim, TO_NOTVICT);
+        single_stab(ch, victim, weapon);
+      }
+      else
+      {
+        int numb = number(4, 7);
+        act("&+rYou sneak up on $N &+rand drive your &+Lweapon &+rdeep into a vital organ!&N", TRUE,
+          ch, obj, victim, TO_CHAR);
+        act("&+L$n &+rsneaks up on $N&+r driving their &+Lweapon &+rdeep into a vital organ!&N", TRUE,
+          ch, obj, victim, TO_NOTVICT);
+        act("&+L&n&+r appears behind you and drives their &+Lweapon &+rdeep into one of your vital organs!&N", TRUE, ch,
+          obj, victim, TO_VICT);
+        add_event(event_bleedproc, PULSE_VIOLENCE, victim, 0, 0, 0, &numb, sizeof(numb));
+        act("&+L...$n &+Lthen quickly fades into the sh&+wad&+Wow&+L, re-appearing only to attack again!",
+        TRUE, ch, 0, victim, TO_NOTVICT);
+        single_stab(ch, victim, weapon);
+      }
+    }
+  } //endassassinspeccheck
 
-	  else
-	    {
-	      int      numb;
-			numb = number(4, 7);
-			act("&+rYou sneak up on $N &+rand drive your &+Lweapon &+rdeep into a vital organ!&N", TRUE,
-				ch, obj, victim, TO_CHAR);
-			act("&+L$n &+rsneaks up on $N&+r driving their &+Lweapon &+rdeep into a vital organ!&N", TRUE,
-				ch, obj, victim, TO_NOTVICT);
-			act("&+L&n&+r appears behind you and drives their &+Lweapon &+rdeep into one of your vital organs!&N", TRUE, ch,
-				obj, victim, TO_VICT);
-			numb = number(4, 7);
-			add_event(event_bleedproc, PULSE_VIOLENCE, victim, 0, 0, 0, &numb, sizeof(numb));
-		act
-	       ("&+L...$n &+Lthen quickly fades into the sh&+wad&+Wow&+L, re-appearing only to attack again!",
-     	  	TRUE, ch, 0, victim, TO_NOTVICT);
-		single_stab(ch, victim, weapon);
-
-          }
-	 }
-    
-    } //endassassinspeccheck
-
-  	
-if(GET_CLASS(ch, CLASS_MERCENARY)) //proc skill for mercenary - sucks moves
+  if(GET_CLASS(ch, CLASS_MERCENARY)) //proc skill for mercenary - sucks moves
+  {
+    skl_lvl = (int) (GET_CHAR_SKILL(ch, SKILL_SNEAKY_STRIKE));
+    i = skl_lvl - (GET_C_AGI(victim) / 6);
+    if (number(1, 100) < i)
     {
-	skl_lvl = (int) (GET_CHAR_SKILL(ch, SKILL_SNEAKY_STRIKE));
-	i = skl_lvl - (GET_C_AGI(victim) / 6);
-	if (number(1, 100) < i)
-	 {
-	   if(IS_NPC(victim) && !IS_STUNNED(victim))
-	    {
-	      act
-    	      ("&+yYou fill with the &+RRAGE &+yof your &+Yancestors&+y, striking $N &+ywith all of your &+Bmight&+y!",
-     	      FALSE, ch, 0, victim, TO_CHAR);
-	      act
-    	  	("$n &+yseems to fill with unearthly &+RRAGE&+y, and strikes $N &+ywith all of their &+Bmight&+y!",
-     	  	TRUE, ch, 0, victim, TO_NOTVICT);
-		Stun(victim, victim, PULSE_VIOLENCE, FALSE);;
-	    }  
-	else
-	  {
-	act
-    	  ("&+yYou tighten up and skillfully hit $N right in the &+Ystomach&+y! $N appears a bit less energetic after that hit.",
-     	  FALSE, ch, 0, victim, TO_CHAR);
-	  act
-    	  ("$n &+yseems to tense up before unleasing a &+Ypowerful &+ystrike to your abdomen! You feel the a lot less &+Yenergetic&+y.",
-     	  TRUE, ch, 0, victim, TO_VICT);
-	  act
-    	  ("$n &+yseems to tense up before unleasing a &+Ypowerful &+ystrike to $N's &+yabdomen&+y, knocking the &+Cwind &+yout of them!",
-     	  TRUE, ch, 0, victim, TO_NOTVICT);
-	  i = number(20, 45);
-    	  if ((GET_VITALITY(victim) - i) < 20)
-      	  i = GET_VITALITY(victim) - 20;
-
-    	  GET_VITALITY(victim) -= i;
-
+      if(IS_NPC(victim) && !IS_STUNNED(victim))
+      {
+        act("&+yYou fill with the &+RRAGE &+yof your &+Yancestors&+y, striking $N &+ywith all of your &+Bmight&+y!",
+          FALSE, ch, 0, victim, TO_CHAR);
+	      act("$n &+yseems to fill with unearthly &+RRAGE&+y, and strikes $N &+ywith all of their &+Bmight&+y!",
+          TRUE, ch, 0, victim, TO_NOTVICT);
+        Stun(victim, victim, PULSE_VIOLENCE, FALSE);;
+      }
+      else
+      {
+        act("&+yYou tighten up and skillfully hit $N right in the &+Ystomach&+y! $N appears a bit less energetic after that hit.",
+          FALSE, ch, 0, victim, TO_CHAR);
+        act("$n &+yseems to tense up before unleasing a &+Ypowerful &+ystrike to your abdomen! You feel the a lot less &+Yenergetic&+y.",
+          TRUE, ch, 0, victim, TO_VICT);
+        act("$n &+yseems to tense up before unleasing a &+Ypowerful &+ystrike to $N's &+yabdomen&+y, knocking the &+Cwind &+yout of them!",
+          TRUE, ch, 0, victim, TO_NOTVICT);
+        i = number(20, 45);
+    	  if( (GET_VITALITY(victim) - i) < 20 )
+        {
+          GET_VITALITY(victim) = 0;
+        }
+        else
+        {
+          GET_VITALITY(victim) -= i;
+        }
     	  StartRegen(victim, EVENT_MOVE_REGEN);
 
-    	if (!affected_by_spell(victim, SKILL_AWARENESS))
-    	 {
+        if (!affected_by_spell(victim, SKILL_AWARENESS))
+        {
       	  bzero(&afs, sizeof(afs));
       	  afs.type = SKILL_AWARENESS;
       	  afs.duration = 5;
       	  afs.bitvector = AFF_AWARE;
       	  affect_to_char(victim, &afs);
-    	 }
-	}
+        }
       }
-    } //endmercclasscheck
+    }
+  } //endmercclasscheck
 
 
-  CharWait(ch, PULSE_VIOLENCE * number(1, 2));
+  CharWait( ch, PULSE_VIOLENCE );
 } //drantemp
 
 bool is_preparing_for_sneaky_strike(P_char ch)
@@ -4702,15 +4681,15 @@ void sneaky_strike(P_char ch, P_char victim)
   struct affected_type af;
   P_obj weapon = ch->equipment[WIELD];
   if(!weapon)
-        {
-          send_to_char("You must be wielding a weapon.\r\n", ch);
-          return;
-        }
+  {
+    send_to_char("You must be wielding a weapon.\r\n", ch);
+    return;
+  }
 
   int is_weapon = (GET_ITEM_TYPE(weapon) == ITEM_WEAPON);
 
 
-    if(!is_weapon)/*
+  if(!is_weapon)/*
     if(!weapon && !(weapon = ch->equipment[WIELD2]))
       if(!weapon && !(weapon = ch->equipment[WIELD3]))
         if(!weapon && !(weapon = ch->equipment[WIELD4]))*/
@@ -4718,8 +4697,8 @@ void sneaky_strike(P_char ch, P_char victim)
           send_to_char("You must be wielding a weapon.\r\n", ch);
           return;
         }
-  send_to_char
-    ("You think you noticed an opening in your victim defenses...\n", ch);
+
+  send_to_char("You think you noticed an opening in your victim defenses...\n", ch);
 
   memset(&af, 0, sizeof(af));
   af.type = SKILL_SNEAKY_STRIKE;
@@ -4802,7 +4781,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
 
   dam += (number (10, GET_C_LUK(ch)) / 10);
 
-  dam =  (int)((float)dam * ((float)skill / (float)100)); //(goes to 0)
+  dam =  (int)((float)dam * ((float)skill / (float)100));
 
   dice_mult = (int) (weapon->value[1] + (weapon->value[2] / 2)) / 2;
   dice_mult += weapon->value[1] + (weapon->value[1] / 2);
@@ -4832,7 +4811,8 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
   critical_stab = get_property("backstab.CriticalStab", 0.200);
   critical_stab_mult = get_property("backstab.CriticalStab.Multiplier", 1.000);
 
-  if(GET_STAT(victim) <= STAT_INCAP || GET_STAT(victim) >= STAT_DYING)
+  // Yeah.. we want them really dead.
+  if( GET_STAT(victim) <= STAT_INCAP )
     dam = MAX(200, dam);
 
   if(affected_by_spell(victim, SPELL_STONE_SKIN))

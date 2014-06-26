@@ -2318,6 +2318,12 @@ void do_shapechange(P_char ch, char *arg, int cmd)
   if (!ch->desc)
     return;
 
+  if (!has_innate(ch, INNATE_SHAPECHANGE) && !IS_TRUSTED(ch) && !IS_MORPH(ch))
+  {
+    send_to_char("You don't know how to change your form!\r\n", ch);
+    return;
+  }
+
   rest = one_argument(arg, mobname);
 
   if (!strcmp(mobname, "learn")) {
@@ -2397,27 +2403,38 @@ if (IS_DISGUISE(ch))
   IS_DISGUISE_NPC(ch) = TRUE;
   IS_DISGUISE_ILLUSION(ch) = FALSE;
   IS_DISGUISE_SHAPE(ch) = TRUE;
-  ch->disguise.title = str_dup(GET_NAME(mob));
-  ch->disguise.name = str_dup(mob->player.short_descr);
-  ch->disguise.longname = str_dup(mob->player.long_descr);
+  if( GET_CLASS( ch, CLASS_BLIGHTER ) )
+  {
+    sprintf( mobname, "skeleton %s", GET_NAME(mob) );
+    ch->disguise.title = str_dup(mobname);
+    sprintf( mobname, "a skeleton of %s&n", mob->player.short_descr );
+    ch->disguise.name = str_dup(mobname);
+    sprintf( mobname, "A skeleton of %s&n stands here.", mob->player.short_descr );
+    ch->disguise.longname = str_dup(mobname);
+    ch->disguise.race = RACE_SKELETON;
+  }
+  else
+  {
+    ch->disguise.title = str_dup(GET_NAME(mob));
+    ch->disguise.name = str_dup(mob->player.short_descr);
+    ch->disguise.longname = str_dup(mob->player.long_descr);
+    ch->disguise.race = GET_RACE(mob);
+  }
   ch->disguise.m_class = mob->player.m_class;
   ch->disguise.racewar = GET_RACEWAR(mob);
-  ch->disguise.race = GET_RACE(mob);
   ch->disguise.hit = GET_LEVEL(ch) * 2;
-  sprintf(mobname, "&+WYou shift into the form of %s!\r\n",
-      mob->player.short_descr);
-send_to_char(mobname, ch);
-sprintf(mobname,
-    " &+WThe image of %s &Nshifts&+W into the form of %s!\r\n",
-    GET_NAME(ch), mob->player.short_descr);
-act(mobname, FALSE, ch, 0, NULL, TO_ROOM);
-SET_BIT(ch->specials.act, PLR_NOWHO);
-justice_witness(ch, NULL, CRIME_DISGUISE);
+  sprintf(mobname, "&+WYou shift into the form of %s!\r\n", ch->disguise.name );
+  send_to_char(mobname, ch);
+  sprintf(mobname, "&+WThe image of %s &Nshifts&+W into the form of %s!\r\n",
+    GET_NAME(ch), ch->disguise.name );
+  act(mobname, FALSE, ch, 0, NULL, TO_ROOM);
+  SET_BIT(ch->specials.act, PLR_NOWHO);
+  justice_witness(ch, NULL, CRIME_DISGUISE);
 
-balance_affects(ch);
+  balance_affects(ch);
 
 cleanup:
-extract_char(mob);
+  extract_char(mob);
 
 }
 

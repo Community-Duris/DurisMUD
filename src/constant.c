@@ -426,7 +426,6 @@ const int shot_damage[] = {
 };
 
 /* multiplier, memtime will be multiplied by appropriate constant */
-
 extern const float druid_memtime_terrain_mod[NUM_SECT_TYPES];
 const float druid_memtime_terrain_mod[NUM_SECT_TYPES] = {
   1.5,                          /* inside */
@@ -461,6 +460,49 @@ const float druid_memtime_terrain_mod[NUM_SECT_TYPES] = {
   1.5,                          /* ud low ceiling */
   2.0,                          /* ud liqmith */
   1.4,                          /* ud mushroom */
+  1.5,                          /* castle wall */
+  1.5,                          /* castle gate */
+  1.5,                          /* castle */
+  1.8,                          /* neg plane */
+  1.2,                          /* plane of avernus */
+  1.5,                          /* sect_road */
+  1.1,                          /* snowy forest */
+};
+
+extern const float blighter_memtime_terrain_mod[NUM_SECT_TYPES];
+const float blighter_memtime_terrain_mod[NUM_SECT_TYPES] = {
+  1.5,                          /* inside */
+  1.5,                          /* city */
+  1.2,                          /* field */
+  1.0,                          /* forest */
+  1.25,                         /* hills */
+  1.4,                          /* mountain */
+  1.25,                         /* water swin */
+  1.2,                          /* water noswim */
+  1.5,                          /* noground */
+  1.25,                         /* underwater */
+  1.25,                         /* underwater */
+  1.4,                          /* fire plane */
+  1.25,                         /* ocean */
+  1.1,                          /* ud wild */
+  1.3,                          /* ud city */
+  1.5,                          /* ud inside */
+  1.3,                          /* ud water */
+  1.3,                          /* ud noswin */
+  1.5,                          /* ud no ground */
+  1.4,                          /* air plane */
+  1.25,                         /* water plane */
+  1.4,                          /* earth plane */
+  1.6,                          /* ethereal */
+  1.6,                          /* astral */
+  1.6,                          /* desert */
+  1.4,                          /* arctic */
+  1.1,                          /* swamp */
+  1.6,                          /* ud mountain */
+  1.3,                          /* ud slime */
+  1.5,                          /* ud low ceiling */
+  2.0,                          /* ud liqmith */
+  1.25,                         /* ud mushroom */
   1.5,                          /* castle wall */
   1.5,                          /* castle gate */
   1.5,                          /* castle */

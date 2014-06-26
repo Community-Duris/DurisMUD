@@ -8632,6 +8632,11 @@ void charm_generic(int level, P_char ch, P_char victim)
     }
   }
 
+  if( IS_TRUSTED(ch) )
+  {
+      failed = FALSE;
+  }
+
   if(failed)
   {
     send_to_char
@@ -8659,6 +8664,12 @@ void charm_generic(int level, P_char ch, P_char victim)
   if(victim->following && (victim->following != ch))
     stop_follower(victim);
 
+  // Uncharm victim's pets.
+  while( victim->followers )
+  {
+    clear_links(victim->followers->follower, LNK_PET);
+  }
+
   if(!victim->following)
     add_follower(victim, ch);
 
@@ -8667,6 +8678,9 @@ void charm_generic(int level, P_char ch, P_char victim)
     num = MIN((GET_LEVEL(ch) / 10 * 24) + 1, 200 / STAT_INDEX(GET_C_INT(victim)));
   else
     num = 4;
+
+  if( IS_TRUSTED(ch) )
+    num = (num > 40) ? num : 40;
 
   setup_pet(victim, ch, num, 0);
 
@@ -13430,7 +13444,7 @@ void spell_acid_blast(int level, P_char ch, char *arg, int type,
      ch->in_room != victim->in_room)
         return;
 
-  int dam = dice(MIN(level, 21), 10);
+  int dam = dice(MIN(level, 21), 10) + level/2;
 
   if(!NewSaves(victim, SAVING_SPELL, 0))
     dam = (int) (dam * 1.25);
@@ -17597,6 +17611,12 @@ void spell_cure_disease(int level, P_char ch, char *arg, int type,
   if(affected_by_spell(victim, SPELL_DISEASE))
   {
     affect_from_char(victim, SPELL_DISEASE);
+    send_to_char("You suddenly feel much much better.\n", victim);
+    act("$n looks markedly better.", FALSE, victim, 0, 0, TO_ROOM);
+  }
+  else if(affected_by_spell(victim, SPELL_CONTAGION))
+  {
+    affect_from_char(victim, SPELL_CONTAGION);
     send_to_char("You suddenly feel much much better.\n", victim);
     act("$n looks markedly better.", FALSE, victim, 0, 0, TO_ROOM);
   }

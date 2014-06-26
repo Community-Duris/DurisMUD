@@ -41,7 +41,7 @@ const char *specdata[][MAX_SPEC] = {
   {"&+rMa&+RUle&+rR", "&+RRa&+rGe&+Rlo&+rRd", "", ""},  //Berserker
   {"&+CI&+Wc&+Ce &+LR&+Le&+wa&+wv&+Le&+Lr", "&+rF&+Rl&+Ya&+Rm&+re &+LR&+Le&+wa&+wv&+Le&+Lr", "&+bSh&+Bo&+Wck &+LR&+Le&+wa&+wv&+Le&+Lr", "&+LEa&+yrt&+Lh R&+yea&+Lve&+yr"},      //Reaver
   {"&+BM&+Yag&+Bic&+Yia&+Bn&n", "&+LDark &+mDreamer&n", "", ""},         // Illusionist
-  {"Spec1", "Spec2", "Spec3", ""},  /* Blighter */
+  {"&+YSt&+yor&+Ym &+LBringer&n", "&+GSc&+gou&+Yrg&+Ge&n", "&+LRu&+win&+Ler&n", ""},  /* Blighter */
   {"&+LDeath&+rlord", "&+LShadow&+rlord", "", ""},      // Dreadlord
   {"&+cWindtalker", "&+WFro&+cst &+CMagus", "&+WCo&+Ysm&+Wom&+Yanc&+Wer", ""},     // Ethermancer
   {"&+YLight&+Wbringer", "&+WInq&+wuisi&+Wtor", "", ""},       //Avenger

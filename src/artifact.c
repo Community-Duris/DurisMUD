@@ -1580,6 +1580,7 @@ void event_check_arti_poof( P_char ch, P_char vict, P_obj obj, void * arg )
   int            t_id, t_tu;
   long unsigned  t_last_time, t_blood;
   P_char         owner;
+  P_obj          item;
 
   // Open the arti directory!
   dir = opendir(ARTIFACT_DIR);
@@ -1658,14 +1659,32 @@ void event_check_arti_poof( P_char ch, P_char vict, P_obj obj, void * arg )
       {
         statuslog( 56, "Arti %d is not on %s's pfile.", vnum, name );
         wizlog( 56, "Arti %d is not on %s's pfile.", vnum, name );
+        sprintf(name, ARTIFACT_DIR "%d", vnum);
+        unlink(name);
+        // Remove eq from char and extract.
+        for( int i = 0; i < MAX_WEAR; i++ )
+        {
+          if (ch->equipment[i])
+          {
+            item = unequip_char(ch, i);
+            extract_obj( item, TRUE );
+          }
+        }
+        while( ch->carrying )
+        {
+          item = ch->carrying;
+          obj_from_char( item, TRUE );
+          extract_obj( item, TRUE );
+        }
+        extract_char( owner );
       }
       else
       {
         event_artifact_poof(NULL, NULL, obj, NULL);
         writeCharacter( owner, RENT_POOFARTI, owner->in_room );
+        // Free memory
+        extract_char( owner );
       }
-      // Free memory
-      extract_char( owner );
     }
   }
 
