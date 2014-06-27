@@ -2017,7 +2017,7 @@ void mount_summoning_thing(P_char ch, P_char victim, P_obj obj, void *data)
   {
     mount = read_mobile(GET_SPEC(ch, CLASS_PALADIN, SPEC_CAVALIER) ? 1235 : 1232, VIRTUAL);
   }
-  else if(GET_RACE(ch) == RACE_GOBLIN)
+  else if(GET_RACE(ch) == RACE_GOBLIN || GET_RACE(ch) == RACE_ORC)
   {
     mount = read_mobile( 39 , VIRTUAL);
   }
