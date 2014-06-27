@@ -14826,8 +14826,7 @@ void spell_dispel_magic(int level, P_char ch, char *arg, int type,
       return;
     }
 
-    if(is_linked_to(ch, victim, LNK_CONSENT) ||
-       IS_TRUSTED(ch))
+    if( ch == victim || is_linked_to(ch, victim, LNK_CONSENT) || IS_TRUSTED(ch) )
     {
       nosave = 1;
     }
@@ -14841,18 +14840,23 @@ void spell_dispel_magic(int level, P_char ch, char *arg, int type,
     for (af = victim->affected; af; af = next_af_dude)
     {
       next_af_dude = af->next;
+
+      // Skip over the multiple affect spells.
+      while( next_af_dude && next_af_dude->type == af->type )
+      {
+        next_af_dude = next_af_dude->next;
+      }
+
       if((af->type != SKILL_CAMP) &&
           (af->type != SKILL_AWARENESS) &&
           (af->type != SPELL_WRAITHFORM) &&
           (af->type != SPELL_CHANNEL) &&
           !(af->flags & AFFTYPE_NODISPEL) && (af->type > 0))
       {
-        if(nosave ||
-           !NewSaves(victim, SAVING_SPELL, (IS_ELITE(ch) ? mod + 5 : mod)))
+        if(nosave || !NewSaves(victim, SAVING_SPELL, (IS_ELITE(ch) ? mod + 5 : mod)))
         {
-          if(!nosave &&
-             resists_spell(ch, victim))
-                return;
+          if(!nosave && resists_spell(ch, victim))
+            return;
 
           success = 1;
           wear_off_message(victim, af);
