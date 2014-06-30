@@ -4815,7 +4815,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
   if( GET_STAT(victim) <= STAT_INCAP )
     dam = MAX(200, dam);
 
-  if(affected_by_spell(victim, SPELL_STONE_SKIN))
+  if(affected_by_spell(victim, SPELL_STONE_SKIN) && dam > 1)
   {
     affect_from_char(victim, SPELL_STONE_SKIN);
     dam = 1;
@@ -4827,7 +4827,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
       FALSE, ch, 0, victim, TO_NOTVICTROOM);
   }
 
-  if(affected_by_spell(victim, SPELL_SHADOW_SHIELD))
+  if(affected_by_spell(victim, SPELL_SHADOW_SHIELD) && dam > 1)
   {
     affect_from_char(victim, SPELL_SHADOW_SHIELD);
     dam = 1;
@@ -4840,7 +4840,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
   }
 
 
-  if(affected_by_spell(victim, SPELL_BIOFEEDBACK))
+  if(affected_by_spell(victim, SPELL_BIOFEEDBACK) && dam > 1)
   {
     affect_from_char(victim, SPELL_BIOFEEDBACK);
     dam = 1;
@@ -4852,7 +4852,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
       FALSE, ch, 0, victim, TO_NOTVICTROOM);
   }
 
-  if(affected_by_spell(victim, SPELL_VINES))
+  if(affected_by_spell(victim, SPELL_VINES) && dam > 1)
   {
     affect_from_char(victim, SPELL_VINES);
     dam = 1;
@@ -4864,7 +4864,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
       FALSE, ch, 0, victim, TO_NOTVICTROOM);
   }
 
-  if(affected_by_spell(victim, SPELL_IRONWOOD))
+  if(affected_by_spell(victim, SPELL_IRONWOOD) && dam > 1)
   {
     affect_from_char(victim, SPELL_IRONWOOD);
     dam = 1;
@@ -4876,6 +4876,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
       FALSE, ch, 0, victim, TO_NOTVICTROOM);
   }
 
+  debug("single_stab: (%s) stabbing (%s) dam (%d) weapon %dd%d.", GET_NAME(ch), GET_NAME(victim), dam, weapon->value[1], weapon->value[2] );
   if(GET_CHAR_SKILL(ch, SKILL_SPINAL_TAP)
     && (notch_skill(ch, SKILL_SPINAL_TAP, get_property("skill.notch.offensive", 15))
     || (spinal_tap * GET_CHAR_SKILL(ch, SKILL_SPINAL_TAP)) > number(1, 100)))
