@@ -34,6 +34,7 @@ using namespace std;
 #include "handler.h"
 #include "ctf.h"
 #include "blispells.h"
+#include "utility.h"
 
 /*
    external variables
@@ -14957,4 +14958,63 @@ int thanksgiving_wings(P_obj obj, P_char ch, int cmd, char *argument)
   }
   return FALSE;
 }
+int moonstone(P_obj obj, P_char ch, int cmd, char *argument)
+{
+  char *name;
+  struct obj_affect *aff;
+  P_nevent e;
 
+  if( !obj || obj_index[obj->R_num].virtual_number != 419 )
+  {
+    logit(LOG_DEBUG, "moonstone: obj proc called with no obj or non-moonstone obj.");
+  }
+
+  if (cmd == CMD_SET_PERIODIC)
+  {
+    return FALSE;
+  }
+
+  if( cmd == CMD_DECAY )
+  {
+    // Notify the caster then let it decay.
+    name = get_player_name_from_pid( obj->value[0] );
+    if( name )
+    {
+      ch = get_char_online( name );
+      if( ch )
+      {
+        send_to_char( "&+WYour moonstone fades to nothingness.&n\n", ch );
+        affect_from_char(ch, SPELL_MOONSTONE);
+      }
+    }
+    return FALSE;
+  }
+
+  // Upon dispel, make object decay soon and let it be dispelled.
+  if( cmd == CMD_DISPEL )
+  {
+    // Get obj affect.
+    aff = get_obj_affect( obj, TAG_OBJ_DECAY );
+    if( aff )
+    {
+      // Find decay event.
+      for (e = get_scheduled(obj, event_obj_affect); e; e = get_next_scheduled(e, event_obj_affect))
+      {
+        // If event found, set it's timer to 1 min.
+        if( *((struct obj_affect **)e->data) == aff )
+        {
+           e->timer = 1;
+        }
+      }
+    }
+    else
+    {
+      // Set timer to 1 min
+      logit(LOG_DEBUG, "moonstone: obj has no decay timer! (creating one)");
+      set_obj_affected( obj, 1, TAG_OBJ_DECAY, 0);
+    }
+    return FALSE;
+  }
+
+  return FALSE;
+}

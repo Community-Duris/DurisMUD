@@ -632,6 +632,7 @@ int neg_orb(P_obj, P_char, int, char *);
 int artifact_biofeedback(P_obj, P_char, int, char *);
 int artifact_stone(P_obj, P_char, int, char *);
 int thanksgiving_wings(P_obj, P_char, int, char *);
+int moonstone(P_obj, P_char, int, char *);
 int artifact_shadow_shield(P_obj, P_char, int, char *);
 int charon_ship(P_obj, P_char, int, char *);
 int living_necroplasm(P_obj, P_char, int, char *);
