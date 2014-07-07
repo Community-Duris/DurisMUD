@@ -446,10 +446,11 @@ void event_acid_rain(P_char ch, P_char victim, P_obj obj, void *data)
   }
 
 //  dam = 110 + GET_LEVEL(ch) * 3 + number(1, 10);
-  dam = 30 + GET_LEVEL(ch)/2 + number(0, 20);
+  dam = 60 + GET_LEVEL(ch) * 2 + number(0, 40);
+
   if( GET_SPEC(ch, CLASS_BLIGHTER, SPEC_STORMBRINGER) )
   {
-    dam += 10;
+    dam += 20;
   }
 
   if( world[room].people)
