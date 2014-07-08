@@ -5875,7 +5875,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
         send_to_char(buffer, tch);
     }//drannak
 
-    if (messages->type & DAMMSG_TERSE)
+    if( messages && messages->type & DAMMSG_TERSE )
       act_flag = ACT_NOTTERSE;
     else
       act_flag = 0;
@@ -5897,7 +5897,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
       }
     }
 
-    if (!messages)
+    if( !messages )
     {
       if (new_stat == STAT_DEAD)
         soul_trap(ch, victim);

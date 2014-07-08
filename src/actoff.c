@@ -4411,41 +4411,33 @@ void event_garroteproc(P_char ch, P_char victim, P_obj obj, void *data)
 
 void event_bleedproc(P_char ch, P_char victim, P_obj obj, void *data)
 {
-  int dam;
   int count = *((int*)data);
-  int rand1 = number(1, 100);
 
-  dam = dice(3, 6);
+  // Deliver damage with no reductions or messages.
+  if( raw_damage( ch, victim, dice(3, 6), PHSDAM_NOREDUCE, NULL ) != DAM_NONEDEAD )
+    return;
 
-  if ((GET_HIT(ch) - dam) > 0)
+  // Show messages..
+  if( number( 1, 100 ) > 50 )
   {
-    GET_HIT(ch) -= dam;
-    if(rand1 > 50)
-    {
-    send_to_char("&+rYour bl&+Rood spl&+ratte&+Rrs as it hits the ground.&N\n", ch);
-    act("$n&+r's blo&+Rod spla&+rtter&+Rs as it hits the ground.&N", TRUE, ch, NULL, NULL,
-        TO_NOTVICT);
-    make_bloodstain(ch);
-
-    }
-    else
-    {
-    send_to_char("&+rYour wound gushes &+Rblood &+rall over the surrounding area.&N\n", ch);
-    act("$n&+r's wound gushes &+Rblood &+rall over the surrounding area.", TRUE, ch, NULL, NULL,
-        TO_NOTVICT);
-    make_bloodstain(ch);
-
-    }
+    send_to_char("&+rYour bl&+Rood spl&+ratte&+Rrs as it hits the ground.&N\n", victim );
+    act("$n&+r's blo&+Rod spla&+rtter&+Rs as it hits the ground.&N", TRUE, victim, NULL, NULL, TO_NOTVICT);
   }
+  else
+  {
+    send_to_char("&+rYour wound gushes &+Rblood &+rall over the surrounding area.&N\n", victim);
+    act("$n&+r's wound gushes &+Rblood &+rall over the surrounding area.", TRUE, victim, NULL, NULL, TO_NOTVICT);
+  }
+  make_bloodstain(ch);
 
   if (count >= 0)
   {
     count--;
-    add_event(event_bleedproc, PULSE_VIOLENCE, ch, 0, 0, 0, &count, sizeof(count));
+    add_event(event_bleedproc, PULSE_VIOLENCE, ch, victim, 0, 0, &count, sizeof(count));
   }
   else
   {
-    send_to_char("&+rYour bleeding appears to have stopped.&N\n", ch);
+    send_to_char("&+rYour bleeding appears to have stopped.&N\n", victim);
   }
 }
 
@@ -4597,7 +4589,7 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
           ch, obj, victim, TO_NOTVICT);
         act("&+L$n&+r appears behind you and drives their &+Lweapon &+rdeep into one of your vital organs!&N", TRUE, ch,
           obj, victim, TO_VICT);
-			  add_event(event_bleedproc, PULSE_VIOLENCE, victim, 0, 0, 0, &numb, sizeof(numb));
+			  add_event(event_bleedproc, PULSE_VIOLENCE, ch, victim, 0, 0, &numb, sizeof(numb));
         act("&+L...$n &+Lthen quickly fades into the sh&+wad&+Wow&+L, re-appearing only to attack again!",
           TRUE, ch, 0, victim, TO_NOTVICT);
         single_stab(ch, victim, weapon);
@@ -4611,7 +4603,7 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
           ch, obj, victim, TO_NOTVICT);
         act("&+L&n&+r appears behind you and drives their &+Lweapon &+rdeep into one of your vital organs!&N", TRUE, ch,
           obj, victim, TO_VICT);
-        add_event(event_bleedproc, PULSE_VIOLENCE, victim, 0, 0, 0, &numb, sizeof(numb));
+        add_event(event_bleedproc, PULSE_VIOLENCE, ch, victim, 0, 0, &numb, sizeof(numb));
         act("&+L...$n &+Lthen quickly fades into the sh&+wad&+Wow&+L, re-appearing only to attack again!",
         TRUE, ch, 0, victim, TO_NOTVICT);
         single_stab(ch, victim, weapon);
