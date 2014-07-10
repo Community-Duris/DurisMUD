@@ -830,19 +830,19 @@ void spell_drain_nature(int level, P_char ch, char *arg, int type, P_char victim
       gain_exp( ch, victim, MIN(healpoints, GET_MAX_HIT(victim) - GET_HIT(victim)), EXP_HEALING );
       update_pos(victim);
     }
-    if(ch == victim)
-    {
-      act( "&+yYou drain &+Whealth&+y from your surroundings.&n", FALSE, ch, 0, victim, TO_CHAR );
-    }
-    else
-    {
-      act("&+yYou feel &+Whealth&+y flow into you from your surroundings.&m", FALSE, ch, 0, victim, TO_VICT );
-      act("&+yYou drain &+Whealth&+y from you surroundings, sending it to $N&+y.&n",
-        FALSE, ch, 0, victim, TO_CHAR);
-    }
-    act("&+y$n&+y sucks the &+glife&+y out of the surroundings, &+Whealing&+y $N&+y.&n",
-      FALSE, ch, 0, victim, TO_NOTVICT);
   }
+  if(ch == victim)
+  {
+    act( "&+yYou drain &+Whealth&+y from your surroundings.&n", FALSE, ch, 0, victim, TO_CHAR );
+  }
+  else
+  {
+    act("&+yYou feel &+Whealth&+y flow into you from your surroundings.&n", FALSE, ch, 0, victim, TO_VICT );
+    act("&+yYou drain &+Whealth&+y from you surroundings, sending it to $N&+y.&n",
+      FALSE, ch, 0, victim, TO_CHAR);
+  }
+  act("&+y$n&+y sucks the &+glife&+y out of the surroundings, &+Whealing&+y $N&+y.&n",
+    FALSE, ch, 0, victim, TO_NOTVICT);
 }
 
 void spell_create_pond(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj )
