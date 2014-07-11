@@ -2500,7 +2500,7 @@ void thanksgiving_proc(P_char ch)
   char_to_room(mob, ch->in_room, 0);
 }
 
-void enhancematload( P_char ch )
+void enhancematload( P_char ch, P_char killer )
 {
   int reward;
   int moblvl = GET_LEVEL(ch);
@@ -2510,7 +2510,7 @@ void enhancematload( P_char ch )
   }
   if( number(1, 5000) < moblvl )
   {
-    debug( "enhancematload: moblvl %d", moblvl );
+    debug( "enhancematload: mob: '%s' (%d) moblvl %d", J_NAME(ch), GET_VNUM(ch), moblvl );
     if(number(1, 4000) < moblvl)
     {
       reward = number(1, 8);
@@ -2591,7 +2591,7 @@ void enhancematload( P_char ch )
     P_obj gift = read_object(reward, VIRTUAL);
     if( gift )
     {
-      debug( "enhancematload: '%s' (%d) rewarded to %s.", gift->short_description, GET_OBJ_VNUM(gift), J_NAME(ch) );
+      debug( "enhancematload: '%s' (%d) rewarded to %s.", gift->short_description, GET_OBJ_VNUM(gift), J_NAME(killer) );
       obj_to_char( gift, ch );
     }
   }

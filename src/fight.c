@@ -2259,7 +2259,7 @@ void die(P_char ch, P_char killer)
     }
 
     if(IS_NPC(ch) && !IS_PC_PET(ch))
-      enhancematload(ch);
+      enhancematload(ch, killer);
 
   }
 
