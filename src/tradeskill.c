@@ -2019,7 +2019,8 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
   FILE    *recipelist;
   int recipenumber = obj->value[6];
   int recnum;
-
+  bool forge = FALSE;
+  bool craft = FALSE;
   P_char temp_ch;
 
   if(!ch)
@@ -2036,45 +2037,69 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
   if(ch != temp_ch)
     return FALSE;
 
-    if (recipenumber == 0)
+  if (recipenumber == 0)
   {
-   send_to_char("This item is useless!\r\n", ch);
-   return TRUE;
+    send_to_char("This item is useless!\r\n", ch);
+    return TRUE;
   }
 
   tobj = read_object(recipenumber, VIRTUAL);
- 	
-  if((IS_SET(tobj->wear_flags, ITEM_WEAR_HEAD) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_BODY) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_ARMS) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_FEET) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_SHIELD) ||
-	IS_SET(tobj->wear_flags, ITEM_WIELD) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_LEGS) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_HANDS))
-       && (GET_CHAR_SKILL(ch, SKILL_FORGE) < 1))
-	{
-	  send_to_char("This recipe can only be used by someone with the &+LForge&n skill.\r\n", ch);
-	  return TRUE;
-	}
- if((IS_SET(tobj->wear_flags, ITEM_WEAR_ABOUT) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_WAIST) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_EARRING) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_NECK) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_WRIST) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_FINGER) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_EYES) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_QUIVER) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_TAIL) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_NOSE) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_HORN) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_FACE)) && 
-	(GET_CHAR_SKILL(ch, SKILL_CRAFT) < 1))
-	{
-	  send_to_char("This recipe can only be used by someone with the &+rCraft&n skill.\r\n", ch);
-	  return TRUE;
-	}  
- extract_obj(tobj, FALSE);
+
+  if( IS_SET(tobj->wear_flags, ITEM_WEAR_HEAD)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_BODY)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_ARMS)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_FEET)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_SHIELD)
+    || IS_SET(tobj->wear_flags, ITEM_WIELD)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_LEGS)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_HANDS) )
+  {
+    forge = TRUE;
+  }
+  if( IS_SET(tobj->wear_flags, ITEM_WEAR_ABOUT)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_WAIST)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_EARRING)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_NECK)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_WRIST)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_FINGER)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_EYES)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_QUIVER)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_TAIL)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_NOSE)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_HORN)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_FACE) )
+  {
+    craft = TRUE;
+  }
+
+  if( forge )
+  {
+    if( GET_CHAR_SKILL(ch, SKILL_FORGE) < 1 )
+    {
+      forge = FALSE;
+      if( craft )
+      {
+        if( GET_CHAR_SKILL(ch, SKILL_CRAFT) < 1 )
+        {
+  	      send_to_char("This recipe can only be used by someone with the &+rCraft&n or &+LForge&n skill.\r\n", ch);
+	        return TRUE;
+        }
+      }
+      else
+      {
+    	  send_to_char("This recipe can only be used by someone with the &+LForge&n skill.\r\n", ch);
+    	  return TRUE;
+      }
+    }
+  }
+  else if( craft )
+  {
+    if( GET_CHAR_SKILL(ch, SKILL_CRAFT) < 1 )
+    {
+  	  send_to_char("This recipe can only be used by someone with the &+rCraft&n skill.\r\n", ch);
+	    return TRUE;
+    }
+  }
 
   //Create buffers for name
   strcpy(buf, GET_NAME(ch));
@@ -2097,16 +2122,18 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
     create_recipes_name(GET_NAME(ch));
     recipelist = fopen(Gbuf1, "rt");
   }
-   /* Check to see if recipe exists */
+
+  /* Check to see if recipe exists */
   while((fscanf(recipelist, "%i", &recnum)) != EOF )
-	{  
-       if(recnum == recipenumber)
-         {
-          send_to_char("You already know how to create that item!&n\r\n", ch);
-          return TRUE;
-         }
-       
-	}
+	{
+    if(recnum == recipenumber)
+    {
+      send_to_char("You already know how to create that item!&n\r\n", ch);
+      extract_obj(tobj, FALSE);
+      return TRUE;
+    }
+  }
+
   fclose(recipelist);
   recipefile = fopen(Gbuf1, "a");
   fprintf(recipefile, "%d\n", recipenumber);
@@ -2117,11 +2144,24 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
   "As you finish the last entry of the &+yrecipe&n, a &+Mbri&+mgh&+Wt &nflash of &+Clight&n appears,\n"
   "quickly consuming $p, which vanishes from sight.\r\n", FALSE, ch, obj, 0, TO_CHAR);   
   fclose(recipefile);
+
   extract_obj(obj, !IS_TRUSTED(ch));
-  if(GET_CHAR_SKILL(ch, SKILL_FORGE) > 1)
-  notch_skill(ch, SKILL_FORGE, 100);
-  if(GET_CHAR_SKILL(ch, SKILL_CRAFT) > 1)
-  notch_skill(ch, SKILL_CRAFT, 100);
+
+  if( forge )
+  {
+    notch_skill(ch, SKILL_FORGE, 100);
+  }
+  else if( craft )
+  {
+    notch_skill(ch, SKILL_CRAFT, 100);
+  }
+  else
+  {
+    // This should never happen.
+    debug("learn_recipe: %s learned %s (%d) without craft or forge!?", J_NAME(ch), tobj->short_description, recipenumber );
+    logit(LOG_DEBUG, "learn_recipe: %s learned %s (%d) without craft or forge!?", J_NAME(ch), tobj->short_description, recipenumber );
+  }
+  extract_obj(tobj, FALSE);
   return TRUE;
 }
 
