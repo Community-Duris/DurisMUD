@@ -246,6 +246,7 @@ const mcname multiclass_names[] = {
   {CLASS_CLERIC, CLASS_ETHERMANCER,      "&+wWind &+cPriest&n"},
   {CLASS_CLERIC, CLASS_AVENGER,          "&+WWar &+YZealot&n"},
   {CLASS_CLERIC, CLASS_THEURGIST,        "&+WHoly &+cPriest&n"},
+  {CLASS_CLERIC, CLASS_BLIGHTER,         "&+LDecay &+yPriest&n"},
   {CLASS_MONK, CLASS_DRUID,              "&+gLeafy Ninja&n"},
   {CLASS_MONK, CLASS_SHAMAN,             "&+CSky &+wNinja&n"},
   {CLASS_MONK, CLASS_SORCERER,           "Pink Ninja&n"},

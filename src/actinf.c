@@ -5807,26 +5807,23 @@ void do_wizhelp(P_char ch, char *argument, int cmd)
 
 const char *get_multiclass_name(P_char ch)
 {
-
-                                                                                                                                       
  int i = 0;
-                                                                                                                                                
+
   if (!IS_MULTICLASS_PC(ch))
     return "error #1";
-                                                                                                                                                
+
   while (multiclass_names[i].cls1 != -1)
   {
     if ((multiclass_names[i].cls1 == ch->player.m_class) &&
         (multiclass_names[i].cls2 == ch->player.secondary_class))
       return multiclass_names[i].mc_name;
-                                                                                                                                                
+
     if ((multiclass_names[i].cls2 == ch->player.m_class) &&
         (multiclass_names[i].cls1 == ch->player.secondary_class))
       return multiclass_names[i].mc_name;
-                                                                                                                                                
     i++;
   }
-                                                                                                                                                
+
   return "error #2";
 }
 
