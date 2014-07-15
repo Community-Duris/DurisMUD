@@ -12059,8 +12059,9 @@ void spell_heal_undead(int level, P_char ch, char *arg, int type,
 {
   int      healpoints;
 
-  if(!IS_UNDEADRACE(victim) &&
-     GET_RACE(victim) != RACE_GOLEM && !GET_CLASS(victim, CLASS_NECROMANCER))
+  // GET_RACE2 -> shapeshifted into skeleton (Blighters).
+  if(!IS_UNDEADRACE(victim) && !GET_RACE2(victim) == RACE_SKELETON
+    && GET_RACE(victim) != RACE_GOLEM && !GET_CLASS(victim, CLASS_NECROMANCER))
   {
     act
       ("$N chants something odd and takes a look at $n, a weird look in $S eyes.",
@@ -12101,7 +12102,9 @@ void spell_greater_heal_undead(int level, P_char ch, char *arg, int type,
 {
   int      healpoints = 300;
 
-  if(!IS_UNDEADRACE(victim) && IS_PC(ch) && IS_NPC(victim) )
+  // GET_RACE2 -> shapeshifted into skeleton (Blighters).
+  if(!IS_UNDEADRACE(victim) && IS_PC(ch) && IS_NPC(victim)
+    && !GET_RACE2(victim) == RACE_SKELETON )
      // old guildhalls (deprecated)
 //     && mob_index[GET_RNUM(victim)].virtual_number != WARRIOR_GOLEM_VNUM &&
 //      mob_index[GET_RNUM(victim)].virtual_number != MAGE_GOLEM_VNUM &&
