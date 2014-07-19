@@ -2158,11 +2158,9 @@ void enhance(P_char ch, P_obj source, P_obj material)
   obj_from_char(material, TRUE);
   extract_obj(material, FALSE);
   statuslog(ch->player.level,
-      "&+BEnhancement&n:&n (%s&n) just got [%d] (%s&n) at [%d]!",
-      GET_NAME(ch),
-      obj_index[robj->R_num].virtual_number,
-      robj->short_description,
-      (ch->in_room == NOWHERE) ? -1 : world[ch->in_room].number);
+    "&+BEnhancement&n:&n %s&n just got [%d] '%s&n' ival [%d] at [%d]!",
+    GET_NAME(ch), obj_index[robj->R_num].virtual_number, robj->short_description,
+      itemvalue(ch, robj), (ch->in_room == NOWHERE) ? -1 : world[ch->in_room].number);
 
   return;
 }
