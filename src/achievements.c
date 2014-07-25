@@ -218,7 +218,7 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
   }
 
   /* The Journey Begins */
-  if((GET_LEVEL(ch) >= 5) && !affected_by_spell(ch, ACH_JOURNEYBEGINS))
+  if( GET_LEVEL(ch) >= 5 && !affected_by_spell(ch, ACH_JOURNEYBEGINS) )
   {
     send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RThe Journey Begins&+r achievement!&n\r\n", ch);
     send_to_char("&+yThis &+Yachievement&+y rewards an &+Yitem&+y! Check your &+Winventory &+yby typing &+Wi&+y!&n\r\n", ch);
