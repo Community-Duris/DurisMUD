@@ -67,7 +67,7 @@ void do_dread_wrath(P_char ch, P_char victim)
   act ("&+LYou can almost taste the terror of $N&+L as you fiercely rush to strike $M down!",
           FALSE, ch, 0, victim, TO_CHAR);
 
-  notch_skill(ch, SKILL_DREAD_WRATH, 50);
+  notch_skill(ch, SKILL_DREAD_WRATH, 2);
 
   memset(&af, 0, sizeof(af));
   af.type = TAG_DREAD_WRATH;

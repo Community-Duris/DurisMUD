@@ -133,6 +133,14 @@ D 0 2781 1 2 100 0 0 0
 *     east exit from "The Force Commander's Personal Study" to
 *     "Outside the Force Commander's Study" - closed/locked
 *
+D 0 2789 4 10 100 0 0 0
+*     up exit from "Mob Holding Room" to
+*     "Mob Holding Room" - closed/locked/blocked
+*
+D 0 2789 4 10 100 0 0 0
+*     up exit from "Mob Holding Room" to
+*     "Mob Holding Room" - closed/locked/blocked
+*
 *
 O 0 2730 1 2730 100 0 0 0          * a rotten oak sign
 O 0 193 1 2747 100 0 0 0           * (object type not in this .obj file)

@@ -44,7 +44,7 @@ int guildhall_door(P_obj obj, P_char ch, int cmd, char *arg)
 }
 
 int guildhall_golem(P_char ch, P_char pl, int cmd, char *arg)
-{  
+{
   char buff[MAX_STRING_LENGTH];
 
   if (cmd == CMD_SET_PERIODIC)
@@ -79,24 +79,24 @@ int guildhall_golem(P_char ch, P_char pl, int cmd, char *arg)
   }
 
   int blocked_dir = direction_tag(ch);
-  
+
   if( blocked_dir < NORTH || blocked_dir >= NUM_EXITS )
   {
     logit(LOG_GUILDHALLS, "guildhall_golem() assigned to %s in %d has an invalid blocking direction (%d)!", GET_NAME(ch), world[ch->in_room].number, blocked_dir);
     REMOVE_BIT(ch->specials.act, ACT_SPEC);
     return FALSE;
   }
-  
+
   //
   // cmds
   //
-  
+
   if( cmd == CMD_PERIODIC )
   {
     // TODO: add buffs based on online guild member count, etc
     return FALSE;
   }
-  
+
   if( cmd == CMD_DEATH )
   {
     // death proc: remove golem from guildhall
@@ -104,19 +104,19 @@ int guildhall_golem(P_char ch, P_char pl, int cmd, char *arg)
     {
       gh->golem_died(ch);
     }
-    
+
     return TRUE;
   }
-  
+
   if( pl && cmd == cmd_from_dir(blocked_dir) )
   {
     // char tried to go in the blocked direction
 
     P_char   t_ch = pl;
-    
+
     if (IS_PC_PET(pl))
       t_ch = pl->following;
-    
+
     if(!t_ch)
       return FALSE;
 
@@ -134,12 +134,12 @@ int guildhall_golem(P_char ch, P_char pl, int cmd, char *arg)
       gl = pl->group;
       while (gl)
       {
-	if (GET_A_NUM(gl->ch) == GET_A_NUM(ch))
-	  allowed = TRUE;
-	gl = gl->next;
+	      if (GET_A_NUM(gl->ch) == GET_A_NUM(ch))
+	        allowed = TRUE;
+	      gl = gl->next;
       }
     }
-    
+
     if( IS_TRUSTED(pl) )
     {
       // don't show anything when immortals enter the GH
@@ -155,35 +155,41 @@ int guildhall_golem(P_char ch, P_char pl, int cmd, char *arg)
     {
       if(IS_WARRIOR(ch))
       {
-         act("$N glares at you and knocks you to the ground.", FALSE, pl, 0, ch, TO_CHAR);
-         act("$N glares at $n and knocks $m to the ground.", FALSE, pl, 0, ch, TO_NOTVICT);
-         SET_POS(pl, GET_STAT(ch) + POS_SITTING);
-         CharWait(pl, WAIT_SEC * 2); 
-         return TRUE;
+        act("$N glares at you and knocks you to the ground.", FALSE, pl, 0, ch, TO_CHAR);
+        act("$N glares at $n and knocks $m to the ground.", FALSE, pl, 0, ch, TO_NOTVICT);
+        SET_POS(pl, GET_STAT(ch) + POS_SITTING);
+        CharWait(pl, WAIT_SEC * 2); 
+        return TRUE;
+      }
+      else
+      {
+        act("$N glares at you and says, 'halt!'", FALSE, pl, 0, ch, TO_CHAR);
+        act("$N glares at $n and says, 'halt!'", FALSE, pl, 0, ch, TO_NOTVICT);
+        return TRUE;
       }
     }
 
     return TRUE;
   }
-  
-  if ( pl && (cmd == CMD_GOTHIT && !number(0, 15)) ||
-      (cmd == CMD_HIT || cmd == CMD_KILL))
+
+  if( pl && (cmd == CMD_GOTHIT && !number(0, 15))
+    || (cmd == CMD_HIT || cmd == CMD_KILL))
   {
     //can add check here to see if guild has magic mouth upgrade from db?
-    sprintf(buff,
-	"&+cA magic mouth tells your guild 'Alert! $N&n&+c has trespassed into %s&n&+c!'&n",
-	world[ch->in_room].name);
+    sprintf(buff, "&+cA magic mouth tells your guild 'Alert! $N&n&+c has trespassed into %s&n&+c!'&n", world[ch->in_room].name);
     for (P_desc i = descriptor_list; i; i = i->next)
-      if (!i->connected &&
-	  !is_silent(i->character, TRUE) &&
-	  IS_SET(i->character->specials.act, PLR_GCC) &&
-	  IS_MEMBER(GET_A_BITS(i->character)) &&
-	  (GET_A_NUM(i->character) == GET_A_NUM(ch)) &&
-	  !IS_TRUSTED(i->character))
-	act(buff, FALSE, i->character, 0, pl, TO_CHAR);
-    return FALSE;
+    {
+      if( !i->connected && !is_silent(i->character, TRUE)
+        && IS_SET(i->character->specials.act, PLR_GCC)
+        && IS_MEMBER(GET_A_BITS(i->character))
+        && (GET_A_NUM(i->character) == GET_A_NUM(ch))
+        && !IS_TRUSTED(i->character) )
+      {
+        act(buff, FALSE, i->character, 0, pl, TO_CHAR);
+      }
+      return FALSE;
+    }
   }
-  
   return FALSE;
 }
 

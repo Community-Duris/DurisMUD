@@ -1077,6 +1077,7 @@ const char *command[] = {
   "add",
   "deploy",
   "blood",
+  "deforest",
   "\n"                          /* MAX_CMD_LIST is now 1000 */
 };
 
@@ -1088,6 +1089,19 @@ const char *fill_words[] = {
   "on",
   "at",
   "to",
+  "\n"
+};
+
+// Rude words that should not be found in names/ship names.
+// Please keep in alpha order to make sure no duplicates.
+const char *rude_ass[] = {
+  "ass",
+  "bitch",
+  "cunt",
+  "dick",
+  "fuck",
+  "penis",
+  "shit",
   "\n"
 };
 
@@ -1235,7 +1249,7 @@ void do_confirm(P_char ch, int yes)
 
     }
 
-    sprintf(guildinfo, ch->desc->last_command);
+    sprintf(guildinfo, "%s", ch->desc->last_command);
     int x = found_asc(ch, ch, "n", guildinfo);
     if(x)
     SUB_MONEY(ch, 5000000, 0);
@@ -1641,14 +1655,14 @@ void command_interpreter(P_char ch, char *argument)
                 send_to_char("&+LYou remain well prepared.&n\r\n", ch);
               else
               {
-                notch_skill(ch, SKILL_AMBUSH, 100);
+                notch_skill(ch, SKILL_AMBUSH, 1);
                 affect_from_char(ch, SKILL_AMBUSH);
                 REMOVE_BIT(ch->specials.affected_by5, AFF5_SHADE_MOVEMENT);
                 REMOVE_BIT(ch->specials.affected_by, AFF_HIDE);
               }
             else
             {
-              notch_skill(ch, SKILL_AMBUSH, 50);
+              notch_skill(ch, SKILL_AMBUSH, 2);
               affect_from_char(ch, SKILL_AMBUSH);
               REMOVE_BIT(ch->specials.affected_by5, AFF5_SHADE_MOVEMENT);
               REMOVE_BIT(ch->specials.affected_by, AFF_HIDE);
@@ -1708,7 +1722,7 @@ void command_interpreter(P_char ch, char *argument)
            if ((cmd == CMD_FIRE) && GET_CHAR_SKILL(ch, SKILL_SHADOW_ARCHERY))
            {
              send_to_char("&+LYou fire silently from the shadows...&n\r\n", ch);
-             notch_skill(ch, SKILL_SHADOW_ARCHERY, 100);
+             notch_skill(ch, SKILL_SHADOW_ARCHERY, 1);
            }
           else
             REMOVE_BIT(ch->specials.affected_by, AFF_HIDE);
@@ -1745,7 +1759,7 @@ void command_interpreter(P_char ch, char *argument)
             else
             {
               send_to_char("You continue your meditation uninterrupted.\n", ch);
-             notch_skill(ch, SKILL_ADVANCED_MEDITATION, 50);
+             notch_skill(ch, SKILL_ADVANCED_MEDITATION, 2);
             }
           }
         }
@@ -2408,7 +2422,7 @@ void assign_command_pointers(void)
   CMD_N(CMD_LOTUS, STAT_RESTING + POS_SITTING, do_lotus, 0);
   CMD_N(CMD_MEDITATE, STAT_RESTING + POS_KNEELING, do_meditate, 0);
   CMD_N(CMD_MORE, STAT_DEAD + POS_PRONE, do_more, 0);
-  CMD_N(CMD_RECALL, STAT_DEAD + POS_PRONE, do_recall, 0);
+  CMD_Y(CMD_RECALL, STAT_DEAD + POS_PRONE, do_recall, 0);
   CMD_N(CMD_MOTD, STAT_SLEEPING + POS_PRONE, do_motd, 0);
   CMD_N(CMD_GMOTD, STAT_SLEEPING + POS_PRONE, do_gmotd, 0);
   CMD_Y(CMD_MOUNT, STAT_NORMAL + POS_STANDING, do_mount, 0);
@@ -2574,6 +2588,7 @@ void assign_command_pointers(void)
   CMD_Y(CMD_MEMORIZE, STAT_RESTING + POS_KNEELING, do_memorize, 0);
   CMD_Y(CMD_ASSIMILATE, STAT_RESTING + POS_KNEELING, do_assimilate, 0);
   CMD_Y(CMD_COMMUNE, STAT_RESTING + POS_KNEELING, do_assimilate, 0);
+  CMD_Y(CMD_DEFOREST, STAT_RESTING + POS_KNEELING, do_assimilate, 0);
   CMD_Y(CMD_PROJECT, STAT_RESTING + POS_PRONE, do_project, 0);
   CMD_Y(CMD_MURDER, STAT_NORMAL + POS_STANDING, do_murder, 0);
   CMD_Y(CMD_NECKBITE, STAT_NORMAL + POS_STANDING, do_gith_neckbite, 0);

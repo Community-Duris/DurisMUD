@@ -118,7 +118,7 @@ const char CONSTRUCT_SYNTAX[] =
 "&+BConstruct syntax                                  \r\n"
 "&+b----------------------------------------------------------------------------------\r\n"
 "&+Wconstruct guildhall&n - construct a guildhall in the current room on map\r\n"
-//"&+Wconstruct golem    &n - construct a golem in the entrance room\r\n"
+"&+Wconstruct golem    &n - construct a golem in the entrance room\r\n"
 "&+Wconstruct room     &n - construct a new room\r\n"
 "&+Wconstruct upgrade  &n - upgrade the current room\r\n"
 "&+Wconstruct rename   &n - rename the current room\r\n"
@@ -152,10 +152,10 @@ void do_construct(P_char ch, char *arg, int cmd)
   {
     do_construct_room(ch, arg);
   }
- /* else if( is_abbrev(buff, "golem") )
+  else if( is_abbrev(buff, "golem") )
   {
     do_construct_golem(ch, arg);
-  }*/
+  }
   else if( is_abbrev(buff, "upgrade") )
   {
     do_construct_upgrade(ch, arg);
@@ -400,14 +400,14 @@ void do_construct_room(P_char ch, char *arg)
 void do_construct_golem(P_char ch, char *arg)
 {
   char buff[MAX_STRING_LENGTH];
-  
+
   int plat_cost = 0, cp_cost = 0;
 
   if( !ch )
     return;
 
   Guildhall *gh = Guildhall::find_by_vnum(world[ch->in_room].number);
-  
+
   if( !gh )
   {
     send_to_char("You must be inside your guildhall in order to construct a golem!\r\n", ch);
@@ -419,13 +419,13 @@ void do_construct_golem(P_char ch, char *arg)
     send_to_char("You can only construct inside of YOUR guildhall.\r\n", ch);
     return;
   }
-  
+
   if( !gh->entrance_room || gh->entrance_room->vnum != world[ch->in_room].number)
   {
     send_to_char("You must be in your guildhall's entrance hall in order to construct a golem!\r\n", ch);
     return;
-  }  
-  
+  }
+
   if(!*arg)
   {
     // just 'construct golem' with no other arguments, so show the current golem slots
@@ -439,13 +439,13 @@ void do_construct_golem(P_char ch, char *arg)
       sprintf(buff, "&+W%d&n) %s\r\n", (i+1), ( gh->entrance_room->golems[i] ? gh->entrance_room->golems[i]->player.short_descr : "none" ));
       send_to_char(buff, ch);
     }
-    
+
     send_to_char("\r\n", ch);
-    
+
     send_to_char("Syntax: construct golem <slot> <warrior|cleric|sorcerer>\r\n", ch);
-    
+
     send_to_char("Cost:\r\n", ch);
-    
+
     sprintf(buff, " %s: %s&n and %d &+Wconstruction points&n\r\n", "warrior", 
             coin_stringv(get_property("guildhalls.construction.platinum.golem.warrior", 0)*1000), 
             get_property("guildhalls.construction.points.golem.warrior", 0));
@@ -455,12 +455,12 @@ void do_construct_golem(P_char ch, char *arg)
             coin_stringv(get_property("guildhalls.construction.platinum.golem.cleric", 0)*1000), 
             get_property("guildhalls.construction.points.golem.cleric", 0));
     send_to_char(buff, ch);
-    
+
     sprintf(buff, " %s: %s&n and %d &+Wconstruction points&n\r\n", "sorcerer", 
             coin_stringv(get_property("guildhalls.construction.platinum.golem.sorcerer", 0)*1000), 
             get_property("guildhalls.construction.points.golem.sorcerer", 0));
     send_to_char(buff, ch);
-    
+
     return;
   }
 
@@ -470,13 +470,13 @@ void do_construct_golem(P_char ch, char *arg)
   arg = one_argument(arg, buff);
 
   int slot = atoi(buff);
-  
+
   if( slot < 1 || slot > GH_GOLEM_NUM_SLOTS )
   {
     send_to_char("Please enter a valid golem slot.\r\n", ch);
     return;
   }
-  
+
   if( gh->entrance_room->golems[slot-1] ) // (slot-1) because player enters 1-4 but its stored as 0-3
   {
     send_to_char("There is already a golem in that slot.\r\n", ch);
@@ -488,7 +488,7 @@ void do_construct_golem(P_char ch, char *arg)
   //
   arg = one_argument(arg, buff);
   int type = 0;
-  
+
   if( is_abbrev(buff, "warrior") )
   {
     type = GH_GOLEM_TYPE_WARRIOR;
@@ -497,7 +497,7 @@ void do_construct_golem(P_char ch, char *arg)
   }
   else if( is_abbrev(buff, "cleric") )
   {
-    type = GH_GOLEM_TYPE_CLERIC;    
+    type = GH_GOLEM_TYPE_CLERIC;
     plat_cost = get_property("guildhalls.construction.platinum.golem.cleric", 0) * 1000;
     cp_cost = get_property("guildhalls.construction.points.golem.cleric", 0);
   }
@@ -512,7 +512,7 @@ void do_construct_golem(P_char ch, char *arg)
     send_to_char("Please enter a valid type of golem.\r\n", ch);
     return;
   }
-  
+
   if(!IS_TRUSTED(ch))
   {
     if(GET_MONEY(ch) < plat_cost)
@@ -520,14 +520,14 @@ void do_construct_golem(P_char ch, char *arg)
       sprintf(buff, "You don't have enough money on you - it costs %s&n to build that type of golem.\r\n", coin_stringv(plat_cost));
       send_to_char(buff, ch);
       return;
-    }    
-    
+    }
+
     if(get_assoc_cps(GET_A_NUM(ch)) < cp_cost)
     {
       sprintf(buff, "Your guild doesn't yet have enough &+Wconstruction points&n - it costs %d to build that type of golem.\r\n", cp_cost);
       send_to_char(buff, ch);
       return;
-    }    
+    }
   }
 
   if( construct_golem(gh, (slot-1), type) ) // (slot-1) because player enters 1-4 but they are stored in 0-3
@@ -537,12 +537,12 @@ void do_construct_golem(P_char ch, char *arg)
       SUB_MONEY(ch, plat_cost, 0);
       add_assoc_cps(GET_A_NUM(ch), -cp_cost);
     }
-    
+
     send_to_char("A &+ggremlin construction team&n appears carrying a massive load of iron, clay, pottery, and bits of string.\r\n"
                  "They assemble the materials into a humanoid shape and then link hands and begin dancing around the shape,\r\n"
                  "chanting a strange ritual song. A few minutes later the pile of junk somehow coallesces into a united being,\r\n"
                  "and the &+ggremlins&n disappear as quickly as they came.\r\n", ch);
-    
+
     CharWait(ch, PULSE_VIOLENCE*2);
     logit(LOG_GUILDHALLS, "%s built a type %d golem for %s in %d", GET_NAME(ch), type, strip_ansi(get_assoc_name(GET_A_NUM(ch)).c_str()).c_str(), world[ch->in_room].number);
     return;

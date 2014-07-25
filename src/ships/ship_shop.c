@@ -15,16 +15,18 @@
 #include "epic.h"
 #include "ships.h"
 #include "epic_bonus.h"
+#include "epic_skills.h"
 #include "defines.h"
 #include "spells.h"
 #include "structs.h"
+#include "utility.h"
 
 extern char buf[MAX_STRING_LENGTH];
 extern char arg1[MAX_STRING_LENGTH];
 extern char arg2[MAX_STRING_LENGTH];
 extern char arg3[MAX_STRING_LENGTH];
 extern P_char character_list;
-
+extern const char *rude_ass[];
 
 int list_cargo(P_char ch, P_ship ship, int owned)
 {
@@ -454,8 +456,6 @@ int sell_cargo_slot(P_char ch, P_ship ship, int slot, int rroom)
         int crates = ship->slot[slot].val0;
         int cost = crates * cargo_buy_price(rroom, type);
         int profit = 100;
-
-       cost *= 0.7; //reducing cargo benefit
 
 	if(has_eq_diplomat(ship))
 	{
@@ -1582,13 +1582,15 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
         send_to_char ("That weapon cannot be placed in that position, try another one.\r\n", ch);
         return TRUE;
     }
+
 /* -Removing frag requirements for weapons - Drannak 6/3/2013
+ *  Readding them. - Lohrr 7/23/2014
+*/
     if (ship->frags < weapon_data[w].min_frags)
     {
         send_to_char ("I'm sorry, but not just anyone can buy this weapon!  You must earn it!\r\n", ch);
         return TRUE;
     }
-*/
 
     if (IS_SET(weapon_data[w].flags, CAPITOL)) 
     {
@@ -1694,9 +1696,11 @@ int buy_equipment(P_char ch, P_ship ship, char* arg1)
     SUB_MONEY(ch, cost, 0);
     set_equipment(ship, slot, e);
     
+/* Unused variable weight. - Lohrr
     int weight = equipment_data[e].weight;
     if (e == E_RAM) weight = eq_ram_weight(ship);
     if (e == E_LEVISTONE) weight = eq_levistone_weight(ship);
+*/
     int buildtime = equipment_data[e].weight * 75;
     int pvp = false;
     pvp = ocean_pvp_state();
@@ -1767,7 +1771,7 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
         }
         if (!check_undocking_conditions (ship, i, ch))
             return TRUE;
-            
+
         /*for( int k = 0; k < MAXSLOTS; k++ )
         {
             if (ship->slot[k].type != SLOT_EMPTY)
@@ -1832,6 +1836,12 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
             send_to_char ("Invalid ANSI name'\r\n", ch); 
             return TRUE;
         }
+        if( sub_string_set(strip_ansi(arg2).c_str(), rude_ass) )
+        {
+            send_to_char("Name must not contain rude terms.\r\n", ch);
+            return TRUE;
+        }
+
         if ((int) strlen(strip_ansi(arg2).c_str()) > 20) 
         {
             send_to_char("Name must be less than 20 characters (not including ansi))\r\n", ch);
@@ -1857,6 +1867,7 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
             send_to_char_f(ch, "Error creating new ship (%d), please notify a god.\r\n", shiperror);
             return TRUE;
         }
+
         buildtime = 75 * SHIPTYPE_ID(i) / 4;
         ship->ownername = str_dup(GET_NAME(ch));
         ship->anchor = world[ch->in_room].number;
@@ -1872,12 +1883,21 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
         // everything went successfully, substracting the cost        
         SUB_MONEY(ch, SHIPTYPE_COST(i), 0);
         if (SHIPTYPE_EPIC_COST(i) > 0)
-            ch->only.pc->epics -= SHIPTYPE_EPIC_COST(i);
+        {
+            epic_gain_skillpoints(ch, -SHIPTYPE_EPIC_COST(i));
+        }
+
+        send_to_char( "Your ship, '", ch );
+        send_to_char( strip_ansi(arg2).c_str(), ch );
+        send_to_char( "', will be ", ch );
+        send_to_char( arg2, ch );
+        send_to_char( " with paint.\n", ch );
+
         send_to_char_f(ch, "Thanks for your business, this hull will take %d hours to build.\r\n", SHIPTYPE_ID(i) / 4);
     }
 
     if (!IS_TRUSTED(ch) && BUILDTIME)
-        ship->timer[T_MAINTENANCE] += buildtime;
+      ship->timer[T_MAINTENANCE] += buildtime;
     update_ship_status(ship);
     write_ship(ship);
     return TRUE;
@@ -2459,7 +2479,7 @@ int crew_shop_proc(int room, P_char ch, int cmd, char *arg)
 #define IS_MOONSTONE_CORE(obj) (obj_index[obj->R_num].virtual_number == AUTOMATONS_MOONSTONE_CORE)
 #define IS_MOONSTONE_PART(obj) (IS_MOONSTONE_FRAGMENT(obj) || IS_MOONSTONE_CORE(obj))
 
-int moonstone_fragment(P_obj obj, P_char ch, int cmd, char *argument)
+bool moonstone_fragment(P_obj obj, P_char ch, int cmd, char *argument)
 {
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
@@ -2499,10 +2519,11 @@ int moonstone_fragment(P_obj obj, P_char ch, int cmd, char *argument)
           }
         }
         int r_num = real_object(AUTOMATONS_MOONSTONE);
-        if (r_num < 0) return NULL;
+        if(r_num < 0)
+          return FALSE;
         P_obj moonstone = read_object(r_num, REAL);
         if (!moonstone)
-            return NULL;
+          return FALSE;
         obj_to_char(moonstone, ch);
 
       }

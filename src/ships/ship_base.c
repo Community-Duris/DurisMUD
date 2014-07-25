@@ -2105,7 +2105,7 @@ int read_ships()
 {
     P_ship ship;
     char    *ret = NULL;
-    int      k, intime, ver;
+    int      k, ver;//, intime;
     FILE    *f = NULL, *f2 = NULL;
 
     f = fopen("Ships/ship_index", "r");

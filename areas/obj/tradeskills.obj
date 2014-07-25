@@ -965,7 +965,7 @@ enchanted metallic glass salvaged~
 #400120
 bent steel scrap salvaged~
 &Na bent steel scrap&N~
-&NA belt steep scrap has lies here on the ground.~
+&NA bent steel scrap has lies here on the ground.~
 ~
 8 16 1 0 8 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
@@ -973,7 +973,7 @@ bent steel scrap salvaged~
 #400121
 small piece steel salvaged~
 &Na small piece of steel~
-&NA belt steep scrap has lies here on the ground.~
+&NA small steel scrap has lies here on the ground.~
 ~
 8 16 1 0 9 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
@@ -981,7 +981,7 @@ small piece steel salvaged~
 #400122
 large steel fragment salvaged~
 &Na large steel fragment&n~
-&NA belt steep scrap has lies here on the ground.~
+&NA large steel scrap has lies here on the ground.~
 ~
 8 16 1 0 10 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
@@ -1611,9 +1611,9 @@ small green dragon scale dragonscale salvaged~
 0 0 0 0 0 0 0 0
 0 50 100
 #400201
-blue dragonscale salvaged~
+blue dragonscale dragon scale salvaged~
 &+Ba blue &+bdragon&+Lscale&N~
-blue dragon scale dragonscale~
+&+BA small blue dragon&+Lscale &+Bhas been left here.~
 ~
 8 35 1 0 12 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0

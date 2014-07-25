@@ -3877,8 +3877,8 @@ int bs_guildguard_sorcconj(P_char ch, P_char pl, int cmd, char *arg)
   }
   if ((ch->in_room == real_room(7844)) && (cmd == CMD_EAST))
   {
-    if ((GET_CLASS(pl) == CLASS_SORCERER) ||
-        (GET_CLASS(pl) == CLASS_CONJURER))
+    if( (GET_CLASS(pl) == CLASS_SORCERER) || (GET_CLASS(pl) == CLASS_SUMMONER)
+      || (GET_CLASS(pl) == CLASS_CONJURER) )
     {
       act("$n lowers $s eyes before your gaze.", FALSE, ch, 0, pl, TO_VICT);
       act("$n lowers $s eyes at $N's gaze.", TRUE, ch, 0, pl, TO_NOTVICT);

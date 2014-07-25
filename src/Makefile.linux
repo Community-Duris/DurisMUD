@@ -70,6 +70,7 @@ OBJS	=  \
 				 auction_houses.o \
 				 bard.o \
 				 beh_magic.o \
+         blispells.o \
 				 boards.o \
 				 boon.o \
 				 buildings.o \

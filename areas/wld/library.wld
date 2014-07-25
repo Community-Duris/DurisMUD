@@ -1,0 +1,2565 @@
+#402000
+&+LA Carved Obsidian Tunnel in the Underdark Wall&n~
+&+L   This sheer section of the Underdark cavernous wall appears to have had a master artisan craft a tunnel going to the south. A series of reliefs have been carved around the entrance of the cave, detailing various historical dark elven scholars exploring the vastness of the Underdark.&+n
+~
+402 134250573 0 0
+D0
+~
+~
+0 0 813342
+D2
+~
+~
+0 0 402001
+S
+#402001
+&+LA Masterfully-Carved Narrow Tunnel&n~
+&+L   The tunnel here continues into a clearing to the south, lit by faerie fire and entirely less clausterphobic than this tunnel seems. Nonetheless, the floors have mosaics of tile that are polished to give even the softest of step a gentle echoing footstep in this cavern.&n
+~
+402 134259017 0 0
+D0
+~
+~
+0 0 402000
+D2
+~
+~
+0 0 402002
+S
+#402002
+&+LAn Obsidian Cavern &+wIl&+Ll&+wum&+Win&+wat&+Le&+wd &+Lwith &+mFa&+Mer&+mie &+MF&+mi&+Mr&+me&n~
+&+L   This room has extremely &+mpo&+Ml&+mis&+Mhe&+md&+L obsidian walls that have are &+mdesi&+Mg&+mn&+Me&+md&+L to &+wg&+Wl&+wit&+Lt&+we&+Wr&+L with &+mthe &+Mpu&+mr&+Mp&+mle &+Mf&+mla&+Mme&+ms &+Lthat &+mda&+Mn&+mce&+L within the &+wsc&+Wo&+wn&+Lc&+wes&+L set into the &+mre&+Ml&+mie&+Mf&+ms&+L of the walls. In the &+wce&+Wnt&+wer&+L of this room is a statue of a gorgeous &+mDrow Elven&+L archer, exploring the Underdark to chart the maps.&n
+~
+402 1207992392 0 0
+D0
+~
+~
+0 0 402001
+D3
+~
+~
+0 0 402003
+D9
+~
+~
+0 0 402004
+S
+#402003
+&+LA Quiet Side Cloister&n~
+&+L   This side cloister appears to be a quiet area reserved for the scholars of the library to enjoy their studies amongst the fountains and the glittering faerie fire. A statue of a Drow Elven monk is flanked by further benches carved into the stone, covered in pillows of silk.&N
+~
+402 134250713 0 0
+D1
+~
+~
+0 0 402002
+S
+#402004
+&+LAn Obsidian Tunnel Lit by &+mFa&+Mer&+mie &+MF&+mi&+Mr&+me&n~
+&+L   This tunnel curves slightly, and connects the fountain cavern to the cavern before the great Library of L'srillizzin, where the scholarship of the Underdark is nourished and celebrated. The stairs begin along the eastern edge of this tunnel.&N
+~
+402 134250569 0 0
+D1
+~
+~
+0 0 402005
+D6
+~
+~
+0 0 402002
+S
+#402005
+&+LThe Bottom of the Stairs before &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   The stairs appear to be masterfully carved into the obsidian Underdark rock, as if they had always meant to be here. They have been worn slightly over the years from students and scholars alike to progress within this great depository of knowledge within the Underdark's rather bleak inhabitants. The stairs are long, narrow of height, perhaps meant for those having strolling discussions as they walked.&N
+~
+402 134250569 0 0
+D3
+~
+~
+0 0 402004
+D4
+~
+~
+0 0 402006
+S
+#402006
+&+LThe Top of the Stairs before &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   The stairs appear to be masterfully carved into the obsidian Underdark rock, as if they had always meant to be here. They have been worn slightly over the years from students and scholars alike to progress within this great depository of knowledge within the Underdark's rather bleak inhabitants. The stairs are long, narrow of height, perhaps meant for those having strolling discussions as they walked.&N
+~
+402 134250569 0 0
+D1
+~
+~
+0 0 402007
+D5
+~
+~
+0 0 402005
+S
+#402007
+&+LThe &+wPortico&+L in front of &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   At the top of the great stairs is a portico of sorts, or a covered column-filled area inside of a larger cavern. The Columns appear to be elegant nymphs of some form, perhaps twisted from an unnatural experience on the Negative Material Plane, twisted into a dance about black smoke-like cores of the columns. To the east, a large set of double-doors has been carefully set into a series of reliefs carved into the cavern's sheer wall.&N
+~
+402 134250569 0 0
+D0
+~
+~
+0 0 402009
+D1
+~
+east door~
+3 402003 402008
+D2
+~
+~
+0 0 402010
+D3
+~
+~
+0 0 402006
+S
+#402008
+&+LThe &+wFoyer &+Lof &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This room is filled with statues of various scholars from the ancient times on into current times. Though most of the statues appear to be of Drow Elves, there are a few of the more exceptional Duergar, Goblin, and Kobolds who have made scholarly pursuits or extremely valuable contributions to the Library.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402011
+D1
+~
+~
+0 0 402013
+D2
+~
+~
+0 0 402012
+D3
+~
+~
+3 0 402007
+S
+#402009
+&+LA Golem Gate House&N~
+&+L   This room is rather bare except for an arcane summoning sigil upon the center of the room. The sigils seem to suggest that the circle brings energy from various elements and infuses them into golems crafted to guard the Library.&N
+~
+402 134250569 0 0
+D2
+~
+~
+0 0 402007
+S
+#402010
+&+LA Golem Gate House&N~
+&+L   This room is rather bare except for an arcane summoning sigil upon the center of the room. The sigils seem to suggest that the circle brings energy from various elements and infuses them into golems crafted to guard the Library.&N
+~
+402 134250569 0 0
+D0
+~
+~
+0 0 402007
+S
+#402011
+&+LA &+wNorthern Corridor &+Lwithin &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the Library has tall ceilings and polished obsidian floors. There are purple and black woven carpets of fine quality that line them as runners to cut down on the sound from footsteps echoing in these halls. Upon the wall are scones of torches with faerie fire, which help illuminate the way.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402014
+D2
+~
+~
+0 0 402008
+D3
+~
+~
+1 0 402115
+E
+default~
+~
+S
+#402012
+&+LA &+wSouthern Corridor &+Lwithin &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the Library has tall ceilings and polished obsidian floors. There are purple and black woven carpets of fine quality that line them as runners to cut down on the sound from footsteps echoing in these halls. Upon the wall are scones of torches with faerie fire, which help illuminate the way.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402008
+D1
+~
+~
+1 0 402114
+D2
+~
+~
+0 0 402030
+D3
+~
+~
+1 0 402113
+S
+#402013
+&+LAn &+wEastern Corridor &+Lwithin &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the Library has tall ceilings and polished obsidian floors. There are purple and black woven carpets of fine quality that line them as runners to cut down on the sound from footsteps echoing in these halls. Upon the wall are scones of torches with faerie fire, which help illuminate the way.&N
+~
+402 9 0 0
+D1
+~
+~
+0 0 402043
+D2
+~
+~
+1 0 402116
+D3
+~
+~
+0 0 402008
+S
+#402014
+&+LA &+wNorthern Corridor &+Lwithin &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the Library has tall ceilings and polished obsidian floors. There are purple and black woven carpets of fine quality that line them as runners to cut down on the sound from footsteps echoing in these halls. Upon the wall are scones of torches with faerie fire, which help illuminate the way.&N
+~
+402 9 0 0
+D0
+~
+~
+1 0 402021
+D1
+~
+~
+0 0 402019
+D2
+~
+~
+0 0 402011
+D3
+~
+~
+1 0 402015
+S
+#402015
+&+LA Library Section Dedicated to &+MSorcery&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402017
+D1
+~
+~
+1 0 402014
+D2
+~
+~
+0 0 402018
+D3
+~
+~
+0 0 402016
+S
+#402016
+&+LA Library Section Dedicated to &+wShadow&+Lmages&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D1
+~
+~
+0 0 402015
+S
+#402017
+&+LA Library Section Dedicated to &+cWizards&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D2
+~
+~
+0 0 402015
+S
+#402018
+&+LA Library Section Dedicated to &+MWild&+mmages&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402015
+S
+#402019
+&+LA &+wVery Small Spiral Staircase&+L Carved in the Rock&N~
+&+L   This spiral staircase makes two complete circles as it winds down into the next level of the Library. The staircase is kind of tight and slightly clausterphobic, and because of its tight turns, it is difficult to adequately illuminate the area.&N
+~
+402 8457 0 0
+D3
+~
+~
+0 0 402014
+D5
+~
+~
+0 0 402020
+S
+#402020
+&+LThe &+wLanding &+Lat the Bottom of a Spiral Staircase&N~
+&+L   A very thin spiral staircase descends down into this next level, and comes out into this room. It is a sparse room, with only two benches along either wall for individuals to wait or rest upon.&N
+~
+402 9 0 0
+D0
+~
+~
+1 0 402022
+D4
+~
+~
+0 0 402019
+S
+#402021
+&+LThe &+wOffice&+L of the &+wDean&+L of the Department of &+MSorcery&N~
+&+L   This room is finely decorated with silk satin-covered furnitures, the finest teakwood desk, and the walls are lined with arcane tomes of varying levels of historical value to scholars of the occult. The room is dimly lit by floating candles and orbs of swirling pale mist.&N
+~
+402 9 0 0
+D2
+~
+~
+1 0 402014
+S
+#402022
+&+LThe &+rOff&+Rens&+rive &+LSpell Target Range Platform&N~
+&+L   This is a very round room in which students and scholars alike may test out their magical theory and practice of offensive spells. This is mostly used by the Sorcery sphere, but occasionally visited by others. This near area has a series of etched circles upon the floor where the casters may stand within to execute their spellcraft from.&N
+~
+402 1073872905 0 0
+D0
+~
+~
+0 0 402023
+D1
+~
+~
+0 0 402024
+D2
+~
+~
+1 0 402020
+D3
+~
+~
+0 0 402025
+D6
+~
+~
+0 0 402026
+D7
+~
+~
+0 0 402028
+D8
+~
+~
+0 0 402027
+D9
+~
+~
+0 0 402029
+S
+#402023
+&+wThe Dead End of the Offensive Spell Target Range&N~
+&+L   This is a very long room in which students and scholars alike may test out their magical theory and practice of offensive spells. This is mostly used by the Sorcery sphere, but occasionally visited by others. This far end has &+wshackles&+L upon the wall in which victims are kept to be targets for the offensive mages.&N
+~
+402 9 0 0
+D2
+~
+~
+0 0 402022
+S
+#402024
+&+wThe Dead End of the Offensive Spell Target Range&N~
+&+L   This is a very long room in which students and scholars alike may test out their magical theory and practice of offensive spells. This is mostly used by the Sorcery sphere, but occasionally visited by others. This far end has &+wshackles&+L upon the wall in which victims are kept to be targets for the offensive mages.&N
+~
+402 9 0 0
+D3
+~
+~
+0 0 402022
+S
+#402025
+&+wThe Dead End of the Offensive Spell Target Range&N~
+&+L   This is a very long room in which students and scholars alike may test out their magical theory and practice of offensive spells. This is mostly used by the Sorcery sphere, but occasionally visited by others. This far end has &+wshackles&+L upon the wall in which victims are kept to be targets for the offensive mages.&N
+~
+402 9 0 0
+D1
+~
+~
+0 0 402022
+S
+#402026
+&+wThe Dead End of the Offensive Spell Target Range&N~
+&+L   This is a very long room in which students and scholars alike may test out their magical theory and practice of offensive spells. This is mostly used by the Sorcery sphere, but occasionally visited by others. This far end has &+wshackles&+L upon the wall in which victims are kept to be targets for the offensive mages.&N
+~
+402 9 0 0
+D9
+~
+~
+0 0 402022
+S
+#402027
+&+wThe Dead End of the Offensive Spell Target Range&N~
+&+L   This is a very long room in which students and scholars alike may test out their magical theory and practice of offensive spells. This is mostly used by the Sorcery sphere, but occasionally visited by others. This far end has &+wshackles&+L upon the wall in which victims are kept to be targets for the offensive mages.&N
+~
+402 73 0 0
+D7
+~
+~
+0 0 402022
+S
+#402028
+&+wThe Dead End of the Offensive Spell Target Range&N~
+&+L   This is a very long room in which students and scholars alike may test out their magical theory and practice of offensive spells. This is mostly used by the Sorcery sphere, but occasionally visited by others. This far end has &+wshackles&+L upon the wall in which victims are kept to be targets for the offensive mages.&N
+~
+402 9 0 0
+D8
+~
+~
+0 0 402022
+S
+#402029
+&+wThe Dead End of the Offensive Spell Target Range&N~
+&+L   This is a very long room in which students and scholars alike may test out their magical theory and practice of offensive spells. This is mostly used by the Sorcery sphere, but occasionally visited by others. This far end has &+wshackles&+L upon the wall in which victims are kept to be targets for the offensive mages.&N
+~
+402 9 0 0
+D6
+~
+~
+0 0 402022
+S
+#402030
+&+LA &+wSouthern Corridor &+Lwithin &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the Library has tall ceilings and polished obsidian floors. There are purple and black woven carpets of fine quality that line them as runners to cut down on the sound from footsteps echoing in these halls. Upon the wall are scones of torches with faerie fire, which help illuminate the way.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402012
+D1
+~
+~
+1 0 402032
+D2
+~
+~
+1 0 402031
+D3
+~
+~
+1 0 402040
+S
+#402031
+&+LThe &+wOffice&+L of the &+wDean&+L of the Department of &+YConjuration&N~
+&+L   This room is finely decorated with silk satin-covered furnitures, the finest teakwood desk, and the walls are lined with arcane tomes of varying levels of historical value to scholars of the occult. The room is dimly lit by floating candles and orbs of swirling pale mist.&N
+~
+402 9 0 0
+D0
+~
+~
+1 0 402030
+S
+#402032
+&+LA &+wVery Small Spiral Staircase&+L Carved in the Rock&N~
+&+L   This spiral staircase makes two complete circles as it winds down into the next level of the Library. The staircase is kind of tight and slightly clausterphobic, and because of its tight turns, it is difficult to adequately illuminate the area.&N
+~
+402 8457 0 0
+D3
+~
+~
+1 0 402030
+D5
+~
+~
+0 0 402033
+S
+#402033
+&+LA &+wFoyer&+L Outside the Golem Summoning Rooms&N~
+&+L   This large cavern below the main Library structure has several doors, all indicating various warding, elemental, and dimensional purposes. The glyphs are of an ancient language, etched into the basalt floor and glowing a cool blue hue. To the west edge of the cavern, a spiral staircase descends from above.&N
+~
+402 1073741833 0 0
+D0
+~
+~
+1 0 402034
+D2
+~
+~
+1 0 402035
+D4
+~
+~
+0 0 402032
+D6
+~
+~
+1 0 402037
+D7
+~
+~
+1 0 402039
+D8
+~
+~
+1 0 402036
+D9
+~
+~
+1 0 402038
+S
+#402034
+&+wA Warded Summoning Chamber to Contain Golems&N~
+&+L   This alcove has several concentric circles to summon and contain obsidian golems infused with various complex elemental and planar features. The circles gloe blue in their faint glyphs, which glitter on the basalt.&N
+~
+402 9 0 0
+D2
+~
+~
+1 0 402033
+S
+#402035
+&+wA Warded Summoning Chamber to Contain Golems&N~
+&+L   This alcove has several concentric circles to summon and contain obsidian golems infused with various complex elemental and planar features. The circles gloe blue in their faint glyphs, which glitter on the basalt.&N
+~
+402 9 0 0
+D0
+~
+~
+1 0 402033
+S
+#402036
+&+wA Warded Summoning Chamber to Contain Golems&N~
+&+L   This alcove has several concentric circles to summon and contain obsidian golems infused with various complex elemental and planar features. The circles gloe blue in their faint glyphs, which glitter on the basalt.&N
+~
+402 9 0 0
+D7
+~
+~
+1 0 402033
+S
+#402037
+&+wA Warded Summoning Chamber to Contain Golems&N~
+&+L   This alcove has several concentric circles to summon and contain obsidian golems infused with various complex elemental and planar features. The circles gloe blue in their faint glyphs, which glitter on the basalt.&N
+~
+402 9 0 0
+D9
+~
+~
+1 0 402033
+S
+#402038
+&+wA Warded Summoning Chamber to Contain Golems&N~
+&+L   This alcove has several concentric circles to summon and contain obsidian golems infused with various complex elemental and planar features. The circles gloe blue in their faint glyphs, which glitter on the basalt.&N
+~
+402 9 0 0
+D6
+~
+~
+1 0 402033
+S
+#402039
+&+wA Warded Summoning Chamber to Contain Golems&N~
+&+L   This alcove has several concentric circles to summon and contain obsidian golems infused with various complex elemental and planar features. The circles gloe blue in their faint glyphs, which glitter on the basalt.&N
+~
+402 9 0 0
+D8
+~
+~
+1 0 402033
+S
+#402040
+&+LA Library Section Dedicated to &+YConjuration&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402042
+D1
+~
+~
+1 0 402030
+D2
+~
+~
+0 0 402041
+S
+#402041
+&+LA Library Section Dedicated to &+rSu&+Rm&+Ym&+Wo&+Yn&+Re&+rrs&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402040
+S
+#402042
+&+LA Library Section Dedicated to &+cCo&+Cnt&+Wrol&+Cle&+crs&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D2
+~
+~
+0 0 402040
+S
+#402043
+&+LThe Bottom of a Wide Central Staircase Lit by &+mFa&+Mer&+mie &+MF&+mi&+Mr&+me&N~
+&+L   This wide central staircase has carpet runners of embroidered spidersilk up the central portion to keep the otherwise larve part of this cavern from echoing with every footstep upon these stairs. The walls have various designs of glowing and floating faerie fire that make the entire area glitter with a purple glow.&N
+~
+402 1073741833 0 0
+D3
+~
+~
+0 0 402013
+D4
+~
+~
+0 0 402044
+S
+#402044
+&+LThe Top of a Wide Central Staircase Lit by &+mFa&+Mer&+mie &+MF&+mi&+Mr&+me&N~
+&+L   This wide central staircase has carpet runners of embroidered spidersilk up the central portion to keep the otherwise larve part of this cavern from echoing with every footstep upon these stairs. The walls have various designs of glowing and floating faerie fire that make the entire area glitter with a purple glow.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402064
+D1
+~
+~
+0 0 402045
+D2
+~
+~
+0 0 402063
+D3
+~
+~
+1 0 402065
+D5
+~
+~
+0 0 402043
+S
+#402045
+&+LAn &+wEastern Corridor &+Lwithin &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the Library has tall ceilings and polished obsidian floors. There are purple and black woven carpets of fine quality that line them as runners to cut down on the sound from footsteps echoing in these halls. Upon the wall are scones of torches with faerie fire, which help illuminate the way.&N
+~
+402 9 0 0
+D0
+~
+~
+1 0 402047
+D1
+~
+~
+1 0 402046
+D2
+~
+~
+1 0 402051
+D3
+~
+~
+0 0 402044
+S
+#402046
+&+LThe &+wOffice&+L of the &+wDean&+L of the Department of &+mNecromancy&N~
+&+L   This room is finely decorated with silk satin-covered furnitures, the finest teakwood desk, and the walls are lined with arcane tomes of varying levels of historical value to scholars of the occult. The room is dimly lit by floating candles and orbs of swirling pale mist.&N
+~
+402 9 0 0
+D3
+~
+~
+1 0 402045
+S
+#402047
+&+LA Library Section Dedicated to &+mNecromancy&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402049
+D1
+~
+~
+0 0 402050
+D2
+~
+~
+1 0 402045
+D3
+~
+~
+0 0 402048
+S
+#402048
+&+LA Library Section Dedicated to &+mDia&+rbolis&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D1
+~
+~
+0 0 402047
+S
+#402049
+&+LA Library Section Dedicated to &+mNe&+Lcro&+mlytes&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D2
+~
+~
+0 0 402047
+S
+#402050
+&+LA Library Section Dedicated to &+wReap&+Lers&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D3
+~
+~
+0 0 402047
+S
+#402051
+&+LThe &+wTop&+L of a &+wVery Steep Spiral Staircase&N~
+&+L   This spiral staircase descends steeply down into a dark depth of no light. There is no embellishment to this area, and the stone is rougher-cut than other places within the Library.&N
+~
+402 9 0 0
+D0
+~
+~
+1 0 402045
+D5
+~
+~
+0 0 402052
+F
+60
+S
+#402052
+&+LThe &+wCenter&+L of a &+wVery Steep Spiral Staircase&N~
+&+L   This spiral staircase descends steeply down into a dark depth of no light. There is no embellishment to this area, and the stone is rougher-cut than other places within the Library.&N
+~
+402 1073750281 0 0
+D4
+~
+~
+0 0 402051
+D5
+~
+~
+0 0 402053
+F
+70
+S
+#402053
+&+LThe &+wBottom&+L of a&+w Steep Spiral Staircase&N~
+&+L   This spiral staircase descends steeply down into a dark depth of no light. There is no embellishment to this area, and the stone is rougher-cut than other places within the Library.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402054
+D4
+~
+~
+0 0 402052
+S
+#402054
+&+LA &+wDoorway &+Lbefore a &+wCrypt&N~
+&+L   The stairway descends to a small room, in which there is a crude door to the crypts of the Library along the north wall. The room is otherwise very barren with little to no adornment.&N
+~
+402 1073872909 0 0
+D0
+~
+~
+1 0 402055
+D2
+~
+~
+0 0 402053
+S
+#402055
+&+LThe &+mFoyer&+L of the &+mLibrary Crypts&N~
+&+L   This room is actually lit only with a sort of glowing white will'o'wisp floating about. Otherwise it is quite a dark room, and there are various crypts radiating off of this main lobby room.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402056
+D2
+~
+~
+1 0 402054
+S
+#402056
+&+mWithin the Crypts of the Library&N~
+&+L   This main central room has vaulted ceilings of stone that has been reinforced with ornate columns. The vaulted ceiling has ribs that support the structure's carved-out interior shape. There are openings to the sides both east and west.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402059
+D1
+~
+~
+0 0 402057
+D2
+~
+~
+0 0 402055
+D3
+~
+~
+0 0 402058
+S
+#402057
+&+mA Smaller Side Crypt&N~
+&+L   This smaller crypt off of the main crypt has niches carved into the walls to hold corpses on their slabs. These corpses provide the various necromancers with sufficient supply of materials for their experiments.&N
+~
+402 262153 29 0
+D3
+~
+~
+0 0 402056
+S
+#402058
+&+mA Dark Smaller Side Crypt&N~
+&+L   This smaller crypt off of the main crypt has niches carved into the walls to hold corpses on their slabs. These corpses provide the various necromancers with sufficient supply of materials for their experiments.&N
+~
+402 2359305 29 0
+D1
+~
+~
+0 0 402056
+S
+#402059
+&+mDeeper Within the Crypts of the Library&N~
+&+L   This main central room has vaulted ceilings of stone that has been reinforced with ornate columns. The vaulted ceiling has ribs that support the structure's carved-out interior shape. There are openings to the sides both east and west.&N
+~
+402 9 0 0
+D0
+~
+~
+5 0 402062
+D1
+~
+~
+0 0 402060
+D2
+~
+~
+0 0 402056
+D3
+~
+~
+0 0 402061
+S
+#402060
+&+mA Smelly Side Crypt&N~
+&+L   This smaller crypt off of the main crypt has niches carved into the walls to hold corpses on their slabs. These corpses provide the various necromancers with sufficient supply of materials for their experiments.&N
+~
+402 262153 29 0
+D3
+~
+~
+0 0 402059
+S
+#402061
+&+mA Dimly-Lit Side Crypt&N~
+&+L   This smaller crypt off of the main crypt has niches carved into the walls to hold corpses on their slabs. These corpses provide the various necromancers with sufficient supply of materials for their experiments.&N
+~
+402 262153 29 0
+D1
+~
+~
+0 0 402059
+S
+#402062
+&+mThe Large Crypt of a &+wD&+Wr&+wa&+Lc&+wol&+Wi&+wc&+Lh&N~
+&+L   This room opens up into a rather vast space in comparison to the rest of the crypts, and has a rather high ceiling. Within the room is a central platform, which appears large enough for an average Goblin's home to fit within the footprint. There are small tables and benches along the sides of the walls, perhaps to allow visitors to view whatever occurs within this room.&N
+~
+402 136347721 0 0
+D2
+~
+~
+1 0 402059
+S
+#402063
+&+LA &+wSouthern Corridor &+Lwithin &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the Library has tall ceilings and polished obsidian floors. There are purple and black woven carpets of fine quality that line them as runners to cut down on the sound from footsteps echoing in these halls. Upon the wall are scones of torches with faerie fire, which help illuminate the way.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402044
+D1
+~
+~
+1 0 402110
+D3
+~
+~
+1 0 402139
+D4
+~
+~
+0 0 402071
+S
+#402064
+&+LA &+wNorthern Corridor &+Lwithin &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the Library has tall ceilings and polished obsidian floors. There are purple and black woven carpets of fine quality that line them as runners to cut down on the sound from footsteps echoing in these halls. Upon the wall are scones of torches with faerie fire, which help illuminate the way.&N
+~
+402 9 0 0
+D0
+~
+~
+1 0 402136
+D1
+~
+~
+1 0 402138
+D2
+~
+~
+0 0 402044
+D3
+~
+~
+1 0 402137
+S
+#402065
+&+LAn &+wUn&+Wu&+ws&+Lu&+wal&+Wl&+wy &+cSi&+Cle&+cnt &+wFoyer&+L before a &+wVisitor's Council Room&N~
+&+L   This is one of the entrances to one of the few social areas of the Library. As such, this foyer is enhanced with an &+wu&+Wn&+wu&+Ls&+wu&+Wa&+wl &+csi&+Clen&+cce&+L to act as a barrier between the social interactions and the serious scholarly pursuits.&N
+~
+402 10616989 0 0
+D1
+~
+~
+1 0 402044
+D3
+~
+~
+0 0 402066
+S
+#402066
+&+LAround the Edges of a &+wLarge &+cCir&+Ccu&+clar &+wMeeting &+LRoom&N~
+&+L    This is where many of the dignitaries of the Underdark come to discuss policy, scholars come to give lectures, and travellers come to relax. There is a raised central platform for when speakers give formal lectures, otherwise, many just mingle about the room in its terraced circular benches.&N
+~
+402 9 0 0
+D1
+~
+~
+0 0 402065
+D3
+~
+~
+0 0 402068
+D6
+~
+~
+0 0 402067
+D7
+~
+~
+0 0 402069
+S
+#402067
+&+LAround the Edges of a &+wLarge &+cCir&+Ccu&+clar &+wMeeting &+LRoom&N~
+&+L    This is where many of the dignitaries of the Underdark come to discuss policy, scholars come to give lectures, and travellers come to relax. There is a raised central platform for when speakers give formal lectures, otherwise, many just mingle about the room in its terraced circular benches.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402146
+D2
+~
+~
+0 0 402068
+D7
+~
+~
+0 0 402070
+D9
+~
+~
+0 0 402066
+S
+#402068
+&+LThe Round &+WCenter Platform&+L of a &+wLarge &+cCir&+Ccu&+clar &+wVisitor's Meeting &+LRoom&N~
+&+L    This is where many of the dignitaries of the Underdark come to discuss policy, scholars come to give lectures, and travellers come to relax. There is a raised central platform for when speakers give formal lectures, otherwise, many just mingle about the room in its terraced circular benches.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402067
+D1
+~
+~
+0 0 402066
+D2
+~
+~
+0 0 402069
+D3
+~
+~
+0 0 402070
+S
+#402069
+&+LAround the Edges of a &+wLarge &+cCir&+Ccu&+clar &+wMeeting &+LRoom&N~
+&+L    This is where many of the dignitaries of the Underdark come to discuss policy, scholars come to give lectures, and travellers come to relax. There is a raised central platform for when speakers give formal lectures, otherwise, many just mingle about the room in its terraced circular benches.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402068
+D2
+~
+~
+0 0 402145
+D6
+~
+~
+0 0 402070
+D8
+~
+~
+0 0 402066
+S
+#402070
+&+LAround the Edges of a &+wLarge &+cCir&+Ccu&+clar &+wMeeting &+LRoom&N~
+&+L    This is where many of the dignitaries of the Underdark come to discuss policy, scholars come to give lectures, and travellers come to relax. There is a raised central platform for when speakers give formal lectures, otherwise, many just mingle about the room in its terraced circular benches.&N
+~
+402 9 0 0
+D1
+~
+~
+0 0 402068
+D3
+~
+~
+0 0 402144
+D8
+~
+~
+0 0 402067
+D9
+~
+~
+0 0 402069
+S
+#402071
+&+LA &+wSpiral Staircase&+L into a &+wSlender Tower&N~
+&+L   This thin spiral staircase ascends into a completely dark tower. The staircase is tight and clausterphobic, and the stairs are tall and shallow. There is a thickness to the shadows here which permeates the air.&N
+~
+402 1075847433 0 0
+D4
+~
+~
+1 0 402072
+D5
+~
+~
+0 0 402063
+F
+50
+S
+#402072
+&+LWithin a &+wLarge Room &+Lof &+wS&+Wh&+wif&+Lt&+wi&+Wn&+wg &+LShadows&N~
+&+L   This room has a magical darkness that permeates the air, walls, and shadows. The room is a perfect octagon, with each panel of the octagon having an ambiguous figure that shifts and changes with a sort of enchanted magic. Within the very middle of the room there is a portal that crackles with magic.&N
+~
+402 1075838985 0 0
+D5
+~
+~
+1 0 402071
+S
+#402073
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+7 402039 402100
+D1
+~
+~
+0 0 402074
+D2
+~
+~
+0 0 402076
+D4
+~
+~
+0 0 402091
+D5
+~
+~
+0 0 402082
+D9
+~
+~
+0 0 402077
+S
+#402074
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D1
+~
+~
+0 0 402092
+D2
+~
+~
+0 0 402077
+D3
+~
+~
+0 0 402073
+D4
+~
+~
+0 0 402074
+D5
+~
+~
+0 0 402083
+S
+#402075
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D2
+~
+~
+0 0 402078
+D3
+~
+~
+0 0 402074
+D4
+~
+~
+0 0 402093
+D5
+~
+~
+0 0 402084
+D7
+~
+~
+0 0 402077
+S
+#402076
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402073
+D1
+~
+~
+0 0 402077
+D2
+~
+~
+0 0 402079
+D4
+~
+~
+0 0 402094
+D5
+~
+~
+0 0 402085
+S
+#402077
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402074
+D1
+~
+~
+0 0 402078
+D2
+~
+~
+0 0 402080
+D3
+~
+~
+0 0 402076
+D4
+~
+~
+0 0 402095
+D5
+~
+~
+0 0 402086
+D6
+~
+~
+0 0 402073
+D7
+~
+~
+0 0 402079
+D8
+~
+~
+0 0 402075
+D9
+~
+~
+0 0 402081
+S
+#402078
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402075
+D2
+~
+~
+0 0 402081
+D3
+~
+~
+0 0 402077
+D4
+~
+~
+0 0 402096
+D5
+~
+~
+0 0 402087
+S
+#402079
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402076
+D1
+~
+~
+0 0 402080
+D4
+~
+~
+0 0 402097
+D5
+~
+~
+0 0 402088
+D8
+~
+~
+0 0 402077
+S
+#402080
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402077
+D1
+~
+~
+0 0 402081
+D3
+~
+~
+0 0 402079
+D4
+~
+~
+0 0 402098
+D5
+~
+~
+0 0 402089
+S
+#402081
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402078
+D3
+~
+~
+0 0 402080
+D4
+~
+~
+0 0 402099
+D5
+~
+~
+0 0 402090
+D6
+~
+~
+0 0 402077
+S
+#402082
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D1
+~
+~
+0 0 402082
+D2
+~
+~
+0 0 402085
+D4
+~
+~
+0 0 402073
+D5
+~
+~
+0 0 402091
+D9
+~
+~
+0 0 402086
+S
+#402083
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D1
+~
+~
+0 0 402084
+D2
+~
+~
+0 0 402086
+D3
+~
+~
+0 0 402082
+D4
+~
+~
+0 0 402074
+D5
+~
+~
+0 0 402092
+S
+#402084
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D2
+~
+~
+0 0 402087
+D3
+~
+~
+0 0 402083
+D4
+~
+~
+0 0 402075
+D5
+~
+~
+0 0 402093
+D7
+~
+~
+0 0 402086
+S
+#402085
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402082
+D1
+~
+~
+0 0 402086
+D2
+~
+~
+0 0 402088
+D4
+~
+~
+0 0 402076
+D5
+~
+~
+0 0 402094
+S
+#402086
+&+LThe &+CCalm&+w in the &+WMiddle&+L of the &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1210220629 22 0
+D0
+~
+~
+0 0 402083
+D1
+~
+~
+0 0 402087
+D2
+~
+~
+0 0 402089
+D3
+~
+~
+0 0 402085
+D4
+~
+~
+0 0 402077
+D5
+~
+~
+0 0 402095
+D6
+~
+~
+0 0 402082
+D7
+~
+~
+0 0 402090
+D8
+~
+~
+0 0 402084
+D9
+~
+~
+0 0 402088
+S
+#402087
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402084
+D2
+~
+~
+0 0 402090
+D3
+~
+~
+0 0 402086
+D4
+~
+~
+0 0 402078
+D5
+~
+~
+0 0 402096
+S
+#402088
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402085
+D1
+~
+~
+0 0 402089
+D4
+~
+~
+0 0 402079
+D5
+~
+~
+0 0 402097
+D8
+~
+~
+0 0 402086
+S
+#402089
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402086
+D1
+~
+~
+0 0 402090
+D3
+~
+~
+0 0 402088
+D4
+~
+~
+0 0 402080
+D5
+~
+~
+0 0 402098
+S
+#402090
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402087
+D3
+~
+~
+0 0 402089
+D4
+~
+~
+0 0 402081
+D5
+~
+~
+0 0 402099
+D6
+~
+~
+0 0 402086
+S
+#402091
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D1
+~
+~
+0 0 402092
+D2
+~
+~
+0 0 402094
+D4
+~
+~
+0 0 402082
+D5
+~
+~
+0 0 402073
+D9
+~
+~
+0 0 402095
+S
+#402092
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D1
+~
+~
+0 0 402093
+D2
+~
+~
+0 0 402095
+D3
+~
+~
+0 0 402091
+D4
+~
+~
+0 0 402083
+D5
+~
+~
+0 0 402074
+S
+#402093
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D2
+~
+~
+0 0 402096
+D3
+~
+~
+0 0 402092
+D4
+~
+~
+0 0 402084
+D5
+~
+~
+0 0 402075
+D7
+~
+~
+0 0 402095
+S
+#402094
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402091
+D1
+~
+~
+0 0 402095
+D2
+~
+~
+0 0 402097
+D4
+~
+~
+0 0 402085
+D5
+~
+~
+0 0 402076
+S
+#402095
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402092
+D1
+~
+~
+0 0 402096
+D2
+~
+~
+0 0 402098
+D3
+~
+~
+0 0 402094
+D4
+~
+~
+0 0 402086
+D5
+~
+~
+0 0 402077
+D6
+~
+~
+0 0 402091
+D7
+~
+~
+0 0 402097
+D8
+~
+~
+0 0 402093
+D9
+~
+~
+0 0 402099
+S
+#402096
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402093
+D2
+~
+~
+0 0 402099
+D3
+~
+~
+0 0 402095
+D4
+~
+~
+0 0 402087
+D5
+~
+~
+0 0 402078
+S
+#402097
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402094
+D1
+~
+~
+0 0 402098
+D4
+~
+~
+0 0 402088
+D5
+~
+~
+0 0 402079
+D8
+~
+~
+0 0 402095
+S
+#402098
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402095
+D1
+~
+~
+0 0 402099
+D3
+~
+~
+0 0 402097
+D4
+~
+~
+0 0 402089
+D5
+~
+~
+0 0 402080
+S
+#402099
+&+LA &+wPlane &+Lof &+cDr&+Cea&+cms &+Land &+WN&+wi&+Lg&+wh&+Wt&+wm&+La&+wr&+We&+Ls&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1075838977 22 0
+D0
+~
+~
+0 0 402096
+D3
+~
+~
+0 0 402098
+D4
+~
+~
+0 0 402090
+D5
+~
+~
+0 0 402081
+D6
+~
+~
+0 0 402095
+S
+#402100
+&+cA &+CTreasury &+Lof &+wI&+Wl&+wl&+Lu&+ws&+Wi&+Lo&+wn&+Ws&+L and &+cDr&+Cea&+cms&N~
+&+c   This shifting plane of chaotic dreams sends a cacophany of sounds and visions past in an ethereal mist. Small rips in reality show bubbles into the dreams of other souls, their most desperate hopes and their most dire nightmares from the recesses of their imaginations.&N
+~
+402 1218740289 22 0
+D2
+~
+~
+7 402039 402073
+S
+#402101
+&+WLOAD GRID FOR DEMON - OBJECT 3&N~
+&+RIf you end up here, petition to a god immediately to report the bug that got you here.&N
+~
+402 142639305 0 0
+D5
+~
+~
+0 0 402100
+S
+#402102
+&+WLOAD GRID FOR DEMON - OBJECT 2&N~
+&+RIf you end up here, petition to a god immediately to report the bug that got you here.&N
+~
+402 142639305 0 0
+D5
+~
+~
+0 0 402100
+S
+#402103
+&+WLOAD GRID FOR DEMON - OBJECT 1&N~
+&+RIf you end up here, petition to a god immediately to report the bug that got you here.&N
+~
+402 142639305 0 0
+D5
+~
+~
+0 0 402100
+S
+#402104
+&+WLOAD GRID FOR DEMON - OBJECT 4&N~
+&+RIf you end up here, petition to a god immediately to report the bug that got you here.&N
+~
+402 142639305 0 0
+D5
+~
+~
+0 0 402100
+S
+#402105
+&+WLOAD GRID FOR DEMON - OBJECT 8&N~
+&+RIf you end up here, petition to a god immediately to report the bug that got you here.&N
+~
+402 142639305 0 0
+D5
+~
+~
+0 0 402100
+S
+#402106
+&+WLOAD GRID FOR DEMON - OBJECT 6&N~
+&+RIf you end up here, petition to a god immediately to report the bug that got you here.&N
+~
+402 142639305 0 0
+D5
+~
+~
+0 0 402100
+S
+#402107
+&+WLOAD GRID FOR DEMON - OBJECT 7&N~
+&+RIf you end up here, petition to a god immediately to report the bug that got you here.&N
+~
+402 142639305 0 0
+D5
+~
+~
+0 0 402100
+S
+#402108
+&+WLOAD GRID FOR DEMON - OBJECT 5&N~
+&+RIf you end up here, petition to a god immediately to report the bug that got you here.&N
+~
+402 142639305 0 0
+D5
+~
+~
+0 0 402100
+S
+#402109
+&+WLOAD GRID FOR DEMON - &+RDEMON LOADS HERE&N~
+&+RIf you end up here, petition to a god immediately to report the bug that got you here.&N
+~
+402 142639305 0 0
+D0
+~
+~
+0 0 402103
+D1
+~
+~
+0 0 402102
+D2
+~
+~
+0 0 402101
+D3
+~
+~
+0 0 402104
+D6
+~
+~
+0 0 402108
+D7
+~
+~
+0 0 402106
+D8
+~
+~
+0 0 402107
+D9
+~
+~
+0 0 402105
+S
+#402110
+&+LA Library Section Dedicated to &+WIl&+cl&+Cus&+ci&+Won&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402111
+D2
+~
+~
+0 0 402112
+D3
+~
+~
+1 0 402063
+S
+#402111
+&+LA Library Section Dedicated to &+mDark &+LDreamers&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D2
+~
+~
+0 0 402110
+S
+#402112
+&+LA Library Section Dedicated to &+BM&+Yag&+Bic&+Yia&+Bns&N~
+&+L   This room is filled with several rows of shelves, as well as several curious objects in glass cases. Each of the shelves appears to be dedicated to a variety of spells within the sphere of magic of the section it pertains to.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402110
+S
+#402113
+&+LA Small &+wScholar's Supply Shop &+Lwithin the &+WLibrary&N~
+&+L   This dimly lit shop has shelves carved out of the obsidian walls to hold all manner of curio that a scholar or a student might need within the course of their stay at the Library. In the middle is a table covered in other curios.&N
+~
+402 9 0 0
+D1
+~
+~
+1 0 402012
+S
+#402114
+&+LThe &+WLibrary &+wDepository&N~
+&+L   Due to the nature of this outpost, and the nature of rising tuition, a bank has baan made available in recent years to accomodate the traveling students' needs upon coming to the Great Library. One never knows who they might be able to purchase an education from at a place such as this.&N
+~
+402 9 0 0
+D3
+~
+~
+1 0 402012
+S
+#402115
+&+LThe &+WInn&+L at &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This room is the reception area for the inn here at the &+wThe Great &+WLi&+wb&+Wr&+wa&+Lr&+wy &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n&+L, so that the visiting scholars might have a place to take comfort. There is a series of rather comfortable looking chairs about the room for people to meet and mingle at the inn. The room is elegantly decorated with sculpted friezes in the obsidian stone walls which have been polished to glisten.&N
+~
+402 524296 0 0
+D1
+~
+~
+1 0 402011
+S
+#402116
+&+LThe &+wTop&+L of a &+wSpiral Staircase&+L to the &+WBasement&n~
+&+L   This spiral staircase descends steeply down into a dark depth of no light. There is no embellishment to this area, and the stone is rougher-cut than other places within the Library.&N
+~
+402 9 0 0
+D0
+~
+~
+1 0 402013
+D5
+~
+~
+0 0 402117
+F
+60
+S
+#402117
+&+LThe &+wBottom&+L of the &+wStaircase&+L at the &+wLibrary &+WBasement&N~
+&+L   This spiral staircase descends steeply down into a dark depth of no light. There is no embellishment to this area, and the stone is rougher-cut than other places within the Library. This area appears to be a large cavern, with exits lit by the faint glow of faerie fire in the halls.&N
+~
+402 1073872909 15 0
+D0
+~
+~
+0 0 402118
+D2
+~
+~
+0 0 402121
+D4
+~
+~
+0 0 402116
+S
+#402118
+&+LA &+wHallway&+L in the &+wBasement &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the basement is rougher-cut into the rock of the Underdark than the rest of the structures. The floors have very plain patterns carved into the stones. The walls remain unadorned. The ceilings have ribbed vaulting to support the floors above it - and all of the structural weight of the books.&N
+~
+402 9 15 0
+D0
+~
+~
+0 0 402119
+D1
+~
+~
+1 0 402126
+D2
+~
+~
+0 0 402117
+D3
+~
+~
+1 0 402132
+E
+default~
+~
+S
+#402119
+&+LA &+wHallway&+L in the &+wBasement &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the basement is rougher-cut into the rock of the Underdark than the rest of the structures. The floors have very plain patterns carved into the stones. The walls remain unadorned. The ceilings have ribbed vaulting to support the floors above it - and all of the structural weight of the books.&N
+~
+402 9 15 0
+D0
+~
+~
+0 0 402120
+D1
+~
+~
+1 0 402125
+D2
+~
+~
+0 0 402118
+D3
+~
+~
+1 0 402131
+E
+default~
+~
+S
+#402120
+&+LThe End of a &+wHallway&+L in the &+wBasement &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the basement is rougher-cut into the rock of the Underdark than the rest of the structures. The floors have very plain patterns carved into the stones. The walls remain unadorned. The ceilings have ribbed vaulting to support the floors above it - and all of the structural weight of the books.&N
+~
+402 9 15 0
+D1
+~
+~
+1 0 402124
+D2
+~
+~
+0 0 402119
+D3
+~
+~
+1 0 402130
+E
+default~
+~
+S
+#402121
+&+LA &+wHallway&+L in the &+wBasement &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the basement is rougher-cut into the rock of the Underdark than the rest of the structures. The floors have very plain patterns carved into the stones. The walls remain unadorned. The ceilings have ribbed vaulting to support the floors above it - and all of the structural weight of the books.&N
+~
+402 9 15 0
+D0
+~
+~
+0 0 402117
+D1
+~
+~
+1 0 402127
+D2
+~
+~
+0 0 402122
+D3
+~
+~
+1 0 402133
+E
+default~
+~
+S
+#402122
+&+LA &+wHallway&+L in the &+wBasement &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the basement is rougher-cut into the rock of the Underdark than the rest of the structures. The floors have very plain patterns carved into the stones. The walls remain unadorned. The ceilings have ribbed vaulting to support the floors above it - and all of the structural weight of the books.&N
+~
+402 9 15 0
+D0
+~
+~
+0 0 402121
+D1
+~
+~
+1 0 402128
+D2
+~
+~
+0 0 402123
+D3
+~
+~
+1 0 402134
+E
+default~
+~
+S
+#402123
+&+LThe End of a &+wHallway&+L in the &+wBasement &+Lof &+wL&+W's&+wri&+Ll&+wli&+Wz&+wzin&n~
+&+L   This corridor within the basement is rougher-cut into the rock of the Underdark than the rest of the structures. The floors have very plain patterns carved into the stones. The walls remain unadorned. The ceilings have ribbed vaulting to support the floors above it - and all of the structural weight of the books.&N
+~
+402 9 15 0
+D0
+~
+~
+0 0 402122
+D1
+~
+~
+1 0 402129
+D3
+~
+~
+1 0 402135
+E
+default~
+~
+S
+#402124
+&+LA &+wDark Room &+Lwithin the &+wBasement &+Lof the &+wLibrary&N~
+&+L   This room appears to be a dormitory of some variety, where perhaps servants or lesser creatures are given a room in which to rest. It is not elaborately decorated, but it does have a rather series of platforms that may resemble a bed for a variety of creatures. There are also dressers for personal belongings, and tables and chairs.&N
+~
+402 9 15 0
+D3
+~
+~
+1 0 402120
+S
+#402125
+&+LA Storage Room within the Basement&N~
+&+L   This storage room within the basement of the Library has a variety of shelves and chests and other manner of places to contain items. Life in the Underdark is harsh, and the simple comforts such as food, wine, and other supplies are desperately needed. The merchants that come by bring such items, which are bought in bulk and stored down here.&N
+~
+402 9 15 0
+D3
+~
+~
+1 0 402119
+S
+#402126
+&+LA &+wDark Room &+Lwithin the &+wBasement &+Lof the &+wLibrary&N~
+&+L   This room appears to be a dormitory of some variety, where perhaps servants or lesser creatures are given a room in which to rest. It is not elaborately decorated, but it does have a rather series of platforms that may resemble a bed for a variety of creatures. There are also dressers for personal belongings, and tables and chairs.&N
+~
+402 9 15 0
+D3
+~
+~
+1 0 402118
+S
+#402127
+&+LA &+wDark Room &+Lwithin the &+wBasement &+Lof the &+wLibrary&N~
+&+L   This room appears to be a dormitory of some variety, where perhaps servants or lesser creatures are given a room in which to rest. It is not elaborately decorated, but it does have a rather series of platforms that may resemble a bed for a variety of creatures. There are also dressers for personal belongings, and tables and chairs.&N
+~
+402 9 15 0
+D3
+~
+~
+1 0 402121
+S
+#402128
+&+LA Storage Room within the Basement&N~
+&+L   This storage room within the basement of the Library has a variety of shelves and chests and other manner of places to contain items. Life in the Underdark is harsh, and the simple comforts such as food, wine, and other supplies are desperately needed. The merchants that come by bring such items, which are bought in bulk and stored down here.&N
+~
+402 9 15 0
+D3
+~
+~
+1 0 402122
+S
+#402129
+&+LA &+wDark Room &+Lwithin the &+wBasement &+Lof the &+wLibrary&N~
+&+L   This room appears to be a dormitory of some variety, where perhaps servants or lesser creatures are given a room in which to rest. It is not elaborately decorated, but it does have a rather series of platforms that may resemble a bed for a variety of creatures. There are also dressers for personal belongings, and tables and chairs.&N
+~
+402 9 15 0
+D3
+~
+~
+1 0 402123
+S
+#402130
+&+LA &+wDark Room &+Lwithin the &+wBasement &+Lof the &+wLibrary&N~
+&+L   This room appears to be a dormitory of some variety, where perhaps servants or lesser creatures are given a room in which to rest. It is not elaborately decorated, but it does have a rather series of platforms that may resemble a bed for a variety of creatures. There are also dressers for personal belongings, and tables and chairs.&N
+~
+402 9 15 0
+D1
+~
+~
+1 0 402120
+S
+#402131
+&+LA Storage Room within the Basement&N~
+&+L   This storage room within the basement of the Library has a variety of shelves and chests and other manner of places to contain items. Life in the Underdark is harsh, and the simple comforts such as food, wine, and other supplies are desperately needed. The merchants that come by bring such items, which are bought in bulk and stored down here.&N
+~
+402 9 15 0
+D1
+~
+~
+1 0 402119
+S
+#402132
+&+LA &+wDark Room &+Lwithin the &+wBasement &+Lof the &+wLibrary&N~
+&+L   This room appears to be a dormitory of some variety, where perhaps servants or lesser creatures are given a room in which to rest. It is not elaborately decorated, but it does have a rather series of platforms that may resemble a bed for a variety of creatures. There are also dressers for personal belongings, and tables and chairs.&N
+~
+402 9 15 0
+D1
+~
+~
+1 0 402118
+S
+#402133
+&+LA &+wDark Room &+Lwithin the &+wBasement &+Lof the &+wLibrary&N~
+&+L   This room appears to be a dormitory of some variety, where perhaps servants or lesser creatures are given a room in which to rest. It is not elaborately decorated, but it does have a rather series of platforms that may resemble a bed for a variety of creatures. There are also dressers for personal belongings, and tables and chairs.&N
+~
+402 9 15 0
+D1
+~
+~
+1 0 402121
+S
+#402134
+&+LA Storage Room within the Basement&N~
+&+L   This storage room within the basement of the Library has a variety of shelves and chests and other manner of places to contain items. Life in the Underdark is harsh, and the simple comforts such as food, wine, and other supplies are desperately needed. The merchants that come by bring such items, which are bought in bulk and stored down here.&N
+~
+402 9 15 0
+D1
+~
+~
+1 0 402122
+S
+#402135
+&+LA &+wDark Room &+Lwithin the &+wBasement &+Lof the &+wLibrary&N~
+&+L   This room appears to be a dormitory of some variety, where perhaps servants or lesser creatures are given a room in which to rest. It is not elaborately decorated, but it does have a rather series of platforms that may resemble a bed for a variety of creatures. There are also dressers for personal belongings, and tables and chairs.&N
+~
+402 9 15 0
+D1
+~
+~
+1 0 402123
+S
+#402136
+&+LA &+wShop&+L of &+cA&+Cl&+cc&+Ch&+ce&+Cm&+ci&+Cc&+ca&+Cl &+cCurios&N~
+&+L   This room has a large laboratory in the back, filled with every variety of bubbling colorful potions in glass beakers and tubes being brewed. A small bit of magical light flutters under them, creating the heat required to develop. The room has a variety of shelves and cabinets filled with alchemical supplies and equipment.&N
+~
+402 134250701 0 0
+D0
+~
+~
+1 0 402140
+D2
+~
+~
+1 0 402064
+S
+#402137
+&+LA &+WLibrary&+L of &+mBardic&+w Tales &+Lof &+wEpic &+mAdventures&N~
+&+L   This room is an over-stuffed library of many tomes, however, many of them remain untouched and covered in dust. Instead, the room has been further cramped with the inclusion of a dozen chairs, meant to occupy those who would come hear the greatest bards of the lands sing and tell tales, rather than have to read about them.&N
+~
+402 9 0 0
+D1
+~
+~
+1 0 402064
+S
+#402138
+&+LThe &+wOffice&+L of the &+wDean&+L of the Department of &+wEthermancers&N~
+&+L   This room is finely decorated with silk satin-covered furnitures, the finest teakwood desk, and the walls are lined with arcane tomes of varying levels of historical value to scholars of the occult. The room is dimly lit by floating candles and orbs of swirling pale mist.&N
+~
+402 9 0 0
+D3
+~
+~
+1 0 402064
+S
+#402139
+&+LThe &+wOffice&+L of the &+wDean&+L of the Department of &+bPsionicists&N~
+&+L   This room is finely decorated with silk satin-covered furnitures, the finest teakwood desk, and the walls are lined with arcane tomes of varying levels of historical value to scholars of the occult. The room is dimly lit by floating candles and orbs of swirling pale mist.&N
+~
+402 9 0 0
+D1
+~
+~
+1 0 402063
+S
+#402140
+&+LA &+MGlowing Mushroom &+mGarden&N~
+&+m   This garden within an alcove of the underdark rock that has been carved out for this Library to exist is a curious one indeed, filled with every variety of mushroom and fungus known to the Underdark. Many of the mushroom and fungi here are helpful in the creation of many potions, elixirs, and tinctures.&N
+~
+402 9 31 0
+D2
+~
+~
+1 0 402136
+D6
+~
+~
+0 0 402143
+D8
+~
+~
+0 0 402141
+S
+#402141
+&+LA &+MGlowing Mushroom &+mGarden&N~
+&+m   This garden within an alcove of the underdark rock that has been carved out for this Library to exist is a curious one indeed, filled with every variety of mushroom and fungus known to the Underdark. Many of the mushroom and fungi here are helpful in the creation of many potions, elixirs, and tinctures.&N
+~
+402 9 31 0
+D6
+~
+~
+0 0 402142
+D7
+~
+~
+0 0 402140
+S
+#402142
+&+LA &+MGlowing Mushroom &+mGarden&N~
+&+m   This garden within an alcove of the underdark rock that has been carved out for this Library to exist is a curious one indeed, filled with every variety of mushroom and fungus known to the Underdark. Many of the mushroom and fungi here are helpful in the creation of many potions, elixirs, and tinctures.&N
+~
+402 9 31 0
+D7
+~
+~
+0 0 402143
+D9
+~
+~
+0 0 402141
+S
+#402143
+&+LA &+MGlowing Mushroom &+mGarden&N~
+&+m   This garden within an alcove of the underdark rock that has been carved out for this Library to exist is a curious one indeed, filled with every variety of mushroom and fungus known to the Underdark. Many of the mushroom and fungi here are helpful in the creation of many potions, elixirs, and tinctures.&N
+~
+402 9 31 0
+D8
+~
+~
+0 0 402142
+D9
+~
+~
+0 0 402140
+S
+#402144
+&+LA &+wSide Alcove&+L near a &+wLarge &+cCir&+Ccu&+clar &+wMeeting &+LRoom&N~
+&+L    This is where many of the dignitaries of the Underdark come to discuss policy, scholars come to give lectures, and travellers come to relax. There is a raised central platform for when speakers give formal lectures, otherwise, many just mingle about the room in its terraced circular benches.&N
+~
+402 9 0 0
+D1
+~
+~
+0 0 402070
+S
+#402145
+&+LA &+wSide Alcove&+L near a &+wLarge &+cCir&+Ccu&+clar &+wMeeting &+LRoom&N~
+&+L    This is where many of the dignitaries of the Underdark come to discuss policy, scholars come to give lectures, and travellers come to relax. There is a raised central platform for when speakers give formal lectures, otherwise, many just mingle about the room in its terraced circular benches.&N
+~
+402 9 0 0
+D0
+~
+~
+0 0 402069
+S
+#402146
+&+LA &+wSide Alcove&+L near a &+wLarge &+cCir&+Ccu&+clar &+wMeeting &+LRoom&N~
+&+L    This is where many of the dignitaries of the Underdark come to discuss policy, scholars come to give lectures, and travellers come to relax. There is a raised central platform for when speakers give formal lectures, otherwise, many just mingle about the room in its terraced circular benches.&N
+~
+402 9 0 0
+D2
+~
+~
+0 0 402067
+S
+#402147
+&+WLoad Room for Fountain&N~
+If you ended up here, sorry, you're not supposed to be here. Something went wrong and please notify a god ASAP.
+~
+402 201359552 0 0
+D0
+~
+~
+0 0 402148
+D5
+~
+~
+0 0 402002
+S
+#402148
+&+WLoad Room Mobs that Go to the Fountain&N~
+If you ended up here, sorry, you're not supposed to be here. Something went wrong and please notify a god ASAP.
+~
+402 201359552 0 0
+D0
+~
+~
+0 0 402149
+D1
+~
+~
+0 0 402149
+D2
+~
+~
+0 0 402147
+D3
+~
+~
+0 0 402149
+D4
+~
+~
+0 0 402149
+D5
+~
+~
+0 0 402149
+D6
+~
+~
+0 0 402149
+D7
+~
+~
+0 0 402149
+D8
+~
+~
+0 0 402149
+D9
+~
+~
+0 0 402149
+S
+#402149
+&+WTRAP Room Mobs that Go to the Fountain&N~
+If you ended up here, sorry, you're not supposed to be here. Something went wrong and please notify a god ASAP.
+~
+402 201359552 0 0
+S

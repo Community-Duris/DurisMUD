@@ -20,7 +20,7 @@
 
 #define DFLT_PORT 7777          /* default port */
 // randomeq constants
-#define MAX_SLOT 108
+#define MAX_SLOT 109
 #define MAXMATERIAL 34
 #define MAXPREFIX 56
 #define RANDOM_EQ_VNUM 1252
@@ -78,7 +78,7 @@
 #define PULSE_BARD_UPDATE        35     /* 15 sec */
 #define PULSE_MOBILE             30     /* 10 seconds */
 #define PULSE_VEHICLE             2     /* for ships, 1 second */
-#define PULSE_VIOLENCE           16     /* combat round, 4 seconds - upped from 3 on 3/6/14 Drannak */
+#define PULSE_VIOLENCE           20     /* combat round, 5 seconds - from 4 Lohrr 6/16/14- upped from 3 on 3/6/14 Drannak */
 #define PULSE_SPELLCAST           9     /* casting crap about 2 seconds */
 #define PULSE_MOB_HUNT            6     /* how often a HUNTER mob moves */
 #define PULSE_AUCTION             8

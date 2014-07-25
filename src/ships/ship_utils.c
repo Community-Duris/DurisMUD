@@ -593,11 +593,11 @@ int getmap(P_ship ship)
       tactical_map[x][y].rroom = rroom;
       if ((world[rroom].sector_type < NUM_SECT_TYPES) && (world[rroom].sector_type > -1))
       {
-        sprintf(tactical_map[x][y].map, ship_symbol[(int) world[rroom].sector_type]);
+        sprintf(tactical_map[x][y].map, "%s", ship_symbol[(int) world[rroom].sector_type]);
       }
       else
       {
-        sprintf(tactical_map[x][y].map, ship_symbol[0]);
+        sprintf(tactical_map[x][y].map, "%s", ship_symbol[0]);
       }
       if (world[rroom].contents)
       {

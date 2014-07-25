@@ -81,7 +81,7 @@ crav cadaver~
 &+Lthe family seems to have retained its abilities of speed and martial
 &+Lprowess. It charges toward you with uncanny speed!
 ~
-1073875016 1 0 0 402727320 268437570 84934656 605033472 -1000 S
+1073875016 1 0 0 402727320 268437570 87031808 605033472 -1000 S
 ZO 0 64 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -95,7 +95,7 @@ A &+Cfrost &+Rwi&+rgh&+Rt&n~
 &+Lwhile they were alive. Now it is just a &+Gr&+go&+Gt&+gt&+Ge&+gd &+Lhusk which is covered in a
 &+Llight dusting of &+Bfr&+bos&+Bt&+L.&n
 ~
-1073879624 1 0 0 402727064 268435522 84934656 68161536 -1000 S
+1073879624 1 0 0 402727064 268435522 87031808 68161536 -1000 S
 UW 0 1048576 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -109,7 +109,7 @@ frozen corpse~
 &+Lcold temperatures of &+CIcecrag&+L. Its eye sockets are empty and black, it moves
 &+Lstiffly but with purpose as it approaches you.
 ~
-1073875528 1 0 0 402727064 2114 84934656 68161536 -1000 S
+1073875528 1 0 0 402727064 2114 87031808 68161536 -1000 S
 ZO 0 16385 0 4
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -176,7 +176,7 @@ elven scimitar boneblade~
 ~
 ~
 1073903688 1 0 0 940048536 268450014 83886080 68161536 -1000 S
-CN 0 2097152 3 2
+AV 0 2097152 3 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -335,8 +335,8 @@ haratius drakenstone vampire~
 &+rlast forever...now as a bloodthirsty vampire he does just that...
 ~
 285374538 1 0 0 402760126 268712158 83886088 1323008 -1000 S
-UM 0 17957376 0 -1
-60 0 0 1d1+1 1d1+1
+y 0 17957376 0 -1
+60 0 0 1d1+15000 1d1+1
 0.0.0.0 0
 8 8 0
 #142426
@@ -365,9 +365,9 @@ that she be raised as a Ju-Ju zombie, the type of zombie who seeps a
 horrific poison from their skin. She is now married to Haratius for
 eternity.
 ~
-8 1 0 0 403218618 276702 84934656 68431872 -1000 S
+10 1 0 0 403218618 276702 87031808 68431872 -1000 S
 UW 0 2109440 0 3
-56 0 0 1d1+1 1d1+1
+56 0 0 1d1+10000 1d1+1
 0.0.0.0 0
 8 8 0
 #142428

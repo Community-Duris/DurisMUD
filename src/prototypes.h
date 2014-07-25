@@ -300,7 +300,7 @@ int get_numb_free_hands(P_char);
 bool put(P_char, P_obj, P_obj, int);
 int wear(P_char, P_obj, int, int);
 int remove_item(P_char, P_obj, int);
-int remove_and_wear(P_char, P_obj, int, int, int);
+int remove_and_wear(P_char, P_obj, int, int, int, int);
 bool find_chance(P_char);
 bool is_salvageable(P_obj);
 void do_drink(P_char, char *, int);
@@ -628,12 +628,13 @@ void concat_which_flagsde(const char *flagType, const flagDef flagNames[], char 
 
 void UpdateArtiBlood(P_char, P_obj, int);
 void setupMortArtiList(void);
-int add_owned_artifact(P_obj, P_char, int);
+int add_owned_artifact(P_obj, P_char, long unsigned);
 int remove_owned_artifact(P_obj, P_char, int);
 int get_current_artifact_info(int, int, char *, int *, time_t *, int *, int, time_t *);
 void do_artifact(P_char, char *, int);
 void feed_artifact(P_char ch, P_obj obj, int feed_seconds, int bypass);
 void artifact_switch_check(P_char ch, P_obj obj);
+void event_check_arti_poof( P_char ch, P_char vict, P_obj obj, void * arg );
 
 // automatic_rules.c
 int is_Raidable(P_char, char *, int);
@@ -807,7 +808,7 @@ void do_enhance(P_char ch, char *argument, int cmd);
 int get_progress(P_char ch, int ach, uint required);
 void thanksgiving_proc(P_char ch);
 void christmas_proc(P_char ch);
-void enhancematload(P_char ch);
+void enhancematload(P_char ch, P_char killer);
 void add_bloodlust(P_char ch, P_char victim);
 bool add_epiccount(P_char ch, int gain);
 
@@ -1077,7 +1078,7 @@ void do_remort(P_char, char *, int);
 void do_spec(P_char, char *, int);
 void do_skills(P_char, char *, int);
 void do_spells(P_char, char *, int);
-int notch_skill(P_char, int, int);
+int notch_skill(P_char, int, float);
 void SetGuildSpellLvl(void);
 void update_skills(P_char);
 
@@ -2879,7 +2880,7 @@ int race_portal_check(P_char, P_char);
 void ereglog(int level, const char *format,...);
 const int char_in_list(const P_char);
 const int is_char_in_room(const P_char, int);
-char racewar(P_char, P_char);
+bool racewar(P_char, P_char);
 P_char char_in_room(int);
 bool spell_can_affect_char(P_char, int);
 bool FightingCheck(P_char, P_char, const char *);

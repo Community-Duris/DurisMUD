@@ -1543,6 +1543,66 @@ int mob_do_rename_hook(P_char npc, P_char ch, int cmd, char *arg)
    return FALSE;
 }
 
+bool rename_spellbook( char *old_name, char *new_name )
+{
+  char  old_book[MAX_STRING_LENGTH];
+  char  new_book[MAX_STRING_LENGTH];
+  char  command[MAX_STRING_LENGTH];
+  FILE *file;
+
+  sprintf( old_book, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*old_name), old_name );
+  sprintf( new_book, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*new_name), new_name );
+
+  // If old_name has a spellbook...
+  if( file = fopen( old_book, "r") )
+  {
+    fclose( file );
+    // Move it to new_name.
+    sprintf( command, "mv -f %s %s", old_book, new_book );
+    if( system( command ) == 0 )
+    {
+      return TRUE;
+    }
+    else
+    {
+      return FALSE;
+    }
+  }
+
+  return TRUE;
+}
+
+bool rename_craftlist( char *old_name, char *new_name )
+{
+  char  old_book[MAX_STRING_LENGTH];
+  char  new_book[MAX_STRING_LENGTH];
+  char  command[MAX_STRING_LENGTH];
+  FILE *file;
+
+  sprintf( old_book, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*old_name), old_name );
+  sprintf( new_book, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*new_name), new_name );
+
+  // If old_name has a crafting book...
+  if( file = fopen( old_book, "r") )
+  {
+    fclose( file );
+    // Move it to new_name.
+    sprintf( command, "mv -f %s %s", old_book, new_book );
+    if( system( command ) == 0 )
+    {
+      return TRUE;
+    }
+    else
+    {
+      return FALSE;
+    }
+  }
+
+  return TRUE;
+}
+
+
+
 /* ------------------------------------------------------------------------------ */
 /* pure char rename function, to be called from rename hooks or command functions */
 /* ------------------------------------------------------------------------------ */
@@ -1555,7 +1615,7 @@ bool rename_character(P_char ch, char *old_name, char *new_name)
   // validate new name
   if (_parse_name(new_name, new_name))
   {
-    send_to_char("Illegal name, please try another.\r\n", ch);
+    send_to_char("Illegal name, please try again.\r\n", ch);
     return FALSE;
   }
 
@@ -1608,6 +1668,28 @@ bool rename_character(P_char ch, char *old_name, char *new_name)
       }
     }
 
+    /* If failed rename spellbook (list of conjurable pets), then don't rename */
+    if( !rename_spellbook( old_name, new_name ) )
+    {
+      send_to_char("Failed to move spellbook?!?\r\n", ch);
+      if( finger_foo )
+      {
+        free_char(finger_foo);
+      }
+       return FALSE;
+    }
+
+    /* If failed rename craft/forge list, then don't rename */
+    if( !rename_craftlist( old_name, new_name ) )
+    {
+      send_to_char("Failed to move craft list?!?\r\n", ch);
+      if( finger_foo )
+      {
+        free_char(finger_foo);
+      }
+       return FALSE;
+    }
+
     /* if failed rename locker - is in use or something wierd, then dont rename */
     if( !rename_locker(ch,old_name,new_name) )
     {
@@ -1619,12 +1701,13 @@ bool rename_character(P_char ch, char *old_name, char *new_name)
     /* if failed rename ship owner - then dont rename */
     if( !rename_ship_owner(old_name,new_name) )
     {
-       if (finger_foo)
-          free_char(finger_foo);
-        
+      if (finger_foo)
+      {
+        free_char(finger_foo);
+      }
        return FALSE;
     }
-    
+
     /* if GOD changing someones name, put old one to deny list */
     if(GET_LEVEL(ch) > GET_LEVEL(doofus))
     {

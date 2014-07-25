@@ -815,7 +815,7 @@ int getSpellCost(const int spell)
 }
 
 #define ALL_MAGES (CLASS_SORCERER | CLASS_NECROMANCER | \
-                         CLASS_CONJURER | CLASS_ILLUSIONIST | \
+             CLASS_SUMMONER | CLASS_CONJURER | CLASS_ILLUSIONIST | \
 						 CLASS_PSIONICIST)
 #define ALL_ROGUES (CLASS_THIEF | CLASS_ASSASSIN | \
                           CLASS_BARD | CLASS_ROGUE)

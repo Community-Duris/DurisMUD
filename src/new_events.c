@@ -122,9 +122,7 @@ void disarm_obj_events(P_obj obj, event_func_type func) {
   }
 }
 
-void add_event(event_func func, int delay,
-               P_char ch, P_char victim, P_obj obj,
-               int flag, void *data, int data_size) 
+void add_event(event_func func, int delay, P_char ch, P_char victim, P_obj obj, int flag, void *data, int data_size)
 {
   P_nevent event = NULL;
   struct char_link_data *cld;
@@ -390,7 +388,8 @@ void ne_init_events(void)
       add_event(event_reset_zone, i, 0, 0, 0, 0, &j, sizeof(j));
     }
 
-    reset_zone(j, TRUE);
+    // The value 2 means that this is a boot-time initial zone reset.
+    reset_zone(j, 2);
   }
 
   /* special cases now */
@@ -436,6 +435,9 @@ void ne_init_events(void)
   /* rather than add a new function, set initial room light values here */
   for (j = 0; j < top_of_world; j++)
     room_light(j, REAL);
+
+  // Checks for artis rented with negative timers..
+  add_event( event_check_arti_poof, 30 * WAIT_SEC, NULL, NULL, NULL, 0, NULL, 0 );
 
   logit(LOG_STATUS, "Done scheduling events.\n");
 }
@@ -525,7 +527,7 @@ void load_event_names()
 
   if (f)
   {
-    while (fscanf(f, "%x %c %s", &func, &c, func_name) == 3 && i < MAX_FUNCTIONS)
+    while (fscanf(f, "%p %c %s", &func, &c, func_name) == 3 && i < MAX_FUNCTIONS)
     {
       function_names[i].func = func;
       function_names[i].func_name = str_dup(func_name);
@@ -570,7 +572,8 @@ void show_world_events(P_char ch, const char* arg)
           if((strlen(buf)+80) < sizeof(buf))
           {
             sprintf(buf + strlen(buf),
-                    "    %-5d | %-5d | %-12.12s | %-12.12s | %-8d | 0x%08.8x\n",
+//                    "    %-5d | %-5d | %-12.12s | %-12.12s | %-8d | 0x%08.8x\n",
+                    "    %-5d | %-5d | %-12.12s | %-12.12s | %-8d | %p\n",
                     ev->element,
                     ev->timer,
                     ev->ch ? GET_NAME(ev->ch) : "   none",

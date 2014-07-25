@@ -43,6 +43,7 @@ extern bool racial_innates[][LAST_RACE];
 extern Skill skills[];
 extern char *spells[];
 
+extern void reset_racial_skills(P_char ch);
 int GET_LVL_FOR_SKILL(P_char ch, int skill);
 P_obj find_gh_library_book_obj(P_char ch);
 //void do_practice_new(P_char ch, char *arg, int cmd);
@@ -53,8 +54,8 @@ bool     avail_prac[MAX_SKILLS];
 
 void update_skills(P_char ch)
 {
-  if( !IS_PC(ch) )
-    return;  
+  if( !ch || !IS_PC(ch) )
+    return;
 
 //#ifdef SKILLPOINTS
 //  return;
@@ -141,35 +142,35 @@ void update_skills(P_char ch)
   }
 }
 
-int notch_skill(P_char ch, int skill, int chance)
+int notch_skill(P_char ch, int skill, float chance)
 {
-  int intel, t, lvl, l, slvl, percent_chance;
+  int intel, t, lvl, l, slvl;
   char buf[MAX_STRING_LENGTH];
 
 //#ifdef SKILLPOINTS
 //  return 0;
 //#endif
 
-  if(!(ch) || !IS_ALIVE(ch))
+  if( !IS_ALIVE(ch) )
     return 0;
-  
-  if(IS_NPC(ch) || IS_TRUSTED(ch))
+
+  if( IS_NPC(ch) || IS_TRUSTED(ch) )
     return 0;
-  
-  if(IS_SET(world[ch->in_room].room_flags, GUILD_ROOM | SAFE_ZONE))
+
+  if( IS_SET(world[ch->in_room].room_flags, GUILD_ROOM | SAFE_ZONE) )
     return 0;
-  
-  if(IS_FIGHTING(ch))
+
+  if( IS_FIGHTING(ch) )
   {
-  // This prevents players from notching up skills using images and 
-  // summoned pets such as elementals. Jan08 -Lucrot
-    if(IS_PC_PET(ch->specials.fighting) ||
-       GET_LEVEL(ch->specials.fighting) < 2)
+    // This prevents players from notching up skills using images and
+    //   summoned pets such as elementals. Jan08 -Lucrot
+    if( IS_PC_PET(ch->specials.fighting)
+      || GET_LEVEL(ch->specials.fighting) < 2 )
     {
       return 0;
     }
   }
-  
+
   lvl = GET_LEVEL(ch);
 
   l = ch->only.pc->skills[skill].learned;
@@ -181,9 +182,9 @@ int notch_skill(P_char ch, int skill, int chance)
     return 0;
   }
 #if wipe2011
-  //  The following addition is for wipe 2011, where intelligence will help determine
-  //  chance to notch a skill, thus making it a partially important stat for rockhead melee
-  //  characters - Jexni 6/5/11  
+  // The following addition is for wipe 2011, where intelligence will help determine
+  //   chance to notch a skill, thus making it a partially important stat for rockhead melee
+  //   characters - Jexni 6/5/11
   intel = BOUNDED(0, 100 - GET_C_INT(ch), 50);
   chance = chance + (intel / 2);
 
@@ -212,39 +213,43 @@ int notch_skill(P_char ch, int skill, int chance)
   //     the mob misses anyhow.
   //  To that end, we'll add a check into fight.c instead. - Jexni 6/5/11
 
-  if (IS_HARDCORE(ch))
+  if( IS_HARDCORE(ch) )
   {
-    chance = (int)(get_property("skill.notch.hardcoreBonus", 0.6) * chance);
+    chance += (int)(get_property("skill.notch.hardcoreBonus", 0.6) * chance);
   }
 
-  if(affected_by_skill(ch, TAG_PHYS_SKILL_NOTCH))  // instead of simply not allowing notches, we just make it
-  {                                                // harder - Jexni 1/3/12
-    chance = chance << 2;
+  // Instead of simply not allowing notches, we just make it harder - Jexni 1/3/12
+  if(affected_by_skill(ch, TAG_PHYS_SKILL_NOTCH))
+  {
+    chance /= 4;
   }
   else if(affected_by_skill(ch, TAG_MENTAL_SKILL_NOTCH))
   {
-    chance = chance << 2;
+    chance /= 4;
   }
-  
-  chance = chance * (1. + ((float)l / t)); // the higher the skill, the tougher to notch and vice versa
+
+  // The higher the skill, the tougher to notch and vice versa
+  chance -= chance * (float)l / (float)t;
+
 #endif
-  
+
 #if !defined(CHAOS_MUD) || (CHAOS_MUD == 0)
-  if(number(0, chance))
+  if( number(1, 10000) > chance * 100 )
   {
     return 0;
   }
-  
+
+  // These will fail if ch is already affected by TAG_..._SKILL_NOTCH.
   if(IS_SET(skills[skill].targets, TAR_PHYS))
   {
     if(!affect_timer(ch, get_property("timer.mins.physicalNotch", 5) * WAIT_MIN, TAG_PHYS_SKILL_NOTCH))
     {
-     // return 0;
+//      debug( "notch_skill: failed affect_timer on '%s' TAG_PHYS_SKILL_NOTCH", J_NAME(ch) );
     }
   }
   else if(!affect_timer(ch, get_property("timer.mins.mentalNotch", 10) * WAIT_MIN, TAG_MENTAL_SKILL_NOTCH))
   {
-    // return 0;
+//    debug( "notch_skill: failed affect_timer on '%s' TAG_MENTAL_SKILL_NOTCH", J_NAME(ch) );
   }
 #endif
 
@@ -368,6 +373,26 @@ P_char FindTeacher(P_char ch)
   return NULL;
 }
 
+// Checks to see if teacher is the proper class & lvl for a spec spell
+// Returns TRUE iff teacher's class has a spec that knows spell skl.
+bool is_spec_spell( P_char teacher, int skl )
+{
+  int spec = teacher->player.spec;
+
+  for (int i = 0; i < MAX_SPEC; i++)
+  {
+    teacher->player.spec = i;
+    if( knows_spell( teacher, skl ) )
+    {
+      teacher->player.spec = spec;
+      return TRUE;
+    }
+  }
+
+  teacher->player.spec = spec;
+  return FALSE;
+}
+
 int IsTaughtHere(P_char ch, int skl)
 {
   P_char   teacher;
@@ -385,7 +410,8 @@ int IsTaughtHere(P_char ch, int skl)
   }
   if (IS_SPELL(skl))
   {
-    if (IS_TRUSTED(teacher) || knows_spell(teacher, skl))
+    if (IS_TRUSTED(teacher) || knows_spell(teacher, skl)
+      || is_spec_spell( teacher, skl ) )
     {
       return TRUE;
     }
@@ -526,8 +552,7 @@ void do_spells(P_char ch, char *argument, int cmd)
         sprintf(buf2 + strlen(buf2), "&+LAP(&n&+C%d&+L)&n,", lvl);
       if ((lvl = skills[spell].m_class[flag2idx(CLASS_CLERIC) - 1].rlevel[0]))
         sprintf(buf2 + strlen(buf), "&+cCL(&n&+C%d&n&+y)&n,", lvl);
-      if ((lvl =
-           skills[spell].m_class[flag2idx(CLASS_CONJURER) - 1].rlevel[0]))
+      if ((lvl = skills[spell].m_class[flag2idx(CLASS_CONJURER) - 1].rlevel[0]))
         sprintf(buf2 + strlen(buf2), "&+YCO(&n&+C%d&+Y)&n,", lvl);
       if ((lvl = skills[spell].m_class[flag2idx(CLASS_DRUID) - 1].rlevel[0]))
         sprintf(buf2 + strlen(buf2), "&+gDR(&n&+C%d&n&+g)&n,", lvl);
@@ -556,6 +581,8 @@ void do_spells(P_char ch, char *argument, int cmd)
         sprintf(buf2 + strlen(buf2), "&+bRV(&n&+C%d&n&+b)&n", lvl);
       if ((lvl = skills[spell].m_class[flag2idx(CLASS_THEURGIST) - 1].rlevel[0]))
         sprintf(buf2 + strlen(buf2), "&+cTH(&n&+C%d&n&+b)&n", lvl);
+      if ((lvl = skills[spell].m_class[flag2idx(CLASS_SUMMONER) - 1].rlevel[0]))
+        sprintf(buf2 + strlen(buf2), "&+RSU(&n&+C%d&+R)&n,", lvl);
 
       char buf3[MAX_STRING_LENGTH];
       sprintf(buf3,
@@ -640,7 +667,7 @@ void do_spells(P_char ch, char *argument, int cmd)
     {
       if (!(target = get_char_vis(ch, argument)))
       {
-        send_to_char("No such character.\n", ch);
+        send_to_char("No such player.\n", ch);
         return;
       }
     }
@@ -732,24 +759,24 @@ void do_skills(P_char ch, char *argument, int cmd)
     send_to_char("You ain't nothin' but a hound-dog.\n", ch);
     return;
   }
-  
+
   *buf = '\0';
   *buf1 = '\0';
 
   if (!*argument && IS_TRUSTED(ch))
   {
     send_to_char
-      ("      Name                        Ap As Ps Ba Cl Co Dr Me Mo Ne Pa Ra Sh So Th Wa Al Re Be Wl Il\n",
+      ("      Name                        Ap As Ps Ba Cl Co Dr Me Mo Ne Pa Ra Sh So Th Wa Al Re Be Wl Il Su\n",
        ch);
     for (skil = 0; skil <= MAX_AFFECT_TYPES; skil++)
     {
       skl = SortedSkills[skil];
-      
+
       if( !IS_SKILL(skl) && !IS_INSTRUMENT_SKILL(skl) && !IS_BARD_SONG(skl) )
         continue;
-      
+
       sprintf(buf1,
-        "%-30s    %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d\n",
+        "%-30s    %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d %2d\n",
         skills[skl].name,
         skills[skl].m_class[flag2idx(CLASS_ANTIPALADIN) - 1].rlevel[0],
         skills[skl].m_class[flag2idx(CLASS_ASSASSIN) - 1].rlevel[0],
@@ -771,8 +798,9 @@ void do_skills(P_char ch, char *argument, int cmd)
         skills[skl].m_class[flag2idx(CLASS_REAVER) - 1].rlevel[0],
         skills[skl].m_class[flag2idx(CLASS_BERSERKER) - 1].rlevel[0],
         skills[skl].m_class[flag2idx(CLASS_WARLOCK) - 1].rlevel[0],
-        skills[skl].m_class[flag2idx(CLASS_ILLUSIONIST) - 1].rlevel[0]);
-      
+        skills[skl].m_class[flag2idx(CLASS_ILLUSIONIST) - 1].rlevel[0],
+        skills[skl].m_class[flag2idx(CLASS_SUMMONER) - 1].rlevel[0]);
+
       send_to_char(buf1, ch);
     }
     return;
@@ -781,9 +809,25 @@ void do_skills(P_char ch, char *argument, int cmd)
   {
     if (IS_TRUSTED(ch) && argument)
     {
-      if (!(target = get_char_vis(ch, argument)))
+      argument = one_argument( argument, buf );
+      if( is_abbrev( buf, "reset" ) )
       {
-        send_to_char("No such player.\n", ch);
+        argument = one_argument( argument, buf );
+        if (!(target = get_char_vis(ch, buf)))
+        {
+          send_to_char("No such character.\n", ch);
+          return;
+        }
+        else
+        {
+          send_to_char("No longer using racial skils, so nothing to reset.\n", ch);
+//          reset_racial_skills(target);
+          return;
+        }
+      }
+      if (!(target = get_char_vis(ch, buf)))
+      {
+        send_to_char("No such character.\n", ch);
         return;
       }
     }
@@ -862,7 +906,7 @@ void prac_all_spells(P_char ch)
     // if they can't have the spell, then don't look at it!
     if( !SKILL_DATA_ALL(ch, spl).maxlearn[0] && !SKILL_DATA_ALL(ch, spl).maxlearn[ch->player.spec] )
       continue;
-    
+
     int circle = get_spell_circle(ch, spl);
     if (circle > max_circle)
       continue;
@@ -908,20 +952,18 @@ void prac_all_spells(P_char ch)
 
 void do_practice(P_char ch, char *arg, int cmd)
 {
-  char     buf[MAX_STRING_LENGTH], buf1[MAX_STRING_LENGTH],
-    obuf[MAX_STRING_LENGTH];
-  int      skl, spl, circle, i, meming_cl, cost, ret;
-  P_char   teacher;
+  char   buf[MAX_STRING_LENGTH], buf1[MAX_STRING_LENGTH],
+         obuf[MAX_STRING_LENGTH];
+  int    skl, spl, circle, i, meming_cl, cost, ret;
+  P_char teacher;
 
-//#ifdef SKILLPOINTS
-//  do_practice_new( ch, arg, cmd );
-//  return;
-//#endif
-  
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !IS_PC(ch))
-        return;
+#ifdef SKILLPOINTS
+  do_practice_new( ch, arg, cmd );
+  return;
+#endif
+
+  if( !IS_ALIVE(ch) || !IS_PC(ch) )
+    return;
 
   teacher = FindTeacher(ch);
 
@@ -931,7 +973,7 @@ void do_practice(P_char ch, char *arg, int cmd)
   meming_cl = meming_class(ch);
 
 
-  if (!*arg && FindTeacher(ch))
+  if( !*arg && teacher )
   {                             /*
                                  * list skills available to be
                                  * taught
@@ -990,7 +1032,7 @@ void do_practice(P_char ch, char *arg, int cmd)
   {                             /* request teachings of a certain skill */
     *buf1='\0';
     *buf='\0';
-    
+
     arg = skip_spaces(arg);
     if (!str_cmp(arg, "all"))
     {
@@ -1002,7 +1044,7 @@ void do_practice(P_char ch, char *arg, int cmd)
     }
     skl = search_block(arg, (const char **) spells, FALSE);
     i = skl;
-    
+
 
     if (!IsTaughtHere(ch, skl))
     {
@@ -1027,7 +1069,7 @@ void do_practice(P_char ch, char *arg, int cmd)
              "Hmm, I don't think you'd understand a damn thing if I *did* try to teach you.");
       else
         send_to_char("You wouldn't understand.\n", ch);
-      return;      
+      return;
     }
 
     if (SKILL_DATA_ALL(ch, skl).rlevel[ch->player.spec] >= 51)
@@ -1323,185 +1365,183 @@ int skill_cost( P_char ch, int skl )
   return 1;
 }
 
-//void do_practice_new( P_char ch, char *arg, int cmd )
-//{
-//  char   buf[MAX_STRING_LENGTH], buf1[MAX_STRING_LENGTH],
-//         obuf[MAX_STRING_LENGTH];
-//  int    skl, spl, circle, i, cost, ret;
-//  P_char teacher;
-//  
-//  if( !(ch) || !IS_ALIVE(ch) || !IS_PC(ch) )
-//    return;
-//
-//  teacher = FindTeacher(ch);
-//
-//  *buf = '\0';
-//  *buf1 = '\0';
-//  *obuf = '\0';
-//
-//  // List skills available to be taught
-//  if( !*arg && teacher )
-//  {   
-//    sprintf( obuf, "&+BSkill                    Cost of Teachings\n&n");
-//    for( skl = FIRST_SKILL; skl <= LAST_SKILL; skl++ )
-//    {
-//                           /* skills first */
-//      if( !IS_SPELL(skl) && GET_CHAR_SKILL_S(ch, skl) )
-//      {
-//        if( GET_LVL_FOR_SKILL(ch, skl) <= GET_LEVEL(ch)
-//          && GET_LVL_FOR_SKILL(teacher, skl) <= GET_LEVEL(teacher)
-//          && skill_cost( ch, skl) > 0 )
-//          sprintf( buf, "%-25s %d\n", skills[skl].name, skill_cost( ch, skl) );
-//        else
-//          sprintf( buf, "%-25s (cannot practice)\n", skills[skl].name );
-//
-//        strcat( buf1, buf );
-//      }
-//    }
-//    strcat( obuf, buf1 );
-//
-//    *buf1 = '\0';
-//    strcat(obuf, "\n&+BSpell                    Cost\n&n");
-//    for (spl = FIRST_SPELL; spl <= LAST_SPELL; spl++)
-//    {
-//// PENIS : THIS CRASHES MUD with SEG FAULT
-//      if( GET_LVL_FOR_SKILL(ch, spl) <= GET_LEVEL(ch)
-//        && GET_LVL_FOR_SKILL(teacher, spl) <= GET_LEVEL(teacher)
-//        && IS_SPELL(spl) && skill_cost( ch, spl) > 0 )
-//      {
-//        circle = get_spell_circle(ch, spl);
-//        sprintf( buf, "%-25s %d\n", skills[spl].name, skill_cost( ch, spl) );
-//        strcat(buf1, buf);
-//      }
-//    }
-//    strcat(obuf, buf1);
-//    page_string(ch->desc, obuf, 1);
-//    return;
-//  }
-//
-//  if( *arg )
-//  {                             /* request teachings of a certain skill */
-//    *buf1='\0';
-//    *buf='\0';
-//    
-//    arg = skip_spaces(arg);
-//    if (!str_cmp(arg, "all"))
-//    {
-//      prac_all_spells(ch);
-//      return;
-//    }
-//    skl = search_block(arg, (const char **) spells, FALSE);
-//    i = skl;
-//    
-//
-//    if (!IsTaughtHere(ch, skl))
-//    {
-//      /* function will give approp. message */
-//      return;
-//    }
-//    if (IS_SPELL(skl) && get_max_circle(ch) < get_spell_circle(ch, skl))
-//    {
-//      sprintf(buf,
-//              "Well, sure, I know that one, but my conscience prevents me from teaching it to someone so unskilled as yourself.");
-//      mobsay(teacher, buf);
-//      return;
-//    }
-//
-//    if( !SKILL_DATA_ALL(ch, skl).rlevel[ch->player.spec] || SKILL_DATA_ALL(ch, skl).rlevel[ch->player.spec] > GET_LEVEL(ch) )
-//    {
-//      mobsay(teacher,
-//             "Hmm, I don't think you'd understand a damn thing if I *did* try to teach you.");
-//      return;      
-//    }
-//
-//    if (SKILL_DATA_ALL(ch, skl).rlevel[ch->player.spec] >= 51)
-//    {
-//      ret = FALSE;
-//
-//      if (GET_LEVEL(teacher) < 51)
-//      {
-//        strcpy(buf,
-//               "Yes, I've heard of such a skill, but have never learned it myself..");
-//        ret = TRUE;
-//      }
-//      else if (GET_LEVEL(ch) < 51)
-//      {
-//        strcpy(buf,
-//               "Sorry, but you're not quite learned enough for that one yet.");
-//        ret = TRUE;
-//      }
-//
-//      if (ret)
-//      {
-//        mobsay(teacher, buf);
-//        return;
-//      }
-//    }
-//
-//    if( skill_cost( ch, skl ) > ch->only.pc->skillpoints )
-//    {
-//      sprintf(buf,
-//              "Sorry, boss, but I'm afraid you cannot afford the training.");
-//      mobsay(teacher, buf);
-//      return;
-//    }
-//    if (!IS_SPELL(skl) && GET_LEVEL(ch) * 2 <
-//        (ch->only.pc->skills[i].learned))
-//    {
-//      sprintf(buf,
-//              "You have not fully grasped your previous lessons. Come back when you have practiced more.");
-//      mobsay(teacher, buf);
-//      return;
-//    }
-//
-//    if (!IS_SPELL(skl) &&
-//        (ch->only.pc->skills[i].learned >= 2 * GET_LEVEL(ch) ||
-//         ch->only.pc->skills[i].learned >= 
-//           ch->only.pc->skills[i].taught * get_property("skill.practice.relativeCap", 0.75)))
-//    {
-//      sprintf(buf,
-//              "You will have to go learn more on your own, I can teach you no more right now.");
-//      mobsay(teacher, buf);
-//      return;
-//    }
-//
-//    if (!IS_SPELL(skl) &&
-//        (ch->only.pc->skills[i].learned >= GET_LEVEL(teacher) * 2))
-//    {
-//      switch (number(1, 4))
-//      {
-//      case 1:
-//        sprintf(buf,
-//                "You are awesome already! Perhaps you would be so kind as to teach me?");
-//        break;
-//      case 2:
-//        sprintf(buf,
-//                "You trying to make a fool of me? I can teach you nothing more!");
-//        break;
-//      case 3:
-//        sprintf(buf, "I fear I am not good enough to teach you more.");
-//        break;
-//      case 4:
-//        sprintf(buf, "Begone from my halls! I do not stand for sarcasm!");
-//        break;
-//      }
-//      mobsay(teacher, buf);
-//      sprintf(buf, "DEBUG: ch->only.pc->skills[i].learned = %d (%s)\n",
-//              ch->only.pc->skills[i].learned, J_NAME(ch));
-//      debug(buf);
-//      return;
-//    }
-//
-//    ch->only.pc->skillpoints -= skill_cost( ch, skl );
-//    ch->only.pc->skills[i].learned += 10;
-//    ch->only.pc->skills[i].taught += 10;
-//
-//    if (ch->only.pc->skills[i].learned > 100)
-//      ch->only.pc->skills[i].learned = 100;
-//    sprintf(buf, "You practice '%s' for a while...\n", skills[skl].name);
-//    send_to_char(buf, ch);
-//  }
-//}
+void do_practice_new( P_char ch, char *arg, int cmd )
+{
+  char   buf[MAX_STRING_LENGTH], buf1[MAX_STRING_LENGTH],
+         obuf[MAX_STRING_LENGTH];
+  int    skl, spl, circle, i, cost, ret;
+  P_char teacher;
+
+  if( !IS_ALIVE(ch) || !IS_PC(ch) )
+    return;
+
+  teacher = FindTeacher(ch);
+
+  *buf = '\0';
+  *buf1 = '\0';
+  *obuf = '\0';
+
+  // List skills available to be taught
+  if( !*arg && teacher )
+  {
+    sprintf( obuf, "&+BSkill                    Cost of Teachings\n&n");
+    for( skl = FIRST_SKILL; skl <= LAST_SKILL; skl++ )
+    {
+                           /* skills first */
+      if( !IS_SPELL(skl) && GET_CHAR_SKILL_S(ch, skl) )
+      {
+        if( GET_LVL_FOR_SKILL(ch, skl) <= GET_LEVEL(ch)
+          && GET_LVL_FOR_SKILL(teacher, skl) <= GET_LEVEL(teacher)
+          && skill_cost( ch, skl) > 0 )
+          sprintf( buf, "%-25s %d\n", skills[skl].name, skill_cost( ch, skl) );
+        else
+          sprintf( buf, "%-25s (cannot practice)\n", skills[skl].name );
+
+        strcat( buf1, buf );
+      }
+    }
+    strcat( obuf, buf1 );
+
+    *buf1 = '\0';
+    strcat(obuf, "\n&+BSpell                    Cost\n&n");
+    for (spl = FIRST_SPELL; spl <= LAST_SPELL; spl++)
+    {
+      if( GET_LVL_FOR_SKILL(ch, spl) <= GET_LEVEL(ch)
+        && GET_LVL_FOR_SKILL(teacher, spl) <= GET_LEVEL(teacher)
+        && IS_SPELL(spl) && skill_cost( ch, spl) > 0 )
+      {
+        circle = get_spell_circle(ch, spl);
+        sprintf( buf, "%-25s %d\n", skills[spl].name, skill_cost( ch, spl) );
+        strcat(buf1, buf);
+      }
+    }
+    strcat(obuf, buf1);
+    page_string(ch->desc, obuf, 1);
+    return;
+  }
+
+  if( *arg )
+  {                             /* request teachings of a certain skill */
+    *buf1='\0';
+    *buf='\0';
+
+    arg = skip_spaces(arg);
+    if (!str_cmp(arg, "all"))
+    {
+      prac_all_spells(ch);
+      return;
+    }
+    skl = search_block(arg, (const char **) spells, FALSE);
+    i = skl;
+
+    if (!IsTaughtHere(ch, skl))
+    {
+      /* function will give approp. message */
+      return;
+    }
+    if (IS_SPELL(skl) && get_max_circle(ch) < get_spell_circle(ch, skl))
+    {
+      sprintf(buf,
+              "Well, sure, I know that one, but my conscience prevents me from teaching it to someone so unskilled as yourself.");
+      mobsay(teacher, buf);
+      return;
+    }
+
+    if( !SKILL_DATA_ALL(ch, skl).rlevel[ch->player.spec] || SKILL_DATA_ALL(ch, skl).rlevel[ch->player.spec] > GET_LEVEL(ch) )
+    {
+      mobsay(teacher,
+             "Hmm, I don't think you'd understand a damn thing if I *did* try to teach you.");
+      return;
+    }
+
+    if (SKILL_DATA_ALL(ch, skl).rlevel[ch->player.spec] >= 51)
+    {
+      ret = FALSE;
+
+      if (GET_LEVEL(teacher) < 51)
+      {
+        strcpy(buf,
+               "Yes, I've heard of such a skill, but have never learned it myself..");
+        ret = TRUE;
+      }
+      else if (GET_LEVEL(ch) < 51)
+      {
+        strcpy(buf,
+               "Sorry, but you're not quite learned enough for that one yet.");
+        ret = TRUE;
+      }
+
+      if (ret)
+      {
+        mobsay(teacher, buf);
+        return;
+      }
+    }
+
+    if( skill_cost( ch, skl ) > ch->only.pc->skillpoints )
+    {
+      sprintf(buf,
+              "Sorry, boss, but I'm afraid you cannot afford the training.");
+      mobsay(teacher, buf);
+      return;
+    }
+    if (!IS_SPELL(skl) && GET_LEVEL(ch) * 2 <
+        (ch->only.pc->skills[i].learned))
+    {
+      sprintf(buf,
+              "You have not fully grasped your previous lessons. Come back when you have practiced more.");
+      mobsay(teacher, buf);
+      return;
+    }
+
+    if (!IS_SPELL(skl) &&
+        (ch->only.pc->skills[i].learned >= 2 * GET_LEVEL(ch) ||
+         ch->only.pc->skills[i].learned >= 
+           ch->only.pc->skills[i].taught * get_property("skill.practice.relativeCap", 0.75)))
+    {
+      sprintf(buf,
+              "You will have to go learn more on your own, I can teach you no more right now.");
+      mobsay(teacher, buf);
+      return;
+    }
+
+    if (!IS_SPELL(skl) &&
+        (ch->only.pc->skills[i].learned >= GET_LEVEL(teacher) * 2))
+    {
+      switch (number(1, 4))
+      {
+      case 1:
+        sprintf(buf,
+                "You are awesome already! Perhaps you would be so kind as to teach me?");
+        break;
+      case 2:
+        sprintf(buf,
+                "You trying to make a fool of me? I can teach you nothing more!");
+        break;
+      case 3:
+        sprintf(buf, "I fear I am not good enough to teach you more.");
+        break;
+      case 4:
+        sprintf(buf, "Begone from my halls! I do not stand for sarcasm!");
+        break;
+      }
+      mobsay(teacher, buf);
+      sprintf(buf, "DEBUG: ch->only.pc->skills[i].learned = %d (%s)\n",
+              ch->only.pc->skills[i].learned, J_NAME(ch));
+      debug(buf);
+      return;
+    }
+
+    ch->only.pc->skillpoints -= skill_cost( ch, skl );
+    ch->only.pc->skills[i].learned += 10;
+    ch->only.pc->skills[i].taught += 10;
+
+    if (ch->only.pc->skills[i].learned > 100)
+      ch->only.pc->skills[i].learned = 100;
+    sprintf(buf, "You practice '%s' for a while...\n", skills[skl].name);
+    send_to_char(buf, ch);
+  }
+}
 
 void advance_skillpoints( P_char ch )
 {

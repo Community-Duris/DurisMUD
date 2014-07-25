@@ -242,7 +242,7 @@ cleansed clean lake slime~
 &+gThis &+Glake&+g sits here cleaned of its vileness.&N~
 ~
 25 40 3 0 11 0 0 0 0 1 0
-87609 7 0 0 0 0 0 0
+87609 7 -1 0 0 0 0 0
 0 0 100
 E
 cleansed clean lake slime~
@@ -731,7 +731,7 @@ A
 #87550
 emblem chain fealty orcus dead~
 &+ythe fealty&+L emblem&+y of &+LO&+wr&+Wc&+wu&+Ls&N~
-&+yAn &+Lemblem&+y lies here awaiting a worshiper of the dead.&N~
+&+yAn &+Lemblem&+y lies here awaiting a worshipper of the dead.&N~
 ~
 9 21 3 0 12 0 0 4097 0 1 0
 3 0 0 2 0 0 0 0

@@ -107,11 +107,11 @@ G 1 19626 1 0 100 0 0 0            *    a key fragment
 F 1 19612 1 19610 100 0 0 0        * a brilliant white wyrm (following)
 G 1 19627 1 0 100 0 0 0            *    a key fragment
 M 0 19616 1 19611 100 0 0 0        * an oddly-clothed man
-M 0 19601 4 19612 100 0 0 0        * a dragonian worshiper
+M 0 19601 4 19612 100 0 0 0        * a dragonian worshipper
 G 1 19601 1 0 100 0 0 0            *    a dark key
-M 0 19601 4 19612 100 0 0 0        * a dragonian worshiper
-M 0 19601 4 19612 100 0 0 0        * a dragonian worshiper
-M 0 19601 4 19612 100 0 0 0        * a dragonian worshiper
+M 0 19601 4 19612 100 0 0 0        * a dragonian worshipper
+M 0 19601 4 19612 100 0 0 0        * a dragonian worshipper
+M 0 19601 4 19612 100 0 0 0        * a dragonian worshipper
 M 0 19603 3 19613 100 0 0 0        * an ancient black wyrm
 G 1 19617 1 0 100 0 0 0            *    a key fragment
 F 1 19604 1 19613 100 0 0 0        * an ancient blue wyrm (following)
@@ -151,7 +151,7 @@ F 1 19603 3 19619 100 0 0 0        * an ancient black wyrm (following)
 G 1 19633 1 0 100 0 0 0            *    a key fragment
 F 1 19605 2 19619 100 0 0 0        * an ancient green wyrm (following)
 G 1 19635 1 0 100 0 0 0            *    a key fragment
-M 0 19613 1 19621 100 0 0 0        * a dragonian worshiper
+M 0 19613 1 19621 100 0 0 0        * a dragonian worshipper
 M 0 19617 1 19624 100 0 0 0        * a pitiful slave
 G 1 32019 3 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 32019 3 0 100 0 0 0            *    (object type not in this .obj file)

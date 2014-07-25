@@ -149,6 +149,10 @@ int can_exec_cmd(P_char ch, int cmd)
       if ((ch->only.pc->gcmd_arr[i] == cmd) && IS_TRUSTED(ch))
         return TRUE;
 
+  // NPCs do NOT execute God commands.
+  if (cmd_info[cmd].minimum_level > 56 && IS_NPC(ch))
+    return FALSE;
+
   if (cmd_info[cmd].minimum_level <= GET_LEVEL(ch))
     return TRUE;
 
@@ -2036,6 +2040,13 @@ bool aggressive_to_class(P_char ch, P_char target)
     if (IS_AGGRO2FLAG(ch, AGGR2_CONJURER) && GET_CLASS1(target, CLASS_CONJURER))
       return TRUE;
 
+    // Summoners are almost identical to conjs. retrofitting..
+    if (IS_AGGRO2FLAG(ch, AGGR2_CONJURER) && GET_CLASS1(target, CLASS_SUMMONER))
+      return TRUE;
+
+    if (IS_AGGRO3FLAG(ch, AGGR3_SUMMONER) && GET_CLASS1(target, CLASS_SUMMONER))
+      return TRUE;
+
     if (IS_AGGRO2FLAG(ch, AGGR2_ROGUE) && GET_CLASS1(target, CLASS_ROGUE))
       return TRUE;
 
@@ -3019,7 +3030,7 @@ bool spell_can_affect_char(P_char ch, int spl)
 
 /* is viewee at war with viewer? */
 
-char racewar(P_char viewer, P_char viewee)
+bool racewar(P_char viewer, P_char viewee)
 {
   if (!viewer || !viewee)
     return FALSE;
@@ -3930,7 +3941,7 @@ int flag2idx(int flag)
 int GET_LEVEL(P_char ch)
 {
   if(!ch)
-  return NULL;
+  return -1;
 
   return ch->player.level;
 }
@@ -5171,3 +5182,45 @@ const char *condition_str(P_char ch)
     return "&+rbleeding, close to death";
 }
 
+// Returns TRUE iff substr is found within str
+// Not case sensitive!
+bool sub_string( const char *str, const char *substr)
+{
+  int strlength = strlen(str);
+  int sublength = strlen(substr);
+  int i = 0;
+  int j;
+
+  // While substr will fit into strlength - i
+  while( strlength >= sublength + i )
+  {
+    j = 0;
+    // While the letters match..
+    while( LOWER(str[i+j]) == LOWER(substr[j]) )
+    {
+      j++;
+      // If we've found all the letters..
+      if( j == sublength )
+        return TRUE;
+    }
+    i++;
+  }
+  return FALSE;
+}
+
+// Looks through list of strings strset to see if name contains one of them.
+// Not case sensitive!
+// Returns TRUE iff name contains one of the strings in strset.
+bool sub_string_set( const char *name, const char **strset )
+{
+  int i = 0;
+
+  while( strset[i][0] != '\n' )
+  {
+    if( sub_string( name, strset[i] ) )
+      return TRUE;
+    i++;
+  }
+
+  return FALSE;
+}

@@ -362,17 +362,23 @@ bool flying_transport_cmd_give(P_char ch, P_char victim, char *arg)
 
 
 int flying_transport(P_char ch, P_char victim, int cmd, char *arg)
-{  
+{
   if( cmd == CMD_SET_PERIODIC )
+  {
     return TRUE;
-  
-  if( !ch )
+  }
+
+  if( !IS_ALIVE(ch) )
+  {
     return FALSE;
-  
+  }
+
   if( TRANSPORT_STATE(ch) == TRANSPORT_STATE_WAITING )
   {
     if(!victim)
+    {
       return FALSE;
+    }
 
     switch(cmd)
     {
@@ -389,22 +395,26 @@ int flying_transport(P_char ch, P_char victim, int cmd, char *arg)
   else if( TRANSPORT_STATE(ch) == TRANSPORT_STATE_MOVING )
   {
     if( !victim || victim != get_linking_char(ch, LNK_RIDING) )
-      return FALSE;
-    
-    if( IS_TRUSTED(victim) )
-      return FALSE;
-    
-    if( cmd == CMD_LOOK || cmd == CMD_SCORE ||
-        cmd == CMD_ATTRIBUTES || cmd == CMD_NEWS ||
-        cmd == CMD_PETITION || cmd == CMD_TOGGLE )
     {
       return FALSE;
     }
-    
+
+    if( IS_TRUSTED(victim) )
+    {
+      return FALSE;
+    }
+
+    if( cmd == CMD_LOOK || cmd == CMD_SCORE || cmd == CMD_INVENTORY
+      || cmd == CMD_ATTRIBUTES || cmd == CMD_NEWS
+      || cmd == CMD_PETITION || cmd == CMD_TOGGLE )
+    {
+      return FALSE;
+    }
+
     act("You can't do that, you're holding on for dear life!", FALSE, ch, 0, victim, TO_VICT);    
     return TRUE;
-  }  
-  
+  }
+
   return FALSE;
 }
 

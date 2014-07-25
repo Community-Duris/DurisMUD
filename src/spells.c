@@ -394,17 +394,17 @@ void cast_channel(int level, P_char ch, char *arg, int type, P_char tar_ch,
   }
 }
 
-int planes_room_num[] = { 
-    23801, 
-    23201, 
-    12401, 
-    24401, 
-    19701, 
-    25401, 
-    SURFACE_MAP_START, 
-    32385, 
-    26600, 
-    0 
+int planes_room_num[] = {
+    23801,
+    23201,
+    12401,
+    24401,
+    19701,
+    25401,
+    SURFACE_MAP_START,
+    32385,
+    26600,
+    0
 };
 
 const char *planes_name[] = {
@@ -711,12 +711,11 @@ int char_is_on_plane(P_char ch)
   return FALSE;
 }
 
-void cast_plane_shift(int level, P_char ch, char *arg, int type,
-                      P_char tar_ch, P_obj tar_obj)
+void cast_plane_shift(int level, P_char ch, char *arg, int type, P_char tar_ch, P_obj tar_obj)
 {
   char     Gbuf4[MAX_STRING_LENGTH];
   int      to_room, plane_id, from_zone, from_room;
-  
+
   if(!(ch))
   {
     logit(LOG_EXIT, "cast_plane_shift called in spells.c without ch");
@@ -728,23 +727,20 @@ void cast_plane_shift(int level, P_char ch, char *arg, int type,
     send_to_char("The dead do not shift!\r\n", ch);
     return;
   }
-  
-  if((ch && !is_Raidable(ch, 0, 0)) ||
-     (tar_ch && !is_Raidable(tar_ch, 0, 0)))
+
+  if( !is_Raidable(ch, 0, 0) || (tar_ch && !is_Raidable(tar_ch, 0, 0)))
   {
     send_to_char("&+WYou or your target is not raidable. The spell fails!\r\n", ch);
     return;
   }
 
-  switch (type)
+  switch( type )
   {
     case SPELL_TYPE_SPELL:
       one_argument(arg, Gbuf4);
 
-      if((GET_CLASS(ch, CLASS_DRUID) ||
-         (IS_MULTICLASS_PC(ch) &&
-         GET_SECONDARY_CLASS(ch, CLASS_DRUID))) &&
-            GET_LEVEL(ch) < 41)
+      if((GET_CLASS(ch, CLASS_DRUID) || (IS_MULTICLASS_PC(ch)
+        && GET_SECONDARY_CLASS(ch, CLASS_DRUID))) && GET_LEVEL(ch) < 41)
       {
         send_to_char("You must reach level 41 to use this ability.\r\n", ch);
         return;
@@ -758,20 +754,20 @@ void cast_plane_shift(int level, P_char ch, char *arg, int type,
 *      send_to_char("Chant such a complex spell while swimming?\r\n", ch);
 *      return;
 *    }
-*/ 
+*/
 // plane_id
-// 0    earth, 
+// 0    earth,
 // 1    water,
-// 2    ethereal, 
-// 3    air, 
-// 4    astral, 
-// 5    fire, 
-// 6    prime, 
+// 2    ethereal,
+// 3    air,
+// 4    astral,
+// 5    fire,
+// 6    prime,
 // 7    hell,
-// 8    negative, 
-  
+// 8    negative,
+
       plane_id = search_block(Gbuf4, planes_name, FALSE);
-      
+
 #if defined(CTF_MUD) && (CTF_MUD == 1)
     if (ctf_carrying_flag(ch) == CTF_PRIMARY)
     {
@@ -780,9 +776,8 @@ void cast_plane_shift(int level, P_char ch, char *arg, int type,
     }
 #endif
 
-      if(plane_id == 6 &&
-        GET_PRIME_CLASS(ch, CLASS_DRUID) &&
-        char_is_on_plane(ch) && !IS_MULTICLASS_PC(ch))
+      if( plane_id == 6 && char_is_on_plane(ch) && !IS_MULTICLASS_PC(ch)
+        && (GET_PRIME_CLASS(ch, CLASS_DRUID) || GET_PRIME_CLASS(ch, CLASS_BLIGHTER)) )
       {
         act("$n slowly fades away...", 0, ch, 0, 0, TO_ROOM);
         char_from_room(ch);
@@ -792,12 +787,9 @@ void cast_plane_shift(int level, P_char ch, char *arg, int type,
         act("$n slowly materializes...", 0, ch, 0, 0, TO_ROOM);
         return;
       }
-      if((plane_id < 0) ||
-        (plane_id > 8))
+      if( (plane_id < 0) || (plane_id > 8) )
       {
-        send_to_char
-          ("Negative, Ethereal, Astral, Air, Water, Fire, Earth and Prime are the only valid targets!\r\n",
-           ch);
+        send_to_char("Negative, Ethereal, Astral, Air, Water, Fire, Earth and Prime are the only valid targets!\r\n", ch);
         return;
       }
       from_zone = world[ch->in_room].zone;
@@ -806,8 +798,7 @@ void cast_plane_shift(int level, P_char ch, char *arg, int type,
       {
         if(from_zone == world[MAX(0, real_room(planes_room_num[plane_id]))].zone)
         {
-          send_to_char
-            ("Plane shift is used for interplanar travel, try walking!\n", ch);
+          send_to_char("Plane shift is used for interplanar travel, try walking!\n", ch);
           return;
         }
         if(plane_id == 8)
@@ -825,13 +816,13 @@ void cast_plane_shift(int level, P_char ch, char *arg, int type,
       }
       else
       {
-        if((from_zone != world[MAX(0, real_room(planes_room_num[1]))].zone) &&
-          (world[ch->in_room].sector_type != SECT_FIREPLANE) &&
-          (world[ch->in_room].sector_type != SECT_AIR_PLANE))
+        // If not on water plane, fire plane, or air plane.. gotta walk.
+        if( (from_zone != world[MAX(0, real_room(planes_room_num[1]))].zone)
+          && (world[ch->in_room].sector_type != SECT_FIREPLANE)
+          && (world[ch->in_room].sector_type != SECT_AIR_PLANE) )
         {
           /*  trying to use plane shift as a teleport, nah nah  */
-          send_to_char
-            ("Plane shift is used for interplanar travel, try walking!\n", ch);
+          send_to_char("&+WPlane shift is used for interplanar travel, try walking!&n\n", ch);
           return;
         }
         do
@@ -2780,13 +2771,13 @@ void cast_bloodstone(int level, P_char ch, char *arg, int type, P_char victim, P
   debug("duration %f", duration);
   int dur = duration;
   debug("duration: %f, dur: %d", duration, dur);  
-  if (affected_by_spell(victim, SPELL_BLOODSTONE))
+  if (affected_by_spell(victim, SPELL_BLOODTOSTONE))
   {
     send_to_char("Their blood is already made of stone!\n", ch);
     return;
   }
 
-  af.type = SPELL_BLOODSTONE;
+  af.type = SPELL_BLOODTOSTONE;
 
   GET_VITALITY(victim) -= 2;
   StartRegen(victim, EVENT_MOVE_REGEN);

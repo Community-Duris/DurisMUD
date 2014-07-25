@@ -479,7 +479,7 @@
 #define SPELL_MAGICAL_FOUNTAIN 	     448
 #define SPELL_HURRICANE 	     449
 #define SPELL_STORMSHIELD      450
-#define SPELL_BLOODSTONE       451
+#define SPELL_BLOODTOSTONE     451
 
 // Ethermancer Spells
 #define SPELL_VAPOR_ARMOR      452
@@ -613,8 +613,8 @@
 #define SPELL_PEBBLE                564
 #define SPELL_BLOOD_SIROCCO         565
 #define SPELL_EXTRACT_WATER_ELEMENTAL 566
-#define SPELL_DEADFALL              567 
-#define SPELL_HORRID_WILTING        568
+#define SPELL_DEADFALL              567
+//#define SPELL_                    568 Unused.
 #define SPELL_EXPLOSIVE_CASCADE     569
 #define SPELL_CELESTIAL_AURA        570
 #define SPELL_SUMMON_GHASTS         571
@@ -666,12 +666,32 @@
 #define SPELL_LODESTONE              617
 #define SPELL_LIFE_LEECH             618
 #define SPELL_BMANTLE                619
-#define SPELL_DECAYING_FLESH	  620
-#define SPELL_NOAUCTION		  621
-#define SPELL_BATTLEMAGE		  622
-#define SPELL_CORPSE_PORTAL		  623
-#define SPELL_CONTAIN_BEING		  624
-#define LAST_SPELL  SPELL_CONTAIN_BEING
+#define SPELL_DECAYING_FLESH         620
+#define SPELL_NOAUCTION	             621
+#define SPELL_BATTLEMAGE	           622
+#define SPELL_CORPSE_PORTAL	         623
+#define SPELL_CONTAIN_BEING		       624
+/* Blighter spells */
+#define SPELL_THORNSKIN              625
+#define SPELL_FLAME_SPHERE           626
+#define SPELL_DESECRATE_LAND         627
+#define SPELL_CONTAGION              628
+#define SPELL_FORBIDDANCE            629
+#define SPELL_WAVES_FATIGUE          630
+#define SPELL_ACID_RAIN              631
+#define SPELL_HORRID_WILTING         632
+#define SPELL_SHAMBLER               633
+#define SPELL_IMPLOSION              634
+#define SPELL_BLIGHT                 635
+#define SPELL_SANDSTORM              636
+#define SPELL_FIRELANCE              637
+#define SPELL_DRAIN_NATURE           638
+#define SPELL_CREATE_POND            639
+#define SPELL_TOXIC_FOG              640
+#define SPELL_FALUZURES_VITALITY     641
+#define SPELL_SAP_NATURE             642
+#define SPELL_BLOODSTONE             643
+#define LAST_SPELL  SPELL_BLOODSTONE
 
 #define FIRST_SKILL                  1000  /* should be a decent split point */
 #define SKILL_SNEAK                  1000
@@ -994,7 +1014,8 @@
 #define AURA_HEALING                 (FIRST_AURA+3)
 #define AURA_ENDURANCE               (FIRST_AURA+4)
 #define AURA_VIGOR                   (FIRST_AURA+5)
-#define LAST_AURA                    (FIRST_AURA+5)
+#define AURA_SPELL_PROTECTION        (FIRST_AURA+6)
+#define LAST_AURA                    (FIRST_AURA+6)
 
 /* Instrument stuff */
 #define FIRST_INSTRUMENT             (LAST_AURA+1)

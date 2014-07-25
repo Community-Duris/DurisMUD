@@ -1590,7 +1590,7 @@ void boon_shop(P_char ch, char *argument)
 	      break;
 	    }
 	    ch->base_stats.Luck = BOUNDED(0, ch->base_stats.Luck+1, 100);
-	    send_to_char("You feel as if you could roll Tripple Tiamat's at the slots...\r\n", ch);
+	    send_to_char("You feel as if you could roll Triple Tiamat's at the slots...\r\n", ch);
 	    break;
 	  }
 	case KARMA:
@@ -1913,7 +1913,7 @@ int boon_display(P_char ch, char *argument)
 	}
       case BTYPE_EXP:
 	{
-	  sprintf(bufftype, boon_types[type].desc);
+	  sprintf(bufftype, "%s", boon_types[type].desc);
 	  break;
 	}
       case BTYPE_EXPM:
@@ -1972,7 +1972,7 @@ int boon_display(P_char ch, char *argument)
 	    sprintf(bufftype, "Error, type is invalid.");
 	    break;
 	  }
-	  sprintf(bufftype, boon_types[type].desc);
+	  sprintf(bufftype, "%s", boon_types[type].desc);
 	  break;
 	}
     }
@@ -2087,7 +2087,7 @@ int boon_display(P_char ch, char *argument)
 	    sprintf(buffoption, "Error, option is invalid.");
 	    break;
           }
-	  sprintf(buffoption, boon_options[option].desc);
+	  sprintf(buffoption, "%s", boon_options[option].desc);
 	  break;
 	}
     }
@@ -2877,7 +2877,7 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 	    if (bdata.bonus == LUCK)
 	    {
 	      ch->base_stats.Luck = BOUNDED(0, ch->base_stats.Luck+1, 100);
-	      send_to_char("You feel as if you could roll Tripple Tiamat's at the slots...\r\n", ch);
+	      send_to_char("You feel as if you could roll Triple Tiamat's at the slots...\r\n", ch);
 	    }
 	    if (bdata.bonus == KARMA)
 	    {

@@ -120,11 +120,11 @@ void listen_say(P_char ch, P_char tch, const char *buf)
 
       send_to_char(buf1, tch);
 
-      notch_skill(tch, SKILL_LISTEN, 20);
+      notch_skill(tch, SKILL_LISTEN, 17);
     }
     else
     {
-      notch_skill(tch, SKILL_LISTEN, 100);
+      notch_skill(tch, SKILL_LISTEN, 1);
     }
   }
 }
@@ -174,11 +174,11 @@ void listen_gsay(P_char ch, P_char tch, const char *buf)
 
       send_to_char(buf1, tch);
 
-      notch_skill(tch, SKILL_LISTEN, 20);
+      notch_skill(tch, SKILL_LISTEN, 5);
     }
     else
     {
-      notch_skill(tch, SKILL_LISTEN, 100);
+      notch_skill(tch, SKILL_LISTEN, 1);
     }
   }
 }

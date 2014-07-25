@@ -386,7 +386,7 @@ struct edit_data {
 #define INNATE_HAMMER_MASTER     92
 #define INNATE_AXE_MASTER        93
 #define INNATE_GAZE              94
-#define INNATE_EMBRACE_DEATH       95
+#define INNATE_EMBRACE_DEATH     95
 #define INNATE_LIFEDRAIN         96
 #define INNATE_IMMOLATE          97
 #define INNATE_VULN_SUN          98
@@ -396,9 +396,9 @@ struct edit_data {
 #define INNATE_SUMMON_WARG       102
 #define INNATE_HATRED            103
 #define INNATE_EVASION           104
-#define INNATE_DRAGONMIND           105
-#define INNATE_SHIFT_ETHEREAL       106
-#define INNATE_ASTRAL_NATIVE        107
+#define INNATE_DRAGONMIND        105
+#define INNATE_SHIFT_ETHEREAL    106
+#define INNATE_ASTRAL_NATIVE     107
 #define INNATE_TWO_DAGGERS       108
 #define INNATE_HOLY_LIGHT        109
 #define INNATE_COMMAND_AURA      110
@@ -438,7 +438,7 @@ struct edit_data {
 #define INNATE_ENGULF            144
 #define INNATE_SLIME             145
 #define INNATE_DUAL_WIELDING_MASTER 146
-#define INNATE_SPEED              147
+#define INNATE_SPEED             147
 #define INNATE_ICE_AURA          148
 #define INNATE_REQUIEM           149
 #define INNATE_ALLY              150
@@ -452,12 +452,13 @@ struct edit_data {
 #define INNATE_WALL_CLIMBING     158
 #define INNATE_WOODLAND_RENEWAL  159
 #define INNATE_NATURAL_MOVEMENT  160
-#define MAGIC_VULNERABILITY 161
+#define MAGIC_VULNERABILITY      161
 #define TWO_HANDED_SWORD_MASTERY 162
-#define HOLY_COMBAT		     163
-#define INNATE_GIANT_AVOIDANCE	     164
-#define INNATE_SEADOG	     165
-#define LAST_INNATE              165   // LAST means last, not last + 1 or whatever
+#define HOLY_COMBAT		           163
+#define INNATE_GIANT_AVOIDANCE	 164
+#define INNATE_SEADOG     	     165
+#define INNATE_AURA_SPELL_PROTECTION 166
+#define LAST_INNATE              166   // LAST means last, not last + 1 or whatever
 
 struct extra_descr_data {
   char *keyword;                /* Keyword in look/examine          */
@@ -1445,74 +1446,74 @@ struct txt_q {
 
 /* modes of connectedness */
 
-#define CON_PLYNG    0
-#define CON_NME      1
-#define CON_NMECNF   2
-#define CON_PWDNRM   3
-#define CON_PWDGET   4
-#define CON_PWDCNF   5
-#define CON_QSEX     6
-#define CON_RMOTD    7
-#define CON_SLCT     8
-#define CON_PUNTCNF  9
-#define CON_QCLASS  10
-#define CON_LDEAD   11
-#define CON_PWDNEW  12
-#define CON_PWDNCNF 13
-#define CON_FLUSH   14
-#define CON_PWDNGET 15
-#define CON_PWDDCNF 16
-#define CON_QRACE   17
-#define CON_TERM    18
-#define CON_EXDSCR  19
-#define CON_QRETURN 20
-#define CON_DSCLMR1 21
-#define CON_DSCLMR2 22
-#define CON_DSCLMR3 23
-#define CON_DSCLMR4 24
-#define CON_DSCLMR5 25
-#define CON_DSCLMR6 26
-#define CON_DISCLMR 27
-#define CON_INFO    28
+#define CON_PLYNG      0
+#define CON_NME        1
+#define CON_NMECNF     2
+#define CON_PWDNRM     3
+#define CON_PWDGET     4
+#define CON_PWDCNF     5
+#define CON_QSEX       6
+#define CON_RMOTD      7
+#define CON_SLCT       8
+#define CON_PUNTCNF    9
+#define CON_QCLASS    10
+#define CON_LDEAD     11
+#define CON_PWDNEW    12
+#define CON_PWDNCNF   13
+#define CON_FLUSH     14
+#define CON_PWDNGET   15
+#define CON_PWDDCNF   16
+#define CON_QRACE     17
+#define CON_TERM      18
+#define CON_EXDSCR    19
+#define CON_QRETURN   20
+#define CON_DSCLMR1   21
+#define CON_DSCLMR2   22
+#define CON_DSCLMR3   23
+#define CON_DSCLMR4   24
+#define CON_DSCLMR5   25
+#define CON_DSCLMR6   26
+#define CON_DISCLMR   27
+#define CON_INFO      28
 #define CON_ACCTINFO  29
-#define CON_RACEWAR 30
-#define CON_LINKVR  31
-#define CON_LINKSET 32
-#define CON_APROPOS 33
-#define CON_DELETE  34
-#define CON_REROLL  35
-#define CON_BONUS1  36
-#define CON_BONUS2  37
-#define CON_BONUS3  38
-#define CON_KEEPCHAR 39
-#define CON_ALIGN    40
-#define CON_HOMETOWN 41
+#define CON_RACEWAR   30
+#define CON_LINKVR    31
+#define CON_LINKSET   32
+#define CON_APROPOS   33
+#define CON_DELETE    34
+#define CON_REROLL    35
+#define CON_BONUS1    36
+#define CON_BONUS2    37
+#define CON_BONUS3    38
+#define CON_KEEPCHAR  39
+#define CON_ALIGN     40
+#define CON_HOMETOWN  41
 #define CON_ACCEPTWAIT 42
-#define CON_WELCOME 43
-#define CON_NEW_NAME 44
+#define CON_WELCOME   43
+#define CON_NEW_NAME  44
 #define CON_HOST_LOOKUP 45      /* looking up hostname... */
-#define CON_OEDIT      46             /*. OLC mode - object edit     .*/
-#define CON_REDIT      47             /*. OLC mode - room edit       .*/
-#define CON_ZEDIT      48             /*. OLC mode - zone info edit  .*/
-#define CON_MEDIT      49             /*. OLC mode - mobile edit     .*/
-#define CON_SEDIT      50             /*. OLC mode - shop edit       .*/
-#define CON_QEDIT      51
-#define CON_BONUS4     52       /* Krov: new 5 bonus system */
-#define CON_BONUS5     53
-#define CON_TEXTED     54
-#define CON_PICKSIDE   55       /* pick racewar side, for true neutral races */
+#define CON_OEDIT     46             /*. OLC mode - object edit     .*/
+#define CON_REDIT     47             /*. OLC mode - room edit       .*/
+#define CON_ZEDIT     48             /*. OLC mode - zone info edit  .*/
+#define CON_MEDIT     49             /*. OLC mode - mobile edit     .*/
+#define CON_SEDIT     50             /*. OLC mode - shop edit       .*/
+#define CON_QEDIT     51
+#define CON_BONUS4    52       /* Krov: new 5 bonus system */
+#define CON_BONUS5    53
+#define CON_TEXTED    54
+#define CON_PICKSIDE  55       /* pick racewar side, for true neutral races */
 #define CON_ENTER_LOGIN 56
-#define CON_ENTER_HOST  57
+#define CON_ENTER_HOST 57
 #define CON_CONFIRM_EMAIL 58
-#define CON_EXIT          59
-#define CON_GET_ACCT_NAME  60
+#define CON_EXIT      59
+#define CON_GET_ACCT_NAME 60
 #define CON_GET_ACCT_PASSWD 61
 #define CON_IS_ACCT_CONFIRMED 62
 #define CON_DISPLAY_ACCT_MENU 63
 #define CON_CONFIRM_ACCT 64
 #define CON_VERIFY_NEW_ACCT_NAME 65
 #define CON_GET_NEW_ACCT_EMAIL 66
-#define CON_VERIFY_NEW_ACCT_EMAIL       67
+#define CON_VERIFY_NEW_ACCT_EMAIL 67
 #define CON_GET_NEW_ACCT_PASSWD 68
 #define CON_VERIFY_NEW_ACCT_PASSWD 69
 #define CON_VERIFY_NEW_ACCT_INFO 70
@@ -1526,9 +1527,10 @@ struct txt_q {
 #define CON_ACCT_VERIFY_DELETE_ACCT 78
 #define CON_VERIFY_ACCT_INFO 79
 #define CON_ACCT_NEW_CHAR_NAME 80
-#define CON_HARDCORE     81
-#define CON_NEWBIE              82
-
+#define CON_HARDCORE  81
+#define CON_NEWBIE    82
+#define CON_SWAPSTATYN 83
+#define CON_SWAPSTAT  84
 
 /* modes of confirmation- SAM 7-94 */
 #define CONFIRM_NONE    0
@@ -2092,10 +2094,10 @@ struct mcname {
 #define SPEC_DECEIVER 1
 #define SPEC_DARK_DREAMER 2
 
-/* CLASS_CABALIST Specs */
-#define SPEC_DRAGONBORN   1
-#define SPEC_ABYSSAL      2
-#define SPEC_DARK_TEMPEST 3
+/* CLASS_BLIGHTER Specs */
+#define SPEC_STORMBRINGER 1
+#define SPEC_SCOURGE      2
+#define SPEC_RUINER       3
 
 //Avenger Specs
 #define SPEC_LIGHTBRINGER 1
@@ -2111,6 +2113,11 @@ struct mcname {
 #define SPEC_MEDIUM 1
 #define SPEC_TEMPLAR 2
 #define SPEC_THAUMATURGE 3
+
+//Summoner Specs
+#define SPEC_CONTROLLER 1
+#define SPEC_SUMMONER 2
+#define SPEC_NATURALIST 3
 
 #define MAX_SPEC 4
 

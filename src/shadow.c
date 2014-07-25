@@ -638,7 +638,7 @@ void event_grapple(P_char ch, P_char victim, P_obj obj, void *data)
 {
      int percent = 100, skill, stages=1, dam=0, move;
 
-          notch_skill(ch, SKILL_GRAPPLE, 5);
+          notch_skill(ch, SKILL_GRAPPLE, 17);
                act("...and then, in rapid succession you slam your head twice into\r\n$S face smashing it to a pulp. ",
                    FALSE, ch, 0, victim, TO_CHAR);
                           act("...then the taste of blood fills your mouth as your\r\nteeth are shattered by $s forehead.", F

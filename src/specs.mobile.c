@@ -2060,7 +2060,7 @@ int guild_guard(P_char ch, P_char pl, int cmd, char *arg)
   case 7584:
     g_prot = TRUE;
     if ((cmd == CMD_NORTH) &&
-        !GET_CLASS(pl, CLASS_NECROMANCER) &&
+        !GET_CLASS(pl, CLASS_NECROMANCER) && !GET_CLASS(pl, CLASS_SUMMONER) &&
         !GET_CLASS(pl, CLASS_SORCERER) && !GET_CLASS(pl, CLASS_CONJURER))
       block = TRUE;
     break;
@@ -2282,7 +2282,7 @@ int guild_guard(P_char ch, P_char pl, int cmd, char *arg)
   case 66084:
     g_prot = TRUE;
     if ((cmd == CMD_NORTH) && !GET_CLASS(pl, CLASS_SORCERER) &&
-        !GET_CLASS(pl, CLASS_CONJURER))
+        !GET_CLASS(pl, CLASS_SUMMONER) && !GET_CLASS(pl, CLASS_CONJURER))
       block = TRUE;
     break;
   case 66078:

@@ -2819,8 +2819,7 @@ void extract_char(P_char ch)
 
       obj = unequip_char(ch, l);
       /* Added pet check */
-      if (ch->in_room == -1 || IS_SET(obj->extra_flags, ITEM_TRANSIENT) || IS_SHOPKEEPER(ch) ||
-          (IS_NPC(ch) && IS_RANDOM_MOB(ch)))
+      if( ch->in_room == NOWHERE || IS_SET(obj->extra_flags, ITEM_TRANSIENT) || IS_SHOPKEEPER(ch) || (IS_NPC(ch) && IS_RANDOM_MOB(ch)) )
       {
         extract_obj(obj, TRUE);
         obj = NULL;
@@ -2828,20 +2827,16 @@ void extract_char(P_char ch)
       else
         obj_to_room(obj, ch->in_room);
     }
-  if(ch &&
-     ch->carrying)
+  if(ch && ch->carrying)
   {
     P_obj    next_obj;
 
     for (obj = ch->carrying; obj != NULL; obj = next_obj)
     {
       next_obj = obj->next_content;
-      
-      if(IS_SHOPKEEPER(ch) ||
-        IS_SET(obj->extra_flags, ITEM_TRANSIENT) ||
-        (IS_NPC(ch) &&
-          mob_index[GET_RNUM(ch)].virtual_number >= 100000 &&
-          mob_index[GET_RNUM(ch)].virtual_number < 110000))
+
+      if( ch->in_room == NOWHERE || IS_SHOPKEEPER(ch) || IS_SET(obj->extra_flags, ITEM_TRANSIENT)
+        || (IS_NPC(ch) && mob_index[GET_RNUM(ch)].virtual_number >= 100000 && mob_index[GET_RNUM(ch)].virtual_number < 110000))
       {
         extract_obj(obj, TRUE);
         obj = NULL;
@@ -3469,42 +3464,75 @@ void ac_stopAllFromIgnoring(P_char ch)
 
 int can_char_use_item(P_char ch, P_obj obj)
 {
-  if (!ch || !obj)
+  if( !ch || !obj )
+  {
     return (FALSE);
-  
+  }
+
   if (IS_NPC(ch) && (GET_RNUM(ch) == real_mobile(250)))
+  {
     return FALSE;
+  }
 
   if (IS_ILLITHID(ch))
+  {
     return TRUE;
-  
+  }
+
   if (!IS_SET(obj->extra_flags, ITEM_ALLOWED_RACES))
   {
-    if (GET_RACE(ch) <= RACE_PLAYER_MAX &&
-        IS_SET(obj->anti2_flags, 1 << (GET_RACE(ch) - 1)))
+    if (GET_RACE(ch) <= RACE_PLAYER_MAX && IS_SET(obj->anti2_flags, 1 << (GET_RACE(ch) - 1)))
+    {
       return FALSE;
+    }
   }
   else
-    if (GET_RACE(ch) > RACE_PLAYER_MAX ||
-        !IS_SET(obj->anti2_flags, 1 << (GET_RACE(ch) - 1)))
-    return FALSE;
-
-  if(ch &&
-    !IS_MULTICLASS_PC(ch))
   {
-    if (!IS_SET(obj->extra_flags, ITEM_ALLOWED_CLASSES))
-    {
-      if (IS_SET(obj->anti_flags, ch->player.m_class))
-        return FALSE;
-    }
-    else if (!IS_SET(obj->anti_flags, ch->player.m_class))
+    if( GET_RACE(ch) > RACE_PLAYER_MAX || !IS_SET(obj->anti2_flags, 1 << (GET_RACE(ch) - 1)) )
     {
       return FALSE;
     }
   }
-  else if(ch && // Multiclass can use either class of equipment. Nov08 -Lucrot
-         (IS_MULTICLASS_PC(ch) ||
-         IS_MULTICLASS_NPC(ch)))
+
+  if( ch && !IS_MULTICLASS_PC(ch) )
+  {
+    // Allow Blighters to use Druid eq unless specifically denied.
+    if( GET_CLASS(ch, CLASS_BLIGHTER) )
+    {
+      if( IS_SET(obj->extra_flags, ITEM_ALLOWED_CLASSES) )
+      {
+        if( IS_SET(obj->anti_flags, CLASS_DRUID) )
+        {
+          return TRUE;
+        }
+      }
+    }
+    // Allow Summoners to wear Conjurer eq unless specifically denied.
+    if( GET_CLASS(ch, CLASS_SUMMONER) )
+    {
+      if( IS_SET(obj->extra_flags, ITEM_ALLOWED_CLASSES) )
+      {
+        if( IS_SET(obj->anti_flags, CLASS_CONJURER) )
+        {
+          return TRUE;
+        }
+      }
+    }
+
+    if( !IS_SET(obj->extra_flags, ITEM_ALLOWED_CLASSES) )
+    {
+      if( IS_SET(obj->anti_flags, ch->player.m_class) )
+      {
+        return FALSE;
+      }
+    }
+    else if( !IS_SET(obj->anti_flags, ch->player.m_class) )
+    {
+      return FALSE;
+    }
+  }
+  // Multiclass can use either class of equipment. Nov08 -Lucrot
+  else if( ch && (IS_MULTICLASS_PC(ch) || IS_MULTICLASS_NPC(ch)) )
   {
     if(!IS_SET(obj->extra_flags, ITEM_ALLOWED_CLASSES))
     {

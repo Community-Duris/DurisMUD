@@ -22,6 +22,7 @@ extern const struct race_names race_names_table[];
 bool isCarved(P_obj corpse);
 
 int CheckFor_remember(P_char ch, P_char victim);
+P_obj get_globe( P_char ch );
 
 struct undead_description
 {
@@ -198,10 +199,12 @@ int setup_pet(P_char mob, P_char ch, int duration, int flag)
   af.type = SPELL_CHARM_PERSON;
   af.duration = IS_PC(ch) ? duration : -1;
 
-  globe = ch->equipment[HOLD];
+  globe = get_globe( ch );
 
-  if (has_innate(ch, INNATE_UNHOLY_ALLIANCE) || (globe && (globe->R_num == real_object(GLOBE_SHADOWS_VNUM))))
+  if( has_innate(ch, INNATE_UNHOLY_ALLIANCE) || globe )
+  {
     af.duration = -1;
+  }
 
   duration = af.duration;
   /* the higher the level of the mob, the more likely it'll be aggro to the caster after charm*/
@@ -247,13 +250,13 @@ int count_undead(P_char ch)
   P_char follower;
   float sum;
   int i;
-  
+
   sum = 0;
 
   for (cld = ch->linked; cld; cld = cld->next_linked)
   {
     follower = cld->linking;
-    
+
     if(cld->type != LNK_PET)
     {
       continue;
@@ -280,7 +283,7 @@ int count_undead(P_char ch)
         }
       }
     }
-    
+
     for(i = 0; i <= NECROGOLEM_LAST; i++)
     {
       if (strstr(follower->player.name, golem_data[i].name))
@@ -367,78 +370,74 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
 
   if (!(obj && ch))
   {
-    logit(LOG_EXIT, "assert: bogus parms");
+    logit(LOG_EXIT, "raise_undead: bogus parms - missing ch or obj");
     raise(SIGSEGV);
   }
-  
+
   if(GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER) ||
      GET_SPEC(ch, CLASS_THEURGIST, SPEC_THAUMATURGE))
     life += (int) (life / 3);
-  
+
   if (CHAR_IN_SAFE_ZONE(ch))
   {
     send_to_char("You do not feel right raising undead here.\r\n", ch);
     return;
   }
-  
+
   if ((GET_ALIGNMENT(ch) > 0) && GET_CLASS(ch, CLASS_NECROMANCER))
   {
-    send_to_char
-      ("You don't even _consider_ such a evil act, meddling with undead!\n",
-       ch);
+    send_to_char("You don't even _consider_ such a evil act, meddling with undead!\n", ch);
     return;
   }
 
   if ((GET_ALIGNMENT(ch) < 0) && GET_CLASS(ch, CLASS_THEURGIST))
   {
-    send_to_char
-      ("You don't even _consider_ such a good act, meddling with angels!\n",
-       ch);
+    send_to_char("You don't even _consider_ such a good act, meddling with angels!\n", ch);
     return;
   }
 
   if(IS_NPC(ch) && IS_PC_PET(ch))
-   return;
+  {
+    return;
+  }
 
-  if ((IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM) &&
-      !is_wearing_necroplasm(ch) &&
-      !IS_NPC(ch)) ||
-      affected_by_spell(ch, SPELL_CORPSEFORM))
+  if( (IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM)
+    && !is_wearing_necroplasm(ch)
+    && !IS_NPC(ch))
+    || affected_by_spell(ch, SPELL_CORPSEFORM) )
   {
     send_to_char("You cannot control undead in that form!\n\r", ch);
     return;
   }
-  
-  if (!OBJ_IN_ROOM(obj, ch->in_room))
+
+  // If corpse not in room with ch ?!
+  if( !OBJ_IN_ROOM(obj, ch->in_room) )
   {
     send_to_char("Something is screwed up with the code.\r\n", ch);
     return;
   }
-  
+
   if (obj->type != ITEM_CORPSE)
   {
     act("You can't animate $p!", FALSE, ch, obj, 0, TO_CHAR);
     return;
   }
-  
-  if (strstr(obj->name, "acorpse"))
+
+  if( strstr(obj->name, "acorpse") )
   {
     send_to_char("Cheater, eh? Go 'way.\r\n", ch);
     return;
   }
-  
-  clevel = obj->value[CORPSE_LEVEL];
-  
-  if (IS_SET(obj->value[CORPSE_FLAGS], PC_CORPSE) &&
-     (clevel < 0))
-        clevel = -clevel;
 
-  if (clevel > (level + 4) &&
-      !IS_TRUSTED(ch) &&
-      (level < 49))
+  clevel = obj->value[CORPSE_LEVEL];
+
+  if( IS_SET(obj->value[CORPSE_FLAGS], PC_CORPSE) && (clevel < 0) )
+    clevel = -clevel;
+
+  if( clevel > (level + 4) && !IS_TRUSTED(ch) && (level < 49) )
   {
     act("You are not powerful enough to animate that corpse!",
-        FALSE, ch, 0, 0, TO_CHAR);
+      FALSE, ch, 0, 0, TO_CHAR);
     return;
   }
 
@@ -446,27 +445,25 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
 
   if (sum < 0)
   {
-    send_to_char
-      ("You cannot have draco-liches, titans, or avatars under your control when animating undead!\r\n", ch);
+    send_to_char("You cannot have draco-liches, titans, or avatars under your control when animating undead!\r\n", ch);
     return;
   }
-  
-  if (clevel < 4)
+
+  if( clevel < 4 )
   {
     send_to_char("The corpse is too weak to rise as undead!\r\n", ch);
     return;
   }
-  
-  if ((which_type >= 0) &&
-      (clevel < undead_data[which_type].corpse_level))
+
+  if( (which_type >= 0) && (clevel < undead_data[which_type].corpse_level) )
   {
     send_to_char("That corpse is too weak to raise in that manner.\r\n", ch);
     return;
   }
 
-  globe = ch->equipment[HOLD];
-  
-  if (globe && (globe->R_num == real_object(GLOBE_SHADOWS_VNUM)))
+  globe = get_globe( ch );
+
+  if( globe )
   {
     act("&+LYour $q &+Lpulses with evil energy, infusing part of its malevolence into your undead abomination!&N",
           FALSE, ch, globe, 0, TO_CHAR);
@@ -475,30 +472,39 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
     life = (life + number(50, 100));
   }
 
-  if (which_type < 0)
+  if( which_type < 0 )
   {
     do
     {
       if (GET_CLASS(ch, CLASS_THEURGIST))
         typ = (int) (number(0, MIN(level + 5, 45)) / 10) + ((NECROPET_LAST + 1) / 2);
+      // Blighters only raise skeletons/zombies.
+      else if (GET_CLASS(ch, CLASS_BLIGHTER))
+        typ = number( 0, 1 );
       else
         typ = (int) (number(0, MIN(level + 5, 45)) / 10);
     }
-    while (clevel < undead_data[typ].corpse_level);
+    while( clevel < undead_data[typ].corpse_level );
   }
   else
   {
     typ = which_type;
   }
 
- int necro_power = GET_LEVEL(ch) * 2;
- if( GET_SPEC(ch, CLASS_NECROMANCER, SPEC_NECROLYTE) ||
-     GET_SPEC(ch, CLASS_THEURGIST, SPEC_TEMPLAR) ) 
-     necro_power += 10;  
-     
-  if ((sum + undead_data[typ].cost > necro_power) &&
-      !IS_TRUSTED(ch) &&
-      IS_PC(ch))
+  int necro_power = GET_LEVEL(ch) * 2;
+  if( GET_SPEC(ch, CLASS_NECROMANCER, SPEC_NECROLYTE)
+    || GET_SPEC(ch, CLASS_THEURGIST, SPEC_TEMPLAR) )
+  {
+    necro_power += 10;
+  }
+  // Lvl 15 : 1 pet, Lvl 30 : 2 pets, Lvl 45 : 3 pets, lvl 56 : 3 pets.
+  if( IS_PC(ch) && GET_CLASS(ch, CLASS_BLIGHTER) )
+  {
+    necro_power = (necro_power) / 3;
+  }
+
+  if( (sum + undead_data[typ].cost > necro_power )
+    && !IS_TRUSTED(ch) && IS_PC(ch) )
   {
     act("You are too weak to animate more corpses!",
       FALSE, ch, 0, 0, TO_CHAR);
@@ -509,11 +515,11 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
 
   if (!undead)
   {
-    logit(LOG_DEBUG, "spell_animate_dead(): mob 1201 (undead) not loadable");
+    logit(LOG_DEBUG, "spell_raise_undead(): mob 1201 (undead) not loadable");
     send_to_char("Something is screwed up with the code. Can't read mob.\r\n", ch);
     return;
   }
-  
+
   /* okie, a few changes so zombies aren't god-like. -JAB */
   GET_SIZE(undead) = SIZE_MEDIUM;
   undead->specials.affected_by = undead_data[typ].aff1;
@@ -525,42 +531,50 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   SET_BIT(undead->specials.affected_by2, AFF2_ULTRAVISION);
   SET_BIT(undead->specials.act, ACT_ISNPC);
   if (!IS_SET(undead->specials.act, ACT_MEMORY))
+  {
     clearMemory(undead);
+  }
 
   remove_plushit_bits(undead);
 
   GET_RACE(undead) = undead_data[typ].race;
-
-
   GET_SEX(undead) = SEX_NEUTRAL;
-  
+
   if ((typ >= NECROPET_START) && (typ <= NECROPET_END))
+  {
     undead->specials.alignment = -1000;    /* evil aligned */
+  }
   else if ((typ >= THEURPET_START) && (typ <= THEURPET_END))
+  {
     undead->specials.alignment = 1000;
+  }
 
   num = (int) (clevel + (level - clevel) / 1.5);
-  
-  if (level < 50)
-    cap =
-      (int) ((((float) level) / 4 + 37.5) * undead_data[typ].max_level / 50);
+
+  if( level < 50 )
+  {
+    cap = (int) ((((float) level) / 4 + 37.5) * undead_data[typ].max_level / 50);
+  }
   else
+  {
     cap = undead_data[typ].max_level;
+  }
 
   undead->player.level = BOUNDED(1, num, cap);
 
-
-
   for (j = 1; j <= MAX_CIRCLE; j++)
-    undead->specials.undead_spell_slots[j] =
-      spl_table[GET_LEVEL(undead)][j - 1];
+  {
+    undead->specials.undead_spell_slots[j] = spl_table[GET_LEVEL(undead)][j - 1];
+  }
 
   undead->points.base_mana = GET_LEVEL(undead) * typ * 2;
   undead->points.mana = undead->points.base_mana;
   undead->player.m_class = undead_data[typ].pet_class;
 
-  while (undead->affected)
+  while( undead->affected )
+  {
     affect_remove(undead, undead->affected);
+  }
 
   undead->base_stats.Str = BOUNDED(74, undead->base_stats.Str, 100);
   undead->base_stats.Agi = BOUNDED(74, undead->base_stats.Agi, 100);
@@ -571,13 +585,11 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   /* max hp: 800 - really lucky lich.  */
   GET_HIT(undead) = GET_MAX_HIT(undead) = undead->points.base_hit =
     (int) (dice(GET_LEVEL(undead), 12) +
-           GET_LEVEL(ch) * undead_data[typ].hps + (life * 3));
+    GET_LEVEL(ch) * undead_data[typ].hps + (life * 3));
 
   undead->points.vitality = undead->points.base_vitality =
     undead->points.max_vitality =
-    MAX(50,
-        undead->base_stats.Agi) + (undead->base_stats.Str +
-                                   undead->base_stats.Con) / 2;
+    MAX(50, undead->base_stats.Agi) + (undead->base_stats.Str + undead->base_stats.Con) / 2;
 
   undead->points.base_armor = 100 - GET_LEVEL(undead) - (typ * 15);
 
@@ -592,16 +604,11 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   balance_affects(undead);
   undead->only.npc->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2);
 
-
-
-
   if ((typ >= THEURPET_START) && (typ <= THEURPET_END))
   {
     sprintf(Gbuf2, "%s", undead_data[typ].name);
     undead->player.name = str_dup(Gbuf2);
-    if (typ == THEURPET_SPECTRE ||
-	typ == THEURPET_LICH ||
-	typ == THEURPET_SHADOW)
+    if (typ == THEURPET_SPECTRE || typ == THEURPET_LICH || typ == THEURPET_SHADOW)
     {
       sprintf(Gbuf1, "an %s", undead_data[typ].short_desc);
       undead->player.short_descr = str_dup(Gbuf1);
@@ -621,24 +628,18 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   {
     sprintf(Gbuf2, "undead %s _%s_", undead_data[typ].name, undead_data[typ].name);
     undead->player.name = str_dup(Gbuf2);
-    sprintf(Gbuf1, "the %s of %s", undead_data[typ].name,
-            obj->action_description);
+    sprintf(Gbuf1, "the %s of %s", undead_data[typ].name, obj->action_description);
     undead->player.short_descr = str_dup(Gbuf1);
-    sprintf(Gbuf1, "The %s of %s stands here.\r\n", undead_data[typ].name,
-            obj->action_description);
+    sprintf(Gbuf1, "The %s of %s stands here.\r\n", undead_data[typ].name, obj->action_description);
     undead->player.long_descr = str_dup(Gbuf1);
   }
 
   if (IS_SET(obj->value[CORPSE_FLAGS], PC_CORPSE))
   {
     logit(LOG_CORPSE, "%s got raised while equipped ( by %s in room %d ).",
-          obj->short_description,
-          (IS_PC(ch) ? GET_NAME(ch) :
-           ch->player.short_descr), world[ch->in_room].number);
+      obj->short_description, (IS_PC(ch) ? GET_NAME(ch) : ch->player.short_descr), world[ch->in_room].number);
     wizlog(57, "%s got raised while equipped ( by %s in room %d ).",
-           obj->short_description,
-           (IS_PC(ch) ? GET_NAME(ch) :
-            ch->player.short_descr), world[ch->in_room].number);
+      obj->short_description, (IS_PC(ch) ? GET_NAME(ch) : ch->player.short_descr), world[ch->in_room].number);
     corpselog = TRUE;
   }
 
@@ -648,10 +649,11 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
     create_saved_corpse(obj, undead);
     for (obj_in_corpse = obj->contains; obj_in_corpse; obj_in_corpse = next_obj)
     {
-      if (corpselog)
+      if( corpselog )
+      {
         logit(LOG_CORPSE, "%s raised with eq: [%d] %s", obj->short_description,
-            obj_index[obj_in_corpse->R_num].virtual_number,
-            obj_in_corpse->name);
+          obj_index[obj_in_corpse->R_num].virtual_number, obj_in_corpse->name);
+      }
       next_obj = obj_in_corpse->next_content;
       obj_from_obj(obj_in_corpse);
       obj_to_char(obj_in_corpse, undead);
@@ -666,9 +668,9 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   else
   {
     act("You breathe life into $p with the awesome power of your art.",
-    FALSE, ch, obj, 0, TO_CHAR);
-  act("You see $p take a deep breath, and suddenly come to life again.",
-    FALSE, ch, obj, 0, TO_NOTVICT);
+      FALSE, ch, obj, 0, TO_CHAR);
+    act("You see $p take a deep breath, and suddenly come to life again.",
+      FALSE, ch, obj, 0, TO_NOTVICT);
   }
 
   int timeToDecay = 0;
@@ -681,7 +683,6 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   extract_obj(obj, TRUE);
   char_to_room(undead, ch->in_room, 0);
 
-
   int duration = setup_pet(undead, ch, MAX(4, timeToDecay), PET_NOCASH);
   add_follower(undead, ch);
 
@@ -693,9 +694,9 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   }
   if(GET_RACE(undead) == RACE_PLICH)
   {
-  undead->player.m_class += CLASS_CONJURER;
-  undead->player.secondary_class += CLASS_SORCERER;
-  //send_to_char("is lich\r\n", ch);
+    undead->player.m_class += CLASS_CONJURER;
+    undead->player.secondary_class += CLASS_SORCERER;
+    //send_to_char("is lich\r\n", ch);
   }
 
 }
@@ -1022,10 +1023,9 @@ void spell_call_titan(int level, P_char ch, char *arg, int type, P_char victim, 
     return;
   }
    
-  globe = ch->equipment[HOLD];
+  globe = get_globe( ch );
 
-  if (globe &&
-     (globe->R_num == real_object(GLOBE_SHADOWS_VNUM)))
+  if( globe )
   {
      act("&+LYour $q &+Lpulses with evil energy, infusing part of its malevolence into your titan!&N",
           FALSE, ch, globe, 0, TO_CHAR);
@@ -1304,10 +1304,9 @@ void spell_create_dracolich(int level, P_char ch, char *arg, int type, P_char vi
     return;
   }
    
-  globe = ch->equipment[HOLD];
+  globe = get_globe( ch );
 
-  if (globe &&
-     (globe->R_num == real_object(GLOBE_SHADOWS_VNUM)))
+  if( globe )
   {
      act("&+LYour $q &+Lpulses with evil energy, infusing part of its malevolence into your abomination!&N",
           FALSE, ch, globe, 0, TO_CHAR);
@@ -1582,8 +1581,8 @@ void create_golem(int level, P_char ch, P_char victim, P_obj obj,
     return;
   }
 
-  globe = ch->equipment[HOLD];
-  if (globe && (globe->R_num == real_object(GLOBE_SHADOWS_VNUM)))
+  globe = get_globe( ch );
+  if( globe )
   {
     act("&+LYour $q &+Lpulses with evil energy, infusing part of it's malevolence into your undead abomination!&N",
           FALSE, ch, globe, 0, TO_CHAR);
@@ -1762,9 +1761,9 @@ void spell_call_avatar(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  globe = ch->equipment[HOLD];
+  globe = get_globe( ch );
   
-  if (globe && (globe->R_num == real_object(GLOBE_SHADOWS_VNUM)))
+  if( globe )
   {
     act("&+LYour $q &+Lpulses with evil energy, infusing part of it's malevolence into your undead abomination!&N",
           FALSE, ch, globe, 0, TO_CHAR);
@@ -1996,9 +1995,9 @@ void spell_create_greater_dracolich(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  globe = ch->equipment[HOLD];
+  globe = get_globe( ch );
   
-  if (globe && (globe->R_num == real_object(GLOBE_SHADOWS_VNUM)))
+  if( globe )
   {
     act("&+LYour $q &+Lpulses with evil energy, infusing part of it's malevolence into your undead abomination!&N",
           FALSE, ch, globe, 0, TO_CHAR);
@@ -2759,7 +2758,22 @@ void spell_eyes_death(int level, P_char ch, char *arg, int type, P_char victim, 
 }
 */
 
+// Checks both hands for artifact globe of shadows.  If found, returns 
+//   a pointer to globe.  If not, returns NULL.
+P_obj get_globe( P_char ch )
+{
+  P_obj globe;
 
-
-
-
+  // Check left hand.
+  globe = ch->equipment[HOLD];
+  if( !globe || !(obj_index[globe->R_num].virtual_number == GLOBE_SHADOWS_VNUM) )
+  {
+    // If not left, check right hand.
+    globe = ch->equipment[WIELD];
+    if( !globe || !(obj_index[globe->R_num].virtual_number == GLOBE_SHADOWS_VNUM) )
+    {
+      globe = NULL;
+    }
+  }
+  return globe;
+}

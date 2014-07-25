@@ -419,7 +419,7 @@ int got_all_ingredients(P_char ch, int required[])
     }
   }
 
-  notch_skill(ch, SKILL_MIX, 15);
+  notch_skill(ch, SKILL_MIX, 6.25);
 
   return 1;
 }
@@ -565,7 +565,7 @@ void do_mix(P_char ch, char *argument, int cmd)
           break;
         }
       }
-      notch_skill(ch, SKILL_MIX, 15);
+      notch_skill(ch, SKILL_MIX, 6.25);
       CharWait(ch, PULSE_VIOLENCE * 2);
 
       return;
@@ -870,7 +870,7 @@ void do_encrust(P_char ch, char *argument, int cmd)
   }
   else
   {
-    //notch_skill(ch, SKILL_ENCRUST, 12);
+    //notch_skill(ch, SKILL_ENCRUST, 7.7);
     wizlog(56, "and created %s", item->short_description);
     act("...creating a real masterpiece!", TRUE, ch, 0, 0, TO_ROOM);
     act("Hurrah! Hurrah!", FALSE, ch, 0, 0, TO_CHAR);
@@ -915,7 +915,7 @@ void do_encrust(P_char ch, char *argument, int cmd)
 
   sprintf(buf1, "%s with %s", str_dup(item->short_description), str_dup(jewel->short_description));
   set_short_description(new_item, buf1);
-  sprintf(buf1, str_dup(item->description));
+  sprintf(buf1, "%s", str_dup(item->description));
   set_long_description(new_item, buf1);
   sprintf(buf1, "%s %s", item->name, "encrust");
   set_keywords(new_item, buf1);
@@ -1249,7 +1249,7 @@ void do_smelt(P_char ch, char *arg, int cmd)
       act("&+LThe furnace hums with activity!&n", FALSE, ch, 0, 0, TO_CHAR);
       act("&+LYou have created $p!", FALSE, ch, new_obj, 0, TO_CHAR);
       act("&+L$p &+Lmakes a roaring sound!&n", FALSE, 0, furnace, 0, TO_ROOM);
-      //notch_skill(ch, SKILL_SMELT, 1);
+      //notch_skill(ch, SKILL_SMELT, 50);
     }
 }
 
@@ -1617,7 +1617,7 @@ void do_enchant(P_char ch, char *argument, int cmd)
     }
 
     GET_PLATINUM(ch) = GET_PLATINUM(ch) - (circle * 10);
-    //notch_skill(ch, SKILL_ENCHANT, 12);
+    //notch_skill(ch, SKILL_ENCHANT, 7.7);
 
     act
       ("&+L$n melts some &+Wplatinum &+Lcoins in a vial of &+gacid &+Land then&n &L&+Lproceeds to carefully pour it over $s $q.&n",

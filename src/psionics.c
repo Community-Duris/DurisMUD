@@ -2986,7 +2986,8 @@ void spell_ether_warp(int level, P_char ch, char *arg, int type,
        IS_SET(world[to_room].room_flags, NO_MAGIC) ||
        IS_SET(world[to_room].room_flags, NO_TELEPORT) ||
        world[to_room].sector_type == SECT_OCEAN ||
-       IS_AFFECTED3(victim, AFF3_NON_DETECTION) || IS_NPC(victim) ||
+       IS_AFFECTED3(victim, AFF3_NON_DETECTION) ||
+       (IS_NPC(victim) && !GET_SPEC(ch, CLASS_PSIONICIST, SPEC_PSYCHEPORTER)) ||
        (IS_PC(victim) && IS_SET(victim->specials.act2, PLR2_NOLOCATE)
         && !is_introd(victim, ch)) ||
        racewar(ch, victim) || (GET_MASTER(ch) && IS_PC(victim))
@@ -3010,9 +3011,17 @@ void spell_ether_warp(int level, P_char ch, char *arg, int type,
        IS_SET(world[to_room].room_flags, NO_MAGIC) ||
        IS_SET(world[to_room].room_flags, NO_TELEPORT) ||
        world[to_room].sector_type == SECT_OCEAN ||
-       IS_AFFECTED3(victim, AFF3_NON_DETECTION) || IS_NPC(victim) ||
+       IS_AFFECTED3(victim, AFF3_NON_DETECTION) ||
+       (IS_NPC(victim) && !GET_SPEC(ch, CLASS_PSIONICIST, SPEC_PSYCHEPORTER)) ||
        (IS_PC(victim) && IS_SET(victim->specials.act2, PLR2_NOLOCATE)
         && !(temp == world[to_room].sector_type))))
+  {
+    to_room = ch->in_room;
+  }
+
+  if(!IS_TRUSTED(ch) && IS_NPC(victim) && GET_SPEC(ch, CLASS_PSIONICIST, SPEC_PSYCHEPORTER)
+    && how_close(ch->in_room, victim->in_room, level*1.35+15) < 0
+    && how_close(victim->in_room, ch->in_room, level*1.35+15) < 0 )
   {
     to_room = ch->in_room;
   }

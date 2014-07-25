@@ -2311,49 +2311,44 @@ int crime_remove(int hometown, crm_rec * what)
  * will segfault and blame you if you do it.
  */
 
-int shout_and_hunt(P_char ch,
-                      int max_distance,
-                      const char *shout_str,
-                      int (*locator_proc) (P_char, P_char, int, char *),
-                      int vnums[],
-                      ulong act_mask,
-                      ulong no_act_mask)
+int shout_and_hunt(P_char ch, int max_distance, const char *shout_str, int (*locator_proc) (P_char, P_char, int, char *), int vnums[], ulong act_mask, ulong no_act_mask)
 {
-  P_char   target;
+  P_char    target;
   P_nevent  ev;
-  char     buffer[MAX_STRING_LENGTH], buffer2[MAX_STRING_LENGTH];
+  char      buffer[MAX_STRING_LENGTH], buffer2[MAX_STRING_LENGTH];
   hunt_data data;
-  int      dummy;
-  int      i;
+  int       dummy;
+  int       i;
+  bool      has_help = FALSE;
+  bool      found_help = FALSE;
 
-  if (!ch || !max_distance || (act_mask & no_act_mask))
+  if( !ch || !max_distance || (act_mask & no_act_mask) )
   {
     logit(LOG_EXIT, "shout_and_hunt proc called with bogus params");
     raise(SIGSEGV);;
   }
-  
-  if(IS_PC(ch))
+
+  if( IS_PC(ch) )
   {
     return FALSE;
   }
-  
-  if(!IS_FIGHTING(ch))
+
+  if( !IS_FIGHTING(ch) )
   {
     return FALSE;
   }
+
   /*
    * if its quiet in here, can't shout for help
    */
-  if(IS_SET(world[ch->in_room].room_flags, ROOM_SILENT))
+  if( IS_SET(world[ch->in_room].room_flags, ROOM_SILENT) )
   {
     return FALSE;
   }
   /*
    * if paralyzed, casting, or sleeping, can't shout for help
    */
-  if(IS_IMMOBILE(ch) ||
-    IS_CASTING(ch) ||
-    GET_STAT(ch) == STAT_SLEEPING)
+  if( IS_IMMOBILE(ch) || IS_CASTING(ch) || GET_STAT(ch) == STAT_SLEEPING )
   {
     return FALSE;
   }
@@ -2373,21 +2368,26 @@ int shout_and_hunt(P_char ch,
    * many abilities, procs, etc as we need to get the job done right.
    */
 
-  if(NPC_IS_CITIZEN(ch) &&
-    !IS_GUARD(ch))
+  if( NPC_IS_CITIZEN(ch) && !IS_GUARD(ch) )
   {
     logit(LOG_EXIT, "shout_and_hunt proc called for a ACT_WITNESS mob");
     raise(SIGSEGV);
   }
+
+  // Attack the master and shout for the master not the pet.
+  if( IS_NPC(ch->specials.fighting) && IS_PC_PET( ch->specials.fighting )
+    && ch->specials.fighting->in_room == (GET_MASTER(ch->specials.fighting))->in_room )
+  {
+    ch->specials.fighting = GET_MASTER(ch->specials.fighting);
+  }
+
   /*
    * Okay... find out if we've dealt with this tank.  If not, deal with
    * him
    */
 
-  if (witness_find(ch->specials.witnessed, J_NAME
-                   (ch->specials.fighting), NULL, 0, NOWHERE, NULL))
+  if( witness_find(ch->specials.witnessed, J_NAME(ch->specials.fighting), NULL, 0, NOWHERE, NULL) )
     return FALSE;
-
   /*
    * party time
    */
@@ -2408,14 +2408,12 @@ int shout_and_hunt(P_char ch,
   do_sorta_yell(ch, buffer);
 */
   int shout_distance = MIN(RMFR_MAX_RADIUS, max_distance);
-  
+
   if (!ch->in_room)
   {
-  
-    REMOVE_BIT(world[ch->in_room].room_flags, SINGLE_FILE);
-    
+    // REMOVE_BIT on a non-existant room?!
+//    REMOVE_BIT(world[ch->in_room].room_flags, SINGLE_FILE);
     logit(LOG_DEBUG, "Problem in shout_and_run() for %s - bogus room", GET_NAME(ch));
-            
     wizlog(MINLVLIMMORTAL,"Problem in shout_and_run() for %s - bogus room", GET_NAME(ch));
     return FALSE;
   }
@@ -2423,9 +2421,7 @@ int shout_and_hunt(P_char ch,
  * Decided to let it be heard only inside the same zone, as it is now.
  */
   act(buffer, TRUE, ch, 0, 0, TO_ROOM);
-  
-  radiate_message_from_room(ch->in_room, buffer, shout_distance, 
-    (RMFR_FLAGS) (RMFR_RADIATE_ALL_DIRS | RMFR_PASS_WALL), 0);
+  radiate_message_from_room(ch->in_room, buffer, shout_distance, (RMFR_FLAGS) (RMFR_RADIATE_ALL_DIRS | RMFR_PASS_WALL), 0);
 
   /*
    * need to find all the mobs which 'locator proc' as their special
@@ -2436,8 +2432,7 @@ int shout_and_hunt(P_char ch,
 
   for (target = character_list; target; target = target->next)
   {
-    if(IS_NPC(target) &&
-      (!locator_proc ||
+    if( IS_NPC(target) && (!locator_proc ||
       (mob_index[GET_RNUM(target)].func.mob == locator_proc)) &&
       !((act_mask & target->specials.act) ^ act_mask) &&
       !(no_act_mask & target->specials.act))
@@ -2478,6 +2473,7 @@ int shout_and_hunt(P_char ch,
       if (IS_FIGHTING(target))
         continue;
 
+//debug( "shout_and_hunt: NPC vnum %d.", mob_index[GET_RNUM(target)].virtual_number );
 
       LOOP_EVENTS(ev, target->nevents) if (ev->func == mob_hunt_event)
       {
@@ -2486,21 +2482,27 @@ int shout_and_hunt(P_char ch,
       if (ev)
         continue;
 
+      has_help = TRUE;
+
       /*
        * check if its a possible hunt.. and if its within the max
        * distance
        */
 
 //       debug("Okay boss mob is shouting at this point and we calling for find_first_step in justice.c 2421");
-       
-      if (find_first_step(target->in_room, ch->in_room,
-                          (IS_MAGE(target) ? BFS_CAN_FLY : 0) |
-                          (npc_has_spell_slot(target, SPELL_DISPEL_MAGIC) ? BFS_CAN_DISPEL : 0) |
-                          BFS_BREAK_WALLS, 0, 0, &dummy) < 0)
+      if( find_first_step(target->in_room, ch->in_room, (IS_MAGE(target) ? BFS_CAN_FLY : 0) |
+        (npc_has_spell_slot(target, SPELL_DISPEL_MAGIC) ? BFS_CAN_DISPEL : 0) |
+        BFS_BREAK_WALLS, 0, 0, &dummy) < 0)
+      {
+//        debug( "shout_and_hunt: mob (%s) no first step to room (%d).", J_NAME(target), ch->in_room);
         continue;
+      }
 
       if (dummy > max_distance)
+      {
+//        debug( "shout_and_hunt: mob (%s) too far to hunt to room (%d).", J_NAME(target), ch->in_room);
         continue;
+      }
 
       if (CAN_SEE(ch, ch->specials.fighting))
       {
@@ -2512,10 +2514,16 @@ int shout_and_hunt(P_char ch,
         data.hunt_type = HUNT_ROOM;
         data.targ.room = ch->in_room;
       }
+      found_help = TRUE;
+//    debug( "shout_and_hunt: adding hunt event mob (%s) to room (%d).", J_NAME(target), ch->in_room);
       add_event(mob_hunt_event, PULSE_MOB_HUNT, target, NULL, NULL, 0, &data, sizeof(hunt_data));
       //AddEvent(EVENT_MOB_HUNT, PULSE_MOB_HUNT, TRUE, target, data);
     }
   }
+
+  // Flee if no help can get to ch.
+  if( has_help && !found_help )
+    do_flee( ch, "", CMD_FLEE );
 
   /*
    * okay... last thing to do is add this "tank" to the mobs justice

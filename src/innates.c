@@ -109,18 +109,19 @@ void     do_shift_ethereal(P_char, char *, int);
 void     do_fade(P_char, char *, int);
 
 void       do_aura_protection(P_char, char *, int);
+void       do_aura_spell_protection(P_char, char *, int);
 void       do_aura_precision(P_char, char *, int);
 void       do_aura_battlelust(P_char, char *, int);
 void       do_aura_endurance(P_char, char *, int);
 void       do_aura_healing(P_char, char *, int);
 void       do_aura_vigor(P_char, char *, int);
 void       do_divine_force(P_char, char *, int);
-void	    do_wall_climbing(P_char, char *, int);
+void       do_wall_climbing(P_char, char *, int);
 
-int      get_relic_num(P_char ch);
-int      fight_in_room(P_char ch);
+int        get_relic_num(P_char ch);
+int        fight_in_room(P_char ch);
 
-int      bite_poison(P_char, P_char, int); 
+int        bite_poison(P_char, P_char, int); 
 
 extern const struct innate_data innates_data[];
 const struct innate_data
@@ -383,6 +384,7 @@ const struct innate_data
   {"holy combat", 0},
   {"giant avoidance", 0},
   {"seadog", 0},
+  {"aura_of_spell_protection", do_aura_spell_protection},
 };
 
 string list_innates(int race, int cls, int spec)
@@ -914,6 +916,10 @@ void assign_innates()
   ADD_CLASS_INNATE(INNATE_PLANE_SHIFT, CLASS_DRUID, 41, 0);
   ADD_CLASS_INNATE(INNATE_FOREST_SIGHT, CLASS_DRUID, 1, 0);
 
+  ADD_CLASS_INNATE(INNATE_SHAPECHANGE, CLASS_BLIGHTER, 11, 0);
+  ADD_CLASS_INNATE(INNATE_PLANE_SHIFT, CLASS_BLIGHTER, 41, 0);
+  ADD_CLASS_INNATE(INNATE_FOREST_SIGHT, CLASS_BLIGHTER, 1, 0);
+
   ADD_CLASS_INNATE(INNATE_WILDMAGIC, CLASS_SORCERER, 41, SPEC_WILDMAGE);
   ADD_CLASS_INNATE(INNATE_SUMMON_BOOK, CLASS_SORCERER, 30, SPEC_WIZARD);
 
@@ -925,6 +931,8 @@ void assign_innates()
   ADD_CLASS_INNATE(INNATE_KNIGHT, CLASS_PALADIN, 30, SPEC_CAVALIER);
   ADD_CLASS_INNATE(INNATE_HOLY_CRUSADE, CLASS_PALADIN, 30, SPEC_CRUSADER);
   ADD_CLASS_INNATE(INNATE_AURA_PROTECTION, CLASS_PALADIN, 1, 0);
+  ADD_CLASS_INNATE(INNATE_AURA_PROTECTION, CLASS_CLERIC, 1, SPEC_HOLYMAN);
+  ADD_CLASS_INNATE(INNATE_AURA_SPELL_PROTECTION, CLASS_CLERIC, 1, SPEC_HOLYMAN);
   ADD_CLASS_INNATE(INNATE_AURA_PRECISION, CLASS_PALADIN, 10, 0);
   ADD_CLASS_INNATE(INNATE_AURA_ENDURANCE, CLASS_PALADIN, 15, 0);
   ADD_CLASS_INNATE(INNATE_AURA_HEALING, CLASS_PALADIN, 30, 0);
@@ -959,13 +967,14 @@ void assign_innates()
   //ADD_CLASS_INNATE(INNATE_BLOOD_SCENT, CLASS_CLERIC, 1, SPEC_HEALER);
 
   ADD_CLASS_INNATE(INNATE_FLY, CLASS_ETHERMANCER, 1, 0);
-  //ADD_CLASS_INNATE(INNATE_FLY, CLASS_CONJURER, 1, SPEC_AIR);
+  ADD_CLASS_INNATE(INNATE_FLY, CLASS_CONJURER, 1, SPEC_AIR);
   ADD_CLASS_INNATE(INNATE_HASTE, CLASS_CONJURER, 1, SPEC_AIR);
   ADD_CLASS_INNATE(INNATE_PROT_FIRE, CLASS_CONJURER, 1, SPEC_WATER);
   ADD_CLASS_INNATE(INNATE_PROT_COLD, CLASS_CONJURER, 1, SPEC_WATER);
-  //ADD_CLASS_INNATE(INNATE_WATERBREATH, CLASS_CONJURER, 1, SPEC_WATER);
-  //ADD_CLASS_INNATE(INNATE_CONJURE_WATER, CLASS_CONJURER, 1, SPEC_WATER);
-  ADD_CLASS_INNATE(INNATE_REGENERATION, CLASS_CONJURER, 1, SPEC_EARTH);
+  ADD_CLASS_INNATE(INNATE_WATERBREATH, CLASS_CONJURER, 1, SPEC_WATER);
+  ADD_CLASS_INNATE(INNATE_CONJURE_WATER, CLASS_CONJURER, 1, SPEC_WATER);
+  ADD_CLASS_INNATE(INNATE_REGENERATION, CLASS_CONJURER, 36, SPEC_WATER);
+  ADD_CLASS_INNATE(INNATE_REGENERATION, CLASS_SUMMONER, 30, SPEC_NATURALIST);
 
   ADD_CLASS_INNATE(INNATE_BATTLEAID, CLASS_MERCENARY, 41, SPEC_BOUNTY);
   ADD_CLASS_INNATE(INNATE_PERCEPTION, CLASS_MERCENARY, 31, SPEC_BOUNTY);
@@ -974,7 +983,7 @@ void assign_innates()
   //ADD_CLASS_INNATE(INNATE_SNEAK, CLASS_ROGUE, 1, SPEC_THIEF);
   ADD_CLASS_INNATE(INNATE_TWO_DAGGERS, CLASS_ROGUE, 1, SPEC_THIEF);
   ADD_CLASS_INNATE(INNATE_QUICK_THINKING, CLASS_THIEF, 36, SPEC_TRICKSTER);
-  ADD_CLASS_INNATE(INNATE_WALL_CLIMBING, CLASS_ROGUE, 1, SPEC_THIEF);
+  ADD_CLASS_INNATE(INNATE_WALL_CLIMBING, CLASS_ROGUE, 56, SPEC_THIEF);
 
   ADD_CLASS_INNATE(INNATE_EYELESS, CLASS_DREADLORD, 1, 0);
   ADD_CLASS_INNATE(INNATE_ACID_BLOOD, CLASS_DREADLORD, 1, 0);
@@ -2725,6 +2734,12 @@ struct god_list_data_struct god_list_data[] = {
 const char *get_god_name(P_char ch)
 {
   int i;
+
+  if( GET_CLASS( ch, CLASS_BLIGHTER) )
+  {
+    return "&+yFa&+Lluz&+yure&n";
+  }
+
   for (i = 0; god_list_data[i].race != RACE_NONE; i++)
     if (GET_RACE(ch) == god_list_data[i].race)
       break;
@@ -3297,7 +3312,7 @@ void halfling_stealaction(P_char ch, char *arg, int cmd)
       act("You unequip $p and steal it.", FALSE, ch, obj, 0, TO_CHAR);
       obj_to_char(unequip_char(vict, loc), ch);
       percent -= GET_OBJ_WEIGHT(obj);
-      notch_skill(ch, SKILL_STEAL, 20);
+      notch_skill(ch, SKILL_STEAL, 5);
     } else {
       send_to_char("Uh huh.. You think your instincts got better of you!\n", ch);
       failed = TRUE;
@@ -3781,7 +3796,7 @@ int get_innate_resistance(P_char ch)
     } 
   //  debug("after: %d", res);
   }
-  debug("resistance: %d", res);
+//  debug("resistance: %d", res);
   return (res >= 100) ? 100 : res;
 }
 
@@ -4616,6 +4631,11 @@ void holy_crusade_check(P_char ch, P_char victim)
 
 void do_aura_protection(P_char ch, char *arg, int cmd) {
         do_aura(ch, AURA_PROTECTION);
+  CharWait(ch, PULSE_VIOLENCE);
+}
+
+void do_aura_spell_protection(P_char ch, char *arg, int cmd) {
+        do_aura(ch, AURA_SPELL_PROTECTION);
   CharWait(ch, PULSE_VIOLENCE);
 }
 

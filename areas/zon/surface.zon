@@ -1726,9 +1726,18 @@ M 0 500179 1 660000 100 0 0 0      * Dreikk, the duergar shadow archer
 M 0 500182 1 660000 100 0 0 0      * an orog mauler named Ruukoz
 M 0 500186 1 660000 100 0 0 0      * the vampire deathlord Koztk
 M 0 500187 1 660000 100 0 0 0      * the vampire shadowlord Szezt
+M 0 500234 1 660000 100 0 0 0      * Lrarar
+M 0 500235 1 660000 100 0 0 0      * Glerin
+M 0 500236 1 660000 100 0 0 0      * Biagrin
+M 0 500240 1 660000 100 0 0 0      * Onoman
+M 0 500241 1 660000 100 0 0 0      * Gadak
+M 0 500242 1 660000 100 0 0 0      * Lenus
 M 0 87742 1 660001 100 0 0 0       * (mob type not in this .mob file)
 M 0 500213 1 660002 100 0 0 0      * the grand elaphidist, K'thruu
 M 0 500218 1 660002 100 0 0 0      * the grand water magus, D'renzd
+M 0 500237 1 660002 100 0 0 0      * Astali
+M 0 500238 1 660002 100 0 0 0      * Frayrien
+M 0 500239 1 660002 100 0 0 0      * Oneliwen
 M 0 500231 1 660003 100 0 0 0      * Draknah
 E 1 500119 1 18 100 0 0 0          *   a golden goblet
 M 0 500232 1 660003 100 0 0 0      * Sodolum

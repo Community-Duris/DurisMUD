@@ -5763,7 +5763,7 @@ int guild_guard_nine(P_char ch, P_char pl, int cmd, char *arg)
 
   if ((ch->in_room == real_room(3038)) && (cmd == CMD_SOUTH))
   {
-    if (GET_CLASS(pl, CLASS_SORCERER) || GET_CLASS(pl, CLASS_CONJURER))
+    if (GET_CLASS(pl, CLASS_SORCERER) || GET_CLASS(pl, CLASS_CONJURER) || GET_CLASS(pl, CLASS_SUMMONER))
     {
       act("The guard bows curtly before $n, and motions $s inside.", FALSE,
           pl, 0, 0, TO_ROOM);

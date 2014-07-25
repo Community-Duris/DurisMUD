@@ -47,6 +47,7 @@ while [ $RESULT != 0 ]; do
 		139) STOP_REASON="crash";;
 		52) STOP_REASON="reboot";;
 		53) STOP_REASON="copyover reboot";;
+		54) STOP_REASON="auto reboot";;
 		*) STOP_REASON="unknown";;
 	esac	
 

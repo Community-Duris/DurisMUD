@@ -85,15 +85,12 @@ void spell_enchant(int level, P_char ch, P_char victim, P_obj obj)
       !IS_SET(obj->extra_flags, ITEM_MAGIC) && !(obj->enchant.prepared))
   {
 
-    if (!(j =
-          ((GET_ITEM_TYPE(obj) == ITEM_WEAPON) &&
-           (GET_CLASS(ch) == CLASS_CONJURER)) ||
-          ((GET_ITEM_TYPE(obj) == ITEM_DRINKCON) &&
-           (GET_CLASS(ch) == CLASS_CLERIC)) ||
-          ((GET_ITEM_TYPE(obj) == ITEM_NOTE) &&
-           ((GET_CLASS(ch) == CLASS_CONJURER) ||
-            (GET_CLASS(ch) == CLASS_SORCERER) ||
-            (GET_CLASS(ch) == CLASS_NECROMANCER)))) && !IS_TRUSTED(ch))
+    if ( !(j = (GET_ITEM_TYPE(obj) == ITEM_WEAPON
+      && (GET_CLASS(ch) == CLASS_CONJURER || GET_CLASS(ch) == CLASS_SUMMONER))
+      || ( GET_ITEM_TYPE(obj) == ITEM_DRINKCON && GET_CLASS(ch) == CLASS_CLERIC)
+      || ( GET_ITEM_TYPE(obj) == ITEM_NOTE
+      && (GET_CLASS(ch) == CLASS_CONJURER || GET_CLASS(ch) == CLASS_SUMMONER
+      || GET_CLASS(ch) == CLASS_SORCERER ||GET_CLASS(ch) == CLASS_NECROMANCER) )) && !IS_TRUSTED(ch))
     {
       send_to_char("You cannot prepare this kind of object.\r\n", ch);
       return;

@@ -162,15 +162,14 @@ P_obj get_hammer(P_char ch)
                               // GET_OBJ_VNUM(obj) == 10640 || \
                               // GET_OBJ_VNUM(obj) == 95531 || \
                               // GET_OBJ_VNUM(obj) == 49018 )
-                              
-#define IS_MINING_PICK(obj) (isname("pick", obj->name) && \
-                             obj->type == ITEM_WEAPON)
+
+#define IS_MINING_PICK(obj) (isname("pick", obj->name) && obj->type == ITEM_WEAPON)
 
 P_obj get_pick(P_char ch)
 {
   if( !ch )
     return NULL;
-  
+
   if( ch->equipment[WIELD] && IS_MINING_PICK( ch->equipment[WIELD] ) )
     return ch->equipment[WIELD];
 
@@ -363,7 +362,8 @@ void do_forge(P_char ch, char *argument, int cmd)
   FILE    *recipelist;
   int line, recfind;
   unsigned long	linenum = 0;
-  long recnum, choice2;
+  int recnum;
+  long choice2;
   long selected = 0;
   P_obj tobj;
  
@@ -650,8 +650,8 @@ void do_forge(P_char ch, char *argument, int cmd)
       }
 
  //reward here
-      wizlog(56, "%s crafted %s" , GET_NAME(ch), tobj->short_description);
-      notch_skill(ch, SKILL_FORGE, 1);
+  wizlog(56, "%s crafted %s" , GET_NAME(ch), tobj->short_description);
+  notch_skill(ch, SKILL_FORGE, 50);
   P_obj reward = read_object(selected, VIRTUAL);
   SET_BIT(reward->extra2_flags, ITEM2_CRAFTED);
   SET_BIT(reward->extra_flags, ITEM_NOREPAIR);
@@ -823,7 +823,7 @@ void do_forge(P_char ch, char *argument, int cmd)
       sprintf(buf1, "You finishing forging: %s!\n", obj->short_description); 
       send_to_char(buf1, ch);  
       wizlog(56, "%s forged %s" , GET_NAME(ch), buf1);
-      notch_skill(ch, SKILL_FORGE, 1);
+      notch_skill(ch, SKILL_FORGE, 50);
       return;
     }
     else
@@ -876,18 +876,18 @@ int remove_mine_content(P_obj mine)
 int random_ore(int mine_quality)
 {
   int x = number(1, 99 + mine_quality * 9);
-    
+
   if(x >= 98 + mine_quality * 8)
     return LARGE_MITHRIL_ORE;
-  if(x >= 96 + mine_quality * 7) 
-    return MEDIUM_MITHRIL_ORE;	
+  if(x >= 96 + mine_quality * 7)
+    return MEDIUM_MITHRIL_ORE;
   if(x >= 94 + mine_quality * 6)
     return SMALL_MITHRIL_ORE;
 
   if(x >= 91 + mine_quality * 5)
-    return LARGE_PLATINUM_ORE; 
+    return LARGE_PLATINUM_ORE;
   if(x >= 88 + mine_quality * 4)
-    return MEDIUM_PLATINUM_ORE; 
+    return MEDIUM_PLATINUM_ORE;
   if(x >= 85 + mine_quality * 3)
     return SMALL_PLATINUM_ORE;
 
@@ -926,7 +926,9 @@ P_obj get_ore_from_mine(P_char ch, int mine_quality)
   int ore_type = random_ore(mine_quality);
   ore = read_object(ore_type, VIRTUAL);
   if(!ore)
+  {
     return NULL;
+  }
   ore->value[4] = time(NULL);
   return ore;
 }
@@ -1101,7 +1103,7 @@ void event_fish_check(P_char ch, P_char victim, P_obj, void *data)
   }
 
   send_to_char("You continue fishing...\n", ch);
-  notch_skill(ch, SKILL_FISHING, 40);
+  notch_skill(ch, SKILL_FISHING, 2.5);
   GET_VITALITY(ch) -= (number(0,100) > GET_CHAR_SKILL(ch, SKILL_FISHING)) ? 3 : 2;
 
   fdata->counter--;
@@ -1135,8 +1137,10 @@ void event_fish_check(P_char ch, P_char victim, P_obj, void *data)
 int mine(P_obj obj, P_char ch, int cmd, char *arg)
 {
   if( cmd == CMD_SET_PERIODIC )
+  {
     return TRUE;
-  
+  }
+
   if( cmd == CMD_PERIODIC )
   {
     if( obj->value[0] <= 0 )
@@ -1145,43 +1149,45 @@ int mine(P_obj obj, P_char ch, int cmd, char *arg)
       return TRUE;
     }
   }
-  
+
   if( cmd == CMD_MINE )
   {
-    if( !ch || !IS_PC(ch) )
+    if( !ch || !IS_PC(ch) || !IS_ALIVE(ch) )
+    {
       return FALSE;
-    
+    }
+
     if( GET_CHAR_SKILL(ch, SKILL_MINE) == 0 )
     {
       send_to_char("You don't know how to mine.\n", ch);
-      return TRUE;      
+      return TRUE;
     }
-    
+
     if( get_scheduled(ch, event_mine_check) )
     {
       send_to_char("You're already mining!\n", ch);
       return TRUE;
     }
-    
-    if (!MIN_POS(ch, POS_STANDING + STAT_NORMAL))
+
+    if( !MIN_POS(ch, POS_STANDING + STAT_NORMAL) )
     {
       send_to_char("You're too relaxed to mine.\n", ch);
       return TRUE;
     }
-    
+
     P_obj pick = get_pick(ch);
     if( !pick )
     {
       send_to_char("You need to be wielding a suitable mining pick.\n", ch);
-      return TRUE;      
+      return TRUE;
     }
-    
+
     if( get_mine_content(obj) <= 0 )
     {
       send_to_char("This area has been completely deplenished!\n", ch);
-      return TRUE;      
+      return TRUE;
     }
-    
+
     // start mining
     send_to_char("You begin to mine...\n", ch);
 
@@ -1191,102 +1197,102 @@ int mine(P_obj obj, P_char ch, int cmd, char *arg)
     data.mine_quality = obj->value[1];
 
     remove_mine_content(obj);
-    
+
     if( get_mine_content(obj) <= 0 )
     {
       send_to_char("There is very little left, but you keep digging one more time!\n", ch);
       extract_obj(obj, TRUE);
     }
-    
+
     add_event( event_mine_check, PULSE_VIOLENCE, ch, 0, 0, 0, &data, sizeof(struct mining_data));
     return TRUE;
   }
-  
+
   return FALSE;
 }
 
-void event_mine_check(P_char ch, P_char victim, P_obj, void *data)
+void event_mine_check( P_char ch, P_char victim, P_obj, void *data )
 {
   struct mining_data *mdata = (struct mining_data*)data;
   P_obj ore, pick;
   char  buf[MAX_STRING_LENGTH], dbug[MAX_STRING_LENGTH];
-  
+
   pick = get_pick(ch);
 
-  if (!ch->desc ||
-      IS_FIGHTING(ch) ||
-      IS_DESTROYING(ch) ||
-      (ch->in_room != mdata->room) ||            
-      !MIN_POS(ch, POS_STANDING + STAT_NORMAL) ||                    
-      IS_SET(ch->specials.affected_by, AFF_HIDE) ||
-      IS_IMMOBILE(ch) ||
-      !AWAKE(ch) ||
-      IS_STUNNED(ch) ||
-      IS_CASTING(ch) ||
-      IS_AFFECTED2(ch, AFF2_CASTING))
+  if( !ch || !IS_ALIVE(ch) )
   {
-    send_to_char("You stop mining.\n", ch);
-    return;  
+    logit( LOG_DEBUG, "event_mine_check: bad ch (%d)", ch );
+    return;
   }
 
-  if (IS_DISGUISE(ch))
+  if( !ch->desc || IS_FIGHTING(ch) || IS_DESTROYING(ch)
+    || (ch->in_room != mdata->room) || !MIN_POS(ch, POS_STANDING + STAT_NORMAL)
+    || IS_SET(ch->specials.affected_by, AFF_HIDE) || IS_IMMOBILE(ch)
+    || !AWAKE(ch) || IS_STUNNED(ch) || IS_CASTING(ch) || IS_AFFECTED2(ch, AFF2_CASTING) )
+  {
+    send_to_char("You stop mining.\n", ch);
+    return;
+  }
+
+  if( IS_DISGUISE(ch) )
   {
     send_to_char("Mining will ruin your disguise!\r\n", ch);
     return;
   }
 
 
-  if(!pick)
+  if( !pick )
   {
     send_to_char("How are you supposed to mine when you don't have anything ready to mine with?\n", ch);
     return;
   }
-  
+
   if (mdata->counter == 0 )
-   if(ch)//debugging
   {
     ore = get_ore_from_mine(ch, mdata->mine_quality);
-    
-    if(!ore)
+
+    if( !ore )
     {
       wizlog(56, "Problem with ore item");
       return;
     }
 
-   //Dynamic pricing - Drannak 3/21/2013
-   float newcost = 80000; //80 p starting point
-   float charskil = (GET_CHAR_SKILL(ch, SKILL_MINE));
-   newcost = (newcost * ((float)GET_LEVEL(ch) / (float)56));
-    newcost = (newcost * ((charskil / (float)100)));
+    //Dynamic pricing - Drannak 3/21/2013
+    // 100 p starting point
+    float newcost = 100000;
+    float charskil = (GET_CHAR_SKILL(ch, SKILL_MINE));
+    newcost *= (float)GET_LEVEL(ch) / 56.0;
+    newcost *= charskil / 100.0;
 
-
-   if(GET_OBJ_VNUM(ore) < 223)
+    // Anything less than gold gets a little bit of a reduction in price.
+    if(GET_OBJ_VNUM(ore) < SMALL_GOLD_ORE)
     {
-     newcost = (newcost * .6); //anything less than gold gets a little bit of a reduction in price
-        
+      newcost *= .6;
     }
 
-   newcost = (newcost * ((float)GET_OBJ_VNUM(ore) / (float)230)); //since the vnum's are sequential, the greatest rarity gets a 1.3 modifier, lowest gets 83% of value.
- 
-  if(number(80, 140) < GET_C_LUK(ch))
-   {
-     newcost *= 1.3;
-     send_to_char("&+yYou &+Ygently&+y break the &+Lore &+yfree from the &+Lrock&+y, preserving its natural form.&n\r\n", ch);
-          
-   }
-     
+    // The greatest rarity gets a 233/230 modifier.
+    // The lowest gets a 194/230 modifier.
+    newcost *= (float)GET_OBJ_VNUM(ore) / 230.0;
+
+    if(number(80, 140) < GET_C_LUK(ch))
+    {
+      newcost *= 1.3;
+      send_to_char("&+yYou &+Ygently&+y break the &+Lore &+yfree from the &+Lrock&+y, preserving its natural form.&n\r\n", ch);
+    }
+
     act("Your mining efforts turn up $p&n!", FALSE, ch, ore, 0, TO_CHAR);
     act("$n finds $p&n!", FALSE, ch, ore, 0, TO_ROOM);
-     gain_exp(ch, NULL, (GET_CHAR_SKILL(ch, SKILL_MINE) * 4), EXP_BOON);
-    //SET_BIT(ore->cost, newcost);
+
+    gain_exp(ch, NULL, (GET_CHAR_SKILL(ch, SKILL_MINE) * 4), EXP_BOON);
     ore->cost = newcost;
     obj_to_room(ore, ch->in_room);
     return;
   }
-    
-  if (get_property("halloween", 0.000) &&
-      (number(0, 100) < get_property("halloween.zombie.chance", 5.000)))
+
+  if( get_property("halloween", 0.000) && (number(0, 100) < get_property("halloween.zombie.chance", 5.000)))
+  {
     halloween_mine_proc(ch);
+  }
 
   if (GET_VITALITY(ch) < 10)
   {
@@ -1294,23 +1300,51 @@ void event_mine_check(P_char ch, P_char victim, P_obj, void *data)
     return;
   }
 
-  if (!notch_skill(ch, SKILL_MINE, get_property("skill.notch.mining", 30)) &&
+  if( IS_RIDING(ch) )
+  {
+    send_to_char( "Mining while mounted?  Good luck!\n", ch );
+    if( !number( 0, GET_CHAR_SKILL(ch, SKILL_MINE)/20 ) )
+    {
+      act( "You fumble your $p!", FALSE, ch, pick, 0, TO_CHAR );
+      if( ch->equipment[WIELD] == pick )
+      {
+        unequip_char( ch, WIELD );
+        obj_to_char( pick, ch );
+      }
+      if( ch->equipment[WIELD2] == pick )
+      {
+        unequip_char( ch, WIELD2 );
+        obj_to_char( pick, ch );
+      }
+      else
+      {
+        logit(LOG_DEBUG, "event_mine_check: %s has pick '%s' (%d) but not in slot WIELD/WIELD2.",
+          J_NAME(ch), pick->short_description, GET_OBJ_VNUM(pick) );
+      }
+      return;
+    }
+  }
+
+  if( !notch_skill(ch, SKILL_MINE, get_property("skill.notch.mining", 2.5)) &&
       !number(0, (GET_CHAR_SKILL(ch, SKILL_MINE) * 2) ))
   {
     send_to_char("You thought you found something, but it was just worthless rock.\n", ch);  
-    return; 
+    return;
   }
 
   if(!number(0, 999))
-    create_parchment(ch); 
+  {
+    create_parchment(ch);
+  }
 
-  if(!number(0,4) &&
-     (GET_OBJ_VNUM(pick) != 83318) &&
-     DamageOneItem(ch, 1, pick, false))
+  // If pick breaks, return.
+  if(!number(0,4) && (GET_OBJ_VNUM(pick) != 83318) && DamageOneItem(ch, 1, pick, false))
+  {
     return;
+  }
 
   send_to_char("You continue mining...\n", ch);
-  notch_skill(ch, SKILL_MINE, 40);
+  notch_skill(ch, SKILL_MINE, get_property("skill.notch.mining", 2.5));
   GET_VITALITY(ch) -= (number(0,100) > GET_CHAR_SKILL(ch, SKILL_MINE)) ? 3 : 2;
 
   mdata->counter--;
@@ -1318,27 +1352,26 @@ void event_mine_check(P_char ch, P_char victim, P_obj, void *data)
 
   //noise distance calc
   for (P_desc i = descriptor_list; i; i = i->next)
-    {
-      if( i->connected != CON_PLYNG ||
-          ch == i->character ||
-          i->character->following == ch ||
-          world[i->character->in_room].zone != world[ch->in_room].zone ||
-          ch->in_room == i->character->in_room ||
-          ch->in_room == real_room(i->character->specials.was_in_room) ||
-          real_room(ch->specials.was_in_room) == i->character->in_room )
-      {
-        continue;
-      }
-      
-      int dist = calculate_map_distance(ch->in_room, i->character->in_room);
-
-  if(dist <= 550 && (number(1, 12) < 3))
   {
-  zone_spellmessage(ch->in_room,
-    "&+yThe sound of &+wmetal &+yhewing &+Lrock&+y can be heard in the distance...&n\r\n",
-    "&+yThe sound of &+wmetal &+yhewing &+Lrock&+y can be heard in the distance to the %s...&n\r\n");
+    if( i->connected != CON_PLYNG || ch == i->character
+      || i->character->following == ch
+      || world[i->character->in_room].zone != world[ch->in_room].zone
+      || ch->in_room == i->character->in_room
+      || ch->in_room == real_room(i->character->specials.was_in_room)
+      || real_room(ch->specials.was_in_room) == i->character->in_room )
+    {
+      continue;
+    }
+
+    int dist = calculate_map_distance(ch->in_room, i->character->in_room);
+
+    if(dist <= 550 && (number(1, 12) < 3))
+    {
+      zone_spellmessage(ch->in_room,
+      "&+yThe sound of &+wmetal &+yhewing &+Lrock&+y can be heard in the distance...&n\r\n",
+      "&+yThe sound of &+wmetal &+yhewing &+Lrock&+y can be heard in the distance to the %s...&n\r\n");
+    }
   }
- }
 }
 
 int smith(P_char ch, P_char pl, int cmd, char *arg)
@@ -1664,7 +1697,7 @@ void event_bandage_check(P_char ch, P_char victim, P_obj, void *data)
     return;
   }
 
-  if (!notch_skill(ch, SKILL_BANDAGE, get_property("skill.notch.bandage", 30)) &&
+  if( !notch_skill(ch, SKILL_BANDAGE, get_property("skill.notch.bandage", 3)) &&
       !number(number(0,3), (GET_CHAR_SKILL(ch, SKILL_BANDAGE) ) ))
   {
     send_to_char("You are not focused enough, you destroy the &+Wbandage&n.\n", ch);  
@@ -1984,9 +2017,10 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
   char     Gbuf1[MAX_STRING_LENGTH], *c;
   FILE    *f;
   FILE    *recipelist;
-  long recipenumber = obj->value[6];
-  long recnum;
-
+  int recipenumber = obj->value[6];
+  int recnum;
+  bool forge = FALSE;
+  bool craft = FALSE;
   P_char temp_ch;
 
   if(!ch)
@@ -2003,45 +2037,69 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
   if(ch != temp_ch)
     return FALSE;
 
-    if (recipenumber == 0)
+  if (recipenumber == 0)
   {
-   send_to_char("This item is useless!\r\n", ch);
-   return TRUE;
+    send_to_char("This item is useless!\r\n", ch);
+    return TRUE;
   }
 
   tobj = read_object(recipenumber, VIRTUAL);
- 	
-  if((IS_SET(tobj->wear_flags, ITEM_WEAR_HEAD) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_BODY) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_ARMS) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_FEET) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_SHIELD) ||
-	IS_SET(tobj->wear_flags, ITEM_WIELD) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_LEGS) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_HANDS))
-       && (GET_CHAR_SKILL(ch, SKILL_FORGE) < 1))
-	{
-	  send_to_char("This recipe can only be used by someone with the &+LForge&n skill.\r\n", ch);
-	  return TRUE;
-	}
- if((IS_SET(tobj->wear_flags, ITEM_WEAR_ABOUT) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_WAIST) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_EARRING) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_NECK) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_WRIST) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_FINGER) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_EYES) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_QUIVER) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_TAIL) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_NOSE) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_HORN) ||
-	IS_SET(tobj->wear_flags, ITEM_WEAR_FACE)) && 
-	(GET_CHAR_SKILL(ch, SKILL_CRAFT) < 1))
-	{
-	  send_to_char("This recipe can only be used by someone with the &+rCraft&n skill.\r\n", ch);
-	  return TRUE;
-	}  
- extract_obj(tobj, FALSE);
+
+  if( IS_SET(tobj->wear_flags, ITEM_WEAR_HEAD)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_BODY)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_ARMS)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_FEET)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_SHIELD)
+    || IS_SET(tobj->wear_flags, ITEM_WIELD)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_LEGS)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_HANDS) )
+  {
+    forge = TRUE;
+  }
+  if( IS_SET(tobj->wear_flags, ITEM_WEAR_ABOUT)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_WAIST)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_EARRING)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_NECK)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_WRIST)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_FINGER)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_EYES)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_QUIVER)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_TAIL)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_NOSE)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_HORN)
+    || IS_SET(tobj->wear_flags, ITEM_WEAR_FACE) )
+  {
+    craft = TRUE;
+  }
+
+  if( forge )
+  {
+    if( GET_CHAR_SKILL(ch, SKILL_FORGE) < 1 )
+    {
+      forge = FALSE;
+      if( craft )
+      {
+        if( GET_CHAR_SKILL(ch, SKILL_CRAFT) < 1 )
+        {
+  	      send_to_char("This recipe can only be used by someone with the &+rCraft&n or &+LForge&n skill.\r\n", ch);
+	        return TRUE;
+        }
+      }
+      else
+      {
+    	  send_to_char("This recipe can only be used by someone with the &+LForge&n skill.\r\n", ch);
+    	  return TRUE;
+      }
+    }
+  }
+  else if( craft )
+  {
+    if( GET_CHAR_SKILL(ch, SKILL_CRAFT) < 1 )
+    {
+  	  send_to_char("This recipe can only be used by someone with the &+rCraft&n skill.\r\n", ch);
+	    return TRUE;
+    }
+  }
 
   //Create buffers for name
   strcpy(buf, GET_NAME(ch));
@@ -2064,16 +2122,18 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
     create_recipes_name(GET_NAME(ch));
     recipelist = fopen(Gbuf1, "rt");
   }
-   /* Check to see if recipe exists */
+
+  /* Check to see if recipe exists */
   while((fscanf(recipelist, "%i", &recnum)) != EOF )
-	{  
-       if(recnum == recipenumber)
-         {
-          send_to_char("You already know how to create that item!&n\r\n", ch);
-          return TRUE;
-         }
-       
-	}
+	{
+    if(recnum == recipenumber)
+    {
+      send_to_char("You already know how to create that item!&n\r\n", ch);
+      extract_obj(tobj, FALSE);
+      return TRUE;
+    }
+  }
+
   fclose(recipelist);
   recipefile = fopen(Gbuf1, "a");
   fprintf(recipefile, "%d\n", recipenumber);
@@ -2084,11 +2144,24 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
   "As you finish the last entry of the &+yrecipe&n, a &+Mbri&+mgh&+Wt &nflash of &+Clight&n appears,\n"
   "quickly consuming $p, which vanishes from sight.\r\n", FALSE, ch, obj, 0, TO_CHAR);   
   fclose(recipefile);
+
   extract_obj(obj, !IS_TRUSTED(ch));
-  if(GET_CHAR_SKILL(ch, SKILL_FORGE) > 1)
-  notch_skill(ch, SKILL_FORGE, 100);
-  if(GET_CHAR_SKILL(ch, SKILL_CRAFT) > 1)
-  notch_skill(ch, SKILL_CRAFT, 100);
+
+  if( forge )
+  {
+    notch_skill(ch, SKILL_FORGE, 1);
+  }
+  else if( craft )
+  {
+    notch_skill(ch, SKILL_CRAFT, 1);
+  }
+  else
+  {
+    // This should never happen.
+    debug("learn_recipe: %s learned %s (%d) without craft or forge!?", J_NAME(ch), tobj->short_description, recipenumber );
+    logit(LOG_DEBUG, "learn_recipe: %s learned %s (%d) without craft or forge!?", J_NAME(ch), tobj->short_description, recipenumber );
+  }
+  extract_obj(tobj, FALSE);
   return TRUE;
 }
 
@@ -2468,19 +2541,18 @@ int learn_tradeskill(P_char ch, P_char pl, int cmd, char *arg)
 
 int itemvalue(P_char ch, P_obj obj)
 {
- long workingvalue = 0;
- double multiplier = 1;
+  long workingvalue = 0;
+  double multiplier = 1;
 
- if (!obj)
- return 0;
+  if (!obj)
+  {
+    return 0;
+  }
 
-
-
-
-   if(IS_SET(obj->wear_flags, ITEM_WEAR_EYES))
+  if(IS_SET(obj->wear_flags, ITEM_WEAR_EYES))
     multiplier = 2.0;
 
-   if(IS_SET(obj->wear_flags, ITEM_WEAR_EARRING))
+  if(IS_SET(obj->wear_flags, ITEM_WEAR_EARRING))
     multiplier = 2.5;
 
   if (IS_SET(obj->wear_flags, ITEM_WEAR_FACE))
@@ -2504,342 +2576,323 @@ int itemvalue(P_char ch, P_obj obj)
   if (IS_SET(obj->wear_flags, ITEM_WEAR_WRIST))
     multiplier = 1.5;
 
- if (IS_SET(obj->bitvector, AFF_STONE_SKIN))
-	 workingvalue += 60;
+  if (IS_SET(obj->bitvector, AFF_STONE_SKIN))
+	  workingvalue += 60;
 
- if (IS_SET(obj->bitvector, AFF_BIOFEEDBACK))
-	 workingvalue += 60;
+  if (IS_SET(obj->bitvector, AFF_BIOFEEDBACK))
+	  workingvalue += 90;
 
- if (IS_SET(obj->bitvector, AFF_FARSEE))
-	 workingvalue += 8;
+  if (IS_SET(obj->bitvector, AFF_FARSEE))
+	  workingvalue += 28;
 
- if (IS_SET(obj->bitvector, AFF_DETECT_INVISIBLE))
-	 workingvalue += 15;
+  if (IS_SET(obj->bitvector, AFF_DETECT_INVISIBLE))
+	  workingvalue += 45;
 
- if (IS_SET(obj->bitvector, AFF_HASTE))
-	 workingvalue += 25;
+  if (IS_SET(obj->bitvector, AFF_HASTE))
+	  workingvalue += 55;
 
- if (IS_SET(obj->bitvector, AFF_INVISIBLE))
-	 workingvalue += 30;
+  if (IS_SET(obj->bitvector, AFF_INVISIBLE))
+	  workingvalue += 30;
 
- if (IS_SET(obj->bitvector, AFF_SENSE_LIFE))
-	 workingvalue += 10;
+  if (IS_SET(obj->bitvector, AFF_SENSE_LIFE))
+	  workingvalue += 20;
 
- if (IS_SET(obj->bitvector, AFF_MINOR_GLOBE))
-	 workingvalue += 8;
+  if (IS_SET(obj->bitvector, AFF_MINOR_GLOBE))
+	  workingvalue += 18;
 
- if (IS_SET(obj->bitvector, AFF_UD_VISION))
-	 workingvalue += 10;
+  if (IS_SET(obj->bitvector, AFF_UD_VISION))
+	  workingvalue += 40;
 
- if (IS_SET(obj->bitvector, AFF_WATERBREATH))
-	 workingvalue += 5;
+  if (IS_SET(obj->bitvector, AFF_WATERBREATH))
+	  workingvalue += 25;
 
- if (IS_SET(obj->bitvector, AFF_PROTECT_EVIL))
-	 workingvalue += 8;
+  if (IS_SET(obj->bitvector, AFF_PROTECT_EVIL))
+	  workingvalue += 8;
 
- if (IS_SET(obj->bitvector, AFF_SLOW_POISON))
-	 workingvalue += 2;
+  if (IS_SET(obj->bitvector, AFF_SLOW_POISON))
+	  workingvalue += 10;
 
- if (IS_SET(obj->bitvector, AFF_SNEAK))
-	 workingvalue += 50;
+  if (IS_SET(obj->bitvector, AFF_SNEAK))
+	  workingvalue += 50;
 
- if (IS_SET(obj->bitvector, AFF_BARKSKIN))
-	 workingvalue += 8;
+  if (IS_SET(obj->bitvector, AFF_BARKSKIN))
+	  workingvalue += 18;
 
- if (IS_SET(obj->bitvector, AFF_INFRAVISION))
-	 workingvalue += 2;
+  if (IS_SET(obj->bitvector, AFF_INFRAVISION))
+	  workingvalue += 2;
 
- if (IS_SET(obj->bitvector, AFF_LEVITATE))
-	 workingvalue += 3;
+  if (IS_SET(obj->bitvector, AFF_LEVITATE))
+	  workingvalue += 13;
 
- if (IS_SET(obj->bitvector, AFF_HIDE))
-	 workingvalue += 50;
+  if (IS_SET(obj->bitvector, AFF_HIDE))
+	  workingvalue += 60;
 
- if (IS_SET(obj->bitvector, AFF_FLY))
-	 workingvalue += 15;
+  if (IS_SET(obj->bitvector, AFF_FLY))
+	  workingvalue += 55;
 
- if (IS_SET(obj->bitvector, AFF_AWARE))
-	 workingvalue += 20;
+  if (IS_SET(obj->bitvector, AFF_AWARE))
+	  workingvalue += 60;
 
- if (IS_SET(obj->bitvector, AFF_PROT_FIRE))
-	 workingvalue += 5;
+  if (IS_SET(obj->bitvector, AFF_PROT_FIRE))
+	  workingvalue += 15;
 
- if (IS_SET(obj->bitvector2, AFF2_FIRESHIELD))
-	 workingvalue += 4;
+  if (IS_SET(obj->bitvector2, AFF2_FIRESHIELD))
+	  workingvalue += 24;
 
- if (IS_SET(obj->bitvector2, AFF2_ULTRAVISION))
-	 workingvalue += 10;
+  if (IS_SET(obj->bitvector2, AFF2_ULTRAVISION))
+	  workingvalue += 40;
 
- if (IS_SET(obj->bitvector2, AFF2_DETECT_EVIL))
-	 workingvalue += 2;
+  if (IS_SET(obj->bitvector2, AFF2_DETECT_EVIL))
+	  workingvalue += 7;
 
- if (IS_SET(obj->bitvector2, AFF2_DETECT_GOOD))
-	 workingvalue += 2;
+  if (IS_SET(obj->bitvector2, AFF2_DETECT_GOOD))
+	  workingvalue += 7;
 
- if (IS_SET(obj->bitvector2, AFF2_DETECT_MAGIC))
-	 workingvalue += 2;
+  if (IS_SET(obj->bitvector2, AFF2_DETECT_MAGIC))
+	  workingvalue += 8;
 
- if (IS_SET(obj->bitvector2, AFF2_PROT_COLD))
-	 workingvalue += 5;
+  if (IS_SET(obj->bitvector2, AFF2_PROT_COLD))
+	  workingvalue += 15;
 
- if (IS_SET(obj->bitvector2, AFF2_PROT_LIGHTNING))
-	 workingvalue += 5;
+  if (IS_SET(obj->bitvector2, AFF2_PROT_LIGHTNING))
+    workingvalue += 15;
 
- if (IS_SET(obj->bitvector2, AFF2_GLOBE))
-	 workingvalue += 20;
+  if (IS_SET(obj->bitvector2, AFF2_GLOBE))
+	  workingvalue += 50;
 
- if (IS_SET(obj->bitvector2, AFF2_PROT_GAS))
-	 workingvalue += 5;
+  if (IS_SET(obj->bitvector2, AFF2_PROT_GAS))
+    workingvalue += 15;
 
- if (IS_SET(obj->bitvector2, AFF2_PROT_ACID))
-	 workingvalue += 5;
+  if (IS_SET(obj->bitvector2, AFF2_PROT_ACID))
+    workingvalue += 15;
 
- if (IS_SET(obj->bitvector2, AFF2_SOULSHIELD))
-    	 workingvalue += 15;
+  if (IS_SET(obj->bitvector2, AFF2_SOULSHIELD))
+    workingvalue += 35;
 
- if (IS_SET(obj->bitvector2, AFF2_MINOR_INVIS))
-	 workingvalue += 5;
+  if (IS_SET(obj->bitvector2, AFF2_MINOR_INVIS))
+	  workingvalue += 5;
 
- if (IS_SET(obj->bitvector2, AFF2_VAMPIRIC_TOUCH))
-	 workingvalue += 20;
+  if (IS_SET(obj->bitvector2, AFF2_VAMPIRIC_TOUCH))
+	  workingvalue += 40;
 
- if (IS_SET(obj->bitvector2, AFF2_EARTH_AURA))
-	 workingvalue += 50;
+  if (IS_SET(obj->bitvector2, AFF2_EARTH_AURA))
+	  workingvalue += 70;
 
- if (IS_SET(obj->bitvector2, AFF2_WATER_AURA))
-	 workingvalue += 50;
+  if (IS_SET(obj->bitvector2, AFF2_WATER_AURA))
+	  workingvalue += 70;
 
- if (IS_SET(obj->bitvector2, AFF2_FIRE_AURA))
-	 workingvalue += 50;
+  if (IS_SET(obj->bitvector2, AFF2_FIRE_AURA))
+	  workingvalue += 70;
 
- if (IS_SET(obj->bitvector2, AFF2_AIR_AURA))
-	 workingvalue += 50;
+  if (IS_SET(obj->bitvector2, AFF2_AIR_AURA))
+	  workingvalue += 70;
 
- if (IS_SET(obj->bitvector2, AFF2_PASSDOOR))
-	 workingvalue += 40;
+  if (IS_SET(obj->bitvector2, AFF2_PASSDOOR))
+	  workingvalue += 40;
 
- if (IS_SET(obj->bitvector2, AFF2_FLURRY))
-	 workingvalue += 75;
+  if (IS_SET(obj->bitvector2, AFF2_FLURRY))
+	  workingvalue += 75;
 
- if (IS_SET(obj->bitvector3, AFF3_PROT_ANIMAL))
-	 workingvalue += 4;
+  if (IS_SET(obj->bitvector3, AFF3_PROT_ANIMAL))
+	  workingvalue += 14;
 
- if (IS_SET(obj->bitvector3, AFF3_SPIRIT_WARD))
-	 workingvalue += 4;
+  if (IS_SET(obj->bitvector3, AFF3_SPIRIT_WARD))
+	  workingvalue += 14;
 
- if (IS_SET(obj->bitvector3, AFF3_GR_SPIRIT_WARD))
-	 workingvalue += 20;
+  if (IS_SET(obj->bitvector3, AFF3_GR_SPIRIT_WARD))
+	  workingvalue += 28;
 
- if (IS_SET(obj->bitvector3, AFF3_ENLARGE))
-	 workingvalue += 45;
+  if (IS_SET(obj->bitvector3, AFF3_ENLARGE))
+	  workingvalue += 65;
 
- if (IS_SET(obj->bitvector3, AFF3_REDUCE))
-	 workingvalue += 45;
+  if (IS_SET(obj->bitvector3, AFF3_REDUCE))
+	  workingvalue += 65;
 
- if (IS_SET(obj->bitvector3, AFF3_INERTIAL_BARRIER))
-	 workingvalue += 45;
+  if (IS_SET(obj->bitvector3, AFF3_INERTIAL_BARRIER))
+	  workingvalue += 65;
 
- if (IS_SET(obj->bitvector3, AFF3_COLDSHIELD))
-	 workingvalue += 8;
+  if (IS_SET(obj->bitvector3, AFF3_COLDSHIELD))
+	  workingvalue += 28;
 
- if (IS_SET(obj->bitvector3, AFF3_TOWER_IRON_WILL))
-	 workingvalue += 25;
+  if (IS_SET(obj->bitvector3, AFF3_TOWER_IRON_WILL))
+	  workingvalue += 35;
 
- if (IS_SET(obj->bitvector3, AFF3_BLUR))
-	 workingvalue += 40;
+  if (IS_SET(obj->bitvector3, AFF3_BLUR))
+	  workingvalue += 45;
 
- if (IS_SET(obj->bitvector3, AFF3_PASS_WITHOUT_TRACE))
-	 workingvalue += 30;
+  if (IS_SET(obj->bitvector3, AFF3_PASS_WITHOUT_TRACE))
+	  workingvalue += 30;
 
- if (IS_SET(obj->bitvector4, AFF4_VAMPIRE_FORM))
-	 workingvalue += 90;
+  if (IS_SET(obj->bitvector4, AFF4_VAMPIRE_FORM))
+	  workingvalue += 90;
 
- if (IS_SET(obj->bitvector4, AFF4_HOLY_SACRIFICE))
-	 workingvalue += 50;
+  if (IS_SET(obj->bitvector4, AFF4_HOLY_SACRIFICE))
+	  workingvalue += 65;
 
- if (IS_SET(obj->bitvector4, AFF4_BATTLE_ECSTASY))
-	 workingvalue += 80;
+  if (IS_SET(obj->bitvector4, AFF4_BATTLE_ECSTASY))
+	  workingvalue += 80;
 
- if (IS_SET(obj->bitvector4, AFF4_DAZZLER))
-	 workingvalue += 30;
+  if (IS_SET(obj->bitvector4, AFF4_DAZZLER))
+	  workingvalue += 35;
 
- if (IS_SET(obj->bitvector4, AFF4_PHANTASMAL_FORM))
-	 workingvalue += 30;
+  if (IS_SET(obj->bitvector4, AFF4_PHANTASMAL_FORM))
+	  workingvalue += 60;
 
- if (IS_SET(obj->bitvector4, AFF4_NOFEAR))
-	 workingvalue += 30;
+  if (IS_SET(obj->bitvector4, AFF4_NOFEAR))
+	  workingvalue += 40;
 
- if (IS_SET(obj->bitvector4, AFF4_REGENERATION))
-	 workingvalue += 20;
+  if (IS_SET(obj->bitvector4, AFF4_REGENERATION))
+	  workingvalue += 30;
 
- if (IS_SET(obj->bitvector4, AFF4_GLOBE_OF_DARKNESS))
-	 workingvalue += 15;
+  if (IS_SET(obj->bitvector4, AFF4_GLOBE_OF_DARKNESS))
+	  workingvalue += 15;
 
- if (IS_SET(obj->bitvector4, AFF4_HAWKVISION))
-	 workingvalue += 16;
+  if (IS_SET(obj->bitvector4, AFF4_HAWKVISION))
+	  workingvalue += 20;
 
- if (IS_SET(obj->bitvector4, AFF4_SANCTUARY))
-	 workingvalue += 60;
+  if (IS_SET(obj->bitvector4, AFF4_SANCTUARY))
+	  workingvalue += 75;
 
- if (IS_SET(obj->bitvector4, AFF4_HELLFIRE))
-	 workingvalue += 80;
+  if (IS_SET(obj->bitvector4, AFF4_HELLFIRE))
+	  workingvalue += 80;
 
- if (IS_SET(obj->bitvector4, AFF4_SENSE_HOLINESS))
-	 workingvalue += 5;
+  if (IS_SET(obj->bitvector4, AFF4_SENSE_HOLINESS))
+	  workingvalue += 5;
 
- if (IS_SET(obj->bitvector4, AFF4_PROT_LIVING))
-	 workingvalue += 10;
+  if (IS_SET(obj->bitvector4, AFF4_PROT_LIVING))
+	  workingvalue += 30;
 
- if (IS_SET(obj->bitvector3, AFF3_ENLARGE))
-        workingvalue +=400;
+  if (IS_SET(obj->bitvector3, AFF3_ENLARGE))
+    workingvalue += 400;
 
- if (IS_SET(obj->bitvector4, AFF4_DETECT_ILLUSION))
-	 workingvalue += 30;
+  if (IS_SET(obj->bitvector4, AFF4_DETECT_ILLUSION))
+	  workingvalue += 30;
 
- if (IS_SET(obj->bitvector4, AFF4_ICE_AURA))
-	 workingvalue += 60;
+  if (IS_SET(obj->bitvector4, AFF4_ICE_AURA))
+	  workingvalue += 70;
 
- if (IS_SET(obj->bitvector4, AFF4_NEG_SHIELD))
-	 workingvalue += 20;
+  if (IS_SET(obj->bitvector4, AFF4_NEG_SHIELD))
+	  workingvalue += 30;
 
- if (IS_SET(obj->bitvector4, AFF4_WILDMAGIC))
-	 workingvalue += 50;
+  if (IS_SET(obj->bitvector4, AFF4_WILDMAGIC))
+	  workingvalue += 80;
 
- if(IS_SET(obj->wear_flags, ITEM_WIELD) && (obj->value[5] > 1)) //has a ghetto proc
+  if(IS_SET(obj->wear_flags, ITEM_WIELD) && (obj->value[5] > 1)) //has a ghetto proc
   {
-   workingvalue +=50;
-   //send_to_char("ghetto proc\r\n", ch);
+    workingvalue +=50;
+    //send_to_char("ghetto proc\r\n", ch);
   }
 
   //------- A0/A1/A2 -------------  
- int i = 0; 
- while(i < 3)
- {
-  //dam/hitroll are normal values
-   if (
-	(obj->affected[i].location == APPLY_DAMROLL) ||
-	 (obj->affected[i].location == APPLY_HITROLL) 
-	)
-   {
-    workingvalue += obj->affected[i].modifier;
-   }
-
-  //regular stats can be high numbers - half them
-   if (
-	(obj->affected[i].location == APPLY_STR) ||
-	(obj->affected[i].location == APPLY_DEX) ||
-	(obj->affected[i].location == APPLY_INT) ||
-	(obj->affected[i].location == APPLY_WIS) ||
-	(obj->affected[i].location == APPLY_CON) ||
-	(obj->affected[i].location == APPLY_AGI) ||
-	(obj->affected[i].location == APPLY_POW) ||
-	(obj->affected[i].location == APPLY_LUCK)
-	)
-   {
-    workingvalue += (int)(obj->affected[i].modifier *.8);
-   }
-
-  //hit, move, mana, are generally large #'s - 1/10
-   if (
-	(obj->affected[i].location == APPLY_HIT) ||
-	(obj->affected[i].location == APPLY_MOVE) ||
-	(obj->affected[i].location == APPLY_MANA) 
-	) 
-   {
-    workingvalue += (int)(obj->affected[i].modifier *.5);
-   }
-
-  //hit, move, mana, regen are generally large #'s - 1/10
-   if (
-	(obj->affected[i].location == APPLY_HIT_REG) ||
-	(obj->affected[i].location == APPLY_MOVE_REG) ||
-	(obj->affected[i].location == APPLY_MANA_REG) 
-	) 
-   {
-    workingvalue += (int)(obj->affected[i].modifier *.3);
-   }
-
-  //racial attributes #'s - 1/10
-   if (
-	(obj->affected[i].location == APPLY_AGI_RACE) ||
-	(obj->affected[i].location == APPLY_STR_RACE) ||
-	(obj->affected[i].location == APPLY_CON_RACE) ||
-	(obj->affected[i].location == APPLY_INT_RACE) ||
-	(obj->affected[i].location == APPLY_WIS_RACE) ||
-	(obj->affected[i].location == APPLY_CHA_RACE) ||
-	(obj->affected[i].location == APPLY_DEX_RACE)
-	)
-   {
-    workingvalue += 60;
-   }
-
-  //obj procs
-   if(obj_index[obj->R_num].func.obj && i < 1)
-   {
-    workingvalue += 50;
-   }
-
-  
-
-  //AC negative is good
-   if (
-	(obj->affected[i].location == APPLY_AC)
-	) 
-   {
-    workingvalue -= (int)(obj->affected[i].modifier*.1);
-   }
-
-  //saving throw values (good) are negative
-   if (
-	(obj->affected[i].location == APPLY_SAVING_PARA) ||
-	(obj->affected[i].location == APPLY_SAVING_ROD) ||
-	(obj->affected[i].location == APPLY_SAVING_FEAR) ||
-	(obj->affected[i].location == APPLY_SAVING_BREATH) ||
-	(obj->affected[i].location == APPLY_SAVING_SPELL)
-	)
-   {
-    workingvalue -= obj->affected[i].modifier * 2;
-   }
-
-  //pulse is quite valuable and negative is good
-   if (
-	(obj->affected[i].location == APPLY_COMBAT_PULSE) ||
-	(obj->affected[i].location == APPLY_SPELL_PULSE)
-
-	)
-   {
-    workingvalue += (int)(obj->affected[i].modifier * -50);
-   }
-
-
-   //max_stats double points
-   if (
-	(obj->affected[i].location == APPLY_STR_MAX) ||
-	(obj->affected[i].location == APPLY_DEX_MAX) ||
-	(obj->affected[i].location == APPLY_INT_MAX) ||
-	(obj->affected[i].location == APPLY_WIS_MAX) ||
-	(obj->affected[i].location == APPLY_CON_MAX) ||
-	(obj->affected[i].location == APPLY_CHA_MAX) ||
-	(obj->affected[i].location == APPLY_AGI_MAX) ||
-	(obj->affected[i].location == APPLY_POW_MAX) ||
-	(obj->affected[i].location == APPLY_LUCK_MAX)
-	)
-   {
-    workingvalue += (obj->affected[i].modifier * 2.5);
-   }
-    i++;
-  }
-   if(obj->type == ITEM_WEAPON)
+  int i = 0;
+  while(i < 3)
+  {
+    //dam/hitroll are normal values
+    if( (obj->affected[i].location == APPLY_DAMROLL)
+	    || (obj->affected[i].location == APPLY_HITROLL) )
     {
-     workingvalue += (obj->value[1] *2);
+      workingvalue += obj->affected[i].modifier;
     }
 
-   if(workingvalue < 1)
-   workingvalue = 1;
+    //regular stats can be high numbers - half them
+    if( (obj->affected[i].location == APPLY_STR)
+	    || (obj->affected[i].location == APPLY_DEX)
+	    || (obj->affected[i].location == APPLY_INT)
+	    || (obj->affected[i].location == APPLY_WIS)
+	    || (obj->affected[i].location == APPLY_CON)
+	    || (obj->affected[i].location == APPLY_AGI)
+	    || (obj->affected[i].location == APPLY_POW)
+	    || (obj->affected[i].location == APPLY_LUCK) )
+    {
+      workingvalue += (int)(obj->affected[i].modifier *.8);
+    }
 
-   workingvalue *= multiplier;
-   //debug("&+YItem value is: &n%d", workingvalue); 
-   return workingvalue;
+    //hit, move, mana, are generally large #'s - 1/10
+    if( (obj->affected[i].location == APPLY_HIT)
+	    || (obj->affected[i].location == APPLY_MOVE)
+	    || (obj->affected[i].location == APPLY_MANA) )
+    {
+      workingvalue += (int)(obj->affected[i].modifier *.5);
+    }
+
+    //hit, move, mana, regen are generally large #'s - 1/10
+    if( (obj->affected[i].location == APPLY_HIT_REG)
+	    || (obj->affected[i].location == APPLY_MOVE_REG)
+	    || (obj->affected[i].location == APPLY_MANA_REG) )
+    {
+      workingvalue += (int)(obj->affected[i].modifier *.3);
+    }
+
+    //racial attributes #'s - 1/10
+    if( (obj->affected[i].location == APPLY_AGI_RACE)
+	    || (obj->affected[i].location == APPLY_STR_RACE)
+	    || (obj->affected[i].location == APPLY_CON_RACE)
+	    || (obj->affected[i].location == APPLY_INT_RACE)
+	    || (obj->affected[i].location == APPLY_WIS_RACE)
+	    || (obj->affected[i].location == APPLY_CHA_RACE)
+	    || (obj->affected[i].location == APPLY_DEX_RACE) )
+    {
+      workingvalue += 60;
+    }
+
+    //obj procs
+    if(obj_index[obj->R_num].func.obj && i < 1)
+    {
+      workingvalue += 50;
+    }
+
+    //AC negative is good
+    if( (obj->affected[i].location == APPLY_AC) )
+    {
+      workingvalue -= (int)(obj->affected[i].modifier*.1);
+    }
+
+    //saving throw values (good) are negative
+    if( (obj->affected[i].location == APPLY_SAVING_PARA)
+	    || (obj->affected[i].location == APPLY_SAVING_ROD)
+	    || (obj->affected[i].location == APPLY_SAVING_FEAR)
+	    || (obj->affected[i].location == APPLY_SAVING_BREATH)
+	    || (obj->affected[i].location == APPLY_SAVING_SPELL) )
+    {
+      workingvalue -= obj->affected[i].modifier * 2;
+    }
+
+    //pulse is quite valuable and negative is good
+    if( (obj->affected[i].location == APPLY_COMBAT_PULSE)
+      || (obj->affected[i].location == APPLY_SPELL_PULSE) )
+    {
+      workingvalue += (int)(obj->affected[i].modifier * -100);
+    }
+
+    //max_stats double points
+    if( (obj->affected[i].location == APPLY_STR_MAX)
+      || (obj->affected[i].location == APPLY_DEX_MAX)
+      || (obj->affected[i].location == APPLY_INT_MAX)
+      || (obj->affected[i].location == APPLY_WIS_MAX)
+      || (obj->affected[i].location == APPLY_CON_MAX)
+      || (obj->affected[i].location == APPLY_CHA_MAX)
+      || (obj->affected[i].location == APPLY_AGI_MAX)
+      || (obj->affected[i].location == APPLY_POW_MAX)
+      || (obj->affected[i].location == APPLY_LUCK_MAX) )
+    {
+      workingvalue += (obj->affected[i].modifier * 2.5);
+    }
+    i++;
+  }
+
+  if(obj->type == ITEM_WEAPON)
+  {
+    workingvalue += (obj->value[1] *2);
+  }
+
+  if(workingvalue < 1)
+  {
+    workingvalue = 1;
+  }
+
+  workingvalue *= multiplier;
+  //debug("&+YItem value is: &n%d", workingvalue); 
+  return workingvalue;
 }
 
 void do_salvation(P_char ch, char *arg, int cmd)
@@ -3063,33 +3116,45 @@ bool has_affect(P_obj obj)
 void do_refine(P_char ch, char *arg, int cmd)
 {
   P_obj obj;
-    char     gbuf1[MAX_STRING_LENGTH], gbuf2[MAX_STRING_LENGTH], buffer[MAX_STRING_LENGTH], gbuf3[MAX_STRING_LENGTH];
-    argument_interpreter(arg, gbuf1, gbuf3);
-    if(*gbuf1)
-     {
-      obj = get_obj_in_list(gbuf1, ch->carrying);
-       if(!obj)
-      {
-       send_to_char("&nYou must have the item you wish to &+yre&+Yfi&+yne &nin your inventory.&n\r\n", ch);
-       return;
-      }
-      
+  P_obj t_obj, nextobj;
+  int   i = 0, o = 0;
+  int   orechance;
+  bool  plat = FALSE;
+  char  gbuf1[MAX_STRING_LENGTH], gbuf2[MAX_STRING_LENGTH], buffer[MAX_STRING_LENGTH], gbuf3[MAX_STRING_LENGTH];
+
+  argument_interpreter(arg, gbuf1, gbuf3);
+
+  // If first argument.
+  if(*gbuf1)
+  {
+    obj = get_obj_in_list(gbuf1, ch->carrying);
+    if(!obj)
+    {
+      send_to_char("&nYou must have the item you wish to &+yre&+Yfi&+yne &nin your inventory.&n\r\n", ch);
+      return;
+    }
 
     //must be salvaged material, and cannot be the highest salvage type.
-      if ((GET_OBJ_VNUM(obj) > 400208) || 
-	    (GET_OBJ_VNUM(obj) < 400000) ||
-	    (GET_OBJ_VNUM(obj) == (get_matstart(obj) + 4))
-	    )
-      {
-       send_to_char("That item is either not a &+ysalvaged &nitem, or it is already the &+Bhighest&n quality of &+bmaterial&n for that type!\r\n", ch);
-       return;
-      }
-  P_obj t_obj, nextobj;
-  int i = 0;
-  int o = 0;
-  for (t_obj = ch->carrying; t_obj; t_obj = nextobj)
+    if( (GET_OBJ_VNUM(obj) > 400208) || (GET_OBJ_VNUM(obj) < 400000) )
+    {
+      send_to_char("That item is not a &+ysalvaged&n item!\r\n", ch);
+      return;
+    }
+    if( GET_OBJ_VNUM(obj) == (get_matstart(obj) + 4) )
+    {
+      send_to_char("That &+bmaterial&n is already of the &+Bhighest&n quality.\n", ch );
+      return;
+    }
+  }
+  else
   {
-    nextobj = t_obj->next_content;
+    send_to_char("What &+ysalvaged &+Ymaterial &nwould you like to &+yre&+Yfi&+yne?\r\n", ch);
+    return;
+  }
+
+  // Check for other materials of same quality/type
+  for( t_obj = ch->carrying; t_obj; t_obj = t_obj->next_content )
+  {
 
     if(GET_OBJ_VNUM(t_obj) == GET_OBJ_VNUM(obj))
     {
@@ -3097,7 +3162,7 @@ void do_refine(P_char ch, char *arg, int cmd)
     }
     if((GET_OBJ_VNUM(t_obj) > 193) && (GET_OBJ_VNUM(t_obj) < 234))
     {
-     o++;
+      o++;
     }
   }
   if(i < 2)
@@ -3105,59 +3170,74 @@ void do_refine(P_char ch, char *arg, int cmd)
     send_to_char("You need at least &+Y2 &nof the &+ymaterials&n in your inventory in order to &+yre&+Yfi&+yne&n it.\r\n", ch);
     return;
   }
+  // If no ore, check for 50 plat..
   if(o != 1)
   {
-    send_to_char("You must have &+Wexactly &+Rone&n &+Lm&+yi&+Ln&+ye&+Ld ore &nin your inventory in order to &+yre&+Yfi&+yne&n it.\r\n", ch);
-    return;
+    if( SUB_MONEY( ch, 50000, 0 ) != 0 )
+    {
+      send_to_char("You must have &+Wexactly &+Rone&n &+Lm&+yi&+Ln&+ye&+Ld ore &nin your inventory or 50 &+Wplatinum&n in order to &+yre&+Yfi&+yne&n it.\r\n", ch);
+      return;
+    }
+    else
+    {
+      plat = TRUE;
+    }
   }
+
   i = 2;
-  int orechance;
   for (t_obj = ch->carrying; t_obj; t_obj = nextobj)
-     {
+  {
     nextobj = t_obj->next_content;
 
-	if((GET_OBJ_VNUM(t_obj) == GET_OBJ_VNUM(obj)) && i > 0 )
-         {
-	   obj_from_char(t_obj, TRUE);
-          send_to_char("You take the item and gently pour the melted ore over the item...\n", ch);
-          i--;
-         }
-       if((GET_OBJ_VNUM(t_obj) > 193) && (GET_OBJ_VNUM(t_obj) < 234))
-        {
-         obj_from_char(t_obj, TRUE);
-         orechance = (GET_OBJ_VNUM(t_obj) - 194);
-        }
-      }
+    if((GET_OBJ_VNUM(t_obj) == GET_OBJ_VNUM(obj)) && i > 0 )
+    {
+      obj_from_char(t_obj, TRUE);
+      send_to_char("You take the item and gently pour the melted ore over the item...\n", ch);
+      i--;
+    }
+    if((GET_OBJ_VNUM(t_obj) > 193) && (GET_OBJ_VNUM(t_obj) < 234))
+    {
+      obj_from_char(t_obj, TRUE);
+      orechance = (GET_OBJ_VNUM(t_obj) - 194);
+    }
+  }
+
   int success = 61;
-  success += orechance;
+  // Increase by ore type or 10 pts for using platinum.
+  success += plat ? 10 : orechance;
   if(success < number(1, 100))
   {
-  act
-    ("&+W$n &+Ltakes their &+yore&+L and begins to &+rh&+Rea&+Yt &+Lit in the &+yforge&+L.\r\n"
-     "&+W$n &+Lgently removes the &+rm&+Ro&+Ylt&+Re&+rn &+yore &+Land starts to spread it about their $ps&+L, which &-L&+Rshatters&n &+Lfrom the intense &+rheat&+L!&N",
-     TRUE, ch, obj, 0, TO_ROOM);
-  act
-    ("&+LYou &+Ltake your &+yore&+L and &+rh&+Rea&+Yt &+Lit in the &+yforge&+L.\r\n"
-     "&+LYou &+Lgently remove the &+rm&+Ro&+Ylt&+Re&+rn &+yore &+Land start to spread it about your $ps&+L, which &-L&+Rshatters&n &+Lfrom the intense &+rheat&+L!&N",
-     FALSE, ch, obj, 0, TO_CHAR);
-   return;
+    if( plat )
+    {
+      act("&+W$n &+Ltakes their &+Wcoins&+L and begins to &+rh&+Rea&+Yt &+Lit in the &+yforge&+L.\r\n"
+        "&+W$n &+Lgently removes the &+rm&+Ro&+Ylt&+Re&+rn &+ymetal &+Land starts to spread it about their $ps&+L, which &-L&+Rshatters&n &+Lfrom the intense &+rheat&+L!&N",
+        TRUE, ch, obj, 0, TO_ROOM);
+      act("&+LYou &+Ltake your &+Wcoins&+L and &+rh&+Rea&+Yt &+Lit in the &+yforge&+L.\r\n"
+        "&+LYou &+Lgently remove the &+rm&+Ro&+Ylt&+Re&+rn &+ymetal &+Land start to spread it about your $ps&+L, which &-L&+Rshatters&n &+Lfrom the intense &+rheat&+L!&N",
+        FALSE, ch, obj, 0, TO_CHAR);
+    }
+    else
+    {
+      act("&+W$n &+Ltakes their &+yore&+L and begins to &+rh&+Rea&+Yt &+Lit in the &+yforge&+L.\r\n"
+        "&+W$n &+Lgently removes the &+rm&+Ro&+Ylt&+Re&+rn &+yore &+Land starts to spread it about their $ps&+L, which &-L&+Rshatters&n &+Lfrom the intense &+rheat&+L!&N",
+        TRUE, ch, obj, 0, TO_ROOM);
+      act("&+LYou &+Ltake your &+yore&+L and &+rh&+Rea&+Yt &+Lit in the &+yforge&+L.\r\n"
+        "&+LYou &+Lgently remove the &+rm&+Ro&+Ylt&+Re&+rn &+yore &+Land start to spread it about your $ps&+L, which &-L&+Rshatters&n &+Lfrom the intense &+rheat&+L!&N",
+        FALSE, ch, obj, 0, TO_CHAR);
+    }
+    return;
   }
 
   //success!
   int newobj = GET_OBJ_VNUM(obj) + 1;
   obj_to_char(read_object(newobj, VIRTUAL), ch);
-  act
-    ("&+W$n &+Ltakes their &+yore&+L and begins to &+rh&+Rea&+Yt &+Lit in the &+yforge&+L.\r\n"
-     "&+W$n &+Lgently removes the &+rm&+Ro&+Ylt&+Re&+rn &+yore &+Land starts to spread it about their $ps&+L, which &+ycrack &+Land &+yreform&+L under the intense &+rheat&+L.&N",
-     TRUE, ch, obj, 0, TO_ROOM);
-  act
-    ("&+LYou &+Ltake your &+yore&+L and &+rh&+Rea&+Yt &+Lit in the &+yforge&+L.\r\n"
-     "&+LYou &+Lgently remove the &+rm&+Ro&+Ylt&+Re&+rn &+yore &+Land start to spread it about your $ps&+L, which &+ycrack &+Land &+yreform&+L under the intense &+rheat&+L.&N",
-     FALSE, ch, obj, 0, TO_CHAR);
-    }
+  act("&+W$n &+Ltakes their &+yore&+L and begins to &+rh&+Rea&+Yt &+Lit in the &+yforge&+L.\r\n"
+    "&+W$n &+Lgently removes the &+rm&+Ro&+Ylt&+Re&+rn &+yore &+Land starts to spread it about their $ps&+L, which &+ycrack &+Land &+yreform&+L under the intense &+rheat&+L.&N",
+    TRUE, ch, obj, 0, TO_ROOM);
+  act("&+LYou &+Ltake your &+yore&+L and &+rh&+Rea&+Yt &+Lit in the &+yforge&+L.\r\n"
+    "&+LYou &+Lgently remove the &+rm&+Ro&+Ylt&+Re&+rn &+yore &+Land start to spread it about your $ps&+L, which &+ycrack &+Land &+yreform&+L under the intense &+rheat&+L.&N",
+    FALSE, ch, obj, 0, TO_CHAR);
 
-    if(!arg || !*arg)
-  send_to_char("What &+ysalvaged &+Ymaterial &nwould you like to &+yre&+Yfi&+yne?\r\n", ch);
 }
 
 void do_dice(P_char ch, char *arg, int cmd)
@@ -3284,7 +3364,7 @@ int assoc_founder(P_char ch, P_char victim, int cmd, char *arg)
        return TRUE;
      }
        int i = 0;
-       sprintf(bufbug, arg);
+       sprintf(bufbug, "%s", arg);
        int times = 0;
        while(times < 2)
        {
@@ -3325,7 +3405,7 @@ int assoc_founder(P_char ch, P_char victim, int cmd, char *arg)
      send_to_char(bufbug, victim);   
      send_to_char(buffer2, victim);
      char makeit[MAX_INPUT_LENGTH];
-     sprintf(makeit, buffer);
+     sprintf(makeit, "%s", buffer);
 
      strcpy(victim->desc->last_command, makeit);
      strcpy(victim->desc->client_str, "found_asc");

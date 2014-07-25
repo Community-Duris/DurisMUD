@@ -17,35 +17,36 @@
 using namespace std;
 
 const char *specdata[][MAX_SPEC] = {
-  {"", "", "", ""},         //None
-  {"&+BSwordsman", "&+yGuardian", "&+bCon&+Bqui&+Wsta&+Bdor&n", ""},      //Warrior
-  {"&+cBlademaster", "&+gHuntsman", "&+gMa&+yrsha&+gll&n", ""},    //Ranger
-  {"&+rPyr&+Rokine&+rtic", "&+MEn&+mslav&+Mer", "&+bPsyche&+Lporter", ""},         //Psionicist
-  {"&+wCrusa&+Wder", "&+WCavalier", "", ""},    //Paladin
-  {"&+LDark Knight", "&+LDem&+ronic Ri&+Lder", "&+LVi&+ro&+Llat&+ror&n", ""},  //Anti-Paladin
-  {"&+YZealot&n", "&+WHealer&n", "&+cHoly&+Wman&n", ""},      //Cleric
-  {"&+rRe&+Rd Dra&+rgon", "&+gElap&+Ghi&+gdist", "", ""},   //Monk
-  {"&+gFo&+Gre&+gst Druid", "&+cStorm &+CDruid", "", ""},       //Druid
+  {"", "", "", ""},                                                                               //None
+  {"&+BSwordsman", "&+yGuardian", "&+bCon&+Bqui&+Wsta&+Bdor&n", ""},                              //Warrior
+  {"&+cBlademaster", "&+gHuntsman", "&+gMa&+yrsha&+gll&n", ""},                                   //Ranger
+  {"&+rPyr&+Rokine&+rtic", "&+MEn&+mslav&+Mer", "&+bPsyche&+Lporter", ""},                        //Psionicist
+  {"&+wCrusa&+Wder", "&+WCavalier", "", ""},                                                      //Paladin
+  {"&+LDark Knight", "&+LDem&+ronic Ri&+Lder", "&+LVi&+ro&+Llat&+ror&n", ""},                     //Anti-Paladin
+  {"&+YZealot&n", "&+WHealer&n", "&+cHoly&+Wman&n", ""},                                          //Cleric
+  {"&+rRe&+Rd Dra&+rgon", "&+gElap&+Ghi&+gdist", "", ""},                                         //Monk
+  {"&+gFo&+Gre&+gst Druid", "&+cStorm &+CDruid", "", ""},                                         //Druid
   {"&+rEl&+Rem&+Lenta&+Rli&n&+rst", "&+WSpir&+Citua&+Wlist", "&+yAni&+Ymal&n&+yist", ""},         /* CLASS_SHAMAN */
   {"&+MWild&+mmage", "&+LWizard", "&+LShadow&+wmage", ""},                                        /* CLASS_SORCERER */
   {"&+mDia&+rbolis", "&+mNe&+Lcro&+mlyte", "&+LReap&+wer", ""},                                   /* CLASS_NECROMANCER */
-  {"&+cCon&+Ctrol&+Wler&n", "&+rS&+Ru&+Ym&+Wmo&+Yn&+Re&+rr", "&-L&+rFire Magus&n", "&+gNat&+Gural&+yist&n"},                          /* CLASS_CONJURER */
+  {"&+CAir Magus&n", "&+BWater Magus&n", "&+rFire Magus&n", "&+yEarth Magus&n"},                  /* CLASS_CONJURER */
   {"&+rAssassin&n", "&+LThief&n","Not Used" , "&+LSh&+wa&+Ldow &+BArc&+bher&n"},                  /* CLASS_ROGUE */
   {"", "", "", ""},                                                                               /* CLASS_ASSASSIN was replaced by CLASS_ROGUE, SPEC_ASSASSIN */
-  {"&+yBr&+Lig&+yand", "&+yBounty &+LHunter", "", ""},  //Mercenary
-  {"&+rD&+mis&+gha&+crm&+yon&+bist", "&+RScoundrel", "&+YMin&n&+ystr&+Yel", ""},        //Bard
-  {"", "", "", ""},         /* Thief is an UNUSED CLASS */
-  {"", "", "", ""},         //Warlock
-  {"", "", "", ""},         //MindFlayer
-  {"&+CBat&n&+ctle-For&+Cger&n", "&+LBla&+ccksm&+Lith&n", "", ""},   //Alchemist
-  {"&+rMa&+RUle&+rR", "&+RRa&+rGe&+Rlo&+rRd", "", ""},  //Berserker
+  {"&+yBr&+Lig&+yand", "&+yBounty &+LHunter", "", ""},                                            /* Mercenary */
+  {"&+rD&+mis&+gha&+crm&+yon&+bist", "&+RScoundrel", "&+YMin&n&+ystr&+Yel", ""},                  //Bard
+  {"", "", "", ""},                                                                               /* Thief is an UNUSED CLASS */
+  {"", "", "", ""},                                                                               //Warlock
+  {"", "", "", ""},                                                                               //MindFlayer
+  {"&+CBat&n&+ctle-For&+Cger&n", "&+LBla&+ccksm&+Lith&n", "", ""},                                //Alchemist
+  {"&+rMa&+RUle&+rR", "&+RRa&+rGe&+Rlo&+rRd", "", ""},                                            //Berserker
   {"&+CI&+Wc&+Ce &+LR&+Le&+wa&+wv&+Le&+Lr", "&+rF&+Rl&+Ya&+Rm&+re &+LR&+Le&+wa&+wv&+Le&+Lr", "&+bSh&+Bo&+Wck &+LR&+Le&+wa&+wv&+Le&+Lr", "&+LEa&+yrt&+Lh R&+yea&+Lve&+yr"},      //Reaver
-  {"&+BM&+Yag&+Bic&+Yia&+Bn&n", "&+LDark &+mDreamer&n", "", ""},         // Illusionist
-  {"&-L&+MC&+YL&+GO&+RW&+CN&+BS&+MO&+YC&+GK&n", "&+yFat &+YSwine&n", "&+LD&+war&+Lk &+bT&+ce&+Cm&+Wp&+Ce&+cs&+bt&n", ""},  /* Cabalist */
-  {"&+LDeath&+rlord", "&+LShadow&+rlord", "", ""},      // Dreadlord
-  {"&+cWindtalker", "&+WFro&+cst &+CMagus", "&+WCo&+Ysm&+Wom&+Yanc&+Wer", ""},     // Ethermancer
-  {"&+YLight&+Wbringer", "&+WInq&+wuisi&+Wtor", "", ""},       //Avenger
+  {"&+BM&+Yag&+Bic&+Yia&+Bn&n", "&+LDark &+mDreamer&n", "", ""},                                  // Illusionist
+  {"&+YSt&+yor&+Ym &+LBringer&n", "&+GSc&+gou&+Yrg&+Ge&n", "&+LRu&+win&+Ler&n", ""},              /* Blighter */
+  {"&+LDeath&+rlord", "&+LShadow&+rlord", "", ""},                                                // Dreadlord
+  {"&+cWindtalker", "&+WFro&+cst &+CMagus", "&+WCo&+Ysm&+Wom&+Yanc&+Wer", ""},                    // Ethermancer
+  {"&+YLight&+Wbringer", "&+WInq&+wuisi&+Wtor", "", ""},                                          // Avenger
   {"&+wMedium&n", "&+YT&+Re&+rmpl&+Ra&+Yr&n", "&+C&+WT&+ch&+Ca&+Wu&+Cm&+ca&+Ct&+Wu&+Cr&+cg&+Ce&n", ""}, // Theurgist
+  {"&+cCon&+Ctrol&+Wler&n", "&+rS&+Ru&+Ym&+Wmo&+Yn&+Re&+rr", "&+gNat&+Gural&+yist&n", ""}         /* Summoner */
 };
 /*
  * mob race lookup table, used to assign a race to a mob when reading them
@@ -1137,11 +1138,12 @@ const struct class_names class_names_table[] = {
   {"Berserker", "&+rBeR&+RSeR&n&+rKeR&n", "Ber", 'u'},
   {"Reaver", "&+LRe&+Wav&+Ler&n", "Rev", 'v'},
   {"Illusionist", "&+WIl&+Clu&+csi&+Con&+Wist&n", "Ilu", 'y'},
-  {"Cabalist", "&+LC&+rab&+Ral&+ris&+Lt&n", "CBL", '9'},
+  {"Blighter", "&+LBl&+yi&+ggh&+yt&+Ler&n", "Bli", '9'},
   {"Dreadlord", "&+LDread&+rlord&n", "Dre", 'e'},
   {"Ethermancer", "&+wEthermancer&n", "Eth", 'g'},
   {"Avenger", "&+WAvenger&n", "Ave", '2'},
   {"Theurgist", "&+cTh&+Ceur&+Wgist&n", "The", '1'},
+  {"Summoner", "&+RSummoner&n", "Sum", '3'},
   {0}
 };
 

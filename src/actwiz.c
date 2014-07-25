@@ -112,7 +112,7 @@ extern int bounce_null_sites;
 extern int number_of_shops;
 extern int invitemode;
 extern int pulse;
-extern int shutdownflag, _reboot, copyover;
+extern int shutdownflag, _reboot, _autoboot, _copyover;
 extern int spl_table[TOTALLVLS][MAX_CIRCLE];
 extern int top_of_mobt;
 extern int top_of_objt;
@@ -148,6 +148,7 @@ extern const char *craftsmanship_names[];
 extern int number_of_quests;
 extern struct quest_data quest_index[];
 extern const struct hold_data hold_index[];
+extern float spell_pulse_data[LAST_RACE + 1];
 
 void apply_zone_modifier(P_char ch);
 static P_char load_locker_char(P_char ch, char *locker_name, int bValidateAccess);
@@ -355,8 +356,8 @@ void do_reboot_restore(P_char ch, P_char victim)
   if(affected_by_spell(victim, SPELL_WITHER))
     affect_from_char(victim, SPELL_WITHER);
 
-  if(affected_by_spell(victim, SPELL_BLOODSTONE))
-    affect_from_char(victim, SPELL_BLOODSTONE);
+  if(affected_by_spell(victim, SPELL_BLOODTOSTONE))
+    affect_from_char(victim, SPELL_BLOODTOSTONE);
   
   if(affected_by_spell(victim, SPELL_SHREWTAMENESS))
     affect_from_char(victim, SPELL_SHREWTAMENESS);
@@ -1516,13 +1517,13 @@ void stat_game(P_char ch)
   send_to_char(buf, ch);
 }
 
-#define STAT_SYNTAX "Syntax:\n   stat game\n   stat room <room #>\n   stat zone <zone #>\n   stat obj|item  #|'name'\n   stat char|mob #|'name'\n   stat trap 'name'\n   shop #|'name'\n   stat damage\n"
+#define STAT_SYNTAX "Syntax:\n   stat game\n   stat room <room #>\n   stat zone <zone #>\n   stat obj|item  #|'name'\n   stat char|mob #|'name'\n   stat trap 'name'\n   stat shop #|'name'\n   stat damage\n   stat quest 'name'"
 
 
 //CMD = 555 is used for storing stat o string in db.
 void do_stat(P_char ch, char *argument, int cmd)
 {
-  P_char   k = 0, t_mob = 0, shopkeeper;
+  P_char   k = 0, t_mob = 0, shopkeeper, mob;
   P_event  e1 = NULL;
   P_obj    j = 0, t_obj = 0;
   P_room   rm = 0;
@@ -1719,7 +1720,30 @@ void do_stat(P_char ch, char *argument, int cmd)
         zone = &zone_table[zone_id];
       }
     }
-    
+    else if( !strcmp( arg2, "portable" ) )
+    {
+      if( IS_MAP_ROOM(ch->in_room) )
+      {
+        send_to_char("&+rThis command is not available in a map zone, there are too many rooms.\n", ch);
+        return;
+      }
+
+      send_to_char("&+YPortable rooms in current zone:\n", ch);
+
+      zone_id = world[ch->in_room].zone;
+      zone = &zone_table[zone_id];
+      for( int i = zone->real_bottom; i < zone->real_top; i++ )
+      {
+        // If the room is teleportable, display it w/room vnum.
+        if( !IS_SET(world[i].room_flags, NO_TELEPORT) )
+        {
+          sprintf( buf, "[&+C%d&n] %s\n", world[i].number, world[i].name );
+          send_to_char( buf, ch );
+        }
+      }
+      return;
+    }
+
     if(!zone)
     {
       send_to_char("Invalid zone number. Type 'world zones' to see list.\n", ch);
@@ -2553,8 +2577,8 @@ void do_stat(P_char ch, char *argument, int cmd)
       sprintf(buf + strlen(buf), "&+RINVALID&n");
 
     sprintf(buf2,
-            "\n&+YHometown: &N%d  &+YBirthplace: &N%d  &+YOrig BP: &n%d\n",
-            GET_HOME(k), GET_BIRTHPLACE(k), GET_ORIG_BIRTHPLACE(k));
+            "\n&+YHometown: &N%d  &+YBirthplace: &N%d  &+YOrig BP: &n%d &+YSpell Pulse: &n%+.2f\n",
+            GET_HOME(k), GET_BIRTHPLACE(k), GET_ORIG_BIRTHPLACE(k), (spell_pulse_data[GET_RACE(k)] * ((12.0 + k->points.spell_pulse)/12)) );
     strcat(buf, buf2);
     strcat(o_buf, buf);
     if(IS_PC(k))
@@ -2563,18 +2587,16 @@ void do_stat(P_char ch, char *argument, int cmd)
       fragnum = 0;
     fragnum /= 100;
 
-    sprintf(buf, "&+YPulse: &N%4d&+Y  Current Pulse: &N%4d&+Y  "
-            "Dam Multiplier: &N%1.2f  &+YFrags:&n %+.02f\n",
-            k->specials.base_combat_round,
-            k->specials.combat_tics,
-            k->specials.damage_mod);
+    sprintf(buf, "&+YPulse: &N%4d&+Y  Current Pulse: &N%4d&+Y  Dam Multiplier: &N%1.2f  &+YFrags:&n %+.02f\n",
+      k->specials.base_combat_round, k->specials.combat_tics,
+      k->specials.damage_mod, fragnum );
     strcat(o_buf, buf);
 
     strcat(o_buf, "\n");
     
     if(IS_PC(k))
     {
-      sprintf(buf, "&+YEpic points: &n%u&+Y  Epic skill points: &n%u\n", k->only.pc->epics, k->only.pc->epic_skill_points);
+      sprintf(buf, "&+YEpic points: &n%ld&+Y  Epic skill points: &n%ld\n", k->only.pc->epics, k->only.pc->epic_skill_points);
       strcat(o_buf, buf);
 
       sprintf(buf,
@@ -2610,14 +2632,13 @@ void do_stat(P_char ch, char *argument, int cmd)
     for (i = 0, i3 = 0; i < MAX_WEAR; i++)
       if(k->equipment[i])
         i3++;
-    i2 = (int) (GET_HEIGHT(k));
-    i = (int) (i2 / 12);
+    i2 = GET_HEIGHT(k);
+    i =  i2 / 12;
     i2 -= i * 12;
 
     sprintf(buf,
             "&+YStr: &n%3d&+Y (&n%3d&+Y)    Pow: &n%3d&+Y (&n%3d&+Y)    Height: &n%3d&+Y\' &n%2d&+Y\" (&n%d&+Yin)\n",
-            GET_C_STR(k), k->base_stats.Str, GET_C_POW(k), k->base_stats.Pow,
-            i, i2, GET_HEIGHT(k));
+            GET_C_STR(k), k->base_stats.Str, GET_C_POW(k), k->base_stats.Pow, i, i2, GET_HEIGHT(k));
     strcat(o_buf, buf);
 
     sprintf(buf,
@@ -3277,6 +3298,54 @@ void do_stat(P_char ch, char *argument, int cmd)
     send_to_char("\n", ch);
     stat_spldam(ch, arg2);
   }
+  else if((*arg1 == 'q') || (*arg1 == 'Q'))
+  {
+    if( !(mob = get_char_vis(ch, arg2)) || !IS_NPC(mob) )
+    {
+      sprintf( buf, "'%s' not found or is not a NPC.\n", arg2 );
+      send_to_char( buf, ch );
+      return;
+    }
+    int qi = find_quester_id(GET_RNUM(mob));
+    struct quest_complete_data *qdata = quest_index[qi].quest_complete;
+    struct goal_data *goals;
+
+    if( !qdata )
+    {
+      sprintf( buf, "'%s' is not a quest complete mob.\n", mob->player.short_descr );
+      send_to_char( buf, ch );
+    }
+    else
+    {
+
+      sprintf( buf, "'%s' has quest:\n", mob->player.short_descr );
+      send_to_char( buf, ch );
+
+      while( qdata )
+      {
+        sprintf( buf, "'%s'\n", qdata->message );
+        send_to_char( buf, ch );
+        if( qdata->receive )
+        {
+          for( goals = qdata->receive; goals; goals = goals->next )
+          {
+            sprintf( buf, "Receive: '%c' %d\n", goals->goal_type, goals->number );
+            send_to_char( buf, ch );
+          }
+        }
+        if( qdata->give )
+        {
+          for( goals = qdata->give; goals; goals = goals->next )
+          {
+            sprintf( buf, "Give: '%c' %d\n", goals->goal_type, goals->number );
+            send_to_char( buf, ch );
+          }
+        }
+
+        qdata = qdata->next;
+      }
+    }
+  }
   else
     send_to_char(STAT_SYNTAX, ch);
 }
@@ -3615,7 +3684,7 @@ void do_nchat(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if(IS_ILLITHID(ch))
+  if(IS_ILLITHID(ch) && !IS_TRUSTED(ch))
   {
     send_to_char("If you need this channel, you shouldn't be playing this character.\n", ch);
     return;
@@ -3708,7 +3777,7 @@ void do_nchat(P_char ch, char *argument, int cmd)
     else if(IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch))
     {
       sprintf(Gbuf1, "&+mYou tell your racewar '&+W%s&n&+w'\n", argument);
-      send_to_char(Gbuf1, ch);
+      send_to_char( Gbuf1, ch, LOG_PRIVATE );
     }
     else
       send_to_char("Ok.\n", ch);
@@ -3862,7 +3931,7 @@ struct TimedShutdownData
   char IssuedBy[50];
 };
 
-static TimedShutdownData shutdownData = {0, -1, TimedShutdownData::NONE};
+TimedShutdownData shutdownData = {0, -1, TimedShutdownData::NONE};
 
 
 void timedShutdown(P_char ch, P_char, P_obj, void *data)
@@ -3902,7 +3971,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
-        shutdownflag = copyover = 1;
+        shutdownflag = _copyover = 1;
         break;
 
       case TimedShutdownData::AUTOREBOOT:
@@ -3910,7 +3979,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
-        shutdownflag = _reboot = 1;
+        shutdownflag = _autoboot = 1;
         break;
 
       default:
@@ -3983,9 +4052,9 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
 
       if(secs > 60)
 //        sprintf(buf, "&+R*** Scheduled %s in %d minutes ***&n\n", type, secs/60, shutdownData.IssuedBy);
-        sprintf(buf, "&+R*** Scheduled %s in %d minutes ***&n\n", type, secs/60);
+        sprintf(buf, "&+R*** Scheduled %s in %ld minutes ***&n\n", type, secs/60);
       else
-        sprintf(buf, "&+R*** Scheduled &-L%s&n&+R in %d seconds ***&n\n", type, secs);
+        sprintf(buf, "&+R*** Scheduled &-L%s&n&+R in %ld seconds ***&n\n", type, secs);
       send_to_all(buf);
       // and set when the next warning should occur..
 
@@ -4027,9 +4096,9 @@ void displayShutdownMsg(P_char ch)
     type = "SHUTDOWN";
 
   if(secs > 60)
-    sprintf(buf, "&+R*** Scheduled %s in %d minute%s***&n\n", type, secs/60, (secs >= 120) ? "s " : " ");
+    sprintf(buf, "&+R*** Scheduled %s in %ld minute%s***&n\n", type, secs/60, (secs >= 120) ? "s " : " ");
   else
-    sprintf(buf, "&+R*** Scheduled &-L%s&n&+R in %d seconds ***&n\n", type, secs);
+    sprintf(buf, "&+R*** Scheduled &-L%s&n&+R in %ld seconds ***&n\n", type, secs);
   send_to_char(buf, ch);
 }
 
@@ -5382,7 +5451,7 @@ void do_zreset(P_char ch, char *argument, int cmd)
   {
     sprintf(buf, "Zone: %s has been reset.\n", zone_struct->name);
     send_to_char(buf, ch);
-    reset_zone(zone_number, FALSE);
+    reset_zone(zone_number, 0);
     if(GET_LEVEL(ch) > MAXLVLMORTAL)
     {
       wizlog(GET_LEVEL(ch), "%s just reset the zone %s.",
@@ -5397,7 +5466,7 @@ void do_zreset(P_char ch, char *argument, int cmd)
     sprintf(buf, "Zone: %s has been reset.\n", zone_struct->name);
     send_to_char(buf, ch);
     zone_purge(zone_number);
-    reset_zone(zone_number, TRUE);
+    reset_zone(zone_number, 1);
     if(GET_LEVEL(ch) > MAXLVLMORTAL)
     {
       wizlog(GET_LEVEL(ch), "%s just reset the zone %s.",
@@ -6814,8 +6883,8 @@ void do_money_supply(P_char ch, char *argument, int cmd)
              fgets(buff, MAX_STR_NORMAL, f);
           }
 
-          fscanf(f, "%i %i %i %i\n", &p, &g, &s, &c);
-          sprintf(buff, "%s: &+W%d p &+Y%d g &+w%d s &+y%d c\r\n", guild_name, p, g, s, c);
+          fscanf(f, "%ld %ld %ld %ld\n", &p, &g, &s, &c);
+          sprintf(buff, "%s: &+W%ld p &+Y%ld g &+w%ld s &+y%ld c\r\n", guild_name, p, g, s, c);
           send_to_char(buff, ch);
           total_p += p;
           total_g += g;
@@ -6859,7 +6928,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
              c = GET_COPPER(tch) + GET_BALANCE_COPPER(tch);
              if(((1000*p) + (100*g) + (10*s) + (c)) >= 10000000)
              {
-                sprintf(buff, "%s: &+W%d p &+Y%d g &+w%d s &+y%d c\r\n", GET_NAME(tch), p, g, s, c);
+                sprintf(buff, "%s: &+W%ld p &+Y%ld g &+w%ld s &+y%ld c\r\n", GET_NAME(tch), p, g, s, c);
                 send_to_char(buff, ch);
              }
 
@@ -6872,7 +6941,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
        fclose(flist);
     }
     system("rm -f temp_letterfile");
-    sprintf(buff, "\r\nTotal money in game: &+W%d platinum, &+Y%d gold, &+w%d silver, &+y%d copper\r\n", total_p, total_g, total_s, total_c);
+    sprintf(buff, "\r\nTotal money in game: &+W%ld platinum, &+Y%ld gold, &+w%ld silver, &+y%ld copper\r\n", total_p, total_g, total_s, total_c);
     send_to_char(buff, ch);
 }
 

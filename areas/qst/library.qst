@@ -1,0 +1,153 @@
+#402000
+MA
+student~
+"Ahh, yes. A new student. You will find many teachers here at the Library, should you be able to keep up with their complicated lectures. That will be 10 platinum for admittance."
+~
+MA
+scholar~
+"I am sure that you will find a way to contribute to our library, as a visiting scholar. That will be 10 platinum for admission, however... this place is not cheap to maintain!"
+~
+QA
+"Very well, you may enter. Here is your key."
+~
+R I 402003
+G C 10000
+S
+#402010
+MA
+summoning essences~
+&+L"Yes! I need at least six of them... of various elemental complexities..."&N
+~
+QA
+&+L"Ahhhh yes, these will do..." the mage says, then adds suspiciously, "although they do look strangely familiar..." he adds with an accusatory tone.&N
+~
+R E 10000
+G I 402004
+G I 402005
+G I 402007
+G I 402006
+G I 402008
+G I 402009
+S
+#402018
+MA
+necromantic necromancy necro arts~
+&+L"You do wish to study the necromantic arts then. Well, once you have studied each of the creatures that necromancers are able to create with the power of our magics, then I shall impart further knowledge upon you.&N
+~
+QA
+&+L"I see that you have defeated the basic zombies and skeletons, found the hidden spectre, observed the crudge magics of the wraiths, contended with the vampires, researched the fearsome liches, and defeated the dracolich. You have come quite far in your knowledge of the necromantic arts. For that, I commend you.&N
+~
+R E 100000
+G I 402020
+G I 402022
+G I 402023
+G I 402024
+G I 402026
+G I 402028
+G I 402027
+S
+#402026
+MA
+cleric clerical teacher~
+&+L"If you are indeed a cleric, are you the sort that is a Holyman, a Zealot, or a Healer? You should specialize."&N
+~
+S
+#402027
+MA
+thief assassin rogue~
+&+L  He nods. &+g"If you are a rogue, are you a &+GThief&+g or an &+GAssassin&+g?" asks the Goblin.&N
+~
+M
+mercenary brigand bounty hunter~
+&+LHe nods. &+g"If you are a Mercenary, are you a &+GBrigand&+g or a &+GBounty Hunter&+g?"&N
+~
+MA
+job~
+&+LThe Goblin nods. He leans in to be more discrete, and after looking around to be sure he is not being overheard, he continues.
+
+&+g"There is a historical journal in the Sorcerer's office. Fetches good coin with a collector that's hired me for the gig, but I think she suspects me and so I have to wait her out... If you can get it, I'll pay you good coin."&N
+
+&+LHe looks at you quizzically. &+g"I doubt you need them, but if you do... I'll sell you the &+Glockpicks&+g.&N
+~
+Q
+&+g"Ah, yes. This is it,"&+L he whispers, quickly tucking it in a messenger bag. He hands you a purse of coin then seemingly pretens to not know you.&N
+~
+R C 50000
+G I 402029
+S
+#402037
+MA
+fragment dream dreams memories~
+&+cThe angel looks at you quizically.
+
+&+C"Yes, there are many dreams of many souls in this world, and the subconscious sleeping creatures lay helpless on such a plane as this to demons and other creatures that would exploit them. I attempt to mend those souls, and to do so I shall need the fragments of their dreams. A sample of eight different souls ought be sufficient to continue my work here."&N
+~
+QA
+~
+R I 402049
+G I 402041
+G I 402042
+G I 402043
+G I 402044
+G I 402045
+G I 402046
+G I 402047
+G I 402048
+D
+&+cThe &+WAngel&N &+ctakes each fragment in hand and examines them in turn. As he touches each, the fragments then twist and turn in mid-air, and unravel into a transient series of threads that suddenly extend out into the dream plane and then disappear into the fabric of the ethereal mists. When he is satisfied, he reaches up and removes an item from his head.
+
+&+W"You have done well in bringing me these things. In turn, I give you this crown as my thanks."&N
+~
+S
+#402041
+MA
+curse~
+&+LThe Drider skitters over and looks at you with classical elven disdain.
+
+&+w"I would not expect you to understand," &+Lhe says dismissively in high Drow Elven, &+w"But this was supposedly a blessing from the High Priestesses of Lloth in Arachdrathos. I knew the transformation would be painful, an enduring torture, and that it would forever change me - not just in body, but in drinking the blood of living creatures for sustenance. None of that bothered me. This was a gift, one of the highest prizes to a noble such as myself..."
+
+&+LThe Drider pauses, and again considers if he has told an outsider too much. He then shrugs casually, and levels his &+rred&+L eyes back upon you.&N
+
+&+w"Yet, my House eventually shunned me, as another rose within the family line and usurped my position as the greatest sorcerer of our House,"&+L he says bitterly. He sighs. &+w"As I said, I do not expect you to understand, but... it will take quite a powerful magic to undo the &+Wtransformation&+w."&N
+~
+S
+#402058
+MA
+warrior~
+&+L"Learn how to fight better by Specializing."&N
+~
+S
+#402059
+MA
+antipaladin anti-paladin~
+&+L"If you are indeed an Anti-Paladin, you should specialize. What do you want to be?"&N
+~
+S
+#402060
+MA
+monk teacher specialize~
+&+wThe monk says nothing, but simply nods. He begins to show you the ways a monk may Specialize.&N
+~
+S
+#402061
+MA
+books~
+&+r"If you can go into the Library and bring me one of each book available to the Apprentices, I am seeking a full collection."&N
+~
+QA
+~
+R I 402089
+G I 402011
+G I 402012
+G I 402015
+G I 402016
+G I 402017
+G I 402018
+G I 402019
+G I 402050
+G I 402051
+G I 402067
+D
+&+L"Ah yes, this is a complete set. You have my thanks."&N
+~
+S

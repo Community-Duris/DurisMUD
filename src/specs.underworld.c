@@ -289,7 +289,7 @@ int dragonkind(P_obj obj, P_char ch, int cmd, char *arg)
         temp = vict->next_in_room;
         if (vict)
         {
-          if (vict->group && (vict->group == ch->group) || vict == ch)
+          if( (vict->group && (vict->group == ch->group)) || vict == ch )
             continue;
           spell_fire_breath(50, ch, NULL, 0, vict, 0);
         }
@@ -431,29 +431,47 @@ int dragonkind(P_obj obj, P_char ch, int cmd, char *arg)
           continue;
 
         /* transparent tower stone blocks roar */
-        if (!IS_DRAGON(tchar1) && !IS_TRUSTED(tchar1) &&
-            (tchar1->specials.z_cord == ch->specials.z_cord))
+        if( !IS_DRAGON(tchar1) && !IS_TRUSTED(tchar1)
+          && (tchar1->specials.z_cord == ch->specials.z_cord) )
         {
 
           if (GET_LEVEL(tchar1) < (GET_LEVEL(ch) / 2))
+          {
             do_flee(tchar1, 0, 2);      /* panic flee, no save */
+            continue;
+          }
           if (GET_RACE(tchar1) == RACE_CENTAUR && !fear_check(tchar1))
+          {
             do_flee(tchar1, 0, 2);
+            continue;
+          }
           if (tchar1->group && (tchar1->group == ch->group))
+          {
             continue;
+          }
           if (fear_check(tchar1))
+          {
             continue;
+          }
           if (GET_LEVEL(tchar1) >= GET_LEVEL(ch))
           {
             if (!NewSaves(tchar1, SAVING_PARA, -2))
+            {
               do_flee(tchar1, 0, 1);
+            }
           }
           else if (!NewSaves(tchar1, SAVING_PARA, 1))
+          {
             do_flee(tchar1, 0, 1);      /* fear, but not panic */
+          }
         }
         if (ch->in_room != tchar1->in_room)
+        {
           if (IS_FIGHTING(tchar1))
+          {
             stop_fighting(tchar1);
+          }
+        }
       }
       return FALSE;
     }

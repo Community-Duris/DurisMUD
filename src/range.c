@@ -641,7 +641,7 @@ void do_fire(P_char ch, char *argument, int cmd)
    {
      sprintf(buf, "You aim high, arcing %s skyward.\r\n", ch->equipment[WIELD]->short_description);
      send_to_char(buf, ch);
-     if( !notch_skill(ch, SKILL_INDIRECT_SHOT, 100) &&
+     if( !notch_skill(ch, SKILL_INDIRECT_SHOT, 1) &&
           GET_CHAR_SKILL(ch, SKILL_INDIRECT_SHOT) < number(1, 130) )
      {
        to_hit = 0;
@@ -708,7 +708,7 @@ void do_fire(P_char ch, char *argument, int cmd)
 
       if(room == victim->in_room &&
         (IS_IMMOBILE(victim) ||
-        notch_skill(ch, SKILL_ARCHERY, get_property("skill.notch.offensive.auto", 100)/2) || 
+        notch_skill(ch, SKILL_ARCHERY, get_property("skill.notch.offensive.auto", 4)/2) || 
         to_hit >= number(1, 100)))
       {
         if (IS_PC(ch) && IS_PC(victim))
@@ -835,7 +835,7 @@ void do_fire(P_char ch, char *argument, int cmd)
          {
             send_to_char("&=LWYou score a CRITICAL SHOT!!!&N\n", ch);
             dam *= get_property("archery.crit.bonus", 1.500);
-            notch_skill(ch, SKILL_CRITICAL_SHOT, 20);
+            notch_skill(ch, SKILL_CRITICAL_SHOT, 5);
          }
 
 //         if(!CAN_HURT(ch, missile, victim) && 
@@ -1024,7 +1024,7 @@ void do_fire(P_char ch, char *argument, int cmd)
    // appeari screwing up what we've done ni interp.c, we do this.
    if (hidecheck)
    {
-     if( notch_skill(ch, SKILL_SHADOW_ARCHERY, 5) ||
+     if( notch_skill(ch, SKILL_SHADOW_ARCHERY, 17) ||
          (GET_CHAR_SKILL(ch, SKILL_SHADOW_ARCHERY) / 2) > number(1, 105))
      {
        SET_BIT(ch->specials.affected_by, AFF_HIDE);
@@ -1685,7 +1685,7 @@ bool mob_can_range_att(P_char ch, P_char victim)
 */
  }
 
- if (GET_CLASS(ch, CLASS_CONJURER))
+ if( GET_CLASS(ch, CLASS_CONJURER) || GET_CLASS(ch, CLASS_SUMMONER) )
  {
    if (!spl && npc_has_spell_slot(ch, SPELL_ICE_STORM))
      spl = SPELL_ICE_STORM;

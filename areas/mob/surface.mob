@@ -3334,3 +3334,105 @@ PL 3 512 0 -1
 56 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 1
+#500234
+lrarar orc scourge blighter scourge teacher _spec2_~
+&+WElrarar&+L, the wandering &+GSc&+gou&+Yrg&+Ge&n~
+&+wAn &+LOrc&n wanders about here, &+Lwilting everything he touches.&N
+~
+&+LThis orc appears to leave a path of death and destruction in his wake.  Every &+gplant&+L he touches begings to &+ywilt&+L.&n
+~
+3254814792 0 0 0 402721208 10270 32 17039360 -1000 S
+HO 0 8388608 2 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#500235
+glerin orc blighter storm bringer teacher _spec1_~
+&+WGlerin&+L, the wandering &+YSt&+yor&+Ym &+LBringer&n~
+&+wAn &+LOrc&n wanders about here, &+Lwilting everything he touches.&N
+~
+&+LThis orc appears to leave a path of death and destruction in his wake.  Every &+gplant&+L he touches begings to &+ywilt&+L.&n
+~
+3254814792 0 0 0 402721208 10270 32 17039360 -1000 S
+HO 0 8388608 1 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#500236
+biagrin orc blighter ruiner teacher _spec3_~
+&+WBiagrin&+L, the wandering Ru&+win&+Ler&n~
+&+wAn &+LOrc&n wanders about here, &+Lwilting everything he touches.&N
+~
+&+LThis orc appears to leave a path of death and destruction in his wake.  Every &+gplant&+L he touches begings to &+ywilt&+L.&n
+~
+3254814792 0 0 0 402721208 10270 32 17039360 -1000 S
+HO 0 8388608 3 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#500237
+astali grey elf summoner controller _spec1_~
+&+WAstali&n, the wandering &+cCon&+Ctrol&+Wler&n~
+&+WAstali&n, the wandering &+cCon&+Ctrol&+Wler&n stands here.
+~
+~
+3271592008 384 0 0 234883260 2076 0 131080 1000 S
+PE 0 268435456 1 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#500238
+frayrien grey elf summoner _spec2_~
+&+WFrayrien&n, the wandering &+rS&+Ru&+Ym&+Wmo&+Yn&+Re&+rr&n~
+&+WFrayrien&n, the wandering &+rS&+Ru&+Ym&+Wmo&+Yn&+Re&+rr&n stands here.
+~
+~
+3271592008 384 0 0 234883260 2076 0 131080 1000 S
+PE 0 268435456 2 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#500239
+oneliwen grey elf summoner naturalist _spec3_~
+&+WOneliwen&n, the wandering &+gNat&+Gural&+yist&n~
+&+WOneliwen&n, the wandering &+gNat&+Gural&+yist&n stands here.
+~
+~
+3271592008 384 0 0 234883260 2076 0 131080 1000 S
+PE 0 268435456 3 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#500240
+onoman orc summoner controller teacher _spec1_~
+&+WOnoman&+L, the Orc &+cCon&+Ctrol&+Wler&n~
+&+WOnoman&+L, the Orc &+cCon&+Ctrol&+Wler&n stands here.
+~
+~
+3271592008 320 0 0 234883516 2079 0 262144 -1000 S
+HO 0 268435456 1 -1
+62 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#500241
+gadak orc summoner teacher _spec2_~
+&+WGadak&+L, the Orc &+rS&+Ru&+Ym&+Wmo&+Yn&+Re&+rr&n~
+&+WGadak&+L, the Orc &+rS&+Ru&+Ym&+Wmo&+Yn&+Re&+rr&n stands here.
+~
+~
+3271592008 320 0 0 234883516 2079 0 262144 -1000 S
+HO 0 268435456 2 -1
+62 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#500242
+lenus orc summoner naturalist teacher _spec3_~
+&+WLenus&+L, the Orc &+gNat&+Gural&+yist&n~
+&+WLenus&+L, the Orc &+gNat&+Gural&+yist&n stands here.
+~
+~
+3271592008 320 0 0 234883516 2079 0 262144 -1000 S
+HO 0 268435456 3 -1
+62 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

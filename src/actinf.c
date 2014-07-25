@@ -126,6 +126,23 @@ void display_map(P_char ch, int n, int show_map_regardless);
 
 
 extern HelpFilesCPPClass help_index;
+struct TimedShutdownData
+{
+  time_t  reboot_time;
+  int  next_warning;
+  enum
+  {
+    NONE,
+    OK,
+    REBOOT,
+    COPYOVER,
+    AUTOREBOOT,
+  }
+  eShutdownType;
+  char IssuedBy[50];
+};
+
+extern struct TimedShutdownData shutdownData;
 
 int astral_clock_setMapModifiers(void);
 void unmulti(P_char ch, P_obj obj);
@@ -667,7 +684,7 @@ int ageCorpse(P_char ch, P_obj obj, char *s)
   if (GET_CHAR_SKILL(ch, SKILL_AGE_CORPSE) == 0)
     return FALSE;
 
-  notch_skill(ch, SKILL_AGE_CORPSE, 50);
+  notch_skill( ch, SKILL_AGE_CORPSE, 10 );
 
   /* Change this to something that finds out how long
    * the corpse has left
@@ -1012,6 +1029,8 @@ void show_visual_status(P_char ch, P_char tar_char)
 
   if (IS_AFFECTED(tar_char, AFF_BARKSKIN))
     SVS("&+y$S skin has a barklike texture..");
+  if (IS_AFFECTED5(tar_char, AFF5_THORNSKIN))
+    SVS("&+y$S skin has the texture of bark with thorns.");
 
 #ifdef STANCES_ALLOWED
   if(IS_AFFECTED5(tar_char, AFF5_STANCE_DEFENSIVE))
@@ -1978,14 +1997,14 @@ void ShowCharSpellBookSpells(P_char ch, P_obj obj)
   char     buf[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
   int      i, j, k = 0, l, m = 0;
 
-  if (IS_NPC(ch))
+  if( IS_NPC(ch) )
   {
-    send_to_char("you're an npc, leave me aone.\n", ch);
+    send_to_char("you're an npc, leave me alone.\n", ch);
     return;
   }
 
   desc = find_spell_description(obj);
-  if (!desc)
+  if( !desc )
   {
     sprintf(buf, "$p appears to be unused and has %d pages left.",
             obj->value[2]);
@@ -2000,13 +2019,13 @@ void ShowCharSpellBookSpells(P_char ch, P_obj obj)
    return;
    }
  */
-  if (obj->value[1] && !GET_CLASS(ch, obj->value[1]))
-  {                             //obj->value[1] != GET_CLASS(ch)) {
+  if( obj->value[1] && !GET_CLASS(ch, obj->value[1]) )
+  {
     sprintf(buf, "The original writer of $p appears to have been a %s.",
             class_names_table[flag2idx(obj->value[1])].ansi);
     act(buf, TRUE, ch, obj, 0, TO_CHAR);
   }
-  if (obj->value[1])
+  if( obj->value[1] )
   {
     l = ch->player.m_class;
     ch->player.m_class = obj->value[1];
@@ -2015,47 +2034,51 @@ void ShowCharSpellBookSpells(P_char ch, P_obj obj)
 
     switch (GetClassType(ch))
     {
-    case CLASS_TYPE_CLERIC:
-      k = SKILL_SPELL_KNOWLEDGE_CLERICAL;
-      break;
-    default:
-      k = SKILL_SPELL_KNOWLEDGE_MAGICAL;
+      case CLASS_TYPE_CLERIC:
+        k = SKILL_SPELL_KNOWLEDGE_CLERICAL;
+        break;
+      default:
+        k = SKILL_SPELL_KNOWLEDGE_MAGICAL;
+        break;
     }
     ch->player.m_class = l;
   }
-  else if (GET_CHAR_SKILL(ch, SKILL_SPELL_KNOWLEDGE_MAGICAL) >
-           GET_CHAR_SKILL(ch, SKILL_SPELL_KNOWLEDGE_CLERICAL))
+  else if( GET_CHAR_SKILL(ch, SKILL_SPELL_KNOWLEDGE_MAGICAL) >
+           GET_CHAR_SKILL(ch, SKILL_SPELL_KNOWLEDGE_CLERICAL) )
     k = SKILL_SPELL_KNOWLEDGE_MAGICAL;
   else
     k = SKILL_SPELL_KNOWLEDGE_CLERICAL;
   buf[0] = 0;
   m = 0;
-  for (j = FIRST_SPELL; j <= LAST_SPELL; j++)
+  for( j = FIRST_SPELL; j <= LAST_SPELL; j++ )
   {
-    if (j < 0)
+    if( !SpellInThisSpellBook(desc, j) )
+    {
       continue;
-    if (!SpellInThisSpellBook(desc, j))
+    }
+    if( !((GET_CLASS(ch, obj->value[1])
+      && get_spell_circle(ch, j) <= get_max_circle(ch))
+      || (GET_CHAR_SKILL(ch, k) <= number(1, 100)
+      && (GET_CHAR_SKILL(ch, k) && number(1, 70) <= GET_LEVEL(ch)))) )
+    {
       continue;
-    if (!((GET_CLASS(ch, obj->value[1]) &&
-           //GET_CLASS(ch) == obj->value[1] &&
-           get_spell_circle(ch, j) <= get_max_circle(ch)) ||
-          (GET_CHAR_SKILL(ch, k) <= number(1, 100) &&
-           (GET_CHAR_SKILL(ch, k) && number(1, 70) <= GET_LEVEL(ch)))))
-      continue;
-    if (m)
+    }
+    if( m )
+    {
       strcat(buf, ", ");
+    }
     m++;
     strcat(buf, skills[j].name);
   }
 #if 0
-  if (m)
+  if( m )
     strcat(buf, ".");
 #endif
-  if (!buf[0])
+  if( !buf[0] )
   {
     send_to_char("It contains no spells you recognize outright ", ch);
   }
-  else if (m == 1)
+  else if( m == 1 )
   {
     sprintf(buf, "It has just one spell you recognize : %s ", buf);
     send_to_char(buf, ch);
@@ -2066,15 +2089,17 @@ void ShowCharSpellBookSpells(P_char ch, P_obj obj)
     send_to_char(buf3, ch);
   }
 
-  if (obj->value[2] <= obj->value[3])
+  if( obj->value[2] <= obj->value[3] )
+  {
     send_to_char("and has no free pages.\n", ch);
+  }
   else
   {
     sprintf(buf, "and has %d free pages.\n", obj->value[2] - obj->value[3]);
     send_to_char(buf, ch);
   }
-  if (k)
-    notch_skill(ch, k, 20);
+  if( k )
+    notch_skill( ch, k, 5 );
 }
 
 void do_look(P_char ch, char *argument, int cmd)
@@ -2763,6 +2788,18 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
               "&+CA series of magical runes are dispersed about this area.&n\n");
       send_to_char(Gbuf5, ch);
     }
+    if (get_spell_from_room(&world[ch->in_room], SPELL_DESECRATE_LAND))
+    {
+      sprintf(Gbuf5,
+              "&+LA series of &+Revil&+L runes are dispersed about this area.&n\n");
+      send_to_char(Gbuf5, ch);
+    }
+    if (get_spell_from_room(&world[ch->in_room], SPELL_FORBIDDANCE))
+    {
+      sprintf(Gbuf5,
+              "&+LA strange unwelcoming energy flows through the area.&n\n");
+      send_to_char(Gbuf5, ch);
+    }
 		if (get_spell_from_room(&world[ch->in_room], SPELL_BINDING_WIND)) 
 		{
 			sprintf(Gbuf5,
@@ -3101,9 +3138,9 @@ void do_examine(P_char ch, char *argument, int cmd)
 
   // check legend lore
   if (tmp_object && (GET_CHAR_SKILL(ch, SKILL_LEGEND_LORE) > number(0, 110)) &&
-		  (GET_ITEM_TYPE(tmp_object) != ITEM_CONTAINER))
+		  (GET_ITEM_TYPE(tmp_object) != ITEM_CONTAINER && GET_ITEM_TYPE(tmp_object) != ITEM_CORPSE))
   {
-    notch_skill(ch, SKILL_LEGEND_LORE, 20);
+    notch_skill( ch, SKILL_LEGEND_LORE, 5 );
     spell_identify(GET_LEVEL(ch), ch, 0, 0, 0, tmp_object);
     CharWait(ch, (int) (PULSE_VIOLENCE * 1.5));
     return;
@@ -3481,7 +3518,7 @@ void do_world(P_char ch, char *argument, int cmd)
     ct = time(0);
     tmstr = asctime(localtime(&ct));
     *(tmstr + strlen(tmstr) - 1) = '\0';
-    sprintf(buf, "Current time is: %s (EDT)\n", tmstr);
+    sprintf(buf, "Current time is: %s (GMT)\n", tmstr);
     send_to_char(buf, ch);
 
     diff_time = ct - boot_time;
@@ -4037,7 +4074,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
             (int) (i / 8), (int) (i2 / 8), (i - i2), load_modifier(k));
     strcat(o_buf, buf);*/
 //    send_to_char(o_buf, ch);
-	sprintf(buf, o_buf);
+	sprintf(buf, "%s", o_buf);
 
 
     }
@@ -4124,105 +4161,103 @@ void do_attributes(P_char ch, char *argument, int cmd)
   send_to_char(buf, ch);
 /*  statupdate2013 stats - drannak */
 
-     if(IS_PC(ch))
+  if(IS_PC(ch))
 	{
 
-	// Crit Chance:
-  	int rollmod = 5;
-  	if (GET_C_INT(ch) < 80)
- 	rollmod = 7;
- 	else if (GET_C_INT(ch) > 130)
-  	rollmod = 4;
-  	int critroll = (int) (GET_C_INT(ch) / rollmod);
+	  // Crit Chance:
+/* Making this linear.. might should be less than linear. - Lohrr
+    int rollmod = 6;
+    if (GET_C_INT(ch) < 90)
+      rollmod = 7;
+ 	  else if (GET_C_INT(ch) > 140)
+      rollmod = 4;
+*/
+    // At 100 int : 5% crit, at 200 int : 28% crit
+    int critroll = (GET_C_INT(ch) - 100)/5 + 8;
+    // Min crit % is 8%.
+    if( critroll < 8 ) critroll = 8;
 
-	// Calm Chance:
-  	int rolmod = 7;
-  	if (GET_C_INT(ch) < 80)
- 	rolmod = 9;
- 	else if (GET_C_INT(ch) > 160)
-  	rolmod = 4;
-  	int calmroll = (int) (GET_C_INT(ch) / rollmod);
-	
-	// Magic Res:
-      int resmod = GET_C_WIS(ch);
-      double modifier = resmod - 120;
-      if (modifier > 75)
+	  // Calm Chance:
+    int rolmod = 7;
+    if (GET_C_CHA(ch) < 80)
+   	  rolmod = 9;
+ 	  else if (GET_C_CHA(ch) > 160)
+      rolmod = 4;
+    int calmroll = (int) (GET_C_CHA(ch) / rolmod);
+
+  	// Magic Res:
+    double modifier = (GET_C_WIS(ch) - 110)/2;
+    if (modifier > 75)
       modifier = 75;
-      if (modifier < 0)
+    if (modifier < 0)
       modifier = 0;
 
-	//vamp percentage:
-       double vamppct = BOUNDED(110, ((GET_C_POW(ch) * 10) / 9), 220);
-      /* if (vamppct < 1.10)
-       vamppct = 1.10;
-       else if (vamppct > 2.20)
-       vamppct = 2.20;*/
-       //vamppct *= 100.00;
+  	//vamp percentage:
+    double vamppct = BOUNDED(110, ((GET_C_POW(ch) * 10) / 9), 220);
+    /*
+    if (vamppct < 1.10)
+      vamppct = 1.10;
+    else if (vamppct > 2.20)
+      vamppct = 2.20;
+    vamppct *= 100.00;
+    */
 
-      // Magic Dam:
-      int dammod = GET_C_STR(ch);
-      double modifierx = dammod - 120;
-      double remod = 100;
-      if(modifierx >=1)
-      {
+    // Magic Dam:
+    // 121 str -> 10%, 141 str -> 20%, 181 str -> 30%.
+    double modifierx = GET_C_STR(ch) - 120;
+    double remod = 100;
+    if(modifierx >=1)
+    {
       if (modifierx <= 20)
-      remod += 10;
+        remod += 10;
       else if (modifierx <= 60)
-      remod += 20;
+        remod += 20;
       else
-      remod += 30;
-      }
+        remod += 30;
+    }
 
-      // Bloodlust:
-      int bloodlust = 0;
-      if(affected_by_spell(ch, TAG_BLOODLUST))
+    // Bloodlust:
+    int bloodlust = 0;
+    if(affected_by_spell(ch, TAG_BLOODLUST))
+    {
+      struct affected_type *findaf, *next_af;
+      for(findaf = ch->affected; findaf; findaf = next_af)
       {
-       struct affected_type *findaf, *next_af;  //initialize affects
-       for(findaf = ch->affected; findaf; findaf = next_af)
-	{
         next_af = findaf->next;
-	 if((findaf && findaf->type == TAG_BLOODLUST))
-         bloodlust = ((findaf->modifier * 10));
-       }
+        if((findaf && findaf->type == TAG_BLOODLUST))
+          bloodlust = ((findaf->modifier * 10));
       }
+    }
 
-
-
-       /* sprintf(buf, "&+cMelee Critical Percentage(int): &+Y%d%   &n&+cMax Spell Damage Reduction Percent(wis): &+Y%d%\r\n",
-            critroll,
-            (int)modifier);
-  send_to_char(buf, ch);*/
-
-        sprintf(buf, "&+cMelee Critical Percentage&n(&+Mint&n): &+Y%d%%\r\n", critroll);
-  send_to_char(buf, ch);        
-sprintf(buf, "&+cMax Spell Damage Reduction Percent&n(&+cwis&n): &+Y%d%%\r\n",
-            (int)modifier);
+/*
+  sprintf(buf, "&+cMelee Critical Percentage(int): &+Y%d%   &n&+cMax Spell Damage Reduction Percent(wis): &+Y%d%\r\n",
+    critroll, (int)modifier);
   send_to_char(buf, ch);
+*/
 
-        sprintf(buf, "&+cCalming Chance&n(&+Ccha&n): &+Y%d%% \r\n",
-            calmroll);
-  send_to_char(buf, ch);
+    sprintf(buf, "&+cMelee Critical Percentage&n(&+Mint&n): &+Y%d%%\r\n", critroll);
+    send_to_char(buf, ch);
+    sprintf(buf, "&+cMax Spell Damage Reduction Percent&n(&+cwis&n): &+Y%d%%\r\n", (int)modifier);
+    send_to_char(buf, ch);
+    sprintf(buf, "&+cCalming Chance&n(&+Ccha&n): &+Y%d%% \r\n", calmroll);
+    send_to_char(buf, ch);
 
-        /*sprintf(buf, "&+cHP Vamp Cap Percentage&n(&+mpow&n): &+Y%d%     &n&+cSpell Damage Modifier(str): &+Y%d%\r\n",
-            (int)vamppct,
-            (int)remod);*/
-	
-        sprintf(buf, "&+cHP Vamp Cap Percentage&n(&+mpow&n): &+Y%d%% \r\n",
-            (int)vamppct);
-  send_to_char(buf, ch);
-        sprintf(buf, "&+cSpell Damage Modifier&n(&+rstr&n): &+Y%d%% \r\n",
-            (int)remod);
-  send_to_char(buf, ch);
-        sprintf(buf, "&+rBloodlust &+cDamage Bonus&n(&+yvs mob only&n): &+Y%d%% \r\n", (int)bloodlust);
+/*
+  sprintf(buf, "&+cHP Vamp Cap Percentage&n(&+mpow&n): &+Y%d%     &n&+cSpell Damage Modifier(str): &+Y%d%\r\n",
+    (int)vamppct, (int)remod);
+*/
+    sprintf(buf, "&+cHP Vamp Cap Percentage&n(&+mpow&n): &+Y%d%% \r\n", (int)vamppct);
+    send_to_char(buf, ch);
+    sprintf(buf, "&+cSpell Damage Modifier&n(&+rstr&n): &+Y%d%% \r\n", (int)remod);
+    send_to_char(buf, ch);
+    sprintf(buf, "&+rBloodlust &+cDamage Bonus&n(&+yvs mob only&n): &+Y%d%% \r\n", (int)bloodlust);
+    send_to_char(buf, ch);
 	}
 
 
 
-//    sprintf(buf, "&+cArmor Class: &+Y%s\n", ac_to_string(t_val));
-
-
-/*  if (IS_TRUSTED(ch)) send_to_char(buf, ch); */
-  send_to_char(buf, ch);
+//  sprintf(buf, "&+cArmor Class: &+Y%s\n", ac_to_string(t_val));
+//  send_to_char(buf, ch);
 
   if (IS_PC(ch) && GET_CLASS(ch, CLASS_MONK))
     MonkSetSpecialDie(ch);
@@ -5508,11 +5543,15 @@ void do_time(P_char ch, char *argument, int cmd)
  
 
   //Auto Reboot - Drannak
-  if((uptime.day * 24 + uptime.hour) > 65)
+  if( (uptime.day * 24 + uptime.hour) > 65 )
   {
-   do_shutdown(ch, "autoreboot 60", 1); 
+    // If no shutdown in progress, or shutdown is > 60 minutes out.
+    if( shutdownData.reboot_time == 0
+      || shutdownData.reboot_time - time(NULL) > 60 * 60 )
+    {
+      do_shutdown(ch, "autoreboot 60", 1);
+    }
   }
-
 
   sprintf(Gbuf2, "Time elapsed since boot-up: %d:%s%d:%s%d\n",
           uptime.day * 24 + uptime.hour,
@@ -5524,7 +5563,7 @@ void do_time(P_char ch, char *argument, int cmd)
   tmstr = asctime(lt);
   *(tmstr + strlen(tmstr) - 1) = '\0';
   sprintf(Gbuf2, "Current time is: %s (%s)\n",
-          tmstr, (lt->tm_isdst <= 0) ? "EDT" : "EDT");
+          tmstr, (lt->tm_isdst <= 0) ? "GMT" : "GMT");
   send_to_char(Gbuf2, ch);
 
   if (IS_TRUSTED(ch))
@@ -5736,7 +5775,7 @@ void do_weather(P_char ch, char *argument, int cmd)
       GET_CLASS(ch, CLASS_SHAMAN) ||
       GET_CLASS(ch, CLASS_PALADIN) ||
       GET_CLASS(ch, CLASS_ANTIPALADIN) ||
-      GET_CLASS(ch, CLASS_NECROMANCER) ||
+      GET_CLASS(ch, CLASS_NECROMANCER) || GET_CLASS(ch, CLASS_SUMMONER) ||
       GET_CLASS(ch, CLASS_CONJURER) || GET_CLASS(ch, CLASS_SORCERER))
   {
     if (cond->free_energy > 40000)
@@ -5808,26 +5847,23 @@ void do_wizhelp(P_char ch, char *argument, int cmd)
 
 const char *get_multiclass_name(P_char ch)
 {
-
-                                                                                                                                       
  int i = 0;
-                                                                                                                                                
+
   if (!IS_MULTICLASS_PC(ch))
     return "error #1";
-                                                                                                                                                
+
   while (multiclass_names[i].cls1 != -1)
   {
     if ((multiclass_names[i].cls1 == ch->player.m_class) &&
         (multiclass_names[i].cls2 == ch->player.secondary_class))
       return multiclass_names[i].mc_name;
-                                                                                                                                                
+
     if ((multiclass_names[i].cls2 == ch->player.m_class) &&
         (multiclass_names[i].cls1 == ch->player.secondary_class))
       return multiclass_names[i].mc_name;
-                                                                                                                                                
     i++;
   }
-                                                                                                                                                
+
   return "error #2";
 }
 
@@ -6277,8 +6313,8 @@ void do_who(P_char ch, char *argument, int cmd)
             "      Experience to next level = %d.\n",
             (new_exp_table[GET_LEVEL(tch) + 1] - GET_EXP(tch)));
     strcat(buf, buf3);
-    sprintf(buf3, 
-            "      Epic points = %ld.\n", tch->only.pc->epics );
+    sprintf(buf3, "      Epic points = %ld.   Epic skill points = %ld.\n",
+      tch->only.pc->epics, tch->only.pc->epic_skill_points );
     strcat(buf, buf3);
 
     sprintf(buf3,
@@ -6722,15 +6758,169 @@ void do_inventory(P_char ch, char *argument, int cmd)
   char     buf[MAX_STRING_LENGTH];
   int      i;
 
-  if IS_AFFECTED
-    (ch, AFF_WRAITHFORM)
-      send_to_char("You have no place to keep anything!\n", ch);
+  if( IS_AFFECTED(ch, AFF_WRAITHFORM) )
+  {
+    send_to_char("You have no place to keep anything!\n", ch);
+  }
   else
   {
     sprintf(buf, "You are carrying: (%d/%d)\n", IS_CARRYING_N(ch), CAN_CARRY_N(ch));
     send_to_char(buf, ch);
     list_obj_to_char(ch->carrying, ch, 1, TRUE);
   }
+}
+
+// Returns true iff ch can wear something in wear_slot slot.
+bool has_eq_slot( P_char ch, int wear_slot )
+{
+  switch (wear_slot)
+  {
+    case WEAR_FINGER_R:
+    case WEAR_FINGER_L:
+      if( IS_THRIKREEN(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_NECK_1:
+    case WEAR_NECK_2:
+      return TRUE;
+      break;
+    case WEAR_BODY:
+      if( !has_innate( ch, INNATE_SPIDER_BODY )
+        || !has_innate( ch, INNATE_HORSE_BODY ) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_HEAD:
+      if( IS_MINOTAUR(ch) || IS_ILLITHID(ch) || IS_PILLITHID(ch))
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_LEGS:
+      if( IS_DRIDER(ch) || IS_CENTAUR(ch) || IS_HARPY(ch)
+        || IS_OGRE(ch) || IS_FIRBOLG(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_FEET:
+      if( IS_DRIDER(ch) || IS_THRIKREEN(ch)
+        || IS_HARPY(ch) || IS_MINOTAUR(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_HANDS:
+      return TRUE;
+      break;
+    case WEAR_ARMS:
+      if( IS_OGRE(ch) || IS_FIRBOLG(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_SHIELD:
+    case WEAR_ABOUT:
+    case WEAR_WAIST:
+    case WEAR_WRIST_L:
+    case WEAR_WRIST_R:
+    case PRIMARY_WEAPON:
+      return TRUE;
+      break;
+    case SECONDARY_WEAPON:
+      if( GET_CHAR_SKILL(ch, SKILL_DUAL_WIELD) <= 0 )
+      {
+        return FALSE;
+      }
+      break;
+    case HOLD:
+    case WEAR_EYES:
+    case WEAR_FACE:
+      return TRUE;
+      break;
+    case WEAR_EARRING_R:
+    case WEAR_EARRING_L:
+      if( IS_THRIKREEN(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_QUIVER:
+    case GUILD_INSIGNIA:
+      return TRUE;
+      break;
+    case THIRD_WEAPON:
+    case FOURTH_WEAPON:
+      if( !HAS_FOUR_HANDS( ch ) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_BACK:
+    case WEAR_ATTACH_BELT_1:
+    case WEAR_ATTACH_BELT_2:
+    case WEAR_ATTACH_BELT_3:
+      return TRUE;
+      break;
+    case WEAR_ARMS_2:
+    case WEAR_HANDS_2:
+    case WEAR_WRIST_LR:
+    case WEAR_WRIST_LL:
+      if( !HAS_FOUR_HANDS( ch ) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_HORSE_BODY:
+      if( !has_innate(ch, INNATE_HORSE_BODY ) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_LEGS_REAR:
+      return FALSE;
+      break;
+    case WEAR_TAIL:
+      if( !IS_CENTAUR(ch) && !IS_MINOTAUR(ch) && !IS_PSBEAST(ch)
+        && !IS_KOBOLD(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_FEET_REAR:
+      return FALSE;
+      break;
+    case WEAR_NOSE:
+      if( !IS_MINOTAUR(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_HORN:
+      if( !IS_MINOTAUR(ch) && !IS_HARPY(ch) && !IS_PSBEAST(ch) )
+      {
+        return FALSE;
+      }
+      break;
+    case WEAR_IOUN:
+      return TRUE;
+      break;
+    case WEAR_SPIDER_BODY:
+      if( !has_innate( ch, INNATE_SPIDER_BODY ) )
+      {
+        return FALSE;
+      }
+      break;
+    default:
+      wizlog(56, "has_eq_slot: Bad wear slot %d", wear_slot );
+      logit(LOG_WIZ, "has_eq_slot: Bad wear slot %d", wear_slot );
+      return FALSE;
+      break;
+  }
+  return TRUE;
 }
 
 bool get_equipment_list(P_char ch, char *buf, int list_only)
@@ -6740,6 +6930,7 @@ bool get_equipment_list(P_char ch, char *buf, int list_only)
   bool     found;
   char     tempbuf[MAX_STRING_LENGTH];
   P_obj    t_obj, wpn;
+  int      free_hands;
   int      wear_order[] =
     { 41, 24, 40, 6, 19, 21, 22, 20, 39, 3, 4, 5, 35, 12, 27, 42, 37, 23, 13, 28,
     29, 30, 10, 31, 11, 14, 15, 33, 34, 9, 32, 1, 2, 16, 17, 25, 26, 18, 7,
@@ -6748,8 +6939,15 @@ bool get_equipment_list(P_char ch, char *buf, int list_only)
 
   buf[0] = '\0';
   found = FALSE;
+  free_hands = get_numb_free_hands(ch);
   if (!list_only)
+  {
     strcpy(buf, "You are using:\n");
+  }
+  else if( list_only == 2 )
+  {
+    strcpy(buf, "Your available eq slots are:\n");
+  }
 
   for (j = 0; wear_order[j] != -1; j++)
   {
@@ -6881,6 +7079,18 @@ bool get_equipment_list(P_char ch, char *buf, int list_only)
         strcat(buf, "Something.\n");
       }
     }
+    else if( list_only == 2 )
+    {
+      if( free_hands || !(wear_order[j] == HOLD || wear_order[j] == WIELD || wear_order[j] == WIELD2
+        || wear_order[j] == WIELD3 || wear_order[j] == WIELD4 || wear_order[j] == WEAR_SHIELD) )
+      {
+        if( has_eq_slot( ch, wear_order[j] ) )
+        {
+          strcat( buf, where[wear_order[j]] );
+          strcat( buf, "\n" );
+        }
+      }
+    }
   }
 
   if (affected_by_spell(ch, TAG_SET_MASTER))
@@ -6894,14 +7104,20 @@ void do_equipment(P_char ch, char *argument, int cmd)
   bool     found;
   char     buf[MAX_STRING_LENGTH];
 
-  if IS_AFFECTED
-    (ch, AFF_WRAITHFORM)
+  argument = one_argument(argument, buf);
+  if IS_AFFECTED(ch, AFF_WRAITHFORM)
   {
     send_to_char("You have no body to wear anything upon!\n", ch);
     return;
   }
-
-  found = get_equipment_list(ch, buf, 0);
+  if( isname( buf, "list" ) || isname( buf, "slots" ) )
+  {
+    found = get_equipment_list(ch, buf, 2);
+  }
+  else
+  {
+    found = get_equipment_list(ch, buf, 0);
+  }
 
   if (!found)
     send_to_char("You aren't wearing anything!\n", ch);
@@ -7229,7 +7445,7 @@ void do_where(P_char ch, char *argument, int cmd)
   }
 
   /* mobs */
-
+  buf[0] = '\0';
   for (i = character_list; i && !flag; i = i->next)
   {
     if ((isname(argument, GET_NAME(i)) ||
@@ -8466,7 +8682,7 @@ void web_info(void)
     return;
   }
 
-  fprintf(opf, Gbuf3);
+  fprintf(opf, "%s", Gbuf3);
   fclose(opf);
 }
 

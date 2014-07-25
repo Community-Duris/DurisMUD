@@ -1,0 +1,773 @@
+#402000
+gafrizzen admissions assistant mage~
+&+mGafrizzen&+L, the Dean of Admissions&N~
+&+LA patient Drow elven mage stands near the doorway, reviewing a book of applicants and visitors.&N
+~
+&+L   The Drow Elf looks up from his book to notice you watching him. "Yes?" he asks. "Are you a &+wstudent&+L or a &+wscholar&+L that has come to visit our Great Library?"&N
+~
+33556554 88 0 0 302055864 8653023 0 67121176 -1000 S
+pl 0 1536 0 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#402001
+obsidian golem fire flames~
+&+Lan obsidian golem of &+rf&+Rir&+re&N~
+&+LAn obsidian golem stands guard here, surrounded by &+rfl&+Ram&+res.&N
+~
+&+LThis golem stands perfectly still, summoned to stand sentinel for when it is needed to guard the Library.&N
+~
+1107298346 88 0 0 128 0 0 0 0 S
+og 0 1 0 6
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402002
+obsidian gas sulfur golem~
+&+Lan obsidian golem of &+yg&+Ya&+ys&N~
+&+LAn obsidian golem stands guard here, in a cloud of &+ysu&+Ylf&+yur.&N
+~
+&+LThis golem stands perfectly still, summoned to stand sentinel for when it is needed to guard the Library.&N
+~
+1107822602 88 0 0 128 0 0 0 0 S
+og 0 1 0 6
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402003
+obsidian golem acid~
+&+Lan obsidian golem of &+ga&+Gc&+gi&+Gd&N~
+&+LAn obsidian golem stands guard here, dripping with &+ga&+Gc&+gi&+Gd&+L.&N
+~
+&+LThis golem stands perfectly still, summoned to stand sentinel for when it is needed to guard the Library.&N
+~
+1107299338 88 0 0 128 0 0 0 0 S
+og 0 1 0 6
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402004
+obsidian golem storms lightning~
+&+Lan obsidian golem of &+cs&+wt&+Wo&+Cr&+cm&+ws&N~
+&+LAn obsidian golem stands guard here, crackling with &+wl&+Wi&+wg&+ch&+Ct&+cn&+wi&+Wn&+wg&+L.&N
+~
+&+LThis golem stands perfectly still, summoned to stand sentinel for when it is needed to guard the Library.&N
+~
+1107298570 88 0 0 128 0 0 0 0 S
+og 0 1 0 6
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402005
+obsidian golem shadows~
+&+Lan obsidian golem of &+ws&+Wh&+wa&+Ld&+wo&+Ww&+ws&N~
+&+LAn obsidian golem stands guard here, enshrouded in &+wsw&+Wi&+wrl&+Lin&+wg s&+Wh&+wa&+Ld&+wo&+Lw&+ws&+L.&N
+~
+&+LThis golem stands perfectly still, summoned to stand sentinel for when it is needed to guard the Library.&N
+~
+1108346890 88 0 0 128 0 0 0 0 S
+og 0 1 0 6
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402006
+obsidian golem frost ice~
+&+Lan obsidian golem of &+wfr&+cos&+Ct&+cbi&+wte&N~
+&+LAn obsidian golem stands guard here, coated in a layer of &+cfr&+Co&+cst &+Land &+wi&+Wc&+we&+L.&N
+~
+&+LThis golem stands perfectly still, summoned to stand sentinel for when it is needed to guard the Library.&N
+~
+1107298826 88 0 0 128 0 0 0 0 S
+og 0 1 0 6
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402007
+grizzlane dean sorcery drow elf~
+&+mGrizzlane&+L, Dean of &+MSorcery&N~
+&+LA &+mDrow Elf&+L sits here, studying her tomes and muttering about the origins of Solbeeps.&N
+~
+&+LThis thin Drow Elf appears to be muttering about the origins of the elite spell, Solbeeps Magic Missile, and is looking for additional documentation of the history of the development.&N
+
+&+L"Are you here to study the ways of the Wizard, Shadowmage, or Wyldmage?"&N
+~
+2449639498 0 0 0 402653240 222 2162688 262144 -1000 S
+pl 0 512 3 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#402008
+shackled grey elf~
+&+La shackled &+cGrey Elf&N~
+&+LA shackled &+cGrey Elf&+L awaits its fate to die with as much dignity as possible.&N
+~
+&+cThis Grey Elf has given up its hope of any mercy from its Elven cousin captors. It will not beg. It will not break its pride. It knows it will die, and with the worst cruelty possible.&N
+~
+33556554 0 0 0 16384 4 0 0 1000 S
+pe 0 2 1 3
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402009
+caged gnome~
+&+La caged &+RGnome&N~
+&+LA &+RGnome&+L rests sullen in a birdcage, resentful of its captured state.&N
+~
+&+LA Gnome rests in this bird cage, resentful that its small size has granted it such an undignified manner of captivity... this resentment is only tempered by the fact that it knows it soon shall die.&N
+~
+33556554 0 0 0 16384 4 0 0 1000 S
+pg 0 4194304 1 2
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402010
+yralrife master golem summoner pale wizard~
+&+GYral&+Wrife&+L, the Master Golem Summoner&N~
+&+LA pale wizard stands in the middle of a summoning circle in deep concentration.&N
+~
+&+LThis pale wizard stands in the middle of a circle etched into the stone floor, and is contemplating the finer points of golem summoning, and further planar properties that might apply. He turns to you and asks, "You seem to be a well-travelled sort, have you come across any &+wsummoning essences&+L?"&N
+~
+2181072970 88 0 0 2550136888 264194 18350080 100663296 -1000 S
+gi 0 4196356 0 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402011
+mage drow elf sorcerer~
+&+La practicing &+mDrow Elf&+L sorcerer&N~
+&+LA hooded mage stands on the target range platform and prepares to cast.&N
+~
+&+mThis mage wears long robes, and has his sleeves rolled back to his elbows. He refers briefly to his spellbook, then to his targets.&N
+~
+1073743946 216 0 0 268435496 32861 0 67371008 -1000 S
+pl 0 512 1 3
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402012
+chained mountain dwarf~
+&+La chained &+YMountain Dwarf&N~
+&+LA &+YMountain Dwarf&+L is chained to the floor, praying quietly to his gods.&N
+~
+&+yThis Mountain Dwarf was been stripped bare of all but a dirty tunic, and some beads braided into his beard. He prays to his gods, and the cleric retains some faith.&N
+~
+33556554 0 0 0 16384 4 0 0 1000 S
+pm 0 32 2 2
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402013
+hanging halfling~
+&+La hanging &+yHalfling&N~
+&+LA &+yHalfling&+L dangles upside down, tied and strung up by his ankles.&N
+~
+&+yThis Halfling has barely retained consciousness, hanging upside down for a prolonged period of time.&N
+~
+33556554 0 0 0 16384 4 0 0 1000 S
+pf 0 32768 1 2
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402014
+hogtied human~
+&+La hogtied &+CHuman&N~
+&+LA &+CHuman&+L has had all of his limbs tied behind him in a bundle on the floor.&N
+~
+&+cThis Human lies on the floor, helpless and waiting to be destroyed by the next volley of destructive magic on this range.&N
+~
+33556554 0 0 0 16384 4 0 0 1000 S
+ph 0 16384 2 2
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402015
+harnessed centaur~
+&+La harnessed &+gCen&+Ltaur&N~
+&+LA &+gCen&+Ltaur has been harnessed to the wall by his horse body.&N
+~
+&+gThis Centaur has had a horse's bridle and harness chained about him, and kick and struggle as he might, cannot break free.&N
+~
+33556554 0 0 0 16384 4 0 0 1000 S
+ct 0 128 2 4
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402016
+bound barbarian~
+&+La bound &+BBarbarian&N~
+&+LA tall &+BBarbarian&+L has been tied against the back wall as a target.&N
+~
+&+BThis Barbarian yells and kicks as best he can, attempting to struggle free to destroy these mages!&N
+~
+33556554 0 0 0 16384 4 0 0 1000 S
+pb 0 1 3 4
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402017
+lysistrazz dean conjuration drow elf~
+&+mLysistrazz&+L, Dean of &+YConjuration&N~
+&+LA &+mDrow Elf&+L sits at his desk and reviews permit applications for summoning.&N
+~
+&+LThis Drow Elf seems to be reviewing a stack of application permits to summon elementals within the Library and Arcaneum grounds by potential students. He looks at you. "Are you here to study &+YConjuration&+L?"&N
+~
+2449639498 0 0 0 402653240 222 2162688 262144 -1000 S
+pl 0 2048 3 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#402018
+rikn archlich dean necromancy lich~
+&+LR&+mik&+Ln the &+wAr&+Wc&+whl&+Li&+wch&+L, Dean of &+mNecromancy&N~
+&+LA ghastly lich stands here, reviewing various tomes on his desk.&N
+~
+&+LThis Archlich appears to have full cognitive understanding of its state and full faculties of its magical prowess in its own right. He reviews various tomes, seeking further information on the ability for mortals to descend into the state of a lich... and somehow survive the process. It turns to you and asks "Are you here to study the &+mNecromantic Arts&+L?"&N
+~
+2449639498 0 0 0 402653240 222 2162688 262144 -1000 S
+ul 0 1024 2 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#402019
+large undead dracolich~
+&+La &+wlarge &+Ld&+wr&+Wa&+wco&+Ll&+wi&+Wc&+wh&N~
+&+LA &+wlarge undead &+Ld&+wr&+Wa&+wco&+Ll&+wi&+Wc&+wh&+L rests upon the platform, wings rested about its body.&N
+~
+&+L   This large creature of bones and gaunt flesh resembles a dragon of legend. Its impressive wingspan is covered in bones and a veneer of thin rotting flesh.&N
+~
+34613834 1 0 0 402718904 264222 0 0 -1000 S
+ud 0 2097168 0 6
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402020
+shambling zombie~
+&+wa &+Lshambling &+yzombie&+L~
+&+LA zombie shuffles around within the crypt, long devoid of life.&N
+~
+&+LThis zombie comes from a completely indiscernable creature, it has gotten to such an advanced state of decay and composition.&N
+~
+1073743944 1 0 0 0 0 0 0 -1000 S
+u 0 0 0 3
+26 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402021
+lich githzerai~
+&+Lthe lich of a Githzerai&N~
+&+LThis former Githzerai stands within the crypt studying a tome.&N
+~
+&+LThis tall and gaunt former Githzerai has flesh hanging off of its bones. As it turns to look at you, it's eyes glow an eerie &+Cice &+Bblue.&N
+~
+1107298378 1 0 0 88 262145 0 0 -1000 S
+ul 0 512 2 3
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402022
+vampire former barbarian~
+&+La vampire of a former Barbarian&N~
+&+LThis former Barbarian looks around the room, searching for prey.&N
+~
+&+LThis former &+BBarbarian&+L appears to have been raised again as a vampire. It has fresh blood dripping from its mouth, likely from a local rat within the crypts.&N
+~
+1073743946 1 0 0 152 0 0 0 -1000 S
+um 0 16 2 4
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402023
+wraith former human~
+&+Lthe wraith of a former Human&N~
+&+LThe wraith of a former human stands within this crypt.&N
+~
+&+L   This former human appears to be raised as a wraith, a crude creature of magic.&N
+~
+1073743882 1 0 0 24 1 0 0 -1000 S
+wr 0 512 1 3
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402024
+spectre former halfling~
+&+Lthe spectre of a former Halfling&N~
+&+LThis former Halfling attempts to skulk within the shadows of the crypt.&N
+~
+&+LThis poor former Halfling has an ethereal ghostly essence to its reanimation, and it skulks about the crypt.&N
+~
+1073743882 1 0 0 1048594 0 0 0 -1000 S
+sp 0 8192 0 2
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402025
+sinister skeleton~
+&+wa sinister-looking &+Wskeleton&N~
+&+wA skeleton wanders about the crypt, its old bones creaking.&N
+~
+&+WThis skeleton has bones that knock together as it moves, its cartiledge between the bones long gone.&N
+~
+1073743912 1 0 0 16 0 0 0 -1000 S
+sk 0 1 1 3
+28 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402026
+murgol cleric duergar dwarf~
+&+rMurgol&+L, the famous clerical explorer&N~
+&+LA thin grey &+rDuergar Dwarf&+L is here discussing the caves of Khilidarak.&N
+~
+&+r   This lean Duergar Dwarf has greyish skin that has shown its age of time and its share of battle scars. He leans over to you and asks, &+w"Are you a &+Rcleric&+w also?&N
+~
+3254814796 262144 0 0 402719160 30 0 541065216 -1000 S
+pd 0 32 3 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402027
+gringobbi goblin rogue teacher~
+&+GGringobbi&+L, the notorious rogue&N~
+&+GA &+GGoblin&+L watches the crowd from amongst the shadows.&N
+~
+&+L   This shifty individual is known to be a thief, an assassin, and a mercenary... all for hire. He's also been known to be good at training others in such matters. He looks at you. &+g"Are you a &+Grogue&+g or a &+Gmercenary&+g?"&+L he asks. &+g"If so, want to take a &+Gjob&+g for some quick cash?"&N
+~
+3254814796 0 128 0 270074168 30 0 67108864 -1000 S
+hg 0 94208 0 2
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402028
+grall troll shamaness~
+&+GGrall&+L, the &+gmaster &+Gshamaness&N~
+&+gA rather short Troll stands here, examining a totem of some variety.&N
+~
+&+gThis female Troll appears to be examining a totem of some variety, and considering its applications to a new theoretical spell.&N
+
+&+G"Oh. Are you shaman too? Are you Elementalist, Spiritualist, or Animalist?" she asks gruffly.
+~
+3254814792 0 0 0 0 0 0 0 -1000 S
+pt 0 256 2 4
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#402029
+ghost shezeera lost blighter~
+&+WShezeera&+L, the &+wlost &+Lblighter &+Wghost&N~
+&+wA &+Wghost&+w floats freely throughout the room, trying to talk to dead plants.&N
+~
+&+wThis ghost appears to have been some variety of human race. She wears clothes that date her to ancient times, and she keeps attempting to touch the Underdark plantlife to no success.&N
+
+&+W"Are you a &+Cblighter&+W also? I came down here to catalogue Underdark plantlife and seem to have gotten lost...&N
+~
+3254814792 0 0 0 0 0 0 0 -1000 S
+ug 0 8388608 0 2
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#402030
+slanx kobold reaver~
+&+LSlanx&+w, the &+LKobold&+w explorer&N~
+&+LA tiny Kobold wanders the Chamber, waiting for an appointment.&N
+~
+&+LThis Kobold appears to be impatiently tapping his tail against the floor, muttering about waiting for an appointment with the Dean of Illusions.
+
+&+w"Are you a Reaver?" he asks.
+~
+3254814792 0 0 0 0 0 0 0 -1000 S
+kb 0 2097152 3 2
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402031
+shifting shadow shade nightmares~
+&+La &+ws&+Wh&+wa&+Ld&+we&+L manifested from &+Wn&+wi&+Lg&+wh&+Wt&+Lm&+wa&+Wr&+we&+Ls&N~
+&+LA shifting shadow manifested from the darkest nightmares floats through the plane.&N
+~
+&+L   This shifting shadow has been created by the dark subconscious fears of the souls of the Underdark, given life upon this very demi-plane of existence.&N
+~
+1107429448 1 0 0 134742034 2 0 2048 -1000 S
+sh 0 2097152 3 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402032
+shifting shadow shade nightmares~
+&+La &+ws&+Wh&+wa&+Ld&+we&+L manifested from &+Wn&+wi&+Lg&+wh&+Wt&+Lm&+wa&+Wr&+we&+Ls&N~
+&+LA shifting shadow manifested from the darkest nightmares floats through the plane.&N
+~
+&+L   This shifting shadow has been created by the dark subconscious fears of the souls of the Underdark, given life upon this very demi-plane of existence.&N
+~
+1107429448 1 0 0 134742034 2 0 2048 -1000 S
+sh 0 2097152 2 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402033
+shifting shadow shade nightmares~
+&+La &+ws&+Wh&+wa&+Ld&+we&+L manifested from &+Wn&+wi&+Lg&+wh&+Wt&+Lm&+wa&+Wr&+we&+Ls&N~
+&+LA shifting shadow manifested from the darkest nightmares floats through the plane.&N
+~
+&+L   This shifting shadow has been created by the dark subconscious fears of the souls of the Underdark, given life upon this very demi-plane of existence.&N
+~
+1107429448 1 0 0 134742034 2 0 2048 -1000 S
+sh 0 2097152 1 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402034
+shifting shadow shade nightmares~
+&+La &+ws&+Wh&+wa&+Ld&+we&+L manifested from &+Wn&+wi&+Lg&+wh&+Wt&+Lm&+wa&+Wr&+we&+Ls&N~
+&+LA shifting shadow manifested from the darkest nightmares floats through the plane.&N
+~
+&+L   This shifting shadow has been created by the dark subconscious fears of the souls of the Underdark, given life upon this very demi-plane of existence.&N
+~
+1107429448 1 0 0 134742034 2 0 2048 -1000 S
+sh 0 2097152 4 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402035
+demon dark dreaming mejilgivar~
+&+rMejilgivar&+L, Demon of the Dark Dreaming&N~
+&+LA &+rDemon&+L wanders the plane, shifting in and out of reality.&N
+~
+&+r   This demon is an ever-shifting creature, born out of whatever the present dreamscape conjures from the deepest fear of those who presently slumber.&N
+~
+34613324 1 0 0 268435482 0 0 67108864 -1000 S
+x 0 4194304 2 4
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402036
+lost explorer memory dream~
+&+wthe &+Wdream &+wmemory &+Lof a &+wlost explorer&N~
+&+wA ghostly memory wanders the plane of dreams, never to find an exit.&N
+~
+&+w   This creature is a faint memory of its former self, wandering the dream plane, skittish and confused, jumpy at the slightest sound, but unaware of your presence.&N
+~
+33693768 0 0 0 402653480 0 0 0 0 S
+ug 0 4194304 2 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#402037
+dream weaver angel gazdiel~
+&+WGazdiel&+w, the &+WWe&+wav&+Wer &+wof &+cDr&+Cea&+cms&N~
+&+wAn &+WAngel&+w stands here, tying the &+cstrands &+wof &+cd&+Cr&+We&+Ca&+cm &+Wmemories&+w together.&N
+~
+&+cThis large winged ethereal creature appears to be tying together the fragments of the dreams of others, tying the fates of the souls together... true love, forgiveness, justice, and mercy.
+&+cThe angel looks at you. &+C"I am quite busy," &+cit says in an ethereal voice-like sound, "&+CHave you found any &+Wfragments of dreams&+C?&N
+~
+1375865160 0 0 0 805306522 264350 19922944 71313408 0 S
+an 0 4194336 0 6
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402038
+kanklestilbin dean illusion kobold~
+&+LKanklestilbin&+w, Dean of &+WIl&+Cl&+cus&+Ci&+Won&N~
+&+wA &+LKobold&+w sits here, focusing on a &+cgateway &+wto a &+Ldemi-plane &+wof &+Cdr&+cea&+Cms&+w.&N
+~
+&+LThis Kobold appears to be obsessed with the fluxing patterns of shadows in the unique gateway he has formed to a demi-plane of dreams. He breaks away from it only briefly to notice your interest in the matter.
+
+&+L"Are you an Illusionist? If so, are you a Dark Dreamer or a Magician?" he asks impatiently.
+~
+2449639498 0 0 0 402653240 222 2162688 262144 -1000 S
+kb 0 4194304 2 1
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#402039
+lark shopkeeper goblin~
+&+GLark&+L, the Scholar's Supply Shopkeeper&N~
+&+LA short &+GGoblin&+L fusses around the shop, organizing the inventory.&N
+~
+&+G   This Goblin is short, unusually clean, and has a rather distinctive underbite. It wanders about the shop keeping the inventory in order.&N
+~
+302131274 0 0 0 268435640 2048 0 0 -1000 S
+hg 0 512 2 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402040
+duergar dwarf gharlant banker~
+&+rGharlant&+L, the Duergar banker&N~
+&+LA short &+rDuergar Dwarf&+L stands behind an obsidian-carved counter.&N
+~
+&+L
+~
+10 0 0 0 0 0 0 0 -1000 S
+pd 0 32 3 3
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402041
+drow spider drider ne'kalsaider hermit creature ne'kalsai~
+&+mNe'kal&+Lsai&+L, the hermit&N~
+&+LA creature with the torso of a &+mDrow Elf&+L and the body of a &+rSpider &+Lstands here.&N
+~
+&+LThis creature appears to be a rather handsom and elegant Drow Elf, at least from the torso up. His long white hair has been braided behind his perfectly shaped ears. Below his torso, he has the body of an arachnid, with eight large and muscular legs which skitter. He turns to look at you, with his &+rred eyes&+L and bares his &+Wfangs&+Las he talks.
+
+&+m"What brings you here, to disturb me? Have you research on the &+Mcurse&+m?"&+L he asks dismissively in high Drow Elven.&N
+~
+1107310670 65536 0 0 402653464 262174 0 604241922 -1000 S
+dr 0 512 1 4
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402042
+young drider~
+&+La young &+mdri&+Lder&N~
+&+wA young &+mDri&+Lder&+w rests within its web, sleeping until its next meal.&N
+~
+&+L   This young Drider appears to have the upper torso of an elegant Drow Elven male, with flowing white hair, and the body of a wicked-looking black arachnid. Its fangs protrude ever so slightly from its mouth as it sleeps.&N
+~
+1107310666 1 0 0 134218000 94 0 266240 -1000 S
+dr 0 1 1 4
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+4 4 1
+#402043
+young drider elegant~
+&+Lan elegant &+mdri&+Lder&N~
+&+wAn elegant &+mDri&+Lder&+w lays upon its web, sleeping with one red eye open.&N
+~
+&+L   This young Drider appears to have the upper torso of an elegant Drow Elven male, with flowing white hair, and the body of a wicked-looking black arachnid. Its fangs protrude ever so slightly from its mouth as it sleeps.&N
+~
+1107310666 1 0 0 134218000 94 0 266240 -1000 S
+dr 0 1 1 4
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+5 5 1
+#402044
+mature drider~
+&+La mature &+mdri&+Lder&N~
+&+wA &+mDri&+Lder&+w has backed into the corner of the room, covered in webs.&N
+~
+&+L   This young Drider appears to have the upper torso of an elegant Drow Elven male, with flowing white hair, and the body of a wicked-looking black arachnid. Its fangs protrude ever so slightly from its mouth as it sleeps.&N
+~
+1107310670 1 0 0 134218000 94 0 266240 -1000 S
+dr 0 16 1 4
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402045
+drider tall~
+&+La tall &+mdri&+Lder&N~
+&+wA rather tall &+mDri&+Lder&+w appears to be quite thin, perhaps in need of a meal...&N
+~
+&+L   This young Drider appears to have the upper torso of an elegant Drow Elven male, with flowing white hair, and the body of a wicked-looking black arachnid. Its fangs protrude ever so slightly from its mouth as it sleeps.&N
+~
+1107310666 1 0 0 134218000 94 0 266240 -1000 S
+dr 0 1 1 4
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402046
+elderly drider old elder~
+&+Lan elderly &+mdri&+Lder&N~
+&+wA very old &+mDri&+Lder&+w rests near the door, wary of trespassers.&N
+~
+&+L   This young Drider appears to have the upper torso of an elegant Drow Elven male, with flowing white hair, and the body of a wicked-looking black arachnid. Its fangs protrude ever so slightly from its mouth as it sleeps.&N
+~
+1107327054 1 0 0 134218000 94 0 266240 -1000 S
+dr 0 1024 2 4
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402047
+blithe svirfneblin alchemist deep gnome~
+&+cBli&+gthe&+L, the svirfneblin alchemist&N~
+&+LA short &+cSv&+gir&+cfn&+geb&+clin&+L works within the Alchemical library.&N
+~
+&+L   This awkward little Underdark version of a Gnome has splotchy tealish-grey skin developed from a lack of sunlight upon its skin, and no hair. Its black-pupiled eyes settle upon you as you enter the room, watching its inventory carefully.&N
+~
+3254814794 0 0 0 134217880 28 0 67108864 -1000 S
+pg 0 524288 1 1
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402048
+xralog troll bardic bard storyteller~
+&+gXralog&+L, the great bardic storyteller&N~
+&+LA large lumbering &+gTroll&+L makes himself the center of attention.&N
+~
+&+g   This large Troll has a bit of an underbite, yet that doesn't stop him from telling great takes of the most epic adventures in the realm with the rapt attention of all who listen.&N
+~
+3254945882 0 0 0 268959960 2078 0 67379200 -1000 S
+pt 0 32768 3 4
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402049
+lakuna storm giant dean ethermancy ethermancer~
+&+wLa&+Wku&+wna&+L, the Dean of &+wEthermancy&N~
+&+LA tall female &+WS&+wt&+Wo&+wr&+Wm&+w G&+Wi&+wa&+Wn&+wt&+L stands here, focusing on seemingly nothing at all.&N
+~
+&+w   This rather large female storm giant is draped in white silks and jewelry formed of icicles. She appears to be rather relaxed, and focusing on something that is otherwise unseen, but she seems to see...&N
+~
+3254822986 0 0 0 402653208 8388610 0 268447744 -1000 S
+sg 0 33554432 3 -1
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#402050
+jargif githyanki pyrokinetic master~
+&+GJar&+Wgif&+L, Dean of &+bPsionicists&N~
+&+LA slender and pale &+GGith&+Wyanki &+Lrolls &+rf&+Rl&+Ya&+Rm&+re&+L over his fingertips while waiting.&N
+~
+&+LThis tall Githyanki has pale and slightly yellowish skin, and bright red hair with streaks of black held back in a low ponytail. He wears dusty clothes of a traveller.
+
+&+r"Only true Psionicists specialize as Pyrokinetics," he says flatly.
+~
+3254814794 0 0 0 2550137112 2 558366720 0 -1000 S
+gi 0 4 1 2
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402051
+spider wicked~
+&+La wicked spider&N~
+&+LA large spider has made an extravagant series of webs in the room.&N
+~
+&+LThis large spider is poised to pounce upon its prey, its multiple sets of eyes glimmering in the faint light of the faerie fire. It extends its fangs and attacks!&N
+~
+1073743946 1 0 0 256 0 0 0 -1000 S
+as 0 64 2 1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#402052
+meek half-orc half orc slave~
+&+La meek &+wHalf-&+LOrc slave&N~
+&+LThis &+wHalf&+L-Orc quietly wanders the halls, cleaning the Library.&N
+~
+&+LThis Half-Orc is a more humane-looking Orc than a usual Orc. Its features are softened, and its skin smoother and 'prettier' than a regular Orc. He is a creature of ridicule and subjugation from birth, and has taken up his lot in life to tend to the Library.&N
+~
+133324 24 0 0 805830928 28 65536 0 -1000 S
+h2 0 4096 4 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402053
+svirfneblin alchemist deep gnome apprentice~
+&+ca &+gsv&+cir&+gfn&+ceb&+gli&+cn &+calc&+Chem&+cist &+gapprentice&N~
+&+LA &+cSv&+gir&+cfn&+geb&+clin&+L collects fungal samples in the Underdark garden.&N
+~
+&+L   This awkward little Underdark version of a Gnome has splotchy tealish-grey skin developed from a lack of sunlight upon its skin, and no hair. It seems to be busy studying a mushroom.&N
+~
+3254814794 0 0 0 134217728 28 0 0 -1000 S
+pg 0 524288 2 1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402054
+apprentice necromancer~
+&+Lan apprentice &+mnecromancer&N~
+&+LThis &+mapprentice &+Lwanders the library, studying its many hidden secrets.&N
+~
+&+L   This hooded Drow Elf barely gives you any notice as it passes by you, but rather, it seems to look right through you - perhaps either as if you were a ghost, or he was envisioning what sort of ghost you'd actually be.&N
+~
+1107331144 24 0 0 134217728 28 0 0 -1000 S
+pl 0 1024 3 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402055
+apprentice illusionist~
+&+Lan apprentice &+Wil&+Clu&+csi&+Con&+Wist&N~
+&+LThis &+Wap&+Cpr&+cen&+Cti&+Wce&+L wanders the library, studying its many hidden secrets.&N
+~
+&+L   This hooded Kobold seems to shift rapidly in appearance, before his masks fail and he flickers back into his original form... perhaps he needs more experience before such a spell will work for him!&N
+~
+1107331144 24 0 0 134217728 28 0 0 -1000 S
+kb 0 4194304 2 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402056
+apprentice conjurer~
+&+Lan apprentice &+Yconjurer&N~
+&+LThis &+Yapprentice &+Lwanders the library, studying its many hidden secrets.&N
+~
+&+L   This hooded Drow Elf barely gives you any notice as it passes by you, but rather, it seems to look right through you. It appears deep in thought about the elemental planes.&N
+~
+1107331144 24 0 0 134217728 28 0 0 -1000 S
+pl 0 2048 1 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402057
+apprentice sorcerer~
+&+Lan apprentice &+Msorcerer&N~
+&+LThis &+Mapprentice &+Lwanders the library, studying its many hidden secrets.&N
+~
+&+L   This lean Githyanki flows about the library in his silken robes. He seems to care little for others, only the fire he is able to produce from his fingertips.&N
+~
+1107331144 24 0 0 134217728 28 0 0 -1000 S
+gi 0 512 1 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402058
+gruk warrior legendary ogre~
+&+bGruk&+L, the legendary warrior&N~
+&+LAn &+bOgre&+L leans up against a wall, watching the various travellers.&N
+~
+&+bThis tall Ogre has muscular arms, a wide stance, and a lack of patience for company.
+&+B"What do you want?" it grunts. "Are you also a &+Cwarrior&+B? If not, I have no time for you.&N
+~
+3254814796 0 0 0 402719160 30 0 541065216 -1000 S
+po 0 1 1 5
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402059
+grumbiter orc knight~
+&+LGrumbiter&+w, the darkest of knights&N~
+&+LAn &+wOrc&+L sits here calmly, watching the various visitors with suspicion.&N
+~
+&+LThis Orc calmly looks you up and down, considering what sort of level of fight you might provide it.
+&+w"My hellfire would destroy you," it says gruffly. "You ought to have better spent your experience learning the ways of the &+Ranti-paladin&+w."&N
+~
+3254814796 0 0 0 402719160 30 0 541065216 -1000 S
+ho 0 16 1 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402060
+githyanki monk frilun~
+&+GFri&+Wlun&+L, the silent monk&N~
+&+LA &+GGith&+Wyanki &+Ldressed in plain robes meditates within the room.&N
+~
+&+wThis pale creature turns to look at you, but says little. It is only interested in other monks, of which there are precious few in the Underdark wilds. He looks you up and down and considers if you are a &+Wmonk&+L.&N
+~
+3254814796 0 0 0 402719160 30 0 541065216 -1000 S
+gi 0 64 1 3
+65 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#402061
+razeline demon rare book collector~
+&+rRaz&+Rel&+rine&+L, the rare book collector&N~
+&+LAn elegant &+rD&+Re&+rm&+Ro&+rn &+Lwanders the area, looking for scholars to speak with.&N
+~
+&+LThis elegant demon is quite an attractive beauty, but that is not all about her. She carries a shoulder bag of books, and carefully considers who may carry new &+rbooks&+L that she may want.
+~
+1375733836 0 0 0 940114328 2077 262144 67371008 0 S
+x 0 4197888 0 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#402062
+apprentice necromancer~
+&+La wandering apprentice&N~
+&+LThis &+mapprentice &+Lwanders the library grounds, studying its many hidden secrets.&N
+~
+&+L   This hooded Drow Elf barely gives you any notice as it passes by you, but rather, it seems to look right through you - perhaps either as if you were a ghost, or he was envisioning what sort of ghost you'd actually be.&N
+~
+1107331148 24 0 0 134217728 28 0 0 -1000 S
+pl 0 1024 1 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

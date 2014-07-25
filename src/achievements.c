@@ -8,6 +8,7 @@
 #include "spells.h"
 
 extern P_index mob_index;
+extern int pulse;
 
 int get_frags(P_char ch)
 {
@@ -339,17 +340,42 @@ void apply_achievement(P_char ch, int ach)
 // Addicted to Blood - Display
 void do_addicted_blood(P_char ch, char *arg, int cmd)
 {
-  char buf[MAX_STRING_LENGTH];
+  char   buf[MAX_STRING_LENGTH];
+  int    time;
+  struct affected_type *af;
+  int    secs;
 
-  sprintf(buf, "&+L%-28s&+L%-51s&+L%s &+W%d%%&n\r\n",
-      "&+rAddicted to Blood&n", "&+wKill &+W30 &+wmobs within 30 minutes", "&+wEXP and Plat Bonus&n", get_progress(ch, TAG_ADDICTED_BLOOD, 30));
+  if( !ch )
+  {
+    return;
+  }
+
+  // Calculate 'seconds' until next tick.  Note: somtimes there will be 60 sec left.
+  secs = 60 *(PULSES_IN_TICK - pulse) / PULSES_IN_TICK;
+
+  sprintf( buf, "%s - %s\n%s\nYou are &+W%d%%&n complete.\n",
+      "&+rAddicted to Blood&n", "&+wEXP and Plat Bonus&n", "&+wKill &+W30 &+wmobs within 30 minutes", get_progress(ch, TAG_ADDICTED_BLOOD, 30));
+  send_to_char( buf, ch );
+  af = ch->affected;
+  while( af && !(af->type == TAG_ADDICTED_BLOOD) )
+    af = af->next;
+  time = af ? af->duration*60 + secs : 0;
+  sprintf( buf, "You have %d:%s%d left.\n\n", time / 60, (time % 60) < 10 ? "0" : "", time % 60 );
   send_to_char( buf, ch );
 
+  af = ch->affected;
+  while( af && !(af->type == TAG_BLOODLUST) )
+    af = af->next;
+  sprintf( buf, "&+rBloodlust&n - Damage Bonus(&+yvs mob only&n)\nCurrent lust: &+W%d%%&n\n", af ? af->modifier * 10 : 0 );
+  send_to_char( buf, ch );
+  time = af ? af->duration*60 + secs : 0;
+  sprintf( buf, "You have %d:%s%d left.\n", time / 60, (time % 60) < 10 ? "0" : "", time % 60 );
+  send_to_char( buf, ch );
 }
 
 void update_addicted_to_blood(P_char ch, P_char victim)
 {
-  if( !IS_PC(victim) && GET_LEVEL(victim) > GET_LEVEL(ch) - 5 )
+  if( !IS_PC(victim) && GET_LEVEL(victim) >= GET_LEVEL(ch) - 5 )
   {
     // Add addicted to blood if it isn't already there
     if( !affected_by_spell(ch, TAG_ADDICTED_BLOOD) )
@@ -358,7 +384,7 @@ void update_addicted_to_blood(P_char ch, P_char victim)
       memset(&aaf, 0, sizeof(struct affected_type));
       aaf.type = TAG_ADDICTED_BLOOD;
       aaf.modifier = 0;
-      aaf.duration = 60;
+      aaf.duration = 30;
       aaf.location = 0;
       aaf.flags = AFFTYPE_NOSHOW | AFFTYPE_PERM | AFFTYPE_NODISPEL;
       affect_to_char(ch, &aaf);

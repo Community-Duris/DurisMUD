@@ -198,10 +198,10 @@ void displayFragList(P_char ch, char *arg, int cmd)
     {
       sprintf(filename, "Fraglists/fraglist.evil");
     }
-    // else if (strstr("undead", arg))
-    // {
-      // sprintf(filename, "Fraglists/fraglist.undead");
-    // }
+    else if (strstr("undead", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.undead");
+    }
     // else if (strstr("death knight", arg))
     // {
       // sprintf(filename, "Fraglists/fraglist.death_knight");
@@ -281,6 +281,10 @@ void displayFragList(P_char ch, char *arg, int cmd)
     else if (strstr("troll", arg))
     {
       sprintf(filename, "Fraglists/fraglist.troll");
+    }
+    else if (strstr("drider", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.drider");
     }
     else if (strstr("half elf", arg))
     {
@@ -406,6 +410,10 @@ void displayFragList(P_char ch, char *arg, int cmd)
     {
       sprintf(filename, "Fraglists/fraglist.conjurer");
     }
+    else if (strstr("summoner", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.summoner");
+    }
     else if (strstr("rogue", arg))
     {
       sprintf(filename, "Fraglists/fraglist.rogue");
@@ -433,6 +441,10 @@ void displayFragList(P_char ch, char *arg, int cmd)
     else if (strstr("druid", arg))
     {
       sprintf(filename, "Fraglists/fraglist.druid");
+    }
+    else if (strstr("blighter", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.blighter");
     }
     else if (strstr("reaver", arg))
     {

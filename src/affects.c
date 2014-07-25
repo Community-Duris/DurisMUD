@@ -224,9 +224,11 @@ int apply_ac(P_char ch, int eq_pos)
       if( GET_CHAR_SKILL(ch, SKILL_SHIELD_COMBAT) )
       {
         value += (int) ( GET_CHAR_SKILL(ch, SKILL_SHIELD_COMBAT) * (float) get_property("skill.shieldCombat.ACBonusMultiplier", 1.00) );
-        if (GET_CLASS(ch, CLASS_WARRIOR | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_MERCENARY))
-	  value *= 2;
-                    notch_skill(ch, SKILL_SHIELD_COMBAT, 50);
+        if( GET_CLASS(ch, CLASS_WARRIOR | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_MERCENARY) )
+        {
+      	  value *= 2;
+        }
+        notch_skill(ch, SKILL_SHIELD_COMBAT, 33.33);
       }
       break;
     case WEAR_BODY:
@@ -386,10 +388,9 @@ int calculate_hitpoints(P_char ch)
     apply_maxconbonus_hitpoints = true;
   }
   
-  if(ch &&
-    IS_MULTICLASS_PC(ch) &&
-    GET_PRIME_CLASS(ch, CLASS_ETHERMANCER | CLASS_DRUID | CLASS_CLERIC | CLASS_SORCERER | CLASS_NECROMANCER | CLASS_SHAMAN | CLASS_PSIONICIST | CLASS_ILLUSIONIST | CLASS_CONJURER | CLASS_BARD) &&
-    GET_SECONDARY_CLASS(ch, CLASS_ETHERMANCER | CLASS_DRUID | CLASS_CLERIC | CLASS_SORCERER | CLASS_NECROMANCER | CLASS_SHAMAN | CLASS_PSIONICIST | CLASS_ILLUSIONIST | CLASS_CONJURER | CLASS_BARD))
+  if(ch && IS_MULTICLASS_PC(ch)
+    && GET_PRIME_CLASS(ch, CLASS_ETHERMANCER | CLASS_DRUID | CLASS_CLERIC | CLASS_SORCERER | CLASS_NECROMANCER | CLASS_SHAMAN | CLASS_PSIONICIST | CLASS_ILLUSIONIST | CLASS_CONJURER | CLASS_BARD | CLASS_SUMMONER | CLASS_BLIGHTER)
+    && GET_SECONDARY_CLASS(ch, CLASS_ETHERMANCER | CLASS_DRUID | CLASS_CLERIC | CLASS_SORCERER | CLASS_NECROMANCER | CLASS_SHAMAN | CLASS_PSIONICIST | CLASS_ILLUSIONIST | CLASS_CONJURER | CLASS_BARD | CLASS_SUMMONER | CLASS_BLIGHTER))
   {
     apply_maxconbonus_hitpoints = true;
   }
@@ -534,6 +535,14 @@ void apply_affs(P_char ch, int mode)
     if (IS_AFFECTED2(ch, AFF2_SOULSHIELD))
     {
       REMOVE_BIT(ch->specials.affected_by4, AFF4_NEG_SHIELD);
+    }
+    if( affected_by_spell(ch, SPELL_ELEMENTAL_AURA) )
+    {
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_FIRE_AURA);
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_WATER_AURA);
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_EARTH_AURA);
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_AIR_AURA);
+      REMOVE_BIT(ch->specials.affected_by4, AFF4_ICE_AURA);
     }
     if (IS_AFFECTED2(ch, AFF2_FIRE_AURA))
     {
@@ -1641,16 +1650,11 @@ char affect_total(P_char ch, int kill_ch)
 
   ch->specials.base_combat_round += ch->points.combat_pulse;
 
-  if (affected_by_spell(ch, SKILL_WHIRLWIND))
-  {
-    ch->specials.base_combat_round -= (ch->specials.base_combat_round >> 1);
-  }
-
   if (innate_two_daggers(ch))
     ch->specials.base_combat_round += (int) get_property("innate.dualDaggers.pulse", -3.0);
 
   if (IS_AFFECTED2(ch, AFF2_FLURRY))
-    ch->specials.base_combat_round -= (int)(0.60 * ch->specials.base_combat_round);
+    ch->specials.base_combat_round = (int)(get_property("innate.flurry.pulse", .70) * ch->specials.base_combat_round);
 
   if( GET_CLASS(ch, CLASS_REAVER) )
     apply_reaver_mods(ch);
@@ -2777,7 +2781,9 @@ void update_damage_data()
     sprintf(buf, "damage.totalOutput.racial.%s",
             race_names_table[i].no_spaces);
     multiplier =
-      get_property(buf, 1.0) * melee_factor * pulse / PULSE_VIOLENCE;
+      get_property(buf, 1.0);
+      // Cancelling the rest of this crap. It doesn't work right anyway. - Lohrr
+      // get_property(buf, 1.0) * melee_factor * pulse / PULSE_VIOLENCE;
     combat_by_race[i][1] = multiplier;
   }
 
@@ -3446,7 +3452,7 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
     if (dam <= 0)
     {
       send_to_char("You land deftly on your feet, nice jump!\n", ch);
-      notch_skill(ch, SKILL_SAFE_FALL, 30);
+      notch_skill(ch, SKILL_SAFE_FALL, 33.33);
       do_look(ch, 0, -2);
       act("$n drops in from above, landing neatly.", TRUE, ch, 0, 0, TO_ROOM);
       return FALSE;

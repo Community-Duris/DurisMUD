@@ -11,6 +11,8 @@ extern struct zone_data *zone_table;
 extern struct room_data *world;
 extern const char *sector_symbol[];
 extern mapSymbolInfo color_symbol[];
+extern P_index mob_index;
+extern int count_classes( P_char mob );
 
 void display_map(P_char ch, int n, int show_map_regardless);
 
@@ -53,7 +55,7 @@ void display_exp_table(P_char ch, char *arg, int cmd)
   for( int i = 0; i < 63; i++ )
   {
     char buff[128];
-    sprintf(buff, "%d: %d\n", i, new_exp_table[i]);
+    sprintf(buff, "%d: %ld\n", i, new_exp_table[i]);
     send_to_char(buff, ch);
   }  
 }
@@ -253,6 +255,35 @@ void do_test(P_char ch, char *arg, int cmd)
   {
     test_load_all_chars(ch);
     return;
+  }
+  else if ( isname("count", buff) )
+  {
+    char   buf[MAX_STRING_LENGTH];
+    int    classes;
+    P_char mob;
+    P_obj  obj;
+
+    generic_find( arg, FIND_CHAR_WORLD, ch, &mob, &obj );
+    if( mob )
+    {
+      classes = count_classes( mob );
+      sprintf( buf, "%s (%d) has %d classes.\n", J_NAME(mob), IS_PC(mob) ? -1 : GET_VNUM(mob), classes );
+      send_to_char( buf, ch );
+    }
+    else
+    {
+      sprintf( buf, "Char '%s' not found.\n", skip_spaces(arg) );
+      send_to_char( buf, ch );
+    }
+    return;
+  }
+  else if ( isname("sql_log", buff) )
+  {
+    P_char mob;
+    // Shadow
+    mob = read_mobile(92076, VIRTUAL);
+    sql_log( mob, WIZLOG, "SQL: '%s'" , arg );
+    extract_char( mob );
   }
   else
   {

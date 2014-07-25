@@ -427,6 +427,7 @@ int breale_townsfolk(P_char ch, P_char pl, int cmd, char *arg)
     if ((GET_CLASS(TmpCh, CLASS_SHAMAN) ||
          GET_CLASS(TmpCh, CLASS_SORCERER) ||
          GET_CLASS(TmpCh, CLASS_NECROMANCER) ||
+         GET_CLASS(TmpCh, CLASS_SUMMONER) ||
          GET_CLASS(TmpCh, CLASS_CONJURER)) &&
         !should_not_kill(ch, TmpCh) &&
         !IS_SET(TmpCh->specials.act, PLR_AGGIMMUNE) && CAN_SEE(ch, TmpCh))

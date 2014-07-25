@@ -1417,6 +1417,7 @@ int mob_vecna_procs(P_obj obj, P_char ch, int cmd, char *arg)
         true, ch, 0, victim, TO_NOTVICT);
         
       dam = number(400, 600);
+      dam /= 4;
       melee_damage(ch, victim, dam,  PHSDAM_TOUCH | PHSDAM_NOREDUCE | PHSDAM_NOPOSITION, 0);
       CharWait(victim, PULSE_VIOLENCE * 2);
       
@@ -1493,6 +1494,7 @@ int mob_vecna_procs(P_obj obj, P_char ch, int cmd, char *arg)
         true, ch, 0, victim, TO_NOTVICT);
 
       dam = number(200, 300);
+      dam /= 4;
       melee_damage(ch, victim, dam,  PHSDAM_TOUCH | PHSDAM_NOREDUCE | PHSDAM_NOPOSITION, 0);
       
       if(GET_POS(victim) == POS_STANDING &&

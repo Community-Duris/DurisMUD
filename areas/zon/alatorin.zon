@@ -1,6 +1,6 @@
 #831
 &+CAlatorin &+L- the &N&+rForge &+LCity~
-83992 0 0 180 190 3
+83992 1 0 180 190 3
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -2105,7 +2105,7 @@ E 1 83234 8 16 100 0 0 0           *   a massive tauren battle-axe
 M 0 83197 1 83135 100 0 0 0        * Gradden the Dwarf Bounty Hunter
 G 1 94336 8 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83128 5 83138 100 0 0 0        * a battle-ready siege dwarf
-E 1 83176 1 5 100 0 0 0            *   a suit of heavy spiked seige armor
+E 1 83176 1 5 100 0 0 0            *   a suit of heavy spiked siege armor
 E 1 83175 12 16 100 0 0 0          *   a barbed longsword
 E 1 83174 10 17 100 0 0 0          *   a bloody warhammer
 M 0 83128 5 83138 100 0 0 0        * a battle-ready siege dwarf
@@ -2121,7 +2121,7 @@ M 0 83128 5 83138 100 0 0 0        * a battle-ready siege dwarf
 E 1 83175 12 16 100 0 0 0          *   a barbed longsword
 E 1 83174 10 17 100 0 0 0          *   a bloody warhammer
 M 0 83129 5 83138 100 0 0 0        * a battlerager
-E 1 83213 1 8 100 0 0 0            *   some spiked seige boots
+E 1 83213 1 8 100 0 0 0            *   some spiked siege boots
 E 1 83175 12 16 100 0 0 0          *   a barbed longsword
 E 1 83173 8 17 100 0 0 0           *   a spiked stone mace
 M 0 83129 5 83138 100 0 0 0        * a battlerager
@@ -3623,7 +3623,7 @@ G 1 40469 999 0 100 0 0 0          *    (object type not in this .obj file)
 G 1 9428 999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 500023 1 0 5 0 0 0             *    (object type not in this .obj file)
 M 0 83363 1 83793 100 0 0 0        * Candella
-E 1 83406 1 21 100 0 0 0           *   an earring of entwined roots
+E 1 83406 1 21 33 0 0 0            *   an earring of entwined roots
 M 0 83364 1 83794 100 0 0 0        * a burly dwarven shopkeeper
 G 1 83111 999 0 100 0 0 0          *    an iron broadsword
 G 1 83112 999 0 50 0 0 0           *    an iron shield bearing the crest of Alatorin

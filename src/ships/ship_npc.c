@@ -1179,12 +1179,13 @@ bool load_npc_ship_crew(P_ship ship, int crew_size, int ship_level)
         return false;
     }
 
+/* Unused variable - Lohrr
     int spec_load = 1;
     if (crew_size <= 8)
         spec_load = 3;
     else if (crew_size <= 12)
         spec_load = 2;
-
+*/
 
     NPCShipCrewData* crew_data = npcShipCrewData + i;
     int loaded = 0;

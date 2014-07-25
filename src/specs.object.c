@@ -33,6 +33,8 @@ using namespace std;
 #include "map.h"
 #include "handler.h"
 #include "ctf.h"
+#include "blispells.h"
+#include "utility.h"
 
 /*
    external variables
@@ -2438,7 +2440,11 @@ void event_revenant_crown(P_char ch, P_char victim, P_obj obj, void *data)
   {
     ch->player.race = af->modifier;
     affect_remove(ch, af);
-    GET_AGE(ch) = racial_data[(int) GET_RACE(ch)].base_age*2;
+//    GET_AGE(ch) = racial_data[(int) GET_RACE(ch)].base_age*2;
+    // Set birthdate + base_age + 5 years.
+    ch->player.time.birth = time(NULL);
+    // Add base_age to birthdate + base_age + 5 years.
+    ch->player.time.birth -= (racial_data[GET_RACE(ch)].base_age) * SECS_PER_MUD_YEAR;
     send_to_char
       ("The curse of the dark powers fade and your soul restores the body.\r\n",
        ch);
@@ -2520,7 +2526,11 @@ int revenant_helm(P_obj obj, P_char ch, int cmd, char *arg)
           FALSE, temp_ch, obj, 0, TO_CHAR);
 
       temp_ch->player.race = RACE_REVENANT;
-      GET_AGE(temp_ch) += racial_data[RACE_REVENANT].base_age*2;
+//      GET_AGE(temp_ch) += racial_data[RACE_REVENANT].base_age*2;
+      // Set birthdate + base_age + 5 years.
+      temp_ch->player.time.birth = time(NULL);
+      // Add base_age to birthdate + base_age + 5 years.
+      temp_ch->player.time.birth -= (racial_data[RACE_REVENANT].base_age) * SECS_PER_MUD_YEAR;
       return TRUE;
 
     }
@@ -2587,10 +2597,14 @@ void event_dragonlord_check(P_char ch, P_char victim, P_obj obj, void *data)
   {
     ch->player.race = af->modifier;
     affect_remove(ch, af);
-    GET_AGE(ch) = racial_data[(int) GET_RACE(ch)].base_age*2;
-    send_to_char
-      ("The curse of the dark powers fade and your soul restores the body.\r\n",
-       ch);
+    ch->player.time.birth = time(NULL) - (racial_data[GET_RACE(ch)].base_age) * 2;
+//    GET_AGE(ch) = racial_data[(int) GET_RACE(ch)].base_age*2;
+    // Set birthdate + base_age + 5 years.
+    ch->player.time.birth = time(NULL);
+    // Add base_age to birthdate + base_age + 5 years.
+    ch->player.time.birth -= (racial_data[GET_RACE(ch)].base_age) * SECS_PER_MUD_YEAR;
+    send_to_char("The curse of the dark powers fade and your soul restores the body.\r\n", ch);
+
     int k = 0;
     P_obj temp_obj;
     for (k = 0; k < MAX_WEAR; k++)
@@ -2682,8 +2696,13 @@ int dragonlord_plate_old(P_obj obj, P_char ch, int cmd, char *arg)
 
       temp_ch->player.race = RACE_DRAGONKIN;
 
-      GET_AGE(temp_ch) += racial_data[RACE_DRAGONKIN].base_age * 2;
-    
+      temp_ch->player.time.birth = time(NULL) - (racial_data[RACE_DRAGONKIN].base_age) * 2;
+//      GET_AGE(temp_ch) += racial_data[RACE_DRAGONKIN].base_age * 2;
+      // Set birthdate + base_age + 5 years.
+      temp_ch->player.time.birth = time(NULL);
+      // Add base_age to birthdate + base_age + 5 years.
+      temp_ch->player.time.birth -= (racial_data[RACE_DRAGONKIN].base_age) * SECS_PER_MUD_YEAR;
+
       return TRUE;
     }
   }
@@ -2700,7 +2719,7 @@ int dragonlord_plate(P_obj obj, P_char ch, int cmd, char *arg)
    */
   if (cmd == -10)
     return TRUE;
- 
+
  if (!cmd){
     if(OBJ_WORN(obj)) {
       temp_ch = obj->loc.wearing;
@@ -7316,11 +7335,11 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
     act(buffer, TRUE, ch, obj, NULL, TO_ROOM);
 /* XXX */
     if (!ENJOYS_FIRE_DAM(ch))
-	{
+	  {
       send_to_char("&+RYou enter into a wall of flames...OUCH!&n\n", ch);
 
       if (IS_AFFECTED(ch, AFF_PROT_FIRE))
-          dam /= 3;
+        dam /= 3;
 
       if (IS_NPC(ch) && !IS_MORPH(ch) && !IS_PC_PET(ch))
         dam = 1;
@@ -7338,16 +7357,16 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
 
       GET_HIT(ch) -= dam;
       spell_blindness(obj->value[4], ch, 0, SPELL_TYPE_SPELL, ch, NULL);
-	  do_simple_move_skipping_procs(ch, dircmd, 0);
-	  act("$n &+Rsteps through the flames!&n", TRUE, ch, NULL, NULL, TO_ROOM);
+	    do_simple_move_skipping_procs(ch, dircmd, 0);
+	    act("$n &+Rsteps through the flames!&n", TRUE, ch, NULL, NULL, TO_ROOM);
     }
-	else
-	{
+  	else
+    {
       send_to_char("&+RYou feel the healing power of the flames!&n\n", ch);
       GET_HIT(ch) = MIN(GET_HIT(ch) + dam, GET_MAX_HIT(ch));
       do_simple_move_skipping_procs(ch, dircmd, 0);
       act("$n &+Rsteps through the flames grinning!&n", TRUE, ch, NULL, NULL, TO_ROOM);
-	}
+    }
 
     update_pos(ch);
     StartRegen(ch, EVENT_HIT_REGEN);
@@ -7356,6 +7375,19 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
 /* XXX */
 
   case WALL_OF_ICE:
+    if(IS_PC(ch) && has_innate( ch, INNATE_WALL_CLIMBING )
+      && number(1,100) > 60 )
+    {
+      act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
+      act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+      do_simple_move_skipping_procs(ch, dircmd, 0);
+      if (IS_AFFECTED2(ch, AFF2_PROT_COLD))
+        dam -= dam / 3;
+      GET_HIT(ch) = MAX(GET_HIT(ch) - MAX(dam, 20), 1);
+      update_pos(ch);
+      return TRUE;
+    }
+
     act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
     act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
 
@@ -7386,16 +7418,14 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
     {
       send_to_char("&+BYou are shocked to death!&n\n", ch);
       do_simple_move_skipping_procs(ch, dircmd, 0);
-      act("$n &+Bfalls through the curtain looking quite charred!&n", FALSE,
-          ch, obj, NULL, TO_NOTVICT);
+      act("$n &+Bfalls through the curtain looking quite charred!&n", FALSE, ch, obj, NULL, TO_NOTVICT);
       die(ch, ch);
       return TRUE;
     }
 
     GET_HIT(ch) = MAX(GET_HIT(ch) - dam, 1);
     do_simple_move_skipping_procs(ch, dircmd, 0);
-    act("$n &+Bsteps through the lightning curtain!&n", TRUE, ch, NULL, NULL,
-        TO_ROOM);
+    act("$n &+Bsteps through the lightning curtain!&n", TRUE, ch, NULL, NULL, TO_ROOM);
     update_pos(ch);
     StartRegen(ch, EVENT_HIT_REGEN);
 
@@ -7415,7 +7445,6 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
     }
 
     // let them walk through the wall 25% of the time
-
     if (!number(0, 3) && IS_PC(ch))
     {
       act("$p fades to shards of magic, and blows away...&n", TRUE, ch, obj, NULL, TO_ROOM);
@@ -7426,9 +7455,15 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       do_simple_move_skipping_procs(ch, dircmd, 0);
       act("$n steps through the wall.", TRUE, ch, obj, NULL, TO_ROOM);
       GET_HIT(ch) = MAX(1, GET_HIT(ch) - 100);
-
-
      return TRUE;
+    }
+    else if(IS_PC(ch) && has_innate( ch, INNATE_WALL_CLIMBING )
+      && number(1,100) > 60 )
+    {
+      act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
+      act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+      do_simple_move_skipping_procs(ch, dircmd, 0);
+      return TRUE;
     }
     else
     {
@@ -7436,23 +7471,21 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     }
 
-     if (!number(0, 3) && IS_PC_PET(ch))
+    if (!number(0, 3) && IS_PC_PET(ch))
     {
-     
       act("You walk through the wall.", TRUE, ch, obj, NULL, TO_CHAR);
       act("$n steps through the wall.", TRUE, ch, obj, NULL, TO_ROOM);
       do_simple_move_skipping_procs(ch, dircmd, 0);
       act("$n steps through the wall.", TRUE, ch, obj, NULL, TO_ROOM);
       GET_HIT(ch) = MAX(1, GET_HIT(ch) - 100);
 
-     return TRUE;
+      return TRUE;
     }
     else
     {
       act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
       act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     }
-
 
     dam = 0;
     spl = 0;
@@ -7538,7 +7571,18 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       do_simple_move_skipping_procs(ch, dircmd, 0);
       return TRUE;
     }
-
+    else if(IS_PC(ch) && has_innate( ch, INNATE_WALL_CLIMBING )
+      && number(1,100) > 60 )
+    {
+      act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
+      act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+      do_simple_move_skipping_procs(ch, dircmd, 0);
+      dam = number(10, 28);
+      GET_VITALITY(ch) = MAX(GET_VITALITY(ch) - dam, 1);
+      update_pos(ch);
+      StartRegen(ch, EVENT_MOVE_REGEN);
+      return TRUE;
+    }
     act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
     act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
 
@@ -7587,79 +7631,74 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
     {
       act("&+L$n&+L passes right through $p&+L.", TRUE, ch, obj, 0, TO_ROOM);
       act("&+LYou pass right through $p&+L.", TRUE, ch, obj, 0, TO_CHAR);
-      
+
       do_simple_move_skipping_procs(ch, dircmd, 0);
     }
-     if(IS_PC(ch) && GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF) && GET_LEVEL(ch) >= 56)
-     {
+    else if(IS_PC(ch) && has_innate( ch, INNATE_WALL_CLIMBING ) )
+    {
       int rand1 = number(1, 100);
       if (rand1 > 60)
-       {
+      {
         act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
-      	 act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
-	 do_simple_move_skipping_procs(ch, dircmd, 0);
-       }
+        act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+        do_simple_move_skipping_procs(ch, dircmd, 0);
+      }
     	else
     	{
-      act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
-      act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
+        act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
+        act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     	}
     }
-    
-else
+    else
     {
       act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
       act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     }
-return TRUE;
+    return TRUE;
   case WALL_OUTPOST:
   case WATCHING_WALL:
   case WALL_OF_IRON:
-    if(IS_PC(ch) && GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF) && GET_LEVEL(ch) >= 56)
+    if(IS_PC(ch) && has_innate( ch, INNATE_WALL_CLIMBING ) )
      {
-      int rand1 = number(1, 100);
-      if (rand1 > 60)
-       {
+      if( number(1, 100) > 60 )
+      {
         act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
-      	 act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
-	 do_simple_move_skipping_procs(ch, dircmd, 0);
-       }
+        act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+        do_simple_move_skipping_procs(ch, dircmd, 0);
+      }
     	else
     	{
-      act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
-      act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
+        act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
+        act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     	}
     }
-    
-else
+    else
     {
       act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
       act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     }
-return TRUE;
+    return TRUE;
   case WALL_OF_STONE:
-    if(IS_PC(ch) && GET_SPEC(ch, CLASS_ROGUE, SPEC_THIEF) && GET_LEVEL(ch) >= 56)
-     {
-      int rand1 = number(1, 100);
-      if (rand1 > 60)
-       {
+    if(IS_PC(ch) && has_innate( ch, INNATE_WALL_CLIMBING ) )
+    {
+      if( number(1, 100) > 60 )
+      {
         act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
-      	 act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
-	 do_simple_move_skipping_procs(ch, dircmd, 0);
-       }
+        act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+	      do_simple_move_skipping_procs(ch, dircmd, 0);
+      }
     	else
     	{
       act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
       act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     	}
     }
-    
-else
+    else
     {
       act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
       act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
     }
-return TRUE;
+    return TRUE;
   case WALL_OF_BONES:
     if (obj->value[2] < 10) /* Hackich assumption that if strength < 10 it's a thin dragonscale sheath */
 	  {
@@ -7670,13 +7709,28 @@ return TRUE;
         // level 70 ensures that its dispelled..
         spell_dispel_magic(70, ch, NULL, SPELL_TYPE_SPELL, 0, obj);
 	    }
+      else if(IS_PC(ch) && has_innate( ch, INNATE_WALL_CLIMBING )
+        && number(1,100) > 60 )
+      {
+        act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
+        act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+        do_simple_move_skipping_procs(ch, dircmd, 0);
+        return TRUE;
+      }
 	    else
 	    {
   	    act("You bump into $p, visibly weakening it!", TRUE, ch, obj, 0, TO_CHAR);
-            act("$n bumps into $p, visibly weakening it!", TRUE, ch, obj, 0, TO_NOTVICT);
-            if (!number(0, 2))
-		obj->value[2] -= 1;
+        act("$n bumps into $p, visibly weakening it!", TRUE, ch, obj, 0, TO_NOTVICT);
+        if (!number(0, 2))
+          obj->value[2] -= 1;
 	    }
+    }
+    else if(IS_PC(ch) && has_innate( ch, INNATE_WALL_CLIMBING )
+      && number(1,100) > 60 )
+    {
+      act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
+      act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
+      do_simple_move_skipping_procs(ch, dircmd, 0);
     }
 	  else  /* a "normal" wall of bones */
 	  {
@@ -7684,7 +7738,6 @@ return TRUE;
       act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
 	  }
 	  return TRUE;
-    
   default:
     logit(LOG_DEBUG, "Wrong value[3] set in wall.");
     send_to_char("Serious screw-up on wall! Tell a god.\n", ch);
@@ -8585,7 +8638,7 @@ int stat_pool_luc(P_obj obj, P_char ch, int cmd, char *arg)
   return stat_pool_common(obj, ch, cmd, &(ch->base_stats.Luck),
                           "&+LYour outlook on life is somewaht grimmer..\n",
                           "$n doesn't look so confident in believing in his lucky stars.\n",
-                          "&+WYou feel as if you could roll Tripple Tiamat's at the slots..\n",
+                          "&+WYou feel as if you could roll Triple Tiamat's at the slots..\n",
                           "$n looks to have the confidence that life is going his way.\n");
 }
 
@@ -8609,21 +8662,23 @@ int druid_spring(P_obj obj, P_char ch, int cmd, char *arg)
     {
       act("You drink from $p.", FALSE, ch, obj, 0, TO_CHAR);
       act("$n drinks from $p.", FALSE, ch, obj, 0, TO_ROOM);
-      
+
       if (obj->value[0] >= 51)
-	spell_regeneration(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
-      //if (obj->value[0] >= 41)
-	//spell_endurance(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+        spell_regeneration(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+//      if (obj->value[0] >= 41)
+//        spell_endurance(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
       if (obj->value[0] >= 36)
-	spell_aid(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+        spell_aid(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
 
       if (obj->value[0] >= 31)
+      {
         spell_natures_touch(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      }
       else
+      {
         spell_cure_serious(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
-      
+      }
       spell_invigorate(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
-      
       CharWait(ch, PULSE_VIOLENCE);
       return TRUE;
     }
@@ -8634,11 +8689,65 @@ int druid_spring(P_obj obj, P_char ch, int cmd, char *arg)
     if (world[obj->loc.room].people)
     {
       act("$p rapidly shrinks in size until finally it disappears entirely.",
-          0, world[obj->loc.room].people, obj, 0, TO_ROOM);
+        0, world[obj->loc.room].people, obj, 0, TO_ROOM);
       act("$p rapidly shrinks in size until finally it disappears entirely.",
-          0, world[obj->loc.room].people, obj, 0, TO_CHAR);
+        0, world[obj->loc.room].people, obj, 0, TO_CHAR);
     }
+    return TRUE;
+  }
 
+  return FALSE;
+}
+
+int blighter_pond(P_obj obj, P_char ch, int cmd, char *arg)
+{
+  if (cmd == CMD_SET_PERIODIC)
+    return FALSE;
+
+  if (cmd == CMD_DRINK)
+  {
+    if (!arg || !*arg)
+      return FALSE;
+    arg = skip_spaces(arg);
+    if( *arg && !strcmp(arg, "pond") )
+    {
+      if( obj->value[0] < 31 )
+      {
+        CharWait( ch, WAIT_SEC );
+        return FALSE;
+      }
+
+      act("You drink from $p.", FALSE, ch, obj, 0, TO_CHAR);
+      act("$n drinks from $p.", FALSE, ch, obj, 0, TO_ROOM);
+
+      if( obj->value[0] >= 31 )
+      {
+        spell_drain_nature(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      }
+//      if (obj->value[0] >= 41)
+//        spell_sap_nature(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      if( obj->value[0] >= 51 )
+      {
+        spell_regeneration(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      }
+      if( GET_VITALITY(ch) < GET_MAX_VITALITY(ch) )
+      {
+        spell_invigorate(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+      }
+      CharWait(ch, PULSE_VIOLENCE);
+      return TRUE;
+    }
+  }
+
+  if (cmd == CMD_DECAY)
+  {
+    if (world[obj->loc.room].people)
+    {
+      act("$p rapidly shrinks in size until finally it disappears entirely.",
+        0, world[obj->loc.room].people, obj, 0, TO_ROOM);
+      act("$p rapidly shrinks in size until finally it disappears entirely.",
+        0, world[obj->loc.room].people, obj, 0, TO_CHAR);
+    }
     return TRUE;
   }
 
@@ -11897,7 +12006,7 @@ int blood_stains(P_obj obj, P_char ch, int cmd, char *argument)
     if ( (obj->timer[0] < (time(NULL) - 180)) && 
          (obj->value[1] == BLOOD_FRESH) )
     {
-      sprintf(buf, long_desc_reg[obj->value[0]]);
+      sprintf(buf, "%s", long_desc_reg[obj->value[0]]);
       obj->description = str_dup(buf);
       obj->value[1] = BLOOD_REG;
       return TRUE;
@@ -11907,7 +12016,7 @@ int blood_stains(P_obj obj, P_char ch, int cmd, char *argument)
     if ( (obj->timer[0] < (time(NULL) - 420)) &&
          (obj->value[1] == BLOOD_REG) )
     {
-      sprintf(buf, long_desc_dry[obj->value[0]]);
+      sprintf(buf, "%s", long_desc_dry[obj->value[0]]);
       obj->description = str_dup(buf);
       obj->value[1] = BLOOD_DRY;
       return TRUE;
@@ -11961,6 +12070,16 @@ int frost_beacon(P_obj obj, P_char ch, int cmd, char *argument)
 
   if (cmd == CMD_DECAY)
   {
+    // Give a message to the caster if they're not in the room.
+    for (tch = character_list; tch; tch = tch->next)
+      if (IS_PC(tch) && GET_PID(tch) == obj->value[0])
+      {
+        if( tch->in_room != obj->loc.room )
+          act("$p melts into nothingness.", TRUE, tch, obj, 0, TO_CHAR);
+        break;
+      }
+
+    // Give a message to all in the room.
     if (world[obj->loc.room].people)
     {
       act("$p melts into nothingness.", TRUE, world[obj->loc.room].people,
@@ -14846,4 +14965,73 @@ int thanksgiving_wings(P_obj obj, P_char ch, int cmd, char *argument)
   }
   return FALSE;
 }
+int moonstone(P_obj obj, P_char ch, int cmd, char *argument)
+{
+  char *name;
+  struct obj_affect *aff;
+  P_nevent e;
 
+  // If not moonstone or bloodstone.
+  if( !obj || (obj_index[obj->R_num].virtual_number != 419
+    && obj_index[obj->R_num].virtual_number != 433) )
+  {
+    logit(LOG_DEBUG, "moonstone: obj proc called with no obj or non-moonstone obj.");
+  }
+
+  if (cmd == CMD_SET_PERIODIC)
+  {
+    return FALSE;
+  }
+
+  if( cmd == CMD_DECAY )
+  {
+    // Notify the caster then let it decay.
+    name = get_player_name_from_pid( obj->value[0] );
+    if( name )
+    {
+      ch = get_char_online( name );
+      if( ch )
+      {
+        if( obj_index[obj->R_num].virtual_number == 419 )
+        {
+          send_to_char( "&+WYour moonstone fades to nothingness.&n\n", ch );
+          affect_from_char(ch, SPELL_MOONSTONE);
+        }
+        else
+        {
+          send_to_char( "&+YYour &+rblood&+ystone&+Y fades to nothingness.&n\n", ch );
+          affect_from_char(ch, SPELL_BLOODSTONE);
+        }
+      }
+    }
+    return FALSE;
+  }
+
+  // Upon dispel, make object decay soon and let it be dispelled.
+  if( cmd == CMD_DISPEL )
+  {
+    // Get obj affect.
+    aff = get_obj_affect( obj, TAG_OBJ_DECAY );
+    if( aff )
+    {
+      // Find decay event.
+      for (e = get_scheduled(obj, event_obj_affect); e; e = get_next_scheduled(e, event_obj_affect))
+      {
+        // If event found, set it's timer to 1 min.
+        if( *((struct obj_affect **)e->data) == aff )
+        {
+           e->timer = 1;
+        }
+      }
+    }
+    else
+    {
+      // Set timer to 1 min
+      logit(LOG_DEBUG, "moonstone: obj has no decay timer! (creating one)");
+      set_obj_affected( obj, 1, TAG_OBJ_DECAY, 0);
+    }
+    return FALSE;
+  }
+
+  return FALSE;
+}

@@ -151,40 +151,65 @@ P_char pick_target(P_char ch, unsigned int flags)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if(!is_aggr_to(ch, tch) && tch->specials.fighting != ch &&
-        ch->specials.fighting != tch)
+    if(!is_aggr_to(ch, tch) && tch->specials.fighting != ch
+      && ch->specials.fighting != tch)
+    {
       continue;
+    }
+    if( !CAN_SEE_Z_CORD( ch, tch ) )
+    {
+      continue;
+    }
     if(flags & PT_SIZE_TOLERANT)
+    {
       if(!any || !number(0, 3))
+      {
         any = tch;
-    if((flags & PT_SMALLER) &&
-        get_takedown_size(ch) <= get_takedown_size(tch))
+      }
+    }
+    if((flags & PT_SMALLER) && get_takedown_size(ch) <= get_takedown_size(tch))
+    {
       continue;
-    if((flags & PT_BASH_SIZE) &&
-        (get_takedown_size(ch) > get_takedown_size(tch) + 1 ||
-        (get_takedown_size(ch) < get_takedown_size(tch) - 1)))
+    }
+    if((flags & PT_BASH_SIZE)
+      && (get_takedown_size(ch) > get_takedown_size(tch) + 1
+      || (get_takedown_size(ch) < get_takedown_size(tch) - 1)))
+    {
       continue;
-    if((flags & PT_TRIP_SIZE) &&
-        (get_takedown_size(ch) > get_takedown_size(tch) ||
-        (get_takedown_size(ch) < get_takedown_size(tch) - 1)))
+    }
+    if((flags & PT_TRIP_SIZE)
+      && (get_takedown_size(ch) > get_takedown_size(tch)
+      || (get_takedown_size(ch) < get_takedown_size(tch) - 1)))
+    {
       continue;
+    }
     if(flags & PT_TOLERANT)
+    {
       if(!any || !number(0, 3))
+      {
         any = tch;
+      }
+    }
     if(IS_PC_PET(tch) && (flags & PT_WEAKEST))
+    {
       continue;
-    if((flags & PT_NUKETARGET) &&
-        (IS_AFFECTED4(tch, AFF4_DEFLECT) ||
-         IS_AFFECTED4(tch, AFF4_STORNOGS_SPHERES) ||
-         (has_innate(tch, INNATE_MAGIC_RESISTANCE) &&
-          get_innate_resistance(tch) > number(0,100))))
+    }
+    if((flags & PT_NUKETARGET)
+      && (IS_AFFECTED4(tch, AFF4_DEFLECT)
+      || IS_AFFECTED4(tch, AFF4_STORNOGS_SPHERES)
+      || (has_innate(tch, INNATE_MAGIC_RESISTANCE)
+      && get_innate_resistance(tch) > number(0,100))))
+    {
       continue;
-    good = tch;
+    }
     if((flags & PT_STANDING) && GET_POS(tch) < POS_STANDING)
+    {
       continue;
-    good = tch;
+    }
     if((flags & PT_FRONT) && IS_BACKRANKED(tch))
+    {
       continue;
+    }
     good = tch;
     if((flags & PT_CASTER) && IS_CASTER(tch))
     {
@@ -537,7 +562,9 @@ int IS_MAGE(P_char ch)
     CLASS_REAVER |
     CLASS_ANTIPALADIN |
     CLASS_PSIONICIST) |
-    CLASS_THEURGIST);
+    CLASS_THEURGIST |
+    CLASS_SUMMONER
+);
 }
 
 int IS_THIEF(P_char ch)
@@ -804,7 +831,7 @@ bool MobCastSpell(P_char ch, P_char victim, P_obj object, int spl, int lvl)
 
       if(skl && success > 0)
       {
-        notch_skill(kala, SKILL_DISRUPTIVE_BLOW, 5);
+        notch_skill(kala, SKILL_DISRUPTIVE_BLOW, 17);
         if(success > 75)
         {
           act("You lunge slamming your fist into $N's larynx.", FALSE, kala,
@@ -2747,8 +2774,8 @@ bool CastDruidSpell(P_char ch, P_char victim, int helping)
   if(!spl && npc_has_spell_slot(ch, SPELL_CDOOM))
     spl = SPELL_CDOOM;
 
-  if(!spl && npc_has_spell_slot(ch, SPELL_BLOODSTONE))
-        spl = SPELL_BLOODSTONE;
+  if(!spl && npc_has_spell_slot(ch, SPELL_BLOODTOSTONE))
+        spl = SPELL_BLOODTOSTONE;
 
   if(!spl && npc_has_spell_slot(ch, SPELL_ACID_STREAM))
     spl = SPELL_ACID_STREAM;
@@ -6281,7 +6308,7 @@ bool MobMercenary(P_char ch)
             (CLASS_SORCERER | CLASS_PSIONICIST | CLASS_CLERIC |
              CLASS_CONJURER | CLASS_WARLOCK | CLASS_ILLUSIONIST |
              CLASS_BARD | CLASS_DRUID | CLASS_ETHERMANCER | CLASS_SHAMAN |
-             CLASS_NECROMANCER | CLASS_THEURGIST))
+             CLASS_NECROMANCER | CLASS_THEURGIST | CLASS_SUMMONER))
         {
           do_headlock(ch, 0, CMD_HEADLOCK);
         }
@@ -6308,11 +6335,11 @@ bool MobMercenary(P_char ch)
     {
       do_tackle(ch, 0, CMD_TACKLE);
     }
-        else if (!affected_by_spell_flagged(vict, SKILL_THROAT_CRUSH, AFFTYPE_CUSTOM1) && number(0, 1))
-        {
+    else if (!affected_by_spell_flagged(vict, SKILL_THROAT_CRUSH, AFFTYPE_CUSTOM1) && number(0, 1)
+      && GET_CHAR_SKILL_P(ch, SKILL_THROAT_CRUSH) )
+    {
       do_throat_crush(ch, 0, CMD_THROAT_CRUSH);
-        }
-             
+    }
     else
       do_headbutt(ch, 0, CMD_HEADBUTT);
     return TRUE;
@@ -6752,7 +6779,7 @@ void MobCombat(P_char ch)
 
   if((GET_CLASS(ch, CLASS_SORCERER) || GET_CLASS(ch, CLASS_CONJURER) ||
        GET_CLASS(ch, CLASS_NECROMANCER) || GET_CLASS(ch, CLASS_BARD) ||
-       GET_CLASS(ch, CLASS_THEURGIST)) &&
+       GET_CLASS(ch, CLASS_THEURGIST) || GET_CLASS(ch, CLASS_SUMMONER)) &&
         (!IS_MULTICLASS_NPC(ch) || number(0, 2)))
     if(CastMageSpell(ch, 0, FALSE))
       return;
@@ -7605,7 +7632,7 @@ int handle_npc_assist(P_char ch)
 bool MobSpellUp(P_char ch)
 {
     bool is_multiclass = IS_MULTICLASS_NPC(ch); // about 15% are multiclass
-    if(GET_CLASS(ch, CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER | CLASS_THEURGIST) && (is_multiclass ? number(0, 2) : 1))
+    if(GET_CLASS(ch, CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER | CLASS_THEURGIST | CLASS_SUMMONER) && (is_multiclass ? number(0, 2) : 1))
     {
       if(CastMageSpell(ch, ch, FALSE))
         return TRUE;
@@ -7929,7 +7956,7 @@ PROFILE_START(mundane_mobcast);
         CLASS_CLERIC | CLASS_SHAMAN | CLASS_ETHERMANCER | CLASS_DRUID |
         CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER |
 	CLASS_THEURGIST | CLASS_ILLUSIONIST | CLASS_WARLOCK |
-        CLASS_PSIONICIST | CLASS_MINDFLAYER |
+        CLASS_PSIONICIST | CLASS_MINDFLAYER | CLASS_SUMMONER |
         CLASS_PALADIN | CLASS_ANTIPALADIN |
         CLASS_RANGER | CLASS_REAVER |
         CLASS_ALCHEMIST | CLASS_BARD |
@@ -7949,7 +7976,7 @@ PROFILE_START(mundane_track);
   { // 85%
     if(IS_SET(ch->specials.act, ACT_HUNTER)) 
     { // 38%
-      if (GET_MEMORY(ch) != NULL) // guardcheck (no hunt will happen if mob has no memory)  -Odorf
+      if ( ch->only.npc != NULL && GET_MEMORY(ch) != NULL) // guardcheck (no hunt will happen if mob has no memory)  -Odorf
       {
 PROFILE_START(mundane_track_1);
         if(InitNewMobHunt(ch))
@@ -8273,9 +8300,10 @@ PROFILE_END(mundane_assist);
       // ground, in order of value.
       //
 
-      if(IS_SET(obj->extra_flags, ITEM_SECRET) || IS_SET(obj->extra_flags,
-                                                          ITEM_NOSHOW)
-          || IS_SET(obj->extra_flags, ITEM_BURIED))
+      if( IS_SET(obj->extra_flags, ITEM_SECRET)
+        || IS_SET(obj->extra_flags, ITEM_NOSHOW)
+        || IS_SET(obj->extra_flags, ITEM_BURIED)
+        || !CAN_WEAR(obj, ITEM_TAKE) )
         continue;
 
       if(CAN_GET_OBJ(ch, obj) || IS_CONTAINER(obj))
@@ -8311,9 +8339,10 @@ PROFILE_END(mundane_assist);
              obj && (CAN_CARRY_N(ch) > IS_CARRYING_N(ch)); obj = obj2)
         {
           obj2 = obj->next_content;
-          if(IS_SET(obj->extra_flags, ITEM_SECRET) ||
-              IS_SET(obj->extra_flags, ITEM_NOSHOW) ||
-              IS_SET(obj->extra_flags, ITEM_BURIED))
+          if( IS_SET(obj->extra_flags, ITEM_SECRET)
+            || IS_SET(obj->extra_flags, ITEM_NOSHOW)
+            || IS_SET(obj->extra_flags, ITEM_BURIED)
+            || !CAN_WEAR(obj, ITEM_TAKE) )
             continue;
           if(obj->type == ITEM_MONEY)
           {
@@ -8335,9 +8364,10 @@ PROFILE_END(mundane_assist);
         }
         goto normal;
       }
-      else if(!IS_SET(best_obj->extra_flags, ITEM_SECRET) &&
-               !IS_SET(best_obj->extra_flags, ITEM_BURIED) &&
-               !IS_SET(best_obj->extra_flags, ITEM_NOSHOW))
+      else if( !IS_SET(best_obj->extra_flags, ITEM_SECRET)
+             && !IS_SET(best_obj->extra_flags, ITEM_BURIED)
+             && !IS_SET(best_obj->extra_flags, ITEM_NOSHOW)
+             && CAN_WEAR(best_obj, ITEM_TAKE) )
       {
         if(OBJ_ROOM(best_obj))
           obj_from_room(best_obj);
@@ -9400,7 +9430,7 @@ bool InitNewMobHunt(P_char ch)
     if(!SanityCheck(tmpch, "InitNewMobHunt"))
       continue;
 
-    if(GET_STAT(tmpch) == STAT_DEAD)
+    if( GET_STAT(tmpch) == STAT_DEAD || !CAN_SEE(ch, tmpch) )
       continue;
 
     if(CheckFor_remember(ch, tmpch) &&

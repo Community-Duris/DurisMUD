@@ -707,6 +707,7 @@ int spell_class(int spl)
       case CLASS_SORCERER:
       case CLASS_NECROMANCER:
       case CLASS_CONJURER:
+      case CLASS_SUMMONER:
       case CLASS_RANGER:
       case CLASS_WARLOCK:
       case CLASS_REAVER:
@@ -876,18 +877,18 @@ void say_spell(P_char ch, int si)
         if(IS_MAGESPELL(si) &&
            IS_MAGE(tch))
         {
-          notch_skill(tch, SKILL_SPELL_KNOWLEDGE_MAGICAL, 100);
+          notch_skill(tch, SKILL_SPELL_KNOWLEDGE_MAGICAL, 1);
         }
         else if(IS_CLERICSPELL(si) &&
                 (IS_CLERIC(tch) ||
                  IS_HOLY(tch)))
         {
-          notch_skill(tch, SKILL_SPELL_KNOWLEDGE_CLERICAL, 100);
+          notch_skill(tch, SKILL_SPELL_KNOWLEDGE_CLERICAL, 1);
         }
         else if(IS_SHAMANSPELL(si) &&
                 GET_CLASS(tch, CLASS_SHAMAN))
         {
-          notch_skill(tch, SKILL_SPELL_KNOWLEDGE_SHAMAN, 100);
+          notch_skill(tch, SKILL_SPELL_KNOWLEDGE_SHAMAN, 1);
         }
 
       }
@@ -977,11 +978,11 @@ void SpellCastShow(P_char ch, int spl)
     act(Gbuf1, TRUE, ch, 0, tch, TO_VICT);
 
     if (idok == 1)
-      notch_skill(ch, SKILL_SPELL_KNOWLEDGE_MAGICAL, 100);
+      notch_skill(ch, SKILL_SPELL_KNOWLEDGE_MAGICAL, 1);
     else if (idok == 2)
-      notch_skill(ch, SKILL_SPELL_KNOWLEDGE_CLERICAL, 100);
+      notch_skill(ch, SKILL_SPELL_KNOWLEDGE_CLERICAL, 1);
     else if (idok == 3)
-      notch_skill(ch, SKILL_SPELL_KNOWLEDGE_SHAMAN, 100);
+      notch_skill(ch, SKILL_SPELL_KNOWLEDGE_SHAMAN, 1);
   }
 }
 
@@ -1031,31 +1032,42 @@ int find_save(P_char ch, int save_type)
 
 bool NewSaves(P_char ch, int save_type, int mod)
 {
-  int      save, i;
+  int  save;
+  bool i;
 
-  if (IS_TRUSTED(ch))
-    return TRUE;
-
-  if (!ch || (save_type < SAVING_PARA) || (save_type > SAVING_SPELL))
+  if( !ch || (save_type < SAVING_PARA) || (save_type > SAVING_SPELL) )
   {
     logit(LOG_DEBUG, "Invalid arguments to NewSaves");
+    debug( "NewSaves: %s has invalid argument: %d.", ch ? J_NAME(ch) : "Nobody", save_type );
     return FALSE;
   }
 
+  if( IS_TRUSTED(ch) )
+  {
+    return TRUE;
+  }
+
+  // Calculate the base save amount with class/race mods.
+  save = find_save(ch, save_type);
+/* find_save does not return an error ever. - Lohrr
+  // error in find_save
   if ((save = find_save(ch, save_type)) == -1)
-    return FALSE;               /* error in find_save  */
+  {
+    return FALSE;
+  }
+*/
 
    /*
      save file scale has changed, so need to change meaning of the mods to it.
      For now, we just multiply the mod by 5.
    */
-  
   save += (ch->specials.apply_saving_throw[save_type] + mod) * 5;
 
   /* always 1% chance to fail/save regardless of saving throw  */
   i = (BOUNDED(1, save, 99) < number(1, 100));
 
-  if (has_innate(ch, INNATE_QUICK_THINKING) && (i == 0))
+  // Quick thinking gives you a second chance to save.
+  if( has_innate(ch, INNATE_QUICK_THINKING) && (i == FALSE) )
   {
     return (BOUNDED(1, save, 99) < number(1, 100));
   }
@@ -1127,14 +1139,10 @@ void StopCasting(P_char ch)
 bool ground_casting_check(P_char ch, int spl)
 {
   /* check for if they were casting but just bashed, then check their groundcast skill */
-  if( IS_SET(ch->specials.affected_by2, AFF2_CASTING) &&
-      !IS_SET(skills[spl].targets, TAR_NOCOMBAT) &&
-
-      (number(0,100) < (int) (GET_CHAR_SKILL(ch, SKILL_GROUND_CASTING) / 2 )) ||
-     //  notch_skill(ch, SKILL_GROUND_CASTING, get_property("skill.notch.groundCasting", 50) ) )
-      ( number(0,120) < (int) ( GET_CHAR_SKILL(ch, SKILL_CONCENTRATION / 2))))
-         
-      
+     //  notch_skill(ch, SKILL_GROUND_CASTING, get_property("skill.notch.groundCasting", 60) ) )
+  if( IS_SET(ch->specials.affected_by2, AFF2_CASTING) && !IS_SET(skills[spl].targets, TAR_NOCOMBAT)
+    && (( number(0,100) < (int) (GET_CHAR_SKILL(ch, SKILL_GROUND_CASTING) / 2) ) ||
+      ( number(0,120) < (int) (GET_CHAR_SKILL(ch, SKILL_CONCENTRATION) / 2) )) )
   {
     act("$n continues preparing $s spell from the ground...", FALSE, ch, 0, 0, TO_ROOM);
     act("You continue preparing your spell from the ground...", FALSE, ch, 0, 0, TO_CHAR);
@@ -1400,9 +1408,13 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data,
             (GET_STAT(ch->specials.fighting) != STAT_DEAD) &&
             (ch->specials.fighting->in_room == ch->in_room))
         {
-          /* WARNING, MAKE INTO POINTER  */
-          vict = ch->specials.fighting;
-          target_ok = TRUE;
+//          if( GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN)
+//            || ( spl != SPELL_HEAL && spl != SPELL_FULL_HEAL ) )
+          {
+            /* WARNING, MAKE INTO POINTER  */
+            vict = ch->specials.fighting;
+            target_ok = TRUE;
+          }
         }
     }
   }
@@ -1516,21 +1528,21 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data,
   return TRUE;
 }
 
-bool parse_spell(P_char ch, char *argument, 
-    struct spell_target_data* target_data, int cmd)
+bool parse_spell(P_char ch, char *argument, struct spell_target_data* target_data, int cmd)
 {
   int      qend;
   int      free_slots;
   int      circle;
   char     Gbuf1[MAX_STRING_LENGTH], ranged_arg[MAX_STRING_LENGTH];
-  int spl = 0;
-  P_obj tar_obj = 0;
-  P_char tar_char = 0;
-  char *tar_arg = 0;
+  int      spl = 0;
+  P_obj    tar_obj = 0;
+  P_char   tar_char = 0;
+  char    *tar_arg = 0;
 
   argument = skip_spaces(argument);
 
-  if (IS_DISGUISE_SHAPE(ch)) {
+  if( IS_DISGUISE_SHAPE(ch) )
+  {
     send_to_char("You cannot use magic in that form!\n", ch);
     return FALSE;
   }
@@ -1573,8 +1585,7 @@ bool parse_spell(P_char ch, char *argument,
        ch);
     return FALSE;
   }
-  spl = 
-    old_search_block(argument, 1, (uint) (MAX(0, (qend - 1))), spells, 0) - 1;
+  spl = old_search_block(argument, 1, (uint) (MAX(0, (qend - 1))), spells, 0) - 1;
 
   if (spl < 0 || (!IS_SPELL(spl) && !(IS_TRUSTED(ch) && IS_POISON(spl))))
   {
@@ -1607,12 +1618,9 @@ bool parse_spell(P_char ch, char *argument,
   memset(target_data, 0, sizeof(struct spell_target_data));
   target_data->ttype = spl;
 
-  
-  if (IS_TRUSTED(ch))
-  {
-  }
-  
-  else if (USES_MANA(ch))
+  if( IS_TRUSTED(ch) )
+    ;
+  else if( USES_MANA(ch))
 //else if (GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
   {
     if (GET_MANA(ch) < 1 && circle != -1)
@@ -1622,7 +1630,6 @@ bool parse_spell(P_char ch, char *argument,
       return FALSE;
     }
   }
-  
   else if (USES_SPELL_SLOTS(ch))
   {
     if (circle != -1 && !ch->specials.undead_spell_slots[circle])
@@ -1638,11 +1645,10 @@ bool parse_spell(P_char ch, char *argument,
 */
       else if (IS_ANGEL(ch))
       {
-	send_to_char("&+WYour illumination is not sufficient enough to cast that spell.&n\n", ch);
+	      send_to_char("&+WYour illumination is not sufficient enough to cast that spell.&n\n", ch);
       }
       else
-        send_to_char("&+LYour power reserves are not sufficient to "
-                     "cast that spell!\n", ch);
+        send_to_char("&+LYour power reserves are not sufficient to cast that spell!\n", ch);
       return FALSE;
     }
   }
@@ -1662,29 +1668,23 @@ bool parse_spell(P_char ch, char *argument,
 
   /* check for shaman's totem */
 
-  if(ch &&
-    GET_CLASS(ch, CLASS_SHAMAN) &&
-    !IS_NPC(ch) &&
-    !hasTotem(ch, spl))
+  if(ch && GET_CLASS(ch, CLASS_SHAMAN) && !IS_NPC(ch) && !hasTotem(ch, spl))
   {
     if (IS_TRUSTED(ch))
     {
-      send_to_char
-        ("You don't have the right totem, but since you're a god..\n", ch);
+      send_to_char("You don't have the right totem, but since you're a god..\n", ch);
     }
     else if(IS_MULTICLASS_PC(ch))
-        {
-        ; //try to handle  totems for shaman spells..
-        }
+    {
+      ; //try to handle  totems for shaman spells..
+    }
     else if(GET_CHAR_SKILL(ch, SKILL_TOTEMIC_MASTERY) > number(1, 100))
     {
-      send_to_char
-      ("Using your mastery of the spirit realm, you prepare your spell without the aid of a focus...\n", ch);
+      send_to_char("Using your mastery of the spirit realm, you prepare your spell without the aid of a focus...\n", ch);
     }
-    else 
+    else
     {
-      send_to_char
-        ("You aren't holding the correct totem to cast that spell.\n", ch);
+      send_to_char("You aren't holding the correct totem to cast that spell.\n", ch);
       // CharWait(ch, PULSE_VIOLENCE);
       return FALSE;
     }
@@ -1698,8 +1698,7 @@ bool parse_spell(P_char ch, char *argument,
   return true;
 }
 
-bool parse_spell(P_char ch, char *argument, 
-    struct spell_target_data* target_data)
+bool parse_spell(P_char ch, char *argument,  struct spell_target_data* target_data)
 {
   return parse_spell(ch, argument, target_data, CMD_CAST);
 }
@@ -1858,7 +1857,7 @@ void do_will(P_char ch, char *argument, int cmd)
 
   orig_arg = argument;
 
-  if (!parse_spell(ch, argument, &common_target_data))
+  if( !parse_spell(ch, argument, &common_target_data) )
     return;
 
   // parse_spell parses argument and sets values on a global struct
@@ -1945,7 +1944,7 @@ void do_will(P_char ch, char *argument, int cmd)
     {
       dura >>= 1;
       if (!number(0, 1))
-        notch_skill(ch, SKILL_QUICK_CHANT, get_property("skill.notch.quickChant", 100));
+        notch_skill(ch, SKILL_QUICK_CHANT, get_property("skill.notch.quickChant", 2.5));
     }*/
     if (GET_CLASS(ch, CLASS_MINDFLAYER))
       dura = 1;
@@ -1977,7 +1976,6 @@ void do_will(P_char ch, char *argument, int cmd)
 
 bool check_disruptive_blow(P_char ch)
 {
-  P_char tch;
   struct damage_messages messages = {
     "You lunge, slamming your fist into $N larynx.",
     "$n lunges, slamming $s fist into your throat.",
@@ -1994,55 +1992,37 @@ bool check_disruptive_blow(P_char ch)
     "$n lunges, slamming $s fist into your throat. That did it.",
     "$n lunges, slamming $s fist into $N larynx. $E's dead."
   };
-  int skl = GET_CHAR_SKILL(ch, SKILL_DISRUPTIVE_BLOW);
+  int skl;
   int success;
+  P_char tch;
 
-  if(!(ch) ||
-     !ch->specials.fighting ||
-     IS_IMMOBILE(ch) ||
-     !AWAKE(ch) ||
-     IS_STUNNED(ch) ||
-     !IS_HUMANOID(ch))
-  {
-    return false;
-  }
-  
+  if( !(ch) || !ch->specials.fighting || IS_IMMOBILE(ch)
+    || !AWAKE(ch) || IS_STUNNED(ch) || !IS_HUMANOID(ch))
+    return FALSE;
+
+  // tch is the merc in this situation.
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
     if (tch == ch)
-    {
       continue;
-    }
-    
-    if(IS_IMMATERIAL(tch) ||
-       IS_GREATER_RACE(tch) ||
-       IS_ELITE(tch) ||
-       !IS_HUMANOID(tch))
-    {
+
+    if(IS_IMMATERIAL(tch) || !IS_HUMANOID(tch))
       continue;
-    }
-    
+
     if (GET_POS(tch) != POS_STANDING)
-    {
       continue;
-    }
 
-    if(tch->specials.fighting == ch)
-    {
+    // Merc must be targeting caster.
+    if(tch->specials.fighting != ch)
       continue;
-    }
-    
-    if(ch->specials.fighting != tch)
-    {
-      continue;
-    }
 
+    skl = GET_CHAR_SKILL(tch, SKILL_DISRUPTIVE_BLOW);
     success = skl - number(0, 130);
 
     if (skl && success)
     {
-      notch_skill(ch, SKILL_DISRUPTIVE_BLOW, 5);
-      
+      notch_skill(ch, SKILL_DISRUPTIVE_BLOW, 17);
+
       if (success > 75)
       {
         if (melee_damage(tch, ch, 4 * (dice(5, 10)), 0, &messages) == DAM_NONEDEAD)
@@ -2057,7 +2037,7 @@ bool check_disruptive_blow(P_char ch)
       }
       else
       {
-        act("&+wYour lunge at $N&+w's throat comes up a bit short.", FALSE, ch, 0, 0, TO_CHAR);
+        act("&+wYour lunge at $N&+w's throat comes up a bit short.", FALSE, tch, NULL, ch, TO_CHAR);
       }
     }
   }
@@ -2157,17 +2137,17 @@ void do_cast(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (!parse_spell(ch, argument, &common_target_data, cmd))
+  if( !parse_spell(ch, argument, &common_target_data, cmd) )
     return;
-    
+
 
   if ((weave_af = get_spell_from_char(ch, SKILL_SPELLWEAVE)) &&
       weave_af->modifier == common_target_data.ttype)
   {
     send_to_char("You call forth your prepared spell...\n", ch);
     weaved = true;
-  } 
-  else 
+  }
+  else
   {
     if(is_silent(ch, FALSE))
     {
@@ -2178,13 +2158,13 @@ void do_cast(P_char ch, char *argument, int cmd)
       else
       {
         CharWait(ch, PULSE_VIOLENCE);
-        return;        
+        return;
       }
     }
     else
     {
       send_to_char("You start chanting...\n", ch);
-    }  
+    }
   }
 
   // parse_spell parses argument and sets values on a global struct
@@ -2217,8 +2197,8 @@ void do_cast(P_char ch, char *argument, int cmd)
 
   if (weaved)
   {
-    if (notch_skill(ch, SKILL_SPELLWEAVE, get_property("skill.notch.spellWeave", 10)) || 
-        GET_CHAR_SKILL(ch, SKILL_SPELLWEAVE) > number(0, 100))
+    if (notch_skill(ch, SKILL_SPELLWEAVE, get_property("skill.notch.spellWeave", 50))
+      || GET_CHAR_SKILL(ch, SKILL_SPELLWEAVE) > number(0, 100))
     {
       SET_BIT(ch->specials.affected_by2, AFF2_CASTING);
       event_spellcast(ch, tar_char, 0, &tmp_spl);
@@ -2251,7 +2231,7 @@ void do_cast(P_char ch, char *argument, int cmd)
   else if (GET_CLASS(ch, CLASS_DRUID) && !IS_MULTICLASS_PC(ch))
     CharWait(ch, (dura >> 1) + 6);
   else if (affected_by_spell(ch, SKILL_BERSERK))
-  {  
+  {
     dura = (int) (dura * get_property("spell.berserk.casting.starMod", 1.500));
     CharWait(ch, dura);
   }
@@ -2263,7 +2243,7 @@ void do_cast(P_char ch, char *argument, int cmd)
   if(IS_AGG_SPELL(spl))
   {
     appear(ch);
-    
+
     if(check_mob_retaliate(ch, tar_char, spl))
     {
       return;
@@ -2286,7 +2266,7 @@ void do_cast(P_char ch, char *argument, int cmd)
   else if ((GET_CLASS(ch, CLASS_DRUID) && !IS_MULTICLASS_PC(ch)) ||
            ((!is_tank || number(0, 1)) &&
             (IS_NPC(ch) || IS_SET(ch->specials.act2, PLR2_QUICKCHANT)) &&
-            (notch_skill(ch, SKILL_QUICK_CHANT, get_property("skill.notch.quickChant", 100)) ||
+            (notch_skill(ch, SKILL_QUICK_CHANT, get_property("skill.notch.quickChant", 2.5)) ||
              (GET_CHAR_SKILL(ch, SKILL_QUICK_CHANT) > number(1, 100)))))
   {
     dura >>= 1;
@@ -2313,7 +2293,7 @@ void do_cast(P_char ch, char *argument, int cmd)
     tmp_spl.arg = str_dup(common_target_data.arg);
 
   SET_BIT(ch->specials.affected_by2, AFF2_CASTING);
-  add_event(event_spellcast, BOUNDED(1, dura, 4), ch, 
+  add_event(event_spellcast, BOUNDED(1, dura, 4), ch,
       common_target_data.t_char, 0, 0, &tmp_spl,
       sizeof(struct spellcast_datatype));
 
@@ -2445,8 +2425,8 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
         skl = SKILL_SPELL_KNOWLEDGE_MAGICAL;
      
       //if (GET_CLASS(ch, CLASS_PSIONICIST | CLASS_DRUID | CLASS_ETHERMANCER) ||
-      if (GET_CLASS(ch, CLASS_PSIONICIST | CLASS_DRUID) ||
-	    number(1, 100) <= GET_CHAR_SKILL(ch, skl))
+      if( GET_CLASS(ch, CLASS_PSIONICIST | CLASS_DRUID) ||
+	      number(1, 100) <= GET_CHAR_SKILL(ch, skl) )
       {
         sprintf(buf, "Casting: %s ", skills[arg->spell].name);
         for (i = 0; i < (arg->timeleft / 4); i++)
@@ -2455,7 +2435,7 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
         send_to_char(buf, ch);
       }
       else
-        notch_skill(ch, skl, 50);
+        notch_skill(ch, skl, 2);
     }
     i = MIN(arg->timeleft, 4);
     arg->timeleft -= i;

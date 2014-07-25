@@ -270,7 +270,7 @@ void players_to_map()
           if (!IS_SET(arena.flags, FLAG_TOURNAMENT))
             arena.team[i].player[k].lives = DEFAULT_LIVES;
           arena.team[i].player[k].flags = 0;
-          sprintf(arena.team[i].player[k].name, GET_NAME(ch));
+          sprintf(arena.team[i].player[k].name, "%s", GET_NAME(ch));
           k++;
         }
         char_from_room(ch);

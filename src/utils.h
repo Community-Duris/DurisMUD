@@ -434,9 +434,9 @@ int race_size(int race);
 
 #define EXP_NOTCH(ch) (GET_LEVEL(ch) <= MAXLVLMORTAL ? MAX(new_exp_table[GET_LEVEL(ch) + 1] / 10, 1) : 1)
 
-#define GET_HEIGHT(ch)  (IS_AFFECTED3(ch, AFF3_ENLARGE) ? ((ch)->player.height * 1.5) : \
+#define GET_HEIGHT(ch)  ((ush_int) ((IS_AFFECTED3(ch, AFF3_ENLARGE) ? ((ch)->player.height * 1.5) : \
                          IS_AFFECTED3(ch, AFF3_REDUCE) ? ((ch)->player.height / 1.5) : \
-                         (ch)->player.height)
+                         (ch)->player.height)))
 
 #define GET_WEIGHT(ch)  (IS_AFFECTED3(ch, AFF3_ENLARGE) ? ((ch)->player.weight * 2) : \
                          IS_AFFECTED3(ch, AFF3_REDUCE) ? ((ch)->player.weight / 2) : \
@@ -887,6 +887,8 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_DRIDER(ch) (GET_RACE(ch) == RACE_DRIDER)
 
+#define IS_FIRBOLG(ch) (GET_RACE(ch) == RACE_FIRBOLG)
+
 #define IS_ARCHON(ch) (GET_RACE(ch) == RACE_ARCHON)
 
 #define IS_ASURA(ch) (GET_RACE(ch) == RACE_ASURA)
@@ -905,9 +907,9 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define PUNDEAD_RACE(ch) RACE_PUNDEAD(ch)
 
 #define IS_PURE_CASTER_CLASS(cls) ( (cls) &\
-  (CLASS_SORCERER | CLASS_CONJURER | CLASS_ILLUSIONIST |\
+  (CLASS_SORCERER | CLASS_CONJURER | CLASS_ILLUSIONIST | CLASS_SUMMONER | \
   CLASS_NECROMANCER | CLASS_CLERIC | CLASS_SHAMAN | CLASS_BARD |\
-  CLASS_DRUID | CLASS_ETHERMANCER | CLASS_THEURGIST | CLASS_CABALIST))
+  CLASS_DRUID | CLASS_ETHERMANCER | CLASS_THEURGIST | CLASS_BLIGHTER))
 #define IS_PARTIAL_CASTER_CLASS(cls) ( (cls) &\
    (CLASS_AVENGER))
 #define IS_SEMI_CASTER_CLASS(cls) ( (cls) &\
@@ -917,15 +919,18 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
   IS_PURE_CASTER_CLASS(cls) || IS_SEMI_CASTER_CLASS(cls) )
 #define IS_BOOK_CLASS(cls) ( (cls) &\
   (CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER |\
-   CLASS_ILLUSIONIST | CLASS_BARD |\
-   CLASS_REAVER | CLASS_THEURGIST | CLASS_CABALIST))
+   CLASS_ILLUSIONIST | CLASS_BARD | CLASS_SUMMONER | \
+   CLASS_REAVER | CLASS_THEURGIST ))
 #define IS_PRAYING_CLASS(cls) ( (cls) &\
   (CLASS_CLERIC | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_AVENGER))
 #define IS_MEMING_CLASS(cls) (IS_BOOK_CLASS(cls) || ((cls) & CLASS_SHAMAN))
 
 #define USES_COMMUNE(ch) ((IS_NPC(ch) || GET_PRIME_CLASS(ch, CLASS_DRUID) || GET_PRIME_CLASS(ch, CLASS_RANGER) \
-|| (!(IS_PRAYING_CLASS(ch->player.m_class) || IS_MEMING_CLASS(ch->player.m_class) || USES_MANA(ch)) \
+|| (!(IS_CASTER_CLASS(ch->player.m_class) || USES_MANA(ch)) \
 && ( GET_SECONDARY_CLASS(ch, CLASS_DRUID) || GET_SECONDARY_CLASS( ch, CLASS_RANGER) )) ))
+
+#define USES_DEFOREST(ch)( IS_PC(ch) && (GET_PRIME_CLASS(ch, CLASS_BLIGHTER) \
+|| ( !(IS_CASTER_CLASS(ch->player.m_class) || USES_MANA(ch)) && GET_SECONDARY_CLASS( ch, CLASS_BLIGHTER ) ) ) )
 
 #define USES_MANA(ch) ((GET_RACE(ch) == RACE_PILLITHID) || \
 						(GET_RACE(ch) == RACE_ILLITHID)  || \
@@ -943,6 +948,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
         IS_PUNDEAD(ch) || \
         IS_HARPY(ch) || \
 	 (GET_CLASS(ch, CLASS_ETHERMANCER)) || \
+	 (GET_CLASS(ch, CLASS_BLIGHTER)) || \
         USES_FOCUS(ch) || \
         IS_ANGEL(ch))
 
@@ -1236,6 +1242,7 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch) || IS_EFREET(ch)) &&
                                                   CLASS_PSIONICIST | \
                                                   CLASS_ILLUSIONIST | \
                                                   CLASS_CONJURER | \
+                                                  CLASS_SUMMONER | \
                                                   CLASS_BARD | \
                                                   CLASS_THEURGIST))
 
@@ -1263,7 +1270,7 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch) || IS_EFREET(ch)) &&
         (affected_by_spell(victim, SPELL_CURSE) || \
         affected_by_spell(victim, SPELL_MALISON) || \
         affected_by_spell(victim, SPELL_WITHER) || \
-        affected_by_spell(victim, SPELL_BLOODSTONE) || \
+        affected_by_spell(victim, SPELL_BLOODTOSTONE) || \
         affected_by_spell(victim, SPELL_SHREWTAMENESS) || \
         affected_by_spell(victim, SPELL_MOUSESTRENGTH) || \
         affected_by_spell(victim, SPELL_MOLEVISION) || \

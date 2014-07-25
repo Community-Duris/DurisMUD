@@ -87,7 +87,7 @@ stonebrew cook~
 &+Rribs &+Wand simotaneously dicing up potatos and tossing them into
 &+Wa &+Lpot&+W.
 ~
-2126 0 0 0 256 0 0 0 0 S
+2122 0 0 0 256 0 0 0 0 S
 pm 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -4494,7 +4494,7 @@ skull ancient demi lich demilich~
 &+Wmany years of mummification.
 ~
 1360026760 1 0 0 2819162136 276672 524288 33558528 -1000 S
-ud 0 1536 0 1
+ud 0 1600 0 1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

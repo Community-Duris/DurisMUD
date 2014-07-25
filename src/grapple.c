@@ -252,12 +252,9 @@ void do_bearhug(P_char ch, char *argument, int cmd)
     percent = BOUNDED(0, GET_CHAR_SKILL(ch, SKILL_BEARHUG), 100);
     gclvl = (int)(GET_CHAR_SKILL(ch, SKILL_GRAPPLER_COMBAT)/10);
 
-    if (!IS_BEARHUG(victim) && 
-        ( (percent > number(1, 101)) || 
-          notch_skill(ch, SKILL_BEARHUG, (int)get_property("skill.notch.bearhug", 7)) ||
-          notch_skill(ch, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 5))
-        )
-       )
+    if( !IS_BEARHUG(victim) && (percent > number(1, 101)
+      || notch_skill(ch, SKILL_BEARHUG, (int)get_property("skill.notch.bearhug", 12.5))
+      || notch_skill(ch, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 17)) ))
     {
       if (BOUNDED(0, (number(0,12)-gclvl), 10))
       {
@@ -299,7 +296,7 @@ void do_bearhug(P_char ch, char *argument, int cmd)
       act("$n tries to grab you in a bearhug but you manage to slip away.", TRUE, ch, 0, victim, TO_VICT);
       act("$n tries to grab $N in a bearhug but $E manages to slip away.", TRUE, ch, 0, victim, TO_NOTVICT);
       CharWait(ch, (int)(PULSE_VIOLENCE * (float)get_property("grapple.bearhug.duration", 3.00)));
-      
+
       engage( ch, victim );
     }
   }
@@ -367,7 +364,7 @@ void event_bearhug(P_char ch, P_char victim, P_obj obj, void *data)
     int dam = BOUNDED(40, (int)(GET_LEVEL(ch) + (3 * (int)(GET_C_STR(ch) - GET_C_STR(victim))) * (float)get_property("grapple.bearhug.dmgmod", 1.00) * ((float)GET_CHAR_SKILL(ch, SKILL_BEARHUG) / 100)), 300);
     dam += number(-20, 20); 
     melee_damage(ch, victim, dam, PHSDAM_TOUCH, &messages);
-    notch_skill(ch, SKILL_BEARHUG, (int)get_property("skill.notch.bearhug", 10));
+    notch_skill(ch, SKILL_BEARHUG, (int)get_property("skill.notch.bearhug", 12.5));
     //check_shields(ch, victim, dam, RAWDAM_DEFAULT);
     if (IS_ALIVE(ch) && IS_ALIVE(victim))
       add_event(event_bearhug, PULSE_VIOLENCE/2, ch, victim, 0, 0, 0, 0);
@@ -499,12 +496,9 @@ void do_headlock(P_char ch, char *argument, int cmd)
     // CHECK_MODIFY
     percent = BOUNDED(0, GET_CHAR_SKILL(ch, SKILL_HEADLOCK), 100);
 
-    if (!IS_HEADLOCK(victim) && 
-        ( (percent > number(1, 101)) ||
-           notch_skill(ch, SKILL_HEADLOCK, (int)get_property("skill.notch.headlock", 5)) ||
-           notch_skill(ch, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 1))
-        )
-       )
+    if (!IS_HEADLOCK(victim) &&  ( (percent > number(1, 101))
+      || notch_skill(ch, SKILL_HEADLOCK, (int)get_property("skill.notch.headlock", 17))
+      || notch_skill(ch, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 17)) ))
     {
       if (IS_BEARHUG(victim))
       {
@@ -676,12 +670,12 @@ void event_headlock(P_char ch, P_char victim, P_obj obj, void *data)
     {
       knockedout = FALSE;
     }
-    
+
     if (!knockedout)
     {
     	int dam = (int)((GET_C_DEX(ch)/7)*damage);
       raw_damage(ch, victim, dam, RAWDAM_DEFAULT, &messages);
-      notch_skill(ch, SKILL_HEADLOCK, (int)get_property("skill.notch.headlock", 5));
+      notch_skill(ch, SKILL_HEADLOCK, (int)get_property("skill.notch.headlock", 17));
       check_shields(ch, victim, dam, RAWDAM_DEFAULT);
       if (IS_ALIVE(ch) && IS_ALIVE(victim))
         add_event(event_headlock, PULSE_VIOLENCE/2, ch, victim, 0, 0, 0, 0);
@@ -742,10 +736,9 @@ void armlock_check(P_char attacker, P_char grappler)
   gclvl = GET_CHAR_SKILL(grappler, SKILL_GRAPPLER_COMBAT)/10;
   percent = GET_CHAR_SKILL(grappler, SKILL_ARMLOCK);
   
-  if (((percent > number(1, 101)) && !number(0, 20-gclvl)) ||
-      notch_skill(grappler, SKILL_ARMLOCK, (int)get_property("skill.notch.armlock", 5)) ||
-      notch_skill(grappler, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 1))
-     )
+  if( ((percent > number(1, 101)) && !number(0, 20-gclvl))
+    || notch_skill(grappler, SKILL_ARMLOCK, (int)get_property("skill.notch.armlock", 17))
+    || notch_skill(grappler, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 17)) )
   {
     reflextype = number(0, ARMREFLEX_MAX);
   }
@@ -1002,10 +995,9 @@ void do_leglock(P_char ch, char *argument, int cmd)
     percent = BOUNDED(0, GET_CHAR_SKILL(ch, SKILL_LEGLOCK), 100);
     lag = 0;
     
-    if ((percent > number(1, 101)) || 
-        notch_skill(ch, SKILL_LEGLOCK, (int)get_property("skill.notch.leglock", 5)) ||
-        notch_skill(ch, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 1))
-       )
+    if( (percent > number(1, 101))
+      || notch_skill(ch, SKILL_LEGLOCK, (int)get_property("skill.notch.leglock", 17))
+      || notch_skill(ch, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 17)) )
     {
       if (!IS_GROUNDSLAM(victim) || (grapple_attack_check(victim) != ch))
       {
@@ -1157,12 +1149,11 @@ void event_leglock(P_char ch, P_char victim, P_obj obj, void *data)
 
       int dam = (int)(((GET_C_DEX(ch)/10)+str)*4*(float)get_property("grapple.leglock.break.dmgmod", 1.00));
       raw_damage(ch, victim, dam, RAWDAM_DEFAULT, &breakmsg);
-      notch_skill(ch, SKILL_LEGLOCK, (int)get_property("skill.notch.leglock", 5));
+      notch_skill(ch, SKILL_LEGLOCK, (int)get_property("skill.notch.leglock", 17));
       check_shields(ch, victim, dam, RAWDAM_DEFAULT);
-      
+
       if (!IS_ALIVE(ch) || !IS_ALIVE(victim))
           return;
-      
 
       af.type = SKILL_GRAPPLER_COMBAT;
       af.duration = (WAIT_SEC * (int)get_property("grapple.cooldown.timer", 15));
@@ -1177,12 +1168,12 @@ void event_leglock(P_char ch, P_char victim, P_obj obj, void *data)
     {
       legbreak = FALSE;
     }
-    
+
     if (!legbreak)
     {
       int dam = (int)((GET_C_DEX(ch)/7)*damage);
       raw_damage(ch, victim, dam, RAWDAM_DEFAULT, &messages);
-      notch_skill(ch, SKILL_LEGLOCK, (int)get_property("skill.notch.leglock", 5));
+      notch_skill(ch, SKILL_LEGLOCK, (int)get_property("skill.notch.leglock", 17));
       check_shields(ch, victim, dam, RAWDAM_DEFAULT);
       if (!IS_ALIVE(ch) || !IS_ALIVE(victim))
           return;
@@ -1297,11 +1288,10 @@ void do_groundslam(P_char ch, char *argument, int cmd)
     }
 
     percent = GET_CHAR_SKILL(ch, SKILL_GROUNDSLAM);
-     
-    if ((number(1, 101) < percent) ||
-        notch_skill(ch, SKILL_GROUNDSLAM, (int)get_property("skill.notch.groundslam", 5)) ||
-        notch_skill(ch, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 1))
-       )
+
+    if( (number(1, 101) < percent)
+      || notch_skill(ch, SKILL_GROUNDSLAM, (int)get_property("skill.notch.groundslam", 17))
+      || notch_skill(ch, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 17)) )
     {
       // Add weight based damge here
       int dam = (int)((GET_WEIGHT(ch)/5)*(float)get_property("grapple.groundslam.dmgmod", 1.00));

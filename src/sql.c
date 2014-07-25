@@ -587,7 +587,7 @@ void manual_log(P_char ch)
   
   mysql_str(buf2, log_sql);
 
-  sprintf(a, "%d%d", rand(), time(NULL));
+  sprintf(a, "%d%ld", rand(), time(NULL));
   sprintf(b, "%s", CRYPT(a,ch->player.name));
   
   db_query("INSERT INTO MANUAL_LOG VALUES( 0, '%s', '%s', %d, 0, NOW() )", log_sql, b, GET_PID(ch));
@@ -1183,7 +1183,8 @@ void sql_log(P_char ch, char * kind, char * format, ...)
 
   if(!IS_PC(ch))
   {
-    debug("sql_log called in sql.c for mobile ch - %s - Vnum %d", GET_NAME(ch), GET_VNUM(ch));    
+    debug("sql_log called in sql.c for mobile ch - %s - Vnum %d", GET_NAME(ch), GET_VNUM(ch));
+    debug("sql_log kind '%s', format '%s'", kind, format );
     return;
   }
 

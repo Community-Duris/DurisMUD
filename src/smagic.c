@@ -667,8 +667,8 @@ void spell_restoration(int level, P_char ch, char *arg, int type,
   if(affected_by_spell(victim, SPELL_WITHER))
     affect_from_char(victim, SPELL_WITHER);
 
-  if(affected_by_spell(victim, SPELL_BLOODSTONE))
-    affect_from_char(victim, SPELL_BLOODSTONE);
+  if(affected_by_spell(victim, SPELL_BLOODTOSTONE))
+    affect_from_char(victim, SPELL_BLOODTOSTONE);
   
   if(affected_by_spell(victim, SPELL_SHREWTAMENESS))
     affect_from_char(victim, SPELL_SHREWTAMENESS);
@@ -1332,7 +1332,7 @@ void spell_earthen_rain(int level, P_char ch, char *arg, int type,
   
   if(IS_ALIVE(ch))
   {
-    if(GET_SPEC(ch, CLASS_CONJURER, SPEC_ELEMENTALIST))
+    if(GET_SPEC(ch, CLASS_CONJURER, SPEC_EARTH))
       level = (int) (level * 1.25);
       
     spell_earthquake(level, ch, NULL, SPELL_TYPE_SPELL, 0, 0);
@@ -1346,36 +1346,39 @@ void earthen_grasp(int level, P_char ch, P_char victim,
   enum {EG_FAIL, EG_SHORT, EG_LONG} effect;
   int      dam_result;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim))
-        return;
-  
+  if(!(ch) || !IS_ALIVE(ch) || !(victim) || !IS_ALIVE(victim))
+  return;
+
   if(affected_by_spell(victim, SPELL_EARTHEN_GRASP))
   {
     send_to_char("As if one fist isn't enough?!\n", ch);
     return;
   }
   int attdiff = ((GET_C_STR(ch) - GET_C_STR(victim)) / 2);
-  attdiff = number(0, attdiff);
+  // Randomize.. Subtract up to 25 or add up to 25.
+  attdiff += 25 - number( 0, 50 );
   attdiff = BOUNDED(-100, attdiff, 100);
 
   if(IS_NPC(victim) && IS_SET(victim->specials.act, ACT_IMMUNE_TO_PARA))
   {
     effect = EG_FAIL;
   }
-  else if(!NewSaves(victim, SAVING_PARA, 0))
-  {
-    effect = EG_LONG;
-  }
+  // If they fail their str bonus save..
   else if(!NewSaves(victim, SAVING_PARA, attdiff))
   {
-    effect = EG_SHORT;
+    // If they fail a regular save.
+    if(!NewSaves(victim, SAVING_PARA, 0))
+      effect = EG_LONG;
+    else
+      effect = EG_FAIL;
   }
   else
   {
-    effect = EG_FAIL;
+    // If they made str bonus and fail regular..
+    if(!NewSaves(victim, SAVING_PARA, 0))
+      effect = EG_SHORT;
+    else
+      effect = EG_FAIL;
   }
 
   if(effect != EG_FAIL)
@@ -1383,32 +1386,25 @@ void earthen_grasp(int level, P_char ch, P_char victim,
     memset(&af, 0, sizeof(struct affected_type));
     af.type = SPELL_EARTHEN_GRASP;
     af.bitvector2 = AFF2_MINOR_PARALYSIS;
+    af.flags = AFFTYPE_SHORT;
     if(effect == EG_SHORT)
     {
       send_to_char("&+yAn earthen fist bursts from the ground nearby!&N\n", victim);
       send_to_char("&+yThe fist attempts to grasp you tightly, but only manages a loose hold.&N\n", victim);
-      act("&+yAn earthen fist bursts from the ground, grasping &n$n&n&+y!&N",
-          FALSE, victim, 0, 0, TO_ROOM);
-      act("$n&n&+y struggles valiantly, making a tighter grasp impossible.&N",
-          FALSE, victim, 0, 0, TO_ROOM);
-      af.flags = AFFTYPE_SHORT;
-      af.duration = attdiff;
+      act("&+yAn earthen fist bursts from the ground, grasping &n$n&n&+y!&N", FALSE, victim, 0, 0, TO_ROOM);
+      act("$n&n&+y struggles valiantly, making a tighter grasp impossible.&N", FALSE, victim, 0, 0, TO_ROOM);
+      af.duration = (attdiff <= 0) ? 1 : attdiff;
     }
     else
     {
-      send_to_char
-        ("&+yAn earthen fist bursts from the ground, grasping you tightly around the chest.&N\n",
-         victim);
-      act
-        ("&+yAn earthen fist bursts from the ground, grasping &n$n&n&+y tightly!&N",
-         FALSE, victim, 0, 0, TO_ROOM);
-      af.flags = AFFTYPE_SHORT;
-      af.duration = attdiff + 10;
+      send_to_char("&+yAn earthen fist bursts from the ground, grasping you tightly around the chest.&N\n", victim);
+      act("&+yAn earthen fist bursts from the ground, grasping &n$n&n&+y tightly!&N", FALSE, victim, 0, 0, TO_ROOM);
+      af.duration = (attdiff <= 0) ? 10 : attdiff + 10;
     }
-    
+
     if(GET_SPEC(ch, CLASS_SHAMAN, SPEC_ELEMENTALIST))
       level = (int) (level * get_property("damage.increase.elementalist", 1.150));
-    
+
     if(!NewSaves(victim, SAVING_SPELL, 0))
       dam_result =
         spell_damage(ch, victim, dice(level, 12), SPLDAM_GENERIC,
@@ -1431,8 +1427,7 @@ void earthen_grasp(int level, P_char ch, P_char victim,
   {
     send_to_char("&+yAn earthen fist bursts from the ground nearby!&N\n", victim);
     send_to_char("&+yThe fist attempts to grasp you tightly, but you avoid it.&N\n", victim);
-    act("&+yAn earthen fist bursts from the ground, aiming at &n$n&n&+y but $e manages to avoid it.&N",
-       FALSE, victim, 0, 0, TO_ROOM);
+    act("&+yAn earthen fist bursts from the ground, aiming at &n$n&n&+y but $e manages to avoid it.&N", FALSE, victim, 0, 0, TO_ROOM);
   }
 }
 

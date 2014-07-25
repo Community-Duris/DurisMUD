@@ -315,13 +315,13 @@ void do_group(P_char ch, char *argument, int cmd)
 
         gl = ch->group;
         if (IS_NPC(gl->ch))
-          sprintf(Gbuf3, gl->ch->player.short_descr);
+          sprintf(Gbuf3, "%s", gl->ch->player.short_descr);
         else
         {
           if (racewar(ch, gl->ch))
             strcpy(Gbuf3, race_names_table[GET_RACE(gl->ch)].ansi);
           else
-            sprintf(Gbuf3, GET_NAME(gl->ch));
+            sprintf(Gbuf3, "%s", GET_NAME(gl->ch));
         }
         sprintf(Gbuf1, "( Head) %-s\n",
                 (!CAN_SEE_Z_CORD(ch, gl->ch)) ? "Someone" : Gbuf3);
@@ -339,13 +339,13 @@ void do_group(P_char ch, char *argument, int cmd)
         for (gl = gl->next; gl; gl = gl->next)
         {
           if (IS_NPC(gl->ch))
-            sprintf(Gbuf3, gl->ch->player.short_descr);
+            sprintf(Gbuf3, "%s", gl->ch->player.short_descr);
           else
           {
             if (racewar(ch, gl->ch))
               strcpy(Gbuf3, race_names_table[GET_RACE(gl->ch)].ansi);
             else
-              sprintf(Gbuf3, GET_NAME(gl->ch));
+              sprintf(Gbuf3, "%s", GET_NAME(gl->ch));
           }
 
           sprintf(Gbuf2, "\n(%-5s)  %-s\n",

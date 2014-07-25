@@ -33,7 +33,7 @@
 #define SAV_AFFVERS   6
 //#define SAV_MAXSIZE 65536
 #define SAV_MAXSIZE 120536
-#define SAV_SAVEVERS  4
+#define SAV_SAVEVERS  5
 #define SAV_WTNSVERS  2   /* Witness version */
 #define SAV_HOUSEVERS 5
 

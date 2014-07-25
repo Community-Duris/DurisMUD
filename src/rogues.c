@@ -140,8 +140,8 @@ void do_slip(P_char ch, char *argument, int cmd)
   if (success)
   {
     /* notch skill */
-    notch_skill(ch, SKILL_SLIP, (int)get_property("skill.notch.slip", 1));
-    
+    notch_skill(ch, SKILL_SLIP, (int)get_property("skill.notch.slip", 5));
+
     /* transfer the obj */
     obj_from_char(obj, TRUE);
     obj_to_char(obj, vict);

@@ -395,7 +395,7 @@ bool newLeaderBoard(P_char ch, char *arg, int cmd)
     if(!strcmp(name, "none"))
       break;
     sprintf(buf, "%s %d\r\n", name, (int)pts);
-    fprintf(newleaderlist, buf);
+    fprintf(newleaderlist, "%s", buf);
   }
 
   fclose(leaderboardlist);
@@ -647,7 +647,7 @@ bool newHardcoreBoard(P_char ch, char *arg, int cmd)
     if(!strcmp(name, "none"))
       break;
     sprintf(buf, "%s %d %s\r\n", name, (int)pts, killedby );
-    fprintf(newhardcorelist, buf);
+    fprintf(newhardcorelist, "%s", buf);
   }
 
   fclose(hardcorelist);

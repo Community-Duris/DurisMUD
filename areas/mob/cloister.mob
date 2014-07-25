@@ -54,7 +54,7 @@ father tel~
 &+CFather &+WTel&N rests in this room, speaking with his assistant.
 ~
    Father Tel's body has been withered with old age, though he still
-strives to instruct the brothers and disciples of his monastary.  He
+strives to instruct the brothers and disciples of his monastery.  He
 wears a tattered grey robe, and rests calmly in his chamber, which is
 actually the central meditation chamber of the cloister itself.
 ~
@@ -101,7 +101,7 @@ assistant~
 The assistant to Father Tel stands next to him, nodding in agreement.
 ~
    This monk is still in his youth, but is well learned in the knowledge
-of the monastary.  He is engaged in a conversation with his present master
+of the monastery.  He is engaged in a conversation with his present master
 and elder, Father Tel.  His position of the cloister is to be guided by
 Tel, and watch over him and protect him to his fullest.
 ~
@@ -130,7 +130,7 @@ praying monk~
 &NA &+Ymonk&N is resting within the pillowed chamber, praying.
 ~
    This monk wears standard brown attire.  He is of low rank in this
-monastary, but he still holds a position.  He has a bald head and
+monastery, but he still holds a position.  He has a bald head and
 muscular arms and legs.  When in meditation, his eyes close as he
 zones out the world.
 ~
@@ -145,7 +145,7 @@ a &+Ymonk&N~
 &NA &+Ymonk&N is standing here, disturbed about the disciple's noise.
 ~
    This monk wears standard brown attire.  He is of low rank in this
-monastary, but he still holds a position.  He has a bald head and
+monastery, but he still holds a position.  He has a bald head and
 muscular arms and legs.  When in meditation, his eyes close as he
 zones out the world.
 ~
@@ -174,7 +174,7 @@ disciple~
 &NA studious &+cdisciple&N walks through the temple, bible in hand.
 ~
    This disciple is carrying a holy bible with him as he walks around
-the halls of the monastary, reciting passages to himself in an attempt
+the halls of the monastery, reciting passages to himself in an attempt
 to memorize them as a part of his studies.  He is wearing the standard
 in disciple atire, consisting of a plain brown robe, with a black sash.
 ~
@@ -186,7 +186,7 @@ PH 0 1 0 -1
 #67112
 young acolyte~
 &Na young &+Wacolyte&N~
-&NA young &+Wacolyte&N looks for anything to clean up in the monastary.
+&NA young &+Wacolyte&N looks for anything to clean up in the monastery.
 ~
    This young acolyte is in his late teens.  He has only begun his
 faith journey within the cloister of Father Tel.  He wear's a clerical

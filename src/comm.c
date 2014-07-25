@@ -90,13 +90,14 @@ P_desc   descriptor_list, next_to_process, next_save = 0;
 fd_set   input_set, output_set, exc_set;        /* for socket handling */
 int      bounce_null_sites = 0;
 int      mini_mode = 0;
-int      copyover = 0;
 int      lawful = 0;
 int      no_specials = 0;
 int      override = 1;
 int      pulse = 0;
 bool     after_events_call = FALSE;
 int      _reboot = 0;
+int      _copyover = 0;
+int      _autoboot = 0;
 int      req_passwd = 1;
 int      shutdownflag = 0;
 int      slow_death = 0;
@@ -433,15 +434,20 @@ void run_the_game(int port)
   dump_mem_log();
 #endif
 
-  if (_reboot)
+  if( _reboot )
   {
     logit(LOG_EXIT, "Rebooting.");
     exit(52);                   /* what's so great about HHGTTG, anyhow? */
   }
-  if (copyover)
+  if( _copyover )
   {
     logit(LOG_EXIT, "Copyover reboot.");
     exit(53);
+  }
+  if( _autoboot )
+  {
+    logit(LOG_EXIT, "Auto reboot.");
+    exit(54);
   }
   logit(LOG_STATUS, "Normal termination of game.");
 }
@@ -2102,8 +2108,10 @@ void write_to_pc_log(P_char ch, const char *message, int log)
 
   ch = GET_PLYR(ch);
 
-  if( !ch || !IS_PC(ch) )
+  if( !ch || !IS_PC(ch) || !IS_ALIVE(ch) )
+  {
     return;
+  }
   
   if( !GET_PLAYER_LOG(ch) )
   {
@@ -3618,11 +3626,13 @@ void act(const char *str, int hide_invisible, P_char ch, P_obj obj,
   }
 }
 
+// This function will have to be fixed if sound re-enabled. - Lohrr
+// Right now, we're overwriting a const string.
 const char *delete_doubledollar(const char *string)
 {
   char    *read1, *write1;
 
-  if ((write1 = strchr(string, '$')) == NULL)
+//  if ((write1 = strchr(string, '$')) == NULL)
     return string;
 
   read1 = write1;

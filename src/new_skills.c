@@ -305,7 +305,7 @@ void do_awareness(P_char ch, char *argument, int cmd)
     REMOVE_BIT(ch->specials.affected_by, AFF_SKILL_AWARE);
   }
   affect_to_char(ch, &af);
-  notch_skill(ch, SKILL_AWARENESS, 4);
+  notch_skill(ch, SKILL_AWARENESS, 20);
 }
 
 int wornweight(P_char ch)
@@ -329,15 +329,15 @@ int MonkAcBonus(P_char ch)
     /*
        base bonus level * 2
      */
-    b = -(2 * GET_LEVEL(ch));
+    b = -(4 * GET_LEVEL(ch));
     // Bonus based on martial arts skill
-    b -= GET_CHAR_SKILL(ch, SKILL_MARTIAL_ARTS) / 2;
+    b -= GET_CHAR_SKILL(ch, SKILL_MARTIAL_ARTS);
     /*
        4x penalty for encumbering worn items with a small allowance for low levels
      */
     b += MAX(0, (3 * (wornweight(ch) - ((60 - GET_LEVEL(ch)) / 6))));
 
-    return BOUNDED(-100, b, 50);
+    return BOUNDED(-400, b, 50);
   }
   else
     return 0;
@@ -464,15 +464,24 @@ int MonkDamage(P_char ch)
   int      dam;
   int      skl_lvl = 0;
 
+
   if (IS_PC(ch))
     skl_lvl = GET_CHAR_SKILL(ch, SKILL_MARTIAL_ARTS);
 
-  MonkSetSpecialDie(ch);
+  if (GET_CLASS(ch, CLASS_MONK))
+  {
+    MonkSetSpecialDie(ch);
+  }
   dam = dice(ch->points.damnodice, ch->points.damsizedice);
   dam += skl_lvl / 11;
 
   if (GET_CLASS(ch, CLASS_MONK))
-    dam = BOUNDED(1, dam - (wornweight(ch) + 56 - GET_LEVEL(ch)), dam); 
+  {
+    // Weight factor affected by lvl and str.
+    int weight = wornweight(ch) - (GET_LEVEL(ch) * GET_C_STR(ch))/100;
+    // Does at least 1 damage, and at most dam damage.
+    dam = BOUNDED(1, dam - weight, dam);
+  }
   return dam;
 }
 
@@ -499,7 +508,7 @@ int MonkNumberOfAttacks(P_char ch)
   if (IS_PC(ch))
   {
     skl_lvl = GET_CHAR_SKILL(ch, SKILL_MARTIAL_ARTS);
-    notch_skill(ch, SKILL_MARTIAL_ARTS, 100);
+    notch_skill(ch, SKILL_MARTIAL_ARTS, 1);
   }
   else
     skl_lvl = BOUNDED(5, GET_LEVEL(ch) * 2, 100);
@@ -592,13 +601,13 @@ void do_feign_death(P_char ch, char *arg, int cmd)
       }
     }
     CharWait(ch, PULSE_VIOLENCE * 2);
-    notch_skill(ch, SKILL_FEIGN_DEATH, 10);
+    notch_skill(ch, SKILL_FEIGN_DEATH, 40);
     return;
   }
   else
   {
     SET_POS(ch, POS_PRONE + STAT_RESTING);      // ditto
-    notch_skill(ch, SKILL_FEIGN_DEATH, 10);
+    notch_skill(ch, SKILL_FEIGN_DEATH, 40);
     CharWait(ch, PULSE_VIOLENCE * 3);
   }
 }
@@ -643,7 +652,7 @@ return;
     if (GET_HIT(ch) > GET_MAX_HIT(ch))
       GET_HIT(ch) = GET_MAX_HIT(ch);
   }
-  notch_skill(ch, SKILL_FIRST_AID, 5);
+  notch_skill(ch, SKILL_FIRST_AID, 17);
 
   bzero(&af, sizeof(af));
   af.duration = 24;
@@ -730,8 +739,8 @@ void chant_diamond_soul(P_char ch, char *argument, int cmd)
     return;
   }
     
-  if (!notch_skill(ch, SKILL_DIAMOND_SOUL, 30) &&
-      number(1, 105) > skl_lvl) // 5 percent chance to fail at max pc skill.
+  if( !notch_skill(ch, SKILL_DIAMOND_SOUL, 30)
+    && number(1, 105) > skl_lvl ) // 5 percent chance to fail at max pc skill.
   {
     send_to_char("Your inner thoughts are in turmoil.\r\n", ch);
     CharWait(ch, PULSE_VIOLENCE);
@@ -796,8 +805,8 @@ void chant_heroism(P_char ch, char *argument, int cmd)
     return;
   }
     
-  if (!notch_skill(ch, SKILL_HEROISM, 30) &&
-      number(1, 105) > skl_lvl) // 5 percent chance to fail at max pc skill.
+  if( !notch_skill(ch, SKILL_HEROISM, 30)
+    && number(1, 105) > skl_lvl) // 5 percent chance to fail at max pc skill.
   {
     send_to_char("Your inner thoughts are in turmoil.\r\n", ch);
     CharWait(ch, PULSE_VIOLENCE);
@@ -891,9 +900,8 @@ void chant_buddha_palm(P_char ch, char *argument, int cmd)
   else
     skl_lvl = MAX(100, GET_LEVEL(ch) * 3);
 
-  if (!notch_skill(ch, SKILL_BUDDHA_PALM,
-                   get_property("skill.notch.offensive", 15)) &&
-      number(1, 101) > skl_lvl)
+  if( !notch_skill(ch, SKILL_BUDDHA_PALM, get_property("skill.notch.offensive", 10))
+    && number(1, 101) > skl_lvl)
   {
     send_to_char("You forgot the words for the chant.\r\n", ch);
     CharWait(ch, 2 * PULSE_VIOLENCE);
@@ -1024,9 +1032,8 @@ void chant_quivering_palm(P_char ch, char *argument, int cmd)
     send_to_char("Your target is too far for your palm to reach!\n", ch);
     return;
   }
-  if (!notch_skill(ch, SKILL_QUIVERING_PALM,
-                   get_property("skill.notch.offensive", 15)) &&
-      number(1, 100) > skl_lvl)
+  if (!notch_skill(ch, SKILL_QUIVERING_PALM, get_property("skill.notch.offensive", 10))
+    && number(1, 100) > skl_lvl)
   {
     send_to_char("You forgot the words for the chant.\r\n", ch);
     CharWait(ch, 2 * PULSE_VIOLENCE);
@@ -1160,7 +1167,7 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
   else if(skl_lvl <= 90)
     dam = (int) (0.6 * dam);
 
-   dam = dam * 2;
+   dam /= 2;
     
   act("&+CYou harness your full Jin, and deliver a powerful strike to&n $N!&n",
     FALSE, ch, 0, vict, TO_CHAR);
@@ -1168,11 +1175,9 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
     FALSE, ch, 0, vict, TO_NOTVICT);
   act("$n&+C's chants a mantra as $e touches you - pain courses throughout your body!&n",
     FALSE, ch, 0, vict, TO_VICT);
-    
-  //debug("(%s) Jin Touch: damage upon (%s) for (%d).", GET_NAME(ch), GET_NAME(vict), dam);
 
-  if(melee_damage(ch, vict, dam, PHSDAM_NOREDUCE | PHSDAM_NOPOSITION |
-      PHSDAM_TOUCH, 0) != DAM_NONEDEAD)
+  debug("chant_jin_touch: (%s) hitting (%s) for (%d) dam.", GET_NAME(ch), GET_NAME(vict), dam);
+  if(melee_damage(ch, vict, dam, PHSDAM_NOREDUCE | PHSDAM_NOPOSITION | PHSDAM_TOUCH, 0) != DAM_NONEDEAD)
         return;
 
   if (!char_in_list(ch))
@@ -1357,8 +1362,8 @@ void chant_regenerate(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (!notch_skill(ch, SKILL_REGENERATE, 20) &&
-      number(1, 100) > GET_CHAR_SKILL(ch, SKILL_REGENERATE))
+  if( !notch_skill(ch, SKILL_REGENERATE, 30)
+    && number(1, 100) > GET_CHAR_SKILL(ch, SKILL_REGENERATE))
   {
     send_to_char("You forgot the words for the chant.\r\n", ch);
     CharWait(ch, 2 * PULSE_VIOLENCE);
@@ -1373,7 +1378,7 @@ void chant_regenerate(P_char ch, char *argument, int cmd)
   af.modifier = GET_CHAR_SKILL(ch, SKILL_REGENERATE);
   affect_to_char(ch, &af);
 
-  notch_skill(ch, SKILL_REGENERATE, 25);
+  notch_skill(ch, SKILL_REGENERATE, 35);
   CharWait(ch, PULSE_VIOLENCE);
 }
 
@@ -1389,15 +1394,14 @@ void chant_tiger_palm(P_char ch, char *arg, int cmd)
 
  if (!affect_timer(ch,
        WAIT_SEC * get_property("timer.secs.monkTigerPalm", 30),
-       SKILL_FIST_OF_DRAGON))
+       SKILL_TIGER_PALM))
   {
     send_to_char("Yer not in proper mood for that right now!\r\n", ch);
     return;
   }
 
-  if (!notch_skill(ch, SKILL_TIGER_PALM,
-     get_property("skill.notch.chants", 100)) &&
-     (number(1,101) > (IS_PC(ch) ? (1 + GET_CHAR_SKILL(ch, SKILL_TIGER_PALM)) : (MIN(100,GET_LEVEL(ch) * 2)))))
+  if( !notch_skill(ch, SKILL_TIGER_PALM, get_property("skill.notch.chants", 20))
+    && (number(1,101) > (IS_PC(ch) ? (1 + GET_CHAR_SKILL(ch, SKILL_TIGER_PALM)) : (MIN(100,GET_LEVEL(ch) * 2)))))
   {
     send_to_char("You fail to embrace the tiger palm concentration&n!\r\n", ch);
     return;
@@ -1420,23 +1424,20 @@ void chant_fist_of_dragon(P_char ch, char *arg, int cmd)
     return;
   }
 
- if (!affect_timer(ch,
-       WAIT_SEC * get_property("timer.secs.monkFistOfDragon", 30),
-       SKILL_FIST_OF_DRAGON))
+  if (!affect_timer(ch, WAIT_SEC * get_property("timer.secs.monkFistOfDragon", 30), SKILL_FIST_OF_DRAGON))
   {
     send_to_char("Yer not in proper mood for that right now!\r\n", ch);
     return;
   }
 
-  if (!notch_skill(ch, SKILL_FIST_OF_DRAGON,
-     get_property("skill.notch.chants", 100)) &&
-     (number(1,101) > (IS_PC(ch) ? (1 + GET_CHAR_SKILL(ch, SKILL_FIST_OF_DRAGON)) : (MIN(100,GET_LEVEL(ch) * 2)))))
+  if (!notch_skill(ch, SKILL_FIST_OF_DRAGON, get_property("skill.notch.chants", 20))
+    && (number(1,101) > (IS_PC(ch) ? (1 + GET_CHAR_SKILL(ch, SKILL_FIST_OF_DRAGON)) : (MIN(100,GET_LEVEL(ch) * 2)))))
   {
     send_to_char("You fail to summon the power of the &+RRed Dragon&n!\r\n", ch);
     return;
   }
 
-  set_short_affected_by(ch, SKILL_FIST_OF_DRAGON, WAIT_SEC * (BOUNDED(4, (GET_CHAR_SKILL(ch, SKILL_FIST_OF_DRAGON) / 2), 55)));
+  set_short_affected_by(ch, SKILL_FIST_OF_DRAGON, WAIT_SEC * (MAX(4, (GET_CHAR_SKILL(ch, SKILL_FIST_OF_DRAGON) / 2))));
   send_to_char
      ("&+rThe strength of the &+Rred dragon &+rflows strong in your veins.\r\n"
      , ch);
@@ -1539,13 +1540,11 @@ void do_chant(P_char ch, char *argument, int cmd)
     send_to_char("Your throat suddenly becomes dry.\r\n", ch);
     act("$n tries to say something, but $s voice is garbled.", FALSE, ch, 0,
         0, TO_ROOM);
-        
-    notch_skill(ch, SKILL_CHANT,
-      get_property("skill.notch.chants", 25));
+
+    notch_skill(ch, SKILL_CHANT, 5);
     return;
   }
-  notch_skill(ch, SKILL_CHANT,
-      get_property("skill.notch.chants", 25));
+  notch_skill(ch, SKILL_CHANT, get_property("skill.notch.chants", 10));
   act("You start to chant in a deep voice.", FALSE, ch, 0, 0, TO_CHAR);
   act("$n starts to chant in a deep voice.", TRUE, ch, 0, 0, TO_ROOM);
   switch (chant_index)
@@ -1780,7 +1779,7 @@ void do_OLD_bandage(P_char ch, char *arg, int cmd)
     if (has_innate(ch, INNATE_BATTLEAID) && GET_HIT(t_char) < 0)
       GET_HIT(t_char) += ((GET_HIT(t_char) * -1) + 1);
 
-    notch_skill(ch, SKILL_BANDAGE, 30);
+    notch_skill(ch, SKILL_BANDAGE, 3.33);
   }
   else if (number(1, 100) > 90)
   {                             /*
@@ -2008,7 +2007,7 @@ void mount_summoning_thing(P_char ch, P_char victim, P_obj obj, void *data)
   {
     mount = read_mobile(GET_SPEC(ch, CLASS_PALADIN, SPEC_CAVALIER) ? 1235 : 1232, VIRTUAL);
   }
-  else if(GET_RACE(ch) == RACE_GOBLIN)
+  else if(GET_RACE(ch) == RACE_GOBLIN || GET_RACE(ch) == RACE_ORC)
   {
     mount = read_mobile( 39 , VIRTUAL);
   }
@@ -2665,7 +2664,7 @@ void do_carve(struct char_data *ch, char *argument, int cmd)
   if (percent > GET_CHAR_SKILL(ch, SKILL_CARVE))
   {
     send_to_char("You butcher! It's all minced up now...\r\n", ch);
-    notch_skill(ch, SKILL_CARVE, 20);
+    notch_skill(ch, SKILL_CARVE, 5);
     return;
   }
   /* he's done it, let's load the prototype and finish it up */
@@ -2675,7 +2674,7 @@ void do_carve(struct char_data *ch, char *argument, int cmd)
   carve_weight[6] = carve_weight[8] = corpse->weight / 4;
   carve_weight[7] = corpse->weight / 7;
 
-  notch_skill(ch, SKILL_CARVE, 50);
+  notch_skill(ch, SKILL_CARVE, 2);
   carve = read_object(8, VIRTUAL);
   if (!carve)
   {
@@ -3194,7 +3193,7 @@ void capture(P_char ch, P_char victim)
   if ((percent > ch_chance) || IS_TRUSTED(victim))
   {
     if (!IS_TRUSTED(victim) && !number(0, 3))
-      notch_skill(ch, SKILL_CAPTURE, 30);
+      notch_skill(ch, SKILL_CAPTURE, 3.33);
 
     SET_POS(ch, POS_PRONE + GET_STAT(ch));
 
@@ -3205,8 +3204,7 @@ void capture(P_char ch, P_char victim)
     act("$n falls face first on the ground as $N avoids $m.", FALSE, ch, 0,
         victim, TO_NOTVICT);
 
-    if (!number(0, 2))
-      notch_skill(ch, SKILL_CAPTURE, 100);
+    notch_skill(ch, SKILL_CAPTURE, .67);
 
     CharWait(ch, PULSE_VIOLENCE * 5);
 
@@ -3244,8 +3242,7 @@ void capture(P_char ch, P_char victim)
 
     extract_obj(unequip_char(ch, HOLD), TRUE);
 
-    if (!number(0, 2))
-      notch_skill(ch, SKILL_CAPTURE, 30);
+    notch_skill(ch, SKILL_CAPTURE, 2.22);
 
     if (!is_wanted)
       justice_witness(ch, victim, CRIME_KIDNAPPING);
@@ -3317,7 +3314,7 @@ void do_appraise(P_char ch, char *argument, int cmd)
   {
     if (percent > GET_CHAR_SKILL(ch, SKILL_APPRAISE))
     {
-      notch_skill(ch, SKILL_APPRAISE, 20);
+      notch_skill(ch, SKILL_APPRAISE, 5);
       if ((number(0, 2)))
         estimate_value += (estimate_value / (number(1, 15)));
       else
@@ -3766,10 +3763,11 @@ void chant_chi_purge(int level, P_char ch, char *arg, int type,
   if (GET_LEVEL(ch) > 55)
     disease = TRUE;
 
-  if (number(1, 100) > GET_CHAR_SKILL(ch, SKILL_CHI_PURGE))
+  if( number(1, 100) > GET_CHAR_SKILL(ch, SKILL_CHI_PURGE)
+    && !notch_skill(ch, SKILL_CHI_PURGE, 10) )
   {
     send_to_char("You forgot the words for the chant.\r\n", ch);
-    notch_skill(ch, SKILL_CHI_PURGE, 10);
+    notch_skill(ch, SKILL_CHI_PURGE, 15);
     CharWait(ch, 2 * PULSE_VIOLENCE);
     return;
   }

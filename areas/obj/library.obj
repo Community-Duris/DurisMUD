@@ -1,0 +1,914 @@
+#402000
+obsidian fountain~
+&+Lan obsidian fountain of a Drow Elven explorer&n~
+&+LGlistening with &+mfa&+Mer&+mie &+Mfi&+mre&+L, an intricately carved &+wfo&+Wu&+wnt&+La&+win&+L is in the middle of the room.&N~
+~
+17 36 4 0 14 0 0 0 1024 0 0
+30 30 28 0 0 0 0 0
+5000 0 100
+#402001
+statue drow monk~
+&+La statue of a hooded Drow Elven monk&N~
+&+LA statue of a &+mDrow Elven&+L monk stands here, with a finger to his mouth indicating silence.&N~
+~
+15 36 4 0 14 0 0 0 1088 0 0
+100 0 100 0 0 0 0 0
+5000 0 100
+#402002
+faerie fire wall sconce~
+&+La &+mfa&+Mer&+mie &+Mf&+mi&+Mr&+me&+L wall torch&N~
+&+LA carved torch is set into the obsidian wall, lit with a ball of &+mfa&+Mer&+mie &+mf&+Mi&+mr&+Me.&N~
+~
+1 1 2 0 14 0 532481 0 1088 0 0
+0 0 0 0 0 0 0 0
+1000 0 100
+#402003
+key small obsidian~
+&+La small obsidian key&N~
+&+LA key lies here, discarded by its former owner.&N~
+~
+18 36 1 0 7 0 8388617 1 0 0 0
+0 100 0 0 0 0 0 0
+1 0 100
+#402004
+summoning essence fire~
+&+Lthe summoning essence of &+rf&+Rir&+re&N~
+&+LA summoning essence to create golems lies here.&N~
+~
+8 1 1 0 7 0 8400896 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402005
+summoning essence acid~
+&+Lthe summoning essence of &+ga&+Gc&+gi&+Gd&N~
+&+LA summoning essence to create golems lies here.&N~
+~
+8 1 1 0 7 0 8400896 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402006
+summoning essence sulfur~
+&+Lthe summoning essence of &+ysu&+Ylf&+yur&N~
+&+LA summoning essence to create golems lies here.&N~
+~
+8 1 1 0 7 0 8400896 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402007
+summoning essence frostbite~
+&+Lthe summoning essence of &+wfr&+Wos&+Ct&+Wbi&+wte&N~
+&+LA summoning essence to create golems lies here.&N~
+~
+8 1 1 0 7 0 8400896 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402008
+summoning essence shadows~
+&+Lthe summoning essence of &+wsh&+Wa&+Ld&+wo&+Lw&+ws&N~
+&+LA summoning essence to create golems lies here.&N~
+~
+8 1 1 0 7 0 8400896 1 72 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402009
+summoning essence lightning~
+&+Lthe summoning essence of &+wl&+Wi&+wg&+ch&+Ct&+cn&+wi&+Wn&+wg&N~
+&+LA summoning essence to create golems lies here.&N~
+~
+8 1 1 0 7 0 8400896 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402010
+bookcase bookshelf~
+&+La bookcase carved into the walls&N~
+&+LA large and ornate bookcase has been carved into the wall.&N~
+~
+15 36 4 0 14 0 0 0 1024 0 0
+300 0 0 300 0 0 0 0
+5000 0 100
+#402011
+book spellbook mystical tome elemental~
+&+La mystical tome with &+wgl&+Wo&+ww&+Li&+wn&+Wg &+re&+Rl&+ce&+Bm&+ye&+Yn&+gt&+Ga&+cl &+wglyphs&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 300 0 0 0 0 0
+0 0 100
+A
+25 0
+A
+3 5
+#402012
+book spellbook illithid wyld~
+&+man &+Millithid&+L-skin &+mspellbook &+Lof &+Mwyld &+mmagick&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 300 0 0 0 0 0
+0 0 100
+A
+23 -2
+A
+13 15
+#402013
+pile coins~
+&+wa small pile of hidden coins&N~
+&+LA small pile of hidden coins lay here, likely hidden for someone's entrance.&N~
+~
+20 24 1 0 7 0 4096 1 0 0 0
+0 0 0 10 0 0 0 0
+0 10000 100
+#402014
+long spidersilk robes shadows robe~
+&+Lsome long &+msp&+Mid&+mer&+ws&+Wi&+wl&+Lk robes covered in &+ws&+Wh&+wad&+Lo&+wws&N~
+An unnamed object lies here, looking lonely and forelorn.~
+~
+9 3 2 0 14 0 8 9 64 263582207 355099
+-30 0 0 0 0 0 0 0
+2 0 100
+A
+13 15
+A
+3 5
+#402015
+book spellbook shifting shadows~
+&+La leather-bound book covered in &+wsh&+Wi&+Lf&+wti&+Ln&+Wg &+ws&+Lh&+wad&+Wo&+ww&+Ls&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 300 0 0 0 0 0
+0 0 100
+A
+24 -3
+A
+13 15
+#402016
+tome book theoretical study spirit domination~
+&+wa white leather-bound &+Wtome &+wof &+Ws&+wp&+Wi&+wr&+Wi&+wt &+Wdomination&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 300 0 0 0 0 0
+0 0 100
+A
+38 1
+A
+3 5
+#402017
+book spellbook embalmed woodelf flesh~
+&+La &+cspellbook&+L bound with embalmed &+gwood&+celf &+yflesh&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 300 0 0 0 0 0
+0 0 100
+A
+22 -5
+A
+3 5
+#402018
+black leather tome book spellbook dracolich~
+&+La black leather tome with an embossed dracolich&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 300 0 0 0 0 0
+0 0 100
+A
+5 4
+A
+3 4
+#402019
+spell book tome putrified zombie skin~
+&+La spell tome of &+rput&+Rrif&+ried &+wz&+Wo&+wmb&+Li&+we s&+Wk&+win&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 300 0 0 0 0 0
+0 0 100
+A
+26 4
+A
+3 4
+#402020
+tailspike tail dracolich~
+&+Lthe tailspike of a &+wd&+Lr&+wa&+Wc&+wo&+Ll&+wi&+Wc&+wh&N~
+&+LThe tailspike of a dracolich lies here.&N~
+~
+8 10 2 0 7 0 8392704 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402021
+spell book tome small fingerbone~
+&+wa small spellbook with a &+Wfingerbone &+wspine&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 200 0 0 0 0 0
+0 0 100
+A
+13 10
+A
+3 3
+#402022
+fingerbone lich~
+&+wthe &+Wfingerbone &+wof a &+Llich&N~
+&+WA fingerbone lies here.&N~
+~
+8 10 2 0 7 0 8392704 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402023
+ashes vampire~
+&+Lthe ashes of a &+rva&+Rmpi&+rre&N~
+&+LThe ashes of a vampire lie scattered here.&N~
+~
+8 10 2 0 7 0 8392704 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402024
+jagged teeth wraith~
+&+Lthe &+wja&+Lgg&+We&+wd&+L &+Wteeth &+Lof a &+wwraith&N~
+&+wThe jagged teeth of a wraith lie here amongst debris.&N~
+~
+8 10 2 0 7 0 8392704 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402025
+crudely carved bone shank~
+&+wa crudely-carved &+Wbone&+L shank&N~
+&+LA shank carved of bone lies here.&N~
+~
+5 10 2 0 3 0 16777232 8396801 0 268374015 0
+2 3 3 0 1 0 0 0
+5 0 100
+A
+18 2
+A
+19 2
+#402026
+ectoplasm spectre residue~
+&+Lthe &+we&+cc&+Ct&+co&+wp&+Wl&+wa&+cs&+wm&+L of a &+Lspectre&N~
+&+LSome ectoplasmic residue appears to stick to the floor here.&N~
+~
+8 1 2 0 7 0 8392704 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402027
+flesh rotting zombie~
+&+Lthe &+yrotting&+L flesh of a &+yzombie&N~
+&+yThe rotting flesh of a zombie appears to have been left here.&N~
+~
+8 2 2 0 7 0 8392704 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402028
+skull skeleton~
+&+wthe &+Wskull&+L of a &+wskeleton&N~
+&+wThe skull of a long-dead skeleton lies here.&N~
+~
+8 10 2 0 7 0 8392704 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402029
+historical journal solbeep~
+&+wthe historical journal of &+r'So&+Rlbe&+rep'&N~
+&+LA historical journal lies here in the dust.&N~
+~
+33 28 2 0 7 0 8392705 8404993 64 262107647 0
+0 0 300 0 0 0 0 0
+0 0 100
+#402030
+polished obsidian desk~
+&+La highly polished obsidian desk&N~
+&+LA highly polished obsidian desk lies here.&N~
+~
+15 36 4 0 14 0 0 0 1024 0 0
+300 13 0 300 0 0 0 0
+5000 0 100
+#402031
+lockpick lockpicks pick picks fine mithril~
+&+Lsome &+cfine &+mmi&+Mth&+mril &+cl&+Coc&+ck&+mpi&+Mck&+ms&N~
+&+LSome lockpicks, made of the coveted mithril, lie here.&N~
+~
+31 18 1 0 11 0 8192 0 0 0 0
+20 5 0 0 0 0 0 0
+0 10000 100
+#402032
+totem spidermonkey spider monkey animal~
+&+Lthe &+Wtotem &+Lof the &+wsp&+Wid&+wer&+Lmo&+wnk&+Ley&N~
+&+LA small statue of a spider monkey lies here.&N~
+~
+34 41 1 0 11 0 8 8404993 64 268435199 0
+3 0 0 0 0 0 0 0
+0 50000 100
+#402033
+totem glacial ice elemental~
+&+wa &+Wtotem &+Lof &+wgl&+Waci&+wal &+Wice&N~
+&+LA small piece of carved magical ice lies here.&N~
+~
+34 1 1 0 11 0 8 8404993 64 268435199 0
+12 0 0 0 0 0 0 0
+0 50000 100
+#402034
+totem swirling shadows~
+&+La &+Wtotem &+Lof &+ws&+Ww&+wir&+Ll&+wi&+Wn&+wg &+Lshadows&N~
+&+La totem of swirling shadows lies here.&N~
+~
+34 1 1 0 11 0 8 8404993 64 268435199 0
+48 0 0 0 0 0 0 0
+0 50000 100
+#402035
+sash plain linen~
+&+La &+wsash&+L of &+ww&+Wo&+wv&+Le&+wn &+Wlinen&N~
+&+wA sash of plain linen lies crumbled in a pile here.&N~
+~
+11 3 2 0 7 0 8 2049 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+13 20
+#402036
+mystical tome book spellbook claw~
+&+La &+wm&+Wy&+wst&+Li&+wc&+Wa&+wl &+Wtome &+Lwith a &+wclaw-like &+Lbinding&N~
+&+LA reaver's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 200 0 0 0 0 0
+0 0 100
+A
+18 1
+A
+19 1
+#402037
+portal shifting shadows dream plane~
+&+La &+wportal &+Lof &+Ws&+wh&+Li&+wf&+Wt&+wi&+Ln&+wg&+L s&+wh&+Wa&+wd&+Lo&+ww&+Ws &+Lto a &+cdr&+Cea&+cm p&+Cla&+cne&N~
+&+LA &+wportal &+Lof &+Ws&+wh&+Li&+wf&+Wt&+wi&+Ln&+wg &+Ls&+wh&+Wa&+wd&+Lo&+ww&+Ws &+Lto a &+cdr&+Cea&+cm p&+Cla&+cne &+Lhovers in mid-air.&N~
+~
+25 1 4 0 7 0 8192 0 1088 0 0
+402073 7 -1 0 0 0 0 0
+5000 0 100
+#402038
+portal shifting shadows dream plane~
+&+La &+wportal &+Lof &+Ws&+wh&+Li&+wf&+Wt&+wi&+Ln&+wg&+L s&+wh&+Wa&+wd&+Lo&+ww&+Ws &+Lfrom a &+cdr&+Cea&+cm p&+Cla&+cne&N~
+&+LA &+wportal &+Lof &+Ws&+wh&+Li&+wf&+Wt&+wi&+Ln&+wg &+Ls&+wh&+Wa&+wd&+Lo&+ww&+Ws &+Lfrom a &+cdr&+Cea&+cm p&+Cla&+cne &+Lhovers in mid-air.&N~
+~
+25 1 4 0 7 0 8192 0 1088 0 0
+402072 7 -1 0 0 0 0 0
+5000 0 100
+#402039
+key small obsidian~
+&+Lan insubstantial &+wske&+Wle&+wton&+L key&N~
+&+LA key lies here, discarded by its former owner.&N~
+~
+18 36 1 0 7 0 8409097 1 0 0 0
+0 100 0 0 0 0 0 0
+1 0 100
+#402040
+pile coins~
+&+wa pile of hidden coins&N~
+&+LA pile of &+Wg&+wl&+Wi&+wt&+Wt&+we&+Wr&+wi&+Wn&+wg &+Ccoins&+L lie here, waiting to be claimed.&N~
+~
+20 24 1 0 7 0 4096 1 0 0 0
+0 0 0 10 0 0 0 0
+0 300000 100
+#402041
+fragment dream ethereal~
+&+wthe &+Wfragment &+wof a &+Wdream&N~
+&+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
+~
+8 1 1 0 15 0 114689 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402042
+fragment dream ethereal~
+&+ythe &+Yfragment &+yof a &+Ydream&N~
+&+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
+~
+8 1 1 0 15 0 114689 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402043
+fragment dream ethereal~
+&+rthe &+Rfragment &+rof a &+Rdream&N~
+&+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
+~
+8 1 1 0 15 0 114689 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402044
+fragment dream ethereal~
+&+mthe &+Mfragment &+mof a &+Mdream&N~
+&+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
+~
+8 1 1 0 15 0 114689 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402045
+fragment dream ethereal~
+&+bthe &+Bfragment &+bof a &+Bdream&N~
+&+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
+~
+8 1 1 0 15 0 114689 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402046
+fragment dream ethereal~
+&+cthe &+Cfragment &+cof a &+Cdream&N~
+&+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
+~
+8 1 1 0 15 0 114689 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402047
+fragment dream ethereal~
+&+gthe &+Gfragment &+gof a &+Gdream&N~
+&+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
+~
+8 1 1 0 15 0 114689 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402048
+fragment dream ethereal~
+&+Lthe &+wfragment &+Lof a &+wdream&N~
+&+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
+~
+8 1 1 0 15 0 114689 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#402049
+ethereal crown of the dream plane~
+&+Lan &+We&+wt&+Lh&+we&+Wr&+we&+La&+wl &+ccrown &+Lof the &+cd&+Cr&+We&+Ca&+cm &+Lplane&N~
+&+LThis ethereal crown hovers above the ground.&N~
+~
+11 1 2 0 15 0 3145737 17 64 264237567 2567269275
+0 0 0 0 0 0 0 0
+0 0 100
+A
+57 -1
+A
+33 5
+#402050
+book spellbook tome magical study~
+&+La &+ycloth-bound&+L tome of &+Bm&+Yag&+Bic&+Yal &+Bstudy&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 300 0 0 0 0 0
+0 0 100
+A
+26 3
+A
+13 13
+#402051
+book spellbook tome demon skin mystical~
+&+La &+mmys&+Mti&+mcal &+wtome &+Lcovered &+win &+Lde&+wmo&+Ln-skin&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 300 0 0 0 0 0
+0 0 100
+A
+27 3
+A
+13 20
+#402052
+quill pen lavishly plumed~
+&+La &+wl&+Wa&+wv&+Li&+ws&+Wh&+wl&+Ly &+wplumed &+Wquill &+Lpen&N~
+&+LThis quill has been left in the dust upon the floor.&N~
+~
+21 50 1 0 7 0 0 8404993 0 262107647 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+13 10
+#402053
+messenger bag embroidered mystical sigils~
+&+La messenger bag embroidered with &+Wm&+wy&+Ls&+wt&+Wi&+wc&+La&+wl sigils&N~
+&+LA messenger bag lies here in a heap upon the ground.&N~
+~
+15 3 2 0 14 0 67117065 1064961 64 0 0
+400 0 0 400 0 0 0 0
+0 0 100
+A
+10 -15
+A
+13 15
+#402054
+flask drider skin~
+&+La &+wflask&+L crafted from &+mDri&+Lder&+L-skin&N~
+&+LA flask of arachnid flesh lies on the ground here.&N~
+~
+17 15 3 0 7 0 8396800 1 0 0 0
+20 20 28 0 0 0 0 0
+0 0 100
+#402055
+drider robe shadow spinner~
+&+Lthe &+mdri&+Lder &+wrobe &+Lof the &+Ws&+wh&+La&+wd&+Wo&+ww &+Ls&+wp&+Wi&+wn&+Ln&+we&+Wr&N~
+&+LA robe designed to drape over a spider body lies here.&N~
+~
+9 1 3 0 15 0 0 536870913 64 0 3221225471
+-30 0 0 2 0 0 0 0
+0 0 100
+A
+35 3
+A
+55 10
+#402056
+robes fine spidersilk spider silk~
+&+Lsome &+wrobes &+Lof fine &+Ws&+wp&+Li&+wd&+We&+wr&+Ls&+wi&+Wl&+wk&N~
+&+LA robe designed to drape over a spider body lies here.&N~
+~
+11 1 3 0 15 0 41 536870913 64 0 3221225471
+0 0 0 0 0 0 0 0
+0 0 100
+A
+33 2
+A
+3 4
+#402057
+arachnid armor spider mithril~
+&+La&+wr&+Wa&+wc&+Lh&+wn&+Wi&+wd &+Warmor &+Lcrafted from &+wmi&+Wthr&+wil&N~
+&+LSome armor designed to fit a spider's body lie here.&N~
+~
+11 1 3 0 15 0 41 536870913 64 0 3221225471
+0 0 0 0 0 0 0 0
+0 0 100
+A
+18 2
+A
+19 2
+#402058
+robes spun cobwebs~
+&+wrobes&+L of spun &+wco&+Wbwe&+wbs&N~
+&+LA robe designed to drape over a spider body lies here.&N~
+~
+11 1 3 0 15 0 9 536870913 64 0 3221225471
+0 0 0 0 0 0 0 0
+0 0 100
+A
+13 20
+A
+26 3
+#402059
+robes shadow spider~
+&+wrobes&+L of the &+Ws&+wh&+La&+wd&+Wo&+ww &+rsp&+Rid&+rer&N~
+&+LA robe designed to drape over a spider body lies here.&N~
+~
+11 1 3 0 15 0 9 536870913 64 0 3221225471
+0 0 0 0 0 0 0 0
+0 0 100
+A
+2 5
+A
+32 3
+#402060
+arachnid robes huntress spider~
+&+La&+wr&+Wa&+wc&+Lh&+wn&+Wi&+wd &+mrobes &+Lof the &+mhunt&+wress&N~
+&+LA robe designed to drape over a spider body lies here.&N~
+~
+11 1 3 0 15 0 9 536870913 64 0 3221225471
+0 0 0 0 0 0 0 0
+0 0 100
+A
+13 15
+A
+5 5
+#402061
+barely visible elixir potion invisibility invis~
+&+La barely visible &+we&+Wl&+wi&+Lx&+wi&+Wr&+L of &+wliquid&n~
+&+LA barely visible elixir of liquid lays here.&N~
+~
+10 7 2 0 7 0 1 8404993 64 0 0
+36 189 0 0 0 0 0 0
+1 10000 100
+#402062
+bright shimmering potion detinv~
+&+wa &+Wbright&+w shimmering potion&N~
+&+wA bright shimmering potion lies here.&N~
+~
+10 7 2 0 7 0 1 8404993 64 0 0
+36 19 0 0 0 0 0 0
+1 10000 100
+#402063
+bright shimmering potion feathers fly~
+&+ca &+Ws&+ch&+Ci&+cm&+Cm&+ce&+Cr&+ci&+Cn&+cg &+Wpotion &+cwith &+wfe&+Wa&+wt&+Wh&+wers&N~
+&+wA bright shimmering potion with feathers lies here.&N~
+~
+10 7 2 0 7 0 1 8404993 64 0 0
+36 84 0 0 0 0 0 0
+1 10000 100
+#402064
+elixir unholy water armorbless armble armor bless~
+&+Lan elixir of unholy water&N~
+&+LAn elixir of unholy water lies here.&N~
+~
+10 7 2 0 7 0 1 8404993 64 0 0
+36 1 3 0 15 0 0 0
+1 5000 100
+#402065
+bubbling potion acid~
+&+ga &+Gb&+gu&+Gb&+gb&+Gl&+gi&+Gn&+gg &+cpotion &+gof &+Ca&+Gc&+Ci&+Gd&N~
+&+LAn elixir of unholy water lies here.&N~
+~
+10 7 2 0 7 0 1 8404993 64 0 0
+36 275 35 43 30 0 0 0
+1 50000 100
+#402066
+elixir heartsblood duergar dwarf heal~
+&+ran &+Relixir &+Lof the &+rhea&+Rrts&+rblood &+Lof a &+rDuergar Dwarf&N~
+&+rAn elixir of the heartsblood of a Duergar Dwarf lies here.&N~
+~
+10 7 2 0 7 0 1 8404993 64 0 0
+31 28 0 0 0 0 0 0
+1 200000 100
+#402067
+thick tome legendary lores lore book spellbook~
+&+La &+wthick &+Wtome &+Lof &+wl&+We&+wg&+Le&+wn&+Wd&+wa&+Lr&+wy &+wlores&N~
+&+LA bard's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 262107647 0
+0 0 200 0 0 0 0 0
+0 0 100
+A
+13 10
+A
+28 5
+#402068
+strange spotted underdark mushroom shroom~
+&+ma &+Lstrange &+Ms&+mp&+Mo&+mt&+Mt&+me&+Md&+L Underdark &+mmushroom&N~
+&+LA strangely &+ms&+Mp&+mo&+Mt&+mt&+Me&+md &+LUnderdark &+mmushroom &+Lgrows here amongst the rock.&N~
+~
+19 48 1 0 7 0 4097 1 64 0 0
+10 0 0 0 0 0 0 0
+0 0 100
+A
+55 4
+#402069
+moss-covered gloves pair~
+&+La &+wpair &+Lof &+gm&+co&+gs&+cs&+w-covered &+Lgloves&N~
+&+LA pair of &+gmoss-covered &+wgloves &+Llies here in the dust.&N~
+~
+11 13 1 0 15 0 3145737 129 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+13 15
+A
+3 5
+#402070
+moss-covered sleeves~
+&+Lsome &+gm&+co&+gs&+cs&+w-covered &+Lsleeves&N~
+&+LA pair of &+gmoss-covered &+wsleeves &+Llies here in the dust.&N~
+~
+11 13 1 0 15 0 3145737 257 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+24 -4
+A
+35 1
+#402071
+moss-covered leggings~
+&+Lsome &+gm&+co&+gs&+cs&+w-covered &+Lleggings&N~
+&+LA pair of &+gmoss-covered &+wgloves &+Llies here in the dust.&N~
+~
+11 13 1 0 15 0 3145737 33 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+22 -4
+A
+26 4
+#402072
+moss-covered cloak~
+&+La &+gm&+co&+gs&+cs&+w-covered &+Lcloak&N~
+&+LA &+gmoss-covered &+wcloak &+Llies here in the dust.&N~
+~
+11 13 1 0 15 0 3145737 1033 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+13 25
+A
+35 1
+#402073
+ring shimmering faerie fire~
+&+La &+mring &+Lof &+Ls&+wh&+Wi&+wm&+Lm&+we&+Wr&+wi&+Ln&+wg &+mfa&+Mer&+mie &+Mf&+mi&+Mr&+me&N~
+&+LA ring of shimmering &+Mfaerie fire&+L lays here in the dust.&N~
+~
+11 1 1 0 8 0 1056777 3 0 230158847 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+13 20
+A
+24 -3
+#402074
+silvery necklace obsidian pendant~
+&+La &+Wsilvery &+wnecklace&+L with &+wan &+Lobsidian &+Wpendant&N~
+&+WA silvery necklace lies here on the ground.&N~
+~
+11 15 3 0 7 0 2105353 5 0 228553215 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+5 5
+A
+3 3
+#402075
+staff elemental creation~
+&+La &+wstaff &+Lof &+ye&+Yl&+re&+Rm&+me&+Mn&+gt&+Ga&+Bl &+Wcreation&N~
+&+LA staff lays upon the ground here, lost and used-up.&N~
+~
+4 5 2 0 15 0 8361 24577 0 228061695 0
+46 2 2 244 0 0 0 0
+0 0 100
+#402076
+ebonywood wand shifting shadows wraith~
+&+wan &+Lebonywood&+W wand &+wof &+Ls&+wh&+Wi&+wf&+Lt&+wi&+Wn&+wg &+Lshadows&N~
+&+LAn ebonywood wand lies here in the dust, its magic used up.&N~
+~
+3 6 1 0 15 0 9 16385 0 230158847 0
+36 2 2 269 0 0 0 0
+1 0 100
+A
+13 20
+A
+3 3
+#402077
+pendant ruby encrusted spider~
+&+La &+wpendant &+Lof a &+rr&+Rub&+ry&+w-encrusted &+Lspider&N~
+&+LA pendant with a spider on it lies on the ground here.&N~
+~
+11 15 3 0 7 0 1056777 5 0 228553215 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+13 10
+A
+24 -4
+#402078
+ring silvery engraved sigils~
+&+wa &+Wsilvery &+wring &+Lwith &+me&+Mn&+mg&+Mr&+ma&+Mv&+me&+Md &+Lsigils&N~
+&+LA silvery ring with engraved sigils lies here on the ground.&N~
+~
+11 1 1 0 8 0 1056777 3 1 230158847 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+27 10
+A
+37 3
+#402079
+thin mithril shield faerie fire~
+&+La &+wthin &+Wmithril &+wshield &+Lenchanted with &+mfa&+Mer&+mie &+Mf&+mi&+Mr&+me&N~
+&+LA mithril shield lies on the ground, glowing with purple flames.&N~
+~
+37 18 2 0 15 0 9 513 64 0 0
+1 5 3 -75 2 0 0 0
+0 0 100
+A
+2 3
+A
+26 3
+#402080
+silvery flute instrument~
+&+La &+wsilvery &+Wflute&+L with &+We&+wn&+Lg&+wr&+Wa&+wv&+Le&+wd &+wsigils&N~
+&+LA silvery flute lays here on the ground.&N~
+~
+32 22 1 0 9 0 8201 8404993 0 268402687 0
+184 51 0 0 0 0 0 0
+0 20000 100
+A
+13 5
+A
+28 2
+#402081
+ebonywood lyre spidersilk strings instrument~
+&+wan &+Lebonywood &+Wlyre &+Lwith &+ws&+Wp&+wi&+Ld&+we&+Wr&+ws&+Li&+wl&+Wk&+L &+wstrings&N~
+&+LAn ebonywood lyre lays upon the ground here.&N~
+~
+32 22 1 0 9 0 8201 8404993 0 268402687 0
+185 51 0 0 0 0 0 0
+0 20000 100
+A
+13 5
+A
+28 2
+#402082
+silvery trumpet horn instrument~
+&+La &+wsilvery &+Wtrumpet horn&+L with &+We&+wn&+Lg&+wr&+Wa&+wv&+Le&+wd &+wsigils&N~
+&+WA silvery horn lies here on the ground.&N~
+~
+32 22 1 0 9 0 8201 8404993 0 268402687 0
+189 51 0 0 0 0 0 0
+0 20000 100
+A
+13 5
+A
+28 2
+#402083
+ebonywood mandolin instrument~
+&+wan &+Lebonywood &+Wmandolin &+Lwith &+ws&+Wp&+wi&+Ld&+we&+Wr&+ws&+Li&+wl&+Wk&+L &+wstrings&N~
+&+LAn ebonywood lyre lays upon the ground here.&N~
+~
+32 22 1 0 9 0 8201 8404993 0 268402687 0
+186 51 0 0 0 0 0 0
+0 20000 100
+A
+13 5
+A
+28 2
+#402084
+ebonywood harp spidersilk strings instrument~
+&+wan &+Lebonywood &+Wharp &+Lwith &+ws&+Wp&+wi&+Ld&+we&+Wr&+ws&+Li&+wl&+Wk&+L &+wstrings&N~
+&+LAn ebonywood lyre lays upon the ground here.&N~
+~
+32 22 1 0 9 0 8201 8404993 0 268402687 0
+187 51 0 0 0 0 0 0
+0 20000 100
+A
+13 5
+A
+28 2
+#402085
+ebonywood drum instrument~
+&+wan &+Lebonywood &+Wdrum &+wwith &+Wsilver &+We&+wn&+Lg&+wr&+Wa&+wv&+Le&+wd &+waccents&N~
+&+LA silvery flute lays here on the ground.&N~
+~
+32 22 1 0 9 0 8201 8404993 0 268402687 0
+188 51 0 0 0 0 0 0
+0 20000 100
+A
+13 5
+A
+28 2
+#402086
+bracelet dracolich teeth~
+&+La &+Wbracelet &+Lof &+Wd&+wr&+La&+wc&+Wo&+wl&+Li&+wc&+Wh &+wteeth&N~
+&+LA bracelet of dracolich teeth lies upon the ground here, rotting.&N~
+~
+9 10 2 0 15 0 12425 4097 64 0 0
+-20 0 0 3 0 0 0 0
+0 0 100
+A
+35 2
+A
+13 20
+#402087
+dagger carved obsidian~
+&+La &+wdagger &+Lof &+wcarved &+Lobsidian&N~
+&+LA dagger of carved obsidian lies here.&N~
+~
+5 36 2 0 9 0 16777240 8396801 64 268374015 0
+2 3 3 0 1 0 0 0
+2 10000 100
+A
+18 2
+A
+19 3
+#402088
+eyepatch swirling shadows~
+&+Lan &+Weyepatch&+L of &+Ws&+ww&+Li&+wr&+Wl&+Li&+wn&+Wg &+Lshadows&N~
+&+LA small cluster of swirling shadows lies here in the form of an eyepatch.&N~
+~
+9 1 1 0 15 0 9 131073 64 0 0
+-5 0 0 3 0 0 0 0
+0 0 100
+A
+33 2
+#402089
+mystical tome book spellbook otherworldly scholars~
+&+La &+Wm&+wy&+Ls&+wt&+Wi&+wc&+La&+wl &+Wtome &+Lof the &+wo&+Lt&+wh&+We&+wr&+Lw&+wo&+Wr&+wl&+Ld&+wl&+Wy &+wscholars&N~
+&+LA mage's spellbook appears to have been discarded here.&N~
+~
+33 28 2 0 14 0 12288 8404993 64 264237567 0
+0 0 500 0 0 0 0 0
+0 0 100
+A
+35 3
+A
+33 3
+#402090
+sash plain linen~
+&+La long flowing &+Wsash&+L of &+ww&+Wo&+wv&+Le&+wn &+rsp&+Rid&+rer&+ws&+Wil&+wk&N~
+&+wA sash of plain linen lies crumbled in a pile here.&N~
+~
+11 3 2 0 7 0 8 2049 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+A
+13 20
+#402091
+long spidersilk robes shadows robe~
+&+Lsome flowing &+rsp&+Rid&+rer&+ws&+Wi&+wl&+Lk robes covered in &+ws&+Wh&+wad&+Lo&+wws&N~
+An unnamed object lies here, looking lonely and forelorn.~
+~
+9 3 2 0 14 0 8 9 64 263582207 355099
+-30 0 0 0 0 0 0 0
+2 0 100
+A
+13 20
+A
+25 5

@@ -394,3 +394,8 @@ void Guildhall::golem_died(P_char golem)
     this->save();
   }
 }
+Guildhall *find_gh_from_vnum( int room )
+{
+  Guildhall* gh = Guildhall::find_by_vnum( room );
+  return gh;
+}

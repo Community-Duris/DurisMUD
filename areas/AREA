@@ -213,7 +213,7 @@ cyrictunnel               *545
 kvarkpass_connector       *546-549
 wh                        *550-558
 trakkia                   *570-573
-nexus			  *575-580
+nexus                     *575-580
 ravenloft                 *583-587
 barovia2                  *588
 ship                      *600-649 New ships
@@ -308,7 +308,7 @@ troll_caves               *969
 icecrag                   *970-972
 sforest                   *974
 shady                     *975-977
-buildings		  *978
+buildings                 *978
 surfacemini               *979
 bandit                    *985
 ruins                     *986
@@ -337,22 +337,23 @@ lortower                  *1340
 brad                      *1350
 firesworn_altar           *1351
 *tiamats_lair             *1352
-azhural			  *1352
+azhural                   *1352
 eternal                   *1354
 PortSkythic               *1380
-mitashi			  *1382
-savannah		  *1385
-lornecro  		  *1389
-New_Brass_2012 		  *1390
-smoke			  *1398  	
+mitashi                   *1382
+savannah                  *1385
+lornecro                  *1389
+New_Brass_2012            *1390
+smoke	                    *1398  	
 magma                     *1420
-blackpearl		  *1422
+blackpearl                *1422
 Voluntown                 *1424
 *surf                     *2000
 *underdark                *2100
-tradeskills		  *4000
+tradeskills	              *4000
 siege                     *4010
+library                   *4020-4022
 surface                   *5000
-underdark		  *7000
+underdark	                *7000
 *    end zone adds top_of_world marker
 end                       *9999

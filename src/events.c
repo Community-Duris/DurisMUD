@@ -1087,7 +1087,7 @@ void event_reset_zone(P_char ch, P_char victim, P_obj obj, void *data)
   if (zone_table[zone].age >= zone_table[zone].lifespan &&
      (zone_table[zone].reset_mode == 2 || is_empty(zone)))
   {
-    reset_zone(zone, FALSE);
+    reset_zone(zone, 0);
   }
   else if(!zone_table[zone].reset_mode)
   {
@@ -1174,7 +1174,7 @@ void init_events(void)
   //    add_event(event_reset_zone, i, 0, 0, 0, 0, &j, sizeof(j));
   //  }
 
-  //  reset_zone(j, TRUE);
+  //  reset_zone(j, 2);
   //}
 
 

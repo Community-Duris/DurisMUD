@@ -35,6 +35,7 @@
 #include "multiplay_whitelist.h"
 #include "guildhall.h"
 #include "epic.h"
+#include "utility.h"
 
 /* external variables */
 
@@ -51,6 +52,7 @@ extern char valid_term_list[];
 extern const struct class_names class_names_table[];
 extern const char *command[];
 extern const char *fill_words[];
+extern const char *rude_ass[];
 extern const char *town_name_list[];
 extern const struct race_names race_names_table[];
 extern const struct bonus_stat bonus_stats[];
@@ -81,6 +83,8 @@ extern int top_of_mobt;
 extern P_index mob_index;
 extern int exp_table[];
 extern int new_exp_table[];
+extern void assign_racial_skills(P_char ch);
+extern void reset_racial_skills(P_char ch);
 
 #define TOGGLE_BIT(var, bit) ((var) = (var) ^ (bit))
 #define PLR_FLAGS(ch)          ((ch)->specials.act)
@@ -101,6 +105,10 @@ long unsigned int ip2ul(const char *ip);
 unsigned int game_locked = 0;       /* 0x00000001;  no creation */
 struct mm_ds *dead_pconly_pool = NULL;
 long int highestPCidNumb;
+
+void swapstat( P_desc d, char *arg);
+void select_swapstat( P_desc d, char *arg);
+void swapstats(P_char ch, int stat1, int stat2);
 
 int getNewPCidNumb(void)
 {
@@ -351,6 +359,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_BARBARIAN, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_BARBARIAN, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -441,6 +454,11 @@ void load_obj_to_newbies(P_char ch)
                                              1143, 203, 204, -1}));
 
   CREATE_KIT(RACE_GITHZERAI, CLASS_CONJURER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
+  CREATE_KIT(RACE_GITHZERAI, CLASS_SUMMONER, ((int[])
                                           {
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
@@ -540,6 +558,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_HUMAN, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_HUMAN, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -631,6 +654,11 @@ void load_obj_to_newbies(P_char ch)
                                              1143, 203, 204, -1}));
 
   CREATE_KIT(RACE_DROW, CLASS_CONJURER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
+  CREATE_KIT(RACE_DROW, CLASS_SUMMONER, ((int[])
                                           {
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
@@ -731,6 +759,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_DUERGAR, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_DUERGAR, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -826,6 +859,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_GNOME, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_GNOME, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -878,6 +916,11 @@ void load_obj_to_newbies(P_char ch)
                                            1106, 1107, 1108, 1109, -1}));
 
   CREATE_KIT(RACE_HALFELF, CLASS_CONJURER, ((int[])
+                                            {
+                                            1114, 1115, 1131, 706, 735, 731,
+                                            731, -1}));
+
+  CREATE_KIT(RACE_HALFELF, CLASS_SUMMONER, ((int[])
                                             {
                                             1114, 1115, 1131, 706, 735, 731,
                                             731, -1}));
@@ -992,6 +1035,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_HALFLING, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_HALFLING, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -1099,6 +1147,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_CENTAUR, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_CENTAUR, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -1144,6 +1197,9 @@ void load_obj_to_newbies(P_char ch)
   CREATE_KIT(RACE_HARPY, CLASS_CONJURER, ((int[])
                                           {
                                           706, 735, 731, 731, -1}));
+  CREATE_KIT(RACE_HARPY, CLASS_SUMMONER, ((int[])
+                                          {
+                                          706, 735, 731, 731, -1}));
   CREATE_KIT(RACE_HARPY, CLASS_ETHERMANCER, ((int[])
                                              {
                                              706, 735, 731, 731, -1}));
@@ -1179,6 +1235,11 @@ void load_obj_to_newbies(P_char ch)
                                               731, -1}));
   
   CREATE_KIT(RACE_PILLITHID, CLASS_CONJURER, ((int[])
+                                              {
+                                              1114, 1115, 1131, 706, 735, 731,
+                                              731, -1}));
+
+  CREATE_KIT(RACE_PILLITHID, CLASS_SUMMONER, ((int[])
                                               {
                                               1114, 1115, 1131, 706, 735, 731,
                                               731, -1}));
@@ -1264,6 +1325,11 @@ void load_obj_to_newbies(P_char ch)
                                              1143, 203, 204, -1}));
 
   CREATE_KIT(RACE_GITHYANKI, CLASS_CONJURER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
+  CREATE_KIT(RACE_GITHYANKI, CLASS_SUMMONER, ((int[])
                                           {
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
@@ -1377,6 +1443,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_MINOTAUR, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_MINOTAUR, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -1474,6 +1545,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_GREY, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_GREY, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -1567,6 +1643,11 @@ void load_obj_to_newbies(P_char ch)
                                              1143, 203, 204, -1}));
 
   CREATE_KIT(RACE_MOUNTAIN, CLASS_CONJURER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
+  CREATE_KIT(RACE_MOUNTAIN, CLASS_SUMMONER, ((int[])
                                           {
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
@@ -1690,6 +1771,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_OGRE, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_OGRE, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -1774,6 +1860,11 @@ void load_obj_to_newbies(P_char ch)
                                              1143, 203, 204, -1}));
 
   CREATE_KIT(RACE_ORC, CLASS_CONJURER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
+  CREATE_KIT(RACE_ORC, CLASS_SUMMONER, ((int[])
                                           {
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
@@ -2079,6 +2170,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_TROLL, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_TROLL, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -2176,6 +2272,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_GOBLIN, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_GOBLIN, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -2239,6 +2340,11 @@ void load_obj_to_newbies(P_char ch)
                                          -1}));
 
   CREATE_KIT(RACE_DRIDER, CLASS_CONJURER, ((int[])
+                                         {
+                                         1114, 1115, 1131, 706, 735, 731, 731,
+                                         -1}));
+
+  CREATE_KIT(RACE_DRIDER, CLASS_SUMMONER, ((int[])
                                          {
                                          1114, 1115, 1131, 706, 735, 731, 731,
                                          -1}));
@@ -2310,6 +2416,11 @@ void load_obj_to_newbies(P_char ch)
                                              1143, 203, 204, -1}));
 
   CREATE_KIT(RACE_KOBOLD, CLASS_CONJURER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_SUMMONER, ((int[])
                                           {
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
@@ -2443,6 +2554,11 @@ void load_obj_to_newbies(P_char ch)
                                           1114, 1115, 1131, 706, 735, 731,
                                           731, 203, 204, -1}));
 
+  CREATE_KIT(RACE_FIRBOLG, CLASS_SUMMONER, ((int[])
+                                          {
+                                          1114, 1115, 1131, 706, 735, 731,
+                                          731, 203, 204, -1}));
+
   CREATE_KIT(RACE_FIRBOLG, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
@@ -2511,6 +2627,11 @@ void load_obj_to_newbies(P_char ch)
                                          1114, 1115, 1131, 706, 735, 731, 731,
                                          -1}));
 
+  CREATE_KIT(RACE_WOODELF, CLASS_SUMMONER, ((int[])
+                                         {
+                                         1114, 1115, 1131, 706, 735, 731, 731,
+                                         -1}));
+
   CREATE_KIT(RACE_WOODELF, CLASS_DRUID, ((int[])
                                       {
                                       1135, 1136, 1137, 1138, 1139, 1140,
@@ -2537,7 +2658,7 @@ void load_obj_to_newbies(P_char ch)
                                      -1}));
 
 /*END Wood Elf Classes*/
-  
+
   if (ch->carrying && IS_PC(ch))        /* we are _NOT_ here to give people free eq many times */
     return;
 
@@ -2557,10 +2678,17 @@ void load_obj_to_newbies(P_char ch)
       LoadNewbyShit(ch, minotaur_evil_eq);
 
   if (newbie_kits[GET_RACE(ch)][flag2idx(ch->player.m_class)])
-    LoadNewbyShit(ch,
-                  newbie_kits[GET_RACE(ch)][flag2idx(ch->player.m_class)]);
+  {
+    LoadNewbyShit(ch, newbie_kits[GET_RACE(ch)][flag2idx(ch->player.m_class)]);
+  }
+  else if( GET_CLASS( ch, CLASS_BLIGHTER ) )
+  {
+                      // shield, weapons*5, armor*8.
+    LoadNewbyShit(ch, (int[]){1109, 1108, 1113, 1112, 1140, 677, 239, 618, 679, 680, 729, 729, 452, 437, -1});
+  }
 
-  if (world[ch->in_room].number == 29201) {
+  if (world[ch->in_room].number == 29201)
+  {
     P_obj note = read_object(29319, VIRTUAL);
 
     obj_to_char(note, ch);
@@ -2577,10 +2705,10 @@ void load_obj_to_newbies(P_char ch)
 
  bandage = read_object(393, VIRTUAL);
   obj_to_char(bandage, ch);
-  
+
  bandage = read_object(393, VIRTUAL);
   obj_to_char(bandage, ch);
-  
+
 }
 
 #undef CREATE_KIT
@@ -2631,6 +2759,10 @@ bool _parse_name(char *arg, char *name)
     "southeast",
     "northwest",
     "southwest",
+    "nw",
+    "ne",
+    "sw",
+    "se",
     "guide",
     "he",
     "she",
@@ -2671,11 +2803,13 @@ bool _parse_name(char *arg, char *name)
     if (isname(name, mob_index[i].keys))
       return TRUE;
 
-  if (search_block(name, command, TRUE) >= 0)
+  if( search_block(name, command, TRUE) >= 0 )
     return TRUE;
-  if (search_block(name, fill_words, TRUE) >= 0)
+  if( search_block(name, fill_words, TRUE) >= 0 )
     return TRUE;
-  if (search_block(name, smart_ass, TRUE) >= 0)
+  if( search_block(name, smart_ass, TRUE) >= 0 )
+    return TRUE;
+  if( sub_string_set(name, rude_ass) )
     return TRUE;
 
   return FALSE;
@@ -2982,10 +3116,10 @@ void enter_game(P_desc d)
     ch->specials.affected_by5 = 0;
 
     if(affected_by_spell(ch, AIP_YOUSTRAHDME))
-    affect_from_char(ch, AIP_YOUSTRAHDME);
+      affect_from_char(ch, AIP_YOUSTRAHDME);
 
     if(affected_by_spell(ch, AIP_YOUSTRAHDME2))
-    affect_from_char(ch, AIP_YOUSTRAHDME2);
+      affect_from_char(ch, AIP_YOUSTRAHDME2);
 
     ch->specials.z_cord = 0;    /* prevent swim crash bug */
 
@@ -2997,7 +3131,7 @@ void enter_game(P_desc d)
     //    clear_sacks(ch);
 
     /* this may fix the disguise not showing on who bug */
-    if (PLR_FLAGGED(ch, PLR_NOWHO))
+    if( PLR_FLAGGED(ch, PLR_NOWHO) )
       PLR_TOG_CHK(ch, PLR_NOWHO);
 
     /* check mail
@@ -3040,6 +3174,9 @@ void enter_game(P_desc d)
     set_char_size(ch);
 
     update_skills(ch);
+// Once racial skills are removed, this will be unnecessary.
+//  Furthermore, it will wipe any formerly-racial now-epic skills learned. - Lohrr
+//    reset_racial_skills( ch );
 
     set_surname(ch, 0);
 
@@ -3175,7 +3312,6 @@ void enter_game(P_desc d)
     ch->only.pc->wiz_invis = 56;
     do_vis(ch, 0, -4);          /* remind them of vis level */
   }
-
   if (d->rtype == RENT_DEATH)
   {
     act("$n has returned from the dead.", TRUE, ch, 0, 0, TO_ROOM);
@@ -3599,7 +3735,7 @@ void select_name(P_desc d, char *arg, int flag)
   for (; isspace(*arg); arg++) ;
   if (!*arg)
   {
-	SEND_TO_Q("Illegal name, please try another.\r\n", d);
+	SEND_TO_Q("Bad name, please try another.\r\n", d);
 	SEND_TO_Q("Name: ", d);
 
   //  close_socket(d);
@@ -4594,13 +4730,14 @@ void select_race(P_desc d, char *arg)
   case '!':
     strcpy(Gbuf, "KOBOLD");
     break;
+*/
   case '2':
     GET_RACE(d->character) = RACE_DRIDER;
     break;
   case '@':
     strcpy(Gbuf, "DRIDER");
     break;
-  case '3':
+/*  case '3':
     GET_RACE(d->character) = RACE_KUOTOA;
     break;
   case '#':
@@ -4843,8 +4980,9 @@ void select_bonus(P_desc d, char *arg)
   {
     display_characteristics(d);
     display_stats(d);
-    SEND_TO_Q(keepchar, d);
-    STATE(d) = CON_KEEPCHAR;
+//    SEND_TO_Q(keepchar, d);
+    SEND_TO_Q("Do you want to swap stats (Y/N): ", d);
+    STATE(d) = CON_SWAPSTATYN;
     return;
   }
   display_stats(d);
@@ -6238,6 +6376,14 @@ void nanny(P_desc d, char *arg)
     select_bonus(d, arg);
     break;
 
+  case CON_SWAPSTATYN:
+    select_swapstat( d, arg );
+    break;
+
+  case CON_SWAPSTAT:
+    swapstat( d, arg );
+    break;
+
     /* Select alignment for new player, when appropriate */
   case CON_ALIGN:
     select_alignment(d, arg);
@@ -6567,4 +6713,236 @@ void Decrypt(char *text, int sizeOfText, const char *key, int sizeOfKey)
 
     text[i] = decryptedChar;
   }
+}
+
+void show_swapstat( P_desc d )
+{
+  SEND_TO_Q("\r\nThe following letters correspond to the stats:\r\n", d);
+  SEND_TO_Q("(S)trength            (P)ower\n\r"
+    "(D)exterity           (I)ntelligence\n\r"
+    "(A)gility             (W)isdom\n\r"
+    "(C)onstitution        C(h)arisma\n\r"
+    "(L)uck\n\r", d);
+  SEND_TO_Q("\r\nEnter two letters separated by a space to swap: \r\n", d);
+}
+
+void select_swapstat( P_desc d, char *arg )
+{
+  /* skip whitespaces */
+  for (; isspace(*arg); arg++) ;
+
+  switch (*arg)
+  {
+  case 'N':
+  case 'n':
+    SEND_TO_Q("\r\n\r\nAccepting these stats.\r\n\r\n", d);
+    display_characteristics(d);
+    display_stats(d);
+    SEND_TO_Q(keepchar, d);
+    STATE(d) = CON_KEEPCHAR;
+    break;
+  case 'Y':
+  case 'y':
+    show_swapstat( d );
+    STATE(d) = CON_SWAPSTAT;
+    break;
+  default:
+    SEND_TO_Q("\r\nUnrecognized response.\r\n", d);
+    display_stats(d);
+    SEND_TO_Q("Do you want to swap stats (Y/N): ", d);
+    STATE(d) = CON_SWAPSTATYN;
+    break;
+  }
+}
+
+void swapstat( P_desc d, char *arg )
+{
+  char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+  int stat1, stat2;
+
+  arg = one_argument(arg, arg1);
+  arg = one_argument(arg, arg2);
+  if( !*arg1 || !*arg2 )
+  {
+    SEND_TO_Q("\r\nUnrecognized response.\r\n", d);
+    display_stats(d);
+    SEND_TO_Q("Do you want to swap stats (Y/N): ", d);
+    STATE(d) = CON_SWAPSTATYN;
+    return;
+  }
+  switch( LOWER(*arg1) )
+  {
+    case 's':
+      stat1 = 1;
+      break;
+    case 'd':
+      stat1 = 2;
+      break;
+    case 'a':
+      stat1 = 3;
+      break;
+    case 'c':
+      stat1 = 4;
+      break;
+    case 'p':
+      stat1 = 5;
+      break;
+    case 'i':
+      stat1 = 6;
+      break;
+    case 'w':
+      stat1 = 7;
+      break;
+    case 'h':
+      stat1 = 8;
+      break;
+    case 'l':
+      stat1 = 9;
+      break;
+    default:
+      stat1 = -1;
+  }
+  switch( LOWER(*arg2) )
+  {
+    case 's':
+      stat2 = 1;
+      break;
+    case 'd':
+      stat2 = 2;
+      break;
+    case 'a':
+      stat2 = 3;
+      break;
+    case 'c':
+      stat2 = 4;
+      break;
+    case 'p':
+      stat2 = 5;
+      break;
+    case 'i':
+      stat2 = 6;
+      break;
+    case 'w':
+      stat2 = 7;
+      break;
+    case 'h':
+      stat2 = 8;
+      break;
+    case 'l':
+      stat2 = 9;
+      break;
+    default:
+      stat2 = -1;
+  }
+  if( stat1 == -1 || stat2 == -1 )
+  {
+    SEND_TO_Q("\r\nUnrecognized response.\r\n", d);
+    display_stats(d);
+    SEND_TO_Q("Do you want to swap stats (Y/N): ", d);
+    STATE(d) = CON_SWAPSTATYN;
+    return;
+  }
+
+  swapstats( d->character, stat1, stat2 );
+
+    display_stats(d);
+    SEND_TO_Q("Do you want to swap more stats (Y/N): ", d);
+    STATE(d) = CON_SWAPSTATYN;
+}
+
+void swapstats(P_char ch, int stat1, int stat2)
+{
+  int  tmp;
+  sh_int *pstat1;
+
+  // Record stat1 value and location.
+  switch( stat1 )
+  {
+    case 1:
+      tmp = ch->base_stats.Str;
+      pstat1 = &(ch->base_stats.Str);
+      break;
+    case 2:
+      tmp = ch->base_stats.Dex;
+      pstat1 = &(ch->base_stats.Dex);
+      break;
+    case 3:
+      tmp = ch->base_stats.Agi;
+      pstat1 = &(ch->base_stats.Agi);
+      break;
+    case 4:
+      tmp = ch->base_stats.Con;
+      pstat1 = &(ch->base_stats.Con);
+      break;
+    case 5:
+      tmp = ch->base_stats.Pow;
+      pstat1 = &(ch->base_stats.Pow);
+      break;
+    case 6:
+      tmp = ch->base_stats.Int;
+      pstat1 = &(ch->base_stats.Int);
+      break;
+    case 7:
+      tmp = ch->base_stats.Wis;
+      pstat1 = &(ch->base_stats.Wis);
+      break;
+    case 8:
+      tmp = ch->base_stats.Cha;
+      pstat1 = &(ch->base_stats.Cha);
+      break;
+    case 9:
+      tmp = ch->base_stats.Luck;
+      pstat1 = &(ch->base_stats.Luck);
+      break;
+    default:
+      send_to_char( "Error in swapstats Part 1!  Tell a God.\n\r", ch );
+      return;
+      break;
+  }
+  // Swap: put stat2 value into stat1 and tmp into stat2 value.
+  switch( stat2 )
+  {
+    case 1:
+      *pstat1 = ch->base_stats.Str;
+      ch->base_stats.Str = tmp;
+      break;
+    case 2:
+      *pstat1 = ch->base_stats.Dex;
+      ch->base_stats.Dex = tmp;
+      break;
+    case 3:
+      *pstat1 = ch->base_stats.Agi;
+      ch->base_stats.Agi = tmp;
+      break;
+    case 4:
+      *pstat1 = ch->base_stats.Con;
+      ch->base_stats.Con = tmp;
+      break;
+    case 5:
+      *pstat1 = ch->base_stats.Pow;
+      ch->base_stats.Pow = tmp;
+      break;
+    case 6:
+      *pstat1 = ch->base_stats.Int;
+      ch->base_stats.Int = tmp;
+      break;
+    case 7:
+      *pstat1 = ch->base_stats.Wis;
+      ch->base_stats.Wis = tmp;
+      break;
+    case 8:
+      *pstat1 = ch->base_stats.Cha;
+      ch->base_stats.Cha = tmp;
+      break;
+    case 9:
+      *pstat1 = ch->base_stats.Luck;
+      ch->base_stats.Luck = tmp;
+      break;
+    default:
+      send_to_char( "Error in swapstats Part 2!  Tell a God.\n\r", ch );
+      return;
+      break;
+  }
+
+  ch->curr_stats = ch->base_stats;
 }

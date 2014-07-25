@@ -127,7 +127,7 @@ int guildhall_cargo_board(P_obj obj, P_char ch, int cmd, char *arg);
 
 int check_gh_home(P_char ch, int r_room);
 P_obj find_gh_library_book_obj(P_char ch);
-
+Guildhall *find_gh_from_vnum( int room );
 //
 // Guildhall classes
 //

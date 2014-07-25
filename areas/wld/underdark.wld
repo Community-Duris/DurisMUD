@@ -182534,7 +182534,7 @@ D1
 D2
 ~
 ~
-0 0 813742
+0 0 402000
 D3
 ~
 ~
@@ -183556,7 +183556,7 @@ S
 #813706
 Dispersement room for Wilms~
 ~
-7000 1 29 0
+7000 142639233 29 0
 D0
 ~
 ~
@@ -183689,7 +183689,7 @@ D0
 D1
 ~
 ~
-0 0 813742
+0 0 0
 D2
 ~
 ~
@@ -183700,9 +183700,9 @@ D3
 0 0 813740
 S
 #813742
-&+LThe Massive Cavern Walls of the &+mUrusi&n~
+&+LThe Marker for Library zone.&n~
 ~
-7000 0 27 0
+7000 134250688 0 0
 D0
 ~
 ~
@@ -183739,7 +183739,7 @@ D2
 D3
 ~
 ~
-0 0 813742
+0 0 0
 S
 #813763
 &+LThe Massive Cavern Walls of the &+mUrusi&n~

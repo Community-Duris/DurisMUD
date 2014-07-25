@@ -544,7 +544,7 @@ G 1 34551 1 0 100 0 0 0            *    the skull of pestilence
 F 1 34560 4 34775 100 0 0 0        * an enormous black steed (following)
 M 0 34561 8 34776 100 0 0 0        * a skeletal protector
 M 0 34561 8 34777 100 0 0 0        * a skeletal protector
-M 0 34562 4 34778 100 0 0 0        * a skeletal worshiper
+M 0 34562 4 34778 100 0 0 0        * a skeletal worshipper
 M 0 34563 4 34779 100 0 0 0        * a skeletal mage
 M 0 34550 12 34781 100 0 0 0       * a patrolling doomguard
 M 0 34552 13 34781 100 0 0 0       * a patrolling doomguard
@@ -555,13 +555,13 @@ F 1 34560 4 34783 100 0 0 0        * an enormous black steed (following)
 M 0 34561 8 34784 100 0 0 0        * a skeletal protector
 M 0 34561 8 34785 100 0 0 0        * a skeletal protector
 M 0 34563 4 34786 100 0 0 0        * a skeletal mage
-M 0 34562 4 34787 100 0 0 0        * a skeletal worshiper
+M 0 34562 4 34787 100 0 0 0        * a skeletal worshipper
 M 0 34544 1 34791 100 0 0 0        * The Horseman of Death
 E 1 34556 1 2 100 0 0 0            *   a ring of tortured souls
 G 1 34549 1 0 100 0 0 0            *    the skull of death
 F 1 34560 4 34791 100 0 0 0        * an enormous black steed (following)
 M 0 34563 4 34792 100 0 0 0        * a skeletal mage
-M 0 34562 4 34793 100 0 0 0        * a skeletal worshiper
+M 0 34562 4 34793 100 0 0 0        * a skeletal worshipper
 M 0 34561 8 34794 100 0 0 0        * a skeletal protector
 M 0 34561 8 34795 100 0 0 0        * a skeletal protector
 M 0 34547 1 34799 100 0 0 0        * The Horseman of War
@@ -569,7 +569,7 @@ G 1 34559 1 0 100 0 0 0            *    a cold steel axe called 'Brainripper'
 G 1 34548 1 0 100 0 0 0            *    the skull of war
 F 1 34560 4 34799 100 0 0 0        * an enormous black steed (following)
 M 0 34561 8 34800 100 0 0 0        * a skeletal protector
-M 0 34562 4 34801 100 0 0 0        * a skeletal worshiper
+M 0 34562 4 34801 100 0 0 0        * a skeletal worshipper
 M 0 34561 8 34802 100 0 0 0        * a skeletal protector
 M 0 34563 4 34803 100 0 0 0        * a skeletal mage
 M 0 34568 1 34805 100 0 0 0        * a majestic platinum dragon

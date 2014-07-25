@@ -190,12 +190,12 @@ int mana_regen(P_char ch)
     if (GET_CHAR_SKILL(ch, SKILL_ADVANCED_MEDITATION) >= 90)
     {
       gain = (int) (gain * 2.5);
-              notch_skill(ch, SKILL_ADVANCED_MEDITATION, 50);
+              notch_skill(ch, SKILL_ADVANCED_MEDITATION, 2);
     }
     else
     {
       gain *= 2;
-             notch_skill(ch, SKILL_ADVANCED_MEDITATION, 50);
+             notch_skill(ch, SKILL_ADVANCED_MEDITATION, 2);
     }
   }
   */
@@ -442,6 +442,7 @@ void gain_practices(P_char ch)
   case CLASS_SORCERER:
   case CLASS_NECROMANCER:
   case CLASS_CONJURER:
+  case CLASS_SUMMONER:
   case CLASS_SHAMAN:
   case CLASS_CLERIC:
   case CLASS_DRUID:
@@ -467,6 +468,7 @@ void lose_practices(P_char ch)
   case CLASS_SORCERER:
   case CLASS_NECROMANCER:
   case CLASS_CONJURER:
+  case CLASS_SUMMONER:
   case CLASS_SHAMAN:
   case CLASS_CLERIC:
   case CLASS_DRUID:
@@ -490,7 +492,7 @@ void githyanki_weapon(P_char ch)
 
   if (GET_CLASS(ch, CLASS_NECROMANCER) || GET_CLASS(ch, CLASS_SORCERER) ||
       GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_CONJURER) ||
-      GET_CLASS(ch, CLASS_ILLUSIONIST))
+      GET_CLASS(ch, CLASS_ILLUSIONIST) || GET_CLASS(ch, CLASS_SUMMONER) )
   {
     sword = read_object(19, VIRTUAL);
     if (sword)
@@ -859,6 +861,8 @@ float gain_exp_modifiers(P_char ch, P_char victim, float XP)
         XP = XP * get_property("gain.exp.mod.mindflayer", 1.00);
       else if(GET_CLASS(victim, CLASS_REAVER))
         XP = XP * get_property("gain.exp.mod.reaver", 1.00);
+      else if(GET_CLASS(victim, CLASS_SUMMONER))
+        XP = XP * get_property("gain.exp.mod.summoner", 1.00);
       else
         XP = XP * get_property("gain.exp.mod.other", 1.00);
     }

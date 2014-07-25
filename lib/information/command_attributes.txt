@@ -24,9 +24,8 @@ GET_C_LUK(ch
 ~
 bash
 GET_C_STR(ch
-GET_C_AGI(ch
+GET_C_DEX(ch
 GET_C_AGI(vi
-GET_C_AGI(ch
 GET_C_STR(ch
 ~
 battle orders

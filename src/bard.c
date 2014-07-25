@@ -496,12 +496,11 @@ void do_bardcheck_action(P_char ch, char *arg, int cmd)
 void bard_drifting(int l, P_char ch, P_char victim, int song)
 {
   int skill = GET_CHAR_SKILL(ch, SONG_DRIFTING);
-  
-  if(!(ch) ||
-     !IS_ALIVE(ch))
-        return;
- 
-  if(skill > number(1, 300))
+
+  if(!(ch) || !IS_ALIVE(ch))
+    return;
+
+  if(skill > number(1, 300) || IS_TRUSTED(ch) )
     spell_group_teleport(l, ch, 0, 0, victim, 0);
 }
 
@@ -580,67 +579,58 @@ void bard_drifting(int l, P_char ch, P_char victim, int song)
 void bard_healing(int l, P_char ch, P_char victim, int song)
 {
   struct affected_type af;
- if(!affected_by_spell(victim, SONG_HEALING) ||
-     (affected_by_spell(victim, SONG_HEALING) &&  (get_linked_char(victim, LNK_SNG_HEALING) == ch)))
+  if( !affected_by_spell(victim, SONG_HEALING)
+    || (affected_by_spell(victim, SONG_HEALING) && (get_linked_char(victim, LNK_SNG_HEALING) == ch)))
   {
-  int healed, old_hits = GET_HIT(ch);
-  //healed = l * 3 * number(40, 80) / 100;
-  //spell_heal(l, ch, 0, 0, victim, NULL);
-  healed = GET_C_CHA(ch) / 3;
-  healed = healed + GET_LEVEL(ch);
-  
-   act("&+WYour body feels restored by the power of $n's soothing song!", FALSE, ch, 0, victim, TO_VICT);
-  if(ch == victim)
-  {
-    act("&+WYour body feels restored by the power of your soothing song!", FALSE, ch, 0, victim, TO_CHAR);
-    heal(victim, ch, healed , GET_MAX_HIT(victim) - number(1, 4));
-  }
-  else
-  {
-   healed = (healed * .65);
-   heal(victim, ch, healed , GET_MAX_HIT(victim) - number(1, 4));
-  }
+    int healed, old_hits = GET_HIT(ch);
+    //healed = l * 3 * number(40, 80) / 100;
+    //spell_heal(l, ch, 0, 0, victim, NULL);
+    healed = GET_C_CHA(ch) / 3;
+    healed = healed + GET_LEVEL(ch);
 
+    act("&+WYour body feels restored by the power of $n's soothing song!", FALSE, ch, 0, victim, TO_VICT);
+    if(ch == victim)
+    {
+      act("&+WYour body feels restored by the power of your soothing song!", FALSE, ch, 0, victim, TO_CHAR);
+      heal(victim, ch, healed , GET_MAX_HIT(victim) - number(1, 4));
+    }
+    else
+    {
+      healed = (healed * .65);
+      heal(victim, ch, healed , GET_MAX_HIT(victim) - number(1, 4));
+    }
+    update_pos(victim);
 
-  update_pos(victim);
-  
+    if(GET_SPEC(ch, CLASS_BARD, SPEC_MINSTREL))
+    {
+      if(IS_AFFECTED(victim, AFF_BLIND) && GET_CHAR_SKILL(ch, SONG_HEALING) >= 90)
+      {
+        spell_cure_blind(GET_LEVEL(ch), ch, NULL, SPELL_TYPE_SPELL, victim, NULL);
+      }
+      if(IS_AFFECTED2(victim, AFF2_POISONED) && GET_CHAR_SKILL(ch, SONG_HEALING) >= 50)
+      {
+        spell_remove_poison(GET_LEVEL(ch), ch, NULL, SPELL_TYPE_SPELL, victim, NULL);
+      }
+      if(GET_CHAR_SKILL(ch, SONG_HEALING) >= 70 && (affected_by_spell(victim, SPELL_DISEASE) ||
+        affected_by_spell(victim, SPELL_PLAGUE)))
+      {
+        spell_cure_disease(GET_LEVEL(ch), ch, NULL, SPELL_TYPE_SPELL, victim, NULL);
+      }
+    }
+    else if(GET_SPEC(ch, CLASS_BARD, SPEC_DISHARMONIST))
+    {
+      if(IS_AFFECTED2(ch, AFF2_SILENCED) && GET_CHAR_SKILL(ch, SONG_HEALING) >= 90)
+      {
+        affect_from_char(ch, SPELL_SILENCE);
+      }
+    }
 
-   if(GET_SPEC(ch, CLASS_BARD, SPEC_MINSTREL))
-  {
-    if(IS_AFFECTED(victim, AFF_BLIND) &&
-        GET_CHAR_SKILL(ch, SONG_HEALING) >= 90)
-    {
-      spell_cure_blind(GET_LEVEL(ch), ch, NULL, SPELL_TYPE_SPELL, victim, NULL);
-    }
-    if(IS_AFFECTED2(victim, AFF2_POISONED) &&
-        GET_CHAR_SKILL(ch, SONG_HEALING) >= 50)
-    {
-      spell_remove_poison(GET_LEVEL(ch), ch, NULL, SPELL_TYPE_SPELL, victim, NULL);
-    }
-    if(GET_CHAR_SKILL(ch, SONG_HEALING) >= 70 &&
-      (affected_by_spell(victim, SPELL_DISEASE) ||
-      affected_by_spell(victim, SPELL_PLAGUE)))
-    {
-      spell_cure_disease(GET_LEVEL(ch), ch, NULL, SPELL_TYPE_SPELL, victim, NULL);
-    }
-  }
-  else if(GET_SPEC(ch, CLASS_BARD, SPEC_DISHARMONIST))
-  {
-    if(IS_AFFECTED2(ch, AFF2_SILENCED) &&
-        GET_CHAR_SKILL(ch, SONG_HEALING) >= 90)
-    {
-      affect_from_char(ch, SPELL_SILENCE);
-    }
-  }
-
-     memset(&af, 0, sizeof(af));
+    memset(&af, 0, sizeof(af));
     af.type = SONG_HEALING;
     af.duration = PULSE_VIOLENCE * 3;
     af.flags = AFFTYPE_SHORT | AFFTYPE_NODISPEL;
 
-
     linked_affect_to_char(victim, &af, ch, LNK_SNG_HEALING);
-
   }
   else
   {
@@ -661,7 +651,7 @@ void bard_charm(int l, P_char ch, P_char victim, int song)
   /* re-enable charm */
   /* return; *//* charm shouldn't be working .. */
 
-  if(GET_MASTER(victim))
+  if( GET_MASTER(victim) || GET_MASTER(ch) )
     return;
 
 
@@ -1662,26 +1652,22 @@ void event_echosong(P_char ch, P_char victim, P_obj obj, void *data)
 
 void event_bardsong(P_char ch, P_char victim, P_obj obj, void *data)
 {
-  int      echoChance = 0,song, l, room, i, terrainType = SECT_INSIDE;
-  P_obj    instrument = NULL;
+  int    echoChance = 0,song, l, room, i, terrainType = SECT_INSIDE;
+  P_obj  instrument = NULL;
   struct affected_type *af, *af2;
   struct char_link_data *cld, *next_cld;
   struct echo_details echoDetails;
   struct song_description *sd;
   P_char tch, next;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch))
-  {
+  if( !(ch) || !IS_ALIVE(ch) )
     return;
-  }
 
   song = *((int *) data);
-  
+
   if(!SINGING(ch))
-  {
     return;
-  }
+
   for (cld = ch->linked; cld; cld = next_cld)
   {
     next_cld = cld->next_linked;
@@ -1706,7 +1692,7 @@ void event_bardsong(P_char ch, P_char victim, P_obj obj, void *data)
     stop_singing(ch);
     return;
   }
-  
+
   if(CHAR_IN_NO_MAGIC_ROOM(ch))
   {
     send_to_char("&+BThe power of song has no effect here.\r\n", ch);
@@ -1763,11 +1749,11 @@ void event_bardsong(P_char ch, P_char victim, P_obj obj, void *data)
     }
   }
 
-  notch_skill(ch, song, 50);
+  notch_skill(ch, song, 2);
   if((instrument = has_instrument(ch)))
   {
     if(bard_get_type(song) == instrument->value[0] + INSTRUMENT_OFFSET)
-      notch_skill(ch, instrument->value[0] + INSTRUMENT_OFFSET, 50);
+      notch_skill(ch, instrument->value[0] + INSTRUMENT_OFFSET, 2);
   }
   for (af = ch->affected; af; af = af2)
   {
@@ -1965,7 +1951,6 @@ void do_play(P_char ch, char *arg, int cmd)
 
 void do_riff(P_char ch, char *arg, int cmd)
 {
-
   int s, level, i, l, room;
   struct affected_type *af, *af2;
   struct char_link_data *cld, *next_cld;
@@ -1973,75 +1958,73 @@ void do_riff(P_char ch, char *arg, int cmd)
   struct song_description *sd;
   P_char tch, next;
 
-  
-  if(!(ch) ||
-    !IS_ALIVE(ch))
-  {
+  if( !(ch) || !IS_ALIVE(ch) )
     return;
-  }
- 
-    if(affected_by_spell(ch, SKILL_RIFF))
+
+  if( affected_by_spell(ch, SKILL_RIFF) )
   {
-    send_to_char
-      ("You havent recovered yet from that last wild &+Criff&n!\n", ch);
+    send_to_char("You havent recovered yet from that last wild &+Criff&n!\n", ch);
     return;
   }
 
- if(affected_by_spell(ch, FIRST_INSTRUMENT))
+  if( affected_by_spell(ch, FIRST_INSTRUMENT) )
   {
     send_to_char("&+yYou haven't regained your composure.\r\n", ch);
     return;
   }
-  
-    if(!CAN_SING(ch))
+
+  if( !CAN_SING(ch) )
   {
     send_to_char("&+WYou are unable to sing while in this state.\r\n", ch);
     return;
 
   }
 
-    if(!IS_AFFECTED3(ch, AFF3_SINGING))
+  if(!IS_AFFECTED3(ch, AFF3_SINGING))
   {
     send_to_char("&+mYou must actively be &+Mplaying &+ma song in order to &+Criff&+m!&n\n", ch);
     return;
   }
-  
+
+  if(CHAR_IN_NO_MAGIC_ROOM(ch))
+  {
+    send_to_char("&+BThe power of song has no effect here.\r\n", ch);
+    return;
+  }
+
   arg = skip_spaces(arg);
-  if(!arg || !*arg)
+  if( !arg || !*arg )
   {
     send_to_char("&+YWhat &+Wsong &+Ywould you like to sing a quick verse from?\r\n", ch);
     return;
   }
-     
+
   if(number(1, 100) < GET_CHAR_SKILL(ch, SKILL_RIFF))
-      {
-      notch_skill(ch, SKILL_RIFF, get_property("skill.notch.offensive", 15)); 
-      }
+  {
+    notch_skill(ch, SKILL_RIFF, get_property("skill.notch.offensive", 6.25)); 
+  }
 
   if(number(1, 90) > GET_CHAR_SKILL(ch, SKILL_RIFF))
-      {
-        act("$n &+ctries to sing a quick &+Cverse&+c, but they cannot seem to recall the lines.&n", FALSE, ch, 0, 0, TO_ROOM);
-        act("&+cYou &+ctry to sing a quick &+Cverse&+c, but cannot seem to recall the lines.&n", FALSE, ch, 0, 0, TO_CHAR);
-        set_short_affected_by(ch, SKILL_RIFF, (int) (2 * PULSE_VIOLENCE));
-        do_action(ch, 0, CMD_COUGH);
-        return;
-      }
- 
+  {
+    act("$n &+ctries to sing a quick &+Cverse&+c, but they cannot seem to recall the lines.&n", FALSE, ch, 0, 0, TO_ROOM);
+    act("&+cYou &+ctry to sing a quick &+Cverse&+c, but cannot seem to recall the lines.&n", FALSE, ch, 0, 0, TO_CHAR);
+    set_short_affected_by(ch, SKILL_RIFF, (int) (2 * PULSE_VIOLENCE));
+    do_action(ch, NULL, CMD_COUGH);
+    return;
+  }
+
   s = -1;
   for (i = 0; songs[i].name && s == -1; i++)
     if(is_abbrev(arg, songs[i].name))
-    {
       s = songs[i].song;
-    }
+
   if(s == -1 || GET_CHAR_SKILL(ch, s) == 0)
   {
     send_to_char("You don't know that song.\r\n", ch);
     return;
   }
-  
 
-    if(ch &&
-    IS_ALIVE(ch))
+  if(ch && IS_ALIVE(ch))
   {
     for (i = 0; songwords[i].num; i++)
     {
@@ -2050,15 +2033,15 @@ void do_riff(P_char ch, char *arg, int cmd)
         act("$n &+Csuddenly breaks out a &+Wquick verse&+C from their &+Crepitiore &+Cof songs...&n", FALSE, ch, 0, 0, TO_ROOM);
         act("&+CYou suddenly break out a &+Wquick verse&+C from your &+Crepitiore &+Cof songs...&n", FALSE, ch, 0, 0, TO_CHAR);
 
-	 act(songwords[i].tochar, FALSE, ch, 0, 0, TO_CHAR);
+        act(songwords[i].tochar, FALSE, ch, 0, 0, TO_CHAR);
         act(songwords[i].toroom, FALSE, ch, 0, 0, TO_ROOM);
         if(number(1, 10) > 5)
         {
-         do_action(ch, 0, CMD_DANCE);
+          do_action(ch, 0, CMD_DANCE);
         }
         else
         {
-         do_action(ch, 0, CMD_TWIRL);
+          do_action(ch, 0, CMD_TWIRL);
         }
         break;
       }
@@ -2085,10 +2068,8 @@ void do_riff(P_char ch, char *arg, int cmd)
     next = tch->next_in_room;
 
     if(IS_TRUSTED(tch))
-    {
       continue;
-    }
-    
+
     if((ch == tch &&
       !(sd->flags & SONG_AGGRESSIVE)) ||
       (grouped(ch, tch) && !(sd->flags & SONG_AGGRESSIVE)) ||

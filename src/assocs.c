@@ -1105,7 +1105,7 @@ void do_society(P_char member, char *argument, int cmd)
 
     send_to_char("No you dont. You actually love him..\r\n", member);
           return;
-          
+
     ostracize_enemy(member, second);
     break;
     /* set hometown to guild room you are in */
@@ -1132,21 +1132,20 @@ void do_society(P_char member, char *argument, int cmd)
         send_to_char("You can only home inside of your guildhall!\r\n", member);
         return;
       }
-        
+
       if( !IS_MEMBER(GET_A_BITS(member)) || GET_A_NUM(member) != gh->assoc_id )
       {
         send_to_char("You can only home inside of YOUR guildhall!\r\n", member);
         return;
       }
-        
+
       int inn_vnum = gh->inn_vnum();
-        
       if(!inn_vnum)
       {
         send_to_char("Your guildhall doesn't have an inn!\r\n", member);
         return;
       }
-        
+
       sprintf(buf, "char %s home %d", J_NAME(member), inn_vnum);
       do_setbit(member, buf, CMD_SETHOME);
       sprintf(buf, "char %s orighome %d", J_NAME(member), inn_vnum);
@@ -1215,8 +1214,13 @@ void do_society(P_char member, char *argument, int cmd)
   }
   /* success -> update */
   if (test == 1)
-    if ((victim = get_char_vis(member, second)) != NULL)
+  {
+    if ((victim = get_char_online(second)) != NULL)
       update_member(victim, full);
+// Just because a member isn't online doesn't mean there's a bug.
+//    else
+//      send_to_char( "Couldn't update member.  Tell a God.\n", member );
+  }
   if (test > 1)
     update_asc(member, GET_A_NUM(member), full);
   return;
@@ -1506,19 +1510,25 @@ void update_member(P_char member, int full)
   /* can we fix this guy from a file? */
   asc_number = GET_A_NUM(member);
   temp = GET_A_BITS(member);
-  
+
   // check to see if they are homed in a guildhall
   // and reset to their original birthplace if they are no longer a guild member, or are homed in the wrong guildhall
   Guildhall *gh = Guildhall::find_by_vnum(GET_BIRTHPLACE(member));
-  if (!asc_number || !IS_MEMBER(temp) || (gh && gh->assoc_id != asc_number) )
+
+  // If they're homed in a guildhall,
+  if( gh )
   {
-    sprintf(home, "char %s home %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
-    do_setbit(member, home, CMD_SETHOME);
-    sprintf(home, "char %s orighome %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
-    do_setbit(member, home, CMD_SETHOME);
-    return;
+    // If they're no longer a member, or are a member of a different guild.
+    if( !IS_MEMBER(temp) || gh->assoc_id != asc_number )
+    {
+      logit(LOG_DEBUG, "%s was homed in GH but doesn't belong to guild, resetting to original home", GET_NAME(member));
+      sprintf(home, "char %s home %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
+      do_setbit(member, home, CMD_SETHOME);
+      sprintf(home, "char %s orighome %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
+      do_setbit(member, home, CMD_SETHOME);
+    }
   }
-  
+
 // old guildhalls (deprecated)
 //    /* let's check to see they are not still sethomed to a guildhall */
 //    temp_house = first_house;
@@ -1546,6 +1556,10 @@ void update_member(P_char member, int full)
 
   /* test for MIN_LEVEL */
   level_check(member);
+
+  // If not guilded, return.
+  if( asc_number <= 0 )
+    return;
 
   sprintf(Gbuf1, "%sasc.%u", ASC_DIR, asc_number);
   f = fopen(Gbuf1, "r");
@@ -3879,7 +3893,7 @@ void do_gmotd(P_char ch, char *argument, int cmd)
   f = fopen(buf, "w");
   text = str_dup(obj->action_description);
   strcat(text, "\r\n");
-  fprintf(f, text);
+  fprintf(f, "%s", text);
   fclose(f);
   obj_from_char(obj, TRUE);
   extract_obj(obj, TRUE);

@@ -16,6 +16,7 @@
 #include "prototypes.h"
 #include "structs.h"
 #include "utils.h"
+#include "utility.h"
 #include "comm.h"
 #include "mm.h"
 #include "spells.h"
@@ -25,7 +26,7 @@
 #define ARTIFACT_DIR "Players/Artifacts/"
 #define ARTIFACT_MORT_DIR "Players/Artifacts/Mortal/"
 #define ARTI_BIND_DIR "Players/Artifacts/Bind/"
-#define ARTIFACT_BLOOD_DAYS 3
+#define ARTIFACT_BLOOD_DAYS 5
 #define ARTIFACT_MAIN   0
 #define ARTIFACT_UNIQUE 1
 #define ARTIFACT_IOUN   2
@@ -43,7 +44,11 @@ extern char *artilist_mortal_ioun;
 void poof_arti( P_char ch, char *arg );
 void swap_arti( P_char ch, char *arg );
 void set_timer_arti( P_char ch, char *arg );
-
+void save_artifact_data( P_char owner, P_obj artifact );
+int is_tracked( P_obj artifact );
+void hunt_for_artis( P_char ch, char *arg );
+void arti_clear( P_char ch, char *arg );
+void nuke_eq( P_char );
 //
 // setupMortArtiList : copies everything over from 'real' arti list, to
 //                     be called once at boot, or whenever you want list
@@ -110,20 +115,23 @@ void UpdateArtiBlood(P_char ch, P_obj obj, int mod)
   FILE    *f;
   char     fname[256], name[256];
   char     Gbuf1[MAX_STRING_LENGTH];
-  int      vnum, id, last_time, uo, blood, oldtime, diff, newtime;
+  int      vnum, id, uo, oldtime, diff, newtime;
+  long unsigned last_time, blood;
 
 //  a = obj;
   if (mod != -1)
-
+  {
+    // If arti is relic of gods (transforms).
     if (obj_index[obj->R_num].virtual_number == 58 ||
         obj_index[obj->R_num].virtual_number == 59 ||
         obj_index[obj->R_num].virtual_number == 68)
     {
+      // 85 hrs ? WTH
       if (obj->timer[3] > time(NULL) - (85 * 60 * 60))
         obj->timer[3] = time(NULL) - (85 * 60 * 60);
       return;
     }
-
+  }
 
 //Spam the gods if more then 5 days passed since feed.
   if (mod == -1 && obj)
@@ -173,19 +181,18 @@ void UpdateArtiBlood(P_char ch, P_obj obj, int mod)
     return;
   }*/
 
-
   if (obj)
   {
     oldtime = obj->timer[3];
-    diff = time(NULL) - oldtime;        //0-10
+    diff = time(NULL) - oldtime;
 
-    bool bIsIoun = CAN_WEAR(obj, ITEM_WEAR_IOUN) ? true : false;
+    bool bIsIoun = CAN_WEAR(obj, ITEM_WEAR_IOUN);
     bool bIsUnique = (isname("unique", obj->name) && !isname("powerunique", obj->name));
     bool bIsTrueArti = (!bIsIoun && !bIsUnique);
 
-    if (diff > (86400 * 5))
+    if (diff > (86400 * ARTIFACT_BLOOD_DAYS))
     {
-      diff = (86400 * 5);
+      diff = (86400 * ARTIFACT_BLOOD_DAYS);
       oldtime = time(NULL) - diff;
     }
 
@@ -194,12 +201,12 @@ void UpdateArtiBlood(P_char ch, P_obj obj, int mod)
       struct obj_affect *af;
       int afMod = 0;
       int afLength = get_property("artifact.feeding.accum.timer", (int)60);
-      
+
       af = get_obj_affect(obj, TAG_OBJ_RECENT_FRAG);
       if (af)
         afMod = af->data;
       affect_from_obj(obj, TAG_OBJ_RECENT_FRAG);
-      
+
       // conditions for feed:
       //  prevMod is -1, or
       //  mod > 20, or
@@ -213,10 +220,8 @@ void UpdateArtiBlood(P_char ch, P_obj obj, int mod)
     		               ch);
     		  // set a new affect with the total frags
     		  mod += afMod;
-    		  
           statuslog(56, "ArtiBlood: artifact #%d DEFERRED %.02f frags", 
                     obj_index[obj->R_num].virtual_number, mod/100.0f);
-    		  
           set_obj_affected(obj, WAIT_SEC * afLength, TAG_OBJ_RECENT_FRAG, mod);
           return;
         }
@@ -230,13 +235,13 @@ void UpdateArtiBlood(P_char ch, P_obj obj, int mod)
       afMod = -1;
       set_obj_affected(obj, WAIT_SEC * afLength, TAG_OBJ_RECENT_FRAG, afMod);
     }  // bIsTrueArti
-    
+
     if (mod > 1)
     {
       statuslog(56, "ArtiBlood: %s #%d fed %.02f frags", 
                 bIsIoun ? "ioun" : bIsUnique ? "unique" : "artifact",
                 obj_index[obj->R_num].virtual_number, mod/100.0f);
-      diff = (86400 * 5 * mod) / 100;
+      diff = (86400 * ARTIFACT_BLOOD_DAYS * mod) / 100;
       obj->timer[3] = oldtime + diff;
       if ((oldtime + diff) > time(NULL))
         obj->timer[3] = time(NULL);
@@ -246,7 +251,7 @@ void UpdateArtiBlood(P_char ch, P_obj obj, int mod)
       diff = 0 - mod;
       obj->timer[3] = oldtime + diff;
       if ((oldtime + diff) > time(NULL))
-        obj->timer[3] = time(NULL);      
+        obj->timer[3] = time(NULL);
     }
 
     if (mod >= 100)
@@ -273,28 +278,19 @@ void UpdateArtiBlood(P_char ch, P_obj obj, int mod)
 
     if (f)
     {
-      fscanf(f, "%s %d %d %d %d", name, &id, &last_time, &uo, &blood);
+      fscanf(f, "%s %d %lu %d %lu", name, &id, &last_time, &uo, &blood);
 
       if ((id != GET_PID(ch)) && !uo)
       {
-        statuslog(56,
-                  "tried to track arti vnum #%d on %s when already tracked on %s.",
-                  vnum, GET_NAME(ch), name);
+        statuslog(56, "UpdateArtiBlood: tried to track arti vnum #%d on %s when already tracked on %s.",
+          vnum, GET_NAME(ch), name);
       }
 
       fclose(f);
     }
     else
     {
-      f = fopen(fname, "wt");
-      if (!f)
-      {
-        statuslog(56, "could not open arti file %s for writing", fname);
-        return;
-      }
-      fprintf(f, "%s %d %ld 0 %ld", GET_NAME(ch), GET_PID(ch), time(NULL), obj->timer[3]);
-      fclose(f);
-//                wizlog(56, "Artifact timer reset: %s now owns %s (#%d).", GET_NAME(ch), name, vnum);
+      save_artifact_data( ch, obj );
     }
   }
 }
@@ -307,8 +303,11 @@ void feed_artifact(P_char ch, P_obj obj, int feed_seconds, int bypass)
     return;
   }
 
+  // Stop artis from feeding at all.  Still want to save arti data though.
+  feed_seconds = 0;
+
   int owner_pid, timer, vnum;
-  
+
   vnum = GET_OBJ_VNUM(obj);
   sql_get_bind_data(vnum, &owner_pid, &timer);
 
@@ -321,69 +320,65 @@ void feed_artifact(P_char ch, P_obj obj, int feed_seconds, int bypass)
 
   int time_now = time(NULL);
 
-  //time_now += (5 * 86400); //old 205 hours - drannak
-  
-  if( obj->timer[3] < ( time_now - (5 * 86400) ) )
-    obj->timer[3] = ( time_now - (5 * 86400) );
-  
+// This code jumps the timer to maximum always?!?
+//  if( obj->timer[3] < ( time_now - (ARTIFACT_BLOOD_DAYS * 86400) ) )
+//    obj->timer[3] = ( time_now - (ARTIFACT_BLOOD_DAYS * 86400) );
+
   obj->timer[3] += feed_seconds;
-  if( obj->timer[3] > (time_now + (5 * 86400)))
-    obj->timer[3] = (time_now + 432000); //allowing people to feed over current limit (drannak)
-    
+  // Not allowing people to feed over limit
+  if( obj->timer[3] > (time_now + (ARTIFACT_BLOOD_DAYS * 86400)) )
+  {
+    // Keep track of how much arti actually fed.
+    feed_seconds -= obj->timer[3] - (time_now + ARTIFACT_BLOOD_DAYS * 86400);
+    obj->timer[3] = ( time_now + (ARTIFACT_BLOOD_DAYS * 86400) );
+  }
   statuslog(56, "Artifact: %s [%d] on %s fed [&+G%ld&+Lh &+G%ld&+Lm &+G%ld&+Ls&n]", 
             obj->short_description, GET_OBJ_VNUM(obj), GET_NAME(ch),
             feed_seconds / 3600, (feed_seconds / 60) % 60, feed_seconds % 60 );
-  
+
   if( feed_seconds > ( 12 * 3600 ) )
-  {  
+  {
     send_to_char("&+RYou feel a deep sense of satisfaction from somewhere...\r\n", ch);
   }
   else
   {
     send_to_char("&+RYou feel a light sense of satisfaction from somewhere...\r\n", ch);
   }
-  
+
   /*
    save to artifact files:
    try to load the artifact file; if it already exists, then it's already being tracked on another player.
    otherwise, update the time remaining timer
    */
-  
+
   FILE     *f;
   char     fname[256], name[256];
   char     Gbuf1[MAX_STRING_LENGTH];
-  int      id, last_time, uo, blood, oldtime, diff, newtime;
-  
+  int      id, uo, oldtime, diff, newtime;
+  long unsigned last_time, blood;
+
   vnum = GET_OBJ_VNUM(obj);
   sprintf(fname, ARTIFACT_DIR "%d", vnum);
   f = fopen(fname, "rt");
   blood = obj->timer[3];
-  
+
   if (f)
   {
-    fscanf(f, "%s %d %d %d %d", name, &id, &last_time, &uo, &blood);
-    
+    fscanf(f, "%s %d %lu %d %lu", name, &id, &last_time, &uo, &blood);
+
     if ((id != GET_PID(ch)) && !uo)
     {
-      statuslog(56,
-                "tried to track arti vnum #%d on %s when already tracked on %s.",
-                vnum, GET_NAME(ch), name);
+      statuslog(56, "feed_artifact: tried to track arti vnum #%d on %s when already tracked on %s.",
+        vnum, GET_NAME(ch), name);
     }
-    
+
     fclose(f);
   }
   else
   {
-    f = fopen(fname, "wt");
-    if (!f)
-    {
-      statuslog(56, "could not open arti file %s for writing", fname);
-      return;
-    }
-    fprintf(f, "%s %d %ld 0 %ld", GET_NAME(ch), GET_PID(ch), time(NULL), obj->timer[3]);
-    fclose(f);
+    save_artifact_data( ch, obj );
   }
-    
+
 }
 
 
@@ -394,12 +389,12 @@ void feed_artifact(P_char ch, P_obj obj, int feed_seconds, int bypass)
 //  arti : arti obj
 //    ch : char who now 'owns' arti
 //
-
-int add_owned_artifact(P_obj arti, P_char ch, int blood)
+int add_owned_artifact(P_obj arti, P_char ch, long unsigned blood)
 {
   FILE    *f;
   char     fname[256], name[256];
-  int      exist = 0, vnum, id, last_time, uo, t_blood;
+  int      exist = 0, vnum, id, uo;
+  long unsigned last_time, t_blood;
 
 
   if (!IS_ARTIFACT(arti) || !ch || IS_TRUSTED(ch) || IS_NPC(ch))
@@ -417,13 +412,12 @@ int add_owned_artifact(P_obj arti, P_char ch, int blood)
   if (f)
   {
     exist = 1;
-    fscanf(f, "%s %d %d %d %d", name, &id, &last_time, &uo, &t_blood);
+    fscanf(f, "%s %d %lu %d %lu", name, &id, &last_time, &uo, &t_blood);
 
     if ((id != GET_PID(ch)) && !uo)
     {
-      statuslog(56,
-                "tried to track arti vnum #%d on %s when already tracked on %s.",
-                vnum, GET_NAME(ch), name);
+      statuslog(56, "add_owned_artifact: tried to track arti vnum #%d on %s when already tracked on %s.",
+        vnum, GET_NAME(ch), name);
 
       fclose(f);
 
@@ -441,7 +435,7 @@ int add_owned_artifact(P_obj arti, P_char ch, int blood)
   // if(exist)
   if (f)
   {
-    fprintf(f, "%s %d %ld 0 %d", GET_NAME(ch), GET_PID(ch), time(NULL), blood);
+    fprintf(f, "%s %d %lu 0 %lu", GET_NAME(ch), GET_PID(ch), time(NULL), blood);
     /*
        else
        fprintf(f, "%s %d %d 0 %d", GET_NAME(ch), GET_PID(ch), time(NULL), time(NULL));
@@ -461,11 +455,11 @@ int add_owned_artifact(P_obj arti, P_char ch, int blood)
 //  arti : arti obj
 //    ch : char who currently 'owns' arti
 //
-
 int remove_owned_artifact(P_obj arti, P_char ch, int full_remove)
 {
   char     fname[256], name[256];
-  int      vnum, id, last_time, true_u, t_blood;
+  int      vnum, id, true_u;
+  long unsigned last_time, t_blood;
   FILE    *f;
 
 
@@ -486,7 +480,7 @@ int remove_owned_artifact(P_obj arti, P_char ch, int full_remove)
     if (!f)
       return FALSE;
 
-    fscanf(f, "%s %d %d %d %d", name, &id, &last_time, &true_u, &t_blood);
+    fscanf(f, "%s %d %lu %d %lu", name, &id, &last_time, &true_u, &t_blood);
 
     if (true_u)
     {
@@ -500,7 +494,7 @@ int remove_owned_artifact(P_obj arti, P_char ch, int full_remove)
 
     f = fopen(fname, "wt");
 
-    fprintf(f, "%s %d %d 1 %d", name, id, last_time, t_blood);
+    fprintf(f, "%s %d %lu 1 %lu", name, id, last_time, t_blood);
 
     fclose(f);
   }
@@ -521,7 +515,8 @@ int get_current_artifact_info(int rnum, int vnum, char *pname, int *id,
                               int get_mort, time_t * blood)
 {
   char     name[256];
-  int      t_id, t_last_time, t_tu, t_blood;
+  int      t_id, t_tu;
+  long unsigned t_last_time, t_blood;
   FILE    *f;
   P_char   owner;
   int      owner_race = 4;
@@ -540,7 +535,7 @@ int get_current_artifact_info(int rnum, int vnum, char *pname, int *id,
   if (!f)
     return FALSE;
 
-  fscanf(f, "%s %d %d %d %d", name, &t_id, &t_last_time, &t_tu, &t_blood);
+  fscanf(f, "%s %d %lu %d %lu", name, &t_id, &t_last_time, &t_tu, &t_blood);
 
   fclose(f);
 
@@ -595,6 +590,7 @@ void list_artifacts(P_char ch, char *arg, int type)
   int      others = 0;
   int      owning_side;
   P_obj    obj;
+  bool     mortal;
 
   sprintf(strn1, "");
 
@@ -603,8 +599,20 @@ void list_artifacts(P_char ch, char *arg, int type)
     send_to_char( "Invalid artifact type.\n\r", ch );
     return;
   }
-
-  if( !IS_TRUSTED(ch) && type == ARTIFACT_MAIN )
+  // Skip whitespaces..
+  while ( *arg == ' ' )
+  {
+    arg++;
+  }
+  if( *arg && is_abbrev( arg, "mortal" ) )
+  {
+    mortal = TRUE;
+  }
+  else
+  {
+    mortal = FALSE;
+  }
+  if( (!IS_TRUSTED(ch) || mortal) && type == ARTIFACT_MAIN )
   {
     if( artilist_mortal_main )
     {
@@ -613,7 +621,7 @@ void list_artifacts(P_char ch, char *arg, int type)
       return;
     }
   }
-  if( !IS_TRUSTED(ch) && type == ARTIFACT_UNIQUE )
+  if( (!IS_TRUSTED(ch) || mortal) && type == ARTIFACT_UNIQUE )
   {
     if( artilist_mortal_unique )
     {
@@ -622,7 +630,7 @@ void list_artifacts(P_char ch, char *arg, int type)
       return;
     }
   }
-  if( !IS_TRUSTED(ch) && type == ARTIFACT_IOUN )
+  if( (!IS_TRUSTED(ch) || mortal) && type == ARTIFACT_IOUN )
   {
     if( artilist_mortal_ioun )
     {
@@ -642,10 +650,8 @@ void list_artifacts(P_char ch, char *arg, int type)
     return;
   }
 
-  if (IS_TRUSTED(ch))
-    send_to_char
-      ("&+YOwner               Time       Last Update                   Artifact\r\n\r\n",
-       ch);
+  if( IS_TRUSTED(ch) && !mortal )
+    send_to_char("&+YOwner               Time       Last Update                   Artifact\r\n\r\n", ch);
   else
     send_to_char("&+YOwner               Artifact\r\n\r\n", ch);
 
@@ -698,12 +704,12 @@ void list_artifacts(P_char ch, char *arg, int type)
       others++;
     }
 
-    if (IS_TRUSTED(ch))
+    if (IS_TRUSTED(ch) && !mortal )
     {
       strcpy(strn2, ctime(&last_time));
       strn2[strlen(strn2) - 1] = '\0';
-      //    blood_time = (float) (ARTIFACT_BLOOD_DAYS - ((time(NULL) - blood) / 86400));
-      blood_time = (time(NULL) - blood);
+//      blood_time = (float) (ARTIFACT_BLOOD_DAYS - ((time(NULL) - blood) / 86400));
+      blood_time = ARTIFACT_BLOOD_DAYS * 86400 -(time(NULL) - blood);
       days = 0;
       minutes = 0;
       hours = 0;
@@ -792,6 +798,11 @@ void do_artifact(P_char ch, char *arg, int cmd)
     return;
 
   arg = one_argument( arg, buf );
+  // Skip whitespaces..
+  while ( *arg == ' ' )
+  {
+    arg++;
+  }
 
   if( !buf || !*buf || is_abbrev(buf, "list") )
   {
@@ -811,7 +822,7 @@ void do_artifact(P_char ch, char *arg, int cmd)
     return;
   }
 
-  if( GET_LEVEL(ch) < FORGER )
+  if( GET_LEVEL(ch) < FORGER || IS_NPC(ch) )
   {
     send_to_char( "Valid arguments are list, unique or ioun.\n\r", ch );
     return;
@@ -835,8 +846,20 @@ void do_artifact(P_char ch, char *arg, int cmd)
     return;
   }
 
+  if( buf && *buf && is_abbrev(buf, "hunt") )
+  {
+    hunt_for_artis( ch, arg );
+    return;
+  }
+
+  if( buf && *buf && is_abbrev(buf, "clear") )
+  {
+    arti_clear( ch, arg );
+    return;
+  }
+
   send_to_char( "Valid arguments are list, unique, ioun, swap, "
-    "poof or timer.\n\r", ch );
+    "poof, timer, hunt or clear.\n\r", ch );
 
 }
 
@@ -852,7 +875,8 @@ void event_artifact_poof(P_char ch, P_char victim, P_obj obj, void *data)
   else
     goto reschedule;
 
-  if (!IS_TRUSTED(ch) && obj->timer[3] + (5 * 24 * 60 * 60) < time(NULL))
+  // Important that this is <= and not just <.
+  if (!IS_TRUSTED(ch) && obj->timer[3] + (5 * 24 * 60 * 60) <= time(NULL))
   {
     act("Your $p vanishes with a bright flash of light!", FALSE, ch,
         obj, 0, TO_CHAR);
@@ -943,8 +967,8 @@ void poof_arti( P_char ch, char *arg )
   FILE *f;
   struct dirent *dire;
   int vnum = 0;
-  int t_id, t_last_time, t_tu, t_blood, i;
-
+  int t_id, t_tu, i;
+  long t_last_time, t_blood;
   one_argument( arg, buf );
 
   send_to_char( "\n\r | ", ch );
@@ -972,7 +996,7 @@ void poof_arti( P_char ch, char *arg )
     if( OBJ_WORN(obj) || OBJ_CARRIED(obj) )
     {
       // Set timer to poof and update.
-      obj->timer[3] = time(NULL) - 6 * 86400;
+      obj->timer[3] = time(NULL) - ARTIFACT_BLOOD_DAYS * 86400;
       // Yes, artifact_poof only cares about obj.
       event_artifact_poof(NULL, NULL, obj, NULL);
     }
@@ -1010,6 +1034,7 @@ void poof_arti( P_char ch, char *arg )
     vnum = 0;
     extract_obj(obj, FALSE);
   }
+  closedir(dir);
   if( vnum )
   {
     // Get name from arti file.
@@ -1021,7 +1046,7 @@ void poof_arti( P_char ch, char *arg )
       send_to_char(buf2, ch);
       return;
     }
-    fscanf(f, "%s %d %d %d %d", buf2, &t_id, &t_last_time, &t_tu, &t_blood);
+    fscanf(f, "%s %d %lu %d %lu", buf2, &t_id, &t_last_time, &t_tu, &t_blood);
     fclose(f);
 
     // Load pfile
@@ -1064,10 +1089,11 @@ void poof_arti( P_char ch, char *arg )
     {
       sprintf( buf3, "Arti '%s' %d is not on %s's pfile.", buf, vnum, buf2 );
       wizlog( 56, buf3 );
+      nuke_eq( owner );
     }
     else
     {
-      obj->timer[3] = time(NULL) - 6 * 86400;
+      obj->timer[3] = time(NULL) - ARTIFACT_BLOOD_DAYS * 86400;
       event_artifact_poof(NULL, NULL, obj, NULL);
       writeCharacter( owner, RENT_POOFARTI, owner->in_room );
     }
@@ -1097,7 +1123,8 @@ void swap_arti( P_char ch, char *arg )
   struct dirent *dire;
   int vnum = 0;
   int wearloc, i;
-  int t_id, t_last_time, t_tu, t_blood;
+  int t_id, t_tu;
+  long unsigned t_last_time, t_blood;
 
   arg = one_argument( arg, arti1name );
   arg = one_argument( arg, arti2name );
@@ -1157,6 +1184,7 @@ void swap_arti( P_char ch, char *arg )
       arti2 = NULL;
     }
   }
+  closedir(dir);
   // If found, send error arti2 already in game and return
   if( arti2 || vnum )
   {
@@ -1170,6 +1198,7 @@ void swap_arti( P_char ch, char *arg )
     return;
   }
 
+  // Now we know arti2 is not in the game or on a pfile.
   // Find arti1 in game or save file.
   // Check for artifact in game:
   arti1 = object_list;
@@ -1186,8 +1215,8 @@ void swap_arti( P_char ch, char *arg )
       break;
     arti1 = arti1->next;
   }
-  // If not found, check save files
   vnum = 0;
+  // If not found in game, check save files
   if( !arti1 )
   {
     dir = opendir(ARTIFACT_DIR);
@@ -1213,7 +1242,9 @@ void swap_arti( P_char ch, char *arg )
       extract_obj(arti1, FALSE);
       arti1 = NULL;
     }
+    closedir(dir);
   }
+  // If !arti1 and !vnum then nothing to swap.
   // If vnum then arti is on pfile.
   if( vnum )
   {
@@ -1226,7 +1257,7 @@ void swap_arti( P_char ch, char *arg )
       send_to_char(buf2, ch);
       return;
     }
-    fscanf(f, "%s %d %d %d %d", buf2, &t_id, &t_last_time, &t_tu, &t_blood);
+    fscanf(f, "%s %d %lu %d %lu", buf2, &t_id, &t_last_time, &t_tu, &t_blood);
     fclose(f);
 
     // Load pfile
@@ -1236,7 +1267,7 @@ void swap_arti( P_char ch, char *arg )
     owner->desc = NULL;
     if( restoreCharOnly( owner, buf2 ) < 0 )
     {
-      sprintf( buf, "poof_arti: %s has bad pfile.\n\r", buf2 );
+      sprintf( buf, "swap_arti: %s has bad pfile.\n\r", buf2 );
       send_to_char( buf, ch );
       return;
     }
@@ -1280,7 +1311,10 @@ void swap_arti( P_char ch, char *arg )
         {
           send_to_char( "Could not load arti2.\n\r", ch );
           if( vnum )
+          {
+            nuke_eq( owner );
             extract_char( owner );
+          }
           return;
         }
         if( IS_ARTIFACT(arti2) )
@@ -1298,7 +1332,10 @@ void swap_arti( P_char ch, char *arg )
       sprintf( buf, "Could not find artifact '%s'.\n\r", arti2name );
       send_to_char( buf, ch );
       if( vnum )
+      {
+        nuke_eq( owner );
         extract_char( owner );
+      }
       return;
     }
 
@@ -1318,6 +1355,7 @@ void swap_arti( P_char ch, char *arg )
         {
           sprintf( buf, "Artifact '%s' in undefined position.\r\n", arti1name );
           send_to_char( buf, ch );
+          extract_obj( arti2, FALSE );
           return;
         }
       }
@@ -1332,8 +1370,12 @@ void swap_arti( P_char ch, char *arg )
         {
           sprintf( buf, "Artifact '%s' not on owner, but is worn!?\r\n", arti1name );
           send_to_char( buf, ch );
+          extract_obj( arti2, FALSE );
           if( vnum )
+          {
+            nuke_eq( owner );
             extract_char( owner );
+          }
           return;
         }
         act( "$p suddenly tranforms in a bright flash of light!", FALSE,
@@ -1357,6 +1399,7 @@ void swap_arti( P_char ch, char *arg )
         act( "$p suddenly tranforms in a bright flash of light!", FALSE,
           ch, arti1, 0, TO_CHAR );
         obj_from_char( arti1, TRUE );
+        extract_obj( arti1, TRUE );
         obj_to_char( arti2, owner );
       }
       else
@@ -1368,7 +1411,6 @@ void swap_arti( P_char ch, char *arg )
     }
     else
     {
-      arti2->timer[3] = arti1->timer[3];
       obj_to_room( arti2, arti1->loc.room );
       act( "$p suddenly tranforms in a bright flash of light!", FALSE,
         NULL, arti1, 0, TO_ROOM );
@@ -1383,8 +1425,12 @@ void swap_arti( P_char ch, char *arg )
     // If not found, send error not found and return.
     sprintf( buf, "Could not find artifact '%s'.\r\n", arti1name );
     send_to_char( buf, ch );
+    // If vnum then owner was loaded, but not sent to room.
     if( vnum )
+    {
+      nuke_eq( owner );
       extract_char( owner );
+    }
     return;
   }
   // write pfile if applicable
@@ -1407,7 +1453,8 @@ void set_timer_arti( P_char ch, char *arg )
   DIR *dir;
   FILE *f;
   struct dirent *dire;
-  int timer, t_id, t_last_time, t_tu, t_blood, i;
+  int timer, t_id, t_tu, i;
+  long unsigned t_last_time, t_blood;
   int vnum = 0;
 
   arg = one_argument( arg, artiname );
@@ -1445,7 +1492,7 @@ void set_timer_arti( P_char ch, char *arg )
   if( obj )
   {
     // Set timer to last timer minutes: current - 5 days + minutes,
-    obj->timer[3] = time(NULL) - 5 * 86400 + 60 * timer;
+    obj->timer[3] = time(NULL) - ARTIFACT_BLOOD_DAYS * 86400 + 60 * timer;
     return;
   }
 
@@ -1471,6 +1518,7 @@ void set_timer_arti( P_char ch, char *arg )
     vnum = 0;
     extract_obj(obj, FALSE);
   }
+  closedir(dir);
   // If arti is on pfile
   if( vnum )
   {
@@ -1483,7 +1531,7 @@ void set_timer_arti( P_char ch, char *arg )
       send_to_char(buf2, ch);
       return;
     }
-    fscanf(f, "%s %d %d %d %d", buf2, &t_id, &t_last_time, &t_tu, &t_blood);
+    fscanf(f, "%s %d %lu %d %lu", buf2, &t_id, &t_last_time, &t_tu, &t_blood);
     fclose(f);
 
     // Load pfile
@@ -1501,7 +1549,7 @@ void set_timer_arti( P_char ch, char *arg )
     owner->next = character_list;
     character_list = owner;
     setCharPhysTypeInfo( owner );
-    // Find/Poof arti
+    // Find arti
     for( i = 0; i < MAX_WEAR; i++ )
     {
       if( !owner->equipment[i] )
@@ -1529,7 +1577,9 @@ void set_timer_arti( P_char ch, char *arg )
     }
     else
     {
-      obj->timer[3] = time(NULL) - 5 * 86400 + 60 * timer;
+      obj->timer[3] = time(NULL) - ARTIFACT_BLOOD_DAYS * 86400 + 60 * timer;
+      // Update the artifact file.
+      save_artifact_data( owner, obj );
       writeCharacter( owner, RENT_INN, owner->in_room );
     }
 
@@ -1541,5 +1591,383 @@ void set_timer_arti( P_char ch, char *arg )
     send_to_char( "Could not find artifact '", ch );
     send_to_char( buf, ch );
     send_to_char( "'.\n\r", ch );
+  }
+}
+
+void event_check_arti_poof( P_char ch, P_char vict, P_obj obj, void * arg )
+{
+  DIR           *dir;
+  FILE          *f;
+  struct dirent *dire;
+  int            vnum, i;
+  char           name[256];
+  int            t_id, t_tu;
+  long unsigned  t_last_time, t_blood;
+  P_char         owner;
+  P_obj          item;
+
+  debug( "event_check_arti_poof: beginning..." );
+
+  // Open the arti directory!
+  dir = opendir(ARTIFACT_DIR);
+  if (!dir)
+  {
+    statuslog( 56, "event_check_arti_poof: could not open arti dir (%s)\r\n", ARTIFACT_DIR );
+    wizlog( 56, "event_check_arti_poof: could not open arti dir (%s)\r\n", ARTIFACT_DIR );
+    return;
+  }
+  // Loop through arti files..
+  while( dire = readdir(dir) )
+  {
+    vnum = atoi(dire->d_name);
+    if (!vnum)
+      continue;
+    debug( "event_check_arti_poof: Checking '%s'", dire->d_name );
+
+    sprintf(name, ARTIFACT_DIR "%d", vnum);
+    f = fopen(name, "rt");
+
+    if (!f)
+    {
+      statuslog( 56, "event_check_arti_poof: could not open arti file (%s)\r\n", name );
+      wizlog( 56, "event_check_arti_poof: could not open arti file (%s)\r\n", name );
+      continue;
+    }
+
+    // Read arti file.
+    fscanf(f, "%s %d %lu %d %lu", name, &t_id, &t_last_time, &t_tu, &t_blood);
+    fclose(f);
+
+    // If arti is overdue to poof..
+    if( (ARTIFACT_BLOOD_DAYS * 86400 + t_blood) < time(NULL) )
+    {
+      statuslog( 56, "Poofing arti vnum %d", vnum );
+      wizlog( 56, "Poofing arti vnum %d", vnum );
+      // Load pfile
+      owner = (P_char) mm_get(dead_mob_pool);
+      clear_char(owner);
+      owner->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
+      owner->desc = NULL;
+      if( restoreCharOnly( owner, name ) < 0 )
+      {
+        statuslog( 56, "event_check_arti_poof: could not restoreCharOnly '%s'", name );
+        wizlog( 56, "event_check_arti_poof: could not restoreCharOnly '%s'", name );
+        extract_char( owner );
+        continue;
+      }
+      restoreItemsOnly( owner, 100 );
+      owner->next = character_list;
+      character_list = owner;
+      setCharPhysTypeInfo( owner );
+      // Find/Poof arti
+      for( i = 0; i < MAX_WEAR; i++ )
+      {
+        if( !owner->equipment[i] )
+          continue;
+        if( obj_index[owner->equipment[i]->R_num].virtual_number == vnum )
+          break;
+      }
+      // If not wearing it..
+      if( i == MAX_WEAR )
+      {
+        obj = owner->carrying;
+        while( obj )
+        {
+          if( obj_index[obj->R_num].virtual_number == vnum )
+            break;
+          obj = obj->next_content;
+        }
+      }
+      else
+        obj = owner->equipment[i];
+      // obj == artifact at this point or person doesn't have it?!
+      if( !obj )
+      {
+        statuslog( 56, "Arti %d is not on %s's pfile.", vnum, name );
+        wizlog( 56, "Arti %d is not on %s's pfile.", vnum, name );
+        sprintf(name, ARTIFACT_DIR "%d", vnum);
+        unlink(name);
+        // Remove eq from char and extract.
+        nuke_eq( owner );
+        extract_char( owner );
+      }
+      else
+      {
+        event_artifact_poof(NULL, NULL, obj, NULL);
+        writeCharacter( owner, RENT_POOFARTI, owner->in_room );
+        // Free memory
+        extract_char( owner );
+      }
+    }
+  }
+  closedir(dir);
+
+  debug( "event_check_arti_poof: ended." );
+  // 3600 = 60sec * 60min => Repeat every one hour (not too important to have it sooner).
+  add_event( event_check_arti_poof, 3600 * WAIT_SEC, ch, vict, obj, 0, arg, 0 );
+}
+
+// Saves artifact data for one artifact.
+void save_artifact_data( P_char owner, P_obj artifact )
+{
+  int   vnum = obj_index[artifact->R_num].virtual_number;
+  char  fname[256];
+  FILE *f;
+
+  sprintf(fname, ARTIFACT_DIR "%d", vnum);
+  f = fopen(fname, "wt");
+
+  if (!f)
+  {
+    statuslog(56, "save_artifact_data: could not open arti file '%s' for writing", fname);
+    debug( "save_artifact_data: could not open arti file '%s' for writing", fname);
+    return;
+  }
+
+  fprintf(f, "%s %d %lu 0 %lu", GET_NAME(owner), GET_PID(owner), time(NULL), artifact->timer[3]);
+
+  fclose(f);
+}
+
+// Returns -1 if artifact is not tracked, 0 if not an arti, or PID of arti owner.
+int is_tracked( P_obj artifact )
+{
+  char  fname[256];
+  FILE *f;
+  char  name[256];
+  int   id, uo, res;
+  long unsigned last_time, blood;
+
+  // Not an artifact ?!?
+  if( !artifact || !IS_ARTIFACT(artifact) )
+  {
+    debug( "is_tracked: passed non-artifact!" );
+    return 0;
+  }
+
+  sprintf( fname, "%s%d", ARTIFACT_DIR, obj_index[artifact->R_num].virtual_number );
+  f = fopen( fname, "r" );
+
+  // Not tracked
+  if( f == NULL )
+  {
+    debug( "is_tracked: couldn't open file '%s'.", fname );
+    return -1;
+  }
+
+  // If file is corrupted?
+  if( (res = fscanf(f, "%s %d %lu %d %lu", name, &id, &last_time, &uo, &blood)) < 5)
+  {
+    debug( "is_tracked: fscanf returned bad result: %d.", res );
+    fclose(f);
+    return -1;
+  }
+
+  fclose(f);
+  return id;
+}
+
+// Searches through all pfiles with initial *arg for artis.
+void hunt_for_artis( P_char ch, char *arg )
+{
+  char  buf[MAX_STRING_LENGTH];
+  char  dname[256];
+  char  fname[256];
+  int   wearloc;
+  int   pid;
+  DIR  *dir;
+  P_obj arti;
+  P_char owner;
+  struct dirent *dire;
+
+  if( !*arg || !isalpha(*arg) )
+  {
+    send_to_char( "Arti hunt needs a letter for which initial to hunt for.\n", ch );
+    send_to_char( "Arti hunt will then search all pfiles with said initial for artifacts, and add them to the arti list if necessary.\n", ch );
+    return;
+  }
+  *arg = LOWER( *arg );
+
+  // Read & loop through the directory..
+  // Open the directory!
+  sprintf( dname, "%s/%c", SAVE_DIR, *arg );
+  dir = opendir( dname );
+  if( !dir )
+  {
+    statuslog( 56, "hunt_for_artis: could not open arti dir (%s)\r\n", ARTIFACT_DIR );
+    debug( "hunt_for_artis: could not open arti dir (%s)\r\n", ARTIFACT_DIR );
+    return;
+  }
+  // Loop through the directory files.
+  while (dire = readdir(dir))
+  {
+    // Skip backup/locker files/etc
+    if( strstr( dire->d_name, "." ) )
+      continue;
+    owner = (struct char_data *) mm_get(dead_mob_pool);
+    owner->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
+    if( restoreCharOnly(owner, dire->d_name) < 0 )
+    {
+      sprintf( buf, "hunt_for_artis: %s has bad pfile.\n\r", dire->d_name );
+      send_to_char( buf, ch );
+      free_char( owner );
+      continue;
+    }
+    if( IS_TRUSTED( owner ) )
+    {
+      free_char( owner );
+      continue;
+    }
+// For debugging only.. gets spammy on live mud.
+//    sprintf( buf, "Hunting pfile of '%s'.\n", J_NAME(owner) );
+//    send_to_char( buf, ch );
+    restoreItemsOnly( owner, 100 );
+    owner->next = character_list;
+    character_list = owner;
+    setCharPhysTypeInfo( owner );
+    // Search each pfile:
+    // Search Worn equipment.
+    for( wearloc = 0; wearloc < MAX_WEAR;wearloc++ )
+    {
+      if( owner->equipment[wearloc] != NULL && IS_ARTIFACT(owner->equipment[wearloc]) )
+      {
+        sprintf( buf, "'%s' has arti %s (%d) : ", J_NAME(owner),
+          pad_ansi(owner->equipment[wearloc]->short_description, 35).c_str(),
+          obj_index[owner->equipment[wearloc]->R_num].virtual_number );
+        send_to_char( buf, ch );
+        if( (pid = is_tracked( owner->equipment[wearloc] )) == -1 )
+        {
+          send_to_char( "Not yet tracked!\n", ch );
+          save_artifact_data( owner, owner->equipment[wearloc] );
+        }
+        else if( pid == GET_PID(owner) )
+        {
+          send_to_char( "Already tracked.\n", ch );
+        }
+        else if( pid == 0 )
+        {
+          send_to_char( "Not an arti!!!\n", ch );
+        }
+        else
+        {
+          sprintf( buf, "&+ROn another char:&N %s\n", get_player_name_from_pid(pid) );
+          send_to_char( buf, ch );
+        }
+      }
+    }
+    // Search inventory.
+    for( arti = owner->carrying; arti; arti = arti->next_content )
+    {
+      if( IS_ARTIFACT( arti ) )
+      {
+        sprintf( buf, "'%s' has arti %s (%d) : ", J_NAME(owner),
+          pad_ansi(arti->short_description, 35).c_str(),
+          obj_index[arti->R_num].virtual_number );
+        send_to_char( buf, ch );
+        if( (pid = is_tracked( arti )) == -1 )
+        {
+          send_to_char( "Not yet tracked!\n", ch );
+          save_artifact_data( owner, arti );
+        }
+        else if( pid == GET_PID(owner) )
+        {
+          send_to_char( "Already tracked.\n", ch );
+        }
+        else if( pid == 0 )
+        {
+          send_to_char( "Not an arti!!!\n", ch );
+        }
+        else
+        {
+          sprintf( buf, "&+ROn another char:&N %s\n", get_player_name_from_pid(pid) );
+          send_to_char( buf, ch );
+        }
+      }
+    }
+    nuke_eq( owner );
+    extract_char( owner );
+  }
+  // Close the directory!
+  closedir( dir );
+  sprintf( buf, "Arti hunted '%c' successfully!\n", *arg );
+  send_to_char( buf, ch );
+}
+
+// Nukes the arti list.  Must be careful with this!
+void arti_clear( P_char ch, char *arg )
+{
+  DIR *dir;
+  FILE *f;
+  char name[256];
+  char buf[256];
+  struct dirent *dire;
+  int vnum;
+
+  if( vnum = atoi(arg) )
+  {
+    sprintf( name, "%s%d", ARTIFACT_DIR, vnum );
+    if( f = fopen( name, "r" ) )
+    {
+      fclose( f );
+      sprintf( buf, "Deleting file '%s'...\n", name );
+      send_to_char( buf, ch );
+      wizlog( 56, "%s: Deleting file '%s'...", J_NAME(ch), name );
+      unlink( name );
+    }
+    else
+    {
+      sprintf( buf, "File '%s' does not exist...\n", name );
+      send_to_char( buf, ch );
+    }
+    return;
+  }
+
+  if( !isname(arg, "confirm") )
+  {
+    send_to_char( "You must type 'artifact clear confirm' to delete all artifact files.\n", ch );
+    send_to_char( "You can type 'artifact clear <vnum>' to a single artifact file.\n", ch );
+    send_to_char( "'artifact clear confirm' is probably a bad idea unless debugging.\n", ch );
+    return;
+  }
+
+  send_to_char( "Deleting ALL live artifact files!!!\n", ch );
+  wizlog( 56, "%s: Deleting ALL live artifact files!!!", J_NAME(ch) );
+  dir = opendir( ARTIFACT_DIR );
+  while( dire = readdir(dir) )
+  {
+    vnum = atoi(dire->d_name);
+    if( !vnum )
+      continue;
+    sprintf( name, "%s%d", ARTIFACT_DIR, vnum );
+    closedir( dir );
+    wizlog( 56, "%s: Deleting file '%s'...", J_NAME(ch), name );
+    sprintf( buf, "Deleting file '%s'...\n", name );
+    send_to_char( buf, ch );
+    unlink( name );
+    dir = opendir( ARTIFACT_DIR );
+  }
+  closedir( dir );
+}
+
+// Removes an unsaved char's equipment from game without disturbing arti list.
+void nuke_eq( P_char ch )
+{
+  P_obj item;
+
+  for( int i = 0; i < MAX_WEAR; i++ )
+  {
+    if (ch->equipment[i])
+    {
+      item = unequip_char(ch, i);
+      // This must be FALSE to prevent nuking arti files.
+      extract_obj( item, FALSE );
+    }
+  }
+  while( ch->carrying )
+  {
+    item = ch->carrying;
+    obj_from_char( item, FALSE );
+    // This must be FALSE to prevent nuking arti files.
+    extract_obj( item, FALSE );
   }
 }

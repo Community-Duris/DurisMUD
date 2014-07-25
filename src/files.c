@@ -1660,7 +1660,8 @@ int writeCharacter(P_char ch, int type, int room)
   ADD_INT(buf, (int) 0);
   size_off = buf;
   ADD_INT(buf, (int) 0);
-
+  // Surname
+  ADD_INT( buf, (ch->specials.act3) );
   /*
    * starting room (VIRTUAL)
    */
@@ -1705,7 +1706,8 @@ int writeCharacter(P_char ch, int type, int room)
   /*
    * if they are staying in game, re-equip them
    */
-  if ((type != RENT_INN) && (type != RENT_LINKDEAD) && (type != RENT_CAMPED) && (type != RENT_DEATH))
+  if( (type != RENT_INN) && (type != RENT_LINKDEAD) && (type != RENT_CAMPED) && (type != RENT_DEATH)
+    && (type != RENT_POOFARTI) && (type != RENT_SWAPARTI) )
   {
     for (i = 0; i < MAX_WEAR; i++)
       if (save_equip[i])
@@ -1936,6 +1938,24 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
     strcat(Gbuf2, ".bak");
     unlink(Gbuf1);
     unlink(Gbuf2);
+  }
+  // Delete file containing conjurable mobs.
+  sprintf( Gbuf1, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*ch->player.name), name);
+  // If file exists.
+  if( FILE *f = fopen( Gbuf1, "r" ) )
+  {
+    fclose( f );
+    sprintf( Gbuf2, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
+    system( Gbuf2 );
+  }
+  // Delete file containing crafting/forging recipe list.
+  sprintf(Gbuf1, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*ch->player.name), name);
+  // If file exists.
+  if( FILE *f = fopen( Gbuf1, "r" ) )
+  {
+    fclose( f );
+    sprintf( Gbuf2, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
+    system( Gbuf2 );
   }
 
   return TRUE;
@@ -2771,6 +2791,9 @@ int restorePasswdOnly(P_char ch, char *name)
        ch);
     return -2;
   }
+  // Surname
+  if( b_savevers > 4 )
+    GET_INTE(buf);
   room = GET_INTE(buf);         /*
                                  * virtual room they saved/rented in
                                  */
@@ -2821,7 +2844,7 @@ int restoreCharOnly(P_char ch, char *name)
 #ifndef _PFILE_
   char     buff[SAV_MAXSIZE];
   char    *buf = buff;
-  int      skill_off, affect_off, item_off;
+  int      skill_off, affect_off, item_off, surname;
 #endif
   int      start, size, csize, type, room;
   int      witness_off;
@@ -2916,6 +2939,10 @@ int restoreCharOnly(P_char ch, char *name)
        ch);
     return -2;
   }
+  if( b_savevers > 4 )
+    surname = GET_INTE(buf);
+  ch->specials.act3 = surname;
+
   room = GET_INTE(buf);         /*
                                  * virtual room they saved/rented in
                                  */
@@ -4020,7 +4047,6 @@ int restoreItemsOnly(P_char ch, int flatrate)
 #endif
     return -2;
   }
-
   for (tmp = 0; tmp < MAX_WEAR; tmp++)
     if (save_equip[tmp] != NULL)
     {

@@ -255,11 +255,24 @@ void do_camp(P_char ch, char *arg, int cmd)
 //      send_to_char("You cannot camp in a hall. Use inn like everyone else!\r\n", ch);
 //      return;
 //      }
+  while (*arg == ' ')
+    arg++;
+
+  if( isname( arg, "abort" ) )
+  {
+    if (!IS_AFFECTED(ch, AFF_CAMPING))
+      send_to_char( "Your not setting up camp atm?!?\n", ch );
+    else
+    {
+      send_to_char( "You quickly pack up your things and move on.\n", ch );
+      affect_from_char(ch, SKILL_CAMP);
+    }
+    return;
+  }
 
   if (IS_AFFECTED2(ch, AFF2_SCRIBING))
   {
-    send_to_char
-      ("Sorry, you're quite busy with your scribing right now..\\r\n", ch);
+    send_to_char("Sorry, you're quite busy with your scribing right now..\\r\n", ch);
     return;
   }
   if (IS_AFFECTED2(ch, AFF2_MEMORIZING))
@@ -269,16 +282,15 @@ void do_camp(P_char ch, char *arg, int cmd)
   }
   if (IS_FIGHTING(ch))
   {
-    act("Better finish dealing with $N first, bunky.",
-        FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
+    act("Better finish dealing with $N first, bunky.", FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
     return;
   }
   if (IS_DESTROYING(ch))
   {
-    act("Better finish dealing with $p first, bunky.",
-        FALSE, ch, ch->specials.destroying_obj, NULL, TO_CHAR);
+    act("Better finish dealing with $p first, bunky.", FALSE, ch, ch->specials.destroying_obj, NULL, TO_CHAR);
     return;
   }
+
   if (IS_TRUSTED(ch))
   {
     ch->specials.was_in_room = world[ch->in_room].number;
@@ -321,16 +333,16 @@ void do_camp(P_char ch, char *arg, int cmd)
     return;
   }
 
-  if(world[ch->in_room].sector_type == SECT_FIREPLANE ||
-    world[ch->in_room].sector_type == SECT_WATER_PLANE ||
-    world[ch->in_room].sector_type == SECT_AIR_PLANE ||
-    world[ch->in_room].sector_type == SECT_EARTH_PLANE)
+  if( world[ch->in_room].sector_type == SECT_FIREPLANE
+    || world[ch->in_room].sector_type == SECT_WATER_PLANE
+    || world[ch->in_room].sector_type == SECT_AIR_PLANE
+    || world[ch->in_room].sector_type == SECT_EARTH_PLANE )
   {
     send_to_char("Camping here is not permitted.\r\n", ch);
     return;
   }
 
-  switch (world[ch->in_room].sector_type)
+  switch( world[ch->in_room].sector_type )
   {
   case SECT_CITY:
   case SECT_UNDRWLD_CITY:
@@ -390,6 +402,7 @@ void do_camp(P_char ch, char *arg, int cmd)
     return;
     break;
   }
+
   if (ch->specials.z_cord < 0)
   {
     send_to_char("I've got just three words: Davy Jones' Locker.\r\n", ch);
@@ -419,21 +432,17 @@ void do_camp(P_char ch, char *arg, int cmd)
   }
   if (IS_SET(world[ch->in_room].room_flags, JAIL))
   {
-    send_to_char
-      ("Just relax Jailbird, you are gonna be here for a while.\r\n", ch);
+    send_to_char("Just relax Jailbird, you are gonna be here for a while.\r\n", ch);
     return;
   }
   if (IS_SET(world[ch->in_room].room_flags, GUILD_ROOM))
   {
-    send_to_char
-    ("You're not allowed to camp here!\r\n", ch);
+    send_to_char("You're not allowed to camp here!\r\n", ch);
     return;
-  }  
+  }
   if (IS_SET(zone_table[world[ch->in_room].zone].flags, ZONE_TOWN))
   {
-    send_to_char
-      ("Riiight, you'd get run over by a cart, or knifed in your sleep!  Go to an Inn!\r\n",
-       ch);
+    send_to_char("Riiight, you'd get run over by a cart, or knifed in your sleep!  Go to an Inn!\r\n", ch);
     return;
   }
   if (IS_STUNNED(ch))
@@ -443,8 +452,7 @@ void do_camp(P_char ch, char *arg, int cmd)
   }
   if (IS_SET(ch->specials.affected_by, AFF_KNOCKED_OUT))
   {
-    send_to_char
-      ("Being knocked out, camping is not really an option for you.\r\n", ch);
+    send_to_char("Being knocked out, camping is not really an option for you.\r\n", ch);
     return;
   }
   if (GET_HIT(ch) < 0)
@@ -471,13 +479,13 @@ void do_camp(P_char ch, char *arg, int cmd)
         break;
       }
     }
-	
+
   	if (aff)
   	{
   		char buf[100];
   		int i = 0;
   		int j = 0;
-      
+
       i = aff->duration;
 
       i = i*100;
@@ -502,11 +510,11 @@ void do_camp(P_char ch, char *arg, int cmd)
 	  }
 	  else
 	  {
-      send_to_char("Your preparations are not quite complete!\r\n", ch);
+      send_to_char("Your preparations are not quite complete...\r\n", ch);
 	  }
 	  return;
   }
-  
+
   if (!RACE_PUNDEAD(ch))
   {
     send_to_char("You start setting up camp...\r\n", ch);
@@ -657,7 +665,7 @@ void do_berserk(P_char ch, char *argument, int cmd)
     act("$n seems to have overcome $s battle madness.",
       TRUE, ch, 0, 0, TO_ROOM);
       
-    notch_skill(ch, SKILL_BERSERK, 25);
+    notch_skill(ch, SKILL_BERSERK, 4);
 
     if (GET_CLASS(ch, CLASS_BERSERKER))
     {
@@ -673,7 +681,7 @@ void do_berserk(P_char ch, char *argument, int cmd)
   if (GET_CHAR_SKILL(ch, SKILL_BERSERK) < number(1, 100))
   {
     send_to_char("You fail to evoke the dreaded battle rage.\r\n", ch);
-    notch_skill(ch, SKILL_BERSERK, 5);
+    notch_skill(ch, SKILL_BERSERK, 17);
   }
   else
   {
@@ -774,7 +782,7 @@ void do_rampage(P_char ch, char *argument, int cmd)
     af.duration = 3;
 
     affect_to_char(ch, &af);
-    notch_skill(ch, SKILL_RAMPAGE, 5);
+    notch_skill(ch, SKILL_RAMPAGE, 17);
     CharWait(ch, 8);
 
     return;
@@ -845,7 +853,7 @@ void do_infuriate(P_char ch, char *argument, int cmd)
   act
     ("$n is overwhelmed with &+RANGER&n, and starts to increase in size!\r\n",
      FALSE, ch, 0, 0, TO_ROOM);
-  notch_skill(ch, SKILL_INFURIATE, 5);
+  notch_skill(ch, SKILL_INFURIATE, 17);
   CharWait(ch, PULSE_VIOLENCE);
   }
   else
@@ -875,7 +883,7 @@ void do_infuriate(P_char ch, char *argument, int cmd)
     send_to_char("Your &+rblood boils&n and you feel your body grow to enormous proportions!\r\n", ch);
     act("$n is overwhelmed with &+RHATRED&n, and begins to grow to enormous proportions!\r\n",
     FALSE, ch, 0, 0, TO_ROOM);
-    notch_skill(ch, SKILL_INFURIATE, 5);
+    notch_skill(ch, SKILL_INFURIATE, 17);
     CharWait(ch, PULSE_VIOLENCE);
   }
 }
@@ -923,7 +931,7 @@ void do_rage(P_char ch, char *argument, int cmd)
     return;
   }
   
-  notch_skill(ch, SKILL_RAGE, (int) get_property("skill.notch.offensive", 1.));
+  notch_skill(ch, SKILL_RAGE, (int) get_property("skill.notch.offensive", 7));
         
   if(!(GET_SPEC(ch, CLASS_BERSERKER, SPEC_RAGELORD)))
     CharWait(ch, 1.5 * PULSE_VIOLENCE);
@@ -1908,7 +1916,7 @@ void do_sneak(P_char ch, char *argument, int cmd)
   CharWait(ch, PULSE_VIOLENCE);
 
 // Notching check moved to actmove.c Apr09 -Lucrot
-//  notch_skill(ch, SKILL_SNEAK, 20);
+//  notch_skill(ch, SKILL_SNEAK, 5);
 
   bzero(&af, sizeof(af));
   af.type = SKILL_SNEAK;
@@ -2035,12 +2043,11 @@ void do_hide(P_char ch, char *argument, int cmd)
         send_to_char("&+LYou blend into the shadows...&n\r\n", ch);
       }
     }
+    notch_skill(ch, SKILL_HIDE, 17);
     if (percent > skl_lvl + agi_app[STAT_INDEX(GET_C_AGI(ch))].hide)
     {
-      notch_skill(ch, SKILL_HIDE, 5);
       return;
     }
-    notch_skill(ch, SKILL_HIDE, 5);
     SET_BIT(ch->specials.affected_by, AFF_HIDE);
     struct affected_type af;
 
@@ -2153,7 +2160,7 @@ void listen(P_char ch, char *argument)
       else
         sprintf(buf, "You hear an odd rustling in the immediate area.\r\n");
       send_to_char(buf, ch);
-      notch_skill(ch, SKILL_LISTEN, 1);
+      notch_skill(ch, SKILL_LISTEN, 50);
     }
     else
       send_to_char(heard_nothing, ch);
@@ -2197,7 +2204,7 @@ void listen(P_char ch, char *argument)
                   ((dir == 5) ? "below" : (dir == 4) ? "above" : "the "),
                   ((dir == 5) ? "" : (dir == 4) ? "" : dirs[dir]));
         send_to_char(buf, ch);
-        notch_skill(ch, SKILL_LISTEN, 1);
+        notch_skill(ch, SKILL_LISTEN, 50);
       }
       else
         send_to_char(heard_nothing, ch);
@@ -3313,7 +3320,6 @@ void do_area(P_char ch, char *argument, int cmd)
   }
   send_to_char(buf, ch);
   send_to_char(buf2, ch);
-  
 }
 
 void do_quaff(P_char ch, char *argument, int cmd)
@@ -3322,10 +3328,9 @@ void do_quaff(P_char ch, char *argument, int cmd)
   int      i, j, chance;
   bool     equipped;
   char     Gbuf1[MAX_STRING_LENGTH];
-  
-  if(!(ch) ||
-     !IS_ALIVE(ch))
-        return;
+
+  if( !IS_ALIVE(ch) )
+    return;
 
   equipped = FALSE;
 
@@ -3335,14 +3340,14 @@ void do_quaff(P_char ch, char *argument, int cmd)
   {
     temp = ch->equipment[HOLD];
     equipped = TRUE;
-    
+
     if((temp == NULL) || !isname(Gbuf1, temp->name))
     {
       act("You do not have that item.", FALSE, ch, 0, 0, TO_CHAR);
       return;
     }
   }
-  
+
   if(temp->type != ITEM_POTION)
   {
     act("You can only quaff potions.", FALSE, ch, 0, 0, TO_CHAR);
@@ -3356,33 +3361,31 @@ void do_quaff(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if(IS_FIGHTING(ch) || IS_DESTROYING(ch) )
+  if(affected_by_spell(ch, TAG_POTION_TIMER))
+  {
+    send_to_char("Your body cannot yet handle another jolt of magical influence!\r\n", ch);
+    return;
+  }
+
+  if( IS_FIGHTING(ch) || IS_DESTROYING(ch) )
   {
     chance = 50;
 
     chance += ((GET_C_DEX(ch) + (GET_C_AGI(ch) / 2)) - 75) / 4;
 
     if (GET_C_LUK(ch) / 2 > number(0, 100))
-       chance = (int) (chance * 1.1);
-       
-    if(has_innate(ch, INNATE_QUICK_THINKING) ||
-       affected_by_spell(ch, SPELL_COMBAT_MIND))
-          chance = (int)(chance * 1.25);
-      
-    if(number(0, 99) >= chance && GET_OBJ_VNUM(temp) != 400228)
+      chance = (int) (chance * 1.1);
+
+    if( has_innate(ch, INNATE_QUICK_THINKING) || affected_by_spell(ch, SPELL_COMBAT_MIND) )
+      chance = (int)(chance * 1.25);
+
+    if( number(0, 99) >= chance && GET_OBJ_VNUM(temp) != 400228 )
     {
       act("Whoops!  You spilled it!", TRUE, ch, 0, 0, TO_CHAR);
-      act("$n attempts to quaff $p, but spills it instead!",
-        TRUE, ch, temp, 0, TO_ROOM);
+      act("$n attempts to quaff $p, but spills it instead!", TRUE, ch, temp, 0, TO_ROOM);
       extract_obj(temp, TRUE);
       return;
     }
-  }
-
-  if(affected_by_spell(ch, TAG_POTION_TIMER))
-  {
-    send_to_char("Your body cannot yet handle another jolt of magical influence!\r\n", ch);
-    return;
   }
 
   struct affected_type af;
@@ -3487,7 +3490,7 @@ void do_recite(P_char ch, char *argument, int cmd)
 
   act("You recite $p which turns to dust in your hands.", FALSE, ch, scroll,
       0, TO_CHAR);
-  CharWait(ch, 2);
+  CharWait(ch, PULSE_VIOLENCE);
 
   if (GET_LEVEL(ch) > 56)
   {
@@ -3703,8 +3706,18 @@ void do_use(P_char ch, char *argument, int cmd)
       if (target_data.t_char != NULL)
       {
         tmp_char = target_data.t_char;
-        act("$n points $p at $N.", TRUE, ch, stick, tmp_char, TO_ROOM);
-        act("You direct $p at $N.", FALSE, ch, stick, tmp_char, TO_CHAR);
+        act("$n points $p at $N!", TRUE, ch, stick, tmp_char, TO_ROOM);
+        act("You direct $p at $N!", FALSE, ch, stick, tmp_char, TO_CHAR);
+      }
+      else if( IS_SET(skills[spl].targets, TAR_IGNORE) )
+      {
+        // Skip whitespace..
+        while( isspace(*argument) )
+          argument++;
+        sprintf( Gbuf1, "You wave $p and say '%s'.", argument );
+        act(Gbuf1, TRUE, ch, stick, NULL, TO_CHAR);
+        sprintf( Gbuf1, "$n waves $p and says '%s'.", argument );
+        act(Gbuf1, TRUE, ch, stick, NULL, TO_ROOM);
       }
       else
       {
@@ -3714,8 +3727,10 @@ void do_use(P_char ch, char *argument, int cmd)
       }
 
 
-      ((*skills[spl].spell_pointer) ((int) stick->value[0], ch, 0,
-                                     SPELL_TYPE_SPELL, tmp_char, tmp_object));
+      if( IS_SET(skills[spl].targets, TAR_IGNORE) )
+        ((*skills[spl].spell_pointer) ((int) stick->value[0], ch, argument, SPELL_TYPE_SPELL, tmp_char, tmp_object));
+      else
+        ((*skills[spl].spell_pointer) ((int) stick->value[0], ch, 0, SPELL_TYPE_SPELL, tmp_char, tmp_object));
 
 
       if (char_in_list(ch))
@@ -5738,7 +5753,7 @@ void do_climb(P_char ch, char *argument, int cmd)
     af.type = SKILL_CLIMB;
     af.duration = 10;
     affect_to_char(ch, &af);
-    notch_skill(ch, SKILL_CLIMB, 5);
+    notch_skill(ch, SKILL_CLIMB, 17);
   }
 }
 
@@ -5800,7 +5815,7 @@ void do_blood_scent(P_char ch, char *argument, int cmd)
   if (GET_CHAR_SKILL(ch, SKILL_BLOOD_SCENT) < number(1, 100))
   {
     send_to_char("You sniff around but cant smell anything special.\r\n", ch);
-    notch_skill(ch, SKILL_BLOOD_SCENT, 12);
+    notch_skill(ch, SKILL_BLOOD_SCENT, 7.69);
     CharWait(ch, (2 * PULSE_VIOLENCE));
     return;
   }
@@ -5832,7 +5847,7 @@ void do_blood_scent(P_char ch, char *argument, int cmd)
     af.flags |= AFFTYPE_CUSTOM1;
     af.duration >>= 1;
     affect_to_char(ch, &af);
-    notch_skill(ch, SKILL_BLOOD_SCENT, 12);
+    notch_skill(ch, SKILL_BLOOD_SCENT, 7.69);
   }*/ 
 }
 
@@ -5898,7 +5913,10 @@ void ascend_theurgist(P_char ch)
 
   send_to_char("You feel a chill and realize that you are naked.\r\n", ch);
   generate_desc(ch);
-  GET_AGE(ch) = 500;
+
+  // GET_AGE does not return a changeable variable.
+  ch->player.time.birth = time(NULL) - 500 * SECS_PER_MUD_YEAR;
+
   GET_VITALITY(ch) =  GET_MAX_VITALITY(ch) = 120;
   forget_spells(ch, -1);
   ch->player.spec = 0;
@@ -6003,7 +6021,8 @@ void do_ascend(P_char ch, char *arg, int cmd)
     GET_SIZE(ch) = SIZE_MEDIUM;
     GET_RACE(ch) = RACE_AGATHINON;
     generate_desc(ch);
-    GET_AGE(ch) = 500;
+    // GET_AGE does not return a changeable variable.
+    ch->player.time.birth = time(NULL) - 500 * SECS_PER_MUD_YEAR;
     ch->player.m_class = CLASS_AVENGER;
     do_start(ch, 1);
     ch->only.pc->epics = MAX(0, ch->only.pc->epics - (int) get_property("ascend.epicCost", 250));
@@ -6439,7 +6458,8 @@ void do_old_descend(P_char ch, char *arg, int cmd)
     }
     send_to_char("You feel a chill and realize that you are naked.\r\n", ch);
     generate_desc(ch);
-    GET_AGE(ch) = 1;
+    // GET_AGE does not return a changeable variable.
+    ch->player.time.birth = time(NULL) - 1 * SECS_PER_MUD_YEAR;
     GET_VITALITY(ch) =  GET_MAX_VITALITY(ch) = 120;
     forget_spells(ch, -1);
     ch->player.spec = 0;

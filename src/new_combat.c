@@ -688,7 +688,7 @@ int calcChDamagetoVictwithArmor(P_char ch, P_char victim, P_obj weap,
       if (GET_CHAR_SKILL(ch, SKILL_MOUNTED_COMBAT) < number(1, 101))
         *damDefl += 0.1;
       if (IS_PC(ch) && !number(0, 1))
-        notch_skill(ch, SKILL_MOUNTED_COMBAT, 4);
+        notch_skill(ch, SKILL_MOUNTED_COMBAT, 20);
     }
 
     /* find a better way to calculate weapon damage */
@@ -1631,7 +1631,7 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
       notch_skill(ch, SKILL_AERIAL_COMBAT, 10);
     }
     else
-      notch_skill(ch, SKILL_AERIAL_COMBAT, 5);
+      notch_skill(ch, SKILL_AERIAL_COMBAT, 17);
   }
 
   if (IS_NPC(ch))
@@ -1705,7 +1705,7 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
         return FALSE;
       }
       if (!number(0, 1))
-        notch_skill(victim, SKILL_DODGE, 5);
+        notch_skill(victim, SKILL_DODGE, 17);
       // check parry
 
       parryrand = number(1, 101);
@@ -1723,7 +1723,7 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
         return FALSE;
       }
       if (!number(0, 1))
-        notch_skill(victim, SKILL_PARRY, 3);
+        notch_skill(victim, SKILL_PARRY, 25);
       // check THRI leap
       if (IS_THRIKREEN(victim) && canCharDodgeParry(victim, ch) &&
           (GET_POS(victim) == POS_STANDING))
@@ -1991,7 +1991,7 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
     else
     {
       to_hit -= 8 * (100 - GET_CHAR_SKILL(ch, SKILL_BLINDFIGHTING)) / 100;
-      notch_skill(ch, SKILL_BLINDFIGHTING, 1);
+      notch_skill(ch, SKILL_BLINDFIGHTING, 50);
     }
   }
   /* new way for protection from evil/good to work, if they apply, they
@@ -2250,16 +2250,16 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
       if (GET_CHAR_SKILL(ch, tmp) < number(1, 101))
         dam = dam * number(3, 9) / 10;
       else if (!number(0, 2))
-        notch_skill(ch, tmp, 4);
+        notch_skill(ch, tmp, 20);
 
       if (wpn_skill_num)
       {
         if (!number(0, 4))
-          notch_skill(ch, wpn_skill_num, 2);
+          notch_skill(ch, wpn_skill_num, 33.33);
       }
       else if (!number(0, 3))
       {
-        notch_skill(ch, SKILL_UNARMED_DAMAGE, 2);
+        notch_skill(ch, SKILL_UNARMED_DAMAGE, 33.33);
       }
     }
     else if (IS_NPC(ch))
@@ -2535,7 +2535,7 @@ void perform_violence(void)
    ch->equipment[WIELD2])
  */ if (PhasedAttack(ch, SKILL_DUAL_WIELD) && ch->equipment[WIELD2])
     {
-      notch_skill(ch, SKILL_DUAL_WIELD, 5);
+      notch_skill(ch, SKILL_DUAL_WIELD, 17);
       if (hit(ch, opponent, ch->equipment[WIELD2], TYPE_UNDEFINED,
               getBodyTarget(ch), !no_dodge, FALSE))
         continue;
@@ -2550,7 +2550,7 @@ void perform_violence(void)
  */
     if (PhasedAttack(ch, SKILL_DOUBLE_ATTACK))
     {
-      notch_skill(ch, SKILL_DOUBLE_ATTACK, 5);
+      notch_skill(ch, SKILL_DOUBLE_ATTACK, 17);
       if (hit(ch, opponent, ch->equipment[WIELD], TYPE_UNDEFINED,
               getBodyTarget(ch), !no_dodge, FALSE))
         continue;
@@ -2569,7 +2569,7 @@ void perform_violence(void)
       }
       else
       {
-        notch_skill(ch, SKILL_TRIPLE_ATTACK, 5);
+        notch_skill(ch, SKILL_TRIPLE_ATTACK, 17);
         if (hit(ch, opponent, ch->equipment[WIELD], TYPE_UNDEFINED,
                 getBodyTarget(ch), !no_dodge, FALSE))
           continue;
@@ -2747,8 +2747,8 @@ void perform_violence(void)
         continue;
       }
 
-      notch_skill(ch, SKILL_MARTIAL_ARTS, 2);
-      notch_skill(ch, SKILL_BAREHANDED_FIGHTING, 2);
+      notch_skill(ch, SKILL_MARTIAL_ARTS, 33.33);
+      notch_skill(ch, SKILL_BAREHANDED_FIGHTING, 33.33);
 
       if ((GET_CHAR_SKILL(ch, SKILL_MARTIAL_ARTS) > number(1, 101)))
       {

@@ -84,6 +84,11 @@ void set_surname(P_char ch, int num)
      4 - Decepticon
      */
 
+  if( !IS_ALIVE(ch) )
+  {
+    return;
+  }
+
   if((num == 0 && !IS_SET(ch->specials.act3, PLR3_NOSUR)) || num == 1 )
   {
     int points = getLeaderBoardPts(ch);
@@ -513,17 +518,20 @@ bool minotaur_race_proc(P_char ch, P_char victim)
   switch(ch->player.m_class)
   {
     case CLASS_REAVER:
-      class_chance = 30;
     case CLASS_RANGER:
       class_chance = 30;
+      break;
     case CLASS_MONK:
       class_chance = 20;
+      break;
     case CLASS_SORCERER:
-      class_chance = 6;
     case CLASS_CONJURER:
+    case CLASS_SUMMONER:
       class_chance = 6;
+      break;
     case CLASS_WARRIOR:
       class_chance = 10;
+      break;
     default:
       class_chance = 15;
       break;
@@ -591,7 +599,7 @@ char get_alias(P_char ch, char *argument)
   bufx = buf;
   for (; *bufx; bufx++)
     *bufx = LOWER(*bufx);
-  sprintf(gbuf1, "Players/%c/%s.aliases", buf[0], buf);
+  sprintf(gbuf1, "%s/%c/%s.aliases", SAVE_DIR, buf[0], buf);
 
   aliaslist = fopen(gbuf1, "rt");
   if(!aliaslist)
@@ -609,7 +617,7 @@ char get_alias(P_char ch, char *argument)
   while((fscanf(aliaslist, "%s", charalias) != EOF))
   {
     int i = 0;
-    sprintf(bufbug, charalias);
+    sprintf(bufbug, "%s", charalias);
     int times = 0;
     char buffer[MAX_STRING_LENGTH] = "";
 
@@ -633,7 +641,7 @@ char get_alias(P_char ch, char *argument)
       int i = 0;
       int times = 0;
 
-      sprintf(bfbug, charalias);
+      sprintf(bfbug, "%s", charalias);
 
       while(times < 2)
       {
@@ -762,24 +770,39 @@ void create_recipe(P_char ch, P_obj temp)
     return;
   }
 
+  // No recipes for high end equipment.
+  if( IS_SET(temp->bitvector, (AFF_STONE_SKIN | AFF_BIOFEEDBACK | AFF_SNEAK | AFF_HIDE ))
+    || IS_SET(temp->bitvector2, ( AFF2_EARTH_AURA | AFF2_WATER_AURA | AFF2_FIRE_AURA | AFF2_AIR_AURA | AFF2_FLURRY ))
+    || IS_SET(temp->bitvector3, ( AFF3_ENLARGE | AFF3_REDUCE | AFF3_INERTIAL_BARRIER | AFF3_BLUR ))
+    || IS_SET(temp->bitvector4, ( AFF4_VAMPIRE_FORM | AFF4_HOLY_SACRIFICE | AFF4_BATTLE_ECSTASY | AFF4_SANCTUARY | AFF4_HELLFIRE | AFF4_ICE_AURA | AFF4_WILDMAGIC )) )
+  {
+    return;
+  }
+  for( int i = 0;i < MAX_OBJ_AFFECT;i++ )
+  {
+    if( (temp->affected[i].location == APPLY_COMBAT_PULSE)
+      || (temp->affected[i].location == APPLY_SPELL_PULSE) )
+    {
+      return;
+    }
+  }
+
   if(!is_salvageable(temp))
     return;
-
-
 
   objrecipe = read_object(400210, VIRTUAL);
   SET_BIT(objrecipe->value[6], recipenumber);
   strcpy(old_name, objrecipe->short_description);
   sprintf(buffer, "%s %s&n", old_name, temp->short_description);
 
-
-  if ((objrecipe->str_mask & STRUNG_DESC2) && objrecipe->short_description)
-    FREE(objrecipe->short_description);
+  if( (objrecipe->str_mask & STRUNG_DESC2) && objrecipe->short_description )
+    FREE( objrecipe->short_description );
 
   objrecipe->short_description = str_dup(buffer);
 
   objrecipe->str_mask |= STRUNG_DESC2;
-  obj_to_char(objrecipe, ch);
+  debug( "create_recipe: %s reward was: %s", J_NAME(ch), objrecipe->short_description );
+  obj_to_char( objrecipe, ch );
 }
 
 void random_recipe(P_char ch, P_char victim)
@@ -796,6 +819,8 @@ void random_recipe(P_char ch, P_char victim)
 
   if(IS_ELITE(victim))
     chance *= 5;
+
+  chance += GET_C_LUK(ch)/2;
 
   int result = number(1, 20000);
 
@@ -1248,7 +1273,7 @@ P_obj random_zone_item(P_char ch)
 
   if(reward)
   {
-    wizlog(56, "%s reward was: %s", GET_NAME(ch), reward->short_description);
+    debug( "random_zone_item: %s reward was: %s", J_NAME(ch), reward->short_description );
 
     REMOVE_BIT(reward->extra_flags, ITEM_SECRET);
     REMOVE_BIT(reward->extra_flags, ITEM_INVISIBLE);
@@ -1274,7 +1299,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
     return;
 
 
-  if (!GET_SPEC(ch, CLASS_CONJURER, SPEC_WATER) && !GET_SPEC(ch, CLASS_CONJURER, SPEC_AIR) && !GET_SPEC(ch, CLASS_CONJURER, SPEC_EARTH))
+  if (!GET_SPEC(ch, CLASS_SUMMONER, SPEC_CONTROLLER) && !GET_SPEC(ch, CLASS_SUMMONER, SPEC_SUMMONER) && !GET_SPEC(ch, CLASS_SUMMONER, SPEC_NATURALIST))
   {
     act("&+YConjuring advanced beings &nis a &+Mmagic &nbeyond your abilities&n.",
         FALSE, ch, 0, 0, TO_CHAR);
@@ -1321,7 +1346,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
   for (; *buff; buff++)
     *buff = LOWER(*buff);
   //buf[0] snags first character of name
-  sprintf(Gbuf1, "Players/%c/%s.spellbook", buf[0], buf);
+  sprintf(Gbuf1, "%s/%c/%s.spellbook", SAVE_DIR, buf[0], buf);
   recipelist = fopen(Gbuf1, "r");
   if (!recipelist)
   {
@@ -1396,7 +1421,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
       return;
     }
     tobj = read_mobile(selected, VIRTUAL);
-    send_to_char("&+rYou open your &+Yconjurers &+Lt&+mo&+Mm&+We &+rwhich &+Rreveals&+r the following information...&n.\n", ch);
+    send_to_char("&+rYou open your &+RSummoners &+Lt&+mo&+Mm&+We &+rwhich &+Rreveals&+r the following information...&n.\n", ch);
     get_class_string(tobj, cinfo2);
     sprintf(cinfo, "You glean they are: \r\n&+YLevel &+W%d \r\n&+YClass:&n %s \r\n&+YBase Hitpoints:&n %d\r\n", GET_LEVEL(tobj), get_class_string(tobj, buf2), GET_MAX_HIT(tobj));
     send_to_char(cinfo, ch);
@@ -1431,7 +1456,6 @@ void do_conjure(P_char ch, char *argument, int cmd)
       return;
     }
 
-
     if(affected_by_spell(ch, SPELL_CONJURE_ELEMENTAL) && !IS_TRUSTED(ch))
     {
       send_to_char("You must wait a short time before calling another &+Yminion&n into existence.\r\n", ch);
@@ -1439,10 +1463,10 @@ void do_conjure(P_char ch, char *argument, int cmd)
       return;
     }
 
-    if(number(1, GET_C_CHA(ch)) < number(1, 30))
+    if(GET_C_CHA(ch) < number(1, 130))
     {
       if(!IS_TRUSTED(ch))
-      { 
+      {
         memset(&af, 0, sizeof(af));
         af.type = SPELL_CONJURE_ELEMENTAL;
         af.duration = 2;
@@ -1467,7 +1491,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
 
     //set up stats
     int chance = number(1, GET_C_CHA(ch));
-    debug("chance %d", chance);
+//    debug("Conjure chance %d", chance);
 
     if(chance > 70)
     {    
@@ -1539,11 +1563,10 @@ void do_conjure(P_char ch, char *argument, int cmd)
     {
       memset(&af, 0, sizeof(af));
       af.type = SPELL_CONJURE_ELEMENTAL;
-      af.duration = 2;
+      af.flags = AFFTYPE_NODISPEL;
+      af.duration = 1;
       affect_to_char(ch, &af);
     }
-
-
   }
 }
 
@@ -1558,7 +1581,7 @@ void create_spellbook_file(P_char ch)
   buff = buf;
   for (; *buff; buff++)
     *buff = LOWER(*buff);
-  sprintf(Gbuf1, "Players/%c/%s.spellbook", buf[0], buf);
+  sprintf(Gbuf1, "%s/%c/%s.spellbook", SAVE_DIR, buf[0], buf);
   f = fopen(Gbuf1, "w");
   fclose(f);
   f = fopen(Gbuf1, "a");
@@ -1566,37 +1589,75 @@ void create_spellbook_file(P_char ch)
   fclose(f);
 }
 
+int count_classes( P_char mob )
+{
+  int count = 0;
+
+  // PCs and !multi mobs have 1 class
+  if( !IS_NPC(mob) )
+  {
+    return IS_MULTICLASS_PC(mob) ? 2 : 1;
+  }
+
+  if( !IS_MULTICLASS_NPC(mob) )
+  {
+    return 1;
+  }
+
+  for( int i = 0;i < CLASS_COUNT;i++ )
+  {
+    if( mob->player.m_class & (1 << i) )
+    {
+      count++;
+    }
+  }
+
+  return count;
+}
+
 bool valid_conjure(P_char ch, P_char victim)
 {
-  if(!victim)
+  if( !victim || !ch )
     return FALSE;
 
-  if(!ch)
+  if( IS_PC(victim) )
     return FALSE;
 
-  if(IS_PC(victim))
+/* Commented out new changes for now.
+  if( GET_LEVEL(victim) > GET_LEVEL(ch) || IS_MULTICLASS_NPC(victim) )
     return FALSE;
+*/
 
   if(GET_VNUM(victim) != 400003)
   {
-    if(GET_SPEC(ch, CLASS_CONJURER, SPEC_AIR) && !IS_HUMANOID(victim) || IS_UNDEADRACE(victim))
+    if(GET_SPEC(ch, CLASS_SUMMONER, SPEC_CONTROLLER) && !IS_HUMANOID(victim) || IS_UNDEADRACE(victim))
     {
       return FALSE;
     }
 
-    if(GET_SPEC(ch, CLASS_CONJURER, SPEC_WATER) && !IS_ELEMENTAL(victim))
+    if(GET_SPEC(ch, CLASS_SUMMONER, SPEC_SUMMONER) && !IS_ELEMENTAL(victim))
     {
       return FALSE;
     }
 
-    if(GET_SPEC(ch, CLASS_CONJURER, SPEC_EARTH) && !IS_ANIMAL(victim))
+    if(GET_SPEC(ch, CLASS_SUMMONER, SPEC_NATURALIST) && !IS_ANIMAL(victim))
     {
       return FALSE;
     }
 
+    // If less than 51, conj's can summon up to 4 lvls difference
     if((GET_LEVEL(victim) - (GET_LEVEL(ch)) > 4) && (GET_LEVEL(ch) < 51))
       return FALSE;
 
+    // New change: All conj's pets must be within 5 lvls.
+    if( GET_LEVEL(victim) - GET_LEVEL(ch) > 5 )
+      return FALSE;
+
+    // New change: Pets can have at most 3 classes.
+    if( count_classes(victim) > 3 )
+    {
+      return FALSE;
+    }
   }
 
   return TRUE;
@@ -1635,13 +1696,11 @@ bool new_summon_check(P_char ch, P_char selected)
     return FALSE;
   }
 
-
   if((greater == 1) && (desired >= 50))
   {
     send_to_char("You may not summon an additional being of such great power.\r\n", ch);
     return FALSE;
   }
-
 
   if(i > 120)
   {
@@ -1649,9 +1708,7 @@ bool new_summon_check(P_char ch, P_char selected)
     return FALSE;
   }
 
-
   return TRUE;
-
 }
 
 void learn_conjure_recipe(P_char ch, P_char victim)
@@ -1673,21 +1730,21 @@ void learn_conjure_recipe(P_char ch, P_char victim)
   if(IS_PC_PET(victim))
     return;
 
-  if(GET_SPEC(ch, CLASS_CONJURER, SPEC_AIR) && !IS_HUMANOID(victim))
+  if(GET_SPEC(ch, CLASS_SUMMONER, SPEC_CONTROLLER) && !IS_HUMANOID(victim))
   {
     send_to_char("You cannot learn to summon a being outside of your area of expertise.\r\n", ch);
     extract_char(victim);
     return;
   }
 
-  if(GET_SPEC(ch, CLASS_CONJURER, SPEC_WATER) && !IS_ELEMENTAL(victim))
+  if(GET_SPEC(ch, CLASS_SUMMONER, SPEC_SUMMONER) && !IS_ELEMENTAL(victim))
   {
     send_to_char("You cannot learn to summon a being outside of your area of expertise.\r\n", ch);
     extract_char(victim);
     return;
   }
 
-  if(GET_SPEC(ch, CLASS_CONJURER, SPEC_EARTH) && !IS_ANIMAL(victim))
+  if(GET_SPEC(ch, CLASS_SUMMONER, SPEC_NATURALIST) && !IS_ANIMAL(victim))
   {
     send_to_char("You cannot learn to summon a being outside of your area of expertise.\r\n", ch);
     extract_char(victim);
@@ -1716,7 +1773,7 @@ void learn_conjure_recipe(P_char ch, P_char victim)
   for (; *buff; buff++)
     *buff = LOWER(*buff);
   //buf[0] snags first character of name
-  sprintf(Gbuf1, "Players/%c/%s.spellbook", buf[0], buf);
+  sprintf(Gbuf1, "%s/%c/%s.spellbook", SAVE_DIR, buf[0], buf);
 
   /*just a debug test
     send_to_char(Gbuf1, ch);*/
@@ -1770,7 +1827,24 @@ void do_dismiss(P_char ch, char *argument, int cmd)
 
   if(GET_CLASS(ch, CLASS_BARD))
   {
-    send_to_char("Just stop singing.\r\n", ch);
+    for (k = ch->followers; k; k = x)
+    {
+      x = k->next;
+
+      // Dismiss mirror images
+      if(IS_NPC(k->follower) && k->follower->only.npc->R_num == 90 )
+      {
+        act("$n makes a &+Mmagical &+mgesture&n, sending $N back to the &+Lnether plane&n.", TRUE, ch, 0,
+            k->follower, TO_ROOM);
+        act("You make a &+Mmagical &+mgesture&n, sending $N back to the &+Lnether plane&n.", TRUE, ch, 0,
+            k->follower, TO_CHAR);
+        extract_char(k->follower);
+        count++;
+      }
+    }
+    // If no images..
+    if( !count )
+      send_to_char("Just stop singing.\r\n", ch);
     return;
   }
 
@@ -1809,11 +1883,11 @@ void do_dismiss(P_char ch, char *argument, int cmd)
   }
   if(get_linked_char(victim, LNK_PET) == ch)
   {
-    extract_char(victim);
     act("$n makes a &+Mmagical &+mgesture&n, sending $N back to the &+Lnether plane&n.", TRUE, ch, 0,
         victim, TO_ROOM);
     act("You make a &+Mmagical &+mgesture&n, sending $N back to the &+Lnether plane&n.", TRUE, ch, 0,
         victim, TO_CHAR);
+    extract_char(victim);
   }
 
 
@@ -1893,23 +1967,46 @@ bool calmcheck(P_char ch)
 void enhance(P_char ch, P_obj source, P_obj material)
 {
   int mod = 0;
+  char buf[MAX_STRING_LENGTH];
+  P_obj robj;
+  long robjint;
+  int cost, searchcount, maxsearch, tries, sval;
+  bool validobj;
+  int val, minval, chluck, wearflags;
 
   if(!ch || !source || !material)
     return;
 
-  char buf[MAX_STRING_LENGTH];
-  P_obj robj;
-  long robjint;
-  int validobj, cost, searchcount = 0, tries;
-  int sval = itemvalue(ch, source);
-  validobj = 0;
-  int val = itemvalue(ch, material);
-  int minval = itemvalue(ch, source) - 5;
+  chluck = (GET_C_LUK(ch));
+  sval = itemvalue(ch, source);
+  val = itemvalue(ch, material);
+  minval = itemvalue(ch, source) - 5;
+  validobj = FALSE;
+  searchcount = 0;
+  maxsearch = 20000;
+  // Only search matching wear flags unless none matching, then just search source wear flags.
+  //  We skip ITEM_TAKE 'cause it's not really a wear flag.  We skip ITEM_HOLD, ITEM_ATTACH_BELT, and
+  //  ITEM_WEAR_BACK because these are too common and override what people really want (i.e. a quiver).
+  wearflags = ( source->wear_flags & material->wear_flags ) & ~( ITEM_TAKE | ITEM_HOLD | ITEM_ATTACH_BELT | ITEM_WEAR_BACK );
+  if( !wearflags )
+    wearflags = ( source->wear_flags ) & ~( ITEM_TAKE | ITEM_HOLD | ITEM_ATTACH_BELT | ITEM_WEAR_BACK );
 
-  if(IS_SET(source->wear_flags, ITEM_GUILD_INSIGNIA))
-    minval +=10;
+  if( !wearflags )
+  {
+    send_to_char( "This item can not be enhanced.\n", ch );
+    return;
+  }
 
-  if(val < minval)
+  if( itemvalue( ch, source ) > 100 )
+  {
+    send_to_char( "This item is too powerful to be enhanced further.\n", ch );
+    return;
+  }
+
+  if( IS_SET(source->wear_flags, ITEM_GUILD_INSIGNIA) )
+    minval +=5;
+
+  if( val < minval )
   {
     char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
     sprintf(buf2, "%s", source->short_description);
@@ -1918,45 +2015,43 @@ void enhance(P_char ch, P_obj source, P_obj material)
     return;
   }
 
-  if(val <= 20)
+  if( val <= 20 )
   {
     cost = 1000;
-    if (GET_MONEY(ch) < 1000)
-    {
-      send_to_char("It will require &+W1 platinum&n to &+Benhance&n this item.\r\n", ch);
-      return;
-    }
   }
-  if(val > 20)
+  else
   {
     cost = 10000;
-    if (GET_MONEY(ch) < 10000)
-    {
-      send_to_char("It will require &+W10 platinum&n to &+Benhance&n this item.\r\n", ch);
-      return;
-    }
+  }
+
+  if( GET_MONEY(ch) < cost )
+  {
+    sprintf(buf, "It will require &+W%d platinum&n to &+Benhance&n this item.\r\n", cost/1000);
+    send_to_char(buf, ch);
+    return;
   }
 
   mod = 1;
-
-  int chluck = (GET_C_LUK(ch));
   if(number(1, 1200) < chluck)
   {
     mod += 3;
+    maxsearch *= 4;
     send_to_char("&+YYou feel &+MEXTREMELY Lucky&+Y!\r\n", ch);
   }
   else if(number(1, 800) < chluck)
   {
     mod += 2;
+    maxsearch *= 3;
     send_to_char("&+YYou feel &+MVery Lucky&+Y!\r\n", ch);
   }
   else if(number(1, 400) < chluck)
   {
     mod ++;
+    maxsearch *= 2;
     send_to_char("&+YYou feel &+MLucky&+Y!\r\n", ch);
   }
 
-  mod += (itemvalue(ch, source));
+  mod += itemvalue(ch, source);
   /*debug sprintf(buf, "validobj value: %d\n\r", validobj);
     send_to_char(buf, ch);*/
   while(validobj == 0)
@@ -1974,21 +2069,26 @@ void enhance(P_char ch, P_obj source, P_obj material)
       validobj = 0;
       extract_obj(robj, FALSE);
     }
-    else if(itemvalue(ch, robj) != mod)
-    {  
+    else if( itemvalue(ch, robj) != mod
+      || (robj->type == ITEM_STAFF && robj->value[3] > 0)
+      || robj->type == ITEM_TREASURE || robj->type == ITEM_POTION
+      || robj->type == ITEM_MONEY || robj->type == ITEM_KEY
+      || robj->type == ITEM_WAND )
+    {
       validobj = 0;
       extract_obj(robj, FALSE);
     }
     else if(GET_OBJ_VNUM(robj) == GET_OBJ_VNUM(source))
-    {  
+    {
       validobj = 0;
       extract_obj(robj, FALSE);
     }
     else if(IS_SET(source->wear_flags, ITEM_WIELD) && !IS_SET(robj->wear_flags, ITEM_WIELD))
-    {  
+    {
       validobj = 0;
       extract_obj(robj, FALSE);
     }
+/*  Tidying this up into a short simple statement...
     else if( (IS_SET(source->wear_flags, ITEM_WIELD) && IS_SET(robj->wear_flags, ITEM_WIELD)) ||
         (IS_SET(source->wear_flags, ITEM_WEAR_BODY) && IS_SET(robj->wear_flags, ITEM_WEAR_BODY)) ||
         (IS_SET(source->wear_flags, ITEM_WEAR_LEGS) && IS_SET(robj->wear_flags, ITEM_WEAR_LEGS)) ||
@@ -2011,17 +2111,19 @@ void enhance(P_char ch, P_obj source, P_obj material)
         (IS_SET(source->wear_flags, ITEM_WEAR_HANDS) && IS_SET(robj->wear_flags, ITEM_WEAR_HANDS)) ||
         (IS_SET(source->wear_flags, ITEM_WEAR_BACK) && IS_SET(robj->wear_flags, ITEM_WEAR_BACK))
         )
-        {  
+*/
+    else if( wearflags & robj->wear_flags )
+    {
           validobj = 1;
-        }
+    }
     else
-    {  
+    {
       validobj = 0;
       extract_obj(robj, FALSE);
     }
 
-    searchcount ++;
-    if(searchcount >  20000)
+    searchcount++;
+    if( searchcount > maxsearch )
     {
       act("&+GThe &+ritem gods&+G could not find a better type of &+yitem &+Gthan your &n$p&+G this time. &+WTry again&+G. If your item's value is above &+W55&+G you may have the &+Wbest&+G item of that type!\r\n", FALSE, ch, source, 0, TO_CHAR);
       return;
@@ -2056,11 +2158,9 @@ void enhance(P_char ch, P_obj source, P_obj material)
   obj_from_char(material, TRUE);
   extract_obj(material, FALSE);
   statuslog(ch->player.level,
-      "&+BEnhancement&n:&n (%s&n) just got [%d] (%s&n) at [%d]!",
-      GET_NAME(ch),
-      obj_index[robj->R_num].virtual_number,
-      robj->short_description,
-      (ch->in_room == NOWHERE) ? -1 : world[ch->in_room].number);
+    "&+BEnhancement&n:&n %s&n just got [%d] '%s&n' ival [%d] at [%d]!",
+    GET_NAME(ch), obj_index[robj->R_num].virtual_number, robj->short_description,
+      itemvalue(ch, robj), (ch->in_room == NOWHERE) ? -1 : world[ch->in_room].number);
 
   return;
 }
@@ -2075,6 +2175,9 @@ void do_enhance(P_char ch, char *argument, int cmd)
   half_chop(argument, first, rest);
   half_chop(rest, second, rest);
   //material = atoi(second);
+
+  if( IS_NPC(ch) )
+    return;
 
   if(!argument || !*argument)
   {
@@ -2100,14 +2203,14 @@ void do_enhance(P_char ch, char *argument, int cmd)
   }
   if (!is_salvageable(source))
   {
-    // act("&+yThe item which you wish to &+Menhance&+y cannot be altered this way... try somethign else&n.", FALSE, ch, 0, 0, TO_CHAR);
-    act("&+yYour $p&+y cannot be used in this way... try somethign else&n.", FALSE, ch, source, 0, TO_CHAR);
+    // act("&+yThe item which you wish to &+Menhance&+y cannot be altered this way... try something else&n.", FALSE, ch, 0, 0, TO_CHAR);
+    act("&+yYour $p&+y cannot be used in this way... try something else&n.", FALSE, ch, source, 0, TO_CHAR);
     return;
   }
   if (!is_salvageable(material))
   {
-    //act("&+yYour &+Menhancement&+y item cannot be used in this way... try somethign else&n.", FALSE, ch, 0, 0, TO_CHAR);
-    act("&+yYour $p&+y cannot be used in this way... try somethign else&n.", FALSE, ch, material, 0, TO_CHAR);
+    //act("&+yYour &+Menhancement&+y item cannot be used in this way... try something else&n.", FALSE, ch, 0, 0, TO_CHAR);
+    act("&+yYour $p&+y cannot be used in this way... try something else&n.", FALSE, ch, material, 0, TO_CHAR);
     return;
   }
   else if(GET_OBJ_VNUM(material) == GET_OBJ_VNUM(source))
@@ -2243,7 +2346,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
       if (source->affected[2].location == APPLY_DEX_MAX)
         loctype = 1; 
       else
-        source->affected[2].location = APPLY_CON;
+        source->affected[2].location = APPLY_DEX_MAX;
       sprintf(modstring, "&+wof &+ggreater dexterity&n");
       mod = 1;
       break;
@@ -2313,15 +2416,15 @@ void modenhance(P_char ch, P_obj source, P_obj material)
       break;
     case 400254:
       if (source->affected[2].location == APPLY_HIT)
-        loctype = 1; 
+        loctype = 1;
       else
         source->affected[2].location = APPLY_HIT;
       sprintf(modstring, "&+wof &+Rhealth&n");
-      mod = 1;
+      mod = 3;
       break;
     case 400255:
       if (source->affected[2].location == APPLY_HITROLL)
-        loctype = 1; 
+        loctype = 1;
       else
         source->affected[2].location = APPLY_HITROLL;
       sprintf(modstring, "&+wof &+yprecision&n");
@@ -2340,7 +2443,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_HIT_REG;
-      sprintf(modstring, "&+wof &+cconstitution&n");
+      sprintf(modstring, "&+wof &+gregeneration&n");
       mod = 3;
       break;
     case 400258:
@@ -2348,7 +2451,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_MOVE_REG;
-      sprintf(modstring, "&+wof &+cconstitution&n");
+      sprintf(modstring, "&+wof &+Gendurance&n");
       mod = 3;
       break;
 
@@ -2357,7 +2460,16 @@ void modenhance(P_char ch, P_obj source, P_obj material)
   }
 
   if (loctype == 1)
-    source->affected[2].modifier += mod;
+  {
+    // IF they've been modified less than 3 times.
+    if( source->affected[2].modifier/mod < 3 )
+      source->affected[2].modifier += mod;
+    else
+    {
+      send_to_char( "Your enhancement was a failure.  Too much magic.\n", ch );
+      return;
+    }
+  }
   else
     source->affected[2].modifier = mod;
 
@@ -2428,19 +2540,21 @@ void thanksgiving_proc(P_char ch)
   char_to_room(mob, ch->in_room, 0);
 }
 
-void enhancematload(P_char ch)
+void enhancematload( P_char ch, P_char killer )
 {
   int reward;
   int moblvl = GET_LEVEL(ch);
-  if (IS_ELITE(ch))
-    moblvl * 10;
-  if(number(1, 5000) < moblvl)
+  if( IS_ELITE(ch) )
   {
-    debug("moblvl %d\r\n", moblvl);
-    if(number(1, 8000) < moblvl)
+    moblvl * 10;
+  }
+  if( number(1, 5000) < moblvl )
+  {
+    debug( "enhancematload: mob: '%s' (%d) moblvl %d", J_NAME(ch), GET_VNUM(ch), moblvl );
+    if(number(1, 4000) < moblvl)
     {
       reward = number(1, 8);
-      switch (reward)
+      switch( reward )
       {
         case 1:
           reward = 400239;
@@ -2471,7 +2585,7 @@ void enhancematload(P_char ch)
     else
     {
       reward = number(1, 13);
-      switch (reward)
+      switch( reward )
       {
         case 1:
           reward = 400238;
@@ -2515,7 +2629,11 @@ void enhancematload(P_char ch)
       }
     }
     P_obj gift = read_object(reward, VIRTUAL);
-    obj_to_char(gift, ch);
+    if( gift )
+    {
+      debug( "enhancematload: '%s' (%d) rewarded to %s.", gift->short_description, GET_OBJ_VNUM(gift), J_NAME(killer) );
+      obj_to_char( gift, ch );
+    }
   }
 }
 
@@ -2540,7 +2658,7 @@ void christmas_proc(P_char ch)
 
 void add_bloodlust(P_char ch, P_char victim)
 {
-  if (!ch)
+  if( !IS_ALIVE(ch) )
     return;
 
   int dur;
@@ -2552,6 +2670,9 @@ void add_bloodlust(P_char ch, P_char victim)
     return;
 
   if (GET_LEVEL(victim) < (GET_LEVEL(ch) - 5))
+    return;
+
+  if( affected_by_spell(victim, TAG_CONJURED_PET) )
     return;
 
   if (GET_RACE(ch) == RACE_OGRE)
@@ -2566,10 +2687,7 @@ void add_bloodlust(P_char ch, P_char victim)
     memset(&af, 0, sizeof(struct affected_type));
     af.type = TAG_BLOODLUST;
     af.modifier = 1;
-    if(GET_RACE(ch) == RACE_OGRE)
-      af.duration = 10;
-    else
-      af.duration = dur;
+    af.duration = dur;
     af.location = 0;
     af.flags = AFFTYPE_NODISPEL;
     affect_to_char(ch, &af);
@@ -2580,14 +2698,22 @@ void add_bloodlust(P_char ch, P_char victim)
     for(findaf = ch->affected; findaf; findaf = next_af)
     {
       next_af = findaf->next;
-      if((findaf && findaf->type == TAG_BLOODLUST) && findaf->modifier < 20)
+      // Everyone gets 100% bloodlust
+      if((findaf && findaf->type == TAG_BLOODLUST) && findaf->modifier < 10)
+      {
+        findaf->modifier += 1;
+        findaf->duration = dur;
+      }
+      // Lvls 1-41 get 200% bloodlust
+      else if((findaf && findaf->type == TAG_BLOODLUST)
+        && findaf->modifier < 20 && GET_LEVEL(ch) < 42)
       {
         findaf->modifier += 1;
         findaf->duration = dur;
       }
       else if(findaf && findaf->type == TAG_BLOODLUST)
       {
-        findaf->modifier = 20;
+        findaf->modifier = (GET_LEVEL(ch)<42) ? 20 : 10;
         findaf->duration = dur;
       }
     }

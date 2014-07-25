@@ -34,4 +34,7 @@ P_char get_player_from_name(char *name);
 int get_player_pid_from_name(char *name);
 char *get_player_name_from_pid(int pid);
 
+bool sub_string( const char *, const char * );
+bool sub_string_set( const char *, const char ** );
+
 #endif // _UTILITY_H_

@@ -21,8 +21,6 @@ struct epic_teacher_skill {
 };
 
 int epic_teacher(P_char ch, P_char pl, int cmd, char *arg);
-void epic_gain_skillpoints(P_char, int);
-int epic_skillpoints(P_char);
 int devotion_spell_check(int);
 void spell_resistance_check(P_char, P_char, void *);
 void do_epic_skills(P_char ch, char *arg, int cmd);
@@ -30,6 +28,11 @@ void do_hone(P_char, char*, int);
 bool silent_spell_check(P_char ch);
 void say_silent_spell(P_char ch, int spell);
 int two_weapon_check(P_char ch);
+
+// Might want to get rid of these? - Lohrr
+#define epic_skillpoints(ch) (IS_NPC(ch) ? 0 : ch->only.pc->epic_skill_points)
+#define epic_gain_skillpoints(ch, gain) (IS_NPC(ch) ? 0 : ch->only.pc->epic_skill_points \
+   = MAX(0, ch->only.pc->epic_skill_points + gain))
 
 #define EPIC_IMP_VNUM         54
 #define EPIC_RAVEN_VNUM       55

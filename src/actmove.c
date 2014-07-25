@@ -212,11 +212,12 @@ void SwapCharsInList(P_char ch1, P_char ch2)
 
 int leave_by_exit(P_char ch, int exitnumb)
 {
-  P_char   k, block1 = 0, block2, t_ch = 0;
+  P_char   k = NULL, block1 = NULL, block2 = NULL, t_ch = NULL;
   char     j, exit1 = -1, exit2 = -1, exit3 = -1;
   int      room_to;
   P_char   target_head = NULL;
   int      num_in_room = 0, room_limit = 0;
+  P_char   rider = NULL;
 
   /*
    * to avoid problems and conflicts, NEVER return TRUE from any check
@@ -439,13 +440,19 @@ int leave_by_exit(P_char ch, int exitnumb)
    * most degenerate case (ch is alone in room)
    */
 
-  if (IS_RIDING(ch) &&
-      (world[room_to].room_flags & SINGLE_FILE))
+  if (IS_RIDING(ch) && (world[room_to].room_flags & SINGLE_FILE))
   {
     send_to_char("You can't fit into this narrow passage while mounted...\n", ch);
     return FALSE;
   }
 
+  if( (( rider = get_linking_char(ch, LNK_RIDING) ) != NULL)
+    && (world[room_to].room_flags & SINGLE_FILE) )
+  {
+    send_to_char("You are almost knocked off your mount trying to head into such a cramped space.\n", rider );
+    send_to_char("You almost knock off your rider trying to head into such a cramped space.\n", ch );
+    return FALSE;
+  }
 
   if ((world[ch->in_room].room_flags & SINGLE_FILE) && !IS_TRUSTED(ch) &&
       !IS_AFFECTED(ch, AFF_WRAITHFORM) && ((world[ch->in_room].people != ch)
@@ -1444,7 +1451,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
        (mob_index[GET_RNUM(ch)].number == 11004)))
     return 0;
 
-  if (affected_by_spell(moving, SPELL_BLOODSTONE)) {
+  if (affected_by_spell(moving, SPELL_BLOODTOSTONE)) {
     need_movement += 4;
   }
 
@@ -1457,7 +1464,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
      !mount &&
      GET_VITALITY(ch) > need_movement)
   {
-    notch_skill(ch, SKILL_SNEAK, 20);
+    notch_skill(ch, SKILL_SNEAK, 5);
   }
   
 /*
@@ -2606,7 +2613,8 @@ void do_lock(P_char ch, char *argument, int cmd)
       send_to_char("Maybe you should close it first...\n", ch);
     else if (obj->value[2] < 1)
       send_to_char("That thing can't be locked.\n", ch);
-    else if (!(key_obj = has_key(ch, obj->value[2])) && !IS_TRUSTED(ch))
+    else if( !(key_obj = has_key(ch, obj->value[2]))
+      && (!IS_TRUSTED(ch) || IS_NPC(ch)) )
       send_to_char("You don't seem to have the proper key.\n", ch);
     else if (IS_SET(obj->value[1], CONT_LOCKED))
       send_to_char("It is locked already.\n", ch);
@@ -2628,7 +2636,8 @@ void do_lock(P_char ch, char *argument, int cmd)
       send_to_char("You have to close it first, I'm afraid.\n", ch);
     else if (EXIT(ch, door)->key < 1)
       send_to_char("There does not seem to be any keyholes.\n", ch);
-    else if (!has_key(ch, EXIT(ch, door)->key) && !IS_TRUSTED(ch))
+    else if( !has_key(ch, EXIT(ch, door)->key)
+      && (!IS_TRUSTED(ch) || IS_NPC(ch)) )
       send_to_char("You don't have the proper key.\n", ch);
     else if (IS_SET(EXIT(ch, door)->exit_info, EX_LOCKED))
       send_to_char("It's already locked!\n", ch);
@@ -2693,7 +2702,7 @@ void do_unlock(P_char ch, char *argument, int cmd)
     else if (obj->value[2] < 0)
     {
       send_to_char("Odd, you can't seem to find a keyhole.\n", ch);
-      if (GET_LEVEL(ch) < MINLVLIMMORTAL)
+      if (GET_LEVEL(ch) < MINLVLIMMORTAL || IS_NPC(ch))
         return;
       REMOVE_BIT(obj->value[1], CONT_LOCKED);
       send_to_char("...but you unlock it anyway!\n", ch);
@@ -2709,7 +2718,7 @@ void do_unlock(P_char ch, char *argument, int cmd)
     else if (!(key_obj = has_key(ch, obj->value[2])))
     {
       send_to_char("You don't seem to have the proper key.\n", ch);
-      if (GET_LEVEL(ch) < MINLVLIMMORTAL)
+      if (GET_LEVEL(ch) < MINLVLIMMORTAL || IS_NPC(ch))
         return;
       REMOVE_BIT(obj->value[1], CONT_LOCKED);
       send_to_char("...but you unlock it anyway!\n", ch);
@@ -2777,7 +2786,7 @@ void do_unlock(P_char ch, char *argument, int cmd)
     {
 
       send_to_char("You do not have the proper key for that.\n", ch);
-      if (GET_LEVEL(ch) < MINLVLIMMORTAL)
+      if (GET_LEVEL(ch) < MINLVLIMMORTAL || IS_NPC(ch))
         return;
       send_to_char("...but you unlock it anyway!\n", ch);
 
@@ -2903,7 +2912,7 @@ void do_pick(P_char ch, char *argument, int cmd)
     else if ((percent > chance) || IS_SET(obj->value[1], CONT_PICKPROOF))
     {
       send_to_char("You failed to pick the lock.\n", ch);
-      notch_skill(ch, SKILL_PICK_LOCK, 3);
+      notch_skill(ch, SKILL_PICK_LOCK, 25);
       CharWait(ch, 8);
       percent =
         percent - chance + pick->value[1] - IS_SET(obj->value[1],
@@ -2957,7 +2966,7 @@ void do_pick(P_char ch, char *argument, int cmd)
              IS_SET(EXIT(ch, door)->exit_info, EX_PICKPROOF))
     {
       send_to_char("You failed to pick the lock.\n", ch);
-      notch_skill(ch, SKILL_PICK_LOCK, 3);
+      notch_skill(ch, SKILL_PICK_LOCK, 25);
       CharWait(ch, 8);
       percent = percent - chance + pick->value[1];
       if (IS_SET(EXIT(ch, door)->exit_info, EX_PICKPROOF))
@@ -3775,7 +3784,7 @@ void do_stand(P_char ch, char *argument, int cmd)
         if(skl &&
            success > 0)
         {
-          notch_skill(kala, SKILL_CRIPPLING_STRIKE, 5);
+          notch_skill(kala, SKILL_CRIPPLING_STRIKE, 15);
           if (success > 85)
           {
             act("You spin on your heel, slamming your elbow into $N's ear.",

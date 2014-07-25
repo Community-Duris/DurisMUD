@@ -1130,8 +1130,8 @@ A
 A
 19 1
 #83176
-suit heavy spiked seige armor~
-&+La &+Ysuit &+Lof heavy &+rspiked &+Yseige &+Larmor&N~
+suit heavy spiked siege armor~
+&+La &+Ysuit &+Lof heavy &+rspiked &+Ysiege &+Larmor&N~
 &+LA &+Ysuit &+Lof heavy &+rspiked &+Yseige &+Larmor has been left here.~
 ~
 9 15 3 0 7 0 0 9 64 0 0
@@ -1584,7 +1584,7 @@ gnomish harm prevention belt~
 A
 17 -60
 A
-13 25
+13 10
 #83207
 steel cutlass~
 &+La &+Csteel &+Lcutlass&N~
@@ -1608,7 +1608,7 @@ platinum telescope studded crystal shrimp~
 ~
 3 8 2 0 14 0 1 8404993 64 0 0
 51 5 5 69 0 0 0 0
-0 414339 100 4 0 0 1048576
+0 414339 100 0 0 0 1048576
 E
 platinum telescope studded crystal shrimp~
    &+WThis small, platinum telescope is studded in shapely, detailed shrimp
@@ -1685,8 +1685,8 @@ stone hearth~
 &+Lintense heat.
 ~
 #83213
-spiked seige boots~
-&+Lsome s&N&+rp&+Li&N&+rk&+Le&N&+rd &+Yseige &+Lboots&N~
+spiked siege boots~
+&+Lsome s&N&+rp&+Li&N&+rk&+Le&N&+rd &+Ysiege &+Lboots&N~
 &+LSome spiked &+Yseige &+Lboots have been left here.~
 ~
 9 15 3 0 9 0 0 65 0 0 0
@@ -1803,16 +1803,16 @@ ancient suit mithril dwarven scalemail~
 ~
 9 18 3 0 14 0 5121 9 66 120734207 0
 30 0 0 5 0 0 0 0
-5 109338 100
+5 109338 100 134217728 0 0 0
 E
 suit mithril dwarven scale mail scalemail~
    &+CThis fine suit of magic scalemail has been made from the purest, finest
 &+Cdwarven mithril.
 ~
 A
-35 5
+5 10
 A
-31 5
+35 3
 #83220
 boody haunch olyx ox meat~
 &+ra bloody &+Rha&+Wun&+Rch &N&+rof &+colyx &+Rmeat&N~
@@ -2201,7 +2201,7 @@ belt darkmail~
    &+LThis belt is made of several finely-smelted plates of dark&N&+mmail &+Lplates, which is known to be an alloy of adamantium and mithril, fastened together into a belt.
 ~
 A
-35 5
+35 3
 A
 13 15
 #83245
@@ -3889,7 +3889,7 @@ all seeing demonic eye all-seeing~
 &+Lan &+Call&+L-seeing &N&+rd&+Le&n&+rm&+Lo&N&+rn&+Li&N&+rc &+Weye&N~
 &+LAn &+Call&+Lseeing &N&+rdemonic &+Weye &Nhas been left here, &+Mstaring at &+Yyou&+W!~
 ~
-9 2 1 0 7 0 67117184 131073 64 0 0
+9 2 1 0 7 0 67117184 131073 64 129101915 0
 5 0 0 2 0 0 0 0
 0 4 100 40 28 0 0
 E
@@ -4868,7 +4868,7 @@ earring entwined roots~
 &n&+gan earring of &+ye&+Ln&N&+yt&+Lw&N&+yi&+Ln&N&+ye&+Ld &N&+groots&N~
 &+yAn earring of &+yen&+Ltw&+Gined &N&+yroots&N has been left here.~
 ~
-9 6 3 0 7 0 0 524289 64 0 0
+9 6 3 0 7 0 4096 524289 64 0 0
 2 0 0 3 0 0 0 0
 2 100 100
 E
@@ -5205,9 +5205,9 @@ _id_desc_~
 &+WA bone band of infinite power has been left here.
 ~
 A
-35 4
+35 3
 A
-37 5
+37 3
 #83427
 etched stone key~
 &+Lan &Ne&+Ltc&Nh&+Led&+L stone key&n~
@@ -5561,9 +5561,9 @@ string disembodied hands~
 &+rdisembodied &+Yhands &N&+yof numerous shapes and sizes.
 ~
 A
-32 4
+32 3
 A
-36 4
+36 3
 #83449
 breastplate gold trimmed mithril plate~
 &+ma breastplate of &+Ygold-trimmed &N&+mmithril&N~
@@ -5632,15 +5632,15 @@ massive studded mithril fists~
 ~
 9 18 5 0 5 0 0 129 64 0 0
 5 0 0 0 0 0 0 0
-9 22332 100
+15 22332 100
 E
 massive studded mithril fists~
    &+mThese simple, massive fists are covered with huge jagged studs.
 ~
 A
-1 12
+1 8
 A
-31 5
+31 4
 #83453
 stacks gold silver coins~
 &+WMassive stacks of &+Ygold &+Wand &N&+csilver &+Wcoins&N~
@@ -5677,7 +5677,7 @@ smouldering forge hammer urtengor _noquest_~
 &+LA massive &N&+rsmouldering &+Lhammer sits here on its head.~
 ~
 5 11 4 0 15 0 33555200 8193 66 0 48
-4 4 4 0 0 167023 40 25
+4 4 4 0 0 431 40 25
 1 332230 100
 E
 smouldering forge hammer urtengor~
@@ -5694,7 +5694,7 @@ _room_msg~
 &n$n's $q &+Yexplodes &+Rwith a massive &n&+cshockwave&+R!
 ~
 A
-58 -1
+1 5
 A
 31 5
 #83456
@@ -5724,7 +5724,7 @@ _victim_msg~
 &n$n's $q &+Wexplodes in a painfully-blinding blast of light, smiting you!
 ~
 A
-57 -1
+34 5
 A
 35 5
 #83457
@@ -6578,7 +6578,7 @@ collapsable platinum prospector prospector's monocle~
 A
 18 4
 A
-36 5
+2 5
 #83505
 black leather gloves mithril blades~
 &+Lsome black leather gloves &n&+mwith mith&+Cril &+mbla&+Cdes&N~
@@ -6774,9 +6774,9 @@ pair skeletal gargoyle wings~
 &+Wfrom wings.
 ~
 A
-54 35
+54 20
 A
-20 -4
+20 -3
 #83512
 strange white hand print~
 &+La s&+Yt&+Lr&+Ca&+Ln&+Yg&+Le &+Wwhite &+Lh&+ya&+Ln&+yd &+Lp&+yr&+Li&+yn&+Lt&N~
@@ -6919,9 +6919,9 @@ mysterious hooded white robe black smoke~
 &+Wdeep within the fabric.
 ~
 A
-36 5
+36 3
 A
-24 -5
+24 -3
 #83518
 long gnarled moorwood staff headed dwarven skulls~
 &+ya lo&+mng &+ygna&+mrl&+yed &+Lmoorwood &+yst&+ma&+yff he&+mad&+yed wi&+mt&+yh &+Yd&+yw&+Ya&+yr&+Yv&+ye&+Yn &+Ws&Nk&+Wu&Nl&+Wl&Ns&N~
@@ -7358,7 +7358,7 @@ slime-covered slime covered aboleth skin~
 ~
 9 2 3 0 6 0 4097 289 64 0 0
 10 0 0 2 0 0 0 0
-1 23442 100 0 8256 16777216 0
+1 23442 100 2048 8256 0 0
 A
 23 -4
 A
@@ -7603,10 +7603,6 @@ righteous platinum platinum-plated plated shield berronar truesilver _noquest_~
 37 25 4 0 15 0 513 513 66 0 48
 1 3 4 200 5 0 0 0
 15 284553 100 0 0 128 0
-A
-57 -1
-A
-58 -1
 #83555
 rotting ram carcass~
 &+ya rotting &+Yram &+rcarcass&N~
@@ -8223,7 +8219,7 @@ barbed leggings oozing slime~
 ~
 9 10 3 0 4 0 4096 33 64 0 0
 15 0 0 5 1 0 0 0
-0 32443 100 8 0 0 0
+0 32443 100 134217728 0 0 0
 E
 barbed leggings oozing slime~
 &+LThese &+rbarbed&+L leggings are hollowed out &+baboleth&+L tentacles, remaining as
@@ -8231,9 +8227,9 @@ barbed leggings oozing slime~
 &+Lto ooze &Npuss.
 ~
 A
-19 5
+19 4
 A
-20 -5
+20 -3
 #83581
 fine suit silver chainmail~
 &+ya fine s&+cu&+yi&+ct &+yof &+cs&+Ci&+cl&+Cve&+cr &nch&+Wai&Nn&+Wm&Nai&+Wl&N~
@@ -8444,9 +8440,9 @@ dwarf bone dwarf-bone crown troglodytes~
 &+Wfashioned without prejudice.
 ~
 A
-31 5
+31 3
 A
-35 5
+13 25
 #83593
 shroud corruption~
 &+Lthe shroud of &N&+mcorruption&N~
@@ -8461,7 +8457,7 @@ shroud corruption~
 &+Land enveloping its wearer with a monstrous persistance.
 ~
 A
-35 4
+35 3
 A
 13 15
 #83594

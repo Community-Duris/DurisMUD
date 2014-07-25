@@ -547,7 +547,7 @@ void do_outpost(P_char ch, char *arg, int cmd)
     }
      
     // Find the rubble object in room
-    for (rubble = world[ch->in_room].contents; rubble; rubble = rubble->next)
+    for (rubble = world[ch->in_room].contents; rubble; rubble = rubble->next_content)
     {
       if (GET_OBJ_VNUM(rubble) == BUILDING_RUBBLE)
         break;
@@ -1492,32 +1492,44 @@ void outposts_upkeep()
   int deduct = 0;
   int owners[MAX_ASC];
 
-  if (time(0) - upkeep_time < (60*60))
+  if( time(0) - upkeep_time < (60*60) )
+  {
     return;
+  }
   else
+  {
     upkeep_time = time(0);
+  }
 
   for (j = 0; j < MAX_ASC; j++)
-    owners[j] = 0;
-
-  for (i = 0; i <= buildings.size(); i++)
   {
-    building = get_building_from_id(i+1);
+    owners[j] = 0;
+  }
+
+  for( i = 1; i <= buildings.size(); i++ )
+  {
+    building = get_building_from_id(i);
     if (!building)
+    {
       continue;
+    }
     owners[building->guild_id]++;
   }
-  
+
   for (j = 1; j < MAX_ASC; j++)
   {
-    if (owners[j])
+    if( owners[j] )
     {
       deduct = cost;
-      if (owners[j] > 1)
-        for (k = 1; k < owners[j]; k++)
-          deduct *= get_property("outpost.cost.upkeep.multi.modifier", 5);
+      if( owners[j] > 1 )
+      {
+        for( k = 1; k < owners[j]; k++ )
+        {
+          deduct = deduct * get_property("outpost.cost.upkeep.multi.modifier", 2.0);
+        }
+      }
       deduct /= 24; // per hour cost
-      debug("owned: %d, owner: %d, deduct: %s", owners[j], j, coin_stringv(deduct));
+//      debug("owned: %d, owner: %d, deduct: %s", owners[j], j, coin_stringv(deduct));
       int p = deduct / 1000;
       deduct = deduct % 1000;
       int g = deduct / 100;
@@ -1525,27 +1537,32 @@ void outposts_upkeep()
       int s = deduct / 10;
       deduct = deduct % 10;
       int c = deduct;
-      debug("p: %d, g: %d, s: %d, c: %d", p, g, s, c);
+//      debug("p: %d, g: %d, s: %d, c: %d", p, g, s, c);
       if (!sub_money_asc(j, p, g, s, c))
       {
-	send_to_guild(j, "The Guild Banker", "There are not enough funds for the outpost upkeep.");
+	      send_to_guild(j, "The Guild Banker", "There are not enough funds for the outpost upkeep.");
         // drop outposts.
-        for (i = 0; i <= buildings.size(); i++)
-	{
-	  building = get_building_from_id(i+1);
-	  if (!building)
-	    continue;
-	  if (building->guild_id == j)
-	  {
-	    // give them an hour after boot to get things in order before dropping
-	    if (real_time_passed(time(0), boot_time).minute < 60)
-	      continue;
-	    sprintf(buff, "Dropping %s&+C outpost.", continent_name(world[building->location()].continent));
-	    send_to_guild(j, "The Guild Banker", buff);
-	    update_outpost_owner(0, building);
-	    reset_one_outpost(building);
-	  }
-	}
+        for( i = 1; i <= buildings.size(); i++ )
+	      {
+      	  building = get_building_from_id(i);
+      	  if (!building)
+          {
+      	    continue;
+          }
+	        if (building->guild_id == j)
+	        {
+            // give them an hour after boot to get things in order before dropping
+	          if( real_time_passed(time(0), boot_time).hour < 1
+              && real_time_passed(time(0), boot_time).day < 1 )
+            {
+	            continue;
+            }
+      	    sprintf(buff, "Dropping %s&+C outpost.", continent_name(world[building->location()].continent));
+	          send_to_guild(j, "The Guild Banker", buff);
+      	    update_outpost_owner(0, building);
+	          reset_one_outpost(building);
+      	  }
+      	}
       }
     }
   }

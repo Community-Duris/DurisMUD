@@ -48,7 +48,7 @@ void do_tether( P_char ch, char *argument, int cmd )
       return;
 
    // If doesn't have tether (i.e. not a cabalist)
-   if( !GET_CLASS( ch, CLASS_CABALIST ) || GET_LEVEL(ch) < 11 )
+   if( !IS_TRUSTED(ch) )// !GET_CLASS( ch, CLASS_CABALIST ) || GET_LEVEL(ch) < 11 )
    {
       act( "You would not know where to begin.", FALSE, ch, NULL, NULL, TO_CHAR );
       return;

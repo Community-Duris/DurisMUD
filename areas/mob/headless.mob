@@ -11,8 +11,8 @@ kal zerr kal-zerr commander force headless~
 &+Whis chest are for proving his battle victories, for each one indicates a&n
 &+Wlarge scale battle where his forces decimated another.&n
 ~
-1124104522 1 0 808124568 12510 0 0 -1000 S
-G 0 545 -1
+1124104522 1 0 0 808124568 12510 0 0 -1000 S
+G 0 545 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -27,8 +27,8 @@ xorn massive eight legged eight-legged br_g~
 &+Cits orifices.  Small trickles of blood flow down its body, perhaps those&n
 &+Cfrom its last meal.&n
 ~
-1140881482 1 0 24 0 0 0 -1000 S
-D 0 384 -1
+1140881482 1 0 0 24 0 0 0 -1000 S
+D 0 384 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -43,8 +43,8 @@ trainer xorn heavily scarred~
 &+Wfull maturity.  An excellent trainer, he is no stranger to combat himself&n
 &+Wand appears quite willing and able to attack anything in his sight.&n
 ~
-10314 1 0 24 0 0 0 -1000 S
-G 0 2097153 -1
+10314 1 0 0 24 0 0 0 -1000 S
+G 0 2097153 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -57,8 +57,8 @@ commodore headless leather hided leather-hided _noblind_ _nosneak_ _nobutt_ _ign
 &+bwill be deployed if a battle erupts on the seas.  His position is one of&n
 &+bconsiderable respect, and as such he is afforded several guards.&n
 ~
-490570 0 0 3087106184 2048 0 71307264 0 S
-G 0 5 -1
+490570 0 0 0 3087106184 2048 0 71307264 0 S
+G 0 5 0 -1
 54 0 0 100d100+10000 10d10+50
 0.0.0.0 0
 8 8 1
@@ -71,8 +71,8 @@ quartermaster huge headless master quarter~
 &+yships are properly equipped, this headless gets all the blame if anything&n
 &+yis found amiss on any of the ships.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -87,8 +87,8 @@ general field headless titanic~
 &+Weach battle.  With this responisbility comes alot of credit, however it also&n
 &+Wcomes with the majority of the blame should things go awry.&n
 ~
-10442 1 0 24 0 0 0 -1000 S
-G 0 1048705 -1
+10442 1 0 0 24 0 0 0 -1000 S
+G 0 1048705 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -102,8 +102,8 @@ sergeant headless gigantic~
 &+gof the horde.  His battle abilities are without question however, for he&n
 &+ghas proven himself as a valiant and brave soldier on the field of battle.&n
 ~
-14414 1 0 24 0 0 0 -1000 S
-G 0 1 -1
+14414 1 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -116,8 +116,8 @@ terrified young frost giant~
 &+cguillotine.  Taken on a raid by the headless horde into Jotenheim, his soul&n
 &+cis doomed to an existence worse than death.&n
 ~
-2248 0 0 8 0 0 0 -1000 S
-G 0 1 -1
+2248 0 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -130,8 +130,8 @@ clerk supply massive headless~
 &+ywork, however he gets none of the credit.  His well-muscled torso shows he&n
 &+yhas spent alot of time loading supplies onto vessels.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -144,8 +144,8 @@ sailor headless mammoth~
 &+bshould be is a gaping hole, although he still seems to walk about as if he &n
 &+bcould see perfectly.  His thick arms are covered in many tattoos and scars.&n
 ~
-10312 1 0 24 0 0 0 -1000 S
-G 0 1 -1
+10312 1 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -158,8 +158,8 @@ captain broad shouldered headless broad-shouldered~
 &+bmission is to sink enemy ships, and he he is the most experienced and&n
 &+bsuccessful of the entire fleet.&n
 ~
-1073752138 1 0 8 0 0 0 -1000 S
-G 0 16385 -1
+1073752138 1 0 0 8 0 0 0 -1000 S
+G 0 16385 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -172,8 +172,8 @@ marine sergeant headless enormous~
 &+bsets up, aims, and fires the machine.  Despite having no eyes he is a crack&n
 &+bshot, and rarely misses with the mighty weapon.&n
 ~
-10314 1 0 24 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -186,8 +186,8 @@ crewman headless ballista large _nosneak_~
 &+btrained in proper use of the weapon.  His training enables him to fire and&n
 &+breload a ballista in a very short amount of time.&n
 ~
-1140861002 0 0 8 0 0 0 -1000 S
-G 0 1 -1
+1140861002 0 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -200,8 +200,8 @@ battlemage huge headless battle mage~
 &+cspecializes in setting enemy ships on fire with magical flame, impossible&n
 &+cto extinguish by normal means.&n
 ~
-1090529354 1 0 152 0 0 0 -1000 S
-G 0 4194817 -1
+1090529354 1 0 0 152 0 0 0 -1000 S
+G 0 4194817 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -214,8 +214,8 @@ ensign enormous headless~
 &+band other officers are not fond of.  Still, he is an officer, and the crew&n
 &+btreads lightly when he is about.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -228,8 +228,8 @@ web-footed web footed headless gigantic~
 &+gbefore its unfortunate conversion to a headless.  It is now a personal &n
 &+gbodyguard of the commodore, sworn to protect his life.&n
 ~
-67119178 0 0 8 0 0 0 -1000 S
-G 0 1 -1
+67119178 0 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -242,8 +242,8 @@ labourer massive headless~
 &+grock from the quarry.  Large scars on his arms and torso show he is no&n
 &+gstranger to battle either.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -256,8 +256,8 @@ overseer headless imposing~
 &+gtime.  No stranger to violence, he has killed many of them while driving &n
 &+gthem to and past the limits of exertion.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -270,8 +270,8 @@ craftsman headless massive~
 &+gfierce in battle.  His delicate hands are accustomed to the swing of a hammer&n
 &+gto build war machines however his strength is not to be under-estimated.&n
 ~
-10314 0 0 8 0 0 0 -1000 S
-G 0 524288 -1
+10314 0 0 0 8 0 0 0 -1000 S
+G 0 524288 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -285,8 +285,8 @@ engineer one armed one-legged headless~
 &+ghas refined the operation of several machines, and is said to be working&n
 &+gon a new&n &+cproject.&n
 ~
-10314 0 0 8 0 0 0 -1000 S
-G 0 524289 -1
+10314 0 0 0 8 0 0 0 -1000 S
+G 0 524289 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -300,8 +300,8 @@ sergeant drill headless gigantic~
 &+gof troops until one dies, considering that to be the way to tell when to&n
 &+gstop the training.&n
 ~
-10314 1 0 24 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -315,8 +315,8 @@ berserker huge headless~
 &+grest of the troops in the army however his training has just begun.  No&n
 &+gdoubt he will make a fine addition to the horde.&n
 ~
-8266 1 0 8 0 0 0 -1000 S
-G 0 1048576 -1
+8266 1 0 0 8 0 0 0 -1000 S
+G 0 1048576 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -330,8 +330,8 @@ corporal enormous headless~
 &+glarge boulder one hundred yards with deadly accuracy, their skill is in&n
 &+gno small part thanks to his instruction.&n
 ~
-10314 1 0 152 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 152 0 0 0 -1000 S
+G 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -345,8 +345,8 @@ trooper shock huge headless~
 &+garms betray the fact that he has spent incredible amounts of time perfecting&n
 &+ghis skills.&n
 ~
-10314 1 0 24 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -360,8 +360,8 @@ guard headless enormous~
 &+Lmagically re-animated.  His immense size and fighting skill make him the&n
 &+Lperfect gate guard for Zalkapfaan.&n
 ~
-1140861002 0 0 8 0 0 0 -1000 S
-G 0 1 -1
+1140861002 0 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -376,8 +376,8 @@ officer bounty headless enormous~
 &+gkills, with no questions asked.  In Zalkapfaan headless rule, and the&n
 &+gnon-headless lose their heads.&n
 ~
-1073752138 0 0 8 0 0 0 -1000 S
-G 0 1 -1
+1073752138 0 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -390,8 +390,8 @@ vigilante headless massive~
 &+gor cathedral some have no proper function.  These merely roam the streets&n
 &+glooking for someone to kill, under the pretense of 'justice'.&n
 ~
-10312 1 0 8 0 0 0 -1000 S
-G 0 16385 -1
+10312 1 0 0 8 0 0 0 -1000 S
+G 0 16385 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -405,8 +405,8 @@ mercenary headless fearsome~
 &+gbasis and for this proof is required, usually the ears of whatever creature&n
 &+gis unfortunate to meet him.&n
 ~
-1073752136 1 0 8 0 0 0 -1000 S
-G 0 16384 -1
+1073752136 1 0 0 8 0 0 0 -1000 S
+G 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -420,8 +420,8 @@ smith headless gargantuan~
 &+gcontract and release.  The pure strength of this smith is unmatched anywhere&n
 &+gin Zalkapfaan.&n
 ~
-1073752138 0 0 24 0 0 0 -1000 S
-G 0 1 -1
+1073752138 0 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -435,8 +435,8 @@ artisan huge headless~
 &+gsome time for he moves the weaponry and armor about with an ease that&n
 &+gspeaks volumes of his former experience.&n
 ~
-67119178 0 0 8 0 0 0 -1000 S
-G 0 524288 -1
+67119178 0 0 0 8 0 0 0 -1000 S
+G 0 524288 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -449,8 +449,8 @@ cook headless filthy~
 &+mof preparing the gruel 'eaten' by the headless horde each day.  He scratches&n
 &+mhis crotch noisily and spits in the vat of gruel.&n
 ~
-10314 0 0 0 0 0 0 -1000 S
-G 0 1 -1
+10314 0 0 0 0 0 0 0 -1000 S
+G 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -463,8 +463,8 @@ off-duty headless miner~
 &+grelaxing with a nice hot bowl of steaming hot gruel.  He lifts it casually&n
 &+gand pours it down the hole in his neck.&n
 ~
-10314 0 0 0 0 0 0 -1000 S
-G 0 1 -1
+10314 0 0 0 0 0 0 0 -1000 S
+G 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -478,8 +478,8 @@ tired headless soldier~
 &+gindicate he has almost completed his training, and soon will be assigned to&n
 &+gan invasion unit.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -492,8 +492,8 @@ soldier foot headless massive~
 &+gfighting techniques.  Although most fights involve some sort of weaponry,&n
 &+gthe intesive training regimen takes every possibility into account.&n
 ~
-1073752138 1 0 24 0 0 0 -1000 S
-G 0 1 -1
+1073752138 1 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -506,8 +506,8 @@ instructor combat headless imposing~
 &+gtraining the army in use of weaponry and hand-to-hand fighting.  He hefts&n
 &+ghis weapon with such casualness that it seems an extension of his body.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-G 0 1064961 -1
+10314 1 0 0 8 0 0 0 -1000 S
+G 0 1064961 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -520,8 +520,8 @@ berserker huge headless~
 &+gveteran is a mindless killer.  His training and weapons are almost secondary&n
 &+gto his pure unstoppable rage and fury.&n
 ~
-1140861004 1 0 24 0 0 0 -1000 S
-G 0 1048577 -1
+1140861004 1 0 0 24 0 0 0 -1000 S
+G 0 1048577 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -535,8 +535,8 @@ serpent sea lime scled huge lime-scaled br_g~
 &+Gflight, however it navigates the water very easily.  Sharp fangs in a&n
 &+Gmassive maw promis quick death.&n
 ~
-1140862026 1 0 24 0 0 0 -1000 S
-D 0 257 -1
+1140862026 1 0 0 24 0 0 0 -1000 S
+D 0 257 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -549,8 +549,8 @@ elite headless keep guard~
 &+ybridge.  His arms quiver in anticipation of dealing out bodily harm to&n
 &+ysomeone or something.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-G 0 17 -1
+10314 1 0 0 8 0 0 0 -1000 S
+G 0 17 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -563,8 +563,8 @@ warden bridge headless gigantic~
 &+gwho is allowed to enter the keep.  His huge frame and obvious muscles show&n
 &+ghe is not one to underestimate.&n
 ~
-10314 1 0 24 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -577,8 +577,8 @@ xorn pet br_g~
 &+ctop half of this creature snap angrily.  Small rivulets of blood flow from&n
 &+cthe corners of the large jaw, dripping slowly to the ground.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-D 0 16777216 -1
+10314 1 0 0 8 0 0 0 -1000 S
+D 0 16777216 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -591,8 +591,8 @@ guard midnight plague headless~
 &+Lthe elite Midnight Plague unit, specially famed for their ferocity and pure&n
 &+Lsavage brutality.&n
 ~
-1073752264 1 0 2228248 0 0 0 -1000 S
-G 0 1 -1
+1073752264 1 0 0 2228248 0 0 0 -1000 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -606,8 +606,8 @@ elite headless bodyguard guard~
 &+gtraining is such that they will willingly trade their lives for even the&n
 &+gslightest chance of protecting their master.  They are without fear.&n
 ~
-1140861002 1 0 2097176 0 0 0 -1000 S
-G 0 65 -1
+1140861002 1 0 0 2097176 0 0 0 -1000 S
+G 0 65 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -620,8 +620,8 @@ yearling xorn br_g~
 &+chas grown incredibly.  Sharp fangs in its large jaw snap angrily, and razor-&n
 &+csharp claws threaten to rend and tear ones life.&n
 ~
-8264 1 0 8 0 0 0 -1000 S
-D 0 0 -1
+8264 1 0 0 8 0 0 0 -1000 S
+D 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -635,8 +635,8 @@ hatchling xorn br_g~
 &+cone day this xorn will accompany a brigade of headless shock troopers into&n
 &+cthe thick of battle.&n
 ~
-14536 1 0 8 0 0 0 -1000 S
-D 0 0 -1
+14536 1 0 0 8 0 0 0 -1000 S
+D 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -650,8 +650,8 @@ xorn mature br_g~
 &+cto fill gaps in the hordes lines of troopers, often swinging the tide of a&n
 &+cbattle all on their own.&n
 ~
-14410 1 0 8 0 0 0 -1000 S
-D 0 33554432 -1
+14410 1 0 0 8 0 0 0 -1000 S
+D 0 33554432 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -665,8 +665,8 @@ less xorn and train them in the attack tactics used by the horde.  The scars
 on his arms attest to the difficulty of his task, although judging by his
 clothing of cured xorn-hide he has had no problem enforcing his will.
 ~
-14410 1 0 24 0 0 0 -1000 S
-G 0 1 -1
+14410 1 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -680,8 +680,8 @@ priest headless wool robed wool-robed~
 &+call headless are, his duties involve defending the secrets of the headless&n
 &+chorde with his very life if need be.&n
 ~
-10440 1 0 8 0 0 0 0 S
-G 0 96 -1
+10440 1 0 0 8 0 0 0 0 S
+G 0 96 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -695,8 +695,8 @@ golem chrome burnished~
 &+Cbuffed so intensely that a perfect reflection is afforded off of the flat,&n
 &+Cunmoving pieces.  A low groan emanates from the golem, a single word:&n &+WMalra&n
 ~
-1073743946 0 0 8 0 0 0 0 S
-OG 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+OG 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -710,8 +710,8 @@ golem thick coagulated blood~
 &+Lthe abomination. and glowing yellow eyes peer eerily about.  A slow murmur&n
 &+Lcomes from the lips of the creature, a dull moaning of one word:&n &+rKaan&n
 ~
-1073752138 0 0 8 0 0 0 0 S
-OG 0 1 -1
+1073752138 0 0 0 8 0 0 0 0 S
+OG 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -725,8 +725,8 @@ bishop headless massive~
 &+rtruly devoted to the god of revenge, and his power is in accordance with&n
 &+rthe fervour with which he is followed.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-G 0 9 -1
+10314 1 0 0 8 0 0 0 -1000 S
+G 0 9 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -740,8 +740,8 @@ deacon headless enormous~
 &+gas most worship, a sick twsting of the devotion of a god long disappeared&n
 &+gfrom its true form.&n
 ~
-1073752138 1 0 8 0 0 0 1000 S
-G 0 9 -1
+1073752138 1 0 0 8 0 0 0 1000 S
+G 0 9 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -756,8 +756,8 @@ cardinal headless horde~
 &+Lit.  Irregardless, it alone contains the magic necesary to create new&n
 &+Lmembers of the headless, and thus it alone decides their fate.&n
 ~
-83896394 1 0 268566712 2048 0 0 -1000 S
-G 0 17825797 -1
+83896394 1 0 0 268566712 2048 0 0 -1000 S
+G 0 17825797 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -773,8 +773,8 @@ head disembodied frost giant~
 &+Mto dust.  For the meantime, it is quite vicious, mindless assaulting any-&n
 &+Mthing in its path with whatever means are at its disposal.&n
 ~
-10314 0 0 8 0 0 0 -1000 S
-R 0 1 -1
+10314 0 0 0 8 0 0 0 -1000 S
+R 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -789,8 +789,8 @@ newly animated headless frost giant~
 &+cto the creature, able to use its former skills and abilitys, but with no&n
 &+creal freedom of action for itself.&n
 ~
-10314 1 0 8 0 0 0 -1000 S
-G 0 1 -1
+10314 1 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -806,8 +806,8 @@ dark-skinned headless massive~
 &+rhe was made headless by more conventional means, perhaps before the use of&n
 &+rthe guillotine.&n
 ~
-2122 1 0 8 0 0 0 -1000 S
-G 0 16777217 -1
+2122 1 0 0 8 0 0 0 -1000 S
+G 0 16777217 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -820,8 +820,8 @@ queen xorn br_g~
 &+call of the newly created xorn.  Her violent temper is unmatched among a&n
 &+crace known for their brutality, and her strength is surpassed by none.&n
 ~
-1090534088 0 0 2228248 0 0 0 1000 S
-D 0 67108968 -1
+1090534088 0 0 0 2228248 0 0 0 1000 S
+D 0 67108968 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -835,8 +835,8 @@ zaal-kab first advisor zaal kab headless~
 &+gconducts surprise inspections on the navy and army units as well, although&n
 &+gthis is much rarer.&n
 ~
-1140852812 0 0 3670040 0 0 0 -1000 S
-G 0 8272 -1
+1140852812 0 0 0 3670040 0 0 0 -1000 S
+G 0 8272 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -851,8 +851,8 @@ zekrallin religious advisor headless~
 &+ghowever he ultimately loyal to the force ommander by vow.  A mumbling from&n
 &+ghim rambles over and over about &+Gpiety.&n
 ~
-1140865224 0 0 3801112 0 0 0 -1000 S
-G 0 96 -1
+1140865224 0 0 0 3801112 0 0 0 -1000 S
+G 0 96 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -867,8 +867,8 @@ serran head midnight plague~
 &+Lwith such pride.  A small badge on his tunic marks him as leader of the&n
 &+Lmidnight plague.&n
 ~
-1140852940 0 0 524312 0 0 0 -1000 S
-G 0 1 -1
+1140852940 0 0 0 524312 0 0 0 -1000 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

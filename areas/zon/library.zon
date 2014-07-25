@@ -1,0 +1,635 @@
+#402
+&+LThe Arcaneum of L'srillizzin~
+402149 1 0 30 50 1
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 402007 1 2 100 0 0 0
+*     east exit from "The Portico in front of The Great Library of L'srillizzin" to
+*     "The Foyer of The Great Library of L'srillizzin" - closed/locked
+*
+D 0 402008 3 2 100 0 0 0
+*     west exit from "The Foyer of The Great Library of L'srillizzin" to
+*     "The Portico in front of The Great Library of L'srillizzin" - closed/locked
+*
+D 0 402011 3 1 100 0 0 0
+*     west exit from "A Northern Corridor within The Great Library of L'srillizzin" to
+*     "The Inn at The Great Library of L'srillizzin" - closed
+*
+D 0 402115 1 1 100 0 0 0
+*     east exit from "The Inn at The Great Library of L'srillizzin" to
+*     "A Northern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402012 1 1 100 0 0 0
+*     east exit from "A Southern Corridor within The Great Library of L'srillizzin" to
+*     "The Library Depository" - closed
+*
+D 0 402114 3 1 100 0 0 0
+*     west exit from "The Library Depository" to
+*     "A Southern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402012 3 1 100 0 0 0
+*     west exit from "A Southern Corridor within The Great Library of L'srillizzin" to
+*     "A Small Scholar's Supply Shop within the Library" - closed
+*
+D 0 402113 1 1 100 0 0 0
+*     east exit from "A Small Scholar's Supply Shop within the Library" to
+*     "A Southern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402013 2 1 100 0 0 0
+*     south exit from "An Eastern Corridor within The Great Library of L'srillizzin" to
+*     "The Top of a Spiral Staircase to the Basement" - closed
+*
+D 0 402116 0 1 100 0 0 0
+*     north exit from "The Top of a Spiral Staircase to the Basement" to
+*     "An Eastern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402014 0 1 100 0 0 0
+*     north exit from "A Northern Corridor within The Great Library of L'srillizzin" to
+*     "The Office of the Dean of the Department of Sorcery" - closed
+*
+D 0 402021 2 1 100 0 0 0
+*     south exit from "The Office of the Dean of the Department of Sorcery" to
+*     "A Northern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402014 3 1 100 0 0 0
+*     west exit from "A Northern Corridor within The Great Library of L'srillizzin" to
+*     "A Library Section Dedicated to Sorcery" - closed
+*
+D 0 402015 1 1 100 0 0 0
+*     east exit from "A Library Section Dedicated to Sorcery" to
+*     "A Northern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402020 0 1 100 0 0 0
+*     north exit from "The Landing at the Bottom of a Spiral Staircase" to
+*     "The Offensive Spell Target Range Platform" - closed
+*
+D 0 402022 2 1 100 0 0 0
+*     south exit from "The Offensive Spell Target Range Platform" to
+*     "The Landing at the Bottom of a Spiral Staircase" - closed
+*
+D 0 402030 1 1 100 0 0 0
+*     east exit from "A Southern Corridor within The Great Library of L'srillizzin" to
+*     "A Very Small Spiral Staircase Carved in the Rock" - closed
+*
+D 0 402032 3 1 100 0 0 0
+*     west exit from "A Very Small Spiral Staircase Carved in the Rock" to
+*     "A Southern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402030 2 1 100 0 0 0
+*     south exit from "A Southern Corridor within The Great Library of L'srillizzin" to
+*     "The Office of the Dean of the Department of Conjuration" - closed
+*
+D 0 402031 0 1 100 0 0 0
+*     north exit from "The Office of the Dean of the Department of Conjuration" to
+*     "A Southern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402030 3 1 100 0 0 0
+*     west exit from "A Southern Corridor within The Great Library of L'srillizzin" to
+*     "A Library Section Dedicated to Conjuration" - closed
+*
+D 0 402040 1 1 100 0 0 0
+*     east exit from "A Library Section Dedicated to Conjuration" to
+*     "A Southern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402033 0 1 100 0 0 0
+*     north exit from "A Foyer Outside the Golem Summoning Rooms" to
+*     "A Warded Summoning Chamber to Contain Golems" - closed
+*
+D 0 402034 2 1 100 0 0 0
+*     south exit from "A Warded Summoning Chamber to Contain Golems" to
+*     "A Foyer Outside the Golem Summoning Rooms" - closed
+*
+D 0 402033 2 1 100 0 0 0
+*     south exit from "A Foyer Outside the Golem Summoning Rooms" to
+*     "A Warded Summoning Chamber to Contain Golems" - closed
+*
+D 0 402035 0 1 100 0 0 0
+*     north exit from "A Warded Summoning Chamber to Contain Golems" to
+*     "A Foyer Outside the Golem Summoning Rooms" - closed
+*
+D 0 402033 6 1 100 0 0 0
+*     northwest exit from "A Foyer Outside the Golem Summoning Rooms" to
+*     "A Warded Summoning Chamber to Contain Golems" - closed
+*
+D 0 402037 9 1 100 0 0 0
+*     southeast exit from "A Warded Summoning Chamber to Contain Golems" to
+*     "A Foyer Outside the Golem Summoning Rooms" - closed
+*
+D 0 402033 7 1 100 0 0 0
+*     southwest exit from "A Foyer Outside the Golem Summoning Rooms" to
+*     "A Warded Summoning Chamber to Contain Golems" - closed
+*
+D 0 402039 8 1 100 0 0 0
+*     northeast exit from "A Warded Summoning Chamber to Contain Golems" to
+*     "A Foyer Outside the Golem Summoning Rooms" - closed
+*
+D 0 402033 8 1 100 0 0 0
+*     northeast exit from "A Foyer Outside the Golem Summoning Rooms" to
+*     "A Warded Summoning Chamber to Contain Golems" - closed
+*
+D 0 402036 7 1 100 0 0 0
+*     southwest exit from "A Warded Summoning Chamber to Contain Golems" to
+*     "A Foyer Outside the Golem Summoning Rooms" - closed
+*
+D 0 402033 9 1 100 0 0 0
+*     southeast exit from "A Foyer Outside the Golem Summoning Rooms" to
+*     "A Warded Summoning Chamber to Contain Golems" - closed
+*
+D 0 402038 6 1 100 0 0 0
+*     northwest exit from "A Warded Summoning Chamber to Contain Golems" to
+*     "A Foyer Outside the Golem Summoning Rooms" - closed
+*
+D 0 402044 3 1 100 0 0 0
+*     west exit from "The Top of a Wide Central Staircase Lit by Faerie Fire" to
+*     "An Unusually Silent Foyer before a Visitor's Council Room" - closed
+*
+D 0 402065 1 1 100 0 0 0
+*     east exit from "An Unusually Silent Foyer before a Visitor's Council Room" to
+*     "The Top of a Wide Central Staircase Lit by Faerie Fire" - closed
+*
+D 0 402045 0 1 100 0 0 0
+*     north exit from "An Eastern Corridor within The Great Library of L'srillizzin" to
+*     "A Library Section Dedicated to Necromancy" - closed
+*
+D 0 402047 2 1 100 0 0 0
+*     south exit from "A Library Section Dedicated to Necromancy" to
+*     "An Eastern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402045 1 1 100 0 0 0
+*     east exit from "An Eastern Corridor within The Great Library of L'srillizzin" to
+*     "The Office of the Dean of the Department of Necromancy" - closed
+*
+D 0 402046 3 1 100 0 0 0
+*     west exit from "The Office of the Dean of the Department of Necromancy" to
+*     "An Eastern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402045 2 1 100 0 0 0
+*     south exit from "An Eastern Corridor within The Great Library of L'srillizzin" to
+*     "The Top of a Very Steep Spiral Staircase" - closed
+*
+D 0 402051 0 1 100 0 0 0
+*     north exit from "The Top of a Very Steep Spiral Staircase" to
+*     "An Eastern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402054 0 1 100 0 0 0
+*     north exit from "A Doorway before a Crypt" to
+*     "The Foyer of the Library Crypts" - closed
+*
+D 0 402055 2 1 100 0 0 0
+*     south exit from "The Foyer of the Library Crypts" to
+*     "A Doorway before a Crypt" - closed
+*
+D 0 402059 0 1 100 0 0 0
+*     north exit from "Deeper Within the Crypts of the Library" to
+*     "The Large Crypt of a Dracolich" - closed
+*
+D 0 402062 2 1 100 0 0 0
+*     south exit from "The Large Crypt of a Dracolich" to
+*     "Deeper Within the Crypts of the Library" - closed
+*
+D 0 402063 1 1 100 0 0 0
+*     east exit from "A Southern Corridor within The Great Library of L'srillizzin" to
+*     "A Library Section Dedicated to Illusion" - closed
+*
+D 0 402110 3 1 100 0 0 0
+*     west exit from "A Library Section Dedicated to Illusion" to
+*     "A Southern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402063 3 1 100 0 0 0
+*     west exit from "A Southern Corridor within The Great Library of L'srillizzin" to
+*     "The Office of the Dean of the Department of Psionicists" - closed
+*
+D 0 402139 1 1 100 0 0 0
+*     east exit from "The Office of the Dean of the Department of Psionicists" to
+*     "A Southern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402064 0 1 100 0 0 0
+*     north exit from "A Northern Corridor within The Great Library of L'srillizzin" to
+*     "A Shop of Alchemical Curios" - closed
+*
+D 0 402136 2 1 100 0 0 0
+*     south exit from "A Shop of Alchemical Curios" to
+*     "A Northern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402064 1 1 100 0 0 0
+*     east exit from "A Northern Corridor within The Great Library of L'srillizzin" to
+*     "The Office of the Dean of the Department of Ethermancers" - closed
+*
+D 0 402138 3 1 100 0 0 0
+*     west exit from "The Office of the Dean of the Department of Ethermancers" to
+*     "A Northern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402064 3 1 100 0 0 0
+*     west exit from "A Northern Corridor within The Great Library of L'srillizzin" to
+*     "A Library of Bardic Tales of Epic Adventures" - closed
+*
+D 0 402137 1 1 100 0 0 0
+*     east exit from "A Library of Bardic Tales of Epic Adventures" to
+*     "A Northern Corridor within The Great Library of L'srillizzin" - closed
+*
+D 0 402071 4 1 100 0 0 0
+*     up exit from "A Spiral Staircase into a Slender Tower" to
+*     "Within a Large Room of Shifting Shadows" - closed
+*
+D 0 402072 5 1 100 0 0 0
+*     down exit from "Within a Large Room of Shifting Shadows" to
+*     "A Spiral Staircase into a Slender Tower" - closed
+*
+D 0 402073 0 6 100 0 0 0
+*     north exit from "A Plane of Dreams and Nightmares" to
+*     "A Treasury of Illusions and Dreams" - closed/locked/secret
+*
+D 0 402100 2 6 100 0 0 0
+*     south exit from "A Treasury of Illusions and Dreams" to
+*     "A Plane of Dreams and Nightmares" - closed/locked/secret
+*
+D 0 402118 1 1 100 0 0 0
+*     east exit from "A Hallway in the Basement of L'srillizzin" to
+*     "A Dark Room within the Basement of the Library" - closed
+*
+D 0 402126 3 1 100 0 0 0
+*     west exit from "A Dark Room within the Basement of the Library" to
+*     "A Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402118 3 1 100 0 0 0
+*     west exit from "A Hallway in the Basement of L'srillizzin" to
+*     "A Dark Room within the Basement of the Library" - closed
+*
+D 0 402132 1 1 100 0 0 0
+*     east exit from "A Dark Room within the Basement of the Library" to
+*     "A Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402119 1 1 100 0 0 0
+*     east exit from "A Hallway in the Basement of L'srillizzin" to
+*     "A Storage Room within the Basement" - closed
+*
+D 0 402125 3 1 100 0 0 0
+*     west exit from "A Storage Room within the Basement" to
+*     "A Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402119 3 1 100 0 0 0
+*     west exit from "A Hallway in the Basement of L'srillizzin" to
+*     "A Storage Room within the Basement" - closed
+*
+D 0 402131 1 1 100 0 0 0
+*     east exit from "A Storage Room within the Basement" to
+*     "A Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402120 1 1 100 0 0 0
+*     east exit from "The End of a Hallway in the Basement of L'srillizzin" to
+*     "A Dark Room within the Basement of the Library" - closed
+*
+D 0 402124 3 1 100 0 0 0
+*     west exit from "A Dark Room within the Basement of the Library" to
+*     "The End of a Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402120 3 1 100 0 0 0
+*     west exit from "The End of a Hallway in the Basement of L'srillizzin" to
+*     "A Dark Room within the Basement of the Library" - closed
+*
+D 0 402130 1 1 100 0 0 0
+*     east exit from "A Dark Room within the Basement of the Library" to
+*     "The End of a Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402121 1 1 100 0 0 0
+*     east exit from "A Hallway in the Basement of L'srillizzin" to
+*     "A Dark Room within the Basement of the Library" - closed
+*
+D 0 402127 3 1 100 0 0 0
+*     west exit from "A Dark Room within the Basement of the Library" to
+*     "A Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402121 3 1 100 0 0 0
+*     west exit from "A Hallway in the Basement of L'srillizzin" to
+*     "A Dark Room within the Basement of the Library" - closed
+*
+D 0 402133 1 1 100 0 0 0
+*     east exit from "A Dark Room within the Basement of the Library" to
+*     "A Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402122 1 1 100 0 0 0
+*     east exit from "A Hallway in the Basement of L'srillizzin" to
+*     "A Storage Room within the Basement" - closed
+*
+D 0 402128 3 1 100 0 0 0
+*     west exit from "A Storage Room within the Basement" to
+*     "A Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402122 3 1 100 0 0 0
+*     west exit from "A Hallway in the Basement of L'srillizzin" to
+*     "A Storage Room within the Basement" - closed
+*
+D 0 402134 1 1 100 0 0 0
+*     east exit from "A Storage Room within the Basement" to
+*     "A Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402123 1 1 100 0 0 0
+*     east exit from "The End of a Hallway in the Basement of L'srillizzin" to
+*     "A Dark Room within the Basement of the Library" - closed
+*
+D 0 402129 3 1 100 0 0 0
+*     west exit from "A Dark Room within the Basement of the Library" to
+*     "The End of a Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402123 3 1 100 0 0 0
+*     west exit from "The End of a Hallway in the Basement of L'srillizzin" to
+*     "A Dark Room within the Basement of the Library" - closed
+*
+D 0 402135 1 1 100 0 0 0
+*     east exit from "A Dark Room within the Basement of the Library" to
+*     "The End of a Hallway in the Basement of L'srillizzin" - closed
+*
+D 0 402136 0 1 100 0 0 0
+*     north exit from "A Shop of Alchemical Curios" to
+*     "A Glowing Mushroom Garden" - closed
+*
+D 0 402140 2 1 100 0 0 0
+*     south exit from "A Glowing Mushroom Garden" to
+*     "A Shop of Alchemical Curios" - closed
+*
+*
+O 0 402000 1 402002 100 0 0 0      * an obsidian fountain of a Drow Elven explorer
+O 0 402001 1 402003 100 0 0 0      * a statue of a hooded Drow Elven monk
+P 1 402013 1 402001 100 0 0 0      *   a small pile of hidden coins
+O 0 402002 16 402004 100 0 0 0     * a faerie fire wall torch
+O 0 402002 16 402011 100 0 0 0     * a faerie fire wall torch
+O 0 402002 16 402012 100 0 0 0     * a faerie fire wall torch
+O 0 402002 16 402013 100 0 0 0     * a faerie fire wall torch
+O 0 402002 16 402014 100 0 0 0     * a faerie fire wall torch
+O 0 402010 11 402016 100 0 0 0     * a bookcase carved into the walls
+P 1 402015 1 402010 100 0 0 0      *   a leather-bound book covered in shifting shadows
+O 0 402010 11 402017 100 0 0 0     * a bookcase carved into the walls
+O 0 402010 11 402018 100 0 0 0     * a bookcase carved into the walls
+P 1 402012 1 402010 100 0 0 0      *   an illithid-skin spellbook of wyld magick
+O 0 402002 16 402020 100 0 0 0     * a faerie fire wall torch
+O 0 402030 1 402021 100 0 0 0      * a highly polished obsidian desk
+P 1 402029 1 402030 100 0 0 0      *   the historical journal of 'Solbeep'
+O 0 402002 16 402030 100 0 0 0     * a faerie fire wall torch
+O 0 402010 11 402041 100 0 0 0     * a bookcase carved into the walls
+P 1 402011 1 402010 100 0 0 0      *   a mystical tome with glowing elemental glyphs
+O 0 402010 11 402042 100 0 0 0     * a bookcase carved into the walls
+P 1 402016 1 402010 100 0 0 0      *   a white leather-bound tome of spirit domination
+O 0 402002 16 402045 100 0 0 0     * a faerie fire wall torch
+O 0 402010 11 402048 100 0 0 0     * a bookcase carved into the walls
+P 1 402019 1 402010 100 0 0 0      *   a spell tome of putrified zombie skin
+O 0 402010 11 402049 100 0 0 0     * a bookcase carved into the walls
+P 1 402018 1 402010 100 0 0 0      *   a black leather tome with an embossed dracolich
+O 0 402010 11 402050 100 0 0 0     * a bookcase carved into the walls
+P 1 402017 1 402010 100 0 0 0      *   a spellbook bound with embalmed woodelf flesh
+O 0 402002 16 402063 100 0 0 0     * a faerie fire wall torch
+O 0 402002 16 402064 100 0 0 0     * a faerie fire wall torch
+O 0 402037 1 402072 100 0 0 0      * a portal of shifting shadows to a dream plane
+O 0 402038 1 402099 100 0 0 0      * a portal of shifting shadows from a dream plane
+O 0 402040 1 402100 100 0 0 0      * a pile of hidden coins
+O 0 402043 1 402101 100 0 0 0      * the fragment of a dream
+O 0 402042 1 402102 100 0 0 0      * the fragment of a dream
+O 0 402041 1 402103 100 0 0 0      * the fragment of a dream
+O 0 402044 1 402104 100 0 0 0      * the fragment of a dream
+O 0 402048 1 402105 100 0 0 0      * the fragment of a dream
+O 0 402046 1 402106 100 0 0 0      * the fragment of a dream
+O 0 402047 1 402107 100 0 0 0      * the fragment of a dream
+O 0 402045 1 402108 100 0 0 0      * the fragment of a dream
+O 0 402010 11 402111 100 0 0 0     * a bookcase carved into the walls
+P 1 402051 1 402010 100 0 0 0      *   a mystical tome covered in demon-skin
+O 0 402010 11 402112 100 0 0 0     * a bookcase carved into the walls
+P 1 402050 1 402010 100 0 0 0      *   a cloth-bound tome of magical study
+O 0 3097 1 402114 100 0 0 0        * (object type not in this .obj file)
+O 0 402002 16 402118 100 0 0 0     * a faerie fire wall torch
+O 0 402002 16 402119 100 0 0 0     * a faerie fire wall torch
+O 0 402002 16 402120 100 0 0 0     * a faerie fire wall torch
+O 0 402002 16 402121 100 0 0 0     * a faerie fire wall torch
+O 0 402002 16 402122 100 0 0 0     * a faerie fire wall torch
+O 0 402002 16 402123 100 0 0 0     * a faerie fire wall torch
+O 0 402010 11 402137 100 0 0 0     * a bookcase carved into the walls
+P 1 402067 1 402010 100 0 0 0      *   a thick tome of legendary lores
+O 0 402068 4 402140 100 0 0 0      * a strange spotted Underdark mushroom
+O 0 402068 4 402141 100 0 0 0      * a strange spotted Underdark mushroom
+O 0 402068 4 402142 100 0 0 0      * a strange spotted Underdark mushroom
+O 0 402068 4 402143 100 0 0 0      * a strange spotted Underdark mushroom
+*
+M 0 402062 2 402003 100 0 0 0      * a wandering apprentice
+M 0 402062 2 402003 100 0 0 0      * a wandering apprentice
+M 0 402000 1 402007 100 0 0 0      * Gafrizzen, the Dean of Admissions
+M 0 402005 7 402008 100 0 0 0      * an obsidian golem of shadows
+M 0 402005 7 402008 100 0 0 0      * an obsidian golem of shadows
+M 0 402005 7 402008 100 0 0 0      * an obsidian golem of shadows
+M 0 402001 4 402009 100 0 0 0      * an obsidian golem of fire
+G 1 402004 1 0 100 0 0 0           *    the summoning essence of fire
+M 0 402002 4 402009 100 0 0 0      * an obsidian golem of gas
+G 1 402006 1 0 100 0 0 0           *    the summoning essence of sulfur
+M 0 402003 4 402009 100 0 0 0      * an obsidian golem of acid
+G 1 402005 1 0 100 0 0 0           *    the summoning essence of acid
+M 0 402004 4 402010 100 0 0 0      * an obsidian golem of storms
+G 1 402009 1 0 100 0 0 0           *    the summoning essence of lightning
+M 0 402005 7 402010 100 0 0 0      * an obsidian golem of shadows
+G 1 402008 1 0 100 0 0 0           *    the summoning essence of shadows
+M 0 402006 4 402010 100 0 0 0      * an obsidian golem of frostbite
+G 1 402007 1 0 100 0 0 0           *    the summoning essence of frostbite
+M 0 402052 6 402013 100 0 0 0      * a meek Half-Orc slave
+E 1 402087 6 16 100 0 0 0          *   a dagger of carved obsidian
+M 0 402052 6 402014 100 0 0 0      * a meek Half-Orc slave
+E 1 402087 6 16 100 0 0 0          *   a dagger of carved obsidian
+M 0 402057 4 402015 100 0 0 0      * an apprentice sorcerer
+M 0 402057 4 402016 100 0 0 0      * an apprentice sorcerer
+E 1 402073 1 1 100 0 0 0           *   a ring of shimmering faerie fire
+M 0 402057 4 402017 100 0 0 0      * an apprentice sorcerer
+M 0 402057 4 402018 100 0 0 0      * an apprentice sorcerer
+E 1 402077 1 3 100 0 0 0           *   a pendant of a ruby-encrusted spider
+M 0 402007 1 402021 100 0 0 0      * Grizzlane, Dean of Sorcery
+M 0 402011 1 402022 100 0 0 0      * a practicing Drow Elf sorcerer
+E 1 402014 1 5 100 0 0 0           *   some long spidersilk robes covered in shadows
+M 0 402008 1 402023 100 0 0 0      * a shackled Grey Elf
+M 0 402009 1 402024 100 0 0 0      * a caged Gnome
+M 0 402015 1 402025 100 0 0 0      * a harnessed Centaur
+M 0 402014 1 402026 100 0 0 0      * a hogtied Human
+M 0 402012 1 402027 100 0 0 0      * a chained Mountain Dwarf
+M 0 402016 1 402028 100 0 0 0      * a bound Barbarian
+M 0 402013 1 402029 100 0 0 0      * a hanging Halfling
+M 0 402052 6 402030 100 0 0 0      * a meek Half-Orc slave
+E 1 402087 6 16 100 0 0 0          *   a dagger of carved obsidian
+M 0 402017 1 402031 100 0 0 0      * Lysistrazz, Dean of Conjuration
+M 0 402010 1 402033 100 0 0 0      * Yralrife, the Master Golem Summoner
+E 1 402075 1 16 100 0 0 0          *   a staff of elemental creation
+M 0 402001 4 402034 100 0 0 0      * an obsidian golem of fire
+M 0 402001 4 402034 100 0 0 0      * an obsidian golem of fire
+M 0 402001 4 402034 100 0 0 0      * an obsidian golem of fire
+M 0 402004 4 402035 100 0 0 0      * an obsidian golem of storms
+M 0 402004 4 402035 100 0 0 0      * an obsidian golem of storms
+M 0 402004 4 402035 100 0 0 0      * an obsidian golem of storms
+M 0 402002 4 402036 100 0 0 0      * an obsidian golem of gas
+M 0 402002 4 402036 100 0 0 0      * an obsidian golem of gas
+M 0 402002 4 402036 100 0 0 0      * an obsidian golem of gas
+M 0 402006 4 402037 100 0 0 0      * an obsidian golem of frostbite
+M 0 402006 4 402037 100 0 0 0      * an obsidian golem of frostbite
+M 0 402006 4 402037 100 0 0 0      * an obsidian golem of frostbite
+M 0 402003 4 402038 100 0 0 0      * an obsidian golem of acid
+M 0 402003 4 402038 100 0 0 0      * an obsidian golem of acid
+M 0 402003 4 402038 100 0 0 0      * an obsidian golem of acid
+M 0 402005 7 402039 100 0 0 0      * an obsidian golem of shadows
+M 0 402005 7 402039 100 0 0 0      * an obsidian golem of shadows
+M 0 402005 7 402039 100 0 0 0      * an obsidian golem of shadows
+M 0 402056 3 402040 100 0 0 0      * an apprentice conjurer
+M 0 402056 3 402041 100 0 0 0      * an apprentice conjurer
+E 1 402074 1 3 100 0 0 0           *   a silvery necklace with an obsidian pendant
+M 0 402056 3 402042 100 0 0 0      * an apprentice conjurer
+E 1 402088 1 19 100 0 0 0          *   an eyepatch of swirling shadows
+M 0 402052 6 402045 100 0 0 0      * a meek Half-Orc slave
+E 1 402087 6 16 100 0 0 0          *   a dagger of carved obsidian
+M 0 402018 1 402046 100 0 0 0      * Rikn the Archlich, Dean of Necromancy
+M 0 402054 4 402047 100 0 0 0      * an apprentice necromancer
+M 0 402054 4 402048 100 0 0 0      * an apprentice necromancer
+E 1 402078 1 1 100 0 0 0           *   a silvery ring with engraved sigils
+M 0 402054 4 402049 100 0 0 0      * an apprentice necromancer
+E 1 402076 1 18 100 0 0 0          *   an ebonywood wand of shifting shadows
+M 0 402054 4 402050 100 0 0 0      * an apprentice necromancer
+M 0 402020 7 402055 100 0 0 0      * a shambling zombie
+M 0 402025 7 402055 100 0 0 0      * a sinister-looking skeleton
+M 0 402020 7 402056 100 0 0 0      * a shambling zombie
+M 0 402025 7 402056 100 0 0 0      * a sinister-looking skeleton
+M 0 402024 1 402057 100 0 0 0      * the spectre of a former Halfling
+E 1 402025 2 16 100 0 0 0          *   a crudely-carved bone shank
+E 1 402025 2 17 100 0 0 0          *   a crudely-carved bone shank
+G 1 402026 1 0 100 0 0 0           *    the ectoplasm of a spectre
+M 0 402020 7 402057 100 0 0 0      * a shambling zombie
+M 0 402025 7 402057 100 0 0 0      * a sinister-looking skeleton
+M 0 402023 1 402058 100 0 0 0      * the wraith of a former Human
+G 1 402024 1 0 100 0 0 0           *    the jagged teeth of a wraith
+M 0 402020 7 402058 100 0 0 0      * a shambling zombie
+M 0 402025 7 402058 100 0 0 0      * a sinister-looking skeleton
+M 0 402020 7 402059 100 0 0 0      * a shambling zombie
+M 0 402025 7 402059 100 0 0 0      * a sinister-looking skeleton
+M 0 402022 1 402060 100 0 0 0      * a vampire of a former Barbarian
+G 1 402023 1 0 100 0 0 0           *    the ashes of a vampire
+M 0 402020 7 402060 100 0 0 0      * a shambling zombie
+M 0 402025 7 402060 100 0 0 0      * a sinister-looking skeleton
+G 1 402028 1 0 100 0 0 0           *    the skull of a skeleton
+M 0 402021 1 402061 100 0 0 0      * the lich of a Githzerai
+G 1 402021 1 0 100 0 0 0           *    a small spellbook with a fingerbone spine
+G 1 402022 1 0 100 0 0 0           *    the fingerbone of a lich
+M 0 402020 7 402061 100 0 0 0      * a shambling zombie
+G 1 402027 1 0 100 0 0 0           *    the rotting flesh of a zombie
+M 0 402025 7 402061 100 0 0 0      * a sinister-looking skeleton
+M 0 402019 1 402062 100 0 0 0      * a large dracolich
+G 1 402020 1 0 100 0 0 0           *    the tailspike of a dracolich
+G 1 402086 1 0 100 0 0 0           *    a bracelet of dracolich teeth
+M 0 402052 6 402063 100 0 0 0      * a meek Half-Orc slave
+E 1 402087 6 16 100 0 0 0          *   a dagger of carved obsidian
+M 0 402052 6 402064 100 0 0 0      * a meek Half-Orc slave
+E 1 402087 6 16 100 0 0 0          *   a dagger of carved obsidian
+M 0 402030 1 402066 100 0 0 0      * Slanx, the Kobold explorer
+G 1 402036 1 0 100 0 0 0           *    a mystical tome with a claw-like binding
+M 0 402027 1 402067 100 0 0 0      * Gringobbi, the notorious rogue
+G 1 402031 999 0 100 0 0 0         *    some fine mithril lockpicks
+M 0 402026 1 402068 100 0 0 0      * Murgol, the famous clerical explorer
+M 0 402029 1 402069 100 0 0 0      * Shezeera, the lost blighter ghost
+M 0 402028 1 402070 100 0 0 0      * Grall, the master shamaness
+E 1 402035 1 13 100 0 0 0          *   a sash of woven linen
+E 1 402032 999 18 100 0 0 0        *   the totem of the spidermonkey
+E 1 402034 999 28 100 0 0 0        *   a totem of swirling shadows
+E 1 402033 999 18 100 0 0 0        *   a totem of glacial ice
+G 1 402032 999 0 100 0 0 0         *    the totem of the spidermonkey
+G 1 402033 999 0 100 0 0 0         *    a totem of glacial ice
+G 1 402034 999 0 100 0 0 0         *    a totem of swirling shadows
+M 0 402038 1 402072 100 0 0 0      * Kanklestilbin, Dean of Illusion
+M 0 402036 8 402081 100 0 0 0      * the dream memory of a lost explorer
+M 0 402036 8 402081 100 0 0 0      * the dream memory of a lost explorer
+M 0 402034 3 402083 100 0 0 0      * a shade manifested from nightmares
+M 0 402034 3 402083 100 0 0 0      * a shade manifested from nightmares
+M 0 402034 3 402083 100 0 0 0      * a shade manifested from nightmares
+M 0 402032 3 402085 100 0 0 0      * a shade manifested from nightmares
+M 0 402032 3 402085 100 0 0 0      * a shade manifested from nightmares
+M 0 402032 3 402085 100 0 0 0      * a shade manifested from nightmares
+M 0 402031 3 402087 100 0 0 0      * a shade manifested from nightmares
+M 0 402031 3 402087 100 0 0 0      * a shade manifested from nightmares
+M 0 402031 3 402087 100 0 0 0      * a shade manifested from nightmares
+M 0 402033 3 402089 100 0 0 0      * a shade manifested from nightmares
+M 0 402033 3 402089 100 0 0 0      * a shade manifested from nightmares
+M 0 402033 3 402089 100 0 0 0      * a shade manifested from nightmares
+M 0 402036 8 402091 100 0 0 0      * the dream memory of a lost explorer
+M 0 402036 8 402091 100 0 0 0      * the dream memory of a lost explorer
+M 0 402036 8 402093 100 0 0 0      * the dream memory of a lost explorer
+G 1 402039 1 0 100 0 0 0           *    an insubstantial skeleton key
+M 0 402036 8 402093 100 0 0 0      * the dream memory of a lost explorer
+M 0 402036 8 402097 100 0 0 0      * the dream memory of a lost explorer
+M 0 402036 8 402097 100 0 0 0      * the dream memory of a lost explorer
+M 0 402037 1 402099 100 0 0 0      * Gazdiel, the Weaver of Dreams
+M 0 402035 1 402109 100 0 0 0      * Mejilgivar, Demon of the Dark Dreaming
+M 0 402055 3 402110 100 0 0 0      * an apprentice illusionist
+M 0 402055 3 402111 100 0 0 0      * an apprentice illusionist
+E 1 402090 1 13 100 0 0 0          *   a long flowing sash of woven spidersilk
+M 0 402055 3 402112 100 0 0 0      * an apprentice illusionist
+E 1 402091 1 5 100 0 0 0           *   some flowing spidersilk robes covered in shadows
+M 0 402039 1 402113 100 0 0 0      * Lark, the Scholar's Supply Shopkeeper
+G 1 402052 999 0 100 0 0 0         *    a lavishly plumed quill pen
+G 1 402053 999 0 100 0 0 0         *    a messenger bag embroidered with mystical sigils
+G 1 402054 999 0 100 0 0 0         *    a flask crafted from Drider-skin
+M 0 402040 1 402114 100 0 0 0      * Gharlant, the Duergar banker
+M 0 402041 1 402124 100 0 0 0      * Ne'kalsai, the hermit
+G 1 402055 1 0 100 0 0 0           *    the drider robe of the shadow spinner
+M 0 402051 8 402125 100 0 0 0      * a wicked spider
+M 0 402051 8 402125 100 0 0 0      * a wicked spider
+M 0 402042 5 402126 100 0 0 0      * a young drider
+M 0 402043 5 402126 100 0 0 0      * an elegant drider
+M 0 402044 4 402126 100 0 0 0      * a mature drider
+G 1 402057 1 0 100 0 0 0           *    arachnid armor crafted from mithril
+M 0 402044 4 402127 100 0 0 0      * a mature drider
+M 0 402043 5 402127 100 0 0 0      * an elegant drider
+M 0 402045 5 402127 100 0 0 0      * a tall drider
+G 1 402059 1 0 100 0 0 0           *    robes of the shadow spider
+M 0 402051 8 402128 100 0 0 0      * a wicked spider
+M 0 402051 8 402128 100 0 0 0      * a wicked spider
+M 0 402042 5 402129 100 0 0 0      * a young drider
+M 0 402045 5 402129 100 0 0 0      * a tall drider
+M 0 402042 5 402129 100 0 0 0      * a young drider
+M 0 402042 5 402130 100 0 0 0      * a young drider
+M 0 402043 5 402130 100 0 0 0      * an elegant drider
+G 1 402058 1 0 100 0 0 0           *    robes of spun cobwebs
+M 0 402045 5 402130 100 0 0 0      * a tall drider
+M 0 402051 8 402131 100 0 0 0      * a wicked spider
+M 0 402051 8 402131 100 0 0 0      * a wicked spider
+M 0 402045 5 402132 100 0 0 0      * a tall drider
+M 0 402046 2 402132 100 0 0 0      * an elderly drider
+G 1 402056 1 0 100 0 0 0           *    some robes of fine spidersilk
+M 0 402043 5 402132 100 0 0 0      * an elegant drider
+M 0 402042 5 402133 100 0 0 0      * a young drider
+M 0 402044 4 402133 100 0 0 0      * a mature drider
+M 0 402046 2 402133 100 0 0 0      * an elderly drider
+M 0 402051 8 402134 100 0 0 0      * a wicked spider
+M 0 402051 8 402134 100 0 0 0      * a wicked spider
+M 0 402043 5 402135 100 0 0 0      * an elegant drider
+G 1 402060 1 0 100 0 0 0           *    arachnid robes of the huntress
+M 0 402045 5 402135 100 0 0 0      * a tall drider
+M 0 402044 4 402135 100 0 0 0      * a mature drider
+M 0 402047 1 402136 100 0 0 0      * Blithe, the svirfneblin alchemist
+G 1 402061 999 0 100 0 0 0         *    a barely visible elixir of liquid
+G 1 402062 999 0 100 0 0 0         *    a bright shimmering potion
+G 1 402063 999 0 100 0 0 0         *    a shimmering potion with feathers
+G 1 402064 999 0 100 0 0 0         *    an elixir of unholy water
+G 1 402065 999 0 100 0 0 0         *    a bubbling potion of acid
+G 1 402066 999 0 100 0 0 0         *    an elixir of the heartsblood of a Duergar Dwarf
+M 0 402048 1 402137 100 0 0 0      * Xralog, the great bardic storyteller
+G 1 402085 999 0 100 0 0 0         *    an ebonywood drum with silver engraved accents
+G 1 402084 999 0 100 0 0 0         *    an ebonywood harp with spidersilk strings
+G 1 402083 999 0 100 0 0 0         *    an ebonywood mandolin with spidersilk strings
+G 1 402082 999 0 100 0 0 0         *    a silvery trumpet horn with engraved sigils
+G 1 402081 999 0 100 0 0 0         *    an ebonywood lyre with spidersilk strings
+G 1 402080 999 0 100 0 0 0         *    a silvery flute with engraved sigils
+M 0 402049 1 402138 100 0 0 0      * Lakuna, the Dean of Ethermancy
+E 1 402079 1 11 100 0 0 0          *   a thin mithril shield enchanted with faerie fire
+M 0 402050 1 402139 100 0 0 0      * Jargif, Dean of Psionicists
+M 0 402053 4 402140 100 0 0 0      * a svirfneblin alchemist apprentice
+E 1 402072 1 5 100 0 0 0           *   a moss-covered cloak
+M 0 402053 4 402141 100 0 0 0      * a svirfneblin alchemist apprentice
+E 1 402071 1 7 100 0 0 0           *   some moss-covered leggings
+M 0 402053 4 402142 100 0 0 0      * a svirfneblin alchemist apprentice
+E 1 402069 1 9 100 0 0 0           *   a pair of moss-covered gloves
+M 0 402053 4 402143 100 0 0 0      * a svirfneblin alchemist apprentice
+E 1 402070 1 10 100 0 0 0          *   some moss-covered sleeves
+M 0 402059 1 402144 100 0 0 0      * Grumbiter, the darkest of knights
+M 0 402058 1 402145 100 0 0 0      * Gruk, the legendary warrior
+M 0 402060 1 402146 100 0 0 0      * Frilun, the silent monk
+M 0 402061 1 402148 100 0 0 0      * Razeline, the rare book collector
+*
+S

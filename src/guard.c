@@ -302,8 +302,8 @@ P_char guard_check(P_char attacker, P_char victim)
 
   //debug("final chance: %d", chance);
   
-  if( !notch_skill(guard, SKILL_GUARD, (int) get_property("skill.notch.guard", 5) ) && 
-      number(0, 100) > chance )
+  if( !notch_skill(guard, SKILL_GUARD, (int) get_property("skill.notch.guard", 17) )
+    && number(0, 100) > chance )
   {
     //debug("guard failed");
     

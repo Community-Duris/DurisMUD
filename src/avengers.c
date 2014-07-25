@@ -159,9 +159,8 @@ void do_holy_smite(P_char ch, char *argument, int cmd)
 	  ch);
    return;
   }
-  if (!notch_skill(ch, SKILL_HOLY_SMITE,
-                   get_property("skill.notch.offensive", 15)) &&
-      number(1, 101) > skl_lvl)
+  if (!notch_skill(ch, SKILL_HOLY_SMITE, get_property("skill.notch.offensive", 7))
+    && number(1, 101) > skl_lvl)
   {
     act("You fruitlessly attempt to judge $N's sins.", FALSE, ch, 0, vict, TO_CHAR);
     act("$n's attempt to judge your sins causes you to laugh malevolently.", FALSE, ch,
@@ -174,8 +173,7 @@ void do_holy_smite(P_char ch, char *argument, int cmd)
   }
   else
   {
-    melee_damage(ch, vict, (dice((GET_LEVEL(ch) / 2), (skl_lvl / 10)) * 2), PHSDAM_NOSHIELDS | PHSDAM_NOREDUCE | PHSDAM_NOPOSITION,
-    &messages);
+    melee_damage(ch, vict, (dice((GET_LEVEL(ch) / 2), (skl_lvl / 10)) / 2), PHSDAM_NOSHIELDS | PHSDAM_NOREDUCE | PHSDAM_NOPOSITION, &messages);
     if ((GET_LEVEL(ch) / 2) > number(1, 150) && IS_ALIVE(vict))
 	{
 	  act("&+L$N&+L is blinded by the &+Wholy&+L energy!&n", FALSE, ch, 0, vict, TO_CHAR);

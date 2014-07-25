@@ -1832,8 +1832,8 @@ void do_pose(P_char ch, char *argument, int cmd)
     m_class = 1;
   else if (GET_CLASS(ch, CLASS_SORCERER) || GET_CLASS(ch, CLASS_NECROMANCER)
            || GET_CLASS(ch, CLASS_CONJURER) || GET_CLASS(ch, CLASS_PSIONICIST)
-           || GET_CLASS(ch, CLASS_MINDFLAYER) ||
-           GET_CLASS(ch, CLASS_ILLUSIONIST))
+           || GET_CLASS(ch, CLASS_MINDFLAYER) || GET_CLASS(ch, CLASS_SUMMONER)
+           || GET_CLASS(ch, CLASS_ILLUSIONIST))
     m_class = 0;
   else
     m_class = 2;                // bard, rogue, assassin, merc, anything else
@@ -1855,6 +1855,7 @@ void do_pose(P_char ch, char *argument, int cmd)
   case CLASS_SORCERER:
   case CLASS_NECROMANCER:
   case CLASS_CONJURER:
+  case CLASS_SUMMONER:
     class = 0;
     break;
   case CLASS_BARD:

@@ -282,7 +282,7 @@ void do_disguise(P_char ch, char *arg, int cmd)
   if (percent > skl_lvl)
   {
     send_to_char("You do a horrid job", ch);
-    notch_skill(ch, SKILL_DISGUISE, 3);
+    notch_skill(ch, SKILL_DISGUISE, 25);
     justice_witness(ch, NULL, CRIME_DISGUISE);
     CharWait(ch, PULSE_VIOLENCE * 3);
     if (!IS_TRUSTED(ch) && !affected_by_spell(ch, ACH_DECEPTICON) && number(0, 1))
@@ -373,7 +373,7 @@ void do_disguise(P_char ch, char *arg, int cmd)
         unequip_char(ch, HOLD);
       extract_obj(temp, TRUE);
     }
-    notch_skill(ch, SKILL_DISGUISE, 15);
+    notch_skill(ch, SKILL_DISGUISE, 6.25);
     CharWait(ch, PULSE_VIOLENCE * 5);
   }
   if (target)
