@@ -168,7 +168,7 @@ void do_test_writemap(P_char ch, char *arg, int cmd)
   }
     
 }
-
+/*
 void do_test_add_epic_skillpoint(P_char ch, const char *charname)
 {
   P_char victim = get_char_room_vis(ch, charname);
@@ -184,7 +184,7 @@ void do_test_add_epic_skillpoint(P_char ch, const char *charname)
   send_to_char("&+WYou have gained an epic skill point!\n", victim);
 
 }
-
+*/
 extern Skill skills[];
 
 void do_test(P_char ch, char *arg, int cmd)
@@ -223,13 +223,13 @@ void do_test(P_char ch, char *arg, int cmd)
   {
     do_test_writemap(ch, arg, cmd);
     return;
-  }
+  }/*
   else if( isname("esp", buff) )
   {
     one_argument(arg, buff);
     do_test_add_epic_skillpoint(ch, buff);
     return;    
-  }
+  }*/
   else if( isname("mem", buff) )
   {
     int spell = memorize_last_spell(ch);

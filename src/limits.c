@@ -57,7 +57,6 @@ extern int get_innate_regeneration(P_char);
 extern P_index mob_index;
 struct mm_ds *dead_trophy_pool = NULL;
 extern struct race_names race_names_table[];
-extern void update_racial_skills(P_char);
 
 long      new_exp_table[TOTALLVLS];
 long     global_exp_limit;
@@ -621,13 +620,11 @@ void advance_level(P_char ch)
   }
   
   /* level out skills */
-#ifdef SKILLPOINTS
-  advance_skillpoints( ch );
-#else
+//#ifdef SKILLPOINTS
+//  advance_skillpoints( ch );
+//#else
   update_skills(ch);
-#endif
-
-  update_racial_skills(ch);
+//#endif
 
 /*
   if (GET_LEVEL(ch) == 21 && !IS_NEWBIE(ch) ) {
@@ -713,11 +710,11 @@ void lose_level(P_char ch)
   ch->player.level = MAX(1, ch->player.level - 1);
   sql_update_level(ch);
 
-#ifdef SKILLPOINTS
-  demote_skillpoints(ch);
-#else
+//#ifdef SKILLPOINTS
+//  demote_skillpoints(ch);
+//#else
   update_skills(ch);
-#endif
+//#endif
 
   if (GET_LEVEL(ch) < MINLVLIMMORTAL)
     for (i = 0; i < 3; i++)

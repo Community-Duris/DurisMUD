@@ -600,7 +600,7 @@ void do_spellbind (P_char ch, char *argument, int cmd)
   struct affected_type *afp;
   P_obj item;
   bool neggood;
-  int skill_points = epic_skillpoints(ch);
+  int total_epic_points = GET_EPIC_POINTS(ch);
   int bonus;
   int skill = GET_CHAR_SKILL(ch, SKILL_SPELLBIND);
   int total = 0;
@@ -616,11 +616,11 @@ void do_spellbind (P_char ch, char *argument, int cmd)
   }
 
   sprintf(buf , "You have %d spellbinds left...\n" , (int)
-    (skill_points));
+    (total_epic_points));
 
   send_to_char(buf, ch);
 
-  if(skill_points < 1)
+  if(total_epic_points < 1)
   {
     act("You do not have enough power...", FALSE, ch, 0, 0, TO_CHAR);
     return;
@@ -678,7 +678,8 @@ void do_spellbind (P_char ch, char *argument, int cmd)
 
   act("You successfully bind some magic to the item...", FALSE, ch, 0, 0, TO_CHAR);
 
-  epic_gain_skillpoints(ch, -1);
+  //epic_gain_skillpoints(ch, -1);
+  ch->only.pc->epics -= 1;
 
   if(!number(0, 2) && !IS_TRUSTED(ch))
   {

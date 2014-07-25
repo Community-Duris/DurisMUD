@@ -2051,12 +2051,6 @@ int getCharDodgeVal(const P_char vict, const P_char attacker,
                     const int body_loc_target, const P_obj weapon);
 const char *getDodgeEaseString(const int passedby, const int tochar);
 
-/* skills.c */
-void assign_racial_skills(P_char ch);
-void assign_racial_skills_norefund(P_char ch);
-void update_racial_skills(P_char ch);
-
-
 /* new_skills.c */
 
 void grapple_event (P_char, P_char);

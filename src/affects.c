@@ -35,7 +35,7 @@
 #include "paladins.h"
 #include "reavers.h"
 #include "ships.h"
-#include "epic.h"
+#include "epic_skills.h"
 #include "disguise.h"
 #include "sql.h"
 #include "vnum.obj.h"

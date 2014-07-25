@@ -22,13 +22,6 @@ using namespace std;
 #define EPIC_REWARD_LEVEL     3
 #define EPIC_MAX_PRESTIGE    12
 
-#define EPIC_IMP_VNUM         54
-#define EPIC_RAVEN_VNUM       55
-#define EPIC_OWL_VNUM         56
-#define EPIC_CAT_VNUM         57
-#define EPIC_BAT_VNUM         58
-#define EPIC_IGUANA_VNUM      59
-
 struct epic_trophy_data 
 {
   epic_trophy_data(int _z, int _c) : zone_number(_z), count(_c) {}
@@ -54,8 +47,8 @@ struct epic_zone_completion
   int delta;
 };
 
-int devotion_spell_check(int);
-void spell_resistance_check(P_char, P_char, void *);
+void create_epic_skills();
+void epic_initialization();
 void do_epic(P_char ch, char *arg, int cmd);
 void do_epic_trophy(P_char ch, char *arg, int cmd);
 void do_epic_zones(P_char ch, char *arg, int cmd);
@@ -66,14 +59,9 @@ int modify_by_epic_trophy(P_char ch, int amount, int zone_number);
 void gain_epic(P_char, int type, int data, int amount);
 void group_gain_epic(P_char, int type, int data, int amount);
 void epic_frag(P_char, int victim_pid, int amount);
-void epic_initialization();
-int epic_skillpoints(P_char);
-void epic_gain_skillpoints(P_char, int);
 const char *epic_prestige(P_char);
-void do_hone(P_char, char*, int); 
 void init_guild_frags();
 void epic_feed_artifacts(P_char ch, int epics, int epic_type);
-void do_epic_skills(P_char ch, char *arg, int cmd);
 void do_epic_reset(P_char ch, char *arg, int cmd);
 void do_epic_reset_norefund(P_char ch, char *arg, int cmd);
 void do_infuse(P_char ch, char *arg, int cmd);
@@ -103,9 +91,9 @@ int zone2saveable(int zone_index);
 int saveable2zone(int saved_zone);
 void epic_choose_new_epic_task(P_char ch);
 
-bool silent_spell_check(P_char ch);
-void say_silent_spell(P_char ch, int spell);
-int two_weapon_check(P_char ch);
+void clear_racial_skills(P_char ch);
+
+#define GET_EPIC_POINTS(ch) (IS_NPC(ch) ? 0 : ch->only.pc->epics)
 
 #define EPIC_ZONE 0
 #define EPIC_PVP 1

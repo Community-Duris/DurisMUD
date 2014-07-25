@@ -191,69 +191,57 @@ void do_setbit(P_char ch, char *arg, int cmd)
   switch (type)
   {
 
-    case SETBIT_ROOM:
-      setbit_room(ch, name, flag, value, on_off);
-      return;
+  case SETBIT_ROOM:
+    setbit_room(ch, name, flag, value, on_off);
+    return;
 
-    case SETBIT_CHAR:
-      if (!god_check(GET_NAME(ch)) && god_check(name))
+  case SETBIT_CHAR:
+    if (!god_check(GET_NAME(ch)) && god_check(name))
+    {
+      act("One hella pissed god says 'Hey buddy, that's not very polite, trying to setbit my ass.'",
+        FALSE, ch, 0, 0, TO_ROOM);
+      act("One hella pissed god says 'Hey buddy, that's not very polite, trying to setbit my ass.'",
+        FALSE, ch, 0, 0, TO_CHAR);
+      return;
+    }
+    setbit_char(ch, name, flag, value, on_off);
+    // Different classes/specs get different skills.
+    if( !strcmp(flag, "spec") || !strcmp( flag, "class" ) )
+    {
+      target = get_char_vis(ch, name);
+      if (target == NULL)
       {
-        act
-          ("One hella pissed god says 'Hey buddy, that's not very polite, trying to setbit my ass.'",
-           FALSE, ch, 0, 0, TO_ROOM);
-        act
-          ("One hella pissed god says 'Hey buddy, that's not very polite, trying to setbit my ass.'",
-           FALSE, ch, 0, 0, TO_CHAR);
+        send_to_char("No one by that name here.\r\n", ch);
         return;
       }
-      setbit_char(ch, name, flag, value, on_off);
-      if(!strcmp(flag, "race"))
-      {
-        target = get_char_vis(ch, name);
-        if (target == NULL)
-        {
-          send_to_char("No one by that name here.\r\n", ch);
-          return;
-        }
-        affect_from_char(target, TAG_RACIAL_SKILLS);
-        reset_racial_skills(target); //We now need to set specific racial skills whenever we change race - Drannak
-      }
-      if(!strcmp(flag, "spec"))
-      {
-        target = get_char_vis(ch, name);
-        if (target == NULL)
-        {
-          send_to_char("No one by that name here.\r\n", ch);
-          return;
-        }
-        update_skills(target);
-      }
-      break;
+      update_skills(target);
+    }
+    break;
 
-    case SETBIT_OBJ:
-      setbit_obj(ch, name, flag, value, on_off);
-      break;
+  case SETBIT_OBJ:
+    setbit_obj(ch, name, flag, value, on_off);
+    break;
 
-    case SETBIT_DIR:
-      setbit_dir(ch, name, flag, value, on_off);
-      break;
+  case SETBIT_DIR:
+    setbit_dir(ch, name, flag, value, on_off);
+    break;
 
-    case SETBIT_AFF:
-      setbit_aff(ch, name, flag, value, on_off);
-      break;
+  case SETBIT_AFF:
+    setbit_aff(ch, name, flag, value, on_off);
+    break;
 
-    case SETBIT_ZONE:
-      setbit_zone(ch, name, flag, value, on_off);
-      break;
+  case SETBIT_ZONE:
+    setbit_zone(ch, name, flag, value, on_off);
+    break;
 
-    case SETBIT_SHIP:
-      setbit_ship(ch, name, flag, value, on_off);
-      break;
+  case SETBIT_SHIP:
+    setbit_ship(ch, name, flag, value, on_off);
+    break;
 
-    default:
-      logit(LOG_DEBUG, "SETBIT:  Unknown type: %d (%s %d)", type, __FILE__,
-          __LINE__);
-      break;
+  default:
+    logit(LOG_DEBUG, "SETBIT:  Unknown type: %d (%s %d)", type, __FILE__,
+      __LINE__ );
+    break;
   }
 }
 

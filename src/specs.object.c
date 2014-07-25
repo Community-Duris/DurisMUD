@@ -13776,16 +13776,16 @@ int unspec_altar(P_obj obj, P_char ch, int cmd, char *arg)
  if(!ch)
  return FALSE;
 
+		/*
         if(GET_SPEC(ch, CLASS_SORCERER, SPEC_WIZARD))
           {
 		ch->only.pc->skills[SKILL_SPELL_PENETRATION].taught = 0;
 		ch->only.pc->skills[SKILL_SPELL_PENETRATION].learned = 0;
 		do_save_silent(ch, 1); // racial skills require a save.
-           }
+           }*/
 
 
   unspecialize(ch, obj);
-  update_racial_skills(ch);
 }
 
 int unmulti_altar(P_obj obj, P_char ch, int cmd, char *arg)
@@ -13803,7 +13803,6 @@ int unmulti_altar(P_obj obj, P_char ch, int cmd, char *arg)
   }
 
   unmulti(ch, obj);
-  update_racial_skills(ch);
 }
 
 int thought_beacon(P_obj obj, P_char ch, int cmd, char *arg)

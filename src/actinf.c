@@ -4865,7 +4865,7 @@ void do_score(P_char ch, char *argument, int cmd)
       // 0 and above = zone epic task
       // -1 to -9 = nexus stone task
       // -10 = spill blood task
-
+	  /* commenting this out due to skill points being deprecated - Zion 4/8/2014
       if (afp = get_epic_task(ch)) {
         if (afp->modifier == SPILL_BLOOD)
           sprintf(buf, "&n&+YEpic points:&n &+W%ld&n  &+YSkill points:&n &+W%ld&n  Current task: &+rspill enemy blood&n\n",
@@ -4899,6 +4899,40 @@ void do_score(P_char ch, char *argument, int cmd)
       send_to_char(buf, ch);
     }
   }
+  */
+     if (afp = get_epic_task(ch)) {
+        if (afp->modifier == SPILL_BLOOD)
+          sprintf(buf, "&n&+YEpic points:&n &+W%ld&n Current task: &+rspill enemy blood&n\n",
+              ch->only.pc->epics);
+        else if (afp->modifier >= 0)
+          sprintf(buf, "&nEpic points: &+W%ld&n Current task: find runestone of %s\n",
+              ch->only.pc->epics, zone_table[real_zone0(afp->modifier)].name);
+	else if (afp->modifier <= MAX_NEXUS_STONES && afp->modifier < 0)
+	{
+	  nexus = get_nexus_stone(-(afp->modifier));
+          if (nexus)
+	  {
+	  sprintf(buf, "&nEpic points: &+W%ld&n Current task: &+Gturn %s.&n\n",
+              ch->only.pc->epics, nexus->short_description);
+	  }
+	  else
+	  {
+	  sprintf(buf, "&nEpic points: &+W%ld&n Current task: &+RERROR - can't find nexus, report to imms&n\n",
+              ch->only.pc->epics);
+          }
+	}
+	else
+	{
+	  sprintf(buf, "&nEpic points: &+W%ld&n Current task: &+RERROR - report to imms&n\n",
+              ch->only.pc->epics);
+	}
+      } else {
+        sprintf(buf, "&nEpic points: &+W%ld&n\n",
+             ch->only.pc->epics);
+      }
+      send_to_char(buf, ch);
+    }
+  }
 
   EpicBonusData ebdata;
   if (!get_epic_bonus_data(ch, &ebdata))
@@ -4906,9 +4940,9 @@ void do_score(P_char ch, char *argument, int cmd)
     ebdata.type = EPIC_BONUS_NONE;
   }
   send_to_char_f(ch, "&nEpic Bonus: &+C%s&n (&+C%.2f%%&n)\r\n", ebd[ebdata.type].description, get_epic_bonus(ch, ebdata.type)*100);
-#ifdef SKILLPOINTS
-  send_to_char_f(ch, "&nSkill Points: &+W%d&n\r\n", ch->only.pc->skillpoints);
-#endif
+//#ifdef SKILLPOINTS
+  //send_to_char_f(ch, "&nSkill Points: &+W%d&n\r\n", ch->only.pc->skillpoints);
+//#endif
   send_to_char("&+RFrags:&n   ", ch);
 
   fragnum = (float) ch->only.pc->frags;
@@ -8729,9 +8763,9 @@ void unmulti(P_char ch, P_obj obj)
   if( !IS_MULTICLASS_PC(ch) )
     return;
 
-  if( epic_skillpoints(ch) < 1 )
+  if( GET_EPIC_POINTS(ch) < 100 )
   {
-    send_to_char("&+WYou must have at least one epic skill point to unmulti!\n", ch);
+    send_to_char("&+WYou must have at least 100 epic points to unmulti!\n", ch);
     return;
   }
 
@@ -8747,7 +8781,8 @@ void unmulti(P_char ch, P_obj obj)
   ch->player.spec = 0;
   forget_spells(ch, -1);
   update_skills(ch);
-  epic_gain_skillpoints(ch, -1);
+  //epic_gain_skillpoints(ch, -1);
+  ch->only.pc->epics -= 100;
 }
 
 void where_stat(P_char ch, char *argument)

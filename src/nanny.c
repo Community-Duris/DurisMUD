@@ -34,6 +34,7 @@
 #include "specializations.h"
 #include "multiplay_whitelist.h"
 #include "guildhall.h"
+#include "epic.h"
 #include "utility.h"
 
 /* external variables */
@@ -3173,7 +3174,9 @@ void enter_game(P_desc d)
     set_char_size(ch);
 
     update_skills(ch);
-    reset_racial_skills( ch );
+// Once racial skills are removed, this will be unnecessary.
+//  Furthermore, it will wipe any formerly-racial now-epic skills learned. - Lohrr
+//    reset_racial_skills( ch );
 
     set_surname(ch, 0);
 
@@ -3565,8 +3568,6 @@ if(d->character->base_stats.Wis < 80)
   {
   d->character->base_stats.Cha = 80;
   }
-   //Drannak - set racial skills
-    assign_racial_skills(ch);
 
   //goodie AP fix
   if(GET_CLASS(ch, CLASS_ANTIPALADIN) && GET_ALIGNMENT(ch) > -10)
@@ -3583,7 +3584,10 @@ if(d->character->player.time.played <  10000000  && !IS_TRUSTED(d->character))
   ch->player.time.played = 10000000;
   }
 */
- 
+
+  // This is to remove the racial epic skills set with TAG_RACIAL_SKILLS
+  // after the current wipe (as of 4/25/14) this should be removed - Torgal
+  clear_racial_skills(ch);
 }
 
 void select_terminal(P_desc d, char *arg)

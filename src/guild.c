@@ -46,7 +46,7 @@ extern char *spells[];
 extern void reset_racial_skills(P_char ch);
 int GET_LVL_FOR_SKILL(P_char ch, int skill);
 P_obj find_gh_library_book_obj(P_char ch);
-void do_practice_new(P_char ch, char *arg, int cmd);
+//void do_practice_new(P_char ch, char *arg, int cmd);
 
 #define MAX_GUILDS    15        /* max size of high/low lists */
 
@@ -57,9 +57,9 @@ void update_skills(P_char ch)
   if( !ch || !IS_PC(ch) )
     return;
 
-#ifdef SKILLPOINTS
-  return;
-#endif
+//#ifdef SKILLPOINTS
+//  return;
+//#endif
 
   int      s, notched = 0, lastlvl = 0, shouldbe = 0;
 	int spec = ch->player.spec;
@@ -147,9 +147,9 @@ int notch_skill(P_char ch, int skill, float chance)
   int intel, t, lvl, l, slvl;
   char buf[MAX_STRING_LENGTH];
 
-#ifdef SKILLPOINTS
-  return 0;
-#endif
+//#ifdef SKILLPOINTS
+//  return 0;
+//#endif
 
   if( !IS_ALIVE(ch) )
     return 0;
@@ -715,16 +715,16 @@ void do_spells(P_char ch, char *argument, int cmd)
       if( !SKILL_DATA_ALL(target, spell).maxlearn[0] &&
           !SKILL_DATA_ALL(target, spell).maxlearn[target->player.spec] )
         continue;
-#ifdef SKILLPOINTS
-        sprintf(buf, "%3d %s%-25s %s", 
-          (target && IS_PC(target)) ? target->only.pc->skills[spell].taught : 0,
-          (target && (circle > get_max_circle(target))) ? "&+L" : "",
-          skills[spell].name, buf2);
-#else
+//#ifdef SKILLPOINTS
+//        sprintf(buf, "%3d %s%-25s %s", 
+//          (target && IS_PC(target)) ? target->only.pc->skills[spell].taught : 0,
+//          (target && (circle > get_max_circle(target))) ? "&+L" : "",
+//          skills[spell].name, buf2);
+//#else
         sprintf(buf, "%s%-25s %s", 
           (target && (circle > get_max_circle(target))) ? "&+L" : "",
           skills[spell].name, buf2);
-#endif
+//#endif
       if (target)
       {
         if (meming_class(target))
@@ -820,7 +820,8 @@ void do_skills(P_char ch, char *argument, int cmd)
         }
         else
         {
-          reset_racial_skills(target);
+          send_to_char("No longer using racial skils, so nothing to reset.\n", ch);
+//          reset_racial_skills(target);
           return;
         }
       }
@@ -961,7 +962,7 @@ void do_practice(P_char ch, char *arg, int cmd)
   return;
 #endif
 
-  if( !(ch) || !IS_ALIVE(ch) || !IS_PC(ch) )
+  if( !IS_ALIVE(ch) || !IS_PC(ch) )
     return;
 
   teacher = FindTeacher(ch);
@@ -1370,8 +1371,8 @@ void do_practice_new( P_char ch, char *arg, int cmd )
          obuf[MAX_STRING_LENGTH];
   int    skl, spl, circle, i, cost, ret;
   P_char teacher;
-  
-  if( !(ch) || !IS_ALIVE(ch) || !IS_PC(ch) )
+
+  if( !IS_ALIVE(ch) || !IS_PC(ch) )
     return;
 
   teacher = FindTeacher(ch);
@@ -1382,7 +1383,7 @@ void do_practice_new( P_char ch, char *arg, int cmd )
 
   // List skills available to be taught
   if( !*arg && teacher )
-  {   
+  {
     sprintf( obuf, "&+BSkill                    Cost of Teachings\n&n");
     for( skl = FIRST_SKILL; skl <= LAST_SKILL; skl++ )
     {
@@ -1423,7 +1424,7 @@ void do_practice_new( P_char ch, char *arg, int cmd )
   {                             /* request teachings of a certain skill */
     *buf1='\0';
     *buf='\0';
-    
+
     arg = skip_spaces(arg);
     if (!str_cmp(arg, "all"))
     {
@@ -1432,7 +1433,6 @@ void do_practice_new( P_char ch, char *arg, int cmd )
     }
     skl = search_block(arg, (const char **) spells, FALSE);
     i = skl;
-    
 
     if (!IsTaughtHere(ch, skl))
     {
@@ -1451,7 +1451,7 @@ void do_practice_new( P_char ch, char *arg, int cmd )
     {
       mobsay(teacher,
              "Hmm, I don't think you'd understand a damn thing if I *did* try to teach you.");
-      return;      
+      return;
     }
 
     if (SKILL_DATA_ALL(ch, skl).rlevel[ch->player.spec] >= 51)

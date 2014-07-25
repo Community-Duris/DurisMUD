@@ -1037,13 +1037,13 @@ int nexus_sage_train(P_char ch, P_char pl, char *arg)
   int cost = (int) get_property("nexusStones.sage.statAddCost", 1);
   int stat_add = (int) get_property("nexusStones.sage.statAdd", 3);    
   
-  if( epic_skillpoints(pl) < cost )
+  if( GET_EPIC_POINTS(pl) < cost )
   {
     act("$n says, 'You have not learned enough. Come back later when you are ready!'", FALSE, ch, 0, pl, TO_VICT);
     return TRUE;
   }
   
-  epic_gain_skillpoints(pl, -1 * cost);
+  ch->only.pc->epics -= cost;
   (*char_stat(pl, info.stat_affect)) = BOUNDED(1, (current_stat + stat_add), 100);
 
   act("You sit at the feet of $n&n and learn, gaining something of $s ability.", FALSE, ch, 0, pl, TO_VICT);

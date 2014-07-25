@@ -29,7 +29,7 @@
 #include "sound.h"
 #include "graph.h"
 #include "guard.h"
-#include "epic.h"
+#include "epic_skills.h"
 #include "ships.h"
 #include "grapple.h"
 #include "sql.h"

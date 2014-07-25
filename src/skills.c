@@ -10,16 +10,17 @@
 #include "defines.h"
 #include "utils.h"
 #ifndef _DE_
-#   include "structs.h"
-#   include "paladins.h"
-#   include "reavers.h"
-#   include "rogues.h"
-#   include "avengers.h"
+#include "structs.h"
+#include "paladins.h"
+#include "reavers.h"
+#include "rogues.h"
+#include "avengers.h"
+#include "epic.h"
 
-extern void do_epic_reset(P_char ch, char *arg, int cmd);
-extern void do_epic_reset_norefund(P_char ch, char *arg, int cmd);
 int      numSkills;
 #endif
+
+void update_racial_skills(P_char ch);
 
 #if defined(_DE_) || defined(_PFILE_)
 struct skill_data
@@ -32,7 +33,7 @@ struct skill_data
 typedef struct skill_data Skill;
 extern int flag2idx(int);
 #else
-#   include "prototypes.h"
+#include "prototypes.h"
 extern int SortedSkills[];
 #endif
 
@@ -181,21 +182,24 @@ void SPELL_ADD(int Class, int Level)
 
 #endif
 
-#ifdef SKILLPOINTS
+//#ifdef SKILLPOINTS
 // Skill has dependency of needing MinDepend in Dependency.
-void SKILL_DEPEND( int Skill, int Dependency, int MinDepend )
-{
-  for( int i = 0; i < 5; i++ )
-  {
-    if( skills[Skill].dependency[i] == 0 )
-    {
-      skills[Skill].dependency[i] = Dependency;
-      skills[Skill].mintotrain[i] = MinDepend;
-      break;
-    }
-  }
-}
-#endif
+//void SKILL_DEPEND( int Skill, int Dependency, int MinDepend )
+//{
+//  for( int i = 0; i < 5; i++ )
+//  {
+//    if( skills[Skill].dependency[i] == 0 )
+//    {
+//      skills[Skill].dependency[i] = Dependency;
+//      skills[Skill].mintotrain[i] = MinDepend;
+//      break;
+//    }
+//  }
+//}
+//#endif
+
+void create_poisons();
+void create_tags();
 
 void initialize_skills()
 {
@@ -211,12 +215,14 @@ void initialize_skills()
   //needed by setbit
   skills[MAX_AFFECT_TYPES].name = "\n";
  
-#ifdef SKILLPOINTS
-  initialize_skills_new();
-  return;
-#endif
+//#ifdef SKILLPOINTS
+//  initialize_skills_new();
+//  return;
+//#endif
 
-// Alchemist
+  SKILL_CREATE("establish camp", SKILL_CAMP, 0);
+
+  // Alchemist
   // Brawler
 
 // Psionicist
@@ -3190,21 +3196,9 @@ SPELL_ADD(CLASS_NONE, 1);
                 spell_restoration);
   SPEC_SPELL_ADD(CLASS_SHAMAN, 10, SPEC_SPIRITUALIST);
 
-#if 0
-  SPELL_ADD(CLASS_SHAMAN, 1);
-#endif
-
-#if 0
-  SPELL_ADD(CLASS_SHAMAN, 1);
-#endif
-
   SPELL_CREATE("summon spirit", SPELL_SUMMON_SPIRIT, PULSE_SPELLCAST,
                 TAR_IGNORE | TAR_NOCOMBAT | TAR_SPIRIT,
                 spell_summon_spirit);
-#if 0
-  SPELL_ADD(CLASS_SHAMAN, 7);
-#endif
-
   /* end of shaman spells */
 
   /* Reaver spells */
@@ -4888,10 +4882,6 @@ SPELL_ADD(CLASS_NONE, 1);
   SKILL_ADD(CLASS_AVENGER, 1, 90);
   SPEC_SKILL_ADD(CLASS_ROGUE, 1, 80, SPEC_ASSASSIN);
 
-
-  SKILL_CREATE("mine", SKILL_MINE, TAR_EPIC);
-  SKILL_CREATE("craft", SKILL_CRAFT, TAR_EPIC);
-  SKILL_CREATE("forge", SKILL_FORGE, TAR_EPIC);
 /*
   SKILL_ADD(CLASS_MERCENARY, 1, 100);
   SKILL_ADD(CLASS_RANGER, 1, 100);
@@ -5081,82 +5071,26 @@ SPELL_ADD(CLASS_NONE, 1);
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                 spell_ghastly_touch);
 
- /* Epic Point Skills */
-  //SKILL_CREATE("spell mastery", SKILL_SPELL_MASTERY, TAR_MENTAL | TAR_EPIC);
-  //SKILL_CREATE("chant mastery", SKILL_CHANT_MASTERY, TAR_MENTAL | TAR_EPIC);
-  //SKILL_CREATE("anatomy", SKILL_ANATOMY, TAR_MENTAL | TAR_EPIC);
- SKILL_CREATE("anatomy", SKILL_ANATOMY, TAR_EPIC);
- // SKILL_ADD(RACE_HALFLING, 1, 100);
-  SKILL_CREATE("summon blizzard", SKILL_SUMMON_BLIZZARD, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("summon familiar", SKILL_SUMMON_FAMILIAR, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("advanced meditation", SKILL_ADVANCED_MEDITATION, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("devotion", SKILL_DEVOTION, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("scribe mastery", SKILL_SCRIBE_MASTERY, TAR_MENTAL | TAR_EPIC);
-  //SKILL_CREATE("sneaky strike", SKILL_SNEAKY_STRIKE, TAR_PHYS | TAR_EPIC);
-  SKILL_CREATE("silent spell", SKILL_SILENT_SPELL, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("shield combat", SKILL_SHIELD_COMBAT, TAR_PHYS | TAR_EPIC);
-  SKILL_CREATE("improved shield combat", SKILL_IMPROVED_SHIELD_COMBAT, TAR_PHYS | TAR_EPIC);
-  SKILL_CREATE("improved listen", SKILL_IMPROVED_LISTEN, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("two weapon fighting", SKILL_TWOWEAPON, TAR_PHYS | TAR_EPIC);
-  SKILL_CREATE("improved two weapon fighting", SKILL_IMPROVED_TWOWEAPON, TAR_PHYS | TAR_EPIC);
-  SKILL_CREATE("jin touch", SKILL_JIN_TOUCH, TAR_PHYS | TAR_EPIC);
-  SKILL_CREATE("ki strike", SKILL_KI_STRIKE, TAR_PHYS | TAR_EPIC);
-  SKILL_CREATE("infuse life", SKILL_INFUSE_LIFE, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("spell penetration", SKILL_SPELL_PENETRATION, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("devastating critical", SKILL_DEVASTATING_CRITICAL, TAR_PHYS | TAR_EPIC);
+  create_epic_skills();
+  create_poisons();
+  create_tags();
+}
 
-  SKILL_CREATE("shieldless bash", SKILL_SHIELDLESS_BASH, TAR_PHYS | TAR_EPIC);
-
-  SKILL_CREATE("toughness", SKILL_TOUGHNESS, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("spatial focus", SKILL_SPATIAL_FOCUS, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("improved endurance", SKILL_IMPROVED_ENDURANCE, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("improved track", SKILL_IMPROVED_TRACK, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("empower song", SKILL_EMPOWER_SONG, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("infuse magical device", SKILL_INFUSE_MAGICAL_DEVICE, TAR_PHYS |TAR_EPIC);
-  SKILL_CREATE("indomitable rage", SKILL_INDOMITABLE_RAGE, TAR_PHYS | TAR_EPIC);
-  // Ripped from the alchemist class, for use as epic skills. What a copout!
-  SKILL_CREATE("fix", SKILL_FIX, TAR_EPIC);
-  //SKILL_CREATE("craft", SKILL_CRAFT, TAR_PHYS | TAR_EPIC);
-  SKILL_CREATE("encrust", SKILL_ENCRUST, TAR_PHYS | TAR_EPIC);
-//  SKILL_CREATE("enchant", SKILL_ENCHANT, TAR_PHYS | TAR_EPIC);
-//  SKILL_CREATE("spellbind", SKILL_SPELLBIND, TAR_PHYS | TAR_EPIC);
-  SKILL_CREATE("smelt", SKILL_SMELT, TAR_PHYS | TAR_EPIC);
-  //SKILL_CREATE("forge", SKILL_FORGE, TAR_MENTAL | TAR_EPIC);
-  // End alchemist jewing.
-  SKILL_CREATE("totemic mastery", SKILL_TOTEMIC_MASTERY, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("natures sanctity", SKILL_NATURES_SANCTITY, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("expert parry", SKILL_EXPERT_PARRY, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("expert riposte", SKILL_EXPERT_RIPOSTE, TAR_MENTAL | TAR_EPIC);
-  /* Stat adjustment epic skills */
-  SKILL_CREATE("epic strength", SKILL_EPIC_STRENGTH, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("epic power", SKILL_EPIC_POWER, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("epic agility", SKILL_EPIC_AGILITY, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("epic intelligence", SKILL_EPIC_INTELLIGENCE, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("epic dexterity", SKILL_EPIC_DEXTERITY, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("epic wisdom", SKILL_EPIC_WISDOM, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("epic constitution", SKILL_EPIC_CONSTITUTION, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("epic charisma", SKILL_EPIC_CHARISMA, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("epic luck", SKILL_EPIC_LUCK, TAR_MENTAL | TAR_EPIC);
-  SKILL_CREATE("ship damage control", SKILL_SHIP_DAMAGE_CONTROL, TAR_PHYS | TAR_EPIC);
-  
-
-  /*
-     special, was easier to make them skills, but not assigned to any class,
-     nor is it checked for, but this keeps the various arrays, indices, etc,
-     from barfing
-   */
-  SKILL_CREATE("establish camp", SKILL_CAMP, 0);
-
+void create_poisons()
+{
   POISON_CREATE("lifeleak", POISON_LIFELEAK, poison_lifeleak);
   POISON_CREATE("weakness", POISON_WEAKNESS, poison_weakness);
   POISON_CREATE("neurotoxin", POISON_NEUROTOXIN, poison_neurotoxin);
   POISON_CREATE("heart toxin", POISON_HEART_TOXIN, poison_heart_toxin);
+}
 
+void create_tags()
+{
   TAG_CREATE("decay", TAG_OBJ_DECAY);
   TAG_CREATE("orig", TAG_ALTERED_EXTRA2);
   TAG_CREATE("no misfire", TAG_NOMISFIRE);
   TAG_CREATE("witch spell", TAG_WITCHSPELL);
-  TAG_CREATE("racial skills", TAG_RACIAL_SKILLS);
+  TAG_CREATE("racial skills (deprecated)", TAG_RACIAL_SKILLS);
   TAG_CREATE("soulbind", TAG_SOULBIND);
 
 /*  ACHIEVEMENT TAGS - FORMAT: ACH_XXXX (completed), AIP_XXXX (Achievement In Progress) */
@@ -5193,7 +5127,7 @@ SPELL_ADD(CLASS_NONE, 1);
                            "&+WYour &+yhands&+W surge with &+Yholy &+Wstrength once again.&n",
                            "&+W$n's &+yhands&+W surge with &+Yholy &+Wstrength once again.&n");
 
- TAG_CREATE_WITH_MESSAGES("BLOODLUST", TAG_BLOODLUST,
+  TAG_CREATE_WITH_MESSAGES("BLOODLUST", TAG_BLOODLUST,
                            "&+rThe taste of &+Rblood &+rslowly fades from your body.&n",
                            "&+r$n's pupils dialate and return to normal.&n");
 

@@ -622,8 +622,8 @@ void unspecialize(P_char ch, P_obj obj)
   if (!IS_SPECIALIZED(ch)) {
     send_to_char("You pray to the &+bWater Goddess&n but you get no response.",
                  ch);
-  } if (epic_skillpoints(ch) < 1) {
-    send_to_char("You need one practice point to pay for this.\n", ch);
+  } if (GET_EPIC_POINTS(ch) < 10) {
+    send_to_char("You need 10 epic points to pay for this.\n", ch);
   } else {
     act("You kneel in front of $p and pray to the \n"
         "&+bWater Goddess&n. As you continue your meditation, you begin\n"
@@ -633,7 +633,8 @@ void unspecialize(P_char ch, P_obj obj)
         "After few moments of silence $e smiles and stands up looking reborn.\n", FALSE, ch, obj, 0, TO_ROOM);
     ch->player.spec = 0;
     update_skills(ch);
-    epic_gain_skillpoints(ch, -1);
+    //epic_gain_skillpoints(ch, -1);
+	ch->only.pc->epics -= 10;
     forget_spells(ch, -1);
   }
 }
