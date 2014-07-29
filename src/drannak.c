@@ -1640,10 +1640,6 @@ bool valid_conjure(P_char ch, P_char victim)
       return FALSE;
     }
 
-    // If less than 51, conj's can summon up to 4 lvls difference
-    if((GET_LEVEL(victim) - (GET_LEVEL(ch)) > 4) && (GET_LEVEL(ch) < 51))
-      return FALSE;
-
     // New change: All conj's pets must be within 5 lvls.
     if( GET_LEVEL(victim) - GET_LEVEL(ch) > 5 )
       return FALSE;
