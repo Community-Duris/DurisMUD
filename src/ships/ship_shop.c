@@ -219,7 +219,7 @@ int list_weapons(P_char ch, P_ship ship, int owned)
 
         send_to_char_f(ch,  "%2d) %s%-20s   &+Y%2d  %5s  %7s    %2d    %3d  %3d%%  %3d%%  %3d%%    %3d  &n%10s&n\r\n",
           i + 1, 
-          ship_allowed_weapons[ship->m_class][i] && (ship->frags >= weapon_data[i].min_frags) ? "&+W" : "&+L", 
+          ship_allowed_weapons[ship->m_class][i] && (ship->frags >= weapon_data[i].min_frags || ship->crew.guns_skill >= weapon_data[i].min_crewexp) ? "&+W" : "&+L", 
           weapon_data[i].name,
           weapon_data[i].weight,
           rng,
@@ -1673,8 +1673,7 @@ int buy_equipment(P_char ch, P_ship ship, char* arg1)
         return TRUE;
     }
 
-    if( ship->frags < equipment_data[e].min_frags
-      && ship->crew.guns_skill < weapon_data[e].min_crewexp )
+    if( ship->frags < equipment_data[e].min_frags )
     {
         send_to_char ("I'm sorry, but not just anyone can buy this equipment!  You must earn it!\r\n", ch);
         return TRUE;
