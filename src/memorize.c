@@ -1457,11 +1457,6 @@ void do_memorize(P_char ch, char *argument, int cmd)
       add_event(event_memorize, time / 2, ch, 0, 0, 0, &time, sizeof(time));
       SET_BIT(ch->specials.affected_by2, AFF2_MEMORIZING);
     }
-else
-{
-  debug( "first_to_mem: %d, e1: %ld ", first_to_mem, e1);// ? *(int *)e1->data : -1), e1 ? (e1->ch ? J_NAME(e1->ch) : "NoChar") : "NoEvent" );
-  debug( "STAT_RESTING: %d, POS_SITTING: %d, POS_KNEELING: %d", GET_STAT(ch) == STAT_RESTING, GET_POS(ch) == POS_SITTING, GET_POS(ch) == POS_KNEELING );
-}
     return;
   }
 
