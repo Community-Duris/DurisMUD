@@ -94,7 +94,7 @@ extern const int allowed_secondary_classes[CLASS_COUNT + 1][5];
 const int allowed_secondary_classes[CLASS_COUNT + 1][5] = {
   {-1},
   {CLASS_MERCENARY, CLASS_CLERIC, -1},            /* War */
-  {CLASS_WARRIOR, CLASS_DRUID, CLASS_ROGUE, CLASS_PSIONICIST, -1},              /* Ran */
+  {CLASS_WARRIOR, CLASS_DRUID, CLASS_ROGUE, CLASS_PSIONICIST, -1}, /* Ran */
   {-1},                         		              /* Psi */
   {CLASS_WARRIOR, -1},          		              /* Pal */
   {CLASS_WARRIOR, -1},          		              /* APa */
@@ -120,7 +120,8 @@ const int allowed_secondary_classes[CLASS_COUNT + 1][5] = {
   {-1},                                  	        /* Dre */
   {CLASS_SORCERER, CLASS_SHAMAN, -1},             /* Eth */
   {-1},                                           /* Ave */
-  {-1}                                            /* The */
+  {-1},                                           /* The */
+  {CLASS_SORCERER, CLASS_SHAMAN, -1}              /* Sum */
 };
 
 // class names for particular multiclass combos
@@ -382,6 +383,8 @@ const mcname multiclass_names[] = {
   {CLASS_ETHERMANCER, CLASS_AVENGER,     "Lensed Zeal"},
   {CLASS_ETHERMANCER, CLASS_THEURGIST,   "Lensed Cloud"},
   {CLASS_AVENGER, CLASS_THEURGIST,       "Apostle"},
+  {CLASS_SUMMONER, CLASS_SORCERER,       "&+rArchmage&n"},
+  {CLASS_SUMMONER, CLASS_SHAMAN,         "&+CHaruspex&n"},
   {-1, -1, ""}
 };
 

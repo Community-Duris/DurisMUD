@@ -1400,17 +1400,17 @@ int ac_can_see_obj(P_char sub, P_obj obj)
 
 bool can_char_multi_to_class(P_char ch,  int m_class)
 {
-  int      i = 0;
+  int i = 0;
 
-  
   while (allowed_secondary_classes[flag2idx(ch->player.m_class)][i] != -1)
   {
-    if (flag2idx(allowed_secondary_classes[flag2idx(ch->player.m_class)][i]) == m_class) {
-        
+    if (flag2idx(allowed_secondary_classes[flag2idx(ch->player.m_class)][i]) == m_class)
+    {
       if ((class_table[(int)GET_RACE(ch)] [m_class ]) != 5)
-               return TRUE;
-               }
-
+      {
+        return TRUE;
+      }
+    }
     i++;
   }
 
