@@ -2165,20 +2165,17 @@ SPELL_CREATE("vigorize light", SPELL_VIGORIZE_LIGHT, PULSE_SPELLCAST * 2,
                 spell_stornogs_lowered_magical_res,
                "&+WYou feel your innate magical resistance return.");
   SPELL_ADD(CLASS_CONJURER, 7);
-  SPELL_ADD(CLASS_SUMMONER, 7);
 
   SPELL_CREATE2("stornogs shimmering starshell", SPELL_STARSHELL, (PULSE_SPELLCAST * 3) / 2,
                 TAR_IGNORE,
                 spell_starshell, "&+WThe &+Yblazing&N&+W shell dissipates.",
                 "&+WThe &+Yblazing&N&+W shell dissipates.");
   SPELL_ADD(CLASS_CONJURER, 10);
-  SPELL_ADD(CLASS_SUMMONER, 10);
 
   SPELL_CREATE("stornogs spheres", SPELL_STORNOGS_SPHERES, PULSE_SPELLCAST * 4,
                 TAR_SELF_ONLY,
                 spell_stornogs_spheres);
   SPELL_ADD(CLASS_CONJURER, 11);
-  SPELL_ADD(CLASS_SUMMONER, 11);
 
   SPELL_CREATE_MSG("decaying flesh", SPELL_DECAYING_FLESH, PULSE_SPELLCAST * 1,
 		TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO, spell_decaying_flesh, "The &+gdecay&n finally leaves your body.");
@@ -2187,7 +2184,6 @@ SPELL_CREATE("vigorize light", SPELL_VIGORIZE_LIGHT, PULSE_SPELLCAST * 2,
   SPELL_CREATE("group stornogs spheres", SPELL_STORNOGS_GREATER_SPHERES, PULSE_SPELLCAST * 7,
                 TAR_SELF_ONLY, spell_group_stornog);
   SPELL_ADD(CLASS_CONJURER, 12);
-  SPELL_ADD(CLASS_SUMMONER, 12);
 
   SPELL_CREATE("cloak of fear", SPELL_CLOAK_OF_FEAR, PULSE_SPELLCAST,
                 TAR_IGNORE | TAR_AGGRO, spell_cloak_of_fear);
@@ -2546,11 +2542,11 @@ SPELL_ADD(CLASS_NONE, 1);
   SPELL_CREATE("prismatic ray", SPELL_PRISMATIC_RAY, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO, spell_prismatic_ray);
   SPELL_ADD(CLASS_SORCERER, 9);
+  SPELL_ADD(CLASS_SUMMONER, 9);
 
   SPELL_CREATE("disintegrate", SPELL_DISINTEGRATE, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO, spell_disintegrate);
   SPELL_ADD(CLASS_CONJURER, 8);
-  SPELL_ADD(CLASS_SUMMONER, 8);
 //  SPELL_ADD(CLASS_REAVER, 11);
 
   SPELL_CREATE("acid stream", SPELL_ACID_STREAM, PULSE_SPELLCAST * 5 / 2,
@@ -2692,12 +2688,10 @@ SPELL_ADD(CLASS_NONE, 1);
   SPELL_CREATE("wall of stone", SPELL_WALL_OF_STONE, PULSE_SPELLCAST * 6,
                 TAR_IGNORE | TAR_NOCOMBAT, cast_wall_of_stone);
   SPELL_ADD(CLASS_CONJURER, 5);
-  SPELL_ADD(CLASS_SUMMONER, 5);
 
   SPELL_CREATE("wall of iron", SPELL_WALL_OF_IRON, PULSE_SPELLCAST * 7,
                 TAR_IGNORE | TAR_NOCOMBAT, cast_wall_of_iron);
   SPELL_ADD(CLASS_CONJURER, 6);
-  SPELL_ADD(CLASS_SUMMONER, 6);
   SPEC_SPELL_ADD(CLASS_ETHERMANCER, 10, SPEC_COSMOMANCER);
 
   SPELL_CREATE("wall of force", SPELL_WALL_OF_FORCE, PULSE_SPELLCAST * 2,
