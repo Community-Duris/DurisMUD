@@ -901,9 +901,9 @@ struct attr_names_struct {
 #define RACE_KUOTOA          34 /* mob race code: KT */
 #define RACE_WOODELF         35 /* mob race code: WE */
 #define RACE_FIRBOLG         36 /* mob race code: FB */
+#define RACE_PLAYER_MAX RACE_FIRBOLG
 #define RACE_AGATHINON       37 /* mob race code: EH */
 #define RACE_ELADRIN         38 /* mob race code: EL */
-#define RACE_PLAYER_MAX RACE_ELADRIN
 #define RACE_GARGOYLE        39 /* mob race code: MG */
 #define RACE_F_ELEMENTAL     40 /* mob race code: EF */
 #define RACE_A_ELEMENTAL     41 /* mob race code: EA */
@@ -964,7 +964,7 @@ struct attr_names_struct {
 #define RACE_SUCCUBUS        96 /* mob race code: SU */
 #define RACE_FIREGIANT       97 /* mob race code: FG */
 #define RACE_FROSTGIANT      98 /* mob race code: IG */
-#define RACE_DEVA             99 /* mob race code: DV */
+#define RACE_DEVA            99 /* mob race code: DV */
 #define LAST_RACE            99 /* 99 races on duris today, 99 races..*/
 
 #define DEFINED_RACES        99 /* actual number of races defined */

@@ -119,7 +119,7 @@ void       do_aura_healing(P_char, char *, int);
 void       do_aura_vigor(P_char, char *, int);
 void       do_divine_force(P_char, char *, int);
 void       do_wall_climbing(P_char, char *, int);
-void       do_list_innates( P_char );
+void       do_list_innates( P_char, char * );
 void       class_has_innate( int, int );
 
 int        get_relic_num(P_char ch);
@@ -425,7 +425,7 @@ string list_innates(int race, int cls, int spec)
   string return_str;
   char level[5];
   int innate, found = 0;
-  
+
   if (!race && !cls)
   {
     debug("list_innates called with no race or class.");
@@ -3622,7 +3622,7 @@ void do_innate(P_char ch, char *arg, int cmd)
 
   if( is_abbrev(innate_name, "list") )
   {
-    do_list_innates( ch );
+    do_list_innates( ch, innate_args );
     return;
   }
 
@@ -4805,50 +4805,79 @@ bool has_divine_force(P_char ch)
 }
 
 // Shows all innates to ch and who can use them.
-void do_list_innates( P_char ch )
+void do_list_innates( P_char ch, char *args )
 {
   int i, j, k;
   char Gbuf1[MAX_STRING_LENGTH];
-  bool found;
+  bool racefound, classfound, fulllist, playeronly;
 
-  send_to_char( "Under Construction.\n", ch );
+  // Options: 'all', 'player', 'partial'.
+  fulllist = is_abbrev( args, "all" ) ? TRUE : FALSE;
+  playeronly = is_abbrev( args, "player" ) ? TRUE : FALSE;
+
+  send_to_char( "&+WListing of Innates:&n\n", ch );
 
   for( i = 0; i < LAST_INNATE+1; i++ )
   {
-    sprintf( Gbuf1, "&+W%s:\n", innates_data[i].name );
-    send_to_char( Gbuf1, ch );
     // Enter list of races (skip RACE_NONE).
-    found = FALSE;
-    for( j = 1; j <= LAST_RACE; j++ )
+    racefound = FALSE;
+    for( j = 1; j <= (playeronly ? RACE_PLAYER_MAX : LAST_RACE); j++ )
     {
+      // Player races that aren't in game currently.  This will need updating somehow..
+      if( playeronly && (j == RACE_ILLITHID || j == RACE_SHADE
+        || j == RACE_PLICH || j == RACE_PVAMPIRE || j == RACE_PDKNIGHT
+        || j == RACE_PSBEAST || j == RACE_SGIANT || j == RACE_WIGHT
+        || j == RACE_PHANTOM || j == RACE_HARPY || j == RACE_OROG
+        || j == RACE_PILLITHID || j == RACE_KUOTOA || j == RACE_WOODELF) )
+      {
+        continue;
+      }
       // If the race has the innate.
       if( racial_innates[i][j - 1] )
       {
-        if( !found )
+        if( !racefound )
         {
+          sprintf( Gbuf1, "&+W%s:\n", innates_data[i].name );
+          send_to_char( Gbuf1, ch );
           send_to_char( "&+B Races:&n", ch );
         }
-        sprintf( Gbuf1, "%s%s", found ? ", " : " ", race_names_table[j].ansi );
-        found = TRUE;
+        sprintf( Gbuf1, "%s%s", racefound ? ", " : " ", race_names_table[j].ansi );
+        racefound = TRUE;
         send_to_char( Gbuf1, ch );
       }
     }
-    if( found )
+    if( racefound )
     {
       send_to_char( "\n", ch );
     }
-    // Enter list of classes.
+    // Enter list of classes. class_innates_at_all might include !player classes only.
     if( class_innates_at_all[i] )
     {
-      send_to_char( "&+B Classes:&n", ch );
-      found = FALSE;
+      classfound = FALSE;
       for( j = 1; j <= CLASS_COUNT; j++ )
       {
+        // Not sure how to automate this either.. non player classes omitted.
+        if( playeronly && (j == flag2idx(CLASS_ASSASSIN) || j == flag2idx(CLASS_THIEF)
+          || j == flag2idx(CLASS_MINDFLAYER) || j == flag2idx(CLASS_ALCHEMIST) || j == flag2idx(CLASS_DREADLORD)
+          || j == flag2idx(CLASS_AVENGER) || j == flag2idx(CLASS_THEURGIST) || j == flag2idx(CLASS_WARLOCK)) )
+        {
+          continue;
+        }
+//debug( "j: %d, flag2idx: %d, class_names_table[j]: '%s'.", j, flag2idx(CLASS_DREADLORD), class_names_table[j].ansi );
         // If the class has the innate.
         if( class_innates[i][j-1][0] )
         {
-          sprintf( Gbuf1, "%s%s", found ? ", " : " ", class_names_table[j].ansi );
-          found = TRUE;
+          if( !racefound && !classfound )
+          {
+            sprintf( Gbuf1, "&+W%s:\n", innates_data[i].name );
+            send_to_char( Gbuf1, ch );
+          }
+          if( !classfound )
+          {
+            send_to_char( "&+B Classes:&n", ch );
+          }
+          sprintf( Gbuf1, "%s%s", classfound ? ", " : " ", class_names_table[j].ansi );
+          classfound = TRUE;
           send_to_char( Gbuf1, ch );
         }
         else
@@ -4857,14 +4886,32 @@ void do_list_innates( P_char ch )
           {
             if( class_innates[i][j-1][k] )
             {
-              sprintf( Gbuf1, "%s%s", found ? ", " : " ", specdata[j][k-1] );
-              found = TRUE;
+              if( !racefound && !classfound )
+              {
+                sprintf( Gbuf1, "&+W%s:\n", innates_data[i].name );
+                send_to_char( Gbuf1, ch );
+              }
+              if( !classfound )
+              {
+                send_to_char( "&+B Classes:&n", ch );
+              }
+              sprintf( Gbuf1, "%s%s", classfound ? ", " : " ", specdata[j][k-1] );
+              classfound = TRUE;
               send_to_char( Gbuf1, ch );
             }
           }
         }
       }
-      send_to_char( "\n", ch );
+      if( classfound )
+      {
+        send_to_char( "\n", ch );
+      }
+    }
+    // If !classes and !races and we want to see all options..
+    else if( !racefound && fulllist )
+    {
+      sprintf( Gbuf1, "&+W%s:\n", innates_data[i].name );
+      send_to_char( Gbuf1, ch );
     }
   }
 }
