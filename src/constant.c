@@ -104,7 +104,7 @@ const int allowed_secondary_classes[CLASS_COUNT + 1][5] = {
   {CLASS_CONJURER, CLASS_DRUID, CLASS_CLERIC, -1},/* Sha */
   {CLASS_CONJURER, -1},         		              /* Sor */
   {-1},                         		              /* Nec */
-  {CLASS_SORCERER, CLASS_SHAMAN, -1},             /* Con */
+  {CLASS_SORCERER, CLASS_SHAMAN, CLASS_BARD, -1}, /* Con */
   {CLASS_BARD, CLASS_MERCENARY, -1},              /* Rog */
   {-1},                       /* Assassin not currently in game      */
   {CLASS_ROGUE, CLASS_WARRIOR, -1},               /* Mer */

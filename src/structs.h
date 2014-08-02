@@ -2024,9 +2024,8 @@ struct mcname {
 #define SPEC_BLACKSMITH 2
 
 //Merc Specs
-#define SPEC_OPPORTUNIST 1
+#define SPEC_BRIGAND 1
 #define SPEC_BOUNTY 2
-#define SPEC_PROFITEER 3
 
 //Assassin Specs
 #define SPEC_ASSMASTER 1
