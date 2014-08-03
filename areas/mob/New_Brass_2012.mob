@@ -676,7 +676,7 @@ and does not look happy that you have interupted his prayers.
 ~
 2058 1 0 0 268509208 2049 0 0 -1000 S
 e 0 320 0 6
-63 0 0 1d1+1 1d1+1
+62 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #139046
@@ -1277,7 +1277,7 @@ half-plate covered in battle scars of many types.
 ~
 10 0 0 0 939524156 2078 0 0 -500 S
 fg 0 1 1 6
-65 0 0 1d1+1 1d1+1
+62 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #139087

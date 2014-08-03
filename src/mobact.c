@@ -10872,7 +10872,6 @@ bool CastBlighterSpell(P_char ch, P_char victim, bool helping)
     target = ch;
   }
 
-debug( "TEST '%s' -> '%s'", J_NAME(ch), J_NAME(target) );
   // Blind ch check: cure blindness first.
   if( IS_AFFECTED(ch, AFF_BLIND)
     && npc_has_spell_slot(ch, SPELL_DRAIN_NATURE) )
@@ -10973,7 +10972,6 @@ debug( "TEST '%s' -> '%s'", J_NAME(ch), J_NAME(target) );
 
   target = victim ? victim : ch->specials.fighting;
 
-debug( "TEST2 '%s' -> '%s'", J_NAME(ch), target ? J_NAME(target) : "NULL" );
   if( !IS_ALIVE(target) )
   {
     return FALSE;
