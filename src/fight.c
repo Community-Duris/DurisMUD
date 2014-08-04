@@ -8136,8 +8136,11 @@ int dodgeSucceed(P_char char_dodger, P_char attacker, P_obj wpn)
   learned = (int) ((GET_C_AGI(char_dodger)) * 1.00) - (WeaponSkill(attacker, wpn));
 
   //Dwarves now get the DnD 3.5 dodgeroll bonus vs giant races
-  if((GET_RACE(char_dodger) == RACE_MOUNTAIN) && ((GET_RACE(attacker) == RACE_TROLL) || (GET_RACE(attacker) == RACE_OGRE) || (GET_RACE(attacker) == RACE_GIANT)))
+  if( has_innate( char_dodger, INNATE_GIANT_AVOIDANCE )
+    && ((GET_RACE(attacker) == RACE_TROLL) || (GET_RACE(attacker) == RACE_OGRE) || (GET_RACE(attacker) == RACE_GIANT)))
+  {
     learned *= 1.10;
+  }
 
   // Everybody receives these values. -maybe change this? Drannak
   learned +=  (int) (((STAT_INDEX(GET_C_AGI(char_dodger))) -
