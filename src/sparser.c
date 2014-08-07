@@ -917,7 +917,7 @@ int SpellCastTime(P_char ch, int spl)
   {
     dura = (dura * .8);
   }
-if( IS_PC(ch) ) debug( "SpellCastTime: beats with flurry/haste: %d", dura );
+// if( IS_PC(ch) ) debug( "SpellCastTime: beats with flurry/haste: %d", dura );
 
   return MAX(1, dura);
 }
