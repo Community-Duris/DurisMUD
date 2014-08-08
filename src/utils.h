@@ -1081,7 +1081,6 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch) || IS_EFREET(ch)) &&
 
 #define OLD_RACE_EVIL(race, align) ( (race == RACE_DROW) \
                                   || (race == RACE_DUERGAR) \
-                                  || (race == RACE_ILLITHID) \
                                   || (race == RACE_GITHYANKI) \
                                   || (race == RACE_OGRE) \
                                   || (race == RACE_GOBLIN) \
@@ -1089,20 +1088,19 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch) || IS_EFREET(ch)) &&
                                   || (race == RACE_OROG) \
                                   || (race == RACE_TROLL) \
 	                                || (race == RACE_KUOTOA) \
-	                                || (race == RACE_PILLITHID) \
 	                                || (race == RACE_KOBOLD) \
 	                                || (race == RACE_DRIDER) \
                                   || (OLD_RACE_NEUTRAL(race) && (align < 0)) )
 
-#define OLD_RACE_PUNDEAD(race) ((race == RACE_PLICH) || \
-                                (race == RACE_PVAMPIRE) || \
-                                (race == RACE_PDKNIGHT) || \
-                                (race == RACE_SHADE) || \
-                                (race == RACE_REVENANT) || \
-                                (race == RACE_PSBEAST) || \
-                                (race == RACE_WIGHT) || \
-                                (race == RACE_GARGOYLE) || \
-                                (race == RACE_PHANTOM))
+#define OLD_RACE_PUNDEAD(race) ( (race == RACE_PLICH) \
+                              || (race == RACE_PVAMPIRE) \
+                              || (race == RACE_PDKNIGHT) \
+                              || (race == RACE_SHADE) \
+                              || (race == RACE_REVENANT) \
+                              || (race == RACE_PSBEAST) \
+                              || (race == RACE_WIGHT) \
+                              || (race == RACE_GARGOYLE) \
+                              || (race == RACE_PHANTOM) )
 
 #define IS_PUNDEAD(ch) (IS_UNDEAD(ch))
 
