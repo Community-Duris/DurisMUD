@@ -574,8 +574,8 @@ void spell_awe(int level, P_char ch, char *arg, int type, P_char victim, P_obj o
       !IS_ELITE(victim) &&
       !IS_UNDEAD(victim) &&
       !IS_TRUSTED(victim) &&
-      (OLD_RACE_EVIL(victim) ||
-      OLD_RACE_GOOD(victim) ||
+      (OLD_RACE_EVIL(GET_RACE(victim), GET_ALIGNMENT(victim)) ||
+      OLD_RACE_GOOD(GET_RACE(victim), GET_ALIGNMENT(victim)) ||
       GET_RACE(victim) == RACE_SNOW_OGRE ||
       GET_RACE(victim) == RACE_RAKSHASA ||
       GET_RACE(victim) == RACE_HUMANOID))

@@ -13,6 +13,7 @@ string wiki_racial_stats(string str);
 string wiki_specs(string str);
 string wiki_spells(string title, int type);
 string wiki_skills(string title, int type);
+string wiki_pcraces(string str);
 
 struct cmd_attrib_data {
   char *name;

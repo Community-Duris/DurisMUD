@@ -5109,11 +5109,11 @@ void select_class(P_desc d, char *arg)
     break;
   }
 
-  if (OLD_RACE_GOOD(d->character))
+  if (OLD_RACE_GOOD(GET_RACE(d->character), GET_ALIGNMENT(d->character)))
     GET_RACEWAR(d->character) = RACEWAR_GOOD;
-  else if (OLD_RACE_EVIL(d->character))
+  else if (OLD_RACE_EVIL(GET_RACE(d->character), GET_ALIGNMENT(d->character)))
     GET_RACEWAR(d->character) = RACEWAR_EVIL;
-  else if (OLD_RACE_PUNDEAD(d->character))
+  else if (OLD_RACE_PUNDEAD(GET_RACE(d->character)))
     GET_RACEWAR(d->character) = RACEWAR_UNDEAD;
   else if (IS_HARPY(d->character))
     GET_RACEWAR(d->character) = RACEWAR_NEUTRAL;
@@ -5230,11 +5230,11 @@ void select_alignment(P_desc d, char *arg)
   /* record it */
   GET_ALIGNMENT(d->character) = align;
 
-  if (OLD_RACE_GOOD(d->character))
+  if (OLD_RACE_GOOD(GET_RACE(d->character), GET_ALIGNMENT(d->character)))
     GET_RACEWAR(d->character) = RACEWAR_GOOD;
-  else if (OLD_RACE_EVIL(d->character))
+  else if (OLD_RACE_EVIL(GET_RACE(d->character), GET_ALIGNMENT(d->character)))
     GET_RACEWAR(d->character) = RACEWAR_EVIL;
-  else if (OLD_RACE_PUNDEAD(d->character))
+  else if (OLD_RACE_PUNDEAD(GET_RACE(d->character)))
     GET_RACEWAR(d->character) = RACEWAR_UNDEAD;
   else if (IS_HARPY(d->character))
     GET_RACEWAR(d->character) = RACEWAR_NEUTRAL;

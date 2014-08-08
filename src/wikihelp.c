@@ -1,4 +1,5 @@
 #include "sql.h"
+#include "utils.h"
 #include "wikihelp.h"
 #include "prototypes.h"
 #include "string.h"
@@ -156,22 +157,22 @@ string wiki_racial_stats(string title)
   for (i = 0; i <= RACE_PLAYER_MAX; i++)
   {
     if (!strcmp(tolower(race_names_table[i].normal).c_str(), tolower(title).c_str()))
-    { 
+    {
       race_str += race_names_table[i].no_spaces;
       break;
     }
   }
 
   return_str += "==Racial Statistics==\n";
-  
-  if (i > RACE_PLAYER_MAX)
+
+  if( i > RACE_PLAYER_MAX )
   {
-    return_str += "No data found for ";
+    return_str += "No data found for race '";
     return_str += title;
-    return_str += "&n\n";
+    return_str += "&n'\n";
     return return_str;
   }
-  
+
   return_str += "Strength    : &+c";
   sprintf(race, "stats.str.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
@@ -268,18 +269,18 @@ string wiki_classes(string title)
 
   if (i > RACE_PLAYER_MAX)
   {
-    return_str += "No data found for ";
+    return_str += "No data found for race '";
     return_str += title;
-    return_str += "&n\n";
+    return_str += "&n'\n";
     return return_str;
   }
-  
+
   for (int cls = 1; cls <= CLASS_COUNT; cls++)
   {
     if (class_table[i][cls] != 5)
     {
       found = 1;
-      return_str += "*";
+      return_str += "* ";
       return_str += pad_ansi(class_names_table[cls].ansi, 12);
       return_str += "&n: ";
       return_str += single_spec_list(i, cls);
@@ -297,35 +298,40 @@ string wiki_specs(string title)
   string return_str;
   int i, j, found = 0;
 
-  for (i = 0; i <= CLASS_COUNT; i++)
+  for( i = 0; i <= CLASS_COUNT; i++ )
   {
-    if (!strcmp(tolower(class_names_table[i].normal).c_str(), tolower(title).c_str()))
+    if( !strcmp(tolower(class_names_table[i].normal).c_str(), tolower(title).c_str()) )
     {
       break;
     }
   }
 
   return_str += "==Specializations==\n";
-  
-  if (i > CLASS_COUNT)
+
+  if( i > CLASS_COUNT )
   {
-    return_str += "No data found for ";
+    return_str += "No data found for class '";
     return_str += title;
-    return_str += "&n\n";
+    return_str += "'&n\n";
     return return_str;
   }
 
   for (j = 0; j < MAX_SPEC; j++)
   {
     if (!strcmp(specdata[i][j], "") || !strcmp(specdata[i][j], "Not Used"))
+    {
       continue;
-    found = 1;
+    }
+    found = TRUE;
+    return_str += "* ";
     return_str += string(specdata[i][j]);
     return_str += "\n";
   }
-  
+
   if (!found)
+  {
     return_str += "No specializations found.\n";
+  }
 
   return return_str;
 }
@@ -397,9 +403,11 @@ string wiki_innates(string title, int type)
 string wiki_races(string title)
 {
   string return_str;
-  int cls, race, found = 0;
+  int cls, race;
+  bool found = FALSE;
 
-  for (cls = 0; cls <= CLASS_COUNT; cls++)
+  // Find class to search for.
+  for( cls = 0; cls <= CLASS_COUNT; cls++ )
   {
     if (!strcmp(tolower(class_names_table[cls].normal).c_str(), tolower(title).c_str()))
     {
@@ -408,22 +416,23 @@ string wiki_races(string title)
   }
 
   return_str += "==Allowed races==\n";
-  
-  if (cls > CLASS_COUNT)
+
+  if( cls > CLASS_COUNT )
   {
-    return_str += "No data found for ";
+    return_str += "No data found for class '";
     return_str += title;
-    return_str += "&n\n";
+    return_str += "&n'\n";
     return return_str;
   }
 
-  for (race = 1; race <= RACE_PLAYER_MAX; race++)
+  for( race = 1; race <= RACE_PLAYER_MAX; race++ )
   {
     if (class_table[race][cls] == 5)
+    {
       continue;
-    
-    found = 1;
-    return_str += "*";
+    }
+    found = TRUE;
+    return_str += "* ";
     return_str += string(race_names_table[race].ansi);
     return_str += "&n\n";
   }
@@ -518,6 +527,10 @@ string wiki_help_single(string str)
   if( !strcmp(row[0], "Multiclass") )
   {
     return_str += wiki_multiclass(row[0]);
+  }
+  else if( !strcmp(row[0], "Races") )
+  {
+    return_str += wiki_pcraces(row[0]);
   }
 
   mysql_free_result(res);
@@ -902,6 +915,91 @@ string wiki_multiclass( string title )
     }
   }
   return_str += "\n\r";
+
+  return return_str;
+}
+
+string wiki_pcraces(string title)
+{
+  string return_str;
+  bool found = FALSE;
+  int i, j;
+
+  return_str = "\n\n==Good Races==\n";
+  for( i = 1; i <= RACE_PLAYER_MAX; i++ )
+  {
+    // With a negative align, this won't include neutral races.
+    if( !OLD_RACE_GOOD(i, -1) )
+      continue;
+    // Hunt for an available class for the race.
+    for( j = 1; j <= CLASS_COUNT; j++ )
+    {
+      if( class_table[i][j] != 5 )
+        break;
+    }
+    if( j > CLASS_COUNT )
+      continue;
+
+    found = TRUE;
+    return_str += "* ";
+    return_str += string(race_names_table[i].ansi);
+    return_str += "&n\n";
+  }
+  if( !found )
+  {
+    return_str += "No data found for Good races.\n";
+  }
+
+  found = FALSE;
+  return_str += "\n==Evil Races==\n";
+  for( i = 1; i <= RACE_PLAYER_MAX; i++ )
+  {
+    // With a positive align, this won't include neutral races.
+    if( !OLD_RACE_EVIL(i, 1) )
+      continue;
+    // Hunt for an available class for the race.
+    for( j = 1; j <= CLASS_COUNT; j++ )
+    {
+      if( class_table[i][j] != 5 )
+        break;
+    }
+    if( j > CLASS_COUNT )
+      continue;
+
+    found = TRUE;
+    return_str += "* ";
+    return_str += string(race_names_table[i].ansi);
+    return_str += "&n\n";
+  }
+  if( !found )
+  {
+    return_str += "No data found for Evil races.\n";
+  }
+
+  found = FALSE;
+  return_str += "\n==Neutral Races==\n";
+  for( i = 1; i <= RACE_PLAYER_MAX; i++ )
+  {
+    if( !OLD_RACE_NEUTRAL(i) )
+      continue;
+    // Hunt for an available class for the race.
+    for( j = 1; j <= CLASS_COUNT; j++ )
+    {
+      if( class_table[i][j] != 5 )
+        break;
+    }
+    if( j > CLASS_COUNT )
+      continue;
+
+    found = TRUE;
+    return_str += "* ";
+    return_str += string(race_names_table[i].ansi);
+    return_str += "&n\n";
+  }
+  if( !found )
+  {
+    return_str += "No data found for Neutral races.\n";
+  }
 
   return return_str;
 }

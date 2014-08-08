@@ -750,7 +750,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
            (IS_DRACOLICH(ch)) || \
            (IS_AFFECTED(ch, AFF_WRAITHFORM) ) || \
            (IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM) && !GET_CLASS(ch, CLASS_THEURGIST) ) || \
-           (RACE_PUNDEAD(ch)) || (OLD_RACE_PUNDEAD(ch)))
+           (RACE_PUNDEAD(ch)) || (OLD_RACE_PUNDEAD(GET_RACE(ch))))
 
 #define IS_ANGELIC(ch) (IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM) && GET_CLASS(ch, CLASS_THEURGIST))
 
@@ -1061,49 +1061,48 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch) || IS_EFREET(ch)) &&
 #define RACE_EVIL(ch) (GET_RACEWAR(ch) == RACEWAR_EVIL)
 #define RACE_PUNDEAD(ch) (GET_RACEWAR(ch) == RACEWAR_UNDEAD)
 
-#define OLD_RACE_NEUTRAL(ch) ((GET_RACE(ch) == RACE_THRIKREEN) || \
-                           (GET_RACE(ch) == RACE_MINOTAUR))
+#define OLD_RACE_NEUTRAL(race) ( (race == RACE_THRIKREEN) \
+                              || (race == RACE_MINOTAUR) )
 
-#define OLD_RACE_GOOD(ch)  ((GET_RACE(ch) == RACE_HUMAN) || \
-      (GET_RACE(ch) == RACE_GREY) || \
-      (GET_RACE(ch) == RACE_MOUNTAIN) || \
-      (GET_RACE(ch) == RACE_BARBARIAN) || \
-      (GET_RACE(ch) == RACE_GNOME) || \
-      (GET_RACE(ch) == RACE_HALFLING) || \
-      (GET_RACE(ch) == RACE_HALFELF) || \
-      (GET_RACE(ch) == RACE_CENTAUR) || \
-      (GET_RACE(ch) == RACE_GITHZERAI) || \
-      (GET_RACE(ch) == RACE_AGATHINON) || \
-	  (GET_RACE(ch) == RACE_WOODELF) || \
-	  (GET_RACE(ch) == RACE_FIRBOLG) || \
-	  (GET_RACE(ch) == RACE_ELADRIN) || \
-      (OLD_RACE_NEUTRAL(ch) && \
-       GET_ALIGNMENT(ch) >= 0))
+#define OLD_RACE_GOOD(race, align)( (race == RACE_HUMAN) \
+                                 || (race == RACE_GREY) \
+                                 || (race == RACE_MOUNTAIN) \
+                                 || (race == RACE_BARBARIAN) \
+                                 || (race == RACE_GNOME) \
+                                 || (race == RACE_HALFLING) \
+                                 || (race == RACE_HALFELF) \
+                                 || (race == RACE_CENTAUR) \
+                                 || (race == RACE_GITHZERAI) \
+                                 || (race == RACE_AGATHINON) \
+                                 || (race == RACE_WOODELF) \
+                                 || (race == RACE_FIRBOLG) \
+                                 || (race == RACE_ELADRIN) \
+                                 || (OLD_RACE_NEUTRAL(race) && (align >= 0)) )
 
-#define OLD_RACE_EVIL(ch)  ((GET_RACE(ch) == RACE_DROW) || \
-      (GET_RACE(ch) == RACE_DUERGAR) || \
-      (GET_RACE(ch) == RACE_ILLITHID) || \
-      (GET_RACE(ch) == RACE_GITHYANKI) || \
-      (GET_RACE(ch) == RACE_OGRE) || \
-      (GET_RACE(ch) == RACE_GOBLIN) || \
-      ((OLD_RACE_NEUTRAL(ch) && (GET_ALIGNMENT(ch)) < 0)) || \
-      (GET_RACE(ch) == RACE_ORC) || \
-      (GET_RACE(ch) == RACE_OROG) || \
-      (GET_RACE(ch) == RACE_TROLL) || \
-	  (GET_RACE(ch) == RACE_KUOTOA) || \
-	  (GET_RACE(ch) == RACE_PILLITHID) || \
-	  (GET_RACE(ch) == RACE_KOBOLD) || \
-	  (GET_RACE(ch) == RACE_DRIDER))
+#define OLD_RACE_EVIL(race, align) ( (race == RACE_DROW) \
+                                  || (race == RACE_DUERGAR) \
+                                  || (race == RACE_ILLITHID) \
+                                  || (race == RACE_GITHYANKI) \
+                                  || (race == RACE_OGRE) \
+                                  || (race == RACE_GOBLIN) \
+                                  || (race == RACE_ORC) \
+                                  || (race == RACE_OROG) \
+                                  || (race == RACE_TROLL) \
+	                                || (race == RACE_KUOTOA) \
+	                                || (race == RACE_PILLITHID) \
+	                                || (race == RACE_KOBOLD) \
+	                                || (race == RACE_DRIDER) \
+                                  || (OLD_RACE_NEUTRAL(race) && (align < 0)) )
 
-#define OLD_RACE_PUNDEAD(ch) ((GET_RACE(ch) == RACE_PLICH) || \
-      (GET_RACE(ch) == RACE_PVAMPIRE) || \
-      (GET_RACE(ch) == RACE_PDKNIGHT) || \
-      (GET_RACE(ch) == RACE_SHADE) || \
-      (GET_RACE(ch) == RACE_REVENANT) || \
-      (GET_RACE(ch) == RACE_PSBEAST) || \
-      (GET_RACE(ch) == RACE_WIGHT) || \
-      (GET_RACE(ch) == RACE_GARGOYLE) || \
-      (GET_RACE(ch) == RACE_PHANTOM))
+#define OLD_RACE_PUNDEAD(race) ((race == RACE_PLICH) || \
+                                (race == RACE_PVAMPIRE) || \
+                                (race == RACE_PDKNIGHT) || \
+                                (race == RACE_SHADE) || \
+                                (race == RACE_REVENANT) || \
+                                (race == RACE_PSBEAST) || \
+                                (race == RACE_WIGHT) || \
+                                (race == RACE_GARGOYLE) || \
+                                (race == RACE_PHANTOM))
 
 #define IS_PUNDEAD(ch) (IS_UNDEAD(ch))
 
