@@ -2462,8 +2462,15 @@ int revenant_helm(P_obj obj, P_char ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if( cmd != CMD_PERIODIC || !OBJ_WORN(obj) || !IS_ALIVE(ch) || IS_NPC(ch) || ch != obj->loc.wearing
-    || affected_by_spell(ch, TAG_RACE_CHANGE) )
+  if( cmd != CMD_PERIODIC || !OBJ_WORN(obj) )
+  {
+    return FALSE;
+  }
+  // Need to do this in 2 steps, 'cause CMD_PERIODIC doesn't assign ch. *sigh*
+  //   We could put an !(ch = obj->loc.wearing) .. but that assignment might not come before
+  //   the IS_ALIVE etc checks.
+  ch = obj->loc.wearing;
+  if( !IS_ALIVE(ch) || IS_NPC(ch) || affected_by_spell(ch, TAG_RACE_CHANGE) )
   {
     return FALSE;
   }
