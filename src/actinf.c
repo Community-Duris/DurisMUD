@@ -122,7 +122,7 @@ extern void show_world_events(P_char ch, const char* arg);
 extern struct quest_data quest_index[];
 extern struct epic_bonus_data ebd[];
 void display_map(P_char ch, int n, int show_map_regardless);
-
+extern void event_short_affect(P_char, P_char , P_obj , void *);
 
 extern HelpFilesCPPClass help_index;
 
@@ -4301,16 +4301,17 @@ void do_attributes(P_char ch, char *argument, int cmd)
 void do_score(P_char ch, char *argument, int cmd)
 {
   struct time_info_data playing_time;
-  static char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
+  static char buf[MAX_STRING_LENGTH], buf1[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
   struct follow_type *fol;
   struct affected_type *aff;
   bool     found = FALSE;
-  int      i, last = 0, percent;
+  int      i, last = 0, percent, secs;
   float    frags;
   char     buffer[1024];
   float    fragnum, hardcorepts = 0;
-  P_char tch, tch2;
-  P_obj nexus;
+  P_nevent ne;
+  P_char   tch, tch2;
+  P_obj    nexus;
 
   if (ch == NULL)
   {
@@ -5292,19 +5293,17 @@ void do_score(P_char ch, char *argument, int cmd)
    * loop through affected list, show them the ones they can see, if
    * affected by detect magic, show remaining durations too. JAB
    */
-
-  if (ch->affected)
+  if( ch->affected )
   {
     last = SKILL_CAMP;          /* gotta initalize it, to something not used */
-    
+
     for (aff = ch->affected; aff; aff = aff->next)
-      if(aff->type &&
-         skills[aff->type].name &&
-	 (aff->type <= LAST_SKILL ||
-	  aff->type == TAG_CTF))
+    {
+      if(aff->type && skills[aff->type].name && (aff->type <= LAST_SKILL || aff->type == TAG_CTF) )
       {
         switch (aff->type)
         {
+          // These are never reported
           case SKILL_AWARENESS:
           case SKILL_FIRST_AID:
           case SKILL_HEADBUTT:
@@ -5314,12 +5313,10 @@ void do_score(P_char ch, char *argument, int cmd)
           case SPELL_SUMMON:
           case SKILL_SCRIBE:
           case SKILL_TACKLE:
-            /*
-             * these are never reported
-             */
             continue;
             break;
 
+          // These get reported, only if detect magic active
           case SONG_CHARMING:
           case SPELL_CHARM_PERSON:
           case SPELL_PROTECT_FROM_ACID:
@@ -5338,89 +5335,95 @@ void do_score(P_char ch, char *argument, int cmd)
           case SPELL_SANCTUARY:
           case SPELL_BLUR:
           case SPELL_FAERIE_SIGHT:
-            /*
-             * these get reported, only if detect magic active
-             */
             if(!IS_AFFECTED2(ch, AFF2_DETECT_MAGIC))
             {
               continue;
             }
             break;
 
+          // The rest always get reported.
           default:
-          {
             break;
-          }
         }
-        
-        if(aff->flags &
-          AFFTYPE_NOSHOW)
+
+        if( aff->flags & AFFTYPE_NOSHOW )
         {
           continue;
         }
-        
+
+        // Don't display affects with 2 or more structs twice.
         if (aff->type - 1 != last)
-        {                       /*
-                                 * don't display twice
-                                 * affects with 2 structs
-                                 */
+        {
           strcat(buf, skills[aff->type].name);
-    if(IS_SET(aff->flags, AFFTYPE_SHORT))
-    {
-
-            strcat(buf, " (&+Rless than a minute remaining&n)\n");
-
-    }
-
-    else
-      {
-	  if(aff->duration < 0)
+          if(IS_SET(aff->flags, AFFTYPE_SHORT))
           {
-	    char buf1[MAX_STRING_LENGTH];
-            //strcat(buf, "\n");
-	     sprintf(buf1, " (&+Bno expiration timer&n)\n");
-            strcat(buf, buf1);
+            secs = 0;
+            for (ne = ch->nevents; ne; ne = ne->next)
+            {
+              if (ne->func == event_short_affect)
+              {
+                if( aff == ((struct event_short_affect_data *)(ne->data))->af )
+                {
+                  secs = ne_event_time(ne)/WAIT_SEC;
+                  break;
+                }
+              }
+            }
+            if( secs > 60 )
+            {
+	            sprintf(buf1, " (&+W%d &+Yminute%s&n)\n", secs/60, (secs/60 > 1) ? "s" : "" );
+              strcat(buf, buf1);
+            }
+            else
+            {
+              strcat(buf, " (&+Rless than a minute remaining&n)\n");
+            }
           }
-          else if(aff->duration > 1) //(!IS_AFFECTED2(ch, AFF2_DETECT_MAGIC) ||  
+          else
           {
-	    char buf1[MAX_STRING_LENGTH];
-            //strcat(buf, "\n");
-	     sprintf(buf1, " (&+W%d &+Yminutes&n)\n", aff->duration);
-            strcat(buf, buf1);
+        	  if(aff->duration < 0)
+            {
+              //strcat(buf, "\n");
+      	      sprintf(buf1, " (&+Bno expiration timer&n)\n");
+              strcat(buf, buf1);
+            }
+            else if(aff->duration > 1) //(!IS_AFFECTED2(ch, AFF2_DETECT_MAGIC) ||  
+            {
+              //strcat(buf, "\n");
+	            sprintf(buf1, " (&+W%d &+Yminutes&n)\n", aff->duration);
+              strcat(buf, buf1);
+            }
+            else if (aff->duration <= 1)
+            {
+              strcat(buf, " (&+Rless than a minute remaining&n)\n");
+            }
+            else if (aff->duration == 2)
+            {
+              strcat(buf, " (fading)\n");
+            }
           }
-          else if (aff->duration <= 1)
-          {
-            strcat(buf, " (&+Rless than a minute remaining&n)\n");
-          }
-          else if (aff->duration == 2)
-          {
-            strcat(buf, " (fading)\n");
-          }
-       }
-      }
+        }
         last = aff->type - 1;
       }
-    
+    }
 #if defined(CTF_MUD) && (CTF_MUD == 1)
     affected_type *af2;
     if ((af2 = get_spell_from_char(ch, TAG_CTF_BONUS)) != NULL)
       sprintf(buf + strlen(buf), "CTF Bonus Level %d", af2->modifier);
 #endif
-    
-    if(*buf &&
-       !affected_by_spell(ch, SPELL_FEEBLEMIND))
+
+    if( *buf && !affected_by_spell(ch, SPELL_FEEBLEMIND) )
     {
       send_to_char("\n&+cActive Spells:&n\n--------------\n", ch);
-
       send_to_char(buf, ch);
     }
   }
-  
+
   if(affected_by_spell(ch, SKILL_REGENERATE))
   {
     send_to_char("regenerating\n", ch);
   }
-  
+
   send_to_char("\n", ch);
 }
 
