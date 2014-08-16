@@ -3257,8 +3257,7 @@ void spell_fireball(int level, P_char ch, char *arg, int type, P_char victim,
 /*
  * cast_as_damage_area passes pointer to the index of hit victim as arg
  */
-void spell_single_chain_lightning(int level, P_char ch, char *arg, int type,
-                                  P_char victim, P_obj obj)
+void spell_single_chain_lightning(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int      dam, order;
   struct damage_messages primary_messages = {
@@ -3279,26 +3278,28 @@ void spell_single_chain_lightning(int level, P_char ch, char *arg, int type,
   };
 
   order = *((int *) arg);
-  dam = 11 * MIN(51, level) + number(1, level);
-  while (order--)
+  dam = 8 * MIN(51, level) + number(level/3, level) + 30;
+  while( order-- )
+  {
     dam = (int) (dam * 0.8);
+  }
 
+  if( IS_PC(ch) && IS_PC(victim) )
+  {
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  }
   dam = dam * get_property("spell.area.damage.factor.chainlightning", 1.000);
 
-  spell_damage(ch, victim, dam, SPLDAM_LIGHTNING, 0,
-               *((int *) arg) ? &secondary_messages : &primary_messages);
+  spell_damage(ch, victim, dam, SPLDAM_LIGHTNING, 0, *((int *) arg) ? &secondary_messages : &primary_messages);
 }
 
-void spell_chain_lightning(int level, P_char ch, char *arg, int type,
-                           P_char victim, P_obj obj)
+void spell_chain_lightning(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int      hit, room;
 
   room = ch->in_room;
-  send_to_char("A writhing &=LBbolt of lightning&n leaves your hands...\n",
-               ch);
-  act("A writhing &=LBbolt of lightning&n leaves $n's hands...", FALSE, ch, 0,
-      0, TO_ROOM);
+  send_to_char("A writhing &=LBbolt of lightning&n leaves your hands...\n", ch);
+  act("A writhing &=LBbolt of lightning&n leaves $n's hands...", FALSE, ch, 0, 0, TO_ROOM);
   zone_spellmessage(room,
                        "&=LBThe sky lights up with brilliant lightning flashes!\n",
                        "&=LBThe sky to the %s lights up with brilliant lightning flashes!\n");
@@ -3307,7 +3308,7 @@ void spell_chain_lightning(int level, P_char ch, char *arg, int type,
                             get_property ("spell.area.minChance.chainLightning", 0),
                             get_property ("spell.area.chanceStep.chainLightning", 25));
 
-  if(!hit)
+  if( !hit )
   {
     send_to_room("and grounds harmlessly.\n", room);
   }
@@ -3448,21 +3449,22 @@ void spell_single_meteorswarm(int level, P_char ch, char *arg, int type,
     "You are whacked by a swarm of $n's meteors.",
     "$n obliterates $N with a swarm of meteors.", 0
   };
-  
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim))
-      return;
 
-  dam = 80 + level * 6 + number(1, 40);
-  if (IS_PC(ch) && IS_PC(victim))
-    dam = dam * get_property("spell.area.damage.to.pc", 0.5); 
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+  {
+    return;
+  }
+
+  dam = 80 + level * 7 + number(1, 40);
+  if( IS_PC(ch) && IS_PC(victim) )
+  {
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  }
   dam = dam * get_property("spell.area.damage.factor.meteorSwarm", 1.000);
   if(GET_SPEC(ch, CLASS_SORCERER, SPEC_WIZARD))
-   {
-    dam = dam * 2;
-   }
+  {
+    dam = dam * 1.4;
+  }
   spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
 }
 
@@ -13055,30 +13057,29 @@ void spell_single_incendiary_cloud(int level, P_char ch, char *arg, int type,
     "As the gases surround you, $n grins evilly -  then you burst into flames and die.",
     "The incendiary cloud from $n turns $N into a charred corpse.", 0
   };
-  
-  if(!(ch) ||
-     !(victim) ||
-     !IS_ALIVE(ch) ||
-     !IS_ALIVE(victim))
+
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
   {
     return;
   }
-  
-  dam = dice(3 * level, 7);
-  
-  if(NewSaves(victim, SAVING_SPELL, 0))
+
+  dam = dice(3 * level, 7)/2;
+
+  if( !NewSaves(victim, SAVING_SPELL, 0) )
   {
-    dam /= 2;
+    dam = dam * 1.5;
   }
 
   if (IS_PC(ch) && IS_PC(victim))
+  {
     dam = dam * get_property("spell.area.damage.to.pc", 0.5);
-  
+  }
   dam = dam * get_property("spell.area.damage.factor.incendiaryCloud", 1.000);
   if(GET_SPEC(ch, CLASS_SORCERER, SPEC_WIZARD))
   {
-   dam = dam * 2;
+   dam = dam * 1.4;
   }
+
   spell_damage(ch, victim, dam, SPLDAM_FIRE, 0, &messages);
 }
 
