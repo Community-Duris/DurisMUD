@@ -87,6 +87,9 @@ bool     create_walls(int room, int exit, P_char ch, int level, int type,
                       ulong flags);
 extern bool has_skin_spell(P_char);
 
+#define TITAN_NUMBER 650
+
+
 /* Let's do some spells yah! */
 
 void spell_phantom_armor(int level, P_char ch, char *arg, int type,
@@ -588,6 +591,7 @@ void spell_reflection(int level, P_char ch, char *arg, int type,
                       P_char victim, P_obj obj)
 {
   P_char   image, tch, tch2;
+  struct char_link_data *cld;
   struct affected_type af;
   char Gbuf1[MAX_STRING_LENGTH];
   int numb, i, spot, room, targ;
@@ -602,6 +606,15 @@ void spell_reflection(int level, P_char ch, char *arg, int type,
   {
     send_to_char("You cannot cast this spell on NPCs.\r\n", ch);
     return;
+  }
+
+  for( cld = ch->linked; cld; cld = cld->next_linked )
+  {
+    if( cld->type == LNK_PET && IS_NPC(cld->linking) && GET_VNUM(cld->linking) == TITAN_NUMBER )
+    {
+      send_to_char("&+LBut you cant support so many different illusions!&n\r\n", ch);
+      return;
+    }
   }
 
   for( k = ch->followers; k; k = p )
@@ -1927,8 +1940,6 @@ void spell_dragon(int level, P_char ch, char *arg, int type, P_char victim,
   MobStartFight(mob, victim);
 }
 
-#   define TITAN_NUMBER 650
-
 void spell_titan(int level, P_char ch, char *arg, int type, P_char victim,
                  P_obj obj)
 {
@@ -1955,33 +1966,30 @@ void spell_titan(int level, P_char ch, char *arg, int type, P_char victim,
 
   for (cld = ch->linked; cld; cld = cld->next_linked)
   {
-    if (cld->type == LNK_PET &&
-        IS_NPC(cld->linking) &&
-	GET_VNUM(cld->linking) == TITAN_NUMBER)
+    if( cld->type == LNK_PET && IS_NPC(cld->linking) && GET_VNUM(cld->linking) == TITAN_NUMBER )
     {
       summoned++;
     }
   }
 
-  if (summoned)
+  if( summoned )
   {
     send_to_char("&+BThere can be only &+Yone&+B!&n\r\n", ch);
     return;
   }
 
-  for (k = ch->followers; k; k = k->next)
+  for( k = ch->followers; k; k = k->next )
   {
     mob = k->follower;
-    if (IS_NPC(mob) && GET_VNUM(mob) == 250)
+    if( IS_NPC(mob) && GET_VNUM(mob) == 250 )
     {
-      send_to_char
-        ("&+LBut you cant support so many different illusions!&n\r\n", ch);
+      send_to_char("&+LBut you cant support so many different illusions!&n\r\n", ch);
       return;
     }
   }
 
   mob = read_mobile(real_mobile(TITAN_NUMBER), REAL);
-  if (!mob)
+  if( !mob )
   {
     logit(LOG_DEBUG, "spell_titan(): mob %d not loadable", TITAN_NUMBER);
     send_to_char("Bug in titan.  Tell a god!\r\n", ch);
@@ -1995,8 +2003,7 @@ void spell_titan(int level, P_char ch, char *arg, int type, P_char victim,
 
   remove_plushit_bits(mob);
 
-  GET_MAX_HIT(mob) = GET_HIT(mob) = mob->points.base_hit =
-    (int) (GET_MAX_HIT(ch) * 0.7);
+  GET_MAX_HIT(mob) = GET_HIT(mob) = mob->points.base_hit = (int) (GET_MAX_HIT(ch) * 0.7);
 
   GET_SIZE(mob) = SIZE_GIANT;
 
