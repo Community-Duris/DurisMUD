@@ -80,10 +80,11 @@ void lore_item( P_char ch, P_obj obj );
 void     set_keywords(P_obj t_obj, const char *newKeys);
 void     set_short_description(P_obj t_obj, const char *newShort);
 
-// This sets players to forego all their attacks. It is useful for 
+int voting_enabled = 0;
+
+// This sets players to forego all their attacks. It is useful for
 // caster type classes which do not want their opponent to riposte or
 // other tactical situations.
-
 void do_offensive(P_char ch, char *arg, int cmd)
 {
 
@@ -3536,13 +3537,13 @@ void do_arena(P_char ch, char *arg, int cmd)
 }
 
 
-void do_vote(P_char ch, char *argument, int cmd)
+void do_vote(P_char ch, char *arg, int cmd)
 {
   char     vote_opts[4096];
   int      votes, i;
   char     vote_str[4096];
   char     voted[4096];
-  int      vote_serial = 9, voting_enabled = 1;
+  int      vote_serial = 9;
   int      max_vote = 0;
   FILE    *f = NULL;
   const char *ip;
@@ -3579,13 +3580,23 @@ void do_vote(P_char ch, char *argument, int cmd)
     send_to_char("Sorry, the polls are closed!\r\n", ch);
     return;
   }
-  if (!is_number(argument))
+  if (!is_number(arg))
   {
-    send_to_char("\r\nHow do you feel about the miniwipe/group caps?\r\n",
-       ch);
+    if( GET_LEVEL(ch) >= FORGER && !str_cmp(skip_spaces(arg), "close") )
+    {
+      voting_enabled = 0;
+      sprintf( vote_str, "&=Ly%s has closed the voting polls!\n\r", J_NAME(ch) );
+      send_to_all( vote_str );
+      return;
+    }
+    send_to_char("\r\nHow do you feel about the miniwipe/group caps?\r\n", ch);
     send_to_char("------", ch);
     send_to_char(vote_opts, ch);
     send_to_char("------\r\n", ch);
+    if( GET_LEVEL(ch) >= FORGER )
+    {
+      send_to_char( "&+yOr you can 'vote close' to close the polls.&n\n\r", ch );
+    }
     return;
   }
 
@@ -3595,8 +3606,8 @@ void do_vote(P_char ch, char *argument, int cmd)
     return;
   }
 
-  votes = atoi(argument);
-  if ((strlen(argument) != 1) || (votes < 1) || (votes > max_vote))
+  votes = atoi(arg);
+  if ((strlen(arg) != 1) || (votes < 1) || (votes > max_vote))
   {
     send_to_char("Hey, you left hanging chads!  Try again!\r\n", ch);
     send_to_char("The proper format is: vote x  'Replace x with the number of your choice.\r\n", ch);
