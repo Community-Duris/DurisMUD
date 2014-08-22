@@ -1756,34 +1756,25 @@ void do_stat(P_char ch, char *argument, int cmd)
       send_to_char("Invalid zone number. Type 'world zones' to see list.\n", ch);
       return;
     }
-    
-    sprintf(o_buf,
-            "&+YZone: [&N%d&+Y](&N%d&+Y)  Name:&N %s&n  &+YFilename:&n %s\n",
-            zone->number,
-            zone_id,
-            zone->name,
-            zone->filename);
+
+    sprintf(o_buf, "&+YZone: [&N%d&+Y](&N%d&+Y)  Name:&N %s&n  &+YFilename:&n %s\n",
+      zone->number, zone_id, zone->name, zone->filename);
 
     int maproom = maproom_of_zone(zone_id);
     if(maproom > 0)
     {
       sprintf(o_buf + strlen(o_buf), "&+YConnects to map room: [&N%d&+Y]\n", maproom);
     }
-    
-    sprintf(o_buf + strlen(o_buf),
-            "&+YRooms: &N%d  &+YRange: [&N%d&+Y](&N%d&+Y) to [&N%d&+Y](&N%d&+Y)  Top: &N%d\n",
-            zone->real_top - zone->real_bottom + 1,
-            world[zone->real_bottom].number, zone->real_bottom,
-            world[zone->real_top].number, zone->real_top, zone->top);
 
-    sprintf(o_buf + strlen(o_buf), "&+YDifficulty: &N%d ",
-            zone->difficulty);
-    
-                sprintf(o_buf + strlen(o_buf), "&+YAvg mob level: &N%d ",
-            zone->avg_mob_level);
-    
-    sprintf(o_buf + strlen(o_buf), "&+YLifespan: &N%d  &+YAge: &N%d  &+R",
-            zone->lifespan, zone->age);
+    sprintf(o_buf + strlen(o_buf), "&+YRooms: &N%d  &+YRange: [&N%d&+Y](&N%d&+Y) to [&N%d&+Y](&N%d&+Y)  Top: &N%d\n",
+      zone->real_top - zone->real_bottom + 1, world[zone->real_bottom].number, zone->real_bottom,
+      world[zone->real_top].number, zone->real_top, zone->top);
+
+    sprintf(o_buf + strlen(o_buf), "&+YDifficulty: &N%d ", zone->difficulty);
+
+    sprintf(o_buf + strlen(o_buf), "&+YAvg mob level: &N%d ", zone->avg_mob_level);
+
+    sprintf(o_buf + strlen(o_buf), "&+YLifespan: &N%d  &+YAge: &N%d  &+R", zone->lifespan, zone->age);
 
     switch (zone->reset_mode)
     {
@@ -1801,118 +1792,97 @@ void do_stat(P_char ch, char *argument, int cmd)
       break;
     }
 
-    sprintf(o_buf + strlen(o_buf),
-            "&+YFull reset lifespan: &n%d  &+YFull reset age: &n%d\n",
-            zone->fullreset_lifespan, zone->fullreset_age);
+    sprintf(o_buf + strlen(o_buf), "&+YFull reset lifespan: &n%d  &+YFull reset age: &n%d\n",
+      zone->fullreset_lifespan, zone->fullreset_age);
 
-    if(IS_SET(zone->flags, ZONE_MAP))
+    if( IS_SET(zone->flags, ZONE_MAP) )
     {
-      sprintf(o_buf + strlen(o_buf), "&+YMap size:&n %d&+Yx&n%d\n",
-              zone->mapx, zone->mapy);
-    }    
+      sprintf(o_buf + strlen(o_buf), "&+YMap size:&n %d&+Yx&n%d\n", zone->mapx, zone->mapy);
+    }
 
     sprintf(o_buf + strlen(o_buf), "&+YControlling town:&N %s\n",
-            town_name_list[zone->hometown]);
+      town_name_list[zone->hometown]);
     sprintbit(zone->hometown ? hometowns[zone->hometown - 1].flags : 0,
-              justice_flags, buf2);
+      justice_flags, buf2);
     sprintf(o_buf + strlen(o_buf), "&+YJustice:&N %s\n", buf2);
     sprintbit(zone->flags, zone_bits, buf);
-    sprintf(o_buf + strlen(o_buf),
-            "&+YZone flags:&N %s\n", buf);
-    
+    sprintf(o_buf + strlen(o_buf), "&+YZone flags:&N %s\n", buf);
+
     struct zone_info zinfo;
     if(get_zone_info(zone->number, &zinfo))
     {
       string buff;
-      
-      sprintf(o_buf + strlen(o_buf),
-              "\n&+GZone Info\n");
-      
-      sprintf(o_buf + strlen(o_buf),
-              "&+gTask zone: &+G%s  &+gQuest zone:  &+G%s  &+gTrophy zone:  &+G%s\n",
-              (zinfo.task_zone ? "YES" : "NO"),
-              (zinfo.quest_zone ? "YES" : "NO"),
-              (zinfo.trophy_zone ? "YES" : "NO"));
-      
+
+      sprintf(o_buf + strlen(o_buf), "\n&+GZone Info\n");
+
+      sprintf(o_buf + strlen(o_buf), "&+gTask zone: &+G%s  &+gQuest zone:  &+G%s  &+gTrophy zone:  &+G%s\n",
+        (zinfo.task_zone ? "YES" : "NO"), (zinfo.quest_zone ? "YES" : "NO"), (zinfo.trophy_zone ? "YES" : "NO"));
+
       if(zinfo.epic_type)
       {
         if(zinfo.epic_level)
         {
-          sprintf(o_buf + strlen(o_buf),
-                  "&+gGrants epic level: &+G%d\n", zinfo.epic_level);          
+          sprintf(o_buf + strlen(o_buf), "&+gGrants epic level: &+G%d\n", zinfo.epic_level);
         }
-        
-        sprintf(o_buf + strlen(o_buf),
-                "&+gRarity: &+G%1.3f  ", zinfo.frequency_mod);
-        
-        sprintf(o_buf + strlen(o_buf),
-                "&+gZone frequency multiplier: &+G%1.3f\n", zinfo.zone_freq_mod);
-        
-        sprintf(o_buf + strlen(o_buf),
-                "&+gEpic value: &+G%d  &+gSuggested group size: &+G%d\n", zinfo.epic_payout, zinfo.suggested_group_size);
-        
-        sprintf(o_buf + strlen(o_buf),
-                "&+gEpic stone(s):\n");
-        
-        for(P_obj tobj = object_list; tobj; tobj = tobj->next)
+
+        sprintf(o_buf + strlen(o_buf), "&+gRarity: &+G%1.3f  ", zinfo.frequency_mod);
+
+        sprintf(o_buf + strlen(o_buf), "&+gZone frequency multiplier: &+G%1.3f\n", zinfo.zone_freq_mod);
+
+        sprintf(o_buf + strlen(o_buf), "&+gEpic value: &+G%d  &+gSuggested group size: &+G%d\n",
+          zinfo.epic_payout, zinfo.suggested_group_size);
+
+        sprintf(o_buf + strlen(o_buf), "&+gEpic stone(s):\n");
+
+        for( P_obj tobj = object_list; tobj; tobj = tobj->next )
         {
-          if(obj_zone_id(tobj) != zone_id)
+          if( obj_zone_id(tobj) != zone_id )
+          {
             continue;
-          
+          }
+
           int obj_vnum = obj_index[tobj->R_num].virtual_number;
 
-          if(obj_vnum != EPIC_SMALL_STONE &&
-              obj_vnum != EPIC_LARGE_STONE &&
-              obj_vnum != EPIC_MONOLITH)
+          if( obj_vnum != EPIC_SMALL_STONE && obj_vnum != EPIC_LARGE_STONE && obj_vnum != EPIC_MONOLITH )
+          {
             continue;
-          
+          }
+
           int obj_room_vnum = world[obj_room_id(tobj)].number;
-          
-          if(obj_room_vnum < 0)
+          if( obj_room_vnum < 0 )
+          {
             continue;
-          
-          sprintf(o_buf + strlen(o_buf),
-                  " %s &nin &+W[&n%d&+W]\n",
-                  tobj->short_description,
-                  obj_room_vnum);
-        }        
+          }
+          sprintf(o_buf + strlen(o_buf), " %s &nin &+W[&n%d&+W]\n", tobj->short_description, obj_room_vnum);
+        }
       }
     }
-        
     sprintf(o_buf + strlen(o_buf), "\n&+YExits from this zone:\n", buf);
 
     int exits_shown = 0;
-    for (i3 = 0, i = zone->real_bottom;
-         (i != NOWHERE) && (i <= zone->real_top) && (exits_shown < 1000); i++)
+    for( i3 = 0, i = zone->real_bottom; (i != NOWHERE && i <= zone->real_top && exits_shown < 1000); i++)
     {
-      for (i2 = 0; i2 < NUM_EXITS; i2++)
+      for( i2 = 0; i2 < NUM_EXITS; i2++ )
       {
-        if(world[i].dir_option[i2])
+        if( world[i].dir_option[i2] )
         {
-          if((world[i].dir_option[i2]->to_room == NOWHERE) ||
-              (world[world[i].dir_option[i2]->to_room].zone !=
-               world[i].zone))
+          if( (world[i].dir_option[i2]->to_room == NOWHERE)
+            || (world[world[i].dir_option[i2]->to_room].zone != world[i].zone) )
           {
-            if(!i3)
+            if( !i3 )
             {
               i3 = 1;
             }
-            
-            if(world[i].dir_option[i2]->to_room == NOWHERE)
+            if( world[i].dir_option[i2]->to_room == NOWHERE )
             {
-              sprintf(o_buf + strlen(o_buf),
-                      " &+Y[&n%5d&+Y]&n &+R%-5s&n to &+WNOWHERE\n",
-                      world[i].number, dirs[i2]);
+              sprintf(o_buf + strlen(o_buf), " &+Y[&n%5d&+Y]&n &+R%-5s&n to &+WNOWHERE\n", world[i].number, dirs[i2]);
               exits_shown++;
             }
             else
             {
-              sprintf(o_buf + strlen(o_buf),
-                      " &+Y[&n%5d&+Y]&n &+R%-5s&n to &+Y[&+R%3d&n:&+C%5d&+Y]&n %s\n",
-                      world[i].number, dirs[i2],
-                      zone_table[world[world[i].dir_option[i2]->to_room].zone].number,
-                      world[world[i].dir_option[i2]->to_room].number,
-                      world[world[i].dir_option[i2]->to_room].name);
+              sprintf(o_buf + strlen(o_buf), " &+Y[&n%5d&+Y]&n &+R%-5s&n to &+Y[&+R%3d&n:&+C%5d&+Y]&n %s\n",
+                world[i].number, dirs[i2], zone_table[world[world[i].dir_option[i2]->to_room].zone].number,
+                world[world[i].dir_option[i2]->to_room].number, world[world[i].dir_option[i2]->to_room].name);
               exits_shown++;
             }
           }
@@ -1924,15 +1894,12 @@ void do_stat(P_char ch, char *argument, int cmd)
     {
       strcat(o_buf, "&+RNONE!&n\n");
     }
-    
     if(exits_shown >= 1000)
     {
       strcat(o_buf, " (and many more)\n");
-    }      
-      
+    }
     page_string(ch->desc, o_buf, 1);
     return;
-
     /* stat all zones, for exits */
   }
   else if((*arg1 == 'w') || (*arg1 == 'W'))

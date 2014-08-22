@@ -4275,6 +4275,7 @@ int real_zone0(const int virt)
 #if DB_NOTIFY
       logit(LOG_DEBUG, "real_zone0: Zone %d not in database", virt);
 #endif
+      debug( "real_zone0: Zone %d not in database", virt);
       return (0);
     }
     if ((zone_table + mid)->number > virt)

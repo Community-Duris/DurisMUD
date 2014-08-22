@@ -151,7 +151,9 @@ struct zone_random_data {
   int races[10];
   int proc_spells[3][2];
 } zones_random_data[MAX_ZONES_RANDOM_DATA] = {
-  {1, {RACE_ANGEL, RACE_DEVIL, }, {{6, SPELL_STONE_SKIN}}},
+// Please keep this in numerical order by zone #.  It's much easier to search that way.
+// Zone 1 not found.. If this is supposed to be Heaven, Heaven is zone 0 and that's a no-go.
+//  {1, {RACE_ANGEL, RACE_DEVIL, 0}, {{6, SPELL_STONE_SKIN}}},
   {14, {RACE_GOBLIN, RACE_HUMANOID, RACE_HALFORC, RACE_ORC, RACE_LYCANTH, 0}, {{6, SPELL_STONE_SKIN}}},
   {18, {RACE_TROLL, RACE_OGRE, RACE_MINOTAUR, 0}, {{6, SPELL_STONE_SKIN}}},
   {20, {RACE_FAERIE, RACE_HUMAN, RACE_GREY, 0}, {{6, SPELL_STONE_SKIN}}},
@@ -162,30 +164,29 @@ struct zone_random_data {
   {40, {RACE_ORC, RACE_HALFORC, RACE_GOBLIN, RACE_REPTILE, 0}, {{6, SPELL_STONE_SKIN}}},
   {50, {RACE_GOLEM, RACE_WIGHT, RACE_REVENANT, RACE_DUERGAR, RACE_PHANTOM, RACE_TROLL, 0}, {{6, SPELL_STONE_SKIN}}},
   {53, {RACE_CENTAUR, RACE_GREY, 0}, {{6, SPELL_STONE_SKIN}}},
-  // Tharnadia
   {60, {RACE_HUMAN, RACE_HALFLING, RACE_BARBARIAN, RACE_HALFELF, RACE_MOUNTAIN, RACE_GNOME, 0}, {{5, SPELL_BLESS}}},
-  {73, {RACE_MINOTAUR, RACE_DROW, RACE_THRIKREEN, RACE_GITHYANKI, RACE_GITHZERAI, RACE_BEHOLDER, 0}, {{6, SPELL_STONE_SKIN}}},
-  {80, {RACE_GREY, RACE_CENTAUR, RACE_HALFELF, 0}, {{6, SPELL_STONE_SKIN}}},
   {68, {RACE_DRAGON, RACE_DRAGONKIN, 0}, {{6, SPELL_STONE_SKIN}}},
+  {73, {RACE_MINOTAUR, RACE_DROW, RACE_THRIKREEN, RACE_GITHYANKI, RACE_GITHZERAI, RACE_BEHOLDER, 0}, {{6, SPELL_STONE_SKIN}}},
+// Zone 80 not found.
+//  {80, {RACE_GREY, RACE_CENTAUR, RACE_HALFELF, 0}, {{6, SPELL_STONE_SKIN}}},
   {91, {RACE_DEVIL, RACE_ANGEL, RACE_RAKSHASA, RACE_SGIANT, RACE_DEMON, RACE_SHADE, RACE_ILLITHID,0 }, {{6, SPELL_STONE_SKIN}}},
   {93, {RACE_FAERIE, RACE_DROW, RACE_GREY, RACE_HARPY, RACE_RAKSHASA, RACE_GITHYANKI, RACE_GITHZERAI, 0}, {{6, SPELL_STONE_SKIN}}},
   {94, {RACE_ORC, RACE_HALFORC, RACE_GIANT, RACE_HUMAN, RACE_MINOTAUR, 0}, {{6, SPELL_STONE_SKIN}}},
   {103, {RACE_ORC, RACE_HALFORC, 0}, {{6, SPELL_STONE_SKIN}}},
   {106, {RACE_ORC, RACE_HALFORC, RACE_GOBLIN, RACE_MINOTAUR, RACE_DUERGAR, 0}, {{6, SPELL_STONE_SKIN}}},
-  {113, {RACE_TROLL, RACE_OGRE, RACE_GIANT, RACE_RAKSHASA, RACE_HUMANOID, RACE_LYCANTH, 0}, {{6, SPELL_STONE_SKIN}}},
   {112, {RACE_ILLITHID, RACE_GITHYANKI, 0}, {{6, SPELL_STONE_SKIN}}},
-  {260, {RACE_TROLL, RACE_OGRE, 0}, {{6, SPELL_STONE_SKIN}}},
-  {140, {RACE_FAERIE, RACE_F_ELEMENTAL, RACE_A_ELEMENTAL, RACE_W_ELEMENTAL, RACE_E_ELEMENTAL, 0}, {{6, SPELL_STONE_SKIN}}},
+  {113, {RACE_TROLL, RACE_OGRE, RACE_GIANT, RACE_RAKSHASA, RACE_HUMANOID, RACE_LYCANTH, 0}, {{6, SPELL_STONE_SKIN}}},
   {130, {RACE_UNDEAD, RACE_GHOST, RACE_OGRE, RACE_DROW, RACE_VAMPIRE, RACE_PLICH, 0}, {{6, SPELL_STONE_SKIN}}},
+  {140, {RACE_FAERIE, RACE_F_ELEMENTAL, RACE_A_ELEMENTAL, RACE_W_ELEMENTAL, RACE_E_ELEMENTAL, 0}, {{6, SPELL_STONE_SKIN}}},
   {143, {RACE_UNDEAD, RACE_GHOST, RACE_VAMPIRE, RACE_GARGOYLE, RACE_PHANTOM, RACE_REVENANT, RACE_SHADE, 0}, {{6, SPELL_STONE_SKIN}}},
   {151, {RACE_DRAGON, RACE_DRAGONKIN, RACE_UNDEAD, RACE_DRACOLICH, RACE_GHOST, RACE_WIGHT, RACE_REVENANT, 0}, {{6, SPELL_STONE_SKIN}}},
   {152, {RACE_OGRE, RACE_TROLL, RACE_ORC, 0}, {{6, SPELL_STONE_SKIN}}},
   {159, {RACE_DRAGONKIN, RACE_DRAGON, 0}, {{6, SPELL_STONE_SKIN}}},
   {160, {RACE_HUMAN, RACE_HALFLING, 0}, {{6, SPELL_STONE_SKIN}}},
   {162, {RACE_DEVIL, RACE_FAERIE, RACE_ORC, RACE_GIANT, RACE_ILLITHID, 0}, {{6, SPELL_STONE_SKIN}}},
-  // woodseer
+  // Woodseer
   {165, {RACE_HALFLING, 0}, {{4, SPELL_BARKSKIN}, {8, SPELL_BLESS}}},
-  // khildarak
+  // Khildarak
   {170, {RACE_DUERGAR, 0}, {{4, SPELL_ARMOR}, {8, SPELL_STRENGTH}}},
   {196, {RACE_DRAGON, RACE_BEHOLDER, RACE_DRAGONKIN, 0}, {{6, SPELL_STONE_SKIN}}},
   {197, {RACE_GITHYANKI, RACE_GITHZERAI, RACE_ILLITHID, RACE_DEMON, RACE_BEHOLDER, 0}, {{6, SPELL_STONE_SKIN}}},
@@ -202,6 +203,7 @@ struct zone_random_data {
   {244, {RACE_A_ELEMENTAL, 0}, {{6, SPELL_STONE_SKIN}}},
   {252, {RACE_F_ELEMENTAL, 0}, {{6, SPELL_STONE_SKIN}}},
   {257, {RACE_DRAGON, RACE_DRAGONKIN, 0}, {{6, SPELL_STONE_SKIN}}},
+  {260, {RACE_TROLL, RACE_OGRE, 0}, {{6, SPELL_STONE_SKIN}}},
   {262, {RACE_HUMAN, RACE_HALFELF, RACE_GREY, RACE_MOUNTAIN, RACE_GNOME, 0}, {{6, SPELL_STONE_SKIN}}},
   {266, {RACE_DEMON, RACE_GITHYANKI, RACE_DRAGONKIN, RACE_BEHOLDER, 0}, {{6, SPELL_STONE_SKIN}}},
   {270, {RACE_HARPY, RACE_GIANT, RACE_MOUNTAIN, RACE_TROLL, 0}, {{6, SPELL_STONE_SKIN}}},
@@ -225,8 +227,8 @@ struct zone_random_data {
   {402, {RACE_HUMAN, RACE_HUMANOID, RACE_GOBLIN, RACE_HALFELF, RACE_HALFORC, 0}, {{6, SPELL_STONE_SKIN}}},
   {419, {RACE_BARBARIAN, RACE_ANIMAL, RACE_ARACHNID, 0}, {{6, SPELL_STONE_SKIN}}},
   {441, {RACE_GITHZERAI, 0}, {{6, SPELL_STONE_SKIN}}},
-  {450, {RACE_GREY, RACE_CENTAUR, RACE_HALFELF, 0}, {{6, SPELL_STONE_SKIN}}},
   {448, {RACE_ANGEL, RACE_DEVIL, RACE_DEMON, RACE_SGIANT, 0}, {{6, SPELL_STONE_SKIN}}},
+  {450, {RACE_GREY, RACE_CENTAUR, RACE_HALFELF, 0}, {{6, SPELL_STONE_SKIN}}},
   {480, {RACE_HUMAN, RACE_BARBARIAN, RACE_HALFORC, RACE_HUMANOID, RACE_HALFLING, 0}, {{6, SPELL_STONE_SKIN}}},
   {510, {RACE_DEMON, RACE_DEVIL, RACE_GITHYANKI, RACE_VAMPIRE, RACE_DRAGON, 0}, {{6, SPELL_STONE_SKIN}}},
   {662, {RACE_HUMAN, RACE_GNOME, RACE_HALFELF, 0}, {{6, SPELL_STONE_SKIN}}},
@@ -237,7 +239,7 @@ struct zone_random_data {
   {710, {RACE_HUMAN, RACE_ORC, RACE_HALFORC, RACE_MINOTAUR, RACE_HUMANOID, 0}, {{6, SPELL_STONE_SKIN}}},
   {756, {RACE_HUMAN, RACE_PLICH, RACE_BARBARIAN, RACE_PHANTOM, RACE_DEMON, RACE_UNDEAD, 0}, {{6, SPELL_STONE_SKIN}}},
   {758, {RACE_HUMAN, RACE_HARPY, RACE_MOUNTAIN, RACE_HALFELF, 0}, {{6, SPELL_STONE_SKIN}}},
-  // rift jungle
+  // Rift Valley Jungle
   {800, {RACE_GREY, RACE_HALFLING, RACE_SNAKE, RACE_CARNIVORE, RACE_HERBIVORE, RACE_FLYING_ANIMAL, RACE_ARACHNID, 0}, {{5, SPELL_BLESS}, {8, SPELL_STONE_SKIN}}},
   {824, {RACE_HUMAN, RACE_GREY, RACE_HALFELF, RACE_RAKSHASA, RACE_CENTAUR, RACE_MOUNTAIN, 0}, {{6, SPELL_STONE_SKIN}}},
   {856, {RACE_UNDEAD, RACE_GHOST, RACE_ORC, RACE_REVENANT, RACE_SHADE, 0}, {{6, SPELL_STONE_SKIN}}},
@@ -246,10 +248,12 @@ struct zone_random_data {
   {955, {RACE_MOUNTAIN,0 }, {{6, SPELL_STONE_SKIN}}},
   {960, {RACE_GIANT, RACE_SGIANT, RACE_TROLL, 0}, {{6, SPELL_STONE_SKIN}}},
   {964, {RACE_ILLITHID, RACE_DROW, 0}, {{6, SPELL_STONE_SKIN}}},
-  // Shady Grove
+  // Shady Grove (orc ht)
   {975, {RACE_ORC, RACE_HALFORC, 0}, {{5, SPELL_ARMOR}}},
   {987, {RACE_VAMPIRE, RACE_SHADE, RACE_PDKNIGHT, RACE_PLICH, RACE_PHANTOM, RACE_WIGHT, 0}, {{6, SPELL_STONE_SKIN}}},
-  {0}
+  // Tharnadia (human ht)
+  {1325, {RACE_HUMAN, 0}, {{4, SPELL_ARMOR}}},
+  {0, {0}, {{0, 0}} }
 };
 
 struct random_mob
@@ -289,7 +293,8 @@ void spawn_random_mapmob()
       create_random_mob(-1, 0);
     }
 }
-    
+
+// Really should list what themes are here.. but I don't know them.
 P_char create_random_mob(int theme, int mob_level)
 {
   P_char   random_mob;
@@ -308,122 +313,146 @@ P_char create_random_mob(int theme, int mob_level)
   struct zone_data *the_zone = 0;
   P_obj    o;
 
-  if(!mob_level)
+  if( !mob_level )
   {
     mob_level = number(10, 61);
   }
 
-  if (theme == -1)
+  if( theme == -1 )
+  {
     random_mob = read_mobile(1255, VIRTUAL);
+  }
   else
+  {
     random_mob = read_mobile(1256, VIRTUAL);
-
+  }
 
   if( !random_mob )
-    return FALSE;
+  {
+    return NULL;
+  }
 
   int zones_random_data_size = 0;
   for( int i = 0; zones_random_data[i].zone; i++ )
+  {
     zones_random_data_size++;
-  
+  }
+
+  // If, for some reason, there's no data in the zones_random_data array.
   if( zones_random_data_size < 1 )
   {
     extract_char(random_mob);
-    return FALSE;
+    return NULL;
   }
-  
+
   zone_idx = number(0, zones_random_data_size-1);
   zone_number = zones_random_data[zone_idx].zone;
   the_zone = &zone_table[real_zone0(zone_number)];
-  to_room = the_zone->real_bottom;        
-  
-  if (to_room <= 0) 
+  to_room = the_zone->real_bottom;
+
+  if( to_room <= 0 )
   {
     debug("Could not find starting room for zone %d for random mob", zone_number);
     extract_char(random_mob);
     return 0;
   }
-    
+
   char_to_room(random_mob, to_room, 0);
-  
+
   int races = 0;
   for( int i = 0; zones_random_data[zone_idx].races[i]; i++ )
+  {
     races++;
-  
+  }
   if( races < 1 )
   {
     extract_char(random_mob);
-    return FALSE;
-  }  
-  
-  race = zones_random_data[zone_idx].races[number(0, races-1)];  
-    
-  if (theme == 3)
-    if (number(0, 1))
+    return NULL;
+  }
+  if( theme == 3 )
+  {
+    if( number(0, 1) )
+    {
       race = RACE_MOUNTAIN;
+    }
     else
+    {
       race = RACE_DUERGAR;
+    }
+  }
+  else
+  {
+    race = zones_random_data[zone_idx].races[number(0, races-1)];
+  }
 
-  random_mob->player.race = race;
-
-  if (theme == 4)
+  if( theme == 4 )
+  {
     while (TRUE)
     {
-      do
-      {
-        race = number(1, LAST_RACE);
-      }
-      while (race > 27);
+      // Pick one of the first 27 races, or up to LAST_RACE if there are less than 27 races.
+      race = number( 1, MIN(27, LAST_RACE) );
 
-      random_mob->player.race = race;
+      // Stop looking when we find a good race.
       if (RACE_GOOD(random_mob))
+      {
         break;
+      }
     }
-  if (theme == 5)
+  }
+  else if (theme == 5)
+  {
     while (TRUE)
     {
-      do
+      race = number( 1, MIN(27, LAST_RACE) );
+
+      // If racewar == EVIL, then racewar != UNDEAD.
+      if( RACE_EVIL(random_mob) )
       {
-        race = number(1, LAST_RACE);
-      }
-      while (race > 27);
-
-      random_mob->player.race = race;
-      if (RACE_EVIL(random_mob) && !RACE_PUNDEAD(random_mob))
         break;
+      }
     }
-
-  if (theme == 6)
+  }
+  else if( theme == 6 )
+  {
     while (TRUE)
     {
-      do
-      {
-        race = number(1, LAST_RACE);
-      }
-      while (race > 27);
+      race = number( 1, MIN(27, LAST_RACE) );
 
-      random_mob->player.race = race;
-      if (RACE_PUNDEAD(random_mob))
+      if( RACE_PUNDEAD(random_mob) )
+      {
         break;
+      }
     }
-  if (theme == 7)
+  }
+  else if (theme == 7)
+  {
     if (number(0, 1))
+    {
       race = RACE_DRAGONKIN;
+    }
     else
+    {
       race = RACE_DRAGON;
-
+    }
+  }
   random_mob->player.race = race;
 
   //find a class for it!
-  i = 0;
-  do
+  // adding this counter to prevent an infinite loop if every column in class_table[race] == 5 | chage by Torgal
+  // Doing this differently.. gonna start at random class, and walk around the class_table, and if we come back to it stop.
+  i = class_idx = number(1, CLASS_COUNT);
+  while( class_table[race][class_idx] == 5 )
   {
-    class_idx = number(1, CLASS_COUNT);
-    i++; /* adding this counter to prevent an infinite loop if every 
-column in class_table[race] == 5 | chage by Torgal */
+    // Increment index or go to 1 at CLASS_COUNT (skip CLASS_NONE == 0).
+    class_idx = (class_idx == CLASS_COUNT) ? 1 : (class_idx + 1);
+
+    // If we've gone around all the classes..
+    if( i == class_idx )
+    {
+      return NULL;
+    }
   }
-  while (class_table[race][class_idx] == 5 && i <20);
-  
+  // Convert class from a number to a bit.
   random_mob->player.m_class = 1 << (class_idx - 1);
 
   random_mob->specials.alignment =
@@ -433,32 +462,44 @@ column in class_table[race] == 5 | chage by Torgal */
   // find a prefix
   prefix = number(1, 35);
   //set long desc
-  for (i = 0; race_names_table[race].ansi[i]; i++)
+  for( i = 0; race_names_table[race].ansi[i]; i++ )
   {
     if (i && race_names_table[race].ansi[i - 1] != '+')
+    {
       race_name[i] = tolower(race_names_table[race].ansi[i]);
+    }
     else
+    {
       race_name[i] = race_names_table[race].ansi[i];
+    }
   }
   race_name[i] = 0;
 
   for (i = 0; class_names_table[class_idx].ansi[i]; i++)
   {
     if (i && class_names_table[class_idx].ansi[i - 1] != '+')
+    {
       class_name[i] = tolower(class_names_table[class_idx].ansi[i]);
+    }
     else
+    {
       class_name[i] = class_names_table[class_idx].ansi[i];
+    }
   }
   class_name[i] = 0;
 
-  if (theme == -1)
+  if( theme == -1 )
   {
-    if (number(0, 4) && IS_HUMANOID(random_mob))
+    if( number(0, 4) && IS_HUMANOID(random_mob) )
     {
-      if (get_name(temp_name))
+      if( get_name(temp_name) )
+      {
         random_mob->player.sex = SEX_MALE;
+      }
       else
+      {
         random_mob->player.sex = SEX_FEMALE;
+      }
       random_mob->only.npc->str_mask |= STRUNG_DESC1;
       sprintf(t_buf, "&+W%s&+w the&n %s %s &+Wfrom %s&n.", temp_name,
               race_name, class_name, the_zone->name);
@@ -515,13 +556,12 @@ column in class_table[race] == 5 | chage by Torgal */
     random_mob->player.name = str_dup(t_buf);
   }
 
-//ok let's set some lvls and other attribs of the mob!
+  //ok let's set some lvls and other attribs of the mob!
   //level
-  if (!mob_level)
-    level = number(30, 61);
-  else
-    level = mob_level;
-  random_mob->player.level = BOUNDED(1, level, 61);
+  // Simplified this
+  level = (mob_level>0) ? mob_level : number(30, 61);
+
+  random_mob->player.level = MIN(level, 61);
   //hit, dam
   //2k - 30k
   random_mob->points.base_hitroll = random_mob->points.hitroll = level;
@@ -532,13 +572,10 @@ column in class_table[race] == 5 | chage by Torgal */
 
   if (GET_CLASS(random_mob, CLASS_MONK))
   {
-    random_mob->points.damnodice = (int) (random_mob->points.damnodice / 1.5);
-    random_mob->points.damsizedice =
-      (int) (random_mob->points.damsizedice / 1.5);
+    MonkSetSpecialDie(random_mob);
   }
 //hps
-  GET_MAX_HIT(random_mob) = GET_HIT(random_mob) =
-    random_mob->points.base_hit =
+  GET_MAX_HIT(random_mob) = GET_HIT(random_mob) = random_mob->points.base_hit =
     (int) (((level * level * level) / 12 + number(0, 89)) / 4);
 
 //let's set some cash on it!
@@ -548,7 +585,8 @@ column in class_table[race] == 5 | chage by Torgal */
 //  GET_COPPER(random_mob) = number(0, 99);
 
   //set right size!
-  switch (GET_RACE(random_mob))
+  // Why you do GET_RACE here instead of just race is beyond me, but ok.
+  switch( GET_RACE(random_mob) )
   {
   case RACE_NONE:
   case RACE_HUMAN:
@@ -670,7 +708,6 @@ column in class_table[race] == 5 | chage by Torgal */
   if(GET_LEVEL(random_mob) >= 56)
   {
     SET_BIT(random_mob->specials.affected_by4, AFF4_DETECT_ILLUSION);
-    
   }
 
   if(GET_LEVEL(random_mob) >= 50)
@@ -681,12 +718,12 @@ column in class_table[race] == 5 | chage by Torgal */
   }
 
   //give the mob 1-3 random items!
-  if (theme == -1 || 0 == number(0, 1))
+  if( theme == -1 || 0 == number(0, 1) )
   {
     o = create_random_eq_new(random_mob, random_mob, -1, -1);
     obj_to_char(o, random_mob);
 
-    while (!number(0, 2))
+    while( !number(0, 2) )
     {
       o = create_random_eq_new(random_mob, random_mob, -1, -1);
       obj_to_char(o, random_mob);
@@ -695,19 +732,23 @@ column in class_table[race] == 5 | chage by Torgal */
   }
 
   if (theme == -1)
+  {
     if (!find_mob_map_room(random_mob))
     {
       extract_char(random_mob);
       return 0;
     }
+  }
 
-  if (!(theme == -1))
+  if( theme != -1)
+  {
     SET_BIT(random_mob->only.npc->aggro_flags, AGGR_ALL);
+  }
   else
-    debug("Created level(%d): %s in %s (%d)", GET_LEVEL(random_mob),
-      random_mob->player.long_descr,
-      world[random_mob->in_room].name,
-      world[random_mob->in_room].number);
+  {
+    debug("Created level(%d): %s in %s (%d)", GET_LEVEL(random_mob), random_mob->player.long_descr,
+      world[random_mob->in_room].name, world[random_mob->in_room].number);
+  }
 
   GET_HOME(random_mob) = GET_BIRTHPLACE(random_mob) =
     GET_ORIG_BIRTHPLACE(random_mob) = world[random_mob->in_room].number;

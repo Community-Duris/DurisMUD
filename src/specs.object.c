@@ -401,6 +401,7 @@ int artifact_biofeedback(P_obj obj, P_char ch, int cmd, char *argument)
 
 /* I have horrbly twisted this function to be called only from
    equip_char, if passed cmd == -1 it activates stone -Zod*/
+// This works just fine but I don't see any reference to -1 in the code anywhere?
 int artifact_stone(P_obj obj, P_char ch, int cmd, char *argument)
 {
   char    *arg;
@@ -425,6 +426,10 @@ int artifact_stone(P_obj obj, P_char ch, int cmd, char *argument)
     {
       return FALSE;
     }
+  }
+  else
+  {
+    return FALSE;
   }
 
   curr_time = time(NULL);
@@ -11961,7 +11966,6 @@ int mrinlor_whip(P_obj obj, P_char ch, int cmd, char *arg)
 int khildarak_warhammer(P_obj obj, P_char ch, int cmd, char *arg)
 {
   P_char   tmp_ch, vict;
-  int      dam = cmd / 1000;
 
   if( cmd == CMD_SET_PERIODIC )
   {
@@ -11974,7 +11978,7 @@ int khildarak_warhammer(P_obj obj, P_char ch, int cmd, char *arg)
     return FALSE;
   }
 
-  if( !dam || !OBJ_WORN(obj) || !(ch = obj->loc.wearing) || cmd != CMD_PERIODIC )
+  if( !OBJ_WORN(obj) || !(ch = obj->loc.wearing) || cmd != CMD_PERIODIC )
   {
     return FALSE;
   }
@@ -12872,12 +12876,15 @@ void event_random_set_proc(P_char ch, P_char victim, P_obj obj, void* data)
   struct affected_type *afp, *afpp = rdata->af;
   char buffer[256];
 
-  for (afp = ch->affected; afp; afp = afp->next)
-    if (afp == afpp) {
-      affect_remove(ch, afp);
+  for( afp = ch->affected; afp; afp = afp->next )
+  {
+    if( afp == afpp )
+    {
       sprintf(buffer, "Spirits of %s no longer support you.\n", rdata->zone_name);
       send_to_char(buffer, ch);
+      affect_remove(ch, afp);
     }
+  }
 }
 
 extern struct zone_random_data {
@@ -12895,44 +12902,49 @@ void apply_zone_spell(P_char ch, int count, const char *zone_name, P_obj obj, in
   int message = SETMSG_NONE;
   char buffer[512];
 
-  switch (spell) {
+  switch (spell)
+  {
     case SPELL_STONE_SKIN:
-      if (!has_skin_spell(ch) &&
-          obj->timer[0] + get_property("timer.stoneskin.generic", 60) < time(NULL)) {
+      if( !has_skin_spell(ch)
+        && obj->timer[0] + get_property("timer.stoneskin.generic", 60) < time(NULL) )
+      {
         spell_stone_skin(count * 5, ch, 0, 0, ch, 0);
         obj->timer[0] = time(NULL);
         message = SETMSG_PROTECT;
       }
       break;
     case SPELL_BARKSKIN:
-      if (!affected_by_spell(ch, SPELL_BARKSKIN)) {
+      if( !affected_by_spell(ch, SPELL_BARKSKIN) )
+      {
         spell_barkskin(count * 5, ch, 0, 0, ch, 0);
         message = SETMSG_PROTECT;
       }
       break;
     case SPELL_ARMOR:
-      if (!affected_by_spell(ch, SPELL_ARMOR)) {
+      if( !affected_by_spell(ch, SPELL_ARMOR) )
+      {
         spell_armor(MIN(56, count * 10), ch, 0, 0, ch, 0);
         message = SETMSG_PROTECT;
       }
       break;
     case SPELL_STRENGTH:
     case SPELL_BLESS:
-      if (!affected_by_spell(ch, spell)) {
+      if( !affected_by_spell(ch, spell) )
+      {
         (skills[spell].spell_pointer)(MIN(56, count * 10), ch, 0, 0, ch, 0);
         message = SETMSG_STRENGTH;
       }
       break;
   }
 
-  if (message == SETMSG_PROTECT) {
-    sprintf(buffer, "The spirits of %s grant you their protection.\n",
-        zone_name);
+  if( message == SETMSG_PROTECT )
+  {
+    sprintf(buffer, "The spirits of %s grant you their protection.\n", zone_name);
     send_to_char(buffer, ch);
   }
-  if (message == SETMSG_STRENGTH) {
-    sprintf(buffer, "The spirits of %s grant you their strength.\n",
-        zone_name);
+  else if( message == SETMSG_STRENGTH )
+  {
+    sprintf(buffer, "The spirits of %s grant you their strength.\n", zone_name);
     send_to_char(buffer, ch);
   }
 }
@@ -12941,34 +12953,52 @@ void apply_zone_spell(P_char ch, int count, const char *zone_name, P_obj obj, in
 #undef SETMSG_PROTECT
 #undef SETMSG_STRENGTH
 
+// Random zone eq spellups (depends on # items worn == count).
 void check_zone_spells(P_char ch, P_obj obj, int count, const char *zone_name)
 {
   int zone_room, zone_idx;
   int i;
 
-  for (i = 0; i <= top_of_zone_table; i++) {
-    if (strstr(zone_name, zone_table[i].name))
+  // Find the matching zone for the random eq.
+  for( i = 0; i <= top_of_zone_table; i++ )
+  {
+    if( strstr(zone_name, zone_table[i].name) )
       break;
   }
-
+  // If zone not found, return.
   if (i == top_of_zone_table)
+  {
     return;
+  }
 
+  // Find the appropriate random_data for the zone.
+  // This calculates the starting # for the zone as in the DE.
   zone_room = world[zone_table[i].real_bottom].number/100;
-  for (i = 0; zones_random_data[i].zone; i++)
-    if (zones_random_data[i].zone == zone_room) {
+  // Walk the list of random eq proc'ing zones.
+  for( i = 0; zones_random_data[i].zone; i++ )
+  {
+    if( zones_random_data[i].zone == zone_room )
+    {
       zone_idx = i;
       break;
     }
-
-  if (zones_random_data[i].zone == 0)
+  }
+  // If random_data not found, return.
+  if( zones_random_data[i].zone == 0 )
+  {
     return;
+  }
 
-  for (i = 0; i < 3; i++) {
-    if (zones_random_data[zone_idx].proc_spells[i][0] &&
+  // For the three possible spellups,
+  for( i = 0; i < 3; i++ )
+  {
+    // If the required num of eq is met for spell
+    if( zones_random_data[zone_idx].proc_spells[i][0] &&
         zones_random_data[zone_idx].proc_spells[i][0] <= count)
-      apply_zone_spell(ch, count, zone_name, obj,
-          zones_random_data[zone_idx].proc_spells[i][1]);
+    {
+      // cast the spell on ch.
+      apply_zone_spell(ch, count, zone_name, obj, zones_random_data[zone_idx].proc_spells[i][1]);
+    }
   }
 }
 
@@ -12979,44 +13009,59 @@ int random_set(P_char ch, P_obj obj, int count, int cmd, char *arg)
   struct random_set_wear_off rdata;
   P_nevent e;
 
-  if (cmd == CMD_SET_PERIODIC)
+  if( cmd == CMD_SET_PERIODIC )
+  {
     return TRUE;
+  }
 
-  if (cmd)
+  if( cmd != CMD_PERIODIC )
+  {
     return FALSE;
+  }
 
-  if (count < 3)
+  // Why do we return true here?
+  if( count < 3 )
+  {
     return TRUE;
+  }
 
+  // Look for a random item proc..
   afp = get_spell_from_char(ch, TAG_SETPROC);
-
-  if (!afp) {
+  if( !afp )
+  {
     memset(&af, 0, sizeof(af));
     af.type = TAG_SETPROC;
     af.flags = AFFTYPE_NOSAVE | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
     af.location = APPLY_HIT;
+    af.duration = 1;
     afp = affect_to_char(ch, &af);
   }
 
   zone_name = strstr(obj->short_description, " &+rfrom") + 9;
 
+  // This right here creates the argument between sets of two different zones being on one char.
   disarm_char_events(ch, event_random_set_proc);
   rdata.af = afp;
   strcpy(rdata.zone_name, zone_name);
+  // Event to remove rdata.af from ch. PULSE_MOBILE + 5 = 35 pulses = 9 sec??
   add_event(event_random_set_proc, PULSE_MOBILE + 5, ch, 0, 0, 0, &rdata, sizeof(rdata));
-
-  afp->duration = 1;
 
   check_zone_spells(ch, obj, count, zone_name);
 
-  if (afp->modifier > (count - 2) * 5) {
+  if( afp->modifier > (count - 2) * 5 )
+  {
     sprintf(buffer, "You feel some of the %s's spirits attention leave you.\n", zone_name);
     send_to_char(buffer, ch);
-  } else if (afp->modifier < (count - 2) * 5) {
+  }
+  else if( afp->modifier < (count - 2) * 5 )
+  {
     sprintf(buffer, "You feel invigorated as the spirits of %s bless you.\n", zone_name);
     send_to_char(buffer, ch);
-  } else
+  }
+  else
+  {
     return TRUE;
+  }
 
   afp->modifier = (count - 2) * 5;
   add_event(event_balance_affects, 0, ch, 0, 0, 0, 0, 0);
@@ -13035,86 +13080,152 @@ struct set_data {
 
 int set_proc(P_obj obj, P_char ch, int cmd, char *arg)
 {
-//return FALSE; -muhahaha drannak
   P_obj tobj, included[MAX_WEAR], cobj = obj;
   int s, i, j, count = 0;
-  unsigned int flag = cmd ? ITEM2_NOPROC : ITEM2_NOTIMER;
+  unsigned int flag = (cmd != CMD_PERIODIC) ? ITEM2_NOPROC : ITEM2_NOTIMER;
   char *c, *d;
 
-  for (s = 0; sets[s].func; s++) {
-    for (i = 0; sets[s].items[i]; i++)
-      if (sets[s].items[i] == obj_index[obj->R_num].virtual_number)
+  // Look through the sets for the right vnum.
+  for( s = 0; sets[s].func; s++ )
+  {
+    for( i = 0; sets[s].items[i]; i++ )
+    {
+      // We found a set that obj is in.
+      if( sets[s].items[i] == obj_index[obj->R_num].virtual_number )
+      {
         break;
-    if (sets[s].items[i])
+      }
+    }
+    if( sets[s].items[i] )
+    {
       break;
+    }
   }
 
-  if (sets[s].items[i] == 0)
+  // If we didn't find a set that obj was in
+  if( sets[s].items[i] == 0 )
+  {
     return FALSE;
+  }
 
-  if (cmd == CMD_SET_PERIODIC)
+  // Set the periodic timer if appropriate.
+  if( cmd == CMD_SET_PERIODIC )
+  {
     return sets[s].func(ch, obj, count, cmd, arg);
+  }
 
-  if (sets[s].func == random_set) {
+  // Check random_set objs for the "<item> &+rfrom <zone>".
+  if( sets[s].func == random_set )
+  {
     c = strstr(obj->short_description, " &+rfrom ");
-    if (!c) {
+    if( !c )
+    {
+      // If not, remove the periodic timer.
       disarm_obj_events(obj, event_object_proc);
       return FALSE;
     }
   }
 
-  if (!OBJ_WORN(obj))
+  // No proc if not worn.
+  if( !OBJ_WORN(obj) )
+  {
     return FALSE;
+  }
 
-  if (cmd == 0)
-    ch = obj->loc.wearing;
-
-  if (IS_SET(obj->extra2_flags, flag)) {
+  if( IS_SET(obj->extra2_flags, flag) )
+  {
     REMOVE_BIT(obj->extra2_flags, flag);
     return FALSE;
   }
 
+  if( cmd == CMD_PERIODIC )
+  {
+    ch = obj->loc.wearing;
+  }
+
   memset(included, 0, sizeof(included));
 
+  // Walk through worn equipment.
   for (i = 0; i < MAX_WEAR; i++)
   {
     tobj = ch->equipment[i];
 
-    if (i == WEAR_ATTACH_BELT_3 || i == WEAR_ATTACH_BELT_2 ||
-        i == WEAR_ATTACH_BELT_1 || i == WEAR_BACK || !tobj)
+    // Skip belted & back?  Shouldn't we allow prime belt slot? and skip empty slots.
+    //   Allowing prime belt slot and on back.. 8/21/2014
+    if( i == WEAR_ATTACH_BELT_3 || i == WEAR_ATTACH_BELT_2 || !tobj )
+//      || i == WEAR_ATTACH_BELT_1 || i == WEAR_BACK || !tobj )
+    {
       continue;
-
-    for (j = 0; sets[s].items[j]; j++)
-      if (sets[s].items[j] == obj_index[tobj->R_num].virtual_number)
-        break;
-
-    if (!sets[s].items[j])
-      continue;
-
-    if (sets[s].func == random_set) {
-      d = strstr(tobj->short_description, " &+rfrom ");
-      if (!d || strcmp(c, d) != 0)
-        continue;
-    } else {
-      for (j = 0; included[j]; j++)
-        if (included[j]->R_num == tobj->R_num)
-          break;
-      if (included[j])
-        continue;
     }
-    if (tobj != obj)
+    // Walk through the current set..
+    for( j = 0; sets[s].items[j]; j++ )
+    {
+      // If the set vnum matches
+      if( sets[s].items[j] == obj_index[tobj->R_num].virtual_number )
+      {
+        break;
+      }
+    }
+    // If we didn't find a match, continue.
+    if( !sets[s].items[j] )
+    {
+      continue;
+    }
+    // If we have a random item..
+    if( sets[s].func == random_set )
+    {
+      // If !zone or zones don't match.
+      d = strstr(tobj->short_description, " &+rfrom ");
+      if( !d || strcmp(c, d) != 0 )
+      {
+        continue;
+      }
+    }
+    else
+    {
+      // Walk the included list.
+      for( j = 0; included[j]; j++ )
+      {
+        if( included[j]->R_num == tobj->R_num )
+        {
+          break;
+        }
+      }
+      // Skip to next item if it's a duplicate vnum.
+      if( included[j] )
+      {
+        continue;
+      }
+    }
+    // Set the no proc flag.
+    if( tobj != obj )
+    {
       SET_BIT(tobj->extra2_flags, flag);
+    }
 
+    // Add tobj to the end of the list of included objects.
     included[j] = tobj;
-    if (cobj->timer[0] < tobj->timer[0])
+    // Save the object with the newest timer.
+    if( cobj->timer[0] < tobj->timer[0] )
+    {
       cobj = tobj;
+    }
+    // Increment the counter of items in set.
     count++;
   }
 
-  if (sets[s].func(ch, cobj, count, cmd, arg)) {
-    if (cmd)
-      for (i = 0; included[i]; i++)
+  // If the set's function returns true..
+  if( sets[s].func(ch, cobj, count, cmd, arg) )
+  {
+    // If we're not periodic..
+    if( cmd != CMD_PERIODIC )
+    {
+      // Remove the no proc flag from all items in set.
+      for( i = 0; included[i]; i++ )
+      {
         REMOVE_BIT(included[i]->extra2_flags, ITEM2_NOPROC);
+      }
+    }
     return TRUE;
   }
 

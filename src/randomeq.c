@@ -1363,90 +1363,82 @@ int random_eq_proc(P_obj obj, P_char ch, int cmd, char *argument)
   };
   int      chance = 0;
 
-  if (cmd == CMD_SET_PERIODIC)
+  if( cmd == CMD_SET_PERIODIC )
+  {
     return FALSE;
-
-  if (cmd == CMD_MELEE_HIT || cmd == CMD_GOTHIT || cmd == CMD_GOTNUKED)
-  {;
   }
-  else
+
+  if( !IS_ALIVE(ch) || !OBJ_WORN_BY(obj, ch) || (cmd != CMD_MELEE_HIT && cmd != CMD_GOTHIT && cmd != CMD_GOTNUKED) )
+  {
     return FALSE;
+  }
 
-  if (cmd == CMD_MELEE_HIT)
+  if( cmd == CMD_MELEE_HIT )
+  {
     chance = 25;
+  }
 
-  if (cmd == CMD_GOTHIT)
+  if( cmd == CMD_GOTHIT )
+  {
     chance = 100;
+  }
 
-  if (cmd == CMD_GOTNUKED)
+  if( cmd == CMD_GOTNUKED )
+  {
     chance = 50;
-
-  if (!ch)
-    return (FALSE);
-
-  if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
-    return (FALSE);
-
+  }
 
   kala = (P_char) arg;
 
-  if (!kala)
+  if( !kala )
+  {
     return FALSE;
+  }
 
   curr_time = time(NULL);
 //obj->value[6] = GET_VNUM(mob);
 //obj->value[7] = named_spells[1];
 
-
 //wizlog(56, "%d, %d, diff=%d" , obj->timer[0], curr_time,  (obj->timer[0] - curr_time)   );
 
-  if (obj->timer[0] + 15 <= curr_time)
+  if( obj->timer[0] + 15 <= curr_time )
   {
-    for (j = 0; wear_order[j] != -1; j++)
+    for( j = 0; wear_order[j] != -1; j++ )
     {
-      if (ch->equipment[wear_order[j]])
+      if( ch->equipment[wear_order[j]] )
       {
         t_obj = ch->equipment[wear_order[j]];
 
-        if (obj->value[6] == t_obj->value[6] && t_obj->value[7] != 0)
+        if( obj->value[6] == t_obj->value[6] && t_obj->value[7] != 0 )
+        {
           numNamed++;
-
+        }
       }
 
     }
 
 
-    if ((numNamed > 2 &&
-         IS_FIGHTING(ch) &&
-         !number(0, chance)) ||
-         (cmd == CMD_MELEE_HIT &&
-         obj->value[6] == 999 &&
-         IS_SET(obj->wear_flags, ITEM_WIELD) &&
-         !number(0, 10) &&
-         IS_FIGHTING(ch)))
+    if( IS_FIGHTING(ch) && ((numNamed > 2 && !number(0, chance))
+      || (cmd == CMD_MELEE_HIT && obj->value[6] == 999 && IS_SET(obj->wear_flags, ITEM_WIELD) && !number(0, 10))) )
     {
       kala = ch->specials.fighting;;
-      act
-        ("&+B$n's $q &+rpu&+Rls&+rat&+Res &+Lwith &+be&+Bn&+Wer&+Bg&+by &+Lfor a &+rmoment&+L...&N",
+      act("&+B$n's $q &+rpu&+Rls&+rat&+Res &+Lwith &+be&+Bn&+Wer&+Bg&+by &+Lfor a &+rmoment&+L...&N",
          TRUE, ch, obj, kala, TO_NOTVICT);
-      act
-        ("&+BYour $q &+rpu&+Rls&+rat&+Res &+Lwith &+be&+Bn&+Wer&+Bg&+by &+Lfor a &+rmoment&+L...&N",
+      act("&+BYour $q &+rpu&+Rls&+rat&+Res &+Lwith &+be&+Bn&+Wer&+Bg&+by &+Lfor a &+rmoment&+L...&N",
          TRUE, ch, obj, kala, TO_CHAR);
-      act
-        ("&+B$n's $q &+rpu&+Rls&+rat&+Res &+Lwith &+be&+Bn&+Wer&+Bg&+by &+Lfor a &+rmoment&+L...&N",
+      act("&+B$n's $q &+rpu&+Rls&+rat&+Res &+Lwith &+be&+Bn&+Wer&+Bg&+by &+Lfor a &+rmoment&+L...&N",
          TRUE, ch, obj, kala, TO_VICT);
       numNamed = obj->value[7];
       if (spells_data[numNamed].self_only)
+      {
         kala = ch;
+      }
 
       if (numNamed > 0)
       {
-        ((*skills[spells_data[numNamed].spell].spell_pointer) ((int) 50, ch,
-                                                               0,
-                                                               SPELL_TYPE_SPELL,
-                                                               kala, obj));
+        ((*skills[spells_data[numNamed].spell].spell_pointer) ((int) 50, ch, 0, SPELL_TYPE_SPELL, kala, obj));
         //wizlog(56, "%d", numNamed);
-        //wizlog(56, "SPell number:%d", spells_data[numNamed].spell);
+        //wizlog(56, "Spell number:%d", spells_data[numNamed].spell);
         //wizlog(56, "List number:%d", spells_data[numNamed].s_number);
         //wizlog(56, "self only:%d", spells_data[numNamed].self_only);
         obj->timer[0] = curr_time;

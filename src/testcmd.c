@@ -17,6 +17,11 @@ extern P_index mob_index;
 extern int count_classes( P_char mob );
 extern long new_exp_table[];
 extern const char *spells[];
+extern struct zone_random_data {
+  int zone;
+  int races[10];
+  int proc_spells[3][2];
+} zones_random_data[100];
 
 extern int get_mincircle( int spell );
 
@@ -374,6 +379,44 @@ void do_test(P_char ch, char *arg, int cmd)
       send_to_char( buff, ch );
       send_to_char( "' in your inventory to randomize.\n\r", ch );
     }
+  }
+  else if ( isname("randomzones", buff) )
+  {
+    int i, j;
+    char buf[MAX_STRING_LENGTH];
+    FILE *pf;
+
+    if( !(pf = fopen( "logs/log/randomzones", "w" )) )
+    {
+      send_to_char( "Couldn't open file. :(\n\r", ch );
+      return;
+    }
+    fprintf( pf, "Printing list of zones with their spells:\n" );
+    debug( "List of zones_random_data:" );
+    for( i = 0; i < 100; i++ )
+    {
+      if( zones_random_data[i].zone == 0 )
+      {
+        break;
+      }
+      debug( "%2d) %4d = %4d rb: %7d zone: '%s'.", i, zones_random_data[i].zone, zone_table[real_zone0(zones_random_data[i].zone)].number,
+        zone_table[real_zone0(zones_random_data[i].zone)].real_bottom, zone_table[real_zone0(zones_random_data[i].zone)].name );
+
+      fprintf(pf, "%2d) '%s'\n", i+1, strip_ansi(zone_table[real_zone0(zones_random_data[i].zone)].name).c_str() );
+      for( j = 0; j < 3; j++ )
+      {
+        if( zones_random_data[i].proc_spells[j][0] > 0 )
+        {
+          fprintf(pf, "  With %d pieces: Spell '%s'.\n", zones_random_data[i].proc_spells[j][0],
+            zones_random_data[i].proc_spells[j][1] == SPELL_STONE_SKIN ? "stone skin" :
+            zones_random_data[i].proc_spells[j][1] == SPELL_BLESS ? "bless" :
+            zones_random_data[i].proc_spells[j][1] == SPELL_STRENGTH ? "strength" :
+            zones_random_data[i].proc_spells[j][1] == SPELL_BARKSKIN ? "barkskin" :
+            zones_random_data[i].proc_spells[j][1] == SPELL_ARMOR ? "armor" : "unknown" );
+        }
+      }
+    }
+    return;
   }
   else if ( isname("clearepiczones", buff) )
   {
