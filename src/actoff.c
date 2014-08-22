@@ -10248,7 +10248,7 @@ void do_legsweep(P_char ch, char *arg, int cmd)
 
   if( IS_DESTROYING(ch) )
   {
-    send_to_char( "You can't tackle an object.\n", ch );
+    send_to_char( "You can't legsweep an object.\n", ch );
     return;
   }
 
@@ -10257,7 +10257,7 @@ void do_legsweep(P_char ch, char *arg, int cmd)
     vict = ParseTarget(ch, arg);
     if( !vict )
     {
-      send_to_char("Tackle who?\n", ch);
+      send_to_char("Legsweep who?\n", ch);
       return;
     }
   }
@@ -10342,7 +10342,7 @@ void do_legsweep(P_char ch, char *arg, int cmd)
     percent_chance *= .75;
   }
 
-  percent_chance = takedown_check(ch, vict, percent_chance, SKILL_LEGSWEEP, APPLY_ALL ^ FOOTING);
+  percent_chance = takedown_check(ch, vict, percent_chance, SKILL_LEGSWEEP, APPLY_ALL);
 
   if( percent_chance == TAKEDOWN_CANCELLED )
   {
