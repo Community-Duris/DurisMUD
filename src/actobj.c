@@ -6117,7 +6117,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
     }
 
     notch_skill(ch, SKILL_SALVAGE, 4);
-    if (objchance <= 5)
+    if( objchance <= 5 )
     {
       reciperoll *= .4;
     }
@@ -6130,23 +6130,29 @@ void do_salvage(P_char ch, char *argument, int cmd)
       reciperoll *= .8;
     }
 
-    if(scitools > 0)
+    if( scitools > 0 )
     {
       send_to_char("&+yYou make sure to utilize your &+cset of &+rLantan &+CScientific &+LTools &+yas you break apart your item...\r\n", ch);
-      reciperoll *= .5;
+      // (1-10000)/15 -> 0-667
+      reciperoll /= 15;
+      // (80-100+2-112+1-100) * 2 -> (83-312)*2 -> 166-624
       playerroll *= 2;
       vnum_from_inv(ch, 400227, 1);
     }
 
-    debug("do_salvage: player: '%s' reciperoll: %d playerroll: %d", J_NAME(ch), reciperoll, playerroll);
+    debug("do_salvage: player: '%s' - reciperoll: %d, playerroll: %d, scitools: %d.", J_NAME(ch), reciperoll, playerroll, scitools);
     /*** CREATE RECIPE ***/
-    if((reciperoll < playerroll))
+    if( reciperoll < playerroll )
     {
       int recipenumber = obj_index[temp->R_num].virtual_number;
 
       if( recipenumber == 1252 || recipenumber == 1253 || recipenumber == 1254 )
       {
         debug( "do_salvage: player: '%s' Not creating recipe for trash item %d.", J_NAME(ch), recipenumber );
+        if( scitools )
+        {
+          act("With your tools, you discover that $p can not be manufactured.", FALSE, ch, temp, 0, TO_CHAR);
+        }
       }
       else
       {
@@ -6155,7 +6161,9 @@ void do_salvage(P_char ch, char *argument, int cmd)
         strcpy(old_name, objrecipe->short_description);
         sprintf(buffer, "%s %s&n", old_name, temp->short_description);
         if( (objrecipe->str_mask & STRUNG_DESC2) && objrecipe->short_description )
+        {
           FREE(objrecipe->short_description);
+        }
         objrecipe->short_description = str_dup(buffer);
         objrecipe->str_mask |= STRUNG_DESC2;
 
