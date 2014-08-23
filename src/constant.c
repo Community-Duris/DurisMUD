@@ -101,22 +101,22 @@ const int allowed_secondary_classes[CLASS_COUNT + 1][5] = {
   {CLASS_DRUID, CLASS_BARD, CLASS_WARRIOR, CLASS_SHAMAN, -1}, /* Cle */
   {-1},                        	 		              /* Mon */
   {CLASS_CLERIC, -1},                             /* Dru */
-  {CLASS_CONJURER, CLASS_DRUID, CLASS_CLERIC, -1},/* Sha */
+  {CLASS_CONJURER, CLASS_DRUID, CLASS_CLERIC, CLASS_BLIGHTER, -1},/* Sha */
   {CLASS_CONJURER, -1},         		              /* Sor */
   {-1},                         		              /* Nec */
   {CLASS_SORCERER, CLASS_SHAMAN, CLASS_BARD, -1}, /* Con */
   {CLASS_BARD, CLASS_MERCENARY, -1},              /* Rog */
-  {-1},                       /* Assassin not currently in game      */
+  {-1},                             /* Assassin not currently in game      */
   {CLASS_ROGUE, CLASS_WARRIOR, -1},               /* Mer */
   {CLASS_SORCERER, CLASS_ROGUE, CLASS_ILLUSIONIST, CLASS_CONJURER, -1}, /* Bar */
-  {-1},    	             /* Thief not currently in game          */
-  {-1},                      /* Warlock not currently in game        */
+  {-1},    	                        /* Thief not currently in game          */
+  {-1},                             /* Warlock not currently in game        */
   {-1},                         		              /* MnF */
   {-1},                         		              /* Alc */
   {-1},                         		              /* Ber */
   {CLASS_SORCERER, CLASS_ROGUE, CLASS_PSIONICIST, -1}, /* Rea */
   {-1},                         		              /* Ilu */
-  {CLASS_CLERIC, CLASS_SHAMAN, -1},               /* Bli */
+  {CLASS_CLERIC, -1},                             /* Bli */
   {-1},                                  	        /* Dre */
   {CLASS_SORCERER, CLASS_SHAMAN, -1},             /* Eth */
   {-1},                                           /* Ave */
