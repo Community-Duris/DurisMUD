@@ -53,13 +53,13 @@ D 0 58960 3 1 100 0 0 0
 *     west exit from "A Repulsive Lair of Corpses" to
 *     "A Whirlpool Waterfall Base" - closed
 *
-D 0 58959 4 1 100 0 0 0
+D 0 58959 4 2 100 0 0 0
 *     up exit from "A Clogged Refuse Drain" to
-*     "A Repulsive Lair of Corpses" - closed
+*     "A Repulsive Lair of Corpses" - closed/locked
 *
-D 0 58960 5 1 100 0 0 0
+D 0 58960 5 2 100 0 0 0
 *     down exit from "A Repulsive Lair of Corpses" to
-*     "A Clogged Refuse Drain" - closed
+*     "A Clogged Refuse Drain" - closed/locked
 *
 D 0 58975 1 9 100 0 0 0
 *     east exit from "The Blackrock Gates of Kashtrakis" to
@@ -351,6 +351,7 @@ E 1 58806 1 3 100 0 0 0            *   a string of human teeth and beastial fang
 E 1 58805 3 16 100 0 0 0           *   a rusty battle-axe
 E 1 58805 3 17 100 0 0 0           *   a rusty battle-axe
 F 1 58829 1 58960 100 0 0 0        * Farkash the dire wolf (following)
+E 1 58854 1 3 100 0 0 0            *   A Key on a leather collar
 E 1 58807 39 16 100 0 0 0          *   a bloody claw
 E 1 58807 39 17 100 0 0 0          *   a bloody claw
 M 0 58805 1 58961 100 0 0 0        * Valicia the Nymph
