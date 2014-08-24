@@ -2588,11 +2588,13 @@ SPELL_ADD(CLASS_NONE, 1);
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                 spell_faerie_fire, "The outline of &+Mpurple flames &naround your body fades.");
   SPELL_ADD(CLASS_DRUID, 3);
+  SPELL_ADD(CLASS_BLIGHTER, 3);
   SPELL_ADD(CLASS_ETHERMANCER, 1);
 
   SPELL_CREATE("faerie fog", SPELL_FAERIE_FOG, PULSE_SPELLCAST * 2,
                 TAR_IGNORE | TAR_NOCOMBAT, spell_faerie_fog);
   SPELL_ADD(CLASS_DRUID, 3);
+  SPELL_ADD(CLASS_BLIGHTER, 3);
 //  SPELL_ADD(CLASS_RANGER, 6);
   SPELL_ADD(CLASS_ETHERMANCER, 3);
 
