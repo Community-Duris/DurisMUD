@@ -3338,18 +3338,16 @@ void reset_zone(int zone, int force_item_repop)
             ((obj_index[ZCMD.arg1].number < ZCMD.arg2 &&
               ZCMD.arg4 == 100) || force_item_repop))
         {
-          if (!(obj =
-                get_obj_in_list_num(ZCMD.arg1, world[ZCMD.arg3].contents)) ||
-              IS_SET(obj->wear_flags, ITEM_TAKE))
+          if( !(obj = get_obj_in_list_num(ZCMD.arg1, world[ZCMD.arg3].contents)) || IS_SET(obj->wear_flags, ITEM_TAKE) )
           {
-            obj = 0;
+            obj = NULL;
             if (ZCMD.arg4 > number(0, 99))
             {
               if( (timer = get_current_artifact_info(ZCMD.arg1, 0, NULL, NULL, NULL, NULL, FALSE, NULL)) )
               {
                 if( timer == -1 )
                 {
-                  get_current_artifact_info(temp, 0, NULL, &room, NULL, NULL, FALSE, &timer);
+                  get_current_artifact_info(ZCMD.arg1, 0, NULL, &room, NULL, NULL, FALSE, &timer);
                 }
                 else
                 {
@@ -3359,14 +3357,13 @@ void reset_zone(int zone, int force_item_repop)
                 }
               }
 
-              if (!(obj = read_object(ZCMD.arg1, REAL)))
+              if( !(obj = read_object(ZCMD.arg1, REAL)) )
               {
                 ZCMD.command = '!';
-                logit(LOG_DEBUG,
-                      "reset_zone(): (zone %d) obj %d [%d] not loadable",
-                      zone, ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
+                logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable",
+                  zone, ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
               }
-              if (obj)
+              if( obj )
               {
                 if( IS_ARTIFACT(obj)
                   && ( get_property("artifact.respawn", 0) == 0
@@ -3394,11 +3391,9 @@ void reset_zone(int zone, int force_item_repop)
         }
         else if (obj_index[ZCMD.arg1].number < ZCMD.arg2)
         {
-          logit(LOG_OBJ,
-                "O cmd: obj: %d to_room: %d, chance: %d, limit %d(%d)",
-                obj_index[ZCMD.arg1].virtual_number,
-                (ZCMD.arg3 >= 0) ? world[ZCMD.arg3].number : -2,
-                ZCMD.arg4, ZCMD.arg2, obj_index[ZCMD.arg1].number);
+          logit(LOG_OBJ, "O cmd: obj: %d to_room: %d, chance: %d, limit %d(%d)",
+            obj_index[ZCMD.arg1].virtual_number, (ZCMD.arg3 >= 0) ? world[ZCMD.arg3].number : -2,
+            ZCMD.arg4, ZCMD.arg2, obj_index[ZCMD.arg1].number);
           ZCMD.command = '!';   /* disable */
         }
         last_cmd = 0;
@@ -3439,7 +3434,7 @@ void reset_zone(int zone, int force_item_repop)
               {
                 if( IS_ARTIFACT(obj)
                   && ( get_property("artifact.respawn", 0) == 0
-                    || (get_property("artifact.respawn", 0) == 1 && force_item_repop != 2) ))
+                  || (get_property("artifact.respawn", 0) == 1 && force_item_repop != 2) ) )
                 {
                   extract_obj(obj, TRUE);
                   break;
@@ -3458,13 +3453,11 @@ void reset_zone(int zone, int force_item_repop)
             }
           }
         }
-        else if (obj_index[ZCMD.arg1].number < ZCMD.arg2)
+        else if( obj_index[ZCMD.arg1].number < ZCMD.arg2 )
         {
-          logit(LOG_OBJ,
-                "P cmd: obj: %d to_obj: %d, chance: %d, limit %d(%d)",
-                obj_index[ZCMD.arg1].virtual_number,
-                (ZCMD.arg3 >= 0) ? obj_index[ZCMD.arg3].virtual_number : -2,
-                ZCMD.arg4, ZCMD.arg2, obj_index[ZCMD.arg1].number);
+          logit(LOG_OBJ, "P cmd: obj: %d to_obj: %d, chance: %d, limit %d(%d)",
+            obj_index[ZCMD.arg1].virtual_number, (ZCMD.arg3 >= 0) ? obj_index[ZCMD.arg3].virtual_number : -2,
+            ZCMD.arg4, ZCMD.arg2, obj_index[ZCMD.arg1].number);
           ZCMD.command = '!';   /* disable */
         }
         break;
@@ -3473,8 +3466,7 @@ void reset_zone(int zone, int force_item_repop)
         last_cmd = 0;
         obj_index[ZCMD.arg1].limit = ZCMD.arg2; // set the limit from zone file
 
-        if ((ZCMD.arg1 >= 0) && ((obj_index[ZCMD.arg1].number < ZCMD.arg2)
-                                 || force_item_repop))
+        if( (ZCMD.arg1 >= 0) && ((obj_index[ZCMD.arg1].number < ZCMD.arg2) || force_item_repop) )
         {
 
           if (ZCMD.arg4 > number(0, 99))
@@ -3492,18 +3484,17 @@ void reset_zone(int zone, int force_item_repop)
               }
             }
 
-            if (!(obj = read_object(ZCMD.arg1, REAL)))
+            if( !(obj = read_object(ZCMD.arg1, REAL)) )
             {
               ZCMD.command = '!';
-              logit(LOG_DEBUG,
-                    "reset_zone(): (zone %d) obj %d [%d] not loadable", zone,
-                    ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
+              logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable", zone,
+                ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
             }
-            if (obj)
+            if( obj )
             {
               if( IS_ARTIFACT(obj)
                 && ( get_property("artifact.respawn", 0) == 0
-                  || (get_property("artifact.respawn", 0) == 1 && force_item_repop != 2) ))
+                || (get_property("artifact.respawn", 0) == 1 && force_item_repop != 2) ) )
               {
                 extract_obj(obj, TRUE);
                 break;
@@ -3542,11 +3533,9 @@ void reset_zone(int zone, int force_item_repop)
         }
         else if (obj_index[ZCMD.arg1].number < ZCMD.arg2)
         {
-          logit(LOG_OBJ,
-                "G cmd: obj: %d to_char: %d, chance: %d, limit %d(%d)",
-                obj_index[ZCMD.arg1].virtual_number,
-                (ZCMD.arg3 >= 0) ? mob_index[ZCMD.arg3].virtual_number : -2,
-                ZCMD.arg4, ZCMD.arg2, obj_index[ZCMD.arg1].number);
+          logit(LOG_OBJ, "G cmd: obj: %d to_char: %d, chance: %d, limit %d(%d)", 
+            obj_index[ZCMD.arg1].virtual_number, (ZCMD.arg3 >= 0) ? mob_index[ZCMD.arg3].virtual_number : -2,
+            ZCMD.arg4, ZCMD.arg2, obj_index[ZCMD.arg1].number);
           ZCMD.command = '!';   /* disable */
         }
         break;
@@ -3555,10 +3544,8 @@ void reset_zone(int zone, int force_item_repop)
         last_cmd = 0;
         obj_index[ZCMD.arg1].limit = ZCMD.arg2; // set the limit from zone file
 
-        if ((ZCMD.arg1 >= 0) && ((obj_index[ZCMD.arg1].number < ZCMD.arg2)
-                                 || force_item_repop))
+        if( (ZCMD.arg1 >= 0) && ((obj_index[ZCMD.arg1].number < ZCMD.arg2) || force_item_repop) )
         {
-
           if (ZCMD.arg4 > number(0, 99))
           {
             if( (timer = get_current_artifact_info(ZCMD.arg1, 0, NULL, NULL, NULL, NULL, FALSE, NULL)) )
@@ -3579,11 +3566,11 @@ void reset_zone(int zone, int force_item_repop)
               ZCMD.command = '!';
               logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable", zone, ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
             }
-            if (obj)
+            if( obj )
             {
               if( IS_ARTIFACT(obj)
                 && ( get_property("artifact.respawn", 0) == 0
-                  || (get_property("artifact.respawn", 0) == 1 && force_item_repop != 2) ))
+                || (get_property("artifact.respawn", 0) == 1 && force_item_repop != 2) ) )
               {
                 extract_obj(obj, TRUE);
                 break;
@@ -3596,7 +3583,7 @@ void reset_zone(int zone, int force_item_repop)
                 break;
               }
               obj->timer[3] = time(NULL);
-              if (mob && (ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR))
+              if( mob && (ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR) )
               {
                 // Drannak trying out item stat randomization 3/28/14
                 if(!IS_ARTIFACT(obj))
@@ -3636,9 +3623,8 @@ void reset_zone(int zone, int force_item_repop)
             if (!(mob = read_mobile(ZCMD.arg1, REAL)))
             {
               ZCMD.command = '!';
-              logit(LOG_DEBUG,
-                    "reset_zone(): (zone %d) mob %d [%d] not loadable", zone,
-                    ZCMD.arg1, mob_index[ZCMD.arg1].virtual_number);
+              logit(LOG_DEBUG, "reset_zone(): (zone %d) mob %d [%d] not loadable", zone,
+                ZCMD.arg1, mob_index[ZCMD.arg1].virtual_number);
             }
           }
           else
@@ -3646,9 +3632,9 @@ void reset_zone(int zone, int force_item_repop)
             last_mob_load = 0;
             mob = last_mob = 0;
             logit(LOG_MOB, "F cmd not executed %d %d %d %d", ZCMD.arg1,
-                  ZCMD.arg2, ZCMD.arg3, ZCMD.arg4);
+              ZCMD.arg2, ZCMD.arg3, ZCMD.arg4);
           }
-          if (!last_mob)
+          if( !last_mob )
           {
             last_cmd = last_mob_load = 0;
             last_mob_followable = 0;
@@ -3661,12 +3647,16 @@ void reset_zone(int zone, int force_item_repop)
           add_follower(mob, last_mob_followable);
           strcpy(buf, "group all");
           command_interpreter(last_mob, buf);
-          if (!IS_SET(mob->specials.act, ACT_SENTINEL))
+          if( !IS_SET(mob->specials.act, ACT_SENTINEL) )
+          {
             SET_BIT(mob->specials.act, ACT_SENTINEL);
+          }
           last_cmd = last_mob_load = 1;
         }
         else
+        {
           last_cmd = last_mob_load = 0;
+        }
         break;
 
       case 'R':                /* last mob loaded with M/F command will mount this */
@@ -3678,9 +3668,8 @@ void reset_zone(int zone, int force_item_repop)
             if (!(mob = read_mobile(ZCMD.arg1, REAL)))
             {
               ZCMD.command = '!';
-              logit(LOG_DEBUG,
-                    "reset_zone(): (zone %d) mob %d [%d] not loadable", zone,
-                    ZCMD.arg1, mob_index[ZCMD.arg1].virtual_number);
+              logit(LOG_DEBUG, "reset_zone(): (zone %d) mob %d [%d] not loadable",
+                zone, ZCMD.arg1, mob_index[ZCMD.arg1].virtual_number);
             }
           }
           else
@@ -3688,9 +3677,9 @@ void reset_zone(int zone, int force_item_repop)
             mob = 0;
             last_mob_load = 0;
             logit(LOG_MOB, "R cmd not executed %d %d %d %d", ZCMD.arg1,
-                  ZCMD.arg2, ZCMD.arg3, ZCMD.arg4);
+              ZCMD.arg2, ZCMD.arg3, ZCMD.arg4);
           }
-          if (!last_mob)
+          if( !last_mob )
           {
             last_cmd = last_mob_load = 0;
             break;
