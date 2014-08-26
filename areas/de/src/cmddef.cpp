@@ -180,6 +180,10 @@ command g_mainCommands[] =
 
   { "MAXVNUM", COMM_MAXVNUM },
 
+#ifdef GODMODE
+  { "HUNT", COMM_HUNT },
+#endif
+
   { 0 }
 };
 

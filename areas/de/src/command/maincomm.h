@@ -129,5 +129,7 @@
 
 #define COMM_MAXVNUM     250
 
+#define COMM_HUNT        260
+
 #define _MAINCOMM_H_
 #endif

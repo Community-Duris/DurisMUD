@@ -2514,4 +2514,30 @@ int get_ival_from_proc( obj_proc_type proc )
   return 100;
 }
 */
+
+void huntForOPEquipment(const char *args)
+{
+  int lowerIValLimit, currIVal;
+  int lowest, highest;
+  char buf[3000];
+
+  if( (lowerIValLimit = atoi(args)) <= 0 )
+  {
+    _outtext( "\n\rHunting for OP equipment requires a positive integer as input.\n\r" );
+    return;
+  }
+  sprintf( buf, "\n\r&+WSearching for items with itemvalues greater than or equal to %d.&n\n\r\n\r", lowerIValLimit );
+  displayColorString(buf);
+
+  lowest = getLowestObjNumber();
+  highest = getHighestObjNumber();
+  for( uint i = lowest; i <= highest; i++ )
+  {
+    if( (g_objLookup[i] != NULL) && ((currIVal = itemvalue(g_objLookup[i])) >= lowerIValLimit) )
+    {
+      sprintf( buf, "&+WItem #&n%6d&+W '&n%s&+W' is OP with itemvalue &n%d&+W.&n\n\r", i, g_objLookup[i]->objShortName, currIVal );
+      displayColorString(buf);
+    }
+  }
+}
 #endif

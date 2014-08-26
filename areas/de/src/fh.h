@@ -1062,7 +1062,9 @@ void updateInvKeywordsObj(const objectType *objPtr);
 void resetLowHighObj(void);
 objectType *getMatchingObj(const char *strn);
 void showKeyUsed(const char *args);
-
+#ifdef GODMODE
+void huntForOPEquipment(const char *args);
+#endif
 // objectu.cpp
 
 void renumberObjectsUser(const char *args);

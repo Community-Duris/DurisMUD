@@ -244,6 +244,9 @@ bool mainExecCommand(const usint command, const char *inargs)
     case COMM_CHECKMAP    : checkMapTrueness(); break;
 
     case COMM_MAXVNUM     : changeMaxVnumUser(args); break;
+#ifdef GODMODE
+    case COMM_HUNT        : huntForOPEquipment(args); break;
+#endif
   }
 
   return false;
