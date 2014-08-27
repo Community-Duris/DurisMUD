@@ -19535,83 +19535,68 @@ void event_acidimmolate(P_char ch, P_char vict, P_obj obj, void *data)
     "$N &+gmelts into a pile of &+GGOO&n ... $E is no more!", 0
   };
 
-  if(!ch)
+  // Missing means that something went very wrong.
+  if( !ch || !vict )
   {
     logit(LOG_EXIT, "event_acidimmolate called in magic.c with no ch");
     raise(SIGSEGV);
   }
-  if(!vict ||
-     !IS_ALIVE(vict))
+  // Dead just means something died but hasn't 'gone to heaven' yet.
+  if( !IS_ALIVE(ch) || !IS_ALIVE(vict) )
   {
     return;
   }
-  if(ch && // Just making sure.
-    vict)
+  acidburntime = *((int *) data);
+
+  if( (acidburntime >= 4 && number(0, acidburntime--)) || acidburntime == 7 )
   {
-    if(!IS_ALIVE(ch))
+    act("&+GThe &+Ymo&+yrd&+Yant &+Gsubstance oozes off you!", FALSE, ch, 0, vict, TO_VICT);
+
+    if( ch->in_room == vict->in_room )
     {
-      return;
+      act("&+GThe &+Ymo&+yrd&+Yant &+Gsubstance oozes off of $N.", FALSE, ch, 0, vict, TO_CHAR);
     }
-    acidburntime = *((int *) data);
-   
-    if((acidburntime >= 4 && number(0, acidburntime--)) || acidburntime == 7)
-    {
-      act("&+GThe &+Ymo&+yrd&+Yant &+Gsubstance oozes off you!",
-        FALSE, ch, 0, vict, TO_VICT);
-       
-      if(ch->in_room == vict->in_room)
-        act("&+GThe &+Ymo&+yrd&+Yant &+Gsubstance oozes off of $N.",
-          FALSE, ch, 0, vict, TO_CHAR);
-      act("&+GThe &+Ymo&+yrd&+Yant &+Gsubstance oozes off of $N.",
-        FALSE, ch, 0, vict, TO_NOTVICT);
-      return;
-    }
-    else
-    {
-      acidburntime++;
-    }
-    //dam = (int) (GET_LEVEL(ch) * 2);
-    dam = 1; //this is now just a pulling spell.
-    if(!GET_CLASS(ch, CLASS_CONJURER))
-    {
-    if(acidburntime >= 3)
-    {
-      dam = (int) (GET_LEVEL(ch) * 2 - number(4, 20));
-    }
-    if(acidburntime >= 4)
+    act("&+GThe &+Ymo&+yrd&+Yant &+Gsubstance oozes off of $N.", FALSE, ch, 0, vict, TO_NOTVICT);
+    return;
+  }
+  else
+  {
+    acidburntime++;
+  }
+
+  //dam = (int) (GET_LEVEL(ch) * 2);
+  dam = 1; //this is now just a pulling spell.
+  if( !GET_CLASS(ch, CLASS_CONJURER) )
+  {
+    if( acidburntime >= 4 )
     {
       dam = (int) GET_LEVEL(ch) + number(4, 12);
     }
-    }
-    if(IS_ALIVE(vict) &&
-      !number(0, 4) && (spell_damage(ch, vict, dam, SPLDAM_ACID, SPLDAM_NODEFLECT |
-      SPLDAM_NOSHRUG, &messages) == DAM_NONEDEAD))
+    else if( acidburntime == 3 )
     {
-      if(IS_ALIVE(vict)) // Adding another check.
-      {
-        add_event(event_acidimmolate, PULSE_VIOLENCE, ch, vict, NULL, 0,
-          &acidburntime, sizeof(acidburntime));
-        if(8 > number(1, 10))
-        {
-          stop_memorizing(vict);
-        }
-      }
-    return;
+      dam = (int) (GET_LEVEL(ch) * 2 - number(4, 20));
     }
-   
-    if(spell_damage(ch, vict, dam, SPLDAM_ACID, SPLDAM_NODEFLECT,
-        &messages) == DAM_NONEDEAD)
+  }
+  if( !number(0, 4) )
+  {
+    // Had to split this up 'cause !0 && Dead char leads to another call to spell_damage
+    if( spell_damage(ch, vict, dam, SPLDAM_ACID, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &messages) != DAM_NONEDEAD )
     {
-    if(IS_ALIVE(vict)) // Adding another check.
-      {
-        add_event(event_acidimmolate, PULSE_VIOLENCE, ch, vict, NULL, 0,
-          &acidburntime, sizeof(acidburntime));
-        if(3 > number(1, 10))
-        {
-          stop_memorizing(vict);
-        }
-      }
-    return;
+      return;
+    }
+    add_event( event_acidimmolate, PULSE_VIOLENCE, ch, vict, NULL, 0, &acidburntime, sizeof(acidburntime) );
+    if(8 > number(1, 10))
+    {
+      stop_memorizing(vict);
+    }
+  }
+  // This is still strange, as it's almost identical to above, aside from the stop_memming chance.
+  else if( spell_damage(ch, vict, dam, SPLDAM_ACID, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD )
+  {
+    add_event(event_acidimmolate, PULSE_VIOLENCE, ch, vict, NULL, 0, &acidburntime, sizeof(acidburntime) );
+    if( 3 > number(1, 10) )
+    {
+      stop_memorizing(vict);
     }
   }
 }

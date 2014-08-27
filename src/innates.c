@@ -3881,8 +3881,9 @@ bool resists_spell(P_char caster, P_char victim)
 
   if( !IS_ALIVE(caster) || !IS_ALIVE(victim) )
   {
-    logit(LOG_EXIT, "resists_spell()bogus parms missing or dead ch '%s' or victim '%s'.",
-      caster ? J_NAME(caster) : "Null", victim ? J_NAME(victim) : "Null" );
+    logit(LOG_EXIT, "resists_spell()bogus parms missing or dead ch %s'%s' or victim %s'%s'.",
+      IS_ALIVE(caster) ? "" : "Dead ", caster ? J_NAME(caster) : "Null",
+      IS_ALIVE(victim) ? "" : "Dead ", victim ? J_NAME(victim) : "Null" );
     raise(SIGSEGV);
   }
 
