@@ -616,23 +616,28 @@ void advance_level(P_char ch)
    *
  ///TODO CODE THIS PIECE OF MASTER    */
 
-  
   ch->player.level++;
   sql_update_level(ch);
 
   if( GET_LEVEL(ch) > 1 )
   {
-    sql_log(ch, PLAYERLOG, "Advanced to level %d", GET_LEVEL(ch)); 
+    sql_log(ch, PLAYERLOG, "Advanced to level %d", GET_LEVEL(ch));
   }
-  
+
+  // If we're at a circle level & use slots...
+  if( GET_LEVEL(ch) % 5 == 1 && USES_SPELL_SLOTS(ch) )
+  {
+    // Zero out the new spell slots gained..
+    ch->specials.undead_spell_slots[(GET_LEVEL(ch)+4)/5] = 0;
+  }
+
   send_to_char("&+WYou raise a level!&N\r\n",
                IS_SET(ch->specials.act, PLR_MORPH) ?
                ch->only.pc->switched : ch);
   logit(LOG_LEVEL, "Level %2d: %s", GET_LEVEL(ch), GET_NAME(ch));
   ch->only.pc->prestige++;
 
-  if( IS_PC(ch) && 
-     GET_A_NUM(ch) && 
+  if( IS_PC(ch) &&  GET_A_NUM(ch) &&
      ch->only.pc->highest_level < GET_LEVEL(ch) &&
      ch->group )
   {
@@ -642,7 +647,7 @@ void advance_level(P_char ch)
       if( IS_PC(gl->ch) && gl->ch != ch && (GET_A_NUM(gl->ch) == GET_A_NUM(ch)) && gl->ch->in_room == ch->in_room )
         group_size++;
     }
-    
+
     if( group_size >= get_property("prestige.guildedInGroupMinimum", 0) )
     {
       int prestige = get_property("prestige.gain.leveling", 0);
