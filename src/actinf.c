@@ -4807,7 +4807,7 @@ void do_score(P_char ch, char *argument, int cmd)
 
     if( IS_PC(ch) )
     {
-      struct affected_type *afp;
+      struct affected_type *afp, *afp2;
 
       // 0 and above = zone epic task
       // -1 to -9 = nexus stone task
@@ -4847,42 +4847,44 @@ void do_score(P_char ch, char *argument, int cmd)
     }
   }
   */
+      afp2 = get_spell_from_char(ch, TAG_EPICS_GAINED);
+
       if( afp = get_epic_task(ch) )
       {
         if( afp->modifier == SPILL_BLOOD )
         {
-          sprintf(buf, "&n&+YEpic points:&n &+W%ld&n Current task: &+rspill enemy blood&n\n",
-              ch->only.pc->epics);
+          sprintf(buf, "&n&+YEpic points(total):&n &+W%ld(%d)&n Current task: &+rspill enemy blood&n\n",
+              ch->only.pc->epics, afp2 ? afp2->modifier : 0 );
         }
         else if( afp->modifier >= 0 )
         {
-          sprintf(buf, "&nEpic points: &+W%ld&n Current task: find runestone of %s\n",
-              ch->only.pc->epics, zone_table[real_zone0(afp->modifier)].name);
+          sprintf(buf, "&nEpic points(total): &+W%ld(%d)&n Current task: find runestone of %s\n",
+              ch->only.pc->epics, afp2 ? afp2->modifier : 0, zone_table[real_zone0(afp->modifier)].name);
         }
         else if( afp->modifier <= MAX_NEXUS_STONES && afp->modifier < 0 )
         {
           nexus = get_nexus_stone(-(afp->modifier));
           if( nexus )
           {
-            sprintf(buf, "&nEpic points: &+W%ld&n Current task: &+Gturn %s.&n\n",
-              ch->only.pc->epics, nexus->short_description);
+            sprintf(buf, "&nEpic points(total): &+W%ld(%d)&n Current task: &+Gturn %s.&n\n",
+              ch->only.pc->epics, afp2 ? afp2->modifier : 0, nexus->short_description);
           }
           else
           {
-            sprintf(buf, "&nEpic points: &+W%ld&n Current task: &+RERROR - can't find nexus, report to imms&n\n",
-              ch->only.pc->epics);
+            sprintf(buf, "&nEpic points(total): &+W%ld(%d)&n Current task: &+RERROR - can't find nexus, report to imms&n\n",
+              ch->only.pc->epics, afp2 ? afp2->modifier : 0);
           }
         }
         else
         {
-          sprintf(buf, "&nEpic points: &+W%ld&n Current task: &+RERROR - report to imms&n\n",
-              ch->only.pc->epics);
+          sprintf(buf, "&nEpic points(total): &+W%ld(%d)&n Current task: &+RERROR - report to imms&n\n",
+              ch->only.pc->epics, afp2 ? afp2->modifier : 0);
         }
       }
       else
       {
-        sprintf(buf, "&nEpic points: &+W%ld&n\n",
-             ch->only.pc->epics);
+        sprintf(buf, "&nEpic points(total): &+W%ld(%d)&n\n",
+             ch->only.pc->epics, afp2 ? afp2->modifier : 0);
       }
       send_to_char(buf, ch);
     }
