@@ -3576,7 +3576,7 @@ SPELL_ADD(CLASS_NONE, 1);
   SPELL_CREATE_MSG("holy sword", SPELL_HOLY_SWORD, PULSE_SPELLCAST * 4 / 3,
                    TAR_SELF_ONLY,
                    spell_holy_sword, "&+wYour weapon ceases to glow with holy power.&n");
-  SPELL_ADD(CLASS_PALADIN, 10);
+//  SPELL_ADD(CLASS_PALADIN, 10); NO OP spells.
   SPELL_ADD(CLASS_AVENGER, 11);
 
   SPELL_CREATE_MSG("divine power", SPELL_DIVINE_POWER, PULSE_SPELLCAST * 4,
