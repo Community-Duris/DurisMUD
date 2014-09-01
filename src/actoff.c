@@ -10294,6 +10294,7 @@ void do_legsweep(P_char ch, char *arg, int cmd)
     act("$n attempts to legsweep you but loses $s &+Wbalance&n and lands on $s ass instead!",
       FALSE, ch, 0, vict, TO_VICT);
     CharWait(ch, (int) (PULSE_VIOLENCE * 0.5));
+    SET_POS(ch, POS_PRONE + GET_STAT(ch));
     return;
   }
 
@@ -10306,6 +10307,7 @@ void do_legsweep(P_char ch, char *arg, int cmd)
     act("$n attempts to legsweep you but loses $s &+Wbalance&n and lands on $s ass instead!",
       FALSE, ch, 0, vict, TO_VICT);
     CharWait(ch, (int) (PULSE_VIOLENCE * 0.5));
+    SET_POS(ch, POS_PRONE + GET_STAT(ch));
     return;
   }
 

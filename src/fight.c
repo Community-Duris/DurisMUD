@@ -379,7 +379,7 @@ bool rapier_dirk(P_char victim, P_char attacker)
   P_obj wep2 = victim->equipment[SECONDARY_WEAPON];
 
   // Off-hand special riposte
-  if( rapier_dirk_check(victim) && chance > number(1, 900) && MIN_POS(victim, POS_STANDING + STAT_NORMAL)
+  if( rapier_dirk_check(victim) && chance > number(1, 1000) && MIN_POS(victim, POS_STANDING + STAT_NORMAL)
     && !IS_DRAGON(attacker) && victim->specials.fighting == attacker )
   {
     if(number(0, 1))
@@ -414,23 +414,27 @@ bool rapier_dirk(P_char victim, P_char attacker)
     }
 
     hit(victim, attacker, wep1);
+    if( !IS_ALIVE(victim) || !IS_ALIVE(attacker) )
+    {
+      return TRUE;
+    }
 
     //if(wep1->craftsmanship == OBJCRAFT_HIGHEST &&
-    if(number(0, 3) && CanDoFightMove(victim, attacker))
+    if(!number(0, 3) && CanDoFightMove(victim, attacker))
     {
       act("$p slices through the air with incredible ease!",
           TRUE, victim, wep1, attacker, TO_CHAR);
       act("$p slices through the air with incredible ease!",
           TRUE, victim, wep1, attacker, TO_ROOM);
 
-      f = number(1, (int) (GET_LEVEL(victim) / 18));
+      f = number(1, (int) (GET_LEVEL(victim) / 28));
 
       for (i = 0; i < f && IS_ALIVE(victim) && IS_ALIVE(attacker); i++)
       {
         hit(victim, attacker, wep1);
       }
     }
-    else if( IS_ALIVE(victim) && IS_ALIVE(attacker) )
+    else
     {
       hit(victim, attacker, wep1);
     }
