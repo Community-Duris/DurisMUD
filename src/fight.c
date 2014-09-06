@@ -6449,8 +6449,7 @@ void event_tainted_blade(P_char ch, P_char victim, P_obj obj, void *data)
     "&+LYour screams ar&+we your onl&+Wy thing ke&+weping you compa&+Lny as you fall into oblivion.&n",
     "$N &+Lfalls to the ground thrashing wildly, $S soul finally devoured."
   };
-  struct damage_messages *messages =
-    GET_CLASS(ch, CLASS_AVENGER) ? &holy_messages : &tainted_messages;
+  struct damage_messages *messages = GET_CLASS(ch, CLASS_AVENGER) ? &holy_messages : &tainted_messages;
 
   af = get_spell_from_char(victim, blade_skill);
   if( !af )
@@ -6458,7 +6457,9 @@ void event_tainted_blade(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
-  if( raw_damage(ch, victim, 40, RAWDAM_DEFAULT ^ RAWDAM_IMPRISON, messages) != DAM_NONEDEAD)
+  // At 56, Min = MAX(40, 3) = 10dam, Simplified Avg = MAX(40, 57) = 14dam, Max = MAX(40, 112) = 28dam
+  //  Note: The real average is more complicated since for all X in Y: Y=dice(3, (2*lvl)/3) < 40: X = 40 or whatever.
+  if( raw_damage(ch, victim, MAX(40, dice(3, (2*GET_LEVEL(ch))/3)), RAWDAM_DEFAULT ^ RAWDAM_IMPRISON, messages) != DAM_NONEDEAD)
     return;
 
   if( af->modifier-- > 0 )
@@ -6494,19 +6495,14 @@ bool tainted_blade(P_char ch, P_char victim)
     "$n's $q &+yglows &+Wbright white as it strikes&n $N.",
     0, ch->equipment[WIELD]
   };
-  struct damage_messages *messages =
-    GET_CLASS(ch, CLASS_AVENGER) ? &holy_messages : &tainted_messages;
+  struct damage_messages *messages = GET_CLASS(ch, CLASS_AVENGER) ? &holy_messages : &tainted_messages;
 
-  if(IS_CONSTRUCT(victim))
-  {
-    return FALSE;
-  }
-  if (!ch->equipment[WIELD])
+  if( IS_CONSTRUCT(victim) || !ch->equipment[WIELD] )
   {
     return FALSE;
   }
 
-  if (raw_damage(ch, victim, 60, RAWDAM_DEFAULT, messages) == DAM_NONEDEAD)
+  if( raw_damage(ch, victim, 60, RAWDAM_DEFAULT, messages) == DAM_NONEDEAD )
   {
     if (old_af = get_spell_from_char(victim, blade_skill))
     {

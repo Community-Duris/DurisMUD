@@ -3267,13 +3267,12 @@ void do_maul(P_char ch, char *argument, int cmd)
 
   victim = ParseTarget(ch, argument);
 
-  if(!(victim) ||
-     !IS_ALIVE(victim))
+  if( !IS_ALIVE(victim) )
   {
     send_to_char("Maul who?\n", ch);
     return;
   }
-    
+
   maul(ch, victim);
 }
 
@@ -3281,28 +3280,29 @@ void do_restrain(P_char ch, char *argument, int cmd)
 {
   P_char   victim = NULL;
 
-  if(!(ch))
+  if( !(ch) )
   {
-    logit(LOG_EXIT, "assert: bogus params (do_maul) in actoff.c");
+    logit(LOG_EXIT, "do_restrain: bogus params - null ch in actoff.c");
     raise(SIGSEGV);
   }
 
-  if(!IS_ALIVE(ch))
+  if( !IS_ALIVE(ch) )
+  {
     return;
+  }
 
-  if(GET_CHAR_SKILL(ch, SKILL_RESTRAIN) < 1)
+  if( GET_CHAR_SKILL(ch, SKILL_RESTRAIN) < 1 )
   {
     send_to_char("&+LThe depths fail to respond to your incantation.&n\n", ch);
     return;
   }
   victim = ParseTarget(ch, argument);
 
-  if(!(victim) ||
-     !IS_ALIVE(victim))
+  if( !IS_ALIVE(victim) )
   {
     send_to_char("&+LWho would you like restrained?&n\n", ch);
     return;
-  }   
+  }
   restrain(ch, victim);
 }
 
@@ -9567,51 +9567,48 @@ void restrain(P_char ch, P_char victim)
   P_char temp_ch;
   struct affected_type af;
 
-  if(!(ch))
+  if( !ch )
   {
-    logit(LOG_EXIT, "restrain called in actoff.c with no ch");
+    logit(LOG_EXIT, "restrain: no ch");
     raise(SIGSEGV);
   }
 
-  if(ch == victim)
+  if( ch == victim )
   {
     send_to_char("&+LOh, but that would be way too much fun...\n", ch);
     CharWait(ch, PULSE_VIOLENCE);
     return;
   }
 
-  if( IS_DESTROYING( ch ) )
+  if( IS_DESTROYING(ch) )
   {
     act("You stare at $p and say 'hold still'.", FALSE, ch, ch->specials.destroying_obj, NULL, TO_CHAR);
     return;
   }
-  
+
   appear(ch);
 
-  if(affected_by_spell(victim, SKILL_BASH))
+  if( affected_by_spell(victim, SKILL_BASH) )
   {
     send_to_char("&+LThey cannot be restrained in their current position.\n", ch);
     CharWait(ch, (int) (PULSE_VIOLENCE));
     return;
   }
 
-  if(affected_by_spell(victim, SKILL_GAZE))
+  if( affected_by_spell(victim, SKILL_GAZE) )
   {
     act("$N &+Lappears to be paralyzed as it is!&n", FALSE, ch, 0, victim, TO_CHAR);
-    CharWait(ch, (int) (2.5 * PULSE_VIOLENCE));
+    CharWait(ch, (int) (1.5 * PULSE_VIOLENCE));
     return;
   }
-  
-  
-  if(affected_by_spell(ch, SKILL_BASH))
+
+  if( affected_by_spell(ch, SKILL_BASH) )
   {
     send_to_char("&+LYour &+rminions &+Lneed rest before restraining again.\n", ch);
     return;
   }
 
-  if(IS_NPC(victim) &&
-     (IS_GREATER_RACE(victim) ||
-     IS_ELITE(victim)))
+  if( IS_NPC(victim) && (IS_GREATER_RACE(victim) || IS_ELITE(victim)) )
   {
     act("&+LYou call your &+rminions &+Lfrom the depths to harness&n $N&+L, but it simply shrugs them away!",
        FALSE, ch, 0, victim, TO_CHAR);
@@ -9620,11 +9617,11 @@ void restrain(P_char ch, P_char victim)
     act("&+LYou simply shrug away&n $N's &+Lattempt to restrain you...",
         FALSE, ch, 0, victim, TO_VICT);
     do_action(ch, 0, CMD_GROWL);
-    CharWait(ch, (int) (2.5 * PULSE_VIOLENCE));
+    CharWait(ch, (int) (1.5 * PULSE_VIOLENCE));
     return;
   }
-  
-  if(get_takedown_size(victim) > get_takedown_size(ch) + 2)
+
+  if( get_takedown_size(victim) > get_takedown_size(ch) + 2 )
   {
     act("&+LYou try to restrain&n $N&+L, but it easily breaks free of your &+rrestraints&+L.&n", FALSE,
         ch, 0, victim, TO_CHAR);
@@ -9632,10 +9629,10 @@ void restrain(P_char ch, P_char victim)
         0, victim, TO_NOTVICT);
     act("$n's&+L minions attempt to restrain you, but you simply break free of the &+rrestraints&+L.&n", FALSE,
         ch, 0, victim, TO_VICT);
-    CharWait(ch, (int) (2 * PULSE_VIOLENCE));
+    CharWait(ch, (int) (1.5 * PULSE_VIOLENCE));
     return;
   }
-  
+
   if(get_takedown_size(victim) < get_takedown_size(ch) - 2)
   {
     act("&+LYou try to restrain&n $N&+L, but it easily evades your &+rminions.",
@@ -9644,16 +9641,15 @@ void restrain(P_char ch, P_char victim)
       FALSE, ch, 0, victim, TO_NOTVICT);
     act("$n &+Ltries to restrain you, but you easily evade the attempt!&n",
       FALSE, ch, 0, victim, TO_VICT);
-    CharWait(ch, (int) (2 * PULSE_VIOLENCE));
+    CharWait(ch, (int) (1.5 * PULSE_VIOLENCE));
     return;
   }
-  
 
   // any conditions past this will lag the char for the full duration
   CharWait(ch, 2 * PULSE_VIOLENCE);
 
   percent_chance = GET_CHAR_SKILL(ch, SKILL_RESTRAIN); // Base percentage
-  
+
   if(GET_POS(victim) != POS_STANDING)
   {
     act("$E &+Lis not in a proper position to be restrained, but you summon your &+rminions &+Lanyway!",
@@ -9664,43 +9660,34 @@ void restrain(P_char ch, P_char victim)
       FALSE, ch, 0, victim, TO_VICT);
     percent_chance = 0;  // Cannot restrain !standing victim.
   }
-  
-  if(get_takedown_size(victim) == get_takedown_size(ch) + 2 ||
-     get_takedown_size(victim) == get_takedown_size(ch) - 2)
+
+  if( get_takedown_size(victim) == get_takedown_size(ch) + 2
+    || get_takedown_size(victim) == get_takedown_size(ch) - 2 )
   {
     percent_chance = (int) (percent_chance * 0.6);
   }
 
-  if(GET_C_LUK(ch) / 2 > number(0, 110))
+  if( GET_C_LUK(ch) / 2 > number(0, 110) )
   {
     percent_chance = (int) (percent_chance * 1.05);
   }
-  
+
   if(GET_C_LUK(victim) / 2 > number(0, 90))
   {
     percent_chance = (int) (percent_chance * 0.95);
   }
-           
-  percent_chance = (int)(percent_chance *
-                       GET_C_POW(ch) / GET_C_POW(victim)) +
-                       GET_LEVEL(ch) -
-                       GET_LEVEL(victim) +
-                       number(-15, 0);
-  
-  percent_chance = BOUNDED(1, percent_chance, 90);
 
-  if(world[ch->in_room].room_flags & SINGLE_FILE &&
-     !AdjacentInRoom(ch, victim) &&
-     !IS_TRUSTED(ch))
+  percent_chance = (int)(percent_chance * GET_C_POW(ch) / GET_C_POW(victim)) +
+    GET_LEVEL(ch) - GET_LEVEL(victim) + number(-15, 5);
+
+  if( world[ch->in_room].room_flags & SINGLE_FILE && !AdjacentInRoom(ch, victim) && !IS_TRUSTED(ch) )
   {
     act("&+LYour &+rminions &+Lwould have a difficult time in such a narrow area.",
       FALSE, ch, 0, victim, TO_CHAR);
     percent_chance = (int) (percent_chance * 0.65);
   }
-  
-  if(IS_FIGHTING(ch) &&
-    victim->specials.fighting != ch &&
-    ch->specials.fighting != victim)
+
+  if( IS_FIGHTING(ch) && victim->specials.fighting != ch && ch->specials.fighting != victim )
   {
     act("&+LYou turn from your current victim and direct your &+rsummons&+L toward&n $N&+L...&n",
       FALSE, ch, 0, victim, TO_CHAR);
@@ -9708,34 +9695,35 @@ void restrain(P_char ch, P_char victim)
       FALSE, ch, 0, victim, TO_NOTVICT);
     act("$n &+Lturns $s focus away from the current fight and makes a strange &+rgesture &+Ltoward you.&n",
       FALSE, ch, 0, victim, TO_VICT);
-    
+
     percent_chance = (int) (percent_chance * 0.40);
   }
 
 // DEBUG CODE SECTION ---------------------
 
-  if(GET_POS(victim) != POS_STANDING)
+  if( GET_POS(victim) != POS_STANDING )
   {
     standing = 0;
   }
-  
-  if(IS_FIGHTING(ch) &&
-    victim->specials.fighting != ch &&
-    ch->specials.fighting != victim)
+
+  if( IS_FIGHTING(ch) && victim->specials.fighting != ch && ch->specials.fighting != victim )
   {
     battling = 0;
   }
-  
-  debug("RESTRAIN: (%s) with (%d) percent at (%s&n) - standing? (%d) battling? (%d).",
-    GET_NAME(ch), percent_chance, J_NAME(victim), standing, battling);
+
+  percent_chance = BOUNDED(1, percent_chance, 90);
+
+  debug("RESTRAIN: (%s) with (%d) percent at (%s&n) - standing? %s battling? %s.",
+    GET_NAME(ch), percent_chance, J_NAME(victim), standing ? "YES" : "NO", battling ? "YES" : "NO" );
 // ---------------------------------------
-  
-  if(notch_skill(ch, SKILL_RESTRAIN, get_property("skill.notch.offensive", 15))
-    || percent_chance > number(0, 100))
+
+  if( notch_skill(ch, SKILL_RESTRAIN, get_property("skill.notch.offensive", 15))
+    || percent_chance > number(0, 100) )
   {
     anatomy_skill = GET_CHAR_SKILL(ch, SKILL_ANATOMY) - 25; // returns -25 to 70 int
 
-    if(GET_HIT(victim) < (int)(((number(0,100) + anatomy_skill))/2))
+    // If hps are low.. like under 100 or so low, we insta-kill?  WTF?
+    if( GET_HIT(victim) < (number(0,100) + anatomy_skill)/2 )
     {
 /*
       if(GET_CLASS(ch, CLASS_CABALIST))
@@ -9797,24 +9785,23 @@ void restrain(P_char ch, P_char victim)
         act("&+LYou suddenly feel unable to move as&n $n's &+rminions &+Lsubdue you!&n",
             FALSE, ch, 0, victim, TO_VICT);
       }
-      
-      
-    memset(&af, 0, sizeof(af));
-    af.type = SKILL_RESTRAIN;
-    af.flags = AFFTYPE_SHORT | AFFTYPE_NODISPEL ;
-    af.duration = (PULSE_VIOLENCE * 2);
-    affect_to_char_with_messages(victim, &af, "&+LThe &+rminions&+L finally release their hold on you!", "$n &+Lfinally breaks free from the &+rminions &+Lrestraining them.");
-    set_short_affected_by(ch, SKILL_BASH, (int) (PULSE_VIOLENCE * 3.0));
-    victim->specials.combat_tics = victim->specials.base_combat_round;
+
+      memset(&af, 0, sizeof(af));
+      af.type = SKILL_RESTRAIN;
+      af.flags = AFFTYPE_SHORT | AFFTYPE_NODISPEL ;
+      af.duration = (PULSE_VIOLENCE * 2);
+      affect_to_char_with_messages(victim, &af, "&+LThe &+rminions&+L finally release their hold on you!", "$n &+Lfinally breaks free from the &+rminions &+Lrestraining them.");
+      set_short_affected_by(ch, SKILL_BASH, (int) (PULSE_VIOLENCE * 3.0));
+      victim->specials.combat_tics = victim->specials.base_combat_round;
       //CharWait(victim, (int) (2.0 * PULSE_VIOLENCE));
 
-      if(IS_NPC(victim))
-        // they can't do any cmds anyway, so lag them so they can stack
-        // cmds the same as being bashed, etc.
+      // They can't do any cmds anyway, so lag them so they can stack
+      // cmds the same as being bashed, etc.
+      if( IS_NPC(victim) )
       {
         CharWait(victim, (int) (2.0 * PULSE_VIOLENCE));
       }
-      if(number(0, 2))
+      if( number(0, 2) )
       {
         StopCasting(victim);
       }
@@ -9830,7 +9817,6 @@ void restrain(P_char ch, P_char victim)
     act("&+LYou quickly jump out of the way of&n $n's &+Levil &+rmionions&+L.&n",
       FALSE,  ch, 0, victim, TO_VICT);
   }
-
 }
 
 
