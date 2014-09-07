@@ -2369,6 +2369,7 @@ void event_artifact_wars( P_char ch, P_char vict, P_obj obj, void * arg )
 void artifact_fight( P_char owner, P_obj arti )
 {
   int numartis, i;
+  int main, unique, ioun;
   P_obj obj;
 
   for( i = numartis = 0;i < MAX_WEAR;i++ )
@@ -2379,21 +2380,42 @@ void artifact_fight( P_char owner, P_obj arti )
     }
   }
   // Yes, we count objects in inventory too!
+  main = unique = ioun = 0;
   obj = owner->carrying;
   while( obj )
   {
     if( owner->equipment[i] && (IS_ARTIFACT(owner->equipment[i]) || isname("powerunique", owner->equipment[i]->name)) )
     {
-      numartis++;
+      if( IS_IOUN(owner->equipment[i]) )
+      {
+        ioun++;
+      }
+      else if( IS_UNIQUE(owner->equipment[i]) )
+      {
+        unique++;
+      }
+      else
+      {
+        main++;
+      }
     }
     obj = obj->next_content;
   }
-  if( numartis > 1 )
+  numartis = (main > 1) ? main - 1 : 0;
+  numartis += (unique > 1) ? unique - 1 : 0;
+  numartis += (ioun > 1) ? ioun - 1 : 0;
+  if( numartis > 0 )
   {
-    // 8 min for 2 artis, 27 min for 3 artis, 64 min for 4 artis, 125 min for 5 artis, 216 min for 6 artis,
-    //   343 min = 5 hrs 43 min for 7 artis, 512 min = 8 hrs 32 min for 8 artis,
-    //   729 min = 12 hrs 9 min for 9 artis, 1000 min = 16 hrs 40 min for 10 artis. 
-    arti->timer[3] -= 60 * numartis * numartis * numartis;
+    // 1: 2, 2: 6, 3: 16, 4: 30, 5: 48, 6: 70, 7: 96
+    // So, 10 artis -> 96 mins loss every 1/2 hour -> ticker 4.2x as fast, or about 2 days from full to 0.
+    if( numartis == 1 )
+    {
+      arti->timer[3] -= 60 * 2;
+    }
+    else
+    {
+      arti->timer[3] -= 60 * (2 * numartis * numartis - 2);
+    }
     act("&+L$p &+Lseems very upset with you.&n", FALSE, owner, arti, 0, TO_CHAR);
   }
 }
