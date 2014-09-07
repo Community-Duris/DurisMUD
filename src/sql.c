@@ -565,11 +565,13 @@ void sql_update_playtime(P_char ch)
 					 ch->player.time.played, GET_PID(ch));
 }
 
-/* Update player's epics */
+/* Update player's epics: We want to record their total epics gained not epics unused */
 void sql_update_epics(P_char ch)
 {
+  struct affected_type *paf = get_spell_from_char(ch, TAG_EPICS_GAINED);
+
   db_query("UPDATE players_core SET epics='%d' WHERE pid='%d'",
-	         ch->only.pc->epics, GET_PID(ch));
+	         paf ? paf->modifier : 0, GET_PID(ch));
 }
 
 void manual_log(P_char ch)
@@ -1554,6 +1556,16 @@ bool sql_pwipe( int code_verify )
     }
     logit(LOG_DEBUG, "sql_pwipe: Clearing completed quest data... .. ." );
     if( qry("DELETE FROM world_quest_accomplished") )
+    {
+      logit(LOG_DEBUG, "  success!" );
+    }
+    else
+    {
+      logit(LOG_DEBUG, "        failure!");
+      return FALSE;
+    }
+    logit(LOG_DEBUG, "sql_pwipe: Deactivating players_core data... .. ." );
+    if( qry("UPDATE players_core SET active = 0") )
     {
       logit(LOG_DEBUG, "  success!" );
     }
