@@ -1549,7 +1549,7 @@ int buy_contra(P_char ch, P_ship ship, char* arg)
 int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
 {
   struct affected_type *paf = get_spell_from_char(ch, ACH_CARGOCOUNT);
-  bool quickbuild = (paf->modifier >= 10000) ? TRUE : FALSE;
+  bool quickbuild = (paf && paf->modifier >= 10000) ? TRUE : FALSE;
 
     if (!is_number(arg1) || !arg2 || !*arg2) 
     {
@@ -1683,7 +1683,7 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
 int buy_equipment(P_char ch, P_ship ship, char* arg1)
 {
   struct affected_type *paf = get_spell_from_char(ch, ACH_CARGOCOUNT);
-  bool quickbuild = (paf->modifier >= 10000) ? TRUE : FALSE;
+  bool quickbuild = (paf && paf->modifier >= 10000) ? TRUE : FALSE;
 
     if (!is_number(arg1)) 
     {
@@ -1780,7 +1780,7 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
 {
   int cost, buildtime;
   struct affected_type *paf = get_spell_from_char(ch, ACH_CARGOCOUNT);
-  bool quickbuild = (paf->modifier >= 10000) ? TRUE : FALSE;
+  bool quickbuild = (paf && paf->modifier >= 10000) ? TRUE : FALSE;
 
   if( owned )
   {
