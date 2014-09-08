@@ -5461,6 +5461,7 @@ void bash(P_char ch, P_char victim)
   double modifier;
   bool shieldless = false;
   char buf[512];
+  P_obj weap = ch->equipment[WIELD];
 
   if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
   {
@@ -5588,9 +5589,9 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
     if( !(ch->equipment[WEAR_SHIELD]) && (GET_CLASS(ch, CLASS_PALADIN | CLASS_ANTIPALADIN))
       && GET_CHAR_SKILL(ch, SKILL_SHIELDLESS_BASH) < 1 )
     {
-      if( ch->equipment[WIELD] )
+      if( weap )
       {
-        if( IS_ARTIFACT(ch->equipment[WIELD]) )
+        if( IS_ARTIFACT(weap) )
         {
           percent_chance += 7;
            // Artifacts are often low weight to allow all
@@ -5598,7 +5599,7 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
         }
         else
         {
-          percent_chance += ch->equipment[WIELD]->weight / 2;
+          percent_chance += weap->weight / 2;
         }
       }
     }
@@ -5630,17 +5631,17 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
     skewer = (int) (skewer * get_property("skill.skewer.OffTarget.Penalty", 0.500));
   }
 
-  if( skewer > 0 && GET_POS(victim) != POS_STANDING && ch->equipment[WIELD]
-    && good_for_skewering(ch->equipment[WIELD])
+  if( skewer > 0 && GET_POS(victim) != POS_STANDING && weap
+    && good_for_skewering(weap)
     && (notch_skill(ch, SKILL_SKEWER, get_property("skill.notch.offensive", 7))
     || skewer / 3 > number(1, 100)) )
   {
     act("$n grins as $e skewers you with $s $q.", FALSE, ch,
-        ch->equipment[WIELD], victim, TO_VICT);
+        weap, victim, TO_VICT);
     act("You dive at $N skewering $M with your $q.", FALSE, ch,
-        ch->equipment[WIELD], victim, TO_CHAR);
+        weap, victim, TO_CHAR);
     act("$n dives at $N skewering $M with $s $q.", FALSE, ch,
-        ch->equipment[WIELD], victim, TO_NOTVICT);
+        weap, victim, TO_NOTVICT);
 
     if(melee_damage(ch, victim, dice(20, 10), 0, 0) == DAM_NONEDEAD)
     {
@@ -5803,7 +5804,8 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
     {
       CharWait(victim, PULSE_VIOLENCE * 1);
     }
-    else if( GET_CLASS(ch, CLASS_PALADIN | CLASS_ANTIPALADIN) )
+    else if( GET_CLASS(ch, CLASS_PALADIN | CLASS_ANTIPALADIN)
+      && weap && IS_PALADIN_SWORD(weap) )
     {
 	    CharWait(victim, (int) (PULSE_VIOLENCE * 2.5));
     }
@@ -5815,7 +5817,7 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
     if( melee_damage(ch, victim, MAX(1, dmg), PHSDAM_TOUCH, 0) == DAM_NONEDEAD )
     {
       //act("Your bash knocks $N to the ground!", FALSE, ch, 0, victim, TO_CHAR);
-      if( GET_CLASS(ch, CLASS_PALADIN | CLASS_ANTIPALADIN) )
+      if( GET_CLASS(ch, CLASS_PALADIN | CLASS_ANTIPALADIN) && weap && IS_PALADIN_SWORD(weap) )
       {
         act("Your skillful bash knocks $N to the ground!", FALSE, ch, 0, victim, TO_CHAR);
         act("You are knocked to the ground by $n's skillful bash!", FALSE, ch, 0, victim, TO_VICT);
@@ -5845,7 +5847,7 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
       return;
     }
 
-    if( GET_CHAR_SKILL(ch, SKILL_SKEWER) > 0 && ch->equipment[WIELD] && good_for_skewering(ch->equipment[WIELD]) )
+    if( GET_CHAR_SKILL(ch, SKILL_SKEWER) > 0 && weap && good_for_skewering(weap) )
     {
       percent_chance = GET_CHAR_SKILL(ch, SKILL_SKEWER) / 2;
       if( notch_skill(ch, SKILL_SKEWER, get_property("skill.notch.offensive", 7))
@@ -5859,15 +5861,19 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
         else
         {
           act("$n grins as $e skewers you with $s $q.", FALSE, ch,
-              ch->equipment[WIELD], victim, TO_VICT);
+              weap, victim, TO_VICT);
           act("You dive at $N skewering $M with your $q.", FALSE, ch,
-              ch->equipment[WIELD], victim, TO_CHAR);
+              weap, victim, TO_CHAR);
           act("$n dives at $N skewering $M with $s $q.", FALSE, ch,
-              ch->equipment[WIELD], victim, TO_NOTVICT);
+              weap, victim, TO_NOTVICT);
           //codemod dice(20, 10) - changed to make skewer do more damage instead of lag user longer
           if( melee_damage(ch, victim, dice(45, 10), 0, 0) == DAM_NONEDEAD )
           {
-            CharWait(victim, (int) (PULSE_VIOLENCE * 2.0));
+            CharWait(victim, PULSE_VIOLENCE * 2);
+          }
+          if( IS_ALIVE(ch) )
+          {
+             CharWait(ch, PULSE_VIOLENCE * 2);
           }
         }
       }
