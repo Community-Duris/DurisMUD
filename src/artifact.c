@@ -2242,7 +2242,6 @@ void event_artifact_wars( P_char ch, P_char vict, P_obj obj, void * arg )
     {
       continue;
     }
-    debug( "event_artifact_wars: Checking '%s'", dire->d_name );
 
     sprintf(name, ARTIFACT_DIR "%d", vnum);
     f = fopen(name, "rt");
@@ -2372,17 +2371,9 @@ void artifact_fight( P_char owner, P_obj arti )
   int main, unique, ioun;
   P_obj obj;
 
-  for( i = numartis = 0;i < MAX_WEAR;i++ )
-  {
-    if( owner->equipment[i] && (IS_ARTIFACT(owner->equipment[i]) || isname("powerunique", owner->equipment[i]->name)) )
-    {
-      numartis++;
-    }
-  }
-  // Yes, we count objects in inventory too!
   main = unique = ioun = 0;
-  obj = owner->carrying;
-  while( obj )
+  // Count up the equipped artis.
+  for( i = numartis = 0;i < MAX_WEAR;i++ )
   {
     if( owner->equipment[i] && (IS_ARTIFACT(owner->equipment[i]) || isname("powerunique", owner->equipment[i]->name)) )
     {
@@ -2391,6 +2382,26 @@ void artifact_fight( P_char owner, P_obj arti )
         ioun++;
       }
       else if( IS_UNIQUE(owner->equipment[i]) )
+      {
+        unique++;
+      }
+      else
+      {
+        main++;
+      }
+    }
+  }
+  // Yes, we count objects in inventory too!
+  obj = owner->carrying;
+  while( obj )
+  {
+    if( IS_ARTIFACT(obj) || isname("powerunique", obj->name) )
+    {
+      if( IS_IOUN(obj) )
+      {
+        ioun++;
+      }
+      else if( IS_UNIQUE(obj) )
       {
         unique++;
       }
@@ -2414,8 +2425,11 @@ void artifact_fight( P_char owner, P_obj arti )
     }
     else
     {
+      // 2x^2 - 2 function (in minutes).
       arti->timer[3] -= 60 * (2 * numartis * numartis - 2);
     }
+    debug( "artifact_fight: '%s' (%d) is upset (%d) with %s.",
+      arti->short_description, GET_OBJ_VNUM(arti), numartis, J_NAME(owner) );
     act("&+L$p &+Lseems very upset with you.&n", FALSE, owner, arti, 0, TO_CHAR);
   }
 }
