@@ -615,7 +615,8 @@ bool holy_weapon_proc(P_char ch, P_char victim)
     spell_cure_critic,  // 6
     spell_heal,         // 7
     spell_heal,         // 8
-    spell_full_heal     // 9
+    spell_full_heal,    // 9
+    spell_full_heal     // 10
   };
 
   if( !IS_ALIVE(ch) || !IS_FIGHTING(ch) || !(victim = ch->specials.fighting)
@@ -625,9 +626,10 @@ bool holy_weapon_proc(P_char ch, P_char victim)
   }
 
   // Level ranges from 0 to spells[].size - 2.
-  lvl = GET_LEVEL(ch) >= 54 ? 7 : (GET_LEVEL(ch) >= 50 ? 6 : (GET_LEVEL(ch) >= 40 ? 5 :
+  lvl = GET_LEVEL(ch) == 56 ? 8 :
+    (GET_LEVEL(ch) >= 53 ? 7 : (GET_LEVEL(ch) >= 50 ? 6 : (GET_LEVEL(ch) >= 40 ? 5 :
     (GET_LEVEL(ch) >= 30 ? 4 : (GET_LEVEL(ch) >= 20 ? 3 : (GET_LEVEL(ch) >= 15 ? 2 : 
-    (GET_LEVEL(ch) >= 10 ? 1 : 0))))));
+    (GET_LEVEL(ch) >= 10 ? 1 : 0)))))));
 
   // Add a bit of randomness.
   num = number(0, 2) + lvl;
