@@ -2301,7 +2301,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
     else if (keyword_no >= 10)
       keyword_no -= 4;
 
-    if( !IS_TRUSTED(ch) && (!EXIT(ch, keyword_no) || IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ILLUSION)) )
+    if( !EXIT(ch, keyword_no) || (!IS_TRUSTED(ch) && IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ILLUSION)) )
     {
       /* not a valid exit there */
       send_to_char("You see nothing special...\n", ch);
