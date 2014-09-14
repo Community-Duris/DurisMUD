@@ -1918,7 +1918,7 @@ P_char read_mobile(int nr, int type)
   int      foo, bar, i, j;
   long     tmp, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9;
   unsigned utmp1, utmp2, utmp3, utmp4, utmp5, utmp6, utmp7, utmp8, utmp9;
-  int      stmp, stmp3, stmp4;
+  int      stmp, stmp3, stmp4, level;
   static int idnum = 0;
 
   i = nr;
@@ -2139,11 +2139,11 @@ P_char read_mobile(int nr, int type)
     {
       logit(LOG_DEBUG, "Bad level %d for mob '%s' %d", tmp, J_NAME(mob), GET_VNUM(mob) );
       debug( "Bad level %d for mob '%s' %d", tmp, J_NAME(mob), GET_VNUM(mob) );
-      mob->player.level = (tmp > MAXLVL) ? MAXLVL : 1;
+      mob->player.level = level = (tmp > MAXLVL) ? MAXLVL : 1;
     }
     else
     {
-      mob->player.level = tmp;
+      mob->player.level = level = tmp;
     }
 #if defined(CTF_MUD) && (CTF_MUD == 1)
     if (!IS_SET(mob->specials.act, ACT_ELITE))
@@ -2197,12 +2197,12 @@ P_char read_mobile(int nr, int type)
     if (tmp2 <= 0 || tmp <= 0)
     {
       // mob->points.base_hit = tmp3;
-      mob->points.base_hit = tmp3 + mob->player.level * mob->player.level / 2;
+      mob->points.base_hit = tmp3 + level * level / 2;
     }
     else
     {
       // mob->points.base_hit = dice(tmp, tmp2) + tmp3;
-      mob->points.base_hit = dice(tmp, tmp2) + tmp3 + mob->player.level * mob->player.level / 2;
+      mob->points.base_hit = dice(tmp, tmp2) + tmp3 + level * level / 2;
     }
     mob->points.hit = mob->points.max_hit = mob->points.base_hit;
     if (mob->points.hit <= 0)
@@ -2210,13 +2210,12 @@ P_char read_mobile(int nr, int type)
             mob_index[nr].virtual_number, mob->points.hit);
 
     fscanf(mob_f, " %ldd%ld+%ld \n", &tmp, &tmp2, &tmp3);
-    mob->points.base_damroll = mob->points.damroll = tmp3;
+    mob->points.base_damroll = mob->points.damroll = tmp3 + level;
     mob->points.damnodice = tmp;
     mob->points.damsizedice = tmp2;
 
     fgets(buf, sizeof(buf) - 1, mob_f);
-    if (sscanf(buf, " %ld.%ld.%ld.%ld %ld", &tmp1, &tmp2, &tmp3, &tmp4, &tmp)
-        == 5)
+    if( sscanf(buf, " %ld.%ld.%ld.%ld %ld", &tmp1, &tmp2, &tmp3, &tmp4, &tmp) == 5 )
     {
       GET_PLATINUM(mob) = tmp4; /* * (number(50, 200) / 100); */
       GET_GOLD(mob) = tmp3;     /* * (number(50, 200) / 100); */
