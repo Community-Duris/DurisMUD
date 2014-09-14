@@ -2210,7 +2210,7 @@ P_char read_mobile(int nr, int type)
             mob_index[nr].virtual_number, mob->points.hit);
 
     fscanf(mob_f, " %ldd%ld+%ld \n", &tmp, &tmp2, &tmp3);
-    mob->points.base_damroll = mob->points.damroll = tmp3 + level;
+    mob->points.base_damroll = mob->points.damroll = tmp3 + level/2;
     mob->points.damnodice = tmp;
     mob->points.damsizedice = tmp2;
 
@@ -2562,7 +2562,7 @@ P_char read_mobile(int nr, int type)
 
     /* Set the damage as some standard 1d6 */
     fscanf(mob_f, " %ldd%ld+%ld %ld\n", &tmp, &tmp2, &tmp3, &tmp4);
-    mob->points.base_damroll = mob->points.damroll = tmp3;
+    mob->points.base_damroll = mob->points.damroll = tmp3 + level/2;
     mob->points.damnodice = tmp;
     mob->points.damsizedice = tmp2;
     /* was warping things.  Tempy fix til everything changes.  JAB */

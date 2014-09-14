@@ -389,7 +389,7 @@ void convertMob(P_char ch)
     damN += GET_LEVEL(ch) / 15;
   }
 
-  ch->points.base_damroll = ch->points.damroll = damA;
+  ch->points.base_damroll = ch->points.damroll = damA + GET_LEVEL(ch)/2;
   ch->points.damnodice = damN;
   ch->points.damsizedice = damS;
 
@@ -425,10 +425,10 @@ void convertMob(P_char ch)
 
   damN = MIN(damA, 90);
 
-  if (damA > damN)
+  if( damA > damN )
   {
     damA = damN;
-    ch->points.base_damroll = ch->points.damroll = damA / 3;
+    ch->points.base_damroll = ch->points.damroll = damA / 3 + GET_LEVEL(ch)/2;
     damA -= ch->points.base_damroll;
     ch->points.damsizedice = 7;
     ch->points.damnodice = MAX(1, damA / 4);
