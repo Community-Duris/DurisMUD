@@ -76,6 +76,8 @@ extern void reset_racial_skills(P_char ch);
 #define SETBIT_AFF              4
 #define SETBIT_ZONE             5
 #define SETBIT_SHIP             6
+#define SETBIT_MAX              6
+
 #define ac_shintCopy            ac_sh_intCopy
 #define ARRAY_SIZE(A)           (sizeof(A)/sizeof(*(A)))
 #define SAME_STRING(A, B)       ac_strcasecmp((A), (B))
@@ -117,8 +119,8 @@ static void setbit_ship(P_char, char *, char *, char *, int);
 
 /* Parse table routine */
 static void setbit_parseTable(P_char, void *, SetBitTable *, int, char *,
-    char *, int);
-static void setbit_syntax(P_char ch);
+    char *, int, int);
+static void setbit_syntax(P_char ch, int type);
 
 /* Syntax error */
 static void setbit_printOutTable(P_char ch, SetBitTable *, int size);
@@ -177,7 +179,7 @@ void do_setbit(P_char ch, char *arg, int cmd)
   }
   if (setbit_parse(arg, &type, name, flag, value, &on_off) == -1)
   {
-    setbit_syntax(ch);
+    setbit_syntax(ch, -1);
     return;
   }
 
@@ -344,8 +346,7 @@ static int setbit_parse(char *arg, int *type, char *name, char *flag,
  * modified: ** ** 1) zone ** 2) sector type ** 3) room flags ** 4) trap
  * level
  */
-static void setbit_room(P_char ch, char *name, char *flag, char *val,
-    int on_off)
+static void setbit_room(P_char ch, char *name, char *flag, char *val, int on_off)
 {
 
   /* Internal Macros */
@@ -376,10 +377,10 @@ static void setbit_room(P_char ch, char *name, char *flag, char *val,
 
   if (room_number < 0 || room_number > top_of_world)
   {
+    send_to_char( "Invalid room number.\n\r", ch );
     return;
   }
-  setbit_parseTable(ch, (void *) (world + room_number), table,
-      ARRAY_SIZE(table), flag, val, on_off);
+  setbit_parseTable(ch, (void *) (world + room_number), table, ARRAY_SIZE(table), flag, val, on_off, SETBIT_ROOM);
 
   room_light(room_number, REAL);
 }
@@ -389,12 +390,11 @@ static void setbit_room(P_char ch, char *name, char *flag, char *val,
  * modified: ** ** 1) zone ** 2) sector type ** 3) room flags ** 4) trap
  * level
  */
-static void setbit_zone(P_char ch, char *name, char *flag, char *val,
-    int on_off)
+static void setbit_zone(P_char ch, char *name, char *flag, char *val, int on_off)
 {
   if( GET_LEVEL(ch) < FORGER )
   {
-    return;    
+    return;
   }
 
   /* Internal Macros */
@@ -419,18 +419,17 @@ static void setbit_zone(P_char ch, char *name, char *flag, char *val,
     return;
   }
 
-  if (!strcmp(flag, "difficulty") && ( atoi(val) < 0 || atoi(val) > 10) )
+  if (!strcmp(flag, "difficulty") && ( atoi(val) < 0 || atoi(val) > 13) )
   {
-    send_to_char("Difficulty must be from 1 to 10\n", ch);
-    return;    
+    send_to_char("Difficulty must be from 1 to 13\n", ch);
+    return;
   }
 
   setbit_parseTable(ch, (void *) (zone_table + zone_id), table,
-      ARRAY_SIZE(table), flag, val, on_off);
+      ARRAY_SIZE(table), flag, val, on_off, SETBIT_ZONE);
 }
 
-static void setbit_char(P_char ch, char *name, char *flag, char *val,
-    int on_off)
+static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off)
 {
   /* Internal Macros */
 #undef  OFFSET
@@ -625,8 +624,7 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val,
       ppl->points.location_hit = NULL;
 #endif
 
-      setbit_parseTable(ch, (void *) ppl, table, ARRAY_SIZE(table), flag, val,
-          on_off);
+      setbit_parseTable(ch, (void *) ppl, table, ARRAY_SIZE(table), flag, val, on_off, SETBIT_CHAR);
 
       setCharPhysTypeInfo(ppl);
 
@@ -679,8 +677,7 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val,
       }
       else
       {
-        setbit_parseTable(ch, (void *) ppl->only.npc, table,
-            ARRAY_SIZE(table), flag, val, on_off);
+        setbit_parseTable(ch, (void *) ppl->only.npc, table, ARRAY_SIZE(table), flag, val, on_off, SETBIT_CHAR);
         return;
       }
     }
@@ -704,14 +701,12 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val,
       }
       else
       {
-        setbit_parseTable(ch, (void *) ppl->only.pc, table, ARRAY_SIZE(table),
-            flag, val, on_off);
+        setbit_parseTable(ch, (void *) ppl->only.pc, table, ARRAY_SIZE(table), flag, val, on_off, SETBIT_CHAR);
         return;
       }
     }
   }
-  setbit_parseTable(ch, (void *) ppl, table, ARRAY_SIZE(table), flag, val,
-      on_off);
+  setbit_parseTable(ch, (void *) ppl, table, ARRAY_SIZE(table), flag, val, on_off, SETBIT_CHAR);
 
   if (IS_NPC(ppl))
     set_npc_multi(ppl);
@@ -729,8 +724,7 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val,
   do_save_silent(ppl, 1);       /* to make it stick */
 }
 
-static void setbit_ship(P_char ch, char *name, char *flag, char *val,
-    int on_off)
+static void setbit_ship(P_char ch, char *name, char *flag, char *val, int on_off)
 {
   /* Internal Macros */
 
@@ -851,12 +845,10 @@ static void setbit_ship(P_char ch, char *name, char *flag, char *val,
     return;
   }
 
-  setbit_parseTable(ch, (void *) ship, table, ARRAY_SIZE(table), flag, val,
-      on_off);
+  setbit_parseTable(ch, (void *) ship, table, ARRAY_SIZE(table), flag, val, on_off, SETBIT_SHIP);
 }
 
-static void setbit_obj(P_char ch, char *name, char *flag, char *val,
-    int on_off)
+static void setbit_obj(P_char ch, char *name, char *flag, char *val, int on_off)
 {
   /* Internal Macros */
 
@@ -955,8 +947,7 @@ static void setbit_obj(P_char ch, char *name, char *flag, char *val,
   }
 #endif
 
-  setbit_parseTable(ch, (void *) obj, table, ARRAY_SIZE(table), flag, val,
-      on_off);
+  setbit_parseTable(ch, (void *) obj, table, ARRAY_SIZE(table), flag, val, on_off, SETBIT_OBJ);
 
   if (OBJ_WORN(obj))
   {
@@ -977,8 +968,7 @@ static void setbit_obj(P_char ch, char *name, char *flag, char *val,
  * setbit_room because this requires a pointer to a room_direction **
  * structure.
  */
-static void setbit_dir(P_char ch, char *name, char *flag, char *value,
-    int on_off)
+static void setbit_dir(P_char ch, char *name, char *flag, char *value, int on_off)
 {
 
   /* Internal Macros */
@@ -1052,6 +1042,7 @@ static void setbit_dir(P_char ch, char *name, char *flag, char *value,
 
   if (room_number < 0 || room_number > top_of_world)
   {
+    send_to_char("Invalid room number.\n\r", ch );
     return;
   }
   room = world + room_number;
@@ -1137,7 +1128,10 @@ static void setbit_dir(P_char ch, char *name, char *flag, char *value,
   }
 
   if (!where)
+  {
+    send_to_char( "Invalid direction.\n\r", ch );
     return;
+  }
 
   // convert a numerical from a vroom num to a real room num
   if (bIsSetRoom)
@@ -1156,15 +1150,13 @@ static void setbit_dir(P_char ch, char *name, char *flag, char *value,
     sprintf(value, "%d", room_number);
   }
 
-  setbit_parseTable(ch, (void *) where, table, ARRAY_SIZE(table), flag, value,
-      on_off);
+  setbit_parseTable(ch, (void *) where, table, ARRAY_SIZE(table), flag, value, on_off, SETBIT_DIR);
 }
 
 /*
  * ** Changes affect structure.
  */
-static void setbit_aff(P_char ch, char *name, char *flag, char *value,
-    int on_off)
+static void setbit_aff(P_char ch, char *name, char *flag, char *value, int on_off)
 {
   /*
    * Internal Macros
@@ -1267,8 +1259,7 @@ static void setbit_aff(P_char ch, char *name, char *flag, char *value,
     send_to_char("Affect number specified is too large.\r\n", ch);
     return;
   }
-  setbit_parseTable(ch, (void *) af, table, ARRAY_SIZE(table), flag, value,
-      on_off);
+  setbit_parseTable(ch, (void *) af, table, ARRAY_SIZE(table), flag, value, on_off, SETBIT_AFF);
 }
 
 /*
@@ -1278,7 +1269,7 @@ static void setbit_aff(P_char ch, char *name, char *flag, char *value,
  * not found, prints out valid string parsable by table and return.
  */
 static void setbit_parseTable(P_char ch, void *ptr, SetBitTable * table,
-    int size, char *flag, char *value, int on_off)
+    int size, char *flag, char *value, int on_off, int type)
 {
   int      i, bit;
   SetBitTable *entry;
@@ -1289,6 +1280,7 @@ static void setbit_parseTable(P_char ch, void *ptr, SetBitTable * table,
   if (i == size)
   {
     setbit_printOutTable(ch, table, size);
+    setbit_syntax(ch, type);
     return;
   }
   /* OK .. found entry -- If sb_subtable is not NULL, then, we */
@@ -1322,15 +1314,42 @@ static void setbit_parseTable(P_char ch, void *ptr, SetBitTable * table,
 }
 
 /* This function should be called when there is a high-level error. */
-static void setbit_syntax(P_char ch)
+static void setbit_syntax(P_char ch, int type)
 {
+  if( type < -1 || type > SETBIT_MAX )
+  {
+    send_to_char( "Invalid type!\n\r", ch);
+    type = -1;
+  }
   send_to_char("Usage:\r\n", ch);
-  send_to_char("setbit room room-number flag-type value [on|off]\r\n", ch);
-  send_to_char("setbit char name flag-type value [on|off]\r\n", ch);
-  send_to_char("setbit obj  name flag-type value [on|off]\r\n", ch);
-  send_to_char("setbit dir  room-number flag-type value [on|off]\r\n", ch);
-  send_to_char("setbit aff  name[aff-number] flag value [on|off|]\r\n", ch);
-  send_to_char("setbit h name\r\n", ch);
+  if( type == SETBIT_ROOM || type == -1 )
+  {
+    send_to_char("setbit room room-number flag-type value [on|off]\r\n", ch);
+  }
+  if( type == SETBIT_CHAR || type == -1 )
+  {
+    send_to_char("setbit char name flag-type value [on|off]\r\n", ch);
+  }
+  if( type == SETBIT_OBJ || type == -1 )
+  {
+    send_to_char("setbit obj name flag-type value [on|off]\r\n", ch);
+  }
+  if( type == SETBIT_DIR || type == -1 )
+  {
+    send_to_char("setbit dir room-number flag-type value\r\n", ch);
+  }
+  if( type == SETBIT_AFF || type == -1 )
+  {
+    send_to_char("setbit aff name[aff-number] flag value\r\n", ch);
+  }
+  if( type == SETBIT_ZONE || type == -1 )
+  {
+    send_to_char("setbit zone difficulty value\r\n", ch);
+  }
+  if( type == SETBIT_SHIP || type == -1 )
+  {
+    send_to_char("setbit ship name flag value\r\n", ch);
+  }
 }
 
 /* This function should be called when "flag" specified is unknown. */
@@ -1355,8 +1374,7 @@ static void setbit_printOutTable(P_char ch, SetBitTable * table, int size)
 }
 
 /* If specified is not in subtable, this function should be called. */
-static void setbit_printOutSubTable(P_char ch, char **subtable,
-    int entry_size)
+static void setbit_printOutSubTable(P_char ch, char **subtable, int entry_size)
 {
   int      i;
   char     buff[128];
@@ -1456,8 +1474,7 @@ MAKE_COPY_FUNCTION(sh_int) MAKE_COPY_FUNCTION(ubyte)
   /* Specifical copy functions */
   /* For age, we set only the year using by finding the difference
      between current MUD time and intended age.  */
-static void ac_ageCopy(void *where, int offset, char *value, int bit,
-    int on_off)
+static void ac_ageCopy(void *where, int offset, char *value, int bit, int on_off)
 {
   long     secs;
   time_t   curr_time = time(NULL);
@@ -1468,8 +1485,7 @@ static void ac_ageCopy(void *where, int offset, char *value, int bit,
 }
 
 /* Use on_off to determine whether to set/clr which bit */
-static void ac_bitCopy(void *where, int offset, char *value, int bit,
-    int on_off)
+static void ac_bitCopy(void *where, int offset, char *value, int bit, int on_off)
 {
   long     orig_bits;
 
@@ -1488,8 +1504,7 @@ static void ac_bitCopy(void *where, int offset, char *value, int bit,
   bcopy((char *) &orig_bits, (char *) where + offset, sizeof(orig_bits));
 }
 
-static void ac_idx2flagCopy(void *where, int offset, char *value, int bit,
-    int on_off)
+static void ac_idx2flagCopy(void *where, int offset, char *value, int bit, int on_off)
 {
   long     flag;
 
@@ -1497,8 +1512,7 @@ static void ac_idx2flagCopy(void *where, int offset, char *value, int bit,
   bcopy((char *) &flag, (char *) where + offset, sizeof(long));
 }
 
-static void ac_positionCopy(void *where, int offset, char *value, int bit,
-    int on_off)
+static void ac_positionCopy(void *where, int offset, char *value, int bit, int on_off)
 {
   P_char   ch = (P_char) where;
 
@@ -1508,8 +1522,7 @@ static void ac_positionCopy(void *where, int offset, char *value, int bit,
     SET_POS(ch, GET_POS(ch) + (1 << (bit - 2)));;
 }
 
-static void ac_tongueCopy(void *where, int offset, char *value, int bit,
-    int on_off)
+static void ac_tongueCopy(void *where, int offset, char *value, int bit, int on_off)
 {
   P_char   ch = (P_char) where;
 
@@ -1520,8 +1533,7 @@ static void ac_tongueCopy(void *where, int offset, char *value, int bit,
 /*
  * ** Saving throw is done by assuming value is in the form ** "A B C D E"
  */
-static void ac_savthrCopy(void *where, int offset, char *value, int bit,
-    int on_off)
+static void ac_savthrCopy(void *where, int offset, char *value, int bit, int on_off)
 {
   sh_int   sav_thr[5];
   P_char   ch = (P_char) where;
@@ -1537,8 +1549,7 @@ static void ac_savthrCopy(void *where, int offset, char *value, int bit,
  * ** For skill, "bit" is the actual skill number to practice - 1. ** And
  * "on_off" indicates how learn a skill is.
  */
-static void ac_skillCopy(void *where, int offset, char *value, int bit,
-    int on_off)
+static void ac_skillCopy(void *where, int offset, char *value, int bit, int on_off)
 {
   P_char   ch = (P_char) where;
   int      skl;
@@ -1556,8 +1567,7 @@ static void ac_skillCopy(void *where, int offset, char *value, int bit,
 /*
  * ** "Value" contains the string.
  */
-static void ac_stringCopy(void *where, int offset, char *value, int bit,
-    int on_off)
+static void ac_stringCopy(void *where, int offset, char *value, int bit, int on_off)
 {
   strcpy((char *) where + offset, value);
 }
@@ -1566,8 +1576,7 @@ static void ac_stringCopy(void *where, int offset, char *value, int bit,
  * ** "bit" is not really a bit to set, but rather, the value of **
  * location.
  */
-static void ac_objaffCopy(void *where, int offset, char *value, int bit,
-    int on_off)
+static void ac_objaffCopy(void *where, int offset, char *value, int bit, int on_off)
 {
   byte     location = (byte) bit;
 
@@ -1581,8 +1590,7 @@ static void ac_objaffCopy(void *where, int offset, char *value, int bit,
  * it will be ok.
  */
 
-static void ac_hitmanaCopy(void *where, int offset, char *value, int bit,
-    int on_off)
+static void ac_hitmanaCopy(void *where, int offset, char *value, int bit, int on_off)
 {
   P_char   ch = (P_char) where;
   sh_int   val;
