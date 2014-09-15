@@ -1423,28 +1423,47 @@ void epic_zone_erase_touch(int zone_number)
 
 bool epic_zone_done_now(int zone_number)
 {
-   for(vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
-             it != epic_zone_completions.end();
-             it++)
-   {
-      if((it->number == zone_number)) return true;
-   }
-   return false;
+  int count = 1;
+
+  // All this to set count to a value in zones.
+  if( qry("SELECT stonecount FROM zones WHERE number = %d", zone_number) )
+  {
+    MYSQL_RES *res = mysql_store_result(DB);
+    if( mysql_num_rows(res) >= 1 )
+    {
+      MYSQL_ROW row = mysql_fetch_row(res);
+      if( row )
+      {
+        count = atoi(row[0]);
+      }
+    }
+    mysql_free_result(res);
+  }
+
+  for( vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
+    it != epic_zone_completions.end(); it++ )
+  {
+    // Relys on lazy evaluation.
+    if( it->number == zone_number && --count <= 0 )
+    {
+      return TRUE;
+    }
+  }
+  return FALSE;
 }
 
 bool epic_zone_done(int zone_number)
 {
-   for(vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
-             it != epic_zone_completions.end();
-             it++)
+  for( vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
+    it != epic_zone_completions.end(); it++ )
    {
-      if((it->number == zone_number) && 
+      if((it->number == zone_number) &&
          (time(NULL) - it->done_at) > (int) get_property("epic.showCompleted.delaySecs", (15*60))) 
       {
-         return true;
+         return TRUE;
       }
    }
-   return false;
+   return FALSE;
 }
 
 int epic_zone_data::displayed_alignment() const 
