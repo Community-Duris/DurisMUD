@@ -3636,34 +3636,31 @@ void do_nchat(P_char ch, char *argument, int cmd)
   int      all = 0;
   char     Gbuf1[MAX_STRING_LENGTH];
   char     Gbuf2[MAX_STRING_LENGTH];
-  
-  if(!(ch) ||
-      !IS_ALIVE(ch))
+
+  if( !IS_ALIVE(ch) )
   {
     return;
   }
 
-  if(!IS_SET(ch->specials.act2, PLR2_NCHAT))
+  if( !IS_SET(ch->specials.act2, PLR2_NCHAT) )
   {
-    send_to_char
-      ("Newbie chat is turned off, type \"tog nchat\" to turn it on.\n", ch);
-
+    send_to_char("Newbie chat is turned off, type \"tog nchat\" to turn it on.\n", ch);
     return;
   }
 
-  if(IS_ILLITHID(ch) && !IS_TRUSTED(ch))
+  if( IS_ILLITHID(ch) && !IS_TRUSTED(ch) )
   {
     send_to_char("If you need this channel, you shouldn't be playing this character.\n", ch);
     return;
   }
 
-  if(IS_AFFECTED2(ch, AFF2_SILENCED))
+  if( IS_AFFECTED2(ch, AFF2_SILENCED) )
   {
     send_to_char("You move your lips, but no sound comes forth!\n", ch);
     return;
   }
 
-  if(is_silent(ch, TRUE))
+  if( is_silent(ch, TRUE) )
   {
     return;
   }
@@ -3676,25 +3673,23 @@ void do_nchat(P_char ch, char *argument, int cmd)
    return;
   }
 */
-  if(IS_DISGUISE_PC(ch) ||
-      IS_DISGUISE_ILLUSION(ch) ||
-      IS_DISGUISE_SHAPE(ch))
+  if( IS_DISGUISE_PC(ch) || IS_DISGUISE_ILLUSION(ch) || IS_DISGUISE_SHAPE(ch) )
   {
     send_to_char("&+WYou are not in your true shape!\r\n", ch);
     return;
-  }  
-  
-  while (*argument == ' ' && *argument != '\0')
-    argument++;
+  }
 
-  if(!*argument)
+  while (*argument == ' ' && *argument != '\0')
   {
-    send_to_char
-      ("Thats right nchat and then add something else, for example: \"nchat how do I kill things?\"\n",
-       ch);
+    argument++;
+  }
+
+  if( !*argument )
+  {
+    send_to_char("Thats right nchat and then add something else, for example: \"nchat how do I kill things?\"\n", ch);
     return;
   }
-  else if(ch->desc)
+  else if( ch->desc )
   {
 
     if(IS_TRUSTED(ch))
@@ -3718,14 +3713,12 @@ void do_nchat(P_char ch, char *argument, int cmd)
       }
       else
       {
-        send_to_char
-          ("&+YMake up your mind first which side do you want to help. Use nchat 'e', 'u', 'g' or 'a'. &n\n",
-           ch);
+        send_to_char("&+YMake up your mind first which side do you want to help. Use nchat 'e', 'u', 'g' or 'a'. &n\n", ch);
         return;
       }
       argument += 2;
 
-      if(all == 1)
+      if( all == 1 )
         sprintf(Gbuf2, "&+C*all* &n");
       else if(goodie == 1)
         sprintf(Gbuf2, "&+Wgoodie &n");
@@ -3737,8 +3730,7 @@ void do_nchat(P_char ch, char *argument, int cmd)
         sprintf(Gbuf2, "undefined ");
 
 
-      sprintf(Gbuf1, "&+mYou racewar chat to %s'&+w%s&n&+w'\n", Gbuf2,
-              argument);
+      sprintf(Gbuf1, "&+mYou racewar chat to %s'&+w%s&n&+w'\n", Gbuf2, argument);
       send_to_char(Gbuf1, ch, LOG_PRIVATE);
     }
     else if(IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch))
@@ -3752,53 +3744,64 @@ void do_nchat(P_char ch, char *argument, int cmd)
 
   if(!IS_TRUSTED(ch))
   {
-    if(RACE_GOOD(ch))
-      sprintf(Gbuf2, "&+Wgoodie&n");
+    if( RACE_GOOD(ch) )
+    {
+      sprintf(Gbuf2, "&+Wgood&n");
+    }
     else if(RACE_EVIL(ch))
+    {
       sprintf(Gbuf2, "&+Revil&n");
+    }
     else if(RACE_PUNDEAD(ch))
+    {
       sprintf(Gbuf2, "&+Lundead&n");
+    }
     else
-      sprintf(Gbuf2, "undefined");
+    {
+      sprintf(Gbuf2, "&-Rundefined&n");
+    }
   }
 
-  for (i = descriptor_list; i; i = i->next)
-
+  for( i = descriptor_list; i; i = i->next )
   {
-    if(i->connected)
+    if( i->connected )
+    {
       continue;
-    if(((racewar(ch, i->character) && !IS_TRUSTED(ch)) ||
-         (!all && evil && !RACE_EVIL(i->character)) ||
-         (!all && undead && !RACE_PUNDEAD(i->character)) ||
-         (!all && goodie && !RACE_GOOD(i->character))) ||
-         i->character == ch)
+    }
+    if( ((racewar(ch, i->character) && !IS_TRUSTED(ch)) || (!all && evil && !RACE_EVIL(i->character))
+      || (!all && undead && !RACE_PUNDEAD(i->character)) || (!all && goodie && !RACE_GOOD(i->character)))
+      || i->character == ch )
+    {
       continue;
-    if(!IS_SET(i->character->specials.act2, PLR2_NCHAT))
+    }
+    if( !IS_SET(i->character->specials.act2, PLR2_NCHAT) )
+    {
       continue;
-
-    if(IS_DISGUISE(i->character) ||
-       IS_DISGUISE_ILLUSION(i->character) ||
-       IS_DISGUISE_SHAPE(i->character))
+    }
+    if( i->character->only.pc->ignored == ch )
+    {
       continue;
-      
-    if(IS_TRUSTED(i->character))
+    }
+    if( IS_DISGUISE(i->character) || IS_DISGUISE_ILLUSION(i->character) || IS_DISGUISE_SHAPE(i->character) )
+    {
+      continue;
+    }
+    if( IS_TRUSTED(i->character) )
     {
       sprintf(Gbuf1, "&+W%s&n&+m racewar-chats &+w(%s&+w): '&+Y%s&n&+w'\n",
-              PERS(ch, i->character, FALSE), Gbuf2, language_CRYPT(ch,
-                                                                   i->
-                                                                   character,
-                                                                   argument));
+        PERS(ch, i->character, FALSE), Gbuf2, language_CRYPT(ch, i->character, argument));
     }
     else
     {
       sprintf(Gbuf1, "&+W%s&n&+m tells your racewar: &+w'&+Y%s&n&+w'\n",
-              PERS(ch, i->character, FALSE), language_CRYPT(ch, i->character,
-                                                            argument));
+        PERS(ch, i->character, FALSE), language_CRYPT(ch, i->character, argument));
     }
     send_to_char(Gbuf1, i->character, LOG_PRIVATE);
   }
-  if(get_property("logs.chat.status", 0.000) && IS_PC(ch))
+  if( get_property("logs.chat.status", 0.000) && IS_PC(ch) )
+  {
     logit(LOG_CHAT, "%s newb chat's (%s) '%s'", GET_NAME(ch), Gbuf2, argument);
+  }
 }
 
 void do_wizmsg(P_char ch, char *arg, int cmd)
