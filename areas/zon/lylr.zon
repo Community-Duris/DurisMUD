@@ -142,6 +142,7 @@ M 0 82215 1 82227 100 0 0 0        * Grandma
 E 1 82218 1 9 100 0 0 0            *   a pair of ragged gloves
 E 1 82219 1 16 100 0 0 0           *   a walking cane
 M 0 82224 1 82228 100 0 0 0        * Sakthris the banker
+O 0 132581 1 82228 100 0 0 0       * the counter
 M 0 82217 1 82230 100 0 0 0        * A prison guard
 G 1 82205 3 0 100 0 0 0            *    a pair of squirrel skin leggings
 M 0 82223 1 82234 100 0 0 0        * A bored guard
