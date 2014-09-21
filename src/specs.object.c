@@ -5162,15 +5162,15 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
            {
               if(alignment = 0)
               {
-                 act("Your $q &+Wglows &+was you slam the pommel into $N&+w,&L&+wknocking $M away from your ally!", FALSE, ch, obj, tch, TO_CHAR);
-                 act("$p &+Wglows &+was its pommel is slammed into $N&+w,&L&+wknocking $M away from YOU!", FALSE, vict, obj, tch, TO_CHAR);
-                 act("$n&+w's $q &+Wglows &+was its pommel smashes into you,&L&+wknocking you off-balance and back several steps!", FALSE, ch, obj, tch, TO_VICT);
+                 act("Your $q &+Wglows &+was you slam the pommel into $N&+w, &+wknocking $M away from your ally!", FALSE, ch, obj, tch, TO_CHAR);
+                 act("$p &+Wglows &+was its pommel is slammed into $N&+w, &+wknocking $M away from YOU!", FALSE, vict, obj, tch, TO_CHAR);
+                 act("$n&+w's $q &+Wglows &+was its pommel smashes into you, &+wknocking you off-balance and back several steps!", FALSE, ch, obj, tch, TO_VICT);
               }
               else
               {
-                 act("&+LYour $q &+Rglows &+Las you slam the pommel into $N&+L,&L&+Lknocking $M away from your ally!", FALSE, ch, obj, tch, TO_CHAR);
-                 act("$p &+Rglows &+Las its pommel is slammed into $N&+L,&L&+Lknocking $M away from YOU!", FALSE, vict, obj, tch, TO_CHAR);
-                 act("$n&+L's $q &+Rglows &+Las its pommel smashes into you,&L&+Lknocking you off-balance and back several steps!", FALSE, ch, obj, tch, TO_VICT);
+                 act("&+LYour $q &+Rglows &+Las you slam the pommel into $N&+L, &+Lknocking $M away from your ally!", FALSE, ch, obj, tch, TO_CHAR);
+                 act("$p &+Rglows &+Las its pommel is slammed into $N&+L, &+Lknocking $M away from YOU!", FALSE, vict, obj, tch, TO_CHAR);
+                 act("$n&+L's $q &+Rglows &+Las its pommel smashes into you, &+Lknocking you off-balance and back several steps!", FALSE, ch, obj, tch, TO_VICT);
               }
               if(vict->specials.fighting == tch)
                 stop_fighting(vict);
