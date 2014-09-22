@@ -439,7 +439,7 @@ void get_pkill_player_description(P_char ch, char *buffer)
 
   get_assoc_name(GET_A_NUM(ch), assoc_name);
 
-  sprintf(buffer, "[%02d %s&n] %s &n%s &n(%s&n)",
+  sprintf(buffer, "[%2d %s&n] %s &n%s &n(%s&n)",
                GET_LEVEL(ch), get_class_name(ch, ch), GET_NAME(ch), assoc_name, race_names_table[GET_RACE(ch)].ansi);
   
   logit(LOG_DEBUG, "%s", buffer);
