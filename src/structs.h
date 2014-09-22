@@ -861,7 +861,7 @@ struct room_data {
 #define PLR_NAMES        BIT_5  /* If on, player sees new player names   */
 #define PLR_PETITION     BIT_6  /* If on, player can buzz god            */
 #define PLR_GCC          BIT_7  /* If on, player hears gcc channel       */
-#define PLR_WIZLOG       BIT_8  /* For wizards. To recieve system msgs   */
+#define PLR_WIZLOG       BIT_8  /* For wizards. To receive system msgs   */
 #define PLR_STATUS       BIT_9  /* deaths, logon, logoff */
 #define PLR_MAP          BIT_10
 #define PLR_VICIOUS      BIT_11
