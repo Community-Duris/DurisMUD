@@ -2722,15 +2722,15 @@ void spell_innate_blast(int level, P_char ch, char *arg, int type,
 }
 
 
-void
-spell_radial_navigation(int level, P_char ch, char *arg, int type,
-                        P_char victim, P_obj tar_obj)
+void spell_radial_navigation(int level, P_char ch, char *arg, int type, P_char victim, P_obj tar_obj)
 {
-  char     arg1[MAX_STRING_LENGTH], arg2[MAX_STRING_LENGTH];
-  int      distance, i, dir, to_room, temp, curr_room;
+  char arg1[MAX_STRING_LENGTH], arg2[MAX_STRING_LENGTH];
+  int  distance, i, dir, to_room, temp, curr_room;
 
-  if (!ch)
+  if( !IS_ALIVE(ch) )
+  {
     return;
+  }
 
   argument_interpreter(arg, arg1, arg2);
 
@@ -2741,18 +2741,18 @@ spell_radial_navigation(int level, P_char ch, char *arg, int type,
  *   return;
  * }
 */
- 
- if (!arg1)
+
+  if( !arg1 )
   {
     send_to_char("You must specify a direction of travel: n,s,e,w\r\n", ch);
     return;
   }
-  if (!arg2)
+  if( !arg2 )
   {
     send_to_char("You must specify the distance you wish to travel.\r\n", ch);
     return;
   }
-  switch (*arg1)
+  switch( *arg1 )
   {
   case 'n':
     dir = 0;
@@ -2770,61 +2770,57 @@ spell_radial_navigation(int level, P_char ch, char *arg, int type,
     send_to_char("That is not a valid direction.\r\n", ch);
     return;
   }
-  if (!(is_number(arg2) && (distance = atoi(arg2))))
+  if( !(is_number(arg2) && (distance = atoi(arg2))) )
   {
     send_to_char("That is not a proper distance.\r\n", ch);
     return;
   }
-  if (distance > (GET_LEVEL(ch) + 10))
+  if( distance > (GET_LEVEL(ch) + 10) )
   {
     send_to_char("Your meager mentality cannot carry you that far!\r\n", ch);
     return;
   }
   to_room = ch->in_room;
   for (curr_room = 0; curr_room <= top_of_world; curr_room++)
-    BFSUNMARK(curr_room);
-  for (i = 0; i < distance; i++)
   {
-    if (!VALID_RADIAL_EDGE(to_room, dir))
+    BFSUNMARK(curr_room);
+  }
+  for( i = 0; i < distance; i++ )
+  {
+    if( !VALID_RADIAL_EDGE(to_room, dir) )
+    {
       break;
+    }
     to_room = TOROOM(to_room, dir);
   }
 
   temp = world[ch->in_room].sector_type;
-  if (!IS_TRUSTED(ch) &&
-      ((to_room == NOWHERE) || (to_room == ch->in_room) ||
-       !IS_MAP_ROOM(ch->in_room) || !IS_MAP_ROOM(to_room) ||
-       IS_SET(world[ch->in_room].room_flags, NO_TELEPORT) ||
-       IS_SET(world[to_room].room_flags, NO_TELEPORT) ||
-       (GET_MASTER(ch) && IS_PC(victim))))
+  if( !IS_TRUSTED(ch) && ((to_room == NOWHERE) || (to_room == ch->in_room)
+    || !IS_MAP_ROOM(ch->in_room) || !IS_MAP_ROOM(to_room)
+    || IS_SET(world[ch->in_room].room_flags, NO_TELEPORT)
+    || IS_SET(world[to_room].room_flags, NO_TELEPORT) || (GET_MASTER(ch) && IS_PC(victim))) )
   {
-    act
-      ("&+L$n's&+L outline begins to &n&+rvibrate&+L, then &+Bblur&+L.... then stabilize.&N",
+    act("&+L$n's&+L outline begins to &n&+rvibrate&+L, then &+Bblur&+L.... then stabilize.&N",
        TRUE, ch, 0, 0, TO_ROOM);
-    act("&+wYour will is not strong enough to carry you away.&n", TRUE, ch, 0,
-        0, TO_CHAR);
+    act("&+wYour will is not strong enough to carry you away.&n", TRUE, ch, 0, 0, TO_CHAR);
   }
   else
   {
-    act
-      ("&+L$n's&+L outline begins to &n&+rvibrate&+L, then &+Bblur&+L, then.....    disappear.&N",
-       TRUE, ch, 0, 0, TO_ROOM);
+    act("&+L$n's&+L outline begins to &n&+rvibrate&+L, then &+Bblur&+L, then.....    disappear.&N",
+      TRUE, ch, 0, 0, TO_ROOM);
     char_from_room(ch);
     char_to_room(ch, to_room, -1);
     send_to_char("&+LYou feel exhausted from the jaunt.&N\r\n", ch);
-    act
-      ("&+LFrom out of nowhere $n's&+L blurred form streaks into the room!&N",
-       TRUE, ch, 0, 0, TO_ROOM);
+    act("&+LFrom out of nowhere $n's&+L blurred form streaks into the room!&N",
+      TRUE, ch, 0, 0, TO_ROOM);
   }
 
   /* subtract mana regardless of success..  snif */
-
-  GET_MANA(ch) -= (distance * 2);
+  GET_MANA(ch) -= (distance * 3);
   CharWait(ch, 10);
 
   /* twould be best to add more to their knock out time if they're already knocked out, but f it */
-
-  if ((GET_MANA(ch) < 0) && !IS_AFFECTED(ch, AFF_KNOCKED_OUT))
+  if( (GET_MANA(ch) < 0) && !IS_AFFECTED(ch, AFF_KNOCKED_OUT) )
   {
     act("Exhausted, $n passes out!", FALSE, ch, 0, 0, TO_ROOM);
     send_to_char("Reserves exhausted, you pass out!\r\n", ch);
