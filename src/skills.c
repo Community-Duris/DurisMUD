@@ -879,8 +879,10 @@ void initialize_skills()
   SPELL_ADD(CLASS_PSIONICIST, 2);
   SPELL_ADD(CLASS_MINDFLAYER, 2);
 
-  SPELL_CREATE("mental anguish", SPELL_MENTAL_ANGUISH, PULSE_SPELLCAST / 2,
-                TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_CHAR_RANGE | TAR_AGGRO, spell_mental_anguish);
+  SPELL_CREATE_MSG("mental anguish", SPELL_MENTAL_ANGUISH, PULSE_SPELLCAST / 2,
+                TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_CHAR_RANGE | TAR_AGGRO,
+                spell_mental_anguish, "Your mind recovers from the assault.");
+  skills[SPELL_MENTAL_ANGUISH].wear_off_room[0] = "$n straightens up and begins fighting more confidently.";
   SPELL_ADD(CLASS_MINDFLAYER, 8);
 
   SPELL_CREATE("memory block", SPELL_MEMORY_BLOCK, PULSE_SPELLCAST,
