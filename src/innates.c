@@ -3543,9 +3543,8 @@ void do_stomp(P_char ch, char *arg, int cmd)
 
 void do_sweep(P_char ch, char *arg, int cmd)
 {
-  /*
-   * This could very well be expanded to include a char skill
-   */
+
+  // This could very well be expanded to include a char skill
   if( IS_PC(ch) )
   {
     send_to_char("You attempt a nifty martial-art move, and fall on your face.\n", ch);

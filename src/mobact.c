@@ -5332,89 +5332,82 @@ void StompAttack(P_char ch)
  * with) which will knock down several opponents (like bash), if they fail
  * a save against Dex (at -2) -JAB
  */
- 
 void SweepAttack(P_char ch)
 {
-  P_char   tch, tch_next, chMaster = NULL;
-  
-  if(!SanityCheck(ch, "SweepAttack"))
+  P_char tch, tch_next, chMaster;
+  int    chance;
+
+  if( !SanityCheck(ch, "SweepAttack") )
   {
     return;
   }
 
-  if (IS_PC_PET(ch))
+  // Get master (PC only).
+  if( (chMaster = GET_MASTER(ch)) && IS_NPC(chMaster) )
   {
-    chMaster = GET_MASTER(ch);
+    chMaster = NULL;
   }
-    
-  act("$n &=LWlashes&n out with $s mighty tail!",
-    0, ch, 0, 0, TO_ROOM);
 
-  for (tch = world[ch->in_room].people; tch; tch = tch_next)
+  if( IS_DRACOLICH(ch) )
+  {
+    act("$n &=LWlashes&n out with $s bony tail!", 0, ch, 0, 0, TO_ROOM);
+  }
+  else
+  {
+    act("$n &=LWlashes&n out with $s mighty tail!", 0, ch, 0, 0, TO_ROOM);
+  }
+
+  // Normally, Dracos would have chance = -5, but nerfing them some.
+  chance = IS_DRACOLICH(ch) ? 5 : GET_LEVEL(ch) / -10;
+
+  for( tch = world[ch->in_room].people; tch; tch = tch_next )
   {
     tch_next = tch->next_in_room;
 
-    if(!(tch))
+    if( !tch || tch == chMaster || tch == ch || IS_TRUSTED(tch) )
     {
       continue;
     }
-    
-    if (chMaster &&
-        !IS_FIGHTING(ch))
-    { 
-      if (tch == chMaster ||
-          tch == ch)
-      {
-        continue;
-      }
-    }
-    else if(!IS_PC(tch) &&
-            (!tch->following || IS_NPC(tch->following)) &&
-            (ch->specials.fighting != tch) &&
-            (tch->specials.fighting != ch))
+
+    // If not a PC pet, and NPC, and tch is not a PC pet, and they're not fighting eachother, skip.
+    if( !chMaster && IS_NPC(tch) && (!tch->following || IS_NPC(tch->following))
+      && (ch->specials.fighting != tch) && (tch->specials.fighting != ch))
     {
       continue;
     }
-    
-    if (IS_TRUSTED(tch))
+
+    // If they're not sweepable, skip.
+    if( IS_OP_GOLEM(tch) || IS_GH_GOLEM(tch) || IS_NEXUS_GUARDIAN(tch)
+      || IS_ELITE(tch) || IS_IMMATERIAL(tch) || IS_GREATER_RACE(tch)
+      || GET_POS(tch) != POS_STANDING )
     {
       continue;
     }
-    
-    if(IS_OP_GOLEM(tch) ||
-       IS_GH_GOLEM(tch) ||
-       IS_NEXUS_GUARDIAN(tch) || 
-       IS_ELITE(tch) || 
-       IS_IMMATERIAL(tch) ||
-       IS_GREATER_RACE(tch) ||
-       GET_POS(tch) != POS_STANDING)
+
+    // If they're grouped, skip
+    if( ch->group != NULL && ch->group == tch->group )
     {
       continue;
     }
-    
-    if(ch->group != NULL &&
-       ch->group == tch->group)
+
+    // If target is fighting sweeper or not fighting.  And target not a dragon.
+    if( ((IS_FIGHTING(tch) && (tch->specials.fighting == ch))
+      || !IS_FIGHTING(tch)) && !IS_DRAGON(tch) )
     {
-      continue;
-    }
-    
-    if(((IS_FIGHTING(tch) &&
-        (tch->specials.fighting == ch)) ||
-        !IS_FIGHTING(tch)) &&
-        !IS_DRAGON(tch))
-    {
-      if (!StatSave(tch, APPLY_AGI, (int) (-1 * GET_LEVEL(ch) / 10)))
+      if( !StatSave(tch, APPLY_AGI, chance) )
       {
         SET_POS(tch, POS_SITTING + GET_STAT(tch));
         CharWait(tch, PULSE_VIOLENCE * 2);
         act("&+yThe powerful sweep sends you crashing to the &+Lground!&n",
           FALSE, tch, 0, 0, TO_CHAR);
-        act("$n &+ycrashes to the &+Lground!&n",
-          FALSE, tch, 0, 0, TO_ROOM);
+        act("$n &+ycrashes to the &+Lground!&n", FALSE, tch, 0, 0, TO_ROOM);
 
-        damage(ch, tch,
-               dice(4, (GET_LEVEL(ch) / 2)),
-               TYPE_UNDEFINED);
+        damage(ch, tch, dice(4, MAX(1, GET_LEVEL(ch) / 4)), TYPE_UNDEFINED);
+        // Dracos hurt themselves via tailsweeps 15-25 damage (not very signifigant since they vamp tho).
+        if( IS_ALIVE(ch) && IS_DRACOLICH(ch) )
+        {
+          damage(tch, ch, dice(4, 11) + 56, TYPE_UNDEFINED);
+        }
       }
       else
       {
@@ -5422,7 +5415,7 @@ void SweepAttack(P_char ch)
         act("$N dodges your sweep.", 0, ch, 0, tch, TO_CHAR);
       }
     }
-    if (!char_in_list(ch))
+    if( !char_in_list(ch) )
     {
       return;
     }

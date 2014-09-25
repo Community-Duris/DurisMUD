@@ -2465,66 +2465,72 @@ bool aggressive_to_basic(P_char ch, P_char target)  // For exp checks
 
 
 /*
- * saving throws based on ch's stats, rather than magical saves.  Only DEX
- * is imped so far, but all stats can be done with this function.  'mod' is
+ * saving throws based on ch's stats, rather than magical saves.  Only DEX/AGI/INT
+ * are imped so far, but all stats can be done with this function.  'mod' is
  * only any additional modifiers, this routine checks for all 'normal' mods
  * to a stat-based save.  For simplicity, it uses the APPLY_* macros for 'stat'
  * JAB
  */
-
 bool StatSave(P_char ch, int stat, int mod)
 {
-  int      save_num;
+  int save_num;
 
-  if (!SanityCheck(ch, "StatSave"))
+  if( !SanityCheck(ch, "StatSave") )
+  {
     return FALSE;
+  }
 
   /*
    * change this when adding other stats
    */
-  if ((stat != APPLY_AGI) && (stat != APPLY_INT) &&
-      (stat != APPLY_POW) && (stat != APPLY_DEX) &&
-      (stat != APPLY_CON) && (stat != APPLY_WIS) &&
-      (stat != APPLY_STR))
-     return FALSE;
+  if( (stat != APPLY_AGI) && (stat != APPLY_INT) &&
+    (stat != APPLY_POW) && (stat != APPLY_DEX) &&
+    (stat != APPLY_CON) && (stat != APPLY_WIS) &&
+    (stat != APPLY_STR) )
+  {
+    return FALSE;
+  }
 
   switch (stat)
   {
     case APPLY_AGI:
       save_num = STAT_INDEX(GET_C_AGI(ch)) + mod;
 
-      if (!GET_CLASS(ch, CLASS_MONK))
+      if( !GET_CLASS(ch, CLASS_MONK) )
       {
-        if (IS_AFFECTED(ch, AFF_HASTE))
+        if( IS_AFFECTED(ch, AFF_HASTE) )
           save_num += 2;
 
-        if (IS_AFFECTED2(ch, AFF2_SLOW))
+        if( IS_AFFECTED2(ch, AFF2_SLOW) )
           save_num -= 2;
       }
 
-      /*
-       * those heavy loaded folks are less than nimble eh?
-       */
-      if (load_modifier(ch) > 299)
+      // Those heavy loaded folks are less than nimble eh?
+      if( load_modifier(ch) > 299 )
+      {
         save_num -= 3;
+      }
       else if (load_modifier(ch) > 199)
+      {
         save_num -= 2;
+      }
       else if (load_modifier(ch) > 99)
+      {
         save_num -= 1;
+      }
 
-      /*
-       * and let us penalize for being off balance eh?
-       */
-      if (IS_AFFECTED2(ch, AFF2_STUNNED))
+      // And let us penalize for being off balance eh?
+      if( IS_AFFECTED2(ch, AFF2_STUNNED) )
+      {
         save_num -= 3;
-
+      }
       save_num += GET_POS(ch) - 3;
 
-      /*
-       * there are a few bonuses
-      */
-      if (IS_AFFECTED(ch, AFF_FLY) || IS_AFFECTED(ch, AFF_LEVITATE))
+      // There are a few bonuses
+      if( IS_AFFECTED(ch, AFF_FLY) || IS_AFFECTED(ch, AFF_LEVITATE) )
+      {
         save_num += 1;
+      }
       break;
 
   case APPLY_DEX:
@@ -2580,6 +2586,7 @@ bool StatSave(P_char ch, int stat, int mod)
     break;
   }
 
+  // 1/21 chance to fail, always.. why not 1/20 chance?  Guess we're a little nicer than D&D.
   return (number(1, 21) < BOUNDED(1, save_num, 20));
 }
 

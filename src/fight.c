@@ -3698,8 +3698,7 @@ bool damage(P_char ch, P_char victim, double dam, int attacktype)
  *   replace SPLDAM_ prefix with something else, it may collide with constants
  *   for spells. SPLDAM, PHSDAM
  */
-int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
-    struct damage_messages *messages)
+int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, struct damage_messages *messages)
 {
   struct damage_messages dummy_messages;
   struct affected_type *af;
