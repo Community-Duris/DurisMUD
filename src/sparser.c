@@ -2322,6 +2322,10 @@ void do_cast(P_char ch, char *argument, int cmd)
   {
     dura >>= 1;
   }
+  else if( USES_MANA(ch) )
+  {
+    dura >>= 1;
+  }
 
   tmp_spl.timeleft = dura;
 // if( IS_PC(ch) ) debug( "Final cast time: %d.", tmp_spl.timeleft );

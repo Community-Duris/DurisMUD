@@ -795,29 +795,29 @@ void initialize_skills()
 
   SPEC_SPELL_ADD(CLASS_BARD, 9, SPEC_DISHARMONIST);
 
-  SPELL_CREATE("enrage", SPELL_ENRAGE, 1,
+  SPELL_CREATE("enrage", SPELL_ENRAGE, PULSE_SPELLCAST/2,
                 TAR_CHAR_ROOM + TAR_FIGHT_VICT | TAR_AGGRO, spell_enrage);
   SPELL_ADD(CLASS_MINDFLAYER, 9);
   SPELL_ADD(CLASS_PSIONICIST, 12);
 
-  SPELL_CREATE("excogitate", SPELL_EXCOGITATE, 1, TAR_CHAR_ROOM, spell_excogitate);
+  SPELL_CREATE("excogitate", SPELL_EXCOGITATE, PULSE_SPELLCAST/2, TAR_CHAR_ROOM, spell_excogitate);
   SPELL_ADD(CLASS_MINDFLAYER, 1);
   SPELL_ADD(CLASS_PSIONICIST, 1);
 
-  SPELL_CREATE("detonate", SPELL_DETONATE, PULSE_SPELLCAST * 1,
+  SPELL_CREATE("detonate", SPELL_DETONATE, (PULSE_SPELLCAST * 3) / 2,
                 TAR_CHAR_ROOM + TAR_FIGHT_VICT | TAR_AGGRO, spell_detonate);
-  SPELL_ADD(CLASS_PSIONICIST, 7);
   SPELL_ADD(CLASS_MINDFLAYER, 6);
+  SPELL_ADD(CLASS_PSIONICIST, 7);
 
-  SPELL_CREATE_MSG("fire aura", SPELL_FIRE_AURA, PULSE_SPELLCAST * 4,
+  SPELL_CREATE_MSG("fire aura", SPELL_FIRE_AURA, PULSE_SPELLCAST * 6,
                 TAR_SELF_ONLY | TAR_NOCOMBAT,
                 spell_fire_aura, "&+BYour &+rfiery aura &+Breturns to normal.&N");
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 12, SPEC_PYROKINETIC);
 
   SPELL_CREATE("ether warp", SPELL_ETHER_WARP, PULSE_SPELLCAST * 3,
                 TAR_CHAR_WORLD | TAR_NOCOMBAT, spell_ether_warp);
-  SPELL_ADD(CLASS_PSIONICIST, 9);
   SPELL_ADD(CLASS_MINDFLAYER, 7);
+  SPELL_ADD(CLASS_PSIONICIST, 9);
 
   SPELL_CREATE("ethereal rift", SPELL_ETHEREAL_RIFT, PULSE_SPELLCAST * 2,
                 TAR_CHAR_WORLD | TAR_NOCOMBAT, spell_ethereal_rift);
@@ -825,95 +825,95 @@ void initialize_skills()
 
   SPELL_CREATE("wormhole", SPELL_WORMHOLE, PULSE_SPELLCAST * 7,
                 TAR_CHAR_WORLD | TAR_NOCOMBAT, spell_wormhole);
-  SPELL_ADD(CLASS_PSIONICIST, 10);
   SPELL_ADD(CLASS_MINDFLAYER, 9);
+  SPELL_ADD(CLASS_PSIONICIST, 10);
 
-  SPELL_CREATE("thought beacon", SPELL_THOUGHT_BEACON, PULSE_SPELLCAST * 4,
+  SPELL_CREATE("thought beacon", SPELL_THOUGHT_BEACON, PULSE_SPELLCAST * 6,
                 TAR_IGNORE | TAR_NOCOMBAT, spell_thought_beacon);
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 12, SPEC_PSYCHEPORTER);
 
-  SPELL_CREATE("radial navigation", SPELL_RADIAL_NAV, PULSE_SPELLCAST * 2,
+  SPELL_CREATE("radial navigation", SPELL_RADIAL_NAV, PULSE_SPELLCAST * 3,
                 TAR_IGNORE | TAR_NOCOMBAT,
                 spell_radial_navigation);
   SPELL_ADD(CLASS_MINDFLAYER, 8);
 
-  SPELL_CREATE_MSG("molecular control", SPELL_MOLECULAR_CONTROL, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("molecular control", SPELL_MOLECULAR_CONTROL, PULSE_SPELLCAST*2,
                 TAR_SELF_ONLY | TAR_NOCOMBAT,
                 spell_molecular_control, "You lose control of your molecules.");
   SPELL_ADD(CLASS_MINDFLAYER, 4);
   SPELL_ADD(CLASS_PSIONICIST, 8);
 
-  SPELL_CREATE("molecular agitation", SPELL_MOLECULAR_AGITATION, PULSE_SPELLCAST * 2,
+  SPELL_CREATE("molecular agitation", SPELL_MOLECULAR_AGITATION, PULSE_SPELLCAST * 3,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                 spell_molecular_agitation);
-  SPELL_ADD(CLASS_PSIONICIST, 3);
   SPELL_ADD(CLASS_MINDFLAYER, 3);
+  SPELL_ADD(CLASS_PSIONICIST, 3);
 
-  SPELL_CREATE("spinal corruption", SPELL_SPINAL_CORRUPTION, PULSE_SPELLCAST,
+  SPELL_CREATE("spinal corruption", SPELL_SPINAL_CORRUPTION, PULSE_SPELLCAST*3,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                 spell_spinal_corruption);
   SPELL_ADD(CLASS_MINDFLAYER, 12);
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 12, SPEC_ENSLAVER);
 
-  SPELL_CREATE_MSG("adrenaline control", SPELL_ADRENALINE_CONTROL, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("adrenaline control", SPELL_ADRENALINE_CONTROL, PULSE_SPELLCAST*2,
                 TAR_SELF_ONLY,
                 spell_adrenaline_control, "&+rYour rush of adrenaline runs dry.&n");
-  SPELL_ADD(CLASS_PSIONICIST, 1);
   SPELL_ADD(CLASS_MINDFLAYER, 1);
+  SPELL_ADD(CLASS_PSIONICIST, 1);
 
-  SPELL_CREATE_MSG("aura sight", SPELL_AURA_SIGHT, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("aura sight", SPELL_AURA_SIGHT, PULSE_SPELLCAST*2,
                 TAR_SELF_ONLY,
                 spell_aura_sight, "&+CThe auras in your vision disappear.&n");
-  SPELL_ADD(CLASS_PSIONICIST, 3);
   SPELL_ADD(CLASS_MINDFLAYER, 3);
+  SPELL_ADD(CLASS_PSIONICIST, 3);
 
-  SPELL_CREATE_MSG("awe", SPELL_AWE, PULSE_SPELLCAST * 2,
+  SPELL_CREATE_MSG("awe", SPELL_AWE, PULSE_SPELLCAST * 4,
                 TAR_CHAR_ROOM,
                 spell_awe, "You regain your senses.");
   SPELL_ADD(CLASS_MINDFLAYER, 4);
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 6, SPEC_ENSLAVER);
 
-  SPELL_CREATE("ballistic attack", SPELL_BALLISTIC_ATTACK, PULSE_SPELLCAST,
+  SPELL_CREATE("ballistic attack", SPELL_BALLISTIC_ATTACK, PULSE_SPELLCAST*2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_CHAR_RANGE | TAR_AGGRO,
                 spell_ballistic_attack);
-  SPELL_ADD(CLASS_PSIONICIST, 2);
   SPELL_ADD(CLASS_MINDFLAYER, 2);
+  SPELL_ADD(CLASS_PSIONICIST, 2);
 
-  SPELL_CREATE_MSG("mental anguish", SPELL_MENTAL_ANGUISH, PULSE_SPELLCAST / 2,
+  SPELL_CREATE_MSG("mental anguish", SPELL_MENTAL_ANGUISH, PULSE_SPELLCAST/2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_CHAR_RANGE | TAR_AGGRO,
                 spell_mental_anguish, "Your mind recovers from the assault.");
   skills[SPELL_MENTAL_ANGUISH].wear_off_room[0] = "$n straightens up and begins fighting more confidently.";
   SPELL_ADD(CLASS_MINDFLAYER, 8);
 
-  SPELL_CREATE("memory block", SPELL_MEMORY_BLOCK, PULSE_SPELLCAST,
+  SPELL_CREATE("memory block", SPELL_MEMORY_BLOCK, PULSE_SPELLCAST*2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_CHAR_RANGE | TAR_AGGRO, spell_memory_block);
   SPELL_ADD(CLASS_MINDFLAYER, 9);
 
-  SPELL_CREATE_MSG("biofeedback", SPELL_BIOFEEDBACK, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("biofeedback", SPELL_BIOFEEDBACK, (PULSE_SPELLCAST * 5)/2,
                 TAR_SELF_ONLY,
                 spell_biofeedback, "&+GThe green mist around your body fades.&n");
   SPELL_ADD(CLASS_MINDFLAYER, 7);
   SPELL_ADD(CLASS_PSIONICIST, 11);
 
-  SPELL_CREATE_MSG("displacement", SPELL_DISPLACEMENT, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("displacement", SPELL_DISPLACEMENT, PULSE_SPELLCAST*2,
                 TAR_SELF_ONLY,
                 spell_displacement, "&+WYour body shifts back into this space-time.&n");
   SPELL_ADD(CLASS_MINDFLAYER, 8);
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 9, SPEC_PSYCHEPORTER);
 
-  SPELL_CREATE("cell adjustment", SPELL_CELL_ADJUSTMENT, PULSE_SPELLCAST,
+  SPELL_CREATE("cell adjustment", SPELL_CELL_ADJUSTMENT, PULSE_SPELLCAST*2,
                 TAR_SELF_ONLY,
                 spell_cell_adjustment);
   SPELL_ADD(CLASS_MINDFLAYER, 2);
   SPELL_ADD(CLASS_PSIONICIST, 6);
 
-  SPELL_CREATE_MSG("combat mind", SPELL_COMBAT_MIND, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("combat mind", SPELL_COMBAT_MIND, PULSE_SPELLCAST*2,
                 TAR_SELF_ONLY,
                 spell_combat_mind, "You forget your battle tactics.");
+  SPELL_ADD(CLASS_MINDFLAYER, 1);
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 1, SPEC_PSYCHEPORTER);
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 1, SPEC_ENSLAVER);
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 1, SPEC_PYROKINETIC);
-  SPELL_ADD(CLASS_MINDFLAYER, 1);
 
 /* what the hell is this? -Zod */
 /* a fun joke! -Tavril */
@@ -921,7 +921,7 @@ void initialize_skills()
     //            TAR_SELF_ONLY, spell_ego_blast);
   //SPELL_ADD(CLASS_PSIONICIST, 12);
 
-  SPELL_CREATE("ego blast", SPELL_EGO_BLAST, PULSE_SPELLCAST * 1,
+  SPELL_CREATE("ego blast", SPELL_EGO_BLAST, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO, spell_ego_blast);
   SPELL_ADD(CLASS_PSIONICIST, 4);
 
@@ -930,78 +930,78 @@ void initialize_skills()
 
 
 
-  SPELL_CREATE("create sound", SPELL_CREATE_SOUND, PULSE_SPELLCAST,
+  SPELL_CREATE("create sound", SPELL_CREATE_SOUND, PULSE_SPELLCAST*2,
                 TAR_IGNORE, spell_create_sound);
-  SPELL_ADD(CLASS_PSIONICIST, 6);
   SPELL_ADD(CLASS_MINDFLAYER, 2);
+  SPELL_ADD(CLASS_PSIONICIST, 6);
 
   SPELL_CREATE("death field", SPELL_DEATH_FIELD, PULSE_SPELLCAST * 3,
                 TAR_AREA | TAR_OFFAREA, spell_death_field);
-  SPELL_ADD(CLASS_PSIONICIST, 10);
   SPELL_ADD(CLASS_MINDFLAYER, 10);
+  SPELL_ADD(CLASS_PSIONICIST, 10);
 
-  SPELL_CREATE("psionic cloud", SPELL_PSIONIC_CLOUD, PULSE_SPELLCAST,
+  SPELL_CREATE("psionic cloud", SPELL_PSIONIC_CLOUD, PULSE_SPELLCAST * 2,
                 TAR_OFFAREA | TAR_AREA, spell_psionic_cloud);
   SPELL_ADD(CLASS_MINDFLAYER, 10);
-  SPELL_CREATE("ectoplasmic form", SPELL_ECTOPLASMIC_FORM, PULSE_SPELLCAST,
+
+  SPELL_CREATE("ectoplasmic form", SPELL_ECTOPLASMIC_FORM, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY,
                 spell_ectoplasmic_form);
-  SPELL_ADD(CLASS_PSIONICIST, 8);
   SPELL_ADD(CLASS_MINDFLAYER, 6);
+  SPELL_ADD(CLASS_PSIONICIST, 8);
 
-  SPELL_CREATE("ego whip", SPELL_EGO_WHIP, PULSE_SPELLCAST,
+  SPELL_CREATE("ego whip", SPELL_EGO_WHIP, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_CHAR_RANGE | TAR_AGGRO, spell_ego_whip);
-  SPELL_ADD(CLASS_PSIONICIST, 1);
   SPELL_ADD(CLASS_MINDFLAYER, 1);
-  
+  SPELL_ADD(CLASS_PSIONICIST, 1);
+
   SPELL_CREATE("psionic wave blast", SPELL_PSIONIC_WAVE_BLAST, PULSE_SPELLCAST,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_CHAR_RANGE | TAR_AGGRO, spell_psionic_wave_blast);
-  
   // SPELL_ADD(CLASS_PSIONICIST, 11);
   // SPELL_ADD(CLASS_MINDFLAYER, 11);
-  
-  SPELL_CREATE_MSG("energy containment", SPELL_ENERGY_CONTAINMENT, PULSE_SPELLCAST,
+
+  SPELL_CREATE_MSG("energy containment", SPELL_ENERGY_CONTAINMENT, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY,
                 spell_energy_containment, "&+YYou can no longer absorb energy.&n");
-  SPELL_ADD(CLASS_PSIONICIST, 4);
   SPELL_ADD(CLASS_MINDFLAYER, 4);
+  SPELL_ADD(CLASS_PSIONICIST, 4);
 
-  SPELL_CREATE_MSG("enhance armor", SPELL_ENHANCE_ARMOR, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("enhance armor", SPELL_ENHANCE_ARMOR, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY,
                 spell_enhance_armor, "&+BThe psionic armor around you fades.&n");
   SPELL_ADD(CLASS_MINDFLAYER, 6);
 
-  SPELL_CREATE_MSG("enhance strength", SPELL_ENHANCED_STR, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("enhance strength", SPELL_ENHANCED_STR, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY | TAR_NOCOMBAT,
                 spell_enhanced_strength, "&+CYour muscles return to normal.&n");
-  SPELL_ADD(CLASS_PSIONICIST, 2);
   SPELL_ADD(CLASS_MINDFLAYER, 2);
+  SPELL_ADD(CLASS_PSIONICIST, 2);
 
-  SPELL_CREATE_MSG("enhance dexterity", SPELL_ENHANCED_DEX, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("enhance dexterity", SPELL_ENHANCED_DEX, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY | TAR_NOCOMBAT,
                 spell_enhanced_dexterity, "&+yYour coordination decreases.&n");
-  SPELL_ADD(CLASS_PSIONICIST, 2);
   SPELL_ADD(CLASS_MINDFLAYER, 2);
+  SPELL_ADD(CLASS_PSIONICIST, 2);
 
-  SPELL_CREATE_MSG("enhance agility", SPELL_ENHANCED_AGI, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("enhance agility", SPELL_ENHANCED_AGI, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY | TAR_NOCOMBAT,
                 spell_enhanced_agility, "&+CYou feel a bit more clumsy.&n");
-  SPELL_ADD(CLASS_PSIONICIST, 2);
   SPELL_ADD(CLASS_MINDFLAYER, 2);
+  SPELL_ADD(CLASS_PSIONICIST, 2);
 
-  SPELL_CREATE_MSG("enhance constitution", SPELL_ENHANCED_CON, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("enhance constitution", SPELL_ENHANCED_CON, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY | TAR_NOCOMBAT,
                 spell_enhanced_constitution, "&+YYour vitality drains away.&n");
-  SPELL_ADD(CLASS_PSIONICIST, 2);
   SPELL_ADD(CLASS_MINDFLAYER, 2);
+  SPELL_ADD(CLASS_PSIONICIST, 2);
 
-  SPELL_CREATE_MSG("flesh armor", SPELL_FLESH_ARMOR, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("flesh armor", SPELL_FLESH_ARMOR, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY,
                 spell_flesh_armor, "&+rYour flesh softens.&n");
-  SPELL_ADD(CLASS_PSIONICIST, 4);
   SPELL_ADD(CLASS_MINDFLAYER, 5);
+  SPELL_ADD(CLASS_PSIONICIST, 4);
 
-  SPELL_CREATE_MSG("inertial barrier", SPELL_INERTIAL_BARRIER, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("inertial barrier", SPELL_INERTIAL_BARRIER, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY,
                 spell_inertial_barrier, "Your &+Winertial barrier&n fades away.");
   SPELL_ADD(CLASS_MINDFLAYER, 7);
@@ -1009,73 +1009,73 @@ void initialize_skills()
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 8, SPEC_ENSLAVER);
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 8, SPEC_PYROKINETIC);
 
-  SPELL_CREATE("inflict pain", SPELL_INFLICT_PAIN, PULSE_SPELLCAST * 1,
+  SPELL_CREATE("inflict pain", SPELL_INFLICT_PAIN, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO, spell_inflict_pain);
-  SPELL_ADD(CLASS_PSIONICIST, 5);
   SPELL_ADD(CLASS_MINDFLAYER, 5);
+  SPELL_ADD(CLASS_PSIONICIST, 5);
 
-  SPELL_CREATE_MSG("intellect fortress", SPELL_INTELLECT_FORTRESS, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("intellect fortress", SPELL_INTELLECT_FORTRESS, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY,
                 spell_intellect_fortress, "&+yYour virtual fortress crumbles.&n");
-  SPELL_ADD(CLASS_PSIONICIST, 6);
   SPELL_ADD(CLASS_MINDFLAYER, 5);
+  SPELL_ADD(CLASS_PSIONICIST, 6);
 
-  SPELL_CREATE("lend health", SPELL_LEND_HEALTH, PULSE_SPELLCAST,
+  SPELL_CREATE("lend health", SPELL_LEND_HEALTH, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_NOCOMBAT, spell_lend_health);
-  SPELL_ADD(CLASS_PSIONICIST, 3);
   SPELL_ADD(CLASS_MINDFLAYER, 3);
+  SPELL_ADD(CLASS_PSIONICIST, 3);
 
 
-  SPELL_CREATE_MSG("flight", SPELL_POWERCAST_FLY, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("flight", SPELL_POWERCAST_FLY, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY,
                 spell_fly, "&+CYour feet slowly descend to the ground.&n");
-  SPELL_ADD(CLASS_PSIONICIST, 6);
   SPELL_ADD(CLASS_MINDFLAYER, 5);
+  SPELL_ADD(CLASS_PSIONICIST, 6);
 
-  SPELL_CREATE("confuse", SPELL_CONFUSE, PULSE_SPELLCAST * 2,
+  SPELL_CREATE("confuse", SPELL_CONFUSE, PULSE_SPELLCAST * 4,
                 TAR_AREA | TAR_AGGRO, spell_confuse);
   SPELL_ADD(CLASS_MINDFLAYER, 9);
-  SPEC_SPELL_ADD(CLASS_PSIONICIST, 12, 1);
+  SPEC_SPELL_ADD(CLASS_PSIONICIST, 12, SPEC_PYROKINETIC);
 
 
-  SPELL_CREATE_MSG("mind blank", SPELL_MIND_BLANK, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("mind blank", SPELL_MIND_BLANK, PULSE_SPELLCAST * 8,
                 TAR_SELF_ONLY,
                 spell_mind_blank, "&+YYour mind is not as concealed anymore!&N");
   SPELL_ADD(CLASS_MINDFLAYER, 12);
 
-  SPELL_CREATE_MSG("psychic crush", SPELL_PSYCHIC_CRUSH, PULSE_SPELLCAST * 1,
+  SPELL_CREATE_MSG("psychic crush", SPELL_PSYCHIC_CRUSH, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM + TAR_FIGHT_VICT | TAR_AGGRO,
 				spell_psychic_crush, "&+MYou feel your mind recover from the assault.&n");
   SPELL_ADD(CLASS_PSIONICIST, 9);
 
-  SPELL_CREATE_MSG("pyrokinesis", SPELL_PYROKINESIS, PULSE_SPELLCAST * 1,
+  SPELL_CREATE_MSG("pyrokinesis", SPELL_PYROKINESIS, PULSE_SPELLCAST * 3,
                 TAR_CHAR_ROOM + TAR_FIGHT_VICT | TAR_AGGRO,
 				spell_pyrokinesis, "&+MYou feel your body recover from the heat.&n");
   //SPELL_ADD(CLASS_PSIONICIST, 11);
-  SPEC_SPELL_ADD(CLASS_PSIONICIST, 11, 1);
+  SPEC_SPELL_ADD(CLASS_PSIONICIST, 11, SPEC_PYROKINETIC);
 
-  SPELL_CREATE_MSG("cannibalize", SPELL_CANNIBALIZE, PULSE_SPELLCAST,
+  SPELL_CREATE_MSG("cannibalize", SPELL_CANNIBALIZE, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY,
                 spell_cannibalize, "&+YYou can no longer drain your victim!&N");
-    SPEC_SPELL_ADD(CLASS_PSIONICIST, 8, SPEC_PSYCHEPORTER);
+  SPELL_ADD(CLASS_MINDFLAYER, 7);
+  SPEC_SPELL_ADD(CLASS_PSIONICIST, 8, SPEC_PSYCHEPORTER);
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 8, SPEC_ENSLAVER);
   SPEC_SPELL_ADD(CLASS_PSIONICIST, 8, SPEC_PYROKINETIC);
-  SPELL_ADD(CLASS_MINDFLAYER, 7);
 
 /* Removed
   SPELL_CREATE("sight link", SPELL_SIGHT_LINK, PULSE_SPELLCAST * 2,
                 TAR_CHAR_WORLD | TAR_SELF_NONO | TAR_NOCOMBAT, spell_sight_link);
   SPELL_ADD(CLASS_MINDFLAYER, 11);
 */
-  SPELL_CREATE("mind travel", SPELL_MIND_TRAVEL, PULSE_SPELLCAST * 4,
+  SPELL_CREATE("mind travel", SPELL_MIND_TRAVEL, PULSE_SPELLCAST * 6,
                 TAR_SELF_ONLY | TAR_NOCOMBAT, spell_mind_travel);
   SPELL_ADD(CLASS_MINDFLAYER, 11);
 
-  SPELL_CREATE_MSG("tower of iron will", SPELL_TOWER_IRON_WILL, PULSE_SPELLCAST * 2,
+  SPELL_CREATE_MSG("tower of iron will", SPELL_TOWER_IRON_WILL, PULSE_SPELLCAST * 4,
                 TAR_SELF_ONLY,
                 spell_tower_iron_will, "&+YYou just lost your tower of iron will!&N");
-  SPELL_ADD(CLASS_PSIONICIST, 7);
   SPELL_ADD(CLASS_MINDFLAYER, 7);
+  SPELL_ADD(CLASS_PSIONICIST, 7);
 
   SPELL_CREATE("celerity", SPELL_CELERITY, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY | TAR_NOCOMBAT, spell_celerity);
