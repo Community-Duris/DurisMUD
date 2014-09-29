@@ -165,22 +165,22 @@ int epic_random_task_zone(P_char ch)
 void epic_choose_new_epic_task(P_char ch)
 {
   char buffer[512];
-  int zone_number = -1;
   P_obj nexus;
+  struct affected_type af, *afp;
+  int zone_number = -1;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch))
+  if( !IS_ALIVE(ch) )
   {
     return;
   }
-  
-  struct affected_type af, *afp;
+
   memset(&af, 0, sizeof(af));
   af.type = TAG_EPIC_ERRAND;
   af.flags = AFFTYPE_STORE | AFFTYPE_PERM;
   af.duration = -1;
 
-  if(number(0, 10))
+  // Now a 5% chance to get spill blood down from 9%.
+  if( number(0, 19) )
   {
     zone_number = epic_random_task_zone(ch);
   }
@@ -189,7 +189,7 @@ void epic_choose_new_epic_task(P_char ch)
 
   //zone_number = epic_random_task_zone(ch);
 
-  if(zone_number < 0)
+  if( zone_number < 0 )
   {
    /* nexus = get_random_enemy_nexus(ch);
     if((number(0, 100) < 50) && (GET_LEVEL(ch) >= 51) && nexus)
@@ -474,6 +474,8 @@ void gain_epic(P_char ch, int type, int data, int amount)
 */
   if( (afp->modifier - amount) / errand_notch < afp->modifier / errand_notch && !has_epic_task(ch))
   {
+    debug( "%s got new task: old epics: %d, new epics: %d.", J_NAME(ch), afp->modifier - amount, afp->modifier );
+    logit(LOG_EPIC, "%s got new task: old epics: %d, new epics: %d.", J_NAME(ch), afp->modifier - amount, afp->modifier );
     epic_choose_new_epic_task(ch);
   }
 
