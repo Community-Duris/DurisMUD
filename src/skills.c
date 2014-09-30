@@ -738,13 +738,13 @@ void initialize_skills()
 
   SPEC_SPELL_ADD(CLASS_DRUID, 9, SPEC_STORM);
 
-  SPELL_CREATE_MSG("blood to stone", SPELL_BLOODTOSTONE, PULSE_SPELLCAST * 1,
+  SPELL_CREATE_MSG("blood to stone", SPELL_BLOODTOSTONE, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                 cast_bloodstone, "Your blood flows normally again.");
   SPEC_SPELL_ADD(CLASS_DRUID, 11, SPEC_STORM);
   SPEC_SPELL_ADD(CLASS_BLIGHTER, 11, SPEC_STORMBRINGER);
 
-  SPELL_CREATE_MSG("waves of fatigue", SPELL_WAVES_FATIGUE, (PULSE_SPELLCAST * 3) / 2,
+  SPELL_CREATE_MSG("waves of fatigue", SPELL_WAVES_FATIGUE, PULSE_SPELLCAST * 4,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                 spell_waves_fatigue, "You feel like moving again.");
   SPELL_ADD( CLASS_BLIGHTER, 6 );

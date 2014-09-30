@@ -2725,51 +2725,45 @@ void cast_storm_shield(int level, P_char ch, char *arg, int type,
 
 void cast_bloodstone(int level, P_char ch, char *arg, int type, P_char victim, P_obj tar_obj)
 {
-  int random = number(0, 4);
-
   struct affected_type af;
-  bzero(&af, sizeof(af));
 
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim) ||
-     ch == victim)
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
   {
     return;
   }
 
-  if(resists_spell(ch, victim))
+  if( resists_spell(ch, victim) )
   {
     return;
   }
 
- /* if(NewSaves(victim, SAVING_PARA, 5))
-  {
-    return;
-  } This now uses percent of health to determine duration - save is not needed. Drannak */
-  
-
-  float duration = ((float)GET_HIT(victim) / (float)GET_MAX_HIT(victim));
-  debug("duration %f", duration);
-  duration = 1 - duration;
-  debug("duration %f", duration);
-  duration *= 100;
-  debug("duration %f", duration);
-  int dur = duration;
-  debug("duration: %f, dur: %d", duration, dur);  
-  if (affected_by_spell(victim, SPELL_BLOODTOSTONE))
+  if( affected_by_spell(victim, SPELL_BLOODTOSTONE) )
   {
     send_to_char("Their blood is already made of stone!\n", ch);
     return;
   }
 
-  af.type = SPELL_BLOODTOSTONE;
 
-  GET_VITALITY(victim) -= 2;
+  // Calculate % health missing.
+  float duration = GET_HIT(victim) * 1.0 / GET_MAX_HIT(victim);
+  debug("blood to stone: duration %f", duration);
+  duration = 1 - duration;
+  duration *= 100;
+  duration = MAX( level, duration );
+  // Lasts % health missing seconds, or level seconds, whichever is more.
+  int dur = duration;
+  if( NewSaves(victim, SAVING_PARA, 5) )
+  {
+    dur /= 2;
+  }
+  debug("blood to stone: duration: %f, dur: %d", duration, dur);
+
+  GET_VITALITY(victim) -= 3;
   StartRegen(victim, EVENT_MOVE_REGEN);
 
-  af.duration = dur;
+  bzero(&af, sizeof(af));
+  af.type = SPELL_BLOODTOSTONE;
+  af.duration = MAX( WAIT_SEC, dur * WAIT_SEC );
   af.flags = AFFTYPE_SHORT | AFFTYPE_NODISPEL;
   affect_to_char(victim, &af);
 

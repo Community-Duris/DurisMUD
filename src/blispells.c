@@ -405,17 +405,39 @@ void event_waves_fatigue(P_char ch, P_char victim, P_obj obj, void *data)
   }
 }
 
+extern struct link_description link_types[];
 // Target spell.
 // Create 3 waves (2 events) that sap moves.
 void spell_waves_fatigue(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
+  int      moves;
+  P_nevent e;
+  char_link_data *link;
+
   if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
   {
     return;
   }
 
+  // If victim is already suffering..
+  // Look through all links where victim is a slave.
+  for( link = victim->linked; link; link = link->next_linked )
+  {
+    // Look through master's events for the waves_fatigue event.
+    for( e = link->linking->nevents; e; e = e->next )
+    {
+      // If master has a waves of fatigue event on victim already..
+      if( e->func == event_waves_fatigue && e->victim == victim )
+      {
+        act("&+Y$N&+Y already looks tired.&n", FALSE, ch, 0, victim, TO_CHAR );
+        act("&+YYou begin sweating, but don't feel any worse.&n", FALSE, NULL, 0, victim, TO_VICT);
+        return;
+      }
+    }
+  }
+
   // moves: level / 4 -> 10 - 16 @ 56 * 3 waves = 30 - 48.
-  int moves = GET_LEVEL(ch)/4 + number( -4, 2);
+  moves = GET_LEVEL(ch)/4 + number( -4, 2);
   // level / 6 : 26: 4, 32: 5, 44: 7, 50: 8, 56: 9.
   if( NewSaves(victim, SAVING_PARA, (level-2) / 6) )
   {

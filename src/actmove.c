@@ -1456,7 +1456,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
 
   if( affected_by_spell(moving, SPELL_BLOODTOSTONE) )
   {
-    need_movement += 4;
+    need_movement += number(1,4);
   }
 
   if( affected_by_spell(moving, TAG_CRIPPLED) )
