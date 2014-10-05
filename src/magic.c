@@ -16787,7 +16787,7 @@ void spell_animal_vision(int level, P_char ch, char *arg, int type,
   switch (world[ch->in_room].sector_type)
   {
   case SECT_FOREST:
-    if(GET_LEVEL(ch) > 46)
+    if(GET_LEVEL(ch) > 45)
     {
       af.bitvector = AFF_SENSE_LIFE | AFF_FARSEE | AFF_DETECT_INVISIBLE;
     }
