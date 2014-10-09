@@ -1444,8 +1444,16 @@ void do_conjure(P_char ch, char *argument, int cmd)
 
     if( !valid_conjure(ch, tobj) && !IS_TRUSTED(ch) )
     {
-      send_to_char("Your character does not have &+Ldominion&n over this race of &+Lmonster&n, either because its level is too high, or it is not a valid race for you to summon.\r\n", ch);
-      extract_char(tobj);
+      if( tobj )
+      {
+        send_to_char("Your character does not have &+Ldominion&n over this race of &+Lmonster&n, either because its level is too high, or it is not a valid race for you to summon.\r\n", ch);
+        extract_char(tobj);
+      }
+      else
+      {
+        sprintf( Gbuf1, "Failed load on mob %ld.  Sorry, try again or tell a God.\n\r", selected );
+        send_to_char( Gbuf1, ch);
+      }
       return;
     }
 
