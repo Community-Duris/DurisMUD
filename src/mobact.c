@@ -610,7 +610,7 @@ bool MobCastSpell(P_char ch, P_char victim, P_obj object, int spl, int lvl)
   char     buf[MAX_STRING_LENGTH];
 
   // Crash iff: No caster, no target (and not area), or invalid spell.
-  if( !ch || !(victim || object || IS_SET(skills[spl].targets, TAR_OFFAREA))
+  if( !ch || !(victim || object || IS_SET(skills[spl].targets, TAR_AREA | TAR_OFFAREA))
     || spl < FIRST_SPELL || spl > LAST_SPELL )
   {
     logit(LOG_EXIT, "MobCastSpell() bogus parms");
