@@ -5336,7 +5336,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
   byte  objmat;
   ulong newcost;
   long  modifier;
-  int   matvnum, objchance;
+  int   matvnum, tempvnum, objchance;
   int	  rolled;
   int   reciperoll = number(1, 10000);
   int   playerroll = GET_C_LUK(ch) + GET_LEVEL(ch)*2 + GET_CHAR_SKILL(ch, SKILL_SALVAGE);
@@ -5358,16 +5358,25 @@ void do_salvage(P_char ch, char *argument, int cmd)
     return;
   }
 
+  tempvnum = GET_OBJ_VNUM(temp);
+
   //handle salvage materials
-  if((GET_OBJ_VNUM(temp) > 399999) && (GET_OBJ_VNUM(temp) < 400210))
+  if((tempvnum > 399999) && (tempvnum < 400210))
   {
     int lowest = get_matstart(temp);
-    if(GET_OBJ_VNUM(temp) == lowest)
+    if(tempvnum == lowest)
     {
       send_to_char("Not possible! That &+ymaterial&n is already of the &+Llowest&n quality.\r\n", ch);
       return;
     }
-    int reward = (GET_OBJ_VNUM(temp) - 1);
+    if( lowest <= 0 )
+    {
+      send_to_char( "Could not figure out what this is made out of !?  Can bug it if you want.\n\r", ch );
+      debug( "Couldn't get start material for object: '%s' %d.", temp->short_description, tempvnum );
+      return;
+    }
+
+    int reward = (tempvnum - 1);
     obj_to_char(read_object(reward, VIRTUAL), ch);
     obj_to_char(read_object(reward, VIRTUAL), ch);
     act("$n breaks down their $p into its &+ylesser&n material...", TRUE, ch, temp, 0, TO_ROOM);
@@ -5377,7 +5386,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (!is_salvageable(temp))
+  if( !is_salvageable(temp) )
   {
     act("That item cannot be &+ysalvaged&n.", FALSE, ch, 0, 0, TO_CHAR);
     return;
@@ -5398,37 +5407,6 @@ void do_salvage(P_char ch, char *argument, int cmd)
     act("You begin breaking down your $p into its &+yraw &+Ymaterials&n...", FALSE, ch, temp, 0, TO_CHAR); 
     objmat = temp->material;
 
-    //get lucky, get tier 4
-    if(number(60, 400) < GET_C_LUK(ch))
-    {
-	    if(number(70, 400) < GET_C_LUK(ch))
-      {
-        if(number(80, 500) < GET_C_LUK(ch))
-        {
-          obj_to_char(read_object(400211, VIRTUAL), ch);
-          send_to_char("...as you work, a small &+Mm&+Ya&+Mg&+Yi&+Mc&+Ya&+Ml&n object gently separates from your item!\r\n", ch);
-        }
-	    }
-    }
-
-    if( IS_SET(temp->bitvector, AFF_STONE_SKIN)
-      || IS_SET(temp->bitvector, AFF_HIDE)
-      || IS_SET(temp->bitvector, AFF_SNEAK)
-      || IS_SET(temp->bitvector, AFF_FLY)
-      || IS_SET(temp->bitvector, AFF4_NOFEAR)
-      || IS_SET(temp->bitvector2, AFF2_AIR_AURA)
-      || IS_SET(temp->bitvector2, AFF2_EARTH_AURA)
-      || IS_SET(temp->bitvector3, AFF3_INERTIAL_BARRIER)
-      || IS_SET(temp->bitvector3, AFF3_REDUCE)
-      || IS_SET(temp->bitvector2, AFF2_GLOBE)
-      || IS_SET(temp->bitvector, AFF_HASTE)
-      || IS_SET(temp->bitvector, AFF_DETECT_INVISIBLE)
-      || IS_SET(temp->bitvector4, AFF4_DETECT_ILLUSION) )
-    {
-      obj_to_char(read_object(400211, VIRTUAL), ch);
-      send_to_char("...as you work, a small &+Mm&+Ya&+Mg&+Yi&+Mc&+Ya&+Ml&n object gently separates from your item!\r\n", ch);
-    }
-
     objchance = itemvalue(ch, temp);
 
     if((objchance <= 5) && (number(1, 1000) > GET_C_LUK(ch)))
@@ -5440,7 +5418,6 @@ void do_salvage(P_char ch, char *argument, int cmd)
 
     if (objchance <= 5) // Grant Rewards based on objchance roll
     {
-      act("&+wYou were able to salvage a rather &+rpoor&n material from your item...", FALSE, ch, 0, 0, TO_CHAR);
       switch( objmat )
       {
         case MAT_NONSUBSTANTIAL:
@@ -5586,10 +5563,11 @@ void do_salvage(P_char ch, char *argument, int cmd)
           return;
           break;
       }
+      // Moved this to bottom in case we don't have a valid material type.
+      act("&+wYou were able to salvage a rather &+rpoor&n material from your item...", FALSE, ch, 0, 0, TO_CHAR);
     }
     else if( objchance <= 10 )
     {
-      act("&+wYour focused efforts allow you to salvage a &+ycommon&n material from your item...", FALSE, ch, 0, 0, TO_CHAR);
       // If they all == 67284, why bother with the Switch?
       // Assuming this is an old comment. - Lohrr
       switch( objmat )
@@ -5737,10 +5715,11 @@ void do_salvage(P_char ch, char *argument, int cmd)
           return;
           break;
       }
+      // Moved this to bottom in case we don't have a valid material type.
+      act("&+wYour focused efforts allow you to salvage a &+ycommon&n material from your item...", FALSE, ch, 0, 0, TO_CHAR);
     }
     else if( objchance <= 15 )
     {
-      act("&+wYou study your item as you break it down, and come away with a rather &+Yuncommon &nmaterial.", FALSE, ch, 0, 0, TO_CHAR);
       switch( objmat )
       {
         case MAT_NONSUBSTANTIAL:
@@ -5886,10 +5865,11 @@ void do_salvage(P_char ch, char *argument, int cmd)
           return;
           break;
       }
+      // Moved this to bottom in case we don't have a valid material type.
+      act("&+wYou study your item as you break it down, and come away with a rather &+Yuncommon &nmaterial.", FALSE, ch, 0, 0, TO_CHAR);
     }
     else if( objchance <= 20 )
     {
-      act("&+wYou make quick work of your item, salvaging a precious &+crare &nmaterial from it...", FALSE, ch, 0, 0, TO_CHAR);
       switch( objmat )
       {
         case MAT_NONSUBSTANTIAL:
@@ -6035,11 +6015,12 @@ void do_salvage(P_char ch, char *argument, int cmd)
           return;
           break;
       }
+      // Moved this to bottom in case we don't have a valid material type.
+      act("&+wYou make quick work of your item, salvaging a precious &+crare &nmaterial from it...", FALSE, ch, 0, 0, TO_CHAR);
     }
     // craftsmanship >= 25
     else
     {
-      act("&+LUsing your ma&+wst&+Wer&+wfu&+Ll &+Wskill&+L, you delicately break apart your item, salvaging a quite &+Munique &+Lmaterial from it...", FALSE, ch, 0, 0, TO_CHAR);
       switch (objmat)
       {
         case MAT_NONSUBSTANTIAL:
@@ -6185,8 +6166,43 @@ void do_salvage(P_char ch, char *argument, int cmd)
           return;
           break;
       }
+      // Moved this to bottom in case we don't have a valid material type.
+      act("&+LUsing your ma&+wst&+Wer&+wfu&+Ll &+Wskill&+L, you delicately break apart your item, salvaging a quite &+Munique &+Lmaterial from it...", FALSE, ch, 0, 0, TO_CHAR);
     }
     //ENDQualitycheck
+
+    // Moved the creation of essences below the checks for valid material types.
+    // Get lucky: get tier 4
+    if(number(60, 400) < GET_C_LUK(ch))
+    {
+	    if(number(70, 400) < GET_C_LUK(ch))
+      {
+        if(number(80, 500) < GET_C_LUK(ch))
+        {
+          obj_to_char(read_object(400211, VIRTUAL), ch);
+          send_to_char("...as you work, a small &+Mm&+Ya&+Mg&+Yi&+Mc&+Ya&+Ml&n object gently separates from your item!\r\n", ch);
+        }
+	    }
+    }
+
+    if( IS_SET(temp->bitvector, AFF_STONE_SKIN)
+      || IS_SET(temp->bitvector, AFF_HIDE)
+      || IS_SET(temp->bitvector, AFF_SNEAK)
+      || IS_SET(temp->bitvector, AFF_FLY)
+      || IS_SET(temp->bitvector, AFF4_NOFEAR)
+      || IS_SET(temp->bitvector2, AFF2_AIR_AURA)
+      || IS_SET(temp->bitvector2, AFF2_EARTH_AURA)
+      || IS_SET(temp->bitvector3, AFF3_INERTIAL_BARRIER)
+      || IS_SET(temp->bitvector3, AFF3_REDUCE)
+      || IS_SET(temp->bitvector2, AFF2_GLOBE)
+      || IS_SET(temp->bitvector, AFF_HASTE)
+      || IS_SET(temp->bitvector, AFF_DETECT_INVISIBLE)
+      || IS_SET(temp->bitvector4, AFF4_DETECT_ILLUSION) )
+    {
+      obj_to_char(read_object(400211, VIRTUAL), ch);
+      send_to_char("...as you work, a small &+Mm&+Ya&+Mg&+Yi&+Mc&+Ya&+Ml&n object gently separates from your item!\r\n", ch);
+    }
+
     // rand2 == number( 1, 3 )
     switch( rand2 )
 		{
