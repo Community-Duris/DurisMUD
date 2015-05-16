@@ -4505,6 +4505,8 @@ void do_toggle(P_char ch, char *arg, int cmd)
     }
     break;
   case 22:
+    send_to_char( "Smartprompt was never fully implemented.  Sorry.\n\r", send_ch );
+    return;
     // result = PLR_TOG_CHK(ch, PLR_SMARTPROMPT);
     // if (!IS_SET(ch->specials.act, PLR_SMARTPROMPT))
     // {

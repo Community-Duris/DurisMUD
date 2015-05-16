@@ -1119,8 +1119,6 @@ void cast_wall_of_force(int level, P_char ch, char *arg, int type,
   }
 }
 
-#define DRAGONSCALE_VNUM 392
-
 void cast_wall_of_bones(int level, P_char ch, char *arg, int type,
                         P_char tar_ch, P_obj tar_obj)
 {

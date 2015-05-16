@@ -2208,13 +2208,13 @@ void die(P_char ch, P_char killer)
   P_obj corpse = NULL;
   int loss = 0, diff, x, i, j;
 
-  if(!ch)
+  if( !ch )
   {
     logit(LOG_EXIT, "die called in fight.c with no ch");
     raise(SIGSEGV);
   }
 
-  if(!killer)
+  if( !killer )
   {
     return;
   }
@@ -2274,26 +2274,36 @@ void die(P_char ch, P_char killer)
     remove_disguise(ch, TRUE);
   }
 
-  if (ch && killer && check_outpost_death(ch, killer))
+  if( check_outpost_death(ch, killer) )
+  {
     return;
+  }
 
-  if(!IS_SET(ch->specials.act, ACT_SPEC_DIE))
+  // PCs and NPCs without a die proc.  Note: Uses lazy eval since PC->specials.act ACT_SPEC_DIE
+  //   is actually PLR_SMARTPROMPT (which isn't implemented as of 5/16/2015).
+  if( IS_PC(ch) || !IS_SET(ch->specials.act, ACT_SPEC_DIE) )
   {
     act("$n is dead! &+RR.I.P.&n", TRUE, ch, 0, 0, TO_ROOM);
     act("&-L&+rYou feel yourself falling to the ground.&n", FALSE, ch, 0, 0, TO_CHAR);
     act("&-L&+rYour soul leaves your body in the cold sleep of death...&n", FALSE, ch, 0, 0, TO_CHAR);
-    if(IS_NPC(ch) && GET_LEVEL(ch) > 44)
+    // Do nothing for PCs and !exp mobs.
+    if( IS_PC(ch) || GET_EXP(ch) <= 0 )
     {
-      if (get_property("thanksgiving", 0.000) && (number(0, 100) < get_property("thanksgiving.turkey.chance", 5.000)))
-        thanksgiving_proc(ch);
     }
-    if(IS_NPC(ch) && GET_LEVEL(ch) > 35)
+    // Check Thanksgiving first.
+    else if( GET_LEVEL(ch) > 44 && get_property("thanksgiving", 0.000)
+      && (number(0, 100) < get_property("thanksgiving.turkey.chance", 5.000)) )
     {
-      if (get_property("christmas", 0.000) && (number(0, 100) < get_property("christmas.elf.chance", 5.000)))
-        christmas_proc(ch);
+      thanksgiving_proc(ch);
     }
-
-    if(IS_NPC(ch) && !IS_PC_PET(ch))
+    // Then Christmas.
+    else if( GET_LEVEL(ch) > 35 &&get_property("christmas", 0.000)
+      && (number(0, 100) < get_property("christmas.elf.chance", 5.000)) )
+    {
+      christmas_proc(ch);
+    }
+    // NPCs that are worth exp and not PC pets may load a random item.
+    if( IS_NPC(ch) && !IS_PC_PET(ch) && GET_EXP(ch) > 0 )
       enhancematload(ch, killer);
 
   }
@@ -2467,10 +2477,11 @@ void die(P_char ch, P_char killer)
     death_cry(ch);
   }
 
-  // dragon mobs now will drop a dragon scale
-  if(GET_RACE(ch) == RACE_DRAGON)
+  // Dragon mobs now will drop a dragon scale
+  // No longer includes !exp mobs like dragon illusions.
+  if( GET_RACE(ch) == RACE_DRAGON && GET_EXP(ch) > 0 )
   {
-    P_obj tempobj = read_object(392, VIRTUAL);
+    P_obj tempobj = read_object(DRAGONSCALE_VNUM, VIRTUAL);
     obj_to_char(tempobj, ch);
   }
 
