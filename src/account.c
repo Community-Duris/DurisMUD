@@ -806,20 +806,20 @@ void account_new_char_name(P_desc d, char *arg)
 
   arg = tmp_name;
 
-  if (!account_exists("Players", arg) &&
-      account_exists("Players/Declined", arg))
+  if (!account_exists(SAVE_DIR, arg) &&
+      account_exists(BADNAME_DIR, arg))
   {
     SEND_TO_Q
       ("That name has been declined before, and would be now too!\r\nName:",
        d);
     return;
   }
-  if (account_exists("Players", arg))
+  if (account_exists(SAVE_DIR, arg))
   {
     SEND_TO_Q("Name is in use already. Please enter new name.\r\nName:", d);
     return;
   }
-  else if (account_exists("Players/Declined", arg))
+  else if (account_exists(BADNAME_DIR, arg))
   {
     SEND_TO_Q
       ("That name has been declined before, and would be now too!\r\nName:",

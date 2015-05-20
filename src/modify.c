@@ -1612,30 +1612,42 @@ bool rename_character(P_char ch, char *old_name, char *new_name)
 {
   char     buf[256], *buff;
   struct   acct_chars *c = NULL;
-  P_char   doofus, finger_foo = NULL;
+  P_char   doofus;
 
-  // validate new name
+  // Validate new name (sets new_name to all lowercase)
   if( _parse_name(new_name, new_name) )
   {
     send_to_char("Illegal name, please try again.\r\n", ch);
     return FALSE;
   }
 
+  // Check for char in game...
   if( !(doofus = get_char_vis(ch, old_name)) )
   {
     send_to_char("I don't know anyone by that name...\r\n", ch);
     return FALSE;
   }
+  // No renaming NPCs.
   if( IS_NPC(doofus) )
   {
-    send_to_char("can't rename an NPC.\r\n", ch);
+    send_to_char("You can't rename an NPC.\r\n", ch);
     return FALSE;
   }
 
+  // No renaming those who are above/equal your level (yourself is an exception).
+  if( GET_LEVEL(doofus) >= GET_LEVEL(ch) && ch != doofus )
+  {
+    send_to_char("We call that cheating bud.\r\n", ch);
+    wizlog(AVATAR, "%s attempted to rename an equal or superior (\"%s\" to \"%s\")!", GET_NAME(ch), old_name, new_name);
+    return FALSE;
+  }
+
+/* Simplified this in above.
+  P_char finger_foo = NULL;
   finger_foo = (struct char_data *) mm_get(dead_mob_pool);
   finger_foo->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
-  /* check existance of oldname */
+  // Check existance of oldname
   if( restoreCharOnly(finger_foo, skip_spaces(old_name)) >= 0 && finger_foo )
   {
     if( GET_LEVEL(finger_foo) > GET_LEVEL(ch) )
@@ -1647,29 +1659,27 @@ bool rename_character(P_char ch, char *old_name, char *new_name)
     }
     free_char(finger_foo);
   }
+*/
 
-  /* New name must not be a valid player */
-  if( restoreCharOnly(finger_foo, skip_spaces(new_name)) < 0 || !finger_foo )
+  // New name must not be in use.
+  // Simplifying this!
+//  if( restoreCharOnly(finger_foo, skip_spaces(new_name)) < 0 || !finger_foo )
+  if( !pfile_exists(SAVE_DIR, new_name) )
   {
     /* be sure new name isn't in declined list */
-    if( pfile_exists("Players/Declined", new_name) )
+    if( pfile_exists(BADNAME_DIR, new_name) )
     {
       /* if GOD changing someones name */
-      if( IS_TRUSTED(ch) && GET_LEVEL(ch) > GET_LEVEL(finger_foo) )
+      if( IS_TRUSTED(ch) )
       {
+        // Remove new_name from BADNAME_DIR
+        sprintf(buf, "%s/%c/%s", BADNAME_DIR, *new_name, new_name );
+        unlink(buf);
         send_to_char("Name was in the declined list, but has been removed. :)\r\n", ch);
-        if( finger_foo )
-        {
-          free_char(finger_foo);
-        }
       }
       else
       {
         send_to_char("That name has been declined before, and would be now too!\r\n", ch);
-        if( finger_foo )
-        {
-          free_char(finger_foo);
-        }
         return FALSE;
       }
     }
@@ -1701,7 +1711,7 @@ bool rename_character(P_char ch, char *old_name, char *new_name)
     }
 
     /* if GOD changing someones name, put old one to deny list */
-    if( IS_TRUSTED(ch) && GET_LEVEL(ch) > GET_LEVEL(doofus) )
+    if( IS_TRUSTED(ch) )
     {
        deny_name(GET_NAME(doofus));
     }

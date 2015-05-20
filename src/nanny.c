@@ -3771,7 +3771,7 @@ void accept_name(char *name)
 
 void deny_name(char *name)
 {
-  create_denied_file("Players/Declined", name);
+  create_denied_file(BADNAME_DIR, name);
 }
 
 void select_name(P_desc d, char *arg, int flag)
@@ -3871,8 +3871,8 @@ void select_name(P_desc d, char *arg, int flag)
   }*/
 
 
-  if (!pfile_exists("Players", tmp_name) &&
-      pfile_exists("Players/Declined", tmp_name))
+  if (!pfile_exists(SAVE_DIR, tmp_name) &&
+      pfile_exists(BADNAME_DIR, tmp_name))
   {
     SEND_TO_Q
       ("That name has been declined before, and would be now too!\r\nName:",
@@ -3906,12 +3906,12 @@ void select_name(P_desc d, char *arg, int flag)
       return;
     }
   }
-  else if (pfile_exists("Players", tmp_name))
+  else if (pfile_exists(SAVE_DIR, tmp_name))
   {
     SEND_TO_Q("Name is in use already. Please enter new name.\r\nName:", d);
     return;
   }
-  else if (pfile_exists("Players/Declined", tmp_name))
+  else if (pfile_exists(BADNAME_DIR, tmp_name))
   {
     SEND_TO_Q
       ("That name has been declined before, and would be now too!\r\nName:",

@@ -47,11 +47,12 @@
 #define MISFIRE                 /* mistargeting spells when there are more allies in room than group cape and racewar is going on */
 /* default filesystem variables */
 
-#define DFLT_DIR "."          /* default data directory     */
-#define MUDNAME "Duris"       /* name whod shows for the mud */
-#define SAVE_DIR "Players"      /* default directory for player save files */
-#define STABLE_DIR "Stables"    /* default directory for pet stables save files */
-#define NUM_ANSI_LOGINS 4       /* Current number of ANSI login sequences, max is 5 */
+#define DFLT_DIR "."                   /* default data directory     */
+#define MUDNAME "Duris"                /* name whod shows for the mud */
+#define SAVE_DIR "Players"             /* default directory for player save files */
+#define BADNAME_DIR "Players/Declined" /* directory containing a list of declined names*/
+#define STABLE_DIR "Stables"           /* default directory for pet stables save files */
+#define NUM_ANSI_LOGINS 4              /* Current number of ANSI login sequences, max is 5 */
 
 /* balance affecting variables */
 
