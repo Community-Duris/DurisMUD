@@ -5111,6 +5111,29 @@ anchor~
 8 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100 0 0 1048576 0
+#55433
+table gambling~
+&+yA huge &+Rg&+Ca&+Bm&+Gb&+Yl&+Mi&+Cn&+Rg&+y table covered with &+bm&+Ba&+Cg&+Wi&+Cc&+Ba&+bl &+bf&+Bl&+Cam&+Be&+bs&+y~
+&+yA huge &+Rg&+Ca&+Bm&+Gb&+Yl&+Mi&+Cn&+Rg&+y table flickering with &+bm&+Ba&+Cg&+Wi&+Cc&+Ba&+bl &+bf&+Bl&+Cam&+Be&+bs&+y over its surface.&n~
+~
+8 18 4 0 8 0 32768 0 1024 0 0
+0 0 0 0 0 0 0 0
+100000 0 100
+E
+table gambling rules~
+&+yAs you stare, the &+bm&+Ba&+Cg&+Wi&+Cc&+Ba&+bl &+bf&+Bl&+Cam&+Be&+bs&+y on top of the table coalesce into some &+Rrules&+y written in a language so that you can understand them.
+&+yThe &+RRULES&+y clearly state:
+&+M * &+yThe &+CDealer&+y is always right!
+&+M * &+yAt any stage, you can ask to &+WSHOWGAME&+y and find out the current status
+&+M * &+yYou must place an &+WOFFER&+y of some coins in order to play. Use "offer 10 plat" or "offer 2 g" for example
+&+M * &+yYou can &+WDEAL&+y only once you have a valid &+WOFFER&+y in place
+&+M * &+yYou can &+WSTAY&+y, &+WFOLD&+y, or &+WHIT&+y only after a &+WDEAL
+&+M * &+yIf you &+WFOLD&+y, you will loose whatever bet you have on the table currently
+&+M * &+yThere are &+rNO&+y Aces in this deck, only ones!
+&+M * &+yYou may &+rNOT&+y split pairs
+&+M * &+yYou cannot &+rdouble-down&+y
+&+M * &+yReport any issues or errors to an &+rImmortal&+y&n
+~
 #55500
 deer~
 &+Wa freshly killed &+Ydeer&n~

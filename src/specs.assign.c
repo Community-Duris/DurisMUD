@@ -37,6 +37,10 @@ extern P_index obj_index;
 extern P_obj object_list;
 extern P_room world;
 
+//Added gellz Procs
+int gellz_test_obj_procs(P_obj obj, P_char ch, int cmd, char *argument);
+int magic_deck(P_obj obj, P_char ch, int cmd, char *argument);
+
 int unmulti_altar(P_obj obj, P_char ch, int cmd, char *arg);
 int harpy_gate(P_obj obj, P_char ch, int cmd, char *arg);
 int block_dir(P_char ch, P_char pl, int cmd, char *arg);
@@ -2643,7 +2647,10 @@ void assign_rooms(void)
   obj_index[real_object0(120051)].func.obj = wh_corpse_decay;
   mob_index[real_mobile0(120051)].func.mob = wh_corpse_to_object;
 
-
+  // Gellz Special Procs added 2015 (gellz)
+  obj_index[real_object0(55433)].func.obj = magic_deck;
+  obj_index[real_object0(1203)].func.obj = gellz_test_obj_procs;
+  
   // NPC Ship Crews
   assign_ship_crew_funcs();
 }

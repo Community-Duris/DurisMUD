@@ -223,6 +223,7 @@ OBJS	=  \
 				 reavers.o \
 				 avengers.o \
 				 specs.lucrot.o \
+				 specs.gellz.o \
 				 multiplay_whitelist.o
 
 SHARED_PFILE_OBJS=pf-skills.o \
