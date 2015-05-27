@@ -206,7 +206,17 @@ void set_surname(P_char ch, int num)
     }
     send_to_char("You have not obtained that &+Wtitle&n yet.\r\n", ch);
   }
-
+  if (num == 8)
+  {
+    if(affected_by_spell(ch, ACH_DEATHSDOOR))
+    {
+      clear_surname(ch);
+      SET_BIT(ch->specials.act3, PLR3_SURDEATHSDOOR);
+      SET_BIT(ch->specials.act3, PLR3_NOSUR);
+      return;
+    }
+    send_to_char("You have not obtained that &+Wtitle&n yet.\r\n", ch);
+  }
 }
 
 void display_surnames(P_char ch)
@@ -265,7 +275,12 @@ void display_surnames(P_char ch)
     strcat(buf, buf2);
   }
 
-
+  if(affected_by_spell(ch, ACH_DEATHSDOOR))
+  {
+    sprintf(buf2, "   &+L%-49s\r\n",
+        "&+W8)&+MTo&+mug&+Mh G&+muy&n");
+    strcat(buf, buf2);
+  }
 
   sprintf(buf2, "\r\n   &+W%-22s\r\n",
       "Note: &nSome &+cachievements&n grant access to additional surnames&n\r\n");
@@ -303,6 +318,7 @@ void clear_surname(P_char ch)
   REMOVE_BIT(ch->specials.act3, PLR3_SURSERIAL);
   REMOVE_BIT(ch->specials.act3, PLR3_SURREAPER);
   REMOVE_BIT(ch->specials.act3, PLR3_SURDECEPTICON);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURDEATHSDOOR);
   REMOVE_BIT(ch->specials.act3, PLR3_NOSUR);
 }
 
