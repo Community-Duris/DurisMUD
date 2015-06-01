@@ -22,7 +22,7 @@
 //char  arc[3];
 extern char buf[MAX_STRING_LENGTH];
 
-/*int epic_ship_damage_control(P_char ch, int dam)
+int epic_ship_damage_control(P_char ch, int dam)
 {
     if(!(ch) || dam < 2)
         return dam;
@@ -44,7 +44,7 @@ extern char buf[MAX_STRING_LENGTH];
         dam--;
 
     return dam;
-}*/
+}
 
 void stun_all_in_ship(P_ship ship, int timer)
 {
