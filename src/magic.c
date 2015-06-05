@@ -20966,8 +20966,7 @@ void event_portal_owner_check(P_char ch, P_char vict, P_obj obj, void *data)
 //-----------------------------------------------------------------------
 // this is called from portals hook functions
 //-----------------------------------------------------------------------
-bool spell_general_portal( int level, P_char ch, P_char victim,
-     struct portal_settings *settings,
+bool spell_general_portal( int level, P_char ch, P_char victim, struct portal_settings *settings,
      struct portal_create_messages *messages, bool isOneWay )
 {
   /* Portal obj settings
@@ -20983,133 +20982,141 @@ bool spell_general_portal( int level, P_char ch, P_char victim,
    * timer[0] - create time
    * timer[1] - last entry time
    */
-   P_obj    portal1=NULL, portal2=NULL;
-   int      to_room;
-   char     logbuf[500];
-   struct portal_data pdata;
+  P_obj    portal1=NULL, portal2=NULL;
+  int      to_room;
+  char     logbuf[500];
+  struct portal_data pdata;
 
-   if(!ch) return FALSE;
+  if( !ch )
+  {
+    return FALSE;
+  }
 
-   to_room = settings->to_room;
-   if(to_room == NOWHERE || to_room == 0)
-   {
-     if( victim )
-     {
-       sprintf(logbuf, "Portal(%d) from %s[%d] to %s[NOWHERE]",
-                    settings->R_num,
-                        GET_NAME(ch), world[ch->in_room].number,
-                        GET_NAME(victim));
-        logit(LOG_PORTALS, logbuf);
-        send_to_char("Spell messed up. contact someone.\n", ch);
-        return FALSE;
-     }
-     else
-     {
-       sprintf(logbuf, "Portal(%d) from %s[%d] to [NOWHERE]",
-               settings->R_num,
-               GET_NAME(ch), world[ch->in_room].number);
-       logit(LOG_PORTALS, logbuf);
-       send_to_char("Spell messed up. contact someone.\n", ch);
-       return FALSE;
-     }
-   }
+  to_room = settings->to_room;
+  // NOWHERE is a bad index, 0 is Limbo
+  if( to_room == NOWHERE || to_room == 0 )
+  {
+    if( victim )
+    {
+      sprintf(logbuf, "Portal(%d) from %s(%d) [%d] to %s(%d) in [%s].", settings->R_num,
+        J_NAME(ch), IS_NPC(ch) ? GET_VNUM(ch) : GET_PID(ch), world[ch->in_room].number,
+        J_NAME(victim), IS_NPC(victim) ? GET_VNUM(victim) : GET_PID(victim), (to_room==NOWHERE) ? "NOWHERE" : "LIMBO");
+      logit(LOG_PORTALS, logbuf);
+      send_to_char("Spell messed up. contact someone.\n", ch);
+      return FALSE;
+    }
+    else
+    {
+      sprintf(logbuf, "Portal(%d) from %s(%d) [%d] to [%s].", settings->R_num,
+        J_NAME(ch), IS_NPC(ch) ? GET_VNUM(ch) : GET_PID(ch), world[ch->in_room].number,
+        (to_room==NOWHERE) ? "NOWHERE" : "LIMBO");
+      logit(LOG_PORTALS, logbuf);
+      send_to_char("Spell messed up. contact someone.\n", ch);
+      return FALSE;
+    }
+  }
 
-   portal1 = read_object(settings->R_num, VIRTUAL);
-   if(!portal1)
-   {
+  if( IS_CASTLE(ch->in_room) )
+  {
+    send_to_char("&+LThe nature of this room prevents you from creating a portal.&n\n", ch);
+    return FALSE;
+  }
+  if( IS_CASTLE(to_room) )
+  {
+    send_to_char("&+LThe nature of that room prevents you from creating a portal.&n\n", ch);
+    return FALSE;
+  }
+
+  portal1 = read_object(settings->R_num, VIRTUAL);
+  if(!portal1)
+  {
+    sprintf(logbuf, "spell_portal(): obj %d not loadable", settings->R_num);
+    logit(LOG_DEBUG, logbuf);
+    send_to_char("Spell messed up. contact someone.\n", ch);
+    return FALSE;
+  }
+  if(!isOneWay)
+  {
+    portal2 = read_object(settings->R_num, VIRTUAL);
+    if(!portal2)
+    {
       sprintf(logbuf, "spell_portal(): obj %d not loadable", settings->R_num);
       logit(LOG_DEBUG, logbuf);
       send_to_char("Spell messed up. contact someone.\n", ch);
+      if(portal1)
+      {
+        extract_obj(portal1, TRUE);
+      }
       return FALSE;
-   }
-   if(!isOneWay)
-   {
-     portal2 = read_object(settings->R_num, VIRTUAL);
-     if(!portal2)
-     {
-       sprintf(logbuf, "spell_portal(): obj %d not loadable", settings->R_num);
-       logit(LOG_DEBUG, logbuf);
-       send_to_char("Spell messed up. contact someone.\n", ch);
-       if(portal1)
-       {
-         extract_obj(portal1, TRUE);
-/*        portal1 = NULL;*/
-       }
-       return FALSE;
-     }
-   }
+    }
+  }
 
-   if(victim && !IS_TRUSTED(ch))
-   {
-      sprintf(logbuf, "Portal(%d) from %s[%d] to %s[%d]",
-                          settings->R_num,
-                      GET_NAME(ch), world[ch->in_room].number,
-                      GET_NAME(victim), world[to_room].number);
-      logit(LOG_PORTALS, logbuf);
-      sql_log(ch, PLAYERLOG, "Portal (%d) to %s in %d", settings->R_num, GET_NAME(victim), world[to_room].number);
+  if(victim && !IS_TRUSTED(ch))
+  {
+    sprintf(logbuf, "Portal(%d) from %s(%d) in [%d] to %s(%d) in [%d].", settings->R_num,
+      J_NAME(ch), IS_NPC(ch) ? GET_VNUM(ch) : GET_PID(ch), world[ch->in_room].number,
+      J_NAME(victim), IS_NPC(victim) ? GET_VNUM(victim) : GET_PID(victim), world[to_room].number);
+    logit(LOG_PORTALS, logbuf);
+    sql_log(ch, PLAYERLOG, "Portal (%d) to %s in %d", settings->R_num, J_NAME(victim), world[to_room].number);
+    // spam immo's if it looks like a possible camped target
+    if( (world[to_room].number == GET_HOME(victim)) || (GET_LEVEL(victim) < 10) )
+    {
+      statuslog(57, logbuf);
+    }
+  }
+  if( world[to_room].people )
+  {
+    if( victim && (ch!=victim) )
+    {
+      act(messages->open_to_victim_room, FALSE, ch, portal1, victim, TO_NOTVICTROOM);
+      act(messages->open_to_victim,      FALSE, ch, portal1, victim, TO_VICT);
+    }
+    else
+    {
+      act(messages->open_to_victim_room, FALSE, world[to_room].people, portal1, 0, TO_ROOM);
+      act(messages->open_to_victim_room, FALSE, world[to_room].people, portal1, 0, TO_CHAR);
+    }
+  }
+  act(messages->open_to_caster_room, FALSE, ch, portal1, victim, TO_ROOM);
+  act(messages->open_to_caster,      FALSE, ch, portal1, victim, TO_CHAR);
 
-      // spam immo's if it looks like a possible camped target
-      if((world[to_room].number == GET_HOME(victim)) || (GET_LEVEL(victim) < 10))
-      {
-         statuslog(57, logbuf);
-      }
-   }
+  portal1->value[0] = world[to_room].number;
 
-   if(world[to_room].people)
-   {
-      if(victim && (ch!=victim))
-      {
-         act(messages->open_to_victim_room, FALSE, ch, portal1, victim, TO_NOTVICTROOM);
-         act(messages->open_to_victim,      FALSE, ch, portal1, victim, TO_VICT);
-      }
-      else
-      {
-          act(messages->open_to_victim_room, FALSE, world[to_room].people, portal1, 0, TO_ROOM);
-          act(messages->open_to_victim_room, FALSE, world[to_room].people, portal1, 0, TO_CHAR);
-       }
-   }
+  // set timers
+  portal1->value[4] = settings->init_timeout;
+  portal1->value[5] = settings->post_enter_timeout;
+  portal1->value[6] = settings->post_enter_lag;
 
-   act(messages->open_to_caster_room, FALSE, ch, portal1, victim, TO_ROOM);
-   act(messages->open_to_caster,      FALSE, ch, portal1, victim, TO_CHAR);
+  set_obj_affected(portal1, settings->decay_timer, TAG_OBJ_DECAY, 0);
 
-   portal1->value[0] = world[to_room].number;
-
-   // set timers
-   portal1->value[4] = settings->init_timeout;
-   portal1->value[5] = settings->post_enter_timeout;
-   portal1->value[6] = settings->post_enter_lag;
-
-   set_obj_affected(portal1, settings->decay_timer, TAG_OBJ_DECAY, 0);
-
-   if(!isOneWay)
-   {
-     portal2->value[0] = world[ch->in_room].number;
-     // set timers
-     portal2->value[4] = settings->init_timeout;
-     portal2->value[5] = settings->post_enter_timeout;
-     portal2->value[6] = settings->post_enter_lag;
-
+  if(!isOneWay)
+  {
+    portal2->value[0] = world[ch->in_room].number;
+    // set timers
+    portal2->value[4] = settings->init_timeout;
+    portal2->value[5] = settings->post_enter_timeout;
+    portal2->value[6] = settings->post_enter_lag;
      set_obj_affected(portal2, settings->decay_timer, TAG_OBJ_DECAY, 0);
-   }
+  }
 
-   set_up_portals(ch, portal1, portal2, settings->throughput);
+  set_up_portals(ch, portal1, portal2, settings->throughput);
 
-   obj_to_room(portal1, ch->in_room);
-   if(!isOneWay)
+  obj_to_room(portal1, ch->in_room);
+  if(!isOneWay)
     obj_to_room(portal2, to_room);
 
-   if(IS_PC(ch) && (settings->R_num != 752))
-   {
-     pdata.pid = GET_PID(ch);
-     pdata.port1 = portal1;
-     if(!isOneWay)
-       pdata.port2 = portal2;
-     pdata.oneway = isOneWay;
-     add_event(event_portal_owner_check, WAIT_SEC, 0, 0, portal1, 0, &pdata, sizeof(pdata));
-     add_event(event_portal_owner_check, WAIT_SEC, 0, 0, portal2, 0, &pdata, sizeof(pdata));
-   }
+  if(IS_PC(ch) && (settings->R_num != 752))
+  {
+    pdata.pid = GET_PID(ch);
+    pdata.port1 = portal1;
+    if(!isOneWay)
+      pdata.port2 = portal2;
+    pdata.oneway = isOneWay;
+    add_event(event_portal_owner_check, WAIT_SEC, 0, 0, portal1, 0, &pdata, sizeof(pdata));
+    add_event(event_portal_owner_check, WAIT_SEC, 0, 0, portal2, 0, &pdata, sizeof(pdata));
+  }
 
-   return TRUE;
+  return TRUE;
 }
 
 //-----------------------------------------------------------------------

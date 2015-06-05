@@ -220,6 +220,8 @@ SECS_PER_MUD_DAY)
 #define IS_OCEAN_ROOM(r) ( world[r].sector_type == SECT_OCEAN )
 #define IS_FOREST_ROOM(r) ( world[r].sector_type == SECT_FOREST || world[r].sector_type == SECT_SNOWY_FOREST)
 #define IS_SWAMP_ROOM(r) ( world[r].sector_type == SECT_SWAMP )
+#define IS_CASTLE(r) ( world[r].sector_type == SECT_CASTLE_WALL || world[r].sector_type == SECT_CASTLE_GATE \
+  || world[r].sector_type == SECT_CASTLE )
 
 #define IS_UNDERWATER(c) (world[c->in_room].sector_type == SECT_UNDERWATER \
                 || world[c->in_room].sector_type == SECT_UNDERWATER_GR \
