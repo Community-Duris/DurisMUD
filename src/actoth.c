@@ -5456,15 +5456,13 @@ void do_fly(P_char ch, char *argument, int cmd)
 
   if (LIMITED_TELEPORT_ZONE(ch->in_room) && !str_cmp(buf, "up"))
   {
-    send_to_char
-      ("The winds are too strong..  Flying here would be folly.\r\n", ch);
+    send_to_char("The winds are too strong..  Flying here would be folly.\r\n", ch);
     return;
   }
 
   if (IS_AFFECTED(ch, AFF_BOUND))
   {
-    send_to_char
-      ("You try to flap your arms, but the ropes are too tight.\r\n", ch);
+    send_to_char("You try to flap your arms, but the ropes are too tight.\r\n", ch);
     return;
   }
 
@@ -5481,10 +5479,9 @@ void do_fly(P_char ch, char *argument, int cmd)
       return;
     }
 
-    if ((ch->specials.z_cord >= 2) && !IS_TRUSTED(ch) /*&& !IS_NPC(ch) */ )
+    if( ch->specials.z_cord >= MAX_ALTITUDE )
     {
-      send_to_char
-        ("The wind currents are much too strong at that altitude.\r\n", ch);
+      send_to_char("The wind currents are much too strong at that altitude.\r\n", ch);
       return;
     }
     else
@@ -5495,6 +5492,8 @@ void do_fly(P_char ch, char *argument, int cmd)
       
       if( level > 0 )
       {
+        if( level > MAX_ALTITUDE )
+          level = MAX_ALTITUDE;
         ch->specials.z_cord = level;
       }
       else

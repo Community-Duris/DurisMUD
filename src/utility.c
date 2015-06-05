@@ -1440,58 +1440,64 @@ int ac_can_see(P_char sub, P_char obj, bool check_z)
  * ** Determine visibility of an object
  */
 
-int ac_can_see_obj(P_char sub, P_obj obj)
+bool ac_can_see_obj(P_char sub, P_obj obj, int zrange )
 {
-  int      rroom;
+  int      rroom, zcord;
   P_char   tmp_char;
   int      vis_mode;
 
   /* wraiths can't see any objects */
   if( IS_AFFECTED(sub, AFF_WRAITHFORM) )
-    return 0;
+    return FALSE;
 
   /* sub is flying, obj isn't */
   if( OBJ_ROOM(obj) && sub->specials.z_cord != obj->z_cord )
   {
-    if( obj_index[obj->R_num].func.obj != ship_obj_proc ) // ships show above/below
+    zcord = sub->specials.z_cord - obj->z_cord;
+    if( zcord < 0 )
     {
-      return 0;
+      zcord *= -1;
+    }
+    // Ships show above/below, other objects only show if within zrange.
+    if( obj_index[obj->R_num].func.obj != ship_obj_proc && zcord > zrange )
+    {
+      return FALSE;
     }
   }
 
 /*
   if (OBJ_NOWHERE(obj)) {
     debug("OBJ_NOWHERE\r\n");
-    return 0;
+    return FALSE;
   }
 */
   /* Immortal can see anything */
   // level 58 and higher (no avatars).
   if( IS_TRUSTED(sub) && GET_LEVEL(sub) >= IMMORTAL )
   {
-    return 1;
+    return TRUE;
   }
 
   /* minor detail, sleeping chars can't see squat! */
   if( !AWAKE(sub) )
-    return 0;
+    return FALSE;
 
   if( IS_NOSHOW(obj) )
-    return 0;
+    return FALSE;
 
   /* Check to see if object is invis */
   if( IS_SET(obj->extra_flags, ITEM_INVISIBLE) && !IS_AFFECTED(sub, AFF_DETECT_INVISIBLE) )
-    return 0;
+    return FALSE;
 
   /* Check if subject is blind */
   if( IS_BLIND(sub) )
-    return 0;
+    return FALSE;
 
   if( IS_SET((obj)->extra_flags, ITEM_SECRET) )
-    return 0;
+    return FALSE;
 
   if( IS_SET((obj)->extra_flags, ITEM_BURIED) )
-    return 0;
+    return FALSE;
 
   /* Room is magically dark
      Done Later - Granor */
@@ -1514,7 +1520,7 @@ int ac_can_see_obj(P_char sub, P_obj obj)
     // You know the eq your wearing regardless.
     if( OBJ_WORN_BY(obj, sub) )
     {
-      return 1;
+      return TRUE;
     }
   }
   else if( OBJ_CARRIED(obj) )
@@ -1523,7 +1529,7 @@ int ac_can_see_obj(P_char sub, P_obj obj)
     // You know what you have in inventory regardless.
     if( OBJ_CARRIED_BY(obj, sub) )
     {
-      return 1;
+      return TRUE;
     }
   }
   // Anti-crash hack?
@@ -1537,7 +1543,7 @@ int ac_can_see_obj(P_char sub, P_obj obj)
   }
 
   if( IS_NPC(sub) )
-    return 1;
+    return TRUE;
 
   vis_mode = get_vis_mode(sub, rroom);
   // vis 1 == god, 2 == normal, 3 == infra, 4 == wraith, 5 == too dark, 6 == too bright.
@@ -1545,7 +1551,7 @@ int ac_can_see_obj(P_char sub, P_obj obj)
   // Ships are big enough to be visible regardless of light.
   if( vis_mode != 4 && (obj_index[obj->R_num].func.obj == ship_obj_proc) )
   {
-    return 1;
+    return TRUE;
   }
 
   // Allowing infravision to see items in room.  They can already see inventory/equipped.

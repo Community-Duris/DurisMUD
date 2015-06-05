@@ -3238,9 +3238,9 @@ P_obj get_obj_in_list_vis(P_char ch, char *name, P_obj list)
 
 /*
  * search the entire world for an object, and return a pointer
+ * zrange is the distance above/below char.
  */
-
-P_obj get_obj_vis(P_char ch, char *name)
+P_obj get_obj_vis(P_char ch, char *name, int zrange )
 {
   P_obj    t_obj;
   int      i, j, k;
@@ -3282,14 +3282,40 @@ P_obj get_obj_vis(P_char ch, char *name)
   /*
    * ok.. no luck yet. scan the entire obj list
    */
-  for (t_obj = object_list, j = 1; t_obj && (j <= k); t_obj = t_obj->next)
-    if (isname(tmp, t_obj->name))
-      if (CAN_SEE_OBJ(ch, t_obj) || IS_NOSHOW(t_obj))
+  if( zrange <= 0 )
+  {
+    for( t_obj = object_list, j = 1; t_obj && (j <= k); t_obj = t_obj->next )
+    {
+      if (isname(tmp, t_obj->name))
       {
-        if (j == k)
-          return (t_obj);
-        j++;
+        // If you can see it, or it's flagged noshow... then you can see it?
+        //   Yes, the NOSHOW flag means you can't see it when you look in room,
+        //   but it shows when you try to interact with it (ie push button / touch flowers / l <extra desc> etc).
+        if (CAN_SEE_OBJ(ch, t_obj) || IS_NOSHOW(t_obj))
+        {
+          if (j == k)
+            return (t_obj);
+          j++;
+        }
       }
+    }
+  }
+  else
+  {
+    for( t_obj = object_list, j = 1; t_obj && (j <= k); t_obj = t_obj->next )
+    {
+      if (isname(tmp, t_obj->name))
+      {
+        if( CAN_SEE_OBJZ(ch, t_obj, zrange) || IS_NOSHOW(t_obj) )
+        {
+          if (j == k)
+            return (t_obj);
+          j++;
+        }
+      }
+    }
+  }
+
   return (0);
 }
 
@@ -3579,7 +3605,7 @@ int generic_find(char *arg, int bitvector, P_char ch, P_char * tar_ch, P_obj * t
   }
   if (IS_SET(bitvector, FIND_OBJ_WORLD))
   {
-    if ((*tar_obj = get_obj_vis(ch, name)))
+    if ((*tar_obj = get_obj_vis(ch, name, (bitvector & FIND_IGNORE_ZCOORD) ? MAX_ALTITUDE : 0)))
     {
       return (FIND_OBJ_WORLD);
     }

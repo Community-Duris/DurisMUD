@@ -1294,4 +1294,6 @@ struct material_data {
 
 #define RANDOM_ZONES 1 // Set to 1 to enable
 
+#define MAX_ALTITUDE 3
+
 #endif /* _DURIS_DEFINES_H_ */

@@ -516,6 +516,7 @@ int race_size(int race);
      /* Object And Carry related macros */
 
 #define CAN_SEE_OBJ(sub, obj)   (ac_can_see_obj((sub), (obj)))
+#define CAN_SEE_OBJZ(sub, obj, z)   (ac_can_see_obj((sub), (obj), z))
 
 #define GET_ITEM_TYPE(obj) ((obj)->type)
 

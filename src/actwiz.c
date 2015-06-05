@@ -988,12 +988,15 @@ void do_at(P_char ch, char *argument, int cmd)
 void do_goto(P_char ch, char *argument, int cmd)
 {
   char     buf[MAX_STRING_LENGTH], output[MAX_STRING_LENGTH];
-  int      location = NOWHERE, old_room, i, bits;
+  int      location = NOWHERE, old_room, i, bits, zcoord = 0;
   P_char   target_mob = NULL, pers;
   P_obj    target_obj = NULL;
 
   if(IS_NPC(ch))
+  {
+    send_to_char( "MOBs don't have such power.\n\r", ch );
     return;
+  }
 
   one_argument(argument, buf);
   if(!*buf)
@@ -1012,8 +1015,7 @@ void do_goto(P_char ch, char *argument, int cmd)
   }
   else
   {
-    bits = generic_find(buf, (FIND_CHAR_WORLD | FIND_OBJ_WORLD), ch,
-                        &target_mob, &target_obj);
+    bits = generic_find(buf, (FIND_CHAR_WORLD | FIND_OBJ_WORLD | FIND_IGNORE_ZCOORD), ch, &target_mob, &target_obj);
     if(!bits)
     {
       send_to_char("Nothing by that name.\n", ch);
@@ -1022,23 +1024,34 @@ void do_goto(P_char ch, char *argument, int cmd)
     if(target_mob)
     {
       location = target_mob->in_room;
+      zcoord = target_mob->specials.z_cord;
     }
     else
     {
       while (location == NOWHERE)
       {
         if(OBJ_ROOM(target_obj))
+        {
           location = target_obj->loc.room;
+          zcoord = target_obj->z_cord;
+        }
         else if(OBJ_CARRIED(target_obj))
+        {
           location = target_obj->loc.carrying->in_room;
+          zcoord = target_obj->loc.carrying->specials.z_cord;
+        }
         else if(OBJ_WORN(target_obj))
+        {
           location = target_obj->loc.wearing->in_room;
+          zcoord = target_obj->loc.wearing->specials.z_cord;
+        }
         else if(OBJ_INSIDE(target_obj))
+        {
           target_obj = target_obj->loc.inside;
+        }
         else
         {
-          send_to_char
-            ("that object is BUGGED! can't find a location for it.\n", ch);
+          send_to_char("&+RThat object is BUGGED! can't find a location for it.&n\n", ch);
           return;
         }
       }
@@ -1059,8 +1072,11 @@ void do_goto(P_char ch, char *argument, int cmd)
       return;
     }
   }
-  if(!can_enter_room(ch, location, TRUE))
+  if( !can_enter_room(ch, location, TRUE) )
+  {
+    send_to_char( "You try, but you can't seem to get there.\n\r", ch );
     return;
+  }
 
   if(ch->only.pc->poofOutSound)
   {
@@ -1098,9 +1114,20 @@ void do_goto(P_char ch, char *argument, int cmd)
   old_room = ch->in_room;
   char_from_room(ch);
   room_light(old_room, REAL);
-  if(target_mob)
-    ch->specials.z_cord = target_mob->specials.z_cord;
-  char_to_room(ch, location, -1);
+  ch->specials.z_cord = zcoord;
+
+  if( !char_to_room(ch, location, -1) )
+  {
+    // If ch didn't make it to the new location, and is still alive, try to put them back in the old room.
+    if( IS_ALIVE(ch) )
+    {
+      send_to_char( "You didn't make it there, trying to put you back where you started...\n\r", ch );
+      if( !char_to_room( ch, old_room, -1 ) )
+      {
+        return;
+      }
+    }
+  }
 
   if(ch->only.pc->poofInSound)
   {
