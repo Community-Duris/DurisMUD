@@ -861,19 +861,20 @@ extern unsigned int game_locked;
  * when wearer gets hit in melee or nuked and when an item is poofing on ground.
  */
 
-#define CMD_MELEE_HIT   1000
+#define CMD_MELEE_HIT     1000
 #define CMD_SET_PERIODIC -10
-#define CMD_PERIODIC     0
-#define CMD_DEATH       -1
-#define CMD_TOROOM      -2    // Checks NPC procs when someone enters a room.
-#define CMD_GOTHIT      -100
-#define CMD_GOTNUKED    -101
-#define CMD_DECAY       -200
-#define CMD_FOUND       -201
-#define CMD_DISPEL      -202
-#define CMD_BARB_REMOVE -300  // CMD for barb hammer (vnum #17) to reset it's static vars (sigh).
-
-#define CMD_MOB_COMBAT  -102
-#define CMD_MOB_MUNDANE 0
+#define CMD_PERIODIC      0
+#define CMD_DEATH        -1
+#define CMD_TOROOM       -2    // Checks NPC procs when someone enters a room.
+#define CMD_LOOKOUT      -5
+#define CMD_GOTHIT       -100
+#define CMD_GOTNUKED     -101
+#define CMD_MOB_COMBAT   -102
+#define CMD_MOB_MUNDANE  -103
+#define CMD_LOOKAFAR     -104
+#define CMD_DECAY        -200
+#define CMD_FOUND        -201
+#define CMD_DISPEL       -202
+#define CMD_BARB_REMOVE  -300  // CMD for barb hammer (vnum #17) to reset it's static vars (sigh).
 
 #endif /* _SOJ_INTERP_H_ */

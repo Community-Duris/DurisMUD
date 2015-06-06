@@ -7,9 +7,7 @@
 #define SURFACE_MAP_START 500000
 #define SURFACE_MAP_END 659999
 
-#define IS_SURFACE_MAP(r) ( \
-    (world[r].number >= SURFACE_MAP_START && world[r].number <= SURFACE_MAP_END) \
-    )
+#define IS_SURFACE_MAP(r) (world[r].number >= SURFACE_MAP_START && world[r].number <= SURFACE_MAP_END)
 
 // Black background maps
 #define UD_MAP_START 700000
@@ -24,24 +22,24 @@
 #define IS_MAP_ZONE(r) (IS_SET(zone_table[r].flags, ZONE_MAP))
 #define IS_MAP_ROOM(r) (IS_SURFACE_MAP(r) || IS_UD_MAP(r) || IS_MAP_ZONE(world[r].zone))
 
-#define CONT_GC 1
-#define CONT_EC 2
-#define CONT_UC 3
-#define CONT_IC 4
-#define CONT_KK 5
-#define CONT_JADE 6
-#define CONT_DRAGONS 7
-#define CONT_CEOTHIA 8
-#define CONT_BOYARD 9
-#define CONT_VENAN 10
-#define CONT_SHADOW 11
-#define CONT_SCORCHED 12
-#define CONT_TEZCAT 13
-#define CONT_MOONSHAE 14
+#define CONT_GC          1
+#define CONT_EC          2
+#define CONT_UC          3
+#define CONT_IC          4
+#define CONT_KK          5
+#define CONT_JADE        6
+#define CONT_DRAGONS     7
+#define CONT_CEOTHIA     8
+#define CONT_BOYARD      9
+#define CONT_VENAN      10
+#define CONT_SHADOW     11
+#define CONT_SCORCHED   12
+#define CONT_TEZCAT     13
+#define CONT_MOONSHAE   14
 
 
 #define CONTINENT(r) ( world[r].continent )
-#define IS_CONTINENT(r, cont) ( CONTINENT(r) == cont )
+#define IS_CONTINENT(room, cont) ( CONTINENT(room) == cont )
 
 //  adding defines for the planes for rewrite of plane_shift -  Jexni 1/26/08
 
@@ -70,6 +68,10 @@
 #define BLOOD_FRESH 1
 #define BLOOD_REG   2
 #define BLOOD_DRY   3
+
+#define MAP_IGNORE_TOGGLE 0
+#define MAP_USE_TOGGLE    1
+#define MAP_AUTOMAP       2
 
 typedef struct _mapSymbolInfo
 {

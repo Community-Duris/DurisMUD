@@ -106,6 +106,11 @@ int get_vis_mode(P_char ch, int room)
   {
     return 4;
   }
+  // Twilight rooms: everyone can see.
+  if( IS_TWILIGHT_ROOM(room) )
+  {
+    return 2;
+  }
 
   flame = globe = FALSE;
   for (tch = world[room].people; tch; tch = tch->next_in_room)
@@ -120,11 +125,6 @@ int get_vis_mode(P_char ch, int room)
     }
   }
 
-  // Twilight rooms: everyone can see.
-  if( IS_TWILIGHT_ROOM(room) )
-  {
-    return 2;
-  }
   // Normal dayvision: Not dayblind and in lit room.
   if( !has_innate(ch, INNATE_DAYBLIND) && (CAN_DAYPEOPLE_SEE(room) || flame) )
   {
@@ -2913,26 +2913,40 @@ void ansi_comp(char *str)
   *str = '\0';
 }
 
-string pad_ansi(const char *str, int length)
-{
-  return pad_ansi(str, length, FALSE);
-}
-
+// str = string to pad, length = max number of total chars of return string
+// trim_to_length -> trim strings that are longer than length chars.
+// Note: if length is negative, we pad the beginning instead of the end.
 string pad_ansi(const char *str, int length, bool trim_to_length)
 {
   register char lookat;
-  string ret_str(str);
-  int to_pad = (length - strip_ansi(str).size());
+  bool bPadEnd = TRUE;
+  string ret_str("");
+  int to_pad;
 
-  for( int i = 0; i < to_pad; i++ )
+  if( length < 0 )
   {
-    ret_str += " ";
+    bPadEnd = FALSE;
+    // Make length non-negative.
+    length *= -1;
+  }
+  to_pad = length - strip_ansi(str).size();
+
+  // If we're not padding the end, pad the beginning.
+  if( !bPadEnd )
+  {
+    while( to_pad > 0 )
+    {
+      ret_str += " ";
+      to_pad--;
+    }
   }
 
+  ret_str += str;
   // If we need to trim the end,
   if( trim_to_length && to_pad < 0 )
   {
     int count = 0, retLength = 0;
+
     while( count < length )
     {
       // If we're at the beginning of a possible ansi code,
@@ -3009,8 +3023,9 @@ string pad_ansi(const char *str, int length, bool trim_to_length)
         count++;
         retLength++;
       }
-    }
-    // This can occur when we end with a bad ansi code (ie &=Rx will jump 3 chars).
+    } // End trimming
+
+    // This occurs when we end with a bad ansi code (ie pad_ansi( "Hi&=Rx", 4, TRUE) will jump 4 chars at the &).
     if( count > length )
     {
       // We just cut off the last chars as they aren't valid ansi codes.
@@ -3018,10 +3033,21 @@ string pad_ansi(const char *str, int length, bool trim_to_length)
     }
     return ret_str.substr( 0, retLength );
   }
+  // Otherwise, we check to see if it needs padding at the end.
   else
   {
-    return ret_str;
+    // This allows for padding at the end instead of the beginning by sending a negative length.
+    // If we're padding the end, pad the end.
+    if( bPadEnd )
+    {
+      while( to_pad > 0 )
+      {
+        ret_str += " ";
+        to_pad--;
+      }
+    }
   }
+  return ret_str;
 }
 
 string strip_ansi(const char *str)

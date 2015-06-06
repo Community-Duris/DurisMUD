@@ -890,7 +890,7 @@ void game_loop(int s)
         }
         if (t_ch->desc->last_map_update)
         {
-          map_look(t_ch, 8);
+          map_look(t_ch, MAP_AUTOMAP);
           t_ch->desc->last_map_update = 0;
         }
         if (t_ch->desc->last_group_update)

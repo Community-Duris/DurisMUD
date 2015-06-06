@@ -995,7 +995,7 @@ int ship_room_proc(int room, P_char ch, int cmd, char *arg)
 
    if (cmd == CMD_LOOK)
    {
-     if (!arg || !*arg || str_cmp(arg, " out"))
+     if (!arg || !*arg || str_cmp(skip_spaces(arg), "out"))
         return(FALSE);
      look_out_ship(ship, ch);
      return(TRUE);

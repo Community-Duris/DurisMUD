@@ -127,6 +127,7 @@ int astral_clock_setMapModifiers(void)
 
   switch (time_info.hour)
   {
+  // Dawn
   case 4:
     astralMsgIdx = 1;
     map_g_modifier = 5;
@@ -185,10 +186,10 @@ int astral_clock_setMapModifiers(void)
     break;
   case 19:
     astralMsgIdx = 9;
-    map_g_modifier = 6;
+    map_g_modifier = 5;
     map_e_modifier = 7;
     break;
-    // fall thru
+  // Night time
   case 20:
   case 21:
   case 22:
@@ -198,7 +199,7 @@ int astral_clock_setMapModifiers(void)
   case 1:
   case 2:
   case 3:
-    map_g_modifier = 6;
+    map_g_modifier = 3;
     map_e_modifier = 8;
     break;
   }

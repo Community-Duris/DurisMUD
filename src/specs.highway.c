@@ -117,8 +117,7 @@ int hewards_mystical_organ(P_obj obj, P_char ch, int cmd, char *arg)
     return FALSE;
 
   /* a location has been found. */
-
-  new_look(ch, NULL, -4, location);
+  new_look(ch, NULL, CMD_LOOKAFAR, location);
 
   return TRUE;
 }
@@ -163,7 +162,7 @@ int amethyst_orb(P_obj obj, P_char ch, int cmd, char *arg)
     else
     {
       act("You peer into $p and see...", 0, ch, obj, 0, TO_CHAR);
-//              new_look(ch, NULL, -4, obj->value[0]);
+//              new_look(ch, NULL, CMD_LOOKAFAR, obj->value[0]);
       send_to_char(world[obj->value[0]].name, ch);
       send_to_char("\r\n", ch);
       if (world[obj->value[0]].description)

@@ -13,6 +13,7 @@ using namespace std;
 #include "interp.h"
 #include "prototypes.h"
 #include "utils.h"
+#include "utility.h"
 #include "damage.h"
 #include "db.h"
 #include "sql.h"

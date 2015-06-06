@@ -719,12 +719,13 @@ int wagon_exit_room(int room, P_char ch, int cmd, char *arg)
     if (!arg || !*arg || str_cmp(arg, " out"))
       return (FALSE);
 
-    rroom = ch->in_room;
-    char_from_room(ch);
-    char_to_room(ch, obj->loc.room, -2);
-    new_look(ch, 0, -4, obj->loc.room);
-    char_from_room(ch);
-    char_to_room(ch, rroom, -2);
+    // This should be fine with just the CMD_LOOKAFAR, but I didn't test it to be sure.
+//    rroom = ch->in_room;
+//    char_from_room(ch);
+//    char_to_room(ch, obj->loc.room, -2);
+    new_look(ch, NULL, CMD_LOOKAFAR, obj->loc.room);
+//    char_from_room(ch);
+//    char_to_room(ch, rroom, -2);
 
     return (TRUE);
   }

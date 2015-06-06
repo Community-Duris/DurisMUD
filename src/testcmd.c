@@ -39,30 +39,45 @@ void disproom(P_char ch, int x, int y)
   int      local_y, local_x;
   int vroom = world[ch->in_room].number;
   struct zone_data *zone = &zone_table[world[ch->in_room].zone];
-  
   int zone_start_vnum = world[zone->real_bottom].number;
+
+  if( zone->mapx == 0 || zone->mapy == 0 )
+  {
+    send_to_char("We have a serious problem: This room has a 0 mapx or 0 mapy.", ch );
+    debug("disproom: we have a serious problem with this room r:%d v:%d - zone->mapx = %d, zone->mapy = %d.",
+      ch->in_room, vroom, zone->mapx, zone->mapy );
+    return;
+  }
 
   // how far are we from the northern local map edge
   local_y = ( ( vroom - zone_start_vnum) / zone->mapx ) % zone->mapy;
-  
+
   // how far are we from the western local map edge
   local_x = ( vroom - zone_start_vnum) % zone->mapy;
- 
+
   if( local_x + x < 0 )
+  {
     local_x += zone->mapx;
+  }
   else if( local_x + x >= zone->mapx )
+  {
     local_x -= zone->mapx;
-  
+  }
+
   if( local_y + y < 0 )
+  {
     local_y += zone->mapy;
+  }
   else if( local_y + y >= zone->mapy )
+  {
     local_y -= zone->mapy;
-  
+  }
+
   int newx = local_x + x;
   int newy = local_y + y;
-  
+
   char buff[100];
-  sprintf(buff, "(%d,%d) : [%d] <%d,%d>\n", x,y, (zone_start_vnum + newx + ( newy * zone->mapx)), newx, newy);
+  sprintf(buff, "(%3d,%3d) : [%6d] <%3d,%3d>\n", x,y, (zone_start_vnum + newx + ( newy * zone->mapx)), newx, newy);
   send_to_char(buff, ch);
 }
 
@@ -112,35 +127,50 @@ void do_test_lava(P_char ch, char *arg, int cmd)
 void do_test_room(P_char ch, char *arg, int cmd)
 {
   int x = 0, y = 0;
-  int      local_y, local_x;
+  int local_y, local_x;
   int vroom = world[ch->in_room].number;
   struct zone_data *zone = &zone_table[world[ch->in_room].zone];
-  
-  if( !IS_SET(zone->flags, ZONE_MAP))
+
+  if( !IS_SET(zone->flags, ZONE_MAP) )
+  {
     send_to_char("This room not on a map.", ch);
-  
+    return;
+  }
+
   int zone_start_vnum = world[zone->real_bottom].number;
-  
-  //  if (IS_SURFACE_MAP(room))
-  //    vroom -= MAP_START;
-  
+
+  if( zone->mapx == 0 || zone->mapy == 0 )
+  {
+    send_to_char("We have a serious problem: This map room has a 0 mapx or 0 mapy.", ch );
+    debug("do_test_room: We have a serious problem with this map room r:%d v:%d - zone->mapx = %d, zone->mapy = %d.",
+      ch->in_room, vroom, zone->mapx, zone->mapy );
+    return;
+  }
+
   // how far are we from the northern local map edge
   local_y = ( ( vroom - zone_start_vnum) / zone->mapx ) % zone->mapy;
-  
+
   // how far are we from the western local map edge
   local_x = ( vroom - zone_start_vnum) % zone->mapy;
-  
+
   char buff[100];
-  sprintf(buff, "Zone (%dx%d) [%d,%d]\n", zone->mapx, zone->mapy, local_x, local_y);
+  sprintf( buff, "&+CZone:&n (%dx%d) [%d,%d] '%s'&n %s\n",
+    zone->mapx, zone->mapy, local_x, local_y, zone->name, zone->filename );
   send_to_char(buff, ch);
 
-  send_to_char("Calculated vnums:\n", ch);
+  send_to_char("&+CCalculated vnums:&n\n", ch);
 
-  disproom(ch, 0, 0);
-  disproom(ch, 0, -1);
-  disproom(ch, 1, 0);
-  disproom(ch, 0, 1);
-  disproom(ch, -1, 0);    
+  // Yeah, put in cyan and underline manually.  So sue me.
+  send_to_char( "\033[4;36mThis room: &n\033[4m", ch );
+  disproom(ch,  0,  0);
+  send_to_char( "&+cOne north: &n", ch );
+  disproom(ch,  0, -1);
+  send_to_char( "&+cOne east : &n", ch );
+  disproom(ch,  1,  0);
+  send_to_char( "&+cOne south: &n", ch );
+  disproom(ch,  0,  1);
+  send_to_char( "&+cOne west : &n", ch );
+  disproom(ch, -1,  0);
 }
 
 void do_test_writemap(P_char ch, char *arg, int cmd)

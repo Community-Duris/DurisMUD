@@ -10663,7 +10663,8 @@ void stat_single_race( P_char ch, int race )
   bool first;
   int  i;
 
-  sprintf( buf, "\n\rRace: %s (%2d) %15s %10s %2s\n\r",
+  // Note: Right now the longest race name is "Water Elemental" (42) at 15 chars. 6/5/2015
+  sprintf( buf, "\n\rRace: %s&n (%2d) %15s %10s %2s\n\r",
     pad_ansi(race_names_table[race].ansi, 15).c_str(), race, race_names_table[race].normal,
     race_names_table[race].no_spaces, race_names_table[race].code );
   send_to_char( buf, ch );

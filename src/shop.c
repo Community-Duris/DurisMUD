@@ -16,6 +16,7 @@
 #include "prototypes.h"
 #include "structs.h"
 #include "utils.h"
+#include "utility.h"
 #include "justice.h"
 #include "salchemist.h"
 #include "specs.prototypes.h"

@@ -3915,12 +3915,12 @@ bool resists_spell(P_char caster, P_char victim)
   {
     return FALSE;
   }
-/* PENIS: TEMP FOR TESTING
+
   if( IS_TRUSTED(caster) && !IS_TRUSTED(victim) )
   {
     return FALSE;
   }
-*/
+
   if( affected_by_spell(victim, SKILL_SPELL_PENETRATION) )
   {
     return FALSE;

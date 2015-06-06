@@ -2864,7 +2864,6 @@ int god_check(char *name);
 __attribute__((deprecated)) char* stripansi(const char *mesg);
 string strip_ansi(const char *str);
 int stripansi_2(const char *, char *);
-string pad_ansi(const char str[], int length);
 void ansi_comp(char *);
 int ansi_strlen(const char*);
 int is_valid_ansi(char *mesg, bool can_set_blinking);

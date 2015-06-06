@@ -25,6 +25,7 @@
 #include "spells.h"
 #include "structs.h"
 #include "utils.h"
+#include "utility.h"
 #include "weather.h"
 #include "damage.h"
 #include "map.h"

@@ -152,7 +152,7 @@ void look_out_ship(P_ship ship, P_char ch)
       ch->specials.z_cord = 2;
    if (SHIP_FLYING(ship))
       ch->specials.z_cord = 4;
-   new_look(ch, 0, -5, ship->location);
+   new_look(ch, 0, CMD_LOOKOUT, ship->location);
    ch->specials.z_cord = 0;
 }
 

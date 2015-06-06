@@ -341,8 +341,11 @@ bool IS_OUTDOORS(int r);
 
 #define GET_NAME1(ch)   (IS_DISGUISE((ch)) ? GET_DISGUISE_NAME((ch)) : GET_NAME((ch)))
 #define GET_NAME(ch)    ((ch)->player.name)
-#define GET_TRUE_NAME(ch)    (((ch)->desc && (ch)->desc->original) \
-  ? (ch)->desc->original->player.name : (ch)->player.name)
+
+#define GET_TRUE_CHAR(ch) ( ((ch)->desc && (ch)->desc->original) ? ((ch)->desc->original) : (ch) )
+#define GET_TRUE_NAME(ch) ( GET_TRUE_CHAR(ch)->player.name )
+#define J_NAME_TRUE(ch) ( J_NAME(GET_TRUE_CHAR(ch)) )
+
 #define GET_DISGUISE_NAME(ch) (IS_DISGUISE_PC(ch) ? (ch)->disguise.name : (ch)->disguise.title)
 #define GET_DISGUISE_LONG(ch) ((ch)->disguise.longname)
 #define GET_DISGUISE_SHORT(ch) ((ch)->disguise.short_descr)

@@ -568,6 +568,8 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
     return val;
 }
 
+// Show ch the map with a distance of n as if the ch is in room from_room
+//   and show_map_regardless
 void display_map_room(P_char ch, int from_room, int n, int show_map_regardless)
 {
   int      x, y, where, what, from_what, prev = -1, temp;
@@ -576,25 +578,23 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless)
   char     buf[MAX_STRING_LENGTH];
   float    horizontal_factor, vertical_factor;
 
-  if(!(ch) ||
-    !IS_ALIVE(ch))
+  // If ch doesn't exist/is dead/doesn't have a descriptor to send info to.
+  if( !IS_ALIVE(ch) || !ch->desc )
   {
     return;
   }
-  
+
   if(n > 500)
   {
-    send_to_char("lines too wide, can't show map safely\n", ch);
+    send_to_char("Lines too wide, can't show map safely!\n\r", ch);
     return;
   }
 
   from_what = SECTOR_TYPE(from_room);
 
-  if(ch &&
-    ch->desc &&
-    ch->desc->term_type == TERM_MSP)
+  if( ch->desc->term_type == TERM_MSP )
   {
-    if(show_map_regardless != 8)
+    if( show_map_regardless != MAP_AUTOMAP )
     {
       send_to_char("\n<map>\n", ch, LOG_NONE);
     }
@@ -616,9 +616,7 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless)
     buf[0] = '\0';
 
     /* send a space, each line */
-    if(ch &&
-      ch->desc &&
-      ch->desc->term_type != TERM_MSP)
+    if( ch->desc->term_type != TERM_MSP )
     {
       send_to_char("           ", ch, LOG_NONE);
     }
@@ -640,17 +638,17 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless)
       {
         what = SECTOR_TYPE(where_rnum);
       }
-      
+
       what = BOUNDED(0, (int) what, (NUM_SECT_TYPES-1));
       map_tile = false;
-      
+
       if (hadbg)
       {
         strcat(buf, "&n");
       }
-      
+
       whats_in = whats_in_maproom(ch, where_rnum, distance, show_map_regardless);
-      
+
       if (horizontal_factor * y * y + vertical_factor * x * x > n * n * 0.6)
       {
         strcat(buf, " ");
@@ -788,15 +786,15 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless)
 	strcat(buf, "&=LYF");
       }
 #endif
-      else if ((prev != what) || (x == -n))
+      else if( (prev != what) || (x == -n) )
       {
         int shift = 0;
-        
+
         if (hadbg && color_symbol[what].hasBg)
         {
           shift = -2;
         }
-        
+
         sprintf(buf + strlen(buf) + shift, "&%s%s",
             color_symbol[what].colorStrn, sector_symbol[what]);
         hadbg = color_symbol[what].hasBg;
@@ -825,11 +823,9 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless)
     send_to_char(buf, ch);
   }
 
-  if(ch &&
-    ch->desc &&
-    ch->desc->term_type == TERM_MSP)
+  if( ch->desc->term_type == TERM_MSP )
   {
-    if(show_map_regardless != 8)
+    if( show_map_regardless != MAP_AUTOMAP )
     {
       send_to_char("\n</map>\n", ch, LOG_NONE);
     }
@@ -854,17 +850,23 @@ int map_view_distance(P_char ch, int room)
     return 0;
   }
 
+  // Imms see 12 + altitude.
+  if( IS_TRUSTED(ch) )
+  {
+    return 12 + ((ch->specials.z_cord > 0) ? ch->specials.z_cord : 0);
+  }
   // eyeless - this means that ANY other factors mean nothing.
-  if( has_innate(ch, INNATE_EYELESS) )
+  else if( has_innate(ch, INNATE_EYELESS) )
   {
     return 8;
   }
   // if on the surface
   else if( IS_SURFACE_MAP(room) )
   {
+    // The map_e_modifier and map_g_modifier varies by time.
     if( has_innate(ch, INNATE_DAYBLIND) )
     {
-      if( IS_AFFECTED2(ch, AFF2_ULTRAVISION) )
+      if( IS_AFFECTED(ch, AFF_INFRAVISION) )
       {
         n = BOUNDED(0, (map_e_modifier + 2), 8);
       }
@@ -942,17 +944,16 @@ int map_view_distance(P_char ch, int room)
     n += 1;
   }
 
-  n = BOUNDED(0, n, 10);
-
   if( IS_OCEAN_ROOM(room) )
   {
     n = 10;
   }
-  if( IS_TRUSTED(ch) )
+  else
   {
-    n = 12;
+    n = BOUNDED(0, n, 10);
   }
-  if (ch->specials.z_cord > 0)
+
+  if( ch->specials.z_cord > 0 )
   {
     n += ch->specials.z_cord;
   }
@@ -960,11 +961,14 @@ int map_view_distance(P_char ch, int room)
   return n;
 }
 
+// ch = person to show the map to, room = the center of the map, show_map_regardless = ignore the PLR_MAP toggle.
 void map_look_room(P_char ch, int room, int show_map_regardless)
 {
   char tot_buf[MAX_STRING_LENGTH];
+  int  n;
 
-  if( !IS_ALIVE(ch) )
+  // If don't have a living char with a desc to send the map to.
+  if( !IS_ALIVE(ch) || !ch->desc )
   {
     return;
   }
@@ -972,29 +976,19 @@ void map_look_room(P_char ch, int room, int show_map_regardless)
   /* quickly repair them, before they see the wrong thing */
   if( ch->specials.z_cord < 0 && !IS_WATER_ROOM(room) )
   {
+    send_to_char("&+BYou rise out of the water!&n\n\r", ch );
     ch->specials.z_cord = 0;
   }
 
-  if( !(IS_MORPH(ch) && IS_SET((MORPH_ORIG(ch))->specials.act, PLR_MAP)) && IS_NPC(ch) )
+  // If we're not ignoring the toggle and we have a PC (includes switched Imms), and they have
+  //   the toggle off, don't show the map.
+  if( show_map_regardless != MAP_IGNORE_TOGGLE
+    && IS_PC(GET_TRUE_CHAR(ch)) && !IS_SET(GET_TRUE_CHAR(ch)->specials.act, PLR_MAP) )
   {
     return;
   }
 
-  if( !IS_MORPH(ch) && !IS_SET(ch->specials.act, PLR_MAP) && !show_map_regardless )
-  {
-    return;
-  }
-  /*
-  if( !IS_TRUSTED(ch) && 
-      IS_SURFACE_MAP(room) &&
-      IS_DAY && has_innate(ch, INNATE_DAYBLIND) && 
-      !IS_OCEAN_ROOM(room) )
-    return;
-  */
-
-  int n = map_view_distance(ch, room);
-
-  if( n > 1 )
+  if( (n = map_view_distance(ch, room)) > 1 )
   {
     display_map_room(ch, room, n, show_map_regardless);
   }

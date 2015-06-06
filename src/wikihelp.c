@@ -1,5 +1,6 @@
 #include "sql.h"
 #include "utils.h"
+#include "utility.h"
 #include "wikihelp.h"
 #include "prototypes.h"
 #include "string.h"

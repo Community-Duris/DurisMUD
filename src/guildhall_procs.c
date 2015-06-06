@@ -297,7 +297,7 @@ int guildhall_window(P_obj obj, P_char ch, int cmd, char *arg)
         //sprintf(buff, "You peer into %s&n and see...\r\n\r\n", obj->short_description);
 		send_to_char("You look out the window...\r\n", ch);
         //send_to_char(buff, ch);
-        new_look(ch, 0, -5, real_room0(obj->value[0]));    
+        new_look(ch, 0, CMD_LOOKOUT, real_room0(obj->value[0]));    
         return TRUE;
     /*
 	else if( *buff && is_abbrev(buff, "out") )
@@ -307,7 +307,7 @@ int guildhall_window(P_obj obj, P_char ch, int cmd, char *arg)
       
       sprintf(buff, "You peer into %s&n and see...\r\n\r\n", obj->short_description);
       send_to_char(buff, ch);
-      new_look(ch, 0, -5, real_room0(obj->value[0]));    
+      new_look(ch, 0, CMD_LOOKOUT, real_room0(obj->value[0]));    
       return TRUE;
     }
 	*/

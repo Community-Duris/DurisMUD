@@ -4788,7 +4788,7 @@ void spell_wizard_eye(int level, P_char ch, char *arg, int type,
   }
   strcpy(Gbuf1, "&+WYou cast your sights far out into the zone...\n");
   send_to_char(Gbuf1, ch);
-  new_look(ch, NULL, -4, target);
+  new_look(ch, NULL, CMD_LOOKAFAR, target);
   // play_sound(SOUND_FARSITE, NULL, ch->in_room, TO_ROOM);
 
   if(NewSaves(victim, SAVING_SPELL, 0))
@@ -4853,7 +4853,7 @@ void spell_clairvoyance(int level, P_char ch, char *arg, int type,
   }
   strcpy(Gbuf1, "&+WYou cast your sights far out into the realms...\n");
   send_to_char(Gbuf1, ch);
-  new_look(ch, NULL, -4, target);
+  new_look(ch, NULL, CMD_LOOKAFAR, target);
 
   if(NewSaves(victim, SAVING_SPELL, 0) && victim->in_room == target)
     send_to_char("&+LYou feel strangely like you are being watched..\n",

@@ -1,6 +1,7 @@
 #include <string.h>
 
 #include "utils.h"
+#include "utility.h"
 #include "prototypes.h"
 #include "sql.h"
 #include "multiplay_whitelist.h"

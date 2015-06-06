@@ -14,6 +14,7 @@
 #include <vector>
 #include "prototypes.h"
 #include "spells.h"
+#include "utility.h"
 using namespace std;
 
 #ifdef __NO_MYSQL__

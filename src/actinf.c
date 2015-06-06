@@ -27,6 +27,7 @@ using namespace std;
 #include "utils.h"
 #include "justice.h"
 #include "prototypes.h"
+#include "utility.h"
 #include "spells.h"
 #include "structs.h"
 #include "weather.h"
@@ -2196,7 +2197,7 @@ void display_room_auras(P_char ch, int room_no)
 }
 
 // Where's the desc for this AWFUL function?!?
-// new_look(ch, 0, -5, ship->location) == 'look out' while on ship.
+// new_look(ch, 0, CMD_LOOKOUT, ship->location) == 'look out' while on ship.
 void new_look(P_char ch, char *argument, int cmd, int room_no)
 {
   char     buffer[MAX_STRING_LENGTH], buf[MAX_STRING_LENGTH];
@@ -2231,8 +2232,14 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
     "\n"
   };
 
-  if( !ch->desc || (room_no == NOWHERE) || GET_STAT(ch) < STAT_SLEEPING )
+  // No descriptor -> nobody to send info to.  valid room number check, and char alert enough to see.
+  if( !ch->desc || room_no < 0 || room_no > top_of_world || GET_STAT(ch) < STAT_SLEEPING )
   {
+    if( room_no < 0 || room_no > top_of_world )
+    {
+      debug( "new_look: room_no (&+C%d&n) out of range &+W0..%d&n.", room_no, top_of_world );
+      send_to_char( "You're in a &+RVERY buggy&N room, please tell a god.\n\r", ch );
+    }
     return;
   }
   if( GET_STAT(ch) == STAT_SLEEPING )
@@ -2254,22 +2261,6 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
     return;
   }
 
-  vis_mode = get_vis_mode(ch, room_no);
-  if( vis_mode == 5 && cmd != -5 )
-  {
-    send_to_char("&+LIt is pitch black...\n", ch);
-    list_ships_to_char( ch, room_no );
-    return;
-  }
-  if( vis_mode == 6 && cmd != -5 )
-  {
-    send_to_char("&+WArgh!!! It's too bright!\n", ch);
-    list_ships_to_char( ch, room_no );
-    return;
-  }
-
-  brief_mode = IS_SET(GET_PLYR(ch)->specials.act, PLR_BRIEF);
-
   if( argument )
   {
     argument_split_2(argument, arg1, arg2);
@@ -2279,6 +2270,31 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
     *arg1 = '\0';
     *arg2 = '\0';
   }
+
+  vis_mode = get_vis_mode(ch, room_no);
+  if( vis_mode == 5 && cmd != CMD_LOOKOUT )
+  {
+    if( IS_MAP_ROOM(room_no) && *arg1 == '\0' )
+    {
+      map_look( ch, MAP_USE_TOGGLE );
+    }
+    send_to_char("&+LIt is pitch black...\n", ch);
+    list_ships_to_char( ch, room_no );
+    return;
+  }
+  if( vis_mode == 6 && cmd != CMD_LOOKOUT )
+  {
+    if( IS_MAP_ROOM(room_no) && *arg1 == '\0' )
+    {
+      map_look( ch, MAP_USE_TOGGLE );
+    }
+    send_to_char("&+WArgh!!! It's too bright!\n", ch);
+    list_ships_to_char( ch, room_no );
+    return;
+  }
+
+  brief_mode = IS_SET(GET_TRUE_CHAR(ch)->specials.act, PLR_BRIEF);
+
   /* Partial Match */
   keyword_no = search_block(arg1, keywords, FALSE);
 
@@ -2293,6 +2309,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
   tmp_char = NULL;
   tmp_desc = NULL;
 
+  // If we have no args, and CMD_LOOKOUT or -4 ?
   if( (keyword_no == 8) && (cmd != CMD_LOOK) )
   {
     keyword_no = 20;
@@ -2348,7 +2365,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
          IS_SET(EXIT(ch, keyword_no)->exit_info, EX_BLOCKED)) )
     {
       /* but infra-only can't detect it */
-      send_to_char("You see nothing special...\n", ch);
+      send_to_char("&+rYou see nothing special...&n\n", ch);
       return;
     }
 
@@ -2504,7 +2521,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
 
     if( !IS_TRUSTED(ch) && !has_innate(ch, INNATE_EYELESS) )
     {
-      if( has_innate(ch, INNATE_DAYBLIND) && IS_SUNLIT(temp) && !IS_TWILIGHT_ROOM(temp) )
+      if( has_innate(ch, INNATE_DAYBLIND) && IS_SUNLIT(temp) )
       {
         send_to_char("&+YThe sunlight! &+WIt's too bright to see!&n\n", ch);
         return;
@@ -2531,14 +2548,14 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
       }
     }
 
-    new_look(ch, NULL, -4, temp);
+    new_look(ch, NULL, CMD_LOOKAFAR, temp);
     break;
 
   case 6:
     /* look 'in' */
     if( vis_mode == 3 )
     {
-      send_to_char("You can't make out much detail in the dark with just infravision..\n", ch);
+      send_to_char("&+rYou can't make out much detail in the dark with just infravision..&n\n", ch);
       break;
     }
     if( vis_mode == 4 )
@@ -2608,7 +2625,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
     /* look 'at' */
     if( vis_mode == 3 )
     {
-      send_to_char("You can't make out much detail in the dark with just infravision..\n", ch);
+      send_to_char("&+rYou can't make out much detail in the dark with just infravision..&n\n", ch);
       break;
     }
     if( *arg2 )
@@ -2737,23 +2754,29 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
     switch (keyword_no)
     {
       case 8:                    /* look COMMAND, with NULL args, brief is forced */
-        if( IS_MAP_ROOM(ch->in_room) || ch->specials.z_cord < 0 || (IS_MAP_ROOM(room_no) && cmd == -5) )
-          map_look_room(ch, room_no, FALSE);
+        if( IS_MAP_ROOM(ch->in_room) || ch->specials.z_cord < 0 || (IS_MAP_ROOM(room_no) && cmd == CMD_LOOKOUT) )
+          map_look_room(ch, room_no, MAP_USE_TOGGLE);
         brief_mode = TRUE;
         break;
       case 9:                    /* look 'room', brief is overridden */
         if( IS_MAP_ROOM(ch->in_room) || ch->specials.z_cord < 0 )
-          map_look(ch, TRUE);
+          map_look(ch, MAP_IGNORE_TOGGLE);
         brief_mode = FALSE;
         break;
       case 20:
-        if( IS_MAP_ROOM(room_no) && cmd == -5 )
+        // Look out -> look out of a tower, or out of a ship.
+        if( IS_MAP_ROOM(room_no) && (cmd == CMD_LOOKOUT) )
         {
-          map_look_room(ch, room_no, FALSE);
+          map_look_room(ch, room_no, MAP_IGNORE_TOGGLE);
         }
-        else if (IS_MAP_ROOM(ch->in_room))
+        // CMD_LOOKAFAR -> look in a room that ch isn't in.
+        if( IS_MAP_ROOM(room_no) && (cmd == CMD_LOOKAFAR) )
         {
-          map_look_room(ch, ch->in_room, FALSE);
+          map_look_room(ch, room_no, MAP_USE_TOGGLE);
+        }
+        else if( IS_MAP_ROOM(ch->in_room) )
+        {
+          map_look_room(ch, ch->in_room, MAP_USE_TOGGLE);
         }
         break;
       default:
@@ -2801,8 +2824,8 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
       }
     }
 
-    // cmd == -5 -> Mode = -1 (for look out on ship).
-    show_exits_to_char(ch, room_no, (cmd == -5) ? -1 : 1);
+    // cmd == CMD_LOOKOUT -> Mode = -1 (for look out on ship).
+    show_exits_to_char(ch, room_no, (cmd == CMD_LOOKOUT) ? -1 : 1);
     if (get_spell_from_room(&world[room_no], SPELL_WANDERING_WOODS))
     {
       sprintf(Gbuf5, "&+GAn air of bewildering enchantment lies heavy here.&n\n");
@@ -2839,7 +2862,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
     }  */
 
     // If we can see normally, or we're on a ship looking out.
-    if( (vis_mode == 2 || vis_mode == 1) || (( cmd == -5 ) && ( vis_mode == 5 || vis_mode == 6 )) )
+    if( (vis_mode == 2 || vis_mode == 1) || (( cmd == CMD_LOOKOUT ) && ( vis_mode == 5 || vis_mode == 6 )) )
     {
       list_obj_to_char(world[room_no].contents, ch, 0, FALSE);
     }
@@ -2861,7 +2884,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
 
 
 // mode: 2 == exits command, 1 == look command/move to new room/etc.
-//       1 == 'look out' on ship.
+//      -1 == 'look out' on ship.
 void show_exits_to_char(P_char ch, int room_no, int mode)
 {
   int      i, vis_mode, count;
@@ -2925,11 +2948,10 @@ void show_exits_to_char(P_char ch, int room_no, int mode)
     for (count = 0, i = 0; i < NUM_EXITS; i++)
     {
       exit = world[room_no].dir_option[i];
-      if( !exit || (exit->to_room == NOWHERE && (vis_mode != 1)) )
+      if( !exit || (exit->to_room == NOWHERE && ( (vis_mode = get_vis_mode( ch, exit->to_room )) != 1) ) )
       {
         continue;
       }
-      vis_mode = get_vis_mode(ch, exit->to_room);
       switch( vis_mode )
       {
       // God vision.
@@ -3004,7 +3026,7 @@ void show_exits_to_char(P_char ch, int room_no, int mode)
           break;
         }
         count++;
-        if (!brief_mode)
+        if( !brief_mode )
         {
           sprintf(buffer + strlen(buffer), " &+c-%s&n", exits[i]);
         }
@@ -3078,13 +3100,17 @@ void show_exits_to_char(P_char ch, int room_no, int mode)
       {
         continue;
       }
-      vis_mode = get_vis_mode(ch, exit->to_room);
-  
+      // Gods need to see NOWHERE exits and you can dereference NOWHERE.
+      if( vis_mode != 1 )
+      {
+        vis_mode = get_vis_mode(ch, exit->to_room);
+      }
+
       switch( vis_mode )
       {
       case 1:
         count++;
-        sprintf(buffer + strlen(buffer), "%s- %s%s%s%s%s%s&n ", exits[i],
+        sprintf(buffer + strlen(buffer), "%14s- %s%s%s%s%s%s&n ", exits[i],
           IS_SET(exit->exit_info, EX_ISDOOR) ? "&+yD" : " ",
           IS_SET(exit->exit_info, EX_CLOSED) ? "&+gC" : " ",
           IS_SET(exit->exit_info, EX_LOCKED) ? "&+RL&n" : " ",
@@ -3132,7 +3158,7 @@ void show_exits_to_char(P_char ch, int room_no, int mode)
           break;
         }
         count++;
-        sprintf(buffer + strlen(buffer), "%s- ", exits[i]);
+        sprintf(buffer + strlen(buffer), "%14s- ", exits[i]);
         if( IS_SET(exit->exit_info, EX_ISDOOR) )
         {
           sprintf(buffer + strlen(buffer), "(%s %s) ", IS_SET(exit->exit_info, EX_CLOSED) ? "closed" : "open",
@@ -3156,7 +3182,7 @@ void show_exits_to_char(P_char ch, int room_no, int mode)
           break;
         }
         count++;
-        sprintf(buffer + strlen(buffer), "%s- %s\n", exits[i], world[exit->to_room].name);
+        sprintf(buffer + strlen(buffer), "%14s- %s\n", exits[i], world[exit->to_room].name);
         break;
       case 4:
         if( (exit->to_room == NOWHERE) || IS_SET(exit->exit_info, EX_SECRET)
