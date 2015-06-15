@@ -83,6 +83,8 @@ extern int top_of_mobt;
 extern P_index mob_index;
 extern void assign_racial_skills(P_char ch);
 extern void reset_racial_skills(P_char ch);
+extern void GetMIA(char *playerName, char *returned);
+extern void GetMIA2(char *playerName, char *returned);
 
 #define TOGGLE_BIT(var, bit) ((var) = (var) ^ (bit))
 #define PLR_FLAGS(ch)          ((ch)->specials.act)
@@ -3047,7 +3049,7 @@ void enter_game(P_desc d)
   crm_rec *crec = NULL;
   int      cost;
   int r_room = NOWHERE;
-  long     time_gone = 0, hit_g, move_g, heal_time;
+  long     time_gone = 0, hit_g, move_g, heal_time, rest;
   int      mana_g;
   char     Gbuf1[MAX_STRING_LENGTH];
   bool     nobonus = FALSE;
@@ -3156,13 +3158,13 @@ void enter_game(P_desc d)
     /* time_gone is how many ticks (currently real minutes) they have been out
        of the game. */
     time_gone = (time(0) - ch->player.time.saved) / SECS_PER_MUD_HOUR;
-  
+    rest = time(0) - ch->player.time.saved;
+
     ch->player.time.birth -= time_gone;
 
     SET_POS(ch, POS_STANDING + STAT_NORMAL);
     heal_time = MAX(0, (time_gone - 120));
 
-  
     if (d->rtype != RENT_DEATH)
     {
       hit_g = BOUNDED(0, hit_regen(ch) * heal_time, 3000);
@@ -3173,7 +3175,7 @@ void enter_game(P_desc d)
     {
       hit_g = mana_g = move_g = 0;
     }
-  
+
     GET_HIT(ch)      = BOUNDED(1, GET_HIT(ch) + hit_g, GET_MAX_HIT(ch));
     GET_MANA(ch)     = BOUNDED(1, GET_MANA(ch) + mana_g, GET_MAX_MANA(ch));
     GET_VITALITY(ch) = BOUNDED(1, GET_VITALITY(ch) + move_g, GET_MAX_VITALITY(ch));
@@ -3195,7 +3197,7 @@ void enter_game(P_desc d)
     set_surname(ch, 0);
   }
   /* don't do any of above for new chars */
-  
+
   send_to_char(WELC_MESSG, ch);
   ch->desc = d;
   ch->next = character_list;
@@ -3218,10 +3220,10 @@ void enter_game(P_desc d)
     if(r_room == NOWHERE)
       r_room = ch->in_room;
   }
-  
+
   if (zone_table[world[r_room].zone].flags & ZONE_CLOSED)
     r_room = real_room(GET_BIRTHPLACE(ch));
-    
+
   if (ch->only.pc->pc_timer[PC_TIMER_HEAVEN] > time(NULL))
   {
     if (IS_ILLITHID(ch))
@@ -3372,36 +3374,12 @@ void enter_game(P_desc d)
     ch->only.pc->highest_level = GET_LEVEL(ch);
   }
 
-  if (time_gone > 1)
-  {
-    strcpy(Gbuf1, "  (MIA: ");
-    if (time_gone > 10080)
-      sprintf(Gbuf1 + strlen(Gbuf1), "%d week%s, ",
-              (int) (time_gone / 10080),
-              ((time_gone / 10080) > 1) ? "s" : "");
-    if ((time_gone % 10080) > 1440)
-      sprintf(Gbuf1 + strlen(Gbuf1), "%d day%s, ",
-              (int) ((time_gone % 10080) / 1440),
-              (((time_gone % 10080) / 1440) > 1) ? "s" : "");
-    if ((time_gone % 1440) > 60)
-      sprintf(Gbuf1 + strlen(Gbuf1), "%d hour%s, ",
-              (int) (time_gone % 1440) / 60,
-              (((time_gone % 1440) / 60) > 1) ? "s" : "");
-    if (time_gone % 60)
-      sprintf(Gbuf1 + strlen(Gbuf1), "%d minute%s, ",
-              (int) (time_gone % 60), ((time_gone % 60) > 1) ? "s" : "");
-    Gbuf1[strlen(Gbuf1) - 2] = ')';
-    Gbuf1[strlen(Gbuf1) - 1] = '\0';
-  }
-  else
-    *Gbuf1 = '\0';
-
   // Add well-rested or rested bonus, if applicable.
   // 24 hrs -> 2h well-rested bonus.
   if( nobonus )
   {
   }
-  else if( time_gone >= 24 * 60 )
+  else if( rest / 3600 >= 24 )
   {
     affect_from_char(ch, TAG_WELLRESTED);
     affect_from_char(ch, TAG_RESTED);
@@ -3413,10 +3391,12 @@ void enter_game(P_desc d)
     af1.location = 0;
     af1.flags = AFFTYPE_PERM | AFFTYPE_NODISPEL;
     affect_to_char(ch, &af1);
-    debug( "'%s' getting well-rested bonus!", J_NAME(ch) );
+
+    GetMIA2(ch->player.name, Gbuf1 );
+    debug( "'%s' getting well-rested bonus (%s)!", J_NAME(ch), Gbuf1 );
   }
   // 10 hrs -> 2h rested bonus.
-  else if( time_gone >= 10 * 60 )
+  else if( rest / 3600 >= 10 )
   {
     affect_from_char(ch, TAG_WELLRESTED);
     affect_from_char(ch, TAG_RESTED);
@@ -3428,10 +3408,13 @@ void enter_game(P_desc d)
     af1.location = 0;
     af1.flags = AFFTYPE_PERM | AFFTYPE_NODISPEL;
     affect_to_char(ch, &af1);
-    debug( "'%s' getting rested bonus!", J_NAME(ch) );
+
+    GetMIA2(ch->player.name, Gbuf1 );
+    debug( "'%s' getting rested bonus (%s)!", J_NAME(ch), Gbuf1 );
   }
 
-  loginlog(GET_LEVEL(ch), "%s [%s] enters game.%s [%d]",
+  GetMIA(ch->player.name, Gbuf1 );
+  loginlog(GET_LEVEL(ch), "%s [%s] enters game. %s [%d]",
            GET_NAME(ch), d->host, Gbuf1, world[ch->in_room].number);
   sql_log(ch, CONNECTLOG, "Entered game");
   

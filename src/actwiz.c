@@ -7329,49 +7329,108 @@ void do_ptell(P_char ch, char *arg, int cmd)
   return;
 }
 
-
-void GetMIA(char *arg, char *returned)
+void GetMIA(char *playerName, char *returned)
 {
-  unsigned long laston, timegone;
+  unsigned long laston, minutesgone;
   char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[512];
   P_char   finger_foo;
 
-  if(!*arg || !arg)
+  if( !playerName || !*playerName )
   {
     sprintf(returned, "NoArgs");
     return;
   }
+
   finger_foo = (struct char_data *) mm_get(dead_mob_pool);
   finger_foo->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
-  if(restoreCharOnly(finger_foo, skip_spaces(arg)) < 0 || !finger_foo)
+  if(restoreCharOnly(finger_foo, skip_spaces(playerName)) < 0 || !finger_foo)
   {
     if(finger_foo)
       free_char(finger_foo);
-    sprintf(returned, "NoPfile");
+    sprintf(returned, "NoPfile: '%s'.", playerName );
     return;
   }
-  timegone = (time(0) - laston) / 60;
 
-  if(timegone > 10)
+  laston = finger_foo->player.time.saved;
+  minutesgone = (time(0) - laston) / 60;
+
+  sprintf(returned, "  &n(&+cMIA: &+w" );
+  if( minutesgone > 0 )
   {
-    strcpy(returned, "  &n&+c(MIA:&n ");
-    if(timegone > 1440)
-      sprintf(returned + strlen(returned), "%d day%s, ",
-              (int) (timegone / 1440), ((timegone / 1440) > 1) ? "s" : "");
-    if((timegone % 1440) > 60)
-      sprintf(returned + strlen(returned), "%d hour%s, ",
-              (int) (timegone % 1440) / 60,
-              (((timegone % 1440) / 60) > 1) ? "s" : "");
-    if(timegone % 60)
-      sprintf(returned + strlen(returned), "%d minute%s, ",
-              (int) (timegone % 60), ((timegone % 60) > 1) ? "s" : "");
-    returned[strlen(returned) - 2] = 0;
+    // 1440 min / day = 24 hrs/day * 60 min / hr
+    if( minutesgone > 1440 )
+    {
+      sprintf(returned + strlen(returned), "%ld day%s%s",
+        (minutesgone / 1440), ((minutesgone / 1440) > 1) ? "s" : "", (minutesgone % 1440) ? ", " : "" );
+    }
+    // % 1440 -> removes days.  .. / 60 -> hours MIA.
+    if( (minutesgone % 1440) / 60 > 0 )
+    {
+      sprintf(returned + strlen(returned), "%2ld hour%s%s",
+        (minutesgone % 1440) / 60, (((minutesgone % 1440) / 60) > 1) ? "s" : "", (minutesgone % 60) ? ", " : "");
+    }
+    // % 60 cuts out hours, just leaving minutes MIA.
+    if( minutesgone % 60 )
+    {
+      sprintf(returned + strlen(returned), "%2ld minute%s", (minutesgone % 60), ((minutesgone % 60) > 1) ? "s" : "");
+    }
     strcat(returned, "&n)");
   }
   else
-    *returned = '\0';
+  {
+    minutesgone = time(0) - laston;
+    sprintf(returned + strlen(returned), "%ld second%s&n)\n\r", minutesgone, (minutesgone > 1) ? "s" : "" );
+  }
+
   return;
+}
+
+// Same as GetMIA but includes seconds and no "  (" to start..
+void GetMIA2(char *playerName, char *returned)
+{
+  unsigned long timegone;
+  int      days, hours, minutes, seconds;
+  time_t   laston;
+  P_char   finger_foo;
+
+  finger_foo = (struct char_data *) mm_get(dead_mob_pool);
+  finger_foo->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
+  if(restoreCharOnly(finger_foo, skip_spaces(playerName)) < 0 || !finger_foo)
+  {
+    if(finger_foo)
+      free_char(finger_foo);
+    debug("Pfile does not exist or is invalid.\n" );
+    return;
+  }
+
+  laston = finger_foo->player.time.saved;
+  timegone = time(0) - laston;
+
+  days    = (timegone               ) / (3600 * 24);
+  hours   = (timegone % (3600 * 24 )) / (3600);
+  minutes = (timegone % (3600      )) / (  60);
+  seconds = (timegone % (  60      ));
+
+  sprintf( returned, "&+cMIA:&n ");
+
+  if( days )
+  {
+    sprintf(returned + strlen(returned), "%d day%s%s", days, (days > 1) ? "s" : "", (hours || minutes) ? ", " : "");
+  }
+  if( hours )
+  {
+    sprintf(returned + strlen(returned), "%d hour%s%s", hours, (hours > 1) ? "s" : "", (minutes||seconds) ? ", " : "" );
+  }
+  if( minutes )
+  {
+    sprintf(returned + strlen(returned), "%d minute%s%s", minutes, (minutes > 1) ? "s" : "", (seconds) ? ", " : "" );
+  }
+  // display seconds only if there are no days/hours/minutes
+  if( seconds )
+  {
+    sprintf(returned + strlen(returned), "%d second%s", seconds, (seconds > 1) ? "s" : "");
+  }
 }
 
 void do_finger(P_char ch, char *arg, int cmd)
@@ -7417,7 +7476,7 @@ void do_finger(P_char ch, char *arg, int cmd)
   send_to_char(Gbuf1, ch);
   send_to_char("\n", ch);
   time_t lastConnect = 0, lastDisconnect = 0;
-  strcpy(Gbuf1, "unrecorded IP");
+  strcpy(Gbuf1, "Unrecorded IP");
   sql_select_IP_info(finger_foo, Gbuf1, sizeof(Gbuf1), &lastConnect, &lastDisconnect);
   if(lastConnect >= lastDisconnect)
   {
@@ -7429,7 +7488,6 @@ void do_finger(P_char ch, char *arg, int cmd)
   }
   send_to_char(Gbuf1, ch);
 
-  Gbuf1[0] = '\0';
   if(lastConnect >= lastDisconnect)
   {
     if((lastConnect == 0) && (lastDisconnect == 0))
@@ -7437,27 +7495,9 @@ void do_finger(P_char ch, char *arg, int cmd)
     else
       timegone = lastDisconnect;
 
-    int days = (timegone / (3600 * 24)),
-        hours = (timegone  % (3600 * 24)) / 3600,
-        minutes = (timegone % 3600) / 60,
-        seconds = (timegone % 60);
-
-    send_to_char("  &+c(MIA:&n ", ch);
-    if(days)
-      sprintf(Gbuf1 + strlen(Gbuf1), "%d day%s, ",
-              (int) days,
-              (days > 1) ? "s" : "");
-    if(hours)
-      sprintf(Gbuf1 + strlen(Gbuf1), "%d hour%s, ",
-              (int) hours,
-              (hours > 1) ? "s" : "");
-    if(minutes)
-      sprintf(Gbuf1 + strlen(Gbuf1), "%d minute%s, ",
-              (int) minutes, (minutes > 1) ? "s" : "");
-    // display seconds only if there are no hours/minutes
-    if(timegone < 60)
-      sprintf(Gbuf1 + strlen(Gbuf1), "%d second%s, ",
-              (int) seconds, (seconds > 1) ? "s" : "");
+    GetMIA( finger_foo->player.name, Gbuf1);
+    send_to_char(Gbuf1, ch);
+    Gbuf1[0] = '\0';
   }
   else
   {
