@@ -3244,7 +3244,7 @@ int can_summon_beast(P_char ch, int level)
   }
 
   if( GET_SPEC(ch, CLASS_SHAMAN, SPEC_ANIMALIST) )
-    charisma += level;
+    charisma += GET_LEVEL(ch);
 
   if( i > MAX(1, (int)(charisma / 30)) )
   {
