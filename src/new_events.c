@@ -156,7 +156,6 @@ void clear_nevent( P_nevent e )
     }
   }
   e->obj = NULL;
-  e->next_obj = NULL;
 
   // If event has a ch,
   if( (ch = e->ch) != NULL )
@@ -940,13 +939,9 @@ void show_world_events(P_char ch, const char* arg)
           {
             sprintf(buf + strlen(buf),
 //                    "    %-5d | %-5d | %-12.12s | %-12.12s | %-8d | 0x%08.8x\n",
-                    "    %-5d | %-5d | %-12.12s | %-12.12s | %-8d | %p\n",
-                    ev->element,
-                    ev->timer,
-                    ev->ch ? GET_NAME(ev->ch) : "   none",
-                    ev->victim ? GET_NAME(ev->victim) : "   none",
-                    ev->obj ? GET_OBJ_VNUM(ev->obj) : 0,
-                    ev->data);
+              "    %-5d | %-5d | %-12.12s | %-12.12s | %-8d | %p\n",
+              ev->element, ev->timer, ev->ch ? GET_NAME(ev->ch) : "   none",
+              ev->victim ? GET_NAME(ev->victim) : "   none", ev->obj ? GET_OBJ_VNUM(ev->obj) : 0, ev->data);
           }
           else
           {

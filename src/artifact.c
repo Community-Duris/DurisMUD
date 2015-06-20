@@ -1750,7 +1750,7 @@ void event_check_arti_poof( P_char ch, P_char vict, P_obj obj, void * arg )
     vnum = atoi(dire->d_name);
     if (!vnum)
       continue;
-    debug( "event_check_arti_poof: Checking '%s'", dire->d_name );
+//    debug( "event_check_arti_poof: Checking '%s'", dire->d_name );
 
     sprintf(name, ARTIFACT_DIR "%d", vnum);
     f = fopen(name, "rt");
@@ -2338,18 +2338,18 @@ void event_artifact_wars( P_char ch, P_char vict, P_obj obj, void * arg )
       // If not wearing it..
       if( i == MAX_WEAR )
       {
-        obj = owner->carrying;
-        while( obj )
+        item = owner->carrying;
+        while( item )
         {
-          if( obj_index[obj->R_num].virtual_number == vnum )
+          if( obj_index[item->R_num].virtual_number == vnum )
             break;
-          obj = obj->next_content;
+          item = item->next_content;
         }
       }
       else
-        obj = owner->equipment[i];
-      // obj == artifact at this point or person doesn't have it?!
-      if( !obj )
+        item = owner->equipment[i];
+      // item == artifact at this point or person doesn't have it?!
+      if( !item )
       {
         statuslog( 56, "event_artifact_wars: arti %d is not on %s's pfile.", vnum, name );
         wizlog( 56, "event_artifact_wars: arti %d is not on %s's pfile.", vnum, name );
@@ -2363,7 +2363,7 @@ void event_artifact_wars( P_char ch, P_char vict, P_obj obj, void * arg )
       }
       else
       {
-        artifact_fight( owner, obj );
+        artifact_fight( owner, item );
         writeCharacter( owner, RENT_FIGHTARTI, owner->in_room );
         // Free memory
         extract_char( owner );
@@ -2381,18 +2381,18 @@ void event_artifact_wars( P_char ch, P_char vict, P_obj obj, void * arg )
       }
       if( i == MAX_WEAR )
       {
-        obj = owner->carrying;
-        while( obj )
+        item = owner->carrying;
+        while( item )
         {
-          if( obj_index[obj->R_num].virtual_number == vnum )
+          if( obj_index[item->R_num].virtual_number == vnum )
             break;
-          obj = obj->next_content;
+          item = item->next_content;
         }
       }
       else
-        obj = owner->equipment[i];
-      // obj == artifact at this point or person doesn't have it?!
-      if( !obj )
+        item = owner->equipment[i];
+      // item == artifact at this point or person doesn't have it?!
+      if( !item )
       {
         statuslog( 56, "event_artifact_wars: arti %d is not on %s!", vnum, name );
         wizlog( 56, "event_artifact_wars: arti %d is not on %s!", vnum, name );
@@ -2403,7 +2403,7 @@ void event_artifact_wars( P_char ch, P_char vict, P_obj obj, void * arg )
       }
       else
       {
-        artifact_fight( owner, obj );
+        artifact_fight( owner, item );
         writeCharacter( owner, 1, owner->in_room );
       }
     }
@@ -2412,7 +2412,7 @@ void event_artifact_wars( P_char ch, P_char vict, P_obj obj, void * arg )
 
   debug( "event_artifact_wars: ended." );
   // 1800 = 60sec * 30min => Repeat every half hour...
-  add_event( event_artifact_wars, 1800 * WAIT_SEC, ch, vict, obj, 0, arg, 0 );
+  add_event( event_artifact_wars, 10 * WAIT_SEC, NULL, NULL, NULL, 0, NULL, 0 );
 }
 
 void artifact_fight( P_char owner, P_obj arti )

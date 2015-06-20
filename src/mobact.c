@@ -11115,12 +11115,17 @@ void event_mob_proc(P_char mob, P_char victim, P_obj object, void *data)
     return;
   }
 
+  if( object != NULL )
+  {
+    debug("event_mob_proc: non-NULL object: %s %d.", OBJ_SHORT(object), GET_OBJ_VNUM(object) );
+  }
+
   // If mob is lagged, we re-schedule for after the lag wears off.
   if( !CAN_ACT(mob) )
   {
     if( (e = get_scheduled(mob, event_wait)) != NULL )
     {
-      add_event(event_mob_proc, ne_event_time(e) + 1, mob, victim, object, 0, NULL, 0 );
+      add_event(event_mob_proc, ne_event_time(e) + 1, mob, victim, NULL, 0, NULL, 0 );
       return;
     }
     else
@@ -11134,6 +11139,6 @@ void event_mob_proc(P_char mob, P_char victim, P_obj object, void *data)
   // Add another event... should check SPEC_ACT and CMD_SET_PERIODIC, but *shrug* supposedly done it once.
   if( IS_ALIVE(mob) )
   {
-    add_event(event_mob_proc, PULSE_MOBILE + number(-4,4), mob, victim, object, 0, NULL, 0 );
+    add_event(event_mob_proc, PULSE_MOBILE + number(-4,4), mob, victim, NULL, 0, NULL, 0 );
   }
 }
