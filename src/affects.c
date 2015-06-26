@@ -3764,8 +3764,10 @@ bool falling_obj(P_obj obj, int start_speed, bool caller_is_event)
     }
     else if(world[obj->loc.room].dir_option[DOWN])
     {
-       if((world[obj->loc.room].sector_type == SECT_NO_GROUND) || (world[obj->loc.room].sector_type == SECT_UNDRWLD_NOGROUND))
-       {
+      if( (world[obj->loc.room].sector_type == SECT_NO_GROUND)
+        || (world[obj->loc.room].sector_type == SECT_UNDRWLD_NOGROUND)
+        || (world[obj->loc.room].chance_fall >= number(1, 100)) )
+      {
          act("$p drops from sight.", TRUE, 0, obj, 0, TO_ROOM);
          if (!obj->z_cord)
            new_room = world[obj->loc.room].dir_option[DOWN]->to_room;

@@ -846,7 +846,8 @@ struct room_data {
 
   P_obj contents;               /* List of items in room              */
   P_char people;                /* List of NPC / PC in room           */
-        struct room_affect *affected;
+
+  struct room_affect *affected;
 
   struct trackmainttype *track;
 //  struct troop_info_rec *troop_info;

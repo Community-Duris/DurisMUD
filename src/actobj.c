@@ -1462,8 +1462,7 @@ void do_drop(P_char ch, char *argument, int cmd)
 
     if ((ctype == -1) || (amount <= 0))
     {
-      send_to_char
-        ("Eh? Bugged call to do_drop(), you will be terminated.\r\n", ch);
+      send_to_char("Eh? Bugged call to do_drop(), you will be terminated.\r\n", ch);
       return;
     }
     switch (ctype)
@@ -1492,17 +1491,14 @@ void do_drop(P_char ch, char *argument, int cmd)
     case 3:
       if (GET_PLATINUM(ch) < amount)
       {
-        send_to_char("You do not have that many &+Wplatinum&N coins!\r\n",
-                     ch);
+        send_to_char("You do not have that many &+Wplatinum&N coins!\r\n", ch);
         return;
       }
       break;
     }
 
     if (cmd == 1 && IS_PC(ch))
-      send_to_char
-        ("Oops, trying to juggle too many loose coins, you drop a few.\r\n",
-         ch);
+      send_to_char("Oops, trying to juggle too many loose coins, you drop a few.\r\n", ch);
     else
       send_to_char("OK.\r\n", ch);
 

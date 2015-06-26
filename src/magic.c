@@ -4983,7 +4983,7 @@ void spell_dimension_door(int level, P_char ch, char *arg, int type, P_char vict
 
   for (tmp = world[ch->in_room].people; tmp; tmp = tmp->next_in_room)
   {
-    if( (IS_AFFECTED(tmp, AFF_BLIND) || (tmp->specials.z_cord != ch->specials.z_cord) || (tmp == ch) )
+    if( IS_AFFECTED(tmp, AFF_BLIND) || (tmp->specials.z_cord != ch->specials.z_cord) || (tmp == ch) )
     {
       continue;
     }
@@ -5001,7 +5001,7 @@ void spell_dimension_door(int level, P_char ch, char *arg, int type, P_char vict
 
   for (tmp = world[ch->in_room].people; tmp; tmp = tmp->next_in_room)
   {
-    if( (IS_AFFECTED(tmp, AFF_BLIND) || (tmp->specials.z_cord != ch->specials.z_cord) || (tmp == ch) )
+    if( IS_AFFECTED(tmp, AFF_BLIND) || (tmp->specials.z_cord != ch->specials.z_cord) || (tmp == ch) )
       continue;
     if(CAN_SEE(tmp, ch))
       act("&+LA black rift in space opens next to you, and&n $n &+Lsteps out of it grinning.&n",

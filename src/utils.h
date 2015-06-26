@@ -691,11 +691,11 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_RIDING(ch) (get_linked_char((ch), LNK_RIDING))
 
-#define OBJ_FALLING(o) \
-((o) && !IS_SET((o)->extra_flags, ITEM_LEVITATES) && OBJ_ROOM(o) && \
-((world[(o)->loc.room].sector_type == SECT_NO_GROUND) || \
-(world[(o)->loc.room].sector_type == SECT_UNDRWLD_NOGROUND) || \
-(o->z_cord > 0)))
+#define OBJ_FALLING(o) ((o) && !IS_SET((o)->extra_flags, ITEM_LEVITATES) && OBJ_ROOM(o) \
+  && (   (world[(o)->loc.room].sector_type == SECT_NO_GROUND) \
+      || (world[(o)->loc.room].sector_type == SECT_UNDRWLD_NOGROUND) \
+      || (world[(o)->loc.room].chance_fall >= number(1,100)) \
+      || (o->z_cord > 0))  )
 
 #define IS_OUTLAW(ch) ((IS_NPC(ch) && IS_SET(ch->specials.act, NPC_OUTLAW))|| \
       (IS_PC(ch) && IS_SET(ch->only.pc->law_flags, PLR_OUTLAW)))

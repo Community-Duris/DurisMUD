@@ -29,7 +29,7 @@
 
 extern P_desc descriptor_list;
 extern P_room world;
-extern char *language_names[];
+extern const char *language_names[];
 extern const flagDef action_bits[];
 extern const flagDef action2_bits[];
 extern const flagDef affected1_bits[];
@@ -91,7 +91,7 @@ struct setBitTable
 {
   const char *sb_flag;          /* * Name of "flag" */
   int      sb_offset;           /* * Offset from beginning of struct */
-  char   **sb_subtable;         /* * Subtable for options */
+  const char **sb_subtable;         /* * Subtable for options */
 
   void     (*sb_func) (void *, int, char *, int, int);
   int      entry_size;
@@ -126,7 +126,7 @@ static void setbit_syntax(P_char ch, int type);
 
 /* Syntax error */
 static void setbit_printOutTable(P_char ch, SetBitTable *, int size);
-static void setbit_printOutSubTable(P_char ch, char **subtable, int entry_size);
+static void setbit_printOutSubTable(P_char ch, const char **subtable, int entry_size);
 static int ac_strcasecmp(const char *s1, const char *s2);
 
 /* String insensitive case comparison */
@@ -360,12 +360,13 @@ static void setbit_room(P_char ch, char *name, char *flag, char *val, int on_off
 
   /* Table */
   SetBitTable table[] = {
-    {"zone", OFFSET(zone), NULL, ac_shintCopy},
-    {"sect", OFFSET(sector_type), (char **) sector_types, ac_byteCopy,
-      sizeof(char *)},
-    {"flag", OFFSET(room_flags), (char **) room_bits, ac_bitCopy,
-      sizeof(flagDef)},
-    {"light", OFFSET(light), NULL, ac_shortCopy}
+    {"zone",              OFFSET(zone),                      NULL,         ac_shintCopy},
+    {"sect",              OFFSET(sector_type),               sector_types, ac_byteCopy, sizeof(char *)},
+    {"flag",              OFFSET(room_flags), (const char**) room_bits,    ac_bitCopy,  sizeof(flagDef)},
+    {"light",             OFFSET(light),                     NULL,         ac_shortCopy},
+    {"fall",              OFFSET(chance_fall),               NULL,         ac_shortCopy},
+    {"speed_current",     OFFSET(current_speed),             NULL,         ac_shortCopy},
+    {"direction_current", OFFSET(current_direction),         dirs,         ac_sbyteCopy, sizeof(char *)}
   };
 
   /* Local Variables */
@@ -465,8 +466,7 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
   SetBitTable table[] = {
     /* char_player_data */
     {"sex", PLOFFSET(sex), NULL, ac_ubyteCopy},
-    {"race", PLOFFSET(race), (char **) race_names_table, ac_ubyteCopy,
-      sizeof(struct race_names)},
+    {"race", PLOFFSET(race), (const char **)race_names_table, ac_ubyteCopy, sizeof(struct race_names)},
     {"racewar", PLOFFSET(racewar), NULL, ac_ubyteCopy},
     {"level", PLOFFSET(level), NULL, ac_ubyteCopy},
     {"spec", PLOFFSET(spec), NULL, ac_ubyteCopy},
@@ -476,8 +476,7 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
     {"age", 0, NULL, ac_ageCopy},
     {"weight", PLOFFSET(weight), NULL, ac_shortCopy},
     {"height", PLOFFSET(height), NULL, ac_shortCopy},
-    {"size", PLOFFSET(size), (char **) size_types, ac_ubyteCopy,
-      sizeof(char *)},
+    {"size", PLOFFSET(size), size_types, ac_ubyteCopy, sizeof(char *)},
     /* stat_data */
     {"str", ABOFFSET(Str), NULL, ac_shortCopy},
     {"dex", ABOFFSET(Dex), NULL, ac_shortCopy},
@@ -518,12 +517,9 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
     {"diceno", POOFFSET(damnodice), NULL, ac_sbyteCopy},
     {"dicesz", POOFFSET(damsizedice), NULL, ac_sbyteCopy},
     /* char_special_data */
-    {"pos", SPOFFSET(position), (char **) position_types, ac_positionCopy,
-      sizeof(char *)},
-    {"pcact", SPOFFSET(act), (char **) player_bits, ac_bitCopy,
-      sizeof(char *)},
-    {"pcact2", SPOFFSET(act2), (char **) player2_bits, ac_bitCopy,
-      sizeof(char *)},
+    {"pos", SPOFFSET(position), position_types, ac_positionCopy, sizeof(char *)},
+    {"pcact", SPOFFSET(act), player_bits, ac_bitCopy, sizeof(char *)},
+    {"pcact2", SPOFFSET(act2), player2_bits, ac_bitCopy, sizeof(char *)},
     {"carryw", SPOFFSET(carry_weight), NULL, ac_intCopy},
     {"carryn", SPOFFSET(carry_items), NULL, ac_shortCopy},
     {"timer", SPOFFSET(timer), NULL, ac_shortCopy},
@@ -535,88 +531,58 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
     {"zcord", SPOFFSET(z_cord), NULL, ac_sbyteCopy},
     {"align", SPOFFSET(alignment), NULL, ac_shintCopy},
     {"ascnum", SPOFFSET(guild), NULL, ac_shintCopy},
-
-    {"aff", SPOFFSET(affected_by), (char **) affected1_bits, ac_bitCopy,
-      sizeof(flagDef)}
-    ,
-      {"aff2", SPOFFSET(affected_by2), (char **) affected2_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"aff3", SPOFFSET(affected_by3), (char **) affected3_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"aff4", SPOFFSET(affected_by4), (char **) affected4_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"aff5", SPOFFSET(affected_by5), (char **) affected5_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"class", PLOFFSET(m_class), (char **) class_names_table, ac_idx2flagCopy,
-        sizeof(struct class_names)},
-      {"secondary", PLOFFSET(secondary_class), (char **) class_names_table, ac_idx2flagCopy,
-        sizeof(struct class_names)},
-      {"multiclass", PLOFFSET(m_class), (char **) &(class_names_table[1]),
-        ac_bitCopy, sizeof(struct class_names)},
-      {"npcact", SPOFFSET(act), (char **) action_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"npcact2", SPOFFSET(act2), (char **) action2_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"aggro", NPOFFSET(aggro_flags), (char **) aggro_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"aggro2", NPOFFSET(aggro2_flags), (char **) aggro2_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"aggro3", NPOFFSET(aggro3_flags), (char **) aggro3_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      /* char_skill_data */
-      {"skill", OFFSET_OF(struct char_skill_data *, learned), (char **) spells,
-        ac_skillCopy, sizeof(char *)}
-    ,
-      {"taught", OFFSET_OF(struct char_skill_data *, taught), (char **) spells,
-        ac_skillCopy, sizeof(char *)}
-    ,
-      /* only.npc */
-      {"ldir", NPOFFSET(last_direction), (char **) dirs, ac_sbyteCopy,
-        sizeof(char *)},
-      {"attack", NPOFFSET(attack_type), NULL, ac_sbyteCopy},
-      {"val0", NPOFFSET(value[0]), NULL, ac_intCopy},
-      {"val1", NPOFFSET(value[1]), NULL, ac_intCopy},
-      {"val2", NPOFFSET(value[2]), NULL, ac_intCopy},
-      {"val3", NPOFFSET(value[3]), NULL, ac_intCopy},
-      {"val4", NPOFFSET(value[4]), NULL, ac_intCopy},
-      {"val5", NPOFFSET(value[5]), NULL, ac_intCopy},
-      {"val6", NPOFFSET(value[6]), NULL, ac_intCopy},
-      {"val7", NPOFFSET(value[7]), NULL, ac_intCopy},
-      /* only.pc */
-      {"frags", PCOFFSET(frags), NULL, ac_longCopy},
-      {"epics", PCOFFSET(epics), NULL, ac_longCopy},
-      {"epic_skill_points", PCOFFSET(epic_skill_points), NULL, ac_longCopy},
-      {"prestige", PCOFFSET(prestige), NULL, ac_shintCopy},
-      {"time_left_guild", PCOFFSET(time_left_guild), NULL, ac_longCopy},
-      {"nb_left_guild", PCOFFSET(nb_left_guild), NULL, ac_sbyteCopy},
-      {"language", 0, (char **) language_names, ac_tongueCopy, sizeof(char *)},
-      {"echo", PCOFFSET(echo_toggle), NULL, ac_ubyteCopy},
-      {"prompt", PCOFFSET(prompt), NULL, ac_shortCopy},
-      {"screensize", PCOFFSET(screen_length), NULL, ac_ubyteCopy},
-      {"winvis", PCOFFSET(wiz_invis), NULL, ac_sbyteCopy},
-      {"law_flags", PCOFFSET(law_flags), (char **) player_law_flags,
-        ac_longCopy, sizeof(char *)},
-      {"wimpy", PCOFFSET(wimpy), NULL, ac_shortCopy},
-      {"aggr", PCOFFSET(aggressive), NULL, ac_shortCopy},
-      {"balc", PCOFFSET(spare1), NULL, ac_intCopy},
-      {"bals", PCOFFSET(spare2), NULL, ac_intCopy},
-      {"balg", PCOFFSET(spare3), NULL, ac_intCopy},
-      {"balp", PCOFFSET(spare4), NULL, ac_intCopy},
-      {"deaths", PCOFFSET(numb_deaths), NULL, ac_longCopy}
+    {"aff", SPOFFSET(affected_by), (const char **) affected1_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aff2", SPOFFSET(affected_by2), (const char **) affected2_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aff3", SPOFFSET(affected_by3), (const char **) affected3_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aff4", SPOFFSET(affected_by4), (const char **) affected4_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aff5", SPOFFSET(affected_by5), (const char **) affected5_bits, ac_bitCopy, sizeof(flagDef)},
+    {"class", PLOFFSET(m_class), (const char **) class_names_table, ac_idx2flagCopy, sizeof(struct class_names)},
+    {"secondary", PLOFFSET(secondary_class), (const char **) class_names_table, ac_idx2flagCopy, sizeof(struct class_names)},
+    {"multiclass", PLOFFSET(m_class), (const char **) &(class_names_table[1]), ac_bitCopy, sizeof(struct class_names)},
+    {"npcact", SPOFFSET(act), (const char **) action_bits, ac_bitCopy, sizeof(flagDef)},
+    {"npcact2", SPOFFSET(act2), (const char **) action2_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aggro", NPOFFSET(aggro_flags), (const char **) aggro_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aggro2", NPOFFSET(aggro2_flags), (const char **) aggro2_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aggro3", NPOFFSET(aggro3_flags), (const char **) aggro3_bits, ac_bitCopy, sizeof(flagDef)},
+    /* char_skill_data */
+    {"skill", OFFSET_OF(struct char_skill_data *, learned), (const char **) spells, ac_skillCopy, sizeof(char *)},
+    {"taught", OFFSET_OF(struct char_skill_data *, taught), (const char **) spells, ac_skillCopy, sizeof(char *)},
+    /* only.npc */
+    {"ldir", NPOFFSET(last_direction), dirs, ac_sbyteCopy, sizeof(char *)},
+    {"attack", NPOFFSET(attack_type), NULL, ac_sbyteCopy},
+    {"val0", NPOFFSET(value[0]), NULL, ac_intCopy},
+    {"val1", NPOFFSET(value[1]), NULL, ac_intCopy},
+    {"val2", NPOFFSET(value[2]), NULL, ac_intCopy},
+    {"val3", NPOFFSET(value[3]), NULL, ac_intCopy},
+    {"val4", NPOFFSET(value[4]), NULL, ac_intCopy},
+    {"val5", NPOFFSET(value[5]), NULL, ac_intCopy},
+    {"val6", NPOFFSET(value[6]), NULL, ac_intCopy},
+    {"val7", NPOFFSET(value[7]), NULL, ac_intCopy},
+    // only.pc
+    {"frags", PCOFFSET(frags), NULL, ac_longCopy},
+    {"epics", PCOFFSET(epics), NULL, ac_longCopy},
+    {"epic_skill_points", PCOFFSET(epic_skill_points), NULL, ac_longCopy},
+    {"prestige", PCOFFSET(prestige), NULL, ac_shintCopy},
+    {"time_left_guild", PCOFFSET(time_left_guild), NULL, ac_longCopy},
+    {"nb_left_guild", PCOFFSET(nb_left_guild), NULL, ac_sbyteCopy},
+    {"language", 0, language_names, ac_tongueCopy, sizeof(char *)},
+    {"echo", PCOFFSET(echo_toggle), NULL, ac_ubyteCopy},
+    {"prompt", PCOFFSET(prompt), NULL, ac_shortCopy},
+    {"screensize", PCOFFSET(screen_length), NULL, ac_ubyteCopy},
+    {"winvis", PCOFFSET(wiz_invis), NULL, ac_sbyteCopy},
+    {"law_flags", PCOFFSET(law_flags), player_law_flags, ac_longCopy, sizeof(char *)},
+    {"wimpy", PCOFFSET(wimpy), NULL, ac_shortCopy},
+    {"aggr", PCOFFSET(aggressive), NULL, ac_shortCopy},
+    {"balc", PCOFFSET(spare1), NULL, ac_intCopy},
+    {"bals", PCOFFSET(spare2), NULL, ac_intCopy},
+    {"balg", PCOFFSET(spare3), NULL, ac_intCopy},
+    {"balp", PCOFFSET(spare4), NULL, ac_intCopy},
+    {"deaths", PCOFFSET(numb_deaths), NULL, ac_longCopy}
   };
 
-  P_char   ppl;
+  P_char ppl;
 
-  if ((ppl = get_char_vis(ch, name)) == NULL)
+  if( (ppl = get_char_vis(ch, name)) == NULL )
   {
     send_to_char("No one by that name here.\r\n", ch);
     return;
@@ -881,67 +847,37 @@ static void setbit_obj(P_char ch, char *name, char *flag, char *val, int on_off)
 
   SetBitTable table[] = {
     /*    {"item", OFFSET(R_num), NULL, ac_shintCopy},*/
-    {"wear", OFFSET(wear_flags), (char **) wear_bits, ac_bitCopy,
-      sizeof(flagDef)}
-    ,
-      {"extra", OFFSET(extra_flags), (char **) extra_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"class", OFFSET(anti_flags), (char **) &(class_names_table[1]),
-        ac_bitCopy, sizeof(struct class_names), OFFSET_OF(struct class_names *,
-            normal)},
-        {"race", OFFSET(anti2_flags), (char **) &(race_names_table[1]),
-          ac_bitCopy, sizeof(struct race_names), OFFSET_OF(struct race_names *,
-              no_spaces)},
-          {"extra2", OFFSET(extra2_flags), (char **) extra2_bits, ac_bitCopy,
-            sizeof(flagDef)}
-    ,
-      {"aff", OFFSET(bitvector), (char **) affected1_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"aff2", OFFSET(bitvector2), (char **) affected2_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"aff3", OFFSET(bitvector3), (char **) affected3_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"aff4", OFFSET(bitvector4), (char **) affected4_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"aff5", OFFSET(bitvector5), (char **) affected5_bits, ac_bitCopy,
-        sizeof(flagDef)}
-    ,
-      {"val0", OFFSET(value[0]), NULL, ac_intCopy}
-    ,
-      {"val1", OFFSET(value[1]), NULL, ac_intCopy}
-    ,
-      {"val2", OFFSET(value[2]), NULL, ac_intCopy}
-    ,
-      {"val3", OFFSET(value[3]), NULL, ac_intCopy}
-    ,
-      {"val4", OFFSET(value[4]), NULL, ac_intCopy}
-    ,
-      {"val5", OFFSET(value[5]), NULL, ac_intCopy}
-    ,
-      {"val6", OFFSET(value[6]), NULL, ac_intCopy}
-    ,
-      {"val7", OFFSET(value[7]), NULL, ac_intCopy}
-    ,
-      {"type", OFFSET(type), (char **) item_types, ac_byteCopy, sizeof(char *)},
-      {"material", OFFSET(material), (char **) item_material, ac_shintCopy,
-        sizeof(char *)},
-      {"weight", OFFSET(weight), NULL, ac_intCopy},
-      {"price", OFFSET(cost), NULL, ac_intCopy},
-      {"condition", OFFSET(condition), NULL, ac_shintCopy},
-      {"a0mod", AO(0, modifier), NULL, ac_sbyteCopy},
-      {"a1mod", AO(1, modifier), NULL, ac_sbyteCopy},
-      {"a2mod", AO(2, modifier), NULL, ac_sbyteCopy},
-      {"a0loc", AO(0, location), (char **) apply_types, ac_objaffCopy,
-        sizeof(char *)},
-      {"a1loc", AO(1, location), (char **) apply_types, ac_objaffCopy,
-        sizeof(char *)},
-      {"a2loc", AO(2, location), (char **) apply_types, ac_objaffCopy,
-        sizeof(char *)}
+    {"wear", OFFSET(wear_flags), (const char **) wear_bits, ac_bitCopy, sizeof(flagDef)},
+    {"extra", OFFSET(extra_flags), (const char **) extra_bits, ac_bitCopy, sizeof(flagDef)},
+    {"class", OFFSET(anti_flags), (const char **) &(class_names_table[1]), ac_bitCopy, sizeof(struct class_names),
+      OFFSET_OF(struct class_names *, normal)},
+    {"race", OFFSET(anti2_flags), (const char **) &(race_names_table[1]), ac_bitCopy, sizeof(struct race_names),
+      OFFSET_OF(struct race_names *, no_spaces)},
+    {"extra2", OFFSET(extra2_flags), (const char **) extra2_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aff", OFFSET(bitvector), (const char **) affected1_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aff2", OFFSET(bitvector2), (const char **) affected2_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aff3", OFFSET(bitvector3), (const char **) affected3_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aff4", OFFSET(bitvector4), (const char **) affected4_bits, ac_bitCopy, sizeof(flagDef)},
+    {"aff5", OFFSET(bitvector5), (const char **) affected5_bits, ac_bitCopy, sizeof(flagDef)},
+    {"val0", OFFSET(value[0]), NULL, ac_intCopy},
+    {"val1", OFFSET(value[1]), NULL, ac_intCopy},
+    {"val2", OFFSET(value[2]), NULL, ac_intCopy},
+    {"val3", OFFSET(value[3]), NULL, ac_intCopy},
+    {"val4", OFFSET(value[4]), NULL, ac_intCopy},
+    {"val5", OFFSET(value[5]), NULL, ac_intCopy},
+    {"val6", OFFSET(value[6]), NULL, ac_intCopy},
+    {"val7", OFFSET(value[7]), NULL, ac_intCopy},
+    {"type", OFFSET(type), (const char **) item_types, ac_byteCopy, sizeof(char *)},
+    {"material", OFFSET(material), (const char **) item_material, ac_shintCopy, sizeof(char *)},
+    {"weight", OFFSET(weight), NULL, ac_intCopy},
+    {"price", OFFSET(cost), NULL, ac_intCopy},
+    {"condition", OFFSET(condition), NULL, ac_shintCopy},
+    {"a0mod", AO(0, modifier), NULL, ac_sbyteCopy},
+    {"a1mod", AO(1, modifier), NULL, ac_sbyteCopy},
+    {"a2mod", AO(2, modifier), NULL, ac_sbyteCopy},
+    {"a0loc", AO(0, location), (const char **) apply_types, ac_objaffCopy, sizeof(char *)},
+    {"a1loc", AO(1, location), (const char **) apply_types, ac_objaffCopy, sizeof(char *)},
+    {"a2loc", AO(2, location), (const char **) apply_types, ac_objaffCopy, sizeof(char *)}
   };
 
   /* Local Variable */
@@ -1004,26 +940,16 @@ static void setbit_dir(P_char ch, char *name, char *flag, char *value, int on_of
   /* Table */
 
   SetBitTable table[] = {
-    {"ninfo", DIR(NORTH, exit_info), (char **) exit_bits, ac_bitCopy,
-      sizeof(char *)},
-    {"einfo", DIR(EAST, exit_info), (char **) exit_bits, ac_bitCopy,
-      sizeof(char *)},
-    {"sinfo", DIR(SOUTH, exit_info), (char **) exit_bits, ac_bitCopy,
-      sizeof(char *)},
-    {"winfo", DIR(WEST, exit_info), (char **) exit_bits, ac_bitCopy,
-      sizeof(char *)},
-    {"uinfo", DIR(UP, exit_info), (char **) exit_bits, ac_bitCopy,
-      sizeof(char *)},
-    {"dinfo", DIR(DOWN, exit_info), (char **) exit_bits, ac_bitCopy,
-      sizeof(char *)},
-    {"nwinfo", DIR(NORTHWEST, exit_info), (char **) exit_bits, ac_bitCopy,
-      sizeof(char *)},
-    {"neinfo", DIR(NORTHEAST, exit_info), (char **) exit_bits, ac_bitCopy,
-      sizeof(char *)},
-    {"swinfo", DIR(SOUTHWEST, exit_info), (char **) exit_bits, ac_bitCopy,
-      sizeof(char *)},
-    {"seinfo", DIR(SOUTHEAST, exit_info), (char **) exit_bits, ac_bitCopy,
-      sizeof(char *)},
+    {"ninfo", DIR(NORTH, exit_info), exit_bits, ac_bitCopy, sizeof(char *)},
+    {"einfo", DIR(EAST, exit_info), exit_bits, ac_bitCopy, sizeof(char *)},
+    {"sinfo", DIR(SOUTH, exit_info), exit_bits, ac_bitCopy, sizeof(char *)},
+    {"winfo", DIR(WEST, exit_info), exit_bits, ac_bitCopy, sizeof(char *)},
+    {"uinfo", DIR(UP, exit_info), exit_bits, ac_bitCopy, sizeof(char *)},
+    {"dinfo", DIR(DOWN, exit_info), exit_bits, ac_bitCopy, sizeof(char *)},
+    {"nwinfo", DIR(NORTHWEST, exit_info), exit_bits, ac_bitCopy, sizeof(char *)},
+    {"neinfo", DIR(NORTHEAST, exit_info), exit_bits, ac_bitCopy, sizeof(char *)},
+    {"swinfo", DIR(SOUTHWEST, exit_info), exit_bits, ac_bitCopy, sizeof(char *)},
+    {"seinfo", DIR(SOUTHEAST, exit_info), exit_bits, ac_bitCopy, sizeof(char *)},
     {"nkey", DIR(NORTH, key), NULL, ac_shintCopy},
     {"ekey", DIR(EAST, key), NULL, ac_shintCopy},
     {"skey", DIR(SOUTH, key), NULL, ac_shintCopy},
@@ -1228,15 +1154,15 @@ static void setbit_aff(P_char ch, char *name, char *flag, char *value, int on_of
   // Note: uint flags isn't represeted here.  You'd have to make a table for lookup.
   //   using AFFTYPE_* in structs.h.
   SetBitTable table[] = {
-    {"type", OFFSET(type), (char **) spells, ac_affModify, sizeof(char *)},
+    {"type", OFFSET(type), spells, ac_affModify, sizeof(char *)},
     {"dur", OFFSET(duration), NULL, ac_intCopy},
     {"mod", OFFSET(modifier), NULL, ac_intCopy},
-    {"loc", OFFSET(location), (char **) apply_types, ac_objaffCopy, sizeof(char *)},
-    {"bits", OFFSET(bitvector), (char **) affected1_bits, ac_bitCopy, sizeof(flagDef)},
-    {"bits2", OFFSET(bitvector2), (char **) affected2_bits, ac_bitCopy, sizeof(flagDef)},
-    {"bits3", OFFSET(bitvector3), (char **) affected3_bits, ac_bitCopy, sizeof(flagDef)},
-    {"bits4", OFFSET(bitvector4), (char **) affected4_bits, ac_bitCopy, sizeof(flagDef)},
-    {"bits5", OFFSET(bitvector5), (char **) affected5_bits, ac_bitCopy, sizeof(flagDef)}
+    {"loc", OFFSET(location), apply_types, ac_objaffCopy, sizeof(char *)},
+    {"bits", OFFSET(bitvector), (const char **) affected1_bits, ac_bitCopy, sizeof(flagDef)},
+    {"bits2", OFFSET(bitvector2), (const char **) affected2_bits, ac_bitCopy, sizeof(flagDef)},
+    {"bits3", OFFSET(bitvector3), (const char **) affected3_bits, ac_bitCopy, sizeof(flagDef)},
+    {"bits4", OFFSET(bitvector4), (const char **) affected4_bits, ac_bitCopy, sizeof(flagDef)},
+    {"bits5", OFFSET(bitvector5), (const char **) affected5_bits, ac_bitCopy, sizeof(flagDef)}
   };
 
   /*
@@ -1450,7 +1376,7 @@ static void setbit_printOutTable(P_char ch, SetBitTable * table, int size)
 }
 
 /* If specified is not in subtable, this function should be called. */
-static void setbit_printOutSubTable(P_char ch, char **subtable, int entry_size)
+static void setbit_printOutSubTable(P_char ch, const char **subtable, int entry_size)
 {
   int      i;
   char     buff[128];
