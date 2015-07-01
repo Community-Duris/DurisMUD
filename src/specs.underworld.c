@@ -2732,8 +2732,6 @@ int deflect_ioun(P_obj obj, P_char ch, int cmd, char *arg)
   return FALSE;
 }
 
-#define DWARVEN_ANCESTOR 75
-
 struct _BarbProcArtiData
 {
   P_obj hammer;
@@ -2756,20 +2754,20 @@ void barb_proc_dwarven_ancestor(int level, P_char ch, P_char victim)
   P_char   mob;
   int duration, lvl, i;
 
-  if (!(ch) ||
-      !IS_ALIVE(ch) ||
-      !victim || !IS_ALIVE(victim))
-          return;
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+  {
+    return;
+  }
 
-  mob = read_mobile(real_mobile(DWARVEN_ANCESTOR), REAL);
-  
+  mob = read_mobile(DWARVEN_ANCESTOR_VNUM, VIRTUAL);
+
   if (!mob)
   {
-    logit(LOG_DEBUG, "barb_proc_dwarven_ancestor(): mob %d not loadable", DWARVEN_ANCESTOR);
+    logit(LOG_DEBUG, "barb_proc_dwarven_ancestor(): mob %d not loadable", DWARVEN_ANCESTOR_VNUM);
     send_to_char("Bug in artifact procedure.  Tell a god!\n", ch);
     return;
   }
-  
+
   mob->player.level = GET_LEVEL(ch);
   SET_BIT(mob->specials.affected_by, AFF_INFRAVISION);
   SET_BIT(mob->specials.affected_by, AFF_DETECT_INVISIBLE);
@@ -2797,13 +2795,12 @@ void barb_proc_dwarven_ancestor(int level, P_char ch, P_char victim)
 
   if(!IS_AFFECTED4(mob, AFF4_NOFEAR))
     SET_BIT(mob->specials.affected_by4, AFF4_NOFEAR);
-    
+
   duration = setup_pet(mob, ch, 1, PET_NOCASH | PET_NOORDER | PET_NOAGGRO);
   add_follower(mob, ch);
 
   if (duration >= 0)
   {
-    
     duration = MAX(6, (int)(GET_LEVEL(ch) / 4)) * WAIT_SEC;
     add_event(event_dwarven_ancestor_death, duration, mob, NULL, NULL, 0, NULL, 0);
   }
@@ -2842,10 +2839,9 @@ void barb_proc_dwarven_ancestor(int level, P_char ch, P_char victim)
       }
       update_pos(victim);
   }
-    
-  if(!IS_FIGHTING(mob) &&
-     victim)
-        MobStartFight(mob, victim);
+
+  if(!IS_FIGHTING(mob) && victim)
+    MobStartFight(mob, victim);
 
   return;
 }

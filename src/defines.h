@@ -1280,11 +1280,13 @@ struct material_data {
 };
 
 #define _NEW_LOW_NECRO_ 0
-#define PLAYERLESS_ZONE_SPEED_MODIFIER 3
-#define WH_HIGH_PRIEST_VNUM 55184
-#define IMAGE_REFLECTION_VNUM 250
-#define DRAGONLORD_PLATE_VNUM 25723
-#define REVENANT_CROWN_VNUM 22070
+#define PLAYERLESS_ZONE_SPEED_MODIFIER     3
+#define WH_HIGH_PRIEST_VNUM            55184
+#define IMAGE_REFLECTION_VNUM            250
+#define DRAGONLORD_PLATE_VNUM          25723
+#define REVENANT_CROWN_VNUM            22070
+#define DWARVEN_ANCESTOR_VNUM             75
+
 #define SNEAK(ch) (IS_AFFECTED(ch, AFF_SNEAK) || UD_SNEAK(ch) || OUTDOOR_SNEAK(ch))
 #define LEVITATE(ch, dir) (IS_AFFECTED(ch, AFF_LEVITATE) && ((dir == UP) || (dir == DOWN)))
 
