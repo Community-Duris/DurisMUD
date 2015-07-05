@@ -344,7 +344,7 @@ void assign_mobiles(void)
   mob_index[real_mobile0(2625)].func.mob = breale_townsfolk;
 
   /* Braddistock Mansion */
-  mob_index[real_mobile0(1314)].func.mob = braddistock;
+  mob_index[real_mobile0(135014)].func.mob = braddistock;
   obj_index[real_object0(1372)].func.obj = jet_black_maul;
 
   /* Orc town? */
