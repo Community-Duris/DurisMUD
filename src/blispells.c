@@ -615,7 +615,7 @@ void spell_horrid_wilting(int level, P_char ch, char *arg, int type, P_char vict
 // Summon spell: 1d4+2 shambling mounds.
 void spell_shambler(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
-  int count = dice( 1, 4 ) + 2;
+  int count;
   P_char mob;
   struct char_link_data *cld;
 
@@ -637,6 +637,28 @@ void spell_shambler(int level, P_char ch, char *arg, int type, P_char victim, P_
   {
     send_to_char( "You already have enough pets.", ch );
     return;
+  }
+
+  switch (world[ch->in_room].sector_type)
+  {
+    case SECT_CITY:
+    case SECT_DESERT:
+    case SECT_ROAD:
+      count = dice( 1, 2);
+      break;
+    case SECT_FIELD:
+    case SECT_HILLS:
+    case SECT_MOUNTAIN:
+      count = dice( 1, 3 ) + 1;
+      break;
+    case SECT_SWAMP:
+    case SECT_FOREST:
+      count = dice( 1, 4 ) + 2;
+      break;
+    default:
+      send_to_char( "&+yThere's no &+gvegetation &+yaround here.&n\n\r", ch );
+      return;
+      break;
   }
 
   // Load count shambling mounds 11hd
