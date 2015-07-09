@@ -2266,26 +2266,26 @@ void event_artifact_wars_sql(P_char ch, P_char vict, P_obj obj, void *arg)
     // If they're in violation (more than one arti of the same type.
     if( punish_level > 0 )
     {
-      // 1: 1min, 2: 5min, 3: 15min, 4: 32min, 5: 50min, 6: 72min, 7: 98min
+      // 1: 5min, 2: 15min, 3: 30min, 4: 64min, 5: 125min, 6: 216min, 7: 343min (happens every 30 min).
       // More than a punish_level of 3 is ridiculous though.
       switch( punish_level )
       {
         case 1:
-            punishment = 60;
-          break;
-        case 2:
             punishment = 300;
           break;
-        case 3:
+        case 2:
             punishment = 900;
           break;
+        case 3:
+            punishment = 1800;
+          break;
         default:
-          // 2x^2 minutes function.
-          punishment = 120 * punish_level * punish_level;
+          // x^3 minutes function.
+          punishment = 60 * punish_level * punish_level * punish_level;
           break;
       }
-      // 2 of the same type (and no others): 60 + 240 =  360 sec =  5min
-      // 6 artis with at least one of each: 900 + 720 = 1620 sec = 27min
+      // 2 of the same type (and no others):  300 + 240 =  540 sec =  9min
+      // 6 artis with two of each type     : 1800 + 720 = 2520 sec = 42min
       punishment += 120 * count[0];
 
       node = nextlist->artis;
