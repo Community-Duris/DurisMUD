@@ -31,6 +31,7 @@
 #include "nexus_stones.h"
 #include "map.h"
 #include "ctf.h"
+#include "handler.h"
 
 /*
    extern variables
@@ -572,7 +573,7 @@ int dispator(P_obj obj, P_char ch, int cmd, char *arg)
 int orb_of_the_sea(P_obj obj, P_char ch, int cmd, char *arg)
 {
   struct proc_data *data;
-  int      dam = cmd / 1000;
+  int      dam = cmd / 1000, loc;
   P_char   victim;
   int      new_room;
 
@@ -581,9 +582,30 @@ int orb_of_the_sea(P_obj obj, P_char ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if( !ch && cmd == CMD_PERIODIC )
+  if( cmd == CMD_PERIODIC )
   {
-    hummer(obj);
+    if( OBJ_ROOM(obj) )
+    {
+      hummer(obj);
+    }
+    else if( OBJ_WORN(obj) && (ch = obj->loc.wearing) )
+    {
+      // Slippery when wet! 5% chance .. :)
+      if( !IS_NPC(ch) && !can_prime_class_use_item(ch, obj) && !number(0,19) )
+      {
+        for( loc = 0; loc < MAX_WEAR; loc++ )
+        {
+          if( obj == ch->equipment[loc] )
+          {
+            act("&+b$p&+b slips out of your hands!&n", FALSE, ch, obj, NULL, TO_CHAR);
+            act("&+b$p&+b slips out of $n&+b's hands.&n", TRUE, ch, obj, NULL, TO_ROOM);
+            unequip_char( ch, loc );
+            obj_to_char( obj, ch );
+            break;
+          }
+        }
+      }
+    }
     return TRUE;
   }
 

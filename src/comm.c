@@ -56,6 +56,7 @@
 #include "ctf.h"
 #include "hardcore.h"
 #include "siege.h"
+#include "utility.h"
 
 /* external variables */
 
@@ -3196,10 +3197,8 @@ void act_convert(char *buf, const char *str, P_char ch, P_char to, P_obj obj,
  p: obj short description ("the lime-green totem")
  q: obj short description w/o article (a/an/the) ("lime-green totem")
  a: obj article (a/an/the) ("the")
- 
  */
-void act(const char *str, int hide_invisible, P_char ch, P_obj obj,
-         void *vict_obj, int type)
+void act(const char *str, int hide_invisible, P_char ch, P_obj obj, void *vict_obj, int type)
 {
   P_char   to, vict;
   bool     found;
@@ -3242,8 +3241,7 @@ void act(const char *str, int hide_invisible, P_char ch, P_obj obj,
     {
       if (vict->in_room == NOWHERE)
       {
-        logit(LOG_DEBUG, "act TO_VICTROOM in NOWHERE %s (%s).",
-              GET_NAME(vict), str);
+        logit(LOG_DEBUG, "act TO_VICTROOM in NOWHERE %s (%s).", GET_NAME(vict), str);
         return;
       }
       to = world[vict->in_room].people;
@@ -3646,15 +3644,36 @@ void act(const char *str, int hide_invisible, P_char ch, P_obj obj,
         *(++point) = '\0';
       }
 
-      CAP(buf);
+      // Skip beginning ansi(s) and capitalize the first char.
+      point = buf;
+      while( *point == '&' && ( LOWER(*(point+1)) == 'n'
+        || (*(point+1) == '+' && is_ansi_char( *(point+2) ))
+        || (*(point+1) == '-' && is_ansi_char( *(point+2) ))
+        || (*(point+1) == '=' && is_ansi_char( *(point+2) ) && is_ansi_char( *(point+3) )) ) )
+      {
+        if( *(point+1) == '+' || *(point+1) == '-' )
+        {
+          point += 3;
+        }
+        else if( *(point+1) == '=' )
+        {
+          point += 4;
+        }
+        else
+        {
+          point += 2;
+        }
+      }
+      CAP(point);
 
       act_convert(mybuf, str, ch, to, obj, vict_obj, type);
       mycheck = strcmp(mybuf, buf);
 
-      if (!sil || IS_TRUSTED(to) ||
-          (!IS_SET(world[to->in_room].room_flags, ROOM_SILENT) &&
-           !IS_AFFECTED4(to, AFF4_DEAF)))
+      if( !sil || IS_TRUSTED(to)
+        || (!IS_SET(world[to->in_room].room_flags, ROOM_SILENT) && !IS_AFFECTED4(to, AFF4_DEAF)) )
+      {
         send_to_char(buf, to, (flags & ACT_PRIVATE) ? LOG_PRIVATE : LOG_PUBLIC);
+      }
     }
 
     if ((type == TO_VICT) || (type == TO_CHAR))
