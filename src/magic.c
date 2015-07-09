@@ -2918,11 +2918,8 @@ void spell_earthen_maul(int level, P_char ch, char *arg, int type, P_char victim
     dam = dice(6 * temp, 9);
   }
 
-  dam = dam * DAMFACTOR;
-
   if(NewSaves(victim, SAVING_SPELL, 1.5))
     dam >>= 1;
-
 
   dam_flag = 0;
 
@@ -3057,8 +3054,7 @@ void spell_earthen_maul(int level, P_char ch, char *arg, int type, P_char victim
 }
 
 
-void spell_bigbys_clenched_fist(int level, P_char ch, char *arg, int type,
-                                P_char victim, P_obj obj)
+void spell_bigbys_clenched_fist(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   struct damage_messages messages = {
     "Your giant &+Yfist of force&N causes $N to stagger in agony!",
@@ -3098,8 +3094,7 @@ void spell_channel_negative_energy(int level, P_char ch, char *arg, int type,
   spell_damage(ch, victim, dam, SPLDAM_NEGATIVE, RAWDAM_NOKILL, &messages);
 }
 
-void spell_bigbys_crushing_hand(int level, P_char ch, char *arg, int type,
-                                P_char victim, P_obj obj)
+void spell_bigbys_crushing_hand(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   struct damage_messages messages = {
     "$N is grabbed by your giant fist, which begins &+Ycrushing&n $M.",
@@ -3839,8 +3834,7 @@ void spell_firestorm(int level, P_char ch, char *arg, int type, P_char victim,
     }
 }
 
-void spell_dispel_good(int level, P_char ch, char *arg, int type,
-                       P_char victim, P_obj obj)
+void spell_dispel_good(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int      dam;
   struct damage_messages messages = {
@@ -3862,7 +3856,7 @@ void spell_dispel_good(int level, P_char ch, char *arg, int type,
         TO_NOTVICT);
     return;
   }
-  dam = dice(level, 8) * DAMFACTOR;
+  dam = dice(level, 8);
 
   if(saves_spell(victim, SAVING_SPELL))
     dam >>= 1;
@@ -3893,7 +3887,7 @@ void spell_dispel_evil(int level, P_char ch, char *arg, int type,
         TO_NOTVICT);
     return;
   }
-  dam = dice((level + 1), 5) * DAMFACTOR;
+  dam = dice((level + 1), 5);
 
   if(saves_spell(victim, SAVING_SPELL))
     dam >>= 1;
@@ -11782,7 +11776,7 @@ void spell_grow_spike(int level, P_char ch, char *arg, int type, P_char victim, 
     dam = dice(6 * temp, 7);
   }
 
-  dam = dam * DAMFACTOR;
+  dam = dam;
 
   if(NewSaves(victim, SAVING_SPELL, (IS_AFFECTED(victim, AFF_FLY) ? -3 : 3)))
     dam >>= 1;
@@ -13226,7 +13220,7 @@ void spell_disintegrate(int level, P_char ch, char *arg, int type, P_char victim
     return;
   }
 
-  dam = dice(level, 13) * DAMFACTOR;
+  dam = dice(level, 13);
 
   act("$n sends a bright &+Ggreen ray of light&n streaking towards&n $N!",
     TRUE, ch, 0, victim, TO_NOTVICT);
@@ -13321,11 +13315,10 @@ void spell_disintegrate(int level, P_char ch, char *arg, int type, P_char victim
   spell_damage(ch, victim, dam, SPLDAM_NEGATIVE, SPLDAM_NOSHRUG, &messages);
 }
 
-void spell_shatter(int level, P_char ch, char *arg, int type, P_char victim,
-                   P_obj obj)
+void spell_shatter(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
-  int      i, dam;
-  P_obj    x;
+  int      i, dam, savemod;
+
   struct damage_messages messages = {
     "&+C$N screams as $E is hit by your ghastly wave of sound!",
     "$n &+Cbombards you with a massive wave of sound. You feel as if your head will explode!",
@@ -13336,40 +13329,49 @@ void spell_shatter(int level, P_char ch, char *arg, int type, P_char victim,
       0
   };
 
-  dam = dice(level, 8) * DAMFACTOR;
-  act("$n &+Lglares at $N&+L, and begins emanating a &+RHORRIBLE&+L sound!",
-      TRUE, ch, 0, victim, TO_NOTVICT);
-  act("$n &+Lglares at you, and begins to emanate a deep, vicious sound!",
-      TRUE, ch, 0, victim, TO_VICT);
-  act
-    ("&+LYou glare at $N&+L, and begin to generate a wretched sound of death!",
-     TRUE, ch, 0, victim, TO_CHAR);
-  if(!saves_spell(victim, SAVING_SPELL))
+  // Corresponds to approx bigbys + 10 damage saved (This is 9th circle vs bigbys 8th for Bards).
+  dam = 15 * level + dice(3, level);
+  // 92 - 100 pow has no bonus, < 92 pow means easier to save, > 100 pow means harder to save.
+  savemod = STAT_INDEX( GET_C_POW(ch) ) - 15;
+
+  act("$n &+Lglares at $N&+L, and begins emanating a &+RHORRIBLE&+L sound!", TRUE, ch, 0, victim, TO_NOTVICT);
+  act("$n &+Lglares at you, and begins to emanate a deep, vicious sound!", TRUE, ch, 0, victim, TO_VICT);
+  act("&+LYou glare at $N&+L, and begin to generate a wretched sound of death!", TRUE, ch, 0, victim, TO_CHAR);
+  if( !NewSaves(victim, SAVING_SPELL, savemod) )
   {
-    if(!IS_SET(world[ch->in_room].room_flags, ARENA))
+    if( !CHAR_IN_ARENA(ch) && !CHAR_IN_ARENA(victim) )
     {
       i = 0;
       do
-      {                         /* could make this check the carried EQ as well...  */
+      {
         if(victim->equipment[i])
         {
           obj = victim->equipment[i];
-          if(number(0, 2) && !CHAR_IN_ARENA(victim))
+          // Hits 2 out of 3 non-artifact eq'd items.
+          if( number(0, 2) && IS_ARTIFACT(victim->equipment[i]) )
           {
-            int      destroy = !number(0, 25);
+            // 4% chance to destroy it outright.
+            int destroy = !number(0, 24);
 
             DamageOneItem(victim, SPLDAM_SOUND, obj, destroy);
-            if(destroy)
+            if( destroy )
+            {
               statuslog(AVATAR, "%s just shattered %s from %s at [%d]",
-                        GET_NAME(ch), obj->short_description,
-                        GET_NAME(victim), world[ch->in_room].number);
+                GET_NAME(ch), obj->short_description, GET_NAME(victim), world[ch->in_room].number);
+            }
           }
         }
         i++;
       }
-      while (i < MAX_WEAR);
+      while( i < MAX_WEAR );
+      // Could make this check the carried EQ as well...
     }
-  }                             /* else dam = 0; */
+  }
+  // If they saved
+  else
+  {
+    dam = (dam * 2)/3;
+  }
   spell_damage(ch, victim, dam, SPLDAM_SOUND, SPLDAM_NOSHRUG, &messages);
 }
 

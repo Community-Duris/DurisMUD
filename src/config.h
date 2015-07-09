@@ -57,20 +57,19 @@
 /* balance affecting variables */
 
 /* #define STANDARD             1 */
-#define DAMFACTOR               1
-#define AREADAMAGEFACTOR                0.6
-#define DRAG_COST               5 /* Additional move cost when dragging */
-#define MANA_PER_CIRCLE         7 /* mobs still using mana, this much per circle for cost */
-#define MAX_DRAG             1.75 /* N times max_carry is how much you can drag */
-#define MAX_SKILL_USAGE        50 /* max number of skills with usage timers, PFILE! */
-#define MAX_SHADOW_MOVES        5 /* number of 'free' moves before someone MIGHT notice a shadower */
-#define MAX_TRACK_DIST         32 /* old limit for tracking */
-#define SHADOW_AWARE_PENALTY   20 /* penalty to shadowers skill, if target is 'aware' */
-#define MAX_TROPHY_SIZE        75 /* max number of mobs to keep in trophy array */
-#define MIN_CHANCE_TO_FLEE      78  /* this is the chance to flee from room with 1 exit*/
-#define MAX_CHANCE_TO_FLEE      86  /* this is the chance to flee from room with 4+ exits*/
-#define MAX_CHANCE_TO_CONTROL_FLEE 95  /* this is the chance for controlled flee with skill at 100 */
-#define MAX_PETS                5 /* number of pets we can save for reloading */
+#define AREADAMAGEFACTOR        0.6
+#define DRAG_COST               5    /* Additional move cost when dragging */
+#define MANA_PER_CIRCLE         7    /* mobs still using mana, this much per circle for cost */
+#define MAX_DRAG                1.75 /* N times max_carry is how much you can drag */
+#define MAX_SKILL_USAGE        50    /* max number of skills with usage timers, PFILE! */
+#define MAX_SHADOW_MOVES        5    /* number of 'free' moves before someone MIGHT notice a shadower */
+#define MAX_TRACK_DIST         32    /* old limit for tracking */
+#define SHADOW_AWARE_PENALTY   20    /* penalty to shadowers skill, if target is 'aware' */
+#define MAX_TROPHY_SIZE        75    /* max number of mobs to keep in trophy array */
+#define MIN_CHANCE_TO_FLEE     78    /* this is the chance to flee from room with 1 exit*/
+#define MAX_CHANCE_TO_FLEE     86    /* this is the chance to flee from room with 4+ exits*/
+#define MAX_CHANCE_TO_CONTROL_FLEE 95/* this is the chance for controlled flee with skill at 100 */
+#define MAX_PETS                5    /* number of pets we can save for reloading */
 
 /* time factors */
 #define MAX_ARENA_CORPSE_TIME  1200     /*   5 RL minutes */
