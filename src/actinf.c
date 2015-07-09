@@ -5355,6 +5355,10 @@ void do_score(P_char ch, char *argument, int cmd)
   {
       strcat(buf, " &+gLight&+yfooted&n");
   }
+  if( IS_AFFECTED4(ch, AFF4_DAZZLER) )
+  {
+      strcat(buf, " &+WS&+Bp&+Ca&+Wr&+Bk&+Cl&+Wi&+cn&+bg&n" );
+  }
 
   if (*buf)
   {
@@ -5362,33 +5366,33 @@ void do_score(P_char ch, char *argument, int cmd)
     send_to_char(buf, ch);
     send_to_char("\n", ch);
   }
-  
+
   buf[0] = 0;
 
   if(affected_by_spell(ch, SONG_DRAGONS))
     strcat(buf, " &+GSong of &+rD&+Lr&+ra&+Lg&+ro&+Ln&+rs&n");
 
   if(affected_by_spell(ch, SONG_PROTECTION))
-    strcat(buf, " &+GSong of &+WProtection&n"); 
+    strcat(buf, " &+GSong of &+WProtection&n");
 
   if(affected_by_spell(ch, SONG_PROTECTION))
     strcat(buf, " &+GSong of &+WProtection&n");
 
   if(affected_by_spell(ch, SONG_REVELATION))
-    strcat(buf, " &+GSong of &+cR&+Ce&+cv&+Ce&+cl&+Ca&+ct&+Ci&+co&+Cn&n");    
+    strcat(buf, " &+GSong of &+cR&+Ce&+cv&+Ce&+cl&+Ca&+ct&+Ci&+co&+Cn&n");
 
   if(affected_by_spell(ch, SONG_HEROISM))
-    strcat(buf, " &+GSong of &+YHeroism&n");  
-    
+    strcat(buf, " &+GSong of &+YHeroism&n");
+
   if(affected_by_spell(ch, SONG_FLIGHT))
-    strcat(buf, " &+GSong of &+CFlight&n"); 
-    
+    strcat(buf, " &+GSong of &+CFlight&n");
+
   if(affected_by_spell(ch, SONG_PEACE))
-    strcat(buf, " &+GSong of &+WPeace&n"); 
+    strcat(buf, " &+GSong of &+WPeace&n");
 
   if(affected_by_spell(ch, SONG_SLEEP))
-    strcat(buf, " &+GSong of &+bSleep&n");     
-    
+    strcat(buf, " &+GSong of &+bSleep&n");
+
   if (*buf)
   {
     send_to_char("Songs:   ", ch);
