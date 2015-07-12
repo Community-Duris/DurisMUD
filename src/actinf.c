@@ -4107,73 +4107,55 @@ void do_attributes(P_char ch, char *argument, int cmd)
         sprintf(buf, "&+cSTR: &+Y***&n");
       else
         sprintf(buf, "&+cSTR: &+Y%3d&n",
-                MAX(1,
-                    (int) ((GET_C_STR(ch) * 100 /
-                            stat_factor[(int) GET_RACE(ch)].Str) + .55)));
+                MAX(1, (int) ((GET_C_STR(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Str) + .55)));
 
       if (GET_C_AGI(ch) > stat_factor[(int) GET_RACE(ch)].Agi)
         sprintf(buf + strlen(buf), "  &+cAGI: &+Y***&n");
       else
         sprintf(buf + strlen(buf), "  &+cAGI: &+Y%3d&n",
-                MAX(1,
-                    (int) ((GET_C_AGI(ch) * 100 /
-                            stat_factor[(int) GET_RACE(ch)].Agi) + .55)));
+                MAX(1, (int) ((GET_C_AGI(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Agi) + .55)));
 
       if (GET_C_DEX(ch) > stat_factor[(int) GET_RACE(ch)].Dex)
         sprintf(buf + strlen(buf), "  &+cDEX: &+Y***&n");
       else
         sprintf(buf + strlen(buf), "  &+cDEX: &+Y%3d&n",
-                MAX(1,
-                    (int) ((GET_C_DEX(ch) * 100 /
-                            stat_factor[(int) GET_RACE(ch)].Dex) + .55)));
+                MAX(1, (int) ((GET_C_DEX(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Dex) + .55)));
 
       if (GET_C_CON(ch) > stat_factor[(int) GET_RACE(ch)].Con)
         sprintf(buf + strlen(buf), "  &+cCON: &+Y***&n");
       else
         sprintf(buf + strlen(buf), "  &+cCON: &+Y%3d&n",
-                MAX(1,
-                    (int) ((GET_C_CON(ch) * 100 /
-                            stat_factor[(int) GET_RACE(ch)].Con) + .55)));
+                MAX(1, (int) ((GET_C_CON(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Con) + .55)));
 
-      if (GET_C_LUK(ch) > stat_factor[(int) GET_RACE(ch)].Luck)
+      if (GET_C_LUK(ch) > stat_factor[(int) GET_RACE(ch)].Luk)
         sprintf(buf + strlen(buf), "  &+cLUCK: &+Y***&n\n");
       else
         sprintf(buf + strlen(buf), "  &+cLUCK: &+Y%3d&n\n",
-                MAX(1,
-                    (int) ((GET_C_LUK(ch) * 100 /
-                            stat_factor[(int) GET_RACE(ch)].Luck) + .55)));
+                MAX(1, (int) ((GET_C_LUK(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Luk) + .55)));
 
       if (GET_C_POW(ch) > stat_factor[(int) GET_RACE(ch)].Pow)
         sprintf(buf + strlen(buf), "&+cPOW: &+Y***&n");
       else
         sprintf(buf + strlen(buf), "&+cPOW: &+Y%3d&n",
-                MAX(1,
-                    (int) ((GET_C_POW(ch) * 100 /
-                            stat_factor[(int) GET_RACE(ch)].Pow) + .55)));
+                MAX(1, (int) ((GET_C_POW(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Pow) + .55)));
 
       if (GET_C_INT(ch) > stat_factor[(int) GET_RACE(ch)].Int)
         sprintf(buf + strlen(buf), "  &+cINT: &+Y***&n");
       else
         sprintf(buf + strlen(buf), "  &+cINT: &+Y%3d&n",
-                MAX(1,
-                    (int) ((GET_C_INT(ch) * 100 /
-                            stat_factor[(int) GET_RACE(ch)].Int) + .55)));
+                MAX(1, (int) ((GET_C_INT(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Int) + .55)));
 
       if (GET_C_WIS(ch) > stat_factor[(int) GET_RACE(ch)].Wis)
         sprintf(buf + strlen(buf), "  &+cWIS: &+Y***&n");
       else
         sprintf(buf + strlen(buf), "  &+cWIS: &+Y%3d&n",
-                MAX(1,
-                    (int) ((GET_C_WIS(ch) * 100 /
-                            stat_factor[(int) GET_RACE(ch)].Wis) + .55)));
+                MAX(1, (int) ((GET_C_WIS(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Wis) + .55)));
 
       if (GET_C_CHA(ch) > stat_factor[(int) GET_RACE(ch)].Cha)
         sprintf(buf + strlen(buf), "  &+cCHA: &+Y***&n\n\n");
       else
         sprintf(buf + strlen(buf), "  &+cCHA: &+Y%3d&n\n\n",
-                MAX(1,
-                    (int) ((GET_C_CHA(ch) * 100 /
-                            stat_factor[(int) GET_RACE(ch)].Cha) + .55)));
+                MAX(1, (int) ((GET_C_CHA(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Cha) + .55)));
 #endif
 /*
 
@@ -4196,7 +4178,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
       sprintf(buf + strlen(buf), "  &+cLUCK: &+Y%3d&n\n",
               MAX(1,
                   (int) ((GET_C_LUK(ch) * 100 /
-                          stat_factor[(int) GET_RACE(ch)].Luck) + .55)));
+                          stat_factor[(int) GET_RACE(ch)].Luk) + .55)));
       sprintf(buf + strlen(buf), "&+cPOW: &+Y%3d&n",
               MAX(1,
                   (int) ((GET_C_POW(ch) * 100 /
@@ -4218,47 +4200,100 @@ void do_attributes(P_char ch, char *argument, int cmd)
 //drannak new way
   char o_buf[MAX_STRING_LENGTH] = "", buf2[MAX_STRING_LENGTH] = "";
   strcat(o_buf, "  &+GActual &n(&+gBase&n)     &+GActual &n(&+gBase&n)\n");
-
   int i, i2, i3;
+  struct stat_data racial_stats;
+
+  i = GET_RACE(ch);
+  racial_stats.Str = stat_factor[i].Str;
+  racial_stats.Pow = stat_factor[i].Pow;
+  racial_stats.Dex = stat_factor[i].Dex;
+  racial_stats.Int = stat_factor[i].Int;
+  racial_stats.Agi = stat_factor[i].Agi;
+  racial_stats.Wis = stat_factor[i].Wis;
+  racial_stats.Con = stat_factor[i].Con;
+  racial_stats.Cha = stat_factor[i].Cha;
+  racial_stats.Luk = stat_factor[i].Luk;
+
   for (i = i3 = 0; i < MAX_WEAR; i++)
+  {
+    // We don't count stats for on back, on belt 2 or 3 (1 is belt buckle is ok).
+    if( i == WEAR_BACK || i == WEAR_ATTACH_BELT_2 || i == WEAR_ATTACH_BELT_3 )
+      continue;
     if(ch->equipment[i])
+    {
+      for( i2 = 0; i2 < MAX_OBJ_AFFECT; i2++ )
+      {
+        switch( ch->equipment[i]->affected[i2].location )
+        {
+          case APPLY_STR_RACE:
+            racial_stats.Str = MAX(racial_stats.Str, stat_factor[ch->equipment[i]->affected[i2].modifier].Str);
+            break;
+          case APPLY_DEX_RACE:
+            racial_stats.Dex = MAX(racial_stats.Dex, stat_factor[ch->equipment[i]->affected[i2].modifier].Dex);
+            break;
+          case APPLY_INT_RACE:
+            racial_stats.Int = MAX(racial_stats.Int, stat_factor[ch->equipment[i]->affected[i2].modifier].Int);
+            break;
+          case APPLY_WIS_RACE:
+            racial_stats.Wis = MAX(racial_stats.Wis, stat_factor[ch->equipment[i]->affected[i2].modifier].Wis);
+            break;
+          case APPLY_CON_RACE:
+            racial_stats.Con = MAX(racial_stats.Con, stat_factor[ch->equipment[i]->affected[i2].modifier].Con);
+            break;
+          case APPLY_AGI_RACE:
+            racial_stats.Agi = MAX(racial_stats.Agi, stat_factor[ch->equipment[i]->affected[i2].modifier].Agi);
+            break;
+          case APPLY_POW_RACE:
+            racial_stats.Pow = MAX(racial_stats.Pow, stat_factor[ch->equipment[i]->affected[i2].modifier].Pow);
+            break;
+          case APPLY_CHA_RACE:
+            racial_stats.Cha = MAX(racial_stats.Cha, stat_factor[ch->equipment[i]->affected[i2].modifier].Cha);
+            break;
+          case APPLY_KARMA_RACE:
+            racial_stats.Kar = MAX(racial_stats.Kar, stat_factor[ch->equipment[i]->affected[i2].modifier].Kar);
+            break;
+          case APPLY_LUCK_RACE:
+            racial_stats.Luk = MAX(racial_stats.Luk, stat_factor[ch->equipment[i]->affected[i2].modifier].Luk);
+            break;
+          default:
+            break;
+        }
+      }
       i3++;
+    }
+  }
   i2 = (int) (GET_HEIGHT(ch));
   i = (int) (i2 / 12);
   i2 -= i * 12;
 
   sprintf(buf, "&+YStr: &n%3d&+Y (&n%3d&+Y)    Pow: &n%3d&+Y (&n%3d&+Y)\n",
-    GET_C_STR(ch), MAX(1, (int) ((GET_C_STR(ch) * 100 /
-    stat_factor[(int) GET_RACE(ch)].Str) + .55)), GET_C_POW(ch), MAX(1,
-    (int) ((GET_C_POW(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Pow) + .55)));
+    GET_C_STR(ch), (int)(GET_C_STR(ch) * 100 / racial_stats.Str + .55),
+    GET_C_POW(ch), (int)(GET_C_POW(ch) * 100 / racial_stats.Pow + .55));
   strcat(o_buf, buf);
 
   sprintf(buf, "&+YDex: &n%3d&+Y (&n%3d&+Y)    Int: &n%3d&+Y (&n%3d&+Y)   \n",
-    GET_C_DEX(ch), MAX(1, (int) ((GET_C_DEX(ch) * 100 /
-    stat_factor[(int) GET_RACE(ch)].Dex) + .55)), GET_C_INT(ch), MAX(1,
-    (int) ((GET_C_INT(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Int) + .55)));
+    GET_C_DEX(ch), (int)(GET_C_DEX(ch) * 100 / racial_stats.Dex + .55),
+    GET_C_INT(ch), (int)(GET_C_INT(ch) * 100 / racial_stats.Int + .55));
   strcat(o_buf, buf);
 
   sprinttype(GET_ALT_SIZE(ch), size_types, buf2);
   sprintf(buf, "&+YAgi: &n%3d&+Y (&n%3d&+Y)    Wis: &n%3d&+Y (&n%3d&+Y)\n",
-    GET_C_AGI(ch), MAX(1, (int) ((GET_C_AGI(ch) * 100 /
-    stat_factor[(int) GET_RACE(ch)].Agi) + .55)), GET_C_WIS(ch), MAX(1,
-    (int) ((GET_C_WIS(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Wis) + .55)));
+    GET_C_AGI(ch), (int)(GET_C_AGI(ch) * 100 / racial_stats.Agi + .55),
+    GET_C_WIS(ch), (int)(GET_C_WIS(ch) * 100 / racial_stats.Wis + .55));
   strcat(o_buf, buf);
 
-  sprintf(buf, "&+YCon: &n%3d&+Y (&n%3d&+Y)    Cha: &n%3d&+Y (&n%3d&+Y)   Luc: &n%3d&+Y (&n%3d&+Y)\n"
+  sprintf(buf, "&+YCon: &n%3d&+Y (&n%3d&+Y)    Cha: &n%3d&+Y (&n%3d&+Y)   Luk: &n%3d&+Y (&n%3d&+Y)\n"
                "&+cEquipped Items: &n%3d&+Y     &+cCarried weight:&n%5d\n\n",
-    GET_C_CON(ch), MAX(1, (int) ((GET_C_CON(ch) * 100 /
-    stat_factor[(int) GET_RACE(ch)].Con) + .55)), GET_C_CHA(ch), MAX(1,
-    (int) ((GET_C_CHA(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Cha) + .55)), 
-    GET_C_LUK(ch), MAX(1, (int) ((GET_C_LUK(ch) * 100 /
-    stat_factor[(int) GET_RACE(ch)].Luck) + .55)), i3, IS_CARRYING_W(ch));
+    GET_C_CON(ch), (int)(GET_C_CON(ch) * 100 / racial_stats.Con + .55),
+    GET_C_CHA(ch), (int)(GET_C_CHA(ch) * 100 / racial_stats.Cha + .55),
+    GET_C_LUK(ch), (int)(GET_C_LUK(ch) * 100 / racial_stats.Luk + .55),
+    i3, IS_CARRYING_W(ch));
   strcat(o_buf, buf);
 
    /* sprintf(buf,
             "&+YKar: &n%3d&+Y (&n%3d&+Y)    Luc: &n%3d&+Y (&n%3d&+Y)    Carried Items: &n%3d&+Y   Max Carry Weight:&n%5d\n",
             GET_C_KARMA(k), k->base_stats.Karma, GET_C_LUK(k),
-            k->base_stats.Luck, IS_CARRYING_N(k), CAN_CARRY_W(k));
+            k->base_stats.Luk, IS_CARRYING_N(k), CAN_CARRY_W(k));
     strcat(o_buf, buf);*/
 
     i = GET_C_STR(ch) + GET_C_DEX(ch) + GET_C_AGI(ch) + GET_C_CON(ch) +
@@ -4280,38 +4315,19 @@ void do_attributes(P_char ch, char *argument, int cmd)
     }
     else                        /*if (GET_LEVEL(ch) >= 10) */
     {
-      sprintf(buf,
+      sprintf( buf,
               "&+cSTR: &+Y%-15s&n  &+cAGI: &+Y%-15s&n   &+cDEX: &+Y%s\n"
               "&+cPOW: &+Y%-15s&n  &+cINT: &+Y%-15s&n   &+cWIS: &+Y%s\n"
               "&+cCON: &+Y%-15s&n  &+cCHA: &+Y%-15s&n  &+cLUCK: &+Y%s\n\n",
-              stat_to_string2((int)
-                              ((GET_C_STR(ch) * 100 /
-                                stat_factor[(int) GET_RACE(ch)].Str) + .55)),
-              stat_to_string2((int)
-                              ((GET_C_AGI(ch) * 100 /
-                                stat_factor[(int) GET_RACE(ch)].Agi) + .55)),
-              stat_to_string2((int)
-                              ((GET_C_DEX(ch) * 100 /
-                                stat_factor[(int) GET_RACE(ch)].Dex) + .55)),
-              stat_to_string2((int)
-                              ((GET_C_POW(ch) * 100 /
-                                stat_factor[(int) GET_RACE(ch)].Pow) + .55)),
-              stat_to_string2((int)
-                              ((GET_C_INT(ch) * 100 /
-                                stat_factor[(int) GET_RACE(ch)].Int) + .55)),
-              stat_to_string2((int)
-                              ((GET_C_WIS(ch) * 100 /
-                                stat_factor[(int) GET_RACE(ch)].Wis) + .55)),
-              stat_to_string2((int)
-                              ((GET_C_CON(ch) * 100 /
-                                stat_factor[(int) GET_RACE(ch)].Con) + .55)),
-              stat_to_string2((int)
-                              ((GET_C_CHA(ch) * 100 /
-                                stat_factor[(int) GET_RACE(ch)].Cha) + .55)),
-              stat_to_string2((int)
-                              ((GET_C_LUK(ch) * 100 /
-                                stat_factor[(int) GET_RACE(ch)].Luck) +
-                               .55)));
+              stat_to_string2((int) ((GET_C_STR(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Str) + .55)),
+              stat_to_string2((int) ((GET_C_AGI(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Agi) + .55)),
+              stat_to_string2((int) ((GET_C_DEX(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Dex) + .55)),
+              stat_to_string2((int) ((GET_C_POW(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Pow) + .55)),
+              stat_to_string2((int) ((GET_C_INT(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Int) + .55)),
+              stat_to_string2((int) ((GET_C_WIS(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Wis) + .55)),
+              stat_to_string2((int) ((GET_C_CON(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Con) + .55)),
+              stat_to_string2((int) ((GET_C_CHA(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Cha) + .55)),
+              stat_to_string2((int) ((GET_C_LUK(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Luk) + .55)) );
     }
   }
   else
@@ -4319,33 +4335,15 @@ void do_attributes(P_char ch, char *argument, int cmd)
     sprintf(buf,
             "&+cSTR: &+Y%s\t&n&+cAGI: &+Y%s\t&n&+cDEX: &+Y%s\t&n&+cCON: &+Y%s\t&n&+cLUCK: &+Y%s&n\n"
             "&+cPOW: &+Y%s\t&n&+cINT: &+Y%s\t&n&+cWIS: &+Y%s\t&n&+cCHA: &+Y%s&n\n\n",
-            stat_to_string1((int)
-                            ((GET_C_STR(ch) * 100 /
-                              stat_factor[(int) GET_RACE(ch)].Str) + .55)),
-            stat_to_string1((int)
-                            ((GET_C_AGI(ch) * 100 /
-                              stat_factor[(int) GET_RACE(ch)].Agi) + .55)),
-            stat_to_string1((int)
-                            ((GET_C_DEX(ch) * 100 /
-                              stat_factor[(int) GET_RACE(ch)].Dex) + .55)),
-            stat_to_string1((int)
-                            ((GET_C_CON(ch) * 100 /
-                              stat_factor[(int) GET_RACE(ch)].Con) + .55)),
-            stat_to_string1((int)
-                            ((GET_C_LUK(ch) * 100 /
-                              stat_factor[(int) GET_RACE(ch)].Luck) + .55)),
-            stat_to_string1((int)
-                            ((GET_C_POW(ch) * 100 /
-                              stat_factor[(int) GET_RACE(ch)].Pow) + .55)),
-            stat_to_string1((int)
-                            ((GET_C_INT(ch) * 100 /
-                              stat_factor[(int) GET_RACE(ch)].Int) + .55)),
-            stat_to_string1((int)
-                            ((GET_C_WIS(ch) * 100 /
-                              stat_factor[(int) GET_RACE(ch)].Wis) + .55)),
-            stat_to_string1((int)
-                            ((GET_C_CHA(ch) * 100 /
-                              stat_factor[(int) GET_RACE(ch)].Cha) + .55)));
+            stat_to_string1((int) ((GET_C_STR(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Str) + .55)),
+            stat_to_string1((int) ((GET_C_AGI(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Agi) + .55)),
+            stat_to_string1((int) ((GET_C_DEX(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Dex) + .55)),
+            stat_to_string1((int) ((GET_C_CON(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Con) + .55)),
+            stat_to_string1((int) ((GET_C_LUK(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Luk) + .55)),
+            stat_to_string1((int) ((GET_C_POW(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Pow) + .55)),
+            stat_to_string1((int) ((GET_C_INT(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Int) + .55)),
+            stat_to_string1((int) ((GET_C_WIS(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Wis) + .55)),
+            stat_to_string1((int) ((GET_C_CHA(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Cha) + .55)));
   }
   send_to_char(buf, ch);
 

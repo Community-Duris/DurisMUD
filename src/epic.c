@@ -1143,8 +1143,8 @@ int stat_shops(int room, P_char ch, int cmd, char *arg)
        sprintf(buf, "4. A &+Gmagical&n constitution potion is not available for you.\r\n");
      send_to_char(buf, ch); 
 
-     cost = ch->base_stats.Luck * ch->base_stats.Luck * ch->base_stats.Luck * cost_mod;
-     if(ch->base_stats.Luck < MAX_SHOP_BUY)
+     cost = ch->base_stats.Luk * ch->base_stats.Luk * ch->base_stats.Luk * cost_mod;
+     if(ch->base_stats.Luk < MAX_SHOP_BUY)
        sprintf(buf, "5. A &+Gmagical&n luck potion for %s\r\n", coin_stringv(cost));
      else
        sprintf(buf, "5. A &+Gmagical&n luck stat potion is not available for you.\r\n");
@@ -1260,13 +1260,13 @@ int stat_shops(int room, P_char ch, int cmd, char *arg)
           return TRUE;
           break;
         case 5:
-          cost = ch->base_stats.Luck * ch->base_stats.Luck * ch->base_stats.Luck * cost_mod;
+          cost = ch->base_stats.Luk * ch->base_stats.Luk * ch->base_stats.Luk * cost_mod;
           if(GET_MONEY(ch) < cost)
           {
              send_to_char("You dont have enough money!\r\n", ch);
              return TRUE;
           }
-          if(ch->base_stats.Luck >= MAX_SHOP_BUY)
+          if(ch->base_stats.Luk >= MAX_SHOP_BUY)
           {
              send_to_char("You cant buy that.\r\n", ch);
              return TRUE;

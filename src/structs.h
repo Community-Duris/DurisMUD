@@ -1066,8 +1066,8 @@ struct stat_data {
   sh_int Wis;
   sh_int Cha;
 
-  sh_int Karma;  /* 2 'special' stats */
-  sh_int Luck;
+  sh_int Kar;  /* 2 'special' stats */
+  sh_int Luk;
 };
 
 struct char_point_data {

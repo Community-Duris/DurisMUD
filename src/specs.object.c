@@ -8389,7 +8389,7 @@ int stat_pool_luc(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  return stat_pool_common(obj, ch, cmd, &(ch->base_stats.Luck),
+  return stat_pool_common(obj, ch, cmd, &(ch->base_stats.Luk),
                           "&+LYour outlook on life is somewaht grimmer..\n",
                           "$n doesn't look so confident in believing in his lucky stars.\n",
                           "&+WYou feel as if you could roll Triple Tiamat's at the slots..\n",

@@ -486,8 +486,8 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
     {"int", ABOFFSET(Int), NULL, ac_shortCopy},
     {"wis", ABOFFSET(Wis), NULL, ac_shortCopy},
     {"cha", ABOFFSET(Cha), NULL, ac_shortCopy},
-    {"karma", ABOFFSET(Karma), NULL, ac_shortCopy},
-    {"luck", ABOFFSET(Luck), NULL, ac_shortCopy},
+    {"karma", ABOFFSET(Kar), NULL, ac_shortCopy},
+    {"luck", ABOFFSET(Luk), NULL, ac_shortCopy},
     /* stat_data (temporary) */
     {"tstr", TAOFFSET(Str), NULL, ac_shortCopy},
     {"tdex", TAOFFSET(Dex), NULL, ac_shortCopy},
@@ -497,8 +497,8 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
     {"tint", TAOFFSET(Int), NULL, ac_shortCopy},
     {"twis", TAOFFSET(Wis), NULL, ac_shortCopy},
     {"tcha", TAOFFSET(Cha), NULL, ac_shortCopy},
-    {"tkarma", TAOFFSET(Karma), NULL, ac_shortCopy},
-    {"tluck", TAOFFSET(Luck), NULL, ac_shortCopy},
+    {"tkarma", TAOFFSET(Kar), NULL, ac_shortCopy},
+    {"tluck", TAOFFSET(Luk), NULL, ac_shortCopy},
     /* char_point_data */
     {"mana", POOFFSET(mana), NULL, ac_shintCopy},
     {"mxmana", POOFFSET(base_mana), NULL, ac_hitmanaCopy},

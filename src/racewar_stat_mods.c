@@ -44,8 +44,8 @@ int add_racewar_stat_mods(P_char ch, struct hold_data *affs) {
   affs->m_Wis += racewar_stat_mods[i].Wis;
   affs->c_Cha += racewar_stat_mods[i].Cha;
   affs->m_Cha += racewar_stat_mods[i].Cha;
-  affs->c_Luc += racewar_stat_mods[i].Luck;
-  affs->m_Luc += racewar_stat_mods[i].Luck;
+  affs->c_Luc += racewar_stat_mods[i].Luk;
+  affs->m_Luc += racewar_stat_mods[i].Luk;
   
   return TRUE;
 }
@@ -97,7 +97,7 @@ int set_racewar_stat_mod(int racewar, int stat_affect, int regular_stat, int max
       break;
       
     case APPLY_LUCK:
-      racewar_stat_mods[i].Luck = regular_stat;
+      racewar_stat_mods[i].Luk = regular_stat;
       break;
   }
   
@@ -114,7 +114,7 @@ void reset_racewar_stat_mods()
   racewar_stat_mods[0].Con = 0;
   racewar_stat_mods[0].Pow = 0;
   racewar_stat_mods[0].Cha = 0;
-  racewar_stat_mods[0].Luck = 0;
+  racewar_stat_mods[0].Luk = 0;
 
   racewar_stat_mods[1].Str = 0;
   racewar_stat_mods[1].Dex = 0;
@@ -124,5 +124,5 @@ void reset_racewar_stat_mods()
   racewar_stat_mods[1].Con = 0;
   racewar_stat_mods[1].Pow = 0;
   racewar_stat_mods[1].Cha = 0;
-  racewar_stat_mods[1].Luck = 0;
+  racewar_stat_mods[1].Luk = 0;
 }

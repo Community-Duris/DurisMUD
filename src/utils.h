@@ -392,8 +392,8 @@ int race_size(int race);
 #define GET_C_INT(ch)     ((ch)->curr_stats.Int)
 #define GET_C_WIS(ch)     ((ch)->curr_stats.Wis)
 #define GET_C_CHA(ch)     ((ch)->curr_stats.Cha)
-#define GET_C_KAR(ch)     ((ch)->curr_stats.Karma)
-#define GET_C_LUK(ch)     ((ch)->curr_stats.Luck)
+#define GET_C_KAR(ch)     ((ch)->curr_stats.Kar)
+#define GET_C_LUK(ch)     ((ch)->curr_stats.Luk)
 
 #define GET_WIMPY(ch)   ((ch)->only.pc->wimpy)
 
@@ -1261,22 +1261,21 @@ char *CRYPT2( char *passwd, char *name );
        affected_by_spell(ch, SPELL_SLEEP))
 
 // Meeting the following define grants hitpoints.spellcaster.maxConBonus.
-#define IS_MAX_CON_BONUS_CLASS(ch) ( GET_CLASS(ch, \
-  CLASS_DRUID       | CLASS_BLIGHTER | CLASS_CLERIC     | CLASS_SORCERER   | \
-  CLASS_NECROMANCER | CLASS_SHAMAN   | CLASS_PSIONICIST | CLASS_MINDFLAYER | \
-  CLASS_ILLUSIONIST | CLASS_CONJURER | CLASS_SUMMONER   | CLASS_BARD | \
-  CLASS_ETHERMANCER | CLASS_THEURGIST) )
+#define MAX_CON_BONUS_CLASSES ( \
+  CLASS_DRUID    | CLASS_BLIGHTER   | CLASS_CLERIC      | CLASS_SORCERER    | CLASS_NECROMANCER | \
+  CLASS_SHAMAN   | CLASS_PSIONICIST | CLASS_MINDFLAYER  | CLASS_ILLUSIONIST | CLASS_CONJURER    | \
+  CLASS_SUMMONER | CLASS_BARD       | CLASS_ETHERMANCER | CLASS_THEURGIST )
 
 #define IS_COLD_VULN(ch) (GET_RACE(ch) == RACE_THRIKREEN || \
                           GET_RACE(ch) == RACE_F_ELEMENTAL || \
                           GET_RACE(ch) == RACE_EFREET || \
                           FIRESHIELDED(ch) || \
-                          IS_AFFECTED2(ch, AFF2_FIRE_AURA)) 
-        
+                          IS_AFFECTED2(ch, AFF2_FIRE_AURA))
+
 #define ENJOYS_FIRE_DAM(ch) ((GET_RACE(ch) == RACE_F_ELEMENTAL || \
                               GET_RACE(ch) == RACE_EFREET) || \
                               IS_AFFECTED2(ch, AFF2_FIRE_AURA))
-        
+
 #define IS_AFFLICTED_PSI(ch) ((affected_by_spell(ch, SPELL_POISON) || \
             IS_AFFECTED2(ch, AFF2_POISONED) || \
             affected_by_spell(ch, SPELL_CURSE) || \
@@ -1284,7 +1283,7 @@ char *CRYPT2( char *passwd, char *name );
             (affected_by_spell(ch, SPELL_DISEASE) && GET_LEVEL(ch) > 55) || \
             IS_AFFECTED(ch, AFF_BLIND)) && \
             GET_CLASS(ch, CLASS_MINDFLAYER | CLASS_PSIONICIST))
-        
+
 #define EYELESS(ch) (has_innate(ch, INNATE_EYELESS))
 
 #define DO_SHAM_RESTORATION(victim) \

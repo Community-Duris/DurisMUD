@@ -3757,9 +3757,9 @@ if(d->character->base_stats.Con < 80)
   {
   d->character->base_stats.Con = 80;
   }
-if(d->character->base_stats.Luck < 80)
+if(d->character->base_stats.Luk < 80)
   {
-  d->character->base_stats.Luck = 80;
+  d->character->base_stats.Luk = 80;
   }
 if(d->character->base_stats.Pow < 80)
   {
@@ -5585,8 +5585,8 @@ void display_stats(P_desc d)
           stat_to_string2((int) d->character->base_stats.Cha));
 
   sprintf(Gbuf1 + strlen(Gbuf1), "Luck: %15s      Unused:     %s\r\n\r\n",
-          stat_to_string2((int) d->character->base_stats.Luck),
-          stat_to_string2((int) d->character->base_stats.Karma));
+          stat_to_string2((int) d->character->base_stats.Luk),
+          stat_to_string2((int) d->character->base_stats.Kar));
 
   SEND_TO_Q(Gbuf1, d);
 }
@@ -5701,7 +5701,7 @@ void add_stat_bonus(P_char ch, int which, int what)
     ch->base_stats.Cha = BOUNDED(1, ch->base_stats.Cha + tmp, 100);
     break;
   case 9:
-    ch->base_stats.Luck = BOUNDED(1, ch->base_stats.Luck + tmp, 100);
+    ch->base_stats.Luk = BOUNDED(1, ch->base_stats.Luk + tmp, 100);
     break;
   }
   ch->curr_stats = ch->base_stats;
@@ -7096,8 +7096,8 @@ void swapstats(P_char ch, int stat1, int stat2)
       pstat1 = &(ch->base_stats.Cha);
       break;
     case 9:
-      tmp = ch->base_stats.Luck;
-      pstat1 = &(ch->base_stats.Luck);
+      tmp = ch->base_stats.Luk;
+      pstat1 = &(ch->base_stats.Luk);
       break;
     default:
       send_to_char( "Error in swapstats Part 1!  Tell a God.\n\r", ch );
@@ -7140,8 +7140,8 @@ void swapstats(P_char ch, int stat1, int stat2)
       ch->base_stats.Cha = tmp;
       break;
     case 9:
-      *pstat1 = ch->base_stats.Luck;
-      ch->base_stats.Luck = tmp;
+      *pstat1 = ch->base_stats.Luk;
+      ch->base_stats.Luk = tmp;
       break;
     default:
       send_to_char( "Error in swapstats Part 2!  Tell a God.\n\r", ch );

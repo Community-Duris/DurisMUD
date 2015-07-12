@@ -1781,25 +1781,25 @@ void boon_shop(P_char ch, char *argument)
 	  }
 	case LUCK:
 	  {
-	    if (ch->base_stats.Luck >= 100)
+	    if (ch->base_stats.Luk >= 100)
 	    {
 	      send_to_char("You already have 100 points in that stat.\r\n", ch);
 	      bshop.stats++;
 	      break;
 	    }
-	    ch->base_stats.Luck = BOUNDED(0, ch->base_stats.Luck+1, 100);
+	    ch->base_stats.Luk = BOUNDED(0, ch->base_stats.Luk+1, 100);
 	    send_to_char("You feel as if you could roll Triple Tiamat's at the slots...\r\n", ch);
 	    break;
 	  }
 	case KARMA:
 	  {
-	    if (ch->base_stats.Karma >= 100)
+	    if (ch->base_stats.Kar >= 100)
 	    {
 	      send_to_char("You already have 100 points in that stat.\r\n", ch);
 	      bshop.stats++;
 	      break;
 	    }
-	    ch->base_stats.Karma = BOUNDED(0, ch->base_stats.Karma+1, 100);
+	    ch->base_stats.Kar = BOUNDED(0, ch->base_stats.Kar+1, 100);
 	    send_to_char("You feel strange.\r\n", ch);
 	    break;
 	  }
@@ -3114,12 +3114,12 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
         }
         else if( bdata.bonus == LUCK )
         {
-          ch->base_stats.Luck = BOUNDED(0, ch->base_stats.Luck+1, 100);
+          ch->base_stats.Luk = BOUNDED(0, ch->base_stats.Luk+1, 100);
           send_to_char("You feel as if you could roll Triple Tiamat's at the slots...\r\n", ch);
         }
         else if( bdata.bonus == KARMA )
         {
-          ch->base_stats.Karma = BOUNDED(0, ch->base_stats.Karma+1, 100);
+          ch->base_stats.Kar = BOUNDED(0, ch->base_stats.Kar+1, 100);
           send_to_char("You feel strange.\r\n", ch);
         }
         else

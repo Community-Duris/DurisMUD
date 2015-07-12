@@ -20460,15 +20460,15 @@ void spell_perm_increase_luck(int level, P_char ch, char *arg, int type,
 {
     send_to_room("&+WThe room lights up as a &+Ymagical&+W light fills the room.&n\n", ch->in_room);
 
-    if(victim->base_stats.Luck >= 95)
+    if(victim->base_stats.Luk >= 95)
     {
         send_to_char("&+BNothing seem to happen..\n", victim);
         return;
     }
 
     send_to_char("&+BYou feel your luck grow..\n", victim);
-    victim->base_stats.Luck = BOUNDED(1, victim->base_stats.Luck +1, 95);
-    victim->curr_stats.Luck = BOUNDED(1, victim->curr_stats.Luck +1, 95);
+    victim->base_stats.Luk = BOUNDED(1, victim->base_stats.Luk +1, 95);
+    victim->curr_stats.Luk = BOUNDED(1, victim->curr_stats.Luk +1, 95);
     balance_affects(victim);
 }
 void spell_perm_increase_pow(int level, P_char ch, char *arg, int type,

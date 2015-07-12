@@ -4375,7 +4375,6 @@ int GET_LEVEL(P_char ch)
 
 int GET_CLASS(P_char ch, uint m_class)
 {
-  
   return ((ch->player.m_class & m_class) || (ch->player.secondary_class & m_class));
 }
 
@@ -4527,7 +4526,7 @@ int GET_CHAR_SKILL_P(P_char ch, int skl)
   }
 
   //Centaurs get innate 2h slashing at lvl 31.
-  if((has_innate(ch, TWO_HANDED_SWORD_MASTERY)) && (skl == SKILL_2H_SLASHING))
+  if( (skl == SKILL_2H_SLASHING) && (has_innate(ch, TWO_HANDED_SWORD_MASTERY)) )
   {
     return 100;
   }
@@ -5420,7 +5419,7 @@ sh_int *char_stat(P_char ch, int stat)
       break;
       
     case APPLY_LUCK:
-      return &ch->base_stats.Luck;
+      return &ch->base_stats.Luk;
       break;
   }
 

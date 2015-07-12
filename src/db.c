@@ -765,9 +765,9 @@ void update_stat_data()
     sprintf(buf, "stats.cha.%s", race_names_table[i].no_spaces);
     stat_factor[i].Cha = (sh_int) get_property(buf, 100.);
     sprintf(buf, "stats.kar.%s", race_names_table[i].no_spaces);
-    stat_factor[i].Karma = (sh_int) get_property(buf, 100.);
+    stat_factor[i].Kar = (sh_int) get_property(buf, 100.);
     sprintf(buf, "stats.luc.%s", race_names_table[i].no_spaces);
-    stat_factor[i].Luck = (sh_int) get_property(buf, 100.);
+    stat_factor[i].Luk = (sh_int) get_property(buf, 100.);
   }
 }
 
@@ -2264,8 +2264,8 @@ P_char read_mobile(int nr, int type)
     mob->base_stats.Pow = mob->base_stats.Int;
     mob->base_stats.Agi = mob->base_stats.Dex;
     mob->base_stats.Cha = number(1, 100);
-    mob->base_stats.Karma = number(1, 100);
-    mob->base_stats.Luck = number(1, 100);
+    mob->base_stats.Kar = number(1, 100);
+    mob->base_stats.Luk = number(1, 100);
 
     fscanf(mob_f, " %ld ", &tmp);
     fscanf(mob_f, " %ld ", &tmp2);

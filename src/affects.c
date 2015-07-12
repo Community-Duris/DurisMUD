@@ -303,20 +303,36 @@ int calculate_mana(P_char ch)
   return mana;
 }
 
+// This is now old code.  The current one in use is calculate_hitpoints2(ch).
 int calculate_hitpoints(P_char ch)
 {
   char buf[128];
-  int hps, i, lvl, old_bonus, hitpoint_bonus, j, mod, toughness;
+  int hps, i, lvl, old_bonus, hitpoint_bonus, j, mod, toughness, racial_con;
   P_obj obj;
   bool apply_maxconbonus_hitpoints = FALSE;
 
   lvl = GET_LEVEL(ch);
 
-  i = MAX(-390, 390 - MIN(GET_C_CON(ch), stat_factor[GET_RACE(ch)].Con));
+  // Apply racial con modifiers.
+  racial_con = stat_factor[GET_RACE(ch)].Con;
+  for( i = 0; i < MAX_WEAR; i++ )
+  {
+    if( obj = ch->equipment[i] )
+    {
+      for( j = 0; j < MAX_OBJ_AFFECT; j++ )
+      {
+        if( obj->affected[j].location == APPLY_CON_RACE )
+        {
+          racial_con = MAX( racial_con, stat_factor[obj->affected[j].modifier].Con );
+        }
+      }
+    }
+  }
+
+  i = MAX(-390, 390 - MIN(GET_C_CON(ch), racial_con));
   old_bonus = (int) (lvl * ((152100.0 - i * i) / 10864.285 - 4.0));
   hps = old_bonus;
-  hps += (int) (((float) lvl) / 50 * stat_factor[GET_RACE(ch)].Con *
-    stat_factor[GET_RACE(ch)].Con * get_property("hitpoints.conMultiplier", 0.035));
+  hps += (int) (((float) lvl) / 50 * racial_con * racial_con * get_property("hitpoints.conMultiplier", 0.035));
 
   if( IS_MULTICLASS_PC(ch) )
   {
@@ -333,10 +349,10 @@ int calculate_hitpoints(P_char ch)
     hps += graf(ch, age(ch).year, 2, 4, 17, 14, 8, 4, 3);
   }
 
+  // Small bonus for the first 10 levels heh.
   hps += MAX(0, 10 - lvl);
 
-  // should be made simpler some time, we add old con_bons part from
-  // maxcon outside class multiplier
+  // Should be made simpler some time, we add old con_bonus part from maxcon outside class multiplier
   i = MAX(-390, 390 - GET_C_CON(ch));
   hps += (int) (lvl * ((152100.0 - i * i) / 10864.285 - 4.0)) - old_bonus;
 
@@ -398,7 +414,7 @@ int calculate_hitpoints(P_char ch)
   // Never liked this and it grew from making hitters far too powerful
   // downing this and finding a better solution - Jexni 2/6/11
 
-  if( ch && IS_MAX_CON_BONUS_CLASS(ch) && !IS_MULTICLASS_PC(ch) )
+  if( ch && GET_PRIME_CLASS(ch, MAX_CON_BONUS_CLASSES) && !IS_MULTICLASS_PC(ch) )
   {
     apply_maxconbonus_hitpoints = TRUE;
   }
@@ -435,7 +451,7 @@ int calculate_hitpoints(P_char ch)
         }
       }
     }
-// Max con hitpoint bonus now uses a racial constitution ratio. May2010 -Lucrot
+    // Max con hitpoint bonus now uses a racial constitution ratio. May2010 -Lucrot
     if( IS_PC(ch) && hitpoint_bonus )
     {
       sprintf(buf, "stats.con.%s", race_names_table[GET_RACE(ch)].no_spaces);
@@ -445,6 +461,139 @@ int calculate_hitpoints(P_char ch)
   }
 
   return hps;
+}
+
+// This is a rewrite of calculate_hitpoints(ch).  It's a little faster for Illithid hps.
+// It's a little faster overall I think.
+// It also uses the racial bonus as figured with APPLY_CON_RACE eq instead of using ch's
+//   normal race.  (As it should be imo).
+int calculate_hitpoints2(P_char ch)
+{
+  char  buf[128];
+  int   i, j;
+  int   level, race, age_mod, curr_con, toughness, newbie, hardcore;
+  float old_bonus, new_bonus, class_mod, racial_con, maxconbonus;
+  P_obj obj;
+
+  if( IS_ILLITHID(ch) )
+  {
+    // Could simplify as there are no Warrior/Pal/AP/Merc Illithids, but just in case.
+    return GET_LEVEL(ch) + 10 + MAX(GET_C_CON(ch), 100) - 100
+      + GET_CHAR_SKILL(ch, SKILL_TOUGHNESS) * get_property("epic.skill.toughness", 0.500)
+      * (GET_CLASS(ch, CLASS_WARRIOR | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_MERCENARY) ? 2 : 1);
+  }
+
+  // Calculate level
+  level = GET_LEVEL(ch);
+
+  // Calculate racial con.
+  race = GET_RACE(ch);
+  racial_con = stat_factor[race].Con;
+  for( i = 0; i < MAX_WEAR; i++ )
+  {
+    if( obj = ch->equipment[i] )
+    {
+      for( j = 0; j < MAX_OBJ_AFFECT; j++ )
+      {
+        if( obj->affected[j].location == APPLY_CON_RACE
+          && stat_factor[obj->affected[j].modifier].Con > racial_con )
+        {
+          race = obj->affected[j].modifier;
+          racial_con = stat_factor[race].Con;
+        }
+      }
+    }
+  }
+
+  // Calculate curr con (max is 390 * 2 = 780, because things go awry above this in the calculations).
+  curr_con = MIN(GET_C_CON(ch), 780);
+
+  i = MIN(curr_con, racial_con);
+  old_bonus = level * ((-14./152100.) * i * i + (28./390.) * i - 4.);
+  new_bonus = (((float) level) / 50. * racial_con * racial_con * get_property("hitpoints.conMultiplier", 0.025));
+
+  // Calculate class mod
+  class_mod = class_hitpoints[flag2idx(ch->player.m_class)];
+  if( IS_MULTICLASS_PC(ch) )
+  {
+    class_mod = MAX( class_mod, class_hitpoints[flag2idx(ch->player.secondary_class)]);
+  }
+  old_bonus *= class_mod - 1.0;
+  new_bonus *= class_mod;
+
+  i = curr_con;
+  new_bonus += level * ((-14./152100.) * i * i + (28./390.) * i - 4.);
+
+  // Calculate age mod
+  if( GET_AGE(ch) <= racial_data[GET_RACE(ch)].max_age )
+  {
+    age_mod = graf(ch, age(ch).year, 2, 4, 17, 14, 8, 4, 3);
+  }
+
+  // Calculate maxcon bonus (rewrote this a little to make it easier to read).
+  maxconbonus = 0;
+  if( GET_PRIME_CLASS(ch, MAX_CON_BONUS_CLASSES) && (!IS_MULTICLASS_PC(ch) || GET_SECONDARY_CLASS(ch, MAX_CON_BONUS_CLASSES)) )
+  {
+    for( i = 0; i < MAX_WEAR; i++ )
+    {
+      // We skip on back (bps don't give stats), and 2nd and 3rd items on belt (1st == belt buckle == ok)
+      if( i == WEAR_BACK || i == WEAR_ATTACH_BELT_2 || i == WEAR_ATTACH_BELT_3 )
+      {
+        continue;
+      }
+      if( obj = ch->equipment[i] )
+      {
+        for( j = 0; j < MAX_OBJ_AFFECT; j++ )
+        {
+          if( obj->affected[j].location == APPLY_CON_MAX )
+          {
+            maxconbonus += obj->affected[j].modifier;
+          }
+        }
+      }
+    }
+    if( maxconbonus )
+    {
+      maxconbonus *= racial_con / 100.;
+      maxconbonus *= get_property("hitpoints.spellcaster.maxConBonus", 2.5);
+    }
+  }
+
+  // Calculate toughness bonus
+  if( (toughness = GET_CHAR_SKILL(ch, SKILL_TOUGHNESS)) > 0 && !GET_CLASS(ch, CLASS_MONK) )
+  {
+    toughness = (float)toughness * get_property("epic.skill.toughness", 0.500) * (GET_CLASS(ch, CLASS_WARRIOR | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_MERCENARY) ? 2. : 1.);
+  }
+  else
+  {
+    if( toughness < 50 )
+    {
+      toughness = ((float)toughness * get_property("epic.skill.toughness.monk.low", 0.800));
+    }
+    else if( toughness >= 50 && toughness <= 90 )
+    {
+      toughness = ((float)toughness * get_property("epic.skill.toughness.monk.medium", 1.000));
+    }
+    else
+    {
+      toughness = ((float)toughness * get_property("epic.skill.toughness.monk.high", 1.250));
+    }
+  }
+
+  // Small bonus for the first 9 levels heh.
+  newbie = MAX(0, 10 - level);
+
+  // Calculate hardcore bonus.
+  hardcore = IS_HARDCORE(ch) ? (2 * level) : 0;
+
+/* If you want to redo hps in some way, this is a good way to test what's changing and how much.
+ * The old_bnus and new_bonus are just the base hps relating to current and racial con.
+ * class_mod is the modifier for class, age_mod for age, maxconbonus for the casters, tough for toughness skill, newb for lowbies and HC for hardcore chars.
+  if( IS_PC(ch) ) debug( "old = %.2f, new = %.2f, CM = %.2f, age = %d, maxcon = %.2f, tough = %d, newb = %d, HC = %d.",
+    old_bonus, new_bonus, class_mod, age_mod, maxconbonus, toughness, newbie, hardcore );
+ */
+
+return old_bonus + new_bonus + age_mod + maxconbonus + toughness + newbie + hardcore;
 }
 
 void event_balance_affects(P_char ch, P_char victim, P_obj obj, void *data)
@@ -514,7 +663,7 @@ void apply_affs(P_char ch, int mode)
   if(!ch)
   {
     return;
-  }  
+  }
   if (mode)
   {
     SET_BIT(ch->specials.affected_by, TmpAffs.BV_1);
@@ -663,7 +812,7 @@ void apply_affs(P_char ch, int mode)
    * that way
    */
 
-  if(mode)
+  if( mode )
   {
     add_racewar_stat_mods(ch, &TmpAffs);
     add_racial_stat_bonus(ch, &TmpAffs);
@@ -672,62 +821,58 @@ void apply_affs(P_char ch, int mode)
   t1 = (!mode || !TmpAffs.r_Str) ? (int) GET_RACE(ch) : TmpAffs.r_Str;
   t3 = (mode) ? (100 + TmpAffs.m_Str) : 100;
   t2 = BOUNDED(1, (ch->base_stats.Str + ((mode) ? TmpAffs.c_Str : 0)), t3);
-  GET_C_STR(ch) =
-    BOUNDED(1, (int) (stat_factor[t1].Str * t2 / 100. + .55), 511);
+  GET_C_STR(ch) = BOUNDED(1, (int) (stat_factor[t1].Str * t2 / 100. + .55), 511);
 
   t1 = (!mode || !TmpAffs.r_Dex) ? (int) GET_RACE(ch) : TmpAffs.r_Dex;
   t3 = (mode) ? (100 + TmpAffs.m_Dex) : 100;
   t2 = BOUNDED(1, (ch->base_stats.Dex + ((mode) ? TmpAffs.c_Dex : 0)), t3);
-  GET_C_DEX(ch) =
-    BOUNDED(1, (int) (stat_factor[t1].Dex * t2 / 100. + .55), 511);
+  GET_C_DEX(ch) = BOUNDED(1, (int) (stat_factor[t1].Dex * t2 / 100. + .55), 511);
 
   t1 = (!mode || !TmpAffs.r_Agi) ? (int) GET_RACE(ch) : TmpAffs.r_Agi;
   t3 = (mode) ? (100 + TmpAffs.m_Agi) : 100;
   t2 = BOUNDED(1, (ch->base_stats.Agi + ((mode) ? TmpAffs.c_Agi : 0)), t3);
-  GET_C_AGI(ch) =
-    BOUNDED(1, (int) (stat_factor[t1].Agi * t2 / 100. + .55), 511);
+  GET_C_AGI(ch) = BOUNDED(1, (int) (stat_factor[t1].Agi * t2 / 100. + .55), 511);
 
+  // t1 = which race to apply racial con with.
   t1 = (!mode || !TmpAffs.r_Con) ? (int) GET_RACE(ch) : TmpAffs.r_Con;
+  // t3 = the amount of maxcon to apply.
   t3 = (mode) ? (100 + TmpAffs.m_Con) : 100;
+  // t2 = amount of base_con + reg con eq, bounded between 1 and t3 (100 + maxcon).
+  //        This is the final con before racial mods.
   t2 = BOUNDED(1, (ch->base_stats.Con + ((mode) ? TmpAffs.c_Con : 0)), t3);
-  GET_C_CON(ch) =
-    BOUNDED(1, (int) (stat_factor[t1].Con * t2 / 100. + .55), 511);
+  // Current con = racial con * actual con / 100 + .55
+  //                 Makes more sense to do (actual con) * (racial modifier/100) + .55 (?)
+  GET_C_CON(ch) = BOUNDED(1, (int) (stat_factor[t1].Con * t2 / 100. + .55), 511);
 
   t1 = (!mode || !TmpAffs.r_Pow) ? (int) GET_RACE(ch) : TmpAffs.r_Pow;
   t3 = (mode) ? (100 + TmpAffs.m_Pow) : 100;
   t2 = BOUNDED(1, (ch->base_stats.Pow + ((mode) ? TmpAffs.c_Pow : 0)), t3);
-  GET_C_POW(ch) =
-    BOUNDED(1, (int) (stat_factor[t1].Pow * t2 / 100. + .55), 511);
+  GET_C_POW(ch) = BOUNDED(1, (int) (stat_factor[t1].Pow * t2 / 100. + .55), 511);
 
   t1 = (!mode || !TmpAffs.r_Int) ? (int) GET_RACE(ch) : TmpAffs.r_Int;
   t3 = (mode) ? (100 + TmpAffs.m_Int) : 100;
   t2 = BOUNDED(1, (ch->base_stats.Int + ((mode) ? TmpAffs.c_Int : 0)), t3);
-  GET_C_INT(ch) =
-    BOUNDED(1, (int) (stat_factor[t1].Int * t2 / 100. + .55), 511);
+  GET_C_INT(ch) = BOUNDED(1, (int) (stat_factor[t1].Int * t2 / 100. + .55), 511);
 
   t1 = (!mode || !TmpAffs.r_Wis) ? (int) GET_RACE(ch) : TmpAffs.r_Wis;
   t3 = (mode) ? (100 + TmpAffs.m_Wis) : 100;
   t2 = BOUNDED(1, (ch->base_stats.Wis + ((mode) ? TmpAffs.c_Wis : 0)), t3);
-  GET_C_WIS(ch) =
-    BOUNDED(1, (int) (stat_factor[t1].Wis * t2 / 100. + .55), 511);
+  GET_C_WIS(ch) = BOUNDED(1, (int) (stat_factor[t1].Wis * t2 / 100. + .55), 511);
 
   t1 = (!mode || !TmpAffs.r_Cha) ? (int) GET_RACE(ch) : TmpAffs.r_Cha;
   t3 = (mode) ? (100 + TmpAffs.m_Cha) : 100;
   t2 = BOUNDED(1, (ch->base_stats.Cha + ((mode) ? TmpAffs.c_Cha : 0)), t3);
-  GET_C_CHA(ch) =
-    BOUNDED(1, (int) (stat_factor[t1].Cha * t2 / 100. + .55), 511);
+  GET_C_CHA(ch) = BOUNDED(1, (int) (stat_factor[t1].Cha * t2 / 100. + .55), 511);
 
   t1 = (!mode || !TmpAffs.r_Kar) ? (int) GET_RACE(ch) : TmpAffs.r_Kar;
   t3 = (mode) ? (100 + TmpAffs.m_Kar) : 100;
-  t2 = BOUNDED(1, (ch->base_stats.Karma + ((mode) ? TmpAffs.c_Kar : 0)), t3);
-  GET_C_KAR(ch) =
-    BOUNDED(1, (int) (stat_factor[t1].Karma * t2 / 100. + .55), 511);
+  t2 = BOUNDED(1, (ch->base_stats.Kar + ((mode) ? TmpAffs.c_Kar : 0)), t3);
+  GET_C_KAR(ch) = BOUNDED(1, (int) (stat_factor[t1].Kar * t2 / 100. + .55), 511);
 
   t1 = (!mode || !TmpAffs.r_Luc) ? (int) GET_RACE(ch) : TmpAffs.r_Luc;
   t3 = (mode) ? (100 + TmpAffs.m_Luc) : 100;
-  t2 = BOUNDED(1, (ch->base_stats.Luck + ((mode) ? TmpAffs.c_Luc : 0)), t3);
-  GET_C_LUK(ch) =
-    BOUNDED(1, (int) (stat_factor[t1].Luck * t2 / 100. + .55), 511);
+  t2 = BOUNDED(1, (ch->base_stats.Luk + ((mode) ? TmpAffs.c_Luc : 0)), t3);
+  GET_C_LUK(ch) = BOUNDED(1, (int) (stat_factor[t1].Luk * t2 / 100. + .55), 511);
 
   /*
    * note that the current stats now show the ACTUAL stat, including
@@ -1114,27 +1259,23 @@ void affect_modify(int loc, int mod, unsigned int *bitv, int from_eq)
   case APPLY_STR_RACE:
     if ((mod <= RACE_NONE) || (mod > LAST_RACE))
     {
-      logit(LOG_DEBUG,
-            "affect_modify(): unknown race (%d) for APPLY_STR_RACE.", loc);
+      logit(LOG_DEBUG, "affect_modify(): unknown race (%d) for APPLY_STR_RACE.", loc);
       break;
     }
-    if (!TmpAffs.r_Str ||
-        (stat_factor[mod].Str > stat_factor[TmpAffs.r_Str].Str))
+    if( !TmpAffs.r_Str || (stat_factor[mod].Str > stat_factor[TmpAffs.r_Str].Str) )
       TmpAffs.r_Str = mod;
     break;
   case APPLY_DEX_RACE:
     if ((mod <= RACE_NONE) || (mod > LAST_RACE))
     {
-      logit(LOG_DEBUG,
-            "affect_modify(): unknown race (%d) for APPLY_DEX_RACE.", loc);
+      logit(LOG_DEBUG, "affect_modify(): unknown race (%d) for APPLY_DEX_RACE.", loc);
       break;
     }
-    if (!TmpAffs.r_Dex ||
-        (stat_factor[mod].Dex > stat_factor[TmpAffs.r_Dex].Dex))
+    if( !TmpAffs.r_Dex || (stat_factor[mod].Dex > stat_factor[TmpAffs.r_Dex].Dex) )
       TmpAffs.r_Dex = mod;
     break;
   case APPLY_AGI_RACE:
-    if ((mod <= RACE_NONE) || (mod > LAST_RACE))
+    if( (mod <= RACE_NONE) || (mod > LAST_RACE) )
     {
       logit(LOG_DEBUG, "affect_modify(): unknown race (%d) for APPLY_AGI_RACE.", loc);
       break;
@@ -1143,80 +1284,66 @@ void affect_modify(int loc, int mod, unsigned int *bitv, int from_eq)
       TmpAffs.r_Agi = mod;
     break;
   case APPLY_CON_RACE:
-    if ((mod <= RACE_NONE) || (mod > LAST_RACE))
+    if( (mod <= RACE_NONE) || (mod > LAST_RACE) )
     {
-      logit(LOG_DEBUG,
-            "affect_modify(): unknown race (%d) for APPLY_CON_RACE.", loc);
+      logit(LOG_DEBUG, "affect_modify(): unknown race (%d) for APPLY_CON_RACE.", loc);
       break;
     }
-    if (!TmpAffs.r_Con ||
-        (stat_factor[mod].Con > stat_factor[TmpAffs.r_Con].Con))
+    if( !TmpAffs.r_Con || (stat_factor[mod].Con > stat_factor[TmpAffs.r_Con].Con) )
       TmpAffs.r_Con = mod;
     break;
   case APPLY_POW_RACE:
     if ((mod <= RACE_NONE) || (mod > LAST_RACE))
     {
-      logit(LOG_DEBUG,
-            "affect_modify(): unknown race (%d) for APPLY_POW_RACE.", loc);
+      logit(LOG_DEBUG, "affect_modify(): unknown race (%d) for APPLY_POW_RACE.", loc);
       break;
     }
-    if (!TmpAffs.r_Pow ||
-        (stat_factor[mod].Pow > stat_factor[TmpAffs.r_Pow].Pow))
+    if( !TmpAffs.r_Pow || (stat_factor[mod].Pow > stat_factor[TmpAffs.r_Pow].Pow) )
       TmpAffs.r_Pow = mod;
     break;
   case APPLY_INT_RACE:
     if ((mod <= RACE_NONE) || (mod > LAST_RACE))
     {
-      logit(LOG_DEBUG,
-            "affect_modify(): unknown race (%d) for APPLY_INT_RACE.", loc);
+      logit(LOG_DEBUG, "affect_modify(): unknown race (%d) for APPLY_INT_RACE.", loc);
       break;
     }
-    if (!TmpAffs.r_Int ||
-        (stat_factor[mod].Int > stat_factor[TmpAffs.r_Int].Int))
+    if( !TmpAffs.r_Int || (stat_factor[mod].Int > stat_factor[TmpAffs.r_Int].Int) )
       TmpAffs.r_Int = mod;
     break;
   case APPLY_WIS_RACE:
     if ((mod <= RACE_NONE) || (mod > LAST_RACE))
     {
-      logit(LOG_DEBUG,
-            "affect_modify(): unknown race (%d) for APPLY_WIS_RACE.", loc);
+      logit(LOG_DEBUG, "affect_modify(): unknown race (%d) for APPLY_WIS_RACE.", loc);
       break;
     }
-    if (!TmpAffs.r_Wis ||
-        (stat_factor[mod].Wis > stat_factor[TmpAffs.r_Wis].Wis))
+    if( !TmpAffs.r_Wis || (stat_factor[mod].Wis > stat_factor[TmpAffs.r_Wis].Wis) )
       TmpAffs.r_Wis = mod;
     break;
   case APPLY_CHA_RACE:
-    if ((mod <= RACE_NONE) || (mod > LAST_RACE))
+    if( (mod <= RACE_NONE) || (mod > LAST_RACE) )
     {
-      logit(LOG_DEBUG,
-            "affect_modify(): unknown race (%d) for APPLY_CHA_RACE.", loc);
+      logit(LOG_DEBUG, "affect_modify(): unknown race (%d) for APPLY_CHA_RACE.", loc);
       break;
     }
-    if (!TmpAffs.r_Cha ||
-        (stat_factor[mod].Cha > stat_factor[TmpAffs.r_Cha].Cha))
+    if( !TmpAffs.r_Cha || (stat_factor[mod].Cha > stat_factor[TmpAffs.r_Cha].Cha) )
       TmpAffs.r_Cha = mod;
     break;
   case APPLY_KARMA_RACE:
     if ((mod <= RACE_NONE) || (mod > LAST_RACE))
     {
-      logit(LOG_DEBUG,
-            "affect_modify(): unknown race (%d) for APPLY_KARMA_RACE.", loc);
+      logit(LOG_DEBUG, "affect_modify(): unknown race (%d) for APPLY_KARMA_RACE.", loc);
       break;
     }
-    if (!TmpAffs.r_Kar ||
-        (stat_factor[mod].Karma > stat_factor[TmpAffs.r_Kar].Karma))
+    if( !TmpAffs.r_Kar || (stat_factor[mod].Kar > stat_factor[TmpAffs.r_Kar].Kar) )
       TmpAffs.r_Kar = mod;
     break;
   case APPLY_LUCK_RACE:
     if ((mod <= RACE_NONE) || (mod > LAST_RACE))
     {
-      logit(LOG_DEBUG,
-            "affect_modify(): unknown race (%d) for APPLY_LUCK_RACE.", loc);
+      logit(LOG_DEBUG, "affect_modify(): unknown race (%d) for APPLY_LUCK_RACE.", loc);
       break;
     }
-    if (!TmpAffs.r_Luc ||
-        (stat_factor[mod].Luck > stat_factor[TmpAffs.r_Luc].Luck))
+    if( !TmpAffs.r_Luc || (stat_factor[mod].Luk > stat_factor[TmpAffs.r_Luc].Luk) )
       TmpAffs.r_Luc = mod;
     break;
 
@@ -1536,7 +1663,7 @@ void all_affects(P_char ch, int mode)
     int      missing_hps = GET_MAX_HIT(ch) - GET_HIT(ch);
     int      missing_mana = GET_MAX_MANA(ch) - GET_MANA(ch);
 
-    GET_MAX_HIT(ch) += calculate_hitpoints(ch);
+    GET_MAX_HIT(ch) += calculate_hitpoints2(ch);
     GET_HIT(ch) = GET_MAX_HIT(ch) - missing_hps;
     GET_MAX_MANA(ch) += calculate_mana(ch);
     GET_MANA(ch) = GET_MAX_MANA(ch) - missing_mana;

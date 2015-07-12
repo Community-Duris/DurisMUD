@@ -405,8 +405,8 @@ int writeStatus(char *buf, P_char ch, bool updateTime )
   ADD_BYTE(buf, ch->base_stats.Int);
   ADD_BYTE(buf, ch->base_stats.Wis);
   ADD_BYTE(buf, ch->base_stats.Cha);
-  ADD_BYTE(buf, ch->base_stats.Karma);
-  ADD_BYTE(buf, ch->base_stats.Luck);
+  ADD_BYTE(buf, ch->base_stats.Kar);
+  ADD_BYTE(buf, ch->base_stats.Luk);
 
   ADD_SHORT(buf, GET_MANA(ch));
   ADD_SHORT(buf, ch->points.base_mana);
@@ -2323,8 +2323,8 @@ int restoreStatus(char *buf, P_char ch)
   ch->base_stats.Int = (ubyte) GET_BYTE(buf);
   ch->base_stats.Wis = (ubyte) GET_BYTE(buf);
   ch->base_stats.Cha = (ubyte) GET_BYTE(buf);
-  ch->base_stats.Karma = (ubyte) GET_BYTE(buf);
-  ch->base_stats.Luck = (ubyte) GET_BYTE(buf);
+  ch->base_stats.Kar = (ubyte) GET_BYTE(buf);
+  ch->base_stats.Luk = (ubyte) GET_BYTE(buf);
   ch->curr_stats = ch->base_stats;
 
   GET_MANA(ch) = GET_SHORT(buf);
@@ -4314,8 +4314,8 @@ int writePetStatus(char *buf, P_char ch)
   ADD_BYTE(buf, ch->base_stats.Int);
   ADD_BYTE(buf, ch->base_stats.Wis);
   ADD_BYTE(buf, ch->base_stats.Cha);
-  ADD_BYTE(buf, ch->base_stats.Karma);
-  ADD_BYTE(buf, ch->base_stats.Luck);
+  ADD_BYTE(buf, ch->base_stats.Kar);
+  ADD_BYTE(buf, ch->base_stats.Luk);
 
   ADD_SHORT(buf, GET_MANA(ch));
   ADD_SHORT(buf, ch->points.base_mana);
@@ -4592,8 +4592,8 @@ int restorePetStatus(char *buf, P_char ch)
   ch->base_stats.Int = (ubyte) GET_BYTE(buf);
   ch->base_stats.Wis = (ubyte) GET_BYTE(buf);
   ch->base_stats.Cha = (ubyte) GET_BYTE(buf);
-  ch->base_stats.Karma = (ubyte) GET_BYTE(buf);
-  ch->base_stats.Luck = (ubyte) GET_BYTE(buf);
+  ch->base_stats.Kar = (ubyte) GET_BYTE(buf);
+  ch->base_stats.Luk = (ubyte) GET_BYTE(buf);
   ch->curr_stats = ch->base_stats;
   GET_MANA(ch) = GET_SHORT(buf);
   ch->points.base_mana = GET_SHORT(buf);

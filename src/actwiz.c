@@ -2701,8 +2701,8 @@ void do_stat(P_char ch, char *argument, int cmd)
 
     sprintf(buf,
             "&+YKar: &n%3d&+Y (&n%3d&+Y)    Luc: &n%3d&+Y (&n%3d&+Y)    Carried Items: &n%3d&+Y   Max Carry Weight:&n%5d\n",
-            GET_C_KAR(k), k->base_stats.Karma, GET_C_LUK(k),
-            k->base_stats.Luck, IS_CARRYING_N(k), CAN_CARRY_W(k));
+            GET_C_KAR(k), k->base_stats.Kar, GET_C_LUK(k),
+            k->base_stats.Luk, IS_CARRYING_N(k), CAN_CARRY_W(k));
     strcat(o_buf, buf);
 
     i = GET_C_STR(k) + GET_C_DEX(k) + GET_C_AGI(k) + GET_C_CON(k) +
@@ -5016,8 +5016,8 @@ void roll_basic_abilities(P_char ch, int flag)
   ch->base_stats.Int = ch->curr_stats.Int = rolls[5];
   ch->base_stats.Wis = ch->curr_stats.Wis = rolls[6];
   ch->base_stats.Cha = ch->curr_stats.Cha = rolls[7];
-  ch->base_stats.Karma = ch->curr_stats.Karma = number(1, 100);
-  ch->base_stats.Luck = ch->curr_stats.Luck = number(1, 100);
+  ch->base_stats.Kar = ch->curr_stats.Kar = number(1, 100);
+  ch->base_stats.Luk = ch->curr_stats.Luk = number(1, 100);
 #endif
   ch->base_stats.Str = ch->curr_stats.Str = MIN(dice(5, 8) + 53, 95);
   ch->base_stats.Dex = ch->curr_stats.Dex = MIN(dice(5, 8) + 53, 95);
@@ -5027,8 +5027,8 @@ void roll_basic_abilities(P_char ch, int flag)
   ch->base_stats.Int = ch->curr_stats.Int = MIN(dice(5, 8) + 53, 95);
   ch->base_stats.Wis = ch->curr_stats.Wis = MIN(dice(5, 8) + 53, 95);
   ch->base_stats.Cha = ch->curr_stats.Cha = MIN(dice(5, 8) + 53, 95);
-  ch->base_stats.Karma = ch->curr_stats.Karma = MIN(dice(5, 8) + 53, 95);
-  ch->base_stats.Luck = ch->curr_stats.Luck = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Kar = ch->curr_stats.Kar = MIN(dice(5, 8) + 53, 95);
+  ch->base_stats.Luk = ch->curr_stats.Luk = MIN(dice(5, 8) + 53, 95);
 }
 
 // fullReset -> Do we reset epic skills/tradeskills?
@@ -5474,7 +5474,7 @@ void do_restore(P_char ch, char *argument, int cmd)
         send_to_char("&+BA haze of magical energies fall from the heavens, engulfing all that you see.&LAs they subside, you feel refreshed...&n\n", victim);
         if(ch != victim)
             do_reboot_restore(ch, victim);
-        
+
         act("You have been fully restored by $N!",
           FALSE, victim, 0, ch, TO_CHAR);
 
@@ -5511,9 +5511,7 @@ void do_restore(P_char ch, char *argument, int cmd)
             victim->equipment[i]->condition = 100;//victim->equipment[i]->max_condition; wipe2011
         for (obj = victim->carrying; obj; obj = obj->next_content)
           obj->condition = 100;//obj->max_condition; wipe2011
-        send_to_char
-          ("&+gFrom out of nowhere, little gremlin-like creatures about 6 inches tall pop up.&LThey grab all of your equipment, and fiddle with it before returning to you.&LThey then vanish as quickly as they came.\n",
-           victim);
+        send_to_char("&+gFrom out of nowhere, little gremlin-like creatures about 6 inches tall pop up.&LThey grab all of your equipment, and fiddle with it before returning to you.&LThey then vanish as quickly as they came.\n", victim);
       }
   }
   else if(!(victim = get_char_vis(ch, buf)))
@@ -5525,9 +5523,9 @@ void do_restore(P_char ch, char *argument, int cmd)
       send_to_char("Not allowed to restore an outpost!\n", ch);
       return;
     }
-       
+
     balance_affects(victim);
-    
+
     GET_MANA(victim) = GET_MAX_MANA(victim);
     GET_HIT(victim) = GET_MAX_HIT(victim);
     GET_VITALITY(victim) = GET_MAX_VITALITY(victim);
@@ -5572,6 +5570,7 @@ void do_restore(P_char ch, char *argument, int cmd)
       for (i = 0; i < MAX_SKILLS; i++)
       {
         victim->only.pc->skills[i].learned = 100;
+        victim->only.pc->skills[i].taught = 100;
       }
       for (i = 0; i < MAX_TONGUE; i++)
         GET_LANGUAGE(victim, i) = 100;
@@ -6187,10 +6186,10 @@ void do_setattr(P_char ch, char *arg, int cmd)
     "cha", OFFSET(base_stats.Cha), sa_byteCopy}
     ,
     {
-    "luck", OFFSET(base_stats.Luck), sa_byteCopy}
+    "luck", OFFSET(base_stats.Luk), sa_byteCopy}
     ,
     {
-    "Karma", OFFSET(base_stats.Karma), sa_byteCopy}
+    "Karma", OFFSET(base_stats.Kar), sa_byteCopy}
     ,
     {
     "hit", OFFSET(points.max_hit), sa_shortCopy}
@@ -10779,7 +10778,7 @@ void stat_single_race( P_char ch, int race )
                 "&+wTotalDamMod : &+c%1.2f&+w| DamrollMod  : &+c%1.2f&n\n\r",
     stat_factor[race].Str, stat_factor[race].Pow, stat_factor[race].Dex, stat_factor[race].Int,
     stat_factor[race].Agi, stat_factor[race].Wis, stat_factor[race].Con, stat_factor[race].Cha,
-    stat_factor[race].Karma, stat_factor[race].Luck, combat_by_race[race][0], spell_pulse_data[race],
+    stat_factor[race].Kar, stat_factor[race].Luk, combat_by_race[race][0], spell_pulse_data[race],
     combat_by_race[race][1], combat_by_race[race][2] );
   send_to_char( buf, ch );
 
