@@ -3303,17 +3303,39 @@ void act(const char *str, int hide_invisible, P_char ch, P_obj obj, void *vict_o
           {
           case 'n':
             if (ch && to)
-              i = PERS(ch, to, FALSE);
+            {
+              if( ch == to )
+              {
+                i = "you";
+              }
+              else
+              {
+                i = PERS(ch, to, FALSE);
+              }
+            }
             else
+            {
               i = NULL;
+            }
 
             break;
 
           case 'N':
             if (vict_obj && to)
-              i = PERS((P_char) vict_obj, to, FALSE);
+            {
+              if( (P_char)vict_obj == to )
+              {
+                i = "you";
+              }
+              else
+              {
+                i = PERS((P_char) vict_obj, to, FALSE);
+              }
+            }
             else
+            {
               i = NULL;
+            }
 
             break;
 
