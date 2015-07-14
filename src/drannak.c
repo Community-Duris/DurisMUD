@@ -36,6 +36,7 @@
 #include "specs.prototypes.h"
 #include "ships.h"
 #include "achievements.h"
+#include "utility.h"
 #include "vnum.obj.h"
 
 /*
@@ -367,31 +368,35 @@ int vnum_in_inv(P_char ch, int cmd)
   return count;
 }
 
+#define SHARDS_FOR_ORB 3
 int pvp_store(P_char ch, P_char pl, int cmd, char *arg)
 {
-  char buffer[MAX_STRING_LENGTH];
-  char     buf[256], *buff;
-  char     Gbuf1[MAX_STRING_LENGTH], *c;
+  char  buffer[MAX_STRING_LENGTH];
+  char  buf[256], *buff;
+  char  Gbuf1[MAX_STRING_LENGTH], *c;
+  P_obj orb;
 
   if(cmd == CMD_LIST)
-  {//iflist
+  {
     if(!arg || !*arg)
-    {//ifnoarg
+    {
+      orb = read_object( VOBJ_GREATER_ORB_MAGIC, VIRTUAL );
       sprintf(buffer,
-          "&+LThe Harvester&+L fills your mind with words...'\n"
-          "&+LThe Harvester&+L &+wsays 'Welcome combatant. I offer exotic items to those who have &+rproven &+Lthemselves in the arts of mortal &+rcombat&+L.&n'\n"
-          "&+LThe Harvester&+L &+wsays 'Only those who have collected the necessary amount frags of may purchase these items.&+L.&n'\n"
-          "&+LThe Harvester&+L &+wsays 'Additionally, I offer a reward for &+R6 &+we&+Wt&+Lh&+rer&+Le&+Wa&+wl &+Wsoul &+rshards&n from beings who have fallen in battle&n.&+L.&n'\n"
-          "&+LThe Harvester&+L &+wsays 'Simply have them in your &+Winventory&n and buy the item from the list below&n.&+L.&n'\n"
-          "&+y=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n"
-          "&+y|		&+cItem Name					           Frags Required       &+y|\n"
-          "&+y|&+W 1) &+Ya &+Mgreater&+Y o&+Mr&+Bb &+Yof &+mM&+Ma&+Wg&+Mi&+mc&n&+C%30d&n		                        &+y|\n"
-          "&+y=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n"
-          "\n", 0);
+          "&+LThe Harvester&+L fills your mind with words...\n"
+          "&+L'Welcome combatant. I offer exotic items to those who have &+rproven &+Lthemselves in the arts of mortal &+rcombat&+L."
+          "&+L  Only those who have collected the necessary amount frags of may purchase these items.."
+          "&+L  Additionally, I offer a reward for &+R%d &+we&+Wt&+Lh&+rer&+Le&+Wa&+wl &+Wsoul &+rshards&+L from beings who have fallen in battle."
+          "&+L  Simply have them in your &+Winventory&+L and buy the item from the list below..&n'\n"
+          "&+y=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n"
+          "&+y|&+c    %-40s     %-15s     &+y|\n"
+          "&+y|&+W 1) %s&+C     %15d     &+y|\n"
+          "&+y=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n"
+          "\n", SHARDS_FOR_ORB, "Item Name", " Frags Required", pad_ansi( orb ? OBJ_SHORT(orb) : "NULL", 40, TRUE).c_str(), 0 );
       send_to_char(buffer, pl);
+      extract_obj(orb);
       return TRUE;
-    }//endifnoarg
-  }//endiflist
+    }
+  }
   else if(cmd == CMD_BUY)
   {
     if(!arg || !*arg)
@@ -404,20 +409,20 @@ int pvp_store(P_char ch, P_char pl, int cmd, char *arg)
 
     else if(strstr(arg, "1"))
     {
-      //check for 3 soul shards
-      if (vnum_in_inv(pl, VOBJ_SOUL_SHARD) < 3)
+      // Check for SHARDS_FOR_ORB soul shards
+      if( vnum_in_inv(pl, VOBJ_SOUL_SHARD) < SHARDS_FOR_ORB )
       {
         send_to_char("&+LThe Harvester&+L &+wsays '&nI'm sorry, but you do not seem to have the 3 e&+Wt&+Lh&+rer&+Le&+Wa&+wl &+Wsoul &+rshards&n required to purchase that item.\r\n&n", pl);
         return TRUE;
       }
-      //subtract 2 soul shards
-      P_obj obj = read_object(VOBJ_GREATER_ORB_MAGIC, VIRTUAL);
-      vnum_from_inv(pl, VOBJ_SOUL_SHARD, 3);
+      // Subtract SHARDS_FOR_ORB soul shards
+      orb = read_object(VOBJ_GREATER_ORB_MAGIC, VIRTUAL);
+      vnum_from_inv(pl, VOBJ_SOUL_SHARD, SHARDS_FOR_ORB);
       send_to_char("&+LThe Harvester&+L &+wsays '&nExcellent, mortal.'\n", pl);
       send_to_char("&+LThe Harvester &ntakes the &+rshards&n from you and tightly grasps them with his hands. After a moment, a large grin appears across it's face.\r\n&n", pl);
       send_to_char("Moments later, &+LThe Harvester &nmakes a strange gesture about your body.\r\n&n", pl);
-      act("You now have $p!\r\n", FALSE, pl, obj, 0, TO_CHAR);
-      obj_to_char(obj, pl);
+      act("You now have $p!\r\n", FALSE, pl, orb, 0, TO_CHAR);
+      obj_to_char(orb, pl);
       return TRUE;
     }
   }
