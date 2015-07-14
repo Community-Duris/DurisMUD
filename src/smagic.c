@@ -44,6 +44,7 @@ extern P_char combat_list;
 extern P_obj object_list;
 extern P_index obj_index;
 extern P_room world;
+extern const int top_of_world;
 extern P_index mob_index;
 extern const char *apply_types[];
 extern const flagDef extra_bits[];
@@ -1316,25 +1317,36 @@ void spell_earthen_rain(int level, P_char ch, char *arg, int type, P_char victim
   }
 }
 
-void earthen_grasp(int level, P_char ch, P_char victim,
-                   struct damage_messages *messages)
+void earthen_grasp( int level, P_char ch, P_char victim )
 {
   struct affected_type af;
   enum {EG_FAIL, EG_SHORT, EG_LONG} effect;
-  int      dam_result;
+  int      dam_result, attdiff;
+  struct damage_messages messages = {
+    "$N&n&+y gasps for air as your earthen fist squeezes $M tightly.",
+    "$n&n&+y's earthen fist tightens around your chest, causing you to gasp for air.",
+    "$N&n&+y gasps for air as &n$n&n&+y's earthen fist squeezes $M tightly.",
+    "&+yYour earthen fist squeezes the life out of &n$N&n&+y, causing a gush of entrails to fly from $S mouth.",
+    "$n&n&+y's earthen fist squeezes the life out of you, ending what little life you had left..",
+    "$n&n&+y's earthen fist squeezes the life out of &n$N&n&+y, causing a gush of entrails to fly from $S mouth."
+  };
 
-  if(!(ch) || !IS_ALIVE(ch) || !(victim) || !IS_ALIVE(victim))
-  return;
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+  {
+    return;
+  }
 
   if(affected_by_spell(victim, SPELL_EARTHEN_GRASP))
   {
     send_to_char("As if one fist isn't enough?!\n", ch);
     return;
   }
-  int attdiff = ((GET_C_STR(ch) - GET_C_STR(victim)) / 2);
-  // Randomize.. Subtract up to 25 or add up to 25.
-  attdiff += 25 - number( 0, 50 );
-  attdiff = BOUNDED(-100, attdiff, 100);
+  // So, at 120 str difference, attdiff is maxxed/min'd.
+  attdiff = ((GET_C_STR(ch) - GET_C_STR(victim)) / 3);
+  // Randomize.. Subtract or add up to 1 sec.
+  attdiff += number( -WAIT_SEC, WAIT_SEC );
+  // Bind it to +/- 40 -> 10 sec.
+  attdiff = BOUNDED(-40, attdiff, 40);
 
   if(IS_NPC(victim) && IS_SET(victim->specials.act, ACT_IMMUNE_TO_PARA))
   {
@@ -1344,7 +1356,7 @@ void earthen_grasp(int level, P_char ch, P_char victim,
   else if(!NewSaves(victim, SAVING_PARA, attdiff))
   {
     // If they fail a regular save.
-    if(!NewSaves(victim, SAVING_PARA, 0))
+    if( !NewSaves(victim, SAVING_PARA, 0) )
       effect = EG_LONG;
     else
       effect = EG_FAIL;
@@ -1352,7 +1364,7 @@ void earthen_grasp(int level, P_char ch, P_char victim,
   else
   {
     // If they made str bonus and fail regular..
-    if(!NewSaves(victim, SAVING_PARA, 0))
+    if( !NewSaves(victim, SAVING_PARA, 0) )
       effect = EG_SHORT;
     else
       effect = EG_FAIL;
@@ -1370,13 +1382,15 @@ void earthen_grasp(int level, P_char ch, P_char victim,
       send_to_char("&+yThe fist attempts to grasp you tightly, but only manages a loose hold.&N\n", victim);
       act("&+yAn earthen fist bursts from the ground, grasping &n$n&n&+y!&N", FALSE, victim, 0, 0, TO_ROOM);
       act("$n&n&+y struggles valiantly, making a tighter grasp impossible.&N", FALSE, victim, 0, 0, TO_ROOM);
-      af.duration = (attdiff <= 0) ? 1 : attdiff;
+      // From minimum 1 sec to str-saved max = 10 sec.
+      af.duration = (attdiff <= WAIT_SEC) ? WAIT_SEC : attdiff;
     }
     else
     {
       send_to_char("&+yAn earthen fist bursts from the ground, grasping you tightly around the chest.&N\n", victim);
       act("&+yAn earthen fist bursts from the ground, grasping &n$n&n&+y tightly!&N", FALSE, victim, 0, 0, TO_ROOM);
-      af.duration = (attdiff <= 0) ? 10 : attdiff + 10;
+      // From minimum 5 sec to absolute max at 15 sec.
+      af.duration = (attdiff <= 0) ? 5 * WAIT_SEC : attdiff + 5 * WAIT_SEC;
     }
 
     if( has_innate( ch, INNATE_ELEMENTAL_POWER ) )
@@ -1386,10 +1400,10 @@ void earthen_grasp(int level, P_char ch, P_char victim,
 
     if(!NewSaves(victim, SAVING_SPELL, 0))
       dam_result =
-        spell_damage(ch, victim, dice(level, 12), SPLDAM_EARTH, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, messages);
+        spell_damage(ch, victim, dice(level, 12), SPLDAM_EARTH, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &messages);
     else
       dam_result =
-        spell_damage(ch, victim, dice(level, 7), SPLDAM_EARTH, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, messages);
+        spell_damage(ch, victim, dice(level, 7), SPLDAM_EARTH, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &messages);
 
     if(dam_result == DAM_NONEDEAD)
     {
@@ -1408,69 +1422,63 @@ void earthen_grasp(int level, P_char ch, P_char victim,
   }
 }
 
-void spell_earthen_grasp(int level, P_char ch, char *arg, int type,
-                         P_char victim, P_obj obj)
+void spell_earthen_grasp(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
-  int in_room;
-  struct damage_messages messages = {
-    "$N&n&+y gasps for air as your earthen fist squeezes $M tightly.",
-    "$n&n&+y's earthen fist tightens around your chest, causing you to gasp for air.",
-    "$N&n&+y gasps for air as &n$n&n&+y's earthen fist squeezes $M tightly.",
-    "&+yYour earthen fist squeezes the life out of &n$N&n&+y, causing a gush of entrails to fly from $S mouth.",
-    "$n&n&+y's earthen fist squeezes the life out of you, ending what little life you had left..",
-    "$n&n&+y's earthen fist squeezes the life out of &n$N&n&+y, causing a gush of entrails to fly from $S mouth."
-  };
-
   if(victim == ch)
   {
     send_to_char("You suddenly decide against that.\r\n", ch);
     return;
   }
 
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(ch->in_room))
-        return;
-  
-  earthen_grasp(level, ch, victim, &messages);
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+  {
+    return;
+  }
+
+  earthen_grasp( level, ch, victim );
 }
 
 
-void spell_single_earthen_grasp(int level, P_char ch, char *arg, int type,
-                              P_char victim, P_obj obj)
+void spell_single_earthen_grasp(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
-  earthen_grasp(level, ch, victim, 0);
+  if( !IS_ALIVE(ch) || !(ch->in_room))
+  {
+    return;
+  }
+
+  earthen_grasp( level, ch, victim );
 }
 
-void spell_greater_earthen_grasp(int level, P_char ch, char *arg, int type,
-                                 P_char victim, P_obj obj)
+void spell_greater_earthen_grasp(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   P_char   tch, next;
-  int      the_room, temp_coor;
+  int      room;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch))
-        return;
-  
-  if(victim == ch)
+  // We need room because ch might die in the middle of the spell (via deflect or such).
+  //   If this happens we still want the zone message.
+  if( !IS_ALIVE(ch) || (room = ch->in_room) < 0 || room > top_of_world )
+  {
+    return;
+  }
+
+  if( victim == ch )
   {
     send_to_char("You suddenly decide against that.\r\n", ch);
     return;
   }
-  
+
   send_to_char("&+yThe ground rumbles deeply as you finish your spell..&n\n", ch);
   act("&+yThe ground suddenly rumbles deeply..", FALSE, ch, 0, 0, TO_ROOM);
-  
+
   cast_as_damage_area(ch, spell_single_earthen_grasp, level, victim,
-                      get_property("spell.area.minChance.gEarthGrasp", 100),
-                      get_property("spell.area.chanceStep.gEarthGrasp", 20));
-  zone_spellmessage(ch->in_room,
-    "&+yThe ground rumbles &+Ldeeply &+ynearby...\n",
+    get_property("spell.area.minChance.gEarthGrasp", 100),
+    get_property("spell.area.chanceStep.gEarthGrasp", 20));
+
+  zone_spellmessage(room, "&+yThe ground rumbles &+Ldeeply &+ynearby...\n",
     "&+yThe ground rumbles &+Ldeeply &+yto the %s...\n");
 }
 
-void spell_pythonsting(int level, P_char ch, char *arg, int type,
-                       P_char victim, P_obj obj)
+void spell_pythonsting(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   bool     was_poisoned;
   int      dam, temp;
@@ -1483,12 +1491,11 @@ void spell_pythonsting(int level, P_char ch, char *arg, int type,
     "&+gFrom nowhere, a python bites &n$N&n&+g in the leg, causing $M to promptly die."
   };
 
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim))
-        return;
-  
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+  {
+    return;
+  }
+
   if(IS_TRUSTED(victim) || resists_spell(ch, victim))
     return;
 

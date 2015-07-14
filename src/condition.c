@@ -135,7 +135,9 @@ const char *item_damage_messages[][2] = {
    "was destroyed by the blast!"},
   {"cracks attacked by the sound wave.",
    "shattered into a million pieces as the sound wave hit it!"},
-   
+  {"cracks from the bombardment of &+yearth&n.",
+   "is smashed to bits by &+Lrocks&n and &+ydebris&n!"},
+
 };
 
 int DamageOneItem(P_char ch, int dam_type, P_obj obj, bool destroy)
@@ -156,35 +158,32 @@ int DamageOneItem(P_char ch, int dam_type, P_obj obj, bool destroy)
   {
     num *= materials[obj->material].dam_res[dam_type];
   }
-  
+
   // physical being the most common is less harsh
   if(dam_type == SPLDAM_GENERIC)
   {
     num >>= 1;
   }
-  
+
   // Lets reduce the amount of damage a lance takes.
-  if(objtype == ITEM_WEAPON &&
-    obj->value[0] == 16)
+  if( objtype == ITEM_WEAPON && obj->value[0] == 16 )
   {
     num = number(1, 3);
   }
-  
+
   obj->condition -= num;
-  
-  if(obj->condition < 0)
+
+  if( obj->condition < 0 )
   {
     destroy = TRUE;
   }
-  
+
   objtype = GET_ITEM_TYPE(obj);
 
-  sprintf(buf, "Your $q %s",
-          item_damage_messages[dam_type - 1][destroy ? 1 : 0]);
+  sprintf(buf, "Your $q %s", item_damage_messages[dam_type - 1][destroy ? 1 : 0]);
   act(buf, TRUE, ch, obj, 0, TO_CHAR);
 
-  sprintf(buf, "$n's $q %s",
-          item_damage_messages[dam_type - 1][destroy ? 1 : 0]);
+  sprintf(buf, "$n's $q %s", item_damage_messages[dam_type - 1][destroy ? 1 : 0]);
   act(buf, TRUE, ch, obj, 0, TO_ROOM);
 
   if(destroy)
