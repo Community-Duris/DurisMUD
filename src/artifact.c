@@ -3199,7 +3199,7 @@ void event_artifact_check_bind_sql( P_char ch, P_char vict, P_obj obj, void * ar
             }
             else
             {
-              debug( "%3d: artifact '%s&n'%6d is ready to merge, but owner '%s' %d not online.",
+              debug( "%3d: '%s&n'%6d is ready, but '%s' %d not online.",
                 ++counter, pad_ansi( arti ? OBJ_SHORT(arti) : "NULL", 35, TRUE).c_str(), list->vnum, get_player_name_from_pid(artidata.location), artidata.location );
             }
           }

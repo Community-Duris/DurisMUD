@@ -2007,6 +2007,12 @@ void spell_create_greater_dracolich(int level, P_char ch, char *arg, int type, P
     return;
   }
 
+  // For testing.
+  if( IS_PC(ch) && level > 56 )
+  {
+    level = 56;
+  }
+
   if( CHAR_IN_SAFE_ZONE(ch) )
   {
     send_to_char("A mysterious force blocks your spell!\r\n", ch);
@@ -2179,7 +2185,7 @@ void spell_create_greater_dracolich(int level, P_char ch, char *arg, int type, P
     act("&+W$N roars to the sky 'I LIVE!!!'", TRUE, ch, 0, mob, TO_ROOM);
     act("&+W$N roars to the sky 'I LIVE!!!'", TRUE, ch, 0, mob, TO_CHAR);
 
-    GET_AC(mob) -= (GET_LEVEL(ch) * 3);
+    GET_AC(mob) -= (level * 4);
     int duration = setup_pet(mob, ch, timeToDecay/2 + (6000 / STAT_INDEX(GET_C_INT(mob))), PET_NOCASH);
     add_follower(mob, ch);
     // if the undead will stop being charmed after a bit, also make it suicide 1 minute later

@@ -369,6 +369,7 @@ void update_dam_factors()
   dam_factor[DF_GUARDIANS_BULWARK] = get_property("damage.reduction.guardians.bulwark", 0.850);
   dam_factor[DF_DAMROLL_MOD] = get_property("damroll.mod", 1.0);
   dam_factor[DF_MELEEMASTERY] = get_property("damage.modifier.meleemastery", 1.100);
+  dam_factor[DF_DRACOLICHVAMP] = get_property("vamping.dracolich", 0.500);
 }
 
 // The swashbuckler is considered the victim. // May09 -Lucrot
@@ -4967,8 +4968,8 @@ int check_shields(P_char ch, P_char victim, int dam, int flags)
   return result;
 }
 
-/**
- * this functions handles physical damage and modifies it against stoneskin type spells,
+/* melee_damage
+ * This functions handles physical damage and modifies it against stoneskin type spells,
  * calculates vamping from melee damage and also resolves damage from fireshield type
  * spells to the attacker.
  */
@@ -5272,10 +5273,10 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags, struct damage_
 
 void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
 {
-  int dam = (int) fdam, can_mana, vamped = 0, wdam;
+  int dam = (int) fdam, vamped = 0, wdam;
   struct group_list *group;
   P_char   tch;
-  double temp_dam, bt_gain, fcap, fhits, sac_gain;
+  double temp_dam, bt_gain, fcap, fhits, sac_gain, can_mana;
 
   if( !IS_ALIVE(ch) || !IS_ALIVE(victim) || (dam < 1) )
   {
@@ -5287,10 +5288,10 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
   {
     can_mana = MAX(10, dam);
     can_mana = BOUNDED(0, can_mana, 100);
-    can_mana *= GET_LEVEL(ch) / 30;
+    can_mana *= GET_LEVEL(ch) / 30.;
     can_mana = BOUNDED(0, GET_MANA(victim), can_mana);
 
-    GET_MANA(ch) += can_mana;
+    GET_MANA(ch) += (int)can_mana;
     if( GET_MANA(ch) > GET_MAX_MANA(ch) )
     {
       GET_MANA(ch) = GET_MAX_MANA(ch);
@@ -5301,7 +5302,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
       StartRegen(ch, EVENT_MANA_REGEN);
     }
 
-    GET_MANA(victim) -= can_mana;
+    GET_MANA(victim) -= (int)can_mana;
     // BOUNDED(0, number(1, can_mana), GET_MANA(victim));
 
     if( GET_MANA(victim) < GET_MAX_MANA(victim) )
@@ -5374,7 +5375,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     }
     else if(GET_CLASS(ch, CLASS_AVENGER) || GET_CLASS(ch, CLASS_DREADLORD))
     {
-      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.dreadaven", 0.100), GET_MAX_HIT(ch) * VAMPPERCENT(ch) );
+      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.dreadlord.or.avenger", 0.100), GET_MAX_HIT(ch) * VAMPPERCENT(ch) );
     }
     else
     {
@@ -5404,9 +5405,8 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     temp_dam = 0;
     temp_dam = number(1, (int) (temp_dam));
 
-    if(IS_PC(ch))
-      // &&
-      //GET_LEVEL(ch) >= 46)
+    if( IS_PC(ch) )
+      // && GET_LEVEL(ch) >= 46)
     {
       temp_dam = dam * get_property("vamping.self.battleEcstasy", 0.150);
       //vamp(ch, temp_dam, GET_MAX_HIT(ch) * get_property("vamping.BTX.self.HP.PC", 1.10));
@@ -5502,6 +5502,11 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
   if( !vamped && (flags & RAWDAM_TRANCEVAMP) && (IS_UNDEADRACE(ch) || IS_ANGEL(ch))
     && !IS_AFFECTED4(ch, AFF4_BATTLE_ECSTASY) )
   {
+    if( IS_DRACOLICH(ch) )
+    {
+      fhits = dam * dam_factor[DF_DRACOLICHVAMP];
+      vamped = vamp(ch, fhits, GET_MAX_HIT(ch) * VAMPPERCENT(ch) );
+    }
     if( IS_NPC(ch) )
     {
       fhits = dam * dam_factor[DF_NPCVAMP];
@@ -5585,7 +5590,6 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
   P_char   tch, orig;
   int i, nr, max_hit, diff, room, new_stat, act_flag, soulWasTrapped = 0;
   int group_size = num_group_members_in_room(victim);
-  double   loss;
   float mod, hpperc, zerkmod;
 
   if( !ch )
@@ -5764,9 +5768,6 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
 
     }
 
-    loss = MIN(dam, (10 + GET_HIT(victim)) * 4);
-    damage_dealt = (int) dam;
-
     if( !(flags & PHSDAM_NOREDUCE) )
     {
       dam = ((int) dam) >> 1;
@@ -5835,23 +5836,32 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
       }
     }
 
+
     if(!IS_TRUSTED(victim))
     {
+      damage_dealt = (int) dam;
       if(flags & RAWDAM_NOKILL)
       {
-        if(GET_HIT(victim) > 1)
+        if(GET_HIT(victim) > 1 )
         {
-          GET_HIT(victim) = MAX(1, GET_HIT(victim) - (int) dam);
+          if( GET_HIT(victim) - damage_dealt < 1 )
+          {
+            damage_dealt = GET_HIT(victim) - 1;
+          }
+        }
+        else
+        {
+          damage_dealt = 0;
         }
       }
-      else
+      else if( GET_HIT(victim) - damage_dealt < -11 )
       {
-        GET_HIT(victim) -= (int) dam;
+        damage_dealt = GET_HIT(victim) + 11;
       }
+      GET_HIT(victim) -= damage_dealt;
     }
 
-    if( IS_PC(victim) && victim->desc
-      && (IS_SET(victim->specials.act, PLR_SMARTPROMPT)
+    if( IS_PC(victim) && victim->desc && (IS_SET(victim->specials.act, PLR_SMARTPROMPT)
       || IS_SET(victim->specials.act, PLR_OLDSMARTP)) )
     {
       victim->desc->prompt_mode = TRUE;
@@ -6002,7 +6012,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
 
     if( ch != victim )
     {
-      check_vamp(ch, victim, loss, flags);
+      check_vamp(ch, victim, damage_dealt, flags);
     }
 
     if( victim && IS_DISGUISE(victim) )
@@ -6798,8 +6808,7 @@ int required_weapon_skill(P_obj wpn)
 bool hit(P_char ch, P_char victim, P_obj weapon)
 {
   P_char   tch, mount, gvict;
-  int      msg, victim_ac, to_hit, diceroll, wpn_skill, sic, tmp,
-           wpn_skill_num;
+  int      msg, victim_ac, to_hit, diceroll, wpn_skill, sic, tmp, wpn_skill_num;
   double   dam;
   int      room, pos;
   int      vs_skill = GET_CHAR_SKILL(ch, SKILL_VICIOUS_STRIKE);
@@ -7175,8 +7184,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
 
   if (sic == -1)
   {
-    if( GET_SPEC(victim, CLASS_BERSERKER, SPEC_RAGELORD)
-      && IS_AFFECTED2(victim, AFF2_FLURRY) )
+    if( GET_SPEC(victim, CLASS_BERSERKER, SPEC_RAGELORD) && IS_AFFECTED2(victim, AFF2_FLURRY) )
     {
       send_to_char("&+rYour RaGe overwhelms you, making you blind to the enemies battering assaults.\n", victim);
       sic = 0;
@@ -7185,8 +7193,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
 
   if (sic == -1)
   {
-    if( GET_CHAR_SKILL(victim, SKILL_INDOMITABLE_RAGE) > number(50, 160)
-      && affected_by_spell(victim, SKILL_BERSERK) )
+    if( GET_CHAR_SKILL(victim, SKILL_INDOMITABLE_RAGE) > number(50, 160) && affected_by_spell(victim, SKILL_BERSERK) )
     {
       act("$n&+W's critical hit sends you into a &+rpure &+Rberserk &+rtrance! &+RROARRRRRRR!&n\n", TRUE, ch, 0, victim, TO_VICT);
       act("$N lets out a fearsome &+RROAR&n!\n", TRUE, ch, 0, victim, TO_CHAR);
@@ -7217,7 +7224,6 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
     make_bloodstain(ch);
 
   }
-
   else if( sic == -1 && (!GET_CLASS(ch, CLASS_MONK) || GET_LEVEL(ch) <= 50) )
   {
     send_to_char("&=LWYou score a CRITICAL HIT!!!!!&N\r\n", ch);
@@ -7239,11 +7245,8 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
     return FALSE;
   }
 
-  if(GET_CHAR_SKILL(ch, SKILL_VICIOUS_ATTACK) > 0 &&
-      !affected_by_spell(ch, SKILL_WHIRLWIND) &&
-      !vicious_hit &&
-      GET_POS(ch) == POS_STANDING &&
-      GET_RACE(victim) != RACE_CONSTRUCT )
+  if( GET_CHAR_SKILL(ch, SKILL_VICIOUS_ATTACK) > 0 && !affected_by_spell(ch, SKILL_WHIRLWIND)
+    && !vicious_hit && GET_POS(ch) == POS_STANDING && GET_RACE(victim) != RACE_CONSTRUCT )
   {
     if( notch_skill(ch, SKILL_VICIOUS_ATTACK, get_property("skill.notch.offensive.auto", 4))
       || 0.1 * GET_CHAR_SKILL(ch, SKILL_VICIOUS_ATTACK) > number(0, 100) )
@@ -7322,8 +7325,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   }
 
   // What's this diceroll < level-40 ?  Monks get additional crits?
-  if( GET_CLASS(ch, CLASS_MONK) && GET_LEVEL(ch) > 30
-    && (sic == -1 || diceroll < GET_LEVEL(ch) - 40) )
+  if( GET_CLASS(ch, CLASS_MONK) && GET_LEVEL(ch) > 30 && (sic == -1 || diceroll < GET_LEVEL(ch) - 40) )
   {
     if(sic != -1)
     {
@@ -7462,8 +7464,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
    *  elite mobs. Apr09 -Lucrot
    */
   // 5% for elite mobs.
-  else if( IS_NPC(ch) && IS_ELITE(ch)
-    && get_property("skill.anatomy.NPC", 5.000) <= number(1, 100)
+  else if( IS_NPC(ch) && IS_ELITE(ch) && get_property("skill.anatomy.NPC", 5.000) <= number(1, 100)
     && IS_HUMANOID(victim) && IS_HUMANOID(ch) )
   {
     dam = anatomy_strike(ch, victim, msg, &messages, (int) dam);

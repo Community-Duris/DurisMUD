@@ -65,7 +65,8 @@
 #define DF_TIGERPALM            49
 #define DF_DAMROLL_MOD          50
 #define DF_MELEEMASTERY         51
-#define LAST_DF                 51
+#define DF_DRACOLICHVAMP        52
+#define LAST_DF                 52
 
 #define SPLDAM_GENERIC   1
 #define SPLDAM_FIRE      2
