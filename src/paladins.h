@@ -1,8 +1,7 @@
 #ifndef __PALADINS_H__
 #define __PALADINS_H__
 
-#define IS_PALADIN_SWORD(obj) ( obj && ( obj->value[0] == WEAPON_2HANDSWORD || \
-                                         (obj->value[0] == WEAPON_LONGSWORD && IS_SET(obj->extra_flags, ITEM_TWOHANDS) ) ) )
+#define IS_PALADIN_SWORD(obj) ( obj && (IS_SET(obj->extra_flags, ITEM_TWOHANDS || obj->value[0] == WEAPON_2HANDSWORD)) )
 
 void event_apply_group_auras(P_char ch, P_char victim, P_obj obj, void *data);
 void do_aura(P_char, int);
