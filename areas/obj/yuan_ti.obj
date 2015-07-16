@@ -293,7 +293,7 @@ A
 A
 4 9
 #80516
-flask potion~
+flask potion glowing clear glass~
 &+Wa glowing flask&N~
 &+WA clear glass flask with a glowing liquid rests here.&N~
 ~
@@ -301,7 +301,7 @@ flask potion~
 50 2 28 -1 0 0 0 0
 1 45000 100
 E
-flask potion~
+flask potion glowing clear glass~
    The thick fluid inside the flask swirls back and forth, glowing with a
 strange magical light
 ~
