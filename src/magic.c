@@ -5478,8 +5478,7 @@ void spell_aid(int level, P_char ch, char *arg, int type, P_char victim,
   }
 }
 
-void spell_bless(int level, P_char ch, char *arg, int type, P_char victim,
-                 P_obj obj)
+void spell_bless(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   struct affected_type af;
 
@@ -5491,10 +5490,10 @@ void spell_bless(int level, P_char ch, char *arg, int type, P_char victim,
       set_obj_affected_extra(obj, -1, SPELL_BLESS, 50, ITEM2_BLESS);
       if (obj->type == ITEM_DRINKCON)
       {
-	if (RACE_GOOD(ch))
-	  obj->value[2] = LIQ_HOLYWATER;
-	else if (RACE_EVIL(ch))
-	  obj->value[2] = LIQ_UNHOLYWAT;
+        if (RACE_GOOD(ch))
+          obj->value[2] = LIQ_HOLYWATER;
+        else if (RACE_EVIL(ch))
+          obj->value[2] = LIQ_UNHOLYWAT;
       }
     }
   }

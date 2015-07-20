@@ -133,12 +133,9 @@ int pick_best_skin_spell(P_char ch, P_char target)
      knows_spell(ch, SPELL_SHADOW_SHIELD) &&
      ch == target)
         spl = SPELL_SHADOW_SHIELD;
-  else if
-    (!affected_by_spell(ch, SPELL_IRONWOOD) &&
-     knows_spell(ch, SPELL_IRONWOOD) &&
-     affected_by_spell(ch, SPELL_BARKSKIN) &&
-     ch == target)
-        spl = SPELL_IRONWOOD;
+  else if( !affected_by_spell(ch, SPELL_IRONWOOD) && knows_spell(ch, SPELL_IRONWOOD)
+    && IS_AFFECTED(ch, AFF_BARKSKIN) && ch == target )
+    spl = SPELL_IRONWOOD;
 
   return spl;
 }
@@ -898,10 +895,8 @@ bool CastIllusionistSpell(P_char ch, P_char victim, int helping)
     (!number(0, 3) || !IS_FIGHTING(ch)))
       spl = pick_best_skin_spell(ch, target);
 
-  if(!spl && npc_has_spell_slot(ch, SPELL_PHANTOM_ARMOR)
-      && (target == ch)
-      && !affected_by_spell(target, SPELL_PHANTOM_ARMOR)
-      && (!IS_FIGHTING(ch)))
+  if( !spl && npc_has_spell_slot(ch, SPELL_PHANTOM_ARMOR) && (target == ch)
+    && !IS_AFFECTED(target, AFF_ARMOR) && (!IS_FIGHTING(ch)) )
     spl = SPELL_PHANTOM_ARMOR;
 
 
@@ -2219,14 +2214,12 @@ bool CastRangerSpell(P_char ch, P_char victim, int helping)
 
   if(!IS_FIGHTING(ch))
   {
-    if(!spl &&
-       !affected_by_spell(target, SPELL_BARKSKIN) &&
-       npc_has_spell_slot(ch, SPELL_BARKSKIN) &&
-       GET_RACE(target) != RACE_ANIMAL)
+    if( !spl && !IS_AFFECTED(target, AFF_BARKSKIN) && npc_has_spell_slot(ch, SPELL_BARKSKIN)
+      && GET_RACE(target) != RACE_ANIMAL )
     {
       spl = SPELL_BARKSKIN;
     }
-    
+
     if(!spl && !affected_by_spell(target, SPELL_BLESS) &&
         npc_has_spell_slot(ch, SPELL_BLESS) &&
         GET_RACE(target) != RACE_ANIMAL)
@@ -2619,10 +2612,8 @@ bool CastDruidSpell(P_char ch, P_char victim, int helping)
   {
     if(npc_has_spell_slot(ch, SPELL_NATURES_TOUCH) && (dam > 90))
       spl = SPELL_NATURES_TOUCH;
-    else
-      if(!affected_by_spell(target, SPELL_BARKSKIN) &&
-         npc_has_spell_slot(ch, SPELL_BARKSKIN) &&
-         GET_RACE(target) != RACE_ANIMAL)
+    else if( !IS_AFFECTED(target, AFF_BARKSKIN) && npc_has_spell_slot(ch, SPELL_BARKSKIN)
+      && GET_RACE(target) != RACE_ANIMAL )
       spl = SPELL_BARKSKIN;
   }
 
@@ -2638,8 +2629,7 @@ bool CastDruidSpell(P_char ch, P_char victim, int helping)
 
   if(!spl && (!IS_FIGHTING(ch) || (number(1, 5) == 3)))
   {
-    if(!affected_by_spell(target, SPELL_IRONWOOD) && affected_by_spell(target, SPELL_BARKSKIN) &&
-          !has_skin_spell(target) && npc_has_spell_slot(ch, SPELL_IRONWOOD))
+    if( IS_AFFECTED(target, AFF_BARKSKIN) && !has_skin_spell(target) && npc_has_spell_slot(ch, SPELL_IRONWOOD) )
       spl = SPELL_IRONWOOD;
     else
       if(!affected_by_spell(ch, SPELL_STORMSHIELD) && ch->equipment[WEAR_SHIELD] &&
@@ -2922,7 +2912,7 @@ bool CastShamanSpell(P_char ch, P_char victim, int helping)
     {
       spl = SPELL_SPIRIT_WARD;
     }
-    else if( !affected_by_spell(target, SPELL_SPIRIT_ARMOR) && npc_has_spell_slot(ch, SPELL_SPIRIT_ARMOR) )
+    else if( !IS_AFFECTED(target, AFF_ARMOR) && npc_has_spell_slot(ch, SPELL_SPIRIT_ARMOR) )
     {
       spl = SPELL_SPIRIT_ARMOR;
     }
@@ -3409,7 +3399,7 @@ bool CastEtherSpell(P_char ch, P_char victim, int helping)
 
     }
 
-    if(!spl && !affected_by_spell(target, SPELL_VAPOR_ARMOR) &&
+    if(!spl && !IS_AFFECTED(target, AFF_ARMOR) &&
         npc_has_spell_slot(ch, SPELL_VAPOR_ARMOR))
       spl = SPELL_VAPOR_ARMOR;
 
@@ -3740,14 +3730,11 @@ bool CastClericSpell(P_char ch, P_char victim, int helping)
 
   if(!spl && (!IS_FIGHTING(ch) || (number(0, 4) == 2)))
   {
-    if(!affected_by_spell(target, SPELL_ARMOR) &&
-        npc_has_spell_slot(ch, SPELL_ARMOR) &&
-        GET_RACE(target) != RACE_ANIMAL)
+    if( !IS_AFFECTED(target, AFF_ARMOR) && npc_has_spell_slot(ch, SPELL_ARMOR)
+      && GET_RACE(target) != RACE_ANIMAL )
       spl = SPELL_ARMOR;
-    else
-      if(!affected_by_spell(target, SPELL_BLESS) &&
-          npc_has_spell_slot(ch, SPELL_BLESS) &&
-          GET_RACE(target) != RACE_ANIMAL)
+    else if( !affected_by_spell(target, SPELL_BLESS) && npc_has_spell_slot(ch, SPELL_BLESS)
+      && GET_RACE(target) != RACE_ANIMAL)
       spl = SPELL_BLESS;
   }
 
@@ -3764,24 +3751,23 @@ bool CastClericSpell(P_char ch, P_char victim, int helping)
     if(!spl && !IS_AFFECTED4(ch, AFF4_SANCTUARY) &&
         npc_has_spell_slot(ch, SPELL_LESSER_SANCTUARY) && (ch == target))
       spl = SPELL_LESSER_SANCTUARY;
-      
+
     if(GET_RACE(target) != RACE_ANIMAL)
     {
-
       if(!spl &&
          !IS_AFFECTED(target, AFF_PROT_FIRE) &&
          npc_has_spell_slot(ch, SPELL_PROTECT_FROM_FIRE))
       {
         spl = SPELL_PROTECT_FROM_FIRE;
       }
-      
+
       if(!spl &&
          !IS_AFFECTED2(target, AFF2_PROT_COLD) &&
          npc_has_spell_slot(ch, SPELL_PROTECT_FROM_COLD))
       {
         spl = SPELL_PROTECT_FROM_COLD;
       }
-      
+
       if(!spl &&
          npc_has_spell_slot(ch, SPELL_PROTECT_FROM_EVIL))
       {
@@ -4219,14 +4205,12 @@ bool CastPaladinSpell(P_char ch, P_char victim, int helping)
 
   if(!IS_FIGHTING(ch) || (number(0, 4) == 2))
   {
-    if(!spl &&
-      !affected_by_spell(target, SPELL_ARMOR) &&
-      npc_has_spell_slot(ch, SPELL_ARMOR) &&
-      GET_RACE(target) != RACE_ANIMAL)
+    if(!spl && !IS_AFFECTED(target, AFF_ARMOR) && npc_has_spell_slot(ch, SPELL_ARMOR)
+      && GET_RACE(target) != RACE_ANIMAL)
     {
       spl = SPELL_ARMOR;
     }
-    
+
     if(!spl &&
        !affected_by_spell(target, SPELL_BLESS) &&
        npc_has_spell_slot(ch, SPELL_BLESS) &&
@@ -4470,10 +4454,8 @@ bool CastAntiPaladinSpell(P_char ch, P_char victim, int helping)
   
   if(!IS_FIGHTING(ch) || (number(0, 4) == 2))
   {
-    if(!spl &&
-       !affected_by_spell(target, SPELL_ARMOR) &&
-       npc_has_spell_slot(ch, SPELL_ARMOR) &&
-       GET_RACE(target) != RACE_ANIMAL)
+    if( !spl && !IS_AFFECTED(target, AFF_ARMOR) && npc_has_spell_slot(ch, SPELL_ARMOR)
+      && GET_RACE(target) != RACE_ANIMAL )
     {
       spl = SPELL_ARMOR;
     }
@@ -4727,10 +4709,8 @@ bool WillPsionicistSpell(P_char ch, P_char victim)
      knows_spell(ch, SPELL_ENERGY_CONTAINMENT))
         spl = SPELL_ENERGY_CONTAINMENT;
 
-  if(!spl &&
-     !affected_by_spell(ch, SPELL_FLESH_ARMOR) &&
-     knows_spell(ch, SPELL_FLESH_ARMOR) &&
-     (!IS_FIGHTING(ch) || (number(0, 4) == 2)))
+  if( !spl && !IS_AFFECTED(ch, AFF_ARMOR) && knows_spell(ch, SPELL_FLESH_ARMOR)
+    && (!IS_FIGHTING(ch) || (number(0, 4) == 2)) )
         spl = SPELL_FLESH_ARMOR;
 
   if(!IS_FIGHTING(ch) || (number(0, 3) == 2))
@@ -10858,7 +10838,7 @@ bool CastBlighterSpell(P_char ch, P_char victim, bool helping)
     {
       spl = SPELL_DRAIN_NATURE;
     }
-    else if( !affected_by_spell(target, SPELL_THORNSKIN)
+    else if( !IS_AFFECTED(target, AFF_ARMOR)
       && npc_has_spell_slot(ch, SPELL_THORNSKIN) )
     {
       spl = SPELL_THORNSKIN;

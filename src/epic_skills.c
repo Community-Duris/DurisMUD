@@ -685,7 +685,7 @@ bool epic_summon(P_char ch, char *arg)
 
 int epic_familiar(P_char ch, P_char pl, int cmd, char *arg)
 {
-  if(!ch)
+  if( !IS_ALIVE(ch) )
     return FALSE;
 
   if(cmd == CMD_SET_PERIODIC)
@@ -705,13 +705,16 @@ int epic_familiar(P_char ch, P_char pl, int cmd, char *arg)
     act("$n notices your maneuver and dives towards your head to protect $s master!",
         FALSE, ch, 0, pl, TO_VICT);
 
-    if(GET_C_AGI(pl) < number(0,150) && !number(0,2)) {
+    if(GET_C_AGI(pl) < number(0,150) && !number(0,2))
+    {
       act("$n's unexpected attack caused you to get lost in your tracks..",
           FALSE, ch, 0, pl, TO_VICT);
       act("$n's vicious assault disturbed $N's move.", FALSE, ch, 0, pl, TO_NOTVICT);
       CharWait(pl, PULSE_VIOLENCE);
       return TRUE;
-    } else {
+    }
+    else
+    {
       act("You easily evade $n's attack.", FALSE, ch, 0, pl, TO_VICT);
       return FALSE;
     }
