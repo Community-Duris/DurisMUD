@@ -5356,7 +5356,7 @@ char *get_player_name_from_pid(int pid)
   if (!pid)
     return NULL;
 
-  if (!qry("SELECT name FROM players_core WHERE pid = '%d'", pid))
+  if (!qry("SELECT name FROM players_core WHERE pid = '%d' AND active=1", pid))
   {
     debug("get_player_name_from_pid(): cant read from db");
     return NULL;

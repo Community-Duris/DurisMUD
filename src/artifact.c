@@ -74,6 +74,7 @@ void list_artifacts_sql( P_char ch, int type, bool Godlist, bool allArtis );
 void arti_clear_sql( P_char ch, char *arg );
 void arti_files_to_sql( P_char ch, char *arg );
 void arti_hunt_sql( P_char ch, char *arg );
+void arti_player_sql( P_char ch, char *arg );
 void arti_poof_sql( P_char ch, char *arg );
 void arti_remove_sql( int vnum, bool mortalToo );
 void arti_reset_sql( P_char ch, char *arg );
@@ -165,6 +166,12 @@ void do_artifact_sql( P_char ch, char *arg, int cmd )
   }
 
   // At this point, arg holds all the arguments but arg1.
+  if( is_abbrev(arg1, "player") )
+  {
+    arti_player_sql( ch, arg );
+    return;
+  }
+
   if( is_abbrev(arg1, "poof") )
   {
     arti_poof_sql( ch, arg );
@@ -3426,4 +3433,122 @@ void addOnMobArtis_sql()
   }
 
   logit( LOG_ARTIFACT, "addOnMobArtis_sql: Ending." );
+}
+
+void arti_player_sql( P_char ch, char *arg )
+{
+  char  buf[MAX_STRING_LENGTH], locationBuf[MAX_STRING_LENGTH], timeBuf[128], *name;
+  int   pid, vnum, locType, minutes, hours;
+  long  totalTime;
+  bool  shownData, negTime;
+  P_obj arti;
+  MYSQL_RES *res;
+  MYSQL_ROW  row;
+
+  if( (pid = atoi(arg)) < 1 )
+  {
+    if( (pid = get_player_pid_from_name(arg)) < 1 )
+    {
+      send_to_char( "The '&+wartifact player&n' command requires a valid player name or pid.\n\r", ch );
+      return;
+    }
+  }
+  if( (name = get_player_name_from_pid(pid)) == NULL )
+  {
+    sprintf( buf, "'%s' was not found to be a valid player name or pid.\n", arg );
+    send_to_char( buf, ch );
+    return;
+  }
+
+  sprintf(buf, "&+YOwner                  Time      Last Update           Artifact\r\n\r\n" );
+  send_to_char( buf, ch );
+
+  // locType is an enum type, so to get the values not the names, we want locType+0.
+  if( !qry("SELECT vnum, locType+0, location, owned, UNIX_TIMESTAMP(timer), lastUpdate FROM artifacts WHERE location=%d", pid) )
+  {
+    send_to_char( "&+RError with query attempt.  Aborting...\n", ch );
+    return;
+  }
+
+  if( !(res = mysql_store_result(DB)) )
+  {
+    send_to_char( "&+RError storing query result.  Aborting...\n", ch );
+    return;
+  }
+
+  if( mysql_num_rows(res) < 1 )
+  {
+    mysql_free_result(res);
+    send_to_char( "No artifacts found.\n\r", ch );
+    return;
+  }
+
+  shownData = FALSE;
+  while( (row = mysql_fetch_row(res)) )
+  {
+    vnum    = atoi(row[0]);
+    locType = atoi(row[1]);
+
+    // In case there's on in the room with vnum == pid or such.
+    if( locType != ARTIFACT_ON_PC && locType != ARTIFACT_ONCORPSE )
+    {
+      continue;
+    }
+
+    // Tryin' load a copy of the arti for display purposes.
+    arti = read_object( vnum, VIRTUAL );
+    if( !arti || !IS_ARTIFACT(arti) )
+    {
+      debug("list_artifacts_sql: Non artifact on arti list: '%s' %d.", (arti == NULL) ? "NULL" : arti->short_description, vnum );
+      // Pull arti if it loaded.
+      if( arti )
+      {
+        extract_obj( arti );
+      }
+      continue;
+    }
+
+    if( locType == ARTIFACT_ON_PC )
+    {
+      sprintf(locationBuf, "%-21s", name);
+    }
+    else if( locType == ARTIFACT_ONCORPSE )
+    {
+      sprintf( buf, "%s's corpse", name );
+      sprintf( locationBuf, "%-21s", buf );
+    }
+    else
+    {
+      sprintf(buf, "&+RError reading query result.  Skipping... '%s' %d.\n", OBJ_SHORT(arti), GET_OBJ_VNUM(arti) );
+      send_to_char( buf, ch );
+      extract_obj( arti );
+      continue;
+    }
+
+    negTime = FALSE;
+    // totalTime (left to poof in sec) is the timer (time at which it poofs) - now.
+    if( atol(row[4]) == 0 )
+    {
+      totalTime = 0;
+    }
+    if( (totalTime = atol(row[4]) - time(NULL)) < 0 )
+    {
+      negTime = TRUE;
+      totalTime *= -1;
+    }
+    // Convert to minutes.
+    totalTime /= 60;
+    minutes = totalTime % 60;
+    // Convert to hours.
+    totalTime /= 60;
+    hours = totalTime % 24;
+
+    sprintf( timeBuf, "%c%2ld:%02d:%02d", negTime ? '-' : ' ', totalTime / 24, hours, minutes );
+
+    sprintf(buf, "%s&n%-11s %-22s%s (#%d)\r\n", locationBuf, timeBuf, row[5], OBJ_SHORT(arti), vnum );
+    send_to_char( buf, ch );
+    shownData = TRUE;
+    extract_obj( arti, FALSE );
+  }
+  mysql_free_result(res);
 }
