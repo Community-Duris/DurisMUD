@@ -6202,10 +6202,10 @@ int calculate_ac(P_char ch)
     victim_ac = ((float)victim_ac * dam_factor[DF_NEG_AC_MULT]);
   }
 
-  if( GET_AC(ch) < 1 && load_modifier(ch) > 50 )
-  {
-    victim_ac += load_modifier(ch) / 2;
-  }
+  // This is strange since load_modifier ranges from 75-300.
+//  if( GET_AC(ch) < 1 && load_modifier(ch) > 50 )
+  // This ranges from 0 to 225, much more reasonable.
+  victim_ac += load_modifier(ch) - 75;
 
   if(GET_CLASS(ch, CLASS_MONK))
   {

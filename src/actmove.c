@@ -78,16 +78,15 @@ int is_ice(P_char ch, int room)
 
 int load_modifier(P_char ch)
 {
-  int      p;
+  int p;
 
-  if( IS_TRUSTED(ch))
-    return 100;
-  if( CAN_CARRY_W(ch) <= 0)
+  if( IS_TRUSTED(ch) )
+    return 75;
+  if( CAN_CARRY_W(ch) <= 0 )
     return 300;
-  p =
-    100 - MAX(0,
-              ((CAN_CARRY_W(ch) -
-                IS_CARRYING_W(ch)) * 100) / CAN_CARRY_W(ch));
+
+  p = 100 - MAX(0, ((CAN_CARRY_W(ch) - IS_CARRYING_W(ch)) * 100) / CAN_CARRY_W(ch));
+
   if( p < 10)
     return 75;
   if( p < 20)
