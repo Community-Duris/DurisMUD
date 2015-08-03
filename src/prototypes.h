@@ -772,7 +772,6 @@ int real_object(const int);
 int real_object0(const int);
 int real_room(const int);
 int real_room0(const int);
-int writeCharacter(P_char, int, int);
 int writePet(P_char);
 int writeShopKeeper(P_char);
 void MemReport(void);
@@ -960,6 +959,8 @@ bool can_hit_target(P_char , P_char);
 
 /* files.c */
 
+void moveToBackup(char *name);
+int writeCharacter(P_char, int, int);
 void restore_houses();
 void writeShapechangeData(P_char ch);
 int writeWitness(char *, wtns_rec *);

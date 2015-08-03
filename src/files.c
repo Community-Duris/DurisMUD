@@ -6455,5 +6455,18 @@ int register_ship(int vnum)
   ship_reg_db = x;
   return TRUE;
 };
-
 #endif //_PFILE_
+
+void moveToBackup( char *name )
+{
+  char lowername[20];
+  char filename[512];
+  char command[1024];
+
+  strcpy( lowername, name );
+  lowername[0] = LOWER(name[0]);
+
+  sprintf( filename, "%s/%c/%s", SAVE_DIR, lowername[0], lowername );
+  sprintf( command, "mv -f %s %s.bak", filename, filename );
+  system( command );
+}

@@ -1713,13 +1713,14 @@ bool rename_character(P_char ch, char *old_name, char *new_name)
     {
        deny_name(GET_NAME(doofus));
     }
-    /* remove old char file, ups... no backup? */
-    deleteCharacter(doofus, false);
+
+    moveToBackup(GET_NAME(doofus));
 
     /* put new name and save char file */
     CAP(new_name);
     GET_NAME(doofus) = str_dup(new_name);
-    // Imperative that arti list is updated here (Otherwise, crasssh).
+    // Need to update the core stuff here.
+    sql_save_player_core(doofus);
     writeCharacter(doofus, 1, doofus->in_room);
 
 #ifdef USE_ACCOUNT
