@@ -2291,7 +2291,7 @@ void cast_vines(int level, P_char ch, char *arg, int type, P_char tar_ch, P_obj 
 
     for( i = 0; i < count; i++ )
     {
-      extract_obj(used_obj[count], TRUE); // Just herb ingred, but 'in game.'
+      extract_obj(used_obj[i], TRUE); // Just herb ingred, but 'in game.'
     }
   }
   else
