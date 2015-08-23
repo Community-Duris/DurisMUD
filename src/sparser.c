@@ -2848,13 +2848,34 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
   }
   ((*skills[arg->spell].spell_pointer) ((int) GET_LEVEL(ch), ch, args, SPELL_TYPE_SPELL, tar_char, tar_obj));
 
-  // Devotion double cast check..
-  int dev_power;
-  if( IS_AGG_SPELL(arg->spell) && is_char_in_room(tar_char, room)
-    && is_char_in_room(ch, room) && devotion_spell_check(arg->spell)
-    && (dev_power = devotion_skill_check(ch)) > 0 )
+  if( !IS_ALIVE(ch) )
   {
-    ((*skills[arg->spell].spell_pointer) (dev_power, ch, args, SPELL_TYPE_SPELL, tar_char, tar_obj));
+    return;
+  }
+
+  if( IS_AGG_SPELL(arg->spell) && is_char_in_room(tar_char, room) && is_char_in_room(ch, room) )
+  {
+    // Devotion double cast check..
+    int dev_power;
+    if( devotion_spell_check(arg->spell) && (dev_power = devotion_skill_check(ch)) > 0 )
+    {
+      ((*skills[arg->spell].spell_pointer) (dev_power, ch, args, SPELL_TYPE_SPELL, tar_char, tar_obj));
+      if( !IS_ALIVE(ch) )
+      {
+        return;
+      }
+    }
+
+    // FALSE -> proc from non-physical.
+    if( IS_ALIVE(tar_char) && affected_by_spell(ch, ACH_YOUSTRAHDME) && IS_UNDEADRACE(tar_char)
+      && lightbringer_proc(ch, tar_char, FALSE) )
+    {
+      // If the proc killed someone, check if it was ch.
+      if( !IS_ALIVE(ch) )
+      {
+        return;
+      }
+    }
   }
 
   /*

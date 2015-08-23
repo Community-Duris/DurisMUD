@@ -8,6 +8,7 @@
 #include "utils.h"
 #include "spells.h"
 #include "ships/ships.h"
+#include "vnum.mob.h"
 
 extern P_index mob_index;
 extern int pulse;
@@ -216,12 +217,12 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
   if ((ach == 3) && !affected_by_spell(ch, AIP_DECEPTICON) && !affected_by_spell(ch, ACH_DECEPTICON))
     apply_achievement(ch, AIP_DECEPTICON);
 
-  if(ach ==2)
+  if( ach == 2 && IS_NPC(victim) && (GET_VNUM(victim) == VMOB_STRAHD_ACH_DORU) )
   {
-    if(!IS_PC(victim))
+    if( !affected_by_spell(ch, AIP_YOUSTRAHDME) && !affected_by_spell(ch, AIP_YOUSTRAHDME2)
+      && !affected_by_spell(ch, ACH_YOUSTRAHDME) )
     {
-      if ((ach == 2) && (GET_VNUM(victim) == 91031) && !affected_by_spell(ch, AIP_YOUSTRAHDME2) && !affected_by_spell(ch, AIP_YOUSTRAHDME))
-        apply_achievement(ch, AIP_YOUSTRAHDME);
+      apply_achievement(ch, AIP_YOUSTRAHDME);
     }
   }
 
@@ -389,34 +390,23 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
     }
     /* end Dragonslayer */
 
-    /* You Strahd Me2
-       doru = 91031
-       cher = 58835
-       strahd = 58383
-       */
-    if((findaf && findaf->type == AIP_YOUSTRAHDME) && IS_ALIVE(victim) && !IS_PC(victim) && !affected_by_spell(ch, AIP_YOUSTRAHDME2) && (ach == 2) && (GET_VNUM(victim) == 58835) )
+    // You Strahd Me2
+    if( (findaf && findaf->type == AIP_YOUSTRAHDME) && (ach == 2)
+      && IS_NPC(victim) && (GET_VNUM(victim) == VMOB_STRAHD_ACH_CHERNOVOG) )
     {
-      affect_remove(ch, findaf);
-      apply_achievement(ch, AIP_YOUSTRAHDME2);
+      findaf->type = AIP_YOUSTRAHDME2;
     }
-    /* end You Strahd Me2 */
 
-    /* You Strahd Me3 
-       doru = 91031
-       cher = 58835
-       strahd = 58383
-       */
-    if((findaf && findaf->type == AIP_YOUSTRAHDME2) && IS_ALIVE(victim) && !IS_PC(victim) && !affected_by_spell(ch, ACH_YOUSTRAHDME) && (ach == 2) && (GET_VNUM(victim) == 58383) )
+    // You Strahd Me - Finish
+    if( (findaf && findaf->type == AIP_YOUSTRAHDME2) && (ach == 2)
+      && IS_NPC(victim) && (GET_VNUM(victim) == VMOB_STRAHD_ACH_STRAHD) )
     {
-      affect_remove(ch, findaf);
-      apply_achievement(ch, ACH_YOUSTRAHDME);
+      findaf->type = ACH_YOUSTRAHDME;
       send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RYou Strahd Me At Hello&+r achievement!&n\r\n", ch);
       send_to_char("&+yPlease see &+chelp you strahd me &+yfor reward details!&n\r\n", ch);
       gain_epic(ch, EPIC_STRAHDME, 0, 1000 );
     }
-    /* end You Strahd Me2 */
   }
-
 }
 
 affected_type *apply_achievement(P_char ch, int ach)

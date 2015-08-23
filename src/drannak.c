@@ -52,6 +52,7 @@ extern P_index mob_index;
 extern P_index obj_index;
 extern P_obj object_list;
 extern P_room world;
+extern const int top_of_world;
 extern char debug_mode;
 extern const char *race_types[];
 
@@ -429,58 +430,62 @@ int pvp_store(P_char ch, P_char pl, int cmd, char *arg)
   return FALSE;
 }
 
-bool lightbringer_weapon_proc(P_char ch, P_char victim)
+// Proc for weapon or spell - Lightbringer from "You Strahd Me" achievement.
+// Returns TRUE iff ch or victim or both are not in ch's room or dead.
+bool lightbringer_proc(P_char ch, P_char victim, bool phys)
 {
-  int num, room = ch->in_room, save, pos;
-  P_obj wpn;
+  int room = ch->in_room;
 
-  typedef void (*spell_func_type) (int, P_char, char *, int, P_char, P_obj);
-  spell_func_type spells[5] = {
+  spell_func spells[5] = {
     spell_bigbys_crushing_hand,
     spell_bigbys_clenched_fist,
     spell_disintegrate,
     spell_destroy_undead,
     spell_flamestrike
   };
-  spell_func_type spell_func;
 
-  if (!IS_FIGHTING(ch) ||
-      !(victim = ch->specials.fighting) ||
-      !IS_ALIVE(victim) ||
-      !(room) ||
-      number(0, 15)) // 3%
-    return false;
-
-  P_char vict = victim;
-
-  for (wpn = NULL, pos = 0; pos < MAX_WEAR; pos++)
+  // If not both are alive and ready to proc..
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) || room < 0 || room > top_of_world
+    || room != victim->in_room )
   {
-    if((wpn = ch->equipment[pos]) &&
-        wpn->type == ITEM_WEAPON &&
-        CAN_SEE_OBJ(ch, wpn))
-      break;
+    return TRUE;
+  }
+  // Chance to proc - 3% from a hit, 6.25% from a spell that's cast (can not proc off of self).
+  if( phys )
+  {
+    if( number(0, 32) ) // 3%
+      return FALSE;
+  }
+  else
+  {
+    if( number(0, 14) ) // 6.67%
+      return FALSE;
   }
 
-  if(wpn == NULL)
-    return false;
+  if( phys )
+  {
+    act("&+LAs you strike your &+rfoe&+L, the power of the &+WLight&+wbri&+Lngers fill you with &+wundead &+Lpurging &+Ymight&+L!&n",
+      TRUE, ch, NULL, victim, TO_CHAR);
+    act("&+LAs $n strikes their &+rfoe&+L, the power of the &+WLight&+wbri&+Lngers fill them with &+wundead &+Lpurging &+Ymight&+L!&n",
+      TRUE, ch, NULL, victim, TO_NOTVICT);
+  }
+  else
+  {
+    act("&+LAs your spell contacts your &+rfoe&+L, the power of the &+WLight&+wbri&+Lngers fill you with &+wundead &+Lpurging &+Ymight&+L!&n",
+      TRUE, ch, NULL, victim, TO_CHAR);
+    act("&+LAs $n's spell contacts their &+rfoe&+L, the power of the &+WLight&+wbri&+Lngers fill them with &+wundead &+Lpurging &+Ymight&+L!&n",
+      TRUE, ch, NULL, victim, TO_NOTVICT);
+  }
 
+  // Nuke with a random nuke.
+  (spells[number(0, 4)])(number(1, GET_LEVEL(ch)), ch, 0, 0, victim, 0);
 
-
-  act("&+LAs you strike your &+rfoe&+L, the power of the &+WLight&+wbri&+Lngers fill you with &+wundead &+Lpurging &+Ymight&+L!&n",
-      TRUE, ch, wpn, vict, TO_CHAR);
-  act("&+LAs $n strikes their &+rfoe&+L, the power of the &+WLight&+wbri&+Lngers fill them with &+wundead &+Lpurging &+Ymight&+L!&n",
-      TRUE, ch, wpn, vict, TO_NOTVICT);
-
-
-  num = number(0, 4);
-
-  spell_func = spells[num];
-
-  spell_func(number(1, GET_LEVEL(ch)), ch, 0, 0, victim, 0);
-  /*
-     return !is_char_in_room(ch, room) || !is_char_in_room(victim, room);
-     victim->specials.apply_saving_throw[SAVING_SPELL] = save;
-     */
+  // If both are alive and haven't moved rooms.
+  if( IS_ALIVE(ch) && IS_ALIVE(victim) && ch->in_room == room && victim->in_room == room )
+  {
+    return FALSE;
+  }
+  return TRUE;
 }
 
 // The 'merc' is the mercenary being hit on by the 'hitter'.

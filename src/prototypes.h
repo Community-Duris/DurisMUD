@@ -813,7 +813,7 @@ void vnum_from_inv(P_char ch, int item, int count);
 void set_surname(P_char ch, int num);
 void clear_surname(P_char ch);
 void display_surnames(P_char ch);
-bool lightbringer_weapon_proc(P_char, P_char);
+bool lightbringer_proc(P_char ch, P_char victim, bool phys);
 bool intercept_defensiveproc(P_char, P_char);
 char get_alias(P_char ch, char *argument);
 void create_alias_file(const char *dir, char *name);

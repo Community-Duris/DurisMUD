@@ -7560,7 +7560,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   }
 
   if( affected_by_spell(ch, ACH_YOUSTRAHDME) && IS_UNDEADRACE(victim)
-    && !IS_PC(victim) && lightbringer_weapon_proc(ch, victim) )
+    && lightbringer_proc(ch, victim, TRUE) )
   {
     return TRUE;
   }

@@ -8,4 +8,8 @@
 
 #define VMOB_ALATORIN_STEELGRIP      83187
 
+#define VMOB_STRAHD_ACH_DORU         91031
+#define VMOB_STRAHD_ACH_CHERNOVOG    58835
+#define VMOB_STRAHD_ACH_STRAHD       58383
+
 #endif // _VNUM_MOB_H_
