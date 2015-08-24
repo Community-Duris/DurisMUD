@@ -314,8 +314,9 @@ struct failed_takedown_messages failed_maul_messages[] = {
    "$n makes a futile attempt to maul you, but you are simply immovable."}
 };
 
-void show_failed_takedown_messages(P_char ch, P_char victim, int skill,
-                                   int reason)
+void knock_out(P_char ch, int duration);
+
+void show_failed_takedown_messages(P_char ch, P_char victim, int skill, int reason)
 {
   struct failed_takedown_messages *messages_set;
   int      i;
@@ -1223,10 +1224,13 @@ void lance_charge(P_char ch, char *argument)
 
 void do_charge(P_char ch, char *argument, int cmd)
 {
+  static bool DEBUG = TRUE;
+
   P_char victim;
-  int percent_chance, dir = -1, a, i, in_room;
+  int dir = -1, a, i;
   int level = GET_LEVEL(ch);
   char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
+  float percent_chance;
 
   struct damage_messages messages = {
     "Your charge impales $N.",
@@ -1237,117 +1241,169 @@ void do_charge(P_char ch, char *argument, int cmd)
     "$n charges right through $N, yuck."
   };
 
-  if(!(ch) ||
-     !IS_ALIVE(ch))
-      return;
-
-  if(!SanityCheck(ch, "do_charge"))
+  if( !IS_ALIVE(ch) )
+  {
     return;
-  
-  if(IS_IMMOBILE(ch))
+  }
+
+  if( IS_TRUSTED(ch) && !strcmp( argument, "debug") )
+  {
+    DEBUG = !DEBUG;
+    debug( "do_charge: DEBUG turned %s.", DEBUG ? "ON" : "OFF" );
+    return;
+  }
+
+  if( !SanityCheck(ch, "do_charge") )
+  {
+    return;
+  }
+
+  if( IS_IMMOBILE(ch) )
   {
     send_to_char("&+RYou are in no condition to charge anything...\r\n", ch);
     return;
   }
-    
-  if(world[ch->in_room].sector_type == SECT_OCEAN)
+
+  switch( world[ch->in_room].sector_type )
+  {
+    case SECT_OCEAN:
+    case SECT_UNDERWATER:
+    case SECT_UNDERWATER_GR:
+    case SECT_WATER_SWIM:
+    case SECT_UNDRWLD_WATER:
+    case SECT_WATER_PLANE:
+      send_to_char("&+WThe waves hamper your ability to charge!\r\n", ch);
+      return;
+    case SECT_AIR_PLANE:
+    case SECT_NO_GROUND:
+    case SECT_UNDRWLD_NOGROUND:
+    case SECT_ETHEREAL:
+    case SECT_ASTRAL:
+    case SECT_FIREPLANE:
+      send_to_char("&+WYou can't seem to find any footing here!\r\n", ch);
+      return;
+    case SECT_UNDRWLD_LOWCEIL:
+      send_to_char("You hit your head on the ceiling, and fall to the ground!\n\r", ch );
+      knock_out(ch, PULSE_VIOLENCE);
+      return;
+    default:
+      break;
+  }
+
+  if( IS_ROOM(ch->in_room, UNDERWATER) )
   {
     send_to_char("&+WThe waves hamper your ability to charge!\r\n", ch);
     return;
   }
 
-  if(IS_SET(world[ch->in_room].room_flags, SINGLE_FILE))
+  if( IS_ROOM(ch->in_room, SINGLE_FILE) || IS_ROOM(ch->in_room, TUNNEL) )
   {
     send_to_char("It's too cramped in here to charge.\n", ch);
     return;
   }
 
-  if(!has_innate(ch, INNATE_CHARGE) ||
-     (IS_RIDING(ch) && (GET_CLASS(ch, CLASS_PALADIN) || (GET_CLASS(ch, CLASS_ANTIPALADIN)))))
+  if( !has_innate(ch, INNATE_CHARGE)
+    || (IS_RIDING(ch) && ( GET_CLASS(ch, CLASS_PALADIN) || GET_CLASS(ch, CLASS_ANTIPALADIN) )) )
   {
     lance_charge(ch, argument);
     return;
   }
 
-  if(affected_by_spell(ch, SKILL_CHARGE))
+  if( affected_by_spell(ch, SKILL_CHARGE) && !IS_TRUSTED(ch) )
   {
     send_to_char("&+GYou are still a bit dizzy from your last attempt.&n\n", ch);
     return;
   }
-  
-  if(IS_FIGHTING(ch))
+
+  if( IS_FIGHTING(ch) )
   {
   	send_to_char("&+rYou may not charge while already engaged!\r\n", ch);
 	  return;
   }
 
-  if(IS_DESTROYING(ch))
+  if( IS_DESTROYING(ch) )
   {
   	send_to_char("Try disengaging from the object first.\r\n", ch);
 	  return;
   }
-  
+
   half_chop(argument, arg1, arg2);
-  
-  if(!*arg1)
+
+  if( !*arg1 )
   {
     send_to_char("Usage: CHARGE <victim> [direction]\n", ch);
     return;
   }
 
-  if(*arg2)
+  if( *arg2 )
   {                             /* they gave dir */
-    switch (toupper(arg2[0]))
+    switch( toupper(arg2[0]) )
     {
-    case 'N':
-      if(toupper(arg2[1]) == 'W')
-        dir = 6;
-      else if(toupper(arg2[1]) == 'E')
-        dir = 8;
-      else
-        dir = 0;
-      break;
-    case 'E':
-      dir = 1;
-      break;
-    case 'S':
-      if(toupper(arg2[1]) == 'W')
-        dir = 7;
-      else if(toupper(arg2[1]) == 'E')
-        dir = 9;
-      else
-        dir = 2;
-      break;
-    case 'W':
-      dir = 3;
-      break;
-    case 'U':
-      dir = 4;
-      break;
-    case 'D':
-      dir = 5;
-      break;
-    default:
-      send_to_char("Invalid direction given.  Use N NW NE E S SW SE W U D\n", ch);
-      return;
+      case 'N':
+        if(toupper(arg2[1]) == 'W')
+          dir = 6;
+        else if(toupper(arg2[1]) == 'E')
+          dir = 8;
+        else
+          dir = 0;
+        break;
+      case 'E':
+        dir = 1;
+        break;
+      case 'S':
+        if(toupper(arg2[1]) == 'W')
+          dir = 7;
+        else if(toupper(arg2[1]) == 'E')
+          dir = 9;
+        else
+          dir = 2;
+        break;
+      case 'W':
+        dir = 3;
+        break;
+      case 'U':
+        dir = 4;
+        break;
+      case 'D':
+        dir = 5;
+        break;
+      default:
+        send_to_char("Invalid direction given.  Use: N, NW, NE, E, S, SW, SE, W, U, or D.\n", ch);
+        return;
     }                           /* end case */
 
-    if(!(victim = get_char_ranged(arg1, ch, 1, dir)))
+    if( !(victim = get_char_ranged(arg1, ch, 1, dir)) )
     {
       send_to_char("Your target doesn't seem to be there.\n", ch);
       return;
     }                           /* could find victim */
 
-    if(IS_SET(world[victim->in_room].room_flags, SINGLE_FILE))
+    if( IS_ROOM(victim->in_room, SINGLE_FILE) || IS_ROOM(victim->in_room, TUNNEL) )
     {
-      send_to_char("It's too cramped in here to charge.\n", ch);
+      send_to_char("It's too cramped in there to charge.\n", ch);
       return;
     }
-    
-    if(world[victim->in_room].sector_type == SECT_OCEAN)
+
+    switch( world[victim->in_room].sector_type )
     {
-      send_to_char("&+WThe waves hamper your ability to charge!\r\n", ch);
-      return;
+      case SECT_OCEAN:
+      case SECT_UNDERWATER:
+      case SECT_UNDERWATER_GR:
+      case SECT_WATER_SWIM:
+      case SECT_UNDRWLD_WATER:
+      case SECT_WATER_PLANE:
+        send_to_char("&+WThe waves hamper your ability to charge!\r\n", ch);
+        return;
+      case SECT_AIR_PLANE:
+      case SECT_NO_GROUND:
+      case SECT_UNDRWLD_NOGROUND:
+      case SECT_ETHEREAL:
+      case SECT_ASTRAL:
+      case SECT_FIREPLANE:
+        send_to_char("&+WYou can't seem to find any footing there!\r\n", ch);
+        return;
+      default:
+        break;
     }
   }
   else
@@ -1373,17 +1429,17 @@ void do_charge(P_char ch, char *argument, int cmd)
 
   if(!CanDoFightMove(ch, victim))
     return;
-  
+
   CharWait(ch, 2 * PULSE_VIOLENCE);
 
-    if (GET_VITALITY(ch) < 30)
+  if( GET_VITALITY(ch) < 30 )
   {
    send_to_char("You need to gather your energy before attempting to charge.\r\n", ch);
    return;
   }
   GET_VITALITY(ch) -= 30;
-  
-  if(dir != -1)                /* try and move em */
+
+  if( dir != -1 )
   {
     if(!EXIT(ch, dir) ||
        IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED) ||
@@ -1396,55 +1452,39 @@ void do_charge(P_char ch, char *argument, int cmd)
     }
 
     a = do_simple_move(ch, dir, 0);
-    
+
     if(!a)
       return;                   /* failed move */
- 
+
     char_light(ch);
     room_light(ch->in_room, REAL);
+
+    if( IS_SECT(ch->in_room, SECT_UNDRWLD_LOWCEIL) )
+    {
+      send_to_char("You hit your head on the ceiling, and fall to the ground!\n\r", ch );
+      knock_out(ch, PULSE_VIOLENCE);
+      return;
+    }
   }
 
-  /*
-   * chance to hit is based on target size, dex, and ch level
-   */
-  if(!on_front_line(ch) ||      // Not currently being used
-     !on_front_line(victim))
+  /* Not currently being used
+  if( !on_front_line(ch) || !on_front_line(victim) )
   {
     send_to_char("You can't seem to reach!\n", ch);
     return;
   }
+  */
 
+  // Chance to hit is based on target size, dex, and ch level
   victim = guard_check(ch, victim);
 
-  if(get_takedown_size(victim) > get_takedown_size(ch) + 2)
+  if(get_takedown_size(victim) > get_takedown_size(ch) + 1)
   {
     act("$n makes a futile attempt to charge $N, but $E is simply immovable.",
-        FALSE, ch, 0, victim, TO_ROOM);
+      FALSE, ch, 0, victim, TO_ROOM);
     act("$N is too huge for you to charge!", FALSE, ch, 0, victim, TO_CHAR);
     act("$n tries to charge you, but merely bounces off your huge girth.",
-        FALSE, ch, 0, victim, TO_VICT);
-
-    if(number(0, 1))
-    {
-      SET_POS(ch, POS_SITTING + GET_STAT(ch));
-    }
-    else
-    {
-      SET_POS(ch, POS_KNEELING + GET_STAT(ch));
-    }
-
-	engage(ch, victim);
-    
-    return;
-  }
-  if(get_takedown_size(victim) < (get_takedown_size(ch) - 2))
-  {
-    act("$n topples over $mself as $e tries to charge into $N.",
-      FALSE, ch, 0, victim, TO_ROOM);
-    act("$n topples over $mself as $e tries to charge into you.",
       FALSE, ch, 0, victim, TO_VICT);
-    act("$N is too small to charge.&n",
-      FALSE, ch, 0, victim, TO_CHAR);
 
     if(number(0, 1))
     {
@@ -1452,86 +1492,124 @@ void do_charge(P_char ch, char *argument, int cmd)
     }
     else
     {
-      SET_POS(ch, POS_KNEELING + GET_STAT(ch));
+      SET_POS(ch, POS_PRONE + GET_STAT(ch));
     }
-    
-    //engage(ch, victim); - we charged, but why should we engage if we failed - Drannak
+
+    if( !IS_FIGHTING(victim) && !IS_DESTROYING(victim) )
+      set_fighting(victim, ch);
+    return;
+  }
+  if( get_takedown_size(victim) < (get_takedown_size(ch) - 1) )
+  {
+    act("$n topples over $mself as $e tries to charge into $N.", FALSE, ch, 0, victim, TO_ROOM);
+    act("$n topples over $mself as $e tries to charge into you.", FALSE, ch, 0, victim, TO_VICT);
+    act("$N is too small to charge.&n", FALSE, ch, 0, victim, TO_CHAR);
+
+    if( number(0, 1) )
+    {
+      SET_POS(ch, POS_SITTING + GET_STAT(ch));
+    }
+    else
+    {
+      SET_POS(ch, POS_PRONE + GET_STAT(ch));
+    }
+
+    // We charged, but why should we engage if we failed - Drannak
+    // Good point, only have the victim start attacking. - Lohrr
+    if( !IS_FIGHTING(victim) && !IS_DESTROYING(victim) )
+      set_fighting(victim, ch);
     return;
   }
 
-  percent_chance = 95;
+  percent_chance = get_property("innate.charge.base.chance", 60.00);
 
-  if(GET_C_LUK(ch) / 2 > number(0, 100))
+  if( GET_C_LUK(ch) / 2 > number(0, 100) )
   {
-    percent_chance = (int) (percent_chance * 1.1);
+    percent_chance = percent_chance * 1.1;
   }
 
-  if(GET_C_LUK(victim) / 2 > number(0, 100))
+  if( GET_C_LUK(victim) / 2 > number(0, 100) )
   {
-    percent_chance = (int) (percent_chance * 0.9);
+    percent_chance = percent_chance * 0.9;
   }
 
-  percent_chance = (int) (percent_chance * ((double) BOUNDED(60, 100 + (GET_LEVEL(ch) - GET_LEVEL(victim)) * 2, 145)) / 100);
-  
-  percent_chance = (int) (percent_chance * ((double) BOUNDED(60, 100 + (GET_C_STR(ch) - GET_C_AGI(victim)) / 4, 145)) / 100);
-  
+//  percent_chance = percent_chance * (float) BOUNDED(60, 100 + (GET_LEVEL(ch) - GET_LEVEL(victim)) * 2, 145) / 100.;
+  percent_chance += (float) BOUNDED(-20, (3 * (GET_LEVEL(ch) - GET_LEVEL(victim))) / 2, 20);
+
+//  percent_chance = percent_chance * (float) BOUNDED(60, 100 + (GET_C_STR(ch) - GET_C_AGI(victim)) / 4, 145) / 100.;
+  percent_chance += (float) BOUNDED(-20, (GET_C_STR(ch) - (3 * GET_C_AGI(victim)) / 2) / 3, 20);
+
  // percent_chance = (int) (percent_chance * ((double) BOUNDED(60, 100 + (get_takedown_size(victim) - get_takedown_size(ch)) * 5, 145)) / 100);
-  
-  percent_chance = (int) (percent_chance * ((GET_POS(victim) == POS_PRONE) ? 0.05 : (GET_POS(victim) != POS_STANDING) ? 0.15 : 1));
 
-  if(IS_AFFECTED(victim, AFF_AWARE))
-    percent_chance = (int) (percent_chance * 0.80);
-  
-  if(affected_by_spell(victim, SPELL_GUARDIAN_SPIRITS))
+  percent_chance = percent_chance * ( (GET_POS(victim) == POS_PRONE) ? 0.05 : (GET_POS(victim) != POS_STANDING) ? 0.15 : 1 );
+
+  if( IS_AFFECTED(victim, AFF_AWARE) )
+  {
+    percent_chance = percent_chance * 0.80;
+  }
+
+  if( affected_by_spell(victim, SPELL_GUARDIAN_SPIRITS) )
   {
     guardian_spirits_messages(ch, victim);
-    percent_chance = MAX(0, percent_chance - GET_LEVEL(victim));
+    percent_chance -= (float)GET_LEVEL(victim);
   }
-  
-  if(number(1, 100) < percent_chance ||
-    IS_IMMOBILE(victim) ||
-    !AWAKE(victim))
 
-  {  
-    if(get_takedown_size(victim) <= get_takedown_size(ch) && 
-      !number(0,2))
+  // Cap chance at 95%.
+  if( percent_chance > 95. )
+  {
+    percent_chance = 95.;
+  }
+
+  if( DEBUG )
+  {
+    debug("do_charge: (%s) charging (%s) final percentage (%d).", GET_NAME(ch), GET_NAME(victim), (int)percent_chance);
+  }
+
+  if( number(1, 100) <= (int)percent_chance || IS_IMMOBILE(victim) || !AWAKE(victim) )
+  {
+    if( get_takedown_size(victim) <= get_takedown_size(ch) && !number(0,2) )
     {
       act("&+yYou charge wildly into&n $N &+yknocking $M to the &+Yground!&n",
         0, ch, 0, victim, TO_CHAR);
       act("$n &+ycharges through the room and crashes into&n $N &+yknocking $M to the &+Yground!",
-          0, ch, 0, victim, TO_NOTVICT);
+        0, ch, 0, victim, TO_NOTVICT);
       act("$n &+ycharges into you, knocking you to the &+Yground!&n &+yYou hear a crunching noise as &+Wbones break!&n",
-          0, ch, 0, victim, TO_VICT);
+        0, ch, 0, victim, TO_VICT);
 
-      SET_POS(victim, POS_PRONE + GET_STAT(victim));
+      if( GET_POS(victim) == POS_PRONE )
+      {
+        ;
+      }
+      else if( number(0,1) )
+      {
+        SET_POS(victim, POS_SITTING + GET_STAT(victim));
+      }
+      else
+      {
+        SET_POS(victim, POS_PRONE + GET_STAT(victim));
+      }
     }
     else
     {
       act("&+yYou charge wildly into&n $N!", 0, ch, 0, victim, TO_CHAR);
       act("$n &+ycharges through the room and crashes into&n $N! &+yYou hear the sound of &+Wbreaking bones!",
-          0, ch, 0, victim, TO_NOTVICT);
+        0, ch, 0, victim, TO_NOTVICT);
       act("$n &+ycharges into you! You hear a crunching noise as &+Wbones break!&n",
         0, ch, 0, victim, TO_VICT);
     }
-    
+
     CharWait(victim, (int) (1.5 * PULSE_VIOLENCE));
-/*
-    if(!melee_damage
-        (ch, victim, str_app[STAT_INDEX(GET_C_STR(ch))].todam + 5, 0,
-         &messages))
-*/
-  
-    if(melee_damage(ch, victim, (number(1, level) + level) * 2,
-      PHSDAM_TOUCH, &messages) != DAM_NONEDEAD)
-        return;
+    set_short_affected_by(ch, SKILL_CHARGE, (int) (3.0 * PULSE_VIOLENCE));
 
-    if(char_in_list(ch))
+    // Damage(final) is about 3/4 * level or about 42 dam at 56.
+    if( melee_damage(ch, victim, (number(1, level) + level) * 2, PHSDAM_TOUCH, &messages) != DAM_NONEDEAD )
     {
-      CharWait(ch, (int) (PULSE_VIOLENCE * 1.0));
-      set_short_affected_by(ch, SKILL_CHARGE, (int) (2.0 * PULSE_VIOLENCE));
+      return;
     }
+    /* Old calculations for damage and such:
+    if(!melee_damage(ch, victim, str_app[STAT_INDEX(GET_C_STR(ch))].todam + 5, 0, &messages))
 
-    /*   if(!damage(ch, victim, number(GET_LEVEL(ch), 6 * GET_LEVEL(ch)), TYPE_CHARGE))
+    if(!damage(ch, victim, number(GET_LEVEL(ch), 6 * GET_LEVEL(ch)), TYPE_CHARGE))
        SET_POS(victim, POS_PRONE + GET_STAT(victim));
        CharWait(victim, PULSE_VIOLENCE);
        Stun(victim, ch, PULSE_VIOLENCE * 3, TRUE);
@@ -1540,52 +1618,61 @@ void do_charge(P_char ch, char *argument, int cmd)
      */
 
   }
+  // Miss
   else
-  {                             /* miss */
-    if((dir != -1) &&
-       EXIT(ch, dir) &&
-       !(IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED)) &&
-       !(IS_SET(EXIT(ch, dir)->exit_info, EX_BLOCKED)) &&
-       !(IS_SET(EXIT(ch, dir)->exit_info, EX_SECRET)) &&
-       !IS_SET(world[ch->in_room].room_flags, GUILD_ROOM)) // Prevents charging past golems
+  {
+    if( (dir != -1) && EXIT(ch, dir) && EXIT(ch, dir)->to_room != NOWHERE
+      && !(IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED | EX_BLOCKED | EX_SECRET))
+      && !IS_ROOM(ch->in_room, GUILD_ROOM)) // Prevents charging past golems
     {
+      int room = EXIT(ch, dir)->to_room;
+      if( world[room].sector_type == SECT_OCEAN )
+      {
+        if( !number(0,3) )
+        {
+          act("&+y$n &+ycharges right past you ... and into the &+BOcean&+y!  That dork.&n", TRUE, ch, 0, victim, TO_VICT);
+          act("&+y$n &+ycharges through the room ... and into the &+BOcean&+y!  That dork.&n", TRUE, ch, 0, victim, TO_ROOM);
+          act("&+yWhoops!  You charge right past $N&+y ... and fall into the &+BOcean&+y!&n", TRUE, ch, 0, victim, TO_CHAR);
+          char_from_room( ch );
+          char_to_room( ch, room, -1 );
+          act("&+y$n &+ycomes charging into the &+BOcean&+y!  Splash...&n", TRUE, ch, 0, NULL, TO_ROOM);
+        }
+        else
+        {
+          act("&+y$n &+ycharges right past you ... and stops just short of the &+BOcean&+y!&n", TRUE, ch, 0, victim, TO_VICT);
+          act("&+y$n &+ycharges through the room ... and stops just short of the &+BOcean&+y!&n", TRUE, ch, 0, victim, TO_ROOM);
+          act("&+yWhoops!  You charge right past $N&+y ... and stop just short of the &+BOcean&+y!&n", TRUE, ch, 0, victim, TO_CHAR);
+        }
+        return;
+      }
+
       /* Vroom, straight on through */
-      act("$n &+ycharges right past you!",
-        TRUE, ch, 0, victim, TO_VICT);
-      act("$n &+ycharges through the room!",
-        TRUE, ch, 0, victim, TO_ROOM);
-      act("&+yWhoops!  You charge right past $N!",
-        TRUE, ch, 0, victim, TO_CHAR);
-      
-      
-      if(world[EXIT(ch, dir)->to_room].sector_type == SECT_OCEAN ||
-         world[EXIT(ch, dir)->to_room].sector_type == NOWHERE )
-          return;
+      act("$n &+ycharges right past you!", TRUE, ch, 0, victim, TO_VICT);
+      act("$n &+ycharges through the room!", TRUE, ch, 0, victim, TO_ROOM);
+      act("&+yWhoops!  You charge right past $N!", TRUE, ch, 0, victim, TO_CHAR);
 
       a = do_simple_move(ch, dir, 0);
-      
-      if(char_in_list(ch))
+
+      if( IS_ALIVE(ch) )
       {
-        act("$n curses under $s breath.&n", 0, ch, 0, victim, TO_ROOM);
+        act("$n curses under $s breath.&n", 0, ch, NULL, NULL, TO_ROOM);
       }
     }
-    else if(IS_RIDING(ch))
+    else if( IS_RIDING(ch) )
     {
       act("$n &+ycharges in and $s mount maneuvers too quickly!", 0, ch, 0, victim, TO_ROOM);
       send_to_char("&+yYou &=LRcharge&n&n &+yand your mount adjusts its course too quickly!\r\n", ch);
       SET_POS(ch, POS_PRONE + GET_STAT(ch));
     }
-    else if(has_innate(ch, INNATE_CHARGE))
+    else if( has_innate(ch, INNATE_CHARGE) )
     {
-      act("$n &+ycharges&n and ends up on $s face!&n",
-        0, ch, 0, victim, TO_ROOM);
+      act("$n &+ycharges&n and ends up on $s face!&n", 0, ch, 0, victim, TO_ROOM);
       send_to_char("&+yYou &=LRcharge&n&n &+yand end up on your face!\r\n", ch);
       SET_POS(ch, POS_PRONE + GET_STAT(ch));
     }
-    else 
+    else
     {
-      act("$n &+ycharges&n and stumbles!&n",
-        0, ch, 0, victim, TO_ROOM);
+      act("$n &+ycharges&n and stumbles!&n", 0, ch, 0, victim, TO_ROOM);
       send_to_char("&+yYou &=LRcharge&n&n &+yand stumble!\r\n", ch);
       SET_POS(ch, POS_PRONE + GET_STAT(ch));
     }

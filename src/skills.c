@@ -4534,7 +4534,7 @@ SPELL_ADD(CLASS_SUMMONER, 11);
   SKILL_ADD(CLASS_BLIGHTER, 1, 40);
   SKILL_ADD(CLASS_REAVER, 1, 40);
   SKILL_ADD(CLASS_ETHERMANCER, 1, 40);
-  
+
   SKILL_CREATE("roundkick", SKILL_ROUNDKICK, TAR_PHYS);
   SKILL_ADD(CLASS_MONK, 1, 100);
 
@@ -4546,8 +4546,9 @@ SPELL_ADD(CLASS_SUMMONER, 11);
 // Creating this bogus skill so only the person being throat crushed receives the wear off message.
 //   This needs a good name for 'stat c George' where George is on cooldown.
   SKILL_CREATE("throat crush cooldown.", SKILL_THROAT_CRUSHER, TAR_PHYS);
+  // Added this so we can see what the affect is (same as above).
+  SKILL_CREATE("charge cooldown.", SKILL_CHARGE, TAR_PHYS);
 
-  
   SKILL_CREATE("guard", SKILL_GUARD, TAR_PHYS);
   //SKILL_ADD(CLASS_ANTIPALADIN, 20, 90);
   //SKILL_ADD(CLASS_PALADIN, 20, 90);
