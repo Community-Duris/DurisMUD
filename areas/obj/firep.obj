@@ -18,7 +18,7 @@ A
 A
 19 5
 #88301
-crown flames burning fire~
+crown flames burning fire _noquest_~
 &+ra crown of &+Rburning&+r flames&N~
 A metal crown, with an unnatural &+rfire&N flowing around it rests here.~
 ~
@@ -229,7 +229,7 @@ A
 A
 24 -4
 #88320
-gauntlets hellfire vampiric~
+gauntlets hellfire vampiric _noquest_~
 &+ra pair of &+Rvam&+rpi&+Rric &+Ldragon&+rscale &+Lgauntlets&n~
 &+RA strange pair of dragonscale gauntlets float here.&n~
 ~
@@ -237,9 +237,9 @@ gauntlets hellfire vampiric~
 6 0 0 0 0 0 0 0
 4 0 100 536870912 274624 64 0
 A
-54 35
+54 15
 A
-32 4
+32 3
 #88321
 carnelian ruby gorget~
 &+ra &+Ycar&+Rnel&+Yian &+rand &+Rruby &+rinlaid &+Ygorget&n~
