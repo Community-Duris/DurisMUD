@@ -7840,7 +7840,7 @@ blue ioun stone~
 A
 12 100
 A
-37 20
+37 15
 #901
 red ioun stone~
 &+Ra bright red ioun stone&n~
@@ -7872,7 +7872,7 @@ yellow ioun stone~
 0 0 0 0 0 0 0 0
 0 0 100
 A
-32 25
+32 15
 #904
 red ioun stone~
 &+ra dark red ioun stone&n~
@@ -7932,9 +7932,9 @@ white ioun stone~
 0 0 0 0 0 0 0 0
 0 0 100
 A
-38 20
+38 15
 A
-40 20
+40 15
 #910
 green ioun stone~
 &+Ga bright green ioun stone&n~
@@ -7986,7 +7986,7 @@ An unnamed object lies here, looking lonely and forelorn.~
 0 0 0 0 0 0 0 0
 0 0 100
 A
-31 25
+31 15
 #916
 glowing white ioun stone~
 &+Wa glowing white ioun stone&N~
