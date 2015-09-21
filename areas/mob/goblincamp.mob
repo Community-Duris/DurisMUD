@@ -8,8 +8,8 @@ a grim expression as he goes about his job with little enthusiasm.  He stands
 at nearly five feet tall, which is enormous for a &+ggoblin&N.  He stands with his
 muscular arms wrapped in front of his chest.&N
 ~
-75499594 0 0 128 0 0 0 -800 S
-HG 0 1 -1
+75499594 0 0 0 128 0 0 0 -800 S
+HG 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -24,8 +24,8 @@ muscular creature and can hold her own against most male &+ggoblins&N.  She came
 with the original&+g goblin &Nraiding group that settled in this once peaceful
 &+gforest&N.  She is a very formidable opponent.&N
 ~
-2124 0 0 0 0 0 0 -400 S
-HG 0 1 -1
+2124 0 0 0 0 0 0 0 -400 S
+HG 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -40,8 +40,8 @@ battle and he has fought and won against many larger opponents.  His teeth
 are stained &+yyellow&N but sharp and deadly as any weapon he might brandish.  He
 stands at almost five feet tall and weighs about two hundred pounds.&N
 ~
-2124 0 0 0 0 0 0 -789 S
-HG 0 1 -1
+2124 0 0 0 0 0 0 0 -789 S
+HG 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ never gazed upon the dark tunnels of its homeland,&+g Malch'hor Ganl&N.  He is v
 short &+ggoblin&N but he appears to be very intelligent.  He is rather emaciated and
 his stomach is sticking out due to lack of malnutrtion.&N
 ~
-8 0 0 0 0 0 0 -450 S
-HG 0 1 -1
+8 0 0 0 0 0 0 0 -450 S
+HG 0 1 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -69,8 +69,8 @@ old elderly goblin~
 &+L&+Lput on a brave face.  He is in constant danger of being killed by one of the
 &+Lyounger warriors.  It seems that he has lost the respect of those&+g goblins.&N
 ~
-76 0 0 0 0 0 0 -500 S
-HG 0 1 -1
+76 0 0 0 0 0 0 0 -500 S
+HG 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -83,8 +83,8 @@ goblin elderly female woman old~
 &+Lduring her childhood in the underground city of &+gMalch'hor Ganl&+L she was quite
 &+Lstupid.  She has grown quite senile in her old age.&N
 ~
-14 0 0 0 0 0 0 -400 S
-HG 0 1 -1
+14 0 0 0 0 0 0 0 -400 S
+HG 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -98,8 +98,8 @@ goblin female woman maiden~
 &+LShe is very strong and good looking for a&+g goblin&+L.  This is one female to not
 &+Lmess with.&N
 ~
-72 0 0 0 0 0 0 -200 S
-HG 0 1 -1
+72 0 0 0 0 0 0 0 -200 S
+HG 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -114,8 +114,8 @@ goblin shaman~
 &+Lnow, but once he was a great man.  He stands at barely over four feet tall and
 &+Lhe weighs nearly two hundred pounds.  Quite frankly, he is fat.&N
 ~
-67110984 0 0 0 0 0 0 -900 S
-HG 0 256 -1
+67110984 0 0 0 0 0 0 0 -900 S
+HG 0 256 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -129,8 +129,8 @@ goblin warrior~
 &+Lspent his entire life in this&+g forest&+L and knows every inch of it.  He stares
 &+Lout with insane looking eyes.&N
 ~
-268437576 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+268437576 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
