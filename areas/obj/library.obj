@@ -581,7 +581,7 @@ barely visible elixir potion invisibility invis~
 ~
 10 7 2 0 7 0 1 8404993 64 0 0
 36 189 0 0 0 0 0 0
-1 10000 100
+1 100000 100
 #402062
 bright shimmering potion detinv~
 &+wa &+Wbright&+w shimmering potion&N~
@@ -589,7 +589,7 @@ bright shimmering potion detinv~
 ~
 10 7 2 0 7 0 1 8404993 64 0 0
 36 19 0 0 0 0 0 0
-1 10000 100
+1 100000 100
 #402063
 bright shimmering potion feathers fly~
 &+ca &+Ws&+ch&+Ci&+cm&+Cm&+ce&+Cr&+ci&+Cn&+cg &+Wpotion &+cwith &+wfe&+Wa&+wt&+Wh&+wers&N~
@@ -597,7 +597,7 @@ bright shimmering potion feathers fly~
 ~
 10 7 2 0 7 0 1 8404993 64 0 0
 36 84 0 0 0 0 0 0
-1 10000 100
+1 100000 100
 #402064
 elixir unholy water armorbless armble armor bless~
 &+Lan elixir of unholy water&N~
@@ -605,7 +605,7 @@ elixir unholy water armorbless armble armor bless~
 ~
 10 7 2 0 7 0 1 8404993 64 0 0
 36 1 3 0 15 0 0 0
-1 5000 100
+1 50000 100
 #402065
 bubbling potion acid~
 &+ga &+Gb&+gu&+Gb&+gb&+Gl&+gi&+Gn&+gg &+cpotion &+gof &+Ca&+Gc&+Ci&+Gd&N~
@@ -613,7 +613,7 @@ bubbling potion acid~
 ~
 10 7 2 0 7 0 1 8404993 64 0 0
 36 275 35 43 30 0 0 0
-1 50000 100
+1 500000 100
 #402066
 elixir heartsblood duergar dwarf heal~
 &+ran &+Relixir &+Lof the &+rhea&+Rrts&+rblood &+Lof a &+rDuergar Dwarf&N~
@@ -621,7 +621,7 @@ elixir heartsblood duergar dwarf heal~
 ~
 10 7 2 0 7 0 1 8404993 64 0 0
 31 28 0 0 0 0 0 0
-1 200000 100
+1 2000000 100
 #402067
 thick tome legendary lores lore book spellbook~
 &+La &+wthick &+Wtome &+Lof &+wl&+We&+wg&+Le&+wn&+Wd&+wa&+Lr&+wy &+wlores&N~
