@@ -592,8 +592,9 @@ void do_gcc(P_char ch, char *argument, int cmd)
       to_guild = GET_A_NUM(to_ch);
       if( IS_TRUSTED(to_ch) )
       {
-        // If they'r governing a diff't association or they have GCC toggled off
-        if( (to_guild && to_guild != from_guild) || !PLR_FLAGGED(to_ch, PLR_GCC) )
+        // If they'r governing a diff't association or they have GCC toggled off, or ignoring ch.
+        if( (to_guild && to_guild != from_guild) || !PLR_FLAGGED(to_ch, PLR_GCC)
+          || to_ch->only.pc->ignored == ch )
         {
           continue;
         }

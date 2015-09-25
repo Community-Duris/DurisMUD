@@ -480,7 +480,7 @@ void do_acc(P_char ch, char *argument, int cmd)
       {
         // If they'r governing a diff't association (or ally) or they have ACC toggled off
         if( (to_guild && to_guild != alliance->forging_assoc_id && to_guild != alliance->joining_assoc_id)
-          || !PLR2_FLAGGED(to_ch, PLR2_ACC) )
+          || !PLR2_FLAGGED(to_ch, PLR2_ACC) || to_ch->only.pc->ignored == ch )
         {
           continue;
         }
