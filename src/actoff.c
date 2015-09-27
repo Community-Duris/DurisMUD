@@ -1,3 +1,4 @@
+
 /*
  * ***************************************************************************
  * *  File: actoff.c                                           Part of Duris *
@@ -4288,9 +4289,9 @@ void do_headbutt(P_char ch, char *argument, int cmd)
   }
 
   // Making agi a factor.
-  chance += GET_C_AGI(ch) - GET_C_AGI(victim) / 2;
+  chance += (GET_C_AGI(ch) - GET_C_AGI(victim)) / 2;
 
-  if( IS_TRUSTED(ch) || !AWAKE(victim) )
+  if( /*IS_TRUSTED(ch) ||*/ !AWAKE(victim) )
   {
     roll = 100;
   }
@@ -4298,6 +4299,8 @@ void do_headbutt(P_char ch, char *argument, int cmd)
   {
     roll = number(1, chance);
   }
+
+  debug("do_headbutt: (%s) butting (%s) chance (%d) roll (%d).", GET_NAME(ch), GET_NAME(victim), chance, roll );
 
   // failed catastrophically!
   if( !notch_skill(ch, SKILL_HEADBUTT, get_property("skill.notch.offensive", 7)) && roll <= 2 )
@@ -4387,7 +4390,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
       act("You deftly pull back your head and ram it into $N again!", FALSE, ch, 0, victim, TO_CHAR);
       act("With a quick move, $n pulls back $s head and rams it into you again!", FALSE, ch, 0, victim, TO_VICT);
       act("$n deftly pulls back $s head and slams it into $N again!", FALSE, ch, 0, victim, TO_NOTVICTROOM);
-      debug("do_headbutt: (%s) double butting (%s) dam (%d) skill (%d).", GET_NAME(ch), GET_NAME(victim), dam/2, GET_CHAR_SKILL(ch, SKILL_DOUBLE_HEADBUTT) );
+      debug("do_headbutt: (%s) double butting (%s) dam (%d) skill (%d).", GET_NAME(ch), GET_NAME(victim), (int)dam/2, GET_CHAR_SKILL(ch, SKILL_DOUBLE_HEADBUTT) );
       if( melee_damage(ch, victim, (int) (dam / 2), PHSDAM_NOPOSITION | PHSDAM_TOUCH | PHSDAM_NOREDUCE , messages) != DAM_NONEDEAD )
       {
         return;
@@ -8324,19 +8327,21 @@ void bodyslam(P_char ch, P_char victim)
 
   appear(ch);
 
-  percent_chance = 50;
+  percent_chance = get_property("innate.bodyslam.base.chance", 60.00);
 
   percent_chance =
     (int) (percent_chance * ((double) BOUNDED(80, 100 + GET_LEVEL(ch) - GET_LEVEL(victim), 125)) / 100);
   percent_chance =
     (int) (percent_chance * ((double) BOUNDED(60, 100 + (GET_C_AGI(ch) - GET_C_AGI(victim)) / 2, 155)) / 100);
   // Bodyslammer's dex can reduce, but not increase chance.  This is done for balancing.
-  percent_chance = (percent_chance * MIN( 100, GET_C_DEX(ch) )) / 100;
+  percent_chance = ( percent_chance * (MIN( 100, GET_C_DEX(ch) ) / 2 + 50) ) / 100;
 
   if(IS_AFFECTED(victim, AFF_AWARE))
   {
     percent_chance = (percent_chance * 8) / 10;
   }
+
+  debug( "bodyslam: (%s) bodyslamming (%s) chance (%d).", J_NAME(ch), J_NAME(victim), percent_chance );
 
   percent_chance = takedown_check(ch, victim, percent_chance, SKILL_BODYSLAM, ~AGI_CHECK);
 
@@ -8371,7 +8376,7 @@ void bodyslam(P_char ch, P_char victim)
     send_to_char("You may as well try and bodyslam a speck of dust!  Too small..\n", ch);
     CharWait(ch, 3 * PULSE_VIOLENCE);
   }
-  else if(percent_chance > number(1, 100))
+  else if(percent_chance >= number(1, 100))
   {
     act("$n suddenly looks a bit dumb, and madly slams at $N!", TRUE, ch, 0, victim, TO_NOTVICT);
     act("$n suddenly looks a bit dumb, and madly slams _YOU_!", TRUE, ch, 0, victim, TO_VICT);
