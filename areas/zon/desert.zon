@@ -599,6 +599,7 @@ M 0 49222 2 49014 100 0 0 0        * a lighthouse sentry
 M 0 49222 2 49014 100 0 0 0        * a lighthouse sentry
 M 0 49108 1 49015 100 0 0 0        * a seagull
 M 0 49110 1 49015 100 0 0 0        * a drunk sailor
+G 1 49028 50 0 100 0 0 0           *    a solid steel key
 M 0 49107 1 49016 100 0 0 0        * a shady rogue
 E 1 49059 1 16 100 0 0 0           *   a thin steel dagger
 M 0 49029 1 49017 100 0 0 0        * Myranx
@@ -801,6 +802,7 @@ G 1 49076 999 0 100 0 0 0          *    a tribal wand of a minotaur shaman
 G 1 49191 999 0 100 0 0 0          *    a tattered old scroll
 G 1 49192 999 0 100 0 0 0          *    an ancient glyph enscribed scroll
 G 1 49193 999 0 100 0 0 0          *    a holy scroll
+G 1 49028 50 0 100 0 0 0           *    a solid steel key
 M 0 49006 2 49102 100 0 0 0        * a desert vagabond
 M 0 49196 2 49102 100 0 0 0        * an ordinary peasant
 M 0 49151 4 49103 100 0 0 0        * a filthy vagabond
