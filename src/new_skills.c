@@ -771,66 +771,67 @@ void chant_diamond_soul(P_char ch, char *argument, int cmd)
 
 void chant_heroism(P_char ch, char *argument, int cmd)
 {
-  struct affected_type af, af1, af2, af3;
+  struct affected_type af, af1;
   char     buf[100];
   int      skl_lvl = 0;
   int duration = MAX(5, (GET_LEVEL(ch) / 4)  + 2);
 
-  if (!GET_CLASS(ch, CLASS_MONK) && !IS_TRUSTED(ch))
+  if( !GET_CLASS(ch, CLASS_MONK) && !IS_TRUSTED(ch) )
   {
     send_to_char("You're no hero - you're a jackass.\r\n", ch);
     return;
   }
 
-  if (!affect_timer(ch,
-        WAIT_SEC * get_property("timer.secs.monkHeroism", 120),
-        SKILL_HEROISM))
+  if( !affect_timer(ch, WAIT_SEC * get_property("timer.secs.monkHeroism", 120), SKILL_HEROISM) )
   {
     send_to_char("Your mind needs rest...\r\n", ch);
     return;
   }
 
-  if(IS_PC(ch) ||
-     IS_PC_PET(ch))
-        skl_lvl = GET_CHAR_SKILL(ch, SKILL_HEROISM);
+  if( IS_PC(ch) || IS_PC_PET(ch) )
+    skl_lvl = GET_CHAR_SKILL(ch, SKILL_HEROISM);
   else
     skl_lvl = GET_LEVEL(ch) * 2;
 
-  if (affected_by_spell(ch, SKILL_HEROISM))
+  if( affected_by_spell(ch, SKILL_HEROISM) )
   {
     send_to_char("You are already under the affects of heroism.\r\n", ch);
     return;
   }
-  
-  if (affected_by_spell(ch, SKILL_DIAMOND_SOUL))
+
+  if( affected_by_spell(ch, SKILL_DIAMOND_SOUL) )
   {
     send_to_char("You cannot call upon the heroism technique while under the influence of diamond soul.\r\n", ch);
     return;
   }
-    
-  if( !notch_skill(ch, SKILL_HEROISM, 30)
-    && number(1, 105) > skl_lvl) // 5 percent chance to fail at max pc skill.
+
+  // 5 percent chance to fail at max pc skill.
+  if( !notch_skill(ch, SKILL_HEROISM, 30 ) && number(1, 105) > skl_lvl )
   {
     send_to_char("Your inner thoughts are in turmoil.\r\n", ch);
     CharWait(ch, PULSE_VIOLENCE);
     return;
   }
-  
+
   sprintf(buf, "A sense of heroism grows in your heart.\r\n");
+
   bzero(&af, sizeof(af));
   af.type = SKILL_HEROISM;
   af.flags = AFFTYPE_NODISPEL;
   af.duration = duration;
-  
+
   af.modifier = MAX(2, (int) (GET_LEVEL(ch) / 8));
   af.location = APPLY_HITROLL;
   affect_to_char(ch, &af);
-  
+
   af.modifier = MAX(2, GET_LEVEL(ch) / 8);
   af.location = APPLY_DAMROLL;
   affect_to_char(ch, &af);
-  
-  if(GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFDRAGON))
+
+  af.modifier = 0;
+  af.location = 0;
+
+  if( GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFDRAGON) && !affected_by_spell(ch, SPELL_INDOMITABILITY) )
   {
     send_to_char("Something wicked just happened didn't it? My god you feel weird. \r\n", ch);
     bzero(&af1, sizeof(af1));
@@ -839,34 +840,28 @@ void chant_heroism(P_char ch, char *argument, int cmd)
     af1.duration = duration;
     affect_to_char(ch, &af1);
   }
-  
+
   send_to_char(buf, ch);
-  
-  if(GET_LEVEL(ch) >= 36 &&
-    GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFSNAKE) &&
-    !IS_AFFECTED4(ch, AFF4_DAZZLER))
+
+  if( GET_LEVEL(ch) >= 36 && GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFSNAKE) && !IS_AFFECTED4(ch, AFF4_DAZZLER) )
   {
-    bzero(&af2, sizeof(af2));
-    af2.type = SPELL_DAZZLE;
-    af2.flags = AFFTYPE_NODISPEL;
-    af2.bitvector4 = AFF4_DAZZLER;
-    af2.duration = duration;
-    affect_to_char(ch, &af2);
+    af.bitvector4 += AFF4_DAZZLER;
     send_to_char("Your body begins to glow with disorienting colors... \r\n", ch);
   }
 
-  if (GET_LEVEL(ch) >= 51 &&
-      !IS_AFFECTED(ch, AFF_HASTE))
+  if( GET_LEVEL(ch) >= 51 && !IS_AFFECTED(ch, AFF_HASTE) )
   {
-    bzero(&af3, sizeof(af3));
-    af3.type = SPELL_HASTE;
-    af3.flags = AFFTYPE_NODISPEL;
-    af3.bitvector = AFF_HASTE;
-    af3.duration = duration;
-    affect_to_char(ch, &af3);
+    af.bitvector += AFF_HASTE;
     send_to_char("Your body begins to speed up!\r\n", ch);
   }
-  
+
+  if( GET_LEVEL(ch) >= 56 && !IS_AFFECTED3(ch, AFF3_BLUR) )
+  {
+    af.bitvector3 += AFF3_BLUR;
+    send_to_char("Your body begins to blur!\r\n", ch);
+  }
+
+  affect_to_char(ch, &af);
   CharWait(ch, PULSE_VIOLENCE);
 }
 
