@@ -8,8 +8,8 @@ body is covered with long, black, matted hair. Its nails are curved like
 talons, designed for the rending and tearing of flesh. Long fangs
 protrude from its mouth.
 ~
-2120 0 0 33554464 0 0 0 0 S
-AA 0 0 -1
+2120 0 0 0 33554464 0 0 0 0 S
+AA 0 0 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -23,8 +23,8 @@ covered with dark brown fur. It has a large head and a dog-like muzzle
 with sharp canine teeth visible. A collar of &+Lgray fur&n encircles its
 neck.
 ~
-2248 0 0 33554432 0 0 0 0 S
-AA 0 8192 -1
+2248 0 0 0 33554432 0 0 0 0 S
+AA 0 8192 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -37,8 +37,8 @@ A &+Yjag&+Lua&+Yr&n crouches here, ready to spring. This powerful
 beast has a &+Y pale yellow skin&n covered with &+Ldark spots&n. It
 snarls at the intrusion, its body poised.
 ~
-2124 1 0 34078756 0 0 0 0 S
-AC 0 0 -1
+2124 1 0 0 34078756 0 0 0 0 S
+AC 0 0 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -50,8 +50,8 @@ leopard~
 A &+Yleo&+La&+yrd&n slinks through the jungle. Its muscular, tawny
 body is covered with &+Lspots&n. Its tail twitches in curiosity.
 ~
-264264 0 0 33554464 0 0 0 0 S
-AC 0 0 -1
+264264 0 0 0 33554464 0 0 0 0 S
+AC 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -63,8 +63,8 @@ A &+Lt&+Ri&+Lg&+Re&+Lr&n stalks its prey here.
 A &+Lt&+Ri&+Lg&+Re&+Lr&n stalks its prey here, tail quivering in
 anticipation.  Its &+Rreddish-orange fur&n ripples with muscles.
 ~
-1074006088 0 0 34078768 0 0 0 0 S
-AC 0 0 -1
+1074006088 0 0 0 34078768 0 0 0 0 S
+AC 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -76,8 +76,8 @@ piranha fish~
 &+WA piranha swims along the river here. The mouth of this silvery fish
 &+Wis filled with large, triangular-shaped teeth.&n
 ~
-262344 1 0 33556512 0 0 0 0 S
-F 0 0 -1
+262344 1 0 0 33556512 0 0 0 0 S
+F 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 1
@@ -89,8 +89,8 @@ boa snake~
 A &+Gboa constrictor&n hangs from a nearby tree. Its coils ripple as it
 slithers among the branches.
 ~
-2121 0 0 33554468 0 0 0 0 S
-RS 0 0 -1
+2121 0 0 0 33554468 0 0 0 0 S
+RS 0 0 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -103,8 +103,8 @@ A large &+Wking cobra&n sways back and forth here. Its &+Wwhite hood&n
 is raised as it hisses. A &+Lblack design shaped like a pair of&+Lglasses&n
 adorns the back of the &+Whood&n.
 ~
-73 0 0 34078752 0 0 0 0 S
-RS 0 0 -1
+73 0 0 0 34078752 0 0 0 0 S
+RS 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -117,8 +117,8 @@ A brownish-green vine hangs from a tree here.
 &+ginches thick and trails down to the ground. It looks like it would make
 &+ga good rope.&n
 ~
-74 1 0 33554464 0 0 0 0 S
-VT 0 0 -1
+74 1 0 0 33554464 0 0 0 0 S
+VT 0 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -130,8 +130,8 @@ tarantula spider~
 &+LA tarantula crawls along the ground here. Its hairy body is huge,
 &+Lalmost 6 inches in diameter.&n
 ~
-200 0 0 32 0 0 0 0 S
-AS 0 0 -1
+200 0 0 0 32 0 0 0 0 S
+AS 0 0 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -143,8 +143,8 @@ colorful frog~
 &+gA colo&+rrful &+gfrog leaps around here. Its bright green body has
 &+gsplotches of &+rred &+gthe size of a small coin covering it.&n
 ~
-262345 0 0 33554432 2 0 0 0 S
-R 0 0 -1
+262345 0 0 0 33554432 2 0 0 0 S
+R 0 0 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -160,8 +160,8 @@ ears, glowing red eyes, and needle-like teeth lining its beak. Its hands
 and feet have sharp claws, ideal for both shredding flesh and climbing
 trees.
 ~
-1073875016 0 0 704643104 0 0 0 -1000 S
-H 0 0 -1
+1073875016 0 0 0 704643104 0 0 0 -1000 S
+H 0 0 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 1
@@ -175,8 +175,8 @@ dark naga snake~
 &+bfanged mouth and forked tongue. At the end of its tail is a barbed
 &+bstinger. A crest runs down the back of its head.
 ~
-2248 0 0 33554472 8192 0 0 -1000 S
-RS 0 512 -1
+2248 0 0 0 33554472 8192 0 0 -1000 S
+RS 0 512 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -190,8 +190,8 @@ flying snake~
 &+Yleathery, bat-like wings are behind its flattish head. Fangs protrude
 &+Yfrom its mouth, and a forked tongue occasionally pokes out.&n
 ~
-133193 0 0 167772192 0 0 0 0 S
-RS 0 0 -1
+133193 0 0 0 167772192 0 0 0 0 S
+RS 0 0 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 1
