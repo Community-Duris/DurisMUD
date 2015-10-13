@@ -142,7 +142,7 @@ heart fire~
 &+ra h&+Re&+Ya&+Wrt of f&+Yi&+Rr&+re&N~
 &+rA heart of &+Rfire&+W burns here softly.~
 ~
-8 27 2 0 12 0 262145 16385 64 0 0
+8 27 2 0 12 0 262145 16385 32832 0 0
 0 0 0 0 0 0 0 0
 1 19434 100
 E
@@ -201,7 +201,7 @@ dragonling wing~
 &+Ba dragonling wing&N~
 &+BA dragonling wing has been left here.~
 ~
-13 2 3 0 3 0 4096 16385 0 0 0
+13 2 3 0 3 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 3 5 100
 E
@@ -293,7 +293,7 @@ scepter bostas firebraid~
 &+Ythe scepter of Bostas Firebraid&N~
 &+YThe scepter of Bostas Firebraid has been left here.~
 ~
-8 24 3 0 15 0 4097 16385 0 0 0
+8 24 3 0 15 0 4097 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 459685 100
 E
@@ -339,7 +339,7 @@ chunk blackrock ore~
 &+Ca chunk of&+L blackrock&+C ore~
 &+CPertruding out of the cavern wall is a &+Lchunk of blackrock ore.~
 ~
-8 19 3 0 7 0 4096 16385 0 0 0
+8 19 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 5 54545 100
 E
@@ -368,7 +368,7 @@ receipt~
 &+Wa receipt from Marny Taskgulch~
 &+WA receipt has been left here.~
 ~
-8 28 3 0 7 0 0 16385 0 0 0
+8 28 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -396,7 +396,7 @@ scimitar frostsharn~
 &+Ca FrostSharn scimitar&N~
 &+CA scimitar of the FrostSharn orcs lies here.~
 ~
-5 15 3 0 7 0 0 8193 0 0 0
+5 15 3 0 7 0 0 8193 32768 0 0
 5 2 7 0 0 0 0 0
 0 0 100
 E
@@ -410,7 +410,7 @@ green orb mystics~
 &+Ga green orb of mystics&N~
 &+GA green orb of mystics has been left here.~
 ~
-8 15 3 0 7 0 1 16385 64 0 0
+8 15 3 0 7 0 1 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100 4 0 0 0
 E
@@ -425,7 +425,7 @@ scales _noquest_~
 &+Lthe scales of Kyzastaxkasis&N~
 &+LThe scales of Kyzastaxkasis lie here, scattered around.~
 ~
-8 35 5 0 11 0 4096 16385 0 0 0
+8 35 5 0 11 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 30 15456 100
 E
@@ -547,7 +547,7 @@ hunting hat~
 &+ga hunting &+Ghat&N~
 &+gA hunting &+Ghat has been left under a bed.~
 ~
-9 15 3 0 7 0 4096 17 64 0 0
+9 15 3 0 7 0 4096 17 32832 0 0
 15 0 0 4 0 0 0 0
 0 0 100
 E
@@ -638,7 +638,7 @@ bloody heart _noquest_~
 &+rthe bloody heart of Thresh Blackmane&N~
 &+rThe bloody heart of someone has been left here.~
 ~
-8 2 3 0 6 0 8392704 1 0 0 0
+8 2 3 0 6 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -650,7 +650,7 @@ bloody heart _noquest_~
 &+rthe bloody heart of Grimmar Stonebrow&N~
 &+rThe bloody heart of someone has been left here.~
 ~
-8 2 3 0 6 0 8392704 1 0 0 0
+8 2 3 0 6 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -662,7 +662,7 @@ bloody heart _noquest_~
 &+rthe bloody heart of Axelon Clawgrip&N~
 &+rThe bloody heart of someone has been left here.~
 ~
-8 2 3 0 6 0 8392704 1 0 0 0
+8 2 3 0 6 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -674,7 +674,7 @@ bloody heart _noquest_~
 &+rthe bloody heart of Riker Firstfang&N~
 &+rThe bloody heart of someone has been left here.~
 ~
-8 2 3 0 6 0 8392704 1 0 0 0
+8 2 3 0 6 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -702,7 +702,7 @@ brenshan harpy feather~
 &+Wa Bren'Shan harpy feather&N~
 &+WA harpy feather lies here, poking out of the snow.~
 ~
-8 50 3 0 3 0 4096 16385 0 0 0
+8 50 3 0 3 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 4565 100
 E
@@ -714,7 +714,7 @@ straka harpy feather _noquest_~
 &+Wa &+CStraka&+W harpy feather&N~
 &+WA harpy feather lies here, poking out of the snow.~
 ~
-8 50 3 0 3 0 4096 16385 0 0 0
+8 50 3 0 3 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 4565 100
 E
@@ -742,7 +742,7 @@ scouting report~
 &+Wa scouting report&N~
 &+WA scroll of scouting reports lies here.~
 ~
-8 28 3 0 7 0 4096 16385 0 0 0
+8 28 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 5 100
 E
@@ -757,7 +757,7 @@ carefully packaged note~
 &+ya carefully packaged note&N~
 &+yA carefully packaged note has been left here.~
 ~
-8 28 2 0 6 0 0 16385 0 0 0
+8 28 2 0 6 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 10 100
 E
@@ -822,7 +822,7 @@ silverleaf~
 &+Ga &+Csilver&+Gleaf&N~
 &+GA majestic &+Csilver&+Gleaf&+G has fallen here, shimmering slightly.~
 ~
-8 30 3 0 13 0 4097 16385 64 0 0
+8 30 3 0 13 0 4097 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 6555 100
 E
@@ -860,7 +860,7 @@ moongaze longbow bow~
 &+Mthe MoonGaze longbow&N~
 &+MThe MoonGaze longbow has been left here, forgotten.~
 ~
-6 6 3 0 14 0 4198401 8193 64 0 0
+6 6 3 0 14 0 4198401 8193 32832 0 0
 120 120 0 1 0 0 0 0
 1 34592 100 268435456 0 0 0
 E
@@ -879,7 +879,7 @@ small orog figurine~
 &+ra small &+ro&+Lr&+ro&+Lg &+yfigurine&N~
 &+LA small orog figurine has been left here.~
 ~
-8 20 1 0 9 0 1 16385 64 0 0
+8 20 1 0 9 0 1 16385 32832 0 0
 0 0 0 0 0 0 0 0
 1 3459 100
 E
@@ -908,7 +908,7 @@ sharp ravasaur tooth~
 &+Wa sharp &+Lravasaur &+Wtooth&N~
 &+WA sharp &+Lravasaur &+Wtooth&N has been left here.~
 ~
-5 15 3 0 7 0 4096 8193 0 0 0
+5 15 3 0 7 0 4096 8193 32768 0 0
 2 1 11 0 0 0 0 0
 0 0 100
 E
@@ -941,7 +941,7 @@ endurium ore~
 &+Lsome &Ne&+Wn&Nduri&+Wum &+Lore&N~
 &+LSome &Nen&+Wdu&Nri&+Wu&Nm &+Lore &+Ysparkles &+Lfrom the rocks.~
 ~
-8 25 4 0 11 0 4097 16385 64 0 0
+8 25 4 0 11 0 4097 16385 32832 0 0
 0 0 0 0 0 0 0 0
 10 114535 100
 E
@@ -969,7 +969,7 @@ void crystal~
 &+La v&+Wo&+Li&+Wd&+L crystal&N~
 &+LA v&+Wo&+Li&+Wd &+Lcrystal hovers here with &+bdark magic.~
 ~
-8 1 2 0 15 0 33554433 8404993 66 0 0
+8 1 2 0 15 0 33554433 8404993 32834 0 0
 0 0 0 0 0 0 0 0
 20 248456 100
 E
@@ -981,7 +981,7 @@ bloody head thel samar thelsamar~
 &+rthe bloody head of Thel'Samar Deathweave&N~
 &+rA bloody head lies here on the ground.~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 10 100
 E
@@ -1010,7 +1010,7 @@ moonstone~
 &+La moon&+cst&+Cone&N~
 &+LA moon&+cst&+Cone &+chas been left here&+m glowing with power.~
 ~
-8 27 2 0 11 0 1 16385 64 0 0
+8 27 2 0 11 0 1 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 143859 100
 E
@@ -1064,7 +1064,7 @@ golden signet zorana felwood~
 &+Ya golden signet of Zorana Felwood&N~
 &+YA golden signet of Zorana Felwood has been left here.~
 ~
-9 24 3 0 14 0 4096 3 0 0 0
+9 24 3 0 14 0 4096 3 32768 0 0
 3 0 0 0 0 0 0 0
 0 264567 100
 E
@@ -1092,7 +1092,7 @@ message bottle~
 &+Wa message &+cin a bottle&N~
 &+WA glass bottle with a tiny note inside&N rests here.~
 ~
-8 7 2 0 7 0 0 16385 0 0 0
+8 7 2 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 45 100
 E
@@ -1159,7 +1159,7 @@ shadow staff~
 &+La shadow staff&N~
 &+LA shadow staff has been left here.~
 ~
-4 1 3 0 7 0 33554433 16385 64 0 0
+4 1 3 0 7 0 33554433 16385 32832 0 0
 60 7 7 166 0 0 0 0
 -10 85456 100
 E
@@ -1171,7 +1171,7 @@ basilisk egg~
 &+ga basilisk &+Wegg&N~
 &+gA basilisk &+Wegg&+g lies here, hidden among the rocks.~
 ~
-8 45 2 0 5 0 4096 16385 0 0 0
+8 45 2 0 5 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 8456 100
 E
@@ -1197,7 +1197,7 @@ earth crystal~
 &+Lan &+yearth&+L crystal&N~
 &+LAn &+yearth &+Lcrystal has been left here.~
 ~
-8 1 3 0 15 0 33554433 16385 64 0 0
+8 1 3 0 15 0 33554433 16385 32832 0 0
 0 0 0 0 0 0 0 0
 2 234995 100
 E
@@ -1209,7 +1209,7 @@ chest~
 &+LBlackbeard's chest&N~
 &+LBlackbeard's chest lies here, &+ypoking out of the sand.~
 ~
-15 15 3 0 7 0 8392704 16385 0 0 0
+15 15 3 0 7 0 8392704 16385 32768 0 0
 45 29 0 0 0 0 0 0
 0 0 100
 E
@@ -1238,7 +1238,7 @@ red pirate bandana~
 &+Ra red pirate's bandana&N~
 &+RA red pirate's bandana has been left here.~
 ~
-9 3 3 0 8 0 0 17 0 0 0
+9 3 3 0 8 0 0 17 32768 0 0
 7 0 0 0 0 0 0 0
 0 6554 100
 E
@@ -1266,7 +1266,7 @@ nether ore~
 &+Lsome &+Mnether &+Lore&N~
 &+LSome &+Mnether &+Lore is lying here.~
 ~
-8 27 3 0 15 0 33554433 16385 64 0 0
+8 27 3 0 15 0 33554433 16385 32832 0 0
 0 0 0 0 0 0 0 0
 5 85944 100
 E
@@ -1278,7 +1278,7 @@ nether crystal~
 &+La &+Mnether &+Lcrystal&N~
 &+LA vibrating &+Mnether &+Lcrystal floats here glowing.~
 ~
-8 27 3 0 15 0 33554433 16385 64 0 0
+8 27 3 0 15 0 33554433 16385 32832 0 0
 0 0 0 0 0 0 0 0
 5 156453 100
 E
@@ -1290,7 +1290,7 @@ plagued skull~
 &+Wa &+Lplagued &+Wskull&N~
 &+WA rotting, &+Lplagued &+Wskull lies here, covered in chunks of flesh.~
 ~
-8 10 3 0 7 0 8392704 16385 0 0 0
+8 10 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 645 100
 E
@@ -1355,7 +1355,7 @@ ether crystal~
 &+Lan &+Wether &+Lcrystal&N~
 &+LAn &+Wether &+Lcrystal floats here glowing high over the ground.~
 ~
-8 25 3 0 7 0 33554433 16385 64 0 0
+8 25 3 0 7 0 33554433 16385 32832 0 0
 0 0 0 0 0 0 0 0
 3 149558 100
 E
@@ -1367,7 +1367,7 @@ gremlin claw~
 &+Wa &+Lgremlin &+Wclaw&N~
 &+LA gremlin &+Wclaw&+L has been left here.~
 ~
-5 15 3 0 7 0 0 8193 0 0 0
+5 15 3 0 7 0 0 8193 32768 0 0
 2 2 8 0 0 0 0 0
 0 0 100
 E
@@ -1394,7 +1394,7 @@ golden githzerai ring~
 &+Ya golden &+ygith&+Gzerai &+Yring&N~
 &+YA golden &+ygith&+Gzerai &+Yring lies here among the rubble.~
 ~
-9 24 1 0 12 0 4097 3 64 0 0
+9 24 1 0 12 0 4097 3 32832 0 0
 4 0 0 0 0 0 0 0
 0 16556 100
 E
@@ -1451,7 +1451,7 @@ life shard~
 &+Ya life shard&N~
 &+YA life shard has been left here.~
 ~
-8 23 3 0 15 0 4097 16385 0 0 0
+8 23 3 0 15 0 4097 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 E
@@ -1668,7 +1668,7 @@ life shard~
 &+La life shard&N~
 &+YA life shard has been left here.~
 ~
-8 23 3 0 15 0 4097 16385 0 0 0
+8 23 3 0 15 0 4097 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 E
@@ -1680,7 +1680,7 @@ life shard~
 &+Ma life shard&N~
 &+YA life shard has been left here.~
 ~
-8 23 3 0 15 0 4097 16385 0 0 0
+8 23 3 0 15 0 4097 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 E
@@ -1692,7 +1692,7 @@ life shard~
 &+Ga life shard&N~
 &+YA life shard has been left here.~
 ~
-8 23 3 0 15 0 4097 16385 0 0 0
+8 23 3 0 15 0 4097 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 E

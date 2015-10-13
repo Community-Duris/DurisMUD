@@ -11,8 +11,8 @@ giant cavern bear~
 &+Linhabitants of these caverns steer well clear of the lair of this bear,
 &+Las certain and gruesome death does not appeal even to the stupid.&n
 ~
-1074137162 1 0 134220056 2 0 0 -1000 S
-ac 0 1 6
+1074137162 1 0 0 134220056 2 0 0 -1000 S
+ac 0 1 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -33,8 +33,8 @@ huge grizzly bear~
 &+Lit stalks through the room, promising a swift death for any who do not
 &+Lpossess the intelligence not to interfere with its search for a mate.&n
 ~
-1074137160 1 0 134220056 2 0 0 -1000 S
-ac 0 1 5
+1074137160 1 0 0 134220056 2 0 0 -1000 S
+ac 0 1 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ cave panther~
 &+Ltypes of prey, this panther leaves many of the creatures who cross its
 &+Lpath alone and unaware of their brush with mortality.&n
 ~
-1074137160 1 0 134744376 2 0 0 -1000 S
-ac 0 1 2
+1074137160 1 0 0 134744376 2 0 0 -1000 S
+ac 0 1 0 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -78,8 +78,8 @@ ancient constrictor snake~
 &+Lweight while it wraps several coils around the victim to provide the
 &+Wcrushing force necessary to finish it off.&n
 ~
-1074137160 1 0 134220056 2 0 0 0 S
-rs 0 1 6
+1074137160 1 0 0 134220056 2 0 0 0 S
+rs 0 1 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -102,8 +102,8 @@ deep crawler~
 &+Lfrom the head section where eyes would normally be, and although they
 &+Ldo not contain deadly poison they are still nonetheless venemous.&n
 ~
-1074137160 1 0 134220056 2 0 0 -1000 S
-I 0 1 6
+1074137160 1 0 0 134220056 2 0 0 -1000 S
+I 0 1 0 6
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -125,8 +125,8 @@ fearsome black troll~
 &+gtheir caves off from this area, it is likely that its attempt at a
 &+gthoughtful demeanor would quickly transform into rage.&n
 ~
-1074137164 1 0 134220056 2 0 0 -1000 S
-pt 0 1 3
+1074137164 1 0 0 134220056 2 0 0 -1000 S
+pt 0 1 0 3
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -144,8 +144,8 @@ shaughin dark hunter~
 &+gwith a vine rope which he can use to bind and drag any kills back to
 &+ghis campsite for processing.&n
 ~
-1074137164 0 0 134220056 2 0 0 -1000 S
-H 0 1 3
+1074137164 0 0 0 134220056 2 0 0 -1000 S
+H 0 1 0 3
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -163,8 +163,8 @@ shaughin elite hunter~
 &+gwith a vine rope which he can use to bind and drag any kills back to
 &+ghis campsite for processing.&n
 ~
-1074137164 0 0 134220056 2 0 0 -1000 S
-H 0 1 3
+1074137164 0 0 0 134220056 2 0 0 -1000 S
+H 0 1 0 3
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -184,8 +184,8 @@ translucent cavern cube~
 &+cnonetheless detect and track living creatures and moves forward with
 &+cdefinite aggression and determination.&n
 ~
-1074137160 1 0 134220056 2 0 0 -1000 S
-ea 0 1 6
+1074137160 1 0 0 134220056 2 0 0 -1000 S
+ea 0 1 0 6
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -204,8 +204,8 @@ angry deep dwarf~
 &+Lis quite formidable for her to have survived in this maze without the
 &+Lslightest hint of stealth or conflict avoidance skills.
 ~
-1074137160 1 0 134220056 2 0 0 -1000 S
-pm 0 1048576 2
+1074137160 1 0 0 134220056 2 0 0 -1000 S
+pm 0 1048576 0 2
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -224,8 +224,8 @@ shaughin camp worker~
 &+gto efficiently snuff the life from a living opponent should it become
 &+gnecessary.&n
 ~
-1141246026 0 0 134220056 2 0 0 -1000 S
-H 0 1 3
+1141246026 0 0 0 134220056 2 0 0 -1000 S
+H 0 1 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -244,8 +244,8 @@ shaughin camp worker~
 &+gto efficiently snuff the life from a living opponent should it become
 &+gnecessary.&n
 ~
-1141246024 0 0 134220056 2 0 0 -1000 S
-H 0 1 3
+1141246024 0 0 0 134220056 2 0 0 -1000 S
+H 0 1 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

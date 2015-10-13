@@ -150,7 +150,7 @@ pile coal~
 &+La pile of coal&n~
 &+LA pile of coal sits here.&n~
 ~
-13 11 3 0 7 0 4096 16385 0 0 0
+13 11 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 192 100
 E
@@ -174,7 +174,7 @@ valve furnance~
 &+La broken furnance valve&n~
 &+LA broken furnance valve has been left here.&n~
 ~
-8 15 3 0 7 0 4096 16385 0 0 0
+8 15 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1902 100
 E
@@ -187,7 +187,7 @@ ticket travel~
 &+ya travel ticket&n~
 &+yA ticket lies here, discarded.&N~
 ~
-8 29 3 0 7 0 0 16385 0 0 0
+8 29 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 11000 100
 E
@@ -318,7 +318,7 @@ packet sea maps~
 &+ya packet of sea maps&n~
 &+yA packet of sea maps have been left here.&n~
 ~
-8 29 3 0 7 0 4096 1 0 0 0
+8 29 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 902 100
 E

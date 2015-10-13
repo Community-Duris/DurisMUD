@@ -9,8 +9,8 @@ golem mostly formed guardian~
 &non magic alone and relies on no substance.  That in itself makes the guardian&n
 &+Wvery dangerous.&n
 ~
-28746 1 0 33628668 30 0 0 0 S
-G 0 1 6
+28746 1 0 0 33628668 30 0 0 0 S
+G 0 1 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -25,8 +25,8 @@ soldier heaven heavens fighter warrior~
 &nhas no interest in politics.  It is a semi glorified golem created from the&n
 &+Lgod's power to deal with the unleashed fury of the renegade goddess.&n
 ~
-33568842 1 0 33554744 30 0 0 0 S
-PO 0 1 -1
+33568842 1 0 0 33554744 30 0 0 0 S
+PO 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -41,15 +41,15 @@ lieutenant heavens heaven lieut~
 &neven if this golem was created for only that purpose, whether it is not&n
 &+Lcapable of greater feats.&n
 ~
-1107310664 1 0 33554940 30 0 0 0 S
-PO 0 512 5
+1107310664 1 0 0 33554940 30 0 0 0 S
+PO 0 512 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #71204
-mighty griffon grifon grif animal~
-&+Wa mighty &+Ygriffon&n~
-&+WReady to circle the village, this &+Ygriffon&+W has landed only momentarily.&n
+mighty griffin animal~
+&+Wa mighty &+Ygriffin&n~
+&+WReady to circle the village, this &+Ygriffin&+W has landed only momentarily.&n
 ~
 &+Y  Although not a servant of the council, this magnificent creature is here&n
 &+Wbecause it realizes the need for law and order.  When asked by the god of&n
@@ -58,8 +58,8 @@ mighty griffon grifon grif animal~
 &+Wpreserved, and that those imprisoned in Mount Banishment, were done so for a&n
 &+Yvery good reason.&n
 ~
-1107441738 1 0 234881340 158 64 0 0 S
-DK 0 128 5
+1107441738 1 0 0 234881340 158 64 0 0 S
+DK 0 128 0 5
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -76,8 +76,8 @@ last survivor nital man townsperson survive~
 &+W"The horror.  The horror.  Brain, in my hair"&N he looks from side to side&n
 &nquickly and huddles back up in the shadows roughly ripping at his scalp.&n
 ~
-33568842 0 0 33554748 30 0 0 -200 S
-PH 0 8192 -1
+33568842 0 0 0 33554748 30 0 0 -200 S
+PH 0 8192 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -92,8 +92,8 @@ demon stray~
 &+Ltorn apart, the rest of the forces advanced.  Now, he looks for more victims,&n
 &+Lhoping to avoid the heavenly troops until he can rejoin his brethren.&n
 ~
-33962056 1 0 838861116 30 0 0 -1000 S
-X 0 16384 -1
+33962056 1 0 0 838861116 30 0 0 -1000 S
+X 0 16384 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -108,8 +108,8 @@ demon devious~
 &+LIf she were to disable their forces, and destroy them, it is likely that she&n
 &+Lcould finish her destruction and move on to continue it elsewhere.&n
 ~
-33962056 1 0 437780796 30 0 0 -1000 S
-X 0 8192 -1
+33962056 1 0 0 437780796 30 0 0 -1000 S
+X 0 8192 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -124,8 +124,8 @@ bear scared extremely~
 &ncircumstances, this bear would rather just walk away from anything to cross&n
 &nits path, but today it is too frightened to act rationally.&n
 ~
-10312 1 0 301990204 30 0 0 0 S
-A 0 1 4
+10312 1 0 0 301990204 30 0 0 0 S
+A 0 1 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -141,8 +141,8 @@ heavenly stone golem~
 &nmeans of getting to the other side besides frontal assault but so far have had&n
 &+Llittle luck.&n
 ~
-33962058 1 0 301990332 30 0 0 0 S
-G 0 1 -1
+33962058 1 0 0 301990332 30 0 0 0 S
+G 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -158,8 +158,8 @@ commander comander heavens heaven~
 &nslim yet powerful physique provides him ample tools to accomplish these goals&n
 &+Land his pearly skin gives off a strange glow.&n
 ~
-33962058 1 0 301990268 30 0 0 0 S
-G 0 129 -1
+33962058 1 0 0 301990268 30 0 0 0 S
+G 0 129 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -173,8 +173,8 @@ soldier heaven heavens fighter warrior~
 &Ncould be going on in the minds of the gods.  He most likely has been forgotten&n
 &+Lby them until the bulk of the fighting is over.&n
 ~
-33568840 1 0 33554748 30 0 0 0 S
-PO 0 2 -1
+33568840 1 0 0 33554748 30 0 0 0 S
+PO 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -190,8 +190,8 @@ demon small little~
 &+Lblood.  Some small cuts on his arms quickly stitch themselves together again&n
 &+Rand the it is easy to realize how even this demon is intimidating.&n
 ~
-33962058 1 0 301990204 30 0 0 -1000 S
-X 0 1 5
+33962058 1 0 0 301990204 30 0 0 -1000 S
+X 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -206,8 +206,8 @@ demon large~
 &+La capture would bring to Tallin, would ensure this demon's existence throughout&n
 &+Rthe apocalypse.&n
 ~
-33962058 1 0 838861180 30 0 0 -1000 S
-X 0 32 5
+33962058 1 0 0 838861180 30 0 0 -1000 S
+X 0 32 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -222,8 +222,8 @@ lieutenant heavens heaven lieut~
 &neven if this golem was created for only that purpose, whether it is not&n
 &+Lcapable of greater feats.&n
 ~
-33568842 1 0 33554812 30 0 0 0 S
-PO 0 512 -1
+33568842 1 0 0 33554812 30 0 0 0 S
+PO 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -239,8 +239,8 @@ pitmaster demon pit horrific master~
 &+Lstarvation, fire, and magic he throws the last of the townspeople in grinning&n
 &+Lmaniacally.&n
 ~
-1107703882 1 0 301990332 2079 0 0 -1000 S
-X 0 16 -1
+1107703882 1 0 0 301990332 2079 0 0 -1000 S
+X 0 16 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -255,8 +255,8 @@ demonic demon larvae mean~
 &+Rcreatures seem to blend into one as a writhing mass of teeth and snakelike&n
 &+Lbody.&n
 ~
-10318 1 0 33554696 30 0 0 -1000 S
-RS 0 1 -1
+10318 1 0 0 33554696 30 0 0 -1000 S
+RS 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -271,8 +271,8 @@ young little smart demon~
 &+Lnothing.  He very soon will grow into a powerful demon, but is not quite there&n
 &+Lyet.&n
 ~
-33962062 1 0 301990188 30 0 0 -1000 S
-HG 0 512 -1
+33962062 1 0 0 301990188 30 0 0 -1000 S
+HG 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -286,8 +286,8 @@ young little vicious demon~
 &+Lmanner is amazing.  With vicious accuracy he slashes at everything, and it is&n
 &+Lobvious that some day he will be a very mean demon.&n
 ~
-33830990 1 0 33554748 30 0 0 -1000 S
-PM 0 1 -1
+33830990 1 0 0 33554748 30 0 0 -1000 S
+PM 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -302,8 +302,8 @@ demonic demon larvae cerebral~
 &+Rcreatures seem to blend into one as a writhing mass of teeth and snakelike&n
 &+Lbody.&n
 ~
-10318 1 0 33554696 30 0 0 -1000 S
-RS 0 4 -1
+10318 1 0 0 33554696 30 0 0 -1000 S
+RS 0 4 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -319,8 +319,8 @@ titan paladin~
 &nof what is happening are true, the goddess could very well rip the world apart&n
 &Nwith her plot.&n
 ~
-33568842 1 0 33554812 32798 0 0 -1000 S
-G 0 8 -1
+33568842 1 0 0 33554812 32798 0 0 -1000 S
+G 0 8 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -335,8 +335,8 @@ giant anti-paladin anti~
 &+Lthere to be a world ruled by evil, there must be a world.  Although not&n
 &+Lpleased, this giant obeyed his master's wishes.&n
 ~
-33830986 1 0 33554812 32798 0 0 -1000 S
-G 0 16 -1
+33830986 1 0 0 33554812 32798 0 0 -1000 S
+G 0 16 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -351,8 +351,8 @@ demon impatient eager nabassu~
 &+Lbeen ordered however to await a point in which reinforcements are necessary,&n
 &+Land so far the troops have been holding their own.&n
 ~
-1107703882 1 0 838861180 30 0 0 -1000 S
-X 0 64 -1
+1107703882 1 0 0 838861180 30 0 0 -1000 S
+X 0 64 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -369,8 +369,8 @@ demon swathed flames flaming~
 &+rdifficult to look at because there indeed appear to be flames flickering&n
 &+rwithin them.&n
 ~
-1108310090 1 0 301990268 31 0 0 -1000 S
-X 0 256 -1
+1108310090 1 0 0 301990268 31 0 0 -1000 S
+X 0 256 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -387,8 +387,8 @@ earth elemental mental large~
 &+ymaster of the caliber of this elemental's to have sent him.  He bursts with&n
 &+ypower as he begins his search for a demon to squash.&n
 ~
-33568840 1 0 33554860 30 0 0 0 S
-EE 0 1 -1
+33568840 1 0 0 33554860 30 0 0 0 S
+EE 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -404,8 +404,8 @@ water large elemental mental~
 &+bvengeance.  As it finishes forming, two especially large bubbles begin looking&n
 &+bfor a demon to drown.&n
 ~
-41973832 1 0 301990204 2078 0 0 0 S
-EW 0 1 -1
+41973832 1 0 0 301990204 2078 0 0 0 S
+EW 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -422,8 +422,8 @@ fire large elemental mental~
 &+rbrightly on its chest.  Ready to scorch some demons it begins to look around&n
 &+ranxiously for those who side with Tallin.&n
 ~
-33585224 1 0 301990204 31 0 0 0 S
-EF 0 1 -1
+33585224 1 0 0 301990204 31 0 0 0 S
+EF 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -440,8 +440,8 @@ air large elemental mental~
 &+Capart.  Two small eddy's in the wind begin looking for a demon to send hurtling&n
 &+Coff into the abyss.&n
 ~
-33585224 1 0 33554748 30 262144 0 0 S
-EA 0 1 -1
+33585224 1 0 0 33554748 30 262144 0 0 S
+EA 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -457,8 +457,8 @@ frost giant~
 &+Lof the heavens, he fears Tallin's wrath more.  Perhaps rending the world&n
 &+Casunder is enough motivation to keep this giant swinging his mighty axe.&n
 ~
-33568840 1 0 33554748 30 0 0 -1000 S
-G 0 1 -1
+33568840 1 0 0 33554748 30 0 0 -1000 S
+G 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -475,8 +475,8 @@ gnoll warrior~
 &+Lpleasure in causing a bit more additional pain.  Its dog face has a cruel&n
 &+glook which sends a chill down even the most hardened spine.&n
 ~
-33564746 1 0 33554732 30 0 0 -1000 S
-HO 0 1 4
+33564746 1 0 0 33554732 30 0 0 -1000 S
+HO 0 1 0 4
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -492,8 +492,8 @@ gnoll chief chieftain~
 &+Lare not limitless.  The loyalty of the followers of Tallin is to the death,&n
 &+Land her minions are devious beyond words.&n
 ~
-33564744 1 0 33554732 30 64 0 -1000 S
-HO 0 256 -1
+33564744 1 0 0 33554732 30 64 0 -1000 S
+HO 0 256 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -513,8 +513,8 @@ gnoll chief chieftain~
 &+Lamused gnoll smiles at itself thinking he may just have gained some favor with&n
 &+LYeenoghu today.&n
 ~
-33568842 1 0 33554812 30 0 0 -1000 S
-HO 0 2048 -1
+33568842 1 0 0 33554812 30 0 0 -1000 S
+HO 0 2048 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -536,8 +536,8 @@ white dragon large mature~
 &+Wdestroy anything that comes near it, is an easy task for the gargantuan beast&n
 &+gto swallow.&n
 ~
-33962570 1 0 302022972 94 2097152 0 -1000 S
-D 0 32 -1
+33962570 1 0 0 302022972 94 2097152 0 -1000 S
+D 0 32 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -553,8 +553,8 @@ demon little~
 &+Ldegree of restraint is present however, because all of these demons fear&n
 &+LTallin nearly as much as they fear their Queen.&n
 ~
-33962058 1 0 301990204 30 0 0 -1000 S
-X 0 1 4
+33962058 1 0 0 301990204 30 0 0 -1000 S
+X 0 1 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -572,8 +572,8 @@ ancient black wyrm dragon~
 &+Lfollowers, and this wyrm is no exception.  Steam rises from its nostrils as&n
 &+ga breath of flames is but a moment away.&n
 ~
-33963082 1 0 301990332 8222 0 0 -1000 S
-D 0 1024 -1
+33963082 1 0 0 301990332 8222 0 0 -1000 S
+D 0 1024 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -591,8 +591,8 @@ ancient red wyrm dragon~
 &+Lfollowers, and this wyrm is no exception.  Steam rises from its nostrils as&n
 &+ga breath of flames is but a moment away.&n
 ~
-33962058 1 0 301990332 30 0 0 -1000 S
-D 0 2048 -1
+33962058 1 0 0 301990332 30 0 0 -1000 S
+D 0 2048 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -612,8 +612,8 @@ demon demonic advisor adviser tallin~
 &+Lbristles as he notices outsiders enter, however he remains open to the&n
 &+Lpossiblity that anybody might be useful in the right circumstance.&n
 ~
-33978442 0 0 301990332 264223 0 0 -1000 S
-X 0 131073 -1
+33978442 0 0 0 301990332 264223 0 0 -1000 S
+X 0 131073 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -630,8 +630,8 @@ black robed demon smart bodyguard body guard~
 &+Rhas some worshipers of his own.  Surely regaining the Rod of Seven Parts for&n
 &+Rthe Queen of chaos in the Abyss will not hurt his bid for power either.&n
 ~
-33962058 1 0 973078972 30 131136 0 -1000 S
-X 0 512 -1
+33962058 1 0 0 973078972 30 131136 0 -1000 S
+X 0 512 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -647,8 +647,8 @@ red robed demon strong bodyguard body guard~
 &+Lbig things for him on the horizon.  Neither one will let a soul anywhere near&n
 &+LTallin, and their power is enormous.&n
 ~
-33962058 1 0 973111740 30 67240000 1024 -1000 S
-X 0 1 -1
+33962058 1 0 0 973111740 30 67240000 1024 -1000 S
+X 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -669,8 +669,8 @@ tallin goddess destruction~
 &+Rmaterial plane.  Even now, she grows extra heads from all around her body
 &+Yso that she can wreak more havoc.&n
 ~
-36075595 1 0 973185468 309471 68157568 271872 -1000 S
-Y 0 5 -1
+36075595 1 0 0 973185468 309471 68157568 271872 -1000 S
+Y 0 5 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -685,8 +685,8 @@ marlith demon~
 &+Rwould prefer to get up close an personal and perhaps strangle its victims&n
 &+Lwith its long snake tail.  Grinning evilly, it shows a mouth full of fangs.&n
 ~
-33830984 1 0 838893884 2078 0 0 -1000 S
-RS 0 18 6
+33830984 1 0 0 838893884 2078 0 0 -1000 S
+RS 0 18 0 6
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -701,8 +701,8 @@ demon eager nabassu~
 &+Lbattle will come soon, it can't come soon enough for this follower of the Queen&n
 &+Lof Chaos.&n
 ~
-33830984 1 0 301990268 30 0 0 -1000 S
-X 0 16384 -1
+33830984 1 0 0 301990268 30 0 0 -1000 S
+X 0 16384 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -718,8 +718,8 @@ demon small little~
 &+Lblood.  Some small cuts on his arms quickly stitch themselves together again&n
 &+Rand the it is easy to realize how even this demon is intimidating.&n
 ~
-33962056 1 0 33554492 30 0 0 -1000 S
-X 0 1 -1
+33962056 1 0 0 33554492 30 0 0 -1000 S
+X 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -739,8 +739,8 @@ demon queen chaos~
 &+Lfrom bringing chaos to the world.  As she turns her many many eyes upon any&n
 &+Lintruders, it becomes very obvious why she has stayed in power.&n
 ~
-33978442 1 0 436314556 264223 16777216 16 -1000 S
-BH 0 513 7
+33978442 1 0 0 436314556 264223 16777216 16 -1000 S
+BH 0 513 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -758,8 +758,8 @@ miska wolf spider general~
 &+ycovers his whole body and below his human face some spider jaws linger ready&n
 &+yto bite his victim voraciously.&n
 ~
-33978442 1 0 436314556 296991 67895296 9984 -1000 S
-Y 0 65 7
+33978442 1 0 0 436314556 296991 67895296 9984 -1000 S
+Y 0 65 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -774,8 +774,8 @@ spider demon bodyguard body guard~
 &+Lin places the hairy spider thorax has been replaced by leathery demonic skin&N
 &+Lriddled with pits and horns.&n
 ~
-33962058 1 0 301990204 30 0 0 -1000 S
-X 0 32 -1
+33962058 1 0 0 301990204 30 0 0 -1000 S
+X 0 32 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -793,8 +793,8 @@ frost giant enormous~
 &+La catnap and then do the rest.  Now this half trapped giant is awake and ready&n
 &+Cto vent some frustration.&n
 ~
-33585226 1 0 301990204 94 0 0 -1000 S
-G 0 1 -1
+33585226 1 0 0 301990204 94 0 0 -1000 S
+G 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -815,8 +815,8 @@ ancient man collector historian history~
 &+Ginside the older part of &+ytown&+G that he might be looking for as well.  He seems&n
 &+Lvery thorough and would certainly want to cover all ground.&N
 ~
-407624 0 0 301990332 30 0 0 700 S
-PE 0 512 -1
+407624 0 0 0 301990332 30 0 0 700 S
+PE 0 512 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -832,8 +832,8 @@ bodyguard tallin body guard~
 &+rproof as to why he is overqualified for this job.  Even as demons go, this&n
 &+Lone proves to be extremely powerful.&n
 ~
-33961992 1 0 301990204 30 0 0 -1000 S
-X 0 2 -1
+33961992 1 0 0 301990204 30 0 0 -1000 S
+X 0 2 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -850,8 +850,8 @@ ever expanding fog feeding feed death~
 &+Lwhether the combatants should be more worried about this fog than fighting&n
 &+Leach other.&n
 ~
-34502728 1 0 436207932 2078 0 512 -1000 S
-UG 0 262144 -1
+34502728 1 0 0 436207932 2078 0 512 -1000 S
+UG 0 262144 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -868,8 +868,8 @@ zu god harmony~
 &+Wthe council in a frenzy to take her down before she destroys it all.  Zu is&n
 &+Win charge of making that happen.&n
 ~
-33978440 1 0 301990332 276703 128 262144 0 S
-AN 0 8 -1
+33978440 1 0 0 301990332 276703 128 262144 0 S
+AN 0 8 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -886,8 +886,8 @@ alu demon alu-demon~
 &+Ltime.  Once victory is within reach, he would be prepared to snatch as much&n
 &+Lpower as possible, by any means necessary.&n
 ~
-33962056 1 0 301990270 30 0 0 -1000 S
-X 0 10 -1
+33962056 1 0 0 301990270 30 0 0 -1000 S
+X 0 10 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -903,8 +903,8 @@ demon balor~
 &+Ris conquered, it will also be one of the first to vie most likely successfully&n
 &+Lfor power.&n
 ~
-33962056 1 0 301990332 31 0 512 -1000 S
-X 0 48 -1
+33962056 1 0 0 301990332 31 0 512 -1000 S
+X 0 48 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -920,8 +920,8 @@ nervous advisor councilors council~
 &nworld.  As he thinks continually on this problem, he doesn't notice even the&n
 &Nmost noisy clatter of dishes.&n
 ~
-33564680 0 0 301990204 30 0 0 -800 S
-GI 0 256 -1
+33564680 0 0 0 301990204 30 0 0 -800 S
+GI 0 256 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -937,8 +937,8 @@ many-armed many armed demon~
 &+Rwas left in a magically silenced area as a last resort against any onslaught&n
 &+Gby the forces of heaven, and he fully intends to stop them should they come.&n
 ~
-33568840 1 0 33587512 30 0 0 -1000 S
-TK 0 1 -1
+33568840 1 0 0 33587512 30 0 0 -1000 S
+TK 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -954,8 +954,8 @@ commander comander heavens heaven~
 &nproduce.  Although he seems to be far away as he relays orders, his blank eyes&n
 &+Wwatch everything in the area.&n
 ~
-33962056 1 0 301990204 30 0 0 0 S
-G 0 1 -1
+33962056 1 0 0 301990204 30 0 0 0 S
+G 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -971,8 +971,8 @@ seeker torg seek~
 &+mwhat they seek.  Should the plan work, they will be able to finish a plot to&n
 &+mtruly bring the world to its knees.&n
 ~
-41957384 0 0 301990204 30 0 0 -1000 S
-PL 0 65536 -1
+41957384 0 0 0 301990204 30 0 0 -1000 S
+PL 0 65536 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -989,8 +989,8 @@ elderly elder mage sorcerer wildmage wild~
 &n
 &+W"My rings, my rings!"&n
 ~
-33699848 0 0 301990332 2078 0 0 -1000 S
-HF 0 512 2
+33699848 0 0 0 301990332 2078 0 0 -1000 S
+HF 0 512 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1005,8 +1005,8 @@ demon large~
 &+La capture would bring to Tallin, would ensure this demon's existence throughout&n
 &+Rthe apocalypse.&n
 ~
-33962056 1 0 838861180 30 0 0 -1000 S
-PO 0 32 -1
+33962056 1 0 0 838861180 30 0 0 -1000 S
+PO 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1023,8 +1023,8 @@ yeenoghu demon prince~
 &+Lis great.  His follower assist in the defense of the rift as the demons are&N
 &+Labout to pour through.&N
 ~
-1175877640 1 0 3120662972 264223 0 0 -1000 S
-X 0 545 7
+1175877640 1 0 0 3120662972 264223 0 0 -1000 S
+X 0 545 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1039,8 +1039,8 @@ battle hardened gnoll body guard bodyguard~
 &+gof those battles.  He is absolutely loyal to Yeenoghu, and would gladly destroy&N
 &+gany who come too near his lord.&N
 ~
-33568842 1 0 33554748 30 0 0 -1000 S
-HO 0 1 4
+33568842 1 0 0 33554748 30 0 0 -1000 S
+HO 0 1 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

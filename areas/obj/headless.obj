@@ -83,7 +83,7 @@ ears murf elven pair~
 &+cthe ears of &+Cmurf&n~
 &+cA pair of elven ears lie here in the dust.&n~
 ~
-12 15 3 1 7 0 8392704 16385 4096 1 0
+12 15 3 1 7 0 8392704 16385 36864 1 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -291,7 +291,7 @@ mithril token malra~
 &+Wa&n &+Cmithril&+W token to Malra&n~
 &+WA mithril token lies abandoned here.&n~
 ~
-9 15 3 2 7 0 0 5 0 0 0
+9 15 3 2 7 0 0 5 32768 0 0
 5 2 1 3 0 0 0 0
 2 10000 100
 E
@@ -307,7 +307,7 @@ adamantium token kaan~
 &+ran&n &+madamantium&n &+rtoken to Kaan&n~
 &+rAn adamantium token to Kaan lis here abandoned.&n~
 ~
-9 19 3 2 7 0 0 5 0 0 0
+9 19 3 2 7 0 0 5 32768 0 0
 5 2 1 3 0 0 0 0
 2 100000 100
 E
@@ -576,7 +576,7 @@ purchase requisition~
 &+ga purchase requisition&n~
 &+gA purchase requisition lies here on the ground.&n~
 ~
-12 15 3 1 7 0 8392704 1 0 1 0
+12 15 3 1 7 0 8392704 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -606,7 +606,7 @@ scales sea serpent~
 &+Gthe scales of a sea serpent&n~
 &+GThe scales of a sea serpent lie here.&n~
 ~
-12 35 3 5 15 0 8392704 1 0 1 0
+12 35 3 5 15 0 8392704 1 32768 1 0
 0 0 0 0 0 0 0 0
 5 10000 100
 E
@@ -702,7 +702,7 @@ pile scales xorn~
 &+cthe scales of a&+C xorn&n~
 &+cThe scales of a xorn lie here in a pile&n~
 ~
-12 15 3 10 7 0 8392704 1 0 1 0
+12 15 3 10 7 0 8392704 1 32768 1 0
 0 0 0 0 0 0 0 0
 10 10000 100
 E
@@ -798,7 +798,7 @@ scales queen xorn~
 &+cthe scales of the &+Cqueen xorn&n~
 &+A pile of xorn scales lies here forgotten.&n~
 ~
-12 35 3 5 7 0 8388608 1 0 1 0
+12 35 3 5 7 0 8388608 1 32768 1 0
 0 0 0 0 0 0 0 0
 5 100000 100
 E
@@ -811,7 +811,7 @@ gears cogs assembly clockwork~
 &+ga clockwork assembly&n~
 &+gA strange assembly of gears and cogs lies here.&n~
 ~
-12 15 3 10 7 0 8392704 1 0 1 0
+12 15 3 10 7 0 8392704 1 32768 1 0
 0 0 0 0 0 0 0 0
 10 10000 100
 E

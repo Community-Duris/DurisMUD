@@ -148,7 +148,7 @@ fire dragon egg~
 &+Ra fire dragon egg&N~
 &+RA fire dragon egg has been left here.~
 ~
-8 15 3 0 7 0 4097 16385 0 0 0
+8 15 3 0 7 0 4097 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100 536870912 0 0 0
 E
@@ -295,7 +295,7 @@ tiny locket platinum chain~
 &+Ya tiny locket on a &+Wplatinum chain&N~
 &+GA tiny golden locket on a &+Wplatinum chain&N has been left here.~
 ~
-8 15 3 0 7 0 4096 16385 64 0 0
+8 15 3 0 7 0 4096 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -430,7 +430,7 @@ old cloudy glass eye~
 &+Lan old, cloudy &+Wglass&+L eye&N~
 &+LAn old, cloudy &+Wglass eye&+L of a powerful witch has been left here.~
 ~
-9 15 3 0 7 0 4096 131073 64 0 0
+9 15 3 0 7 0 4096 131073 32832 0 0
 4 0 0 0 0 0 0 0
 0 0 100
 E
@@ -583,7 +583,7 @@ grotesque black devil heart~
 &+Ma grotesque &+Lblack &+Mdevil's heart&N~
 &+MThe black &+Lheart&+M of Chernovog the Devil God&N has been left here.~
 ~
-8 2 3 0 7 0 4224 16385 64 0 0
+8 2 3 0 7 0 4224 16385 32832 0 0
 0 0 0 0 0 0 0 0
 5 2695849 100
 E
@@ -754,7 +754,7 @@ mark saboteur~
 &+Lthe &+rmark&+L of the &+rs&+La&+rb&+Lo&+rt&+Le&+ru&+Lr&N~
 &+LThe mark of the &+rsaboteur &+Lhas been left here.~
 ~
-9 3 0 0 7 0 0 2097153 0 0 0
+9 3 0 0 7 0 0 2097153 32768 0 0
 4 0 0 0 0 0 0 0
 0 15343 100 0 0 0 1048576
 E
@@ -775,7 +775,7 @@ badge vistani~
 &+La badge of the &+cVistani&+L~
 &+LA badge of the &+cVistani&+L has been left here.~
 ~
-9 3 0 0 7 0 0 2097153 0 0 0
+9 3 0 0 7 0 0 2097153 32768 0 0
 4 0 0 0 0 0 0 0
 0 15343 100
 E

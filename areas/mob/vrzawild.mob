@@ -7,8 +7,8 @@ This giant wolf stands larger than a horse. Notorious for their savage bite
 and immense destructive capabilities, they are feared by any sane denizen of
 the glacier.
 ~
-1073741832 5 0 1572864 0 0 0 0 S
-AC 0 1 -1
+1073741832 5 0 0 1572864 0 0 0 0 S
+AC 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -21,8 +21,8 @@ This giant wolf stands larger than a horse. Notorious for their savage bite
 and immense destructive capabilities, they are feared by any sane denizen of
 the glacier.
 ~
-1073741832 5 0 1572864 0 0 0 0 S
-AC 0 1 -1
+1073741832 5 0 0 1572864 0 0 0 0 S
+AC 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -35,8 +35,8 @@ This giant wolf stands larger than a horse. Notorious for their savage bite
 and immense destructive capabilities, they are feared by any sane denizen of
 the glacier.
 ~
-1073741832 5 0 1572864 0 0 0 0 S
-AC 0 1 -1
+1073741832 5 0 0 1572864 0 0 0 0 S
+AC 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -49,8 +49,8 @@ This giant wolf stands larger than a horse. Notorious for their savage bite
 and immense destructive capabilities, they are feared by any sane denizen of
 the glacier.
 ~
-1073741832 5 0 1572864 0 0 0 0 S
-AC 0 1 -1
+1073741832 5 0 0 1572864 0 0 0 0 S
+AC 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -63,8 +63,8 @@ This giant wolf stands larger than a horse. Notorious for their savage bite
 and immense destructive capabilities, they are feared by any sane denizen of
 the glacier.
 ~
-1073741832 5 0 1572864 0 0 0 0 S
-AC 0 1 -1
+1073741832 5 0 0 1572864 0 0 0 0 S
+AC 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -78,8 +78,8 @@ to live exclusively in the Crystalspyres. Instead of normal scales, this has
 adapted like the rhemorhaz to have white hot scales to warm its massive
 reptilian body. It is quite large and very imposing.
 ~
-1073741864 1 0 672661504 65 0 0 -1000 S
-D 0 256 -1
+1073741864 1 0 0 672661504 65 0 0 -1000 S
+D 0 256 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -92,8 +92,8 @@ This giant worm is a distant cousin of the feared purple worms of the
 underworld. Smaller in size and white in color, it has made its home in
 the twilight tundras of the Crystalspyres.
 ~
-1073743880 1 0 1572864 262144 0 0 0 S
-RS 0 1 -1
+1073743880 1 0 0 1572864 262144 0 0 0 S
+RS 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -106,8 +106,8 @@ This giant worm is a distant cousin of the feared purple worms of the
 underworld. Smaller in size and white in color, it has made its home in
 the twilight tundras of the Crystalspyres.
 ~
-1073743880 1 0 1572864 262144 0 0 0 S
-RS 0 1 -1
+1073743880 1 0 0 1572864 262144 0 0 0 S
+RS 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -120,8 +120,8 @@ This giant worm is a distant cousin of the feared purple worms of the
 underworld. Smaller in size and white in color, it has made its home in
 the twilight tundras of the Crystalspyres.
 ~
-1073743872 1 0 1572864 262144 0 0 0 S
-RS 0 1 -1
+1073743872 1 0 0 1572864 262144 0 0 0 S
+RS 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -134,8 +134,8 @@ This giant worm is a distant cousin of the feared purple worms of the
 underworld. Smaller in size and white in color, it has made its home in
 the twilight tundras of the Crystalspyres.
 ~
-1073743880 1 0 1572864 262144 0 0 0 S
-RS 0 1 -1
+1073743880 1 0 0 1572864 262144 0 0 0 S
+RS 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -148,8 +148,8 @@ This giant worm is a distant cousin of the feared purple worms of the
 underworld. Smaller in size and white in color, it has made its home in
 the twilight tundras of the Crystalspyres.
 ~
-1073743882 1 0 1572864 262144 0 0 0 S
-RS 0 1 -1
+1073743882 1 0 0 1572864 262144 0 0 0 S
+RS 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -163,8 +163,8 @@ guardian of the kingdom of Verzanan is ready to protect the frontier of the
 glacial empire. He stands about seven feet at the shoulder and is incredibly
 powerful in appearance.
 ~
-1140852878 0 0 268435480 64 0 0 -1000 S
-PB 12 1 -1
+1140852878 0 0 0 268435480 64 0 0 -1000 S
+PB 12 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -179,8 +179,8 @@ both the blatant black hand of evil, and the devious and subtle hand of evil
 often masquerading under the guise of good. He is shaped like a huge drow
 elf over thrice the height of a normal drow.
 ~
-1140852874 1 0 268959784 294977 0 0 -1000 S
-X 0 256 -1
+1140852874 1 0 0 268959784 294977 0 0 -1000 S
+X 0 256 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -191,8 +191,8 @@ yin globe light~
 ~
 &+WThis is an intense ball of light.&N
 ~
-67110922 1 0 268435496 1 0 0 -1000 S
-X 0 1024 -1
+67110922 1 0 0 268435496 1 0 0 -1000 S
+X 0 1024 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -203,8 +203,8 @@ yang globe shadow~
 ~
 &+WThis is an intense ball of shadow.&N
 ~
-67110922 1 0 268435496 262144 0 0 -1000 S
-X 0 512 -1
+67110922 1 0 0 268435496 262144 0 0 -1000 S
+X 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -216,8 +216,8 @@ minion zikata drowlike creature shadowy~
 This looks like a drow at first, but close examination reveals it to be even
 more demonic than a drow elf!
 ~
-1140852746 1 0 268959784 1 0 0 -1000 S
-PL 0 8192 -1
+1140852746 1 0 0 268959784 1 0 0 -1000 S
+PL 0 8192 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -229,8 +229,8 @@ minion zikata drowlike~
 This looks like a drow at first, but close examination reveals it to be even
 more demonic than a drow elf!
 ~
-1140852746 1 0 268959784 1 0 0 -1000 S
-PL 0 8192 -1
+1140852746 1 0 0 268959784 1 0 0 -1000 S
+PL 0 8192 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

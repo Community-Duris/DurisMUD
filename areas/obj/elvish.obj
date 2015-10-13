@@ -183,7 +183,7 @@ egg spider eggs~
 &+Lsome unhatched spi&+md&+Ler &+Weggs&n~
 &+LAn unhatched spi&+md&+Lers &+Weggs lays here encrusted with &+wwebs&+L.~
 ~
-19 45 1 1 5 0 4096 1 0 0 0
+19 45 1 1 5 0 4096 1 32768 0 0
 2 0 0 0 0 0 0 0
 1 1000 100
 E
@@ -195,7 +195,7 @@ vial golden gold dragon statue~
 &+ma &+Ygo&+Wld&+Yen &+Me&+cn&+mg&+Cr&+Ma&+cv&+me&+Cd &+Ld&+rr&+Lag&+ro&+Ln &+mstatue&n~
 &+gA &+Ygold engraved dragon&+g lays along the ground.~
 ~
-10 7 1 1 7 0 237569 8388609 2 0 0
+10 7 1 1 7 0 237569 8388609 32770 0 0
 41 132 -1 -1 0 0 0 0
 1 5324 100
 E
@@ -207,7 +207,7 @@ vial red blood manticore glass~
 &+ra blood-&+Rred &+Wglass &+ymant&+ri&+gcore&n~
 &+rA &+Wglass &+ymant&+ri&+gcore &+mstatue&+r blood-&+Rred &+yrests here apon the ground.~
 ~
-10 7 1 1 7 0 237569 8388609 0 0 0
+10 7 1 1 7 0 237569 8388609 32768 0 0
 36 35 29 -1 0 0 0 0
 1 3456 100
 E
@@ -235,7 +235,7 @@ vial blue serpent sea statue~
 &+ba blue &+Bsea&+b serpent &+mstatue&n~
 &+gA &+bdeep blue &+Bsea &+bserpent &+mstatue &+g rests apon the ground.~
 ~
-10 7 1 1 7 0 237569 1 0 0 0
+10 7 1 1 7 0 237569 1 32768 0 0
 31 15 356 1 0 0 0 0
 1 12452 100
 E
@@ -247,7 +247,7 @@ robin feather tail~
 &+ba &+yrobin's&+b tail feather&n~
 &+bA discarded &+bfeather &+grests here apon the ground.~
 ~
-8 50 0 0 5 0 262145 8929281 0 0 0
+8 50 0 0 5 0 262145 8929281 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -261,7 +261,7 @@ leaf ivy~
 &+ga &+mstrangly &+Mglowing &+Wivy &+gleaf&n~
 &+gAn &+Wivy &+gleaf rests here apon the ground.~
 ~
-9 30 1 0 5 0 40961 8929281 64 0 0
+9 30 1 0 5 0 40961 8929281 32832 0 0
 2 0 0 1 0 0 0 0
 0 10000 100
 E

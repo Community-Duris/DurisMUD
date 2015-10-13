@@ -2,48 +2,48 @@
 &+mValinhaven&n~
 90965 2 0 25 35 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 90823 0 0 100 0 0 0
-*     north exit from " A Dip in the Central Path" to
+*     north exit from "A Dip in the Central Path" to
 *     "Before The Gates of Valinhaven" - open
 *
 D 0 90825 2 0 100 0 0 0
 *     south exit from "Before The Gates of Valinhaven" to
-*     " A Dip in the Central Path" - open
+*     "A Dip in the Central Path" - open
 *
 D 0 90824 5 5 100 0 0 0
-*     down exit from " Lava Spring" to
-*     " Pit Of The Lava Fiend" - closed/secret
+*     down exit from "Lava Spring" to
+*     "Pit of the Lava Fiend" - closed/secret
 *
 D 0 90936 4 5 100 0 0 0
-*     up exit from " Pit Of The Lava Fiend" to
-*     " Lava Spring" - closed/secret
+*     up exit from "Pit of the Lava Fiend" to
+*     "Lava Spring" - closed/secret
 *
 D 0 90828 0 1 100 0 0 0
-*     north exit from " The Gem Refinery" to
-*     " A Steam Filled Room" - closed
+*     north exit from "The Gem Refinery" to
+*     "A Steam-filled Room" - closed
 *
 D 0 90837 2 1 100 0 0 0
-*     south exit from " A Steam Filled Room" to
-*     " The Gem Refinery" - closed
+*     south exit from "A Steam-filled Room" to
+*     "The Gem Refinery" - closed
 *
 D 0 90937 0 1 100 0 0 0
-*     north exit from " Conjurers Training Ground" to
-*     " Master's Room" - closed
+*     north exit from "Conjurers Training Ground" to
+*     "Master's Room" - closed
 *
 D 0 90939 2 1 100 0 0 0
-*     south exit from " Master's Room" to
-*     " Conjurers Training Ground" - closed
+*     south exit from "Master's Room" to
+*     "Conjurers Training Ground" - closed
 *
 D 0 90944 0 2 100 0 0 0
-*     north exit from " The Foreman's Office" to
-*     " A Display Room" - closed/locked
+*     north exit from "The Foreman's Office" to
+*     "A Display Room" - closed/locked
 *
 D 0 90951 2 2 100 0 0 0
-*     south exit from " A Display Room" to
-*     " The Foreman's Office" - closed/locked
+*     south exit from "A Display Room" to
+*     "The Foreman's Office" - closed/locked
 *
 *
 *

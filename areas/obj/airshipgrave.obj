@@ -3,7 +3,7 @@ gold key~
 &+Yan adorned gold key&n~
 &+YAn adorned gold key has been dropped here.&n~
 ~
-18 24 3 0 5 0 8388608 16385 0 0 0
+18 24 3 0 5 0 8388608 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 100 100
 E
@@ -107,7 +107,7 @@ fossil crystal~
 &+Wa fossilized &+Gcrystal&n~
 &+yA &+Wfossilized&+G crystal&+y lies here, covered in dirt.&n~
 ~
-8 8 3 0 5 0 4096 1 0 0 0
+8 8 3 0 5 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 50000 100
 E
@@ -175,7 +175,7 @@ nest rockworm rock worm larvae~
 &+ya nest of rockworm larvae&n~
 &+yA nest of rockworm larvae is here.&n~
 ~
-13 15 3 0 5 0 0 1 0 0 0
+13 15 3 0 5 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -202,7 +202,7 @@ vial liquid sunlight~
 &+Ya vial of liquid sunlight&n~
 &+YA glimmering vial of sunlight has been left here.&n~
 ~
-10 40 3 0 5 0 1024 1 0 524288 0
+10 40 3 0 5 0 1024 1 32768 524288 0
 40 124 0 0 0 0 0 0
 0 29999 100
 E
@@ -234,7 +234,7 @@ hunter bow hunters~
 &+ya splintered hunter's bow&n~
 &+yA splintered and destroyed bow lies here.&n~
 ~
-13 6 3 0 5 0 4096 1 0 0 0
+13 6 3 0 5 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -307,7 +307,7 @@ gold portrait~
 &+ya &+Ygold-&+yframed portrait&n~
 &+yA portrait of &+YDawndale&+y framed with &+Ygold&+y lies here.&n~
 ~
-8 24 3 0 11 0 0 8388609 0 0 0
+8 24 3 0 11 0 0 8388609 32768 0 0
 0 0 0 0 0 0 0 0
 0 50000 100
 E
@@ -323,7 +323,7 @@ collection sparkling stones~
 &+ya collection of &+Cspark&+cli&+Cng&+w stones&N~
 &+yA handful of &+Cspark&+cli&+Cng&+w stones have been dropped here.&n~
 ~
-8 11 3 0 5 0 8388608 16385 0 0 0
+8 11 3 0 5 0 8388608 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 10000 100
 E
@@ -337,7 +337,7 @@ handful rock dust~
 &+ya handful of combustable &+wrock&+y dust&n~
 &+yA small handful of &+wrock&+y dust&+y is here.&n~
 ~
-8 11 3 0 5 0 0 16385 0 0 0
+8 11 3 0 5 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -352,7 +352,7 @@ device explosive detonator small~
 &+ya small &+rexp&+Ylo&+rsive&n &+ydevice&n~
 &+yA small detontation device has been dropped here.&n~
 ~
-8 9 3 0 10 0 8388608 16385 0 0 0
+8 9 3 0 10 0 8388608 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -739,7 +739,7 @@ shamanistic rune stones~
 &+ysome &+Cshamanistic rune &+ystones&n~
 &+yA handful of &+Crune&+y stones have been left here.&n~
 ~
-8 11 3 0 5 0 0 1 0 0 0
+8 11 3 0 5 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 81 100
 E
@@ -754,7 +754,7 @@ coins treasure pile~
 &+Ya pile of treasure&n~
 &+YA large mountain of treasure trinkets and coins lies here.&n~
 ~
-8 24 3 0 5 0 4096 1 0 0 0
+8 24 3 0 5 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 250000 100
 E
@@ -767,7 +767,7 @@ study guide witchcraft book~
 &+ya &+Lwitchcraft&+y study guide&n~
 &+yA thick book with strange glyphs on the cover lies here.&n~
 ~
-23 29 3 0 5 0 0 8404993 0 0 0
+23 29 3 0 5 0 0 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 1222 100
 E
@@ -877,7 +877,7 @@ bucket water~
 &+ya bucket of &+Lrank&+B pool&+b water&n~
 &+yA guard must have left behind a bucket for cleaning the &+bnaga&+B pool&+y here.&n~
 ~
-17 40 3 0 5 0 4096 16385 0 0 0
+17 40 3 0 5 0 4096 16385 32768 0 0
 5 5 7 1 0 0 0 0
 0 299 100
 E
@@ -893,7 +893,7 @@ clump cave monkey fur~
 &+ya clump of &+Lcave&+y monkey fur&n~
 &+yA large clump of fur lays here.&n~
 ~
-8 2 3 0 5 0 4096 16385 0 0 0
+8 2 3 0 5 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E

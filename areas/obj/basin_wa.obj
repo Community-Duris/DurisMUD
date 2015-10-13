@@ -3,7 +3,7 @@ shell~
 &+La bombardier beetle shell&n~
 An unoccupied&+L beetle shell &ndents the ground here.~
 ~
-9 10 0 0 7 0 0 9 0 0 0
+9 10 0 0 7 0 0 9 32768 0 0
 8 3 1 3 0 0 0 0
 20 100 100
 E
@@ -20,7 +20,7 @@ mandible~
 &+La beetle mandible&n~
 A chitinous &+Lbeetle mandible &nhas been left here.~
 ~
-5 15 2 0 7 0 0 8193 0 0 0
+5 15 2 0 7 0 0 8193 32768 0 0
 3 1 8 6 0 0 0 0
 2 100 100
 E
@@ -37,7 +37,7 @@ sac gland light~
 a &+Rfire beetle &+Ylight gland&n~
 &+YA luminous organic sac sheds a pool of light on the ground here.&n~
 ~
-1 2 0 0 7 0 0 16385 0 0 0
+1 2 0 0 7 0 0 16385 32768 0 0
 0 0 96 0 0 0 0 0
 1 20000 100
 E
@@ -50,7 +50,7 @@ horn piece~
 &+ca horn from a rhino beetle&n~
 A piece of a &+crhino beetle's head &nhas been left here.~
 ~
-5 10 2 0 7 0 0 8193 0 0 0
+5 10 2 0 7 0 0 8193 32768 0 0
 15 1 8 11 0 0 0 0
 5 100 100
 E
@@ -392,7 +392,7 @@ signet ring~
 &+Gan ancient signet ring&n~
 &+GA luminous ring creates a small pool of light on the ground.&n~
 ~
-11 16 1 1 7 0 856064 3 0 0 0
+11 16 1 1 7 0 856064 3 32768 0 0
 0 3 3 0 0 0 0 0
 1 5000 100
 E
@@ -409,7 +409,7 @@ potion red glowing~
 &+Ra &+Yglowing &+Rpotion~
 &+RA &+rred &+Rpotion&+Y glows&+R here on the ground.~
 ~
-10 7 3 1 7 0 262144 1 64 0 0
+10 7 3 1 7 0 262144 1 32832 0 0
 30 108 -1 -1 0 0 0 0
 1 50100 100
 E
@@ -483,7 +483,7 @@ heart stone heartstone _noquest_~
 &+Rthe heartstone &nof &+LSakaslan&n~
 &+rA &-L&+Rpulsing&+r reddish &+Lstone&+r lies here.&n~
 ~
-11 11 1 0 15 0 3289097 16385 64 0 0
+11 11 1 0 15 0 3289097 16385 32832 0 0
 0 0 0 0 0 0 0 0
 7 0 100 32 28 128 0
 E
@@ -567,7 +567,7 @@ strange elixir vial dark magic~
 &+Lan elixir of &+mdark &+Mmagic&n~
 &+mA strange elixir vial has been tossed here.&n~
 ~
-10 7 3 0 7 0 4104 8388609 0 0 0
+10 7 3 0 7 0 4104 8388609 32768 0 0
 1 0 0 0 0 0 0 0
 0 0 100
 #34031
@@ -575,6 +575,6 @@ smoldering dragon scale~
 &+ra &+Lsm&+wol&+Lde&+wri&+Lng &+rdragon &+Lscale&n~
 &+rA dragon scale &+Lsmolders here.&n~
 ~
-8 35 3 0 7 0 69632 1 0 0 0
+8 35 3 0 7 0 69632 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100

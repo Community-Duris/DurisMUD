@@ -42,7 +42,7 @@ heart lump wood~
 &+wthe &+Ltwisted &+rheart &+wof a pine&N~
 &+LA hardened lump of wood lies here on the ground.&N~
 ~
-13 15 3 0 7 0 8388616 1 0 0 0
+13 15 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -56,7 +56,7 @@ blob mind~
 &+Lthe demented &+Mmind &+Lof a bear&N~
 &+LA black and &+Mpurple &+Lblob lies here on the ground.&N~
 ~
-13 15 3 0 7 0 8388608 1 0 0 0
+13 15 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -103,7 +103,7 @@ rock~
 &+La m&+Bys&+Lti&+Bca&+Ll &+Mgl&+mow&+Min&+mg &+Lrock&N~
 &+LA rock lies here &+Mhu&+mmm&+Min&+mg &+Lquietly.&N~
 ~
-13 15 3 0 7 0 0 1 0 0 0
+13 15 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -134,7 +134,7 @@ sunbeam beam~
 &+Wa &+Ybeam &+Wof &+Ysun&+Wlight&N~
 &+YA sunbeam has struck the ground here.&N~
 ~
-13 15 3 0 7 0 8650760 1 0 0 0
+13 15 3 0 7 0 8650760 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E

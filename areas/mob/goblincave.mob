@@ -12,8 +12,8 @@ a large hog.  Its snout is flattened and it has floppy ears that hang over the
 side of its head.  It has an enormous stomach and grunts a lot.  It is blind
 for reasons unknown.  Somehow the &+ggoblins&N got them to breed without eyes.&N
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -32,8 +32,8 @@ pootata~
 &+Lhang down like a donkey.  The creature is bred by the &+ggoblins &+Lfor its tasty and
 &+Lgreasy &+rmeat&+L.  It is a staple of food in &+ggoblin &+Lsociety.&N
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -47,8 +47,8 @@ goblin worker~
 &+Lgood looking &+ggoblin&+L as he has quite a few facial scars.  He often whines and
 &+Lcomplains in a very shrill voice about the weight of his load.&N
 ~
-2120 0 0 0 0 0 0 -500 S
-HG 0 1 -1
+2120 0 0 0 0 0 0 0 -500 S
+HG 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -64,8 +64,8 @@ creature is too dumb to realize its fate as it cannot see or fathom what is
 going on around it.  It looks to weigh in excess of five hundred pounds, a
 lot of meat for a &+ggoblin.&N
 ~
-74 0 0 0 0 0 0 0 S
-A 0 0 -1
+74 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -84,8 +84,8 @@ goblin butcher slaughter slaughtermaster master~
 &+Lfinish off most of the livestock in one swift blow, although he usually takes
 &+Lthe time to enjoy the kill.&N
 ~
-2122 0 0 0 0 0 0 -900 S
-HG 0 1 -1
+2122 0 0 0 0 0 0 0 -900 S
+HG 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -102,8 +102,8 @@ goblin leather leatherworker&n~
 &+Lwell known that you can ask him to make a particular item for you.  He usually
 &+Lrequires a few &+Wplatinum&n for his services.&N
 ~
-74 0 0 264 0 0 0 -500 S
-HG 0 1 -1
+74 0 0 0 264 0 0 0 -500 S
+HG 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -120,8 +120,8 @@ bone worker goblin bone-worker~
 &+Lworks dilligently on his next piece.  It is rumored he can also create great
 &+Learrings for warriors.&N
 ~
-10 0 0 0 0 0 0 -890 S
-HG 0 1 -1
+10 0 0 0 0 0 0 0 -890 S
+HG 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -135,8 +135,8 @@ apprentice goblin leather worker~
 &+Lassigned to work with for the rest of his life.  He wanted to join the
 &+Lshaman school but his parents would not allow him to.&N
 ~
-74 0 0 0 0 0 0 -400 S
-HG 0 1 -1
+74 0 0 0 0 0 0 0 -400 S
+HG 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -151,8 +151,8 @@ goblin worker~
 &+Lsame duty several dozen times in his lifetime.  He doesn't especially enjoy
 &+Lhis job but he does it the best he can.&N
 ~
-2120 0 0 256 0 0 0 -400 S
-HG 0 1 -1
+2120 0 0 0 256 0 0 0 -400 S
+HG 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -165,8 +165,8 @@ goblin warrior guard~
 &+Lbut a very kind hearted one.  He is not brutal like many of his fellow guards.
 &+LHe is rather short for his occupation and his equipment looks almost funny.&N
 ~
-2120 0 0 0 0 0 0 -400 S
-HG 0 1 -1
+2120 0 0 0 0 0 0 0 -400 S
+HG 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -316,7 +316,7 @@ tarnished royal signet ring~
 &+ya tarnished &+Yroyal&+y signet ring&n~
 &+yAn ancient and tarnished signet ring lies in the dust here.&n~
 ~
-8 17 3 0 7 0 0 1 0 0 0
+8 17 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -560,7 +560,7 @@ grangle root~
 &+ya grangle root&n~
 &+yA strange root is here.&n~
 ~
-12 42 3 0 7 0 4096 1 0 0 0
+12 42 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -607,7 +607,7 @@ goat hides filthy~
 &+ysome filthy &+Wgoat&+y hides&n~
 &+yA pile of filthy and smelly &+Wgoat&+y hides has been dropped here.&n~
 ~
-9 12 3 0 7 0 0 9 0 0 0
+9 12 3 0 7 0 0 9 32768 0 0
 1 0 0 3 0 0 0 0
 0 1 100
 E
@@ -734,7 +734,7 @@ tormented soul khan aspuru~
 &+Lthe tormented &+csoul &+Lof Kh&+yan As&+Lpuru&n~
 &+LA tormented &+csoul &+Llies here.&n~
 ~
-13 15 3 0 7 0 8388608 1 0 0 0
+13 15 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #57055

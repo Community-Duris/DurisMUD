@@ -3,7 +3,7 @@ chunk meat~
 a &+cchunk&N of &+rmeat~
 A large &+cchunk&N of &+rmeat&N lies here.~
 ~
-19 2 4 0 1 0 8 1 0 0 0
+19 2 4 0 1 0 8 1 32768 0 0
 15 0 0 0 0 0 0 0
 2 1 100
 E
@@ -15,7 +15,7 @@ mushroom yellow small~
 &+Ga small &+Yyellow mushroom~
 &+GA delicious &+Yyellow mushroom &+Gis here.~
 ~
-19 48 1 0 10 0 20488 1 0 0 0
+19 48 1 0 10 0 20488 1 32768 0 0
 9 6 5 0 0 0 0 0
 1 1 100
 E
@@ -27,7 +27,7 @@ blackberries berries~
 some &+Lblack&+mberries~
 &+mSome &+Lblack&+mberries grow on a bush nearby.~
 ~
-19 48 2 0 9 0 20488 16385 0 0 0
+19 48 2 0 9 0 20488 16385 32768 0 0
 12 0 0 0 0 0 0 0
 1 1 100
 E
@@ -73,7 +73,7 @@ chunk meat large~
 a large &+cchunk&N of &+rmeat~
 A very large &+cchunk&N of &+rmeat&N lies here.~
 ~
-19 2 4 0 1 0 8 1 0 0 0
+19 2 4 0 1 0 8 1 32768 0 0
 15 0 0 0 0 0 0 0
 2 1 100
 E

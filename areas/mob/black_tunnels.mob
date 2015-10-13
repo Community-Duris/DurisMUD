@@ -8,8 +8,8 @@ osquip~
 &+YThis osquip has six legs. This creature's hide is a light yellow, almost
 &+Ycolorless and resembles very pliable leather.&n
 ~
-1073744064 1 0 35127328 0 0 0 0 S
-AC 0 0 -1
+1073744064 1 0 0 35127328 0 0 0 0 S
+AC 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -25,8 +25,8 @@ adult aboleth~
 &+gbony ridges, are set atop the other in the front of its head. An
 &+gaboleth is able to swim in water, or crawl on land.&n
 ~
-1074006080 1 0 33663016 5120 0 0 -1000 S
-F 0 0 -1
+1074006080 1 0 0 33663016 5120 0 0 -1000 S
+F 0 0 0 -1
 29 8 7 29d55+319 3d6+4
 0.0.0.0 25839
 8 8 0
@@ -40,8 +40,8 @@ young aboleth~
 &+cThere are three slit-like eyes, one on top of the other, on the front of
 &+cits bulbous head, and are protected by bony ridges.&n
 ~
-1074006208 0 0 33662976 1024 0 0 -500 S
-F 0 0 -1
+1074006208 0 0 0 33662976 1024 0 0 -500 S
+F 0 0 0 -1
 16 13 48 16d30+80 3d4+2
 0.0.0.0 7776
 8 8 0
@@ -55,8 +55,8 @@ dracolisk evil angry~
 &+Ldragon-like monster that moves with relative quickness on its six
 &+Llegs. It can fly, but for only short periods.&n
 ~
-1107429440 1 0 704708620 8192 0 0 -1000 S
-D 0 1 -1
+1107429440 1 0 0 704708620 8192 0 0 -1000 S
+D 0 1 0 -1
 55 -5 -131 55d131+5225 7d6+30
 0.2.3.19 445500
 8 8 0
@@ -70,8 +70,8 @@ flaming salamander~
 &+rlower body is like that of a serpent. On its face is a fiery beard and
 &+rmoustache. Its hot red eyes glare, as it stays at its post.&n
 ~
-33556546 1 0 570425448 4097 0 0 -950 S
-EF 0 1 -1
+33556546 1 0 0 570425448 4097 0 0 -950 S
+EF 0 1 0 -1
 50 -3 -105 50d119+2750 6d6+25
 0.0.0.0 121500
 8 8 1
@@ -86,8 +86,8 @@ large gaund~
 &+gThis male is aggressive about his territory and will do anything to
 &+gprotect it, unafraid of death.&n
 ~
-1073743940 1 0 570425396 0 0 0 0 S
-R 0 1 -1
+1073743940 1 0 0 570425396 0 0 0 0 S
+R 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 1
@@ -102,8 +102,8 @@ female gaund~
 &+gThis female would protect her brood with her own life, and should not
 &+gbe taken lightly.&n
 ~
-2118 1 0 570425400 0 0 0 0 S
-R 0 0 -1
+2118 1 0 0 570425400 0 0 0 0 S
+R 0 0 0 -1
 32 6 -2 32d70+480 4d6+7
 0.0.0.0 41472
 8 8 2
@@ -116,8 +116,8 @@ young gaund~
 &+gThey are intelligent, but spend most of their time on all fours. the skin
 &+gis scaled and leathery, and of a somewhat lighter color on the underside.
 ~
-1073744068 1 0 570425360 0 0 0 0 S
-R 0 0 -1
+1073744068 1 0 0 570425360 0 0 0 0 S
+R 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
@@ -130,8 +130,8 @@ young gaund~
 &+gThey are intelligent, but spend most of thier time on all fours. the skin
 &+gis scaled and leathery, and of a somewhat lighter color on the underside.
 ~
-1073743940 0 0 570425372 0 0 0 0 S
-R 0 0 -1
+1073743940 0 0 0 570425372 0 0 0 0 S
+R 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 2
@@ -143,8 +143,8 @@ fire elemental~
 &+r6 feet tall and blazing steadily, this fire elemental is from the
 &+relemental plane of fire.&n
 ~
-1073743938 1 0 33628268 0 0 0 0 S
-EF 0 1 -1
+1073743938 1 0 0 33628268 0 0 0 0 S
+EF 0 1 0 -1
 40 2 -38 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -157,8 +157,8 @@ This spectre has risen from the dead and seeks to destroy all life
 that comes near it. Glowing red eyes stand out from the rest of this
 undead, drawing your attention.
 ~
-1107298368 1 0 167772170 12480 0 0 -1000 S
-sp 0 0 -1
+1107298368 1 0 0 167772170 12480 0 0 -1000 S
+sp 0 0 0 -1
 35 6 -22 35d70+525 4d6+7
 0.0.0.0 45360
 8 8 1
@@ -170,8 +170,8 @@ large orc leader~
 &+cWell muscled and looking skilled with his weapons, this orc leads
 &+chis band through the tunnels, looking for intruders to their domain.&n
 ~
-67110980 0 0 33554436 0 0 0 -1000 S
-HO 0 1 -1
+67110980 0 0 0 33554436 0 0 0 -1000 S
+HO 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -184,8 +184,8 @@ hunter orc orcish~
 &+gtraverses the tunnels of these underground passages, knowledgable in
 &+gthe ways and creatures of the area.&n
 ~
-1082394692 1 0 33554468 0 0 0 -1000 S
-HO 0 1 -1
+1082394692 1 0 0 33554468 0 0 0 -1000 S
+HO 0 1 0 -1
 23 11 26 23d47+230 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -199,8 +199,8 @@ warrior orc~
 &+bintruders. Dressed in plain metal armor and a wielding an ordinary,
 &+bdirty sword, he's ready for action.&n
 ~
-2116 0 0 33554464 0 0 0 -1000 S
-HO 0 1 -1
+2116 0 0 0 33554464 0 0 0 -1000 S
+HO 0 1 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -213,8 +213,8 @@ guard hulking skeletal~
 &+Wguards the entryway from intruders. A slight red glow emanates from within
 &+Wits empty eyesockets. Dressed in full armor, he looks ready for battle.&n
 ~
-67110978 0 0 570458152 12480 0 0 -1000 S
-sk 0 16 -1
+67110978 0 0 0 570458152 12480 0 0 -1000 S
+sk 0 16 0 -1
 42 -1 -59 42d107+1890 6d6+12
 0.0.0.0 102060
 8 8 0
@@ -225,8 +225,8 @@ skeleton~
 ~
 &+WRaised from the dead, this skeleton walks around brainlessly.&n
 ~
-0 0 0 33554432 0 0 0 -500 S
-sk 0 1 -1
+0 0 0 0 33554432 0 0 0 -500 S
+sk 0 1 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0

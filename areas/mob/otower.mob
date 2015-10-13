@@ -10,8 +10,8 @@ gates for the members of the tower's guild.  He wears a set of black
 robes with a red sash.  His most prized possesion seems to be a sparkling
 wristband that he wears constantly.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-PH 0 64 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+PH 0 64 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -25,8 +25,8 @@ mountain.  He appears to feed one some of the smaller animals that
 wander up from the field to the mountains.  He also seems to have
 the distinct liking for mountain goats.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -40,8 +40,8 @@ mountain.  It makes its way up through the mountain trail and eating
 whatever small grasses it can find. Only sometimes does it get caught
 by the vicious mountain lion.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ seems to be strong enough to hurl large boulders great distances.  His
 cave is very quaint and is quite suitable for all of his uses.  He
 eats mainly the mountain lions and goats.
 ~
-2058 0 0 0 0 0 0 -1000 S
-G 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -72,8 +72,8 @@ evil fiends of the tower.  She wears a simple set of forest robes, which
 almost blend her into the woods.  The only item of value on her seems to
 be a small scarlet ring.
 ~
-1073743882 128 0 152 2048 0 0 1000 S
-PE 0 2 -1
+1073743882 128 0 0 152 2048 0 0 1000 S
+PE 0 2 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -87,8 +87,8 @@ the elven huntress.   This bear appears to be middle-aged, and was
 probably raised from a cub by Aleilinal.  It has a thick coat of warm
 brown fur.  It sleeps upon a large rock in the alpine grove.
 ~
-2058 0 0 0 0 0 0 0 S
-A 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 1
@@ -103,8 +103,8 @@ to a quiet, yet still honorable, position of being the first line of
 defense against any raid against the Outcasts' Tower.  He appears to
 be very large and powerful, even for a troll.
 ~
-1073743882 0 0 144 0 0 0 -1000 S
-PT 0 1 -1
+1073743882 0 0 0 144 0 0 0 -1000 S
+PT 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -119,8 +119,8 @@ This anti-paladin appears to have the lowly rank of a patrolling guard
 in the tower.  He wears a set of simple armor, probably one originally
 bought in Tharnadia and then painted a blood red.
 ~
-1140852744 0 0 144 0 0 0 -1000 S
-PH 0 16 -1
+1140852744 0 0 0 144 0 0 0 -1000 S
+PH 0 16 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -136,8 +136,8 @@ little more than a few skins and wields a small wooden club.  He has
 several wounds all over his body from the constant sparring in this
 training room.
 ~
-2058 0 0 144 0 0 0 -1000 S
-PT 0 1 -1
+2058 0 0 0 144 0 0 0 -1000 S
+PT 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -152,8 +152,8 @@ and lots of scales. It's tale appears to be shaggy like a dogs, except
 for the long spike at the end.  The jaws of this animal are the worst,
 and can rip through most armor.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-A 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+A 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -169,8 +169,8 @@ not particularily assigned to this room, rather they just sort of all
 flock together as a part of tradition.  He wears a simple hide loincloth
 and wields a spike stone club.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-PO 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+PO 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -186,8 +186,8 @@ longswords seem to be the best fighters, while the ones wieldling the
 shortswords appear to be sly and more devious than the others.  Besides
 the poor rusty weapons, they wear a simple set of black sparring clothes.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-PL 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+PL 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -202,8 +202,8 @@ given the job of punishing those who set back this great quest.  He
 wears a suit of black-leather armor and is equipped with only the most
 vile of whips, chains, and rods.
 ~
-1073744010 0 0 268435608 2049 0 0 -1000 S
-PH 0 8192 -1
+1073744010 0 0 0 268435608 2049 0 0 -1000 S
+PH 0 8192 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -217,8 +217,8 @@ not only Talon, but several of the other high warriors of the guild.  He
 has been stripped of all but a bloody loincloth, and sent here to be
 punished by Talon.
 ~
-2058 0 0 0 0 0 0 -1000 S
-PH 0 64 -1
+2058 0 0 0 0 0 0 0 -1000 S
+PH 0 64 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -233,8 +233,8 @@ adventure for the sake of the constant raidings against his home village.
 He has been employed by the powers that be of the tower, to guard this
 slimy muck pool, that only he and the elders know where it leads.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-PT 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+PT 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -248,8 +248,8 @@ He has been given the glorious task of keeping the unwanted out of the
 way of the larger warriors on the higher levels of the tower.  He appears
 to be quite strong and has earned his name in battle.
 ~
-1073743882 1 0 144 0 0 0 -1000 S
-PD 0 1 -1
+1073743882 1 0 0 144 0 0 0 -1000 S
+PD 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -264,8 +264,8 @@ skills to prove it.  He wears a suit of black hide armor, and wields an
 enormous two-handed club, used for beating down any who might stray upwards
 into the tower.
 ~
-1073743882 1 0 152 2048 0 0 -1000 S
-PO 0 1 -1
+1073743882 1 0 0 152 2048 0 0 -1000 S
+PO 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -281,8 +281,8 @@ drawn with his own blood upon the floor.  He wears no shoes and rarely
 sits down, except for memorization.  He teaches his best pupils in this
 room.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PL 0 512 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PL 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -297,8 +297,8 @@ for him.  He wears a pair of small sandles, which probably do more harm than
 good.  Although he is still young and inexperienced, he has been chosen to
 be a worthy apprentice in the tower.
 ~
-1140852746 1 0 144 0 0 0 -1000 S
-PL 0 512 -1
+1140852746 1 0 0 144 0 0 0 -1000 S
+PL 0 512 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -316,8 +316,8 @@ portals after great battles, and bring the looted corpses back to his
 room, where he might teach his students the proper techniques in controlling
 hordes of undead.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-HO 0 1024 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+HO 0 1024 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -332,8 +332,8 @@ of a set of well-made robes, some black-steel greaves, and a hat with a
 bloodstain on it.  He tries to control his undead best he can, in hopes
 he can join the rest of his brothers in an enormous duel one day.
 ~
-1140852746 1 0 0 0 0 0 -1000 S
-HO 0 1024 -1
+1140852746 1 0 0 0 0 0 0 -1000 S
+HO 0 1024 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -349,8 +349,8 @@ arachnids.  She is about average height for a drow elf, and probably weighs
 less than one hundred pounds.  For a drow elf, she might be attractive, if
 she wasn't often covered in the blood of small infants.
 ~
-1073743882 1 0 268435608 2049 0 0 -1000 S
-PL 0 32 -1
+1073743882 1 0 0 268435608 2049 0 0 -1000 S
+PL 0 32 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -365,8 +365,8 @@ composing of a black dress.  She is very young, and has yet to master
 the skills as the priestess who is preforming the ceremony.  She sits
 and watches the ceremony take place.
 ~
-1140852746 1 0 152 0 0 0 -1000 S
-PL 0 32 -1
+1140852746 1 0 0 152 0 0 0 -1000 S
+PL 0 32 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -381,8 +381,8 @@ the sun, as they call them.  He wears a suit of platemail, most likely
 obtained on a raid.  He has a full beard and devious little eyes.  His
 most prized possession appears to be a small ring on his left hand.
 ~
-1073743882 1 0 0 0 0 0 -1000 S
-PD 0 32 -1
+1073743882 1 0 0 0 0 0 0 -1000 S
+PD 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -396,8 +396,8 @@ the duergar and orcish hordes against the humans and elves.  He seems to
 be quite intent on accomplishing this goal, and often comes to this shrine
 to practice with the elder.
 ~
-1140852746 1 0 0 0 0 0 -1000 S
-PD 0 32 -1
+1140852746 1 0 0 0 0 0 0 -1000 S
+PD 0 32 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -412,8 +412,8 @@ directly above the swamp.  Several times a day, he leaves his room and heads
 into the swamp, leaving the ogre guards of the second floor in charge.  He
 seems quite content living this life in the tower.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PT 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -428,8 +428,8 @@ defenses this far.  He is equipped like a true warrior, with sword
 and shield, and a fine suit of armor.  He seems quite large, and
 exceptionally skilled.
 ~
-2058 1 0 152 0 0 0 -1000 S
-PT 0 1 -1
+2058 1 0 0 152 0 0 0 -1000 S
+PT 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -444,8 +444,8 @@ goblin fellow, and has the ability to dodge many of the enemies attacks.
 He is about middle-aged, yet he is full of vigor and energy.  He has
 slain many an elf and human, and his room displays all his trophies.
 ~
-1073743880 1 0 939589788 309443 0 0 -1000 S
-HG 0 1 -1
+1073743880 1 0 0 939589788 309443 0 0 -1000 S
+HG 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -462,8 +462,8 @@ through battle against the races of light, which he quiet often defeats.
 The majority of his time is spent either out on raids, or directing the
 conduct of the tower.
 ~
-1073743880 1 0 805306522 14529 0 0 -1000 S
-PL 0 512 -1
+1073743880 1 0 0 805306522 14529 0 0 -1000 S
+PL 0 512 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -477,8 +477,8 @@ that he can not handle the burdens of leadership, and therefor has devoted
 his life as a bodyguard.  He stands guard here at the intersection of
 the master's quarters, prepared to defend them whatever the cost might be.
 ~
-1073743882 1 0 152 2048 0 0 -1000 S
-PO 0 1 -1
+1073743882 1 0 0 152 2048 0 0 -1000 S
+PO 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -494,8 +494,8 @@ any warrior in the tower.  He wears several different types of armor at
 once for maximum protection, while still having maximum movement
 possible.  He is indeed the great troll mercenary.
 ~
-1073743880 1 0 268435608 2049 0 0 -1000 S
-PT 0 16384 -1
+1073743880 1 0 0 268435608 2049 0 0 -1000 S
+PT 0 16384 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -516,8 +516,8 @@ and whether his control is genuine or illusion, the fact is that he has
 organized this tower for the sole purpose of creating a stronghold for
 the races of darkness, admist the lands of the races of light.
 ~
-1090521098 1 0 957939866 309443 0 0 -1000 S
-MF 0 4 -1
+1090521098 1 0 0 957939866 309443 0 0 -1000 S
+MF 0 4 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -531,8 +531,8 @@ illusionary throne room.  This dragon isn't quite an ancient wyrm, however,
 it is definitly not a hatchling.  Ximixix was wise in chosing the shadow
 dragon, being one of the most deadly dragons in the realm.
 ~
-1141901322 1 0 190 2049 0 0 -1000 S
-D 0 1 -1
+1141901322 1 0 0 190 2049 0 0 -1000 S
+D 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -547,8 +547,8 @@ The only food they see are very small fish, people thrown out of the tower,
 mountain goats who fall off the mountain trails into the swamp, and any
 adventurers who might come and disturb them.
 ~
-1073743882 0 0 144 0 0 0 0 S
-R 0 1 -1
+1073743882 0 0 0 144 0 0 0 0 S
+R 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

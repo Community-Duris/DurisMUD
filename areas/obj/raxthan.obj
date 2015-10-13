@@ -487,7 +487,7 @@ strange mush shrooms mushrooms~
 &nsome &+Gstrange mu&+gshrooms&N~
 &+LSome &+Gstrange &+Llooking &+Gmu&+gshrooms &+Lare on the ground here.&n~
 ~
-19 43 0 0 11 0 0 16385 0 0 0
+19 43 0 0 11 0 0 16385 32768 0 0
 48 0 0 0 0 0 0 0
 0 900 100
 E
@@ -501,7 +501,7 @@ cave shroom~
 &na &+Lcave &+gshroom&n~
 &+LA cave &+gshroom &+Lis on the ground here.&n~
 ~
-19 43 0 0 7 0 4096 16385 0 0 0
+19 43 0 0 7 0 4096 16385 32768 0 0
 33 0 0 0 0 0 0 0
 0 90 100
 E
@@ -591,7 +591,7 @@ head raxthan~
 &nthe &+Lhead of &+rRax&+Rtha&+rn&n~
 &+LYikes someone has left the head of &+rRax&+Rtha&+rn &+Lon the ground here.&n~
 ~
-8 2 3 0 15 55 45056 8404993 0 0 0
+8 2 3 0 15 55 45056 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 1 9 100
 E
@@ -645,7 +645,7 @@ slime covered arrow head~
 &+wa &+Gs&+gl&+Gi&+gm&+Ge &+gc&+Go&+gv&+Ge&+gr&+Ge&+gd &+Larrow head&N~
 &+LA &+Gs&+gl&+Gi&+gm&+Ge &+gc&+Go&+gv&+Ge&+gr&+Ge&+gd &+Larrow head rests upon the ground here.~
 ~
-8 23 1 0 12 33 45065 8404993 64 0 0
+8 23 1 0 12 33 45065 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 E
@@ -703,7 +703,7 @@ scales large serpentine~
 &+Lsome large &+gs&+Ge&+gr&+Gp&+ge&+Gn&+gt &+Lscales&N~
 &+LSome large &+gs&+Ge&+gr&+Gp&+ge&+Gn&+gt &+Lscales rest upon the dismal ground here.&N~
 ~
-8 35 3 0 9 33 45056 8404993 64 0 0
+8 35 3 0 9 33 45056 8404993 32832 0 0
 0 8 1 5 0 0 0 0
 0 9000 100
 E
@@ -739,7 +739,7 @@ head graskal~
 &nthe &+Lhead of &+rGraskal&n~
 &+LYikes someone has left the head of &+rGraskal &+Lon the ground here.&n~
 ~
-8 2 3 0 15 55 4096 16385 0 0 0
+8 2 3 0 15 55 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 9 100
 E
@@ -760,7 +760,7 @@ heart noctule~
 &nthe &+Lblack &+Rheart &+Lof &+rN&+Ro&+rc&+Rt&+ru&+Rl&+re&n~
 &+LSomeone has left a giant &+Rheart &+Lon the ground here.&n~
 ~
-8 2 3 0 15 55 4096 8404993 0 0 0
+8 2 3 0 15 55 4096 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 1 9 100
 E
@@ -816,7 +816,7 @@ head elytron~
 &nthe &+Lhead of &+RElytron&n~
 &+LYikes someone has left the head of &+RElytron &+Lon the ground here.&n~
 ~
-8 2 3 0 15 55 4096 8404993 0 0 0
+8 2 3 0 15 55 4096 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 1 9 100
 E
@@ -1098,7 +1098,7 @@ heart black bloodbeast~
 &+Lthe black &+Rheart &+Lof a &+RBl&+ro&+Ro&+rd&+Lbeast&N~
 &+LThe black &+Rheart &+Lof a giant creature rests upon the ground here.&N~
 ~
-8 2 3 0 11 9 45064 8404993 0 0 0
+8 2 3 0 11 9 45064 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 1 9000 100
 E
@@ -1117,7 +1117,7 @@ fang~
 &+wa &+Lgiant &+Rzvorgast &+Wfang&N~
 &+LA giant &+Wfang &+Lhas been left upon the ground to gather &+wdust&+L.&N~
 ~
-8 34 3 0 9 9 45056 8404993 0 0 0
+8 34 3 0 9 9 45056 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 3333 100
 E
@@ -1293,7 +1293,7 @@ spine darthus~
 &+Lthe &+Wspine &+Lof Darthus&N~
 &+LA ripped out &+Wspine &+Lhas been left upon the ghastly ground here.&N~
 ~
-5 10 3 0 9 0 45064 24577 0 0 0
+5 10 3 0 9 0 45064 24577 32768 0 0
 2 2 4 0 0 0 0 0
 0 0 100
 E
@@ -1310,7 +1310,7 @@ tongue agama~
 &+Lthe &+Rtongue &+Lof &+rAgama&N~
 &+LA &+Rtongue &+Lhas been left upon the ghastly ground here.&N~
 ~
-8 2 2 0 11 0 45064 16385 0 0 0
+8 2 2 0 11 0 45064 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E

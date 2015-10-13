@@ -4,8 +4,8 @@ something~
 A vaporous, swirling mist is here, enveloping you in ruthless terror.
 ~
 ~
-100677708 1 0 537919612 14556 0 0 -1000 S
-X 0 128 -1
+100677708 1 0 0 537919612 14556 0 0 -1000 S
+X 0 128 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

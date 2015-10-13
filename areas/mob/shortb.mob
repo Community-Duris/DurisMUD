@@ -15,8 +15,8 @@ srakart human necro necromancer~
 &+Lforgotten arcane tome of necromancy - he started the extraplanar journey for
 &+Leven more power...
 ~
-33699918 0 0 671162536 47298 0 0 -1000 S
-PH 0 1024 -1
+33699918 0 0 0 671162536 47298 0 0 -1000 S
+PH 0 1024 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -29,8 +29,8 @@ A soul wanders here, lost in her way out of this world.
 this world, yet. It will wander within this fog until some mercifull God
 will summon her into his realm.
 ~
-33962056 1 0 436207616 4096 0 0 0 S
-UG 0 1 -1
+33962056 1 0 0 436207616 4096 0 0 0 S
+UG 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -43,8 +43,8 @@ A soul wanders here, lost in her way out of this world.
 this world, yet. It will wander within this fog until some mercifull God
 will summon her into his realm.
 ~
-33962056 0 0 167772160 4096 0 0 0 S
-UG 0 32 -1
+33962056 0 0 0 167772160 4096 0 0 0 S
+UG 0 32 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -57,8 +57,8 @@ A soul wanders here, lost in her way out of this world.
 this world, yet. It will wander within this fog until some mercifull God
 will summon her into his realm.
 ~
-33962056 0 0 167772160 4096 0 0 0 S
-UG 0 512 -1
+33962056 0 0 0 167772160 4096 0 0 0 S
+UG 0 512 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -72,8 +72,8 @@ abandoned and let live on his own. Its mental powers are greatly diminished
 by lack of a living master, and it doesn't really know what it shall do.
 It's hungry.
 ~
-1074006222 0 0 0 2 0 0 -1000 S
-UV 0 16 -1
+1074006222 0 0 0 0 2 0 0 -1000 S
+UV 0 16 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -86,8 +86,8 @@ a giant turtle~
 brief inspection it occurs it's not. This turtle learned to feed on undead
 dwelling the fog. He drains their powers, feeding his own. Incredible.
 ~
-33560654 0 0 2208 0 0 0 0 S
-R 0 1 6
+33560654 0 0 0 2208 0 0 0 0 S
+R 0 1 0 6
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -100,8 +100,8 @@ a giant turtle~
 brief inspection it occurs she's not. This turtle learned to feed on undead
 dwelling the fog. She drains their powers, feeding her own.
 ~
-33560654 0 0 268437668 0 0 0 0 S
-R 0 0 6
+33560654 0 0 0 268437668 0 0 0 0 S
+R 0 0 0 6
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -114,8 +114,8 @@ A soul wanders here, lost in her way out of this world.
 this world, yet. It will wander within this fog until some mercifull God
 will summon her into his realm.
 ~
-33962056 1 0 167772160 4096 0 0 0 S
-UG 0 1 -1
+33962056 1 0 0 167772160 4096 0 0 0 S
+UG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -128,8 +128,8 @@ A soul wanders here, lost in her way out of this world.
 this world, yet. It will wander within this fog until some mercifull God
 will summon her into his realm.
 ~
-33962056 0 0 167772160 4096 0 0 0 S
-UG 0 32 -1
+33962056 0 0 0 167772160 4096 0 0 0 S
+UG 0 32 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -142,8 +142,8 @@ A soul wanders here, lost in her way out of this world.
 this world, yet. It will wander within this fog until some mercifull deity
 will summon her into his realm.
 ~
-33962056 0 0 167772160 4096 0 0 0 S
-UG 0 512 -1
+33962056 0 0 0 167772160 4096 0 0 0 S
+UG 0 512 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -156,8 +156,8 @@ A crippled soul floats here, obviously drained from energy.
 It moves slowly, unable to do anything else but just move.
 But who or what is capable of draining a ghost?
 ~
-33962056 1 0 167772160 5120 0 0 0 S
-UG 0 1 -1
+33962056 1 0 0 167772160 5120 0 0 0 S
+UG 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -170,8 +170,8 @@ A crippled soul floats here, obviously drained from energy.
 It moves slowly, unable to do anything else but just move.
 But who or what is capable of draining a ghost?
 ~
-33962056 1 0 167772160 5120 0 0 0 S
-UG 0 1 -1
+33962056 1 0 0 167772160 5120 0 0 0 S
+UG 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -184,8 +184,8 @@ A crippled soul floats here, obviously drained from energy.
 It moves slowly, unable to do anything else but just move.
 But who or what is capable of draining a ghost?
 ~
-33962058 1 0 167772160 5120 0 0 0 S
-UG 0 8192 -1
+33962058 1 0 0 167772160 5120 0 0 0 S
+UG 0 8192 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -198,8 +198,8 @@ A crippled soul floats here, obviously drained from energy.
 It moves slowly, unable to do anything else but just move.
 But who or what is capable of draining a ghost?
 ~
-33962058 0 0 167772160 5120 0 0 0 S
-UG 0 1 3
+33962058 0 0 0 167772160 5120 0 0 0 S
+UG 0 1 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

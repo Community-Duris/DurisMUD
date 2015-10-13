@@ -18,7 +18,7 @@ earring~
 a &+Rco&+rra&+Rl &nearring~
 A &+Rco&+rra&+Rl &nearring has been tossed here.~
 ~
-11 1 10 0 7 0 0 524289 64 0 0
+11 1 10 0 7 0 0 524289 32832 0 0
 0 0 0 0 0 0 0 0
 0 20 100
 E
@@ -304,7 +304,7 @@ blue gem~
 a &+Cblue gem~
 A &+Cblue gem &+Bhas been tossed here.&N~
 ~
-10 26 10 0 7 0 0 1 64 0 0
+10 26 10 0 7 0 0 1 32832 0 0
 1 85 -1 -1 0 0 0 0
 0 50 100
 E

@@ -9,8 +9,8 @@ eshadow shadow serpent yuan-ti~
 &+Land nightmares to them in their sleep. It was rumored that Sseth was fathered
 &+Lby a shadow dragon from the demi-plane of Shadows.
 ~
-1110915274 1 0 957939864 268435458 67108864 571483136 -1000 S
-dk 0 24576 -1
+1110915274 1 0 0 957939864 268435458 67108864 571483136 -1000 S
+dk 0 24576 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -27,8 +27,8 @@ ssythar chosen yuan-ti~
 &+LSsythar, his Presence is always welcomed on the field of battle. He sits here
 &+Lwatching the sparring lessons.
 ~
-1107363914 1 0 134283288 34818 128 570435584 -1000 S
-pt 0 2304 -1
+1107363914 1 0 0 134283288 34818 128 570435584 -1000 S
+pt 0 2304 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -44,8 +44,8 @@ sss'yin'tia'saminass feathered serpent~
 &+gshe who will be the last, once the Night Serpent has devoured the sun. Confined
 &+Where and tormented by nightmares of the end.
 ~
-2229034 0 0 24 0 0 0 1000 S
-d 0 512 -1
+2229034 0 0 0 24 0 0 0 1000 S
+d 0 512 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -59,8 +59,8 @@ najara naga overlord~
 &+Mto rule over the yuan-ti whom have dwell here within the temple. Najara sits
 &+Mupon a throne ruling all nagas and bides his time
 ~
-1109882953 1 0 402718872 32962 128 570433536 -1000 S
-dk 0 768 -1
+1109882953 1 0 0 402718872 32962 128 570433536 -1000 S
+dk 0 768 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -74,8 +74,8 @@ vrael'oloiss serpent lord yuan-ti~
 &+Lhis cunning and cold hearted tactics he is the commander of the Serpent
 &+LFangs, an elite military force used for assinations.
 ~
-1074214922 1 0 956367000 268482754 67108928 583541760 -1000 S
-dk 0 1048592 -1
+1074214922 1 0 0 956367000 268482754 67108928 583541760 -1000 S
+dk 0 1048592 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -90,8 +90,8 @@ hss'tafin yuan-ti abomination commander~
 &+Lbrigade the Serpents Fang are one of the few yuan-ti forces whom take part in
 &+Lthe fighting during times of war.
 ~
-1074202634 1 0 956301336 268449986 67108992 47186944 -1000 S
-x 0 1048576 -1
+1074202634 1 0 0 956301336 268449986 67108992 47186944 -1000 S
+x 0 1048576 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -105,8 +105,8 @@ ss'sehen yuan-ti half-blood~
 &+Land despite her serpent like appearnce she could still pass for human. Not an
 &+Lassassins she sometimes infiltrate human cities to spy on them.
 ~
-460810 1 0 3103858840 268482754 67108992 584066048 -1000 S
-dk 0 2432 -1
+460810 1 0 0 3103858840 268482754 67108992 584066048 -1000 S
+dk 0 2432 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -121,8 +121,8 @@ ss'thar'tiss'ssum emerald princess yuan-ti~
 &+gthe Temple of Elder Elemental Evil but holds power in the hearts in mind
 &+gof soldiers Serpents Fang and worshipers of the Emerald Serpent.
 ~
-2492682 1 0 3103850648 47298 17301640 583542784 -1000 S
-d 0 260 -1
+2492682 1 0 0 3103850648 47298 17301640 583542784 -1000 S
+d 0 260 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -139,8 +139,8 @@ terpenzi witch king witch-king yuan-ti abomination~
 &+Land wife delve into magical research and bide their time to take back the
 &+LFang Kingdom.
 ~
-1075972106 0 0 3103858840 269531330 67633224 583543808 -1000 S
-bh 0 640 -1
+1075972106 0 0 0 3103858840 269531330 67633224 583543808 -1000 S
+bh 0 640 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -154,8 +154,8 @@ sa'kowlyn'raa witch queen half-blood yuan-ti~
 &+Lpowerful sorcerers whom also dabbles in the arts of shamanism. She and her
 &+Lconsort spend most of their time delving into magical research.
 ~
-1109788746 1 0 3103858840 276838594 67633288 584592384 -1000 S
-d 0 2304 -1
+1109788746 1 0 0 3103858840 276838594 67633288 584592384 -1000 S
+d 0 2304 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -173,8 +173,8 @@ slaazh kingslayer yuan-ti abomination~
 &+Lagony. He keeps the flaming crowns and skulls upon his neck attached by a
 &+Lmithril chain like a badge of office.
 ~
-1128218378 1 0 3104383128 269531330 67633280 576203776 -1000 S
-bh 0 1048576 -1
+1128218378 1 0 0 3104383128 269531330 67633280 576203776 -1000 S
+bh 0 1048576 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -190,8 +190,8 @@ dendar elder night serpent~
 &+Lviscour essence of lost dreams and her scales glows with a thousand hypnotic
 &+Lhues of darkness, a terrifying yet beautiful affect.
 ~
-53870666 0 0 3103858842 284211394 85459072 584594464 -1000 S
-d 0 68 -1
+53870666 0 0 0 3103858842 284211394 85459072 584594464 -1000 S
+d 0 68 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -211,8 +211,8 @@ extinguishes all nearby fires, and he reeks with the sweet stench of
 ancient death. Those with a sense of smell can catch this scent from many
 miles away.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -232,8 +232,8 @@ of the darkness within. The mouth is the color of blood and can expand to a
 great width or extend downward into a long snout similar to that of an
 anteater. Within the mouth, hard plates of cartilage constantly grind together.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -249,8 +249,8 @@ The yuan-ti abomination, Xaod the Death Serpent is here, researching necromancy.
 &+LSerpent. Now he spends most of his time in research of necromancy with his
 &+Lillithid lich assistant.
 ~
-1107757130 1 0 3103858840 269498562 85459080 584592384 -1000 S
-bh 0 525312 -1
+1107757130 1 0 0 3103858840 269498562 85459080 584592384 -1000 S
+bh 0 525312 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -266,8 +266,8 @@ ventured from the Underdark to the Temple of the Elder Eternal Evil over twenty 
 though his lifespan started over a century before this. He is known the adviser of the
 Serpent of Death, helping him in his magical research of necromancy.
 ~
-1073887306 1 0 3103858840 14530 17301640 541591552 -1000 S
-mf 0 263168 -1
+1073887306 1 0 0 3103858840 14530 17301640 541591552 -1000 S
+mf 0 263168 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -285,8 +285,8 @@ eyes. She dresses in extravagant, but form-fitting, long gowns of satin, silk
 and velvet robes with shades of purple. She hopes to someday be a Lord
 herselve taking the place of the Emerald Serpent.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -301,8 +301,8 @@ Z&+Wz&+L'&ns&+L'z&nik&+La, the &+bA&+Br&+Lcanei&+Bs&+bt~
 &+Linto research and the training of younger yuan-ti mages in their
 &+Lfirst stages of magecraft.
 ~
-35731530 1 0 3170959512 269793474 1161330816 584727584 -1000 S
-bh 0 524288 -1
+35731530 1 0 0 3170959512 269793474 1161330816 584727584 -1000 S
+bh 0 524288 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -315,8 +315,8 @@ yuan-ti guard~
 &+Lwith the Serpent Fang sigil upon his breastplate. He sits here within the
 &+Lbarracks waiting to be called to war.
 ~
-1073743946 1 0 3103858840 268447938 1048576 34603008 -1000 S
-dk 0 1048576 -1
+1073743946 1 0 0 3103858840 268447938 1048576 34603008 -1000 S
+dk 0 1048576 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -329,8 +329,8 @@ yuan-ti guard~
 &+Lwith the Serpent Lords sigil upon his breastplate. He sits here within the
 &+Lbarracks waiting to be called to war.
 ~
-1073743946 1 0 3103858840 268447938 1048576 34603008 -1000 S
-dk 0 1048576 -1
+1073743946 1 0 0 3103858840 268447938 1048576 34603008 -1000 S
+dk 0 1048576 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -344,8 +344,8 @@ yuan-ti guard guardian~
 &+Lguard the Spire of the Eternal Eclipse when not at war. Warhardend and always
 &+Lready for battle they attack anything not of their own kin.
 ~
-1073743946 1 0 3103858840 268447938 1048576 34603008 -1000 S
-dk 0 1048576 -1
+1073743946 1 0 0 3103858840 268447938 1048576 34603008 -1000 S
+dk 0 1048576 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -359,8 +359,8 @@ yuan-ti lord~
 &+Lthe Temple of the Elder Eternal Evil, he wonders the halls, looking thoughtful
 &+Lwith his personal escort.
 ~
-1073743944 1 0 3103858840 268447938 1048576 34603008 -1000 S
-dk 0 64 -1
+1073743944 1 0 0 3103858840 268447938 1048576 34603008 -1000 S
+dk 0 64 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -374,8 +374,8 @@ yuan-ti guard guardian~
 &+Lguard the Spire of the temple of evil when not at war. Warhardend and always
 &+Lready for battle they attack anything not of their own kin.
 ~
-1073743946 1 0 3103858840 268447938 1048576 34603008 -1000 S
-dk 0 16 -1
+1073743946 1 0 0 3103858840 268447938 1048576 34603008 -1000 S
+dk 0 16 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -389,8 +389,8 @@ yuan-ti mage~
 &+Lthe Temple of the Elder Eternal Evil, he wonders the halls, looking thoughtful
 &+Lwith his personal escort.
 ~
-1073743944 1 0 3103858840 268447938 1048576 34603008 -1000 S
-dk 0 512 -1
+1073743944 1 0 0 3103858840 268447938 1048576 34603008 -1000 S
+dk 0 512 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -404,8 +404,8 @@ yuan-ti guard guardian~
 &+Lguard the Spire of the temple of evil when not at war. Warhardend and always
 &+Lready for battle they attack anything not of their own kin.
 ~
-1073743946 1 0 3103858840 268447938 1048576 34603008 -1000 S
-dk 0 16777216 -1
+1073743946 1 0 0 3103858840 268447938 1048576 34603008 -1000 S
+dk 0 16777216 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -419,8 +419,8 @@ yuan-ti lord~
 &+Lthe Temple of the Elder Eternal Evil, he wonders the halls, looking thoughtful
 &+Lwith his personal escort.
 ~
-1073743944 1 0 3103858840 268447938 1048576 34603008 -1000 S
-dk 0 64 -1
+1073743944 1 0 0 3103858840 268447938 1048576 34603008 -1000 S
+dk 0 64 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -434,8 +434,8 @@ yuan-ti mage~
 &+Lthe Temple of the Elder Eternal Evil, he wonders the halls, looking thoughtful
 &+Lwith his personal escort.
 ~
-1073743946 1 0 3103858840 268447938 1048576 34603008 -1000 S
-dk 0 512 -1
+1073743946 1 0 0 3103858840 268447938 1048576 34603008 -1000 S
+dk 0 512 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -449,8 +449,8 @@ bone naga~
 &+WHis flesh has completely rotted and fell away from him, leaving a serpentine
 &nbone body, with a humanoid skull and skeletal face.
 ~
-421962 1 0 3103860888 268482754 17825928 576192512 -1000 S
-ul 0 1024 -1
+421962 1 0 0 3103860888 268482754 17825928 576192512 -1000 S
+ul 0 1024 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -462,8 +462,8 @@ dark naga~
 &+m   This ugly creature has a serpentine body, and a humanoid head with the face
 &+mand visage of an old ugly crone.
 ~
-1074165834 1 0 3103860888 268449986 84934784 580396032 -1000 S
-r 0 256 -1
+1074165834 1 0 0 3103860888 268449986 84934784 580396032 -1000 S
+r 0 256 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -475,8 +475,8 @@ spirit naga~
 &+W   This appears to be a ghostly serpent, with the a ethereal head of an old
 &+Wcrone. It slithers here and their around the throne room of the Naga Overlord.
 ~
-1074165770 1 0 3103852698 268482754 84934656 576202752 -1000 S
-ug 0 512 -1
+1074165770 1 0 0 3103852698 268482754 84934656 576202752 -1000 S
+ug 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -490,8 +490,8 @@ bone naga~
 &+WHis flesh has completely rotted and fell away from him, leaving a serpentine
 &nbone body, with a humanoid skull and skeletal face.
 ~
-1074137160 1 0 3103860888 268482754 17825928 576192512 -1000 S
-ul 0 1024 -1
+1074137160 1 0 0 3103860888 268482754 17825928 576192512 -1000 S
+ul 0 1024 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -503,8 +503,8 @@ dark naga~
 &+m   This ugly creature has a serpentine body, and a humanoid head with the face
 &+mand visage of an old ugly crone.
 ~
-1074137160 1 0 3103860888 268449986 84934784 580396032 -1000 S
-r 0 512 -1
+1074137160 1 0 0 3103860888 268449986 84934784 580396032 -1000 S
+r 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -516,8 +516,8 @@ spirit naga~
 &+W   This appears to be a ghostly serpent, with the a ethereal head of an old
 &+Wcrone. It slithers here and their around the throne room of the Naga Overlord.
 ~
-1074137098 1 0 3103852698 268482754 84934656 576202752 -1000 S
-ug 0 256 -1
+1074137098 1 0 0 3103852698 268482754 84934656 576202752 -1000 S
+ug 0 256 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -531,8 +531,8 @@ yuan-ti pure-blood apprentice~
 &+Lspheres of magic. Any apprentice can exptect to go far in mastering the
 &+Lelements.
 ~
-1073743946 1 0 3103858840 14530 16777216 34603008 -1000 S
-r 0 512 -1
+1073743946 1 0 0 3103858840 14530 16777216 34603008 -1000 S
+r 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -546,8 +546,8 @@ yuan-ti pure-blood apprentice~
 &+Lspheres of magic. Any apprentice can exptect to go far in mastering the
 &+Lelements.
 ~
-1073743946 1 0 3103858840 14530 16777216 34603008 -1000 S
-r 0 512 -1
+1073743946 1 0 0 3103858840 14530 16777216 34603008 -1000 S
+r 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -563,8 +563,8 @@ his own magic. So that his master doesnt not have to waste his own magic
 keeping whatever he has summoned chained and trapped within the magic
 circles power.
 ~
-28682 1 0 3103858840 14528 8 37748736 -1000 S
-dk 0 2304 -1
+28682 1 0 0 3103858840 14528 8 37748736 -1000 S
+dk 0 2304 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -578,8 +578,8 @@ shadow yuan-ti~
 &+Lmaster of his craft, and for his sacrifice he has become a member of the
 &+LShadow Serpents.
 ~
-1110509706 1 0 3105431704 268482754 87556224 584584192 -1000 S
-dk 0 8192 -1
+1110509706 1 0 0 3105431704 268482754 87556224 584584192 -1000 S
+dk 0 8192 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -593,8 +593,8 @@ shadow yuan-ti~
 &+Lmaster of his craft, and for his sacrifice he has become a member of the
 &+LShadow Serpents.
 ~
-1110509704 1 0 3105431704 268482754 87556224 584584192 -1000 S
-dk 0 8192 -1
+1110509704 1 0 0 3105431704 268482754 87556224 584584192 -1000 S
+dk 0 8192 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -608,8 +608,8 @@ yuan-ti lord~
 &+Lthe Temple of the Elder Eternal Evil, he wonders the halls, looking thoughtful
 &+Lwith his personal escort.
 ~
-74 1 0 3103858840 268447938 1048576 34603008 -1000 S
-dk 0 64 -1
+74 1 0 0 3103858840 268447938 1048576 34603008 -1000 S
+dk 0 64 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -630,8 +630,8 @@ of Set, sacrificing anyone regardless of innocence. She believes all
 most die so that Dendar, the Night Serpent may rise out of her cave
 and swallow the sun whole.
 ~
-33620042 1 0 134283288 34818 128 570435584 -1000 S
-pt 0 256 -1
+33620042 1 0 0 134283288 34818 128 570435584 -1000 S
+pt 0 256 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -646,8 +646,8 @@ image, his features always bare the visage of a horror. A face of horror
 that tells anyone residing in the Temple of the Elder Eternal Evil he saw
 something no mortal was ment to see.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -661,8 +661,8 @@ issis queen~
 &+Lof &nl&+Wos&ns&+L his apparent upon her serpentine face. She sits here waiting
 &+Lfor her pettion to &+GS&+get&+L, the &nG&+Wo&nd&+L of &+GS&+gerpents&+L to be answered.
 ~
-10 0 0 0 0 0 0 -1000 S
-dk 0 32 -1
+10 0 0 0 0 0 0 0 -1000 S
+dk 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -679,8 +679,8 @@ of hardship, and never ending wars his father blessed his son and made him
 his champion. A pure look of outrage, malice, and anger is visable upon his
 minotaur features. Pacing the emissary chamber like a caged animal.
 ~
-74 0 0 152 0 0 0 -1000 S
-dk 0 1 -1
+74 0 0 0 152 0 0 0 -1000 S
+dk 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -698,8 +698,8 @@ simply shrugs, laughs and makes small talk with a yuan-ti abomination
 who stares at him in boredem. Perhaps thinking to make a meal of the
 annoying gnome tinker gnome.
 ~
-10 0 0 152 0 0 0 1000 S
-pg 0 524288 -1
+10 0 0 0 152 0 0 0 1000 S
+pg 0 524288 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -714,8 +714,8 @@ image, his features always bare the visage of a horror. A face of horror
 that tells anyone residing in the Temple of the Elder Eternal Evil he saw
 something no mortal was ment to see.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

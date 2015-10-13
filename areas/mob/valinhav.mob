@@ -6,8 +6,8 @@ tired miner~
 &+y This miner is here resting on his duff. He has soft clammy skin which has
 &+ybeen soiled from the day's work. He wears slightly scuffed clothes.
 ~
-8 0 0 0 0 0 0 0 S
-PG 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -20,8 +20,8 @@ A drow slave stands here working hard.
 mines. He bears the bright white uniform of that of a prisoner and has a
 small set of scribbles running across his forehead.
 ~
-8 0 0 0 0 0 0 0 S
-PL 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+PL 0 1 0 -1
 5 20 83 5d17+27 1d5+0
 3.1.0.0 648
 8 8 1
@@ -35,8 +35,8 @@ dark conjurer~
 &+Lfine clothing. His skin is slightly lighter than most of the miners around
 &+Lhere. He is also very clean.
 ~
-10 48 0 200 1 0 0 0 S
-PG 0 2048 -1
+10 48 0 0 200 1 0 0 0 S
+PG 0 2048 0 -1
 40 2 -28 40d64+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -49,8 +49,8 @@ foreman~
 &+ybest dressed among everyone. He has a small wooden desk behind where work
 &+yschedules and gem orders are scattered about.
 ~
-8 0 0 72 0 0 0 0 S
-PG 0 1 -1
+8 0 0 0 72 0 0 0 0 S
+PG 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -63,8 +63,8 @@ fire elemental~
 &+relementals. It has a stern look on its face and constantly scans the area
 &+rfor signs of trouble.
 ~
-10 0 0 33554504 1 0 0 0 S
-EF 0 1 -1
+10 0 0 0 33554504 1 0 0 0 S
+EF 0 1 0 -1
 30 8 -7 30d65+390 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -77,8 +77,8 @@ A stout miner stands here hammering away.
 much. His hair is starting to fall out of his head and he looks rather old.
 His clothes are well worn and tattered.
 ~
-10 0 0 0 0 0 0 0 S
-PG 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -92,8 +92,8 @@ foreman assistant~
 &+Lhe records shifts and the gem trade. He keeps himself very clean and seems
 &+Lvery annoyed when one of the miners splashes him with mud.
 ~
-10 0 0 0 0 0 0 0 S
-PG 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 0
@@ -106,8 +106,8 @@ A seasoned miner stands here lifting huge rocks.
 He has dirty finger nails and muddy boots. His skin is starting to wrinkle
 with age and his hair has a tint of silver in it.
 ~
-8 0 0 0 0 0 0 0 S
-PG 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 17 13 45 17d35+119 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -121,8 +121,8 @@ way. There are beer stains all up and down his front side and his hands
 barely show a day's work on them. His eyes wander about the tunnels trying
 to find his way back to the bar.
 ~
-8 40 0 0 0 0 0 0 S
-PG 0 1 -1
+8 40 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 3 20 90 3d17+17 1d5+0
 2.1.0.0 388
 8 8 1
@@ -136,8 +136,8 @@ svifill master~
 &+bdown to his naval where it curls into a small 's' shape. He wears a strange
 &+bpointy hat on the top of his head which conceals his baldness.
 ~
-10 0 0 536870920 2113 0 0 0 S
-PG 0 2048 -1
+10 0 0 0 536870920 2113 0 0 0 S
+PG 0 2048 0 -1
 45 -1 -69 45d72+1935 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -150,8 +150,8 @@ taelar official~
 &+Lto the foreman. He wears very wealthy clothes and has long grey hair. His
 &+Leyes are a pitch-black color.
 ~
-10 0 0 0 2048 0 0 1000 S
-PG 0 32 -1
+10 0 0 0 0 2048 0 0 1000 S
+PG 0 32 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -164,8 +164,8 @@ lava fiend~
 &+rlaval. It has huge arms that are about three feet wide in diameter. It bathes
 &+rhere in a pool of lava and fire.
 ~
-10 1 0 536871064 2049 0 0 0 S
-EF 0 1 -1
+10 1 0 0 536871064 2049 0 0 0 S
+EF 0 1 0 -1
 40 2 -38 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -177,8 +177,8 @@ gate guard~
  &+yA svirfneblin &+ygate guard &+ystands here patrolling the area trying to
 &+ystop the thieves that would steal their precious gems.
 ~
-10 0 0 0 0 0 0 0 S
-PG 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -191,8 +191,8 @@ water rat~
 &+Bperfectly, it has huge claws which to grasp rock when it tangles with rapids.
 &+BIt has beautiful shiny fur.
 ~
-8 56 0 0 0 0 0 0 S
-A 0 1 -1
+8 56 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 2 20 93 2d17+11 1d5+0
 0.0.0.0 259
 8 8 1
@@ -206,8 +206,8 @@ guard svirfneblin~
 &+yaverage in height for a svirfneblin and has a tattoo on his left arm with
 &+ythe insignia of the guard of Valinhaven.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 0
@@ -221,8 +221,8 @@ svirfneblin commoner~
 &+ysvirfneblin commoners are all stout and are only about four feet tall at
 &+ymost.
 ~
-8 32 0 0 0 0 0 0 S
-PG 0 1 -1
+8 32 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 4 20 87 4d17+22 1d5+0
 2.1.0.0 518
 8 8 2
@@ -236,8 +236,8 @@ young conjurer~
 &+Yonly the simple clothes of the local conjuration school and is not that strong
 &+Yin appearance.
 ~
-10 0 0 0 0 0 0 0 S
-PG 0 2048 -1
+10 0 0 0 0 0 0 0 0 S
+PG 0 2048 0 -1
 10 18 67 10d14+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -251,8 +251,8 @@ xeanlor demon~
 &+Rdark red eyes that have pupils of fire embedded in them. His voice is as
 &+Rloud as thunder.
 ~
-2058 1 0 537985210 2049 0 0 -1000 S
-X 11 1024 -1
+2058 1 0 0 537985210 2049 0 0 -1000 S
+X 11 1024 0 -1
 59 -3 -110 50d80+3000 6d6+25
 0.3.9.6 182250
 8 8 0
@@ -263,8 +263,8 @@ fiery dervish~
 ~
   &+rA f&+Ri&+re&+Rr&+ry dervish is here protecting his master.
 ~
-67110922 56 0 536870922 1 0 0 0 S
-EF 0 1 -1
+67110922 56 0 0 536870922 1 0 0 0 S
+EF 0 1 0 -1
 36 18 57 10d21+55 2d3+1
 0.0.0.0 1296
 8 8 1
@@ -277,8 +277,8 @@ angry miner~
 &+Lface. His eyes are wide open with his thick eyebrows raised high. His chin
 &+Lis covered with small stubbles of a beard.
 ~
-8 192 0 0 0 0 0 0 S
-PG 0 1 -1
+8 192 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 9 18 71 9d21+49 2d3+1
 4.3.0.0 1166
 8 8 1

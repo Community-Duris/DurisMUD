@@ -73,7 +73,7 @@ diamond bracelet~
 &+Wan old diamond bracelet~
 &+WAn old diamond bracelet rests here, forgotten.~
 ~
-9 27 2 0 14 0 4096 4097 0 0 0
+9 27 2 0 14 0 4096 4097 32768 0 0
 6 0 0 2 0 0 0 0
 1 61500 100
 E
@@ -767,7 +767,7 @@ skull war~
 &+Wthe skull of &+rwar~
 &+WThis ghastly skull was once the head of the &+LHorseman of &+rWar~
 ~
-13 10 3 0 14 0 41947136 1 64 0 0
+13 10 3 0 14 0 41947136 1 32832 0 0
 0 0 0 0 0 0 0 0
 8 1 100
 E
@@ -779,7 +779,7 @@ skull death~
 &+Wthe skull of &+Ldeath~
 &+WThis ghastly skull was once the head of the &+LHorseman of Death~
 ~
-13 10 3 0 14 0 41947136 1 64 0 0
+13 10 3 0 14 0 41947136 1 32832 0 0
 0 0 0 0 0 0 0 0
 8 1 100
 E
@@ -791,7 +791,7 @@ skull famine~
 &+Wthe skull of &nfamine~
 &+WThis ghastly skull was once the head of the &+LHorseman of &nfamine~
 ~
-13 10 3 0 14 0 41947136 1 64 0 0
+13 10 3 0 14 0 41947136 1 32832 0 0
 0 0 0 0 0 0 0 0
 8 1 100
 E
@@ -803,7 +803,7 @@ skull pestilence~
 &+Wthe skull of &+gpestilence~
 &+WThis ghastly skull was once the head of the &+LHorseman of &+gPestilence~
 ~
-13 10 3 0 14 0 41947136 1 64 0 0
+13 10 3 0 14 0 41947136 1 32832 0 0
 0 0 0 0 0 0 0 0
 8 1 100
 E

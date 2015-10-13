@@ -7,8 +7,8 @@ agent inspection human~
 &+gthe castle.  He is also responsible for watching who enters the city, and&n
 &+greports any suspicious characters to the guards.&n
 ~
-2122 128 0 24 0 0 0 0 S
-PH 0 1 -1
+2122 128 0 0 24 0 0 0 0 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -21,8 +21,8 @@ officer customs human~
 &+Wcharged with the job of fining incoming merchants.  He checks all cargo,&n
 &+Wthen calculates a fee based upon a small percentage of the estimated worth.&n
 ~
-2126 128 0 24 0 0 0 0 S
-PH 0 1 -1
+2126 128 0 0 24 0 0 0 0 S
+PH 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -36,8 +36,8 @@ dwarven mountain dwarf merchant~
 &+Yhis goods, an idea that doesn't please him very well, and as such he is&n
 &+Yarguing loudly and complaining to anyone who will listen.&n
 ~
-2126 128 0 24 0 0 0 0 S
-PM 5 1 -1
+2126 128 0 0 24 0 0 0 0 S
+PM 5 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -51,8 +51,8 @@ bailey apothecary grey elf~
 &+Mof nature with a little of magic provides the results so often desired but&n
 &+Mso rarely attained in the potions he creates.&n
 ~
-2122 0 0 0 0 0 0 400 S
-PE 0 32 -1
+2122 0 0 0 0 0 0 0 400 S
+PE 0 32 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -65,8 +65,8 @@ bartender halfling rotund~
 &+yjiggles as he walks, and his bushy eyebrows nearly cover his eyes.  He picks&n
 &+yhis nose furiously then giggles.&n
 ~
-2126 0 0 0 0 0 0 400 S
-PF 0 1 -1
+2126 0 0 0 0 0 0 0 400 S
+PF 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -79,8 +79,8 @@ ranger exhausted half-elf elf~
 &+gthe wilderness nearby.  His hands are filthy, and his face is caked in mud.&n
 &+gHe stands against the bar relaxing as drinks one of the fine ales.&n
 ~
-2126 0 0 0 0 0 0 900 S
-P2 0 2 -1
+2126 0 0 0 0 0 0 0 900 S
+P2 0 2 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -93,8 +93,8 @@ hosteler towering barbarian~
 &+bHe is not clad in furs but in a fine red robe, although his massive arms&n
 &+bshow he is no stranger to hard work.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PB 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -108,8 +108,8 @@ prostitute sleazy half -orc~
 &+gloudly.  Obviously, she is only for those with either little taste or
 &+glittle money.&n
 ~
-134219854 0 0 0 0 0 0 -400 S
-H 0 4096 -1
+134219854 0 0 0 0 0 0 0 -400 S
+H 0 4096 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -122,8 +122,8 @@ miller bailey human~
 &+ggrinding wheat into meal.  His mill, at present, is non-operational and he&n
 &+glooks quite unhappy as he tries to fix it.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -136,8 +136,8 @@ fishmonger foul smelling foul-smelling gnome~
 &+gquarter.  His hairy arms are covered in the scales and entrails of fish,&n
 &+gfor he not only sells freshly-caught fish but fillets and pre-cut meats.&n
 ~
-2126 0 0 0 0 0 0 800 S
-PG 0 1 -1
+2126 0 0 0 0 0 0 0 800 S
+PG 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -150,8 +150,8 @@ filthy poulterer half-elf~
 &+ypoulterer, selling chickens, duck, geese and pheasant to the local&n
 &+ypopulation, alive and dead.&n
 ~
-2126 0 0 0 0 0 0 400 S
-P2 0 1 -1
+2126 0 0 0 0 0 0 0 400 S
+P2 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -165,8 +165,8 @@ baker overweight human~
 &+yof his food for outside sale.  His plump belly shows he is very fond of his&n
 &+yown cooking.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -180,8 +180,8 @@ saucemaker bailey sauce maker human~
 &+Yhim from one town to the next.  Only due to the offer of a very impressive
 &+Ysalary does he stay in this Duchy.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -194,8 +194,8 @@ hangman bailey barbarian~
 &+yduty of maked sure all criminals found guilty of a capital crime are hanged,&n
 &+yhe wanders the city at other times as deterrent for would-be criminals.&n
 ~
-67111112 0 0 0 0 0 0 0 S
-PB 0 1 -1
+67111112 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -209,8 +209,8 @@ herbalist grey elf delicate~
 &+gpieces of nature at her disposal are incredible, all the more so because&n
 &+gshe uses no magic at all.&n
 ~
-1073743950 0 0 0 0 0 0 850 S
-PE 0 2 -1
+1073743950 0 0 0 0 0 0 0 850 S
+PE 0 2 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -224,8 +224,8 @@ small gnomish clockmaker gnome~
 &+cworking on finishing a grand masterpiece, however he grumbles on and on&n
 &+cabout missing a certain part.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PG 0 524288 -1
+2126 0 0 0 0 0 0 0 0 S
+PG 0 524288 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -239,8 +239,8 @@ bookbinder book binder handsome half-elven half-elf~
 &+ylobeless ears give his face a dignified and intelligent look.  His hands are&n
 &+ynimble and spry from hours at work.&n
 ~
-2126 0 0 0 0 0 0 0 S
-P2 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+P2 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -254,8 +254,8 @@ scrivener short dwarven mountain dwarf~
 &+yHis large beard is split and tucked up over his shoulders, where it is&n
 &+ytied in a large knot.&n
 ~
-1073743948 0 0 0 0 0 0 0 S
-PM 0 1 -1
+1073743948 0 0 0 0 0 0 0 0 S
+PM 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -269,8 +269,8 @@ glazier one eyed one-eyed elven elf grey~
 &+WHis left eye no longer functions after a glob of molten silicon was quite&n
 &+Waccidentally flicked into it long ago.&n
 ~
-1073743950 0 0 0 0 0 0 800 S
-PE 0 2 -1
+1073743950 0 0 0 0 0 0 0 800 S
+PE 0 2 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -283,8 +283,8 @@ cutler bearded human~
 &+ctableware.  His hands are both strong and nimble, both traits required&n
 &+cto make the fine cutlery that he sells.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -297,8 +297,8 @@ well built well-built knife grinder knifegrinder human~
 &+yoccasional sword or axe to break the monotony.  His arms are deeply cut&n
 &+ywith muscle from holding weapons still as the grinding wheels spin past.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -311,8 +311,8 @@ dyer bailey~
 &+Bsewn into clothing.  Using the many chemicals at his disposal he is able to&n
 &+Bcreate a vast array of shades and tints.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PG 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -326,8 +326,8 @@ haberdasher elven finely-dressed grey elf~
 &+Cin the artisans' quarter he is doing a brisk business selling to the&n
 &+Cmerchants of the city.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PE 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PE 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -340,8 +340,8 @@ seamstress beautiful human~
 &+cvelvet.  Her long and nimble fingers weave in and out with a needle, and&n
 &+cher beautiful green eyes gleam as she peers about the room.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -354,8 +354,8 @@ weaver plain looking plain-looking grey elf~
 &+Wmost elven maidens.  Her hands are quite skilled though, and she runs her&n
 &+Whands across the large loom very gracefully.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PE 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PE 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -369,8 +369,8 @@ spinner elderly human~
 &+Wwool back and forth as her small legs pump at the pedals of the spinning&n
 &+Wwheel.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -383,8 +383,8 @@ cobbler dwarven mountain dwarf red bearded red-bearded~
 &+cspends his days repairing shoes and boots, although occasionally he can be&n
 &+cpersuaded to create a new pair.&n
 ~
-1073743950 0 0 0 0 0 0 800 S
-PM 0 1 -1
+1073743950 0 0 0 0 0 0 0 800 S
+PM 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -397,8 +397,8 @@ fuller gap toothed gap-toothed half-elf~
 &+cmore so by the huge gap between his front teeth.  He leers as he looks about&n
 &+cthe room, then grins widely.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-P2 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+P2 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -411,8 +411,8 @@ wheelwright wheel wright broad chested broad-chested human~
 &+yof commerce in the bailey, many wagons are in need of repair.  His enormous&n
 &+yskill at this particular task has enabled him to lead a comfortable life.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -425,8 +425,8 @@ ironmonger iron monger charismatic~
 &+cguild.  With no actual skill at the forge himself, his only task is to sell&n
 &+cthe goods that the smithys make every day.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -439,8 +439,8 @@ wiredrawer wire drawer burly barbarian~
 &+Ldraws it over and over through successively smaller holes, resulting finally&n
 &+Lin a long length of wire, hopefully not too brittle or weak.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PB 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -453,8 +453,8 @@ farrier bare chested bare-chested human~
 &+Bhorseshoes.  With the constant rtaffic of merchants to and from the castle,&n
 &+Bhe is always in demand as the horses wear out their shoes.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -467,8 +467,8 @@ limeburner lime burner disfigured human~
 &+gturn used in making mortar.  His face is horribly disfigured, a result of&n
 &+gan accident with a cauldron of molten rock at an early age.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -481,8 +481,8 @@ bellfounder bell founder barrel chested barrel-chested~
 &+Wforge.  His function as bellfounder is a steady one, whether he is making&n
 &+Wsmall bells for clocks or large bells for churches.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PM 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PM 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -495,8 +495,8 @@ bladesmith smith blade master human~
 &+cmaker of bulk weapons for armies and such, he custom creates fine weaponry&n
 &+cthat is well-balanced and superior to most other arms.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -509,8 +509,8 @@ tanner bailey~
 &+yof taking animals hides and tanning them, although more often than not he&n
 &+yis the one who actually skins the animal as well.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -523,8 +523,8 @@ bricklayer brick layer burly~
 &+yaimlessly.  His skin is deeply sunburned from working outside nearly every&n
 &+yday.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -536,8 +536,8 @@ beggar one armed one-armed~
 &+y   This poor soul is one of the unfortunate people with no home.  He spends&n
 &+yhis days begging for even the smallest coin or scrap of food.&n
 ~
-2252 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2252 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -550,8 +550,8 @@ barber well groomed well-groomed gnome~
 &+yrace.  The normally hairy ears have been snipped and the usual tufts of&n
 &+yhair billowing out of the nose are nonexistent.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PG 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -564,8 +564,8 @@ woodturner wood turner halfling small~
 &+ylathe his skills are quite excellent and his work commands quite a steep&n
 &+yprice.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PF 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PF 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -578,8 +578,8 @@ teamster frowning human~
 &+ycart from one city or twon to the next.  His hair is bleached white from&n
 &+ynumerous days on the road underneath the sun.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -592,8 +592,8 @@ swineherd swine herd country human~
 &+ysize of this one, and is quite obviously in awe.  Several small pigs follow&n
 &+yhim closely, unaware that he leads them to their slaughter.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -606,8 +606,8 @@ hog grunting~
 &+gwildly for a means of escape.  The only familiar object to it however is the&n
 &+gswineherd, so it follows him closely.&n
 ~
-2126 0 0 0 0 0 0 0 S
-A 0 0 -1
+2126 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -620,8 +620,8 @@ fisherman fisher man elf grey elven~
 &+yonce a week to be sold at the markets in the bailey.  His rather frail&n
 &+ylooking body is quite tanned.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PE 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PE 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -634,8 +634,8 @@ brewer over weight overweight~
 &+yorder to make a quilaity drink for the owner.  His skill at brewing is&n
 &+yalmost legendary; at least in his own mind.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -648,8 +648,8 @@ mason heavily build heavily-built barbarian~
 &+ybrick and stone.  His large arms are as wide as his thighs, although he&n
 &+yhas a large belly from too much ale.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PB 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -662,8 +662,8 @@ locksmith lock smith master human~
 &+yexcept by the most talented of thieves.  His nimble fingers and quick&n
 &+ydarting eyes reinforce his reputation as a possible reformed criminal.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -676,8 +676,8 @@ minter finely dressed finely-dressed~
 &+yarea.  His well-manicured hands look never to have seen a hard days work,&n
 &+yalthough his eyes are dark and unblinking.&n
 ~
-1073743948 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743948 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -689,8 +689,8 @@ sheather grinning human~
 &+y   This fine artisan makes scabbards and fine knife sheaths for the soldiers&n
 &+yof the castle.  His work is quality handworkmanship and is never cheap.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -703,8 +703,8 @@ limner grumpy human~
 &+yactually practicing his art.  His hands are stained different colors and&n
 &+yhis nose has a dab of green paint upon it.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -716,8 +716,8 @@ cordwainer cord wainer travelling half-elf~
 &+y   This half-elf is a maker of shoes.  Not a residient of the bailey, he is&n
 &+yvisiting merely to appraise whether or not he'd like to move here or not.&n
 ~
-2124 0 0 0 0 0 0 0 S
-P2 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+P2 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -730,8 +730,8 @@ embroiderer petite human~
 &+yof any kind.  Her embellishments are often the final touch to a beautiful&n
 &+ygarment, and her work is of the highest quality.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -745,8 +745,8 @@ shepherd humble~
 &+ynew generation of lambs they are taken to town, where they are sheared and
 &+yslaughtered.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -758,8 +758,8 @@ sheep rambouillet~
 &+y   This fine sheep is of a breed well-known for their fine wool.  A small&n
 &+ybrand on the right rear flank reads 30-Bar.&n
 ~
-2122 0 0 0 0 0 0 0 S
-A 0 0 -1
+2122 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -771,8 +771,8 @@ girdler skinny~
 &+y   A maker of fine belts and girdles, this man is quite skinny.   His long&n
 &+yarms and thin legs seem very unstable as he walks about awkwardly.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -785,8 +785,8 @@ vintner red nosed red-nosed~
 &+ya little of his own product.  His bright red nose is a sure sign of his&n
 &+yalcoholic tendencies and his large belly jiggles as he walks.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -799,8 +799,8 @@ astrologer short gnome~
 &+yeyebrows nearly cover his eyes, which both have dark rings about them from&n
 &+ybeing pressed against a telecope too often.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PG 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -813,8 +813,8 @@ quarrier burly barbarian~
 &+yquarrying rock.  His dark suntanned skin is like leather, with his enormous&n
 &+ymuscles bulging beneath.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PB 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -827,8 +827,8 @@ sheriff bailey human~
 &+yinclude arresting those who break the castle laws, as well as protecting the&n
 &+ydenizens of the castle from bodily harm.&n
 ~
-1140852812 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852812 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -841,8 +841,8 @@ man-at-arms man at arms imposing human~
 &+ycastle from breaking any laws.  His job is to detain, arrest or in extreme&n
 &+ycases to kill, anyone breaking the laws or threatening the general populace.&n
 ~
-1140865100 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140865100 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -856,8 +856,8 @@ footman heavy~
 &+yequally in every function necessary to fire such a weapon, so that in the event
 &+yof an injury in combat someone else can take the wounded man's place.&n
 ~
-67110986 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110986 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -870,8 +870,8 @@ lieutenant ballista crew guard human~
 &+yone given all of the responsibility of ensuring his ballista can fire both&n
 &+ypromptly and accurately and he drills his team constantly.&n
 ~
-1140852810 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852810 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -884,8 +884,8 @@ longbowman long bow man tall human~
 &+yto rain death upon a foe below.  His skill with the weapon is not as great&n
 &+yas the fabled elves or the rangers of the woods, but it is still impressive.&n
 ~
-67110988 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110988 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -898,8 +898,8 @@ nailsmith nail smith heavily-bearded heavily bearded human~
 &+yHis heavy red beard flows half-way down his chest, stopping just above a&n
 &+ylarge and ample belly.&n
 ~
-1073743948 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743948 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -912,8 +912,8 @@ tinker rotund human~
 &+yrepairing pots and pans.  While not a highpaying job, it has the benefits&n
 &+yand drawbacks of a profession that travels frequently.&n
 ~
-1073743948 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743948 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -926,8 +926,8 @@ ploughman plough man bulky barbarian~
 &+yand is quite amazed by the various sites which he sees.  His massive arms
 &+yand legs speak to a lifetime behind the plough.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PB 0 1 -1
+2124 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -940,8 +940,8 @@ sergeant guard human~
 &+yroutine, but more as a way of checking up on his men.  His striped shirt announces
 &+yhis authority and the other men walk lightly around him.&n
 ~
-1140852812 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852812 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -954,8 +954,8 @@ private grumbling~
 &+ycastle.  His function is that of manning the oil cauldrons at the gates to&n
 &+ythe bailey, ready to pour scalding death on invaders below.&n
 ~
-1140852812 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852812 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -968,8 +968,8 @@ chef tubby human~
 &+ymade meals for the castle nobility.  He is reputedly the finest chef in the&n
 &+yregion and his haughty attitude shows he is aware of his reputation.&n
 ~
-1073743946 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743946 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -982,8 +982,8 @@ guard lazy human~
 &+gthe duchy.  His smallish arms and legs also reveal he has been neglecting&n
 &+ghis exercise; he is a sorry excuse for a soldier.&n
 ~
-1073743946 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743946 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -996,8 +996,8 @@ servant meek human~
 &+gskill with a broom is phenomenal, however this is the only skill she has&n
 &+gever acquired.&n
 ~
-2248 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2248 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1010,8 +1010,8 @@ servant off-duty off duty human~
 &+genjoys his time between shifts.  Currently engaged in a game of darts, he&n
 &+gseems preoccupied with the dartboard mounted upon the wall.&n
 ~
-2122 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1025,8 +1025,8 @@ servant worried looking worried-looking human~
 &+yopening, traditionaly started by moving the pawn at C2 to C4 and the Knight&n
 &+yat B1 to C3.&n
 ~
-2122 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1039,8 +1039,8 @@ servant exhausted human~
 &+gable to relax.  Pale skin shows she has not seen much sun in the recent past&n
 &+gand her eyes are set within sunken sockets.&n
 ~
-1073743946 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743946 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 2
@@ -1053,8 +1053,8 @@ captain off-duty off duty human~
 &+gHis fine uniform is hardly dirty and his boots are highly shined black.  He
 &+gmutters something under his breath about the chess players.&n
 ~
-1073743946 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743946 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1067,8 +1067,8 @@ corporal burly human~
 &+genlisted men with any sort of rank.  Currently off-duty, he is cleaning up&n
 &+ghis weapons rack, not content to merely sleep as do most of his men.&n
 ~
-67110986 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110986 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1081,8 +1081,8 @@ archbishop arch bishop human~
 &+gsect devoted to the god of battle.  He spends most of his days praying for&n
 &+gthe soldiers of the keep and as such is very popular with them.&n
 ~
-1140852810 0 0 16 32768 0 0 0 S
-PH 0 32 -1
+1140852810 0 0 0 16 32768 0 0 0 S
+PH 0 32 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1096,8 +1096,8 @@ disciple arch bishop~
 &+gno firm religious beliefs, however the gold he is paid ensures his feigned
 &+gpiety.&n
 ~
-67110986 0 0 0 0 0 0 0 S
-PH 0 64 -1
+67110986 0 0 0 0 0 0 0 0 S
+PH 0 64 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1112,8 +1112,8 @@ delwyn duke human~
 &+gglows a dark red.  His eyes are firm yet compassionate, suggesting he is
 &+gjust man unafraid of using violence to enforce his will.&n
 ~
-1174419530 0 0 805380152 45248 0 0 1000 S
-PH 0 8 -1
+1174419530 0 0 0 805380152 45248 0 0 1000 S
+PH 0 8 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1127,8 +1127,8 @@ herald elven grey elf~
 &+gof magic.  Also unusual is his interest in the affairs of the mostly human
 &+gcastle.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PE 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PE 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1142,8 +1142,8 @@ churl sun burned sunburned human~
 &+gsubject to taxation by the Duke.  It is this last of which brings him to&n
 &+gcourt, to argue his position against the increase of taxes.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1157,8 +1157,8 @@ page weasel faced weasel-faced human~
 &+gis said that he is also trained as a bodyguard, although he is on first&n
 &+glook quite skinny and frail.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1172,8 +1172,8 @@ dignitary dwarven dwarf mountain~
 &+gplace as the Duke's court.  He appears ready to slam his fist into a wall&n
 &+gor yell at the top of his lungs just to break the solemn atmosphere.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PM 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PM 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1186,8 +1186,8 @@ representative guild human~
 &+gregion, this human is quite important.  He has come to negotiate a trade&n
 &+groute past the castle and is even now researching his facts and figures.&n
 ~
-1073743950 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1200,8 +1200,8 @@ duchess flabby barbarian~
 &+cin weight.  Her rolls of blubber jiggle as she walks and she seems to be&n
 &+csearching for something in the room.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PB 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1215,8 +1215,8 @@ mistress gorgeous human~
 &+gis covered only by an exotic velvet skirt, her chest bare and her feet&n
 &+guncovered.&n
 ~
-2126 0 0 1572864 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 1572864 0 0 0 0 S
+PH 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1229,8 +1229,8 @@ watchman watch man elite human~
 &+gpersonal guard.  His current assignment is that of guarding the Duke's&n
 &+gquarters, one he does not appear to take lightly.&n
 ~
-67110990 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110990 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1242,8 +1242,8 @@ watchman watch man elite human~
 &+g   This guard is a member of the elite gaurd of the keep.  His function is&n
 &+gcurrently to keep any and all intruders from the archbishop's quarters.&n
 ~
-67110990 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110990 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1256,8 +1256,8 @@ diplomat guild human~
 &+gwith representatives of the duchy.  His weasel-face and darting eyes give&n
 &+ghim a look that belies trust.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1270,8 +1270,8 @@ arbitrator stout human~
 &+gof both the guilds and the government of the duchy.  His reputation for&n
 &+gfairness is well-deserved, having successfully arbitrated many contracts.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1284,8 +1284,8 @@ halfling skulking~
 &+Levade detection, however he also seems to be searching for something in the&n
 &+LDuke's study.&n
 ~
-2126 0 0 1572864 0 0 0 0 S
-PF 0 8192 -1
+2126 0 0 0 1572864 0 0 0 0 S
+PF 0 8192 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1298,8 +1298,8 @@ footman foot man heavy~
 &+gguard of the castle.  In addition, several small tattoos on his right&n
 &+gshoulder indicate his prowess in battle, a mark for every kill.&n
 ~
-67110988 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110988 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1312,8 +1312,8 @@ lookout lithe human tall~
 &+gkeep.  He is assigned a specific area to watch, and is always on the watch&n
 &+gfor anything that might mean trouble to the castle.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1326,8 +1326,8 @@ warden rooftop roof top human~
 &+gconventional or less mundane assault.  His arms bear many battle scars and&n
 &+git is evident he knows one end of a sword from the other.&n
 ~
-67110988 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110988 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1341,8 +1341,8 @@ observer specially trained human~
 &+gbear large rings about them from having them pressed to the eyepiece of the&n
 &+gtelescope.&n
 ~
-2126 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2126 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1356,8 +1356,8 @@ magician keep gnome~
 &+galtruistic incantations.  He glares about and frowns as he looks at the&n
 &+gflagpole.&n
 ~
-1073789134 0 0 134217728 0 0 0 0 S
-PG 0 4194304 -1
+1073789134 0 0 0 134217728 0 0 0 0 S
+PG 0 4194304 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

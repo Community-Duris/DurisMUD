@@ -8,8 +8,8 @@ Scurrying here and there, this overgrown&+W mouse &nlooks hungry.
 &+Lcaloric intake to support such a large body.  It is a wonder that the creature&n
 &+Wcould have grown so large seemingly so suddenly.&n
 ~
-1074026568 0 0 34111744 4126 0 0 0 S
-A 0 1 1
+1074026568 0 0 0 34111744 4126 0 0 0 S
+A 0 1 0 1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -23,8 +23,8 @@ Scurrying here and there, this overgrown &+Wmouse&n looks very hungry.
 &+Lcaloric intake to support such a large body.  It is a wonder that the creature&n
 &+Wcould have grown so large seemingly so suddenly.&n
 ~
-1074026568 0 0 34111776 4126 0 0 0 S
-A 0 1 1
+1074026568 0 0 0 34111776 4126 0 0 0 S
+A 0 1 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -39,8 +39,8 @@ Looking around, this big &+Wf&+Le&+Wr&+Lr&+We&+Lt&n curiously inspects the low g
 &+ylooks as though it contains a brain somewhat bigger than the normal ferret.&n
 &+yThus it looks a bit cartoonish.&n
 ~
-1074018380 0 0 34079008 30 0 0 0 S
-A 0 8192 3
+1074018380 0 0 0 34079008 30 0 0 0 S
+A 0 8192 0 3
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ Looking around, this very big &+Wf&+Le&+Wr&+Lr&+We&+Lt&n curiously inspects the 
 &+ylooks as though it contains a brain somewhat bigger than the normal ferret.&n
 &+yThus it looks a bit cartoonish.&n
 ~
-1074018380 0 0 34079008 30 0 0 0 S
-A 0 8192 4
+1074018380 0 0 0 34079008 30 0 0 0 S
+A 0 8192 0 4
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -71,8 +71,8 @@ big happy rabbit~
 &+Wfield still are growing.  They are however disapearing at an astonishing rate&n
 &+Wnow with a multitude of oversized bunnies.&n
 ~
-1073764424 0 0 33554688 30 536870912 0 0 S
-A 0 16384 3
+1073764424 0 0 0 33554688 30 536870912 0 0 S
+A 0 16384 0 3
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -87,8 +87,8 @@ big happy rabbit~
 &+Wfield still are growing.  They are however disapearing at an astonishing rate&n
 &+Wnow with a multitude of oversized bunnies.&n
 ~
-1073772616 0 0 33554688 30 536870912 0 0 S
-A 0 16384 3
+1073772616 0 0 0 33554688 30 536870912 0 0 S
+A 0 16384 0 3
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -102,8 +102,8 @@ a large garden &+gslug&n slithers forth leaving a trail of slime..
 &+Gin every spot it visits.  Its two antennae twitch nervously as the disgusting&n
 &+Lthing looks for a very big bowl of beer to drown itself in.&n
 ~
-1107318856 0 0 33554688 1054 0 0 0 S
-RS 0 1 2
+1107318856 0 0 0 33554688 1054 0 0 0 S
+RS 0 1 0 2
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -117,8 +117,8 @@ a big garden &+gslug&n slithers forth leaving a trail of slime.
 &+Gin every spot it visits.  Its two antennae twitch nervously as the disgusting&n
 &+Lthing looks for a very big bowl of beer to drown itself in.&n
 ~
-1107318856 0 0 33554688 1054 0 0 0 S
-RS 0 1 3
+1107318856 0 0 0 33554688 1054 0 0 0 S
+RS 0 1 0 3
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -133,8 +133,8 @@ a hulking &+bbluebird&n~
 &+Lthey pass by, it is a wonder that it hasn't attempted to peck at one of them&n
 &+Lyet.&n
 ~
-1208109128 1 0 234881316 158 0 0 0 S
-B 0 0 2
+1208109128 1 0 0 234881316 158 0 0 0 S
+B 0 0 0 2
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -149,8 +149,8 @@ a truly hulking &+bbluebird&n~
 &+Lthey pass by, it is a wonder that it hasn't attempted to peck at one of them&n
 &+Lyet.&n
 ~
-1208109128 1 0 234881316 158 0 0 0 S
-B 0 0 3
+1208109128 1 0 0 234881316 158 0 0 0 S
+B 0 0 0 3
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -166,8 +166,8 @@ badger bloodthirsty hybrid~
 &+ythe mutation process.  Perhaps at the time of the mutation, the badgers were&n
 &+yin the midst of a hunt together and will chase each other until none are left.&n
 ~
-1074014284 1 0 34079008 30 0 0 0 S
-A 0 16384 3
+1074014284 1 0 0 34079008 30 0 0 0 S
+A 0 16384 0 3
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -183,8 +183,8 @@ badger bloody~
 &+ythe mutation process.  Perhaps at the time of the mutation, the badgers were&n
 &+yin the midst of a hunt together and will chase each other until none are left.&n
 ~
-1074014284 1 0 34079008 30 0 0 0 S
-A 0 16384 3
+1074014284 1 0 0 34079008 30 0 0 0 S
+A 0 16384 0 3
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -200,8 +200,8 @@ fox scales scaly~
 &+yAs it scans the overgrown brush for predators, the oversized animal simply&n
 &+ymakes pitiful sounds.&n
 ~
-1074010184 0 0 33554720 30 0 0 0 S
-A 0 8192 2
+1074010184 0 0 0 33554720 30 0 0 0 S
+A 0 8192 0 2
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -217,8 +217,8 @@ fox scales scaly large~
 &+yAs it scans the overgrown brush for predators, the oversized animal simply&n
 &+ymakes pitiful sounds.&n
 ~
-1074010184 0 0 33554720 30 0 0 0 S
-A 0 8192 3
+1074010184 0 0 0 33554720 30 0 0 0 S
+A 0 8192 0 3
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -235,8 +235,8 @@ forty foot purple snake~
 &+mits attacker down.  Unfortunately, the attacker always appears to leave only&n
 &+ga tail for the snake to bite in ratliation.&n
 ~
-1074022472 0 0 33589536 30 0 0 0 S
-RS 0 16384 4
+1074022472 0 0 0 33589536 30 0 0 0 S
+RS 0 16384 0 4
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -253,8 +253,8 @@ fifty foot purple snake~
 &+mits attacker down.  Unfortunately, the attacker always appears to leave only&n
 &+ga tail for the snake to bite in ratliation.&n
 ~
-1074022472 0 0 33589280 30 0 0 0 S
-RS 0 16384 5
+1074022472 0 0 0 33589280 30 0 0 0 S
+RS 0 16384 0 5
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -270,8 +270,8 @@ A &+ywart&+mhog&n covered in &+Wtusks&n charges in every direction.
 &+citself apart with its tusks, but others almost appear to be more of the burn&n
 &+cvariety.&n
 ~
-1073756232 1 0 33556768 30 0 0 0 S
-A 0 1 3
+1073756232 1 0 0 33556768 30 0 0 0 S
+A 0 1 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -287,8 +287,8 @@ A &+ywart&+mhog&n full of warts and scars snorts here.
 &+citself apart with its tusks, but others almost appear to be more of the burn&n
 &+cvariety.&n
 ~
-1073756232 1 0 33556768 30 0 0 0 S
-A 0 1 3
+1073756232 1 0 0 33556768 30 0 0 0 S
+A 0 1 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -304,8 +304,8 @@ This man-sized &+Gmantis&n doesn't know which insects to catch.
 &+mmantis is not something they usually fly too near.  It clicks its mandibles&n
 &+Lin frustration and an almost audible sigh can be heard from it.&n
 ~
-1107306572 0 0 33556768 12318 0 0 0 S
-R 0 1 3
+1107306572 0 0 0 33556768 12318 0 0 0 S
+R 0 1 0 3
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -321,8 +321,8 @@ LThis boy-sized &+Gmantis&n sits here lunging at birds.&n
 &+mmantis is not something they usually fly too near.  It clicks its mandibles&n
 &+Lin frustration and an almost audible sigh can be heard from it.&n
 ~
-1107306572 0 0 301992224 4126 0 0 0 S
-R 0 1 2
+1107306572 0 0 0 301992224 4126 0 0 0 S
+R 0 1 0 2
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -339,8 +339,8 @@ Looking very mad this &+Yostrich&n flails his human arms wildly.&N
 &+Wat its feathers for the fact that it does not yet realize the use of these&n
 &+Marms and hands.&n
 ~
-1073887304 0 0 167805184 30 0 0 0 S
-H 0 16384 -1
+1073887304 0 0 0 167805184 30 0 0 0 S
+H 0 16384 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -356,8 +356,8 @@ Charging and then gliding, this &+Lrhinocerous&n spreads his wings.
 &+Yof grey skin and feathers.  It obviously is distressed, and the large wings&n
 &nstartling it does not seem to be helping the situation.&n
 ~
-1073883208 0 0 167772416 30 0 0 0 S
-AE 0 1 4
+1073883208 0 0 0 167772416 30 0 0 0 S
+AE 0 1 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -373,8 +373,8 @@ lion drooling drool rainbows rainbow~
 &+Rhis belly.  He snarls and sprays a shower of blue, red, orange, yellow, white,
 &+Ygreen, lavendar and pink.&n
 ~
-1073756232 0 0 33554688 30 0 0 0 S
-AC 0 1 4
+1073756232 0 0 0 33554688 30 0 0 0 S
+AC 0 1 0 4
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -391,8 +391,8 @@ bear trout trout-headed mutant hybrid~
 &+ya fish's diet is probably all he could manage.  That diet will not be sufficent&n
 &+yto maintain the bear.&n
 ~
-1074018376 0 0 33554720 94 0 0 0 S
-A 0 1 4
+1074018376 0 0 0 33554720 94 0 0 0 S
+A 0 1 0 4
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -408,8 +408,8 @@ boa constrictor legged~
 &+gvicious however, and there is a sense that if threatened it would be able to&n
 &+ggain more deadly control over its body.&n
 ~
-1074018376 0 0 33587456 30 0 0 0 S
-RS 0 1 4
+1074018376 0 0 0 33587456 30 0 0 0 S
+RS 0 1 0 4
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -423,8 +423,8 @@ living wall thorn thorns~
 &+gall about.  As it nears flesh, the vines seem to know this and wrap themselves&n
 &+yabout the unsuspecting victim.&n
 ~
-30794 0 0 302022716 30 0 0 -200 S
-VT 0 65536 -1
+30794 0 0 0 302022716 30 0 0 -200 S
+VT 0 65536 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -439,8 +439,8 @@ Standing here this walrus-&+bgiant&n hybrid guards the door&n.
 &+Lgiant is beginning to get the hang of casting spells.  This is evidenced by&n
 &+Lthe scorched vines which seem to have perished during his experimentation.&n
 ~
-14346 1 0 33554460 30 0 0 0 S
-PO 0 512 -1
+14346 1 0 0 33554460 30 0 0 0 S
+PO 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -456,8 +456,8 @@ horde semi-intelligent intelligent monkeys monkey~
 &+maverage monkey.  Now that intelligence is madly at work as these creatures&n
 &+Luse their quills incessantly.&n
 ~
-293066 1 0 302514488 30 0 0 -200 S
-TK 0 8192 -1
+293066 1 0 0 302514488 30 0 0 -200 S
+TK 0 8192 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -473,8 +473,8 @@ Standing here this not so petite &+Lelephant is angry at being in a dress&n.
 &+Lspends a lot of time trying to stamp on things as it bucks to get the dress&N
 &+Loff.&N
 ~
-14344 1 0 33554728 30 0 0 0 S
-A 0 0 5
+14344 1 0 0 33554728 30 0 0 0 S
+A 0 0 0 5
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -489,8 +489,8 @@ human giant's giant head~
 &Nwhoever the giant once was, his powers with the elements do not seem to be&n
 &Ndiminished.&n
 ~
-14348 1 0 34078796 30 0 0 0 S
-PO 0 256 -1
+14348 1 0 0 34078796 30 0 0 0 S
+PO 0 256 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -505,8 +505,8 @@ middle aged middle-aged turtle reaver mutated mutant~
 &+Gare just now beginning to ache, and although this tower is better than the&n
 &+Gsewers, it is not by a far stretch ideal.&n
 ~
-1073750024 1 0 33048 30 0 0 -900 S
-R 0 2 3
+1073750024 1 0 0 33048 30 0 0 -900 S
+R 0 2 0 3
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -521,8 +521,8 @@ ogre raider lookout sentry scout~
 &+bin the woods, much less staying still.  They eagerly await a chance to cause&n
 &+bsome brutality on a stray farmer or adventurer.&n
 ~
-276554 1 0 33554488 30 0 0 -800 S
-PO 0 16384 -1
+276554 1 0 0 33554488 30 0 0 -800 S
+PO 0 16384 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -536,8 +536,8 @@ drunk troll raider drunken~
 &+gproblem with starting fights.  All in all however, he doesn't qualify as a&N
 &+gmean drunk, and seems to be relatively happy go lucky.&N
 ~
-14408 1 0 33554712 30 0 0 -800 S
-PT 0 16384 -1
+14408 1 0 0 33554712 30 0 0 -800 S
+PT 0 16384 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -553,8 +553,8 @@ Looking annoyed at being pushed around, this &+Lorc&n hates being a shaman.&n
 &+LOccasionally these shaman, gather in groups to complain about their positions,&n
 &+Lhowever none dare do so for long as they make excellent targets.&n
 ~
-276552 1 0 33554472 30 64 0 -800 S
-HO 0 256 -1
+276552 1 0 0 33554472 30 64 0 -800 S
+HO 0 256 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -570,8 +570,8 @@ Stopping by the bar first, this &+ghobgoblin&n will soon make a delivery for &+b
 &+greason the trolls and ogres prefer to pick on them.  However, if no orcs are&N
 &+gpresent, the hobgoblins are next on that totem pole.&N
 ~
-14410 1 0 33554488 30 0 0 -800 S
-HG 0 16384 3
+14410 1 0 0 33554488 30 0 0 -800 S
+HG 0 16384 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -588,8 +588,8 @@ grox captain~
 &+bhands first before it goes to Grog, and he even gets rewarded for it.  He&N
 &+bwaits impatiently here for the items to arrive.&N
 ~
-33847370 0 0 302514488 30 0 0 -800 S
-PO 0 16384 -1
+33847370 0 0 0 302514488 30 0 0 -800 S
+PO 0 16384 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -605,8 +605,8 @@ Sitting here &+Ydrunk&n and hungry, this &+Gtroll&N wants entertainment.&n
 &+gfar off places and exotic &+Yfood&+g.  Most of all, this troll needs &nentertainment&N
 &+gto keep himself going in this dreary job.&N
 ~
-14412 0 0 33554744 30 64 0 -800 S
-PO 0 256 -1
+14412 0 0 0 33554744 30 64 0 -800 S
+PO 0 256 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -624,8 +624,8 @@ grog raider elder~
 &+gpreocuppied with the &+Wtask&+g that Grox has yet to complete.  He is impatient to
 &+bhave the &+Mwildmage&+b problem taken care of.&N
 ~
-101087306 0 0 33628668 34846 67371008 9216 -1000 S
-Y 0 16 -1
+101087306 0 0 0 33628668 34846 67371008 9216 -1000 S
+Y 0 16 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -640,8 +640,8 @@ burly ogre bodyguard guard~
 &+babuse all the others in the camp who are not either Grog or Grox, and that is&n
 &+ban enormous benefit.&n
 ~
-67123274 0 0 33554488 30 0 0 -800 S
-PO 0 2 -1
+67123274 0 0 0 33554488 30 0 0 -800 S
+PO 0 2 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -658,8 +658,8 @@ orc shaman bodyguard guard~
 &+LGrog.  One day however he wishes to be &+Yfree&+L of it all.  If only there were
 &+La &+Wway&+L out of the camp for him.&N
 ~
-100677706 0 0 33554744 30 128 0 -800 S
-HO 0 256 -1
+100677706 0 0 0 33554744 30 128 0 -800 S
+HO 0 256 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -675,8 +675,8 @@ octopus whirling blades knives octo~
 &+Mtheir tastebuds well.  It serves the creature well that he possesses so many&n
 &+Mtentacles, because otherwise he'd never get all his work done.&n
 ~
-276554 1 0 33554744 30 0 0 -200 S
-TK 0 2 4
+276554 1 0 0 33554744 30 0 0 -200 S
+TK 0 2 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -691,8 +691,8 @@ tree party druid poplar~
 &+ycreatures here do so with him, and follow his lead as he grooves to the music&N
 &+ywhich is playing.&N
 ~
-33568842 1 0 33554728 94 0 0 -800 S
-VT 0 128 -1
+33568842 1 0 0 33554728 94 0 0 -800 S
+VT 0 128 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -711,8 +711,8 @@ water elemental banjo player~
 &+Bmeans the music consists of mostly the same notes half played.  You'd never&N
 &+Bknow this to look at how enthusiastically the elemental does his thing.&N
 ~
-33568842 1 0 33554728 30 0 0 -800 S
-EW 0 32768 -1
+33568842 1 0 0 33554728 30 0 0 -800 S
+EW 0 32768 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -727,8 +727,8 @@ vampire serving server drink barkeep bartender bar~
 &+rfirebreathers are legendary, and he is well known in the tower as a ladies&n
 &+rvampire.  Now he helps keep things lively in the worship of their creator.&n
 ~
-33568842 1 0 167772472 30 0 0 -800 S
-UV 0 1024 -1
+33568842 1 0 0 167772472 30 0 0 -800 S
+UV 0 1024 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -745,8 +745,8 @@ illithid twirling whirling twirl whirl glowin sticks squid illi~
 &+Methereal creature has created quite a sense of loyalty in it.  In fact, it&N
 &+Mnow truly enjoys itself twirling glowing sticks as it dances.&N
 ~
-33568842 1 0 167772472 30 16777216 0 -800 S
-MF 0 4 -1
+33568842 1 0 0 167772472 30 16777216 0 -800 S
+MF 0 4 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -762,8 +762,8 @@ wildmage mage wild elements~
 &+ydoesn't seem to bother him in the least.  The chaos of the elements crashing&N
 &+yagainst one another seems to suit him fine.&N
 ~
-33568842 1 0 838861112 222 0 0 -800 S
-HF 0 2048 3
+33568842 1 0 0 838861112 222 0 0 -800 S
+HF 0 2048 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -779,8 +779,8 @@ wildmage mage wild nature~
 &+gonly be described as leprechaunish.  However they all seem to be creations&N
 &+gfrom the randomness that this wildmage exudes.&N
 ~
-33568842 1 0 855638328 12318 0 0 -800 S
-HF 0 128 3
+33568842 1 0 0 855638328 12318 0 0 -800 S
+HF 0 128 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -796,8 +796,8 @@ wildmage mage wild elements~
 &+BWhile the creature did not last long at all, it did provide tons of&N
 &+Bentertainment.&N
 ~
-33568842 1 0 301990200 30 64 0 -800 S
-HF 0 256 3
+33568842 1 0 0 301990200 30 64 0 -800 S
+HF 0 256 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -813,8 +813,8 @@ wildmage mage wild elements~
 &+Wwildmages even fear what this one does, but leave his work alone as he is just&n
 &+Wlike the others in his pursuit of chaos.&n
 ~
-33568842 1 0 301990200 30 0 536870912 -800 S
-HF 0 4 3
+33568842 1 0 0 301990200 30 0 536870912 -800 S
+HF 0 4 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -831,8 +831,8 @@ wildmage mage wild great~
 &+ystill maintains much of his power, and attempts to continue his studies even&n
 &+gin this form.  It is safe to say, Zooox would be proud.&n
 ~
-33585226 1 0 855673340 2078 0 0 -800 S
-HF 0 512 7
+33585226 1 0 0 855673340 2078 0 0 -800 S
+HF 0 512 0 7
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -850,8 +850,8 @@ weaponsmith weapon smith troll~
 &+gin ways normal mithril never could, he may even be able to make blades that&N
 &+gare unbreakable.&N
 ~
-33568842 1 0 301990200 30 0 8192 -800 S
-PT 0 16384 -1
+33568842 1 0 0 301990200 30 0 8192 -800 S
+PT 0 16384 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -868,8 +868,8 @@ hobgoblin cook hob goblin~
 &+gdissaray as mice run through the floors constantly.  In fact, more often than&N
 &+gnot they become part of the meal which is served.&N
 ~
-14410 1 0 570425656 30 0 0 -800 S
-HG 0 2 3
+14410 1 0 0 570425656 30 0 0 -800 S
+HG 0 2 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -884,8 +884,8 @@ drunk drunken troll raider~
 &+gHowever, the job seems to be getting done properly as the troll stumbles&N
 &+gand trips here.&N
 ~
-2122 1 0 33554744 30 0 0 -800 S
-PT 0 1 -1
+2122 1 0 0 33554744 30 0 0 -800 S
+PT 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -900,8 +900,8 @@ very hungry ogre hunger~
 &+bogre is the last thing anybody wants, and can be the last thing anybody sees&N
 &+bbefore they become dinner.&N
 ~
-2120 1 0 33554744 30 0 0 -800 S
-PO 0 16384 -1
+2120 1 0 0 33554744 30 0 0 -800 S
+PO 0 16384 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -916,8 +916,8 @@ giant torturer torture~
 &+bmaster in entertaining the raiders more often than not.  When his still massive&N
 &+band muscled figure walks by, the ogres clear the way.&N
 ~
-14410 1 0 33554744 32798 0 0 -800 S
-G 0 32 -1
+14410 1 0 0 33554744 32798 0 0 -800 S
+G 0 32 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -932,8 +932,8 @@ wildhaired wild professor proffessor profesor proffesor haired~
 &+Wchemicals to combine with the mithril and make it a &+Ldark&+W color.  Perhaps he&n
 &+Wis interested in using a new type of &+Cmithril&+W to make a &+Ldevious&+W invention.&n
 ~
-14410 0 0 33554744 31 0 0 -800 S
-PG 0 512 -1
+14410 0 0 0 33554744 31 0 0 -800 S
+PG 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -948,8 +948,8 @@ two-headed dog giant~
 &+yespecially vicious in the way it fights.  It pulls no punches, and has been&N
 &+yknown to rip genitalia off.&N
 ~
-14410 1 0 301990008 30 0 0 -800 S
-A 0 1 3
+14410 1 0 0 301990008 30 0 0 -800 S
+A 0 1 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -964,8 +964,8 @@ wildmage mage wild priosner captive~
 &+Mbeing manipulated by dark chains which seem to bind them from harming the&N
 &+Mbearer of the chains.&N
 ~
-14410 1 0 33554728 30 0 0 -800 S
-PH 0 512 -1
+14410 1 0 0 33554728 30 0 0 -800 S
+PH 0 512 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -981,8 +981,8 @@ raider prison master~
 &+bprisoners battered and bruised.  To some of his better customers however,&N
 &+bthis is known as tenderizing.&N
 ~
-14410 0 0 33554488 30 0 0 -800 S
-PO 0 1 -1
+14410 0 0 0 33554488 30 0 0 -800 S
+PO 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -997,8 +997,8 @@ troll annoyed raider~
 &+gand the raids have slowed some. Instead, he drinks and gets into fights with&N
 &+ghis cohorts.&N
 ~
-33568840 1 0 33554472 30 0 0 -800 S
-PT 0 16384 -1
+33568840 1 0 0 33554472 30 0 0 -800 S
+PT 0 16384 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1014,8 +1014,8 @@ bored ogre raider~
 &+bEven though they had more fun in the past when Grog led more raids, they are&N
 &+bloyeal to him yet because of fear.&N
 ~
-14408 0 0 33554472 30 0 0 -800 S
-PO 0 16384 -1
+14408 0 0 0 33554472 30 0 0 -800 S
+PO 0 16384 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1030,8 +1030,8 @@ ape very hungry~
 &nsmaller creatures around.  It is fortunate however because he has not as of&n
 &nyet tried to eat them.&n
 ~
-14412 1 0 33554472 30 0 0 -800 S
-A 0 1 -1
+14412 1 0 0 33554472 30 0 0 -800 S
+A 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1046,8 +1046,8 @@ upset mound shambling~
 &+gthis mound, do an admirable job of pummeling things considering it was given&N
 &+glife just recently.&N
 ~
-2120 1 0 33554472 30 0 0 -800 S
-PO 0 1 -1
+2120 1 0 0 33554472 30 0 0 -800 S
+PO 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1063,8 +1063,8 @@ angry set platemail plate mail suit~
 &+rhad a life and willpower of its own, made it undesireable for anybody to&n
 &+Lwear it for protection.&n
 ~
-14408 1 0 33554472 30 0 0 -200 S
-HO 0 1 -1
+14408 1 0 0 33554472 30 0 0 -200 S
+HO 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1080,8 +1080,8 @@ upset mouse rather~
 &+Levaluate everybody.  It is obvious that something has &+Wupset&+L the mouse and it&N
 &+Lskittishly almost speaks, but seems too shy to do so.&N
 ~
-14346 0 0 34603048 30 0 0 -800 S
-A 0 0 1
+14346 0 0 0 34603048 30 0 0 -800 S
+A 0 0 0 1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1097,8 +1097,8 @@ mother despair lost~
 &nson again either.  Without him, she will have failed for all her life's&n
 &nambitions.&n
 ~
-14344 0 0 33554472 30 0 0 0 S
-PH 0 1 -1
+14344 0 0 0 33554472 30 0 0 0 S
+PH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1112,8 +1112,8 @@ dimensional globulous rift~
 &+Wsmall yet potent globulous texture so it can suck things through to the otherve&N
 &+Lside of whatever this malevolent rift leads to.&N
 ~
-424008 1 0 2315886904 12510 0 0 -800 S
-SL 0 0 -1
+424008 1 0 0 2315886904 12510 0 0 -800 S
+SL 0 0 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1128,8 +1128,8 @@ dark shadowy shadow beast creature~
 &+Lall of eternity.  Although it has travelled through the darkness of this place,&N
 &+Lit has as of yet not found the prey it seeks.&N
 ~
-30826 1 0 33628472 30 0 0 -800 S
-D 0 1 -1
+30826 1 0 0 33628472 30 0 0 -800 S
+D 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

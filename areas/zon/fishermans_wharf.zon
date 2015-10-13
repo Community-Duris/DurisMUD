@@ -2,7 +2,7 @@
 &+gFisher&+Lmans Wharf&n~
 88973 2 0 10 20 2
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 88904 3 1 100 0 0 0
@@ -64,7 +64,6 @@ O 0 88910 7 88958 100 0 0 0        * some lily pads
 O 0 88911 7 88958 100 0 0 0        * some frog spawn jelly
 O 0 88910 7 88960 100 0 0 0        * some lily pads
 O 0 88911 7 88960 100 0 0 0        * some frog spawn jelly
-O 0 88917 0 88972 100 0 0 0        * a secret treasure
 O 0 88912 4 88973 100 0 0 0        * a bundle of sticks
 O 0 88924 1 88973 100 0 0 0        * a curious sapling
 *

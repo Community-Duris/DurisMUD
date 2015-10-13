@@ -2,7 +2,7 @@
 The &+LMotte &nand &+yBailey &nof Duke &+CDelwyn&n~
 83006 2 0 40 50 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 82800 2 1 100 0 0 0
@@ -357,7 +357,7 @@ E 1 82832 14 5 100 0 0 0           *   a tunic woven of hardened reed
 M 0 82886 2 82966 100 0 0 0        * an elite watchman
 E 1 82832 14 5 100 0 0 0           *   a tunic woven of hardened reed
 M 0 82884 1 82967 100 0 0 0        * the flabby Duchess
-M 0 82885 1 82967 100 0 0 0        * an gorgeous mistress
+M 0 82885 1 82967 100 0 0 0        * a gorgeous mistress
 M 0 82883 1 82969 100 0 0 0        * a guild representative
 M 0 82888 1 82970 100 0 0 0        * a guild diplomat
 M 0 82887 2 82971 100 0 0 0        * an elite watchman

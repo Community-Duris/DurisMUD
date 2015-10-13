@@ -8,8 +8,8 @@ castaway~
 &+gnot been easy, but he has made a home here, and he resents any intruders into&n
 &+ghis side of the jungle - especially corsairs.&n
 ~
-1141114952 1 0 302063932 12510 0 1048576 0 S
-PH 0 65536 -1
+1141114952 1 0 0 302063932 12510 0 1048576 0 S
+PH 0 65536 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -25,8 +25,8 @@ castaway~
 &+gtide, and they raid the castaway camp often, taking what they please if they&n
 &+gwin the battle.&n
 ~
-1141114952 1 0 805380412 12510 0 1048576 0 S
-PH 0 4194304 -1
+1141114952 1 0 0 805380412 12510 0 1048576 0 S
+PH 0 4194304 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -42,8 +42,8 @@ castaway~
 &+gcolors, not the expected black, and some of them seem to glow with a faint red&n
 &+gor blue aura.&n
 ~
-1141114956 1 0 805380412 12510 0 1048576 0 S
-PH 0 16384 -1
+1141114956 1 0 0 805380412 12510 0 1048576 0 S
+PH 0 16384 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -60,8 +60,8 @@ chief~
 &+gbut along the length of the strap that secures the loincloth are bits of pelts&n
 &+gand hair, trophies of the many battles he has won.&n
 ~
-1141115084 1 0 805380412 12510 0 1048576 0 S
-PH 0 64 -1
+1141115084 1 0 0 805380412 12510 0 1048576 0 S
+PH 0 64 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -79,8 +79,8 @@ corsair~
 &+gleatherworker.  At his side hangs a sword with a jewel-encrusted hilt that has&n
 &+gseen much use despite its appearance of just being an ornate decoration.&n
 ~
-1141114956 1 0 805380412 12510 0 1048576 0 S
-PH 0 2097152 -1
+1141114956 1 0 0 805380412 12510 0 1048576 0 S
+PH 0 2097152 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -99,8 +99,8 @@ corsair~
 &+gabove the tops of the cuffs, but her weapon of choice is the slim &+Crapier&+g which&n
 &+ghangs from the &+Ygold-chain belt.&n
 ~
-1141114956 1 0 805380412 12510 0 1048576 0 S
-PH 0 524288 -1
+1141114956 1 0 0 805380412 12510 0 1048576 0 S
+PH 0 524288 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -117,8 +117,8 @@ corsair~
 &+gseems that much of the treasure his people have collected to give to the ruler&n
 &+gas their tithe has disappeared from their settlement.&n
 ~
-1141114956 1 0 805380412 12510 0 1048576 1000 S
-PH 0 2 -1
+1141114956 1 0 0 805380412 12510 0 1048576 1000 S
+PH 0 2 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -135,8 +135,8 @@ bella~
 &+gbe used as a garrote.  She has no mercy for those she deems enemies and bears&n
 &+ga special hatred for the castaways, who she considers thieving scum.&n
 ~
-1141114952 1 0 805380412 12510 0 1048576 0 S
-PH 0 16 -1
+1141114952 1 0 0 805380412 12510 0 1048576 0 S
+PH 0 16 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -149,8 +149,8 @@ dog~
 &+gblack and tan coat blends well in the shadows among the trees, often leaping to&n
 &+gthe attack with no warning of its presence whatsoever.&n
 ~
-1141114952 1 0 872423740 12510 0 1048576 0 S
-ac 0 1 -1
+1141114952 1 0 0 872423740 12510 0 1048576 0 S
+ac 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -164,8 +164,8 @@ cat~
 &+ghunting companions, and even fights their fights against the &+wcor&+Ysa&+Rirs&+g with them&n
 &+gwhen raiding &+Wcor&+Ysa&+Rir&+g territory.&n
 ~
-1141114952 1 0 805380412 12510 0 1048576 0 S
-ac 0 1 -1
+1141114952 1 0 0 805380412 12510 0 1048576 0 S
+ac 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -179,8 +179,8 @@ bird giant~
 &+Rsees anything near the tree where it nests, it will swoop down to attack before&n
 &+Rwhatever approaches can attack it.&n
 ~
-1141246028 1 0 973152572 222 0 1048576 0 S
-b 0 2049 5
+1141246028 1 0 0 973152572 222 0 1048576 0 S
+b 0 2049 0 5
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -192,8 +192,8 @@ giant bird~
 &+Y     An overgrown canary with an attitude, this huge bird flies to the attack&n
 &+Ywith an enraged shriek whenever it sees anything near its nest.&n
 ~
-1141246028 1 0 704708924 222 0 1048576 0 S
-b 0 257 5
+1141246028 1 0 0 704708924 222 0 1048576 0 S
+b 0 257 0 5
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -206,8 +206,8 @@ giant bird~
 &+Banything moving, it flies to the attack with an enraged shriek, protecting its&n
 &+Bnest and its young from harm.&n
 ~
-1141246028 1 0 671162684 222 0 1048576 0 S
-b 0 16640 5
+1141246028 1 0 0 671162684 222 0 1048576 0 S
+b 0 16640 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -220,8 +220,8 @@ giant lemur~
 &+Lthe forces active in this crater.  It is huge, and attacks any who enter into&n
 &+Lits line of vision instead of fleeing like it should.&n
 ~
-1141258316 1 0 671686972 12510 0 1048576 0 S
-ac 0 8208 5
+1141258316 1 0 0 671686972 12510 0 1048576 0 S
+ac 0 8208 0 5
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -234,8 +234,8 @@ giant lemur~
 &+Lthe forces active in this crater.  It is huge, and attacks any who enter into&n
 &+Lits line of vision instead of fleeing like it should.&n
 ~
-1141258316 1 0 973678908 12510 0 1048576 0 S
-ac 0 257 5
+1141258316 1 0 0 973678908 12510 0 1048576 0 S
+ac 0 257 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -248,8 +248,8 @@ giant lemur~
 &+Lthe forces active in this crater.  It is huge, and attacks any who enter into&n
 &+Lits line of vision instead of fleeing like it should.&n
 ~
-1141258316 1 0 973154620 12510 0 1048576 0 S
-ac 0 2049 5
+1141258316 1 0 0 973154620 12510 0 1048576 0 S
+ac 0 2049 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -264,8 +264,8 @@ beetleman~
 &+Lbut its antennae wave about constantly,  sensing everything around it better&n
 &+Lthan eyes would in this dark.&n
 ~
-1141259340 1 0 973154748 12510 0 0 0 S
-ac 0 257 5
+1141259340 1 0 0 973154748 12510 0 0 0 S
+ac 0 257 0 5
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -280,8 +280,8 @@ beetleman~
 &+Lbut its antennae wave about constantly,  sensing everything around it better&n
 &+Lthan eyes would in this dark.&n
 ~
-1141259276 1 0 939600316 12510 0 0 0 S
-ac 0 2056 5
+1141259276 1 0 0 939600316 12510 0 0 0 S
+ac 0 2056 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -296,8 +296,8 @@ beetleman~
 &+Lbut its antennae wave about constantly,  sensing everything around it better&n
 &+Lthan eyes would in this dark.&n
 ~
-1141259340 1 0 973154748 12510 0 0 0 S
-ac 0 80 5
+1141259340 1 0 0 973154748 12510 0 0 0 S
+ac 0 80 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -312,8 +312,8 @@ fish~
 &+Bcreatures in seconds, leaving them skeletons even as they realize they have&n
 &+Bdied.&n
 ~
-1074018638 1 0 805382460 12510 0 0 0 S
-f 0 257 5
+1074018638 1 0 0 805382460 12510 0 0 0 S
+f 0 257 0 5
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

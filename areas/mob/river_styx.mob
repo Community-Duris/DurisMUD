@@ -8,8 +8,8 @@ is but an intangable shadow of blackness. Gazing upon it sends involuntary
 shivers down your spine as you immediately sense its desire to feast upon
 your very immortal soul.
 ~
-133186 1 0 101711928 64 0 0 -1000 S
-U 0 1024 -1
+133186 1 0 0 101711928 64 0 0 -1000 S
+U 0 1024 0 -1
 51 -5 -98 51d88+4233 7d6+30
 0.0.0.0 206550
 8 8 0
@@ -27,8 +27,8 @@ razor sharp teeth chatter in fury at your presence near the hells.
 It is sworn to defend the passages of the River Styx and suddenly
 its telepathic voice tells you of your impending doom at its hands.
 ~
-1107429568 1 0 706937016 309441 0 0 -1000 S
-Y 0 512 -1
+1107429568 1 0 0 706937016 309441 0 0 -1000 S
+Y 0 512 0 -1
 55 -1 -84 45d90+2250 6d6+12
 5.9.4.6 109350
 8 8 0
@@ -43,8 +43,8 @@ the devil is equiped with powerful looking claws and a mouth of
 sharp pointed teeth. It appears to be well prepared for battle and
 emits a voracious scream as it fights for its devilish lords.
 ~
-1107429568 1 0 706937016 309441 0 0 -1000 S
-Y 0 512 -1
+1107429568 1 0 0 706937016 309441 0 0 -1000 S
+Y 0 512 0 -1
 57 2 -30 36d80+1008 4d7+10
 0.1.2.3 46656
 8 8 0
@@ -59,8 +59,8 @@ a set of great wings, all of which are a deep green in color. The
 beast occasionally screams at the overhead rocks as it seeks some
 lower ranking devil to molest and torture.
 ~
-1107429568 1 0 707461176 309313 0 0 -1000 S
-Y 0 512 -1
+1107429568 1 0 0 707461176 309313 0 0 -1000 S
+Y 0 512 0 -1
 56 6 -23 34d70+748 4d6+7
 8.9.9.2 44064
 8 8 0
@@ -77,8 +77,8 @@ blood curdling scream of rage the creature attacks with claw and
 bite to torment the lesser creatures unfortunate enough to cross
 its path.
 ~
-1107429568 1 0 707461562 309441 0 0 -1000 S
-Y 0 512 -1
+1107429568 1 0 0 707461562 309441 0 0 -1000 S
+Y 0 512 0 -1
 57 6 -17 32d70+704 4d6+7
 6.8.9.2 41472
 8 8 0
@@ -95,8 +95,8 @@ sports powerful wings, a fanged maw and sharp claws. Occasionally, it lets
 loose a chilling scream of rage as it arches its serpentine tail and
 assesses its surroundings.
 ~
-1107429568 1 0 707469498 440513 0 0 -1000 S
-Y 0 512 -1
+1107429568 1 0 0 707469498 440513 0 0 -1000 S
+Y 0 512 0 -1
 58 6 -20 33d70+726 4d6+7
 7.8.9.2 42768
 8 8 0
@@ -113,8 +113,8 @@ and a similar set of fangs make the creature look quite vicious and
 deadly in combat, probably a service it provides willingly to its fiendish
 masters.
 ~
-1140984000 1 0 706936888 307393 0 0 -1000 S
-Y 0 512 -1
+1140984000 1 0 0 706936888 307393 0 0 -1000 S
+Y 0 512 0 -1
 54 6 -17 32d70+704 4d6+7
 6.8.9.2 41472
 8 8 0
@@ -129,8 +129,8 @@ the shadow-stuff reach out to grasp at prey and tear it to shreds. No
 eyes or mouth are evident in the deep black which is this creature, but
 you know it senses your presence..
 ~
-1074137154 1 0 68157496 66 0 0 -1000 S
-EA 0 0 -1
+1074137154 1 0 0 68157496 66 0 0 -1000 S
+EA 0 0 0 -1
 50 -3 -105 50d100+2650 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -145,8 +145,8 @@ ermine and silk, which flow out behind him in an unfelt breeze. In his
 bony hands lies a runed staff with which he mans his skiff through the
 lower planes of the Realms.
 ~
-395330 0 0 604053560 194 0 0 0 S
-U 0 0 -1
+395330 0 0 0 604053560 194 0 0 0 S
+U 0 0 0 -1
 59 -7 -128 59d120+6077 7d6+35
 0.0.0.0 238950
 10 10 0
@@ -161,8 +161,8 @@ and void of feeling. Over the bony frame the figure wears drab robes of
 somber black and grey which hang stiffly from its shoulders, rasping ever
 so slightly as the fabric rubs together.
 ~
-395328 0 0 570490936 12480 0 0 -900 S
-X 0 0 -1
+395328 0 0 0 570490936 12480 0 0 -900 S
+X 0 0 0 -1
 40 2 -43 40d80+1120 4d7+10
 3.3.4.4 77760
 8 8 0
@@ -180,8 +180,8 @@ creature would be an excellent swimmer and glider, highly maneuverable in its
 chosen environment, although it will occasionally leave the river to lie
 about the rocky river banks.
 ~
-1074003968 1 0 33556536 4160 0 0 -900 S
-X 0 0 -1
+1074003968 1 0 0 33556536 4160 0 0 -900 S
+X 0 0 0 -1
 38 2 -36 38d80+1064 4d7+10
 1.2.2.3 73872
 8 8 0
@@ -196,8 +196,8 @@ the devil is equiped with powerful looking claws and a mouth of
 sharp pointed teeth. It appears to be well prepared for battle and
 emits a voracious scream as it fights for its devilish lords.
 ~
-133186 1 0 704643128 4160 0 0 -1000 S
-Y 0 0 -1
+133186 1 0 0 704643128 4160 0 0 -1000 S
+Y 0 0 0 -1
 36 2 -30 36d80+1008 4d7+10
 0.1.2.3 46656
 8 8 0
@@ -212,8 +212,8 @@ a set of great wings, all of which are a deep green in color. The
 beast occasionally screams at the overhead rocks as it seeks some
 lower ranking devil to molest and torture.
 ~
-133186 1 0 704643128 4160 0 0 -1000 S
-Y 0 0 -1
+133186 1 0 0 704643128 4160 0 0 -1000 S
+Y 0 0 0 -1
 34 6 -23 34d70+748 4d6+7
 8.9.9.2 44064
 8 8 0
@@ -231,8 +231,8 @@ the creature would be an excellent swimmer and glider, highly maneuverable
 in its chosen environment, although it will occasionally leave the river
 to lie about the rocky river banks.
 ~
-1074003970 1 0 33556536 4160 0 0 -900 S
-X 0 0 -1
+1074003970 1 0 0 33556536 4160 0 0 -900 S
+X 0 0 0 -1
 38 2 -36 38d80+1064 4d7+10
 1.2.2.3 73872
 8 8 0
@@ -247,8 +247,8 @@ pachyderm head. The head sports a wickedly barbed trunk-spike and rows of
 sharp teeth. The beast is most certainly as terrifying to behold as it is
 strangely unusual and fascinating.
 ~
-1074266178 1 0 301989932 0 0 0 -800 S
-Y 0 0 -1
+1074266178 1 0 0 301989932 0 0 0 -800 S
+Y 0 0 0 -1
 55 -5 -126 55d110+4950 7d6+30
 0.2.0.9 222750
 8 8 0
@@ -262,8 +262,8 @@ her huge, feathery wings. Hair of a golden blonde streams down her back
 and a tightly fitting black leather garmet emphasizes her lucious curves.
 However, the red gleam in her eyes is anything but seductive.
 ~
-133186 1 0 704643112 4160 0 0 -1000 S
-Y 0 512 -1
+133186 1 0 0 704643112 4160 0 0 -1000 S
+Y 0 512 0 -1
 40 2 -43 40d64+1120 4d7+10
 3.3.4.4 51840
 8 8 2
@@ -278,8 +278,8 @@ mucus slime, which reeks of acidic fumes and occasionally hisses when
 contacted by the surrounding rocks. Huge pincher jaws writhe back and
 forth as the creature drools in anticipation of its next meal
 ~
-1074005056 1 0 33556520 12288 0 0 -200 S
-DK 0 0 -1
+1074005056 1 0 0 33556520 12288 0 0 -200 S
+DK 0 0 0 -1
 53 -5 -114 53d110+4770 7d6+30
 8.0.8.12 214650
 8 8 0
@@ -293,8 +293,8 @@ down its sixty foot length. A gaping maw hold rows of razor sharp teeth,
 all of them oozing with a yellowish-green drool. As the massive creature
 rolls about the cavern floor, the rock steams in protest.
 ~
-1074528320 1 0 33556520 12288 0 0 -200 S
-DK 0 0 -1
+1074528320 1 0 0 33556520 12288 0 0 -200 S
+DK 0 0 0 -1
 48 -3 -88 48d100+2880 6d6+25
 8.1.7.9 116640
 8 8 0
@@ -307,8 +307,8 @@ This shadowy figure has a vaugely humanoid shape, which shimmers and
 shifts as you gaze upon it. Long claws of infinite darkness reach out from
 the creature's arms as you sense its deep hatred for the living.
 ~
-133184 1 0 101711928 64 0 0 -1000 S
-U 0 16 -1
+133184 1 0 0 101711928 64 0 0 -1000 S
+U 0 16 0 -1
 39 2 -24 39d95+897 4d7+10
 0.0.0.0 50544
 8 8 0

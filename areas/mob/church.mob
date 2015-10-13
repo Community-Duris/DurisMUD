@@ -8,8 +8,8 @@ scholar head church~
 &+yshe is given complete control of the archives, and any requests to borrow &n
 &+ya scroll, or even book for that matter, would have to go through her. &n
 ~
-1107298378 0 0 73728 0 0 0 -650 S
-PH 1 512 -1
+1107298378 0 0 0 73728 0 0 0 -650 S
+PH 1 512 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -23,8 +23,8 @@ cardinal church~
 &+mglance at the map on the wall makes him frown, and furrow his brows in  &n
 &+mconcentration.  He mutters angrily under his breath about the paladins.&n
 ~
-1073756366 0 0 16 0 0 0 -900 S
-PH 1 288 -1
+1073756366 0 0 0 16 0 0 0 -900 S
+PH 1 288 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -38,8 +38,8 @@ friar squint-eyed large squint~
 &+ba ponytail which stretches down to his waist.  He squints eerily as he&n
 &+bpeers around, never seeming to find what it is he's looking for.&n
 ~
-1107306702 0 0 0 0 0 0 -800 S
-PH 1 32 -1
+1107306702 0 0 0 0 0 0 0 -800 S
+PH 1 32 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -54,8 +54,8 @@ food taster human food-taster~
 &+Bof time.  He does a wonderful job of being a food-taster however, making&n
 &+Bsure that no poison is present in the cardinals food.&n
 ~
-2286 0 0 0 0 0 0 -400 S
-PH 1 1 -1
+2286 0 0 0 0 0 0 0 -400 S
+PH 1 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -69,8 +69,8 @@ bodyguard brawny barbarian~
 &+ballowed inside because of his warrior skills.  He growls as he looks around &n
 &+bthe room, looking for something to vent his anger upon.        &n
 ~
-1073743946 0 0 8208 0 0 0 -400 S
-pb 11 1 -1
+1073743946 0 0 0 8208 0 0 0 -400 S
+pb 11 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -84,8 +84,8 @@ member church tired looking tired-looking~
 &+gcrossed, letting the fatigue drain out of him.  Like most of the other church&n
 &+gmembers, he is dressed in a dark green and black robe. &n
 ~
-2254 0 0 0 0 0 0 -400 S
-PH 1 1 -1
+2254 0 0 0 0 0 0 0 -400 S
+PH 1 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -100,8 +100,8 @@ member church well muscled~
 &+gon his forehead.  His nose is crooked, probably the result of meeting&n
 &+gsomeone just a little bit bigger than he is.&n
 ~
-2126 0 0 0 0 0 0 -500 S
-PH 1 1 -1
+2126 0 0 0 0 0 0 0 -500 S
+PH 1 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -115,8 +115,8 @@ skinny church member darts~
 &+bwobble slightly as he engages in recreation.  A scraggly mess of hair hangs&n
 &+bdown over his face, no doubtr blurring his vision.&n
 ~
-2126 0 0 0 0 0 0 -450 S
-PH 1 4 -1
+2126 0 0 0 0 0 0 0 -450 S
+PH 1 4 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -130,8 +130,8 @@ patron wealthy church~
 &+brolling.  As such he is given quite a bit of influence within the church&n
 &+balthough not as much as the official church leaders.&n
 ~
-1073743946 0 0 0 0 0 0 -650 S
-PH 0 4194304 -1
+1073743946 0 0 0 0 0 0 0 -650 S
+PH 0 4194304 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -144,8 +144,8 @@ wife scrawny~
 &+bchurch, and does nothing but follow him around all day.  She is skinny  &n
 &+band scrawny, but a mean look in her eyes makes you wary.                &n
 ~
-1073744074 0 0 0 0 0 0 -950 S
-PH 1 32768 -1
+1073744074 0 0 0 0 0 0 0 -950 S
+PH 1 32768 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -159,8 +159,8 @@ devout church follower~
 &+bglass windows and doors on the balcony clean, a never-ending job with&n
 &+bthe wild wind and weather that this area experiences.&n
 ~
-2250 0 0 0 0 0 0 -500 S
-PH 1 1 -1
+2250 0 0 0 0 0 0 0 -500 S
+PH 1 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -173,8 +173,8 @@ agnostic wild eyed wild-eyed~
 &+bdisturbed by the great amount of faith that the churchmembers have in&n
 &+bsomething he cannot believe still exists.&n
 ~
-74 0 0 0 0 0 0 0 S
-PH 1 1 -1
+74 0 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -187,8 +187,8 @@ official church~
 &+bHis main function is sending newly converted people to the indoctrination&n
 &+bsessions so that they may be fully prepared for chucrch life.&n
 ~
-1073743946 0 0 0 0 0 0 -800 S
-PH 0 256 -1
+1073743946 0 0 0 0 0 0 0 -800 S
+PH 0 256 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -203,8 +203,8 @@ spokesman pompous church~
 &+bclothing that the church cannot get elsewhere but from travelling&n
 &+bmerchants.&n
 ~
-2122 0 0 0 0 0 0 -800 S
-PH 1 1 -1
+2122 0 0 0 0 0 0 0 -800 S
+PH 1 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -218,8 +218,8 @@ cowled church member~
 &+bas he hums a low sound.  His face is covered by a damp cowl, what it is&n
 &+bdamp with is not apparent.&n
 ~
-1073744076 0 0 0 0 0 0 -650 S
-PH 1 64 -1
+1073744076 0 0 0 0 0 0 0 -650 S
+PH 1 64 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -233,8 +233,8 @@ clerk church supply~
 &+bmany of the churchmembers either very comfortable or very miserable, they&n
 &+btend to be very polite to him.&n
 ~
-2254 0 0 0 0 0 0 -800 S
-PH 1 1 -1
+2254 0 0 0 0 0 0 0 -800 S
+PH 1 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -247,8 +247,8 @@ dim-witted dim witted church member~
 &+bthe room.  He lumbers about the area moving supplies about under the&n
 &+bdirections of the clerk, since he is not capable of working independently.&n
 ~
-78 0 0 0 0 0 0 0 S
-PH 1 1 -1
+78 0 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -261,8 +261,8 @@ leader work-gang work gang~
 &+bitself with.  At the moment their task is moving furniture in the storage&n
 &+broom, although they are always available for whatever tasks are needed.&n
 ~
-2120 0 0 0 0 0 0 -800 S
-PH 1 1 -1
+2120 0 0 0 0 0 0 0 -800 S
+PH 1 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -275,8 +275,8 @@ brawny work gang work-gang member~
 &+bsize and enormous muscles.  He moves the furniture about the room with ease,&n
 &+band looks as if he could fling a person just as easily.&n
 ~
-2122 0 0 0 0 0 0 -600 S
-PH 1 1 -1
+2122 0 0 0 0 0 0 0 -600 S
+PH 1 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -290,8 +290,8 @@ muscular work gang work-gang member~
 &+benormous muscles are the result of years of doing this, although this&n
 &+blooks to have occured at the expense of his intellect.&n
 ~
-2122 0 0 0 0 0 0 40 S
-PH 1 1 -1
+2122 0 0 0 0 0 0 0 40 S
+PH 1 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -306,8 +306,8 @@ jailor church~
 &+mthe many beatings he metes out to those he has under his boot.  A cruel man&n
 &+mwith a cruel job, who enjoys every minute of it.&n
 ~
-2126 0 0 0 0 0 0 -800 S
-PB 11 1 -1
+2126 0 0 0 0 0 0 0 -800 S
+PB 11 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -320,8 +320,8 @@ scrawny church scholar~
 &+bconcept he has recently read about.  His brow is wrinkled from days spent&n
 &+bin thought, and he looks like quite a wimp.&n
 ~
-1073743946 0 0 0 0 0 0 -600 S
-PH 1 512 -1
+1073743946 0 0 0 0 0 0 0 -600 S
+PH 1 512 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -334,8 +334,8 @@ scraggly church scholar~
 &+beyes wander about the room without seeming to notice anything.  If the&n
 &+bchurch were burning down around him you doubt he would notice.&n
 ~
-1073743946 0 0 0 0 0 0 -400 S
-PH 1 512 -1
+1073743946 0 0 0 0 0 0 0 -400 S
+PH 1 512 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -349,8 +349,8 @@ skinny church scholar~
 &+ba free thinker and intellectually superior, but his body has suffered as&n
 &+ba result, and he is quite wimpy in appearance.&n
 ~
-1073743946 0 0 0 0 0 0 -750 S
-PH 1 4194304 -1
+1073743946 0 0 0 0 0 0 0 -750 S
+PH 1 4194304 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -364,8 +364,8 @@ minotaur church scholar~
 &+bspecial robes had to be fashioned for him, although the tailoring is quite&n
 &+bcrude.&n
 ~
-1073743882 0 0 0 0 0 0 -500 S
-MT 12 512 -1
+1073743882 0 0 0 0 0 0 0 -500 S
+MT 12 512 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -382,8 +382,8 @@ warmage hired~
 &+gto let only those with the possibility of conversion to the church faith&n
 &+gto enter.&n
 ~
-1073743946 0 0 0 0 0 0 -300 S
-PG 8 512 -1
+1073743946 0 0 0 0 0 0 0 -300 S
+PG 8 512 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -397,8 +397,8 @@ massive paladin scout~
 &+cchest and bulging shoulders give a look of pure power, and a warm glow&n
 &+csurrounds him, a sign of holy acceptance.&n
 ~
-1073743946 128 0 16 0 0 0 1000 S
-PH 1 8 -1
+1073743946 128 0 0 16 0 0 0 1000 S
+PH 1 8 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -412,8 +412,8 @@ general field paladin grey haired grey-haired~
 &+ccommand of the expeditionary paladin forces, leading a small group of men&n
 &+cas they scout out pockets of evil within the realms.&n
 ~
-67119178 128 0 0 0 0 0 1000 S
-PH 1 8 -1
+67119178 128 0 0 0 0 0 0 1000 S
+PH 1 8 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -427,8 +427,8 @@ young paladin~
 &+cgroup devoted to smiting the scourge of evil from the land.  His eyes&n
 &+cwatch the landscape wearily, always ready for the unexpected.&n
 ~
-67110986 128 0 0 0 0 0 1000 S
-PH 1 8 -1
+67110986 128 0 0 0 0 0 0 1000 S
+PH 1 8 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -442,8 +442,8 @@ devout dwarven cleric~
 &+cthick beard flows down to his waist, covering a large pot belly, although&n
 &+che seems in remarkable physical shape otherwise.&n
 ~
-2122 128 0 0 0 0 0 1000 S
-PM 5 32 -1
+2122 128 0 0 0 0 0 0 1000 S
+PM 5 32 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -457,8 +457,8 @@ meek church academic~
 &+bthe titles is somewhat easier, and has a large glass monocle screwed into&n
 &+bher eye-socket to aid her doubtlessly non-perfect vision.&n
 ~
-2126 0 0 0 0 0 0 -450 S
-PH 1 512 -1
+2126 0 0 0 0 0 0 0 -450 S
+PH 1 512 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -472,8 +472,8 @@ editor church~
 &+bsure that the content is of the sort that is intended.  He scans over the&n
 &+bdocuments, occasionally squinting at the small print.&n
 ~
-1073743950 0 0 0 0 0 0 -600 S
-PH 1 1 -1
+1073743950 0 0 0 0 0 0 0 -600 S
+PH 1 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -488,8 +488,8 @@ publisher church~
 &+bplatinum each month to keep the printing press rolling, and is forced&n
 &+bto be very economical with his decisions.&n
 ~
-1073744078 0 0 0 0 0 0 -800 S
-PH 1 16384 -1
+1073744078 0 0 0 0 0 0 0 -800 S
+PH 1 16384 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -503,8 +503,8 @@ creative writer church~
 &+bquite a bit of propaganda, making sure only to emphasiza the good parts&n
 &+bof church life, conveniently omitting the bad.&n
 ~
-1073743950 0 0 0 0 0 0 -600 S
-PH 1 1 -1
+1073743950 0 0 0 0 0 0 0 -600 S
+PH 1 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -519,8 +519,8 @@ doctor spin devoted church~
 &+bhas sent many articles back to the writers, and as such is nto a favorite&n
 &+bamong them.&n
 ~
-1073743950 0 0 0 0 0 0 -900 S
-PH 1 1 -1
+1073743950 0 0 0 0 0 0 0 -900 S
+PH 1 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -533,8 +533,8 @@ muscular church member~
 &+bare used for the pamphlets about.  He is immense in size, his muscles no&n
 &+bdoubt largely increased by his work.  &n
 ~
-1073743950 0 0 0 0 0 0 -400 S
-PH 1 1 -1
+1073743950 0 0 0 0 0 0 0 -400 S
+PH 1 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -549,8 +549,8 @@ inventor gnome gnomish hired~
 &+bby tufts of hair and his eyes bounce about the room as if they had a life&n
 &+bof their own.&n
 ~
-1073744078 0 0 0 0 0 0 -200 S
-PG 8 512 -1
+1073744078 0 0 0 0 0 0 0 -200 S
+PG 8 512 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -565,8 +565,8 @@ director choir church~
 &+che has never worked an hour in his life, although his eyes are dark and&n
 &+cforeboding.&n
 ~
-10446 0 0 0 0 0 0 -1000 S
-PH 1 32768 -1
+10446 0 0 0 0 0 0 0 -1000 S
+PH 1 32768 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -580,8 +580,8 @@ gentle-looking gentle looking choir member~
 &+csongs without ever once breaking, as well as doing a decent job of hitting&n
 &+cthe low notes.&n
 ~
-1073744074 0 0 0 0 0 0 -400 S
-PH 1 1 -1
+1073744074 0 0 0 0 0 0 0 -400 S
+PH 1 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -594,8 +594,8 @@ beautiful choir member~
 &+cto be very happy.  She sings a long slow song about the death of a brother,&n
 &+cand she seems to be on the verge of crying as she does so. &n
 ~
-1073743950 0 0 0 0 0 0 -500 S
-PH 1 1 -1
+1073743950 0 0 0 0 0 0 0 -500 S
+PH 1 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -610,8 +610,8 @@ bishop church~
 &+bjudgment, although there is rumor that the church employs its own brutal  &n
 &+binterrogaters for those who stray from the word of the church.              &n
 ~
-2126 0 0 0 0 0 0 -1000 S
-PH 1 96 -1
+2126 0 0 0 0 0 0 0 -1000 S
+PH 1 96 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -625,8 +625,8 @@ ravenous imp~
 &+rappears to be a very good natural armor source, and his small eyes seem&n
 &+rto smolder as they peer about the room.&n
 ~
-1073744106 0 0 134217736 0 0 0 -1000 S
-Y 0 0 -1
+1073744106 0 0 0 134217736 0 0 0 -1000 S
+Y 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -640,8 +640,8 @@ interrogater head church~
 &+csignificantly, as occasionally he gets to lop the heads off of his victims,&n
 &+cin addition to beating them to within a centimeter of their lives.&n
 ~
-2126 0 0 0 0 0 0 -1000 S
-PH 1 1 -1
+2126 0 0 0 0 0 0 0 -1000 S
+PH 1 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -655,8 +655,8 @@ delegate zilverran~
 &+gof the world financially sound.  As such, he feels no remorse about his&n
 &+gcommunication and dealings with the church, profit is his god.&n
 ~
-1073743946 0 0 0 0 0 0 -350 S
-PH 1 1 -1
+1073743946 0 0 0 0 0 0 0 -350 S
+PH 1 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -669,8 +669,8 @@ fervent church acolyte~
 &+gconvert the converted.  For this reason the rest of his church-mates despise&n
 &+ghim, and nfortunately, there are many like him.&n
 ~
-2124 0 0 0 0 0 0 -400 S
-PH 0 32 -1
+2124 0 0 0 0 0 0 0 -400 S
+PH 0 32 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -683,8 +683,8 @@ guardsman guard church~
 &+Bsuch it is his responsibility to roam the area and make sure that no-one&n
 &+Btries to harm those of which he shares his beliefs.&n
 ~
-67110984 0 0 0 0 0 0 -400 S
-PH 1 1 -1
+67110984 0 0 0 0 0 0 0 -400 S
+PH 1 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -698,8 +698,8 @@ furious troll~
 &+cis evil.  This large troll was at one time a clan chieftain, now all he&n
 &+chas is his memories, and this is what drives his fury.&n
 ~
-2124 1 0 0 0 0 0 -1000 S
-PT 10 1 -1
+2124 1 0 0 0 0 0 0 -1000 S
+PT 10 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -713,8 +713,8 @@ depressed ogre warrior~
 &+cclever (for an ogre, anyway) means of escape, however now he just sulks in&n
 &+cthe corner.&n
 ~
-2248 1 0 0 0 0 0 -1000 S
-PO 9 1 -1
+2248 1 0 0 0 0 0 0 -1000 S
+PO 9 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -728,8 +728,8 @@ duergar squint-eyed squint eyed~
 &+csquint as he peers about, and his hands constantly open and then clench&n
 &+cinto fists.&n
 ~
-2248 1 0 0 0 0 0 -1000 S
-PD 6 32 -1
+2248 1 0 0 0 0 0 0 -1000 S
+PD 6 32 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -743,8 +743,8 @@ paladin large~
 &+cby the church as a bargaining piece in the event war breaks out between&n
 &+cthe paladins and the church.&n
 ~
-2122 0 0 0 0 0 0 1000 S
-PH 1 8 -1
+2122 0 0 0 0 0 0 0 1000 S
+PH 1 8 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -758,8 +758,8 @@ knight well groomed well-groomed~
 &+cstripped of all but his clothing, but they are cut to a very fine fit, and&n
 &+chis hair and moustache are meticulously well-groomed.&n
 ~
-1073743948 0 0 0 0 0 0 -200 S
-PH 1 1 -1
+1073743948 0 0 0 0 0 0 0 -200 S
+PH 1 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -773,8 +773,8 @@ mercenary fierce~
 &+Cemployer and the chuch broke out, his master was hanged, and he was thrown&n
 &+Cinto the gaol, and has been languising here ever since.&n
 ~
-1073743944 0 0 0 0 0 0 0 S
-PH 1 16384 -1
+1073743944 0 0 0 0 0 0 0 0 S
+PH 1 16384 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -790,8 +790,8 @@ burglar master~
 &+Cthem and bound him.  While a master thief, with many skills, he was helpless&n
 &+Cagainst the great magical forces in use.&n
 ~
-1073743944 0 0 0 0 0 0 -400 S
-PH 1 4096 -1
+1073743944 0 0 0 0 0 0 0 -400 S
+PH 1 4096 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -805,8 +805,8 @@ wizard panic stricken panic-stricken~
 &+Cthen in a show of brutality his mind was flooded with magic, burning out&n
 &+Chis connection to the ether, and robbing him of his magical ability.&n
 ~
-2252 0 0 0 0 0 0 0 S
-PH 1 512 -1
+2252 0 0 0 0 0 0 0 0 S
+PH 1 512 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -821,8 +821,8 @@ bard tongue-less~
 &+Cput out on his capture.  He evaded several of the hunters, but was&n
 &+Ceventually brought in and incarcerated.&n
 ~
-2124 0 0 0 0 0 0 600 S
-PH 1 32768 -1
+2124 0 0 0 0 0 0 0 600 S
+PH 1 32768 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

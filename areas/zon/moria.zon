@@ -2,7 +2,7 @@
 Neverwinter Woods~
 99335 2 0 15 25 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 99141 3 5 100 0 0 0
@@ -38,7 +38,7 @@ D 0 99330 2 1 100 0 0 0
 *     "Log Lane" - closed
 *
 *
-O 0 99061 1 99001 100 0 0 0        * a set of golden horse shoes
+O 0 99061 1 99001 100 0 0 0        * a set of golden horseshoes
 O 0 99062 1 99194 100 0 0 0        * the well
 *
 M 0 99001 39 99001 100 0 0 0       * the wood elf

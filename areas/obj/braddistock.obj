@@ -374,7 +374,7 @@ key~
 &+ca silver key&N~
 &+cA silver key rests here.&N~
 ~
-13 15 3 0 7 0 16384 1 0 0 0
+13 15 3 0 7 0 16384 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #1335
@@ -448,7 +448,7 @@ collar~
 &+Ba collar with an inscription, "Slippers"&N~
 &+BA collar lies here.&N~
 ~
-13 15 3 0 7 0 0 1 0 0 0
+13 15 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E

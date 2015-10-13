@@ -2,7 +2,7 @@
 &+YMyrloch Vale&n~
 26578 1 0 19 29 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 26492 5 2 100 0 0 0
@@ -91,7 +91,6 @@ O 0 26414 1 26549 100 0 0 0        * a stalagmite
 O 0 26415 1 26551 100 0 0 0        * a stalagmite
 O 0 26416 1 26553 100 0 0 0        * a stalagmite
 O 0 358 1 26555 100 0 0 0          * (object type not in this .obj file)
-O 0 26435 0 26558 100 0 0 0        * a glittering mountain of coins
 *
 M 0 26416 15 26401 100 0 0 0       * a Llewyrr child
 E 1 26436 11 18 100 0 0 0          *   a toy

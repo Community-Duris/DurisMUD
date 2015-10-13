@@ -58,7 +58,7 @@ smoke key pure~
 &+La key of pure smoke~
 &+LA key made of swirling smoke lays here unwanted.~
 ~
-18 15 3 0 7 0 8507393 16385 0 1 0
+18 15 3 0 7 0 8507393 16385 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 #131606
@@ -96,7 +96,7 @@ essence frost ball essense~
 &+Wthe essence of frost~
 &+WA ball of pure frost and power levitate here emiting a radiance of cold.~
 ~
-12 1 3 0 7 100 67235904 16385 0 1 0
+12 1 3 0 7 100 67235904 16385 32768 1 0
 0 0 0 0 0 0 0 0
 0 130400 100
 E
@@ -109,7 +109,7 @@ smoke essense ball~
 &+Lthe essense of smoke~
 &+LA small ball made of smoke levitates in mid air here.~
 ~
-12 15 3 0 7 100 118848 16385 0 1 0
+12 15 3 0 7 100 118848 16385 32768 1 0
 0 0 0 0 0 0 0 0
 0 130594 100
 E
@@ -122,7 +122,7 @@ essense ball mist~
 &+Cthe essense of mist~
 &+CA small ball made of the essense of mist levitates in mid air here.~
 ~
-12 15 3 0 7 100 67227712 16385 0 1 0
+12 15 3 0 7 100 67227712 16385 32768 1 0
 0 0 0 0 0 0 0 0
 0 139284 100
 E
@@ -168,7 +168,7 @@ heart ixteal small~
 &n&+rthe heart of &n&+Mixteal~
 &n&+rA small heart has been dropped here, obviously unwanted.~
 ~
-12 15 3 0 7 50 53312 16385 0 2560 0
+12 15 3 0 7 50 53312 16385 32768 2560 0
 0 0 0 0 0 0 0 0
 0 5019 100
 E
@@ -193,7 +193,7 @@ cloak north wind~
 &+Wthe &+cfr&+Cos&+Wt-&+cco&+Cver&+ced &+Cc&+Wloa&+Ck&+W of the &+Cnor&+cth w&+Cind&n~
 &+cA cloak of the north wind lies here.&N~
 ~
-11 1 3 0 12 0 33824 1025 0 147099140 0
+11 1 3 0 12 0 33824 1025 32768 147099140 0
 0 0 0 0 0 0 0 0
 0 181818 100 134217744 0 0 0
 A
@@ -316,7 +316,7 @@ medallion djinn~
 &+Ythe medallion of the Djinn&N~
 &+YA shiny gold medallion lies here.&N~
 ~
-11 15 3 0 7 0 229376 16389 0 1 0
+11 15 3 0 7 0 229376 16389 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 #131628
@@ -480,7 +480,7 @@ essence ball essense storm four~
 &+cthe s&+Cwi&+Wrli&+Cn&+cg es&+Csen&+cce &+Co&+cf &+Ct&+che &+CFo&+cur &+CStor&+cms&n~
 &+WA ball of pure wind and power levitate here emiting a radiance of storms and lightning.~
 ~
-12 1 3 0 7 100 67235904 16385 0 0 0
+12 1 3 0 7 100 67235904 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 130400 100
 E
@@ -493,7 +493,7 @@ essence ball essense wind fate~
 &+cthe s&+Cwi&+Wrli&+Cn&+cg es&+Csen&+cce &+Co&+cf &+Ct&+che &+CW&+Wind&+Cs&+W of &+cF&+Ca&+Wt&+Ce&n~
 &+WA ball of pure wind and power levitate here emiting a radiance of storms and lightning.~
 ~
-12 1 3 0 7 100 67235904 16385 0 0 0
+12 1 3 0 7 100 67235904 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 130400 100
 E
@@ -506,7 +506,7 @@ essence ball essense great maelstrom~
 &+cthe s&+Cwi&+Wrli&+Cn&+cg es&+Csen&+cce &+Co&+cf &+Ct&+che &+cG&+Cre&+Wa&+ct &+CMa&+Wel&+ws&+ctr&+Com&n~
 &+WA ball of pure wind and power levitate here emiting a radiance of storms and lightning.~
 ~
-12 1 3 0 7 100 67235904 16385 0 0 0
+12 1 3 0 7 100 67235904 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 130400 100
 E
@@ -519,7 +519,7 @@ essence ball essense boundless blue~
 &+cthe s&+Cwi&+Wrli&+Cn&+cg es&+Csen&+cce &+Co&+cf &+Ct&+che &+bB&+Bo&+Cundless Bl&+Bu&+be&n~
 &+WA ball of pure wind and power levitate here emiting a radiance of storms and lightning.~
 ~
-12 1 3 0 7 100 67235904 16385 0 0 0
+12 1 3 0 7 100 67235904 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 130400 100
 E
@@ -532,7 +532,7 @@ essence ball essense unseen breeze~
 &+cthe s&+Cwi&+Wrli&+Cn&+cg es&+Csen&+cce &+Co&+cf &+Ct&+che &+CUn&+Wseen &+CBr&+Weeze&n~
 &+WA ball of pure wind and power levitate here emiting a radiance of storms and lightning.~
 ~
-12 1 3 0 7 100 67235904 16385 0 0 0
+12 1 3 0 7 100 67235904 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 130400 100
 E
@@ -545,7 +545,7 @@ essence ball essense maelstrom chaotic elemental fragment~
 &+cthe &+Wc&+Mh&+Ra&+yo&+Yt&+Ci&+mc &+re&+Rl&+Ye&+ym&+Ge&+gn&+Ct&+Ba&+bl &+rf&+Rr&+Lagme&+Rn&+rt &+cof the &+CMa&+Wel&+ws&+ctr&+Com&n~
 &+WA ball of pure wind and power levitate here emiting a radiance of storms and lightning.~
 ~
-12 1 3 0 7 100 67235904 16385 0 0 0
+12 1 3 0 7 100 67235904 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 130400 100
 E

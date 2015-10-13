@@ -59,7 +59,7 @@ bloody head grtak gr'tak raider~
 &+rthe bloody head of Gr'Tak the Raider&N~
 &+rThe bloody head of Gr'Tak the Raider lies here in a puddle.~
 ~
-8 2 3 0 7 0 8392704 16385 0 0 0
+8 2 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 14 1 100
 E
@@ -87,7 +87,7 @@ bloody head krekish vicefang~
 &+rthe bloody head of Krekish ViceFang&N~
 &+rThe bloody head of Krekish ViceFang lies here.~
 ~
-8 2 3 0 7 0 8392704 16385 0 0 0
+8 2 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 14 1 100
 E
@@ -218,7 +218,7 @@ heart sa'dah~
 &+Lthe still &+rbeating &+Lheart of &+rSa'Dah&n~
 &+La still &+rbeating &+Lheart lies here.&n~
 ~
-13 2 3 0 7 0 8392712 1 0 0 0
+13 2 3 0 7 0 8392712 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #500016
@@ -226,7 +226,7 @@ heart jorl'gan~
 &+Lthe still &+rbeating &+Lheart of &+gJorl'gan&n~
 &+La still &+rbeating &+Lheart lies here.&n~
 ~
-13 2 3 0 7 0 8392712 1 0 0 0
+13 2 3 0 7 0 8392712 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #500017
@@ -234,7 +234,7 @@ heart cho'van~
 &+Lthe still &+rbeating &+Lheart of &+CCho'van&n~
 &+La still &+rbeating &+Lheart lies here.&n~
 ~
-13 2 3 0 7 0 8392712 1 0 0 0
+13 2 3 0 7 0 8392712 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #500018
@@ -242,7 +242,7 @@ pulsing darkness throbbing merrova~
 &+Lthe &+mpulsing &+Ldarkness of &+MMerrova&n~
 &+LA &+mthrobbing &+Land &+mpulsing &+Ldarkness lies here.&n~
 ~
-13 1 3 0 7 0 8392713 1 0 0 0
+13 1 3 0 7 0 8392713 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #500019
@@ -250,7 +250,7 @@ heart thorne~
 &+Lthe still &+rbeating &+Lheart of &+BThorne&n~
 &+La still &+rbeating &+Lheart lies here.&n~
 ~
-13 2 3 0 7 0 8388608 1 0 0 0
+13 2 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #500020
@@ -258,7 +258,7 @@ nightcrawler claw~
 &+La n&+bi&+Lght&+bcr&+Lawler c&+bl&+Law&N~
 &+LA hideous nightcrawler claw has been left here.~
 ~
-5 15 3 0 7 0 0 8193 0 0 0
+5 15 3 0 7 0 0 8193 32768 0 0
 2 1 10 0 0 0 0 0
 0 0 100
 E
@@ -290,7 +290,7 @@ bloody paw grey fang~
 &+rthe bloody paw of Grey Fang&N~
 &+rThe bloody paw of Grey Fang has been left here.~
 ~
-8 2 3 0 7 0 8392704 16385 0 0 0
+8 2 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 5 100
 E
@@ -303,7 +303,7 @@ frosty white potion~
 &+Wa &+Cfrosty &+Wwhite potion&N~
 &+WA &+Cfrosty &+Wwhite potion has been left here.~
 ~
-10 7 3 0 7 0 1 16385 0 0 0
+10 7 3 0 7 0 1 16385 32768 0 0
 50 131 232 293 0 0 0 0
 0 15343 100
 E
@@ -315,7 +315,7 @@ lizardman totem elemental~
 &+ga &+Ll&+Gi&+Lz&+Ga&+Lr&+Gd&+Lm&+Ga&+Ln &+gtotem&N~
 &+gA &+Llizardman &+gtotem&N has been left here.~
 ~
-34 6 3 0 7 0 1 16385 64 0 0
+34 6 3 0 7 0 1 16385 32832 0 0
 12 0 0 0 0 0 0 0
 4 15343 100
 E
@@ -332,7 +332,7 @@ huge blood crystal~
 &+ra huge &+Rblood &+rcrystal&N~
 &+rJutting out of the ground, a huge &+Rblood crystal &+Lgrows here.~
 ~
-8 26 3 0 15 0 8388609 16385 64 0 0
+8 26 3 0 15 0 8388609 16385 32832 0 0
 0 0 0 0 0 0 0 0
 15 35000 100
 E
@@ -344,7 +344,7 @@ wyvern egg~
 &+ya wyvern &+Wegg&N~
 &+yA wyvern &+Wegg &+yrests here in a thick wyvern nest.~
 ~
-19 45 3 0 15 0 8388608 16385 0 0 0
+19 45 3 0 15 0 8388608 16385 32768 0 0
 100 0 0 0 0 0 0 0
 1 15656 100
 E
@@ -368,7 +368,7 @@ crumbling locket fire~
 &+Lthe &+wcrumbling &+Llocket of &+rfire&n~
 &+LAn &+wancient &+Llocket lies here, decaying in the winds of time.&n~
 ~
-13 15 3 0 7 0 8 1 64 0 0
+13 15 3 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -392,7 +392,7 @@ crumbling locket water~
 &+Lthe &+wcrumbling &+Llocket of &+bwater&n~
 &+LAn &+wancient &+Llocket lies here, decaying in the winds of time.&n~
 ~
-13 15 3 0 7 0 8 1 64 0 0
+13 15 3 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -416,7 +416,7 @@ crumbling locket earth~
 &+Lthe &+wcrumbling &+Llocket of &+yearth&n~
 &+LAn &+wancient &+Llocket lies here, decaying in the winds of time.&n~
 ~
-13 15 3 0 7 0 8 1 64 0 0
+13 15 3 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -440,7 +440,7 @@ crumbling locket fire~
 &+Lthe &+wcrumbling &+Llocket of &+Cair&n~
 &+LAn &+wancient &+Llocket lies here, decaying in the winds of time.&n~
 ~
-13 15 3 0 7 0 8 1 64 0 0
+13 15 3 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -464,7 +464,7 @@ strange powerful mystical book tomorrows~
 &+Lthe &+mmy&+rst&+mic&+ral &+Lbook of &+Ytommorrows&n~
 &+LA strange and powerful &+Ybook &+Llies here.&n~
 ~
-13 15 3 0 7 0 8 1 64 0 0
+13 15 3 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #500033
@@ -715,7 +715,7 @@ head prophet fire~
 &+Lthe &+rhead &+Lof the &+RProphet &+rof &+RFire&n~
 &+LThe &+rhead &+Lof the &+RPropher &+rof &+RFire &+Lfloats here.&n~
 ~
-3 15 3 0 7 0 0 16385 64 0 0
+3 15 3 0 7 0 0 16385 32832 0 0
 50 5 5 277 0 0 0 0
 0 0 100
 A
@@ -727,7 +727,7 @@ head prophet ice~
 &+LThe &+bhead &+Lof the &+CProphet &+bof &+CIce&n~
 &+LThe &+bhead &+Lof the &+CProphet &+bof &+CIce &+Lfloats here.&n~
 ~
-3 15 3 0 7 0 0 16385 64 0 0
+3 15 3 0 7 0 0 16385 32832 0 0
 50 5 5 325 0 0 0 0
 0 0 100
 A

@@ -9,8 +9,8 @@ pounds, she stands poised and ready for intruders.  There is a restless glare
 in her eyes that is indicative of her indomitable will to keep this place
 safe.
 ~
-1074006090 0 0 2162696 64 0 0 -1000 S
-I 0 1 -1
+1074006090 0 0 0 2162696 64 0 0 -1000 S
+I 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -24,8 +24,8 @@ snow hare~
 &+Wof food or companionship.  Rather shy in nature, these bunnies keep to&n
 &+Wthemselves.  They blend almost perfectly with the snow.&n
 ~
-2120 0 0 524288 0 0 0 -100 S
-A 0 0 -1
+2120 0 0 0 524288 0 0 0 -100 S
+A 0 0 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -40,8 +40,8 @@ frost ant worker~
 &+ccreatures about.  It would seem that it carves the ice with two jagged&n
 &+cmandibles - that seem very &+Csharp&+c at that.&n
 ~
-1073743946 0 0 2162984 12444 0 0 -1000 S
-I 0 16 -1
+1073743946 0 0 0 2162984 12444 0 0 -1000 S
+I 0 16 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -57,8 +57,8 @@ or natural.  Its two fierce mandibles nervously chatter along with the
 sound of its shuffling spiked legs.  This being seems almost neurotic
 however, thus so indicated by its constant motion and aggressive tendencies.
 ~
-1073756234 1 0 44 28 0 0 -350 S
-I 0 1 -1
+1073756234 1 0 0 44 28 0 0 -350 S
+I 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -72,8 +72,8 @@ tiny red being larvae handler~
 &+rhere and nestling them there.  He works rather swiftly and relentlessly, the&n
 &+rultimate caretaker in every aspect.&n
 ~
-1140983882 0 0 40 0 0 0 -1000 S
-Y 0 32 -1
+1140983882 0 0 0 40 0 0 0 -1000 S
+Y 0 32 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -87,8 +87,8 @@ frozen larva~
 &+cand rippling throughout.  A strange cyan tinge surrounds the larva, and it&n
 &+cbrightens and dims to the steady sound of a shallow heartbeat.&n
 ~
-1074006218 0 0 2795624 12510 0 0 -350 S
-I 0 0 -1
+1074006218 0 0 0 2795624 12510 0 0 -350 S
+I 0 0 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -103,8 +103,8 @@ ant keeper warrior~
 &+crazor sharp mandibles.  An intermittent high pitched hiss comes from this&n
 &+cfearless ant, a war cry yawped in the face of danger.&n
 ~
-1073743944 0 0 12 0 0 0 -1000 S
-I 0 1 -1
+1073743944 0 0 0 12 0 0 0 -1000 S
+I 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -118,8 +118,8 @@ green slime sickly~
 &+gIt moves about slowly, creating the illusion of a surreal effortless hover.&n
 &+gNext to mesmerizing, this must be how it catches its prey.&n
 ~
-8 0 0 0 0 0 0 -1000 S
-AP 0 0 -1
+8 0 0 0 0 0 0 0 -1000 S
+AP 0 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -134,8 +134,8 @@ arctic panther white~
 &+Wmore opportune catch to pass by.  Common sense would dictate that this&n
 &+Wbeast is to be left alone.&n
 ~
-1073743944 0 0 0 0 0 0 -555 S
-A 0 1 -1
+1073743944 0 0 0 0 0 0 0 -555 S
+A 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

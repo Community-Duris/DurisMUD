@@ -157,7 +157,7 @@ heart drow _noquest_~
 &+Lthe &+rheart &+Lof &+WSpij&n~
 &+LThe &+rbloody heart &+Lof a &+mDrow Elf &+Llies here.&n~
 ~
-13 2 2 0 7 0 8392705 1 64 0 0
+13 2 2 0 7 0 8392705 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -167,7 +167,7 @@ heart duergar _noquest_~
 &+Lthe &+rheart &+Lof &+WGolrith&n~
 &+LThe &+rbloody heart &+Lof a &+rDuergar &+Llies here.&n~
 ~
-13 2 2 0 7 0 8392705 1 64 0 0
+13 2 2 0 7 0 8392705 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -177,7 +177,7 @@ heart ogre _noquest_~
 &+Lthe &+rheart &+Lof &+WTaranno&n~
 &+LThe &+rbloody heart &+Lof an &+BOgre &+Llies here.&n~
 ~
-13 2 2 0 7 0 8392705 1 64 0 0
+13 2 2 0 7 0 8392705 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -187,7 +187,7 @@ heart githyanki _noquest_~
 &+Lthe &+rheart &+Lof &+WLaps&n~
 &+LThe &+rbloody heart &+Lof a &+GGith&+Wyanki &+Llies here.&n~
 ~
-13 2 2 0 7 0 8392705 1 64 0 0
+13 2 2 0 7 0 8392705 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -197,7 +197,7 @@ heart troll _noquest_~
 &+Lthe &+rheart &+Lof &+WBreg&n~
 &+LThe &+rbloody heart &+Lof a &+GTroll &+Llies here.&n~
 ~
-13 2 2 0 7 0 8392705 1 64 0 0
+13 2 2 0 7 0 8392705 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -207,7 +207,7 @@ heart thri-kreen _noquest_~
 &+Lthe &+rheart &+Lof &+WKileek&n~
 &+LThe &+rbloody heart &+Lof a &+GThri-&+YKreen &+Llies here.&n~
 ~
-13 2 2 0 7 0 4097 1 64 0 0
+13 2 2 0 7 0 4097 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -217,7 +217,7 @@ heart goblin _noquest_~
 &+Lthe &+rheart &+Lof &+WDakta&n~
 &+LThe &+rbloody heart &+Lof a &+GGoblin &+Llies here.&n~
 ~
-13 2 2 0 7 0 4097 1 64 0 0
+13 2 2 0 7 0 4097 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -227,7 +227,7 @@ heart orc _noquest_~
 &+Lthe &+rheart &+Lof &+WOrthaz&n~
 &+LThe &+rbloody heart &+Lof an Orc lies here.&n~
 ~
-13 2 2 0 7 0 8392705 1 64 0 0
+13 2 2 0 7 0 8392705 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -271,7 +271,7 @@ heart lost jade wyrm _noquest_~
 &+Lthe &+rheart &+Lof the &+glost &+Gjade &+gwyrm&n~
 &+La &+Rbloody &+rheart &+Lfrom a &+glost &+Gjade &+gwyrm &+Llies here.&n~
 ~
-13 2 3 0 7 0 8396808 1 0 0 0
+13 2 3 0 7 0 8396808 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55026
@@ -334,7 +334,7 @@ venom sack puffadder~
 &+Lthe &+gvenom &+Gsack &+Lof a &+rpuff&+Radder&n~
 &+LA &+rbloody &+gvenom &+Gsack &+Llies here.&n~
 ~
-13 2 3 0 7 0 0 1 0 0 0
+13 2 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55031
@@ -342,7 +342,7 @@ letter immunity _noquest_~
 &+La letter of immunity&n~
 &+La letter of immunity&n~
 ~
-13 15 3 0 7 0 0 1 0 0 0
+13 15 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -356,7 +356,7 @@ vial bodyrush~
 &+La vial of &+ybody&+rrush&n~
 &+LA small vial of &+ybody&+rrush &+Lhas been thrown away here.&n~
 ~
-10 7 3 0 7 0 1 8388609 64 0 0
+10 7 3 0 7 0 1 8388609 32832 0 0
 40 41 0 0 0 0 0 0
 1 0 100
 #55033
@@ -364,7 +364,7 @@ gnomish shopkeepers token _noquest_~
 &+La &+Rgn&+romi&+Rsh &+Lshopkeepers token&n~
 &+LA &+Rgn&+romi&+Rsh &+Lshopkeepers token lies in the dust here.&n~
 ~
-13 15 3 0 7 0 8 1 64 0 0
+13 15 3 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55034
@@ -398,7 +398,7 @@ skull bloody seasoned warrior _noquest_~
 &+Lthe &+Wskull &+Lof a &+rseasoned &+Lwarrior&n~
 &+LA &+rbloody &+Wskull &+Llies on the floor here.&n~
 ~
-13 10 3 0 7 0 0 1 0 0 0
+13 10 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55038
@@ -406,7 +406,7 @@ sheath stitched skulls~
 &+La sheath of &+rstitched &+Ltogether &+Wskulls&n~
 &+LAn odd looking sheath &+rmade &+Lof &+Wskulls &+Llies here.&n~
 ~
-9 10 3 0 7 0 0 1048577 64 0 0
+9 10 3 0 7 0 0 1048577 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100 8 0 0 0
 A
@@ -786,7 +786,7 @@ heart tiamat _noquest_~
 &+Wthe &+rheart &+Wof &+LTiamat&n~
 &+WA beating &+rheart &+Wlies here.~
 ~
-8 2 3 0 15 0 8388608 1 64 0 0
+8 2 3 0 15 0 8388608 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -796,7 +796,7 @@ heart bahamut _noquest_~
 &+Wthe &+rheart &+Wof &+WBahamut&n~
 &+WA beating &+rheart &+Wlies here.~
 ~
-8 2 3 0 15 0 8388608 1 64 0 0
+8 2 3 0 15 0 8388608 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -806,7 +806,7 @@ heart dragonnia _noquest_~
 &+Wthe &+rheart &+Wof &+GDragonnia&n~
 &+WA beating &+rheart &+Wlies here.~
 ~
-8 2 3 0 15 0 8388608 1 64 0 0
+8 2 3 0 15 0 8388608 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -1321,7 +1321,7 @@ long sword longsword steel plain~
 &+Wa plain &+Csteel &+Wlongsword~
 &+WA plain &+Csteel &+Wlongsword lies here.&n~
 ~
-5 16 2 0 7 0 0 8193 0 0 0
+5 16 2 0 7 0 0 8193 32768 0 0
 5 1 8 0 0 0 0 0
 5 9500 100
 A
@@ -1335,7 +1335,7 @@ shortsword short sword steel plain~
 &+Wa plain &+Csteel &+Wshortsword~
 &+WA plain &+Csteel &+Wshortsword lies here.&n~
 ~
-5 16 2 0 7 0 0 8193 0 0 0
+5 16 2 0 7 0 0 8193 32768 0 0
 9 1 4 0 0 0 0 0
 3 9500 100
 A
@@ -1349,7 +1349,7 @@ warhammer steel plain~
 &+Wa plain &+Csteel &+Wwarhammer&n~
 &+WA plain &+Csteel &+Wwarhammer lies here.&n~
 ~
-5 16 2 0 7 0 0 8193 0 0 0
+5 16 2 0 7 0 0 8193 32768 0 0
 4 1 5 0 0 0 0 0
 5 9500 100
 A
@@ -1363,7 +1363,7 @@ axe steel plain~
 &+Wa plain &+Csteel &+Waxe&n~
 &+WA plain &+Csteel &+Waxe lies here.&n~
 ~
-5 16 2 0 7 0 0 8193 0 0 0
+5 16 2 0 7 0 0 8193 32768 0 0
 1 1 6 0 0 0 0 0
 4 9500 100
 A
@@ -1377,7 +1377,7 @@ bastard sword steel plain~
 &+Wa plain &+Csteel &+Wbastard sword&n~
 &+WA plain &+Csteel &+Wbastard sword lies here.&n~
 ~
-5 16 2 0 7 0 0 8193 0 0 0
+5 16 2 0 7 0 0 8193 32768 0 0
 13 1 8 0 0 0 0 0
 6 11500 100
 A
@@ -1391,7 +1391,7 @@ spiked mace steel plain~
 &+Wa plain &+Csteel &+Wspiked mace&n~
 &+WA plain &+Csteel &+Wspiked mace lies here.&n~
 ~
-5 16 2 0 7 0 0 8193 0 0 0
+5 16 2 0 7 0 0 8193 32768 0 0
 7 1 6 0 0 0 0 0
 4 10500 100
 A
@@ -1405,7 +1405,7 @@ dagger steel plain~
 &+Wa plain &+Csteel &+Wdagger&n~
 &+WA plain &+Csteel &+Wdagger lies here.&n~
 ~
-5 16 2 0 7 0 0 8193 0 0 0
+5 16 2 0 7 0 0 8193 32768 0 0
 2 1 4 0 0 0 0 0
 3 6500 100
 A
@@ -1419,7 +1419,7 @@ steel armplates~
 &+Wa set of &+Csteel &+Warmplates&n~
 &+WA set of &+Csteel &+Warmplates lies here.&n~
 ~
-9 16 2 0 7 0 0 257 0 0 0
+9 16 2 0 7 0 0 257 32768 0 0
 0 0 0 0 0 0 0 0
 3 155000 100
 A
@@ -1433,7 +1433,7 @@ steel legplates~
 &+Wa set of &+Csteel &+Wlegplates&n~
 &+WA set of &+Csteel &+Wlegplates lies here.&n~
 ~
-9 16 2 0 7 0 0 33 0 0 0
+9 16 2 0 7 0 0 33 32768 0 0
 0 0 0 0 0 0 0 0
 5 155000 100
 A
@@ -1447,7 +1447,7 @@ steel boots~
 &+Wa set of &+Csteel &+Wboots&n~
 &+WA set of &+Csteel &+Wboots lies here.&n~
 ~
-9 16 2 0 7 0 0 65 0 0 0
+9 16 2 0 7 0 0 65 32768 0 0
 0 0 0 0 0 0 0 0
 4 155000 100
 A
@@ -1461,7 +1461,7 @@ steel helmet~
 &+Wa simple &+Csteel &+Whelmet&n~
 &+WA simple &+Csteel &+Whelmet lies here.&n~
 ~
-9 16 2 0 7 0 0 17 0 0 0
+9 16 2 0 7 0 0 17 32768 0 0
 0 0 0 0 0 0 0 0
 3 155000 100
 A
@@ -1475,7 +1475,7 @@ steel platemail suit~
 &+Wa suit of &+Csteel &+Wplatemail&n~
 &+WA suit of &+Csteel &+Wplatemail lies here.&n~
 ~
-9 16 2 0 7 0 1024 9 0 1065017 0
+9 16 2 0 7 0 1024 9 32768 1065017 0
 0 0 0 0 0 0 0 0
 12 350000 100
 A
@@ -1489,7 +1489,7 @@ steel gauntlets~
 &+Wa set of &+Csteel &+Wgauntlets&n~
 &+WA set of &+Csteel &+Wgauntlets lies here.&n~
 ~
-9 16 2 0 7 0 0 129 0 0 0
+9 16 2 0 7 0 0 129 32768 0 0
 0 0 0 0 0 0 0 0
 3 155000 100
 A
@@ -1503,7 +1503,7 @@ steel tower shield heavy~
 &+Wa heavy &+Csteel &+Wtower shield&n~
 &+WA heavy &+Csteel &+Wtower shield lies here.&n~
 ~
-9 16 2 155000 7 0 0 513 0 0 0
+9 16 2 155000 7 0 0 513 32768 0 0
 0 0 0 0 0 0 0 0
 15 55000 100
 A
@@ -1517,7 +1517,7 @@ steel buckler~
 &+Wa light &+Csteel &+Wbuckler~
 &+WA light &+Csteel &+Wbuckler lies here.&n~
 ~
-9 16 2 0 7 0 0 257 0 0 0
+9 16 2 0 7 0 0 257 32768 0 0
 0 0 0 0 0 0 0 0
 8 135000 100
 A
@@ -1531,7 +1531,7 @@ ingot mithril _noquest_~
 &+La &+mmithril &+Lingot&n~
 &+La small block of &+mmithril &+Llies here.&n~
 ~
-12 18 2 0 7 0 0 1 0 0 0
+12 18 2 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 100000 100
 T
@@ -1541,7 +1541,7 @@ ingot adamantium _noquest_~
 &+Lan &+Madamantium &+Lingot&n~
 &+La small block of &+Madamantium &+Llies here.&n~
 ~
-12 19 2 0 7 0 0 1 0 0 0
+12 19 2 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 100000 100
 T
@@ -1551,7 +1551,7 @@ ingot platinum _noquest_~
 &+La &+Wplatinum &+Lingot&n~
 &+La small block of &+Wplatinum &+Llies here.&n~
 ~
-12 25 2 0 7 0 0 1 0 0 0
+12 25 2 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 100000 100
 T
@@ -1561,7 +1561,7 @@ ingot electrum _noquest_~
 &+Lan &+Celectrum &+Lingot&n~
 &+La small block of &+Celectrum &+Llies here.&n~
 ~
-12 23 2 0 7 0 0 1 0 0 0
+12 23 2 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 100000 100
 T
@@ -1571,7 +1571,7 @@ ingot bronze _noquest_~
 &+La &+ybronze &+Lingot&n~
 &+La small block of &+ybronze &+Llies here.&n~
 ~
-12 20 2 0 7 0 0 1 0 0 0
+12 20 2 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 100000 100
 T
@@ -1625,7 +1625,7 @@ potion frosty~
 &+Wa &+Cfr&+Bos&+Cty &+Wpotion~
 &+WA small &+Cfr&+Bos&+Cty &+Wpotion has been tossed in the dust.&n~
 ~
-10 7 1 0 7 0 0 8404993 0 0 0
+10 7 1 0 7 0 0 8404993 32768 0 0
 50 97 131 356 0 0 0 0
 0 25000 100
 T
@@ -1635,7 +1635,7 @@ potion fiery~
 &+Wa &+Rfi&+re&+Rry &+Wpotion~
 &+WA small &+Rfi&+re&+Rry &+Wpotion has been tossed in the dust.&n~
 ~
-10 7 1 0 7 0 0 8404993 0 0 0
+10 7 1 0 7 0 0 8404993 32768 0 0
 50 96 108 356 0 0 0 0
 0 25000 100
 T
@@ -1645,7 +1645,7 @@ potion granite~
 &+Wa &+Lgr&+wa&+Lni&+wt&+Le &+Wpotion~
 &+WA small &+Lgr&+wa&+Lni&+wt&+Le &+Wpotion has been tossed in the dust.&n~
 ~
-10 7 1 0 7 0 0 8404993 0 0 0
+10 7 1 0 7 0 0 8404993 32768 0 0
 50 36 1 400 0 0 0 0
 0 50000 100
 T
@@ -1655,7 +1655,7 @@ potion acceleration~
 &+Wa &+Yac&+Wcel&+Yera&+Wtio&+Yn &+Wpotion~
 &+WA small &+Yac&+Wcel&+Yera&+Wtio&+Yn &+Wpotion has been tossed in the dust.&n~
 ~
-10 7 1 0 7 0 0 8404993 0 0 0
+10 7 1 0 7 0 0 8404993 32768 0 0
 50 201 41 452 0 0 0 0
 0 25000 100
 T
@@ -1665,7 +1665,7 @@ potion protection~
 &+Wa &+Mpro&+mtect&+Mion &+Wpotion~
 &+WA potion of &+Mpro&+mtect&+Mion &+Whas been left here.&n~
 ~
-10 7 1 0 7 0 0 8404993 0 0 0
+10 7 1 0 7 0 0 8404993 32768 0 0
 50 188 144 318 0 0 0 0
 0 25000 100
 T
@@ -1675,7 +1675,7 @@ empty potion bottle~
 &+Yan empty potion bottle&n~
 &+YAn empty potion bottle lies here.&n~
 ~
-17 7 1 0 7 0 0 1 0 0 0
+17 7 1 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 T
@@ -1850,7 +1850,7 @@ mark death~
 &+Lthe mark of &+rD&+Rea&+rth&n~
 &+LA strange symbol of &+rd&+Rea&+rth &+Llies here.&n~
 ~
-13 15 3 0 7 0 1 16385 0 0 0
+13 15 3 0 7 0 1 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100 0 1024 0 0
 E
@@ -1970,7 +1970,7 @@ blueprints improvement gnomish _noquest_~
 &+Lthe &+Rgn&+romi&+Rsh &+bblueprints &+Lof &+bimprovement&n~
 &+LA &+bset &+Lof &+bblueprints &+Lhave been left on the ground.&n~
 ~
-13 28 1 0 15 0 8 1 64 0 0
+13 28 1 0 15 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -1980,7 +1980,7 @@ long sword longsword magical platinum _noquest_~
 &+Wa &+Cmagical &+Wplatinum &+clongsword~
 &+WA &+Cmagical &+Wplatinum &+clongsword &+Wlies on the floor.&n~
 ~
-5 25 2 0 7 0 9216 8193 66 87080987 0
+5 25 2 0 7 0 9216 8193 32834 87080987 0
 5 3 4 0 0 0 0 0
 2 10000 100
 A
@@ -1994,7 +1994,7 @@ bastard sword magical platinum _noquest_~
 &+Wa &+Cmagical &+Wplatinum &+cbastard sword~
 &+WA &+Cmagical &+Wplatinum &+cbastard sword &+Wlies on the floor.&n~
 ~
-5 25 2 0 7 0 9216 8193 66 87048219 0
+5 25 2 0 7 0 9216 8193 32834 87048219 0
 13 2 8 0 0 0 0 0
 2 0 100
 A
@@ -2008,7 +2008,7 @@ magical electrum dagger _noquest_~
 &+Wa &+cmagical &+Celectrum &+Wdagger~
 &+WA &+cmagical &+Celectrum &+Wdagger lies on the floor.&n~
 ~
-5 23 2 0 7 0 9216 8193 66 3272707 0
+5 23 2 0 7 0 9216 8193 32834 3272707 0
 2 2 3 0 0 0 0 0
 2 0 100
 A
@@ -2022,7 +2022,7 @@ magical electrum shortsword _noquest_~
 &+Wa &+cmagical &+Celectrum &+Wshortsword~
 &+WA &+cmagical &+Celectrum &+Wshortsword lies on the floor.&n~
 ~
-5 23 2 0 7 0 9216 8193 0 3198979 0
+5 23 2 0 7 0 9216 8193 32768 3198979 0
 9 3 3 0 0 0 0 0
 2 10000 100
 A
@@ -2036,7 +2036,7 @@ magical electrum spiked mace _noquest_~
 &+Wa &+cmagical &+mmithril &+Cspiked mace~
 &+WA &+cmagical &+mmithril &+Cspiked mace &+Wlies on the floor.&n~
 ~
-5 18 2 0 7 0 9216 8193 66 87081275 0
+5 18 2 0 7 0 9216 8193 32834 87081275 0
 7 3 5 0 0 0 0 0
 2 0 100
 A
@@ -2050,7 +2050,7 @@ magical electrum axe _noquest_~
 &+Wa &+cmagical &+ybronze &+Waxe~
 &+WA &+cmagical &+ybronze &+Waxe lies on the floor.&n~
 ~
-5 20 2 0 7 0 9216 8193 66 3194883 0
+5 20 2 0 7 0 9216 8193 32834 3194883 0
 1 2 5 0 0 0 0 0
 2 0 100
 A
@@ -2064,7 +2064,7 @@ magical electrum warhammer _noquest_~
 &+Wa &+cmagical &+Madamantium &+Wwarhammer~
 &+WA &+cmagical &+Madamantium &+Wwarhammer lies on the floor.&n~
 ~
-5 19 2 0 7 0 9216 8193 0 5259297 65792
+5 19 2 0 7 0 9216 8193 32768 5259297 65792
 4 3 4 0 0 0 0 0
 2 10000 100
 A
@@ -2078,7 +2078,7 @@ bronze gauntlets _noquest_~
 &+Wa pair of &+cmagical &+ybronze &+Wgauntlets~
 &+WA pair of &+cmagical &+ybronze &+Wgauntlets lies on the floor.&n~
 ~
-9 20 2 0 7 0 1024 129 0 87081019 0
+9 20 2 0 7 0 1024 129 32768 87081019 0
 0 0 0 0 0 0 0 0
 2 10000 100
 A
@@ -2092,7 +2092,7 @@ magical adamantium platemail _noquest_~
 &+Wa suit of &+cmagical &+Madamantium &+Wplatemail~
 &+WA suit of &+cmagical &+Madamantium &+Wplatemail lies on the floor.&n~
 ~
-9 19 2 0 7 0 1024 9 0 87081019 0
+9 19 2 0 7 0 1024 9 32768 87081019 0
 0 0 0 0 0 0 0 0
 2 10000 100
 A
@@ -2106,7 +2106,7 @@ magical mithril helmet _noquest_~
 &+Wa &+cmagical &+mmithril &+Whelmet~
 &+WA &+cmagcial &+mmithril &+Whelmet lies on the floor.&n~
 ~
-9 18 2 0 7 0 1024 17 0 87081019 0
+9 18 2 0 7 0 1024 17 32768 87081019 0
 0 0 0 0 0 0 0 0
 2 10000 100
 A
@@ -2120,7 +2120,7 @@ magical platinum boots _noquest_~
 &+Wa pair of &+Cmagical &+Wplatinum &+cboots&n~
 &+WA pair of &+Cmagical &+Wplatinum &+cboots &+Wlies on the floor.&n~
 ~
-9 25 2 0 7 0 1024 65 0 87081019 0
+9 25 2 0 7 0 1024 65 32768 87081019 0
 0 0 0 0 0 0 0 0
 2 10000 100
 A
@@ -2134,7 +2134,7 @@ magical mithril legplates _noquest_~
 &+Wa pair of &+cmagical &+mmithril &+Wlegplates&n~
 &+WA pair of &+cmagical &+mmithril &+Wlegplates lies on the floor.&n~
 ~
-9 18 2 0 7 0 1024 33 0 87081019 0
+9 18 2 0 7 0 1024 33 32768 87081019 0
 0 0 0 0 0 0 0 0
 2 10000 100
 A
@@ -2148,7 +2148,7 @@ magical mithril armplates _noquest_~
 &+Wa pair of &+cmagical &+mmithril &+Warmplates&n~
 &+WA pair of &+cmagical &+mmithril &+Warmplates lies on the floor.&n~
 ~
-9 18 2 0 7 0 1024 257 0 87081275 0
+9 18 2 0 7 0 1024 257 32768 87081275 0
 0 0 0 0 0 0 0 0
 2 10000 100
 A
@@ -2162,7 +2162,7 @@ magical adamantium tower shield _noquest_~
 &+Wa &+cmagical &+Madamantium &+Wtower shield&n~
 &+WA &+cmagical &+Madamantium &+Wtower shield&N lies here.~
 ~
-9 19 2 0 7 0 1024 4194817 0 83902521 0
+9 19 2 0 7 0 1024 4194817 32768 83902521 0
 0 0 0 0 0 0 0 0
 30 10000 100
 A
@@ -2176,7 +2176,7 @@ magical adamantium buckler _noquest_~
 &+Wa &+cmagical &+Madamantium &+Wbuckler&n~
 &+WA &+cmagical &+Madamantium &+Wbuckler lies on the floor.&n~
 ~
-9 19 2 0 7 0 1024 4194817 0 3264827 0
+9 19 2 0 7 0 1024 4194817 32768 3264827 0
 0 0 0 0 0 0 0 0
 15 10000 100
 A
@@ -2190,7 +2190,7 @@ memory jade empire _noquest_~
 &+ga me&+Gmo&+gry of the The &+GJade &+gEmpire&n~
 &+gA &+Gmemory &+gof The &+GJade &+gEmpire lies on the floor.&n~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2204,7 +2204,7 @@ memory _noquest_ castle du'maathe~
 &+La &+rmemory &+Lof the &+rDu'Maathe &+LCastle~
 &+LA &+rmemory &+Lof the &+rDu'Maathe &+LCastle lies on the floor.&n~
 ~
-9 11 2 0 7 0 8388616 1 64 0 0
+9 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2218,7 +2218,7 @@ memory icecrag castle~
 &+Wa mem&+Cory &+Wof the Ice&+Ccrag &+LCastle~
 &+WA mem&+Cory &+Wof the Ice&+Ccrag &+LCastle lies on the floor.&n~
 ~
-13 1 2 0 7 0 8388616 1 64 0 0
+13 1 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -2228,7 +2228,7 @@ memory _noquest_ fort boyard~
 &+ra &+Rmemory &+rof Fort &+RBoyard&n~
 &+rA &+Rmemory &+rof Fort &+RBoyard lies on the floor.&n~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2242,7 +2242,7 @@ memory _noquest_ city sky ultarium~
 &+Ba mem&+Wory of The &+BSky &+WCity of Ultarium&n~
 &+BA mem&+Wory of The &+BSky &+WCity of Ultarium lies on the floor.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2256,7 +2256,7 @@ memory _noquest_ jotunheim~
 &+ca &+Cmemory &+cof &+CJotunheim&n~
 &+cA &+Cmemory &+cof &+CJotunheim&n lies on the floor.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2270,7 +2270,7 @@ memory _noquest_ krethik keep~
 &+Wa mem&+Lory &+Wof Kre&+Lthik Ke&+Wep&n~
 &+WA mem&+Lory &+Wof Kre&+Lthik Ke&+Wep&n lies on the floor.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2284,7 +2284,7 @@ memory _noquest_ temple skrentherlog~
 &+La mem&+Yory &+Lof The Temple of &+YSkrentherlog&n~
 &+LA mem&+Yory &+Lof The Temple of &+YSkrentherlog&n lies on the floor.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2298,7 +2298,7 @@ memory _noquest_ forest city aravne~
 &+wa &+Wmem&+wory &+Wof &+wthe &+WForest City of Aravne&n~
 &+wA &+Wmem&+wory &+Wof &+wthe &+WForest City of Aravne&n lies on the floor.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2312,7 +2312,7 @@ memory _noquest_ domain lost souls~
 &+La m&+We&+Cmo&+cr&+Ly of the Domain of &+WLost &+CS&+co&+Cul&+cs&n~
 &+LA m&+We&+Cmo&+cr&+Ly of the Domain of &+WLost &+CS&+co&+Cul&+cs&n lies on the floor.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2326,7 +2326,7 @@ memory _noquest_ tribal oasis~
 &+ya me&+Cm&+Gor&+Cy &+yof the Tribal &+CO&+Gasi&+Cs&n~
 &+yA me&+Cm&+Gor&+Cy &+yof the Tribal &+CO&+Gasi&+Cs&n lies on the floor.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2354,7 +2354,7 @@ memory _noquest_ new cave city~
 &+La memory of &+yNew Cave &+LCity~
 &+LA memory of &+yNew Cave &+LCity&n lies on the floor.~
 ~
-13 10 2 0 7 0 8388616 1 64 0 0
+13 10 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -2364,7 +2364,7 @@ memory _noquest_ prisons carthapia~
 &+ma m&+Le&+mmo&+Lry &+mo&+Lf &+LThe Prisons of &+mCarthapia&n~
 &+mA m&+Le&+mmo&+Lry &+mo&+Lf &+LThe Prisons of &+mCarthapia&n lies here.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2378,7 +2378,7 @@ memory _noquest_ labyrinth return no~
 &+La &+wm&+Le&+rmo&+wr&+Ly &+rof &+Lthe &+wLabyrinth &+Lof &+rNo Return&n~
 &+LA memory of &+Lthe &+wLabyrinth &+Lof &+rNo Return&n lies here.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2392,7 +2392,7 @@ memory _noquest_ swamp~
 &+ga m&+mem&+gor&+my &+gof t&+mhe &+gSw&+mam&+gp~
 &+gA m&+mem&+gor&+my &+gof t&+mhe &+gSw&+mam&+gp lies here.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2406,7 +2406,7 @@ memory _noquest_ keep evil~
 &+La memory of the Keep of Evil&n~
 &+LA memory of the Keep of Evil lies here.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2420,7 +2420,7 @@ memory _noquest_ citadel~
 &+Ba &+Lm&+Be&+Lmo&+Bry &+Lof The &+BCitadel&n~
 &+BA &+Lm&+Be&+Lmo&+Bry &+Lof The &+BCitadel&n &+Blies here.~
 ~
-13 11 2 0 7 0 8388616 16385 64 0 0
+13 11 2 0 7 0 8388616 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2434,7 +2434,7 @@ memory _noquest_ obsidian citadel~
 &+La memory of the Obsidian Citadel&n~
 &+LA memory of the Obsidian Citadel lies here.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2448,7 +2448,7 @@ memory _noquest_ zalkapfaan~
 &+ya m&+Lemo&+yry &+Lof Zalkapfaan&n~
 &+yA m&+Lemo&+yry &+Lof Zalkapfaan &+ylies here.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2462,7 +2462,7 @@ memory _noquest_ lair gibberling king~
 &+La m&+Wem&+Lor&+Wy &+Lof the &+WLair of the Gibberling King&n~
 &+LA m&+Wem&+Lor&+Wy &+Lof the &+WLair of the Gibberling King &+Llies here.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2476,7 +2476,7 @@ memory _noquest_ high moor forest~
 &+ga m&+Cem&+Mor&+gy &+Lof &+gThe &+CHigh &+MMoor &+gForest&n~
 &+gA m&+Cem&+Mor&+gy &+Lof &+gThe &+CHigh &+MMoor &+gForest lies here.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2490,7 +2490,7 @@ memory _noquest_ ice tower~
 &+Wa m&+Cem&+Wor&+Cy o&+Wf t&+Ch&+We I&+Cc&+We &+CT&+Wo&+Cw&+We&+Cr&n~
 &+WA m&+Cem&+Wor&+Cy o&+Wf t&+Ch&+We I&+Cc&+We &+CT&+Wo&+Cw&+We&+Cr &+Wlies here.~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -2684,7 +2684,7 @@ mind illithid lord _noquest_~
 &+Lthe mind of an &+MIllithid &+Llord&n~
 &+LA strange &+Mpurple &+Land pusling blob lies here.&n~
 ~
-13 1 1 0 7 0 8200 1 64 0 0
+13 1 1 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -2694,7 +2694,7 @@ body illithid lord _noquest_~
 &+Lthe body of an &+MIllithid &+Llord&n~
 &+LA large &+Mpurple &+Lcorpse lies here.&n~
 ~
-13 1 1 0 7 0 8200 1 64 0 0
+13 1 1 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -2704,7 +2704,7 @@ soul illithid lord _noquest_~
 &+Lthe soul of an &+MIllithid &+Llord&n~
 &+LAn odd &+Mpurple &+Lmist lies here.&n~
 ~
-13 1 1 0 7 0 8200 1 64 0 0
+13 1 1 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -2714,7 +2714,7 @@ gnomish orb binding _noquest_~
 &+Lthe &+Rgn&+romi&+Rsh &+Co&+Lr&+Cb &+Lof b&+Ci&+Ln&+Cd&+Li&+Cn&+Lg&n~
 &+LA small &+Rpu&+rls&+Ra&+rti&+Rng &+Co&+Lr&+Cb &+Lbeckons you to pick it up.&n~
 ~
-13 1 1 0 7 0 33562633 1 64 0 0
+13 1 1 0 7 0 33562633 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -2752,7 +2752,7 @@ hide deer~
 &+Wthe hide of a &+Ydeer&n~
 &+WThe hide of a &+Ydeer &+Whas been left here.&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55213
@@ -2760,7 +2760,7 @@ hide doe~
 &+Wthe hide of a &+Ydoe&n~
 &+Wthe hide of a &+Ydoe&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55214
@@ -2768,7 +2768,7 @@ hide buck~
 &+Wthe hide of a &+Ybuck&n~
 &+Wthe hide of a &+Ybuck&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55215
@@ -2776,7 +2776,7 @@ down duck~
 &+Wthe down of a &+Yduck&N~
 &+Wthe down of a &+Yduck&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55216
@@ -2784,7 +2784,7 @@ pelt rabbit~
 &+Wthe pelt of a &+wrabbit&n~
 &+Wthe pelt of a &+wrabbit&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55217
@@ -2792,7 +2792,7 @@ pelt squirrel~
 &+Wthe pelt of a &+ysquirrel&n~
 &+Wthe pelt of a &+ysquirrel&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55218
@@ -2800,7 +2800,7 @@ feathers bluejay~
 &+Wthe feathers of a &+Bbluejay&n~
 &+Wthe feathers of a &+Bbluejay&n~
 ~
-13 50 3 0 7 0 0 1 0 0 0
+13 50 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55219
@@ -2808,7 +2808,7 @@ pelt raccoon~
 &+Wthe pelt of a &+Lr&+wa&+Lcc&+woo&+Ln&n~
 &+Wthe pelt of a &+Lr&+wa&+Lcc&+woo&+Ln&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55220
@@ -2816,7 +2816,7 @@ pelt fox~
 &+Wthe pelt of a &+rfox&n~
 &+Wthe pelt of a &+rfox&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55221
@@ -2824,7 +2824,7 @@ feathers eagle~
 &+Wthe feathers of an &+Yeagle&n~
 &+Wthe feathers of an &+Yeagle&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55222
@@ -2832,7 +2832,7 @@ pelt chipmunk~
 &+Wthe pelt of a &+ychipmunk&n~
 &+Wthe pelt of a &+ychipmunk&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55223
@@ -2840,7 +2840,7 @@ quills hedgehog~
 &+Wthe quills of a &+Lhedgehog&n~
 &+Wthe quills of a &+Lhedgehog&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55224
@@ -2848,7 +2848,7 @@ feathers hummingbird~
 &+Wthe feathers of a &+mh&+Mu&+mmm&+Mi&+mngb&+Mi&+mrd&n~
 &+Wthe feathers of a &+mh&+Mu&+mmm&+Mi&+mngb&+Mi&+mrd&n~
 ~
-13 50 3 0 7 0 0 1 0 0 0
+13 50 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55225
@@ -2856,7 +2856,7 @@ feathers swallow~
 &+Wthe feathers of a &+Lswallow&n~
 &+Wthe feathers of a &+Lswallow&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55226
@@ -2864,7 +2864,7 @@ hide wildcat~
 &+Wthe hide of a &+Ywildcat&n~
 &+Wthe hide of a &+Ywildcat&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55227
@@ -2872,7 +2872,7 @@ talons vulture~
 &+Wthe talons of a &+Lvulture&n~
 &+Wthe talons of a &+Lvulture~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55228
@@ -2880,7 +2880,7 @@ hide monkey~
 &+Wthe hide of a &+ymonkey&n~
 &+Wthe hide of a &+ymonkey&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55229
@@ -2888,7 +2888,7 @@ down duckling~
 &+Wthe down of a &+Yduckling&n~
 &+Wthe down of a &+Yduckling&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55230
@@ -2896,7 +2896,7 @@ skin carp~
 &+Wthe skin of a &+Bcarp&n~
 &+Wthe skin of a &+Bcarp&n~
 ~
-13 12 3 0 7 0 0 1 0 0 0
+13 12 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55231
@@ -2904,7 +2904,7 @@ vial smelly fish oil~
 &+La vial of &+Bsmelly &+Lfish &+Boil&n~
 &+LA vial of &+Bsmelly &+Lfish &+Boil&+L lies here.~
 ~
-13 40 3 0 7 0 0 1 0 0 0
+13 40 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55232
@@ -2912,7 +2912,7 @@ centaur semen _noquest_~
 &+Wa handful of &+gcen&+Ltaur &+Wsemen&n~
 &+WA handful of &+gcen&+Ltaur &+Wsemen lies here.&n~
 ~
-13 40 3 0 7 0 0 1 0 0 0
+13 40 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55233
@@ -2920,7 +2920,7 @@ baby centaur half-breed _noquest_~
 &+La baby &+gcen&+Ltaur half-breed&n~
 &+LA baby &+gcen&+Ltaur half-breed cries here.&n~
 ~
-13 2 3 0 7 0 0 8388609 0 0 0
+13 2 3 0 7 0 0 8388609 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55234
@@ -2969,7 +2969,7 @@ wicked scepter chronomancer _noquest_~
 &+Lthe &+rwi&+Rck&+red &+Lscepter of the Chronomancer&n~
 &+LA really &+rawe&+Rso&+rme &+Lscepter has been left here.&n~
 ~
-5 6 3 0 7 0 0 8193 0 0 0
+5 6 3 0 7 0 0 8193 32768 0 0
 7 3 3 0 0 0 0 0
 4 0 100
 A
@@ -2993,7 +2993,7 @@ sinew dragons heart _noquest_~
 &+Lthe &+rsi&+Rn&+rew &+Lof a &+gdr&+Gago&+gns &+rhe&+Ra&+rrt&n~
 &+LA pile of &+gdr&+Gago&+gn &+rfl&+Re&+rsh &+Llies here.&n~
 ~
-13 2 3 0 7 0 1 1 0 0 0
+13 2 3 0 7 0 1 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55241
@@ -3013,7 +3013,7 @@ locket glacier _noquest_~
 &+Lthe locket of the &+wgl&+ca&+Cc&+ci&+wer&n~
 &+LA small locket lies on the floor.&n~
 ~
-13 23 2 0 7 0 33554432 1 0 0 0
+13 23 2 0 7 0 33554432 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55243
@@ -3021,7 +3021,7 @@ locket volcano _noquest_~
 &+Lthe locket of the &+Lv&+rol&+Rc&+ran&+Lo&n~
 &+LA small locket lies on the floor.&n~
 ~
-13 23 2 0 7 0 33554432 1 0 0 0
+13 23 2 0 7 0 33554432 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55244
@@ -3029,7 +3029,7 @@ locket desert _noquest_~
 &+Lthe locket of the &+wd&+ye&+Yse&+yr&+wt&n~
 &+LA small locket lies on the floor.&n~
 ~
-13 23 2 0 7 0 33554432 1 0 0 0
+13 23 2 0 7 0 33554432 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55245
@@ -3037,7 +3037,7 @@ locket squall _noquest_~
 &+Lthe locket of the &+bs&+Bq&+Cua&+Bl&+bl&n~
 &+LA small locket lies on the floor.&n~
 ~
-13 23 2 0 7 0 33554432 1 0 0 0
+13 23 2 0 7 0 33554432 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55246
@@ -3045,7 +3045,7 @@ psychomia plant _noquest_~
 &+ga &+Lpsychomia &+gp&+Gla&+gnt&n~
 &+gA &+Lpsychomia &+gpl&+Gan&+gt &+Lgrows here.&n~
 ~
-13 43 2 0 7 0 0 1 0 0 0
+13 43 2 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -3058,7 +3058,7 @@ plastic bag drugs _noquest_~
 &+Wa small &+wplastic &+Wbag filled with &+gdr&+Gu&+ggs&n~
 &+WA small &+wplastic &+Wbag has been left here.&n~
 ~
-13 49 2 0 7 0 0 1 0 0 0
+13 49 2 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55248
@@ -3066,7 +3066,7 @@ super secret invitation _noquest_~
 &+La super &+wsecret &+Linvitation&n~
 &+LA cool looking invitation lies here.&n~
 ~
-13 28 2 0 7 0 33554432 1 0 0 0
+13 28 2 0 7 0 33554432 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55249
@@ -3152,7 +3152,7 @@ earring bluejay feathers~
 &+Wan &+Bea&+brr&+Bi&+Bng &+Wmade from &+Bbluejay &+bf&+Bea&+bth&+Be&+brs&n~
 &+WSomebody has thrown away a &+Bb&+beau&+Bt&+bi&+Bf&+bu&+Bl &+Wearring.&n~
 ~
-9 50 3 0 11 0 8192 524289 0 0 0
+9 50 3 0 11 0 8192 524289 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 A
@@ -3194,7 +3194,7 @@ eagle feather earring~
 &+Wa marvelous &+Yeagle&+W-&+Yfeather &+Wearring&n~
 &+WAn &+Yeagle's feather lies on the floor here.&n~
 ~
-9 50 3 0 11 0 8192 524289 0 0 0
+9 50 3 0 11 0 8192 524289 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 A
@@ -3250,7 +3250,7 @@ hummingbird feather brooch~
 &+Wa &+mh&+Mu&+mmm&+Mi&+mngb&+Mi&+mrd&+W-feather brooch~
 &+WA really cool looking &+mbr&+Moo&+mch &+Wlies here.&n~
 ~
-9 50 3 0 11 0 8192 524289 0 0 0
+9 50 3 0 11 0 8192 524289 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 A
@@ -3334,7 +3334,7 @@ earring swallow feathers~
 &+Wan &+Lea&+wrr&+Li&+wng &+Wmade from &+Lswallow &+Lf&+wea&+Lth&+we&+Lrs&n~
 &+WSomebody has thrown away a &+Bb&+beau&+Bt&+bi&+Bf&+bu&+Bl &+Wearring.&n~
 ~
-9 50 3 0 11 0 8192 524289 0 0 0
+9 50 3 0 11 0 8192 524289 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 A
@@ -3348,7 +3348,7 @@ memory _noquest_ hall knighthood~
 &+La m&+Yemo&+Lry of &+YThe Hall of Knighthood&n~
 &+LA m&+Yemo&+Lry of &+YThe Hall of Knighthood &+Lfloats here.&n~
 ~
-13 11 2 0 7 0 8388616 1 64 0 0
+13 11 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -3362,7 +3362,7 @@ broken rays morning sunrise _noquest_~
 &+Yth&+We b&+Yro&+Wke&+Yn &+Wr&+Ya&+Wy&+Ys o&+Wf m&+Yor&+Wni&+Yng &+rS&+Ru&+rnr&+Ri&+rs&+Re&n~
 &+YSo&+Wme s&+Yhatt&+Were&+Yd r&+Way&+Ys of l&+Wig&+Yht l&+Wie h&+Yer&+We.&n~
 ~
-13 11 2 0 7 0 8 1 64 0 0
+13 11 2 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -3376,7 +3376,7 @@ broken rays evening sunset _noquest_~
 &+Yth&+We b&+Yro&+Wke&+Yn &+Wr&+Ya&+Wy&+Ys o&+Wf e&+Yve&+Wni&+Yng &+RS&+ru&+Rns&+re&+Rt&n~
 &+YSo&+Wme s&+Yhatt&+Were&+Yd r&+Way&+Ys of l&+Wig&+Yht l&+Wie h&+Yer&+We.&n~
 ~
-13 11 2 0 7 0 8 1 64 0 0
+13 11 2 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -3390,7 +3390,7 @@ tormented spirit unborn child _noquest_~
 &+Wthe &+rtor&+Rme&+rnt&+Red &+Wspirit of an &+Lunborn &+Wchild&n~
 &+WA &+rtor&+Rme&+rnt&+Red &+Wspirit floats here, writhing in &+Rag&+ron&+Ry&+W.&n~
 ~
-13 1 2 0 7 0 8 1 64 0 0
+13 1 2 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -3404,7 +3404,7 @@ tormented spirit loving mother _noquest_~
 &+Wthe &+rtor&+Rme&+rnt&+Red &+Wspirit of a &+Lloving &+Wmother&n~
 &+WA &+rtor&+Rme&+rnt&+Red &+Wspirit floats here, screaming in &+Rpa&+rin&+W.&n~
 ~
-13 1 2 0 7 0 8 1 64 0 0
+13 1 2 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -3418,7 +3418,7 @@ tormented spirit devoted father _noquest_~
 &+Wthe &+rtor&+Rme&+rnt&+Red &+Wspirit of a &+Ldevoted &+Wfather&n~
 &+WA &+rtor&+Rme&+rnt&+Red &+Wspirit floats in &+Rte&+rrr&+Ror&+W.&n~
 ~
-13 1 2 0 7 0 8 1 64 0 0
+13 1 2 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -3432,7 +3432,7 @@ blessings snow ogre kings _noquest_~
 &+Wthe blessings of the snow &+bogre &+Wkings&n~
 &+WThe blessings of the mighty snow &+bogre &+Wkings lies here.&n~
 ~
-13 1 2 0 7 0 8 1 64 0 0
+13 1 2 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -3446,7 +3446,7 @@ passified rage snow ogre kings _noquest_~
 &+Wthe tamed &+Rf&+ru&+Rr&+ry &+Wof the snow &+bogre &+Wkings&n~
 &+WA once &+Rb&+roi&+Rl&+ri&+Rng r&+ra&+Rg&+re &+Wnow lies here calmly.&n~
 ~
-13 1 2 0 7 0 8 1 64 0 0
+13 1 2 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -3497,7 +3497,7 @@ story living legend~
 &+Lthe story of a &+rLi&+Rv&+ring &+mL&+Meg&+men&+Md&n~
 &+LThe story of a &+rLi&+Rv&+ring &+mL&+Meg&+men&+Md &+Lfloats here.&n~
 ~
-13 1 2 0 7 0 8 1 64 0 0
+13 1 2 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3521,7 +3521,7 @@ decaying femur euronymous _noquest_~
 &+wthe &+Ldecaying &+wfemur of &+rEuronymous&n~
 &+wThe &+Ldecaying &+wfemur of &+rEuronymous &+wlies here.&n~
 ~
-13 10 2 0 7 0 8 1 64 0 0
+13 10 2 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3531,7 +3531,7 @@ decaying femur bel _noquest_~
 &+wthe &+Ldecaying &+wfemur of &+rBel&n~
 &+wThe &+Ldecaying &+wfemur of &+rBel &+wlies here.&n~
 ~
-13 10 2 0 7 0 8 1 64 0 0
+13 10 2 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3541,7 +3541,7 @@ strange glowing weapon hilt _noquest_~
 &+La strange &+mglowing &+Lweapon hilt&n~
 &+LA strange &+mglowing &+Lweapon hilt lies here.&n~
 ~
-13 19 2 0 15 0 8 1 64 0 0
+13 19 2 0 15 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 1000000 100
 T
@@ -3551,7 +3551,7 @@ strange glowing flint armor _noquest_~
 &+La strange &+Mglowing &+Lflint of armor&n~
 &+LA strange &+mglowing &+Lflint of armor lies here.&n~
 ~
-13 19 2 0 15 0 8 1 64 0 0
+13 19 2 0 15 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 1000000 100
 T
@@ -3561,7 +3561,7 @@ memory _noquest_ venan'trut~
 &+La memory of &+YVenan'Trut~
 &+LA memory of &+YVenan'Trut &+Lis lying here.&n~
 ~
-13 10 2 0 7 0 8388616 1 64 0 0
+13 10 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3571,7 +3571,7 @@ memory _noquest_ rogue plains~
 &+La memory of &+wRogue Plains&n~
 &+LA memory of &+wRogue Plains &+Lis lying here.~
 ~
-13 10 2 0 7 0 8388616 1 64 0 0
+13 10 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3581,7 +3581,7 @@ inspiring visage dragon _noquest_~
 &+Wan &+Cinspiring &+Wvisage of a &+LDragon&n~
 &+WAn &+Cinspiring &+Wvisage of a &+WDragon has been tossed aside here.&n~
 ~
-3 1 2 0 15 0 8 1 64 0 0
+3 1 2 0 15 0 8 1 32832 0 0
 44 2 2 283 0 0 0 0
 0 0 100
 A
@@ -3619,7 +3619,7 @@ mark badge dagger~
 &+Lthe mark of the &+rdagger&n~
 &+LA strange looking &+rbadge &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 2097153 64 0 0
+13 3 2 0 7 0 8200 2097153 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55292
@@ -3737,7 +3737,7 @@ swirling mist~
 &+Ba s&+Cwi&+Brl&+Cin&+Bg m&+Cis&+Bt&n~
 &+BA str&+Cange &+Bswir&+Clin&+Bg m&+Cist l&+Bies h&+Cere.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3747,7 +3747,7 @@ swirling mist~
 &+Ca s&+Bwi&+Crl&+Bin&+Cg m&+Bis&+Ct&n~
 &+BA str&+Cange &+Bswir&+Clin&+Bg m&+Cist l&+Bies h&+Cere.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3771,7 +3771,7 @@ living essence haze volo traveler _noquest_~
 &+ct&+Lhe &+cl&+Living &+ce&+Lssence &+co&+Lf &+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler&n~
 &+cA s&+Ltrange &+ch&+Laze &+cf&+Lloats &+ct&+Lthrough &+ct&+Lthe &+cr&+Loom.&n~
 ~
-13 1 2 0 15 0 8200 1 64 0 0
+13 1 2 0 15 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3805,7 +3805,7 @@ captured egos immortals _noquest_~
 &+Lthe captured &+Me&+mg&+Mo&+ms &+Lof the &+mim&+Mmo&+mrt&+Mal&+ms&n~
 &+LThe &+Me&+mg&+Mo&+ms &+Lof the &+mim&+Mmo&+mrt&+Mal&+ms &+Lfloats here.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3836,7 +3836,7 @@ bloody fangs vampire god _noquest_~
 &+rt&+Lhe &+rb&+Lloody &+rf&+Langs &+ro&+Lf &+ra V&+Lampire &+rG&+Lod&n~
 &+rA w&+Licked &+rs&+Let &+ro&+Lf &+rf&+Langs &+rl&+Lies &+rh&+Lere.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3860,7 +3860,7 @@ immaterial abyss darkness _noquest_~
 &+Bt&+Lhe &+Bi&+Lmmaterial &+Bd&+Larkness &+Bo&+Lf &+Bt&+Lhe &+BA&+Lb&+By&+Lss&n~
 &+LSomething strange is lying here, absorbing the the nearby light.&n~
 ~
-13 1 2 0 7 0 8200 1 0 0 0
+13 1 2 0 7 0 8200 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3870,7 +3870,7 @@ scale leviathan _noquest_~
 &+Bt&+Lhe &+Bs&+Lcale &+Bo&+Lf &+Bt&+Lhe &+BL&+Lev&+Bi&+Lat&+Bh&+Lan&n~
 &+LA small scale lies here.&n~
 ~
-13 1 2 0 7 0 8400904 1 0 0 0
+13 1 2 0 7 0 8400904 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3942,7 +3942,7 @@ cosmic dust _noquest_~
 &+Ys&+yome &+Yc&+yo&+Wsm&+yi&+Yc &+Yd&+yust&n~
 &+YS&+yome &+Yc&+yo&+Wsm&+yi&+Yc d&+yust &+Yl&+yies &+Yh&+yere.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3966,7 +3966,7 @@ essence indomitable snowman _noquest_~
 &+Lt&+rh&+Le &+Le&+rs&+Rs&+Le&+Rn&+rc&+Le &+Lo&+rf &+Lt&+rh&+Le &+LIn&+rdo&+Rm&+Li&+Rt&+rab&+Lle &+LS&+rno&+Rw&+rma&+Ln&n~
 &+LT&+rh&+Le &+Le&+rs&+Rs&+Le&+Rn&+rc&+Le &+Lo&+rf &+La &+LS&+rno&+Rw&+rma&+Ln &+Ll&+rie&+Ls &+Lh&+rer&+Le.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -3994,7 +3994,7 @@ aura saint gauce _noquest_~
 &+Lthe &+Wa&+wu&+Lr&+wa &+Lof &+YSaint &+WGauce&n~
 &+LThe &+Wa&+wu&+Lr&+wa &+Lof a &+Yholy &+Wsaint &+Llies here.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4004,7 +4004,7 @@ aura saint macavor _noquest_~
 &+Lthe &+Wa&+wu&+Lr&+wa &+Lof &+YSaint &+WMacavor~
 &+LThe &+Wa&+wu&+Lr&+wa &+Lof a &+Yholy &+Wsaint &+Llies here.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4014,7 +4014,7 @@ aura saint verdonnaly _noquest_~
 &+Lthe &+Wa&+wu&+Lr&+wa &+Lof &+WSaint Verdonnaly&n~
 &+LThe &+Wa&+wu&+Lr&+wa &+Lof a &+Yholy &+Wsaint &+Llies here.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4044,7 +4044,7 @@ mold key gnomish secrets _noquest_~
 &+Lthe first mold of the key of &+Rgn&+romi&+Rsh &+Lsecrets&n~
 &+LA mold of a key lies here.&n~
 ~
-13 1 2 0 7 0 8200 1 72 0 0
+13 1 2 0 7 0 8200 1 32840 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4054,7 +4054,7 @@ mold key gnomish secrets _noquest_~
 &+Lthe second mold of the key of &+Rgn&+romi&+Rsh &+Lsecrets&n~
 &+LA mold of a key lies here.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4064,7 +4064,7 @@ mold key gnomish secrets _noquest_~
 &+Lthe third mold of the key of &+Rgn&+romi&+Rsh &+Lsecrets&n~
 &+LA mold of a key lies here.&n~
 ~
-13 1 2 0 7 0 8200 1 64 0 0
+13 1 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4074,7 +4074,7 @@ rare fabrics jade empire roll _noquest_~
 &+La small &+groll &+Lof &+Grare &+Lfabrics from &+gThe &+GJade &+gEmpire&n~
 &+LA small &+groll &+Lof &+Grare &+Lfabrics from &+gThe &+GJade &+gEmpire &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 1 64 0 0
+13 3 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4084,7 +4084,7 @@ rare fabrics venan'trut roll _noquest_~
 &+La small &+Yroll &+Lof &+yrare &+Yfabrics &+Lfrom &+YVenan'Trut&n~
 &+LA small &+Yroll &+Lof &+yrare &+Yfabrics &+Lfrom &+YVenan'Trut &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 1 64 0 0
+13 3 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4130,7 +4130,7 @@ decaying femur jubilex~
 &+wthe &+Ldecaying &+wfemur of &+rJubilex&n~
 &+wThe &+Ldecaying &+wfemur of &+rJubilex &+wlies here.&n~
 ~
-13 10 3 0 7 0 8 1 64 0 0
+13 10 3 0 7 0 8 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55337
@@ -4220,7 +4220,7 @@ enchanted earring strength~
 &+Lan &+cenc&+Chan&+cted &+Learring of &+Rstrength&n~
 &+LAn &+cenc&+Chan&+cted &+Learring of &+Rstrength &+Llies here.&n~
 ~
-9 23 3 0 7 0 0 524289 0 0 0
+9 23 3 0 7 0 0 524289 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4232,7 +4232,7 @@ enchanted earring intelligence~
 &+Lan &+cenc&+Chan&+cted &+Learring of &+Mintelligence&N~
 &+LAn &+cenc&+Chan&+cted &+Learring of &+Mintelligence &+Llies here.&n~
 ~
-9 23 3 0 7 0 0 524289 0 0 0
+9 23 3 0 7 0 0 524289 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4244,7 +4244,7 @@ enchanted earring dexterity~
 &+Lan &+cenc&+Chan&+cted &+Learring of &+Gdexterity&n~
 &+LAn &+cenc&+Chan&+cted &+Learring of &+Gdexterity &+Llies here.&n~
 ~
-9 23 3 0 7 0 0 524289 0 0 0
+9 23 3 0 7 0 0 524289 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4256,7 +4256,7 @@ enchanted earring wisdom~
 &+Lan &+cenc&+Chan&+cted &+Learring of &+Cwisdom&n~
 &+LAn &+cenc&+Chan&+cted &+Learring of &+Cwisdom &+Llies here.&n~
 ~
-9 23 3 0 7 0 0 524289 0 0 0
+9 23 3 0 7 0 0 524289 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4268,7 +4268,7 @@ enchanted earring constitution~
 &+Lan &+cenc&+Chan&+cted &+Learring of &+bconstitution&n~
 &+LAn &+cenc&+Chan&+cted &+Learring of &+bconstitution &+Llies here.&n~
 ~
-9 23 3 0 7 0 0 524289 0 0 0
+9 23 3 0 7 0 0 524289 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4280,7 +4280,7 @@ enchanted earring agility~
 &+Lan &+cenc&+Chan&+cted &+Learring of &+Yagility&n~
 &+LAn &+cenc&+Chan&+cted &+Learring of &+Yagility &+Llies here.&n~
 ~
-9 23 3 0 7 0 0 524289 0 0 0
+9 23 3 0 7 0 0 524289 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4292,7 +4292,7 @@ enchanted earring luck~
 &+Lan &+cenc&+Chan&+cted &+Learring of &+Gluck&n~
 &+LAn &+cenc&+Chan&+cted &+Learring of &+Gluck &+Llies here.&n~
 ~
-9 23 3 0 7 0 0 524289 0 0 0
+9 23 3 0 7 0 0 524289 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4304,7 +4304,7 @@ enchanted earring power~
 &+Lan &+cenc&+Chan&+cted &+Learring of &+mpower&n~
 &+LAn &+cenc&+Chan&+cted &+Learring of &+mpower &+Llies here.&n~
 ~
-9 23 3 0 7 0 0 524289 0 0 0
+9 23 3 0 7 0 0 524289 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4316,7 +4316,7 @@ enchanted earring charisma~
 &+Lan &+cenc&+Chan&+cted &+Learring of &+Bcharisma&n~
 &+LAn &+cenc&+Chan&+cted &+Learring of &+Bcharisma &+Llies here.&n~
 ~
-9 23 3 0 7 0 0 524289 0 0 0
+9 23 3 0 7 0 0 524289 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4328,7 +4328,7 @@ enchanted scroll strength~
 &+Lan &+cenc&+Chan&+cted &+Lscroll of &+Rstrength&n~
 &+LAn &+cenc&+Chan&+cted &+Lscroll of &+Rstrength &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55353
@@ -4336,7 +4336,7 @@ enchanted scroll intelligence~
 &+Lan &+cenc&+Chan&+cted &+Lscroll of &+Mintelligence&n~
 &+LAn &+cenc&+Chan&+cted &+Lscroll of &+Mintelligence &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55354
@@ -4344,7 +4344,7 @@ enchanted scroll dexterity~
 &+Lan &+cenc&+Chan&+cted &+Lscroll of &+Gdexterity&n~
 &+LAn &+cenc&+Chan&+cted &+Lscroll of &+Gdexterity &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55355
@@ -4352,7 +4352,7 @@ enchanted scroll wisdom~
 &+Lan &+cenc&+Chan&+cted &+Lscroll of &+Cwisdom&n~
 &+LAn &+cenc&+Chan&+cted &+Lscroll of &+Cwisdom &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55356
@@ -4360,7 +4360,7 @@ enchanted scroll constitution~
 &+Lan &+cenc&+Chan&+cted &+Lscroll of &+bconstitution&n~
 &+LAn &+cenc&+Chan&+cted &+Lscroll of &+bconstitution &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55357
@@ -4368,7 +4368,7 @@ enchanted scroll agility~
 &+Lan &+cenc&+Chan&+cted &+Lscroll of &+Yagility&n~
 &+LAn &+cenc&+Chan&+cted &+Lscroll of &+Yagility &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55358
@@ -4376,7 +4376,7 @@ enchanted scroll luck~
 &+Lan &+cenc&+Chan&+cted &+Lscroll of &+Gluck&n~
 &+LAn &+cenc&+Chan&+cted &+Lscroll of &+Gluck &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55359
@@ -4384,7 +4384,7 @@ enchanted scroll power~
 &+Lan &+cenc&+Chan&+cted &+Lscroll of &+mpower&n~
 &+LAn &+cenc&+Chan&+cted &+Lscroll of &+mpower &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55360
@@ -4392,7 +4392,7 @@ enchanted scroll charisma~
 &+Lan &+cenc&+Chan&+cted &+Lscroll of &+Bcharisma&n~
 &+LAn &+cenc&+Chan&+cted &+Lscroll of &+Bcharisma &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55361
@@ -4486,7 +4486,7 @@ thread silk~
 &+La &+Wthread &+Lof &+Wsilk&n~
 &+LA &+Wthread &+Lof &+Wsilk &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55370
@@ -4502,7 +4502,7 @@ locket desert island~
 &+Lthe &+Ylocket &+Lof the &+Ydesert &+yisland&n~
 &+LA strange &+Ylocket &+Lof the &+Ydesert &+yisland &+Llies on the floor.&n~
 ~
-8 11 3 0 7 0 0 1 0 0 0
+8 11 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55372
@@ -4510,7 +4510,7 @@ jade charm empowerment~
 &+Wthe &+GJade &+gcharm &+Wof &+gempowerment&n~
 &+WThe &+GJade &+gcharm &+Wof &+gempowerment &+Wlies here.&n~
 ~
-8 28 3 0 7 0 8388608 1 0 0 0
+8 28 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55373
@@ -4534,7 +4534,7 @@ mark badge dagger _noquest_~
 &+Lthe mark of the &+Rdagger~
 &+LA strange looking &+Rbadge &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 2097153 64 0 0
+13 3 2 0 7 0 8200 2097153 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55376
@@ -4578,7 +4578,7 @@ mark badge dagger _noquest_~
 &+Lthe mark of the &+mdagger&n~
 &+LA strange looking &+Mbadge &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 2097153 64 0 0
+13 3 2 0 7 0 8200 2097153 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55380
@@ -4610,7 +4610,7 @@ leatehr penny loafers~
 &+ya pair of &+Yleather &+Lpenny loafers&n~
 &+yA pair of really comfortable looking &+Lpenny loafers &+ylies here.&n~
 ~
-9 13 2 0 7 0 8192 65 64 0 0
+9 13 2 0 7 0 8192 65 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4622,7 +4622,7 @@ vial dye blue~
 &+La small vial of &+Bblue &+Wdye&n~
 &+LA small vial of &+Bblue &+Wdye &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 1 64 0 0
+13 3 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55384
@@ -4630,7 +4630,7 @@ vial dye red~
 &+La small vial of &+Rred &+Wdye&n~
 &+LA small vial of &+Rred &+Wdye &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 1 64 0 0
+13 3 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55385
@@ -4638,7 +4638,7 @@ vial dye purple~
 &+La small vial of &+Mpurple &+Wdye&n~
 &+LA small vial of &+Mpurple &+Wdye &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 1 64 0 0
+13 3 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55386
@@ -4646,7 +4646,7 @@ thread pretty silk~
 &+La &+Bthread &+Lof &+breally &+Lpretty &+Bsi&+blk&n~
 &+LA thread of &+Bsi&+blk &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55387
@@ -4654,7 +4654,7 @@ thread pretty silk~
 &+La &+Mthread &+Lof &+mreally &+Lpretty &+Msi&+mlk&n~
 &+LA &+Mthread &+Lof &+mreally &+Lpretty &+Msi&+mlk &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55388
@@ -4662,7 +4662,7 @@ thread pretty silk~
 &+La &+Rthread &+Lof &+rreally &+Lpretty &+Rsi&+rlk&n~
 &+LA thread of &+Rsi&+rlk &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55389
@@ -4694,7 +4694,7 @@ thread pretty silk~
 &+La &+Ythread &+Lof &+yreally &+Lpretty &+Ysi&+ylk&n~
 &+LA thread of &+Ysi&+ylk &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55392
@@ -4744,7 +4744,7 @@ vial dye yellow~
 &+La small vial of &+Yyellow &+Wdye&n~
 &+LA small vial of &+Yyellow &+Wdye &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 1 64 0 0
+13 3 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55398
@@ -4752,7 +4752,7 @@ vial dye cyan~
 &+La small vial of &+Ccyan &+Wdye&n~
 &+LA small vial of &+Ccyan &+Wdye &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 1 64 0 0
+13 3 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55399
@@ -4760,7 +4760,7 @@ vial dye green~
 &+La small vial of &+Ggreen &+Wdye&n~
 &+LA small vial of &+Ggreen &+Wdye &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 1 64 0 0
+13 3 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55400
@@ -4776,7 +4776,7 @@ fingerless leather gloves~
 &+ya pair of &+Lfingerless &+Yleather &+Lgloves&n~
 &+yA pair of &+Lfingerless &+Yleather &+Lgloves &+ylies here.&n~
 ~
-9 3 2 0 7 0 0 129 0 0 0
+9 3 2 0 7 0 0 129 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -4788,7 +4788,7 @@ thread pretty silk~
 &+La &+Cthread &+Lof &+creally &+Lpretty &+Csi&+clk&n~
 &+LA thread of &+Csi&+clk &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55403
@@ -4796,7 +4796,7 @@ thread pretty silk~
 &+La &+Gthread &+Lof &+greally &+Lpretty &+Gsi&+glk&n~
 &+LA thread of &+Gsi&+glk &+Llies here.&n~
 ~
-8 28 3 0 7 0 0 1 0 0 0
+8 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55404
@@ -4840,7 +4840,7 @@ pair rugged leather breeches~
 &+ya pair of &+Lrugged &+Yleather &+Lbreeches&n~
 &+LA pair of &+Lrugged &+Yleather &+Lbreeches &+Wlies here.&n~
 ~
-9 28 3 0 7 0 0 16417 0 0 0
+9 28 3 0 7 0 0 16417 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100 8192 0 0 0
 A
@@ -4852,7 +4852,7 @@ vial dye black~
 &+La small vial of &+wblack &+Wdye&n~
 &+LA small vial of &+wblack &+Wdye &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 1 64 0 0
+13 3 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55409
@@ -4868,7 +4868,7 @@ vial dye white~
 &+La small vial of &+Wwhite dye&n~
 &+LA small vial of &+Wwhite dye &+Llies here.&n~
 ~
-13 3 2 0 7 0 8200 1 64 0 0
+13 3 2 0 7 0 8200 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55411
@@ -4920,7 +4920,7 @@ memory _noquest_ forgotten mansion~
 &+La memory of &+WThe &+LForgotten Mansion&n~
 &+La memory of &+WThe &+LForgotten Mansion&n~
 ~
-13 10 2 0 7 0 8388616 1 64 0 0
+13 10 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4930,7 +4930,7 @@ memory _noquest_ village werrun~
 &+La memory of the &+rVillage of &+LWerrun&n~
 &+La memory of the &+rVillage of &+LWerrun&n~
 ~
-13 10 2 0 7 0 8388616 1 64 0 0
+13 10 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4940,7 +4940,7 @@ memory _noquest_ quintaragon castle~
 &+La memory of Quintaragon Castle&n~
 &+La memory of Quintaragon Castle&n~
 ~
-13 10 2 0 7 0 8388616 1 64 0 0
+13 10 2 0 7 0 8388616 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -5036,7 +5036,7 @@ brilliant blood-red orb~
 &+La &+Rbrilliant &+rblood-red &+Lorb&n~
 &+LA &+Rbrilliant &+rblood-red &+Lorb lies here.&n~
 ~
-3 15 3 0 7 0 8388609 16385 0 0 0
+3 15 3 0 7 0 8388609 16385 32768 0 0
 40 2 2 25 0 0 0 0
 0 0 100
 #55426
@@ -5161,7 +5161,7 @@ deer~
 &+Wa freshly killed &+Ydeer&n~
 &+WA freshly killed &+Ydeer &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55501
@@ -5169,7 +5169,7 @@ doe~
 &+Wa freshly killed &+Ydoe&n~
 &+WA freshly killed &+Ydoe &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55502
@@ -5177,7 +5177,7 @@ buck~
 &+Wa freshly killed &+Ybuck&n~
 &+WA freshly killed &+Ybuck &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55503
@@ -5185,7 +5185,7 @@ duck~
 &+Wa freshly killed &+Yduck&n~
 &+WA freshly killed &+Yduck &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55504
@@ -5193,7 +5193,7 @@ rabbit~
 &+Wa freshly killed &+wrabbit&n~
 &+WA freshly killed &+wrabbit &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55505
@@ -5201,7 +5201,7 @@ squirrel~
 &+Wa freshly killed &+ysquirrel&n~
 &+WA freshly killed &+ysquirrel &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55506
@@ -5209,7 +5209,7 @@ bluejay~
 &+Wa freshly killed &+Bbluejay&n~
 &+WA freshly killed &+Bbluejay &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55507
@@ -5217,7 +5217,7 @@ raccoon~
 &+Wa freshly killed &+Lr&+wa&+Lcc&+woo&+Ln&n~
 &+WA freshly killed &+Lr&+wa&+Lcc&+woo&+Ln &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55508
@@ -5225,7 +5225,7 @@ fox~
 &+Wa freshly killed &+rfox&n~
 &+WA freshly killed &+rfox &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55509
@@ -5233,7 +5233,7 @@ eagle~
 &+Wa freshly killed &+Yeagle&n~
 &+WA freshly killed &+Yeagle &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55510
@@ -5241,7 +5241,7 @@ chipmunk~
 &+Wa freshly killed &+ychipmunk&n~
 &+WA freshly killed &+ychipmunk &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55511
@@ -5249,7 +5249,7 @@ hedgehog~
 &+Wa freshly killed &+Lhedgehog&n~
 &+WA freshly killed &+Lhedgehog &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55512
@@ -5257,7 +5257,7 @@ hummingbird~
 &+Wa freshly killed &+whummingbird&n~
 &+WA freshly killed &+whummingbird &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55513
@@ -5265,7 +5265,7 @@ swallow~
 &+Wa freshly killed &+Lswallow&n~
 &+WA freshly killed &+Lswallow &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55514
@@ -5273,7 +5273,7 @@ wildcat~
 &+Wa freshly killed &+Ywildcat&n~
 &+WA freshly killed &+Ywildcat &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55515
@@ -5281,7 +5281,7 @@ vulture~
 &+Wa freshly killed &+Lvulture&n~
 &+WA freshly killed &+Lvulture &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55516
@@ -5289,7 +5289,7 @@ monkey~
 &+Wa freshly killed &+ymonkey&n~
 &+WA freshly killed &+ymonkey &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55517
@@ -5297,7 +5297,7 @@ duckling~
 &+Wa freshly killed &+Yduckling&n~
 &+WA freshly killed &+Yduckling &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8396808 1 0 0 0
+13 2 3 0 7 0 8396808 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55518
@@ -5305,7 +5305,7 @@ carp~
 &+Wa freshly killed &+Bcarp&n~
 &+WA freshly killed &+Ycarp &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8396808 1 0 0 0
+13 2 3 0 7 0 8396808 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55519
@@ -5313,7 +5313,7 @@ carp~
 &+Wa freshly killed &+Bcarp&n~
 &+WA freshly killed &+Ycarp &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8396808 1 0 0 0
+13 2 3 0 7 0 8396808 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55520
@@ -5321,7 +5321,7 @@ carp~
 &+Wa freshly killed &+Bcarp&n~
 &+WA freshly killed &+Ycarp &+Wlies here.&n~
 ~
-13 2 3 0 7 0 8396808 1 0 0 0
+13 2 3 0 7 0 8396808 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55521
@@ -5329,7 +5329,7 @@ freshly killed puffadder~
 &+La &+Wfreshly &+Lkilled &+rpuff&+Radder&n~
 &+LA &+Wfreshly &+Lkilled &+rpuff&+Radder &+Llies here.&n~
 ~
-13 2 3 0 7 0 8388616 1 0 0 0
+13 2 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #55550
@@ -5337,7 +5337,7 @@ flame _noquest_~
 &+Ra b&+Ru&+rrn&+Ri&+rng fl&+Ra&+rm&+Re&n~
 &+RA sm&+ral&+Rl f&+rlam&+Re b&+rur&+Rn&+rs h&+Rer&+re.&n~
 ~
-13 1 1 0 7 0 8192 1 0 0 0
+13 1 1 0 7 0 8192 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -5347,7 +5347,7 @@ snow flake snowflake _noquest_~
 &+Ca s&+Bma&+Cll s&+Bno&+Cwfl&+Bake&n~
 &+CA s&+Bma&+Cll s&+Bno&+Cwfl&+Bake l&+Cie&+Bs h&+Cer&+Be.&n~
 ~
-13 1 1 0 7 0 8192 1 0 0 0
+13 1 1 0 7 0 8192 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -5357,7 +5357,7 @@ flint granite _noquest_~
 &+La f&+wli&+Lnt o&+wf gr&+La&+wni&+Lte&n~
 &+LA f&+wli&+Lnt &+wo&+Lf gr&+wan&+Lit&+we l&+Lie&+ws &+Lhe&+wre&+L.&n~
 ~
-13 1 1 0 7 0 8192 1 0 0 0
+13 1 1 0 7 0 8192 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -5367,7 +5367,7 @@ wisp wind _noquest_~
 &+Wa w&+Yis&+Wp o&+Yf w&+Wind&n~
 &+WA &+Ywi&+wsp &+Yof &+Wwi&+Ynd f&+Wlo&+Yats &+Whe&+Yr&+We.&n~
 ~
-13 1 1 0 7 0 8192 1 0 0 0
+13 1 1 0 7 0 8192 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -5377,7 +5377,7 @@ delicate bubble _noquest_~
 &+Ma d&+mel&+Mica&+mte &+Mbu&+mb&+Mble&n~
 &+MA d&+mel&+Mic&+mate b&+Mub&+mb&+Mle f&+mlo&+Mat&+ms h&+Mer&+me.&n~
 ~
-13 1 1 0 7 0 8192 1 0 0 0
+13 1 1 0 7 0 8192 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T

@@ -6,8 +6,8 @@ bunny rabbit~
 &+WThis little white rabbit frolicks playfully through the small clearing
 &+Win the woods.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 2
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 2
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -19,8 +19,8 @@ chittering chipmunk~
 &+yThe chipmunk, being one of natures most playful creatures, scampers
 &+yaround the forest glade, playfully searching for nuts and berries.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 2
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -33,8 +33,8 @@ forest spider~
 &+LIt is quick and nimple and runs across the forest floor in a constant
 &+Lsearch for prey.&n
 ~
-8 0 0 0 0 0 0 -500 S
-I 0 0 1
+8 0 0 0 0 0 0 0 -500 S
+I 0 0 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -47,8 +47,8 @@ garter snake~
 &+gor anything.  It winds its way through the forest grounds, flicking out
 &+gits tongue in an attempt to find food.&n
 ~
-8 0 0 0 0 0 0 0 S
-RS 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+RS 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -60,8 +60,8 @@ spotted lizard~
 &+gThis tiny lizard appears to be a speckled gecko. It scrouges around
 &+gthe forest floor hunting insects with its long sticky tongue.&n
 ~
-8 0 0 0 0 0 0 0 S
-R 0 0 1
+8 0 0 0 0 0 0 0 0 S
+R 0 0 0 1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -73,8 +73,8 @@ cricket~
 &+LThis little insect chirps and hops around the forest floor, intently
 &+Lsearching for anything smaller than it to eat.&n
 ~
-8 0 0 0 0 0 0 0 S
-I 0 0 1
+8 0 0 0 0 0 0 0 0 S
+I 0 0 0 1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -88,8 +88,8 @@ sapling treant~
 &+yor two off the ground and has yet not grown the ability to move on its
 &+yown.&n
 ~
-10 0 0 0 0 0 0 500 S
-VT 0 0 2
+10 0 0 0 0 0 0 0 500 S
+VT 0 0 0 2
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -102,8 +102,8 @@ bluebird blue bird~
 &+Bbluebird chirps merrily as it collects sticks and leaves for its nest
 &+Bsomewhere nearby.&n
 ~
-8 0 0 0 0 0 0 0 S
-B 0 0 1
+8 0 0 0 0 0 0 0 0 S
+B 0 0 0 1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -116,8 +116,8 @@ partridge~
 &+ycurious little creatures sprints along the forest floor, afraid of
 &+yalmost nearly anything it encounters, including its own shadow.&n
 ~
-136 0 0 0 0 0 0 0 S
-B 0 0 1
+136 0 0 0 0 0 0 0 0 S
+B 0 0 0 1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -130,8 +130,8 @@ hooded druid~
 &+ghim, indicating kindness.  He is dressed in the long robes that are
 &+gcommon in his order.&n
 ~
-10 384 0 8 0 0 0 0 S
-PH 0 0 -1
+10 384 0 0 8 0 0 0 0 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -144,8 +144,8 @@ speckled duck~
 &+yThe group of ducks out on the pond look extremely content just
 &+yfloated around minding their own business.&n
 ~
-10 0 0 0 0 0 0 0 S
-B 0 0 2
+10 0 0 0 0 0 0 0 0 S
+B 0 0 0 2
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -158,8 +158,8 @@ strangle weed strangleweed~
 &+Gthrough the florest floor, wrapping its long vines around anything
 &+Gsmaller than it, thus somehow feeding.&n
 ~
-8 0 0 0 0 0 0 0 S
-VT 0 0 1
+8 0 0 0 0 0 0 0 0 S
+VT 0 0 0 1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -172,8 +172,8 @@ tree hopper~
 &+Gas it hops from branch to branch among the trees collecting nuts and
 &+Gberries.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 2
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 2
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -186,8 +186,8 @@ dandy lion dandylion weed~
 &+gand almost seems to have a will of its own.  On top of the weed grows
 &+ga bright &+Yyellow &+gflower.&n
 ~
-10 0 0 0 0 0 0 0 S
-VT 0 0 1
+10 0 0 0 0 0 0 0 0 S
+VT 0 0 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -197,8 +197,8 @@ wizened old alchemist~
 &+CAn old, wizened alc&+bhem&+Cist stands here.&n
 ~
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -210,8 +210,8 @@ stately doe deer~
 &+yA beautiful animal, this &+Wdoe&+y casually grazes the glen, staying close
 &+yto her buck who she entrusts will protect her from danger.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 3
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 3
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -223,8 +223,8 @@ proud buck deer~
 &+yThis strong, proud buck, wanders the glen, occasionally nibbling
 &+yon the grass but always watching, and keeping an eye out for danger.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 3
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 3
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -237,8 +237,8 @@ chirping sparrow~
 &+yat little insects and leaves as it makes it way in the forest, he
 &+ychirps inscentently, as if he is singing.&n
 ~
-8 0 0 0 0 0 0 0 S
-B 0 0 1
+8 0 0 0 0 0 0 0 0 S
+B 0 0 0 1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -251,8 +251,8 @@ trail keeper~
 &+yvillages and cities to keep watch over the forest.  His tasks include
 &+ykeeping the trail clear, the fountain cleaned, and the torches lit.&n
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -265,8 +265,8 @@ gnoll poacher~
 &+yarea he hunts after anything smaller than it to bring back home for
 &+ydinner.&n
 ~
-2056 0 0 0 0 0 0 -500 S
-H 0 0 3
+2056 0 0 0 0 0 0 0 -500 S
+H 0 0 0 3
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -276,8 +276,8 @@ short gnoll~
 &+yA short gnoll huddles around the camp&+rfire&n
 ~
 ~
-2058 0 0 0 0 0 0 -500 S
-H 0 0 3
+2058 0 0 0 0 0 0 0 -500 S
+H 0 0 0 3
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -289,8 +289,8 @@ gnoll warden~
 &+yEasily the strongest and largest of the gnolls around here, the
 &+Lwarden&+y seems to keep all the other gnolls in line by howling feircely.&n
 ~
-67108872 0 0 0 0 0 0 -500 S
-H 0 1 -1
+67108872 0 0 0 0 0 0 0 -500 S
+H 0 1 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -304,8 +304,8 @@ young gnoll~
 &+ygoing on around it, though not much more than the slightest hint of
 &+yintelligence can be seen in those eyes.&n
 ~
-10 0 0 0 0 0 0 -500 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 -500 S
+H 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -318,8 +318,8 @@ young gnoll~
 &+yhis ugly dog-face seems to be in a constant snarl and he seems angry
 &+yabout just about everything around him.  It must be teen-gnoll angst.&n
 ~
-8 1 0 0 0 0 0 -500 S
-H 0 0 -1
+8 1 0 0 0 0 0 0 -500 S
+H 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -329,8 +329,8 @@ massive mercenary burly~
 &+yA massive, &+Yburly&+y, mercenary stands here.&n
 ~
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

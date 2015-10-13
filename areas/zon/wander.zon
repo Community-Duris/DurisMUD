@@ -2,7 +2,7 @@
 &+WThe Wandering Fields&n~
 36613 2 3 5 15 1
 *
-* Zone edited with dikuEdit v2.98i
+* Zone edited with durisEdit v3.00
 *
 *
 *
@@ -18,37 +18,37 @@ E 1 36600 12 16 100 0 0 0          *   a barbed scimitar
 M 0 36626 5 36600 100 0 0 0        * a zarbon
 E 1 36600 12 16 100 0 0 0          *   a barbed scimitar
 E 1 36600 12 17 100 0 0 0          *   a barbed scimitar
-E 1 36600 12 25 100 0 0 0          *   a barbed scimitar
-E 1 36600 12 26 100 0 0 0          *   a barbed scimitar
+G 1 36600 12 0 100 0 0 0           *    a barbed scimitar
+G 1 36600 12 0 100 0 0 0           *    a barbed scimitar
 M 0 36626 5 36600 100 0 0 0        * a zarbon
 M 0 36626 5 36600 100 0 0 0        * a zarbon
 M 0 36626 5 36600 100 0 0 0        * a zarbon
-M 0 36011 2 36600 100 0 0 0        * (mob not in this .MOB file)
-M 0 36011 2 36600 100 0 0 0        * (mob not in this .MOB file)
+M 0 36011 2 36600 100 0 0 0        * (mob type not in this .mob file)
+M 0 36011 2 36600 100 0 0 0        * (mob type not in this .mob file)
 M 0 36600 5 36601 100 0 0 0        * a gentle rothe
-G 1 36204 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36204 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36600 5 36601 100 0 0 0        * a gentle rothe
-G 1 36204 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36204 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36600 5 36601 100 0 0 0        * a gentle rothe
-G 1 36204 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36204 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36601 5 36601 100 0 0 0        * a gentle rothe
-G 1 36204 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36204 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36601 5 36601 100 0 0 0        * a gentle rothe
-G 1 36204 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36204 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36601 5 36601 100 0 0 0        * a gentle rothe
-G 1 36205 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36205 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36602 5 36601 100 0 0 0        * a gentle rothe
-G 1 36204 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36204 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36602 5 36601 100 0 0 0        * a gentle rothe
-G 1 36204 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36204 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36602 5 36601 100 0 0 0        * a gentle rothe
-G 1 36205 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36205 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36603 5 36601 100 0 0 0        * a gentle rothe
-G 1 36204 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36204 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36603 5 36601 100 0 0 0        * a gentle rothe
-G 1 36204 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36204 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36603 5 36601 100 0 0 0        * a gentle rothe
-G 1 36204 9999 0 100 0 0 0        *    (object not in this .OBJ file)
+G 1 36204 9999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 36604 5 36602 100 0 0 0        * a spore ball
 M 0 36604 5 36602 100 0 0 0        * a spore ball
 M 0 36604 5 36602 100 0 0 0        * a spore ball

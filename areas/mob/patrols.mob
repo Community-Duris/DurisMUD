@@ -7,8 +7,8 @@ tharnadian soldier human guard~
 &+wStern and competant, this soldier is eager to face off against the
 &+wforces of evil.&n
 ~
-67110920 384 0 134217728 0 0 0 1000 S
-PH 0 1 -1
+67110920 384 0 0 134217728 0 0 0 1000 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -21,8 +21,8 @@ ugta soldier barbarian guard~
 &+wStern and competant, this soldier is eager to face off against the
 &+wforces of evil.&n
 ~
-67110920 384 0 134217728 0 0 0 1000 S
-PB 0 1 -1
+67110920 384 0 0 134217728 0 0 0 1000 S
+PB 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -35,8 +35,8 @@ gnomish gnome soldier guard~
 &+wStern and competant, this soldier is eager to face off against the
 &+wforces of evil.&n
 ~
-67110920 128 0 134217728 0 0 0 1000 S
-PG 0 1 -1
+67110920 128 0 0 134217728 0 0 0 1000 S
+PG 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -49,8 +49,8 @@ halfling soldier woodseer patrol guard~
 &+wStern and competant, this soldier is eager to face off against the
 &+wforces of evil.&n
 ~
-67110920 128 0 134217728 0 0 0 1000 S
-PF 0 1 -1
+67110920 128 0 0 134217728 0 0 0 1000 S
+PF 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -63,8 +63,8 @@ dwarven soldier dwarf guard~
 &+wStern and competant, this soldier is eager to face off against the
 &+wforces of evil.&n
 ~
-67110920 128 0 134217728 0 0 0 1000 S
-PM 0 1 -1
+67110920 128 0 0 134217728 0 0 0 1000 S
+PM 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -77,8 +77,8 @@ elf elven soldier guard grey~
 &+wStern and competant, this soldier is eager to face off against the
 &+wforces of evil.&n
 ~
-67110920 384 0 134217728 0 0 0 1000 S
-PE 0 1 -1
+67110920 384 0 0 134217728 0 0 0 1000 S
+PE 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -91,8 +91,8 @@ centaur soldier marigot guard~
 &+wStern and competant, this soldier is eager to face off against the
 &+wforces of evil.&n
 ~
-67110920 384 0 134217728 0 0 0 1000 S
-CT 0 1 -1
+67110920 384 0 0 134217728 0 0 0 1000 S
+CT 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -105,8 +105,8 @@ tharnadian soldier elite human guard~
 &+wHe is much more experienced than the younger guards that wander the
 &+wcountryside, and quite adept at battling against the tides of evil.&n
 ~
-67110920 384 0 134217736 0 0 0 1000 S
-PH 0 1 -1
+67110920 384 0 0 134217736 0 0 0 1000 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -119,8 +119,8 @@ barbarian soldier elite ugta guard~
 &+wHe is much more experienced than the younger guards that wander the
 &+wcountryside, and quite adept at battling against the tides of evil.&n
 ~
-67110920 384 0 134217736 0 0 0 1000 S
-PB 0 1 -1
+67110920 384 0 0 134217736 0 0 0 1000 S
+PB 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -133,8 +133,8 @@ halfling soldier woodseer patrol guard elite~
 &+wintruders.  He seems eager to jump into battle, and quite adept with
 &+wat combat.&n
 ~
-67110920 384 0 134217736 0 0 0 1000 S
-PF 0 1 -1
+67110920 384 0 0 134217736 0 0 0 1000 S
+PF 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -147,8 +147,8 @@ elite gnome gnomish soldier guard~
 &+wHe is much more experienced than the younger guards that wander the
 &+wcountryside, and quite adept at battling against the tides of evil.&n
 ~
-67110920 128 0 134217736 0 0 0 1000 S
-PG 0 1 -1
+67110920 128 0 0 134217736 0 0 0 1000 S
+PG 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -161,8 +161,8 @@ elite dwarven dwarf soldier guard~
 &+wHe is much more experienced than the younger guards that wander the
 &+wcountryside, and quite adept at battling against the tides of evil.&n
 ~
-67110920 128 0 134217736 0 0 0 1000 S
-PM 0 1 -1
+67110920 128 0 0 134217736 0 0 0 1000 S
+PM 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -175,8 +175,8 @@ elite elven elf soldier guard grey~
 &+wHe is much more experienced than the younger guards that wander the
 &+wcountryside, and quite adept at battling against the tides of evil.&n
 ~
-67110920 384 0 134217736 0 0 0 1000 S
-PE 0 1 -1
+67110920 384 0 0 134217736 0 0 0 1000 S
+PE 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -189,8 +189,8 @@ elite centaur marigot soldier guard~
 &+wHe is much more experienced than the younger guards that wander the
 &+wcountryside, and quite adept at battling against the tides of evil.&n
 ~
-67110920 384 0 134217736 0 0 0 1000 S
-CT 0 1 -1
+67110920 384 0 0 134217736 0 0 0 1000 S
+CT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -204,8 +204,8 @@ captain guard warrior human tharnadia tharnadian~
 &+wfor signs of trouble for when he will be called to protect and serve
 &+wthe lesser people.&n
 ~
-67110920 384 0 134217788 0 0 0 1000 S
-PH 0 1 -1
+67110920 384 0 0 134217788 0 0 0 1000 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -219,8 +219,8 @@ captain barbarian guard warrior ugta~
 &+wfor signs of trouble for when he will be called to protect and serve
 &+wthe lesser people.&n
 ~
-67110920 384 0 134217788 0 0 0 1000 S
-PB 0 1 -1
+67110920 384 0 0 134217788 0 0 0 1000 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -234,8 +234,8 @@ guard captain gnomish ashrumite warrior gnome~
 &+wfor signs of trouble for when he will be called to protect and serve
 &+wthe lesser people.&n
 ~
-67110920 128 0 134217788 0 0 0 1000 S
-PG 0 1 -1
+67110920 128 0 0 134217788 0 0 0 1000 S
+PG 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -249,8 +249,8 @@ captain guard halfling woodseer warrior~
 &+wfor signs of trouble for when he will be called to protect and serve
 &+wthe lesser people.&n
 ~
-67110920 384 0 134217788 0 0 0 1000 S
-PF 0 1 -1
+67110920 384 0 0 134217788 0 0 0 1000 S
+PF 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -264,8 +264,8 @@ captain guard warrior dwarven dwarf kimordril~
 &+wfor signs of trouble for when he will be called to protect and serve
 &+wthe lesser people.&n
 ~
-67110920 128 0 134217788 0 0 0 1000 S
-PM 0 1 -1
+67110920 128 0 0 134217788 0 0 0 1000 S
+PM 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -279,8 +279,8 @@ captain guard warrior centaur marigot~
 &+wfor signs of trouble for when he will be called to protect and serve
 &+wthe lesser people.&n
 ~
-67110920 384 0 134217788 0 0 0 1000 S
-CT 0 1 -1
+67110920 384 0 0 134217788 0 0 0 1000 S
+CT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -294,8 +294,8 @@ grey guard captain elven charing~
 &+wfor signs of trouble for when he will be called to protect and serve
 &+wthe lesser people.&n
 ~
-67110920 384 6291471 134217788 0 0 0 1000 S
-PE 0 1 -1
+67110920 384 6291471 0 134217788 0 0 0 1000 S
+PE 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

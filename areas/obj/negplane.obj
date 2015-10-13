@@ -131,7 +131,7 @@ star salt~
 &+Wthe star of salt~
 A salty star has been left here.~
 ~
-8 15 3 0 14 100 40960 1 64 0 0
+8 15 3 0 14 100 40960 1 32832 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -161,7 +161,7 @@ star dust brown~
 &+ythe star of dust~
 A brown star has been left here.~
 ~
-8 37 10 0 14 100 40960 1 64 0 0
+8 37 10 0 14 100 40960 1 32832 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -200,7 +200,7 @@ orb unmaking~
 &+Lthe &+Corb &+Lof &+run&+Rmak&+ring~
 &+LA pulsating orb has been left here.~
 ~
-5 1 10 0 15 100 28452112 24577 65 4230660 0
+5 1 10 0 15 100 28452112 24577 32833 4230660 0
 6 3 3 7 0 0 0 0
 1 1000000 100 536944676 12508 0 0
 E
@@ -260,7 +260,7 @@ ash star~
 &+Lthe star of ash~
 A funky looking star has been left here.~
 ~
-8 15 3 0 14 100 40960 1 64 0 0
+8 15 3 0 14 100 40960 1 32832 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -309,7 +309,7 @@ scroll unmaking first~
 &+Lthe first scroll of unmaking~
 &+LA dreadful scroll has been left here.~
 ~
-12 29 3 0 7 100 40960 16385 64 0 0
+12 29 3 0 7 100 40960 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -600,7 +600,7 @@ star vacuum~
 &+Lthe star of vacuum~
 A strange star hes been left here.~
 ~
-8 11 3 0 14 0 40960 1 64 0 0
+8 11 3 0 14 0 40960 1 32832 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -671,7 +671,7 @@ unmaking scroll~
 &+Lthe second scroll of unmaking~
 &+LSomeone left a scroll here.~
 ~
-8 35 3 0 14 75 40960 16385 64 0 0
+8 35 3 0 14 75 40960 16385 32832 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E

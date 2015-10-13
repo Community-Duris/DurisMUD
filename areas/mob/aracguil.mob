@@ -9,8 +9,8 @@ from the torso of this creature, extending through its chest until it
 serves as its legs. It moves by undulating its back and it sees through
 duithalite eyes mounted in a drowan face.
 ~
-1140852746 600 0 33554712 2 0 0 -1000 S
-OG 3 1 -1
+1140852746 600 0 0 33554712 2 0 0 -1000 S
+OG 3 1 0 -1
 53 -5 -104 53d131+4505 7d6+30
 8.0.6.6 214650
 8 8 0
@@ -25,8 +25,8 @@ from the torso of this creature, extending through its chest until it
 serves as its legs. It moves by undulating its back and it sees through
 durithalite eyes mounted in a drow face.
 ~
-67110922 600 0 33554712 2 0 0 -1000 S
-OG 3 1 -1
+67110922 600 0 0 33554712 2 0 0 -1000 S
+OG 3 1 0 -1
 52 -5 -101 52d131+4420 7d6+30
 7.9.5.6 210600
 8 8 0
@@ -39,8 +39,8 @@ drow strong business zarbonesti warrior~
 His bare arms are riddled by scars from the blades of numerous fallen foes.
 He looks like he does not have time to deal with the like of you.
 ~
-1174407180 24 0 256 2 0 0 -1000 S
-PL 3 1 -1
+1174407180 24 0 0 256 2 0 0 -1000 S
+PL 3 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -53,8 +53,8 @@ drow strong business warrior zarbonesti~
 His bare arms are riddled by scars from the blades of numerous fallen foes.
 He looks like he does not have time to deal with the like of you.
 ~
-1174407182 24 0 256 2 0 0 -1000 S
-PL 3 1 -1
+1174407182 24 0 0 256 2 0 0 -1000 S
+PL 3 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -67,8 +67,8 @@ drow warrior sleeping zarbonesti~
 His bare arms are riddled by scars from the blades of numerous fallen foes.
 He has brassy hair and sable skin.
 ~
-1174407180 24 0 256 2 0 0 -1000 S
-PL 3 1 -1
+1174407180 24 0 0 256 2 0 0 -1000 S
+PL 3 1 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 4 4 1
@@ -80,8 +80,8 @@ skull floating hovering~
 Most likely an illithid skull, this fleshless and lifeless piece of calcium
 is hovering uncharacteristically in the air. Its eyes glow black.
 ~
-1073741834 1 0 134217984 2 0 0 -1000 S
-U 3 4 -1
+1073741834 1 0 0 134217984 2 0 0 -1000 S
+U 3 4 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -95,8 +95,8 @@ a variety of concotions, all of which must have tasted fabulous while they
 were in the cauldron. Now they would probably have a little too much of
 that fibery and bland lint seasoning.
 ~
-1073743882 1 0 256 2 0 0 -1000 S
-PL 3 1 -1
+1073743882 1 0 0 256 2 0 0 -1000 S
+PL 3 1 0 -1
 53 -5 -104 53d131+4505 7d6+30
 8.0.6.6 214650
 8 8 1
@@ -109,8 +109,8 @@ This gruesome eye is about six feet in diameter and hovers menacingly about
 three feet above the ground. It scans the city of arachdrathos below. A
 large retinal nerve trails out from behind it.
 ~
-1073874954 0 0 134217984 2 0 0 -1000 S
-X 3 4 -1
+1073874954 0 0 0 134217984 2 0 0 -1000 S
+X 3 4 0 -1
 50 -3 -110 50d110+3050 6d6+25
 0.3.9.6 182250
 8 8 0
@@ -123,8 +123,8 @@ This master of House Zarbonesti is as cunning as he is powerful. He is short
 for a drow, and not even all that strong, but he has made up for his physical
 shortcomings with skill and deceit.
 ~
-1073743882 1 0 269484296 2 0 0 -1000 S
-PL 3 8192 -1
+1073743882 1 0 0 269484296 2 0 0 -1000 S
+PL 3 8192 0 -1
 55 -5 -111 55d110+4565 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -139,8 +139,8 @@ for the summoning of the hordes of Zarbon to terrorize the webbed city.
 It is her power and her cunning that has made the arched house the greatest
 of the many on Arachdra's web.
 ~
-1073743882 1 0 269484296 0 0 0 -1000 S
-PL 3 32 -1
+1073743882 1 0 0 269484296 0 0 0 -1000 S
+PL 3 32 0 -1
 60 -7 -114 56d132+5824 7d6+35
 1.3.8.6 226800
 8 8 2
@@ -160,8 +160,8 @@ in torment, and their strong arms, capable of wielding any weapon they desire.
 They slither like milipedes along the ground and often leave trails of a
 glowing violet ooze behind them.
 ~
-1140852750 1 0 33554480 2 0 0 -1000 S
-X 3 1 -1
+1140852750 1 0 0 33554480 2 0 0 -1000 S
+X 3 1 0 -1
 56 -3 -90 47d119+2914 6d6+25
 7.0.7.6 171315
 8 8 1
@@ -175,8 +175,8 @@ shade mentenozan emptiness~
 &+Lundetectable except under direct light. Even in daylight they appear as
 &+Llittle more than a tentacled amorphous blob.&N
 ~
-101074958 1 0 672727352 276674 0 0 -1000 S
-SH 3 8192 -1
+101074958 1 0 0 672727352 276674 0 0 -1000 S
+SH 3 8192 0 -1
 59 -7 -128 59d120+6077 7d6+35
 0.0.0.0 238950
 8 8 0
@@ -189,8 +189,8 @@ This coldly beautiful woman has devoted her life to the demoness Lolth. Here
 at the House Zarbonesti shrine she communes with the abyss to find ways to
 summon the powers of the outerworld to vanquish the enemies of Zarbonesti.
 ~
-1140852746 1 0 256 2 0 0 -1000 S
-PL 3 32 -1
+1140852746 1 0 0 256 2 0 0 -1000 S
+PL 3 32 0 -1
 53 -3 -75 47d110+2538 6d6+25
 7.0.0.5 114210
 8 8 2
@@ -205,8 +205,8 @@ Zarbonesti are known all too well in the small villages around the shadow
 massif. His black arms are stained crimson and hsi red eyes seem to have
 already found every weakness in your defenses.
 ~
-1073743886 1 0 1048832 2 0 0 -1000 S
-PL 3 16384 -1
+1073743886 1 0 0 1048832 2 0 0 -1000 S
+PL 3 16384 0 -1
 60 -5 -101 52d131+4420 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -220,8 +220,8 @@ Trained by the master slaver of Zarbonesti and the bloodmaster, he is a
 skilled veteran of raids upon the overworld, abd execeptionally lethal in the
 underworld.
 ~
-1073743886 1 0 264 2 0 0 -1000 S
-PL 3 8192 -1
+1073743886 1 0 0 264 2 0 0 -1000 S
+PL 3 8192 0 -1
 43 -1 -62 43d90+1849 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -234,8 +234,8 @@ This rich looking drow is an agent of house Zarbonesti. His job is to sell
 slaves and contracts to all those with vandettas against enemies of house
 Zarbonesti.
 ~
-67110926 0 0 256 2 0 0 -1000 S
-PL 3 16384 -1
+67110926 0 0 0 256 2 0 0 -1000 S
+PL 3 16384 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -248,8 +248,8 @@ This drow is incredibly scarred and battered. He has come to house zarbonesti
 to have a contract issued upn his enemies. He looks about suspiciously,
 avoiding your gaze at the same time.
 ~
-67110926 0 0 256 2 0 0 -1000 S
-PL 3 1 -1
+67110926 0 0 0 256 2 0 0 -1000 S
+PL 3 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -262,8 +262,8 @@ This creature of negative energy has been brought here to guard house Olipth
 against intrusion. It has no eyes and no form, just a darker spot in the
 darkness of this tower.
 ~
-1140850764 1 0 135790632 2 0 0 -1000 S
-U 3 1 -1
+1140850764 1 0 0 135790632 2 0 0 -1000 S
+U 3 1 0 -1
 54 -1 -69 45d107+2025 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -275,8 +275,8 @@ apprentice~
 This young apprentice is full of enthusiasm for learning the dark arts of
 magic. He seems quite potent for his years.
 ~
-67108876 1 0 134217984 2 0 0 -1000 S
-PL 3 512 -1
+67108876 1 0 0 134217984 2 0 0 -1000 S
+PL 3 512 0 -1
 40 2 -28 40d64+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -288,8 +288,8 @@ apprentice~
 This young apprentice is full of enthusiasm for learning the dark arts of
 magic. He seems quite potent for his years.
 ~
-67108876 1 0 134217984 2 0 0 -1000 S
-PL 3 2048 -1
+67108876 1 0 0 134217984 2 0 0 -1000 S
+PL 3 2048 0 -1
 40 2 -28 40d64+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -302,8 +302,8 @@ This ancient drow has spent his entire lifetime in the service of house
 Olipth. He knows more about the arcana of the underworld than almost any
 other magus.
 ~
-32778 0 0 134217984 2 0 0 -1000 S
-PL 3 512 -1
+32778 0 0 0 134217984 2 0 0 -1000 S
+PL 3 512 0 -1
 60 -5 -101 52d88+4316 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -315,8 +315,8 @@ first apprentice~
 This young apprentice is full of enthusiasm for learning the dark arts of
 magic. He seems quite potent for his years.
 ~
-67108876 1 0 134217984 2 0 0 -1000 S
-PL 3 2048 -1
+67108876 1 0 0 134217984 2 0 0 -1000 S
+PL 3 2048 0 -1
 50 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -329,8 +329,8 @@ This seer of house Olipth is a very potent mage. His limber, yet gnarled
 fingers are very long. His face is even longer. He gazes upon you with
 pupiless eyes, seeing far more of you than you see of him.
 ~
-67108876 1 0 256 2 0 0 -1000 S
-PL 3 512 -1
+67108876 1 0 0 256 2 0 0 -1000 S
+PL 3 512 0 -1
 60 -5 -101 52d88+4316 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -343,8 +343,8 @@ This seer of house Olipth is a very potent mage. His limber, yet gnarled
 fingers are very long. His face is even longer. He gazes upon you with
 pupiless eyes, seeing far more of you than you see of him.
 ~
-67108876 1 0 134217984 2 0 0 -1000 S
-PL 3 2048 -1
+67108876 1 0 0 134217984 2 0 0 -1000 S
+PL 3 2048 0 -1
 52 -5 -101 52d88+4316 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -357,8 +357,8 @@ This seer of house Olipth is a very potent mage. His limber, yet gnarled
 fingers are very long. His face is even longer. He gazes upon you with
 pupiless eyes, seeing far more of you than you see of him.
 ~
-67108876 1 0 134217984 2 0 0 -1000 S
-PL 3 2048 -1
+67108876 1 0 0 134217984 2 0 0 -1000 S
+PL 3 2048 0 -1
 56 -5 -107 54d88+4482 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -371,8 +371,8 @@ This golem is made of adamantine and is quite large too. It stands over
 eighteen feet tall at the shoulder. It is shaped like a giant drow warrior
 bearing two giant swords. It is quite impressive indeed.
 ~
-100665358 1 0 301990168 2050 0 0 -1000 S
-OG 3 1 -1
+100665358 1 0 0 301990168 2050 0 0 -1000 S
+OG 3 1 0 -1
 56 -7 -114 56d143+5880 7d6+35
 1.3.8.6 226800
 8 8 0
@@ -385,8 +385,8 @@ This warrior is very mad and even more deadly. His sable drow arms are well
 muscled and stained crimson with some sort of war paint, or perhaps it is
 fresh blood.
 ~
-1073743886 1 0 264 2 0 0 -1000 S
-PL 3 1 -1
+1073743886 1 0 0 264 2 0 0 -1000 S
+PL 3 1 0 -1
 53 -5 -104 53d131+4505 7d6+30
 8.0.6.6 214650
 8 8 1
@@ -399,8 +399,8 @@ This warrior is very mad and even more deadly. His sable drow arms are well
 muscled and stained crimson with some sort of war paint, or perhaps it is
 fresh blood.
 ~
-1140852750 1 0 264 0 0 0 -1000 S
-PL 3 1 -1
+1140852750 1 0 0 264 0 0 0 -1000 S
+PL 3 1 0 -1
 58 -7 -125 58d143+6090 7d6+35
 3.4.8.6 234900
 8 8 1
@@ -414,8 +414,8 @@ of armed combat and now marshalls one of the most ruthless war machines in
 the realm. Having led his troops to numerous victories over the lesser houses
 and other races, his position is one of great respect.
 ~
-1140918478 1 0 280 2 0 0 -1000 S
-PL 3 1 -1
+1140918478 1 0 0 280 2 0 0 -1000 S
+PL 3 1 0 -1
 60 -10 -132 10d10+25000 7d6+35
 6.6.9.7 243000
 8 8 1
@@ -428,8 +428,8 @@ Crackling bursts of energy have come together to form a shield and longsword
 which sance together against the cosmos. Some unseen force moves these
 devices with the sole intention to destroy.
 ~
-1073874958 1 0 671613244 12482 0 0 -1000 S
-X 3 1 -1
+1073874958 1 0 0 671613244 12482 0 0 -1000 S
+X 3 1 0 -1
 60 -7 -132 57d143+6384 7d6+35
 2.4.2.9 346275
 8 8 0
@@ -443,8 +443,8 @@ the corpses of shadows, undead from the nether planes. These corpses are then
 stitched into a huge creature and reanimated using lost arcana into one of
 the most trustworthy, and lethal guardians one can find.
 ~
-1174405130 1 0 1048832 2 0 0 -1000 S
-OG 3 1 -1
+1174405130 1 0 0 1048832 2 0 0 -1000 S
+OG 3 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 0
@@ -459,8 +459,8 @@ arachdrathos to the high cleric of Zarbonesti. It is her mission to elevate
 house ilith to the ruling house of the city after the fall of house
 Zarbonesti.
 ~
-1140850702 1 0 256 2 0 0 -1000 S
-PL 3 32 -1
+1140850702 1 0 0 256 2 0 0 -1000 S
+PL 3 32 0 -1
 59 -5 -111 55d121+4620 7d6+30
 0.2.7.6 222750
 8 8 2
@@ -473,8 +473,8 @@ This large black spider is almost the size of a small cow. It has sharp
 jagged mandibles and a shiny exoskeleton. A red dot is prominent on its
 back.
 ~
-1073743880 1 0 524544 2 0 0 -1000 S
-AS 3 16 -1
+1073743880 1 0 0 524544 2 0 0 -1000 S
+AS 3 16 0 -1
 45 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -487,8 +487,8 @@ This large black spider is almost the size of a small cow. It has sharp
 jagged mandibles and a shiny exoskeleton. A red dot is prominent on its
 back.
 ~
-1073743880 1 0 524544 2 0 0 -1000 S
-AS 3 16 -1
+1073743880 1 0 0 524544 2 0 0 -1000 S
+AS 3 16 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -502,8 +502,8 @@ gain converts to the spider queen. Her sales pitch is obviously a mix of
 herself and her message, as she most definitely can use her allure to sell
 the demoness to the least gullible of humans.
 ~
-1073741836 1 0 256 2 0 0 -1000 S
-PL 3 32 -1
+1073741836 1 0 0 256 2 0 0 -1000 S
+PL 3 32 0 -1
 47 -3 -75 47d110+2538 6d6+25
 7.0.0.5 114210
 8 8 2
@@ -516,8 +516,8 @@ slime pool stairway ochre guardian~
 the staircase of house slin, seeming to patrol and clean at the same time.
 It is a sick ochre color.
 ~
-2062 1 0 536871168 276674 0 0 -1000 S
-AP 3 0 -1
+2062 1 0 0 536871168 276674 0 0 -1000 S
+AP 3 0 0 -1
 50 -3 -95 50d100+2650 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -530,8 +530,8 @@ chef slinite~
 stained with the magenta blood of zarbon. He seems to be a very lethal
 fighter, apparently slaughtering zarbon on a regular basis.
 ~
-1073743886 1 0 256 2 0 0 -1000 S
-PL 3 1 -1
+1073743886 1 0 0 256 2 0 0 -1000 S
+PL 3 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -543,8 +543,8 @@ slinite devious drow~
 Cunning as he is lethal this assassin has one thought on his mind, turning
 you into a corpse.
 ~
-2062 1 0 1573128 2 0 0 -1000 S
-PL 3 8192 -1
+2062 1 0 0 1573128 2 0 0 -1000 S
+PL 3 8192 0 -1
 45 -1 -69 45d90+1935 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -556,8 +556,8 @@ slinite devious drow~
 Cunning as she is lethal, this assassin has one thought on her mind, turning
 you into a corpse.
 ~
-1073743884 1 0 1573176 2 0 0 -1000 S
-PL 3 8192 -1
+1073743884 1 0 0 1573176 2 0 0 -1000 S
+PL 3 8192 0 -1
 48 -3 -78 48d100+2544 6d6+25
 8.1.0.5 116640
 8 8 2
@@ -570,8 +570,8 @@ Cunning as she is lethal, this assassin has one thought on her mind, turning
 you into a corpse. She must be very effective at this, considering she is the
 master of this house of killers.
 ~
-1073743884 1 0 1573120 2 0 0 -1000 S
-PL 3 8192 -1
+1073743884 1 0 0 1573120 2 0 0 -1000 S
+PL 3 8192 0 -1
 59 -5 -104 53d110+4399 7d6+30
 8.0.6.6 214650
 8 8 2
@@ -583,8 +583,8 @@ skeletal guardian corpse~
 This drow skeleton has been animated to protect the interests of House
 Sa'Zarn.
 ~
-2058 1 0 256 262146 0 0 -1000 S
-U 3 1 -1
+2058 1 0 0 256 262146 0 0 -1000 S
+U 3 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -595,8 +595,8 @@ nothing absence mass~
 ~
 There is really -nothing- here.
 ~
-1073743880 1 0 312 262146 0 0 -1000 S
-X 3 1 -1
+1073743880 1 0 0 312 262146 0 0 -1000 S
+X 3 1 0 -1
 60 -7 -143 59d143+6608 7d6+35
 4.5.4.9 358425
 8 8 0
@@ -608,8 +608,8 @@ dracolich skeletal giant dragon~
 Through some awesome spells, this massive skeleton of a dragon has been
 animated to guard the guildhouse.
 ~
-1209010186 1 0 134218024 262146 0 0 -1000 S
-D 3 1 -1
+1209010186 1 0 0 134218024 262146 0 0 -1000 S
+D 3 1 0 -1
 50 -3 -115 50d119+3250 6d6+25
 0.3.7.14 243000
 8 8 0
@@ -622,8 +622,8 @@ This magus has many years behind him. His white hair has begun to yellow and
 dark creases form on his sable skin. He looks incredibly potent and more than
 slightly insane.
 ~
-1073743882 1 0 256 2 0 0 -1000 S
-PL 3 1024 -1
+1073743882 1 0 0 256 2 0 0 -1000 S
+PL 3 1024 0 -1
 53 -5 -104 53d88+4399 7d6+30
 8.0.6.6 214650
 8 8 1
@@ -636,8 +636,8 @@ This magus has many years behind him. His white hair has begun to yellow and
 dark creases form on his sable skin. He looks incredibly potent and more than
 slightly insane.
 ~
-1073743882 1 0 256 2 0 0 -1000 S
-PL 3 1024 -1
+1073743882 1 0 0 256 2 0 0 -1000 S
+PL 3 1024 0 -1
 57 -7 -117 57d96+5871 7d6+35
 2.4.8.6 230850
 8 8 1
@@ -650,8 +650,8 @@ Zargenenon is dead, very dead, however he has perserved his soul and
 continued to use his dead body as his own and only animation until the end
 of time. Yes, Zargenenon is indeed a lich.
 ~
-1073743882 1 0 738828600 309443 67109088 637546496 -1000 S
-UV 3 1024 -1
+1073743882 1 0 0 738828600 309443 67109088 637546496 -1000 S
+UV 3 1024 0 -1
 57 -7 -117 57d96+5871 7d6+35
 2.4.8.6 230850
 8 8 0
@@ -666,8 +666,8 @@ the necromancers of house Sa'Zarn have caused it to grow numerous tentacles
 all incredibly spiny. its central mass is quite huge about eighteen feet in
 diameter pulsating under reptilian scales.
 ~
-2062 1 0 280 0 0 0 -1000 S
-X 3 1 -1
+2062 1 0 0 280 0 0 0 -1000 S
+X 3 1 0 -1
 57 -7 -132 57d143+6384 7d6+35
 2.4.2.9 346275
 8 8 0
@@ -682,8 +682,8 @@ the necromancers of house Sa'Zarn have caused it to grow numerous tentacles
 all incredibly spiny. its central mass is quite huge about eighteen feet in
 diameter pulsating under reptilian scales.
 ~
-1140852750 1 0 35127576 0 0 0 -1000 S
-UV 3 8192 -1
+1140852750 1 0 0 35127576 0 0 0 -1000 S
+UV 3 8192 0 -1
 59 191 -77 10d10+1000 4d7+20
 0.0.0.0 60000
 8 8 0
@@ -695,8 +695,8 @@ dragon shadow~
 This little dragon is amazingly old looking, perhaps this great creature
 has shrunk his size to fit in his master's chambers.
 ~
-1074792462 1 0 403177768 262144 0 0 -1000 S
-D 0 256 -1
+1074792462 1 0 0 403177768 262144 0 0 -1000 S
+D 0 256 0 -1
 57 -7 -137 57d132+6498 7d6+35
 2.4.6.19 461700
 8 8 2
@@ -709,8 +709,8 @@ This magus has many years behind him. His white hair has begun to yellow and
 dark creases form on his sable skin. He looks incredibly potent and more than
 slightly insane.
 ~
-1073743882 1 0 939598108 268710018 64 571486208 -1000 S
-PL 3 1024 -1
+1073743882 1 0 0 939598108 268710018 64 571486208 -1000 S
+PL 3 1024 0 -1
 57 -7 -117 20d60+2000 7d20+35
 2.4.8.6 230850
 8 8 1
@@ -722,8 +722,8 @@ hound phaze~
 An aboninated blink dog, these phaze hounds are a powerful component of
 the drow hunting force.
 ~
-1073743880 1 0 1573128 0 0 0 0 S
-UV 0 512 -1
+1073743880 1 0 0 1573128 0 0 0 0 S
+UV 0 512 0 -1
 51 -5 -98 51d88+4233 7d6+30
 6.9.4.6 206550
 8 8 2
@@ -734,8 +734,8 @@ slinite ambassador green drow sneaky~
 ~
 This sneaky looking drow is probably form house slin.&N
 ~
-1073743882 1 0 270008632 0 0 0 -1000 S
-PL 0 8192 -1
+1073743882 1 0 0 270008632 0 0 0 -1000 S
+PL 0 8192 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

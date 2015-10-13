@@ -97,7 +97,7 @@ harvest bag~
 &+ya full harvest bag&n~
 &+yA full bag of &+Wrice&+y has been dropped here.&n~
 ~
-8 3 3 0 5 0 0 1 0 0 0
+8 3 3 0 5 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -109,7 +109,7 @@ rice harvest~
 &+ya &+Wrice &+yharvest&n~
 &+yEnough &+Wrice&+y to harvest seems to be here.&n~
 ~
-8 15 3 0 5 0 4096 1 0 0 0
+8 15 3 0 5 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -204,7 +204,7 @@ armageddon signet ring~
 &+Lan &+rarmageddon&+L signet ring&n~
 &+LA black ring with the sigil of &+rarmageddon&+L has been dropped here.&n~
 ~
-9 15 3 0 5 0 4096 3 0 0 0
+9 15 3 0 5 0 4096 3 32768 0 0
 6 0 0 2 0 0 0 0
 0 0 100
 E
@@ -241,7 +241,7 @@ enormous hemp net~
 &+yan enormous hemp net&n~
 &+yTransient items shouldnt need long names.~
 ~
-8 43 3 0 5 0 524288 16385 0 0 0
+8 43 3 0 5 0 524288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -269,7 +269,7 @@ boar meat strip~
 &+ra strip of fresh boar meat&n~
 &+rA strip of fresh and bloody boar meat has been dropped here.&n~
 ~
-8 48 3 0 5 0 8392704 16385 0 0 0
+8 48 3 0 5 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -282,7 +282,7 @@ enormous boar hide~
 &+ythe hide of an enormous &+Lboar&n~
 &+LBoar &+yhide of epic proportions has been dropped here.&n~
 ~
-8 12 3 0 5 0 4096 16385 0 0 0
+8 12 3 0 5 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -324,7 +324,7 @@ utility knife~
 &+wa dull utility knife&n~
 &+wA dull utility knife has been dropped here.&n~
 ~
-13 15 3 0 5 0 4096 1 0 0 0
+13 15 3 0 5 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -337,7 +337,7 @@ seaturtle turtle~
 &+ga &+bsea&+gturtle&n~
 &+gA &+bsea&+gturtle crawls around in circles here.&n~
 ~
-8 2 3 0 5 0 8388608 16385 0 0 0
+8 2 3 0 5 0 8388608 16385 32768 0 0
 0 0 0 0 0 0 0 0
 5 1 100
 E
@@ -369,7 +369,7 @@ ground rice~
 &+ysome ground&+W rice&n~
 &+ySome freshly ground &+Wrice&+y has been left here.&n~
 ~
-8 48 3 0 5 0 0 16385 0 0 0
+8 48 3 0 5 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -497,7 +497,7 @@ rice paper hat~
 &+Wa rice paper hat&n~
 &+WA paper made from folded rice paper is blown around by a breeze here.&n~
 ~
-9 28 3 0 4 0 0 17 0 0 0
+9 28 3 0 4 0 0 17 32768 0 0
 2 0 0 1 0 0 0 0
 0 90 100
 E
@@ -636,7 +636,7 @@ captured razorback male~
 &+ya captured &+Wrazor&+yback alpha male~
 &+yA razorback male stands here, subdued for the moment.&N~
 ~
-8 2 3 0 5 0 0 0 0 0 0
+8 2 3 0 5 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -787,7 +787,7 @@ family heirloom~
 &+Ya family heirloom&n~
 &+YA family heirloom faintly glimmers here.&n~
 ~
-8 24 3 0 5 0 8392704 16385 0 0 0
+8 24 3 0 5 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -826,7 +826,7 @@ bar electrum~
 &+Ca solid bar of electrum&n~
 &+CA solid and valuable bar of electrum is here.&n~
 ~
-8 23 3 0 11 0 4096 16385 0 0 0
+8 23 3 0 11 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 10 300000 100
 E
@@ -840,7 +840,7 @@ chunk adamantium~
 &+ma solid chunk of &+Madamantium&n~
 &+mA large, solid chunk of &+Madamantium&+m has been left here.&n~
 ~
-8 19 3 0 5 0 8392704 1 0 0 0
+8 19 3 0 5 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 5000 100
 E
@@ -854,7 +854,7 @@ bar electium~
 &+ma bar of refined &+Melectium&n~
 &+cA bar of extremely rare &+Melectium&+m lies here.&n~
 ~
-8 19 3 0 5 0 0 1 0 0 0
+8 19 3 0 5 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 50000 100
 E
@@ -867,7 +867,7 @@ weapon template~
 &+can iron weapon template&N~
 &+cAn iron weapon template lies here.&n~
 ~
-8 15 3 0 5 0 8392704 16385 0 0 0
+8 15 3 0 5 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -937,7 +937,7 @@ heart hydra~
 &+ra still-beating heart of a hydra&n~
 &+RA warm, still-beating heart of a hydra, lies here.&n~
 ~
-8 2 3 0 5 0 4096 16385 0 0 0
+8 2 3 0 5 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -949,7 +949,7 @@ severed index finger~
 &+ya &+rsevered&+y index finger&n~
 &+yThe &+rsevered &+yfinger of Feng Cho lies here.&n~
 ~
-8 2 3 0 5 0 4096 1 0 0 0
+8 2 3 0 5 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -960,7 +960,7 @@ royal invitation~
 &+Wa royal invitation&n~
 &+WAn invitation with an eastern royal seal has been dropped here.&n~
 ~
-8 28 3 0 5 0 8388608 16385 0 0 0
+8 28 3 0 5 0 8388608 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -1088,7 +1088,7 @@ map jade~
 &+Wa map of &+Gjade&n~
 &+WA map of the &+GJade &+gEmpire&+W has been left here.&n~
 ~
-8 28 3 0 5 0 0 16385 0 0 0
+8 28 3 0 5 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 50000 100
 E
@@ -1143,7 +1143,7 @@ emerald rose seeds~
 &+gsome &+Gemerald&+g rose&+y seeds&n~
 &+ySeeds &+gof the very rare&+G emerald&+g rose lay here.&n~
 ~
-8 5 3 0 5 0 4096 1 0 0 0
+8 5 3 0 5 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 15000 100
 E
@@ -1155,7 +1155,7 @@ armor template~
 &+can iron armor template&n~
 &+cAn iron armor template has been dropped here.&n~
 ~
-8 15 3 0 5 0 8392704 16385 0 0 0
+8 15 3 0 5 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -1278,7 +1278,7 @@ mark mankillers sigil~
 &+Lthe mark of the &+rmankillers&n~
 &+LA stitched sigil, with the &+rmankiller&+L emblem on it, lays here.&n~
 ~
-8 3 3 0 5 0 8392704 16385 0 0 0
+8 3 3 0 5 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -1293,7 +1293,7 @@ medallion vengence~
 &+Lthe med&+walli&+Lon of &+rvengence&n~
 &+LAn evil looking medallion has been dropped here.&n~
 ~
-9 23 3 0 5 0 1 5 64 0 0
+9 23 3 0 5 0 1 5 32832 0 0
 8 0 0 3 0 0 0 0
 0 21922 100
 E
@@ -1322,7 +1322,7 @@ wild orchid seeds~
 &+gsome wild &+morchid&+y seeds&n~
 &+gSome wild &+morchid &+yseeds&+g are scattered here.&n~
 ~
-8 4 3 0 5 0 8392704 1 0 0 0
+8 4 3 0 5 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 5000 100
 E
@@ -1346,7 +1346,7 @@ bonzai tree seed~
 &+ya &+gbonzai&+y tree seed&n~
 &+yA smattering of &+gbonzai&+y seeds lay here.&n~
 ~
-8 4 3 0 5 0 8392704 1 0 0 0
+8 4 3 0 5 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 5000 100
 E
@@ -1359,7 +1359,7 @@ lilac seeds~
 &+gsome &+mlilac&+y seeds&n~
 &+gSome tiny &+mlilac&+y seeds &+glay about here.&n~
 ~
-8 4 3 0 5 0 8392704 1 0 0 0
+8 4 3 0 5 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 5000 100
 E
@@ -1527,7 +1527,7 @@ captured outlaw~
 &+La &+ycaptured&+L outlaw&n~
 &+LAn outlaw, tangled up in a large &+ynet&+L, wiggles around on the floor.&n~
 ~
-8 2 3 0 5 0 8388608 1 0 0 0
+8 2 3 0 5 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 50 1 100
 E
@@ -1555,7 +1555,7 @@ white belt silk~
 &+Wa laced, white silk belt&n~
 &+WA white silk belt, with many laced-up pockets, lies here.&n~
 ~
-15 3 3 0 5 0 0 2049 0 0 0
+15 3 3 0 5 0 0 2049 32768 0 0
 50 5 0 50 0 0 0 0
 0 6881 100
 E
@@ -1588,7 +1588,7 @@ holy relic east~
 &+wthe holy relic of the &+Weast&n~
 &+wThe holy relic of the&+W east&+w has been left here.&n~
 ~
-8 27 3 0 5 0 12288 1 0 0 0
+8 27 3 0 5 0 12288 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -1625,7 +1625,7 @@ holy relic west~
 &+rthe holy relic of the &+Rwest&n~
 &+rThe holy relic of the &+Rwest&+r has been left here.&n~
 ~
-8 27 3 0 5 0 12288 1 0 0 0
+8 27 3 0 5 0 12288 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -1641,7 +1641,7 @@ holy relic north~
 &+gthe holy relic of the &+Gnorth&n~
 &+gThe holy relic of the &+Gnorth&+g has been left here.&n~
 ~
-8 27 3 0 5 0 12288 1 0 0 0
+8 27 3 0 5 0 12288 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -1657,7 +1657,7 @@ holy relic south~
 &+bthe holy relic of the &+Bsouth&n~
 &+bThe holy relic of the&+B east&+b has been left here.&n~
 ~
-8 27 3 0 5 0 12288 1 0 0 0
+8 27 3 0 5 0 12288 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -1797,7 +1797,7 @@ simple necktie neck tie~
 &+Wa simple necktie&n~
 &+WA simple and basic necktie has been dropped here.&n~
 ~
-9 3 3 0 5 0 0 5 0 0 0
+9 3 3 0 5 0 0 5 32768 0 0
 3 0 0 2 0 0 0 0
 0 679 100
 A
@@ -1859,6 +1859,6 @@ bloody head mande~
 &+Lthe &+Rbloody &+rhead &+Lof &+cMande&n~
 &+LThe &+Rbloody &+rhead &+Lof &+cMande &+Llies here.&n~
 ~
-13 2 3 0 7 0 8388608 1 0 0 0
+13 2 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100

@@ -1,13 +1,13 @@
 #999
 &+wInterspace&n~
-99999 2 0 40 50 0
+99999 2 0 40 50 1
 *
-* Zone edited with dikuEdit v2.97f
-*
-*
+* Zone edited with durisEdit v3.00
 *
 *
-M 0 99 2 99900 100 0 0 0           * (mob not in this .MOB file)
-M 0 99 2 99937 100 0 0 0           * (mob not in this .MOB file)
+*
+*
+M 0 99 2 99900 100 0 0 0           * (mob type not in this .mob file)
+M 0 99 2 99937 100 0 0 0           * (mob type not in this .mob file)
 *
 S

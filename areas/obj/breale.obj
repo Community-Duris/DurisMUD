@@ -611,7 +611,7 @@ ash~
 some &+Lash&N~
 Some &+Lash&N lies here.~
 ~
-12 2 0 0 7 0 0 16385 0 0 0
+12 2 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 100 100
 #2671
@@ -619,7 +619,7 @@ peppercorn~
 a &+Lpeppercorn&N~
 A &+Lpeppercorn&N lies here.~
 ~
-19 2 2 2 7 0 0 16385 0 0 0
+19 2 2 2 7 0 0 16385 32768 0 0
 1 0 0 0 0 0 0 0
 0 200 100
 #2672
@@ -627,7 +627,7 @@ wood~
 a tiny pile of &+ywood&N~
 A tiny pile of &+ywood&N lies here.~
 ~
-12 6 0 0 7 0 0 16385 0 0 0
+12 6 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 300 100
 #2673
@@ -635,7 +635,7 @@ dirt~
 some &+ydirt&N~
 Some &+ydirt&N lies in a pile here.~
 ~
-12 2 0 0 7 0 0 16385 0 0 0
+12 2 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 500 100
 #2674
@@ -643,7 +643,7 @@ fennel root~
 a &+Wfennel root&N~
 A &+Wfennel root&N grows here.~
 ~
-19 2 2 2 7 0 0 16385 0 0 0
+19 2 2 2 7 0 0 16385 32768 0 0
 4 0 0 0 0 0 0 0
 0 1000 100
 #2675
@@ -651,7 +651,7 @@ red mushroom~
 a &+Rred mushroom&N~
 A &+Rred mushroom&N grows here.~
 ~
-19 2 2 2 7 0 0 16385 0 0 0
+19 2 2 2 7 0 0 16385 32768 0 0
 4 0 0 0 0 0 0 0
 0 400 100
 #2676
@@ -691,7 +691,7 @@ small potion healing~
 &+ra small potion of healing&N~
 &+rA small potion sits unwanted on the ground.~
 ~
-10 15 3 0 7 0 8388609 16385 0 0 0
+10 15 3 0 7 0 8388609 16385 32768 0 0
 50 214 0 0 0 0 0 0
 1 3200 100
 #2680

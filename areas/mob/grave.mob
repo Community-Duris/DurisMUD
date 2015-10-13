@@ -7,8 +7,8 @@ skeleton~
 &+Wbones of this undead entity.  The bones of the skeleton are magically
 &+Wanimated and carry with it great, deceiving strength.
 ~
-72 1 0 0 0 0 0 -1000 S
-U 0 1 -1
+72 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -23,8 +23,8 @@ zombie moaning~
 &+yZombies tend to be slow, but they are often quite strong even when armed only
 &+gwith their own severed limbs.
 ~
-72 1 0 0 0 0 0 -1000 S
-U 0 1 -1
+72 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -38,8 +38,8 @@ spectre ghostly~
 &+Lhumanoid from its body.  Enraged, the spirit lives on in an attempt to quench
 &+Lits hatred.
 ~
-1073742024 1 0 268435520 0 0 0 -1000 S
-UG 0 8192 -1
+1073742024 1 0 0 268435520 0 0 0 -1000 S
+UG 0 8192 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -53,8 +53,8 @@ A &+Lwailing &nghost flies about the area.
 &+Ltroubled essence continues to walk the prime material plane in search of
 &+Lsalvation.
 ~
-2120 1 0 403308612 0 0 0 -1000 S
-UG 0 1 -1
+2120 1 0 0 403308612 0 0 0 -1000 S
+UG 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -68,8 +68,8 @@ is long dead, but powerful magic keeps this hunter alive.  Its thirst for blood
 and flesh has been strengthened in death.  This unrelenting scavenger, once it
 has acquired a scent, will track its victim until caught.
 ~
-1073743944 0 0 839458924 204 0 0 -1000 S
-U 0 1 -1
+1073743944 0 0 0 839458924 204 0 0 -1000 S
+U 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -84,8 +84,8 @@ be one of those unfortunate victims.  Legends tell stories of these beasts who
 wield unimaginable strength and agility.  Children are told these stories in
 the hopes that it will deter any unsavoury behavior.
 ~
-1073743944 1 0 838901868 220 0 0 -1000 S
-L 0 1 -1
+1073743944 1 0 0 838901868 220 0 0 -1000 S
+L 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -98,8 +98,8 @@ bat vampire~
 &+Lof its unfortunate victims.  These nocturnal beasts hunt only at night, but
 &+Lin this graveyard with the thick fog about, anytime seems like night!
 ~
-72 1 0 0 0 0 0 -500 S
-B 0 1 -1
+72 1 0 0 0 0 0 0 -500 S
+B 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -114,8 +114,8 @@ liches or vampires.  Mummys are often quite simple minded, and will usually
 only attack when provoked.  The power of a mummy is often underestimated.  In
 death, these beings tend to triple the strength of their living counterparts.
 ~
-1140852936 0 0 301998184 220 0 0 -1000 S
-U 0 1 -1
+1140852936 0 0 0 301998184 220 0 0 -1000 S
+U 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -129,8 +129,8 @@ which wrap his torso are more tattered and dirty.  This particular mummy is
 also quite a bit larger than the rest.  His disposition is much more aggressive
 and upon recognizing a threat, the mummy lumbers forward to attack.
 ~
-1140852808 1 0 301989944 64 0 0 -1000 S
-U 0 2 -1
+1140852808 1 0 0 301989944 64 0 0 -1000 S
+U 0 2 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -144,8 +144,8 @@ life.  This zombie, although small in stature, is still much stronger than the
 average living human.  Angered by death, this zombie will attack anyone and
 he will do so unrelentingly.
 ~
-1073743944 1 0 301989928 64 0 0 -1000 S
-U 0 1 -1
+1073743944 1 0 0 301989928 64 0 0 -1000 S
+U 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -159,8 +159,8 @@ remnants of long flowing blonde hair cling to the scalp of the unfortunate
 young girl.  In death, this young girls strength has been tripled.  Care
 should be taken to avoid angering this zombie.
 ~
-1073743944 1 0 301989928 64 0 0 -1000 S
-U 0 1 -1
+1073743944 1 0 0 301989928 64 0 0 -1000 S
+U 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -174,8 +174,8 @@ the room, an agonizing moan emanated from its lips.  Doomed to live her life
 as a zombie now, this zombie lashes out in anger.  Such seems to be the fate
 of all who are buried in this cursed graveyard.
 ~
-1073743944 1 0 301990008 12382 0 0 -1000 S
-U 0 1 -1
+1073743944 1 0 0 301990008 12382 0 0 -1000 S
+U 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -190,8 +190,8 @@ died a violent death at the hands of an ogre guard of Faang.  His body has
 been ressurected in the form of a powerful vampire.  Uncontrollable rage
 forces this once good man to attack all in his path.
 ~
-22606 1 0 303038712 264257 0 8192 -1000 S
-UV 0 512 -1
+22606 1 0 0 303038712 264257 0 8192 -1000 S
+UV 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -206,8 +206,8 @@ vampire pale~
 &+Lskin.  Upon seeing intruders in his tomb, the vampire stalks forward ready for
 &+Lbattle.
 ~
-2122 1 0 301989928 64 0 0 -1000 S
-UV 0 1 -1
+2122 1 0 0 301989928 64 0 0 -1000 S
+UV 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -221,8 +221,8 @@ A &+Lwailing &nghost flies about the area.
 &+Ltroubled essence continues to walk the prime material plane in search of
 &+Lsalvation.
 ~
-2120 1 0 402718812 0 0 0 -1000 S
-UG 0 1 -1
+2120 1 0 0 402718812 0 0 0 -1000 S
+UG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -236,8 +236,8 @@ A &+Lwailing &nghost flies about the area.
 &+Ltroubled essence continues to walk the prime material plane in search of
 &+Lsalvation.
 ~
-2120 1 0 402718812 0 0 0 -1000 S
-UG 0 1 -1
+2120 1 0 0 402718812 0 0 0 -1000 S
+UG 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -252,8 +252,8 @@ skeleton angered strong~
 &+Wwipe out an entire party of adventurers.  Fortunately, these skeletons pose
 &+Wlittle threat to any but the weakest of opponents.
 ~
-72 1 0 302186500 0 0 0 -1000 S
-U 0 1 -1
+72 1 0 0 302186500 0 0 0 -1000 S
+U 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -267,8 +267,8 @@ is long dead, but powerful magic keeps this hunter alive.  Its thirst for blood
 and flesh has been strengthened in death.  This unrelenting scavenger, once it
 has acquired a scent, will track its victim until caught.
 ~
-1073743944 1 0 839458924 204 0 0 -1000 S
-U 0 1 -1
+1073743944 1 0 0 839458924 204 0 0 -1000 S
+U 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -284,8 +284,8 @@ a &+Lga&nrgoy&+Lle &nsits atop a &+ybranch of the tree.
 &+Lstony-skin tone to match their surroundings.  Many gargoyles tend to be
 &+Lpeaceful unless provoked.
 ~
-1073756234 0 0 973676652 204 0 0 -1000 S
-PT 0 1 -1
+1073756234 0 0 0 973676652 204 0 0 -1000 S
+PT 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -301,8 +301,8 @@ a &+Lga&nrgoy&+Lle &nsits atop a &+ybranch of the tree.
 &+Lstony-skin tone to match their surroundings.  Many gargoyles tend to be
 &+Lpeaceful unless provoked.
 ~
-1073756234 0 0 973676652 204 0 0 -1000 S
-PT 0 1 -1
+1073756234 0 0 0 973676652 204 0 0 -1000 S
+PT 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -318,8 +318,8 @@ a large &+Lga&nrgoy&+Lle &nsits atop a &+ybranch of the tree.
 &+Lstony-skin tone to match their surroundings.  Many gargoyles tend to be
 &+Lpeaceful unless provoked.
 ~
-1073756234 0 0 973676652 204 0 0 -1000 S
-OG 0 1 -1
+1073756234 0 0 0 973676652 204 0 0 -1000 S
+OG 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -335,8 +335,8 @@ a wise &+Lga&nrgoy&+Lle &nsits atop the highest point of the &+ytree.
 &+Lstony-skin tone to match their surroundings.  Many gargoyles tend to be
 &+Lpeaceful unless provoked.
 ~
-1073756234 0 0 973676796 204 0 0 -1000 S
-OG 0 256 -1
+1073756234 0 0 0 973676796 204 0 0 -1000 S
+OG 0 256 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -350,8 +350,8 @@ caretaker crazed~
 &+ythink of you as an adversary.  Without thought he picks up his shovel and
 &+ycharges to attack
 ~
-14410 1 0 973676716 220 0 0 -500 S
-PH 0 1 -1
+14410 1 0 0 973676716 220 0 0 -500 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -364,8 +364,8 @@ robber grave scared duergar~
 &+Lunaware that the corpses that were once at rest, have now risen from the dead.
 &+LThis thief is trying frantically to escape the vile crypt at any means possible
 ~
-1073756362 1 0 973676780 204 0 0 -1000 S
-PD 6 8192 -1
+1073756362 1 0 0 973676780 204 0 0 -1000 S
+PD 6 8192 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -380,8 +380,8 @@ wight fiendish~
 &+ga place such as this.  Care should be taken to fight these monsters away
 &+gfrom their paralyzing touch.
 ~
-1073756234 1 0 973676796 204 0 0 -1000 S
-PT 0 1 -1
+1073756234 1 0 0 973676796 204 0 0 -1000 S
+PT 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -396,8 +396,8 @@ wraith vicious~
 &+mto begin devouring the corpses of their paralyzed victims while they still
 &+mlive.
 ~
-1073756234 1 0 973676796 204 0 0 -1000 S
-PT 0 1 -1
+1073756234 1 0 0 973676796 204 0 0 -1000 S
+PT 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -412,8 +412,8 @@ lich~
 &+bare often quite fragile, and as long as they aren't allowed to concentrate
 &+btheir spellcasting abilities are nullified.
 ~
-1073756234 1 0 973152492 204 0 0 -1000 S
-U 0 512 -1
+1073756234 1 0 0 973152492 204 0 0 -1000 S
+U 0 512 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -430,8 +430,8 @@ necromancer ancient drow~
 &+Lcorpses matters to this dark individual.  Intrusion into his laboratory will
 &+Lnot be met with anything but retalliation.
 ~
-1073756234 1 0 973676796 204 0 0 -1000 S
-PL 0 1024 -1
+1073756234 1 0 0 973676796 204 0 0 -1000 S
+PL 0 1024 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

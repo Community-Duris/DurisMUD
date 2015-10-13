@@ -7,8 +7,8 @@ burly centaur large~
 in his protection of the forest. Though his scars speak of many fights, there
 is a gentle look in his eyes.
 ~
-235042888 0 0 822616120 14528 83886080 1057792 0 S
-CT 0 2 -1
+235042888 0 0 0 822616120 14528 83886080 1057792 0 S
+CT 0 2 0 -1
 60 1 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -21,8 +21,8 @@ sleek elf~
 the forest. His hair is long and grey, almost covering a cracked face of great
 age.&n
 ~
-33962056 0 0 805904700 14528 0 0 0 S
-PE 0 512 -1
+33962056 0 0 0 805904700 14528 0 0 0 S
+PE 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -33,8 +33,8 @@ small rabbit~
 ~
   &+WA small furry rabbit with a pure white coat.&n
 ~
-2248 0 0 16 0 0 0 0 S
-A 0 0 -1
+2248 0 0 0 16 0 0 0 0 S
+A 0 0 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -45,8 +45,8 @@ squirrel frisky~
 ~
    The squirrel is frisky and alert as it watches you closely.
 ~
-2056 0 0 0 0 0 0 0 S
-A 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -58,8 +58,8 @@ human guard~
      &+WStanding tall and proud the guard has his hand on his sword determined
  &+Wto keep all strangers out of the temple.&N
 ~
-100677706 0 0 805380536 14528 83886208 1056768 0 S
-PH 0 8 -1
+100677706 0 0 0 805380536 14528 83886208 1056768 0 S
+PH 0 8 0 -1
 60 1 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -72,8 +72,8 @@ dark drow cleric~
 &+Lthe Underdark to report on the Temple's status. The Temple's clerics know&n
 &+Lnot to kill the cleric lest it report from the afterlife.&n
 ~
-33716296 1 0 805937592 47298 84934656 34873344 -1000 S
-PL 0 32 -1
+33716296 1 0 0 805937592 47298 84934656 34873344 -1000 S
+PL 0 32 0 -1
 60 -3 -100 1d60000+1 1d20+1
 100.0.27.32 500000
 8 8 2
@@ -86,8 +86,8 @@ malinok mage~
 &+Wsecrets of the Realms. His stature reflects his many years bound to a desk&n
 &+Wstuding books and scrolls. Though only a fool would dismiss his power.&n
 ~
-33560654 1 0 973185180 14528 87031808 34611200 1000 S
-PH 0 512 -1
+33560654 1 0 0 973185180 14528 87031808 34611200 1000 S
+PH 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -99,8 +99,8 @@ tower guard~
   &+WThis temple paladin has been assigned to guard the tower's study. He&n
 &+Wlooks ahead intent on his assigned duty.&n
 ~
-100677706 2304 0 419471544 47296 17825792 5251328 1000 S
-PH 0 8 -1
+100677706 2304 0 0 419471544 47296 17825792 5251328 1000 S
+PH 0 8 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -112,8 +112,8 @@ burnherf~
   &+WHe is a very large for a human, a giant for his race, and has a stern&n
 &+Wlook on his face.&n
 ~
-33585226 2048 0 939565240 47296 1158676608 5251328 0 S
-PH 0 8 4
+33585226 2048 0 0 939565240 47296 1158676608 5251328 0 S
+PH 0 8 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -125,8 +125,8 @@ tower guard~
   &+WThis temple paladin has been assigned to guard the tower's study. He&n
 &+Wlooks ahead intent on his assigned duty.&n
 ~
-100677704 1 0 419471544 47296 17825792 5251328 1000 S
-PH 0 8 -1
+100677704 1 0 0 419471544 47296 17825792 5251328 1000 S
+PH 0 8 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -138,8 +138,8 @@ tower cleric temple~
   &+WThis temple paladin has been assigned to guard the tower's study. He&n
 &+Wlooks ahead intent on his assigned duty.&n
 ~
-100677704 1 0 419471544 47296 17825792 5251328 1000 S
-PH 0 32 -1
+100677704 1 0 0 419471544 47296 17825792 5251328 1000 S
+PH 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -151,8 +151,8 @@ maial cleric~
   &+WHe is a very large for a human, a giant for his race, and has a stern&n
 &+Wlook on his face.&n
 ~
-33585226 2048 0 939565240 47296 1158676608 5251328 0 S
-PH 0 32 4
+33585226 2048 0 0 939565240 47296 1158676608 5251328 0 S
+PH 0 32 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -164,8 +164,8 @@ tower guard~
   &+LThis temple warrior has been assigned to guard the temple's prison. He&n
 &+Llooks ahead intent on his assigned duty.&n
 ~
-100677706 0 0 419471544 47296 17825792 5251328 0 S
-PH 0 1 -1
+100677706 0 0 0 419471544 47296 17825792 5251328 0 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -177,8 +177,8 @@ ravisihing ogre~
   &+LThe ogre was captured doing some crime or not, a ogre is guilty out of hand.&n
 &+LThe poor beast screams at the ceiling in a mad rage.&n
 ~
-100677706 1 0 939565112 14530 17825792 1056768 -1000 S
-PO 0 1 -1
+100677706 1 0 0 939565112 14530 17825792 1056768 -1000 S
+PO 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -192,8 +192,8 @@ man anti burnhard~
 &Nparts costs him his status in the temple. He is a very large for a human, a&n
 &Ngiant for his race, and has a wild look on his face.&n
 ~
-33585226 0 0 939565240 47296 1158676608 5251328 0 S
-PH 0 16 4
+33585226 0 0 0 939565240 47296 1158676608 5251328 0 S
+PH 0 16 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -205,8 +205,8 @@ hunched orc~
   &+LThe orc was captured doing some crime or not, a orc is guilty out of hand.&n
 &+LHe is hunched over in despair over being in the Temple's prison.&n
 ~
-100677706 1 0 939565096 47298 17825792 8192 -1000 S
-HO 0 8192 -1
+100677706 1 0 0 939565096 47298 17825792 8192 -1000 S
+HO 0 8192 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -219,8 +219,8 @@ red dragon~
 &+Rcan no longer wreck havok on the prime material plane. It raises its head and&n
 &+Rroars at the ceiling.&n
 ~
-100677706 1 0 939565096 14530 17825792 8192 -1000 S
-D 0 1 -1
+100677706 1 0 0 939565096 14530 17825792 8192 -1000 S
+D 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -232,8 +232,8 @@ dragonkin dragon~
    &+WThe dragonkin are not all evil but this one has done something evil to be&n
 &+Wbrought to the temple's prison. It looks at you with eyes full of hate.&n
 ~
-100677706 1 0 939565096 14530 17825792 8192 -1000 S
-DK 0 1 -1
+100677706 1 0 0 939565096 14530 17825792 8192 -1000 S
+DK 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -245,8 +245,8 @@ illithid~
    &+WTricked by the temple clerics into a trap the mindflayer is constantly&n
 &+Wtrying to establish a link to the master brain.&n
 ~
-10314 1 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+10314 1 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -259,8 +259,8 @@ black demon~
 &+Late the priest that summoned it, but the paladins easily trapped it and&n
 &+Lput it here in the prison.&n
 ~
-33585226 1 0 805347512 47299 17825792 0 -1000 S
-X 0 16 -1
+33585226 1 0 0 805347512 47299 17825792 0 -1000 S
+X 0 16 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -272,8 +272,8 @@ bantu devil~
    &+WThe bantu devil is very large and has many scars. Its skin is loose and&n
 &+Weludes to great age. It is missing one of his wings.&n
 ~
-33568842 1 0 8250 12290 0 0 -1000 S
-Y 0 1 -1
+33568842 1 0 0 8250 12290 0 0 -1000 S
+Y 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -285,8 +285,8 @@ bantu devil~
    &+WThe bantu devil is young by its short horns and looks to be in in good&n
 &+Whealth. It eyes everything and looks worried.&n
 ~
-33568842 1 0 8250 12290 0 0 -1000 S
-Y 0 512 -1
+33568842 1 0 0 8250 12290 0 0 -1000 S
+Y 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -298,8 +298,8 @@ goblin~
    &+WThe goblin is scared and knows it will never leave the cell alive. He runs&n
 &+Waround the cell trying to think of a way to get out.&n
 ~
-33716296 1 0 805937592 47298 84934656 34873344 -1000 S
-HG 0 65536 -1
+33716296 1 0 0 805937592 47298 84934656 34873344 -1000 S
+HG 0 65536 0 -1
 60 -3 -100 1d60000+1 1d20+1
 100.0.27.32 500000
 8 8 2
@@ -311,8 +311,8 @@ man paladin~
   &+WThis temple paladin has been assigned to guard the tower's study. He&n
 &+Wlooks ahead intent on his assigned duty.&n
 ~
-100677704 0 0 419471544 47296 17825792 5251328 1000 S
-PH 0 8 -1
+100677704 0 0 0 419471544 47296 17825792 5251328 1000 S
+PH 0 8 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -324,8 +324,8 @@ man cleric~
   &+WThis temple paladin has been assigned to guard the tower's study. He&n
 &+Wlooks ahead intent on his assigned duty.&n
 ~
-100677704 0 0 419471544 47296 17825792 5251328 1000 S
-PH 0 32 -1
+100677704 0 0 0 419471544 47296 17825792 5251328 1000 S
+PH 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -337,8 +337,8 @@ man paladin~
   &+WThis temple paladin has been assigned to guard the tower's study. He&n
 &+Wlooks ahead intent on his assigned duty.&n
 ~
-100677706 0 0 419471544 47296 17825792 5251328 1000 S
-PH 0 8 -1
+100677706 0 0 0 419471544 47296 17825792 5251328 1000 S
+PH 0 8 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -350,8 +350,8 @@ man paladin~
   &+WThis temple paladin has been assigned to guard the tower's study. He&n
 &+Wlooks ahead intent on his assigned duty.&n
 ~
-100677706 0 0 419471544 47296 17825792 5251328 1000 S
-PH 0 8 -1
+100677706 0 0 0 419471544 47296 17825792 5251328 1000 S
+PH 0 8 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -364,8 +364,8 @@ crakkaros dragon~
 &+WHe is a massive dragon in the prime of his long life. He all but ignores your&n
 &+Wpressence until he strikes.&n
 ~
-33978442 1 0 671197368 309440 87031808 33562624 0 S
-D 0 514 -1
+33978442 1 0 0 671197368 309440 87031808 33562624 0 S
+D 0 514 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -377,8 +377,8 @@ ice devil~
    &+WThe bantu devil is young by its short horns and looks to be in in good&n
 &+Whealth. It eyes everything and looks worried.&n
 ~
-33568842 1 0 8250 12290 0 0 -1000 S
-Y 0 512 -1
+33568842 1 0 0 8250 12290 0 0 -1000 S
+Y 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -390,8 +390,8 @@ ice golem~
    &+WThe bantu devil is young by its short horns and looks to be in in good&n
 &+Whealth. It eyes everything and looks worried.&n
 ~
-33568842 1 0 8250 12290 0 0 -1000 S
-OG 0 1 -1
+33568842 1 0 0 8250 12290 0 0 -1000 S
+OG 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -405,8 +405,8 @@ woman~
 
 &+wShe looks up and screams, "&+WMy lover is gone to never return!&+w".&n
 ~
-2058 0 0 0 0 0 0 0 S
-PF 0 512 3
+2058 0 0 0 0 0 0 0 0 S
+PF 0 512 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -419,8 +419,8 @@ green dragon~
 &+Rcan no longer wreck havok on the prime material plane. It raises its head and&n
 &+Rroars at the ceiling.&n
 ~
-100677706 1 0 939565096 14530 17825792 8192 -1000 S
-D 0 1 -1
+100677706 1 0 0 939565096 14530 17825792 8192 -1000 S
+D 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -432,8 +432,8 @@ cleric temple~
   &+WThis temple paladin has been assigned to guard the tower's study. He&n
 &+Wlooks ahead intent on his assigned duty.&n
 ~
-100677704 0 0 419471544 47296 17825792 5251328 1000 S
-PH 0 32 -1
+100677704 0 0 0 419471544 47296 17825792 5251328 1000 S
+PH 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -445,8 +445,8 @@ man paladin~
   &+WThis temple paladin has been assigned to guard the tower's study. He&n
 &+Wlooks ahead intent on his assigned duty.&n
 ~
-100677706 0 0 419471544 47296 17825792 5251328 1000 S
-PH 0 8 -1
+100677706 0 0 0 419471544 47296 17825792 5251328 1000 S
+PH 0 8 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -458,8 +458,8 @@ deer~
    &+yThe deer is large and healthy with a full set of horns. His coat shines&n
 &+yeluding to the good grazing found here in the clearing.&n
 ~
-2120 0 0 8192 0 0 0 0 S
-AH 0 1 -1
+2120 0 0 0 8192 0 0 0 0 S
+AH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -471,8 +471,8 @@ deer~
    &+yThe doe is small but healthy. She is well feed from the good grazing&n
 &+yfound here in the clearing.&n
 ~
-2120 0 0 8192 0 0 0 0 S
-AH 0 1 -1
+2120 0 0 0 8192 0 0 0 0 S
+AH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -485,8 +485,8 @@ troll~
 &+wThe troll is to stupid to even care that its in captivity, only that it is&n
 feed well.&n
 ~
-2122 1 0 268435736 0 67108864 0 0 S
-PT 0 1 -1
+2122 1 0 0 268435736 0 67108864 0 0 S
+PT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -10,8 +10,8 @@ him. His royal cloak hangs long behind him, trimmed with white
 fur and velvet. His eyes seem to show great wisdom and his hands
 have that rugged look of one who has seen many a battle.
 ~
-100669450 0 0 33562872 12480 0 0 950 S
-PH 0 8 4
+100669450 0 0 0 33562872 12480 0 0 950 S
+PH 0 8 0 4
 55 -3 -81 49d80+2597 6d6+25
 9.2.0.5 119070
 6 8 1
@@ -25,8 +25,8 @@ disposition. His clothes are enamored with designs and jewels. He
 has no interest whatsoever in your presence-- he could care less
 for those "beneath" him.
 ~
-4296 0 0 0 0 0 0 300 S
-PH 0 4194560 -1
+4296 0 0 0 0 0 0 0 300 S
+PH 0 4194560 0 -1
 24 13 42 18d33+108 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -45,8 +45,8 @@ hovering over it. Her crown is beveled with beautiful diamonds
 and emeralds-- no doubt, priceless. What ever she wants, her
 husband, King Mrotha, will get-- there is no limit.
 ~
-67113098 0 0 536879176 0 0 0 0 S
-PH 0 32 -1
+67113098 0 0 0 536879176 0 0 0 0 S
+PH 0 32 0 -1
 52 -5 -101 52d121+4368 7d6+30
 7.9.5.6 210600
 8 8 2
@@ -60,8 +60,8 @@ but has learned from his mentor, Myranthea, that wisdom is the
 better half of knowledge. He looks pensive, and then quickly
 notices you. It looks at though he needs your help.
 ~
-4107 0 0 128 0 0 0 850 S
-PH 0 2048 -1
+4107 0 0 0 128 0 0 0 850 S
+PH 0 2048 0 -1
 45 15 51 15d18+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -80,8 +80,8 @@ twice challenged Sir Lagarias at Breale in order to avenge his
 brothers Sir Gareth and Sir Gaheris, who were wounded in a
 jousting arena by Sir Lagarias.
 ~
-1140854856 0 0 8280 0 0 0 750 S
-PH 0 64 -1
+1140854856 0 0 0 8280 0 0 0 750 S
+PH 0 64 0 -1
 52 -5 -101 52d88+4316 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -101,8 +101,8 @@ indeed the son of a King and was knighted by Mrotha himself
 when Gareth had saved Queen Bessandra from certain death from
 thieves on the Breale-Myranthea trade route.
 ~
-1140854856 0 0 1581144 0 0 0 0 S
-PH 0 16384 -1
+1140854856 0 0 0 1581144 0 0 0 0 S
+PH 0 16384 0 -1
 35 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -120,8 +120,8 @@ than his younger brother, Gareth, has shined his armor to the
 point that some of it has worn down. A red cloth with designs
 hangs over the back of his suit of armor.
 ~
-1140854794 0 0 8280 0 0 0 400 S
-PH 0 1 -1
+1140854794 0 0 0 8280 0 0 0 400 S
+PH 0 1 0 -1
 52 -5 -101 52d131+4420 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -137,8 +137,8 @@ last year's jousting tournament. His suit of armor is strikingly
 white in tint, and clean. He wears a white cape that bears his
 family crest.
 ~
-1140854856 0 0 8216 0 0 0 360 S
-PH 0 32 -1
+1140854856 0 0 0 8216 0 0 0 360 S
+PH 0 32 0 -1
 56 -7 -114 56d132+5824 7d6+35
 1.3.8.6 226800
 8 8 1
@@ -154,8 +154,8 @@ accomplished the quest for the Staff of Life and passed the
 Knight's Test with flying colors. This is not a man of
 trivialities, nor is Golahy a man to test your mettle.
 ~
-1140854856 0 0 33562840 12480 0 0 450 S
-PH 0 1 -1
+1140854856 0 0 0 33562840 12480 0 0 450 S
+PH 0 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -170,8 +170,8 @@ through the Knight's Test. His hair is long, tumbling over his
 shoulders out of his visor. His eyes are dark-brown and have a
 serious glare to them.
 ~
-1140854856 0 0 8392 0 0 0 0 S
-PH 0 32 -1
+1140854856 0 0 0 8392 0 0 0 0 S
+PH 0 32 0 -1
 38 2 -21 38d88+836 4d7+10
 1.2.2.2 49248
 8 8 1
@@ -185,8 +185,8 @@ is head servant to His Highness and must report all quests and
 attempts for fame by the knights to His Highness. He wears
 glasses and looks intensely at his papers.
 ~
-4168 0 0 0 128 0 0 0 S
-PH 0 512 -1
+4168 0 0 0 0 128 0 0 0 S
+PH 0 512 0 -1
 13 15 58 13d18+52 2d5+2
 6.5.2.0 6318
 8 8 1
@@ -200,8 +200,8 @@ Mrotha's rule. He keeps an eye on the Knights of Bastine and
 the King's loyal subjects-- if they aren't so "loyal". His eyes
 show that he can see through trickery and deceit.
 ~
-1140854984 0 0 40 0 0 0 0 S
-PH 0 1 -1
+1140854984 0 0 0 40 0 0 0 0 S
+PH 0 1 0 -1
 53 -5 -104 53d131+4505 7d6+30
 8.0.6.6 214650
 8 8 1
@@ -215,8 +215,8 @@ Mrotha's court. He wears glasses and is very anal about what
 he does. Everything must be in their proper order for him to be
 satisfied.
 ~
-1140856904 0 0 128 0 0 0 0 S
-PH 0 16384 -1
+1140856904 0 0 0 128 0 0 0 0 S
+PH 0 16384 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -231,8 +231,8 @@ red hair. His freckles make him look young; but that should not
 fool anyone into thinking that he has not had his share of
 battles.
 ~
-1140854984 0 0 33562624 0 0 0 0 S
-PH 0 16384 -1
+1140854984 0 0 0 33562624 0 0 0 0 S
+PH 0 16384 0 -1
 27 8 13 27d65+351 3d6+4
 8.3.7.1 24057
 8 8 1
@@ -247,8 +247,8 @@ He has a very round face and large lips that seem to pop out of
 his round, rosy cheeks. His shield and sword are rather large for
 him, but that does not seem to bother him.
 ~
-1140854984 0 0 8192 0 0 0 0 S
-PH 0 1 -1
+1140854984 0 0 0 8192 0 0 0 0 S
+PH 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -262,8 +262,8 @@ title from many battles fought there. He has since joined the
 Bastine Knights and has made many friends in Volheru. His cape
 attaches around his platemail with a silver chain.
 ~
-1140854856 0 0 8344 0 0 0 0 S
-PH 0 16384 -1
+1140854856 0 0 0 8344 0 0 0 0 S
+PH 0 16384 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -279,8 +279,8 @@ enemies like a butcher would his roast beef. Sir Bantin is very
 strong from his looks-- his biceps stretch the shirt beneath his
 plate.
 ~
-1140854856 0 0 8440 0 0 0 0 S
-PH 0 1 -1
+1140854856 0 0 0 8440 0 0 0 0 S
+PH 0 1 0 -1
 58 -7 -125 58d143+6090 7d6+35
 3.4.8.6 234900
 8 8 1
@@ -295,8 +295,8 @@ his own arm. In many battles, both brothers would fight along
 side each other, Bantan defending, Bantin delivering deathly
 blows.
 ~
-1140854856 0 0 8376 0 0 0 0 S
-PH 0 32 -1
+1140854856 0 0 0 8376 0 0 0 0 S
+PH 0 32 0 -1
 57 -7 -117 57d132+5928 7d6+35
 2.4.8.6 230850
 8 8 1
@@ -310,8 +310,8 @@ enough battles to make more enemies than friends. His eyes are
 serious and his brows furrowed with intensity. He walks carefully
 wherever he goes.
 ~
-1140854856 0 0 8200 0 0 0 0 S
-PH 0 16384 -1
+1140854856 0 0 0 8200 0 0 0 0 S
+PH 0 16384 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -327,8 +327,8 @@ ever since they began with King Mrotha's rule. He is very
 perceptive of those around him, and must have been to
 have survived this long.
 ~
-1140854856 0 0 56 0 0 0 0 S
-PH 0 512 -1
+1140854856 0 0 0 56 0 0 0 0 S
+PH 0 512 0 -1
 41 -1 -56 41d72+1763 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -344,8 +344,8 @@ his horse, even if Ladynas is not on one himself. He wears a blue
 cape on his back and a cross is imprinted on the front breast
 plate of his armor.
 ~
-1140854856 0 0 24 0 0 0 0 S
-PH 0 32 -1
+1140854856 0 0 0 24 0 0 0 0 S
+PH 0 32 0 -1
 35 6 -12 35d77+560 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -364,8 +364,8 @@ slice and dice any attempts on his person. His visor covers his
 pointed ears, but one can see that his eyes are almond shaped--
 an attribute of the elves of Myranthea.
 ~
-1140854984 0 0 136 0 0 0 0 S
-PE 0 512 -1
+1140854984 0 0 0 136 0 0 0 0 S
+PE 0 512 0 -1
 35 6 -12 35d56+525 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -379,8 +379,8 @@ taxes and funds from Volheru. His grey hair is neatly pulled
 behind his face. He wears strong spectacles to notice any
 details.
 ~
-10 0 0 0 0 0 0 -750 S
-PH 0 1024 -1
+10 0 0 0 0 0 0 0 -750 S
+PH 0 1024 0 -1
 28 11 23 24d32+192 3d5+3
 6.1.6.0 21384
 8 8 1
@@ -393,8 +393,8 @@ The guard is serious about his work. The scars on his face show
 that he has been battle-proven and will fight again, if needs be.
 His stance shows that he is very committed to his work.
 ~
-67108936 0 0 33554432 0 0 0 0 S
-PH 0 1 -1
+67108936 0 0 0 33554432 0 0 0 0 S
+PH 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -407,8 +407,8 @@ The court jester loves to make people laugh-- else, he gets the
 shaft. He is constantly entertaining the nobles of Castle
 Volheru. His colorful tights are funny enough by themselves.
 ~
-200 0 0 0 0 0 0 0 S
-PH 0 0 -1
+200 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 21 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -421,8 +421,8 @@ The castle maid basically takes care of all the cleaning of rooms
 of the castle. This is quite a job with all the action taking
 place here.
 ~
-200 0 0 0 0 0 0 0 S
-PH 0 0 -1
+200 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 18 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 2
@@ -435,8 +435,8 @@ The castle butler keeps the castle clean. He is constantly
 looking for bits and pieces of trash carelessly thrown away by
 one of the knights or nobles.
 ~
-200 0 0 0 0 0 0 0 S
-PH 0 0 -1
+200 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 19 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -453,8 +453,8 @@ Her arms are humongous-- probably from lifting huge cauldrons
 her hand at you to leave as she takes a sip of her soup. You are
 disturbing her cooking.
 ~
-28 0 0 128 0 0 0 0 S
-PO 0 0 -1
+28 0 0 0 128 0 0 0 0 S
+PO 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -467,8 +467,8 @@ The white horse looks tamed and well-fed. It has a long,
 beautiful white mane that has been carefully braided. The legs
 look strong and are able to carry several men if needs be.
 ~
-134217866 0 0 0 0 0 0 0 S
-AE 0 0 -1
+134217866 0 0 0 0 0 0 0 0 S
+AE 0 0 0 -1
 15 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 2
@@ -480,8 +480,8 @@ A horse stands here grazing on some grass.
 The horse looks tame. It is speckled with different colors of all
 sorts.
 ~
-134217866 0 0 0 0 0 0 0 S
-AE 0 0 -1
+134217866 0 0 0 0 0 0 0 0 S
+AE 0 0 0 -1
 15 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 1
@@ -494,8 +494,8 @@ The noble is very egocentric. He believes that one is born into
 nobility. Everyone not of royal blood is beneath him. His
 expensive garments give him the dignity that he conveys.
 ~
-4168 0 0 0 0 0 0 0 S
-PH 0 0 -1
+4168 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 17 13 45 17d30+85 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -507,8 +507,8 @@ A &+Wtrout&N swims through the water with great speed here.
 The trout looks tasty. Its green fins and silver body guide it
 though the cold waters.
 ~
-327752 0 0 34816 0 0 0 0 S
-F 0 0 -1
+327752 0 0 0 34816 0 0 0 0 S
+F 0 0 0 -1
 10 0 83 1d1+1 1d5+0
 0.0.0.0 1024
 8 8 1
@@ -520,8 +520,8 @@ The &+Garcher&N stands ready to fire at his foe.
 The archer has a sharp nose and dark hair. He carries a bow with
 ease and his fingers looks nimble and fast.
 ~
-6154 0 0 40 0 0 0 500 S
-PH 0 4096 -1
+6154 0 0 0 40 0 0 0 500 S
+PH 0 4096 0 -1
 35 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -536,8 +536,8 @@ looks at you as though he is suffering. He wants to say something
 but he has difficulty in making out words. You can almost make
 out a tear running down his hairy, but grotesque, cheek.
 ~
-10 0 0 8 0 0 0 500 S
-L 0 1048576 -1
+10 0 0 0 8 0 0 0 500 S
+L 0 1048576 0 -1
 45 -5 -70 45d80+950 6d6+25
 1.0.0.0 295010
 8 8 1
@@ -551,8 +551,8 @@ grime. It has lived in these caverns for years, and has been able
 to survive. It looks at you as though you have invaded its
 territory.
 ~
-72 0 0 40 0 0 0 1000 S
-AC 0 4096 -1
+72 0 0 0 40 0 0 0 1000 S
+AC 0 4096 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 8290
 8 8 1
@@ -565,8 +565,8 @@ The suit of armor, which was lifeless a minute ago, have been
 animated somehow. Red eyes glow through its helm and stare at
 you, sending shivers down your spine.
 ~
-10 1 0 56 0 0 0 -400 S
-U 0 16384 -1
+10 1 0 0 56 0 0 0 -400 S
+U 0 16384 0 -1
 20 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -579,8 +579,8 @@ It is simply the larges octopus you have ever seen. It moves
 quickly about the moat, spreading its tenticles over the cool
 waters.
 ~
-1074004040 1 0 34824 0 0 0 0 S
-F 0 16384 3
+1074004040 1 0 0 34824 0 0 0 0 S
+F 0 16384 0 3
 25 11 19 25d47+250 3d5+3
 0.0.0.0 22275
 8 8 1
@@ -593,8 +593,8 @@ The suit of armor, which was lifeless a minute ago, have been
 animated somehow. Red eyes glow through its helm and stare at
 you, sending shivers down your spine.
 ~
-10 1 0 56 0 0 0 -400 S
-U 0 16384 -1
+10 1 0 0 56 0 0 0 -400 S
+U 0 16384 0 -1
 23 10 25 20d35+240 3d4+4
 0.0.0.0 13720
 8 8 1
@@ -607,8 +607,8 @@ The court jester loves to make people laugh-- else, he gets the
 shaft. He is constantly entertaining the nobles of Castle
 Volheru. His colorful tights are funny enough by themselves.
 ~
-200 0 0 0 0 0 0 0 S
-PH 0 32768 -1
+200 0 0 0 0 0 0 0 0 S
+PH 0 32768 0 -1
 18 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1

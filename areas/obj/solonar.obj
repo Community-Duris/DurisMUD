@@ -474,7 +474,7 @@ mandrake root~
 &+ga small patch of mandrake roots~
 &+gA small patch of mandrake roots grow here in this area.~
 ~
-12 43 2 0 7 0 4096 8388609 0 0 0
+12 43 2 0 7 0 4096 8388609 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -486,7 +486,7 @@ nightshade plant night shade~
 &+ba nightshade &+gplant~
 &+BA strange nightshade &+gplant grows here around the trees.~
 ~
-19 43 2 0 7 0 4096 1 0 0 0
+19 43 2 0 7 0 4096 1 32768 0 0
 10 0 0 1 0 0 0 0
 0 3456 100
 E
@@ -498,7 +498,7 @@ panther hide~
 &+La panther hide~
 &+LSome sleek black skins lay here along the ground.~
 ~
-13 2 3 0 7 0 4096 1 0 0 0
+13 2 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 121 100
 E
@@ -510,7 +510,7 @@ golden thread~
 &+Ya golden strand of thread~
 &+YSome golden thread lays here along the ground.~
 ~
-3 24 1 0 15 0 0 1 1 0 0
+3 24 1 0 15 0 0 1 32769 0 0
 31 1 1 149 0 0 0 0
 0 10232 100
 E
@@ -522,7 +522,7 @@ adamantium stone~
 &+man admantium stone~
 &+mAn adamantium stone lays here along the side of the ground.~
 ~
-3 15 3 0 7 0 1 8404993 0 0 0
+3 15 3 0 7 0 1 8404993 32768 0 0
 31 2 2 201 0 0 0 0
 0 19 100
 E
@@ -550,7 +550,7 @@ elk horn~
 &+ya worn elk horn~
 &+yA somewhat worn elk horn rests here along the ground.~
 ~
-8 2 3 0 7 0 4096 1 0 0 0
+8 2 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 112 100
 E
@@ -562,7 +562,7 @@ stone tablet old~
 &+Wan old stone tablet~
 &+WAn old stone tablet lays here along the ground.~
 ~
-8 11 3 0 7 0 4096 1 0 0 0
+8 11 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 132 100
 E
@@ -574,7 +574,7 @@ orb glowing small~
 &+Wa small glowing orb~
 &+WA small glowing orb rests here along the ground.~
 ~
-3 8 3 0 14 0 1 8404993 64 0 0
+3 8 3 0 14 0 1 8404993 32832 0 0
 31 3 3 28 0 0 0 0
 0 234 100
 E
@@ -588,7 +588,7 @@ quill crystalline~
 &+Ca crystalline quill&n~
 &+cA small crystaline quill rests here along the ground.~
 ~
-21 8 2 0 14 0 1 8404993 64 0 0
+21 8 2 0 14 0 1 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 0 31313 100
 E
@@ -600,7 +600,7 @@ buckskin~
 &+ysome buckskin~
 &+ySome buckskin lays here along the ground~
 ~
-13 2 3 0 7 0 4096 1 0 0 0
+13 2 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1212 100
 E
@@ -612,7 +612,7 @@ air pocket~
 &+Wa small pocket of air~
 &+WA small pocket of air lays here along the ground.~
 ~
-8 34 2 0 15 0 4097 8388609 0 0 0
+8 34 2 0 15 0 4097 8388609 32768 0 0
 0 0 0 0 0 0 0 0
 0 12212 100
 E
@@ -624,7 +624,7 @@ pech rock~
 &+ya small pech rock~
 &+yA small statue like rock of a pech rests here.~
 ~
-3 37 2 0 7 0 4097 16385 64 0 0
+3 37 2 0 7 0 4097 16385 32832 0 0
 51 2 1 244 0 0 0 0
 0 2341 100
 E
@@ -637,7 +637,7 @@ scale fire salamander~
 &+ra fire salamander scale~
 &+rA glowing red scale rests here along the ground.~
 ~
-8 2 2 0 7 0 4097 8388609 64 0 0
+8 2 2 0 7 0 4097 8388609 32832 0 0
 0 0 0 0 0 0 0 0
 0 61234 100
 E
@@ -649,7 +649,7 @@ sand~
 &+ya bit of sand~
 &+yA bit of sand lays here along the ground.~
 ~
-8 11 2 0 14 0 4097 1 0 0 0
+8 11 2 0 14 0 4097 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 23451 100
 E
@@ -661,7 +661,7 @@ water vial~
 &+ba small vial of water~
 &+bA small vial of water rests here.~
 ~
-10 40 2 0 14 0 4097 8388609 64 0 0
+10 40 2 0 14 0 4097 8388609 32832 0 0
 31 106 1 3 0 0 0 0
 0 12121 100
 E
@@ -673,7 +673,7 @@ cloud piece storm~
 &+La piece of the storm~
 &+LA solid piece of air rests here along the ground.~
 ~
-8 40 2 0 14 0 4097 8388609 64 0 0
+8 40 2 0 14 0 4097 8388609 32832 0 0
 0 0 0 0 0 0 0 0
 0 12951 100
 E
@@ -686,7 +686,7 @@ filiment~
 &+Lsome filiment~
 &+LSome filiment from a cave fisher rests here.~
 ~
-8 19 2 0 14 0 4097 8388609 64 0 0
+8 19 2 0 14 0 4097 8388609 32832 0 0
 0 0 0 0 0 0 0 0
 0 12212 100
 E
@@ -698,7 +698,7 @@ dust fairie~
 &+Ysome fairie dust~
 &+YSome fairie dust lays here in a small pouch.~
 ~
-10 52 3 0 14 0 1 1 64 0 0
+10 52 3 0 14 0 1 1 32832 0 0
 15 1 3 12 0 0 0 0
 0 1212 100
 E
@@ -710,7 +710,7 @@ tooth dragon~
 &+ra large dragons tooth~
 &+rA large dragons tooth rests here along the ground.~
 ~
-8 10 4 0 14 0 4097 1 64 0 0
+8 10 4 0 14 0 4097 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 21211 100
 E
@@ -722,7 +722,7 @@ scale dragon~
 &+ma large dragon scale~
 &+mA large dragon scale rests here along the ground.~
 ~
-8 47 4 0 14 0 1 1 64 0 0
+8 47 4 0 14 0 1 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 12451 100
 E
@@ -734,7 +734,7 @@ flower azalea~
 &+ra small azalea flower~
 &+rA small azalea flower lays here along the ground.~
 ~
-13 15 3 0 7 0 4096 16385 0 0 0
+13 15 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -746,7 +746,7 @@ mistletoe~
 &+rsome mistletoe~
 &+rSome mistletoe lays here along the ground.~
 ~
-8 5 3 0 7 0 4097 8404993 64 0 0
+8 5 3 0 7 0 4097 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -759,7 +759,7 @@ root ginseng~
 &+ga small ginseng root~
 &+gA small root lays here along the ground.~
 ~
-19 48 2 0 7 0 4097 16385 64 0 0
+19 48 2 0 7 0 4097 16385 32832 0 0
 24 0 0 0 0 0 0 0
 0 1211 100
 E
@@ -771,7 +771,7 @@ robes hide~
 &+ysome cured hide robes~
 &+ySome cured robes lay here along the ground.~
 ~
-9 2 3 0 14 0 1 1033 64 0 0
+9 2 3 0 14 0 1 1033 32832 0 0
 23 0 0 2 0 0 0 0
 0 12121 100
 E
@@ -785,7 +785,7 @@ thread lavander~
 &+msome radiant glowing lavander thread~
 &+mSome lavander thread lays here along the ground.~
 ~
-8 3 1 0 15 0 1 8404993 64 0 0
+8 3 1 0 15 0 1 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 0 12341 100
 E
@@ -797,7 +797,7 @@ mithril scales linked~
 &+Bsome mithril linked &+Mscales~
 &+BSome light blue mithril linked scales lay here in a pile.~
 ~
-8 47 3 12 15 0 1 8404993 64 0 0
+8 47 3 12 15 0 1 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 12 12345 100
 E
@@ -809,7 +809,7 @@ pick pickaxe axe~
 &+La small pickaxe with a small hilt~
 &+LA small pickaxe rests here along the ground.~
 ~
-5 19 3 1 15 0 257 8396801 64 0 0
+5 19 3 1 15 0 257 8396801 32832 0 0
 15 5 4 6 0 0 0 0
 1 12121 100
 E
@@ -826,7 +826,7 @@ amulet small scales~
 &+Ba small amulet of scales~
 &+bA small amulet lays here along the ground.~
 ~
-9 24 2 1 15 0 0 5 0 0 0
+9 24 2 1 15 0 0 5 32768 0 0
 10 0 0 1 0 0 0 0
 1 12345 100
 E
@@ -839,7 +839,7 @@ diamond shattered~
 &+Wa shattered diamond~
 &+WPieces of a diamond lay here along the ground~
 ~
-8 27 4 0 1 0 4097 16385 64 0 0
+8 27 4 0 1 0 4097 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 12212 100
 E
@@ -851,7 +851,7 @@ diamond radiant power~
 &+Wa radiant diamond of &+bpower~
 &+WA glowing diamond rests here along the ground.~
 ~
-3 27 3 0 7 0 33554433 16385 64 0 0
+3 27 3 0 7 0 33554433 16385 32832 0 0
 36 3 3 56 0 0 0 0
 0 12345 100
 E
@@ -863,7 +863,7 @@ treant heart wooden wood~
 &+ya treants wooden heart~
 &+yA strange wooden heart shaped object lays here along the ground.~
 ~
-8 6 4 0 15 0 4097 8404993 64 0 0
+8 6 4 0 15 0 4097 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 0 12121 100
 E
@@ -875,7 +875,7 @@ heart wood~
 &+ra pulsating heart of &+ywood~
 .~
 ~
-3 6 4 0 15 0 0 16385 0 0 0
+3 6 4 0 15 0 0 16385 32768 0 0
 31 5 4 66 0 0 0 0
 0 12345 100
 E
@@ -904,7 +904,7 @@ scroll ancient powerful~
 &+Can ancient and powerful scroll~
 &+CAn ancient and powerful scroll rests here along the ground.~
 ~
-2 12 2 0 15 0 1 8388609 64 0 0
+2 12 2 0 15 0 1 8388609 32832 0 0
 30 66 39 81 0 0 0 0
 0 32123 100
 E
@@ -928,7 +928,7 @@ mouse dead~
 &+ya dead mouse~
 &+yA small dead mouse lays here along the ground decaying.~
 ~
-13 15 3 0 7 0 4096 0 0 0 0
+13 15 3 0 7 0 4096 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -940,7 +940,7 @@ dead earthworm worm~
 &+ra dead earthworm~
 &+rA dead earthworn lays here along the ground.~
 ~
-13 2 1 0 7 0 4096 1 0 0 0
+13 2 1 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E

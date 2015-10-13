@@ -7,8 +7,8 @@ ghost servant boy~
 &+Lfloats about here.  He appears to be wearing some sort of servant
 &+Lattire.  He looks quite frail and ignores your presence.
 ~
-2250 0 0 134217736 0 0 0 -1000 S
-UG 0 1 -1
+2250 0 0 0 134217736 0 0 0 -1000 S
+UG 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -21,8 +21,8 @@ black tailed squirrel~
 &+Lit has picked from a nearby shrub.  It holds the nut with its
 &+Lfront paws and seems to be enjoying this delight.
 ~
-10 1 0 136 0 0 0 -1000 S
-A 0 1 -1
+10 1 0 0 136 0 0 0 -1000 S
+A 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -36,8 +36,8 @@ for the fort.  He appears to be very overworked and upset.  He
 appears to be a well aged dwarf.  He ignores your presence and
 continues to take care of his duties.
 ~
-24778 0 0 16777372 262336 0 0 -1000 S
-PM 0 2048 -1
+24778 0 0 0 16777372 262336 0 0 -1000 S
+PM 0 2048 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -52,8 +52,8 @@ hand appears to be working at his assigned duty and ignores your
 presence.  Working diligently, this pier hand has begun to sweat
 under the pressure.
 ~
-202 0 0 0 0 0 0 -300 S
-PH 0 1 -1
+202 0 0 0 0 0 0 0 -300 S
+PH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -69,8 +69,8 @@ maiya shipping navigator~
 &+bof far and near.   She continues writing on her parchment
 &+bas you approach.
 ~
-28874 0 0 152 274624 2129920 0 -1000 S
-PL 0 512 3
+28874 0 0 0 152 274624 2129920 0 -1000 S
+PL 0 512 0 3
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -84,8 +84,8 @@ elite guard~
 &+Lelite guard stands ready to keep out unwanted visitors to
 &+Lthe fort.  He eyes you suspiciously as you approach.
 ~
-67139658 0 0 65752 12480 2129920 0 -1000 S
-MT 0 1 -1
+67139658 0 0 0 65752 12480 2129920 0 -1000 S
+MT 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -99,8 +99,8 @@ black panther dark~
 &+LApparently quite bored, this black panther eyes you with delight
 &+Las you are a new face in her life.
 ~
-1073744074 0 0 16 0 0 0 -1000 S
-A 0 1 -1
+1073744074 0 0 0 16 0 0 0 -1000 S
+A 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -114,8 +114,8 @@ elite guard gate~
 &+Lelite guard stands ready to keep out unwanted visitors to
 &+Lthe fort.  He eyes you suspiciously as you approach.
 ~
-30794 0 0 65752 12480 2129920 0 -1000 S
-MT 0 1 -1
+30794 0 0 0 65752 12480 2129920 0 -1000 S
+MT 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -128,8 +128,8 @@ Resting on a guide wire, a &+rtomato&N plant grows here.
 here resting itself on the guide wires.  It is apparently
 weighed down by the many fruits on his branches.
 ~
-10 0 0 0 0 0 0 -1000 S
-VT 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+VT 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -142,8 +142,8 @@ head lettuce~
 &+gPlanted at the beginning of the growing season,  it is almost
 &+gdone growing.
 ~
-10 0 0 0 0 0 0 -1000 S
-VT 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+VT 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -156,8 +156,8 @@ A &+ggreen&N pepper plant grows here.
 here resting itself on the guide wires.  It is apparently
 weighed down by the many fruits on his branches.
 ~
-10 0 0 0 0 0 0 -1000 S
-VT 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+VT 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -169,8 +169,8 @@ cucumber vine~
    This cucumber vine grows and climbs the gates deigned by the
 gardeners.  The vine bears its fruits for all to enjoy.
 ~
-10 0 0 0 0 0 0 -1000 S
-VT 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+VT 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -184,8 +184,8 @@ garden master of the fort.  His job is to keep the garden
 producing capacity at its maximum level.  He prays daily at
 the altar.  He ignores your presence as he is deep in prayer.
 ~
-30922 0 0 805380312 274624 0 0 -1000 S
-G 0 32 -1
+30922 0 0 0 805380312 274624 0 0 -1000 S
+G 0 32 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -199,8 +199,8 @@ stands here ready to take the next directive.  This gardener
 wears a jump suit which has been stained by mud and other
 sorts of plant debris.  He patiently waits for Rovsi.
 ~
-67111114 0 0 598136 262144 0 0 -1000 S
-G 0 16 -1
+67111114 0 0 0 598136 262144 0 0 -1000 S
+G 0 16 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -215,8 +215,8 @@ explorers risk their encounter with Ciuto.  Ciuto is a dragon
 related to Oslyra of the lands far off to the north.  Ciuto
 is quite aware of your presence and leaps in to attack!
 ~
-2122 56 0 73852 12480 262208 0 -1000 S
-D 0 4 -1
+2122 56 0 0 73852 12480 262208 0 -1000 S
+D 0 4 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -229,8 +229,8 @@ ghost servant girl~
 &+Lfloats about here.  She appears to be wearing some sort of servant
 &+Lattire.  She looks quite frail and ignores your presence.
 ~
-2250 0 0 939524312 0 262144 0 -1000 S
-UG 0 32 -1
+2250 0 0 0 939524312 0 262144 0 -1000 S
+UG 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -242,8 +242,8 @@ black spider~
 &+L  This black spider spins her sticky web to trap her next
 &+Lvictim.   She eyes you with a blood thirsty wanting.
 ~
-138 1 0 136 0 0 0 -1000 S
-A 0 1 -1
+138 1 0 0 136 0 0 0 -1000 S
+A 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -257,8 +257,8 @@ trespass.  He eyes everyone suspecting all who enter.  He moves
 in the shadows of the room.  He surprises his next victim as he
 attacks!
 ~
-138 1 0 1573116 0 0 0 -1000 S
-PH 0 1 -1
+138 1 0 0 1573116 0 0 0 -1000 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -272,8 +272,8 @@ of assigned duties.  He rushes about taking care of the duty at
 hand.  He ignores your presence and quickly continues on his
 way.
 ~
-12 0 0 0 0 0 0 -1000 S
-PH 0 1 -1
+12 0 0 0 0 0 0 0 -1000 S
+PH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -287,8 +287,8 @@ fresh meals daily.  He is an experienced cook and loves his
 job with a passion.   He can always be found within these
 walls preparing a meal for all to enjoy.
 ~
-2250 0 0 73784 0 0 0 -345 S
-PH 0 1 -1
+2250 0 0 0 73784 0 0 0 -345 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -303,8 +303,8 @@ the primary duty at hand which is cleaning.  She hums a little
 melody to herself as she continues to work.  She looks up and
 briefly smiles at you.
 ~
-12 0 0 0 0 0 0 -1000 S
-PH 0 1 -1
+12 0 0 0 0 0 0 0 -1000 S
+PH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -318,8 +318,8 @@ elite guard~
 &+Lelite guard stands ready to keep out unwanted visitors to
 &+Lthe fort.  He eyes you suspiciously as you approach.
 ~
-67139658 0 0 268509400 14529 67141760 0 -1000 S
-MT 0 1 -1
+67139658 0 0 0 268509400 14529 67141760 0 -1000 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -334,8 +334,8 @@ poor servant girl of the fort.  He curses and swears loudly
 in a voice that sends chills down your back.  He notices that
 you dare come to visit him and he attacks!
 ~
-2122 1 0 73912 145600 32768 0 -1000 S
-PO 0 16640 -1
+2122 1 0 0 73912 145600 32768 0 -1000 S
+PO 0 16640 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -349,8 +349,8 @@ of the fort.  He is here resting within his quarters after a
 day of talks and meetings with many members of royalty.  He
 prepares to go to sleep as you enter his quarters.
 ~
-2250 1 0 268509432 0 0 0 -1000 S
-PL 0 2048 -1
+2250 1 0 0 268509432 0 0 0 -1000 S
+PL 0 2048 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -364,8 +364,8 @@ He can find any book, tome, or text that exists under his working
 environment.  Appointed by the fort master himself, he stands read
 to assist anyone who wishes to do research within his halls.
 ~
-30922 0 0 822157560 0 0 0 -1000 S
-TK 0 33 -1
+30922 0 0 0 822157560 0 0 0 -1000 S
+TK 0 33 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -379,8 +379,8 @@ of assigned duties.  He rushes about taking care of the duty at
 hand.  He ignores your presence and quickly continues on his
 way organizing the many books and tomes on the shelves.
 ~
-67111116 0 0 24 0 0 0 -1000 S
-PH 0 1 -1
+67111116 0 0 0 24 0 0 0 -1000 S
+PH 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -396,8 +396,8 @@ to that of a red dragon.  She has a body covered in red glistening
 scales and the face of a barbarian.  She looks quite disturbed at
 this occurrence.
 ~
-2122 0 0 248 0 2359296 0 -1000 S
-D 0 256 -1
+2122 0 0 0 248 0 2359296 0 -1000 S
+D 0 256 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -412,8 +412,8 @@ great master.  He stands here particularly examining one
 new spell he has encountered.   He completely ignores your
 presence in the room.
 ~
-18634 0 0 285286648 0 2097152 0 -1000 S
-HG 0 512 -1
+18634 0 0 0 285286648 0 2097152 0 -1000 S
+HG 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -429,8 +429,8 @@ of the dead from these heads.  She curiously eyes your presence
 in her bedroom.  She screams and beckons for the guards to remove
 your scawny presence!
 ~
-26826 0 0 402653436 0 2130112 0 -1000 S
-PD 0 1024 -1
+26826 0 0 0 402653436 0 2130112 0 -1000 S
+PD 0 1024 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -445,8 +445,8 @@ here looking at an interesting gem stored on the shelf.  He pokes
 at it and takes a closer look.  He doesn't want any fakes for his
 collection.  He quickly looks up and eyes you suspiciously.
 ~
-2250 0 0 17375352 0 64 0 -1000 S
-PT 0 8192 -1
+2250 0 0 0 17375352 0 64 0 -1000 S
+PT 0 8192 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -460,8 +460,8 @@ trespass.  He eyes everyone suspecting all who enter.  He moves
 in the shadows of the room.  He surprises his next victim as he
 attacks!
 ~
-67109002 1 0 252 262144 0 0 -1000 S
-PH 0 1 -1
+67109002 1 0 0 252 262144 0 0 -1000 S
+PH 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -476,8 +476,8 @@ master boyard~
 &+rhelplessly into space and jumps up as you dare approach
 &+rhim.
 ~
-67139658 0 0 822157564 276673 64 0 -1000 S
-D 0 33 -1
+67139658 0 0 0 822157564 276673 64 0 -1000 S
+D 0 33 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -492,8 +492,8 @@ of the evil continent has been given the gift of song.  She uses
 this to treat her Master when he seems upset about one thing or
 another.
 ~
-67139786 0 0 402727164 12480 2130048 0 -1000 S
-PL 0 2304 -1
+67139786 0 0 0 402727164 12480 2130048 0 -1000 S
+PL 0 2304 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -508,8 +508,8 @@ brought to him by one of his assistants.  The message from
 Master Boyard has put Magib deep in thought.  He doesn't
 appear interested in your presence as you approach.
 ~
-30922 0 0 805380348 0 192 0 -1000 S
-X 0 32 6
+30922 0 0 0 805380348 0 192 0 -1000 S
+X 0 32 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -523,8 +523,8 @@ elite guard~
 &+Lelite guard stands ready to keep out unwanted visitors to
 &+Lthe fort.  He eyes you suspiciously as you approach.
 ~
-67139658 1 0 268509400 276673 67141760 0 -1000 S
-MT 0 1 -1
+67139658 1 0 0 268509400 276673 67141760 0 -1000 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -539,8 +539,8 @@ upon the heavens above at night.  Master Boyard has instructed
 Moro to keep watch looking for any signs of impending disaster
 which may show.  Moro is unware of your entry into his observatory.
 ~
-26826 0 0 252 0 0 0 -1000 S
-PH 0 1 -1
+26826 0 0 0 252 0 0 0 -1000 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -7,8 +7,8 @@ mongrel mongrelman kythis gimpish thief~
 for a living.  He inevitably finds something valuable here and there, and
 has no plans on finding more fertile hunting grounds anytime soon.
 ~
-1073744076 8 0 33554432 0 0 0 -700 S
-H2 12 4096 -1
+1073744076 8 0 0 33554432 0 0 0 -700 S
+H2 12 4096 0 -1
 25 11 19 25d40+200 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -19,8 +19,8 @@ skeleton guard gate undead~
 ~
 This skeleton is probably the magically re-animated remains of some large humanoid.  Its red eyes glow as it stares at nothing in particular.
 ~
-67131466 72 0 33554432 0 0 0 -1000 S
-SK 0 1 -1
+67131466 72 0 0 33554432 0 0 0 -1000 S
+SK 0 1 0 -1
 35 11 19 25d47+250 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -35,8 +35,8 @@ It is a miracle that the undead minions of the evil that resides in the
 citidel have not killed him yet.  Perhaps the shrine is protecting him, as
 an ancient vampire normally would have no trouble dispossing of most clerics.
 ~
-1073743946 0 0 8240 34844 0 0 1000 S
-PH 1 32 -1
+1073743946 0 0 0 8240 34844 0 0 1000 S
+PH 1 32 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -51,8 +51,8 @@ Slightly more imaginative than a zombie or other undead, the shadow is quite
 cappable of casting spells, demonstrating cunning in battle, and chasing
 down wounded (but not quite dead) victims.
 ~
-1073760328 1 0 34078754 12352 0 0 -1000 S
-SW 0 1 -1
+1073760328 1 0 0 34078754 12352 0 0 -1000 S
+SW 0 1 0 -1
 20 13 25 20d35+140 3d4+2
 0.0.0.0 9720
 11 11 0
@@ -67,8 +67,8 @@ citidel is beyond you, but chances are that if he can survive it he is either
 extremely powerfull, a servant of the evil here or something besides what
 he appears to be.  Perhaps all 3...
 ~
-1073743947 0 0 33620028 28 0 0 -1000 S
-UV 0 1024 -1
+1073743947 0 0 0 33620028 28 0 0 -1000 S
+UV 0 1024 0 -1
 45 -1 -69 45d72+1935 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -82,8 +82,8 @@ It has some amount of mental power of its own and this makes it all the more
 dangerous.  Besides this, it is in much better shape than most zombies,
 making it even more deadly.
 ~
-1073743948 1 0 33554432 262144 0 0 -1000 S
-ZO 0 1 -1
+1073743948 1 0 0 33554432 262144 0 0 -1000 S
+ZO 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -96,8 +96,8 @@ This zombie looks fresh as zombies go and seems to have been a former human.
 Perhaps he was once a foolish adventurer who came here and got more than he
 bargained for.
 ~
-6216 1 0 33554432 0 0 0 -1000 S
-ZO 0 0 -1
+6216 1 0 0 33554432 0 0 0 -1000 S
+ZO 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -110,8 +110,8 @@ This zombie appears to be a combination of a lizardman, wererat and some sort
 of slime.  Although the animation was successfull, it gained most of the bad
 traits of the things it was raised from.
 ~
-67115082 0 0 33554440 13376 0 0 -1000 S
-ZO 0 0 -1
+67115082 0 0 0 33554440 13376 0 0 -1000 S
+ZO 0 0 0 -1
 32 6 -2 32d70+480 4d3+7
 0.0.0.0 23472
 8 8 1
@@ -124,8 +124,8 @@ This flesh golem has 2 legs and an arm and seems to be mostly innactive.
 Although flesh golems are normally formidable opponents, this one is basically
 a wimp.
 ~
-67110986 0 0 33554432 1024 0 0 -1000 S
-OG 0 0 -1
+67110986 0 0 0 33554432 1024 0 0 -1000 S
+OG 0 0 0 -1
 30 8 3 30d55+330 3d4+5
 0.5.7.1 20730
 8 8 0
@@ -136,8 +136,8 @@ teeth animated undead~
 ~
 This jaw and set of teeth are moving...
 ~
-1073760330 1 0 33554448 0 0 0 -1000 S
-U 0 512 -1
+1073760330 1 0 0 33554448 0 0 0 -1000 S
+U 0 512 0 -1
 20 13 35 20d24+100 3d4+2
 0.0.0.0 9720
 6 6 0
@@ -149,8 +149,8 @@ skeleton missing few undead large~
 This skeleton seems to be missing over half its ribs, parts of its limbs
 and almost all of its fingers.  Its a miracle its still animated.
 ~
-6218 1 0 33554432 0 0 0 -1000 S
-SK 0 1 -1
+6218 1 0 0 33554432 0 0 0 -1000 S
+SK 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -162,8 +162,8 @@ wight undead man stench hunchback hunchbacked~
 Upon closer inspection this creature appears to be a wight, a relatively
 weak undead monster that is dangerous in large numbers.
 ~
-6220 0 0 33554432 0 0 0 -750 S
-UW 0 0 -1
+6220 0 0 0 33554432 0 0 0 -750 S
+UW 0 0 0 -1
 22 11 29 22d40+176 3d5+3
 0.0.0.0 19602
 8 8 1
@@ -176,8 +176,8 @@ This ghoul is ghastly green and seems to have rotting scales where skin
 would normally be.  Based on its reptile-shaped head, it was most likely
 once a lizardman.
 ~
-1073748040 0 0 0 12288 0 0 -1000 S
-U 0 1 -1
+1073748040 0 0 0 0 12288 0 0 -1000 S
+U 0 1 0 -1
 23 11 26 23d47+230 3d5+3
 0.0.0.0 20493
 8 8 0
@@ -192,8 +192,8 @@ here.  Since life is its antithesis, if will of course devour any life that
 approaches.  The shadow beast maintains a stronger link to the negative plane
 than ordinary undead and as a result is significantly deadlier.
 ~
-6218 1 0 167772218 12352 0 0 -1000 S
-SW 0 1 -1
+6218 1 0 0 167772218 12352 0 0 -1000 S
+SW 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -215,8 +215,8 @@ archpriest, in the blink of an eye.  Occasionally serving Lord Ghulan,
 he is mostly independent, and Lord Ghulan tolerates this as this vampire
 has no ambitions to gain power, but only to gain wealth.
 ~
-1073743882 0 0 33554432 262144 0 0 -1000 S
-UV 0 512 -1
+1073743882 0 0 0 33554432 262144 0 0 -1000 S
+UV 0 512 0 -1
 40 2 -28 40d64+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -234,8 +234,8 @@ virtuos of them all, and this is why he is probably the weakest of the death
 knights of the citadel.  His soul has partially resisted the taint of the
 negative plane magic used to animate him and his breathen.
 ~
-2063 0 0 33620024 64 0 0 -1000 S
-U 0 16 -1
+2063 0 0 0 33620024 64 0 0 -1000 S
+U 0 16 0 -1
 40 2 -28 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 1
@@ -247,8 +247,8 @@ vampire pale young man~
 This young man is rather pale.  He has two red spots on his neck, but looks
 otherwise healthy.  His eyes have a slightly red tint.
 ~
-6218 0 0 33554536 262172 0 0 -500 S
-UV 0 512 -1
+6218 0 0 0 33554536 262172 0 0 -500 S
+UV 0 512 0 -1
 15 15 51 15d18+60 2d5+2
 7.6.2.0 7290
 4 4 1
@@ -262,8 +262,8 @@ drow and its expression is a rictus smile.  The fact that a drow brave and
 strong enough to go up to the surface died here is disturbing; something more
 powerfull must have slain it.
 ~
-6216 0 0 33554432 0 0 0 -1000 S
-U 0 1 -1
+6216 0 0 0 33554432 0 0 0 -1000 S
+U 0 1 0 -1
 37 2 -18 37d95+851 4d7+10
 0.0.0.0 47952
 8 8 0
@@ -277,8 +277,8 @@ octopus, having numerous tentacles.  It absorbs all light and heat that falls
 on it, and as a result seems to radiate cold.  Something is very unnatural
 about its presence here in the prime material plane.
 ~
-1082136586 1 0 524570 14428 0 0 -1000 S
-U 0 1 -1
+1082136586 1 0 0 524570 14428 0 0 -1000 S
+U 0 1 0 -1
 50 -7 -114 56d143+5880 7d6+35
 0.0.0.0 226800
 8 8 0
@@ -292,8 +292,8 @@ looking for things to kill, and even randomly attacks the obsidian walls
 causing injury to itself.  Even though it seems to be lacking in mental
 capacity, it still seems stay put (in the general area anyway).
 ~
-6154 1 0 33554472 0 0 0 -1000 S
-U 0 0 -1
+6154 1 0 0 33554472 0 0 0 -1000 S
+U 0 0 0 -1
 30 8 3 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -307,8 +307,8 @@ are utterly devoid of flesh, and the skeleton has a dirty off-white color.
 Armed and most certainly dangerous, the skeleton is prepared to slay any
 living on sight.
 ~
-2058 1 0 33554472 64 0 0 -1000 S
-SK 0 1 -1
+2058 1 0 0 33554472 64 0 0 -1000 S
+SK 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -322,8 +322,8 @@ Although it lacks the deadly breath and unnatural speed it had in life, its
 size and extremely durable bones make it a dangerous foe even in its weak
 undead state.
 ~
-1073747978 1 0 167772160 0 0 0 -1000 S
-SK 0 0 -1
+1073747978 1 0 0 167772160 0 0 0 -1000 S
+SK 0 0 0 -1
 45 -1 -69 45d90+1935 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -337,8 +337,8 @@ from any hostiles.  Although not hostile itself, it will meet any acts of
 aggression with retribution in kind, and it will not be very forgiving.
 Its red eyes stare, watching for the first sign of aggression.
 ~
-67115082 0 0 33554432 0 0 0 -1000 S
-SK 0 1 -1
+67115082 0 0 0 33554432 0 0 0 -1000 S
+SK 0 1 0 -1
 27 8 13 27d65+351 3d6+4
 0.0.0.0 24057
 8 8 0
@@ -352,8 +352,8 @@ pest to any adventurer, and is probably also seriously damaging the small
 stock the armory has.  If Lord Ghulan knew about the rust monster, it would
 most likely be dead within a few seconds.
 ~
-203 0 0 1572864 1024 0 0 0 S
-AS 0 0 -1
+203 0 0 0 1572864 1024 0 0 0 S
+AS 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -368,8 +368,8 @@ remains.  Because it is utterly fearless and immune to pain in its undead form
 and because it follows orders without question, it is an opponent to be
 respected.  An army of such warriors are a serious threat to any city-state.
 ~
-2056 0 0 33554432 0 0 0 -1000 S
-SK 0 1 -1
+2056 0 0 0 33554432 0 0 0 -1000 S
+SK 0 1 0 -1
 27 8 13 27d65+351 3d6+4
 0.0.0.0 24057
 8 8 0
@@ -383,8 +383,8 @@ It isnt very strong, and its existence is only temporary.  Nonetheless,
 it seeks to devour the life necessary for it to grow and continue its
 existence on this plane.
 ~
-6154 1 0 33554792 262144 0 0 -1000 S
-WR 0 512 -1
+6154 1 0 0 33554792 262144 0 0 -1000 S
+WR 0 512 0 -1
 11 15 54 11d18+44 2d5+2
 0.0.0.0 5346
 8 8 0
@@ -398,8 +398,8 @@ on sight.  No longer having its dwarven muscles or its or amazing
 constitution, the only thing the skeleton retains is its skeleton
 and some of its skill in the axe from its mortal existence.
 ~
-1073743880 1 0 33554432 0 0 0 -1000 S
-SK 0 1 -1
+1073743880 1 0 0 33554432 0 0 0 -1000 S
+SK 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -414,8 +414,8 @@ intellegent, faster, more agile and much, much stronger, this vampire is
 to be feared.  Fortunatelly, he doesnt look extremely hungry and might
 not pursue a foolish adventurer....
 ~
-6154 1 0 33554472 0 0 0 -1000 S
-UV 0 512 -1
+6154 1 0 0 33554472 0 0 0 -1000 S
+UV 0 512 0 -1
 35 6 -12 35d56+525 4d6+7
 9.9.1.2 45360
 8 8 0
@@ -431,8 +431,8 @@ more undead join the ranks of Satar Ghulan's hoard.  The smithy is something
 in between a skeleton and a zombie, with bits of decaying flesh falling off
 and sinew covered bones showing through.
 ~
-10 0 0 0 0 0 0 -1000 S
-ZO 0 0 -1
+10 0 0 0 0 0 0 0 -1000 S
+ZO 0 0 0 -1
 45 -1 -69 45d90+1935 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -447,8 +447,8 @@ it is unlikely that it would repel any serious rescue attempt.  That is the
 job of the various skeleton guards and Lord Ghulan's fellow vampires.  The
 golem's job is to keep the prisoners in.
 ~
-2122 1 0 33554472 0 0 0 -500 S
-OG 0 1 -1
+2122 1 0 0 33554472 0 0 0 -500 S
+OG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 0
@@ -460,8 +460,8 @@ rolart shade~
 The shade of Rolart has a sad look on its face.  He looks around for something
 and has a depressing look on his face.
 ~
-22600 0 0 301989928 2048 0 0 1000 S
-UG 0 32 -1
+22600 0 0 0 301989928 2048 0 0 1000 S
+UG 0 32 0 -1
 25 11 9 25d44+225 3d5+3
 0.0.0.0 22275
 8 8 1
@@ -477,8 +477,8 @@ a holy sword located to the south.  Irronically, he guards against what would
 bring him peace.  Unfortunately for him, he doesn't know this, even as a free-
 willed undead.
 ~
-67110923 32 0 33554472 0 0 0 -1000 S
-U 0 16 -1
+67110923 32 0 0 33554472 0 0 0 -1000 S
+U 0 16 0 -1
 51 -5 -98 51d131+4335 7d6+30
 0.0.0.0 206550
 8 8 0
@@ -491,8 +491,8 @@ Kyrix, now a death knight, was once a noble paladin.  Always with his
 brother Kyrir in life, Kyrix continues to stand by his brother, ready to
 attack anything living.  The two make a formidable opponent.
 ~
-67119115 1 0 33554472 0 0 0 -1000 S
-U 0 16 -1
+67119115 1 0 0 33554472 0 0 0 -1000 S
+U 0 16 0 -1
 51 -5 -98 51d131+4335 7d6+30
 0.0.0.0 206550
 8 8 0
@@ -507,8 +507,8 @@ at the hands of Satar Ghulan not too long ago.  Now a death knight, an
 abomidable hater of the living, Falas uses all his knowledge and skill to
 destroy anything living in a misguided attempt to "elevate" them.
 ~
-10315 1 0 33554472 92 0 0 -1000 S
-U 0 16 -1
+10315 1 0 0 33554472 92 0 0 -1000 S
+U 0 16 0 -1
 48 -1 -62 43d107+1935 6d6+12
 0.0.0.0 104490
 8 8 0
@@ -524,8 +524,8 @@ across the realms.  Right now, he is guarding the entrance to the spires
 leading up to the abode of a man he holds as his idol, Satar Ghulan,
 Vampire necromancer of the 10th circle.
 ~
-10251 1 0 33554472 0 0 0 -1000 S
-U 0 16 -1
+10251 1 0 0 33554472 0 0 0 -1000 S
+U 0 16 0 -1
 46 -3 -72 46d119+2530 6d6+25
 0.0.0.0 111780
 8 8 0
@@ -543,8 +543,8 @@ ressurected by Lord Ghulan as a death knight.  Now Rileas slays all living,
 and rather than conning you out of your equipment, wishes to simply kill you
 and take it.
 ~
-10319 1 0 33554488 64 0 0 -1000 S
-U 0 16 -1
+10319 1 0 0 33554488 64 0 0 -1000 S
+U 0 16 0 -1
 52 -5 -101 52d131+4420 7d6+30
 0.0.0.0 210600
 8 8 1
@@ -558,8 +558,8 @@ knight, rather than a paladin.  He stands here guarding the skeletal warlord,
 even though the skeletal warlord is much mightier than he.  Nonethless,
 the two put together are a deadly duo.
 ~
-67110987 1 0 33554472 0 0 0 -1000 S
-U 0 16 -1
+67110987 1 0 0 33554472 0 0 0 -1000 S
+U 0 16 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -574,8 +574,8 @@ However, he was considered to be a noble and great paladin.  Now he is a
 Death Knight and seeks to slay the living.  He patrols the library of his
 Lord, ready to slay any intruders.
 ~
-1073752138 1 0 33554472 0 0 0 -1000 S
-U 0 16 -1
+1073752138 1 0 0 33554472 0 0 0 -1000 S
+U 0 16 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -589,8 +589,8 @@ sheer skill and speed.  The fact that he fell to the undead legions of Lord
 Ghulan is a testament to the power of them.  Now he is a death knight,
 and guards Lord Ghulan from any intruders.
 ~
-1140860939 1 0 33554472 0 0 0 -1000 S
-U 0 16 -1
+1140860939 1 0 0 33554472 0 0 0 -1000 S
+U 0 16 0 -1
 53 -5 -104 53d131+4505 7d6+30
 0.0.0.0 214650
 8 8 1
@@ -604,8 +604,8 @@ of being less than true to the faith. This could explain why he is so
 powerfull in undeath as a death knight.  He patrols the second floor of
 the central spire, ready to protect Lord Ghulan.
 ~
-1073743945 1 0 33554488 0 0 0 -1000 S
-U 0 16 -1
+1073743945 1 0 0 33554488 0 0 0 -1000 S
+U 0 16 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.0.0.0 222750
 8 8 0
@@ -621,8 +621,8 @@ of the arcane arts.  A vampire, and thus nearly impossible to kill, Satar
 Ghulan enjoys slaying those who would challenge him and then draining
 their blood.
 ~
-67123278 1 0 436207676 297052 0 0 -1000 S
-UV 0 1024 -1
+67123278 1 0 0 436207676 297052 0 0 -1000 S
+UV 0 1024 0 -1
 60 -10 -132 60d96+6180 7d6+35
 6.6.9.7 600000
 8 8 1
@@ -638,8 +638,8 @@ for blood, just like her ally Lord Ghulan.  Existing in both the negative plane
 and the prime material plane at once, Kaketkralix can not be destroyed, but
 only banished from here for a few dozen years.
 ~
-1075841097 1 0 436207964 12352 0 0 -1000 S
-D 0 1 -1
+1075841097 1 0 0 436207964 12352 0 0 -1000 S
+D 0 1 0 -1
 60 -7 -137 57d143+6555 7d6+35
 2.4.6.19 461700
 8 8 2
@@ -654,8 +654,8 @@ at all with scrutiny, and is likely to attack any who cause problems for it.
 It moves around the citadel, ready to repel any intruders that it can
 disguish as definately not servants of Lord Ghulan.
 ~
-1073743944 64 0 33554432 0 0 0 -1000 S
-SK 0 1 -1
+1073743944 64 0 0 33554432 0 0 0 -1000 S
+SK 0 1 0 -1
 37 2 -18 37d95+851 4d7+10
 0.0.0.0 47952
 8 8 0
@@ -670,8 +670,8 @@ specimen is dressed unlike any in modern-day duris.  The skeletal warlord
 waits for Lord Ghulans command, ready to organize the hoards of Lord Ghulan
 and march on to victory and a larger army from the resulting corpses.
 ~
-67110926 1 0 33554536 0 0 0 -1000 S
-SK 0 1 -1
+67110926 1 0 0 33554536 0 0 0 -1000 S
+SK 0 1 0 -1
 52 -5 -101 52d131+4420 7d6+30
 0.0.0.0 210600
 8 8 0
@@ -685,8 +685,8 @@ most of the captives, however, he was abducted during the day, while he was
 weak.  The vampires are keeping him here, using him as one of their last
 choices for food, as humans and elves are prefered.
 ~
-2120 0 0 33554432 0 0 0 -900 S
-HO 0 16384 -1
+2120 0 0 0 33554432 0 0 0 -900 S
+HO 0 16384 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -699,8 +699,8 @@ This small hatchling is very out of place here in the prime material plane.
 It years to be back in its native "land" and is rather agitated about being
 misplaced.
 ~
-67242058 1 0 33554472 0 0 0 -1000 S
-D 0 1 -1
+67242058 1 0 0 33554472 0 0 0 -1000 S
+D 0 1 0 -1
 41 2 -48 40d80+1240 4d7+10
 3.3.5.9 103680
 8 8 0
@@ -715,8 +715,8 @@ is perhaps the most knowledgeable person in the world about flesh golems.
 A vampire like Lord Ghulan, he is evily charming, and will readily slay
 ordinary mortals for sport and a good dinner.
 ~
-1073743946 1 0 33554536 0 0 0 -1000 S
-UV 0 1024 -1
+1073743946 1 0 0 33554536 0 0 0 -1000 S
+UV 0 1024 0 -1
 50 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 0
@@ -730,8 +730,8 @@ damage it can easily crack.  It hits extremely hard, as it is solid bone
 with a bit a senew.  Magic holds it together and gives it strength, and it
 is a welcome addition to the ranks of Lord Ghulan's hoard.
 ~
-71754 0 0 570425384 64 0 0 -1000 S
-OG 0 1 -1
+71754 0 0 0 570425384 64 0 0 -1000 S
+OG 0 1 0 -1
 42 -1 -59 42d55+1890 6d6+12
 2.8.7.3 70000
 8 8 0
@@ -744,8 +744,8 @@ This massive flesh golem is the recent work of Lord Ghulan's most trusted
 minions.  It has incredible strength and durability, even if it is
 lacking in intellegence.
 ~
-67110922 0 0 33554472 0 0 0 -1000 S
-OG 0 0 -1
+67110922 0 0 0 33554472 0 0 0 -1000 S
+OG 0 0 0 -1
 42 -1 -59 42d90+1806 6d6+12
 2.8.7.3 102060
 8 8 0
@@ -763,8 +763,8 @@ his will, Lord Ghulan has sealed it in a circle of power.  Although
 it would like to attack anything that moves, it can only get to any being
 stupid enough to attack it in its circle of power.
 ~
-67658 0 0 33554616 307266 0 0 -1000 S
-OG 0 1 -1
+67658 0 0 0 33554616 307266 0 0 -1000 S
+OG 0 1 0 -1
 60 -5 -125 59d132+4675 9d6+30
 0.2.7.6 222750
 8 8 0
@@ -779,8 +779,8 @@ to life as a vampire, if Lord Ghulan deems him worthy.  Otherwise, he will
 rise again as one of the skeletons, zombies or ghouls that rove the keep.
 Already beaten, he looks sullen and depressed.
 ~
-2122 0 0 33554432 0 0 0 -1000 S
-P2 0 1 -1
+2122 0 0 0 33554432 0 0 0 -1000 S
+P2 0 1 0 -1
 33 6 -5 33d83+561 4d6+7
 7.8.0.2 42768
 8 8 1
@@ -793,8 +793,8 @@ This lizardman was snatched from the dungeon northeast of here.  Now a captive
 to the vampires of this citadel, he is extremely angry and is ready to fight
 to the end, even though his strength is sapped and he has several wounds.
 ~
-1073743946 0 0 33554432 0 0 0 -500 S
-H 0 1 -1
+1073743946 0 0 0 33554432 0 0 0 -500 S
+H 0 1 0 -1
 32 6 -2 32d83+544 4d6+7
 6.8.0.2 41472
 8 8 0
@@ -810,8 +810,8 @@ A master of disguise and lying, this thief may very well destroy the vampire
 that tries to feed on him, with a masterful backstab, or lightning stab
 though the head.
 ~
-1073743880 128 0 301989936 0 0 0 250 S
-PH 0 4096 -1
+1073743880 128 0 0 301989936 0 0 0 250 S
+PH 0 4096 0 -1
 50 -1 -62 43d90+1849 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -829,8 +829,8 @@ especially much, as it is not only as sweet as drow blood, but also is the
 blood of the mortal enemies of the drow -- which the vampires of this citadel
 once were in life.
 ~
-2184 1 0 33554488 0 0 0 900 S
-PE 0 512 -1
+2184 1 0 0 33554488 0 0 0 900 S
+PE 0 512 0 -1
 36 2 -15 36d64+756 4d7+10
 0.1.2.2 46656
 8 8 2
@@ -842,8 +842,8 @@ goblin captive~
 This goblin has taken a beating.  Bruises cover its entire body, and it
 has given up, ready to become the fodder of the vampires.
 ~
-2186 0 0 33554432 0 0 0 -1000 S
-HG 0 0 -1
+2186 0 0 0 33554432 0 0 0 -1000 S
+HG 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -858,8 +858,8 @@ is Lord Ghulans most trusted servant.  He stands here, practicing different
 versions of similar spells, looking for the best variants.  At the moment,
 he is attempting to improve the create dracolich spell.
 ~
-67110986 1 0 436207676 0 0 0 -1000 S
-UV 0 1024 -1
+67110986 1 0 0 436207676 0 0 0 -1000 S
+UV 0 1024 0 -1
 53 -5 -104 53d88+4399 7d6+30
 8.0.6.6 214650
 8 8 1
@@ -871,8 +871,8 @@ dracolich pet~
 This dracolich is the recent creation of Calon.  Posessing incredible powers,
 this dracolich is nearly as powerfull as his master, Calon.
 ~
-1140873290 1 0 33554488 0 0 0 -1000 S
-DK 0 512 -1
+1140873290 1 0 0 33554488 0 0 0 -1000 S
+DK 0 512 0 -1
 45 -1 -79 45d72+2250 6d6+12
 5.9.4.9 109350
 8 8 0
@@ -886,8 +886,8 @@ and Lord Ghulan with a minimal of hastle for either one.  It is extremely
 powerfull, being one of Orcus' more powerfull minions, and could give
 Lord Ghulan a run for his money in a one-on-one fight.
 ~
-30794 1 0 33554488 2048 0 0 -1000 S
-X 0 16 -1
+30794 1 0 0 33554488 2048 0 0 -1000 S
+X 0 16 0 -1
 53 -5 -119 53d131+4876 7d6+30
 8.0.8.8 321975
 8 8 0
@@ -901,8 +901,8 @@ lord Ghulan.  Hard food is good to come by in these parts, as Lord Ghulan
 dislikes orcs, trolls and ogres, but Qartik sends out many clairvoyance
 spells in search of other sentient beings.
 ~
-22602 1 0 33554432 0 0 0 -1000 S
-UV 0 512 -1
+22602 1 0 0 33554432 0 0 0 -1000 S
+UV 0 512 0 -1
 52 -5 -101 52d88+4316 7d6+30
 7.9.5.6 210600
 8 8 0
@@ -915,8 +915,8 @@ This undead harpy is one of Qartik's hunters.  It often goes out
 to abduct the prey that Qartik has located, sometimes abducting the prey,
 sometimes slaying it.  It is a fearsome beast.
 ~
-1073743882 1 0 167772200 0 0 0 -1000 S
-MG 0 0 -1
+1073743882 1 0 0 167772200 0 0 0 -1000 S
+MG 0 0 0 -1
 35 6 -12 35d70+525 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -929,8 +929,8 @@ This headless ogre has seen a lot of punishment.  Probably animated in the
 state that it is, it still retains a massive amount of strength, bolstered
 by the necromatic magics animating it.
 ~
-2120 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+2120 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 42 -1 -59 42d107+1890 6d6+12
 0.0.0.0 102060
 8 8 0

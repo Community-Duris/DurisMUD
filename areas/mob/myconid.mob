@@ -5,8 +5,8 @@ A &+mviolet colored shrieker&n grows from the ground.
 ~
    A &+mviolet colored fungi&n waves its branches here.
 ~
-9 1 0 33554432 0 0 0 0 S
-AP 0 0 -1
+9 1 0 0 33554432 0 0 0 0 S
+AP 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -18,8 +18,8 @@ A &+wmyconid&n wanders here looking for fungi.
    A &+wmyconid&n stands here, looking very much like an ambulatory
 toadstool. Its flesh is bloated and gray. Its arms flail about.
 ~
-2126 0 0 0 2 0 0 0 S
-AH 0 0 -1
+2126 0 0 0 0 2 0 0 0 S
+AH 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -31,8 +31,8 @@ An &+Lelder myconid&n stands here, deep in concentration.
    An &+Lelder myconid&n stands here, deep in concentration. The
 toadstool-looking dark gray creature appears to be meditating.
 ~
-2124 0 0 0 2 0 0 0 S
-AH 0 0 -1
+2124 0 0 0 0 2 0 0 0 S
+AH 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 0.0.0.0 5832
 8 8 0
@@ -44,8 +44,8 @@ A &+Mlarge myconid&n stands here chanting.
    A large &+Mpurple myconid&n stands here chanting. Its hands wave in
 arcane gestures.
 ~
-2126 1 0 0 2 0 0 0 S
-H 0 1024 -1
+2126 1 0 0 0 2 0 0 0 S
+H 0 1024 0 -1
 15 15 51 15d18+60 2d5+2
 7.6.2.0 7290
 8 8 0
@@ -58,8 +58,8 @@ gas spore~
 &+Ythe mushroom forest. Faintly yellow and green, and 2 feet in diameter, it
 &+Yposes no threat to anything around it.&n
 ~
-131144 1 0 0 5122 0 0 0 S
-I 0 0 -1
+131144 1 0 0 0 5122 0 0 0 S
+I 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 11 11 0
@@ -70,8 +70,8 @@ A &+Lgiant black centipede&n slithers along the ground.
 ~
    A giant black centipede slithers along the ground.
 ~
-8 1 0 33554432 0 0 0 0 S
-I 0 0 -1
+8 1 0 0 33554432 0 0 0 0 S
+I 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -83,8 +83,8 @@ A &+mviolet fungi&n grows on the floor here.
    A &+Mviolet fungi&n is growing on the floor. It has three branches
 which wave around.
 ~
-10 1 0 33554432 0 0 0 0 S
-I 0 0 -1
+10 1 0 0 33554432 0 0 0 0 S
+I 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -96,8 +96,8 @@ A &+Lgray ooze&n slides along the floor.
    A &+Lgray ooze&n slides along the cave floor, looking very much like
 a damp spot.
 ~
-12 1 0 570425344 64 0 0 0 S
-I 0 0 -1
+12 1 0 0 570425344 64 0 0 0 S
+I 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -108,8 +108,8 @@ A &+Ggreen slime&n hangs from the walls of the cavern.
 ~
    A bright &+Ggreen&n, sticky, wet growth hangs from the ceiling.
 ~
-10 1 0 33554432 0 0 0 0 S
-I 0 0 -1
+10 1 0 0 33554432 0 0 0 0 S
+I 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -120,8 +120,8 @@ a &+yfurry brown mold&n clings to the wall here.
 ~
    A furry &+ybrown mold&n clings to the damp wall.
 ~
-10 1 0 570425344 0 0 0 0 S
-AP 0 0 -1
+10 1 0 0 570425344 0 0 0 0 S
+AP 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -132,8 +132,8 @@ A &+Yyellow furry mold&n grows here.
 ~
    A &+Yyellow furry mold&n clings to the walls of the cavern.
 ~
-10 1 0 33554432 0 0 0 0 S
-AP 0 0 -1
+10 1 0 0 33554432 0 0 0 0 S
+AP 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -145,8 +145,8 @@ An &+mochre jelly&n oozes through cracks in the walls.
    A giant amoeba-looking creature seeps through the cracks in the
 cavern walls.
 ~
-72 1 0 33554432 0 0 0 0 S
-AP 0 0 -1
+72 1 0 0 33554432 0 0 0 0 S
+AP 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -157,8 +157,8 @@ A &+Lsmall black bat&n flies around here.
 ~
    A &+Lsmall black bat&n flies around here, emitting a shrill shriek.
 ~
-131080 1 0 33554432 0 0 0 0 S
-A 0 0 -1
+131080 1 0 0 33554432 0 0 0 0 S
+A 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -169,8 +169,8 @@ A &+Llarge black spider&n crawls around here.
 ~
    A &+Llarge black spider&n crawls along here.
 ~
-12 1 0 33554436 0 0 0 0 S
-AS 0 0 -1
+12 1 0 0 33554436 0 0 0 0 S
+AS 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -182,8 +182,8 @@ A &+Wmilky white swirl&n floats on the water.
    Something shimmers on the surface of the water, a &+Wmilky white&n
 swirl running through it.
 ~
-262154 1 0 0 2 0 0 0 S
-AP 0 0 -1
+262154 1 0 0 0 2 0 0 0 S
+AP 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -195,8 +195,8 @@ A &+Bdeep blue mold&n lies on the wall.
    A &+Bdeep blue mold&n lies on the wall. It gives off a particualrly
 appealing fragrance.
 ~
-10 0 0 33554432 0 0 0 0 S
-AP 0 0 -1
+10 0 0 0 33554432 0 0 0 0 S
+AP 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -207,8 +207,8 @@ A &+Lfuzzy gray mold&n grows on the ground.
 ~
    A &+Lfuzzy gray mold&n grows on the floor.
 ~
-10 0 0 33554432 0 0 0 0 S
-AP 0 0 -1
+10 0 0 0 33554432 0 0 0 0 S
+AP 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -220,8 +220,8 @@ An algae-like phycomid grows on the wall here.
    A &+Wmilky white&n fungus frows on the wall here. There are
 mushroom-like fungi growing from the fibrous blobs.
 ~
-10 1 0 33554432 0 0 0 0 S
-AP 0 0 -1
+10 1 0 0 33554432 0 0 0 0 S
+AP 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -233,8 +233,8 @@ A &+Llarge velvet black bat&n flies around here.
    A large &+Lvelvet black bat&n flies around here, emitting a shrill
 scream. Its eyes grow red in the gloom.
 ~
-131084 1 0 33554432 0 0 0 0 S
-A 0 0 -1
+131084 1 0 0 33554432 0 0 0 0 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -247,8 +247,8 @@ zombie undead~
 skin missing where the bones poke through. One eye is gone, as is
 most of his clothing. A low moaning comes from the creature.
 ~
-67108874 1 0 33554688 0 0 0 0 S
-U 0 1 -1
+67108874 1 0 0 33554688 0 0 0 0 S
+U 0 1 0 -1
 8 18 74 8d21+44 2d3+1
 0.0.0.0 1036
 8 8 0
@@ -261,8 +261,8 @@ A &+Gmyconid&n stands here, collecting mushrooms.
 ground for mushrooms or interesting rocks. He seems to be searching
 for something &+Wspecific&n.
 ~
-2060 0 0 0 0 0 0 0 S
-H 0 524288 -1
+2060 0 0 0 0 0 0 0 0 S
+H 0 524288 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

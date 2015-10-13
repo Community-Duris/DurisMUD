@@ -8,8 +8,8 @@ vulture~
 &+Yeven clear if the vulture can fly. One of its eyes is glazed red and floats
 &+Ylazily in the socket. The vulture eyes you hungrily, but warily.&N
 ~
-1073743880 0 0 0 0 0 0 -750 S
-B 0 1 2
+1073743880 0 0 0 0 0 0 0 -750 S
+B 0 1 0 2
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -23,8 +23,8 @@ zebra~
 &+rblood-red&+L and it walks with a stagger, but otherwise this animal is
 &+Lperfectly normal.&N
 ~
-1073743944 0 0 0 0 0 0 0 S
-AE 0 1 3
+1073743944 0 0 0 0 0 0 0 0 S
+AE 0 1 0 3
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ tiger saber~
 &+Lfrom any other tigers, as it has two very large teeth extending past its lower
 &+Ljaw.&N
 ~
-1073743946 1 0 524288 0 0 2 -250 S
-AC 0 1 3
+1073743946 1 0 0 524288 0 0 2 -250 S
+AC 0 1 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -52,8 +52,8 @@ hunter human~
 &+Ycloser now!", he says. He is very involved in hunting his prey and barely
 &+Ynotices you.&N
 ~
-1073743948 0 0 1048576 0 0 0 400 S
-PH 1 0 3
+1073743948 0 0 0 1048576 0 0 0 400 S
+PH 1 0 0 3
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -66,8 +66,8 @@ gorilla~
 &+Land beating his chest. As he raises his head to roar, the glint of his shiny
 &+Lred teeth catches your eye.&N
 ~
-1073743948 0 0 0 0 262144 0 -750 S
-TK 0 1 4
+1073743948 0 0 0 0 0 262144 0 -750 S
+TK 0 1 0 4
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -80,8 +80,8 @@ camel~
 &+Yback. As it moves, the humps sway and roll like ocean waves. One of the humps
 &+Yis beginning to become detached and is throwing the camel's balance off center.&N
 ~
-1073743944 0 0 0 0 0 0 0 S
-AE 0 0 4
+1073743944 0 0 0 0 0 0 0 0 S
+AE 0 0 0 4
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -95,8 +95,8 @@ translucent mammoth~
 &+cstruggling to keep the mammoth alive and its veins pulse with what appears to
 &+cbe green blood. The mammoth is slowly shuffling around the area.&n
 ~
-1073743944 0 0 0 0 0 0 0 S
-AH 0 0 5
+1073743944 0 0 0 0 0 0 0 0 S
+AH 0 0 0 5
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -109,8 +109,8 @@ drider~
 &+mruins. It never tires of killing the adventurers that enter its lair,
 &+mhowever.&N
 ~
-1073743950 1 0 33554688 2 0 0 -1000 S
-DR 0 1 4
+1073743950 1 0 0 33554688 2 0 0 -1000 S
+DR 0 1 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -122,8 +122,8 @@ nightmare~
 &+m   This nightmare is rampaging around the room in a rage. It continually
 &+mplants its hooves into the wall.&n
 ~
-1073875018 1 0 0 0 0 0 -1000 S
-AE 0 0 3
+1073875018 1 0 0 0 0 0 0 -1000 S
+AE 0 0 0 3
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -136,8 +136,8 @@ blue monkey~
 &+caround here, but something about it still just doesn't quite seem right. Its
 &+cfur is dark blue and its eyes are glazed.&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-AA 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+AA 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -149,8 +149,8 @@ large blue monkey~
 &+c   This monkey looks much like the smaller monkeys in this area, except that
 &+cit is much larger. Its fur is bright blue and it appears to be very sick.&n
 ~
-1073743944 0 0 0 0 0 0 0 S
-AA 0 1 -1
+1073743944 0 0 0 0 0 0 0 0 S
+AA 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -162,8 +162,8 @@ sewer rat~
 &+Y   This disgusting creature needs to be driven back into the sewers. It is
 &+Ycarrying a bone in its jaws.&N
 ~
-1073741960 0 0 0 0 0 0 -250 S
-A 0 0 -1
+1073741960 0 0 0 0 0 0 0 -250 S
+A 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -176,8 +176,8 @@ The zoo keeper moves through the zoo, cleaning up after
 the animals.  He wears a dirty white uniform, stained
 after years of re-use.
 ~
-1073743944 896 0 152 0 0 0 1000 S
-PH 0 1 -1
+1073743944 896 0 0 152 0 0 0 1000 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

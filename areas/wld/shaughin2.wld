@@ -2434,7 +2434,7 @@ D1
 D2
 ~
 secret~
-5 0 6546
+5 0 6700
 D3
 ~
 ~
@@ -2770,4 +2770,26 @@ D2
 ~
 ~
 0 0 6698
+S
+#6700
+&+LA &+WSecret &+gHunting &+LPassage&n~
+&+L     This passage is smooth and hand carved, and shows the signs of
+&+Lrecent and constant passage.  Although possibly not created by the
+&+Lshaughin which hunt the maze, it nonetheless is being used by them
+&+Lto allow a secret means of entry and exit to the maze as well as a
+&+Lsafe refuge for rest and kill processing.  Bits of decomposing flesh
+&+Loccasionally dot the ground here, probably remnants of the kills which
+&+Lare often dragged through the passage by the hunters.  The smell of
+&+Lsmoking underdark vegetation permeates the passage, indicating the
+&+Lpresence of a nearby campfire.&n
+~
+66 33554444 15
+D0
+~
+~
+1 0 6686
+D2
+~
+~
+0 0 6546
 S

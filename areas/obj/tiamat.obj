@@ -86,7 +86,7 @@ fragment ruby encrusted key~
 &+Ra fragment of a ruby encrusted key&n~
 &+RA small fragment of a ruby encrusted key lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19609
@@ -94,7 +94,7 @@ fragment ruby encrusted key~
 &+Ra fragment of a ruby encrusted key&n~
 &+RA small fragment of a ruby encrusted key lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19610
@@ -102,7 +102,7 @@ fragment ruby encrusted key~
 &+Ra fragment of a ruby encrusted key&n~
 &+RA small fragment of a ruby encrusted key lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19611
@@ -150,7 +150,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19617
@@ -158,7 +158,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19618
@@ -166,7 +166,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19619
@@ -174,7 +174,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19620
@@ -190,7 +190,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19622
@@ -198,7 +198,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19623
@@ -206,7 +206,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19624
@@ -230,7 +230,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19627
@@ -238,7 +238,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19628
@@ -254,7 +254,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19630
@@ -270,7 +270,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19632
@@ -278,7 +278,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19633
@@ -286,7 +286,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19634
@@ -302,7 +302,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19636
@@ -310,7 +310,7 @@ key fragment~
 &+La key fragment&n~
 &+LA small key fragment lies here&n~
 ~
-13 15 3 0 7 0 8396840 1 0 0 0
+13 15 3 0 7 0 8396840 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #19637
@@ -366,7 +366,7 @@ bits pieces tiamat~
 &+Lsome &+rbits &+Land &+rpieces &+Lfrom Tiamat's cadaver~
 &+Lsome &+rbits &+Land &+rpieces &+Lfrom Tiamat's cadaver lies here.&n~
 ~
-13 15 3 0 7 0 4096 1 66 0 0
+13 15 3 0 7 0 4096 1 32834 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E

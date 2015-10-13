@@ -87,7 +87,7 @@ badge moonstone~
 &+Lthe badge of the&n &+Wmoonstone&n &+Lthief guild&n~
 &+LA badge of dark metal lies on the ground here.&n~
 ~
-11 16 9 0 10 50 8433664 2113537 64 0 0
+11 16 9 0 10 50 8433664 2113537 32832 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 E
@@ -100,7 +100,7 @@ badge jade wyrm~
 &+Lthe badge of the&n &+gjade wyrm&n &+Lthief guild&n~
 &+LA badge of dark metal lies on the ground here.&n~
 ~
-11 16 9 0 10 50 8433664 2113537 64 0 0
+11 16 9 0 10 50 8433664 2113537 32832 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 E
@@ -169,7 +169,7 @@ badge red shadow~
 &+Lthe badge of the&n &+rred shadow&n &+Lthief guild&n~
 &+LA badge of dark metal lies on the ground here.&n~
 ~
-11 16 9 0 10 50 8433664 2113537 64 0 0
+11 16 9 0 10 50 8433664 2113537 32832 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 E
@@ -182,7 +182,7 @@ badge violet death~
 &+Lthe badge of the&n &+mviolet death&n &+Lthief guild&n~
 &+LA badge of dark metal lies on the ground here.&n~
 ~
-11 16 9 0 10 50 8433664 2113537 64 0 0
+11 16 9 0 10 50 8433664 2113537 32832 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 E
@@ -215,7 +215,7 @@ badge thief ceothian~
 &+Lthe badge of the&n &+cCeothian&n &+Lthief guild&n~
 &+LA badge made from a dark metal lies on the ground here.&n~
 ~
-9 16 10 0 10 25 40960 2113537 64 0 0
+9 16 10 0 10 25 40960 2113537 32832 0 0
 1 0 0 3 0 0 0 0
 1 1212 100
 E
@@ -428,7 +428,7 @@ crate oaken~
 &+ya large oaken crate&n~
 &+yA large oaken crate has been left here.&n~
 ~
-12 15 4 0 7 1 8396800 1 0 0 0
+12 15 4 0 7 1 8396800 1 32768 0 0
 0 0 0 0 0 0 0 0
 50 1 100
 E

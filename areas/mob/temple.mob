@@ -7,8 +7,8 @@ wolf ghost red~
 &+Whalf mangled corpse.  His eyes &+Rburn&+W with a rage unlike that in&N
 &+Wany creature of nature.  Another force is at play here...&N
 ~
-1073875022 1 0 56 262338 0 0 -1000 S
-UG 0 1 -1
+1073875022 1 0 0 56 262338 0 0 -1000 S
+UG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -21,8 +21,8 @@ soul lost entity cursed shape~
 &=lrexpressionless plane of being.  An unfinished puzzle keeps him here&N
 &=lragainst his will.&N
 ~
-1073879116 0 0 301989932 0 0 0 -1000 S
-U 0 1 -1
+1073879116 0 0 0 301989932 0 0 0 -1000 S
+U 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 1
@@ -36,8 +36,8 @@ illyn gatekeeper~
 &+Wwears a shining suit of armor upon which an emblem of &+Rfire&+W is carved on&N
 &+Wthe breastplate.&N
 ~
-1107704010 0 0 1056973052 309463 0 0 1000 S
-X 0 8 -1
+1107704010 0 0 0 1056973052 309463 0 0 1000 S
+X 0 8 0 -1
 60 -10 -147 60d143+6720 7d6+35
 6.6.4.10 364500
 8 8 1
@@ -50,8 +50,8 @@ With flesh torn away from his face and chest, digits missing from his hands,&N
 this man walks about silently waiting for an impending release from a&N
 pointless existence.&N
 ~
-1074006216 0 0 268501032 262146 0 0 -1000 S
-ZO 0 1 -1
+1074006216 0 0 0 268501032 262146 0 0 -1000 S
+ZO 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.0.0.0 26730
 8 8 1
@@ -64,8 +64,8 @@ To further examine this creature would return the same results as examing
 the air about you.  It is somewhat transparent, save for a gaseous refraction
 of light noticed only by the distortion of the scenery behing him.
 ~
-1140996170 0 0 33554482 2048 0 0 1000 S
-UG 0 512 -1
+1140996170 0 0 0 33554482 2048 0 0 1000 S
+UG 0 512 0 -1
 45 -1 -79 45d72+1935 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -78,8 +78,8 @@ Trapped in a sheath of permeated stone, this warrior has never lost his rage
 or desire to kill.  His airs raise still more questions about the dire
 events that have transpired here.
 ~
-1073752138 0 0 268435600 0 0 0 -450 S
-PH 0 1 -1
+1073752138 0 0 0 268435600 0 0 0 -450 S
+PH 0 1 0 -1
 34 6 -8 34d83+578 4d6+7
 8.9.0.2 44064
 8 8 1
@@ -93,8 +93,8 @@ this sad fate, he his here; a foot pushing on the target, his hands grasping
 an arrow that must've lodged by a powerful shot.  He is most likely a page
 to the knights of this establishment.
 ~
-1073743882 0 0 268435456 0 0 0 -500 S
-PH 0 0 -1
+1073743882 0 0 0 268435456 0 0 0 -500 S
+PH 0 0 0 -1
 27 8 13 27d55+297 3d6+4
 8.3.7.1 24057
 8 8 1
@@ -107,8 +107,8 @@ She must have been a wondrous woman, her long locks of curled hair are
 indicative of the attention she paid to her personal appearance.  Could
 she only have known that this time, her hair would be perfect...&+rforever.
 ~
-1073743946 0 0 536871072 12480 0 0 0 S
-PH 0 32 -1
+1073743946 0 0 0 536871072 12480 0 0 0 S
+PH 0 32 0 -1
 37 2 -18 37d88+814 4d7+10
 0.1.2.2 47952
 8 8 2
@@ -121,8 +121,8 @@ naked figure twisted dark contortionate~
 &+Lbody.  He obviously suffers from some mind-altering disease or state of&n
 &+Lbeing.  No human could have survived locked in here for so long.&n
 ~
-1073752266 1 0 268992832 0 0 0 -1000 S
-U 0 16384 -1
+1073752266 1 0 0 268992832 0 0 0 -1000 S
+U 0 16384 0 -1
 40 2 -28 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 1
@@ -134,8 +134,8 @@ corpse rotting zombie~
 &+LThis corpse walks slowly about the cemetery, seemingly not noticing that&n
 &+Lyou are staring at him. Worms crawl about his long decomposed figure.
 ~
-1073743948 0 0 64 262144 0 0 -1000 S
-ZO 0 1 -1
+1073743948 0 0 0 64 262144 0 0 -1000 S
+ZO 0 1 0 -1
 40 2 -28 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -149,8 +149,8 @@ skeleton lleddraick king _nofear_~
 &+Wits &+Ygolden throne.&+W A blue &+Cfl&+came&n&+W or&+C au&+cra&+W burns within his now hollow&n
 &+Wribcage.&n
 ~
-1073918026 0 0 419430844 309443 0 0 1000 S
-SK 0 1024 -1
+1073918026 0 0 0 419430844 309443 0 0 1000 S
+SK 0 1024 0 -1
 51 -5 -108 51d88+4233 7d6+30
 0.0.0.0 206550
 6 6 1
@@ -163,8 +163,8 @@ spectre small man rape~
 &+Mtorso and back unrecognizable, but his frame indicates he must've been human&n
 &+Monce.  &+rBlood &+Mcovers his face and genital areas.&n
 ~
-1073744074 0 0 16384 0 0 0 0 S
-SP 0 0 -1
+1073744074 0 0 0 16384 0 0 0 0 S
+SP 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 6 6 1
@@ -176,8 +176,8 @@ huge rat~
 &+yWere a plain, small rat hextupled in size, it would much resemble this&n
 &+yaberrate that stands before you.&N
 ~
-1073743944 1 0 0 0 0 0 0 S
-A 0 0 -1
+1073743944 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 19 13 39 19d30+95 3d4+2
 0.0.0.0 9234
 8 8 0
@@ -190,8 +190,8 @@ ravaging demon~
 &+rthan a large humanoid form and a long fiery trail.  His eyes however,&n
 &+rshine the deep &+Clight&+r of an otherworldly hue.
 ~
-1073883212 1 0 671154332 274653 0 0 -1000 S
-X 0 0 -1
+1073883212 1 0 0 671154332 274653 0 0 -1000 S
+X 0 0 0 -1
 45 -1 -84 45d90+2250 6d6+12
 5.9.4.6 164025
 8 8 0
@@ -202,8 +202,8 @@ noisy insects swarm~
 ~
 &+LAnnoying as hell, these little buggers are just ready to be breathed in.&N
 ~
-1073875144 1 0 134217744 0 0 0 0 S
-I 0 0 -1
+1073875144 1 0 0 134217744 0 0 0 0 S
+I 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 11 11 0
@@ -216,8 +216,8 @@ alligator silhouette _nofear_~
 &+Wundisturbed by his motion.  However ignorant to this plane of being&n
 &+Whe is quite aware of your presence.&n
 ~
-1074006092 1 0 128 0 0 0 0 S
-UG 0 1 -1
+1074006092 1 0 0 128 0 0 0 0 S
+UG 0 1 0 -1
 28 8 0 28d65+364 3d6+4
 0.0.0.0 24948
 12 12 0
@@ -230,8 +230,8 @@ crawling monster~
 &+rlook something like this.  Unrecognizable by form, this monster's original&n
 &+rshape is unknown.  His presence is revolting.&n
 ~
-1074010184 0 0 8 262144 0 0 0 S
-H 0 1 -1
+1074010184 0 0 0 8 262144 0 0 0 S
+H 0 1 0 -1
 36 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 8 8 0
@@ -245,8 +245,8 @@ lord samael~
 &+Bwide, a powerful specimen indeed.  He is of a solid state, and his face is&n
 &+Bcovered with fresh blood.  Perhaps he hunts as well as patrols.&N
 ~
-1107703880 0 0 419963068 296991 0 0 1000 S
-UV 0 2 -1
+1107703880 0 0 0 419963068 296991 0 0 1000 S
+UV 0 2 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 11 11 1
@@ -259,8 +259,8 @@ ghost sweeper _nofear_~
 &+Wbeing obviously continues to do what he has always done best.  Sway his&N
 &+Wbroom to a special tune only he can hear.&N
 ~
-1073887304 0 0 536870944 128 0 0 -599 S
-UG 0 1 -1
+1073887304 0 0 0 536870944 128 0 0 -599 S
+UG 0 1 0 -1
 32 6 -12 32d83+544 4d6+7
 0.0.0.0 41472
 8 8 1
@@ -273,8 +273,8 @@ dog twitching hound~
 &+Lforeign to this plane of existence, his conscience seems elsewhere though&N
 &+Lhis body is here.&N
 ~
-1073756234 1 0 58 262144 0 0 0 S
-AC 0 1 -1
+1073756234 1 0 0 58 262144 0 0 0 S
+AC 0 1 0 -1
 36 2 -15 36d95+828 4d7+10
 0.0.0.0 46656
 8 8 1
@@ -289,8 +289,8 @@ high lord aku demon creature monster~
 &+rdemoralizes, and frightens all at once.  He has the seal of a burning&n
 &+rpentagram burning a bright &+Cblue &+ron his forehead.&n
 ~
-1107441738 1 0 939589788 32769 0 0 -1000 S
-EF 0 4 -1
+1107441738 1 0 0 939589788 32769 0 0 -1000 S
+EF 0 4 0 -1
 55 -10 -142 60d132+6240 7d6+35
 0.0.0.0 243000
 8 8 0
@@ -303,8 +303,8 @@ yellow little devil faerie~
 &+Ymixed with a smidge of anger.  She is obviously guarding something.  She&n
 &+Yseems fierce enough, and stands ready.
 ~
-1073875018 1 0 135790592 0 0 0 -500 S
-HF 0 8192 -1
+1073875018 1 0 0 135790592 0 0 0 -500 S
+HF 0 8192 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 2
@@ -316,8 +316,8 @@ toddler small~
 &+YThis little guy is amusing himself digging in the dirt.  He can't be&N
 &+Yvery old, and he has to be on of the cutest things in the world.&n
 ~
-1073744072 0 0 0 0 0 0 0 S
-HF 0 0 -1
+1073744072 0 0 0 0 0 0 0 0 S
+HF 0 0 0 -1
 13 15 58 13d23+52 2d5+2
 6.5.2.0 6318
 8 8 1
@@ -329,8 +329,8 @@ green little devil faerie~
 &+GStrangely enough, he is waving his arms madly about the forest.  His face&N
 &+Gscrewed in concentration, he is unnervingly startled by your presence.&n
 ~
-1073743944 1 0 72 0 0 0 -350 S
-HF 0 512 -1
+1073743944 1 0 0 72 0 0 0 -350 S
+HF 0 512 0 -1
 26 8 16 26d44+286 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -344,8 +344,8 @@ little faerie blue devil~
 &+Bmake hima clown rather than a fighter were it not for the intent that&N
 &+Bshines in his eyes.&N
 ~
-1073743946 1 0 0 0 0 0 -200 S
-HF 0 1 -1
+1073743946 1 0 0 0 0 0 0 -200 S
+HF 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -359,8 +359,8 @@ man old sage~
 &+mHe seems at home here, and doesn't seem to mind the dark at all.  The light&n
 &+msource that could be seen is apparently being held by him&n
 ~
-1073756234 0 0 134217948 0 0 0 1000 S
-PH 0 8 -1
+1073756234 0 0 0 134217948 0 0 0 1000 S
+PH 0 8 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -374,8 +374,8 @@ human faceless old~
 &+rup to him.  What dissolved his facial traits isn't readily apparent, but it&n
 &+rmust have been painful.&n
 ~
-1073744074 1 0 536870912 0 0 0 0 S
-PH 0 1 -1
+1073744074 1 0 0 536870912 0 0 0 0 S
+PH 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -388,8 +388,8 @@ dark watcher~
 &+Lare made of, this being with his arms crossed keeps watch over the temple.&n
 &+Lit is perhaps a good idea to steer clear of him.&n
 ~
-1141291082 0 0 33554462 2050 0 0 0 S
-UV 0 1 -1
+1141291082 0 0 0 33554462 2050 0 0 0 S
+UV 0 1 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -402,8 +402,8 @@ monstrous sown horror creation~
 &+Rmerely an assembly of limbs and other body parts.  A strange groan comes&n
 &+Rfrom it, and it seems to breathe through many different orifices as well.&n
 ~
-1073743944 1 0 0 2048 0 0 -900 S
-ZO 0 0 -1
+1073743944 1 0 0 0 2048 0 0 -900 S
+ZO 0 0 0 -1
 28 8 10 28d55+308 3d6+4
 8.3.7.1 24948
 8 8 0
@@ -417,8 +417,8 @@ monster chef~
 &+Lof sew marks, and they are carefully done it seems, around certain of his&n
 &+Ljoints.  He has only one eye open, the other is sewn shut.&n
 ~
-1107310666 0 0 72 0 0 0 -1000 S
-SP 0 1 -1
+1107310666 0 0 0 72 0 0 0 -1000 S
+SP 0 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -433,8 +433,8 @@ cups, and other odds and ends are attached.  His breaches seem to be the sole
 exception to his clothes however, they are of a finely woven silk.  He seems
 really tired.
 ~
-1140852810 128 0 136 0 0 0 100 S
-PH 0 32768 -1
+1140852810 128 0 0 136 0 0 0 100 S
+PH 0 32768 0 -1
 48 -3 -78 48d110+2592 6d6+25
 8.1.0.5 116640
 6 6 1
@@ -450,8 +450,8 @@ angel female naked~
 &n
 &+Wthe Angel tells you 'Help others and I shall help thee in turn.'&n
 ~
-1073743946 0 0 536879288 47325 0 0 1000 S
-AN 0 32 -1
+1073743946 0 0 0 536879288 47325 0 0 1000 S
+AN 0 32 0 -1
 60 -10 -142 60d132+6240 7d6+35
 0.0.0.0 243000
 11 11 2
@@ -464,8 +464,8 @@ The stone is thick, and render his features barely discernable, save for his
 bent-knee stance and his fingers that are digging into his skull.  It is
 obvious that this man was in great pain when he was fixed like this.
 ~
-1073743946 0 0 128 0 0 0 0 S
-OG 0 0 -1
+1073743946 0 0 0 128 0 0 0 0 S
+OG 0 0 0 -1
 35 6 -12 35d70+525 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -479,8 +479,8 @@ noble~
 &+Lrepeadtedly and ceaselessly through this same motion, doomed to this&n
 &+Luntil the worlds dawns and dusks altogether.&n
 ~
-1073743946 0 0 33554464 32768 0 0 -950 S
-U 0 1 -1
+1073743946 0 0 0 33554464 32768 0 0 -950 S
+U 0 1 0 -1
 39 2 -24 39d95+897 4d7+10
 0.0.0.0 50544
 8 6 2
@@ -493,8 +493,8 @@ soul shape human~
 &+Wvibrate in and out of vision, as if shifting in and out of prime planar&n
 &+Wexistence.&n
 ~
-33560650 0 0 536870912 0 0 0 -300 S
-U 0 0 -1
+33560650 0 0 0 536870912 0 0 0 -300 S
+U 0 0 0 -1
 39 2 -24 39d80+819 4d7+10
 0.0.0.0 50544
 4 8 0
@@ -507,8 +507,8 @@ dwarfed contortionate beast~
 &+LHe has probably felt more pain then he ever has, in his former life of course.&n
 &+LHe endlessly hops about the temple, endlessly being the operative word.&n
 ~
-1073743944 1 0 0 0 0 0 0 S
-U 0 1 -1
+1073743944 1 0 0 0 0 0 0 0 S
+U 0 1 0 -1
 16 13 48 16d35+112 3d4+2
 0.0.0.0 7776
 8 8 0
@@ -524,8 +524,8 @@ man decaying weapons master _nofear_~
 &+cthat are scattered away from him are most likely the work of some cold air&n
 &+cdrafts that scurry about the floor of this massacred temple.&n
 ~
-2058 0 0 0 0 0 0 0 S
-UG 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+UG 0 0 0 -1
 1 20 86 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -540,8 +540,8 @@ monster massive thorned crazy~
 &+Ywhether he is extremely stupid playing with rocks, or amazingly cunning with&n
 &+Ya few tricks in his bag.&n
 ~
-1073743946 0 0 16 0 0 0 0 S
-OG 0 1 -1
+1073743946 0 0 0 16 0 0 0 0 S
+OG 0 1 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -555,8 +555,8 @@ the grey &+Wold&n man~
 &+Lextremely long yet are cured. He just sits there, his palms resting on&n
 &+Lhis knees, breathing deeply.&n
 ~
-1073756234 0 0 134217856 262144 0 0 0 S
-X 0 512 -1
+1073756234 0 0 0 134217856 262144 0 0 0 S
+X 0 512 0 -1
 55 -5 -126 55d88+4950 7d6+30
 0.2.0.9 334125
 6 6 1
@@ -568,8 +568,8 @@ creature strange hallucination~
 &+LIt is the epitomy of shapelessness, somewhat of a living liquid that, at&n
 &+Lirregular intervals, assumes the shape of different things.&n
 ~
-1073743944 0 0 144 0 0 0 0 S
-H 0 0 -1
+1073743944 0 0 0 144 0 0 0 0 S
+H 0 0 0 -1
 30 8 3 30d55+330 3d6+4
 0.5.7.1 26730
 8 8 0
@@ -582,8 +582,8 @@ statue robed man black bishop~
 &+Lcarved to the stitch.  A very impressive work of art indeed...it seems&n
 &+Llike it anyway..&n
 ~
-1073756234 128 0 65688 262144 0 0 -1000 S
-OG 0 256 -1
+1073756234 128 0 0 65688 262144 0 0 -1000 S
+OG 0 256 0 -1
 41 -1 -56 41d99+1804 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -596,8 +596,8 @@ woman statue queen~
 &+Lbody justly.  She is holding her robe up with her right hand, to keep it&n
 &+Lfrom dirtying itself on the floor.&n
 ~
-1073887306 0 0 134217928 299139 0 0 -1000 S
-OG 0 512 -1
+1073887306 0 0 0 134217928 299139 0 0 -1000 S
+OG 0 512 0 -1
 52 -5 -101 52d88+4316 7d6+30
 7.9.5.6 210600
 8 8 2
@@ -610,8 +610,8 @@ king statue old man~
 &+Wthat look of wisdom in his eye, he surely must be of some greater importance&n
 &+Won this checkered board.&n
 ~
-1073875018 128 0 134217920 8193 0 0 1000 S
-G 0 4 -1
+1073875018 128 0 0 134217920 8193 0 0 1000 S
+G 0 4 0 -1
 45 -1 -59 45d99+2205 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -625,8 +625,8 @@ commoner zombie~
 &+Lbe moaning with what's left of its vocal cords.  They will most likely&n
 &+Lrot away soon as well.&n
 ~
-1073743948 0 0 33554568 262146 0 0 -400 S
-U 0 1 -1
+1073743948 0 0 0 33554568 262146 0 0 -400 S
+U 0 1 0 -1
 41 -1 -56 41d107+1845 6d6+12
 0.0.0.0 99630
 8 8 1
@@ -640,8 +640,8 @@ old woman~
 &+rin blood.  Where she actually acquired this crimson veil isn't evident at&n
 &+rthe moment.&n
 ~
-1073875018 0 0 201326656 1026 0 0 0 S
-PH 0 1 -1
+1073875018 0 0 0 201326656 1026 0 0 0 S
+PH 0 1 0 -1
 44 -1 -65 44d107+1980 6d6+12
 4.9.8.3 106920
 8 8 2
@@ -654,8 +654,8 @@ man priest~
 &+Whis neck area only to disseapear below his robes.  He never seems to blink,&n
 &+Wand constantly turns around himself to see who is around him.&n
 ~
-1107441736 128 0 687907004 309471 0 0 1000 S
-PH 0 32 -1
+1107441736 128 0 0 687907004 309471 0 0 1000 S
+PH 0 32 0 -1
 60 -10 -132 60d132+6240 7d6+35
 6.6.9.7 243000
 8 8 1
@@ -669,8 +669,8 @@ white demon ice winged~
 &+Bknees bend in a backwards manner, giving him a strange stance indeed.  He&n
 &+Bhas gigantic claws and fangs, and seems quite hungry as a matter of fact.&n
 ~
-1074137162 1 0 436207624 294976 0 0 -1000 S
-X 0 16384 -1
+1074137162 1 0 0 436207624 294976 0 0 -1000 S
+X 0 16384 0 -1
 50 -3 -110 50d119+3100 6d6+25
 0.3.9.6 182250
 8 8 1
@@ -683,8 +683,8 @@ demon void dark shape~
 &+Lnonetheless.  It is extremely fast, and moves rapidly about the room,&n
 &+Lshifting from end to another.&n
 ~
-1107441742 1 0 134283448 0 0 0 -1000 S
-X 0 64 -1
+1107441742 1 0 0 134283448 0 0 0 -1000 S
+X 0 64 0 -1
 55 -5 -126 55d131+5060 7d6+30
 0.2.0.9 334125
 8 8 1
@@ -700,8 +700,8 @@ demon fiend wretch~
 &+ras he paces about the floor on both his hands and legs, which are interceded&n
 &+rby a long, barbed tail.&n
 ~
-1140983884 1 0 134217912 0 0 0 -1000 S
-X 0 1 -1
+1140983884 1 0 0 134217912 0 0 0 -1000 S
+X 0 1 0 -1
 38 2 -36 38d95+1140 4d7+10
 1.2.2.3 73872
 8 8 0
@@ -716,8 +716,8 @@ huge beast demon~
 &+rdeadly foe.  He has three arms and two legs, and one VERY big tail.  There&n
 &+ris an extremely menacing look in his eyes.&n
 ~
-1140996172 1 0 738197528 0 0 0 -1000 S
-X 0 64 -1
+1140996172 1 0 0 738197528 0 0 0 -1000 S
+X 0 64 0 -1
 43 -1 -77 43d107+2236 6d6+12
 3.8.2.5 156735
 8 8 1
@@ -729,8 +729,8 @@ holy spirit mass _nofear_~
 &+WLike a cloud of swirling milk, this white liquidy mass floats above&n
 &+Wground, flying around as it pleases.&n
 ~
-1073887244 0 0 671097022 307397 0 0 1000 S
-UG 0 32 -1
+1073887244 0 0 0 671097022 307397 0 0 1000 S
+UG 0 32 0 -1
 45 -1 -79 45d99+1980 6d6+12
 0.0.0.0 109350
 8 8 0

@@ -3,7 +3,7 @@ wood section~
 a small section of wood~
 A small section of wood lays comfortably here.~
 ~
-12 6 1 0 7 0 8486920 16385 0 0 0
+12 6 1 0 7 0 8486920 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 50 100
 E
@@ -42,7 +42,7 @@ egg~
 a &+Ls&+Wp&+Le&+Wc&+Lk&+Wl&+Le&+Wd egg~
 A &+Ls&+Wp&+Le&+Wc&+Lk&+Wl&+Le&+Wd&n egg rests here.~
 ~
-12 45 1 0 7 0 8454152 16385 0 0 0
+12 45 1 0 7 0 8454152 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -54,7 +54,7 @@ egg~
 a &+Bblue&n egg~
 A &+Bblue&n egg rests here.~
 ~
-12 45 1 0 7 0 8454152 16385 0 0 0
+12 45 1 0 7 0 8454152 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -66,7 +66,7 @@ egg~
 a &+Wwhite&n egg~
 A &+Wwhite&n egg rests here.~
 ~
-12 45 1 0 7 0 8454152 16385 0 0 0
+12 45 1 0 7 0 8454152 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -78,7 +78,7 @@ egg~
 a &+ybrown&n egg~
 A &+ybrown&n egg rests here.~
 ~
-12 45 1 0 7 0 8454152 16385 0 0 0
+12 45 1 0 7 0 8454152 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -255,7 +255,7 @@ letter~
 an apology letter~
 An apology letter lies discarded here.~
 ~
-16 28 1 0 7 0 8912904 1 0 0 0
+16 28 1 0 7 0 8912904 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E

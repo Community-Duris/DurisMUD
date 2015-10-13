@@ -6,8 +6,8 @@ A whispy wraith wanders about in the mist.
 Summoned up from a sound sleep, this thing is cranky and feeling more than
 a little vindictive.
 ~
-1073741832 1 0 0 0 0 0 -1000 S
-U 0 1024 -1
+1073741832 1 0 0 0 0 0 0 -1000 S
+U 0 1024 0 -1
 31 6 0 31d56+465 4d6+7
 0.0.0.0 40176
 8 8 0
@@ -19,8 +19,8 @@ The mist here swirls and eddies uneasily.
 Looking closer, you notice that the mist sometimes moves against the flow
 of the wind.  In fact, its headed in your direction ...
 ~
-1073741832 1 0 0 0 0 0 -500 S
-UG 0 0 -1
+1073741832 1 0 0 0 0 0 0 -500 S
+UG 0 0 0 -1
 31 6 0 31d70+465 4d6+7
 5.7.9.1 40176
 8 8 0
@@ -33,8 +33,8 @@ As this thing that used to be human shambles about, bits and pieces of flesh
 drip off its bones and strike the ground writhing like maggots.  Its stench
 is unbearable.
 ~
-1073742024 24 0 0 0 0 0 -1000 S
-U 0 0 -1
+1073742024 24 0 0 0 0 0 0 -1000 S
+U 0 0 0 -1
 21 11 32 21d40+168 3d5+3
 0.0.0.0 18711
 8 8 0
@@ -46,8 +46,8 @@ A darkwolf steps out from between the trees.
 The creature looks like a normal wolf, only larger.  And meaner.  His fur is a
 beautiful blackish silver, and his eyes glow dimly in the gloom.
 ~
-1073741832 1 0 0 0 0 0 -500 S
-A 0 0 -1
+1073741832 1 0 0 0 0 0 0 -500 S
+A 0 0 0 -1
 30 8 3 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -61,8 +61,8 @@ golem stone guard guardian~
 &+Yfound much better protection for his bridge, this being the trurly unpassable
 &+Ywall of force, yet he left this golem here.
 ~
-10 0 0 0 0 0 0 -750 S
-OG 0 1 4
+10 0 0 0 0 0 0 0 -750 S
+OG 0 1 0 4
 31 6 0 31d70+465 4d6+7
 5.7.9.1 40176
 8 8 0
@@ -74,8 +74,8 @@ A long-legged stork steps slowly though the tall grass.
 An amusing looking bird, its body is white, its long bill is yellow.  It
 cocks its head side to side looking for prey.
 ~
-136 0 0 0 0 0 0 0 S
-A 0 0 -1
+136 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -88,8 +88,8 @@ He doesn't pay too much attention to you, instead casting and reeling in
 his line.  He must be a rather remarkable fellow, to fish these shark
 infested waters.
 ~
-2121 0 0 0 0 0 0 500 S
-H 0 32 -1
+2121 0 0 0 0 0 0 0 500 S
+H 0 32 0 -1
 25 11 19 25d44+225 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -101,8 +101,8 @@ the &+Bdragonfly&n~
 The dragonfly is unusually large.  The sunlight reflects off its hard blue
 shell in a rainbow of colors.
 ~
-1073872904 0 0 134217744 0 0 0 0 S
-I 0 0 -1
+1073872904 0 0 0 134217744 0 0 0 0 S
+I 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -115,8 +115,8 @@ This is a thick cloud of small insect bodies.  The buzzing is painful to
 the ears, and although they are easy to kill individually, in a swarm they
 can suck a cow dry.
 ~
-1073872904 1 0 134217872 0 0 0 0 S
-I 0 0 -1
+1073872904 1 0 0 134217872 0 0 0 0 S
+I 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -129,8 +129,8 @@ This mysterious creature of the deep has no business being in this lake...
 yet here it is just the same.  All that is really visible of this creature
 is long, muscular tentacles.
 ~
-262216 1 0 32768 0 0 0 -500 S
-F 0 0 2
+262216 1 0 0 32768 0 0 0 -500 S
+F 0 0 0 2
 30 8 3 30d55+330 3d6+4
 0.0.0.0 36730
 8 8 0
@@ -143,8 +143,8 @@ The fin is the only part of the large fish that is above the water all the
 time; the rest of it (namely its mouth) comes up from under the water only
 when it is attacking.  Like now.
 ~
-262216 1 0 32768 0 0 0 0 S
-F 0 0 2
+262216 1 0 0 32768 0 0 0 0 S
+F 0 0 0 2
 30 8 3 30d55+330 3d6+4
 0.0.0.0 36730
 8 8 0
@@ -156,8 +156,8 @@ fish swarmfish~
 The fish not only swims around being obnoxious -- it also jumps out of
 the water and is obnoxious.
 ~
-262216 1 0 32784 0 0 0 0 S
-F 0 0 2
+262216 1 0 0 32784 0 0 0 0 S
+F 0 0 0 2
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0

@@ -9,8 +9,8 @@ purple hide to blend into the dark shadows that seem to swallow everything
 nearby.  Calmly munching on the thorny bushes and trees, it appears to be
 impervious to the thorns and unfrighted by anything else in the forest.
 ~
-1073743944 0 0 33554432 0 0 0 -400 S
-A 0 0 -1
+1073743944 0 0 0 33554432 0 0 0 -400 S
+A 0 0 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -25,8 +25,8 @@ making more akin to a porcupine that a gentle bunny.  Even more disconcerting
 are the lenghty claws on its forepaws, and its sharpened fangs.  This creature
 is certainly not a vegetarian.
 ~
-1073743944 1 0 33554432 0 0 0 -500 S
-A 0 1 -1
+1073743944 1 0 0 33554432 0 0 0 -500 S
+A 0 1 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -41,8 +41,8 @@ Despite its small size, it looks well-adapted to its strange and twisted
 surroundings and has a cruel demeanor that suggets it is more dangerous than
 its size alone suggests.
 ~
-1073743944 1 0 134217744 0 0 0 -400 S
-B 0 1 -1
+1073743944 1 0 0 134217744 0 0 0 -400 S
+B 0 1 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -58,8 +58,8 @@ designed for ripping and tearing.  Perhaps the only good thing about this
 creature is that isn't as large as a normal bear.  Small size is an asset in
 the thick forest, as is speed, and this creature has both.
 ~
-72 1 0 33554432 0 0 0 -500 S
-A 0 1 -1
+72 1 0 0 33554432 0 0 0 -500 S
+A 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -74,8 +74,8 @@ predators, and if they don't do the job, its tail is lined with small barbs
 that glisten with poison.  Whether the poison is truely deadly or not, it is
 enough of a threat that most just leave the creature alone.
 ~
-1073743944 0 0 16 0 0 0 -300 S
-A 0 0 -1
+1073743944 0 0 0 16 0 0 0 -300 S
+A 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -89,8 +89,8 @@ the most vicious.  What it lacks in size, it more than makes up for in teeth
 and claws.  The tawny hide of this creature contains numerous spikes that puff
 out in battle to make it almost impossible to hit it without being hurt too.
 ~
-1073743944 1 0 0 0 0 0 -400 S
-A 0 0 -1
+1073743944 1 0 0 0 0 0 0 -400 S
+A 0 0 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -103,8 +103,8 @@ This disgusting creature belongs in dark places like this, yet even it is
 uncomfortable here.  Carrying only the simplest of clubs, he seems unprepared
 for the terrible creatures of this dark place.
 ~
-1073743948 64 0 0 0 0 0 -1000 S
-PT 0 1 -1
+1073743948 64 0 0 0 0 0 0 -1000 S
+PT 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -117,8 +117,8 @@ Glowing with a strange inner light this spider has a peacefulness about it
 that is quite deceiving.  The creature's many eyes watch everything around it,
 allowing it to carefully decide who or what to attack.
 ~
-1073743944 1 0 0 0 0 0 -500 S
-AS 0 0 -1
+1073743944 1 0 0 0 0 0 0 -500 S
+AS 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -131,8 +131,8 @@ Though small, its bright color suggests that it could be quite dangerous.
 Either its bite, or its flesh are poisonous, though determining which could be
 a problem.
 ~
-1073743944 1 0 0 0 0 0 -500 S
-I 0 0 -1
+1073743944 1 0 0 0 0 0 0 -500 S
+I 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -145,8 +145,8 @@ This tiny creature seeks warm flesh to burrow into so that it can lay its
 eggs.  They aren't that dangerous if noticed in time, but the unwary can be in
 for an unpleasant surprise.
 ~
-1073743946 1 0 34603024 0 0 0 -500 S
-I 0 0 -1
+1073743946 1 0 0 34603024 0 0 0 -500 S
+I 0 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -160,8 +160,8 @@ in the faint light of the forest.  It quickly darts back and forth as if it is
 looking for something to do.  Like all faeries, this one uses its powerful
 magic to protect itself from the darker creatures of the forest.
 ~
-1073875020 128 0 167772346 0 0 0 800 S
-HF 0 512 -1
+1073875020 128 0 0 167772346 0 0 0 800 S
+HF 0 512 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -176,8 +176,8 @@ what he is guarding is completely unclear.  His dark purple wings hum softly
 as the beat up and down, one would think he would tire, but he continues his
 slow circling showing no fatigue.
 ~
-1073875022 128 0 167772282 0 0 0 1000 S
-HF 0 512 -1
+1073875022 128 0 0 167772282 0 0 0 1000 S
+HF 0 512 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -193,8 +193,8 @@ sturdy warrior.  His burly arms bear numerous scars, and his armor looks well
 used.  It is clear that he is sturdy enough to withstand whatever the forest
 may throw at him.
 ~
-1073743948 128 0 176 0 0 0 1000 S
-PF 7 1 -1
+1073743948 128 0 0 176 0 0 0 1000 S
+PF 7 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -207,8 +207,8 @@ Sturdy and massive like all his brethren, this warrior seems a bit young to
 have left the saftey of his tribe.  He watches the forest cautiously as he
 seeks to protect those he came with.
 ~
-1140852814 128 0 0 0 0 0 800 S
-PB 2 1 -1
+1140852814 128 0 0 0 0 0 0 800 S
+PB 2 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -222,8 +222,8 @@ enter the Twisted Wood with young and inexperienced guards, several of whom
 have already been lost.  He is calm though, quietly contemplating the forest
 around him, trying to understand it so that he may defeat it in the end.
 ~
-1140852814 128 0 0 0 0 0 800 S
-PB 2 256 -1
+1140852814 128 0 0 0 0 0 0 800 S
+PB 2 256 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -238,8 +238,8 @@ of their shaman, which they tolerate, and is afraid that they might leave her
 if she doesn't do her share of the work.  Her dark green eyes survey the
 forest around her in clear fear of what could come at her party next.
 ~
-1140852814 128 0 0 0 0 0 0 S
-PH 0 512 -1
+1140852814 128 0 0 0 0 0 0 0 S
+PH 0 512 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -253,8 +253,8 @@ This adventurer has no fear of what might be around him, and seems to need no
 reason to wander into danger.  He clearly enjoys this for some reason, perhaps
 he is insane, or maybe he just has a deathwish.
 ~
-1073743948 128 0 0 0 0 0 800 S
-PE 0 2 -1
+1073743948 128 0 0 0 0 0 0 800 S
+PE 0 2 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -267,8 +267,8 @@ Large and ugly, this hulking creature isn't smart enough to know when even it
 is lost and out-manned.  Despite all its efforts to the contrary, it wanders
 in circles trying to find its way out of the forest.
 ~
-1073743948 1 0 0 0 0 0 -1000 S
-PO 0 1 -1
+1073743948 1 0 0 0 0 0 0 -1000 S
+PO 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -283,8 +283,8 @@ them.  Dark eyes are set far back into its head, well-cloaked by its thick
 thorny brows.  It looks quite thin and in need of a meal, but one would
 hesitate to find out what it might eat.
 ~
-1073743948 1 0 33554688 0 0 0 -600 S
-H 0 4096 -1
+1073743948 1 0 0 33554688 0 0 0 -600 S
+H 0 4096 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -298,8 +298,8 @@ all in what is going on around it and refuses to even blink when adventurers
 stare at it.  Ofcourse, angering a contented creature could mean far more
 trouble than it would be worth.
 ~
-1073743948 0 0 33554688 0 0 0 -600 S
-H 0 1 -1
+1073743948 0 0 0 33554688 0 0 0 -600 S
+H 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -313,8 +313,8 @@ job.  What it can't frighten away with its ugly face it attacks immediately.
 It is hard to say what it is really guarding, and one suspects that it may not
 know itself.
 ~
-2126 1 0 33554688 0 0 0 -600 S
-H 0 1 -1
+2126 1 0 0 33554688 0 0 0 -600 S
+H 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -327,8 +327,8 @@ This bush has been carefully cultivated for some reason, though what that
 reason is remains a mystery.  It bears no fruit and even its thickly
 intertwined inner branches aren't work anything in terms of wood.
 ~
-2062 1 0 33554432 0 0 0 -600 S
-H 0 1 -1
+2062 1 0 0 33554432 0 0 0 -600 S
+H 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -342,8 +342,8 @@ job.  What it can't frighten away with its ugly face it attacks immediately.
 It is hard to say what it is really guarding, and one suspects that it may not
 know itself.
 ~
-1073743950 0 0 33554688 0 0 0 -600 S
-H 0 1 -1
+1073743950 0 0 0 33554688 0 0 0 -600 S
+H 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -356,8 +356,8 @@ This odd creatures eyes are closed in prayer as it worships the strange stone
 obelisk.  What the creature hopes to gain from its prayers is a mystery, but
 then, what it this twisted forest isn't?
 ~
-1073743950 0 0 33554688 0 0 0 -600 S
-H 0 1 -1
+1073743950 0 0 0 33554688 0 0 0 -600 S
+H 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -374,8 +374,8 @@ those that can be seen, has a more frightening aspect to him.  His arms appear
 to be lined with hollow thorns, thorns that have a sinister faint red glow to
 them.  Whatever these specialized thorns are, it would be best to avoid them.
 ~
-1073743950 64 0 50397584 262144 0 0 -1000 S
-PL 0 1 -1
+1073743950 64 0 0 50397584 262144 0 0 -1000 S
+PL 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -389,8 +389,8 @@ intelligent.  Though some of the other thornmen may not be, it is entirely
 possible that they are all geniuses that simple choose not to communicate with
 other creatures.
 ~
-1073743950 0 0 33554688 0 0 0 -800 S
-H 0 32 -1
+1073743950 0 0 0 33554688 0 0 0 -800 S
+H 0 32 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -403,8 +403,8 @@ This is one of the smaller thornmen in the camp but all the others shun it.
 Its incantations cause the forest around to quiver in anticipation, as if the
 forest itself enjoys the power of the thornman's evil.
 ~
-1073743948 1 0 33554688 0 0 0 -600 S
-H 0 512 -1
+1073743948 1 0 0 33554688 0 0 0 -600 S
+H 0 512 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -420,8 +420,8 @@ It is clear that this young fool has committed one dark deed too many and is
 hiding from the guards and bounty hunters that are certainly searching for
 him.
 ~
-1073743884 1 0 0 0 0 0 -1000 S
-PH 0 8192 -1
+1073743884 1 0 0 0 0 0 0 -1000 S
+PH 0 8192 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -434,8 +434,8 @@ It is clear that this thornman is searching for food, and that anything it
 finds is most likely going to be considered food.  His long arms are lined
 with thorns that have all been pointed outwards to create built-in weapons.
 ~
-1073743948 1 0 1572864 0 0 0 -600 S
-H 0 1 -1
+1073743948 1 0 0 1572864 0 0 0 -600 S
+H 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -448,8 +448,8 @@ This sturdy dwarf is clearly in search of whatever treasures this odd forest
 might hold.  His eyes constantly search for danger, though something about him
 suggests he isn't out to avoid a fight, rather he seems to be looking for one.
 ~
-1073743948 128 0 0 0 0 0 1000 S
-PM 0 16384 -1
+1073743948 128 0 0 0 0 0 0 1000 S
+PM 0 16384 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -464,8 +464,8 @@ mumbles, 'How did I lose her?"  What his rambling means, and why the dark
 denizens of the forest haven't killed this distracted man are mysteries best
 left to the gods.
 ~
-1073743948 160 0 0 0 0 0 800 S
-PH 0 8 -1
+1073743948 160 0 0 0 0 0 0 800 S
+PH 0 8 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -1049,7 +1049,7 @@ eye kraken~
 &+ba kraken eye&N~
 &+bAn eye of what seems to be a kraken rests on the ground here.&N~
 ~
-8 8 3 0 11 34 28672 8404993 0 0 0
+8 8 3 0 11 34 28672 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 1 22222 100
 E
@@ -1065,7 +1065,7 @@ scale kraken~
 &+ba kraken scale&N~
 &+bA scale of what seems to be a kraken rests on the ground here.&N~
 ~
-8 8 3 0 11 34 28672 8929281 0 0 0
+8 8 3 0 11 34 28672 8929281 32768 0 0
 0 0 0 0 0 0 0 0
 1 22222 100
 E

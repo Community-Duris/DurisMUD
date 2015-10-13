@@ -10,8 +10,8 @@ beetle death leaves~
 &+Lrazor-sharp mandibles which extend outwards some two feet from the rest
 &+Lof its body.&N
 ~
-72 1 0 16 0 0 0 0 S
-i 0 1 2
+72 1 0 0 16 0 0 0 0 S
+i 0 1 0 2
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -23,8 +23,8 @@ beetle slicer large~
 The beetle has huge mandibles that click very, VERY loudly.  They look
 really sharp as well.
 ~
-72 1 0 16 0 262144 1048576 0 S
-I 0 1 -1
+72 1 0 0 16 0 262144 1048576 0 S
+I 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -36,8 +36,8 @@ beetle giant~
 The beetle is nondescript, a totally normal beetle, save for one thing --
 it is roughly the size of a full grown St.Bernard.  It also seems hungry.
 ~
-72 1 0 16 0 32768 1048576 0 S
-I 0 1 3
+72 1 0 0 16 0 32768 1048576 0 S
+I 0 1 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -49,8 +49,8 @@ beetle fire~
 The insect has very large mandibles.  There appear to be two glowing spots
 on its body, one near the back of its head and one on the end of its abdomen.
 ~
-104 0 0 16 1 0 1049600 0 S
-I 0 0 3
+104 0 0 0 16 1 0 1049600 0 S
+I 0 0 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -63,8 +63,8 @@ The beetle tramples everything in its path as it goes about in search of
 food.  The horn protruding from its head is about six feet long and looks
 exceedingly sharp and pointed.
 ~
-526408 0 0 16 0 0 1052672 0 S
-I 0 16384 3
+526408 0 0 0 16 0 0 1052672 0 S
+I 0 16384 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -76,8 +76,8 @@ beetle stag~
 The twin horns adorning this insect's head give it the appearance of a moose
 but its mandibles, since it feeds on grains, are relatively small.
 ~
-23624 0 0 16 1024 786432 0 0 S
-I 0 1 4
+23624 0 0 0 16 1024 786432 0 0 S
+I 0 1 0 4
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -89,8 +89,8 @@ lizard fire reptilian~
 The lizard's body is mostly gray, with patches of red on its back and belly.
 It appears to be rather lazy, barely sparing you a glance.
 ~
-3176 0 0 0 0 67108864 8192 0 S
-dk 0 1 2
+3176 0 0 0 0 0 67108864 8192 0 S
+dk 0 1 0 2
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -104,8 +104,8 @@ a microscope.  The thing is freaking *huge* about 15 feet from tip to
 tail.  And it is actually one of the smaller creatures wandering these
 wastes ...
 ~
-3144 0 0 0 0 0 0 0 S
-dk 0 0 -1
+3144 0 0 0 0 0 0 0 0 S
+dk 0 0 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -118,8 +118,8 @@ The creature is about forty feet long ... and has a huge gaping mouth
 that looks able to swallow a full grown man whole.  Its jaw is outfitted
 with jagged teeth that look strong enough to munch metal.
 ~
-2376 0 0 1048576 0 0 0 0 S
-dk 0 0 4
+2376 0 0 0 1048576 0 0 0 0 S
+dk 0 0 0 4
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -132,8 +132,8 @@ The smooth bark of the trunk looks like it would be comfortable to
 rest upon after a long, weary day.  Wait a moment ... it has a snake's
 head at one end!  Ye gads!  The enormous thing is a snake!!
 ~
-2120 0 0 16 1024 524288 4096 0 S
-rs 0 0 5
+2120 0 0 0 16 1024 524288 4096 0 S
+rs 0 0 0 5
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -146,8 +146,8 @@ Apparently the pile of rock is actually a stone golem!  It seems to be
 miserable, squatting on the ground.  It notices you looking at it.  'Go
 away,' it says.
 ~
-2120 0 0 128 0 0 0 0 S
-og 0 32 6
+2120 0 0 0 128 0 0 0 0 S
+og 0 32 0 6
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 171500
 8 8 0
@@ -159,8 +159,8 @@ A beetle with an exceptionally strong carapace chitters here.
 The beetle is sleek, slick and black.  Its inhuman eyes regard you
 impassively, as if you were a rock on the ground ... or perhaps food.
 ~
-8390729 1 0 16 0 0 4096 0 S
-I 0 0 -1
+8390729 1 0 0 16 0 0 4096 0 S
+I 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -173,8 +173,8 @@ This huge, ancient dragon is the color of midnight, except for his eyes, which
 burn golden, alight with malice and intelligence, afire with unholy joy as he
 turns to attack.
 ~
-1363050344 1 0 973185214 45278 1074528384 667956736 -1000 S
-D 0 1072 7
+1363050344 1 0 0 973185214 45278 1074528384 667956736 -1000 S
+D 0 1072 0 7
 62 0 -500 1d1+1 1d1+1
 0.0.0.10000 0
 8 8 1
@@ -188,8 +188,8 @@ witch hunchbacked woman hag~
 &+bis shaking slightly as she moves, yet there is some feeling of certainty
 &+bin her moves.
 ~
-1073776712 0 0 134217740 28 0 0 0 S
-PH 12 512 2
+1073776712 0 0 0 134217740 28 0 0 0 S
+PH 12 512 0 2
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -206,8 +206,8 @@ wolf spider huge hairy elite _block_east_~
 &+rThe rather tiny head it has is equipped with an impressive set of mandibles,
 &+rhowever.&n
 ~
-30730 1 0 840016188 274654 68157440 33558528 -500 S
-AS 0 1 6
+30730 1 0 0 840016188 274654 68157440 33558528 -500 S
+AS 0 1 0 6
 61 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

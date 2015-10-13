@@ -8,8 +8,8 @@ roams the caverns of the underdark.  He bears the tears and scars of someone
 that has fought bravely, but lost.  He clings grimly to what remains of his
 life as he tries to escape the intricate caverns.
 ~
-1073743948 1 0 0 0 0 0 -500 S
-PO 0 1 -1
+1073743948 1 0 0 0 0 0 0 -500 S
+PO 0 1 0 -1
 5 20 83 5d17+27 1d5+0
 3.1.0.0 648
 8 8 1
@@ -24,8 +24,8 @@ not really intelligent enough to know what it can and cannot attack.  Its
 body is so pale and translucent that it almost looks like the crystals it
 roams through.
 ~
-1073743944 1 0 0 0 0 0 0 S
-AS 0 0 -1
+1073743944 1 0 0 0 0 0 0 0 S
+AS 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -40,8 +40,8 @@ Creatures such as this have been known to attack other animals to protect
 what they view as their own territory.  It has long, sharp mandibles and
 enough legs to move extremely fast when it needs to.
 ~
-1073743946 1 0 16 0 0 0 0 S
-I 0 0 -1
+1073743946 1 0 0 16 0 0 0 0 S
+I 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -55,8 +55,8 @@ distances when it really needs to.  Despite its constant eating, it seems
 to stay the same size.  The worm seems to be quite protective of its food
 supply.
 ~
-2122 1 0 0 0 0 0 0 S
-RS 0 0 -1
+2122 1 0 0 0 0 0 0 0 S
+RS 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -69,8 +69,8 @@ This clawed insect has grown to immense proportions.  It hides well in the
 dark cavern and does its best to attract unsuspecting prey with its strange,
 crystal-tipped appendages.
 ~
-2122 1 0 0 0 0 0 -500 S
-I 0 1 -1
+2122 1 0 0 0 0 0 0 -500 S
+I 0 1 0 -1
 7 18 77 7d21+38 2d3+1
 0.0.0.0 907
 8 8 0
@@ -84,8 +84,8 @@ when it is actually in the light.  Its milky-white eyes are clearly blind,
 but it is also clear that it has adapted well to the darkness and has found
 other, perhaps more accurate, ways to find its prey.
 ~
-1073743944 1 0 256 2 0 0 0 S
-R 0 1 -1
+1073743944 1 0 0 256 2 0 0 0 S
+R 0 1 0 -1
 8 18 74 8d21+44 2d3+1
 0.0.0.0 1036
 8 8 0
@@ -100,8 +100,8 @@ comes from its mouth as it moves through the cavern trying to help the
 crystals it tends grow strong and brilliant.  Its body looks hard and
 unyielding, covered with sharp ridges and jagged edges.
 ~
-1082132559 0 0 572653568 12482 0 0 0 S
-PB 0 1 -1
+1082132559 0 0 0 572653568 12482 0 0 0 S
+PB 0 1 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 0
@@ -115,8 +115,8 @@ made from jagged, deep blue, crystal.  It seems to have a particular affinity
 for the blue crystals that it tends.  A soft song comes from its stony mouth
 as it carefully watches over the crystals.
 ~
-1082132559 0 0 539099136 12482 0 0 0 S
-PB 0 0 -1
+1082132559 0 0 0 539099136 12482 0 0 0 S
+PB 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 0
@@ -132,8 +132,8 @@ There is a peaceful quality to its soft song, and a gentleness to its
 demeanor.  Its size and jagged exterior would make it a formidable foe, but an
 excellent ally.
 ~
-1082132559 0 0 539099136 12482 0 0 0 S
-PB 0 1 -1
+1082132559 0 0 0 539099136 12482 0 0 0 S
+PB 0 1 0 -1
 14 15 55 14d27+84 2d5+2
 7.5.2.0 6804
 8 8 0
@@ -149,8 +149,8 @@ tremble and shiver when it sings.  The song is as jagged as the crystals
 around the creature singing it, its tempo uneven and almost painful to the
 ears.
 ~
-1082132559 0 0 539099152 274626 0 0 -500 S
-PB 0 1 -1
+1082132559 0 0 0 539099152 274626 0 0 -500 S
+PB 0 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 0
@@ -165,8 +165,8 @@ elemental-like creatures that appear to be made from living crystal.  This
 one's body has all the jagged ridges and sharp edges of all the others, but
 they seem to see little use.
 ~
-1082132559 0 0 539099136 12482 0 0 0 S
-PB 0 256 -1
+1082132559 0 0 0 539099136 12482 0 0 0 S
+PB 0 256 0 -1
 15 15 51 15d25+75 2d5+2
 7.6.2.0 7290
 8 8 0
@@ -180,8 +180,8 @@ and wealth.  A thick mane of white hair hangs down to his shoulders, and a
 small scar mars his left cheek.  He stalks cautiously through the cavern,
 avoiding danger when he can, and fighting his best when he can't.
 ~
-1107298380 88 0 0 0 0 0 -1000 S
-PL 0 32768 -1
+1107298380 88 0 0 0 0 0 0 -1000 S
+PL 0 32768 0 -1
 11 15 64 11d25+55 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -198,8 +198,8 @@ the normal size.  Brutal scars mar his already ugly face, in fact scars along
 his left cheek are so large that they have even prevented the normal growth of
 his beard.
 ~
-1073743948 1 0 2228224 2 0 0 -1000 S
-PD 0 1 -1
+1073743948 1 0 0 2228224 2 0 0 -1000 S
+PD 0 1 0 -1
 9 18 71 9d21+49 2d3+1
 4.3.0.0 1166
 8 8 1
@@ -214,8 +214,8 @@ be terribly good to eat anyway.  Although easily as large as an earth
 elemental, it moves through the cavern with a fluid agility that even a drow
 scout would have difficulty matching.
 ~
-1082132557 0 0 536870912 12482 0 0 0 S
-PB 0 1 -1
+1082132557 0 0 0 536870912 12482 0 0 0 S
+PB 0 1 0 -1
 17 13 45 17d35+119 3d4+2
 8.6.2.0 8262
 8 8 0
@@ -231,8 +231,8 @@ drow, or the twisted, elongated ghost could even be from a duergar.  In any
 case, its mouth is opened in a soundless scream, attacking anything it can
 find.
 ~
-1073875016 1 0 135790592 0 0 0 -500 S
-UG 0 0 -1
+1073875016 1 0 0 135790592 0 0 0 -500 S
+UG 0 0 0 -1
 8 18 64 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 0
@@ -246,8 +246,8 @@ it goes down to its feet.  The chrysloin is easily as large as an earth
 elemental, and the sharp, jagged edges of its crystal arms and hands make
 it even more frightening.
 ~
-1149241423 0 0 539099152 12482 0 0 0 S
-PB 0 1 -1
+1149241423 0 0 0 539099152 12482 0 0 0 S
+PB 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 0
@@ -261,8 +261,8 @@ it goes down to its feet.  The chrysloin is easily as large as an earth
 elemental, and the sharp, jagged edges of its crystal arms and hands make
 it even more frightening.
 ~
-1149241421 0 0 539099152 12482 0 0 0 S
-PB 0 1 -1
+1149241421 0 0 0 539099152 12482 0 0 0 S
+PB 0 1 0 -1
 13 15 58 13d27+78 2d5+2
 6.5.2.0 6318
 8 8 0
@@ -277,8 +277,8 @@ recognizable by their deep black color set against the violet crystal of its
 face and body.  Though the creature is large and threatening, the crystal
 might be fairly fragile, then again, it may be harder than the hardest stone.
 ~
-75499599 1 0 539099152 12482 0 0 0 S
-PB 0 1 -1
+75499599 1 0 0 539099152 12482 0 0 0 S
+PB 0 1 0 -1
 11 15 64 11d27+66 2d5+2
 5.4.1.0 5346
 8 8 0
@@ -293,8 +293,8 @@ the vault without the proper permission, whatever that may be.  The entire
 surface of the magical golem is perfectly smooth, lacking the sharp, jagged
 edges of the chrysloin.
 ~
-75499599 1 0 539099152 12482 0 0 0 S
-PB 0 1 -1
+75499599 1 0 0 539099152 12482 0 0 0 S
+PB 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 0
@@ -309,8 +309,8 @@ its mouth as the crystal melts away from its hands and is formed into
 whatever it desires.  This creature clearly has great power and respect from
 the others of its strange kind.
 ~
-1082132559 0 0 539099136 12482 0 0 0 S
-PB 0 1 -1
+1082132559 0 0 0 539099136 12482 0 0 0 S
+PB 0 1 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 0
@@ -324,8 +324,8 @@ pitched, not matching with its massive size in any way.  Despite its
 ferocious appearance, the creature seems quite gentle as it carefully molds
 the crystal walls of the spire with its glowing hands.
 ~
-1082132557 0 0 539099136 12482 0 0 0 S
-PB 0 1 -1
+1082132557 0 0 0 539099136 12482 0 0 0 S
+PB 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 0
@@ -339,8 +339,8 @@ lost in thought as it ponders some unknown mystery.  One of the chrysloin's
 arms ends in a jagged point and is much shorter than the other suggesting it
 may have been lost or broken off at some time in the past.
 ~
-1149241423 0 0 539099136 12482 0 0 0 S
-PB 0 256 -1
+1149241423 0 0 0 539099136 12482 0 0 0 S
+PB 0 256 0 -1
 12 15 61 12d25+60 2d5+2
 6.4.2.0 5832
 8 8 0
@@ -355,8 +355,8 @@ massive creature moves makes it one of the most dangerous of the chrysloin.
 Its stony demeanor makes it quite clear that this creature has only one job,
 that of making war.
 ~
-75499599 0 0 539099152 12482 0 0 0 S
-PB 0 1 -1
+75499599 0 0 0 539099152 12482 0 0 0 S
+PB 0 1 0 -1
 11 15 64 11d27+66 2d5+2
 5.4.1.0 5346
 8 8 0
@@ -371,8 +371,8 @@ massive creature moves makes it one of the most dangerous of the chrysloin.
 Its stony demeanor makes it quite clear that this creature has only one job,
 that of making war.
 ~
-1149241423 0 0 539099152 12482 0 0 0 S
-PB 0 1 -1
+1149241423 0 0 0 539099152 12482 0 0 0 S
+PB 0 1 0 -1
 11 15 64 11d27+66 2d5+2
 5.4.1.0 5346
 8 8 0
@@ -387,8 +387,8 @@ behavior show how nervous it must be, it paces back and forth, looking from
 one stony face to another.  It is clear that it is on the verge of some sort
 of major decision.
 ~
-1149241423 0 0 539099152 12482 0 0 0 S
-PB 0 1 -1
+1149241423 0 0 0 539099152 12482 0 0 0 S
+PB 0 1 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 0
@@ -401,8 +401,8 @@ The deep gnome is here on some sort of business.  His fine clothing and
 sturdy hammer show that he must be of some importance.  Though large for a
 gnome, he tiny when compared to the massive chrysloin that he stands among.
 ~
-1140852814 0 0 0 32770 0 0 1000 S
-PG 0 32 -1
+1140852814 0 0 0 0 32770 0 0 1000 S
+PG 0 32 0 -1
 11 15 64 11d25+55 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -417,8 +417,8 @@ extremely angry about something.  His long robes are those of a wealthy
 and experienced mage, one that would normally be found in some major city
 rather than here with the chrysloin.
 ~
-1107298382 64 0 807534632 2 0 0 -1000 S
-PL 0 512 -1
+1107298382 64 0 0 807534632 2 0 0 -1000 S
+PL 0 512 0 -1
 36 2 -15 36d64+756 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -433,8 +433,8 @@ she has been around for many years.  Her dark eyes bear the wisdom of
 centuries of life and exploration in the dangerous realm of the
 underdark.
 ~
-1073743948 0 0 0 2 0 0 1000 S
-PG 0 2 -1
+1073743948 0 0 0 0 2 0 0 1000 S
+PG 0 2 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 2
@@ -448,8 +448,8 @@ creation of some sort of twisted magic.  Paper thin, crystal wings flap send
 it darting through the air at incredible speeds, but it has no apparent
 purpose or goal as it darts about.
 ~
-1082263625 1 0 0 2 0 0 0 S
-B 0 0 -1
+1082263625 1 0 0 0 2 0 0 0 S
+B 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -464,8 +464,8 @@ extremely thin wings' that flap in such a way as to send it spiraling through
 the air.  There is no face or head to the creature, but its movements suggest
 that it has some sort of magical means to find its way through the cavern.
 ~
-1082132553 1 0 539099152 12482 0 0 0 S
-B 0 0 -1
+1082132553 1 0 0 539099152 12482 0 0 0 S
+B 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -480,8 +480,8 @@ It is impossible to make out the true shape of the creature, its
 constant motion makes its outline vague and unnerving.  The other
 twisted creatures of the cavern stay well clear of its spinning outline.
 ~
-8390735 1 0 16 2 0 0 0 S
-TK 0 1 -1
+8390735 1 0 0 16 2 0 0 0 S
+TK 0 1 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 0
@@ -495,8 +495,8 @@ Whatever magic helped create it and give it life has faded and it is
 slowly dieing.  Its features are vaguely humanoid, but its hands are
 shaped more like pincers or weapons.
 ~
-8388685 0 0 539099136 12482 0 0 0 S
-H 0 0 -1
+8388685 0 0 0 539099136 12482 0 0 0 S
+H 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 0
@@ -511,8 +511,8 @@ is almost perfectly flat though, lacking any real detail or features.
 Strange black stones have been used to create its glowing eyes, eyes
 that appear able to see in any sort of light.
 ~
-1082132557 1 0 539099136 12482 0 0 0 S
-OG 0 1 -1
+1082132557 1 0 0 539099136 12482 0 0 0 S
+OG 0 1 0 -1
 9 18 71 9d21+49 2d3+1
 4.3.0.0 1166
 8 8 0
@@ -527,8 +527,8 @@ guard some sort of treasure or doorway, but nothing around it remains.
 The crystal used to create its perfectly smooth body is made up of
 swirls of color ranging from pink to a deep, blood red.
 ~
-1082132559 0 0 539099152 12482 0 0 0 S
-OG 0 1 -1
+1082132559 0 0 0 539099152 12482 0 0 0 S
+OG 0 1 0 -1
 14 15 55 14d27+84 2d5+2
 7.5.2.0 6804
 8 8 0
@@ -544,8 +544,8 @@ to slowly cool into its present form.  Whatever purpose it was made for
 has clearly been forgotten as it turns to attack anything that gets in
 its way.
 ~
-1149253707 1 0 539099136 12482 0 0 0 S
-OG 0 1 -1
+1149253707 1 0 0 539099136 12482 0 0 0 S
+OG 0 1 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 0
@@ -560,8 +560,8 @@ the north is roughly pushed aside.  The magical life and commands it
 possesses, whether recent or ancient, have kept it here guarding
 whatever lies in the caverns beyond.
 ~
-1082132559 1 0 539099152 12482 0 0 0 S
-OG 0 1 -1
+1082132559 1 0 0 539099152 12482 0 0 0 S
+OG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 0
@@ -577,8 +577,8 @@ stone or metal, showing no preference or aversion to anything so long as
 it is mineral.  It is rumored that their excrement itself can also melt
 stone, and can weaken metal.
 ~
-1073743948 1 0 0 2 0 0 0 S
-RS 0 0 -1
+1073743948 1 0 0 0 2 0 0 0 S
+RS 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -592,8 +592,8 @@ lumbers through the caverns searching for crystals and gems to eat.
 Though slow moving, its body is heavily armored and able to withstand a
 great deal of damage.
 ~
-1073743948 1 0 539099152 12482 0 0 0 S
-AC 0 0 -1
+1073743948 1 0 0 539099152 12482 0 0 0 S
+AC 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -608,8 +608,8 @@ with this one being somewhere in between.  Its vestigial eyes are almost
 completely worthless, it relies entirely on echo-location to find and
 attack its prey.
 ~
-1073875020 0 0 134217728 2 0 0 0 S
-B 0 1 -1
+1073875020 0 0 0 134217728 2 0 0 0 S
+B 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -622,8 +622,8 @@ This massive creature appears to have been set here as some sort of guardian
 for the caverns that lie beyond.  The stony face will clearly not give
 any clue as to why it is here, the only clue lies in the caverns beyond.
 ~
-14411 0 0 855744700 276702 0 0 0 S
-OG 0 1 -1
+14411 0 0 0 855744700 276702 0 0 0 S
+OG 0 1 0 -1
 35 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 0

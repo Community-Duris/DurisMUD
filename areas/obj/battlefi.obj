@@ -3,7 +3,7 @@ dead rat~
 &+La dead &+grat&+L named &n'&+WParka&n'~
 &+LA dead rat lays here.&n~
 ~
-19 15 3 0 7 0 0 8404993 0 0 0
+19 15 3 0 7 0 0 8404993 32768 0 0
 24 0 0 0 0 0 0 0
 1 1 100
 E
@@ -230,7 +230,7 @@ swirling mist~
 &+msome swirling mist~
 &+mSome swirling mist floats here.~
 ~
-8 1 3 0 7 0 0 1 0 0 0
+8 1 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 293 100
 E
@@ -242,7 +242,7 @@ holy cross~
 &+Wa holy cross&n~
 &+WA holy cross lays here.~
 ~
-8 38 3 0 7 0 0 1 0 0 0
+8 38 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 5 2030 100
 E
@@ -256,7 +256,7 @@ abominable cloth~
 &+Lsome&n &+rabominable&+L cloth~
 &+LSome abominable material look horrific.~
 ~
-8 23 3 0 7 0 70656 129 64 87650371 0
+8 23 3 0 7 0 70656 129 32832 87650371 0
 0 0 0 2 0 0 0 0
 5 202 100 0 16 0 0
 E
@@ -412,7 +412,7 @@ skull~
 &+Wa skull&n~
 &+WA skull lays upon the floor.~
 ~
-8 15 3 0 7 0 4097 1 0 0 0
+8 15 3 0 7 0 4097 1 32768 0 0
 0 0 0 0 0 0 0 0
 5 1 100
 E
@@ -441,7 +441,7 @@ snakeskin~
 &+Lsome snakeskin~
 &+LSome snakeskin lays here.~
 ~
-8 2 3 0 7 0 0 1 0 0 0
+8 2 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 5 5 100
 E
@@ -491,7 +491,7 @@ scalp~
 scalp of a soldier~
 The scalp of a soldiers lays here.~
 ~
-8 15 3 0 7 0 0 1 0 0 0
+8 15 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 4 1 100
 E
@@ -828,7 +828,7 @@ book magic black~
 &+RMinanupoli's &+Lblack magic book~
 &+LA black magic book rests here.~
 ~
-8 3 3 0 15 0 1 1 0 0 0
+8 3 3 0 15 0 1 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 3029 100
 E
@@ -859,7 +859,7 @@ unholy crystal medallion~
 &+Lan &+cu&+Ln&+Ch&+Lo&+cl&+Ly&+C c&+cr&+Ly&+Cs&+ct&+Lal&+L m&+ce&+Ld&+Cal&+Ll&+cio&+Ln~
 &+LAn unholy crystal medallion rests here.~
 ~
-8 15 3 0 7 0 0 1 0 0 0
+8 15 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 300929 100
 E
@@ -889,7 +889,7 @@ hammer large~
 &+La large war hammer&n~
 &+LA large warhammer rests here.~
 ~
-5 19 3 0 7 0 4194304 8193 64 0 0
+5 19 3 0 7 0 4194304 8193 32832 0 0
 4 3 4 0 0 0 0 0
 20 2999 100
 E

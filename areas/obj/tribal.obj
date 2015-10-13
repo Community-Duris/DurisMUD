@@ -21,7 +21,7 @@ worm white piece meat~
 a piece of white-worm meat~
 A piece of &+csmelly&+W white&n meat lies here unregarded.~
 ~
-19 48 3 0 7 0 8916992 16385 0 0 0
+19 48 3 0 7 0 8916992 16385 32768 0 0
 21 0 0 4 0 0 0 0
 1 10 100
 E
@@ -36,7 +36,7 @@ worm white piece meat~
 a small piece of white-worm meat~
 A small piece of &+csmelly&+W white&n meat lies here unregarded.~
 ~
-19 48 3 0 7 0 8916992 16385 0 0 0
+19 48 3 0 7 0 8916992 16385 32768 0 0
 10 0 0 1 0 0 0 0
 1 10 100
 E
@@ -182,7 +182,7 @@ bone old wand~
 an old bone covered with magical runes~
 An old bone covered with some magical runes sits here, humming.~
 ~
-3 10 3 0 3 0 12288 16385 64 4227727361 0
+3 10 3 0 3 0 12288 16385 32832 4227727361 0
 50 1 1 93 0 0 0 0
 5 5 50
 E
@@ -295,7 +295,7 @@ shoes deerskin~
 &+ya pair of &+gfine&+y deerskin shoes&n~
 &+gA pair of fine &+ydeerskin shoes&+g gathers dust here.&n~
 ~
-9 14 3 0 8 0 0 65 0 0 0
+9 14 3 0 8 0 0 65 32768 0 0
 5 0 0 2 0 0 0 0
 1 1000 100
 E
@@ -312,7 +312,7 @@ skirt deerskin~
 &+ya deerskin skirt&n~
 &+wA &+ydeerskin skirt&+w is lying here, abandoned.&n~
 ~
-9 13 3 0 7 0 0 33 0 0 0
+9 13 3 0 7 0 0 33 32768 0 0
 5 0 0 3 0 0 0 0
 2 1200 100
 E
@@ -327,7 +327,7 @@ bone twisted~
 a twisted bone~
 &+wA short twisted bone rests here, looking a bit out of place.&n~
 ~
-5 10 3 0 7 0 0 24577 0 0 0
+5 10 3 0 7 0 0 24577 32768 0 0
 10 1 2 7 0 0 0 0
 2 1 100
 E
@@ -345,7 +345,7 @@ key blue bluish iron~
 &+Ba bluish iron key&n~
 &+wA &+Bbluish iron key&+w is here, stuck in the ground&n~
 ~
-18 15 3 0 7 0 8388608 16385 0 0 0
+18 15 3 0 7 0 8388608 16385 32768 0 0
 0 50 0 0 0 0 0 0
 1 1 100
 E
@@ -428,7 +428,7 @@ crystal magnifying~
 &+Wa magnifying crystal&n~
 &+wA &+Wpiece of worked crystal&+w has been dumped here.~
 ~
-9 8 3 0 7 0 524288 147457 0 0 0
+9 8 3 0 7 0 524288 147457 32768 0 0
 3 0 0 3 0 0 0 0
 1 15000 100
 E
@@ -650,7 +650,7 @@ comb wooden beautiful~
 &+Ya beautifully crafted wooden comb&n~
 A beautiful wooden comb has been tossed aside here.~
 ~
-11 5 3 0 7 0 36864 16401 0 0 0
+11 5 3 0 7 0 36864 16401 32768 0 0
 0 0 0 0 0 0 0 0
 1 39 100
 E
@@ -668,7 +668,7 @@ blanket wool~
 &+ca blanket made from wool&n~
 &+yA woolen blanket lies on the floor here, providing warmth to everyone present.&n~
 ~
-11 3 3 0 7 0 0 16794625 0 0 0
+11 3 3 0 7 0 0 16794625 32768 0 0
 0 0 0 0 0 0 0 0
 4 1500 95
 E
@@ -699,7 +699,7 @@ deerskin piece green spotted skin~
 &+ya piece of &+ggr&+ye&+ge&+yn sp&+go&+yt&+gte&+yd deerskin~
 &+yA gr&+ge&+yen-&+gsp&+yot&+gt&+yed piece of deerskin looks a bit out of place here.&n~
 ~
-12 13 3 0 7 0 4096 1 0 0 0
+12 13 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 50 100
 E
@@ -991,7 +991,7 @@ horn devils small~
 &+ra small horn of a devil&n~
 &+rA small horn of devilish nature lies here, emanating aura of evil.&n~
 ~
-5 10 3 1 7 0 0 8193 0 0 0
+5 10 3 1 7 0 0 8193 32768 0 0
 2 1 6 11 0 0 0 0
 1 10000 100
 E
@@ -1019,7 +1019,7 @@ oat handful grain grains~
 &+ysome oat grains&n~
 &+yA handful of oat grain lies here, scattered.&n~
 ~
-19 48 3 1 7 0 0 1 0 0 0
+19 48 3 1 7 0 0 1 32768 0 0
 1 0 0 0 0 0 0 0
 1 10 100
 E
@@ -1049,7 +1049,7 @@ root ancient~
 &+yan&+g ancient&+y and &+gmagical&+y root&n~
 &+gAn ancient looking piece of tree root has been left here, apreading an aura of &+Ymagic&+g.&n~
 ~
-12 5 1 1 7 0 65536 8388609 64 0 0
+12 5 1 1 7 0 65536 8388609 32832 0 0
 0 0 0 0 0 0 0 0
 1 40100 100
 E
@@ -1463,7 +1463,7 @@ leg severed left~
 &+La severed left leg~
 &+LA severed drowish leg has been left here to rot.~
 ~
-13 2 3 5 7 0 69632 1 0 0 0
+13 2 3 5 7 0 69632 1 32768 0 0
 0 0 0 0 0 0 0 0
 10 1 100
 E
@@ -1475,7 +1475,7 @@ hand severed left~
 &+La severed left hand~
 &+LA severed hand has been abandoned here by previous owner.~
 ~
-13 2 3 6 7 0 69632 1 0 0 0
+13 2 3 6 7 0 69632 1 32768 0 0
 0 0 0 0 0 0 0 0
 7 1 100
 E
@@ -1487,7 +1487,7 @@ hand severed right~
 &+La severed right hand~
 &+LA severed hand has been abandoned here by previous owner.~
 ~
-13 2 3 6 7 0 69632 1 0 0 0
+13 2 3 6 7 0 69632 1 32768 0 0
 0 0 0 0 0 0 0 0
 7 1 100
 E
@@ -1499,7 +1499,7 @@ leg severed right~
 &+La severed right leg~
 &+LA severed drowish leg has been left here to rot.~
 ~
-13 2 3 5 7 0 69632 1 0 0 0
+13 2 3 5 7 0 69632 1 32768 0 0
 0 0 0 0 0 0 0 0
 10 1 100
 E
@@ -1511,7 +1511,7 @@ head drow~
 &+La &+rsevered &+Lhead of a&+m Drow Elf~
 &+LA dark-skinned &+Wwhite-haired &+rhead &+Lhas been rolled aside here.~
 ~
-8 2 3 4 7 0 69632 16385 64 0 0
+8 2 3 4 7 0 69632 16385 32832 0 0
 0 0 0 0 0 0 0 0
 4 1000 100
 E
@@ -1595,7 +1595,7 @@ egg soft white~
 &+Wa soft white egg~
 &+WA peculiar looking white egg of some sort ages here.~
 ~
-13 45 3 1 7 0 4096 8388609 0 0 0
+13 45 3 1 7 0 4096 8388609 32768 0 0
 0 0 0 0 0 0 0 0
 1 1000 100
 E

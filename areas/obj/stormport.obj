@@ -79,7 +79,7 @@ bundle leather straps~
 &+ya bundle of leather straps&n~
 &+yA bundle of leather straps has been dropped here.&n~
 ~
-8 13 3 0 7 0 4096 1 0 0 0
+8 13 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -92,7 +92,7 @@ slab granite~
 &+Wa slab of granite&n~
 &+WA large slab of granite has been dropped here.&n~
 ~
-8 13 3 0 7 0 0 1 0 0 0
+8 13 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 223 100
 E
@@ -448,7 +448,7 @@ shackles~
 &+La set of shackles from the prison&n~
 &+LSomeone has dropped a set of shackles here.&n~
 ~
-8 15 3 0 7 0 8388608 16385 0 0 0
+8 15 3 0 7 0 8388608 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 8 100
 E
@@ -461,7 +461,7 @@ verbeeg tooth~
 &+ya &+Lverbeeg&+y tooth&n~
 &+yThe tooth of a giant &+Lverbeeg&+y has been dropped here.&n~
 ~
-8 10 3 0 7 0 8392704 16385 0 0 0
+8 10 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 9 100
 E
@@ -474,7 +474,7 @@ captains badge~
 &+La &+Wcaptain's&+L badge&n~
 &+LA ship &+Wcaptain's&+L badge has been dropped here.&n~
 ~
-8 3 3 0 7 0 8388608 16385 0 0 0
+8 3 3 0 7 0 8388608 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 11 100
 E
@@ -486,7 +486,7 @@ smooth stone~
 &+ya smooth stone&n~
 &+yA smooth stone has been left here.&n~
 ~
-8 11 3 0 7 0 8392704 16385 0 0 0
+8 11 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 11 100
 E

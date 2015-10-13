@@ -2,7 +2,7 @@
 &+BMazzolin&n~
 21436 1 0 30 45 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 21308 1 1 100 0 0 0
@@ -148,46 +148,46 @@ M 0 21307 14 21350 100 0 0 0       * a red blugrul
 M 0 21309 12 21352 100 0 0 0       * an iridescent blugrul
 M 0 21306 15 21355 100 0 0 0       * a black blugrul
 M 0 21307 14 21357 100 0 0 0       * a red blugrul
-M 0 21336 14 21360 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21360 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21361 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21361 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21362 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21362 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21363 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21363 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21364 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21364 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21365 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21365 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21366 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21366 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21367 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21367 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21368 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21368 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21369 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21369 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21370 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21370 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21371 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21371 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21372 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21372 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
-M 0 21336 14 21373 100 0 0 0       * a patroling Mazzolin guard
+M 0 21336 14 21373 100 0 0 0       * a patrolling Mazzolin guard
 E 1 21315 14 12 100 0 0 0          *   some blue platemail
 E 1 21314 14 16 100 0 0 0          *   a blue longsword
 M 0 21311 1 21374 100 0 0 0        * the augurist

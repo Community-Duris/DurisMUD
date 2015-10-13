@@ -8,8 +8,8 @@ like the others, wears a red bandanna over his nose and mouth.  His eyes
 watch you carefully, and he is clad in a tight uniform that is completely
 black.
 ~
-100665352 0 0 8 0 0 0 -500 S
-PH 0 1 -1
+100665352 0 0 0 8 0 0 0 -500 S
+PH 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -23,8 +23,8 @@ like the others, wears a red bandanna over his nose and mouth.  His eyes
 watch you carefully, and he is clad in a tight uniform that is completely
 black.
 ~
-2058 0 0 8 0 0 0 -500 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 -500 S
+PH 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -36,8 +36,8 @@ beggar thief~
 The wretched creature is covered with festering sores.  His eyes dart
 back and forth as he begs you for money.  Lice peek out from his hair.
 ~
-206 0 0 0 0 0 0 -350 S
-PH 0 4096 -1
+206 0 0 0 0 0 0 0 -350 S
+PH 0 4096 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -49,8 +49,8 @@ nizarine thief shady rogue~
 The nimble thief isn't nimble enough to avoid being seen by you.  He is
 dressed in a tight black body suit, and has a bag of his tools at his belt.
 ~
-2189 0 0 524288 0 0 0 -800 S
-PH 0 1 -1
+2189 0 0 0 524288 0 0 0 -800 S
+PH 0 1 0 -1
 25 11 19 25d40+200 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -63,8 +63,8 @@ The nimble thief isn't nimble enough to avoid being seen by you.  He is
 dressed in a tight black body suit, and is muttering something about dropping
 his keys to the door somewhere.
 ~
-2191 1 0 524288 0 0 0 -800 S
-PH 0 4096 -1
+2191 1 0 0 524288 0 0 0 -800 S
+PH 0 4096 0 -1
 30 8 3 30d55+330 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -76,8 +76,8 @@ leader rogue roguish~
 The unprepossessing man seems to be nothing formidable at first glance, but
 looking closer you notice a certain grace and quickness to his movements.
 ~
-14 1 0 8 0 0 0 -1000 S
-PH 0 4096 -1
+14 1 0 0 8 0 0 0 -1000 S
+PH 0 4096 0 -1
 40 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -91,8 +91,8 @@ Nizari, but something about him just strikes you as different.  Perhaps it
 is the fact he looks you in the eyes and doesn't act like he's just picked
 your pocket.
 ~
-10 32 0 24 0 0 0 1000 S
-PH 0 32 -1
+10 32 0 0 24 0 0 0 1000 S
+PH 0 32 0 -1
 25 -1 -69 45d99+1980 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -104,8 +104,8 @@ A rat pauses its nibbling on trash to sit up and look around.
 The rat is rather large and looks well fed.  It is also, you note with some
 interest, larger than some small dogs.
 ~
-8 0 0 16 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 16 0 0 0 0 S
+A 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -117,8 +117,8 @@ camel~
 The animal looks back at you through bored, long lashed eyes ... then farts
 and spits at you.
 ~
-10 0 0 0 0 0 0 -500 S
-A 0 0 -1
+10 0 0 0 0 0 0 0 -500 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -131,8 +131,8 @@ The thing ... beast ... shadow ... whatever -- is a blot of darkness against
 the darkness.  All that is visible is the occasional glint of light off sharp
 claws and fangs.
 ~
-1073741838 1 0 33554632 0 0 0 -1000 S
-UG 0 1 -1
+1073741838 1 0 0 33554632 0 0 0 -1000 S
+UG 0 1 0 -1
 40 2 -38 40d88+880 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -145,8 +145,8 @@ The creature has long since ceased to be human.  The strange magics that
 have made the mummy 'live' again have stripped away any and all sense
 of humanity ... or mercy.
 ~
-14 1 0 136 0 0 0 -1000 S
-U 0 0 -1
+14 1 0 0 136 0 0 0 -1000 S
+U 0 0 0 -1
 18 13 42 18d30+90 3d4+2
 0.0.0.0 8748
 8 8 0
@@ -160,8 +160,8 @@ that it seems to glow.  Each and every individual scale is visible, and the
 fangs are exquisitely detailed, and the eyes ... was it just your imagination
 or did they just shift to look in your direction?? ... nah.
 ~
-10 0 0 28 0 0 0 0 S
-RS 0 0 -1
+10 0 0 0 28 0 0 0 0 S
+RS 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -173,8 +173,8 @@ A &+rr&+Ra&+Yi&+Gn&+Bb&+Mo&+mw &ndances in the air, a refraction off a large, ru
 The shimmering colors in the air seem to have solidified at this point.  The
 air fluctuates and undulates like a breathing, living creature.
 ~
-8388619 0 0 152 0 0 0 0 S
-OG 0 0 -1
+8388619 0 0 0 152 0 0 0 0 S
+OG 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 0
@@ -187,8 +187,8 @@ Judging from the elaborate symbols in the room and painted on the mummy
 itself, it seem this ... creature was once a powerful cleric.  Death does
 not seem to have blunted its spells at all!
 ~
-14 1 0 33554632 0 0 0 -1000 S
-U 0 256 -1
+14 1 0 0 33554632 0 0 0 -1000 S
+U 0 256 0 -1
 40 2 -28 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -201,8 +201,8 @@ Unkempt, unwashed, unclean and several other un-'s come to mind looking at
 this creature.  He bobs up and down at you, all the while grinning foolishly.
 You wonder if the fleas on his body can do tricks.
 ~
-10 0 0 0 0 0 0 -500 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 -500 S
+PH 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -215,8 +215,8 @@ The guard wears only a loincloth, which itself is almost obscured by the
 rolls of fat hanging off its midsection.  Despite its large size, it
 still moves quickly.
 ~
-8 1 0 8 0 0 0 -500 S
-H 0 1 -1
+8 1 0 0 8 0 0 0 -500 S
+H 0 1 0 -1
 40 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -229,8 +229,8 @@ Looking closer, you notice a faint aura of menace hovering about the flower;
 which itself has needle sharp thorns that are shaped remarkably like --
 teeth.
 ~
-10 1 0 0 0 0 0 0 S
-VT 0 0 -1
+10 1 0 0 0 0 0 0 0 S
+VT 0 0 0 -1
 25 20 87 4d15+54 1d5+0
 0.0.0.0 518
 8 8 0
@@ -243,8 +243,8 @@ His eyes are so wide from fright it seems only the whites are visible.
 There is a sheen of sweat coating his forehead, and he fairly reeks of fear.
 "You must leave," he whispers to you, "before it's too late!"
 ~
-136 0 0 0 0 0 0 150 S
-PH 0 0 -1
+136 0 0 0 0 0 0 0 150 S
+PH 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -257,8 +257,8 @@ Her eyes are so wide from fright it seems only the whites are visible.
 There is a sheen of sweat coating her forehead, and she fairly reeks of
 fear.  "You must leave," she whispers to you, "before it's too late!"
 ~
-136 0 0 0 0 0 0 150 S
-PH 0 0 -1
+136 0 0 0 0 0 0 0 150 S
+PH 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 2
@@ -271,8 +271,8 @@ Her hair is so light it can not be properly termed blonde; it is more white
 than anything else.  She's not wearing much, and judging from the vacuous
 look in her eyes there's not a whole lot on her mind either.
 ~
-140 0 0 0 0 0 0 -50 S
-PH 0 0 -1
+140 0 0 0 0 0 0 0 -50 S
+PH 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 5 5 2
@@ -284,8 +284,8 @@ A filthy, destitute denizen of northern Nizari wanders aimlessly around.
 It is hard to tell the 'honest' citizens of Nizari from the thieves and
 scum.  Of course, most outsiders hold there *is* no difference.
 ~
-12 0 0 0 0 0 0 0 S
-PH 0 0 -1
+12 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -297,8 +297,8 @@ A filthy, destitute denizen of Northern Nizari wanders aimlessly around.
 It is hard to tell the 'honest' citizens of Nizari from the thieves and
 scum.  Of course, most outsiders hold there *is* no difference.
 ~
-12 0 0 0 0 0 0 0 S
-PH 0 0 -1
+12 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 2
@@ -312,8 +312,8 @@ stands to reason he is the sultan.  His lips are frothing in anger at seeing
 you, and his hands are curled into claws.  Spittle splatters as he shrieks
 in indignation.
 ~
-14 1 0 152 0 0 0 -1000 S
-G 0 256 -1
+14 1 0 0 152 0 0 0 -1000 S
+G 0 256 0 -1
 60 -5 -111 55d121+4620 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -327,8 +327,8 @@ an almost palpable force.  His hands are stained the color of blood and the
 look in his eye can not be termed 'balanced' by the farthest stretch of the
 word.
 ~
-2062 0 0 90 0 0 0 -1000 S
-PH 0 512 -1
+2062 0 0 0 90 0 0 0 -1000 S
+PH 0 512 0 -1
 55 -5 -111 55d88+4565 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -341,8 +341,8 @@ He wears only a loincloth, which itself is by the
 rolls of fat hanging off his midsection.  Despite his
 large size, he still moves quickly.
 ~
-10 1 0 8 0 0 0 -500 S
-H 0 1 -1
+10 1 0 0 8 0 0 0 -500 S
+H 0 1 0 -1
 45 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -354,8 +354,8 @@ nizarine thief~
 The nimble thief isn't nimble enough to avoid being seen by you.  He is
 dressed in a tight black body suit, and has a bag of his tools at his belt.
 ~
-2189 0 0 524288 0 0 0 -800 S
-H 0 4096 -1
+2189 0 0 0 524288 0 0 0 -800 S
+H 0 4096 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1

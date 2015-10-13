@@ -42,7 +42,7 @@ blue horn dragon~
 a &+bblue tinged&n dragon &+whorn&n~
 A bluish horn is lying on the ground here.~
 ~
-4 10 9 0 15 50 102528 16385 0 0 0
+4 10 9 0 15 50 102528 16385 32768 0 0
 60 1 1 62 0 0 0 0
 5 321000 100 0 128 0 0
 E
@@ -57,7 +57,7 @@ black gem small~
 &+La small black gem&n~
 Lying lost amoung the cracks in the ground is a small dark gem.~
 ~
-11 8 9 0 14 100 110592 540673 64 0 0
+11 8 9 0 14 100 110592 540673 32832 0 0
 0 0 0 0 0 0 0 0
 1 230000 100
 E
@@ -75,7 +75,7 @@ potion granular~
 a &+ygr&+wan&+wul&+yar&n &+wpotion&n~
 A rather rough looking vial has been left on the ground.~
 ~
-10 15 3 0 11 0 40960 8404993 64 0 0
+10 15 3 0 11 0 40960 8404993 32832 0 0
 50 28 9 1 0 0 0 0
 1 43000 100
 E
@@ -88,7 +88,7 @@ find sand~
 a small handful of &+wfine&n &+ysand&n~
 Scattered across the ground is a fine sand.~
 ~
-13 11 9 0 7 100 45056 16385 0 0 0
+13 11 9 0 7 100 45056 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -115,7 +115,7 @@ white horn dragon~
 a &+Wpure white&n dragon &+whorn&n~
 A pure white horn is lying on the ground here.~
 ~
-3 10 9 0 14 10 36864 16385 64 0 0
+3 10 9 0 14 10 36864 16385 32832 0 0
 60 3 3 254 0 0 0 0
 5 523223 100
 E
@@ -141,7 +141,7 @@ rod iron curved~
 a curved &+ciron&n rod~
 A bent iron bar has been left on the ground here.~
 ~
-5 15 3 0 10 10 36864 24577 64 0 0
+5 15 3 0 10 10 36864 24577 32832 0 0
 10 2 5 7 0 0 0 0
 8 84380 100
 E
@@ -209,7 +209,7 @@ small dragon tooth~
 &+Wa small dragon tooth&n~
 A small tooth of some sort has been lost here.~
 ~
-13 10 9 0 15 10 8491008 16385 64 0 0
+13 10 9 0 15 10 8491008 16385 32832 0 0
 0 0 0 0 0 0 0 0
 6 100000 100
 E
@@ -312,7 +312,7 @@ white flower~
 &+Wa small white flower&n~
 A small &+Wwhite flower&n grows on the ground here.~
 ~
-13 30 3 0 10 100 4096 16385 0 0 0
+13 30 3 0 10 100 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E

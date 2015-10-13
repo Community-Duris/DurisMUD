@@ -6,8 +6,8 @@ The wolf cub~
 &+wAhh, isn't he cute! The small wolf cub doesn't even notice you as he paws at &N
 &+wthe ground, secure with the wolf pack nearby.&N
 ~
-200 0 0 0 0 0 0 0 S
-A 0 0 -1
+200 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 1
@@ -20,8 +20,8 @@ The grey wolf~
 &+wmeal. In a forest where only the strong survive this animal has thrived,&N
 &+wkilling the creatures around him and living off their meat.&N
 ~
-1073743944 1 0 0 0 0 0 -351 S
-A 0 0 -1
+1073743944 1 0 0 0 0 0 0 -351 S
+A 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 1
@@ -35,8 +35,8 @@ The battle scarred giant~
 &+wcauses him to look years beyone his age. Giving you hardly a notice he &N
 &+wsimply states, &+W'Go away warrior, my battling days are behind me.'&N
 ~
-33556559 0 0 0 0 0 0 -400 S
-G 0 1 -1
+33556559 0 0 0 0 0 0 0 -400 S
+G 0 1 0 -1
 35 6 -2 35d83+770 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -50,8 +50,8 @@ the dire wolf~
 &+weyes peer into the forest around him. His light gray hair is matted with &N
 &+wblood, still warm from his latest kill. &N
 ~
-1073743944 1 0 0 0 0 0 -400 S
-A 0 0 -1
+1073743944 1 0 0 0 0 0 0 -400 S
+A 0 0 0 -1
 19 13 39 19d30+95 3d4+2
 0.0.0.0 9234
 8 8 1
@@ -64,8 +64,8 @@ The undead skeleton~
 &+rthrough a pile of old books, most of their pages burnt. Within his eye &N
 &+rsockets a &+Rdeep red glow &+rcan be seen, giving no indication of understanding.&N
 ~
-33554506 1 0 65576 64 0 0 -1000 S
-U 0 0 -1
+33554506 1 0 0 65576 64 0 0 -1000 S
+U 0 0 0 -1
 34 6 -8 34d70+510 4d6+7
 0.0.0.0 44064
 8 8 0
@@ -79,8 +79,8 @@ a black bear~
 &+wright cheek, it appears to have come from a blade of some sort. As he stares&N
 &+wat you his growling becomes increasingly louder.&N
 ~
-2122 0 0 0 0 0 0 1000 S
-A 0 0 -1
+2122 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 1
@@ -92,8 +92,8 @@ The owl~
 &+wThe small owl flies among the nearby trees, occasionally landing on one of&N
 &+wthe branches as it stares at you in wonder.&N
 ~
-131272 0 0 134217728 0 0 0 0 S
-A 0 0 -1
+131272 0 0 0 134217728 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 1
@@ -106,8 +106,8 @@ The lizard man~
 &+gsword for battle. Saliva drips from his mouth at the sight of what he thinks &N
 &+gis his next meal. &N
 ~
-74 1 0 8 0 0 0 -900 S
-A 0 1 -1
+74 1 0 0 8 0 0 0 -900 S
+A 0 1 0 -1
 21 11 32 21d47+210 3d5+3
 0.0.0.0 18711
 8 8 1
@@ -120,8 +120,8 @@ The lizard man~
 &+gsword for battle. Saliva drips form his mouth at the sight of what he thinks &N
 &+gis his next meal.&N
 ~
-72 1 0 8 0 0 0 -900 S
-A 0 1 -1
+72 1 0 0 8 0 0 0 -900 S
+A 0 1 0 -1
 21 11 32 21d47+210 3d5+3
 0.0.0.0 18711
 8 8 1
@@ -134,8 +134,8 @@ The badger~
 &+wof fur running down along his face. He seems preoccupied with burrowing a &N
 &+wnew hole than in your presence.&N
 ~
-8 1 0 0 0 0 0 0 S
-A 0 0 -1
+8 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 1
@@ -149,8 +149,8 @@ The carniverous plant~
 &+gtwitches with dark red blood . You notice one of the vines inching slowly in&N
 &+gyour direction.&N
 ~
-10 1 0 1048576 0 0 0 0 S
-VT 0 0 -1
+10 1 0 0 1048576 0 0 0 0 S
+VT 0 0 0 -1
 30 8 3 30d55+630 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -163,8 +163,8 @@ The boar~
 &+wbegins sniffing at some unknown object. Twigs and leaves can be seen matted &N
 &+wwithin his matted fur. As you enter he begins sniffing in your direction.&N
 ~
-8 1 0 0 0 0 0 0 S
-A 0 0 -1
+8 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 9 18 71 9d18+31 2d3+1
 0.0.0.0 1166
 8 8 1
@@ -178,8 +178,8 @@ The crocodile~
 &+glake. As he notices you he begins thrashing his tail in the water, angered&N
 &+gby your presence.&N
 ~
-262154 1 0 0 0 0 0 -200 S
-R 0 0 -1
+262154 1 0 0 0 0 0 0 -200 S
+R 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
@@ -192,8 +192,8 @@ the stone gargoyle~
 &+Lstone skin moves here with quiet purpose. As it stares off into the horizon &N
 &+Lyou see it turn slowly in your direction, &+rred eyes glaring dangerously. &N
 ~
-10 1 0 152 0 0 0 -900 S
-OG 0 0 -1
+10 1 0 0 152 0 0 0 -900 S
+OG 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 6.2.6.1 22275
 8 8 0
@@ -206,8 +206,8 @@ the hawk~
 &+wfor his next meal. His dark brown feathers mix perfectly with the branches&N
 &+waround him, almost hiding from your view. &N
 ~
-133128 0 0 134217728 0 0 0 0 S
-B 0 0 -1
+133128 0 0 0 134217728 0 0 0 0 S
+B 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 1
@@ -220,8 +220,8 @@ the beaver~
 &+wwhich have stopped the flowing water. The beaver doesn't seem to even notice&N
 &+wyou enter as he continues his work on the dam.&N
 ~
-262154 0 0 0 0 0 0 0 S
-A 0 0 -1
+262154 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 1
@@ -234,8 +234,8 @@ the panther~
 &+Lintent on you as he balances on his hind legs. Quickly he glances at the&N
 &+Lexits, then prepares himself to pounce.&N
 ~
-2056 0 0 0 0 0 0 0 S
-A 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -248,8 +248,8 @@ the porcupine~
 &+wto protect it from predators. As it see's you it backs up defensively, &N
 &+wkeeping an eye on your position.&N
 ~
-200 0 0 0 0 0 0 0 S
-A 0 0 -1
+200 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 1
@@ -262,8 +262,8 @@ the treant~
 &+ghuge oaks which surround it. It stands tall and proud here, not moving as&N
 &+git keeps watch on the surrounding forest.&N
 ~
-2056 0 0 0 0 0 0 0 S
-G 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+G 0 0 0 -1
 25 11 29 25d40+325 3d5+3
 6.2.6.1 22275
 8 8 0
@@ -277,8 +277,8 @@ the woodsman~
 &+rworn down from years of hard use. As you enter he doesn't seem to notice &N
 &+ryou, too intent on his meal cooking in the fire.&N
 ~
-33556490 0 0 0 0 0 0 -600 S
-PH 0 1 -1
+33556490 0 0 0 0 0 0 0 -600 S
+PH 0 1 0 -1
 45 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -292,8 +292,8 @@ Ascuren~
 &+Wapparently communicating with the trees. Once he notices you enter he turns&N
 &+Wquietly and smiles.&N
 ~
-33585161 0 0 8 0 0 0 300 S
-PH 0 128 -1
+33585161 0 0 0 8 0 0 0 300 S
+PH 0 128 0 -1
 48 -3 -78 48d110+2592 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -307,8 +307,8 @@ Daumis the sage~
 &+Walthough he kneels in the dirt. His hair is pulled back behind him as he&N
 &+Wprays. &+rIt is obvious that he's distressed about something.&N
 ~
-33556491 0 0 0 0 0 0 500 S
-PH 0 32 -1
+33556491 0 0 0 0 0 0 0 500 S
+PH 0 32 0 -1
 45 -1 -69 45d99+1980 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -321,8 +321,8 @@ Jarnes~
 &+Wdesigns. He searches the vegetation carefully, trying to find something. &N
 &+rIt's obvious that he's distressed about something.&N
 ~
-33556490 0 0 0 0 0 0 500 S
-PH 0 1 -1
+33556490 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 48 6 -2 32d77+512 4d6+7
 6.8.0.2 41472
 8 8 1
@@ -336,8 +336,8 @@ The korred~
 &+rappearing to be that of a goat. As you look at him he begins laughing, then&N
 &+rstops suddenly and grins.&N
 ~
-33556495 0 0 0 0 0 0 -300 S
-H 0 1 -1
+33556495 0 0 0 0 0 0 0 -300 S
+H 0 1 0 -1
 44 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -350,8 +350,8 @@ The deer~
 &+wespecially green. Noticing you it turns its head in your direction, &N
 &+wears raising up as it watches to make sure you pose no threat.&N
 ~
-2057 0 0 0 0 0 0 0 S
-A 0 0 -1
+2057 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 1
@@ -364,8 +364,8 @@ The rabbit~
 &+wslightly. The rabbit's fur is white, a few patches of black mixing in to &N
 &+whelp protect it from being spotted easily.&N
 ~
-2057 0 0 0 0 0 0 0 S
-A 0 0 -1
+2057 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 1
@@ -378,8 +378,8 @@ The packrat~
 &+wthe bobbles which he collects as his treasures. Although the bobbles are&N
 &+wworthless its apparent that this little creature values them greatly.&N
 ~
-2062 0 0 0 0 0 0 0 S
-A 0 0 -1
+2062 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 1
@@ -392,8 +392,8 @@ a brown bear~
 &+woff a rich brown. As he notices you he rises up to its full height, showing&N
 &+woff an impressive view of his size. &N
 ~
-1073743944 1 0 0 0 0 0 -351 S
-A 0 0 -1
+1073743944 1 0 0 0 0 0 0 -351 S
+A 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
@@ -406,8 +406,8 @@ The water snake~
 &+balmost causing you to miss it completely. As it notices you it begins to&N
 &+bmove cautiously in your direction.&N
 ~
-262154 1 0 0 0 0 0 -400 S
-F 0 0 -1
+262154 1 0 0 0 0 0 0 -400 S
+F 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 1
@@ -419,8 +419,8 @@ The otter~
 &+bThe otter seems to be enjoying its daily swim, paying no notice to you at&N
 &+ball as it swims. He splashes along the river as if you weren't there at all.&N
 ~
-262154 0 0 0 0 0 0 0 S
-A 0 0 -1
+262154 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 1
@@ -433,8 +433,8 @@ The grey wolf~
 &+wmeal. In a forest where only the strong survive this animal has thrived,&N
 &+wkilling the creatures around him and living off their meat.&N
 ~
-1073743880 1 0 0 0 0 0 -351 S
-A 0 0 -1
+1073743880 1 0 0 0 0 0 0 -351 S
+A 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 0.0.0.0 5832
 8 8 1
@@ -448,8 +448,8 @@ the dire wolf~
 &+weyes peer into the forest around him. His light gray hair is matted with &N
 &+wblood, still warm from his latest kill. &N
 ~
-1073743880 1 0 0 0 0 0 -400 S
-A 0 0 -1
+1073743880 1 0 0 0 0 0 0 -400 S
+A 0 0 0 -1
 19 13 39 19d30+95 3d4+2
 0.0.0.0 9234
 8 8 1
@@ -462,8 +462,8 @@ The lizard man~
 &+gsword for battle. Saliva drips from his mouth at the sight of what he thinks &N
 &+gis his next meal. &N
 ~
-10 1 0 8 0 0 0 -900 S
-A 0 1 -1
+10 1 0 0 8 0 0 0 -900 S
+A 0 1 0 -1
 21 11 32 21d47+210 3d5+3
 0.0.0.0 18711
 8 8 1
@@ -476,8 +476,8 @@ The brown bear~
 &+woff a rich brown. As he notices you he rises up to its full height, showing&N
 &+woff an impressive view of his size. &N
 ~
-1073743880 1 0 0 0 0 0 -351 S
-A 0 0 -1
+1073743880 1 0 0 0 0 0 0 -351 S
+A 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1

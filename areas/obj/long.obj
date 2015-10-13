@@ -17,7 +17,7 @@ boobrie plumage~
 &+Msome plumage of a boobrie&N~
 &+MThe plumage of some giant boobrie lies here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -92,7 +92,7 @@ sac venom~
 &+Ma venom&+L sac&N~
 &+wA translucent sac drips a &+Mthick liquid here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 10 100
 E
@@ -135,7 +135,7 @@ bloody skin panther~
 &+Ra bloody&+L panther skin&N~
 &+RA blood covered&+L skin lies here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 3 100 100
 E
@@ -148,7 +148,7 @@ eyes eye frog~
 &+gsome eyes of a frog&N~
 &+gTwo small frog eyes have been dropped here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -162,7 +162,7 @@ wing bat~
 &+La wing of a bat&N~
 &+LA bat wing lies on the ground here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 1
 E
@@ -176,7 +176,7 @@ leg legs cricket~
 &+Ya pair of cricket legs&N~
 &+ya pair of tiny cricket legs have been dropped here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 1
 E
@@ -191,7 +191,7 @@ snake skin~
 &+ra snake&+L skin&N~
 &+rA snake&+L skin has been dropped here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 1
 E
@@ -205,7 +205,7 @@ head sabertooth~
 &+Lthe head of a &+ysabertooth&N~
 &+LThe head of a &+ysabertooth&+L is here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 1
 E
@@ -219,7 +219,7 @@ feather black~
 &+La black feather&N~
 &+LA black feather lies here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 1
 E
@@ -231,7 +231,7 @@ feather red~
 &+Ra red feather&N~
 &+RA red feather lies here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 1
 E
@@ -243,7 +243,7 @@ feather yellow~
 &+Ya yellow feather&N~
 &+YA yellow feather lies here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 1
 E
@@ -255,7 +255,7 @@ fur red pelt~
 &+ra fox fur&N~
 &+rA pelt of red fur lies here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -268,7 +268,7 @@ eyes owl small~
 &+Ya pair of owl eyes&N~
 &+YA small pair of eyes rolls about here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -322,7 +322,7 @@ scales fish fishscales blue~
 &+bsome blue fishscales&N~
 &+bA small set of fishscales have been dropped here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -336,7 +336,7 @@ scales fish fishscales red~
 &+rsome red fishscales&N~
 &+rA small set of red fishscales lies here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -378,7 +378,7 @@ skin raccoon~
 &+La raccoon&+w skin&N~
 &+LA black &+Wand white&+y skin lies here drying.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -391,7 +391,7 @@ head bloody~
 &+rthe bloody head of a knight&N~
 &+rThe bloody head of the knight rolls here.&N~
 ~
-12 15 3 0 7 0 20480 1 0 0 0
+12 15 3 0 7 0 20480 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -405,7 +405,7 @@ head bloody~
 &+rthe bloody head of the necromancer&N~
 &+rThe bloody head of the necromancer rolls here.&N~
 ~
-12 15 3 0 7 0 20480 1 0 0 0
+12 15 3 0 7 0 20480 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -419,7 +419,7 @@ head bloody~
 &+rthe bloody head of the chieftan&N~
 &+rThe bloody head of the chieftan rolls here.&N~
 ~
-12 15 3 0 7 0 20480 1 0 0 0
+12 15 3 0 7 0 20480 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -433,7 +433,7 @@ head bloody~
 &+rthe bloody head of the enchantress&N~
 &+rThe bloody head of the enchantress rolls here.&N~
 ~
-12 15 3 0 7 0 20480 1 0 0 0
+12 15 3 0 7 0 20480 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -447,7 +447,7 @@ head bloody~
 &+rthe bloody head of the dark priest&N~
 &+rThe bloody head of the dark priest rolls here.&N~
 ~
-12 15 3 0 7 0 20480 1 0 0 0
+12 15 3 0 7 0 20480 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -461,7 +461,7 @@ root briar~
 &+La briar root&N~
 &+LA dark briar root is covered in dirt here.&N~
 ~
-19 15 3 0 7 0 4096 1 0 0 0
+19 15 3 0 7 0 4096 1 32768 0 0
 4 0 0 1 0 0 0 0
 0 1000 100
 E
@@ -475,7 +475,7 @@ root mandrake~
 &+Ysome mandrake root&N~
 &+YA root resembling a human body lies here.&N~
 ~
-19 15 3 0 7 0 4096 1 0 0 0
+19 15 3 0 7 0 4096 1 32768 0 0
 4 0 0 1 0 0 0 0
 0 11000 100
 E
@@ -489,7 +489,7 @@ leaves lotus~
 &+Gsome lotus leaves&N~
 &+GA lotus plant blooms here.&N~
 ~
-19 15 3 0 7 0 4096 1 0 0 0
+19 15 3 0 7 0 4096 1 32768 0 0
 4 0 0 1 0 0 0 0
 0 1000 100
 E
@@ -502,7 +502,7 @@ nightshade clump~
 &+ma clump of&+L nightshade&N~
 &+mA clump of&+L nightshade has sprouted here.&N~
 ~
-19 15 3 0 7 0 4096 1 0 0 0
+19 15 3 0 7 0 4096 1 32768 0 0
 4 0 0 1 0 0 0 0
 0 1000 100
 E
@@ -515,7 +515,7 @@ mushroom red~
 &+ra red mushroom&N~
 &+RA red mushroom&+g is growing here.&N~
 ~
-19 15 3 0 7 0 8 1 0 0 0
+19 15 3 0 7 0 8 1 32768 0 0
 4 0 0 1 0 0 0 0
 0 1000 100
 E
@@ -541,7 +541,7 @@ talona kiss plant flowering~
 &+Lthe kiss of &+Mtalona bloom&N~
 A flowering &+M'Kiss of Talona' bloom&N hangs here.&N~
 ~
-19 15 3 0 7 0 8462336 1 0 0 0
+19 15 3 0 7 0 8462336 1 32768 0 0
 3 0 0 1 0 0 0 0
 0 10000 100
 E
@@ -555,7 +555,7 @@ blood drop virgin~
 &+Ra drop of virgin blood&N~
 &+Ra single drop of blood forms here.&N~
 ~
-12 15 3 0 7 0 8392704 1 0 0 0
+12 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 80000 100
 E
@@ -567,7 +567,7 @@ root razor~
 &+ythe root of a razor vine&N~
 &+yThe root of a razor vine is covered in dirt here.&N~
 ~
-19 15 3 0 7 0 4096 1 0 0 0
+19 15 3 0 7 0 4096 1 32768 0 0
 4 0 0 1 0 0 0 0
 0 100 100
 E
@@ -581,7 +581,7 @@ wing dragazhar scrap bloody~
 &+ra bloody scrap of &+Ldragazhar wing&N~
 &+rA bloody scrap of &+Ldragazhar wing is here.&N~
 ~
-12 15 3 0 7 0 8392704 1 0 0 0
+12 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -595,7 +595,7 @@ bulb wild tulip~
 &+Wthe bulb of a &+Mwild tulip&N~
 &+WThe bulb of a &+Mwild tulip&+W tries to grow here.&N~
 ~
-12 15 3 0 7 0 4096 1 0 0 0
+12 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 100 100
 E
@@ -608,7 +608,7 @@ vial red fluid slender~
 &+wa slender vial of &+rred fluid&N~
 &+wA slender vial of &+rred fluid&+w has been dropped here.&N~
 ~
-10 15 3 0 7 0 0 1 0 0 0
+10 15 3 0 7 0 0 1 32768 0 0
 10 66 14 15 0 0 0 0
 0 7500 100
 E
@@ -622,7 +622,7 @@ vial green fluid tiny~
 &+wa tiny vial of &+Gglowing green fluid&N~
 &+gA tiny vial of glowing green fluid has been dropped here.&N~
 ~
-10 15 3 0 7 0 0 1 0 0 0
+10 15 3 0 7 0 0 1 32768 0 0
 50 131 97 92 25 0 0 0
 0 12000 100
 E
@@ -636,7 +636,7 @@ vial glowing liquid shimmering~
 &+Ca shimmering vial of glowing bubbling liquid&N~
 &+CA shimmering vial of glowing bubbling liquid has been dropped here.&N~
 ~
-10 15 3 0 7 0 0 1 0 0 0
+10 15 3 0 7 0 0 1 32768 0 0
 15 28 35 1 0 0 0 0
 0 26000 100
 E
@@ -663,7 +663,7 @@ paste mushroom hollowed head~
 &+Ra hollowed out mushroom head &+Gfilled with paste&N~
 &+RA hollowed out mushroom head filled with paste lies here.&N~
 ~
-10 15 3 0 7 0 0 1 0 0 0
+10 15 3 0 7 0 0 1 32768 0 0
 7 41 39 1 0 0 0 0
 0 9000 100
 E
@@ -691,7 +691,7 @@ root mandrake venom~
 &+ya hollow mandrake root filled with &+Lvenom&N~
 &+yA hollow mandrake root lies here.&N~
 ~
-10 15 3 0 7 0 0 1 0 0 0
+10 15 3 0 7 0 0 1 32768 0 0
 2 35 1 15 0 0 0 0
 0 21000 100
 E
@@ -740,7 +740,7 @@ bracer symbol longhollow~
 &+Wa bracer bearing the &+BLonghollow&+Y symbol&n~
 &+bA small bracer lies on the ground here.~
 ~
-9 35 3 0 14 75 131072 4097 66 0 0
+9 35 3 0 14 75 131072 4097 32834 0 0
 10 0 0 5 0 0 0 0
 3 90000 100
 E
@@ -778,7 +778,7 @@ web spider fiddler~
 &+wa fiddler spider web&N~
 &+wA spider web sprawls across &+Ythe grass here.~
 ~
-12 15 3 0 7 0 0 1 0 0 0
+12 15 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -791,7 +791,7 @@ clump moss green~
 &+wa clump of &+ggreen moss&N~
 &+wA clump of &+ggreen moss&+w hangs here.~
 ~
-12 15 3 0 7 0 0 1 0 0 0
+12 15 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E

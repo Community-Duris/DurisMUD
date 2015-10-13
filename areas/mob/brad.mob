@@ -6,8 +6,8 @@ large spider~
 This spider is larger then ones you normally see.  He doesn't
 look very friendly, and you prepare to defend yourself.
 ~
-10 1 0 0 0 0 0 -100 S
-AS 0 0 -1
+10 1 0 0 0 0 0 0 -100 S
+AS 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -19,8 +19,8 @@ giant centipede~
 This big centipede is not something you want to get really close to.
 You are repulsed by it and prepare to attack.
 ~
-10 1 0 0 0 0 0 0 S
-I 0 0 -1
+10 1 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -33,8 +33,8 @@ From his gait you can sense he's quick and you would guess is some
 sort of hired thief or assassin.  Either way you're going to have to
 deal with him.  He doesn't like leaving live enemies behind.
 ~
-1073743944 1 0 32 0 0 0 -600 S
-PH 0 8192 -1
+1073743944 1 0 0 32 0 0 0 -600 S
+PH 0 8192 0 -1
 11 15 64 11d23+44 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -47,8 +47,8 @@ These monsters resemble birds in that they can fly, but that's where
 the similarities end.  A stirge feeds on blood, and apparently it has
 selected yours for its next meal.
 ~
-133130 1 0 67108864 0 0 0 -800 S
-I 0 0 -1
+133130 1 0 0 67108864 0 0 0 -800 S
+I 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 11 11 0
@@ -59,8 +59,8 @@ a large &+Ccellar rat&N is here staring at you with hungry eyes.
 ~
 It's a normal looking rat, except bigger.
 ~
-10 1 0 40 0 0 0 0 S
-A 0 0 -1
+10 1 0 0 40 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -73,8 +73,8 @@ This man looks like he was born on a boat.  From the look of him you can
 tell he has spent most of his life at sea, most likely up to illegal
 activities.  He doesn't look very friendly.
 ~
-67110920 1 0 524288 0 0 0 -1000 S
-PH 0 16384 -1
+67110920 1 0 0 524288 0 0 0 -1000 S
+PH 0 16384 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -86,8 +86,8 @@ a &+Bhuman smuggler is here&N, and he is &+r_not_&N happy to see you.
 This man looks like he has spent much of his life at sea, and usually
 avoiding authorities.
 ~
-67110920 1 0 524288 0 0 0 -1000 S
-PH 0 16384 -1
+67110920 1 0 0 524288 0 0 0 -1000 S
+PH 0 16384 0 -1
 7 18 77 7d21+38 2d3+1
 3.2.0.0 907
 8 8 1
@@ -99,8 +99,8 @@ a &+Wskeleton&N is here &+rmoaning&N as it approaches you; its arms outstretched
 This is the corpse of a long dead human, now animated for some purpose
 to serve evil.  It must be destroyed.
 ~
-10 1 0 40 0 0 0 -1000 S
-U 0 0 -1
+10 1 0 0 40 0 0 0 -1000 S
+U 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -112,8 +112,8 @@ sanbalet chief smuggler~
 This human looks like he knows some magic and also looks like he can
 handle himself in a fight.  Better be careful with him.
 ~
-2058 1 0 8 16 0 0 -1000 S
-PH 0 512 -1
+2058 1 0 0 8 16 0 0 -1000 S
+PH 0 512 0 -1
 17 13 45 17d24+85 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -124,8 +124,8 @@ a &+ggnoll&N is standing here ready to defend the place.
 ~
 Not very bright, but strong and good in a fight.
 ~
-67110920 1 0 0 0 0 0 -1000 S
-H 0 1 -1
+67110920 1 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -136,8 +136,8 @@ goblin wandering~
 ~
 Not very strong, but will fight with ferocity when it attacks.
 ~
-2252 1 0 0 0 0 0 -600 S
-HG 0 0 -1
+2252 1 0 0 0 0 0 0 -600 S
+HG 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 1
@@ -148,8 +148,8 @@ giant weasel~
 ~
 A normal weasel, only bigger, and with an angry glare in its eyes.
 ~
-10 1 0 0 0 0 0 0 S
-A 0 0 -1
+10 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -160,8 +160,8 @@ a giant&+L ant&N is going to bite you.
 ~
 These ants are rather large and live but to serve their queen.
 ~
-10 1 0 0 0 0 0 0 S
-I 0 0 -1
+10 1 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -174,8 +174,8 @@ spirit lord braddistock~
 &+Whe now strives to keep out as many people as possible.  Only a select few
 &+Wmay enter and those who are denied might have to face his wrath.&N
 ~
-133134 0 0 671088824 14493 0 0 0 S
-G 0 1 -1
+133134 0 0 0 671088824 14493 0 0 0 S
+G 0 1 0 -1
 59 -7 -148 59d143+6785 7d6+35
 4.5.9.19 477900
 11 11 1

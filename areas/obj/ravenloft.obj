@@ -767,7 +767,7 @@ crystal statue raven idol ravenloft~
 &+Cthe idol of Ravenloft&N~
 &+CA crystal statue of a raven sits at the very top of the &+Waltar&+C.~
 ~
-8 8 1 0 14 0 33554433 16385 66 0 0
+8 8 1 0 14 0 33554433 16385 32834 0 0
 0 0 0 0 0 0 0 0
 1 2009123 100
 E
@@ -1122,7 +1122,7 @@ document ravenloft indulgence scroll~
 &+ya document of &+rRavenloft Indulgence&N~
 &+yA document entitled '&+rRavenloft Indulgence&+y' lies here, forgotten.~
 ~
-8 29 3 0 7 0 4096 16385 0 0 0
+8 29 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 25432 100
 E
@@ -1138,7 +1138,7 @@ document ravenloft lenience~
 &+ya document of &+cRavenloft Lenience&N~
 &+yAn old document entitled 'Ravenloft Lenience' lies herem forgotten.~
 ~
-8 29 1 0 7 0 4096 16385 64 0 0
+8 29 1 0 7 0 4096 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 600 100
 E
@@ -1543,7 +1543,7 @@ abyssal essence~
 &+Lan &+babyssal &+Lessence&N~
 &+LAn &+babyssal &+Lessence lies here, radiating pure &+bevil&+L.~
 ~
-8 1 0 0 15 0 4097 16385 64 0 0
+8 1 0 0 15 0 4097 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 10 100
 E
@@ -1783,7 +1783,7 @@ zionyn essence~
 &+La &+mZionyn &+Lessence&N~
 &+LAn evil essence of &+mZionyn &+Lfloats here in mid-air.~
 ~
-8 1 0 0 15 0 67121153 16385 64 0 0
+8 1 0 0 15 0 67121153 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 10 100
 E
@@ -1820,7 +1820,7 @@ dayheart~
 &+Ythe Dayheart&n~
 &+YThe Dayheart sits here on a pedestal, shining in ageless &+Wglory&+Y.~
 ~
-8 2 3 0 15 0 1 16385 66 0 0
+8 2 3 0 15 0 1 16385 32834 0 0
 0 0 0 0 0 0 0 0
 0 234987 100
 E

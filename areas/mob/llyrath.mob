@@ -7,8 +7,8 @@ seulith tall man~
 in the forest. Around his neck is the symbol of Chauntea, goddess of
 plantlife, balance and growth. He wears a solemn, but friendly look.
 ~
-1174407242 128 0 50339848 0 0 0 0 S
-PH 0 128 -1
+1174407242 128 0 0 50339848 0 0 0 0 S
+PH 0 128 0 -1
 28 8 10 28d60+336 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -20,8 +20,8 @@ A small ferret runs around here, searching for food and mischief.
    With sleek grey fur and beady black eyes, this ferret is not only
 hyperactive, but cute as well.
 ~
-2184 0 0 34078768 0 0 0 -5 S
-A 0 0 -1
+2184 0 0 0 34078768 0 0 0 -5 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -33,8 +33,8 @@ timid deer~
    Beautiful with black specks along its sides and large ears which rise
 up to search for any sound, this deer is timid and beautiful.
 ~
-200 0 0 32 0 0 0 500 S
-A 0 0 -1
+200 0 0 0 32 0 0 0 500 S
+A 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 2
@@ -46,8 +46,8 @@ ground squirrel~
    Much like a chipmunk, only larger and lives undergruond, this squirrel
 peeks out of its hole and scans the area regularly, looking for danger.
 ~
-202 0 0 33554432 0 0 0 0 S
-A 0 0 -1
+202 0 0 0 33554432 0 0 0 0 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 6 6 1
@@ -60,8 +60,8 @@ kalrath woodsman man~
 Llyrath forest well. He is tall and strong looking with a short, brown
 beard and moustache.
 ~
-1140852810 128 0 65552 0 0 0 0 S
-PH 0 0 -1
+1140852810 128 0 0 65552 0 0 0 0 S
+PH 0 0 0 -1
 31 6 0 31d70+465 4d6+7
 5.7.9.1 40176
 6 6 1
@@ -73,8 +73,8 @@ A &+Lblack &nowl is sitting on a branch here contentedly.&n
    With black and brown feathers, and large eyes, this owl is happy inside
 Llyrath forest. It keeps an eye out for a stray rodent, searching for food.
 ~
-2122 0 0 33554436 0 0 0 0 S
-B 0 0 -1
+2122 0 0 0 33554436 0 0 0 0 S
+B 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 6 6 0
@@ -87,8 +87,8 @@ fish~
 and brown scales. It swims around the surface of the water looking for
 drowning or swimming insects.
 ~
-262346 0 0 0 0 0 0 0 S
-F 0 0 -1
+262346 0 0 0 0 0 0 0 0 S
+F 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -101,8 +101,8 @@ small bat~
 wings, this bat hides in the cave, away from any of the predators that
 would think of a bat as a nice snack.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 1.0.0.0 129
 8 8 0
@@ -114,8 +114,8 @@ A small cricket runs around, trying to hide here.
    It hops around and hides durign the day and chirps during the night.
 It is fairly large for a cricket and brown in color.
 ~
-218 0 0 1048576 1024 0 0 0 S
-I 0 0 -1
+218 0 0 0 1048576 1024 0 0 0 S
+I 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -127,8 +127,8 @@ A falcon is here in a tree, preening its feathers.
    A beautiful specimen of bird, this falcon rests here on a branch,
 preening its feathers.
 ~
-133192 0 0 33554444 0 0 0 0 S
-B 0 0 -1
+133192 0 0 0 33554444 0 0 0 0 S
+B 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -140,8 +140,8 @@ A grey squirrel hops through the trees here.
    Grey with a long, furry tail, this squirrel runs through the forest,
 jumping from branch to branch.
 ~
-200 0 0 16 0 0 0 0 S
-A 0 0 -1
+200 0 0 0 16 0 0 0 0 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -151,8 +151,8 @@ raccoon~
 &+yA sneaky racc&+Loo&+yn wanders here, scrounging around.&n
 ~
 ~
-2188 0 0 33554432 0 0 0 0 S
-A 0 4096 -1
+2188 0 0 0 33554432 0 0 0 0 S
+A 0 4096 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 1
@@ -165,8 +165,8 @@ small hedgehog~
 It has a small snout and beady black eyes. Its small feet end in little
 sharp claws.
 ~
-72 0 0 32768 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 32768 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -179,8 +179,8 @@ wild boar~
 large, powerful tusks, this boar is threatened easily and will charge any
 who even approaches it.
 ~
-200 1 0 16 0 0 0 -500 S
-AC 0 0 -1
+200 1 0 0 16 0 0 0 -500 S
+AC 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 1
@@ -193,8 +193,8 @@ A little mouse is here, running in and out of its burrow.
 feet. Its fur is dark grey and its whiskers wriggle around constantly
 as it searches around its home.
 ~
-136 0 0 0 0 0 0 0 S
-A 0 0 -1
+136 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -206,8 +206,8 @@ stag magnificent deer~
    This 5-point stag is large and strong looking. It has brown fur and
 white fur running from its chest to the underside of its tail.
 ~
-200 0 0 52 0 0 0 100 S
-AH 0 0 -1
+200 0 0 0 52 0 0 0 100 S
+AH 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 1

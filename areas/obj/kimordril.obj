@@ -62,7 +62,7 @@ small potato~
 &+ya potato&n~
 &+yA small potato is here collecting dust.&n~
 ~
-19 48 2 2 7 0 0 1 0 0 0
+19 48 2 2 7 0 0 1 32768 0 0
 5 0 0 0 0 0 0 0
 1 10 100
 #95507
@@ -70,7 +70,7 @@ cutting knife~
 a cutting knife~
 A cutting knife lies here.~
 ~
-5 16 2 3 7 0 0 8193 0 4194697632 0
+5 16 2 3 7 0 0 8193 32768 4194697632 0
 2 1 4 11 0 0 0 0
 2 10 100
 A
@@ -80,7 +80,7 @@ carrot~
 &+Ra carrot&n~
 &+RA carrot is on the ground here.&n~
 ~
-19 48 2 2 7 0 0 1 0 0 0
+19 48 2 2 7 0 0 1 32768 0 0
 3 0 0 0 0 0 0 0
 1 6 100
 #95509
@@ -125,7 +125,7 @@ goat skin goatskin~
 some goatskin~
 A heap of smelly goatskin lies here.~
 ~
-13 12 3 8 7 0 0 1 0 0 0
+13 12 3 8 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #95513
@@ -133,7 +133,7 @@ black boar skin boarskin~
 &+Lsome black boarskin&n~
 &+LSome black boarskin is here, rotting away.&n~
 ~
-13 12 3 8 7 0 0 1 0 0 0
+13 12 3 8 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #95514
@@ -141,7 +141,7 @@ brown boar skin boarskin~
 &+ysome brown boarskin&n~
 &+ySome brown boarskin lies here in a heap.&n~
 ~
-13 12 3 8 7 0 0 1 0 0 0
+13 12 3 8 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #95515

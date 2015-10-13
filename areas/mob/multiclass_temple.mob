@@ -9,8 +9,8 @@ than the male dragons but to mistake her power would ensure a quick
 death. She is almost 150 feet from head to the tip of her tail and
 her wings would cloud the sun.
 ~
-35813450 1 0 671162552 14464 0 37756928 0 S
-D 0 1 7
+35813450 1 0 0 671162552 14464 0 37756928 0 S
+D 0 1 0 7
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -23,8 +23,8 @@ ice golem _nosneak_ _spec1_~
 &+Wthroughout this cavern. Its purpose is unknow. Its creator is
 &+Wunknown. Yet, it constantly scans the area for intruders.
 ~
-225866 1 0 939591966 0 128 67108864 0 S
-og 0 64 -1
+225866 1 0 0 939591966 0 128 67108864 0 S
+og 0 64 0 -1
 51 0 0 1d1+5000 5d10+80
 0.0.0.0 0
 8 8 0

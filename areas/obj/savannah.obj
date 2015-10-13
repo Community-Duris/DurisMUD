@@ -126,7 +126,7 @@ essence crystal kahir~
 &+Wthe &+cc&+Crystallized &+ce&+Cssence &+Wof the &+gK&+Gahir &+gt&+Gribe&N~
 &+WA &+Ccrystal &+Wthat hums with the voices of a hundred souls has been placed here.&N~
 ~
-8 8 3 0 7 0 8409153 1 0 1 0
+8 8 3 0 7 0 8409153 1 32768 1 0
 0 0 0 0 0 0 0 0
 4 291200 100
 E
@@ -160,7 +160,7 @@ feather tailfeather roc~
 &+ya &+Rr&+roc&+y's &+Yt&+Rail&+Wf&+Leather&N~
 &+yA four-foot feather lies here, looking amazingly out of place.&N~
 ~
-13 50 3 0 7 0 8392704 1 0 1 0
+13 50 3 0 7 0 8392704 1 32768 1 0
 0 0 0 0 0 0 0 0
 3 2011 100
 E
@@ -333,7 +333,7 @@ tusk~
 &+Wan elephant's tusk&N~
 &+WA long, curved elephant's tusk is lying here.&N~
 ~
-13 34 3 0 7 0 4096 1 0 1 0
+13 34 3 0 7 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 8 23244 100
 E
@@ -365,7 +365,7 @@ skin piece~
 an &+yga&+Lzel&N&+wle sk&+yin&N~
 A pie&+yce of gaz&+Lelle sk&N&+yin lie&+ws here.&N~
 ~
-13 13 3 0 7 0 4096 1 0 1 0
+13 13 3 0 7 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 4 4288 100
 E
@@ -395,7 +395,7 @@ bones skeleton lion~
 &+Wa pile of lion &N&+wbones&N~
 &+WA lion's &N&+wskeleton &+Wlies here, looking formerly ferocious.&N~
 ~
-13 10 3 0 7 0 4096 1 0 1 0
+13 10 3 0 7 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 16 10 100
 E
@@ -440,7 +440,7 @@ legendary drums chaos heroism instrument~
 &+Lthe &+Wleg&n&+wend&+Lary &+yd&+Yrums&+L of &+Wc&+mh&+ra&+yo&+Ys&+L and &+Wh&+Cerois&+Wm&n~
 &+Lsome &+yd&+Yrums&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
 ~
-32 35 10 0 14 0 0 16385 192 125796351 0
+32 35 10 0 14 0 0 16385 32960 125796351 0
 188 41 0 1 0 0 0 0
 0 100000 100
 E
@@ -458,7 +458,7 @@ legendary horn flight dragons dragon instrument~
 &+Lthe &+Wleg&n&+wend&+Lary &+yh&+Yorn&+L of &+wfl&+Wig&+wht&+L and &+gdr&+Gago&+gns&n~
 &+Lthe &+yh&+Yorn&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
 ~
-32 14 10 0 14 0 0 16385 64 125796351 0
+32 14 10 0 14 0 0 16385 32832 125796351 0
 189 41 0 1 0 0 0 0
 0 100000 100
 E
@@ -476,7 +476,7 @@ legendary lyre healing harming instrument~
 &+Lthe &+Wleg&n&+wend&+Lary &+yl&+Yyre&+L of &+Ch&+cea&+Cling&+L and &+Rha&+rrmi&+Rng&n~
 &+Lthe &+yl&+Yyre&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
 ~
-32 35 10 0 14 0 0 16385 192 0 0
+32 35 10 0 14 0 0 16385 32960 0 0
 185 41 0 1 0 0 0 0
 0 100000 100
 E
@@ -494,7 +494,7 @@ legendary flute sleeping charming instrument~
 &+Lthe &+Wleg&n&+wend&+Lary &+yf&+Ylute&+L of &+bs&+Bl&+Leepi&+Bn&+bg&+L and &+mc&+Mh&+Warmi&+Mn&+mg&n~
 &+Lthe &+yf&+Ylute&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
 ~
-32 35 10 0 14 0 0 16385 192 125796351 0
+32 35 10 0 14 0 0 16385 32960 125796351 0
 184 41 0 1 0 0 0 0
 0 100000 100
 E
@@ -512,7 +512,7 @@ legendary mandolin revelations forgetfulness instrument~
 &+Lthe &+Wleg&n&+wend&+Lary &+ym&+Yandolin&+L of &+mr&+Me&+Lvelatio&+Mn&+ms&+L and &+Lfo&+grg&+Cetfu&+gln&+Less&n~
 &+Lthe &+ym&+Yandolin&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
 ~
-32 35 10 0 14 0 0 16385 192 125796351 0
+32 35 10 0 14 0 0 16385 32960 125796351 0
 186 41 0 1 0 0 0 0
 0 100000 100
 E
@@ -530,7 +530,7 @@ legendary harp peace calming~
 &+Lthe &+Wleg&n&+wend&+Lary &+yh&+Yarp&+L of &+Wp&+Ceac&+We&+L and &+Cc&+Walmin&+Cg&n~
 &+Lthe &+yh&+Yarp&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
 ~
-32 35 10 0 14 0 0 16385 192 125796351 0
+32 35 10 0 14 0 0 16385 32960 125796351 0
 187 41 0 1 0 0 0 0
 0 100000 100
 E

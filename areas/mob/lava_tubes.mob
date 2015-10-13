@@ -6,8 +6,8 @@ snowbeast beast large furry~
 &+W   Not quite the tamest creature around, but it does have a certain childlike&N
 &+Winnocence between glares of ferocity.&N
 ~
-1073756289 1 0 8 0 0 0 200 S
-H 0 1 4
+1073756289 1 0 0 8 0 0 0 200 S
+H 0 1 0 4
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 0
@@ -21,8 +21,8 @@ snow vulture~
 &+Wthe body are all snow white as part of nature's effort to camouflage creatures&N
 &+Wof this region.&N
 ~
-33568897 1 0 33554432 0 0 0 0 S
-B 0 0 -1
+33568897 1 0 0 33554432 0 0 0 0 S
+B 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -36,8 +36,8 @@ lesser spiny boccila~
 &+Lversion is a bit larger, more muscular, and covered by rows of spiny plates,&N
 &+Lwhich tend to discourage predators.&N
 ~
-33566721 1 0 0 0 0 0 0 S
-AH 0 0 1
+33566721 1 0 0 0 0 0 0 0 S
+AH 0 0 0 1
 12 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 0
@@ -51,8 +51,8 @@ greater spiny boccila~
 &+Lversion is much larger, more muscular, and covered by rows of &+yspiny &+Lplates,&N
 &+Lwhich tend to discourage predators.&N
 ~
-33568769 1 0 0 0 0 0 0 S
-AH 0 0 2
+33568769 1 0 0 0 0 0 0 0 S
+AH 0 0 0 2
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 0
@@ -65,8 +65,8 @@ arctic wolf~
 &+Wa strong jaw for biting down meals. The wolf prefers fresh &+Rkills &+Wover any wimpy&N
 &+Wcooked food.&N
 ~
-33568840 1 0 32 0 0 0 0 S
-A 0 0 -1
+33568840 1 0 0 32 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 2
@@ -79,8 +79,8 @@ crystal phalanx~
 &+ci&+Cn &+ct&+Ch&+ce &+Ca&+ci&+Cr&+c, &+Cs&+co&+Cm&+cet&+Cim&+ces &+Cse&+cem&+Cin&+cg t&+Co b&+ce &+Cco&+cnn&+Ce&+cct&+Ce&+cd &+Cb&+cy &+Cf&+ci&+Cb&+ce&+Cr&+cs &+Cth&+ci&+Cnn&+ce&+Cr &+cth&+Ca&+cn &+Ca &+csp&+Ci&+cd&+Ce&+cr&+Cs&N
 &+Cw&+ce&+Cb&+cb&+Ci&+cn&+Cg&+c.&N
 ~
-8388611 0 0 33554432 0 0 0 0 S
-OG 0 0 -1
+8388611 0 0 0 33554432 0 0 0 0 S
+OG 0 0 0 -1
 30 11 19 25d40+200 3d5+3
 6.2.6.1 22275
 8 8 0
@@ -93,8 +93,8 @@ skeleton~
 &+Lthese &+Wb&+wo&+Wn&+we&+Ws &+Ltogether, yet there they are, stuck together in a disconcerting&N
 &+Lmanner.&N
 ~
-41957451 1 0 0 0 0 0 -500 S
-U 0 0 -1
+41957451 1 0 0 0 0 0 0 -500 S
+U 0 0 0 -1
 24 11 23 24d40+192 3d5+3
 0.0.0.0 21384
 8 8 0
@@ -107,8 +107,8 @@ chitta cute little~
 &+Lnaturedness. The &+ychitta&+L, however, is much more capable of defending itself with&N
 &+Lits sharp claws and two rows of teeth.&N
 ~
-200 0 0 0 0 0 0 500 S
-A 0 0 2
+200 0 0 0 0 0 0 0 500 S
+A 0 0 0 2
 9 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 1
@@ -119,8 +119,8 @@ seagull white~
 ~
 &+W   It's a bird, it's white, and has a thing for &+bwatery &+Wplaces.&N
 ~
-131272 0 0 0 0 0 0 500 S
-B 0 0 -1
+131272 0 0 0 0 0 0 0 500 S
+B 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -132,8 +132,8 @@ weasel sly~
 &+y   The weasel is a small, tube-like animal with quick reflexes and a painful&N
 &+ybite.&N
 ~
-1107310728 0 0 0 0 0 0 -10 S
-A 0 0 1
+1107310728 0 0 0 0 0 0 0 -10 S
+A 0 0 0 1
 8 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -145,8 +145,8 @@ flamingo pink~
 &+M   Th&+me &+Mm&+mo&+Mst &+mc&+Mo&+mmm&+Mo&+mn &+Mth&+mou&+Mght &+mpr&+Mo&+mv&+Mo&+mk&+Me&+md &+Mby &+mth&+Mi&+ms &+Mcr&+mea&+Mt&+mu&+Mr&+me &+Mi&+ms &+M"&+mI &+Mw&+mou&+Mldn&+m'&+Mt &+mw&+Ma&+mnt &+Ml&+me&+Mgs&N
 &+mth&+Ma&+mt b&+Me&+mnt l&+Mi&+mk&+Me &+mth&+Ma&+mt&+M.&+m" &+MP&+me&+Mrh&+ma&+Mps &+mi&+Mt &+mi&+Ms &+mb&+Me&+mst &+Mt&+mh&+Ma&+mt &+Mfl&+ma&+Mm&+mi&+Mng&+mo&+Ms &+mc&+Ma&+mn &+Mfly&+m.&N
 ~
-138 0 0 0 0 0 0 900 S
-B 0 0 -1
+138 0 0 0 0 0 0 0 900 S
+B 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 2
@@ -159,8 +159,8 @@ fire spirit~
 &+ri&+Rns&+rt&+Ran&+rc&+Re &+rb&+Re&+rf&+Ro&+rre&+R.  &+rI&+Rt &+rs&+Ree&+rms &+Rt&+ro &+rh&+Ra&+rv&+Re &+ra &+Rf&+ra&+Rc&+re &+Ra&+rt t&+Ri&+rm&+Re&+rs, &+Rs&+rome&+Rt&+rime&+Rs &+rm&+Ra&+rny&+R, &+ra&+Rlw&+rays &+Ri&+rn&N
 &+Rt&+rr&+Ra&+rg&+Ri&+rc &+Ra&+rnd &+Rp&+rai&+Rn&+re&+Rd &+re&+Rxpr&+re&+Rss&+rio&+Rns&+r.&N
 ~
-33568846 1 0 134744104 1 0 0 -900 S
-EF 0 1 -1
+33568846 1 0 0 134744104 1 0 0 -900 S
+EF 0 1 0 -1
 50 -3 -95 50d100+2650 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -173,8 +173,8 @@ fire spirit~
 &+ri&+Rns&+rt&+Ran&+rc&+Re &+rb&+Re&+rf&+Ro&+rre&+R.  &+rI&+Rt &+rs&+Ree&+rms &+Rt&+ro &+rh&+Ra&+rv&+Re &+ra &+Rf&+ra&+Rc&+re &+Ra&+rt t&+Ri&+rm&+Re&+rs, &+Rs&+rome&+Rt&+rime&+Rs &+rm&+Ra&+rny&+R, &+ra&+Rlw&+rays &+Ri&+rn&N
 &+Rt&+rr&+Ra&+rg&+Ri&+rc &+Ra&+rnd &+Rp&+rai&+Rn&+re&+Rd &+re&+Rxpr&+re&+Rss&+rio&+Rns&+r.&N
 ~
-33568846 1 0 134744104 1 0 0 -900 S
-EF 0 1 -1
+33568846 1 0 0 134744104 1 0 0 -900 S
+EF 0 1 0 -1
 50 -3 -95 50d100+2650 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -187,8 +187,8 @@ skeleton~
 &+Lthese &+Wb&+wo&+Wn&+we&+Ws &+Ltogether, yet there they are, stuck together in a disconcerting&N
 &+Lmanner.&N
 ~
-41957451 1 0 0 0 0 0 -500 S
-U 0 0 -1
+41957451 1 0 0 0 0 0 0 -500 S
+U 0 0 0 -1
 24 11 23 24d40+192 3d5+3
 0.0.0.0 21384
 8 8 0
@@ -201,8 +201,8 @@ skeleton~
 &+Lthese &+Wb&+wo&+Wn&+we&+Ws &+Ltogether, yet there they are, stuck together in a disconcerting&N
 &+Lmanner.&N
 ~
-41957451 1 0 0 0 0 0 -500 S
-U 0 0 -1
+41957451 1 0 0 0 0 0 0 -500 S
+U 0 0 0 -1
 24 11 23 24d40+192 3d5+3
 0.0.0.0 21384
 8 8 0
@@ -213,8 +213,8 @@ mountain goat~
 ~
 &+L   The mountain &+wgoat &+Lis a nimble creature, well adapted to cold climates.&N
 ~
-33554632 0 0 0 0 0 0 100 S
-A 0 0 -1
+33554632 0 0 0 0 0 0 0 100 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 1
@@ -227,8 +227,8 @@ skeleton~
 &+Lthese &+Wb&+wo&+Wn&+we&+Ws &+Ltogether, yet there they are, stuck together in a disconcerting&N
 &+Lmanner.&N
 ~
-41957451 1 0 0 0 0 0 -500 S
-U 0 0 -1
+41957451 1 0 0 0 0 0 0 -500 S
+U 0 0 0 -1
 24 11 23 24d40+192 3d5+3
 0.0.0.0 21384
 8 8 0
@@ -241,8 +241,8 @@ skeleton~
 &+Lthese &+Wb&+wo&+Wn&+we&+Ws &+Ltogether, yet there they are, stuck together in a disconcerting&N
 &+Lmanner.&N
 ~
-41957451 1 0 0 0 0 0 -500 S
-U 0 0 -1
+41957451 1 0 0 0 0 0 0 -500 S
+U 0 0 0 -1
 24 11 23 24d40+192 3d5+3
 0.0.0.0 21384
 8 8 0
@@ -255,8 +255,8 @@ skeleton~
 &+Lthese &+Wb&+wo&+Wn&+we&+Ws &+Ltogether, yet there they are, stuck together in a disconcerting&N
 &+Lmanner.&N
 ~
-41957451 1 0 0 0 0 0 -500 S
-U 0 0 -1
+41957451 1 0 0 0 0 0 0 -500 S
+U 0 0 0 -1
 24 11 23 24d40+192 3d5+3
 0.0.0.0 21384
 8 8 0
@@ -268,8 +268,8 @@ flamingo pink~
 &+M   Th&+me &+Mm&+mo&+Mst &+mc&+Mo&+mmm&+Mo&+mn &+Mth&+mou&+Mght &+mpr&+Mo&+mv&+Mo&+mk&+Me&+md &+Mby &+mth&+Mi&+ms &+Mcr&+mea&+Mt&+mu&+Mr&+me &+Mi&+ms &+M"&+mI &+Mw&+mou&+Mldn&+m'&+Mt &+mw&+Ma&+mnt &+Ml&+me&+Mgs&N
 &+mth&+Ma&+mt b&+Me&+mnt l&+Mi&+mk&+Me &+mth&+Ma&+mt&+M.&+m" &+MP&+me&+Mrh&+ma&+Mps &+mi&+Mt &+mi&+Ms &+mb&+Me&+mst &+Mt&+mh&+Ma&+mt &+Mfl&+ma&+Mm&+mi&+Mng&+mo&+Ms &+mc&+Ma&+mn &+Mfly&+m.&N
 ~
-202 0 0 0 0 0 0 900 S
-B 0 0 -1
+202 0 0 0 0 0 0 0 900 S
+B 0 0 0 -1
 3 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 2
@@ -282,8 +282,8 @@ buffalo~
 &+yhump.  He seems to be wandering the area in search of something to satisfy his&N
 &+Rhunger&+y.  A strange empty glazed look fills his weary dreary foreboding &+Leyes&+y.&N
 ~
-33566792 0 0 65536 0 0 0 1000 S
-A 0 1 3
+33566792 0 0 0 65536 0 0 0 1000 S
+A 0 1 0 3
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -296,8 +296,8 @@ massive buffalo~
 &+yhump.  He seems to be wandering the area in search of something to satisfy his&N
 &+Rhunger&+y.  A strange empty glazed look fills his weary dreary foreboding &+Leyes&+y.&N
 ~
-33566792 0 0 65536 0 0 0 1000 S
-A 0 1 3
+33566792 0 0 0 65536 0 0 0 1000 S
+A 0 1 0 3
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -309,8 +309,8 @@ spore ball small sphere~
 &+L   It appears to be hollow and slightly transparent, with veinlike patterns on&N
 &+Lits surface.&N
 ~
-8388673 0 0 67108864 0 0 0 0 S
-AP 0 0 -1
+8388673 0 0 0 67108864 0 0 0 0 S
+AP 0 0 0 -1
 9 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 0
@@ -322,8 +322,8 @@ spore ball large sphere~
 &+L   It appears to be hollow and slightly transparent, with veinlike patterns on&N
 &+Lits surface.&N
 ~
-41957449 0 0 67108864 0 0 0 0 S
-AP 0 0 3
+41957449 0 0 0 67108864 0 0 0 0 S
+AP 0 0 0 3
 14 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 0
@@ -336,8 +336,8 @@ skeletal skeleton snake~
 &+Lthese &+Wb&+wo&+Wn&+we&+Ws &+Ltogether, yet there they are, stuck together in a disconcerting&N
 &+Lmanner.&N
 ~
-41957451 1 0 0 0 0 0 -500 S
-U 0 0 -1
+41957451 1 0 0 0 0 0 0 -500 S
+U 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 0
@@ -350,8 +350,8 @@ xexos~
 toe in filth.  A pungent odor rises from him, of body odor and decay.  He
 is clad entirely in gray rags, and seems mostly harmless.
 ~
-33556555 0 0 33554488 0 0 0 -400 S
-G 0 256 -1
+33556555 0 0 0 33554488 0 0 0 -400 S
+G 0 256 0 -1
 18 13 52 18d33+198 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -365,8 +365,8 @@ agthrodos~
 &+Lsize of a tall &+Chuman&+L, its legs each as thick as a mighty oak.  It has no&N
 &+Ldiscernible neck.  &+LA&+rg&+Lt&+rh&+Lr&+ro&+Ld&+ro&+Li were rumored to be adept at &+bmagic&+L, too...&N
 ~
-33568843 1 0 33620216 192 0 0 -950 S
-G 0 33 -1
+33568843 1 0 0 33620216 192 0 0 -950 S
+G 0 33 0 -1
 56 -7 -104 56d132+6104 7d6+35
 1.3.8.6 226800
 8 8 0
@@ -381,8 +381,8 @@ automaton huge mechanical~
 &+ycreaking, a testimony to the skill of its creator, and stands nearly twelve&N
 &+yfeet high.&N
 ~
-33566795 1 0 65724 192 0 0 -500 S
-G 0 1 -1
+33566795 1 0 0 65724 192 0 0 -500 S
+G 0 1 0 -1
 56 6 -2 35d83+770 4d6+7
 9.9.1.2 45360
 8 8 0
@@ -395,8 +395,8 @@ squirrel small~
 &+ylittle eyes.  Most likely this squirrel is looking for something to satisfy his&N
 &+Rhunger&+y.&N
 ~
-72 0 0 0 2 0 0 1000 S
-A 0 0 2
+72 0 0 0 0 2 0 0 1000 S
+A 0 0 0 2
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -409,8 +409,8 @@ squirrel cute~
 &+ylittle eyes.  Most likely this squirrel is looking for something to satisfy her&N
 &+Rhunger&+y.&N
 ~
-72 0 0 0 2 0 0 1000 S
-A 0 0 1
+72 0 0 0 0 2 0 0 1000 S
+A 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -423,8 +423,8 @@ rodent cute~
 &+ylittle eyes.  Most likely this &+Lrodent &+yis searching for something to satisfy her&N
 &+Rhunger&+y.&N
 ~
-72 0 0 0 2 0 0 1000 S
-A 0 0 1
+72 0 0 0 0 2 0 0 1000 S
+A 0 0 0 1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -437,8 +437,8 @@ rodent small~
 &+ylittle eyes.  Most likely this &+Lrodent &+yis searching for something to satisfy his&N
 &+Rhunger&+y.&N
 ~
-72 0 0 0 2 0 0 1000 S
-A 0 0 2
+72 0 0 0 0 2 0 0 1000 S
+A 0 0 0 2
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -450,8 +450,8 @@ bird tiny~
 &+g   This tiny &+Cbird &+gflaps its little wings flying around looking for &+Linsects &+gto&N
 &+geat.  Perhaps this creature fell out of a nest, or is just exploring the world.&N
 ~
-131144 0 0 65536 2 0 0 1000 S
-B 0 0 1
+131144 0 0 0 65536 2 0 0 1000 S
+B 0 0 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -463,8 +463,8 @@ bird small~
 &+g   This small &+Cbird &+gflaps its little wings flying around looking for &+Linsects &+gto&N
 &+geat.  Perhaps this creature fell out of a nest, or is just exploring the world.&N
 ~
-131144 0 0 65536 2 0 0 1000 S
-B 0 0 2
+131144 0 0 0 65536 2 0 0 1000 S
+B 0 0 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -477,8 +477,8 @@ squirrel crafty~
 &+ylittle eyes.  Most likely this &+wsquirrel &+yis looking for something to satisfy his&N
 &+Rhunger&+y.&N
 ~
-72 0 0 0 2 0 0 1000 S
-A 0 0 2
+72 0 0 0 0 2 0 0 1000 S
+A 0 0 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -491,8 +491,8 @@ squirrel hungry~
 &+ylittle eyes.  Most likely this squirrel is looking for something to satisfy her&N
 &+Rhunger&+y.&N
 ~
-72 0 0 0 2 0 0 1000 S
-A 0 0 1
+72 0 0 0 0 2 0 0 1000 S
+A 0 0 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -507,8 +507,8 @@ mockvrakar demon vrakar~
 &+Lfrom the plane of mortals.  The hands of this monster &+Rglow&+L, giving off an eerie&N
 &+Lforeboding light.&N
 ~
-1110473290 1 0 3088681388 47298 0 34611712 -1000 S
-X 12 81 7
+1110473290 1 0 0 3088681388 47298 0 34611712 -1000 S
+X 12 81 0 7
 61 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -520,8 +520,8 @@ huge roc~
    &+LThis huge roc sits on a massive nest.  It seems to not pay attention
 &+Lto you, however, it may decide to defend its eggs if you get too close.
 ~
-2058 0 0 0 0 0 0 0 S
-B 0 0 1
+2058 0 0 0 0 0 0 0 0 S
+B 0 0 0 1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -534,8 +534,8 @@ fire spirit~
 &+ri&+Rns&+rt&+Ran&+rc&+Re &+rb&+Re&+rf&+Ro&+rre&+R.  &+rI&+Rt &+rs&+Ree&+rms &+Rt&+ro &+rh&+Ra&+rv&+Re &+ra &+Rf&+ra&+Rc&+re &+Ra&+rt t&+Ri&+rm&+Re&+rs, &+Rs&+rome&+Rt&+rime&+Rs &+rm&+Ra&+rny&+R, &+ra&+Rlw&+rays &+Ri&+rn&N
 &+Rt&+rr&+Ra&+rg&+Ri&+rc &+Ra&+rnd &+Rp&+rai&+Rn&+re&+Rd &+re&+Rxpr&+re&+Rss&+rio&+Rns&+r.&N
 ~
-33568846 1 0 134744104 1 0 0 -900 S
-EF 0 1 -1
+33568846 1 0 0 134744104 1 0 0 -900 S
+EF 0 1 0 -1
 50 -3 -95 50d100+2650 6d6+25
 0.0.0.0 121500
 8 8 0

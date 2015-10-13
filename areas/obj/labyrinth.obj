@@ -19,7 +19,7 @@ bat wing~
 &+La bat wing&n~
 &+LA bat wing lies here, &+rdismembered &+Lfrom the body it belongs to.&n~
 ~
-19 2 2 2 9 9 8192 2097153 0 0 0
+19 2 2 2 9 9 8192 2097153 32768 0 0
 6 0 0 12 0 0 0 0
 0 1000 100
 E
@@ -33,7 +33,7 @@ tuft sasquatch hair~
 &+ya tuft of sasquatch hair&n~
 &+yA tuft of sasquatch hair is here, providing a home for &+Llice&+y.&n~
 ~
-13 2 0 0 7 0 4096 16385 0 0 0
+13 2 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 E
@@ -46,7 +46,7 @@ beetle shell~
 &+wa &+Lbeetle &+wshell&N~
 &+wA shiny &+Lblack beetle &+wshell lies discarded on the ground here.&N~
 ~
-12 10 0 0 7 0 0 16385 0 0 0
+12 10 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 3 500 100
 E
@@ -70,7 +70,7 @@ poison sac~
 &+La spider's &+Gpoison &+Lsac&n~
 &+LA strange, &+Gjelly-like &+Lsac is here, pulsating with a life of its own.&N~
 ~
-17 2 0 0 7 0 4096 16385 0 0 0
+17 2 0 0 7 0 4096 16385 32768 0 0
 1 1 27 1103 0 0 0 0
 1 9000 100
 E
@@ -83,7 +83,7 @@ patch red moss~
 &+La patch of &+rred moss&n~
 &+LA patch of &+rred moss &+Llies off to the side here.&N~
 ~
-19 30 2 2 7 0 4096 16385 64 0 0
+19 30 2 2 7 0 4096 16385 32832 0 0
 10 0 0 0 0 0 0 0
 1 200 100
 E
@@ -97,7 +97,7 @@ patch blue moss~
 &+La patch of &+Bblue moss&n~
 &+LA patch of &+Bblue moss &+Llies off to the side here.~
 ~
-19 30 2 2 7 0 4096 16385 0 0 0
+19 30 2 2 7 0 4096 16385 32768 0 0
 10 0 0 0 0 0 0 0
 1 200 100
 E
@@ -111,7 +111,7 @@ patch green moss~
 &+La patch of &+ggreen moss&n~
 &+LA patch of &+ggreen moss &+Llies off to the side here.&N~
 ~
-19 30 2 2 7 0 4096 16385 0 0 0
+19 30 2 2 7 0 4096 16385 32768 0 0
 10 0 0 0 0 0 0 0
 1 200 100
 E
@@ -125,7 +125,7 @@ patch black moss~
 &+wa patch of &+Lblack moss&n~
 &+wA patch of &+Lblack moss &+wlies off to the side here.&N~
 ~
-19 30 2 2 7 0 4096 16385 0 0 0
+19 30 2 2 7 0 4096 16385 32768 0 0
 5 0 0 6 0 0 0 0
 1 200 100
 E
@@ -200,7 +200,7 @@ dusty map~
 &+wa &+Ldusty &+wmap~
 &+wA map lies on the ground here, collecting &+Ldust&+w.&N~
 ~
-12 29 1 1 10 0 0 16385 0 0 0
+12 29 1 1 10 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 1000 100
 E
@@ -289,7 +289,7 @@ piece spider web~
 &+La piece of spider &+wweb&n~
 &+LA sticky piece of spider &+wweb &+Lis here, waiting to entangle its next victim.&n~
 ~
-12 1 0 0 7 0 24704 16385 0 0 0
+12 1 0 0 7 0 24704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1000 100
 E
@@ -807,7 +807,7 @@ bloody heart~
 &+La &+rbl&+Ro&+ro&+Rd&+ry &+Lmino&+rtaur heart&N~
 &+LA &+rbl&+Ro&+ro&+Rd&+ry &+Lmino&+rtaur heart &+Lrests upon the ground here.&N~
 ~
-8 2 3 0 15 53 28672 8404993 0 0 0
+8 2 3 0 15 53 28672 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 1 4444 100
 E
@@ -886,7 +886,7 @@ eye minotaur bloody~
 &+La &+rbloody &+Lmino&+rtaur &+Leye&N~
 &+LA &+rbloody &+Lmino&+rtaur &+Leye rests upon the ground here.&N~
 ~
-8 2 2 0 11 34 12288 8404993 0 0 0
+8 2 2 0 11 34 12288 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 10104 100
 E
@@ -934,7 +934,7 @@ tail severed minotaur~
 &+La severed tail of a &+Lmino&+rtaur&N~
 &+LA severed tail of a mino&+rtaur &+Lrests upon the gloomy ground.&N~
 ~
-8 2 3 0 11 35 12288 16385 0 0 0
+8 2 3 0 11 35 12288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 12912 100
 E

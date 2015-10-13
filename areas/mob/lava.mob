@@ -8,8 +8,8 @@ look in his eyes shows he's all business.   Many people give him much respect
 since he is a soldier.  For some reason he seems to be separated from the
 other soldiers.  There must have been complications in battle.
 ~
-1140852744 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1140852744 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -23,8 +23,8 @@ seriousness about him shows he's all business.   Many people give him much
 respect even now as a commander.  For some reason he seems to be separated
 from the rest of his army.  There must have been complications in battle.
 ~
-2056 0 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+2056 0 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ skeleton dark~
 lost its rotting flesh. The black bones of whatever race is was are now stark
 and bare to the harsh world. Its eyes glow with a hellish glow.
 ~
-1073743880 64 0 33554432 0 0 0 -1000 S
-sk 0 0 -1
+1073743880 64 0 0 33554432 0 0 0 -1000 S
+sk 0 0 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -51,8 +51,8 @@ ghost eerie~
 lost soul searching for revenge.  You can see through the ghost as if he
 wasn't really here.
 ~
-2056 0 0 33554432 0 0 0 -1000 S
-UG 0 0 -1
+2056 0 0 0 33554432 0 0 0 -1000 S
+UG 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -65,8 +65,8 @@ durka undead keeper innkeeper~
 man.  Now though, the wrinkles that were once a sign of aging now give
 him a haunting look.  Deep creases cover what's left of his skin.
 ~
-1141245962 0 0 33554432 0 0 0 -1000 S
-U 0 0 -1
+1141245962 0 0 0 33554432 0 0 0 -1000 S
+U 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -81,8 +81,8 @@ grossly distorted body, but what can't be covered up are the patches of
 his face that have lost their flesh and now show bloody remnants of his
 cheek and chin.
 ~
-2056 0 0 33554432 0 0 0 -1000 S
-U 0 1 -1
+2056 0 0 0 33554432 0 0 0 -1000 S
+U 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -97,8 +97,8 @@ slowly and painfully if bitten. The spider stands about three feet high and
 five feet long.  It moves at an astonishing speed, zipping around endlessly.
 It has been known to kill animals much bigger than itself.
 ~
-1140852746 1 0 33554432 0 0 0 -1000 S
-L 0 1 -1
+1140852746 1 0 0 33554432 0 0 0 -1000 S
+L 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -111,8 +111,8 @@ bat~
 inches in length, but it's very agile.  It flutters around the room screeching
 loudly.
 ~
-131080 0 0 33554432 0 0 0 -1000 S
-b 0 0 -1
+131080 0 0 0 33554432 0 0 0 -1000 S
+b 0 0 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -127,8 +127,8 @@ life it was a cute and happy kid.  The flesh of the zombie is almost
 completely gone.  It has slowly been falling off of the dead body.  The child
 is poor and is dressed in ragged clothes.
 ~
-2056 0 0 33554432 0 0 0 -1000 S
-U 0 0 -1
+2056 0 0 0 33554432 0 0 0 -1000 S
+U 0 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -141,8 +141,8 @@ commoner undead~
 was a slack off with no responsibility.  His skin has begun to hang down and
 peel off.
 ~
-2056 0 0 33554432 0 0 0 -1000 S
-U 0 0 -1
+2056 0 0 0 33554432 0 0 0 -1000 S
+U 0 0 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -157,8 +157,8 @@ and there on his shriveled body.  He looks at you expectantly.
 
 The undead blacksmith says "Excuse me, is there something you need?"
 ~
-2058 0 0 33554432 0 0 0 -1000 S
-U 0 1 -1
+2058 0 0 0 33554432 0 0 0 -1000 S
+U 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -173,8 +173,8 @@ He wears a pair of half-spectacles upon the lower bridge of his nose, and
 peers over them at you.  He rubs his hands in a greedy manner waiting for you
 to give him your money.
 ~
-2058 0 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+2058 0 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -186,8 +186,8 @@ crow black~
    The black crow has tar black feathers.  The bird is sitting nearby and
 staring at you with an evil intent.  The bird looks like it needs to be fed.
 ~
-8 0 0 33554432 0 0 0 -1000 S
-A 0 0 -1
+8 0 0 0 33554432 0 0 0 -1000 S
+A 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -199,8 +199,8 @@ lizard fire~
    The tiny lizard looks vicious.  It has somewhat hard scales all across its
 red body.
 ~
-8 1 0 33554432 0 0 0 -1000 S
-R 0 0 -1
+8 1 0 0 33554432 0 0 0 -1000 S
+R 0 0 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -222,8 +222,8 @@ are quite ugly and have black skin. They have long pointed ears and a mottled
 mane of yellow hair. Their sickly fangs protrude from their mouths as their
 cunning eyes pierce the darkness.
 ~
-1073743882 0 0 33554440 0 0 0 -1000 S
-X 0 1 -1
+1073743882 0 0 0 33554440 0 0 0 -1000 S
+X 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -237,8 +237,8 @@ walls as if the alcohol was still in his system.  He was once a disgrace to
 the town and hasn't gotten much better.  He notices you and lifts his hand as
 if holding a beer until stumbling backwards.
 ~
-1073741832 0 0 33554432 0 0 0 -1000 S
-HO 0 0 -1
+1073741832 0 0 0 33554432 0 0 0 -1000 S
+HO 0 0 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -251,8 +251,8 @@ vampire sinister~
 mind which is sucking others blood.  He also doesn't look too happy to be
 in this world.
 ~
-1140852744 0 0 33554432 0 0 0 -1000 S
-UV 0 1 -1
+1140852744 0 0 0 33554432 0 0 0 -1000 S
+UV 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -265,8 +265,8 @@ rakshasa~
 about seven feet tall.  He is like a humanoid, but he has the arms of an ape
 and the tail of a tiger.
 ~
-2058 0 0 33554432 0 0 0 -1000 S
-RA 0 0 -1
+2058 0 0 0 33554432 0 0 0 -1000 S
+RA 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -279,8 +279,8 @@ guard post~
 feet tall with broad shoulders and a thick neck.  He is aware of your every
 move and is prepared to attack.
 ~
-2058 0 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+2058 0 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -293,8 +293,8 @@ bat~
 inches in length, but it's very agile.  It flutters around the room screeching
 loudly.
 ~
-67241994 1 0 33554432 0 0 0 -1000 S
-A 0 0 -1
+67241994 1 0 0 33554432 0 0 0 -1000 S
+A 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -307,8 +307,8 @@ vampire bloodthirsty~
 mind which is sucking others blood.  He also doesn't look too happy to be
 in this world.
 ~
-2056 1 0 33554432 0 0 0 -1000 S
-UV 0 1 -1
+2056 1 0 0 33554432 0 0 0 -1000 S
+UV 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -323,8 +323,8 @@ giant garm~
 &+yThe garm stand here watching over the slaves to ensure the safety of the
 &+yvillagers.
 ~
-10 1 0 33554432 0 0 0 -1000 S
-A 0 0 -1
+10 1 0 0 33554432 0 0 0 -1000 S
+A 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -338,8 +338,8 @@ typhon.  He's taller than mountains and has serpentine legs and thighs.  Also
 his he has vast feathered wings on his back.  He is know as the village god
 that protects Lava Springs from harm.
 ~
-1074137098 1 0 167837864 0 0 0 -1000 S
-G 0 512 -1
+1074137098 1 0 0 167837864 0 0 0 -1000 S
+G 0 512 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -354,8 +354,8 @@ slave to Vionak the typhon who has garms watching over the slaves incase they
 try to escape.  The slave is tossed into the slave pens whenever he's not
 outside working in the fields.
 ~
-133128 1 0 33554432 0 0 0 0 S
-PL 0 32 -1
+133128 1 0 0 33554432 0 0 0 0 S
+PL 0 32 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -370,8 +370,8 @@ to Vionak the typhon who has garms watching over the slaves incase they try to
 escape.  The slave is tossed into the slave pens whenever he's not outside
 working in the fields.
 ~
-133128 0 0 33554432 0 0 0 0 S
-PO 0 1 -1
+133128 0 0 0 33554432 0 0 0 0 S
+PO 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -386,8 +386,8 @@ situation.  He is a slave to Vionak the typhon who has garms watching over
 the slaves incase they try to escape.  The slave is tossed into the slave
 pens whenever he's not outside working in the fields.
 ~
-133128 1 0 33554432 0 0 0 0 S
-PH 0 4096 -1
+133128 1 0 0 33554432 0 0 0 0 S
+PH 0 4096 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -398,8 +398,8 @@ conjurer slave~
 ~
 The conjurer slave is tall and stocky drow elf.
 ~
-133128 0 0 33554432 0 0 0 0 S
-PL 0 2048 -1
+133128 0 0 0 33554432 0 0 0 0 S
+PL 0 2048 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -410,8 +410,8 @@ necromancer slave~
 ~
 The necromancer slave is short and frail drow elf.
 ~
-133128 1 0 33554432 0 0 0 0 S
-PL 0 1024 -1
+133128 1 0 0 33554432 0 0 0 0 S
+PL 0 1024 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -426,8 +426,8 @@ situation.  He is a slave to Vionak the typhon who has garms watching over
 the slaves incase they try to escape.  The slave is tossed into the slave pens
 whenever he's not outside working in the fields.
 ~
-133128 0 0 33554432 0 0 0 0 S
-PL 0 512 -1
+133128 0 0 0 33554432 0 0 0 0 S
+PL 0 512 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -442,8 +442,8 @@ situation.  He is a slave to Vionak the typhon who has garms watching over
 the slaves incase they try to escape.  The slave is tossed into the slave pens
 whenever he's not outside working in the fields.
 ~
-133128 0 0 33554432 0 0 0 0 S
-PB 0 256 -1
+133128 0 0 0 33554432 0 0 0 0 S
+PB 0 256 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -458,8 +458,8 @@ situation.  He is a slave to Vionak the typhon who has garms watching over
 the slaves incase they try to escape.  The slave is tossed into the slave pens
 whenever he's not outside working in the fields.
 ~
-133128 0 0 33554432 0 0 0 0 S
-HO 0 16 -1
+133128 0 0 0 33554432 0 0 0 0 S
+HO 0 16 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -475,8 +475,8 @@ on his neck.
 A tiny illithid says 'Hey did you know I can mend stuff with my mind?!  I like
 to call it my job.  Mostly metals and jewels, though.'
 ~
-395274 0 0 33554432 0 0 0 0 S
-MF 0 4 -1
+395274 0 0 0 33554432 0 0 0 0 S
+MF 0 4 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -490,8 +490,8 @@ lava para-elemental elemental figure humanoid~
 &+rits plane, this creature seeks to consume all in its path, before it
 &+rbecomes one with the earth that it was once formed from.
 ~
-8 1 0 33554600 0 0 0 0 S
-EF 0 1 -1
+8 1 0 0 33554600 0 0 0 0 S
+EF 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

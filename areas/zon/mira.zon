@@ -2,7 +2,7 @@
 &+MMyrabolus&n~
 82683 1 0 25 35 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 82518 0 1 100 0 0 0
@@ -444,7 +444,7 @@ G 1 13321 4 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 13321 4 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 13321 4 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 82500 1 82667 100 0 0 0        * Roland
-E 1 82560 1 13 100 0 0 0           *   a black leather belt embossed with a silver cresent moon.
+E 1 82560 1 13 100 0 0 0           *   a black leather belt embossed with a silver cresent moon
 E 1 82500 1 16 100 0 0 0           *   a black double-edged shortsword dubbed, Huntsmaster
 M 0 82569 1 82669 100 0 0 0        * Balance
 M 0 82573 1 82670 100 0 0 0        * the dock master

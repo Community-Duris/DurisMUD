@@ -8,8 +8,8 @@ young urd~
 &+Lthree feet tall, his is covered with brick red scales.  His wings are half
 &+Lunfolded as if he was ready to take off if he sighted something tasty.
 ~
-2056 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 2 20 93 2d17+11 1d5+0
 1.0.0.0 259
 8 8 1
@@ -23,8 +23,8 @@ young urd warrior~
 &+Lstrong looking for his size. His scales are reddish black and his horns have
 &+Lbeen sharpened to points.
 ~
-2056 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 4 20 87 4d17+22 1d5+0
 2.1.0.0 518
 8 8 1
@@ -38,8 +38,8 @@ adult urd~
 &+bthree feet tall, his is covered with brick red scales.  His wings are half
 &+bunfolded as if he was ready to take off if he sighted something tasty.
 ~
-2056 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 5 20 83 5d17+27 1d5+0
 3.1.0.0 648
 8 8 1
@@ -53,8 +53,8 @@ urd warrior~
 &+bstrong looking for his size. His scales are reddish black and his horns have
 &+bbeen sharpened to points.
 ~
-2056 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 7 18 77 7d21+38 2d3+1
 3.2.0.0 907
 8 8 1
@@ -68,8 +68,8 @@ mature urd~
 &+cthree feet tall, his is covered with brick red scales.  His wings are half
 &+cunfolded as if he was ready to take off if he sighted something tasty.
 ~
-2056 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -83,8 +83,8 @@ mature urd warrior~
 &+cstrong looking for his size. His scales are reddish black and his horns have
 &+cbeen sharpened to points.
 ~
-2056 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -98,8 +98,8 @@ urd warrior~
 &+ystrong looking for his size. His scales are reddish black and his horns have
 &+ybeen sharpened to points.
 ~
-67110920 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+67110920 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 11 15 64 11d27+66 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -113,8 +113,8 @@ urd scavenger~
 &+rhas short ivory horns. His large leathery wings are folded behind him. He
 &+rcarries a large sack which has an ominous dark red stain on the bottom of it.
 ~
-2056 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 13 15 58 13d27+78 2d5+2
 6.5.2.0 6318
 8 8 1
@@ -129,8 +129,8 @@ young orgillon soldier~
 &+wis greenish grey and covered with hairy horny plates making it a formidible
 &+wopponent.
 ~
-67110922 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 9 18 71 9d21+49 2d3+1
 4.3.0.0 1166
 8 8 1
@@ -146,8 +146,8 @@ young orgillon mercenary~
 &+wis sharping its claws. It probably would not be a good idea to make it wait
 &+wtoo long.
 ~
-2056 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -162,8 +162,8 @@ mature orgillon soldier~
 &+wis greenish grey and covered with hairy horny plates making it a formidible
 &+wopponent.
 ~
-67110922 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 17 13 45 17d35+119 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -179,8 +179,8 @@ mature orgillon mercenary~
 &+wis sharping its claws. It probably would not be a good idea to make it wait
 &+wtoo long.
 ~
-2056 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -195,8 +195,8 @@ experienced orgillon soldier~
 &+wis greenish grey and covered with hairy horny plates making it a formidible
 &+wopponent.
 ~
-67110922 1 0 0 0 0 0 -1000 S
-HO 0 1 -1
+67110922 1 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -212,8 +212,8 @@ experienced orgillon mercenary~
 &+wis sharping its claws. It probably would not be a good idea to make it wait
 &+wtoo long.
 ~
-2056 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 21 11 32 21d47+210 3d5+3
 4.0.5.0 18711
 8 8 1
@@ -227,8 +227,8 @@ orgillon cleric~
 &+wyellow canine teeth protrude from its large, open mouth. His hairy skin is
 &+wgreenish gray and covered with horny plates.
 ~
-2058 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -242,8 +242,8 @@ orgillon mage~
 &+wlarge yellow canine teeth protrude from its jaws. The mage points his staff at
 &+wits helpless prey, chanting the words to a spell.
 ~
-2058 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -258,8 +258,8 @@ orgillon leader~
 &+wvicious look. His skin is greenish grey and covered with hairy horny plates
 &+wmaking it a formidible opponent.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 23 11 26 23d47+230 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -275,8 +275,8 @@ filthy spriggan~
 &+mvery sallow, giving him an unhealthy look. His clothes are plain and are grimy
 &+mwith sweat and dirt.
 ~
-2056 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 9 18 71 9d21+49 2d3+1
 4.3.0.0 1166
 8 8 1
@@ -286,8 +286,8 @@ dirty spriggan~
 &+bA dirty&n &+mspriggan&n &+Lstands here eating something he got out of his mustache.
 ~
 ~
-2056 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -303,8 +303,8 @@ filthy spriggan warrior~
 &+mvery sallow, giving him an unhealthy look. His clothes are plain and are grimy
 &+mwith sweat and dirt.
 ~
-2056 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -314,8 +314,8 @@ dirty spriggan hunter~
 &+bA dirty&n &+mspriggan&n &+chunter&n &+Lis busy tracking his prey.
 ~
 ~
-67110922 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 13 15 58 13d27+78 2d5+2
 6.5.2.0 6318
 8 8 1
@@ -331,8 +331,8 @@ spriggan warrior~
 &+mvery sallow, giving him an unhealthy look. His clothes are plain and are grimy
 &+mwith sweat and dirt.
 ~
-2056 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -342,8 +342,8 @@ spriggan hunter~
 &+bA&n &+mspriggan&n &+chunter&n &+Lstands here slaughtering his kill.
 ~
 ~
-67110920 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+67110920 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 16 13 48 16d35+112 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -356,8 +356,8 @@ female spriggan~
 &+mlike she is preparing a meal out of the various disgusting ingredients stored
 &+mhere. Her long dank hair hangs in the food.
 ~
-2058 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 2
@@ -372,8 +372,8 @@ spriggan shaman~
 &+mhis chin. His skin is very sallow, giving him an unhealthy look. His robes are
 &+mplain and are grimy with sweat and dirt.
 ~
-2056 0 0 0 0 0 0 -1000 S
-PG 0 256 -1
+2056 0 0 0 0 0 0 0 -1000 S
+PG 0 256 0 -1
 20 13 35 20d33+120 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -387,8 +387,8 @@ spriggan patriarch~
 &+mof his race. He is just as filthy, however, and his bright red hair and
 &+msideburns are matted with dirt and sweat.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 18 20 96 1d17+6 1d5+0
 1.0.0.0 129
 8 8 1
@@ -402,8 +402,8 @@ angry ettercap~
 &+Lthe ground. Two large fangs protrude from its mouth and its large blood red
 &+Leyes bulge with anticipation.
 ~
-2056 0 0 0 0 0 0 -1000 S
-AC 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+AC 0 1 0 -1
 16 13 48 16d35+112 3d4+2
 0.0.0.0 7776
 8 8 1
@@ -417,8 +417,8 @@ immature ettercap~
 &+Lthe ground. Two large fangs protrude from its mouth and its large blood red
 &+Leyes bulge with anticipation.
 ~
-2056 0 0 0 0 0 0 -1000 S
-AC 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+AC 0 1 0 -1
 17 13 45 17d35+119 3d4+2
 0.0.0.0 8262
 8 8 1
@@ -432,8 +432,8 @@ angry ettercap warrior~
 &+Lthe ground. Two large fangs protrude from its mouth and its large blood red
 &+Leyes bulge with anticipation.
 ~
-67110920 0 0 0 0 0 0 -1000 S
-AC 0 1 -1
+67110920 0 0 0 0 0 0 0 -1000 S
+AC 0 1 0 -1
 19 13 39 19d35+133 3d4+2
 0.0.0.0 9234
 8 8 1
@@ -447,8 +447,8 @@ ettercap warrior~
 &+Lthe ground. Two large fangs protrude from its mouth and its large blood red
 &+Leyes bulge with anticipation.
 ~
-2056 0 0 0 0 0 0 -1000 S
-AC 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+AC 0 1 0 -1
 21 11 32 21d47+210 3d5+3
 0.0.0.0 18711
 8 8 1
@@ -463,8 +463,8 @@ large ettercap~
 &+Lleader. Bits of its last meal lay scattered in a bloody heap on the ground it
 &+Lfront of it.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-AC 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+AC 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 0.0.0.0 19602
 8 8 1
@@ -478,8 +478,8 @@ rot grub~
 &+yteeth are ready to burrow into its next victim, straight to its heart. A very
 &+ypainful way to die!
 ~
-67110920 0 0 0 0 0 0 -1000 S
-AP 0 1 -1
+67110920 0 0 0 0 0 0 0 -1000 S
+AP 0 1 0 -1
 15 15 51 15d27+90 2d5+2
 0.0.0.0 7290
 8 8 0
@@ -493,8 +493,8 @@ carrion crawler~
 &+rup the scent of its next meal. As it moves, it leaves behind a noxious,
 &+rnoisome secretion marking its trail.
 ~
-2056 0 0 0 0 0 0 -1000 S
-AP 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+AP 0 1 0 -1
 18 13 42 18d35+126 3d4+2
 0.0.0.0 8748
 8 8 0
@@ -508,8 +508,8 @@ immature gulguthra~
 &+rof its body, it would be almost indistinguishable from the dung heap it is
 &+rhides in. Its eye stalks move slowly back and forth searching its next meal.
 ~
-2058 0 0 0 0 0 0 -1000 S
-AC 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+AC 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 0.0.0.0 23166
 8 8 0

@@ -2,7 +2,7 @@
 &+WCel&+Ces&+ctia&+Cl Pl&+Wane&n~
 45729 0 0 40 50 8
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 45545 5 14 100 0 0 0
@@ -370,8 +370,8 @@ E 1 45530 1 2 100 0 0 0            *   the ring of the masters
 E 1 45531 1 13 100 0 0 0           *   the masters belt
 G 1 45544 1 0 100 0 0 0            *    a jeweled key
 G 1 360 1 0 100 0 0 0              *    (object type not in this .obj file)
-G 1 921 1 45718 100 0 0 0          * (object type not in this .obj file)
-G 1 25103 1 45718 100 0 0 0        * (object type not in this .obj file)
+G 1 921 1 0 100 0 0 0              *    (object type not in this .obj file)
+G 1 25103 1 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 45545 12 45689 100 0 0 0       * a titan soldier
 M 0 45545 12 45690 100 0 0 0       * a titan soldier
 M 0 45573 10 45690 100 0 0 0       * a siren

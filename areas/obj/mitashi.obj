@@ -1095,7 +1095,7 @@ katana sword shadows breath~
 &+ca katana called '&n&+LShadows Breath&n&+c'&n~
 &+cThe magical katana '&n&+LShadows Breath&n&+c' has been mistakenly dropped.&n~
 ~
-5 16 3 0 15 0 83008 8193 0 2211843 0
+5 16 3 0 15 0 83008 8193 32768 2211843 0
 5 3 4 3 0 0 0 0
 8 19880 100
 E
@@ -1119,7 +1119,7 @@ katana sword north wind~
 &+ca katana called '&n&+WThe North Wind&n&+c'&n~
 &+cThe magical katana '&n&+WThe North Wind&n&+c' has been mistakenly dropped.&n~
 ~
-5 16 3 0 15 0 83008 24577 0 2195459 0
+5 16 3 0 15 0 83008 24577 32768 2195459 0
 5 3 4 3 0 0 0 0
 8 15555 100
 E
@@ -1143,7 +1143,7 @@ katana sword divine fury~
 &+ca katana called '&n&+CDivine Fury&n&+c'&n~
 &+cThe magical katana '&n&+CDivine Fury&n&+c' has been mistakenly dropped.&n~
 ~
-5 16 3 0 15 0 83008 8193 0 2195459 0
+5 16 3 0 15 0 83008 8193 32768 2195459 0
 5 3 4 3 0 0 0 0
 8 15666 100
 E
@@ -1167,7 +1167,7 @@ katana sword lotus blossom~
 &+ca katana called '&n&+mThe Lotus Bl&n&+Moss&n&+mom&+c'&n~
 &+cThe magical katana '&n&+mThe Lotus Bl&n&+Moss&n&+mom&n&+c' has been mistakenly dropped.&n~
 ~
-5 16 3 0 15 0 87104 8193 0 2195459 0
+5 16 3 0 15 0 87104 8193 32768 2195459 0
 5 3 4 3 0 0 0 0
 8 18888 100
 E
@@ -1191,7 +1191,7 @@ katana sword celestial dragon~
 &+ca katana called '&n&+BCelestial Dragon&n&+c'&n~
 &+cThe magical katana '&n&+BCelestial Dragon&n&+c' has been mistakenly dropped.&n~
 ~
-5 16 3 0 15 0 83008 8193 0 2195459 0
+5 16 3 0 15 0 83008 8193 32768 2195459 0
 5 3 4 3 0 0 0 0
 8 24010 100
 E
@@ -1215,7 +1215,7 @@ katana sword torrential rain~
 &+ca katana called '&n&+bTorrential Rain&n&+c'&n~
 &+cThe magical katana '&n&+bTorrential Rain&n&+c' has been mistakenly dropped.&n~
 ~
-5 16 3 0 15 0 87104 8193 0 2195459 0
+5 16 3 0 15 0 87104 8193 32768 2195459 0
 5 3 4 3 0 0 0 0
 8 19000 100
 E

@@ -7,8 +7,8 @@ orc guard~
 &+rhold&+w.  Though he is not as hostile as some of the other soldiers in
 &+wthe outpost, he is still not an orc soldier to be taken lightly.&n
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -23,8 +23,8 @@ orc scarb torntooth~
 &+wthem ally, or even semi-ally. He glares at your presence.&n
         &+W'Don't screw with me.'&+w He warns.&n
 ~
-1140852746 0 0 24 0 0 0 -1000 S
-HO 0 16384 -1
+1140852746 0 0 0 24 0 0 0 -1000 S
+HO 0 16384 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -38,8 +38,8 @@ orc lookout~
         &+WWe will show the world, Storm Port will conquer
         &+Wthem all!'&n
 ~
-1073743946 0 0 0 0 0 0 -1000 S
-HO 0 16384 -1
+1073743946 0 0 0 0 0 0 0 -1000 S
+HO 0 16384 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -53,8 +53,8 @@ orc archer~
 &+wany attackers who wish to challenge the might of the &+WSto&+Lrm &+bPort
 &+wauthority.&n
 ~
-67110922 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -67,8 +67,8 @@ rakshasa merchant~
 &+Lkeep the soldiers suppied with the usual goods and make some money
 &+Lwhile at it.&n
 ~
-1073743944 0 0 0 0 0 0 -1000 S
-RA 0 512 -1
+1073743944 0 0 0 0 0 0 0 -1000 S
+RA 0 512 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -81,8 +81,8 @@ orc stronghold guard~
 &+wof &+WSto&+Lrm&+b Port&+w they are given the menial job of lounging around in
 &+wthis ragged outpost and keeping watch.&n
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -94,8 +94,8 @@ resting orc soldier~
 &+wThis &+Lorc&+w is resting in between his guard shifts.  Though he isn't as
 &+walert as he normally is, he still probably could put up quite a fight.&n
 ~
-2122 0 0 0 0 0 0 -1000 S
-HO 0 16384 -1
+2122 0 0 0 0 0 0 0 -1000 S
+HO 0 16384 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -107,8 +107,8 @@ veteran orc soldier~
 &+wThis &+Lorc&+w is a veteran within the &+WSto&+Lrm&+b Port&+w military.  He is quite
 &+wdedicated to defending the outpost.&n
 ~
-2058 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -122,8 +122,8 @@ duergar engineer~
           &+Wif I were you. Them naval orcs don't like visitors
           &+Wthat much.'&n
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -135,8 +135,8 @@ warg~
 &+yThe warg has always been a favorite pet of the orcs. They are often
 &+yused as mounts or just loyal combatants in battle.&n
 ~
-1073744008 0 0 0 0 0 0 -1000 S
-A 0 1 2
+1073744008 0 0 0 0 0 0 0 -1000 S
+A 0 1 0 2
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -149,8 +149,8 @@ iromark mercenary minotaur~
 &+Llooks like he could crush a normal man's head with his hand without
 &+La second thought.&n
 ~
-67110984 1 0 0 0 0 0 -1000 S
-MT 0 16384 -1
+67110984 1 0 0 0 0 0 0 -1000 S
+MT 0 16384 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -163,8 +163,8 @@ orc rention warlord~
 &+Ldue to his cruel and vicious tactics in battle.  He is not an orc to
 &+Lbe taken lightly.&n
 ~
-1140852744 1 0 134217788 2050 0 0 -1000 S
-HO 0 1 -1
+1140852744 1 0 0 134217788 2050 0 0 -1000 S
+HO 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -177,8 +177,8 @@ raven~
 &+Laggression, but out of protection for its nest that lies somewhere
 &+Lclose by.&n
 ~
-2058 1 0 8 0 0 0 -1000 S
-B 0 1 -1
+2058 1 0 0 8 0 0 0 -1000 S
+B 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -191,8 +191,8 @@ orc field marshall~
 &+wwell as teaching the &+rsoldiers&+w, he also maintains order around the training
 &+Lgrounds&+w.&n
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -205,8 +205,8 @@ training orc soldier~
 &+wseems to be a catchy song, mentioning words like &+W'Destroy, Tharnadia,
 &+WArmageddon,'&+w and so on.&n
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-HO 0 64 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+HO 0 64 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -219,8 +219,8 @@ orc sailor~
 &+Lthe best of the best are allowed upon the city's flagship.  This
 &+Wsailor&+Lis exceptional at his duties.&n
 ~
-2184 1 0 0 0 0 0 -1000 S
-HO 0 64 -1
+2184 1 0 0 0 0 0 0 -1000 S
+HO 0 64 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -234,8 +234,8 @@ carefree pixie~
 &+carea. Perhaps this one is the last of a group of faeries who lived
 &+caround the area before the &+LOrcs&+c came in and set up the outpost.&n
 ~
-133208 0 0 135790602 1 0 0 1000 S
-HF 0 512 -1
+133208 0 0 0 135790602 1 0 0 1000 S
+HF 0 512 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -250,8 +250,8 @@ decker~
         &+WIf you can get us launched, I'll give you something
         &+Wspecial I have been holding on to.'&n
 ~
-1073743946 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743946 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -264,8 +264,8 @@ blazing ifrit~
 &+rappear angry or that hostile, it is obvious he isn't pleased by being
 &+rstuck inside a furance.  Poor guy.&n
 ~
-2058 0 0 1048576 1 0 1024 0 S
-EF 0 1 -1
+2058 0 0 0 1048576 1 0 1024 0 S
+EF 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -279,8 +279,8 @@ goblin trainee~
 &+wthat last through intial training are treated quite harshly when they
 &+wmove up in the ranks.&n
 ~
-67110922 0 0 0 0 0 0 -1000 S
-HG 0 4096 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+HG 0 4096 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -293,8 +293,8 @@ orc stronghold guard~
 &+wof &+WSto&+Lrm&+b Port&+w they are given the menial job of lounging around in
 &+wthis ragged outpost and keeping watch.&n
 ~
-1140852744 1 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1140852744 1 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -307,8 +307,8 @@ goblin captain~
 &+LThough not as talented as his orc counterparts, he is still quite
 &+Lefficient.&n
 ~
-1140852744 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+1140852744 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -321,8 +321,8 @@ archmage arch mage~
 &+Lis in charge in making sure the mystic orcs within the navy are fully
 &+Lequipped and prepared for battle.&n
 ~
-1140885514 0 0 0 0 0 0 -1000 S
-PH 0 512 -1
+1140885514 0 0 0 0 0 0 0 -1000 S
+PH 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -335,8 +335,8 @@ ghost aphantan visage~
 &+Wfounded &+MMyrabolus&+W.  Now he travels the prime material plane, collecting
 &+Wwhatever he can find lying around.&n
 ~
-1073743884 0 0 940122266 14530 128 8192 0 S
-UG 0 512 -1
+1073743884 0 0 0 940122266 14530 128 8192 0 S
+UG 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -350,8 +350,8 @@ slave master~
 &+yover zealous about his career choice, and takes great pleasure
 &+yevery time his whip tear the flesh of a slave.&n
 ~
-1073743882 1 0 0 0 0 0 -1000 S
-HO 0 64 -1
+1073743882 1 0 0 0 0 0 0 -1000 S
+HO 0 64 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -364,8 +364,8 @@ orc crew man crewman~
 &+Lthe usual sailing and preparation duties, but also defending the mammoth
 &+Lvessel from intruders.&n
 ~
-2184 1 0 0 0 0 0 -500 S
-HO 0 16384 -1
+2184 1 0 0 0 0 0 0 -500 S
+HO 0 16384 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -379,8 +379,8 @@ captain hordine scorn~
         &+W'I lost my sea maps, I can't even remember where I put them,
         &+WI travel so much they could be anywhere.'&n
 ~
-1140852746 0 0 16 2048 0 0 -500 S
-HO 0 16 -1
+1140852746 0 0 0 16 2048 0 0 -500 S
+HO 0 16 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -392,8 +392,8 @@ first mate orc~
 &+LThe &+Wfirst mate&+L defends the juggernaught viciously. He attacks without
 &+Lremorse, screaming out, &+W'No one but the navy may enter!'&n
 ~
-1073743882 1 0 8 0 0 0 -500 S
-HO 0 16384 -1
+1073743882 1 0 0 8 0 0 0 -500 S
+HO 0 16384 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -407,8 +407,8 @@ priest orc~
 &+Larrived. However they do get their spells, though, is not really the
 &+Lproblem, the unholy &+Wwrath&+L of a god blazing from their hands is...&n
 ~
-1140852744 0 0 8 0 0 0 -1000 S
-HO 0 32 -1
+1140852744 0 0 0 8 0 0 0 -1000 S
+HO 0 32 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -421,8 +421,8 @@ crazt githzerai~
 &+Lleague for help in eliminating the Hunters.  As a member of the &+gHunter-
 &+LKiller group, he is ruthless and more than just a little insane.&n
 ~
-1140852744 1 0 0 0 0 0 -1000 S
-GI 0 4 -1
+1140852744 1 0 0 0 0 0 0 -1000 S
+GI 0 4 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -436,8 +436,8 @@ sorcerer archilon master~
 &+Lpurpose of extracting revenge upon the &+gHunters&+L for a discretion made
 &+Llong in the past.&n
 ~
-67110920 1 0 0 0 0 0 -1000 S
-PH 0 512 -1
+67110920 1 0 0 0 0 0 0 -1000 S
+PH 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -451,8 +451,8 @@ A &+cHuman&n (medium) &+L-=*Black&+Wtalon&+y Company&+L*=-&n stands here.
         &+Wdoes the Drifter have to break down at the
         &+Wworst times?'&n
 ~
-72 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+72 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -465,8 +465,8 @@ An &+LOrc&n (medium) &+rBlood&+Lfist &+L-&+rBlood&+Laxe&+y Company&+L-&n stands 
 &+Ljust got off one of the ships in port and seems to be deciding on where
 &+Lto go next.&n
 ~
-1073743946 0 0 0 0 0 0 -1000 S
-HO 0 16384 -1
+1073743946 0 0 0 0 0 0 0 -1000 S
+HO 0 16384 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -480,8 +480,8 @@ A &+cHuman&n (medium) &+LJack of S&npa&+Lde&ns &+L/\&+WWild &+LCard&+y Company&+
         &+WIt's not like I want to be next to these
         &+Widiot orcs.'&n
 ~
-72 0 0 0 0 0 0 250 S
-PH 0 2 -1
+72 0 0 0 0 0 0 0 250 S
+PH 0 2 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -495,8 +495,8 @@ A &+rMino&+Ltaur&n (huge) &+L--&+WSto&+Lrm&+Wbringer&+y Company&+L--&n stands he
 &+cthey are hired to do.  Unfortuately he doesn't look quite adept at
 &+cthe moment and just curses under his breath about the broken airship.&n
 ~
-72 0 0 0 0 0 0 0 S
-MT 0 16384 -1
+72 0 0 0 0 0 0 0 0 S
+MT 0 16384 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -511,8 +511,8 @@ night mare nightmare~
 &+Lspirals upwards from its hooves where contact has caused the grass
 &+Lbelow to smoulder.&n
 ~
-1207961674 0 0 0 0 0 0 -1000 S
-A 0 1 -1
+1207961674 0 0 0 0 0 0 0 -1000 S
+A 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -527,8 +527,8 @@ captain~
         &+WDamnit, we just can't get enough power to leave, something
         &+Whas broke the furance, and we are dangerously short on coal!'&n
 ~
-1073743882 0 0 268435584 2048 0 0 1000 S
-PH 0 16384 -1
+1073743882 0 0 0 268435584 2048 0 0 1000 S
+PH 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -542,8 +542,8 @@ lookout~
 &+cof the &+LSoldiers of &+YFortune&+c, has yet to be rotated with other job
 &+cassignments within the &+ymercenary&+c company.&n
 ~
-67110922 0 0 0 0 0 0 1000 S
-PH 0 16384 -1
+67110922 0 0 0 0 0 0 0 1000 S
+PH 0 16384 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -557,8 +557,8 @@ crewman~
 &+ccarries out his duties, hustling from one end of the ship to the
 &+cother.&n
 ~
-67110920 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+67110920 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -571,8 +571,8 @@ human slave~
 &+yraid in one of the &+chuman&+y port towns, he now spends day after
 &+yday rowing on the &+bjuggernaught.&n
 ~
-2058 0 0 0 0 0 0 500 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -586,8 +586,8 @@ gnome slave~
 &+ybut several of the locals were captured.  This little guy was one
 &+yof them.&n
 ~
-2058 0 0 0 0 0 0 500 S
-PG 0 1 -1
+2058 0 0 0 0 0 0 0 500 S
+PG 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -600,8 +600,8 @@ grey elf slave~
 &+yfrom one slavemaster after another for so long now he can no longer
 &+yremember how he became a slave in the first place. &n
 ~
-2058 0 0 0 0 0 0 1000 S
-PE 0 2 -1
+2058 0 0 0 0 0 0 0 1000 S
+PE 0 2 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -614,8 +614,8 @@ dwarf slave~
 &+yloud and obnoxious as he could possibly be.  He pulls at his chains
 &+yin defiance and spits in the direction of the slave master.&n
 ~
-2058 0 0 0 0 0 0 500 S
-PM 0 32 -1
+2058 0 0 0 0 0 0 0 500 S
+PM 0 32 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -627,8 +627,8 @@ unblinking eye~
 &+LThis is the all-seeing eye of the devil Agaures, it floats around watching everything,
 &+Lspying on all for its owner.
 ~
-1073874952 0 0 1572890 0 0 0 -1000 S
-BH 0 33554436 2
+1073874952 0 0 0 1572890 0 0 0 -1000 S
+BH 0 33554436 0 2
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

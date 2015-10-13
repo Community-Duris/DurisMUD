@@ -1276,7 +1276,7 @@ key golden~
 a &+Ygolden &+ydesk key~
 &+yA small &+Ygolden &+ykey has been left here.~
 ~
-8 24 2 0 10 0 25 1 0 0 0
+8 24 2 0 10 0 25 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 1 100
 E

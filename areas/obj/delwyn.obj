@@ -245,7 +245,7 @@ fleece sheep~
 &+wthe fleece of a&n &+Wsheep&n~
 &+wThe fleece of a sheep lies here abandoned.&n~
 ~
-12 15 3 5 7 0 8392704 1 0 1 0
+12 15 3 5 7 0 8392704 1 32768 1 0
 0 0 0 0 0 0 0 0
 5 5000 100
 E
@@ -257,7 +257,7 @@ spool fine white yarn~
 &+wa spool of fine white&n &+Wyarn&n~
 &+wA spool of finw white yarn lies here.&n~
 ~
-12 15 3 3 7 0 0 1 0 1 0
+12 15 3 3 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 3 10000 100
 E
@@ -269,7 +269,7 @@ spool crimson yarn~
 &+ya spool of &+rcrimson yarn&n~
 &+yA spool of crimson yarn lies here abandoned.&n~
 ~
-12 15 3 3 7 0 0 1 0 1 0
+12 15 3 3 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 3 10000 100
 E
@@ -281,7 +281,7 @@ bolt crimson fabric~
 &+ya bolt of&n &+rcrimson fabric&n~
 &+rA bolt of crimson fabric lies here abandoned.&n~
 ~
-12 15 3 3 7 0 0 1 0 1 0
+12 15 3 3 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 3 10000 100
 E
@@ -293,7 +293,7 @@ large crimson banner~
 &+ra large crimson banner&n~
 &+rA large crimson banner lies here.&n~
 ~
-8 15 3 5 7 0 0 1 0 1 0
+8 15 3 5 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 5 10000 100
 E
@@ -321,7 +321,7 @@ assessment paper note~
 &+Wan assessment of the duchy's military&n~
 &+WAn assessment of the duchy's military lies here.&n~
 ~
-12 15 3 1 7 0 0 1 0 1 0
+12 15 3 1 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 10000 100
 E
@@ -335,7 +335,7 @@ deep blue braid rank~
 &+ba deep blue braid of rank&n~
 &+bA deep blue braid of rank lies here abandoned.&n~
 ~
-9 15 3 1 7 0 0 4097 0 0 0
+9 15 3 1 7 0 0 4097 32768 0 0
 5 11 1 1 0 0 0 0
 1 10000 100
 E
@@ -353,7 +353,7 @@ hastily scribbled note~
 &+Wa hastily scribbled note&n~
 &+WA hastily scribbled note lies here.&n~
 ~
-12 15 3 1 7 0 0 1 0 1 0
+12 15 3 1 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 1000 100
 E
@@ -397,7 +397,7 @@ carved ivory knight~
 &+Wa carved ivory knight&n~
 &+WA carved ivory knight lies here forgotten.&n~
 ~
-12 15 3 1 7 0 4096 1 0 1 0
+12 15 3 1 7 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 10000 100
 E
@@ -427,7 +427,7 @@ small iron bell~
 &+La small iron bell&n~
 &+LA small iron bell lies here forgotten.&n~
 ~
-12 15 3 5 7 0 4096 1 0 1 0
+12 15 3 5 7 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 5 10000 100
 E
@@ -440,7 +440,7 @@ large iron cog~
 &+La large iron cog&n~
 &+LA large iron cog lies here abandoned.&n~
 ~
-13 15 3 5 7 0 0 1 0 1 0
+13 15 3 5 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 5 3000 100
 E

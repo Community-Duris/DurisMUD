@@ -3,7 +3,7 @@ elvish sword great antiquity _noquest_~
 &+Ban elvish sword of great antiquity&N~
 &+BA large sword lies here on the ground, glowing slightly in a bluish hue.&N~
 ~
-5 16 3 10 7 0 1024 8193 66 96071707 0
+5 16 3 10 7 0 1024 8193 32834 96071707 0
 5 1 5 3 0 0 0 0
 17 200000 100 8208 4 0 0
 E
@@ -244,7 +244,7 @@ ring faerie glowing~
 &+ga &+Gglowing &+Yfaerie &+Gring&n~
 &+gA &+Ggleaming &+gband of the &+Yfaeries &+glies here.~
 ~
-9 25 3 0 7 0 0 3 0 0 0
+9 25 3 0 7 0 0 3 32768 0 0
 0 2 0 0 0 0 0 0
 0 0 100
 A
@@ -381,7 +381,7 @@ walnut~
 &+ya fist-sized walnut&N~
 &+yA fist-sized walnut is lying here, hidden in the shadows.~
 ~
-13 5 0 50 7 0 0 16385 0 0 0
+13 5 0 50 7 0 0 16385 32768 0 0
 0 0 1 0 0 0 0 0
 3 10 100
 #14029
@@ -454,7 +454,7 @@ ring signet finn~
 &+YFinn's signet ring&N~
 &+YA huge golden signet ring is sitting here, waiting to be picked up.~
 ~
-9 24 4 1 12 0 4096 16387 64 0 0
+9 24 4 1 12 0 4096 16387 32832 0 0
 8 0 0 3 0 0 0 0
 3 15000 100
 E
@@ -476,7 +476,7 @@ key mammoth finn~
 &+La mammoth key of crafted iron&N~
 &+LA mammoth key of crafted iron lies here in the dust.~
 ~
-18 15 5 1 7 0 8425600 16385 0 0 0
+18 15 5 1 7 0 8425600 16385 32768 0 0
 0 0 0 0 0 0 0 0
 10 1000 100
 E
@@ -1518,7 +1518,7 @@ heat forge blazing _noquest_~
 &+Lthe &+rb&+Rl&+Ya&+Wz&+Yi&+Rn&+rg &+Rheat &+Lof a &+rforge&n~
 &+LThe &+Rheat &+Lof a &+rforge&n lies here, abandoned.&n~
 ~
-1 1 3 0 15 0 33943561 1 64 0 0
+1 1 3 0 15 0 33943561 1 32832 0 0
 0 0 10000 0 0 0 0 0
 1 0 100
 #14122
@@ -1526,7 +1526,7 @@ billowing wind forge _noquest_~
 &+Lthe &+Wbillowing &+Cwind &+Lof a &+rforge&n~
 &+LThe &+Cwind &+Lof a &+rforge &nhas been abandoned here.&n~
 ~
-12 1 3 0 15 0 33943561 1 64 0 0
+12 1 3 0 15 0 33943561 1 32832 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 #14123
@@ -1534,7 +1534,7 @@ earthen hammer forge forging _noquest_~
 &+Lthe &+yearthen &+Lhammer &+yof &+rforging&n~
 &+LAn &+yearthen &+Lhammer &nlies here, forgotten.&n~
 ~
-5 11 2 0 15 0 33943625 8193 64 0 0
+5 11 2 0 15 0 33943625 8193 32832 0 0
 4 3 3 0 0 0 0 0
 5 0 100
 A
@@ -1546,7 +1546,7 @@ forge astral _noquest_~
 &+Lan astral &+rforge&n~
 &+LA nonsubstantion &+rforge&n has been misplaced.&n~
 ~
-8 1 3 0 15 0 33943625 1 64 0 0
+8 1 3 0 15 0 33943625 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #14125
@@ -1554,7 +1554,7 @@ copper basin water forge _noquest_~
 &+La &+ycopper basin &+Lof &+Bw&+bat&+Ber&n~
 &+LA &+ybasin &+Lof &+Bwater&n is lost and forelorn.&n~
 ~
-15 21 3 0 15 0 33943625 1 64 0 0
+15 21 3 0 15 0 33943625 1 32832 0 0
 10 0 0 10 0 0 0 0
 10 0 100
 #14126

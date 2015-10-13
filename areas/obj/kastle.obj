@@ -210,7 +210,7 @@ snake skull ring~
 &Na &+gs&+Gn&+ga&+Gk&+ge &+Wskull &+Lring&N~
 &+LA ring rests upon the gloomy ghastly ground here.&N~
 ~
-11 10 3 0 11 0 0 3 0 0 0
+11 10 3 0 11 0 0 3 32768 0 0
 0 0 0 0 0 0 0 0
 0 400 100 32768 0 0 0
 E
@@ -474,7 +474,7 @@ ossuary~
 &Nan &+Lossuary&N~
 &+LAn ossuary rests upon the gloomy ground here.&N~
 ~
-15 11 3 0 10 0 4096 16385 0 0 0
+15 11 3 0 10 0 4096 16385 32768 0 0
 9 0 0 9 0 0 0 0
 3 18 100
 E

@@ -345,7 +345,7 @@ skin tigerskin~
 &+ya t&+Lige&+yr skin&N~
 &+yThe skin of a tiger has been left here.~
 ~
-13 12 3 0 7 0 0 16385 0 0 0
+13 12 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -397,7 +397,7 @@ skin tigerskin white~
 &+Wskin of a white tiger&N~
 &+WThe skin of a white tiger has been foolishly left here.&N~
 ~
-13 12 3 0 7 0 12288 16385 0 0 0
+13 12 3 0 7 0 12288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -462,7 +462,7 @@ mithril chunk ore~
 &+ca chunk of mithril ore&N~
 &+CA chunk of almost pure mithril ore has been left here.&N~
 ~
-8 18 3 0 7 0 4096 16385 0 0 0
+8 18 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 5 12500 100
 E
@@ -857,7 +857,7 @@ feather quetzel green~
 &+Ga quetzel feather&N~
 &+GA delicate green quetzel feather has been left here.&N~
 ~
-8 1 3 0 7 0 0 16385 0 0 0
+8 1 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 150 100
 E
@@ -870,7 +870,7 @@ feather quetzel yellow~
 &+Ya quetzel feather~
 &+YA long, yellow quetzel feather has fallen here.&N~
 ~
-8 1 3 0 7 0 0 16385 0 0 0
+8 1 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 150 100
 E
@@ -884,7 +884,7 @@ feather quetzel red~
 &+Ra quetzel feather&N~
 &+RA bright red quetzel feather has fallen here.&N~
 ~
-8 1 3 0 7 0 0 16385 0 0 0
+8 1 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 150 100
 E
@@ -926,7 +926,7 @@ frogskin frog skin~
 &+rthe poisonous skin of a dartfrog&N~
 &+rThe poisonous skin of a dartfrog has been left here to rot.&N~
 ~
-13 3 3 0 7 0 8396800 16385 0 0 0
+13 3 3 0 7 0 8396800 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -955,7 +955,7 @@ hide couatl~
 &+rthe thick hide of an elder couatl&N~
 &+rThe thick, scaly hide of an elder couatl lies here.&N~
 ~
-8 35 3 0 7 0 110592 16385 64 0 0
+8 35 3 0 7 0 110592 16385 32832 0 0
 0 0 0 0 0 0 0 0
 10 20000 100
 E
@@ -992,7 +992,7 @@ hide couatl skin~
 &+Rhide of a young couatl&N~
 &+RThe hide of a young couatl has been left here.&N~
 ~
-8 35 3 0 7 0 110592 16385 64 0 0
+8 35 3 0 7 0 110592 16385 32832 0 0
 0 0 0 0 0 0 0 0
 20 12000 100
 E
@@ -1048,7 +1048,7 @@ couatl hide wrist guard~
 &+Ga couatl-hide wrist guard&N~
 &+GA strip of finely scaled green couatl hide lies here.&N~
 ~
-9 35 3 0 12 0 200704 4097 64 0 0
+9 35 3 0 12 0 200704 4097 32832 0 0
 2 11 1 2 0 0 0 0
 1 25000 100
 E
@@ -1084,7 +1084,7 @@ egg couatl~
 &+Wan elongated couatl egg&N~
 &+WAn elongated couatl egg lies hidden in the jungle.&N~
 ~
-8 13 3 0 7 0 8425472 16385 0 0 0
+8 13 3 0 7 0 8425472 16385 32768 0 0
 0 0 0 0 0 0 0 0
 3 1 100
 E
@@ -1198,7 +1198,7 @@ shell turtle~
 &+gthe shell of a giant turtle&N~
 &+gThe shell of a giant turtle has been left here.&N~
 ~
-8 13 3 0 7 0 4096 16385 0 0 0
+8 13 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 15 15000 100
 E
@@ -1229,7 +1229,7 @@ skin alligator~
 &+gthe skin of a &+rred&N &+galligator&N~
 &+gThe skin of a &+rred&N &+galligator has been left here.&N~
 ~
-8 12 3 0 7 0 12288 16385 0 0 0
+8 12 3 0 7 0 12288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 5 1000 100
 E
@@ -1243,7 +1243,7 @@ skin alligator~
 &+gskin of a giant alligator~
 &+gThe skin of a giant alligator has been left here.&N~
 ~
-8 12 3 0 7 0 12288 16385 0 0 0
+8 12 3 0 7 0 12288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 5 1000 100
 E
@@ -2118,7 +2118,7 @@ bark~
 &+ysome thin, soft bark&N~
 &+ySome thin, soft bark has been left here.&N~
 ~
-8 6 3 0 7 0 0 16385 0 0 0
+8 6 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 4500 100
 E
@@ -2158,7 +2158,7 @@ petals flower~
 &+Rsome bright red flower petals&N~
 &+RSome bright red flower petals lie scattered about.&N~
 ~
-8 6 3 0 7 0 0 16385 0 0 0
+8 6 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 4500 100
 E
@@ -2244,7 +2244,7 @@ leaves crumpled~
 &+gsome crumpled green leaves&N~
 &+gSome crumpled green leaves lie here.&N~
 ~
-8 6 3 0 7 0 0 16385 0 0 0
+8 6 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 E
@@ -2269,7 +2269,7 @@ parchment plans~
 &+ya strange parchment&N~
 &+yA rolled parchment lies in the corner.&N~
 ~
-8 6 3 0 7 0 4104 16385 0 0 0
+8 6 3 0 7 0 4104 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 E
@@ -2348,7 +2348,7 @@ sword elven silver~
 &+can ancient, silver sword&N~
 &+cAn ancient silver sword of elven design rests here.&N~
 ~
-5 22 3 0 15 25 99336 8193 64 95993883 0
+5 22 3 0 15 25 99336 8193 32832 95993883 0
 5 1 6 3 0 0 0 0
 20 4500 100
 E
@@ -2368,7 +2368,7 @@ rod chieftain gold golden~
 &+Ygolden rod of the lizardman chieftain&N~
 &+YA golden rod has been dropped here.&N~
 ~
-5 24 3 0 10 0 0 8193 64 4165287492 0
+5 24 3 0 10 0 0 8193 32832 4165287492 0
 10 1 3 6 0 0 0 0
 20 4500 100
 E
@@ -2416,7 +2416,7 @@ head~
 &+rthe bloody head of the lizardman chieftain&N~
 &+rThe bloody head of the lizardman chieftain has been left here.&N~
 ~
-8 6 3 0 7 0 4104 16385 0 0 0
+8 6 3 0 7 0 4104 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 4500 100
 E
@@ -2430,7 +2430,7 @@ amulet trinket silver~
 &+cSummerstorm's silver amulet&N~
 &+cA silver trinket lies on the ground.&N~
 ~
-8 22 3 0 10 0 4104 16389 1 0 0
+8 22 3 0 10 0 4104 16389 32769 0 0
 0 0 0 0 0 0 0 0
 1 4500 100
 E
@@ -2487,7 +2487,7 @@ staff~
 &+ya large, twisted staff with a &+Wcrystal head&N~
 &+yA massive wooden staff has been left here.&N~
 ~
-8 6 3 0 15 0 77832 16385 0 0 0
+8 6 3 0 15 0 77832 16385 32768 0 0
 0 0 0 0 0 0 0 0
 14 1000 100
 E
@@ -2581,7 +2581,7 @@ amulet air~
 &+ca strange amulet of swirling air&N~
 &+cA bizarre amulet of swirling air lies here.&N~
 ~
-8 1 3 0 15 0 77832 16385 0 0 0
+8 1 3 0 15 0 77832 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 E
@@ -2612,7 +2612,7 @@ amulet earth~
 &+yan earthen amulet&N~
 &+yA strange, earthen amulet lies here.&N~
 ~
-8 11 3 0 15 0 69640 16385 0 0 0
+8 11 3 0 15 0 69640 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 1000 100
 E
@@ -2645,7 +2645,7 @@ amulet water~
 &+ba watery amulet&N~
 &+bA watery amulet has been left behind.&N~
 ~
-8 40 3 0 15 0 77832 16385 0 0 0
+8 40 3 0 15 0 77832 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 E
@@ -2678,7 +2678,7 @@ medallion flaming fire~
 &+ra flaming medallion&N~
 &+rA flaming medallion hangs in mid-air on a chain of fire.&N~
 ~
-8 1 3 0 15 0 67178504 16385 0 0 0
+8 1 3 0 15 0 67178504 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 E

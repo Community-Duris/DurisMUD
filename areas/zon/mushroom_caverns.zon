@@ -2,16 +2,16 @@
 &+mthe &+MMushroom&n &+mCaverns&n~
 24237 2 0 40 50 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 24144 2 9 100 0 0 0
-*     south exit from "Inside a large Mushroom Forest" to
+*     south exit from "Inside a Large Mushroom Forest" to
 *     "A Collapsed Section of a Duergar Mining Tunnel" - closed/blocked
 *
 D 0 24168 0 9 100 0 0 0
 *     north exit from "A Collapsed Section of a Duergar Mining Tunnel" to
-*     "Inside a large Mushroom Forest" - closed/blocked
+*     "Inside a Large Mushroom Forest" - closed/blocked
 *
 D 0 24148 1 1 100 0 0 0
 *     east exit from "An Ancient Duergar Mining Outpost" to

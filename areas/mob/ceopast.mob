@@ -11,8 +11,8 @@ than capable of rending flesh.  Stopping to sniff the
 air for danger or prey, this wolf is not an animal
 that would take kindly to unwanted attention.
 ~
-1073744072 1 0 33554488 0 0 0 -1000 S
-AC 0 1 -1
+1073744072 1 0 0 33554488 0 0 0 -1000 S
+AC 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -30,8 +30,8 @@ scars lining its body appear to have been inflicted by
 another animal, whether that of a pack rival, or another
 wolf pack, seeking to expand its domain is unclear.
 ~
-1073743882 1 0 33554472 0 0 0 -1000 S
-AC 0 1 -1
+1073743882 1 0 0 33554472 0 0 0 -1000 S
+AC 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -47,8 +47,8 @@ its companions, it seems to stop and sniff the air
 mimicing the older wolves.  Stopping to play with the
 other younger wolves, while the pack waits patiently.
 ~
-1073743882 1 0 33554472 0 0 0 -1000 S
-AC 0 1 -1
+1073743882 1 0 0 33554472 0 0 0 -1000 S
+AC 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -65,8 +65,8 @@ know of the finer things in life.  A small embroided collar
 sits around her neck, most likely the only finery afforded
 to her from a life on the land.
 ~
-2186 0 0 33554464 0 0 0 -1 S
-PH 0 1 -1
+2186 0 0 0 33554464 0 0 0 -1 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -84,8 +84,8 @@ Wearing just his breaches, he extends a dirty hand in welcome,
 at the same time searching his surrounds, to make sure all is
 as it should be.
 ~
-2056 0 0 33554464 0 0 0 -1 S
-PH 0 1 -1
+2056 0 0 0 33554464 0 0 0 -1 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -103,8 +103,8 @@ brown, and blends perfectly with the surrounding trees,
 whilst her hair is a deep green, which matches the foliage
 of the nearby trees.
 ~
-1073743880 0 0 320348216 0 0 0 0 S
-X 0 128 -1
+1073743880 0 0 0 320348216 0 0 0 0 S
+X 0 128 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -122,8 +122,8 @@ a simple, unadorned woolen dress, she carefully wipes
 her hands on a cloth taken from a pocket, before
 returning it.
 ~
-1140852746 0 0 33554616 0 0 0 -1 S
-PB 0 256 -1
+1140852746 0 0 0 33554616 0 0 0 -1 S
+PB 0 256 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -143,8 +143,8 @@ a set of sharp claws.  Its massive beak is hooked at a
 vicious angle, more than able to rend the flesh of its
 prey.
 ~
-1073874952 1 0 33554488 0 0 0 -1000 S
-B 0 1 -1
+1073874952 1 0 0 33554488 0 0 0 -1000 S
+B 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -159,8 +159,8 @@ she has an aire of hardiness about her, most likely from
 a life on the land.  Looking up she smiles at you, glad
 for the different company, and welcomes you into her home.
 ~
-1140852746 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1140852746 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -176,8 +176,8 @@ is cut short, and his brown eyes keenly search his
 surrounds for things that are astray. He reguards you
 with a cool gaze, before extending a dirty hand in welcome.
 ~
-1073743880 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1073743880 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -192,8 +192,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-2058 1 0 33554456 0 0 0 -1000 S
-HG 0 1 -1
+2058 1 0 0 33554456 0 0 0 -1000 S
+HG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -208,8 +208,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-2058 1 0 33554456 0 0 0 -1000 S
-HG 0 1 -1
+2058 1 0 0 33554456 0 0 0 -1000 S
+HG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -224,8 +224,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-2058 1 0 33554456 0 0 0 -1000 S
-HG 0 1 -1
+2058 1 0 0 33554456 0 0 0 -1000 S
+HG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -240,8 +240,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-2058 1 0 33554488 0 0 0 -1000 S
-HG 0 1 -1
+2058 1 0 0 33554488 0 0 0 -1000 S
+HG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -256,8 +256,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-2058 1 0 33554488 0 0 0 -1000 S
-HG 0 1 -1
+2058 1 0 0 33554488 0 0 0 -1000 S
+HG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -272,8 +272,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-2058 1 0 33554488 0 0 0 -1000 S
-HG 0 512 -1
+2058 1 0 0 33554488 0 0 0 -1000 S
+HG 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -288,8 +288,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-2058 1 0 33554488 0 0 0 -1000 S
-HG 0 256 -1
+2058 1 0 0 33554488 0 0 0 -1000 S
+HG 0 256 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -304,8 +304,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-1073743880 1 0 33554488 0 0 0 -1000 S
-HG 0 1 -1
+1073743880 1 0 0 33554488 0 0 0 -1000 S
+HG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -320,8 +320,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-1073743880 1 0 33554488 0 0 0 -1000 S
-HG 0 1 -1
+1073743880 1 0 0 33554488 0 0 0 -1000 S
+HG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -336,8 +336,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-1073743880 1 0 33554488 0 0 0 -1000 S
-HG 0 1 -1
+1073743880 1 0 0 33554488 0 0 0 -1000 S
+HG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -352,8 +352,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-1073743880 1 0 33554488 0 0 0 -1000 S
-HG 0 1 -1
+1073743880 1 0 0 33554488 0 0 0 -1000 S
+HG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -368,8 +368,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-1073743880 1 0 33554488 0 0 0 -1000 S
-HG 0 1 -1
+1073743880 1 0 0 33554488 0 0 0 -1000 S
+HG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -384,8 +384,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-2056 1 0 33554488 0 0 0 -1000 S
-HG 0 512 -1
+2056 1 0 0 33554488 0 0 0 -1000 S
+HG 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -400,8 +400,8 @@ pointed ears twitch with anger at your trespass, and
 its red eyes burn with bloodlust.  Its pale skin is
 grey-green in color, and muscles ripple along its body.
 ~
-2056 1 0 33554488 0 0 0 -1000 S
-HG 0 256 -1
+2056 1 0 0 33554488 0 0 0 -1000 S
+HG 0 256 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -419,8 +419,8 @@ its giant claws rend the very rock its self.  The dragon
 seems almost insubstaintial, its glossy black scales
 seemingly fading in and out of reality itself.
 ~
-1107364104 1 0 303562938 2049 0 0 -1000 S
-D 0 512 7
+1107364104 1 0 0 303562938 2049 0 0 -1000 S
+D 0 512 0 7
 60 200 -100 10d10+30000 7d7+40
 0.0.0.0 0
 8 8 1
@@ -436,8 +436,8 @@ suprise.  Its black eyes dart back and forth searching
 for prey.  A maw of sharp teeth, and deadly claws being
 the weapons of its trade, each able to rend a victims flesh.
 ~
-1073743880 1 0 35127352 0 0 0 -1000 S
-AC 0 1 -1
+1073743880 1 0 0 35127352 0 0 0 -1000 S
+AC 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -454,8 +454,8 @@ than capable of rending flesh.  Stopping to sniff the
 air for danger or prey, this wolf is not an animal
 that would take kindly to unwanted attention.
 ~
-1073744072 1 0 33554488 0 0 0 -1000 S
-AC 0 1 -1
+1073744072 1 0 0 33554488 0 0 0 -1000 S
+AC 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -473,8 +473,8 @@ scars lining its body appear to have been inflicted by
 another animal, whether that of a pack rival, or another
 wolf pack, seeking to expand its domain is unclear.
 ~
-1073743882 1 0 33554472 0 0 0 -1000 S
-AC 0 1 -1
+1073743882 1 0 0 33554472 0 0 0 -1000 S
+AC 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -490,8 +490,8 @@ its companions, it seems to stop and sniff the air
 mimicing the older wolves.  Stopping to play with the
 other younger wolves, while the pack waits patiently.
 ~
-1073743882 1 0 33554472 0 0 0 -1000 S
-AC 0 1 -1
+1073743882 1 0 0 33554472 0 0 0 -1000 S
+AC 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -508,8 +508,8 @@ than capable of rending flesh.  Stopping to sniff the
 air for danger or prey, this wolf is not an animal
 that would take kindly to unwanted attention.
 ~
-1073744072 1 0 33554488 0 0 0 -1000 S
-AC 0 1 -1
+1073744072 1 0 0 33554488 0 0 0 -1000 S
+AC 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -527,8 +527,8 @@ scars lining its body appear to have been inflicted by
 another animal, whether that of a pack rival, or another
 wolf pack, seeking to expand its domain is unclear.
 ~
-1073743882 1 0 33554472 0 0 0 -1000 S
-AC 0 1 -1
+1073743882 1 0 0 33554472 0 0 0 -1000 S
+AC 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -544,8 +544,8 @@ its companions, it seems to stop and sniff the air
 mimicing the older wolves.  Stopping to play with the
 other younger wolves, while the pack waits patiently.
 ~
-1073743882 1 0 33554472 0 0 0 -1000 S
-AC 0 1 -1
+1073743882 1 0 0 33554472 0 0 0 -1000 S
+AC 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -560,8 +560,8 @@ happy with the quite farming life, she helps out when
 she can.  Looking over the young child, so that her
 daughter is free to go about her business on the farm.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -576,8 +576,8 @@ to play where he sees fit, the young child is under the
 constant eye of his grandmother.  Although at times he
 thinks otherwise.
 ~
-10 0 0 33554432 0 0 0 -1 S
-PH 0 1 -1
+10 0 0 0 33554432 0 0 0 -1 S
+PH 0 1 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -592,8 +592,8 @@ allow himself time for the less mundane activities life
 has to offer.  His blond hair flows freely down his back,
 and his eyes sparkle with the lust for adventure.
 ~
-1073743880 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1073743880 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -609,8 +609,8 @@ to feed.  Looking up to sniff the air the deer moves on
 to another location, careful not to stay in any place to
 long, less predators track her.
 ~
-2184 0 0 33554432 0 0 0 -1 S
-A 0 1 -1
+2184 0 0 0 33554432 0 0 0 -1 S
+A 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -626,8 +626,8 @@ the same time listening with its large floppy ears.
 Satisfied, for the time being, it begins to eat a small
 flower.
 ~
-8 0 0 33554464 0 0 0 -1 S
-A 0 1 -1
+8 0 0 0 33554464 0 0 0 -1 S
+A 0 1 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -643,8 +643,8 @@ of white hair rim its hooves, while the rest of its
 brown coat shines.  The mane of the horse is pure
 black, and sways as the horse nickers for attention.
 ~
-2058 0 0 0 0 0 0 -1 S
-AE 0 1 -1
+2058 0 0 0 0 0 0 0 -1 S
+AE 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -660,8 +660,8 @@ the creatures head, offering it a meager defense.  Its
 long tail flicks from side to side scaring away lingering
 insects.
 ~
-136 0 0 33554464 0 0 0 -1 S
-AH 0 1 -1
+136 0 0 0 33554464 0 0 0 -1 S
+AH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -677,8 +677,8 @@ helping her mother.  Staring off occasionally she
 giggles, living some fantasy, before returning to her
 chores.
 ~
-1073743880 128 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1073743880 128 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -694,8 +694,8 @@ ensure it does not injure the farmers.  Its large set
 of horns move threateningly, as he throws his head from
 side to side.
 ~
-2058 1 0 33554480 0 0 0 -1 S
-AH 0 1 -1
+2058 1 0 0 33554480 0 0 0 -1 S
+AH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -710,8 +710,8 @@ the surrounding forest.  The creature's massive jaws
 display a maw of razor teeth, and its four paws bare talons
 that can rend steel.
 ~
-1073756264 1 0 302514232 64 0 0 -1000 S
-AC 0 1 4
+1073756264 1 0 0 302514232 64 0 0 -1000 S
+AC 0 1 0 4
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -729,8 +729,8 @@ crude tattoo of a wolf on his forehead.  This man is is
 held in high reguard and well recognised for his prowess
 as a tracker.
 ~
-1074137096 0 0 856236220 47296 0 0 0 S
-PB 0 1 5
+1074137096 0 0 0 856236220 47296 0 0 0 S
+PB 0 1 0 5
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -744,8 +744,8 @@ snarling firbolg~
 &+yretains enough free will to eagerly rampage through any areas the
 &+ybeast sends him.
 ~
-1140852812 1 0 0 0 0 0 -1000 S
-AC 0 1 4
+1140852812 1 0 0 0 0 0 0 -1000 S
+AC 0 1 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -759,8 +759,8 @@ firbolg subdued~
 &+yto side show that she fights the controls this Demon has placed on
 &+yher, yet her intellect is simply too weak to succeed.
 ~
-1140869192 1 0 16777224 0 536870912 8192 -1000 S
-AC 0 128 5
+1140869192 1 0 0 16777224 0 536870912 8192 -1000 S
+AC 0 128 0 5
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -774,8 +774,8 @@ demon beast~
 &+LAn aura of intense Evil seems to spread wherever this creature
 &+Lmoves, making all around it shiver in unknown dread.
 ~
-1174489160 1 0 2148007944 0 22544384 0 -1000 S
-X 0 4 6
+1174489160 1 0 0 2148007944 0 22544384 0 -1000 S
+X 0 4 0 6
 56 200 -100 10d10+20000 7d7+30
 0.0.0.0 0
 8 8 0

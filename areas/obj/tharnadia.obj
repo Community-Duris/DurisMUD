@@ -949,7 +949,7 @@ bread~
 a loaf of &+ybread&n~
 &+WA loaf of &+ybread&+W has been left here.&n~
 ~
-19 2 2 2 7 0 0 1 0 0 0
+19 2 2 2 7 0 0 1 32768 0 0
 12 0 0 0 0 0 0 0
 1 10 100
 E
@@ -1635,7 +1635,7 @@ hooking ticket~
 a &+Whooking ticket&n~
 &+WA ragged hooking ticket lies crumpled here.&n~
 ~
-12 28 0 0 7 0 8192 16385 0 0 0
+12 28 0 0 7 0 8192 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 150 100
 E
@@ -1652,7 +1652,7 @@ ribbed vorskin penis sheath~
 a &+cvor&+Csk&+Win &+Ypenis &+Wsheath&n~
 &+WA ribbed &+cvor&+Csk&+Win bag lies here.&n~
 ~
-12 13 0 0 7 0 8192 18449 0 0 0
+12 13 0 0 7 0 8192 18449 32768 0 0
 0 0 0 0 0 0 0 0
 0 2000 100
 E
@@ -1973,7 +1973,7 @@ crumpled note~
 &+La crumpled up &+wnote&N~
 &+LA mysterious crumpled &+wnote &+Lrest here gathering dust.&N~
 ~
-13 43 3 0 10 8 12288 16385 0 0 0
+13 43 3 0 10 8 12288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -2717,7 +2717,7 @@ magical book text~
 a &+rmag&+Ric&+Wal &+Ltext book&n~
 &+LA &+rmagically &+Rglowing&+L book is here.&n~
 ~
-12 28 2 5 7 0 65536 16385 64 0 0
+12 28 2 5 7 0 65536 16385 32832 0 0
 0 0 0 0 0 0 0 0
 3 1 100
 E
@@ -3025,7 +3025,7 @@ small reed flute instrument~
 A small &+Greed&n flute~
 A small flute made from a hollowed reed lies here.~
 ~
-32 42 3 0 2 0 1024 16385 0 32768 0
+32 42 3 0 2 0 1024 16385 32768 32768 0
 184 5 0 0 0 0 0 0
 0 23 100
 #132683
@@ -3033,7 +3033,7 @@ small clumsily made mandolin instrument~
 A small clumsily made &+ymandolin&n~
 A small mandolin that looks to have been hastily carved out of driftwood lies here.~
 ~
-32 5 3 0 1 0 1024 16385 0 32768 0
+32 5 3 0 1 0 1024 16385 32768 32768 0
 186 5 0 0 0 0 0 0
 0 28 100
 #132684
@@ -3041,7 +3041,7 @@ small bamboo lyre instrument~
 a small &+ybamboo&n lyre~
 A lyre made out of a set of bamboo stalks lies here.~
 ~
-32 41 3 0 5 0 1024 16385 0 32768 0
+32 41 3 0 5 0 1024 16385 32768 32768 0
 185 5 0 0 0 0 0 0
 0 25 100
 #132685
@@ -3049,7 +3049,7 @@ large blank book~
 a large blank book~
 A large blank book lies here.~
 ~
-13 29 3 0 5 0 4096 16385 0 0 0
+13 29 3 0 5 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #132686
@@ -3129,7 +3129,7 @@ clump nightshade plant~
 &+ma clump of &+Lnightshade&n~
 A group of plants lie here.~
 ~
-13 30 3 0 5 0 4096 16385 0 0 0
+13 30 3 0 5 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #132695
@@ -3137,7 +3137,7 @@ batch mandrake roots small~
 a small&+g batch&n of &+ymandrake roots&n~
 A clump of gnarly roots lie here.~
 ~
-13 4 3 0 5 0 4096 16385 0 0 0
+13 4 3 0 5 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #132696
@@ -3153,7 +3153,7 @@ vial thick maroon liquid potion medicine~
 a vial filled with a thick &+rmaroon &+cl&+Ci&+cq&+Cui&+cd&n~
 A vial filled with a brick-colored liquid lies here.~
 ~
-10 40 3 0 5 0 0 16385 0 0 0
+10 40 3 0 5 0 0 16385 32768 0 0
 11 16 16 16 0 0 0 0
 0 0 100
 #132698
@@ -3173,7 +3173,7 @@ heavy solid gold pendant heirloom~
 &+ya &+Yheavy &+ysolid &+Ygold &+ypendant&n~
 A large golden pendant glints in the light here.~
 ~
-9 24 3 0 11 0 0 5 0 0 0
+9 24 3 0 11 0 0 5 32768 0 0
 3 0 0 0 0 0 0 0
 2 2343 100
 A
@@ -3183,7 +3183,7 @@ small little black pup wolf puppy _id_~
 small and furry black wolf pup~
 A little black ball of fur is curled up taking a nap.~
 ~
-13 2 1 0 15 0 4096 16385 0 0 0
+13 2 1 0 15 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 E

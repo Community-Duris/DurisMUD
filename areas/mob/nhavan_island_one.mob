@@ -8,8 +8,8 @@ and pointed ears. There is no discernible difference between the sexes, if
 there are sexes. The chest is flat but tautly muscled from many hours in the
 sun.
 ~
-264392 0 0 0 0 0 0 600 S
-H 0 1 -1
+264392 0 0 0 0 0 0 0 600 S
+H 0 1 0 -1
 9 18 71 9d21+49 2d3+1
 4.3.0.0 1166
 8 8 0
@@ -22,8 +22,8 @@ The Endu witch doctor is here, intoning to the village gods.
 rocks back and forth as it chants and mutters to itself in deep trance. Its
 skin is richly tattooed with symbols and glyphs in bright colors.
 ~
-2126 32 0 56 0 0 0 900 S
-H 0 2048 -1
+2126 32 0 0 56 0 0 0 900 S
+H 0 2048 0 -1
 15 15 51 15d18+60 2d5+2
 7.6.2.0 7290
 6 6 0
@@ -35,8 +35,8 @@ A large vrang is here, staring stupidly into space.
    The vrang is a large, humpbacked beast with yellow stripes on brown fur. It
 chews its cud placidly, braying occasionally at the flies.
 ~
-26 0 0 0 0 0 0 25 S
-A 0 0 -1
+26 0 0 0 0 0 0 0 25 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -48,8 +48,8 @@ Pantu the fishmonger is here, peddling his wares.
    Pantu is besmeared by fish blood and entrails. His hands fly at blinding
 speed as he cleans, guts, and fillets fish and various other oceanic creatures.
 ~
-2123 0 0 8224 0 0 0 500 S
-H 0 0 -1
+2123 0 0 0 8224 0 0 0 500 S
+H 0 0 0 -1
 23 11 26 23d40+184 3d5+3
 5.1.6.0 20493
 8 8 0
@@ -62,8 +62,8 @@ A fiendish puck is here sharpening a claw.
 from hapless adventurers' bones. He grins maliciously and cackles to himself
 as he dances around mischievously.
 ~
-12 1 0 56 0 0 0 -950 S
-H 0 0 -1
+12 1 0 0 56 0 0 0 -950 S
+H 0 0 0 -1
 17 13 45 17d30+85 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -76,8 +76,8 @@ A will-o'-the-wisp floats nearby.
 floating group of pale green lights which flicker on and off as it moves
 about. It has an almost tangible evil aura about it.
 ~
-131080 1 0 40 0 0 0 -850 S
-O 0 0 -1
+131080 1 0 0 40 0 0 0 -850 S
+O 0 0 0 -1
 13 15 58 13d23+52 2d5+2
 6.5.2.0 6318
 8 8 0
@@ -90,8 +90,8 @@ An oongawa roots around for muck.
 ground-dweller.  It doesn't appear very bright, although its tusks
 are able to do some damage.
 ~
-90 0 0 0 0 0 0 -100 S
-A 0 0 -1
+90 0 0 0 0 0 0 0 -100 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0

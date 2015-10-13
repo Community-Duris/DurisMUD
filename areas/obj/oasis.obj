@@ -232,7 +232,7 @@ fungus pungent~
 &+ysome pungent &+gfungus~
 &+ySome awful smelling fungus grows out of the ground.~
 ~
-8 15 3 0 7 0 8388608 1 0 0 0
+8 15 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 2 100
 E
@@ -259,7 +259,7 @@ petal rose~
 &+ra rose petal~
 &+rA small rose petal gathers dust.~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 2 100
 E
@@ -271,7 +271,7 @@ petal orchid~
 &+man orchid petal~
 &+mAn orchid petal releases a powerful aroma.~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 2 100
 E
@@ -283,7 +283,7 @@ weed strange~
 &+ga strange weed~
 &+gA strange weed grows out of the ground.~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 2 100
 E
@@ -465,7 +465,7 @@ heart mantis queen~
 &+rthe massive, still-beating heart of the &+Gmantis &+Yqueen~
 &+rThe heart of the &+Gmantis &+Yqueen &+rremains beating.~
 ~
-8 15 3 0 7 0 8392704 16385 64 0 0
+8 15 3 0 7 0 8392704 16385 32832 0 0
 0 0 0 0 0 0 0 0
 5 1 100 33554432 0 0 0
 E
@@ -648,7 +648,7 @@ moss glowing patch~
 &+ga &+Gglowing &+gpatch of moss~
 &+gA &+Gglowing &+Gpatch of moss grows here.~
 ~
-8 15 3 0 7 0 8388609 1 0 0 0
+8 15 3 0 7 0 8388609 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 2 100
 E
@@ -684,7 +684,7 @@ blossom lotus~
 &+Ma lotus blossum~
 &+MA lotus blossom flourishes in a pot here.~
 ~
-8 15 3 0 7 0 8388608 1 0 0 0
+8 15 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 2 100
 E
@@ -868,7 +868,7 @@ girl young dirty~
 a &+Ldirty &nand &+Bfrightened&n young girl~
 A young girl cowers here, covered in &+Ldirt&n.~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 65 1 100
 E
@@ -969,7 +969,7 @@ wing demon~
 &+ra bloody wing of the demon &+Lambassador~
 &+rA severed demon's wing lies here.~
 ~
-8 15 3 0 7 0 41947136 16385 0 0 0
+8 15 3 0 7 0 41947136 16385 32768 0 0
 0 0 0 0 0 0 0 0
 5 1 100 134217728 0 0 0
 E

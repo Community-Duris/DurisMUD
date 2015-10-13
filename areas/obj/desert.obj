@@ -379,7 +379,7 @@ eyeball writhing wyrm~
 a &+Lw&+cr&+gi&+bt&+ch&+gi&+Ln&+cg &+Weyeball&n of a &+rwy&+rrm~
 &+WAn eyeball of a some creature lays here.&n~
 ~
-11 15 3 0 7 0 4096 524289 0 0 0
+11 15 3 0 7 0 4096 524289 32768 0 0
 0 0 0 0 0 0 0 0
 1 20000 100
 E
@@ -807,7 +807,7 @@ compass~
 &+ya compass&n~
 &+yA compass is here, looking forlonr.~
 ~
-13 15 3 0 7 0 4096 16385 0 0 0
+13 15 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -895,7 +895,7 @@ royal garb~
 &+La royal g&+ma&+Lr&+Mb &+Llaced with &+Yg&+Lo&+Yl&+Ld&n~
 &+mA royal garbed laced with gold lays here.&n~
 ~
-9 15 3 0 7 0 1 1025 0 0 0
+9 15 3 0 7 0 1 1025 32768 0 0
 5 0 0 1 0 0 0 0
 1 23322 100
 E
@@ -1028,7 +1028,7 @@ large potion~
 &+ma large glowing potion~
 &+mA large potion lays on the ground.&n~
 ~
-10 40 3 0 7 0 0 1 0 0 0
+10 40 3 0 7 0 0 1 32768 0 0
 21 57 57 57 0 0 0 0
 1 17928 100
 E
@@ -1114,7 +1114,7 @@ smuggled piece of contraband~
 a smuggled piece of contraband~
 A smuggled piece of contraband is here.~
 ~
-8 43 3 0 7 0 4096 1 0 0 0
+8 43 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 123822 100
 E
@@ -2183,7 +2183,7 @@ signet ring~
 a &+Lsig&+cn&+Ce&+Wt r&+Ci&+Cn&+Lg &nof &+LVernadad &+rLo'Ushuur&n~
 &+LA signet ring lays here.&n~
 ~
-11 16 3 0 7 0 0 3 0 0 0
+11 16 3 0 7 0 0 3 32768 0 0
 0 0 0 0 0 0 0 0
 3 53922 100
 E
@@ -2539,7 +2539,7 @@ dusty signet ring~
 &+Ma dusty signet ring~
 &+Ma dusty signet ring lays here.&n~
 ~
-13 15 3 0 7 0 4096 1 0 0 0
+13 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 2323 100
 E
@@ -2566,7 +2566,7 @@ elvish hunter medallion~
 an &+gelvish &+yhunter&+g meda&+yllion~
 &+gAn elven hunter medallion is here.&n~
 ~
-9 5 3 0 7 0 0 5 64 0 0
+9 5 3 0 7 0 0 5 32832 0 0
 6 0 0 3 0 0 0 0
 2 12929 100
 E

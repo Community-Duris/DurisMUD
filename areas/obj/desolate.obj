@@ -184,7 +184,7 @@ stinky meat bones~
 &+Wsome stinky meat bones&N~
 &+WSomeone has left some stinky meat bones here.&n~
 ~
-13 10 3 0 7 0 8392704 16385 0 0 0
+13 10 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -233,7 +233,7 @@ sad monkey~
 &+ya sad little monkey&n~
 &+yA sad little monkey cries quietly here.&n~
 ~
-15 2 3 0 7 0 4096 1 0 0 0
+15 2 3 0 7 0 4096 1 32768 0 0
 100 5 0 100 0 0 0 0
 0 1 100
 E
@@ -248,7 +248,7 @@ silver neck chain~
 &+Ca silver neck chain&n~
 &+CA silver neck chain has been dropped here.&n~
 ~
-9 22 3 0 7 0 4096 5 0 0 0
+9 22 3 0 7 0 4096 5 32768 0 0
 5 0 0 3 0 0 0 0
 0 121 100
 E
@@ -261,7 +261,7 @@ badge armageddon~
 &+Lthe badge of &+rarmageddon&n~
 &+LA badge from the army of &+rarmageddon&+L has been dropped here.&n~
 ~
-11 3 3 0 7 0 0 2097153 0 0 0
+11 3 3 0 7 0 0 2097153 32768 0 0
 0 0 0 0 0 0 0 0
 0 892 100
 E
@@ -324,7 +324,7 @@ iron rod~
 &+wan iron rod&n~
 &+wA long iron rod has been left here.&n~
 ~
-8 15 3 0 7 0 0 16385 0 0 0
+8 15 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -445,7 +445,7 @@ tankard empty~
 &+yan empty tankard&n~
 &+yAn empty drinking tankard has been left here.&n~
 ~
-13 9 3 0 7 0 8388608 16385 0 0 0
+13 9 3 0 7 0 8388608 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 83 100
 E
@@ -458,7 +458,7 @@ tankard ale full~
 &+ya &+Yfull&+y tankard of &+Yale&n~
 &+yA tankard full to the brim of &+Yale&+y has been left here.&n~
 ~
-17 9 3 0 7 0 8388608 16385 0 0 0
+17 9 3 0 7 0 8388608 16385 32768 0 0
 10 10 1 0 0 0 0 0
 0 83 100
 E
@@ -472,7 +472,7 @@ broken wheel~
 &+La broken &+ywheel&n~
 &+LA broken wagon &+ywheel&+L has become lost under some rocks here.&n~
 ~
-8 6 3 0 7 0 4096 1 0 0 0
+8 6 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 3421 100
 E
@@ -812,7 +812,7 @@ repaired wheel~
 &+La repaired &+ywheel&n~
 &+LA repaired &+ywagon wheel&+L has been left here.&n~
 ~
-8 6 3 0 7 0 0 1 0 0 0
+8 6 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 98 100
 E
@@ -1285,7 +1285,7 @@ badge storm~
 &+La &+Wbadge&+L of the &+Csto&+crm&n~
 &+LA &+Wbadge&+L with the crest of &+WStorm &+CPo&+crt&+L has been left here.&n~
 ~
-11 3 3 0 7 0 0 2097153 0 0 0
+11 3 3 0 7 0 0 2097153 32768 0 0
 0 0 0 0 0 0 0 0
 0 24 100
 E
@@ -1298,7 +1298,7 @@ severed hand thief~
 &+rthe severed hand of a thief&n~
 &+rA disgusting severed hand lies here.&n~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E

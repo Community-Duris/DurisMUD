@@ -111,7 +111,7 @@ blood soaked longsword sword~
 &Na &+rb&+Rl&+ro&+Ro&+rd s&+Roa&+rk&+Re&+rd &+Llongsword&N~
 &+LA longsword marked by &+rb&+Rl&+ro&+Ro&+rd &+Lrests upon the ground here.&N~
 ~
-5 36 3 0 11 69 8192 8193 66 0 0
+5 36 3 0 11 69 8192 8193 32834 0 0
 5 2 6 3 0 0 0 0
 0 18000 100
 E
@@ -264,7 +264,7 @@ sword blood stained claymore~
 &Na &+rbl&+Ro&+ro&+Rd s&+rt&+Ra&+rin&+Re&+rd &+Lclaymore&N~
 &+LA claymore marked by &+rbl&+Ro&+ro&+Rd &+Lrests upon the ground here.&N~
 ~
-5 19 3 0 11 55 4203520 8193 66 87572507 0
+5 19 3 0 11 55 4203520 8193 32834 87572507 0
 13 4 7 3 0 0 0 0
 0 33000 100
 E
@@ -283,7 +283,7 @@ heart~
 &Na &+Lheart of living da&+brkne&+Lss&N~
 &+LA heart of a living da&+brkne&+Lss beats upon the ghastly ground here.&N~
 ~
-8 2 2 0 15 69 61440 8404993 64 0 0
+8 2 2 0 15 69 61440 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 2 6000 100
 E

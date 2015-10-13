@@ -35,7 +35,7 @@ white scale~
 &+Wa white scale&N~
 An unwanted white scale sits on the ground here.~
 ~
-8 35 3 0 7 0 307201 16385 66 0 0
+8 35 3 0 7 0 307201 16385 32834 0 0
 0 0 0 0 0 0 0 0
 3 1230 100
 #43004
@@ -65,7 +65,7 @@ blue scale~
 &+ba blue scale&N~
 An unwanted blue scale sits on the ground here.~
 ~
-8 35 3 0 7 0 307201 16385 66 0 0
+8 35 3 0 7 0 307201 16385 32834 0 0
 0 0 0 0 0 0 0 0
 3 1230 100
 #43007
@@ -85,7 +85,7 @@ green scale~
 &+ga green scale&N~
 An unwanted green scale sits on the ground here.~
 ~
-8 35 3 0 7 0 307201 16385 66 0 0
+8 35 3 0 7 0 307201 16385 32834 0 0
 0 0 0 0 0 0 0 0
 3 1230 100
 #43009
@@ -109,7 +109,7 @@ red scale~
 &+ra red scale&N~
 An unwanted red scale sits on the ground here.~
 ~
-8 35 3 0 7 0 307201 16385 66 0 0
+8 35 3 0 7 0 307201 16385 32834 0 0
 0 0 0 0 0 0 0 0
 3 1230 100
 #43012
@@ -117,7 +117,7 @@ black scale~
 &+La black scale&N~
 An unwanted black scale sits on the ground here.~
 ~
-8 35 3 0 7 0 307201 16385 66 0 0
+8 35 3 0 7 0 307201 16385 32834 0 0
 0 0 0 0 0 0 0 0
 3 1230 100
 #43013

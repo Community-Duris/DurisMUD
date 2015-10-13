@@ -10,8 +10,8 @@ here.  A scar runs down his left cheek, highlighting the single bushy
 eyebrow that runs across his forehead.  Dark eyes survey the
 surroundings with a deep intensity, this man is nobody to trifle with.
 ~
-1073743884 1 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743884 1 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -27,8 +27,8 @@ and forth and then continues on his way.  It is clear that he enjoys
 the peacefulness of the forest, but is still willing to disturb it to
 make his money.
 ~
-1073743884 1 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743884 1 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -46,8 +46,8 @@ is nothing that can please him though.  Everything about the way he
 walks and the stiffness of his frame create the image of a brutal and
 very angry man.
 ~
-1073743884 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743884 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -64,8 +64,8 @@ spells he often closes his eyes and takes a deep breath of air and then
 slowly exhales.  Despite his youth, there is something wise and
 knowledgeable about him.
 ~
-1073776654 0 0 0 0 0 0 500 S
-PH 0 2048 -1
+1073776654 0 0 0 0 0 0 0 500 S
+PH 0 2048 0 -1
 31 6 0 31d56+465 4d6+7
 5.7.9.1 40176
 6 6 1
@@ -81,8 +81,8 @@ everything around him as if searching for hidden secrets.  There is a
 calmness that surrounds him, he is clearly at peace with himself and
 his long life.
 ~
-1073776652 0 0 0 0 0 0 500 S
-PH 0 512 -1
+1073776652 0 0 0 0 0 0 0 500 S
+PH 0 512 0 -1
 31 6 0 31d56+465 4d6+7
 5.7.9.1 40176
 8 8 1
@@ -100,8 +100,8 @@ the area as he searches for something.  Several recent wounds mark his
 body, but they have been healed, he is clearly ready to fight anything
 or anyone that is willing to challenge him.
 ~
-1107298380 0 0 65680 34824 0 0 -1000 S
-PH 0 16 -1
+1107298380 0 0 0 65680 34824 0 0 -1000 S
+PH 0 16 0 -1
 56 -7 -114 56d143+5880 7d6+35
 1.3.8.6 226800
 8 8 1
@@ -119,8 +119,8 @@ dragon gold auriam~
 &+Ycan sense the wisdom and knowledge she bears as well as the kindness&N
 &+Yshe bears to all those things that are good and holy.&N
 ~
-1073875020 32 0 672145594 47296 0 0 1000 S
-D 0 8 -1
+1073875020 32 0 0 672145594 47296 0 0 1000 S
+D 0 8 0 -1
 60 -10 -152 60d143+6900 7d6+35
 6.6.9.22 486000
 8 8 2
@@ -134,8 +134,8 @@ openings in the branches that even larger birds would have problems
 with.  It spends as much time singing and playing as it does looking
 for food.
 ~
-133256 0 0 0 0 0 0 0 S
-B 0 0 -1
+133256 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -150,8 +150,8 @@ feathers surround its face somehow giving it an almost human
 appearance.  Though it isn't capable of speach, one gets the distinct
 impression that if it could talk it could tell some interesting tales.
 ~
-1073874952 0 0 0 0 0 0 500 S
-B 0 512 -1
+1073874952 0 0 0 0 0 0 0 500 S
+B 0 512 0 -1
 15 15 51 15d18+60 2d5+2
 0.0.0.0 7290
 8 8 0
@@ -166,8 +166,8 @@ animal is a powerful hunter.  Though not large enough to really
 threaten adventurers, one had best be cautious around it.  Soft &+rred&N
 feathers line its head like an executioners hood.
 ~
-1073874952 0 0 134217728 0 0 0 0 S
-B 0 1 -1
+1073874952 0 0 0 134217728 0 0 0 0 S
+B 0 1 0 -1
 13 15 58 13d27+78 2d5+2
 0.0.0.0 6318
 8 8 1
@@ -181,8 +181,8 @@ colored hawks that are the males who fight for their territories.  The
 plainly colored females are left to hunt for themselves and their young
 while the males viciously defend their homes.
 ~
-1073874952 0 0 134217728 0 0 0 0 S
-B 0 1 -1
+1073874952 0 0 0 134217728 0 0 0 0 S
+B 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 0.0.0.0 1296
 8 8 2
@@ -196,8 +196,8 @@ stand out in the forest.  Even in the darkness the birds feathers seem
 to shimmer.  It struts around like a prima donna, singing at and about
 everything it sees.
 ~
-133256 0 0 0 0 0 0 0 S
-B 0 0 -1
+133256 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -211,8 +211,8 @@ close look at the sky and branches that might be above it.  It knows
 that it is one of the favorite meals of the hawks that circle the area,
 and takes care to avoid becoming dinner.
 ~
-1073744008 0 0 0 0 0 0 0 S
-A 0 0 -1
+1073744008 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -226,8 +226,8 @@ very cautious as it runs around searching for something to eat.  The
 soft &+Lblack&N pelt it wears is prized in many areas because it makes very
 beautiful soft hats for the winter months in colder climates.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 7 18 77 7d21+38 2d3+1
 0.0.0.0 907
 8 8 0
@@ -241,8 +241,8 @@ imagine any hunter heartless enough to try to kill it.  It has a soft
 brown hide with small dark spots that help it fade into the shadows to
 avoid predators.
 ~
-2184 0 0 0 0 0 0 0 S
-A 0 1 -1
+2184 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 7 18 77 7d21+38 2d3+1
 0.0.0.0 907
 8 8 0
@@ -257,8 +257,8 @@ queen.  Clearly large and fast enough to avoid most predators she takes
 special care to tend to her young fawns to keep them from becoming
 somebody's dinner.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 0 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 2
@@ -273,8 +273,8 @@ the does and young fawns.  Clearly this stag is old enough to use them,
 though perhaps not as well as some of the older deer that live in the
 forest.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 12 15 61 12d27+72 2d5+2
 0.0.0.0 5832
 8 8 1
@@ -289,8 +289,8 @@ different &+Wsharp&N points on it rests on top of its head like a crown.
 Confidently strutting through the forest as it were king, this creature
 looks ready to face any challenge.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 16 13 48 16d35+112 3d4+2
 0.0.0.0 7776
 8 8 1
@@ -304,8 +304,8 @@ certainly a formidable opponent.  Fortunately, this bear prefers eating
 grubs, roots, and berries to hunting and killing for food.  Certainly
 an opportunist though, if a fight comes to it will not back down.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 14 15 55 14d27+84 2d5+2
 0.0.0.0 6804
 8 8 0
@@ -320,8 +320,8 @@ clearly double as terrible weapons.  This creature is quite peaceful
 however, because few creatures in the forest are foolish enough to
 raise its ire.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 16 13 48 16d35+112 3d4+2
 0.0.0.0 7776
 8 8 0
@@ -336,8 +336,8 @@ fish they can come by.  This bear has quite a temper though, and lets
 be honest, it will eat any meat it can get.  It might be wisest not to
 anger this beast.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 17 13 45 17d35+119 3d4+2
 0.0.0.0 8262
 8 8 0
@@ -353,8 +353,8 @@ sharp claws on its paws look able to shred even armor, this creature is
 certainly not one to trifle with.  In fact, it is probably fortunate
 that it seems to have just eaten.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -370,8 +370,8 @@ appearance that separates it from other wildcats throughout the world.
 This cat looks particularily powerful and well-fed, it must be an
 excellent hunter.
 ~
-1073743882 0 0 16 0 0 0 0 S
-A 0 1 -1
+1073743882 0 0 0 16 0 0 0 0 S
+A 0 1 0 -1
 14 15 55 14d27+84 2d5+2
 0.0.0.0 6804
 8 8 0
@@ -386,8 +386,8 @@ low slung, powerfully built body make it difficult to fight against.
 If stories about wolverines are true, once it bites it won't let go,
 even when dead.
 ~
-2058 1 0 16 0 0 0 0 S
-A 0 1 -1
+2058 1 0 0 16 0 0 0 0 S
+A 0 1 0 -1
 17 13 45 17d35+119 3d4+2
 0.0.0.0 8262
 8 8 0
@@ -403,8 +403,8 @@ spots to it that help it fade into faint shadows.  Sharp teeth and
 nasty-looking claws make it a formidable foe and, despite the value of
 its hide, probably not worth angering.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -420,8 +420,8 @@ out against its dark &+ybrown&N feathers like a beacon.  The beak, and sharp
 claws look designed for killing, this is NOT a creature to play games
 with.
 ~
-1073743880 0 0 0 0 0 0 0 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 0.0.0.0 19602
 8 8 0
@@ -435,8 +435,8 @@ its prey rather than relying entirely on its teeth and claws.  Though
 not as large as many predators, its craftiness makes it quite
 dangerous.
 ~
-1073743880 0 0 524288 0 0 0 0 S
-A 0 0 -1
+1073743880 0 0 0 524288 0 0 0 0 S
+A 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -452,8 +452,8 @@ There is a regal holiness about him, something that sets him apart from
 even other barbarians.  He carries strange runed sticks and other odd
 items and walks as if nature is his second home.
 ~
-1073743884 0 0 0 0 0 0 500 S
-PB 0 1 -1
+1073743884 0 0 0 0 0 0 0 500 S
+PB 0 1 0 -1
 28 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -471,8 +471,8 @@ worship gods of metals and forges and show their faith in their
 creations a the forge.  The smile on his face tells all around him that
 he would be happy to talk about his god.
 ~
-1107298316 0 0 8224 0 0 0 1000 S
-PM 0 32 -1
+1107298316 0 0 0 8224 0 0 0 1000 S
+PM 0 32 0 -1
 26 8 16 26d60+312 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -489,8 +489,8 @@ is a single tattoo on her forehead, a tattoo of a golden oak leaf.
 What it means is unclear, and she appears to be quite cautious and
 unapproachable, and probably wouldn't say anything if asked.
 ~
-1073743884 0 0 8232 0 0 0 750 S
-PE 0 2 -1
+1073743884 0 0 0 8232 0 0 0 750 S
+PE 0 2 0 -1
 24 11 23 24d47+240 3d5+3
 6.1.6.0 21384
 8 8 2
@@ -506,8 +506,8 @@ tree than just age, that some strange infusion of magic has given it
 its sentience and power.  Content to simply observe the world around
 it, there is no reason for anyone or anything to bother disturbing it.
 ~
-33564682 0 0 16777216 0 0 0 350 S
-VT 0 128 -1
+33564682 0 0 0 16777216 0 0 0 350 S
+VT 0 128 0 -1
 31 6 0 31d77+806 4d6+7
 0.0.0.0 40176
 8 8 0
@@ -524,8 +524,8 @@ world.  There is something very magical about it that suggests that age
 alone can't accout for its evolution into something more than a simple
 tree.
 ~
-33564682 0 0 16777224 0 0 0 350 S
-VT 0 128 -1
+33564682 0 0 0 16777224 0 0 0 350 S
+VT 0 128 0 -1
 41 -1 -56 41d99+2214 6d6+12
 0.0.0.0 99630
 8 8 0
@@ -540,8 +540,8 @@ watchfulness the trees exhibit.  This tree, like several others has a
 magical aura to it, as if some strange sorcerery was used to give it
 its knowledge.
 ~
-33564682 0 0 16777216 0 0 0 350 S
-VT 0 128 -1
+33564682 0 0 0 16777216 0 0 0 350 S
+VT 0 128 0 -1
 36 2 -15 36d88+1152 4d7+10
 0.0.0.0 46656
 8 8 0
@@ -559,8 +559,8 @@ mysteries of life.  Though rooted to this spot, it seems able to gather
 knowledge from other parts of the forest, perhaps by communicating in
 some mysterious manner with other trees.
 ~
-100673546 32 0 16777216 0 0 0 350 S
-VT 0 128 -1
+100673546 32 0 0 16777216 0 0 0 350 S
+VT 0 128 0 -1
 60 -10 -132 60d132+6840 7d6+35
 0.0.0.0 243000
 8 8 0
@@ -574,8 +574,8 @@ This thick tree root is clearly part of the majestic ancient &+rred&N
 a mind of its own, but at the same time is under the control of the
 tree it is connected to.
 ~
-100673546 0 0 17825792 0 0 0 0 S
-VT 0 1 -1
+100673546 0 0 0 17825792 0 0 0 0 S
+VT 0 1 0 -1
 20 13 35 20d35+340 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -589,8 +589,8 @@ welcome some fighting, just for the entertainment.  Though he may be
 bored by his work it must pay well, he is very well equiped.  He looks
 sturdy enough, but one must wonder how much experience he really has.
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -607,8 +607,8 @@ woman elf half-elf druid young~
 &+gyet more to her grace and charm, this young woman is as much a part of &N
 &+gthe forest as a traveler through it.&N
 ~
-1107298314 0 0 16777248 0 0 0 0 S
-P2 0 128 -1
+1107298314 0 0 0 16777248 0 0 0 0 S
+P2 0 128 0 -1
 25 11 19 25d44+225 3d5+3
 6.2.6.1 22275
 8 8 2
@@ -623,8 +623,8 @@ clothing and gear make it clear that he is from a wealthy family, and
 like many irresponsible young men, he has gone off to seek his own
 fortune before he is really ready.
 ~
-1107298312 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1107298312 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -638,8 +638,8 @@ recent meal and is in no quick need of another.  It is probably trying
 to find a safe place to sleep and digest its meal, a place where it
 won't end up becoming a meal itself.
 ~
-2184 0 0 0 0 0 0 0 S
-RS 0 0 -1
+2184 0 0 0 0 0 0 0 0 S
+RS 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -654,8 +654,8 @@ fat men' this man doesn't have any pleasant looks for strangers.  Like
 most of the villagers he has only cold, almost accusing glances for
 visitors, and does his best to ignore them.
 ~
-1073743884 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743884 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -671,8 +671,8 @@ about the way she watches everyone she walks by.  Her eyes quickly
 evaluate every male she passes, dismissing women as if they didn't
 exist.
 ~
-1073743884 0 0 0 0 0 0 0 S
-PH 0 0 -1
+1073743884 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 2
@@ -687,8 +687,8 @@ no problems wielding an axe, or perhaps even a sword.  Her bright
 expression sours when she notices strangers in the village, she is
 clearly just as unfriendly as the rest of the villagers.
 ~
-2060 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2060 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -704,8 +704,8 @@ pour out of her mouth without stopping, few people bother to even pay
 attention to her.  Then again, it is clear that not even the villagers
 want to anger her either.
 ~
-1073743884 0 0 0 0 0 0 0 S
-PH 0 512 -1
+1073743884 0 0 0 0 0 0 0 0 S
+PH 0 512 0 -1
 14 15 55 14d18+56 2d5+2
 7.5.2.0 6804
 8 8 2
@@ -721,8 +721,8 @@ Most of the villagers here seem lazy, trying to get away with as little
 work as they can, but this woman clearly enjoys cooking, and loves to
 do a good job.
 ~
-2062 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2062 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -736,8 +736,8 @@ something about her that suggests she is really into doing things for
 money.  She has a tough mercenary air about her that keeps most people
 at least an arm's length away.
 ~
-1073743884 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+1073743884 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 2
@@ -752,8 +752,8 @@ keep him from getting into any fights.  He studies everyone he sees
 carefully, giving visitors hard looks.  It almost seems as if he is
 hoping for a fight, just to have something to do.
 ~
-1073743884 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743884 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -769,8 +769,8 @@ middle of nowhere, or perhaps he prefers a peaceful life after years of
 fighting.  Whatever the case may be, he certainly seems ready to stand
 here and earn easy money.
 ~
-1073743886 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743886 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -784,8 +784,8 @@ has seen a great deal of fighting in his time.  His grim face bears
 signs of tightly restrained rage.  He looks ready to burst any minute,
 but restrains himself waiting for a good excuse to go into battle.
 ~
-1073743950 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 24 11 23 24d47+240 3d5+3
 6.1.6.0 21384
 8 8 1
@@ -799,8 +799,8 @@ village.  Not only is she trusted because of her skill, but also
 because nobody wants to take a chance on insulting her.  She moves with
 a cat-like grace that anyone would find hard to match.
 ~
-1073743948 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+1073743948 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 27 8 13 27d65+351 3d6+4
 8.3.7.1 24057
 8 8 2
@@ -814,8 +814,8 @@ here, and his blood-shot eyes and downcast expression make it clear
 that he has had little success selling anything.  The empty bags he
 carries suggest he may even have been robbed.
 ~
-1073744012 0 0 0 0 0 0 0 S
-PH 0 4096 -1
+1073744012 0 0 0 0 0 0 0 0 S
+PH 0 4096 0 -1
 16 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -830,8 +830,8 @@ one child is almost a rarity.  Unlike most small villages where playing
 children add the din of life, this small girl plays quietly by herself,
 it would seem she doesn't have anyone else to play with.
 ~
-2188 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2188 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 2
@@ -846,8 +846,8 @@ the villagers that can be seen, this is the only one that offers any
 visitors a smile.  Her bright green eyes and wide six tooth smile are a
 joy to see in an otherwise dismal place.
 ~
-140 0 0 0 0 0 0 0 S
-PH 0 0 -1
+140 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 1.0.0.0 259
 8 8 0
@@ -860,8 +860,8 @@ This is one of the many village guards, sleeping calmly here until his
 next shift.  It almost seems as if there are more guards then workers
 in this small village, an odd thing to behold.
 ~
-1073743950 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743950 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 4 4 1
@@ -875,8 +875,8 @@ until her next shift.  Her sword lies nearby, ready to move at a
 moments notice, though it is hard to imagine any sort of emergency in
 this town.
 ~
-1073743886 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743886 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 4 4 2
@@ -892,8 +892,8 @@ rather than cunning in his planning.  He walks with confidence but his
 dark eyes have a concerned look to them, as if he is contemplating some
 dark secret.
 ~
-1140852750 1 0 16 0 0 0 0 S
-PH 0 16384 -1
+1140852750 1 0 0 16 0 0 0 0 S
+PH 0 16384 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -910,8 +910,8 @@ a distant past, she was probably a beautiful woman but time has taken a
 harsh toll on her features and her body.  Now she is just a withered
 old crone, though one with a great deal of power.
 ~
-1073743884 0 0 0 0 0 0 300 S
-PH 0 256 -1
+1073743884 0 0 0 0 0 0 0 300 S
+PH 0 256 0 -1
 26 8 16 26d60+312 3d6+4
 7.2.6.1 23166
 8 8 2
@@ -925,8 +925,8 @@ almost as important as her husband.  Rumours abound that she is the
 true brains of the mayor, and her bright &+Ggreen&N eyes do seem to hold a
 great deal of wisdom and knowledge.
 ~
-1140852814 0 0 0 0 0 0 -350 S
-PH 0 2048 -1
+1140852814 0 0 0 0 0 0 0 -350 S
+PH 0 2048 0 -1
 30 8 3 30d44+330 3d6+4
 0.5.7.1 26730
 8 8 2
@@ -940,8 +940,8 @@ money.  Despite his obvious youth, he bears the scars of long hours
 training with a sword.  Harsh, cruel laughter seems to pour from his
 mouth along with spittle and ale as he carouses here.
 ~
-2062 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+2062 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 17 13 45 17d35+119 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -956,8 +956,8 @@ twisted it there to get it out of the way.  One of her eyes sways off
 on its own, seeming continually out of focus.  Like many of the village
 citizens, she is here drinking because she is bored.
 ~
-2062 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2062 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 14 15 55 14d23+56 2d5+2
 7.5.2.0 6804
 8 8 2
@@ -972,8 +972,8 @@ powerful, piercing effect upon all those that meet their stare.  Though
 he still stands quite straight, it is clear that this one has had more
 than enough to drink.
 ~
-2062 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2062 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -989,8 +989,8 @@ out, no matter how small.  Clearly one of the finest warriors in town,
 it is easy to see why he has been given control of all the village
 guards and mercenaries.
 ~
-1174407246 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1174407246 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -1004,8 +1004,8 @@ exciting to happen just to break the monotony.  Though he is quite
 tall, his long limbs are thin and weak looking.  He was probably picked
 based upon his height alone.
 ~
-1140852750 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852750 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -1019,8 +1019,8 @@ cold blue eyes do nothing to detract from it.  He has the bored air of
 one that is here for one thing only, money.  In fact, he would probably
 demand bonus pay to actually do something.
 ~
-1140852750 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+1140852750 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -1035,8 +1035,8 @@ began eating too much.  Then again, he may just be so large that he
 frightens people away.  Crumbs and spilled juices stain his clothing,
 giving him a more disheveled then frightening appearance.
 ~
-1073743886 1 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743886 1 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -1049,8 +1049,8 @@ One of the most powerful guards in the village, this man seems content
 to just sit and rest.  He keeps watch through slitted lids, daring
 someone to actually believe that he is asleep.
 ~
-1073743886 1 0 0 0 0 0 -351 S
-PH 0 1 -1
+1073743886 1 0 0 0 0 0 0 -351 S
+PH 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -1066,8 +1066,8 @@ man alone.  Of all the bored and unfriendly people in the village this
 mercenary seems to be in the best mood, but then again, he may just be
 looking for an excuse to kill somebody.
 ~
-1073743886 1 0 0 0 0 0 0 S
-PH 0 16384 -1
+1073743886 1 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -1082,8 +1082,8 @@ to help watch over the duergar slaves.  Her whip looks well-worn, and
 the darting glances the slaves give her are a mixture of fear and
 hatred.
 ~
-1073743886 1 0 0 0 0 0 -400 S
-PH 0 1 -1
+1073743886 1 0 0 0 0 0 0 -400 S
+PH 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 2
@@ -1098,8 +1098,8 @@ watches over the slaves with his arms crossed over his chest.  He
 exudes confidence and power, daring the slaves
 to try something.
 ~
-1073743886 1 0 0 0 0 0 -400 S
-PH 0 1 -1
+1073743886 1 0 0 0 0 0 0 -400 S
+PH 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -1113,8 +1113,8 @@ everytime a slave is beaten or whipped.  It is clear that he is more
 than happy to join in on a beating, making him perfect for this sort of
 duty.
 ~
-1073743886 1 0 0 0 0 0 -400 S
-PH 0 1 -1
+1073743886 1 0 0 0 0 0 0 -400 S
+PH 0 1 0 -1
 22 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -1129,8 +1129,8 @@ look for new sources of ore.  Despite the numbers of slaves, they are
 poorly nourished and have been worked so hard that they are weak.  This
 guard and a few of his fellows are able to keep them all under control.
 ~
-1073743886 1 0 0 0 0 0 -400 S
-PH 0 1 -1
+1073743886 1 0 0 0 0 0 0 -400 S
+PH 0 1 0 -1
 24 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -1144,8 +1144,8 @@ creature would find vile.  The cruelty and hatred that this man has
 inflicted on the duergar would be enough to make them hate all humans
 even if they hadn't already.
 ~
-1073743884 1 0 0 0 0 0 -400 S
-PH 0 1 -1
+1073743884 1 0 0 0 0 0 0 -400 S
+PH 0 1 0 -1
 30 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -1163,8 +1163,8 @@ find.  The odd thing is that he hasn't been killed for trying just
 that.  If he didn't have some hope of being freed it is clear that he
 would never stand for the treatment he has received.
 ~
-1073743886 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743886 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 20 13 48 16d35+112 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -1181,8 +1181,8 @@ to what sort of job he is doing.  It is clear that the villagers have
 found this to be a source of 'quick' money but don't really know a
 thing about mining or about the smelting down of the ore.
 ~
-1073743886 1 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743886 1 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 22 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -1198,8 +1198,8 @@ amounts of time studying plain stone.  He glowers at his human captors
 continuously, earning himself reprimands and lashes, his hate is so
 strong it is palpable.
 ~
-1073743886 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743886 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 20 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -1215,8 +1215,8 @@ fight.  His dark skin blends allows him to easily hide in dark shadows,
 but the bright lights in the cavern above prevent him from entering it
 unseen.
 ~
-1073743950 64 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743950 64 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 24 11 23 24d47+240 3d5+3
 6.1.6.0 21384
 8 8 1
@@ -1230,8 +1230,8 @@ the deep dark regions is hard and unforgiving.  This elderly warrior
 bears the scars of many battles, and his skill and experience are
 clearly valued by the clan.
 ~
-1073743950 64 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743950 64 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 31 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -1245,8 +1245,8 @@ the only truely skilled blacksmith to survive the attack and capture by
 the human villagers.  It is his job now to repair the armor and weapons
 at hand so that the surviving clansmen can try to free their brethren.
 ~
-1073743950 64 0 0 0 0 0 -1000 S
-PD 0 32 -1
+1073743950 64 0 0 0 0 0 0 -1000 S
+PD 0 32 0 -1
 26 8 16 26d60+312 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -1260,8 +1260,8 @@ that no human will get past this one while he lives, nor will he ever
 be captured alive.  A strange pale scar marks his left cheek, standing
 out on his dark skin like a bizarre tattoo.
 ~
-1073743950 64 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743950 64 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 24 11 23 24d47+240 3d5+3
 6.1.6.0 21384
 8 8 1
@@ -1279,8 +1279,8 @@ freeing his clansmen will take more than skill alone because he and his
 surviving clansmen are vastly outnumbered and at a severe disadvantage
 in the light.
 ~
-1073743950 320 0 65712 0 0 0 -1000 S
-PD 0 32 -1
+1073743950 320 0 0 65712 0 0 0 -1000 S
+PD 0 32 0 -1
 36 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -1293,8 +1293,8 @@ Though he serves drinks to his villager patrons he ignores visitors
 from outside the town.  When he does notice visitors he gives them an
 unfriendly glare and pointedly ignores any orders they try to place.
 ~
-2062 384 0 0 0 0 0 0 S
-PH 0 1 -1
+2062 384 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -1311,8 +1311,8 @@ with the villagers anyway.  It is clear that the villagers don't really
 seem to like her much, probably because of all the foreigners that come
 to see her.
 ~
-33556494 0 0 0 0 0 0 400 S
-PH 0 512 -1
+33556494 0 0 0 0 0 0 0 400 S
+PH 0 512 0 -1
 21 11 32 21d32+168 3d5+3
 4.0.5.0 18711
 8 8 2
@@ -1327,8 +1327,8 @@ to force the overseers to give him another ration so he can give it to
 his clansmen, in hopes they survive to avenge him by slaying all the
 humans.
 ~
-67110926 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+67110926 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 18 20 87 4d17+22 1d5+0
 2.1.0.0 518
 8 8 0
@@ -1343,8 +1343,8 @@ look for new sources of ore.  Despite the numbers of slaves, they are
 poorly nourished and have been worked so hard that they are weak.  This
 guard and a few of his fellows are able to keep them all under control.
 ~
-1073743886 1 0 0 0 0 0 -400 S
-PH 0 1 -1
+1073743886 1 0 0 0 0 0 0 -400 S
+PH 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -1358,8 +1358,8 @@ creature would find vile.  The cruelty and hatred that this man has
 inflicted on the duergar would be enough to make them hate all humans
 even if they hadn't already.
 ~
-1073743884 1 0 0 0 0 0 -400 S
-PH 0 1 -1
+1073743884 1 0 0 0 0 0 0 -400 S
+PH 0 1 0 -1
 30 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -1375,8 +1375,8 @@ amounts of time studying plain stone.  He glowers at his human captors
 continuously, earning himself reprimands and lashes, his hate is so
 strong it is palpable.
 ~
-1073743886 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743886 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -1393,8 +1393,8 @@ arcane magics.  Her wings and golden scales bear a slightly greenish tint that
 will mellow and become more golden with age.  Muscles ripple beneath her hard
 scales, showing just how powerful she really is.
 ~
-1073874956 384 0 706224318 14528 0 0 1000 S
-D 0 512 -1
+1073874956 384 0 0 706224318 14528 0 0 1000 S
+D 0 512 0 -1
 53 -5 -124 53d88+4929 7d6+30
 8.0.0.19 429300
 8 8 2
@@ -1411,8 +1411,8 @@ he shows his full strength, few dragons are as powerful, or as large, as he.
 His emerald eyes study everything around him in quiet wisdom, prefering to be
 an observer rather than a participant in all that goes on around him.
 ~
-1073874956 384 0 723001534 47324 0 0 1000 S
-D 0 32 -1
+1073874956 384 0 0 723001534 47324 0 0 1000 S
+D 0 32 0 -1
 56 -7 -134 56d132+6384 7d6+35
 1.3.6.19 453600
 8 8 1
@@ -1427,8 +1427,8 @@ as he casts a spell.  The plants and animals around him shun him in fear and
 awe.  Somehow he has gained a power over the elements that has allowed him to
 twist nature around him to his own dark purposes.
 ~
-1073743884 0 0 553713852 12480 0 0 -1000 S
-PH 0 256 -1
+1073743884 0 0 0 553713852 12480 0 0 -1000 S
+PH 0 256 0 -1
 56 -7 -114 56d132+5824 7d6+35
 1.3.8.6 226800
 8 8 1

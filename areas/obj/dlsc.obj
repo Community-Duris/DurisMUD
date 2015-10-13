@@ -1044,7 +1044,7 @@ contract demonic parchment drow~
 a &+Rdemonic &+Wcontract&n~
 &+LA rolled scroll of &+mdrow&+L flesh has been discarded here.&n~
 ~
-12 2 3 0 7 0 98305 16385 64 0 0
+12 2 3 0 7 0 98305 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 100 100
 E
@@ -1136,7 +1136,7 @@ ring platinum celtic wedding~
 a &+Wplatinum &+Gce&+gl&+Gt&+gic&+L wedding band&n~
 &+LA small &+Wplatinum&+L ring has been discarded in the dirt, here.&n~
 ~
-9 25 3 0 7 15 0 3 2 0 0
+9 25 3 0 7 15 0 3 32770 0 0
 5 1 0 3 0 0 0 0
 3 25000 100
 E

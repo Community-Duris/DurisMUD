@@ -2,7 +2,7 @@
 &+rLava Springs&N~
 99772 2 0 15 16 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 99701 4 1 100 0 0 0
@@ -134,6 +134,7 @@ D 0 99764 1 2 100 0 0 0
 *     "The Slave Pens Center Hall" - closed/locked
 *
 *
+O 0 3097 1 99725 100 0 0 0         * (object type not in this .obj file)
 O 0 99700 1 99741 100 0 0 0        * a small lava spring
 O 0 99704 1 99746 100 0 0 0        * a small lava spring
 O 0 99705 3 99746 100 0 0 0        * a chunk of cinder
@@ -199,7 +200,6 @@ M 0 99716 4 99723 100 0 0 0        * a sinister vampire
 M 0 99712 4 99723 100 0 0 0        * a black crow
 M 0 99716 4 99723 100 0 0 0        * a sinister vampire
 M 0 99715 5 99724 100 0 0 0        * a drunk flind
-O 0 3097 1 99725 100 0 0 0         * (object type not in this .obj file)
 M 0 99711 1 99725 100 0 0 0        * Fonlak, the honest banker
 M 0 99707 4 99725 100 0 0 0        * a deadly bat
 M 0 99712 4 99726 100 0 0 0        * a black crow

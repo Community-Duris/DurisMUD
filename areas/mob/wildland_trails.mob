@@ -11,8 +11,8 @@ decomposing leaves and dirt. In multiple places, the body shows signs
 of deep piercing wounds, obviously these killed him and began his life
 of undeath. One can only imagine what prevented his peaceful rest....
 ~
-2 1 0 33554472 4160 0 0 0 S
-U 0 1 -1
+2 1 0 0 33554472 4160 0 0 0 S
+U 0 1 0 -1
 23 11 26 23d47+230 3d5+3
 0.0.0.0 20493
 8 8 0
@@ -26,8 +26,8 @@ it is so coiled about the other vegetation in the area. The thickness
 of the vine is nearly that of a large sapling, and its entire length
 is covered in large blood red thorns.
 ~
-3 1 0 34603048 0 0 0 0 S
-VT 0 0 -1
+3 1 0 0 34603048 0 0 0 0 S
+VT 0 0 0 -1
 5 20 83 5d15+67 1d5+0
 0.0.0.0 648
 8 8 0
@@ -42,8 +42,8 @@ which are very tentacle-like. These smaller vines can move with a
 frightening speed within their range as they seek out warm blooded
 prey to grasp and strangle.
 ~
-3 1 0 34603048 0 0 0 0 S
-VT 0 0 -1
+3 1 0 0 34603048 0 0 0 0 S
+VT 0 0 0 -1
 10 18 67 10d18+135 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -56,8 +56,8 @@ These vines are very thin, yet surprisingly tough and resilient. Huge
 blood red flower blooms cover the vines and emit a sweetly smelling
 pollen.
 ~
-7 1 0 33554472 0 0 0 0 S
-VT 0 0 -1
+7 1 0 0 33554472 0 0 0 0 S
+VT 0 0 0 -1
 3 20 90 3d15+41 1d5+0
 0.0.0.0 388
 8 8 0
@@ -72,8 +72,8 @@ he peers into the water looking for fish to catch for dinner. Despite his
 youth and inexperience, the lad is still a strapping individual born into a
 harsh land with the skills necessary for survival.
 ~
-2114 128 0 0 0 0 0 200 S
-PB 0 1 -1
+2114 128 0 0 0 0 0 0 200 S
+PB 0 1 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -89,8 +89,8 @@ striking feature is a shimmering blue aura which surrounds his entire
 body. As you approach, he mumbles prayers to the unseen forces of
 mother nature which surround us all, the wakan.
 ~
-100663363 128 0 8232 0 0 0 0 S
-PB 0 256 -1
+100663363 128 0 0 8232 0 0 0 0 S
+PB 0 256 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -104,8 +104,8 @@ bluish matter. Sometimes humanoid in shape, at other times globular,
 but constantly shifting form, its extremely difficult to assess its
 true nature.
 ~
-67108934 0 0 100663354 128 0 0 0 S
-EA 0 0 -1
+67108934 0 0 0 100663354 128 0 0 0 S
+EA 0 0 0 -1
 35 6 -22 35d70+525 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -119,8 +119,8 @@ bluish matter. Sometimes humanoid in shape, at other times globular,
 but constantly shifting form, its extremely difficult to assess its
 true nature.
 ~
-1140850758 0 0 100663354 128 0 0 0 S
-EA 0 0 -1
+1140850758 0 0 0 100663354 128 0 0 0 S
+EA 0 0 0 -1
 35 6 -22 35d70+525 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -134,8 +134,8 @@ tribe and is responsible for helping feed the collective. He wanders
 about the camp and the river repairing fishing gear, checking nets,
 and spearing for fish.
 ~
-1073743936 0 0 0 0 0 0 200 S
-PB 0 1 -1
+1073743936 0 0 0 0 0 0 0 200 S
+PB 0 1 0 -1
 26 11 26 23d47+230 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -151,8 +151,8 @@ Apparently, the Welgurd tribe respects the knowledge and spiritualness
 of its religious leaders above the warrior's might idolized my many
 barbaric peoples.
 ~
-1107298370 128 0 0 0 0 0 200 S
-PB 0 256 -1
+1107298370 128 0 0 0 0 0 0 200 S
+PB 0 256 0 -1
 40 2 -28 40d88+880 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -166,8 +166,8 @@ deeply tanned skin. Despite her years, she is still able to perform
 some of the many tasks required of the women-folk such as tanning
 animal hides and the cooking of meals.
 ~
-2242 0 0 0 0 0 0 200 S
-PB 0 0 -1
+2242 0 0 0 0 0 0 0 200 S
+PB 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 2
@@ -183,8 +183,8 @@ meager providings. As you look on, she has obviously been attending to
 her many duties such as cleaning game and fish, tanning animal skins,
 gathering firewood and cooking.
 ~
-2112 128 0 0 0 0 0 200 S
-PB 0 1 -1
+2112 128 0 0 0 0 0 0 200 S
+PB 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 2
@@ -199,8 +199,8 @@ Tribe. When not running about on errands for one of the older
 barbarians, the youngster tags along with the fisherman or hunters
 to learn about the ways of the tribe.
 ~
-196 0 0 0 0 0 0 0 S
-PB 0 0 -1
+196 0 0 0 0 0 0 0 0 S
+PB 0 0 0 -1
 11 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 1
@@ -215,8 +215,8 @@ of the tribe. When not playing around the campsite, the girl can be
 seen helping out the adults with chores, learning the way to chew
 leather and cook meals.
 ~
-196 0 0 0 0 0 0 0 S
-PB 0 0 -1
+196 0 0 0 0 0 0 0 0 S
+PB 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 2
@@ -231,8 +231,8 @@ survive. This man is one such barbarian, for he is strong, lean and
 tough in the ways of the Moorland Plains. His contributions to the
 tribe are a steady hunting eye and an unflinching combat nerve.
 ~
-1174407232 0 0 0 0 0 0 0 S
-PB 0 1 -1
+1174407232 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 37 2 -18 37d95+851 4d7+10
 0.1.2.2 47952
 8 8 1
@@ -248,8 +248,8 @@ sometimes aggressive to humanoids, the cat generally prefers to avoid
 men and stick to easier prey. However, if threatened or protecting
 young the cats have been known to viciously defend themselves.
 ~
-1073741888 0 0 524288 0 0 0 0 S
-A 0 0 -1
+1073741888 0 0 0 524288 0 0 0 0 S
+A 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 0
@@ -265,8 +265,8 @@ sometimes aggressive to humanoids, the cat generally prefers to avoid
 men and stick to easier prey. However, if threatened or protecting
 young the cats have been known to viciously defend themselves.
 ~
-1073741888 1 0 524288 0 0 0 0 S
-AC 0 0 -1
+1073741888 1 0 0 524288 0 0 0 0 S
+AC 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 0
@@ -280,8 +280,8 @@ life in the prairie and grasslands of the Realms. Its feathers offer
 good camouflage against the brown and yellow grasses as it hunts
 for seeds and small insects to eat.
 ~
-131200 0 0 0 0 0 0 0 S
-B 0 0 -1
+131200 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -295,8 +295,8 @@ with patches of a short, wiry brown fur which grow darker near its
 hyena-like snout. Lean muscles covered its bones and a thin drip of
 saliva rolls down its lips as it snarls.
 ~
-1073743940 1 0 0 0 0 0 -400 S
-H 0 0 -1
+1073743940 1 0 0 0 0 0 0 -400 S
+H 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 0
@@ -312,8 +312,8 @@ him some minimal protection. From a glance in his eyes, you get the
 feeling this giant is smarter than the stupid reputation most giants
 have earned.
 ~
-1073743874 1 0 0 0 0 0 -500 S
-G 0 1 -1
+1073743874 1 0 0 0 0 0 0 -500 S
+G 0 1 0 -1
 28 8 20 28d65+504 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -327,8 +327,8 @@ of a carrion stench. Commonly know to be the pets of goblinoids and
 other hideous creatures, these beasts are trained to kill anything
 they encounter other than their masters.
 ~
-64 1 0 0 0 0 0 -400 S
-AC 0 0 -1
+64 1 0 0 0 0 0 0 -400 S
+AC 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -342,8 +342,8 @@ Welgund barbarians as they migrate across the great moorlands. Tamed
 from the wild horses of the plains, the beast is used to carry warriors
 into battle and to carry travois laden with the barbarian's belongings.
 ~
-134217730 0 0 0 0 0 0 0 S
-AE 0 0 -1
+134217730 0 0 0 0 0 0 0 0 S
+AE 0 0 0 -1
 17 13 45 17d30+85 3d4+2
 0.0.0.0 8262
 8 8 0
@@ -357,8 +357,8 @@ health, vibrant and alive. It's somewhat skittish and nervous at your
 presence here but so far has not galloped off. Rearing and neighing,
 it warns you not to approach any closer.
 ~
-64 0 0 0 0 0 0 0 S
-AE 0 1 -1
+64 0 0 0 0 0 0 0 0 S
+AE 0 1 0 -1
 17 13 45 17d35+119 3d4+2
 0.0.0.0 8262
 8 8 0
@@ -374,8 +374,8 @@ the surrounding sounds, ever alert for danger. Its primary defense is
 to run away from enemies its keen senses have spotted, for like all
 antelope the pronghorn is quite nimble and fast.
 ~
-192 0 0 0 0 0 0 0 S
-AH 0 0 -1
+192 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 0
@@ -387,8 +387,8 @@ vine thick~
 &+gThis vine looks much like any other, except that it is covered
 &+gwith sharp thorns and has curious external root-like appendages..
 ~
-2120 1 0 35127336 0 0 0 0 S
-AC 0 0 -1
+2120 1 0 0 35127336 0 0 0 0 S
+AC 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 0

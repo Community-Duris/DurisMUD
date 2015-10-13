@@ -441,7 +441,7 @@ scroll light dark darkness~
 &+ga &+Wlight &+gand &+Ldark&+g scroll~
 &+gA peculiar scroll all in &+Wlight &+gand &+Ldark &+grunes lies here crumpled on the ground.~
 ~
-2 3 3 0 7 0 12288 8388609 0 0 0
+2 3 3 0 7 0 12288 8388609 32768 0 0
 60 123 122 -1 0 0 0 0
 0 150000 100
 E

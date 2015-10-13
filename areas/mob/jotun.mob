@@ -8,8 +8,8 @@ and nibbles on nuts as it leaps back and forth between the
 branches of Yggdrasil.  This one of the ratatosk, the self-styled
 guardians of the great tree.
 ~
-200 0 0 35127328 64 0 0 600 S
-AH 0 0 -1
+200 0 0 0 35127328 64 0 0 600 S
+AH 0 0 0 -1
 50 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 1
@@ -22,8 +22,8 @@ This ratatosk is larger than the others and is the ruler of the
 pack in this section of Yggdrasil.  He is the only one in the
 pack trusted with the use of fire.
 ~
-202 0 0 35127328 64 0 0 600 S
-AH 0 0 -1
+202 0 0 0 35127328 64 0 0 600 S
+AH 0 0 0 -1
 14 15 55 14d23+56 2d5+2
 0.0.0.0 6804
 8 8 1
@@ -36,8 +36,8 @@ Dressed in woolen clothing and a leather vest, this creature is
 extremely ugly but looks vaguely manlike.  He is one of the
 fensir, a peculiar breed of troll only known in Ysgard.
 ~
-204 0 0 33554464 64 0 0 0 S
-PT 0 0 -1
+204 0 0 0 33554464 64 0 0 0 S
+PT 0 0 0 -1
 18 13 42 18d30+90 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -51,8 +51,8 @@ They are known as devourers because of their fearsome apetites.
 This rakka is nearly 25 feet tall and weighs several thousand
 pounds.
 ~
-1073743886 1 0 33554472 64 0 0 0 S
-PT 0 1 -1
+1073743886 1 0 0 33554472 64 0 0 0 S
+PT 0 1 0 -1
 52 -5 -101 52d131+4420 7d6+30
 7.9.5.6 210600
 8 8 2
@@ -66,8 +66,8 @@ impressive sight with his dull black skin and flaming red hair.
 Dressed in iron chainmail and wielding a huge black sword he
 looks fully capable of fulfilling his duty to Surtr.
 ~
-67108938 1 0 570490920 4096 0 0 -700 S
-G 0 1 -1
+67108938 1 0 0 570490920 4096 0 0 -700 S
+G 0 1 0 -1
 55 -3 -85 50d119+3000 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -81,8 +81,8 @@ grown to an awesome size.  The beast's maw is stained with the
 blood of recent kills.  Huge glistening white scales reflect the
 little light in the lair.
 ~
-1073874954 1 0 33554488 12480 0 0 -400 S
-D 0 1 -1
+1073874954 1 0 0 33554488 12480 0 0 -400 S
+D 0 1 0 -1
 60 -5 -121 52d110+4836 7d6+30
 7.9.9.18 421200
 4 4 1
@@ -95,8 +95,8 @@ A furry beast with a vaguely humanoid body, the yeti is a
 ferocious carnivore.  Sharp yellowed teeth and a vice-like grip
 help the yeti down his prey.
 ~
-72 1 0 35127328 64 0 0 0 S
-AC 0 0 -1
+72 1 0 0 35127328 64 0 0 0 S
+AC 0 0 0 -1
 53 -3 -78 48d100+2544 6d6+25
 0.0.0.0 116640
 8 8 0
@@ -110,8 +110,8 @@ The worm is covered in many spiky projections and armor plating
 that blends in with the snow.  The worm's saber-like teeth can
 rip you to shreds in seconds.
 ~
-584 1 0 34603048 64 0 0 -450 S
-AC 0 1 -1
+584 1 0 0 34603048 64 0 0 -450 S
+AC 0 1 0 -1
 52 -5 -101 52d131+4420 7d6+30
 0.0.0.0 210600
 8 8 0
@@ -124,8 +124,8 @@ An enormous furry beast, cave bears have a fonder taste for meat
 than other smaller varieties of bears.  The bears are also
 fiercely territorial and resent any intrusions.
 ~
-74 1 0 40 64 0 0 0 S
-A 0 0 -1
+74 1 0 0 40 64 0 0 0 S
+A 0 0 0 -1
 45 -1 -69 45d90+1935 6d6+12
 0.0.0.0 109350
 8 8 1
@@ -139,8 +139,8 @@ camoflage.  The creature's dull black eyes gleam with a hint of
 the creature's ferocity.  Although quite thin, snow trolls have
 fearsome strength and can rip a man in two.
 ~
-1073743944 1 0 35127352 64 0 0 -1000 S
-PT 0 1 -1
+1073743944 1 0 0 35127352 64 0 0 -1000 S
+PT 0 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -155,8 +155,8 @@ and snow virtually undetected.  The creature's dull black eyes
 gleam with a hint of the creature's ferocity.  Although quite
 thin, ice trolls have fearsome strength and can rip a man in two.
 ~
-1073743944 1 0 35127480 64 0 0 -1000 S
-PT 0 1 -1
+1073743944 1 0 0 35127480 64 0 0 -1000 S
+PT 0 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -169,8 +169,8 @@ This giant has had one to many tankards of Brimir's fine mead.
 The giants light blue complexion is flushed with the presence of
 alcohol.
 ~
-10 0 0 33554432 64 0 0 -350 S
-G 0 1 -1
+10 0 0 0 33554432 64 0 0 -350 S
+G 0 1 0 -1
 28 8 20 28d65+504 3d6+4
 8.3.7.1 24948
 4 8 1
@@ -184,8 +184,8 @@ mead.  Every guest at his hall of Okalnir is met with a toast and
 has a tankard pushed in front of them.  Brimir is not to be
 underestimated; in his day he was a great warrior.
 ~
-2058 0 0 33554472 64 0 0 200 S
-G 0 1 -1
+2058 0 0 0 33554472 64 0 0 200 S
+G 0 1 0 -1
 52 -5 -91 52d131+4680 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -200,8 +200,8 @@ giants for untold eons.  He has a saddened look about his face
 but his steely gaze leaves no doubt that he is capable of
 defending his charge.
 ~
-2059 0 0 33628280 64 0 0 0 S
-G 0 32 -1
+2059 0 0 0 33628280 64 0 0 0 S
+G 0 32 0 -1
 59 -7 -118 59d132+6431 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -215,8 +215,8 @@ the base of the Great Plateau.  Years of hard work in this
 unforgiving land show in the gnarled face of the giant.
 Trespassers on his small plot of land aren't looked upon kindly.
 ~
-10 1 0 33554432 64 0 0 0 S
-G 0 0 -1
+10 1 0 0 33554432 64 0 0 0 S
+G 0 0 0 -1
 31 6 10 31d70+620 4d6+7
 5.7.9.1 40176
 8 8 1
@@ -230,8 +230,8 @@ the hills checking his traps.  The trappers feel they own the
 territory they roam, and have a hatred of any who try to poach
 their lands.
 ~
-10 1 0 33554432 64 0 0 -350 S
-G 0 1 -1
+10 1 0 0 33554432 64 0 0 -350 S
+G 0 1 0 -1
 51 -5 -88 51d131+4590 7d6+30
 6.9.4.6 206550
 8 8 1
@@ -244,8 +244,8 @@ A small white dragon captured by some ingenious frost giant has
 been harnessed to a plow.  The dragon is forced to plow the hard
 land and doesn't look very happy about it.
 ~
-10 1 0 167772200 12480 0 0 -350 S
-D 0 0 -1
+10 1 0 0 167772200 12480 0 0 -350 S
+D 0 0 0 -1
 35 6 -32 35d70+875 4d6+7
 9.9.1.6 90720
 8 8 1
@@ -259,8 +259,8 @@ are the protectors, the guardian spirits of the mountains.  This
 snowhair oread is one of the elders of her kind, and is able to
 command powerful magic.
 ~
-10 0 0 33562794 64 0 0 350 S
-HF 0 256 -1
+10 0 0 0 33562794 64 0 0 350 S
+HF 0 256 0 -1
 55 -5 -111 55d121+4620 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -273,8 +273,8 @@ A large shaggy goat with extremely nimble feet.  The goat is able
 to walk on sheer rocks almost without trying in search for weeds
 and other assorted plants to munch on.
 ~
-72 0 0 32 64 0 0 0 S
-AH 0 0 -1
+72 0 0 0 32 64 0 0 0 S
+AH 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 1
@@ -288,8 +288,8 @@ has decided to take a nap.  The frost giant's light blue skin is
 hid by the dirt and grime caked on his face.  His huge shaggy
 beard lies tied in knots.
 ~
-10 1 0 33554432 64 0 0 -500 S
-G 0 1 -1
+10 1 0 0 33554432 64 0 0 -500 S
+G 0 1 0 -1
 50 -3 -85 50d119+3000 6d6+25
 0.3.1.5 121500
 4 8 1
@@ -302,8 +302,8 @@ A short frost giant dressed in a dirty apron and leather vest.
 He ladles out food from huge cauldrons hanging over a cooking
 fire to the soldiers of the camp.
 ~
-10 1 0 33554432 64 0 0 -450 S
-G 0 0 -1
+10 1 0 0 33554432 64 0 0 -450 S
+G 0 0 0 -1
 30 8 13 30d55+480 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -316,8 +316,8 @@ A huge muscled frost giant naked to the waste.  His light blue
 skin is covered by the soot and dirt from the messy forge.  He is
 the giant in charge of supplying weapons to the entire camp.
 ~
-10 1 0 33554472 64 0 0 -500 S
-G 0 1 -1
+10 1 0 0 33554472 64 0 0 -500 S
+G 0 1 0 -1
 52 -5 -91 52d131+4680 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -334,8 +334,8 @@ boulders tremendous distances causing massive destruction.
 Seemingly every other word emenating from the giant's mouth is a
 throaty roar to Thrym, god of the frost giants.
 ~
-72 1 0 33554472 64 0 0 -500 S
-G 0 1 -1
+72 1 0 0 33554472 64 0 0 -500 S
+G 0 1 0 -1
 54 -5 -97 54d131+4860 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -351,8 +351,8 @@ wields a tremendous polished axe as if it were a toy. The giant
 is in charge of training the frost giant students into being good
 fighters.
 ~
-10 1 0 33554488 64 0 0 -500 S
-G 0 1 -1
+10 1 0 0 33554488 64 0 0 -500 S
+G 0 1 0 -1
 59 -7 -118 59d143+6490 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -366,8 +366,8 @@ attention.  The giant is wearing heavy mithril platemail and bars
 entrance to a large mithril gate with his enormous pike.  The
 giant seems unusually devoted to his duty.
 ~
-67108874 1 0 33554476 64 0 0 -400 S
-G 0 1 -1
+67108874 1 0 0 33554476 64 0 0 -400 S
+G 0 1 0 -1
 55 -5 -101 55d131+4950 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -382,8 +382,8 @@ armor and carries a huge broadsword at his side.  Upset at the
 failures to defeat the frost mages he's taking out his
 frustration on the council of jarls.
 ~
-67110922 1 0 33620088 64 0 0 -500 S
-G 0 1 -1
+67110922 1 0 0 33620088 64 0 0 -500 S
+G 0 1 0 -1
 59 -7 -118 59d143+6490 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -397,8 +397,8 @@ the clans of frost giants that have heeded Thrym's call to war.
 The jarls owe their position due to prowess in battle, but have
 been thwarted so far by the magic of the frost mages.
 ~
-67110922 1 0 33554472 64 0 0 -500 S
-G 0 1 -1
+67110922 1 0 0 33554472 64 0 0 -500 S
+G 0 1 0 -1
 54 -5 -97 54d131+4860 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -414,8 +414,8 @@ seems to be almost deathly cold.  Thrym has been god of the frost
 giants for untold eons and is most displeased with the intrusion
 of Kostchtchie into his domain.
 ~
-8456203 1 0 33628268 12480 0 0 -500 S
-G 0 1 -1
+8456203 1 0 0 33628268 12480 0 0 -500 S
+G 0 1 0 -1
 59 -7 -118 6d6+29100 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -432,8 +432,8 @@ managed to become extremely adept at wielding spells.  However
 the strain of holding off the attack of Thrym's horde is evident
 in the mages worried look.
 ~
-10 1 0 33620012 64 0 0 -800 S
-G 0 1024 -1
+10 1 0 0 33620012 64 0 0 -800 S
+G 0 1024 0 -1
 48 -3 -68 48d80+2784 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -448,8 +448,8 @@ mumbles occasionally in some odd language.  This giant was the
 first prophet of Kostchtchie in Jotunheim, but he seems to have
 now gone quite utterly mad.
 ~
-10 1 0 33554492 64 0 0 -900 S
-G 0 256 -1
+10 1 0 0 33554492 64 0 0 -900 S
+G 0 256 0 -1
 59 -7 -118 59d132+6431 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -465,8 +465,8 @@ balor wields a jagged sword of lightning and a many tailed whip.
 This balor has been called to Jotunheim to serve as a bodyguard
 for the Lord Kostchtchie's prophet.
 ~
-1082132490 1 0 167837816 4288 0 0 -1000 S
-X 0 512 -1
+1082132490 1 0 0 167837816 4288 0 0 -1000 S
+X 0 512 0 -1
 59 -7 -143 59d96+6490 7d6+35
 4.5.4.9 358425
 8 8 1
@@ -481,8 +481,8 @@ crushed skull emblem of Utgard-Loki.  The giant is one of the
 guards entrusted with guarding the gates of the city and
 diligently does his job lest he draw the wrath of the king.
 ~
-67108874 1 0 33554476 64 0 0 -500 S
-G 0 1 -1
+67108874 1 0 0 33554476 64 0 0 -500 S
+G 0 1 0 -1
 50 -3 -85 50d119+3000 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -497,8 +497,8 @@ crushed skull emblem of Utgard-Loki.  The giant is one of the
 guards entrusted with guarding the citadel of the Utgard-Loki and
 diligently does his job lest he draw the wrath of the king.
 ~
-67110922 1 0 33554476 64 0 0 -500 S
-G 0 1 -1
+67110922 1 0 0 33554476 64 0 0 -500 S
+G 0 1 0 -1
 54 -5 -97 54d131+4860 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -513,8 +513,8 @@ crushed skull emblem of Utgard-Loki.  The giant is one of the
 guards entrusted with patrolling the walls of the city and
 diligently does his job lest he draw the wrath of the king.
 ~
-67108872 1 0 33554476 64 0 0 -500 S
-G 0 1 -1
+67108872 1 0 0 33554476 64 0 0 -500 S
+G 0 1 0 -1
 48 -3 -68 48d119+2880 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -527,8 +527,8 @@ This giant looks cowed, as if a twenty foot giant could look
 scared.  The giant hurredly goes about his business and does his
 best to avoid the press gangs of the king.
 ~
-2138 1 0 33554472 64 0 0 -50 S
-G 0 0 -1
+2138 1 0 0 33554472 64 0 0 -50 S
+G 0 0 0 -1
 25 11 29 25d40+325 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -543,8 +543,8 @@ and eyes.  He has great feathery wings but they look broken and
 twisted into odd positions.  He lies shackled to the great table.
 He barely manages to turn his head and gaze longily at you.
 ~
-2058 0 0 33562744 12480 0 0 1000 S
-HF 0 512 -1
+2058 0 0 0 33562744 12480 0 0 1000 S
+HF 0 512 0 -1
 60 -5 -98 51d88+4233 7d6+30
 6.9.4.6 206550
 5 5 1
@@ -559,8 +559,8 @@ he can no longer fly.  A large chain attached to an iron collar
 around his neck is held by his handler.  The dragon lolls about
 lazily and occasionally snaps at his handler.
 ~
-67111242 0 0 33554476 64 0 0 -450 S
-D 0 1 -1
+67111242 0 0 0 33554476 64 0 0 -450 S
+D 0 1 0 -1
 51 -3 -92 46d119+2990 6d6+25
 6.0.1.14 223560
 8 8 1
@@ -575,8 +575,8 @@ testy.  Numerous small bites and cuts mar the giants light blue
 skin.  He holds a large iron chain that's attached to the neck of
 the dragon.
 ~
-2058 0 0 33554472 64 0 0 -350 S
-G 0 1 -1
+2058 0 0 0 33554472 64 0 0 -350 S
+G 0 1 0 -1
 51 -1 -46 41d107+2050 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -590,8 +590,8 @@ the clans of frost giants that pay allegiange to Utgard-Loki.
 The jarls owe their position due to prowess in battle, but can
 lose it on a whim by the king.
 ~
-67110922 1 0 33554552 64 0 0 -500 S
-G 0 1 -1
+67110922 1 0 0 33554552 64 0 0 -500 S
+G 0 1 0 -1
 56 -7 -104 56d143+6160 7d6+35
 1.3.8.6 226800
 8 8 1
@@ -608,8 +608,8 @@ control of Jotunheim for centuries, unprecedented in history.  He
 has even managed to best several of the Aesir in battle.  Any
 attempt to challenge him will be severly dealt with.
 ~
-2059 1 0 33554552 64 0 0 -750 S
-G 0 256 -1
+2059 1 0 0 33554552 64 0 0 -750 S
+G 0 256 0 -1
 59 -7 -118 59d132+6431 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -623,8 +623,8 @@ jailkeeper for the prisoners of the frost giant soldiers, a very
 boring and tedious job.  The giant snores contendly, safely
 assuming that no one can make it this far.
 ~
-10 1 0 33554432 64 0 0 -400 S
-G 0 1 -1
+10 1 0 0 33554432 64 0 0 -400 S
+G 0 1 0 -1
 40 2 -18 40d95+1120 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -637,8 +637,8 @@ One of the frost mages of Kostchtchie, he was captured by the
 soldiers of Thrym and placed in this dank cell.  He looks in
 terrible condition, as if he had been beaten several times.
 ~
-10 0 0 33554472 64 0 0 -800 S
-G 0 1024 -1
+10 0 0 0 33554472 64 0 0 -800 S
+G 0 1024 0 -1
 42 -1 -49 42d72+2016 6d6+12
 2.8.7.3 102060
 6 6 1
@@ -655,8 +655,8 @@ than Utgard-Loki, king of the frost giants. A faint glimmer of
 magic surrounds the giants appearance but the source is
 undetectable.
 ~
-2076 1 0 33554472 64 0 0 -350 S
-G 0 0 -1
+2076 1 0 0 33554472 64 0 0 -350 S
+G 0 0 0 -1
 50 -3 -85 50d100+2900 6d6+25
 0.3.1.5 121500
 6 6 1
@@ -670,8 +670,8 @@ Loki, he is one of the many overseers of the vast number of
 slaves the giants keep.  The giant cruelly treats the slaves and
 leaves many for dead.
 ~
-10 1 0 33554472 64 0 0 -700 S
-G 0 1 -1
+10 1 0 0 33554472 64 0 0 -700 S
+G 0 1 0 -1
 47 -3 -65 47d119+2820 6d6+25
 7.0.0.5 114210
 8 8 1
@@ -686,8 +686,8 @@ ankles, he has no hope for escape.  The dwarven slaves are
 cruelly treated because of an abiding hatred the giants have for
 the little folk.
 ~
-10 0 0 33554432 64 0 0 200 S
-PM 0 1 -1
+10 0 0 0 33554432 64 0 0 200 S
+PM 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -701,8 +701,8 @@ raids of the frost giants.  Wearing chains around his ankles, he
 has no hope for escape.  Most elves are unused to hard physical
 labor and don't last very long working the mines.
 ~
-10 0 0 33554432 64 0 0 800 S
-PE 0 2 -1
+10 0 0 0 33554432 64 0 0 800 S
+PE 0 2 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -715,8 +715,8 @@ A young looking frost giant barely twenty feet tall waits
 impatiently at the sparring yard for his lessons with the
 battlemaster.
 ~
-10 1 0 33554472 64 0 0 -400 S
-G 0 1 -1
+10 1 0 0 33554472 64 0 0 -400 S
+G 0 1 0 -1
 36 2 -5 36d95+1008 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -731,8 +731,8 @@ giant renders him oblivious to anything other than the need to
 fight.  It would be a good idea to clear a large path around this
 giant.
 ~
-1074006089 1 0 33554464 64 0 0 -500 S
-G 0 1048576 -1
+1074006089 1 0 0 33554464 64 0 0 -500 S
+G 0 1048576 0 -1
 56 -7 -104 56d143+6160 7d6+35
 1.3.8.6 226800
 8 8 1
@@ -747,8 +747,8 @@ shelves.  The giant is in charge of inventorying all the spell
 components of the mages and seeing that they are well-stocked, as
 well as brewing any potions the mages may need.
 ~
-10 0 0 33554472 64 0 0 -350 S
-G 0 256 -1
+10 0 0 0 33554472 64 0 0 -350 S
+G 0 256 0 -1
 55 -5 -101 55d88+4840 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -761,8 +761,8 @@ With coal-black skin and flame-red hair, the giant is an
 impressive sight.  He has come on Surtr's behalf as an emissary
 to the court of Utgard-Loki.
 ~
-10 1 0 570425384 64 0 0 -800 S
-G 0 1 -1
+10 1 0 0 570425384 64 0 0 -800 S
+G 0 1 0 -1
 60 -5 -97 54d131+4860 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -776,8 +776,8 @@ reserved expression on his face.  He has come on behalf of the
 rulers of Svartalfheim as an emissary to the court of Utgard-
 Loki.  He wears a small token to Eilistraee on his shoulder.
 ~
-10 0 0 524344 66 0 0 0 S
-PL 0 2048 -1
+10 0 0 0 524344 66 0 0 0 S
+PL 0 2048 0 -1
 60 -5 -107 54d88+4482 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -790,8 +790,8 @@ An ashen-faced man dressed in fine clothing.  He is very thin and
 gaunt and has a haunted look about him.  He has come to the court
 of Utgard-Loki as an emissary of his mistress Hel.
 ~
-1073743882 1 0 33554552 64 0 0 -1000 S
-UV 0 512 -1
+1073743882 1 0 0 33554552 64 0 0 -1000 S
+UV 0 512 0 -1
 56 -5 -107 54d88+4482 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -805,8 +805,8 @@ emissary to the court of Utgard-Loki on behalf of Odin.  He looks
 extremely unhappy to be in this god-forsaken land but follows the
 wishes of his lord.
 ~
-10 0 0 32 64 0 0 400 S
-PH 0 1 -1
+10 0 0 0 32 64 0 0 400 S
+PH 0 1 0 -1
 60 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -821,8 +821,8 @@ seeing that the slaves are productive and mine enough ore for the
 city.  He wears the mace and skull emblem of Utgard-Loki proudly
 on a fine cloak.
 ~
-10 1 0 33554472 64 0 0 -900 S
-G 0 1 -1
+10 1 0 0 33554472 64 0 0 -900 S
+G 0 1 0 -1
 57 -7 -107 57d143+6270 7d6+35
 2.4.8.6 230850
 8 8 1
@@ -837,8 +837,8 @@ skull emblem of Utgard-Loki. He's the commander in charge of all
 the citadel's guards. Since no one in their right mind would
 attack the citadel, there isn't much for him to do.
 ~
-2076 1 0 33554432 64 0 0 -400 S
-G 0 1 -1
+2076 1 0 0 33554432 64 0 0 -400 S
+G 0 1 0 -1
 60 -7 -115 58d143+6380 7d6+35
 3.4.8.6 234900
 8 8 1
@@ -851,8 +851,8 @@ An old looking frost giant covered with blood.  Holding a nasty
 looking cleaver he carves up sides of meat hanging in the room.
 He is the butcher for the city of Utgard.
 ~
-10 1 0 33554432 64 0 0 -350 S
-G 0 0 -1
+10 1 0 0 33554432 64 0 0 -350 S
+G 0 0 0 -1
 40 2 -18 40d80+1040 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -865,8 +865,8 @@ A finely dressed frost giant.  He's made a fortune acting as the
 grain seller to the inhabitants of Utgard.  He does not look
 kindly upon any competition to his business.
 ~
-10 1 0 33554432 64 0 0 -400 S
-G 0 0 -1
+10 1 0 0 33554432 64 0 0 -400 S
+G 0 0 0 -1
 40 2 -18 40d80+1040 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -880,8 +880,8 @@ leather apron and covered with soot from working long hours at
 the forge making tools.  Lately most of his time has been spent
 forging weapons for the king.
 ~
-10 0 0 33554432 64 0 0 -450 S
-G 0 0 -1
+10 0 0 0 33554432 64 0 0 -450 S
+G 0 0 0 -1
 42 -1 -49 42d90+2016 6d6+12
 2.8.7.3 102060
 8 8 1
@@ -895,8 +895,8 @@ wears a large eyepiece for use in his work.  Gems and precious
 metals lay scattered about his work bench where he works making
 fine jewelry to sell to the inhabitants of Utgard.
 ~
-10 0 0 33554432 64 0 0 -350 S
-G 0 0 -1
+10 0 0 0 33554432 64 0 0 -350 S
+G 0 0 0 -1
 38 2 -11 38d80+988 4d7+10
 1.2.2.2 49248
 8 8 1
@@ -909,8 +909,8 @@ Smaller than the male frost giants, the matron is still the size
 of a small mountain.  Dressed in fur clothing, the matron travels
 about the city of Utgard doing her shopping.
 ~
-2138 1 0 33554432 64 0 0 0 S
-G 0 0 -1
+2138 1 0 0 33554432 64 0 0 0 S
+G 0 0 0 -1
 25 11 29 25d40+325 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -923,8 +923,8 @@ A small frost giant, only about ten feet tall. He'll remain with
 his mother until he's old enough to fight, at which point he'll
 probably be quickly picked up by the press gangs of the king.
 ~
-2138 1 0 33554432 64 0 0 0 S
-G 0 0 -1
+2138 1 0 0 33554432 64 0 0 0 S
+G 0 0 0 -1
 15 15 61 15d23+135 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -939,8 +939,8 @@ prepared he could lose his life.  He's personally in charge of
 preparing the food of Utgard-Loki, a responsibility that no doubt
 causes him many sleepless nights.
 ~
-10 1 0 33554432 64 0 0 -350 S
-G 0 0 -1
+10 1 0 0 33554432 64 0 0 -350 S
+G 0 0 0 -1
 40 2 -18 40d80+1040 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -954,8 +954,8 @@ into service in the citadel of Utgard-Loki.  This slave is
 helping prepare the food in the citadel's kitchen; any food not
 made to exacting standards is punished with swift execution.
 ~
-10 0 0 32 64 0 0 350 S
-PH 0 0 -1
+10 0 0 0 32 64 0 0 350 S
+PH 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -971,8 +971,8 @@ guards entrusted with guarding the citadel of the Utgard-Loki and
 diligently does his job lest he draw the wrath of the king.  This
 giant's shift is over and he's soundly snoring.
 ~
-67108874 1 0 33554472 64 0 0 -500 S
-G 0 1 -1
+67108874 1 0 0 33554472 64 0 0 -500 S
+G 0 1 0 -1
 54 -5 -97 54d131+4860 7d6+30
 9.1.7.6 218700
 4 4 1
@@ -987,8 +987,8 @@ crushed skull emblem of Utgard-Loki.  The giant is one of the
 guards entrusted with guarding the citadel of the Utgard-Loki and
 diligently does his job lest he draw the wrath of the king.
 ~
-67110920 1 0 33554472 64 0 0 -500 S
-G 0 1 -1
+67110920 1 0 0 33554472 64 0 0 -500 S
+G 0 1 0 -1
 54 -5 -97 54d131+4860 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -1005,8 +1005,8 @@ control of Jotunheim for centuries, unprecedented in history.  He
 has even managed to best several of the Aesir in battle.  Any
 attempt to challenge him will be severly dealt with.
 ~
-8 0 0 0 0 0 0 0 S
-G 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+G 0 0 0 -1
 1 20 106 1d15+9 1d5+0
 1.0.0.0 129
 8 8 1
@@ -1021,8 +1021,8 @@ be around the somewhat chaotic god for so long attests to his tact
 and wisdom.  He is currently advising Thrym on the matter of
 Kostchtchie, who has been making inroads into Thrym's domain.
 ~
-2058 1 0 33554472 64 0 0 -500 S
-G 0 256 -1
+2058 1 0 0 33554472 64 0 0 -500 S
+G 0 256 0 -1
 60 -10 -122 60d132+6540 7d6+35
 6.6.9.7 243000
 8 8 1
@@ -1036,8 +1036,8 @@ in her presence.  Dressed in battle armor, this handmaiden of Odin is
 wandering Jotunheim, helping any of the einheriar or other good
 souls who may have ventured into this unpleasant realm.
 ~
-1073743944 0 0 33554552 12480 0 0 1000 S
-PH 0 32 -1
+1073743944 0 0 0 33554552 12480 0 0 1000 S
+PH 0 32 0 -1
 59 -7 -128 59d132+6136 7d6+35
 4.5.9.6 238950
 8 8 2
@@ -1054,8 +1054,8 @@ any who have crossed the king's wishes.  Sarimar is reputed to
 be as deadly in his own right as the king is; no doubt he has
 learned a few tricks in his day.
 ~
-1073743880 0 0 33554488 64 0 0 -750 S
-G 0 1 -1
+1073743880 0 0 0 33554488 64 0 0 -750 S
+G 0 1 0 -1
 59 -7 -118 59d143+6490 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -1071,8 +1071,8 @@ a towering, vaguely giantish form with astonishing speed.  This can
 only be Ymir, progenitor of the frost giants, who has eons past been
 set aside by the younger and more vigorous Thrym.
 ~
-1073744392 1 0 35127352 64 0 0 -800 S
-G 0 512 -1
+1073744392 1 0 0 35127352 64 0 0 -800 S
+G 0 512 0 -1
 59 -7 -118 59d96+6372 7d6+35
 4.5.9.6 238950
 8 8 0
@@ -1087,8 +1087,8 @@ him as a shaman of Vaprak, the Destroyer. This position
 of high status is hard earned, but also easily lost. It
 looks slightly agitated, a curious state for a troll.
 ~
-1073743884 0 0 35127352 64 0 0 -1000 S
-PT 0 256 -1
+1073743884 0 0 0 35127352 64 0 0 -1000 S
+PT 0 256 0 -1
 58 -7 -125 58d132+6032 7d6+35
 3.4.8.6 234900
 8 8 0
@@ -1103,8 +1103,8 @@ him as a shaman of Vaprak, the Destroyer. This position
 of high status is hard earned, but also easily lost. It
 looks slightly agitated, a curious state for a troll.
 ~
-1073743884 0 0 35127352 64 0 0 -1000 S
-PT 0 256 -1
+1073743884 0 0 0 35127352 64 0 0 -1000 S
+PT 0 256 0 -1
 58 -7 -125 58d132+6032 7d6+35
 3.4.8.6 234900
 8 8 0
@@ -1120,8 +1120,8 @@ his moniker the One-Eye.  He has been known for tremendous acts of
 violence and harbors a particular hatred for dwarves, no doubt
 due to some past injury.
 ~
-1073743880 1 0 33554456 64 0 0 -550 S
-G 0 1048576 -1
+1073743880 1 0 0 33554456 64 0 0 -550 S
+G 0 1048576 0 -1
 59 -7 -118 59d143+6490 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -1136,8 +1136,8 @@ countryside. Blood drips from the beast's large fangs, evidence
 of many recent kills.  The twinkle in the beast's eye suggests
 it is not quite through with its current depradations.
 ~
-1073744392 1 0 33554472 64 0 0 -700 S
-D 0 1 -1
+1073744392 1 0 0 33554472 64 0 0 -700 S
+D 0 1 0 -1
 57 -7 -137 57d143+6555 7d6+35
 2.4.6.19 461700
 8 8 1
@@ -1153,8 +1153,8 @@ to be reckoned with in combat.  This dwarf from Nidavellir is one of
 the 'Jotunslayers', a famed group of dwarven heroes who strive
 to defeat the giants many consider their implacable foe.
 ~
-1073743880 0 0 33554488 0 0 0 500 S
-PM 0 1 -1
+1073743880 0 0 0 33554488 0 0 0 500 S
+PM 0 1 0 -1
 59 -7 -128 59d143+6195 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -1170,8 +1170,8 @@ rip you to shreds in seconds.  This ancient worms scales have
 strengthened to near diamond hardness, and provide incredible
 protection to the elder beast.
 ~
-584 1 0 34603048 64 0 0 -450 S
-AC 0 1 -1
+584 1 0 0 34603048 64 0 0 -450 S
+AC 0 1 0 -1
 57 -7 -117 57d143+5985 7d6+35
 0.0.0.0 230850
 8 8 0
@@ -1185,8 +1185,8 @@ wings from his green skin. Stark blue eyes frame the face of this
 gentle, yet imposing giant. The being turns and looks at you,
 announcing telepathically that he is the planetar Quelranor.
 ~
-1073744136 0 0 33554432 64 0 0 1000 S
-G 0 1 -1
+1073744136 0 0 0 33554432 64 0 0 1000 S
+G 0 1 0 -1
 59 -7 -118 59d143+6490 7d6+35
 4.5.9.6 238950
 8 8 1

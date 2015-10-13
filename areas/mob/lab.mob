@@ -7,8 +7,8 @@ small frog~
 &+Gcroaks in the night.  Its two hind legs propel it on land, and it swims while
 &+Gin the water.
 ~
-10 0 0 0 0 0 0 600 S
-R 0 0 -1
+10 0 0 0 0 0 0 0 600 S
+R 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -21,8 +21,8 @@ tree treant~
 &+Gas if they're tentacles of a sort razing through the wind.  Its rough bark
 &+Gis its armor, and it's more than ready to handle any mere mortal.
 ~
-1073743880 1 0 24 0 67108864 0 -500 S
-VT 0 1 6
+1073743880 1 0 0 24 0 67108864 0 -500 S
+VT 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -35,8 +35,8 @@ green golem~
 &+Gis almost as wide as the gate it is protecting.  It's impossible to discern
 &+Gwhat this creature is made of, perhaps pure magic.
 ~
-74 1 0 24 0 67108864 0 0 S
-OG 0 1 7
+74 1 0 0 24 0 67108864 0 0 S
+OG 0 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -49,8 +49,8 @@ wise owl~
 &+Wleaving nothing unnoticed.  Her hoots in the night keep the tree and the
 &+Wrest of the dead wood stirring.
 ~
-2058 0 0 24 0 67108864 0 500 S
-A 0 32 -1
+2058 0 0 0 24 0 67108864 0 500 S
+A 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -63,8 +63,8 @@ evil dragon~
 &+Lfind new ways to inflict pain on others.  Its huge body mass isn't a problem
 &+Lin these quarters, for this chamber could fit a hundred of his kind with ease.
 ~
-1073743944 0 0 24 0 67109120 0 -500 S
-D 0 4 7
+1073743944 0 0 0 24 0 67109120 0 -500 S
+D 0 4 0 7
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -77,8 +77,8 @@ huge crocodile~
 &+gand latch on to its prey, there is nothing that can tear it from its food.
 &+gIt swims almost effortlessly in the swamp, maing it a very dangerous foe.
 ~
-1073743880 1 0 24 0 67108864 0 -500 S
-R 0 1 -1
+1073743880 1 0 0 24 0 67108864 0 -500 S
+R 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -91,8 +91,8 @@ ravenous large being swamp swampthing thing~
 &+Gmust certainly be a concoction of some evil alchemist.  Its limbs are that of
 &+Ga humanoid, however, there is more that meets the eye about this swampthing.
 ~
-1082132554 1 0 16777240 2 262144 0 -500 S
-PH 0 1 -1
+1082132554 1 0 0 16777240 2 262144 0 -500 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -105,8 +105,8 @@ perched raven~
 &+Lblue.  Its feathers are not the customary black of any normal raven, they are
 &+Lin fact &+Ggreen&+L.  Perhaps this bird is more than it appears to be.
 ~
-1073743946 0 0 24 0 67108864 0 -500 S
-B 0 4 3
+1073743946 0 0 0 24 0 67108864 0 -500 S
+B 0 4 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -119,8 +119,8 @@ powerful wolfen~
 &+yit further and faster than any other mammal.  Running away from this beast is
 &+ya physical impossibility.  Its front claws look ready to tear into some flesh.
 ~
-1073743944 1 0 24 0 67371008 0 -500 S
-H 0 1 4
+1073743944 1 0 0 24 0 67371008 0 -500 S
+H 0 1 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -133,8 +133,8 @@ wolfen fierce~
 &+ythat would be you.  Its forelegs have razor sharp claws that could eviscerate
 &+yany living being in this realm.
 ~
-1073743946 1 0 24 0 67108864 0 -500 S
-A 0 1 4
+1073743946 1 0 0 24 0 67108864 0 -500 S
+A 0 1 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -147,8 +147,8 @@ wolfen hunter~
 &+yrun at speeds faster than any other mammal could possible dream of.  Its
 &+yforelegs claws could cut down prey in a matter of seconds.
 ~
-1073743882 1 0 24 0 0 0 -500 S
-A 0 1 4
+1073743882 1 0 0 24 0 0 0 -500 S
+A 0 1 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -161,8 +161,8 @@ massive stone golem~
 &+Yundoubtably greater than any living being.  This thing rises well over twenty
 &+Yfeet high, an own small mountain itself.
 ~
-1073741898 1 0 24 0 0 0 -500 S
-OG 0 1 6
+1073741898 1 0 0 24 0 0 0 -500 S
+OG 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -175,8 +175,8 @@ massive stone golem~
 &+Wundoubtably greater than any living being.  This thing rises well over twenty
 &+Wfeet high.
 ~
-1073741898 1 0 24 0 0 0 -500 S
-OG 0 32 5
+1073741898 1 0 0 24 0 0 0 -500 S
+OG 0 32 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -189,8 +189,8 @@ massive marble golem~
 &+Wundoubtably greater than any living being.  This thing rises well over twenty
 &+Wfeet high.
 ~
-1073741898 1 0 24 0 0 0 -500 S
-OG 0 1 6
+1073741898 1 0 0 24 0 0 0 -500 S
+OG 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -204,8 +204,8 @@ khul lor khul'lor~
 &+Wfor a mage.  His facial features are youthful, however, this mage must be
 &+Wmiddle age or beyond, for who could construct such a kingdom in his youth.
 ~
-1073743946 1 0 24 0 0 0 -500 S
-PH 0 512 6
+1073743946 1 0 0 24 0 0 0 -500 S
+PH 0 512 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -218,8 +218,8 @@ guardian ward~
 &+cit mustn't be a problem for it.  The mage who conjured this ward must be
 &+ctruely strong in magic.
 ~
-1073743946 1 0 24 0 0 0 -500 S
-UG 0 512 -1
+1073743946 1 0 0 24 0 0 0 -500 S
+UG 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -232,8 +232,8 @@ were wolf werewolf~
 &+yfeatures are humanoid.  Its ears are pointed, its eyes are wide eyed, and
 &+yits jaw has a number of fangs dripping saliva.
 ~
-1073743946 1 0 24 0 67108864 0 -900 S
-H 0 1 -1
+1073743946 1 0 0 24 0 67108864 0 -900 S
+H 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -246,8 +246,8 @@ small iguana~
 &+gfeet give it some grip as it scurries along.  Its little tail gives it some
 &+gbalance and its tongue gives it some smell.
 ~
-8 0 0 0 0 0 0 -500 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 -500 S
+PH 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -260,8 +260,8 @@ large turtle~
 &+gdoes not make this turtle very fearsome, however, if it manages to latch its
 &+gjaws upon its prey, it could hurt.
 ~
-8 0 0 0 0 0 0 -500 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 -500 S
+A 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -274,8 +274,8 @@ small snake~
 &+gframe is hardly threatening, one could step on it and crush it.  It's doubtful
 &+gthat this little reptile has any venom in its fangs.
 ~
-8 0 0 0 0 0 0 -500 S
-R 0 0 -1
+8 0 0 0 0 0 0 0 -500 S
+R 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

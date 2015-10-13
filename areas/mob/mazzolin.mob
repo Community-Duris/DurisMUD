@@ -6,8 +6,8 @@ golem drow warrior~
 This statue is about eighteen feet tall and looks just like a drow warrior.
 It looks very fierce and very fast.
 ~
-100673546 0 0 268435896 0 0 0 0 S
-OG 0 2097152 -1
+100673546 0 0 0 268435896 0 0 0 0 S
+OG 0 2097152 0 -1
 56 -7 -114 56d143+5880 7d6+35
 1.3.8.6 226800
 8 8 0
@@ -21,8 +21,8 @@ ice white hair and strong arms and legs while maintaning incredibly feminine
 qualities. She seems to be caclulating your strengths and weaknesses as you
 look upon her and you are certain she is making no errors.
 ~
-1140852874 0 0 268435720 0 0 0 -1000 S
-PL 0 32 -1
+1140852874 0 0 0 268435720 0 0 0 -1000 S
+PL 0 32 0 -1
 56 -7 -114 56d132+5824 7d6+35
 1.3.8.6 226800
 8 8 2
@@ -35,8 +35,8 @@ This huge drow by any standard is tightly sinewed with constantly rippling
 muscles. He surveys the area befor ethe throne, not missing the slightest
 wind current or speck of dust.
 ~
-67110922 0 0 268435736 0 0 0 -1000 S
-PL 0 1 -1
+67110922 0 0 0 268435736 0 0 0 -1000 S
+PL 0 1 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -48,8 +48,8 @@ zanzilanen drow black~
 Mage of the black art, Zanzilanen serves his queen faithfully, as long as she
 remains the most powerful cleric of house Mazzolin keep.
 ~
-67111050 0 0 268435848 262144 0 0 -1000 S
-PL 0 1024 -1
+67111050 0 0 0 268435848 262144 0 0 -1000 S
+PL 0 1024 0 -1
 55 -5 -111 55d88+4565 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -61,8 +61,8 @@ guard elite~
 This strong and powerful warrior has been specially selected to protect the
 matron and queen of House Mazzolin Keep.
 ~
-67110922 0 0 268435736 0 0 0 -1000 S
-PL 0 1 -1
+67110922 0 0 0 268435736 0 0 0 -1000 S
+PL 0 1 0 -1
 51 -5 -98 51d131+4335 7d6+30
 6.9.4.6 206550
 8 8 1
@@ -74,8 +74,8 @@ guard stormtrooper~
 This strong and powerful warrior has been specially selected to protect the
 matron and queen of House Mazzolin Keep.
 ~
-1140852746 1 0 268435736 0 0 0 -1000 S
-PL 0 1 -1
+1140852746 1 0 0 268435736 0 0 0 -1000 S
+PL 0 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -89,8 +89,8 @@ decomposers that ingest the fecal and filth expelled by the drow keep and
 transform it into blurgstone, a valuable export of the drow of Mazzolin
 keep.
 ~
-1140853768 1 0 805306664 12480 0 0 -1000 S
-DK 0 512 -1
+1140853768 1 0 0 805306664 12480 0 0 -1000 S
+DK 0 512 0 -1
 45 -1 -79 45d72+2250 6d6+12
 5.9.4.9 109350
 8 8 0
@@ -104,8 +104,8 @@ decomposers that ingest the fecal and filth expelled by the drow keep and
 transform it into blurgstone, a valuable export of the drow of Mazzolin
 keep.
 ~
-1140852776 1 0 805306664 12480 0 0 -1000 S
-DK 0 1024 -1
+1140852776 1 0 0 805306664 12480 0 0 -1000 S
+DK 0 1024 0 -1
 45 -1 -79 45d72+2250 6d6+12
 5.9.4.9 109350
 8 8 0
@@ -119,8 +119,8 @@ decomposers that ingest the fecal and filth expelled by the drow keep and
 transform it into blurgstone, a valuable export of the drow of Mazzolin
 keep.
 ~
-1140853256 1 0 805306664 12480 0 0 -1000 S
-DK 0 2048 -1
+1140853256 1 0 0 805306664 12480 0 0 -1000 S
+DK 0 2048 0 -1
 45 -1 -79 45d72+2250 6d6+12
 5.9.4.9 109350
 8 8 0
@@ -134,8 +134,8 @@ decomposers that ingest the fecal and filth expelled by the drow keep and
 transform it into blurgstone, a valuable export of the drow of Mazzolin
 keep.
 ~
-1140853000 1 0 805306664 12480 0 0 -1000 S
-DK 0 128 -1
+1140853000 1 0 0 805306664 12480 0 0 -1000 S
+DK 0 128 0 -1
 45 -1 -79 45d99+2295 6d6+12
 5.9.4.9 109350
 8 8 0
@@ -149,8 +149,8 @@ decomposers that ingest the fecal and filth expelled by the drow keep and
 transform it into blurgstone, a valuable export of the drow of Mazzolin
 keep.
 ~
-1141377032 1 0 805306664 12480 0 0 -1000 S
-DK 0 256 -1
+1141377032 1 0 0 805306664 12480 0 0 -1000 S
+DK 0 256 0 -1
 45 -1 -79 45d99+2295 6d6+12
 5.9.4.9 109350
 8 8 0
@@ -163,8 +163,8 @@ augurist~
 respected and feared member of the corut of Mazzolin. She is known to be
 incredibly irritable when her meditiations are interrupted.
 ~
-1140852746 0 0 264 0 0 0 -1000 S
-PL 0 32 -1
+1140852746 0 0 0 264 0 0 0 -1000 S
+PL 0 32 0 -1
 41 -1 -56 41d99+1804 6d6+12
 1.7.6.3 99630
 8 8 2
@@ -177,8 +177,8 @@ inquisitor drow~
 army of Mazzolin. She relies on charm, intuition and seduction to get what
 she wants from her victim.
 ~
-1140852746 0 0 264 0 0 0 -1000 S
-PL 0 32 -1
+1140852746 0 0 0 264 0 0 0 -1000 S
+PL 0 32 0 -1
 25 11 19 25d44+225 3d5+3
 6.2.6.1 22275
 8 8 2
@@ -190,8 +190,8 @@ torturer drow~
    This slim drow male is an expert at torture. He has developed new ways
 to cause pain and suffereing and loves to employ them for everyday use.
 ~
-1140852746 0 0 264 0 0 0 -1000 S
-PL 0 8192 -1
+1140852746 0 0 0 264 0 0 0 -1000 S
+PL 0 8192 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -204,8 +204,8 @@ executioner drow~
 giving victims of the inquisition their final question, would they like
 their brains sliced or mashed.
 ~
-1140852746 0 0 264 0 0 0 -1000 S
-PL 0 1 -1
+1140852746 0 0 0 264 0 0 0 -1000 S
+PL 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -219,8 +219,8 @@ journey from the overworld into the depths of the city of Arachdrathos.
 House Mazzolin swiftly incarcerated him when they found this renegade
 trying to sing a contract with the necromancers of House Sa'Zarn.
 ~
-1140852746 1 0 264 0 0 0 -1000 S
-PE 0 1024 -1
+1140852746 1 0 0 264 0 0 0 -1000 S
+PE 0 1024 0 -1
 45 -1 -69 45d72+1935 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -232,8 +232,8 @@ illithid undead~
    This corpse of an illithid has been reanimated to cause chaos to all those
 who wish to try to navigate to the pit of lost hope.
 ~
-1140852746 1 0 296 0 0 0 -1000 S
-U 0 1 -1
+1140852746 1 0 0 296 0 0 0 -1000 S
+U 0 1 0 -1
 40 15 51 15d27+90 2d5+2
 0.0.0.0 7290
 8 8 0
@@ -245,8 +245,8 @@ illithid undead~
    This corpse of an illithid has been reanimated to cause chaos to all those
 who wish to try to navigate to the pit of lost hope.
 ~
-1140852746 1 0 296 0 0 0 -1000 S
-U 0 1 -1
+1140852746 1 0 0 296 0 0 0 -1000 S
+U 0 1 0 -1
 40 11 19 25d47+250 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -258,8 +258,8 @@ illithid undead~
    This corpse of an illithid has been reanimated to cause chaos to all those
 who wish to try to navigate to the pit of lost hope.
 ~
-1140852746 1 0 296 0 0 0 -1000 S
-U 0 1 -1
+1140852746 1 0 0 296 0 0 0 -1000 S
+U 0 1 0 -1
 40 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -271,8 +271,8 @@ illithid ghost~
    This corpse of an illithid has been reanimated to cause chaos to all those
 who wish to try to navigate to the pit of lost hope.
 ~
-1140852746 1 0 298 0 0 0 -1000 S
-UG 0 1 -1
+1140852746 1 0 0 298 0 0 0 -1000 S
+UG 0 1 0 -1
 40 2 -38 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -284,8 +284,8 @@ illithid vampire~
    This corpse of an illithid has been reanimated to cause chaos to all those
 who wish to try to navigate to the pit of lost hope.
 ~
-1140852746 1 0 298 262144 0 0 -1000 S
-UV 0 4 -1
+1140852746 1 0 0 298 262144 0 0 -1000 S
+UV 0 4 0 -1
 44 -1 -65 44d99+1936 6d6+12
 4.9.8.3 106920
 8 8 0
@@ -298,8 +298,8 @@ widow death spider~
 widow spider is known to be the mightiest of the common demon spiders of
 the abyss.
 ~
-1140852744 1 0 1048856 262144 0 0 -1000 S
-EF 0 1024 -1
+1140852744 1 0 0 1048856 262144 0 0 -1000 S
+EF 0 1024 0 -1
 57 -7 -132 57d96+6270 7d6+35
 2.4.2.9 346275
 8 8 2
@@ -312,8 +312,8 @@ widow death spider~
 widow spider is known to be the mightiest of the common demon spiders of
 the abyss.
 ~
-1140852744 1 0 1048888 262144 0 0 -1000 S
-EF 0 32 -1
+1140852744 1 0 0 1048888 262144 0 0 -1000 S
+EF 0 32 0 -1
 57 -7 -132 57d132+6327 7d6+35
 2.4.2.9 346275
 8 8 2
@@ -325,8 +325,8 @@ aeirayne elf grey~
    This grey elf is very beautiful for a creature of the overworld, but she has
 obviously underwent many hours of torture.
 ~
-2058 0 0 16648 0 0 0 1000 S
-PE 0 32 -1
+2058 0 0 0 16648 0 0 0 1000 S
+PE 0 32 0 -1
 47 -3 -75 47d110+2538 6d6+25
 7.0.0.5 114210
 5 5 2
@@ -339,8 +339,8 @@ widow death spider~
 widow spider is known to be the mightiest of the common demon spiders of
 the abyss.
 ~
-1140852744 1 0 1048888 262144 0 0 -1000 S
-EF 0 1 -1
+1140852744 1 0 0 1048888 262144 0 0 -1000 S
+EF 0 1 0 -1
 57 -7 -132 57d143+6384 7d6+35
 2.4.2.9 346275
 8 8 2
@@ -350,8 +350,8 @@ tentamort tentacle~
 &+gA green tentacle erupts through the center of the festering whirlpool.&N
 ~
 ~
-100931594 1 0 806355256 274624 0 0 -1000 S
-X 0 1 -1
+100931594 1 0 0 806355256 274624 0 0 -1000 S
+X 0 1 0 -1
 55 -5 -126 55d131+5060 7d6+30
 0.2.0.9 334125
 8 8 0
@@ -361,8 +361,8 @@ tentamort tentacle~
 &+gA green tentacle erupts through the center of the festering whirlpool.&N
 ~
 ~
-100931594 1 0 806355256 274624 0 0 -1000 S
-X 0 32 -1
+100931594 1 0 0 806355256 274624 0 0 -1000 S
+X 0 32 0 -1
 55 -5 -126 55d121+5005 7d6+30
 0.2.0.9 334125
 8 8 0
@@ -372,8 +372,8 @@ tentamort tentacle~
 &+gA green tentacle erupts through the center of the festering whirlpool.&N
 ~
 ~
-100931594 1 0 806355256 274624 0 0 -1000 S
-X 0 512 -1
+100931594 1 0 0 806355256 274624 0 0 -1000 S
+X 0 512 0 -1
 55 -5 -126 55d88+4950 7d6+30
 0.2.0.9 334125
 8 8 0
@@ -387,8 +387,8 @@ coiled like a serpent yet has small wings just behing its great head. It has
 very foul smelling breath and it is hard to tell where its scales end and
 the sewer mess begins.
 ~
-1140853770 1 0 270008616 0 0 0 -1000 S
-D 0 256 -1
+1140853770 1 0 0 270008616 0 0 0 -1000 S
+D 0 256 0 -1
 59 -7 -148 59d132+6726 7d6+35
 4.5.9.19 477900
 8 8 1
@@ -402,8 +402,8 @@ decomposers that ingest the fecal and filth expelled by the drow keep and
 transform it into blurgstone, a valuable export of the drow of Mazzolin
 keep.
 ~
-1141901322 1 0 805306664 12480 0 0 -1000 S
-D 0 256 -1
+1141901322 1 0 0 805306664 12480 0 0 -1000 S
+D 0 256 0 -1
 58 -7 -145 58d132+6612 7d6+35
 3.4.6.19 469800
 8 8 0
@@ -415,8 +415,8 @@ gladiator mazzolin drow~
    This strong drow has stained his arms with blue die to show him to be a
 champion of house Mazzolin. He seems very egaer to prove his skills.&N
 ~
-1140852762 1 0 296 0 0 0 -1000 S
-PL 0 1 -1
+1140852762 1 0 0 296 0 0 0 -1000 S
+PL 0 1 0 -1
 40 6 -5 33d83+561 4d6+7
 7.8.0.2 42768
 8 8 1
@@ -429,8 +429,8 @@ warrior mazzolin drow~
 warrior of house Mazzolin. He looks very skilled with any weapon, luckily
 for you he currently doesnt seem to have his with him.&N
 ~
-1140852746 1 0 296 0 0 0 -1000 S
-PL 0 1 -1
+1140852746 1 0 0 296 0 0 0 -1000 S
+PL 0 1 0 -1
 31 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 4 4 1
@@ -443,8 +443,8 @@ warrior mazzolin drow~
 warrior of house Mazzolin. He looks very skilled with any weapon, luckily
 for you he currently doesnt seem to have his with him.&N
 ~
-1140852746 1 0 296 0 0 0 -1000 S
-PL 0 1 -1
+1140852746 1 0 0 296 0 0 0 -1000 S
+PL 0 1 0 -1
 33 6 -2 32d83+544 4d6+7
 6.8.0.2 41472
 4 4 1
@@ -457,8 +457,8 @@ warrior mazzolin drow~
 warrior of house Mazzolin. He looks very skilled with any weapon, luckily
 for you he currently doesnt seem to have his with him.&N
 ~
-1140852746 1 0 296 0 0 0 -1000 S
-PL 0 1 -1
+1140852746 1 0 0 296 0 0 0 -1000 S
+PL 0 1 0 -1
 36 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 4 4 1
@@ -471,8 +471,8 @@ chef drow~
 warrior of house Mazzolin. He looks very skilled with any weapon, luckily
 for you he currently doesnt seem to have his with him.&N
 ~
-1140852746 0 0 296 0 0 0 -1000 S
-PL 0 1 -1
+1140852746 0 0 0 296 0 0 0 -1000 S
+PL 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 4 4 1
@@ -485,8 +485,8 @@ acolyte drow woman~
 trains at the side of the Queen of Mazzolin and is willing to lay down
 her life for her faith.
 ~
-1140852746 1 0 264 0 0 0 -1000 S
-PL 0 32 -1
+1140852746 1 0 0 264 0 0 0 -1000 S
+PL 0 32 0 -1
 31 6 0 31d77+496 4d6+7
 5.7.9.1 40176
 8 8 2
@@ -499,8 +499,8 @@ drow blue mazzolin guard~
 Mazzolin. He seems very serious about this his charge and is obviously
 not someone to be trifled with.
 ~
-1140852808 0 0 264 0 0 0 -1000 S
-PL 0 1 -1
+1140852808 0 0 0 264 0 0 0 -1000 S
+PL 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -513,8 +513,8 @@ widow death spider~
 widow spider is known to be the mightiest of the common demon spiders of
 the abyss.
 ~
-1140852746 1 0 1048888 262144 0 0 -1000 S
-X 0 64 -1
+1140852746 1 0 0 1048888 262144 0 0 -1000 S
+X 0 64 0 -1
 57 -7 -132 57d132+6327 7d6+35
 2.4.2.9 346275
 8 8 2
@@ -527,8 +527,8 @@ widow spider death~
 widow spider is known to be the mightiest of the common demon spiders of
 the abyss.
 ~
-1140852746 1 0 1048856 262144 0 0 -1000 S
-X 0 1 -1
+1140852746 1 0 0 1048856 262144 0 0 -1000 S
+X 0 1 0 -1
 57 -7 -132 57d96+6270 7d6+35
 2.4.2.9 346275
 8 8 2

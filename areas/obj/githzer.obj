@@ -15,7 +15,7 @@ wrinkled parchment paper~
 &+La wrinkled parchment&N~
 &+LA wrinkled parchment&N lies here.~
 ~
-8 15 3 0 7 0 4096 16385 0 0 0
+8 15 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -428,7 +428,7 @@ heart dark githyanki~
 &+Lthe dark &+rh&+me&+ra&+Rr&+rt &+Lof a &+Ggith&+Wyanki&N~
 &+LA dark heart lies here.&N~
 ~
-8 15 3 0 7 0 4097 8404993 0 0 0
+8 15 3 0 7 0 4097 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100 73728 12 0 0
 E
@@ -520,7 +520,7 @@ zerthimonian necklace~
 &+La &+mZe&+Mr&+Wt&+Mh&+mim&+Mo&+Wn&+Mi&+man &+Lnecklace&N~
 &+LA &+MZ&+Merthimonia&+Mn &+Lnecklace&N lies here.&N~
 ~
-9 15 3 0 7 0 33558528 5 0 0 0
+9 15 3 0 7 0 33558528 5 32768 0 0
 5 0 0 0 0 0 0 0
 0 0 100
 E
@@ -538,7 +538,7 @@ scalp githyanki~
 &+Lthe &+cs&+Cc&+ca&Nlp &+Lof a &+Ggith&+Wyanki&N~
 &+LA festering scalp lies here.&N~
 ~
-8 15 3 0 7 0 4096 8404993 0 0 0
+8 15 3 0 7 0 4096 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -552,7 +552,7 @@ skull githyanki~
 &+Lthe &+Rblo&+rod&+Ry &+Wsk&Nu&+Wll &+Lof a &+Ggith&+Wyanki&N~
 &+LA bloody skull lies here.&N~
 ~
-9 15 3 0 7 0 4097 8405009 0 0 0
+9 15 3 0 7 0 4097 8405009 32768 0 0
 15 4 0 0 0 0 0 0
 0 0 100
 E
@@ -669,7 +669,7 @@ first relic chaos~
 &+Lthe first relic of &+rchaos&N~
 &+LThe first relic of &+rchaos&N lies here.~
 ~
-8 15 3 0 7 0 1 16385 0 0 0
+8 15 3 0 7 0 1 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -709,7 +709,7 @@ red slaadi hide~
 &+Ra pile of red &+rslaadi hide&N~
 &+RSome red &+rslaadi hide&N lies here.~
 ~
-8 15 3 0 7 0 4096 16385 0 0 0
+8 15 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -721,7 +721,7 @@ green slaadi hide~
 &+Ga pile of green &+gslaadi hide&N~
 &+GSome green &+gslaadi hide&N lies here.~
 ~
-8 15 3 0 7 0 4096 16385 0 0 0
+8 15 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -767,7 +767,7 @@ red slaadi hide~
 &+Rsome red &+rslaadi hide&N~
 &+RSome red &+rslaadi hide&N lies here.~
 ~
-8 15 3 0 7 0 4096 16385 0 0 0
+8 15 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -779,7 +779,7 @@ green slaadi hide~
 &+Gsome green &+gslaadi hide&N~
 &+GSome green &+gslaadi hide&N lies here.~
 ~
-8 15 3 0 7 0 4096 16385 0 0 0
+8 15 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -832,7 +832,7 @@ second relic chaos~
 &+Lthe &Nsecond &+Lrelic of &+rchaos&N~
 &+LThe &Nsecond &+Lrelic of &+rchaos&N lies here.~
 ~
-8 15 3 0 7 0 1 16385 0 0 0
+8 15 3 0 7 0 1 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -868,7 +868,7 @@ heartstone stone heart zerthimon~
 &+Lthe &+rhe&+Ra&+rrts&+Rto&+rne&+L of &+MZ&+me&+Lr&+mt&+Mh&+Wi&+Mm&+mo&+Ln&N~
 &+RA red stone is here..&N~
 ~
-8 15 3 0 7 0 33558529 16385 0 0 0
+8 15 3 0 7 0 33558529 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -899,7 +899,7 @@ third relic chaos~
 &+Lthe &+Wthird &+Lrelic of &+rchaos&N~
 &+LThe &+Wthird &+Lrelic of &+rchaos&N lies here.~
 ~
-8 15 3 0 7 0 1 16385 0 0 0
+8 15 3 0 7 0 1 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1284,7 +1284,7 @@ tiny azure bottle poison~
 &+La tiny &+baz&+Bu&+cr&+be &+bbo&+gt&+Gt&+Bl&+be&N~
 &+LA tiny &+Bblue&+L bottle&N lies here.~
 ~
-17 15 3 0 7 0 4097 8404993 64 0 0
+17 15 3 0 7 0 4097 8404993 32832 0 0
 6 6 27 7 0 0 0 0
 0 0 100
 E
@@ -2057,7 +2057,7 @@ pile adamantite coins~
 &+La pile of adamantite coins&N~
 &+LA pile of adamantite coins&N is here.~
 ~
-8 19 3 0 15 0 4096 1 64 0 0
+8 19 3 0 15 0 4096 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 55999 100
 E
@@ -2102,7 +2102,7 @@ violet potion~
 &+ra &+Mvio&+mlet &+rpotion&N~
 &+rA &+Mvio&+mlet &+rpotion&N lies here.~
 ~
-10 15 3 0 7 0 4097 16385 64 0 0
+10 15 3 0 7 0 4097 16385 32832 0 0
 50 66 66 -1 0 0 0 0
 0 0 100
 E
@@ -2796,7 +2796,7 @@ zerthimonian ring~
 &+La &+MZ&+mer&+Mt&+Wh&+Mi&+mmo&+Mn&+Wi&+Ma&+mn &+Lring&N~
 &+LA &+MZ&+Merthimonia&+Mn &+Lring&N lies here.~
 ~
-9 8 3 0 10 0 33558528 3 0 0 0
+9 8 3 0 10 0 33558528 3 32768 0 0
 5 0 0 0 0 0 0 0
 0 15000 100
 E
@@ -3000,7 +3000,7 @@ signet ring kingly crest~
 &+Ya signet ring with a &+ckingly &+Ycrest&N~
 &+YA signet ring with a &+ckingly &+Ycrest&N has been left here.~
 ~
-9 15 3 0 5 0 4097 3 64 0 0
+9 15 3 0 5 0 4097 3 32832 0 0
 5 0 0 0 0 0 0 0
 0 0 100
 E
@@ -3273,7 +3273,7 @@ wicked piece metal torture implement~
 &+ra wicked implement of &+Ltor&+Rt&+Lure&n~
 &+LA rather disturbing piece of twisted metal lies here.&n~
 ~
-5 15 3 0 7 0 65664 1 0 0 0
+5 15 3 0 7 0 65664 1 32768 0 0
 15 5 2 0 0 0 0 0
 0 0 100
 A

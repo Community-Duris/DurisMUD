@@ -10,8 +10,8 @@ yilox cloud giant guardian~
 &+bmountain.  The loneliness has jaded the giant and he feels as much a prisoner&n
 &+bas those within the mountain.&n
 ~
-395338 1 0 301990264 30 0 2147483648 0 S
-G 0 33 6
+395338 1 0 0 301990264 30 0 2147483648 0 S
+G 0 33 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -28,8 +28,8 @@ divine guardian golem~
 &+Lmeddled with long enough it might be possible for one of the gods to escape.&n
 &+LThis golem is here against that possiblity.  &n
 ~
-100681802 1 0 301990324 0 131072 8192 0 S
-G 0 1 7
+100681802 1 0 0 301990324 0 131072 8192 0 S
+G 0 1 0 7
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -44,8 +44,8 @@ howling insane imp prisoner~
 &+Lpleasure in sending all the mortals and demi-gods to warring.  Now, their
 &+Lmischief can never be again.&n
 ~
-141386 1 0 33587560 30 0 0 -800 S
-PF 0 4096 1
+141386 1 0 0 33587560 30 0 0 -800 S
+PF 0 4096 0 1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -60,8 +60,8 @@ bloody bloodied warangel angel~
 &+Wknown who began this problem.  Regardless all parties responsible now suffer&n
 &+Where with the angel.&n
 ~
-67242056 1 0 201326648 30 0 0 800 S
-HF 0 32 3
+67242056 1 0 0 201326648 30 0 0 800 S
+HF 0 32 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -77,8 +77,8 @@ bloodied wardemon bloody demon~
 &+Las he can move out in the world again he rages and bloodies himself against&n
 &+Lthe wall, or the angels.&n
 ~
-18440 1 0 385876016 30 0 0 -900 S
-X 0 1 4
+18440 1 0 0 385876016 30 0 0 -900 S
+X 0 1 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -93,8 +93,8 @@ wildmage wild mage~
 &+mhave had his way, his lord would've led them all to the victory of destruction,&n
 &+Mand still might.&n
 ~
-10312 1 0 100663304 30 0 0 0 S
-HF 0 512 3
+10312 1 0 0 100663304 30 0 0 0 S
+HF 0 512 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -108,8 +108,8 @@ sentinel demon~
 &+rto be worried, as any of the underlings knows that to enter one another's&n
 &+Larea would be certain torture.  However the guards still are assigned.&n
 ~
-67119178 1 0 570425400 29 0 0 -900 S
-X 0 1 -1
+67119178 1 0 0 570425400 29 0 0 -900 S
+X 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -125,8 +125,8 @@ demon demonic torturer~
 &+Lwar&+Wangel&+r.  He'd pay a hefty price to be able to &+Ltorture&+r one of their enemies&n
 &+rtill the end of time.&n
 ~
-67119114 0 0 1006633016 31 0 0 -900 S
-X 0 32 -1
+67119114 0 0 0 1006633016 31 0 0 -900 S
+X 0 32 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -139,8 +139,8 @@ tortured mass discards trash~
 &+Lendure torture.  Trapped inside the iron maiden all it can do is scream and&n
 &+glash out at anything that comes near the poor creature.&n
 ~
-26634 1 0 33554488 30 0 0 -900 S
-SL 0 1 2
+26634 1 0 0 33554488 30 0 0 -900 S
+SL 0 1 0 2
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -155,8 +155,8 @@ three headed hound hell hellhound dog~
 &+Rthis hound back down, and the thought that this hound could rip through steel&n
 &+rwith its teeth as though it were paper, makes any who view it uncomfortable.&n
 ~
-67121194 1 0 67109112 30 67108864 0 -999 S
-A 0 1 4
+67121194 1 0 0 67109112 30 67108864 0 -999 S
+A 0 1 0 4
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -173,8 +173,8 @@ tolog demi-god god demi apocalypse demon~
 &+rDeities banished Tolog and the three others here for fear that they might rend&n
 &+rthe world apart.  The demon sits here only wishing to do so, once again.&n
 ~
-1140881418 1 0 1057030648 34847 67272704 8192 -1000 S
-X 0 16 7
+1140881418 1 0 0 1057030648 34847 67272704 8192 -1000 S
+X 0 16 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -190,8 +190,8 @@ warangel sentinel angel war~
 &+Wway for them to once again ride the winds and purge all immorality from the&n
 &+Wworld.&n
 ~
-10250 1 0 234881080 30 0 0 900 S
-HF 0 32 4
+10250 1 0 0 234881080 30 0 0 900 S
+HF 0 32 0 4
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -205,8 +205,8 @@ interrogator holy interogator~
 &+rHoping some day that Pakar can once again regain their place in the heavans&n
 &+Whe bides his time here and enjoys his work.&n
 ~
-67119114 1 0 234889336 30 0 0 900 S
-HF 0 32 4
+67119114 1 0 0 234889336 30 0 0 900 S
+HF 0 32 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -221,8 +221,8 @@ seraphim burly angel~
 &+Wthe minions away.  The last time Pakar was disturbed, he sent the minion to&N
 &+Wthe interrogator for a century and thrashed the rest of his followers.&n
 ~
-67254282 1 0 234889528 30 0 0 999 S
-HF 0 1 5
+67254282 1 0 0 234889528 30 0 0 999 S
+HF 0 1 0 5
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -239,8 +239,8 @@ pakar demi god purity demi-god~
 &+Win sunders, and the Council of Gods were more than willing to turn on him&n
 &+Wimmediately, and imprison him.&n
 ~
-1141012490 1 0 503325112 32798 0 0 1000 S
-HF 0 8 7
+1141012490 1 0 0 503325112 32798 0 0 1000 S
+HF 0 8 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -256,8 +256,8 @@ plotting imp~
 &+Llord so he could sunder their prison.  It is nervewracking how pleased these&n
 &+Limps look with themselves, and at the pressence of outsiders.&n
 ~
-10382 1 0 100663336 30 0 0 -800 S
-PF 0 32 2
+10382 1 0 0 100663336 30 0 0 -800 S
+PF 0 32 0 2
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -273,8 +273,8 @@ plotting imp~
 &+Llord so he could sunder their prison.  It is nervewracking how pleased these&n
 &+Limps look with themselves, and at the pressence of outsiders.&n
 ~
-10382 1 0 100663336 30 0 0 -800 S
-PF 0 4096 2
+10382 1 0 0 100663336 30 0 0 -800 S
+PF 0 4096 0 2
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -290,8 +290,8 @@ plotting imp~
 &+Llord so he could sunder their prison.  It is nervewracking how pleased these&n
 &+Limps look with themselves, and at the pressence of outsiders.&n
 ~
-10382 1 0 100663336 30 0 0 -800 S
-PF 0 512 2
+10382 1 0 0 100663336 30 0 0 -800 S
+PF 0 512 0 2
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -307,8 +307,8 @@ plotting imp~
 &+Llord so he could sunder their prison.  It is nervewracking how pleased these&n
 &+Limps look with themselves, and at the pressence of outsiders.&n
 ~
-10382 1 0 100663336 30 0 0 -800 S
-PF 0 1 2
+10382 1 0 0 100663336 30 0 0 -800 S
+PF 0 1 0 2
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -324,8 +324,8 @@ lokpan creature shap plotter~
 &+Lone another is what Lokpan does, and even the rivalry between Tolog and Pakar&n
 &+Lwas Lokpan's doing.&n
 ~
-1141929994 1 0 167772344 2078 0 0 0 S
-Y 0 1 7
+1141929994 1 0 0 167772344 2078 0 0 0 S
+Y 0 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -340,8 +340,8 @@ arch archmage archwildmage wildmage wild mage~
 &+Bprison in the world, here is good enough.  Having more power than some of his&n
 &+Bbretheren this particular mage is respected.&N
 ~
-33564682 1 0 771785208 12511 0 8192 0 S
-HF 0 512 6
+33564682 1 0 0 771785208 12511 0 8192 0 S
+HF 0 512 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -355,8 +355,8 @@ devious imp~
 &+Lplanned.  Whatever the reason, this imp is ready to perish having completed&n
 &+Lits task.  The imp looks ready to perish happily.&n
 ~
-10254 0 0 102236202 30 0 0 -800 S
-PF 0 4096 1
+10254 0 0 0 102236202 30 0 0 -800 S
+PF 0 4096 0 1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -370,8 +370,8 @@ mutated wild mage wildmage~
 &+Gscreams with the agony of this form.  Angry beyond belief the mage now twists&n
 &+Lhis agonized form, and tries to take his pain out on anything that comes near.&n
 ~
-14346 1 0 33554488 30 0 0 -400 S
-PO 0 5 -1
+14346 1 0 0 33554488 30 0 0 -400 S
+PO 0 5 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -386,8 +386,8 @@ wildmage wild mage~
 &+RWith stakes so high, it is obvious that this mage would reward anybody for&n
 &+Raids in such an endeavor.  The mage smiles hopefully at any approachers.&n
 ~
-33564682 0 0 771752312 12510 0 0 0 S
-HF 0 512 3
+33564682 0 0 0 771752312 12510 0 0 0 S
+HF 0 512 0 3
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -402,8 +402,8 @@ former concubine woman god's dejected lover~
 &+Wbe heard as she mumbles.  It is obvious how a god could find this powerful&n
 &+Wwoman attractive as she nearly radiates a dangerous aura.&n
 ~
-28828 1 8388608 303563132 131074 0 0 0 S
-PT 0 8192 5
+28828 1 8388608 0 303563132 131074 0 0 0 S
+PT 0 8192 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -420,8 +420,8 @@ zooox demi-god demi god wildmage wild mage wildmagic~
 &+Mfingers start wiggling, one can only guess what will next spring forth from&n
 &+Mhim.&n
 ~
-1141274698 1 0 2936048126 2079 0 0 0 S
-HF 0 512 7
+1141274698 1 0 0 2936048126 2079 0 0 0 S
+HF 0 512 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -436,8 +436,8 @@ to the moment of creation and now this poor elephant sneezes unhappily.&n
 Wondering what he is to do next this elephant looks so stressed that it is&n
 obvious that it could use a serious drink.&n
 ~
-134231050 1 0 33554840 0 0 0 0 S
-A 0 1 5
+134231050 1 0 0 33554840 0 0 0 0 S
+A 0 1 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -453,8 +453,8 @@ demonic demon advisor~
 &+rlord find out, the torture this being would endre would be inconceivable to&n
 &+Lany mortal.&n
 ~
-10250 1 0 234881320 30 0 0 -850 S
-X 0 2 5
+10250 1 0 0 234881320 30 0 0 -850 S
+X 0 2 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -469,8 +469,8 @@ mighty griffon~
 &+Wamounts of money on the black market.  However, the griffon has little to fear&n
 &+Wfrom mere mortals.&N
 ~
-141322 1 0 234881400 30 0 0 950 S
-AC 0 1 7
+141322 1 0 0 234881400 30 0 0 950 S
+AC 0 1 0 7
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -485,8 +485,8 @@ deep mountain dragon~
 &+Lprisoners crowded his tunnels.  The dragon wishes only to mete out revenge&n
 &+Lupon any of them that come near.&n
 ~
-143400 1 0 788529596 30 0 0 0 S
-D 0 1 -1
+143400 1 0 0 788529596 30 0 0 0 S
+D 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -501,8 +501,8 @@ gadornar titan berserker~
 &+bmost powerful gods without a care.  This of course sent him to his demise here&n
 &+bamongst some of the more prominent folks who were banished here.&n
 ~
-143432 1 0 234881532 158 0 0 0 S
-G 0 2 6
+143432 1 0 0 234881532 158 0 0 0 S
+G 0 2 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -517,8 +517,8 @@ burly imp especially~
 &+Loften on the others.  Of course it obeys its masters, however amongst the&n
 &+Lunderlings, it enjoys some limited power.&n
 ~
-14344 1 0 67109112 30 0 0 -900 S
-PF 0 24577 5
+14344 1 0 0 67109112 30 0 0 -900 S
+PF 0 24577 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -532,8 +532,8 @@ annoyed earth elemental~
 &+yit could not dig any further.  In fact some of the tunnels it had dug are&n
 &+ysome of the same ones that the prisoners now inhabit.&n
 ~
-14344 1 0 33554876 30 67108864 0 0 S
-EE 0 1 5
+14344 1 0 0 33554876 30 67108864 0 0 S
+EE 0 1 0 5
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -549,8 +549,8 @@ xoliy stone giant guardian~
 &+Lsingle key to break that crack.  So here the isolated giant waits till he is&n
 &+Lfreed of this prison.&n
 ~
-395338 1 0 301990264 30 0 2147483648 0 S
-G 0 33 6
+395338 1 0 0 301990264 30 0 2147483648 0 S
+G 0 33 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -567,8 +567,8 @@ zu god harmony~
 &+Weven hand, and the justice it would mete out would be equally equal in its&n
 &+Wferociousness.&n
 ~
-35680264 1 0 1040820732 276703 0 0 0 S
-Y 0 537 7
+35680264 1 0 0 1040820732 276703 0 0 0 S
+Y 0 537 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -584,8 +584,8 @@ beholder~
 &+WIt has a partnership with the creature, which is not quite even.  It does fear&n
 &+Lits master.&n
 ~
-33961994 1 0 2651390364 262174 0 0 -900 S
-BH 0 4 5
+33961994 1 0 0 2651390364 262174 0 0 -900 S
+BH 0 4 0 5
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -601,8 +601,8 @@ high priest high-priest~
 &+Ltheir god.  Two weeks ago however, a dream woke this priest and he came&n
 &+Lhere with his guards the second he awoke.&n
 ~
-1174829384 0 0 234883580 32798 0 8650752 -900 S
-UV 0 32 6
+1174829384 0 0 0 234883580 32798 0 8650752 -900 S
+UV 0 32 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -617,8 +617,8 @@ dark bodyguard body guard~
 &+Lwill be repaid quite well.  The deep dark armor on its body heaves slowly&n
 &+Lwith his deep breaths, and the dark hued warrior is a frightening site.&N
 ~
-100694090 0 0 100663612 30 0 0 -900 S
-G 0 1 -1
+100694090 0 0 0 100663612 30 0 0 -900 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -633,8 +633,8 @@ burly wardemon demon war especially~
 &+Loften on the others.  Of course it obeys its masters, however amongst the&n
 &+Lunderlings, it enjoys some limited power.&n
 ~
-14344 1 0 67109112 30 0 0 -900 S
-X 0 3 5
+14344 1 0 0 67109112 30 0 0 -900 S
+X 0 3 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -650,8 +650,8 @@ high mage high-mage lokpan~
 &+Land nothing could stop them.  However, they must still wait until the chosen&n
 &+Lones full fill the prophecy.&n
 ~
-67266634 0 0 252 2079 0 0 -900 S
-PL 0 512 4
+67266634 0 0 0 252 2079 0 0 -900 S
+PL 0 512 0 4
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

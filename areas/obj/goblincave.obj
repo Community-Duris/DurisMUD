@@ -86,7 +86,7 @@ chothe hide strip~
 &+La strip of &+Ycho&+ythe&+L hide&N~
 &+LA strip of &+Ycho&+ythe&+L hide has been left on the ground.&N~
 ~
-13 2 3 0 7 0 8392704 16385 0 1 0
+13 2 3 0 7 0 8392704 16385 32768 1 0
 0 0 0 0 0 0 0 0
 2 0 100
 E
@@ -157,7 +157,7 @@ chothe bone~
 &+La &+Ycho&+ythe&+W bone&N~
 &+LA large &+Wwhite bone&+L lies here upon the ground.&N~
 ~
-13 10 3 0 2 0 8392712 16385 0 1 0
+13 10 3 0 2 0 8392712 16385 32768 1 0
 0 0 0 0 0 0 0 0
 5 0 100
 E
@@ -186,7 +186,7 @@ flesh strip pootata~
 &+La strip of &+Mpoo&+gtata&N &+Lflesh&N~
 &+LA strip of flesh has been dropped upon the ground here.&N~
 ~
-13 2 3 0 4 0 8392704 16385 0 1 0
+13 2 3 0 4 0 8392704 16385 32768 1 0
 0 0 0 0 0 0 0 0
 5 0 100
 E

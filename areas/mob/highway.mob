@@ -7,8 +7,8 @@ orc warrior~
 what paler appearance than normal. The result is a putrid green flesh,
 resembling something you once threw up.
 ~
-1073741832 1 0 33554464 0 0 0 -750 S
-HO 0 16384 -1
+1073741832 1 0 0 33554464 0 0 0 -750 S
+HO 0 16384 0 -1
 25 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -21,8 +21,8 @@ orc warrior~
 what paler appearance than normal. The result is a putrid green flesh,
 resembling something you once threw up.
 ~
-1073741832 1 0 33554464 0 0 0 -750 S
-HO 0 1048576 -1
+1073741832 1 0 0 33554464 0 0 0 -750 S
+HO 0 1048576 0 -1
 30 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -40,8 +40,8 @@ of a hart, or full-grown deer. This gives it great dexterity and
 quickness. The Kearonor Beast looks at you with hunger, the words
 "dinner" register in its eyes.
 ~
-1107560458 1 0 268443864 0 0 0 -800 S
-X 0 65 7
+1107560458 1 0 0 268443864 0 0 0 -800 S
+X 0 65 0 7
 58 -5 -100 55d137+4025 6d7+35
 0.0.0.0 309350
 8 8 0
@@ -58,8 +58,8 @@ king, and kept his subjects happy. They reciprocated by making
 him a coffin in his honor. Viznor looks strong, his muscles
 bulging from his transparent royal jerkin.
 ~
-33685514 0 0 8314 0 0 0 700 S
-UG 0 8 -1
+33685514 0 0 0 8314 0 0 0 700 S
+UG 0 8 0 -1
 50 -3 -105 50d100+2650 6d6+25
 0.0.0.0 121500
 8 8 1
@@ -73,8 +73,8 @@ was knighted by King Mrotha and has resolved not to return to
 court until he has won fame. He wishes soon to take the Knights'
 Test and come out victorious.
 ~
-1073741832 672 0 0 0 0 0 1000 S
-PH 0 8 -1
+1073741832 672 0 0 0 0 0 0 1000 S
+PH 0 8 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -90,8 +90,8 @@ wants to be the one who does it. He is very tall, and very broad-
 shouldered. His suit of armor is not that shiny-- in fact rusty
 from exposure to high humidity and fog.
 ~
-1073741836 672 0 0 0 0 0 1000 S
-PH 0 8 -1
+1073741836 672 0 0 0 0 0 0 1000 S
+PH 0 8 0 -1
 39 2 -24 39d80+819 4d7+10
 2.2.3.2 50544
 8 8 1
@@ -105,8 +105,8 @@ lucky to return with minor wounds. He is now on a quest to help
 his friend, Morlanthra, but looks confused. He looks as though he
 has lost his direction.
 ~
-1107296266 672 0 8192 0 0 0 1000 S
-PH 0 8 -1
+1107296266 672 0 0 8192 0 0 0 1000 S
+PH 0 8 0 -1
 40 2 -28 40d80+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -121,8 +121,8 @@ previous battles. Sir Peryne has always been able to defeat a
 knight before the knight has even stepped 5 feet within Peryne's
 range. Basically, he is deadly with a bow.
 ~
-1073741836 672 0 8192 0 0 0 1000 S
-PH 0 2 -1
+1073741836 672 0 0 8192 0 0 0 1000 S
+PH 0 2 0 -1
 33 6 -5 33d70+495 4d6+7
 7.8.0.2 42768
 8 8 1
@@ -140,8 +140,8 @@ quite. His horse is beautiful; its black mane hangs in curls. The
 knight has been known to attack others before they had a chance
 to do so to him.
 ~
-1074006024 672 0 8410 0 0 0 1000 S
-PH 0 8 -1
+1074006024 672 0 0 8410 0 0 0 1000 S
+PH 0 8 0 -1
 52 -3 -95 50d100+2650 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -154,8 +154,8 @@ The horse is amazingly beautiful and strong. Its fore-muscles are
 bulging and its nostrils are flaring. It looks at you, daring you
 to mount it.
 ~
-134217738 0 0 536870922 0 0 0 0 S
-CT 0 1 -1
+134217738 0 0 0 536870922 0 0 0 0 S
+CT 0 1 0 -1
 30 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -169,8 +169,8 @@ from its being is almost blinding. Its long robe touches the
 ground, although the angel hovers above the floor. Its face is
 beautiful. Long golden hair is braided down to the waist.
 ~
-10 0 0 8200 0 0 0 1000 S
-AN 0 512 -1
+10 0 0 0 8200 0 0 0 1000 S
+AN 0 512 0 -1
 30 8 3 30d55+330 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -183,8 +183,8 @@ A small baby with wings flaps them with ease. Although its
 features are young, its eyes tell that it has much wisdom and
 knowledge.
 ~
-67108936 0 0 8200 0 0 0 1000 S
-AN 0 1 -1
+67108936 0 0 0 8200 0 0 0 1000 S
+AN 0 1 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -196,8 +196,8 @@ A &+Wrabbit&N hops around with delight.
 The rabbit is snow white in color and quietly sniffs the area for
 various plants to chew on.
 ~
-200 0 0 0 0 0 0 0 S
-A 0 0 -1
+200 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 1
@@ -215,8 +215,8 @@ translucent, caressing her every curve of what is a very
 shapely figure of a woman. Esterra looks at you with a glare
 that could freeze water.
 ~
-10 1 0 208 0 0 0 -900 S
-PH 0 512 -1
+10 1 0 0 208 0 0 0 -900 S
+PH 0 512 0 -1
 45 -1 -69 45d72+1935 6d6+12
 5.9.8.4 109350
 8 8 2
@@ -231,8 +231,8 @@ luster. Nynevena is young, but brilliant. She has quickly become
 one of the most powerful sorcerers of Volheru under Esterra's
 instruction and training. Her long purple robes touch the ground.
 ~
-10 1 0 136 0 0 0 -850 S
-PH 0 1024 -1
+10 1 0 0 136 0 0 0 -850 S
+PH 0 1024 0 -1
 38 2 -21 38d64+798 4d7+10
 1.2.2.2 49248
 8 8 2
@@ -250,8 +250,8 @@ bags under his eyes and wrinkles that have taken their course. It
 is clear from Morlanthra's great powers that he is not of this
 world. Morlanthra looks at you and smiles happily.
 ~
-11 0 0 536871128 12480 0 0 900 S
-PH 0 2048 -1
+11 0 0 0 536871128 12480 0 0 900 S
+PH 0 2048 0 -1
 56 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -264,8 +264,8 @@ A bright, translucent figure stands in the room. Its face
 contorts to the sound of its moans as it shakes its chains,
 haunting you.
 ~
-131144 0 0 67108866 0 0 0 0 S
-UG 0 0 -1
+131144 0 0 0 67108866 0 0 0 0 S
+UG 0 0 0 -1
 10 18 57 10d18+35 2d3+1
 0.0.0.0 1296
 10 10 0
@@ -278,8 +278,8 @@ A transparent shadow rides on the breeze. Its elongated body and
 face stretch even more as it swooshes down on you. Its hands are
 outstretched as though it were going to grab you.
 ~
-131144 0 0 67108874 0 0 0 0 S
-UG 0 0 -1
+131144 0 0 0 67108874 0 0 0 0 S
+UG 0 0 0 -1
 13 15 48 13d23+52 2d5+2
 0.0.0.0 6318
 10 10 0
@@ -292,8 +292,8 @@ The greater spirit is of a higher form of ghost from beyond the
 grave. It looks at you, rubbing its hands in anticipation of a
 good haunting.
 ~
-131144 0 0 67108874 0 0 0 0 S
-UG 0 0 -1
+131144 0 0 0 67108874 0 0 0 0 S
+UG 0 0 0 -1
 25 15 41 15d23+60 2d5+2
 0.0.0.0 7290
 10 10 0
@@ -306,8 +306,8 @@ The mist monster, just a second ago, was just gas. Then,
 suddenly, in front of your eyes, it materialized into a solid
 form of goo, sliming its way toward you.
 ~
-72 1 0 24 0 0 0 0 S
-AC 0 0 -1
+72 1 0 0 24 0 0 0 0 S
+AC 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 0
@@ -320,8 +320,8 @@ A long snake-like creature worms through the swamp with great
 speed. Its teeth are razor sharp as it pops out of the mud
 in front of you.
 ~
-72 1 0 8 0 0 0 0 S
-AC 0 0 -1
+72 1 0 0 8 0 0 0 0 S
+AC 0 0 0 -1
 18 13 42 18d30+90 3d4+2
 0.0.0.0 8748
 8 8 0
@@ -335,8 +335,8 @@ plants, and vines pasted together with mud. It is human in form,
 but seems to have no eyes. Whatever it is, it does not like you
 disturbing it.
 ~
-72 1 0 0 0 0 0 0 S
-H 0 0 -1
+72 1 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 25 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 0
@@ -349,8 +349,8 @@ Pieces of armor and old clothing are on the rib cage of this
 skeleton. The skeleton has suddenly become animated from your
 presence and is ready to attack.
 ~
-72 1 0 8 0 0 0 0 S
-U 0 0 -1
+72 1 0 0 8 0 0 0 0 S
+U 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 5296
 8 8 0
@@ -363,8 +363,8 @@ The alligator sometimes opens its wide mouth, showing many large,
 sharp teeth. This is its playground, and you, apparently, are
 its next meal.
 ~
-72 1 0 0 0 0 0 0 S
-R 0 0 -1
+72 1 0 0 0 0 0 0 0 S
+R 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 1
@@ -378,8 +378,8 @@ trunks and his arms are like thick branches. He wears a loin
 cloth showing his hairy chest and armpits. His back is bent as
 though he were carrying a load. He looks at you, drooling.
 ~
-67108936 1 0 0 1024 0 0 -400 S
-G 0 0 -1
+67108936 1 0 0 0 1024 0 0 -400 S
+G 0 0 0 -1
 35 15 61 15d23+135 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -391,8 +391,8 @@ A &+Wbillygoat&N romps the hills with ease here.
 The goat has strong legs and is wearing its winter coat. It
 occasionally stops to chew on some plants.
 ~
-32968 0 0 0 0 0 0 0 S
-A 0 0 -1
+32968 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 1
@@ -403,8 +403,8 @@ A &+Wsheep&N lazily stands here chewing on some grass.
 ~
 The sheep looks plump. It has grown a full coat of wool.
 ~
-32968 0 0 0 0 0 0 0 S
-A 0 0 -1
+32968 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 1
@@ -420,8 +420,8 @@ The Bishop looks at you with disgust. At the moment, you are a
 fly in his soup, so to speak. He stretches out his arm towards
 you. Apparently, he wants you to kiss his ring.
 ~
-4106 0 0 144 0 0 4096 800 S
-PH 0 32 -1
+4106 0 0 0 144 0 0 4096 800 S
+PH 0 32 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -436,8 +436,8 @@ compassion for. His language is incomprensible, and his face,
 horrifyingly uggly. Yet, you feel an affinity towards the poor
 beast-- as though he had some intelligence to him.
 ~
-2058 0 0 8200 0 0 0 850 S
-PH 0 1 -1
+2058 0 0 0 8200 0 0 0 850 S
+PH 0 1 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -451,8 +451,8 @@ the pilgrimage to the church of Volheru. He walks silently,
 giving you a brief look. He smiles warmly at you, then returns to
 his chanting.
 ~
-4104 0 0 0 0 0 0 800 S
-PH 0 64 -1
+4104 0 0 0 0 0 0 0 800 S
+PH 0 64 0 -1
 28 13 42 18d30+90 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -466,8 +466,8 @@ completed the pilgrimage to the church of Volheru. She walks
 silently, giving you a brief look. She smiles warmly at you, then
 returns to her chanting.
 ~
-4168 0 0 0 0 0 0 800 S
-PH 0 32 -1
+4168 0 0 0 0 0 0 0 800 S
+PH 0 32 0 -1
 17 13 45 17d30+85 3d4+2
 8.6.2.0 8262
 8 8 2
@@ -481,8 +481,8 @@ very holy person. He wears long white robes and a piece of red
 cloth with cross symbols is wrapped around his shoulders. He
 raises his hands to bless you, then goes about his work.
 ~
-4168 0 0 0 0 0 0 700 S
-PH 0 0 -1
+4168 0 0 0 0 0 0 0 700 S
+PH 0 0 0 -1
 24 15 55 14d23+56 2d5+2
 7.5.2.0 6804
 8 8 1
@@ -495,8 +495,8 @@ The boy is about 8 to 10 years of age. He has rosy cheeks and
 short blonde hair. He helps the acolytes and priests with certain
 ceremonies.
 ~
-200 0 0 0 0 0 0 600 S
-PH 0 0 -1
+200 0 0 0 0 0 0 0 600 S
+PH 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -509,8 +509,8 @@ The priest is adorned with clean, white robes and a gold shawl.
 Wrapped around his waist is a silver sash. He takes no notice of
 you in his prayer.
 ~
-4168 0 0 0 0 0 0 700 S
-PH 0 32 -1
+4168 0 0 0 0 0 0 0 700 S
+PH 0 32 0 -1
 25 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 6 8 1
@@ -523,8 +523,8 @@ The priestess wears a white hood and long, white robes. A small,
 gold cross is worn around her neck. She nods her head towards you
 as you walk by.
 ~
-67108936 0 0 0 0 0 0 700 S
-PH 0 0 -1
+67108936 0 0 0 0 0 0 0 700 S
+PH 0 0 0 -1
 16 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -536,8 +536,8 @@ A &+Wtrout&N swims through the water with great speed here.
 The trout looks tasty. Its green fins and silver body guide it
 though the cold waters.
 ~
-262216 0 0 34816 0 0 0 0 S
-F 0 0 -1
+262216 0 0 0 34816 0 0 0 0 S
+F 0 0 0 -1
 15 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 1
@@ -549,8 +549,8 @@ A &+rsalmon&N quickly swims upstream here.
 The salmon looks strong to be able to keep up with the raging
 water.
 ~
-262154 0 0 34816 0 0 0 0 S
-F 0 0 -1
+262154 0 0 0 34816 0 0 0 0 S
+F 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 1
@@ -563,8 +563,8 @@ The leper wears a cloth over his face to prevent anyone seeing
 his deformities or loss of skin. His eyes look at you sadly,
 almost begging you to give him a quick end to it all.
 ~
-10 1 0 0 0 0 0 0 S
-PE 0 0 -1
+10 1 0 0 0 0 0 0 0 S
+PE 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -577,8 +577,8 @@ dragon red~
 &+ropponent for a small legion of infantry. Besides fiery breath, casual thing for
 &+rsuch beasts, this very dragon seems to be also radiating a strong magical aura.
 ~
-1309018222 1 0 704743644 0 0 0 -1000 S
-D 0 576 -1
+1309018222 1 0 0 704743644 0 0 0 -1000 S
+D 0 576 0 -1
 56 -1 -89 45d72+2385 6d6+12
 5.9.0.14 218700
 5 8 2
@@ -591,8 +591,8 @@ lizard~
 &+rthe kind that loves warm and dry air, and thus often is often found in the
 &+rvicinity of red dragons and other firebreathing beasts.
 ~
-131112 0 0 128 0 0 0 0 S
-D 0 0 -1
+131112 0 0 0 128 0 0 0 0 S
+D 0 0 0 -1
 10 20 73 2d15+27 1d5+0
 1.0.0.0 518
 8 8 0
@@ -605,8 +605,8 @@ eagle~
 &+ysingle meal. On its feathers one can notice signs of someone trying to ride it.
 &+yIt seems this eagle was not very happy about it, and is still a bit upset.
 ~
-1208090762 1 0 134217728 0 0 0 0 S
-B 0 0 -1
+1208090762 1 0 0 134217728 0 0 0 0 S
+B 0 0 0 -1
 30 8 3 30d55+330 3d6+4
 0.0.0.0 26730
 5 8 0
@@ -619,8 +619,8 @@ orc warrior leader~
 what paler appearance than normal. The result is a putrid green flesh,
 resembling something you once threw up.
 ~
-1073741832 1 0 33554464 0 0 0 -750 S
-HO 0 16384 -1
+1073741832 1 0 0 33554464 0 0 0 -750 S
+HO 0 16384 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -632,8 +632,8 @@ deer~
   This deer appears well feed, living among these endless rolling fields of
 wheat. So well fed in fact, that it would probably make one tasty dinner.
 ~
-152 0 0 0 0 0 0 0 S
-A 0 0 -1
+152 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 31 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -649,8 +649,8 @@ armor, of course, is completely black -- there are no designs
 whatsoever on it. He wears no cape or other adornments -- just
 his black armor. His eyes look fierce and blood red.
 ~
-10 1 0 8408 0 0 0 -900 S
-PH 0 16 -1
+10 1 0 0 8408 0 0 0 -900 S
+PH 0 16 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -662,8 +662,8 @@ the &+ggreen goblin&N~
 This goblin's skin is colored a putrid green. It's jaws are wide
 allowing its devious grin to show many sharp teeth.
 ~
-72 0 0 0 0 0 0 -450 S
-HG 0 0 -1
+72 0 0 0 0 0 0 0 -450 S
+HG 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 8290
 8 8 1
@@ -678,8 +678,8 @@ but is carried with ease. Hanging from its mouth is a long strand
 of drool that has not reached the ground yet. Two large tusks jut
 out of the sides of its mouth.
 ~
-72 0 0 0 0 0 0 -450 S
-PO 0 0 -1
+72 0 0 0 0 0 0 0 -450 S
+PO 0 0 0 -1
 28 13 35 20d30+100 3d4+2
 0.9.3.0 10720
 8 8 1
@@ -694,8 +694,8 @@ berthol dwarf~
 &+yhair is short, along with his body. His nose is bulbous, and
 &+yhangs slightly over his mustache and beard.
 ~
-72 1 0 33554440 0 0 0 -500 S
-PD 0 0 -1
+72 1 0 0 33554440 0 0 0 -500 S
+PD 0 0 0 -1
 28 13 42 18d30+90 3d4+2
 9.7.3.0 9748
 8 8 1
@@ -709,8 +709,8 @@ horse is completely black from head to tail. Its nostrils flair
 as you look at it. This horse was tamed, but it wasn't an easy
 task.
 ~
-134217738 0 0 0 0 0 0 0 S
-AE 0 0 -1
+134217738 0 0 0 0 0 0 0 0 S
+AE 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
@@ -723,8 +723,8 @@ The thief wears a dirty leather tunic and carries a small dagger
 on him. He has an evil grin, showing some of his missing teeth.
 Avarice drives his every move with quickness and accuracy.
 ~
-67108936 1 0 0 0 0 0 -400 S
-PH 0 4096 -1
+67108936 1 0 0 0 0 0 0 -400 S
+PH 0 4096 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -738,8 +738,8 @@ himself after completing a certain quota of robberies on the
 dusty highway. He is very certain in his actions
 and very precise.
 ~
-67108874 1 0 0 0 0 0 -500 S
-PH 0 4096 -1
+67108874 1 0 0 0 0 0 0 -500 S
+PH 0 4096 0 -1
 25 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -753,8 +753,8 @@ stealing 10000 platinum from a wagon heading for Castle Volheru.
 You can see from the squint in the lieutenant's eyes that he
 means business.
 ~
-67108874 1 0 8 0 0 0 -550 S
-PH 0 4096 -1
+67108874 1 0 0 8 0 0 0 -550 S
+PH 0 4096 0 -1
 32 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -769,8 +769,8 @@ at you with disgust and spits in your direction. His shoulders
 are broad and stalky. He is short, but from the size of his arms,
 he packs a good wallop.
 ~
-8 1 0 24 0 0 0 -600 S
-PH 0 4096 -1
+8 1 0 0 24 0 0 0 -600 S
+PH 0 4096 0 -1
 27 13 45 17d30+85 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -782,8 +782,8 @@ A lamb innocently grazes on some grass here.
 The lamb is plump and round. It has its winter coat of wool on.
 It stops to look at you, then continues eating the grass.
 ~
-200 0 0 0 0 0 0 0 S
-A 0 0 -1
+200 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 20 87 4d15+14 1d5+0
 0.0.0.0 1000
 8 8 2
@@ -795,8 +795,8 @@ A goat stands here eating some plants.
 The goat has been well-fed from the foliage around it. It senses
 you and looks your way; then it continues to feed itself.
 ~
-200 0 0 0 0 0 0 0 S
-A 0 0 -1
+200 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 8 20 83 5d15+17 1d5+0
 0.0.0.0 1648
 8 8 1
@@ -809,8 +809,8 @@ The merchant is expensively dressed, adorned with jewelry and
 other costly items. He sees you and immediately pulls something
 out of his wagon. He wants you to buy it.
 ~
-72 0 0 0 0 0 0 0 S
-PH 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 16 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -825,8 +825,8 @@ lamerok sir knight wicked tall~
 &+Lmage of Volheru, and fled the castle. Many has searched for him, noone ever
 &+Lsucceded.
 ~
-1174677640 24 0 33620224 12288 0 8388608 -1000 S
-PH 0 1 -1
+1174677640 24 0 0 33620224 12288 0 8388608 -1000 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -841,8 +841,8 @@ cloth showing his hairy chest and armpits. His back is bent as
 though he were carrying a load. He looks at you, drooling as he
 charges to attack!
 ~
-67110984 1 0 0 0 0 0 -600 S
-G 0 1 -1
+67110984 1 0 0 0 0 0 0 -600 S
+G 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -857,8 +857,8 @@ montel knight short uglyfaced ugly sir~
 &+gturning whole Volheru castle into charred ruin.
 &+yThe face of this knight is so ugly he has to wear a cloth mask over it.
 ~
-1073741832 0 0 270008352 2 0 0 -1000 S
-PH 0 3 -1
+1073741832 0 0 0 270008352 2 0 0 -1000 S
+PH 0 3 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -871,8 +871,8 @@ stout harpy~
 &+ysingle meal. On its feathers one can notice signs of someone trying to ride it.
 &+yIt seems this eagle was not very happy about it, and is still a bit upset.
 ~
-1208090762 1 0 134217728 0 0 0 0 S
-B 0 0 -1
+1208090762 1 0 0 134217728 0 0 0 0 S
+B 0 0 0 -1
 30 8 3 30d55+330 3d6+4
 0.0.0.0 26730
 5 8 0
@@ -883,8 +883,8 @@ young harpy~
 ~
   &+yA young harpy who is nestled against its mother for protection.&n
 ~
-1208090762 0 0 134217728 268435456 0 0 0 S
-MH 0 33554432 -1
+1208090762 0 0 0 134217728 268435456 0 0 0 S
+MH 0 33554432 0 -1
 12 8 3 30d55+330 3d6+4
 0.0.0.0 26730
 5 8 0
@@ -897,8 +897,8 @@ A tired &+Cartifact collector&n walks slowly along the &+ydusty highway&n
 along the dusty highway searching for &+yartifacts&n to sell for profit or
 for his own collection.
 ~
-2122 0 0 134219912 0 0 0 0 S
-PH 0 32 4
+2122 0 0 0 134219912 0 0 0 0 S
+PH 0 32 0 4
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -911,8 +911,8 @@ xalinor merchant dwarf~
 to travelers along the dusty highway.  He has made a name for himself as
 being a fair and honest businessman.
 ~
-74 0 0 134217736 0 0 0 0 S
-PM 0 2 -1
+74 0 0 0 134217736 0 0 0 0 S
+PM 0 2 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -924,8 +924,8 @@ sturdy horse mount~
   A large sturdy mountain horse that travellers use along the dusty
 highway and beyond.
 ~
-134217736 0 0 134217736 0 0 0 0 S
-AE 0 0 -1
+134217736 0 0 0 134217736 0 0 0 0 S
+AE 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -937,8 +937,8 @@ A &+Lhooded guard&n stands before the &+Bodd&n chest.
   &+LA mysterious hooded guard that keeps intruders away from the magical&n
 &+Lchest that is kept in this small granite enclosure.&n
 ~
-266 1 0 134217760 0 0 0 0 S
-PH 0 8 -1
+266 1 0 0 134217760 0 0 0 0 S
+PH 0 8 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

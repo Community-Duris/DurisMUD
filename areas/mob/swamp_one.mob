@@ -6,8 +6,8 @@ korbin druid~
 Korbin is rather unfriendly for a druid; its probably due to his lack of human
 contacts. Korbin glares at you and tells you to leave his home.
 ~
-78 32 0 33554604 0 0 0 1000 S
-H 0 128 -1
+78 32 0 0 33554604 0 0 0 1000 S
+H 0 128 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -18,8 +18,8 @@ phyla witch~
 ~
 A very evil and ugly creature.
 ~
-2062 1 0 33554604 0 0 0 -1000 S
-H 0 256 -1
+2062 1 0 0 33554604 0 0 0 -1000 S
+H 0 256 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 2
@@ -30,8 +30,8 @@ mog demon~
 ~
 A very powerful beast, that loves to destroy all living creatures.
 ~
-1073743886 1 0 33554604 0 0 0 -1000 S
-X 0 16 -1
+1073743886 1 0 0 33554604 0 0 0 -1000 S
+X 0 16 0 -1
 58 -7 -140 58d143+6496 7d6+35
 3.4.2.9 352350
 8 8 0
@@ -42,8 +42,8 @@ swamp troll~
 ~
 A large and rather disgusting looking beast.
 ~
-1073743884 1 0 33554472 0 0 0 -1000 S
-pt 0 1 6
+1073743884 1 0 0 33554472 0 0 0 -1000 S
+pt 0 1 0 6
 57 -7 -107 57d143+6270 7d6+35
 2.4.8.6 230850
 8 8 0
@@ -54,8 +54,8 @@ swamp troll guard~
 ~
 A very large powerful looking troll. It looks like he wants you for lunch.
 ~
-2058 1 0 40 0 0 0 -1000 S
-PT 0 16384 6
+2058 1 0 0 40 0 0 0 -1000 S
+PT 0 16384 0 6
 60 -7 -115 58d143+6380 7d6+35
 3.4.8.6 234900
 8 8 0
@@ -66,8 +66,8 @@ swamp troll king~
 ~
 The largest and most evil looking troll you have ever seen stands before you.
 ~
-16845066 1 0 33554604 0 0 0 -1000 S
-PT 0 256 7
+16845066 1 0 0 33554604 0 0 0 -1000 S
+PT 0 256 0 7
 62 -7 -107 4d10+40000 7d6+55
 2.4.8.6 500000
 8 8 0
@@ -77,8 +77,8 @@ bug~
 &+MA very large and strange looking bug is wandering around.&n
 ~
 ~
-12 0 0 8 0 0 0 0 S
-I 0 0 -1
+12 0 0 0 8 0 0 0 0 S
+I 0 0 0 -1
 18 13 42 18d30+90 3d4+2
 0.0.0.0 8748
 8 8 0
@@ -88,8 +88,8 @@ snake~
 &+GA large snake slithers around on the ground.&n
 ~
 ~
-8 1 0 0 0 0 0 -100 S
-RS 0 0 -1
+8 1 0 0 0 0 0 0 -100 S
+RS 0 0 0 -1
 18 13 42 18d30+90 3d4+2
 9.7.3.0 8748
 8 8 0
@@ -99,8 +99,8 @@ drgon fly~
 &+yA dragon fly about 9 ft long flies around the area.&n
 ~
 ~
-12 0 0 134217728 0 0 0 100 S
-I 0 0 -1
+12 0 0 0 134217728 0 0 0 100 S
+I 0 0 0 -1
 19 13 39 19d30+95 3d4+2
 0.0.0.0 9234
 8 8 0
@@ -111,8 +111,8 @@ fish~
 ~
 The fish has incredibly sharp teeth, and looks like it is very hungry.
 ~
-262152 1 0 8 0 0 0 0 S
-F 0 0 -1
+262152 1 0 0 8 0 0 0 0 S
+F 0 0 0 -1
 22 11 29 22d40+176 3d5+3
 4.0.5.0 19602
 8 8 0
@@ -124,8 +124,8 @@ guard elite troll~
 An incredibly large and powerful troll.  he wants to rip your head off and
 eat your pulsating brain.
 ~
-2062 1 0 34603016 0 0 0 -1000 S
-PT 0 1 6
+2062 1 0 0 34603016 0 0 0 -1000 S
+PT 0 1 0 6
 59 -7 -118 59d143+6490 7d6+35
 4.5.9.6 238950
 8 8 0
@@ -135,8 +135,8 @@ centaur horse~
 &+WA powerful centaur wanders lost in the swamp&n
 ~
 ~
-1073743944 0 0 285212808 0 0 0 0 S
-CT 0 2 -1
+1073743944 0 0 0 285212808 0 0 0 0 S
+CT 0 2 0 -1
 56 -7 -114 56d143+5880 7d6+35
 1.3.8.6 226800
 8 8 1

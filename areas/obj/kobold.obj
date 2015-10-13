@@ -473,7 +473,7 @@ red gem jeweled eyes demon~
 &+Rthe gem eyes of the demon statue&n~
 A pair of &+Rred gems&n lie here on the ground.~
 ~
-8 26 0 0 7 0 4096 131073 64 0 0
+8 26 0 0 7 0 4096 131073 32832 0 0
 0 0 0 0 0 0 0 0
 1 10000 100
 E
@@ -506,7 +506,7 @@ silver wire frames specs spectacles~
 the &+csilver wire frames&n of a pair of broken spectacles~
 The &+csilver wire frames&n of some broken pair of spectacles lie here.~
 ~
-13 22 0 0 7 0 0 131073 0 0 0
+13 22 0 0 7 0 0 131073 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -729,7 +729,7 @@ nugget silver~
 a small nugget of &+csilver&n~
 A small nugget of silver lies here glittering.~
 ~
-8 22 0 0 7 0 0 1 0 0 0
+8 22 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 90 100
 E
@@ -742,7 +742,7 @@ large block silver~
 a large block of &+Csolid silver&n~
 A large block of natural silver lies here at your feet.~
 ~
-8 22 0 0 7 0 0 1 0 0 0
+8 22 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 20 1990 100
 E

@@ -8,8 +8,8 @@ githyanki guardian _spec1_~
 &+Lpiercing eyes seem to stare through you. Given the task to patrol
 &+Lthe landmass, this &+Ggith&+Wyanki &+Llooks eager to kill.&n
 ~
-395336 1 0 24 0 0 0 -1000 S
-GI 0 1 -1
+395336 1 0 0 24 0 0 0 -1000 S
+GI 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -23,8 +23,8 @@ githyanki prison guard large _no_move_~
 &+Ggith&+Wyanki &+Ljusticar, his gauntleted fist seems to tighen upon his weapon
 &+Las you get closer.&n
 ~
-145418 1 0 402653208 264192 0 4096 -1000 S
-gi 0 4194320 -1
+145418 1 0 0 402653208 264192 0 4096 -1000 S
+gi 0 4194320 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -40,8 +40,8 @@ di'zanr'raek di zanr raek chief knight githyanki~
 &+Lwraps around his waste and carries the scabbard for his great
 &+Lsword. Several large sigil's run the length of the &+rred &+Lrobe.&n
 ~
-26698 0 0 24 32768 0 0 -1000 S
-gi 0 17 -1
+26698 0 0 0 24 32768 0 0 -1000 S
+gi 0 17 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -56,8 +56,8 @@ githyanki advisor~
 &+LThis &+Ggith&+Wyani&+L's slender build does not mark him as much of a fighter
 &+Lat all.&n
 ~
-133194 0 0 0 0 0 0 -1000 S
-gi 0 1 -1
+133194 0 0 0 0 0 0 0 -1000 S
+gi 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -73,8 +73,8 @@ gate guard githyanki _no_move_~
 &+Lseeing you, he is quick to sound the alarm and alert the rest of your
 &+Ltrespass.&n
 ~
-18442 1 0 24 0 0 0 -1000 S
-gi 0 1 -1
+18442 1 0 0 24 0 0 0 -1000 S
+gi 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -89,8 +89,8 @@ githyanki warlock apprentice~
 &+Lsmall pouch of magical components emits a sour odor. Clutching his
 &+Lspell book, this &+Ggith&+Wyanki &+Lavoids you at all costs.&n
 ~
-2122 1 0 24 0 0 0 -1000 S
-gi 0 512 -1
+2122 1 0 0 24 0 0 0 -1000 S
+gi 0 512 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -107,8 +107,8 @@ zalik al zalik'al githyanki arch mage arch-mage _no_move_~
 &+Lpass knowledge of a new type of magic to the githyanki mages and
 &+Lwarlocks.&n
 ~
-268830794 1 0 402653336 0 0 0 -1000 S
-gi 0 2560 -1
+268830794 1 0 0 402653336 0 0 0 -1000 S
+gi 0 2560 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -123,8 +123,8 @@ githyanki grand warlock tilieianaiz _no_move_~
 &+Lalmost everything, the only features that can really be seen are the
 &+Lpiercing &+rred &+Leyes which stare directly into yours.&n
 ~
-2122 0 0 152 0 0 0 -1000 S
-gi 0 512 -1
+2122 0 0 0 152 0 0 0 -1000 S
+gi 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -139,8 +139,8 @@ githyanki warlock~
 &+LUpon seeing you, the &+Ggith&+Wyanki&+L's hands start to move in complex
 &+Lpatterns and the crackle of magic appears between its thin fingers.
 ~
-268435528 1 0 56 0 0 0 -1000 S
-gi 0 512 -1
+268435528 1 0 0 56 0 0 0 -1000 S
+gi 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -154,8 +154,8 @@ strong githyanki warrior~
 &+Ggith&+Wyanki &+Land makes for a rather striking contrast between the skin and
 &+Ldark steel of his armor. &+rRed &+Leyes follow your every movement.&n
 ~
-1073743944 1 0 56 0 0 0 -1000 S
-gi 0 1 -1
+1073743944 1 0 0 56 0 0 0 -1000 S
+gi 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -171,8 +171,8 @@ githyanki supreme leader xalithil commander~
 &+LBrilliant &+Rred &+Leyes seem to pull at your &+Cs&+co&+Cu&+cl &+Las he rushes to strike
 &+Lyou down!&n
 ~
-285370442 1 0 402661560 47324 32 0 -1000 S
-gi 0 513 -1
+285370442 1 0 0 402661560 47324 32 0 -1000 S
+gi 0 513 0 -1
 61 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -190,8 +190,8 @@ emissary tiamat~
 &+Lqueen looks to be as strong as ever by the pure malicious content
 &+Lthis emissary seems to display by being here.&n
 ~
-18474 1 0 402653336 2048 0 1024 0 S
-dk 0 256 -1
+18474 1 0 0 402653336 2048 0 1024 0 S
+dk 0 256 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -204,8 +204,8 @@ umnnwak githyanki master blacksmith~
 &+Lpays you any heed. Far from the normal guant frame of the &+Ggith&+Wyanki&+L,
 &+Lthis blacksmith pounds away on a long two handed sword.&n
 ~
-2122 1 0 156 0 0 0 -1000 S
-gi 0 1 -1
+2122 1 0 0 156 0 0 0 -1000 S
+gi 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -221,8 +221,8 @@ fire giant _no_move_~
 &+rhe raises his head and steels his gaze. Speaking in a near growl,
 &+rthe giant utters '&+WHello mortal...&+r'&n
 ~
-24650 0 0 0 0 0 0 -1000 S
-G 0 1048577 -1
+24650 0 0 0 0 0 0 0 -1000 S
+G 0 1048577 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -240,8 +240,8 @@ frost giant _no_move_~
 &+Cwith a miserable expression, you can faintly hear him whisper the word
 &+W'Heeeeeeeeeeeeeeeeelp.......' &n
 ~
-157770 0 0 0 0 0 0 -1000 S
-g 0 16777280 -1
+157770 0 0 0 0 0 0 0 -1000 S
+g 0 16777280 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -255,8 +255,8 @@ worshipping githyanki~
 &+Lthe things going around him. Absorbed in his silent worship of the fabled
 &+ml&+Li&+mc&+Lh&+m-&+Lq&+mu&+Le&+me&+Ln, this &+Ggith&+Wyanki &+Lhas no clue your here.&n
 ~
-395338 0 0 402653200 0 128 4096 -1000 S
-GI 0 1 -1
+395338 0 0 0 402653200 0 128 4096 -1000 S
+GI 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -271,8 +271,8 @@ githyanki knight~
 &+La silvery breast plate over the top. Clenched in his hands is the
 &+Lfabled &+Csilver &+Llongsword.&n
 ~
-2120 1 0 24 0 0 0 -1000 S
-gi 0 16 -1
+2120 1 0 0 24 0 0 0 -1000 S
+gi 0 16 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -293,8 +293,8 @@ ujani celestial outcast figure angel demon~
 &+LCaptured during a vicious fight with his arch enemy, the &+Ggith&+Wyanki &+Lhave
 &+Lrendered both of the angels powerless in their jail cells.&n&n
 ~
-268585032 1 0 402653336 2204 64 536870912 -1000 S
-AN 0 16777217 -1
+268585032 1 0 0 402653336 2204 64 536870912 -1000 S
+AN 0 16777217 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -314,8 +314,8 @@ malachite hunter seven winds angel~
 &+Land destroy the fallen angel for his murderous rampage among the
 &+Lmortals they were sent to protect.&n
 ~
-1074137160 1 0 939532440 1 128 4194304 1000 S
-AN 0 67108872 -1
+1074137160 1 0 0 939532440 1 128 4194304 1000 S
+AN 0 67108872 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -332,8 +332,8 @@ astral projection alenien image~
 &+Lfor her moment to strike at the githyanki who captured her and
 &+Lcaused her to become a mere shadow of herself.&n
 ~
-18504 1 0 402653336 0 128 536872960 -1000 S
-ug 0 512 -1
+18504 1 0 0 402653336 0 128 536872960 -1000 S
+ug 0 512 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

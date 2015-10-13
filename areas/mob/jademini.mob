@@ -7,8 +7,8 @@ water ox~
 &+yare especially adept and pulling tills and plows behind them while
 &+ywallowing through the muck, often several feet deep.&n
 ~
-2120 0 0 0 0 0 0 0 S
-A 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -21,8 +21,8 @@ huge olyx~
 &+WThey make excellent work creatures, often used in farms for plowing
 &+Wand tilling soil.&n
 ~
-2120 0 0 0 0 0 0 0 S
-A 0 1 4
+2120 0 0 0 0 0 0 0 0 S
+A 0 1 0 4
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -38,8 +38,8 @@ halfling adventurer~
 &+W        want... Lets say 50 platinum!"
 &+yHe giggles to himself.
 ~
-1073743948 0 0 0 0 0 0 500 S
-PF 0 32768 -1
+1073743948 0 0 0 0 0 0 0 500 S
+PF 0 32768 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -57,8 +57,8 @@ canner~
 &+W        to put into a can and I'll do it. But you need to pay
 &+W        for the can, they aren't cheap you know."
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -71,8 +71,8 @@ packer citizen~
 &+yploughing and packing up rice. After he has packed it into the
 &+ylarge harvest bags, he sends it off to the city.&n
 ~
-1073743944 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743944 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -85,8 +85,8 @@ mosquitoes mosquito swarm~
 &+Lfields and populate to incredible numbers. They become a horrible nuisance
 &+Lwhen in swarms like these.&n
 ~
-72 1 0 0 0 0 0 0 S
-I 0 1 -1
+72 1 0 0 0 0 0 0 0 S
+I 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -99,8 +99,8 @@ crewman oberon~
 &+yglance up at you as he rushes by, swinging his saber against the
 &+yoncoming pirates.
 ~
-1140852744 0 0 0 0 0 0 500 S
-PH 0 16384 -1
+1140852744 0 0 0 0 0 0 0 500 S
+PH 0 16384 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -114,8 +114,8 @@ crewman crew~
 &+W        "I'll hold the line here! Try and make it to
 &+W        their ship!
 ~
-1140852746 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1140852746 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -134,8 +134,8 @@ captain~
 &+W        princess at any cost! Rudder twenty degrees left..
 &+W        Go men go! No one lives forever!"
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -149,8 +149,8 @@ pirate~
 &+Lwith short bows and cutlasses, the pirate crew is not to be
 &+Ltrifled with.&n
 ~
-1073741836 1 0 0 0 0 0 -1000 S
-PH 0 16384 -1
+1073741836 1 0 0 0 0 0 0 -1000 S
+PH 0 16384 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -160,8 +160,8 @@ guardsman guard elite~
 &+LAn elite guardsman of the &+gEmperor&+L assists in the battle.&n
 ~
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 2097154 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 2097154 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -176,8 +176,8 @@ miu pai captain~
 &+Lwhile his comrades work on undermining the trade guilds, the city
 &+Lofficials, and all sorts of malicious crimes.
 ~
-16394 1 0 24 0 0 0 -1000 S
-PH 0 81920 -1
+16394 1 0 0 24 0 0 0 -1000 S
+PH 0 81920 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -194,8 +194,8 @@ first mate~
 &+W	this rescue attempt will be a failure."
 &+yHe turns away quickly and gets back to work.&n
 ~
-1073743882 0 0 0 0 0 0 500 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -209,8 +209,8 @@ reef shark~
 &+bor even takes a single misstep and falls into these cold waters
 &+bwill become this sharks next meal.&n
 ~
-1074003976 1 0 8 0 0 0 0 S
-AC 0 1 -1
+1074003976 1 0 0 8 0 0 0 0 S
+AC 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -224,8 +224,8 @@ captive princess jade~
 &+Msecurely manacled and it appears the only way to free her would be to unlock
 &+Mthe heavy locks that have her chained.
 ~
-2058 0 0 8 0 0 0 500 S
-PH 0 4194304 -1
+2058 0 0 0 8 0 0 0 500 S
+PH 0 4194304 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -235,8 +235,8 @@ shady rascal~
 &+LA shady &+yrascal&+L helps to support the pirate soldiers.&n
 ~
 ~
-1073741832 1 0 0 0 0 0 -1000 S
-PH 0 512 -1
+1073741832 1 0 0 0 0 0 0 -1000 S
+PH 0 512 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -246,8 +246,8 @@ archer pirate~
 &+LAn archer for the Lace&+wdon&+L fires arrows at the enemy crew here.&n
 ~
 ~
-11 0 0 0 0 0 0 -1000 S
-PH 0 65536 -1
+11 0 0 0 0 0 0 0 -1000 S
+PH 0 65536 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -257,8 +257,8 @@ shady rascal~
 &+LA shady &+yrascal&+L stands here, protecting his leader.&n
 ~
 ~
-2058 1 0 0 0 0 0 -1000 S
-PH 0 512 -1
+2058 1 0 0 0 0 0 0 -1000 S
+PH 0 512 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -268,8 +268,8 @@ helmsman helms man~
 &+yThe helmsman of the &+WOb&+Wer&+Won&+y stands here, looking distressed.&n
 ~
 ~
-1140852746 0 0 0 0 0 0 500 S
-PH 0 1 -1
+1140852746 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -283,8 +283,8 @@ pirate sly~
 &+Lwith short bows and cutlasses, the pirate crew is not to be
 &+Ltrifled with.&n
 ~
-1073741836 1 0 0 0 0 0 -1000 S
-PH 0 65536 -1
+1073741836 1 0 0 0 0 0 0 -1000 S
+PH 0 65536 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

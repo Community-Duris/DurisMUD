@@ -63,7 +63,7 @@ halo golden~
 &+Ya golden halo&n~
 &+YA shiny halo has been dropped here.&n~
 ~
-9 24 3 0 7 0 8448 17 0 1073741825 0
+9 24 3 0 7 0 8448 17 32768 1073741825 0
 -8 0 0 0 0 0 0 0
 1 5512 100
 E
@@ -79,7 +79,7 @@ golden blade prophets~
 &+Ythe golden blade &+wo&+Wf &+WPro&+wph&+Lets&n~
 &+LA mighty &+Yblade&+L of &+wpast &+Wpro&+wph&+Lets lies here.&N~
 ~
-5 24 3 0 7 0 7529736 8396801 0 67108865 0
+5 24 3 0 7 0 7529736 8396801 32768 67108865 0
 13 7 4 3 0 0 0 0
 5 64422 100 8192 4 0 0
 E
@@ -95,7 +95,7 @@ golden platemail past prophets~
 &+Ythe golden platemail of &+WP&+wa&+Lst &+WPro&+wphe&+Lts&n~
 &+YA suit of fine armor has been left here.&n~
 ~
-9 24 3 0 7 0 36889600 9 0 67108865 0
+9 24 3 0 7 0 36889600 9 32768 67108865 0
 -35 0 0 0 0 0 0 0
 10 19893 100 4 0 0 0
 E
@@ -111,7 +111,7 @@ sinister horns~
 &+rsome&+L sinister &+rhorns&N~
 &+rA pair of &+Lsinister looking&+r horns lie here.&n~
 ~
-9 10 3 0 7 0 25088 142606353 0 1 0
+9 10 3 0 7 0 25088 142606353 32768 1 0
 -5 0 0 0 0 0 0 0
 3 2323 100
 E
@@ -127,7 +127,7 @@ purge demonic blade~
 &+LPurge&+w, &+rthe demonic blade&n~
 &+rThe grand demonic blade labeled &+w'&+LPurge&+w'&+rlies here.&n~
 ~
-5 19 3 0 7 0 7528968 8396801 0 1 0
+5 19 3 0 7 0 7528968 8396801 32768 1 0
 13 6 6 6 0 0 0 0
 5 25651 100 65536 8 0 0
 E
@@ -143,7 +143,7 @@ purge blood platemail plate~
 &+LPurge&+w,&+r the bl&+Roo&+rd th&+Rir&+rs&+Rty&+r platemail&n~
 &+rA fine platemail named &+w'&+LPurge&+w'&+r lies here in a p&+Roo&+rl of bl&+Roo&+rd.&n~
 ~
-9 19 3 0 7 0 25600 9 0 67108865 0
+9 19 3 0 7 0 25600 9 32768 67108865 0
 35 0 0 0 0 0 0 0
 10 31442 100 32 0 0 0
 A
@@ -401,7 +401,7 @@ wad paper letter illusionists~
 &+Wan il&+Clu&+csi&+Con&+Wists letter&n~
 &+wA wad of paper lies here.&N~
 ~
-8 28 3 0 7 0 24576 8404993 0 0 0
+8 28 3 0 7 0 24576 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -421,7 +421,7 @@ kiss princess~
 &+mthe kiss of a &+Mprin&+Wcess&n~
 &+mA symbol of the &+Mprin&+Wcesses&+m love lies here.&n~
 ~
-8 2 3 0 7 0 24576 1 0 1 0
+8 2 3 0 7 0 24576 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 42323 100
 #31330
@@ -429,7 +429,7 @@ rose~
 &+ga long stem &+rrose&n~
 &+gA long stem &+rrose&+g lies here.&N~
 ~
-8 30 3 0 7 0 28672 8404993 0 1 0
+8 30 3 0 7 0 28672 8404993 32768 1 0
 0 0 0 0 0 0 0 0
 1 2334 100
 E

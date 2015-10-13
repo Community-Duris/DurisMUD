@@ -7,8 +7,8 @@ a &+Rbu&+Yr&+Wn&+Yi&+Rng &+czombie~
 &+chulk that is being burned for eternity. It screams out as the &+Rfla&+Ym&+Res &+click
 &+cat its body and devour its flesh...
 ~
-72 1 0 570458120 1025 0 33554432 -550 S
-U 0 1 -1
+72 1 0 0 570458120 1025 0 33554432 -550 S
+U 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -21,8 +21,8 @@ the &+czombie&N of an insane &+Chuman~
 &+cdifferent from the next because they were, of course, once alive and &+Chuman&+c.
 &+cMany an adventurer has lost their lives to&N the &+czombie&N of an &+Minsane &+Chuman&+c.
 ~
-72 1 0 100761624 28 0 34603008 -600 S
-U 0 1 -1
+72 1 0 0 100761624 28 0 34603008 -600 S
+U 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -35,8 +35,8 @@ the tiny &+Ws&Nke&+Wle&Nto&+Wn&N of a &+Rgnome~
 out of its resting place by some &+Levil&N force. Many an adventurer has lost their
 lives to the tiny &+Ws&Nke&+Wle&Nto&+Wn&N of a &+Rgnome&N.
 ~
-72 1 0 100761608 1040 0 33554432 -450 S
-U 0 1 1
+72 1 0 0 100761608 1040 0 33554432 -450 S
+U 0 1 0 1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -49,8 +49,8 @@ the &+Ws&Nke&+Wle&Nto&+Wn&N of an &+Lorc&N adventurer~
 looks very mindless but still dangerous.Many an adventurer has lost their lives
 to the &+Ws&Nke&+Wle&Nto&+Wn&N of an &+Lorc&N adventurer.
 ~
-72 1 0 369131548 28 0 101711872 -500 S
-U 0 1 -1
+72 1 0 0 369131548 28 0 101711872 -500 S
+U 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -63,8 +63,8 @@ the &+czombie&N of an &+bogre~
 &+cwho died and became a zombie, he was very strong, so... this zombie is nothing
 &+cto be laughed at.
 ~
-72 1 0 167805208 8220 0 34603008 -600 S
-U 0 1 4
+72 1 0 0 167805208 8220 0 34603008 -600 S
+U 0 1 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -77,8 +77,8 @@ the &+Ws&Nke&+Wle&Nto&+Wn&N of a &+Wpaladin~
 continues for him in his charmed state. Many an adventurer has lost their
 lives to the &+Ws&Nke&+Wle&Nto&+Wn&N of a &+Wpaladin&N.
 ~
-72 1 0 167870492 28 0 34603008 -350 S
-U 0 1 -1
+72 1 0 0 167870492 28 0 34603008 -350 S
+U 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -90,8 +90,8 @@ the &+Ws&Nke&+Wle&Nto&+Wn&N of a &+rbloody beast~
    Rotting &+rflesh&N and gore drops from the bones of this creature. Its decaying
 eyes stare at you intently as it sees only you delicious and juicy brain.
 ~
-1073741896 1 0 335642652 8222 0 34603008 -750 S
-U 0 1 -1
+1073741896 1 0 0 335642652 8222 0 34603008 -750 S
+U 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -103,8 +103,8 @@ a &+grotting &+czombie~
    &+cMaggots crawl all over its decaying body. The &+Wbones &+care almost &+ybrown&+c.
 &+cIt must have been buried for a very long time.
 ~
-72 1 0 33587208 1024 0 33554432 -400 S
-U 0 1 -1
+72 1 0 0 33587208 1024 0 33554432 -400 S
+U 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -117,8 +117,8 @@ a &+ydusty &+Ws&Nke&+Wle&Nto&+Wn~
 the only thing completely clean on him is his &+Wwhite&N teeth, perhaps from his
 nightly meals of &+rflesh&N and &+Wbone&N.
 ~
-72 1 0 33587208 1024 0 33554432 -500 S
-U 0 1 -1
+72 1 0 0 33587208 1024 0 33554432 -500 S
+U 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -130,8 +130,8 @@ the wraith of a &+Bwandering &+Lb&+bar&+Ld~
    The wraith no longer has a material form.He is wearing a tattered &+Lblack&N robe
 which hides all but the &+Ldarkness&N of his face and the &+Cglimmer&N in his eyes.
 ~
-1073741896 1 0 134324256 8222 0 101711872 -650 S
-U 0 32768 -1
+1073741896 1 0 0 134324256 8222 0 101711872 -650 S
+U 0 32768 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -144,8 +144,8 @@ old thri-kreen adventurer~
 &+Ghopes he doesn't get killed in the pr&+Yocess. He carries only essential
 &+Gexploration gear; if there is anythin&+Yg down here, he probably won't last long.
 ~
-2124 0 203423759 8240 0 0 0 600 S
-TK 0 1 -1
+2124 0 203423759 0 8240 0 0 0 600 S
+TK 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -158,8 +158,8 @@ An &+Cair elemental&N roams free through the tunnels of &+yMaze&N.
 behind it seem to waver and are slightly blurred. Many an adventurer has lost
 their lives to the &+Lghostly &+Cair elemental&N.
 ~
-1073741896 1 0 8 30 1048640 303038464 -800 S
-EA 0 1 2
+1073741896 1 0 0 8 30 1048640 303038464 -800 S
+EA 0 1 0 2
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -170,8 +170,8 @@ An emaciated adventurer is here looking lost and hopeless.
 ~
 He looks haggard and sickly; no doubt he's been lost here for quite some time.
 ~
-76 0 201326607 587202600 12480 0 0 550 S
-PF 0 0 -1
+76 0 201326607 0 587202600 12480 0 0 550 S
+PF 0 0 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -185,8 +185,8 @@ final rest, however, and now guards the mines tirelessly as a skeleton.
 Seems like the warrior could not stop fighting even in death. It fights amongst
 each other and flail at any living being that would wander near.
 ~
-1073743944 1 0 234979644 8222 0 118489096 -850 S
-U 0 1 -1
+1073743944 1 0 0 234979644 8222 0 118489096 -850 S
+U 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -199,8 +199,8 @@ the &+Wgh&No&+Wst&N of &+Rma&+rss&+Rac&+rre&+Rd &+YCwoczek's&N enemy~
 &+Wlike he took a nasty fall. His one &+Rdamaged &+Weye hangs on its own. He smiles
 &+Winsanely at you thru a &+Rbroken &+Wjaw and missing teeth.
 ~
-1073743880 0 0 939630648 4208863 1048576 33554432 -650 S
-EF 0 131072 2
+1073743880 0 0 0 939630648 4208863 1048576 33554432 -650 S
+EF 0 131072 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -213,8 +213,8 @@ a &+Lgiant&N undead &+mworm~
 &+mthis beast is strong and hardy and looking for something to eat. Many
 &+man adventurer has lost their lives to the &+Lgiant&N undead &+mworm.
 ~
-1073760328 1 0 369721780 2078 32 118489098 -500 S
-U 0 1 6
+1073760328 1 0 0 369721780 2078 32 118489098 -500 S
+U 0 1 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -230,8 +230,8 @@ kalroh alchemist~
 &+LKalroh&N says 'Damn! I need a &+Lpile&N of &+ydust&N to make my new mixture!
              Bring me it, please. I'll pay...'
 ~
-2122 0 0 2432698376 29 0 68157440 -700 S
-SH 0 524288 3
+2122 0 0 0 2432698376 29 0 68157440 -700 S
+SH 0 524288 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -245,8 +245,8 @@ lich priest general~
 &+cHe is a creature to be reckoned with, and unless the gods are in your favor
 &+che will probably kill you.
 ~
-1140852744 0 0 939630776 14559 0 34603008 -600 S
-UL 0 16777216 4
+1140852744 0 0 0 939630776 14559 0 34603008 -600 S
+UL 0 16777216 0 4
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -259,8 +259,8 @@ the &+Lghostly &+Willusion &+Lof Tiamat~
 &+Ldragon. It appears to emerge from the mist. You feel the cold radiating
 &+Lfrom its form as it draws nearer..
 ~
-1073743880 0 0 805414952 8403167 0 34603008 -1000 S
-EA 0 2 6
+1073743880 0 0 0 805414952 8403167 0 34603008 -1000 S
+EA 0 2 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -276,8 +276,8 @@ emissary nightcrawler crawler~
 &+Lsmiles not at all because it has no face, only a suggestive blackness where
 &+La face ought to be.
 ~
-1083181064 1 0 2147483704 2111618 4194368 67108864 -1000 S
-EW 0 33554432 3
+1083181064 1 0 0 2147483704 2111618 4194368 67108864 -1000 S
+EW 0 33554432 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -292,8 +292,8 @@ a &+Wso&Nul&+Lless &+yMaze&+Lguardian~
 &+rlimbs. A &+ggreen &+rand red blotched skin gives its a diseased and decaying look.
 &+rThey somewhat resemble &+Lshadows &+ror &+gghasts&+r.
 ~
-2122 0 0 536870920 0 0 0 0 S
-EF 0 1 2
+2122 0 0 0 536870920 0 0 0 0 S
+EF 0 1 0 2
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 0
@@ -308,8 +308,8 @@ a &+Wso&Nul&+Lless &+yMaze&+Lguardian~
 &+rlimbs. A &+ggreen &+rand red blotched skin gives its a diseased and decaying look.
 &+rThey somewhat resemble &+Lshadows &+ror &+gghasts&+r.
 ~
-2122 0 0 536870924 0 0 0 0 S
-EF 0 1 2
+2122 0 0 0 536870924 0 0 0 0 S
+EF 0 1 0 2
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 0
@@ -324,8 +324,8 @@ a &+Wso&Nul&+Lless &+yMaze&+Lguardian~
 &+rlimbs. A &+ggreen &+rand red blotched skin gives its a diseased and decaying look.
 &+rThey somewhat resemble &+Lshadows &+ror &+gghasts&+r.
 ~
-2122 0 0 536870920 0 0 0 0 S
-EF 0 1 2
+2122 0 0 0 536870920 0 0 0 0 S
+EF 0 1 0 2
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 0
@@ -338,8 +338,8 @@ a &+Lshady &+yMaze&+Lwatcher~
 &+Rfrom the shoulders. A prehensile tail serves as the creature's 5th arm, and it
 &+Rhas fan-like wings attached to their shoulders.
 ~
-2122 0 0 0 0 0 0 900 S
-EF 0 0 -1
+2122 0 0 0 0 0 0 0 900 S
+EF 0 0 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -352,8 +352,8 @@ a &+Lshady &+yMaze&+Lwatcher~
 &+Rfrom the shoulders. A prehensile tail serves as the creature's 5th arm, and it
 &+Rhas fan-like wings attached to their shoulders.
 ~
-2122 0 0 32768 0 0 0 900 S
-EF 0 0 -1
+2122 0 0 0 32768 0 0 0 900 S
+EF 0 0 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -366,8 +366,8 @@ a &+Lshady &+yMaze&+Lwatcher~
 &+Rfrom the shoulders. A prehensile tail serves as the creature's 5th arm, and it
 &+Rhas fan-like wings attached to their shoulders.
 ~
-2122 0 0 67141688 1053 0 0 900 S
-EF 0 0 -1
+2122 0 0 0 67141688 1053 0 0 900 S
+EF 0 0 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -380,8 +380,8 @@ An &+Winsubstantial&N soul wanders here mindlessly.
 &+Wtorture. This unfortunate being has had its very soul torn from its body.
 &+WIt now roams mindlessly, unaware of its surroundings.
 ~
-2060 0 0 34603264 2 0 33558530 0 S
-UG 0 0 2
+2060 0 0 0 34603264 2 0 33558530 0 S
+UG 0 0 0 2
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -395,8 +395,8 @@ An &+Winsubstantial&N soul wanders here mindlessly.
 &+WIt now roams mindlessly, unaware of its surroundings. It screams out at you
 &+Win pain and terror.
 ~
-2060 0 0 437289252 1054 0 50335746 0 S
-UG 0 0 2
+2060 0 0 0 437289252 1054 0 50335746 0 S
+UG 0 0 0 2
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -409,8 +409,8 @@ An &+Winsubstantial&N soul wanders here mindlessly.
 &+Wmake out features that would identify it as the person it was in life.
 &+WIt screams out at you in pain and terror.
 ~
-2060 0 0 454132020 1054 0 117444618 0 S
-UG 0 0 2
+2060 0 0 0 454132020 1054 0 117444618 0 S
+UG 0 0 0 2
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -422,8 +422,8 @@ a pair of &+rdisembodied &+Lhands~
   &+LThe hands twitch with anticipation of strangling someone. The stench of
 &+Lthe gore covered limb makes you want to retch.
 ~
-20554 1 0 67141632 1024 0 0 -250 S
-UG 0 0 2
+20554 1 0 0 67141632 1024 0 0 -250 S
+UG 0 0 0 2
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -435,8 +435,8 @@ a pair of &+Rdisembodied &+Larms~
   &+cThe &+rbloody &+carms of some poor luckless indivudual. The stench of the gore
 &+ccovered limb makes you want to retch.
 ~
-20554 1 0 67108864 1024 0 0 -200 S
-UG 0 0 2
+20554 1 0 0 67108864 1024 0 0 -200 S
+UG 0 0 0 2
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -449,8 +449,8 @@ dweller creature~
 &+gIt has a bird's beak, huge &+Wwhite &+geyes, a furry body, and long clawed hands
 &+gand feet.
 ~
-67110988 1 0 67108900 1024 128 0 -800 S
-AC 0 4096 2
+67110988 1 0 0 67108900 1024 128 0 -800 S
+AC 0 4096 0 2
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -463,8 +463,8 @@ gargoyle guard sand elite~
 &+LIt has stone scales over its four-legged reptilian body, with sharp claws
 &+Land piercing tail. It is disturbed by your intrusion.
 ~
-67110988 1 0 67215548 30 0 1048578 -500 S
-MG 0 1 5
+67110988 1 0 0 67215548 30 0 1048578 -500 S
+MG 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -479,8 +479,8 @@ a &+Lmutated &+glizardman &+Lthief~
 &+gspeed on almost any surface if it wasn't so immensely fat. Its large, bulbous
 &+geyes stare &+Lback&+g.
 ~
-67110988 1 0 134250556 30 18350080 34603008 -750 S
-R 0 65536 4
+67110988 1 0 0 134250556 30 18350080 34603008 -750 S
+R 0 65536 0 4
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -497,8 +497,8 @@ fallen into &+Lutter &+gdecay&N. His once cheery face has turned into a &+ccrude
 as you can feel that his soul isn't at ease. His right hand is shattered and
 burned with a fire and his &+Yfingers&N are cut off.
 ~
-1140852810 0 0 536870936 14530 1048576 603983872 -790 S
-UV 0 33554432 3
+1140852810 0 0 0 536870936 14530 1048576 603983872 -790 S
+UV 0 33554432 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -511,8 +511,8 @@ a &+Ldeadly &+ysand&+gplant~
 &+Lhidden&+y. No one is really sure what the sandplant looks like, but it is
 &+ya dangerous foe.
 ~
-20554 1 0 286294076 4098 5242880 1048576 -450 S
-EE 0 1 2
+20554 1 0 0 286294076 4098 5242880 1048576 -450 S
+EE 0 1 0 2
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -526,8 +526,8 @@ strange, &+Ldark &+Bmagic&N is keeping this zombie in some kind of lifeless exis
 This monster has rotting bits of &+rflesh&N attached to its bones. It carries
 a &+yrusty&N shield and sword.
 ~
-1073743880 1 0 134217728 2 0 0 -1000 S
-U 0 1 -1
+1073743880 1 0 0 134217728 2 0 0 -1000 S
+U 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -539,8 +539,8 @@ A fading &+Wspectre&N hides here while sharpening its teeth.
   The spectre is animated from some nearby invisible matter. It has a terrible
 face... and its whole body is filthy... and its claws are sharp and disgusting.
 ~
-1073743884 1 0 134217728 30 5242912 117444616 -1000 S
-U 0 8192 -1
+1073743884 1 0 0 134217728 30 5242912 117444616 -1000 S
+U 0 8192 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -553,8 +553,8 @@ bone dragon~
 &+wbody. Numerous holes in its heavy &+Wbone &+gwings tell of many fights as does
 &+wthe nicks in the horns on its head. It smells as disgusting as only dragons do.
 ~
-1074268234 1 0 671088792 12482 0 67108864 -1000 S
-UD 0 1 6
+1074268234 1 0 0 671088792 12482 0 67108864 -1000 S
+UD 0 1 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 0
@@ -568,8 +568,8 @@ a &+Lblank&N-faced zombie~
 &+clooking at it the hair on your arms raises. It looks mighty tough to be just
 &+ca minor minion.
 ~
-1073743944 1 0 134217728 2 0 67108866 -1000 S
-U 0 1 -1
+1073743944 1 0 0 134217728 2 0 67108866 -1000 S
+U 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -584,8 +584,8 @@ conservator creature~
 &+mwhere a head would ordinarily be. This being sometimes walk on all its
 &+mlegs and sometimes on the hind pair only.
 ~
-1140856904 1 0 671088640 12418 16777216 268435456 -450 S
-PO 0 1024 3
+1140856904 1 0 0 671088640 12418 16777216 268435456 -450 S
+PO 0 1024 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -598,8 +598,8 @@ A small &+Ydwarven &+Wspirit&N roams the mine tunnels.
 &+WThe soul of some unfortunate &+Ydwarf &+Wnow has to fly aimlessly through this
 &+Wchamber of eternal pain.
 ~
-1073743944 1 0 134217736 2 0 2 -800 S
-UG 0 1 2
+1073743944 1 0 0 134217736 2 0 2 -800 S
+UG 0 1 0 2
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -616,8 +616,8 @@ krugor assistant~
 &+LKrugor &+ysays 'Damn! I need a &+Lpile&N of &+ydust&N to make my new mixture!
              Bring me it, please. I'll pay...'
 ~
-2122 0 0 2432698376 29 0 68157440 -700 S
-SH 0 1 3
+2122 0 0 0 2432698376 29 0 68157440 -700 S
+SH 0 1 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

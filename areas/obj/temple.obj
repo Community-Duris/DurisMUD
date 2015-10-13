@@ -3,7 +3,7 @@ gem cage soul~
 &+CThe s&+coul o&+Bf Ill&+byn~
 &+cLying here is a palm-sized, gem-like cage of some sort.~
 ~
-12 1 10 1 15 100 42173441 16385 66 100794424 0
+12 1 10 1 15 100 42173441 16385 32834 100794424 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -146,7 +146,7 @@ locket golden~
 &+Ya golden locket~
 &+Ya golden locket lies on the floor here, reflecting the light it meets.~
 ~
-15 24 3 5 12 0 8392704 5 2 0 0
+15 24 3 5 12 0 8392704 5 32770 0 0
 4 5 0 4 0 0 0 0
 5 8765 100
 E
@@ -175,7 +175,7 @@ dagger well~
 &+La we&+gll&+G-cra&+gfted&+L dagger~
 &+LA nice dagger lay here on the floor.~
 ~
-5 36 2 2 13 45 0 8193 64 0 0
+5 36 2 2 13 45 0 8193 32832 0 0
 2 2 5 11 1 0 0 0
 4 99345 100
 E
@@ -369,7 +369,7 @@ yellow dagger~
 &+Ya yellow dagger~
 &+YA yellow dagger lay here on the floor.~
 ~
-5 24 2 3 8 0 173072 8193 0 12288 0
+5 24 2 3 8 0 173072 8193 32768 12288 0
 2 2 4 11 0 0 0 0
 2 1234 100
 E
@@ -401,7 +401,7 @@ green token coin~
 &+Ga green token~
 &+GA small green coin shaped object lies on the ground here.~
 ~
-8 32 2 1 9 0 0 1 0 0 0
+8 32 2 1 9 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 25000 100
 E
@@ -414,7 +414,7 @@ wooden sword blue~
 &+Ba blue wooden sword~
 &+BA wooden sword is here on the ground.~
 ~
-5 6 3 16 7 0 4195328 8193 0 85458945 0
+5 6 3 16 7 0 4195328 8193 32768 85458945 0
 13 3 5 3 0 0 0 0
 12 2345 100
 E
@@ -579,7 +579,7 @@ ring wedding band~
 &+Ya wedding band~
 &+YA tiny gold ring is on the floor here.~
 ~
-9 24 3 0 7 0 8388608 3 0 0 0
+9 24 3 0 7 0 8388608 3 32768 0 0
 5 1 0 1 0 0 0 0
 0 2534 100
 E
@@ -601,7 +601,7 @@ hammer stonecrusher~
 &+La stonecrusher~
 &+LA very big hammer lay forgotten here.~
 ~
-5 37 3 50 3 0 4239360 8193 0 0 0
+5 37 3 50 3 0 4239360 8193 32768 0 0
 4 4 8 6 0 0 0 0
 70 123 100
 E

@@ -431,7 +431,7 @@ badge~
 &+ra badge of &+Lgloo&+rmhav&+Len&n~
 &+yA small badge lies discarded on the ground.&n~
 ~
-13 3 3 0 7 0 8 2097153 64 0 0
+13 3 3 0 7 0 8 2097153 32832 0 0
 0 0 0 0 0 0 0 0
 0 99999 100
 E
@@ -655,7 +655,7 @@ band silver~
 &+La &+csilver &+Lband of Torm the true&n~
 &+cA thick silver band has been dropped on the ground.&n~
 ~
-9 15 3 0 7 0 4128 3 1 0 0
+9 15 3 0 7 0 4128 3 32769 0 0
 5 0 0 3 0 0 0 0
 0 8954 100
 E

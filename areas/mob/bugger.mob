@@ -9,8 +9,8 @@ bugger sentinel~
 &+gwhen any amount of light reflect off of them. It's abdomen seems to be slightly
 &+gdamp when &+Ylight &+Wreflects&N &+goff of its&N &+rred &+gand &+ggreen &+gexoskeleton.&N
 ~
-2122 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+2122 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -25,8 +25,8 @@ bugger sentinel~
 &+gthe same rainbow tint as the rest of the buggers. and its two front legs are
 &+gheld in the mantis position, they have a very sharp serated edge to them.&N
 ~
-2122 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+2122 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -42,8 +42,8 @@ bugger queen~
 &+gthan the other bu&+Rgge&+grs abdomens because she carries many &+Weggs.&+g She looks very
 &+Gagitated&+g for some reason.
 ~
-10314 0 0 0 0 0 0 -800 S
-TK 0 1 -1
+10314 0 0 0 0 0 0 0 -800 S
+TK 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -56,8 +56,8 @@ larvae~
 &+gand two large round &+Rred&+g eyes. It almost looks like a grub bout about ten times
 &+gBigger&N.
 ~
-72 0 0 0 0 0 0 -600 S
-i 0 1 -1
+72 0 0 0 0 0 0 0 -600 S
+i 0 1 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -70,8 +70,8 @@ a &+wpupa&N~
 &+gvomit. It looks just like a miniture bug&+rger &+gbut it hasnt reached its caccoon
 &+gphase yet.&N
 ~
-72 0 0 0 0 0 0 -600 S
-I 0 1 -1
+72 0 0 0 0 0 0 0 -600 S
+I 0 1 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -85,8 +85,8 @@ adult bugger baby~
 &+gis however about half the size of a full grown adult and will reach full
 &+gmaturity in about a year or so.&N
 ~
-72 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+72 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -100,8 +100,8 @@ bugger attendant~
 &+gtop of thier head that will release the sticky substance that covers the holes
 &+gon some of the brooding holes.&n
 ~
-2122 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+2122 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -115,8 +115,8 @@ bugger attendant~
 &+gshades of metalic collers. It's goo organ must have been recently used becuase
 &+gof the small strand of slime hanging from it.&N
 ~
-74 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+74 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -130,8 +130,8 @@ bugger attendant~
 &+gholds food in it. It has specialy designed claws that are narrow enough to
 &+gfit into the brooding holes.&N
 ~
-74 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+74 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -145,8 +145,8 @@ bugger attendant~
 &+gsome strange &+mviolet&+g streaks in it, this must designate her as one of
 &+gthe few buggers that can work with the Queens eggs.&N
 ~
-74 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+74 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -159,8 +159,8 @@ spotted fungus~
 &+Mnaturaly. It is purple with lots of little &+Bblue &+Mspots, it has got a very large
 &+Mhead with a long thick shaft.&N
 ~
-2122 0 0 0 0 0 0 -600 S
-AP 0 1 -1
+2122 0 0 0 0 0 0 0 -600 S
+AP 0 1 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -174,8 +174,8 @@ a &+rbug&+Gger&+g caretaker is here tending over the colonies storage room.&N
 &+gthe caretaker keeps the storage chamber clean and tidy. The caretaker is also
 &+gin charge of rationing the food in times of shortages and population booms.&N
 ~
-2122 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+2122 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -191,8 +191,8 @@ digging bugger~
 &+gdigging. This bugger stands about four feet tall and has a redish color to its
 &+gskin.&N
 ~
-2122 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+2122 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -206,8 +206,8 @@ a &+gbug&+Rger&N~
 &+gskin refects all the light that hits it but it is hard to make out in this
 &+gdark place.&N
 ~
-2122 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+2122 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -221,8 +221,8 @@ a &+rb&+Ru&+rg&+Gg&+ge&+Gr&N~
 &+gthat are probabaly a design of evolution. It carries the dirt and stones in
 &+gits front scopes. Its exo-skeleton has many scrapes and scratches on it.&N
 ~
-2120 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+2120 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -237,8 +237,8 @@ bugger drone~
 &+ghave no other purposes in the colony some are often used as a found source when
 &+gfood runs low.&N
 ~
-67110984 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+67110984 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -252,8 +252,8 @@ bugger servant~
 &+glaid &+Weggs&N.  Its skin is a light green color and it has a little symbol
 &+gon its forehead that designates it as a queens servant.&N
 ~
-2122 0 0 0 0 0 0 -600 S
-TK 0 1 -1
+2122 0 0 0 0 0 0 0 -600 S
+TK 0 1 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -266,8 +266,8 @@ wriggling pupa~
 &+gvomit. It looks just like a miniture bug&+rger &+gbut it hasnt reached its caccoon
 &+gphase yet.&N
 ~
-74 0 0 0 0 0 0 -600 S
-I 0 1 -1
+74 0 0 0 0 0 0 0 -600 S
+I 0 1 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -280,8 +280,8 @@ grotesque larvae~
 &+gand two large round &+Rred&+g eyes. It almost looks like a grub bout about ten times
 &+gBigger&N.
 ~
-74 0 0 0 0 0 0 -600 S
-i 0 1 -1
+74 0 0 0 0 0 0 0 -600 S
+i 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -295,8 +295,8 @@ bugger slime matron~
 &+Lbugger attendants are equipped with.  Rather this matron bugger is covered
 &+Lwith large black pores that ooze out a thick green slime.
 ~
-74 0 0 0 0 0 0 -650 S
-i 0 1 2
+74 0 0 0 0 0 0 0 -650 S
+i 0 1 0 2
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -309,8 +309,8 @@ spotted fungus~
 &+Mnaturaly. It is purple with lots of little &+Bblue &+Mspots, it has got a very large
 &+Mhead with a long thick shaft.&N
 ~
-2122 0 0 0 0 0 0 -600 S
-AP 0 1 -1
+2122 0 0 0 0 0 0 0 -600 S
+AP 0 1 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -324,8 +324,8 @@ six=legged six insect~
 &+Lhesitation.  Beads, shiny eyes stare outwards from two stalks coming
 &+Lfrom the hard carapace of this insect.
 ~
-72 0 0 0 0 0 0 0 S
-i 0 1 -1
+72 0 0 0 0 0 0 0 0 S
+i 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

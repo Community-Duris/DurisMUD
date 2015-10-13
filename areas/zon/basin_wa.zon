@@ -2,7 +2,7 @@
 The Basin Wastes~
 34199 2 0 0 10 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 *
@@ -62,7 +62,7 @@ E 1 34000 10 5 100 0 0 0           *   a bombardier beetle shell
 M 0 34007 12 34051 100 0 0 0       * a giant lizard
 M 0 34005 11 34052 100 0 0 0       * a stag beetle
 M 0 34008 12 34052 100 0 0 0       * a minotaur lizard
-G 1 34030 1 0 100 0 0 0            *    an elixer of dark magic
+G 1 34030 1 0 100 0 0 0            *    an elixir of dark magic
 M 0 34013 1 34052 100 0 0 0        * an old witch
 E 1 34029 1 18 100 0 0 0           *   a gnarled wooden staff
 M 0 34000 13 34053 100 0 0 0       * a death watch beetle

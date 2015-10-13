@@ -9,8 +9,8 @@ teeth are what the zombie lord uses to rip apart prey. Deep black eyes
 stare at your soul. The zombie lord wears the clothes of a noble, now
 ripped to shreds and filthy.
 ~
-33556555 1 0 65560 0 0 0 -1000 S
-U 0 1 -1
+33556555 1 0 0 65560 0 0 0 -1000 S
+U 0 1 0 -1
 56 -5 -107 54d131+4590 7d6+30
 0.0.0.0 218700
 8 8 0
@@ -24,8 +24,8 @@ with pale blue flesh rotting away. Large black, sightless eyes look
 around for some prey. The zombie wears the clothes of a commoner, all
 tattered and filthy from the dirt.
 ~
-33554504 1 0 65536 0 0 0 -1000 S
-U 0 1 -1
+33554504 1 0 0 65536 0 0 0 -1000 S
+U 0 1 0 -1
 51 6 0 31d83+527 4d6+7
 0.0.0.0 40176
 8 8 0
@@ -41,8 +41,8 @@ form of clothing except perhaps some old filthy, torn up pair of pants. The
 greater zombie has large deep sightless eyes, and it seems to be searching
 for some fresh flesh.
 ~
-33554504 1 0 65560 0 0 0 -1000 S
-U 0 1 -1
+33554504 1 0 0 65560 0 0 0 -1000 S
+U 0 1 0 -1
 55 2 -28 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -57,8 +57,8 @@ bones. The skeletal knight wears the armor of a great knight, now dented
 and tarnished from time and filthy from dirt. It has no eyes but instead
 within the eye sockets are glowing balls of red light.
 ~
-33556558 1 0 33554640 0 0 0 -1000 S
-U 0 512 -1
+33556558 1 0 0 33554640 0 0 0 -1000 S
+U 0 512 0 -1
 56 -3 -78 48d80+2544 6d6+25
 0.0.0.0 116640
 8 8 0
@@ -73,8 +73,8 @@ sections with a large middle section being the main body. Unlike common
 worms this massive worm has a very large gaping maw with several very
 sharp teeth all lined in rows.
 ~
-33556548 1 0 33554528 0 0 0 -1000 S
-A 0 1 -1
+33556548 1 0 0 33554528 0 0 0 -1000 S
+A 0 1 0 -1
 45 2 -21 38d95+874 4d7+10
 0.0.0.0 49248
 8 8 0

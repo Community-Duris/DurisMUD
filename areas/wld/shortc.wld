@@ -7,7 +7,7 @@
 &+g The path itself looks rather dull and not interessing at all.
 &+gWest from here, the path joins wider road.
 ~
-1 33554432 2
+532 33554432 2
 D1
 ~
 ~
@@ -38,7 +38,7 @@ S
 &+gobsidian mines. There are many fresh footprints in the mud here, meaning a new
 &+gtransport of slaves has just arrived.
 ~
-1 33554432 2
+532 33554432 2
 D1
 ~
 ~
@@ -71,7 +71,7 @@ S
 &+yobsidian mines, starts just west from here.
 &+yThere's a small well in the center of the square.
 ~
-1 33554432 2
+532 33554432 2
 D0
 ~
 ~
@@ -101,7 +101,7 @@ S
 &+yClosed wooden doors smeared with tar block the sight inside their rooms.
 &+yThe central square of the encampement lies just south from here.
 ~
-1 33558528 2
+532 33558528 2
 D1
 ~
 door~
@@ -122,7 +122,7 @@ S
 &+yare to the east. Closed wooden doors block the sigh inside their rooms.
 &+yThe central square of the encampement lies just north from here.
 ~
-1 33558528 2
+532 33558528 2
 D0
 ~
 ~
@@ -145,7 +145,7 @@ A Slave Pen~
 &+LThe floor is a raw soil, with a heap of rotting hay thrown over it.
 &+LThere are wooden doors leading east from this room.
 ~
-1 33558528 0
+532 33558528 0
 D1
 ~
 door~
@@ -159,7 +159,7 @@ A Slave Pen~
 &+Lslaves with other. The floor is a raw soil, with a heap of rotting hay
 &+Lthrown over it. There are wooden doors leading west away from this room.
 ~
-1 33558528 0
+532 33558528 0
 D3
 ~
 door~
@@ -173,7 +173,7 @@ A Slave Pen~
 &+LThe floor is a raw soil, with a heap of rotting hay thrown over it.
 &+LThere are wooden doors leading east from this room.
 ~
-1 33558528 0
+532 33558528 0
 D1
 ~
 door~
@@ -187,7 +187,7 @@ A Slave Pen~
 &+Lother ends. The floor is a raw soil, with a heap of rotting hay thrown over it.
 &+LThere are wooden doors leading west.
 ~
-1 33558528 0
+532 33558528 0
 D3
 ~
 door~
@@ -204,7 +204,7 @@ S
 &+ylies just west from here, while a small wooden door is visible in the east
 &+ywall.
 ~
-1 33558528 2
+532 33558528 2
 D0
 ~
 door~
@@ -231,7 +231,7 @@ A Slave Pen~
 &+Lother ends. The floor is a raw soil, with a heap of rotting hay thrown over it.
 &+LThere are wooden doors leading south.
 ~
-1 33558528 0
+532 33558528 0
 D2
 ~
 door~
@@ -245,7 +245,7 @@ A Slave Pen~
 &+Lother ends. The floor is a raw soil, with a heap of rotting hay thrown over it.
 &+LThere are wooden doors leading north.
 ~
-1 33558528 0
+532 33558528 0
 D0
 ~
 door~
@@ -259,7 +259,7 @@ S
 &+Labove, but there's no ladder leading to it. Whover once gets thrown in here,
 &+Lwill starve to death.
 ~
-1 266241 0
+532 266241 0
 D4
 ~
 trapdoor~
@@ -273,7 +273,7 @@ S
 &+rblodstained and there are pieces of torn clothing and smashed bones&+y scattered
 &+yall around here.
 ~
-1 33558528 2
+532 33558528 2
 D3
 ~
 door~

@@ -9,8 +9,8 @@ to all that wish to learn. He wears only simple dark pants, and carries a
 small pack, indicating that he has left his family to travel on his own. He
 walks with a great purpose, his stride never slowing.
 ~
-1073743884 0 0 0 0 0 0 351 S
-PH 0 1 -1
+1073743884 0 0 0 0 0 0 0 351 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -23,8 +23,8 @@ A team of four draft horses are tethered together. Although this limits their
 mobility, it means that a threat to one immediately becomes a threat to all
 four. They are skittish and alarmed, and do not react to strangers well.
 ~
-2122 0 0 0 0 0 0 0 S
-AE 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+AE 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -39,8 +39,8 @@ taught. Though no more than five years of age, this boy moves as if a
 hardened hunter, stalking a cricket and whacking at it with amazing
 precision.
 ~
-72 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+72 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -54,8 +54,8 @@ style of the Cimmerians has most definitely had an effect on his lethality.
 He practices wondrous spinning kicks that, were they thrown against a live
 opponent, might well take a head off!
 ~
-2120 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -70,8 +70,8 @@ practices chain-punching, any series of which would send the average man
 reeling. Her long black ponytail swings jauntily as she weaves from side to
 side, punishing the air.
 ~
-2120 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -86,8 +86,8 @@ continuing her studies. She is already in her mid-twenties and is concen-
 trating her energies on finding a strapping male warrior with whom to make
 a horde of babies.
 ~
-2120 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -101,8 +101,8 @@ basics of the Cimmerian fighting style. He is contemplating what comes
 next: the Master's Path, the process by which a Cimmerian warrior learns
 skills and techniques no ordinary fighter can ever hope to acquire.
 ~
-1073752136 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+1073752136 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -116,8 +116,8 @@ basics of the Cimmerian martial arts and given several children to the
 tribe. Now, she has begun her journey down the Master's Path, seeking both
 enlightenment, and also just something to do when the chores are finished.
 ~
-2120 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 2
@@ -131,8 +131,8 @@ the basics of the Cimmerian arts, and has also made some progress along the
 Master's Path, making him a very dangerous opponent indeed. He has been
 walking about the camp on his hands for some time now, and is not tired...
 ~
-2120 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -146,8 +146,8 @@ dozen "normal" warriors alone and unarmed. His practice and exercise, now,
 lie within, so he appears to simply be wandering about the camp, when in
 fact he is concentrating ferociously on one of his final lessons.
 ~
-1073743944 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+1073743944 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -162,8 +162,8 @@ deadliest fighters on the planet. He is aged and wizened, but he can
 harness magical energies and focus them into a single punch that would
 kill a young dragon, or your average frost giant.
 ~
-1073743944 0 0 16 0 67108864 0 -1 S
-PH 0 1 -1
+1073743944 0 0 0 16 0 67108864 0 -1 S
+PH 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -178,8 +178,8 @@ what seems to be several broken ribs. Being from such a hardy people, he'll
 probably need less than half the time a normal man does to get back up to
 speed.
 ~
-10314 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+10314 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 8 1
@@ -194,8 +194,8 @@ duties. Although there are certainly a good number of babies born to members
 of this camp each year, stumbling upon a woman in the infirmary is actually
 quite unusual.
 ~
-10314 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+10314 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 2
@@ -211,8 +211,8 @@ burden, if for no other reason than that he spends very little time in the
 capricious Basternae outdoors, where it might snow one minute and burn the
 next.
 ~
-10314 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+10314 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -226,8 +226,8 @@ nomads. He seems to be having some troubled times, though, based on the
 fact that he recently drank himself into unconsciousness. Perhaps some-
 thing about his work is bothering him.
 ~
-2058 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 1
@@ -240,8 +240,8 @@ This piteous creature has been bound by evil magicks, and tries in vain to
 break free. It is tree-like, and resembles a treant in some ways, but also
 an earth elemental in others.
 ~
-10314 0 0 536871080 12480 0 0 0 S
-VT 0 128 -1
+10314 0 0 0 536871080 12480 0 0 0 S
+VT 0 128 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -255,8 +255,8 @@ almost to come to a point, marking him as having some Orcish blood in him.
 His shamanic powers are enormous, and he fairly radiates the power of the
 dark priest.
 ~
-1073743946 0 0 56 0 0 0 -1000 S
-H2 0 256 -1
+1073743946 0 0 0 56 0 0 0 -1000 S
+H2 0 256 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 1
@@ -271,8 +271,8 @@ metals, and seems to be imbuing them sith some unnatural power: first one,
 then another glows with a strange greenish light. He is virtually unaware
 of his surroundings, so intent is he on his work.
 ~
-1073743946 0 0 16 0 0 0 -1000 S
-H2 0 2048 -1
+1073743946 0 0 0 16 0 0 0 -1000 S
+H2 0 2048 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -287,8 +287,8 @@ of elemental, perhaps? It is made of the same material that forms the walls
 of this room, and indeed seems to be melded with the walls in some way,
 making it impossible for this creature to leave the wagon.
 ~
-26698 0 0 73912 276703 0 0 0 S
-VT 0 1 -1
+26698 0 0 0 73912 276703 0 0 0 S
+VT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -304,8 +304,8 @@ Master's Path and become a respected member of the Cimmerian community along
 the way. She is often found primping, but this does not make her any less
 dangerous an opponent.
 ~
-1073752138 0 0 16 0 0 0 -1 S
-P2 0 64 -1
+1073752138 0 0 0 16 0 0 0 -1 S
+P2 0 64 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 2
@@ -322,8 +322,8 @@ immortal blood would go a long way towards explaining Septimus' unearthly
 fighting skills. He paces worriedly about the cramped wagon, muttering to
 himself garbled phrases concerning what happens next and 'the future'.
 ~
-1073752074 0 0 144 2050 67108864 0 -1 S
-PH 0 64 -1
+1073752074 0 0 0 144 2050 67108864 0 -1 S
+PH 0 64 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

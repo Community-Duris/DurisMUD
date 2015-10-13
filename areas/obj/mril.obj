@@ -130,7 +130,7 @@ bone~
 &+Wa bone&n~
 &+WA bone lies here, discarded.&n~
 ~
-13 10 0 0 7 0 4096 16385 0 0 0
+13 10 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 10 100
 #33711
@@ -150,7 +150,7 @@ pouch~
 &+Ya luminescent pouch&n~
 A pouch lies here, &+Yglowing &nsoftly.~
 ~
-8 3 3 3 7 0 4096 16385 64 0 0
+8 3 3 3 7 0 4096 16385 32832 0 0
 0 0 0 0 0 0 0 0
 3 2000 100
 #33713
@@ -265,7 +265,7 @@ light orb~
 &+Wa light orb&n~
 &+WA glowing orb of light is here.&n~
 ~
-12 16 1 2 7 0 8654848 16385 0 0 0
+12 16 1 2 7 0 8654848 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 #33728

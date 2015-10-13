@@ -2,7 +2,7 @@
 &+LThe &+yMountain &+Lof the Banished&n~
 9166 1 0 40 50 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 9112 5 2 100 0 0 0
@@ -75,8 +75,8 @@ M 0 9103 4 9131 100 0 0 0          * the bloodied warangel
 M 0 9103 4 9132 100 0 0 0          * the bloodied warangel
 M 0 9103 4 9133 100 0 0 0          * the bloodied warangel
 M 0 9103 4 9134 100 0 0 0          * the bloodied warangel
-M 0 9106 2 9136 100 0 0 0          * the sentinal demon
-M 0 9106 2 9136 100 0 0 0          * the sentinal demon
+M 0 9106 2 9136 100 0 0 0          * the sentinel demon
+M 0 9106 2 9136 100 0 0 0          * the sentinel demon
 M 0 9107 1 9138 100 0 0 0          * the demonic torturer
 M 0 9108 1 9139 100 0 0 0          * the tortured mass of discards
 E 1 9133 1 7 100 0 0 0             *   the slimy skin of discards
@@ -87,8 +87,8 @@ E 1 9114 1 5 100 0 0 0             *   the hide of the apocalypse demon
 G 1 9117 1 0 100 0 0 0             *    the essence of Tolog
 G 1 359 1 0 100 0 0 0              *    (object type not in this .obj file)
 M 0 9127 1 9141 100 0 0 0          * the demonic advisor
-M 0 9111 2 9143 100 0 0 0          * the warangel sentinal
-M 0 9111 2 9143 100 0 0 0          * the warangel sentinal
+M 0 9111 2 9143 100 0 0 0          * the warangel sentinel
+M 0 9111 2 9143 100 0 0 0          * the warangel sentinel
 M 0 9112 1 9145 100 0 0 0          * the holy interrogator
 E 1 9110 1 10 100 0 0 0            *   some sleeves forged of malice
 M 0 9113 1 9146 100 0 0 0          * the burly seraphim

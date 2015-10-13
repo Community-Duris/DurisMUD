@@ -15,7 +15,7 @@ amethyst rune~
 the &+Mamethyst rune&N~
 A rune lies here emanating &+Mpurple&N light.~
 ~
-12 16 0 0 7 0 0 16385 64 0 0
+12 16 0 0 7 0 0 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 100 100
 #99003
@@ -23,7 +23,7 @@ sapphire rune sap~
 the &+Lsapphire rune&N~
 A rune lies here emanating &+Lblack&N light.~
 ~
-12 33 0 0 7 0 0 16385 64 0 0
+12 33 0 0 7 0 0 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 200 100
 #99004
@@ -31,7 +31,7 @@ diamond rune~
 the &+Wdiamond rune&N~
 A rune lies here emanating &+Wwhite&N light.~
 ~
-12 8 0 0 7 0 0 16385 64 0 0
+12 8 0 0 7 0 0 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 250 100
 #99005
@@ -39,7 +39,7 @@ ruby rune~
 the &+Rruby rune&N~
 A rune lies here emanating &+Rred&N light.~
 ~
-12 31 0 0 7 0 0 16385 64 0 0
+12 31 0 0 7 0 0 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 500 100
 #99006
@@ -47,7 +47,7 @@ emerald rune emer~
 the &+Gemerald rune&N~
 A rune lies here emanating &+Ggreen&N light.~
 ~
-12 32 0 0 7 0 0 16385 64 0 0
+12 32 0 0 7 0 0 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 205 100
 #99007

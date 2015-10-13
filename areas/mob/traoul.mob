@@ -7,8 +7,8 @@ hulking guard gate royal goblin~
 &+rreach this position in his life as a guard. Eyes always alert, weapon ready,
 &+rhe is ready to deal with any trouble that arises near him.&n
 ~
-67115078 1 0 33619968 0 0 0 -1000 S
-HG 0 1 -1
+67115078 1 0 0 33619968 0 0 0 -1000 S
+HG 0 1 0 -1
 24 11 23 24d47+240 3d5+3
 6.1.6.0 21384
 8 8 1
@@ -22,8 +22,8 @@ shady goblin~
 &+Lglaring red in the dim light, he watches everything warily, acting really
 &+Lanxious.&n
 ~
-1107298510 0 0 33554440 0 0 0 -1000 S
-HG 0 8192 -1
+1107298510 0 0 0 33554440 0 0 0 -1000 S
+HG 0 8192 0 -1
 27 8 13 27d55+297 3d6+4
 8.3.7.1 24057
 8 8 1
@@ -38,8 +38,8 @@ goblin huge evil warmaster~
 &+rhit. He trains the guard wannabes and the current militia with a cruel
 &+rhand.&n
 ~
-67110990 1 0 33562632 0 0 0 -1000 S
-HG 0 1 -1
+67110990 1 0 0 33562632 0 0 0 -1000 S
+HG 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -53,8 +53,8 @@ master servant~
 &+gmakes sure servants do their jobs and that no slaves escape the inner
 &+glair.&n
 ~
-33556682 0 0 33554456 0 0 0 -900 S
-HG 0 32 -1
+33556682 0 0 0 33554456 0 0 0 -900 S
+HG 0 32 0 -1
 24 11 23 24d44+216 3d5+3
 6.1.6.0 21384
 8 8 1
@@ -67,8 +67,8 @@ hulking guard gate royal goblin~
 &+rreach this position in his life as a guard. Eyes always alert, weapon ready,
 &+rhe is ready to deal with any trouble that arises near him.&n
 ~
-67115078 1 0 33619968 0 0 0 -1000 S
-HG 0 1 -1
+67115078 1 0 0 33619968 0 0 0 -1000 S
+HG 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -82,8 +82,8 @@ young guard trainee~
 &+ctrainee, but the energy will only last until the warmaster gets his
 &+chands on this one and shapes him into a killer guard.&n
 ~
-78 1 0 33554448 0 0 0 -500 S
-HG 0 16384 -1
+78 1 0 0 33554448 0 0 0 -500 S
+HG 0 16384 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -96,8 +96,8 @@ large spider~
 &+Lrelying on a web. Large fangs drip green venom as it looks around
 &+Lhungrily with its 8 eyes.&n
 ~
-1073743884 760 0 34078780 0 0 0 -900 S
-AS 0 0 -1
+1073743884 760 0 0 34078780 0 0 0 -900 S
+AS 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -111,8 +111,8 @@ guard trainee~
 &+Bwarmasters iron grip of training, he will soon be a fully trained and
 &+Badept guard.&n
 ~
-67110986 1 0 33554432 0 0 0 -700 S
-HG 0 0 -1
+67110986 1 0 0 33554432 0 0 0 -700 S
+HG 0 0 0 -1
 17 13 45 17d30+85 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -125,8 +125,8 @@ busy servant~
 &+mgoblin is used to running around, following orders and doing things for
 &+mthe king and master servant.&n
 ~
-2124 0 0 33554436 0 0 0 -700 S
-HG 0 16384 -1
+2124 0 0 0 33554436 0 0 0 -700 S
+HG 0 16384 0 -1
 21 11 32 21d47+210 3d5+3
 4.0.5.0 18711
 8 8 1
@@ -140,8 +140,8 @@ tired servant~
 &+bthe king and master servant. Right now he is pooped and taking a much
 &+bneeded nap.&n
 ~
-2124 0 0 33554436 0 0 0 -700 S
-HG 0 16384 -1
+2124 0 0 0 33554436 0 0 0 -700 S
+HG 0 16384 0 -1
 21 11 32 21d47+210 3d5+3
 4.0.5.0 18711
 4 4 1
@@ -154,8 +154,8 @@ patrol guard goblin~
 &+Lscans the area for trouble, walking around, making sure there isn't
 &+Lanyone here who would dare to defy King Traoul or his laws.&n
 ~
-67110984 1 0 33554436 0 0 0 -890 S
-HG 0 16384 -1
+67110984 1 0 0 33554436 0 0 0 -890 S
+HG 0 16384 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -168,8 +168,8 @@ elite guard king~
 &+cwielding wicked looking swords, these guards watch for any intruders who
 &+cdare trespass within these halls. He has a keen eye and a mean demeanor.&n
 ~
-67110990 56 0 0 2 0 0 -900 S
-HG 0 16 -1
+67110990 56 0 0 0 2 0 0 -900 S
+HG 0 16 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -183,8 +183,8 @@ cildabrin pet~
 &+yindeed. Charmed or controlled by King Traoul's magics, it serves and
 &+yprotects the cowardly goblin.&n
 ~
-1073743882 56 0 524348 2 0 0 -1000 S
-AS 0 1 -1
+1073743882 56 0 0 524348 2 0 0 -1000 S
+AS 0 1 0 -1
 29 8 7 29d65+377 3d6+4
 0.0.0.0 25839
 8 8 0
@@ -198,8 +198,8 @@ Traoul, this goblin is a pitiful sight. Barely fed and chained to the wall
 by a long length of steel rings, it is thin and gaunt, just strong enough
 to do the King's bidding.&n
 ~
-2254 0 0 33554432 0 0 0 -300 S
-HG 0 0 -1
+2254 0 0 0 33554432 0 0 0 -300 S
+HG 0 0 0 -1
 18 13 42 18d30+90 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -213,8 +213,8 @@ king traoul~
 &+Rcannot charm. Dressed regally, for a goblin, he sits upon his throne, giving
 &+Rout orders and making his subjects do what he wants.&n
 ~
-33556558 56 0 33628168 2 0 0 -1000 S
-HG 0 512 -1
+33556558 56 0 0 33628168 2 0 0 -1000 S
+HG 0 512 0 -1
 33 6 -5 33d56+495 4d6+7
 7.8.0.2 42768
 8 6 1

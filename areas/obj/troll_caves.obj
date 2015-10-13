@@ -89,7 +89,7 @@ stones obsidian~
 &+Lsmall obsidian stones&N~
 &+LA pile of small obsidian stones lie here.~
 ~
-8 36 0 0 7 0 0 1 0 0 0
+8 36 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 583 100
 E
@@ -102,7 +102,7 @@ rubies~
 &+rsome small rubies&N~
 &+rA small pile of rubies lie here.~
 ~
-8 31 0 0 7 0 4096 1 0 0 0
+8 31 0 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 20834 100
 E
@@ -144,7 +144,7 @@ emeralds~
 &+Gsome small emeralds&N~
 &+GA small pile of uncut emeralds lie here.~
 ~
-8 32 0 0 7 0 4096 1 0 0 0
+8 32 0 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 24053 100
 E
@@ -215,7 +215,7 @@ emerald mace~
 &+Gan emerald mace&N~
 &+GAn emerald mace lies here.~
 ~
-5 32 3 8 7 0 8192 8193 2 0 0
+5 32 3 8 7 0 8192 8193 32770 0 0
 6 1 6 7 0 0 0 0
 6 12912 100
 E
@@ -480,7 +480,7 @@ chalice gold~
 &+Ya gold chalice&n~
 &+YA golden chalice with strange symbols&n lies here.~
 ~
-17 24 0 0 7 0 1024 16385 2 33685920 0
+17 24 0 0 7 0 1024 16385 32770 33685920 0
 3 3 0 0 0 0 0 0
 1 1000 100
 E
@@ -516,7 +516,7 @@ emeralds~
 &+Gsome carefully cut emeralds&N~
 &+GA small pile of cut emeralds lie here.&n~
 ~
-8 32 0 0 7 0 4096 1 0 0 0
+8 32 0 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 84053 100
 E

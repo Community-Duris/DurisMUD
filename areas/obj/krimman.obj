@@ -804,7 +804,7 @@ staff~
 &+LEckraldu's staff&N~
 &+LA wicked-looking black staff has been dropped here.&N~
 ~
-4 6 3 10 7 0 8597504 16385 0 0 0
+4 6 3 10 7 0 8597504 16385 32768 0 0
 25 1 1 30 0 0 0 0
 4 4000 100
 E
@@ -821,7 +821,7 @@ staff fragment~
 &+La piece of a staff&N~
 &+LThe broken fragment of a staff lies here.&N~
 ~
-13 6 3 10 7 0 8912896 16385 0 0 0
+13 6 3 10 7 0 8912896 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -835,7 +835,7 @@ ring~
 &+ba boy's signet ring&N~
 &+bA small ring with a tiny seal on it has been dropped here.&N~
 ~
-11 16 1 1 7 0 8978432 16387 0 0 0
+11 16 1 1 7 0 8978432 16387 32768 0 0
 0 0 0 2 0 0 0 0
 1 1 100
 E
@@ -851,7 +851,7 @@ broach~
 &+Ma girl's broach&N~
 &+MA small broach has been dropped here.&N~
 ~
-11 16 0 0 7 0 8454144 2113537 0 0 0
+11 16 0 0 7 0 8454144 2113537 32768 0 0
 0 0 0 1 0 0 0 0
 1 100 100
 E
@@ -866,7 +866,7 @@ broach~
 &+can elegant silver broach&N~
 &+cAn elegant silver broach has been dropped here.&N~
 ~
-11 22 0 0 7 0 8454144 2113537 0 0 0
+11 22 0 0 7 0 8454144 2113537 32768 0 0
 0 0 0 2 0 0 0 0
 1 3000 100
 E

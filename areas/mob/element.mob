@@ -6,8 +6,8 @@ A pixie darts in and out of the trees.
 The pixie is a small creature standing perhaps six inches tall.  It is
 dressed in woodland colors, and is very easy to overlook.
 ~
-2056 0 0 34603008 0 0 0 0 S
-HF 0 512 -1
+2056 0 0 0 34603008 0 0 0 0 S
+HF 0 512 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -18,8 +18,8 @@ A Fairy flutters about here.
 ~
 The fairy is a tiny version of a woman, but with wings!
 ~
-133128 0 0 33554448 0 0 0 500 S
-HF 0 32 -1
+133128 0 0 0 33554448 0 0 0 500 S
+HF 0 32 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -31,8 +31,8 @@ A water sprite dances amongst the willow branches.
 The sprite is a cheerful little lass.  She is smaller than a human,
 and her skin has a slight bluish cast to it.
 ~
-2056 0 0 33554448 0 0 0 500 S
-HF 0 32 -1
+2056 0 0 0 33554448 0 0 0 500 S
+HF 0 32 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -44,8 +44,8 @@ A Fire Sprite flitters around the trees here.
 A bold sort of fellow, his hair is red and cheeks are ruddy.  He
 smirks arrogantly at you.
 ~
-2056 0 0 33554448 0 0 0 -400 S
-HF 0 32769 -1
+2056 0 0 0 33554448 0 0 0 -400 S
+HF 0 32769 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -57,8 +57,8 @@ An air sprite floats around here.
 A lovely looking woman, she is only two feet tall.  She backs away into
 a tree when she see you looking at her.
 ~
-2184 0 0 33554448 0 0 0 300 S
-HF 0 32768 -1
+2184 0 0 0 33554448 0 0 0 300 S
+HF 0 32768 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -69,8 +69,8 @@ An earthy looking sprite rests on the ground here.
 ~
 He looks somewhat like a dwarf, but smaller and thinner.
 ~
-2056 0 0 33554432 0 0 0 500 S
-HF 0 256 -1
+2056 0 0 0 33554432 0 0 0 500 S
+HF 0 256 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -82,8 +82,8 @@ A small, elfin brownie grins mischievously at you.
 A small girl who looks something like a halfling, only smaller.  She is
 dressed in a short brown tunic.
 ~
-2056 0 0 33554448 0 0 0 -400 S
-HF 0 32 -1
+2056 0 0 0 33554448 0 0 0 -400 S
+HF 0 32 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -94,8 +94,8 @@ koala bear~
 ~
 A small fuzzy teddy-bear looking fellow.
 ~
-134217864 0 0 0 0 0 0 0 S
-A 0 0 -1
+134217864 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -107,8 +107,8 @@ A beautiful dryad dances about the trees.
 Long earth-colored hair and eyes the color of grass, she is beautiful
 as all outdoors and lvoely as a summer day.
 ~
-2056 0 0 50331648 0 0 0 10 S
-H 0 128 -1
+2056 0 0 0 50331648 0 0 0 10 S
+H 0 128 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -120,8 +120,8 @@ A su-monster lurks in the trees.
 The creature's fur is a dirty grey.  Its tail and face are black, but
 its paws are bloody red, and its eyes glow redly in the gloom.
 ~
-67108872 1 0 34603032 0 0 0 -400 S
-A 0 1 -1
+67108872 1 0 0 34603032 0 0 0 -400 S
+A 0 1 0 -1
 22 11 29 22d40+176 3d5+3
 0.0.0.0 19602
 8 8 0
@@ -132,8 +132,8 @@ A wombat hangs onto the tree here.
 ~
 A cross between two other animals, this wombat looks like neither.
 ~
-2056 1 0 16 0 0 0 -1000 S
-A 0 1 -1
+2056 1 0 0 16 0 0 0 -1000 S
+A 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -144,8 +144,8 @@ An earth elemental takes up most of the space in this room.
 ~
 The large beast is made of mud and blends in perfectly to the walls.
 ~
-8 1 0 33554600 0 0 0 -1000 S
-EE 0 1 -1
+8 1 0 0 33554600 0 0 0 -1000 S
+EE 0 1 0 -1
 30 8 -7 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 1
@@ -156,8 +156,8 @@ Some animated ooze rears up to attack!
 ~
 It's a muddy type thing that seems really hard to kill.
 ~
-8 1 0 33554664 0 0 0 -1000 S
-EE 0 1 -1
+8 1 0 0 33554664 0 0 0 -1000 S
+EE 0 1 0 -1
 40 2 -38 40d80+840 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -169,8 +169,8 @@ Something almost invisible coils in the water here.
 A barely visisble sinuous creature of water, it is almost impossible to
 guess what it will do next.
 ~
-8 1 0 33554600 0 0 0 -1000 S
-EW 0 512 -1
+8 1 0 0 33554600 0 0 0 -1000 S
+EW 0 512 0 -1
 30 8 -7 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -182,8 +182,8 @@ A water elemental is hard to detect standing in the room.
 It is pretty much water, and under water it is pretty much impossible
 to spot unless one knows what to look for.
 ~
-8 1 0 34603240 0 0 0 -1000 S
-EW 0 2048 -1
+8 1 0 0 34603240 0 0 0 -1000 S
+EW 0 2048 0 -1
 41 2 -38 40d80+840 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -194,8 +194,8 @@ A Fire Elemental merges with the flames in the room.
 ~
 A sheet of fire, it has no body but the flames.
 ~
-8 1 0 570425584 0 0 0 -1000 S
-EF 0 1 -1
+8 1 0 0 570425584 0 0 0 -1000 S
+EF 0 1 0 -1
 30 8 -7 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -207,8 +207,8 @@ A magma man stands here, half magma, half man, all deadly.
 His body appears to be made of molten rock; he glows redly and is one HOT
 dude.
 ~
-1073741832 1 0 570425544 4097 0 0 -1000 S
-EF 0 1 -1
+1073741832 1 0 0 570425544 4097 0 0 -1000 S
+EF 0 1 0 -1
 40 2 -38 40d80+840 4d7+10
 0.0.0.0 51840
 8 8 1
@@ -220,8 +220,8 @@ smoke~
 The thick particles of the smoke seem to be somewhat cohesive, forming
 the body of an usual creature indeed.
 ~
-8 1 0 33554480 128 0 0 -100 S
-EA 0 512 -1
+8 1 0 0 33554480 128 0 0 -100 S
+EA 0 512 0 -1
 30 8 -7 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -235,8 +235,8 @@ light.  His coat is luminous gold, much as a sunrise on a clear day.  his
 mane and tail are darker gold.  His horn and hooves are golden pink, and
 his eyes are violet.
 ~
-133384 0 0 167780488 4 0 0 1000 S
-D 0 1 -1
+133384 0 0 0 167780488 4 0 0 1000 S
+D 0 1 0 -1
 40 2 -48 40d80+1240 4d7+10
 3.3.5.9 103680
 8 8 1
@@ -250,8 +250,8 @@ trees.  His eyes are as bright as the moon when it is full, and the color
 of the sky on a hot summer day.  He is wry of limb and quick of movement,
 his face is creased by laughter and sunshine.
 ~
-1174440008 0 0 34078724 0 0 0 1000 S
-H 0 34 -1
+1174440008 0 0 0 34078724 0 0 0 1000 S
+H 0 34 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -264,8 +264,8 @@ The wraith seems to have a body made of a weird, strange substance that is
 not of this world.  It moves something like a mist, only there are hints of
 fire in what seems to be its eyes.
 ~
-1073743880 1 0 167772200 0 0 0 -1000 S
-EA 0 512 -1
+1073743880 1 0 0 167772200 0 0 0 -1000 S
+EA 0 512 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -279,8 +279,8 @@ touch of elven features. She seems almost lost in the beauty of the
 elements which surround her peaceful meadow. Her pure white garments
 flutter in the breeze sending forth scents of pines and wildflowers.
 ~
-2122 0 0 33562680 0 0 0 1000 S
-P2 0 512 -1
+2122 0 0 0 33562680 0 0 0 1000 S
+P2 0 512 0 -1
 57 -7 -117 57d120+5871 7d6+35
 2.4.8.6 230850
 8 8 2
@@ -293,8 +293,8 @@ elf protector ranger~
 &+gfrom all kinds of scum that could endanger its existance. He is watching for
 &+ginvading newcomers, while Forrestal takes care of the already existant issues.
 ~
-1141115080 0 0 303570990 0 0 0 900 S
-PE 17 8194 4
+1141115080 0 0 0 303570990 0 0 0 900 S
+PE 17 8194 0 4
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

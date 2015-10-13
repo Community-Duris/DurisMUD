@@ -43,7 +43,7 @@ divine essence blood~
 &+Lthe &+Ydivine &+Lessence of &+rbl&+Roo&+rd&n~
 &+LA swirling energy that moves like blood lies here.&n~
 ~
-13 40 3 0 7 0 8388617 16385 0 0 0
+13 40 3 0 7 0 8388617 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135107
@@ -51,7 +51,7 @@ divine essence fire~
 &+Lthe &+Ydivine &+Lessence of &+rf&+Ri&+rr&+Re&n~
 &+LAn oddly dancing fusion of energy and fire dances here.&n~
 ~
-13 40 3 0 7 0 8388617 16385 0 0 0
+13 40 3 0 7 0 8388617 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135108
@@ -59,7 +59,7 @@ divine essence mist~
 &+Lthe &+Ydivine &+Lessence of &+cm&+Ci&+cs&+Ct&n~
 &+LA strange fusion of energy and mist seems to slowly swirl on the ground here.&n~
 ~
-13 40 3 0 7 0 8388617 16385 0 0 0
+13 40 3 0 7 0 8388617 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135109
@@ -67,7 +67,7 @@ divine essence enchantment~
 &+Lthe &+Ydivine &+Lessence of en&+mch&+Lan&+mtm&+Len&+mt&n~
 &+LA strange ball of energy lies here, emitting a strange sparkle.&n~
 ~
-13 40 3 0 7 0 0 16385 0 0 0
+13 40 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135110

@@ -658,7 +658,7 @@ tip jar waittresses~
 &+gthe waittress's tip jar&n~
 A waittress's tip jar lies here abandoned.~
 ~
-15 7 2 3 7 0 4096 16385 0 0 0
+15 7 2 3 7 0 4096 16385 32768 0 0
 15 5 0 15 0 0 0 0
 3 1540 100
 E
@@ -1262,7 +1262,7 @@ strip metal~
 &+wa silvery-&+bblue&+w strip of metal~
 An attractive strip of &+bbluish&+w metal&N lies here wasting away.~
 ~
-8 15 3 0 7 0 8458241 1 0 0 0
+8 15 3 0 7 0 8458241 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 300 100
 E
@@ -1276,7 +1276,7 @@ strip metal~
 &+wa &+bblue-&+Ggreen&+w strip of metal~
 An attractive strip of &+bbluish-&+Ggreen&+w metal&N lies here wasting away.~
 ~
-8 15 3 0 7 0 8458241 1 0 0 0
+8 15 3 0 7 0 8458241 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 300 100
 E
@@ -1290,7 +1290,7 @@ strip metal~
 &+wa silvery-&+Ggreen&+w strip of metal~
 An attractive strip of &+Ggreenish&+w metal&N lies here wasting away.~
 ~
-8 15 3 0 7 0 8458241 1 0 0 0
+8 15 3 0 7 0 8458241 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 300 100
 E
@@ -1401,7 +1401,7 @@ parchment~
 &+La parchment&N~
 &+LA rotting piece of parchment lies here.&N~
 ~
-13 2 3 0 7 0 8912896 16385 0 0 0
+13 2 3 0 7 0 8912896 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 5 100
 E
@@ -1435,7 +1435,7 @@ golden hilt~
 &+Ya shiny golden hilt~
 A golden hilt with runic inscriptions lies here.~
 ~
-8 24 3 0 14 0 4096 1 0 0 0
+8 24 3 0 14 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 19337 100
 E
@@ -1484,7 +1484,7 @@ ghostly sleeves pair~
 &+Wa pa&Nir &+Wof gh&+Wos&Ntly &+Wsl&Nee&+Wves&N~
 &+WA pair of ghostly sleeves float here.~
 ~
-9 1 3 0 7 0 64 257 64 0 0
+9 1 3 0 7 0 64 257 32832 0 0
 8 0 0 0 0 0 0 0
 -10 36232 100
 E
@@ -1500,7 +1500,7 @@ pair ghostly pants~
 &Na pa&+Wir &Nof g&+Who&Nst&+Wly &Npa&+Wnt&Ns&N~
 &+WA pair of ghostly pants float here.~
 ~
-9 1 3 0 7 0 64 33 64 0 0
+9 1 3 0 7 0 64 33 32832 0 0
 8 0 0 0 0 0 0 0
 -10 33294 100
 E
@@ -1516,7 +1516,7 @@ pair ghostly gloves~
 &+Wa pai&Nr of gho&+Wst&Nly gl&+Wov&Nes&N~
 &+WA pair of ghostly gloves float here.~
 ~
-9 1 3 0 7 0 64 129 64 0 0
+9 1 3 0 7 0 64 129 32832 0 0
 8 0 0 0 0 0 0 0
 -10 46989 100
 E
@@ -1532,7 +1532,7 @@ ghostly pair boots~
 &+Wa pa&Ni&+Wr of gh&No&+Wst&Nl&+Wy boo&Nt&+Ws&N~
 &+WA pair of ghostly boots float here.~
 ~
-9 1 3 0 7 0 64 65 64 0 0
+9 1 3 0 7 0 64 65 32832 0 0
 8 0 0 0 0 0 0 0
 -10 30989 100
 E

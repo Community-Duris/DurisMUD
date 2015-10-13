@@ -2,7 +2,7 @@
 &+LVargan II&n~
 7918 2 0 35 45 1
 *
-* Zone edited with dikuEdit v2.98i
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 7804 2 0 100 0 0 0
@@ -130,14 +130,14 @@ O 0 7851 1 7917 100 0 0 0          * a table drawer
 P 1 7852 1 7851 100 0 0 0          *   an ancient scroll
 *
 M 0 7805 7 7802 100 0 0 0          * a red minotaur warrior
-E 1 7818 2 8 100 0 0 0             *   some red boots
+E 1 7818 2 10 100 0 0 0            *   some red sleeves
 E 1 7848 6 16 100 0 0 0            *   a drow longsword
 M 0 7808 5 7802 100 0 0 0          * a black minotaur warrior
 E 1 7848 6 16 100 0 0 0            *   a drow longsword
 M 0 7805 7 7808 100 0 0 0          * a red minotaur warrior
 E 1 7848 6 16 100 0 0 0            *   a drow longsword
 M 0 7805 7 7808 100 0 0 0          * a red minotaur warrior
-E 1 7807 4 8 100 0 0 0             *   a pair of white boots
+E 1 7807 4 10 100 0 0 0            *   a pair of white sleeves
 E 1 7848 6 16 100 0 0 0            *   a drow longsword
 M 0 7808 5 7808 100 0 0 0          * a black minotaur warrior
 E 1 7848 6 16 100 0 0 0            *   a drow longsword
@@ -178,20 +178,20 @@ M 0 7809 6 7862 100 0 0 0          * an elite black minotaur warrior
 M 0 7806 6 7864 100 0 0 0          * an elite red minotaur warrior
 M 0 7806 6 7866 100 0 0 0          * an elite red minotaur warrior
 M 0 7802 1 7867 100 0 0 0          * an albino minotaur overlord
-E 1 7808 1 7 100 0 0 0             *   a pair of minotaur leggings
-E 1 7807 4 8 100 0 0 0             *   a pair of white boots
+E 1 7807 4 10 100 0 0 0            *   a pair of white sleeves
 E 1 7828 1 13 100 0 0 0            *   a white skirt
+E 1 7808 1 14 100 0 0 0            *   a pair of minotaur bracers
 E 1 7809 1 16 100 0 0 0            *   a large spiked mace
 M 0 7805 7 7871 100 0 0 0          * a red minotaur warrior
-E 1 7818 2 8 100 0 0 0             *   some red boots
+E 1 7818 2 10 100 0 0 0            *   some red sleeves
 M 0 7805 7 7871 100 0 0 0          * a red minotaur warrior
 M 0 7808 5 7873 100 0 0 0          * a black minotaur warrior
-E 1 7807 4 8 100 0 0 0             *   a pair of white boots
+E 1 7807 4 10 100 0 0 0            *   a pair of white sleeves
 M 0 7811 1 7874 100 0 0 0          * an albino minotaur
 E 1 7806 1 13 100 0 0 0            *   a white loin cloth
 E 1 7825 1 15 100 0 0 0            *   a blackened manacle
 M 0 7808 5 7876 100 0 0 0          * a black minotaur warrior
-E 1 7807 4 8 100 0 0 0             *   a pair of white boots
+E 1 7807 4 10 100 0 0 0            *   a pair of white sleeves
 E 1 7848 6 16 100 0 0 0            *   a drow longsword
 M 0 7808 5 7876 100 0 0 0          * a black minotaur warrior
 M 0 7805 7 7877 100 0 0 0          * a red minotaur warrior

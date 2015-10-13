@@ -7,8 +7,8 @@ a &+Llarge bat&n~
 and bright luminous yellow eyes.  Its shrill keen echoes off the walls like
 the wail of a banshee.
 ~
-133130 1 0 33554472 0 0 0 0 S
-AC 0 0 -1
+133130 1 0 0 33554472 0 0 0 0 S
+AC 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 1
@@ -20,8 +20,8 @@ a &+Lsmall bat&n~
    This diminutive creature at first glance seems rather timid and docile, but
 its shriek reveals a darker more hidden nature to this velvety little demon.
 ~
-1073873034 1 0 33554432 0 0 0 0 S
-AC 0 0 -1
+1073873034 1 0 0 33554432 0 0 0 0 S
+AC 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -34,8 +34,8 @@ a &+Gsmall lizard&n~
 &+Gtongue out, then returns to its scavaging.  Its six legs work in harmony as
 &+Git makes its way across the cavern floor.&n
 ~
-1073742024 0 0 33554432 0 0 0 350 S
-R 0 0 -1
+1073742024 0 0 0 33554432 0 0 0 350 S
+R 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -50,8 +50,8 @@ the exception of his front two upper bicuspids, his mouth is devoid of all
 teeth.  He groggily grins at you, then seems to almost slip back into
 oblivion.
 ~
-1073744008 576 0 33554432 0 0 0 -350 S
-PD 0 0 -1
+1073744008 576 0 0 33554432 0 0 0 -350 S
+PD 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 4 4 1
@@ -64,8 +64,8 @@ a &+LGranite Golem&n~
 &+Lthe entrance to &+BDirk'nspire&+L from all invaders.  Its hard skin is permeated by
 &+Lthe same strange ore that works its way through the walls of the area.&n
 ~
-67110986 1 0 33554560 0 0 0 0 S
-OG 0 1 -1
+67110986 1 0 0 33554560 0 0 0 0 S
+OG 0 1 0 -1
 60 -10 -132 60d143+6300 7d6+35
 6.6.9.7 243000
 8 8 0
@@ -78,8 +78,8 @@ a &+Wskeletal rat&n~
 &+Wback door.  Two &+Rflames&+w burn within its empty eyesockets, casting a
 &+Wghastly shadow over its fleshless skull.&n
 ~
-1107296328 1 0 33554432 0 0 0 250 S
-U 0 0 -1
+1107296328 1 0 0 33554432 0 0 0 250 S
+U 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -92,8 +92,8 @@ a &+Wskeletal rat&n~
 &+Wback door.  Two &+Rflames&+w burn within its empty eyesockets, casting a
 &+Wghastly shadow over its fleshless skull.&n
 ~
-1073741896 1 0 33554432 0 0 0 500 S
-U 0 0 -1
+1073741896 1 0 0 33554432 0 0 0 500 S
+U 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -107,8 +107,8 @@ hefted over his shoulder, Bofak Purefinger is more occuppied with the sinner
 before him, than with you.  His reddish hair is matted to his head with sweat,
 and he occasionally grunts as the wind gets knocked out of him.
 ~
-1140852878 0 0 33554432 0 0 0 400 S
-PD 0 32 -1
+1140852878 0 0 0 33554432 0 0 0 400 S
+PD 0 32 0 -1
 26 8 16 26d60+312 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -121,8 +121,8 @@ morgana slut prostitute strongheart whore derro~
 &+Rspends most of her time behind closed doors, and consequently her skin is
 &+Rsofter than her contemperaries.  She has large blue eyes and painted red lips.
 ~
-1073741962 0 0 33554432 0 0 0 670 S
-PD 0 4096 -1
+1073741962 0 0 0 33554432 0 0 0 670 S
+PD 0 4096 0 -1
 18 13 42 18d30+90 3d4+2
 9.7.3.0 8748
 8 8 2
@@ -134,8 +134,8 @@ the &+Rbrothel receptionist&n~
 &+c   'Whotz yer name, love?  I aint a got all day,' &nshe says as she deftly
 files her nails.  She looks up and you see a smile appear beneath her beard.
 ~
-2250 0 0 33554432 0 0 0 -200 S
-PD 0 4096 -1
+2250 0 0 0 33554432 0 0 0 -200 S
+PD 0 4096 0 -1
 16 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 8 8 2
@@ -151,8 +151,8 @@ is braided into two long tufts, their ends capped in leather wraps.
 &+Rwe was here firsts.  I'm fer betting she smells better than me mother,'&n he
 rambles on aimlessly.
 ~
-2186 0 0 33554432 0 0 0 200 S
-PD 0 0 -1
+2186 0 0 0 33554432 0 0 0 200 S
+PD 0 0 0 -1
 14 15 55 14d23+56 2d5+2
 7.5.2.0 6804
 8 8 1
@@ -170,8 +170,8 @@ He looks at you and says, '&+CFather Bofak is not in currently, he is with a
 &+Cfallen dwarf trying to exorcise her sins from her.  But if you wait around,
 &+CI'm sure he will be back soon.&n'
 ~
-2270 0 0 33554432 0 0 0 700 S
-PD 0 32 -1
+2270 0 0 0 33554432 0 0 0 700 S
+PD 0 32 0 -1
 16 13 48 16d33+96 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -184,8 +184,8 @@ a &+Bcorpulent guard&n~
 &+Bwell fed guard doesn't look to interested in the post he was assigned.  Every
 &+Bso often, he lets out a belch and spits into the ghetto's well.
 ~
-1140852746 0 0 33554432 0 0 0 -250 S
-PD 0 1 -1
+1140852746 0 0 0 33554432 0 0 0 -250 S
+PD 0 1 0 -1
 36 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -199,8 +199,8 @@ in her work.  Assigned to scrub the stairs here clean, she leans into each
 careful stroke of her toothbrush.  Her white overalls are speckled with black
 spots of dirt.
 ~
-2190 0 0 33554432 0 0 0 450 S
-PG 0 1024 -1
+2190 0 0 0 33554432 0 0 0 450 S
+PG 0 1024 0 -1
 11 15 64 11d18+44 2d5+2
 5.4.1.0 5346
 8 8 2
@@ -217,8 +217,8 @@ gartuk bartender ogre~
 
 &+wHe snarls at you and says, '&+RWhat do ye want to drink?&n'
 ~
-1073743882 0 0 33554432 0 0 0 -500 S
-PO 0 1 -1
+1073743882 0 0 0 33554432 0 0 0 -500 S
+PO 0 1 0 -1
 29 8 7 29d65+377 3d6+4
 9.4.7.1 25839
 8 8 1
@@ -230,8 +230,8 @@ a &+cdrunk &+morc &+cpatron&n~
    Reeking of &+Yalcohol&n and stale &+ybeernuts&n, this &+morc&n patron is near falling into
 unconsciousness.  He looks at you, smiles and hiccups.
 ~
-2058 0 0 33554432 0 0 0 25 S
-HO 0 0 -1
+2058 0 0 0 33554432 0 0 0 25 S
+HO 0 0 0 -1
 14 15 55 14d23+56 2d5+2
 7.5.2.0 6804
 8 8 1
@@ -246,8 +246,8 @@ firb derstl warden male man derro~
 &+Cshut from where he took an arrow when he was defending against a drow raid a
 &+Cfew years ago.  &n
 ~
-67373128 0 0 33562672 8384 0 0 1000 S
-PD 0 8 -1
+67373128 0 0 0 33562672 8384 0 0 1000 S
+PD 0 8 0 -1
 60 -10 -132 60d143+6300 7d6+35
 6.6.9.7 243000
 8 8 1
@@ -261,8 +261,8 @@ an &+rirate duergar&n~
 &+Lplayed upon him.  Something in his eyes warns you that he is not one to be
 &+Ltrifled with.&n
 ~
-1073743944 1 0 35127296 0 0 0 -750 S
-PD 6 8192 -1
+1073743944 1 0 0 35127296 0 0 0 -750 S
+PD 6 8192 0 -1
 11 15 64 11d23+44 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -277,8 +277,8 @@ a &+Gtired &+gtroll&n~
 &+Ldisarray around her large head and shoulders.  One of her eyes has been burned
 &+Lshut, an &+ytroglodyte&+Ysk&+Win&+L eyepatch covers the hideous scar left by the fire.
 ~
-1073743886 72 0 33554432 0 0 0 -578 S
-PT 10 1 -1
+1073743886 72 0 0 33554432 0 0 0 -578 S
+PT 10 1 0 -1
 17 13 45 17d35+119 3d4+2
 8.6.2.0 8262
 8 8 2
@@ -296,8 +296,8 @@ a &+gthr&+Gi-k&+Yre&+Wen&n~
 &+Lwhich rests upon two bent and crooked legs.  It clacks its mandibles at you in
 &+Lanticipation of a feast.&n
 ~
-1073743884 1 0 33554452 4096 0 0 250 S
-AC 0 1 -1
+1073743884 1 0 0 33554452 4096 0 0 250 S
+AC 0 1 0 -1
 6 18 80 6d21+33 2d3+1
 0.0.0.0 777
 8 8 0
@@ -316,8 +316,8 @@ a &+Lhomeless &+mwe&+Mmi&+Wc&n~
 &+rclothe&+W to prevent them from straining too hard and causing the creature to
 &+Wbecome further inept.  &n
 ~
-134250650 0 0 17 0 0 0 600 S
-AC 0 512 -1
+134250650 0 0 0 17 0 0 0 600 S
+AC 0 512 0 -1
 16 13 48 16d24+80 3d4+2
 0.0.0.0 7776
 8 8 1
@@ -332,8 +332,8 @@ a &+mdrow &+Lcommoner&n~
 &+cslavery.  Her long fingers wiggle deftly in various patterns, giving you the
 &+cvague imprint of a caster before he completes his spell.&n
 ~
-2120 64 0 33554432 0 0 0 -1000 S
-PL 3 1024 -1
+2120 64 0 0 33554432 0 0 0 -1000 S
+PL 3 1024 0 -1
 16 13 48 16d24+80 3d4+2
 8.6.2.0 7776
 8 8 2
@@ -346,8 +346,8 @@ an &+corc &+Cchild&n~
 &+cold &+Wbones&+c.  A look, you can only equate with humour, plays across the boy's
 &+cswinelike face.  &n
 ~
-1073744072 0 0 33554432 0 0 0 234 S
-HO 0 0 -1
+1073744072 0 0 0 33554432 0 0 0 234 S
+HO 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 1
@@ -361,8 +361,8 @@ an &+corc &+Cfemale&n~
 &+CSmall sharp &+Wteeth&+C poke out from behind her leathery lips, and her pig-like
 &+Cnose flares as she inhales the odors of her labor.&n
 ~
-1073743950 64 0 33554432 0 0 0 -500 S
-HO 0 16 -1
+1073743950 64 0 0 33554432 0 0 0 -500 S
+HO 0 16 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -376,8 +376,8 @@ a &+Gdrunk &+ggoblin&n~
 &+Wintoxicated.  Her ears point out from the side of her head, sagging just a
 &+Wlittle from the alcohol.&n
 ~
-2250 0 0 33554432 0 0 0 34 S
-HG 0 1 -1
+2250 0 0 0 33554432 0 0 0 34 S
+HG 0 1 0 -1
 5 20 83 5d17+27 1d5+0
 3.1.0.0 648
 8 8 2
@@ -390,8 +390,8 @@ a &+BDirk'nspire guard&n~
 &+BDirk'nspire&+W guard.  His long &+Rauburn&+W beard is braided into two long tufts, both
 &+Wof which are capped in a &+Gsnakeskin&+W wrap.
 ~
-1140852808 0 0 33554432 0 0 0 -250 S
-PD 0 1 -1
+1140852808 0 0 0 33554432 0 0 0 -250 S
+PD 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -406,8 +406,8 @@ a &+mdrow &+Lslave&n~
 &+Llessons he has been forced to learn here.  Defiance burns bright in his pale
 &+yamber&+L eyes, giving you an uneasy feeing in the pit of your stomach.&n
 ~
-2122 64 0 33554432 0 0 0 -1000 S
-PL 0 512 -1
+2122 64 0 0 33554432 0 0 0 -1000 S
+PL 0 512 0 -1
 16 13 48 16d24+80 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -420,8 +420,8 @@ an &+corc &+Cslave&n~
 &+Ccowers as you enter, but after realizing you're not her tormentors, hope
 &+Csprings to her pig-like face.
 ~
-2126 64 0 33554432 0 0 0 -500 S
-HO 0 1 -1
+2126 64 0 0 33554432 0 0 0 -500 S
+HO 0 1 0 -1
 14 15 55 14d27+84 2d5+2
 7.5.2.0 6804
 8 8 2
@@ -439,8 +439,8 @@ a &+gthr&+Gi-k&+Yre&+Wen slave&n~
 &+Lwhich rests upon two bent and crooked legs.  It clacks its mandibles at you in
 &+Lanticipation of a feast.&n
 ~
-1073743884 1 0 33554452 4096 0 0 250 S
-AC 0 1 -1
+1073743884 1 0 0 33554452 4096 0 0 250 S
+AC 0 1 0 -1
 12 15 61 12d27+72 2d5+2
 0.0.0.0 5832
 8 8 0
@@ -458,8 +458,8 @@ balith emissary troll~
 &+L   He looks up at you and says, '&+RDo you have any maps, for Balith?  Secrets?
 &+RBalith needs secrets to see his family again.  Balith needs maps for his Lord.&+L'
 ~
-1074006024 72 0 33554432 0 0 0 -1000 S
-PT 10 1 -1
+1074006024 72 0 0 33554432 0 0 0 -1000 S
+PT 10 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -472,8 +472,8 @@ a &+ggoblin&+W slave&n~
 &+Wwith deepset &+Lblack&+W eyes.  She is covered in muck from head to toe, but you
 &+Wcan't tell if it's from working in the mines or bathing in this water.&n
 ~
-2250 0 0 33554432 0 0 0 34 S
-HG 0 0 -1
+2250 0 0 0 33554432 0 0 0 34 S
+HG 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 3.2.0.0 907
 8 8 2
@@ -486,8 +486,8 @@ a &+rclan priest&n~
 &+Wthe crown of his head.  His robes are immaculate, pressed with firm creases
 &+Wrunning down their sides.  He appears to be deep in concentration.&n
 ~
-1140852878 0 0 33554432 0 0 0 400 S
-PD 0 32 -1
+1140852878 0 0 0 33554432 0 0 0 400 S
+PD 0 32 0 -1
 17 13 45 17d33+102 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -500,8 +500,8 @@ a &+rclan priest&n~
 &+Won the crown of his head.  His robes are immaculate, pressed with firm creases
 &+Wrunning down their sides.  He appears to be deep in concentration.&n
 ~
-1140852878 0 0 33554432 0 0 0 400 S
-PD 0 32 -1
+1140852878 0 0 0 33554432 0 0 0 400 S
+PD 0 32 0 -1
 21 11 32 21d44+189 3d5+3
 4.0.5.0 18711
 8 8 1
@@ -514,8 +514,8 @@ a &+Lderro &+Wcook&n~
 &+Ba large &+Lcouldren&+B of soup for tonight's supper.  His white &+Wapron&+B is covered in
 &+rblood&+B and a peculiar &+Ggreen&+B slop.&n
 ~
-2062 0 0 33554432 0 0 0 450 S
-PD 0 1 -1
+2062 0 0 0 33554432 0 0 0 450 S
+PD 0 1 0 -1
 11 15 64 11d27+66 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -529,8 +529,8 @@ the &+Bclan &+celder&n~
 &+Rhis stomach and falls neatly between his feet.  He looks like a man used to
 &+Rbeing followed, and you don't think he would tolerate insubordination.&n
 ~
-1073743882 64 0 33554432 0 0 0 1000 S
-PD 0 2048 -1
+1073743882 64 0 0 33554432 0 0 0 1000 S
+PD 0 2048 0 -1
 26 8 16 26d44+286 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -543,8 +543,8 @@ a &+Bderro &+ccommoner&n~
 &+Wlong &+Yblonde&+W hair and a close cropped beard.  Occaisionally she stops and looks
 &+Waround her.&n
 ~
-2120 64 0 33554432 0 0 0 500 S
-PD 0 1 -1
+2120 64 0 0 33554432 0 0 0 500 S
+PD 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 2
@@ -557,8 +557,8 @@ a &+Bderro &+ccommoner&n~
 &+Wway home from the mines or just off to relieve those already there.  He has a
 &+Wlong stiff &+Lblack&+W beard and a slightly balding mane.&n
 ~
-2120 64 0 33554432 0 0 0 500 S
-PD 0 1 -1
+2120 64 0 0 33554432 0 0 0 500 S
+PD 0 1 0 -1
 14 15 55 14d27+84 2d5+2
 7.5.2.0 6804
 8 8 1
@@ -572,8 +572,8 @@ a &+Bderro &+ccommoner&n~
 &+Wlong &+Yblonde&+W hair and a close cropped beard.  Occaisionally she stops and looks
 &+Waround her.&n
 ~
-2120 64 0 33554432 0 0 0 500 S
-PD 0 256 -1
+2120 64 0 0 33554432 0 0 0 500 S
+PD 0 256 0 -1
 10 18 67 10d19+45 2d3+1
 5.3.0.0 1296
 8 8 2
@@ -586,8 +586,8 @@ flyrr pharthing derro man~
 &+Lgrey&n wisps of hair trailing down his balding head.  He wears a thin pair of
 wire frame spectacles upon his face, covering two dull &+Ggreen&n eyes.
 ~
-33556490 0 0 33554432 0 0 0 -500 S
-PD 0 4096 -1
+33556490 0 0 0 33554432 0 0 0 -500 S
+PD 0 4096 0 -1
 50 -3 -95 50d100+2650 6d6+25
 0.3.1.5 121500
 8 8 1

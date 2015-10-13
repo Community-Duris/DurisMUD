@@ -8,8 +8,8 @@ daring to challenge the mages who rule here must first go through him. He
 stands expressionless, without movement, awaiting the opportunity to smash
 someone.
 ~
-67381322 0 0 268435640 2 0 0 -1000 S
-OG 0 512 -1
+67381322 0 0 0 268435640 2 0 0 -1000 S
+OG 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -24,8 +24,8 @@ enabled him to magically create some very snazzy items, provided he has the
 right parts to combine. He hopes one day to form a new resistance party and
 help retake the temple.
 ~
-133194 0 0 172 0 0 0 0 S
-PH 0 512 -1
+133194 0 0 0 172 0 0 0 0 S
+PH 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -38,8 +38,8 @@ ghast~
 undead creature was raised to help destroy all living beings. Knowing no fear
 or pain, he looks at you and attacks!
 ~
-1073743948 1 0 0 0 0 0 -1000 S
-U 0 32 -1
+1073743948 1 0 0 0 0 0 0 -1000 S
+U 0 32 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -52,8 +52,8 @@ This warrior came to the temple to help fight the undead that were taking
 over. He obviously failed. Now nothing but an animated skeleton, his sole
 purpose in his afterlife is to kill everything he sees.
 ~
-1073743944 1 0 0 0 0 0 -1000 S
-SK 0 1 -1
+1073743944 1 0 0 0 0 0 0 -1000 S
+SK 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -65,8 +65,8 @@ zombie~
 This decaying corpse of a once valiant fighter has been raised along with
 the other undead to help take over this underground temple.
 ~
-1073743948 1 0 0 0 0 0 -1000 S
-ZO 0 1 -1
+1073743948 1 0 0 0 0 0 0 -1000 S
+ZO 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -78,8 +78,8 @@ ghost~
 This undead being was once a student of the arcane, studying in the temple
 to improve his skills in sorcery. He never got a chance to learn enough.
 ~
-1073743944 1 0 0 0 0 0 -1000 S
-UG 0 512 -1
+1073743944 1 0 0 0 0 0 0 -1000 S
+UG 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -92,8 +92,8 @@ This evil mage was one of the many that helped take over this forsaken
 temple. Dressed in blood red robes, he spends most of his time praying at the
 altar of knowledge, trying to become more powerful.
 ~
-1073743946 1 0 0 2 0 0 -1000 S
-GI 0 512 -1
+1073743946 1 0 0 0 2 0 0 -1000 S
+GI 0 512 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -107,8 +107,8 @@ the army of undead, he soon became one of them. His job of protecting the
 temple is still the same though, just now he protects it from any living being
 that enters its halls.
 ~
-1140852810 1 0 24 2 0 0 -1000 S
-U 0 1 -1
+1140852810 1 0 0 24 2 0 0 -1000 S
+U 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -121,8 +121,8 @@ A large &+rwarrior&N stands here, praying.
 his kind to help the mages take over the temple. In return, the mages have
 made him much stronger and more skilled than he ever could have imagined.
 ~
-1073743946 1 0 0 2 0 0 -1000 S
-PT 0 1 -1
+1073743946 1 0 0 0 2 0 0 -1000 S
+PT 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -135,8 +135,8 @@ skeleton~
 over. He obviously failed. Now nothing but an animated skeleton, his sole
 purpose in his afterlife is to kill everything he sees.
 ~
-1073743944 1 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743944 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -149,8 +149,8 @@ ghast~
 undead creature was raised to help destroy all living beings. Knowing no fear
 or pain, he looks at you and attacks!
 ~
-1073743948 1 0 0 0 0 0 -1000 S
-U 0 32 -1
+1073743948 1 0 0 0 0 0 0 -1000 S
+U 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -162,8 +162,8 @@ zombie~
    This decaying corpse of a once valiant fighter has been raised along with
 the other undead to help take over this underground temple.
 ~
-1073743948 1 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743948 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -175,8 +175,8 @@ ghost~
    This undead being was once a student of the arcane, studying in the temple
 to improve his skills in sorcery. He never got a chance to learn enough.
 ~
-1073743944 1 0 0 0 0 0 -1000 S
-UG 0 512 -1
+1073743944 1 0 0 0 0 0 0 -1000 S
+UG 0 512 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -190,8 +190,8 @@ the army of undead, he soon became one of them. His job of protecting the
 temple is still the same though, just now he protects it from any living being
 that enters its halls.
 ~
-1140852808 1 0 536870936 2 0 0 -1000 S
-U 0 1 -1
+1140852808 1 0 0 536870936 2 0 0 -1000 S
+U 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -205,8 +205,8 @@ fallen prey to the two daggers he wields, and there are sure to be many more
 to come. His assistance greatly aided the mages in their takeover, as many a
 victim never woke up from their slumbers.
 ~
-1073744010 1 0 35127480 2 0 0 -1000 S
-PL 0 8192 -1
+1073744010 1 0 0 35127480 2 0 0 -1000 S
+PL 0 8192 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -219,8 +219,8 @@ warrior burly humungous~
 comrades, and help take over the temple. He passes his time by praying at the
 Altar of the Sword, in hopes of becoming a master swordsman.
 ~
-1073743946 1 0 152 2 0 0 -1000 S
-PO 0 1 -1
+1073743946 1 0 0 152 2 0 0 -1000 S
+PO 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -233,8 +233,8 @@ A &+gtroll &+Gwarrior&N sits near a large altar.
 superior bashing skills kept any spellcaster he went against down, thus
 breezing through most of the temple.
 ~
-1073743946 1 0 152 2 0 0 -1000 S
-PT 0 1 -1
+1073743946 1 0 0 152 2 0 0 -1000 S
+PT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -248,8 +248,8 @@ the army of undead, he soon became one of them. His job of protecting the
 temple is still the same though, just now he protects it from any living being
 that enters its halls.
 ~
-1140852808 1 0 536871064 2 0 0 -1000 S
-U 0 1 -1
+1140852808 1 0 0 536871064 2 0 0 -1000 S
+U 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -263,8 +263,8 @@ defended his home valiantly, but succumbed to the forces of the undead along
 with the rest of his comrades. Now a member of the undead horde, he roams the
 temple, looking for things to decapitate.
 ~
-1073743944 1 0 536871064 2 0 0 -1000 S
-U 0 1 -1
+1073743944 1 0 0 536871064 2 0 0 -1000 S
+U 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -278,8 +278,8 @@ defended his home valiantly, but succumbed to the forces of the undead along
 with the rest of his comrades. Now a member of the undead horde, he roams the
 temple, looking for things to decapitate.
 ~
-1073743944 1 0 536871064 2 0 0 -1000 S
-U 0 32 -1
+1073743944 1 0 0 536871064 2 0 0 -1000 S
+U 0 32 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -293,8 +293,8 @@ defended his home valiantly, but succumbed to the forces of the undead along
 with the rest of his comrades. Now a member of the undead horde, he roams the
 temple, looking for things to decapitate.
 ~
-1073743944 1 0 536871064 2 0 0 -1000 S
-U 0 512 -1
+1073743944 1 0 0 536871064 2 0 0 -1000 S
+U 0 512 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -308,8 +308,8 @@ defended his home valiantly, but succumbed to the forces of the undead along
 with the rest of his comrades. Now a member of the undead horde, he roams the
 temple, looking for things to decapitate.
 ~
-1073743944 1 0 536871064 2 0 0 -1000 S
-U 0 16 -1
+1073743944 1 0 0 536871064 2 0 0 -1000 S
+U 0 16 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -322,8 +322,8 @@ An old &+rmage&N stands here, conjuring up some spells.
 this elder mage has become a noted master of magic. His quickness of thought
 is matched by very few, causing his spells to be some of the deadliest around.
 ~
-1140852808 1 0 536870940 2 0 0 -1000 S
-PH 0 2048 -1
+1140852808 1 0 0 536870940 2 0 0 -1000 S
+PH 0 2048 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -335,8 +335,8 @@ earth elemental~
    This huge elemental is constructed of hard stone. Standing dutifily over
 the Temple of Earth, ready to kill any that intrude into this sacred place.
 ~
-1140852810 1 0 152 2 0 0 0 S
-EE 0 1 -1
+1140852810 1 0 0 152 2 0 0 0 S
+EE 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -348,8 +348,8 @@ earth elemental~
    This huge elemental is constructed of hard stone. Standing dutifily over
 the Temple of Earth, ready to kill any that intrude into this sacred place.
 ~
-2122 1 0 152 2 0 0 0 S
-EE 0 512 -1
+2122 1 0 0 152 2 0 0 0 S
+EE 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -361,8 +361,8 @@ earth elemental~
    This huge elemental is constructed of hard stone. Standing dutifily over
 the Temple of Earth, ready to kill any that intrude into this sacred place.
 ~
-2122 1 0 152 2 0 0 0 S
-EE 0 256 -1
+2122 1 0 0 152 2 0 0 0 S
+EE 0 256 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -377,8 +377,8 @@ power, and this mages spells cast fear into the hearts of even the strongest
 and bravest of warriors. He has been entrusted with protecting the sacred
 &+yAltar of Earth&N, and he will defend it with his life.
 ~
-67110986 1 0 524444 2 0 0 -1000 S
-EE 0 512 -1
+67110986 1 0 0 524444 2 0 0 -1000 S
+EE 0 512 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -392,8 +392,8 @@ of the sea. He stands guard over the Temple of Water, preventing any intruders
 passing into the temple. Anyone caught trespassing gets an immediate
 bludgeoning.
 ~
-1140852810 1 0 2204 2 0 0 0 S
-EW 0 1 -1
+1140852810 1 0 0 2204 2 0 0 0 S
+EW 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -407,8 +407,8 @@ of the sea. He stands guard over the Temple of Water, preventing any intruders
 passing into the temple. Anyone caught trespassing gets an immediate
 bludgeoning.
 ~
-1140852810 1 0 2204 2 0 0 0 S
-EW 0 512 -1
+1140852810 1 0 0 2204 2 0 0 0 S
+EW 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -422,8 +422,8 @@ of the sea. He stands guard over the Temple of Water, preventing any intruders
 passing into the temple. Anyone caught trespassing gets an immediate
 bludgeoning.
 ~
-1140852810 1 0 2204 2 0 0 0 S
-EW 0 256 -1
+1140852810 1 0 0 2204 2 0 0 0 S
+EW 0 256 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -438,8 +438,8 @@ power, and this mages spells cast fear into the hearts of even the strongest
 and bravest of warriors. He has been entrusted with protecting the sacred
 &+bAltar &+Bof&+b Water&N, and he will defend it with his life.
 ~
-67110986 1 0 526492 2 0 0 -1000 S
-EW 0 512 -1
+67110986 1 0 0 526492 2 0 0 -1000 S
+EW 0 512 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -453,8 +453,8 @@ Blending in perfectly with the inferno that surrounds him, this Fire Elemental
 waits for travelers to wander into his temple, then ruthlessly beats them to
 death.
 ~
-1140852810 1 0 536871068 2 0 0 0 S
-EF 0 1 -1
+1140852810 1 0 0 536871068 2 0 0 0 S
+EF 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -468,8 +468,8 @@ Blending in perfectly with the inferno that surrounds him, this Fire Elemental
 waits for travelers to wander into his temple, then ruthlessly beats them to
 death.
 ~
-1140852810 1 0 536871068 2 0 0 0 S
-EF 0 512 -1
+1140852810 1 0 0 536871068 2 0 0 0 S
+EF 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -483,8 +483,8 @@ Blending in perfectly with the inferno that surrounds him, this Fire Elemental
 waits for travelers to wander into his temple, then ruthlessly beats them to
 death.
 ~
-1140852810 1 0 536871068 2 0 0 0 S
-EF 0 256 -1
+1140852810 1 0 0 536871068 2 0 0 0 S
+EF 0 256 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -499,8 +499,8 @@ power, and this mages spells cast fear into the hearts of even the strongest
 and bravest of warriors. He has been entrusted with protecting the sacred
 &+rAltar &+Rof&+r Fire&N, and he will defend it with his life.
 ~
-67110986 1 0 537395356 2 0 0 -1000 S
-CT 0 512 -1
+67110986 1 0 0 537395356 2 0 0 -1000 S
+CT 0 512 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -514,8 +514,8 @@ any opponent that dare face it. The elemental stands guard over his temple
 dedicated to the air that surrounds us all, and any that dare invade can
 expect a painful resistance from it.
 ~
-1140852810 1 0 134217884 2 0 0 0 S
-EA 0 1 -1
+1140852810 1 0 0 134217884 2 0 0 0 S
+EA 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -529,8 +529,8 @@ any opponent that dare face it. The elemental stands guard over his temple
 dedicated to the air that surrounds us all, and any that dare invade can
 expect a painful resistance from it.
 ~
-1140852810 1 0 134217884 2 0 0 0 S
-EA 0 512 -1
+1140852810 1 0 0 134217884 2 0 0 0 S
+EA 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -544,8 +544,8 @@ any opponent that dare face it. The elemental stands guard over his temple
 dedicated to the air that surrounds us all, and any that dare invade can
 expect a painful resistance from it.
 ~
-1140852810 1 0 134217884 2 0 0 0 S
-EA 0 256 -1
+1140852810 1 0 0 134217884 2 0 0 0 S
+EA 0 256 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -560,8 +560,8 @@ power, and this mages spells cast fear into the hearts of even the strongest
 and bravest of warriors. He has been entrusted with protecting the sacred
 &+WAltar &+wof&+W Air&N, and he will defend it with his life.
 ~
-67242058 1 0 134742172 2 0 0 -1000 S
-MT 0 2048 -1
+67242058 1 0 0 134742172 2 0 0 -1000 S
+MT 0 2048 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -575,8 +575,8 @@ like a humongous, mutated dog, this beast stands about five feet tall while
 standing on its four legs. Long fangs that could easily impale anything hang
 from his mouth, ready to draw the blood of any intruder.
 ~
-1140852810 1 0 671088664 3 0 0 -1000 S
-AC 0 1 4
+1140852810 1 0 0 671088664 3 0 0 -1000 S
+AC 0 1 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -589,8 +589,8 @@ yeti~
 from his surroundings from making him uncomfortable. Sharp claws extend from
 both of his arms, able to slash skin and turn flesh into mincemeat.
 ~
-1141114954 1 0 24 2 2097152 0 0 S
-A 0 1 5
+1141114954 1 0 0 24 2 2097152 0 0 S
+A 0 1 0 5
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -603,8 +603,8 @@ white shark great~
 to knock you backwards. He swims here, in his shallow pool, feeding off any
 living thing that dares enter his home.
 ~
-1140852810 1 0 2072 2 0 0 -1000 S
-F 0 1 5
+1140852810 1 0 0 2072 2 0 0 -1000 S
+F 0 1 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -617,8 +617,8 @@ lizard huge~
 lizards spends most of his time bathing in the sun. The only break he gets
 from that is when food enters the room, thinking they'll get past him.
 ~
-1140852810 1 0 24 2 0 0 0 S
-R 0 1 5
+1140852810 1 0 0 24 2 0 0 0 S
+R 0 1 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -632,8 +632,8 @@ peacefully, hoping no one will disturb his rest. Anyone daring to disturb him
 will have one of the swords in his many arms slice them to pieces, so he can
 serve them to his pet lizard.
 ~
-1140852810 1 0 524312 2 262144 0 -1000 S
-TK 0 1 -1
+1140852810 1 0 0 524312 2 262144 0 -1000 S
+TK 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -646,8 +646,8 @@ Some moronic &+mDrow Elf&N stands submersed in the &+Bwater&N here.
 one should worship the water day in, and day out. All those that dont follow
 his beliefs are tyrants, and must die. This means you.
 ~
-1141114954 1 0 526360 2 0 0 -1000 S
-PL 0 512 -1
+1141114954 1 0 0 526360 2 0 0 -1000 S
+PL 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -660,8 +660,8 @@ bigfoot~
 this huge hairy beast wanders about his snow-filled rooms, looking for someone
 to slash with his claws, or to smash in their heads with his humungous fists.
 ~
-1140852810 1 0 524312 2 0 0 0 S
-G 0 16384 -1
+1140852810 1 0 0 524312 2 0 0 0 S
+G 0 16384 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -674,8 +674,8 @@ A lone &+rdemon&N stands solemnly in the center of the room.
 to help protect the temple from any invaders. He stands amongst the flames,
 his dark red flesh blending in well with the fire.
 ~
-1140852810 1 0 537395224 2 0 0 -1000 S
-X 0 512 -1
+1140852810 1 0 0 537395224 2 0 0 -1000 S
+X 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -688,8 +688,8 @@ vampire nasty~
 their energy into him. He wanders the halls of this forsaken temple, looking
 for something to ravage, something to feed on.
 ~
-1140852808 1 0 24 2 0 0 -1000 S
-UV 0 512 -1
+1140852808 1 0 0 24 2 0 0 -1000 S
+UV 0 512 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -702,8 +702,8 @@ assassin spectre~
 prey to the swords of the Royal Guard. Though, his aid for them continues on
 in the afterlife, as he was raised from the dead to finish his mission.
 ~
-1140852808 1 0 0 2 0 0 -1000 S
-U 0 4096 -1
+1140852808 1 0 0 0 2 0 0 -1000 S
+U 0 4096 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -716,8 +716,8 @@ wraith~
 temple from the undead which overran it. After dying in an intense battle, he
 was raised to aid his enemies in their takeover.
 ~
-1140852808 1 0 0 2 0 0 -1000 S
-UG 0 512 -1
+1140852808 1 0 0 0 2 0 0 -1000 S
+UG 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -730,8 +730,8 @@ This lich used to be a sorcerer who helped defend the temple against the
 undead onslaught. The evil mages have made him an ally, using his sorcerous
 knowledge to their advantage, even after his death.
 ~
-1140852808 1 0 0 2 0 0 -1000 S
-U 0 512 -1
+1140852808 1 0 0 0 2 0 0 -1000 S
+U 0 512 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -745,8 +745,8 @@ though all was lost to the evil mages and their minions. He has since been
 raised into a nasty dracolich, capable of doing serious damage to anyone
 making it this far down into the heart of the temple.
 ~
-1140852810 1 0 524444 2 0 0 -1000 S
-D 0 1 -1
+1140852810 1 0 0 524444 2 0 0 -1000 S
+D 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -760,8 +760,8 @@ defended his home valiantly, but succumbed to the forces of the undead along
 with the rest of his comrades. Now a member of the undead horde, he roams the
 temple, looking for things to decapitate.
 ~
-1140852808 1 0 536871068 2 0 0 -1000 S
-ZO 0 1 -1
+1140852808 1 0 0 536871068 2 0 0 -1000 S
+ZO 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -775,8 +775,8 @@ defended his home valiantly, but succumbed to the forces of the undead along
 with the rest of his comrades. Now a member of the undead horde, he roams the
 temple, looking for things to decapitate.
 ~
-1140852810 1 0 536871068 2 0 0 -1000 S
-ZO 0 32 -1
+1140852810 1 0 0 536871068 2 0 0 -1000 S
+ZO 0 32 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -790,8 +790,8 @@ defended his home valiantly, but succumbed to the forces of the undead along
 with the rest of his comrades. Now a member of the undead horde, he roams the
 temple, looking for things to decapitate.
 ~
-1140852810 1 0 536871068 2 0 0 -1000 S
-ZO 0 512 -1
+1140852810 1 0 0 536871068 2 0 0 -1000 S
+ZO 0 512 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -805,8 +805,8 @@ defended his home valiantly, but succumbed to the forces of the undead along
 with the rest of his comrades. Now a member of the undead horde, he roams the
 temple, looking for things to decapitate.
 ~
-1073743946 1 0 536871068 2 0 0 -1000 S
-ZO 0 16 -1
+1073743946 1 0 0 536871068 2 0 0 -1000 S
+ZO 0 16 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -820,8 +820,8 @@ ever laid your eyes upon. Maybe the evil mages couldnt bring themselves to
 destroy someone so perfect in every way, or maybe the drow was in on the
 takeover. Either way, she stands here alive, and untouched.
 ~
-1073776714 0 0 8 2 0 0 0 S
-PL 0 32768 -1
+1073776714 0 0 0 8 2 0 0 0 S
+PL 0 32768 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -835,8 +835,8 @@ alive the whole time the temple was being taken over. But don't let his size
 fool you, as he is still very skilled in the art of magic, and can cause quite
 a bit of pain to anyone who tests him.
 ~
-1073776714 0 0 1572874 2 0 0 0 S
-HF 0 512 -1
+1073776714 0 0 0 1572874 2 0 0 0 S
+HF 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -851,8 +851,8 @@ off of rats and other vermin, waiting for any lone undead to come in and meet
 his daggers. 1 by 1 he plans to eliminate all the undead, and take the temple
 back over.
 ~
-1073776858 0 0 1572888 2 0 0 -1000 S
-HO 0 4096 -1
+1073776858 0 0 0 1572888 2 0 0 -1000 S
+HO 0 4096 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -865,8 +865,8 @@ This drow elf warrior was one of the many evils that helped the mages in
 their takeover of this once sacred temple. He spends most of his days praying
 at the Altar of Agility, trying to improve his already impressive skills.
 ~
-1140852810 1 0 24 2 0 0 -1000 S
-PL 0 1 -1
+1140852810 1 0 0 24 2 0 0 -1000 S
+PL 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -880,8 +880,8 @@ temple and made it their own. He stands guard over the Altar of Prayer, healing
 his fellow mages and undead, as well as teaching the younger clerics how to
 become more powerful.
 ~
-67110986 1 0 524296 2 0 0 -1000 S
-PL 0 32 5
+67110986 1 0 0 524296 2 0 0 -1000 S
+PL 0 32 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -895,8 +895,8 @@ highest ranking of the evil mages. His knowledge of sorcery played a key role
 in the takeover of the temple, for without him, the undead couldnt have done
 it. He stands guard over the Altar of Meditation, planning his next coup.
 ~
-67110922 1 0 8 2 0 0 -1000 S
-PH 0 512 5
+67110922 1 0 0 8 2 0 0 -1000 S
+PH 0 512 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -911,8 +911,8 @@ the High Mages, Krahn'krayv has been magically enlarged, making him even more
 fearsome then he originally was. He spends his time studying tomes in the
 Temple of Meditation, alongside Krahn'moor.
 ~
-1140852810 1 0 0 0 0 0 -1000 S
-PL 0 2048 5
+1140852810 1 0 0 0 0 0 0 -1000 S
+PL 0 2048 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -927,8 +927,8 @@ help of some other evil mages in the realm, his warplan was a success. He now
 stands proudly at the Altar of Necromancy, relishing his victory, and figuring
 out what to take over next.
 ~
-67110986 1 0 8 2 0 0 -1000 S
-PL 0 1024 5
+67110986 1 0 0 8 2 0 0 -1000 S
+PL 0 1024 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -941,8 +941,8 @@ This lich used to be a sorcerer who helped defend the temple against the
 undead onslaught. The evil mages have made him an ally, using his sorcerous
 knowledge to their advantage, even after his death.
 ~
-1140852810 1 0 0 2 0 0 -1000 S
-UL 0 512 -1
+1140852810 1 0 0 0 2 0 0 -1000 S
+UL 0 512 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -955,8 +955,8 @@ This spectral image was once a brave sorcerer who tried to defend his
 temple from the undead which overran it. After dying in an intense battle, he
 was raised to aid his enemies in their takeover.
 ~
-1140852810 1 0 0 2 0 0 -1000 S
-WR 0 512 -1
+1140852810 1 0 0 0 2 0 0 -1000 S
+WR 0 512 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -969,8 +969,8 @@ This undead fiend feeds off the living, draining their souls and transferring
 their energy into him. He wanders the halls of this forsaken temple, looking
 for something to ravage, something to feed on.
 ~
-1140852810 1 0 24 2 0 0 -1000 S
-UV 0 512 -1
+1140852810 1 0 0 24 2 0 0 -1000 S
+UV 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -983,8 +983,8 @@ Once a healer who roamed the hallways of this temple helping others, this
 undead creature was raised to help destroy all living beings. Knowing no fear
 or pain, he looks at you and attacks!
 ~
-1073743950 1 0 0 0 0 0 -1000 S
-U 0 32 -1
+1073743950 1 0 0 0 0 0 0 -1000 S
+U 0 32 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -997,8 +997,8 @@ This one time assassin was killed along with everyone else while praying at
 the Altar of Dexterity. He now serves his master mages in killing everything
 in sight.
 ~
-1140852938 1 0 1572872 2 0 0 -1000 S
-SP 0 8192 -1
+1140852938 1 0 0 1572872 2 0 0 -1000 S
+SP 0 8192 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1011,8 +1011,8 @@ This warrior came to the temple to help fight the undead that were taking
 over. He obviously failed. Now nothing but an animated skeleton, his sole
 purpose in his afterlife is to kill everything he sees.
 ~
-1073743946 1 0 0 0 0 0 -1000 S
-SK 0 1 -1
+1073743946 1 0 0 0 0 0 0 -1000 S
+SK 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1024,8 +1024,8 @@ zombie rotting~
 This decaying corpse of a once valiant fighter has been raised along with
 the other undead to help take over this underground temple.
 ~
-1073743950 1 0 0 0 0 0 -1000 S
-ZO 0 1 -1
+1073743950 1 0 0 0 0 0 0 -1000 S
+ZO 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1038,8 +1038,8 @@ This vicious dragon was summoned forth from the undead to become the
 sidekick of Krahn'ehk. He awaits the opportunity to show his master just how
 willing he is to kill anything he sees.
 ~
-1140852810 1 0 0 2 0 0 -1000 S
-D 0 512 -1
+1140852810 1 0 0 0 2 0 0 -1000 S
+D 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1056,8 +1056,8 @@ unbelievable wealth, that of which the Kings public never knew about. Now the
 King is a servant of the mages, along with the other undead roaming this
 forsaken temple.
 ~
-67110986 1 0 152 2 0 0 -1000 S
-X 0 513 -1
+67110986 1 0 0 152 2 0 0 -1000 S
+X 0 513 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1072,8 +1072,8 @@ could have greatly helped the guards defend the temple from the onslaught.
 Now, like her former husband, she is controlled by the mages, destined to
 live in the afterlife for eternity.
 ~
-67110986 1 0 152 2 0 0 -1000 S
-Y 0 256 -1
+67110986 1 0 0 152 2 0 0 -1000 S
+Y 0 256 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1087,8 +1087,8 @@ him, the royal family, and any visitors that might have come. However, the
 undead do not possess the necessary skills for juggling, nor doing flips, so
 all thats left for this menace to do is kill.
 ~
-1140852936 1 0 1572872 2 0 0 -1000 S
-ZO 0 4096 -1
+1140852936 1 0 0 1572872 2 0 0 -1000 S
+ZO 0 4096 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1102,8 +1102,8 @@ treasure chambers, preventing anyone besides the King himself from coming
 inside. Anyone trying to get past the dragon, will meet swift death, even the
 Queen herself!
 ~
-67110986 1 0 156 2049 0 0 -1000 S
-D 0 512 -1
+67110986 1 0 0 156 2049 0 0 -1000 S
+D 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

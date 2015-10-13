@@ -337,7 +337,7 @@ blood red tear insignia _id_~
 &+Ra blood red tear insignia&N~
 &+RA guild insignia lies here.&N~
 ~
-13 15 3 0 7 0 8 2097153 0 0 0
+13 15 3 0 7 0 8 2097153 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -435,7 +435,7 @@ ring~
 &+Yan ornate gold ring&+w~
 &+YAn expensive looking ring lies glittering here&+w~
 ~
-8 24 3 0 7 0 0 3 0 0 0
+8 24 3 0 7 0 0 3 32768 0 0
 0 0 0 0 0 0 0 0
 1 43895 100
 E
@@ -467,7 +467,7 @@ key metal~
 &+La key for shackles&+w~
 &+LA small metal key lies here&+w~
 ~
-18 15 3 0 7 0 8388616 1 0 0 0
+18 15 3 0 7 0 8388616 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -512,7 +512,7 @@ key~
 &+Wa shackle key&N~
 &+WA key lies here, discarded.&N~
 ~
-18 15 3 0 7 0 8388616 16385 0 0 0
+18 15 3 0 7 0 8388616 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E

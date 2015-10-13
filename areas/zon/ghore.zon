@@ -2,7 +2,7 @@
 &+gGhore&n~
 11967 2 4 10 20 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 11528 5 5 100 0 0 0
@@ -791,6 +791,7 @@ E 1 11570 1 18 100 0 0 0           *   a wooden figurine of Labelas Enoreth
 M 0 11517 13 11702 100 0 0 0       * a small lizard
 G 1 11602 26 0 100 0 0 0           *    a piece of raw meat
 M 0 11503 13 11703 100 0 0 0       * a foul-smelling troll guard
+M 0 401060 1 11703 100 0 0 0       * (mob type not in this .mob file)
 M 0 11510 7 11705 100 0 0 0        * a sickly troll
 E 1 11599 1 15 100 0 0 0           *   a snake spine bracelet
 E 1 11600 1 20 100 0 0 0           *   a pink veil of silk
@@ -1026,6 +1027,5 @@ M 0 11629 3 11960 100 0 0 0        * a female alligator
 M 0 11640 10 11964 100 0 0 0       * a hungry crocodile
 M 0 11628 2 11967 100 0 0 0        * a female alligator
 G 1 11621 1 0 100 0 0 0            *    an alligator tail
-M 0 401060 1 11703 100 0 0 0       * the Ghore Quartermaster
 *
 S

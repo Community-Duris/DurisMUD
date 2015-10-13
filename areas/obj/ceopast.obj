@@ -19,7 +19,7 @@ lock hair~
 &+ga lock of green hair&n~
 &+gA small curl of green hair lies on the ground here.&n~
 ~
-12 30 8 0 15 100 73728 16385 64 0 0
+12 30 8 0 15 100 73728 16385 32832 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -33,7 +33,7 @@ white bell blossom~
 &+Wa white bell blossom&n~
 &+WA single white bell blossom grows here, its purity a sign of luck.&n~
 ~
-12 30 8 0 15 100 8433664 16385 0 0 0
+12 30 8 0 15 100 8433664 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -49,7 +49,7 @@ shard bluestone~
 &+ba sh&+Bard o&+bf blu&+Besto&+bne&n~
 &+bA sh&+Bard o&+bf blu&+Besto&+bne lies here, chipped from the stone rise.&n~
 ~
-12 11 10 0 15 100 45056 16385 0 0 0
+12 11 10 0 15 100 45056 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 1 100
 E
@@ -93,7 +93,7 @@ blood red feather~
 &+Ra blood red&n &+Lfeather&n~
 &+LA small bird feather lies here, its color&n &+Rblood red.&n~
 ~
-12 50 3 0 15 100 45056 16385 64 0 0
+12 50 3 0 15 100 45056 16385 32832 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -120,7 +120,7 @@ black wolf pelt~
 &+La black wolf pelt&n~
 &+LThe pelt of a black wolf lies on the ground here.&n~
 ~
-12 12 3 0 10 100 45056 16385 0 0 0
+12 12 3 0 10 100 45056 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -223,7 +223,7 @@ white wolf pelt~
 &+Wa white wolf pelt&n~
 &+WThe pelt of a white wolf lies on the ground here.&n~
 ~
-12 12 3 0 15 100 12288 16385 0 0 0
+12 12 3 0 15 100 12288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -237,7 +237,7 @@ brown wolf pelt~
 &+ya brown wolf pelt&n~
 &+yA brown wolf pelt lies on the ground here.&n~
 ~
-12 12 3 0 15 100 12288 16385 0 0 0
+12 12 3 0 15 100 12288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E

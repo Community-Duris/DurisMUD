@@ -8,8 +8,8 @@ prison guard~
 &+bShifting his weight from one foot to the other,  the guard
 &+blooks around in search for something in particular.
 ~
-67108874 1 0 268435640 0 0 0 -500 S
-PB 0 1 -1
+67108874 1 0 0 268435640 0 0 0 -500 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -24,8 +24,8 @@ white dragon~
 &+Wenergy.  She doesn't even recognize that the prison cell is
 &+Wnow wide open.
 ~
-1073772686 1 0 285286584 270336 262144 0 -1000 S
-D 0 65 -1
+1073772686 1 0 0 285286584 270336 262144 0 -1000 S
+D 0 65 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -43,8 +43,8 @@ mebme grey elf sage~
 &+mlooks every so poorly these days.  He looks like he might
 &+mpass on to another life.
 ~
-30922 0 0 353968152 272392 0 0 -500 S
-PE 0 512 -1
+30922 0 0 0 353968152 272392 0 0 -500 S
+PE 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -58,8 +58,8 @@ blue dragon~
 &+bdragon is here resting.  She eyes you suspiciously and leaps
 &+bat you when the cell opens!
 ~
-1073772682 1 0 285286584 270336 262144 0 -1000 S
-D 0 513 -1
+1073772682 1 0 0 285286584 270336 262144 0 -1000 S
+D 0 513 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -74,8 +74,8 @@ ximoto dark drow elf~
 &+cwithin the realms.   Ximoto circles the room in anger
 &+cready to strike.
 ~
-161994 1 0 402653560 0 32896 0 -1000 S
-PL 0 512 -1
+161994 1 0 0 402653560 0 32896 0 -1000 S
+PL 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -89,8 +89,8 @@ green dragon large~
 &+gdragon is here resting.  She eyes you suspiciously and leaps
 &+gat you when the cell opens!
 ~
-30922 1 0 285286584 270336 262144 0 -1000 S
-D 0 5 -1
+30922 1 0 0 285286584 270336 262144 0 -1000 S
+D 0 5 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -104,8 +104,8 @@ red dragon~
 &+rdragon is here resting.  She eyes you suspiciously and leaps
 &+rat you when the cell opens!
 ~
-30954 1 0 285286584 270336 262144 0 -1000 S
-D 0 257 -1
+30954 1 0 0 285286584 270336 262144 0 -1000 S
+D 0 257 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -119,8 +119,8 @@ black dragon large~
 &+Ldragon is here resting.  She eyes you suspiciously and leaps
 &+Lat you when the cell opens!
 ~
-1074821322 1 0 285286584 270336 262144 0 -1000 S
-D 0 65 -1
+1074821322 1 0 0 285286584 270336 262144 0 -1000 S
+D 0 65 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -134,8 +134,8 @@ prison guard~
 &+bShifting his weight from one foot to the other,  the guard
 &+blooks around in search for something in particular.
 ~
-30922 0 0 268435640 0 0 0 -500 S
-PB 0 1 -1
+30922 0 0 0 268435640 0 0 0 -500 S
+PB 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -150,8 +150,8 @@ ximota drow elf priestess~
 &+cShe has powers unlike many clerics in her race.  Ximota
 &+ccircles the room in anger ready to strike.
 ~
-161994 1 0 402653560 262144 32896 0 -1000 S
-PL 0 32 -1
+161994 1 0 0 402653560 262144 32896 0 -1000 S
+PL 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -169,8 +169,8 @@ gixmo captain~
 &+rHe mumbles something barely audible.  He looks up at you,
 &+rsmiles and says &+W"Hey mate! How can I help you?"
 ~
-67139786 0 0 822157432 440512 128 0 -1000 S
-PH 0 32769 -1
+67139786 0 0 0 822157432 440512 128 0 -1000 S
+PH 0 32769 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -183,8 +183,8 @@ deck hand~
 &+mship.  He hums a soft melody to himself as his continues
 &+mto do his job.
 ~
-2252 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2252 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -198,8 +198,8 @@ about these quarters preparing a meal for the crew's
 enjoyment.  Wearing a chef's hat, he looks at you and
 wonders why you have come to bother him.
 ~
-30922 0 0 72 0 0 0 -1000 S
-PH 0 1 -1
+30922 0 0 0 72 0 0 0 -1000 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -213,8 +213,8 @@ drunken sailor~
 &+mno apparent reason.  He seems to have forgotten his assigned
 &+mtask of securing the prisoners down below.
 ~
-2250 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2250 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -228,8 +228,8 @@ resting sailor~
 &+mfilled with many jobs.  He has now retired to these
 &+mquarters to get his much deserved rest.
 ~
-2250 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2250 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -243,8 +243,8 @@ resting sailor~
 &+mfilled with many jobs.  He has now retired to these
 &+mquarters to get his much deserved rest.
 ~
-2250 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2250 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -259,8 +259,8 @@ gira mistress~
 &+Yhair and wears a special ruby medallion around her neck.
 &+YShe eyes you suspiciously as you enter her bedroom.
 ~
-1073772746 0 0 805380124 6336 64 0 -1000 S
-PH 0 32768 -1
+1073772746 0 0 0 805380124 6336 64 0 -1000 S
+PH 0 32768 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -277,8 +277,8 @@ iktib~
 &+Mfrustrated by these stupid members of the crew.  He
 &+Mpays no attention to you when you enter his study.
 ~
-1073772746 0 0 419504376 0 67141632 0 -1000 S
-PH 0 16 -1
+1073772746 0 0 0 419504376 0 67141632 0 -1000 S
+PH 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -292,8 +292,8 @@ sailor~
 &+band quickly scribbles down some instructions.  He pays
 &+bno attention to your scrawny presence.
 ~
-67139786 0 0 248 0 0 0 0 S
-PH 0 1 -1
+67139786 0 0 0 248 0 0 0 0 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -310,8 +310,8 @@ gatt old minotaur~
 &+Gdarkend holding cell appearing to grow quite angry
 &+Gnow.  He is trying to figure out a way for an escape.
 ~
-1073772746 56 0 805380348 0 0 0 -1000 S
-MT 0 1 -1
+1073772746 56 0 0 805380348 0 0 0 -1000 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -326,8 +326,8 @@ prison guard elite~
 &+Lcome up for some fresh air and a change of scenery. He
 &+Leyes you with some suspicion.
 ~
-30922 0 0 268435704 0 0 0 -500 S
-PB 0 1 -1
+30922 0 0 0 268435704 0 0 0 -500 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -343,8 +343,8 @@ by Master Boyard and has since been travelling aboard the prison
 ship. She acknowledges your presence as he continues with his
 ritual.  She prays for a way to escape.
 ~
-30922 0 0 352395388 276672 128 0 -300 S
-CT 0 256 -1
+30922 0 0 0 352395388 276672 128 0 -300 S
+CT 0 256 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -359,8 +359,8 @@ grant her an new inner strength that she may use for every
 wish of the Master and the Queen.  She has long golden locks
 of hair.  She wears a dark robes about her body.
 ~
-30922 0 0 805380348 0 192 0 -1000 S
-X 0 32 6
+30922 0 0 0 805380348 0 192 0 -1000 S
+X 0 32 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -375,8 +375,8 @@ gate guard~
 &+bthe guard blooks around in search for something in
 &+bparticular.
 ~
-30922 0 0 268435640 0 0 0 -500 S
-PB 0 1 -1
+30922 0 0 0 268435640 0 0 0 -500 S
+PB 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -390,8 +390,8 @@ within the church taking care of daily chores.  He is a young
 centaur who seeks to help the church of fort.  He smiles
 at you as he makes his way.
 ~
-2250 0 0 73772 12480 0 0 0 S
-CT 0 128 -1
+2250 0 0 0 73772 12480 0 0 0 S
+CT 0 128 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

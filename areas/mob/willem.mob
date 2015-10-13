@@ -8,8 +8,8 @@ forehead. That, and the fact that it doesn't seem to be very afraid
 of intruders, would tend to indicate that this is no ordinary squirrel
 at all.
 ~
-1073741832 0 0 0 0 0 0 0 S
-A 0 0 -1
+1073741832 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -22,8 +22,8 @@ This frightening creature has an elongated body, which allows enough room
 for two pairs of wings! Other than that it seems to be much like a normal
 raven, capricious and unimportant.
 ~
-136 0 0 0 0 0 0 0 S
-B 0 0 -1
+136 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -37,8 +37,8 @@ again as many legs as its cousins. It uses all these legs to scramble
 deftly over the chaotic vegetation in the park, all the while creating
 a huge and complex web in its wake.
 ~
-8 0 0 0 0 0 0 0 S
-AS 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+AS 0 0 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -52,8 +52,8 @@ druid corwyck~
 &+glost something in their many folds. He bolts upright for a moment, a
 &+glook of near-bliss on his face, but then slumps and looks downcast.
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 128 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 128 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -66,8 +66,8 @@ grinning shadow~
 &+Lwithout shape, without feature, with one exception. One can barely
 &+Lmake out, deep within the darkness, a hideous grin.
 ~
-1073872906 1 0 0 0 0 0 -500 S
-UG 0 32 -1
+1073872906 1 0 0 0 0 0 0 -500 S
+UG 0 32 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -83,8 +83,8 @@ gorma woman barbarian~
 &+rremain are some trinkets placed about her body. She has obviously
 &+rsuccumbed to lunacy from being trapped here for so very long.
 ~
-1073741832 1 0 0 0 0 0 0 S
-PB 0 1 -1
+1073741832 1 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -98,8 +98,8 @@ figure okhell~
 &+Lonce very fine, but after an indeterminate period in this oubliette he has
 &+Lreduced them to little more than rags.
 ~
-1073741837 1 0 0 0 0 0 0 S
-P2 0 512 -1
+1073741837 1 0 0 0 0 0 0 0 S
+P2 0 512 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -113,8 +113,8 @@ kalmidor dwarf~
 &+bA fearsome warhammer rests at his side.He appears to have responded to his
 &+bimprisonment by losing his mind and his volition.
 ~
-1073743880 1 0 0 0 0 0 1000 S
-PM 0 32 -1
+1073743880 1 0 0 0 0 0 0 1000 S
+PM 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -128,8 +128,8 @@ elf chlyridia druid~
 &+girreparably damaged. She constantly readjusts her clothing and mutters
 &+glong-forgotten Elvish words to herself.
 ~
-1073741832 1 0 0 0 0 0 0 S
-PE 0 128 -1
+1073741832 1 0 0 0 0 0 0 0 S
+PE 0 128 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -143,8 +143,8 @@ snarling manticore~
 &+Lback and forth menacingly. It bares its teeth at any that might intrude
 &+Lon its home.
 ~
-1073743886 1 0 34078720 0 0 0 -500 S
-A 0 1 -1
+1073743886 1 0 0 34078720 0 0 0 -500 S
+A 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -158,8 +158,8 @@ ballic halfling thief rogue~
 &+yhair is unkempt and his face is filthy. He fingers a dagger, tossing it
 &+yabsentmindedly from hand to hand.
 ~
-1073743884 1 0 0 0 0 0 0 S
-PF 0 4096 -1
+1073743884 1 0 0 0 0 0 0 0 S
+PF 0 4096 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -172,8 +172,8 @@ a &+gg&+Li&+ga&+Ln&+gt c&+ye&+gn&+yt&+gi&+yp&+ge&+yd&+ge~
 &+gcity. It can travel through the rough terrain far better than two- or
 &+gfour-legged folk, and seems to be thriving.
 ~
-2120 0 0 33554432 0 0 0 0 S
-I 0 0 -1
+2120 0 0 0 33554432 0 0 0 0 S
+I 0 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -186,8 +186,8 @@ a &+ggar&+Lg&+gan&+Lt&+guan centipede~
 &+gmother, or leader of all the centipedes in the city. It seems to keep
 &+gquite busy looking after the other, smaller centipedes that surround it.
 ~
-1140852810 0 0 33554432 0 0 0 0 S
-I 0 0 -1
+1140852810 0 0 0 33554432 0 0 0 0 S
+I 0 0 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -200,8 +200,8 @@ Somehow, even though this creature is far larger than the average insect,
 it is apparent that it is immature. It races around in circles and seems
 to lack the purpose that an adult hunter or gatherer would possess.
 ~
-67108938 0 0 0 0 0 0 0 S
-I 0 0 -1
+67108938 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -214,8 +214,8 @@ lump ooze green~
 &+Gseems to exist solely to consume, and moves toward this goal with great
 &+Gferocity.
 ~
-2120 0 0 33554432 0 0 0 1000 S
-AP 0 0 -1
+2120 0 0 0 33554432 0 0 0 1000 S
+AP 0 0 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -228,8 +228,8 @@ piece water ooze blue~
 &+Bthe room. It leaves a trail of itself, and seems to be intent on getting
 &+Bsomewhere.
 ~
-2120 0 0 33554432 0 0 0 0 S
-AP 0 0 -1
+2120 0 0 0 33554432 0 0 0 0 S
+AP 0 0 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -242,8 +242,8 @@ puddle blood ooze crimson red~
 &+rpuddle of blood, but one of the many oozes that roam this dead city. It
 &+rmoves quickly, searching for something to devour.
 ~
-2120 0 0 33554432 0 0 0 -1000 S
-AP 0 0 -1
+2120 0 0 0 33554432 0 0 0 -1000 S
+AP 0 0 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -257,8 +257,8 @@ pudding black blob ooze~
 &+Lis constantly changing shape, forming appendages of various sorts. It
 &+Lperiodically makes a low gurgling sound.
 ~
-1073743886 0 0 33554432 0 0 0 -500 S
-AP 0 1 -1
+1073743886 0 0 0 33554432 0 0 0 -500 S
+AP 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -272,8 +272,8 @@ rhagodessa spider~
 &+yas its moves among its webs, checking on the unfortunate souls that have
 &+ybeen caught and brought here to be eaten.
 ~
-10 1 0 33554440 2 0 0 -500 S
-AS 0 1 -1
+10 1 0 0 33554440 2 0 0 -500 S
+AS 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 0
@@ -288,8 +288,8 @@ spider rhagodessa~
 &+yjust appears menacing about the spider, though it seems to have no
 &+yinterest in anything but moving onwards.
 ~
-1073743948 0 0 33554432 2 0 0 0 S
-AS 0 1 -1
+1073743948 0 0 0 33554432 2 0 0 0 S
+AS 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -303,8 +303,8 @@ young man naive adventurer~
 &+yornate shield. He stares in awe at the sight of this place, mouth and eyes
 &+ywide open, and mumbles something about someone named 'Willem.'
 ~
-2248 128 0 0 0 0 0 1000 S
-PH 0 1 -1
+2248 128 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -319,8 +319,8 @@ elf lothrell~
 &+gto be getting unpleasant answers to his questions, because he sighs and
 &+glooks to the sky. Suddenly he fairly screams "&+rTurol!&+g"
 ~
-1073747976 0 0 0 0 0 0 400 S
-PE 0 2048 -1
+1073747976 0 0 0 0 0 0 0 400 S
+PE 0 2048 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -333,8 +333,8 @@ stallion horse~
 &+yits belly and legs. However, it barely moves, and simply stares at the wall
 &+yopposite its stall. It seems almost to be under an enchantment of some sort.
 ~
-134217738 0 0 0 0 0 0 0 S
-AE 0 0 -1
+134217738 0 0 0 0 0 0 0 0 S
+AE 0 0 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -349,8 +349,8 @@ unicorn~
 &+Wto her stall, over and over, but thus far has had little luck in breaking
 &+Wfree.
 ~
-1140856840 32 0 34078720 2 0 0 1000 S
-AE 0 32 -1
+1140856840 32 0 0 34078720 2 0 0 1000 S
+AE 0 32 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -364,8 +364,8 @@ a &+rCrimson Watch &+wsentinel~
 &+rdown each pants leg, and wields a gleaming longsword. He stares straight
 &+rahead, unblinking.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -380,8 +380,8 @@ elf drow emissary~
 &+melf sent to establish relations with the powerful rulers of Duris, from
 &+mWillem of Turol to Utgard-Loki himself.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-PL 0 512 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+PL 0 512 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -396,8 +396,8 @@ kurtukr dwarf smith~
 &+bHe looks at the ruined surroundings with a critical eye, as though he is
 &+bthinking about single-handedly repairing the entire city.
 ~
-1073743950 0 0 33554444 0 0 0 800 S
-PM 0 1 -1
+1073743950 0 0 0 33554444 0 0 0 800 S
+PM 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -413,8 +413,8 @@ gnome sprecken~
 &+Y"A bloodsaber! A bloodsaber!" and tears it from the debris. It is merely
 &+Ya rusted iron bar, and Sprecken throws it down in disgust.
 ~
-67110988 0 0 0 0 0 0 1000 S
-PG 0 0 -1
+67110988 0 0 0 0 0 0 0 1000 S
+PG 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -429,8 +429,8 @@ dressed in an outrageous patchwork outfit of bright &+Ggreen &+wand &+Yyellow&+w
 and his unruly mop of blond hair flips back and forth as he does his
 acrobatics.
 ~
-1073743948 0 0 0 0 0 0 0 S
-PH 0 4096 -1
+1073743948 0 0 0 0 0 0 0 0 S
+PH 0 4096 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -443,8 +443,8 @@ This terrifying creature is twenty feet in diameter, and extends back into
 the cavern for an indefinite distance. From this vantage point it appears
 to be little more than a gigantic, ravening mouth.
 ~
-8388618 1 0 8 2 0 0 -1000 S
-RS 0 1 -1
+8388618 1 0 0 8 2 0 0 -1000 S
+RS 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -458,8 +458,8 @@ minotaur mino~
 &+Lfrom the martial to the practical. He gazes into a mirror, turning his
 &+Lhead this way and that, peering closely at the reflection of his horns.
 ~
-1140852750 0 0 0 0 0 0 0 S
-MT 0 2048 -1
+1140852750 0 0 0 0 0 0 0 0 S
+MT 0 2048 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -472,8 +472,8 @@ rat giant~
 &+yway along, hunting in vain for some morsel of food. A piteous squeak escapes
 &+yits lips.
 ~
-2184 0 0 0 0 0 0 -500 S
-A 0 0 -1
+2184 0 0 0 0 0 0 0 -500 S
+A 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -488,8 +488,8 @@ A member of the &+rCrimson Watch &+wstands here, guarding the cells.
 &+rwith an additional insignia on his left shoulder. It is a series of
 &+rparallel lines, perhaps identifying him as keeper of the dungeon.
 ~
-2058 1 0 0 0 0 0 -800 S
-PH 0 1 -1
+2058 1 0 0 0 0 0 0 -800 S
+PH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -503,8 +503,8 @@ thri thri-kreen prisoner~
 &+YDark green poison drips from its mandibles as it digs deeper and deeper
 &+Yinto the wall.
 ~
-1073741832 1 0 0 0 0 0 -1000 S
-TK 0 1 -1
+1073741832 1 0 0 0 0 0 0 -1000 S
+TK 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -519,8 +519,8 @@ dragon creature drake wooddrake~
 &+gquite uncomfortable in this environment, being far from the woodlands of
 &+gits birth.
 ~
-1073743912 0 0 135266306 32770 0 0 1000 S
-DK 0 1 -1
+1073743912 0 0 0 135266306 32770 0 0 1000 S
+DK 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -534,8 +534,8 @@ shaman~
 &+mof beard. He whittles at a piece of bone, forming the shape of a &+Wwhite
 &+Wwolf&+m. He exudes an aura of goodnes, of holiness, rarely found in a shaman.
 ~
-1140852744 0 0 0 0 0 0 1000 S
-PB 0 256 -1
+1140852744 0 0 0 0 0 0 0 1000 S
+PB 0 256 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -549,8 +549,8 @@ fop mishka~
 &+Coutfit of various expensive cloths. A smile crosses his pasty face as he
 &+Crealizes what a beautiful man he is.
 ~
-1073743880 128 0 0 0 0 0 0 S
-PH 0 32768 -1
+1073743880 128 0 0 0 0 0 0 0 S
+PH 0 32768 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -565,8 +565,8 @@ jalk captain guard watch watchman~
 &+yEven now, he has withstood the madness that has swept so many of the others,
 &+yand patiently discusses escape with his liege.
 ~
-67110922 0 0 0 0 0 0 -1000 S
-PB 0 1 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+PB 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -579,8 +579,8 @@ willem lord anti antipaladin~
 &+rface. Dressed in a suit of blackest field plate, he strides about the room
 &+rconferring with Jelk and Amanthia, plotting his escape and revenge.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-PH 0 16 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+PH 0 16 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -596,8 +596,8 @@ amanthia castellan~
 &+BBloodstone school of wizardry, rather than the more common Tharnadian
 &+Bschool.
 ~
-67110922 0 0 0 0 0 0 -1000 S
-PH 0 1024 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+PH 0 1024 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -611,8 +611,8 @@ emblazoned over his heart. The same pattern can be seen tattooed inside his
 left wrist. He has difficulty breathing, and walks with a marked limp.
 He seems to be looking endlessly for rest.
 ~
-2190 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2190 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -626,8 +626,8 @@ A member of the &+rCrimson Watch &+wroams the palace.
 &+rWatch uniform, vaguely waving his sword in various directions, and talking
 &+ragitatedly to various chairs, wall ornaments, and potted plants.
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-PH 0 1 -1
+1073743880 1 0 0 0 0 0 0 -1000 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

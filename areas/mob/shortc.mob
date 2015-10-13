@@ -10,8 +10,8 @@ He decides which slaves are no longer able to work and should serve as a food
 for dogs. He is treating them much worse than dogs.
 &+WHe is a local god.&n
 ~
-67110986 0 0 65536 0 0 0 -1000 S
-HO 0 1 -1
+67110986 0 0 0 65536 0 0 0 -1000 S
+HO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -35,8 +35,8 @@ him to the slave encampement of their friendly tribe, Split Shield.
 Too bad orcs from Split Shield decided he is no good as a slave. Too stubborn.
 And that's how he got trapped in this cell, let to die from starvation.
 ~
-2062 0 0 33587200 1026 0 0 1000 S
-PB 0 1 -1
+2062 0 0 0 33587200 1026 0 0 1000 S
+PB 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -50,8 +50,8 @@ doberman dog black large~
 &+rshelter before the beast catches you&+Y!&+r This dog is so savage, he only accepts
 &+rpresence of his master, and attacks all and every other living beings&+Y!&+r
 ~
-264202 1 0 33554432 0 0 0 -1000 S
-AC 0 1 4
+264202 1 0 0 33554432 0 0 0 -1000 S
+AC 0 1 0 4
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -64,8 +64,8 @@ An elf lies here, chained to the wall.
 vicinity of an orcish village Split Shield, which is placed near elven town.
 He seems to be quite exhausted by the hard work he's doing here.
 ~
-67111050 0 0 0 28 0 0 1000 S
-PE 4 1 -1
+67111050 0 0 0 0 28 0 0 1000 S
+PE 4 1 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -78,8 +78,8 @@ An elven woman lies here, chained to the wall.
 of an orcish village named Split Shield, which is placed nearby elven town.
 She seems to be quite exhausted by the hard work she's doing here.
 ~
-2186 0 0 0 28 0 0 1000 S
-PE 4 0 -1
+2186 0 0 0 0 28 0 0 1000 S
+PE 4 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -92,8 +92,8 @@ An elven woman lies here, chained to the wall.
 of an orcish village named Split Shield, which is placed nearby elven town.
 She seems to be quite exhausted by the hard work she's doing here.
 ~
-2186 0 0 0 28 0 0 1000 S
-PE 4 0 -1
+2186 0 0 0 0 28 0 0 1000 S
+PE 4 0 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -107,8 +107,8 @@ in this slave camp as a guard. His duties are not very hard, as all slaves
 are being kept chained to walls anyway. So his main task here is watching
 for kids who are too young to get chained, and fetching himself good food.
 ~
-67110920 0 0 33554432 0 0 0 -700 S
-HO 0 1 -1
+67110920 0 0 0 33554432 0 0 0 -700 S
+HO 0 1 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -122,8 +122,8 @@ orcs captured during their raid in the vicinity of orcish village Split
  Shield, which is placed near elven town.
 She is crying aloud, here in this prison.
 ~
-2186 0 0 0 28 0 0 1000 S
-PE 4 0 -1
+2186 0 0 0 0 28 0 0 1000 S
+PE 4 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -135,8 +135,8 @@ A half-elf lies here, chained to the wall.
    This half-elf was captured by orcs during one of their raids on goodie
 continent. He has gone through many tortures, but still seems to be alive.
 ~
-2186 0 0 0 28 0 0 500 S
-P2 1 2 -1
+2186 0 0 0 0 28 0 0 500 S
+P2 1 2 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -149,8 +149,8 @@ A half-elven woman lies here, chained to the wall.
 continent. She has gone through many tortures, has been raped too, but still
 seems to be alive. Probably not for long...
 ~
-2186 0 0 0 28 0 0 500 S
-P2 1 0 -1
+2186 0 0 0 0 28 0 0 500 S
+P2 1 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -163,8 +163,8 @@ A half-elf child plays with his own crap here.
 continent. She has gone through many tortures, has been raped too, but still
 seems to be alive. Probably not for long...
 ~
-2186 0 0 0 28 0 0 500 S
-P2 1 0 -1
+2186 0 0 0 0 28 0 0 500 S
+P2 1 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -176,8 +176,8 @@ A half-elf child stares at the wall with frightened eyes.
    This half-elf was born in this prison, and will propably stay here rest of
 her short life.
 ~
-2186 0 0 0 28 0 0 500 S
-P2 1 0 -1
+2186 0 0 0 0 28 0 0 500 S
+P2 1 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -191,8 +191,8 @@ But evil orcs gathered their endless hoards, and during one dark night they
 invaded Ugta, capturing everyone they could, and killing everyone they
 couldn't capture. God one knows what would be worse...
 ~
-67111050 0 0 0 28 0 0 0 S
-PB 11 16384 -1
+67111050 0 0 0 0 28 0 0 0 S
+PB 11 16384 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -206,8 +206,8 @@ But evil orcs gathered their endless hoards, and during one dark night they
 invaded Ugta, capturing everyone they could, and killing everyone they
 couldn't capture. God one knows what would be worse...
 ~
-67111050 0 0 0 28 0 0 0 S
-PB 11 16384 -1
+67111050 0 0 0 0 28 0 0 0 S
+PB 11 16384 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -221,8 +221,8 @@ But evil orcs gathered their endless hoards, and during one dark night they
 invaded Ugta, capturing everyone they could, and killing everyone they
 couldn't capture. God one knows what would be worse, especially for women...
 ~
-2186 0 0 0 28 0 0 0 S
-PB 11 0 -1
+2186 0 0 0 0 28 0 0 0 S
+PB 11 0 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -234,8 +234,8 @@ A barbarian boy sulks in the corner of the cell.
    This barbarian boy was marely three months old when orcs invaded Ugta.
 Noone knows for what reason they spared him, but this reason cant be any good.
 ~
-2186 0 0 0 28 0 0 0 S
-PB 11 0 -1
+2186 0 0 0 0 28 0 0 0 S
+PB 11 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -248,8 +248,8 @@ A dirty barbarian girl plays in the dust here.
 would be even more sad if she'd realize what is going to happen to her in the
 future...
 ~
-2186 0 0 0 28 0 0 0 S
-PB 11 0 -1
+2186 0 0 0 0 28 0 0 0 S
+PB 11 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -261,8 +261,8 @@ A dwarf lies here, chained to the wall.
    This dwarf was once a leading miner in mithril mine near Kimordril.
 Now he's nothing but a living wreck...
 ~
-2186 0 0 0 28 0 0 500 S
-PM 5 1 -1
+2186 0 0 0 0 28 0 0 500 S
+PM 5 1 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -275,8 +275,8 @@ A dwarf woman lies here, chained to the wall.
 She hoped to get a caring and rich husband. But all she gained in her life is
 this here cell in the slave camp...
 ~
-2186 0 0 0 28 0 0 500 S
-PM 5 0 -1
+2186 0 0 0 0 28 0 0 500 S
+PM 5 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -289,8 +289,8 @@ A dwarf woman lies here, chained to the wall.
 She hoped to get a caring and rich husband. But all she gained in her life is
 this here cell in the slave camp...
 ~
-2186 0 0 0 28 0 0 500 S
-PM 5 0 -1
+2186 0 0 0 0 28 0 0 500 S
+PM 5 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -302,8 +302,8 @@ A dwarf boy sits here with stupid look in his eyes.
    This dwarven boy will never venture anywhere outside this camp and nearby
 mines. During his mortal life, of course. But that won't take long...
 ~
-2186 0 0 0 28 0 0 500 S
-PM 5 0 -1
+2186 0 0 0 0 28 0 0 500 S
+PM 5 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -315,8 +315,8 @@ A dwarf girl lies here on the ground, naked and innocent.
    This dwarven girl is still as innocent as a little angel itself. This is
 mainly becouse she's too young even for most crazed orc tastes.
 ~
-2186 0 0 0 28 0 0 500 S
-PM 5 0 -1
+2186 0 0 0 0 28 0 0 500 S
+PM 5 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -330,8 +330,8 @@ captured right before Tannadian gates. It's not uncommon for orcs to set such
 wicked trap on used roads leading from populated towns. And this man realized
 it too late.
 ~
-2186 0 0 0 28 0 0 0 S
-PH 1 1 -1
+2186 0 0 0 0 28 0 0 0 S
+PH 1 1 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -345,8 +345,8 @@ captured right before Tannadian gates. It's not uncommon for orcs to set such
 wicked trap on used roads leading from populated towns. And this woman
  realized it, but a little too late. Whole life too late...
 ~
-2186 0 0 0 28 0 0 0 S
-PH 1 0 -1
+2186 0 0 0 0 28 0 0 0 S
+PH 1 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -360,8 +360,8 @@ captured right before Tannadian gates. It's not uncommon for orcs to set such
 wicked trap on used roads leading from populated towns. And this woman
  realized it, but a little too late. Whole life too late...
 ~
-2186 0 0 0 28 0 0 0 S
-PH 1 0 -1
+2186 0 0 0 0 28 0 0 0 S
+PH 1 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -374,8 +374,8 @@ A human boy sits here, staring at the ceiling.
 into the ceiling. He can also catch fleas and cockroaches, or try to peer out
 of his cell. Pretty nice, isn't it?
 ~
-2186 0 0 0 28 0 0 0 S
-PH 1 0 -1
+2186 0 0 0 0 28 0 0 0 S
+PH 1 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -388,8 +388,8 @@ A human girl is lying here, sleeping.
 She was thrown back into the cell today morning. Since then, she is still
 asleep. She sobs quietly.
 ~
-2186 0 0 0 28 0 0 0 S
-PH 1 0 -1
+2186 0 0 0 0 28 0 0 0 S
+PH 1 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 2
@@ -402,8 +402,8 @@ A gnome lies here, chained to the wall.
 probably end up as nothing more than a rug under the bed of some orcish brute.
 He shouldn't have tried raiding the evil continent...
 ~
-2186 0 0 0 28 0 0 500 S
-PG 8 512 -1
+2186 0 0 0 0 28 0 0 500 S
+PG 8 512 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -415,8 +415,8 @@ A gnomish woman lies here, chained to the wall.
    Once an excellent wife-to-be, this young gnomish girl ventured a bit too
 far outside her hometown. And this is where she ended up...
 ~
-2186 0 0 0 28 0 0 500 S
-PG 8 0 -1
+2186 0 0 0 0 28 0 0 500 S
+PG 8 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -429,8 +429,8 @@ A gnomish boy is here, enjoying the life as it is.
 with almost everywhere. He plays with cockroaches, he plays with rats.
 He uses rotting hay as his main toy. Such happiness in such poor conditions...
 ~
-2186 0 0 0 28 0 0 500 S
-PG 8 0 -1
+2186 0 0 0 0 28 0 0 500 S
+PG 8 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -443,8 +443,8 @@ A gnomish girl is here, not caring for her surrounding.
 much in the way she does not. Her apathic face shows no expression as she sits
 in the corner of the cell silently.
 ~
-2186 0 0 0 28 0 0 500 S
-PG 8 0 -1
+2186 0 0 0 0 28 0 0 500 S
+PG 8 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

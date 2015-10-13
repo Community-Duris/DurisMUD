@@ -6,8 +6,8 @@ bird gay happy~
 You see a happy, gay-bird with an abundance of red and blue colors.  He
 chirps at you with delight.
 ~
-72 0 0 0 0 0 0 1000 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -18,8 +18,8 @@ bird pretty song songbird~
 ~
 The beautiful beak of the bird opens in a gesture of greeting as it sees you.
 ~
-72 0 0 0 0 0 0 1000 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -30,8 +30,8 @@ A &+Yhoney&N &+y bee is humming softly.
 ~
 You see just an average bee.  It looks pretty busy collecting pollen.
 ~
-72 0 0 0 0 0 0 200 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 200 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -42,8 +42,8 @@ A &+Lbig &+Ybumble bee buzzes about.
 ~
 You see a bee twice the size of normal honey bees.
 ~
-72 0 0 0 0 0 0 200 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 200 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -54,8 +54,8 @@ A scavenger beetle is looking for food.
 ~
 You stare at a beetle that is quite small.  It is frightened by your presence.
 ~
-72 0 0 8 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 8 0 0 0 0 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -67,8 +67,8 @@ A &+yrocky&n looking insect sits motionless here.
 You see a rock basically, but after staring at it for a while you notice
 slight movements.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 5 5 0
@@ -80,8 +80,8 @@ A tree sapling stands here, its living arms waving in the breeze.
 This baby treant is not nearly as large as its colossal parents.  The branches
 are still soft and very bendable.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -93,8 +93,8 @@ A monarch &+rb&+Ru&+rt&+Rt&+re&+Rr&+rf&+Rl&+ry&n flutters around.
 You behold the most beautiful species of butterflies.  If flies around showing
 off its proud colors.
 ~
-72 0 0 0 0 0 0 300 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 300 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -105,8 +105,8 @@ A furry &+gvermin&n scurries about.
 ~
 You can't really see anything except lots of dirty, brown fur.
 ~
-72 0 0 8 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 8 0 0 0 0 S
+A 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -118,8 +118,8 @@ A nasty looking critter is here stinking up the place.
 You look away quick and hold your breath.  Not only is it ugly, but it smells
 awful. It appears to be some kind of rat or mouse, but you can't be sure.
 ~
-72 0 0 8 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 8 0 0 0 0 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -130,8 +130,8 @@ A g&+ge&nc&+gk&no sits quietly in the bushes.
 ~
 You see a small green lizard that's pretty harmless.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -142,8 +142,8 @@ A fuzzy caterpillar is climbing up a tree.
 ~
 You see a yellow, green, and black bug wiggling his body up a tree.
 ~
-72 0 0 0 0 0 0 300 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 300 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -154,8 +154,8 @@ An inchworm inches around a marigold.
 ~
 You see an insect roughly the length of an inch.
 ~
-72 0 0 0 0 0 0 100 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 100 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -166,8 +166,8 @@ A &+rladybug&n flys around in search of other insects to devourer.
 ~
 You see a red insect with four black spots on its back.
 ~
-131144 0 0 8 0 0 0 600 S
-A 0 0 -1
+131144 0 0 0 8 0 0 0 600 S
+A 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 2
@@ -178,8 +178,8 @@ A small spider lies on its back here.
 ~
 You see a midget of a spider and it looks pretty helpless.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -190,8 +190,8 @@ A &+Mhyper&n acting squirrel is running around.
 ~
 You see a brown critter that has a terrified look in its eyes.
 ~
-72 0 0 0 0 0 0 100 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 100 S
+A 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -203,8 +203,8 @@ An ugly buzzard is eating a rotten corpse.
 This carnivore eats without passion displaying a good survival of the fittest
 adaptation.
 ~
-72 0 0 0 0 0 0 -250 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 -250 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -215,8 +215,8 @@ A &+Rred&n-headed woodpecker is pecking at a tree.
 ~
 You see a bird with red feathers and a strong, sharp beak.
 ~
-72 0 0 0 0 0 0 400 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 400 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -227,8 +227,8 @@ A small hummingbird is sucking on nectar.
 ~
 You see a tiny blue bird with frantically flapping wings.
 ~
-72 0 0 0 0 0 0 550 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 550 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -239,8 +239,8 @@ A mean vulture looks really tough.
 ~
 This large bird glares at you quite confidently.
 ~
-131144 0 0 8 0 0 0 -400 S
-A 0 0 -1
+131144 0 0 0 8 0 0 0 -400 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -251,8 +251,8 @@ A fat cow stands here chewing on the dry grass.
 ~
 This animal looks like it's about to explode from too much grass.
 ~
-10 0 0 0 0 0 0 100 S
-A 0 0 -1
+10 0 0 0 0 0 0 0 100 S
+A 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -263,8 +263,8 @@ A wild mare rears back on her hind legs.
 ~
 You see a splendid creature as free as the wind.
 ~
-10 0 0 0 0 0 0 500 S
-A 0 0 -1
+10 0 0 0 0 0 0 0 500 S
+A 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 2
@@ -276,8 +276,8 @@ A scared piglet squeals loudly here.
 A cute, pinkish babypig is frightened by your presence and he runs about
 frantically.
 ~
-10 0 0 0 0 0 0 500 S
-A 0 0 -1
+10 0 0 0 0 0 0 0 500 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 1
@@ -289,8 +289,8 @@ A large sow is lazily sleeping.
 A large female pig snores at you. She is a palish pink in color
 and looks rather dirty.
 ~
-10 0 0 0 0 0 0 300 S
-A 0 0 -1
+10 0 0 0 0 0 0 0 300 S
+A 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 2
@@ -301,8 +301,8 @@ A peasant farmer tries to grow some crops.
 ~
 You see a skinny fella with raggedy clothes and a dirty, worn out straw hat.
 ~
-10 0 0 0 0 0 0 500 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 500 S
+H 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
@@ -314,8 +314,8 @@ A peasant guard belongs back on the farm.
 You stifle a laugh as the "guard" attempts to glare you down. He doesn't
 look strong enough to lift a puppy dog.
 ~
-12 0 0 0 0 0 0 500 S
-H 0 0 -1
+12 0 0 0 0 0 0 0 500 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -327,8 +327,8 @@ A village guardian tries to prevent petty crimes.
 A strong-looking young man with a clean shaven face bows his head to you
 in a gesture of respect and greeting. His mama must be very proud of him.
 ~
-12 0 0 0 0 0 0 750 S
-H 0 0 -1
+12 0 0 0 0 0 0 0 750 S
+H 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -340,8 +340,8 @@ A lowly peasant girl is begging for food.
 She looks at you with very sad eyes and holds out her hand to you, hoping
 for some relief. You see that she has been crying...
 ~
-12 0 0 0 0 0 0 500 S
-H 0 0 -1
+12 0 0 0 0 0 0 0 500 S
+H 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 2
@@ -353,8 +353,8 @@ A peasant boy begs you for a copper coin.
 You see a skinny little boy with bags under his eyes. He looks really
 hungry and poor.
 ~
-76 0 0 0 0 0 0 500 S
-H 0 0 -1
+76 0 0 0 0 0 0 0 500 S
+H 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
@@ -365,8 +365,8 @@ A village grandpa scratches his grubby beard.
 ~
 You see an ancient man with a very crooked stick which he waves in your face.
 ~
-4188 0 0 0 0 0 0 700 S
-H 0 0 -1
+4188 0 0 0 0 0 0 0 700 S
+H 0 0 0 -1
 50 -7 -117 57d120+5871 7d6+35
 2.4.8.6 230850
 8 8 1
@@ -379,8 +379,8 @@ You see a sweet old lady who is in great shape for her age. She looks like
 she can still wrestle crocodiles with ease. She sees you, smiles, then says
 "Don't even think about it, I'll send you home in a diaper bag."
 ~
-4172 0 0 128 0 0 0 1000 S
-H 0 0 -1
+4172 0 0 0 128 0 0 0 1000 S
+H 0 0 0 -1
 20 -7 -125 750d1+50 4d4+20
 3.4.8.6 1
 8 8 2
@@ -391,8 +391,8 @@ The village grump is always here complaining.
 ~
 The grumpy guy sees you and starts complaining about your bad breath.
 ~
-72 0 0 0 0 0 0 200 S
-H 0 0 -1
+72 0 0 0 0 0 0 0 200 S
+H 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -403,8 +403,8 @@ a village bum is really looking poor.
 ~
 You see a poor, dirty man with rags on his back and blisters on his feet.
 ~
-76 0 0 0 0 0 0 500 S
-H 0 0 -1
+76 0 0 0 0 0 0 0 500 S
+H 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
@@ -416,8 +416,8 @@ A village pauper looks like he stole something.
 You see a teenager with some scruffy brown hair. He has a knowing gleam in
 his eyes.
 ~
-76 0 0 0 0 0 0 0 S
-H 0 0 -1
+76 0 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -428,8 +428,8 @@ The branded villager is looking and feeling like an outcast.
 ~
 You see sadness in his eyes and his face openly displays his regrets.
 ~
-10 16 0 0 0 0 0 350 S
-H 0 0 -1
+10 16 0 0 0 0 0 0 350 S
+H 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -441,8 +441,8 @@ The village nag never looks appeased.
 You see a mean, cross-eyed lady with steely eyes and a tongue sharper than
 a razor blade.
 ~
-72 0 0 0 0 0 0 -150 S
-H 0 0 -1
+72 0 0 0 0 0 0 0 -150 S
+H 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 2
@@ -454,8 +454,8 @@ The village hag is looking very old.
 She looks at you with old tired eyes. She nearly pokes out your eyes with
 her long nose.
 ~
-10 0 0 0 0 0 0 500 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 500 S
+H 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 3.2.0.0 907
 8 8 2
@@ -467,8 +467,8 @@ The village baker makes bad bread.
 You see a roundish man all covered with flour. He takes no pride in his bread
 obviously and he sells dirty, murky water too.
 ~
-10 0 0 285212800 0 0 0 500 S
-H 0 0 -1
+10 0 0 0 285212800 0 0 0 500 S
+H 0 0 0 -1
 21 11 32 21d40+168 3d5+3
 4.0.5.0 18711
 8 8 1
@@ -479,8 +479,8 @@ The meat vendor wants your business.
 ~
 A fat, greasy man with stubby fingers sees you and points to his nice meats.
 ~
-10 0 0 0 0 0 0 250 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 250 S
+H 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -492,8 +492,8 @@ The fruit vendor peels an apple for you.
 You see a nice man with a bald spot on his head. He kindly lets you sample
 his produce.
 ~
-10 0 0 0 0 0 0 250 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 250 S
+H 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -505,8 +505,8 @@ The fish vendor hates his job.
 You see a ruddy, smelly fisherman with many scars on his arms.  He has
 fish slime all over his apron.
 ~
-10 0 0 0 0 0 0 250 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 250 S
+H 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -518,8 +518,8 @@ A tradesman tries to catch your attention.
 You see a herky jerky man who has money on his mind.  He offers to trade
 his goods for your sword.
 ~
-10 0 0 0 0 0 0 250 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 250 S
+H 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -531,8 +531,8 @@ A vagabond has hunger in her eyes.
 Your heart breaks as you gaze upon the poor lady desperately needing food
 and shelter.  She is pretty but way too thin.
 ~
-76 0 0 0 0 0 0 700 S
-H 0 0 -1
+76 0 0 0 0 0 0 0 700 S
+H 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 2
@@ -543,8 +543,8 @@ The village slut wants you to see her body.
 ~
 You turn your nose up in distaste as you look at a trashy blonde hooker.
 ~
-72 0 0 0 0 0 0 -400 S
-H 0 0 -1
+72 0 0 0 0 0 0 0 -400 S
+H 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 2
@@ -556,8 +556,8 @@ The council leader is high on herself.
 You see a mean, old hag with permanent frown lines on her forehead.  She
 looks very stern.
 ~
-10 0 0 0 0 0 0 -500 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 -500 S
+H 0 0 0 -1
 20 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 2
@@ -569,8 +569,8 @@ An innocent man doesn't fear his horrible fate.
 You look upon the face of a condemned man.  He stares at you with defiance
 and holds true to his God.
 ~
-10 0 0 0 0 0 0 400 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 400 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -582,8 +582,8 @@ An innocent woman weeps for her children.
 You see a brave, yet saddened woman who awaits her death.  She has done
 nothing and only regrets not seeing her children again.
 ~
-10 0 0 0 0 0 0 500 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 500 S
+H 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 2
@@ -595,8 +595,8 @@ A weeping boy cries for his mama.
 You see a boy no older than six with big red, puffy eyes.  He cries loudly
 trying to find his mommy.
 ~
-10 0 0 0 0 0 0 900 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 900 S
+H 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
@@ -608,8 +608,8 @@ The village leader is just a figurehead.
 He stares at you for a while, then turns away.  There is nothing more to
 say.
 ~
-10 0 0 0 0 0 0 400 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 400 S
+H 0 0 0 -1
 20 15 64 11d23+44 2d5+2
 5.4.1.0 5346
 8 8 1

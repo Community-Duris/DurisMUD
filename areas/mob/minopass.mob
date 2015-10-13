@@ -9,8 +9,8 @@ cat displacer beast~
 &+Lprotrude from its back, which are raised in the air like a warrior's
 &+Lweapons during battle.
 ~
-2058 1 0 2 0 0 0 -1000 S
-AC 0 1 -1
+2058 1 0 0 2 0 0 0 -1000 S
+AC 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -27,8 +27,8 @@ vorclauz undead minotaur guard guardian~
 &+rfills his glowing red deep-set eyes.
    &+rVorclauz &+Lnotices your gaze at him, and snarls.
 ~
-2058 0 0 8 0 0 0 -1000 S
-U 0 16 5
+2058 0 0 0 8 0 0 0 -1000 S
+U 0 16 0 5
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -43,8 +43,8 @@ xatawan spectre tyrant~
 &+Lthrough the &+mportal&+L to enter his labyrinth.  A sly grin helps to
 &+Lunderscore this spectre's true intension for travellers..
 ~
-2058 0 0 8 0 0 0 -1000 S
-U 0 8193 -1
+2058 0 0 0 8 0 0 0 -1000 S
+U 0 8193 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -60,8 +60,8 @@ xatawan vampire~
    &+LThis diabolical abomination stands at the top of the spiral,
 &+Lbeckoning you to continue forward.
 ~
-2058 1 0 8 0 0 0 -1000 S
-UV 0 1 -1
+2058 1 0 0 8 0 0 0 -1000 S
+UV 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -75,8 +75,8 @@ oesh'lyn oesh sage truth~
 &+Wlong silken robe.  &+YOesh'lyn&+W guards the ivory gates from the evil
 &+Wof the world that attempts to violate its holy sanctity.
 ~
-2058 0 0 8 0 0 0 1000 S
-AN 0 8 4
+2058 0 0 0 8 0 0 0 1000 S
+AN 0 8 0 4
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -90,8 +90,8 @@ titan contracter~
 &+Wsomething.  A very weary look fills his eyes as he has clearly lost
 &+Wsomething precious to him after the corridor's collapse.
 ~
-2056 0 0 8 0 0 0 400 S
-G 0 1 -1
+2056 0 0 0 8 0 0 0 400 S
+G 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -108,8 +108,8 @@ image borthur~
 &+Wfrom the evil of the land, although it is not Borthur in the
 &+Wflesh, simply an image of him.
 ~
-2058 0 0 0 0 0 0 0 S
-G 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -127,8 +127,8 @@ titan borthur proud~
 &+Woffer passage through his &+Yportal &+Wto any of those whom his&+c image&+W has
 &+Winvited into his keep.
 ~
-2058 0 0 0 0 0 0 350 S
-G 0 1 -1
+2058 0 0 0 0 0 0 0 350 S
+G 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -141,8 +141,8 @@ scheming pech miner~
 &+Lmining, when not in their native elemental plane, this &+ypech&+L is
 &+Lenthralled by a strange object he secretly clutches.
 ~
-2058 0 0 0 0 0 0 0 S
-H 0 1 1
+2058 0 0 0 0 0 0 0 0 S
+H 0 1 0 1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -155,8 +155,8 @@ mountain eagle~
 &+ycovering its large body.  It currently perches on a nearby
 &+yrock, beak poking into the ground looking for worms.
 ~
-2120 0 0 134217728 0 0 0 0 S
-B 0 1 2
+2120 0 0 0 134217728 0 0 0 0 S
+B 0 1 0 2
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -170,8 +170,8 @@ rock spider~
 &+Lwhen scanning the surroundings, as its natural
 &+Ldefense is to blend in perfectly.
 ~
-2120 0 0 0 0 0 0 0 S
-I 0 1 1
+2120 0 0 0 0 0 0 0 0 S
+I 0 1 0 1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -184,8 +184,8 @@ young thri kreen thri-kreen~
 and surrounding vegetation.  Its body reacts quickly, yet rarely,
 to the environment as it peacefully scouts the area.
 ~
-2120 0 0 0 0 0 0 0 S
-TK 0 1 3
+2120 0 0 0 0 0 0 0 0 S
+TK 0 1 0 3
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -199,8 +199,8 @@ mountain goat~
 &+Wfurry head.  This animal hops along the mountain
 &+Wwith grace and finess in search of food.
 ~
-2120 0 0 0 0 0 0 0 S
-A 0 1 2
+2120 0 0 0 0 0 0 0 0 S
+A 0 1 0 2
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -213,8 +213,8 @@ small harpy~
 &+yand nimble.  It currently is circling its prey at
 &+ya close proximity - most likely some worms or ants.
 ~
-2120 0 0 134217728 0 0 0 0 S
-MH 0 1 2
+2120 0 0 0 134217728 0 0 0 0 S
+MH 0 1 0 2
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -228,8 +228,8 @@ minotaur~
 &+Lto sleep through the night.  His eyes shift, always
 &+Lon his guard.
 ~
-2122 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -243,8 +243,8 @@ short minotaur~
 &+Lto sleep through the night.  His eyes shift, always
 &+Lon his guard.
 ~
-67110986 0 0 0 0 0 0 0 S
-MT 0 1 -1
+67110986 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -258,8 +258,8 @@ tohr-kreen tohr kreen relaxed~
 &+Linsect-humanoid is larger and rarer then its cousin, the
 &+Gthri-&+Ykreen&+L.
 ~
-2122 0 0 0 0 0 0 0 S
-TK 0 1 4
+2122 0 0 0 0 0 0 0 0 S
+TK 0 1 0 4
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 0
@@ -273,8 +273,8 @@ thri kreen thri-kreen~
 &+gsort of supernatural powers.  A glazed look covers the
 &+ginsect-humanoid's face as it drifts away in enjoyment.
 ~
-2122 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -287,8 +287,8 @@ harpy~
 &+yand nimble.  It currently is circling its prey at
 &+ya close proximity - most likely some worms or ants.
 ~
-2120 0 0 134217728 0 0 0 0 S
-MH 0 1 2
+2120 0 0 0 134217728 0 0 0 0 S
+MH 0 1 0 2
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -300,8 +300,8 @@ rock lizard~
    &+rThis small rock lizard crawls through the cracks
 &+rand sutures of the surrounding mountains.
 ~
-72 0 0 0 0 0 0 0 S
-R 0 1 1
+72 0 0 0 0 0 0 0 0 S
+R 0 1 0 1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -314,8 +314,8 @@ black stag~
 &+Lalthough more fit for the rocky terrain, rather then
 &+Lthe forest.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 1 2
+72 0 0 0 0 0 0 0 0 S
+A 0 1 0 2
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -328,8 +328,8 @@ black stag~
 &+Lalthough more fit for the rocky terrain, rather then
 &+Lthe forest.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 1 4
+72 0 0 0 0 0 0 0 0 S
+A 0 1 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -342,8 +342,8 @@ harpy mother~
 &+yfeathers have small missing patches, resulting from an older
 &+yage.
 ~
-2122 1 0 134217728 0 0 0 0 S
-MH 0 1 2
+2122 1 0 0 134217728 0 0 0 0 S
+MH 0 1 0 2
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 2
@@ -356,8 +356,8 @@ baby harpy~
 &+yand nimble.  It currently is circling its prey at
 &+ya close proximity - most likely some worms or ants.
 ~
-2122 0 0 134217728 0 0 0 0 S
-MH 0 1 2
+2122 0 0 0 134217728 0 0 0 0 S
+MH 0 1 0 2
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -369,8 +369,8 @@ tired minotaur~
    &+LThis large mino&+rtaur&+L looks quite exhausted as he lets out
 &+Lhuge throaty yawns, reclined against the &+gtree&+L.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1
@@ -384,8 +384,8 @@ tropical treant sapling~
 &+gThe tro&+Gp&+Yi&+Gc&+Ya&+Gl&+g nature of this &+yliving&+G plant&+g gives it a very pleasant
 &+gscent and appearance.
 ~
-10 0 0 0 0 0 0 0 S
-AH 0 1 2
+10 0 0 0 0 0 0 0 0 S
+AH 0 1 0 2
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -399,8 +399,8 @@ tropical treant sapling~
 &+gThe tro&+Gp&+Yi&+Gc&+Ya&+Gl&+g nature of this &+yliving&+G plant&+g gives it a very pleasant
 &+gscent and appearance.
 ~
-10 0 0 0 0 0 0 0 S
-AH 0 1 2
+10 0 0 0 0 0 0 0 0 S
+AH 0 1 0 2
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -414,8 +414,8 @@ tropical treant sapling~
 &+gThe tro&+Gp&+Yi&+Gc&+Ya&+Gl&+g nature of this &+yliving&+G plant&+g gives it a very pleasant
 &+gscent and appearance.
 ~
-10 0 0 0 0 0 0 0 S
-AH 0 1 2
+10 0 0 0 0 0 0 0 0 S
+AH 0 1 0 2
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -427,8 +427,8 @@ exhausted thri kreen thri-kreen~
    &+gThis &+Gthri-&+Ykreen&+g looks very tired as it finally
 &+gregains its strength, relaxing in the corner of this campsite.
 ~
-2058 0 0 0 0 0 0 0 S
-TK 0 1 3
+2058 0 0 0 0 0 0 0 0 S
+TK 0 1 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1
@@ -443,8 +443,8 @@ troglodyte trog hunter~
    &+LMoving with great anticipation for another ambush, this &+ytrog&+Ylo&+Wdyte
 &+Lreadies itself for battle.
 ~
-2120 1 0 8 0 0 0 -750 S
-H 0 16384 3
+2120 1 0 0 8 0 0 0 -750 S
+H 0 16384 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -459,8 +459,8 @@ troglodyte trog~
    &+LMoving with great anticipation for another ambush, this &+ytrog&+Ylo&+Wdyte
 &+Lreadies itself for battle.
 ~
-2120 1 0 8 0 0 0 -750 S
-H 0 1 3
+2120 1 0 0 8 0 0 0 -750 S
+H 0 1 0 3
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -475,8 +475,8 @@ troglodyte trog~
    &+LMoving with great anticipation for another ambush, this &+ytrog&+Ylo&+Wdyte
 &+Lreadies itself for battle.
 ~
-2120 1 0 8 0 0 0 -750 S
-H 0 1 3
+2120 1 0 0 8 0 0 0 -750 S
+H 0 1 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -491,8 +491,8 @@ storming air sylph~
 &+Ccreature has broken from its masters control and is otherwise imprisoned
 &+Cin this realm.
 ~
-2056 1 0 8 0 0 0 0 S
-EA 0 1 -1
+2056 1 0 0 8 0 0 0 0 S
+EA 0 1 0 -1
 29 0 -5 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -506,8 +506,8 @@ titan bodyguard guard~
 &+Cmassive sword in hand, this bodyguard confidently protects his
 &+Cmaster's personal quarters.
 ~
-2058 1 0 8 0 0 0 0 S
-G 0 1 -1
+2058 1 0 0 8 0 0 0 0 S
+G 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -522,8 +522,8 @@ titan guardsman guard~
 &+Csimple patrol guard.  However, he holds his position and continues
 &+Chis watch over the court.
 ~
-67110920 0 0 0 0 0 0 0 S
-G 0 1 -1
+67110920 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -537,8 +537,8 @@ titan commoner~
 &+cSuspicious of your arrival, this commoner fears you have the worst
 &+cintensions and yells in a booming voice 'Tresspasser!!'
 ~
-2056 1 0 0 0 0 0 0 S
-G 0 1 -1
+2056 1 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -552,8 +552,8 @@ young titan~
 &+cstumbling in disorientation as he cries, due to the recent disturbance
 &+cwithin the court.
 ~
-2184 0 0 0 0 0 0 0 S
-G 0 1 -1
+2184 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -565,8 +565,8 @@ frenzied air elemental~
    &+WThis air elemental, broken from the will of its original masters,
 &+Wfloats around here in a frenzy, trapped in this foreign plane.
 ~
-8 1 0 8 0 0 0 0 S
-EA 0 1 -1
+8 1 0 0 8 0 0 0 0 S
+EA 0 1 0 -1
 28 0 -5 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -582,8 +582,8 @@ spirit dwarven cleric dwarf archaic~
 &+Wdwarves.  A great feeling of holy rejuvenation flows from the
 &+Wrighteous form of this holyman.
 ~
-2122 0 0 8 0 0 0 1000 S
-UG 0 33 -1
+2122 0 0 0 8 0 0 0 1000 S
+UG 0 33 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -599,8 +599,8 @@ darkened crimson cave wyrm~
 &+Lappears to be completely resilient to the effects of this
 &+Lterrain.
 ~
-8 0 0 536870912 1 0 0 0 S
-R 0 1 4
+8 0 0 0 536870912 1 0 0 0 S
+R 0 1 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -613,8 +613,8 @@ magma man magmaman~
 &+Lforms from the &+rmagma flow&+L below and stands here, ready to protect his
 &+Ldomain and do battle with trespassers.
 ~
-2120 1 0 536870920 1 0 0 -300 S
-EF 0 1 3
+2120 1 0 0 536870920 1 0 0 -300 S
+EF 0 1 0 3
 32 0 -10 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -628,8 +628,8 @@ flame bat~
 &+Lprey.  The nature of this breed of &+rbat is to be attracted to &+Yheat&+L,
 &+Lmuch like other mammals are attracted to water.
 ~
-72 1 0 536870920 1 0 0 0 S
-B 0 1 1
+72 1 0 0 536870920 1 0 0 0 S
+B 0 1 0 1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -643,8 +643,8 @@ lava beast~
 &+Rearthen bits.  It seems to posess the ability to reach out
 &+Rwith extra arms as desired, making it an efficient stalker.
 ~
-2120 1 0 536870912 1 0 0 0 S
-TK 0 1 2
+2120 1 0 0 536870912 1 0 0 0 S
+TK 0 1 0 2
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -658,8 +658,8 @@ disgusting maggot~
 &+Lfrom the front side of its bloated by, piching away at bits of
 &+Lfl&+res&+Lh that litter these c&+ra&+Lt&+ra&+Lcombs.
 ~
-8 1 0 0 0 0 0 0 S
-AP 0 1 1
+8 1 0 0 0 0 0 0 0 S
+AP 0 1 0 1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -673,8 +673,8 @@ tiny purple maggot~
 &+Lfrom the front side of its bloated by, piching away at bits of
 &+Lfl&+res&+Lh that litter these c&+ra&+Lt&+ra&+Lcombs.
 ~
-8 1 0 0 0 0 0 0 S
-AP 0 1 1
+8 1 0 0 0 0 0 0 0 S
+AP 0 1 0 1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -688,8 +688,8 @@ fomorian giant~
 &+Lrotten flesh.  Various humanoid pieces, such as ears, fingers, and eyes,
 &+Lgrow out of the body of this beast in a gruesome and unhuman way.
 ~
-72 1 0 8 0 0 0 0 S
-G 0 1 5
+72 1 0 0 8 0 0 0 0 S
+G 0 1 0 5
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -704,8 +704,8 @@ undead minotaur~
 &+Lpieces of &+rflesh &+Lare missing from this undead mino&+rtaur&+L's body, as various
 &+Wbones&+L can be seen protruding from its body.
 ~
-8 1 0 8 0 0 0 -1000 S
-U 0 1 4
+8 1 0 0 8 0 0 0 -1000 S
+U 0 1 0 4
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -719,8 +719,8 @@ blood red ooze~
 &+rThis ooze occasionally reaches out with tentacle-like projections
 &+rin an attempt to grab onto its prey.
 ~
-67108872 1 0 8 0 0 0 -600 S
-SL 0 1 1
+67108872 1 0 0 8 0 0 0 -600 S
+SL 0 1 0 1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -733,8 +733,8 @@ nearly invisible nearly-invisible gheist~
 &+Lhas had its soul &+rdoomed&+L to haunt the area where it had died
 &+Las a mortal.
 ~
-72 1 0 524288 0 0 0 -1000 S
-U 0 1 3
+72 1 0 0 524288 0 0 0 -1000 S
+U 0 1 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -748,8 +748,8 @@ thri-kreen thri kreen horrified~
 &+LLooking quite &Nfrail&+L, it appears that this &+gthri&+Y-kreen&+L has been here
 &+Lfor quite some time.
 ~
-8 0 0 0 0 0 0 0 S
-TK 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -762,8 +762,8 @@ huge black spider~
 &+Lfur with many beady black eyes.  Two shiny black fangs reach several
 &+Linches form its mouth.
 ~
-72 1 0 8 0 0 0 0 S
-AS 0 1 2
+72 1 0 0 8 0 0 0 0 S
+AS 0 1 0 2
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -776,8 +776,8 @@ screeching vampire bat~
 &+Lhidden perches before landing onto the next.  This bat releases
 &+La loud shrieking sound as it swoops in to attack.
 ~
-8 1 0 8 0 0 0 -500 S
-B 0 1 1
+8 1 0 0 8 0 0 0 -500 S
+B 0 1 0 1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -791,8 +791,8 @@ patch moss~
 &+gthe &+mfiberous &+gtendrils of this &+Gmoss&+g are tiny rat &+Wskulls&+g and dusty
 &+gspider &Nwebs&+g.
 ~
-10 1 0 8 0 0 0 0 S
-AP 0 1 1
+10 1 0 0 8 0 0 0 0 S
+AP 0 1 0 1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -805,8 +805,8 @@ large black spider~
 &+Lhair growing off of its entire body and legs.  The spider blends in very
 &+Lwell to the black rock of this underdark.
 ~
-8 1 0 8 0 0 0 -500 S
-AS 0 1 2
+8 1 0 0 8 0 0 0 -500 S
+AS 0 1 0 2
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -818,8 +818,8 @@ thorny moss vine~
    &+gThis long tentacle-like vine of &+Gmoss &+greaches out in a
 &+gwhip-like manner.  Tiny &+ythorns &+gcover the vine.
 ~
-8 1 0 8 0 0 0 -300 S
-AP 0 1 1
+8 1 0 0 8 0 0 0 -300 S
+AP 0 1 0 1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -833,8 +833,8 @@ huge black drider~
 &+Lis a cursed noble, damned to the life of a drider by the great spider
 &+Lqueen Lolth.
 ~
-72 1 0 8 0 0 0 -1000 S
-DR 0 1 4
+72 1 0 0 8 0 0 0 -1000 S
+DR 0 1 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -848,8 +848,8 @@ vicious magenta drider~
 &+Lis a cursed noble, damned to the life of a drider by the great spider
 &+Lqueen Lolth.
 ~
-72 1 0 8 0 0 0 -1000 S
-DR 0 1 4
+72 1 0 0 8 0 0 0 -1000 S
+DR 0 1 0 4
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -865,8 +865,8 @@ nahasp hermit~
    &+LA strange glimmer in his eye suggests that he may posess more knowledge
 &+Lthan he lets on.
 ~
-2122 0 0 8 0 0 0 0 S
-H 0 1 2
+2122 0 0 0 8 0 0 0 0 S
+H 0 1 0 2
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -880,8 +880,8 @@ vegepygmy pygmy mold man~
 &+Lor vegepygmy lurks in these fungal caverns here with its kin, forming a
 &+Lsmall and primative tribe.
 ~
-2184 0 0 524288 0 0 0 0 S
-H 0 1 2
+2184 0 0 0 524288 0 0 0 0 S
+H 0 1 0 2
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -895,8 +895,8 @@ vegepygmy pygmy mold man elder~
 &+Lor vegepygmy lurks in these fungal caverns here with its kin, forming a
 &+Lsmall and primative tribe.
 ~
-2056 0 0 524288 0 0 0 0 S
-H 0 1 2
+2056 0 0 0 524288 0 0 0 0 S
+H 0 1 0 2
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -910,8 +910,8 @@ vegepymy pygmy mold man ancient~
 &+Lor vegepygmy lurks in these fungal caverns here with its kin, forming a
 &+Lsmall and primative tribe.
 ~
-2184 0 0 1572864 0 0 0 0 S
-H 0 32 2
+2184 0 0 0 1572864 0 0 0 0 S
+H 0 32 0 2
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -924,8 +924,8 @@ titan holyman~
 &+Cshrine of the Titan castle.  Holy symbols adorn the brilliant white garments
 &+Cof this figure and a smile covers his large, ample face.
 ~
-138 0 0 0 0 0 0 0 S
-G 0 32 -1
+138 0 0 0 0 0 0 0 0 S
+G 0 32 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -940,8 +940,8 @@ minotaur adventurer~
 &+Lcovered with burns that seem to be healing quite well from
 &+La magical force as he braves the fiery inferno of this cave.
 ~
-2120 0 0 536870912 0 0 0 0 S
-MT 0 1 -1
+2120 0 0 0 536870912 0 0 0 0 S
+MT 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

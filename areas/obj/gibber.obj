@@ -108,7 +108,7 @@ roper tentacle~
 a &+Gslimy&n &+groper's&n tentacle~
 A writhing tentacle of a &+groper&n slithers across the floor.~
 ~
-12 2 3 0 7 100 8388616 1 0 1 0
+12 2 3 0 7 100 8388616 1 32768 1 0
 0 0 0 0 0 0 0 0
 10 1 100
 E
@@ -278,7 +278,7 @@ wand dismissal~
 &+Wa wand of dismissal&n~
 &+WA wand lies &+Yglowing&+W on the ground.&n~
 ~
-3 15 3 0 7 0 8392705 16385 0 1 0
+3 15 3 0 7 0 8392705 16385 32768 1 0
 55 1 1 4 0 0 0 0
 0 1 100
 E
@@ -595,7 +595,7 @@ soul crymson essence _noquest_~
 an essence of Crymson~
 The soul of the Crymson howls in anguish at his bitter fate.~
 ~
-12 1 10 0 7 0 8392712 16385 0 1 0
+12 1 10 0 7 0 8392712 16385 32768 1 0
 0 0 0 0 0 0 0 0
 0 1 100
 E

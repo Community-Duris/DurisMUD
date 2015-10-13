@@ -1,5 +1,5 @@
 set MainZoneName shaughin2
 set ObjAffect true
-set LastCommand n
-set StartRoom 6699
+set LastCommand l
+set StartRoom 6686
 limit mob 6611 3

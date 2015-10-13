@@ -61,7 +61,7 @@ scepter bronze~
 &+ya bronze scepter&+w~
 a bronze scepter lies on the ground here.~
 ~
-5 20 3 0 7 0 0 8193 0 4173708804 0
+5 20 3 0 7 0 0 8193 32768 4173708804 0
 10 2 5 7 0 0 0 0
 10 1 100
 E
@@ -217,7 +217,7 @@ bracelet silver polished~
 &+Ca polished silver bracelet&n~
 &+CA silver bracelet lies on the ground here sparkling.~
 ~
-9 22 3 3 7 0 4096 4097 64 0 0
+9 22 3 3 7 0 4096 4097 32832 0 0
 8 11 24 3 0 0 0 0
 2 10000 100
 E
@@ -234,7 +234,7 @@ bracelet amber~
 &+ya &+Yg&+yl&+Yo&+Ww&+Yi&+yn&+Yg &+Ya&+ym&+Wb&+ye&+Yr&+y bracelet~
 &+yA &+Wglowing &+Yamber&+y bracelet lies on the ground here.~
 ~
-9 5 3 3 7 0 0 4097 64 0 0
+9 5 3 3 7 0 0 4097 32832 0 0
 6 11 24 3 0 0 0 0
 2 50 100
 E
@@ -289,7 +289,7 @@ silver disc~
 a small silver disc~
 A tiny silver disc lies here.~
 ~
-12 22 0 0 7 0 4096 1 0 0 0
+12 22 0 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -301,7 +301,7 @@ platinum disc~
 a small platinum disc~
 A tiny platinum disc lies here.~
 ~
-12 25 0 0 7 0 4096 1 0 0 0
+12 25 0 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -313,7 +313,7 @@ vial strange~
 a strange looking vial~
 A strange looking vial lies here.~
 ~
-10 7 2 4 7 0 4096 1 0 0 0
+10 7 2 4 7 0 4096 1 32768 0 0
 50 28 75 41 0 0 0 0
 2 10 100
 E
@@ -338,7 +338,7 @@ bracelet engraved~
 &+can &+We&+wn&+Wg&+wr&+Wa&+wv&+We&+wd &+cbracelet of &+Chu&+cm&+Can &+Wbo&+wn&+Wes~
 A bracelet made from engraved bones has been left here.~
 ~
-9 10 3 0 7 0 0 4097 0 0 0
+9 10 3 0 7 0 0 4097 32768 0 0
 5 0 0 3 0 0 0 0
 1 5000 100
 E

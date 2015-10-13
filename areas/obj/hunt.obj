@@ -41,7 +41,7 @@ amulet kilospanatis~
 &+wthe &+Lamulet&+w of kil&+Lospa&+wnatis&n~
 &+wAn &+Lamulet&+w from the sect of kil&+Lospa&+wnatis lays here.&n~
 ~
-9 11 3 0 7 0 0 5 0 0 0
+9 11 3 0 7 0 0 5 32768 0 0
 6 0 0 3 0 0 0 0
 1 1 100
 E
@@ -267,7 +267,7 @@ hazy blue amulet~
 &+ba hazy, bl&+Bue amulet~
 &+bA hazy, bl&+Bue amulet has been &+b dropped here.~
 ~
-9 1 3 0 7 0 1 5 0 0 0
+9 1 3 0 7 0 1 5 32768 0 0
 4 0 0 2 0 0 0 0
 1 1 100
 E
@@ -478,7 +478,7 @@ tags wild card~
 &+cthe tags of a &+WWild &+LCard&n~
 &+cA set of tags of the &+WWild &+LCard&+c company have been dropped here.~
 ~
-8 15 3 0 7 0 4096 1 0 0 0
+8 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -559,7 +559,7 @@ wings arch angel~
 &+Wa pair &+Larch&+Wangel&+W wings&n~
 &+WA set of &+Larch&+Wangel wings have been left here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -574,7 +574,7 @@ twisted tooth behemoth~
 &+ma twisted behe&+bmoth &+mtooth&n~
 &+mThe tooth of a behe&+bmoth&+m lies here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 3 0 0 0 0
 1 1 100
 E
@@ -662,7 +662,7 @@ severed head renatta~
 &+rthe severed head of Renatta&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -674,7 +674,7 @@ severed head jigoog~
 &+rthe severed head of Jigoog&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -704,7 +704,7 @@ severed head veannan~
 &+rthe severed head of Veannan&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -716,7 +716,7 @@ severed head greeef~
 &+rthe severed head of Greeef&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -728,7 +728,7 @@ severed head endosa~
 &+rthe severed head of Endosa&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -740,7 +740,7 @@ severed head zeelnar~
 &+rthe severed head of Zeelnar&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -752,7 +752,7 @@ beholder eyestalk eye stalk~
 &+wa &+Lbeho&+wlder &+Leye&+wstalk&n~
 &+wA se&+Lvere&+wd beh&+Lolde&+wr eye&+Lstalk &+whas been left here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -766,7 +766,7 @@ wispy tendril flame~
 &+ra wisp&+Ry ten&+rdri&+Rl of flame&n~
 &+rA wisp&+Ry ten&+rdri&+Rl of flame&+r has been lef&+Rt here.&n~
 ~
-8 1 3 0 7 0 8392704 1 0 0 0
+8 1 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -799,7 +799,7 @@ severed head maverick~
 &+rthe severed head of Maverick&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -811,7 +811,7 @@ severed head argophel~
 &+rthe severed head of Argophel&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -823,7 +823,7 @@ severed head grue~
 &+rthe severed head of Grue&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -835,7 +835,7 @@ severed head chowza~
 &+rthe severed head of Chowza&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -847,7 +847,7 @@ severed head graiven~
 &+rthe severed head of Graiven&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -859,7 +859,7 @@ severed head maximas~
 &+rthe severed head of Maximas&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -871,7 +871,7 @@ severed head krazzi~
 &+rthe severed head of Krazzi&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -883,7 +883,7 @@ tags myrabolan~
 &+cthe tags of the &+MMyrabolan&+c guard&n~
 &+cA set of tags of the &+MMyrabolan&+c guard have been left here.&n~
 ~
-8 15 3 0 7 0 4096 1 0 0 0
+8 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -926,7 +926,7 @@ severed head hackzen~
 &+rthe severed head of Hackzen&n~
 &+rA severed head lies on the ground here.&n~
 ~
-8 2 3 0 7 0 8392704 1 0 0 0
+8 2 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E

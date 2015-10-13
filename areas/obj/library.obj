@@ -35,7 +35,7 @@ summoning essence fire~
 &+Lthe summoning essence of &+rf&+Rir&+re&N~
 &+LA summoning essence to create golems lies here.&N~
 ~
-8 1 1 0 7 0 8400896 1 64 0 0
+8 1 1 0 7 0 8400896 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402005
@@ -43,7 +43,7 @@ summoning essence acid~
 &+Lthe summoning essence of &+ga&+Gc&+gi&+Gd&N~
 &+LA summoning essence to create golems lies here.&N~
 ~
-8 1 1 0 7 0 8400896 1 64 0 0
+8 1 1 0 7 0 8400896 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402006
@@ -51,7 +51,7 @@ summoning essence sulfur~
 &+Lthe summoning essence of &+ysu&+Ylf&+yur&N~
 &+LA summoning essence to create golems lies here.&N~
 ~
-8 1 1 0 7 0 8400896 1 64 0 0
+8 1 1 0 7 0 8400896 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402007
@@ -59,7 +59,7 @@ summoning essence frostbite~
 &+Lthe summoning essence of &+wfr&+Wos&+Ct&+Wbi&+wte&N~
 &+LA summoning essence to create golems lies here.&N~
 ~
-8 1 1 0 7 0 8400896 1 64 0 0
+8 1 1 0 7 0 8400896 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402008
@@ -67,7 +67,7 @@ summoning essence shadows~
 &+Lthe summoning essence of &+wsh&+Wa&+Ld&+wo&+Lw&+ws&N~
 &+LA summoning essence to create golems lies here.&N~
 ~
-8 1 1 0 7 0 8400896 1 72 0 0
+8 1 1 0 7 0 8400896 1 32840 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402009
@@ -75,7 +75,7 @@ summoning essence lightning~
 &+Lthe summoning essence of &+wl&+Wi&+wg&+ch&+Ct&+cn&+wi&+Wn&+wg&N~
 &+LA summoning essence to create golems lies here.&N~
 ~
-8 1 1 0 7 0 8400896 1 64 0 0
+8 1 1 0 7 0 8400896 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402010
@@ -91,7 +91,7 @@ book spellbook mystical tome elemental~
 &+La mystical tome with &+wgl&+Wo&+ww&+Li&+wn&+Wg &+re&+Rl&+ce&+Bm&+ye&+Yn&+gt&+Ga&+cl &+wglyphs&N~
 &+LA mage's spellbook appears to have been discarded here.&N~
 ~
-33 28 2 0 14 0 12288 8404993 64 262107647 0
+33 28 2 0 14 0 12288 8404993 32832 262107647 0
 0 0 300 0 0 0 0 0
 0 0 100
 A
@@ -103,7 +103,7 @@ book spellbook illithid wyld~
 &+man &+Millithid&+L-skin &+mspellbook &+Lof &+Mwyld &+mmagick&N~
 &+LA mage's spellbook appears to have been discarded here.&N~
 ~
-33 28 2 0 14 0 12288 8404993 64 262107647 0
+33 28 2 0 14 0 12288 8404993 32832 262107647 0
 0 0 300 0 0 0 0 0
 0 0 100
 A
@@ -135,7 +135,7 @@ book spellbook shifting shadows~
 &+La leather-bound book covered in &+wsh&+Wi&+Lf&+wti&+Ln&+Wg &+ws&+Lh&+wad&+Wo&+ww&+Ls&N~
 &+LA mage's spellbook appears to have been discarded here.&N~
 ~
-33 28 2 0 14 0 12288 8404993 64 262107647 0
+33 28 2 0 14 0 12288 8404993 32832 262107647 0
 0 0 300 0 0 0 0 0
 0 0 100
 A
@@ -147,7 +147,7 @@ tome book theoretical study spirit domination~
 &+wa white leather-bound &+Wtome &+wof &+Ws&+wp&+Wi&+wr&+Wi&+wt &+Wdomination&N~
 &+LA mage's spellbook appears to have been discarded here.&N~
 ~
-33 28 2 0 14 0 12288 8404993 64 262107647 0
+33 28 2 0 14 0 12288 8404993 32832 262107647 0
 0 0 300 0 0 0 0 0
 0 0 100
 A
@@ -159,7 +159,7 @@ book spellbook embalmed woodelf flesh~
 &+La &+cspellbook&+L bound with embalmed &+gwood&+celf &+yflesh&N~
 &+LA mage's spellbook appears to have been discarded here.&N~
 ~
-33 28 2 0 14 0 12288 8404993 64 262107647 0
+33 28 2 0 14 0 12288 8404993 32832 262107647 0
 0 0 300 0 0 0 0 0
 0 0 100
 A
@@ -171,7 +171,7 @@ black leather tome book spellbook dracolich~
 &+La black leather tome with an embossed dracolich&N~
 &+LA mage's spellbook appears to have been discarded here.&N~
 ~
-33 28 2 0 14 0 12288 8404993 64 262107647 0
+33 28 2 0 14 0 12288 8404993 32832 262107647 0
 0 0 300 0 0 0 0 0
 0 0 100
 A
@@ -183,7 +183,7 @@ spell book tome putrified zombie skin~
 &+La spell tome of &+rput&+Rrif&+ried &+wz&+Wo&+wmb&+Li&+we s&+Wk&+win&N~
 &+LA mage's spellbook appears to have been discarded here.&N~
 ~
-33 28 2 0 14 0 12288 8404993 64 262107647 0
+33 28 2 0 14 0 12288 8404993 32832 262107647 0
 0 0 300 0 0 0 0 0
 0 0 100
 A
@@ -195,7 +195,7 @@ tailspike tail dracolich~
 &+Lthe tailspike of a &+wd&+Lr&+wa&+Wc&+wo&+Ll&+wi&+Wc&+wh&N~
 &+LThe tailspike of a dracolich lies here.&N~
 ~
-8 10 2 0 7 0 8392704 1 64 0 0
+8 10 2 0 7 0 8392704 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402021
@@ -215,7 +215,7 @@ fingerbone lich~
 &+wthe &+Wfingerbone &+wof a &+Llich&N~
 &+WA fingerbone lies here.&N~
 ~
-8 10 2 0 7 0 8392704 1 64 0 0
+8 10 2 0 7 0 8392704 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402023
@@ -223,7 +223,7 @@ ashes vampire~
 &+Lthe ashes of a &+rva&+Rmpi&+rre&N~
 &+LThe ashes of a vampire lie scattered here.&N~
 ~
-8 10 2 0 7 0 8392704 1 64 0 0
+8 10 2 0 7 0 8392704 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402024
@@ -231,7 +231,7 @@ jagged teeth wraith~
 &+Lthe &+wja&+Lgg&+We&+wd&+L &+Wteeth &+Lof a &+wwraith&N~
 &+wThe jagged teeth of a wraith lie here amongst debris.&N~
 ~
-8 10 2 0 7 0 8392704 1 64 0 0
+8 10 2 0 7 0 8392704 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402025
@@ -251,7 +251,7 @@ ectoplasm spectre residue~
 &+Lthe &+we&+cc&+Ct&+co&+wp&+Wl&+wa&+cs&+wm&+L of a &+Lspectre&N~
 &+LSome ectoplasmic residue appears to stick to the floor here.&N~
 ~
-8 1 2 0 7 0 8392704 1 64 0 0
+8 1 2 0 7 0 8392704 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402027
@@ -259,7 +259,7 @@ flesh rotting zombie~
 &+Lthe &+yrotting&+L flesh of a &+yzombie&N~
 &+yThe rotting flesh of a zombie appears to have been left here.&N~
 ~
-8 2 2 0 7 0 8392704 1 64 0 0
+8 2 2 0 7 0 8392704 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402028
@@ -267,7 +267,7 @@ skull skeleton~
 &+wthe &+Wskull&+L of a &+wskeleton&N~
 &+wThe skull of a long-dead skeleton lies here.&N~
 ~
-8 10 2 0 7 0 8392704 1 64 0 0
+8 10 2 0 7 0 8392704 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402029
@@ -275,7 +275,7 @@ historical journal solbeep~
 &+wthe historical journal of &+r'So&+Rlbe&+rep'&N~
 &+LA historical journal lies here in the dust.&N~
 ~
-33 28 2 0 7 0 8392705 8404993 64 262107647 0
+33 28 2 0 7 0 8392705 8404993 32832 262107647 0
 0 0 300 0 0 0 0 0
 0 0 100
 #402030
@@ -377,7 +377,7 @@ fragment dream ethereal~
 &+wthe &+Wfragment &+wof a &+Wdream&N~
 &+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
 ~
-8 1 1 0 15 0 114689 1 64 0 0
+8 1 1 0 15 0 114689 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402042
@@ -385,7 +385,7 @@ fragment dream ethereal~
 &+ythe &+Yfragment &+yof a &+Ydream&N~
 &+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
 ~
-8 1 1 0 15 0 114689 1 64 0 0
+8 1 1 0 15 0 114689 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402043
@@ -393,7 +393,7 @@ fragment dream ethereal~
 &+rthe &+Rfragment &+rof a &+Rdream&N~
 &+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
 ~
-8 1 1 0 15 0 114689 1 64 0 0
+8 1 1 0 15 0 114689 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402044
@@ -401,7 +401,7 @@ fragment dream ethereal~
 &+mthe &+Mfragment &+mof a &+Mdream&N~
 &+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
 ~
-8 1 1 0 15 0 114689 1 64 0 0
+8 1 1 0 15 0 114689 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402045
@@ -409,7 +409,7 @@ fragment dream ethereal~
 &+bthe &+Bfragment &+bof a &+Bdream&N~
 &+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
 ~
-8 1 1 0 15 0 114689 1 64 0 0
+8 1 1 0 15 0 114689 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402046
@@ -417,7 +417,7 @@ fragment dream ethereal~
 &+cthe &+Cfragment &+cof a &+Cdream&N~
 &+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
 ~
-8 1 1 0 15 0 114689 1 64 0 0
+8 1 1 0 15 0 114689 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402047
@@ -425,7 +425,7 @@ fragment dream ethereal~
 &+gthe &+Gfragment &+gof a &+Gdream&N~
 &+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
 ~
-8 1 1 0 15 0 114689 1 64 0 0
+8 1 1 0 15 0 114689 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402048
@@ -433,7 +433,7 @@ fragment dream ethereal~
 &+Lthe &+wfragment &+Lof a &+wdream&N~
 &+LAn ethereal memory of a dream hovers here, giving off sounds and visions.&N~
 ~
-8 1 1 0 15 0 114689 1 64 0 0
+8 1 1 0 15 0 114689 1 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #402049
@@ -453,7 +453,7 @@ book spellbook tome magical study~
 &+La &+ycloth-bound&+L tome of &+Bm&+Yag&+Bic&+Yal &+Bstudy&N~
 &+LA mage's spellbook appears to have been discarded here.&N~
 ~
-33 28 2 0 14 0 12288 8404993 64 262107647 0
+33 28 2 0 14 0 12288 8404993 32832 262107647 0
 0 0 300 0 0 0 0 0
 0 0 100
 A
@@ -465,7 +465,7 @@ book spellbook tome demon skin mystical~
 &+La &+mmys&+Mti&+mcal &+wtome &+Lcovered &+win &+Lde&+wmo&+Ln-skin&N~
 &+LA mage's spellbook appears to have been discarded here.&N~
 ~
-33 28 2 0 14 0 12288 8404993 64 262107647 0
+33 28 2 0 14 0 12288 8404993 32832 262107647 0
 0 0 300 0 0 0 0 0
 0 0 100
 A
@@ -627,7 +627,7 @@ thick tome legendary lores lore book spellbook~
 &+La &+wthick &+Wtome &+Lof &+wl&+We&+wg&+Le&+wn&+Wd&+wa&+Lr&+wy &+wlores&N~
 &+LA bard's spellbook appears to have been discarded here.&N~
 ~
-33 28 2 0 14 0 12288 8404993 64 262107647 0
+33 28 2 0 14 0 12288 8404993 32832 262107647 0
 0 0 200 0 0 0 0 0
 0 0 100
 A

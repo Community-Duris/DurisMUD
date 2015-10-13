@@ -6,8 +6,8 @@ An apprentice sits here eating his daily gruel.
 His nose is buried in the spell book he is studying, paying more
 attention to it than his gruel.  He chews absentmindedly on his spoon.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-H 0 1024 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+H 0 1024 0 -1
 38 13 35 20d24+100 1d10+2
 0.9.3.0 9720
 8 8 1
@@ -19,8 +19,8 @@ A patrolling apprentice on guard duty wanders about here.
 One of the older apprentices, he would actually be able to deal with a
 crisis should a crisis situation develop.
 ~
-1140852744 1 0 8 0 0 0 -1000 S
-H 0 1024 -1
+1140852744 1 0 0 8 0 0 0 -1000 S
+H 0 1024 0 -1
 40 11 19 25d32+200 3d6+3
 6.2.6.1 22275
 8 8 1
@@ -31,8 +31,8 @@ An exhausted apprentice steals a few hours of sleep.
 ~
 Studying can be hard work -- and this guy has had all he's going to have.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-H 0 1024 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+H 0 1024 0 -1
 55 -5 -111 55d88+4565 7d6+30
 0.2.7.6 222750
 4 8 1
@@ -43,8 +43,8 @@ An apprentice wanders about on some private errand.
 ~
 He is lost in thought and isn't paying a whole lot of attention to you.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-H 0 1024 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+H 0 1024 0 -1
 40 11 19 25d32+200 3d6+3
 6.2.6.1 22275
 8 8 1
@@ -55,8 +55,8 @@ An apprentice sits on the toilet here taking a crap.
 ~
 He is not amused.
 ~
-1140852746 1 0 16 0 0 0 -1000 S
-H 0 1024 -1
+1140852746 1 0 0 16 0 0 0 -1000 S
+H 0 1024 0 -1
 55 -5 -111 55d88+4565 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -67,8 +67,8 @@ An apprentice is studying dilligently here.
 ~
 His nose is buried in his book and he seems oblivious to the world.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-H 0 1024 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+H 0 1024 0 -1
 44 15 51 15d18+60 2d6+1
 7.6.2.0 7290
 8 8 1
@@ -81,8 +81,8 @@ He wanders about the library his eyes scanning the titles of the books,
 searching for either an enormous tome of arcane knowledge or the dirty
 magazine he hid in the shelves when the &+Wshalafi &n(master) came by.
 ~
-1073743880 0 0 16 0 0 0 -1000 S
-H 0 1024 -1
+1073743880 0 0 0 16 0 0 0 -1000 S
+H 0 1024 0 -1
 41 15 51 15d18+60 2d6+1
 7.6.2.0 7290
 8 8 1
@@ -95,8 +95,8 @@ It appears his experiment blew up in his face.  When you pay more
 attention to him, you can make out the words he is saying: 'too much
 sulfer ... that's it.  Too much sulfer.'
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-H 0 1024 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+H 0 1024 0 -1
 41 20 96 1d12+4 1d5+0
 1.0.0.0 129
 6 6 1
@@ -108,8 +108,8 @@ An apprentice is hard at work on some strange apparatus.
 His concentration is focused totally on pouring the contents of a vial
 into a large flask.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-H 0 1024 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+H 0 1024 0 -1
 50 11 19 25d32+200 3d6+3
 6.2.6.1 22275
 8 8 1
@@ -121,8 +121,8 @@ An apprentice cultivates the reagents growing in this area.
 He is appropriately dressed for the area he is working in.  He moves
 slowly and purposefully, knowing exactly what he is doing.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-H 0 1024 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+H 0 1024 0 -1
 46 11 19 25d32+200 3d6+3
 6.2.6.1 22275
 8 8 1
@@ -135,8 +135,8 @@ As he works he mutters about the unfairness of his lot in life and
 how just because he was caught trying to decipher some runes he was
 assigned to arctic duty-life-is-so-unfair.
 ~
-1073743882 0 0 16 0 0 0 -1000 S
-H 0 1024 -1
+1073743882 0 0 0 16 0 0 0 -1000 S
+H 0 1024 0 -1
 55 -5 -111 55d88+4565 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -148,8 +148,8 @@ wraith~
 He's very ... well ... wraithy.  Since he was summoned by an apprentice,
 he isn't a very powerful wraith, but a wraith just the same.
 ~
-10 1 0 202 0 0 0 -1000 S
-U 0 256 -1
+10 1 0 0 202 0 0 0 -1000 S
+U 0 256 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.0.0.0 121500
 8 8 1
@@ -162,8 +162,8 @@ She was once one of the greatest bards in the land, but succumbed to
 time and her own mortality.  Now she haunts her old lyre, longing to
 play it just once more ...
 ~
-10 1 0 216 0 0 0 -1000 S
-U 0 32768 -1
+10 1 0 0 216 0 0 0 -1000 S
+U 0 32768 0 -1
 55 -5 -111 55d121+4620 7d6+30
 0.0.0.0 222750
 8 8 2
@@ -175,8 +175,8 @@ elemental earth~
 The thing is almost certain you do not belong in here.  No, correction:
 it _is_ certain you do not belong here, and moves to attack!
 ~
-2056 1 0 136 0 0 0 -1000 S
-EE 0 1 -1
+2056 1 0 0 136 0 0 0 -1000 S
+EE 0 1 0 -1
 40 8 -7 30d60+360 3d6+4
 0.0.0.0 26730
 8 8 1
@@ -189,8 +189,8 @@ He looks utterly confused because he is.  He is muttering something
 obscure and senseless about worlds and imagination and fantasy and
 mental disorders.
 ~
-8 0 0 0 0 0 0 -1000 S
-H 0 516 -1
+8 0 0 0 0 0 0 0 -1000 S
+H 0 516 0 -1
 59 -5 -111 55d110+4565 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -204,8 +204,8 @@ around.  In here, however, it has somehow become magically enhanced
 and gained a certain amount of mobility and awareness.  Mostly it is
 aware of its stomach, but it's a start.
 ~
-10 1 0 0 0 0 0 -1000 S
-RS 0 192 -1
+10 1 0 0 0 0 0 0 -1000 S
+RS 0 192 0 -1
 59 20 96 1d15+4 1d5+0
 1.0.0.0 129
 8 8 0
@@ -216,8 +216,8 @@ scorpion~
 ~
 The scorpion blends in almost perfectly with the sand.
 ~
-10 1 0 0 0 0 0 -1000 S
-I 0 0 -1
+10 1 0 0 0 0 0 0 -1000 S
+I 0 0 0 -1
 50 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -230,8 +230,8 @@ The Master of the Citadel regards you with tired eyes.
 to learn?'  Exactly what race he belongs to is uncertain; his hair is black
 and glossy, his eyes twin pools of darkness that pierce the soul.
 ~
-2058 1 0 216 0 0 0 -100 S
-DK 0 640 -1
+2058 1 0 0 216 0 0 0 -100 S
+DK 0 640 0 -1
 60 -7 -125 58d132+6032 7d6+35
 3.4.8.6 234900
 8 8 1
@@ -246,8 +246,8 @@ feminine, yet her stance is challenging almost to the point of aggressiveness.
 Her hair is a rich earthen brown highlighted with rust streaks, and her eyes
 liquid pools of sunlight and earth.
 ~
-2058 1 0 144 0 0 0 -1000 S
-H 0 288 -1
+2058 1 0 0 144 0 0 0 -1000 S
+H 0 288 0 -1
 60 -7 -114 56d132+5824 7d6+35
 1.3.8.6 226800
 8 8 2
@@ -259,8 +259,8 @@ elemental guardian~
 He looks like a statue, and in fact, he pretty much IS a statue, only
 he can move.
 ~
-2059 1 0 152 0 0 0 -1000 S
-H 0 544 -1
+2059 1 0 0 152 0 0 0 -1000 S
+H 0 544 0 -1
 45 2 -28 40d88+880 4d6+10
 3.3.3.3 51840
 8 8 1
@@ -272,8 +272,8 @@ elemental guardian~
 He looks like a statue, and in fact, he pretty much IS a statue, only
 he can move.
 ~
-2059 1 0 152 0 0 0 -1000 S
-H 0 40 -1
+2059 1 0 0 152 0 0 0 -1000 S
+H 0 40 0 -1
 45 2 -28 40d88+880 4d6+10
 3.3.3.3 51840
 8 8 1
@@ -285,8 +285,8 @@ elemental guardian~
 He looks like a statue, and in fact, he pretty much IS a statue, only
 he can move.
 ~
-2059 1 0 152 0 0 0 -1000 S
-H 0 32 -1
+2059 1 0 0 152 0 0 0 -1000 S
+H 0 32 0 -1
 45 2 -28 40d88+880 4d6+10
 3.3.3.3 51840
 8 8 1
@@ -298,8 +298,8 @@ elemental guardian~
 He looks like a statue, and in fact, he pretty much IS a statue, only
 he can move.
 ~
-2059 1 0 152 0 0 0 -1000 S
-H 0 32 -1
+2059 1 0 0 152 0 0 0 -1000 S
+H 0 32 0 -1
 55 -5 -111 55d121+4620 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -312,8 +312,8 @@ It is extremely hard to see him; in the shadows he merges with the gloom,
 and in bright light he becomes even more wraith-like and invisible.  His
 eyes burn in the gloom, and he watches you from his post before the portal.
 ~
-2058 1 0 208 0 0 0 -1000 S
-UG 0 256 -1
+2058 1 0 0 208 0 0 0 -1000 S
+UG 0 256 0 -1
 60 -7 -125 58d132+6032 7d6+35
 3.4.8.6 234900
 8 8 0
@@ -327,8 +327,8 @@ almost unformed, and very, very large.  He looks something like ac cross
 between a golem and a giant; its face expressionless, almost shapeless,
 but his eyes are clear and penetrating.
 ~
-2058 1 0 136 0 0 0 -1000 S
-G 0 512 7
+2058 1 0 0 136 0 0 0 -1000 S
+G 0 512 0 7
 59 -7 -118 59d96+6372 7d6+35
 4.5.9.6 238950
 8 8 0
@@ -340,8 +340,8 @@ wraith~
 He's very ... well ... wraithy.  Since he was summoned by an apprentice,
 he isn't a very powerful wraith, but a wraith just the same.
 ~
-10 1 0 202 0 0 0 -1000 S
-U 0 4 -1
+10 1 0 0 202 0 0 0 -1000 S
+U 0 4 0 -1
 56 -3 -95 50d110+2700 6d6+25
 0.0.0.0 121500
 8 8 1
@@ -353,8 +353,8 @@ elemental earth~
 The thing is almost certain you do not belong in here.  No, correction:
 it _is_ certain you do not belong here, and moves to attack!
 ~
-2058 1 0 136 0 0 0 -1000 S
-EE 0 1 -1
+2058 1 0 0 136 0 0 0 -1000 S
+EE 0 1 0 -1
 48 8 -7 30d60+360 3d6+4
 0.0.0.0 26730
 8 8 1
@@ -368,8 +368,8 @@ beholder huge guardian~
 &+mthey all developped very special kind of welfare. Their powers of mind can be
 &+mfocused and unleashed through their huge eyes, spreading death and destruction.
 ~
-20490 1 0 402653224 0 131072 0 -1000 S
-BH 0 5 4
+20490 1 0 0 402653224 0 131072 0 -1000 S
+BH 0 5 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -383,8 +383,8 @@ himself in the extreme conditions of the desert.  He has a scar on his left
 cheek and he sits in a comfortable chair telling the apprentices stories
 about his travels.
 ~
-1073743882 0 0 152 268435456 0 0 1000 S
-PH 0 2 -1
+1073743882 0 0 0 152 268435456 0 0 1000 S
+PH 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -396,8 +396,8 @@ druid teacher~
 This druid teacher tends to the greenhouse, showing the apprentices of the
 citadel everything they need to know about plants.
 ~
-1073743882 0 0 152 0 0 0 0 S
-PH 0 129 -1
+1073743882 0 0 0 152 0 0 0 0 S
+PH 0 129 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -411,8 +411,8 @@ lost apprentice~
 &ndisbelief, 'This place is a filled with nightmares. I beg of you,
 &nhelp me!'&n
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -1,9 +1,17 @@
 #66
 &n&+LThe &n&+GSh&n&+gau&n&+Ggh&n&+gi&n&+Gn &n&+RH&n&+runtin&n&+Rg &n&+WGrounds&n~
-6699 1 0 1 5 2
+6700 1 0 1 5 2
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
+*
+D 0 6686 2 0 100 0 0 0
+*     south exit from "An Old Campfire in the Maze" to
+*     "A Secret Hunting Passage" - open
+*
+D 0 6700 0 0 100 0 0 0
+*     north exit from "A Secret Hunting Passage" to
+*     "An Old Campfire in the Maze" - open
 *
 D 0 6696 3 5 100 0 0 0
 *     west exit from "A Cavern off the Underdark Depths" to
@@ -14,35 +22,30 @@ D 0 6697 1 5 100 0 0 0
 *     "A Cavern off the Underdark Depths" - closed/secret
 *
 *
-D 0 6686 2 5 100 0 0 0
-*     south exit from "An Old Campfire in the Maze" to
-*     "A Secret Hunting Passage" - closed/secret
-*
-*
 O 0 6600 1 6600 100 0 0 0          * a wooden trapdoor
 O 0 6605 1 6605 100 0 0 0          * The skeleton of some long forgotten adventurer
-O 0 6602 10 6606 100 0 0 0         * A strange glowing mushroom
-O 0 6602 10 6607 100 0 0 0         * A strange glowing mushroom
-O 0 6602 10 6615 100 0 0 0         * A strange glowing mushroom
-O 0 6606 1 6616 100 0 0 0          * A bloody carcass
-O 0 6602 10 6624 100 0 0 0         * A strange glowing mushroom
-O 0 6607 1 6625 100 0 0 0          * A scattering of huge bones
-O 0 6602 10 6633 100 0 0 0         * A strange glowing mushroom
+O 0 6602 10 6606 100 0 0 0         * a strange glowing mushroom
+O 0 6602 10 6607 100 0 0 0         * a strange glowing mushroom
+O 0 6602 10 6615 100 0 0 0         * a strange glowing mushroom
+O 0 6606 1 6616 100 0 0 0          * a bloody carcass
+O 0 6602 10 6624 100 0 0 0         * a strange glowing mushroom
+O 0 6607 1 6625 100 0 0 0          * a scattering of huge bones
+O 0 6602 10 6633 100 0 0 0         * a strange glowing mushroom
 O 0 6608 1 6641 100 0 0 0          * some massive clawed footprints
 O 0 6611 4 6642 100 0 0 0          * a recently shattered mushroom
 O 0 6611 4 6643 100 0 0 0          * a recently shattered mushroom
 O 0 6611 4 6652 100 0 0 0          * a recently shattered mushroom
 O 0 6611 4 6661 100 0 0 0          * a recently shattered mushroom
-O 0 6602 10 6662 100 0 0 0         * A strange glowing mushroom
+O 0 6602 10 6662 100 0 0 0         * a strange glowing mushroom
 O 0 6609 1 6670 100 0 0 0          * a pitted and charred skeleton
-O 0 6602 10 6671 100 0 0 0         * A strange glowing mushroom
-O 0 6602 10 6680 100 0 0 0         * A strange glowing mushroom
+O 0 6602 10 6671 100 0 0 0         * a strange glowing mushroom
+O 0 6602 10 6680 100 0 0 0         * a strange glowing mushroom
 O 0 6610 1 6681 100 0 0 0          * a single skull
-O 0 6603 2 6686 100 0 0 0          * A campfire
-O 0 6602 10 6689 100 0 0 0         * A strange glowing mushroom
-O 0 6602 10 6690 100 0 0 0         * A strange glowing mushroom
+O 0 6603 2 6686 100 0 0 0          * a campfire
+O 0 6602 10 6689 100 0 0 0         * a strange glowing mushroom
+O 0 6602 10 6690 100 0 0 0         * a strange glowing mushroom
 O 0 6612 1 6691 100 0 0 0          * some blood spatters
-O 0 6603 2 6696 100 0 0 0          * A campfire
+O 0 6603 2 6696 100 0 0 0          * a campfire
 *
 M 0 6600 20 6603 100 0 0 0         * a giant cavern bear
 G 1 6613 20 0 100 0 0 0            *    the tooth of a great bear

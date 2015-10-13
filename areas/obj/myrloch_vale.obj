@@ -218,7 +218,7 @@ key old~
 an old key~
 An old key lies here, aging.~
 ~
-18 16 1 1 7 0 8392704 1 0 0 0
+18 16 1 1 7 0 8392704 1 32768 0 0
 0 100 0 0 0 0 0 0
 1 1 100
 E
@@ -230,7 +230,7 @@ bloodied head warlord fire~
 &+ra bloodied head of the warlord of fire&N~
 &+rA bloodied head of the warlord of fire bleeds here.&N~
 ~
-8 2 0 0 7 0 8421376 1 0 0 0
+8 2 0 0 7 0 8421376 1 32768 0 0
 0 0 0 0 0 0 0 0
 60 1 100
 E
@@ -261,7 +261,7 @@ bracelet old~
 an old bracelet~
 An old bracelet lies here untouched on the floor.~
 ~
-8 16 3 3 7 0 36864 4097 0 0 0
+8 16 3 3 7 0 36864 4097 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -430,7 +430,7 @@ old dagger~
 an old dagger~
 An old dagger sits here~
 ~
-8 16 2 3 7 0 4096 8193 0 0 0
+8 16 2 3 7 0 4096 8193 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E

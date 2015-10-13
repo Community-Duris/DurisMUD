@@ -317,7 +317,7 @@ wood shard piece~
 &+ga shard of other-planar wood~
 &+gA small piece of greenish wood lies here~
 ~
-8 6 1 0 7 0 12353 1 0 0 0
+8 6 1 0 7 0 12353 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 24000 100
 E
@@ -332,7 +332,7 @@ iron shard piece~
 &+La shard of other-planar iron~
 &+LA small piece of iron is hidden here, almost undetectable.~
 ~
-8 15 1 0 7 0 12353 1 0 0 0
+8 15 1 0 7 0 12353 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 24000 100
 E
@@ -347,7 +347,7 @@ head~
 &+rthe severed head of the half-orc shaman~
 &+rA severed head lies here, oozing clotted blood.~
 ~
-8 2 2 4 7 0 8916992 1 0 0 0
+8 2 2 4 7 0 8916992 1 32768 0 0
 0 0 0 0 0 0 0 0
 4 24000 100
 E
@@ -362,7 +362,7 @@ head~
 &+rthe severed head of the half-orc conjurer~
 &+rA severed head lies here, oozing clotted blood.~
 ~
-8 2 2 4 7 0 8916992 1 0 0 0
+8 2 2 4 7 0 8916992 1 32768 0 0
 0 0 0 0 0 0 0 0
 4 24000 100
 E
@@ -377,7 +377,7 @@ ring~
 &+Wa hallowed &+CCimmerian &+Wring~
 &+WA ring lies here, &+Csparkling &+Wbrightly.~
 ~
-9 27 1 0 12 0 64 3 0 0 0
+9 27 1 0 12 0 64 3 32768 0 0
 5 1 0 2 0 0 0 0
 0 0 100
 E

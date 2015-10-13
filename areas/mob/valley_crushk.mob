@@ -5,8 +5,8 @@ rabbit furry white~
 ~
 &+WThis is a small, white rabbit with very soft fur.&N
 ~
-72 0 0 0 0 0 0 200 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 200 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 1
@@ -17,8 +17,8 @@ squirrel brown~
 ~
 &+yThis is a tiny, brown squirrel with a bushy tail.&N
 ~
-72 0 0 0 0 0 0 200 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 200 S
+A 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 1
@@ -29,8 +29,8 @@ sparrow tiny bird~
 ~
 &+yThis is a very beautiful, tiny bird with brown body and wings.&N
 ~
-72 0 0 0 0 0 0 300 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 300 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 2
@@ -41,8 +41,8 @@ rodent small~
 ~
 &+yThis is a small, brown rodent that looks almost like a mouse.&N
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 1
@@ -53,8 +53,8 @@ wolf white~
 ~
 &+WThis is a very beautiful, majestic looking wolf with snow white fur.&N
 ~
-72 1 0 0 0 0 0 -1000 S
-A 0 0 -1
+72 1 0 0 0 0 0 0 -1000 S
+A 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 1
@@ -65,8 +65,8 @@ owl wise old~
 ~
 &+yThis is a very large owl with brown feathers and&N &+Ybright yellow eyes.&N
 ~
-72 0 0 0 0 0 0 500 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 500 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 1
@@ -77,8 +77,8 @@ bandit sneaky~
 ~
 &+LThis is a small man dressed in black leather and a mask to hide his identity.
 ~
-2120 0 0 524288 0 0 0 -500 S
-H 0 4096 -1
+2120 0 0 0 524288 0 0 0 -500 S
+H 0 4096 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -90,8 +90,8 @@ gypsy wandering~
 &+LThis is an old, scruffy woman with strangly, grey hair.  She is trying to get
 &+Lyou to give her money to tell you your fortune.&N
 ~
-2120 0 0 0 0 0 0 0 S
-H 0 0 -1
+2120 0 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 1
@@ -103,8 +103,8 @@ A seasoned warrior is travelling here, looking for adventure.
 This is a scruffy human dressed in leather.  He looks like he has travelled a
 long way, and looks tired.
 ~
-2120 0 0 0 0 0 0 100 S
-H 0 1 -1
+2120 0 0 0 0 0 0 0 100 S
+H 0 1 0 -1
 6 18 80 6d21+33 2d3+1
 3.2.0.0 777
 8 8 1
@@ -115,8 +115,8 @@ A young cleric is here looking lost.
 ~
 He smiles at you and says, 'Do you know the way to the town of Verzanan?'.
 ~
-2056 0 0 0 0 0 0 500 S
-H 0 32 -1
+2056 0 0 0 0 0 0 0 500 S
+H 0 32 0 -1
 4 20 87 4d16+18 1d5+0
 2.1.0.0 518
 8 8 1
@@ -127,8 +127,8 @@ magician evil~
 ~
 &+LHe growls at you, 'What are you looking at?!?!?!'.&N
 ~
-72 0 0 0 0 0 0 -500 S
-H 0 2048 -1
+72 0 0 0 0 0 0 0 -500 S
+H 0 2048 0 -1
 4 20 87 4d12+14 1d5+0
 2.1.0.0 518
 8 8 1
@@ -139,8 +139,8 @@ A wise, old man is here telling stories of old.
 ~
 He says, 'Did I tell you the story about when I slayed a dragon bare-handed?'.
 ~
-2120 0 0 0 0 0 0 0 S
-H 0 0 -1
+2120 0 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
@@ -151,8 +151,8 @@ deer~
 ~
 &+yThis is a large, beautiful deer with soft brown and grey fur.&N
 ~
-72 0 0 0 0 0 0 300 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 300 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 1
@@ -163,8 +163,8 @@ fox grey small~
 ~
 &+LThis is a small fox with grey fur and small&N &+Wwhite blotches&N &+Laround its eyes.
 ~
-72 0 0 0 0 0 0 150 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 150 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 1
@@ -175,8 +175,8 @@ A merchant is travelling here, and selling his wares.
 ~
 This is a tall, human merchant trying to earn an honest living.
 ~
-2120 0 0 0 0 0 0 400 S
-H 0 0 -1
+2120 0 0 0 0 0 0 0 400 S
+H 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 1
@@ -188,8 +188,8 @@ faerie moon~
 &+WThis faerie glows with an inner radiance much like the full moon on a dark
 &+Wnight.  It has small transluscent wings which flutter brightly.
 ~
-2056 32 0 8 0 0 0 700 S
-H 0 0 -1
+2056 32 0 0 8 0 0 0 700 S
+H 0 0 0 -1
 9 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
@@ -202,8 +202,8 @@ The iridescent faerie swirls in a myriad of colors blending each color into
 itself seeming to blur.  It has small wings the color of frosted glass which
 sparkle brightly.
 ~
-2056 32 0 8 0 0 0 700 S
-H 0 0 -1
+2056 32 0 0 8 0 0 0 700 S
+H 0 0 0 -1
 10 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 1
@@ -216,8 +216,8 @@ faerie opal~
 &+Wof fire-light dancing inside.  The small wings are like plumes of fire, and
 &+Wseem to flicker as the faerie flies about.
 ~
-2056 32 0 8 0 0 0 700 S
-H 0 0 -1
+2056 32 0 0 8 0 0 0 700 S
+H 0 0 0 -1
 11 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 2
@@ -230,8 +230,8 @@ faerie rainbow~
 &+Whued.  Her wings are lined with silver like the clouds that join the
 &+Wrainbow in the sky.
 ~
-2056 32 0 8 0 0 0 700 S
-H 0 0 -1
+2056 32 0 0 8 0 0 0 700 S
+H 0 0 0 -1
 12 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 2
@@ -244,8 +244,8 @@ faerie emerald~
 &+gvividly.  The palette of green is breathtaking, and complements the gold-
 &+gtinted faerie wings.
 ~
-2056 32 0 8 0 0 0 700 S
-H 0 0 -1
+2056 32 0 0 8 0 0 0 700 S
+H 0 0 0 -1
 10 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 2
@@ -258,8 +258,8 @@ This faerie is totally transluscent and the images behind it are blurred from
 the refraction of light passing through.  The wings of this faerie are clear
 like thin ice, and you wonder if a strong wind would break them.
 ~
-2056 32 0 138 0 0 0 700 S
-H 0 0 -1
+2056 32 0 0 138 0 0 0 700 S
+H 0 0 0 -1
 9 18 77 7d18+24 2d3+1
 3.2.0.0 907
 8 8 1
@@ -271,8 +271,8 @@ faerie spider~
 &+LThis faerie is obsidian black with hair that looks like fine silk.  Its wings
 &+Llook like freshly spun spider webs.
 ~
-2056 32 0 138 0 0 0 700 S
-H 0 0 -1
+2056 32 0 0 138 0 0 0 700 S
+H 0 0 0 -1
 13 18 77 7d18+24 2d3+1
 3.2.0.0 907
 8 8 1
@@ -285,8 +285,8 @@ faerie king royal~
 &+Wcrafted of fine, platinum silk, and his body stands upright with pride,
 &+Wmaking you want to bow in reverence.
 ~
-2056 32 0 0 0 0 0 1000 S
-H 0 0 -1
+2056 32 0 0 0 0 0 0 1000 S
+H 0 0 0 -1
 15 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -299,8 +299,8 @@ The faerie cleric is surrounded by a bright, white aura.  Each movement of
 the faerie seems to bring about a soft musical sound, creating a harmony
 of melodies around you.
 ~
-2056 32 0 136 0 0 0 700 S
-H 0 32 -1
+2056 32 0 0 136 0 0 0 700 S
+H 0 32 0 -1
 7 18 77 7d19+31 2d3+1
 3.2.0.0 907
 8 8 1
@@ -314,8 +314,8 @@ channels it into the air around it as magical energy.  Small magical sparks
 emit from deep in the heart of the faerie mage, its visage seems to dance
 as if made from an illusion.
 ~
-2056 32 0 8 0 0 0 700 S
-H 0 0 -1
+2056 32 0 0 8 0 0 0 700 S
+H 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 3.2.0.0 907
 8 8 1
@@ -327,8 +327,8 @@ esroh hermit~
 Esroh the hermit loves his home away from everyone.  'No one to bother me!',
 he says in a comely tone.  He stands about 5'2" tall and is rather rotund.
 ~
-2058 0 0 128 0 0 0 500 S
-H 0 256 -1
+2058 0 0 0 128 0 0 0 500 S
+H 0 256 0 -1
 11 18 67 10d19+45 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -339,8 +339,8 @@ A &+Wvillage guardian&N is patrolling here.
 ~
 This is a large warrior hired to protect the town of Minthka.
 ~
-2056 0 0 0 0 0 0 300 S
-H 0 1 -1
+2056 0 0 0 0 0 0 0 300 S
+H 0 1 0 -1
 7 18 77 7d21+38 2d3+1
 3.2.0.0 907
 8 8 1
@@ -351,8 +351,8 @@ A &+mvillage salesman&N is here peddling his wares.
 ~
 He looks like he would bargain for hours and hours to try to make a deal.
 ~
-2056 0 0 0 0 0 0 0 S
-H 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -363,8 +363,8 @@ A &+yvillage poor man&N is here begging for money.
 ~
 He looks like he hasn't eaten in days. 'Please have pity on me!', he says.
 ~
-2056 0 0 0 0 0 0 300 S
-H 0 0 -1
+2056 0 0 0 0 0 0 0 300 S
+H 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 2.1.0.0 518
 8 8 1
@@ -375,8 +375,8 @@ The &+Lvillage blacksmith&N is standing here, pounding on some iron.
 ~
 He looks very muscular from pounding iron all day.  He looks mean and tough.
 ~
-2058 0 0 0 0 0 0 0 S
-H 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+H 0 1 0 -1
 11 18 80 6d21+33 2d3+1
 3.2.0.0 777
 8 8 1
@@ -387,8 +387,8 @@ The &+Yvillage baker&N is here selling his breads.
 ~
 The village baker is covered in flour as he is busy preparing his bread.
 ~
-2058 0 0 0 0 0 0 200 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 200 S
+PH 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 1
@@ -399,8 +399,8 @@ The &+gvillage grocer&N is here selling his goods.
 ~
 The village grocer smiles and says, 'What would ya like?'.
 ~
-2058 0 0 0 0 0 0 350 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 350 S
+PH 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 1
@@ -411,8 +411,8 @@ The &+mvillage magician&N is here practicing a spell.
 ~
 The village magician says, 'Yes? How may I help you?'.
 ~
-2058 0 0 0 0 0 0 150 S
-PH 0 2048 -1
+2058 0 0 0 0 0 0 0 150 S
+PH 0 2048 0 -1
 9 18 71 9d14+31 2d3+1
 4.3.0.0 1166
 8 8 1
@@ -424,8 +424,8 @@ The &+rvillage leader&N is here pondering new laws of the village.
 The village leader is a large man about 6'1" tall and weighing 300 lbs.  He
 is dressed in fine leather and looks very wise.  He grunts at you, 'What?!?'.
 ~
-8388760 16 0 0 0 0 0 100 S
-H 0 2048 -1
+8388760 16 0 0 0 0 0 0 100 S
+H 0 2048 0 -1
 11 18 67 10d14+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -436,8 +436,8 @@ A &+Bvillage boy&N is here dreaming of being a warrior.
 ~
 He looks like a spoiled brat, and says to you, 'Got a sword I can have?'.
 ~
-2056 0 0 0 0 0 0 200 S
-H 0 0 -1
+2056 0 0 0 0 0 0 0 200 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -448,8 +448,8 @@ A &+Mvillage girl&N is innocently playing here.
 ~
 She is a petit little thing with long, curly hair.
 ~
-2056 0 0 0 0 0 0 200 S
-H 0 0 -1
+2056 0 0 0 0 0 0 0 200 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 2
@@ -463,8 +463,8 @@ his master uses belts for a collar -- the normal dog collar type things
 just don't work since they're too small.  His teeth are sharp and pointed
 and his breath is worse than his bite is worse than his bark.
 ~
-10 1 0 0 0 0 0 0 S
-A 0 0 -1
+10 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -482,8 +482,8 @@ flazoh bounty hunter~
 &+ya jeweler.  Regardless, Flazoh nervously peers out of the windows of this
 &+ysmall hut ever-so-often, keeping an eye peeled for someone.
 ~
-2186 0 0 8 0 0 0 420 S
-pf 0 65536 -1
+2186 0 0 0 8 0 0 0 420 S
+pf 0 65536 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

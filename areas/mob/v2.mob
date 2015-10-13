@@ -7,8 +7,8 @@ the &+rred abishai&n~
 &+grepulsive, reptilian face. Her&n &+rscaly skin&n &+gis bright red and her long barbed
 &+gtail curls behind her. Her feet and hands end in huge powerful claws.
 ~
-33687554 1 0 167772160 0 0 0 -900 S
-X 0 1 -1
+33687554 1 0 0 167772160 0 0 0 -900 S
+X 0 1 0 -1
 55 -5 -126 55d131+5060 7d6+30
 0.2.0.9 334125
 8 8 2
@@ -23,8 +23,8 @@ per guardian~
 &+glong curving white plume. His face shows no expression, except that of
 &+gimplacable determination.
 ~
-33556546 1 0 33554576 0 0 0 -940 S
-PO 0 1 -1
+33556546 1 0 0 33554576 0 0 0 -940 S
+PO 0 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -38,8 +38,8 @@ albino minotaur overlord~
 &+wloin cloth and boots, black leather legging trimmed in red and gold. Radiating
 &+wan aura of unquestioned authority, he stands ready to command his warriors.
 ~
-67110978 1 0 33554432 0 0 0 -877 S
-mt 0 2 -1
+67110978 1 0 0 33554432 0 0 0 -877 S
+mt 0 2 0 -1
 50 -3 -85 50d119+3000 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -54,8 +54,8 @@ albinor minotaur conjurer~
 &+wTheir&n &+rtips&n &+ware stained blood red which matches the minotaur's&n &+reyes.&n &+wIt eyes
 &+whave a baleful expression and its face is full of rage and hate.
 ~
-67110912 1 0 33554432 0 0 0 -900 S
-G 0 2048 -1
+67110912 1 0 0 33554432 0 0 0 -900 S
+G 0 2048 0 -1
 50 -3 -85 50d80+2900 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -70,8 +70,8 @@ crazed adventurer~
 &+gso torn, it is a wonder that they don't fall off. His black leather boots
 &+ghave also seen better days.
 ~
-1174407170 1 0 33554576 12480 0 0 -900 S
-X 0 1 -1
+1174407170 1 0 0 33554576 12480 0 0 -900 S
+X 0 1 0 -1
 55 -5 -126 55d131+5060 7d6+30
 0.2.0.9 334125
 8 8 1
@@ -84,8 +84,8 @@ red minotaur warrior~
 &+rarms. Its fur is red and it has coal black horns. It is wearing a black loin
 &+rcloth and black boots. Its are also black, cold, and without mercy.
 ~
-2048 0 0 33554432 0 0 0 -999 S
-mt 0 1 -1
+2048 0 0 0 33554432 0 0 0 -999 S
+mt 0 1 0 -1
 45 6 5 33d83+726 4d6+7
 7.8.0.2 42768
 8 8 1
@@ -100,8 +100,8 @@ red elite minotaur warrior~
 &+robviously an insignia of rank. Its eyes are also black, cold, and without
 &+rmercy.
 ~
-2056 1 0 33554432 0 0 0 -1000 S
-mt 0 1 -1
+2056 1 0 0 33554432 0 0 0 -1000 S
+mt 0 1 0 -1
 35 6 -2 35d83+770 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -116,8 +116,8 @@ red overlord minotaur warrior~
 &+rRadiating an aura of unquestioned authority, he stands ready to command his
 &+rwarriors.
 ~
-2056 1 0 33554432 0 0 0 -700 S
-mt 0 2 -1
+2056 1 0 0 33554432 0 0 0 -700 S
+mt 0 2 0 -1
 51 -5 -88 51d131+4590 7d6+30
 6.9.4.6 206550
 8 8 1
@@ -130,8 +130,8 @@ black minotaur warrior~
 &+Larms. Its fur is black and it has very sharp red hors. It is wearing a red
 &+Lloin cloth and boots. Its eyes are also black, cold, and without mercy.
 ~
-2048 0 0 33554432 0 0 0 -999 S
-mt 0 1 -1
+2048 0 0 0 33554432 0 0 0 -999 S
+mt 0 1 0 -1
 49 2 -5 36d95+1008 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -146,8 +146,8 @@ black elite minotaur warrior~
 &+Lwhich is obviously an insignia of rank. Its eyes are also black, cold, and
 &+Lwithout mercy.
 ~
-67110920 1 0 33554432 0 0 0 -1000 S
-mt 0 1 -1
+67110920 1 0 0 33554432 0 0 0 -1000 S
+mt 0 1 0 -1
 42 -1 -49 42d107+2100 6d6+12
 2.8.7.3 102060
 8 8 1
@@ -162,8 +162,8 @@ black overlord minotaur warrior~
 &+LRadiating an aura of unquestioned authority, he stands ready to command his
 &+Lwarriors.
 ~
-67110920 1 0 33554432 0 0 0 -910 S
-mt 0 2 -1
+67110920 1 0 0 33554432 0 0 0 -910 S
+mt 0 2 0 -1
 53 -5 -94 53d131+4770 7d6+30
 8.0.6.6 214650
 8 8 1
@@ -177,8 +177,8 @@ albino minotaur~
 &+wskirt and black boots. Although its black horns are smaller than that of the
 &+wother minotaurs, they are just as deadly.
 ~
-67110912 0 0 33554432 0 0 0 -899 S
-mt 0 1 -1
+67110912 0 0 0 33554432 0 0 0 -899 S
+mt 0 1 0 -1
 45 8 26 26d65+468 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -192,8 +192,8 @@ white disciple vargan~
 &+gface is lean and weatherworn. His eyes are hidden in deep shadows cast by the
 &+ghood he wears. Sharp horns sticks out from the top of the hood.
 ~
-2048 1 0 33554432 0 0 0 -900 S
-G 0 32 -1
+2048 1 0 0 33554432 0 0 0 -900 S
+G 0 32 0 -1
 46 -3 -62 46d110+2714 6d6+25
 6.0.9.4 111780
 8 8 1
@@ -207,8 +207,8 @@ disciple black vargan~
 &+gface is lean and weatherworn. His eyes are hidden in deep shadows cast by the
 &+ghood he wears. Sharp horns sticks out from the top of the hood.
 ~
-2048 1 0 33554432 0 0 0 -900 S
-G 0 256 -1
+2048 1 0 0 33554432 0 0 0 -900 S
+G 0 256 0 -1
 46 -3 -62 46d110+2714 6d6+25
 6.0.9.4 111780
 8 8 1
@@ -223,8 +223,8 @@ sellis son vargan~
 &+gHis shoulder length hair is black, streaked with white. His eyes are very
 &+gpale, light blue, almost white, giving his face a fanatical expression.
 ~
-1107429386 1 0 33554432 0 0 0 -1000 S
-PH 0 512 -1
+1107429386 1 0 0 33554432 0 0 0 -1000 S
+PH 0 512 0 -1
 46 -3 -72 46d80+2438 6d6+25
 6.0.9.4 111780
 8 8 1
@@ -239,8 +239,8 @@ grimlock warrior~
 &+gprobably only held together by the caked dirt and filth covering them. His
 &+ggrey skin is disgusting, covered with peeling, flaking scales.
 ~
-2056 1 0 33554432 0 0 0 -1000 S
-PH 0 1 -1
+2056 1 0 0 33554432 0 0 0 -1000 S
+PH 0 1 0 -1
 43 -1 -62 43d107+1935 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -256,8 +256,8 @@ grimlock champion~
 &+ggrey skin is disgusting, covered with peeling, flaking scales. His skin is
 &+gheavily scarred from the many battles he has survived.
 ~
-2056 1 0 33554432 0 0 0 -1000 S
-PH 0 1 -1
+2056 1 0 0 33554432 0 0 0 -1000 S
+PH 0 1 0 -1
 48 -3 -78 48d119+2640 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -273,8 +273,8 @@ grimlock guardian~
 &+ggrey skin is disgusting, covered with peeling, flaking scales. He stands
 &+ghere, ready to kill, guarding something.
 ~
-2066 1 0 33554432 0 0 0 -1000 S
-PH 0 1 -1
+2066 1 0 0 33554432 0 0 0 -1000 S
+PH 0 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -291,8 +291,8 @@ triton gather~
 &+gdrowned, but what he really could use now is a good meal. And he's not picky
 &+gabout what that might be!
 ~
-133184 1 0 33556480 0 0 0 -500 S
-P2 0 1 -1
+133184 1 0 0 33556480 0 0 0 -500 S
+P2 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -307,8 +307,8 @@ daeth tyrant~
 &+gremaining, the others having been hacked off in past battles. The death
 &+gtryrant doesn't look like it has much fight left in it, however....
 ~
-1073743880 1 0 167772160 0 0 0 -1000 S
-U 0 1 -1
+1073743880 1 0 0 167772160 0 0 0 -1000 S
+U 0 1 0 -1
 42 -1 -59 42d107+1890 6d6+12
 0.0.0.0 102060
 8 8 1
@@ -325,8 +325,8 @@ undead minotaur red~
 &+gwhite horns, however, are still very long and very sharp. Their tips are
 &+gstained blood red and have bits of flesh still sticking to them.
 ~
-1073743872 0 0 33554432 0 0 0 -1000 S
-U 0 1 -1
+1073743872 0 0 0 33554432 0 0 0 -1000 S
+U 0 1 0 -1
 36 2 -15 36d95+828 4d7+10
 0.0.0.0 46656
 8 8 1
@@ -343,8 +343,8 @@ undead minotaur black~
 &+gIts bone white horns, however, are still very long and very sharp. Their tips
 &+gare stained blood red and have bits of flesh still sticking to them.
 ~
-1073743872 0 0 33554432 0 0 0 -1000 S
-U 0 32 -1
+1073743872 0 0 0 33554432 0 0 0 -1000 S
+U 0 32 0 -1
 38 2 -21 38d88+836 4d7+10
 0.0.0.0 49248
 8 8 1
@@ -359,8 +359,8 @@ vurlok~
 &+gWith all the shriveled up bodies of rats lying about, what has Varlok lived
 &+gon? Or do we really want to know?
 ~
-1073743882 0 0 33554432 0 0 0 -1000 S
-PH 0 1024 -1
+1073743882 0 0 0 33554432 0 0 0 -1000 S
+PH 0 1024 0 -1
 48 -3 -78 48d80+2544 6d6+25
 8.1.0.5 116640
 8 8 1

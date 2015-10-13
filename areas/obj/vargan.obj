@@ -356,7 +356,7 @@ shoulder plate~
 &+ran ancient&n &+yshoulder&n &+gplate&n~
 &+rAn ancient&n &+yshoulder&n &+gplate is here on the ground.~
 ~
-13 16 0 0 7 0 4096 1 0 0 0
+13 16 0 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #2127
@@ -364,7 +364,7 @@ plate~
 &+ran ancient&n &+ybreast&n &+gplate&n~
 &+rAn ancient&n &+ybreast&n &+gplate is here on the ground.~
 ~
-13 16 0 0 7 0 4096 1 0 0 0
+13 16 0 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #2128

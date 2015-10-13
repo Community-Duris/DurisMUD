@@ -165,7 +165,7 @@ amulet demonic jeweled~
 &+Ra jeweled demonic amulet&N~
 An unwanted amulet collects dust amongst the rubble here.~
 ~
-9 16 3 2 7 0 8192 5 66 0 0
+9 16 3 2 7 0 8192 5 32834 0 0
 7 0 0 4 0 0 0 0
 1 987 100
 A
@@ -545,7 +545,7 @@ old scroll recall~
 &+Ca scroll of recall&N~
 An old scroll lies tossed on the ground here.~
 ~
-8 29 1 2 7 0 12288 16385 0 0 0
+8 29 1 2 7 0 12288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 #75253
@@ -711,7 +711,7 @@ dragon heart~
 &+Ra dragon's heart&N~
 A dragon's heart sits on the ground here.~
 ~
-13 2 0 0 7 0 12288 16385 66 0 0
+13 2 0 0 7 0 12288 16385 32834 0 0
 0 0 0 0 0 0 0 0
 15 100 100
 #75269
@@ -743,7 +743,7 @@ scale green~
 &+Ga green scale&N~
 A lonley green scale sits on the ground here.~
 ~
-37 15 0 0 7 0 274560 513 66 4169510912 0
+37 15 0 0 7 0 274560 513 32834 4169510912 0
 2 1 2 148 0 0 0 0
 7 777 100
 A
@@ -777,7 +777,7 @@ golden vial~
 &+Ya golden vial&N~
 A golden vial sits on the ground here.~
 ~
-13 24 1 2 7 0 12288 16385 0 0 0
+13 24 1 2 7 0 12288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 20 10 100
 #75275
@@ -843,7 +843,7 @@ small note~
 &+Ya small note&N~
 A small note sits on the ground here.~
 ~
-8 29 1 1 7 0 8192 16385 0 0 0
+8 29 1 1 7 0 8192 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 3 100
 E
@@ -863,7 +863,7 @@ bottled heart blue dragon~
 &+Ba bottled heart of a blue dragon&N~
 A small bottle sits on the ground here.~
 ~
-13 2 0 0 7 0 8192 16385 0 0 0
+13 2 0 0 7 0 8192 16385 32768 0 0
 0 0 0 0 0 0 0 0
 7 10 100
 #75282

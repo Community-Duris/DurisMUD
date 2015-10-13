@@ -8,8 +8,8 @@ librarian small~
 &+wglance up at you, then return to the book she is&n
 &+wcurrently cataloging.&n
 ~
-10 0 0 0 0 0 0 1000 S
-PH 0 8 -1
+10 0 0 0 0 0 0 0 1000 S
+PH 0 8 0 -1
 36 3 55 15d25+112 2d6+1
 88.73.1.0 4500
 8 8 1
@@ -25,8 +25,8 @@ Esliae Ji'Zaman, &+WKnight of the Merciful Sword&N stands here.
 &+bin her right hand while a large tower shield protects her
 &+bflanking left side.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -43,8 +43,8 @@ Bevelin Tisvin, &+BKnight of the Holy Judgement&N stands here.
 &+wcloak drapes down his back, prominently displaying the
 &+wsymbol of &+WNewhaven&+w for all to see.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -58,8 +58,8 @@ LeSair I'villianda, &+WHigh Magistrate of Newhaven&N stands here.
 &+wtriangulate her face down to her pointed chin.  Her skin
 &+wis pale and shiny, stretching across a petite frame of bone.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -76,8 +76,8 @@ blacksmith man~
 &+Larms have been stained with soot while his thick leather
 &+Lapron continues to take punishment from his daily tasks.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 36 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -92,8 +92,8 @@ boy hand stable~
 &+ysoaked with sweat and soot from the raging fire of the
 &+yblacksmith's forge.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 15 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -108,8 +108,8 @@ equerry newhaven man knight~
 &+cclosed-faced helmet as his hand firmly grips the hilt of
 &+chis longsword.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 39 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -124,8 +124,8 @@ his rigorous training to one day become a knight of Newhaven.
 His black hair has been cut short and his face clean shaven.
 He carries a small short sword in his right hand.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -139,8 +139,8 @@ knight stronghold~
 &+wscans the surrounding area for any of those that would
 &+wattempt to break the laws of the city.&N
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 28 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -155,8 +155,8 @@ visor has been topped with a vibrant blue and white plume.
 His blue cloak has been fastened to his shoulder plates
 making it easier to control if a fray should arise.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -173,8 +173,8 @@ knight commander~
 &+Lpresses firmly against the stone floor while his strong
 &+Lgauntlet hands grasp the hilt of the blade.
 ~
-10 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 34 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -187,8 +187,8 @@ armorer newhaven~
 &+gripples with massive muscle tension.  His eyes are dim and
 &+gtired looking, yet he keeps on working.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 36 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -203,8 +203,8 @@ assistant young man~
 &+ycraftsman construct a well-balanced shield of steel and iron.
 &+yHe pays you no attention at all.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 20 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -221,8 +221,8 @@ every motion.  Her lips are thick and deep red.  Her eyes are
 of crystal blue and emit a friendly feeling to all those who
 gaze at her.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 36 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -237,8 +237,8 @@ Ytarae Retoriva~
 &+Wlips are smooth and thin, yet her smile instantly brings a warm
 &+Whappy feeling to you.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 40 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -253,8 +253,8 @@ have caked itself to his wet sweaty skin making it appear with
 a marble like resemblance.  His eyes carefully scan over a block
 of stone, taking in every detail while ignoring you totally.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 32 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -268,8 +268,8 @@ dibbly gnome~
 &+Wyour coin purse.  He casually puffs on a long brown pipe and
 &+Wwelcomes you to his shop.
 ~
-10 0 0 0 0 0 0 0 S
-PG 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PG 0 0 0 -1
 35 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -285,8 +285,8 @@ etched platemail. A scabbard, containing a longsword, hangs
 loosely around his waist.  A large blue cloak drapes down his
 back, prominently displaying the symbol of Newhaven.
 ~
-8 0 0 8216 32768 1073741824 0 0 S
-PH 0 67108864 -1
+8 0 0 0 8216 32768 1073741824 0 0 S
+PH 0 67108864 0 -1
 41 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -301,8 +301,8 @@ it hard to see any facial features.  A long frilly quill
 scribbles quickly and endlessly taking every word spoke by
 the Magistrate onto paper.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 20 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -316,8 +316,8 @@ regal appearance.  A white rope belt has been tied across
 his waist while a heavy medallion emblazoned with the holy
 symbol of Newhaven hangs about his neck.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 24 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -332,8 +332,8 @@ platemail while grasping a large two-handed sword with his
 hands.  A large white cloak drapes down his back, prominently
 displaying the symbol of Newhaven.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 26 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -349,8 +349,8 @@ hair flow freely about his head, mingling with his extremely
 long beard.  A single white robe, embroidered with intricate
 blue designs, clothes his body.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 512 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 512 0 -1
 48 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -364,8 +364,8 @@ the constant reading he endures each day while his hands have
 become stained with the various colorful inks used in scripting
 the law of Newhaven.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 30 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -379,8 +379,8 @@ rope belt has been tied across his waist supporting a
 thick holy symbol of Newhaven.  He goes about the temple looking
 for imperfections that need to be corrected immediately.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 21 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -393,8 +393,8 @@ A long blue robe drapes across the priest’s body while a white
 rope belt stretched across his waist while a heavy medallion
 emblazoned with the holy symbol of Newhaven hangs about his neck.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 27 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -409,8 +409,8 @@ medallion emblazoned with the holy symbol of Newhaven hangs about
 her neck.  Her hair has been tied to the back of her head with
 a white piece of cloth.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 29 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -426,8 +426,8 @@ soldier.  A steel-banded buckler promptly displays the symbol
 of Newhaven while a clothed hand firmly grasps the hilt of a longsword.
 A spotless white cloak flows about the warrior’s body.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 20 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -443,8 +443,8 @@ A steel-banded buckler promptly displays the symbol of Newhaven while
 a clothed hand firmly grasps the hilt of a longsword.  A spotless
 black cloak flows about the warrior’s body.
 ~
-10 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 21 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -460,8 +460,8 @@ steel-banded buckler promptly displays the symbol of Newhaven while a
 clothed hand firmly grasps the hilt of a longsword.  A spotless
 blue cloak flows about the warrior’s body.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 22 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -478,8 +478,8 @@ displays the symbol of Newhaven while an armored hand firmly grasps
 the hilt of a longsword.  A spotless white cloak adorned with
 tiny symbols of Newhaven flows about the warrior’s body.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 27 0 0 5d5+200 0d0+0
 0.0.0.0 0
 8 8 1
@@ -496,8 +496,8 @@ displays the symbol of Newhaven while an armored hand firmly grasps
 the hilt of a longsword.  A spotless blue cloak adorned with
 tiny symbols of Newhaven flows about the warrior’s body.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 28 0 0 5d5+250 0d0+0
 0.0.0.0 0
 8 8 1
@@ -510,8 +510,8 @@ Well-groomed and clean cut, a typical male civilian of Newhaven
 makes his way down the maze like roadways.  His clothes are well
 tailored and very clean.
 ~
-2252 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+2252 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 19 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -524,8 +524,8 @@ Perfectly styled hair and flawless skin, a typical female civilian
 of Newhaven makes her way down the maze like roadways shopping the
 day away.  Her clothes are well tailored and very clean.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -538,8 +538,8 @@ Blonde locks of hair rustles as she plays with a stuffed doll.
 Her skin is pale as snow and her petite body looks like it could
 be crushed with the slightest force.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 15 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -552,8 +552,8 @@ Short brown hair has been spiked and trimmed short.  He plays
 with a wooden sword, pretending to be a paladin of Newhaven.  He
 is well fit and very agile.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 14 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -566,8 +566,8 @@ cat large~
 &+Lgrooming itself.  Its long tail occasionally plops and slithers&N
 &+Lacross the ground in a playful manner.&N
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -581,8 +581,8 @@ wyiarn priest high~
 &+Ybushy eyebrows.  His lips are mauve and shiny.  An aura of sheer
 &+Yholy force enshrouds his body with brilliance.
 ~
-8 0 0 0 0 0 0 1000 S
-PH 0 33 -1
+8 0 0 0 0 0 0 0 1000 S
+PH 0 33 0 -1
 46 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -601,8 +601,8 @@ symbol of a scale and balance has been emblazoned on a blue tabard
 that drapes across his torso and back.  A small tattoo of a weight
 scale can be seen under his right eye.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -621,8 +621,8 @@ symbol of a scale and balance has been emblazoned on a blue tabard
 that drapes across his torso and back. A small tattoo of a balance
 can be seen under his right eye.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -641,8 +641,8 @@ symbol of a scale and balance has been emblazoned on a blue tabard
 that drapes across his torso and back. A small tattoo outlining a
 scale and balance can be seen under his right eye.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -659,8 +659,8 @@ has been draped across his front and back emblazoned with a balance
 and scale symbol in white.  His eyes constantly scan the surrounding
 area looking for any signs of trouble or law breaking individuals.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 26 0 0 5d5+150 0d0+0
 0.0.0.0 0
 8 8 1
@@ -678,8 +678,8 @@ her front and back emblazoned with a balance and scale symbol in
 white.  Her eyes are very narrow and alert constantly scanning for
 any signs of trouble or who would break the law.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 24 0 0 5d5+150 0d0+0
 0.0.0.0 0
 8 8 2
@@ -693,8 +693,8 @@ librarian small~
 &+Wfilm&+w glance up at you, then return to the book she is&n
 &+wcurrently destroying.&n
 ~
-10 0 0 0 0 0 0 1000 S
-PG 0 17 -1
+10 0 0 0 0 0 0 0 1000 S
+PG 0 17 0 -1
 36 3 55 15d25+112 2d6+1
 88.73.1.0 4500
 8 8 1
@@ -709,8 +709,8 @@ the breastplate is partially covered in rdied blood.  She
 grasps a sword in her right hand while a large tower shield
 protects her flanking left side.
 ~
-10 0 0 0 0 0 0 0 S
-zo 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+zo 0 0 0 -1
 26 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -727,8 +727,8 @@ grasping a large halberd with his two hands.  A large blue
 cloak drapes down his back, prominently displaying the
 symbol of Newhaven for all to see.
 ~
-10 0 0 0 0 0 0 0 S
-U 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+U 0 0 0 -1
 26 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -742,8 +742,8 @@ lips are extremely narrow as her slender high cheekbones
 triangulate her face down to her pointed chin.  Her skin
 is pale and shiny, stretching across a petite frame of bone.
 ~
-10 0 0 0 0 0 0 -1000 S
-UV 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+UV 0 1 0 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -760,8 +760,8 @@ dark and patches of scruff adorn his face.  His hands and
 arms have been stained with soot while his thick leather
 apron continues to take punishment from his daily tasks.
 ~
-2056 0 0 0 64 0 0 -1000 S
-U 0 1 4
+2056 0 0 0 0 64 0 0 -1000 S
+U 0 1 0 4
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -776,8 +776,8 @@ sweat coat his entire plush face.  He is almost entirely
 soaked with sweat and soot from the raging fire of the
 blacksmith's forge.
 ~
-8 0 0 0 0 0 0 0 S
-sk 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+sk 0 0 0 -1
 10 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -792,8 +792,8 @@ A huge white plum sprouts from the center of his partially
 closed-faced helmet as his hand firmly grips the hilt of
 his longsword.
 ~
-8 0 0 0 0 0 0 0 S
-zo 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+zo 0 0 0 -1
 34 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -808,8 +808,8 @@ his rigorous training to one day become a knight of Newhaven.
 His black hair has been cut short and his face clean shaven.
 He carries a small short sword in his right hand.
 ~
-10 0 0 0 0 0 0 0 S
-sk 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+sk 0 0 0 -1
 13 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -823,8 +823,8 @@ motionless.  His stance is almost statuesque.  The knight
 scans the surrounding area for any of those that would
 attempt to break the laws of the city.
 ~
-10 0 0 0 0 0 0 0 S
-zo 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+zo 0 0 0 -1
 23 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -839,8 +839,8 @@ visor has been topped with a vibrant blue and white plume.
 His blue cloak has been fastened to his shoulder plates
 making it easier to control if a fray should arise.
 ~
-8 0 0 0 0 0 0 -1000 S
-UV 0 1 -1
+8 0 0 0 0 0 0 0 -1000 S
+UV 0 1 0 -1
 26 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -857,8 +857,8 @@ drapes down his back.  The tip of a massive two-handed sword
 presses firmly against the stone road while his strong
 gauntlet hands grasp the hilt of the blade.
 ~
-10 0 0 0 0 0 0 -1000 S
-wr 0 512 -1
+10 0 0 0 0 0 0 0 -1000 S
+wr 0 512 0 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -871,8 +871,8 @@ Long brown hair sticks to his neck has his soot stained body
 ripples with massive muscle tension.  His eyes are dim and
 tired looking, yet he keeps on working.
 ~
-10 0 0 0 0 0 0 0 S
-UV 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+UV 0 0 0 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -887,8 +887,8 @@ His eyes burn with an inner intensity has he watches the master
 craftsman construct a well-balanced shield of steel and iron.
 He pays you no attention at all.
 ~
-10 0 0 0 0 0 0 0 S
-zo 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+zo 0 0 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -905,8 +905,8 @@ every motion.  Her lips are thick and deep red.  Her eyes are
 of crystal blue and emit a friendly feeling to all those who
 gaze at her.
 ~
-10 0 0 0 0 0 0 -1000 S
-sp 0 16384 -1
+10 0 0 0 0 0 0 0 -1000 S
+sp 0 16384 0 -1
 32 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -921,8 +921,8 @@ brown, radiating like two voids within her chiseled face.  Her
 lips are smooth and thin, yet her smile instantly brings a warm
 happy feeling to you.
 ~
-8 0 0 0 0 0 0 -1000 S
-UV 0 4096 -1
+8 0 0 0 0 0 0 0 -1000 S
+UV 0 4096 0 -1
 40 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -937,8 +937,8 @@ have caked itself to his wet sweaty skin making it appear with
 a marble like resemblance.  His eyes carefully scan over a block
 of stone, taking in every detail while ignoring you totally.
 ~
-395278 0 0 0 0 0 0 -1000 S
-ul 0 512 -1
+395278 0 0 0 0 0 0 0 -1000 S
+ul 0 512 0 -1
 32 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -951,8 +951,8 @@ Short and skinny with a HUGE nose, this little gnome looks at you
 with a wan smile filled with pain.  He makes a gesture as if to bow,
 only to pause abruptly as his chains halt any movements.
 ~
-10 0 0 0 0 0 0 0 S
-PG 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PG 0 0 0 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -968,8 +968,8 @@ etched platemail. A scabbard, containing a longsword, hangs
 loosely around his waist.  A large blue cloak drapes down his
 back, prominently displaying the symbol of Newhaven.
 ~
-10 0 0 0 0 0 0 0 S
-U 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+U 0 0 0 -1
 41 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -984,8 +984,8 @@ it hard to see any facial features.  A long frilly quill
 scribbles quickly and endlessly taking every word spoke by
 the Magistrate onto paper.
 ~
-10 0 0 0 0 0 0 0 S
-sk 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+sk 0 0 0 -1
 20 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -999,8 +999,8 @@ regal appearance.  A white rope belt has been tied across
 his waist while a heavy medallion emblazoned with the holy
 symbol of Newhaven hangs about his neck.
 ~
-10 0 0 0 0 0 0 0 S
-U 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+U 0 0 0 -1
 23 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1015,8 +1015,8 @@ platemail while grasping a large two-handed sword with his
 hands.  A large white cloak drapes down his back, prominently
 displaying the symbol of Newhaven.
 ~
-10 0 0 0 0 0 0 0 S
-sk 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+sk 0 0 0 -1
 24 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1032,8 +1032,8 @@ hair flow freely about his head, mingling with his extremely
 long beard.  A single white robe, embroidered with intricate
 blue designs, clothes his body.
 ~
-8 0 0 0 0 0 0 0 S
-U 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+U 0 0 0 -1
 48 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1047,8 +1047,8 @@ the constant reading he endures each day while his hands have
 become stained with the various colorful inks used in scripting
 the law of Newhaven.
 ~
-8 0 0 0 0 0 0 0 S
-zo 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+zo 0 0 0 -1
 26 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1062,8 +1062,8 @@ rope belt has been tied across his waist supporting a
 thick holy symbol of Newhaven.  He goes about the temple looking
 for imperfections that need to be corrected immediately.
 ~
-8 0 0 0 0 0 0 0 S
-U 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+U 0 0 0 -1
 21 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1076,8 +1076,8 @@ A long blue robe drapes across the priest's body while a white
 rope belt stretched across his waist while a heavy medallion
 emblazoned with the holy symbol of Newhaven hangs about his neck.
 ~
-8 0 0 0 0 0 0 0 S
-zo 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+zo 0 0 0 -1
 22 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1092,8 +1092,8 @@ medallion emblazoned with the holy symbol of Newhaven hangs about
 her neck.  Her hair has been tied to the back of her head with
 a white piece of cloth.
 ~
-8 0 0 0 0 0 0 0 S
-U 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+U 0 0 0 -1
 24 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1109,8 +1109,8 @@ soldier.  A steel-banded buckler promptly displays the symbol
 of Newhaven while a clothed hand firmly grasps the hilt of a longsword.
 A spotless white cloak flows about the warrior's body.
 ~
-10 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1126,8 +1126,8 @@ A steel-banded buckler promptly displays the symbol of Newhaven while
 a clothed hand firmly grasps the hilt of a longsword.  A spotless
 black cloak flows about the warrior's body.
 ~
-10 0 0 0 0 0 0 0 S
-U 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+U 0 0 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1143,8 +1143,8 @@ steel-banded buckler promptly displays the symbol of Newhaven while a
 clothed hand firmly grasps the hilt of a longsword.  A spotless
 blue cloak flows about the warrior's body.
 ~
-10 0 0 0 0 0 0 0 S
-zo 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+zo 0 0 0 -1
 19 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1161,8 +1161,8 @@ displays the symbol of Newhaven while an armored hand firmly grasps
 the hilt of a longsword.  A spotless white cloak adorned with
 tiny symbols of Newhaven flows about the warrior's body.
 ~
-10 0 0 0 0 0 0 -1000 S
-zo 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+zo 0 1 0 -1
 24 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1179,8 +1179,8 @@ displays the symbol of Newhaven while an armored hand firmly grasps
 the hilt of a longsword.  A spotless blue cloak adorned with
 tiny symbols of Newhaven flows about the warrior's body.
 ~
-10 0 0 0 0 0 0 0 S
-zo 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+zo 0 0 0 -1
 25 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1193,8 +1193,8 @@ The skeletal remains of a typical male civilian of Newhaven
 makes his way down the maze like roadways.  His clothes are ragged
 and blood-stained.
 ~
-8 0 0 0 0 0 0 0 S
-U 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+U 0 0 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1208,8 +1208,8 @@ civilian of Newhaven makes her way down the maze like roadways
 shopping the day away.  Her clothes are ragged and soiled with bloog
 and gore.
 ~
-10 0 0 0 0 0 0 0 S
-zo 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+zo 0 0 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1222,8 +1222,8 @@ Blonde locks of hair rustles as she plays with a stuffed doll.
 Her skin is pale as snow and her petite body looks like it could
 be crushed with the slightest force.
 ~
-10 0 0 0 0 0 0 0 S
-sk 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+sk 0 0 0 -1
 13 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1236,8 +1236,8 @@ Short brown hair has been spiked and trimmed short.  He plays
 with a wooden sword, pretending to be a paladin of Newhaven.  He
 is well fit and very agile.
 ~
-10 0 0 0 0 0 0 0 S
-sk 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+sk 0 0 0 -1
 12 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1250,8 +1250,8 @@ A &+Wskeletal&N &+Lcat&N is resting here.
 &+Lgrooming itself.  Its long &+Wbony tail&+L occasionally plops and
 &+Lslithers across the ground.&N
 ~
-8 0 0 0 0 0 0 0 S
-U 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+U 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1266,8 +1266,8 @@ baazetu woman naked demon erinyes~
 &+Wteeth.&+y  Bronzed skin stretches across her petite&n
 &+yframe defining her slim muscular body.&n
 ~
-1073903626 0 0 537395208 264257 1310720 0 0 S
-Y 0 16384 4
+1073903626 0 0 0 537395208 264257 1310720 0 0 S
+Y 0 16384 0 4
 50 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
@@ -1281,8 +1281,8 @@ of pale flesh while his amber eyes are heavily intensified by thick
 bushy eyebrows.  His lips are mauve and shiny.  An aura of sheer
 holy force enshrouds his body with brilliance.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 46 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1301,8 +1301,8 @@ symbol of a scale and balance has been emblazoned on a blue tabard
 that drapes across his torso and back.  A small tattoo of a weight
 scale can be seen under his right eye.
 ~
-2062 0 0 0 0 0 0 0 S
-zo 0 0 -1
+2062 0 0 0 0 0 0 0 0 S
+zo 0 0 0 -1
 30 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1321,8 +1321,8 @@ symbol of a scale and balance has been emblazoned on a blue tabard
 that drapes across his torso and back. A small tattoo of a balance
 can be seen under his right eye.
 ~
-10 0 0 0 0 0 0 -1000 S
-zo 0 16 -1
+10 0 0 0 0 0 0 0 -1000 S
+zo 0 16 0 -1
 30 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1341,8 +1341,8 @@ symbol of a scale and balance has been emblazoned on a blue tabard
 that drapes across his torso and back. A small tattoo outlining a
 scale and balance can be seen under his right eye.
 ~
-10 0 0 0 0 0 0 -1000 S
-zo 0 16 -1
+10 0 0 0 0 0 0 0 -1000 S
+zo 0 16 0 -1
 30 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1357,8 +1357,8 @@ soldier.  Remnants of hair protrude from under her open-faced
 helm.  Scraps of a blue tabard hang across her front and back.
 White eyes stare outward in a fixed gaze.
 ~
-8 0 0 0 0 0 0 0 S
-sk 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+sk 0 0 0 -1
 21 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1373,8 +1373,8 @@ soldier.  Remnants of hair protrude from under her open-faced
 helm.  Scraps of a blue tabard hang across her front and back.
 White eyes stare outward in a fixed gaze.
 ~
-8 0 0 0 0 0 0 -1000 S
-zo 0 1 -1
+8 0 0 0 0 0 0 0 -1000 S
+zo 0 1 0 -1
 24 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
@@ -1389,8 +1389,8 @@ hound dog hellhound undead~
 &+Lgazes the area for prey.  Sharp &+Yyellow canines&+L protrude&n
 &+Lfrom the upper lip of the hound as it snarls at you.&n
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-L 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+L 0 1 0 -1
 30 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1

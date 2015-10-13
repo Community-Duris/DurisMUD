@@ -168,7 +168,7 @@ robe ether~
 &+ra robe of ether&N~
 A robe of ether lies here.~
 ~
-9 3 3 8 7 0 1114112 9 64 0 0
+9 3 3 8 7 0 1114112 9 32832 0 0
 5 3 1 3 0 0 0 0
 1 1 100
 E
@@ -500,7 +500,7 @@ sword hugh cymrych~
 the &+Llost&N sword of &+YCymrych Hugh&N~
 The &+Llost&N sword of &+Ycymrych hugh&N lays here.~
 ~
-5 16 3 10 7 0 37888 8193 66 87572571 0
+5 16 3 10 7 0 37888 8193 32834 87572571 0
 5 3 6 3 0 27 50 30
 6 100000 100 8192 4 0 0
 E

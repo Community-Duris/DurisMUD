@@ -6,8 +6,8 @@ A disgusting squirt bug is flying here, its nozzle-like snout ready to spray.
 It looks something like a black piece of volcanic rock, with black wings,
 and a black snout.
 ~
-134 1 0 0 0 0 0 -375 S
-I 0 0 -1
+134 1 0 0 0 0 0 0 -375 S
+I 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 11 11 0
@@ -18,8 +18,8 @@ hare white~
 ~
 Gosh, it's a cute little thing.
 ~
-2112 0 0 0 0 0 0 0 S
-A 0 0 -1
+2112 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 3 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 1
@@ -31,8 +31,8 @@ lunatic raving man~
 He's got quite the wild look in his eyes, which is rather aesthetically
 complimented by his ragged beard and long, unkempt hair.
 ~
-70 1 0 32 0 0 0 -500 S
-H 0 0 -1
+70 1 0 0 32 0 0 0 -500 S
+H 0 0 0 -1
 15 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -45,8 +45,8 @@ This wolf has a dark brown fur, unkept and dirty, and a strong jaw for
 biting down his meals.  He isn't fully grown but not quite a child either,
 left alone in the wild to fend for himself.
 ~
-2056 1 0 0 0 0 0 -1000 S
-A 0 0 -1
+2056 1 0 0 0 0 0 0 -1000 S
+A 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -59,8 +59,8 @@ This barbarian is quite large, his muscles very apparent and he only wears
 a loincloth about his waist.  Language isn't one of his strong points, as
 he grunts in your direction.
 ~
-2122 0 0 0 0 0 0 0 S
-PB 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -74,8 +74,8 @@ his arms, legs, and upon his face - there's no telling what lies beneath
 his loose fitting clothing.  His only choice of weapon is a heavy
 longsword.  He stands about, awaiting a fight.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-PH 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+PH 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -88,8 +88,8 @@ This young knight has come to the valley for the first time for a test
 of strength.  He attempts to appear confident and self assured, masking
 his face in one of indifference.
 ~
-2248 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2248 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -102,8 +102,8 @@ It's difficult to tell whether this mage is here to watch the proceedings
 or to participate.  He wanders the area observing all that goes on around
 him, draped in a black cloak and staff.
 ~
-1073743944 0 0 0 0 0 0 0 S
-PH 0 2048 -1
+1073743944 0 0 0 0 0 0 0 0 S
+PH 0 2048 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -115,8 +115,8 @@ mercenary scowling~
 His face wears a scowl at all times, as he shoves people out of the way
 and spits at their feet, attempting to provoke them.
 ~
-2124 0 0 0 0 0 0 -1000 S
-PB 0 16384 -1
+2124 0 0 0 0 0 0 0 -1000 S
+PB 0 16384 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -128,8 +128,8 @@ coyote~
 The coyote looks as if he hasn't eaten in some time.  He wanders through
 the canyon, scavanging any food he can find.
 ~
-2120 0 0 0 0 0 0 0 S
-A 0 0 -1
+2120 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -141,8 +141,8 @@ bat small~
 The bat doesn't notice your entry, content to sleep the days away in
 this small cave.
 ~
-74 4 0 0 0 0 0 -1000 S
-B 0 0 -1
+74 4 0 0 0 0 0 0 -1000 S
+B 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -154,8 +154,8 @@ slime green~
    This slime looks to be nothing more than a clump of ooziness, moving
 along the tunnel walls without care on what it moves over.
 ~
-72 0 0 0 0 0 0 -1000 S
-SL 0 0 -1
+72 0 0 0 0 0 0 0 -1000 S
+SL 0 0 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -168,8 +168,8 @@ bobcat young~
 importantly, the ways of hunting.  He attempts to blend into a nearby
 bush, waiting for the perfect time to jump out at his prey.
 ~
-2120 0 0 36 0 0 0 0 S
-A 0 1 -1
+2120 0 0 0 36 0 0 0 0 S
+A 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -181,8 +181,8 @@ snake~
 This long snake is not a foe to mess with, his scales a dark black in
 color to blend in with the chasm very well.
 ~
-1073743944 0 0 0 0 0 0 -1000 S
-RS 0 1 -1
+1073743944 0 0 0 0 0 0 0 -1000 S
+RS 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -194,8 +194,8 @@ owl brown~
 &+y   This owl is a light brown in color and only comes out in the night,
 &+ywatching the area closely for his prey.&n
 ~
-2120 0 0 134324268 0 0 0 0 S
-B 0 1 -1
+2120 0 0 0 134324268 0 0 0 0 S
+B 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -207,8 +207,8 @@ deer female~
 The female deer looks very nervous but the reason for this is unknown,
 perhaps she's lost her young or she senses danger nearby.
 ~
-2120 0 0 536944652 0 0 0 0 S
-A 0 1 -1
+2120 0 0 0 536944652 0 0 0 0 S
+A 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -220,8 +220,8 @@ ferret small~
 It resembles a squirrel in some respects, except that it is very friendly
 and a bit smaller.
 ~
-2248 0 0 0 0 0 0 0 S
-B 0 0 -1
+2248 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -234,8 +234,8 @@ With a large barrel like body and long snout filled with razor sharp teeth,
 this hidious looking beast is ugly to behold.  Its fierceness matches its
 reputation quite well.
 ~
-72 0 0 0 0 0 0 -1000 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 -1000 S
+A 0 0 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -248,8 +248,8 @@ With a thick brown coat and small sharp hornes, this huge beast is truely
 a sight to behold.  Its body would be enough meat to feed a family several
 weeks, if they were tough enough to bring him down.
 ~
-72 0 0 300 28 0 0 250 S
-A 0 1 3
+72 0 0 0 300 28 0 0 250 S
+A 0 1 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -262,8 +262,8 @@ It is a beautiful looking beast, standing six feet at the shoulder with a
 brown coat and black mane.  Its powerful front legs and muscled chest
 indicate that this horse can probably run quite fast.
 ~
-134219848 0 0 0 0 0 0 0 S
-A 0 1 3
+134219848 0 0 0 0 0 0 0 0 S
+A 0 1 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -276,8 +276,8 @@ With white fur and an elongated snout, it looks like a normal goat in most
 respects, except in that it has two very long horns.  It is a gentle looking
 animal, feeding on the plants and foliage that grows at this altitude.
 ~
-2120 0 0 0 0 0 0 0 S
-A 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

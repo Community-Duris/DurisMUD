@@ -3,7 +3,7 @@ dust pile small~
 a small &+Lpile&N of &+ydust~
 &+yA pile of dust of appearance has gathered here.~
 ~
-13 10 2 0 7 0 67162120 1 0 1 0
+13 10 2 0 7 0 67162120 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -16,7 +16,7 @@ piece item green~
 &+Ga green piece of &+Bmagical &+Gitem~
 &+GA piece of magical item lies on the floor.~
 ~
-11 15 1 0 4 0 49160 1 0 0 0
+11 15 1 0 4 0 49160 1 32768 0 0
 13 0 0 3 0 0 0 0
 2 1 100
 E
@@ -28,7 +28,7 @@ piece red item~
 &+Ra red piece of &+Bmagical &+Ritem~
 &+RA piece of magical item lies on the floor.~
 ~
-11 16 1 0 3 0 49160 1 0 0 0
+11 16 1 0 3 0 49160 1 32768 0 0
 0 85 0 0 0 0 0 0
 2 1 100
 E
@@ -40,7 +40,7 @@ piece yellow item~
 &+Ya yellow piece of &+Bmagical &+Yitem~
 &+YA piece of magical item lies on the floor.~
 ~
-11 18 1 0 5 0 49160 1 0 0 0
+11 18 1 0 5 0 49160 1 32768 0 0
 0 85 0 0 0 0 0 0
 2 1 100
 E
@@ -344,7 +344,7 @@ finger bloody~
 &+ra bloody finger~
 &+rA bloody finger has been abandoned here.~
 ~
-13 2 2 0 1 0 16392 1 0 0 0
+13 2 2 0 1 0 16392 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 65
 E

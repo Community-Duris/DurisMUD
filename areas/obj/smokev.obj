@@ -3,7 +3,7 @@ heart dolgar~
 &Nthe &+Rheart &+Lof D&+ro&+Llg&+ra&+Lr&N~
 &+LThis black &+Rheart &+Lbeats on even without any body.&N~
 ~
-12 2 3 0 9 69 110592 1 64 0 0
+12 2 3 0 9 69 110592 1 32832 0 0
 0 0 0 0 0 0 0 0
 3 0 100
 E
@@ -145,7 +145,7 @@ pile black dragon scales~
 &nsome &+Lblack dragon scales&n~
 &+LA pile of pitch black dragon scales are on the ground here.&N~
 ~
-12 35 3 0 7 80 4096 16385 0 0 0
+12 35 3 0 7 80 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 3 9000 100
 E
@@ -160,7 +160,7 @@ heart sanrabb~
 &Nthe &+rheart &+Lof &+mSanrabb&N~
 &+LA still beating &+Rheart &+Lis on the ground here.&N~
 ~
-12 2 3 0 7 50 33566721 16385 0 0 0
+12 2 3 0 7 50 33566721 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 9000 100
 E
@@ -174,7 +174,7 @@ head bunny master xertrath~
 &nthe &+Lhead of &+WX&+Le&+Wrtr&+La&+Wth&N~
 &+LThe head of the bunny master is on the ground here.&n~
 ~
-13 2 1 0 7 20 0 16385 0 0 0
+13 2 1 0 7 20 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 9 100
 E
@@ -186,7 +186,7 @@ dead animal moof~
 &+La dead &+yanimal&N~
 &+LA dead &+yanimal &+Lrests upon the ground here.&N~
 ~
-13 2 3 0 15 81 16789520 8404993 0 0 0
+13 2 3 0 15 81 16789520 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -233,7 +233,7 @@ large black dragon scale~
 &na &+Llarge dragon scale&n~
 &+LA large pitch black dragon scale is on the ground here.&N~
 ~
-12 35 3 0 7 80 4096 16385 0 0 0
+12 35 3 0 7 80 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 3 9000 100
 E
@@ -854,7 +854,7 @@ bloody dragon talon~
 &+wa &+rbloody &+Ldragon &+Wtalon&N~
 &+LA &+rbloody &+Wtalon &+Lis on the ground here gathering dust.&n~
 ~
-5 34 3 0 9 9 4096 24577 0 0 0
+5 34 3 0 9 9 4096 24577 32768 0 0
 2 2 3 11 0 0 0 0
 5 81000 100
 E
@@ -867,7 +867,7 @@ whiskey bottle glass~
 &+wa &+ybottle&n~
 &+yA bottle is on the ground here gathering dust.&n~
 ~
-17 7 2 0 7 9 0 16385 0 0 0
+17 7 2 0 7 9 0 16385 32768 0 0
 9 9 5 0 0 0 0 0
 0 900 100
 E
@@ -1018,7 +1018,7 @@ helm skull~
 &+wa &+rbl&+Ro&+ro&+Rd &+Lsoaked &+whelm &+Lbearing a &+Wskull &+Lcrest&N~
 &+LA &+rbl&+Ro&+ro&+Rd &+Lsoaked &+whelm &+Lbearing a &+Wskull &+Lcrest rests upon the ground.&N~
 ~
-9 22 3 0 15 88 8192 16401 66 4173696644 75776
+9 22 3 0 15 88 8192 16401 32834 4173696644 75776
 9 0 0 5 0 0 0 0
 0 33000 100
 E
@@ -1036,7 +1036,7 @@ heart~
 &+wthe &+Lblack heart of a &+gTentabeast&N~
 &+LThis heart of d&+barkne&+Lss beats on even devoid of a body.~
 ~
-12 2 3 0 9 69 126976 1 64 0 0
+12 2 3 0 9 69 126976 1 32832 0 0
 0 0 0 0 0 0 0 0
 3 23423 100 2048 0 0 0
 E
@@ -1077,7 +1077,7 @@ grishnak scum head traitor~
 &+Lthe head of the traitor &+YGrishnak&N~
 &+LThe head of the scum traitor &+YGrishnak &+Lrests on the ground here.&N~
 ~
-13 2 3 0 7 55 12288 16385 0 0 0
+13 2 3 0 7 55 12288 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 423 100
 E

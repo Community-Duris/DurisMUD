@@ -131,7 +131,7 @@ pole polearm huge~
 &na huge &+Cpolearm&n~
 &+CA huge pole arm lies upon the ground.&N~
 ~
-5 16 3 0 7 0 4194304 8193 0 0 0
+5 16 3 0 7 0 4194304 8193 32768 0 0
 8 3 7 0 0 0 0 0
 25 20004 100
 E
@@ -143,7 +143,7 @@ battle mace~
 &na&+L battle &+bmace&N~
 &+LA battle mace lays on the ground.&N~
 ~
-5 16 3 0 7 0 0 8193 0 0 0
+5 16 3 0 7 0 0 8193 32768 0 0
 6 3 4 0 0 0 0 0
 10 25000 100
 E
@@ -189,7 +189,7 @@ steel sleeves~
 &nsome &+Csteel&n &nsleeves~
 &nSome steel sleeves lay on the ground.~
 ~
-9 15 3 0 7 0 0 257 0 0 0
+9 15 3 0 7 0 0 257 32768 0 0
 5 0 0 3 0 0 0 0
 13 4000 100
 E
@@ -206,7 +206,7 @@ steel leggings~
 &nsome &+Csteel&n leggings~
 &nSome steel leggings lie on the ground here.~
 ~
-9 15 3 0 7 0 0 33 0 0 0
+9 15 3 0 7 0 0 33 32768 0 0
 4 0 0 3 0 0 0 0
 10 3000 100
 E
@@ -222,7 +222,7 @@ oakencrest ring seal emblem~
 &+WLord &+gOakencrest's&n &+Wsignet ring&N~
 &+WA ring with an emblem on top of it lays here.&N~
 ~
-8 15 3 0 7 0 4096 16385 0 0 0
+8 15 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -234,7 +234,7 @@ del lord du'kel seal ring~
 &+WLord &+rDu'kel's&+W signet ring&N~
 &+WA ring with the seal of Du'kel lies here.&N~
 ~
-8 15 3 0 7 0 4096 1 0 0 0
+8 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -246,7 +246,7 @@ lord berani signet ring~
 &+WLord &+LBerani's &+Wsignet ring&N~
 &+WA seal belonging to Lord Berani lies here.&N~
 ~
-8 15 3 0 7 0 4096 1 0 0 0
+8 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -355,7 +355,7 @@ bottled wine~
 &+msome bottled &+Mwine&N~
 &+mSome bottled wine lies on the floor.&N~
 ~
-8 15 3 0 7 0 4096 1 0 0 0
+8 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 5 200 100
 E
@@ -367,7 +367,7 @@ dinner plate~
 &+Ysome &+ydinner &+Yon a plate&N~
 &+YWhat appears to be someone's dinner lies here on a plate.&N~
 ~
-13 48 3 0 7 0 0 1 0 0 0
+13 48 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -437,7 +437,7 @@ seal prince~
 &+Wthe seal of prince&n &+bKaryn&N~
 &+WA seal of the prince lays here.&N~
 ~
-8 15 3 0 7 0 4096 16385 0 0 0
+8 15 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -449,7 +449,7 @@ seal princess~
 &+Wthe seal of princess &+mDyneen&N~
 &+WThe seal of the princess lays here.&N~
 ~
-8 15 3 0 7 0 4096 1 0 0 0
+8 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -560,7 +560,7 @@ elvish note~
 an elvish note~
 A note lies upon the floor.~
 ~
-13 3 3 0 7 0 4096 1 0 0 0
+13 3 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -625,7 +625,7 @@ beautiful roses~
 &+rsome beautiful roses&N~
 &+rSome beautiful roses are here.&N~
 ~
-8 30 3 0 5 0 0 1 0 1 0
+8 30 3 0 5 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 0 100
 E
@@ -762,7 +762,7 @@ white rose~
 a &+Ww&+wh&+Wit&+we &+Wr&+wo&+Wse&N~
 &+WA white rose lays here.&N~
 ~
-11 30 3 0 5 0 0 2097153 0 1 0
+11 30 3 0 5 0 0 2097153 32768 1 0
 0 0 0 0 0 0 0 0
 1 1 100
 E

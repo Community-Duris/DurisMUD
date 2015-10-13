@@ -9,8 +9,8 @@ leucrotta mature~
 &+yabout 7 feet tall, and about 9 feet long.  The leucrotta immitates human
 &+yvoices, trying to draw its prey into approaching closer.&n
 ~
-1073743884 1 0 34078760 0 0 0 -750 S
-AC 0 1 -1
+1073743884 1 0 0 34078760 0 0 0 -750 S
+AC 0 1 0 -1
 44 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -26,8 +26,8 @@ leucrotta immature~
 &+yvoices, trying to draw its prey into approaching closer, however this beast
 &+yis not quite mature enough to successfuly hunt like its elders.&n
 ~
-2056 0 0 34078720 0 0 0 -500 S
-AC 0 0 -1
+2056 0 0 0 34078720 0 0 0 -500 S
+AC 0 0 0 -1
 28 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -42,8 +42,8 @@ thorn slinger thornslinger~
 &+gshould decide to coil itself upon some unsuspecting person, death would
 &+gnot be far behind.&n
 ~
-2120 0 0 0 64 0 0 0 S
-AH 0 0 -1
+2120 0 0 0 0 64 0 0 0 S
+AH 0 0 0 -1
 32 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -58,8 +58,8 @@ grasp creeper~
 &+clight, but clearly thrives off the strange moisture gathered in the soil
 &+chere.  Otherwise, the plant appears similar to other High Moor vegetation.&n
 ~
-2120 0 0 536870912 0 0 0 0 S
-AH 0 0 -1
+2120 0 0 0 536870912 0 0 0 0 S
+AH 0 0 0 -1
 19 5 5 1d1+1 1d1+1
 1.0.0.0 1
 8 8 0
@@ -75,8 +75,8 @@ fire grub centipede~
 &+ywhich end is the head and which is the tail.  Its body is such a &+Rbright red&+y
 &+ythat the centipede appears as if engulfed in &+Rflames&+y.&n
 ~
-2120 0 0 33554432 1 0 0 -150 S
-I 0 0 -1
+2120 0 0 0 33554432 1 0 0 -150 S
+I 0 0 0 -1
 23 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -92,8 +92,8 @@ worker boring beetle~
 &+ybe rekoned with.  This beetle serves its colony by growing &+gmolds&+y, &+Gslimes&+y,
 &+yand &+rfungi&+y in the colony lair.&n
 ~
-1140852812 0 0 32 0 0 0 -400 S
-I 0 0 -1
+1140852812 0 0 0 32 0 0 0 -400 S
+I 0 0 0 -1
 30 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -109,8 +109,8 @@ soldier boring beetle~
 &+ybe rekoned with.  This beetle serves its colony by protecting other members
 &+yof the colony from outsiders and invaders.&n
 ~
-67110988 0 0 570425376 0 0 0 -550 S
-I 0 0 -1
+67110988 0 0 0 570425376 0 0 0 -550 S
+I 0 0 0 -1
 42 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -126,8 +126,8 @@ guard elite boring beetle~
 &+ybe rekoned with.  This beetle serves its colony by protecting other members
 &+yof the colony from outsiders and invaders.&n
 ~
-1140852812 1 0 536870960 0 0 0 -700 S
-I 0 1 -1
+1140852812 1 0 0 536870960 0 0 0 -700 S
+I 0 1 0 -1
 40 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -142,8 +142,8 @@ queen boring beetle~
 &+yout of her shell, which seems as hard as &+Lstone&+y.  The queen is prepared to fight
 &+yto the death for her colony, as you are about to find out.&n
 ~
-1140852814 1 0 16777456 0 0 0 -1000 S
-X 0 512 -1
+1140852814 1 0 0 16777456 0 0 0 -1000 S
+X 0 512 0 -1
 59 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 2
@@ -159,8 +159,8 @@ weed weedling~
 &+gseems to not have been affected by whatever &+Lmagics&+g destroyed this once
 &+gbeautiful wilderness.&n
 ~
-2122 0 0 0 0 0 0 0 S
-AH 0 0 -1
+2122 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 24 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -177,8 +177,8 @@ fern fernling~
 &+gthat seems to not have been affected by whatever &+Lmagics&+g destroyed this once
 &+gbeautiful wilderness.&n
 ~
-2120 0 0 0 0 0 0 0 S
-AH 0 0 -1
+2120 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 20 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -193,8 +193,8 @@ albino fire ferret~
 &+rto ward you off.  This might only be a natural defense mechanism, or it could
 &+rbe a warning that should be heeded.&n
 ~
-1073743944 0 0 570425344 1 0 0 -100 S
-A 0 0 -1
+1073743944 0 0 0 570425344 1 0 0 -100 S
+A 0 0 0 -1
 33 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -210,8 +210,8 @@ snapper saw snapper-saw~
 &+mthe remains of some small creature on the floor near the base of this plant
 &+mand are not too sure you want to get close.&n
 ~
-2120 0 0 33554432 0 0 0 0 S
-AH 0 32 -1
+2120 0 0 0 33554432 0 0 0 0 S
+AH 0 32 0 -1
 35 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -226,8 +226,8 @@ bat azmyth albino~
 &+Wchin, and &+Lleathery gray&+W skin.  These bats are sometimes used as familiars
 &+Wby local wizards, thus making you question its powers.&n
 ~
-133194 0 0 167772224 0 0 0 0 S
-B 0 512 -1
+133194 0 0 0 167772224 0 0 0 0 S
+B 0 512 0 -1
 25 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -243,8 +243,8 @@ quipper fish~
 &+mlow into the water for a drink, and then leap into the air to grab hold of
 &+mthe unsuspecting prey.&n
 ~
-67373258 0 0 1050656 64 0 0 100 S
-F 0 0 -1
+67373258 0 0 0 1050656 64 0 0 100 S
+F 0 0 0 -1
 31 1 1 1d1+1 1d1+1
 0.0.0.1 1
 12 12 2
@@ -258,8 +258,8 @@ gremlin jermlaine~
 &+rlimbs are knotilly muscled, fingernails thick and &+Lfilthy&+r.  He seems to be
 &+rspeaking to some unseen being in high-pitched squeaks and twitters.&n
 ~
-1140852812 0 0 1572970 0 0 0 -600 S
-PH 0 2 -1
+1140852812 0 0 0 1572970 0 0 0 -600 S
+PH 0 2 0 -1
 43 1 1 1d1+0 1d1+0
 0.0.0.1 1
 8 8 1
@@ -278,8 +278,8 @@ yingin druid~
 &+ymeddle unharmoniously with nature, and also those who look to turn it into an
 &+yunintended &+Levil&+y power.&n
 ~
-1140852810 32 0 50331744 0 0 0 100 S
-P2 0 128 -1
+1140852810 32 0 0 50331744 0 0 0 100 S
+P2 0 128 0 -1
 55 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -296,8 +296,8 @@ high moor owl~
 &+Wbeing able to control pest problems, and are the closest friends of nature
 &+Wfor many local druids.&n
 ~
-133192 0 0 167772192 0 0 0 0 S
-B 0 128 -1
+133192 0 0 0 167772192 0 0 0 0 S
+B 0 128 0 -1
 35 1 1 1d1+1 1d1+1
 0.0.0.1 1
 11 11 0
@@ -313,8 +313,8 @@ high moor treant~
 &+ghang &+Ggreat leaves&+g.  One can tell this creature is intolerant of &+Levil&+g and
 &+gwill not allow any destruction to its homeland.&n
 ~
-67110984 160 0 35127336 0 0 0 100 S
-VT 0 2 -1
+67110984 160 0 0 35127336 0 0 0 100 S
+VT 0 2 0 -1
 41 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -332,8 +332,8 @@ withering high moor treant~
 &+ghas seen his days in the forest diminish to a few that he has left, as this
 &+gcreature of the wilderness is suffering from some unknown malady.&n
 ~
-1140852810 160 0 35127336 1024 0 0 100 S
-VT 0 2 -1
+1140852810 160 0 0 35127336 1024 0 0 100 S
+VT 0 2 0 -1
 50 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -348,8 +348,8 @@ sick grasp creeper~
 &+clight, but clearly thrives off the minerals and moisture gathered in the soil
 &+cof the &+CHigh &+MMoor&+c forest.  A strange malady is slowly killing this plant.&n
 ~
-2122 0 0 536870912 0 0 0 0 S
-AH 0 0 -1
+2122 0 0 0 536870912 0 0 0 0 S
+AH 0 0 0 -1
 5 5 5 1d1+1 1d1+1
 1.0.0.0 1
 8 8 0
@@ -366,8 +366,8 @@ dying fire grub centipede~
 &+ythat the centipede appears as if engulfed in &+Rflames&+y.  The centipede
 &+ytries to eat the vegetation provided for it in its cage but is too weak.&n
 ~
-2122 0 0 33554432 1 0 0 -150 S
-I 0 0 -1
+2122 0 0 0 33554432 1 0 0 -150 S
+I 0 0 0 -1
 23 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -385,8 +385,8 @@ red clay golem earth~
 &+Wbegins.  One also cannot help but notice the two &+Lextremely sharp&+W pieces solid
 &+Wpetrified clay that this golem is holding.&n
 ~
-2122 1 0 34603192 0 0 0 -1000 S
-OG 0 8192 -1
+2122 1 0 0 34603192 0 0 0 -1000 S
+OG 0 8192 0 -1
 46 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -404,8 +404,8 @@ red clay golem earth~
 &+Wbegins.  This particular golem however seems to have misplaced his weapons,
 &+Wand is searching for them furiously, oblivious to all around him.&n
 ~
-2122 0 0 34603064 0 0 0 -1000 S
-OG 0 8192 -1
+2122 0 0 0 34603064 0 0 0 -1000 S
+OG 0 8192 0 -1
 45 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -423,8 +423,8 @@ hoorgash troll~
 &+gout of the maze-like forest, and is simply resting here, trying to catch his
 &+gbreath.&n
 ~
-2122 8 0 33554480 0 0 0 -880 S
-PT 0 1 -1
+2122 8 0 0 33554480 0 0 0 -880 S
+PT 0 1 0 -1
 60 1 1 1d1+1 1d1+1
 0.0.0.1 1
 6 6 0
@@ -439,8 +439,8 @@ copperhead ancient snake~
 &+rthrough the material.  One can only wonder what this seemingly passive serpent
 &+reats for a meal, or more importantly, exactly when does it decide to feed.&n
 ~
-1073743946 0 0 33554464 0 0 0 0 S
-R 0 2 -1
+1073743946 0 0 0 33554464 0 0 0 0 S
+R 0 2 0 -1
 48 1 1 1d1+1 1d1+1
 0.0.0.1 1
 5 5 0
@@ -455,8 +455,8 @@ hunter fish piranha~
 &+Bto attack in schools, this strain prefers to perform alone, and thats the only
 &+Bthing that gives any opponents much of a chance for survival.&n
 ~
-1074006088 1 0 33556512 0 0 0 -200 S
-F 0 0 -1
+1074006088 1 0 0 33556512 0 0 0 -200 S
+F 0 0 0 -1
 38 1 1 1d1+1 1d1+1
 0.0.0.1 1
 12 12 1
@@ -472,8 +472,8 @@ osquip rat hero~
 &+cdraws his weapons in a very calculating manner.  This might not be a bad time
 &+cto whisper a prayer or two for yourself as well.&n
 ~
-1140852746 0 0 33587320 64 0 0 -750 S
-A 0 16 -1
+1140852746 0 0 0 33587320 64 0 0 -750 S
+A 0 16 0 -1
 55 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -487,8 +487,8 @@ gremlin jermlaine~
 &+rlimbs are knotilly muscled, fingernails thick and &+Lfilthy&+r.  He seems to be
 &+rspeaking to some unseen being in high-pitched squeaks and twitters.&n
 ~
-1140852812 1 0 1572970 0 0 0 -600 S
-PH 0 2 -1
+1140852812 1 0 0 1572970 0 0 0 -600 S
+PH 0 2 0 -1
 43 1 1 1d1+0 1d1+0
 0.0.0.1 1
 8 8 1
@@ -505,8 +505,8 @@ high moor owl whuunik~
 &+Wbeing able to control pest problems, and are the closest friends of nature
 &+Wfor many local druids.&n
 ~
-1140983818 0 0 167772192 0 0 0 0 S
-B 0 256 -1
+1140983818 0 0 0 167772192 0 0 0 0 S
+B 0 256 0 -1
 51 1 1 1d1+1 1d1+1
 0.0.0.1 1
 11 11 1
@@ -521,8 +521,8 @@ patrol lizard bloodleaf~
 &+Gis not prehensile.  This warrior has pledged his life to the &+RBlood&+rleaf &+Gclan
 &+Gand is about to show you how devoted he is.&n
 ~
-2062 1 0 33554480 0 0 0 -800 S
-R 0 1 -1
+2062 1 0 0 33554480 0 0 0 -800 S
+R 0 1 0 -1
 37 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -537,8 +537,8 @@ guardian lizard bloodleaf~
 &+Gis not prehensile.  This warrior has pledged his life to the &+RBlood&+rleaf &+Gclan
 &+Gand is about to show you how devoted he is.&n
 ~
-2062 1 0 33554464 0 0 0 -800 S
-R 0 32 -1
+2062 1 0 0 33554464 0 0 0 -800 S
+R 0 32 0 -1
 45 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -555,8 +555,8 @@ osquip rat hunter~
 &+ca &+Wpale &+Yyellow&+c, but these seem to have mutated in a &+Lmurky &+Caqua&+c-&+Ggreen&+c.  Their
 &+cteeth are sharp enough to dig through stone.
 ~
-1140852814 1 0 35192872 64 0 0 -750 S
-A 0 2 -1
+1140852814 1 0 0 35192872 64 0 0 -750 S
+A 0 2 0 -1
 42 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -572,8 +572,8 @@ giant frog~
 &+gparticular species once resided in the larger oceans but has since been
 &+gable to acclimitize itself to semi-brackish/fresh waters.&n
 ~
-264392 0 0 33556480 0 0 0 0 S
-A 0 0 -1
+264392 0 0 0 33556480 0 0 0 0 S
+A 0 0 0 -1
 28 1 1 1d1+1 1d1+1
 0.0.0.1 1
 12 12 1
@@ -588,8 +588,8 @@ man-of-war jellyfish jelly~
 &+wthus making feeding easy.  It is almost completely &+Wclear&+w, making them very
 &+whard to spot in the water.&n
 ~
-264264 1 0 570951714 12480 0 0 100 S
-F 0 0 -1
+264264 1 0 0 570951714 12480 0 0 100 S
+F 0 0 0 -1
 35 1 1 1d1+1 1d1+1
 0.0.0.1 1
 12 12 0
@@ -601,8 +601,8 @@ sand crab sandcrab~
    &+RThis little critter skitters and scampers about on its six legs,
 &+Rpicking around for anything edible.&N
 ~
-2188 0 0 0 0 0 0 100 S
-AC 0 0 -1
+2188 0 0 0 0 0 0 0 100 S
+AC 0 0 0 -1
 15 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -619,8 +619,8 @@ wind sandstorm ivyn~
 &+Wand although it must now kill by design, it gets torn up inside each attack,
 &+Wall the while making itself become that much more &+renraged &+Wand &+Mviolent&+W.&n
 ~
-26638 1 0 168296488 0 0 0 -600 S
-EA 0 1 -1
+26638 1 0 0 168296488 0 0 0 -600 S
+EA 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -637,8 +637,8 @@ wind sandstorm muk~
 &+Wand although it must now kill by design, it gets torn up inside each attack,
 &+Wall the while making itself become that much more &+renraged &+Wand &+Mviolent&+W.&n
 ~
-26638 1 0 168296488 0 0 0 -600 S
-EA 0 128 -1
+26638 1 0 0 168296488 0 0 0 -600 S
+EA 0 128 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -653,8 +653,8 @@ bloodied creature boneless~
 &+ysteal from you the &+Wpure life energy&+y you still contain, and make some of it
 &+yits very own.&n
 ~
-1074137102 1 0 169345066 0 0 0 -1000 S
-AC 0 512 -1
+1074137102 1 0 0 169345066 0 0 0 -1000 S
+AC 0 512 0 -1
 30 1 1 1d1+1 1d1+1
 0.0.0.1 1
 11 11 0
@@ -668,8 +668,8 @@ flesh disfigured~
 &+Wover nature.  This &+Yfleshless&+W mass of &+Rguts&+W and &+Rgore&+W looks to borrow some
 &+Wof your &+yhide&+W so that it can stay warm during the &+bwinter&+W.&n
 ~
-1073744014 1 0 33554488 0 0 0 -1000 S
-AC 0 1 -1
+1073744014 1 0 0 33554488 0 0 0 -1000 S
+AC 0 1 0 -1
 30 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -685,8 +685,8 @@ servant servant's ghost~
 &+Cnothingness and forget of the pain and loss it has seen, and must continually
 &+Cbe reminded of on a daily baises.&n
 ~
-67258376 0 0 134217728 2048 0 0 0 S
-UG 0 512 -1
+67258376 0 0 0 134217728 2048 0 0 0 S
+UG 0 512 0 -1
 60 1 1 1d1+1 1d1+1
 0.0.0.1 1
 11 11 2
@@ -702,8 +702,8 @@ dr doctor fester~
 &+Lsuperior animal.  So far he has failed so miserably that it has taken its
 &+Ltoll and driven him to &+rmadness&+L.&n
 ~
-1140852750 0 0 33554472 2048 0 0 -1000 S
-PH 0 1024 -1
+1140852750 0 0 0 33554472 2048 0 0 -1000 S
+PH 0 1024 0 -1
 60 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -717,8 +717,8 @@ lump nerves twitching~
 &+wover nature.  The severed ends of hundreds of &+bnerves&+w all seem to be
 &+wkeeping a careful eye on all that occurs in the near vicinity.&n
 ~
-67110926 1 0 34603112 0 0 0 -900 S
-AC 0 32 -1
+67110926 1 0 0 34603112 0 0 0 -900 S
+AC 0 32 0 -1
 35 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -734,8 +734,8 @@ doctor son deformed~
 &+mpainful &+Mmoans&+m produced by this unfortunate soul, that he asking you to
 &+mmercifuly put him out of his misery.&n
 ~
-2186 1 0 33554448 0 0 0 500 S
-PH 0 8 -1
+2186 1 0 0 33554448 0 0 0 500 S
+PH 0 8 0 -1
 41 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -753,8 +753,8 @@ osquip rat initiate~
 &+ca &+Wpale &+Yyellow&+c, but these seem to have mutated in a &+Lmurky &+Caqua&+c-&+Ggreen&+c.  Their
 &+cteeth are sharp enough to dig through stone.
 ~
-1073743950 1 0 34078760 64 0 0 -750 S
-A 0 1 -1
+1073743950 1 0 0 34078760 64 0 0 -750 S
+A 0 1 0 -1
 35 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -773,8 +773,8 @@ osquip rat captain~
 &+ca &+Wpale &+Yyellow&+c, but these seem to have mutated in a &+Lmurky &+Caqua&+c-&+Ggreen&+c.  Their
 &+cteeth are sharp enough to dig through stone.
 ~
-1073743950 1 0 34078776 64 0 0 -750 S
-A 0 2 -1
+1073743950 1 0 0 34078776 64 0 0 -750 S
+A 0 2 0 -1
 50 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -792,8 +792,8 @@ osquip rat sleepy~
 &+ca &+Wpale &+Yyellow&+c, but these seem to have mutated in a &+Lmurky &+Caqua&+c-&+Ggreen&+c.  Their
 &+cteeth are sharp enough to dig through stone.
 ~
-1073743950 0 0 34078760 64 0 0 -750 S
-A 0 1 -1
+1073743950 0 0 0 34078760 64 0 0 -750 S
+A 0 1 0 -1
 35 1 1 1d1+1 1d1+1
 0.0.0.1 1
 4 4 1
@@ -809,8 +809,8 @@ kirus collector~
 &+mnot forgeten all the friends and family of theirs that wound up missing for
 &+mgood one morning, which likely meant Kirus found another unwilling subject.
 ~
-1141114890 0 0 33554472 0 0 0 0 S
-U 0 4 -1
+1141114890 0 0 0 33554472 0 0 0 0 S
+U 0 4 0 -1
 46 1 1 1d1+1 1d1+1
 0.0.0.1 1
 6 6 1
@@ -823,8 +823,8 @@ bloated corpse~
 &+wis not known to those of this &+gsimple plane&+w, as he winks to you just before
 &+whe tail hooks you and starts to slowly drag you under.&n
 ~
-1141114888 0 0 33554472 0 0 0 0 S
-X 0 1024 -1
+1141114888 0 0 0 33554472 0 0 0 0 S
+X 0 1024 0 -1
 35 1 1 1d1+1 1d1+1
 0.0.0.1 1
 12 12 1
@@ -840,8 +840,8 @@ sand swallower~
 &+ynutrients from.  This will allow it to survive until better feeding days
 &+ycome to the river inhabitants.&n
 ~
-264200 1 0 34078730 0 0 0 -300 S
-F 0 0 -1
+264200 1 0 0 34078730 0 0 0 -300 S
+F 0 0 0 -1
 32 1 1 1d1+1 1d1+1
 0.0.0.1 1
 12 12 1
@@ -854,8 +854,8 @@ lava lick lava-lick~
 &+rthrough the &+Bwater&+r like a &+Wrazored&+r top.  No living being could likely
 &+rsurvive in a nearby environment for any amount of time.&n
 ~
-18442 1 0 638584850 64 0 0 -700 S
-EF 0 8192 -1
+18442 1 0 0 638584850 64 0 0 -700 S
+EF 0 8192 0 -1
 50 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -871,8 +871,8 @@ gorgimera xiizhaha~
 &+rleft unexplored.  The gorgimera tries to briefly speak to you in a limited
 &+rform of the foul language of the red dragons before attacking.&n
 ~
-1141245966 1 0 705693754 14528 0 0 -200 S
-X 0 16384 -1
+1141245966 1 0 0 705693754 14528 0 0 -200 S
+X 0 16384 0 -1
 60 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -887,8 +887,8 @@ harvester termite~
 &+Ytrash compactor for any of the unwanted &+gforest&+Y debris that makes it into the
 &+Ycolony.&n
 ~
-2248 0 0 33554432 0 0 0 100 S
-I 0 0 -1
+2248 0 0 0 33554432 0 0 0 100 S
+I 0 0 0 -1
 33 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -901,8 +901,8 @@ sooth-sayer praying mantis~
 &+Gclose, with its front spiny arms.  Besides its two claws, it bites with its
 &+Gstrong mandibles, removing and chewing &+Yflesh&+G with each unerring strike.&n
 ~
-1140852810 0 0 0 0 0 0 50 S
-I 0 1 -1
+1140852810 0 0 0 0 0 0 0 50 S
+I 0 1 0 -1
 42 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -917,8 +917,8 @@ badger~
 &+yso large that it can no longer leave the lair opening, and will die here one
 &+yday, but not before it takes a few others with it.&n
 ~
-1073743882 1 0 33554432 0 0 0 100 S
-A 0 0 -1
+1073743882 1 0 0 33554432 0 0 0 100 S
+A 0 0 0 -1
 44 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -934,8 +934,8 @@ juvenile boring beetle~
 &+ybe rekoned with.  This beetle will one day serve its colony by growing &+gmolds&+y,
 &+Gslimes&+y, &+yand &+rfungi&+y in the colony lair.&n
 ~
-2124 0 0 33554464 0 0 0 -400 S
-I 0 0 -1
+2124 0 0 0 33554464 0 0 0 -400 S
+I 0 0 0 -1
 25 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -953,8 +953,8 @@ juvenile boring beetle~
 &+ywhile, you get the feeling this is some other life form that has actually
 &+ytransformed itself into a beetle for some unknown purpose, probably spying.&n
 ~
-2124 0 0 33554464 0 0 0 -400 S
-I 0 512 -1
+2124 0 0 0 33554464 0 0 0 -400 S
+I 0 512 0 -1
 40 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -969,8 +969,8 @@ bloodied creature boneless~
 &+ysteal from you the &+Wpure life energy&+y you still contain, and make some of it
 &+yits very own.&n
 ~
-1074137102 1 0 169345066 0 0 0 -1000 S
-AC 0 512 -1
+1074137102 1 0 0 169345066 0 0 0 -1000 S
+AC 0 512 0 -1
 30 1 1 1d1+1 1d1+1
 0.0.0.1 1
 11 11 0
@@ -985,8 +985,8 @@ fire lizard~
 &+rThey tend to hunt game every fortnight and the prey is hauled back to its
 &+rlair for a leisurely meal.&n
 ~
-1140852938 1 0 34078728 0 0 0 -300 S
-D 0 4 -1
+1140852938 1 0 0 34078728 0 0 0 -300 S
+D 0 4 0 -1
 30 1 1 1d1+1 1d1+1
 0.0.0.1 1
 4 4 1
@@ -1003,8 +1003,8 @@ neo otyugh neo-otyugh~
 &+gquickly from side to side, enabling them to scan a large area.  This stalk
 &+gis also a receiver/transmitter for their telepathing abilities.&n
 ~
-1140852750 1 0 33554472 2048 0 0 0 S
-AC 0 4 -1
+1140852750 1 0 0 33554472 2048 0 0 0 S
+AC 0 4 0 -1
 55 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 0
@@ -1020,8 +1020,8 @@ guard guardian boring beetle~
 &+ybe rekoned with.  This beetle serves its colony by protecting other members
 &+yof the colony from outsiders and invaders.&n
 ~
-1140852814 1 0 536870960 0 0 0 -700 S
-I 0 1 -1
+1140852814 1 0 0 536870960 0 0 0 -700 S
+I 0 1 0 -1
 55 1 1 1d1+1 1d1+1
 0.0.0.1 1
 8 8 1
@@ -1036,8 +1036,8 @@ swanmay~
 &+Witems are transformed into part of the swans' plumage or worn on a leg.
 &+WSwanmays are independent protectors of the &+gforests&+W and &+Ywildlife&+W.&n
 ~
-1073743944 0 0 186130474 0 0 0 0 S
-PH 0 128 -1
+1073743944 0 0 0 186130474 0 0 0 0 S
+PH 0 128 0 -1
 52 1 1 1d1+1 1d1+1
 0.0.0.1 1
 11 11 2
@@ -1052,8 +1052,8 @@ warm water octopus~
 &+bhandily destroy opponents.  These creatures also have the ability to change
 &+btheir &+Bc&+Wo&+Gl&+Yo&+Lr&+Ms&+b so that they can perfectly blend into their surroundings.&n
 ~
-1074006092 1 0 34603056 0 0 0 -200 S
-F 0 64 -1
+1074006092 1 0 0 34603056 0 0 0 -200 S
+F 0 64 0 -1
 38 1 1 1d1+1 1d1+1
 0.0.0.1 1
 12 12 0
@@ -1069,8 +1069,8 @@ dragon turtle~
 &+Ggreen&+g and are flecked with &+Ygolden highlights&+g.  It would likely be wise to
 &+gallow this creature to have its fun and be on your way.&n
 ~
-264396 0 0 50331744 0 0 0 0 S
-D 0 8 -1
+264396 0 0 0 50331744 0 0 0 0 S
+D 0 8 0 -1
 40 1 1 1d1+1 1d1+1
 0.0.0.1 1
 12 12 1
@@ -1086,8 +1086,8 @@ crimson death mist~
 &+Mvisible by normal vision.  It has a language that seems to be nothing more than
 &+Ma series of barely audible whispers.&n
 ~
-1074137100 1 0 169345066 2048 0 0 -1000 S
-UV 0 512 -1
+1074137100 1 0 0 169345066 2048 0 0 -1000 S
+UV 0 512 0 -1
 60 1 1 1d1+1 1d1+1
 0.0.0.1 1
 11 11 1

@@ -8,8 +8,8 @@ pech earth~
 &+yhis axe to tunnel in the &n&+Lrock&n&+y all around here.d  He barely notices you when
 &+yyou enter this area, then without warning turns and attacks!
 ~
-1073752296 0 0 1573016 0 0 0 -500 S
-H 0 1 -1
+1073752296 0 0 0 1573016 0 0 0 -500 S
+H 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -23,8 +23,8 @@ dao magician djinn~
 &+yhover there in midair above it.  This &n&+cDjinn&n&+y looks to be going over some
 &+yaction or order in his mind, probably from the &n&+rKhan&n&+y himself.
 ~
-1073756264 0 0 134217736 18 0 0 -1000 S
-EE 0 10 -1
+1073756264 0 0 0 134217736 18 0 0 -1000 S
+EE 0 10 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -38,8 +38,8 @@ dao guardian djinn~
 &+yhe loves his work and his duty, to endlessly patrol these caverns and to
 &+ysmash anything he finds thats not susposed to be here.
 ~
-1073756264 0 0 134217880 18 0 0 -1000 S
-EE 0 1 -1
+1073756264 0 0 0 134217880 18 0 0 -1000 S
+EE 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -53,8 +53,8 @@ earth mephit~
 &+yanyone does sneak up on him.  How it managed to avoid everything and to
 &+ysurvive this long is a mystery to all.
 ~
-252 0 0 34078722 0 0 0 -400 S
-H 0 13 -1
+252 0 0 0 34078722 0 0 0 -400 S
+H 0 13 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -68,8 +68,8 @@ small earth elemental~
 &+yhalf jutting out.  The only part of a body, if it could be called that, is
 &+ya head of sorts and arms.
 ~
-1073756264 0 0 33554584 0 0 0 -1000 S
-EE 0 1 -1
+1073756264 0 0 0 33554584 0 0 0 -1000 S
+EE 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -84,8 +84,8 @@ gigantic earth elemental~
 &+yground.  It takes one look at you and with no expression as it moves towards
 &+yyou to attack!
 ~
-1073756264 0 0 33554584 0 0 0 -1000 S
-EE 0 1 -1
+1073756264 0 0 0 33554584 0 0 0 -1000 S
+EE 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -99,8 +99,8 @@ sandling earth~
 &+ythe &n&+Learth&n&+y at the same time.  It has the the appearance of a man sized
 &+yearthworm, that mindless eats everything in its path.
 ~
-12392 0 0 34603144 0 0 0 -500 S
-I 0 1 -1
+12392 0 0 0 34603144 0 0 0 -500 S
+I 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -114,8 +114,8 @@ dao enforcer djinn~
 &+yhis orders to the absolute letter.  Just the sight of anyone being this far
 &+yinto the elemental plane of his home is enough reason for him to attack.
 ~
-1140865128 0 0 302514328 2051 0 0 -1000 S
-EE 0 5 -1
+1140865128 0 0 0 302514328 2051 0 0 -1000 S
+EE 0 5 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -130,8 +130,8 @@ xorn earth~
 &+yas well.  They protect what is theres fiercely and without mercy, using there
 &+ynatural powers as weapons.
 ~
-14440 0 0 33554568 0 0 0 -1000 S
-EE 0 1 -1
+14440 0 0 0 33554568 0 0 0 -1000 S
+EE 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -145,8 +145,8 @@ xaren earth~
 &+yof the Xorn, is also a native of the Earth Plane usually working for metal
 &+yfood from the Daos.
 ~
-1140865132 0 0 302514312 0 0 0 -1000 S
-EE 0 2 -1
+1140865132 0 0 0 302514312 0 0 0 -1000 S
+EE 0 2 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -160,8 +160,8 @@ galber dher earth~
 &+Lin exact percison towards its targets.  It moves along here looking over
 &+Lthe plane making sure none of the damage here is too extensive to its home.
 ~
-1073756392 0 0 33554568 0 0 0 -1000 S
-EE 0 9 -1
+1073756392 0 0 0 33554568 0 0 0 -1000 S
+EE 0 9 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -177,8 +177,8 @@ grumbar lord earth br_a~
 &+yof the reason when you enter his &n&+Ychambers&n&+y he looks puzzled for a moment then
 &+yproceeds to smash these bothersome insects.
 ~
-1191213163 0 0 436207802 2076 0 0 -1000 S
-EE 0 301 7
+1191213163 0 0 0 436207802 2076 0 0 -1000 S
+EE 0 301 0 7
 62 180 -85 1d100+30000 7d6+70
 0.0.50.30 500000
 8 8 1
@@ -193,8 +193,8 @@ titan~
 &+yis littered with Dao, Xorn, and Xaren bodies, you can only guess he doesn't
 &+ylike there kind at all.
 ~
-1073756264 0 0 570466360 2076 0 0 1000 S
-G 0 4 -1
+1073756264 0 0 0 570466360 2076 0 0 1000 S
+G 0 4 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -431,7 +431,7 @@ ring bloodstone~
 &+Wa royal ring of&N &+rBloodstone&N~
 &+WThe royal ring of&N &+rBloodstone&N is lying here.~
 ~
-9 16 1 1 7 0 2654208 3 0 0 0
+9 16 1 1 7 0 2654208 3 32768 0 0
 6 0 0 3 0 0 0 0
 1 1 100
 E
@@ -533,7 +533,7 @@ locket golden~
 &+Ya golden locket&N~
 A &+Ygolden locket&N is lying here.~
 ~
-8 24 0 0 7 0 4096 5 0 0 0
+8 24 0 0 7 0 4096 5 32768 0 0
 0 0 0 0 0 0 0 0
 1 8000 100
 A
@@ -943,7 +943,7 @@ head bloody~
 &+ra bloody head&N~
 &+rA bloody head&N is here decaying on the ground.~
 ~
-12 2 0 0 7 0 0 16385 0 0 0
+12 2 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 3 1 100
 #74058
@@ -2974,7 +2974,7 @@ boy baby~
 &+Ba baby boy&N~
 A baby boy has been left here to be exposed to the elements.~
 ~
-12 2 0 0 7 0 0 16385 0 0 0
+12 2 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 15 1 100
 #74238
@@ -2982,7 +2982,7 @@ girl baby~
 &+Ma baby girl&N~
 A baby girl has been left herer to be exposed to the elements.~
 ~
-12 2 0 0 7 0 0 16385 0 0 0
+12 2 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 15 1 100
 #74239
@@ -2990,7 +2990,7 @@ heart bloody~
 &+ra bloody heart&N~
 &+rA bloody heart, ripped from some poor bastard, lies here.&N~
 ~
-12 2 0 0 7 0 4104 16385 0 0 0
+12 2 0 0 7 0 4104 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 1 100
 #74240
@@ -2998,7 +2998,7 @@ ear bloody~
 &+ra bloody ear&N~
 &+rAn ear lies here, but where is its owner&N!?~
 ~
-12 2 1 1 7 0 4104 16385 0 0 0
+12 2 1 1 7 0 4104 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 #74241
@@ -3006,7 +3006,7 @@ tongue small bloody~
 &+ra small bloody tongue&N~
 &+rA small bloody tongue of a child has been left here.&N~
 ~
-12 2 0 0 7 0 4096 16385 0 0 0
+12 2 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74242
@@ -3014,7 +3014,7 @@ phallus crusty~
 &+ya crusty phallus&N~
 A phallus, which has been sliced off, is laying here.~
 ~
-12 2 0 0 7 0 4096 16385 0 0 0
+12 2 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74243
@@ -3022,7 +3022,7 @@ scalp bloody~
 &+Ra bloody scalp&N~
 A person's scalp has been left here as a sign of some hideous crime.~
 ~
-12 2 0 0 7 0 0 16385 0 0 0
+12 2 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74244
@@ -3046,7 +3046,7 @@ entrails pink~
 &+Msome pink entrails&N~
 Long coils of pink entrails are here, evidence of somebody's demise.~
 ~
-12 2 0 0 7 0 4096 16385 0 0 0
+12 2 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74247
@@ -3072,7 +3072,7 @@ head bloody mistress~
 &+rthe bloody head of the mistress&N~
 A bloody head is lying here on the ground buzzing with flies.~
 ~
-12 2 0 0 7 0 4096 16385 0 0 0
+12 2 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74250
@@ -3088,7 +3088,7 @@ flute instrument~
 &+Ba shiny flute&N~
 &+BA flute is lying here on the ground.&N~
 ~
-32 16 3 15 7 0 0 16385 0 0 0
+32 16 3 15 7 0 0 16385 32768 0 0
 184 30 0 1 0 0 0 0
 0 0 100
 #74252
@@ -3096,7 +3096,7 @@ carcass~
 &+gthe carcass of some small lizard.&N~
 &+gA small carcass is lying here.&N~
 ~
-12 2 0 0 7 0 0 16385 0 0 0
+12 2 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74253
@@ -3104,7 +3104,7 @@ bones child child's~
 &+Wa child's bones&N~
 &+WA pile of bones is lying here.&N~
 ~
-12 10 0 0 7 0 4096 16385 0 0 0
+12 10 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74254
@@ -3112,7 +3112,7 @@ head bloody manticore~
 &+rthe bloody head of the huge manticore&N~
 &+rA bloody head is lying here on the ground buzzing with flies.&N~
 ~
-12 2 0 0 7 0 4096 16385 0 0 0
+12 2 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74255
@@ -3128,7 +3128,7 @@ lyre minotaur instrument~
 &+Ythe lyre of the Svalich Minotaur&N~
 &+YA large golden lyre is laying here on the ground.&N~
 ~
-32 24 3 15 11 0 0 16385 0 0 0
+32 24 3 15 11 0 0 16385 32768 0 0
 185 55 0 10 0 0 0 0
 6 80000 100
 A
@@ -3140,7 +3140,7 @@ head bloody missionary~
 &+rthe blood soaked head of a Verzanan missionary~
 &+rA blood soaked head is laying here.&N~
 ~
-12 2 0 0 7 0 4096 16385 0 0 0
+12 2 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74258
@@ -3156,7 +3156,7 @@ quarter amulet~
 &+Ma piece of a broken amulet&N~
 A piece of an amulet is laying here.~
 ~
-12 16 3 2 7 0 0 16385 0 0 0
+12 16 3 2 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74260
@@ -3164,7 +3164,7 @@ quarter amulet~
 &+Ma piece of a broken amulet&N~
 A piece of an amulet is laying here.~
 ~
-12 16 3 2 7 0 0 16385 0 0 0
+12 16 3 2 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74261
@@ -3172,7 +3172,7 @@ quarter amulet~
 &+Ma piece of a broken amulet&N~
 A piece of an amulet is laying here.~
 ~
-12 16 3 2 7 0 0 16385 0 0 0
+12 16 3 2 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74262
@@ -3180,7 +3180,7 @@ quarter amulet~
 &+Ma piece of a broken amulet&N~
 A piece of an amulet is laying here.~
 ~
-12 16 3 2 7 0 0 16385 0 0 0
+12 16 3 2 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74263
@@ -3467,7 +3467,7 @@ head bloody missionary~
 &+rthe blood soaked head of a Verzanan missionary~
 A blood soaked head is laying here.~
 ~
-12 1 0 0 7 0 0 16385 0 0 0
+12 1 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #74294
@@ -3487,7 +3487,7 @@ head bloody~
 &+rthe bloody head of the baron's mother&N~
 &+rA bloody head is lying here on the ground buzzing with flies.&N~
 ~
-12 2 3 0 7 0 8 16385 0 0 0
+12 2 3 0 7 0 8 16385 32768 0 0
 0 0 0 0 0 0 0 0
 3 1 100
 #74296

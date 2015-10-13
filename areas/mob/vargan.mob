@@ -7,8 +7,8 @@ hobgoblin warrior~
 &+garmor. Its brownish red hairy hide is heavily scarred. It has a scowl on its
 &+gface and a fierce expression in its beady yellow&n &+yeyes.
 ~
-2120 1 0 33554432 0 0 0 -1000 S
-HG 0 1 -1
+2120 1 0 0 33554432 0 0 0 -1000 S
+HG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 0
@@ -21,8 +21,8 @@ orog~
 &+gunkempt armor. It has very large and sharp yellow&n &+ycanine teeth&n &+gjutting from
 &+gits upper jaw.
 ~
-2120 1 0 33554432 0 0 0 -1000 S
-H 0 1 -1
+2120 1 0 0 33554432 0 0 0 -1000 S
+H 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 0
@@ -36,8 +36,8 @@ scrag~
 &+gIts wide mouth is filled with needle-like teeth with bits of&n &+rbloody flesh&n
 &+ghanging from them.
 ~
-264264 1 0 33556480 0 0 0 -1000 S
-H 0 1 -1
+264264 1 0 0 33556480 0 0 0 -1000 S
+H 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 0
@@ -52,8 +52,8 @@ drake~
 &+gpower and strengh. He obviously has forgotten more magic than most people
 &+ghave ever known.
 ~
-1073743946 1 0 0 0 0 0 -1000 S
-PH 0 512 -1
+1073743946 1 0 0 0 0 0 0 -1000 S
+PH 0 512 0 -1
 30 6 0 31d56+465 4d6+7
 5.7.9.1 40176
 8 8 1
@@ -68,8 +68,8 @@ Norkon Longbeard~
 &+gHis black beard is a little shorter than that of other dwarfs, no doubt to
 &+gprotect it from catching&n &+rfire!
 ~
-1073743947 0 0 33554560 0 0 0 -1000 S
-PM 0 1 -1
+1073743947 0 0 0 33554560 0 0 0 -1000 S
+PM 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 0
@@ -82,8 +82,8 @@ orog leader~
 &+gand unkempt armor. It has very large and sharp yellow&n &+ycanine teeth&n &+gjutting from
 &+gits upper jaw.
 ~
-2120 1 0 33554448 0 0 0 -1000 S
-G 0 1 -1
+2120 1 0 0 33554448 0 0 0 -1000 S
+G 0 1 0 -1
 31 6 10 31d83+682 4d6+7
 5.7.9.1 40176
 8 8 0
@@ -97,8 +97,8 @@ minotaur~
 &+gas coal. It is unmistakeable to anyone that he could tear a full grown bull
 &+gapart with his bare hands.
 ~
-2120 1 0 33554432 0 0 0 -1000 S
-G 0 1 -1
+2120 1 0 0 33554432 0 0 0 -1000 S
+G 0 1 0 -1
 28 8 20 28d65+504 3d6+4
 8.3.7.1 24948
 8 8 0
@@ -112,8 +112,8 @@ spectator~
 &+gtop of its monstrous body. Taking up the entire bottom half of its body is
 &+ga large toothy maw.
 ~
-1073875018 1 0 167772160 2 0 0 -1000 S
-DK 0 4 -1
+1073875018 1 0 0 167772160 2 0 0 -1000 S
+DK 0 4 0 -1
 31 6 -10 31d77+713 4d6+7
 5.7.7.3 40176
 11 11 0
@@ -127,8 +127,8 @@ starved minotaur~
 &+gas coal. It is unmistakeable to anyone that he could tear a full grown bull
 &+gapart with his bare hands.
 ~
-1073743945 1 0 33554432 0 0 0 -1000 S
-G 0 1 -1
+1073743945 1 0 0 33554432 0 0 0 -1000 S
+G 0 1 0 -1
 31 6 10 31d83+682 4d6+7
 5.7.9.1 40176
 8 8 0
@@ -141,8 +141,8 @@ shaman~
 &+gand unkempt armor. It has very large and sharp yellow&n &+ycanine teeth
 &+gjutting from its upper jaw. There are ritual markings covering his upper body.
 ~
-1073743946 1 0 33554432 0 0 0 -1000 S
-G 0 256 -1
+1073743946 1 0 0 33554432 0 0 0 -1000 S
+G 0 256 0 -1
 26 8 26 26d60+442 3d6+4
 7.2.6.1 23166
 8 8 0
@@ -155,8 +155,8 @@ rogue~
 &+gthe other&n &+rOrogs&n &+galthough he looks just as strong. He has a very sharp, very
 &+glong dagger in one hand which is obviously ready to be used!
 ~
-1140852872 1 0 1048576 0 0 0 -1000 S
-G 0 8192 -1
+1140852872 1 0 0 1048576 0 0 0 -1000 S
+G 0 8192 0 -1
 25 11 29 25d40+325 3d5+3
 6.2.6.1 22275
 8 8 0

@@ -257,7 +257,7 @@ magnificent pile black red dragonscales~
 &+La magnificent &+rpile &+Lof black a&+rnd red &+Ldragon&+rscales&n~
 &+LA rather large pile of dragonscales lies here.&n~
 ~
-12 35 3 0 7 0 69632 1 0 0 0
+12 35 3 0 7 0 69632 1 32768 0 0
 0 0 0 0 0 0 0 0
 40 0 100
 #88323
@@ -265,7 +265,7 @@ gauntlets battered worn used~
 &+ra pair of &+ybattered &+rand &+Lworn &+Cgauntlets&n~
 &+CA pair of overly-used gauntlets lie here, nearly destroyed.&n~
 ~
-9 16 3 0 0 0 4096 129 0 0 0
+9 16 3 0 0 0 4096 129 32768 0 0
 0 0 0 0 0 0 0 0
 4 0 10
 A

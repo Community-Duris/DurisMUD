@@ -634,7 +634,7 @@ book~
 an alchemist book titled 'Gunsmithing'~
 A alchemist book with a strange design of a smoke powderweapon has been left here.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135438
@@ -642,7 +642,7 @@ book~
 the Wonderbring book titled 'Muskets and Arquebuses'~
 A book with the holy symbol of Gond, the Wonderbringer has been left here.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135439
@@ -650,7 +650,7 @@ book~
 a battle-forgers book titled 'Smokepowder'~
 A book with mithril bindings and a battle-forgers sigil has been left here.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135440
@@ -658,7 +658,7 @@ object unnamed~
 the hide of Kezef, the Chaos Hound~
 An unnamed object lies here, looking lonely and forelorn.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135441
@@ -674,7 +674,7 @@ visage dendar~
 the visage of Dendar, the Elder Eternal Evil~
 An unnamed object lies here, looking lonely and forelorn.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135443
@@ -806,7 +806,7 @@ object unnamed~
 the scale of the Death Serpent~
 An unnamed object lies here, looking lonely and forelorn.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135452
@@ -814,7 +814,7 @@ object unnamed~
 the scale of the Night Serpent~
 An unnamed object lies here, looking lonely and forelorn.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135453
@@ -822,7 +822,7 @@ object unnamed~
 the scale of the Shadow Serpent~
 An unnamed object lies here, looking lonely and forelorn.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135454
@@ -830,7 +830,7 @@ object unnamed~
 the scale of the Emerald Serpent~
 An unnamed object lies here, looking lonely and forelorn.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135455
@@ -838,7 +838,7 @@ standard vaprak~
 &+Lthe &+Wstandard&+L of &+rVap&+Lrak&+L, the &nG&+Wo&nd&+L of &+rMino&+Ltaurs&n~
 &+LA &+rbl&+Roody drench&+red &+Lbattle-standard of a bull has been left here.&n~
 ~
-13 15 3 0 7 0 8728577 1 0 0 0
+13 15 3 0 7 0 8728577 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 E

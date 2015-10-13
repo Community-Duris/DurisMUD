@@ -7,8 +7,8 @@ beetle~
 in this part of the caves.  The beetle is peaceful and smell funny as to give
 warning to the other wildlife here that it doesn't taste very good.
 ~
-72 0 0 0 0 0 0 0 S
-I 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -21,8 +21,8 @@ A &+Yslimy fungus&N drips, looking to find an unsuspecting insect.&N
 fungus.  The insect-eating fungus is a species related to the slimes found
 in the hotter sections of this cave.
 ~
-8 0 0 0 0 0 0 0 S
-I 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -35,8 +35,8 @@ slime green~
 &+Gsmall insects and feed on the rotting corpses of bigger animals.  The slime
 &+Ghas no regard for life and takes over everything.
 ~
-74 1 0 33554464 0 0 0 0 S
-A 0 0 -1
+74 1 0 0 33554464 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -49,8 +49,8 @@ slime red~
 &+rsmall insects and feed on the rotting corpses of bigger animals.  The slime
 &+rhas no regard for life and takes over everything.
 ~
-2122 1 0 33554464 0 0 0 0 S
-A 0 0 -1
+2122 1 0 0 33554464 0 0 0 0 S
+A 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -64,8 +64,8 @@ slime metal~
 &+Lhas no regard for life and takes over everything.  They evolved their metal
 &+Lcapacity from the strange organic metals molten in nearby lava caves.
 ~
-74 1 0 33554464 0 0 0 0 S
-A 0 0 -1
+74 1 0 0 33554464 0 0 0 0 S
+A 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -79,8 +79,8 @@ gnome~
 &+Rfrom his hardships in the caves.  Although small and weak, he is fast and
 &+Rvery intellegent.
 ~
-10 1 0 33554440 0 0 0 -1000 S
-PG 0 512 -1
+10 1 0 0 33554440 0 0 0 -1000 S
+PG 0 512 0 -1
 16 13 48 16d24+80 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -93,8 +93,8 @@ troll slave~
 the cave.  The troll is frightened by the awesome sight of magic and is
 deathly afraid of the magic used to enslave her.
 ~
-8 1 0 0 0 0 0 -1000 S
-PT 10 1 -1
+8 1 0 0 0 0 0 0 -1000 S
+PT 10 1 0 -1
 13 15 58 13d27+78 2d5+2
 6.5.2.0 6318
 8 8 2
@@ -107,8 +107,8 @@ swamp fish~
 as larger dead animals.  Very aggressive, this fish will defend its territory
 with a vengeance.
 ~
-262280 1 0 33556480 0 0 0 0 S
-F 0 0 -1
+262280 1 0 0 33556480 0 0 0 0 S
+F 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 12 12 0
@@ -120,8 +120,8 @@ lizard~
    This water lizard is absolutely huge in proportions.  Bigger than two adult
 ogres, this lizard defends her nest with a deadly aggressive attitude.
 ~
-262154 1 0 33556512 0 0 0 0 S
-R 0 0 -1
+262154 1 0 0 33556512 0 0 0 0 S
+R 0 0 0 -1
 25 -1 -69 45d90+1935 6d6+12
 0.0.0.0 109350
 12 12 2
@@ -133,8 +133,8 @@ centipede blue~
    &+BA blue centipede has large pincers as well as hundreds of legs.  Hardly
 &+Bbig at all, this insect is an easy kill.
 ~
-8 0 0 0 0 0 0 0 S
-I 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -146,8 +146,8 @@ snake~
    This snake is small and could hardly hurt a child; however, the snake is
 fairly poisonous evident from the diamond markings all over it.
 ~
-8 0 0 0 0 0 0 0 S
-RS 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+RS 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -159,8 +159,8 @@ mosquitoes swarm~
    These mosquitoes are adapted to the hot environment with tough but light
 exoskeletons.  The mosquitoes are huge and very quick.
 ~
-10 1 0 0 0 0 0 0 S
-I 0 0 -1
+10 1 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -172,8 +172,8 @@ lizard~
    This lizard enjoys the hot environment and seems to be more energetic
 because of the heat.
 ~
-8 0 0 0 0 0 0 0 S
-R 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+R 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -186,8 +186,8 @@ ogre outlaw~
 &+Bthe caves to escape persecution for his crimes.  He enjoys eating troll
 &+Bchildren who stray from their parents.
 ~
-10 1 0 33554432 0 0 0 -1000 S
-PO 0 1 -1
+10 1 0 0 33554432 0 0 0 -1000 S
+PO 0 1 0 -1
 19 13 39 19d35+133 3d4+2
 9.7.3.0 9234
 8 8 1
@@ -200,8 +200,8 @@ swamp rat~
 With large beady eyes and very sharp teeth, this rat hisses at everything in
 sight.  The rat is paranoid and aggressive.
 ~
-136 1 0 32 0 0 0 0 S
-A 0 0 -1
+136 1 0 0 32 0 0 0 0 S
+A 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -214,8 +214,8 @@ shaman troll~
 solitude and to practice his prayers and seems to be annoyed at any
 disturbance.
 ~
-10 1 0 10 0 0 0 -900 S
-PT 10 256 -1
+10 1 0 0 10 0 0 0 -900 S
+PT 10 256 0 -1
 17 13 45 17d33+102 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -228,8 +228,8 @@ hraaf troll blacksmith~
 rocks and stones.  She has huge bulging muscles and is as smart and wise as
 she is strong.  She is able to bless her creations as she makes them.
 ~
-2058 72 0 65544 2048 0 0 -900 S
-PT 10 32 -1
+2058 72 0 0 65544 2048 0 0 -900 S
+PT 10 32 0 -1
 47 -3 -75 47d110+2538 6d6+25
 7.0.0.5 114210
 8 8 2
@@ -241,8 +241,8 @@ snake~
    This snake is small and could hardly hurt a child; however, the snake is
 fairly poisonous evident from the diamond markings all over it.
 ~
-8 1 0 0 0 0 0 0 S
-RS 0 0 -1
+8 1 0 0 0 0 0 0 0 S
+RS 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 0
@@ -254,8 +254,8 @@ lizard~
    This lizard enjoys the hot environment and seems to be more energetic
 because of the heat.
 ~
-8 1 0 0 0 0 0 0 S
-R 0 0 -1
+8 1 0 0 0 0 0 0 0 S
+R 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -268,8 +268,8 @@ troll foreman~
 he's intensely jealous of any strangers wandering in his caves.  He suspects
 everyone of stealing and guards himself accordingly.
 ~
-10 1 0 0 0 0 0 -1000 S
-PT 10 1 -1
+10 1 0 0 0 0 0 0 -1000 S
+PT 10 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -282,8 +282,8 @@ troll miner~
 dirty and seems to have been working here for years.  His hands are huge and
 his feet are swollen, but he experiences no pain.
 ~
-8 1 0 0 0 0 0 -1000 S
-PT 10 1 -1
+8 1 0 0 0 0 0 0 -1000 S
+PT 10 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -296,8 +296,8 @@ troll miner~
 dirty and seems to have been working here for years.  His hands are huge and
 his feet are swollen, but he experiences no pain.
 ~
-8 1 0 0 0 0 0 -1000 S
-PT 10 1 -1
+8 1 0 0 0 0 0 0 -1000 S
+PT 10 1 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -310,8 +310,8 @@ swamp fish~
 as larger dead animals.  Very aggressive, this fish will defend its territory
 with a vengeance.
 ~
-262280 1 0 33556480 0 0 0 0 S
-F 0 0 -1
+262280 1 0 0 33556480 0 0 0 0 S
+F 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 0.0.0.0 5832
 12 12 0
@@ -326,8 +326,8 @@ inexperienced, he is the purest of evils.  He has gained special spells and
 skills through treachery and cheating, and he uses them without discipline
 or regards to himself or others.
 ~
-1073741832 1 0 1572912 2048 0 0 -1000 S
-PT 0 8192 -1
+1073741832 1 0 0 1572912 2048 0 0 -1000 S
+PT 0 8192 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -343,8 +343,8 @@ measurement as its web is created methodically and carefully.  There are
 several insects wrapped up that are as big as an ogre's fist and are stuck
 onto the web.
 ~
-10 1 0 32 0 0 0 0 S
-I 0 0 -1
+10 1 0 0 32 0 0 0 0 S
+I 0 0 0 -1
 11 15 64 11d23+44 2d5+2
 0.0.0.0 5346
 8 8 0
@@ -363,8 +363,8 @@ by ten-fold.  Only the highest conjurers of the realms can do better than this
 troll.  &+gGuremgh&n looks tired and is wise beyond his years.  He has embraced
 the craft and looks forward to death.
 ~
-33589274 0 0 73772 14528 0 0 -100 S
-PT 10 256 -1
+33589274 0 0 0 73772 14528 0 0 -100 S
+PT 10 256 0 -1
 48 -3 -78 48d110+2592 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -381,8 +381,8 @@ his art.  Once a thief, he has acquired magical spells to become a jeweler and
 has retired from his stealing days.  Because he use to be a great thief, he
 has an uncanny ability to spot valuable objects and gems.
 ~
-2058 0 0 40 0 0 0 -500 S
-PT 10 4096 -1
+2058 0 0 0 40 0 0 0 -500 S
+PT 10 4096 0 -1
 44 -1 -65 44d90+1892 6d6+12
 4.9.8.3 106920
 8 8 1
@@ -395,8 +395,8 @@ scrag bandit~
 &+Lskin and oozing slime.  Basking here, most likely after a large smuggling
 &+Lpayoff, this bandit grins and moans.
 ~
-2058 0 0 0 0 0 0 -450 S
-pt 0 1 4
+2058 0 0 0 0 0 0 0 -450 S
+pt 0 1 0 4
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1

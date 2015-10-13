@@ -270,7 +270,7 @@ small scale salamander jade~
 &na &+gsmall &+Gsalamander &+gscale&N~
 &+LA small &+gjade &+Lscale rests upon the ground here.&N~
 ~
-8 47 3 0 9 33 12288 8404993 0 0 0
+8 47 3 0 9 33 12288 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 4000 100
 E
@@ -282,7 +282,7 @@ large scale salamander jade~
 &na &+glarge &+Lsalamander &+gscale&N~
 &+LA large &+Gjade &+Lscale rests upon the ground here.&N~
 ~
-8 47 3 0 10 44 12288 8404993 0 0 0
+8 47 3 0 10 44 12288 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 8000 100
 E

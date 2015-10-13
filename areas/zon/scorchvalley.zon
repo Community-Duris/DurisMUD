@@ -2,7 +2,7 @@
 &N&+LThe &N&+rSc&N&+Ro&N&+Yrc&N&+Rh&N&+red&N&+L Valley&N~
 71332 1 0 40 50 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 71203 0 2 100 0 0 0
@@ -11,7 +11,7 @@ D 0 71203 0 2 100 0 0 0
 *
 D 0 71204 2 2 100 0 0 0
 *     south exit from "Just Inside the Shield" to
-*     "Decending Into The Valley" - closed/locked
+*     "Descending Into The Valley" - closed/locked
 *
 D 0 71240 5 1 100 0 0 0
 *     down exit from "Dead End In The Burning Barricade" to

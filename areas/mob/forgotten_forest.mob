@@ -6,8 +6,8 @@ snake green~
   &+gThis relatively harmless snake has &+Wbright &+galternating bands of &+Rred&+g, &+Yyellow
 &+gand &+Lblack&+g.
 ~
-16456 0 0 557056 9216 0 0 0 S
-RS 0 0 -1
+16456 0 0 0 557056 9216 0 0 0 S
+RS 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -24,8 +24,8 @@ the &+Gelder &+ghierophant~
 &+gintrusion has not pleased it. Maybe if you gave him a &+Lblack&+mberries&+g, or a &+Yyellow
 &+Ymushroom&+g, or even a &+cchunk&N of &+rmeat &+ghe would be your friend?
 ~
-67111002 0 0 939597884 12482 5242912 17825800 890 S
-P2 0 129 3
+67111002 0 0 0 939597884 12482 5242912 17825800 890 S
+P2 0 129 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -37,8 +37,8 @@ a large &+ydoe~
   &+yThis peaceful creature looks at you with big &+Ldark &+yeyes. Her nose twitches as
 &+yshe sniffs at you, but she goes back to chewing some grass.
 ~
-72 0 0 0 1024 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 1024 0 0 0 S
+A 0 0 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -50,8 +50,8 @@ bear brown big~
   &+yThe bear is a big, brown, furry animal with very large claws and very sharp
 &+yteeth.
 ~
-1073743944 0 0 16 2 0 1048576 -150 S
-A 0 1 4
+1073743944 0 0 0 16 2 0 1048576 -150 S
+A 0 1 0 4
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -62,8 +62,8 @@ fox brown~
 ~
 &+yIt is a large fox with beautiful, &+rred&N-&+ybrown fur and a long, thick brush.
 ~
-2120 0 0 33554432 0 0 0 0 S
-A 0 0 2
+2120 0 0 0 33554432 0 0 0 0 S
+A 0 0 0 2
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -75,8 +75,8 @@ wolf vicious~
   &+LIt is an exceptionally large wolf with thick, black fur. Saliva is dripping
 &+Lquickly from its long, white fangs. It looks quite dangerous and very angry.
 ~
-1073743944 0 0 16 2 64 1048576 -250 S
-A 0 1 4
+1073743944 0 0 0 16 2 64 1048576 -250 S
+A 0 1 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -88,8 +88,8 @@ You hear buzzing, and see a swarm of insects flying at you.
   These insects are more of an annoyance than a threat. It is made up of
 hundreds annoying insects.
 ~
-20552 0 0 402653184 2 0 0 0 S
-I 0 0 1
+20552 0 0 0 402653184 2 0 0 0 S
+I 0 0 0 1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -101,8 +101,8 @@ A &+gfallow &+ydeer&N is grazing peacefully here.
   &+yShe is a graceful creature on long, slender legs, and with large, brown eyes
 &+ylooking back at you with an air of watchful interest.
 ~
-72 0 0 33554432 1024 0 0 0 S
-A 0 0 -1
+72 0 0 0 33554432 1024 0 0 0 S
+A 0 0 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -115,8 +115,8 @@ a wild &+cdog~
 &+ybrown &+cspots. It's shape, along with its colors, make this dog almost
 &+cundetectable as it moves.
 ~
-1073743944 0 0 34078736 0 0 0 -100 S
-A 0 1 3
+1073743944 0 0 0 34078736 0 0 0 -100 S
+A 0 1 0 3
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -128,8 +128,8 @@ mouse field~
   &+yThis mouse is about the length of your hand, with sharp teeth, which it
 &+yuses to bite.
 ~
-200 0 0 268959744 1024 0 0 0 S
-A 0 0 1
+200 0 0 0 268959744 1024 0 0 0 S
+A 0 0 0 1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -141,8 +141,8 @@ A &+Wyoung&N horse is here, grazing peacefully.
   The horse whinnies at you, then runs around you a few times, then just goes
 back to grazing.
 ~
-134219784 0 0 134217744 2 0 1048576 100 S
-AE 0 1 3
+134219784 0 0 0 134217744 2 0 1048576 100 S
+AE 0 1 0 3
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -155,8 +155,8 @@ tree huge skeletal~
 &+Land pale and is decorated with scratches and claw marks. On its east side is
 &+La small opening just above ground level.
 ~
-30794 10240 0 385974588 30 1048672 118489098 -850 S
-VT 0 0 5
+30794 10240 0 0 385974588 30 1048672 118489098 -850 S
+VT 0 0 0 5
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -169,8 +169,8 @@ tree huge skeletal~
 &+yand pale and is decorated with scratches and claw marks. On its west side is
 &+ya small opening just above ground level.
 ~
-30794 10240 0 385974588 30 1048672 117440522 -850 S
-VT 0 0 5
+30794 10240 0 0 385974588 30 1048672 117440522 -850 S
+VT 0 0 0 5
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -183,8 +183,8 @@ tree colossal treant oak~
 &+gVery few leaves remain. Its limbs are crooked and gnarled. It moans as the
 &+gwind pushes it back and forth.
 ~
-30794 6144 0 385917228 1054 0 84934664 900 S
-VT 0 0 5
+30794 6144 0 0 385917228 1054 0 84934664 900 S
+VT 0 0 0 5
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -197,8 +197,8 @@ tree colossal treant~
 &+gVery few leaves remain. Its limbs are crooked and gnarled. It moans as the
 &+gwind pushes it back and forth.
 ~
-30794 6144 0 385917228 5150 32 84934664 800 S
-VT 0 0 6
+30794 6144 0 0 385917228 5150 32 84934664 800 S
+VT 0 0 0 6
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -211,8 +211,8 @@ cvok lumberjack~
 &+ychequered shirt. His features are worn with hard work and his expression is
 &+yone of a &+Wpeaceful &+yman leading a simple life.
 ~
-1073743948 0 0 419536956 30 0 1048576 450 S
-PM 0 1 2
+1073743948 0 0 0 419536956 30 0 1048576 450 S
+PM 0 1 0 2
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -225,8 +225,8 @@ a &+Lgrey&N cat~
 &+Lcontentedly. It looks rather harmless and seems to be nothing more than
 &+La large ball of fluff with claws.
 ~
-72 0 0 268992544 0 0 0 -100 S
-A 0 0 2
+72 0 0 0 268992544 0 0 0 -100 S
+A 0 0 0 2
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -239,8 +239,8 @@ centaur hunter wandering~
 &+gThe years of wanderings have left the hunter hardened and strong. He is
 &+gclad mostly in the fur of various animals he's caught.
 ~
-1073743880 0 0 603988004 14558 0 84934656 850 S
-CT 0 2 -1
+1073743880 0 0 0 603988004 14558 0 84934656 850 S
+CT 0 2 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -254,8 +254,8 @@ The &+yspider queen&N tempts you into being one of her many slaves.
 &+yneed them. She is the last bastion of good in this realm. Her mission is to
 &+ysomeday make free the inhabitants of the Forgotten Forest.
 ~
-2058 0 0 386433292 2 1048608 83886088 440 S
-AS 0 32 2
+2058 0 0 0 386433292 2 1048608 83886088 440 S
+AS 0 32 0 2
 30 0 0 1d1+1 1d1+1
 0.0.0.20 250000
 8 8 2
@@ -268,8 +268,8 @@ A young slave is here to serve his &+yqueen&N.
 are just growing in as of late. The slave does not mind you, but will fight
 like a warrior to protect his queen.
 ~
-1073743882 0 0 386433316 2 32 16777224 0 S
-AS 0 0 1
+1073743882 0 0 0 386433316 2 32 16777224 0 S
+AS 0 0 0 1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -281,8 +281,8 @@ A small horned &+glizard&N flicks his tongue and slithers away.
    &+gThis scaly creature looks like it is well adapted to its forest habitat.
 &+gIt looks very powerful.
 ~
-8 0 0 369131812 9246 32 16777224 0 S
-R 0 0 2
+8 0 0 0 369131812 9246 32 16777224 0 S
+R 0 0 0 2
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -293,8 +293,8 @@ A &+ybrown&N sparrow is flapping around on the limbs.
 ~
 &+yThe sparrow has brown feathers and small wings, looks like it is enjoying life.
 ~
-136 0 0 436207908 1054 32 16777226 0 S
-B 0 0 1
+136 0 0 0 436207908 1054 32 16777226 0 S
+B 0 0 0 1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -305,8 +305,8 @@ A rather large &+Lpython&N rests in a coil here.
 ~
 &+LIt looks really disgusting and doesn't smell very nice either.
 ~
-18440 0 0 369131808 8222 1048608 16777224 -250 S
-RS 0 0 3
+18440 0 0 0 369131808 8222 1048608 16777224 -250 S
+RS 0 0 0 3
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -318,8 +318,8 @@ A harmless &+Gturtle&N is here looking for some vegetation to eat.
    &+GThe turtle is small in size and has hard scales on its body,it looks most of
 &+Gall like a tiny scaled creature.
 ~
-8 0 0 369131812 30 32 16777216 0 S
-A 0 0 2
+8 0 0 0 369131812 30 32 16777216 0 S
+A 0 0 0 2
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -331,8 +331,8 @@ A small &+chairy &+yspider&N is running along the web.
    &+yA small brown and green slime covered spider. It seems to move around to
 &+yeach food item and proceed to barf acid all over it.
 ~
-2056 0 0 369131812 8222 32 0 -380 S
-AS 0 0 1
+2056 0 0 0 369131812 8222 32 0 -380 S
+AS 0 0 0 1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

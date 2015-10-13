@@ -4,8 +4,8 @@ roper young~
 &+LA small &+groper &+Lflitters around, looking lost.&n
 ~
 ~
-1141246152 1 0 0 0 0 0 0 S
-ac 0 1 2
+1141246152 1 0 0 0 0 0 0 0 S
+ac 0 1 0 2
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -15,8 +15,8 @@ roper mature _nosneak_~
 &+LA mature &+groper &+Lfloats here, &+Ytentacles &+Lflailing.&n
 ~
 ~
-1141246024 1 0 56 0 0 0 0 S
-ac 0 16384 3
+1141246024 1 0 0 56 0 0 0 0 S
+ac 0 16384 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -26,8 +26,8 @@ roper baby~
 &+LA very small &+groper &+Lcrawls across the floor.&n
 ~
 ~
-1140852940 1 0 0 0 0 0 0 S
-ac 0 1 1
+1140852940 1 0 0 0 0 0 0 0 S
+ac 0 1 0 1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ roper large _nosneak_~
 &+LA large &+groper &+Lgravitates towards you, hungrily.&n
 ~
 ~
-1141246026 0 0 56 268435456 0 0 0 S
-ac 0 16384 4
+1141246026 0 0 0 56 268435456 0 0 0 S
+ac 0 16384 0 4
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -48,8 +48,8 @@ roper elder _nosneak_~
 &+LAn elder &+groper &+Lgrooms itself with its &+Ytentacles&+L.&n
 ~
 ~
-1074149448 1 0 312 268435456 0 0 0 S
-ac 0 0 5
+1074149448 1 0 0 312 268435456 0 0 0 S
+ac 0 0 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -59,8 +59,8 @@ roper ancient _nosneak_~
 &+LAn ancient &+groper &+Lgrowls with a ravenous hunger.&n
 ~
 ~
-1141246026 1 0 24 0 0 0 0 S
-ac 0 16384 6
+1141246026 1 0 0 24 0 0 0 0 S
+ac 0 16384 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -70,8 +70,8 @@ roper colossal _ignore_ _nosneak_~
 &+LA colossal &+groper &+Lwobbles haphazardly.&n
 ~
 ~
-1141389386 1 0 3187779896 0 262272 68169728 0 S
-ac 0 5 7
+1141389386 1 0 0 3187779896 0 262272 68169728 0 S
+ac 0 5 0 7
 61 0 0 10d10+4000 10d10+80
 0.0.0.0 0
 8 8 0
@@ -81,8 +81,8 @@ sebastian lodehammer clansdwarf pudgy~
 &+rA pudgy clansdwarf &+Lraises an eyebrow.&n
 ~
 ~
-1074137162 0 0 1041869112 268712158 91881696 63977224 -1000 S
-pd 0 8192 2
+1074137162 0 0 0 1041869112 268712158 91881696 63977224 -1000 S
+pd 0 8192 0 2
 61 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -10,8 +10,8 @@ completely ignores the weapons in his belt as he attacks everything around him
 with his hands and sharp beak.  A tattered rucksack hangs down his back,
 showing that at least some of the creatures he has attacked have fought back.
 ~
-1073875020 1 0 188219408 0 0 0 -400 S
-H 0 4096 -1
+1073875020 1 0 0 188219408 0 0 0 -400 S
+H 0 4096 0 -1
 30 8 3 30d55+330 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -26,8 +26,8 @@ around it.  There is a magical quality to the bush and its bright yellow
 flowers that is hard to define.  A barren circle extends around it, almost as
 if a gardener has single-mindedly been protecting it.
 ~
-2058 1 0 50462736 0 0 0 -400 S
-AP 0 1 -1
+2058 1 0 0 50462736 0 0 0 -400 S
+AP 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -44,8 +44,8 @@ appear quite harmless.  It is the second glance that startles, as one realizes
 that this creature is all muscle, teeth, and claws, and that it is more than
 willing to kill creatures many times its size.
 ~
-1073743944 1 0 587202704 12480 0 0 -500 S
-A 0 1 -1
+1073743944 1 0 0 587202704 12480 0 0 -500 S
+A 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 0.0.0.0 24948
 8 8 0
@@ -59,8 +59,8 @@ Completely covered by the plants that surround it, the poor pink orchid is in
 dire need of water, nutrients, and sunshine.  Anything less sturdy than this
 hearty plant would surely have died long ago.
 ~
-2122 0 0 52559928 262144 0 0 0 S
-U 0 0 -1
+2122 0 0 0 52559928 262144 0 0 0 S
+U 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -78,8 +78,8 @@ dangerous places.  This kenku, like most kenku, looks more like a burly
 halfling wearing a bird costume, her eyes though tell the tale of a determined
 adventurer and hint that she should not be trifled with.
 ~
-1073875020 128 0 138018872 0 0 0 0 S
-H 0 512 -1
+1073875020 128 0 0 138018872 0 0 0 0 S
+H 0 512 0 -1
 31 6 0 31d56+465 4d6+7
 5.7.9.1 40176
 8 8 2
@@ -94,8 +94,8 @@ It would seem that her beauty is so great that she was preserved in death by
 someone that loved her.  Tattered clothing hangs from her body exposing more
 than it covers.
 ~
-1073874958 1 0 35717304 264192 0 0 -1000 S
-UV 0 1 -1
+1073874958 1 0 0 35717304 264192 0 0 -1000 S
+UV 0 1 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 4 4 2
@@ -110,8 +110,8 @@ body.  The slime looks healthy and well-fed, this is probably just its safe
 hiding place for resting after big meals.  It is clear that it is more than
 willing to envelope new victims, the more food the better.
 ~
-1073743946 1 0 590479530 274624 0 0 -500 S
-A 0 0 -1
+1073743946 1 0 0 590479530 274624 0 0 -500 S
+A 0 0 0 -1
 36 2 -15 36d80+756 4d7+10
 0.0.0.0 46656
 8 8 0
@@ -125,8 +125,8 @@ grow to an incredible size, with massive flowers that droop from high branches
 to hang over the narrow pathway.  A sticky secretion drips from the flowers,
 spreading an acrid yet sweet aroma into the air.
 ~
-2122 1 0 2261048 0 0 0 -400 S
-VT 0 1 -1
+2122 1 0 0 2261048 0 0 0 -400 S
+VT 0 1 0 -1
 27 8 13 27d65+621 3d6+4
 0.0.0.0 24057
 8 8 0
@@ -140,8 +140,8 @@ consume.  It has clearly had a great deal to eat in the past for it is quite
 large, but it appears to be starving now, its pale skin stretched tightly over
 its pulsing veins.
 ~
-1073743946 1 0 35782696 0 0 0 -400 S
-RS 0 0 -1
+1073743946 1 0 0 35782696 0 0 0 -400 S
+RS 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -155,8 +155,8 @@ green skin.  This poor orc's face is twisted in agony as he stares at his hands
 shaking his head.  It is quite clear from his tortured expression that his
 hands were once normal and that some strange curse has befallen him.
 ~
-1107298380 64 0 50331664 0 0 0 -1000 S
-HO 0 1 -1
+1107298380 64 0 0 50331664 0 0 0 -1000 S
+HO 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -171,8 +171,8 @@ grown quite large, its network of branches extending quite a distance.
 Fortunately it is no more immune to axes and swords than any other plant,
 though its lively attack is quite a surprise.
 ~
-2122 1 0 53608488 0 0 0 -500 S
-VT 0 0 -1
+2122 1 0 0 53608488 0 0 0 -500 S
+VT 0 0 0 -1
 20 13 35 20d30+300 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -186,8 +186,8 @@ Even though it is a simple plant it appears to be able to move quite quickly,
 and with a strange, but basic, intelligence.  Small tendrils and leaves line
 its lengthy stem, helping it move along, and helping it sense its surroundings.
 ~
-74 0 0 19005440 1024 0 0 0 S
-A 0 0 -1
+74 0 0 0 19005440 1024 0 0 0 S
+A 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -203,8 +203,8 @@ disposition.  Though her skin has clearly been transformed, her muscles and
 size remain the same, if anything, the transformation has made her stronger and
 her skin harder.
 ~
-1073743948 1 0 52560144 0 0 0 -1000 S
-PO 0 1 -1
+1073743948 1 0 0 52560144 0 0 0 -1000 S
+PO 0 1 0 -1
 32 6 -2 32d83+544 4d6+7
 6.8.0.2 41472
 8 8 2
@@ -224,8 +224,8 @@ creature.  It is clear that its sharp claws and teeth could shred most normal
 armor to pieces when driven by the dense hard muscles that ripple beneath its
 hide.
 ~
-1073743944 1 0 591003832 12480 0 0 -500 S
-A 0 64 -1
+1073743944 1 0 0 591003832 12480 0 0 -500 S
+A 0 64 0 -1
 35 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -240,8 +240,8 @@ his hairy legs look closer to those of a horse, or maybe a satyr.  He seems
 to be hiding here, fearing what others might think of him, and trying in vain
 to overcome whatever curse has befallen him.
 ~
-1073743948 128 0 16 0 0 0 700 S
-PB 0 1 -1
+1073743948 128 0 0 16 0 0 0 700 S
+PB 0 1 0 -1
 42 -1 -59 42d107+1890 6d6+12
 2.8.7.3 102060
 8 8 1
@@ -257,8 +257,8 @@ it swims.  Powerful jaws full of sharp teeth appear to be its most noticeable
 attribute for its scales are a dark bluish-grey that blends in well with the
 water it swims in making it almost invisible.
 ~
-1074006088 1 0 37357624 0 0 0 -400 S
-F 0 0 -1
+1074006088 1 0 0 37357624 0 0 0 -400 S
+F 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -272,8 +272,8 @@ trapped in this dark, strange pool.  Water is its true home though, so it is
 quite powerful here, and more than willing to excercise its wrath on all who
 dare to enter its new home.
 ~
-1074006094 1 0 555878586 12480 0 0 -800 S
-EW 0 2048 -1
+1074006094 1 0 0 555878586 12480 0 0 -800 S
+EW 0 2048 0 -1
 40 2 -38 40d64+840 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -291,8 +291,8 @@ has tainted the garden and forest above, or if it is just another victim.  In
 either case, it is a formidable foe, more than willing to excercise its hatred
 and anger upon even the most powerful foes.
 ~
-1074006094 1 0 572655800 405696 0 0 -1000 S
-X 0 1 -1
+1074006094 1 0 0 572655800 405696 0 0 -1000 S
+X 0 1 0 -1
 40 2 -43 40d95+1200 4d7+10
 3.3.4.4 77760
 8 8 0
@@ -305,8 +305,8 @@ This tormented spirit is so transparent that one can almost see straight
 through it.  If not for the aggressive way it attacks everything in sight, it
 probably wouldn't be noticed by anyone or anything.
 ~
-1107429454 1 0 168820890 0 0 0 -500 S
-UG 0 1 -1
+1107429454 1 0 0 168820890 0 0 0 -500 S
+UG 0 1 0 -1
 41 -1 -66 41d107+1845 6d6+12
 0.0.0.0 99630
 8 8 0
@@ -322,8 +322,8 @@ she has dressed herself in the highest of fashion, her translucent clothing
 revealing a translucent body that men would go to war for.  Whatever death
 she suffered has left her soul trapped here in torment.
 ~
-1073875020 128 0 254935226 264192 0 0 1000 S
-UG 0 32 -1
+1073875020 128 0 0 254935226 264192 0 0 1000 S
+UG 0 32 0 -1
 41 -1 -66 41d99+1804 6d6+12
 0.0.0.0 99630
 8 8 2
@@ -339,8 +339,8 @@ Lord Krimeneha enjoyed the pleasures of the flesh as often as possible, and
 that his servants gave more to the guests than just food.  She wanders the
 halls and rooms searching for something to set her soul free.
 ~
-1073875020 160 0 203554872 0 0 0 0 S
-UG 0 512 -1
+1073875020 160 0 0 203554872 0 0 0 0 S
+UG 0 512 0 -1
 35 6 -22 35d56+525 4d6+7
 0.0.0.0 45360
 8 8 2
@@ -356,8 +356,8 @@ Like the other ghosts that float through these haunted halls, she wears
 frail garments that reveal more then they cover, exposing her beautiful body
 for the world to see.
 ~
-1073875020 128 0 203554816 0 0 0 0 S
-UG 0 128 -1
+1073875020 128 0 0 203554816 0 0 0 0 S
+UG 0 128 0 -1
 30 8 -7 30d60+360 3d6+4
 0.0.0.0 26730
 8 8 2
@@ -373,8 +373,8 @@ highlight his piercing eyes, eyes he turns on anyone he notices.  It is clear
 from his features that he is concerned about something, something dire and
 horrible.
 ~
-1073874958 160 0 203563192 32768 0 0 1000 S
-UG 0 8 -1
+1073874958 160 0 0 203563192 32768 0 0 1000 S
+UG 0 8 0 -1
 41 -1 -66 41d107+1845 6d6+12
 0.0.0.0 99630
 8 8 1
@@ -390,8 +390,8 @@ power hasn't faded any, but his enemies have all been forgotten.  Despite his
 success at defeating his foes, he has acquired a madness, a foul evil that
 threatens to consume him.
 ~
-1073743884 0 0 184 0 0 0 -1000 S
-PH 0 2048 -1
+1073743884 0 0 0 184 0 0 0 -1000 S
+PH 0 2048 0 -1
 41 -1 -56 41d72+1763 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -406,8 +406,8 @@ or why he is here.  He darts back and forth, fighting imaginary foes, screaming
 cheeks and a small pug-nose.  His smile, even in this ghostly state, lights up
 the room.
 ~
-1073875020 128 0 203563192 0 0 0 1000 S
-UG 0 8 -1
+1073875020 128 0 0 203563192 0 0 0 1000 S
+UG 0 8 0 -1
 26 8 6 26d65+338 3d6+4
 0.0.0.0 23166
 8 8 1
@@ -422,8 +422,8 @@ soul here.  Lines of determination line her face, it is clear that she has no
 plans to give in to the torment of existing as a ghost, and in fact is doing
 her best to preserve the best of every moment she is still here.
 ~
-1073875020 128 0 203554832 0 0 0 0 S
-UG 0 512 -1
+1073875020 128 0 0 203554832 0 0 0 0 S
+UG 0 512 0 -1
 30 8 -7 30d44+330 3d6+4
 0.0.0.0 26730
 8 8 2
@@ -437,8 +437,8 @@ and madness.  He cowers here, trying to hide within his own transparent self,
 mumbling something about 'the pool'.  His eyes dart around, searching for
 something and he seems to tremble in fear.
 ~
-1073875020 128 0 201457680 0 0 0 0 S
-UG 0 1 -1
+1073875020 128 0 0 201457680 0 0 0 0 S
+UG 0 1 0 -1
 28 8 0 28d65+364 3d6+4
 0.0.0.0 24948
 8 8 1
@@ -453,8 +453,8 @@ lordship.'  His kind eyes are tempered by a sense of worry, and an urgency that
 makes him shake with urgency.  Dirt hangs from his hands, even as a spirit
 he has tried to tame the garden, but has clearly had no success.
 ~
-1073875020 128 0 203554832 0 0 0 0 S
-UG 0 1 -1
+1073875020 128 0 0 203554832 0 0 0 0 S
+UG 0 1 0 -1
 32 6 -12 32d83+544 4d6+7
 0.0.0.0 41472
 8 8 1
@@ -469,8 +469,8 @@ even seem to hold her form very well.  Attacking everything in sight, she
 struggles to break free of this inhumane torture, but whatever curse holds her
 soul in check must be deeper and more complex then that.
 ~
-1073875020 1 0 201326608 0 0 0 -500 S
-UG 0 1 -1
+1073875020 1 0 0 201326608 0 0 0 -500 S
+UG 0 1 0 -1
 20 13 25 20d35+140 3d4+2
 0.0.0.0 9720
 8 8 2
@@ -485,8 +485,8 @@ likely an honored guest to the mansion.  Her terrible death has caused her to
 suffer the same curse as the Krimeneha family and servants, and her trapped
 soul has gone mad.
 ~
-1073875020 1 0 203554816 0 0 0 -500 S
-UG 0 512 -1
+1073875020 1 0 0 203554816 0 0 0 -500 S
+UG 0 512 0 -1
 24 11 13 24d32+192 3d5+3
 0.0.0.0 21384
 8 8 2
@@ -500,8 +500,8 @@ mansion, but the tormented soul has become so twisted and tortured that it
 is difficult to say for certain.  It is clear from the way he simply slams into
 the walls and doors that all sanity has completely departed him.
 ~
-1073875020 1 0 203554816 0 0 0 -500 S
-UG 0 256 -1
+1073875020 1 0 0 203554816 0 0 0 -500 S
+UG 0 256 0 -1
 20 13 25 20d33+120 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -515,8 +515,8 @@ into madness.  His eyes spin in their transparent sockets as he attacks
 everything in sight.  Such madness is painful to watch, and even more painful
 to have to endure, his misery screams for release.
 ~
-1073875020 1 0 203554944 0 0 0 -500 S
-UG 0 32 -1
+1073875020 1 0 0 203554944 0 0 0 -500 S
+UG 0 32 0 -1
 25 11 9 25d44+225 3d5+3
 0.0.0.0 22275
 8 8 1
@@ -531,8 +531,8 @@ and the dark brown of his feathers helps him fade into the darkness.  Despite
 his small size, it is clear that this kenku has explored a great deal in his
 time and isn't to be trifled with.
 ~
-1073875020 0 0 171573264 0 0 0 0 S
-H 0 16384 -1
+1073875020 0 0 0 171573264 0 0 0 0 S
+H 0 16384 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -546,8 +546,8 @@ golem quite beaten up.  Chips out of its face and body give it a gruesome and
 threatening appearance.  Fortunately, the magic that animates it has begun to
 fade a bit so it isn't able to move as fast as it did in the past.
 ~
-1073875018 1 0 673317048 12480 0 0 0 S
-OG 0 1 -1
+1073875018 1 0 0 673317048 12480 0 0 0 S
+OG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 0

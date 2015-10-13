@@ -8,8 +8,8 @@ myconid~
 &+mwere a distant relative of his. He wears very little, but carries
 &+ma small pouch of herbs.
 ~
-10312 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+10312 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -26,8 +26,8 @@ him on his journies.  Roaming the mushroom forest, this creature is rather
 peaceful, yet is rumored to have the temper and fury of the greatest of
 all the ogres and trolls put together.
 ~
-1073752136 0 0 88 0 0 0 -1000 S
-PT 0 1 -1
+1073752136 0 0 0 88 0 0 0 -1000 S
+PT 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -40,8 +40,8 @@ ball spore~
 &+Rrumored that such a spore ball is quite a delight on the drow dinner
 &+Rtable, and that they even grow these things, but it's just a rumor.&n
 ~
-1073883208 0 0 0 0 0 0 -1000 S
-A 0 1 -1
+1073883208 0 0 0 0 0 0 0 -1000 S
+A 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -56,8 +56,8 @@ serve to the great leader of Valinhaven.  However, this svirfneblin
 appears to be looking to be a permanent resident of the mushroom forest,
 as he seems to keep rambling on about some demon in the mines..
 ~
-10312 0 0 0 0 0 0 1000 S
-H 0 1 -1
+10312 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -71,8 +71,8 @@ Shady Grove.  He has unfortunately lost his way among the mushrooms and
 is searching for a way out.  Unfortunately, he seems to have been here
 a rather long time, as his armor has gotten soiled with mushroom stains.
 ~
-10312 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+10312 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -86,8 +86,8 @@ floating brain with tentacles instead of arms, feathers, and a large
 squaking beak.  It appears to be quite upset that it has lost its hive,
 and roams about the mushroom forest endlessly.
 ~
-1073756236 0 0 134217880 2 0 0 -1000 S
-TK 0 1 -1
+1073756236 0 0 0 134217880 2 0 0 -1000 S
+TK 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -100,8 +100,8 @@ rothe~
 that count, except for its whitish fur, and dulled eyesight.  This rothe
 grazes upon the mushrooms of the great mushroom forest.
 ~
-10312 0 0 0 0 0 0 0 S
-A 0 1 -1
+10312 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -114,8 +114,8 @@ spider~
 of the great mushroom forest.  It has a small amount of black fur
 upon its back, and seems to keep itself well fed in this place.
 ~
-10312 0 0 0 0 0 0 0 S
-I 0 0 -1
+10312 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -137,8 +137,8 @@ drow warrior~
 &+Lbring them under his control.  He preforms many daily sacrafices to
 &+LLolth at his shrine, and spends his days perfecting his new found art.
 ~
-1073887242 1 0 805306522 309443 0 0 -1000 S
-PL 0 1 -1
+1073887242 1 0 0 805306522 309443 0 0 -1000 S
+PL 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -153,8 +153,8 @@ dragon undead~
 &+La magical diamond, similiar to the ones that necromancers sometimes
 &+Luse to turn themselves into powerful liches.
 ~
-14346 1 0 536871050 145603 0 0 -1000 S
-D 0 32 -1
+14346 1 0 0 536871050 145603 0 0 -1000 S
+D 0 32 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -170,8 +170,8 @@ bugbear~
 &+csome patches where his clothes have torn.  He has a doggish face,
 &+cand scruffy looking hair.
 ~
-10312 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+10312 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -184,8 +184,8 @@ fungus~
 &+Mon the invaders of its home.  It has large excreting glands used
 &+Mto paralyze its prey while it slowly eats them.
 ~
-10312 1 0 0 0 0 0 -1000 S
-AC 0 1 -1
+10312 1 0 0 0 0 0 0 -1000 S
+AC 0 1 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -201,8 +201,8 @@ creature mushroom~
 &+Mmouth or any other form of communication, all it does is block the
 &+Mpath, and won't listen to any reason.
 ~
-14410 0 0 805306552 14529 0 0 -1000 S
-G 0 512 -1
+14410 0 0 0 805306552 14529 0 0 -1000 S
+G 0 512 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -216,8 +216,8 @@ duergar mercenary~
 &+La vast forest, he feels relatively safe here, and even safer after
 &+Lthat huge mushroom creature blocks the path to the unwelcome visitors.
 ~
-1073752140 0 0 0 0 0 0 -1000 S
-PD 0 16384 -1
+1073752140 0 0 0 0 0 0 0 -1000 S
+PD 0 16384 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

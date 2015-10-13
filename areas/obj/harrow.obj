@@ -3,7 +3,7 @@ sack~
 &+yleather &+Ga&+gl&+Gchemist s&+ga&+Gck&n~
 A &+ydurable&n &+ga&+Gl&+gc&+Gh&+ge&+Gm&+gi&+Gs&+gt&n &+ysack&n lies here.~
 ~
-15 15 3 0 11 0 0 12582913 0 0 0
+15 15 3 0 11 0 0 12582913 32768 0 0
 200 1 0 200 0 0 0 0
 0 3200 100
 A
@@ -31,7 +31,7 @@ faerie dust~
 &+Wf&na&+We&nr&+Wi&ne &+ydust&n~
 Some &+Wf&na&+We&nr&+Wi&ne &+ydust&n lies here.~
 ~
-12 1 2 1 7 0 0 16385 0 0 0
+12 1 2 1 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -67,7 +67,7 @@ ring special sapphire~
 a &+Bsap&+bph&+Bire&n &+Br&ni&+Bng&n~
 A special &+Bsap&+bph&+Bire r&ni&+Bng&n lies here.~
 ~
-8 33 3 0 11 0 4104 3 0 0 0
+8 33 3 0 11 0 4104 3 32768 0 0
 0 0 0 0 0 0 0 0
 2 2343 100
 E
@@ -84,7 +84,7 @@ red heart token~
 a &+rtoken&n~
 A &+rtoken&n in the shape of a &+Rh&+rear&+Rt&n lies here.~
 ~
-8 9 3 0 7 0 262472 2113537 0 1 0
+8 9 3 0 7 0 262472 2113537 32768 1 0
 0 0 0 0 0 0 0 0
 3 5767 100
 E
@@ -96,7 +96,7 @@ horn stylish~
 a &+csty&+Clish&n &+Yh&+Wo&+Yrn&n~
 A &+csty&+Clish&n &+Yh&+Wo&+Yrn&n lies here.~
 ~
-32 15 3 0 7 0 0 16385 0 0 0
+32 15 3 0 7 0 0 16385 32768 0 0
 189 16 0 0 0 0 0 0
 4 3455 100
 E
@@ -138,7 +138,7 @@ web spider silk~
 &+Lspider&n &+Ws&+Ci&+Wl&+Ck&n~
 a small piece of &+Lspider&n &+Ws&+Ci&+Wl&+Ck&n lies here.~
 ~
-9 3 3 0 7 0 4096 17 0 0 0
+9 3 3 0 7 0 4096 17 32768 0 0
 -10 0 0 300 0 0 0 0
 0 2300 100
 E
@@ -179,7 +179,7 @@ scrap cloth~
 &N&+ya scrap&N of &+Wcloth&N~
 A small &+ypiece&n of &+Wcloth&n lies here.~
 ~
-12 3 2 1 7 0 0 1 0 1 0
+12 3 2 1 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -192,7 +192,7 @@ scrap glass jagged~
 a &+cscrap&n of &+Cglass&n~
 a &+cjagged&n piece of &+Cglass&n lies here.~
 ~
-8 7 2 1 7 0 4096 1 0 1 0
+8 7 2 1 7 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -205,7 +205,7 @@ robe satin simple~
 a &+Msimple&n &+crobe&n~
 A &+msimple&n &+crobe&n made of a bluish satin.&n~
 ~
-9 3 2 1 7 0 0 1025 0 0 0
+9 3 2 1 7 0 0 1025 32768 0 0
 9 0 0 0 0 0 0 0
 1 100 100
 E
@@ -267,7 +267,7 @@ pretty doll~
 a &+mpretty&n &+bdoll&n~
 A simple &+mdoll&n with a pretty &+Bblue&n dress~
 ~
-8 3 3 0 7 0 4352 4210689 0 0 0
+8 3 3 0 7 0 4352 4210689 32768 0 0
 0 0 0 0 0 0 0 0
 3 3999 100
 E
@@ -523,7 +523,7 @@ painting picture art~
 &+ba near finished&n &+Rpainting&n~
 A &+Bpainting&n near completion.~
 ~
-8 29 3 0 5 0 0 16385 0 0 0
+8 29 3 0 5 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 5023 100
 E
@@ -568,7 +568,7 @@ gold pot~
 a &+Lpot&n of &+Ygold&n~
 A small &+Lpot&n of &+Ygold&n sits here.~
 ~
-8 15 3 0 5 0 8193 16385 0 0 0
+8 15 3 0 5 0 8193 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #29445
@@ -736,7 +736,7 @@ fish food~
 &+gfish food&n~
 Some small particles of &+gfish food&n lie here.~
 ~
-19 48 3 0 5 0 8192 16385 0 0 0
+19 48 3 0 5 0 8192 16385 32768 0 0
 2 0 0 0 0 0 0 0
 0 0 100
 #29461

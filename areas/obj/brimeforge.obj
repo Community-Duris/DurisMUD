@@ -11,7 +11,7 @@ locket strange first~
 &+Lthe locket of the &+Mfirst&n~
 &+LA strange looking locket lies on the floor.&n~
 ~
-9 18 2 0 12 0 8388609 5 0 0 0
+9 18 2 0 12 0 8388609 5 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100 0 0 0 32
 #131003
@@ -19,7 +19,7 @@ locket strange second~
 &+Lthe locket of the &+Msecond&n~
 &+LA strange looking locket lies on the floor.&n~
 ~
-9 18 2 0 12 0 8388609 5 0 0 0
+9 18 2 0 12 0 8388609 5 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #131004
@@ -27,7 +27,7 @@ locket strange third~
 &+Lthe locket of the &+Mthird&n~
 &+LA strange looking locket lies on the floor.&n~
 ~
-9 18 2 0 12 0 8388609 5 0 0 0
+9 18 2 0 12 0 8388609 5 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #131005
@@ -183,7 +183,7 @@ powerful brimstone rune~
 &+La powerful &+rbrim&+Lstone rune&n~
 &+LA very powerful looking &+rbrim&+Lstone rune floats mysteriously here.&n~
 ~
-8 11 2 0 15 0 8388608 16385 0 0 0
+8 11 2 0 15 0 8388608 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #131020

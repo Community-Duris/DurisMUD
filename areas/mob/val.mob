@@ -7,8 +7,8 @@ A &+ydusty&+L guard &nstands proudly in uniform.
 &+ythe peace of the land, and only to admit those he deems worthy. No ordinary
 &+yscum can grace this castle with his presence, for this guard prevents it.
 ~
-2058 384 0 24 0 0 0 400 S
-PH 0 1 -1
+2058 384 0 0 24 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -22,8 +22,8 @@ lively drunkard~
 &+Wenough to make an occasional one crack.  He's not cracked yet, but if his luck
 &+Wdoesn't change for the better, he just might lose his sanity.
 ~
-2058 0 0 8 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -37,8 +37,8 @@ barkeep~
 &+gin this bar, for he has many servants under him now.  These servants, of
 &+gcourse, do all the work that he had to do to reach where he was now.
 ~
-2058 0 0 8 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -51,8 +51,8 @@ kitchen cook~
 &+Lthis cook is baking some bread.  This is but one of many duties given to the
 &+Lhim, however, in time he shall start another.
 ~
-2058 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -65,8 +65,8 @@ indentured servant~
 &+ywas his freedom.  He works off his debt in this tavern, taking orders from
 &+yhis barkeep and the cook.
 ~
-2058 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -79,8 +79,8 @@ servant~
 &+mwell, and this he does.  For such service he is given a place within his
 &+mmasters mansion to live.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -94,8 +94,8 @@ weaponsmaster master~
 &+Rhis day, he was a fearless warrior.  With such experience, he is the perfect
 &+Rperson to inspect and maintain the mansions tools of war.
 ~
-1073743882 0 0 268435576 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 268435576 0 0 0 0 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -109,8 +109,8 @@ horse~
 &+yhave been freshly attended to, therefore it can go long distances with no
 &+ytrouble.
 ~
-134219786 0 0 0 0 0 0 0 S
-AE 0 0 -1
+134219786 0 0 0 0 0 0 0 0 S
+AE 0 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -123,8 +123,8 @@ licub~
 &+yattached to these animals, and would rather die than see any harm come to them.
 &+yHe has a strong build, and looks like he's seen a few fights himself.
 ~
-67110922 0 0 0 0 0 0 500 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -137,8 +137,8 @@ servant~
 &+bkeeps his mind off of his troublesome life. Working in this gigantic mansion
 &+bis the best antidote for a depression.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -151,8 +151,8 @@ garbleyarble garble yarble tinkerer~
 &+Rinvent to make life just that much easier for those around him. He hopes to
 &+Ramount a reputation within the castle, as well as a small fortune.
 ~
-2058 0 0 24 0 0 0 500 S
-PG 0 512 -1
+2058 0 0 0 24 0 0 0 500 S
+PG 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -165,8 +165,8 @@ bren~
 &+Ba piece of junk, or a valuable piece of equipment. Of course, he uses his
 &+Bdeceptive nature to fool would be pawners into making a profit.
 ~
-67110922 0 0 0 0 0 0 500 S
-PM 0 1 -1
+67110922 0 0 0 0 0 0 0 500 S
+PM 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -180,8 +180,8 @@ servant~
 &+gmaster given him a place to live and food to eat, but he has given him work
 &+gand money and the self-esteem that comes with it.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -196,8 +196,8 @@ an &+Larmed guard&n~
 &+Lover most people who enter the gates. He is a muscular man with and wears his
 &+Lbreasplate proudly. He has a strong commanding voice that is understood well.
 ~
-67110922 384 0 73752 0 0 0 400 S
-PH 0 1 -1
+67110922 384 0 0 73752 0 0 0 400 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -210,8 +210,8 @@ onyx griffon~
 &+Lseems to hum with a magical aura. Its wings are outstretched and its front
 &+Lpaws are reaching toward the sky as if it is ready to take off.
 ~
-67110922 0 0 8 0 0 0 400 S
-G 0 1 -1
+67110922 0 0 0 8 0 0 0 400 S
+G 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -226,8 +226,8 @@ soldier elite~
 &+Lwarrior many battle scars. They are apparent on his person. His breastplate
 &+Lbears the insignia of the royal king of Valois.
 ~
-2058 1 0 8 0 0 0 400 S
-PH 0 1 -1
+2058 1 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -241,8 +241,8 @@ weapon weaponsmith smith~
 &+bit cheaper to hirer his own hands to make weapons instead of buying arms from
 &+ba local realitor.
 ~
-2058 0 0 0 0 0 0 500 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -255,8 +255,8 @@ blacksmith black smith~
 &+Lthe better part of his years learning from the masters of that day.  Now that
 &+Lhe is a grown man, he is a master himself.
 ~
-2058 0 0 8 0 0 0 500 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 500 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -269,8 +269,8 @@ armorsmith armor smith~
 &+yblacksmith in the forge, together they make some of the better armor available
 &+yin the region.
 ~
-2058 0 0 8 0 0 0 500 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 500 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -283,8 +283,8 @@ lord oakencrest oaken crest~
 &+Wnearly all white hair. The curse of a great fortune forces one to worry, to
 &+Wgive one stress, and ultimately turn one's hair white.
 ~
-2056 0 0 24 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 24 0 0 0 400 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -297,8 +297,8 @@ du kel lord~
 &+Wspread far and wide. Not only does this man have a great estate, but it is
 &+Wrumored that he is raising an army also.
 ~
-2056 0 0 24 0 0 0 0 S
-PH 0 1 -1
+2056 0 0 0 24 0 0 0 0 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -312,8 +312,8 @@ lord berani~
 &+Wstudies his mansion carefully, perhaps trying to come to some sort of
 &+Wconclusion, perhaps an appraisal conclusion.
 ~
-8 0 0 24 0 0 0 400 S
-PH 0 1 -1
+8 0 0 0 24 0 0 0 400 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -328,8 +328,8 @@ king ulgris~
 &+bthe lessons of life and how to stay alive. His face appears strained, as if
 &+bhe was considering something rather heavily until interrupted.
 ~
-2058 0 0 24 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 24 0 0 0 0 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -343,8 +343,8 @@ elven diplomat~
 &+Gof food, this elf has an important obligation to ensure that his nation does
 &+Gnot go broke in its attempts in feeding itself.
 ~
-1073743944 0 0 24 0 0 0 0 S
-PE 0 128 -1
+1073743944 0 0 0 24 0 0 0 0 S
+PE 0 128 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -358,8 +358,8 @@ a &+Rgnome &+remissary~
 &+rfor him. He's a little fellow at that, and it's a small wonder how he managed
 &+rto be given the chance to seek an audience with his majesty.
 ~
-1073744072 0 0 805904536 0 0 0 300 S
-PG 0 512 -1
+1073744072 0 0 0 805904536 0 0 0 300 S
+PG 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -374,8 +374,8 @@ a &+Bbarbarian &+btribesman~
 &+bcare injured. It is his hope to convince the king in aiding his comrades, to
 &+bgive them proper medical care.
 ~
-1073743880 0 0 24 0 0 0 400 S
-PB 0 1 -1
+1073743880 0 0 0 24 0 0 0 400 S
+PB 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -389,8 +389,8 @@ dwarf hearty mountain~
 &+Yyounger generation. However, something seems to be bothering this dwarf, for
 &+Yhis face is agitated and his grumbles something about weapons and armor.
 ~
-1073743944 0 0 24 0 0 0 500 S
-PM 0 1 -1
+1073743944 0 0 0 24 0 0 0 500 S
+PM 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -403,8 +403,8 @@ stealthy figure assassin~
 &+Lwearily, as if not really looking at the brew at all, for his ears must be
 &+Lfocusing in on something else.  He listens silently, staring, waiting...
 ~
-8 0 0 24 0 0 0 -999 S
-PH 0 4096 -1
+8 0 0 0 24 0 0 0 -999 S
+PH 0 4096 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -418,8 +418,8 @@ prince karyn~
 &+btutors to help him on his way, and in fact, his talent is now flourishing.  He
 &+bspends most of his days painting family portraits and enjoys it immensely.
 ~
-1073743946 0 0 24 0 0 0 500 S
-PH 0 1 -1
+1073743946 0 0 0 24 0 0 0 500 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -434,8 +434,8 @@ princess dyneen~
 &+mto each other at all. Never the less, they are content with each other and
 &+mshow no sibling rivalry whatsoever.
 ~
-10 0 0 24 0 0 0 500 S
-PH 0 1 -1
+10 0 0 0 24 0 0 0 500 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -448,8 +448,8 @@ fluffy rabbit~
 &+Wcome to them, and they seem to enjoy the serenity of this place. Their little
 &+Wears can pick up movement from afar and are rarely caught off guard.
 ~
-8 0 0 0 0 0 0 999 S
-A 0 0 1
+8 0 0 0 0 0 0 0 999 S
+A 0 0 0 1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -462,8 +462,8 @@ squirrel little~
 &+Yteeth are the most dangerous part of this animal, for he can inflict great
 &+Ypain on anyone if he feels threatened.
 ~
-10 0 0 0 0 0 0 999 S
-A 0 0 1
+10 0 0 0 0 0 0 0 999 S
+A 0 0 0 1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -476,8 +476,8 @@ servant~
 &+rwell, and this he does. For such service he is given a place within his
 &+rmasters castle to live.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -490,8 +490,8 @@ servant~
 &+Mwell, and this he does. For such service he is given a place within his
 &+Mmasters castle to live.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -504,8 +504,8 @@ cook~
 &+Waround his person, with a top hat to match on his head.  This cook works around
 &+Wthe clock to prepare bread for the soldiers and royalty alike.
 ~
-2058 0 0 24 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 24 0 0 0 400 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -519,8 +519,8 @@ throne guard~
 &+LNo ordinary scum can grace this castle with his presence, for this guard
 &+Lprevents it.  His battle scars are numerous on his left arm.
 ~
-2058 1 0 8 0 0 0 400 S
-PH 0 1 -1
+2058 1 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -534,8 +534,8 @@ patrolling pikeman guard~
 &+LNo ordinary scum can grace this castle with his presence, for this guard
 &+Lprevents it. His battle scars are numerous on his left arm.
 ~
-1140852808 1 0 8 0 0 0 400 S
-PH 0 1 -1
+1140852808 1 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -549,8 +549,8 @@ elite guard~
 &+LNo ordinary scum can grace this castle with his presence, for this guard
 &+Lprevents it. His battle scars are numerous on his left arm.
 ~
-2058 1 0 8 0 0 0 400 S
-PH 0 1 -1
+2058 1 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -563,8 +563,8 @@ queen napolia~
 &+Madvantages and disadvantages, one gains wisdom and virtue but loses youth
 &+Mand innoscence.
 ~
-2058 0 0 24 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 24 0 0 0 400 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -578,8 +578,8 @@ vineyard keeper~
 &+Msatisfied. His duties include keeping accurate accounts of sells and purchases
 &+Mand handling the shipments that usually follow either transaction.
 ~
-2056 0 0 24 0 0 0 500 S
-PH 0 1 -1
+2056 0 0 0 24 0 0 0 500 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -593,8 +593,8 @@ servant~
 &+Gmaster given him a place to live and food to eat, but he has given him work
 &+Gand money and the self-esteem that comes with it.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -607,8 +607,8 @@ servant~
 &+Rwell, and this he does. For such service he is given a place within his
 &+Rmasters castle to live.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -621,8 +621,8 @@ old monk~
 &+Ythat gives off a powerful aura of sereneness and sincerity. His bald head
 &+Ycontributes to the fervor of peace in this man.
 ~
-2058 0 0 822157320 0 32768 0 500 S
-PH 0 64 -1
+2058 0 0 0 822157320 0 32768 0 500 S
+PH 0 64 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -636,8 +636,8 @@ cook~
 &+Gmaster given him a place to live and food to eat, but he has given him work
 &+Gand money and the self-esteem that comes with it.
 ~
-2058 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -651,8 +651,8 @@ chamberlain man~
 &+cof daily arrivals of prestigeous visitors, namely politicians and citizens who
 &+chave alot of money.
 ~
-1140852746 0 0 8 0 0 0 400 S
-PH 0 512 -1
+1140852746 0 0 0 8 0 0 0 400 S
+PH 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -666,8 +666,8 @@ elite guard~
 &+LNo ordinary scum can grace this castle with his presence, for this guard
 &+Lprevents it. His battle scars are numerous on his left arm.
 ~
-67110922 0 0 8 0 0 0 400 S
-PH 0 1 -1
+67110922 0 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -681,8 +681,8 @@ guard ambassador~
 &+LNo ordinary scum can grace this castle with his presence, for this guard
 &+Lprevents it. His battle scars are numerous on his left arm.
 ~
-2058 1 0 8 0 0 0 400 S
-PH 0 1 -1
+2058 1 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -696,8 +696,8 @@ sleeping guest~
 &+Lyou will never pass on your way to the top, simply because he has ties nearly
 &+Leverywhere, some higher than the king himself.
 ~
-2058 0 0 0 0 0 0 400 S
-PH 0 1 3
+2058 0 0 0 0 0 0 0 400 S
+PH 0 1 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -711,8 +711,8 @@ architect~
 &+Laway from society.  It is his duty to pick an ideal spot away from these
 &+Lestates to build another mansion for his lord.
 ~
-2058 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -725,8 +725,8 @@ madam oakencrest~
 &+MIf she ran away, the old lord would never have the strength to go much further
 &+Min life, for she is the wife he's always dreamed.
 ~
-2058 0 0 8 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -739,8 +739,8 @@ cook~
 &+Wwell, and this he does. For such service he is given a place within his
 &+Wmasters mansion to live.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -754,8 +754,8 @@ dining guest~
 &+Whas been placed upon the table by servants. Every lunch hour is like a private
 &+Wfestival in this mansion.
 ~
-2058 0 0 0 0 0 0 500 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -769,8 +769,8 @@ sleeping guest~
 &+Wyou will never pass on your way to the top, simply because he has ties nearly
 &+Weverywhere, some higher than the king himself.
 ~
-2058 0 0 0 0 0 0 400 S
-PH 0 1 3
+2058 0 0 0 0 0 0 0 400 S
+PH 0 1 0 3
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -784,8 +784,8 @@ stout guest~
 &+Wmight look normal despite his weight, because he is merely a little over five
 &+Wfeet tall.
 ~
-2058 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -799,8 +799,8 @@ dining guest~
 &+Yhas been placed upon the table by servants. Every lunch hour is like a private
 &+Yfestival in this mansion.
 ~
-2058 0 0 0 0 0 0 500 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -813,8 +813,8 @@ dance instructor~
 &+bart.  He twirls gracefully with much confidence.  If there were ever a better
 &+bdancer, it would be he who actually invented the dance.
 ~
-10 0 0 24 0 0 0 400 S
-PH 0 1 -1
+10 0 0 0 24 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -828,8 +828,8 @@ sleeping guest~
 &+Wyou will never pass on your way to the top, simply because he has ties nearly
 &+Weverywhere, some higher than the king himself.
 ~
-2058 0 0 24 0 0 0 400 S
-PH 0 1 3
+2058 0 0 0 24 0 0 0 400 S
+PH 0 1 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -843,8 +843,8 @@ assistant turn turnuckle~
 &+mhe is also reliable. Those are the reasons he has been chosen to handle the
 &+mdelegates and their respected party.
 ~
-1073743882 0 0 8 0 0 0 400 S
-PH 0 512 -1
+1073743882 0 0 0 8 0 0 0 400 S
+PH 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -857,8 +857,8 @@ porter~
 &+Gserving a master as charitable as the one he is serving now.  When it comes
 &+Gdown to it, without this job he'd still be a mere peasant among the masses.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -871,8 +871,8 @@ porter~
 &+Rserving a master as charitable as the one he is serving now.  When it comes
 &+Rdown to it, without this job he'd still be a mere peasant among the masses.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -885,8 +885,8 @@ porter~
 &+Wserving a master as charitable as the one he is serving now.  When it comes
 &+Wdown to it, without this job he'd still be a mere peasant among the masses.
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -900,8 +900,8 @@ patrolling pikeman guard~
 &+LNo ordinary scum can grace this castle with his presence, for this guard
 &+Lprevents it. His battle scars are numerous on his left arm.
 ~
-1140852808 1 0 8 0 0 0 400 S
-PH 0 1 -1
+1140852808 1 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -915,8 +915,8 @@ powerful guard~
 &+LNo ordinary scum can grace this castle with his presence, for this guard
 &+Lprevents it. His battle scars are numerous on his left arm.
 ~
-2058 1 0 8 0 0 0 400 S
-PH 0 1 -1
+2058 1 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -930,8 +930,8 @@ an &+gelven &+rambassador~
 &+gI don't get my note soon I just don't know what I'll do with him" he thinks
 &+gto himself softly.
 ~
-2058 0 0 24 0 0 0 400 S
-PE 0 2 -1
+2058 0 0 0 24 0 0 0 400 S
+PE 0 2 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -945,8 +945,8 @@ a &+yhalfling &+rambassador~
 &+yof such great doctrines are sure to be the most experienced selected from
 &+ya pool of people of no more than a few.
 ~
-2058 0 0 24 0 0 0 400 S
-PF 0 512 -1
+2058 0 0 0 24 0 0 0 400 S
+PF 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -960,8 +960,8 @@ a &+Rgnome&+r ambassador~
 &+rof such great doctrines are sure to be the most experienced selected from
 &+ra pool of people of no more than a few.
 ~
-2058 0 0 24 0 0 0 400 S
-PF 0 512 -1
+2058 0 0 0 24 0 0 0 400 S
+PF 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -975,8 +975,8 @@ a &+Bbarbarian &+rambassador~
 &+Bof such great doctrines are sure to be the most experienced selected from
 &+Ba pool of people of no more than a few.
 ~
-2058 0 0 24 0 0 0 400 S
-PB 0 256 -1
+2058 0 0 0 24 0 0 0 400 S
+PB 0 256 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -989,8 +989,8 @@ apprentice~
 &+Whim with obvious intent on reading them all.  In his delicate position with his
 &+Wlordship, he can't afford to make mistakes.
 ~
-2058 0 0 0 0 0 0 500 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1004,8 +1004,8 @@ warrior highly trained~
 &+Lare numerous about his person, it's obvious that he's participated in a quite
 &+Lmany battles.
 ~
-2058 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1018,8 +1018,8 @@ A &+gservant &nrests comfortably.
 &+gwell, and this he does. For such service he is given a place within his
 &+gmasters castle to live.
 ~
-2058 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1033,8 +1033,8 @@ guard~
 &+LNo ordinary scum can grace this castle with his presence, for this guard
 &+Lprevents it. His battle scars are numerous on his left arm.
 ~
-2058 1 0 8 0 0 0 400 S
-PH 0 1 -1
+2058 1 0 0 8 0 0 0 400 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1047,8 +1047,8 @@ A &+ywandering&+m bard &nwalks toward the castle.
 &+yinstrument sack strapped around his back and hopes to sing to the king
 &+ysomeday.
 ~
-2056 0 0 0 8192 0 0 0 S
-PH 0 32768 -1
+2056 0 0 0 0 8192 0 0 0 S
+PH 0 32768 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1061,8 +1061,8 @@ A &+Mtall &+mmerchant&n smiles broadly.
 &+mking's retainers and seems very pleased with the outcome. By his articles and
 &+mclothing he is a rich man. His ledger book is thick.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1075,8 +1075,8 @@ A &+Wc&+wh&+Wam&+wp&+Wi&+wo&+Wn &nseems very pleased with himself.
 &+Wdefeat any number of foes that plague the land. His greatest opponent was the
 &+Wgreat green dragon &+GSuthxx&n.
 ~
-2056 0 0 0 0 0 0 999 S
-PH 0 8 -1
+2056 0 0 0 0 0 0 0 999 S
+PH 0 8 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1089,8 +1089,8 @@ A &+Gloyal&+g retainer&n of the king walks briskly.
 &+gseveral campaigns for the king and his nobles and has been rewarded with
 &+gnumerous metals.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1103,8 +1103,8 @@ A &+rloyal swordsman&n stands at the gate.
 &+ryoungster in training with the great lord. He was selected to protect his
 &+rmansion because of his undoubted loyalty to lord Du'Kel.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 0 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1117,8 +1117,8 @@ A &+cpowerful&+B barbarian &+Cshaman&n protects the castle gates.
 &+Bhuman guards and is brawnier as well. He draws his power from the spirit and
 &+Banimal world to strengthen the armies of the king.
 ~
-1140852746 384 0 0 0 0 0 0 S
-PH 0 256 -1
+1140852746 384 0 0 0 0 0 0 0 S
+PH 0 256 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1131,8 +1131,8 @@ yuppi wizard~
 &+Lside when he senses danger nearby. His keen intellect and foresight have
 &+Lsaved the king countless times and he relies upon his judgment in all things.
 ~
-67110922 0 0 0 0 0 0 999 S
-PH 0 512 -1
+67110922 0 0 0 0 0 0 0 999 S
+PH 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1145,8 +1145,8 @@ hired hand~
 &+ya great deal of muscle and calluses. His long blond hair flows freely around
 &+yhis big shoulders.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1159,8 +1159,8 @@ hugo cleric~
 &+yking loyaly for years and has been well rewarded with estate and power. He
 &+ypractices his art with fervor and renown for his healing skills.
 ~
-67110922 0 0 24 0 0 0 999 S
-PH 0 32 -1
+67110922 0 0 0 24 0 0 0 999 S
+PH 0 32 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1173,8 +1173,8 @@ A &+Yhighlord&n looks briefly at some merchandise.
 &+Yprovince but a stranger to this one. The jewels around his neck and the gold
 &+Yon his wrists must be very expensive.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1187,8 +1187,8 @@ mercenary~
 &+yhas a dagger strapped to his side and a long sword on his back. By the look
 &+yon his face he is eager to be done with something.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1201,8 +1201,8 @@ nanz blacksmith dwarvern~
 &+Ythe lengths of the world to inspect the finer qualities of other craftsman.
 &+YHe hopes to pick up a few things on this trip.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 0 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1215,8 +1215,8 @@ former soldier~
 &+Llieutenants at one time. He is familiar with the great lord when they were
 &+Lboth younger.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1229,8 +1229,8 @@ noble lord~
 &+gOakencrest and plans to leave the countryside for a time. He likes art,
 &+gliterature, music, and war.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 32 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 32 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1243,8 +1243,8 @@ maiden hand handmaiden~
 &+Ceveryday life for many years and is well trusted. She is middle-aged with
 &+Ca wonderful smile and excellent taste.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1257,8 +1257,8 @@ stokely bartender~
 &+Lthat are sure to come with tending a bar. He has a beard that should be
 &+Lshaven and he needs a bath.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1270,8 +1270,8 @@ A &+gpatron&n of the bar drinks some brew.
 &+gThis patron frequents this bar. He is about the only one to do so and he
 &+gdoes so often to drown away the sickness in his life. He stinks.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1285,8 +1285,8 @@ An &+gelven ranger&n stands watch at the gates.
 &+ga disaster if something were to happen while the elven emissary was at court
 &+gwith the king.
 ~
-1140852746 384 0 24 0 0 0 0 S
-PE 0 2 -1
+1140852746 384 0 0 24 0 0 0 0 S
+PE 0 2 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1300,8 +1300,8 @@ A &+Ydwarven &+Bwarrior&n grumbles something about a foul smell.
 &+Ythe castle gates at all costs. The noble dwarves visiting the castle rest
 &+Ybetter knowing one of their kind is protecting them.
 ~
-1140852746 384 0 0 0 0 0 0 S
-PM 0 1 -1
+1140852746 384 0 0 0 0 0 0 0 S
+PM 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1314,8 +1314,8 @@ A &+gnomad&n gently strokes his horse.
 &+gplaces his saddle on her. He will ride her all day. He will ride her all
 &+gnight if he gets the chance. He will even dream of riding her.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1330,8 +1330,8 @@ maxwell sorcerer~
 &+Msearching. His long blond hair flows over his golden white robes that fit
 &+Mloosely over his body.
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 512 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1346,8 +1346,8 @@ handerly~
 &+ykingdom of Valois and are proud to be one of its people. His old bald head
 &+ysweats profusely.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -280,7 +280,7 @@ silver horse shoe~
 &+Ca silver horse shoe&N~
 &+CA silver horse shoe&N has been accidentally left here.~
 ~
-8 22 3 0 10 0 4096 16385 0 0 0
+8 22 3 0 10 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 55000 100
 E
@@ -381,7 +381,7 @@ gold chalice~
 &+Ya gold chalice&N~
 &+YA perfectly-crafted gold chalice has been left here.~
 ~
-8 24 3 0 14 0 0 16385 0 0 0
+8 24 3 0 14 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 855000 100
 E
@@ -425,7 +425,7 @@ bloody holy symbol brooch~
 &+Wa small &+rbloody&+W holy symbol brooch&N~
 &+WA small &+rbloody&+W holy symbol brooch has been dropped here.~
 ~
-9 27 3 0 11 0 4096 2113537 64 0 0
+9 27 3 0 11 0 4096 2113537 32832 0 0
 1 0 0 0 0 0 0 0
 0 15000 100
 E
@@ -441,7 +441,7 @@ note~
 &+Wa note from &+YKolyan Indirovich&N~
 &+WA note from &+YKolyan Indirovich has been dropped here.~
 ~
-8 28 3 0 7 0 4096 16385 0 0 0
+8 28 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -512,7 +512,7 @@ rare electrum coin~
 &+Ca rare engraved electrum coin&N~
 &+CA rare engraved electrum coin has been tossed here.~
 ~
-8 23 3 0 12 0 4096 16385 0 0 0
+8 23 3 0 12 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 10000 100
 E
@@ -528,7 +528,7 @@ diamond engagement ring~
 &+Wa diamond engagement ring&N~
 &+WA diamond engagement ring sparkles here, left behind.~
 ~
-9 27 3 0 12 0 4096 3 0 0 0
+9 27 3 0 12 0 4096 3 32768 0 0
 5 0 0 3 0 0 0 0
 0 352582 100
 E
@@ -680,7 +680,7 @@ heart blaspheme~
 &+Lthe &+rheart &+Lof &+rblaspheme&N~
 &+LThe heart of &+rblaspheme&+L has been left here.~
 ~
-8 2 3 0 7 0 8392705 16385 64 0 0
+8 2 3 0 7 0 8392705 16385 32832 0 0
 0 0 0 0 0 0 0 0
 5 10 100
 E
@@ -710,7 +710,7 @@ note plan ambush~
 &+Wa note and ambush plan&N~
 &+WA note has been left here.~
 ~
-8 28 3 0 7 0 4096 16385 0 0 0
+8 28 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 153 100
 E
@@ -788,7 +788,7 @@ golden wrench~
 &+Ya golden wrench&N~
 &+YA golden wrench has been left here.~
 ~
-8 24 3 0 11 0 4096 16385 0 0 0
+8 24 3 0 11 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 159233 100
 E
@@ -800,7 +800,7 @@ golden compass locket~
 &+Ya golden compass locket&N~
 &+YA golden compass locket rests here in the clutter.~
 ~
-8 24 3 0 10 0 4096 16385 0 0 0
+8 24 3 0 10 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 154382 100
 E
@@ -812,7 +812,7 @@ small delicate bell blue~
 &+Ba small delicate bell&N~
 &+BA small, delicate blue bell has been left here.~
 ~
-8 16 3 0 11 0 4096 16385 0 0 0
+8 16 3 0 11 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 15049 100
 E
@@ -825,7 +825,7 @@ thin adamantium hair pin~
 &+Ma thin adamantium hair pin&N~
 &+MA thin adamantium hair pin has been left here.~
 ~
-9 15 3 0 7 0 4097 2097153 0 0 0
+9 15 3 0 7 0 4097 2097153 32768 0 0
 1 0 0 0 0 0 0 0
 0 0 100
 E
@@ -839,7 +839,7 @@ silver spoon~
 &+Ca silver spoon&N~
 &+CA silver spoon has been left here, discarded and useless.~
 ~
-8 22 3 0 10 0 4096 16385 1 0 0
+8 22 3 0 10 0 4096 16385 32769 0 0
 0 0 0 0 0 0 0 0
 1 8454 100
 E

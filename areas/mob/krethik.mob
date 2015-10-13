@@ -5,8 +5,8 @@ bartender fat orc~
 ~
 &+gThis fat bartender stands here serving drinks. He is missing his left eye and   appears to walk with a slight limp. Large for orc standards he looks like he    could handle himself in a bar brawl.
 ~
-2122 0 0 33554432 0 0 0 -1000 S
-HO 0 0 -1
+2122 0 0 0 33554432 0 0 0 -1000 S
+HO 0 0 0 -1
 46 -3 -72 46d100+2438 6d6+25
 6.0.9.4 111780
 8 8 1
@@ -20,8 +20,8 @@ A &+Lmuscular &+Gorc &+Ltorturer &nstands here, looking for his next victim.&n
 &+LHis&+r crimson&+L eyes glow with hatred as he scans the room looking for his next
 &+Lvictim.
 ~
-67110986 1 0 33554436 2 0 0 -1000 S
-HO 0 1 -1
+67110986 1 0 0 33554436 2 0 0 -1000 S
+HO 0 1 0 -1
 50 -3 -72 46d119+2530 6d6+25
 6.0.9.4 111780
 8 8 1
@@ -36,8 +36,8 @@ orc dreg~
 &+Gmuscular build. Covered with small&+R burns&+G and &+Lscars&+G, Dreg's skin is a pale
 &+Ggreenish color, and his eyes are a bright&+Y yellow&+G.
 ~
-2122 0 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+2122 0 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 48 -3 -78 48d119+2640 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -51,8 +51,8 @@ He appears to be under five feet tall, below average for most orcs. His gut
 more then makes up for his lack of height, bulging far beyond his belt. He
 peers around, searching for some scrap of food.
 ~
-2122 0 0 256 2 0 0 -1000 S
-HO 0 0 -1
+2122 0 0 0 256 2 0 0 -1000 S
+HO 0 0 0 -1
 43 -1 -62 43d90+1849 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -71,8 +71,8 @@ combat skills. Emissaries from all of the dark races are constantly negotiating
 for his support in wars against their rivals. From his reputation and looks
 it can be safely assumed Tyrik is one of the most powerful orcs alive today.
 ~
-67110986 1 0 838967320 12480 0 0 -1000 S
-HO 0 1 -1
+67110986 1 0 0 838967320 12480 0 0 -1000 S
+HO 0 1 0 -1
 53 -5 -120 700d5+12000 9d6+40
 8.0.6.6 214650
 8 8 1
@@ -87,8 +87,8 @@ guard orc~
 &+genemy. Having to stand here twelve hours a day, his dark green skin has become
 &+gcracked and weathered. He stands completely still, always alert for attackers.
 ~
-67110986 1 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+67110986 1 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 46 -1 -62 43d107+1935 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -103,8 +103,8 @@ blig orc shaman~
 &+gwields. He has begone to train another shaman to take his place when he passes
 &+gon, into the&+W spirit&+g world.
 ~
-1140852810 1 0 33554440 0 0 0 -1000 S
-HO 0 256 -1
+1140852810 1 0 0 33554440 0 0 0 -1000 S
+HO 0 256 0 -1
 50 -3 -78 48d110+2592 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -119,8 +119,8 @@ A &+Wguardian spirit&N stands here, watching over his master.
 &+Whorns protrude from his forehead. Through his outer skin, a&+Y golden&+W heart is
 &+Wvisible, throbbing with unknown powers.
 ~
-1140852746 1 0 436207658 2 0 0 0 S
-X 0 32 -1
+1140852746 1 0 0 436207658 2 0 0 0 S
+X 0 32 0 -1
 48 -3 -93 48d80+2880 6d6+25
 8.1.7.6 174960
 8 8 0
@@ -134,8 +134,8 @@ stands well over nine feet tall and weighs about nine hundred pounds. His
 oily&+L black hair&N hangs down below his shoulders, giving off a nauseating
 &+gfishy&n smell.&+R Blood&N covers his &+Wclothing&N and fists.&n
 ~
-1073743946 1 0 855744536 2 0 0 -1000 S
-PO 0 1 -1
+1073743946 1 0 0 855744536 2 0 0 -1000 S
+PO 0 1 0 -1
 58 -3 -80 500d10+4000 7d7+55
 9.2.0.5 119070
 8 8 1
@@ -149,8 +149,8 @@ A &+rDuergar&n emissary sits here, pondering something.
 &+rduergar, as are his&+L coal black eyes&+r and&+L beard&+r. He appears to be
 &+ragitated as if he was trying to make an extremly hard decision.
 ~
-1073744074 72 0 856236058 2 0 0 -1000 S
-PD 0 8192 -1
+1073744074 72 0 0 856236058 2 0 0 -1000 S
+PD 0 8192 0 -1
 53 -3 -78 48d100+2544 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -165,8 +165,8 @@ trained for many years he has finaly earned the right to guard his master
 and he isn't about to allow anyone to harm him. &+YYellow&N eyes peer around
 the room looking for any sign of trouble.
 ~
-1140852810 1 0 33554448 0 0 0 -1000 S
-HO 0 1 -1
+1140852810 1 0 0 33554448 0 0 0 -1000 S
+HO 0 1 0 -1
 48 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -181,8 +181,8 @@ A &+mDrow&n emissary stands here, talking with Tyrik.
 &+mtall and weighing about one hundred pounds, he seems quite frail. &+mOnly a fool
 &+mwould under-estimate the power of a drow spellcaster tho.&N
 ~
-67110986 1 0 264 2 0 0 -1000 S
-PL 0 1 -1
+67110986 1 0 0 264 2 0 0 -1000 S
+PL 0 1 0 -1
 51 -3 -78 48d80+2544 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -197,8 +197,8 @@ A young &+Wsilver&N dragon lies here, planning an escape.
 &+Wto escape her prison. Etched into her breast is a small unicorn, the symbol
 &+Wof Mielikki, goddess of the&+g forests&+W.
 ~
-1208092712 128 0 33554488 4 0 0 1000 S
-D 0 2 -1
+1208092712 128 0 0 33554488 4 0 0 1000 S
+D 0 2 0 -1
 60 -5 -127 54d121+5076 7d6+30
 9.1.3.19 437400
 8 8 2
@@ -212,8 +212,8 @@ A&+L huge war dog&N stands here, growling ferociously.
 &+Lher massive size it is obvious she is much more dangerous then any of the other
 &+ywar dogs&+L held in this pen. She snarls, bearing her&+W bone white&+L fangs.
 ~
-1073744072 1 0 33554432 0 0 0 -250 S
-A 0 1 4
+1073744072 1 0 0 33554432 0 0 0 -250 S
+A 0 1 0 4
 55 -1 -65 44d107+1980 6d6+12
 0.0.0.0 106920
 8 8 2
@@ -229,8 +229,8 @@ A &+ylarge war dog&N stands here, looking for some meat.
 &+yhearing and smell makes this breed of canine great for tracking down escaped
 &+yprisoners and enemy spies.
 ~
-1140852938 1 0 33554440 0 0 0 -200 S
-A 0 0 -1
+1140852938 1 0 0 33554440 0 0 0 -200 S
+A 0 0 0 -1
 40 8 10 28d55+308 3d6+4
 0.0.0.0 24948
 8 8 1
@@ -244,8 +244,8 @@ A &+Rbloody&N &+gorc&N stands here, sparring with a friend.
 &+Gare swollen shut, and he is starting to gasp for breath. He appears to &+Gbe
 &+Gyoung, &+Gmaybe seventeen, and very inexperienced.
 ~
-1140852938 72 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+1140852938 72 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -260,8 +260,8 @@ once pale complexion is now covered with&+L dark&+B bruises&N. Her small nose ha
 been smashed to one side. Dried&+R blood&N covers most of her face and hands, it
 and it appears Tyrik has been a little rough with her.
 ~
-1073744074 0 0 33554432 0 0 0 600 S
-P2 0 0 -1
+1073744074 0 0 0 33554432 0 0 0 600 S
+P2 0 0 0 -1
 23 11 26 23d40+184 3d5+3
 5.1.6.0 20493
 6 6 2
@@ -277,8 +277,8 @@ A &+Chuman&N slave stands here, looking frustrated.
 &+Cto escape. It is rumored that an&+g orc&+C attempted to break her free a month ago.
 &+CHe hasn't been seen since.
 ~
-133323 0 0 0 0 0 0 0 S
-PH 0 0 -1
+133323 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 24 11 23 24d40+192 3d5+3
 6.1.6.0 21384
 8 8 2
@@ -294,8 +294,8 @@ gertella wife first~
 &+gspellcaster and that she may not even really be an orc, but Tyrik quickly ends
 &+gany such speculation.
 ~
-1107298378 1 0 33554432 0 0 0 -1000 S
-X 0 512 -1
+1107298378 1 0 0 33554432 0 0 0 -1000 S
+X 0 512 0 -1
 48 -3 -93 48d80+2880 6d6+25
 8.1.7.6 174960
 8 8 2
@@ -309,8 +309,8 @@ to convert&+g orcs&N to his chosen deity,&+L Dr&+ru&+Lll&N. His scrawny form giv
 of weakness, but the glint in his eyes betray the inner&+Y power&N he possesses.
 Within&+L Krethik Keep&N this&+g orc&N holds great influence, second only to Tyrik.
 ~
-1140852810 32 0 33554440 0 0 0 -1000 S
-HO 0 33 -1
+1140852810 32 0 0 33554440 0 0 0 -1000 S
+HO 0 33 0 -1
 51 -3 -78 48d110+2592 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -325,8 +325,8 @@ An &+gorc&N stands here &+Yurinating&N on the wall.
 &+ghis superiors caught him he would be the next one sacrificed on the altar for
 &+LDr&+ru&+Lll&+g, &+gorcish god of war.
 ~
-67110986 0 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+67110986 0 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -341,8 +341,8 @@ An &+Lorc&N sits here, chained to the wall.
 &+Lbeing tortured. Soon it will be his turn, but still, a &+rpassion&+L can be seen
 &+Lin his eyes.
 ~
-74 0 0 33554432 0 0 0 -250 S
-HO 0 1 -1
+74 0 0 0 33554432 0 0 0 -250 S
+HO 0 1 0 -1
 50 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 5 5 1
@@ -357,8 +357,8 @@ A beaten &+cgrey elf&N lies here, silently.
 &+cdeep&+b blue&+c bruises.&+R Blood&+c cakes most of her&+W clothes&+c. Her tangled&+Y yellow&+c hair
 &+cis covered with&+G slime&+c. She just lies here silently, as if she has given up.
 ~
-74 0 0 33554432 0 0 0 1000 S
-PE 0 0 -1
+74 0 0 0 33554432 0 0 0 1000 S
+PE 0 0 0 -1
 19 13 39 19d30+95 3d4+2
 9.7.3.0 9234
 8 8 2
@@ -372,8 +372,8 @@ a &+yhuge cave rat&N~
 &+ythree inches long, drip with his&+W saliva&+y. He peers around with his&+r crimson
 &+yeyes and his nose twitches as he searches for any scrap of food.
 ~
-1073744072 0 0 33554440 0 0 0 -100 S
-A 0 0 -1
+1073744072 0 0 0 33554440 0 0 0 -100 S
+A 0 0 0 -1
 29 8 7 29d55+319 3d6+4
 0.0.0.0 25839
 8 8 1
@@ -388,8 +388,8 @@ A &+gTroll&n emissary stands here, throwing a fit.
 &+Yyellow&+g eyes scan the room looking for any possible escape route. He seems
 &+gto be in need of help and might be able to pay well for it.
 ~
-2122 0 0 256 0 0 0 -1000 S
-PT 0 1 -1
+2122 0 0 0 256 0 0 0 -1000 S
+PT 0 1 0 -1
 50 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -403,8 +403,8 @@ A &+Lblack&N orc guard stands here, watching for trouble.
 &+Lstands here watching for any signs of trouble with his cat like&+Y yellow
 &+Leyes.
 ~
-67108938 72 0 33554456 0 0 0 -1000 S
-HO 0 1 -1
+67108938 72 0 0 33554456 0 0 0 -1000 S
+HO 0 1 0 -1
 48 -1 -62 43d107+1935 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -418,8 +418,8 @@ being interrogated.&+r Blood&N coveres her&+b bruised&N face. Whip marks are vis
 along her back and arms. Three of her fingers have been severed. She struggles
 at her&+L chains&N with the last remaining strength she possesses.
 ~
-74 0 0 33570816 0 0 0 0 S
-PF 0 4096 -1
+74 0 0 0 33570816 0 0 0 0 S
+PF 0 4096 0 -1
 23 11 26 23d40+184 3d5+3
 5.1.6.0 20493
 8 8 2
@@ -434,8 +434,8 @@ An &+gorc&N patrol guard stands here, patrolling the area.
 &+gcame along he would need support. He peers around attempting to find any signs
 &+gof an enemy.
 ~
-1140852808 1 0 33554440 0 0 0 -1000 S
-HO 0 1 -1
+1140852808 1 0 0 33554440 0 0 0 -1000 S
+HO 0 1 0 -1
 47 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -449,8 +449,8 @@ a &+Wlarge mountain goat&N~
 &+Wa tangled mass, covered with dirt and smelling quite bad. Two large horns
 &+Wprotrude from his forehead, making a set of dangerous looking weapons.
 ~
-200 0 0 33554432 0 0 0 0 S
-AH 0 0 -1
+200 0 0 0 33554432 0 0 0 0 S
+AH 0 0 0 -1
 33 6 -5 33d70+495 4d6+7
 0.0.0.0 42768
 8 8 1
@@ -464,8 +464,8 @@ a &+Yferocious mountain lion&N~
 &+Yis stuck between her massive fangs. She peers around the room looking for
 &+Ysomething to pounce on and kill.
 ~
-1073743944 0 0 33554432 0 0 0 0 S
-AC 0 1 -1
+1073743944 0 0 0 33554432 0 0 0 0 S
+AC 0 1 0 -1
 36 2 -15 36d95+828 4d7+10
 0.0.0.0 46656
 8 8 1
@@ -480,8 +480,8 @@ connected with&+y nature&N. After many years of hard work he learned to wield th
 almost unlimited power of the&+G Earthmother&N. Now he sits here trying to grow
 a&+g forest&N in the middle of a barren&+y mountain&N range.
 ~
-1073741898 0 0 33554440 0 0 0 0 S
-HO 0 8 -1
+1073741898 0 0 0 33554440 0 0 0 0 S
+HO 0 8 0 -1
 47 -3 -75 47d110+2538 6d6+25
 7.0.0.5 114210
 8 8 1
@@ -495,8 +495,8 @@ An tired &+gorc&N guard sleeps here.
 &+gHe appears to be of moderate build for an orc and might be able to handle
 &+ghimself in combat.
 ~
-1140852810 0 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+1140852810 0 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 29 8 7 29d65+377 3d6+4
 9.4.7.1 25839
 4 4 1
@@ -510,8 +510,8 @@ a&+g half drunk orc&N~
 &+gby the ammount of&+Y ale&+g he has consumed. He peers blurry eyed around the room,
 &+glooking for the bartender.
 ~
-1140852810 0 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+1140852810 0 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 5 5 1
@@ -525,8 +525,8 @@ An&+g orc&N guard sits here, waiting for food.
 &+LKrethik Keep's&+g garrison. A small tattoo of a&+r bloody&+g fist is visible on his
 &+gupper arm, showing his loyalty to Tyrik Bloodyfist.
 ~
-1140852810 72 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+1140852810 72 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 37 2 -18 37d95+851 4d7+10
 0.1.2.2 47952
 8 8 1
@@ -541,8 +541,8 @@ cook orc~
 &+Rheat&+W of the&+L iron&+W stove. Dressed in a tight fighting stained uniform, he
 &+Wappears to enjoy sampling all of the food.
 ~
-1140852810 72 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+1140852810 72 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 56 -1 -56 41d107+1845 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -556,8 +556,8 @@ orc assistant~
 &+Wpounds. He has tiny&+Y yellow&+W eyes and bright&+G green&+W skin. Sweat drips down his
 &+Wface, and has soaked most of his uniform.
 ~
-67110986 72 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+67110986 72 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 31 6 0 31d83+527 4d6+7
 5.7.9.1 40176
 8 8 1
@@ -571,8 +571,8 @@ and having a powerful muscular frame, he looks like he can hold his own in
 combat. He is currently leading a small patrol through&+L Krethik Keep&N, to ensure
 its security. His&+Y yellow eyes&N scan the area looking for any sign of trouble.
 ~
-1140852808 1 0 33554440 0 0 0 -1000 S
-HO 0 1 -1
+1140852808 1 0 0 33554440 0 0 0 -1000 S
+HO 0 1 0 -1
 56 -3 -81 49d119+2695 6d6+25
 9.2.0.5 119070
 8 8 1
@@ -586,8 +586,8 @@ an&+g elite orc patrol guard&N~
 &+gmuscular frame. His skin is dark green and his eyes a&+Y pale yellow&+g. A small
 &+gtattoo of a&+R bloody fist&+g can be seen on his upper arm, the emblem of his lord.
 ~
-67110986 1 0 33554464 0 0 0 -1000 S
-HO 0 1 -1
+67110986 1 0 0 33554464 0 0 0 -1000 S
+HO 0 1 0 -1
 48 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -601,8 +601,8 @@ a&+y vicious cave rat~
 &+yprotection from physical attacks. Her hairless tail stretches three feet behind
 &+yher. This rat could easily take down a large dog or small humanoid.
 ~
-1073743946 1 0 33554440 0 0 0 0 S
-AC 0 1 -1
+1073743946 1 0 0 33554440 0 0 0 0 S
+AC 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 0.0.0.0 24948
 8 8 1
@@ -616,8 +616,8 @@ and having a powerful muscular frame, he looks like he can hold his own in
 combat. He is currently leading a small patrol through&+L Krethik Keep&N, to ensure
 its security. His&+Y yellow eyes&N scan the area looking for any sign of trouble.
 ~
-1140852808 72 0 33554440 0 0 0 -1000 S
-HO 0 16384 -1
+1140852808 72 0 0 33554440 0 0 0 -1000 S
+HO 0 16384 0 -1
 49 -3 -72 46d119+2530 6d6+25
 6.0.9.4 111780
 8 8 1
@@ -632,8 +632,8 @@ An&+g orc&N lieutenant stands here, looking for any signs of trouble.
 &+gskin are common amoung orcs. A tattoo of a&+R bloody fist&+g has been placed on
 &+ghis forehead, showing his loyalty to his lord, Tyrik Bloodyfist.
 ~
-1140852808 1 0 33554440 0 0 0 -1000 S
-HO 0 1 -1
+1140852808 1 0 0 33554440 0 0 0 -1000 S
+HO 0 1 0 -1
 48 -1 -59 42d107+1890 6d6+12
 2.8.7.3 102060
 8 8 1
@@ -648,8 +648,8 @@ black orc doesn't look very dangerous, but his&+B cold&N emotionless stare, brin
 a &+Bchill&N to even the most powerful of foes. He stands here, slightly behind the
 throne, awaiting Tyrik's command to assassinate someone.
 ~
-67110986 1 0 34603008 0 0 0 -1000 S
-HO 0 8192 -1
+67110986 1 0 0 34603008 0 0 0 -1000 S
+HO 0 8192 0 -1
 46 -1 -56 41d90+1763 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -662,8 +662,8 @@ an&+g orcish dungeon guard&N~
 &+gignore the giant&+y rats&+g prowling about. He appears to be rather small for an orc,
 &+gand could possibly be part goblin. His&+R red&+g eyes gleam in the darkness.
 ~
-1140852874 72 0 33554432 0 0 0 -1000 S
-HO 0 1 -1
+1140852874 72 0 0 33554432 0 0 0 -1000 S
+HO 0 1 0 -1
 45 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -679,8 +679,8 @@ shaman apprentice~
 &+gto master the&+y animal&+g aspect of shamanic magic by summoning forest animals
 &+gto aid him.
 ~
-1140852810 72 0 33554432 0 0 0 -1000 S
-HO 0 256 -1
+1140852810 72 0 0 33554432 0 0 0 -1000 S
+HO 0 256 0 -1
 41 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -694,8 +694,8 @@ a&+y huge grizzly bear&N~
 &+ybrown fur gives her good protection against physical attacks and her huge
 &+yclawed paws will cause massive damage.
 ~
-1308622922 0 0 40 0 0 0 0 S
-AC 0 1 -1
+1308622922 0 0 0 40 0 0 0 0 S
+AC 0 1 0 -1
 40 2 -28 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 2
@@ -712,8 +712,8 @@ an&+g orcish advisor&N~
 &+ghere, waiting to intercept the messengers bearing anything but favorable news
 &+gto Tyrik.
 ~
-1140852938 0 0 33554432 0 0 0 -750 S
-HO 0 2048 -1
+1140852938 0 0 0 33554432 0 0 0 -750 S
+HO 0 2048 0 -1
 46 -1 -56 41d72+1763 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -728,8 +728,8 @@ an&+g orcish&+L scout~
 &+gis dressed in light flexible armor and soft leather boots to mask the sound
 &+gof walking on the gravel covered path.
 ~
-1073743880 64 0 35127296 0 0 0 -1000 S
-HO 0 1 -1
+1073743880 64 0 0 35127296 0 0 0 -1000 S
+HO 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -743,8 +743,8 @@ a&+W tortured spirit&n~
 &+Wpain. Trapped in this plane of existance after falling victim to a
 &+Wtraumatic death its solo purpose is to cause misery &+Wto the living.
 ~
-1073743944 1 0 33554434 0 0 0 -1000 S
-UG 0 2 -1
+1073743944 1 0 0 33554434 0 0 0 -1000 S
+UG 0 2 0 -1
 40 2 -34 39d88+858 4d7+10
 0.0.0.0 50544
 8 8 0
@@ -757,8 +757,8 @@ huge male rat~
 &+yhairless tail nearly four feet. Gleaming red eyes scan over all of his mates,
 &+ywhile he gnaws on a yellowed bone
 ~
-1140852744 1 0 33554440 0 0 0 0 S
-A 0 1 -1
+1140852744 1 0 0 33554440 0 0 0 0 S
+A 0 1 0 -1
 34 6 -8 34d83+578 4d6+7
 0.0.0.0 44064
 8 8 1
@@ -773,8 +773,8 @@ A&+m Drow&N priestess stands here, protecting her emissary.
 &+mwould have to get through her first. As with most drow she has ebony skin
 &+mand long white hair.
 ~
-67110986 1 0 264 2 0 0 -1000 S
-PL 0 32 -1
+67110986 1 0 0 264 2 0 0 -1000 S
+PL 0 32 0 -1
 45 -1 -59 42d99+1848 6d6+12
 2.8.7.3 102060
 8 8 2
@@ -788,8 +788,8 @@ A &+mDrow&N warrior stands here, protecting his emissary.
 &+mstandards, but his body possess great agility and dexterity. His lavender
 &+meyes sparkle brightly in the flickering torchlight.
 ~
-67110922 1 0 67109120 2 0 0 -1000 S
-PL 0 1 -1
+67110922 1 0 0 67109120 2 0 0 -1000 S
+PL 0 1 0 -1
 46 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -803,8 +803,8 @@ An &+bOgre&N shaman stands here, watching Blig.
 &+binto Blig and was invited to observe a powerful ritual. He now stands far
 &+bbehind Blig and watches wide eyed as the spell is prepared for casting.
 ~
-67110922 1 0 264 2 0 0 -1000 S
-PO 0 256 -1
+67110922 1 0 0 264 2 0 0 -1000 S
+PO 0 256 0 -1
 45 2 -21 38d88+836 4d7+10
 1.2.2.2 49248
 8 8 1
@@ -818,8 +818,8 @@ fyrik~
 &+gsize and strength. He stands over his father watching him negotiate with the
 &+gdrow.
 ~
-67110922 1 0 24 0 0 0 -1000 S
-HO 0 513 -1
+67110922 1 0 0 24 0 0 0 -1000 S
+HO 0 513 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -833,8 +833,8 @@ an&+g orcish priest~
 &+gDrull, orcish god of battle. He seems to be of average size for most orcs
 &+gand looks like he could hold his own if someone would attack the altar.
 ~
-2058 1 0 40 0 0 0 -1000 S
-HO 0 32 -1
+2058 1 0 0 40 0 0 0 -1000 S
+HO 0 32 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -849,8 +849,8 @@ An &+gorc&N patrol guard stands here, patrolling the area.
 &+gcame along he would need support. He peers around attempting to find any signs
 &+gof an enemy.
 ~
-1140852808 1 0 33554440 0 0 0 -1000 S
-HO 0 1 -1
+1140852808 1 0 0 33554440 0 0 0 -1000 S
+HO 0 1 0 -1
 47 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -865,8 +865,8 @@ an&+g orcish&+L general~
 &+gtargets Krethik Keep has ever dared to attack. The last assualt of this human
 &+gcity was a complete failure, but maybe this time will be different.
 ~
-67110922 1 0 33554448 0 0 0 -1000 S
-HO 0 1 -1
+67110922 1 0 0 33554448 0 0 0 -1000 S
+HO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -880,8 +880,8 @@ and having a powerful muscular frame, he looks like he can hold his own in
 combat. He is currently assisting the general with his plans to attack
 Tharnadia. His&+Y yellow eyes&N scan the area looking for any sign of trouble.
 ~
-1140852810 1 0 33554440 0 0 0 -1000 S
-HO 0 1 -1
+1140852810 1 0 0 33554440 0 0 0 -1000 S
+HO 0 1 0 -1
 49 -3 -72 46d119+2530 6d6+25
 6.0.9.4 111780
 8 8 1
@@ -895,8 +895,8 @@ herris king pirate~
 &+Cbrown hair is tied back into a ponytail, and his gleaming brown eyes scan
 &+Cthe area, looking for any orcish trap.
 ~
-67110922 1 0 268959768 192 0 0 -300 S
-PH 0 1 -1
+67110922 1 0 0 268959768 192 0 0 -300 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -910,8 +910,8 @@ A&+L pirate&N stands near Herris, protecting his back.
 &+Lhours sailing the seas. He has a powerful build and appears to know how
 &+Lto handle himself well in combat.
 ~
-67110922 1 0 16 0 0 0 -200 S
-PH 0 1 -1
+67110922 1 0 0 16 0 0 0 -200 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -926,8 +926,8 @@ ugrakt ogre~
 &+bassualt against Tharnadia and has agreed to contribute many of his ogre
 &+bfollowers.
 ~
-1073743882 1 0 33619976 0 0 0 -1000 S
-PO 0 16384 -1
+1073743882 1 0 0 33619976 0 0 0 -1000 S
+PO 0 16384 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -941,8 +941,8 @@ An&+b ogre&+L mercenary&N stands near Ugrakt.
 &+bdeadly in combat, this mercenary is known for his sneaky tactics and nearly
 &+bunwavering courage.
 ~
-67110922 1 0 301989904 0 0 0 -1000 S
-PO 0 16384 -1
+67110922 1 0 0 301989904 0 0 0 -1000 S
+PO 0 16384 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -956,8 +956,8 @@ dyrean human~
 &+Cget detailed maps of her hometown city and know is selling them to Tyrik.
 &+CShe now stands here bartering for the price she is to recieve.
 ~
-67110922 1 0 301989904 2049 0 0 -100 S
-PH 0 512 -1
+67110922 1 0 0 301989904 2049 0 0 -100 S
+PH 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -971,8 +971,8 @@ A&+C human sorcerer&N stands near&+M Dyrean&N, ready to blast anyone who attacks
 &+Cto be quite alert and ready for action. The thought of betraying Tharnadia
 &+Cto Tyrik doesn't seem to bother him at all.
 ~
-67110922 1 0 33554440 2049 0 0 -100 S
-PH 0 512 -1
+67110922 1 0 0 33554440 2049 0 0 -100 S
+PH 0 512 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -987,8 +987,8 @@ A&+L huge black&+b ogre&N stands here, radiating evil.
 &+Lfoolish enough to attack Ugrakt while this ogre is near will surely die
 &+La most unpleasant death.
 ~
-1140852746 1 0 570425360 0 0 0 -1000 S
-PO 0 1 -1
+1140852746 1 0 0 570425360 0 0 0 -1000 S
+PO 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1003,8 +1003,8 @@ A huge&+W skeletal dragon&N lies here, guarding the tomb.
 &+Wof light. He swings his bony tail around, and roars at anything that dares
 &+Wto enter the tomb.
 ~
-1073742347 1 0 167838000 262146 0 0 -1000 S
-D 0 1 -1
+1073742347 1 0 0 167838000 262146 0 0 -1000 S
+D 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1018,8 +1018,8 @@ a&+W trapped soul~
 &+Wwith black blotches. Floating about the room it is doomed to scram in pain
 &+Wfor eternity.
 ~
-67110922 1 0 33554488 0 0 0 -1000 S
-UG 0 1 -1
+67110922 1 0 0 33554488 0 0 0 -1000 S
+UG 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1033,8 +1033,8 @@ The&+W spectre&N of&+W Ferrik&+r Bloodyfist&N floats above the coffin.
 &+Wspecter. He has an aura of dark power surrounding him, and his eyes glow
 &+Wwith flaming red fire.
 ~
-67110922 1 0 33554488 32768 0 0 -1000 S
-UG 0 768 -1
+67110922 1 0 0 33554488 32768 0 0 -1000 S
+UG 0 768 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1048,8 +1048,8 @@ an&+g orcish&+W spirit~
 &+Weternity. After slowly starving to death, this orc's spirit stayed, to
 &+Wcontinue his vigilant watch over his lord.
 ~
-67110922 1 0 33554472 0 0 0 -1000 S
-UG 0 16 -1
+67110922 1 0 0 33554472 0 0 0 -1000 S
+UG 0 16 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1065,8 +1065,8 @@ An&+L armored&+W skeleton&N stands here, protecting the tomb.
 &+Wlong ago, he stands here dressed in old rusty armor, waiting for someone
 &+Wfoolish enough to try and enter the tomb.
 ~
-67110922 1 0 33554488 0 0 0 -1000 S
-U 0 1 -1
+67110922 1 0 0 33554488 0 0 0 -1000 S
+U 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

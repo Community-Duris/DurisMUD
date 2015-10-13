@@ -607,7 +607,7 @@ dagger seers~
 &+Lthe &n&+rda&+Lg&N&+rg&+Ler of the &+Cseers&N~
 &+LThe &N&+rda&+Lg&N&+rg&+Ler of the &+Cseers&+L has been left here.~
 ~
-5 16 2 0 11 0 100671488 8193 64 0 0
+5 16 2 0 11 0 100671488 8193 32832 0 0
 2 2 6 0 0 0 0 0
 0 18993 100
 E
@@ -786,7 +786,7 @@ golden gold dwarven band runes~
 &+Ya golden band bearing dwarven runes~
 &+yNearly concealed by rocky debris&+Y, a runed golden dwarven wedding band &Nsparkles here.~
 ~
-9 24 1 0 8 0 4097 3 64 0 0
+9 24 1 0 8 0 4097 3 32832 0 0
 2 0 0 0 0 0 0 0
 0 554 100
 E
@@ -822,7 +822,7 @@ freshly killed osquip remains~
 &n&+ya fr&+re&+yshl&+ry-&+ykil&+rl&+ye&+rd &+Yosquip&N~
 &+LAn &+Yosquip &+Lthat has been &N&+yfr&+re&+ysh&+rly&+y-k&+ri&+yll&+re&+yd &+Llies here in a pool of &N&+rblood&+L.~
 ~
-19 2 1 0 7 0 0 1 0 0 0
+19 2 1 0 7 0 0 1 32768 0 0
 3 3 3 0 0 0 0 0
 1 600 100
 E
@@ -838,7 +838,7 @@ gloomwing feather~
 &+La gl&n&+moomwi&+Lng &+mfe&+Lath&+mer&N~
 &+LA &N&+mgl&+Loom&+mwi&+Lng &+mfe&+Lat&+mher&+L pokes out between two &Nrocks&+L.~
 ~
-9 50 2 0 7 0 0 8929281 64 0 0
+9 50 2 0 7 0 0 8929281 32832 0 0
 1 0 0 0 0 0 0 0
 0 3222 100
 E
@@ -855,7 +855,7 @@ gloomwing feather~
 &+La &+mgl&+Lo&+mo&+Lm&+mwi&+Lng &+Wf&+Me&+ma&+Lther&N~
 &+LA &N&+mgl&+Loom&+mwi&+Lng &+mfe&+Lat&+mher&+L pokes out between two &Nrocks&+L.~
 ~
-9 50 2 0 7 0 0 8929281 64 0 0
+9 50 2 0 7 0 0 8929281 32832 0 0
 1 0 0 0 0 0 0 0
 0 3222 100
 E

@@ -9,8 +9,8 @@ views the inhabitants of the surrounding area as
 innocent and thus guards the entrance to the tower.
 He wears the insignia of a Tharnadia guard.
 ~
-1073743882 128 0 268435608 0 67108864 1024 1000 S
-PH 0 1 -1
+1073743882 128 0 0 268435608 0 67108864 1024 1000 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -25,8 +25,8 @@ the underwater tunnels to the underground swamp, where he
 finds more safety than above the surface.  Thus, he is
 more relaxed than would be otherwise.
 ~
-264200 0 0 144 0 0 0 -1000 S
-H 0 1 4
+264200 0 0 0 144 0 0 0 -1000 S
+H 0 1 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ slime pool~
 ~
 &+GThis is a green pool of slime that appears to be moving!&n
 ~
-2056 0 0 0 0 0 0 0 S
-SL 0 0 0
+2056 0 0 0 0 0 0 0 0 S
+SL 0 0 0 0
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -49,8 +49,8 @@ slime pool~
 ~
 This is a blue pool of slime that appears to be moving!
 ~
-2056 0 0 0 0 0 0 0 S
-SL 0 0 0
+2056 0 0 0 0 0 0 0 0 S
+SL 0 0 0 0
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -61,8 +61,8 @@ slime pool~
 ~
 &+RThis is a red pool of slime that appears to be moving!&n
 ~
-2056 0 0 0 0 0 0 0 S
-SL 0 0 0
+2056 0 0 0 0 0 0 0 0 S
+SL 0 0 0 0
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -72,8 +72,8 @@ slime pool~
 &+CA pool of slime sits here&n.
 ~
 ~
-2056 0 0 0 0 0 0 0 S
-SL 0 0 0
+2056 0 0 0 0 0 0 0 0 S
+SL 0 0 0 0
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -88,8 +88,8 @@ from Clan Miner well, but also has several pieces of
 equipment from other races, such as headband from
 the drow elves.
 ~
-1073743882 0 0 152 0 0 0 0 S
-PD 0 16384 -1
+1073743882 0 0 0 152 0 0 0 0 S
+PD 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -104,8 +104,8 @@ the underground tunnels of the underworld.  He wears
 blackened jodani wood armor and his face is painted
 pitch-black.  His eyes glow golden in the dark.
 ~
-1074137098 128 0 404226188 264192 67108992 0 1000 S
-PF 0 1 -1
+1074137098 128 0 0 404226188 264192 67108992 0 1000 S
+PF 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -117,8 +117,8 @@ myconid~
 This large mushroom appears to have grown arms and legs
 and is walking around the mushroom forest.
 ~
-1073743880 0 0 0 0 0 0 0 S
-H 0 1 3
+1073743880 0 0 0 0 0 0 0 0 S
+H 0 1 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -130,8 +130,8 @@ myconid~
 This large mushroom appears to have grown arms and legs
 and is walking around the mushroom forest.
 ~
-1073743880 0 0 0 0 0 0 0 S
-H 0 1 4
+1073743880 0 0 0 0 0 0 0 0 S
+H 0 1 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -143,8 +143,8 @@ myconid~
 This large mushroom appears to have grown arms and legs
 and is walking around the mushroom forest.
 ~
-1073743880 0 0 0 0 0 0 0 S
-H 0 1 3
+1073743880 0 0 0 0 0 0 0 0 S
+H 0 1 0 3
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -156,8 +156,8 @@ myconid~
 This large mushroom appears to have grown arms and legs
 and is walking around the mushroom forest.
 ~
-1073743880 0 0 0 0 0 0 0 S
-H 0 1 2
+1073743880 0 0 0 0 0 0 0 0 S
+H 0 1 0 2
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -169,8 +169,8 @@ myconid~
 This large mushroom appears to have grown arms and legs
 and is walking around the mushroom forest.
 ~
-1073743880 0 0 0 0 0 0 0 S
-H 0 1 5
+1073743880 0 0 0 0 0 0 0 0 S
+H 0 1 0 5
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -183,8 +183,8 @@ The roper looks like a short, fat tree with a dozen or so rope-like tentacles
 protruding out of its body on all sides.  It has two small black eyes in its
 torso and a large mouth or sharp teeth in its midsection.
 ~
-1073743880 1 0 2200 0 0 0 0 S
-AC 0 1 4
+1073743880 1 0 0 2200 0 0 0 0 S
+AC 0 1 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -196,8 +196,8 @@ earth huge elemental~
 The elemental is large, standing fifteen feet tall and at least five feet
 in width.  It has a humanoid shape, and looks very dangerous.
 ~
-1073743880 1 0 152 0 0 0 0 S
-EE 0 1 4
+1073743880 1 0 0 152 0 0 0 0 S
+EE 0 1 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -209,8 +209,8 @@ weird water~
 &+bThe water weird resembles a large snake made from pure water, rising up
 &+bout of the river about five feet into the air.
 ~
-395272 1 0 134219784 0 0 0 -500 S
-EW 0 1 4
+395272 1 0 0 134219784 0 0 0 -500 S
+EW 0 1 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -223,8 +223,8 @@ kraken large wicked~
 &+Bangry disposition.  The claws and tail of the beast are generally darker
 &+Bin color and help the creature stay hidden in deep waters.&N
 ~
-1073743882 1 0 2184 0 67108864 0 0 S
-F 0 1 6
+1073743882 1 0 0 2184 0 67108864 0 0 S
+F 0 1 0 6
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -236,8 +236,8 @@ shark~
    This shark is only about four feet in length, howver it has
 a huge set of teeth and sneering eyes.
 ~
-8 1 0 0 0 0 0 0 S
-F 0 1 3
+8 1 0 0 0 0 0 0 0 S
+F 0 1 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -252,8 +252,8 @@ The only food they see are very small fish, people thrown out of the tower,
 mountain goats who fall off the mountain trails into the swamp, and any
 adventurers who might come and disturb them.
 ~
-1073743882 0 0 152 0 0 0 0 S
-A 0 1 4
+1073743882 0 0 0 152 0 0 0 0 S
+A 0 1 0 4
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -268,8 +268,8 @@ The only food they see are very small fish, people thrown out of the tower,
 mountain goats who fall off the mountain trails into the swamp, and any
 adventurers who might come and disturb them.
 ~
-1073743882 0 0 152 0 0 0 0 S
-A 0 1 4
+1073743882 0 0 0 152 0 0 0 0 S
+A 0 1 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -284,8 +284,8 @@ The only food they see are very small fish, people thrown out of the tower,
 mountain goats who fall off the mountain trails into the swamp, and any
 adventurers who might come and disturb them.
 ~
-1073743882 0 0 152 0 0 0 0 S
-A 0 1 5
+1073743882 0 0 0 152 0 0 0 0 S
+A 0 1 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -296,8 +296,8 @@ The spirit of a &+Ydwarven&n miner roams the tunnels.
 ~
 The faint outline of a dwarven miner floats here.
 ~
-1073743880 0 0 10 0 0 0 0 S
-PM 0 1 -1
+1073743880 0 0 0 10 0 0 0 0 S
+PM 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -308,8 +308,8 @@ The spirit of a &+Wdwarven&n miner roams the tunnels.
 ~
 The faint outline of a dwarven miner floats here.
 ~
-1073743880 0 0 10 0 0 0 0 S
-PM 0 1 -1
+1073743880 0 0 0 10 0 0 0 0 S
+PM 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -320,8 +320,8 @@ The spirit of a &+Rdwarven&n miner roams the tunnels.&n
 ~
 The faint outline of a dwarven miner floats here.
 ~
-1073743880 128 0 10 0 0 0 0 S
-PM 0 1 -1
+1073743880 128 0 0 10 0 0 0 0 S
+PM 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -333,8 +333,8 @@ shark~
    This shark is only about four feet in length, howver it has
 a huge set of teeth and sneering eyes.
 ~
-8 1 0 8 0 0 0 0 S
-F 0 1 3
+8 1 0 0 8 0 0 0 0 S
+F 0 1 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -353,8 +353,8 @@ underground, not far from the Bone Fort Inn.  He
 spends his days fishing, and his nights keeping his
 skills sharpened against the nearby earthen elementals.
 ~
-1073743882 0 0 152 0 0 0 0 S
-PL 0 1 -1
+1073743882 0 0 0 152 0 0 0 0 S
+PL 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -369,8 +369,8 @@ over his chest.  His fishing rod appears to be an
 entire tree, with jagged hooks attached to many of the
 branches.
 ~
-1073743882 0 0 10392 0 0 0 0 S
-G 0 1 -1
+1073743882 0 0 0 10392 0 0 0 0 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -385,8 +385,8 @@ appropriate climbing tools for traversing
 the underworld and wears a stury climbing
 belt.
 ~
-1073743882 0 0 134217872 0 0 0 0 S
-G 0 1 -1
+1073743882 0 0 0 134217872 0 0 0 0 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -398,8 +398,8 @@ worm rock~
 This worm appears to be 10 feet in length and has a skin
 that is almost like rock.
 ~
-2056 1 0 0 0 0 0 0 S
-A 0 1 2
+2056 1 0 0 0 0 0 0 0 S
+A 0 1 0 2
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -411,8 +411,8 @@ worm rock~
 This worm appears to be 10 feet in length and has a skin
 that is almost like rock.
 ~
-2056 1 0 0 0 0 0 0 S
-A 0 1 2
+2056 1 0 0 0 0 0 0 0 S
+A 0 1 0 2
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -424,8 +424,8 @@ worm rock~
 This worm appears to be 10 feet in length and has a skin
 that is almost like rock.
 ~
-2056 1 0 0 0 0 0 0 S
-A 0 1 2
+2056 1 0 0 0 0 0 0 0 S
+A 0 1 0 2
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

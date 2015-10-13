@@ -8,8 +8,8 @@ fish sightless~
 &+wplace with its mouth open wide waiting for the &+Bstream &+wto carry bits of
 &+Gvegetation &+wits way.  If it is aware of your presence, it does not show it.
 ~
-262360 0 0 2048 0 0 0 0 S
-F 0 1 -1
+262360 0 0 0 2048 0 0 0 0 S
+F 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -24,8 +24,8 @@ duck spoon-billed~
 &+ylikely just stopped here on its long migration to feed and rest up before it
 &+ycontinues its long journey.
 ~
-395336 0 0 0 0 0 0 500 S
-B 0 1 -1
+395336 0 0 0 0 0 0 0 500 S
+B 0 1 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -39,8 +39,8 @@ swan large white~
 &+wslender neck are covered with &+Wsnow white feather.  &+wIt's head is set with &+Ldark
 &+Leyes &+wthat watch you cautiously.
 ~
-395336 0 0 0 0 0 0 500 S
-B 0 1 -1
+395336 0 0 0 0 0 0 0 500 S
+B 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -55,8 +55,8 @@ swan regal swanmay~
 &+wright leg.  She looks at you the way a preditor looks at its prey, sizing you
 &+wup and looking for weaknesses.
 ~
-1141246027 0 0 268967976 2 0 0 1000 S
-B 0 1 -1
+1141246027 0 0 0 268967976 2 0 0 1000 S
+B 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -70,8 +70,8 @@ swanmay woman tall~
 &+win &+gforest green leather armor.  &+wHer eyes are constantly scanning the &+Bpond &+wand
 &+wthe &+Gforest &+wbeyond looking for any signs of danger.
 ~
-1149503562 1 0 335552520 2 0 0 1000 S
-PH 0 2 -1
+1149503562 1 0 0 335552520 2 0 0 1000 S
+PH 0 2 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -84,8 +84,8 @@ borrix goblin trader~
 &+yof &+wmetal &+yoff those that scavenge it from the battlefield.  His scarred face
 &+yshows him to be well practiced in the art of goblin haggling.
 ~
-1073744078 0 0 0 2 0 0 -1000 S
-HG 0 1 -1
+1073744078 0 0 0 0 2 0 0 -1000 S
+HG 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -99,8 +99,8 @@ goblin scavenger~
 &+yBy his emaciated appears he doesn't seems to be doing very well at it, most
 &+yof the valuable items having been looted long ago.
 ~
-2252 0 0 0 2 0 0 -1000 S
-HG 0 1 -1
+2252 0 0 0 0 2 0 0 -1000 S
+HG 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -117,8 +117,8 @@ orc old warrior~
 &+wand scattered my army.  If only I could prove to my brethren that I killed
 &+whim they would follow me again, I would have my army!  I'm sure of it!"
 ~
-2122 0 0 65536 2 0 0 -1000 S
-HO 0 32768 -1
+2122 0 0 0 65536 2 0 0 -1000 S
+HO 0 32768 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -131,8 +131,8 @@ spirit elf warrior _nofear_~
 &+Wspirit &+wstands here trying to defending his lord in &+Ldeath &+was he did in &+Wlife,
 &+was though this could make up for his failure so long ago.
 ~
-2122 1 0 134217768 2 0 0 1000 S
-UG 0 1 -1
+2122 1 0 0 134217768 2 0 0 1000 S
+UG 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -145,8 +145,8 @@ spirit guardian _nofear_~
 &+wand insubstantial.  It stares at you through &+Wglowing spectral eyes &+wthat hold
 &+wno reason, only a single minded determination that none shall pass.
 ~
-67110986 1 0 134217768 2 0 0 1000 S
-UG 0 1 -1
+67110986 1 0 0 134217768 2 0 0 1000 S
+UG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -159,8 +159,8 @@ spirit orc warrior _nofear_~
 &+wself.  So great was his &+rhatred &+wof &+gelves &+wthat it lives on in this &+Lspectral form.
 &+wHis &+rglowing red eyes &+wcontinually scanning the &+ybattlefield &+wsearch for his foes.
 ~
-1073875016 64 0 134217770 2 0 0 -1000 S
-UG 0 1 -1
+1073875016 64 0 0 134217770 2 0 0 -1000 S
+UG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -173,8 +173,8 @@ maggot giant~
 &+wcreature you see before you.  Two feet long this writhing sack of pale flesh
 &+wlives only to feed its unnatural hunger.
 ~
-1073743946 1 0 32 2 0 0 0 S
-I 0 1 -1
+1073743946 1 0 0 32 2 0 0 0 S
+I 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -188,8 +188,8 @@ boar wild~
 &+Gforest &+yforaging for eatible roots and &+Gplants.  &+yAs soon as it notices you it
 &+yturns towards you and start to &+rcharge!
 ~
-1208223816 1 0 32 0 0 0 0 S
-A 0 1 -1
+1208223816 1 0 0 32 0 0 0 0 S
+A 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -203,8 +203,8 @@ will-o-the-wisp wisp ball~
 &+cover.  It seems to be playing a little game with you, suddenly it gets &+Rupset
 &+cthat you won't play along.
 ~
-1073875144 1 0 134217728 130 0 0 0 S
-HF 0 512 -1
+1073875144 1 0 0 134217728 130 0 0 0 S
+HF 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -216,8 +216,8 @@ slime green pool~
 &+g   Currents and eddies are at play in this small pool, swirling one way and
 &+gthen the other.  They are almost h&+Gy&+gp&+Gn&+go&+Gt&+gi&+Gc&+g.
 ~
-1074004168 1 0 0 12290 0 0 0 S
-SL 0 0 -1
+1074004168 1 0 0 0 12290 0 0 0 S
+SL 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

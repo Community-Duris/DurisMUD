@@ -2,7 +2,7 @@
 &+CThe Pl&n&+cains o&+Wf Life&n~
 22806 2 0 1 2 1
 *
-* Zone edited with dikuEdit v2.98i
+* Zone edited with durisEdit v3.00
 *
 *
 *
@@ -16,13 +16,13 @@ O 0 22803 1 22806 100 0 0 0        * the life stream
 M 0 22800 3 22802 100 0 0 0        * a ball of light
 M 0 22801 1 22804 100 0 0 0        * a solemn paladin
 G 1 22807 1 0 100 0 0 0            *    a small sack
-P 1 246 1 22807 100 0 0 0          *   (object not in this .OBJ file)
-P 1 450 1 22807 100 0 0 0          *   (object not in this .OBJ file)
-P 1 227 1 22807 100 0 0 0          *   (object not in this .OBJ file)
-P 1 239 1 22807 100 0 0 0          *   (object not in this .OBJ file)
-P 1 214 1 22807 100 0 0 0          *   (object not in this .OBJ file)
-P 1 447 1 22807 100 0 0 0          *   (object not in this .OBJ file)
-P 1 452 1 22807 100 0 0 0          *   (object not in this .OBJ file)
+P 1 246 1 22807 100 0 0 0          *   (object type not in this .obj file)
+P 1 450 1 22807 100 0 0 0          *   (object type not in this .obj file)
+P 1 227 1 22807 100 0 0 0          *   (object type not in this .obj file)
+P 1 239 1 22807 100 0 0 0          *   (object type not in this .obj file)
+P 1 214 1 22807 100 0 0 0          *   (object type not in this .obj file)
+P 1 447 1 22807 100 0 0 0          *   (object type not in this .obj file)
+P 1 452 1 22807 100 0 0 0          *   (object type not in this .obj file)
 M 0 22800 3 22805 100 0 0 0        * a ball of light
 M 0 22802 3 22805 100 0 0 0        * a wisp of cloud
 M 0 22802 3 22805 100 0 0 0        * a wisp of cloud

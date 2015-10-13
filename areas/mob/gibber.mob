@@ -9,8 +9,8 @@ A gibberling female in the agony of birthing, lays here.
 &+LThe furry wretch tries to stand out of the pool of blood and embryonic&n
 &+Lfluids.&n
 ~
-10314 0 0 256 0 0 0 -999 S
-HG 0 1 -1
+10314 0 0 0 256 0 0 0 -999 S
+HG 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 2
@@ -24,8 +24,8 @@ with malice in its eyes.  Spotting its first possible sight of food, it rears
 to its wobbling legs.  Stalking towards you, it even now begins to show the
 vile nature of its elders.
 ~
-1073750088 1 0 256 262146 0 0 -999 S
-HG 0 1 -1
+1073750088 1 0 0 256 262146 0 0 -999 S
+HG 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -39,8 +39,8 @@ A large burly &+Lgibberling&n stands glaring at you.
 &+Lmass of pale muscled flesh intimidates all its horde of blood slathering&n
 &+Lfollowers.  &+bZsrsr's&+L scars bare mute testimony to his prowess in battle.&n
 ~
-67119178 1 0 152 262144 0 0 -1000 S
-TK 0 16 -1
+67119178 1 0 0 152 262144 0 0 -1000 S
+TK 0 16 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -54,8 +54,8 @@ A &+rblood&n &+Rdrenched&n &+Lgibberling&n glares around the chamber.
 &+Lof innocents.  Adorned in the blood and flesh of their victims, these minions&n
 &+Lof evil bristle with fur, muscle, and hatred.&n
 ~
-67119178 1 0 0 0 0 0 -1000 S
-H 0 1 -1
+67119178 1 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -71,8 +71,8 @@ A large &+yhulking&n &+bogre&n brute stands guarding &+bZsrsr&n.
 &+Lfrom their orbits around his gangrenous scalp.  Dogs would flee in fear of&n
 &+Lthis walking flea motel.&n
 ~
-67119178 1 0 392 0 0 0 -1000 S
-PO 0 256 -1
+67119178 1 0 0 392 0 0 0 -1000 S
+PO 0 256 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -85,8 +85,8 @@ A howling &+Lhorde&n of short &+Lgibberlings&n charges you in a wave.
 &+Lmeans.  The horde of gibberlings appears to be without number as they swarm&n
 &+Laround you.&n
 ~
-1073743944 1 0 524304 0 0 0 -800 S
-TK 0 1 -1
+1073743944 1 0 0 524304 0 0 0 -800 S
+TK 0 1 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -99,8 +99,8 @@ A howling &+Lhorde&n of short &+Lgibberlings&n charges you in a wave.
 &+Lmeans.  The horde of gibberlings appears to be without number as they swarm&n
 &+Laround you.&n
 ~
-1140861002 0 0 524560 0 0 0 -800 S
-TK 0 1 -1
+1140861002 0 0 0 524560 0 0 0 -800 S
+TK 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -114,8 +114,8 @@ A howling &+Lhorde&n of short &+Lgibberlings&n charges you in a wave.
 &+Laround you. They stand slightly over four feet tall, but more than compensate&n
 &+Lfor their height with thier ferocity and muscle.&n
 ~
-6222 32 0 524304 0 0 0 -800 S
-HG 0 1 -1
+6222 32 0 0 524304 0 0 0 -800 S
+HG 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -129,8 +129,8 @@ A &+Lhorde&n of howling &+Lgibberlings&n charges you in a wave.
 &+Laround you. They stand slightly over four feet but more than compensate for their&n
 &+Lheight with thier ferocity and muscel.&n
 ~
-10312 0 0 524560 0 0 0 -800 S
-HG 0 1 -1
+10312 0 0 0 524560 0 0 0 -800 S
+HG 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -145,8 +145,8 @@ A shrieking &+Lhorde&n of &+Lgibberlings&n charges you in a wave.
 &+Lfor their height with their ferocity and muscle.  These gibberlings let out&n
 &+Lshrieks of rage upon spotting you.&n
 ~
-8264 0 0 524560 0 0 0 -800 S
-HG 0 1 -1
+8264 0 0 0 524560 0 0 0 -800 S
+HG 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -159,8 +159,8 @@ A tired &+Lgibberling&n lays sleeping here.
 &+Lraping.  Taking what little time is available to these near devil spawn,&n
 &+Lhe lies sprawled on the cavern floor among the &+grefuse&+L.&n
 ~
-1073744074 0 0 0 0 0 0 -900 S
-HG 0 1 -1
+1073744074 0 0 0 0 0 0 0 -900 S
+HG 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 5 1
@@ -174,8 +174,8 @@ this slave searches for any means of escape.  If this wench were not a captive
 she would warrant a second look by nearly any man with a pulse.  Yet in her
 current condition she would be lucky to even get a helping hand.
 ~
-10314 0 0 50331912 0 0 0 0 S
-PE 0 128 -1
+10314 0 0 0 50331912 0 0 0 0 S
+PE 0 128 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -189,8 +189,8 @@ A dejected &+Lgibberling&n whore sulks against the cavern wall.
 &+Lthey have not been kind.  &+rBlood&+L from gashes and semen cover this
 &+Lwhore's skin.&n
 ~
-10314 1 0 8 0 0 0 -800 S
-HG 0 1024 -1
+10314 1 0 0 8 0 0 0 -800 S
+HG 0 1024 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -203,8 +203,8 @@ A small &+Gmound&n of flailing tentacles crawls out of the heap of &+grefuse&n.
 &+Ldeadly killer almost goes by unnoticed.  Flailing tentacles suddenly erupt from&n
 &+Lits' sides, leaving no doubt that this creature is alive.&n
 ~
-1073752138 0 0 270008624 2 0 0 -1000 S
-TK 0 1 -1
+1073752138 0 0 0 270008624 2 0 0 -1000 S
+TK 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -218,8 +218,8 @@ only slightly more intelligent than his brethren.  This may be why he was
 assigned to cook and puree the gibberlings food supply.  The soot has coated
 this beast a pasty grey.
 ~
-1073743946 0 0 296 0 0 0 -900 S
-HG 0 1 -1
+1073743946 0 0 0 296 0 0 0 -900 S
+HG 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -235,8 +235,8 @@ A &+Bblubbery&n &+Lgibberling&n stands here scolding an underling.
 &+Lfor you to become the next meal.  He looks like he would cook or eat nearly&n
 &+Lanything.&n
 ~
-74 0 0 33554696 2 0 0 -1000 S
-HG 0 32 -1
+74 0 0 0 33554696 2 0 0 -1000 S
+HG 0 32 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -251,8 +251,8 @@ A howling &+Lhorde&n of short &+Lgibberlings&n charges you in a wave.
 &+Lheight with thier ferocity and muscel.  These gibberlings let out scrieks of rage&n
 &+Lupon spotting you.&n
 ~
-1140861002 1 0 524560 0 0 0 -800 S
-TK 0 1 -1
+1140861002 1 0 0 524560 0 0 0 -800 S
+TK 0 1 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -267,8 +267,8 @@ A &+Lgibberling&n caught in the &+Lunholy&n &+becstacy&n.
 &+Lreligious zealot could not be anymore dead to the world unless he was on some&n
 &+Ldrug induced euphoria.&n
 ~
-1073752138 0 0 264 0 0 0 -1000 S
-HG 0 32 -1
+1073752138 0 0 0 264 0 0 0 -1000 S
+HG 0 32 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -283,8 +283,8 @@ an &+Lunholy gibberling&n~
 &+Lwould eat her as well.  Having dedicated his soul to his unholy gods, he takes&n
 &+Lgreat joy in bringing suffering and pain to others.&n
 ~
-1073743946 0 0 264 0 0 0 -1000 S
-HG 0 32 -1
+1073743946 0 0 0 264 0 0 0 -1000 S
+HG 0 32 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -299,8 +299,8 @@ the &+Lunholy&n high priest &+bG'graz&n~
 &+Lfur, leaving his taught muscles clearly visible.  A sense of evil permeates&n
 &+Lthe air around this foul creature.&n
 ~
-1140861002 0 0 268435880 34817 0 0 -1000 S
-X 0 32 -1
+1140861002 0 0 0 268435880 34817 0 0 -1000 S
+X 0 32 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -314,8 +314,8 @@ A &+Yleperous&n rat &+rglares&n at you, while waiting to be the &+Lgibberlings&n
 &+Lglare comes over its eyes, seeing its first real meal in days.  The obvious&n
 &+Leffects of leprosy can be seen as the flesh falls from its scrawny body.&n
 ~
-1073743947 0 0 288 0 0 0 0 S
-AC 0 1 -1
+1073743947 0 0 0 288 0 0 0 0 S
+AC 0 1 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -329,8 +329,8 @@ missing a limb.  The stump of the limb appears to have been chewed off by one
 of its hungry companions.  Puss at the end of the limb leads you to believe
 that disease will soon end its life.
 ~
-1073752139 0 0 256 0 0 0 0 S
-AC 0 1 -1
+1073752139 0 0 0 256 0 0 0 0 S
+AC 0 1 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -344,8 +344,8 @@ A tormented &+chalf-elven&n &+Lgibberling&n screams in twisted agony.
 &+Lforms.  Find no help from outside itself, the monstrosity has turned to the&n
 &+Lpower of its mind to inflict pain on its tormenters.&n
 ~
-67119178 1 0 256 0 0 0 -850 S
-P2 0 4 -1
+67119178 1 0 0 256 0 0 0 -850 S
+P2 0 4 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -360,8 +360,8 @@ A &+Chuman&n looks frantic, trying to find a way to escape.
 &+Lhope of escape the sigh of madness has taken a firm hold over this shattered&n
 &+Lhusk of a man.&n
 ~
-1073752264 1 0 392 0 0 0 600 S
-PH 0 8192 -1
+1073752264 1 0 0 392 0 0 0 600 S
+PH 0 8192 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -375,8 +375,8 @@ A &+mdrow elf&n eyes the &+cgrey elf&n with lust in his &+reyes&n.
 &+Ltenderizing him, and he seems weak and helpless.  As he spots you looking at&n
 &+Lhim, the madness in his eyes is readily apparent.&n
 ~
-10314 0 0 264 0 0 0 -1000 S
-PL 0 512 -1
+10314 0 0 0 264 0 0 0 -1000 S
+PL 0 512 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -391,8 +391,8 @@ roper tentacles mass~
 &+yrazor sharp teeth and malevolent glare sweeps across the room looking for&n
 &+yvictims.&n
 ~
-1073752136 1 0 524696 262144 0 0 -1000 S
-TK 0 1 -1
+1073752136 1 0 0 524696 262144 0 0 -1000 S
+TK 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -408,8 +408,8 @@ roper large pillar tentacles~
 &+yvictims.  Its coloration and texture allow it to blend in with the suround&n
 &+yterrain&n
 ~
-1073752136 1 0 524696 262144 0 0 -1000 S
-TK 0 1 -1
+1073752136 1 0 0 524696 262144 0 0 -1000 S
+TK 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -425,8 +425,8 @@ roper moss large~
 &+yvictims.  This &+Groper&+y appears to be older than many of its kind, having been&n
 &+yin the grotto long enough for &+gmoss&+y to start growing on its hide.&n
 ~
-1073752136 1 0 524696 262144 0 0 -1000 S
-TK 0 1 -1
+1073752136 1 0 0 524696 262144 0 0 -1000 S
+TK 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -442,8 +442,8 @@ roper huge tentacles~
 &+yvictims.  This beast is far larger than most of its kind.  A dark and&n
 &+ymalevolent intelligence dwells within its eyes.&n
 ~
-1073752136 1 0 524696 262144 0 0 -1000 S
-TK 0 1 -1
+1073752136 1 0 0 524696 262144 0 0 -1000 S
+TK 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -458,8 +458,8 @@ elemental earth form~
 &+yHe glares around at his surroundings looking for people to punish for his&n
 &+ypredicament.&n
 ~
-1073752136 1 0 33554440 0 0 0 -1000 S
-EE 0 1 -1
+1073752136 1 0 0 33554440 0 0 0 -1000 S
+EE 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -474,8 +474,8 @@ elemental earth giant~
 &+yHe glares around at his surroundings looking for people to punish for his&n
 &+ypredicament.&n
 ~
-1073752136 1 0 33554560 0 0 0 -1000 S
-EE 0 1 -1
+1073752136 1 0 0 33554560 0 0 0 -1000 S
+EE 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -490,8 +490,8 @@ elemental earth noble~
 &+yHe glares around at his surroundings looking for people to punish for his&n
 &+ypredicament.&n
 ~
-1073752138 0 0 34078744 2048 0 0 -1000 S
-EE 0 1 -1
+1073752138 0 0 0 34078744 2048 0 0 -1000 S
+EE 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -507,8 +507,8 @@ roper huge mass tentacles~
 &+yvictims.  This beast is far larger than most of its kind.  A dark and&n
 &+ymalevolent intelligence dwells within its eyes.&n
 ~
-1073752138 1 0 34078752 0 0 0 -1000 S
-TK 0 1 -1
+1073752138 1 0 0 34078752 0 0 0 -1000 S
+TK 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -524,8 +524,8 @@ of the &+rBlood &+LHorde&n shows her allegiance to the forces of evil.  Equipped
 battered armor, it is still evident that this woman is heavily muscled and
 some might say even pretty.
 ~
-1140861002 1 0 268960184 32768 0 0 -1000 S
-PH 0 32 -1
+1140861002 1 0 0 268960184 32768 0 0 -1000 S
+PH 0 32 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -541,8 +541,8 @@ decorated with gnome skins this being looks like a freak of nature.  A badge
 of the &+rBlood &+Lhorde&n once worn with pride, and now forgotten adorns his
 shoulder.&n
 ~
-1140861002 8 0 408 1 0 0 -1000 S
-PT 0 1 -1
+1140861002 8 0 0 408 1 0 0 -1000 S
+PT 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -557,8 +557,8 @@ Seperated from his companions, this &+Chuman&n looks for a means of escape.&n
 &+gHis tattered robe and &+rblood-streaked&+g cloak show that he did not make it&n
 &+gunscathed.&n
 ~
-1073752136 1 0 151519640 34816 0 0 -1000 S
-PH 0 128 -1
+1073752136 1 0 0 151519640 34816 0 0 -1000 S
+PH 0 128 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -574,8 +574,8 @@ muscled and agile he has run into few things that he could not defeat.  Loyal
 to the &+rBlood &+LHorde&n, he still feels little remorse for those left on the other
 side of the &+yboulder&n.&n
 ~
-1140861002 1 0 408 2049 0 0 -1000 S
-HO 0 16 -1
+1140861002 1 0 0 408 2049 0 0 -1000 S
+HO 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -591,8 +591,8 @@ Now one of the leading members of the &+LHorde&n, she leads the rear guard so th
 some of her surrogate family may escape.  Gleaming &+Lblack&n shards flash in her
 everready hands.
 ~
-1140861002 1 0 2164261304 2049 0 0 -1000 S
-PH 0 8192 -1
+1140861002 1 0 0 2164261304 2049 0 0 -1000 S
+PH 0 8192 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -608,8 +608,8 @@ to kill his way up the ranks than from any means of duty, he still looks out
 for only himself.  Cloaked in burning &+rf&+Ri&+rr&+Re&n, he looks for anything to burn,
 kill, or destroy.
 ~
-1140861002 1 0 134218172 0 0 0 -1000 S
-PL 0 512 -1
+1140861002 1 0 0 134218172 0 0 0 -1000 S
+PL 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -625,8 +625,8 @@ are caked to her skin and armor, it would be a wonder if she ever bathed.
 The only things that gleam or shine on this warrior are her weapons and the
 deadly look in her eyes.&n
 ~
-1140861002 1 0 33554440 0 0 0 -1000 S
-PB 0 1 -1
+1140861002 1 0 0 33554440 0 0 0 -1000 S
+PB 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -639,8 +639,8 @@ A massive brute of an &+bogre&n scans the cavern for any enemies.
 Though as dumb as stone, he has twisted many a gnome into pretzels.  Garbed
 in the battle armor of his clan, he plans to bring death to all his enemies.
 ~
-1140861002 1 0 301989928 2048 0 0 -1000 S
-PO 0 1 -1
+1140861002 1 0 0 301989928 2048 0 0 -1000 S
+PO 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -654,8 +654,8 @@ to the gods of &+Ld&+We&+La&+Wt&+Lh&n and destruction.  Bolen has brought death 
 his enemies, yet even he saw defeat against the roper hordes.  He stands
 four feet in height and is garbed in the armor of the &+rBlood &+LHorde&n.
 ~
-1140861002 1 0 33554432 262144 0 0 -1000 S
-PD 0 32 -1
+1140861002 1 0 0 33554432 262144 0 0 -1000 S
+PD 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -673,8 +673,8 @@ him to rise quickly within its ranks for most underestimate him.  Now tired
 of the prolonged fight and then flight with the &+gropers&n, he is at his most
 vulnerable.
 ~
-1140865098 1 0 269484184 0 0 0 -1000 S
-HF 0 4 -1
+1140865098 1 0 0 269484184 0 0 0 -1000 S
+HF 0 4 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -691,8 +691,8 @@ her her life.  Ordered to stay behind while the leader of the blood horde
 scouts ahead, Sylara has begun to think there may be no escape.  &+YLightning&n
 arcs and swirls up and down &+bSylara's&n robe, giving off the smell of ozone.
 ~
-1073743946 1 0 33554432 0 0 0 -1000 S
-PH 0 512 -1
+1073743946 1 0 0 33554432 0 0 0 -1000 S
+PH 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -708,8 +708,8 @@ by years of practice with his bow, &+bK'zrak&n has few equals. Besides his
 bow, &+bK'zrak&n wears very little in way of clothing and armor, as he feels
 that it disturbs his aim.
 ~
-1140865098 1 0 33554444 32769 0 0 -1000 S
-PH 0 2 -1
+1140865098 1 0 0 33554444 32769 0 0 -1000 S
+PH 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -726,8 +726,8 @@ opening a rift to the &+yelemental plane of earth&n from where the masses came.
 The reak of foul odor and green skin give away this foul creatures race to be
 that of a troll.
 ~
-1140865098 1 0 8 0 0 0 -1000 S
-PT 0 2 -1
+1140865098 1 0 0 8 0 0 0 -1000 S
+PT 0 2 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -743,8 +743,8 @@ their dying life-force into his transformation.  Once only a priest of death,
 he now has become deaths reaper.  The crazed light in his eyes makes you
 wonder if he would even recognize an ally if he saw one.
 ~
-1140996170 1 0 301990076 296961 0 0 -1000 S
-UD 0 32 -1
+1140996170 1 0 0 301990076 296961 0 0 -1000 S
+UD 0 32 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -760,8 +760,8 @@ pitched battles against the &+groper&n masses. She silently curses her
 leaders stupidity for opening a rift to the &+yelemental plane of earth&n which
 the masses came through.
 ~
-1140865098 1 0 8 0 0 0 -1000 S
-PH 0 64 -1
+1140865098 1 0 0 8 0 0 0 -1000 S
+PH 0 64 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -776,8 +776,8 @@ than most of his allies, he made it alive this far after the pitched battles
 against the &+groper&n masses.  He silently curses his leaders stupidity for
 opening a rift to the &+yelemental plane of earth&n from wince the masses came.
 ~
-1140865096 1 0 8 0 0 0 -1000 S
-PH 0 2 -1
+1140865096 1 0 0 8 0 0 0 -1000 S
+PH 0 2 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -793,8 +793,8 @@ roper huge mass tentacles~
 &+yvictims.  This beast is far larger than most of its kind.  A dark and&n
 &+ymalevalent intelegence dwells within its eyes.&n
 ~
-1073743880 1 0 302514224 0 0 0 -1000 S
-TK 0 1 -1
+1073743880 1 0 0 302514224 0 0 0 -1000 S
+TK 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -809,8 +809,8 @@ elemental earth giant~
 &+yHe glares around at his surroundings looking for people to punish for his&n
 &+ypredicament.&n
 ~
-1073883208 1 0 524696 262144 0 0 -1000 S
-EE 0 1 -1
+1073883208 1 0 0 524696 262144 0 0 -1000 S
+EE 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -824,8 +824,8 @@ shark black red striped~
 &+Lred stripes hunts for anything that will satiate its hunger.  Rows of razor&n
 &+Lsharp teeth gleam off the slightest illumination.&n
 ~
-1074014280 1 0 2320 2 131072 0 -1000 S
-F 0 1 -1
+1074014280 1 0 0 2320 2 131072 0 -1000 S
+F 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -839,8 +839,8 @@ catfish large~
 &+Llong years of survival in the subterranean depths. Even the sharks tend to&n
 &+Lleave this foul tempered fish alone.&n
 ~
-8265 0 0 2320 0 131072 0 -1000 S
-F 0 1 -1
+8265 0 0 0 2320 0 131072 0 -1000 S
+F 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -853,8 +853,8 @@ small rothe scrawny~
 wiggle and squirm in its heavy fur coat.  It stares placidly around as it
 munches on the fungi and moss.&n
 ~
-8264 0 0 256 0 0 0 -1000 S
-A 0 1 -1
+8264 0 0 0 256 0 0 0 -1000 S
+A 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -867,8 +867,8 @@ small rothe~
 wiggle and squirm in its heavy fur coat.  It stares placidly around as it
 munches on the fungi and moss.&n
 ~
-8264 0 0 256 0 0 0 -1000 S
-A 0 1 -1
+8264 0 0 0 256 0 0 0 -1000 S
+A 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -884,8 +884,8 @@ pitched battles against the &+groper&n masses.  He silently curses his
 leader's stupidity for opening a rift to the &+yelemental plane of earth&n which
 the masses came through.
 ~
-1140865098 1 0 8 0 0 0 -1000 S
-PH 0 512 -1
+1140865098 1 0 0 8 0 0 0 -1000 S
+PH 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

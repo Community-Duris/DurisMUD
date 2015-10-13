@@ -3,7 +3,7 @@ paper guide~
 &+ya fishing&+c guide&n~
 &+yA ragged &+cpiece of paper&+y lies here.&N~
 ~
-12 28 3 0 7 0 0 16385 0 0 0
+12 28 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 8773 100
 E
@@ -52,7 +52,7 @@ sack worms earthworms bait~
 &+ya sack of earth&+Yworms&n~
 &+yA sack of fishing &+Ybait&+y lies here.&N~
 ~
-12 15 3 0 7 0 0 1 0 0 0
+12 15 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 541 100
 E
@@ -94,7 +94,7 @@ reel line~
 &+ca reel of fishing &+Cline&n~
 &+cA &+Ctangled&+c reel of fishing &+Cline&+c lies here.&n~
 ~
-12 3 3 0 7 0 0 1 0 0 0
+12 3 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 341 100
 E
@@ -187,7 +187,7 @@ spawn jelly eggs~
 &+Gsome frog s&+gp&+Ga&+gw&+Gn &+gj&+Ge&+gll&+Gy&n~
 &+gS&+Gome conden&+gs&+Ged je&+gll&+Gy enca&+gs&+Ge&+gs&+G the fre&+gs&+Gh frog e&+gggs.&n~
 ~
-8 45 3 0 7 0 12288 8388609 0 0 0
+8 45 3 0 7 0 12288 8388609 32768 0 0
 0 0 0 0 0 0 0 0
 -2 1482 100
 E
@@ -201,7 +201,7 @@ stick sticks bundle~
 &+ya bundle of sticks&n~
 &+ySome sticks have been &+Lsca&+ytt&+Lered&+y here.&N~
 ~
-5 5 3 0 7 0 8192 8193 0 0 0
+5 5 3 0 7 0 8192 8193 32768 0 0
 6 1 4 2 0 0 0 0
 2 39 100
 E
@@ -217,7 +217,7 @@ beaver pelt~
 &+ya soft beaver &+Ypelt&N~
 &+yA furry beaver &+Ypelt&+y lies here.&N~
 ~
-9 12 3 0 7 0 12288 2049 0 0 0
+9 12 3 0 7 0 12288 2049 32768 0 0
 3 0 0 3 0 0 0 0
 1 125 100
 E
@@ -233,7 +233,7 @@ glass bottle~
 &+ya glass bo&+Ltt&+yle&n~
 &+yA chi&+Lpp&+yed glass bottle has been carelessly tossed here.&N~
 ~
-13 7 3 0 7 0 12288 1 0 0 0
+13 7 3 0 7 0 12288 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 13 100
 E
@@ -245,7 +245,7 @@ eagle egg~
 &+Wa full-size &+Leagle &+wegg&N~
 &+WA fine looking &+Leagle &+wegg&+W lies here.&n~
 ~
-12 45 3 0 7 0 0 16385 0 0 0
+12 45 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 9291 100
 E

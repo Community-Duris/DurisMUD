@@ -33,7 +33,7 @@ tattered paper silk map~
 a &+Wtattered piece of silk-paper&n~
 Tattered and forgotten, a small strip of paper lies crumpled in the corner.~
 ~
-12 28 1 2 7 0 4096 16385 0 0 0
+12 28 1 2 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -724,7 +724,7 @@ sealed document~
 a &+Rsealed&+W document&n~
 &+wA &+ybound&+w and &+Rsealed &+Wdocument&+w has been placed here.&n~
 ~
-12 28 0 0 7 0 0 1 0 0 0
+12 28 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 E

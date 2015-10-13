@@ -8,8 +8,8 @@ decaying zombie sentry~
 &+Lhis lack of sense and humanity.  This zombie seems to have been raised
 &+Lto protect the chamber to the south.
 ~
-2058 1 0 0 0 0 0 -1000 S
-zo 0 1 -1
+2058 1 0 0 0 0 0 0 -1000 S
+zo 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -24,8 +24,8 @@ flaming skeleton undead~
 &+Rwreckoned with.  The evil fires of this lava seem to have forged
 &+Rthis flaming skeleton out of the fallen souls of Cyric's victims.
 ~
-2120 1 0 536870912 1 0 0 -1000 S
-EF 0 1 -1
+2120 1 0 0 536870912 1 0 0 -1000 S
+EF 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -39,8 +39,8 @@ large bat~
 &+Lred eyes give it infravision and let it safely glide through
 &+Lthese tunnels in search of food.
 ~
-2056 1 0 0 0 0 0 -1000 S
-B 0 1 1
+2056 1 0 0 0 0 0 0 -1000 S
+B 0 1 0 1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -53,8 +53,8 @@ wandering zombie~
 &+Lfrom its rotting decomposing body.  The zombie lets off random
 &+Lgroans as it stumbles through the tunnels aimlessly.
 ~
-2056 1 0 0 0 0 0 -1000 S
-zo 16 1 -1
+2056 1 0 0 0 0 0 0 -1000 S
+zo 16 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -70,8 +70,8 @@ fanatical necromancer cyric~
 &+Lwho get lost in the mountains to his god, Cyric, and then raising
 &+Ltheir dead bodies into undead.
 ~
-2058 1 0 8 0 0 0 -1000 S
-H 0 1024 -1
+2058 1 0 0 8 0 0 0 -1000 S
+H 0 1024 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -84,8 +84,8 @@ decaying zombie~
 &+Lfrom its rotting decomposing body.  The zombie lets off random
 &+Lgroans as it stumbles through the tunnels aimlessly.
 ~
-2056 1 0 0 0 0 0 -1000 S
-zo 16 1 -1
+2056 1 0 0 0 0 0 0 -1000 S
+zo 16 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -99,8 +99,8 @@ skeleton humanoid~
 &+Labomination has bits of flesh hanging from its bony body and an
 &+Levil stare with eyes of red fire.
 ~
-2056 0 0 0 0 0 0 -1000 S
-sk 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+sk 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -114,8 +114,8 @@ dark spectre~
 &+Labomination has bits of flesh hanging from its bony body and an
 &+Levil stare with eyes of red fire.
 ~
-2056 1 0 8 0 0 0 -1000 S
-sp 0 8192 -1
+2056 1 0 0 8 0 0 0 -1000 S
+sp 0 8192 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -129,8 +129,8 @@ partially decayed zombie~
 &+Labomination has bits of flesh hanging from its bony body and an
 &+Levil stare with eyes of red fire.
 ~
-2056 1 0 8 0 0 0 -1000 S
-zo 0 1 -1
+2056 1 0 0 8 0 0 0 -1000 S
+zo 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -145,8 +145,8 @@ maniacal worshiper~
 &+Lwhich make him look utterly insane.  &+WFoam&+L drips from his mouth
 &+Las he gives himself to the God of Destruction.
 ~
-1073743880 1 0 8 0 0 0 -1000 S
-PH 0 1 -1
+1073743880 1 0 0 8 0 0 0 -1000 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -161,8 +161,8 @@ maniacal worshiper~
 &+Lwhich make him look utterly insane.  &+WFoam&+L drips from his mouth
 &+Las he gives himself to the God of Destruction.
 ~
-1073743880 1 0 8 0 0 0 -1000 S
-PH 0 1 -1
+1073743880 1 0 0 8 0 0 0 -1000 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -177,8 +177,8 @@ entranced follower~
 &+Lblessed the others, and this follower will carve the symbols of Cyric
 &+Linto his own face.
 ~
-2058 0 0 0 0 0 0 -1000 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -193,8 +193,8 @@ high priest cyric~
 &+Lhis half-decayed face is covered in scars and shadows from his massive
 &+Lruned hood.
 ~
-2058 1 0 8 0 0 0 -1000 S
-PH 0 32 -1
+2058 1 0 0 8 0 0 0 -1000 S
+PH 0 32 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -209,8 +209,8 @@ imp servant~
 &+ron you is if you see his black pupils in your direction.  He currently
 &+rpreps the priests dagger to continue with the sacrament.
 ~
-1073743882 0 0 24 0 0 0 -1000 S
-Y 0 1 1
+1073743882 0 0 0 24 0 0 0 -1000 S
+Y 0 1 0 1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -224,8 +224,8 @@ tormented spirit~
 &+Wover its ghostly face and body.  This spirit seems to have
 &+Wformed in from below as this domain has been visited by mortal hands.
 ~
-2056 1 0 24 0 0 0 -1000 S
-UG 0 2 -1
+2056 1 0 0 24 0 0 0 -1000 S
+UG 0 2 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -240,8 +240,8 @@ imp servant~
 &+ron you is if you see his black pupils in your direction.  He currently
 &+rpreps the priests dagger to continue with the sacrament.
 ~
-1073743882 0 0 24 0 0 0 -1000 S
-Y 0 512 1
+1073743882 0 0 0 24 0 0 0 -1000 S
+Y 0 512 0 1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

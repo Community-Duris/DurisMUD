@@ -29,7 +29,7 @@ bugger egg~
 &+ga bug&+rger &+Wegg&N~
 A small round egg lies here.~
 ~
-19 48 3 0 7 0 0 16385 0 1 0
+19 48 3 0 7 0 0 16385 32768 1 0
 24 0 0 0 0 0 0 0
 2 0 100
 E
@@ -41,7 +41,7 @@ bugger egg~
 &+ga bug&+rger &+Wegg&N~
 &+gA small &+gbug&+rgers &+Wegg&+g sits here.&N~
 ~
-12 46 3 0 7 0 8491016 16385 0 1 0
+12 46 3 0 7 0 8491016 16385 32768 1 0
 0 0 0 0 0 0 0 0
 2 0 100
 E
@@ -53,7 +53,7 @@ bugger egg~
 &+ga bug&+rger &+Wegg&N~
 &+ga round shiny bug&+rgers &+Wegg &+gis here&N~
 ~
-13 46 3 0 7 0 8392712 16385 0 1 0
+13 46 3 0 7 0 8392712 16385 32768 1 0
 0 0 0 0 0 0 0 0
 2 0 100
 E
@@ -65,7 +65,7 @@ bugger carapace~
 &+ga &+rbug&+ggers cara&+rpace&N~
 &+gA &+rbug&+ggers cara&+rpace &+gis piled here.&N~
 ~
-12 46 3 0 7 0 0 1 0 1 0
+12 46 3 0 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 10 0 100
 E

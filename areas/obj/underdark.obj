@@ -3,7 +3,7 @@ half ancient amulet first~
 &+Lthe first half of an &+Mancient &+Lamulet&n~
 &+Lone half of an &+mancient &+Lamulet lies here.&n~
 ~
-9 19 3 0 7 0 0 5 64 0 0
+9 19 3 0 7 0 0 5 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -15,7 +15,7 @@ half ancient amulet second~
 &+Lthe second half of an &+Mancient &+Lamulet&n~
 &+Lone half of an &+mancient &+Lamulet lies here.&n~
 ~
-9 19 3 0 7 0 0 5 64 0 0
+9 19 3 0 7 0 0 5 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 A
@@ -83,7 +83,7 @@ bloody skin roper~
 &+gthe &+rbloody &+gskin of a &+GRoper&n~
 &+gThe &+rbloody &+gskin of a &+GRoper &+glies here.&n~
 ~
-9 15 3 0 7 0 0 20481 0 0 0
+9 15 3 0 7 0 0 20481 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100 0 16 0 0
 A

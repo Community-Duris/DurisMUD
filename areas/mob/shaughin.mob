@@ -17,8 +17,8 @@ young shaughin hunter~
 &+gshaughin has trained heavily in the art of fighting and should not&n
 &+gbe taken lightly.&n
 ~
-1074006088 0 0 256 2 0 0 -1000 S
-H 0 1 2
+1074006088 0 0 0 256 2 0 0 -1000 S
+H 0 1 0 2
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -42,8 +42,8 @@ shaughin guard training~
 &+gthis point in his career, this shaughin should not be taken lightly and
 &+gshows the scarred knuckles of many a good brawl.&n
 ~
-1141114956 0 0 256 2 0 0 -1000 S
-h 0 1 2
+1141114956 0 0 0 256 2 0 0 -1000 S
+h 0 1 0 2
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -67,8 +67,8 @@ shaughin gatherer~
 &+gart of foraging rather then fighting, this female must assist the tribe
 &+gfrom time to time to defend the village.&n
 ~
-1074006088 0 0 256 2 0 0 -1000 S
-h 0 1 3
+1074006088 0 0 0 256 2 0 0 -1000 S
+h 0 1 0 3
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -93,8 +93,8 @@ shaughin fisherman~
 &+gOther then the occasional tussle with one of those very snakes, this
 &+gfisherman leads a fairly sedate and enjoyable lifestyle.&n
 ~
-1074006088 0 0 256 2 0 0 -1000 S
-h 0 1 3
+1074006088 0 0 0 256 2 0 0 -1000 S
+h 0 1 0 3
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -120,8 +120,8 @@ shaughin hunter~
 &+gtrophies of past kills are displayed on various pieces of jewelry
 &+gwhich he wears in prominent places.&n
 ~
-1074006088 0 0 256 2 0 0 -1000 S
-h 0 1 3
+1074006088 0 0 0 256 2 0 0 -1000 S
+h 0 1 0 3
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -149,8 +149,8 @@ shaughin guard~
 &+gwell, many of which look like they would have been fatal wounds to his
 &+gweaker elven ancestors.&n
 ~
-1141114952 0 0 256 2 0 0 -1000 S
-h 0 1 3
+1141114952 0 0 0 256 2 0 0 -1000 S
+h 0 1 0 3
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -174,8 +174,8 @@ retired shaughin hunter~
 &+gcaverns.  Instead, he lounges around with a smug look of importance
 &+gon his face and stares at his many trophies from impessive past kills.&n
 ~
-1074006090 0 0 256 2 0 0 -1000 S
-h 0 1 3
+1074006090 0 0 0 256 2 0 0 -1000 S
+h 0 1 0 3
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -195,8 +195,8 @@ cavern constrictor~
 &+ymore interested in lounging in the water here then hunting for any
 &+ypotential meals.&n
 ~
-1074006090 0 0 256 2 0 0 -1000 S
-RS 0 1 5
+1074006090 0 0 0 256 2 0 0 -1000 S
+RS 0 1 0 5
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -216,8 +216,8 @@ cavern death viper~
 &+Linterested in an adventurer sized meal, its coiled body seems willing
 &+Lto unleash a lightning fast strike should it feel threatened.&n
 ~
-1074006088 1 0 256 2 0 0 -1000 S
-RS 0 1 4
+1074006088 1 0 0 256 2 0 0 -1000 S
+RS 0 1 0 4
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -240,8 +240,8 @@ massive king constrictor~
 &+Wto indicate this reptile has no problem scouring the lower caverns for
 &+Wmore appropriately sized beasts to feast upon.&n
 ~
-1074006090 0 0 256 2 0 0 -1000 S
-RS 0 1 6
+1074006090 0 0 0 256 2 0 0 -1000 S
+RS 0 1 0 6
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -259,8 +259,8 @@ cavern constrictor young~
 &+ysnake instead menaces the much more harmless flora and fauna of this
 &+ysettlement.&n
 ~
-1074006088 1 0 256 2 0 0 -1000 S
-RS 0 1 2
+1074006088 1 0 0 256 2 0 0 -1000 S
+RS 0 1 0 2
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -278,8 +278,8 @@ cavern constrictor young~
 &+ysnake instead menaces the much more harmless flora and fauna of this
 &+ysettlement.&n
 ~
-1074006088 1 0 256 2 0 0 -1000 S
-RS 0 1 2
+1074006088 1 0 0 256 2 0 0 -1000 S
+RS 0 1 0 2
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -306,8 +306,8 @@ shaughin hunter delirious~
 &+cin the settlement, the other shaughin simply avoid him entirely but
 &+cotherwise offer no assistance.&n
 ~
-1074006088 1 0 256 2 0 0 -1000 S
-h 0 1 3
+1074006088 1 0 0 256 2 0 0 -1000 S
+h 0 1 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -329,8 +329,8 @@ thregamar master hunter~
 &+Lcaverns which make up his settlements true hunting grounds.  He seems
 &+Lto be &+yrewarding &+Lthe younger hunters when they bring him &+Wtrophies&+L.&n
 ~
-1074004042 0 0 134742328 268435486 67371008 0 -1000 S
-h 0 1 3
+1074004042 0 0 0 134742328 268435486 67371008 0 -1000 S
+h 0 1 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

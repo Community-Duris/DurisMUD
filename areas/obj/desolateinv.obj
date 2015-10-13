@@ -168,7 +168,7 @@ stinky meat bones~
 &+Wsome stinky meat bones&N~
 &+WSomeone has left some stinky meat bones here.&n~
 ~
-13 10 3 0 7 0 8392704 16385 0 0 0
+13 10 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -217,7 +217,7 @@ sad monkey~
 &+ya sad little monkey&n~
 &+yA sad little monkey cries quietly here.&n~
 ~
-15 2 3 0 7 0 4096 1 0 0 0
+15 2 3 0 7 0 4096 1 32768 0 0
 100 5 0 100 0 0 0 0
 0 1 100
 E
@@ -232,7 +232,7 @@ silver neck chain~
 &+Ca silver neck chain&n~
 &+CA silver neck chain has been dropped here.&n~
 ~
-9 22 3 0 7 0 4096 5 0 0 0
+9 22 3 0 7 0 4096 5 32768 0 0
 5 0 0 3 0 0 0 0
 0 121 100
 E
@@ -245,7 +245,7 @@ badge armageddon~
 &+Lthe badge of &+rarmageddon&n~
 &+LA badge from the army of &+rarmageddon&+L has been dropped here.&n~
 ~
-11 3 3 0 7 0 0 2097153 0 0 0
+11 3 3 0 7 0 0 2097153 32768 0 0
 0 0 0 0 0 0 0 0
 0 892 100
 E
@@ -374,7 +374,7 @@ shard metal~
 &+wa shard of sharpened &+cmetal&n~
 &+wA thin shard of sharp &+cmetal&+w lies here.&n~
 ~
-8 15 3 0 7 0 4096 1 0 0 0
+8 15 3 0 7 0 4096 1 32768 0 0
 0 0 1 0 0 0 0 0
 0 1 100
 E
@@ -450,7 +450,7 @@ dark blade armageddon~
 &+La dark blade of &+rarmageddon&n~
 &+LA black longsword with the &+rarmageddon&+L sigil has been left here.&n~
 ~
-5 16 3 0 7 0 0 8193 0 0 0
+5 16 3 0 7 0 0 8193 32768 0 0
 9 2 5 0 0 0 0 0
 0 17222 100
 A
@@ -683,7 +683,7 @@ leather bindings~
 &+ysome cut leather bindings&n~
 &+ySome bindings that have already been cut have been left here.&n~
 ~
-8 14 3 0 7 0 4194304 1 0 0 0
+8 14 3 0 7 0 4194304 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100 8192 0 0 0
 #77346
@@ -782,7 +782,7 @@ repaired wheel~
 &+La repaired &+ywheel&n~
 &+LA repaired &+ywagon wheel&+L has been left here.&n~
 ~
-8 6 3 0 7 0 0 1 0 0 0
+8 6 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 98 100
 E
@@ -1081,7 +1081,7 @@ severed hand gromlog~
 &+rthe severed hand of gromlog~
 &+rA disgusting severed hand lies here.&n~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -1254,7 +1254,7 @@ severed hand alboa~
 &+rthe severed hand of alboa&n~
 &+rA disgusting severed hand lies here.&n~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -1337,7 +1337,7 @@ severed hand mackama~
 &+rthe severed hand of mackama&n~
 &+rA disgusting severed hand lies here.&n~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E

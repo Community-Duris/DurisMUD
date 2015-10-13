@@ -8,8 +8,8 @@ sprouting from its head. It is very fishlike and about eighteen
 feet in length. In the middle of its head it has three large wide
 eye-slits stacked on top of each other.
 ~
-1141135432 0 0 0 0 0 0 0 S
-F 0 4 4
+1141135432 0 0 0 0 0 0 0 0 S
+F 0 4 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -24,8 +24,8 @@ brown underbelly. There are three slit-like eyes, one on top of
 the other, on the front of its bulbous head, and are protected by
 bony ridges.
 ~
-1141129224 1 0 24 0 0 0 0 S
-F 0 4 3
+1141129224 1 0 0 24 0 0 0 0 S
+F 0 4 0 3
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -35,8 +35,8 @@ sneaky grell~
 &+gA grell prowls the cavern.&n
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -51,8 +51,8 @@ Khildarak to help prepare the new settlement for the
 Clan.  He is dressed in a basic set of purple wormskin
 armor that his clan often wears.
 ~
-8 64 0 2 0 0 0 0 S
-PD 0 1 -1
+8 64 0 0 2 0 0 0 0 S
+PD 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -65,8 +65,8 @@ bat~
 what used to be a quite shaft. It flutters around swooping down as if
 trying to drive off what startled it.
 ~
-10 1 0 134217728 0 0 0 0 S
-B 5 1 1
+10 1 0 0 134217728 0 0 0 0 S
+B 5 1 0 1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -83,8 +83,8 @@ demon figure~
 &+rbeing. Released by the greed of the Duergar Dwarves digging to deeply
 &+rit quickly destroyed those who were too slow to flee.
 ~
-8 1 0 0 0 0 0 0 S
-X 5 2097152 5
+8 1 0 0 0 0 0 0 0 S
+X 5 2097152 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -100,8 +100,8 @@ lizard cave large~
 &+ghave no pupil.  The creature shys away from any light brighter than a weak
 &+gtorch flame.&n
 ~
-280648 0 0 536903936 0 0 0 0 S
-R 0 0 4
+280648 0 0 0 536903936 0 0 0 0 S
+R 0 0 0 4
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -116,8 +116,8 @@ colorless salamander amphibian~
 &+gthey do not move very quickly, they are large enough to be able to defend
 &+gthemselves well.
 ~
-280648 0 0 536903936 0 0 0 0 S
-ac 0 0 4
+280648 0 0 0 536903936 0 0 0 0 S
+ac 0 0 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

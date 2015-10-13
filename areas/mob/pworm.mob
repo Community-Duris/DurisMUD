@@ -9,8 +9,8 @@ a &+mpurple worm&n~
 &+mmuch like any other worm, except that it is purple, and has
 &+man abnormally large set of teeth.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-RS 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+RS 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -24,8 +24,8 @@ Still sleeping and incased in much of its egg shell, it isn't much
 more than a larve, except that weighs as much as an ogre, and has
 a set of teeth that could rip through armor.
 ~
-1073744008 0 0 0 0 0 0 -1000 S
-RS 0 1 -1
+1073744008 0 0 0 0 0 0 0 -1000 S
+RS 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -39,8 +39,8 @@ worm is still very large, and has enormous teeth, at least the length
 of an orc's arm.  Compared to the average purple worm, this one is
 a monster.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-A 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+A 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -55,8 +55,8 @@ doesn't have quite the copacity to swallow someone whole, as the cavern
 is too constricting on its belly, and it would need to burrow a larger
 cavern to swallow someone whole.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-G 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -67,8 +67,8 @@ mouth~
 ~
 This is a mouth, it has 7 foot teeth.
 ~
-14378 0 0 805308572 14528 0 0 -1000 S
-D 0 1 -1
+14378 0 0 0 805308572 14528 0 0 -1000 S
+D 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -78,8 +78,8 @@ worm~
 &+MA segment of the gargantuan worm thrashes about here.&N
 ~
 ~
-2058 1 0 806357178 276675 68681856 524288 0 S
-PW 0 65 7
+2058 1 0 0 806357178 276675 68681856 524288 0 S
+PW 0 65 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -94,8 +94,8 @@ draknahov slayer~
 &+msomething important because he attacks them with a bloodlust
 &+mthat is rarely seen.
 ~
-1073756232 0 0 940050686 14529 0 0 0 S
-G 0 5 -1
+1073756232 0 0 0 940050686 14529 0 0 0 S
+G 0 5 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -108,8 +108,8 @@ assassin battle scarred~
 only, and that is to ambush someone in the worm tunnels.  He avoids
 contact with about just anyone he sees, and is very sly about his work.
 ~
-1074149576 0 0 941107390 14529 0 0 -1000 S
-PL 0 8194 -1
+1074149576 0 0 0 941107390 14529 0 0 -1000 S
+PL 0 8194 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -124,8 +124,8 @@ a &+mmutated purple worm&n~
 &+ma purple worm, and a large sack-like tail dragging behind him, it
 &+mdefinitly doesn't look friendly.
 ~
-1073756232 0 0 268435592 2048 0 0 -1000 S
-PW 0 1 6
+1073756232 0 0 0 268435592 2048 0 0 -1000 S
+PW 0 1 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -139,8 +139,8 @@ has taken it upon himself to be the best, and he usually seems to be
 as he slaughters the worms with such acurracy that an ogre would have
 a tough time doing the damage he could do.
 ~
-1073760264 0 0 3104319678 14531 0 0 -1000 S
-HG 0 16385 -1
+1073760264 0 0 0 3104319678 14531 0 0 -1000 S
+HG 0 16385 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -153,8 +153,8 @@ dragon shadow~
 its scales are so dark they, the dragon looks like a shadow as it moves.
 Infact, many people walk by it dismissing it as a shadow.
 ~
-1074149448 0 0 3155765438 14531 0 0 -1000 S
-D 0 5 -1
+1074149448 0 0 0 3155765438 14531 0 0 -1000 S
+D 0 5 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -8,8 +8,8 @@ remains a force to be reckoned with.  He stands guard at the foot of the
 great castle without acknowledging anyone's presence.  He seems to not care
 about anything but himself.
 ~
-10 0 0 33554536 0 0 0 0 S
-PH 0 1 -1
+10 0 0 0 33554536 0 0 0 0 S
+PH 0 1 0 -1
 35 -1 -62 43d107+1935 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -24,8 +24,8 @@ seem stupid as well as crazy.  Those eyes would give &+Lnightmares&N to even the
 bravest of people and prove that this sorceror has lived through those
 &+Lnightmares.
 ~
-136 1 0 8 0 0 0 0 S
-PH 0 512 -1
+136 1 0 0 8 0 0 0 0 S
+PH 0 512 0 -1
 21 11 32 21d32+168 3d5+3
 4.0.5.0 18711
 8 8 1
@@ -36,8 +36,8 @@ A rat scrurries around in the dark.
 ~
    The rat is old and ugly.
 ~
-8 56 0 33554432 0 0 0 0 S
-A 0 0 -1
+8 56 0 0 33554432 0 0 0 0 S
+A 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -50,8 +50,8 @@ A servant stands here, looking for his masters.
 on top of his head scratching.  He keeps shouting for his masters.  Hopefully
 he will find them or nothing will get done around here.
 ~
-2248 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2248 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -64,8 +64,8 @@ A maid looks confused.
 searches for her masters.  She looks frustrated and somewhat sick.  Hopefully
 she will find them or the castle will fall apart.
 ~
-2248 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2248 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -79,8 +79,8 @@ intellegent.  He's looking at some scrolls and concentrating on his
 studies.  Juku seems to be very interested in prayer and his precious
 books.
 ~
-100698122 0 0 41032 0 0 0 1000 S
-PE 4 128 -1
+100698122 0 0 0 41032 0 0 0 1000 S
+PE 4 128 0 -1
 55 -3 -75 47d110+2538 6d6+25
 7.0.0.5 114210
 8 8 1
@@ -93,8 +93,8 @@ A maid is here cleaning hastily.
 dusts and mops.  She looks frustrated but still manages to clean
 the rooms.
 ~
-2248 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2248 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -107,8 +107,8 @@ renardien apprentice~
 years.  However, the things he has seen in this castle have driven him
 completely insane. He mumbles unpredictably in a wild uncontrollable fright.
 ~
-1073874954 56 0 167772234 0 0 0 0 S
-PE 4 512 -1
+1073874954 56 0 0 167772234 0 0 0 0 S
+PE 4 512 0 -1
 56 -1 -56 41d72+1763 6d6+12
 1.7.6.3 99630
 6 8 1
@@ -122,8 +122,8 @@ in the castle has driven him mad.  If not for his piercing red eyes, he
 would seem stupid as well as crazy.  His eyes would give nightmares to even
 the bravest of people.
 ~
-136 56 0 134217736 256 0 0 0 S
-PH 0 512 -1
+136 56 0 0 134217736 256 0 0 0 S
+PH 0 512 0 -1
 31 6 0 31d56+465 4d6+7
 5.7.9.1 40176
 8 8 1
@@ -135,8 +135,8 @@ An ordinary&+W castle guard&+w stands here protecting the castle.
    This guard has been trained to help and protect the residents of the
 castle.  He has a bulging build and seems eager to fight.
 ~
-75499608 0 0 33554440 0 0 0 1000 S
-PH 1 8 -1
+75499608 0 0 0 33554440 0 0 0 1000 S
+PH 1 8 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -149,8 +149,8 @@ A &+Bholy assistant&N to &+bCetyla&N stands quietly, ready to help her mistress.
 to do what she asks.  She's versed in religion and continues to help her
 mistress in this time of grief.
 ~
-1140852746 0 0 8 0 0 0 1000 S
-PE 4 32 -1
+1140852746 0 0 0 8 0 0 0 1000 S
+PE 4 32 0 -1
 46 6 0 31d77+496 4d6+7
 5.7.9.1 40176
 8 8 2
@@ -162,8 +162,8 @@ An ordinary&+W castle guard&+w stands here protecting the castle.
    This guard has been trained to help and protect the residents of the
 castle.  He looks trained and eager to fight.
 ~
-67110986 0 0 33554440 0 0 0 1000 S
-PH 1 8 -1
+67110986 0 0 0 33554440 0 0 0 1000 S
+PH 1 8 0 -1
 41 -1 -56 41d107+1845 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -177,8 +177,8 @@ because no one will get rid of it.  It rots as it stands and is weak
 from losing its preservation.  However, its evil nature makes it
 a difficult kill ... for a child.
 ~
-1140852872 56 0 0 0 0 0 -1000 S
-zo 0 1 -1
+1140852872 56 0 0 0 0 0 0 -1000 S
+zo 0 1 0 -1
 12 15 61 12d27+72 2d5+2
 0.0.0.0 5832
 8 8 1
@@ -190,8 +190,8 @@ The &+Mskeleton of a human&N stands there protecting its new master.
    This undead was recently raised by Giauque's ghost.  It seems content on
 doing whatever necessary to protect its new master.
 ~
-67110922 0 0 72 0 0 0 -1000 S
-SK 0 1 -1
+67110922 0 0 0 72 0 0 0 -1000 S
+SK 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -205,8 +205,8 @@ powerful than his human form.  He haunts the basement seeking revenge for
 his and his family's death.  He yearns to grasp hold of his murderer and to
 kill him without mercy.
 ~
-67110922 0 0 167837722 2304 0 0 -1000 S
-UG 0 1024 -1
+67110922 0 0 0 167837722 2304 0 0 -1000 S
+UG 0 1024 0 -1
 55 -3 -91 49d80+2597 6d6+25
 0.0.0.0 119070
 10 10 1
@@ -218,8 +218,8 @@ An ordinary&+W castle guard&+w stands here looking tired.
    This guard has been trained to help and protect the residents of the
 castle.  He looks as if he would be eager to fight if he was so tired.
 ~
-1140852810 0 0 33554440 0 0 0 1000 S
-PH 1 8 -1
+1140852810 0 0 0 33554440 0 0 0 1000 S
+PH 1 8 0 -1
 41 -1 -56 41d107+1845 6d6+12
 1.7.6.3 99630
 4 8 1
@@ -232,8 +232,8 @@ chief remy~
 He's built like a house and looks like he could lift one too.  He must
 work out constantly to keep that shape.
 ~
-1174407182 0 0 587276344 14528 0 0 500 S
-PH 0 2 -1
+1174407182 0 0 0 587276344 14528 0 0 500 S
+PH 0 2 0 -1
 43 -1 -62 43d107+1935 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -244,8 +244,8 @@ A LARGE rat scrurries around in the dark.
 ~
    The rat is old and ugly.  It chews on something.
 ~
-10 56 0 33554432 0 0 0 0 S
-A 0 0 -1
+10 56 0 0 33554432 0 0 0 0 S
+A 0 0 0 -1
 35 6 -12 35d70+525 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -257,8 +257,8 @@ cetyla~
    &+bCetyla&N, the purest woman in the world sits here deep in prayer.
 A beauty, she has devoted herself to the Quintaragon family and her husband.
 ~
-33554442 0 0 587309096 14528 0 0 0 S
-PH 0 128 -1
+33554442 0 0 0 587309096 14528 0 0 0 S
+PH 0 128 0 -1
 51 -1 -69 45d99+1980 6d6+12
 5.9.8.4 109350
 5 8 2
@@ -272,8 +272,8 @@ her hair is golden blonde.  She haunts the castle in search for a meaning
 for her death.  She cries for the unborn child she died with.  Her wails
 of pain freeze the blood of the bravest.
 ~
-100796426 0 0 637640878 2048 0 0 1000 S
-UG 0 512 -1
+100796426 0 0 0 637640878 2048 0 0 1000 S
+UG 0 512 0 -1
 56 -3 -91 49d80+2597 6d6+25
 0.0.0.0 119070
 10 10 2
@@ -286,8 +286,8 @@ hildebrand assistant~
 Glynn and her teaching to the apprentices.  He looks a little tired but will
 never upset his mistress.
 ~
-67110922 0 0 0 0 0 0 0 S
-PG 0 512 -1
+67110922 0 0 0 0 0 0 0 0 S
+PG 0 512 0 -1
 51 2 -28 40d64+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -299,8 +299,8 @@ An apprentice mage stands here, practicing his spells.
    This apprentice can not be more than 10 years old.  He wants to become a
 great mage like his mistress was so they can seek revenge for her family.
 ~
-2056 0 0 0 0 0 0 0 S
-PE 0 512 -1
+2056 0 0 0 0 0 0 0 0 S
+PE 0 512 0 -1
 20 13 35 20d24+100 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -313,8 +313,8 @@ The cook stands here, desperately trying to find some dragon eggs.
 he ate himself, considering he is so much larger than any of the family
 members.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 1.0.0.0 129
 8 8 1
@@ -326,8 +326,8 @@ fire elemental~
 &+r   A fire elemental stands here like a column of fire and looks unhappy to
 &+rbe here.
 ~
-2056 56 0 64 0 0 0 0 S
-EF 0 0 -1
+2056 56 0 0 64 0 0 0 0 S
+EF 0 0 0 -1
 20 13 25 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -339,8 +339,8 @@ earth elemental~
 &+y    The earth elemental stands here like a living rock and seems a tad bit
 &+yupset.
 ~
-2056 56 0 64 0 0 0 0 S
-EE 0 0 -1
+2056 56 0 0 64 0 0 0 0 S
+EE 0 0 0 -1
 20 13 25 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -352,8 +352,8 @@ air elemental~
 &+C   The air elemental, composed of pure tornado-like air, does not look
 &+Chappy.
 ~
-2056 56 0 2 0 0 0 0 S
-EA 0 0 -1
+2056 56 0 0 2 0 0 0 0 S
+EA 0 0 0 -1
 20 13 25 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -365,8 +365,8 @@ water elemental~
    &+bA water elemental stands here like a living current and seems to be a
 &+btad bit upset about being here.
 ~
-2056 56 0 2048 0 0 0 0 S
-EW 0 0 -1
+2056 56 0 0 2048 0 0 0 0 S
+EW 0 0 0 -1
 20 13 25 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -380,8 +380,8 @@ the house looking for revenge of his and his family's death.  Looking upset,
 he floats back and forth searching for answers to the injustices done to him.
 The magic radiating from this entity is almost blinding.
 ~
-100665354 0 0 134258826 2048 0 0 0 S
-UG 0 512 -1
+100665354 0 0 0 134258826 2048 0 0 0 S
+UG 0 512 0 -1
 56 -3 -105 50d80+2650 6d6+25
 0.0.0.0 121500
 8 8 1
@@ -393,8 +393,8 @@ fire elemental~
 &+r   The fire elemental stands here like a column of pure fire and does not
 &+rlook happy about being here.
 ~
-67110922 0 0 64 0 0 0 0 S
-EF 0 1 -1
+67110922 0 0 0 64 0 0 0 0 S
+EF 0 1 0 -1
 50 2 -31 38d80+798 4d7+10
 0.0.0.0 49248
 8 8 0
@@ -406,8 +406,8 @@ earth elemental~
 &+y    The earth elemental stands here like a living rock, and does not look
 &+ylike he wishes to be here.
 ~
-67110922 0 0 64 0 0 0 0 S
-EE 0 1 -1
+67110922 0 0 0 64 0 0 0 0 S
+EE 0 1 0 -1
 52 2 -38 40d80+840 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -419,8 +419,8 @@ air elemental~
    &+CThe air elemental, composed of pure tornado-like air, does not look
 &+Chappy.
 ~
-67110922 0 0 2 0 0 0 0 S
-EA 0 0 -1
+67110922 0 0 0 2 0 0 0 0 S
+EA 0 0 0 -1
 38 2 -31 38d80+798 4d7+10
 0.0.0.0 49248
 8 8 0
@@ -432,8 +432,8 @@ water elemental~
    &+bA water elemental flows here like a living current and seems to be a
 &+btad bit upset.
 ~
-67110922 0 0 2048 0 0 0 0 S
-EW 0 1 -1
+67110922 0 0 0 2048 0 0 0 0 S
+EW 0 1 0 -1
 50 2 -31 38d80+798 4d7+10
 0.0.0.0 49248
 8 8 0
@@ -449,8 +449,8 @@ povtail dog~
 
 The dog is playing with a &+Wdiamond studded&N bone.
 ~
-10 0 0 1572864 0 0 0 0 S
-A 0 1 -1
+10 0 0 0 1572864 0 0 0 0 S
+A 0 1 0 -1
 38 8 16 26d65+338 3d6+4
 0.0.0.0 23166
 8 8 1
@@ -462,8 +462,8 @@ An ordinary&+W castle guard&+w stands here protecting the castle.
    This guard has been trained to help and protect the residents of the
 castle.  He looks eager to fight.
 ~
-67110986 0 0 33554442 2048 0 0 1000 S
-PH 1 8 -1
+67110986 0 0 0 33554442 2048 0 0 1000 S
+PH 1 8 0 -1
 44 -1 -65 44d107+1980 6d6+12
 4.9.8.3 106920
 8 8 1
@@ -480,8 +480,8 @@ to &+Whuge &+rflames&N.  He is a great force that successfully killed the most
 magically talented family in the realms. Looking at him, one feels lucky he
 hasn't killed you yet.
 ~
-1109526540 1 0 234954780 14528 0 0 -500 S
-D 0 2097920 -1
+1109526540 1 0 0 234954780 14528 0 0 -500 S
+D 0 2097920 0 -1
 60 -3 -115 50d100+3150 6d6+25
 0.3.7.14 243000
 11 11 1
@@ -494,8 +494,8 @@ thief~
 He has put hard work and sweat into this operation and will not allow anyone
 to spoil his plans.
 ~
-1073741960 56 0 524320 0 0 0 -500 S
-PF 0 4096 -1
+1073741960 56 0 0 524320 0 0 0 -500 S
+PF 0 4096 0 -1
 35 6 -12 35d70+525 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -508,8 +508,8 @@ assassin~
 cautious fighter and a worthy opponent, he knows three ways to kill you
 instantly.
 ~
-1073741960 56 0 32 0 0 0 -900 S
-PH 0 8192 -1
+1073741960 56 0 0 32 0 0 0 -900 S
+PH 0 8192 0 -1
 40 2 -28 40d80+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -522,8 +522,8 @@ mercenary~
 battle.  Fiercely loyal to his clients, he is honor bound to lay down his life
 for them if need be.
 ~
-1140850696 56 0 524320 0 0 0 0 S
-PH 1 16384 -1
+1140850696 56 0 0 524320 0 0 0 0 S
+PH 1 16384 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -536,8 +536,8 @@ a &+Rconjured demon&n~
 has piercing &+rred eyes&n and &+Lhuge black horns&n protruding from his head.
 Nothing else is as grotesque as this being.
 ~
-1073743882 0 0 33628216 12480 0 0 -1000 S
-X 0 0 -1
+1073743882 0 0 0 33628216 12480 0 0 -1000 S
+X 0 0 0 -1
 52 2 -39 39d80+1092 4d7+10
 2.2.4.3 75816
 8 8 1

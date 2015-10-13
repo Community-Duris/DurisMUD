@@ -125,7 +125,7 @@ book~
 &+yan old book&n~
 &+yAn old book lies here.~
 ~
-13 28 2 5 7 0 4096 1 0 0 0
+13 28 2 5 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 23 100
 #13709
@@ -133,7 +133,7 @@ book~
 &+ga dark green book&n~
 &+gA dark green book lies here.~
 ~
-13 28 2 5 7 0 4096 1 0 0 0
+13 28 2 5 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 24 100
 #13710
@@ -141,7 +141,7 @@ book~
 &+ma dark magenta book&n~
 &+MA dark magenta book likes here.&n~
 ~
-13 28 2 5 7 0 4096 1 0 0 0
+13 28 2 5 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 25 100
 #13711
@@ -149,7 +149,7 @@ book~
 &+La dark black book&n~
 &+LA dark black book lies here.&n~
 ~
-13 28 2 5 7 0 4096 1 0 0 0
+13 28 2 5 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 26 100
 #13712
@@ -174,7 +174,7 @@ boots snowy~
 &+Wa pair of snowy adventurer boots&n~
 &+WA pair of snowy adventurer boots lie here.&n~
 ~
-9 13 3 8 7 0 0 65 0 0 0
+9 13 3 8 7 0 0 65 32768 0 0
 8 6 1 3 0 0 0 0
 6 1056 100
 E
@@ -189,7 +189,7 @@ scales dragon red~
 &+ra pile of red dragon scales&n~
 &+rA pile of red dragon scales lie here.~
 ~
-8 35 0 0 7 0 4096 1 0 0 0
+8 35 0 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 4932 100
 #13715
@@ -312,7 +312,7 @@ head bloody malinar~
 &+rthe bloody head of Malinar&n~
 &+rThe bloody head of Malinar&n lies here.~
 ~
-13 2 0 0 7 0 8491008 1 0 0 0
+13 2 0 0 7 0 8491008 1 32768 0 0
 0 0 0 0 0 0 0 0
 20 0 100
 E

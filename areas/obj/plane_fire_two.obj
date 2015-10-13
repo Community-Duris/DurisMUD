@@ -190,7 +190,7 @@ flaming head caltoon~
 &+rthe &+Rflaming &+rhead of &+bCaltoon&n~
 &+rThe &+Rflaming &+rhead of &+bCaltoon &+rlies here.&n~
 ~
-13 11 3 0 7 0 0 1 0 0 0
+13 11 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #25113
@@ -261,7 +261,7 @@ flaming head arch-magi~
 &+rthe &+Rflaming &+rhead of the Arch-Magi&n~
 &+rThe &+Rflaming &+rhead of the Arch-Magi lies here.&n~
 ~
-13 11 3 0 7 0 0 1 0 0 0
+13 11 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #25118
@@ -269,7 +269,7 @@ flaming head amir~
 &+rthe &+Rflaming &+rhead of &+mAmir&n~
 &+rThe &+Rflaming &+rhead of &+mAmir &+rlies here.&n~
 ~
-13 11 3 0 7 0 0 1 0 0 0
+13 11 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #25119
@@ -277,7 +277,7 @@ cold strange blue vial flames~
 &+La &+bcold &+Lvial of &+bblue &+rflames&n~
 &+LA strange &+bblue &+Lvial lies here.&n~
 ~
-10 11 3 0 7 0 0 1 0 0 0
+10 11 3 0 7 0 0 1 32768 0 0
 55 267 0 0 0 0 0 0
 0 0 100
 #25120

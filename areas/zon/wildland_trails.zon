@@ -2,7 +2,7 @@
 &+gThe Wildland Trails&n~
 14699 2 0 15 25 1
 *
-* Zone edited with dikuEdit v2.98i
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 14606 5 5 100 0 0 0
@@ -184,8 +184,8 @@ E 1 14607 4 16 100 0 0 0           *   a stone hunting axe
 M 0 14611 6 14690 100 0 0 0        * a barbarian woman
 M 0 14612 2 14690 100 0 0 0        * a barbarian youth
 M 0 14609 1 14691 100 0 0 0        * the barbarian chieftain
-E 1 14610 1 16 100 0 0 0           *   the great war axe of the Welgurd Chieftain
 E 1 14611 1 21 100 0 0 0           *   a fish bone earring
+E 1 14610 1 16 100 0 0 0           *   the great war axe of the Welgurd Chieftain
 M 0 14605 1 14692 100 0 0 0        * the barbarian spiritist
 E 1 14605 1 13 100 0 0 0           *   a spiritist's medicine pouch
 E 1 14601 1 18 100 0 0 0           *   a bone totem rod

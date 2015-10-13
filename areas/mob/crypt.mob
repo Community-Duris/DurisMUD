@@ -7,8 +7,8 @@ This cute little bunny rabbit has grey fur and is no bigger than ordinary
 rabbits.  Its cute little whiskers twitch as it peers about cautiously.  Why
 someone would harm such a cute little creature, you don't know..
 ~
-2248 0 0 0 0 0 0 400 S
-A 0 0 -1
+2248 0 0 0 0 0 0 0 400 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -21,8 +21,8 @@ This wolf has definitely seen better days - it stinks like the stuff of unholy
 legend and does not look entirely healthy.  Perhaps even rabid, or maybe it's
 just working up for a really big loogie..
 ~
-1073743946 1 0 0 0 0 0 -200 S
-A 0 0 -1
+1073743946 1 0 0 0 0 0 0 -200 S
+A 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 1
@@ -36,8 +36,8 @@ applied haircut, and extremely dirty clothing.  It wouldn't hurt
 him to take a bath, either..  He mutters unintelligible phrases
 to himself, laughing at jokes only he can understand.
 ~
-2254 0 0 0 0 0 0 500 S
-PH 0 0 -1
+2254 0 0 0 0 0 0 0 500 S
+PH 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 6 6 1
@@ -49,8 +49,8 @@ An emaciated timber wolf lays here, snarling at your intrusion.
 With grey fur and sharp, glistening teeth, this wolf looks pretty
 pissed off.  He also looks hungry.
 ~
-1073743946 1 0 0 1024 0 0 0 S
-A 0 0 -1
+1073743946 1 0 0 0 1024 0 0 0 S
+A 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 5 5 1
@@ -63,8 +63,8 @@ It is impossible to tell what this ghoul once was, as it has been
 eaten away by maggots, leaving more bone than flesh.  Whatever it
 may have once been, it's definitely pissed now.
 ~
-33556554 1 0 33554432 0 0 0 -1000 S
-U 0 0 -1
+33556554 1 0 0 33554432 0 0 0 -1000 S
+U 0 0 0 -1
 40 8 3 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -76,8 +76,8 @@ doe deer~
 This little baby deer looks a bit lost and frightened.  It blinks at
 you blankly, apparently at a loss for what to do.
 ~
-2248 0 0 0 0 0 0 100 S
-A 0 0 -1
+2248 0 0 0 0 0 0 0 100 S
+A 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 2
@@ -89,8 +89,8 @@ chipmunk~
 Most chipmunks look so cheerful and upbeat..  This one looks so
 downtrodden and frightened.  You feel sorry for the little guy.
 ~
-2248 0 0 0 0 0 0 150 S
-A 0 0 -1
+2248 0 0 0 0 0 0 0 150 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -103,8 +103,8 @@ wraith undead~
 &+Lare bits and pieces of skeletal arms and a head, with a shawl
 &+Lcovering what used to be torso and legs.
 ~
-133198 1 0 570491002 10304 0 0 -1000 S
-UG 0 512 -1
+133198 1 0 0 570491002 10304 0 0 -1000 S
+UG 0 512 0 -1
 51 -1 -69 45d72+1935 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -117,8 +117,8 @@ With dirty fur and an extremely bad stench, it's obvious this
 guy hasn't washed in quite some time..  Somebody ought to let
 his mother know.
 ~
-67110990 1 0 33554456 0 0 0 -800 S
-HO 0 1 -1
+67110990 1 0 0 33554456 0 0 0 -800 S
+HO 0 1 0 -1
 36 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -130,8 +130,8 @@ orc straining~
 This orc looks like a thoroughly decent fellow with but one
 problem - he has constipation.
 ~
-2122 1 0 0 0 0 0 -800 S
-HO 0 1 -1
+2122 1 0 0 0 0 0 0 -800 S
+HO 0 1 0 -1
 31 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 6 6 1
@@ -144,8 +144,8 @@ Sweating like a pig, this cook nonetheless looks like a tough
 cookie, with his large stature, bulging arm muscles, and sour
 demeanor.
 ~
-2122 1 0 16 0 0 0 -800 S
-HO 0 256 -1
+2122 1 0 0 16 0 0 0 -800 S
+HO 0 256 0 -1
 41 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -159,8 +159,8 @@ he actually bathes on a regular basis, and his eyes don't have
 that emptiness shared by so many of his cousins.  However, he'd
 still like to kill you.
 ~
-2126 1 0 33554456 0 0 0 -1000 S
-HO 0 16384 -1
+2126 1 0 0 33554456 0 0 0 -1000 S
+HO 0 16384 0 -1
 56 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 6 6 1
@@ -171,8 +171,8 @@ orc guard~
 ~
 Napping, this orc is.  Waking him up may prove fatal.
 ~
-2126 1 0 0 0 0 0 -800 S
-HO 0 0 -1
+2126 1 0 0 0 0 0 0 -800 S
+HO 0 0 0 -1
 36 6 -12 35d70+525 4d6+7
 9.9.1.2 45360
 4 4 1
@@ -184,8 +184,8 @@ skeleton undead~
 Picked clean, the skeleton stares forward, motionless, for all
 eternity.
 ~
-2126 1 0 33587256 0 0 0 -1000 S
-U 0 1 -1
+2126 1 0 0 33587256 0 0 0 -1000 S
+U 0 1 0 -1
 46 2 -28 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -198,8 +198,8 @@ wraith undead~
 &+Lare bits and pieces of skeletal arms and a head, with a shawl
 &+Lcovering what used to be torso and legs.
 ~
-133198 1 0 570491002 10304 0 0 -1000 S
-UG 0 512 -1
+133198 1 0 0 570491002 10304 0 0 -1000 S
+UG 0 512 0 -1
 56 -1 -69 45d72+1935 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -213,8 +213,8 @@ nakral theodeus keeper mage necromancer necro~
 &+Lgoatee and moustache, and pale white skin, he every bit
 &+Lfits the mold of the stereotypical necromancer.
 ~
-1073743946 1 0 570491006 2112 0 0 -1000 S
-PH 0 1024 -1
+1073743946 1 0 0 570491006 2112 0 0 -1000 S
+PH 0 1024 0 -1
 59 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -227,8 +227,8 @@ This undead beast looks much like the normal skeleton you see in
 the occasional museum.  There's always the small fact that it'd
 like to tear you up into little bitty pieces, however.
 ~
-1140852810 1 0 33554552 0 0 0 -1000 S
-U 0 1 -1
+1140852810 1 0 0 33554552 0 0 0 -1000 S
+U 0 1 0 -1
 51 -3 -72 46d119+2530 6d6+25
 0.0.0.0 111780
 8 8 0
@@ -240,8 +240,8 @@ rat~
 &+ySmall and somehow fearsome, this mammal is known throughout the world
 &+yfor eating like mad and, subsequently, reproducing like mad.
 ~
-2122 1 0 0 0 0 0 0 S
-A 0 0 -1
+2122 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -253,8 +253,8 @@ skeleton tall~
 Though humanoid, this skeleton is at least seven feet tall, making
 it more fearsome than your usual run-of-the-mill skeleton.
 ~
-2124 1 0 33554544 0 0 0 -1000 S
-U 0 1 -1
+2124 1 0 0 33554544 0 0 0 -1000 S
+U 0 1 0 -1
 56 -3 -72 46d119+2530 6d6+25
 0.0.0.0 111780
 8 8 0
@@ -265,8 +265,8 @@ slime~
 ~
 &+gIt looks just like normal slime..  But wait, is it moving?  Odd..
 ~
-33554504 1 0 1081456 12288 0 0 0 S
-SL 0 0 -1
+33554504 1 0 0 1081456 12288 0 0 0 S
+SL 0 0 0 -1
 36 11 32 21d40+168 3d5+3
 0.0.0.0 18711
 8 8 0
@@ -278,8 +278,8 @@ skeleton patrol~
 Much like any other skeleton, this creature is nothing but bones
 animated by the forces of dark magic.
 ~
-2124 1 0 33587312 0 0 0 -1000 S
-U 0 1 -1
+2124 1 0 0 33587312 0 0 0 -1000 S
+U 0 1 0 -1
 46 2 -28 40d95+920 4d7+10
 0.0.0.0 51840
 8 8 0
@@ -292,8 +292,8 @@ wraith~
 &+Lonly partially visible.  Vaguely humanoid, no lower torso or legs can
 &+Lbe seen.
 ~
-133196 1 0 33554520 2048 0 0 -1000 S
-UG 0 512 -1
+133196 1 0 0 33554520 2048 0 0 -1000 S
+UG 0 512 0 -1
 46 -1 -69 42d72+1806 6d6+12
 0.0.0.0 102060
 8 8 0
@@ -306,8 +306,8 @@ zombie undead~
 &+ywhere it can no longer think properly.  Its body, greatly modified by
 &+yexperiments, is only able to carry out the most instinctual of tasks.
 ~
-2248 1 0 33554432 0 0 0 0 S
-U 0 0 -1
+2248 1 0 0 33554432 0 0 0 0 S
+U 0 0 0 -1
 23 11 26 23d40+184 3d5+3
 0.0.0.0 20493
 8 8 0
@@ -320,8 +320,8 @@ ghost undead~
 &+Lcreation, or it is quickly lost from view.  It appears vaguely
 &+Lhumanoid, though the exact shape is hard to make out.
 ~
-1073743946 1 0 638681128 10304 0 0 -1000 S
-UG 0 256 -1
+1073743946 1 0 0 638681128 10304 0 0 -1000 S
+UG 0 256 0 -1
 56 -5 -121 55d121+4620 7d6+30
 0.0.0.0 222750
 8 8 0
@@ -334,8 +334,8 @@ With only chunks of flesh remaining, this rat has no doubt been risen
 from beyond the grave.  Even stranger, this puppy is huge - bigger
 than most large dogs.
 ~
-2122 1 0 33554472 0 0 0 -250 S
-U 0 0 -1
+2122 1 0 0 33554472 0 0 0 -250 S
+U 0 0 0 -1
 36 11 26 23d40+184 3d5+3
 0.0.0.0 20493
 8 8 0
@@ -347,8 +347,8 @@ an &+gelf&+L-&+ybear&n mutant~
 &+yWith the body, arms, and legs of a bear and the head of an elf, this has
 &+ygot to be one of the strangest damn things you've ever seen.
 ~
-1073743950 1 0 34111608 0 0 0 -375 S
-A 0 2 -1
+1073743950 1 0 0 34111608 0 0 0 -375 S
+A 0 2 0 -1
 46 2 -18 37d95+851 4d7+10
 0.0.0.0 47952
 8 8 0
@@ -361,8 +361,8 @@ golem iron~
 &+cas though it were flesh and blood.  It looks none too happy,
 &+ceither.
 ~
-100665422 1 0 587202744 6144 0 0 0 S
-OG 0 1 -1
+100665422 1 0 0 587202744 6144 0 0 0 S
+OG 0 1 0 -1
 60 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 0
@@ -375,8 +375,8 @@ hyena black~
 &+Lsurroundings.  With rippling muscles and snapping jaws, this
 &+Lcreature definitely looks like something to be reckoned with.
 ~
-67110986 1 0 34603064 2048 0 0 -200 S
-A 0 1 -1
+67110986 1 0 0 34603064 2048 0 0 -200 S
+A 0 1 0 -1
 56 -5 -101 52d131+4420 7d6+30
 0.0.0.0 210600
 8 8 0
@@ -388,8 +388,8 @@ butterfly iron~
 &+cMade of iron, this butterfly looks like any other, fluttering its
 &+cwings happily as it flies from here to there.
 ~
-33556586 1 0 721453304 6144 0 0 0 S
-I 0 0 -1
+33556586 1 0 0 721453304 6144 0 0 0 S
+I 0 0 0 -1
 46 8 13 27d55+297 3d6+4
 0.0.0.0 24057
 8 8 0
@@ -401,8 +401,8 @@ imp black grinning~
 &+LDark as night and twice as evil, you can tell this imp can't wait
 &+Lto tear you into itty-bitty pieces.
 ~
-2126 1 0 101810264 2048 0 0 -1000 S
-X 0 512 -1
+2126 1 0 0 101810264 2048 0 0 -1000 S
+X 0 512 0 -1
 56 -1 -74 42d72+2100 6d6+12
 2.8.2.5 153090
 8 8 0
@@ -413,8 +413,8 @@ zombie~
 ~
 Once elven, this zombie has only small bits of flesh remaining.
 ~
-2126 1 0 33554536 0 0 0 -432 S
-U 0 0 -1
+2126 1 0 0 33554536 0 0 0 -432 S
+U 0 0 0 -1
 31 13 45 17d30+85 3d4+2
 0.0.0.0 8262
 8 8 0
@@ -426,8 +426,8 @@ skeleton regal~
 &+WThough like every other skeleton you've seen, this one somehow
 &+Wappears more regal and dignified than most.
 ~
-2126 1 0 33554552 0 0 0 -1000 S
-U 0 16384 -1
+2126 1 0 0 33554552 0 0 0 -1000 S
+U 0 16384 0 -1
 59 -1 -62 43d107+1935 6d6+12
 0.0.0.0 104490
 6 6 0
@@ -439,8 +439,8 @@ skeleton guard~
 &+WFlanking the throne, this skeleton may as well have been standing
 &+Where since the world was created.
 ~
-67110990 1 0 33554552 0 0 0 -796 S
-U 0 1 -1
+67110990 1 0 0 33554552 0 0 0 -796 S
+U 0 1 0 -1
 41 -1 -56 41d107+1845 6d6+12
 0.0.0.0 99630
 8 8 0
@@ -452,8 +452,8 @@ worm purple huge~
 &+yThis worm looks much like an earthworm in anatomy, but is much
 &+ylonger - about thirty feet long, to be exact.
 ~
-1073743950 1 0 33554456 0 0 0 0 S
-PW 0 0 -1
+1073743950 1 0 0 33554456 0 0 0 0 S
+PW 0 0 0 -1
 57 -1 -62 43d90+1849 6d6+12
 0.0.0.0 104490
 8 8 0
@@ -467,8 +467,8 @@ corpse ogre zombie~
 &+yhome to a happy family of maggots.  Wait a minute - did the corpse
 &+yjust twitch?
 ~
-2126 1 0 33554504 0 0 0 -723 S
-U 0 0 -1
+2126 1 0 0 33554504 0 0 0 -723 S
+U 0 0 0 -1
 36 8 13 27d55+297 3d6+4
 0.0.0.0 24057
 4 4 0
@@ -480,8 +480,8 @@ lich undead~
 &+LDark and sinister, this lich looks like it can't wait to take you
 &+Ldown and reanimate you.
 ~
-2126 1 0 570523738 2112 0 0 -1000 S
-U 0 512 -1
+2126 1 0 0 570523738 2112 0 0 -1000 S
+U 0 512 0 -1
 59 -5 -111 55d88+4565 7d6+30
 0.0.0.0 222750
 8 8 0
@@ -494,8 +494,8 @@ This zombie would probably be leading a full and happy life right now
 if it weren't for those darn irons around what's left of its wrists
 and ankles.
 ~
-2126 1 0 33554440 1024 0 0 -750 S
-U 0 0 -1
+2126 1 0 0 33554440 1024 0 0 -750 S
+U 0 0 0 -1
 26 11 26 23d40+184 3d5+3
 0.0.0.0 20493
 8 8 0
@@ -507,8 +507,8 @@ bat~
 &+LThis bat looks something like a rat, only with wings made of
 &+Ldark skin.
 ~
-133192 1 0 33554464 0 0 0 0 S
-B 0 0 -1
+133192 1 0 0 33554464 0 0 0 0 S
+B 0 0 0 -1
 16 18 71 9d18+31 2d3+1
 0.0.0.0 1166
 8 8 0
@@ -520,8 +520,8 @@ A formless mass swirls about here, barely visible.
 Barely visible, it is impossible to define what this shapeless mass
 looks like - it is just a swirling "it".
 ~
-133194 1 0 537919552 2240 0 0 -493 S
-EA 0 512 -1
+133194 1 0 0 537919552 2240 0 0 -493 S
+EA 0 512 0 -1
 56 -1 -79 45d72+1935 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -534,8 +534,8 @@ devil magma~
 &+rmade of living lava.  With tiny horns and a spiked tail, it
 &+rdoesn't exactly look like the Avon Lady.
 ~
-67111018 1 0 570425432 1 0 0 -1000 S
-Y 0 1 -1
+67111018 1 0 0 570425432 1 0 0 -1000 S
+Y 0 1 0 -1
 46 8 -2 27d65+540 3d6+4
 8.3.3.2 24057
 8 8 0
@@ -547,8 +547,8 @@ conjurer dwarf surok~
 &+yA wholesome looking fellow, this conjurer looks like
 &+yhe has found himself caught in a very bad situation.
 ~
-2126 0 0 33554504 0 0 0 823 S
-PM 5 2048 -1
+2126 0 0 0 33554504 0 0 0 823 S
+PM 5 2048 0 -1
 36 6 -2 32d56+480 4d6+7
 6.8.0.2 41472
 6 6 1
@@ -561,8 +561,8 @@ dervish frost cone~
 &+Wit's only five feet tall and possesses the intent desire to obliterate
 &+Wall living creatures it sees.
 ~
-133450 1 0 33554552 2240 0 0 -1000 S
-Y 0 2048 -1
+133450 1 0 0 33554552 2240 0 0 -1000 S
+Y 0 2048 0 -1
 56 -1 -84 45d72+2250 6d6+12
 5.9.4.6 109350
 8 8 0
@@ -574,8 +574,8 @@ wolf snow white~
 &+WThis wolf appears like any other, with deep white fur and an
 &+Wappetite that is impossible to ignore or sate.
 ~
-67110986 1 0 33554536 2112 0 0 -123 S
-A 0 1 -1
+67110986 1 0 0 33554536 2112 0 0 -123 S
+A 0 1 0 -1
 56 2 -21 38d80+798 4d7+10
 0.0.0.0 49248
 8 8 0
@@ -588,8 +588,8 @@ mutant ogre troll~
 &+ya troll, this creature looks fearsome indeed, if not extremely
 &+yintelligent.
 ~
-1107298382 1 0 33554640 0 0 0 -1000 S
-PT 0 1 -1
+1107298382 1 0 0 33554640 0 0 0 -1000 S
+PT 0 1 0 -1
 55 -1 -65 44d107+1980 6d6+12
 4.9.8.3 106920
 8 8 0
@@ -601,8 +601,8 @@ gnat tiny bug~
 &+yToo small to see, this bug's buzzing is quite grating on the
 &+years.
 ~
-526410 1 0 134217728 0 0 0 0 S
-I 0 0 -1
+526410 1 0 0 134217728 0 0 0 0 S
+I 0 0 0 -1
 36 13 48 16d30+80 3d4+2
 0.0.0.0 7776
 8 8 0
@@ -614,8 +614,8 @@ lich undead alchemist~
 &+LOnce a great alchemist, what remains of the man frantically
 &+Ltries to mix some great formula even in his death.
 ~
-2126 1 0 570523736 10432 0 0 -1000 S
-U 0 512 -1
+2126 1 0 0 570523736 10432 0 0 -1000 S
+U 0 512 0 -1
 59 -5 -104 53d88+4399 7d6+30
 0.0.0.0 214650
 8 8 0
@@ -628,8 +628,8 @@ statue squat jade~
 &+gjade stands in the corner of the corridor, facing outwards
 &+gwith hands cupped.
 ~
-67658 0 0 536977624 14556 0 0 0 S
-VT 0 1 -1
+67658 0 0 0 536977624 14556 0 0 0 S
+VT 0 1 0 -1
 59 -7 -128 59d120+15000 7d6+35
 0.0.0.0 238950
 8 8 0
@@ -641,8 +641,8 @@ ghost~
 &+LNearly invisible, this ghost's form is impossible to define -
 &+Lit looks more like the distortion caused by heat than anything.
 ~
-1140983882 1 0 570458170 2112 0 0 -1000 S
-UG 0 512 -1
+1140983882 1 0 0 570458170 2112 0 0 -1000 S
+UG 0 512 0 -1
 59 -3 -88 48d80+2544 6d6+25
 0.0.0.0 116640
 8 8 0
@@ -654,8 +654,8 @@ rat small~
 &+ySmall, this rat appears like any other, though perhaps a bit more
 &+yvoracious.
 ~
-2120 1 0 0 0 0 0 0 S
-A 0 0 -1
+2120 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 11 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -668,8 +668,8 @@ catfish fish~
 &+yunblinking eyeballs and scales as big as your big toe do nothing to
 &+ycalm the feeling that this fish could kick some major ass.
 ~
-264264 1 0 33556520 64 0 0 0 S
-F 0 0 -1
+264264 1 0 0 33556520 64 0 0 0 S
+F 0 0 0 -1
 34 6 -8 34d70+510 4d6+7
 0.0.0.0 44064
 12 12 0
@@ -681,8 +681,8 @@ pike large fish~
 &+cLooking much like any other pike, only bigger, this monstrosity is
 &+cmad at the world, and looking for something to take it out on.
 ~
-264264 1 0 33556520 64 0 0 0 S
-F 0 0 -1
+264264 1 0 0 33556520 64 0 0 0 S
+F 0 0 0 -1
 32 6 -2 32d70+480 4d6+7
 0.0.0.0 41472
 12 12 0
@@ -694,8 +694,8 @@ werebeast ghost beast~
 &+LThough invisible to the eye, the distortion of the walls behind
 &+Lsuggest that this creature is similar in shape to a wolf.
 ~
-1140852810 1 0 35225722 0 0 0 -1000 S
-UG 0 1 -1
+1140852810 1 0 0 35225722 0 0 0 -1000 S
+UG 0 1 0 -1
 59 -1 -56 41d107+1845 6d6+12
 0.0.0.0 99630
 8 8 0
@@ -707,8 +707,8 @@ skeleton undead~
 &+WStanding straight ahead, motionless, as most skeletons do, this
 &+Wone looks especially fearsome.
 ~
-100665422 1 0 33554520 128 0 0 -1000 S
-U 0 1 -1
+100665422 1 0 0 33554520 128 0 0 -1000 S
+U 0 1 0 -1
 51 -1 -69 45d107+2025 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -720,8 +720,8 @@ gnome misshapen~
 &+yClearly a gnome, but clearly misshapen, this poor creature peers
 &+yabout nervously, obviously with no real intelligence.
 ~
-2126 1 0 50331752 0 0 0 0 S
-PG 0 1 -1
+2126 1 0 0 50331752 0 0 0 0 S
+PG 0 1 0 -1
 36 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 0
@@ -734,8 +734,8 @@ shark large battle scarred~
 &+Lthe shark is feared throughout the world, and for good reason -
 &+Lthey're killing machines.
 ~
-1074006090 1 0 50333752 64 0 0 0 S
-F 0 0 -1
+1074006090 1 0 0 50333752 64 0 0 0 S
+F 0 0 0 -1
 48 -3 -78 48d100+2544 6d6+25
 0.0.0.0 116640
 12 12 0
@@ -747,8 +747,8 @@ skeleton undead~
 &+WStanding straight ahead, motionless, as most skeletons do, this
 &+Wone looks especially fearsome.
 ~
-100665422 1 0 33554456 0 0 0 -1000 S
-U 0 1 -1
+100665422 1 0 0 33554456 0 0 0 -1000 S
+U 0 1 0 -1
 51 -1 -69 45d107+2025 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -761,8 +761,8 @@ wraith undead~
 &+Lare bits and pieces of skeletal arms and a head, with a shawl
 &+Lcovering what used to be torso and legs.
 ~
-1140983886 1 0 570491002 8256 0 0 -1000 S
-UG 0 512 -1
+1140983886 1 0 0 570491002 8256 0 0 -1000 S
+UG 0 512 0 -1
 51 -1 -69 45d72+1935 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -778,8 +778,8 @@ hellhound hound chained~
 &+rplate mounted in the wall, the beast carries an added undercurrent
 &+rof danger.
 ~
-2090 1 0 536871000 10369 0 0 -1000 S
-Y 0 1 -1
+2090 1 0 0 536871000 10369 0 0 -1000 S
+Y 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -792,8 +792,8 @@ wraith undead~
 &+Lare bits and pieces of skeletal arms and a head, with a shawl
 &+Lcovering what used to be torso and legs.
 ~
-67242062 1 0 572063866 10304 0 0 -1000 S
-UG 0 512 -1
+67242062 1 0 0 572063866 10304 0 0 -1000 S
+UG 0 512 0 -1
 56 -1 -69 45d72+1935 6d6+12
 0.0.0.0 109350
 8 8 0

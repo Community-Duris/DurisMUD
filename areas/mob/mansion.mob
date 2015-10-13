@@ -8,8 +8,8 @@ horrors which forced him to find solice in the corner of this room.  Alone,
 scared and hungry, this thief defends himself in the only way he knows how.
 Daggers in hand, he leaps with bloodshot eyes fixated at your throat.
 ~
-2248 1 0 303038504 0 0 0 -1000 S
-PH 0 8192 -1
+2248 1 0 0 303038504 0 0 0 -1000 S
+PH 0 8192 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -23,8 +23,8 @@ lich ancient~
 &+Lan undead corpse has taken its toll on this beasts sanity.  Getting interrupted
 &+Lin his ceremony has certainly angered him, as he turns to attack.&N
 ~
-2058 192 0 268435506 2049 0 0 -1000 S
-U 0 512 -1
+2058 192 0 0 268435506 2049 0 0 -1000 S
+U 0 512 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -36,8 +36,8 @@ A &+Wskeleton&n stands watch, protecting his creator.
 &+WThis skeleton was created for the sole purpose of protecting its master.
 &+WIt stands here keeping a watchful eye on its surroundings.&N
 ~
-2058 192 0 268435514 2048 0 0 -1000 S
-SK 0 1 -1
+2058 192 0 0 268435514 2048 0 0 -1000 S
+SK 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -51,8 +51,8 @@ suggest that in his prior life, he might have been an evil priest.  His empty
 eyes glare at you with contempt.  He abandons his prayer, turning his attention
 to attacking!
 ~
-2058 192 0 268435514 34816 0 0 -1000 S
-U 0 32 -1
+2058 192 0 0 268435514 34816 0 0 -1000 S
+U 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -68,8 +68,8 @@ An aging &+chalf-elf&n tends to the &+ggarden&n.
 &+gyou.  &n"Another bunch of foolish adventurers come to try their luck, eh?" &+ghe
 &+gmuses to himself in a slightly more audible tone.&N
 ~
-2248 0 0 0 0 0 0 100 S
-P2 0 128 -1
+2248 0 0 0 0 0 0 0 100 S
+P2 0 128 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -84,8 +84,8 @@ image corporeal pianist~
 &+Lmusical piece on the piano, but it seems unfinished and she stops abrubtly
 &+Land begins again...&N
 ~
-2250 0 0 56 2048 0 0 0 S
-UG 0 512 -1
+2250 0 0 0 56 2048 0 0 0 S
+UG 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 2
@@ -99,8 +99,8 @@ will not stop crying.  "She's been crying for ages now!" says the apparition,
 "I don't know what to do".  The ghost turns away from you and begins to watch
 the baby in the crib again.
 ~
-2058 0 0 268435496 2048 0 0 0 S
-UG 0 1 -1
+2058 0 0 0 268435496 2048 0 0 0 S
+UG 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -114,8 +114,8 @@ perhaps centurys old.  The worm is roughly the size of a dragon, and its scales
 probably as hard.  It writhes about in its blood soaked lair and rears its head
 to attack.
 ~
-3082 192 0 268435512 2050 0 0 -1000 S
-D 0 1 -1
+3082 192 0 0 268435512 2050 0 0 -1000 S
+D 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -130,8 +130,8 @@ death~
 &+Lnetherworld.  Death, however doesn't seem interested in you.  He seems more
 &+Linterested in the area around him.&N
 ~
-2120 0 0 268959766 2049 0 0 0 S
-PL 0 1024 -1
+2120 0 0 0 268959766 2049 0 0 0 S
+PL 0 1024 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -145,8 +145,8 @@ the &+Lghost&n of an &+ginsane ranger&N~
 &+gby his desire for revenge.  Nothing but anger is shown in his eyes.  This
 &+granger is an even more fearsome opponent in death.&N
 ~
-1073743944 248 0 319291452 2048 0 0 -500 S
-UG 0 2 -1
+1073743944 248 0 0 319291452 2048 0 0 -500 S
+UG 0 2 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -163,8 +163,8 @@ rate.  Perhaps only a few hundred of these creatures still exist.  Perhaps
 this &+gCen&+Ltaur&n is looking to find the same secrets as the lord of the
 manor.
 ~
-10440 0 0 285736992 2048 0 0 250 S
-CT 0 128 -1
+10440 0 0 0 285736992 2048 0 0 250 S
+CT 0 128 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -183,8 +183,8 @@ house is now only a playground for the horrific creatures that were left by
 some incredible genocide.  He now contemplates delving into the lower
 caverns to uncover the secrets of the Englehardt experiments.
 ~
-1073743880 0 0 524348 2048 0 0 0 S
-TK 0 1 -1
+1073743880 0 0 0 524348 2048 0 0 0 S
+TK 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -201,8 +201,8 @@ him to create the portal which allowed his &+rdemon master&n to enter the prime
 plane.  &+gGaultair&n is one of the wisest of the &+rdemons &nans he is known for his
 magic powers.
 ~
-2122 248 0 805306428 32769 0 0 -1000 S
-Y 0 256 -1
+2122 248 0 0 805306428 32769 0 0 -1000 S
+Y 0 256 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -220,8 +220,8 @@ these beasts seem to lose total control.  As a norm, &+rMino&+Ltaurs &nare a neu
 race and don't tend to be either exceptionally good, or evil.  This particular
 beast appears to be quite intelligent.
 ~
-1073743944 0 0 268435518 2049 0 0 0 S
-MT 0 512 -1
+1073743944 0 0 0 268435518 2049 0 0 0 S
+MT 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -235,8 +235,8 @@ demon spawn small~
 &+LViciously attacking all that get in its path, this diminutive devil is a
 &+Lfearsome foe.&N
 ~
-1073744072 248 0 268435470 1 0 0 -1000 S
-X 0 4 -1
+1073744072 248 0 0 268435470 1 0 0 -1000 S
+X 0 4 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -249,8 +249,8 @@ demon warrior large vicious~
 &+rPossesing no magic skills, this demon prefers to attack its opponents with
 &+runrelenting force.&N
 ~
-1073743944 248 0 536870940 0 0 0 -1000 S
-X 0 1 -1
+1073743944 248 0 0 536870940 0 0 0 -1000 S
+X 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -264,8 +264,8 @@ acolyte demon tall~
 &+rthe powers of the &+Ldark gods&+r to aid in its evil machinations, this wise demon
 &+rglares about maliciously.&N
 ~
-1073744008 248 0 805306414 32768 0 0 -1000 S
-X 0 32 -1
+1073744008 248 0 0 805306414 32768 0 0 -1000 S
+X 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -280,8 +280,8 @@ jalharoth angel fallen beast devil~
 &+mthe room inspiring gazes of awe and sensations of utter terror.  Seeing you,
 &+mthe &+Lfallen &+Wangel &+munfurls his dark purple wings and takes a battle stance.
 ~
-1073875016 248 0 940048414 2049 0 0 -1000 S
-Y 0 16 -1
+1073875016 248 0 0 940048414 2049 0 0 -1000 S
+Y 0 16 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -302,8 +302,8 @@ eluded the prior lords.  His failure and lack of judgment was the most severe
 and cataclysmic of them all.  Vanis stands here, seeking to speak of his quest
 for life, perhaps to alleviate his pain.
 ~
-2122 0 0 805306556 2049 0 0 0 S
-UG 0 2048 -1
+2122 0 0 0 805306556 2049 0 0 0 S
+UG 0 2048 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -318,8 +318,8 @@ campaigns in previous demon wars.  Previously a general in &+rTy&+Lrl&+ros'&n ar
 battle and without peer in hand to hand combat, and this demon is quite angered
 by your presence.  The war advisor twists and attacks.
 ~
-2122 248 0 536870974 2049 0 0 -1000 S
-X 0 16 -1
+2122 248 0 0 536870974 2049 0 0 -1000 S
+X 0 16 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -334,8 +334,8 @@ since fallen off of the lich's body.  A dark cloak is worn wrapped about the
 undead skeleton of the mage.  Seeing you in her master's presence, the lich
 spins around and attacks.
 ~
-2122 248 0 268435518 2049 0 0 -1000 S
-U 0 512 -1
+2122 248 0 0 268435518 2049 0 0 -1000 S
+U 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -350,8 +350,8 @@ assassin demon~
 &+Lcunning and deadly opponent will often try to circle around his opponents in
 &+Lan effort to find their weakest spot.&N
 ~
-2186 248 0 806879288 2049 0 0 -1000 S
-X 0 8192 -1
+2186 248 0 0 806879288 2049 0 0 -1000 S
+X 0 8192 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -366,8 +366,8 @@ the rudimentary task of keeping unwanted visitors out of the &+Lbishop's&n hair.
 Standing 12 feet tall, this &+rdemon&n doesn't appear to be receptive to the idea
 of letting you past to see his master.
 ~
-2122 248 0 60 2048 0 0 -1000 S
-X 0 1 -1
+2122 248 0 0 60 2048 0 0 -1000 S
+X 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -381,8 +381,8 @@ about the disturbance.  This demon doesn't seem to have anything special about
 it, but any demon can prove to be a very difficult opponent.  Shouting in a
 demon language, the beast charges to attack.
 ~
-1073744010 248 0 8 2049 0 0 -1000 S
-X 0 1 -1
+1073744010 248 0 0 8 2049 0 0 -1000 S
+X 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -398,8 +398,8 @@ tyrlos prince demon~
 &+Lout of the beast's back.  This creature inspires incredible fear, and with a roar,
 &+rTy&+Lrl&+ros&+L shouts the orders to attack!&N
 ~
-14410 248 0 838860990 2049 0 0 -1000 S
-D 0 256 -1
+14410 248 0 0 838860990 2049 0 0 -1000 S
+D 0 256 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -412,8 +412,8 @@ hound hell hellhound~
 &+rSummoned from the darkest pits of hell, this beast will fight until the death
 &+rto protect Ty&+Lrl&+ros.&N
 ~
-2120 248 0 805306422 2049 0 0 -1000 S
-Y 0 1 -1
+2120 248 0 0 805306422 2049 0 0 -1000 S
+Y 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -428,8 +428,8 @@ master.  Seeking revenge against the living, this &+Lvampire&n has offered his
 services to &+rTy&+Lrl&+ros&n.  Calling upon the powers of mystics, the magic advisor
 leaps into battle to aid his prince.
 ~
-2122 248 0 805306430 2049 0 0 -1000 S
-UV 0 512 -1
+2122 248 0 0 805306430 2049 0 0 -1000 S
+UV 0 512 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -442,8 +442,8 @@ sentry demon towering~
 &+Lnorth.  Taller than most, this &+rdemon&+L makes an imposing obstacle to any who
 &+Lwish to get past.&N
 ~
-2058 248 0 805306424 2049 0 0 -1000 S
-X 0 1 -1
+2058 248 0 0 805306424 2049 0 0 -1000 S
+X 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -456,8 +456,8 @@ elemental fire flames~
 &+RThese evil beasts of pure fire, are given the opportunity to live here by the
 &+Rdemons as they surve as guards for the chambers of the demon lord.&N
 ~
-1073744072 248 0 536870968 2049 0 0 -1000 S
-EF 0 1 -1
+1073744072 248 0 0 536870968 2049 0 0 -1000 S
+EF 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -470,8 +470,8 @@ elemental fire~
 &+RThese evil beasts of pure fire, are given the opportunity to live here by the
 &+Rdemons as they surve as guards for the chambers of the demon lord.&N
 ~
-1073744008 248 0 536870968 2049 0 0 -1000 S
-EF 0 16 -1
+1073744008 248 0 0 536870968 2049 0 0 -1000 S
+EF 0 16 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -485,8 +485,8 @@ about the disturbance.  This demon doesn't seem to have anything special about
 it, but any demon can prove to be a very difficult opponent.  Shouting in a
 demon language, the beast charges to attack.
 ~
-1073744008 248 0 8 2049 0 0 -1000 S
-X 0 1 -1
+1073744008 248 0 0 8 2049 0 0 -1000 S
+X 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -499,8 +499,8 @@ rat undead large~
 &+ythese rats can prove deadly when encountered in numbers.  These rats are
 &+yvicious and starving for humanoid flesh.&N
 ~
-1073752264 248 0 24 0 0 0 -1000 S
-U 0 1 -1
+1073752264 248 0 0 24 0 0 0 -1000 S
+U 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -512,8 +512,8 @@ A &+Wskeleton&n moans as it stumbles about.
 &+WThis skeleton has been reanimated and now it wanders about the caverns in
 &+Wsearch of victims.&N
 ~
-1073752072 248 0 8 0 0 0 -1000 S
-U 0 1 -1
+1073752072 248 0 0 8 0 0 0 -1000 S
+U 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -525,8 +525,8 @@ A &+Wskeleton &nstays hidden in the &+Lsh&nado&+Lws&n.
 &+LThis sneaky &+Wskeleton &+Lhides in the shadows waiting for a victim to
 &+Lcome within striking distance.&N
 ~
-1073752264 248 0 270008328 2 0 0 -1000 S
-U 0 8192 -1
+1073752264 248 0 0 270008328 2 0 0 -1000 S
+U 0 8192 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -540,8 +540,8 @@ about the disturbance.  This demon doesn't seem to have anything special about
 it, but any demon can prove to be a very difficult opponent.  Shouting in a
 demon language, the beast charges to attack.
 ~
-1073744010 248 0 8 2049 0 0 -1000 S
-X 0 1 -1
+1073744010 248 0 0 8 2049 0 0 -1000 S
+X 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -554,8 +554,8 @@ Haunted by its early and sudden death, this ghost remains trapped in the
 mansion for all eternity.  Anger and hostility fill its empty soul and
 in response, it attacks.
 ~
-1073744008 248 0 24 2048 0 0 -1000 S
-UG 0 1 -1
+1073744008 248 0 0 24 2048 0 0 -1000 S
+UG 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -568,8 +568,8 @@ Reanimated by powerful &+mnecromancy&n, this former house &+Wservant&n spends it
 in agonizing mental anguish.  The painful experience of &+rdeath&n and the theft of
 its soul have left the &+gzombie&n with nothing but hatred in its eyes.
 ~
-1073743944 248 0 24 0 0 0 -1000 S
-U 0 1 -1
+1073743944 248 0 0 24 0 0 0 -1000 S
+U 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -585,8 +585,8 @@ golem copper~
 &+yThis copper based monstrocity will continue to protect the treasure of the
 &+yvault until death.&N
 ~
-14346 248 0 536871096 2048 0 0 0 S
-OG 0 1 -1
+14346 248 0 0 536871096 2048 0 0 0 S
+OG 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -602,8 +602,8 @@ A &+Ygolden dragon&n patrols the room in search of intruders.&N
 &+Yabout since the &+rEnglehardt &+Ydemise and protects her former master's
 &+Yriches with incredible fervor.&N
 ~
-2058 248 0 805306408 47297 0 0 1000 S
-D 0 32 -1
+2058 248 0 0 805306408 47297 0 0 1000 S
+D 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -617,8 +617,8 @@ A &+rdragon&n with deep &+rred scales&n protects the &+Yvault&n.
 &+rfortune.  Upon seeing you, the red dragon clambers to his feet and prepares
 &+rto do battle.  With a deep, hearty roar the dragon charges to attack.&N
 ~
-2058 248 0 805306408 47297 0 0 0 S
-D 0 1 -1
+2058 248 0 0 805306408 47297 0 0 0 S
+D 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -632,8 +632,8 @@ superior magic skills.  Hoping to one day become an advisor to &+gGaultair&n or
 perhaps even &+rTy&+Lrl&+ros&n himself, this &+rdemon &nseeks to show off the other &+rdemons
 in the caverns.&N
 ~
-1073743880 248 0 805306410 2 0 0 -1000 S
-X 0 512 -1
+1073743880 248 0 0 805306410 2 0 0 -1000 S
+X 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -647,8 +647,8 @@ The barely visible image is clearly that of a dragon, one of the deadliest
 &+Lknown beasts in the land.  This particular dragon protects the treasure of
 the Englehardt family with ferocious intensity.&N
 ~
-1050634 248 0 805306408 47297 0 0 -1000 S
-D 0 16 -1
+1050634 248 0 0 805306408 47297 0 0 -1000 S
+D 0 16 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

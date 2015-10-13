@@ -3,7 +3,7 @@ hide worm~
 &+msome gargantuan worm hide&n~
 &+mSome gargantuan worm hide lies here.&n~
 ~
-13 15 3 0 7 0 4096 1 0 0 0
+13 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 #42501
@@ -27,7 +27,7 @@ amulet~
 &+ythe family amulet of Drakhov&n~
 &+yThe family amulet of Drakhov lies here.&n~
 ~
-13 15 3 0 7 0 4096 1 0 0 0
+13 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 2 2 100
 E

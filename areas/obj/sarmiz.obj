@@ -439,7 +439,7 @@ badge black silver~
 a &+Lblack&N and &+Wsilver&N badge of the Sarmiz'Duul Peacekeepers~
 A &+Lblack&N and &+Wsilver&N badge lies here.~
 ~
-9 22 1 2 7 0 0 2113537 0 0 0
+9 22 1 2 7 0 0 2113537 32768 0 0
 5 0 0 3 0 0 0 0
 1 1000 100
 E
@@ -533,7 +533,7 @@ lockpicks steel picks~
 a set of &+Wsteel&N lockpicks with &+Lobsidian&N grips~
 A set of &+Wsteel&N lockpicks lies here.~
 ~
-31 16 1 2 7 0 1024 16385 0 8515584 0
+31 16 1 2 7 0 1024 16385 32768 8515584 0
 10 25 0 0 0 0 0 0
 2 11500 100
 E
@@ -723,7 +723,7 @@ demon heart~
 &+ra demon's heart&N~
 A &+mdecomposing &+rheart&N lies here.~
 ~
-13 2 0 0 7 0 8519680 16385 64 0 0
+13 2 0 0 7 0 8519680 16385 32832 0 0
 8 0 0 0 0 0 0 0
 5 1 100
 E
@@ -762,7 +762,7 @@ stomach dragon~
 &+ga dragon's stomach&n~
 a dragons stomach~
 ~
-15 2 0 0 7 0 0 1 0 0 0
+15 2 0 0 7 0 0 1 32768 0 0
 100 0 0 0 0 0 0 0
 7 15390 100
 E
@@ -824,7 +824,7 @@ rock obsidian fragment~
 &+La small piece of obsidian&N~
 &+LA fragment of obsidian lies here.&N~
 ~
-13 36 0 0 7 0 8388608 16385 0 0 0
+13 36 0 0 7 0 8388608 16385 32768 0 0
 0 0 0 0 0 0 0 0
 3 493 100
 #9449
@@ -832,7 +832,7 @@ silver dagger~
 &+Wan ornate &Nsilver &+Wdagger&N~
 &+WAn ornate &nsilver &+Wdagger&n is here.~
 ~
-5 22 2 3 7 0 524288 24577 0 0 0
+5 22 2 3 7 0 524288 24577 32768 0 0
 2 1 5 11 0 0 0 0
 3 4930 100
 #9450
@@ -840,7 +840,7 @@ scroll magical~
 &+ya scroll covered with magical formulas&n~
 &+yA scroll lies here.~
 ~
-2 29 1 2 7 0 8912896 16385 0 0 0
+2 29 1 2 7 0 8912896 16385 32768 0 0
 26 15 15 -1 0 0 0 0
 2 392 100
 #9451
@@ -848,7 +848,7 @@ potion sparkling blue~
 &+ba sparkling blue potion&N~
 &+bA sparkling blue potion is here.~
 ~
-13 7 1 2 7 0 525312 16385 0 0 0
+13 7 1 2 7 0 525312 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 393 100
 #9452
@@ -856,7 +856,7 @@ ancient fragile sword~
 &+Yan ancient, fragile sword&N~
 &+YAn ancient sword lies here.~
 ~
-5 16 3 10 7 0 525312 24577 0 87572507 0
+5 16 3 10 7 0 525312 24577 32768 87572507 0
 5 3 5 3 0 0 0 0
 9 9392 100
 A
@@ -868,7 +868,7 @@ bag dust~
 &+Ya bag of magical dust&N~
 &+YA bag is here.~
 ~
-12 2 3 10 7 0 8913920 16385 0 0 0
+12 2 3 10 7 0 8913920 16385 32768 0 0
 0 0 0 0 0 0 0 0
 4 4933 100
 A
@@ -886,7 +886,7 @@ letter wax~
 &+ya letter sealed in wax&n~
 &+yA letter is here.~
 ~
-13 28 0 0 7 0 8912896 16385 0 0 0
+13 28 0 0 7 0 8912896 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 932 100
 #9456

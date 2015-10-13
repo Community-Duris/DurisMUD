@@ -7,8 +7,8 @@ drestah wizard mage archmage~
 &+wfight with his sister came to claim the &+Ltower&+w. He has obviously been the master&N
 &+wof the &+Ltower &+wfor many years, and probably will be for years to come.&N
 ~
-67119306 1 0 135340058 2060 0 0 -1000 S
-PH 0 2560 -1
+67119306 1 0 0 135340058 2060 0 0 -1000 S
+PH 0 2560 0 -1
 59 0 0 59d120+5900 7d6+35
 6.4.22.21 0
 8 8 1
@@ -20,8 +20,8 @@ spectre demon fiend fiendish~
 &+wT&+Wh&+we &+Ws&+wp&+We&+wc&+Wt&+wr&+We &+wis &+Wtr&+wa&+Wn&+ws&+Wp&+wa&+Wr&+we&+Wn&+wt&+W, &+wa&+Wn&+wd &+Ws&+wee&+Wms &+wt&+Wo &+wb&+We &+wgr&+Wi&+wnn&+Wi&+wng &+Wa&+wb&+Wou&+wt &+Ws&+wo&+Wm&+we&+Wt&+wh&+Wi&+wn&+wg&+W.  &+wH&+We&N
 &+Wl&+wo&+Wo&+wk&+Ws &+wq&+Wu&+wi&+Wt&+we &+Wa&+wn&+Wg&+wr&+Wy &+wf&+Wo&+wr &+Ws&+wo&+Wm&+we &+Wr&+we&+Wa&+ws&+Wo&+wn&+W.&N
 ~
-1174415562 1 0 1573050 0 0 0 -1000 S
-SP 0 1 -1
+1174415562 1 0 0 1573050 0 0 0 -1000 S
+SP 0 1 0 -1
 55 27 -110 55d110+5500 7d6+30
 0.7.52.19 275000
 8 8 0
@@ -32,8 +32,8 @@ warrior muscular large~
 ~
 &+LHis muscles are very, very big, and quite bulky...  He must be on steriods.&N
 ~
-10250 0 0 8 0 0 0 -1000 S
-PH 0 1 4
+10250 0 0 0 8 0 0 0 -1000 S
+PH 0 1 0 4
 56 28 -98 56d120+5600 7d6+35
 4.6.30.19 280000
 8 8 1
@@ -45,8 +45,8 @@ jethromus black mage~
 &+LHe looks like an advanced &+Wapprentice &+Lto the &+barchmage&+L, but is very young.  He&N
 &+Llooks devoted to his class and his dark diabolical race.&N
 ~
-1060362 0 0 8 12 0 0 -1000 S
-PH 0 512 -1
+1060362 0 0 0 8 12 0 0 -1000 S
+PH 0 512 0 -1
 42 10 -46 42d90+1680 6d6+12
 6.4.40.7 105000
 8 8 1
@@ -58,8 +58,8 @@ sarlania cleric sexy~
 &+LShe looks beautiful, too beautiful for a place like this.  Her &+Ygolden &+Lhair&N
 &+Lcontrasts with the dark surroundings of her room.&N
 ~
-10314 0 0 8 0 0 0 -1000 S
-PE 0 32 -1
+10314 0 0 0 8 0 0 0 -1000 S
+PE 0 32 0 -1
 42 10 -46 42d90+1680 6d6+12
 6.4.40.7 105000
 8 8 2
@@ -71,8 +71,8 @@ guard patrolling patrol~
 &+LHe looks like one tough dude, so you may not want to mess with him, but he&N
 &+Lwill probably start the fighting himself.&N
 ~
-100673548 1 0 24 2 0 0 -1000 S
-PH 0 1 -1
+100673548 1 0 0 24 2 0 0 -1000 S
+PH 0 1 0 -1
 25 12 25 25d40+187 3d6+3
 93.72.9.1 18750
 8 8 1
@@ -84,8 +84,8 @@ burly guardian barrack~
 &+LHe has a large, bulky chest and very big arms.  He look like someone that&N
 &+Lwouldn't be good to mess with.&N
 ~
-100673546 0 0 8 0 0 0 -1000 S
-PH 0 65 -1
+100673546 0 0 0 8 0 0 0 -1000 S
+PH 0 65 0 -1
 22 8 49 17d30+85 2d6+2
 86.78.2.0 6800
 8 8 1
@@ -97,8 +97,8 @@ brekrvertornthal chief guard~
 &+LHe says "Don't bother me or I will &+ylynch &+Lyou....!"  He smiles happily, then&N
 &+Lcontinues on about his business.&N
 ~
-14346 0 0 40 2 0 0 -1000 S
-PH 0 65 -1
+14346 0 0 0 40 2 0 0 -1000 S
+PH 0 65 0 -1
 45 22 -55 45d90+1800 6d6+12
 5.3.38.8 112500
 8 8 1
@@ -110,8 +110,8 @@ guardian mage tower~
 &+LA very old, but still &+Gp&+go&+Gt&+Lent, Magic User/Warrior, he is here because he was&N
 &+Ldestined to guard the gates for all time.&N
 ~
-101201934 0 0 168 0 0 0 -1000 S
-OG 0 513 -1
+101201934 0 0 0 168 0 0 0 -1000 S
+OG 0 513 0 -1
 36 15 10 30d55+300 3d6+4
 66.72.14.1 22500
 8 8 1
@@ -123,8 +123,8 @@ xlorkortor priest high~
 &+wA very wise man, devoted to his god for all eternity.  He looks vibrant for&N
 &+whis old age, and performs the rituals with great ease.&N
 ~
-10446 1 0 40 2 0 0 -1000 S
-PH 0 32 -1
+10446 1 0 0 40 2 0 0 -1000 S
+PH 0 32 0 -1
 42 10 -46 42d90+1680 6d6+12
 6.4.40.7 105000
 8 8 1
@@ -136,8 +136,8 @@ disciple devoted~
 &+LHe is young, but following in the footsteps of the tower's &+Gh&+gi&+Gg&+gh &+Lpriest, he&N
 &+Lprays every chance he can get.&N
 ~
-8412 1 0 8 0 0 0 -1000 S
-PH 0 32 -1
+8412 1 0 0 8 0 0 0 -1000 S
+PH 0 32 0 -1
 27 3 55 15d25+37 2d6+1
 102.72.1.0 6000
 8 8 1
@@ -149,8 +149,8 @@ golden warrior~
 &+yHis skin is of golden and his hair is dark brown.  He reigns over you with&N
 &+yhis 6 foot 5 inch height, and large muscular arms.&N
 ~
-100677706 1 0 536944696 2 0 8192 -1000 S
-PB 0 1 -1
+100677706 1 0 0 536944696 2 0 8192 -1000 S
+PB 0 1 0 -1
 58 29 -109 58d120+5800 7d6+35
 2.5.18.21 290000
 8 8 1
@@ -161,8 +161,8 @@ imp satan diabolical infernal~
 ~
 &+LHe says "I am &+RSatan&+L, Yes I Am, Now &+RDIE&+r!&+R!&+L"&N
 ~
-1073750122 1 0 168 3 0 0 -1000 S
-Y 0 512 -1
+1073750122 1 0 0 168 3 0 0 -1000 S
+Y 0 512 0 -1
 42 21 -61 42d90+2520 6d6+12
 6.4.80.7 105000
 8 8 0
@@ -174,8 +174,8 @@ thing deformed digusting~
 &+LThis &+Rdeformed &+Ldisgusting looking thing seems like it is composed of the vile&N
 &+Lparts of several different creatures.&N
 ~
-1107304680 1 0 8 2 0 0 -1000 S
-AC 0 16449 -1
+1107304680 1 0 0 8 2 0 0 -1000 S
+AC 0 16449 0 -1
 52 13 -86 52d110+4160 7d6+30
 0.0.0.0 260000
 8 8 0
@@ -187,8 +187,8 @@ iron golem~
 &+LA magically formed animation of several armors, it mumbles strange sounds&N
 &+Lover and over.&N
 ~
-10286 0 0 268435480 2 0 0 -1000 S
-OG 0 33 -1
+10286 0 0 0 268435480 2 0 0 -1000 S
+OG 0 33 0 -1
 53 26 -104 53d110+4240 7d6+30
 0.0.0.0 265000
 8 8 0
@@ -200,8 +200,8 @@ flesh golem~
 &+rThis abysmal golem smells like rotting rancid decomposing flesh.  Several&N
 &+rdisgusting clumps of skin create this diabolical creature.&N
 ~
-67647498 1 0 8 2 0 0 -1000 S
-OG 0 1 -1
+67647498 1 0 0 8 2 0 0 -1000 S
+OG 0 1 0 -1
 39 19 -32 39d80+780 4d6+10
 0.0.0.0 39000
 8 8 0
@@ -213,8 +213,8 @@ rogue sinister~
 &+LHe looks like a seasoned adventurer, with his many battle &+rscars&+L.  He is very&N
 &+Lskillful, so don't under estimate his power.&N
 ~
-1073756364 0 0 8 0 0 0 -1000 S
-PH 0 24576 -1
+1073756364 0 0 0 8 0 0 0 -1000 S
+PH 0 24576 0 -1
 50 25 -80 50d100+2500 6d6+25
 0.5.31.10 125000
 8 8 1
@@ -226,8 +226,8 @@ silver dragon~
 &+cHe says "&+CKill me &+cand you will be rewarded greatly..." He looks weak from his&N
 &+Cb&+co&+Cnd &+ct&+Co &+cth&+Ce &+cw&+Ca&+cll&+C, &+cb&+Cu&+ct &+Ci&+cs st&+Ci&+cll r&+Cea&+cdy t&+Co &+cb&+Ca&+cttl&+Ce&+c.&N
 ~
-34093130 0 0 940646538 2 0 0 1000 S
-D 0 768 -1
+34093130 0 0 0 940646538 2 0 0 1000 S
+D 0 768 0 -1
 55 27 -115 55d110+7150 7d6+30
 0.42.104.38 275000
 8 8 1
@@ -241,8 +241,8 @@ zrbardfaustas demon archdemon~
 &+Lhe has not lost any.  Eyes of demonical &+Rfire &+Lstare, causing you to feel unholy&N
 &+Lmortal dread.&N
 ~
-1107311178 1 0 8 2 0 0 -1000 S
-X 0 2560 -1
+1107311178 1 0 0 8 2 0 0 -1000 S
+X 0 2560 0 -1
 50 25 -95 50d100+3500 6d6+25
 0.5.62.10 125000
 8 8 0
@@ -253,8 +253,8 @@ sentry wimpy~
 ~
 &+LHe looks quite &+Wwimpy&+L, like most rookies do.&N
 ~
-10440 0 0 8 2 0 0 -1000 S
-PH 0 1 -1
+10440 0 0 0 8 2 0 0 -1000 S
+PH 0 1 0 -1
 25 12 25 25d40+187 3d6+3
 107.85.8.1 18750
 8 8 1
@@ -265,8 +265,8 @@ mage apprentice~
 ~
 &+LHe says "Wow, I just learned &+RF&+ri&+Rr&+re&+Rb&+ra&+Rl&+rl&+R!&+L" He grins evilly.&N
 ~
-10440 0 0 8 2 0 0 -1000 S
-PH 0 512 -1
+10440 0 0 0 8 2 0 0 -1000 S
+PH 0 512 0 -1
 26 6 25 25d40+187 3d6+3
 65.88.8.1 18750
 8 8 1
@@ -281,8 +281,8 @@ worker smedge wack smedgewack~
 &+Lat some point in his life.  Perhaps he still practices this art, &+rscars &+Ladorn&N
 &+Lhis age tainted face.&N
 ~
-1111375850 0 0 268435560 2 0 0 0 S
-PH 0 613 3
+1111375850 0 0 0 268435560 2 0 0 0 S
+PH 0 613 0 3
 33 12 25 25d40+187 3d6+3
 51.89.8.1 18750
 8 8 1
@@ -294,8 +294,8 @@ guard patrolling patrol~
 &+LHe looks like one tough dude, so you may not want to mess with him, but he&N
 &+Lwill probably start the fighting himself.&N
 ~
-100673548 1 0 24 2 0 0 -1000 S
-PH 0 1 -1
+100673548 1 0 0 24 2 0 0 -1000 S
+PH 0 1 0 -1
 25 12 25 25d40+187 3d6+3
 93.72.9.1 18750
 8 8 1
@@ -307,8 +307,8 @@ burly guardian barrack~
 &+LHe has a large, bulky chest and very big arms.  He look like someone that&N
 &+Lwouldn't be good to mess with.&N
 ~
-100677642 0 0 8 0 0 0 -1000 S
-PH 0 65 -1
+100677642 0 0 0 8 0 0 0 -1000 S
+PH 0 65 0 -1
 23 8 49 17d30+85 2d6+2
 86.78.2.0 6800
 8 8 1
@@ -320,8 +320,8 @@ burly guardian barrack~
 &+LHe has a large, bulky chest and very big arms.  He look like someone that&N
 &+Lwouldn't be good to mess with.&N
 ~
-100677642 0 0 8 0 0 0 -1000 S
-PH 0 65 -1
+100677642 0 0 0 8 0 0 0 -1000 S
+PH 0 65 0 -1
 23 8 49 17d30+85 2d6+2
 86.78.2.0 6800
 8 8 1
@@ -333,8 +333,8 @@ burly guardian barrack~
 &+LHe has a large, bulky chest and very big arms.  He look like someone that&N
 &+Lwouldn't be good to mess with.&N
 ~
-100673546 0 0 8 0 0 0 -1000 S
-PH 0 65 -1
+100673546 0 0 0 8 0 0 0 -1000 S
+PH 0 65 0 -1
 24 8 49 17d30+85 2d6+2
 86.78.2.0 6800
 8 8 1
@@ -346,8 +346,8 @@ burly guardian barrack~
 &+LHe has a large, bulky chest and very big arms.  He look like someone that&N
 &+Lwouldn't be good to mess with.&N
 ~
-100677642 0 0 8 0 0 0 -1000 S
-PH 0 65 -1
+100677642 0 0 0 8 0 0 0 -1000 S
+PH 0 65 0 -1
 25 8 49 17d30+85 2d6+2
 86.78.2.0 6800
 8 8 1
@@ -359,8 +359,8 @@ burly guardian barrack~
 &+LHe has a large, bulky chest and very big arms.  He look like someone that&N
 &+Lwouldn't be good to mess with.&N
 ~
-67119114 0 0 8 0 0 0 -1000 S
-PH 0 65 -1
+67119114 0 0 0 8 0 0 0 -1000 S
+PH 0 65 0 -1
 26 8 49 17d30+85 2d6+2
 86.78.2.0 6800
 8 8 1
@@ -372,8 +372,8 @@ burly guardian barrack~
 &+LHe has a large, bulky chest and very big arms.  He look like someone that&N
 &+Lwouldn't be good to mess with.&N
 ~
-67119114 0 0 8 0 0 0 -1000 S
-PH 0 65 -1
+67119114 0 0 0 8 0 0 0 -1000 S
+PH 0 65 0 -1
 27 8 49 17d30+85 2d6+2
 86.78.2.0 6800
 8 8 1
@@ -385,8 +385,8 @@ spectre demon fiend fiendish~
 &+wT&+Wh&+we &+Ws&+wp&+We&+wc&+Wt&+wr&+We &+wis &+Wtr&+wa&+Wn&+ws&+Wp&+wa&+Wr&+we&+Wn&+wt&+W, &+wa&+Wn&+wd &+Ws&+wee&+Wms &+wt&+Wo &+wb&+We &+wgr&+Wi&+wnn&+Wi&+wng &+Wa&+wb&+Wou&+wt &+Ws&+wo&+Wm&+we&+Wt&+wh&+Wi&+wn&+wg&+W.  &+wH&+We&N
 &+Wl&+wo&+Wo&+wk&+Ws &+wq&+Wu&+wi&+Wt&+we &+Wa&+wn&+Wg&+wr&+Wy &+wf&+Wo&+wr &+Ws&+wo&+Wm&+we &+Wr&+we&+Wa&+ws&+Wo&+wn&+W.&N
 ~
-1174415562 1 0 1573050 0 0 0 -1000 S
-UG 0 1 -1
+1174415562 1 0 0 1573050 0 0 0 -1000 S
+UG 0 1 0 -1
 55 27 -110 55d110+5500 7d6+30
 0.7.52.19 275000
 8 8 0
@@ -398,8 +398,8 @@ burly guardian barrack~
 &+LHe has a large, bulky chest and very big arms.  He look like someone that&N
 &+Lwouldn't be good to mess with.&N
 ~
-100677642 0 0 8 0 0 0 -1000 S
-PH 0 65 -1
+100677642 0 0 0 8 0 0 0 -1000 S
+PH 0 65 0 -1
 28 8 49 17d30+85 2d6+2
 86.78.2.0 6800
 8 8 1
@@ -411,8 +411,8 @@ guard patrolling patrol~
 &+LHe looks like one tough dude, so you may not want to mess with him, but he&N
 &+Lwill probably start the fighting himself.&N
 ~
-100673548 1 0 24 2 0 0 -1000 S
-PH 0 1 -1
+100673548 1 0 0 24 2 0 0 -1000 S
+PH 0 1 0 -1
 25 12 25 25d40+187 3d6+3
 93.72.9.1 18750
 8 8 1
@@ -424,8 +424,8 @@ disciple devoted~
 &+LHe is young, but following in the footsteps of the tower's &+Gh&+gi&+Gg&+gh &+Lpriest, he&N
 &+Lprays every chance he can get.&N
 ~
-8412 1 0 8 0 0 0 -1000 S
-PH 0 32 -1
+8412 1 0 0 8 0 0 0 -1000 S
+PH 0 32 0 -1
 28 3 55 15d25+37 2d6+1
 102.72.1.0 6000
 8 8 1
@@ -437,8 +437,8 @@ disciple devoted~
 &+L   He is young, but following in the footsteps of the tower's &+Gh&+gi&+Gg&+gh &+Lpriest, he&N
 &+Lprays every chance he can get.&N
 ~
-8412 1 0 8 0 0 0 -1000 S
-PH 0 32 -1
+8412 1 0 0 8 0 0 0 -1000 S
+PH 0 32 0 -1
 26 3 55 15d25+37 2d6+1
 102.72.1.0 6000
 8 8 1
@@ -450,8 +450,8 @@ flesh golem~
 &+r   This abysmal golem smells like rotting rancid decomposing flesh.  Several&N
 &+rdisgusting clumps of skin create this diabolical creature.&N
 ~
-67647498 1 0 8 2 0 0 -1000 S
-OG 0 1 -1
+67647498 1 0 0 8 2 0 0 -1000 S
+OG 0 1 0 -1
 39 19 -32 39d80+780 4d6+10
 0.0.0.0 39000
 8 8 0
@@ -463,8 +463,8 @@ flesh golem~
 &+r   This abysmal golem smells like rotting rancid decomposing flesh.  Several&N
 &+rdisgusting clumps of skin create this diabolical creature.&N
 ~
-67647498 1 0 8 2 0 0 -1000 S
-OG 0 1 -1
+67647498 1 0 0 8 2 0 0 -1000 S
+OG 0 1 0 -1
 39 19 -32 39d80+780 4d6+10
 0.0.0.0 39000
 8 8 0
@@ -475,8 +475,8 @@ mage apprentice~
 ~
 &+L   He says "Wow, I just learned &+RF&+ri&+Rr&+re&+Rb&+ra&+Rl&+rl&+R!&+L" He grins evilly.&N
 ~
-10440 0 0 8 2 0 0 -1000 S
-PH 0 512 -1
+10440 0 0 0 8 2 0 0 -1000 S
+PH 0 512 0 -1
 26 6 25 25d40+187 3d6+3
 65.88.8.1 18750
 8 8 1
@@ -488,8 +488,8 @@ guard patrolling patrol~
 &+L   He looks like one tough dude, so you may not want to mess with him, but he&N
 &+Lwill probably start the fighting himself.&N
 ~
-100673548 1 0 24 2 0 0 -1000 S
-PH 0 1 -1
+100673548 1 0 0 24 2 0 0 -1000 S
+PH 0 1 0 -1
 25 12 25 25d40+187 3d6+3
 93.72.9.1 18750
 8 8 1
@@ -501,8 +501,8 @@ guard patrolling patrol~
 &+L   He looks like one tough dude, so you may not want to mess with him, but he&N
 &+Lwill probably start the fighting himself.&N
 ~
-67119116 1 0 24 2 0 0 -1000 S
-PH 0 1 -1
+67119116 1 0 0 24 2 0 0 -1000 S
+PH 0 1 0 -1
 25 12 25 25d40+187 3d6+3
 93.72.9.1 18750
 8 8 1
@@ -513,8 +513,8 @@ imp satan diabolical infernal~
 ~
 &+L   He says "I am &+RSatan&+L, Yes I Am, Now &+RDIE&+r!&+R!&+L"&N
 ~
-1073750122 1 0 168 3 0 0 -1000 S
-Y 0 1 -1
+1073750122 1 0 0 168 3 0 0 -1000 S
+Y 0 1 0 -1
 42 21 -61 42d90+2520 6d6+12
 6.4.80.7 105000
 8 8 0
@@ -526,8 +526,8 @@ thing deformed digusting~
 &+L   This &+rdeformed &+Ldisgusting looking thing seems like it is composed of the vile&N
 &+Lparts of several different creatures.&N
 ~
-1107304680 1 0 8 2 0 0 -1000 S
-AC 0 64 -1
+1107304680 1 0 0 8 2 0 0 -1000 S
+AC 0 64 0 -1
 52 13 -86 52d110+4160 7d6+30
 0.0.0.0 260000
 8 8 0
@@ -539,8 +539,8 @@ skeleton warrior~
 &+L   Although it doesn't have skin to show expressions, its eternal grin and&N
 &+Leyeless sockets send a &+Cs&+Wh&+Ci&+Wv&+Ce&+Wr &+Ldown your &+Wspine&+L.&N
 ~
-34093126 1 0 524298 0 0 0 -800 S
-SK 0 1 -1
+34093126 1 0 0 524298 0 0 0 -800 S
+SK 0 1 0 -1
 45 22 -55 45d90+1800 6d6+12
 0.0.0.0 112500
 8 8 0
@@ -553,8 +553,8 @@ bulette landshark shark land~
 &+Lturtle and an armadillo.  The crest of this beast looks somewhat like a &+bshark's&N
 &+Lfin, and thus the name.&N
 ~
-1107306565 1 0 524288 0 0 0 -300 S
-AC 0 1 3
+1107306565 1 0 0 524288 0 0 0 -300 S
+AC 0 1 0 3
 33 8 1 33d70+495 4d6+7
 0.0.0.0 33000
 8 8 1
@@ -567,8 +567,8 @@ barkwoof mongrelman~
 &+Lentirely possible that he has the &+rbl&+Ro&+ro&+Rd &+Lof &+Chumans&+L, orcs, &+ygnolls&+L, &+bogres&+L,&N
 &+Ydwarves&+L, &+yhobgoblins&+L, and &+celves &+Lrunning through his &+Rveins&+L.&N
 ~
-35666118 1 0 1572872 0 0 0 -200 S
-H 0 1 -1
+35666118 1 0 0 1572872 0 0 0 -200 S
+H 0 1 0 -1
 49 11 -55 45d90+1800 6d6+12
 5.3.38.8 112500
 8 8 1
@@ -581,8 +581,8 @@ bulette landshark shark land~
 &+Lturtle and an armadillo.  The crest of this beast looks somewhat like a &+bshark's&N
 &+Lfin, and thus the name.&N
 ~
-1107306565 1 0 524288 0 0 0 -300 S
-AC 0 1 4
+1107306565 1 0 0 524288 0 0 0 -300 S
+AC 0 1 0 4
 33 8 1 33d70+495 4d6+7
 0.0.0.0 33000
 8 8 1
@@ -595,8 +595,8 @@ bulette landshark shark land~
 &+Lturtle and an armadillo.  The crest of this beast looks somewhat like a &+bshark's&N
 &+Lfin, and thus the name.&N
 ~
-1107306565 1 0 524288 0 0 0 -300 S
-AC 0 1 2
+1107306565 1 0 0 524288 0 0 0 -300 S
+AC 0 1 0 2
 33 8 1 33d70+495 4d6+7
 0.0.0.0 33000
 8 8 1
@@ -609,8 +609,8 @@ bulette landshark shark land~
 &+Lturtle and an armadillo.  The crest of this beast looks somewhat like a &+bshark's&N
 &+Lfin, and thus the name.&N
 ~
-1107306565 1 0 524288 0 0 0 -300 S
-AC 0 1 3
+1107306565 1 0 0 524288 0 0 0 -300 S
+AC 0 1 0 3
 33 8 1 33d70+495 4d6+7
 0.0.0.0 33000
 8 8 1
@@ -623,8 +623,8 @@ bulette landshark shark land~
 &+Lturtle and an armadillo.  The crest of this beast looks somewhat like a &+bshark's&N
 &+Lfin, and thus the name.&N
 ~
-1107306565 1 0 524288 0 0 0 -300 S
-AC 0 1 3
+1107306565 1 0 0 524288 0 0 0 -300 S
+AC 0 1 0 3
 33 8 1 33d70+495 4d6+7
 0.0.0.0 33000
 8 8 1
@@ -637,8 +637,8 @@ bulette landshark shark land~
 &+Lturtle and an armadillo.  The crest of this beast looks somewhat like a &+bshark's&N
 &+Lfin, and thus the name.&N
 ~
-1107306565 1 0 524288 0 0 0 -300 S
-AC 0 1 3
+1107306565 1 0 0 524288 0 0 0 -300 S
+AC 0 1 0 3
 33 8 1 33d70+495 4d6+7
 0.0.0.0 33000
 8 8 1
@@ -651,8 +651,8 @@ bulette landshark shark land~
 &+Lturtle and an armadillo.  The crest of this beast looks somewhat like a &+bshark's&N
 &+Lfin, and thus the name.&N
 ~
-1107310663 1 0 524288 0 0 0 -300 S
-AC 0 1 3
+1107310663 1 0 0 524288 0 0 0 -300 S
+AC 0 1 0 3
 33 8 1 33d70+495 4d6+7
 0.0.0.0 33000
 8 8 1
@@ -665,8 +665,8 @@ bulette landshark shark land~
 &+Lturtle and an armadillo.  The crest of this beast looks somewhat like a &+bshark's&N
 &+Lfin, and thus the name.&N
 ~
-1073752133 1 0 524288 0 0 0 -300 S
-AC 0 1 4
+1073752133 1 0 0 524288 0 0 0 -300 S
+AC 0 1 0 4
 33 8 1 33d70+495 4d6+7
 0.0.0.0 33000
 8 8 1
@@ -678,8 +678,8 @@ skeleton sentry~
 &+L   Although it doesn't have skin to show expressions, its eternal grin and&N
 &+Leyeless sockets send a &+Cs&+Wh&+Ci&+Wv&+Ce&+Wr &+Ldown your &+Wspine&+L.&N
 ~
-34093126 1 0 524298 0 0 0 -800 S
-U 0 1 -1
+34093126 1 0 0 524298 0 0 0 -800 S
+U 0 1 0 -1
 45 22 -55 45d90+1800 6d6+12
 0.0.0.0 112500
 8 8 0
@@ -691,8 +691,8 @@ armonder skeleton ever living~
 &+L   Although it doesn't have skin to show expressions, its eternal grin and&N
 &+Leyeless sockets send a &+Cs&+Wh&+Ci&+Wv&+Ce&+Wr &+Ldown your &+Wspine&+L.&N
 ~
-34093126 1 0 524298 0 0 0 -800 S
-U 0 17 3
+34093126 1 0 0 524298 0 0 0 -800 S
+U 0 17 0 3
 53 22 -55 45d90+1800 6d6+12
 0.0.0.0 112500
 8 8 0
@@ -706,8 +706,8 @@ fiend foul water mass~
 &+bKrakr.  Whatever the origins of the beast, it does not seem like it is happy.&N
 &+bFor some reason a hug does not seem like it will satisfy matters either.&N
 ~
-33978442 1 0 570493208 262146 0 34611200 -1000 S
-EW 0 16385 2
+33978442 1 0 0 570493208 262146 0 34611200 -1000 S
+EW 0 16385 0 2
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -721,8 +721,8 @@ kraken mysterious creature~
 &+blike it was created in this mortal world.  Most likely from another realm that&N
 &+bis best never to be seen by those who follow the light.&N
 ~
-1107720330 1 0 1640600 2178 262144 0 1000 S
-EW 11 24577 2
+1107720330 1 0 0 1640600 2178 262144 0 1000 S
+EW 11 24577 0 2
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -735,8 +735,8 @@ spout water~
 &+bThe thing almost seems like it is alive, or least has thoughts to what it does.&N
 &+bPerhaps it is some sort of water elemental from a plane not of this world.&N
 ~
-33978442 1 0 1640472 2 0 0 1000 S
-EW 0 1 2
+33978442 1 0 0 1640472 2 0 0 1000 S
+EW 0 1 0 2
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -749,8 +749,8 @@ spout water~
 &+bThe thing almost seems like it is alive, or least has thoughts to what it does.&N
 &+bPerhaps it is some sort of water elemental from a plane not of this world.&N
 ~
-33978442 1 0 1640472 2 0 0 1000 S
-EW 0 1 3
+33978442 1 0 0 1640472 2 0 0 1000 S
+EW 0 1 0 3
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -763,8 +763,8 @@ weird water~
 &+bThe thing almost seems like it is alive, or least has thoughts to what it does.&N
 &+bPerhaps it is some sort of water elemental from a plane not of this world.&N
 ~
-1107720264 1 0 1640472 2 0 0 1000 S
-EW 0 1 2
+1107720264 1 0 0 1640472 2 0 0 1000 S
+EW 0 1 0 2
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -777,8 +777,8 @@ weird water~
 &+bThe thing almost seems like it is alive, or least has thoughts to what it does.&N
 &+bPerhaps it is some sort of water elemental from a plane not of this world.&N
 ~
-33978440 1 0 1640472 2 0 0 1000 S
-EW 0 1 3
+33978440 1 0 0 1640472 2 0 0 1000 S
+EW 0 1 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -791,8 +791,8 @@ weird water~
 &+bThe thing almost seems like it is alive, or least has thoughts to what it does.&N
 &+bPerhaps it is some sort of water elemental from a plane not of this world.&N
 ~
-33978440 1 0 1640472 2 0 0 1000 S
-EW 0 1 4
+33978440 1 0 0 1640472 2 0 0 1000 S
+EW 0 1 0 4
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -806,8 +806,8 @@ kraken gargantuan creature diabolical~
 &+blike it was created in this mortal world.  Most likely from another realm that&N
 &+bis best never to be seen by those who follow the light.&N
 ~
-1107720266 1 0 1640600 2178 262144 0 0 S
-X 12 1 7
+1107720266 1 0 0 1640600 2178 262144 0 0 S
+X 12 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -821,8 +821,8 @@ kraken giant creature diabolical~
 &+blike it was created in this mortal world.  Most likely from another realm that&N
 &+bis best never to be seen by those who follow the light.&N
 ~
-1107720266 1 0 1640600 2178 262144 0 0 S
-X 12 1 6
+1107720266 1 0 0 1640600 2178 262144 0 0 S
+X 12 1 0 6
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -834,8 +834,8 @@ fish undead~
    Its dead, very dead...Not something people would catch and bring home to the
 family.
 ~
-33949896 1 0 268435464 0 0 0 -666 S
-U 0 0 -1
+33949896 1 0 0 268435464 0 0 0 -666 S
+U 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -848,8 +848,8 @@ karkran boat keeper undead~
 &+Lfrom its limbs.  It seems to be repeating the job it did in life over and over&N
 &+Lagain till the end of time.&N
 ~
-33961994 0 0 536870920 192 0 0 -1000 S
-U 0 16 3
+33961994 0 0 0 536870920 192 0 0 -1000 S
+U 0 16 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -862,8 +862,8 @@ warg vampiric~
 &+La black coat of fur, and blazing red eyes.  His vile fangs are &+rblood&+Ly, probably&N
 &+Lfrom a recent &+Rkill &+Lof an &+yanimal&+L.&N
 ~
-33568968 1 0 8 262144 0 0 -1000 S
-UV 0 1 3
+33568968 1 0 0 8 262144 0 0 -1000 S
+UV 0 1 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -875,8 +875,8 @@ ghast diabolical~
 &+L   It looks great, for being dead for as long as it has.  Much of its &+rflesh &+Lhas&N
 &+Lalready rotted away.&N
 ~
-33560776 1 0 8 2 0 0 -1000 S
-U 0 1 3
+33560776 1 0 0 8 2 0 0 -1000 S
+U 0 1 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -888,8 +888,8 @@ ghoul floating~
 &+L   It looks dead, long dead, very dead. It mumbles some strange things, but it&N
 &+Lseems to be chanting "&+wDrizz'ul Act'reeen Azar&+L" over and over again...&N
 ~
-33691848 1 0 8 2 0 0 -1000 S
-U 0 1 3
+33691848 1 0 0 8 2 0 0 -1000 S
+U 0 1 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -904,8 +904,8 @@ zbarnos master craftsman~
 &+Lsome sort of martial arts expert.  A mysterious &+bkraken &+Lsymbol has been burned&N
 &+Linto his right forearm.&N
 ~
-1107310664 0 0 134285500 0 0 8192 1000 S
-DK 0 65 3
+1107310664 0 0 0 134285500 0 0 8192 1000 S
+DK 0 65 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -917,8 +917,8 @@ guardian patrolling patrol~
 &+L   He looks like one tough dude, so you may not want to mess with him, but he&N
 &+Lwill probably start the fighting himself.&N
 ~
-1174419532 1 0 24 2 0 0 -1000 S
-PH 0 1 -1
+1174419532 1 0 0 24 2 0 0 -1000 S
+PH 0 1 0 -1
 28 12 25 25d40+187 3d6+3
 93.72.9.1 18750
 8 8 1
@@ -930,8 +930,8 @@ guardian patrolling patrol muscular~
 &+LHe looks like one tough dude, so you may not want to mess with him, but he&N
 &+Lwill probably start the fighting himself.&N
 ~
-1174419532 1 0 24 2 0 0 -1000 S
-PH 0 1 -1
+1174419532 1 0 0 24 2 0 0 -1000 S
+PH 0 1 0 -1
 33 12 25 25d40+187 3d6+3
 93.72.9.1 18750
 8 8 1
@@ -942,8 +942,8 @@ sentry wimpy~
 ~
 &+L   He looks quite &+Wwimpy&+L, like most rookies do.&N
 ~
-33564872 0 0 8 2 0 0 -1000 S
-PH 0 1 -1
+33564872 0 0 0 8 2 0 0 -1000 S
+PH 0 1 0 -1
 26 12 25 25d40+187 3d6+3
 107.85.8.1 18750
 8 8 1
@@ -954,8 +954,8 @@ advanced mage apprentice~
 ~
 &+L   He says "Wow, I just learned &+RF&+ri&+Rr&+re&+Rb&+ra&+Rl&+rl&+R!&+L" He grins evilly.&N
 ~
-1107310792 0 0 8 2 0 0 -1000 S
-PH 0 512 -1
+1107310792 0 0 0 8 2 0 0 -1000 S
+PH 0 512 0 -1
 32 6 25 25d40+187 3d6+3
 65.88.8.1 18750
 8 8 1
@@ -968,8 +968,8 @@ warg vampiric~
 &+La black coat of fur, and blazing red eyes.  His vile fangs are &+rblood&+Ly, probably&N
 &+Lfrom a recent &+Rkill &+Lof an &+yanimal&+L.&N
 ~
-33568968 1 0 8 262144 0 0 -1000 S
-UV 0 1 3
+33568968 1 0 0 8 262144 0 0 -1000 S
+UV 0 1 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -981,8 +981,8 @@ ghast diabolical~
 &+L   It looks great, for being dead for as long as it has.  Much of its &+rflesh &+Lhas&N
 &+Lalready rotted away.&N
 ~
-33560776 1 0 8 2 0 0 -1000 S
-U 0 1 3
+33560776 1 0 0 8 2 0 0 -1000 S
+U 0 1 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -994,8 +994,8 @@ ghoul floating~
 &+L   It looks dead, long dead, very dead. It mumbles some strange things, but it&N
 &+Lseems to be chanting "&+wDrizz'ul Act'reeen Azar&+L" over and over again...&N
 ~
-33691848 1 0 8 2 0 0 -1000 S
-U 0 1 3
+33691848 1 0 0 8 2 0 0 -1000 S
+U 0 1 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1008,8 +1008,8 @@ weird water huge~
 &+bThe thing almost seems like it is alive, or least has thoughts to what it does.&N
 &+bPerhaps it is some sort of water elemental from a plane not of this world.&N
 ~
-1107720264 1 0 1640472 2 0 0 1000 S
-EW 0 1 5
+1107720264 1 0 0 1640472 2 0 0 1000 S
+EW 0 1 0 5
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1022,8 +1022,8 @@ weird water giant~
 &+bThe thing almost seems like it is alive, or least has thoughts to what it does.&N
 &+bPerhaps it is some sort of water elemental from a plane not of this world.&N
 ~
-33978440 1 0 1640472 2 0 0 1000 S
-EW 0 1 6
+33978440 1 0 0 1640472 2 0 0 1000 S
+EW 0 1 0 6
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

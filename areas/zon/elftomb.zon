@@ -2,7 +2,7 @@
 Barrow of the Quiosho~
 20806 2 0 25 35 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 20602 4 5 100 0 0 0
@@ -107,43 +107,43 @@ M 0 20600 10 20610 100 0 0 0       * a sightless fish
 M 0 20600 10 20611 100 0 0 0       * a sightless fish
 M 0 20600 10 20613 100 0 0 0       * a sightless fish
 M 0 20602 8 20629 100 0 0 0        * a large white swan
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20601 10 20630 100 0 0 0       * a spoon-billed duck
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20602 8 20631 100 0 0 0        * a large white swan
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20601 10 20632 100 0 0 0       * a spoon-billed duck
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20602 8 20633 100 0 0 0        * a large white swan
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20601 10 20634 100 0 0 0       * a spoon-billed duck
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20602 8 20635 100 0 0 0        * a large white swan
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20601 10 20636 100 0 0 0       * a spoon-billed duck
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20601 10 20637 100 0 0 0       * a spoon-billed duck
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20602 8 20638 100 0 0 0        * a large white swan
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20601 10 20639 100 0 0 0       * a spoon-billed duck
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20603 1 20640 100 0 0 0        * the regal swan
 E 1 20601 1 7 100 0 0 0            *   a feathery band
 M 0 20602 8 20643 100 0 0 0        * a large white swan
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20601 10 20644 100 0 0 0       * a spoon-billed duck
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20602 8 20645 100 0 0 0        * a large white swan
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20601 10 20646 100 0 0 0       * a spoon-billed duck
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20601 10 20647 100 0 0 0       * a spoon-billed duck
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20602 8 20648 100 0 0 0        * a large white swan
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20601 10 20649 100 0 0 0       * a spoon-billed duck
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20606 10 20650 100 0 0 0       * a goblin scavenger
 M 0 20606 10 20651 100 0 0 0       * a goblin scavenger
 M 0 20606 10 20653 100 0 0 0       * a goblin scavenger
@@ -167,21 +167,21 @@ M 0 20606 10 20702 100 0 0 0       * a goblin scavenger
 E 1 20612 1 9 100 0 0 0            *   a pair of spiked gloves
 M 0 20607 1 20710 100 0 0 0        * the old orcish warrior
 M 0 20612 8 20711 100 0 0 0        * a wild boar
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20612 8 20719 100 0 0 0        * a wild boar
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20612 8 20730 100 0 0 0        * a wild boar
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20612 8 20740 100 0 0 0        * a wild boar
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20612 8 20754 100 0 0 0        * a wild boar
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20612 8 20761 100 0 0 0        * a wild boar
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20612 8 20766 100 0 0 0        * a wild boar
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20612 8 20768 100 0 0 0        * a wild boar
-G 1 20602 9999 0 100 0 0 0       *    a bloody piece of meat
+G 1 20602 9999 0 100 0 0 0         *    a bloody piece of meat
 M 0 20609 4 20771 100 0 0 0        * a guardian spirit
 G 1 20616 1 0 100 0 0 0            *    a glowing wooden key
 M 0 20609 4 20771 100 0 0 0        * a guardian spirit

@@ -5,8 +5,8 @@ wolf black grisly~
 ~
  This dirty-looking wolf seems mad at the world, and even you.
 ~
-1073744072 1 0 0 0 0 0 0 S
-A 0 0 -1
+1073744072 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 7 2 7 1d100+50 1d5+2
 0.0.0.0 0
 8 8 0
@@ -19,8 +19,8 @@ gatekeeper mask masked hood keeper~
 body and face. He remains silent, and his seemenly only purpose in life
 is to guard the outside world from what lurks past the &+Cmithril&n gates.
 ~
-1073743882 0 0 88 0 0 0 -500 S
-G 0 32 -1
+1073743882 0 0 0 88 0 0 0 -500 S
+G 0 32 0 -1
 46 2 -3 3d100+2000 1d10+5
 0.0.0.5 0
 8 8 1
@@ -33,8 +33,8 @@ warrior insane~
 edge of insanity. He has a chilling look in his eyes, forbidding you to
 tamper with him if all together nessicerry.
 ~
-2122 1 0 24 0 0 0 -1000 S
-PB 0 1 -1
+2122 1 0 0 24 0 0 0 -1000 S
+PB 0 1 0 -1
 51 5 -4 5d120+2000 1d10+7
 0.0.0.0 0
 8 8 1
@@ -47,8 +47,8 @@ orrak guardian~
 &+Rthat even. His wild hair poofs out into his greenish grey scalp, making
 &+Ra shook of terror every time this beast is seen.
 ~
-1140852810 1 0 8 0 0 0 -1000 S
-HO 0 1 -1
+1140852810 1 0 0 8 0 0 0 -1000 S
+HO 0 1 0 -1
 56 4 -2 1d500+2000 1d15+3
 0.0.0.0 0
 8 8 2
@@ -61,8 +61,8 @@ orrak warmaster~
 are load and annoying. He stands a full 7 feet, and the long scars across
 his face and chest show that he is a seasoned warrior and killer.
 ~
-1140852746 1 0 24 0 0 0 -1000 S
-PO 0 1 -1
+1140852746 1 0 0 24 0 0 0 -1000 S
+PO 0 1 0 -1
 51 5 -5 3d300+3000 1d10+5
 0.0.0.11 0
 8 8 1
@@ -75,8 +75,8 @@ orrak apprentice~
 his elders in the catacombs here. He seems foolhardy enough to attack
 anyone, including you.
 ~
-1140852746 1 0 8 0 0 0 -1000 S
-PO 0 1 -1
+1140852746 1 0 0 8 0 0 0 -1000 S
+PO 0 1 0 -1
 36 3 -1 1d1000+1500 1d5+4
 0.0.0.4 0
 8 8 1
@@ -88,8 +88,8 @@ rogue fierce treasure hunting hunt thief~
   This extremly angry duergar dwarf looks like he could inflict much pain
   on trespassers and fools, and to him, you are both.
 ~
-1073743946 1 0 1572872 0 0 0 -1000 S
-PD 0 8192 -1
+1073743946 1 0 0 1572872 0 0 0 -1000 S
+PD 0 8192 0 -1
 41 0 0 1d500+500 1d20+7
 0.0.0.34 0
 8 8 1
@@ -101,8 +101,8 @@ orrak priest sin~
    &+LThis orrak is dressed completely in black robes, but for the sake of
 &+Lthe sight of his face, that is probably good.
 ~
-1073743882 0 0 88 0 0 0 -1000 S
-PO 0 256 -1
+1073743882 0 0 0 88 0 0 0 -1000 S
+PO 0 256 0 -1
 57 4 -3 5d500+2000 1d10+10
 0.0.5.11 0
 8 8 1
@@ -114,8 +114,8 @@ hookhorror hook giant~
   This guy looks like the average hook horror, big and ugly. With claws
   long and sharp, you know why they have a reputaion for killing.
 ~
-1073743946 1 0 24 0 0 0 -1000 S
-I 0 1 -1
+1073743946 1 0 0 24 0 0 0 -1000 S
+I 0 1 0 -1
 28 4 -5 2d500+1000 1d10+5
 0.0.0.0 0
 8 8 1
@@ -129,8 +129,8 @@ white devil~
 &+WIt has large fangs and horns, and looks unholy enough to curse whatever
 &+Wit touches.
 ~
-67110922 1 0 88 1 0 0 -1000 S
-Y 0 512 -1
+67110922 1 0 0 88 1 0 0 -1000 S
+Y 0 512 0 -1
 56 5 -10 3d2000+3000 2d10+3
 0.23.16.30 0
 8 8 2
@@ -142,8 +142,8 @@ servant~
   This attractive nude female seems to be a slave of the Black Devil.
   She paces back and forth, making sure all is well with her master.
 ~
-67110986 1 0 8 0 0 0 -1000 S
-PF 0 512 -1
+67110986 1 0 0 8 0 0 0 -1000 S
+PF 0 512 0 -1
 51 3 -6 2d2000+2000 2d2+5
 0.0.0.23 0
 8 8 2
@@ -155,8 +155,8 @@ orrak awe fallen fall~
 &+L This is a average orrak, big and ugly. It has been overcomed by the
 &+Ldevils power, and now shakes violenty on the floor.
 ~
-1073743883 1 0 8 0 0 0 1 S
-H 0 1 -1
+1073743883 1 0 0 8 0 0 0 1 S
+H 0 1 0 -1
 41 3 -2 2d500+1000 2d4+2
 0.0.4.12 0
 8 8 1
@@ -169,8 +169,8 @@ devil black~
 &+LIt reeks of death and decay, and seems to emote evil from its very presence.
 &+LMounds of orrak sacrifices lie beneath his feet, they are his throne.
 ~
-67110922 0 0 88 32768 0 0 -1000 S
-Y 0 1 -1
+67110922 0 0 0 88 32768 0 0 -1000 S
+Y 0 1 0 -1
 60 3 -5 3d2050+2050 2d11+6
 0.0.12.24 0
 8 8 2
@@ -183,8 +183,8 @@ orrak butcher~
 &+rhis body has if it where sweat. His eyes nearly buldge out of his nasty
 &+rface with rage.
 ~
-67110922 1 0 24 0 0 0 -1000 S
-PD 0 1 -1
+67110922 1 0 0 24 0 0 0 -1000 S
+PD 0 1 0 -1
 56 3 -2 2d500+2000 2d6+3
 0.0.5.12 0
 8 8 1
@@ -198,8 +198,8 @@ quei ilxtlor illthid squid~
 &+mfor feeding purposes. He lies in thought by the warmth of the heated
 &+mfountain.
 ~
-1073743882 0 0 8 0 0 0 -1000 S
-MF 0 4 -1
+1073743882 0 0 0 8 0 0 0 -1000 S
+MF 0 4 0 -1
 51 1 0 21d1000+200 1d10+4
 0.0.0.0 0
 8 8 1
@@ -213,8 +213,8 @@ vellel arch-angel arch angel sin~
 &+messance. She wears nothing, and does not leave her throne to meet your
 &+mgaze.
 ~
-67110922 1 0 134217816 0 0 0 -1000 S
-Y 0 256 -1
+67110922 1 0 0 134217816 0 0 0 -1000 S
+Y 0 256 0 -1
 52 3 -5 3d500+2000 2d8+3
 0.0.24.50 0
 8 8 2
@@ -231,8 +231,8 @@ old man imprisoned~
  &+Wit to escape my prisonment! I will offer you a very good reward in
  &+Wreturn...
 ~
-2122 0 0 8 0 0 0 0 S
-PH 0 1 -1
+2122 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 11 0 10 2d100+1 2d5+3
 0.0.0.2 0
 8 8 1
@@ -244,8 +244,8 @@ vothlth black devil pet~
 &+r This fearsome red dragon seems to be a pet of the Black devil, and
 &+ra fitting one it is.
 ~
-69339210 0 0 72 0 0 0 -1000 S
-D 0 1 -1
+69339210 0 0 0 72 0 0 0 -1000 S
+D 0 1 0 -1
 56 0 -5 2d5000+5000 2d10+6
 0.0.0.12 0
 8 8 1

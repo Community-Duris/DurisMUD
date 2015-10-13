@@ -136,7 +136,7 @@ heart~
 &+LNaergot the Black's &+rhe&+Rar&+rt&n~
 &+LA huge ebon six-chambered &+rheart&+L lies here in a pool of &+Rblood&+L.&n~
 ~
-19 2 2 2 7 0 4096 16385 0 0 0
+19 2 2 2 7 0 4096 16385 32768 0 0
 76 0 0 1 0 0 0 0
 25 150000 100
 E
@@ -151,7 +151,7 @@ scroll letter glass tube vellum~
 a &+Wletter of recommendation&n~
 &+LA vellum &+Wscroll&+L encased in a &+Cglass&+L tube, rests here.&n~
 ~
-12 29 1 2 7 0 0 16385 2 0 0
+12 29 1 2 7 0 0 16385 32770 0 0
 0 0 0 0 0 0 0 0
 2 0 100
 E
@@ -176,7 +176,7 @@ horn gilandrimeel~
 the &+Yhorn&n of &+LGilandrimeel&n~
 &+LA golden spiraled &+Yhorn&+L rests in the dirt here.&n~
 ~
-5 10 3 0 7 0 262144 8193 0 4198895524 0
+5 10 3 0 7 0 262144 8193 32768 4198895524 0
 15 2 8 11 0 0 0 0
 15 9873 100 0 4 0 0
 E
@@ -193,7 +193,7 @@ half amulet~
 a half &+Yamulet&n~
 One half of an &+Yamulet&n has been dropped here.~
 ~
-11 16 3 2 7 0 0 5 64 0 0
+11 16 3 2 7 0 0 5 32832 0 0
 0 0 0 1 0 0 0 0
 1 2000 100
 E
@@ -259,7 +259,7 @@ staff crooked~
 a crooked old &+ystaff&n~
 A crooked old &+ystaff&n lies deserted here.~
 ~
-4 6 3 10 7 0 36864 16385 2 0 0
+4 6 3 10 7 0 36864 16385 32770 0 0
 6 1 1 6 0 0 0 0
 6 75000 100
 E

@@ -7,8 +7,8 @@ large goblin guard~
 &+rkill or eat his people in this harsh underground world. Glaring red eyes
 &+rare alert and watch for trouble.&n
 ~
-67115074 1 0 33554432 0 0 0 -750 S
-HG 0 1 -1
+67115074 1 0 0 33554432 0 0 0 -750 S
+HG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -22,8 +22,8 @@ massive goblin gate guard~
 &+mMuscles strain against his leather armor and white knuckles grip his large
 &+mgreat axe.&n
 ~
-1140856898 1 0 33587256 0 0 0 -1000 S
-HG 0 1 -1
+1140856898 1 0 0 33587256 0 0 0 -1000 S
+HG 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -35,8 +35,8 @@ goblin sentry~
    This goblin is dressed in light travelling gear and ready to run back
 to his home to report any intruders that pose a threat to Truktagyagyo.
 ~
-1073748164 1 0 33554448 0 0 0 -500 S
-HG 0 2 -1
+1073748164 1 0 0 33554448 0 0 0 -500 S
+HG 0 2 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 0
@@ -51,8 +51,8 @@ brutish goblin bartender~
 &+rapron and leather pants he grumbles at nothing in particular every time he
 &+rgets a drink for the patrons.&n
 ~
-2114 0 0 33587200 0 0 0 -800 S
-HG 0 1 -1
+2114 0 0 0 33587200 0 0 0 -800 S
+HG 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -65,8 +65,8 @@ drunk goblin~
 &+Gin his own drunkedness. He staggers about and spills his drink, annoying
 &+Gall of the almost sober patrons.&n
 ~
-6210 0 0 33554432 0 0 0 -400 S
-HG 0 0 -1
+6210 0 0 0 33554432 0 0 0 -400 S
+HG 0 0 0 -1
 14 15 55 14d23+56 2d5+2
 7.5.2.0 6804
 8 8 1
@@ -80,8 +80,8 @@ goblin patron~
 &+bsits at his table. Occasionally he has to shove a drunk goblin away from
 &+bhim.&n
 ~
-6210 0 0 33554432 0 0 0 -500 S
-HG 0 0 -1
+6210 0 0 0 33554432 0 0 0 -500 S
+HG 0 0 0 -1
 18 13 42 18d30+90 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -95,8 +95,8 @@ common goblin female~
 &+cshe looks poor indeed. Dirty tangled hair grow atop her head, and peering
 &+cfrom behind her long bangs her glaring red eyes look around carefully.&n
 ~
-6212 0 0 33554432 0 0 0 -500 S
-HG 0 0 -1
+6212 0 0 0 33554432 0 0 0 -500 S
+HG 0 0 0 -1
 14 15 55 14d23+56 2d5+2
 7.5.2.0 6804
 8 8 2
@@ -110,8 +110,8 @@ goblin child~
 &+ma rothe-hide loincloth, he wanders around the settlement, having snuck out
 &+mfrom his home.&n
 ~
-6212 0 0 33554432 0 0 0 -345 S
-HG 0 0 -1
+6212 0 0 0 33554432 0 0 0 -345 S
+HG 0 0 0 -1
 11 15 64 11d23+44 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -125,8 +125,8 @@ goblin child~
 &+ma rothe-hide loincloth, she wanders around the settlement, having snuck out
 &+mfrom her home.&n
 ~
-6212 0 0 33554432 0 0 0 -345 S
-HG 0 0 -1
+6212 0 0 0 33554432 0 0 0 -345 S
+HG 0 0 0 -1
 11 15 64 11d23+44 2d5+2
 5.4.1.0 5346
 8 8 2
@@ -139,8 +139,8 @@ large male rothe~
 white hair and has two small horns. Its pretty stupid and breeds easy so
 it isn't any problem for the goblins to raise.&n
 ~
-2112 0 0 33587200 0 0 0 0 S
-AH 0 0 -1
+2112 0 0 0 33587200 0 0 0 0 S
+AH 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -153,8 +153,8 @@ female rothe~
 white hair and has two small horns. Its pretty stupid and breeds easy so
 it isn't any problem for the goblins to raise.&n
 ~
-64 0 0 33587200 0 0 0 0 S
-AH 0 0 -1
+64 0 0 0 33587200 0 0 0 0 S
+AH 0 0 0 -1
 18 13 42 18d30+90 3d4+2
 0.0.0.0 8748
 8 8 2
@@ -167,8 +167,8 @@ young rothe~
 white hair and has two small horns. Its pretty stupid and breeds easy so
 it isn't any problem for the goblins to raise.&n
 ~
-64 0 0 33554432 0 0 0 0 S
-AH 0 0 -1
+64 0 0 0 33554432 0 0 0 0 S
+AH 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 0.0.0.0 5832
 8 8 0
@@ -181,8 +181,8 @@ working tending goblin~
 &+ggiving fungi to the rothe and cleaning after them. Unfortunately, he
 &+gisn't doing his job well, because the area smells and looks awful!
 ~
-1073748034 1 0 33554436 0 0 0 -678 S
-HG 0 1 -1
+1073748034 1 0 0 33554436 0 0 0 -678 S
+HG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -195,8 +195,8 @@ busy goblin male~
 &+Call of Traoul's wishes. he is wearing simple clothes and probably
 &+Cdoesn't get much for what he does, barely living life.&n
 ~
-6340 0 0 33554448 0 0 0 -800 S
-HG 0 16384 -1
+6340 0 0 0 33554448 0 0 0 -800 S
+HG 0 16384 0 -1
 23 11 26 23d47+230 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -210,8 +210,8 @@ large guard~
 &+yprotecting the citizens. his head is shaved and he stands tall for
 &+ya goblin at 5 feet.&n
 ~
-67115074 1 0 33554432 0 0 0 -567 S
-HG 0 1 -1
+67115074 1 0 0 33554432 0 0 0 -567 S
+HG 0 1 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -225,8 +225,8 @@ elite goblin guard~
 &+gwatch the center of Truktakyagyo. Yellow-rimmed red eyes and sharp teeth
 &+gflash at anyone who looks at him.&n
 ~
-67115074 1 0 33628160 0 0 0 -1000 S
-HG 0 1 -1
+67115074 1 0 0 33628160 0 0 0 -1000 S
+HG 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -240,8 +240,8 @@ goblin small patrol patrolling guard~
 &+geasily getting to any scene of trouble nearby and dealing with the trouble
 &+gmaker.&n
 ~
-67115076 1 0 33554448 0 0 0 -1000 S
-HG 0 2 -1
+67115076 1 0 0 33554448 0 0 0 -1000 S
+HG 0 2 0 -1
 13 15 58 13d27+78 2d5+2
 6.5.2.0 6318
 8 8 1
@@ -255,8 +255,8 @@ weapon master weaponsmaster goblin~
 &+mand wielding a vicious looking scimitar, probably looted from someone, he
 &+mis always at the ready.&n
 ~
-67143746 0 0 33660976 0 0 0 -999 S
-HG 0 1 -1
+67143746 0 0 0 33660976 0 0 0 -999 S
+HG 0 1 0 -1
 35 8 7 29d65+377 3d6+4
 9.4.7.1 25839
 8 8 1

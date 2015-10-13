@@ -149,7 +149,7 @@ notebook torn~
 &+ya torn and rotted notebook&N~
 &+yA torn and rotted notebook lies mostly hidden in the muck here.&N~
 ~
-13 15 3 0 7 0 102400 1 0 0 0
+13 15 3 0 7 0 102400 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -462,7 +462,7 @@ sphere magic crystallized~
 &+Ya sphere of crystallized magic&N~
 &+YA glowing sphere lies here.&N~
 ~
-12 15 3 0 7 0 102400 16385 64 0 0
+12 15 3 0 7 0 102400 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #32843
@@ -470,7 +470,7 @@ sphere magic crystallized~
 &+La sphere of crystallized magic&N~
 &+LA glowing sphere lies here.&N~
 ~
-12 15 3 0 7 0 102400 16385 64 0 0
+12 15 3 0 7 0 102400 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #32844
@@ -478,7 +478,7 @@ sphere magic crystallized~
 &+Ga sphere of crystallized magic&N~
 &+GA glowing sphere lies here.&N~
 ~
-12 15 3 0 7 0 102400 16385 64 0 0
+12 15 3 0 7 0 102400 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #32845
@@ -486,7 +486,7 @@ sphere magic crystallized~
 &+Ca sphere of crystallized magic&N~
 &+CA glowing sphere lies here.&N~
 ~
-12 15 3 0 7 0 102400 16385 64 0 0
+12 15 3 0 7 0 102400 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #32846

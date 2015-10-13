@@ -1967,7 +1967,7 @@ mithral piece~
 &+Ca piece of mithral&n~
 &+rA piece of &+Cmithral&+r lies unnoticed in the dust.&n~
 ~
-13 18 1 0 7 0 8192 1 2 0 0
+13 18 1 0 7 0 8192 1 32770 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -2422,7 +2422,7 @@ mithral dagger~
 &+ca mi&+Cth&+cra&+Cl d&+ca&+Cgg&+cer&n~
 &+cA s&+Ch&+cinin&+Cg &+cmi&+Cth&+cra&+Cl d&+ca&+Cgg&+cer &+Cl&+cies &+Ch&+cere.&n~
 ~
-5 18 1 0 10 30 8256 8396801 0 0 0
+5 18 1 0 10 30 8256 8396801 32768 0 0
 2 2 3 11 0 0 0 0
 2 6332 100
 E
@@ -2441,7 +2441,7 @@ mithral shortsword sword short~
 &+ca mi&+Cth&+cra&+Cl &+cs&+Ch&+cor&+Ct&+cswor&+Cd&n~
 &+cA mi&+Cth&+cra&+Cl &+cs&+Ch&+cor&+Ct&+cswor&+Cd l&+cies &+Ch&+cere.&n~
 ~
-5 18 2 0 10 30 8256 8396801 0 0 0
+5 18 2 0 10 30 8256 8396801 32768 0 0
 9 3 2 3 0 0 0 0
 3 5436 100
 E
@@ -2460,7 +2460,7 @@ mithral longsword sword long~
 &+ca mi&+Cth&+cra&+Cl l&+con&+Cg&+cswor&+Cd&n~
 &+cA mi&+Cth&+cra&+Cl l&+con&+Cg&+cswor&+Cd l&+cies &+Ch&+cere.&n~
 ~
-5 18 3 0 10 30 8256 8396801 0 0 0
+5 18 3 0 10 30 8256 8396801 32768 0 0
 5 3 3 3 0 0 0 0
 4 9352 100
 E

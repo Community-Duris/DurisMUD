@@ -256,7 +256,7 @@ totem spiked~
 a&+L spiked totem carved from iron&+ywood&+L~
 A slender &+Liron&+ywood totem&N lies here.~
 ~
-34 6 2 2 11 0 1024 16385 64 33685924 0
+34 6 2 2 11 0 1024 16385 32832 33685924 0
 60 0 0 0 0 0 0 0
 5 300000 100
 E
@@ -273,7 +273,7 @@ sandwich~
 a &+Lrat&N and &+Rtomato&N sandwich~
 A nasty looking sandwich lies here.~
 ~
-19 2 2 2 7 0 73728 1 64 0 0
+19 2 2 2 7 0 73728 1 32832 0 0
 6 0 0 0 0 0 0 0
 1 100 100
 E
@@ -531,7 +531,7 @@ note~
 a small note~
 A small note lies here.~
 ~
-13 29 1 1 7 0 4096 16385 0 0 0
+13 29 1 1 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 10 100
 E

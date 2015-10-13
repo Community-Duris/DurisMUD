@@ -7,8 +7,8 @@ This corpse was recently raised judging by the fresh &+rblood&n still oozing
 from the rends and tears in its flesh.  This &+rduergar&n warrior was
 involved in the battle against the &+YMountain Dwarves&n from above.
 ~
-1073756232 1 0 33554732 2 0 0 -500 S
-zo 0 1 -1
+1073756232 1 0 0 33554732 2 0 0 -500 S
+zo 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -21,8 +21,8 @@ The &+WZombie&n of a &+Ymountain dwarf&n was a victim of the &+rfierce&n
 fighting in the caverns here.  The remains of his corpse have been raised
 to serve some foul purpose.
 ~
-1073756168 1 0 33554728 2 0 0 -500 S
-zo 0 1 -1
+1073756168 1 0 0 33554728 2 0 0 -500 S
+zo 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -36,8 +36,8 @@ space.  His rank is given away by his &+rblood-streaked&n uniform.
 He probably lead many fine &+rduergar&n one time, but his days of command
 have ended.  Now he is a follower.
 ~
-1073756232 1 0 33554732 2 0 0 -500 S
-zo 0 32 -1
+1073756232 1 0 0 33554732 2 0 0 -500 S
+zo 0 32 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -50,8 +50,8 @@ A &+WZombie&n of a &+Ymountain dwarf&n regular once served as the main stay
 of the &+Ydwarven&n forces.  You can hear a faint moaning emanting from
 him.
 ~
-1073756232 1 0 33554732 2 0 0 -500 S
-zo 0 1 -1
+1073756232 1 0 0 33554732 2 0 0 -500 S
+zo 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -64,8 +64,8 @@ This &+Ymountain dwarf&n looks considerably stronger and tougher than any
 other dwarf you've seen in these caverns.  These &+LBattle&n-&+rRagers&n
 must have been the best the &+Ydwarves&n had to offer.
 ~
-1073756232 1 0 33554732 2 0 0 -500 S
-zo 0 1048576 -1
+1073756232 1 0 0 33554732 2 0 0 -500 S
+zo 0 1048576 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -78,8 +78,8 @@ Awaken from his long slumber, &+RKelek&n, the &+mWraith&n-&+WLord&n growls
 at you.  Pure &+Levil&n seems to emant from him.  He must be the source
 of the &+rho&+Lrr&+ror&n below.
 ~
-50362442 1 0 33620472 262146 0 0 -1000 S
-ul 0 512 -1
+50362442 1 0 0 33620472 262146 0 0 -1000 S
+ul 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -92,8 +92,8 @@ Dressed in flowing &+Wwhite&n robes, a &+Wholy&n &+Ydwarven&n &+ccleric&n
 crouches here.  He's holding a &+Wholy&n cross in front of him, as if to ward
 off the unnatural evil which has consumed his kinsman.
 ~
-1073752136 1 0 570433848 30 0 0 1000 S
-PM 0 67108896 -1
+1073752136 1 0 0 570433848 30 0 0 1000 S
+PM 0 67108896 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -106,8 +106,8 @@ Large and foreboding, this guard is here ready to protect his charge.  A
 &+Wholy&n cross is engraved in &+cmithril&n on his chest plate.  This is
 a tamer version of the &+rBattle&n-&+LRager&n.
 ~
-1140861002 1 0 33562920 2 0 0 1000 S
-PM 0 1 -1
+1140861002 1 0 0 33562920 2 0 0 1000 S
+PM 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -119,8 +119,8 @@ A &+blich&n floats here.
 Once a powerful sorcerer, this mage was reincarnated to serve as a
 guardian to the powerful &+MWraith&n-&WLord&n, &+RKelek.
 ~
-30730 1 0 33554744 262146 0 0 -1000 S
-ul 0 1536 -1
+30730 1 0 0 33554744 262146 0 0 -1000 S
+ul 0 1536 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -133,8 +133,8 @@ Once a devout follower of &+RKelek&n, the &+Wspirit&n now spends its
 afterlife howling in agony.  Sentenced to imprisonment with its master,
 it roams the passages looking for escape.
 ~
-10314 1 0 302063932 66 0 0 -1000 S
-UG 0 512 -1
+10314 1 0 0 302063932 66 0 0 -1000 S
+UG 0 512 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -146,8 +146,8 @@ A &+rduergar&n &+Lassassin&n hides in the shadows here.
 Shifty and not at all comfortable with his surroundings, a &+rduergar&n
 is trying his best to blend into the shadows.
 ~
-1073752138 1 0 35127592 2 0 0 -1000 S
-PD 0 4096 -1
+1073752138 1 0 0 35127592 2 0 0 -1000 S
+PD 0 4096 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -160,8 +160,8 @@ The &+Wskeletal&n remains of what might have been some kind of dwarf
 stands here.  Its worn skull rotates back and forth, as if looking
 for something.
 ~
-1073752136 1 0 301990184 66 0 0 -500 S
-sk 0 16777216 -1
+1073752136 1 0 0 301990184 66 0 0 -500 S
+sk 0 16777216 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -173,8 +173,8 @@ A &+Wspectre&n flys about, surveying the battlefield.
 Vaguely resembling a puff of smoke, this &+Wspectre&n moves about silently.
 Its tormented soul screaming for release.
 ~
-1073752136 1 0 436732216 94 0 0 -500 S
-sp 0 40960 -1
+1073752136 1 0 0 436732216 94 0 0 -500 S
+sp 0 40960 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -187,8 +187,8 @@ smith duergar muttering~
 &+Lstrangely unharmed by the raging battles, or the ensuing undead invasion.
 &+L   He says 'Mithril! They wanted my precious mithril!'
 ~
-1140865034 0 0 436732348 276703 0 0 -1000 S
-PD 0 1 -1
+1140865034 0 0 0 436732348 276703 0 0 -1000 S
+PD 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -201,8 +201,8 @@ Large and foreboding, this guard is here ready to protect his charge.  A
 &+Wholy&n cross is engraved in &+cmithril&n on his chest plate.  This is
 a tamer version of the &+rBattle&n-&+LRager&n.
 ~
-1140861002 1 0 33562920 2 0 0 1000 S
-PG 0 32 -1
+1140861002 1 0 0 33562920 2 0 0 1000 S
+PG 0 32 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -215,8 +215,8 @@ Large and foreboding, this guard is here ready to protect his charge.  A
 &+Wholy&n cross is engraved in &+cmithril&n on his chest plate.  This is
 a tamer version of the &+rBattle&n-&+LRager&n.
 ~
-1073752138 1 0 33562920 2 0 0 1000 S
-PM 0 33 -1
+1073752138 1 0 0 33562920 2 0 0 1000 S
+PM 0 33 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

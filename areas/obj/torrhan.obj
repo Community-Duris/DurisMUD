@@ -153,7 +153,7 @@ dragon scales dragonscales green dragonscale~
 &+gsome green&+C dragonscales&n~
 &+CA pile of dragonscales lie in a heap here.&n~
 ~
-9 35 3 0 7 0 4104 16393 0 0 0
+9 35 3 0 7 0 4104 16393 32768 0 0
 10 0 0 5 0 0 0 0
 0 4000 100
 E
@@ -198,7 +198,7 @@ bracelet dull metal piece~
 &+La&n dull&+L grey bracelet&n~
 &+LA piece of metal lies on the ground here.&n~
 ~
-9 15 3 0 7 0 0 4097 0 0 0
+9 15 3 0 7 0 0 4097 32768 0 0
 7 0 0 1 0 0 0 0
 0 10 100
 E
@@ -269,7 +269,7 @@ shark tooth earring~
 &+La&+b shark&+L tooth earring&n~
 &+LA&+b shark tooth&+L lays here.&n~
 ~
-9 15 3 0 7 0 36864 524289 64 0 0
+9 15 3 0 7 0 36864 524289 32832 0 0
 2 0 0 4 0 0 0 0
 1 23415 100 2048 0 0 0
 E
@@ -553,7 +553,7 @@ cloth translucent _ignore_~
 &+Lsome&+W tr&+wa&+wns&+Wluc&+we&+Wnt&+L cloth&n~
 &+LA large roll of&+W tr&+wans&+Wluc&+we&+Wnt&+L cloth has been left here.&n~
 ~
-8 3 3 0 7 0 33566753 1 66 0 0
+8 3 3 0 7 0 33566753 1 32834 0 0
 0 0 0 0 0 0 0 0
 0 3414 100
 E
@@ -565,7 +565,7 @@ cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the&+W anc&+wien&+Wts&n~
 &+LA&+W shi&+wmm&+Weri&+wn&+Wg&+L cloak has been left here.&n~
 ~
-9 3 2 0 13 0 8193 1025 64 4179456065 0
+9 3 2 0 13 0 8193 1025 32832 4179456065 0
 10 0 0 4 0 0 0 0
 0 123 100 12 0 0 0
 E
@@ -581,7 +581,7 @@ cloak ancients ancient translucent _ignore_~
 &+La&+W tra&+wnsl&+Wuc&+we&+Wnt&+L cloak of the&+B anc&+bien&+Bt&+bs&n~
 &+LA &+Wtr&+wans&+Wluce&+wnt&+L cloak has been left here.&n~
 ~
-9 3 3 0 7 0 139265 1025 64 0 0
+9 3 3 0 7 0 139265 1025 32832 0 0
 8 0 0 1 0 0 0 0
 5 2341 100
 E
@@ -597,7 +597,7 @@ cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the&+M anc&+mien&+Mt&+ms&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak has been left here.&n_~
 ~
-9 3 3 0 7 0 8192 1025 8 0 0
+9 3 3 0 7 0 8192 1025 32776 0 0
 9 0 0 2 0 0 0 0
 5 2341 100
 E
@@ -613,7 +613,7 @@ cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the &+Ran&+rcie&+Lnts&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak has been left here.&n~
 ~
-9 3 3 0 7 0 0 1025 0 0 0
+9 3 3 0 7 0 0 1025 32768 0 0
 9 0 0 1 0 0 0 0
 5 4351 100
 E
@@ -629,7 +629,7 @@ cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the&+y an&+Yci&+Len&+Yt&+ys&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak shimmers on the ground here.&n~
 ~
-9 3 3 0 7 0 270368 1025 0 0 0
+9 3 3 0 7 0 270368 1025 32768 0 0
 8 0 0 3 0 0 0 0
 5 92 100 134217728 0 0 0
 E
@@ -645,7 +645,7 @@ cloak translucent ancients ancient green _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the&+G a&+gnci&+Gen&+gt&+Gs&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak shimmers with its own light here.&n~
 ~
-9 3 3 0 7 0 524288 1025 64 0 0
+9 3 3 0 7 0 524288 1025 32832 0 0
 9 0 0 5 0 0 0 0
 5 5555 100 301989888 0 0 0
 E
@@ -661,7 +661,7 @@ cloak translucent ancients ancient _ignore_~
 &+La&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak of the&+C anc&+cien&+Ct&+cs&n~
 &+LA&+W tr&+wans&+Wluc&+we&+Wnt&+L cloak shimmers on the ground here.&n~
 ~
-9 3 3 0 7 0 0 1025 66 0 0
+9 3 3 0 7 0 0 1025 32834 0 0
 6 0 0 1 0 0 0 0
 5 2324 100 536870912 64 0 0
 E
@@ -804,7 +804,7 @@ sea shell seashell dirty~
 &+ba&+L dirty&+b se&+ga&+bshell&n~
 &+bA seashell covered in&+y dirt&+b lies here.&n~
 ~
-9 46 3 0 7 0 0 16385 0 0 0
+9 46 3 0 7 0 0 16385 32768 0 0
 2 0 0 3 0 0 0 0
 0 9999 100
 E
@@ -819,7 +819,7 @@ potion blue dark _id_~
 &+La dark&+b blue&+L potion&n~
 &+bA dark blue potion lies here.&n~
 ~
-10 40 3 0 7 0 0 1 0 0 0
+10 40 3 0 7 0 0 1 32768 0 0
 40 284 10 97 0 0 0 0
 0 9999 100
 E
@@ -979,7 +979,7 @@ dark purple potion _id_~
 &+ma&+L dark&+m purple potion&n~
 &+mA purple potion lies here.&n~
 ~
-10 40 1 0 7 0 0 8404993 64 0 0
+10 40 1 0 7 0 0 8404993 32832 0 0
 50 56 1 3 0 0 0 0
 0 2323 100
 E
@@ -999,7 +999,7 @@ yellow potion~
 &+La&+Y yellow&+L potion&n~
 &+YA potion of bright yellow lies here.&n~
 ~
-10 40 3 0 7 0 4128 16385 64 0 0
+10 40 3 0 7 0 4128 16385 32832 0 0
 50 19 90 91 0 0 0 0
 0 9999 100
 E
@@ -1029,7 +1029,7 @@ feather large white~
 &+Wa large white feather&n~
 &+WA large white feather has been left here.&n~
 ~
-8 15 3 0 7 0 36864 1 0 0 0
+8 15 3 0 7 0 36864 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 12213 100
 E
@@ -1107,7 +1107,7 @@ yellow potion half empty~
 &+La half empty&+Y yellow&+L potion&n~
 &+LA potion of half empty yellow liquid has been left here.&n~
 ~
-10 40 3 0 7 0 0 16385 64 0 0
+10 40 3 0 7 0 0 16385 32832 0 0
 20 15 16 57 0 0 0 0
 2 2323 100
 E
@@ -1597,7 +1597,7 @@ helmet dull silver~
 &+wa dull silver helmet&n~
 &+wA helmet lies here, in need of a shining.&n~
 ~
-9 22 3 0 7 0 1024 17 0 87572507 0
+9 22 3 0 7 0 1024 17 32768 87572507 0
 10 0 0 2 0 0 0 0
 5 333 100
 E
@@ -1718,7 +1718,7 @@ sword longsword thick steel long~
 &+ya thick, steel longsword&n~
 A longsword covered in rust lies here.~
 ~
-5 15 3 0 7 0 1024 8193 64 95993883 0
+5 15 3 0 7 0 1024 8193 32832 95993883 0
 5 2 4 3 0 0 0 0
 4 3452 100
 E
@@ -1767,7 +1767,7 @@ oblivion sword longsword~
 &+La longsword named 'Ob&+wl&+Wiv&+wi&+Lon'&n~
 &+wA longsword has been left here, a soft glow emiting from it.&n~
 ~
-5 15 3 0 15 0 1024 8193 0 87572507 0
+5 15 3 0 15 0 1024 8193 32768 87572507 0
 5 4 3 3 0 0 0 0
 8 34521 100
 E
@@ -1811,7 +1811,7 @@ small diamond ring~
 &+wa small&+W diamond&+w ring&n~
 &+wA small ring has been left here.&n~
 ~
-9 22 3 0 11 0 0 3 0 0 0
+9 22 3 0 11 0 0 3 32768 0 0
 2 0 0 1 0 0 0 0
 0 34523 100
 E

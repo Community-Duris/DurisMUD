@@ -348,7 +348,7 @@ bag fu ll of silver~
 &+Ca bag full of silver~
 &+CA bag full of silver lays here.~
 ~
-8 22 3 0 7 0 0 1 0 1 0
+8 22 3 0 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 25 1 100
 E
@@ -360,7 +360,7 @@ silver earring~
 &+ca silver stud~
 &+CA sparkled silver stud lays here.~
 ~
-11 22 1 0 14 0 0 524289 64 0 0
+11 22 1 0 14 0 0 524289 32832 0 0
 0 0 0 0 0 0 0 0
 1 10000 100
 E
@@ -513,7 +513,7 @@ scales slimy anaconda~
 a pair of &+gslimy &+gs&+Gca&+L&+Cl&+ge&+Gs&+W&+g&n of an &+manaconda&n~
 A pair of giant anaconda scales lays here.~
 ~
-8 35 3 0 14 0 4160 1 0 0 0
+8 35 3 0 14 0 4160 1 32768 0 0
 0 0 0 0 0 0 0 0
 5 30000 100
 E
@@ -525,7 +525,7 @@ python scale~
 a python scale~
 A python scale lays here.~
 ~
-13 15 3 0 7 0 4096 1 0 1 0
+13 15 3 0 7 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -537,7 +537,7 @@ serpent scale~
 a serpent scale~
 A serpent scale lays here.~
 ~
-13 15 3 0 7 0 4096 1 0 1 0
+13 15 3 0 7 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -593,7 +593,7 @@ fiery dragon eyes~
 &+Ra pair of fiery dragon eyes~
 &+RA pair of fiery dragon eyes lay here.~
 ~
-8 15 2 0 7 0 4096 131073 0 1 0
+8 15 2 0 7 0 4096 131073 32768 1 0
 0 0 0 0 0 0 0 0
 5 12000 100
 E
@@ -668,7 +668,7 @@ bear fur snow~
 &+Wsome fur from a snow bear&n~
 &+WSome fur lays here.&n~
 ~
-8 15 3 0 7 0 0 1 0 1 0
+8 15 3 0 7 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -704,7 +704,7 @@ parchment~
 &+ya parchment&n~
 &+yA small parchment lays here.~
 ~
-8 15 3 0 7 0 0 16385 0 1 0
+8 15 3 0 7 0 0 16385 32768 1 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -719,7 +719,7 @@ eye troll eyeball~
 an &+geyeball&n of a &+gtroll~
 &+gAn eyeball of a troll lays here.~
 ~
-11 2 3 0 7 0 0 131073 64 0 0
+11 2 3 0 7 0 0 131073 32832 0 0
 0 0 0 0 0 0 0 0
 1 23339 100
 A
@@ -794,7 +794,7 @@ ancient twisted skeleton head~
 &+Wan ancient t&+ww&+Li&+Ws&+wt&+Le&+Wd skeleton head~
 &+WAn ancient twisted skeleton head is here.&n~
 ~
-9 15 3 0 7 0 4160 2097153 0 1 0
+9 15 3 0 7 0 4160 2097153 32768 1 0
 2 0 0 1 0 0 0 0
 1 12000 100
 E
@@ -810,7 +810,7 @@ tentacle slimy~
 &+Ga slimy&+g tentacle&+G from a carniverous plant&n~
 &+GA slimy tentacle from a carniverous plant is here.&n~
 ~
-8 15 3 0 7 0 4160 1 0 1 0
+8 15 3 0 7 0 4160 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 12000 100
 E
@@ -890,7 +890,7 @@ arm sasquach~
 &+Wthe right arm of a sasquach&n~
 &+WThe right arm of a sasquach lays here.~
 ~
-8 15 3 0 7 0 4096 1 0 1 0
+8 15 3 0 7 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 1 1 100
 E
@@ -957,7 +957,7 @@ slimy tentacly~
 &+ga &+Gslimy&+g tentacle from a kraken~
 &+gA slimy tentacle lays here.&n~
 ~
-8 2 3 0 7 0 12352 16385 0 1 0
+8 2 3 0 7 0 12352 16385 32768 1 0
 0 0 0 0 0 0 0 0
 1 23322 100
 E

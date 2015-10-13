@@ -87,7 +87,7 @@ hideous red leather mask~
 &+ra hideous red leather mask&N~
 a piece of leather died red and shaped somewhat like a face.~
 ~
-9 13 3 3 7 0 0 262145 64 0 0
+9 13 3 3 7 0 0 262145 32832 0 0
 5 13 1 3 0 0 0 0
 1 19 100
 E
@@ -137,7 +137,7 @@ intricate golden amulet~
 &+yan intricate golden amulet&N~
 An intricately carved golden amulet rests on the ground.~
 ~
-9 24 3 2 7 0 4096 5 0 0 0
+9 24 3 2 7 0 4096 5 32768 0 0
 4 2 0 3 0 0 0 0
 2 5000 100
 E
@@ -377,7 +377,7 @@ tankard pewter~
 &+La heavy tankard made of pewter&n~
 a large pewter tankard full of mead.~
 ~
-17 16 0 0 7 0 0 1 0 0 0
+17 16 0 0 7 0 0 1 32768 0 0
 500 500 3 0 0 0 0 0
 12 200 100
 E
@@ -565,7 +565,7 @@ blood leggings fur~
 &+Wa pair of fur leggings&+r splattered with blood~
 &+Wa pair of fur leggings&N &+rspattered with blood&N are piled here.~
 ~
-9 3 3 8 7 0 0 33 0 0 0
+9 3 3 8 7 0 0 33 32768 0 0
 5 5 1 3 0 0 0 0
 3 243 100
 E
@@ -581,7 +581,7 @@ eerily glowing jade bracelet~
 &+Gan eerily glowing&+g jade bracelet&N~
 &+Ga thin hoop of jade&N &+gglows eerily on the ground.&N~
 ~
-9 11 3 3 7 0 32 4097 0 0 0
+9 11 3 3 7 0 32 4097 32768 0 0
 6 11 24 3 0 0 0 0
 1 5000 100 4 0 0 0
 E
@@ -593,7 +593,7 @@ shield polished rose quartz~
 &+Wa glowing shield of &+Mpolished rose quartz&N~
 a &+Mquartz shield&N lies discarded on the ground.~
 ~
-37 26 3 15 7 0 262144 513 64 0 0
+37 26 3 15 7 0 262144 513 32832 0 0
 2 1 3 156 3 0 0 0
 4 7000 100
 E
@@ -609,7 +609,7 @@ jagged lightning sword~
 &+ya jagged lightning sword&N~
 &+yA jagged lightning sword lies on the ground.&N~
 ~
-5 16 3 10 7 0 49152 8193 0 4198895524 0
+5 16 3 10 7 0 49152 8193 32768 4198895524 0
 5 3 5 3 0 0 0 0
 11 2000 100 65536 0 0 0
 E
@@ -626,7 +626,7 @@ barbed whip~
 &+La barbed whip&N~
 a cruelly barbed whip lies on the ground.~
 ~
-5 13 3 0 7 0 0 8193 0 4198895524 0
+5 13 3 0 7 0 0 8193 32768 4198895524 0
 14 2 6 2 0 0 0 0
 2 2000 100
 E
@@ -676,7 +676,7 @@ cloak feathers~
 &+Wa cloak of deva's feathers~
 a feather cloak drapes over the ground.~
 ~
-9 50 3 8 7 0 4096 1025 0 0 0
+9 50 3 8 7 0 4096 1025 32768 0 0
 10 9 1 3 0 0 0 0
 0 20000 100 134217728 0 0 0
 E
@@ -742,7 +742,7 @@ bracelet nightshade~
 &+ga bracelet made from leaves of nightshade&N~
 &+ga bracelet made of dark green leaves rests here.&N~
 ~
-9 30 3 3 7 0 4096 4097 0 0 0
+9 30 3 3 7 0 4096 4097 32768 0 0
 2 11 24 3 0 0 0 0
 0 22 100
 E
@@ -899,7 +899,7 @@ flaming sword valkyrie~
 &+ra flaming sword&+W of the valkyrie&N~
 A brilliant flaming sword rests on the ground.~
 ~
-5 16 3 10 7 0 8192 8193 64 0 0
+5 16 3 10 7 0 8192 8193 32832 0 0
 5 4 3 3 0 21 51 25
 8 20000 100
 E
@@ -929,7 +929,7 @@ belt human skulls~
 &+La belt of&+W human skulls&N~
 A cluster of human skulls bound together by a tight cord rests here.~
 ~
-9 10 3 3 7 0 0 2049 64 0 0
+9 10 3 3 7 0 0 2049 32832 0 0
 3 10 0 3 0 0 0 0
 1 2300 100
 E
@@ -983,7 +983,7 @@ feathered standard ice trolls~
 &+ythe feathered standard of the&+C ice&+g trolls&N~
 A long feathered pole lies on the ground.~
 ~
-9 3 0 0 7 0 8192 16385 0 0 0
+9 3 0 0 7 0 8192 16385 32768 0 0
 3 18 0 3 0 0 0 0
 1 1405 100
 E
@@ -1001,7 +1001,7 @@ sacred totem snow trolls~
 &+ythe sacred totem of the&+W snow&+g trolls&N~
 A carved wooden pole lies on the ground.~
 ~
-34 11 2 2 7 0 8192 16385 0 0 0
+34 11 2 2 7 0 8192 16385 32768 0 0
 49 0 0 0 0 0 0 0
 1 1405 100
 E
@@ -1141,7 +1141,7 @@ pile remorhaz scales~
 &+ma pile of remorhaz scales&N~
 Remorhaz scales lay strewn about the area.~
 ~
-12 35 0 0 7 0 0 1 0 0 0
+12 35 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 235 100
 E
@@ -1168,7 +1168,7 @@ pile ancient remorhaz scales~
 &+ma pile of ancient remorhaz scales&N~
 Remorhaz scales lay strewn about the area.~
 ~
-12 35 0 0 7 0 0 1 0 0 0
+12 35 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 235 100
 E
@@ -1251,7 +1251,7 @@ clump fireweed~
 &+ra clump of fireweed&N~
 &+ra hardy looking plant grows in the sulfurous soil.~
 ~
-12 42 0 0 7 0 8388608 1 0 0 0
+12 42 0 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 290 100
 E
@@ -1328,7 +1328,7 @@ sapphire sapphires gold bracelet~
 &+Ba &+bsapphire &+Band &+Ygold &+bb&+Yr&+Ba&+bc&+Ye&+Bl&+be&+Yt&n~
 &+BA bracelet studded with &+bsapphires &+Band &+Ygold &+Blies here.&n~
 ~
-11 33 3 0 7 0 3276800 4097 0 0 0
+11 33 3 0 7 0 3276800 4097 32768 0 0
 0 0 0 0 0 0 0 0
 2 0 100
 A

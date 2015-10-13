@@ -6,8 +6,8 @@ A &+Lvicious&N &+yguard dog&N snarls as it charges
 This hound appears to be a cross between a mastiff and a hunting dog. It
 is alert and eyes passerby warily.
 ~
-10 1 0 16 0 0 0 0 S
-A 0 0 -1
+10 1 0 0 16 0 0 0 0 S
+A 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 1
@@ -19,8 +19,8 @@ a &+Lgiant leech&N opens its maw wide as it moves towards you
 This leech is truely of a giant species, measuring 7 meters and length. It
 has a circular maw lined with several rows of small teeth.
 ~
-262152 1 0 33556480 0 0 0 0 S
-AP 0 1 -1
+262152 1 0 0 33556480 0 0 0 0 S
+AP 0 1 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 12 12 0
@@ -32,8 +32,8 @@ a &+mswarmfish&N leaps out of the &+Bwater&N towards you
 This large fish has huge jaws with a row of very sharp looking teeth. He seems
 hungry as he leaps out of the water towards your nose.
 ~
-262154 1 0 34603024 0 0 0 0 S
-F 0 0 -1
+262154 1 0 0 34603024 0 0 0 0 S
+F 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 12 12 0
@@ -45,8 +45,8 @@ A &+Lhulking thug&N &+Yurinates&N in the pool
 This huge, dumb looking fellow appears to be quite the bully as he
 snarls 'You wanna hold it fer me?'.
 ~
-1073743882 0 0 16 0 0 0 -450 S
-PH 0 16384 -1
+1073743882 0 0 0 16 0 0 0 -450 S
+PH 0 16384 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -59,8 +59,8 @@ This man appears to be a blacksmith. Though blind in one eye, and in his late
 forties, he still looks like he could be a formidable foe if angered. He
 regards you with suspicious eyes and grunts a uncertain greeting.
 ~
-1140852746 0 0 16 0 0 0 -100 S
-PM 0 4096 -1
+1140852746 0 0 0 16 0 0 0 -100 S
+PM 0 4096 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -73,8 +73,8 @@ This warg is larger than any other you have seen, an astounding  three and
 a half feet high at the shoulder.  It looks like it could devour a halfling
 in two bites.
 ~
-10 1 0 33554432 0 0 0 -100 S
-A 0 0 -1
+10 1 0 0 33554432 0 0 0 -100 S
+A 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -86,8 +86,8 @@ A &+ydun pony&N stands here, eyeing the world complacently.
 This pony is wonderful chestnut brown.  Small for a pony, it would be the
 perfect mount for a dwarf or halfling.
 ~
-134217866 0 0 0 0 0 0 100 S
-A 0 0 -1
+134217866 0 0 0 0 0 0 0 100 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -100,8 +100,8 @@ The black and white patches on this light riding horse look like someone threw
 a bucket of paint on it.  Though the horse looks timid, and probably couldn't
 carry an armored knight, it looks like an excellent mount for a long journey.
 ~
-134217866 0 0 0 0 0 0 0 S
-A 0 0 -1
+134217866 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 0
@@ -114,8 +114,8 @@ The feathers on this black buzzard are mottled and ruffled. The buzzard's
 eyes gleam with a strange intelligence, with a tinge of malice creeping in.
 It seems to know something more than it appears.
 ~
-131080 0 0 167772160 0 0 0 -351 S
-B 0 0 -1
+131080 0 0 0 167772160 0 0 0 -351 S
+B 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 11 11 0
@@ -129,8 +129,8 @@ frog. It is large, about the size of your average horse, with thick green
 skin that bubbles with large warts. Huge warg-like jaws filled with sharp
 teeth chew slowy on thorns.
 ~
-1207961736 0 0 50331648 0 0 0 0 S
-A 0 0 -1
+1207961736 0 0 0 50331648 0 0 0 0 S
+A 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -144,8 +144,8 @@ taking care of the forest. He has taken it upon himself to look after this
 small forest, thinking these trees might be the last of their kind in the
 entire world. He looks at you with a stern but friendly expression.
 ~
-1140852746 0 0 16 0 0 0 0 S
-PH 0 1 -1
+1140852746 0 0 0 16 0 0 0 0 S
+PH 0 1 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -157,8 +157,8 @@ A &+ylumberjack&N rests after a hard days work
    This human woodsman is kept very strong and healthy from his rigorous work
 taking care of the forest. The keeper pays well for men that work hard.
 ~
-1140852746 0 0 16 0 0 0 0 S
-PH 0 16384 -1
+1140852746 0 0 0 16 0 0 0 0 S
+PH 0 16384 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -170,8 +170,8 @@ a &+gthorn lizard&N pretends to be a &+gthorn&N
 This large lizard is about 1 meter in length with a thick scaled
 skin. It must be part iguana as it blends into the thorns perfectly.
 ~
-138 0 0 34603008 0 0 0 0 S
-R 0 0 -1
+138 0 0 0 34603008 0 0 0 0 S
+R 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -184,8 +184,8 @@ This warg is larger than any other you have seen, an astounding  three and
 a half feet high at the shoulder.  It looks like it could devour a halfling
 in two bites.
 ~
-10 0 0 33554432 0 0 0 -100 S
-A 0 0 -1
+10 0 0 0 33554432 0 0 0 -100 S
+A 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -197,8 +197,8 @@ A &+rthieving rogue&N tries to hide in the brush
 This skulking man wears a large hood, concealing his features.  His leather
 garb is dyed a dark green, the better to skulk and hide in the bush.
 ~
-14 1 0 1572864 0 0 0 -375 S
-PH 0 4096 -1
+14 1 0 0 1572864 0 0 0 -375 S
+PH 0 4096 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -211,8 +211,8 @@ This ugly creature wears a gaudy mish-mash of clothes stolen from passing
 merchants. Fortunately you can't tell what what gender this wretch is, though
 it looks capable of putting up a fight.
 ~
-1140852750 0 0 33554432 0 0 0 -550 S
-HO 0 4096 -1
+1140852750 0 0 0 33554432 0 0 0 -550 S
+HO 0 4096 0 -1
 25 11 19 25d40+200 3d5+3
 6.2.6.1 22275
 8 8 0
@@ -225,8 +225,8 @@ This brown bear is thin and looks very hungry.  Its fur is matted from
 the muddy water and a few large gashes on its sides look recently healed.
 Evidentally it has seen a few fights recently.
 ~
-1073744008 0 0 33554448 0 0 0 0 S
-A 0 0 -1
+1073744008 0 0 0 33554448 0 0 0 0 S
+A 0 0 0 -1
 13 15 58 13d23+52 2d5+2
 0.0.0.0 6318
 8 8 0
@@ -239,8 +239,8 @@ The feathers on this black buzzard are mottled and ruffled. The buzzard's
 eyes gleam with a strange intelligence, with a tinge of malice creeping in.
 It seems to know something more than it appears.
 ~
-131080 0 0 167772160 0 0 0 -351 S
-B 0 0 -1
+131080 0 0 0 167772160 0 0 0 -351 S
+B 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 11 11 0
@@ -254,8 +254,8 @@ another, looking for any thing out of the ordinary.  He looks like he has
 spent too much time at the guard picket, and his thin haggard face is a
 portrait of deprivation.
 ~
-1073743882 1 0 0 0 0 0 -400 S
-PM 0 4096 -1
+1073743882 1 0 0 0 0 0 0 -400 S
+PM 0 4096 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -269,8 +269,8 @@ dark scowl affixed permanently upon his face. His movements are stiff, with
 a distinct military manner about them. He looks unhappy about something and
 would certainly make a hard taskmaster.
 ~
-1073743886 0 0 16 0 0 0 -580 S
-PH 0 8192 -1
+1073743886 0 0 0 16 0 0 0 -580 S
+PH 0 8192 0 -1
 30 8 3 30d55+330 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -282,8 +282,8 @@ A &+Lvicious&N &+yguard dog&N snarls as it charges
 This hound appears to be a cross between a mastiff and a hunting dog. It
 is alert and eyes passerby warily.
 ~
-10 1 0 16 0 0 0 0 S
-A 0 0 -1
+10 1 0 0 16 0 0 0 0 S
+A 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 1
@@ -297,8 +297,8 @@ dark scowl affixed permanently upon his face. His movements are stiff, with
 a distinct military manner about them. He looks unhappy about something and
 would certainly make a hard taskmaster.
 ~
-1073743886 1 0 16 0 0 0 -580 S
-PH 0 4096 -1
+1073743886 1 0 0 16 0 0 0 -580 S
+PH 0 4096 0 -1
 30 8 3 30d55+330 3d6+4
 0.5.7.1 50200
 4 8 1
@@ -311,8 +311,8 @@ This female human is practically naked, the only piece of clothing that can
 be seen is a tight fitting money belt. She watches you carefully as she
 bathes and splashes under the waterfall.
 ~
-67111054 0 0 16 0 0 0 -450 S
-PH 0 8192 -1
+67111054 0 0 0 16 0 0 0 -450 S
+PH 0 8192 0 -1
 40 2 -28 40d80+840 4d7+10
 3.3.3.3 51840
 8 8 2
@@ -325,8 +325,8 @@ This human female looks meaner than the male bandits in the area as she toils
 over a boiling pot of stew. She glances toward you and quickly goes back to
 her cooking.
 ~
-1140852878 0 0 16 0 0 0 -450 S
-PH 0 8192 -1
+1140852878 0 0 0 16 0 0 0 -450 S
+PH 0 8192 0 -1
 35 6 -12 35d70+525 4d6+7
 9.9.1.2 45360
 8 8 2
@@ -341,8 +341,8 @@ a distinct military manner about them. He looks unhappy about something and
 would certainly make a hard taskmaster. He sits and watches the females
 prepare the meal he is so hungry for.
 ~
-1140852750 0 0 16 0 0 0 -580 S
-PH 0 4096 -1
+1140852750 0 0 0 16 0 0 0 -580 S
+PH 0 4096 0 -1
 30 8 3 30d55+330 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -356,8 +356,8 @@ another, looking for any thing out of the ordinary.  He looks like he has
 spent too much time at the guard picket, and his thin haggard face is a
 portrait of deprivation.
 ~
-1073743882 0 0 0 0 0 0 -400 S
-PH 0 4096 -1
+1073743882 0 0 0 0 0 0 0 -400 S
+PH 0 4096 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -372,8 +372,8 @@ spent too much time at the guard picket, and his thin haggard face is a
 portrait of deprivation. He wonders if you saw him peeping at the women
 below and decides he better silence you just in case.
 ~
-1073743882 1 0 1572880 0 0 0 -400 S
-PH 0 4096 -1
+1073743882 1 0 0 1572880 0 0 0 -400 S
+PH 0 4096 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -385,8 +385,8 @@ A &+Lvicious&N &+yguard dog&N snarls as it charges
 This hound appears to be a cross between a mastiff and a hunting dog. It
 is alert and eyes passerby warily.
 ~
-10 1 0 16 0 0 0 0 S
-A 0 0 -1
+10 1 0 0 16 0 0 0 0 S
+A 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 1
@@ -400,8 +400,8 @@ another, looking for any thing out of the ordinary.  He looks like he has
 spent too much time at the guard picket, and his thin haggard face is a
 portrait of deprivation.
 ~
-1073743882 1 0 0 0 0 0 -400 S
-PH 0 4096 -1
+1073743882 1 0 0 0 0 0 0 -400 S
+PH 0 4096 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -413,8 +413,8 @@ a &+Lbandit &+Bchild&N plays in the &+ggrass&N
 This young child looks to be around 10 years old and is still quite content
 with playing in the field.
 ~
-138 0 0 0 0 0 0 -250 S
-PH 0 4096 -1
+138 0 0 0 0 0 0 0 -250 S
+PH 0 4096 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -426,8 +426,8 @@ a &+Lbandit &+Bchild&N is practicing his battle tecniques
 This young child looks to be around 10 years old and is still quite content
 sparring with his friends.
 ~
-138 0 0 0 0 0 0 -250 S
-PH 0 4096 -1
+138 0 0 0 0 0 0 0 -250 S
+PH 0 4096 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -441,8 +441,8 @@ dark scowl affixed permanently upon his face. His movements are stiff, with
 a distinct military manner about them. He looks unhappy about something and
 would certainly make a hard taskmaster.
 ~
-1140852750 0 0 16 0 0 0 -580 S
-PH 0 8192 -1
+1140852750 0 0 0 16 0 0 0 -580 S
+PH 0 8192 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -455,8 +455,8 @@ This human female looks meaner than the male bandits in the area as she toils
 over a boiling pot of stew. She glances toward you and quickly goes back to
 her cooking.
 ~
-1073744014 0 0 16 0 0 0 -450 S
-PH 0 8192 -1
+1073744014 0 0 0 16 0 0 0 -450 S
+PH 0 8192 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -470,8 +470,8 @@ wears.  Clad in leather, he appears a strange, twisted sort, and his gait is
 marked by a slight limp. He is silent, but his eyes speak volumes of hatred
 and a taste for sadism.
 ~
-1073743882 0 0 33554448 0 0 0 -1000 S
-PB 0 16384 -1
+1073743882 0 0 0 33554448 0 0 0 -1000 S
+PB 0 16384 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -485,8 +485,8 @@ Olat is as big as he is ugly.  About seven and a half feet tall and perhaps
 with a light grey clay and his eyes glow a dull red underneath his thick
 brow. While not very bright, he looks like a dedicated warrior.
 ~
-1073743882 0 0 50331664 0 0 0 -750 S
-PO 0 1 -1
+1073743882 0 0 0 50331664 0 0 0 -750 S
+PO 0 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -500,8 +500,8 @@ dark scowl affixed permanently upon his face. His movements are stiff, with
 a distinct military manner about them. He looks unhappy about something and
 would certainly make a hard taskmaster.
 ~
-1073743886 1 0 16 0 0 0 -580 S
-PH 0 4096 -1
+1073743886 1 0 0 16 0 0 0 -580 S
+PH 0 4096 0 -1
 40 2 -28 40d80+840 4d7+10
 3.3.3.3 51840
 4 8 1
@@ -515,8 +515,8 @@ dark scowl affixed permanently upon his face. Her movements are stiff, with
 a distinct military manner about them. She looks unhappy about something and
 would certainly make a hard taskmaster.
 ~
-1073743886 1 0 16 0 0 0 -580 S
-PH 0 4096 -1
+1073743886 1 0 0 16 0 0 0 -580 S
+PH 0 4096 0 -1
 40 2 -28 40d80+840 4d7+10
 3.3.3.3 51840
 4 8 2
@@ -528,8 +528,8 @@ A &+rthieving rogue&N hears you and tries to hide
 This skulking man wears a large hood, concealing his features.  His leather
 garb is dyed a dark green, the better to skulk and hide in the bush.
 ~
-1073743886 1 0 1572864 0 0 0 -375 S
-PH 0 4096 -1
+1073743886 1 0 0 1572864 0 0 0 -375 S
+PH 0 4096 0 -1
 35 6 -12 35d70+525 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -541,8 +541,8 @@ A &+rthieving rogue&N hears you and tries to hide
 This skulking man wears a large hood, concealing his features.  His leather
 garb is dyed a dark green, the better to skulk and hide in the bush.
 ~
-1073743886 1 0 1572864 0 0 0 -375 S
-PH 0 4096 -1
+1073743886 1 0 0 1572864 0 0 0 -375 S
+PH 0 4096 0 -1
 35 6 -12 35d70+525 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -555,8 +555,8 @@ This poor wretch has been enslaved by the bandits. Perhaps they await a ransom
 and perhaps they have kept him around for manual labor. Barely covered by his
 rags, his body is covered with the marks of the lash and a branding iron.
 ~
-67109002 0 0 33554432 0 0 0 1000 S
-PG 0 1 -1
+67109002 0 0 0 33554432 0 0 0 1000 S
+PG 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -570,8 +570,8 @@ opposition. Black hair tied back in a leather thong rests atop a tanned face
 which features a scar or too.  She moves with caution, carefully considering
 each step and watching carefully about her, wary for threats to her power.
 ~
-1073743882 1 0 524304 0 0 0 -850 S
-PH 0 8192 -1
+1073743882 1 0 0 524304 0 0 0 -850 S
+PH 0 8192 0 -1
 50 -3 -95 50d100+2650 6d6+25
 0.3.1.5 121500
 8 8 2
@@ -585,8 +585,8 @@ hands and quick speech give the impression of nervousness. Occasionally a high
 pitched laugh escapes his mouth.  Otherwise he looks exceptionally normal,
 with pale skin and greasy light brown hair.
 ~
-1073743886 1 0 1572880 0 0 0 -750 S
-PH 0 4096 -1
+1073743886 1 0 0 1572880 0 0 0 -750 S
+PH 0 4096 0 -1
 45 -1 -69 45d90+1935 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -599,8 +599,8 @@ This young child looks to be around 10 years old and is still quite content
 sparring with his friends. It appears he worked up an appetite as he wolfs
 down his food.
 ~
-138 0 0 0 0 0 0 -250 S
-PH 0 4096 -1
+138 0 0 0 0 0 0 0 -250 S
+PH 0 4096 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -613,8 +613,8 @@ This stout half-orc woman is hideously ugly.  Her clothes are covered with
 unidentifiable stains and bits of bone and entrails stick to her apron. She
 grumbles as she putters about the kitchen.
 ~
-1073744010 0 0 0 0 0 0 -150 S
-H 0 4096 -1
+1073744010 0 0 0 0 0 0 0 -150 S
+H 0 4096 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -626,8 +626,8 @@ a &+Lyoung bandit&N plays in the &+ybrown water&N
 This young child looks to be around 10 years old and is still quite content
 playing in the dirty water.
 ~
-138 0 0 0 0 0 0 -250 S
-PH 0 4096 -1
+138 0 0 0 0 0 0 0 -250 S
+PH 0 4096 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -640,8 +640,8 @@ This stout half-orc woman is hideously ugly.  Her clothes are covered with
 unidentifiable stains and bits of bone and entrails stick to her apron. She
 grumbles as she scrubs her fingers raw.
 ~
-1140852874 0 0 0 0 0 0 -150 S
-H 0 4096 -1
+1140852874 0 0 0 0 0 0 0 -150 S
+H 0 4096 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -654,8 +654,8 @@ This stout half-orc woman is hideously ugly.  Her clothes are covered with
 unidentifiable stains and bits of bone and entrails stick to her apron.
 She grumbles loudly in protest as she folds stacks and stacks of clothes.
 ~
-1140852874 0 0 0 0 0 0 -150 S
-H 0 4096 -1
+1140852874 0 0 0 0 0 0 0 -150 S
+H 0 4096 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -668,8 +668,8 @@ This huge reptile is equally comfortable in or out of water.  Living off
 small fish, mammals and halflings, it has a vicious set of jaws and a powerful
 tail.
 ~
-1074006026 1 0 50333712 0 0 0 0 S
-R 0 0 -1
+1074006026 1 0 0 50333712 0 0 0 0 S
+R 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -682,8 +682,8 @@ The feathers on this black buzzard are mottled and ruffled. The buzzard's
 eyes gleam with a strange intelligence, with a tinge of malice creeping in.
 It seems to know something more than it appears.
 ~
-131080 0 0 167772160 0 0 0 -351 S
-B 0 0 -1
+131080 0 0 0 167772160 0 0 0 -351 S
+B 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 11 11 0
@@ -695,8 +695,8 @@ a &+Bfishing&N &+Lbandit&N fishes from the &+ybank&N
 This young man looks to be around 18 years old and is still quite content
 trying to catch some dinner from the muddy bank.
 ~
-138 0 0 0 0 0 0 -250 S
-PH 0 4096 -1
+138 0 0 0 0 0 0 0 -250 S
+PH 0 4096 0 -1
 18 13 42 18d30+90 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -708,8 +708,8 @@ A thin young &+Lbandit&N wonders if you are friend or foe
 This young woman appears to be new to the life of banditry. She must be in her
 late teens, and she moves with false courage, eager to prove her mettle.
 ~
-136 0 0 0 0 0 0 -300 S
-PH 0 4096 -1
+136 0 0 0 0 0 0 0 -300 S
+PH 0 4096 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 2
@@ -721,8 +721,8 @@ a &+Lyoung bandit&N plays in the tall &+Ymeadow grass&N
 This young child looks to be around 10 years old and is still quite content
 playing in the dirty water.
 ~
-138 0 0 0 0 0 0 -250 S
-PH 0 4096 -1
+138 0 0 0 0 0 0 0 -250 S
+PH 0 4096 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -736,8 +736,8 @@ another, looking for any thing out of the ordinary.  He looks like he has
 spent too much time at the guard picket, and his thin haggard face is a
 portrait of deprivation.
 ~
-1073743880 1 0 0 0 0 0 -400 S
-PM 0 4096 -1
+1073743880 1 0 0 0 0 0 0 -400 S
+PM 0 4096 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -749,8 +749,8 @@ a &+Lyoung apprentice&N works over a &+rhot kiln&N.
 This young bandit looks to be around 18 years old and is still quite content
 helping the smithy with his chores.
 ~
-1140852874 0 0 0 0 0 0 -250 S
-PH 0 4096 -1
+1140852874 0 0 0 0 0 0 0 -250 S
+PH 0 4096 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1

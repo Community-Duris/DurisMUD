@@ -247,7 +247,7 @@ hammer titans~
 &+cthe &+Lhammer&+c of the &+Ctitans&n~
 &+cThe &+Lhammer&+c of the &+Ctitans&+c has been left here.&n~
 ~
-5 15 3 0 7 0 0 8396801 0 0 0
+5 15 3 0 7 0 0 8396801 32768 0 0
 4 2 8 7 0 0 0 0
 0 30000 100
 E
@@ -265,7 +265,7 @@ shard mist solidified~
 &+La shard of solidified &+Wmist&n~
 &+LA shard of solidified &+Wmist&+L has been left here.&n~
 ~
-11 1 3 0 7 0 4096 2097153 0 0 0
+11 1 3 0 7 0 4096 2097153 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -298,7 +298,7 @@ token titans~
 &+ca token of the &+Ctitans&n~
 &+cA token of the &+Ctitans&+c has been left here.&n~
 ~
-8 15 3 0 7 0 8392704 2097153 0 0 0
+8 15 3 0 7 0 8392704 2097153 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -313,7 +313,7 @@ piece ivory~
 &+Wa piece of ivory&n~
 &+WA piece of ivory has been left here.&n~
 ~
-8 34 3 0 7 0 8392704 1 0 0 0
+8 34 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -418,7 +418,7 @@ heart raith~
 &+rthe dark heart of Raith&n~
 &+rA heart filled with evil has been left here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -431,7 +431,7 @@ riser iron mace~
 &+Wan&+c iron mace&+W dubbed&+c '&+YRiser&+c'&n~
 &+WAn &+ciron mace&+W has been dropped here.&n~
 ~
-5 15 3 0 7 0 1024 8193 0 95993859 0
+5 15 3 0 7 0 1024 8193 32768 95993859 0
 6 2 4 3 0 0 0 0
 0 2000 100
 E
@@ -448,7 +448,7 @@ rising frost icy mace~
 &+can &+bicy&+c mace dubbed &+c'&+bRis&+Bing&+b Frost&+c'&n~
 &+cAn &+bicy&+c mace has been left here.&n~
 ~
-5 23 3 0 11 0 1024 8193 64 95993859 0
+5 23 3 0 11 0 1024 8193 32832 95993859 0
 6 3 4 3 0 472325 25 30
 0 200000 100 0 64 0 0
 E
@@ -478,7 +478,7 @@ blazing mace rising sun~
 &+ca &+rbla&+Yzi&+rng&+c mace dubbed '&+YRis&+ring &+YSun&+c'&n~
 &+cA &+rbla&+Yzi&+rng&+c mace has been left here.&n~
 ~
-5 15 3 0 7 0 0 8193 64 0 0
+5 15 3 0 7 0 0 8193 32832 0 0
 6 3 4 3 0 233021 50 30
 0 0 100
 E
@@ -560,7 +560,7 @@ golden horse shoe~
 &+Ya golden horse shoe&n~
 &+YA golden horse shoe, left by a &+Wuni&+Ccorn&+Y, has fallen here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -574,7 +574,7 @@ large scale smoke dragon~
 &+wa large smoke dragon scale&n~
 &+wA large smoke dragon scale has fallen here.&n~
 ~
-8 35 3 0 7 0 8392704 1 0 0 0
+8 35 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -587,7 +587,7 @@ large celestial dragon scale~
 &+ca large cel&+Wes&+ctial dragon scale&n~
 &+cA large cel&+Wes&+ctial dragon has fallen here.&n~
 ~
-8 35 3 0 7 0 8392704 1 0 0 0
+8 35 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -637,7 +637,7 @@ piece nexus cloud~
 &+Wa piece of &+Cnex&+cus&+W cloud&n~
 &+WA small piece of cloud from the &+Cnex&+cus&+W is here.&n~
 ~
-8 1 3 0 7 0 8392704 1 0 0 0
+8 1 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -713,7 +713,7 @@ badge cloud giants~
 &+ca badge of the &+Wcloud &+Lgiants&n~
 &+cA badge of the &+Wcloud&+L giants&+c has been left here.&n~
 ~
-9 3 3 0 7 0 0 2097153 0 0 0
+9 3 3 0 7 0 0 2097153 32768 0 0
 -5 0 0 1 0 0 0 0
 0 0 100
 E
@@ -739,7 +739,7 @@ griffon feather~
 &+ya rare &+Wgrif&+Yfon&+y feather&n~
 &+yA valuable &+Wgrif&+Yfon&+y feather has been left here.&n~
 ~
-8 50 3 0 7 0 8392704 16385 0 0 0
+8 50 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -771,7 +771,7 @@ smoke dragon egg~
 &+wa smoke dragon &+Wegg&n~
 &+wA smoke dragon &+Wegg&+w hides in the &+Wmist&+w here.&n~
 ~
-8 45 3 0 7 0 8392704 16385 0 0 0
+8 45 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -784,7 +784,7 @@ frosty icicle~
 &+ba &+Wfrosty&+b icicle&n~
 &+bA &+Wfrosty&+b icicle has formed from the freezing &+Wclouds&+b here.&n~
 ~
-8 7 3 0 7 0 4096 16385 0 0 0
+8 7 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -798,7 +798,7 @@ bone statue carved~
 &+Wa tiny carved bone statue&n~
 &+WA small statue, carved by bone, &+Lhides&+W in the shifting &+Lhaze&+W here.&n~
 ~
-8 10 3 0 7 0 8392704 16385 0 0 0
+8 10 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -812,7 +812,7 @@ disc molded adamantium~
 &+Ma disc of molded adamantium&n~
 &+MA disc of molded adamantium has been left here.&n~
 ~
-8 19 3 0 7 0 8392704 1 0 0 0
+8 19 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -880,7 +880,7 @@ heart vain~
 &+rthe dark heart of Vain&n~
 &+rA heart filled with evil has been left here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -893,7 +893,7 @@ heart gravet~
 &+rthe dark heart of Gravet&n~
 &+rA heart filled with evil has been left here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -906,7 +906,7 @@ heart ajandaner~
 &+rthe dark heart of Ajandaner&n~
 &+rA heart filled with evil has been left here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -937,7 +937,7 @@ flaming demon claw~
 &+ra &+Yfl&+rami&+Yng&+r demon &+Lclaw&n~
 &+rA demon &+Lclaw&+r, burning with an eternal &+Yfl&+ra&Yme&+r of evil, lies here.&n~
 ~
-8 15 3 0 7 0 4096 1 0 0 0
+8 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -966,7 +966,7 @@ token earth~
 &+ya token of earth&n~
 &+yA token of earth has been left here.&n~
 ~
-9 15 3 0 7 0 0 8388613 0 0 0
+9 15 3 0 7 0 0 8388613 32768 0 0
 -5 0 0 2 0 0 0 0
 0 0 100
 E
@@ -983,7 +983,7 @@ token water~
 &+ba token of water&n~
 &+bA token of water has been left here.&n~
 ~
-9 15 3 0 7 0 8192 8388613 0 0 0
+9 15 3 0 7 0 8192 8388613 32768 0 0
 -3 0 0 2 0 0 0 0
 0 0 100
 E
@@ -1000,7 +1000,7 @@ token air~
 &+ca token of air&n~
 &+cA token of air has been left here.&n~
 ~
-9 15 3 0 7 0 0 8388613 0 0 0
+9 15 3 0 7 0 0 8388613 32768 0 0
 -3 0 0 2 0 0 0 0
 0 0 100
 E
@@ -1017,7 +1017,7 @@ token fire~
 &+ra token of fire&n~
 &+rA token of fire has been left here.&n~
 ~
-9 15 3 0 7 0 0 8388613 0 0 0
+9 15 3 0 7 0 0 8388613 32768 0 0
 -3 0 0 2 0 0 0 0
 0 0 100
 E
@@ -1139,7 +1139,7 @@ heart snent~
 &+rthe dark heart of Snent&n~
 &+rA heart filled with evil has been left here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1164,7 +1164,7 @@ heart sealot~
 &+rthe dark heart of Sealot&n~
 &+rA heart filled with evil has been left here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1204,7 +1204,7 @@ heart relazier~
 &+rthe dark heart of Relazier&n~
 &+rA heart filled with evil has been left here.&n~
 ~
-8 15 3 0 7 0 8392704 1 0 0 0
+8 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1259,7 +1259,7 @@ blazing sword longsword rising sun~
 &+ca &+rbla&+Yzi&+rng&+c longsword dubbed '&+YRis&+ring &+YSun&+c'&n~
 &+cA &+rbla&+Yzi&+rng&+c longsword has been left here.&n~
 ~
-5 15 3 0 7 0 0 8193 64 0 0
+5 15 3 0 7 0 0 8193 32832 0 0
 5 3 4 3 0 233021 25 30
 0 0 100
 E
@@ -1321,7 +1321,7 @@ rising frost icy sword longsword~
 &+can &+bicy&+c longsword dubbed &+c'&+bRis&+Bing&+b Frost&+c'&n~
 &+cAn &+bicy&+c longsword has been left here.&n~
 ~
-5 23 3 0 11 0 1024 8193 64 95993859 0
+5 23 3 0 11 0 1024 8193 32832 95993859 0
 5 3 4 3 0 325472 25 30
 0 2000 100
 E

@@ -69,7 +69,7 @@ chunk cinder~
 &+ra chunk of cinder&N~
 &+rA chunk of cinder lies here.&n~
 ~
-8 15 3 0 7 0 8499200 16385 0 0 0
+8 15 3 0 7 0 8499200 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -81,7 +81,7 @@ sword longsword cinder~
 &+ra longsword named &n'&+RCinder&N'~
 &+rA longsword named &n'&+RCinder&N'&+r lies here.&N~
 ~
-5 15 3 0 7 0 1024 8193 0 87572507 0
+5 15 3 0 7 0 1024 8193 32768 87572507 0
 5 3 4 3 1 195 50 50
 11 9235 100 0 16 0 0
 E
@@ -253,7 +253,7 @@ jewel~
 &+Ma dull jewel&n~
 &+MA small dull looking jewel lies here&n.~
 ~
-8 15 3 0 7 0 110592 16385 0 0 0
+8 15 3 0 7 0 110592 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E

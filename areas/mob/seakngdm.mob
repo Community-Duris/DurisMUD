@@ -7,8 +7,8 @@ deep spawn~
 &+cseveral openned toothy maws.  Many whip-like tendrils surge from the
 &+cbody, flailing about wildly as it protects something.
 ~
-1073743882 1 0 402655256 2048 0 0 0 S
-X 0 1 -1
+1073743882 1 0 0 402655256 2048 0 0 0 S
+X 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -22,8 +22,8 @@ deep blue eel br_l~
 &+bten feet long, and four feet wide; its body continually shifting.
 &+bLarge electrical pulses wrap around its body like vines on a tree.
 ~
-1073744008 1 0 134219800 0 0 0 0 S
-EW 0 1 -1
+1073744008 1 0 0 134219800 0 0 0 0 S
+EW 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ snake large water~
 &+babout this snake is that it seems to be made out of the water it
 &+bswims through, giving it uncanny speed and total initiative.
 ~
-1073743896 1 0 135792656 0 0 0 0 S
-RS 0 1 -1
+1073743896 1 0 0 135792656 0 0 0 0 S
+RS 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -54,8 +54,8 @@ morkoth~
 &+bthis room.  Its body is a light indigo and magenta in color, shimmering
 &+band glowing as it readies itself for another victim.
 ~
-2058 1 0 402655384 264256 69206016 1536 -1000 S
-TK 0 1 -1
+2058 1 0 0 402655384 264256 69206016 1536 -1000 S
+TK 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -69,8 +69,8 @@ water elemental~
 &+belemental moves exceptionally fast here in the waters, and strives
 &+bto protect it from the unwanted.
 ~
-2056 1 0 134219800 2048 0 0 0 S
-EW 0 1 -1
+2056 1 0 0 134219800 2048 0 0 0 S
+EW 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -84,8 +84,8 @@ water elemental huge~
 &+belemental moves exceptionally fast here in the waters, and strives
 &+bto protect it from the unwanted.
 ~
-2056 1 0 134219800 2048 0 0 0 S
-EW 0 1 -1
+2056 1 0 0 134219800 2048 0 0 0 S
+EW 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -98,8 +98,8 @@ large octopus~
 &+ctentacles reach from its head, each covered with thousands upon
 &+cthousands of suction cups, whirling towards its next victim.
 ~
-1073743884 1 0 134219800 0 0 0 0 S
-G 0 1 -1
+1073743884 1 0 0 134219800 0 0 0 0 S
+G 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -112,8 +112,8 @@ coral golem~
 &+bbeautiful, twisted coral.  It stands here prepared to give its unnatural
 &+blife to protect the sea.
 ~
-2058 1 0 134219800 0 0 0 0 S
-G 0 1 -1
+2058 1 0 0 134219800 0 0 0 0 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -126,8 +126,8 @@ right arm~
 &+Lclawed hand reaches from the massive arm, connected to the trunk of the
 &+Lbody.
 ~
-2056 1 0 403703824 0 0 0 0 S
-EE 0 1 -1
+2056 1 0 0 403703824 0 0 0 0 S
+EE 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -140,8 +140,8 @@ left arm~
 &+Lclawed hand reaches from the massive arm, connected to the trunk of the
 &+Lbody.
 ~
-2056 1 0 403703824 0 0 0 0 S
-EE 0 1 -1
+2056 1 0 0 403703824 0 0 0 0 S
+EE 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -155,8 +155,8 @@ whirlpool demon~
 &+bshine with an unnatural tint.  Large bony projections out his back
 &+bjut behind him.
 ~
-2058 1 0 402655256 2049 0 0 -1000 S
-X 0 2 -1
+2058 1 0 0 402655256 2049 0 0 -1000 S
+X 0 2 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -169,8 +169,8 @@ evil shadow fish~
 &+LIt's identical to the other shadow fish of the realm, but simply much,
 &+Lmuch larger.
 ~
-1073743880 1 0 134744090 2048 0 0 -1000 S
-MT 0 16 -1
+1073743880 1 0 0 134744090 2048 0 0 -1000 S
+MT 0 16 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -183,8 +183,8 @@ lesser shadow fish~
 &+Llarge and can definately pose a formidable fight in the underwater
 &+Lconditions of the shadow lake.
 ~
-1073743880 1 0 134744090 2048 0 0 -1000 S
-MT 0 1 -1
+1073743880 1 0 0 134744090 2048 0 0 -1000 S
+MT 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -197,8 +197,8 @@ sea sage~
 &+bis the portrayal of a mage that the planar creator has depicted to be.
 &+bIts thin body is draped in an illusionary shroud.
 ~
-2056 1 0 402655240 0 0 0 0 S
-UG 0 512 -1
+2056 1 0 0 402655240 0 0 0 0 S
+UG 0 512 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -210,8 +210,8 @@ water mephit~
    &+bThis small figure of water drifts past totally unrecognized.  Its
 &+bentire body bears no distinguishing marks or features whatsoever.
 ~
-1073743880 1 0 402653208 2048 0 0 0 S
-H 0 16384 -1
+1073743880 1 0 0 402653208 2048 0 0 0 S
+H 0 16384 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -227,8 +227,8 @@ eye sapphire deep~
 &+bbelow its mysterious eye, there is a large, opened mouth.  It drips with
 &+ba deep green saliva and carries many, many tiny teeth.
 ~
-2058 1 0 402655256 2048 0 0 0 S
-BH 0 128 -1
+2058 1 0 0 402655256 2048 0 0 0 S
+BH 0 128 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -243,8 +243,8 @@ eye azure deep~
 &+bhowever, is white instead of black.  Tiny circles of its pupil fill
 &+beachother in its eye, creating small spiral, all within its eye.
 ~
-2058 1 0 402655256 2048 0 0 0 S
-BH 0 2 -1
+2058 1 0 0 402655256 2048 0 0 0 S
+BH 0 2 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -257,8 +257,8 @@ aquatic beast~
 &+bdog.  Large unnatural muscles ripple through its body of pure water.
 &+bIt moves with uncanny speed to protect the sea from intruders.
 ~
-1073743882 1 0 134219800 262144 0 0 0 S
-MT 0 1 -1
+1073743882 1 0 0 134219800 262144 0 0 0 S
+MT 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -271,8 +271,8 @@ psionic eel br_l~
 &+Lexcept that its body is made of the same shadow filling this lake,
 &+Lenabling it materialize anywhere.
 ~
-2058 1 0 404228120 0 0 0 0 S
-EW 0 4 -1
+2058 1 0 0 404228120 0 0 0 0 S
+EW 0 4 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -286,8 +286,8 @@ manta ray~
 &+Ldarker in color, with a saphire blue tint around its piercing red eyes.
 &+LThe manta ray is simply a guardian of its home, here on the sea.
 ~
-1073743882 1 0 135268376 2049 0 0 0 S
-EW 0 512 -1
+1073743882 1 0 0 135268376 2049 0 0 0 S
+EW 0 512 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -301,8 +301,8 @@ eerie sea minion~
 &+bbody.  It has no face at all, and its body is simply a small pillar
 &+bof concentrated water, housing the large stalks it uses as arms.
 ~
-1073743880 1 0 134219928 0 0 0 -1000 S
-G 0 1 -1
+1073743880 1 0 0 134219928 0 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -317,8 +317,8 @@ sea spirit~
 &+cto different images of fallen sailors and explorers, each with an equal
 &+cexpression of depression.
 ~
-1073743880 1 0 134217880 0 0 0 0 S
-UG 0 64 -1
+1073743880 1 0 0 134217880 0 0 0 0 S
+UG 0 64 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -333,8 +333,8 @@ ixitxachitl priest~
 &+cof the sea god, or it is merely an elemental projecting the image of the
 &+cearthly ixitxachitl.
 ~
-1073743882 1 0 134219800 0 0 0 -1000 S
-EW 0 32 -1
+1073743882 1 0 0 134219800 0 0 0 -1000 S
+EW 0 32 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -349,8 +349,8 @@ ixitxachitl~
 &+gor is this simply a water elemental taking shape of the malevolant
 &+gearthly specimine.
 ~
-8 1 0 134219800 0 0 0 -1000 S
-EW 0 1 -1
+8 1 0 0 134219800 0 0 0 -1000 S
+EW 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -364,8 +364,8 @@ black tentacle br_g~
 &+Ljet black, and shining to the core.  Whatever beast this tenticle comes
 &+Lfrom must be massive.
 ~
-2056 1 0 402655256 2048 0 0 0 S
-MT 0 1 -1
+2056 1 0 0 402655256 2048 0 0 0 S
+MT 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -380,8 +380,8 @@ piranha red-tooth~
 &+Lof total lostness in its eyes stare into nowhere as it preys among
 &+Lall.
 ~
-1073743880 1 0 134219800 0 0 0 -1000 S
-F 0 1 -1
+1073743880 1 0 0 134219800 0 0 0 -1000 S
+F 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -394,8 +394,8 @@ cloud dark sea mist~
 &+Lpart of these waters, like it would in normal air.  It takes no particular
 &+Lshape at all, just a large blob of fluctuating mist.
 ~
-1073743880 1 0 135792664 0 0 0 0 S
-X 0 1 -1
+1073743880 1 0 0 135792664 0 0 0 0 S
+X 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -409,8 +409,8 @@ daemonite imp br_f~
 &+Llower half of his face at all times, showing off his several rows of
 &+Ltiny razor teeth.
 ~
-2056 1 0 402655256 264193 0 0 -1000 S
-D 0 1 -1
+2056 1 0 0 402655256 264193 0 0 -1000 S
+D 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -430,8 +430,8 @@ poseidon~
 &+Lhe speaks, the voice of Poseidon echos with an intense power.  Waters
 &+Lthroughout the realm change continuously with but a thought of the water God.
 ~
-2316 1 0 402655416 2049 0 0 0 S
-av 0 512 -1
+2316 1 0 0 402655416 2049 0 0 0 S
+av 0 512 0 -1
 60 0 0 1d1+20000 5d15+60
 0.0.0.0 0
 8 8 1
@@ -446,8 +446,8 @@ needled blow fish~
 &+bwhen swimming directly at its prey, contact with it would be very
 &+bdangerous.
 ~
-1073743880 1 0 135792664 0 0 0 -50 S
-F 0 16384 -1
+1073743880 1 0 0 135792664 0 0 0 -50 S
+F 0 16384 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -463,8 +463,8 @@ whirlpool minion~
 &+band it has a very small head.  This strange looking sea creature
 &+bprotects the whirlpool with a ferocity seen only in untame animals.
 ~
-2058 1 0 135268376 0 0 0 -450 S
-EW 0 1 -1
+2058 1 0 0 135268376 0 0 0 -450 S
+EW 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -479,8 +479,8 @@ lures hanging from small leather loops on his attire.  Tiny tears roll
 down his cheeks under his eyes, framing his aged face.  This fisherman
 now floats about in terror through the sea kingdom, brought by Poseidon.
 ~
-2056 0 0 134217752 0 0 0 900 S
-UG 0 1 -1
+2056 0 0 0 134217752 0 0 0 900 S
+UG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -496,8 +496,8 @@ razor blade.  This serpent's technique of killing victims in the water
 involves circling itself around them, becoming tighter and tighter until
 the razor blades tear away at the victim in an uncanny speed.
 ~
-1073743880 1 0 134219800 0 0 0 -500 S
-G 0 1 -1
+1073743880 1 0 0 134219800 0 0 0 -500 S
+G 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -511,8 +511,8 @@ no legs at all, just a faint trail behind it cut off at the waist.  The
 enforcer senses danger in the sea kingdom and rushes to aid its comrades
 at the slightest sign of trouble in the tide.
 ~
-1073743880 1 0 134219800 0 0 0 -1000 S
-MT 0 1 -1
+1073743880 1 0 0 134219800 0 0 0 -1000 S
+MT 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -527,8 +527,8 @@ reef demon br_c~
 &+Wtotal force.  The demon has flaming blue eyes and an open mouth,
 &+Wexposing a frozen breath.
 ~
-1073743882 1 0 402655256 1 0 0 -1000 S
-X 0 512 -1
+1073743882 1 0 0 402655256 1 0 0 -1000 S
+X 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -543,8 +543,8 @@ and how even if it has been slain, the tendrils will continue to fight.
 Several rows of huge black spikes reach out of the tendril, which is wrapped
 around the targets body, twisted, and squeezed.
 ~
-2058 1 0 134219800 0 67108864 0 -1000 S
-A 0 1 -1
+2058 1 0 0 134219800 0 67108864 0 -1000 S
+A 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -559,8 +559,8 @@ body glows and pulsates, as it stands motionless guarding the sea kingdom.
 The golem's head is erected only a few inches off of its torso, set with very
 deep black eyes.
 ~
-2058 1 0 134219928 0 0 0 0 S
-OG 0 256 -1
+2058 1 0 0 134219928 0 0 0 0 S
+OG 0 256 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -575,8 +575,8 @@ Ultranos to be trusted into protecting the treasurey.  He also wears bright
 red gloves that reach his elbows, as well as bright red boots that reach his
 knees.  A small and pointy moustache frames his upper lip.
 ~
-1140852746 0 0 134217752 0 0 0 1000 S
-H 0 1 -1
+1140852746 0 0 0 134217752 0 0 0 1000 S
+H 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -591,8 +591,8 @@ Normally he would have a smirk or a grin on his face, but it has been frozen
 over in utter terror as he tries to fight off the &+bsea horde&N that is
 overrunning the Ultranos at this point in time.
 ~
-1073743880 0 0 134217736 0 0 0 1000 S
-PH 0 2 -1
+1073743880 0 0 0 134217736 0 0 0 1000 S
+PH 0 2 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -608,8 +608,8 @@ dante captain~
 &+Bbattle.  Dant‚ has a tattoo of an anchor on his right arm.  His open
 &+Bshirt is also ripped in several spots.
 ~
-1140852744 0 0 134217736 0 0 0 1000 S
-PH 0 2 -1
+1140852744 0 0 0 134217736 0 0 0 1000 S
+PH 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -626,8 +626,8 @@ wrist.  His hand must have been taken in battle at one point or another,
 but for the time being he has a large metal hook extended from a case,
 mounted onto the stub of where his hand once was.
 ~
-1140852744 0 0 134217736 0 0 0 1000 S
-PH 0 512 -1
+1140852744 0 0 0 134217736 0 0 0 1000 S
+PH 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -642,8 +642,8 @@ at the moment the ship is being attacked and destroyed by vicious unearthly
 sea creatures.  The lookout has only been involved in the very basic of
 training sessions and hides in the crow's nest from the horde.
 ~
-2058 0 0 201326600 0 0 0 1000 S
-PH 0 1 -1
+2058 0 0 0 201326600 0 0 0 1000 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 10 10 1
@@ -657,8 +657,8 @@ and boots.  He is very strong; his bulging muscles stretch his shirt across
 his body to a very tight state.  He has a look of panic and fear on his face
 as he tries hopelessly to defend the ship from the onslaught of the Sea Horde.
 ~
-1140852744 1 0 134217752 0 0 0 1000 S
-PH 0 1 -1
+1140852744 1 0 0 134217752 0 0 0 1000 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -673,8 +673,8 @@ off the attacks of the Sea Horde.  A look of shock and fear mars his normally
 clean-shaven face.  He breathes loud and hard as adrenaline forces him to
 move on.
 ~
-67110922 0 0 134217736 0 0 0 1000 S
-PH 0 1 -1
+67110922 0 0 0 134217736 0 0 0 1000 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -690,8 +690,8 @@ gust.  Its eyes are vacant and mysterious, white in color.  It seems to
 be totally out of control and lives without a mind, under control of some
 more potent force, perhaps.
 ~
-3082 1 0 134217882 0 0 0 -1000 S
-D 0 1 -1
+3082 1 0 0 134217882 0 0 0 -1000 S
+D 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.900.450 0
 8 8 0
@@ -706,8 +706,8 @@ that a vulture would circle its decaying prey.  The drake occasionaly
 unleashes a fearsome gust of lightning breath towards the crew, tenderizing
 it before it swoops.
 ~
-1073874954 1 0 402655256 0 0 0 -699 S
-G 0 1 -1
+1073874954 1 0 0 402655256 0 0 0 -699 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 1
@@ -722,8 +722,8 @@ that a vulture would circle its decaying prey.  The drake occasionaly
 unleashes a fearsome gust of lightning breath towards the crew, tenderizing
 it before it swoops.
 ~
-1073874954 1 0 402655256 0 0 0 -699 S
-X 0 1 -1
+1073874954 1 0 0 402655256 0 0 0 -699 S
+X 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 1
@@ -738,8 +738,8 @@ Ultranos.  Its clawed wings reach almost three times the size of the dragon
 itself on either side, and are held out as it swoops down.  The dragon's
 eyes are a deep blue, which give off a faint light of their own.
 ~
-1073874952 1 0 134217728 0 0 0 -800 S
-D 0 1 -1
+1073874952 1 0 0 134217728 0 0 0 -800 S
+D 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -754,8 +754,8 @@ It attacks with a fury not previously seen in any type of water elemental,
 and must be controlled magically by a higher force that wishes to destroy
 the Ultranos.
 ~
-1073743880 1 0 134219804 0 0 0 -399 S
-EW 0 1048576 -1
+1073743880 1 0 0 134219804 0 0 0 -399 S
+EW 0 1048576 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -772,8 +772,8 @@ uncanny speed.  The water Oni can dissipate into the air, then reform from
 any type of water in the surroundings, allowing it to have an incredible
 advantage over more primative means of mobility.
 ~
-1073743880 1 0 135792664 0 0 0 -1000 S
-X 0 1 -1
+1073743880 1 0 0 135792664 0 0 0 -1000 S
+X 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

@@ -2,7 +2,7 @@
 Lylr-Meop~
 82263 2 0 40 50 1
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 82208 3 5 100 0 0 0
@@ -79,6 +79,7 @@ D 0 82239 2 2 100 0 0 0
 *
 *
 O 0 82213 1 82221 100 0 0 0        * a white marble fountain
+O 0 132581 1 82228 100 0 0 0       * (object type not in this .obj file)
 O 0 82215 1 82229 100 0 0 0        * a sturdy chest
 P 1 82216 1 82215 100 0 0 0        *   a pile of coins
 P 1 82221 1 82215 100 0 0 0        *   a twisted iron staff
@@ -142,7 +143,6 @@ M 0 82215 1 82227 100 0 0 0        * Grandma
 E 1 82218 1 9 100 0 0 0            *   a pair of ragged gloves
 E 1 82219 1 16 100 0 0 0           *   a walking cane
 M 0 82224 1 82228 100 0 0 0        * Sakthris the banker
-O 0 132581 1 82228 100 0 0 0       * the counter
 M 0 82217 1 82230 100 0 0 0        * A prison guard
 G 1 82205 3 0 100 0 0 0            *    a pair of squirrel skin leggings
 M 0 82223 1 82234 100 0 0 0        * A bored guard

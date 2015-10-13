@@ -13,8 +13,8 @@ males hardly ever reach such a position in life where they are privaledged
 enough to become a drider, thusly, the drow women usually have the
 opportunity to undergow the transformation.
 ~
-1073743882 1 0 56 0 0 0 -1000 S
-dr 0 1 -1
+1073743882 1 0 0 56 0 0 0 -1000 S
+dr 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -33,8 +33,8 @@ males hardly ever reach such a position in life where they are privaledged
 enough to become a drider, thusly, the drow women usually have the
 opportunity to undergow the transformation.
 ~
-1073743882 1 0 184 0 0 0 -1000 S
-DR 0 1 -1
+1073743882 1 0 0 184 0 0 0 -1000 S
+DR 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -48,8 +48,8 @@ the caverns.  It has large black teeth, and pearly white eyes that
 stare out into the darkness.  It spins a web as it awaits the great
 transformation by Lolth.
 ~
-2056 0 0 152 2 0 0 -1000 S
-AS 0 1 -1
+2056 0 0 0 152 2 0 0 -1000 S
+AS 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -63,8 +63,8 @@ the caverns.  It has large black teeth, and pearly white eyes that
 stare out into the darkness.  It spins a web as it awaits the great
 transformation by Lolth.
 ~
-2056 0 0 152 0 0 0 -1000 S
-A 0 1 -1
+2056 0 0 0 152 0 0 0 -1000 S
+A 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -80,8 +80,8 @@ the adolescent stage of life and has a large scar down the right side
 of his arm, gotten probably from fighting off an invader of the town.
 Of course, most people around here are considered invaders of the town.
 ~
-1073743882 1 0 152 2 0 0 -1000 S
-PD 0 1 -1
+1073743882 1 0 0 152 2 0 0 -1000 S
+PD 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -96,8 +96,8 @@ training center.  He wears little more than a standard suit of
 leather armor, with a small adamantite set of weapons, consisting
 of a dagger and shortsword.
 ~
-2056 1 0 152 0 0 0 -1000 S
-PD 0 1 -1
+2056 1 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -112,8 +112,8 @@ elder of a clan due to his silvery-gray hair.  He wears a simple
 uniform of the mining company, with an occaissional piece of gem
 studded jewelry.
 ~
-1073744394 1 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1073744394 1 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -127,8 +127,8 @@ here to mine the many precious ores that are found within the duergar
 mines.  He wears a simple set of mining clothes, no lantern of course,
 and has a huge pick axe.
 ~
-2056 0 0 152 0 0 0 -1000 S
-PD 0 1 -1
+2056 0 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -142,8 +142,8 @@ here to mine the many precious ores that are found within the duergar
 mines.  He wears a simple set of mining clothes, no lantern of course,
 and has a huge pick axe.
 ~
-2056 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+2056 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -157,8 +157,8 @@ his quaint little home.  He appears to be a mine worker, with just
 a little bit of training at the training facility.  He wears a simple
 set of leather armor, and keeps a dagger hidden at all times.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -172,8 +172,8 @@ a little skill in the fine war arts, probably been taught by his father.
 He wears a set of tattered rags, probably with him since birth.  He
 is about 2 and a half feet tall, and rather fat.
 ~
-2058 0 0 152 0 0 0 -1000 S
-PD 0 1 -1
+2058 0 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -189,8 +189,8 @@ back.  He lives a simple life back here, and occaisionally wears
 a disguise of a normal commoner and steals a few of the local gems
 from the mines.
 ~
-1073743882 0 0 1048728 0 0 0 -1000 S
-PD 0 8192 -1
+1073743882 0 0 0 1048728 0 0 0 -1000 S
+PD 0 8192 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -204,8 +204,8 @@ his quaint little home.  He appears to be a mine worker, with just
 a little bit of training at the training facility.  He wears a simple
 set of leather armor, and keeps a dagger hidden at all times.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -220,8 +220,8 @@ leather armor.  The plates themselve don't appear to be normal adamantite
 plates, but rather a more slender stealthy cut of the material.  He
 wields a sharp dagger to pierce his opponents with.
 ~
-1073743882 1 0 8 0 0 0 -1000 S
-PD 0 4096 -1
+1073743882 1 0 0 8 0 0 0 -1000 S
+PD 0 4096 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -238,8 +238,8 @@ sorts, including one handed slashing, bludgeoning, and piercing weapons.
 Finally, he wears a small helm that covers his forehead for practicing
 headbutting.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PD 0 16384 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PD 0 16384 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -254,8 +254,8 @@ the taste of blood, especially that of the mountain dwarf wars.  He carries
 with him at all times his sacred daggers, as well as a small vial of
 dwarf blood he got while saving the king's life.
 ~
-1073743882 1 0 270008504 14336 0 0 -1000 S
-PD 0 8192 -1
+1073743882 1 0 0 270008504 14336 0 0 -1000 S
+PD 0 8192 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -269,8 +269,8 @@ guards and has now moved to a less-dangerous life of training new
 duergar mercenaries to serve the king.  He is dressed in a suit
 of adamantite platemail with several other of his famous trophies.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PD 0 16384 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PD 0 16384 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -284,8 +284,8 @@ the training center to train in the arts of fighting to become a
 warrior in the king's guard.  He seems to be very strong, and very
 agile, every for a duergar.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -300,8 +300,8 @@ strength.  He has large scars all over his body and several medals
 of honor.  He seems to be regarded with great authority at the
 training facility as most of the trainees are warriors.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -315,8 +315,8 @@ duergar clerics that are advanced enough to take up the training
 of the temple here.  He is dressed in the standard set of unholy
 garments given to the trainees, and carries a small mace.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PD 0 32 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PD 0 32 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -331,8 +331,8 @@ Formerly the king's personal priest, he is quite proud of his
 acomplishments by carrying around several pins of honor.  He is
 dressed in a brilliant sent of robes.
 ~
-1073743882 1 0 156 8 0 0 -1000 S
-PD 0 32 -1
+1073743882 1 0 0 156 8 0 0 -1000 S
+PD 0 32 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -346,8 +346,8 @@ junk collector, and general tinkerer.  He seems to be short-eyed and
 very crazy-like.  He is short and fat with a small beard and a scar
 across his neck (probably from taking the junk of a fellow citizen).
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -359,8 +359,8 @@ a trap spider~
     This hairy spider sits in the closets of the duergar warriors,
 waiting to jump on those who want to take its master's treasures.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-I 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+I 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -376,8 +376,8 @@ just made their home with the duergar. Most of these worms seem
 relatively harmless, and burrow back into the UD, eating other creatures
 in the UD for food, rather than the tough and stringy duergar.
 ~
-1073743880 0 0 2200 2050 0 0 -1000 S
-AC 0 1 5
+1073743880 0 0 0 2200 2050 0 0 -1000 S
+AC 0 1 0 5
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -391,8 +391,8 @@ brenevka orc maid~
  the entire time she is employed.  She has been given a small room
  next to the foyer for easy access to the castle.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-PO 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+PO 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -406,8 +406,8 @@ aware of this duty, he lets nothing distract him, and will attack
 on sight anyone who wasn't personally invited by the king.  He
 wears a standard suit of royal platemail.
 ~
-1073743882 1 0 805830808 14528 0 0 -1000 S
-PD 0 1 -1
+1073743882 1 0 0 805830808 14528 0 0 -1000 S
+PD 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -420,8 +420,8 @@ drow emissary~
 in his quarters, waiting for an audience with the king.  He is very
 slender and thin, but seems to have a mystical aura about him.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PL 0 512 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PL 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -435,8 +435,8 @@ fire place in his personal guests' quarters that the king has granted
 him the nice quarters.  He sits here memorizing his spells, preparing
 for his audience with the king.
 ~
-1073743882 1 0 939524248 14530 0 0 -1000 S
-PG 0 2048 -1
+1073743882 1 0 0 939524248 14530 0 0 -1000 S
+PG 0 2048 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -450,8 +450,8 @@ in standard cleric garb, this flind is very much the common cleric
 stereotype of a quiet monkish-cleric.  He seems to be very calm and
 patient, waiting his turn.
 ~
-1073743882 1 0 2232 2048 0 0 -1000 S
-HO 0 32 -1
+1073743882 1 0 0 2232 2048 0 0 -1000 S
+HO 0 32 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -464,8 +464,8 @@ troll emissary~
 very large troll, and probably a prominent figure back in his hometown,
 he was sent here to work out the army and trade agreement with the king.
 ~
-1073743882 1 0 268437656 2050 0 0 -1000 S
-PT 0 1 -1
+1073743882 1 0 0 268437656 2050 0 0 -1000 S
+PT 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -481,8 +481,8 @@ goodie he kills, he tattoos something new on his arm reminding him
 of the glorious battle, such tattoos that are recognizeable are splattered
 skulls, scalps, headless dwarves, and gutted grey elves.
 ~
-1073743882 1 0 805308600 2050 0 0 -1000 S
-PO 0 1 -1
+1073743882 1 0 0 805308600 2050 0 0 -1000 S
+PO 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -496,8 +496,8 @@ negotiate army strategies with the great duergar king.  He seems
 to have been in battle himself, and probably a former general of
 the army, now, however, he is slightly older.
 ~
-1073743882 1 0 939524184 2050 0 0 -1000 S
-HO 0 1 -1
+1073743882 1 0 0 939524184 2050 0 0 -1000 S
+HO 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -512,8 +512,8 @@ orcish hordes, the orc emissary seems to be first in line with
 audience of the king, however, the king seems to already be in
 audience with even a bigger force than the great orcish hordes.
 ~
-1073743882 1 0 939526328 2058 0 0 -1000 S
-HO 0 1 -1
+1073743882 1 0 0 939526328 2058 0 0 -1000 S
+HO 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -525,8 +525,8 @@ lion head~
     This is the head of the lion part of the chimera.  The lion is a
 well groomed part of the chimera and contains the front two paws.
 ~
-2058 1 0 152 0 0 0 -1000 S
-A 0 1 -1
+2058 1 0 0 152 0 0 0 -1000 S
+A 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -538,8 +538,8 @@ head dragon~
     The dragon head of the chimera is right next to the main lion head
 and also continues throughout the beast to provide wings and a tail.
 ~
-2090 1 0 184 2048 0 0 -1000 S
-D 0 1 -1
+2090 1 0 0 184 2048 0 0 -1000 S
+D 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -551,8 +551,8 @@ goat head~
     The goat part of the chimera makes up the back half of the chimera
 and the horned head.
 ~
-2058 1 0 184 0 0 0 -1000 S
-A 0 1 -1
+2058 1 0 0 184 0 0 0 -1000 S
+A 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -574,8 +574,8 @@ head.  There are two royal honor bodyguards by his side, as well as his
 pet basilisk which sleeps in the corner.  He seems to be very well adapted
 in his throne room, and lets only the greatest of all the warriors in here.
 ~
-16779274 1 0 152 0 0 0 -1000 S
-PD 0 1 -1
+16779274 1 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 60 150 200 500d5+16000 7d6+65
 0.0.0.100 500000
 8 8 1
@@ -589,8 +589,8 @@ aware of this duty, he lets nothing distract him, and will attack
 on sight anyone who wasn't personally invited by the king.  He
 wears a standard suit of royal platemail.
 ~
-67110922 1 0 268437656 2050 0 0 -1000 S
-PD 0 1 -1
+67110922 1 0 0 268437656 2050 0 0 -1000 S
+PD 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -607,8 +607,8 @@ to have been raised by King StoutDorf and is his life long pet
 and servant.  Its eyes glow a pale green, and is able to see
 all that goes on.
 ~
-1141377034 1 0 2200 2050 0 0 -1000 S
-R 0 32 -1
+1141377034 1 0 0 2200 2050 0 0 -1000 S
+R 0 32 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -623,8 +623,8 @@ other devil.  He has the complextion of a drow elf, and the wings of
 a fiery demon.  He has four arms and strikes out in fury against any
 who attack him, having a fury that none see but in the depths of hell.
 ~
-2058 1 0 152 0 0 0 -1000 S
-Y 0 64 -1
+2058 1 0 0 152 0 0 0 -1000 S
+Y 0 64 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -634,8 +634,8 @@ guard duergar mine~
 &+rA duergar mine guard stands here with a grim look on his face.&n
 ~
 ~
-67110922 0 0 0 0 0 0 -1000 S
-PD 5 1 3
+67110922 0 0 0 0 0 0 0 -1000 S
+PD 5 1 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

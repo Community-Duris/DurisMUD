@@ -56,7 +56,7 @@ fox~
 a freshly killed &+rfox&n~
 A freshly killed &+rfox&N is lying here.~
 ~
-13 2 0 0 7 0 0 1 0 0 0
+13 2 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 10 0 100
 #13506
@@ -80,7 +80,7 @@ wolf~
 a freshly killed wolf~
 A freshly killed wolf is lying here.~
 ~
-13 2 0 0 7 0 0 1 0 0 0
+13 2 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 15 0 100
 #13509
@@ -104,7 +104,7 @@ rabbit~
 a freshly killed &+Wrabbit&n~
 A freshly killed &+Wrabbit&N is lying here.~
 ~
-13 2 0 0 7 0 0 1 0 0 0
+13 2 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 3 0 100
 #13512
@@ -120,7 +120,7 @@ raccoon~
 a freshly killed &+Lr&+ya&+Lc&+yc&+Lo&+yo&+Ln&N~
 A freshly killed &+Lr&+ya&+Lc&+yc&+Lo&+yo&+Ln&N is lying here.~
 ~
-13 2 0 0 7 0 0 1 0 0 0
+13 2 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 4 0 100
 #13514
@@ -136,7 +136,7 @@ buck~
 a freshly killed &+ybuck&n~
 A freshly killed &+ybuck&N is lying here.~
 ~
-13 2 0 0 7 0 0 1 0 0 0
+13 2 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 25 0 100
 #13516
@@ -144,7 +144,7 @@ deer~
 a freshly killed &+ydeer&n~
 A freshly killed &+ydeer&N is lying here.~
 ~
-13 2 0 0 7 0 0 1 0 0 0
+13 2 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 20 0 100
 #13517
@@ -152,7 +152,7 @@ doe~
 a freshly killed &+ydoe&n~
 A freshly killed &+ydoe&N is lying here.~
 ~
-13 2 0 0 7 0 0 1 0 0 0
+13 2 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 18 0 100
 #13518
@@ -160,7 +160,7 @@ rattlesnake snake~
 a freshly killed &+yra&+Ytt&+yle&+Ysn&+yake&N~
 A freshly killed &+yra&+Ytt&+yle&+Ysn&+yake&N is lying here.~
 ~
-13 2 0 0 7 0 0 1 0 0 0
+13 2 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 5 0 100
 #13519
@@ -168,7 +168,7 @@ bluejay~
 a freshly killed &+Bbluejay&n~
 A freshly killed &+Bbluejay&N is lying here.~
 ~
-13 2 0 0 7 0 0 1 0 0 0
+13 2 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 #13520
@@ -199,7 +199,7 @@ jacket buckskin~
 &+ya buckskin jacket lined with &+Wfur&N~
 &+yA buckskin jacket lined with &+Wfur&N has been tossed here.~
 ~
-9 12 0 0 7 0 0 9 0 0 0
+9 12 0 0 7 0 0 9 32768 0 0
 10 3 1 3 0 0 0 0
 5 3000 100
 E
@@ -217,7 +217,7 @@ boots deerskin~
 &+ysome &+Wfurlined&N &+ydeerskin boots&n~
 &+ySome &+Wfurlined&N &+ydeerskin boots&N are lying here.~
 ~
-9 12 3 8 7 0 0 65 0 0 0
+9 12 3 8 7 0 0 65 32768 0 0
 6 6 1 3 0 0 0 0
 5 3000 100
 E
@@ -235,7 +235,7 @@ pants doeskin~
 &+ysome doeskin pants&n~
 Someone has discarded &+ysome doeskin pants&N here.~
 ~
-9 12 3 8 7 0 0 33 0 0 0
+9 12 3 8 7 0 0 33 32768 0 0
 6 5 1 3 0 0 0 0
 5 2000 100
 E
@@ -251,7 +251,7 @@ belt snakeskin~
 &+ya sn&+Yak&+yes&+Yki&+yn belt&n~
 &+ya sn&+Yak&+yes&+Yki&+yn belt&N has been left here.~
 ~
-9 12 3 3 7 0 0 2049 0 0 0
+9 12 3 3 7 0 0 2049 32768 0 0
 4 10 0 3 0 0 0 0
 5 1000 100
 E
@@ -266,7 +266,7 @@ cape fox fur~
 &+ra fox fur &+Wcape&N~
 &+ra beautiful fox fur &+Wcape&N has been left here.~
 ~
-9 3 0 0 7 0 0 1025 0 0 0
+9 3 0 0 7 0 0 1025 32768 0 0
 10 9 1 3 0 0 0 0
 4 5000 100
 E
@@ -283,7 +283,7 @@ cap coonskin raccoon~
 &+ya &+Lr&+ya&+Lc&+yc&+Lo&+yo&+Ln&+y cap&N~
 Someone has lost &+ya &+Lr&+ya&+Lc&+yc&+Lo&+yo&+Ln&+y cap&N here.~
 ~
-9 12 3 3 7 0 0 17 0 0 0
+9 12 3 3 7 0 0 17 32768 0 0
 3 4 16 3 0 0 0 0
 5 1000 100
 E
@@ -326,7 +326,7 @@ arrow~
 &+gan arr&+Bow&N~
 &+gAn arrow with a green shaft and &+Bblue feathers&N lies here.~
 ~
-7 6 0 3 7 0 4096 16385 0 0 0
+7 6 0 3 7 0 4096 16385 32768 0 0
 0 1 8 1 0 0 0 0
 1 0 100
 E
@@ -439,7 +439,7 @@ buckskin hide~
 &+ya tanned buckskin&n~
 &+yA tanned buckskin&N has been discarded here.~
 ~
-13 12 0 0 7 0 0 1 0 0 0
+13 12 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 300 100
 E
@@ -452,7 +452,7 @@ deerskin hide~
 &+ya tanned deerskin&n~
 &+yA tanned deerskin&N has been discarded here.~
 ~
-13 12 0 0 7 0 0 1 0 0 0
+13 12 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 300 100
 E
@@ -465,7 +465,7 @@ doeskin hide~
 &+ya tanned doeskin&n~
 &+yA tanned doeskin&N has been discarded here.~
 ~
-13 12 0 0 7 0 0 1 0 0 0
+13 12 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 300 100
 E
@@ -478,7 +478,7 @@ rabbit pelt~
 &+Wa white rabbit pelt&n~
 &+WA white rabbit pelt&N has been discarded here.~
 ~
-13 12 0 0 7 0 0 1 0 0 0
+13 12 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 300 100
 E
@@ -491,7 +491,7 @@ snakeskin~
 &+ya tanned &+ysn&+Yak&+yes&+Yki&+yn&N~
 &+yA tanned &+ysn&+Yak&+yes&+Yki&+yn&N has been discarded here.~
 ~
-13 12 0 0 7 0 0 1 0 0 0
+13 12 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 300 100
 E
@@ -505,7 +505,7 @@ coonskin~
 &+ya &+Lc&+yo&+Lo&+yn&+Ls&+yk&+Li&+yn&N~
 &+yA &+Lc&+yo&+Lo&+yn&+Ls&+yk&+Li&+yn&N has been discarded here.~
 ~
-13 12 0 0 7 0 0 1 0 0 0
+13 12 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 300 100
 E
@@ -518,7 +518,7 @@ wolf hide~
 a wolf hide~
 A wolf hide has been discarded here.~
 ~
-13 12 0 0 7 0 0 1 0 0 0
+13 12 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 300 100
 E
@@ -532,7 +532,7 @@ fox fur~
 &+ra fox fur&n~
 &+rA fox fur&N has been discarded here.~
 ~
-13 3 0 0 7 0 0 1 0 0 0
+13 3 0 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 300 100
 E
@@ -546,7 +546,7 @@ backpack bp~
 a wolfhide backpack~
 A wolfhide backpack has been dropped here.~
 ~
-15 12 3 10 7 0 0 1025 0 0 0
+15 12 3 10 7 0 0 1025 32768 0 0
 200 5 0 100 0 0 0 0
 1 2000 100
 E
@@ -562,7 +562,7 @@ orchid~
 &+gan &+Mo&+mrc&+Mhid&N~
 &+gAn &+Mo&+mrc&+Mhid&N &+gis here.~
 ~
-9 30 0 0 7 0 0 8388609 0 0 0
+9 30 0 0 7 0 0 8388609 32768 0 0
 0 18 0 3 0 0 0 0
 1 400 100
 E
@@ -576,7 +576,7 @@ orchid sprig~
 &+gan &+Mo&+mrc&+Mhid&N &+gsprig&n~
 &+gAn &+Mo&+mrc&+Mhid&N &+gsprig has been discovered here.~
 ~
-13 30 0 0 7 0 4096 16385 0 0 0
+13 30 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -589,7 +589,7 @@ rose~
 &+ga &+rr&+Ros&+re&N~
 &+gA &+rr&+Ros&+re &+gis here.~
 ~
-9 30 0 0 7 0 0 8388609 0 0 0
+9 30 0 0 7 0 0 8388609 32768 0 0
 0 18 0 3 0 0 0 0
 1 400 100
 E
@@ -603,7 +603,7 @@ rose plant~
 &+ga &+rr&+Ros&+re &+gplant~
 &+gA &+rr&+Ros&+re &+gplant has been discovered here.~
 ~
-13 30 0 0 7 0 4096 16385 0 0 0
+13 30 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -616,7 +616,7 @@ chrysanthemum mum~
 &+ga &+Wchr&+Yysa&+Rnth&+Wemu&+Ym&N~
 &+gA &+Wchr&+Yysa&+Rnth&+Wemu&+Ym&N &+gis here.~
 ~
-9 30 0 0 7 0 0 8388609 0 0 0
+9 30 0 0 7 0 0 8388609 32768 0 0
 0 18 0 3 0 0 0 0
 1 400 100
 E
@@ -630,7 +630,7 @@ chrysanthemum mum plant~
 &+ga &+Wchr&+Yysa&+Rnth&+Wemu&+Ym&N &+gplant~
 &+gA &+Wchr&+Yysa&+Rnth&+Wemu&+Ym&N &+gplant has been discovered here.~
 ~
-13 30 0 0 7 0 4096 16385 0 0 0
+13 30 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -643,7 +643,7 @@ tulip~
 &+ga &+Ytulip&N~
 &+gA &+Ytulip&N &+gis here.~
 ~
-9 30 0 0 7 0 0 8388609 0 0 0
+9 30 0 0 7 0 0 8388609 32768 0 0
 0 18 0 3 0 0 0 0
 1 400 100
 E
@@ -658,7 +658,7 @@ tulip bulb~
 &+ga &+Ytulip&N &+gbulb~
 &+gA &+Ytulip&N &+gbulb has been discovered here.~
 ~
-13 30 0 0 7 0 4096 16385 0 0 0
+13 30 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -671,7 +671,7 @@ iris~
 &+gan &+Biris&N~
 &+gAn &+Biris&N &+gis here.~
 ~
-9 30 0 0 7 0 0 8388609 0 0 0
+9 30 0 0 7 0 0 8388609 32768 0 0
 0 18 0 3 0 0 0 0
 1 400 100
 E
@@ -686,7 +686,7 @@ iris bulb~
 &+gan &+Biris&N &+gbulb~
 &+gAn &+Biris&N &+gbulb has been discovered here.~
 ~
-13 30 0 0 7 0 4096 16385 0 0 0
+13 30 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -699,7 +699,7 @@ sunflower~
 &+ga &+Wsunf&+Ylo&+Wwer&N~
 &+gA &+Wsunf&+Ylo&+Wwer&N &+gis here.~
 ~
-9 30 0 0 7 0 0 8388609 0 0 0
+9 30 0 0 7 0 0 8388609 32768 0 0
 0 18 0 3 0 0 0 0
 1 400 100
 E
@@ -715,7 +715,7 @@ sunflower sprout~
 &+ga &+Wsunf&+Ylo&+Wwer&N &+gsprout~
 &+gA &+Wsunf&+Ylo&+Wwer&N &+gsprout has been discovered here.~
 ~
-13 30 0 0 7 0 4096 16385 0 0 0
+13 30 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -728,7 +728,7 @@ pansy~
 &+ga &+mp&+Ma&+bns&+My&N~
 &+gA &+mp&+Ma&+bns&+My&N &+gis here.~
 ~
-9 30 0 0 7 0 0 8388609 0 0 0
+9 30 0 0 7 0 0 8388609 32768 0 0
 0 18 0 3 0 0 0 0
 1 400 100
 E
@@ -743,7 +743,7 @@ pansy seedling~
 &+ga &+mp&+Ma&+bns&+My &+gseedling~
 &+gA &+mp&+Ma&+bns&+My&N &+gseedling has been discovered here.~
 ~
-13 30 0 0 7 0 4096 16385 0 0 0
+13 30 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -757,7 +757,7 @@ daisy~
 &+ga &+Wda&+Yi&+Wsy&N~
 &+gA &+Wda&+Yi&+Wsy&N &+gis here.~
 ~
-9 30 0 0 7 0 0 8388609 0 0 0
+9 30 0 0 7 0 0 8388609 32768 0 0
 0 18 0 3 0 0 0 0
 1 400 100
 E
@@ -772,7 +772,7 @@ daisy plant~
 &+ga &+Wda&+Yi&+Wsy&N &+gplant~
 &+gA &+Wda&+Yi&+Wsy&N &+gplant has been discovered here.~
 ~
-13 30 0 0 7 0 4096 16385 0 0 0
+13 30 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 100 100
 E
@@ -798,7 +798,7 @@ arrow~
 &+Wan arr&+Gow&N~
 &+WAn arrow with a white shaft and &+Ggreen feathers&N lies here.~
 ~
-7 6 0 3 7 0 4096 16385 0 0 0
+7 6 0 3 7 0 4096 16385 32768 0 0
 0 1 8 1 0 0 0 0
 1 0 100
 E
@@ -810,7 +810,7 @@ arrow~
 &+ran arr&+Wow&N~
 &+rAn arrow with a red shaft and &+Wwhite feathers&N lies here.~
 ~
-7 6 0 3 7 0 4096 16385 0 0 0
+7 6 0 3 7 0 4096 16385 32768 0 0
 0 1 8 1 0 0 0 0
 1 0 100
 E
@@ -822,7 +822,7 @@ arrow~
 &+Yan arr&+Row&N~
 &+YAn arrow with a yellow shaft and &+Rred feathers&N lies here.~
 ~
-7 6 0 3 7 0 4096 16385 0 0 0
+7 6 0 3 7 0 4096 16385 32768 0 0
 0 1 8 1 0 0 0 0
 1 0 100
 E
@@ -966,7 +966,7 @@ bag fairy dust~
 &+Wa tiny bag of shimmering fairy dust~
 A small bag lies discarded here.~
 ~
-11 3 3 10 7 0 36864 16385 64 0 0
+11 3 3 10 7 0 36864 16385 32832 0 0
 0 0 0 100 0 0 0 0
 0 10000 100
 E
@@ -985,7 +985,7 @@ wand~
 &+Ma tiny little wand&N~
 &+MA tiny little wand&N lies almost unnoticed here.~
 ~
-3 6 2 4 7 0 10522624 16385 64 0 0
+3 6 2 4 7 0 10522624 16385 32832 0 0
 31 1 1 83 0 0 0 0
 0 10000 100
 E
@@ -1003,7 +1003,7 @@ yellow feather yellowbird~
 &+Ya magical yellowbird feather~
 &+YA yellow feather&N lies here.~
 ~
-3 5 2 4 7 0 2129920 16385 64 0 0
+3 5 2 4 7 0 2129920 16385 32832 0 0
 20 1 1 65 0 0 0 0
 0 5000 100
 E
@@ -1020,7 +1020,7 @@ red feather redbird~
 &+Ra magical redbird feather~
 &+RA red feather&N lies here.~
 ~
-3 5 2 4 7 0 1081344 16385 64 0 0
+3 5 2 4 7 0 1081344 16385 32832 0 0
 20 1 1 92 0 0 0 0
 0 5000 100
 E
@@ -1037,7 +1037,7 @@ blue feather bluebird~
 &+Ba magical bluebird feather~
 &+BA blue feather&N lies here.~
 ~
-3 5 2 4 7 0 32768 16385 64 0 0
+3 5 2 4 7 0 32768 16385 32832 0 0
 20 1 1 3 0 0 0 0
 0 5000 100
 E
@@ -1054,7 +1054,7 @@ green feather greenbird~
 &+Ga magical greenbird feather~
 &+GA green feather&N lies here.~
 ~
-3 5 2 4 7 0 294912 16385 64 0 0
+3 5 2 4 7 0 294912 16385 32832 0 0
 20 1 1 141 0 0 0 0
 0 5000 100
 E
@@ -1087,7 +1087,7 @@ wand~
 &+Ma tiny little wand&N~
 &+MA tiny little wand&N lies almost unnoticed here.~
 ~
-3 6 2 4 7 0 10522624 16385 64 0 0
+3 6 2 4 7 0 10522624 16385 32832 0 0
 31 4 4 84 0 0 0 0
 0 10000 100
 E
@@ -1119,7 +1119,7 @@ wand~
 &+Ma tiny little wand&N~
 &+MA tiny little wand&N lies almost unnoticed here.~
 ~
-3 5 2 4 7 0 10522624 16385 64 0 0
+3 5 2 4 7 0 10522624 16385 32832 0 0
 31 4 4 189 0 0 0 0
 0 10000 100
 E

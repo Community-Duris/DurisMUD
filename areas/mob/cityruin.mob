@@ -8,8 +8,8 @@ limbs sewn onto it. It walks on a disgusting pair of clawed feet, and
 has four different appendages to attack with. This creature looks hungry
 and very aggressive and will probably try to attack anything that moves.
 ~
-1073743882 1 0 16 2 262144 0 -750 S
-U 0 1 3
+1073743882 1 0 0 16 2 262144 0 -750 S
+U 0 1 0 3
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -26,8 +26,8 @@ soldier was probably a good fighter back when it was a living being, and
 has probably retained a lot of its skill. Even in death it tries to do
 what it did in its former life, protect the city.
 ~
-2058 1 0 40 2 0 0 -500 S
-ZO 0 1 -1
+2058 1 0 0 40 2 0 0 -500 S
+ZO 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -42,8 +42,8 @@ zombies, it has unblinking yellow eyes, and rotten flesh falling from its
 body. It gives off a powerful stench of death, and growls loudly every so
 often. It would be wise to give this particular undead a wide berth.
 ~
-1073743944 1 0 0 0 0 0 -500 S
-ZO 0 1 -1
+1073743944 1 0 0 0 0 0 0 -500 S
+ZO 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -57,8 +57,8 @@ quarter.  It looks average, but its power is not.  It faces you
 and prepares for battle.  Will you be the next corpse raised
 by it?
 ~
-18506 1 0 56 2 32768 0 -500 S
-SK 0 1536 -1
+18506 1 0 0 56 2 32768 0 -500 S
+SK 0 1536 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -73,8 +73,8 @@ of the soldiers in the barracks. No doubt whatever god this death knight
 worshipped, has let him keep his powers even after death. He is dressed
 in surprisingly intact plate armor and stands here completely motionless.
 ~
-2122 1 0 8 2 0 0 -1000 S
-ZO 0 1 -1
+2122 1 0 0 8 2 0 0 -1000 S
+ZO 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -89,8 +89,8 @@ painfully, and appears to be nearly blind. While it may move slow, it has
 vicious looking claws that would no doubt cause serious pain to the victim
 caught in its swipe. This is definitely a creature to stay clear of.
 ~
-1073743880 1 0 65536 0 0 0 -500 S
-ZO 0 1 -1
+1073743880 1 0 0 65536 0 0 0 -500 S
+ZO 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -105,8 +105,8 @@ blood colored red eyes. It moves in complete silence, reacting only when
 it sees a living being. It has vicious looking claws that would no doubt
 freeze human flesh instantly from its vileness.
 ~
-10248 1 0 524288 0 2097152 512 -500 S
-SK 0 1 -1
+10248 1 0 0 524288 0 2097152 512 -500 S
+SK 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -121,8 +121,8 @@ blood colored red eyes. It moves in complete silence, reacting only when
 it sees a living being. It has vicious looking claws that would no doubt
 freeze human flesh instantly from its vileness.
 ~
-1073752074 1 0 524288 0 2097152 512 -500 S
-SK 0 1 -1
+1073752074 1 0 0 524288 0 2097152 512 -500 S
+SK 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -138,8 +138,8 @@ the fine clothes he wears, it appears he must have been the leader of the
 city at one time. It stands here looking at papers completely oblivious to
 anyones presence.
 ~
-1073743946 0 0 0 0 0 0 -500 S
-ZO 0 1 -1
+1073743946 0 0 0 0 0 0 0 -500 S
+ZO 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -153,8 +153,8 @@ to eat and reproduce. Human bones, and other debris can be seen inside the
 cube being slowly digested. This creature is very aggressive, and is able
 to move quickly to attack anything within its range.
 ~
-2056 0 0 536870912 262144 0 0 0 S
-SL 0 1 -1
+2056 0 0 0 536870912 262144 0 0 0 S
+SL 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -169,8 +169,8 @@ magic. His magic ability makes him a fearsome opponent in battle. Because
 zombies have an innate hatred of life, this zombie of a sorcerer is
 definitely something to stay clear of.
 ~
-1073752074 1 0 0 0 0 0 -700 S
-ZO 0 512 -1
+1073752074 1 0 0 0 0 0 0 -700 S
+ZO 0 512 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -185,8 +185,8 @@ mangled horribly, with puncture wounds all over his body. He groans
 loudly in a raspy voice with vocal cords that are soon to rot away. He
 stands here apparently waiting for something that will never happen.
 ~
-2058 1 0 0 2 0 0 -500 S
-ZO 0 1 -1
+2058 1 0 0 0 2 0 0 -500 S
+ZO 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -200,8 +200,8 @@ He appears to have been a human, and is dressed in the fine clothes of a
 rich merchant. His face is frozen in terror and his mouth wide open in a
 silent scream. A large gash can be seen across his throat.
 ~
-1073743882 0 0 8 2 0 0 -700 S
-UG 0 1 -1
+1073743882 0 0 0 8 2 0 0 -700 S
+UG 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -216,8 +216,8 @@ rich merchant. His face is frozen in terror and his mouth wide open in a
 silent scream. Unlike the other guests, this one is strangely aggressive,
 and is under the effects of a very powerful necromancer spell.
 ~
-1073743882 1 0 24 2 0 0 -700 S
-UG 0 16 -1
+1073743882 1 0 0 24 2 0 0 -700 S
+UG 0 16 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -232,8 +232,8 @@ wandering into the mansion of the former evil owners, and was tortured here
 for a long time. From his frail appearance it is evident that he probably
 died from starvation, and was completely neglected in this basement.
 ~
-67110920 1 0 0 2 0 0 500 S
-UG 0 1 -1
+67110920 1 0 0 0 2 0 0 500 S
+UG 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -247,8 +247,8 @@ to see it try to function as if it were living. It is completely oblivious
 to the presence of living things, and continues about trying to do what
 it did in its former life.
 ~
-1140852744 1 0 0 2 0 0 -500 S
-ZO 0 1 -1
+1140852744 1 0 0 0 2 0 0 -500 S
+ZO 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -262,8 +262,8 @@ has given it strength much greater than it could ever have in its mortal
 form, and it now perpetually spends it life looking for living beings to
 murder. It is completely white except for glowing red eyes.
 ~
-1073743880 1 0 0 2 65536 2 -500 S
-U 0 0 2
+1073743880 1 0 0 0 2 65536 2 -500 S
+U 0 0 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -277,8 +277,8 @@ not realizing he is dead, the zombie stands here expectantly waiting for
 someone to buy from his store. He has deadly claws that would cause
 considerable damage to unarmored victims.
 ~
-1073743882 1 0 0 2 0 0 -500 S
-ZO 0 1 -1
+1073743882 1 0 0 0 2 0 0 -500 S
+ZO 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -293,8 +293,8 @@ from time to time, and would probably attack any living being on sight. It
 was probably a skilled warrior back when he was living, and remains a deadly
 opponent. It now stands here motionless, ready to kill any intruders.
 ~
-100665418 1 0 805380312 12482 0 0 -700 S
-ZO 0 1 5
+100665418 1 0 0 805380312 12482 0 0 -700 S
+ZO 0 1 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -311,8 +311,8 @@ look very painful. It moves with an irregular gait and would probably be
 extremely clumsy in combat. It is currently examining the rubble looking to
 scavenge anything of use.
 ~
-1073743944 1 0 33554432 0 0 0 -600 S
-TK 0 1 -1
+1073743944 1 0 0 33554432 0 0 0 -600 S
+TK 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -326,8 +326,8 @@ color, and has deep black eyes. Its scales look very tough and difficult
 to penetrate, and it has extremely vicious looking claws about three inches
 long. It looks very hungry and would probably attack anything moving.
 ~
-2056 0 0 33554432 0 0 0 -500 S
-R 0 0 5
+2056 0 0 0 33554432 0 0 0 -500 S
+R 0 0 0 5
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -342,8 +342,8 @@ could rip through a metal suit of armor with ease. She is quite large and
 probably pregnant. A female lizard of this size is definitely aggressive and
 will attack any unlucky intruder on sight.
 ~
-1073743914 1 0 33554576 0 0 0 -700 S
-R 0 1 5
+1073743914 1 0 0 33554576 0 0 0 -700 S
+R 0 1 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -357,8 +357,8 @@ look of an innocent is still evident in its eyes, as it wanders around in
 the shelter looking very sad and lonely. It is dressed in commoners clothes
 and looks around on a futile quest to find its parents.
 ~
-2058 0 0 8 2 0 0 100 S
-UG 0 0 -1
+2058 0 0 0 8 2 0 0 100 S
+UG 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -373,8 +373,8 @@ capable of ripping apart most living things. It is dressed in a black cloak
 and has very white skin. It is currently examining the dwelling for the
 presence of anything it might find valuable.
 ~
-2058 1 0 0 2 0 0 -1000 S
-UV 0 1 -1
+2058 1 0 0 0 2 0 0 -1000 S
+UV 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -388,8 +388,8 @@ that was once the master's personal bodyguard. Like other zombies, his
 flesh is rotting however, he is definitely stronger than most other undead
 and is a force to be reckoned with.
 ~
-1073743946 1 0 0 2 0 0 -600 S
-ZO 0 16384 -1
+1073743946 1 0 0 0 2 0 0 -600 S
+ZO 0 16384 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -404,8 +404,8 @@ remain here until his death. The man obviously knows this fact himself,
 as he is standing fully alert, and ready for battle. He definitely plans
 to go down fighting without surrender.
 ~
-10250 288 0 8 0 0 0 1000 S
-PH 0 8 -1
+10250 288 0 0 8 0 0 0 1000 S
+PH 0 8 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -420,8 +420,8 @@ falling apart. His eyes glow like red embers and seem to petrify anyone
 who stares directly at him. He walks with extreme silence; his vicious
 abilities as a murderer have increased exponentially upon death.
 ~
-1073903692 1 0 538443800 14336 0 0 -1000 S
-SH 0 8192 3
+1073903692 1 0 0 538443800 14336 0 0 -1000 S
+SH 0 8192 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -437,8 +437,8 @@ eyes of two black holes that seem to drain the light around it. It stands
 here doing what it did in its former life, protecting the tower, and
 trying to practice new spells.
 ~
-2058 1 0 8 0 0 0 -750 S
-U 0 512 -1
+2058 1 0 0 8 0 0 0 -750 S
+U 0 512 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -454,8 +454,8 @@ He sits here in his study looking for ways to build his power further.
 He is willing to train any other fellow undead in magic with the
 knowledge that he cannot conquer the prime material plane alone.
 ~
-1073772618 1 0 268435592 14528 0 0 -1000 S
-UL 0 512 -1
+1073772618 1 0 0 268435592 14528 0 0 -1000 S
+UL 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -470,8 +470,8 @@ rotting flesh is very evident when near this creature. He has vicious
 claws that would no doubt destroy human flesh on contact. Currently it
 lumbers about slowly here seemingly searching for something.
 ~
-67110920 1 0 0 0 0 0 0 S
-ZO 0 1 4
+67110920 1 0 0 0 0 0 0 0 S
+ZO 0 1 0 4
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -487,8 +487,8 @@ motionless, this zombie will no doubt react instantly to any living being
 trying to loot the armory. This is not a zombie that would be taken
 down alone.
 ~
-2122 1 0 56 2 32768 0 -500 S
-SK 0 16 -1
+2122 1 0 0 56 2 32768 0 -500 S
+SK 0 16 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -504,8 +504,8 @@ motionless, this zombie will no doubt react instantly to any living being
 trying to loot the armory. This is not a zombie that would be taken
 down alone.
 ~
-2122 1 0 56 2 32768 0 -500 S
-SK 0 512 -1
+2122 1 0 0 56 2 32768 0 -500 S
+SK 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -521,8 +521,8 @@ metal shield in the other. The evil which radiates from this knight would
 cause any good, weak creature to flee in terror. Any living creature would
 best leave him alone.
 ~
-33585162 1 0 839459064 310495 67108864 8704 -1000 S
-UK 0 16 4
+33585162 1 0 0 839459064 310495 67108864 8704 -1000 S
+UK 0 16 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -537,8 +537,8 @@ is unguarded. It's "weapons" are gigantic clawed hands which could tear
 its victims apart with ease. It now silently patrols the town looking to
 kill any intruders.
 ~
-1140852812 1 0 0 0 0 0 -1000 S
-SK 0 1 -1
+1140852812 1 0 0 0 0 0 0 -1000 S
+SK 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -552,8 +552,8 @@ not realizing he is dead, the zombie stands here expectantly waiting for
 someone to buy from his store. He has deadly claws that would cause
 considerable damage to unarmored victims.
 ~
-1073743882 1 0 0 2 0 0 -500 S
-ZO 0 1 -1
+1073743882 1 0 0 0 2 0 0 -500 S
+ZO 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -567,8 +567,8 @@ not realizing he is dead, the zombie stands here expectantly waiting for
 someone to buy from his store. He has deadly claws that would cause
 considerable damage to unarmored victims.
 ~
-1073743882 1 0 0 2 0 0 -500 S
-ZO 0 1 -1
+1073743882 1 0 0 0 2 0 0 -500 S
+ZO 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -580,8 +580,8 @@ innkeeper~
   This is an innkeeper, he rents rooms to those who wish
 a place to sleep.
 ~
-2058 0 0 0 0 0 0 0 S
-U 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+U 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -596,8 +596,8 @@ from time to time, and would probably attack any living being on sight. It
 was probably a skilled warrior back when he was living, and remains a deadly
 opponent. It now stands here motionless, ready to kill any intruders.
 ~
-67110986 1 0 16 2 0 0 -700 S
-ZO 0 1 5
+67110986 1 0 0 16 2 0 0 -700 S
+ZO 0 1 0 5
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -611,8 +611,8 @@ transformation to a lich. He stands taller than any human could possibly
 be, no doubt magical enhancements have permanently altered his height.
 He sits here in his study looking for ways to build his power further.
 ~
-1073772616 1 0 0 0 0 0 -1000 S
-U 0 2097152 -1
+1073772616 1 0 0 0 0 0 0 -1000 S
+U 0 2097152 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -623,8 +623,8 @@ lich alchemist~
 ~
 'Something you are interested in?'
 ~
-10 0 0 8 0 0 0 1000 S
-UL 0 1 -1
+10 0 0 0 8 0 0 0 1000 S
+UL 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -634,8 +634,8 @@ seer spectre~
 &+LA ghastly spectre seer patrols the town here.&n
 ~
 ~
-8 1 0 24 0 0 67108864 -1000 S
-U 0 16777216 -1
+8 1 0 0 24 0 0 67108864 -1000 S
+U 0 16777216 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -650,8 +650,8 @@ wields appears ragged, but is deadly as ever.  No doubt this undead
 being is as powerful as it is ancient; whomever fights it will be in
 for the fight of their life.
 ~
-16779274 1 0 16777224 0 0 0 -1000 S
-U 0 1 -1
+16779274 1 0 0 16777224 0 0 0 -1000 S
+U 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

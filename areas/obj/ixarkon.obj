@@ -222,7 +222,7 @@ red skullcap~
 &+ra red skullcap&n~
 A piece of soft red leather lies here.~
 ~
-11 3 0 0 7 0 0 17 0 0 0
+11 3 0 0 7 0 0 17 32768 0 0
 0 0 0 1 0 0 0 0
 0 5906 100
 E
@@ -480,7 +480,7 @@ mushroom spore~
 &+Ga large mushroom spore&N~
 A large round spore lies here, waiting to burst.~
 ~
-12 48 0 0 7 0 4096 16385 0 0 0
+12 48 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -529,7 +529,7 @@ small spider amulet~
 &+La small spider amulet of&+m Lloth&N~
 &+LA small spidery amulet lies on the ground.~
 ~
-11 16 3 2 7 0 0 5 0 0 0
+11 16 3 2 7 0 0 5 32768 0 0
 0 0 0 1 0 0 0 0
 0 40000 100
 E

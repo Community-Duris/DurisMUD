@@ -484,7 +484,7 @@ green potion~
 &+Ga green potion&n~
 &+GA green potion sits here.~
 ~
-10 7 3 1 7 0 0 1 64 0 0
+10 7 3 1 7 0 0 1 32832 0 0
 35 43 0 0 0 0 0 0
 1 3245 100
 #27038
@@ -500,7 +500,7 @@ brown jar~
 &+ya brown jar&n~
 &+yA brown jar has been dropped here.~
 ~
-13 7 3 1 7 0 0 1 0 0 0
+13 7 3 1 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 3 100
 #27040
@@ -508,7 +508,7 @@ piece badge miner's~
 &+Gpart of a miner's badge&n~
 &+GA small green piece of metal has been dropped here.~
 ~
-9 15 3 1 7 0 262145 2097153 64 0 0
+9 15 3 1 7 0 262145 2097153 32832 0 0
 15 0 0 1 0 0 0 0
 1 2143 100
 #27041
@@ -516,7 +516,7 @@ piece miner's badge~
 &+Ra piece of a miner's badge&n~
 &+RA small jagged piece of mettal has fallen on the floor.~
 ~
-11 15 3 1 7 0 262145 2097153 64 0 0
+11 15 3 1 7 0 262145 2097153 32832 0 0
 0 0 0 0 0 0 0 0
 1 23455 100
 A
@@ -526,7 +526,7 @@ badge miner's miner broken~
 &+Ba broken badge of the miner&n~
 &+BA jagged piece of metal has been left here.~
 ~
-11 15 3 1 7 0 262145 2097153 64 0 0
+11 15 3 1 7 0 262145 2097153 32832 0 0
 0 0 0 0 0 0 0 0
 1 25233 100 2048 0 0 0
 A
@@ -548,7 +548,7 @@ note paper~
 &+wa note from&+r Bartis&n~
 A scrap of paper has been left here.~
 ~
-13 29 3 0 7 0 0 1 0 0 0
+13 29 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 #27045
@@ -616,7 +616,7 @@ scalp leader~
 the &+rleader's&N scalp~
 A piece of bloodied skin has been cut off someone and left here.~
 ~
-13 2 3 0 7 0 4096 1 0 0 0
+13 2 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 #27052
@@ -624,7 +624,7 @@ scalp leader~
 the &+Lorc's&N scalp~
 A piece of bloodied skin has been cut off someone and left here.~
 ~
-13 2 3 0 7 0 4096 1 0 0 0
+13 2 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 #27053
@@ -632,7 +632,7 @@ scalp leader~
 the &+mdrow's&N scalp~
 A piece of bloodied skin has been cut off someone and left here.~
 ~
-13 2 3 0 7 0 4096 1 0 0 0
+13 2 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 #27054
@@ -640,7 +640,7 @@ scalp leader~
 the &+Ggoblin's&N scalp~
 A piece of bloodied skin has been cut off someone and left here.~
 ~
-13 2 3 0 7 0 4096 1 0 0 0
+13 2 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 #27055
@@ -648,7 +648,7 @@ scalp leader~
 the &+rduergar's&N scalp~
 A piece of bloodied skin has been cut off someone and left here.~
 ~
-13 2 3 0 7 0 4096 1 0 0 0
+13 2 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 #27056
@@ -664,7 +664,7 @@ scalp bartis bartis'~
 &+rBartis'&N scalp~
 A piece of bloodied skin has been cut off someone and left here.~
 ~
-13 2 3 0 7 0 4096 1 0 0 0
+13 2 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 #27058
@@ -672,7 +672,7 @@ hulkuis hulkuis' scalp~
 &+BHulkuis'&N scalp~
 A piece of bloodied skin has been cut off someone and left here.~
 ~
-13 2 3 0 7 0 4096 1 0 0 0
+13 2 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 #27059

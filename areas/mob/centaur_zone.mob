@@ -13,8 +13,8 @@ naergot black dragon~
 &+Lgets its name from its evil tendencies, or the jet black color of its
 &+Lscales.&n
 ~
-1107689738 1 0 536936492 192 0 0 -1000 S
-D 0 1 -1
+1107689738 1 0 0 536936492 192 0 0 -1000 S
+D 0 1 0 -1
 60 -10 -152 60d143+6900 7d6+35
 6.6.9.22 486000
 8 8 0
@@ -35,8 +35,8 @@ He turns to you and says, '&+cI wouldn't reckon you to have a dragon's heart,
 &+chardly believe they exist, what with the advent of that funny box with the
 &+cmoving pictures in it.  No, no you don't have a dragon's heart.&n'
 ~
-33589258 128 0 33554432 0 0 0 1000 S
-PE 4 256 -1
+33589258 128 0 0 33554432 0 0 0 1000 S
+PE 4 256 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -54,8 +54,8 @@ to tell apart as it stands here, giving it the appearance of an immense tree
 trunk.  This treant's beard and leaves are a deep &+Gemerald&n hue, and its thick
 bark has a &+ysepia&n tone to it.
 ~
-1140885577 160 0 50339840 1088 0 0 1000 S
-VT 0 128 -1
+1140885577 160 0 0 50339840 1088 0 0 1000 S
+VT 0 128 0 -1
 57 -7 -117 57d132+6498 7d6+35
 0.0.0.0 230850
 4 4 0
@@ -73,8 +73,8 @@ eyebrows.  It has elongated arms which end in twisted and knobby fingers.  Its
 legs are nearly impossible to tell apart as it stands here, giving it the
 appearance of an immense tree trunk.
 ~
-1140852809 160 0 51388416 1088 0 0 1000 S
-VT 0 2 -1
+1140852809 160 0 0 51388416 1088 0 0 1000 S
+VT 0 2 0 -1
 35 6 -12 35d83+945 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -90,8 +90,8 @@ haornig mardigan hunter~
 &+Lis surrounded by a deep musky odor, like the scent of a rutting moose, and his
 &+Lnostrils flare with each strong breath he takes.&n
 ~
-1140852872 0 0 524292 0 0 0 -1000 S
-PH 0 2 -1
+1140852872 0 0 0 524292 0 0 0 -1000 S
+PH 0 2 0 -1
 37 2 -18 37d95+851 4d7+10
 0.1.2.2 47952
 8 8 1
@@ -105,8 +105,8 @@ a &+Ljet black wolf&n~
 &+Lback of its wide throat, warning you to keep your distance.  This wolf wears
 &+Lspecialized war &+Wbarding&+L, and follows loyally at its master's side.&n
 ~
-1141114888 0 0 34078740 0 0 0 -200 S
-AC 0 0 -1
+1141114888 0 0 0 34078740 0 0 0 -200 S
+AC 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -124,8 +124,8 @@ eyebrows.  It has elongated arms which end in twisted and knobby fingers.  Its
 legs are nearly impossible to tell apart as it stands here, giving it the
 appearance of an immense tree trunk.
 ~
-1140852809 160 0 50339840 1088 0 0 1000 S
-VT 0 2 -1
+1140852809 160 0 0 50339840 1088 0 0 1000 S
+VT 0 2 0 -1
 35 6 -12 35d83+945 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -143,8 +143,8 @@ It has elongated arms which end in twisted and knobby fingers.  Its legs are
 nearly impossible to tell apart as it stands here, giving it the appearance of
 an immense tree trunk.
 ~
-1140852809 128 0 51388416 1088 0 0 1000 S
-VT 0 1 -1
+1140852809 128 0 0 51388416 1088 0 0 1000 S
+VT 0 1 0 -1
 30 8 3 30d65+690 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -162,8 +162,8 @@ prime.  Her hide is a tawny color, with a diamond shaped patch of silver hair
 between her forelegs.  She is naked with the exception of the small &+Ctiara&n upon
 her head which marks her as the clan's progenitor.
 ~
-1140852808 128 0 34078720 4096 0 0 0 S
-H 0 8 -1
+1140852808 128 0 0 34078720 4096 0 0 0 S
+H 0 8 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 2
@@ -180,8 +180,8 @@ but transparent.
    Banitoor looks at you and says, '&+MWelcome, friend, to my home.  Of what
 &+Mservice can I be to you?&n'
 ~
-33556490 0 0 0 2 0 0 550 S
-PL 0 32 -1
+33556490 0 0 0 0 2 0 0 550 S
+PL 0 32 0 -1
 60 -10 -132 60d132+6240 7d6+35
 6.6.9.7 243000
 8 8 2
@@ -202,8 +202,8 @@ serves two purposes.  The first is protection against cold winters, and heavy
 rainfalls.  The second is to make him almost impossible to distinguish from the
 night sky, helping to confuse animal predators and humanoid hunters alike.
 ~
-1140852808 128 0 34078720 4096 0 0 0 S
-H 0 1 -1
+1140852808 128 0 0 34078720 4096 0 0 0 S
+H 0 1 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -220,8 +220,8 @@ A nomadic male &+Lc&+we&+Wnta&+wu&+Lr&n warrior trots around, here.
 &+Lfrom the night sky, helping to confuse animal predators and humanoid hunters
 &+La like.  He has long braided hair, a thin goatee, and chestnut coloured eyes.&n
 ~
-1140852808 0 0 33554432 0 0 0 0 S
-H 0 1 -1
+1140852808 0 0 0 33554432 0 0 0 0 S
+H 0 1 0 -1
 42 -1 -59 42d107+1890 6d6+12
 2.8.7.3 102060
 8 8 1
@@ -235,8 +235,8 @@ A nomadic male &+Lc&+we&+Wnta&+wu&+Lr&n wanders about with his family, here.
 &+Lbody, torso included, is covered with a thick layer of ebon hair.  He has
 &+Llong kinky hair, a thin goatee, and slate coloured eyes.&n
 ~
-1073743944 0 0 33554432 0 0 0 0 S
-H 0 1 -1
+1073743944 0 0 0 33554432 0 0 0 0 S
+H 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -250,8 +250,8 @@ A nomadic female &+Lc&+we&+Wnta&+wu&+Lr&n searches the area for food.
 &+Lthick shag of her people.  Her long auburn hair is tied back in a ponytail,
 &+Lto keep it from getting in front of her crystal &+Bblue&+L eyes.&n
 ~
-2120 0 0 33554432 0 0 0 0 S
-H 0 2 -1
+2120 0 0 0 33554432 0 0 0 0 S
+H 0 2 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 2
@@ -265,8 +265,8 @@ A nomadic male &+Lc&+we&+Wnta&+wu&+Lr&n has fallen asleep, here, while sunbathin
 &+Ljust beginning his search for his life-mate.  He has long blond hair, blue
 &+Leyes, and the first signs of a beard impresses itself upon his face.&n
 ~
-1073743944 0 0 33554432 0 0 0 0 S
-H 0 128 -1
+1073743944 0 0 0 33554432 0 0 0 0 S
+H 0 128 0 -1
 25 11 19 25d44+225 3d5+3
 6.2.6.1 22275
 4 4 1
@@ -279,8 +279,8 @@ A nomadic adolescent &+Lc&+we&+Wnta&+wu&+Lr&n struts around trying to attract a 
 &+Lattempt to attract himself a life-mate.  He has a darkening grey shag, short
 &+Lchestnut hair, grey eyes, and a cultivated goatee.&n
 ~
-1073743944 0 0 33554432 0 0 0 0 S
-H 0 32768 -1
+1073743944 0 0 0 33554432 0 0 0 0 S
+H 0 32768 0 -1
 28 8 10 28d60+336 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -294,8 +294,8 @@ A female adolescent &+Lc&+we&+Wnta&+wu&+Lr&n walks about shyly.
 &+Lstraight hair, which cascades down to her mid-back.  She is in excellent shape
 &+Land just coming into womanhood.&n
 ~
-2248 0 0 33554432 0 0 0 0 S
-H 0 32 -1
+2248 0 0 0 33554432 0 0 0 0 S
+H 0 32 0 -1
 28 8 10 28d60+336 3d6+4
 8.3.7.1 24948
 8 8 2
@@ -310,8 +310,8 @@ silky white strands of hair hang down from her mane and forelock.  A single
 &+Ygolden&n ivory horn grows from the center of her forehead, reaching a length of
 nearly three feet.  Her hooves are cloven and of &+Yyellow&n-ivory coloring.
 ~
-33556553 128 0 33554536 0 0 0 1000 S
-AE 0 2 -1
+33556553 128 0 0 33554536 0 0 0 1000 S
+AE 0 2 0 -1
 54 -5 -107 54d131+4590 7d6+30
 0.0.0.0 218700
 8 8 2
@@ -323,8 +323,8 @@ an &+Werm&+wi&+Lne&n~
    This small weasel is completely covered in white fur, except for the tip of
 its tail which is jet black.  It seems to be busy foraging for supper.
 ~
-262152 0 0 0 0 0 0 0 S
-AH 0 0 -1
+262152 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 17 13 45 17d30+85 3d4+2
 0.0.0.0 8262
 8 8 0
@@ -337,8 +337,8 @@ a &+Lr&+Wa&+Lc&+Wo&+Lo&+Wn&n~
 You almost swear it winked at you, as it pauses looks at you and darts back
 toward the trees.
 ~
-1074004104 0 0 34078724 0 0 0 0 S
-AC 0 0 -1
+1074004104 0 0 0 34078724 0 0 0 0 S
+AC 0 0 0 -1
 13 15 58 13d23+52 2d5+2
 0.0.0.0 6318
 8 8 0
@@ -351,8 +351,8 @@ A male &+yc&+Ye&+Wnta&+Yu&+yr&n wanders about the forest.
 &+ybody is covered with a short layer of chestnut hair, a shock of maple just
 &+ybetween his forelegs.  He has short well groomed hair, and bright &+Ggreen&+y eyes.&n
 ~
-1073743944 0 0 33554432 0 0 0 0 S
-H 0 1 -1
+1073743944 0 0 0 33554432 0 0 0 0 S
+H 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -366,8 +366,8 @@ A female &+yc&+Ye&+Wnta&+Yu&+yr&n stands here, grooming herself.
 &+Lthick shag of her people.  Her long auburn hair is tied back in a ponytail,
 &+Lto keep it from getting in front of her crystal &+Bblue&+L eyes.&n
 ~
-2120 0 0 33554432 0 0 0 0 S
-H 0 128 -1
+2120 0 0 0 33554432 0 0 0 0 S
+H 0 128 0 -1
 25 11 19 25d44+225 3d5+3
 6.2.6.1 22275
 8 8 2
@@ -380,8 +380,8 @@ An adolescent &+yc&+Ye&+Wnta&+Yu&+yr&n struts around trying to impress the phill
 &+yattempt to attract himself a life-mate.  He has a darkening chestnut coat,
 &+yshort blond hair, and dark &+ggreen&+y eyes.&n
 ~
-1073743944 0 0 33554432 0 0 0 0 S
-H 0 2048 -1
+1073743944 0 0 0 33554432 0 0 0 0 S
+H 0 2048 0 -1
 26 8 16 26d44+286 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -395,8 +395,8 @@ A female adolescent &+yc&+Ye&+Wnta&+Yu&+yr&n stands here picking flowers..
 &+ypatches of childhood just beginning to fade.  Her long brunette hair is pulled
 &+yup in a french braid, a daffodil stuck behind her ear.&n
 ~
-2248 0 0 33554432 0 0 0 0 S
-H 0 16384 -1
+2248 0 0 0 33554432 0 0 0 0 S
+H 0 16384 0 -1
 23 11 26 23d47+230 3d5+3
 5.1.6.0 20493
 8 8 2
@@ -409,8 +409,8 @@ A majestic &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd&n &+yantelope&n stands here eating the h
 upon its head, and white and black stripes that cross its brown hide.  Grass
 sticks out of its mouth as it begins to masticate its dinner.
 ~
-136 0 0 0 0 0 0 500 S
-AH 0 1 -1
+136 0 0 0 0 0 0 0 500 S
+AH 0 1 0 -1
 33 6 -5 33d83+561 4d6+7
 0.0.0.0 42768
 8 8 0
@@ -423,8 +423,8 @@ A majestic &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd&n &+yantelope&n stands here, looking abo
 upon its head, and white and black stripes that cross its brown hide.  Eats at
 attention, this skittish doe is on the look out for predators.
 ~
-136 0 0 0 0 0 0 500 S
-AH 0 1 -1
+136 0 0 0 0 0 0 0 500 S
+AH 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -437,8 +437,8 @@ A majestic &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd&n &+yantelope&n reclines here, asleep.&n
 upon its head, and white and black stripes that cross its brown hide.  Its
 chest rises and falls as it slumbers, head resting on its forepaws.
 ~
-2184 0 0 0 0 0 0 500 S
-AH 0 1 -1
+2184 0 0 0 0 0 0 0 500 S
+AH 0 1 0 -1
 37 2 -18 37d95+851 4d7+10
 0.0.0.0 47952
 4 4 0
@@ -451,8 +451,8 @@ A majestic &+Ls&+wt&+Wr&+wi&+Lp&+we&+Wd&n &+yantelope&n walks about here, lookin
 upon its head, and white and black stripes that cross its brown hide.  Looking
 defiant and strong, this young buck tries to attract a mate.
 ~
-136 0 0 0 0 0 0 500 S
-AH 0 1 -1
+136 0 0 0 0 0 0 0 500 S
+AH 0 1 0 -1
 31 6 0 31d83+527 4d6+7
 0.0.0.0 40176
 8 8 0
@@ -466,8 +466,8 @@ upon its head, and white and black stripes that cross its brown hide.  This
 antelope is busy scraping its antlers against a rock in an attempt to shed his
 old pair.
 ~
-136 0 0 0 0 0 0 500 S
-AH 0 1 -1
+136 0 0 0 0 0 0 0 500 S
+AH 0 1 0 -1
 29 8 7 29d65+377 3d6+4
 0.0.0.0 25839
 8 8 0

@@ -262,7 +262,7 @@ bloody haunch caribou meat~
 &+ra bloody &+Rha&+Wun&+Rch &+rof &+ycaribou &+Rmeat&N~
 &+rA huge, bloody &+Rha&+Wun&+Rch &+rof &+Ycaribou meat&+r sits here, dying to be &+Rc&+Lo&+Ro&+Lk&+Re&+Ld&+W.~
 ~
-19 2 2 0 6 0 0 16385 0 0 0
+19 2 2 0 6 0 0 16385 32768 0 0
 10 3 3 0 0 1 0 0
 9 808 100
 E
@@ -275,7 +275,7 @@ bloody haunch theezak meat~
 &+ra bloody &+Rha&+Wun&+Rch &+rof &+Ltheezak &+Rmeat&N~
 &+rA huge, bloody &+Rha&+Wun&+Rch &+rof &+Ltheezak meat&+r sits here, dying to be &+Rc&+Lo&+Ro&+Lk&+Re&+Ld&+W.~
 ~
-19 2 2 0 6 0 0 16385 0 0 0
+19 2 2 0 6 0 0 16385 32768 0 0
 10 3 3 0 1 0 0 0
 9 864 100
 E
@@ -288,7 +288,7 @@ huge barrel stonebrew~
 &+ya huge barrel marked &+WStone&+Ybrew&N~
 &+yA huge barrel labelled '&+WStone&+Ybrew&+y' sits in the corner, covered in &Ndust&+y.~
 ~
-17 5 4 0 7 0 0 16385 0 0 0
+17 5 4 0 7 0 0 16385 32768 0 0
 200 200 3 0 0 0 0 0
 100 45999 100
 E
@@ -425,7 +425,7 @@ small lion cub~
 &+Ya small lion cub&N~
 &+YA small lion cub sits here, looking for its mother.~
 ~
-8 2 2 0 7 0 4096 16385 0 0 0
+8 2 2 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 6 15400 100
 E
@@ -616,7 +616,7 @@ glazed rack caribou ribs~
 &+Ra glazed r&+ra&+Rc&+rk &+Rof &+ycaribou &+Rr&+ri&+Rb&+Rs&N~
 &+RA glazed rack of &+ycaribou &+Rribs has been left here, uneaten.~
 ~
-19 2 2 0 7 0 0 16385 0 0 0
+19 2 2 0 7 0 0 16385 32768 0 0
 36 8 12 0 0 0 0 1
 0 1000 100
 E
@@ -1015,7 +1015,7 @@ cheese-covered garlic apple clam mash~
 &+Wa &+Ycheese-covered &+Wgarlic apple clam &+ym&Na&+ys&Nh&N~
 &+WA bowl of famous Stone&+Ybrew &+Wapple clam mash has been left here.~
 ~
-19 48 2 0 10 0 0 16385 0 0 0
+19 48 2 0 10 0 0 16385 32768 0 0
 10 8 8 0 3 3 0 0
 0 1332 100
 E
@@ -1028,7 +1028,7 @@ juicy theezak ribs~
 &+rsome &+Rjuicy &+Ltheezak &+Rs&+rp&+Ra&+rr&+Re &+Rribs&N~
 &+RSome juicy &+Ltheezak &+Rribs have been left here.~
 ~
-19 48 2 0 10 0 0 16385 0 0 0
+19 48 2 0 10 0 0 16385 32768 0 0
 36 8 6 0 2 0 0 1
 0 1430 100
 E
@@ -1041,7 +1041,7 @@ fish chips fried deep orange accented~
 &+Lan &+Yorange-accented &+Ldeep &+yfried &+yfish 'n chips&N~
 &+LA bowl of &+yfried fish, seasoned to perfection is here.~
 ~
-19 15 3 0 7 0 0 16385 0 0 0
+19 15 3 0 7 0 0 16385 32768 0 0
 8 6 4 0 0 0 0 0
 0 0 100
 E
@@ -1069,7 +1069,7 @@ large keg ale~
 &+ya large keg of Barlow's ale&N~
 &+yA large keg of Barlow's &+Lale &+ysits here, eager to be tapped.~
 ~
-17 6 3 0 8 0 0 16385 0 0 0
+17 6 3 0 8 0 0 16385 32768 0 0
 300 300 3 0 0 0 0 0
 66 40000 100
 E
@@ -1118,7 +1118,7 @@ barbed longsword sword~
 &+La &+rbarbed &+Llongsword&N~
 &+LA &+rbarbed &+Llongsword has been left here.~
 ~
-5 16 3 0 7 0 0 8193 0 0 0
+5 16 3 0 7 0 0 8193 32768 0 0
 5 2 4 0 0 0 0 0
 4 1598 100
 E
@@ -1151,7 +1151,7 @@ huge bright silver axe~
 &+Ca huge bright silver axe&N~
 &+CA huge bright silver axe is propped up here.~
 ~
-5 22 3 0 10 0 4194305 8193 67 0 0
+5 22 3 0 10 0 4194305 8193 32835 0 0
 1 4 5 0 0 0 0 0
 8 25434 100
 E
@@ -1168,7 +1168,7 @@ commendation token dragonslaying dragon slaying~
 &+Wa commendation &+Ytoken &+Wof &+gdragon&+rslaying&N~
 &+WA commendation &+Ytoken &+Wof &+gdragon&+rslaying &+Whas been left here.~
 ~
-8 8 1 0 7 0 0 16385 0 0 0
+8 8 1 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 20434 100
 E
@@ -1247,7 +1247,7 @@ robes alatorin apprentice~
 &+Lsome &+cAl&+Cator&+cin &+Lapprentice robes&N~
 &+LSome robes lie here in a crumbled heap.~
 ~
-9 3 3 0 7 0 0 9 64 0 0
+9 3 3 0 7 0 0 9 32832 0 0
 10 0 0 3 0 0 0 0
 2 10343 100
 E
@@ -1310,7 +1310,7 @@ tempered mithril breastplate breast plate~
 &n&+ma te&+Mmp&N&+mer&+Med &+Cmithril &N&+mbr&+Mea&N&+mst&+Mpl&N&+mate&N~
 &+mA tempered &+Cmithril &+Mbreastplate&N has been left here.~
 ~
-9 18 3 0 13 0 134217728 9 64 0 0
+9 18 3 0 13 0 134217728 9 32832 0 0
 20 0 0 5 0 0 0 0
 15 17568 100
 A
@@ -1322,7 +1322,7 @@ tempered mithril helmet~
 &+Ma te&N&+mmpe&+Mred &+Cmithril &+Mhel&N&+mmet&N~
 &+MA tempered &+Cmithril &+Chelmet has been left here.~
 ~
-9 18 3 0 13 0 134217728 17 64 0 0
+9 18 3 0 13 0 134217728 17 32832 0 0
 15 0 0 5 0 0 0 0
 5 1170 100
 A
@@ -1334,7 +1334,7 @@ tempered mithril arm plates~
 &+Mso&N&+mme te&+Mmp&+Mere&N&+md &+Cmithril &n&+ma&+Mrm &N&+mp&+Mla&N&+mtes&N~
 &+CSome templered &+Cmithril &N&+carm plates have been left here.~
 ~
-9 18 3 0 13 0 134217728 257 64 0 0
+9 18 3 0 13 0 134217728 257 32832 0 0
 15 0 0 5 0 0 0 0
 5 5332 100
 A
@@ -1346,7 +1346,7 @@ tempered mithril leg plates~
 &+Mso&N&+mme te&+Mmp&+Mere&N&+md &+Cmithril &n&+mle&+Mg &N&+mp&+Mla&N&+mtes&N~
 &+CSome tempered &+Cmithril &+Cleg plates have been left here.~
 ~
-9 18 3 0 13 0 134217728 33 64 0 0
+9 18 3 0 13 0 134217728 33 32832 0 0
 15 0 0 5 0 0 0 0
 5 9750 100
 A
@@ -1358,7 +1358,7 @@ tempered mithril boots~
 &+Mso&N&+mme te&+Mmp&+Mere&N&+md &+Cmithril &n&+mbo&+Mots&N~
 &+CSome tempered &+Cmithril &+Cboots have been left here.~
 ~
-9 18 3 0 13 0 134217728 65 64 0 0
+9 18 3 0 13 0 134217728 65 32832 0 0
 15 0 0 5 0 0 0 0
 10 10072 100
 A
@@ -1478,7 +1478,7 @@ bloody haunch lion meat~
 &+ra bloody &+Rha&+Wun&+Rch &N&+rof &+Ylion &+Rmeat&N~
 &+rA bloody &+Rha&+Wun&+Rch &n&+rof &+Ylion &+Rmeat &N&+rsits on a chopping block.~
 ~
-19 2 2 0 6 0 0 16385 0 0 0
+19 2 2 0 6 0 0 16385 32768 0 0
 10 5 5 0 0 0 0 2
 9 200 100
 E
@@ -1818,7 +1818,7 @@ boody haunch olyx ox meat~
 &+ra bloody &+Rha&+Wun&+Rch &N&+rof &+colyx &+Rmeat&N~
 &+rA bloody &+Rha&+Wun&+Rch &N&+rof &+colyx &+Rmeat sits on a &n&+ychopping board&N&+r, eager to be chopped.~
 ~
-19 2 2 0 6 0 0 16385 0 0 0
+19 2 2 0 6 0 0 16385 32768 0 0
 10 5 5 0 5 0 0 0
 9 200 100
 E
@@ -1832,7 +1832,7 @@ seasoned lion rib nuggets ribs~
 &n&+ysome seasoned &+Ylion &+Rrib &N&+rnuggets&N~
 &+ySome seasoned &+Ylion &+Rrib &N&+rnuggets&N have been left here.~
 ~
-19 2 2 0 11 0 0 16385 0 0 0
+19 2 2 0 11 0 0 16385 32768 0 0
 36 6 4 0 1 1 0 0
 0 6449 100
 E
@@ -1860,7 +1860,7 @@ bloody side boar meat~
 &N&+ra &+Rside&N&+r of &Nboar~
 &n&+rA huge, bloody &+Rside &N&+rof &Nboar &+Rmeat hangs here, dripping &N&+rblood.~
 ~
-19 2 3 0 5 0 0 16385 0 0 0
+19 2 3 0 5 0 0 16385 32768 0 0
 60 5 3 0 2 0 0 1
 25 13004 100
 E
@@ -1872,7 +1872,7 @@ bowl stew zing~
 &+rsome &+ystew &+rwith a &+Mzing&N~
 &n&+rA bowl of &N&+ystew &N&+rsits here, steaming.~
 ~
-19 48 3 0 9 0 0 16385 0 0 0
+19 48 3 0 9 0 0 16385 32768 0 0
 25 10 7 0 0 0 2 0
 0 2000 100
 E
@@ -1885,7 +1885,7 @@ broiled zesty meatloaf loaf meat~
 &+Ra &+Lbroiled &N&+yz&+Ye&N&+ys&+Yt&N&+yy &n&+rmeatloaf&N~
 &+LA broiled, zesty &+Rmeatloaf&+L has been left here, &Nsteaming&+L.~
 ~
-19 2 2 0 7 0 0 16385 0 0 0
+19 2 2 0 7 0 0 16385 32768 0 0
 30 8 6 0 1 0 0 1
 0 3444 100
 E
@@ -1911,7 +1911,7 @@ commendation token cooking~
 &+Wa commendation &+Ytoken &+Wof &N&+ycooking&N~
 &+WA commendation &+Ytoken &+Wof &N&+ycooking&N has been left here.~
 ~
-8 8 1 0 7 0 0 16385 0 0 0
+8 8 1 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 20434 100
 E
@@ -2157,7 +2157,7 @@ royal signet ring alatorin~
 &+Ythe &N&+mr&+Mo&N&+my&+Ma&N&+ml &+Ysignet of &N&+cAl&+Cator&N&+cin&N~
 &+YThe &+Mroyal &+Ysignet ring of &N&+cAlatorin &+Yhas been left here.~
 ~
-9 24 0 0 7 0 1 3 64 0 0
+9 24 0 0 7 0 1 3 32832 0 0
 5 0 0 0 0 0 0 0
 0 243994 100 4 0 0 0
 E
@@ -2209,7 +2209,7 @@ piece token collecting~
 &Na piece of a &+Wtoken of &N&+yc&No&+yl&Nl&+ye&Nc&+yt&Ni&+yn&Ng&N~
 &NA piece of a &+Wtoken of &N&+ycollecting&N has been left here.~
 ~
-8 8 1 0 7 0 0 16385 0 0 0
+8 8 1 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 10000 100
 E
@@ -2221,7 +2221,7 @@ shimmering token collecting~
 &+Wa commendation &+Ytoken &+Wof &nc&+yo&nll&+yec&Nti&+yng&N~
 &+WA shimmering &+Ytoken &+Wof &Ncollecting has been left here.~
 ~
-8 8 3 0 7 0 0 16385 0 0 0
+8 8 3 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 100000 100
 E
@@ -2264,7 +2264,7 @@ ancient wedding band~
 &+Yan ancient &+Mw&+Ye&+Md&+Yd&+Mi&+Yn&+Mg &+Yband&N~
 &+WAn ancient wedding band of dwarven craftsmanship has been left here.~
 ~
-9 24 3 0 7 0 4096 16387 0 0 0
+9 24 3 0 7 0 4096 16387 32768 0 0
 3 0 0 0 0 0 0 0
 0 123334 100
 E
@@ -2277,7 +2277,7 @@ alatorin medal honor~
 &N&+can Alatorin &+Cmedal &N&+cof &+Whonor&N~
 &N&+cAn Alatorin &+Cmedal of &+Whonor&+L has been left here.~
 ~
-9 18 0 0 7 0 1 10502145 64 0 0
+9 18 0 0 7 0 1 10502145 32832 0 0
 5 0 0 0 0 0 0 0
 0 0 100
 E
@@ -2378,7 +2378,7 @@ blood bloody heart~
 &+rthe bloody heart of Sslitheran&N~
 &+rA freshly-gutted heart lies here, &+Wg&N&+rlis&+Wt&N&+reni&+Wn&N&+rg in a pool of blood.~
 ~
-8 2 2 0 4 0 4096 16385 0 0 0
+8 2 2 0 4 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 6 100
 #83256
@@ -2440,7 +2440,7 @@ signet ring hammerhelm~
 &+Wthe signet &+Yof &+WHammer&+Yhelm&N~
 &+WThe signet ring of &+WHammer&+Yhelm has been left here.~
 ~
-9 11 3 0 7 0 4096 3 64 0 0
+9 11 3 0 7 0 4096 3 32832 0 0
 0 0 0 0 0 0 0 0
 0 344 100
 E
@@ -2565,7 +2565,7 @@ old tome entitled advanced magic missile techniques book spellbook~
 &+Lan old &N&+mtome &+Lentitled &+Y'Advanced Magic Missile Techniques'~
 &+LAn old &N&+mtome &+Lentitled &+Y'Advanced Magic Missile Techniques'&N has been left here.~
 ~
-33 28 2 0 6 0 0 8404993 64 0 0
+33 28 2 0 6 0 0 8404993 32832 0 0
 0 0 500 0 0 0 0 0
 1 9992 100
 E
@@ -2589,7 +2589,7 @@ book entitled sol~
 &+Ya book entitled &+Y'Sol'~
 &+YA bright yellow book with huge letters spelling 'Sol' has been left here.~
 ~
-4 28 2 0 7 0 0 8404993 64 0 0
+4 28 2 0 7 0 0 8404993 32832 0 0
 40 3 3 359 0 0 0 0
 0 343 100
 E
@@ -2604,7 +2604,7 @@ story jedd burningbraids tome~
 &+gthe &+ystory &+gof &+YJedd &+RBu&+Yrn&+Ri&+Yn&+Rg&+Ybraids&N~
 &+gAn ancient &+ytome &N&+gentitled &+y'The Story of Jedd Burningbraids'&+g has been left here.~
 ~
-8 28 3 0 7 0 0 8404993 0 0 0
+8 28 3 0 7 0 0 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 503433 100
 E
@@ -2651,7 +2651,7 @@ parchment letter~
 &n&+ya parchment &Nletter~
 &+yAn old parchment &Nletter has been left here, tied with a small &+Bribbon.~
 ~
-33 15 3 0 7 0 4096 16385 0 0 0
+33 15 3 0 7 0 4096 16385 32768 0 0
 0 0 1 0 0 0 0 0
 0 0 100
 E
@@ -2685,7 +2685,7 @@ badge barlow brewery~
 &+La &Nbadge &+Lof &N&+yBarlow's Brewery~
 &NA badge of &+yBarlow's Brewery&N has been left here.~
 ~
-9 15 3 0 7 0 0 2097153 0 0 0
+9 15 3 0 7 0 0 2097153 32768 0 0
 1 0 0 2 0 0 0 0
 0 0 100
 E
@@ -2718,7 +2718,7 @@ bloody head gru dank gru'dank~
 &+rthe bloody head of Gru'Dank&N~
 &+rThe bloody head of Gru'Dank has been left here.~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 1 100
 E
@@ -2813,7 +2813,7 @@ ethereal lotus~
 &+Lan ethe&Nre&+Wal &N&+blotus&N~
 &+LAn ether&Ne&+Wal &N&+blotus &+Lgrows here in a multi-phased planar existense.~
 ~
-8 30 1 0 14 0 67117088 16385 64 0 0
+8 30 1 0 14 0 67117088 16385 32832 0 0
 0 0 0 0 0 0 0 0
 0 209348 100
 E
@@ -2827,7 +2827,7 @@ dreamfoil~
 &+Lsome &+Wdream&Nfo&+Lil&N~
 &+LSome magical &+Wdream&Nfo&+Lil glows here, &+Ysparkling &+Lwith magic.~
 ~
-8 30 3 0 15 0 1 8404993 64 0 0
+8 30 3 0 15 0 1 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 0 15343 100
 E
@@ -2840,7 +2840,7 @@ ethereal lily~
 &+Can &+We&+Ct&+Wh&+Ce&+Wr&+Ce&+Wa&+Cl &N&+clily&n~
 &+CGrowing amongst the &N&+rdark wood&+C, an &+We&+Ct&+Wh&+Ce&+Wr&+Ce&+Wa&+Cl &N&+clily &+Csprouts here.~
 ~
-8 30 1 0 15 0 67117057 8404993 64 0 0
+8 30 1 0 15 0 67117057 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 0 66382 100
 E
@@ -2874,7 +2874,7 @@ bloody head chungy taskgulch~
 &n&+rthe bloody head of Chungy Taskgulch~
 &+rThe bloody head of a dwarf lies here in a pool of blood.~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 15343 100
 E
@@ -2908,7 +2908,7 @@ bloody head frahzel thunderfist~
 &+rthe bloody head of Frahzel Thunderfist~
 &N&+rLying in a pool of thick dark blood, the head of Frahzel Thunderfist sits, mouth open.~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 3 0 100
 E
@@ -3118,7 +3118,7 @@ bloody heart melbe~
 &+rthe bloody heart of Melbe~
 &+rThe bloody heart of Melbe has been left here in a puddle.~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 5 100
 E
@@ -3145,7 +3145,7 @@ craftsmans pin dweefniggle workshop~
 &n&+ya craftsman's pin &+Lof &N&+cDweefniggle's &+Mworkshop&N~
 &+yA craftsman's pin has been left here.~
 ~
-9 6 3 4 7 0 0 2097153 0 0 0
+9 6 3 4 7 0 0 2097153 32768 0 0
 4 0 0 0 0 0 0 0
 0 400 100
 E
@@ -3191,7 +3191,7 @@ bloody heart blue drake~
 &+rthe bloody heart of a &+Bblue drake&N~
 &+rThe huge, bloody heart of a &+Bblue dragon&N&+r has been left here.~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 5 100
 E
@@ -3204,7 +3204,7 @@ bloody heart blue drake~
 &+rthe bloody heart of a &+bblue drake&N~
 &+rThe bloody herat of a &+rblue drake&+r lies here in a pool of blood.~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 5 100
 E
@@ -3313,7 +3313,7 @@ chromium dragon scales dragonscales~
 &+Lsome &+Wc&Nh&+cr&+Rom&N&+ci&Nu&+Wm &+Ldragon&+Cs&N&+cc&+Ca&N&+cl&+Ce&N&+cs&N~
 &+LSome &+Yprecious &+Wch&+Rr&+Com&+Ri&+Wum &+Ldragon&N&+csc&+Lal&N&+ces &+Lhave been left here.~
 ~
-8 35 5 0 15 0 4096 1 66 0 0
+8 35 5 0 15 0 4096 1 32834 0 0
 0 0 0 0 0 0 0 0
 10 289409 100
 E
@@ -3377,7 +3377,7 @@ commendation token mining~
 &+Wa commendation &+Ytoken &+Wof &N&+bmining&N~
 &+YA commendation token of &N&+bmining&+Y has been left here.~
 ~
-8 8 1 0 7 0 0 16385 0 0 0
+8 8 1 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 20434 100
 E
@@ -3462,7 +3462,7 @@ gored tongue swamp troll~
 &n&+gthe &+rgored &N&+gto&+Gngue &N&+gof a s&+Lw&N&+ga&+Lm&N&+gp troll&N~
 &+gThe gored &+Gtongue &n&+gof a &+Lswamp troll &Nhas been left here.~
 ~
-19 2 3 0 7 0 8392704 8404993 0 0 0
+19 2 3 0 7 0 8392704 8404993 32768 0 0
 72 12 9 0 3 1 0 0
 0 0 100
 E
@@ -3477,7 +3477,7 @@ bloody heart birch scruden orc~
 &+rthe bloody heart of Birch Scruden&N~
 &+rThe bloody heart of a duergar lies here in a thick pool.~
 ~
-19 2 2 0 7 0 4096 16385 0 0 0
+19 2 2 0 7 0 4096 16385 32768 0 0
 2 6 10 0 0 0 0 0
 1 4 100
 E
@@ -3839,7 +3839,7 @@ brudo brudos brudo's emerald shortsword sword~
 &n&+gBrudo's emerald &+Gs&N&+gh&+Go&N&+gr&+Gt&N&+gs&+Gw&N&+go&+Gr&N&+gd&N~
 &+gA magical emerald shortsword&n has been left here..~
 ~
-5 32 3 0 12 0 1 8193 66 0 0
+5 32 3 0 12 0 1 8193 32834 0 0
 9 3 5 0 0 0 0 0
 0 33228 100 0 28 0 0
 E
@@ -3855,7 +3855,7 @@ bloody head clund hammerhelm~
 &n&+rthe bloody head of &+WClund &+YHammer&+Whelm&N~
 &+rThe bloody head of &+WClund &+YHammer&+Whelm &n&+rlies here in a pool of blood and &+Wpuss&n&+r.~
 ~
-15 10 2 0 7 0 4096 8404993 0 0 0
+15 10 2 0 7 0 4096 8404993 32768 0 0
 10 0 0 10 0 0 0 0
 0 5 100
 E
@@ -3977,7 +3977,7 @@ war banner helgor~
 &+La &N&+rwar &+Wbanner &+Lof &N&+rHel&+Rgor&N~
 &+LA &N&+rwar &+Wbanner &+Lof &N&+rHel&+Rgor&N lies here.~
 ~
-9 3 3 0 9 0 0 2097153 64 0 0
+9 3 3 0 9 0 0 2097153 32832 0 0
 1 0 0 0 0 0 0 0
 2 15343 100
 E
@@ -3995,7 +3995,7 @@ key adamantite cell~
 &+Lan adamantite &N&+ccell &+Lkey&N~
 &+LA single key on a huge adamantite ring sits here.~
 ~
-18 19 1 0 7 0 0 16385 0 0 0
+18 19 1 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 100 100
 E
@@ -4177,7 +4177,7 @@ antiquated silver dragon egg~
 &+Wan antiquated &+Csilver dragon egg&N~
 &+WAn antiquated &+Csilver dragon egg&N has been left here.~
 ~
-8 8 2 0 7 0 4096 16385 64 0 0
+8 8 2 0 7 0 4096 16385 32832 0 0
 0 0 0 0 0 0 0 0
 1 78332 100
 E
@@ -4335,7 +4335,7 @@ silver dragon scales~
 &+Wsome sil&+Cv&N&+cer dragonscales&N~
 &+WSome sil&+Cver &N&+cdragon scales &nhave been left here.~
 ~
-8 35 4 0 7 0 4097 16385 64 0 0
+8 35 4 0 7 0 4097 16385 32832 0 0
 0 0 0 0 0 0 0 0
 10 20322 100
 E
@@ -4552,7 +4552,7 @@ bloody heart jenk~
 &+rthe bloody heart of Jenk&N~
 &+rThe bloody heart of Jenk has been left here.~
 ~
-8 2 2 0 7 0 4096 16385 0 0 0
+8 2 2 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 E
@@ -4702,7 +4702,7 @@ war banner khoralator~
 &n&+ca &+rwar &+Wbanner &n&+cof &+WKhor&N&+calator&N~
 &+cA war banner of Khoralator Fort&N has been left here, crumbled.~
 ~
-9 3 3 0 9 0 0 2097153 64 0 0
+9 3 3 0 9 0 0 2097153 32832 0 0
 1 0 0 0 0 0 0 0
 2 15343 100
 E
@@ -4829,7 +4829,7 @@ crude map shanatar mountains~
 &N&+ya crude map of the Shan&+La&N&+yt&+La&N&+yr mountains&N~
 &+yA crude map of the Shanatar mountains has been left here.~
 ~
-8 29 3 0 0 0 0 8404993 0 0 0
+8 29 3 0 0 0 0 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 5332 89
 E
@@ -5008,7 +5008,7 @@ bloody head helgor~
 &+rthe bloody head of General &+RHel&N&+rgor&N~
 &+rThe bloody head of a duergar has been left here.~
 ~
-8 2 3 0 7 0 8392704 16385 0 0 0
+8 2 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 10 100
 E
@@ -5022,7 +5022,7 @@ bloody head borhad khoralator~
 &+rthe bloody head of Borhad &+WKhor&N&+calator&N~
 &+rThe bloody head of Borhad &+WKhor&N&+calator&N has been left here.~
 ~
-8 2 3 0 7 0 4096 16385 0 0 0
+8 2 3 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 2 10 100
 E
@@ -5053,7 +5053,7 @@ ancient cask frothing mug ale~
 &+Lan ancient cask of &N&+y'Frothing Mug' ale&N~
 &+LAn ancient cask of &N&+yale&N has been left here.~
 ~
-17 6 4 0 7 0 4096 16385 0 0 0
+17 6 4 0 7 0 4096 16385 32768 0 0
 60 60 3 0 0 0 0 0
 7 33222 100
 E
@@ -5225,7 +5225,7 @@ cask vintage hammer shield ale~
 &N&+ya cask of vintage &n&+cHammer&N&+y and &+WShield &N&+ybrand ale&N~
 &+yA cask of vintage &N&+cHammer&N&+y and &+WShield &N&+ybrand dwarven ale has been left here.~
 ~
-17 6 4 0 7 0 4096 16385 0 0 0
+17 6 4 0 7 0 4096 16385 32768 0 0
 120 120 1 0 0 0 0 0
 9 20333 100
 E
@@ -5748,7 +5748,7 @@ tinkerer's tinkerer token~
 &+La &+Rtinkerer's &+Ytoken&N~
 &+LA &+Rtinkerer's &+Ytoken&+L has been left here.~
 ~
-8 16 0 0 13 0 0 8404993 0 0 0
+8 16 0 0 13 0 0 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 0 1000 100
 E
@@ -5839,7 +5839,7 @@ commendation token stealth~
 &+Wa commendation &+Ytoken &+Wof &+Lstealth&N~
 &+WA shimmering &+Ytoken &+Wof &+Lstealth&+W has been left here.~
 ~
-8 39 2 0 14 0 1 8404993 64 0 0
+8 39 2 0 14 0 1 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 0 32321 100
 E
@@ -6012,7 +6012,7 @@ keg beer golden pearl~
 &N&+ya keg of beer from &N'the &+YGolden Pearl&N'~
 &+yA large keg of beer marked with the symbol of &N'The &+YGolden Pearl&N' is sitting here upright.~
 ~
-8 6 4 0 5 0 0 1 0 0 0
+8 6 4 0 5 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 8 6332 100
 E
@@ -6153,7 +6153,7 @@ shackle key~
 &+La &Nsh&+Lac&Nkl&+Le &+Ckey&N~
 &+LA &Nsh&+Lac&Nkl&+Le &+Ckey &Nhas been left here.~
 ~
-18 15 3 0 7 0 8392704 16385 0 0 0
+18 15 3 0 7 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -7168,7 +7168,7 @@ piece token dragonslaying dragon slaying~
 &na piece of a &+Wtoken &+Wof &+gdragon&+rslaying&N~
 &+WA piece of a token of &+gdragon&+rslaying &+Whas been left here.~
 ~
-8 8 1 0 7 0 0 16385 0 0 0
+8 8 1 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 20434 100
 E
@@ -7315,7 +7315,7 @@ bloody head azarem tumek~
 &+rthe bloody head of Azarem Tumek&N~
 &+rA bloody duergar head lies here, mouth open in a pool of blood.~
 ~
-8 2 2 0 7 0 4096 16385 0 0 0
+8 2 2 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 50444 100
 E

@@ -1400,7 +1400,7 @@ grate key~
 &+ma grate key&n~
 &+mA discarded key lies here.&n~
 ~
-18 15 3 0 7 0 4104 1 0 0 0
+18 15 3 0 7 0 4104 1 32768 0 0
 0 100 0 0 0 0 0 0
 1 0 100
 #92134
@@ -1408,6 +1408,6 @@ crude note _id_~
 &+ya crude note&n~
 &+ySomeone threw a crude note here.&n~
 ~
-16 28 3 0 7 0 0 1 0 0 0
+16 28 3 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100

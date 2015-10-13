@@ -190,7 +190,7 @@ flaming head caltoon~
 &+rthe &+Rflaming &+rhead of &+bCaltoon&n~
 &+rThe &+Rflaming &+rhead of &+bCaltoon &+rlies here.&n~
 ~
-13 11 3 0 7 0 8388608 1 0 0 0
+13 11 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #139012
@@ -261,7 +261,7 @@ flaming head arch-magi~
 &+rthe &+Rflaming &+rhead of the &+Ra&+rrch-&+Rm&+ragi&n~
 &+rThe &+Rflaming &+rhead of the Arch-Magi lies here.&n~
 ~
-13 11 3 0 7 0 8388608 1 0 0 0
+13 11 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #139017
@@ -269,7 +269,7 @@ flaming head amir ornon kasoon~
 &+rthe &+Rflaming &+rhead of &+MO&+mrnon &+MK&+masoon&n~
 &+rThe &+Rflaming &+rhead of &+mAmir &+rlies here.&n~
 ~
-13 11 3 0 7 0 8388608 1 0 0 0
+13 11 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #139018
@@ -277,7 +277,7 @@ cold strange blue vial flames~
 &+La &+bcold &+Lvial of &+bblue &+rflames&n~
 &+LA strange &+bblue &+Lvial lies here.&n~
 ~
-10 11 3 0 7 0 0 1 0 0 0
+10 11 3 0 7 0 0 1 32768 0 0
 55 267 0 0 0 0 0 0
 0 0 100
 #139019
@@ -363,7 +363,7 @@ flaming quill~
 &+ra f&+Rl&+Ya&+Wm&+Yi&+Rn&+rg quill&n~
 &+rA flaming quill is stuck in the ground.&n~
 ~
-21 10 0 0 11 0 8193 8404993 64 0 0
+21 10 0 0 11 0 8193 8404993 32832 0 0
 0 0 0 0 0 0 0 0
 0 0 100 536870912 1 0 0
 A
@@ -385,7 +385,7 @@ golden coin surtr~
 &+Ya golden &+RSu&+rrt&+Rr&N &+Ycoin&n~
 &+YA shiny coin made of gold sits here looking of significant value.~
 ~
-8 24 0 0 15 0 8409089 16385 0 0 0
+8 24 0 0 15 0 8409089 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1000000 100 2 0 0 0
 #139029
@@ -417,7 +417,7 @@ imix coin flaming~
 &+ra&n &+rf&+Rl&+Ya&+Wm&+Yi&+Rn&+rg&n &+LI&+rmi&n&+Lx&n &+rcoin~
 Marked with the symbol of &+RImix&n, a flaming coin lies here.~
 ~
-8 31 0 0 15 0 274432 16385 0 0 0
+8 31 0 0 15 0 274432 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 500000 100
 A
@@ -439,7 +439,7 @@ quartz crystal~
 &+Wa &nquartz &+Wcrystal~
 &+rA &npiece of &+Wcrystal &+rprotrudes from the harden magma.~
 ~
-8 8 0 0 9 0 45056 16385 0 0 0
+8 8 0 0 9 0 45056 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 550000 100
 #139034
@@ -1859,7 +1859,7 @@ pile elder hydra scales scale~
 &+La p&ni&+Lle of &+ye&+Yld&+yer&n &+Gh&+gydr&+Ga&n &+Lscales~
 &+LA pile of &+ye&+Yld&+yer&n &+Gh&+gydr&+Ga&n &+Lscales are scattered on the floor.~
 ~
-8 35 2 0 15 0 12289 16385 0 0 0
+8 35 2 0 15 0 12289 16385 32768 0 0
 0 0 0 0 0 0 0 0
 11 550000 100
 E
@@ -1871,7 +1871,7 @@ drop chimaera blood~
 a &+Ldrop&n of &+mch&+Mi&+mmaer&+Ma&n &+rblood&n~
 &+LA single drop of &+rblood &+Lbegins to harden.~
 ~
-8 40 1 0 12 0 8192 16385 0 0 0
+8 40 1 0 12 0 8192 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 550000 100
 E
@@ -2012,7 +2012,7 @@ flaming head high priest~
 &+rthe &+Rflaming &+rhead of the &+Yh&+yigh &+Yp&+yriest&n~
 &+rThe &+Rflaming &+rhead of the &+Yh&+yigh &+Yp&+yriest &+rlies here.&n~
 ~
-13 11 3 0 7 0 8388608 1 0 0 0
+13 11 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #139140
@@ -2020,7 +2020,7 @@ flaming head wrinyan otis~
 &+rthe &+Rflaming &+rhead of &+CW&+crinyen &+CO&+ctis&n~
 &+rThe &+Rflaming &+rhead of the &+CW&+crinyen &+CO&+ctis &+rlies here.&n~
 ~
-13 11 3 0 7 0 8388608 1 0 0 0
+13 11 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #139141
@@ -2028,7 +2028,7 @@ flaming head hakim okewonaku~
 &+rthe &+Rflaming &+rhead of &nH&+Lakim &nO&+Lkewonaku&n~
 &+rThe &+Rflaming &+rhead of the &nH&+Lakim &nO&+Lkewonaku&n &+rlies here.&n~
 ~
-13 11 3 0 7 0 8388608 1 0 0 0
+13 11 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #139142
@@ -2036,7 +2036,7 @@ pile ancient pyro pyrohydra hydra scales scale~
 &+La p&ni&+Lle of &+Lan&nci&+Lent &+rpy&+Rro&+Yhy&+Wdra&n &+Lsc&na&+Lles~
 &+LA pile of ancient &+rpy&+Rro&+Yhy&+Wdra&n &+Lscales are scattered on the floor.~
 ~
-8 35 2 0 15 0 12289 16385 0 0 0
+8 35 2 0 15 0 12289 16385 32768 0 0
 0 0 0 0 0 0 0 0
 11 550000 100
 E
@@ -2063,7 +2063,7 @@ flaming head artoon branan~
 &+rthe &+Rflaming &+rhead of &+GA&+grtoon &+GB&+granan&n~
 &+rThe &+Rflaming &+rhead of the &+GA&+grtoon &+GB&+granan&n &+rlies here.&n~
 ~
-13 11 3 0 7 0 8388608 1 0 0 0
+13 11 3 0 7 0 8388608 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #139145

@@ -250,7 +250,7 @@ ring wedding silver~
 &+ca silver wedding ring~
 &+cA small silver wedding band lays here gathering dust.~
 ~
-9 22 2 0 8 0 8392704 3 64 0 0
+9 22 2 0 8 0 8392704 3 32832 0 0
 4 0 0 2 0 0 0 0
 1 105 100
 E
@@ -353,7 +353,7 @@ necklace ice~
 &+Ya &+Cnecklace &+Yof &+Cice~
 a &+Ygold necklace &ncovered with &+Cice&n rests here.~
 ~
-9 24 3 0 9 0 36864 5 64 0 0
+9 24 3 0 9 0 36864 5 32832 0 0
 5 0 0 3 0 0 0 0
 2 5890 100 65536 0 0 0
 E

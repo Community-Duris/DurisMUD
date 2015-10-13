@@ -5,8 +5,8 @@ essence nightmare nightmares~
 ~
 You can't wake up, all you hear is yourself screaming...
 ~
-8 1 0 136 0 0 0 -1000 S
-X 0 1 -1
+8 1 0 0 136 0 0 0 -1000 S
+X 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

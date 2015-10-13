@@ -9,8 +9,8 @@ the open tome and continues reciting.  Her long brown hair is tied
 up in a golden hair piece.  Completing her spell, she mutters and
 appears puzzled why her spell failed.
 ~
-33687754 0 0 134217852 14528 0 0 -1000 S
-D 0 512 -1
+33687754 0 0 0 134217852 14528 0 0 -1000 S
+D 0 512 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 2
@@ -23,8 +23,8 @@ A &+Ystrange yellow plant&N grows against the wall here.
 hallway here.  It has yellow leaves and yellow spines all
 over its body.  It bears a large red blossom.
 ~
-100665418 0 0 16777256 2048 0 0 -1000 S
-AH 0 4 -1
+100665418 0 0 0 16777256 2048 0 0 -1000 S
+AH 0 4 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -39,8 +39,8 @@ He has short dark black.  With a small scripture book in hand,
 he appears to be in prayer.  Nathin closes his eyes sinking
 deeper into meditation.  He in unaware of your presence.
 ~
-33556682 0 0 75900 12480 0 0 -1000 S
-PH 0 32 -1
+33556682 0 0 0 75900 12480 0 0 -1000 S
+PH 0 32 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ battle armor.  Standing over six feet tall, he watches with keen
 interest over the surrounding area.  He is marked with a dark
 tattoo on his forehead that glows blood red.
 ~
-100689994 0 0 16851068 12480 0 0 -1000 S
-PH 0 1 5
+100689994 0 0 0 16851068 12480 0 0 -1000 S
+PH 0 1 0 5
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -70,8 +70,8 @@ prayer.  He is a middle aged man with short dark brown hair.  His
 dark eyes stare at the holy scripture on the altar.  Azreq wears a
 dark cloak about his body and a suit of platemail on his body.
 ~
-67127882 0 0 73844 45248 0 0 -1000 S
-PE 0 32 5
+67127882 0 0 0 73844 45248 0 0 -1000 S
+PE 0 32 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -86,8 +86,8 @@ feet tall and glances over the surrounding area with cold eyes.
 With a sword in one hand and a shield in the other, this holy
 guardian stands here ready for action.
 ~
-1140852938 0 0 16851060 12480 0 0 0 S
-PB 0 1 -1
+1140852938 0 0 0 16851060 12480 0 0 0 S
+PB 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -100,8 +100,8 @@ A &+bcitizen&N of &+MTeka&N is here praying to her god.
 praying within the walls of this cathedral.  Deep in meditation,
 this citizen hardly is aware of your presence.
 ~
-2250 0 0 24 12288 0 0 0 S
-PH 0 1024 -1
+2250 0 0 0 24 12288 0 0 0 S
+PH 0 1024 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -113,8 +113,8 @@ morlena~
    Morlena circles the chamber very upset about one
 thing or another.  She pulses with a dark aura about here.
 ~
-2250 1 0 134217854 307392 0 0 -1000 S
-X 0 32 -1
+2250 1 0 0 134217854 307392 0 0 -1000 S
+X 0 32 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 2
@@ -128,8 +128,8 @@ disturbed by something or some being.  It howls loudly as it
 continues flying through the room.  It notices you and
 quickly charges at your soul.
 ~
-1073875146 1 0 134291624 12288 0 0 -1000 S
-X 0 1 -1
+1073875146 1 0 0 134291624 12288 0 0 -1000 S
+X 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -145,8 +145,8 @@ as it completes a complete round.  It growls and screams loudly
 every few minutes.  The spectre is almost transparent. It looks
 quite troubled for some reason.
 ~
-149514 1 0 402727096 307392 0 0 -1000 S
-X 0 32 -1
+149514 1 0 0 402727096 307392 0 0 -1000 S
+X 0 32 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -161,8 +161,8 @@ Aerlyn's troops pass under this warrior's care.  He stands over six feet
 tall with a well defined build.  He continues training unaware
 of your presence.
 ~
-67110986 1 0 73964 0 0 0 -1000 S
-G 0 1 -1
+67110986 1 0 0 73964 0 0 0 -1000 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -176,8 +176,8 @@ the midst of casting another spell.  He looks like an advanced
 apprentice to the archmage, but is very young.  He appears
 devoted to his class and his race.
 ~
-428234 0 0 73964 12288 0 0 -1000 S
-PH 0 2048 -1
+428234 0 0 0 73964 12288 0 0 -1000 S
+PH 0 2048 0 -1
 42 20 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -191,8 +191,8 @@ through her room.  She sifts through her belongings searching. She
 looks beautiful, too beautiful for a place like this. Her golden hair
 contrasts with the dark surroundings of her room.
 ~
-2250 0 0 73864 45248 0 0 -1000 S
-PH 0 32 -1
+2250 0 0 0 73864 45248 0 0 -1000 S
+PH 0 32 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -206,8 +206,8 @@ mage of the tower.  He has been appointed to keep all who do not
 belong out of the tower.   Trained by Caledan, this guard displays
 proper form and technique in his actions.
 ~
-67110988 1 0 8228 8192 0 0 -1000 S
-PB 0 1 -1
+67110988 1 0 0 8228 8192 0 0 -1000 S
+PB 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -221,8 +221,8 @@ new skills within these halls.  This guard has a somewhat bulky
 appearance.  He moves with great agility as he dashes across the
 room.
 ~
-67111114 0 0 73836 0 0 0 -1000 S
-PB 0 1 -1
+67111114 0 0 0 73836 0 0 0 -1000 S
+PB 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -237,8 +237,8 @@ Aerlyn's troops.  Preparing the inexperienced guards, the chief
 guard has seen many battles.  Quentim looks at you as you enter
 his quarters.
 ~
-67110986 0 0 73964 14528 0 0 -1000 S
-G 0 1 -1
+67110986 0 0 0 73964 14528 0 0 -1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -252,8 +252,8 @@ Aerlyn, is a very wise man, devoted to his god for all eternity.
 He looks vibrant for his old age, and performs the rituals
 with great ease.
 ~
-67111114 0 0 124 45248 0 0 -1000 S
-G 0 32 -1
+67111114 0 0 0 124 45248 0 0 -1000 S
+G 0 32 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -267,8 +267,8 @@ region practicing his religion to all.  He follows in the footsteps
 of his mentor.   His goal is to spread his religion throughout the
 city of Teka and its surrounding territories.
 ~
-67109070 0 0 8 0 0 0 -1000 S
-H 0 32 -1
+67109070 0 0 0 8 0 0 0 -1000 S
+H 0 32 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -283,8 +283,8 @@ minions of Wilvem, the old Tekan mage.  Dressed in a platemail ready
 for war, Khalil stands some 6 feet tall with a large build.
 He continues pacing the room upon your enterance.
 ~
-67110986 0 0 805380124 12480 0 0 -1000 S
-G 0 1 -1
+67110986 0 0 0 805380124 12480 0 0 -1000 S
+G 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -297,8 +297,8 @@ A &+Bdark cloaked imp&N is standing here, looking fiendish.
 your appearence.  With a flash of white light, its hands crackle with
 a red energy.
 ~
-2252 1 0 1122430 14528 0 0 -1000 S
-X 0 2 -1
+2252 1 0 0 1122430 14528 0 0 -1000 S
+X 0 2 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -310,8 +310,8 @@ A &+Rfiendish devil&N~
   This blood thirsty devil howls loudly as it notices your presence.
 With glowing eyes, it drools and charges you.
 ~
-133322 1 0 73852 307392 0 0 -1000 S
-Y 0 1 -1
+133322 1 0 0 73852 307392 0 0 -1000 S
+Y 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -323,8 +323,8 @@ A large &+Wiron golem&N stands here looking lifeless.
   A magically formed animation of several armors, it mumbles
 strange sounds over and over.  It shines in the light of the room.
 ~
-2122 1 0 536944844 0 0 0 -1000 S
-G 0 1 -1
+2122 1 0 0 536944844 0 0 0 -1000 S
+G 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -338,8 +338,8 @@ golem from the many corpses of trespassers.  Those corpses
 have been magically animated into this guardian of her tower.
 It smells strongly of rotten flesh.
 ~
-395468 0 0 537469052 307392 0 0 -1000 S
-G 0 1024 -1
+395468 0 0 0 537469052 307392 0 0 -1000 S
+G 0 1024 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.1 0
 8 8 0
@@ -353,8 +353,8 @@ dark leather suit.  He looks like a seasoned adventurer, with his
 many battle scars. Moving quickly through the room, Osmirim appears
 to be a very adept rogue.
 ~
-1076889804 0 0 598254 45248 0 0 -1000 S
-G 0 18432 -1
+1076889804 0 0 0 598254 45248 0 0 -1000 S
+G 0 18432 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -368,8 +368,8 @@ break free.  It has a great body of silver scales which sparkle
 in the light of the room. He looks weak from his bond to the wall,
 but is still ready to battle.
 ~
-2138 0 0 2300 274624 262144 0 0 S
-D 0 1 -1
+2138 0 0 0 2300 274624 262144 0 0 S
+D 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -382,8 +382,8 @@ demon archdemon glowing~
 by something or someperson.  It howls loudly as it continues flying
 through the room.  It notices you and quickly charges at your soul.
 ~
-1073875146 1 0 134291624 12288 0 0 -1000 S
-X 0 1024 -1
+1073875146 1 0 0 134291624 12288 0 0 -1000 S
+X 0 1024 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -396,8 +396,8 @@ A &+Bhooded sentry&N is here, keeping watch.
 stands on his post looking for signs of danger.  He is
 dressed in a ragged leather armor.
 ~
-67111114 0 0 73836 128 0 0 -1000 S
-H 0 1 -1
+67111114 0 0 0 73836 128 0 0 -1000 S
+H 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -410,8 +410,8 @@ An &+capprentice mage&N is here, practicing his spells.
 spell.  He stops abruptly short of completion and frowns.  He
 pulls out a tome and tries again.
 ~
-133324 1 0 67109068 4096 0 0 -1000 S
-H 0 2048 -1
+133324 1 0 0 67109068 4096 0 0 -1000 S
+H 0 2048 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -425,8 +425,8 @@ has taken form within this hall.  With your attitude and your body,
 the golden reflection peers back at you.  It mumbles something
 incoherent.
 ~
-67127370 1 0 73964 274624 0 0 0 S
-EA 0 1 -1
+67127370 1 0 0 73964 274624 0 0 0 S
+EA 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -440,8 +440,8 @@ has taken form within this hall.  With your attitude and your body,
 the dark reflection growls back at you.  It mumbles something
 incoherent.  It looks very upset.
 ~
-18634 1 0 73964 274624 0 0 -1000 S
-G 0 1024 -1
+18634 1 0 0 73964 274624 0 0 -1000 S
+G 0 1024 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -454,8 +454,8 @@ A &+Bdark cloaked imp&N is standing here, looking fiendish.
 your appearence.  With a flash of white light, its hands crackle with
 a red energy.
 ~
-2250 1 0 1122430 14528 0 0 -1000 S
-G 0 1 -1
+2250 1 0 0 1122430 14528 0 0 -1000 S
+G 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -469,8 +469,8 @@ here within the dark tower of Aerlyn keeping the peace.  He
 stands over six feet tall and glances over the surrounding
 area with cold eyes.
 ~
-1140852938 0 0 16851070 12480 0 0 0 S
-PB 0 1 -1
+1140852938 0 0 0 16851070 12480 0 0 0 S
+PB 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -484,8 +484,8 @@ He stands over six feet in height and wears equipment ready for
 battle.  This guardsman keeps watch here fighting off resistance
 to his work.
 ~
-67110986 1 0 74092 12480 0 0 -1000 S
-SK 0 1 -1
+67110986 1 0 0 74092 12480 0 0 -1000 S
+SK 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -499,8 +499,8 @@ dark stone tower of Aerlyn.  He mumbles to himself and continues
 along his way.  He wears a tanned suit of buffalo hide about his
 body.
 ~
-2122 0 0 8556 0 0 0 -1000 S
-G 0 32 -1
+2122 0 0 0 8556 0 0 0 -1000 S
+G 0 32 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -512,8 +512,8 @@ undead fish~
    This undead fish floats through the water here.  It is
 covered with white silken scales which appear to glow.
 ~
-18634 1 0 0 0 0 0 -1000 S
-U 0 1 -1
+18634 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -527,8 +527,8 @@ this far below the tower in search of a lost relic.  Ilbe is a
 tall and massive barbarian with dark brown hair.  He stands
 before is crew of workers shouting directives.
 ~
-67110986 0 0 73836 12480 0 0 -1000 S
-PB 0 1 -1
+67110986 0 0 0 73836 12480 0 0 -1000 S
+PB 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -542,8 +542,8 @@ This working miner is here digging into the earth under
 Ilbe's directive.  He wields a pick in one hand and continues
 his work.
 ~
-67110986 0 0 8192 12480 0 0 0 S
-PM 0 1 -1
+67110986 0 0 0 8192 12480 0 0 0 S
+PM 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -557,8 +557,8 @@ crypt and its contents.  The guardian appears almost transparent
 and wears a Tekan amulet about its neck.  The Tekans have placed
 these guardians as a protective measure.
 ~
-67110986 1 0 168894498 309248 0 0 -1000 S
-X 0 1 -1
+67110986 1 0 0 168894498 309248 0 0 -1000 S
+X 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 10 10 0
@@ -572,8 +572,8 @@ crypt and its contents.  The guardian appears almost transparent
 and wears a Tekan amulet about its neck.  The Tekans have placed
 these guardians as a protective measure.
 ~
-67110986 1 0 168894498 309248 0 0 -1000 S
-X 0 256 -1
+67110986 1 0 0 168894498 309248 0 0 -1000 S
+X 0 256 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 10 10 0
@@ -587,8 +587,8 @@ crypt and its contents.  The guardian appears almost transparent
 and wears a Tekan amulet about its neck.  The Tekans have placed
 these guardians as a protective measure.
 ~
-67110986 1 0 168894498 309248 0 0 -1000 S
-X 0 512 -1
+67110986 1 0 0 168894498 309248 0 0 -1000 S
+X 0 512 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 10 10 0
@@ -601,8 +601,8 @@ The &+Csoul of Lashan Blackfeather&N rests here within these quarters.
 within the room here.  He appears to be resting.  It has been many
 years since his death.
 ~
-33572938 1 0 973152376 274624 0 0 -1000 S
-X 0 512 -1
+33572938 1 0 0 973152376 274624 0 0 -1000 S
+X 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 1
@@ -615,8 +615,8 @@ A &+Wsnow&N bobcat silently hunts her prey.
 unsuspecting prey.  Her heavy white coat helps her in this
 harsh environment.
 ~
-2060 1 0 1572878 0 0 0 0 S
-A 0 1 -1
+2060 1 0 0 1572878 0 0 0 0 S
+A 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

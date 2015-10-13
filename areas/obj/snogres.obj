@@ -115,7 +115,7 @@ hourglass intricate strange _noquest_~
 &+Yan intricate &+yhourglass &+Yrunning in &+Yre&+yv&+Le&+yr&+Yse&N~
 &+yA strange hourglass lies upon one end here, running in reverse.&N~
 ~
-3 24 2 0 14 0 3153952 8404993 64 0 0
+3 24 2 0 14 0 3153952 8404993 32832 0 0
 60 3 3 88 0 0 0 0
 1 55000 100
 E
@@ -186,7 +186,7 @@ claymore onyx iron cold _id_ _noquest_~
 &+Lan onyx&+w-&+Lhilted &+Ccold&+L-&+Ciron &+wclaymore&N~
 &+CA large pulsing blade with an &+Lonyx&+C hilt lies here.&N~
 ~
-5 15 4 0 15 0 4235272 8193 80 0 0
+5 15 4 0 15 0 4235272 8193 32848 0 0
 13 8 3 0 0 0 0 0
 18 0 100 0 0 0 1024
 E
@@ -205,7 +205,7 @@ greatsword sword onyx cold iron _id_ _noquest_~
 &+Lan onyx&+w-&+Lhilted &+Ccold&+L-&+Ciron &+Wgreatsword&N~
 &+LA &+Wgreatsword&+L with an onyx hilt lies here.&N~
 ~
-5 15 4 0 15 0 4202504 8193 80 0 0
+5 15 4 0 15 0 4202504 8193 32848 0 0
 13 5 4 0 0 0 0 0
 15 0 100 0 0 0 4096
 E
@@ -260,7 +260,7 @@ crystal green shard _noquest_~
 &+Ga green shard of &+Ccrystal&N~
 &+GSome green crystal shattered here.&N~
 ~
-12 8 1 0 11 0 98312 8404993 0 0 0
+12 8 1 0 11 0 98312 8404993 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 #87714
@@ -288,7 +288,7 @@ bleeding eye astereater _noquest_~
 &+wthe &+Rbleeding &+Weye of an &+Lastereater&N~
 &+RA still bleeding, giant &+Weye &+Rlies here.&N~
 ~
-13 2 2 0 7 0 0 1 0 0 0
+13 2 2 0 7 0 0 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 #87716
@@ -296,7 +296,7 @@ severed head hydra ice _noquest_~
 &+ca severed head from an &+bice hydra&N~
 &+bBlood still drips from the stump where this hydra's head was severed.&N~
 ~
-12 2 3 0 0 0 36936 8388609 0 0 0
+12 2 3 0 0 0 36936 8388609 32768 0 0
 0 0 0 0 0 0 0 0
 20 0 30
 #87717
@@ -304,7 +304,7 @@ long writhing illithid tentacle _noquest_~
 &+ma long, writhing &+Millithid &+mtentacle&N~
 &+mA long, writhing &+Millithid &+mtentacle has been lost here.&N~
 ~
-12 2 1 0 7 0 36936 1 0 0 0
+12 2 1 0 7 0 36936 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 #87718
@@ -312,7 +312,7 @@ large black scale dragon swamp _noquest_~
 &+La scale from an elder &+wswamp &+Ldragon&N~
 &+LWhat looks to be a large black scale lies here.&N~
 ~
-12 35 1 0 7 0 36872 1 0 0 0
+12 35 1 0 7 0 36872 1 32768 0 0
 0 0 0 0 0 0 0 0
 3 0 100
 #87719
@@ -320,7 +320,7 @@ plant stalk sundew chunk _noquest_~
 &+Ga chunk of stalk from a &+mmutated &+Ysun&+Gdew&N~
 &+GA thick piece of plant stalk lies amongst some debris here.&N~
 ~
-12 5 1 0 7 0 36872 1 0 0 0
+12 5 1 0 7 0 36872 1 32768 0 0
 0 0 0 0 0 0 0 0
 6 0 100
 #87720
@@ -372,7 +372,7 @@ remorhaz hide chunk large bleached _noquest_~
 &+wa &+Lsubstantial chunk &+wof &+Wremorhaz hide&N~
 &+WA large bit of bleached chitinous hide lies here.&N~
 ~
-12 2 3 0 2 0 36872 1 0 0 0
+12 2 3 0 2 0 36872 1 32768 0 0
 0 0 0 0 0 0 0 0
 20 0 100
 #87726
@@ -458,7 +458,7 @@ yellow shard crystal _noquest_~
 &+Ya yellow shard of &+Ccrystal&N~
 &+YA yellow colored shard of crystal is here.&N~
 ~
-12 8 1 0 11 0 32776 1 0 0 0
+12 8 1 0 11 0 32776 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 #87731
@@ -466,7 +466,7 @@ blue shard crystal~
 &+Ba blue shard of &+Ccrystal&N~
 &+BA blue colored shard of crystal is here.&N~
 ~
-12 8 1 0 11 0 32776 1 0 0 0
+12 8 1 0 11 0 32776 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 0 100
 #87732

@@ -6,8 +6,8 @@ rock flaming huge~
    &+LIt is a big chunk of &+yrock &+Lthat has been magically formed into
 &+La giant stone creature. This &+yrock &+Lis lying here guarding the cave.
 ~
-2122 40 0 537919656 3 0 0 0 S
-EE 0 1 5
+2122 40 0 0 537919656 3 0 0 0 S
+EE 0 1 0 5
 54 0 0 20000d1+10 1d1+1
 0.0.0.0 0
 8 8 0
@@ -19,8 +19,8 @@ creature monster lava~
    &+gAs you look you see what seems to be a face and
 &+galmost a &+Chumanoid &+gfigure somehow trapped in the &+Rfire&+g.
 ~
-1073743944 0 0 603979776 31 0 1048576 -250 S
-H 0 0 4
+1073743944 0 0 0 603979776 31 0 1048576 -250 S
+H 0 0 0 4
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -33,8 +33,8 @@ wall fire~
 &+RIt slowly inches the room burning everything in
 &+Rits path.
 ~
-10 1 0 872415232 1055 0 0 0 S
-EF 0 0 4
+10 1 0 0 872415232 1055 0 0 0 S
+EF 0 0 0 4
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -45,8 +45,8 @@ flame small~
 ~
    &+rIt smolders along the grass aimlessly.
 ~
-10 1 0 872415232 1055 0 0 0 S
-EF 0 0 3
+10 1 0 0 872415232 1055 0 0 0 S
+EF 0 0 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -59,8 +59,8 @@ beast~
 &+RThe head and torso of a &+Lbe&+ma&+Lst &+Ris &+ycopper&N-&+Rcovered, with &+Yyellow&+R,
 &+Wglowing &+Reyes. The lower body is in a orange &+rflames&+R.
 ~
-1073743944 0 0 604012576 29 0 1048576 -150 S
-TK 0 16384 4
+1073743944 0 0 0 604012576 29 0 1048576 -150 S
+TK 0 16384 0 4
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -75,8 +75,8 @@ nightmare fire~
 &+cblacker than the darkest night, and hooves that &+Rb&+Yur&+Rn
 &+cwith unholy &+rfires&+c.
 ~
-1207961608 0 0 604012560 31 0 1048576 -500 S
-AE 0 1 4
+1207961608 0 0 0 604012560 31 0 1048576 -500 S
+AE 0 1 0 4
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -90,8 +90,8 @@ creature. Its appears a skeleton with a black leather
 jumpsuit. It does the hot radiating from its form as
 it nears.
 ~
-1073743944 0 0 604012576 1055 0 0 -450 S
-R 0 0 2
+1073743944 0 0 0 604012576 1055 0 0 -450 S
+R 0 0 0 2
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -103,8 +103,8 @@ fire blast massive fires~
    &+RThe fire feeds on everyone and everything like a living being,
 &+Rlicking out at the head.
 ~
-74 1 0 872415232 31 0 0 0 S
-EF 0 0 5
+74 1 0 0 872415232 31 0 0 0 S
+EF 0 0 0 5
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -117,8 +117,8 @@ bat fire~
 &+Lof a bat. The creature hangs from the ceiling and
 &+Lattacks...
 ~
-18504 0 0 939524096 9217 0 0 -150 S
-B 0 0 1
+18504 0 0 0 939524096 9217 0 0 -150 S
+B 0 0 0 1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -131,8 +131,8 @@ roc gigantic~
 &+yspear-lengths. It moves surprisingly fast for something
 &+yof its size.
 ~
-1073743944 0 0 939524096 3 0 0 0 S
-B 0 1 4
+1073743944 0 0 0 939524096 3 0 0 0 S
+B 0 1 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -145,8 +145,8 @@ rat gigantic~
 &+gto tail and has claws the size of &+Chuman &+ghead, looking
 &+gvery nasty.
 ~
-1073743944 0 0 604536864 3 0 0 -450 S
-A 0 0 4
+1073743944 0 0 0 604536864 3 0 0 -450 S
+A 0 0 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -158,8 +158,8 @@ scorpion small fire~
    &+rThe little tail is mighty &+Gdangerous &+rfor such
 &+ra small creature.
 ~
-22600 1 0 604012544 13313 0 0 -240 S
-AS 0 0 1
+22600 1 0 0 604012544 13313 0 0 -240 S
+AS 0 0 0 1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -174,8 +174,8 @@ spider large~
 &+yand sharp &+gp&+Go&+gi&+Gs&+go&+Gn&+go&+Gu&+gs &+yfangs to &+Yparalyze &+yor  kill its
 &+yprey.
 ~
-4106 1 0 1081376 8194 0 0 -600 S
-AS 0 0 4
+4106 1 0 0 1081376 8194 0 0 -600 S
+AS 0 0 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -189,8 +189,8 @@ A &+Mmindflayer &+wlies here, scarred from the nasty tortures.
 &+MIt is hunched over, bent and scarred from &+rtorture
 &+Minflicted by its enemies. It &+Bcringes &+Mas you approach.
 ~
-10 0 0 2281701384 1024 22020096 0 -1000 S
-MF 0 0 3
+10 0 0 0 2281701384 1024 22020096 0 -1000 S
+MF 0 0 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 0
@@ -205,8 +205,8 @@ a &+Rgnome &+Lpri&+gsoner~
 &+climply by his side. Looks like he wants to say something
 &+cabout big &+Ytresure &+chidden in a &+Lsecret &+cplace...
 ~
-2058 0 0 67141632 1024 0 0 0 S
-PG 0 65536 2
+2058 0 0 0 67141632 1024 0 0 0 S
+PG 0 65536 0 2
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -221,8 +221,8 @@ a &+Chalf&+c-elf &+Lpri&+gsoner~
 &+cmouth,  whether  to keep him  from  screaming,  or to
 &+csilence his spell casting you cannot tell.
 ~
-2058 0 0 32 0 0 0 1000 S
-P2 0 2 3
+2058 0 0 0 32 0 0 0 1000 S
+P2 0 2 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -237,8 +237,8 @@ to beat up upon. He doesn't look too happy that you have
 found him here. The lieutenant is whining on a sneaky &+mperson
 who stole his &+Wplatinum &+ch&+Gorn&+cs&N few days ago.
 ~
-1073743946 0 0 939630776 14528 0 34603008 -1000 S
-MT 0 16 -1
+1073743946 0 0 0 939630776 14528 0 34603008 -1000 S
+MT 0 16 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -250,8 +250,8 @@ A &+Lmino&+rtaur &+wguard is standing here, making sure there is no trouble.
    The &+Lmino&+rtaur &+wguard  is quite huge. He is dressed in heavy &+Rred &+warmor and
 a huge flail. He looks quite capable of patrolling &+bthe Prison&+w.
 ~
-1140852812 1 0 67108904 2048 0 1048576 -1000 S
-MT 0 1 -1
+1140852812 1 0 0 67108904 2048 0 1048576 -1000 S
+MT 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -264,8 +264,8 @@ A &+Lmino&+rtaur&N is standing here, guarding &+bthe Prison&N door.
 to the next room. He looks quite misterable standing in the &+Ldarkness&N rigidly
 before door of the &+bPrison&N. He looks dangerous and skilled.
 ~
-67110922 1 0 67109048 2048 0 0 -1000 S
-MT 0 1 -1
+67110922 1 0 0 67109048 2048 0 0 -1000 S
+MT 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -279,8 +279,8 @@ hell hound~
 &+rand tongue are convered with &+Ggreen spittle &+rthat runs down its
 &+rdung convered coat.
 ~
-1073743880 1 0 134744064 12416 0 135266304 -1000 S
-I 0 0 2
+1073743880 1 0 0 134744064 12416 0 135266304 -1000 S
+I 0 0 0 2
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -294,8 +294,8 @@ a normal man. Like all &+Ggith&+Wyanki&N, his teeth are fanged and his eyes
 hollow and sunken. He is clad in ornately designed leg bands, and wields
 a sword that whistles through the air as it slices towards his enemies neck.
 ~
-1140852808 0 0 134217784 0 0 1048576 -1000 S
-GI 0 1 -1
+1140852808 0 0 0 134217784 0 0 1048576 -1000 S
+GI 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -307,8 +307,8 @@ A &+Lmino&+rtaur&n warrior is here practicing his skills.
    This is a huge &+Lmino&+rtaur&N that is dressed in heavy chainmail and gloves.
 He has black fur and red eyes. He looks quite dangerous and skilled.
 ~
-1140852808 0 0 134250552 0 0 1048576 -1000 S
-MT 0 1 -1
+1140852808 0 0 0 134250552 0 0 1048576 -1000 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -324,8 +324,8 @@ bones &+Lof dozens of humans. He is armored in dull black plate with a black swo
 &+Lemblazoned on his shield. The Dark Kn&+big&+Lht appears ready to fight with every
 &+Lintruder that will try to pass the gates without permission.
 ~
-1073743962 0 0 671195192 12508 0 34603008 -650 S
-H2 0 16 3
+1073743962 0 0 0 671195192 12508 0 34603008 -650 S
+H2 0 16 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -340,8 +340,8 @@ rest.  The mind of this creature  has been t wisted and
 destroyed in this torment, and it now envys and intends
 to destroy  all the true living  beings  it encounters.
 ~
-1073743880 1 0 134217730 1024 0 33554432 0 S
-UG 0 128 2
+1073743880 1 0 0 134217730 1024 0 33554432 0 S
+UG 0 128 0 2
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -354,8 +354,8 @@ A &+Lwere&+yrat&n warrior is here practicing his skills.
 both. It stands erect wielding a weapon, but has the fur, large ears, and tail
 of a &+yrat&N. He looks quite dangerous and skilled.
 ~
-1140852808 0 0 67108888 2 0 1048576 -850 S
-H 0 1 3
+1140852808 0 0 0 67108888 2 0 1048576 -850 S
+H 0 1 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 350000
 8 8 1
@@ -374,8 +374,8 @@ instructor mharag demon~
 &+mthe path of war. As you look closely at Mharag you notice that he has
 &+mmany wounds apon his body.
 ~
-1073772632 0 0 604053692 274652 128 1048576 -250 S
-X 0 1 5
+1073772632 0 0 0 604053692 274652 128 1048576 -250 S
+X 0 1 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -389,8 +389,8 @@ person prisoner~
 &+yspiritually. He writhes in agony and pain as he frantically longs
 &+yfor Death to answer its desperate pleas...
 ~
-2058 0 0 0 1026 0 0 0 S
-PF 0 0 2
+2058 0 0 0 0 1026 0 0 0 S
+PF 0 0 0 2
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1
@@ -404,8 +404,8 @@ of war. He might not have a lot of strength but he makes up for it with his
 weapons skill. Hanging from the silken blonde hair of one of his victims are
 the finger bones of dozens of humans. He looks quite dangerous and skilled.
 ~
-1140852808 0 0 134217784 0 0 1048576 -1000 S
-HG 0 1 -1
+1140852808 0 0 0 134217784 0 0 1048576 -1000 S
+HG 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -418,8 +418,8 @@ A &+glizardman&n warrior is here practicing his skills.
 be a fierce fighter in the ancient war but now his king have decided to put
 him here. He looks quite dangerous and skilled.
 ~
-1140852808 0 0 134252568 8192 0 1048576 -1000 S
-H 0 1 4
+1140852808 0 0 0 134252568 8192 0 1048576 -1000 S
+H 0 1 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -432,8 +432,8 @@ An &+bogre&n warrior is here practicing his skills.
 scars across his body prove that he was using his arms before you were born.
 He has a calm look on his face yet looks quite dangerous and skilled.
 ~
-1140852808 0 0 134217768 1024 0 0 -1000 S
-PO 0 1 -1
+1140852808 0 0 0 134217768 1024 0 0 -1000 S
+PO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -446,8 +446,8 @@ A &+Chuman&n warrior is here practicing his skills.
 chivalrous deeds. His extreme skill combined with his experience in warfare
 makes him a deadly opponent. He looks quite dangerous and skilled.
 ~
-1140852808 0 0 402653240 2049 0 1048576 150 S
-PH 0 1 -1
+1140852808 0 0 0 402653240 2049 0 1048576 150 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -461,8 +461,8 @@ armored, and he uses his equipment with a practiced precision. Luckily for
 you, this warrior will never use his deadly skills other than to defend himself
 or his kingdom. He looks quite dangerous and skilled.
 ~
-1140852808 0 0 134217784 0 0 1048576 200 S
-PM 0 1 -1
+1140852808 0 0 0 134217784 0 0 1048576 200 S
+PM 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -475,8 +475,8 @@ stalagmite fiery rock~
 &+rthis disadvantage its &+Rflaming &+rclaws and &+Bmagical &+rpowers more then make up
 &+rfor disadvantage.
 ~
-10 1 0 536870928 1 0 0 0 S
-EF 0 0 4
+10 1 0 0 536870928 1 0 0 0 S
+EF 0 0 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -489,8 +489,8 @@ stalactite fiery rock~
 &+rthis disadvantage its &+Rflaming &+rclaws and &+Bmagical &+rpowers more then make up
 &+rfor disadvantage.
 ~
-10 1 0 536903696 1 0 0 0 S
-EF 0 0 5
+10 1 0 0 536903696 1 0 0 0 S
+EF 0 0 0 5
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -503,8 +503,8 @@ a seasoned &+Ladventurer~
 showing everyone what he found. He sees you, and waves a &+Wplatinum horn&n.
 a seasoned &+Ladventurer &+Wsays in common 'Look what I found! Ha ha!'&n
 ~
-1073743948 0 0 671088684 29 0 0 200 S
-PH 0 32768 -1
+1073743948 0 0 0 671088684 29 0 0 200 S
+PH 0 32768 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -517,8 +517,8 @@ A dirty &+Lmino&+rtaur&N is here, torturing his victim with &+Gacid&N and &+Rfir
 humanity and loves to burn people with acid He calls this his  unholy fire. This torturer is
 without a doubt a person who loves his job.
 ~
-1073743946 1 0 604012732 2076 0 1048576 -1000 S
-MT 0 8192 -1
+1073743946 1 0 0 604012732 2076 0 1048576 -1000 S
+MT 0 8192 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -535,8 +535,8 @@ a &+Rbu&+Yrn&+Red &+rbody~
 &+rthe corpse you recoil as you notice its &+Meyes &+rstill move. They stare intently
 &+rfrom its bluish face as if pleading for your help.
 ~
-74 0 0 33554432 1025 0 0 0 S
-H 0 0 -1
+74 0 0 0 33554432 1025 0 0 0 S
+H 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -549,8 +549,8 @@ a &+Mbrain&+mless &+rfighter~
 &+mspittle runs down the scales of its &+Lblackened &+mskin. He seems to be guarding
 &+msomeone.
 ~
-1140852808 0 0 134217904 28 128 1048576 -800 S
-PO 0 16384 -1
+1140852808 0 0 0 134217904 28 128 1048576 -800 S
+PO 0 16384 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -566,8 +566,8 @@ fighter giant frost~
 &+C'frost' are ravenous collectors of &+Ytreasure&+C. This giant seems to be guarding
 &+Csomeone.
 ~
-1140852808 0 0 67141872 28 0 1048576 0 S
-G 0 1 -1
+1140852808 0 0 0 67141872 28 0 1048576 0 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -585,8 +585,8 @@ manufacturer alchemist alch~
 &+Lthe nights are spent watching out for thieves. He is bored, but is not so
 &+Lbored that he really wants to talk to you.
 ~
-2122 0 0 402653224 30 128 1048576 -500 S
-PT 0 16384 -1
+2122 0 0 0 402653224 30 128 1048576 -500 S
+PT 0 16384 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -599,8 +599,8 @@ A large &+rsentry&N to the &+gLi&+Gbra&+gry&N stands at attention here.
 &+rprotect this library. The guardian will attack anybody that comes here
 &+rand isn't the &+Bmage&+r.
 ~
-1140852808 33554432 7806960 671195184 28 16777216 8192 -550 S
-EF 0 90112 4
+1140852808 33554432 7806960 0 671195184 28 16777216 8192 -550 S
+EF 0 90112 0 4
 53 0 0 3500d1+11 1d1+1
 0.0.0.0 0
 8 8 1
@@ -613,8 +613,8 @@ A large &+Csentry&N to the &+gLi&+Gbra&+gry&N stands at attention here.
 &+Cprotect this library. The guardian will attack anybody that comes here
 &+Cand isn't the &+Bmage&+C.
 ~
-1140852808 33554432 7806960 106544 156 16777216 8192 -500 S
-EA 0 90112 4
+1140852808 33554432 7806960 0 106544 156 16777216 8192 -500 S
+EA 0 90112 0 4
 53 0 0 3000d1+12 1d1+1
 0.0.0.0 0
 8 8 1
@@ -627,8 +627,8 @@ A large &+ysentry&N to the &+gLi&+Gbra&+gry&N stands at attention here.
 &+yprotect this library. The guardian will attack anybody that comes here
 &+yand isn't the &+Bmage&+y.
 ~
-1140852808 33554432 7806960 134324272 4124 16777216 8192 -600 S
-EE 0 90112 4
+1140852808 33554432 7806960 0 134324272 4124 16777216 8192 -600 S
+EE 0 90112 0 4
 53 0 0 4500d1+13 1d1+1
 0.0.0.0 0
 8 8 1
@@ -641,8 +641,8 @@ A large &+bsentry&N to the &+gLi&+Gbra&+gry&N stands at attention here.
 &+bprotect this library. The guardian will attack anybody that comes here
 &+band isn't the &+Bmage&+b.
 ~
-1140852808 33554432 7806960 134324272 8220 16777216 8192 -450 S
-EW 0 90112 4
+1140852808 33554432 7806960 0 134324272 8220 16777216 8192 -450 S
+EW 0 90112 0 4
 53 0 0 4000d1+14 1d1+1
 0.0.0.0 0
 8 8 1
@@ -654,8 +654,8 @@ dwarf miner dorf~
    &+yThe small dwarf is dirty and dressed only in a small tunic and leggings.
 &+yHis beard is encrusted with cracked rock and dust from the tunnel walls.
 ~
-2124 0 0 100663296 1024 0 0 250 S
-PM 0 1 2
+2124 0 0 0 100663296 1024 0 0 250 S
+PM 0 1 0 2
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -667,8 +667,8 @@ dwarf miner dorf~
    &+yThe small dwarf is dirty and dressed only in a small tunic and leggings.
 &+yHis beard is encrusted with cracked rock and dust from the tunnel walls.
 ~
-2124 0 0 100696068 1024 0 0 150 S
-PM 0 1 2
+2124 0 0 0 100696068 1024 0 0 150 S
+PM 0 1 0 2
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -680,8 +680,8 @@ dwarf miner dorf~
    &+yThe small dwarf is dirty and dressed only in a small tunic and leggings.
 &+yHis beard is encrusted with cracked rock and dust from the tunnel walls.
 ~
-2124 0 0 100696100 0 0 0 200 S
-PM 0 1 2
+2124 0 0 0 100696100 0 0 0 200 S
+PM 0 1 0 2
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -695,8 +695,8 @@ dwarf guardian guard dorf~
 &+Lsuited for sight in the dark tunnels of the mines. The armor of the dwarf is
 &+Lof no use to anyone but him, but provides adequate defense.
 ~
-1140852810 524288 0 134783032 30 0 0 450 S
-PM 0 1 2
+1140852810 524288 0 0 134783032 30 0 0 450 S
+PM 0 1 0 2
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

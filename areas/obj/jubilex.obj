@@ -51,7 +51,7 @@ neck clamp dark-mithril dark mithril~
 &+Lthe &+mneck clamp&+L of dark-mithril&N~
 &+LLying here is a &+mneck clamp&+L that doesn't look too pleasant.&N~
 ~
-9 18 3 0 7 0 8454272 5 0 1 0
+9 18 3 0 7 0 8454272 5 32768 1 0
 2 0 0 5 0 0 0 0
 0 0 100 0 1024 0 0
 E
@@ -125,7 +125,7 @@ tiny umber hulk little~
 &+La tiny umber hulk&N~
 &+LLying here is a very small and very fussy umber hulk.&N~
 ~
-13 2 3 0 5 0 8388608 1 0 1 0
+13 2 3 0 5 0 8388608 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -139,7 +139,7 @@ chrystal power source pulsate pulsating crystal~
 &+Ba &+bp&+Bu&+Bl&+bs&+Ba&+bt&+Bi&+Bn&+bg&+B c&+br&+By&+bs&+Bt&+ba&+Bl&N~
 &+bThis crystal power source pulses with power.&N~
 ~
-13 8 3 0 14 0 8388608 1 0 1 0
+13 8 3 0 14 0 8388608 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -167,7 +167,7 @@ brain zooox clone mind rainbows rainbow~
 &+mthe brain of &+MZooox&+m's clone&N~
 &+mLeaking juices, this &+Mbrain&+m has &+rr&+ba&+Yi&+Bn&+Rb&+Mo&+Lw&+Gs&+m springing from it.&N~
 ~
-13 2 3 0 12 0 4096 1 0 1 0
+13 2 3 0 12 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -354,7 +354,7 @@ slightly digested body arianna~
 &+ythe slightly &+gdigested&+y body&N~
 &+yLying here is a slightly digested female body.&N~
 ~
-13 2 3 0 5 0 8388608 16385 0 1 0
+13 2 3 0 5 0 8388608 16385 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -368,7 +368,7 @@ slightly digested body sassumo~
 &+ythe slightly &+gdigested&+y body&N~
 &+yLying here is a slightly digested male body.&N~
 ~
-13 2 3 0 5 0 8388608 16385 0 1 0
+13 2 3 0 5 0 8388608 16385 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -451,7 +451,7 @@ map blood stained bloodstained~
 &+ya &+Rblood&+Lstained&+y map&N~
 &+yA map of the abyss lies here.&n~
 ~
-13 28 3 0 3 0 0 8388609 0 1 0
+13 28 3 0 3 0 0 8388609 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -645,7 +645,7 @@ larvae nonorga devil~
 &+Lthe &+rlarvae&+L of Nonorga&N~
 &+LSlithering here, this &+rlarvae&+L is of a once powerful devil.&N~
 ~
-13 2 3 0 7 0 4096 1 0 1 0
+13 2 3 0 7 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -749,7 +749,7 @@ medallion demonic protection demon necklace~
 &+Lthe &+Ymedallion&+L of &+Rdemonic&+L protection&N~
 &+LLying here is a &+Ymedallion&+L which emanates &+Wprotection&+L.&N~
 ~
-13 24 3 0 11 0 0 5 0 1 0
+13 24 3 0 11 0 0 5 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -778,7 +778,7 @@ head lost wildmage wild mage space time~
 &+Lthe &+rhead&+L of the lost &+Wwi&+Lld&+Wma&+Lge&N~
 &+LLying here is a disgusting &+rhead&+L of some poor mage.&N~
 ~
-13 2 3 0 5 0 4096 1 0 1 0
+13 2 3 0 5 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -790,7 +790,7 @@ head lost wildmage wild mage elements element~
 &+Lthe &+rhead&+L of the lost &+rwil&+Cdm&+yage&N~
 &+LLying here is a disgusting &+rhead&+L of some poor mage.&N~
 ~
-13 2 3 0 5 0 4096 1 0 1 0
+13 2 3 0 5 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -802,7 +802,7 @@ head lost wildmage wild mage great~
 &+Lthe &+rhead&+L of the lost great &+Cw&+Bi&+Cl&+Bd&+Bm&+Ca&+Bg&+Ce&N~
 &+LLying here is a disgusting &+rhead&+L of some poor mage.&N~
 ~
-13 2 3 0 5 0 4096 1 0 1 0
+13 2 3 0 5 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -814,7 +814,7 @@ head lost wildmage wild mage creatures creature~
 &+Lthe &+rhead&+L of the lost &+Bwildmage&N~
 &+LLying here is a disgusting &+rhead&+L of some poor mage.&N~
 ~
-13 2 3 0 5 0 4096 1 0 1 0
+13 2 3 0 5 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -842,7 +842,7 @@ head lost wildmage wild mage nature~
 &+Lthe &+rhead &+Lof the lost &+gwildmage&N~
 &+LLying here is a disgusting &+rhead&+L of some poor mage.&N~
 ~
-13 2 3 0 5 0 4096 1 0 1 0
+13 2 3 0 5 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -903,7 +903,7 @@ gloves madness anger glove gauntlets~
 &+Lthe &+Wgloves&+L of &+Rm&+Ga&+Rd&+Gn&+Re&+Gs&+Rs&N~
 &+LThese &+Wgloves&+L seem to draw in the &+ranger&+L from the world.&N~
 ~
-9 8 3 0 10 0 128 129 0 0 0
+9 8 3 0 10 0 128 129 32768 0 0
 8 0 0 2 0 0 0 0
 0 0 100
 E
@@ -919,7 +919,7 @@ gloves glove gauntlets irritation~
 &+Lthe &+Wgloves &+Lof &+Rirr&+Git&+Rat&+Gion&N~
 &+LThis pair of &+Wgloves&+L seems to make people tense.&N~
 ~
-9 8 3 0 11 0 128 129 0 1 0
+9 8 3 0 11 0 128 129 32768 1 0
 8 0 0 2 0 0 0 0
 0 0 100
 E
@@ -1040,7 +1040,7 @@ used wand summer winter staff key~
 &+Lthe &+wused wand&+L of &+Ysummer&+L and &+Wwinter&N~
 &+LThis wand looks like it has been all used up.&N~
 ~
-13 7 3 0 11 0 1 16385 0 1 0
+13 7 3 0 11 0 1 16385 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1053,7 +1053,7 @@ tiny wriggling wriggle worm acid~
 &+ra &+Rtiny&+r wriggling&+R worm&+r of &+gacid&N~
 &+rThis &+Rworm&+r looks as though it could grow to be very large.&N~
 ~
-13 40 3 0 10 0 0 1 0 1 0
+13 40 3 0 10 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1134,7 +1134,7 @@ arms arm digested demonic demon mostly~
 &+Lsome mostly digested demonic &+Marms&N~
 &+LSome partially digested demonic &+Marms&+L lie here.&N~
 ~
-13 2 3 0 5 0 0 1 0 1 0
+13 2 3 0 5 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1147,7 +1147,7 @@ torso digested demonic demon~
 &+La somewhat digested demonic &+Mtorso&N~
 &+LA somewhat digested demonic &+Mtorso&+L lies here.&N~
 ~
-13 2 3 0 5 0 0 1 0 1 0
+13 2 3 0 5 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1160,7 +1160,7 @@ legs leg undigested demonic demon~
 &+Lsome undigested demonic &+Mlegs&N~
 &+LThese undigested &+Mlegs&+L of a demon lie here.&N~
 ~
-13 2 3 0 5 0 0 1 0 1 0
+13 2 3 0 5 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1173,7 +1173,7 @@ grotesque demonic demon head~
 &+Lthe grotesque demonic &+Mhead&N~
 &+LA grotesque detached demonic &+Mhead&+L lies here.&n~
 ~
-13 2 3 0 5 0 0 1 0 1 0
+13 2 3 0 5 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1204,7 +1204,7 @@ mass great darkness lokpan dark~
 &+Lthe mass of darkness that was Lokpan&N~
 &+LA great mass of dark matter that was once Lokpan lies here.&N~
 ~
-13 2 3 0 15 0 0 1 0 1 0
+13 2 3 0 15 0 0 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1282,7 +1282,7 @@ essence demon galnor galnor's~
 &+Wthe &+Rdemon &+LGalnor's&+W essence&N~
 &+WFloating here is the essence of a &+Rdemon&+W.&N~
 ~
-13 1 3 0 15 0 4096 1 0 1 0
+13 1 3 0 15 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1296,7 +1296,7 @@ essence demon dinok dinok's~
 &+Wthe &+Rdemon &+LDinok's&+W essence&N~
 &+WFloating here is the essence of a &+Rdemon&+W.&N~
 ~
-13 1 3 0 15 0 4096 1 0 1 0
+13 1 3 0 15 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1310,7 +1310,7 @@ essence demon kriben kriben's~
 &+Wthe &+Rdemon &+LKriben's&+W essence&N~
 &+WFloating here is the essence of a &+Rdemon&+W.&N~
 ~
-13 1 3 0 15 0 4096 1 0 1 0
+13 1 3 0 15 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1324,7 +1324,7 @@ essence demon blaxor blaxor's~
 &+Wthe &+Rdemon &+LBlaxor's&+W essence&N~
 &+WFloating here is the essence of a &+Rdemon&+W.&N~
 ~
-13 1 3 0 15 0 4096 1 0 1 0
+13 1 3 0 15 0 4096 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1473,7 +1473,7 @@ prison neptune neptune's soul being case tiny~
 &+wa tiny &+Lprison&+w for &+BN&+be&+Bp&+bt&+Bu&+bn&+Be&+b's&+L being&N~
 &+LLying here is a &+wcase&+L bearing the symbols of &+BN&+be&+Bp&+bt&+Bu&+bn&+Be&+L.&N~
 ~
-13 1 3 0 15 0 33554433 1 0 1 0
+13 1 3 0 15 0 33554433 1 32768 1 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1582,7 +1582,7 @@ body gigantic ferret marvin~
 &+wthe body of a gigantic &+yferret&+w named &+w"&+YMarvin&+w"~
 &+wLying here is a &+yferret&+w body of abnormally large proportions.&n~
 ~
-13 15 7 0 7 0 4096 1 0 0 0
+13 15 7 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #87607
@@ -1614,7 +1614,7 @@ leash ferret marvin~
 &+wa &+yferret&+w leash&n~
 &+yLying here is a plain leash for a ferret.&n~
 ~
-13 15 3 0 7 0 4096 1 0 0 0
+13 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -1627,7 +1627,7 @@ leash ferret marvin~
 &+wa &+yferret&+w leash given by "&+YMarvin&+w"&n~
 &+yLying here is a plain leash for a ferret.&n~
 ~
-13 15 3 0 7 0 4096 1 0 0 0
+13 15 3 0 7 0 4096 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E

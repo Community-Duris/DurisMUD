@@ -71,7 +71,7 @@ paper musical music old~
 &+Wan old piece of paper&N~
 &+WSome paper with musical notes has been left here.&N~
 ~
-13 15 3 0 7 0 8392704 1 0 0 0
+13 15 3 0 7 0 8392704 1 32768 0 0
 0 0 0 0 0 0 0 0
 0 1 100
 E
@@ -138,7 +138,7 @@ rattle simple~
 &+ya simple rattle&N~
 &+yAn infant's rattle has carelessly been tossed aside here.&N~
 ~
-13 6 2 0 10 0 8425472 1 0 0 0
+13 6 2 0 10 0 8425472 1 32768 0 0
 0 0 0 0 0 0 0 0
 1 125 100
 E
@@ -472,7 +472,7 @@ head bloody gaultair demon~
 the &+Rbloo&+rdy &nhead of Gaultair~
 The head of a demon has been left behind.~
 ~
-8 2 4 0 9 0 8491008 1 66 0 0
+8 2 4 0 9 0 8491008 1 32834 0 0
 0 0 0 0 0 0 0 0
 20 1 100
 E
@@ -642,7 +642,7 @@ horn tyrlos~
 &+Lthe &+Whorn &+Lof &+rTy&+Lrl&+ros&N~
 A &+rbloodied &+Whorn &nof &+rTy&+Lrl&+ros&n has been dropped here.~
 ~
-8 10 3 0 8 0 8426496 1 0 85458969 0
+8 10 3 0 8 0 8426496 1 32768 85458969 0
 0 0 0 0 0 0 0 0
 14 1 100
 E

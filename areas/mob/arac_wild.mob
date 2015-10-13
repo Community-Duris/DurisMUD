@@ -8,8 +8,8 @@ castle militia. It has huge claws and even a larger mouth. The dragon's
 wings are vestigal at best, indicating that this dragon is probably not
 of the flying variety.
 ~
-1074792522 1 0 167772200 2049 0 0 -666 S
-D 0 1 -1
+1074792522 1 0 0 167772200 2049 0 0 -666 S
+D 0 1 0 -1
 59 -7 -148 59d143+6785 7d6+35
 4.5.9.19 477900
 4 4 2
@@ -24,8 +24,8 @@ color, violet, showing that she does indeed have some Grey Elf heritage.
 Ylani chooses to rule the half drow by using her deadly magical powers
 and her even more deadly beauty.
 ~
-1140852810 0 0 40 0 0 0 -1000 S
-P2 0 32 -1
+1140852810 0 0 0 40 0 0 0 -1000 S
+P2 0 32 0 -1
 53 -5 -104 53d121+4452 7d6+30
 8.0.6.6 214650
 8 8 2
@@ -39,8 +39,8 @@ incredible beauty. He is of a massive build for a Drow and looks like he
 can wield a sword as well as any surface creature and better than many of
 his counterparts in the underworld.
 ~
-1140852810 0 0 56 0 0 0 -1000 S
-PL 0 1 -1
+1140852810 0 0 0 56 0 0 0 -1000 S
+PL 0 1 0 -1
 52 -5 -101 52d131+4420 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -54,8 +54,8 @@ arts and has apparently become a master of them. He has jet black skin
 and blond hair, most probably the result of a mating between a Drow and a
 Human.
 ~
-1073743946 1 0 40 0 0 0 -1000 S
-P2 0 256 -1
+1073743946 1 0 0 40 0 0 0 -1000 S
+P2 0 256 0 -1
 52 -5 -101 52d121+4368 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -68,8 +68,8 @@ She is a beautiful Half-Drow woman covered in various amounts of cave
 filth. A deviously intelligent glint appears in her eye as she looks
 you over pondering your intentions, and your existence in her cave.
 ~
-1140852808 0 0 40 0 0 0 -1000 S
-P2 0 32 -1
+1140852808 0 0 0 40 0 0 0 -1000 S
+P2 0 32 0 -1
 36 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 2
@@ -84,8 +84,8 @@ supplies for the enclave. His ultimate goal, however, is to train to
 invade the Drow city of Arachdrathos and destroy the Drow there who have
 exiled him.
 ~
-1140852808 0 0 40 0 0 0 -1000 S
-P2 0 1 -1
+1140852808 0 0 0 40 0 0 0 -1000 S
+P2 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -99,8 +99,8 @@ been commissioned by Ylani to become one of her elite guardians. Due to
 the cruel nature of their queen, these Half-Drow warriors would rather
 die than face her wrath.
 ~
-1140852808 0 0 40 0 0 0 -1000 S
-P2 0 1 -1
+1140852808 0 0 0 40 0 0 0 -1000 S
+P2 0 1 0 -1
 38 2 -21 38d95+874 4d7+10
 1.2.2.2 49248
 8 8 1
@@ -116,8 +116,8 @@ learn the clerical arts. then it is the duty of these matrons to breed
 with Ylani's consort to make mighty Half-Drow warriors. This short little
 girl with black hair and black skin is the future of the Half-Drow.
 ~
-1140852808 0 0 40 0 0 0 -1000 S
-P2 0 32 -1
+1140852808 0 0 0 40 0 0 0 -1000 S
+P2 0 32 0 -1
 16 13 48 16d33+96 3d4+2
 8.6.2.0 7776
 8 8 2
@@ -130,8 +130,8 @@ This is a massive spider, about the size of a small cow. It has eight
 ugly, hairy legs and sixteen beedy little eyes. Its mandible looks most
 formiddable though, and quite capable of ripping a person's arm off.
 ~
-1073743944 0 0 34078760 2 0 0 0 S
-AS 0 0 -1
+1073743944 0 0 0 34078760 2 0 0 0 S
+AS 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -144,8 +144,8 @@ This bear is about as large as a bear can get. It is hard not to be
 impressed by the glossy black coat of this mammoth beast. Even more
 impressive, however, are its bloodstained claws and gleaming white fangs.
 ~
-1073743944 0 0 0 0 0 0 0 S
-AC 0 0 4
+1073743944 0 0 0 0 0 0 0 0 S
+AC 0 0 0 4
 20 13 35 20d30+100 3d4+2
 0.0.0.0 9720
 8 8 2
@@ -160,8 +160,8 @@ perhaps caused by other antlered stags. Looking at the age of the wounds,
 it is quite clear that this stag is a survivor, and has not been attacked
 by any other animals in a long time.
 ~
-1073743944 0 0 0 0 0 0 0 S
-AH 0 0 -1
+1073743944 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 1
@@ -177,8 +177,8 @@ covered with thick white hair and terminate in nasty looking hooks. Its
 torso truncates in a reptilian tail forgoing the formation of any legs.
 Its batlike wings carry it aloft with dazzling skill.
 ~
-1073875016 1 0 168296504 2048 0 0 -1000 S
-X 0 16 -1
+1073875016 1 0 0 168296504 2048 0 0 -1000 S
+X 0 16 0 -1
 45 -1 -84 45d107+2340 6d6+12
 5.9.4.6 164025
 8 8 1
@@ -194,8 +194,8 @@ covered with thick white hair and terminate in nasty looking hooks. Its
 torso truncates in a reptilian tail forgoing the formation of any legs.
 Its batlike wings carry it aloft with dazzling skill.
 ~
-1073875016 1 0 168296504 2048 0 0 -1000 S
-X 0 16 -1
+1073875016 1 0 0 168296504 2048 0 0 -1000 S
+X 0 16 0 -1
 51 -3 -110 50d119+3100 6d6+25
 0.3.9.6 182250
 8 8 1
@@ -211,8 +211,8 @@ covered with thick white hair and terminate in nasty looking hooks. Its
 torso truncates in a reptilian tail forgoing the formation of any legs.
 Its batlike wings carry it aloft with dazzling skill.
 ~
-1073875016 1 0 168296504 2048 0 0 -1000 S
-X 0 513 -1
+1073875016 1 0 0 168296504 2048 0 0 -1000 S
+X 0 513 0 -1
 55 -5 -126 55d131+5060 7d6+30
 0.2.0.9 334125
 8 8 1
@@ -228,8 +228,8 @@ However, the eight legs are most certainly arachnid in nature and
 attached to an arachnid abdomen. The torso and head are but the
 remnants of the drow that was disgustingly transformed into this creature.
 ~
-1073743948 1 0 34078760 0 0 0 -1000 S
-DR 0 1 -1
+1073743948 1 0 0 34078760 0 0 0 -1000 S
+DR 0 1 0 -1
 20 13 20 20d35+280 3d4+2
 0.9.6.0 14580
 8 8 0
@@ -244,8 +244,8 @@ massive arms with two massive fists attached to them. It also has two
 very large legs with even larger feet. Its head bears no face and is has
 two pools of blackness for eyes.
 ~
-1073743946 64 0 33554488 0 0 0 0 S
-EE 0 1 -1
+1073743946 64 0 0 33554488 0 0 0 0 S
+EE 0 1 0 -1
 55 -5 -121 55d131+4675 7d6+30
 0.0.0.0 222750
 8 8 0

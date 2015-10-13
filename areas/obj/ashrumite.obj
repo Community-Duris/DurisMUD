@@ -295,7 +295,7 @@ gem glassstone~
 &+Ra raw gem&N~
 &+RA raw gem&N is deposited here.~
 ~
-8 26 0 0 7 0 4096 16385 0 0 0
+8 26 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 #66033
@@ -303,7 +303,7 @@ gem glassstone~
 &+Ga raw gem&N~
 &+GA raw gem&N is caught between two rocks.~
 ~
-8 26 0 0 7 0 4096 16385 0 0 0
+8 26 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1 100
 #66034
@@ -351,7 +351,7 @@ gem glassstone~
 &+Ma raw gem&N~
 &+MA raw gem&N awaits your plucking.~
 ~
-8 26 0 0 7 0 4096 16385 0 0 0
+8 26 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 #66040
@@ -359,7 +359,7 @@ gem glassstone~
 &+Ya raw gem&N~
 &+YA raw gem&N has rolled out here.~
 ~
-8 26 0 0 7 0 4096 16385 0 0 0
+8 26 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 #66041
@@ -367,7 +367,7 @@ gem glassstone~
 &+Wa raw gem&N~
 &+WA raw gem&N has been exposed here.~
 ~
-8 26 0 0 7 0 4096 16385 0 0 0
+8 26 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 #66042
@@ -375,7 +375,7 @@ gem sapphire~
 &+Ra beautiful sapphire&N~
 &+RA beautiful sapphire&N awaits an owner.~
 ~
-8 33 0 0 7 0 0 16385 0 0 0
+8 33 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1000 100
 #66043
@@ -383,7 +383,7 @@ gem emerald~
 &+Ga brilliant emerald&N~
 &+GA brilliant emerald&N is caught between two rocks.~
 ~
-8 32 0 0 7 0 0 16385 0 0 0
+8 32 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 500 100
 #66044
@@ -391,7 +391,7 @@ gem amethyst~
 &+Man amethyst&N~
 &+MAn amethyst&N has been dropped here.~
 ~
-8 26 0 0 7 0 0 16385 0 0 0
+8 26 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 425 100
 #66045
@@ -399,7 +399,7 @@ gem tigerseye eye~
 &+Yan exotic tigers-eye gem&N~
 &+YAn exotic tigers-eye gem&N is sitting here.~
 ~
-8 26 0 0 7 0 0 16385 0 0 0
+8 26 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 650 100
 #66046
@@ -407,7 +407,7 @@ gem diamond~
 &+Wa lustrous diamond&N~
 &+WA lustrous diamond&N of many facets lies here.~
 ~
-8 8 0 0 7 0 0 16385 0 0 0
+8 8 0 0 7 0 0 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 1555 100
 #66047
@@ -415,7 +415,7 @@ necklace jewelry~
 &+Wa necklace of fine silver&N~
 &+WA necklace of fine Ashrumite silver&N is here.~
 ~
-8 22 3 2 7 0 0 16389 0 0 0
+8 22 3 2 7 0 0 16389 32768 0 0
 0 0 0 0 0 0 0 0
 2 5000 100
 #66048
@@ -423,7 +423,7 @@ necklace jewelry~
 &+Wa ne&+Rc&+Wkla&+Gc&+We of s&+Mi&+Wlve&+Yr&N set with gems~
 &+WA necklace of silver fitted with gems&N is here.~
 ~
-8 22 3 2 7 0 0 16389 0 0 0
+8 22 3 2 7 0 0 16389 32768 0 0
 0 0 0 0 0 0 0 0
 2 25000 100
 #66049
@@ -431,7 +431,7 @@ necklace jewelry~
 &+Wa ne&+Rc&+Wkla&+Gc&+We of s&+Mi&+Wlve&+Yr&N set with gems~
 &+WA necklace of silver fitted with gems&N is here.~
 ~
-4 22 3 10 12 0 73728 16389 64 0 0
+4 22 3 10 12 0 73728 16389 32832 0 0
 25 3 3 107 0 0 0 0
 2 32000 100
 E
@@ -448,7 +448,7 @@ nugget gold ore~
 &+Ya small gold nugget&N~
 &+Ya small nugget of gold ore&N awaits your miners pick.~
 ~
-8 24 0 0 7 0 4096 16385 0 0 0
+8 24 0 0 7 0 4096 16385 32768 0 0
 0 0 0 0 0 0 0 0
 1 600 100
 #66051
@@ -578,7 +578,7 @@ ring~
 &+Wa silver ring&N set with &+Ma small gem&N~
 &+WA ring of fine silver&N set with &+Ma small gem&N has been discarded.~
 ~
-8 16 1 1 7 0 0 16387 0 0 0
+8 16 1 1 7 0 0 16387 32768 0 0
 0 0 0 0 0 0 0 0
 0 2500 100
 #66065
@@ -586,6 +586,6 @@ earring~
 &+Wa silver and diamond earring&N~
 &+WAn earring of silver, set with a diamond&N awaits an owner.~
 ~
-8 22 1 1 7 0 0 540673 0 0 0
+8 22 1 1 7 0 0 540673 32768 0 0
 0 0 0 0 0 0 0 0
 0 3450 100

@@ -9,8 +9,8 @@ male leucrotta~
 &+Lbadger, with sharp jagged bony ridges used as teeth.  It's eyes glow with a
 &+Lferal red light.&n
 ~
-1073743880 1 0 33554472 0 0 0 -500 S
-A 0 0 -1
+1073743880 1 0 0 33554472 0 0 0 -500 S
+A 0 0 0 -1
 25 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
@@ -25,8 +25,8 @@ female mother huge leucrotta~
 &+Lbadger, with sharp jagged bony ridges used as teeth.  It's eyes glow with a
 &+Lferal red light.&n
 ~
-10 1 0 33554488 0 0 0 -500 S
-A 0 1 -1
+10 1 0 0 33554488 0 0 0 -500 S
+A 0 1 0 -1
 41 -1 -56 41d107+1845 6d6+12
 0.0.0.0 99630
 8 8 2
@@ -41,8 +41,8 @@ leucrotta immature~
 &+Lbadger, with sharp jagged bony ridges used as teeth.  It's eyes glow with a
 &+Lferal red light.&n
 ~
-10 1 0 33554472 0 0 0 -357 S
-A 0 0 -1
+10 1 0 0 33554472 0 0 0 -357 S
+A 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -55,8 +55,8 @@ huge giant worm~
 &+gdark, slimy, brown underbelly.  A huge gaping mouth opens at one end, big
 &+genough to swallow a grown man whole.
 ~
-1073743882 1 0 33554464 0 0 0 0 S
-G 0 1 -1
+1073743882 1 0 0 33554464 0 0 0 0 S
+G 0 1 0 -1
 45 -1 -59 45d107+2250 6d6+12
 5.9.8.4 109350
 8 8 0
@@ -71,8 +71,8 @@ dragon red chromatic~
 &+Rnostrels and one can hear the rumble deep within its body of the fiery flames
 &+Rthat are given birth there.
 ~
-1107298346 1 0 33554488 12504 0 0 -1000 S
-D 0 1 -1
+1107298346 1 0 0 33554488 12504 0 0 -1000 S
+D 0 1 0 -1
 60 -10 -152 60d143+6900 7d6+35
 6.6.9.22 486000
 8 8 1
@@ -86,8 +86,8 @@ Horrid moles and warts dots her blotchy skin, her mouth is filled with blackened
 teeth, and she has very foul breath.  This decrepit looking woman is extremely
 agile and strong.  She does not seem happy to see you.
 ~
-1107296330 1 0 33554440 0 0 0 -1000 S
-PH 0 256 -1
+1107296330 1 0 0 33554440 0 0 0 -1000 S
+PH 0 256 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 2
@@ -99,8 +99,8 @@ small dog~
    This canine looks like a small wolf, and is haggard and skinny.  It sniffs
 the air looking for carrion and small animals.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 0.0.0.0 5832
 8 8 0
@@ -113,8 +113,8 @@ large dog~
 sniffing the air in search of small prey to feast upon.  It looks at you with
 fear and distrust.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 23 11 26 23d40+184 3d5+3
 0.0.0.0 20493
 8 8 0
@@ -127,8 +127,8 @@ huge wild dog leader~
 large size and fearsome teeth are probably why it is the leader of the pack.
 He looks at you with hatred and distrust in its eyes.
 ~
-1073741896 0 0 56 0 0 0 0 S
-A 0 1 -1
+1073741896 0 0 0 56 0 0 0 0 S
+A 0 1 0 -1
 36 2 -15 36d95+828 4d7+10
 0.0.0.0 46656
 8 8 1
