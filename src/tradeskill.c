@@ -4767,11 +4767,6 @@ int get_ival_from_proc( obj_proc_type proc )
   {
     return 105;
   }
-  // Important zone proc.
-  if( proc == drowcrusher )
-  {
-    return 150;
-  }
   // 5% chance to proc silence.
   if( proc == squelcher )
   {
@@ -5305,7 +5300,7 @@ int get_ival_from_proc( obj_proc_type proc )
     || proc == newbie_sign1 || proc == newbie_sign2 || proc == vareena_statue || proc == wh_corpse_decay
     || proc == dragon_heart_decay || proc == ravenloft_bell || proc == toe_chamber_switch || proc == flesh_golem_repop
     || proc == unmulti_altar || proc == jubilex_grid_mob_generator || proc == eth2_tree_obj || proc == magic_deck
-    || proc == blackjack_table || proc == toe_chamber_switch )
+    || proc == blackjack_table || proc == toe_chamber_switch || proc == drowcrusher )
   {
     return -100000;
   }
