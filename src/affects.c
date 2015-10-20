@@ -3050,14 +3050,14 @@ void update_damage_data()
  *   We can just up the damage where it should be; in the zone files / mob load.
     sprintf(buf, "damage.totalOutput.racial.%s", race_names_table[i].no_spaces);
     multiplier = get_property(buf, 1.0);
- */
     // Cancelling the rest of this crap. It doesn't work right anyway. - Lohrr
     // get_property(buf, 1.0) * melee_factor * pulse / PULSE_VIOLENCE;
     combat_by_race[i][1] = multiplier;
+ */
+    combat_by_race[i][1] = 1;
     sprintf(buf, "damage.damrollModifier.racial.%s", race_names_table[i].no_spaces);
     multiplier = get_property(buf, 1.0);
     combat_by_race[i][2] = multiplier;
-
   }
 
   for (i = 0; i <= CLASS_COUNT; i++)
