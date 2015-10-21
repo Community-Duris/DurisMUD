@@ -1089,7 +1089,7 @@ A
 A
 19 4
 #44168
-cloak madman~
+cloak madman _noquest_~
 &+bthe &+Bcloak&+b of a &+RMaDMaN&N~
 &+BSomeone's gotta be&N &+RINSANE&N for leaving this cloak here!~
 ~
@@ -1106,7 +1106,7 @@ A
 A
 40 10
 #44169
-emblem madman badge~
+emblem madman badge _noquest_~
 &+rthe emblem &+rof a &+RMaDMaN&N~
 &+rA&N &+RM&+ra&+RDM&+ra&+RNs badge sits here.&N~
 ~
@@ -1122,7 +1122,7 @@ A
 A
 31 3
 #44170
-armor madman~
+armor madman _noquest_~
 &+rthe &+Rarmor &+rof a &+RMaDMaN&N~
 &+RSome M&+ra&+RDM&+ra&+RN dropped his armor here!&N~
 ~
@@ -1138,7 +1138,7 @@ A
 A
 33 5
 #44171
-earring madman~
+earring madman _noquest_~
 &+Rthe &+rearring &+Rof &+ra &+RMaDMaN&N~
 &+rWhoever dropped his earring here is surely a MaDMaN!&N~
 ~
@@ -1154,7 +1154,7 @@ A
 A
 35 6
 #44172
-spiked shield madman~
+spiked shield madman _noquest_~
 &+Cthe spiked shield of a &+RMaDMaN&N~
 &+CA maddening shield sits here.&N~
 ~
@@ -1170,7 +1170,7 @@ A
 A
 31 5
 #44173
-sleeves madman~
+sleeves madman _noquest_~
 &+bthe &+Bsleeves &+bof a &+RMaDMaN&N~
 &+BWhat&N &+RMaDMaN&N &+Bwould have left his sleeves here?&N~
 ~
@@ -1187,7 +1187,7 @@ A
 A
 36 4
 #44174
-leggings madman~
+leggings madman _noquest_~
 &+bthe &+Ble&+bgg&+Bin&+bgs of &+Ba &+RMaDMaN&N~
 &+bPick up these leggings! Quick!&N~
 ~
@@ -1204,7 +1204,7 @@ A
 A
 32 5
 #44175
-glistening bracelet madman~
+glistening bracelet madman _noquest_~
 &+wthe &+Wglis&+Cte&+Wning &+wbracelet &+Wof a &+RMaDMaN&N~
 &+WSome&N &+RMaDMaN&N &+Wdropped his bracelet!&N~
 ~
@@ -1237,7 +1237,7 @@ A
 A
 24 -6
 #44177
-madman stabber~
+madman stabber _noquest_~
 &+ra &+RMaDMaNs &+rst&+Rabb&+rer&N~
 &+rThis stabber looks like it would really hurt.&N~
 ~
@@ -1265,7 +1265,7 @@ A
 A
 19 5
 #44178
-madman slasher~
+madman slasher _noquest_~
 &+ra &+RMaDMaNs &+rsl&+Rash&+rer&N~
 &+RA very sharp slasher was left here by mistake.&N~
 ~
@@ -1294,7 +1294,7 @@ A
 A
 19 3
 #44179
-madman slicer mangler~
+madman slicer mangler _noquest_~
 &+ra &+RMaDMaNs &+rma&+Rngl&+rer&N~
 &+RA large, two-handed slicer lays here.&N~
 ~
@@ -1473,7 +1473,7 @@ lights array~
 &+Menter unto the mighty array of light.....&N
 ~
 #44191
-ring madman~
+ring madman _noquest_~
 &+bthe&N &+Rr&+rin&+Rg&N &+Bof a &+RMaDMaN&n~
 &+BSome fool dropped a&N &+RMaDDenING&N &+Bring here&N!~
 ~
@@ -1516,7 +1516,7 @@ mage's journal~
 0 0 0 0 0 0 0 0
 99999 1 100
 #44194
-boots madman~
+boots madman _noquest_~
 &+rthe &+Rboots &+rof a &+RMaDMaN&N~
 &+rA pair of &+Rboots &+rgive off an &+ma&+Mur&+ma &+rof &+RIns&+raN&+RitY &+rhere.~
 ~
