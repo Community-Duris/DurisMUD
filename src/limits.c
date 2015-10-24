@@ -1294,6 +1294,8 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   }
   else if( type == EXP_DEATH )
   {
+    float mod = get_property("exp.factor.global", 1.0);
+
     // Goods don't lose exp on death untill over the threshold.
     if( RACE_GOOD(ch) && GET_LEVEL(ch) < (int) get_property("exp.goodieDeathExpLossLevelThreshold", 20) )
     {
@@ -1301,6 +1303,10 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     }
 
     XP = -1 * (new_exp_table[GET_LEVEL(ch) + 1] * get_property("exp.death.level.loss", 0.10));
+    // We reduce the exp loss from death by 2x of the global modifier if the global modifier is less than 1/2.
+    // So, .4 -> 80% modifier, .3 -> 60% modifier, .15 -> 30% modifier, etc.
+    if( mod < .5 )
+      XP = XP * 2 * mod;
 // debug("death 1 exp gain (%d)", (int)XP);
   }
   else if(type == EXP_KILL)

@@ -15513,7 +15513,7 @@ void spell_resurrect(int level, P_char ch, char *arg, int type, P_char victim, P
     {
       if( GET_LEVEL(t_ch) >= 56 )
       {
-         resu_exp = (long)(resu_exp * 0.050);
+         resu_exp = (long)(resu_exp * 0.500);
       }
       else if( EVIL_RACE(t_ch) )
       {
@@ -15525,8 +15525,7 @@ void spell_resurrect(int level, P_char ch, char *arg, int type, P_char victim, P
       }
     }
 
-    logit(LOG_EXP,
-          "Resu debug: %s (%d) by %s (%d): old exp: %d, new exp: %d, +exp: %d",
+    logit(LOG_EXP, "Resu debug: %s (%d) by %s (%d): old exp: %d, new exp: %d, +exp: %d",
           GET_NAME(t_ch), GET_LEVEL(t_ch), GET_NAME(ch), GET_LEVEL(ch),
           GET_EXP(t_ch), GET_EXP(t_ch) + resu_exp, resu_exp);
     debug("&+RResurrect&n: %s (%d) by %s (%d): old exp: %d, new exp: %d, +exp: %d",
