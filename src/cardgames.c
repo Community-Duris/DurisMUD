@@ -480,6 +480,7 @@ int blackjack_table(P_obj obj, P_char ch, int cmd, char *argument)
       else if( betamt > 1000 * get_property("blackjack.MaxBetInPlatinum", 100) )
       {
         act(STR_CARDS_BIGBID_FAIL, FALSE, ch, obj, obj, TO_CHAR);
+        return TRUE;
       }
       else
       {
@@ -497,6 +498,7 @@ int blackjack_table(P_obj obj, P_char ch, int cmd, char *argument)
       else if( betamt > 100 * get_property("blackjack.MaxBetInPlatinum", 100) )
       {
         act(STR_CARDS_BIGBID_FAIL, FALSE, ch, obj, obj, TO_CHAR);
+        return TRUE;
       }
       else
       {
@@ -514,6 +516,7 @@ int blackjack_table(P_obj obj, P_char ch, int cmd, char *argument)
       else if( betamt > 10 * get_property("blackjack.MaxBetInPlatinum", 100) )
       {
         act(STR_CARDS_BIGBID_FAIL, FALSE, ch, obj, obj, TO_CHAR);
+        return TRUE;
       }
       else
       {
@@ -530,6 +533,7 @@ int blackjack_table(P_obj obj, P_char ch, int cmd, char *argument)
       else if( betamt > get_property("blackjack.MaxBetInPlatinum", 100) )
       {
         act(STR_CARDS_BIGBID_FAIL, FALSE, ch, obj, obj, TO_CHAR);
+        return TRUE;
       }
 	    else
       {
