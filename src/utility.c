@@ -5851,3 +5851,19 @@ bool has_touch_stone( P_char ch )
   }
   return FALSE;
 }
+
+// This function is designed to handle the random load code for the 2015-6 wipe.
+// Quest items have 100% load and should be checked before calling this function.
+// Approaches 25% chance as ival approaches infinity.  ival 1 -> 100% chance, 2 -> ~94.5%...
+bool item_load_check( P_obj item, int ival, int zone_percent )
+{
+  register int percent = (100 * ival + 5000) / (4 * ival + 47);
+
+  percent = MIN( percent, zone_percent );
+
+  if( percent > number(0, 99) )
+  {
+    return TRUE;
+  }
+  return FALSE;
+}

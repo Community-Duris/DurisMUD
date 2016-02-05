@@ -1,5 +1,6 @@
 #include <string.h>
 
+#include "structs.h"
 #include "utils.h"
 #include "utility.h"
 #include "prototypes.h"

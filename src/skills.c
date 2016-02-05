@@ -10,8 +10,8 @@
 #include "defines.h"
 #include "spells.h"
 #ifndef _DE_
-#include "utils.h"
 #include "structs.h"
+#include "utils.h"
 #include "paladins.h"
 #include "reavers.h"
 #include "rogues.h"

@@ -3215,7 +3215,7 @@ void reset_zone(int zone, int force_item_repop)
           }
 
           ival = itemvalue(obj);
-          if( !ITEM_LOAD_CHECK(obj, ival) )
+          if( !ITEM_LOAD_CHECK(obj, ival, ZCMD.arg4) )
           {
             extract_obj(obj);
             last_cmd = 1;
@@ -3280,7 +3280,7 @@ void reset_zone(int zone, int force_item_repop)
         }
 
         ival = itemvalue(obj);
-        if( !ITEM_LOAD_CHECK(obj, ival) )
+        if( !ITEM_LOAD_CHECK(obj, ival, ZCMD.arg4) )
         {
           extract_obj(obj);
  	        last_cmd = 1;
@@ -3331,7 +3331,7 @@ void reset_zone(int zone, int force_item_repop)
           }
           ival = itemvalue(obj);
           // Load all shopkeeper eq.
-          if( !ITEM_LOAD_CHECK(obj, ival) && (!mob || !IS_SHOPKEEPER(mob)) )
+          if( !ITEM_LOAD_CHECK(obj, ival, ZCMD.arg4) && (!mob || !IS_SHOPKEEPER(mob)) )
           {
             extract_obj(obj);
             last_cmd = 1;
@@ -3399,41 +3399,38 @@ void reset_zone(int zone, int force_item_repop)
           if( !(obj = get_obj_in_list_num(ZCMD.arg1, world[ZCMD.arg3].contents)) || IS_SET(obj->wear_flags, ITEM_TAKE) )
           {
             obj = NULL;
-            if (ZCMD.arg4 > number(0, 99))
+            if( !(obj = read_object(ZCMD.arg1, REAL)) )
             {
-              if( !(obj = read_object(ZCMD.arg1, REAL)) )
+              ZCMD.command = '!';
+              logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable",
+                zone, ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
+            }
+            if( obj )
+            {
+              if( IS_ARTIFACT(obj) && get_artifact_data_sql(obj_index[ZCMD.arg1].virtual_number, &artidata) )
               {
-                ZCMD.command = '!';
-                logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable",
-                  zone, ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
+                // If the artifact is owned, then it's timer is ticking somwhere, so we don't need to load another.
+                if( artidata.owned )
+                {
+                  extract_obj(obj);
+                  break;
+                }
               }
-              if( obj )
+              if( IS_ARTIFACT(obj) && (respawn == 0 || (respawn == 1 && force_item_repop != 2)) )
               {
-                if( IS_ARTIFACT(obj) && get_artifact_data_sql(obj_index[ZCMD.arg1].virtual_number, &artidata) )
-                {
-                  // If the artifact is owned, then it's timer is ticking somwhere, so we don't need to load another.
-                  if( artidata.owned )
-                  {
-                    extract_obj(obj);
-                    break;
-                  }
-                }
-                if( IS_ARTIFACT(obj) && (respawn == 0 || (respawn == 1 && force_item_repop != 2)) )
-                {
-                  extract_obj(obj);
-                  break;
-                }
-                ival = itemvalue(obj);
-                if( !ITEM_LOAD_CHECK(obj, ival) )
-                {
-                  extract_obj(obj);
-                  last_cmd = 1;
-                  break;
-                }
-                obj_to_room(obj, ZCMD.arg3);
+                extract_obj(obj);
+                break;
+              }
+              ival = itemvalue(obj);
+              if( !ITEM_LOAD_CHECK(obj, ival, ZCMD.arg4) )
+              {
+                extract_obj(obj);
                 last_cmd = 1;
                 break;
               }
+              obj_to_room(obj, ZCMD.arg3);
+              last_cmd = 1;
+              break;
             }
           }
           else
@@ -3455,44 +3452,41 @@ void reset_zone(int zone, int force_item_repop)
 
         if( (ZCMD.arg1 >= 0) && (ZCMD.arg3 >= 0) && ((obj_index[ZCMD.arg1].number < ZCMD.arg2) || force_item_repop) )
         {
-          if (ZCMD.arg4 > number(0, 99))
+          if( !(obj = read_object(ZCMD.arg1, REAL)) )
           {
-            if( !(obj = read_object(ZCMD.arg1, REAL)) )
+            ZCMD.command = '!';
+            logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable", zone, ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
+          }
+          if( obj )
+          {
+            if( IS_ARTIFACT(obj) && get_artifact_data_sql(obj_index[ZCMD.arg1].virtual_number, &artidata) )
             {
-              ZCMD.command = '!';
-              logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable", zone, ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
-            }
-            if( obj )
-            {
-              if( IS_ARTIFACT(obj) && get_artifact_data_sql(obj_index[ZCMD.arg1].virtual_number, &artidata) )
+              // If the artifact is owned, then it's timer is ticking somwhere, so we don't need to load another.
+              if( artidata.owned )
               {
-                // If the artifact is owned, then it's timer is ticking somwhere, so we don't need to load another.
-                if( artidata.owned )
-                {
-                  extract_obj(obj);
-                  break;
-                }
+                extract_obj(obj);
+                break;
               }
+            }
 
-              obj_to = get_obj_num(ZCMD.arg3);
-              if (obj_to)
+            obj_to = get_obj_num(ZCMD.arg3);
+            if (obj_to)
+            {
+              if( IS_ARTIFACT(obj) && (respawn == 0 || (respawn == 1 && force_item_repop != 2)) )
               {
-                if( IS_ARTIFACT(obj) && (respawn == 0 || (respawn == 1 && force_item_repop != 2)) )
-                {
-                  extract_obj(obj);
-                  break;
-                }
-                ival = itemvalue(obj);
-                if( !ITEM_LOAD_CHECK(obj, ival) )
-                {
-                  extract_obj(obj);
-                  last_cmd = 1;
-                  break;
-                }
-            		obj_to_obj(obj, obj_to);
+                extract_obj(obj);
+                break;
+              }
+              ival = itemvalue(obj);
+              if( !ITEM_LOAD_CHECK(obj, ival, ZCMD.arg4) )
+              {
+                extract_obj(obj);
                 last_cmd = 1;
                 break;
               }
+          		obj_to_obj(obj, obj_to);
+              last_cmd = 1;
+              break;
             }
           }
         }
@@ -3511,55 +3505,52 @@ void reset_zone(int zone, int force_item_repop)
 
         if( (ZCMD.arg1 >= 0) && ((obj_index[ZCMD.arg1].number < ZCMD.arg2) || force_item_repop) )
         {
-          if (ZCMD.arg4 > number(0, 99))
+          if( !(obj = read_object(ZCMD.arg1, REAL)) )
           {
-            if( !(obj = read_object(ZCMD.arg1, REAL)) )
+            ZCMD.command = '!';
+            logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable", zone,
+              ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
+          }
+          if( obj )
+          {
+            if( IS_ARTIFACT(obj) && get_artifact_data_sql(obj_index[ZCMD.arg1].virtual_number, &artidata) )
             {
-              ZCMD.command = '!';
-              logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable", zone,
-                ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
+              // If the artifact is owned, then it's timer is ticking somwhere, so we don't need to load another.
+              if( artidata.owned )
+              {
+                extract_obj(obj);
+                break;
+              }
             }
-            if( obj )
+            if( IS_ARTIFACT(obj) && (respawn == 0 || (respawn == 1 && force_item_repop != 2)) )
             {
-              if( IS_ARTIFACT(obj) && get_artifact_data_sql(obj_index[ZCMD.arg1].virtual_number, &artidata) )
-              {
-                // If the artifact is owned, then it's timer is ticking somwhere, so we don't need to load another.
-                if( artidata.owned )
-                {
-                  extract_obj(obj);
-                  break;
-                }
-              }
-              if( IS_ARTIFACT(obj) && (respawn == 0 || (respawn == 1 && force_item_repop != 2)) )
-              {
-                extract_obj(obj);
-                break;
-              }
-              ival = itemvalue(obj);
-              // Load all shopkeeper eq.
-              if( !ITEM_LOAD_CHECK(obj, ival) && (!mob || !IS_SHOPKEEPER(mob)) )
-              {
-                extract_obj(obj);
-                last_cmd = 1;
-                break;
-              }
-              if( mob )
-              {
-                //Drannak trying out item stat randomization 3/28/14
-                // Added check for shopkeeper so their wares don't look goofy.
-                if( !IS_ARTIFACT(obj) && !IS_SHOPKEEPER(mob) )
-                  randomizeitem(mob, obj);
-                obj_to_char(obj, mob);
-                last_cmd = 1;
-            		break;
-              }
-              else
-              {
-                logit(LOG_MOB, "G cmd: obj: %d  chance: %d, limit %d(%d) (no char)", obj_index[ZCMD.arg1].virtual_number, ZCMD.arg4,
-                  ZCMD.arg2, obj_index[ZCMD.arg1].number);
-                extract_obj(obj);
-                break;
-              }
+              extract_obj(obj);
+              break;
+            }
+            ival = itemvalue(obj);
+            // Load all shopkeeper eq.
+            if( !ITEM_LOAD_CHECK(obj, ival, ZCMD.arg4) && (!mob || !IS_SHOPKEEPER(mob)) )
+            {
+              extract_obj(obj);
+              last_cmd = 1;
+              break;
+            }
+            if( mob )
+            {
+              //Drannak trying out item stat randomization 3/28/14
+              // Added check for shopkeeper so their wares don't look goofy.
+              if( !IS_ARTIFACT(obj) && !IS_SHOPKEEPER(mob) )
+                randomizeitem(mob, obj);
+              obj_to_char(obj, mob);
+              last_cmd = 1;
+          		break;
+            }
+            else
+            {
+              logit(LOG_MOB, "G cmd: obj: %d  chance: %d, limit %d(%d) (no char)", obj_index[ZCMD.arg1].virtual_number, ZCMD.arg4,
+                ZCMD.arg2, obj_index[ZCMD.arg1].number);
+              extract_obj(obj);
+              break;
             }
           }
         }
@@ -3583,56 +3574,53 @@ void reset_zone(int zone, int force_item_repop)
 
         if( (ZCMD.arg1 >= 0) && ((obj_index[ZCMD.arg1].number < ZCMD.arg2) || force_item_repop) )
         {
-          if (ZCMD.arg4 > number(0, 99))
+          if( !(obj = read_object(ZCMD.arg1, REAL)) )
           {
-            if( !(obj = read_object(ZCMD.arg1, REAL)) )
+            ZCMD.command = '!';
+            logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable", zone, ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
+          }
+          if( obj )
+          {
+            if( IS_ARTIFACT(obj) && get_artifact_data_sql(obj_index[ZCMD.arg1].virtual_number, &artidata) )
             {
-              ZCMD.command = '!';
-              logit(LOG_DEBUG, "reset_zone(): (zone %d) obj %d [%d] not loadable", zone, ZCMD.arg1, obj_index[ZCMD.arg1].virtual_number);
+              // If the artifact is owned, then it's timer is ticking somwhere, so we don't need to load another.
+              if( artidata.owned )
+              {
+                extract_obj(obj);
+                break;
+              }
             }
-            if( obj )
+            if( IS_ARTIFACT(obj) && (respawn == 0 || (respawn == 1 && force_item_repop != 2)) )
             {
-              if( IS_ARTIFACT(obj) && get_artifact_data_sql(obj_index[ZCMD.arg1].virtual_number, &artidata) )
-              {
-                // If the artifact is owned, then it's timer is ticking somwhere, so we don't need to load another.
-                if( artidata.owned )
-                {
-                  extract_obj(obj);
-                  break;
-                }
-              }
-              if( IS_ARTIFACT(obj) && (respawn == 0 || (respawn == 1 && force_item_repop != 2)) )
-              {
-                extract_obj(obj);
-                break;
-              }
-              ival = itemvalue(obj);
-              if( !ITEM_LOAD_CHECK(obj, ival) )
-              {
-                extract_obj(obj);
-                last_cmd = 1;
-                break;
-              }
-              if( mob && (ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR) )
-              {
-                // Drannak trying out item stat randomization 3/28/14
-                // Added check for shopkeeper so their wares don't look goofy.
-                //   Removed shopkeeper check: this is eq'd items not for-sale items.
-                if( !IS_ARTIFACT(obj) )
-                  randomizeitem(mob, obj);
-                if (mob->equipment[ZCMD.arg3])
-                  obj_to_char( unequip_char(mob, ZCMD.arg3), mob );
-                equip_char(mob, obj, ZCMD.arg3, 1);
-                last_cmd = 1;
-                break;
-              }
-              else
-              {
-                logit(LOG_OBJ, "E cmd: obj: %d pos: %d(%s) chance: %d, limit %d(%d)",
-                  obj_index[ZCMD.arg1].virtual_number, ZCMD.arg3, ((ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR)) ?
-                  equipment_types[ZCMD.arg3] : "ERR", ZCMD.arg4, ZCMD.arg2, obj_index[ZCMD.arg1].number);
-                break;
-              }
+              extract_obj(obj);
+              break;
+            }
+            ival = itemvalue(obj);
+            if( !ITEM_LOAD_CHECK(obj, ival, ZCMD.arg4) )
+            {
+              extract_obj(obj);
+              last_cmd = 1;
+              break;
+            }
+            if( mob && (ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR) )
+            {
+              // Drannak trying out item stat randomization 3/28/14
+              // Added check for shopkeeper so their wares don't look goofy.
+              //   Removed shopkeeper check: this is eq'd items not for-sale items.
+              if( !IS_ARTIFACT(obj) )
+                randomizeitem(mob, obj);
+              if (mob->equipment[ZCMD.arg3])
+                obj_to_char( unequip_char(mob, ZCMD.arg3), mob );
+              equip_char(mob, obj, ZCMD.arg3, 1);
+              last_cmd = 1;
+              break;
+            }
+            else
+            {
+              logit(LOG_OBJ, "E cmd: obj: %d pos: %d(%s) chance: %d, limit %d(%d)",
+                obj_index[ZCMD.arg1].virtual_number, ZCMD.arg3, ((ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR)) ?
+                equipment_types[ZCMD.arg3] : "ERR", ZCMD.arg4, ZCMD.arg2, obj_index[ZCMD.arg1].number);
+              break;
             }
           }
         }

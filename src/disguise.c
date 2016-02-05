@@ -5,6 +5,7 @@
 #include "db.h"
 #include "interp.h"
 #include "spells.h"
+#include "structs.h"
 #include "utils.h"
 #include "comm.h"
 #include "events.h"

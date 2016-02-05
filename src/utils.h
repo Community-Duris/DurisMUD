@@ -1426,7 +1426,8 @@ char *CRYPT2( char *passwd, char *name );
 
 // Approaches 25% chance as ival approaches infinity.  ival 1 -> 100% chance, 2 -> ~94.5%...
 // Quest items have 100% load.
-#define ITEM_LOAD_CHECK(item, ival) ( IS_OBJ_STAT2(item, ITEM2_QUESTITEM) ? TRUE \
-  : ((100 * ival + 5000) / (4 * ival + 47) > number(0, 99)) )
+#define ITEM_LOAD_CHECK(item, ival, zone_percent) ( IS_OBJ_STAT2(item, ITEM2_QUESTITEM) ? TRUE \
+  : item_load_check( item, ival, zone_percent ) )
+bool item_load_check( P_obj item, int ival, int zone_percent );
 
 #endif /* _DURIS_UTILS_H_ */
