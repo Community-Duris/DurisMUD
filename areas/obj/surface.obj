@@ -536,12 +536,12 @@ E
 huge sign~
 &+y+-----------------+
 &+y|                 |
-&+y| &+Y /\  Ugta &+y      |
-&+y|   &+Y   Evermeet&+y   |
-&+y|  &+W>   Winterhaven&+y|
-&+y|  &+W    Canderthal&+y |
-&+y|  &+C\/  Woodseer&+y   |
-&+y|   &+C   Calimshan&+y  |
+&+y| &+Y  /\  Ugta       &+y|
+&+y| &+Y      Evermeet   &+y|
+&+y| &+W  >   Canderthal &+y|
+&+y| &+C  \/  Woodseer   &+y|
+&+y| &+C      Torrhan    &+y|
+&+y| &+C      Tharnadia  &+y|
 &+y+-----------------+
 &+y       |   |
 &+g\&+G|&+g/----\&+G\\//&+g/---\&+G|&+g/|
@@ -558,11 +558,11 @@ E
 large sign~
 &+y+-----------------+
 &+y| &+C >  Woodseer    &+y|
-&+y| &+C    Calimshan  &+y |
-&+y| &+W /\ Winterhaven&+y |
-&+y|  &+W   Evermeet  &+y  |
-&+y|  &+R<  Torrhan   &+y  |
-&+y|   &+R  Tharnadia &+y  |
+&+y| &+W /\ Canderthal  &+y|
+&+y| &+W    Ugta        &+y|
+&+y| &+W    Evermeet    &+y|
+&+y| &+R<   Torrhan     &+y|
+&+y| &+R    Tharnadia   &+y|
 &+y+-----------------+
 &+y      |     |
 &+g\\//\\//\\//\\//\\//
@@ -578,10 +578,12 @@ sign~
 E
 sign~
 &+y+----------------------+
-&+y| &+C >  Woodseer     &+y    |
-&+y|  &+C   Calimshan   &+y     |
-&+y| &+R \/ Torrhan     &+y     |
-&+y| &+B <  Tharnadia&+y        |
+&+y| &+C >  Woodseer         &+y|
+&+y| &+C    Canderthal       &+y|
+&+y| &+C    Ugta             &+y|
+&+y| &+C    Evermeet         &+y|
+&+y| &+R \/ Torrhan          &+y|
+&+y| &+B <  Tharnadia        &+y|
 &+y+----------------------+
 &+y        |    |
 &+G\\//\\//\\//\\//\\//\\//
@@ -600,6 +602,7 @@ snow-covered sign~
 &+W|  &+C<  Verspin             &+W|
 &+W|  &+B\/ Menden-of-the-Deep  &+W|
 &+W|  &+c>  Werrun              &+W|
+&+W|  &+c   Breale              &+W|
 &+W+-------------------------+
 &+W           |   |
 &+W           |   |
@@ -615,12 +618,15 @@ old sign~
 0 0 100
 E
 old sign~
-&+y+----------------------+
-&+y|&+W <   Ice Crag       &+y  |
-&+y|&+W     Bone Fort Inn  &+y  |
-&+y|&+M \/  Teka       &+y      |
-&+y|&+C >   Verspin&+y          |
-&+y+----------------------+
+&+y+-----------------------+
+&+y|&+W <   IceCrag Castle    &+y|
+&+y|&+W     Bone Fort Inn     &+y|
+&+y|&+M \/  Teka              &+y|
+&+y|&+C >   Verspin           &+y|
+&+y|&+C     Menden-of-the-Deep&+y|
+&+W|&+C     Werrun            &+y|
+&+W|&+C     Breale            &+y|
+&+y+-----------------------+
 &+y         |   |
 &+G\\//\\//\\//\\//\\//\\//|
 ~
@@ -635,11 +641,12 @@ frozen sign~
 E
 frozen sign~
 &+C+-------------------+
-&+C| &+c/\ Ice Crag&+C       |
-&+C| &+m<  Church of&+C      |
-&+C|    &+m  Eternal Dusk &+C|
-&+C| &+M\/ Teka   &+C        |
-&+C|   &+M Verspin   &+C     |
+&+C| &+c/\ Ice Crag Castle&+C|
+&+C| &+c   Bone Fort Inn  &+C|
+&+C| &+m<  Church of      &+C|
+&+C| &+m     Eternal Dusk &+C|
+&+C| &+M\/ Teka           &+C|
+&+C| &+M   Verspin        &+C|
 &+C+-------------------+
 &+C        |   |
 &+C\\&+G//&+C\\&+G//&+G\\&+C//&+G\\&+C//&+G\\&+C//&+G\\&+C//
@@ -656,8 +663,8 @@ E
 old sign~
 &+y+-----------------+
 &+y|&+W /\  Shady Grove &+y|
-&+y| <   FaanG       |
-&+y|&+W \/  Sto&+brm &+LPo&+Wrt&+y  |
+&+y|&+y <   FaanG       &+y|
+&+y|&+W >   Sto&+brm &+LPo&+Wrt  &+y|
 &+y+-----------------+
 &+y       |   |
 &+g\\//\\//\\//\\//\\//\\//
@@ -696,8 +703,8 @@ sign~
 E
 sign~
 &+y+-----------------+
-&+y|&+r /\  Bloodstone &+y |
-&+y| \/  Sarmiz'Duul |
+&+y|&+r /\  Bloodstone  &+y|
+&+y|&+y \/  Sarmiz'Duul &+y|
 &+y+-----------------+
 &+y       |  |
 &+g\\//\\//\\//\\//\\/\\/
