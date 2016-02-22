@@ -7407,7 +7407,14 @@ bool get_equipment_list(P_char ch, char *buf, int list_only)
   if (affected_by_spell(ch, TAG_SET_MASTER))
     if(ch->only.pc->master_set)
     strcat(buf, set_master_text[ch->only.pc->master_set]);
-  return found;
+  if( list_only == 2 )
+  {
+    return TRUE;
+  }
+  else
+  {
+    return found;
+  }
 }
 
 void do_equipment(P_char ch, char *argument, int cmd)
