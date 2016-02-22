@@ -190,6 +190,7 @@ int setup_pet(P_char mob, P_char ch, int duration, int flag)
 {
   struct affected_type af;
   P_obj globe;
+  string name;
 
   memset(&af, 0, sizeof(af));
   if( !IS_SET(flag, PET_NOORDER) )
@@ -232,6 +233,12 @@ int setup_pet(P_char mob, P_char ch, int duration, int flag)
     GET_EXP(mob) = 0;
   }
   remove_plushit_bits(mob);
+
+  if( IS_PC(ch) )
+  {
+    name = string(mob->player.name) + " _" + string(ch->player.name) + "_";
+    mob->player.name = str_dup(name.c_str());
+  }
 
   return duration;
 }
