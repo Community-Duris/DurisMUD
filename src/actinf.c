@@ -7303,7 +7303,7 @@ bool get_equipment_list(P_char ch, char *buf, int list_only)
           ? where[HOLD] :  where[wear_order[j]]);
       }
 
-      if (CAN_SEE_OBJ(ch, t_obj) || list_only)
+      if( CAN_SEE_OBJ(ch, t_obj) || list_only == 1 )
       {
         /*
          * stolen from show_obj_to_char(), so we can buffer it.
