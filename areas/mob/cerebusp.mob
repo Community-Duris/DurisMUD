@@ -166,7 +166,7 @@ large zebra~
 &+Wthe &+YSavannah&+W, carefree and wild.&n
 ~
 67110920 0 0 0 0 0 0 0 0 S
-A 0 1 0 -1
+ae 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -178,7 +178,7 @@ female zebra~
 &+WThis z&+Le&+Wb&+Lr&+Wa stays close to its mate and grazes in some relative &+Lshade&+W.&n
 ~
 2056 0 0 0 0 0 0 0 0 S
-A 0 0 0 -1
+ae 0 0 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -191,7 +191,7 @@ young zebra~
 &+WIt is striped white and &+Lblack&+W.&n
 ~
 2056 0 0 0 0 0 0 0 0 S
-A 0 1 0 -1
+ae 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
