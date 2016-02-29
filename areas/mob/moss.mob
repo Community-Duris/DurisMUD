@@ -2140,7 +2140,7 @@ wife~
 PH 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
-8 8 1
+8 8 2
 #23513
 farmer~
 &+gthe farmer&N~
@@ -2214,7 +2214,7 @@ wife~
 PH 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
-8 8 1
+8 8 2
 #23517
 toddler~
 &+wa toddler&N~
@@ -2359,7 +2359,7 @@ woman wife~
 PH 0 128 0 -1
 9 0 0 0d0+0 0d0+0
 0.0.0.0 0
-8 8 1
+8 8 2
 #23525
 bedgar armorer~
 &+LBedgar, &+cthe armorer&N~

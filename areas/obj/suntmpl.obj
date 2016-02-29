@@ -376,7 +376,7 @@ earring gold~
 &+Yan earring of pure gold&N~
 &+YA shiny golden earring lies here.&N~
 ~
-9 15 3 0 7 0 0 524289 64 0 0
+9 24 3 0 7 0 0 524289 64 0 0
 5 0 0 3 0 0 0 0
 1 1121 100
 E
@@ -417,7 +417,7 @@ circlet golden~
 &+Ya golden circlet&N~
 &+YA shiny circlet of gold lies here.&N~
 ~
-9 15 3 0 7 0 0 17 64 0 0
+9 24 3 0 7 0 0 17 64 0 0
 10 0 0 3 0 0 0 0
 0 10000 100
 E
