@@ -49,7 +49,7 @@
 
 #define NUMB_FLAG_TEMPLATES  7      // number of flag templates
 
-#define DE_VERSION           "3.01" // version string
+#define DE_VERSION           "3.02" // version string
 
 #ifndef __UNIX__
 #  define UNUSED_FIELD_CH '°'  // looks like half-shaded square with standard IBM PC character set
