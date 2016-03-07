@@ -35,10 +35,10 @@
 #include <stdio.h>
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
-#include "../vardef.h"
-#include "../misc/menu.h"
+#include "fh.h"
+#include "types.h"
+#include "vardef.h"
+#include "misc/menu.h"
 
 extern variable *g_varHead;
 extern bool g_madeChanges;

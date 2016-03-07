@@ -35,8 +35,8 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
 #include "exit.h"
 

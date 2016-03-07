@@ -33,18 +33,16 @@
 
 
 #include <ctype.h>
-
 #include <stdlib.h>
 #include <string.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 #include "loaded.h"
-
-#include "../obj/objhere.h"
-#include "../mob/mobhere.h"
-#include "../misc/master.h"
-#include "../command/command.h"
+#include "obj/objhere.h"
+#include "mob/mobhere.h"
+#include "misc/master.h"
+#include "command/command.h"
 
 
 

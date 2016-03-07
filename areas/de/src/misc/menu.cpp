@@ -34,11 +34,11 @@
 
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../misc/menu.h"
-#include "../keys.h"
-#include "../types.h"
-#include "../obj/object.h"
+#include "fh.h"
+#include "misc/menu.h"
+#include "keys.h"
+#include "types.h"
+#include "obj/object.h"
 
 extern flagDef g_roomManaList[], g_roomSectList[], g_objSizeList[], g_shopShopkeeperRaceList[],
                g_roomExitDirectionList[], g_npc_class_bits[], g_race_names[], g_objCraftsmanshipList[],

@@ -36,8 +36,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
 extern uint g_numbObjTypes, g_numbLookupEntries;
 

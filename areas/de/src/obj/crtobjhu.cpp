@@ -37,8 +37,8 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
 #include "object.h"
 #include "objhere.h"

@@ -36,9 +36,9 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "../types.h"
-#include "../fh.h"
-#include "../keys.h"
+#include "types.h"
+#include "fh.h"
+#include "keys.h"
 #include "room.h"
 
 extern room *g_currentRoom;

@@ -36,12 +36,11 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "../types.h"
-#include "../fh.h"
-
-#include "../room/room.h"
-#include "../mob/mobhere.h"
-#include "../misc/master.h"
+#include "types.h"
+#include "fh.h"
+#include "room/room.h"
+#include "mob/mobhere.h"
+#include "misc/master.h"
 
 extern bool g_madeChanges;
 extern room *g_currentRoom;

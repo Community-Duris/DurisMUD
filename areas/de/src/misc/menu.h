@@ -30,6 +30,8 @@
 
 #ifndef _MENU_H_
 
+#include <stdlib.h>
+
 #define MENUKEY_OTHER     0     // unrecognized
 #define MENUKEY_ABORT     1     // abort
 #define MENUKEY_SAVE      2     // save

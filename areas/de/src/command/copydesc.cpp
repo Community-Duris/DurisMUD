@@ -32,11 +32,11 @@
  */
 
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
-#include "../room/room.h"
-#include "../mob/mob.h"
+#include "room/room.h"
+#include "mob/mob.h"
 
 extern bool g_madeChanges;
 

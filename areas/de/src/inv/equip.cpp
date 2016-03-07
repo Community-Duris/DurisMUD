@@ -36,10 +36,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../fh.h"
-#include "../types.h"
-
-#include "../misc/editable.h"
+#include "fh.h"
+#include "types.h"
+#include "misc/editable.h"
 
 extern bool g_madeChanges;
 extern room *g_currentRoom;

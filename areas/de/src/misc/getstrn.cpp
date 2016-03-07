@@ -34,12 +34,10 @@
 
 #include <string.h>
 
-#include "../fh.h"
-#include "../types.h"
-#include "../keys.h"
-
-#include "../graphcon.h"
-
+#include "fh.h"
+#include "types.h"
+#include "keys.h"
+#include "graphcon.h"
 #include "getstrn.h"
 
 extern stringNode *g_commandHistory;

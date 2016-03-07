@@ -37,20 +37,20 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
-#include "../vardef.h"
-#include "../edesc/edesc.h"
+#include "vardef.h"
+#include "edesc/edesc.h"
 #include "object.h"
 
-#include "../readfile.h"
+#include "readfile.h"
 
 #include "material.h"
 #include "objsize.h"
 #include "objcraft.h"
 
-#include "../defines.h"
+#include "defines.h"
 
 
 

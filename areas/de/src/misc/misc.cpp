@@ -41,22 +41,18 @@
 #  include <unistd.h>
 #endif
 
-#include "../types.h"
-#include "../fh.h"
-#include "../de.h"
-
-#include "../room/room.h"
-#include "../obj/object.h"
-#include "../mob/mob.h"
-#include "../command/alias.h"
-#include "../keys.h"
-#include "../vardef.h"
-#include "../misc/loaded.h"
-
-#include "../misc/misc.h"
-
-#include "../graphcon.h"
-
+#include "types.h"
+#include "fh.h"
+#include "de.h"
+#include "room/room.h"
+#include "obj/object.h"
+#include "mob/mob.h"
+#include "command/alias.h"
+#include "keys.h"
+#include "vardef.h"
+#include "misc/loaded.h"
+#include "misc/misc.h"
+#include "graphcon.h"
 
 
 extern bool g_madeChanges;

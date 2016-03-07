@@ -28,6 +28,9 @@
 
 #ifndef _READZON_H_
 
+#include <stdlib.h>
+#include "obj/objhere.h"
+
 typedef struct _lastObjHereLoaded
 {
   uint objNumb;

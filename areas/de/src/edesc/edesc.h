@@ -28,7 +28,7 @@
 
 #ifndef _EDESC_H_
 
-#include "../misc/strnnode.h"
+#include "misc/strnnode.h"
 
 // extra description stuff
 

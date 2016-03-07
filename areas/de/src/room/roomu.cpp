@@ -36,14 +36,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
-#include "../de.h"
+#include "fh.h"
+#include "types.h"
+#include "de.h"
 
 #include "room.h"
 #include "roomu.h"
 
-#include "../keys.h"
+#include "keys.h"
 
 extern room *g_currentRoom;
 extern uint g_numbExits, g_numbRooms, g_numbLookupEntries;

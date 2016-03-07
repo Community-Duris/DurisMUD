@@ -30,7 +30,7 @@
 
 #ifndef _LOADED_H_
 
-#include "../types.h"
+#include "types.h"
 
 typedef struct _entityLoaded
 {

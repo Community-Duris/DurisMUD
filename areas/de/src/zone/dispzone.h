@@ -28,6 +28,8 @@
 
 #ifndef _DISPZONE_H_
 
+#include "room/room.h"
+
 typedef struct _zoneExit
 {
   const room *roomIn; // room exit is in

@@ -33,11 +33,11 @@
 
 #include "exit.h"
 
-#include "../obj/objhere.h"
-#include "../mob/mobhere.h"
+#include "obj/objhere.h"
+#include "mob/mobhere.h"
 
-#include "../misc/master.h"
-#include "../misc/editable.h"
+#include "misc/master.h"
+#include "misc/editable.h"
 
 // mana flag types
 

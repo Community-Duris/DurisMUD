@@ -35,11 +35,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../fh.h"
+#include "fh.h"
 
-#include "../misc/master.h"
-#include "../mob/mobhere.h"
-#include "../obj/objhere.h"
+#include "misc/master.h"
+#include "mob/mobhere.h"
+#include "obj/objhere.h"
 
 extern bool g_madeChanges;
 extern room *g_currentRoom;

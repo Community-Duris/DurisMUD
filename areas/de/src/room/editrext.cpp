@@ -35,15 +35,15 @@
 
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
-#include "../graphcon.h"
+#include "graphcon.h"
 
 #include "room.h"
 #include "exit.h"
 
-#include "../misc/menu.h"
+#include "misc/menu.h"
 
 
 

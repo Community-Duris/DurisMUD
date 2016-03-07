@@ -36,8 +36,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
 extern editableListNode *g_inventory;
 extern room *g_currentRoom;

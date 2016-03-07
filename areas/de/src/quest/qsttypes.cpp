@@ -33,8 +33,8 @@
  */
 
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
 #include "quest.h"
 

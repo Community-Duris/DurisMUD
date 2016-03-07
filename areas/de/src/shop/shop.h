@@ -28,7 +28,7 @@
 
 #ifndef _SHOP_H_
 
-#include "../types.h"
+#include "types.h"
 
 // shopkeeper race
 

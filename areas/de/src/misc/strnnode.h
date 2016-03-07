@@ -34,7 +34,7 @@
 #include <string.h>
 #include <new>    // nothrow
 
-#include "../types.h"
+#include "types.h"
 
 // string node stuff
 

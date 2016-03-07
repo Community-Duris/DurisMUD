@@ -32,8 +32,8 @@
  */
 
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
 extern mobType **g_mobLookup;
 extern uint g_numbMobTypes, g_lowestMobNumber, g_highestMobNumber, g_numbLookupEntries;

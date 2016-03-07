@@ -36,11 +36,11 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-#include "../types.h"
-#include "../fh.h"
-#include "../keys.h"
+#include "types.h"
+#include "fh.h"
+#include "keys.h"
 
-#include "../room/room.h"
+#include "room/room.h"
 
 #include "misccomm.h"
 

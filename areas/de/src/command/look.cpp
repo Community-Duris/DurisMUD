@@ -37,12 +37,12 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
-#include "../obj/objhere.h"
-#include "../misc/master.h"
-#include "../misc/editable.h"
+#include "obj/objhere.h"
+#include "misc/master.h"
+#include "misc/editable.h"
 
 extern room *g_currentRoom;
 extern zone g_zoneRec;

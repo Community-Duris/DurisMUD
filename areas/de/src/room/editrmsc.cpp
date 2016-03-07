@@ -36,13 +36,13 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
-#include "../graphcon.h"
+#include "graphcon.h"
 
 #include "room.h"
-#include "../misc/menu.h"
+#include "misc/menu.h"
 
 extern menu g_roomMiscMenu;
 

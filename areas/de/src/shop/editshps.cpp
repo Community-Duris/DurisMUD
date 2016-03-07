@@ -36,14 +36,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
-#include "../graphcon.h"
+#include "graphcon.h"
 
 #include "editshp.h"
-#include "../misc/menu.h"
-#include "../keys.h"
+#include "misc/menu.h"
+#include "keys.h"
 
 extern menu g_shopItemMenu;
 

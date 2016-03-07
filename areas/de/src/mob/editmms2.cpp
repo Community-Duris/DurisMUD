@@ -37,13 +37,11 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
-#include "../misc/menu.h"
-#include "../keys.h"
-
-#include "../graphcon.h"
-
+#include "fh.h"
+#include "types.h"
+#include "misc/menu.h"
+#include "keys.h"
+#include "graphcon.h"
 #include "mob.h"
 
 extern menu g_mobMisc2Menu;

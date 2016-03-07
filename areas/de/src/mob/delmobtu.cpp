@@ -36,9 +36,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "../types.h"
-#include "../fh.h"
-#include "../keys.h"
+#include "types.h"
+#include "fh.h"
+#include "keys.h"
 
 #include "mob.h"
 

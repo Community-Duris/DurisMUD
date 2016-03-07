@@ -34,11 +34,11 @@
 
 
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
 #include "objhere.h"
-#include "../room/room.h"
+#include "room/room.h"
 #include "object.h"
 
 

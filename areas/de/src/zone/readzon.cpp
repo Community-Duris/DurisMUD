@@ -37,17 +37,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
 #include "zone.h"
 #include "readzon.h"
-#include "../misc/loaded.h"
-#include "../keys.h"
-#include "../vardef.h"
-#include "../defines.h"
+#include "misc/loaded.h"
+#include "keys.h"
+#include "vardef.h"
+#include "defines.h"
 
-#include "../readfile.h"
+#include "readfile.h"
 
 
 

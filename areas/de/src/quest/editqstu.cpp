@@ -36,10 +36,10 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../types.h"
-#include "../fh.h"
-#include "../keys.h"
-#include "../misc/menu.h"
+#include "types.h"
+#include "fh.h"
+#include "keys.h"
+#include "misc/menu.h"
 
 #include "quest.h"
 

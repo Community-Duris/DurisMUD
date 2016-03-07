@@ -28,9 +28,9 @@
 
 #ifndef _MOBHERE_H_
 
-#include "../zone/zone.h"
+#include "zone/zone.h"
 #include "mob.h"
-#include "../obj/objhere.h"
+#include "obj/objhere.h"
 
 #define EQ_WEARABLE      0  // eq is wearable, no error
 #define EQ_SLOT_FILLED 127  // slot is already filled

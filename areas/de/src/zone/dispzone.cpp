@@ -35,12 +35,12 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
 #include "dispzone.h"
 
-#include "../misc/loaded.h"
+#include "misc/loaded.h"
 
 extern zone g_zoneRec;
 extern uint g_numbRooms, g_numbExits, g_numbObjTypes, g_numbObjs, g_numbMobTypes, g_numbMobs;

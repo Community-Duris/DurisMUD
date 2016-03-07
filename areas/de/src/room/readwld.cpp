@@ -37,14 +37,14 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
 #include "room.h"
 #include "exit.h"
-#include "../edesc/edesc.h"
-#include "../vardef.h"
-#include "../readfile.h"
+#include "edesc/edesc.h"
+#include "vardef.h"
+#include "readfile.h"
 
 
 

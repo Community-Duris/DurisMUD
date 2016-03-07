@@ -33,11 +33,10 @@
 
 #include <stdio.h>
 
-#include "../de.h"
-#include "../fh.h"
-
-#include "../obj/objhere.h"
-#include "../mob/mobhere.h"
+#include "de.h"
+#include "fh.h"
+#include "obj/objhere.h"
+#include "mob/mobhere.h"
 
 extern editableListNode *g_inventory;
 extern room *g_currentRoom;

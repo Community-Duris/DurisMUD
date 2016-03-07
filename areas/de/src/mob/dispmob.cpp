@@ -37,9 +37,8 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../types.h"
-#include "../fh.h"
-
+#include "types.h"
+#include "fh.h"
 #include "mob.h"
 
 extern "C" flagDef action_bits[], affected1_bits[], affected2_bits[], affected3_bits[], affected4_bits[], 

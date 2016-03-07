@@ -37,9 +37,9 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../types.h"
-#include "../fh.h"
-#include "../spells.h"
+#include "types.h"
+#include "fh.h"
+#include "spells.h"
 
 #include "object.h"
 #include "objhere.h"

@@ -37,9 +37,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../fh.h"
-#include "../types.h"
-#include "../de.h"
+#include "fh.h"
+#include "types.h"
+#include "de.h"
 
 #include "writezon.h"
 

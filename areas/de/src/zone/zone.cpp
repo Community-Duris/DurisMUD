@@ -35,9 +35,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "../fh.h"
-#include "../types.h"
-#include "../de.h"
+#include "fh.h"
+#include "types.h"
+#include "de.h"
 
 #include "zone.h"
 

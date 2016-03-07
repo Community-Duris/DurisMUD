@@ -35,8 +35,8 @@
 #include <string.h>
 
 #include "mob.h"
-#include "../boolean.h"
-#include "../fh.h"
+#include "boolean.h"
+#include "fh.h"
 
 extern flagDef g_mobHometownList[], g_mobPositionList[], g_mobSexList[], g_mobSizeList[], g_mobSpecList[];
 extern "C" const struct race_names race_names_table[];

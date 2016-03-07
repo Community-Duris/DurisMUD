@@ -36,8 +36,8 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
 #include "object.h"
 #include "traps.h"

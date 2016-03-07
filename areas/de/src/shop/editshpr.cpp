@@ -36,11 +36,11 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
-#include "../misc/menu.h"
+#include "fh.h"
+#include "types.h"
+#include "misc/menu.h"
 
-#include "../graphcon.h"
+#include "graphcon.h"
 
 #include "shop.h"
 

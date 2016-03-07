@@ -34,8 +34,8 @@
 
 #include <string.h>
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
 extern command g_createEditCommands[];
 extern room *g_currentRoom;

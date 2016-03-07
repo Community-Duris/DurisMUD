@@ -35,18 +35,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../fh.h"
-#include "../types.h"
-
-#include "../misc/editable.h"
-#include "../misc/master.h"
-#include "../obj/objhere.h"
-#include "../mob/mobhere.h"
-
-#include "../misc/master.h"
-
-#include "../readfile.h"
-
+#include "fh.h"
+#include "types.h"
+#include "misc/editable.h"
+#include "misc/master.h"
+#include "obj/objhere.h"
+#include "mob/mobhere.h"
+#include "misc/master.h"
+#include "readfile.h"
 #include "inv.h"  // constant(s) for inventory file
 
 extern editableListNode *g_inventory;

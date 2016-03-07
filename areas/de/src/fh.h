@@ -43,6 +43,7 @@
 
 #include "types.h"
 #include "boolean.h"
+#include "display.h"
 #include "misc/strnnode.h"
 #include "command/command.h"
 #include "command/var.h"
@@ -53,7 +54,6 @@
 #include "zone/dispzone.h"
 #include "zone/readzon.h"
 #include "zone/writezon.h"
-#include "display.h"
 
 // WTH is this even here?
 //#define ITEM_WEAR_WAIST  ITEM_WEAR_WAISTE  // "waiste"?  COME ON NOW

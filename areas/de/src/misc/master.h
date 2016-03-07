@@ -31,7 +31,7 @@
 
 #ifndef _MASTER_H_
 
-#include "../misc/strnnode.h"
+#include "misc/strnnode.h"
 
 #define NO_MATCH        69   // used when no match is found
 

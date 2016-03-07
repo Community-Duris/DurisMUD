@@ -38,14 +38,13 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-#include "../types.h"
-#include "../fh.h"
-#include "../keys.h"
+#include "types.h"
+#include "fh.h"
+#include "keys.h"
 
 #include "var.h"
-#include "../vardef.h"
-
-#include "../system.h"
+#include "vardef.h"
+#include "system.h"
 
 
 

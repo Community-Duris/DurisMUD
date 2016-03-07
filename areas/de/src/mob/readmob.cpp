@@ -37,10 +37,10 @@
 #include <string.h>
 
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
-#include "../readfile.h"
+#include "readfile.h"
 
 #include "mob.h"
 

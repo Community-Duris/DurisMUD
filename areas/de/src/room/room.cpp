@@ -38,8 +38,8 @@
 
 #include <ctype.h>
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 #include "room.h"        // header for room stuff
 
 

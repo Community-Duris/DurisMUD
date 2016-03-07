@@ -28,7 +28,7 @@
 
 #ifndef _WRITEZON_H_
 
-#include "../types.h"
+#include "types.h"
 
 #define COMMENT_POS     35   // x-position of comments
 

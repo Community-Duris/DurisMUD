@@ -33,9 +33,9 @@
 
 #include <string.h>
 #include <ctype.h>
-#include "../types.h"
-#include "../boolean.h"
-#include "../fh.h"
+#include "types.h"
+#include "boolean.h"
+#include "fh.h"
 
 
 //

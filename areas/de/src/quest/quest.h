@@ -28,7 +28,7 @@
 
 #ifndef _QUEST_H_
 
-#include "../misc/strnnode.h"
+#include "misc/strnnode.h"
 
 #define MAX_QSTMSGKEY_LEN   (usint)256
 

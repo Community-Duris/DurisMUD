@@ -36,14 +36,14 @@
 #include <ctype.h>
 #include <string.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
-#include "../graphcon.h"
+#include "graphcon.h"
 
 #include "room.h"
-#include "../misc/menu.h"
-#include "../keys.h"
+#include "misc/menu.h"
+#include "keys.h"
 
 extern room **g_roomLookup, *g_currentRoom;
 extern bool g_madeChanges;

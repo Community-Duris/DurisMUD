@@ -37,12 +37,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "../types.h"
-#include "../fh.h"
-#include "../misc/menu.h"
-#include "../keys.h"
+#include "types.h"
+#include "fh.h"
+#include "misc/menu.h"
+#include "keys.h"
 
-#include "../graphcon.h"
+#include "graphcon.h"
 
 #include "shop.h"
 

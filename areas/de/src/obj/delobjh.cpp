@@ -32,11 +32,11 @@
  */
 
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
 #include "objhere.h"
-#include "../zone/zone.h"
+#include "zone/zone.h"
 
 extern uint g_numbObjs;
 extern bool g_madeChanges;

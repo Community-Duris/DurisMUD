@@ -30,11 +30,11 @@
 
 #ifndef _OBJECT_H_
 
-#include "../edesc/edesc.h"
+#include "edesc/edesc.h"
 
-#include "../types.h"
-#include "../misc/strnnode.h"
-#include "../defines.h"  // numb_obj_vals
+#include "types.h"
+#include "misc/strnnode.h"
+#include "defines.h"  // numb_obj_vals
 
 // object types
 

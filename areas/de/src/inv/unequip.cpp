@@ -35,13 +35,12 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../fh.h"
-#include "../types.h"
-
-#include "../de.h"
-#include "../misc/editable.h"
-#include "../obj/objhere.h"
-#include "../mob/mobhere.h"
+#include "fh.h"
+#include "types.h"
+#include "de.h"
+#include "misc/editable.h"
+#include "obj/objhere.h"
+#include "mob/mobhere.h"
 
 extern bool g_madeChanges;
 extern room *g_currentRoom;

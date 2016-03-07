@@ -35,22 +35,22 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "../fh.h"
-#include "../types.h"
+#include "fh.h"
+#include "types.h"
 
-#include "../obj/objsize.h"
-#include "../obj/traps.h"
-#include "../obj/armor.h"
-#include "../spells.h"
-#include "../obj/weapons.h"
-#include "../obj/missiles.h"
-#include "../obj/liquids.h"
-#include "../obj/shields.h"
-#include "../obj/material.h"
-#include "../obj/objcraft.h"
-#include "../defines.h"
+#include "obj/objsize.h"
+#include "obj/traps.h"
+#include "obj/armor.h"
+#include "spells.h"
+#include "obj/weapons.h"
+#include "obj/missiles.h"
+#include "obj/liquids.h"
+#include "obj/shields.h"
+#include "obj/material.h"
+#include "obj/objcraft.h"
+#include "defines.h"
 
-#include "../misc/mudcomm.h"
+#include "misc/mudcomm.h"
 #include "check.h"
 
 extern zone g_zoneRec;

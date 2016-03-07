@@ -36,15 +36,15 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
 #include "editrexd.h"
 #include "room.h"
 #include "exit.h"
 
-#include "../misc/menu.h"
-#include "../keys.h"
+#include "misc/menu.h"
+#include "keys.h"
 
 
 

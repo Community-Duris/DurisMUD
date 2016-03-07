@@ -34,11 +34,10 @@
 
 #include <string.h>
 
-#include "../types.h"
-#include "../fh.h"
-
-#include "../room/room.h"
-#include "../misc/master.h"
+#include "types.h"
+#include "fh.h"
+#include "room/room.h"
+#include "misc/master.h"
 
 extern command g_editCommands[];
 extern editableListNode *g_inventory;

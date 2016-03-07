@@ -34,7 +34,7 @@
 
 #include <string.h>
 
-#include "../fh.h"
+#include "fh.h"
 
 
 //

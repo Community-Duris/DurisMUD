@@ -36,10 +36,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "../types.h"
-#include "../fh.h"
+#include "types.h"
+#include "fh.h"
 
-#include "../mob/mob.h"
+#include "mob/mob.h"
 
 extern bool g_madeChanges;
 
