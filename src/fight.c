@@ -5952,8 +5952,10 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
         send_to_char(buffer, tch);
       }
       // If it's a charmie, charmed by a PC with PET_DAMAGE toggled on.
-      else if( IS_AFFECTED(ch, AFF_CHARM) && IS_PC(tch) && IS_SET(tch->specials.act3, PLR3_PET_DAMAGE)
-        && tch == GET_MASTER(ch) )
+      // Note: We want pet damage to show for illusionist / no-order pets which are
+      //   affected by SPELL_CHARM_PERSON, but not AFF_CHARM.
+      else if( (IS_AFFECTED( ch, AFF_CHARM ) || affected_by_spell( ch, SPELL_CHARM_PERSON ))
+        && IS_PC(tch) && IS_SET(tch->specials.act3, PLR3_PET_DAMAGE) && tch == GET_MASTER(ch) )
       {
         send_to_char(buffer, tch);
       }
