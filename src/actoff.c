@@ -3550,6 +3550,7 @@ void kick(P_char ch, P_char victim)
   int csize = get_takedown_size(ch);
   int percent_chance = 0;
   bool in_gh;
+  char     buf[512];
 
   if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
   {
@@ -3655,10 +3656,12 @@ void kick(P_char ch, P_char victim)
     }
 
     if( CAN_GO(victim, door) && (!check_wall(victim->in_room, door)) )
-    {
-      act("Your mighty kick sends $N flying out of the room!", FALSE, ch, 0, victim, TO_CHAR);
+    { 
+      sprintf(buf, "Your mighty kick sends $N flying out of the room to the %s!&n", dirs[door]);
+      act(buf, FALSE, ch, 0, victim, TO_CHAR);
+      sprintf(buf, "$n's mighty kick sends $N flying out of the room to the %s!&n", dirs[door]);
+      act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
       act("$n's mighty kick sends you flying out of the room!", FALSE, ch, 0, victim, TO_VICT);
-      act("$n's mighty kick sends $N flying out of the room!", FALSE, ch, 0, victim, TO_NOTVICT);
       target_room = world[victim->in_room].dir_option[door]->to_room;
       char_from_room(victim);
 
@@ -7837,13 +7840,13 @@ void do_rearkick(P_char ch, char *argument, int cmd)
       door = number(0, 3);
 
     if((CAN_GO(victim, door)) && (!check_wall(victim->in_room, door)))
-    {
-      act("&+LYour mighty rearkick sends&n $N &+Lflying out of the room!&n",
-        FALSE, ch, 0, victim, TO_CHAR);
+    { 
+      sprintf(buf, "&+LYour mighty rearkick sends&n $N &+Lflying out of the room to the %s!&n", dirs[door]);
+      act(buf, FALSE, ch, 0, victim, TO_CHAR);
+      sprintf(buf, "$n's &+Lmighty rearkick sends&n $N &+Lflying out of the room to the %s!&n", dirs[door]);
+      act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
       act("$n's &+Lmighty rearkick sends you flying out of the room!&n",
         FALSE, ch, 0, victim, TO_VICT);
-      act("$n's &+Lmighty rearkick sends&n $N &+Lflying out of the room!&n",
-        FALSE, ch, 0, victim, TO_NOTVICT);
       target_room = world[victim->in_room].dir_option[door]->to_room;
       char_from_room(victim);
       if( char_to_room(victim, target_room, -1))
