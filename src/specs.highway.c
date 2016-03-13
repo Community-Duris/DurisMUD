@@ -415,7 +415,7 @@ int breale_townsfolk(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || IS_FIGHTING(ch) || !AWAKE(ch))
+  if (cmd || IS_FIGHTING(ch) || !IS_AWAKE(ch))
     return FALSE;
 
   for (TmpCh = world[ch->in_room].people; TmpCh && !IS_FIGHTING(ch);
@@ -579,7 +579,7 @@ int mir_spider(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   for (room_junk = world[ch->in_room].contents; room_junk;

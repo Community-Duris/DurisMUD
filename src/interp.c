@@ -2115,7 +2115,7 @@ bool special(P_char ch, int cmd, char *arg)
       }
       if((k != ch) &&
          IS_NPC(k) &&
-         AWAKE(k) &&
+         IS_AWAKE(k) &&
          mob_index[GET_RNUM(k)].func.mob &&
          !affected_by_spell(k, TAG_CONJURED_PET) &&
          (!IS_IMMOBILE(k) ||
@@ -2131,7 +2131,7 @@ bool special(P_char ch, int cmd, char *arg)
      * quest mobile present?
      */
     for (k = world[ch->in_room].people; k; k = k->next_in_room)
-      if ((k != ch) && IS_NPC(k) && AWAKE(k) && mob_index[GET_RNUM(k)].qst_func)
+      if ((k != ch) && IS_NPC(k) && IS_AWAKE(k) && mob_index[GET_RNUM(k)].qst_func)
         if ((*mob_index[GET_RNUM(k)].qst_func) (k, ch, cmd, arg))
           return (1);
   }

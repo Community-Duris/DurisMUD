@@ -337,7 +337,7 @@ int topless_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       c_obj = get_char_room(Gbuf1, ch->in_room);
     if (IS_AGG_CMD(cmd))
     {
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       act("$N screams at you, 'Oh not good enough for you huh!'", FALSE, pl,
           0, ch, TO_CHAR);
@@ -358,7 +358,7 @@ int topless_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_DREAM:
     case CMD_DROOL:
     case CMD_OGLE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N whispers to you, '5 gold for the time of your life baby.'",
@@ -368,7 +368,7 @@ int topless_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       break;
     case CMD_SMILE:
     case CMD_WINK:
-      if (!AWAKE(ch))
+      if (!IS_AWAKE(ch))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$n smiles evilly, rubbing $mself.", TRUE, ch, 0, 0, TO_ROOM);
@@ -382,7 +382,7 @@ int topless_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_PUNCH:
     case CMD_CHOKE:
     case CMD_STRANGLE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N tells you, 'You faggot you're in the wrong place.'", FALSE, pl,
@@ -404,7 +404,7 @@ int topless_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_SPANK:
     case CMD_WORSHIP:
     case CMD_PINCH:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N whispers to you, 'OoOOooOOOoo' excitedly.", FALSE, pl, 0, ch,
@@ -428,7 +428,7 @@ int topless_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_POKE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, arg, CMD_POKE);
       act("$N says 'HooHoo.'", FALSE, pl, 0, ch, TO_CHAR);
@@ -548,7 +548,7 @@ int sex_crazed_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       c_obj = get_char_room(Gbuf1, ch->in_room);
     if (IS_AGG_CMD(cmd))
     {
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       act("$N screams at you, 'Oh not good enough for you huh!'", FALSE, pl,
           0, ch, TO_CHAR);
@@ -569,7 +569,7 @@ int sex_crazed_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_DREAM:
     case CMD_DROOL:
     case CMD_OGLE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N whispers to you, '5 gold for the time of your life baby.'",
@@ -579,7 +579,7 @@ int sex_crazed_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       break;
     case CMD_SMILE:
     case CMD_WINK:
-      if (!AWAKE(ch))
+      if (!IS_AWAKE(ch))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$n smiles evilly, rubbing herself.", TRUE, ch, 0, 0, TO_ROOM);
@@ -593,7 +593,7 @@ int sex_crazed_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_PUNCH:
     case CMD_CHOKE:
     case CMD_STRANGLE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N tells you, 'You faggot! You're in the wrong place!'", FALSE, pl,
@@ -615,7 +615,7 @@ int sex_crazed_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_SPANK:
     case CMD_WORSHIP:
     case CMD_PINCH:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N whispers to you, 'OoOOooOOOoo' excitedly.", FALSE, pl, 0, ch,
@@ -639,7 +639,7 @@ int sex_crazed_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_POKE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, arg, CMD_POKE);
       act("$N says 'HooHoo.'", FALSE, pl, 0, ch, TO_CHAR);
@@ -760,7 +760,7 @@ int well_built_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       c_obj = get_char_room(Gbuf1, ch->in_room);
     if (IS_AGG_CMD(cmd))
     {
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       act("$N screams at you, 'Oh not good enough for you huh!'", FALSE, pl,
           0, ch, TO_CHAR);
@@ -781,7 +781,7 @@ int well_built_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_DREAM:
     case CMD_DROOL:
     case CMD_OGLE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N whispers to you, '5 gold for the time of your life baby.'",
@@ -791,7 +791,7 @@ int well_built_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       break;
     case CMD_SMILE:
     case CMD_WINK:
-      if (!AWAKE(ch))
+      if (!IS_AWAKE(ch))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$n smiles evilly, rubbing herself.", TRUE, ch, 0, 0, TO_ROOM);
@@ -805,7 +805,7 @@ int well_built_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_PUNCH:
     case CMD_CHOKE:
     case CMD_STRANGLE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N tells you, 'Listen punk! I'll bodyslam you!'", FALSE, pl, 0, ch,
@@ -827,7 +827,7 @@ int well_built_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_SPANK:
     case CMD_WORSHIP:
     case CMD_PINCH:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N whispers to you, 'OoOOooOOOoo' excitedly.", FALSE, pl, 0, ch,
@@ -851,7 +851,7 @@ int well_built_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_POKE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, arg, CMD_POKE);
       act("$N says 'HooHoo.'", FALSE, pl, 0, ch, TO_CHAR);
@@ -971,7 +971,7 @@ int sleezy_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       c_obj = get_char_room(Gbuf1, ch->in_room);
     if (IS_AGG_CMD(cmd))
     {
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       act("$N screams at you, 'Oh not good enough for you huh!'", FALSE, pl,
           0, ch, TO_CHAR);
@@ -992,7 +992,7 @@ int sleezy_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_DREAM:
     case CMD_DROOL:
     case CMD_OGLE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N whispers to you, '5 gold for the time of your life baby.'",
@@ -1002,7 +1002,7 @@ int sleezy_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       break;
     case CMD_SMILE:
     case CMD_WINK:
-      if (!AWAKE(ch))
+      if (!IS_AWAKE(ch))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$n smiles evilly, rubbing herself.", TRUE, ch, 0, 0, TO_ROOM);
@@ -1016,7 +1016,7 @@ int sleezy_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_PUNCH:
     case CMD_CHOKE:
     case CMD_STRANGLE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N tells you, 'You faggot you're in the wrong place.'", FALSE, pl,
@@ -1038,7 +1038,7 @@ int sleezy_prostitute(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_SPANK:
     case CMD_WORSHIP:
     case CMD_PINCH:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N whispers to you, 'OoOOooOOOoo' excitedly.", FALSE, pl, 0, ch,
@@ -1062,7 +1062,7 @@ int sleezy_prostitute(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_POKE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, arg, CMD_POKE);
       act("$N says 'HooHoo.'", FALSE, pl, 0, ch, TO_CHAR);

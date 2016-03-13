@@ -3458,7 +3458,7 @@ void do_tupor(P_char ch, char *arg, int cmd)
     send_to_char("You have no idea how to even begin.\n", ch);
     return;
   }
-  if( AWAKE(ch) )
+  if( IS_AWAKE(ch) )
   {
     send_to_char("You must be sleeping to begin your trance.\n", ch);
     return;

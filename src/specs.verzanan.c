@@ -236,7 +236,7 @@ int piergeiron(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_FLUTTER:
     case CMD_HICKEY:
     case CMD_ROSE:
-      if ((c_obj != ch) || (!AWAKE(ch)) || (IS_FIGHTING(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)) || (IS_FIGHTING(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       if (GET_SEX(pl) == SEX_FEMALE)
@@ -294,7 +294,7 @@ int piergeiron(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_IMPALE:
     case CMD_SWAT:
     case CMD_TRIP:
-      if ((c_obj != ch) || (!AWAKE(ch)) || (IS_FIGHTING(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)) || (IS_FIGHTING(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act
@@ -323,7 +323,7 @@ int piergeiron(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_ROLL:
     case CMD_FOOL:
     case CMD_BIRD:
-      if ((c_obj != ch) || (!AWAKE(ch)) || (IS_FIGHTING(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)) || (IS_FIGHTING(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act
@@ -355,7 +355,7 @@ int piergeiron(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_PILLOW:
     case CMD_MOSH:
     case CMD_HI5:
-      if ((c_obj != ch) || (!AWAKE(ch)) || (IS_FIGHTING(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)) || (IS_FIGHTING(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N giggles at you, finding that amusing.", FALSE, pl, 0, ch,
@@ -825,7 +825,7 @@ int dog_one(P_char ch, P_char pl, int cmd, char *arg)
     }
   }
 
-  if (cmd || !AWAKE(ch))
+  if (cmd || !IS_AWAKE(ch))
     return (FALSE);
 
   for (i = world[ch->in_room].contents; i; i = i->next_content)
@@ -906,7 +906,7 @@ int dog_two(P_char ch, P_char pl, int cmd, char *arg)
     }
   }
 
-  if (cmd || !AWAKE(ch))
+  if (cmd || !IS_AWAKE(ch))
     return (FALSE);
 
   for (i = world[ch->in_room].contents; i; i = i->next_content)
@@ -1847,7 +1847,7 @@ int casino_three(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch) || IS_FIGHTING(ch))
+  if (cmd || !IS_AWAKE(ch) || IS_FIGHTING(ch))
     return (FALSE);
 
   if (ch->in_room != real_room(GET_HOME(ch)))
@@ -2011,7 +2011,7 @@ int guard_one(P_char ch, P_char pl, int cmd, char *arg)
       break;
     }
   }
-  if (cmd || !AWAKE(ch) || (IS_FIGHTING(ch)))
+  if (cmd || !IS_AWAKE(ch) || (IS_FIGHTING(ch)))
     return (FALSE);
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
@@ -2678,7 +2678,7 @@ int prostitute_one(P_char ch, P_char pl, int cmd, char *arg)
       c_obj = get_char_room(Gbuf1, ch->in_room);
     if (IS_AGG_CMD(cmd))
     {
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       act
         ("$N screams in terror at you, 'Help, help! Someone get this creep off of me!'",
@@ -2701,7 +2701,7 @@ int prostitute_one(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_DREAM:
     case CMD_DROOL:
     case CMD_OGLE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N whispers to you, 'I'm yours for 5 gold, sweetie pie.'", FALSE,
@@ -2711,7 +2711,7 @@ int prostitute_one(P_char ch, P_char pl, int cmd, char *arg)
       break;
     case CMD_SMILE:
     case CMD_WINK:
-      if (!AWAKE(ch))
+      if (!IS_AWAKE(ch))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$n smiles evilly, looking for some fun..", TRUE, ch, 0, 0,
@@ -2726,7 +2726,7 @@ int prostitute_one(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_PUNCH:
     case CMD_CHOKE:
     case CMD_STRANGLE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N tells you, 'piss off jerk.'", FALSE, pl, 0, ch, TO_CHAR);
@@ -2746,7 +2746,7 @@ int prostitute_one(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_SPANK:
     case CMD_WORSHIP:
     case CMD_PINCH:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N whispers to you, 'I like that.' in a sexy voice.", FALSE, pl, 0,
@@ -2771,7 +2771,7 @@ int prostitute_one(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_POKE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, arg, CMD_POKE);
       act("$N pokes you back, looking annoyed.", FALSE, pl, 0, ch, TO_CHAR);
@@ -4111,7 +4111,7 @@ int verzanan_guard_one(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch) || (IS_FIGHTING(ch)))
+  if (cmd || !IS_AWAKE(ch) || (IS_FIGHTING(ch)))
     return (FALSE);
 
   if (cityguard(ch, pl, cmd, arg))
@@ -4156,7 +4156,7 @@ int verzanan_guard_two(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch) || (IS_FIGHTING(ch)))
+  if (cmd || !IS_AWAKE(ch) || (IS_FIGHTING(ch)))
     return (FALSE);
 
   if (cityguard(ch, pl, cmd, arg))
@@ -4204,7 +4204,7 @@ int verzanan_guard_three(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch) || (IS_FIGHTING(ch)))
+  if (cmd || !IS_AWAKE(ch) || (IS_FIGHTING(ch)))
     return (FALSE);
 
   if (pl && cityguard(ch, pl, cmd, arg))
@@ -4275,7 +4275,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_POSE:
     case CMD_CHEER:
     case CMD_HI5:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N vomits all over $n, giving him something to frown about..",
@@ -4286,7 +4286,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_INSULT:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_insult(pl, arg, 0);
       act("$N humbles you with a greater insult.", FALSE, pl, 0, ch, TO_CHAR);
@@ -4297,7 +4297,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       /*
          An exchange of poking 
        */
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, arg, CMD_POKE);
       act("$N pokes you back.", FALSE, pl, 0, ch, TO_CHAR);
@@ -4318,7 +4318,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_UNDRESS:
     case CMD_BATHE:
     case CMD_FLIRT:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, arg, cmd);
       act("$N spits and coughs in disgust saying, 'Bleh!'.", TRUE, pl, 0, ch,
@@ -4328,7 +4328,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_PUKE:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N sees $n puke, and begins vomiting uncontrollably.", TRUE, ch, 0,
@@ -4341,7 +4341,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_SCREAM:
     case CMD_APPLAUD:
     case CMD_SING:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N says, 'Will ya keep it down, $n? My head hurts!'.", TRUE, ch, 0,
@@ -4357,7 +4357,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
     case CMD_GRUMBLE:
     case CMD_WHATEVER:
     case CMD_HISS:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N says, 'Quit cryin' about it, we're all in this together.'",
@@ -4367,7 +4367,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_BURP:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N applauds and says with great cheer, 'Worthy! Good one!'.", TRUE,
@@ -4377,7 +4377,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_FART:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N says, 'Oh, god..  Will ya do that outside?!?'.", TRUE, ch, 0, 0,
@@ -4387,7 +4387,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_SLAP:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N slaps $n back with great cheer, thinking it all a game.", TRUE,
@@ -4397,7 +4397,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_LAUGH:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N frowns and says, 'What are YOU laughin' about, $n?'.", TRUE, ch,
@@ -4407,7 +4407,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_HUG:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N says, 'Don't hug me, $n, ya smell awful!'.", TRUE, ch, 0, 0,
@@ -4417,7 +4417,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_GRIN:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N grins and whispers something to $n", TRUE, ch, 0, 0, TO_ROOM);
@@ -4426,7 +4426,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_GASP:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N says with alarm, 'What, WHAT?'.", TRUE, ch, 0, 0, TO_ROOM);
@@ -4434,7 +4434,7 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_POUT:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$N says, 'Quit yer pouting, $n, and think of a way outta here'.",
@@ -4836,7 +4836,7 @@ int guild_guard_one(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
     }
   }
-  if (cmd || !AWAKE(ch) || (IS_FIGHTING(ch)))
+  if (cmd || !IS_AWAKE(ch) || (IS_FIGHTING(ch)))
     return (FALSE);
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
@@ -5172,7 +5172,7 @@ int guild_guard_four(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
     }
   }
-  if (cmd || !AWAKE(ch))
+  if (cmd || !IS_AWAKE(ch))
     return (FALSE);
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
@@ -6931,7 +6931,7 @@ int bouncer_one(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch) || (IS_FIGHTING(ch)) || GET_MASTER(ch))
+  if (cmd || !IS_AWAKE(ch) || (IS_FIGHTING(ch)) || GET_MASTER(ch))
     return (FALSE);
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
@@ -7054,7 +7054,7 @@ int bouncer_two(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch) || (IS_FIGHTING(ch)) || GET_MASTER(ch))
+  if (cmd || !IS_AWAKE(ch) || (IS_FIGHTING(ch)) || GET_MASTER(ch))
     return (FALSE);
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
@@ -7165,7 +7165,7 @@ int bouncer_three(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch) || (IS_FIGHTING(ch)) || GET_MASTER(ch))
+  if (cmd || !IS_AWAKE(ch) || (IS_FIGHTING(ch)) || GET_MASTER(ch))
     return (FALSE);
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
@@ -7264,7 +7264,7 @@ int bouncer_four(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch) || (IS_FIGHTING(ch)) || GET_MASTER(ch))
+  if (cmd || !IS_AWAKE(ch) || (IS_FIGHTING(ch)) || GET_MASTER(ch))
     return (FALSE);
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)

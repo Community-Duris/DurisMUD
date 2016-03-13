@@ -347,7 +347,7 @@ void event_righteous_aura_check(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
   
-  if(AWAKE(ch) &&
+  if(IS_AWAKE(ch) &&
     !IS_IMMOBILE(ch)) 
   {
     P_char tch;
@@ -487,7 +487,7 @@ void event_bleak_foeman_check(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   
   if(CAN_ACT(ch) &&
-     AWAKE(ch) &&
+     IS_AWAKE(ch) &&
     !IS_IMMOBILE(ch)) 
   {  
     P_char tch;

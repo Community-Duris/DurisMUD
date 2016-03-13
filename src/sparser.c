@@ -2080,7 +2080,7 @@ bool check_disruptive_blow(P_char ch)
   P_char tch;
 
   if( !IS_ALIVE(ch) || !ch->specials.fighting || IS_IMMOBILE(ch)
-    || !AWAKE(ch) || IS_STUNNED(ch) || !IS_HUMANOID(ch))
+    || !IS_AWAKE(ch) || IS_STUNNED(ch) || !IS_HUMANOID(ch))
     return FALSE;
 
   // tch is the merc in this situation.

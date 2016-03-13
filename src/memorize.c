@@ -605,7 +605,7 @@ int calculate_harpy_time(P_char ch, int circle, bool bStatOnly)
   remem_time = (int) ((time_mult * lfactor[circle - 1]) / (fake_sqrt_table[GET_LEVEL(ch) - 1] * tick_factor));
 
   /* harpies who tupor while awake or not reclining get a slight disadvantage */
-  if( !AWAKE(ch) && GET_POS(ch) == POS_PRONE )
+  if( !IS_AWAKE(ch) && GET_POS(ch) == POS_PRONE )
   {
     remem_time *= .75;
   }
@@ -1213,7 +1213,7 @@ void do_assimilate(P_char ch, char *argument, int cmd)
         (GET_POS(ch) != POS_SITTING && GET_POS(ch) != POS_KNEELING))
     {
       /* harpies also get to tupor while sleeping... */
-      if (AWAKE(ch))
+      if (IS_AWAKE(ch))
       {
         return;
       }

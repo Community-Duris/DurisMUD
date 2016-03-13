@@ -448,7 +448,7 @@ void npc_steal(P_char ch, P_char vict)
           TO_NOTVICT);
     }
   }
-  if (AWAKE(vict) &&
+  if (IS_AWAKE(vict) &&
       StatSave(vict, APPLY_DEX, (GET_LEVEL(vict) - GET_LEVEL(ch)) / 6))
   {                             /*(number(0, GET_LEVEL(vict)) > GET_LEVEL(ch)) */
     act("You discover that $n has $s hands in your wallet.", FALSE, ch, 0,

@@ -650,7 +650,7 @@ void do_emote(P_char ch, char *argument, int cmd)
      * sprintf(buf, "$n %s", argument + i);
      */
     for (k = world[ch->in_room].people; k; k = k->next_in_room)
-      if(AWAKE(k))
+      if(IS_AWAKE(k))
       {
         sprintf(buf, "$n %s", language_CRYPT(ch, k, argument + i));
         act(buf, FALSE, ch, 0, k, TO_VICT | ACT_SILENCEABLE);

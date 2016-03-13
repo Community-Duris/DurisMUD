@@ -483,7 +483,7 @@ int race_size(int race);
 
 #define GET_PLAYER_LOG(ch) ((ch)->only.pc->log)
 
-#define AWAKE(ch) ((GET_STAT(ch) > STAT_SLEEPING) && !IS_AFFECTED((ch), AFF_KNOCKED_OUT))
+#define IS_AWAKE(ch) ((GET_STAT(ch) > STAT_SLEEPING) && !IS_AFFECTED((ch), AFF_KNOCKED_OUT))
 
 #define MIN_POS(ch, v)  \
 ((GET_POS(ch) >= (ubyte)((v) & 3)) && (GET_STAT(ch) >= (ubyte)((v) & STAT_MASK)))

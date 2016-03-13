@@ -1229,7 +1229,7 @@ int babau_combat(P_char ch, P_char vict, int cmd, char* arg)
    if(cmd == CMD_SET_PERIODIC)
      return TRUE;
  
-   if(!ch || !IS_ALIVE(ch) || !AWAKE(ch))
+   if(!ch || !IS_ALIVE(ch) || !IS_AWAKE(ch))
      return FALSE;
 
    if(!IS_SET(ch->specials.act, ACT_HUNTER))

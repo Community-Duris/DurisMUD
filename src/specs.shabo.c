@@ -346,7 +346,7 @@ int tower_summoning(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
+  if (!ch || !IS_AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
       (GET_STAT(ch) == !STAT_NORMAL))
     return FALSE;
 
@@ -429,7 +429,7 @@ int shabo_trap_north(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
+  if (!ch || !IS_AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
       (GET_STAT(ch) == !STAT_NORMAL))
     return FALSE;
 
@@ -464,7 +464,7 @@ int shabo_trap_south(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
+  if (!ch || !IS_AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
       (GET_STAT(ch) == !STAT_NORMAL))
     return FALSE;
 
@@ -508,7 +508,7 @@ int shabo_trap_south_two(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
+  if (!ch || !IS_AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
       (GET_STAT(ch) == !STAT_NORMAL))
     return FALSE;
 
@@ -542,7 +542,7 @@ int shabo_trap_down(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
+  if (!ch || !IS_AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
       (GET_STAT(ch) == !STAT_NORMAL))
     return FALSE;
 
@@ -576,7 +576,7 @@ int shabo_trap_up(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
+  if (!ch || !IS_AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
       (GET_STAT(ch) == !STAT_NORMAL))
     return FALSE;
 
@@ -621,7 +621,7 @@ int shabo_trap_up_two(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
+  if (!ch || !IS_AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
       (GET_STAT(ch) == !STAT_NORMAL))
     return FALSE;
 
@@ -669,7 +669,7 @@ int shabo_trap_north_two(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
+  if (!ch || !IS_AWAKE(ch) || (GET_POS(ch) == POS_SITTING) ||
       (GET_STAT(ch) == !STAT_NORMAL))
     return FALSE;
 

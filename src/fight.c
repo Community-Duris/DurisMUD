@@ -6184,7 +6184,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
 
     /* new, unless vicious, no auto attacks on helpless targets */
 
-    if( !AWAKE(victim) || (GET_HIT(victim) < -2) || IS_IMMOBILE(victim) )
+    if( !IS_AWAKE(victim) || (GET_HIT(victim) < -2) || IS_IMMOBILE(victim) )
     {
       if(IS_FIGHTING(victim))
       {
@@ -6441,7 +6441,7 @@ int chance_to_hit(P_char ch, P_char victim, int skill, P_obj weapon)
     to_hit = (int) (to_hit * get_property("to.hit.VampTouch", 1.150));
   }
 
-  if( !AWAKE(victim) || IS_IMMOBILE(victim) )
+  if( !IS_AWAKE(victim) || IS_IMMOBILE(victim) )
   {
     to_hit += 100;
   }
@@ -7845,7 +7845,7 @@ void set_fighting(P_char ch, P_char vict)
     return;
   }
 
-  if(IS_IMMOBILE(ch) || !AWAKE(ch))
+  if(IS_IMMOBILE(ch) || !IS_AWAKE(ch))
   {
     return;
   }
@@ -8001,7 +8001,7 @@ void set_destroying(P_char ch, P_obj obj)
     raise(SIGSEGV);
   }
 
-  if(IS_IMMOBILE(ch) || !AWAKE(ch))
+  if(IS_IMMOBILE(ch) || !IS_AWAKE(ch))
     return;
 
   if( IS_TRUSTED(ch) && IS_SET(ch->specials.act, PLR_AGGIMMUNE) )
@@ -8520,7 +8520,7 @@ int MonkRiposte(P_char victim, P_char attacker, P_obj wpn)
       !IS_ALIVE(attacker) ||
       IS_IMMOBILE(victim) ||
       IS_BLIND(victim) ||
-      !AWAKE(victim) ||
+      !IS_AWAKE(victim) ||
       IS_STUNNED(victim))
   {
     return 0;
@@ -9671,7 +9671,7 @@ void perform_violence(void)
       continue;
     }
 
-    if(is_char_in_room(ch, room) && IS_NPC(ch) && AWAKE(ch) && CAN_ACT(ch))
+    if(is_char_in_room(ch, room) && IS_NPC(ch) && IS_AWAKE(ch) && CAN_ACT(ch))
     {
       MobCombat(ch);
     }

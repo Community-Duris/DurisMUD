@@ -85,7 +85,7 @@ int demon_chick(P_char ch, P_char pl, int cmd, char *arg)
 {
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch))
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch))
     return FALSE;
   if ((cmd == CMD_GET) && pl && (pl != ch) && (isname("statue", arg) ||
                                                isname("golden", arg) ||

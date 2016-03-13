@@ -376,7 +376,7 @@ int eth2_aramus_crown(P_obj obj, P_char ch, int cmd, char *arg)
     {
       obj->timer[0] = curr_time;
       
-      if (!AWAKE(ch))
+      if (!IS_AWAKE(ch))
       {
         if( !affected_by_spell(ch, SPELL_REGENERATION) )
         {
@@ -461,7 +461,7 @@ int eth2_aramus_crown(P_obj obj, P_char ch, int cmd, char *arg)
 
 void event_aramus_crown_sleep_check(P_char ch, P_char vict, P_obj obj, void *data)
 {
-  if( AWAKE(ch) )
+  if( IS_AWAKE(ch) )
   {
     send_to_char("Your body slows down as you blink the sleep from your eyes.\r\n", ch);
     affect_from_char(ch, SPELL_REGENERATION);

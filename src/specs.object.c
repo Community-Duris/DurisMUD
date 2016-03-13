@@ -5273,7 +5273,7 @@ int menden_figurine(P_obj obj, P_char ch, int cmd, char *arg)
     return FALSE;
   }
 
-  if( !OBJ_WORN(obj) || !IS_ALIVE(ch) || !AWAKE(ch) )
+  if( !OBJ_WORN(obj) || !IS_ALIVE(ch) || !IS_AWAKE(ch) )
   {
     return FALSE;
   }
@@ -5333,7 +5333,7 @@ int die_roller(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!obj || !ch || cmd == CMD_PERIODIC || !AWAKE(ch))
+  if (!obj || !ch || cmd == CMD_PERIODIC || !IS_AWAKE(ch))
     return (FALSE);
 
   if (!OBJ_WORN(obj))
@@ -5418,7 +5418,7 @@ int skeleton_key(P_obj obj, P_char ch, int cmd, char *arg)
   /*
      no object? no character? not "unlock"? not awake? -- do nothing
    */
-  if ((!obj) || (!ch) || (cmd != CMD_UNLOCK) || !AWAKE(ch))
+  if ((!obj) || (!ch) || (cmd != CMD_UNLOCK) || !IS_AWAKE(ch))
     return (FALSE);
 
   // Must be equipped
@@ -5690,7 +5690,7 @@ int banana(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!obj || !ch || cmd == CMD_PERIODIC || !AWAKE(ch))
+  if (!obj || !ch || cmd == CMD_PERIODIC || !IS_AWAKE(ch))
     return (FALSE);
 
   if ((cmd < CMD_NORTH) || ((cmd > CMD_DOWN) && (cmd != CMD_EAT)))
@@ -6407,7 +6407,7 @@ int llyms_altar(P_obj obj, P_char ch, int cmd, char *arg)
     return FALSE;
   }
 
-  if( cmd != CMD_OFFER || !obj || !IS_ALIVE(ch) || !AWAKE(ch) )
+  if( cmd != CMD_OFFER || !obj || !IS_ALIVE(ch) || !IS_AWAKE(ch) )
   {
     return FALSE;
   }

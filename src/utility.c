@@ -1225,7 +1225,7 @@ bool ac_can_see(P_char sub, P_char obj, bool check_z)
     return FALSE;
 
   /* minor detail, sleeping chars can't see squat! */
-  if( !AWAKE(sub) )
+  if( !IS_AWAKE(sub) )
     return FALSE;
 
   // Determine visibility by "vis" command
@@ -1499,7 +1499,7 @@ bool ac_can_see_obj(P_char sub, P_obj obj, int zrange )
   }
 
   /* minor detail, sleeping chars can't see squat! */
-  if( !AWAKE(sub) )
+  if( !IS_AWAKE(sub) )
     return FALSE;
 
   if( IS_NOSHOW(obj) )
@@ -2584,7 +2584,7 @@ bool is_aggr_to(P_char ch, P_char target)
   
   if(IS_FIGHTING(ch) ||
     IS_DESTROYING(ch) ||
-    !AWAKE(ch) ||
+    !IS_AWAKE(ch) ||
     IS_IMMOBILE(ch) ||
     CHAR_IN_SAFE_ZONE(ch) ||
     !CAN_SEE(ch, target) ||

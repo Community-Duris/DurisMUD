@@ -1568,7 +1568,7 @@ void do_charge(P_char ch, char *argument, int cmd)
     debug("do_charge: (%s) charging (%s) final percentage (%d).", GET_NAME(ch), GET_NAME(victim), (int)percent_chance);
   }
 
-  if( number(1, 100) <= (int)percent_chance || IS_IMMOBILE(victim) || !AWAKE(victim) )
+  if( number(1, 100) <= (int)percent_chance || IS_IMMOBILE(victim) || !IS_AWAKE(victim) )
   {
     if( get_takedown_size(victim) <= get_takedown_size(ch) && !number(0,2) )
     {
@@ -2011,7 +2011,7 @@ void do_circle(P_char ch, char *argument, int cmd)
 
   messages->obj = weapon;
 
-  if(IS_AFFECTED(victim, AFF_AWARE) && AWAKE(victim))
+  if(IS_AFFECTED(victim, AFF_AWARE) && IS_AWAKE(victim))
     percent_chance = (int)(0.5 * (float)percent_chance);
 
   percent_chance =
@@ -3849,7 +3849,7 @@ int chance_roundkick(P_char ch, P_char victim)
   }
 
   if(IS_AFFECTED(victim, AFF_AWARE) &&
-    AWAKE(victim))
+    IS_AWAKE(victim))
   {
     percent_chance = (int) (percent_chance * 0.95);
   }
@@ -4286,7 +4286,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
   // Making agi a factor.
   chance += (GET_C_AGI(ch) - GET_C_AGI(victim)) / 2;
 
-  if( /*IS_TRUSTED(ch) ||*/ !AWAKE(victim) )
+  if( /*IS_TRUSTED(ch) ||*/ !IS_AWAKE(victim) )
   {
     roll = 100;
   }
@@ -5174,7 +5174,7 @@ bool backstab(P_char ch, P_char victim)
   victim = guard_check(ch, victim);
 
   if( (get_takedown_size(ch) > get_takedown_size(victim) + 1)
-    && AWAKE(victim) && GET_POS(victim) > POS_KNEELING )
+    && IS_AWAKE(victim) && GET_POS(victim) > POS_KNEELING )
   {
     send_to_char("Smirk. I don't believe you could sneak behind to stab it.\n", ch);
     return FALSE;
@@ -5239,7 +5239,7 @@ bool backstab(P_char ch, P_char victim)
      percent_chance = (int) (percent_chance * 1.1);
   }
   /* Commenting out the aware stuff and having aware just be damage reduction. - Lohrr 6/27/2015
-  if( IS_AFFECTED(victim, AFF_AWARE) && AWAKE(victim) && !IS_DWARF(ch) )
+  if( IS_AFFECTED(victim, AFF_AWARE) && IS_AWAKE(victim) && !IS_DWARF(ch) )
   {
     percent_chance = (int) (percent_chance * get_property("backstab.AwareModifier", 0.850));
   }
@@ -6512,7 +6512,7 @@ void do_disengage(P_char ch, char *arg, int cmd)
   if(!SanityCheck(ch, "do_disengage"))
     return;
 
-  if(!AWAKE(ch))
+  if(!IS_AWAKE(ch))
   {
     send_to_char("You're in no condition to disengage!\n", ch);
     return;
@@ -6601,7 +6601,7 @@ void do_retreat(P_char ch, char *arg, int cmd)
   if(!SanityCheck(ch, "do_retreat"))
     return;
 
-  if(!AWAKE(ch))
+  if(!IS_AWAKE(ch))
   {
     send_to_char("You're in no condition to retreat!\n", ch);
     return;
@@ -10647,7 +10647,7 @@ bool check_crippling_strike( P_char ch )
         continue;
       }
 
-      if( IS_IMMOBILE(kala) || !AWAKE(kala) || IS_STUNNED(kala)
+      if( IS_IMMOBILE(kala) || !IS_AWAKE(kala) || IS_STUNNED(kala)
         || !IS_HUMANOID(ch) || IS_ELITE(ch))
       {
         continue;

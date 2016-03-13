@@ -1481,7 +1481,7 @@ int wh_janitor(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
 /* Is there anything in the room that we can pick up? Do it! */

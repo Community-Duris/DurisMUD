@@ -77,7 +77,7 @@ int CanDoFightMove(P_char ch, P_char victim)
     return FALSE;
   }
 
-  if( !AWAKE(ch) )
+  if( !IS_AWAKE(ch) )
   {
     send_to_char("You can't do that if you're not awake!\r\n", ch);
     return FALSE;

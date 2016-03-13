@@ -1352,7 +1352,7 @@ void event_fish_check(P_char ch, P_char victim, P_obj, void *data)
 
   if( !ch->desc || IS_FIGHTING(ch) || IS_DESTROYING(ch) || (ch->in_room != fdata->room)
     || !MIN_POS(ch, POS_STANDING + STAT_NORMAL) || IS_SET(ch->specials.affected_by, AFF_HIDE)
-    || IS_IMMOBILE(ch) || !AWAKE(ch) || IS_STUNNED(ch) || IS_CASTING(ch) )
+    || IS_IMMOBILE(ch) || !IS_AWAKE(ch) || IS_STUNNED(ch) || IS_CASTING(ch) )
   {
     send_to_char("You stop fishing.\n", ch);
     return;
@@ -1577,7 +1577,7 @@ void event_mine_check( P_char ch, P_char victim, P_obj, void *data )
   if( !ch->desc || IS_FIGHTING(ch) || IS_DESTROYING(ch)
     || (ch->in_room != mdata->room) || !MIN_POS(ch, POS_STANDING + STAT_NORMAL)
     || IS_SET(ch->specials.affected_by, AFF_HIDE) || IS_IMMOBILE(ch)
-    || !AWAKE(ch) || IS_STUNNED(ch) || IS_CASTING(ch) || IS_AFFECTED2(ch, AFF2_CASTING) )
+    || !IS_AWAKE(ch) || IS_STUNNED(ch) || IS_CASTING(ch) || IS_AFFECTED2(ch, AFF2_CASTING) )
   {
     send_to_char("You stop mining.\n", ch);
     return;

@@ -325,7 +325,7 @@ int demodragon(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!AWAKE(ch))
+  if (!IS_AWAKE(ch))
     return FALSE;
 
   if (dam != 0)
@@ -409,7 +409,7 @@ int room_of_sanctum(int room, P_char ch, int cmd, char *arg)
   if( cmd == CMD_SET_PERIODIC )
     return FALSE;
 
-  if( (cmd != CMD_UNLOCK) || !ch || !AWAKE(ch) )
+  if( (cmd != CMD_UNLOCK) || !ch || !IS_AWAKE(ch) )
     return FALSE;
 
   // What if these mobs have been lured from their rooms?
@@ -500,7 +500,7 @@ int dragon_guard(P_char ch, P_char pl, int cmd, char *arg)
 
   give_proper_stat(ch);
 
-  if (!AWAKE(ch) || IS_FIGHTING(ch))
+  if (!IS_AWAKE(ch) || IS_FIGHTING(ch))
     return FALSE;
 
   if ((world[ch->in_room].zone == world[real_room(6809)].zone) ||

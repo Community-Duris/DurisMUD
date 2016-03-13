@@ -2571,7 +2571,7 @@ void justice_hometown_echo(int town, const char *str)
 
   for (d = descriptor_list; d; d = d->next)
     if ((d->connected == CON_PLYNG) &&
-        (CHAR_IN_TOWN(d->character) == town) && (AWAKE(d->character)))
+        (CHAR_IN_TOWN(d->character) == town) && (IS_AWAKE(d->character)))
     {
       send_to_char(str, d->character);
       send_to_char("\r\n", d->character);

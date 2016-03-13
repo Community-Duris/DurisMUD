@@ -1387,7 +1387,7 @@ int um_durnan(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 50))
@@ -1493,7 +1493,7 @@ int um_mhaere(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 8))
@@ -1522,7 +1522,7 @@ int um_regular(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 5))
@@ -1553,7 +1553,7 @@ int um_gambler(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 15))
@@ -1600,7 +1600,7 @@ int um_tamsil(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 10))
@@ -1634,7 +1634,7 @@ int um_kevlar(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   for (i = 0; i < NUM_EXITS; i++)
@@ -1699,7 +1699,7 @@ int um_thorn(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   LOOP_THRU_PEOPLE(leader, ch)
@@ -1750,7 +1750,7 @@ int um_korelar(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   LOOP_THRU_PEOPLE(leader, ch)
@@ -1797,7 +1797,7 @@ int um_essra(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || !IS_FIGHTING(ch))
+  if (!ch || !IS_AWAKE(ch) || !IS_FIGHTING(ch))
     return FALSE;
 
   switch (number(1, 10))
@@ -1835,7 +1835,7 @@ int um_mezzoloth(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch))
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch))
     return FALSE;
 
   if (pl && (pl != ch))
@@ -2020,7 +2020,7 @@ int malodine_one(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch) || !IS_FIGHTING(ch))
+  if (!ch || !IS_AWAKE(ch) || !IS_FIGHTING(ch))
     return FALSE;
 
   if (IS_FIGHTING(ch))
@@ -2082,7 +2082,7 @@ int malodine_three(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || !pl)
+  if (!ch || !IS_AWAKE(ch) || !pl)
     return FALSE;
 
   if (IS_FIGHTING(ch) && !number(0, 2) && !resists_spell(ch, pl))

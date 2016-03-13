@@ -6990,7 +6990,7 @@ P_char PickTarget(P_char ch)
   }
   
   if(IS_STUNNED(ch) ||
-     !AWAKE(ch) ||
+     !IS_AWAKE(ch) ||
      IS_IMMOBILE(ch))
   {
     return NULL;
@@ -9384,7 +9384,7 @@ void mobact_memoryHandle(P_char mob)
     return;
 
   if(!HAS_MEMORY(mob) || IS_FIGHTING(mob) || ALONE(mob) ||
-      !AWAKE(mob) || (NumAttackers(mob) > 0) || (mob->in_room == NOWHERE))
+      !IS_AWAKE(mob) || (NumAttackers(mob) > 0) || (mob->in_room == NOWHERE))
   {
     return;
   }
@@ -9698,7 +9698,7 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
   /*
    * if sleeping, but not magically, then wake up, and stand them up!
    */
-  if(!AWAKE(ch))
+  if(!IS_AWAKE(ch))
   {
     do_wake(ch, NULL, 0);
 
@@ -10358,7 +10358,7 @@ void MobRetaliateRange(P_char ch, P_char vict)
 #endif // no range breath anymore, circling that really sucks
   /* Higher wimpy set, as they know its tough to charge into an arrow */
 
-  if(AWAKE(ch) && CAN_ACT(ch) && !IS_STUNNED(ch))
+  if(IS_AWAKE(ch) && CAN_ACT(ch) && !IS_STUNNED(ch))
     if(IS_SET(ch->specials.act, ACT_WIMPY) &&
         (GET_HIT(ch) < (GET_LEVEL(ch) * 6)) &&
         room_has_valid_exit(ch->in_room))
@@ -10551,7 +10551,7 @@ void event_agg_attack(P_char ch, P_char victim, P_obj obj, void *data)
 {
   int door;
 
-  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) || victim->in_room == NOWHERE || ch->in_room == NOWHERE || !AWAKE(ch)
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) || victim->in_room == NOWHERE || ch->in_room == NOWHERE || !IS_AWAKE(ch)
     || !MIN_POS(ch, POS_STANDING + STAT_RESTING) || !is_aggr_to(ch, victim) || IS_IMMOBILE(ch) || IS_STUNNED(ch) )
   {
     return;

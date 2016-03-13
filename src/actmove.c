@@ -1564,7 +1564,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
   {
     LOOP_THRU_PEOPLE(tch, ch)
     {
-      if( (ch == tch) || !AWAKE(tch) )
+      if( (ch == tch) || !IS_AWAKE(tch) )
       {
         continue;
       }
@@ -1682,7 +1682,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
 
     LOOP_THRU_PEOPLE(tch, ch)
     {
-      if( (ch == tch) || !AWAKE(tch) )
+      if( (ch == tch) || !IS_AWAKE(tch) )
       {
         continue;
       }

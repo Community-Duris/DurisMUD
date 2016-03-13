@@ -130,7 +130,7 @@ int harpy_evil(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!AWAKE(ch))
+  if (!IS_AWAKE(ch))
     return FALSE;
 
   if (cmd == CMD_GIVE)
@@ -181,7 +181,7 @@ int harpy_good(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!AWAKE(ch))
+  if (!IS_AWAKE(ch))
     return FALSE;
 
   if (cmd == CMD_GIVE)
@@ -233,7 +233,7 @@ int gargoyle_master(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!AWAKE(ch))
+  if (!IS_AWAKE(ch))
     return FALSE;
 
   if (cmd != -2)
@@ -330,7 +330,7 @@ int temple_illyn(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 30))
@@ -354,7 +354,7 @@ int bs_boss(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -887,7 +887,7 @@ int demogorgon(P_char ch, P_char tch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch) || cmd || IS_IMMOBILE(ch))
+  if (!ch || !IS_AWAKE(ch) || cmd || IS_IMMOBILE(ch))
     return FALSE;
 
 /*
@@ -1018,7 +1018,7 @@ int shadow_demon(P_char ch, P_char tch, int cmd, char *arg)
                                  */
     return (FALSE);
 
-  if ((!CAN_SEE(ch, tch) || !CAN_SEE(tch, ch)) || IS_FIGHTING(ch) || !AWAKE(ch))        /*
+  if ((!CAN_SEE(ch, tch) || !CAN_SEE(tch, ch)) || IS_FIGHTING(ch) || !IS_AWAKE(ch))        /*
                                                                                          * if dragon can't see player
                                                                                          */
     return (FALSE);
@@ -1088,7 +1088,7 @@ int tiaka_ghoul(P_char ch, P_char tch, int cmd, char *arg)
   if (cmd != CMD_WHISPER)
     return (FALSE);
 
-  if ((!CAN_SEE(ch, tch) || !CAN_SEE(tch, ch)) || IS_FIGHTING(ch) || !AWAKE(ch))        /*
+  if ((!CAN_SEE(ch, tch) || !CAN_SEE(tch, ch)) || IS_FIGHTING(ch) || !IS_AWAKE(ch))        /*
                                                                                          * if dragon can't see player
                                                                                          */
     return (FALSE);
@@ -1174,7 +1174,7 @@ int mystra_dragon(P_char ch, P_char tch, int cmd, char *arg)
                                  */
     return (FALSE);
 
-  if ((!CAN_SEE(ch, tch) || !CAN_SEE(tch, ch)) || IS_FIGHTING(ch) || !AWAKE(ch))        /*
+  if ((!CAN_SEE(ch, tch) || !CAN_SEE(tch, ch)) || IS_FIGHTING(ch) || !IS_AWAKE(ch))        /*
                                                                                          * if dragon can't see player
                                                                                          */
     return (FALSE);
@@ -1258,7 +1258,7 @@ int hunt_cat(P_char ch, P_char tch, int cmd, char *arg)
   if ((cmd != CMD_WHISPER) && (cmd != CMD_MOUNT))
     return (FALSE);
 
-  if ((!CAN_SEE(ch, tch) || !CAN_SEE(tch, ch)) || IS_FIGHTING(ch) || !AWAKE(ch))        /*
+  if ((!CAN_SEE(ch, tch) || !CAN_SEE(tch, ch)) || IS_FIGHTING(ch) || !IS_AWAKE(ch))        /*
                                                                                          * if cat can't see player
                                                                                          */
     return (FALSE);
@@ -1550,7 +1550,7 @@ int money_changer(P_char me, P_char ch, int cmd, char *arg)
   {
     return FALSE;
   }
-  if (!me || !ch || !AWAKE(me) || IS_FIGHTING(me))
+  if (!me || !ch || !IS_AWAKE(me) || IS_FIGHTING(me))
     return FALSE;
 
   if ((cmd != CMD_EXCHANGE) && (cmd != CMD_LIST))
@@ -1785,14 +1785,14 @@ void exec_social(P_char npc, char *cmd, int next_line, int *cur_line,
     break;
 
   case 'w':
-    if (AWAKE(npc))
+    if (IS_AWAKE(npc))
       ok = FALSE;
     else
       SET_POS(npc, POS_STANDING + STAT_NORMAL);
     break;
 
   case 's':
-    if (!AWAKE(npc))
+    if (!IS_AWAKE(npc))
       ok = FALSE;
     else
       SET_POS(npc, GET_POS(npc) + STAT_SLEEPING);
@@ -2364,7 +2364,7 @@ int guardian(P_char ch, P_char pl, int cmd, char *arg)
      * don't let them get out of position, unless charmed, which shouldn't
      * happen with these guys anyway.
      */
-    if (!AWAKE(ch) || IS_FIGHTING(ch))
+    if (!IS_AWAKE(ch) || IS_FIGHTING(ch))
       return FALSE;
 
     act("$N looks around frantically, then vanishes in a small puff of smoke",
@@ -2495,7 +2495,7 @@ int devour(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if( cmd != CMD_PERIODIC || !AWAKE(ch) )
+  if( cmd != CMD_PERIODIC || !IS_AWAKE(ch) )
     return FALSE;
 
   for (i = world[ch->in_room].contents; i; i = i->next_content)
@@ -2638,7 +2638,7 @@ int shadow_demon_of_torm(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || pl)
+  if (!ch || !IS_AWAKE(ch) || pl)
     return FALSE;
 
   if (cmd != -1)
@@ -3086,7 +3086,7 @@ int ticket_taker(P_char ch, P_char pl, int cmd, char *arg)
 
   if ((cmd != CMD_ENTER) || !ch || !pl)
     return FALSE;
-  if (!AWAKE(ch))
+  if (!IS_AWAKE(ch))
     return FALSE;
   if (!CAN_SEE(ch, pl))
     return FALSE;
@@ -3461,7 +3461,7 @@ int xexos(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch))
+  if (!ch || !IS_AWAKE(ch))
     return FALSE;
 
   if (IS_FIGHTING(ch))
@@ -3576,7 +3576,7 @@ int agthrodos(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch))
+  if (!ch || !IS_AWAKE(ch))
     return FALSE;
 
   /*
@@ -3742,7 +3742,7 @@ int menden_magus(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch) || cmd)
+  if (cmd || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(0, 50))
@@ -3794,7 +3794,7 @@ int menden_fisherman(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(1, 80))
@@ -3977,7 +3977,7 @@ int janitor(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch))
+  if (cmd || !IS_AWAKE(ch))
     return (FALSE);
 
   for (i = world[ch->in_room].contents; i; i = i->next_content)
@@ -4008,7 +4008,7 @@ int cityguard(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (cmd || !AWAKE(ch) || (IS_FIGHTING(ch)))
+  if (cmd || !IS_AWAKE(ch) || (IS_FIGHTING(ch)))
     return (FALSE);
 
   a_flag = (IS_GOOD(ch) ? 1001 : IS_EVIL(ch) ? -1001 : 0);
@@ -4132,7 +4132,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
       /*
        * Actions of questionable intent
        */
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       if (pl->player.sex != 2)
       {
@@ -4144,7 +4144,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_TELL:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       mobsay(ch, "I can talk all day, but only you can buy...");
       return TRUE;
@@ -4153,7 +4153,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
       /*
        * The salesman suffers from acceptance anxiety :-)
        */
-      if (!AWAKE(ch))
+      if (!IS_AWAKE(ch))
         return FALSE;
       do_action(pl, Gbuf1, cmd);
       act("$n smiles too, trying to join in on the fun.",
@@ -4161,7 +4161,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_INSULT:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_insult(pl, arg, 0);
       act("$N humbles you with a greater insult.", FALSE, pl, 0, ch, TO_CHAR);
@@ -4187,7 +4187,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
       /*
        * An exchange of poking
        */
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       do_action(pl, arg, CMD_POKE);
       act("$N pokes you back.", FALSE, pl, 0, ch, TO_CHAR);
@@ -4195,7 +4195,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
       break;
     case CMD_BACKSTAB:
-      if ((c_obj != ch) || (!AWAKE(ch)))
+      if ((c_obj != ch) || (!IS_AWAKE(ch)))
         return FALSE;
       act("Oof! $N knocks you down.", FALSE, pl, 0, ch, TO_CHAR);
       act("$n tries to backstab $N who, more alert than $E appears, slams\r\n"
@@ -4208,7 +4208,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
       /*
        * "To buy is to be" is the salesman's motto...
        */
-      if ((strlen(Gbuf1) == 0) || (!AWAKE(ch)) || !selling)
+      if ((strlen(Gbuf1) == 0) || (!IS_AWAKE(ch)) || !selling)
         return FALSE;
       if (c_obj == ch)
       {
@@ -4312,7 +4312,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
         }
         else
         {
-          if (!AWAKE(ch->following))
+          if (!IS_AWAKE(ch->following))
             return (0);
           Gbuf4[0] = 0;
           switch (number(0, 14))
@@ -4415,7 +4415,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
       }
     }
   }
-  else if (AWAKE(ch))
+  else if (IS_AWAKE(ch))
   {
     if (!ch->light)
     {                           /*
@@ -4789,7 +4789,7 @@ int guru_anapest(P_char ch, P_char pl, int cmd, char *arg)
 
   if (pl)
   {
-    if (!AWAKE(ch))
+    if (!IS_AWAKE(ch))
       return (FALSE);
     argument_interpreter(arg, Gbuf1, Gbuf2);
     who = get_char_room(Gbuf1, ch->in_room);
@@ -4909,7 +4909,7 @@ int taxman(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!AWAKE(ch))
+  if (!IS_AWAKE(ch))
     return (FALSE);
   if (pl)
   {
@@ -5001,7 +5001,7 @@ int mage_anapest(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!AWAKE(ch))
+  if (!IS_AWAKE(ch))
     return (FALSE);
   if (pl)
   {
@@ -5058,7 +5058,7 @@ int farmer(P_char ch, P_char pl, int cmd, char *arg)
 
   if (pl)
   {
-    if (!AWAKE(ch))
+    if (!IS_AWAKE(ch))
       return (FALSE);
     argument_interpreter(arg, Gbuf1, Gbuf2);
     who = get_char_room(Gbuf1, ch->in_room);
@@ -5512,7 +5512,7 @@ int blob(P_char ch, P_char pl, int cmd, char *arg)
     ch->only.npc->spec[0] = 0;
     return TRUE;
   }
-  if (cmd || !AWAKE(ch) || IS_FIGHTING(ch))
+  if (cmd || !IS_AWAKE(ch) || IS_FIGHTING(ch))
     return (FALSE);
 
   i = world[ch->in_room].contents;
@@ -5592,7 +5592,7 @@ int boulder_pusher(P_char ch, P_char t_ch, int cmd, char *arg)
   {
     return (FALSE);
   }
-  if (IS_FIGHTING(ch) || !AWAKE(ch))
+  if (IS_FIGHTING(ch) || !IS_AWAKE(ch))
     return (FALSE);
 
   switch (world[ch->in_room].number)
@@ -6275,7 +6275,7 @@ int chicken(P_char ch, P_char pl, int cmd, char *arg)
   {
     return (FALSE);
   }
-  if (AWAKE(ch) || !IS_FIGHTING(ch))
+  if (IS_AWAKE(ch) || !IS_FIGHTING(ch))
   {
     switch (number(1, 25))
     {
@@ -6315,7 +6315,7 @@ int cc_fisherffolk(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6348,7 +6348,7 @@ int cc_female_ffolk(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6382,7 +6382,7 @@ int cc_warehouse_man(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6416,7 +6416,7 @@ int cc_warehouse_foreman(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6455,7 +6455,7 @@ int barbarian_spiritist(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(0, 5))
@@ -6666,7 +6666,7 @@ int nw_woodelf(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6701,7 +6701,7 @@ int nw_elfhealer(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6737,7 +6737,7 @@ int nw_ammaster(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6772,7 +6772,7 @@ int nw_sapmaster(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6807,7 +6807,7 @@ int nw_diamaster(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6843,7 +6843,7 @@ int nw_rubmaster(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6878,7 +6878,7 @@ int nw_emmaster(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6914,7 +6914,7 @@ int nw_human(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 80))
@@ -6950,7 +6950,7 @@ int nw_hafbreed(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -6975,7 +6975,7 @@ int nw_owl(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7010,7 +7010,7 @@ int nw_golem(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7045,7 +7045,7 @@ int nw_agatha(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7082,7 +7082,7 @@ int nw_farmer(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7117,7 +7117,7 @@ int nw_chicken(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7152,7 +7152,7 @@ int nw_pig(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7187,7 +7187,7 @@ int nw_cow(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7211,7 +7211,7 @@ int nw_chief(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7246,7 +7246,7 @@ int nw_malchor(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7280,7 +7280,7 @@ int nw_builder(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7314,7 +7314,7 @@ int nw_carpen(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7348,7 +7348,7 @@ int nw_logger(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7382,7 +7382,7 @@ int nw_cutter(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7416,7 +7416,7 @@ int nw_foreman(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7450,7 +7450,7 @@ int nw_ansal(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7485,7 +7485,7 @@ int nw_vitnor(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7519,7 +7519,7 @@ int nw_brock(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7553,7 +7553,7 @@ int nw_merthol(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 100))
@@ -7620,7 +7620,7 @@ void nw_block_exit(int room, int dir, int flag)
       {
         LOOP_THRU_PEOPLE(t_ch, world[i].people)
         {
-          if( AWAKE(t_ch) && !IS_AFFECTED(t_ch, AFF_BLIND) )
+          if( IS_AWAKE(t_ch) && !IS_AFFECTED(t_ch, AFF_BLIND) )
           {
             if( !IS_SET(world[i].room_flags, ROOM_SILENT) )
             {
@@ -7631,7 +7631,7 @@ void nw_block_exit(int room, int dir, int flag)
               send_to_char(Gbuf1, t_ch);
             }
           }
-          else if( AWAKE(t_ch) )
+          else if( IS_AWAKE(t_ch) )
           {
             send_to_char(Gbuf3, t_ch);
           }
@@ -7641,7 +7641,7 @@ void nw_block_exit(int room, int dir, int flag)
       {
         LOOP_THRU_PEOPLE(t_ch, world[i].people)
         {
-          if( AWAKE(t_ch) )
+          if( IS_AWAKE(t_ch) )
           {
             send_to_char(Gbuf3, t_ch);
           }
@@ -7746,7 +7746,7 @@ int nw_mirroid(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (pl || cmd || !AWAKE(ch) || !CAN_ACT(ch))
+  if (pl || cmd || !IS_AWAKE(ch) || !CAN_ACT(ch))
     return FALSE;
 
   c_room = ch->in_room;
@@ -8181,7 +8181,7 @@ int ghore_paradise(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch))
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch))
     return FALSE;
 
   if (ch->in_room == real_room(11666))
@@ -8288,7 +8288,7 @@ int warhorse(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd || !IS_FIGHTING(ch) || !CAN_ACT(ch))
+  if (!ch || !IS_AWAKE(ch) || cmd || !IS_FIGHTING(ch) || !CAN_ACT(ch))
     return FALSE;
 
   /*
@@ -8362,7 +8362,7 @@ int warhorse(P_char ch, P_char pl, int cmd, char *arg)
        */
       for (i = 1; i < 4; i++)
       {
-        if (!AWAKE(vict) || !StatSave(vict, APPLY_AGI, -2))
+        if (!IS_AWAKE(vict) || !StatSave(vict, APPLY_AGI, -2))
         {
           if( damage(ch, vict, ( dice(ch->points.damnodice, ch->points.damsizedice) + TRUE_DAMROLL(ch) ),
             TYPE_UNDEFINED) )
@@ -8442,7 +8442,7 @@ int warhorse(P_char ch, P_char pl, int cmd, char *arg)
     if (!number(0, 10))
       Stun(vict, ch, PULSE_VIOLENCE * 2, FALSE);
     update_pos(vict);
-    if (AWAKE(vict))
+    if (IS_AWAKE(vict))
       CharWait(vict, 2 * PULSE_VIOLENCE);
     CharWait(ch, PULSE_VIOLENCE);
 
@@ -8518,7 +8518,7 @@ int ice_snooty_wife(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 15))
@@ -8548,7 +8548,7 @@ int ice_cleaning_crew(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 15))
@@ -8574,7 +8574,7 @@ int ice_artist(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 15))
@@ -8601,7 +8601,7 @@ int ice_privates(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 15))
@@ -8629,7 +8629,7 @@ int ice_masha(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch))
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch))
     return FALSE;
 
   if ((cmd == CMD_GET) && pl && (pl != ch) &&
@@ -8661,7 +8661,7 @@ int ice_tubby_merchant(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 15))
@@ -8695,7 +8695,7 @@ int ice_priest(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 15))
@@ -8724,7 +8724,7 @@ int ice_garden_attendant(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 30))
@@ -8754,7 +8754,7 @@ int ice_raucous_guest(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 8))
@@ -8789,7 +8789,7 @@ int ice_tar(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 40))
@@ -8815,7 +8815,7 @@ int ice_commander(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 15))
@@ -8844,7 +8844,7 @@ int ice_viscount(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 15))
@@ -8872,7 +8872,7 @@ int ice_masonary_crew(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 3))
@@ -8894,7 +8894,7 @@ int ice_impatient_guest(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(1, 15))
@@ -8923,7 +8923,7 @@ int ice_privates2(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd || ch->following)
+  if (!ch || !IS_AWAKE(ch) || cmd || ch->following)
     return FALSE;
 
   LOOP_THRU_PEOPLE(leader, ch)
@@ -8947,7 +8947,7 @@ int ice_bodyguards(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || cmd || pl || !AWAKE(ch))
+  if (!ch || cmd || pl || !IS_AWAKE(ch))
     return FALSE;
 
   LOOP_THRU_PEOPLE(blockee, ch)
@@ -8981,7 +8981,7 @@ int ice_wolf(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch))
+  if (!ch || !IS_AWAKE(ch))
     return FALSE;
 
   /*
@@ -9172,7 +9172,7 @@ int ice_malice(P_char ch, P_char pl, int cmd, char *arg)
 
     return TRUE;
   }
-  if (!ch || !AWAKE(ch) || !IS_FIGHTING(ch) || cmd || !CAN_ACT(ch))
+  if (!ch || !IS_AWAKE(ch) || !IS_FIGHTING(ch) || cmd || !CAN_ACT(ch))
     return FALSE;
 
   /*
@@ -9414,7 +9414,7 @@ int jotun_mimer(P_char ch, P_char pl, int cmd, char *arg)
   if ((ch->in_room != real_room(GET_BIRTHPLACE(ch))) ||
       (ch->in_room == NOWHERE))
   {
-    if (!AWAKE(ch) || IS_FIGHTING(ch))
+    if (!IS_AWAKE(ch) || IS_FIGHTING(ch))
       return FALSE;
     act("$N looks around frantically, then vanishes in a small puff of smoke",
         FALSE, ch, 0, 0, TO_ROOM);
@@ -9908,7 +9908,7 @@ int rentacleric(P_char ch, P_char vict, int cmd, char *argument)
     return TRUE;
   }
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch))
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch))
     return FALSE;
 
   if (cmd == CMD_BUY)
@@ -11333,7 +11333,7 @@ int fooquest_mob(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch))
+  if (!ch || !IS_AWAKE(ch))
     return FALSE;
 
   /*
@@ -12380,7 +12380,7 @@ int undead_parrot(P_char ch, P_char pl, int cmd, char *arg)
       break;
     }
 
-    if (!ch || !AWAKE(ch) || IS_FIGHTING(ch))
+    if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch))
       return FALSE;
 
     switch (number(0, 100))
@@ -12491,7 +12491,7 @@ int pirate_talk(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -12527,7 +12527,7 @@ int pirate_female_talk(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -12569,7 +12569,7 @@ int pirate_cabinboy_talk(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -12615,7 +12615,7 @@ int shabo_butler(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch))
+  if (!ch || !IS_AWAKE(ch))
     return FALSE;
 
   /*
@@ -12801,7 +12801,7 @@ int cow_talk(P_char ch, P_char tch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(0, 40))
@@ -12867,7 +12867,7 @@ int annoying_mob(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
   if (cmd == 0)
   {
@@ -12916,7 +12916,7 @@ int shabo_petre(P_char ch, P_char pl, int cmd, char *arg)
     return FALSE;               //TRUE;
 
   if(!ch ||
-    !AWAKE(ch) ||
+    !IS_AWAKE(ch) ||
     cmd)
   {
     return FALSE;
@@ -13016,7 +13016,7 @@ int ako_hypersquirrel(P_char ch, P_char pl, int cmd, char *arg)
 {
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -13060,7 +13060,7 @@ int ako_songbird(P_char ch, P_char pl, int cmd, char *arg)
     }
   }
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
 
@@ -13091,7 +13091,7 @@ int ako_vulture(P_char ch, P_char pl, int cmd, char *arg)
 {
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -13120,7 +13120,7 @@ int ako_wildmare(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -13143,7 +13143,7 @@ int ako_cow(P_char ch, P_char pl, int cmd, char *arg)
 {
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -13193,7 +13193,7 @@ int raoul(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
   strcpy(buf, "christine");
 
@@ -13329,7 +13329,7 @@ int christine(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
   strcpy(buf, "raoul");
   if (cmd == 0)
@@ -13434,7 +13434,7 @@ int cookie_monster(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
   if (cmd == 0)
   {
@@ -14685,7 +14685,7 @@ int io_assistant(P_char ch, P_char pl, int cmd, char *arg)
     return FALSE;
   }
 
-  if (!ch || !AWAKE(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || cmd)
     return FALSE;
 
   int realroom44 = real_room0(44);
@@ -14813,7 +14813,7 @@ int bs_citizen(P_char ch, P_char pl, int cmd, char *arg)
       if (cmd == CMD_SET_PERIODIC)
          return TRUE;
                 
-      if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+      if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
           return FALSE;
                       
           switch (number(0, 100))
@@ -14856,7 +14856,7 @@ int bs_comwoman(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -14897,7 +14897,7 @@ int bs_brat(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -14939,7 +14939,7 @@ int bs_holyman(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -14985,7 +14985,7 @@ int bs_merchant(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15021,7 +15021,7 @@ int bs_wino(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15074,7 +15074,7 @@ int bs_watcher(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 50))
@@ -15109,7 +15109,7 @@ int bs_guard(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 80))
@@ -15147,7 +15147,7 @@ int bs_squire(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 80))
@@ -15183,7 +15183,7 @@ int bs_peddler(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 80))
@@ -15220,7 +15220,7 @@ int bs_critter(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   if (devour(ch, pl, cmd, arg))
@@ -15252,7 +15252,7 @@ int bs_timid(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15294,7 +15294,7 @@ int bs_shady(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15333,7 +15333,7 @@ int bs_sinister(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15371,7 +15371,7 @@ int bs_menacing(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 80))
@@ -15398,7 +15398,7 @@ int bs_executioner(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15442,7 +15442,7 @@ int bs_baron(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15492,7 +15492,7 @@ int bs_sparrow(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 80))
@@ -15522,7 +15522,7 @@ int bs_squirrel(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 80))
@@ -15551,7 +15551,7 @@ int bs_crow(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 80))
@@ -15582,7 +15582,7 @@ int bs_mountainman(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15620,7 +15620,7 @@ int bs_salesman(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15653,7 +15653,7 @@ int bs_nomad(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15688,7 +15688,7 @@ int bs_insane(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15732,7 +15732,7 @@ int bs_homeless(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15785,7 +15785,7 @@ int bs_servant(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15825,7 +15825,7 @@ int bs_wolf(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   if (devour(ch, pl, cmd, arg))
@@ -15864,7 +15864,7 @@ int bs_gnoll(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15893,7 +15893,7 @@ int bs_ettin(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15925,7 +15925,7 @@ int bs_griffon(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15961,7 +15961,7 @@ int bs_boar(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -15994,7 +15994,7 @@ int bs_cub(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 100))
@@ -16028,7 +16028,7 @@ int bs_fierce(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   if (devour(ch, pl, cmd, arg))
@@ -16069,7 +16069,7 @@ int bs_stirge(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
-  if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
+  if (!ch || !IS_AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
   switch (number(0, 80))

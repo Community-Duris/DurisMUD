@@ -65,7 +65,7 @@ int berserker_proc_room(int room, P_char ch, int cmd, char *arg)
     return FALSE;
   }
 
-  if( IS_FIGHTING(ch) || IS_IMMOBILE(ch) || !AWAKE(ch) )
+  if( IS_FIGHTING(ch) || IS_IMMOBILE(ch) || !IS_AWAKE(ch) )
   {
     send_to_char("&+yYou are unable to use this command at this time...\r\n", ch);
     return TRUE;
@@ -1178,7 +1178,7 @@ int automaton_trapdoor(int room, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!ch || !AWAKE(ch))
+  if (!ch || !IS_AWAKE(ch))
     return FALSE;
 
   /*

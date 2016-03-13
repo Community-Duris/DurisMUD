@@ -240,7 +240,7 @@ void event_astral_clock(P_char ch, P_char victim, P_obj obj, void *data)
     for (d = descriptor_list; d; d = d->next)
     {
       if ((d->connected == CON_PLYNG) && (d->character)
-          && (AWAKE(d->character)))
+          && (IS_AWAKE(d->character)))
       {
         int      r = d->character->in_room;
 
@@ -964,12 +964,15 @@ void send_to_weather_sector(int z, const char *msg)
   if (z > 99)
     return;
   for (i = descriptor_list; i; i = i->next)
-    if (!i->connected && (in_weather_sector(i->character->in_room) == z)
+  {
+    if( !i->connected && (in_weather_sector(i->character->in_room) == z)
         && NORMAL_PLANE(i->character->in_room) && OUTSIDE(i->character)
         && !IS_SET(world[i->character->in_room].room_flags, NO_PRECIP)
         && !IS_SET(world[i->character->in_room].room_flags, DARK)
-        && i->character->specials.z_cord >= 0)
+        && i->character->specials.z_cord >= 0
+        && !IS_BLIND(i->character) && IS_AWAKE(i->character) )
     {
       send_to_char(msg, i->character);
     }
+  }
 }

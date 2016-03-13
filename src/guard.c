@@ -216,7 +216,7 @@ P_char guard_check(P_char attacker, P_char victim)
       guard == attacker ||
       GET_POS(guard) != POS_STANDING ||
       GET_STAT(guard) != STAT_NORMAL ||
-      !AWAKE(guard) ||
+      !IS_AWAKE(guard) ||
       affected_by_spell(guard, SKILL_GUARD) ||
       IS_IMMOBILE(guard) ||
       IS_BLIND(guard))

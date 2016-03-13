@@ -3368,9 +3368,9 @@ void do_hamstring(P_char ch, char *arg, int cmd)
 
   appear(ch);
 
-  if (IS_AFFECTED(vict, AFF_AWARE) && AWAKE(vict))
+  if (IS_AFFECTED(vict, AFF_AWARE) && IS_AWAKE(vict))
     skl_lvl -= 10;
-  else if (AWAKE(vict) && IS_AFFECTED(vict, AFF_SKILL_AWARE))
+  else if (IS_AWAKE(vict) && IS_AFFECTED(vict, AFF_SKILL_AWARE))
   {
     for (af = vict->affected; af; af = af->next)
     {

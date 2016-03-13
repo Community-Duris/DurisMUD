@@ -3291,7 +3291,7 @@ void act(const char *str, int hide_invisible, P_char ch, P_obj obj, void *vict_o
   for( ; to; to = to->next_in_room )
   {
     // Viewing character needs a descriptor to send to, needs to be awake, and match z-requirements...
-    if( to->desc && AWAKE(to) && (ignore_zcoord || ( to->specials.z_cord == which_z ))
+    if( to->desc && IS_AWAKE(to) && (ignore_zcoord || ( to->specials.z_cord == which_z ))
     //   needs to not be ignoring target ch
       && (IS_NPC( to ) || !to->only.pc->ignored || ( to->only.pc->ignored != ch ))
     //   needs to match the target type: Only TO_CHAR is shown to ch, NOTVICT/NOTVICTROOM doesn't show to victim.

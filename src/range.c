@@ -743,7 +743,7 @@ void do_fire(P_char ch, char *argument, int cmd)
 
       // Check for shield block.
       shield = victim->equipment[WEAR_SHIELD];
-      if( shield && GET_ITEM_TYPE(shield) == ITEM_SHIELD && !IS_IMMOBILE(victim) && AWAKE(victim) )
+      if( shield && GET_ITEM_TYPE(shield) == ITEM_SHIELD && !IS_IMMOBILE(victim) && IS_AWAKE(victim) )
       {
         // Maxxed out char with 100 stats => 100 + 50 + 50 + 20 + 20 = 240
         int block_chance = (int)( GET_CHAR_SKILL(victim, SKILL_SHIELD_BLOCK) + (GET_C_AGI(victim) / 2)
