@@ -1445,19 +1445,25 @@ int ship_panel_proc(P_obj obj, P_char ch, int cmd, char *arg)
         return FALSE;
     }
 
-    if ((cmd == CMD_GET) && arg) 
+    if ((cmd == CMD_GET) && arg)
     {
-        if (isname(arg, "coins money")) 
+        if (isname(arg, "coins money"))
         {
             return claim_coffer(ch, ship);
         }
         return FALSE;
     }
-    if ((cmd == CMD_ORDER) && arg) 
+    if( (cmd == CMD_ORDER) && arg )
     {
         half_chop(arg, arg1, tmp_str);
+        if( *arg1 != '\0' && is_abbrev(arg1, "fire") )
+        {
+          ship_panel_proc(obj, ch, CMD_FIRE, tmp_str);
+          return TRUE;
+        }
+
         half_chop(tmp_str, arg2, arg3);
-      
+
         if (!(isname(arg1, "sail sa") ||
               isname(arg1, "jettison j") || isname(arg1, "salvage") ||
               isname(arg1, "undock") ||
