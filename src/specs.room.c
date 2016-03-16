@@ -821,40 +821,48 @@ int pet_shops(int room, P_char ch, int cmd, char *arg)
   P_obj    ticket;
 
   /* check for periodic event calls */
-  if (cmd == CMD_SET_PERIODIC)
+  if( cmd == CMD_SET_PERIODIC )
     return FALSE;
 
-  if (!ch)
-    return (FALSE);
+  if( !IS_ALIVE(ch) )
+    return  FALSE;
 
   pet_room = ch->in_room + 1;
 
-  if (cmd == CMD_LIST)
-  {                             /* List */
+  if( cmd == CMD_LIST )
+  {
     send_to_char("Available hirelings are:\r\n", ch);
-    for (pet = world[pet_room].people, count = 0; pet; pet = pet->next_in_room)
+    for( pet = world[pet_room].people, count = 0; pet; pet = pet->next_in_room )
     {
       temp = 8 * GET_EXP(pet);
       sprintf(buf, "[%d] %s for %s.\r\n", ++count, pad_ansi(pet->player.short_descr, 25, TRUE).c_str(), coin_stringv(temp));
       send_to_char(buf, ch);
     }
-    return (TRUE);
+    return TRUE;
   }
-  else if (cmd == CMD_BUY)
-  {                             /* Buy */
+  else if( cmd == CMD_BUY )
+  {
 
     arg = one_argument(arg, buf);
 
-    if (!(pet = get_char_room(buf, pet_room)))
-      if (atoi(buf))
-        for (pet = world[pet_room].people; pet; pet = pet->next_in_room)
-          if (++count == atoi(buf))
+    if( !(pet = get_char_room(buf, pet_room)) )
+    {
+      if( (count = atoi(buf)) > 0 )
+      {
+        for( pet = world[pet_room].people; pet; pet = pet->next_in_room )
+        {
+          if( --count == 0 )
+          {
             break;
+          }
+        }
+      }
+    }
 
-    if (!pet)
+    if( !pet )
     {
       send_to_char("There is no such pet!\r\n", ch);
-      return (TRUE);
+      return TRUE;
     }
     if( (GET_LEVEL(pet) + 5) > GET_LEVEL(ch))
     {
