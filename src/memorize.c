@@ -1501,7 +1501,10 @@ void do_memorize(P_char ch, char *argument, int cmd)
         sbook = SpellInSpellBook(ch, first_to_mem, SBOOK_MODE_IN_INV | SBOOK_MODE_AT_HAND |
           SBOOK_MODE_ON_BELT | SBOOK_MODE_ON_GROUND);
         send_to_char("You continue your study.\n", ch);
-        strcpy(Gbuf1, "$n opens $p and begins studying it intently.");
+        if( sbook )
+          strcpy(Gbuf1, "$n opens $p and begins studying it intently.");
+        else
+          strcpy(Gbuf1, "$n looks down at $s lap and begins studying it intently.");
       }
       else
       {
