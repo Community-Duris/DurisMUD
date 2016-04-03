@@ -1898,6 +1898,19 @@ void do_dismiss(P_char ch, char *argument, int cmd)
   P_char   victim, next_vict;
   int i, j, count = 0, desired = 0;
 
+  if( cmd != CMD_DEATH )
+  {
+    if( !IS_ALIVE(ch) )
+    {
+      return;
+    }
+    if( IS_NPC(ch) )
+    {
+      send_to_char( "Hey.  Don't throw yer friends away.\n", ch );
+      return;
+    }
+  }
+
   if( GET_CLASS(ch, CLASS_BARD) && cmd != CMD_DEATH )
   {
     for (k = ch->followers; k; k = x)
