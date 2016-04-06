@@ -30,6 +30,7 @@ extern const struct stat_data stat_factor[];
 extern struct str_app_type str_app[];
 extern struct zone_data *zone_table;
 extern int mini_mode;
+extern const int new_exp_table[];
 
 #define QUEST_FILE "areas/world.qst"
 #define MINI_QUEST_FILE "areas/mini.qst"
@@ -315,12 +316,15 @@ void give_reward(struct quest_complete_data *qcp, P_char mob, P_char pl)
 		}  else temp = 1;
 			*/
 
-			temp = 1;
-      gain_exp(pl, NULL, gp->number / temp, EXP_QUEST);
+      // Capping exp at 1 notch per quest.
+			temp = gp->number;
+      if( temp > new_exp_table[GET_LEVEL(pl)+1] / 10 )
+        temp = new_exp_table[GET_LEVEL(pl)+1] / 10;
+      gain_exp(pl, NULL, temp, EXP_QUEST);
       send_to_char("You gain some experience.\n", pl);
-      statuslog(58, "%s was rewarded %d experience by %s", GET_NAME(pl), gp->number/ temp, mob->player.short_descr );
-      sql_log(pl, QUESTLOG, "Rewarded %d experience by %s", gp->number/ temp, mob->player.short_descr );
-      
+      statuslog(58, "%s was rewarded %d experience by %s", GET_NAME(pl), temp, mob->player.short_descr );
+      sql_log(pl, QUESTLOG, "Rewarded %d experience by %s", temp, mob->player.short_descr );
+
       if( pl->group )
       {
         for( struct group_list *gl = pl->group; gl; gl = gl->next )
@@ -331,9 +335,15 @@ void give_reward(struct quest_complete_data *qcp, P_char mob, P_char pl)
             continue;
           if( gl->ch->in_room == pl->in_room)
           {
-            gain_exp(gl->ch, NULL, gp->number / temp, EXP_QUEST);
+            temp = gp->number;
+            if( temp > new_exp_table[GET_LEVEL(gl->ch)+1] / 10 )
+              temp = new_exp_table[GET_LEVEL(gl->ch)+1] / 10;
+      			temp = gp->number;
+            if( temp > new_exp_table[GET_LEVEL(gl->ch)+1] )
+              temp = new_exp_table[GET_LEVEL(gl->ch)+1];
+            gain_exp(gl->ch, NULL, temp, EXP_QUEST);
             send_to_char("You gain some experience.\n", gl->ch);
-            statuslog(58, "%s was rewarded %d experience by %s", GET_NAME(gl->ch), gp->number/ temp, mob->player.short_descr );
+            statuslog(58, "%s was rewarded %d experience by %s", GET_NAME(gl->ch), temp, mob->player.short_descr );
             sql_log(gl->ch, QUESTLOG, "Rewarded %d experience by %s", gp->number/ temp, mob->player.short_descr );
           }          
         }
