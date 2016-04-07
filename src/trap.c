@@ -403,7 +403,7 @@ bool checkmovetrap(P_char ch, int dir)
   P_obj    obj, obj_next;
   bool     found;
 
-  if (!world[ch->in_room].contents)
+  if( !world[ch->in_room].contents || IS_TRUSTED(ch) || (IS_NPC( ch ) && !IS_PC_PET( ch )) )
     return FALSE;
 
   for (obj = world[ch->in_room].contents; obj; obj = obj_next)
