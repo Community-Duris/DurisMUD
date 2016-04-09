@@ -3293,8 +3293,7 @@ int good_evil_stoneOrSoulshield(P_obj obj)
 
 }
 
-void good_evil_procDrain(P_char ch, P_obj obj, P_char opponent,
-                         int *swordMana)
+void good_evil_procDrain(P_char ch, P_obj obj, P_char opponent, int *swordMana)
 {
   act("Your $p &+Rglows&N as it &+rbites deeply&n into $N&n", FALSE, ch, obj,
       opponent, TO_CHAR);
@@ -3307,8 +3306,7 @@ void good_evil_procDrain(P_char ch, P_obj obj, P_char opponent,
   *swordMana += 100;
 }
 
-int good_evil_attemptFightProc(P_char ch, P_obj obj, P_char opponent,
-                               int procMana, int *swordMana)
+int good_evil_attemptFightProc(P_char ch, P_obj obj, P_char opponent, int procMana, int *swordMana)
 {
 
   act("$p &+Wglows brightly&N for a moment.", FALSE, ch, obj, 0, TO_CHAR);
@@ -14549,4 +14547,123 @@ int moonstone(P_obj obj, P_char ch, int cmd, char *argument)
   }
 
   return FALSE;
+}
+
+int random_gc_room( )
+{
+  int rroom;
+
+  // Pick a random map room
+  while( rroom = real_room0(number( SURFACE_MAP_START, SURFACE_MAP_END )) )
+  {
+    // If it's on gc and not on mountains, return it.
+    if( IS_CONTINENT(rroom, CONT_GC) && world[rroom].sector_type != SECT_MOUNTAIN )
+    {
+      return rroom;
+    }
+  }
+}
+
+int gc_portal( P_obj obj, P_char ch, int cmd, char *argument )
+{
+  char buf[MAX_INPUT_LENGTH];
+
+  if( cmd == CMD_SET_PERIODIC )
+    return FALSE;
+
+  if( !IS_ALIVE(ch) )
+    return FALSE;
+
+  if( cmd != CMD_ENTER )
+    return FALSE;
+
+  one_argument(argument, buf);
+  // If not the right portal..
+  if( obj != get_obj_in_list(buf, world[ch->in_room].contents) )
+  {
+    return FALSE;
+  }
+
+  if( GET_LEVEL(ch) > 35 && !IS_TRUSTED(ch) )
+  {
+    act("&+LA strong force pushes you away from $p&+L.", FALSE, ch, obj, 0, TO_CHAR);
+    return TRUE;
+  }
+
+  // Add ch enters portal message here.
+  act("&+L$n &+Lenters $p &+Land quickly fades to nothing!", FALSE, ch, obj, 0, TO_ROOM);
+  act("&+LAs you enter $p&+L, you feel your body begin to be torn apart!", FALSE, ch, obj, 0, TO_CHAR);
+
+  // Move ch to random room on gc.
+  char_from_room( ch );
+  char_to_room( ch, random_gc_room(), -2 );
+
+  // Destroy eq here.
+
+  // Add ch appears here.
+  // Add message to ch here.
+  act("&+LSuddenly, you feel your body reform...", FALSE, ch, obj, 0, TO_CHAR);
+  act("&+LSuddenly, $n &+Lforms out of nothing...", FALSE, ch, obj, 0, TO_ROOM);
+  do_look( ch, NULL, -4 );
+
+  return TRUE;
+}
+int random_ec_room( )
+{
+  int rroom;
+
+  // Pick a random map room
+  while( rroom = real_room0(number( SURFACE_MAP_START, SURFACE_MAP_END )) )
+  {
+    // If it's on gc and not on mountains, return it.
+    if( IS_CONTINENT(rroom, CONT_EC) && world[rroom].sector_type != SECT_MOUNTAIN )
+    {
+      return rroom;
+    }
+  }
+}
+
+int ec_portal( P_obj obj, P_char ch, int cmd, char *argument )
+{
+  char buf[MAX_INPUT_LENGTH];
+
+  if( cmd == CMD_SET_PERIODIC )
+    return FALSE;
+
+  if( !IS_ALIVE(ch) )
+    return FALSE;
+
+  if( cmd != CMD_ENTER )
+    return FALSE;
+
+  one_argument(argument, buf);
+  // If not the right portal..
+  if( obj != get_obj_in_list(buf, world[ch->in_room].contents) )
+  {
+    return FALSE;
+  }
+
+  if( GET_LEVEL(ch) > 35 && !IS_TRUSTED(ch) )
+  {
+    act("&+LA strong force pushes you away from $p&+L.", FALSE, ch, obj, 0, TO_CHAR);
+    return TRUE;
+  }
+
+  // Add ch enters portal message here.
+  act("&+L$n &+Lenters $p &+Land quickly fades to nothing!", FALSE, ch, obj, 0, TO_ROOM);
+  act("&+LAs you enter $p&+L, you feel your body begin to be torn apart!", FALSE, ch, obj, 0, TO_CHAR);
+
+  // Move ch to random room on gc.
+  char_from_room( ch );
+  char_to_room( ch, random_ec_room(), -2 );
+
+  // Destroy eq here.
+
+  // Add ch appears here.
+  // Add message to ch here.
+  act("&+LSuddenly, you feel your body reform...", FALSE, ch, obj, 0, TO_CHAR);
+  act("&+LSuddenly, $n &+Lforms out of nothing...", FALSE, ch, obj, 0, TO_ROOM);
+  do_look( ch, NULL, -4 );
+
+  return TRUE;
 }

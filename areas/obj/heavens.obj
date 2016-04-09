@@ -4877,6 +4877,34 @@ gates town~
 These massive gates are apparently fashioned from a single piece of grey
 stone.
 ~
+#465
+swirling rift _id_~
+&+La swirling rift&n~
+&+LA swirling rift&n &+wshifts&n and &+chowls&n here.~
+~
+12 1 3 0 15 0 67117056 0 64 0 0
+0 0 0 0 0 0 0 0
+100000 1000000 100
+E
+swirling rift~
+&+LThis portal &+wswirls&+L and &+chowls&+L and &nshifts&+L.
+&+LYou feel compelled to look in it, and see the lush grounds of
+&+Lthe &+Wgood continent&+L.  Perhaps you could enter?
+~
+#466
+swirling rift _id_~
+&+La swirling rift&n~
+&+LA swirling rift&n &+wshifts&n and &+rhowls&n here.~
+~
+12 1 3 0 15 0 67117056 0 64 0 0
+0 0 0 0 0 0 0 0
+100000 1000000 100
+E
+swirling rift~
+&+LThis portal &+wswirls&+L and &+rhowls&+L and &nshifts&+L.
+&+LYou feel compelled to look in it, and see the tainted grounds
+&+Lof the &+revil continent&+L.  Perhaps you could enter?
+~
 #499
 lohrr pain equipment~
 &+gLohrr's item of pain&N~
