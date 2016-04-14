@@ -365,6 +365,7 @@ O 0 97545 3 97588 100 0 0 0        * a large bed
 O 0 3097 99 97604 100 0 0 0        * (object type not in this .obj file)
 O 0 97556 2 97628 100 0 0 0        * a large fountain
 O 0 90 1 97628 100 0 0 0           * (object type not in this .obj file)
+O 0 465 1 97628 100 0 0 0          * (object type not in this .obj file)
 O 0 92 999 97653 100 0 0 0         * (object type not in this .obj file)
 O 0 97546 1 97654 100 0 0 0        * a large well
 O 0 97545 3 97688 100 0 0 0        * a large bed

@@ -2,7 +2,7 @@
 &+rKhildarak Stronghold&n~
 17750 2 4 25 30 1
 *
-* Zone edited with durisEdit v3.00
+* Zone edited with durisEdit v3.02
 *
 *
 D 0 17000 0 8 100 0 0 0
@@ -2123,6 +2123,7 @@ O 0 17011 1 17001 100 0 0 0        * a rock
 O 0 17000 1 17021 100 0 0 0        * a statue of Khildarak Strongstone
 O 0 17001 1 17021 100 0 0 0        * a pool of water
 O 0 90 999 17021 100 0 0 0         * (object type not in this .obj file)
+O 0 465 1 17021 100 0 0 0          * (object type not in this .obj file)
 O 0 17007 1 17058 100 0 0 0        * a bookcase
 O 0 17016 1 17069 100 0 0 0        * a bookcase
 O 0 17004 1 17070 100 0 0 0        * the layer of ash

@@ -511,6 +511,7 @@ O 0 132503 1 132573 100 0 0 0      * an engraved ivory fountain
 O 0 132504 1 132573 100 0 0 0      * an onyx plaque
 O 0 90 999 132573 100 0 0 0        * (object type not in this .obj file)
 O 0 132627 1 132573 100 0 0 0      * a shingle
+O 0 466 1 132573 100 0 0 0         * (object type not in this .obj file)
 O 0 92 999 132574 100 0 0 0        * (object type not in this .obj file)
 O 0 132511 3 132574 100 0 0 0      * a stone hearth
 O 0 67900 999 132574 100 0 0 0     * (object type not in this .obj file)
