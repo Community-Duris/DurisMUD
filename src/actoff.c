@@ -4767,7 +4767,14 @@ bool is_preparing_for_sneaky_strike(P_char ch)
 void sneaky_strike(P_char ch, P_char victim )
 {
   struct affected_type af;
-  P_obj weapon = ch->equipment[WIELD];
+  P_obj weapon;
+  int size_diff;
+
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+    return;
+
+  weapon = ch->equipment[WIELD];
+  size_diff = GET_SIZE(ch) - GET_SIZE(victim);
 
   if(!weapon)
   {
@@ -4783,9 +4790,21 @@ void sneaky_strike(P_char ch, P_char victim )
       if(!weapon && !(weapon = ch->equipment[WIELD3]))
         if(!weapon && !(weapon = ch->equipment[WIELD4]))*/
         {
-          send_to_char("You must be wielding a weapon.\r\n", ch);
+          act( "$p is not a weapon.", FALSE, ch, weapon, NULL, TO_CHAR );
           return;
         }
+
+  // Size limits 1 up 1 down.
+  if( size_diff > 1 )
+  {
+    act( "$N is too small for you to strike at like that.", FALSE, ch, NULL, (void *)victim, TO_CHAR );
+    return;
+  }
+  if( size_diff < -1 )
+  {
+    act( "$N is too big for you to strike at like that.", FALSE, ch, NULL, (void *)victim, TO_CHAR );
+    return;
+  }
 
   send_to_char("You think you noticed an opening in your victim defenses...\n", ch);
 
