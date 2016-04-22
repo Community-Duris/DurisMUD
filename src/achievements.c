@@ -507,7 +507,7 @@ void update_addicted_to_blood(P_char ch, P_char victim)
 
         send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed &+rAddicted to Blood&+r!&n\r\n", ch);
         send_to_char("&+yEnjoy an &+Yexp bonus&+y and &+W5 platinum coins&+y!&n\r\n", ch);
-        gain_exp(ch, NULL, GET_EXP(victim) * 5 / allies, EXP_BOON);
+        gain_exp(ch, NULL, GET_EXP(victim) * 5 / allies, EXP_KILL);
         ADD_MONEY(ch, 5000);
       }
       // Otherwise, add a kill.
