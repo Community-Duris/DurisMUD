@@ -372,7 +372,7 @@ int fight_in_room(P_char ch)
 
 void do_get(P_char ch, char *argument, int cmd)
 {
-  P_char   hood = NULL, owner = NULL;
+  P_char   hood = NULL, owner = NULL, rider;
   P_obj    s_obj = NULL, o_obj = NULL, next_obj;
   bool     found = FALSE, fail = FALSE, corpse_flag = FALSE, alldot = FALSE, carried;
   char     Gbuf2[MAX_STRING_LENGTH], Gbuf3[MAX_STRING_LENGTH];
@@ -513,7 +513,7 @@ void do_get(P_char ch, char *argument, int cmd)
         if( (IS_CARRYING_N(ch) + 1) <= CAN_CARRY_N(ch) ||
           ( (OBJ_VNUM(o_obj) > LOWEST_MAT_VNUM) && (OBJ_VNUM(o_obj) <= HIGHEST_MAT_VNUM)) )
         {
-          if ((IS_CARRYING_W(ch) + GET_OBJ_WEIGHT(o_obj)) <= CAN_CARRY_W(ch))
+          if ((IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(o_obj)) <= CAN_CARRY_W(ch))
           {
             if( CAN_WEAR(o_obj, ITEM_TAKE)
               || ((GET_LEVEL(ch) >= 60) && !IS_NPC(ch)) )
@@ -584,7 +584,7 @@ void do_get(P_char ch, char *argument, int cmd)
       if( IS_CARRYING_N(ch) < CAN_CARRY_N(ch)
         || ((OBJ_VNUM(o_obj) > LOWEST_MAT_VNUM) && (OBJ_VNUM(o_obj) <= HIGHEST_MAT_VNUM)) )
       {
-        if( (IS_CARRYING_W(ch) + GET_OBJ_WEIGHT(o_obj)) <= CAN_CARRY_W(ch) )
+        if( (IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(o_obj)) <= CAN_CARRY_W(ch) )
         {
           if( CAN_WEAR(o_obj, ITEM_TAKE)
             || ((GET_LEVEL(ch) >= 60) && !IS_NPC(ch)) )
@@ -747,7 +747,7 @@ void do_get(P_char ch, char *argument, int cmd)
             if( IS_CARRYING_N(ch) < CAN_CARRY_N(ch)
               || ((OBJ_VNUM(o_obj) >= LOWEST_MAT_VNUM) && (OBJ_VNUM(o_obj) <= HIGHEST_MAT_VNUM) ))
             {
-              if( ((IS_CARRYING_W(ch) + GET_OBJ_WEIGHT(o_obj)) < CAN_CARRY_W(ch)) || OBJ_CARRIED(s_obj) )
+              if( ((IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(o_obj)) < CAN_CARRY_W(ch)) || OBJ_CARRIED(s_obj) )
               {
                 if( CAN_WEAR(o_obj, ITEM_TAKE) || ((GET_LEVEL(ch) >= 60) && !IS_NPC(ch)) )
                 {
@@ -960,7 +960,7 @@ void do_get(P_char ch, char *argument, int cmd)
           if (IS_CARRYING_N(ch) < CAN_CARRY_N(ch)
             || ((OBJ_VNUM(o_obj) >= LOWEST_MAT_VNUM) && (OBJ_VNUM(o_obj) <= HIGHEST_MAT_VNUM) ))
           {
-            if( ((IS_CARRYING_W(ch) + GET_OBJ_WEIGHT(o_obj)) < CAN_CARRY_W(ch)) || OBJ_CARRIED(s_obj) )
+            if( ((IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(o_obj)) < CAN_CARRY_W(ch)) || OBJ_CARRIED(s_obj) )
             {
               if( CAN_WEAR(o_obj, ITEM_TAKE) || ((GET_LEVEL(ch) >= 60) && !IS_NPC(ch)) )
               {
@@ -2171,7 +2171,7 @@ void do_give(P_char ch, char *argument, int cmd)
   char     arg[MAX_INPUT_LENGTH];
   char     Gbuf1[MAX_STRING_LENGTH];
   int      amount, ctype;
-  P_char   vict;
+  P_char   vict, rider;
   P_obj    obj;
   int      quest = 0;
 
@@ -2239,12 +2239,11 @@ void do_give(P_char ch, char *argument, int cmd)
 
     send_to_char("Ok.\r\n", ch);
 
-    if (((CAN_CARRY_COINS(vict) < amount) || (amount > 1000)) &&
+    if (((CAN_CARRY_COINS(vict, rider) < amount) || (amount > 1000)) &&
         !is_linked_to(ch, vict, LNK_CONSENT) && (!IS_TRUSTED(vict)) &&
         (cmd != -4) && !IS_TRUSTED(ch))
     {
-      act("$E must consent to you before you can overload $M.", 0, ch, 0,
-          vict, TO_CHAR);
+      act("$E must consent to you before you can overload $M.", 0, ch, 0, vict, TO_CHAR);
       return;
     }
     if (((ctype == 3) && (amount > 999)) || ((ctype == 2) && (amount > 99)))
@@ -2344,7 +2343,7 @@ void do_give(P_char ch, char *argument, int cmd)
     act("$N seems to have $S hands full.", 0, ch, 0, vict, TO_CHAR);
     return;
   }
-  if (((((GET_OBJ_WEIGHT(obj) + IS_CARRYING_W(vict)) > CAN_CARRY_W(vict)) ||
+  if (((((GET_OBJ_WEIGHT(obj) + IS_CARRYING_W(vict, rider)) > CAN_CARRY_W(vict)) ||
         (GET_OBJ_WEIGHT(obj) > 25)) && !is_linked_to(ch, vict, LNK_CONSENT))
       && (cmd != -4) && (!IS_TRUSTED(ch)))
   {

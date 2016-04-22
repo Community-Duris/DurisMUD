@@ -7847,7 +7847,7 @@ bool MobSpellUp(P_char ch)
 
 void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
 {
-  P_char   tmp_ch;
+  P_char   tmp_ch, rider;
   P_obj    obj, obj2, best_obj, next_obj;
   char     Gbuf1[MAX_STRING_LENGTH];
   int      door, moved, max, i;
@@ -8389,14 +8389,14 @@ PROFILE_END(mundane_assist);
         || !CAN_WEAR(obj, ITEM_TAKE) )
         continue;
 
-      if(CAN_GET_OBJ(ch, obj) || IS_CONTAINER(obj))
+      if(CAN_GET_OBJ(ch, obj, rider) || IS_CONTAINER(obj))
         if((CAN_CARRY_W(ch) >= GET_OBJ_WEIGHT(obj)) || IS_CONTAINER(obj))
           if(IS_CONTAINER(obj) && ItemsIn(obj) >= 1)
           {
             best_obj = obj;
             max = 0 - ItemsIn(obj);
           }
-          else if((!IS_CONTAINER(obj) || CAN_GET_OBJ(ch, obj)) &&
+          else if((!IS_CONTAINER(obj) || CAN_GET_OBJ(ch, obj, rider)) &&
                    (obj->weight <= 120) &&
                    ((obj->cost * 100 / number(75, 125)) > max) &&
                    (RateObject(ch, 0, obj) >= 0))

@@ -277,6 +277,7 @@ long pow10(long x)
 void npc_steal(P_char ch, P_char vict)
 {
   P_obj    obj = NULL, next_obj = NULL;
+  P_char   rider;
   int      percent, roll, loc, gold, chance;
   bool     failed, caught;
 
@@ -375,7 +376,7 @@ void npc_steal(P_char ch, P_char vict)
       else
         obj = vict->equipment[loc];
       // No stealing artifacts.
-      if( (IS_CARRYING_W(ch) + GET_OBJ_WEIGHT(obj)) > CAN_CARRY_W(ch) || IS_ARTIFACT(obj) )
+      if( (IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(obj)) > CAN_CARRY_W(ch) || IS_ARTIFACT(obj) )
         failed = TRUE;
       if( !failed && (percent > 175) )
       {

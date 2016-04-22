@@ -1471,11 +1471,12 @@ int welfare_well(int room, P_char ch, int cmd, char *arg)
 
 int wh_janitor(P_char ch, P_char pl, int cmd, char *arg)
 {
-  P_obj    o, next_obj, o_1, well;
+  P_obj     o, next_obj, o_1, well;
+  P_char    rider;
   P_nevent  ev = NULL;
   hunt_data data;
-  bool     found_well, dumped;
-  bool     loaded = FALSE;
+  bool      found_well, dumped;
+  bool      loaded = FALSE;
 
 
   if (cmd == CMD_SET_PERIODIC)
@@ -1490,7 +1491,7 @@ int wh_janitor(P_char ch, P_char pl, int cmd, char *arg)
     if(o->type == (ITEM_SWITCH || ITEM_KEY || ITEM_TRASH))
       continue;
 
-  	if (!CAN_GET_OBJ(ch, o))
+  	if (!CAN_GET_OBJ(ch, o, rider))
   	{
   		continue;
   	}
@@ -1583,7 +1584,7 @@ int wh_janitor(P_char ch, P_char pl, int cmd, char *arg)
       {
         for (o = world[EXIT(ch, a)->to_room].contents; o; o = o->next_content)
         {
-          if (CAN_WEAR(o, ITEM_TAKE) && CAN_CARRY_OBJ(ch, o))
+          if (CAN_WEAR(o, ITEM_TAKE) && CAN_CARRY_OBJ(ch, o, rider))
           {
             act("$n notices some garbage nearby.", FALSE, ch, 0, 0, TO_ROOM);
             move_to_loot = exitnumb_to_cmd(a);

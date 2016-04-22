@@ -538,12 +538,13 @@ string save_to_string(P_char ch, int save_type)
 
 const char *load_to_string(P_char ch)
 {
+  P_char   rider;
   int      percent = CAN_CARRY_W(ch);
 
   if (percent <= 0)
     percent = 1;
 
-  percent = (int) ((IS_CARRYING_W(ch) * 100) / percent);
+  percent = (int) ((IS_CARRYING_W(ch, rider) * 100) / percent);
 
   if (percent <= 0)
     return (load_names[0]);
@@ -4078,6 +4079,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
   char     buf[MAX_STRING_LENGTH];
   char     buffer[MAX_STRING_LENGTH];
   int      t_val, h, w;
+  P_char   rider;
 
   if (ch == NULL)
   {
@@ -4304,7 +4306,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
     GET_C_CON(ch), (int)(GET_C_CON(ch) * 100. / racial_stats.Con + .55),
     GET_C_CHA(ch), (int)(GET_C_CHA(ch) * 100. / racial_stats.Cha + .55),
     GET_C_LUK(ch), (int)(GET_C_LUK(ch) * 100. / racial_stats.Luk + .55),
-    i3, IS_CARRYING_W(ch));
+    i3, IS_CARRYING_W(ch, rider));
   strcat(o_buf, buf);
 
    /* sprintf(buf,

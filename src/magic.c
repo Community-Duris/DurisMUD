@@ -8119,11 +8119,11 @@ void spell_ventriloquate(int level, P_char ch, char *arg, int type,
    */
 }
 
-void spell_word_of_recall(int level, P_char ch, char *arg, int type,
-                          P_char victim, P_obj obj)
+void spell_word_of_recall(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
-  int      loc_nr, e_pos, heavy;
-  int      a, b = 0;
+  P_char rider;
+  int    loc_nr, e_pos, heavy;
+  int    a, b = 0;
 
   if(!SanityCheck(ch, "spell_word_of_recall") ||
       !SanityCheck(victim, "spell_word_of_recall"))
@@ -8218,7 +8218,7 @@ void spell_word_of_recall(int level, P_char ch, char *arg, int type,
   e_pos = heavy = 0;
   do
   {
-    if(IS_CARRYING_W(victim) > ((CAN_CARRY_W(victim) / 100) * 70))
+    if(IS_CARRYING_W(victim, rider) > ((CAN_CARRY_W(victim) / 100) * 70))
       if(victim->equipment[e_pos])
       {
         logit(LOG_RECALL, "WORD OF RECALL: (%s) drops (%s) in [%d].",

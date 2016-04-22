@@ -481,7 +481,7 @@ int move_regen(P_char ch)
     gain += (endurance / 10);
 
   if( GET_RACE(ch) == RACE_QUADRUPED )
-    gain += dice(2, 4);
+    gain += dice( 2, 3 );
 
   return (int) (gain * gain / 5);
 }

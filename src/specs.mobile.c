@@ -1540,6 +1540,7 @@ int seas_coral_golem(P_char ch, P_char pl, int cmd, char *arg)
 
 int money_changer(P_char me, P_char ch, int cmd, char *arg)
 {
+  P_char   rider;
   long     amount, from, to, n, ok, rate = 0;
   char     Gbuf1[MAX_STRING_LENGTH];
 
@@ -1629,7 +1630,7 @@ int money_changer(P_char me, P_char ch, int cmd, char *arg)
       return TRUE;
     }
     n = (amount * (100 - RATE_TO_LOWER) / 100) / pow10(to);
-    ok = (CAN_CARRY_COINS(ch) >= n);
+    ok = (CAN_CARRY_COINS(ch, rider) >= n);
 
     if (!ok)
     {
@@ -3969,8 +3970,8 @@ int brass_dragon(P_char ch, P_char pl, int cmd, char *arg)
 
 int janitor(P_char ch, P_char pl, int cmd, char *arg)
 {
-  P_obj    i;
-
+  P_obj  i;
+  P_char rider;
   /*
    * check for periodic event calls
    */
@@ -3982,7 +3983,7 @@ int janitor(P_char ch, P_char pl, int cmd, char *arg)
 
   for (i = world[ch->in_room].contents; i; i = i->next_content)
   {
-    if (CAN_GET_OBJ(ch, i) && (CAN_CARRY_W(ch) <= GET_OBJ_WEIGHT(i)) &&
+    if (CAN_GET_OBJ(ch, i, rider) && (CAN_CARRY_W(ch) <= GET_OBJ_WEIGHT(i)) &&
         ((i->type == ITEM_DRINKCON) || (i->type == ITEM_TRASH) ||
          (i->type == ITEM_OTHER) || (i->type == ITEM_FOOD) || (i->cost < 20)))
     {

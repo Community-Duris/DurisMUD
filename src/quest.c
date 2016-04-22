@@ -186,6 +186,7 @@ void give_reward(struct quest_complete_data *qcp, P_char mob, P_char pl)
   struct group_list *gl;
   int      group_fact = 1;
   int temp = 1;
+  P_char rider;
   /*
      value_pts = 2500 * (GET_LEVEL(mob) / 2);
 
@@ -247,7 +248,7 @@ void give_reward(struct quest_complete_data *qcp, P_char mob, P_char pl)
       }
 
       if ((IS_CARRYING_N(pl) < CAN_CARRY_N(pl)) &&
-          ((IS_CARRYING_W(pl) + GET_OBJ_WEIGHT(obj)) < CAN_CARRY_W(pl)))
+          ((IS_CARRYING_W(pl, rider) + GET_OBJ_WEIGHT(obj)) < CAN_CARRY_W(pl)))
       {
         obj_to_char(obj, pl);
         act("$n gives you $p.", FALSE, mob, obj, pl, TO_VICT);

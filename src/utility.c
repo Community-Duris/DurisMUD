@@ -3724,12 +3724,13 @@ int dir_from_keyword(char *keyword)
 /* self-explanatory :) 0 would be naked, 14 overloaded */
 int weight_notches_above_naked(P_char ch)
 {
-  int      percent = CAN_CARRY_W(ch);
+  P_char rider;
+  int percent = CAN_CARRY_W(ch);
 
   if (percent <= 0)
     percent = 1;
 
-  percent = (int) ((IS_CARRYING_W(ch) * 100) / percent);
+  percent = (int) ((IS_CARRYING_W(ch, rider) * 100) / percent);
 
   if (percent <= 0)
     return 0;

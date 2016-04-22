@@ -79,13 +79,14 @@ int is_ice(P_char ch, int room)
 int load_modifier(P_char ch)
 {
   int p;
+  P_char rider;
 
   if( IS_TRUSTED(ch) )
     return 75;
   if( CAN_CARRY_W(ch) <= 0 )
     return 300;
 
-  p = 100 - MAX(0, ((CAN_CARRY_W(ch) - IS_CARRYING_W(ch)) * 100) / CAN_CARRY_W(ch));
+  p = 100 - MAX(0, ((CAN_CARRY_W(ch) - IS_CARRYING_W(ch, rider)) * 100) / CAN_CARRY_W(ch));
 
   if( p < 10)
     return 75;
@@ -1366,7 +1367,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
     affect_from_char(ch, SPELL_INVISIBLE);
   }
 
-  if( IS_CARRYING_W(ch) > CAN_CARRY_W(ch) && IS_PC(ch) )
+  if( IS_CARRYING_W(ch, rider) > CAN_CARRY_W(ch) && IS_PC(ch) )
   {
     send_to_char("You collapse under your carried load!\n", ch);
     act("$n collapses under the weight of $s inventory!", TRUE, ch, 0, 0, TO_ROOM);
@@ -3364,7 +3365,7 @@ void do_follow(P_char ch, char *argument, int cmd)
 void do_drag(P_char ch, char *argument, int cmd)
 {
   P_obj    obj;
-  P_char   tch, owner = NULL;
+  P_char   tch, owner = NULL, rider;
   char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
   char     Gbuf4[MAX_STRING_LENGTH];
   int      dragCommand;
@@ -3473,8 +3474,8 @@ void do_drag(P_char ch, char *argument, int cmd)
       return;
     }
 
-    if((IS_NPC(tch) || (GET_WEIGHT(tch) + IS_CARRYING_W(tch)) >
-      (MAX_DRAG * CAN_CARRY_W(ch) - IS_CARRYING_W(ch))) && !IS_TRUSTED(ch))
+    if((IS_NPC(tch) || (GET_WEIGHT(tch) + IS_CARRYING_W(tch, rider)) >
+      (MAX_DRAG * CAN_CARRY_W(ch) - IS_CARRYING_W(ch, rider))) && !IS_TRUSTED(ch))
     {
       act("$E's too heavy for you to drag!", FALSE, ch, 0, tch, TO_CHAR);
       act("$n tries to drag $N out, but after a series of grunts, gives up.",
@@ -3597,7 +3598,7 @@ void do_drag(P_char ch, char *argument, int cmd)
     }
     /* Let players drag an object up to 150 % of their max_carry */
     if( (GET_OBJ_WEIGHT(obj) >
-         (MAX_DRAG * CAN_CARRY_W(ch) - IS_CARRYING_W(ch))) && !IS_TRUSTED(ch))
+         (MAX_DRAG * CAN_CARRY_W(ch) - IS_CARRYING_W(ch, rider))) && !IS_TRUSTED(ch))
     {
       act("It's too heavy for you to drag!", FALSE, ch, 0, 0, TO_CHAR);
       act("$n tries to drag out $p, but after a series of grunts, gives up.",

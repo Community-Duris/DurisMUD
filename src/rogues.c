@@ -25,7 +25,7 @@ void do_slip(P_char ch, char *argument, int cmd)
 {
   char obj_name[MAX_INPUT_LENGTH], vict_name[MAX_INPUT_LENGTH];
   char arg[MAX_INPUT_LENGTH];
-  P_char vict;
+  P_char vict, rider;
   P_obj obj, container;
   P_char t_ch = NULL;
   int success, percent, check, bits, bits2;
@@ -111,7 +111,7 @@ void do_slip(P_char ch, char *argument, int cmd)
   }
   
   /* will it immobilize the victim? */
-  if ((IS_CARRYING_W(vict) + GET_OBJ_WEIGHT(obj)) > CAN_CARRY_W(vict))
+  if ((IS_CARRYING_W(vict, rider) + GET_OBJ_WEIGHT(obj)) > CAN_CARRY_W(vict))
   {
     send_to_char("They cannot possibly carry anymore!\r\n", ch);
     return;
