@@ -2191,37 +2191,37 @@ struct proc_data {
 struct random_spells {
   int s_number;
   int spell;
-  int self_only;
+  bool self_only;
   char name[32];
 };
 
-struct random_quest {
-
-        int z_number;
-        char *z_mapdesc;
-        int z_justan;
+struct random_quest
+{
+  int z_number;
+  char *z_mapdesc;
+  int z_justan;
 };
 
 
-struct randomeq_slots {
-
-        int m_number;
-        char *m_name;
-        float m_stat;
-        float m_ac;
-        int wear_bit;
-        int numb_material;
-        int damage_type;
-
+struct randomeq_slots
+{
+  int m_number;
+  char *m_name;
+  float m_stat;
+  float m_ac;
+  int wear_bit;
+  int numb_material;
+  int damage_type;
+  int base_weight;
 };
 
-struct randomeq_material {
-
-
-        int m_number;
-        char *m_name;
-        float m_stat;
-        float m_ac;
+struct randomeq_material
+{
+  int m_number;
+  char *m_name;
+  float m_stat;
+  float m_ac;
+  float weight_mod;
 };
 
 struct spell_target_data {

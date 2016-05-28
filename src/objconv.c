@@ -814,130 +814,54 @@ int getSpellCost(const int spell)
   }
 }
 
-#define ALL_MAGES (CLASS_SORCERER | CLASS_NECROMANCER | \
-             CLASS_SUMMONER | CLASS_CONJURER | CLASS_ILLUSIONIST | \
-						 CLASS_PSIONICIST)
-#define ALL_ROGUES (CLASS_THIEF | CLASS_ASSASSIN | \
-                          CLASS_BARD | CLASS_ROGUE)
+#define ALL_MAGES (CLASS_SORCERER | CLASS_NECROMANCER | CLASS_SUMMONER | CLASS_CONJURER \
+  | CLASS_ILLUSIONIST |  CLASS_PSIONICIST)
 
+#define ALL_ROGUES (CLASS_THIEF | CLASS_ASSASSIN | CLASS_BARD | CLASS_ROGUE)
 
-void material_restrictions(P_obj obj)
+// Sets anti-class flags based on material type and object name.
+void material_restrictions( P_obj obj )
 {
-  ulong    anti = 0, anti2 = 0;
-  int      mat = obj->material;
-  
-  if(!(obj))
-  {
-    return;
-  }
-  
-  if(isname("quiver", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("badge", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("robe", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("tunic", obj->name))
+  ulong anti, anti2;
+  int   mat;
+  // Since it's referenced so much.
+  char *name = obj->name;
+
+  if( !obj )
   {
     return;
   }
 
-  if(isname("cloak", obj->name))
+  anti = anti2 = 0;
+  mat = obj->material;
+
+  if( isname("quiver", name) || isname("badge", name)   || isname("robe", name)
+    || isname("tunic", name) || isname("cloak", name)   || isname("pants", name)
+    || isname("belt", name)  || isname("earring", name) || isname("moccasins", name)
+    || isname("ring", name)  || isname("band", name)    || isname("signet", name)
+    || isname("hat", name)   || isname("cap", name)     || isname("bracelet", name)
+    || isname("stud", name)  || isname("amulet", name)  || isname("bodycloak", name) )
   {
     return;
   }
-  
-  if(isname("pants", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("belt", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("earring", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("moccasins", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("ring", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("band", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("signet", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("hat", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("cap", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("bracelet", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("stud", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("amulet", obj->name))
-  {
-    return;
-  }
-  
-  if(isname("bodycloak", obj->name))
-  {
-    return;
-  }
-  
-  if (IS_RIGID(mat) && (obj->wear_flags & ITEM_WEAR_BODY))
+
+  if( IS_RIGID(mat) && (obj->wear_flags & ITEM_WEAR_BODY) )
   {
     anti = ALL_MAGES | ALL_ROGUES | CLASS_MONK;
   }
 
-  if (IS_RIGID(mat) && (obj->wear_flags & (ITEM_WEAR_FACE | ITEM_WEAR_ARMS | ITEM_WEAR_HEAD | ITEM_WEAR_LEGS)))
+  if( IS_RIGID(mat) && (obj->wear_flags & (ITEM_WEAR_FACE | ITEM_WEAR_ARMS | ITEM_WEAR_HEAD | ITEM_WEAR_LEGS)) )
   {
     anti |= CLASS_MONK;
   }
 
-  if (IS_METAL(mat) && mat != MAT_MITHRIL &&
-      (obj->wear_flags & (ITEM_WEAR_FACE |ITEM_WEAR_ARMS | ITEM_WEAR_HEAD | ITEM_WEAR_LEGS)))
+  if( IS_METAL(mat) && (mat != MAT_MITHRIL)
+    && (obj->wear_flags & (ITEM_WEAR_FACE |ITEM_WEAR_ARMS | ITEM_WEAR_HEAD | ITEM_WEAR_LEGS)) )
   {
     anti |= ALL_MAGES;
   }
 
-  if (obj->extra_flags & ITEM_ALLOWED_CLASSES)
+  if( obj->extra_flags & ITEM_ALLOWED_CLASSES )
     obj->anti_flags &= ~anti;
   else
     obj->anti_flags |= anti;

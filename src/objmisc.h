@@ -103,9 +103,24 @@
 
 #define NUMB_MATERIALS (MAT_HIGHEST + 1)
 
-#define OBJCRAFT_LOWEST  0
-#define OBJCRAFT_AVERAGE 7
-#define OBJCRAFT_HIGHEST 15
+#define OBJCRAFT_LOWEST     0
+#define OBJCRAFT_TERRIBLE   0
+#define OBJCRAFT_E_POOR     1
+#define OBJCRAFT_V_POOR     2
+#define OBJCRAFT_F_POOR     3
+#define OBJCRAFT_WELL_BELOW 4
+#define OBJCRAFT_BELOW      5
+#define OBJCRAFT_S_BELOW    6
+#define OBJCRAFT_AVERAGE    7
+#define OBJCRAFT_S_ABOVE    8
+#define OBJCRAFT_ABOVE      9
+#define OBJCRAFT_W_ABOVE   10
+#define OBJCRAFT_EXCELLENT 11
+#define OBJCRAFT_SKILLED   12
+#define OBJCRAFT_V_SKILLED 13
+#define OBJCRAFT_MASTER    14
+#define OBJCRAFT_ONE_KIND  15
+#define OBJCRAFT_HIGHEST   15
 
 /* assorted armor info */
 

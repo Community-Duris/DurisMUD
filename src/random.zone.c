@@ -1216,7 +1216,7 @@ int random_quest_mob_proc(P_char ch, P_char pl, int cmd, char *arg)
       return TRUE;
     }
 
-    if (OBJ_VNUM(obj) == RANDOM_EQ_VNUM && obj->value[5] == x)
+    if( OBJ_VNUM(obj) == VOBJ_RANDOM_ARMOR && obj->value[5] == x )
     {
       gain_epic(pl, EPIC_RANDOM_ZONE, 0, value_pts / 100 );
 
@@ -1383,7 +1383,7 @@ P_obj create_sigil(int zone_number)
   char     buf3[MAX_STRING_LENGTH];
   struct zone_data *zone = 0;
 
-  obj = read_object(RANDOM_EQ_VNUM, VIRTUAL);
+  obj = read_object( VOBJ_RANDOM_ARMOR, VIRTUAL );
   zone = &zone_table[find_a_zone()];
 
   sprintf(buf1, "sigil %s", zone->name);
