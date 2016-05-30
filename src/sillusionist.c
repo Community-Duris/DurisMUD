@@ -1501,8 +1501,7 @@ int is_illusion_obj(P_obj obj)
 
 }
 
-void spell_clone_form(int level, P_char ch, char *arg, int type,
-                      P_char victim, P_obj obj)
+void spell_clone_form(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   bool     loss_flag = FALSE;
   bool     casting_on_self = FALSE;
@@ -1513,22 +1512,21 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
   P_char   t_ch, tch, next_ch, target = NULL;
   char     tbuf[MAX_STRING_LENGTH];
 
-  if (!((level >= 0) && victim && ch))
+  if( (level < 0) || !IS_ALIVE(ch) || !IS_ALIVE(victim) )
   {
     logit(LOG_EXIT, "assert: bogus parms");
     raise(SIGSEGV);
   }
 
-  if(IS_NPC(ch))
-  return;
-
-  if (!IS_ALIVE(ch))
+  if( IS_NPC(ch) )
     return;
-  
-  if (!IS_TRUSTED(ch) && GET_LEVEL(victim) > 56)
+
+  if( !IS_ALIVE(ch) )
+    return;
+
+  if( !IS_TRUSTED(ch) && GET_LEVEL(victim) > 56 )
   {
-    send_to_char
-      ("&+LTry to find something that is a lower level to clone.&N\r\n", ch);
+    send_to_char("&+LTry to find something that is a lower level to clone.&N\r\n", ch);
     return;
   }
 
@@ -1537,15 +1535,13 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
     casting_on_self = TRUE;
   }
 
-  if (IS_NPC(victim) &&
-      victim != ch &&
-      GET_VNUM(victim) == 250)
+  if( IS_NPC(victim) && victim != ch && GET_VNUM(victim) == 250 )
   {
     send_to_char("&+WYour magic is unable to duplicate the appearance of an illusion.&N\r\n", ch);
     return;
   }
 
-  if (casting_on_self && is_illusion_char(ch))
+  if( casting_on_self && is_illusion_char(ch) )
   {
     send_to_char("&+WYou f&Nad&+Le back into your own image.&N\r\n", ch);
     act("&+W$n &+Wf&Nad&+Les back into $s &+Lown image.&N", FALSE,
@@ -1558,7 +1554,7 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
 
   target = victim;
 
-  if (target == ch)
+  if( target == ch )
   {
     if (!IS_DISGUISE(ch))
     {
@@ -1581,9 +1577,7 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
       if (target == ch)
       {
         send_to_char("&+LYou just tried to clone into yourself.&N\n\r", ch);
-        send_to_char
-          ("&+LTo avoid problems, use arguments \"me\" or \"self\" if you want to return to your normal form.&N\r\n",
-           ch);
+        send_to_char("&+LTo avoid problems, use arguments \"me\" or \"self\" if you want to return to your normal form.&N\r\n", ch);
         return;
       }
     }
@@ -1591,12 +1585,11 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
   }
 
 
-  if (IS_NPC(target))
+  if( IS_NPC(target) )
   {
     if ((GET_ALT_SIZE(ch) > (GET_ALT_SIZE(target) + 1)) && !IS_TRUSTED(ch))
     {
-      send_to_char
-        ("You're too big to even imagine trying to look like that!\r\n", ch);
+      send_to_char("You're too big to even imagine trying to look like that!\r\n", ch);
     }
     else
     {
@@ -1615,12 +1608,10 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
       ch->disguise.racewar = GET_RACEWAR(target);
       ch->disguise.race = GET_RACE(t_ch);
       ch->disguise.hit = GET_LEVEL(ch) * 2;
-      sprintf(tbuf, "&+LYou &+Bblur&N and take on the form of %s!\r\n",
-              t_ch->player.short_descr);
+      sprintf(tbuf, "&+LYou &+Bblur&N and take on the form of %s!\r\n", t_ch->player.short_descr);
       send_to_char(tbuf, ch);
-      sprintf(tbuf,
-              " &+LThe image of %s &Ndisappears&+L, and is replaced by %s!\r\n",
-              GET_NAME(ch), t_ch->player.short_descr);
+      sprintf(tbuf, " &+LThe image of %s &Ndisappears&+L, and is replaced by %s!\r\n",
+        GET_NAME(ch), t_ch->player.short_descr);
       act(tbuf, FALSE, ch, 0, NULL, TO_ROOM);
       SET_BIT(ch->specials.act, PLR_NOWHO);
 //      justice_witness(ch, NULL, CRIME_DISGUISE);
@@ -1629,11 +1620,9 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
   else
   {
 
-    if (!IS_TRUSTED(ch) && target && GET_LEVEL(target) > 56)
+    if( !IS_TRUSTED(ch) && target && GET_LEVEL(target) > MAXLVLMORTAL )
     {
-      send_to_char
-        ("&+LYou don't know what the divine look like to make their illusions.&N\r\n",
-         ch);
+      send_to_char("&+LYou don't know what the divine look like to make their illusions.&N\r\n", ch);
       return;
     }
     if (IS_TRUSTED(ch))
@@ -1645,16 +1634,14 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
       }
     }
     if (target)
+    {
       if ((GET_ALT_SIZE(ch) > (GET_ALT_SIZE(target) + 1)) && !IS_TRUSTED(ch))
       {
-        send_to_char
-          ("You're too big to even think of making yourself look like that!\r\n",
-           ch);
+        send_to_char("You're too big to even think of making yourself look like that!\r\n", ch);
         return;
       }
       else
       {
-
         if (target)
         {
           if (is_illusion_char(ch))
@@ -1675,8 +1662,7 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
                   "&+LYour image shifts and &+bb&+Blur&+bs&+L into %s!&N\r\n",
                   target->player.name);
           send_to_char(tbuf, ch);
-          sprintf(tbuf,
-                  "&+LThe image of %s &+Lshifts and &+bb&+Blur&+bs&+L into %s&+L!&N\r\n",
+          sprintf(tbuf, "&+LThe image of %s &+Lshifts and &+bb&+Blur&+bs&+L into %s&+L!&N\r\n",
                   GET_NAME(ch), GET_NAME(target));
           act(tbuf, FALSE, ch, 0, NULL, TO_ROOM);
           SET_BIT(ch->specials.act, PLR_NOWHO);
@@ -1684,6 +1670,7 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
           return;
         }
       }
+    }
   }
 }
 
