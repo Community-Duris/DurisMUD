@@ -270,7 +270,7 @@ A
 #131623
 crystal dagger~
 &+ca crystal dagger&N~
-&+cA crystal dagger lies here.7N~
+&+cA crystal dagger lies here.&N~
 ~
 5 15 3 0 7 0 32768 8193 0 1 0
 2 4 4 11 0 0 0 0
@@ -282,7 +282,7 @@ A
 #131624
 ruby dragons _ignore_~
 &+rthe fabled ruby of the &+RDragons&N~
-&+rA large ruby lies here.7N~
+&+rA large ruby lies here.&N~
 ~
 8 31 3 0 15 100 102400 16385 0 1 0
 0 0 0 0 0 0 0 0
@@ -302,7 +302,7 @@ A
 #131626
 barbed black whip~
 &+La black &Nbarbed&+L whip&N~
-&+LA long black whip lies here.7N~
+&+LA long black whip lies here.&N~
 ~
 5 15 3 0 7 0 32768 8193 0 1 0
 14 5 4 0 0 0 0 0
