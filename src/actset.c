@@ -889,9 +889,11 @@ static void setbit_obj(P_char ch, char *name, char *flag, char *val, int on_off)
     {"a0mod", AO(0, modifier), NULL, ac_sbyteCopy},
     {"a1mod", AO(1, modifier), NULL, ac_sbyteCopy},
     {"a2mod", AO(2, modifier), NULL, ac_sbyteCopy},
+    {"a3mod", AO(3, modifier), NULL, ac_sbyteCopy},
     {"a0loc", AO(0, location), (const char **) apply_types, ac_objaffCopy, sizeof(char *)},
     {"a1loc", AO(1, location), (const char **) apply_types, ac_objaffCopy, sizeof(char *)},
-    {"a2loc", AO(2, location), (const char **) apply_types, ac_objaffCopy, sizeof(char *)}
+    {"a2loc", AO(2, location), (const char **) apply_types, ac_objaffCopy, sizeof(char *)},
+    {"a3loc", AO(3, location), (const char **) apply_types, ac_objaffCopy, sizeof(char *)}
   };
 
   /* Local Variable */

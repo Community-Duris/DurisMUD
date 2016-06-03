@@ -3178,7 +3178,7 @@ int itemvalue( P_obj obj )
 	  workingvalue += 75;
 
   if (IS_SET(obj->bitvector, AFF_PROT_FIRE))
-	  workingvalue += 35;
+	  workingvalue += 20;
 
   if (IS_SET(obj->bitvector2, AFF2_FIRESHIELD))
 	  workingvalue += 45;
@@ -3187,28 +3187,28 @@ int itemvalue( P_obj obj )
 	  workingvalue += 80;
 
   if (IS_SET(obj->bitvector2, AFF2_DETECT_EVIL))
-	  workingvalue += 10;
+	  workingvalue += 5;
 
   if (IS_SET(obj->bitvector2, AFF2_DETECT_GOOD))
-	  workingvalue += 10;
+	  workingvalue += 5;
 
   if (IS_SET(obj->bitvector2, AFF2_DETECT_MAGIC))
-	  workingvalue += 15;
+	  workingvalue += 10;
 
   if (IS_SET(obj->bitvector2, AFF2_PROT_COLD))
-	  workingvalue += 35;
+	  workingvalue += 20;
 
   if (IS_SET(obj->bitvector2, AFF2_PROT_LIGHTNING))
-    workingvalue += 35;
+    workingvalue += 30;
 
   if (IS_SET(obj->bitvector2, AFF2_GLOBE))
 	  workingvalue += 75;
 
   if (IS_SET(obj->bitvector2, AFF2_PROT_GAS))
-    workingvalue += 35;
+    workingvalue += 30;
 
   if (IS_SET(obj->bitvector2, AFF2_PROT_ACID))
-    workingvalue += 35;
+    workingvalue += 30;
 
   if (IS_SET(obj->bitvector2, AFF2_SOULSHIELD))
     workingvalue += 45;
@@ -3217,7 +3217,7 @@ int itemvalue( P_obj obj )
 	  workingvalue += 15;
 
   if (IS_SET(obj->bitvector2, AFF2_VAMPIRIC_TOUCH))
-	  workingvalue += 60;
+	  workingvalue += 65;
 
   if (IS_SET(obj->bitvector2, AFF2_EARTH_AURA))
 	  workingvalue += 110;
@@ -3238,13 +3238,13 @@ int itemvalue( P_obj obj )
 	  workingvalue += 150;
 
   if (IS_SET(obj->bitvector3, AFF3_PROT_ANIMAL))
-	  workingvalue += 25;
+	  workingvalue += 20;
 
   if (IS_SET(obj->bitvector3, AFF3_SPIRIT_WARD))
-	  workingvalue += 40;
+	  workingvalue += 35;
 
   if (IS_SET(obj->bitvector3, AFF3_GR_SPIRIT_WARD))
-	  workingvalue += 65;
+	  workingvalue += 55;
 
   if (IS_SET(obj->bitvector3, AFF3_ENLARGE))
 	  workingvalue += 120;
@@ -3253,7 +3253,7 @@ int itemvalue( P_obj obj )
 	  workingvalue += 120;
 
   if (IS_SET(obj->bitvector3, AFF3_INERTIAL_BARRIER))
-	  workingvalue += 125;
+	  workingvalue += 135;
 
   if (IS_SET(obj->bitvector3, AFF3_COLDSHIELD))
 	  workingvalue += 45;
@@ -3304,7 +3304,7 @@ int itemvalue( P_obj obj )
 	  workingvalue += 15;
 
   if (IS_SET(obj->bitvector4, AFF4_PROT_LIVING))
-	  workingvalue += 65;
+	  workingvalue += 45;
 
   if (IS_SET(obj->bitvector4, AFF4_DETECT_ILLUSION))
 	  workingvalue += 40;
@@ -3362,9 +3362,15 @@ int itemvalue( P_obj obj )
     }
   }
 
-  //------- A0/A1/A2 -------------  
+  // Real Obj procs
+  if( obj_index[obj->R_num].func.obj )
+  {
+    workingvalue += get_ival_from_proc(obj_index[obj->R_num].func.obj);
+  }
+
+  //------- A0/A1/A2 -------------
   int i = 0;
-  while(i < 3)
+  while( i < MAX_OBJ_AFFECT )
   {
     mod = obj->affected[i].modifier;
     //dam/hitroll are normal values
@@ -3373,30 +3379,38 @@ int itemvalue( P_obj obj )
     {
       // 1:1, 2:2, 3:6, 4:12, 5:20, 6:30, 7:42, 8:56, 9:72, 10:90, 11: 110..
       workingvalue += (mod <= 2) ? mod : mod * (mod - 1);
+      // Translates to 1:1, 2:2, 3:7, 4:15, 5:25, 6:37, 7:52, 8:70, 9:90, 10:112
       multiplier *= 1.25;
+      // So a 5/5 item is essentially 40 * 1.25 * 1.25 = 62.5 (before adding other stats).
+      // A 6/6 item (no other stats) is 93, a 2d2 6/6 sword would be 62 * 1.25^2 = 96, and 5d5 6/6 = 112.
     }
 
-    //regular stats can be high numbers - half them
+    // Regular stats can be high numbers - half them
     if( (obj->affected[i].location == APPLY_STR)
 	    || (obj->affected[i].location == APPLY_DEX)
 	    || (obj->affected[i].location == APPLY_INT)
 	    || (obj->affected[i].location == APPLY_WIS)
 	    || (obj->affected[i].location == APPLY_CON)
-	    || (obj->affected[i].location == APPLY_AGI)
-	    || (obj->affected[i].location == APPLY_POW)
+	    || (obj->affected[i].location == APPLY_AGI) )
+    {
+      // 1:2, 2:4, 3:6, 4:9, 5:16, 6:25, 7:36, 8:49, 9:64, 10:81, 11:100
+      workingvalue += (mod <= 3) ? 2 * mod : (mod - 1) * (mod - 1);
+    }
+
+    // These are used a little less
+	  if( (obj->affected[i].location == APPLY_POW)
 	    || (obj->affected[i].location == APPLY_CHA)
 	    || (obj->affected[i].location == APPLY_LUCK) )
     {
-      // 1:1, 2:2, 3:4, 4:9, 5:16, 6:25, 7:36, 8:49, 9:64, 10:81, 11:100
-      workingvalue += (mod <= 2) ? mod : (mod - 1) * (mod - 1);
+      // 1:2, 2:4, 3:6, 4:8, 5:10, 6:12, 7:15, 8:26, 9:39, 10:54, 11:71, 12:90, 13: 111
+      workingvalue += (mod <= 6) ? 2 * mod : (mod - 2) * (mod - 2) - 10;
     }
 
     // Hitpoints.
     if( obj->affected[i].location == APPLY_HIT )
     {
-      // 1 ival per hitpoint up to 4, then we count by 3's.
-      // 1 : 1, 4 : 4, 5 : 8, 10 : 23, 20 : 53, 30 : 83, 35 : 101 (can't be crafted), 37 : 107 (can't be enhanced).
-      workingvalue += (mod <= 4) ? mod : 3 * mod - 7;
+      // 1 : 2, 4 : 8, 5 : 11, 10 : 29, 20 : 65, 30 : 101 (can't be crafted), 32 : 108 (can't be enhanced).
+      workingvalue += (mod <= 4) ? 2 * mod : (18 * mod) / 5 - 7;
     }
 
     // Moves and mana are generally large #'s
@@ -3406,7 +3420,8 @@ int itemvalue( P_obj obj )
       // Right now, 25 : 25, 35 : 65, 44 : 101, 45 : 105 - not enhanceable.
       workingvalue += (mod <= 25) ? mod : 4 * mod - 75;
     }
-    //hit, move, mana, regen are generally large #'s, but we don't want above 9.
+
+    // Hit, move, mana, regen are generally large #'s, but we don't want above 9.
     if( (obj->affected[i].location == APPLY_HIT_REG)
 	    || (obj->affected[i].location == APPLY_MOVE_REG)
 	    || (obj->affected[i].location == APPLY_MANA_REG) )
@@ -3467,18 +3482,18 @@ int itemvalue( P_obj obj )
       }
     }
 
-    //obj procs
-    if(obj_index[obj->R_num].func.obj && i < 1)
-    {
-      workingvalue += get_ival_from_proc(obj_index[obj->R_num].func.obj);
-    }
-
     // AC negative is good, not reducing itemvalue for items that make ac worse.
     if( (obj->affected[i].location == APPLY_AC) && mod != 0 )
     {
       // 1.5 points for each point of armor class.
       // 1 : 1, 2 : 3, 3 : 4, 5 : 7, ... 50 : 75, 67 : 100, 68 : 102 (!craft), 70 : 105 (!enhance).
-      workingvalue += (( (mod < 0) ? -1 : 1 ) * mod * 3) / 2;
+      if( mod < 0 )
+      {
+        mod *= -1;
+      }
+      workingvalue += (3 * mod) / 2;
+      // +10% at 50ac.
+      multiplier += mod / 500.;
     }
 
     //saving throw values (good) are negative
@@ -3517,20 +3532,31 @@ int itemvalue( P_obj obj )
     i++;
   }
 
-  if(obj->type == ITEM_WEAPON)
+  if( obj->type == ITEM_WEAPON )
   {
     // Add avg damage.
-    workingvalue += (obj->value[1] * obj->value[2])/2;
+    workingvalue += (obj->value[1] * obj->value[2]);
+    // 1d1 = .7%, 5d5 = 17.5%, 10d10 = 70%.
+    multiplier += obj->value[1] * obj->value[2] * .005;
     // Backstabbing weapons get a big ival for big dice.
     if( IS_BACKSTABBER(obj) )
     {
-      workingvalue += obj->value[1];
-      multiplier += obj->value[2];
+      mod = obj->value[2];
+      // workingvalue increases quadratic for every die roll and cubic for dice size.
+      // For number of dice: 1:1, 2:1.15, 3:1.4, 4:1.75, 5:2.2, 6:2.75, 7:3.4, 8:4.15, 9:5, 10:5.95
+      // For number of die sides: 1:0, 2:1, 3:5, 4:12, 5:25, 6:43, 7: 68, 8:102, 9:145, 10: 200
+      // So, 1d8 / 3d7 stabber is !forge and !enhance (115 ival when combined with above).
+      workingvalue += ( (obj->value[1] * obj->value[1] + 19.) / 20. ) * ( mod * mod * mod ) / 5.;
     }
   }
 
+  // Two handed items have less ival.
+  if( IS_SET(obj->extra_flags, ITEM_TWOHANDS) )
+  {
+    multiplier *= .80;
+  }
 
-  if(workingvalue < 1)
+  if( workingvalue < 1 )
   {
     workingvalue = 1;
   }
