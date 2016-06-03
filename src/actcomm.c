@@ -558,8 +558,16 @@ void do_gcc(P_char ch, char *argument, int cmd)
       // NPCs always see their guild chatter (in case of switch, etc).
       if( IS_NPC(ch) || IS_SET(ch->specials.act, PLR_ECHO) )
       {
-        sprintf(Gbuf1, "&+cYou tell your guild '&+C%s&n&+c'\r\n", argument);
-        send_to_char(Gbuf1, ch, LOG_PRIVATE);
+        if( IS_NPC(ch) || IS_SET(ch->specials.act3, PLR3_GUILDNAME) )
+        {
+          sprintf(Gbuf1, "&+cYou tell %s '&+C%s&n&+c'\r\n", from_guild->get_name().c_str(), argument);
+          send_to_char(Gbuf1, ch, LOG_PRIVATE);
+        }
+        else
+        {
+          sprintf(Gbuf1, "&+cYou tell your guild '&+C%s&n&+c'\r\n", argument);
+          send_to_char(Gbuf1, ch, LOG_PRIVATE);
+        }
       }
       else
       {
@@ -610,8 +618,16 @@ void do_gcc(P_char ch, char *argument, int cmd)
       {
         continue;
       }
-      sprintf(Gbuf1, "&+c%s&n&+c tells %s '&+C%s&n&+c'\r\n", PERS(ch, to_ch, FALSE),
-        guild_name, language_CRYPT(ch, to_ch, argument));
+      if( IS_NPC(to_ch) || IS_SET(to_ch->specials.act3, PLR3_GUILDNAME) )
+      {
+        sprintf(Gbuf1, "&+c%s&n&+c tells &n%s &+c'&+C%s&n&+c'\r\n", PERS(ch, to_ch, FALSE),
+          guild_name, language_CRYPT(ch, to_ch, argument));
+      }
+      else
+      {
+        sprintf(Gbuf1, "&+c%s&n&+c tells your guild '&+C%s&n&+c'\r\n", PERS(ch, to_ch, FALSE),
+          language_CRYPT(ch, to_ch, argument));
+      }
       send_to_char(Gbuf1, to_ch, LOG_PRIVATE);
     }
   }

@@ -4261,7 +4261,7 @@ void show_toggles(P_char ch)
           "&+r     Damage      :&+g %-3s    &+y|&n"
           "&+r     No Level    :&+g %-3s    &+y|&n\r\n"
           "&+r   PetDamage   :&+g %-3s    &+y|"
-          "&+r                          &+y|"
+          "&+r     Guildname   :&+g %-3s    &+y|"
           "&+r                          &+y|&n\r\n"
           "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
           "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n",
@@ -4304,7 +4304,8 @@ void show_toggles(P_char ch)
           ONOFF(PLR3_FLAGGED(ch, PLR3_NOSUR)),
           ONOFF(PLR2_FLAGGED(ch, PLR2_DAMAGE)),
           ONOFF(PLR3_FLAGGED(ch, PLR3_NOLEVEL)),
-          ONOFF(PLR3_FLAGGED(ch, PLR3_PET_DAMAGE)) );
+          ONOFF(PLR3_FLAGGED(ch, PLR3_PET_DAMAGE)),
+          ONOFF(PLR3_FLAGGED(ch, PLR3_GUILDNAME)) );
   send_to_char(Gbuf1, send_ch);
 
   if (GET_LEVEL(ch) >= AVATAR)
@@ -4456,6 +4457,7 @@ static const char *toggles_list[] = {
   "nolevel",
   "epic",
   "petdamage",
+  "guildname",
   "\n"
 };
 
@@ -4577,7 +4579,9 @@ static const char *tog_messages[][2] = {
   {"You turn off the &+WEpic&N messages.\r\n",
    "You tune into the &+WEpic&N messages.\r\n"},
   {"You turn off the display of pet damage.\r\n",
-   "You turn on the display of pet damage.\r\n"}
+   "You turn on the display of pet damage.\r\n"},
+  {"You turn off the display of your guild name.\r\n",
+   "You turn on the display of your guild name.\r\n"}
 };
 
 void do_more(P_char ch, char *arg, int cmd)
@@ -5125,6 +5129,9 @@ void do_toggle(P_char ch, char *arg, int cmd)
     break;
   case 63:
     result = PLR3_TOG_CHK(ch, PLR3_PET_DAMAGE);
+    break;
+  case 64:
+    result = PLR3_TOG_CHK(ch, PLR3_GUILDNAME);
     break;
   default:
     break;

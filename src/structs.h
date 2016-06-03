@@ -889,8 +889,7 @@ struct room_data {
 #define PLR_SMARTPROMPT  BIT_24
 #define PLR_SILENCE      BIT_25 /* Player has been silenced.               */
 #define PLR_FROZEN       BIT_26 /* Player has been frozen. (no cmd input)  */
-#define PLR_PLRLOG       BIT_27 /* toggle for displaying login/out spam to
-                                   wizards */
+#define PLR_PLRLOG       BIT_27 /* toggle for displaying login/out spam to wizards */
 #define PLR_MAIL         BIT_28
 #define PLR_WRITE        BIT_29
 #define PLR_MORTAL       BIT_30 /* removes is_trusted   */
@@ -907,8 +906,8 @@ struct room_data {
 #define PLR2_TERSE         BIT_7  /* terse battle mode (anti-spam) */
 #define PLR2_QUICKCHANT    BIT_8
 #define PLR2_RWC           BIT_9  /* Race War Char */
-#define PLR2_PROJECT       BIT_10  /* Race War Char */
-#define PLR2_NPC_HOG       BIT_11  /* Race War Char */
+#define PLR2_PROJECT       BIT_10 /* Race War Char */
+#define PLR2_NPC_HOG       BIT_11 /* Race War Char */
 #define PLR2_UNUSED_1      BIT_12 /* Specialized Class */
 #define PLR2_NCHAT         BIT_13
 #define PLR2_HARDCORE_CHAR BIT_14
@@ -934,7 +933,7 @@ struct room_data {
 /* For players : specials.act3 */
 #define PLR3_FRAGLEAD      BIT_1  /* FragList Leader */
 #define PLR3_FRAGLOW       BIT_2  /* Lowest Fragger */
-//#define PLR3_RACIAL_SKILLS BIT_3
+#define PLR3_GUILDNAME     BIT_3  // Whether or not they see guild name when using gcc.
 #define PLR3_NOSUR         BIT_4  /* Titles that will show on who list before names - This is default, none */
 #define PLR3_SURSERF	     BIT_5
 #define PLR3_SURCOMMONER   BIT_6

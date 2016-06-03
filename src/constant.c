@@ -859,7 +859,7 @@ const char *player2_bits[] = {
 const char *player3_bits[] = {
   "FRAGLEADER",
   "LOWEST_FRAGS",
-  "",
+  "GUILD_NAME",
   "ACHIEVEMENT_SURNAME",
   "SURNAME_SERF",
   "SURNAME_COMMONER",
