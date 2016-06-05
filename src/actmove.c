@@ -1924,9 +1924,12 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
           send_to_char("\n", k->follower);
           sprintf(amsg, "%s %s", command[cmd], dirs[exitnumb]);
           SET_BIT(k->follower->specials.affected_by5, AFF5_FOLLOWING);
+          // We need to use tch here, because if he dies, then the memory for followers will be gone.
+          //   tch won't be following anymore so k->follower points to free memory.
+          tch = k->follower;
           command_interpreter(k->follower, amsg);
-          if( IS_ALIVE(k->follower) )
-            REMOVE_BIT(k->follower->specials.affected_by5, AFF5_FOLLOWING);
+          if( IS_ALIVE(tch) )
+            REMOVE_BIT(tch->specials.affected_by5, AFF5_FOLLOWING);
           num_followed++;
         }
       }
