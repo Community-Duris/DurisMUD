@@ -2016,6 +2016,12 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
   strcpy( Gbuf2, Gbuf1 );
   sprintf( Gbuf2, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
   system( Gbuf2 );
+  if( f = fopen( Gbuf1, "r" ) )
+  {
+    debug( "deleteCharacter: Error: pfile (%s) still exists.", Gbuf1 );
+    debug( "deleteCharacter: Command: (%s).", Gbuf2 );
+    fclose( f );
+  }
 
   if( bDeleteLocker )
   {
