@@ -1723,9 +1723,10 @@ int parasitebite(P_char ch, P_char victim)
 
 
   level = GET_LEVEL(ch);
-  mod = (level >= 40) ? (level / 10) : (level / 15);
 
-  damage = dice(level, 8+mod);
+  damage = 40 + dice( 4, level );
+  if( IS_NPC(ch) )
+    damage += dice( 4, level );
 
   if (!StatSave(victim, APPLY_AGI, BOUNDED(-3, (GET_LEVEL(victim) - GET_LEVEL(ch) -
                                            STAT_INDEX(GET_C_AGI(ch))/2) / 5, 3)))
@@ -1857,7 +1858,7 @@ void do_bite(P_char ch, char *arg, int cmd)
     return;
   }
 
-  if (!check_innate_time(ch, INNATE_BITE))
+  if( !check_innate_time(ch, INNATE_BITE, get_property( "innate.timer.bite", 12 )) )
   {
     send_to_char("You have no &+gvenom&N left!\n", ch);
     return;
