@@ -32,6 +32,7 @@ extern struct zone_data *zone_table;
  */
 int halfcut_defenders(P_char ch, P_char player, int cmd, char *arg)
 {
+  char buf[32];
 
   if (IS_FIGHTING(ch))
     return FALSE;
@@ -45,7 +46,8 @@ int halfcut_defenders(P_char ch, P_char player, int cmd, char *arg)
   if ((GET_LEVEL(player) < 44) && (!number(0, 20)))
   {
     do_consider(ch, GET_NAME(player), CMD_CONSIDER);
-    command_interpreter(ch, "chuckle");
+    sprintf( buf, "chuckle" );
+    command_interpreter( ch, buf );
     return FALSE;
   }
   /* get here only if not fighting, and pc is 44+ level, attack them */
