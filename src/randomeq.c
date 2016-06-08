@@ -463,7 +463,7 @@ How to setting stats to random weapons works - Astansus's school for the inexper
   {103, "&+yquarterstaff&n",   1.40, 0.90, ITEM_WIELD, 2, WEAPON_CLUB,         4},
   {104, "&+Lleister&n",        1.10, 1.20, ITEM_WIELD, 3, WEAPON_TRIDENT,      3},
   {105, "&+Lsickle&n",         1.00, 1.00, ITEM_WIELD, 2, WEAPON_SICKLE,       2},
-  {106, "&+Ldirk&n",           1.00, 0.70, ITEM_WIELD, 2, WEAPON_SHORTSWORD,   2},
+  {106, "&+Ldirk&n",           1.00, 0.70, ITEM_WIELD, 2, WEAPON_DAGGER,       2},
   {107, "&+Rswitchblade&n",    0.80, 0.80, ITEM_WIELD, 2, WEAPON_DAGGER,       1},
   {108, "&+rmallet&n",         1.00, 1.00, ITEM_WIELD, 2, WEAPON_HAMMER,       6},
   {109, "&+mtruncheon&n",      1.10, 1.20, ITEM_WIELD, 3, WEAPON_CLUB,         4},
