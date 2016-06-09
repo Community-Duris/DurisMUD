@@ -424,7 +424,7 @@ int undead_inn(int room, P_char ch, int cmd, char *arg)
     send_to_char("You're too stunned to think of renting!\r\n", ch);
     return FALSE;
   }
-  if (!RACE_PUNDEAD(ch))
+  if (!IS_RACEWAR_UNDEAD(ch))
   {
     send_to_char
       ("The innkeeper grins slyly and moans, 'We have no beds here!'\r\n",

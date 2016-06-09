@@ -2599,7 +2599,7 @@ void assign_rooms(void)
   world[real_room0(70175)].funct = inn;
 
   /* ADD THIS FOR HEAVEN */
-  world[real_room0(ILLITHID_HEAVEN_ROOM)].funct = mortal_heaven;
+  world[real_room0(NEUTRAL_HEAVEN_ROOM)].funct = mortal_heaven;
   world[real_room0(EVIL_HEAVEN_ROOM)].funct = mortal_heaven;
   world[real_room0(GOOD_HEAVEN_ROOM)].funct = mortal_heaven;
   world[real_room0(UNDEAD_HEAVEN_ROOM)].funct = mortal_heaven;

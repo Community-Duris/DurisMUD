@@ -5481,9 +5481,9 @@ void spell_bless(int level, P_char ch, char *arg, int type, P_char victim, P_obj
       set_obj_affected_extra(obj, -1, SPELL_BLESS, 50, ITEM2_BLESS);
       if (obj->type == ITEM_DRINKCON)
       {
-        if (RACE_GOOD(ch))
+        if (IS_RACEWAR_GOOD(ch))
           obj->value[2] = LIQ_HOLYWATER;
-        else if (RACE_EVIL(ch))
+        else if (IS_RACEWAR_EVIL(ch))
           obj->value[2] = LIQ_UNHOLYWAT;
       }
     }
@@ -6848,7 +6848,7 @@ void spell_heal(int level, P_char ch, char *arg, int type, P_char victim, P_obj 
 
   heal(victim, ch, healpoints, GET_MAX_HIT(victim) - number(1, 4));
   update_pos(victim);
-  if(RACE_PUNDEAD(victim))
+  if(IS_RACEWAR_UNDEAD(victim))
     send_to_char("&+WYou feel the powers of darkness strengthen you!\n",
                  victim);
   else
@@ -8513,8 +8513,8 @@ void spell_summon(int level, P_char ch, char *arg, int type, P_char victim,
     (IS_SET(victim->specials.act, ACT_AGGRESSIVE_GOOD) && IS_GOOD(ch)) ||
        (IS_SET(victim->specials.act, ACT_AGGRESSIVE_NEUTRAL) &&
   IS_NEUTRAL(ch)) ||
-     (IS_SET(victim->specials.act, ACT_AGG_RACEEVIL) && RACE_EVIL(ch)) ||
-    (IS_SET(victim->specials.act, ACT_AGG_RACEGOOD) && RACE_GOOD(ch)))) {*/
+     (IS_SET(victim->specials.act, ACT_AGG_RACEEVIL) && IS_RACEWAR_EVIL(ch)) ||
+    (IS_SET(victim->specials.act, ACT_AGG_RACEGOOD) && IS_RACEWAR_GOOD(ch)))) {*/
 
     send_to_char("You feel a sudden surge of hatred and halt the spell.\n",
                  ch);
@@ -14030,7 +14030,7 @@ void spell_heavens_aid(int level, P_char ch, char *arg, int type, P_char victim,
     !IS_ALIVE(victim))
       return;
 
-  if(RACE_GOOD(victim) || IS_ANGEL(victim))
+  if(IS_RACEWAR_GOOD(victim) || IS_ANGEL(victim))
   {
     act("&+WThe light from above passes over $N &+Wwithout harm.&n", FALSE, ch, 0, victim, TO_CHAR);
     return;
@@ -16613,7 +16613,7 @@ void spell_mass_heal(int level, P_char ch, char *arg, int type, P_char victim,
       gain_exp(ch, tch, healed, EXP_HEALING);
     }
     update_pos(tch);
-    if(RACE_PUNDEAD(tch))
+    if(IS_RACEWAR_UNDEAD(tch))
       send_to_char("&+WYou feel the powers of darkness strengthen you!\n",
           tch);
     else

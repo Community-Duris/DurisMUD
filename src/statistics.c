@@ -84,17 +84,17 @@ void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
       if (world[t_ch->in_room].zone == 50)
         inhalls++;
 
-      if (RACE_GOOD(t_ch))
+      if (IS_RACEWAR_GOOD(t_ch))
       {
         goodies++;
         goodies_lvl = goodies_lvl + GET_LEVEL(t_ch);
       }
-      else if (RACE_EVIL(t_ch) && !IS_ILLITHID(t_ch))
+      else if (IS_RACEWAR_EVIL(t_ch) && !IS_ILLITHID(t_ch))
       {
         evils++;
         evils_lvl = evils_lvl + GET_LEVEL(t_ch);
       }
-      else if (RACE_PUNDEAD(t_ch))
+      else if (IS_RACEWAR_UNDEAD(t_ch))
       {
         undeads++;
         undeads_lvl = undeads_lvl + GET_LEVEL(t_ch);

@@ -285,9 +285,9 @@ extern const char *justice_flag_names[];
 */
 
 #define PC_NOTWELCOME(a, b) ( IS_PC(a) && !TRUSTED_NPC(a) \
-                            && ( (IS_SET(hometowns[b - 1].flags, JUSTICE_GOODHOME) && !RACE_GOOD(a)) \
-                            || (IS_SET(hometowns[b - 1].flags, JUSTICE_EVILHOME) && !RACE_EVIL(a)) \
-                            || (IS_SET(hometowns[b - 1].flags, JUSTICE_UNDEADHOME) && !RACE_PUNDEAD(a)) \
+                            && ( (IS_SET(hometowns[b - 1].flags, JUSTICE_GOODHOME) && !IS_RACEWAR_GOOD(a)) \
+                            || (IS_SET(hometowns[b - 1].flags, JUSTICE_EVILHOME) && !IS_RACEWAR_EVIL(a)) \
+                            || (IS_SET(hometowns[b - 1].flags, JUSTICE_UNDEADHOME) && !IS_RACEWAR_UNDEAD(a)) \
 /*                            || (IS_SET(hometowns[b - 1].flags, JUSTICE_NEUTRALHOME) && !RACE_NEUTRAL(a)) */ ) \
                             && !( (IS_ELFIE(a) && ((b) == HOME_CHARIN)) || \
                              (IS_CENTAURIE(a) && ((b) == HOME_MARIGOT)) ) )
@@ -298,7 +298,7 @@ extern const char *justice_flag_names[];
    || (!IS_ELFIE(a) && ((b) == HOME_CHARIN)) || (!IS_CENTAURIE(a) && ((b) == HOME_MARIGOT))) )
 
   /* special macros for justice that also check NPC races! */
-#define EVILRACE(a) (RACE_EVIL(a) || \
+#define EVILRACE(a) (IS_RACEWAR_EVIL(a) || \
                      (GET_RACE(a) == RACE_DEMON) || \
                      (GET_RACE(a) == RACE_DEVIL) || \
                      (IS_UNDEAD(a) ) || \
@@ -307,9 +307,9 @@ extern const char *justice_flag_names[];
                      (GET_RACE(a) == RACE_HALFORC) || \
                      (GET_RACE(a) == RACE_DEMON))
 
-#define GOODRACE(a) (RACE_GOOD(a))
+#define GOODRACE(a) (IS_RACEWAR_GOOD(a))
 
-#define UNDEADRACE(a) (RACE_PUNDEAD(a))
+#define UNDEADRACE(a) (IS_RACEWAR_UNDEAD(a))
 
   /* invaders and outcasts can't hide behind shapechange, so use the
      GET_PLYR() macros. */

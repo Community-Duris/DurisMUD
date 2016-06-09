@@ -754,9 +754,9 @@ void do_spellbind (P_char ch, char *argument, int cmd)
 
   sprintf(tempbuf , "%s %s", item->name, GET_NAME(ch));
   set_keywords(item, tempbuf);
-  if(RACE_GOOD(ch))
+  if(IS_RACEWAR_GOOD(ch))
   sprintf(tempbuf , "%s &+yenc&+Yha&+ynted by &+L%s&n", item->short_description, GET_NAME(ch));
-  else if(RACE_EVIL(ch))
+  else if(IS_RACEWAR_EVIL(ch))
   sprintf(tempbuf , "%s &+renc&+Rha&+rnted by &+L%s&n", item->short_description, GET_NAME(ch));
   else
   sprintf(tempbuf , "%s &+wenc&+Wha&+wnted by &+L%s&n", item->short_description, GET_NAME(ch));

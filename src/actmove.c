@@ -1692,8 +1692,8 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
       enter_message(ch, tch, exitnumb, amsg, was_in, new_room);
 
       int nocalming = 0;
-      if( (RACE_EVIL(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_GOODHOME)) ||
-          (RACE_GOOD(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_EVILHOME)))
+      if( (IS_RACEWAR_EVIL(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_GOODHOME)) ||
+          (IS_RACEWAR_GOOD(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_EVILHOME)))
       nocalming = 1;
 
       if( !IS_ELITE(tch) && !nocalming && (((GET_LEVEL(tch) - GET_LEVEL(ch)) <= 5) || !number(0, 3))

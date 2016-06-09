@@ -3962,7 +3962,7 @@ int good_evil_sword(P_obj obj, P_char ch, int cmd, char *arg)
   }
   if( !IS_TRUSTED(ch) )
   {
-    if( !IS_NPC(ch) && (bIsEvil && RACE_GOOD(ch)) || (bIsGood && RACE_EVIL(ch)) )
+    if( !IS_NPC(ch) && (bIsEvil && IS_RACEWAR_GOOD(ch)) || (bIsGood && IS_RACEWAR_EVIL(ch)) )
     {
       good_evil_poofSword(ch, obj);
     }
@@ -5242,13 +5242,13 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
     act("&+LYour spell is absorbed by $N&+L's $q&+L!", FALSE, vict, obj, ch, TO_CHAR);
     act("&+L$n&+L's spell is absorbed by your $q&+L!", FALSE, vict, obj, ch, TO_VICT);
 
-    if( alignment == 0 && ( IS_EVIL(vict) || RACE_EVIL(vict) ) )
+    if( alignment == 0 && ( IS_EVIL(vict) || IS_RACEWAR_EVIL(vict) ) )
     {
       act("You are filled with &+WHOLY&n power!", FALSE, ch, obj, 0, TO_CHAR);
       act("$n is filled with &+WHOLY&n power!", FALSE, ch, obj, 0, TO_ROOM);
       spell_holy_word(60, ch, NULL, 0, vict, 0);
     }
-    else if( alignment == 1 && ( IS_GOOD(vict) || RACE_GOOD(vict) ) )
+    else if( alignment == 1 && ( IS_GOOD(vict) || IS_RACEWAR_GOOD(vict) ) )
     {
       act("You are filled with &+LUNHOLY&n power!", FALSE, ch, obj, 0, TO_CHAR);
       act("$n is filled with &+LUNHOLY&n power!", FALSE, ch, obj, 0, TO_ROOM);
@@ -9528,7 +9528,7 @@ int guild_badge(P_obj obj, P_char ch, int cmd, char *arg)
       affects_bonus = (affects_bonus * GET_LEVEL(ch) / 50);
 
       // Goodies have it a bit easier get good stat's
-      if( RACE_GOOD(ch) )
+      if( IS_RACEWAR_GOOD(ch) )
       {
         affects_bonus = (int) (affects_bonus * 1.3);
       }

@@ -54,7 +54,7 @@ int tharnrifts_portal(P_obj obj, P_char ch, int cmd, char *arg)
   {
     if (isname(arg, "portal") || isname(arg, "shadowrift"))
     {
-      if(RACE_GOOD(ch))
+      if(IS_RACEWAR_GOOD(ch))
         obj->value[0] = 5569;
       else
         obj->value[0] = 5583;

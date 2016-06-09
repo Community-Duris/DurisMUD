@@ -280,7 +280,7 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
       send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RThe Journey Begins&+r achievement!&n\r\n", ch);
       send_to_char("&+yThis &+Yachievement&+y rewards an &+Yitem&+y! Check your &+Winventory &+yby typing &+Wi&+y!&n\r\n", ch);
       gift = read_object(400222, VIRTUAL);
-      if( RACE_EVIL(ch) && gift )
+      if( IS_RACEWAR_EVIL(ch) && gift )
       {
         REMOVE_BIT(gift->extra_flags, ITEM_LIT);
       }

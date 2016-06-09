@@ -1177,10 +1177,10 @@ struct char_shapechange_data {
 
 #define NUMB_PC_TIMERS 10
 
-#define ILLITHID_HEAVEN_ROOM 1197
-#define EVIL_HEAVEN_ROOM 1198
-#define GOOD_HEAVEN_ROOM 1199
-#define UNDEAD_HEAVEN_ROOM 1281
+#define GOOD_HEAVEN_ROOM      1199
+#define EVIL_HEAVEN_ROOM      1198
+#define UNDEAD_HEAVEN_ROOM    1281
+#define NEUTRAL_HEAVEN_ROOM   1197
 
 struct pc_only_data {           /* values only used by PCs        */
   int pid; // replacement for PC's ->nr

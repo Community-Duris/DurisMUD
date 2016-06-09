@@ -105,13 +105,13 @@ int order_undock(P_char ch, P_ship ship)
     send_to_char("Your crew begins undocking procedures.\r\n", ch);
     if (!IS_NPC_SHIP(ship))
     {
-      if( RACE_GOOD(ch) )
+      if( IS_RACEWAR_GOOD(ch) )
         ship->race = GOODIESHIP;
-      else if( RACE_EVIL(ch) )
+      else if( IS_RACEWAR_EVIL(ch) )
         ship->race = EVILSHIP;
-      else if( RACE_PUNDEAD(ch) )
+      else if( IS_RACEWAR_UNDEAD(ch) )
         ship->race = UNDEADSHIP;
-      else if( RACE_NEUTRAL(ch) )
+      else if( IS_RACEWAR_NEUTRAL(ch) )
         ship->race = SQUIDSHIP;
       else
         ship->race = UNKNOWNSHIP;

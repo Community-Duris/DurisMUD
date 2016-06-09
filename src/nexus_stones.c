@@ -362,7 +362,7 @@ bool nexus_stone_touch(P_obj stone, P_char ch)
     return FALSE;
   }
   
-  if( !RACE_GOOD(ch) && !RACE_EVIL(ch) )
+  if( !IS_RACEWAR_GOOD(ch) && !IS_RACEWAR_EVIL(ch) )
   {
     act(ns_messages[_CH_INDIFFERENT], FALSE, ch, stone, 0, TO_CHAR);
     return FALSE;
@@ -374,8 +374,8 @@ bool nexus_stone_touch(P_obj stone, P_char ch)
     return FALSE;
   }
   
-  if( ( RACE_GOOD(ch) && STONE_ALIGN(stone) >= STONE_ALIGN_GOOD ) ||
-      ( RACE_EVIL(ch) && STONE_ALIGN(stone) <= STONE_ALIGN_EVIL ) )
+  if( ( IS_RACEWAR_GOOD(ch) && STONE_ALIGN(stone) >= STONE_ALIGN_GOOD ) ||
+      ( IS_RACEWAR_EVIL(ch) && STONE_ALIGN(stone) <= STONE_ALIGN_EVIL ) )
   {
     // if the stone is turned, only allow touches from opposite side
     act(ns_messages[_CH_INDIFFERENT], FALSE, ch, stone, 0, TO_CHAR);
@@ -391,8 +391,8 @@ bool nexus_stone_touch(P_obj stone, P_char ch)
   
   bool will_turn = FALSE;
   
-  if( ( RACE_GOOD(ch) && (STONE_ALIGN(stone) + 1) >= STONE_ALIGN_GOOD ) ||
-      ( RACE_EVIL(ch) && (STONE_ALIGN(stone) - 1) <= STONE_ALIGN_EVIL ) )
+  if( ( IS_RACEWAR_GOOD(ch) && (STONE_ALIGN(stone) + 1) >= STONE_ALIGN_GOOD ) ||
+      ( IS_RACEWAR_EVIL(ch) && (STONE_ALIGN(stone) - 1) <= STONE_ALIGN_EVIL ) )
   {
     will_turn = true;
   }
@@ -431,7 +431,7 @@ bool nexus_stone_touch(P_obj stone, P_char ch)
   
   bool turned = false;
   
-  if( RACE_GOOD(ch) )
+  if( IS_RACEWAR_GOOD(ch) )
   {
     // a good raced player touches
     world_echo(ns_messages[_GLOBAL_GOOD_TOUCH]);
@@ -455,7 +455,7 @@ bool nexus_stone_touch(P_obj stone, P_char ch)
       //load_sage(STONE_ID(stone), ch->in_room, STONE_ALIGN_GOOD);
     }
   }
-  else if( RACE_EVIL(ch) )
+  else if( IS_RACEWAR_EVIL(ch) )
   {
     // an evil raced player touches
     world_echo(ns_messages[_GLOBAL_EVIL_TOUCH]);

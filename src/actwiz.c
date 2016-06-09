@@ -1607,6 +1607,7 @@ void do_stat(P_char ch, char *argument, int cmd)
   struct time_info_data playing_time;
   struct zone_data *zone = 0;
   float    fragnum = 0;
+  time_t now;
   static int class_mod[17] =
     { 0, 12, 12, 12, 12, 12, 8, 10, 8, 8, 4, 4, 4, 6, 6, 9, 6 };
 
@@ -2632,7 +2633,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     strcat(o_buf, buf);
 
     strcat(o_buf, "\n");
-    
+
     if(IS_PC(k))
     {
       struct affected_type *paf = get_spell_from_char(ch, TAG_EPICS_GAINED);
@@ -3002,6 +3003,29 @@ void do_stat(P_char ch, char *argument, int cmd)
       strcat(buf, "\n");
       strcat(o_buf, buf);
     }
+
+    strcat(o_buf, "\n");
+
+    if( IS_PC(k) )
+    {
+      sprintf( buf, "&+YTimers: T[0] = &N%10ld&+Y, T[1] = &N%10ld&+Y, T[2] = &N%10ld&+Y, T[3] = &N%10ld&+Y, T[4] = &N%10ld&+Y,\n"
+                    "&+Y        T[5] = &N%10ld&+Y, T[6] = &N%10ld&+Y, T[7] = &N%10ld&+Y, T[8] = &N%10ld&+Y, T[9] = &N%10ld&+Y.&N\n",
+        k->only.pc->pc_timer[0], k->only.pc->pc_timer[1], k->only.pc->pc_timer[2], k->only.pc->pc_timer[3],
+        k->only.pc->pc_timer[4], k->only.pc->pc_timer[5], k->only.pc->pc_timer[6], k->only.pc->pc_timer[7],
+        k->only.pc->pc_timer[8], k->only.pc->pc_timer[9] );
+      strcat( o_buf, buf );
+
+      now = time(NULL);
+      sprintf( buf, "&+YTimers(left): T[STAT_POOL] = &N%8ld&+Y, T[FLEE]    = &N%8ld&+Y, T[HEAVEN] = &N%8ld&+Y,\n"
+                    "&+Y              T[AVATAR]    = &N%8ld&+Y, T[SBEACON] = &N%8ld&+Y.\n\n",
+        (k->only.pc->pc_timer[PC_TIMER_STAT_POOL] > now) ? k->only.pc->pc_timer[PC_TIMER_STAT_POOL] - now : 0,
+        (k->only.pc->pc_timer[PC_TIMER_FLEE] > now) ? k->only.pc->pc_timer[PC_TIMER_FLEE] - now : 0,
+        (k->only.pc->pc_timer[PC_TIMER_HEAVEN] > now) ? k->only.pc->pc_timer[PC_TIMER_HEAVEN] - now : 0,
+        (k->only.pc->pc_timer[PC_TIMER_AVATAR] > now) ? k->only.pc->pc_timer[PC_TIMER_AVATAR] - now : 0,
+        (k->only.pc->pc_timer[PC_TIMER_SBEACON] > now) ? k->only.pc->pc_timer[PC_TIMER_SBEACON] - now : 0 );
+      strcat( o_buf, buf );
+    }
+
     if(k->affected)
     {
       strcat(o_buf, "&+YAffecting Spells:\n&+Y-----------------\n");
@@ -3504,7 +3528,7 @@ void do_echog(P_char ch, char *arg, int cmd)
     {
       if(d->connected == CON_PLYNG)
       {
-        if(RACE_GOOD(d->character) || IS_TRUSTED(d->character))
+        if(IS_RACEWAR_GOOD(d->character) || IS_TRUSTED(d->character))
         {
           if(GET_LEVEL(d->character) >= level)
           {
@@ -3552,7 +3576,7 @@ void do_echoe(P_char ch, char *arg, int cmd)
       if(d->connected == CON_PLYNG)
       {
         if((EVIL_RACE(d->character) || IS_TRUSTED(d->character)) &&
-            (!(RACE_PUNDEAD(d->character))))
+            (!(IS_RACEWAR_UNDEAD(d->character))))
         {
           if(GET_LEVEL(d->character) >= level)
           {
@@ -3599,7 +3623,7 @@ void do_echou(P_char ch, char *arg, int cmd)
     {
       if(d->connected == CON_PLYNG)
       {
-        if(RACE_PUNDEAD(d->character) || IS_TRUSTED(d->character))
+        if(IS_RACEWAR_UNDEAD(d->character) || IS_TRUSTED(d->character))
         {
           if(GET_LEVEL(d->character) >= level)
           {
@@ -3819,22 +3843,22 @@ void do_nchat(P_char ch, char *argument, int cmd)
 
   if( !IS_TRUSTED(ch) )
   {
-    if( RACE_GOOD(ch) )
+    if( IS_RACEWAR_GOOD(ch) )
     {
       sprintf(Gbuf2, "&+Wgood&n");
       good = TRUE;
     }
-    else if(RACE_EVIL(ch))
+    else if(IS_RACEWAR_EVIL(ch))
     {
       sprintf(Gbuf2, "&+Revil&n");
       evil = TRUE;
     }
-    else if(RACE_PUNDEAD(ch))
+    else if(IS_RACEWAR_UNDEAD(ch))
     {
       sprintf(Gbuf2, "&+Lundead&n");
       undead = TRUE;
     }
-    else if(RACE_NEUTRAL(ch))
+    else if(IS_RACEWAR_NEUTRAL(ch))
     {
       sprintf(Gbuf2, "&+Mneutral&n");
       neutral = TRUE;
@@ -3852,8 +3876,8 @@ void do_nchat(P_char ch, char *argument, int cmd)
       continue;
     }
     // If mortal && racewar side doesn't match.  (Immortals see all nchats).
-    if( !IS_TRUSTED(to) && !all && ( (evil && !RACE_EVIL(to)) || (undead && !RACE_PUNDEAD(to))
-      || (good && !RACE_GOOD(to)) || (neutral && !RACE_NEUTRAL(to)) ) )
+    if( !IS_TRUSTED(to) && !all && ( (evil && !IS_RACEWAR_EVIL(to)) || (undead && !IS_RACEWAR_UNDEAD(to))
+      || (good && !IS_RACEWAR_GOOD(to)) || (neutral && !IS_RACEWAR_NEUTRAL(to)) ) )
     {
       continue;
     }
@@ -5571,7 +5595,7 @@ void do_restore(P_char ch, char *argument, int cmd)
         if(GET_HIT(victim) < GET_MAX_HIT(victim))
           GET_HIT(victim) = GET_MAX_HIT(victim);
         GET_VITALITY(victim) = GET_MAX_VITALITY(victim);
-        if(GET_CLASS(victim, CLASS_PSIONICIST) || RACE_PUNDEAD(victim) ||
+        if(GET_CLASS(victim, CLASS_PSIONICIST) || IS_RACEWAR_UNDEAD(victim) ||
             GET_CLASS(ch, CLASS_MINDFLAYER))
           GET_MANA(victim) = GET_MAX_MANA(victim);
         GET_COND(victim, FULL) = IS_TRUSTED(victim) ? -1 : 24;

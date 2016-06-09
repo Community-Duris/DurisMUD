@@ -10439,12 +10439,12 @@ int patrol_leader(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch) && number(1, 3) == 1)
   {
-    if (IS_PC(ch->specials.fighting) && RACE_EVIL(ch->specials.fighting))
+    if (IS_PC(ch->specials.fighting) && IS_RACEWAR_EVIL(ch->specials.fighting))
     {
       strcpy(buf, "Die you evil scum!");
       do_yell(ch, buf, CMD_SHOUT);
     }
-    else if (IS_PC(ch->specials.fighting) && RACE_GOOD(ch->specials.fighting))
+    else if (IS_PC(ch->specials.fighting) && IS_RACEWAR_GOOD(ch->specials.fighting))
     {
       strcpy(buf, "You moron I am here to protect you!");
       do_say(ch, buf, CMD_SAY);
@@ -10578,12 +10578,12 @@ int patrol_leader_road(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch) && number(1, 3) == 1)
   {
-    if (IS_PC(ch->specials.fighting) && RACE_EVIL(ch->specials.fighting))
+    if (IS_PC(ch->specials.fighting) && IS_RACEWAR_EVIL(ch->specials.fighting))
     {
       strcpy(buf, "Die you evil scum!");
       do_yell(ch, buf, CMD_SHOUT);
     }
-    else if (IS_PC(ch->specials.fighting) && RACE_GOOD(ch->specials.fighting))
+    else if (IS_PC(ch->specials.fighting) && IS_RACEWAR_GOOD(ch->specials.fighting))
     {
       strcpy(buf, "You moron I am here to protect you!");
       do_say(ch, buf, CMD_SAY);
@@ -11379,7 +11379,7 @@ int fooquest_mob(P_char ch, P_char pl, int cmd, char *arg)
     /*
      * transfer inventory to agthrodos
      */
-    if (RACE_EVIL(ch))
+    if (IS_RACEWAR_EVIL(ch))
     {
       item = read_object(21, VIRTUAL);
     }
@@ -14316,13 +14316,13 @@ int outpost_captain(P_char ch, P_char pl, int cmd, char *arg)
   /* Fix this to check how many in room */
   if (IS_FIGHTING(ch) && number(1, 3) == 1)
   {
-    if ((IS_PC(ch->specials.fighting) && RACE_EVIL(ch->specials.fighting)) ||
-        (RACE_PUNDEAD(ch->specials.fighting) && IS_PC(ch->specials.fighting)))
+    if ((IS_PC(ch->specials.fighting) && IS_RACEWAR_EVIL(ch->specials.fighting)) ||
+        (IS_RACEWAR_UNDEAD(ch->specials.fighting) && IS_PC(ch->specials.fighting)))
     {
       LOOP_THRU_PEOPLE(t_ch, ch)
       {
-        if ((IS_PC(t_ch) && RACE_EVIL(t_ch)) ||
-            (IS_PC(t_ch) && RACE_PUNDEAD(t_ch)))
+        if ((IS_PC(t_ch) && IS_RACEWAR_EVIL(t_ch)) ||
+            (IS_PC(t_ch) && IS_RACEWAR_UNDEAD(t_ch)))
         {
           if (!IS_TRUSTED(ch))
             how_many++;
@@ -14364,7 +14364,7 @@ int outpost_captain(P_char ch, P_char pl, int cmd, char *arg)
                               NULL, helpers_3, 0, 0);
 
     }
-    else if (IS_PC(ch->specials.fighting) && RACE_GOOD(ch->specials.fighting))
+    else if (IS_PC(ch->specials.fighting) && IS_RACEWAR_GOOD(ch->specials.fighting))
     {
       strcpy(buf, "You moron I am here to protect you!");
       do_say(ch, buf, CMD_SAY);
@@ -14393,9 +14393,9 @@ int outpost_captain(P_char ch, P_char pl, int cmd, char *arg)
             !(IS_SET(world[ch->in_room].room_flags, GUILD_ROOM)))
         {
           /*found char in same zone */
-          if ((IS_PC(d->character) && RACE_EVIL(d->character) &&
+          if ((IS_PC(d->character) && IS_RACEWAR_EVIL(d->character) &&
                !IS_TRUSTED(d->character)) || (IS_PC(d->character) &&
-                                              RACE_PUNDEAD(d->character) &&
+                                              IS_RACEWAR_UNDEAD(d->character) &&
                                               !IS_TRUSTED(d->character)))
           {
             if (how_close(ch->in_room, d->character->in_room, distance) > 0)
@@ -16307,8 +16307,8 @@ int clear_epic_task_spec(P_char npc, P_char ch, int cmd, char *arg)
         send_to_char("Can't clear a bugged task, please ask an imm.\r\n", ch);
         return TRUE;
       }
-      if( (RACE_GOOD(ch) && STONE_ALIGN(nexus) < STONE_ALIGN_GOOD)
-        || (RACE_EVIL(ch) && STONE_ALIGN(nexus) > STONE_ALIGN_EVIL) )
+      if( (IS_RACEWAR_GOOD(ch) && STONE_ALIGN(nexus) < STONE_ALIGN_GOOD)
+        || (IS_RACEWAR_EVIL(ch) && STONE_ALIGN(nexus) > STONE_ALIGN_EVIL) )
       {
         price = (price * 3) /2;
       }

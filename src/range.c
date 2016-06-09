@@ -1522,7 +1522,7 @@ int range_scan(P_char ch, P_char target, int distance, int type_scan)
          case SCAN_EVILRACE:
            LOOP_THRU_PEOPLE(t_ch, ch)
            {
-             if (IS_PC(t_ch) && RACE_EVIL(t_ch))
+             if (IS_PC(t_ch) && IS_RACEWAR_EVIL(t_ch))
              {
                ch->in_room = source_room;
                return door;
@@ -1532,7 +1532,7 @@ int range_scan(P_char ch, P_char target, int distance, int type_scan)
          case SCAN_GOODRACE:
            LOOP_THRU_PEOPLE(t_ch, ch)
            {
-             if (IS_PC(t_ch) && RACE_GOOD(t_ch))
+             if (IS_PC(t_ch) && IS_RACEWAR_GOOD(t_ch))
              {
                ch->in_room = source_room;
                return door;
@@ -1604,7 +1604,7 @@ int range_scan_track(P_char ch, int distance, int type_scan)
          case SCAN_EVILRACE:
            LOOP_THRU_PEOPLE(t_ch, ch)
            {
-             if (IS_PC(t_ch) && RACE_EVIL(t_ch))
+             if (IS_PC(t_ch) && IS_RACEWAR_EVIL(t_ch))
              {
                remember(ch, t_ch);
                ch->in_room = source_room;
@@ -1615,7 +1615,7 @@ int range_scan_track(P_char ch, int distance, int type_scan)
          case SCAN_GOODRACE:
            LOOP_THRU_PEOPLE(t_ch, ch)
            {
-             if (IS_PC(t_ch) && RACE_GOOD(t_ch))
+             if (IS_PC(t_ch) && IS_RACEWAR_GOOD(t_ch))
              {
                remember(ch, t_ch);
                ch->in_room = source_room;

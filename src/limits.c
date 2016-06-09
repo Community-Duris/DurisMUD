@@ -974,13 +974,13 @@ float gain_exp_modifiers(P_char ch, P_char victim, float XP)
 
 float gain_global_exp_modifiers(P_char ch, float XP)
 {
-  if( RACE_GOOD(ch) )
+  if( IS_RACEWAR_GOOD(ch) )
     XP *= exp_mods[EXPMOD_GOOD];
-  else if( RACE_EVIL(ch) )
+  else if( IS_RACEWAR_EVIL(ch) )
     XP *= exp_mods[EXPMOD_EVIL];
-  else if( RACE_PUNDEAD(ch) )
+  else if( IS_RACEWAR_UNDEAD(ch) )
     XP *= exp_mods[EXPMOD_UNDEAD];
-  else if( RACE_NEUTRAL(ch) )
+  else if( IS_RACEWAR_NEUTRAL(ch) )
     XP *= exp_mods[EXPMOD_NEUTRAL];
   XP *= exp_mods[EXPMOD_GLOBAL];
 
@@ -1132,7 +1132,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     if( tank && tank != ch && IS_PC(tank) && grouped(tank, ch) )
     {
       // Powerleveling stopgap
-      if( GET_LEVEL(tank) >= GET_LEVEL(ch) - (RACE_GOOD(ch) ? goodcap : evilcap) )
+      if( GET_LEVEL(tank) >= GET_LEVEL(ch) - (IS_RACEWAR_GOOD(ch) ? goodcap : evilcap) )
       {
         gain_exp(tank, victim, XP, EXP_TANKING);
       }
@@ -1272,7 +1272,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   else if( type == EXP_DEATH )
   {
     // Goods don't lose exp on death untill over the threshold.
-    if( RACE_GOOD(ch) && GET_LEVEL(ch) < (int) get_property("exp.goodieDeathExpLossLevelThreshold", 20) )
+    if( IS_RACEWAR_GOOD(ch) && GET_LEVEL(ch) < (int) get_property("exp.goodieDeathExpLossLevelThreshold", 20) )
     {
       return 0;
     }

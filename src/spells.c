@@ -2832,7 +2832,7 @@ void spell_mirage(int level, P_char ch, char *arg, int type, P_char victim, P_ob
         if (!is_illusion_char(gm))
 	  affect_from_char(gm, SPELL_MIRAGE);
 
-      if (RACE_GOOD(gm))
+      if (IS_RACEWAR_GOOD(gm))
       {
         do
 	{
@@ -2853,7 +2853,7 @@ void spell_mirage(int level, P_char ch, char *arg, int type, P_char victim, P_ob
 	       race != RACE_FIRBOLG &&
 	       race != RACE_WOODELF);
       }
-      else if (RACE_EVIL(gm))
+      else if (IS_RACEWAR_EVIL(gm))
       {
         do
 	{
@@ -2873,7 +2873,7 @@ void spell_mirage(int level, P_char ch, char *arg, int type, P_char victim, P_ob
 	       race != RACE_PILLITHID &&
 	       race != RACE_KUOTOA);
       }
-      else if (RACE_PUNDEAD(gm))
+      else if (IS_RACEWAR_UNDEAD(gm))
       {
         do
 	{

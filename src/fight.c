@@ -1420,7 +1420,7 @@ P_obj make_corpse(P_char ch, int loss)
     corpse->value[CORPSE_FLAGS] = PC_CORPSE;
     corpse->value[CORPSE_PID] = GET_PID(ch);
 
-    if (RACE_PUNDEAD(ch))
+    if (IS_RACEWAR_UNDEAD(ch))
     {
       corpse->value[CORPSE_RACEWAR] = 3;
     }

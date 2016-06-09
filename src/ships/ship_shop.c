@@ -2474,7 +2474,7 @@ int crew_shop_proc(int room, P_char ch, int cmd, char *arg)
   for( ; isspace(*arg); arg++ )
     ;
 
-  if( RACE_EVIL(ch) && !IS_TRUSTED(ch) )
+  if( IS_RACEWAR_EVIL(ch) && !IS_TRUSTED(ch) )
   {
     for( unsigned i = 0; i < sizeof(good_crew_shops) / sizeof(int); i++ )
     {
@@ -2485,7 +2485,7 @@ int crew_shop_proc(int room, P_char ch, int cmd, char *arg)
       }
     }
   }
-  if( RACE_GOOD(ch) && !IS_TRUSTED(ch) )
+  if( IS_RACEWAR_GOOD(ch) && !IS_TRUSTED(ch) )
   {
     for( unsigned i = 0; i < sizeof(evil_crew_shops) / sizeof(int); i++ )
     {

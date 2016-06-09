@@ -579,7 +579,7 @@ void checkFragList_internal(P_char ch, char type)
       sprintf(fraglist_file, "Fraglists/fraglist.squid");
     else if (GOOD_RACE(ch))
       sprintf(fraglist_file, "Fraglists/fraglist.goodie");
-    else if (RACE_PUNDEAD(ch))
+    else if (IS_RACEWAR_UNDEAD(ch))
       sprintf(fraglist_file, "Fraglists/fraglist.undead");
     else if (EVIL_RACE(ch))
       sprintf(fraglist_file, "Fraglists/fraglist.evil");

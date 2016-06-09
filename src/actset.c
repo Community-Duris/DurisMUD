@@ -89,13 +89,13 @@ char bad_on_off[MAX_INPUT_LENGTH];
 /* Types */
 struct setBitTable
 {
-  const char *sb_flag;          /* * Name of "flag" */
-  int      sb_offset;           /* * Offset from beginning of struct */
-  const char **sb_subtable;         /* * Subtable for options */
+  const char  *sb_flag;             // Name of "flag"
+  int          sb_offset;           // Offset from beginning of struct
+  const char **sb_subtable;         // Subtable for options
 
-  void     (*sb_func) (void *, int, char *, int, int);
-  int      entry_size;
-  int      entry_offset;
+  void       (*sb_func) (void *, int, char *, int, int);
+  int          entry_size;
+  int          entry_offset;
 };
 
 typedef struct setBitTable SetBitTable;
@@ -157,7 +157,7 @@ static void ac_skillCopy(void *, int, char *, int, int);
 static void ac_tongueCopy(void *, int, char *, int, int);
 static void ac_ubyteCopy(void *, int, char *, int, int);
 static void ac_idx2flagCopy(void *, int, char *, int, int);
-
+static void ac_timerCopy( void *, int, char *, int, int);
 /*
  * Wizard's command:
  * setbit "room" room-number flag-type value [ "on | off" ]
@@ -577,7 +577,8 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
     {"bals", PCOFFSET(spare2), NULL, ac_intCopy},
     {"balg", PCOFFSET(spare3), NULL, ac_intCopy},
     {"balp", PCOFFSET(spare4), NULL, ac_intCopy},
-    {"deaths", PCOFFSET(numb_deaths), NULL, ac_longCopy}
+    {"deaths", PCOFFSET(numb_deaths), NULL, ac_longCopy},
+    {"heaven", PCOFFSET(pc_timer[PC_TIMER_HEAVEN]), NULL, ac_timerCopy}
   };
 
   P_char ppl;
@@ -587,6 +588,7 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
     send_to_char("No one by that name here.\r\n", ch);
     return;
   }
+
   // only level forger+ can setbit players (outside of themselves)
   if( IS_PC(ppl) && ppl != ch
     && ((GET_LEVEL(ch) < FORGER) || (GET_LEVEL(ch) <= GET_LEVEL(ppl))) )
@@ -681,18 +683,13 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
         return;
       }
     }
-    else if (SAME_STRING(flag, "echo") || SAME_STRING(flag, "screensize") ||
-        SAME_STRING(flag, "prompt") || SAME_STRING(flag, "law_flags") ||
-        SAME_STRING(flag, "winvis") || SAME_STRING(flag, "wimpy") ||
-        SAME_STRING(flag, "aggr") || SAME_STRING(flag, "balp") ||
-        SAME_STRING(flag, "balg") || SAME_STRING(flag, "bals") ||
-        SAME_STRING(flag, "balc") || SAME_STRING(flag, "lesson") ||
-        SAME_STRING(flag, "frags") || SAME_STRING(flag, "epics") ||
-        SAME_STRING(flag, "epic_skill_points") ||
-        SAME_STRING(flag, "prestige") ||
-        SAME_STRING(flag, "time_left_guild") ||
-        SAME_STRING(flag, "nb_left_guild") ||
-        SAME_STRING(flag, "deaths"))
+    else if (SAME_STRING(flag, "echo") || SAME_STRING(flag, "screensize") || SAME_STRING(flag, "prompt")
+      || SAME_STRING(flag, "law_flags") || SAME_STRING(flag, "winvis") || SAME_STRING(flag, "wimpy")
+      || SAME_STRING(flag, "aggr") || SAME_STRING(flag, "balp") || SAME_STRING(flag, "balg")
+      || SAME_STRING(flag, "bals") || SAME_STRING(flag, "balc") || SAME_STRING(flag, "lesson")
+      || SAME_STRING(flag, "frags") || SAME_STRING(flag, "epics") || SAME_STRING(flag, "epic_skill_points")
+      || SAME_STRING(flag, "prestige") || SAME_STRING(flag, "time_left_guild") || SAME_STRING(flag, "nb_left_guild")
+      || SAME_STRING(flag, "deaths") || SAME_STRING(flag, "heaven") )
     {
       if (IS_NPC(ppl))
       {
@@ -701,6 +698,28 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
       }
       else
       {
+        if( SAME_STRING(flag, "heaven") && !(ppl->in_room == real_room0( GOOD_HEAVEN_ROOM )
+          || ppl->in_room == real_room0( EVIL_HEAVEN_ROOM ) || ppl->in_room == real_room0( UNDEAD_HEAVEN_ROOM )
+          || ppl->in_room == real_room0( NEUTRAL_HEAVEN_ROOM )) )
+        {
+          char_from_room( ppl );
+          if( IS_RACEWAR_GOOD(ppl) )
+            char_to_room( ppl, real_room0(GOOD_HEAVEN_ROOM), -2 );
+          else if( IS_RACEWAR_EVIL(ppl) )
+            char_to_room( ppl, real_room0(EVIL_HEAVEN_ROOM), -2 );
+          else if( IS_RACEWAR_UNDEAD(ppl) )
+            char_to_room( ppl, real_room0(UNDEAD_HEAVEN_ROOM), -2 );
+          else if( IS_RACEWAR_NEUTRAL(ppl) )
+            char_to_room( ppl, real_room0(NEUTRAL_HEAVEN_ROOM), -2 );
+          else
+          {
+            char_to_room( ppl, real_room0(ppl->specials.was_in_room), -2 );
+            act("Could not find heaven room for $N.. aborting", TRUE, ch, 0, ppl, TO_CHAR);
+            return;
+          }
+          send_to_char( "You feel your body pulled through reality by your soul...\n", ppl );
+          new_look( ppl, "", CMD_LOOK, ppl->in_room );
+        }
         setbit_parseTable(ch, (void *) ppl->only.pc, table, ARRAY_SIZE(table), flag, val, on_off, SETBIT_CHAR);
         return;
       }
@@ -1633,4 +1652,12 @@ static void ac_hitmanaCopy(void *where, int offset, char *value, int bit, int on
     val = (sh_int) bit;
 
   bcopy((char *) &val, (char *) where + offset, sizeof(val));
+}
+
+// Sets a time_t value.
+static void ac_timerCopy( void *where, int offset, char *value, int time_to_zero, int on_off )
+{
+  // So, we need to add the timer to time(NULL) to get the time when it should end.
+  // And we need to adjust offset to handle the size difference between the time_t and char.
+  *( (time_t *)(where) + (sizeof( char ) * offset / sizeof( time_t )) ) = time(NULL) + time_to_zero;
 }

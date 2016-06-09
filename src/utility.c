@@ -3600,13 +3600,13 @@ bool racewar(P_char viewer, P_char viewee)
 
   return FALSE;
 /*
-  if (RACE_EVIL(viewer) && !RACE_EVIL(viewee))
+  if (IS_RACEWAR_EVIL(viewer) && !IS_RACEWAR_EVIL(viewee))
     return TRUE;
 
-  if (RACE_PUNDEAD(viewer) && !RACE_PUNDEAD(viewee))
+  if (IS_RACEWAR_UNDEAD(viewer) && !IS_RACEWAR_UNDEAD(viewee))
     return TRUE;
 
-  if (RACE_GOOD(viewer) && !RACE_GOOD(viewee))
+  if (IS_RACEWAR_GOOD(viewer) && !IS_RACEWAR_GOOD(viewee))
     return TRUE;
 
   if ((IS_HARPY(viewer) && GET_RACEWAR(viewer) == RACEWAR_NEUTRAL) &&
@@ -3614,20 +3614,20 @@ bool racewar(P_char viewer, P_char viewee)
     return TRUE;
 */
 #if 0
-  if (RACE_PUNDEAD(viewer) && RACE_PUNDEAD(viewee))
+  if (IS_RACEWAR_UNDEAD(viewer) && IS_RACEWAR_UNDEAD(viewee))
     return FALSE;
 
-  if (RACE_PUNDEAD(viewee) && RACE_PUNDEAD(viewer))
+  if (IS_RACEWAR_UNDEAD(viewee) && IS_RACEWAR_UNDEAD(viewer))
     return FALSE;
 
-  if (RACE_EVIL(viewer) && RACE_PUNDEAD(viewee) && !RACE_PUNDEAD(viewer))
+  if (IS_RACEWAR_EVIL(viewer) && IS_RACEWAR_UNDEAD(viewee) && !IS_RACEWAR_UNDEAD(viewer))
     return TRUE;
 
-  if (RACE_PUNDEAD(viewer) && RACE_EVIL(viewee))
+  if (IS_RACEWAR_UNDEAD(viewer) && IS_RACEWAR_EVIL(viewee))
     return TRUE;
 
-  if ((RACE_PUNDEAD(viewer) && RACE_GOOD(viewee)) ||
-      (RACE_PUNDEAD(viewee) && RACE_GOOD(viewer)))
+  if ((IS_RACEWAR_UNDEAD(viewer) && IS_RACEWAR_GOOD(viewee)) ||
+      (IS_RACEWAR_UNDEAD(viewee) && IS_RACEWAR_GOOD(viewer)))
   {
     return TRUE;
   }
@@ -3645,7 +3645,7 @@ bool racewar(P_char viewer, P_char viewee)
   if (IS_NPC(viewer) && GET_MASTER(viewer) &&
       viewer->in_room == GET_MASTER(viewer)->in_room)
   {
-//    if (RACE_EVIL(viewer->following) != RACE_EVIL(viewee))
+//    if (IS_RACEWAR_EVIL(viewer->following) != IS_RACEWAR_EVIL(viewee))
     if (opposite_racewar(viewer->following, viewee))
       return TRUE;
   }
@@ -4205,9 +4205,9 @@ int is_introd(P_char viewee, P_char viewer)
 #else
 
 
-  if (((RACE_EVIL(viewer) && RACE_EVIL(viewee)) ||
-       (RACE_GOOD(viewer) && RACE_GOOD(viewee)) ||
-       (RACE_PUNDEAD(viewer) && RACE_PUNDEAD(viewee)) ||
+  if (((IS_RACEWAR_EVIL(viewer) && IS_RACEWAR_EVIL(viewee)) ||
+       (IS_RACEWAR_GOOD(viewer) && IS_RACEWAR_GOOD(viewee)) ||
+       (IS_RACEWAR_UNDEAD(viewer) && IS_RACEWAR_UNDEAD(viewee)) ||
        (IS_NHARPY(viewer) && IS_NHARPY(viewee)) ||
        (IS_ILLITHID(viewer))))
     return TRUE;

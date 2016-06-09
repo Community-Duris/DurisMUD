@@ -272,17 +272,17 @@ bool is_ally(P_char ch, P_char other)
     return FALSE;
   }
   
-  if (RACE_GOOD(ch))
+  if (IS_RACEWAR_GOOD(ch))
   {
-    return RACE_GOOD(other);
+    return IS_RACEWAR_GOOD(other);
   }
-  else if (RACE_PUNDEAD(ch))
+  else if (IS_RACEWAR_UNDEAD(ch))
   {
-    return RACE_PUNDEAD(other);
+    return IS_RACEWAR_UNDEAD(other);
   }
-  else if (RACE_EVIL(ch))
+  else if (IS_RACEWAR_EVIL(ch))
   {
-    return RACE_EVIL(other) && !RACE_PUNDEAD(other);
+    return IS_RACEWAR_EVIL(other) && !IS_RACEWAR_UNDEAD(other);
   }
   else if (IS_ILLITHID(ch))
   {

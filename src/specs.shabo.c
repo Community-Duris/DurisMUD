@@ -932,7 +932,7 @@ int shaboath_alternation_tower(int room, P_char ch, int cmd, char *argument)
       affect_to_char(tch, af);
       add_event(event_shabo_racechange, PULSE_VIOLENCE, tch, 0, 0, 0, 0, 0);
 
-      if (RACE_GOOD(tch))
+      if (IS_RACEWAR_GOOD(tch))
       {
 
         for (k = number(0, NUMBER_RACES_FOR_GOOD - 1);
@@ -942,7 +942,7 @@ int shaboath_alternation_tower(int room, P_char ch, int cmd, char *argument)
         tch->player.race = goodie_races[k];
 
       }
-      else if (RACE_EVIL(tch))
+      else if (IS_RACEWAR_EVIL(tch))
       {
 
         for (k = number(0, NUMBER_RACES_FOR_EVIL - 1);
@@ -952,7 +952,7 @@ int shaboath_alternation_tower(int room, P_char ch, int cmd, char *argument)
         tch->player.race = evil_races[k];
 
       }
-      else if (RACE_PUNDEAD(tch))
+      else if (IS_RACEWAR_UNDEAD(tch))
       {
 
         for (k = number(0, NUMBER_RACES_FOR_UNDEAD - 1);

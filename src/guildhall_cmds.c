@@ -191,12 +191,12 @@ void do_construct_overmax(P_char ch, char *arg)
     return;
   }
   
-  if (RACE_GOOD(ch))
+  if (IS_RACEWAR_GOOD(ch))
   {
     maxovermax = (int)get_property("guildhalls.construction.overmax.cap.good", 10);
     plat_cost = plat_cost/2;
   }
-  else if (RACE_EVIL(ch))
+  else if (IS_RACEWAR_EVIL(ch))
     maxovermax = (int)get_property("guildhalls.construction.overmax.cap.evil", 5);
   else
     maxovermax = 0;
@@ -1288,12 +1288,12 @@ bool guildhall_map_check(P_char ch)
     return FALSE;
 
   //making guildhalls only avail in towns - 8/22/13 Drannak
-  if (RACE_GOOD(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_EVILHOME))
+  if (IS_RACEWAR_GOOD(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_EVILHOME))
   {
     send_to_char("Sure, call in the contractors!... Try to find a good hometown to build in.\n", ch);
     return FALSE;
   }
-  else if (RACE_EVIL(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_GOODHOME))
+  else if (IS_RACEWAR_EVIL(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_GOODHOME))
   {
     send_to_char("Sure, call in the contractors!... Try to find an evil hometown to build in.\n", ch);
     return FALSE;

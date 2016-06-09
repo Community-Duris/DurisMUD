@@ -394,11 +394,11 @@ char    *language_CRYPT(P_char ch, P_char victim, char *message)
     return string;
 
   /* below this line is an autotranslator for sameside, disabling it -Raxxel */
-  if (RACE_EVIL(ch) && RACE_EVIL(victim))
+  if (IS_RACEWAR_EVIL(ch) && IS_RACEWAR_EVIL(victim))
     return string;
-  if (RACE_GOOD(ch) && RACE_GOOD(victim))
+  if (IS_RACEWAR_GOOD(ch) && IS_RACEWAR_GOOD(victim))
     return string;
-  if (RACE_PUNDEAD(ch) && RACE_PUNDEAD(victim))
+  if (IS_RACEWAR_UNDEAD(ch) && IS_RACEWAR_UNDEAD(victim))
     return string;
 
   if (IS_HARPY(ch) && IS_HARPY(victim))
@@ -418,9 +418,9 @@ char    *language_CRYPT(P_char ch, P_char victim, char *message)
     vict_skill = 100;
 
 /* works across racewars again */
-/*  if ((RACE_EVIL(ch) && RACE_EVIL(victim)) ||
-     (RACE_GOOD(ch) && RACE_GOOD(victim))  ||
-     (RACE_PUNDEAD(ch) && RACE_PUNDEAD(victim))) */
+/*  if ((IS_RACEWAR_EVIL(ch) && IS_RACEWAR_EVIL(victim)) ||
+     (IS_RACEWAR_GOOD(ch) && IS_RACEWAR_GOOD(victim))  ||
+     (IS_RACEWAR_UNDEAD(ch) && IS_RACEWAR_UNDEAD(victim))) */
 
   if (affected_by_spell(victim, SPELL_COMPREHEND_LANGUAGES))
   {

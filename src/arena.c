@@ -119,15 +119,15 @@ void send_to_arena(char *msg, int race)
         switch (race)
         {
         case GOODIE:
-          if (RACE_GOOD(d->character))
+          if (IS_RACEWAR_GOOD(d->character))
             send_to_char(msg, d->character);
           break;
         case EVIL:
-          if (RACE_EVIL(d->character))
+          if (IS_RACEWAR_EVIL(d->character))
             send_to_char(msg, d->character);
           break;
         case UNDEAD:
-          if (RACE_PUNDEAD(d->character))
+          if (IS_RACEWAR_UNDEAD(d->character))
             send_to_char(msg, d->character);
           break;
         default:
@@ -525,11 +525,11 @@ int arenaobj_proc(P_obj obj, P_char ch, int cmd, char *arg)
       return TRUE;
     }
 
-    if (RACE_EVIL(ch))
+    if (IS_RACEWAR_EVIL(ch))
       race = EVIL;
-    else if (RACE_GOOD(ch))
+    else if (IS_RACEWAR_GOOD(ch))
       race = GOODIE;
-    else if (RACE_PUNDEAD(ch))
+    else if (IS_RACEWAR_UNDEAD(ch))
       race = UNDEAD;
 
     for (i = 0; i < 2; i++)
@@ -569,7 +569,7 @@ int arenaobj_proc(P_obj obj, P_char ch, int cmd, char *arg)
       char_from_room(ch);
       char_to_room(ch,
                    real_room(arena_hometown_location
-                             [RACE_EVIL(ch) ? EVIL : GOODIE]), -1);
+                             [IS_RACEWAR_EVIL(ch) ? EVIL : GOODIE]), -1);
       act("$n steps out of $p.", TRUE, ch, obj, 0, TO_ROOM);
       return TRUE;
     }

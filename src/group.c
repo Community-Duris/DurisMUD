@@ -377,9 +377,9 @@ void do_group(P_char ch, char *argument, int cmd)
       {
         counter++;
       }
-      if (RACE_EVIL(ch))
+      if (IS_RACEWAR_EVIL(ch))
         maxsize = (int) get_property("groups.size.max.evil", 13);
-      if (RACE_GOOD(ch))
+      if (IS_RACEWAR_GOOD(ch))
         maxsize = (int) get_property("groups.size.max.good", 13);
 #if defined(CTF_MUD) && (CTF_MUD == 1)
       maxsize = 5;
@@ -1066,7 +1066,7 @@ bool group_add_member(P_char leader, P_char member)
       return FALSE;
     }
 #else
-    if (RACE_EVIL(leader) && !IS_PC_PET(member))
+    if (IS_RACEWAR_EVIL(leader) && !IS_PC_PET(member))
     {
       if (group_size >= (int) get_property("groups.size.max.evil", 13) )
       {
@@ -1074,7 +1074,7 @@ bool group_add_member(P_char leader, P_char member)
         return FALSE;
       }
     }
-    if (RACE_GOOD(leader) && !IS_PC_PET(member))
+    if (IS_RACEWAR_GOOD(leader) && !IS_PC_PET(member))
     {
       if (group_size >= (int) get_property("groups.size.max.good", 13) )
       {

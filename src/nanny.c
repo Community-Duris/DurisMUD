@@ -36,6 +36,7 @@
 #include "guildhall.h"
 #include "epic.h"
 #include "utility.h"
+#include "vnum.room.h"
 
 /* external variables */
 
@@ -3126,16 +3127,19 @@ void enter_game(P_desc d)
 
   if (ch->only.pc->pc_timer[PC_TIMER_HEAVEN] > ct)
   {
-    if (IS_ILLITHID(ch))
-      r_room = real_room(ILLITHID_HEAVEN_ROOM);
-    else if (GOOD_RACE(ch))
+    if( IS_RACEWAR_GOOD(ch) )
       r_room = real_room(GOOD_HEAVEN_ROOM);
-    else if (PUNDEAD_RACE(ch))
-      r_room = real_room(UNDEAD_HEAVEN_ROOM);
-    else if (EVIL_RACE(ch))
+    else if( IS_RACEWAR_EVIL(ch) )
       r_room = real_room(EVIL_HEAVEN_ROOM);
+    else if( IS_RACEWAR_UNDEAD(ch) )
+      r_room = real_room(UNDEAD_HEAVEN_ROOM);
+    else if( IS_ILLITHID(ch) )
+      r_room = real_room(NEUTRAL_HEAVEN_ROOM);
+    else if( IS_RACEWAR_NEUTRAL(ch) )
+      r_room = real_room(NEUTRAL_HEAVEN_ROOM);
+    // Cage people on undefined racewar sides.  That'll get a fix quick
     else
-      r_room = real_room(ILLITHID_HEAVEN_ROOM);
+      r_room = real_room(VROOM_CAGE);
   }
 
   if (r_room == NOWHERE)

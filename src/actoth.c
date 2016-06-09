@@ -523,7 +523,7 @@ void do_camp(P_char ch, char *arg, int cmd)
 	  return;
   }
 
-  if (!RACE_PUNDEAD(ch))
+  if (!IS_RACEWAR_UNDEAD(ch))
   {
     send_to_char("You start setting up camp...\r\n", ch);
     act("$n begins to set up camp..", FALSE, ch, 0, 0, TO_ROOM);
@@ -4979,7 +4979,7 @@ void do_toggle(P_char ch, char *arg, int cmd)
     break;
 
   case 29:
-    if (RACE_EVIL(ch) || RACE_PUNDEAD(ch))
+    if (IS_RACEWAR_EVIL(ch) || IS_RACEWAR_UNDEAD(ch))
     {
       send_to_char("You wish life were that easy.\r\n", send_ch);
       return;
@@ -7003,7 +7003,7 @@ void do_old_descend(P_char ch, char *arg, int cmd)
     ch->player.secondary_class = 0;
     ch->only.pc->epics = MAX(0, ch->only.pc->epics - cost);
 
-    if(RACE_EVIL(ch))
+    if(IS_RACEWAR_EVIL(ch))
     {
       GET_HOME(ch) = GET_BIRTHPLACE(ch) = GET_ORIG_BIRTHPLACE(ch) = 90363;
     }

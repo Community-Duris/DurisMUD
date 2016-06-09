@@ -950,10 +950,6 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_INCORPOREAL(ch) (IS_IMMATERIAL(ch))
 
-#define EVIL_RACE(ch) RACE_EVIL(ch)
-#define GOOD_RACE(ch) RACE_GOOD(ch)
-#define PUNDEAD_RACE(ch) RACE_PUNDEAD(ch)
-
 #define IS_PURE_CASTER_CLASS(cls) ( (cls) &\
   (CLASS_SORCERER | CLASS_CONJURER | CLASS_ILLUSIONIST | CLASS_SUMMONER | \
   CLASS_NECROMANCER | CLASS_CLERIC | CLASS_SHAMAN | CLASS_BARD |\
@@ -1104,10 +1100,14 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 /* Race determinators --MIAX */
 
-#define RACE_GOOD(ch) (GET_RACEWAR(ch) == RACEWAR_GOOD)
-#define RACE_EVIL(ch) (GET_RACEWAR(ch) == RACEWAR_EVIL)
-#define RACE_PUNDEAD(ch) (GET_RACEWAR(ch) == RACEWAR_UNDEAD)
-#define RACE_NEUTRAL(ch) (GET_RACEWAR(ch) == RACEWAR_NEUTRAL)
+#define IS_RACEWAR_GOOD(ch) (GET_RACEWAR(ch) == RACEWAR_GOOD)
+#define IS_RACEWAR_EVIL(ch) (GET_RACEWAR(ch) == RACEWAR_EVIL)
+#define IS_RACEWAR_UNDEAD(ch) (GET_RACEWAR(ch) == RACEWAR_UNDEAD)
+#define IS_RACEWAR_NEUTRAL(ch) (GET_RACEWAR(ch) == RACEWAR_NEUTRAL)
+
+#define EVIL_RACE(ch)     IS_RACEWAR_EVIL(ch)
+#define GOOD_RACE(ch)     IS_RACEWAR_GOOD(ch)
+#define PUNDEAD_RACE(ch)  IS_RACEWAR_UNDEAD(ch)
 
 #define OLD_RACE_NEUTRAL(race) ( (race == RACE_THRIKREEN) \
                               || (race == RACE_MINOTAUR) )
@@ -1403,14 +1403,14 @@ char *CRYPT2( char *passwd, char *name );
                        IS_ANGELIC(ch))
 
 #define INFRA_INVIS_RACE(race)   (race == RACE_UNDEAD      || race == RACE_GHOST       || race == RACE_VAMPIRE       \
-  || race == RACE_LICH        || race == RACE_PDKNIGHT    || race == RACE_ZOMBIE      || race == RACE_SPECTRE       \
+  || race == RACE_LICH         || race == RACE_PDKNIGHT    || race == RACE_ZOMBIE      || race == RACE_SPECTRE       \
   || race == RACE_SKELETON     || race == RACE_WRAITH      || race == RACE_SHADOW      || race == RACE_DRACOLICH     \
   || race == RACE_PVAMPIRE     || race == RACE_SHADE       || race == RACE_REVENANT    || race == RACE_PSBEAST       \
   || race == RACE_WIGHT        || race == RACE_GARGOYLE    || race == RACE_PHANTOM     || race == RACE_AQUATIC_ANIMAL\
   || race == RACE_PARASITE     || race == RACE_GOLEM       || race == RACE_SNAKE       || race == RACE_ARACHNID      \
   || race == RACE_PLANT        || race == RACE_SLIME       || race == RACE_A_ELEMENTAL || race == RACE_INSECT        \
   || race == RACE_W_ELEMENTAL  || race == RACE_V_ELEMENTAL || race == RACE_I_ELEMENTAL || race == RACE_E_ELEMENTAL   \
-  || (IS_AFFECTED4(obj, AFF4_VAMPIRE_FORM) && !GET_CLASS(obj, CLASS_THEURGIST)) || RACE_PUNDEAD(obj) )
+  || (IS_AFFECTED4(obj, AFF4_VAMPIRE_FORM) && !GET_CLASS(obj, CLASS_THEURGIST)) || IS_RACEWAR_UNDEAD(obj) )
 
 // This is done in reverse 'cause it's faster that way.
 #define HAS_LUNGS(race)     ( race != RACE_SHADE     && race != RACE_REVENANT    && race != RACE_LICH       \

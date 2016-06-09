@@ -353,7 +353,7 @@ int room_has_evil_enemy(const P_char ch)
     {
       if(IS_PC(temp))
       {
-        if(RACE_EVIL(temp))
+        if(IS_RACEWAR_EVIL(temp))
           return TRUE;
       }
       else if(GET_ALIGNMENT(temp) <= 0)
@@ -383,7 +383,7 @@ int room_has_good_enemy(const P_char ch)
     {
       if(IS_PC(temp))
       {
-        if(RACE_GOOD(temp))
+        if(IS_RACEWAR_GOOD(temp))
           return TRUE;
       }
       else if(GET_ALIGNMENT(temp) >= 0)
@@ -6511,7 +6511,7 @@ void GhostFearEffect(P_char ch)
     next = tch->next_in_room;
 
     if(IS_PC(tch) && (!GET_CLASS(tch, CLASS_CLERIC) || GET_LEVEL(tch) <= 25)
-        && !IS_THRIKREEN(tch) && (!RACE_PUNDEAD(tch) && number(0, 2)))
+        && !IS_THRIKREEN(tch) && (!IS_RACEWAR_UNDEAD(tch) && number(0, 2)))
       if(!NewSaves(tch, SAVING_FEAR, 0) && CAN_SEE(tch, ch) &&
           !IS_TRUSTED(tch))
       {
@@ -8242,8 +8242,8 @@ PROFILE_START(mundane_picktarget);
   {
       int calming = 0;
       int nocalming = 0;
-      if ((RACE_EVIL(tmp_ch) && IS_SET(hometowns[VNUM2TOWN(world[tmp_ch->in_room].number)-1].flags, JUSTICE_GOODHOME)) ||
-          (RACE_GOOD(tmp_ch) && IS_SET(hometowns[VNUM2TOWN(world[tmp_ch->in_room].number)-1].flags, JUSTICE_EVILHOME)))
+      if ((IS_RACEWAR_EVIL(tmp_ch) && IS_SET(hometowns[VNUM2TOWN(world[tmp_ch->in_room].number)-1].flags, JUSTICE_GOODHOME)) ||
+          (IS_RACEWAR_GOOD(tmp_ch) && IS_SET(hometowns[VNUM2TOWN(world[tmp_ch->in_room].number)-1].flags, JUSTICE_EVILHOME)))
       nocalming = 1;
 
       // Alright, if !elite ch and !nocalming.. check for calming:

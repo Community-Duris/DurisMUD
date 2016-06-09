@@ -3431,7 +3431,7 @@ int camp(P_char ch)
           if( IS_DESTROYING(ch) )
             stop_destroying(ch);
           affect_from_char(ch, TAG_CAMP);
-          if (!RACE_PUNDEAD(ch))
+          if (!IS_RACEWAR_UNDEAD(ch))
           {
             act("$n rolls $mself up in $s bedroll and tunes out the world.",
                 FALSE, ch, 0, 0, TO_ROOM);

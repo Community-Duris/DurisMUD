@@ -391,7 +391,7 @@ P_char create_random_mob(int theme, int mob_level)
       race = number( 1, MIN(27, LAST_RACE) );
 
       // Stop looking when we find a good race.
-      if (RACE_GOOD(random_mob))
+      if (IS_RACEWAR_GOOD(random_mob))
       {
         break;
       }
@@ -405,7 +405,7 @@ P_char create_random_mob(int theme, int mob_level)
       race = number( 1, MIN(27, LAST_RACE) );
 
       // If racewar == EVIL, then racewar != UNDEAD.
-      if( RACE_EVIL(random_mob) )
+      if( IS_RACEWAR_EVIL(random_mob) )
       {
         break;
       }
@@ -418,7 +418,7 @@ P_char create_random_mob(int theme, int mob_level)
     {
       race = number( 1, MIN(27, LAST_RACE) );
 
-      if( RACE_PUNDEAD(random_mob) )
+      if( IS_RACEWAR_UNDEAD(random_mob) )
       {
         break;
       }
