@@ -466,8 +466,8 @@ void Guild::save( )
     strcat( write_buf, titles[i] );
     strcat( write_buf, "\n" );
   }
-  // Then the guild bits.
-  sprintf( buf, "%d\n", bits );
+  // Then the guild bits, prestige and construction.
+  sprintf( buf, "%d %d %d\n", bits, prestige, construction );
   strcat( write_buf, buf );
   // Then guild funds.
   sprintf( buf, "%i %i %i %i\n", platinum, gold, silver, copper );
@@ -516,9 +516,11 @@ bool Guild::load_guild( int guild_num )
     buf[strlen(buf) - 1] = '\0';
     sprintf( new_guild->titles[i], "%s", buf );
   }
-  // Then get the bits for the guild.
+  // Then get the guild bits, prestige and construction.
   fgets( buf, MAX_STR_NORMAL, file );
-  new_guild->bits = atoi(buf);
+
+  sscanf( buf, "%d %d %d", &new_guild->bits, &new_guild->prestige, &new_guild->construction );
+
   // Then get the money for the guild...
   fscanf( file, "%i %i %i %i\n", &(new_guild->platinum), &(new_guild->gold),
     &(new_guild->silver), &(new_guild->copper) );
@@ -1292,13 +1294,15 @@ void do_supervise( P_char god, char *argument, int cmd )
     if( is_abbrev(third, "prestige") )
     {
       guild->set_prestige( atoi(fourth) );
-      send_to_char_f( god, "You set %s's prestige points to %s.", guild->get_name().c_str(), fourth );
+      guild->save();
+      send_to_char_f( god, "You set %s's prestige points to %s.\n", guild->get_name().c_str(), fourth );
       return;
     }
     else if( is_abbrev(third, "construction") )
     {
       guild->set_construction( atoi(fourth) );
-      send_to_char_f( god, "You set %s's construction points to %s.", guild->get_name().c_str(), fourth );
+      guild->save();
+      send_to_char_f( god, "You set %s's construction points to %s.\n", guild->get_name().c_str(), fourth );
       return;
     }
     else
