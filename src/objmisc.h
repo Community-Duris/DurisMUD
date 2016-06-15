@@ -373,7 +373,6 @@
 
 /* weapon stuff */
 
-#define WEAPON_LOWEST       0
 #define WEAPON_NONE         0
 #define WEAPON_AXE          1  // axes - slashing
 #define WEAPON_DAGGER       2  // daggers, knives - piercing, slashing (with -)
@@ -396,7 +395,6 @@
 #define WEAPON_HORN        19  // pierce like dagger, should be removed
 #define WEAPON_NUMCHUCKS   20  // numchucks - bludgeon
 #define WEAPON_HIGHEST     20
-#define NUMB_WEAPONS      (WEAPON_HIGHEST - WEAPON_LOWEST)
 
 #define WEAPONTYPE_UNDEFINED  0
 #define WEAPONTYPE_BLUDGEON   1

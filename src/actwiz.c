@@ -177,6 +177,7 @@ void event_mob_mundane(P_char, P_char, P_obj, void *);
 void which_stat(P_char ch, char *argument);
 void which_spec(P_char ch, char *argument);
 void which_food(P_char ch, char *argument);
+void which_weapon(P_char ch, char *argument);
 
 /*
  * Macros
@@ -8881,6 +8882,10 @@ void do_which(P_char ch, char *args, int cmd)
     which_food( ch, rest );
     return;
   }
+  else if( is_abbrev(arg1, "weapon") )
+  {
+    which_weapon( ch, rest );
+  }
   if(!*o_buf)
     send_to_char("No matches.\n", ch);
   else
@@ -11507,7 +11512,6 @@ void which_stat(P_char ch, char *argument)
     }
   }
 }
-#undef OBJ_COLOR
 
 void do_whois(P_char ch, char *arg, int cmd)
 {
@@ -11628,11 +11632,6 @@ void do_whois(P_char ch, char *arg, int cmd)
   send_to_char( ".\n", ch );
 }
 
-// We don't want this as a global since we have an adjust of 1 for the one we loaded.
-#define OBJ_COLOR(rnum) ( (obj_index[rnum].number <= 1) ? "+L" : \
-  (obj_index[rnum].number - 1 > obj_index[rnum].limit) ? "+W" : \
-  (obj_index[rnum].number - 1 == obj_index[rnum].limit) ? "n" : "+w" )
-
 char *food_modifiers( P_obj food )
 {
   static char mod_string[MAX_STRING_LENGTH];
@@ -11709,12 +11708,6 @@ void which_food(P_char ch, char *argument)
     extract_obj( obj, FALSE );
   }
 }
-#undef OBJ_COLOR
-
-// We don't want this as a global since we have it defined differently in actwiz.c
-#define OBJ_COLOR(rnum) ( (obj_index[rnum].number <= 0) ? "+L" : \
-  (obj_index[rnum].number > obj_index[rnum].limit) ? "+W" : \
-  (obj_index[rnum].number == obj_index[rnum].limit) ? "n" : "+w" )
 
 // Looks through the list of objects in game for those with supplied stats.
 void where_stat(P_char ch, char *argument)
@@ -12119,7 +12112,6 @@ void where_stat(P_char ch, char *argument)
     }
   }
 }
-#undef OBJ_COLOR
 
 // Looks through obj / char list and displays those items/chars in "NOWHERE".
 // TODO: Subcategories: char and obj that just list chars or just objs.
@@ -12569,3 +12561,82 @@ void which_spec(P_char ch, char *argument)
   if( count == 0 )
     send_to_char( "&+YNone found.&n\n", ch );
 }
+
+char *weapon_modifiers( P_obj weapon )
+{
+  static char mod_string[MAX_STRING_LENGTH];
+  int hit, dam, i;
+
+  hit = dam = 0;
+  for( i = 0; i < MAX_OBJ_AFFECT; i++ )
+  {
+    if( weapon->affected[i].location == APPLY_HITROLL )
+    {
+      hit += weapon->affected[i].modifier;
+    }
+    else if( weapon->affected[i].location == APPLY_DAMROLL )
+    {
+      dam += weapon->affected[i].modifier;
+    }
+  }
+
+  sprintf( mod_string, "%dd%d %d/%d", weapon->value[1], weapon->value[2], hit, dam );
+
+  return mod_string;
+}
+
+void which_weapon(P_char ch, char *argument)
+{
+  int   type, count;
+  char  buf[MAX_STRING_LENGTH];
+  P_obj obj;
+
+  if( !*argument )
+  {
+    send_to_char( "Please supply a weapon type (ie shortsword).\n", ch );
+    return;
+  }
+  for( type = 0;type <= WEAPON_HIGHEST; type++ )
+  {
+    if( is_abbrev( argument, weapon_types[type].flagLong) )
+    {
+      break;
+    }
+  }
+  if( type > WEAPON_HIGHEST )
+  {
+    send_to_char_f( ch, "'%s' is not a valid weapon type.\n", argument );
+    send_to_char_f( ch, "Valid weapon types are: %s", weapon_types[type].flagLong );
+    for( type = 1;type <= WEAPON_HIGHEST; type++ )
+    {
+      send_to_char( ", ", ch );
+      send_to_char( weapon_types[type].flagLong, ch );
+    }
+    send_to_char( ".\n", ch );
+    return;
+  }
+  type = weapon_types[type].defVal;
+
+  // Display the Header:
+                 // "  1)    0/   0     13 a *huge* valium tablet measuri - Unknown."
+  sprintf( buf, "&=LWNum) INGAME      VNUM Description                    - Modifiers&n\n"
+                "         &=LW/ LIMIT&n\n" );
+  send_to_char( buf, ch );
+  count = 0;
+  for( int r_num = 0; r_num <= top_of_objt; r_num++ )
+  {
+    // Load a copy of object.
+    obj = read_object(r_num, REAL);
+
+    if( obj->type == ITEM_WEAPON && obj->value[0] == type )
+    {
+      sprintf( buf, "%3d) &%s%4d/%4d %6d&n %s&n - %s.\n", ++count, OBJ_COLOR(r_num), obj_index[r_num].number-1,
+        obj_index[r_num].limit, obj_index[r_num].virtual_number,
+        pad_ansi( obj->short_description, 30, TRUE ).c_str(), weapon_modifiers(obj) );
+      send_to_char( buf, ch );
+    }
+    // Free up the object copy.
+    extract_obj( obj, FALSE );
+  }
+}
+#undef OBJ_COLOR

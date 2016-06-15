@@ -3391,8 +3391,7 @@ void do_examine(P_char ch, char *argument, int cmd)
 
     if (GET_ITEM_TYPE(tmp_object) == ITEM_WEAPON)
     {
-      if ((tmp_object->value[0] < WEAPON_LOWEST) ||
-          (tmp_object->value[0] > WEAPON_HIGHEST))
+      if( (tmp_object->value[0] < 0) || (tmp_object->value[0] > WEAPON_HIGHEST) )
       {
         act("$p has a buggy weapon type, tell a god-type fellow.", FALSE, ch,
             tmp_object, 0, TO_CHAR);

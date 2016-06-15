@@ -1370,28 +1370,29 @@ const char *item_material[] = {
   "\n"
 };
 
-flagDef  weapon_types[] = {
-  {"WEAPON_AXE", "axe", 1, WEAPON_AXE},
-  {"WEAPON_DAGGER", "dagger", 1, WEAPON_DAGGER},
-  {"WEAPON_FLAIL", "flail", 1, WEAPON_FLAIL},
-  {"WEAPON_HAMMER", "hammer", 1, WEAPON_HAMMER},
-  {"WEAPON_LONGSWORD", "longsword", 1, WEAPON_LONGSWORD},
-  {"WEAPON_MACE", "mace", 1, WEAPON_MACE},
-  {"WEAPON_SPIKED_MACE", "spiked mace", 1, WEAPON_SPIKED_MACE},
-  {"WEAPON_POLEARM", "polearm", 1, WEAPON_POLEARM},
-  {"WEAPON_SHORTSWORD", "shortsword", 1, WEAPON_SHORTSWORD},
-  {"WEAPON_CLUB", "club", 1, WEAPON_CLUB},
-  {"WEAPON_SPIKED_CLUB", "spiked club", 1, WEAPON_SPIKED_CLUB},
-  {"WEAPON_STAFF", "staff", 1, WEAPON_STAFF},
-  {"WEAPON_2HANDSWORD", "two-handed sword", 1, WEAPON_2HANDSWORD},
-  {"WEAPON_WHIP", "whip", 1, WEAPON_WHIP},
-  {"WEAPON_SPEAR", "spear", 1, WEAPON_SPEAR},
-  {"WEAPON_LANCE", "lance", 1, WEAPON_LANCE},
-  {"WEAPON_SICKLE", "sickle", 1, WEAPON_SICKLE},
-  {"WEAPON_TRIDENT", "trident", 1, WEAPON_TRIDENT},
-  {"WEAPON_HORN", "horn", 1, WEAPON_HORN},
-  {"WEAPON_NUMCHUCKS", "numchucks", 1, WEAPON_NUMCHUCKS},
-  {0}
+// From 0 .. WEAPON_HIGHEST
+flagDef  weapon_types[WEAPON_HIGHEST+1] = {
+  {"WEAPON_NONE",         "none",             1, WEAPON_NONE},
+  {"WEAPON_AXE",          "axe",              1, WEAPON_AXE},
+  {"WEAPON_DAGGER",       "dagger",           1, WEAPON_DAGGER},
+  {"WEAPON_FLAIL",        "flail",            1, WEAPON_FLAIL},
+  {"WEAPON_HAMMER",       "hammer",           1, WEAPON_HAMMER},
+  {"WEAPON_LONGSWORD",    "longsword",        1, WEAPON_LONGSWORD},
+  {"WEAPON_MACE",         "mace",             1, WEAPON_MACE},
+  {"WEAPON_SPIKED_MACE",  "spiked mace",      1, WEAPON_SPIKED_MACE},
+  {"WEAPON_POLEARM",      "polearm",          1, WEAPON_POLEARM},
+  {"WEAPON_SHORTSWORD",   "shortsword",       1, WEAPON_SHORTSWORD},
+  {"WEAPON_CLUB",         "club",             1, WEAPON_CLUB},
+  {"WEAPON_SPIKED_CLUB",  "spiked club",      1, WEAPON_SPIKED_CLUB},
+  {"WEAPON_STAFF",        "staff",            1, WEAPON_STAFF},
+  {"WEAPON_2HANDSWORD",   "two-handed sword", 1, WEAPON_2HANDSWORD},
+  {"WEAPON_WHIP",         "whip",             1, WEAPON_WHIP},
+  {"WEAPON_SPEAR",        "spear",            1, WEAPON_SPEAR},
+  {"WEAPON_LANCE",        "lance",            1, WEAPON_LANCE},
+  {"WEAPON_SICKLE",       "sickle",           1, WEAPON_SICKLE},
+  {"WEAPON_TRIDENT",      "trident",          1, WEAPON_TRIDENT},
+  {"WEAPON_HORN",         "horn",             1, WEAPON_HORN},
+  {"WEAPON_NUMCHUCKS",    "numchucks",        1, WEAPON_NUMCHUCKS}
 };
 
 flagDef  missile_types[] = {
