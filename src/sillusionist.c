@@ -197,8 +197,8 @@ void spell_shadow_monster(int level, P_char ch, char *arg, int type, P_char vict
   mob->points.damsizedice = (int) GET_LEVEL(ch) / 6;
 // play_sound(SOUND_ELEMENTAL, NULL, ch->in_room, TO_ROOM);
 
-  MobStartFight(mob, victim);
   group_add_member(ch, mob);
+  MobStartFight(mob, victim);
 }
 
 
@@ -272,8 +272,8 @@ void spell_insects(int level, P_char ch, char *arg, int type, P_char victim, P_o
     mob->points.damsizedice = (int)(GET_LEVEL(ch) / 9);
 
     setup_pet(mob, ch, 1, PET_NOORDER | PET_NOCASH);
-    MobStartFight(mob, victim);
     group_add_member(ch, mob);
+    MobStartFight(mob, victim);
 
     if( !GET_CLASS(ch, CLASS_ILLUSIONIST) )
       return;
@@ -2033,8 +2033,8 @@ void spell_titan(int level, P_char ch, char *arg, int type, P_char victim,
 // play_sound(SOUND_ELEMENTAL, NULL, ch->in_room, TO_ROOM);
 
   setup_pet(mob, ch, 1, PET_NOORDER | PET_NOCASH);
-  MobStartFight(mob, victim);
   group_add_member(ch, mob);
+  MobStartFight(mob, victim);
 
 }
 
