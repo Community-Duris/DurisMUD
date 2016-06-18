@@ -3400,7 +3400,7 @@ void do_examine(P_char ch, char *argument, int cmd)
       else
         wtype = tmp_object->value[0];
 
-      sprintf(buf, "$p is a %s.", weapon_types[wtype - 1].flagLong);
+      sprintf(buf, "$p is a %s.", weapon_types[wtype].flagLong);
 
       act(buf, FALSE, ch, tmp_object, 0, TO_CHAR);
     }

@@ -2241,7 +2241,7 @@ void do_stat(P_char ch, char *argument, int cmd)
         if((j->value[0] < 1) || (j->value[0] > WEAPON_NUMCHUCKS))
           strcpy(buf2, "&+RBUGGED!&N");
         else
-          strcpy(buf2, weapon_types[j->value[0] - 1].flagLong);
+          strcpy(buf2, weapon_types[j->value[0]].flagLong);
 
         if(obj_index[j->R_num].func.obj == NULL && j->value[5])
         {

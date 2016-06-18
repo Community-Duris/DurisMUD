@@ -1371,7 +1371,7 @@ const char *item_material[] = {
 };
 
 // From 0 .. WEAPON_HIGHEST
-flagDef  weapon_types[WEAPON_HIGHEST+1] = {
+flagDef weapon_types[WEAPON_HIGHEST+1] = {
   {"WEAPON_NONE",         "none",             1, WEAPON_NONE},
   {"WEAPON_AXE",          "axe",              1, WEAPON_AXE},
   {"WEAPON_DAGGER",       "dagger",           1, WEAPON_DAGGER},
