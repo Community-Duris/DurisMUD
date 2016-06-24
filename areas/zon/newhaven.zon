@@ -2,7 +2,7 @@
 &+LThe &+wCity&+L of &+WNewhaven&n~
 35299 2 0 10 15 1
 *
-* Zone edited with durisEdit v3.02
+* Zone edited with durisEdit v3.00
 *
 *
 D 0 35203 0 1 100 0 0 0
@@ -205,25 +205,27 @@ O 0 35216 2 35207 100 0 0 0        * a wooden sign
 O 0 35217 1 35209 100 0 0 0        * a teakwood sign
 O 0 35232 2 35212 100 0 0 0        * a brass sign
 O 0 35218 1 35214 100 0 0 0        * the registry
+O 0 35242 1 35216 100 0 0 0        * a sewer grate
 O 0 35222 2 35221 100 0 0 0        * a worn brass sign
 O 0 35219 2 35223 100 0 0 0        * a wooden sign
 O 0 35201 1 35235 100 0 0 0        * a large painting
 O 0 35202 1 35250 100 0 0 0        * a tear in reality
-O 0 35233 2 35251 100 0 0 0        * some blackberries
 O 0 35215 2 35253 100 0 0 0        * a rusting gate
 O 0 35216 2 35257 100 0 0 0        * a wooden sign
 O 0 35215 2 35258 100 0 0 0        * a rusting gate
-P 1 35227 1 35215 100 0 0 0        *   a lizard tail
+P 1 23616 1 35215 100 0 0 0        *   (object type not in this .obj file)
 O 0 35223 1 35259 100 0 0 0        * a sequoia sign
 O 0 35232 2 35262 100 0 0 0        * a brass sign
+O 0 35243 1 35266 100 0 0 0        * a sewer grate
+O 0 35233 2 35267 100 0 0 0        * some blackberries
 O 0 35238 1 35270 100 0 0 0        * a pouch of tobacco
 O 0 35222 2 35271 100 0 0 0        * a worn brass sign
 O 0 35219 2 35273 100 0 0 0        * a wooden sign
 O 0 35233 2 35279 100 0 0 0        * some blackberries
 O 0 35203 1 35285 100 0 0 0        * a large painting
-O 0 35226 1 35295 100 0 0 0        * a mummified female
 *
 M 0 35286 1 35201 100 0 0 0        * Vulgaris
+M 0 35290 5 35201 100 0 0 0        * a small lizard
 M 0 35238 1 35202 80 0 0 0         * Melairn Strom
 E 1 35208 5 16 100 0 0 0           *   a gleaming longsword
 M 0 35226 3 35202 100 0 0 0        * a private
@@ -237,13 +239,15 @@ M 0 35228 3 35204 100 0 0 0        * a private
 M 0 35228 3 35204 100 0 0 0        * a private
 M 0 35230 1 35204 100 0 0 0        * the lieutenant
 M 0 35231 2 35206 100 0 0 0        * a citizen
+M 0 35235 2 35207 100 0 0 0        * a cat
 M 0 35241 3 35208 100 0 0 0        * a warder
 M 0 35240 3 35208 100 0 0 0        * a warder
+M 0 35289 5 35208 100 0 0 0        * a small lizard
 M 0 35232 3 35210 100 0 0 0        * a citizen
 F 1 35233 2 35210 100 0 0 0        * a girl (following)
 M 0 35204 1 35213 100 0 0 0        * the blacksmith
 G 1 252 1 0 100 0 0 0              *    (object type not in this .obj file)
-G 1 253 1 0 100 0 0 0              *    (object type not in this .obj file)
+G 1 35241 999 0 100 0 0 0          *    a mining pick
 M 0 35206 1 35213 100 0 0 0        * the equerry
 M 0 35205 1 35213 100 0 0 0        * the stable hand
 M 0 35214 1 35214 100 0 0 0        * Ytarae Retoriva
@@ -268,6 +272,7 @@ M 0 35216 1 35220 100 0 0 0        * Dibbly Libalien
 G 1 35234 999 0 100 0 0 0          *    a teak fishing rod
 G 1 35235 999 0 100 0 0 0          *    a silver-threaded satchel
 G 1 368 999 0 100 0 0 0            *    (object type not in this .obj file)
+M 0 35289 5 35222 100 0 0 0        * a small lizard
 M 0 35240 3 35223 100 0 0 0        * a warder
 M 0 35208 5 35225 100 0 0 0        * a stronghold knight
 M 0 35208 5 35225 100 0 0 0        * a stronghold knight
@@ -276,6 +281,7 @@ F 1 35232 3 35225 100 0 0 0        * a citizen (following)
 F 1 35233 2 35225 100 0 0 0        * a girl (following)
 F 1 35234 2 35225 100 0 0 0        * the boy (following)
 M 0 35240 3 35226 100 0 0 0        * a warder
+M 0 35290 5 35228 100 0 0 0        * a small lizard
 M 0 35222 3 35230 100 0 0 0        * a scribe
 M 0 35221 1 35230 100 0 0 0        * Evelosi Thal
 E 1 35213 1 3 100 0 0 0            *   a sandstone choker
@@ -291,7 +297,9 @@ M 0 35225 2 35239 100 0 0 0        * a solemn sister
 M 0 35224 2 35239 100 0 0 0        * a solemn brother
 M 0 35209 2 35241 100 0 0 0        * a grand knight
 M 0 35241 3 35242 100 0 0 0        * a warder
+M 0 35290 5 35243 100 0 0 0        * a small lizard
 M 0 35241 3 35244 100 0 0 0        * a warder
+M 0 35235 2 35244 100 0 0 0        * a cat
 M 0 35211 1 35245 100 0 0 0        * the armorer
 G 1 35236 999 0 100 0 0 0          *    a buckler decorated with a lizard skull
 F 1 35212 1 35245 100 0 0 0        * the assistant (following)
@@ -310,19 +318,19 @@ M 0 35227 3 35249 100 0 0 0        * a member
 M 0 35227 3 35249 100 0 0 0        * a member
 M 0 35227 3 35249 100 0 0 0        * a member
 M 0 35208 5 35249 100 0 0 0        * a stronghold knight
-M 0 35235 1 35250 100 0 0 0        * a cat
+M 0 35289 5 35250 100 0 0 0        * a small lizard
 M 0 35281 1 35252 100 0 0 0        * the zombie-lord, Melairn Strom
 M 0 35268 3 35252 100 0 0 0        * a skeletal private
 M 0 35268 3 35252 100 0 0 0        * a skeletal private
 M 0 35268 3 35252 100 0 0 0        * a skeletal private
 M 0 35271 1 35252 100 0 0 0        * a zombie of a lieutenant
-M 0 35277 1 35253 100 0 0 0        * a skeleton of a cat
 M 0 35282 1 35254 100 0 0 0        * the zombie-lord, Beltorian Strom
 M 0 35270 3 35254 100 0 0 0        * a zombie of a private
 M 0 35270 3 35254 100 0 0 0        * a zombie of a private
 M 0 35270 3 35254 100 0 0 0        * a zombie of a private
 M 0 35272 1 35254 100 0 0 0        * a zombie of a lieutenant
 M 0 35273 2 35256 100 0 0 0        * a skeletal man
+M 0 35277 2 35257 100 0 0 0        * a skeleton of a cat
 M 0 35284 3 35258 100 0 0 0        * a zombie warder
 M 0 35283 3 35258 100 0 0 0        * a skeletal warder
 M 0 35274 3 35260 100 0 0 0        * a zombie of a woman
@@ -333,6 +341,7 @@ M 0 35246 1 35263 100 0 0 0        * the zombie of a blacksmith
 M 0 35256 1 35264 100 0 0 0        * the vampire of Ytarae Retoriva
 M 0 35274 3 35265 100 0 0 0        * a zombie of a woman
 F 1 35276 2 35265 100 0 0 0        * a zombie of a boy (following)
+M 0 35289 5 35266 100 0 0 0        * a small lizard
 M 0 35255 1 35267 100 0 0 0        * the spectre of the baker
 M 0 35244 1 35268 100 0 0 0        * the zombie of Bevelin Tisvin
 M 0 35245 1 35268 100 0 0 0        * the vampire of LeSair I'vila
@@ -350,6 +359,7 @@ E 1 35230 1 17 100 0 0 0           *   a cut-throat razor
 M 0 35287 1 35272 100 0 0 0        * a displacer beast
 G 1 35237 1 0 100 0 0 0            *    the skin of a displacer beast
 M 0 35283 3 35273 100 0 0 0        * a skeletal warder
+M 0 35290 5 35274 100 0 0 0        * a small lizard
 M 0 35250 5 35275 100 0 0 0        * the zombie of a stronghold knight
 M 0 35250 5 35275 100 0 0 0        * the zombie of a stronghold knight
 M 0 35273 2 35275 100 0 0 0        * a skeletal man
@@ -357,6 +367,8 @@ F 1 35274 3 35275 100 0 0 0        * a zombie of a woman (following)
 F 1 35275 2 35275 100 0 0 0        * a skeleton of a girl (following)
 F 1 35276 2 35275 100 0 0 0        * a zombie of a boy (following)
 M 0 35283 3 35276 100 0 0 0        * a skeletal warder
+M 0 35290 5 35279 100 0 0 0        * a small lizard
+G 1 35227 1 0 100 0 0 0            *    a lizard tail
 M 0 35263 1 35280 100 0 0 0        * Evelosi Thal
 M 0 35242 1 35280 100 0 0 0        * the librarian
 M 0 35257 1 35282 100 0 0 0        * the lich of Jelfelir Ulikira
@@ -374,7 +386,9 @@ M 0 35251 2 35291 100 0 0 0        * a vampire of a grand knight
 M 0 35284 3 35292 100 0 0 0        * a zombie warder
 M 0 35285 1 35293 100 0 0 0        * a hellhound
 M 0 35284 3 35294 100 0 0 0        * a zombie warder
+M 0 35277 2 35294 100 0 0 0        * a skeleton of a cat
 M 0 35254 1 35295 100 0 0 0        * the zombie of an assistant
+G 1 35226 1 0 100 0 0 0            *    a mummified female
 M 0 35253 1 35295 100 0 0 0        * the vampire of an armorer
 M 0 35279 1 35296 100 0 0 0        * Wyiarn Truesteel
 M 0 35251 2 35297 100 0 0 0        * a vampire of a grand knight
@@ -388,5 +402,6 @@ M 0 35269 3 35299 100 0 0 0        * a skeletal member
 M 0 35269 3 35299 100 0 0 0        * a skeletal member
 M 0 35250 5 35299 100 0 0 0        * the zombie of a stronghold knight
 E 1 35205 1 11 100 0 0 0           *   a tower shield decorated with an elven skull
+M 0 35289 5 35299 100 0 0 0        * a small lizard
 *
 S

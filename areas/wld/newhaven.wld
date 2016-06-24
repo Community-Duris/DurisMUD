@@ -9,7 +9,7 @@
 &+wsprouted about the &+yflagpoles&+w.  The &+yroadway&+w is completely free of any &+Ldebris
 &+wother than a &+ysign&+w.&n
 ~
-352 4 2
+352 0 2
 D0
 &+L   Newhaven Way&+w heads toward a &+Lcity&+w to the north.&n
 ~
@@ -94,7 +94,7 @@ S
 &+wthe area with a subtle, if cloying, insistancy.  To the west, a &+cpool&+w collects
 &+wat the base of a &+Cw&+cat&+Ce&+cr&+Cfa&+cl&+Cl&+w that cascades off a unique upthrust of &+Wlimestone&+w.&n
 ~
-352 0 1
+352 4 6
 D0
 &+w   An iron &+cgate&+w breeches the &+Lcity wall&+w to the north.&n
 ~
@@ -519,7 +519,8 @@ S
 &+winto the &+yroadway&+w.  Each &+Lstone&+w has been polished brightly with a single symbol
 &+wetched into the surface of the stones.  The strong odor of baking &+ybread &+wlingers
 &+where.  The &+yroad&+w continues both to the north and south, while the &+Wplaster &+wof the
-&+Lbuilding&+w to the east is pierced by a &+ydoor&+w.&n
+&+Lbuilding&+w to the east is pierced by a &+ydoor&+w.  A &+Lgrate&+w leading into the &+gse&+Gw&+ge&+Grs&+w is
+&+wset into the &+Lstreet&+w here.&n
 ~
 352 0 1
 D0
@@ -1608,7 +1609,7 @@ S
 &+wwhile on the left side, each &+Wfl&+co&+Ww&+cer&+w is in pristine condition as no sign of
 &+gweeds&+w have managed to grow within the &+yloam&+w of the &+gga&+Gr&+gd&+Gen&+w.&n
 ~
-352 0 2
+352 4 2
 D0
 &+L   Newhaven Way&+w heads off to the north.&n
 ~
@@ -1631,7 +1632,7 @@ pestilence&+w and decay&+w.  Tiny red &+Rfl&+ro&+Rw&+rer&+Rs&+w have grown along
 &+roozes&+w red from each &+mfl&+Mo&+mw&+Mer&+w, dripping down each withered petal to feed the &+gweed
 &+w-packed flower &+ybed&+w that lies below.&n
 ~
-352 4 1
+352 0 1
 D0
 &+L   Newhaven Way&+w continues to the north.&n
 ~
@@ -2128,7 +2129,8 @@ S
 &+weasy comprehension.  The odor of stale and &+gm&+yo&+gl&+yd&+gy &+ybread&+w is strong in this area,
 &+wseemingly oozing from every available crevice within sight.  The &+Lroad&+w leads out
 &+wto the south but is blocked to the north by the collapse of the stronghold's
-&+wwestern defensive &+Lwall&+w and whatever &+Wbuildings&+w it once sheltered.&n
+&+wwestern defensive &+Lwall&+w and whatever &+Wbuildings&+w it once sheltered.  &+wA &+Lgrate
+&+wleading into the &+gse&+Gw&+ge&+Grs&+w lies here.&n
 ~
 352 0 1
 D1

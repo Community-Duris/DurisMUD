@@ -12,7 +12,7 @@ the &+Llibrarian&n~
 PH 0 4194304 1 -1
 36 3 55 15d25+112 2d6+1
 88.73.1.0 4500
-8 8 1
+6 8 1
 #35201
 esliae ji'zaman jizaman knight~
 &+WEsliae Ji'Zaman&n~
@@ -55,7 +55,7 @@ lesair ivila i'vila magistrate high~
 &+wnarrow as her slender, high cheekbones triangulate her face down to her pointed
 &+wchin.  Her skin is pale and shiny, stretching across a petite frame of bone.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+1140850698 0 0 0 0 0 0 0 0 S
 PH 0 16777216 2 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -223,7 +223,7 @@ PH 0 16384 0 -1
 #35214
 ytarae retoriva innkeeper~
 &+WYtarae&+w Retoriva&n~
-&+wThe &+yInnkeeper&+w seems to be purposefully busying herself.&n
+&+wThe &+yinnkeeper&+w seems to be purposefully busying herself.&n
 ~
 &+w   Long, raven-black &+Lhair&+w has been pulled and tied into a &+Lponytail&+w at the back
 &+wof her head.  Her skin is extremely pale and fine, giving the occasional hint
@@ -294,7 +294,7 @@ a &+Lcourt &+Wscribe&n~
 &+wfeatures.  A long, frilly &+Lquill&+w scribbles quickly and endlessly, recording
 &+wevery word spoken by the &+mMagistrate&+w onto a stack of &+Wpaper&+w.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+10 0 0 0 0 0 0 0 0 S
 ph 0 32 2 -1
 21 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -310,7 +310,7 @@ the &+Lcourt &+rpetitioner&n~
 &+wand a heavy &+cmedallion&+w emblazoned with the crest of &+LNewhaven&+w hangs about his
 &+wneck.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+10 0 0 0 0 0 0 0 0 S
 PH 0 4096 0 -1
 24 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -360,7 +360,7 @@ a &+Wscribe&n~
 PH 0 32 3 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
-8 8 1
+6 8 1
 #35223
 acolyte law~
 the &+cacolyte&n~
@@ -563,7 +563,7 @@ a &+Lcat&n~
 ~
 8 0 0 0 0 0 0 0 -100 S
 ae 0 1 0 -1
-7 0 0 0d0+0 0d0+0
+10 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 2
 #35236
@@ -685,7 +685,7 @@ the &+Llibrarian&n~
 PG 0 4194304 2 -1
 36 3 55 15d25+112 2d6+1
 88.73.1.0 4500
-8 8 1
+6 8 1
 #35243
 zombie esliae jizaman ji'zaman undead~
 the &+czombie&n of &+WEsliae Ji'Zaman&N~
@@ -761,7 +761,7 @@ the &+Wskeleton&n of a &+ystable hand&n~
 &+wmissing &+Wbones&+w of his hands and feet, including the entire left arm below the
 &+welbow.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+8 5 0 0 0 0 0 0 0 S
 sk 0 1 0 -1
 10 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -791,7 +791,7 @@ the &+Wskeleton&+w of a &+cpage&n~
 &+wthis page protection in his former life, is now nothing more than expensive
 &+Ltatters&+w of material hanging together by sheer strength of will.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+10 5 0 0 0 0 0 0 0 S
 sk 0 1 0 -1
 13 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -807,7 +807,7 @@ the &+czombie&+w of a &+Lstronghold &+Bknight&n~
 &+win a constant fight not to gag.  His one remaining &+yeye&+w constantly flicks back
 &+wand forth as he scans the &+Lcity&+w for any perceived threats.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+10 5 0 0 0 0 0 0 0 S
 zo 0 1 0 -1
 23 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -840,7 +840,7 @@ the &+Wwraith&+w of a &+Lknight &+rcommander&n~
 &+wof the curse that created him in the first place is beyond your ability to
 &+wdiscern.  He grips a massive, two-handed &+Csword&+w in his &+cgauntleted&+w hands.&n
 ~
-10 0 0 0 0 0 0 0 -1000 S
+10 5 0 0 0 0 0 0 -1000 S
 wr 0 512 0 -1
 31 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -871,7 +871,7 @@ the &+czombie&+w of an &+yassistant&n~
 &+wyou ignore the stench and the missing anatomy, this &+czombie&+w doesn't seem to be
 &+wmuch worse off than he was in life.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+10 5 0 0 0 0 0 0 0 S
 zo 0 1 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -920,7 +920,7 @@ the &+mlich&+w of &nJelfelir Ulikira&n~
 &+wthe afterlife.  These days, however, instead of &+Lstone&+w, Jelfelir now works his
 &+wart in &+mf&+Ml&+me&+Ms&+mh&+w and &+Wbone&+w.  He is an &+Martist&+w of death in all senses of the term.&n
 ~
-395278 0 0 0 0 0 0 0 -1000 S
+395278 5 0 0 0 0 0 0 -1000 S
 ul 0 512 0 -1
 32 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -951,7 +951,7 @@ demilich artos chori lich demi-lich undead~
 &+whangs loosely about his waist.  The remains of a blue &+Bcloak&+w hang to the middle
 &+wof his back, a &+Lcrest&+w of some kind having at one time decorated its surface.&n
 ~
-10 0 0 0 0 0 0 0 -1000 S
+10 5 0 0 0 0 0 0 -1000 S
 ul 0 16 2 -1
 41 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -966,11 +966,11 @@ the &+Wskeleton&+w of a &+Lcourt &+Wscribe&n~
 &+wwicked looking &+Ldagger&+w is gripped in his right hand, with which he is carving
 &+wstrange designs into the surface of the &+ydesk&+w at which he sits.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+8 5 0 0 0 0 0 0 0 S
 sk 0 32 2 -1
 20 0 0 0d0+0 0d0+0
 0.0.0.0 0
-6 8 0
+6 6 0
 #35261
 skeletal petitioner court skeleton~
 the &+Wskeleton&+w of a &+rpetitioner&n~
@@ -983,7 +983,7 @@ the &+Wskeleton&+w of a &+rpetitioner&n~
 &+Rrobe&+w.  A heavy &+cmedallion&+w emblazoned with the crest of &+LNewhaven&+w slowly &+yrusts
 &+won it's chain about the &+rpetitioner&+w's neck.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+10 5 0 0 0 0 0 0 0 S
 U 0 4096 0 -1
 23 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -998,7 +998,7 @@ the &+Wskeletal &+Blawkeeper&n~
 &+wintervention.  His dented &+cplatemail&+w has seen better days, its &+Cmetal&+w beginning
 &+wits descent into deterioration through oxidation.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+10 5 0 0 0 0 0 0 0 S
 sk 0 1 0 -1
 24 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1015,7 +1015,7 @@ evelosi thal librarian~
 &+wintricate blue &+Bdesigns&+w, clothes his body.&n
 ~
 8 0 0 0 0 0 0 0 -1000 S
-U 0 512 2 -1
+ph 0 512 2 -1
 48 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1030,7 +1030,7 @@ the &+czombie&+w of a &+Wscribe&n~
 &+wHis &+Wskull&+w is completely exposed at the pate where this &+Wscribe&+w has been scalped
 &+wat some previous time.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+8 5 0 0 0 0 0 0 0 S
 zo 0 0 0 -1
 26 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1045,7 +1045,7 @@ the &+Wskeleton&+w of an &+cacolyte&n~
 &+wa comical attempt to support a thick crest of &+LNewhaven&+w.  He wanders about the
 &+Ltemple&+w looking for any imperfections that need to be addressed.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+8 5 0 0 0 0 0 0 0 S
 U 0 2 0 -1
 21 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1061,7 +1061,7 @@ a &+czombie&+w of a &+Lsolemn brother&n~
 &+wthe crest of &+LNewhaven&+w from the zombie's thick neck.  All in all, this creature
 &+wseems to have led a life of comfort and plenty.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+8 5 0 0 0 0 0 0 0 S
 zo 0 64 0 -1
 22 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1077,7 +1077,7 @@ a &+czombie&+w of a &+Wsolemn sister&n~
 &+wconstitute the bulk of her outfit.  A heavy crest of &+LNewhaven&+w hangs from a
 &+cc&+Ch&+cai&+Cn&+w about her neck.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+8 5 0 0 0 0 0 0 0 S
 U 0 128 0 -1
 24 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1094,7 +1094,7 @@ a &+Wskeletal &+cprivate&n~
 &+whis &+Lhelm&+w, however it was already nearly impossible to differentiate between
 &+wthe various &+cprivates&+w of the &+CSword&+w by their facial features.&n
 ~
-10 0 0 0 0 0 0 0 -1000 S
+10 5 0 0 0 0 0 0 -1000 S
 U 0 1 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1113,7 +1113,7 @@ a &+Wskeletal&+L member&n~
 &+Lsockets&+w look almost sad, as if somewhere in there he is aware of what he has
 &+wbecome.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+10 5 0 0 0 0 0 0 0 S
 U 0 4096 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1130,7 +1130,7 @@ a &+Lzombie&+w of a &+rprivate&n~
 &+whis &+Lhelm&+w, however it was already nearly impossible to differentiate between
 &+wthe various &+rprivates&+w of the &+RHammer&+w by their facial features.&n
 ~
-10 0 0 0 0 0 0 0 -1000 S
+10 5 0 0 0 0 0 0 -1000 S
 zo 0 1 0 -1
 19 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1147,7 +1147,7 @@ a &+Lzombie&+w of a &+Clieutenant&n~
 &+LNewhaven&+w, but the zombie's &+Csword&+w has begun its journey down the rust road on
 &+wthe path to obsolescence.&n
 ~
-10 0 0 0 0 0 0 0 -1000 S
+10 5 0 0 0 0 0 0 -1000 S
 zo 0 1 0 -1
 24 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1164,7 +1164,7 @@ a &+czombie&+w of a &+Rlieutenant&n~
 &+LNewhaven&+w, but the zombie's &+Csword&+w has begun its journey down the rust road on
 &+wthe path to obsolescence.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+10 5 0 0 0 0 0 0 0 S
 zo 0 1 0 -1
 25 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1180,7 +1180,7 @@ A &+Wskeleton&+w of a &+Ccitizen&+w of &+LNewhaven&+w is walking here.&n
 &+wseen.  Two empty &+Lsockets&+w stare out of his perpetually &+Wgrinning&+w face, but what
 &+wit is they exactly see is anyone's guess.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+8 5 0 0 0 0 0 0 0 S
 U 0 1 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1196,7 +1196,7 @@ a &+Lzombie&+w of a &+cwoman&n~
 &+Ypatches&+w from a destroyed scalp that shows large swathes of &+Wskull&+w in places.  A
 &+wsense of loss seems to radiate from this miserable creature.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+10 5 0 0 0 0 0 0 0 S
 zo 0 32 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1212,7 +1212,7 @@ a &+Wskeleton&+w of a &+cgirl&n~
 &+waccretions.  Overall, this &+cgirl&+w exudes despair and the inevitable sadness of
 &+Ldeath&+w.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+10 5 0 0 0 0 0 0 0 S
 sk 0 1 0 -1
 13 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1227,7 +1227,7 @@ a &+czombie&+w of a &+Cboy&n~
 &+wover his crown, the rest having already been lost to his decomposition.  He
 &+wclutches a battered, wooden &+ysword&+w in his left hand.&n
 ~
-10 0 0 0 0 0 0 0 0 S
+10 5 0 0 0 0 0 0 0 S
 zo 0 16 0 -1
 12 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1243,9 +1243,9 @@ a &+Wskeleton&+w of a &+Lcat&n~
 &+wflicking the &+Wbones&+w of its tail and glaring at others with empty &+Lsockets&+w full
 &+wof contempt and quiet disdain.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+8 5 0 0 0 0 0 0 0 S
 U 0 1 0 -1
-7 0 0 0d0+0 0d0+0
+10 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 0
 #35278
@@ -1260,11 +1260,11 @@ an &+Rerinyes&n~
 &+wfrom betwixt her bronzed shoulders, darkening toward their tips to an intense,
 &+wnear &+Lraven&+w, shade of &+mpurple&+w.&n
 ~
-1124235278 0 0 0 537395208 264257 1310720 0 -1000 S
+1124235278 5 0 0 537395208 264257 1310720 0 -1000 S
 su 0 1 3 4
 50 0 0 0d0+0 0d0+0
 0.0.0.0 0
-6 8 2
+6 6 2
 #35279
 wyiarn truesteel priest high~
 &+WWyiarn &+mTrue&+Msteel&n~
@@ -1279,7 +1279,7 @@ wyiarn truesteel priest high~
 PH 0 8 1 -1
 46 0 0 0d0+0 0d0+0
 0.0.0.0 0
-6 8 1
+6 6 1
 #35280
 riverlan zombie lord zombie-lord strom~
 the &+czombie&+L-lord&+w, &+cRiver&+Clan &+yStrom&n~
@@ -1311,7 +1311,7 @@ the &+czombie&+L-lord&+w, &+cMel&+Cairn &+yStrom&n~
 &+win life.  &+cMel&+Cairn&+w still has his &+Ltower &+yshield&+w strapped to his right arm, but
 &+whis &+clongsword&+w is nowhere to be seen.&n
 ~
-1140852814 1 0 0 0 0 0 0 -1000 S
+1140852814 5 0 0 0 0 0 0 -1000 S
 zo 0 16 1 -1
 30 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1348,7 +1348,7 @@ a &+Wskeletal &+Cwarder&n~
 &+wbeneath the &+csteel&+w rim of his headwear, eerily devoid of any indication as to
 &+wwhat, if anything, he is looking at.&n
 ~
-8 0 0 0 0 0 0 0 0 S
+8 5 0 0 0 0 0 0 0 S
 sk 0 1 0 -1
 21 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1365,7 +1365,7 @@ a &+Lzombie &+cwarder&n~
 &+wcrest of &+LNewhaven&+w just barely discernable in it's &+yleather&+w.  Blank, white eyes
 &+wstare out of her bloated face with a set and fixed gaze.&n
 ~
-8 0 0 0 0 0 0 0 -1000 S
+8 5 0 0 0 0 0 0 -1000 S
 zo 0 16 0 -1
 24 0 0 0d0+0 0d0+0
 0.0.0.0 0
@@ -1436,3 +1436,35 @@ FB 0 1 1 -1
 45 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
+#35289
+small lizard~
+a &+Lsmall&+m li&+Rz&+ma&+Rrd&n~
+&+LThis &+mli&+Rz&+ma&+Rrd&+L climbs upon the &+wwalls&+L.&n
+~
+&+w   This tiny &+mcr&+Re&+ma&+Rtu&+mr&+Re&+w scuttles about the area, climbing up &+Lwalls&+w as if they
+&+wwere horizontal and leaping about at intervals thrice its own &+mbody&+w length.  It
+&+whas a mottled &+Rred&+w and &+mpurple&+w coloration to its &+msc&+Ra&+ml&+Re&+ms&+w.  Some of the &+mli&+Rz&+ma&+Rr&+mds&+w are
+&+wmarkedly more of one color than the other, but whether this signifies anything
+&+wyou cannot tell.&n
+~
+200 0 0 0 301990176 0 536870944 0 0 S
+r 0 1 0 1
+5 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#35290
+small lizard~
+a &+Lsmall&+R li&+mz&+Ra&+mrd&n~
+&+LThis &+Rli&+mz&+Ra&+mrd&+L scampers about the &+yarea&+L.&n
+~
+&+w   This tiny &+Rcr&+me&+Ra&+mtu&+Rr&+me&+w scuttles about the area, climbing up &+Lwalls&+w as if they
+&+wwere horizontal and leaping about at intervals thrice its own &+Rbody&+w length.  It
+&+whas a mottled &+Rred&+w and &+mpurple&+w coloration to its &+Rsc&+ma&+Rl&+me&+Rs&+w.  Some of the &+Rli&+mz&+Ra&+mr&+Rds&+w are
+&+wmarkedly more of one color than the other, but whether this signifies anything
+&+wyou cannot tell.&n
+~
+200 0 0 0 301990176 0 536870944 0 0 S
+r 0 1 0 1
+7 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0

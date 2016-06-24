@@ -35,117 +35,144 @@ He clasps the mummy of his wife to his chest and sobs into her hair.
 
 $n&n says, "I owe you much for this, but she was all I had.  Now I am nothing."
 ~
-R E 39200
+R E 50000
 G I 35226
 S
 #35211
 M
-hi hello quest quests~
+hi hello quest quests armor~
 $n&n says, "If you bring me certain items, I will improve them for a
 small fee."
 
-$n&n continues, "Bring me a Dark Circle from Shadowclave and 50
-platinum pieces."
-He says, "For that, I'll craft you a scale and balance badge."
+$n&n continues, "Bring me a Dark Circle from Shadowclave and I can
+craft you one of two pieces."
+He says, "For 45 platinum pieces I'll craft a scale and balance badge."
+He mumbles, "Best for caster types."
+He says, "For 55 platinum pieces I'll craft a hammer and anvil badge."
+He grunts, "Best for fighter types."
 
 $n&n says, "Find me a lizard tail from here-abouts and 75 platinum."
 He finishes, "I'll turn it into a mighty fine bracer for that, I will."
+
+$n&n says, "Find the hide of a displacer beast from the forests of
+this continent and a further 50 platinum and I will craft a fine cloak best
+suited to psionicists and true mages."
 ~
 MA
-qc_action 5~
-$n coughs and curses under his breath.
+qc_action 3~
+$n&n coughs and curses under his breath.
 ~
 MA
-qc_action 10~
+qc_action 7~
 $n&n wipes the &+cs&+Cw&+ce&+Ca&+ct&n from his brow.
 ~
 MA
-qc_action 15~
+qc_action 12~
 $n&n fiddles with a set of &+Larmor&n.
 He attaches some &+cplate&n using &+Crivets&n.
 ~
 MA
-qc_action 20~
+qc_action 17~
 $n&n cuts a section of &+cmail&n to size.
 He bangs the &+Lscissors&n against his &+yworkbench&n.
 ~
+MA
+qc_action 22~
+$n&n says, "I can craft you some special armor if you like."
+He continues, "Just ask me about my armor and I will tell you what you need."
+~
 Q
-$n say, "May this serve you well in coming days."
+$n&n turns to his &+ybench&n and begins working.
+He say, "May this serve you well in coming days."
 ~
 R I 35228
 G I 93901
-G C 50000
+G C 45000
 Q
-$n say, "This should help you considerably, I trust."
+$n&n spends some time altering the &+mcollar&n.
+He says, "This should help you considerably, I trust."
 ~
 R I 35229
 G I 35227
 G C 75000
+Q
+$n&n turns to his &+yworkbench&n and starts crafting.
+He say, "May this serve you well in coming days."
+~
+R I 35239
+G I 93901
+G C 55000
+Q
+~
+R I 35240
+G I 35237
+G C 50000
 S
 #35213
 MA
-qc_action 5~
+qc_action 3~
 $n&n breaks three &+Yeggs&n into &+Wflour&n.
 She works the &+Wmi&+Yx&+Wt&+Yur&+We&n furiously with her &+cwhisk&n.
 ~
 MA
-qc_action 10~
+qc_action 7~
 $n&n works some &+ydough&n into a pocket.
 She stuffs the &+Lbl&+ma&+Lc&+mkb&+Le&+mr&+Lri&+me&+Ls&n and &+rm&+Re&+ra&+Rt&n into the &+ypastry&n.
 ~
 MA
-qc_action 15~
+qc_action 12~
 $n&n minces a &+rflank&n of &+rm&+Re&+ra&+Rt&n.
 She throws the chunks into a hot &+cskillet&n.
 ~
 MA
-qc_action 20~
+qc_action 17~
 $n&n kneads a mound of &+ydough&n.
 ~
 MA
-qc_action 25~
-$n&n says, "If you find any Newhaven blackberries, I'll reward you for them."
+qc_action 22~
+$n&n says, "If you find any Newhaven &+Lbl&+ma&+Lc&+mkb&+Le&+mr&+Lri&+me&+Ls&n, I'll reward you for them."
 ~
 Q
 $n&n takes the &+Lbl&+ma&+Lc&+mkb&+Le&+mr&+Lri&+me&+Ls&n from you with a giant smile.
-He says, 'Thank you, so much!'
+Shee says, 'Thank you, so much!'
 ~
 R E 18000
 G I 35233
 S
 #35216
 MA
-qc_action 5~
+qc_action 3~
 $n&n shifts some &+Cbottles&n on the &+cshelves&n.
 You notice him watching you from the corner of his eyes.
 ~
 MA
-qc_action 10~
+qc_action 7~
 $n&n exhales &+Ws&+wm&+Wo&+wk&+We&n through his huge &+rnose&n.
 He taps some &+Lash&n from his &+ypipe&n.
 ~
 MA
-qc_action 15~
+qc_action 12~
 $n&n inhales on his &+ypipe&n.
 He exhales a thick &+Ws&+wm&+Wo&+wk&+We&n ring.
 ~
 MA
-qc_action 20~
+qc_action 17~
+$n&n says offhand, "If you come across &+ca reel of fishing &+Cline&n
+I'll pay you nicely for it."
+
+He says, "I use them to make my &+ct&+Ge&+ca&+Gk &+Lfishing &+yrods&n."
+~
+MA
+qc_action 22~
+$n&n is tearing his shop apart looking for something.
+He says, "I know I have more &+ytobacco&n around here somewhere!"
+~
+MA
+qc_action 27~
 $n&n smiles at you.
 He says, "Take a look around.  Best wares in all of Duris."
 
 $n&n coughs.
-~
-MA
-qc_action 25~
-$n&n is tearing his shop apart looking for something.
-He says, "I know I have more tobacco around here somewhere!"
-~
-MA
-qc_action 30~
-$n&n says offhand, "If you come across &+ca reel of fishing
-&+Cline&n, I'll pay you nicely for it."
-He says, "I use them to make my &+Ct&+Ge&+Ca&+Gk &+Lfishing &+yrods&n."
 ~
 Q
 $n&n claps his hands in delight.
@@ -154,45 +181,47 @@ He says, "Excellent!  Here, take this as payment."
 R C 5000
 G I 88905
 Q
+$n&n snaps the &+Lpouch&n from you.
+He says, "Ah!  There it is.  Here, take this."
 ~
 R C 3500
 G I 35238
 S
 #35221
 MA
-qc_action 5~
+qc_action 3~
 $n&n mumbles, "The Stroms expect an explanation.  But..."
 ~
 MA
-qc_action 10~
+qc_action 7~
 $n&n paces about the &+ylibrary&n.
 ~
 MA
-qc_action 15~
+qc_action 12~
 $n&n says, "Damnit!  Where did this rift come from?!"
 He slams a &+ydrawer&n on his &+ydesk&n.
 ~
 MA
-qc_action 20~
+qc_action 17~
 $n&n throws a &+ybook&n across the room.
 He shouts, "There must be an answer!"
 ~
 S
 #35258
 MA
-qc_action 5~
+qc_action 3~
 $n&n mumbles, "I... don't understand.  What... what the hell happened?!"
 ~
 MA
-qc_action 10~
+qc_action 7~
 &+LChains&n groan in protest as $n&n tries to ease his discomfort.
 ~
 MA
-qc_action 15~
+qc_action 12~
 $n&n sobs in the corner of the &+Lcell&n.
 ~
 MA
-qc_action 20~
+qc_action 17~
 $n&n looks at you with a tear-streaked face.
 
 He moans, "Kill... me.  Pl... please."
@@ -200,11 +229,47 @@ He moans, "Kill... me.  Pl... please."
 S
 #35263
 MA
-qc_action 5~
+qc_action 3~
 $n&n mumbles, "It's all my fault.  All mine."
 He looks about wildly.
 
 $n&n begins to sob.
+~
+MA
+qc_action 7~
+$n&n screams, "Don't you see?!"
+He glares at you with madness in his eyes.
+~
+MA
+qc_action 12~
+$n&n sobs, "I never should have summoned that creature."
+You think you hear him mumble something about an erinyes.
+~
+S
+#35278
+MA
+qc_action 3~
+$n&n smiles sardonically.
+She says, "What do you think of my creation?"
+
+$n&n waves her hand to encompass everything around you.
+~
+MA
+qc_action 7~
+$n&n preens her resplendant &+Mwi&+mn&+Mg&+ms&n.
+~
+MA
+qc_action 12~
+$n&n looks at the &+citems&n lining the &+yshelves&n.
+
+She says, "Funny little things, but one must properly decorate one's world."
+~
+MA
+qc_action 17~
+$n&n says, "That silly little librarian thinks I have no idea where he is."
+Her laughter makes the hair on your neck rise.
+
+She says, "But why kill him?  If not for him, none of this would exist."
 ~
 S
 #35280
@@ -237,6 +302,32 @@ $n&n lets out a deep, soul-rumbling growl.
 ~
 S
 #35286
+MA
+qc_action 3~
+$n&n stretches his long arms.
+He looks you over.
+~
+MA
+qc_action 7~
+$n&n bends his form into an impossible position.
+He says, "Do you yoga?  It's soooo good for the back."
+~
+MA
+qc_action 12~
+$n&n says, "Beware the displacer beast, my son!"
+He continues, "The jaws that bite, the claws that catch!"
+~
+MA
+qc_action 17~
+$n&n adjusts his few belongings in the &+ycave&n.
+~
+MA
+qc_action 22~
+$n&n says, "Nah.  Mas dei."
+He laughs.
+
+$n&n says, "See what I did there?"
+~
 Q
 $n&n grins and moves amongst his &+cshelves&n muttering to himself.
 
@@ -252,19 +343,19 @@ G C 100000
 S
 #35287
 MA
-qc_action 5~
+qc_action 3~
 $n&n mewls and rubs his &+Lbody&n against a nearby &+ytree&n.
 ~
 MA
-qc_action 10~
+qc_action 7~
 $n &+Yurinates&n and &+csp&+Cr&+ca&+Cys&n about the &+yarea&n to mark its territory.
 ~
 MA
-qc_action 15~
+qc_action 12~
 $n&n thrashes its &+Lt&+ben&+Lt&+baB&+Lcl&+be&+Ls&n in rage.
 ~
 MA
-qc_action 20~
+qc_action 17~
 Bearing its wicked &+Wteeth&n, $n&n lets loose a growl from somewhere deep in its &+Lb&+bel&+Ll&+by&n.
 ~
 S
@@ -278,17 +369,17 @@ $n&n says, "You try standing here all day."
 $n&n mumbles, "Kids can be little bastards."
 ~
 MA
-qc_action 7~
+qc_action 6~
 $n&n &+cs&+Cp&+ci&+Ct&+cs&n on the &+yground&n.
 He says, "Been holding that in for awhile."
 ~
 MA
-qc_action 11~
+qc_action 10~
 $n&n looks uncomfortable.
 He scratches at himself through his &+carmor&n.
 ~
 MA
-qc_action 15~
+qc_action 14~
 $n&n looks around the area.
 
 $n&n says, "Mind yourselves in town.  Laws is laws."
