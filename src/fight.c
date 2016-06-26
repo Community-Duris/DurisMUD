@@ -9160,21 +9160,21 @@ int calculate_attacks(P_char ch, int attacks[])
             act("&n$n gasps suddenly as their body is &+Benhanced&n by some &+Wother-worldly &npower!&n",
               FALSE, ch, 0, 0, TO_NOTVICT);
             act("&+WYour devotion to your god causes you to unleash a &+rF&+Rlurr&+ry&+W of attacks against $N!&n",
-              FALSE, ch, 0, 0, TO_CHAR);
+              FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
             do_say( ch, "The non-believer must be punished!", CMD_SAY );
             ADD_ATTACK(PRIMARY_WEAPON);
             ADD_ATTACK(PRIMARY_WEAPON);
             break;
           case 4:
             act("&+WYour devotion to your god causes you to unleash a &+rF&+Rlurr&+ry&+W of attacks against $N!&n",
-                FALSE, ch, 0, 0, TO_CHAR);
+                FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
             ADD_ATTACK(PRIMARY_WEAPON);
             do_say( ch, "Beg for forgiveness and be saved!", CMD_SAY );
             ADD_ATTACK(PRIMARY_WEAPON);
             break;
           case 5:
             act("&+WYour devotion to your god causes you to unleash a &+rF&+Rlurr&+ry&+W of attacks against $N!&n",
-                FALSE, ch, 0, 0, TO_CHAR);
+                FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
             do_say( ch, "May your bloodshed be a willing sacrifice!", CMD_SAY );
             ADD_ATTACK(PRIMARY_WEAPON);
             ADD_ATTACK(PRIMARY_WEAPON);
