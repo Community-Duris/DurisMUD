@@ -155,8 +155,7 @@
 #define UD_SNEAK(ch) (has_innate(ch, INNATE_UD_SNEAK) && IS_UNDERWORLD(ch->in_room))
 
 #define SWAMP_SNEAK_TERRAIN(ch) \
- (world[(ch)->in_room].sector_type == SECT_SWAMP || \
-  IS_WATER_ROOM(ch->in_room))
+ ( (world[(ch)->in_room].sector_type == SECT_SWAMP) || (world[(ch)->in_room].sector_type == SECT_UNDRWLD_SLIME) )
 
 #define SWAMP_SNEAK(ch) (has_innate(ch, INNATE_SWAMP_SNEAK) && SWAMP_SNEAK_TERRAIN(ch))
 
