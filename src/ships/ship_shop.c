@@ -2455,7 +2455,7 @@ int ship_shop_proc(int room, P_char ch, int cmd, char *arg)
 };
 
 
-const int good_crew_shops[] = { 43220, 43222, 132766, 28197 };
+const int good_crew_shops[] = { 43220, 43222, 133075, 28197 };
 const int evil_crew_shops[] = { 43221,  9704,  22481, 22648 };
 
 int look_crew (P_char ch, P_ship ship);

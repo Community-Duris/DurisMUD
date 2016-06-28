@@ -41,7 +41,7 @@ const ShipCrewData ship_crew_data[MAXCREWS] = {
 
     { "&+YSturdy &+BWhalers",                                              0,     0,       0,       0,    750,      0,     0,     0,   1000000,     0, { 43220, 0, 0, 0, 77 }, CF_NONE },
     { "&+GEv&+ge&+Grm&+gee&+Gt &+BCoasters",                               0,   100,     120,     120,    625,      0,     1,     1,   2000000,    90, { 43222, 0, 0, 0, 77 }, CF_NONE },
-    { "&+WTh&+wa&+Wrn&+wa&+Wdi&+wa&+Wn &+WR&+wi&+Wgg&+we&+Wrs",            0,   150,      80,     100,    600,      1,     0,     0,   1600000,    80, {132766, 0, 0, 0, 77 }, CF_NONE },
+    { "&+WTh&+wa&+Wrn&+wa&+Wdi&+wa&+Wn &+WR&+wi&+Wgg&+we&+Wrs",            0,   150,      80,     100,    600,      1,     0,     0,   1600000,    80, {133075, 0, 0, 0, 77 }, CF_NONE },
     { "&+MT&+me&+Mk&+ma&+Mn &+MMad&+mcaps",                                1,   550,     450,     400,    700,      1,     1,     0,   5000000,   350, { 28197, 0, 0, 0, 77 }, CF_NONE },
 
     { "&+GStr&+go&+Gng&+ga&+Grms &+go&+Gf &+GGh&+go&+Gr&+ge ",             0,     0,       0,       0,    780,      0,     0,     0,   1000000,     0, { 43221, 0, 0, 0, 77 }, CF_NONE },
@@ -67,9 +67,9 @@ const ShipChiefData ship_chief_data[MAXCHIEFS] = {
 //                                                                    Skill  Gain    Mod       Cost   Frags
     { NO_CHIEF,    "None",                                               0,     0,      0,          0,      0, {     0,     0, 0, 0, 77 }, CCF_NONE  } ,
 
-    { SAIL_CHIEF,  "&+wDe&+Lck &+wCa&+Lde&+wt",                        200,    10,      1,     800000,    120, { 43222,132766,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
+    { SAIL_CHIEF,  "&+wDe&+Lck &+wCa&+Lde&+wt",                        200,    10,      1,     800000,    120, { 43222,133075,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
     { SAIL_CHIEF,  "&+wR&+Lu&+wgg&+Le&+wd &+yHelms&+wman",             200,    10,      1,     800000,    120, {  9704, 22481,     0, 0, 77 }, CCF_NONE  } ,
-    { GUNS_CHIEF,  "&+rGunner &+cCadet",                               250,    10,      1,    1200000,    150, { 43220,132766,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
+    { GUNS_CHIEF,  "&+rGunner &+cCadet",                               250,    10,      1,    1200000,    150, { 43220,133075,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
     { GUNS_CHIEF,  "&+cExperienced &+rCanoneer",                       250,    10,      1,    1200000,    150, {  1734,     0,     0, 0, 77 }, CCF_NONE  } ,
     { RPAR_CHIEF,  "&+wShip&+yw&+wr&+yi&+wg&+yh&+wt &+yTyro",          220,    10,      1,    1000000,    130, { 43220,     0,     0, 0, 77 }, CCF_NONE  } ,
     { RPAR_CHIEF,  "&+wD&+yoc&+wk &+yCa&+wrp&+yen&+wter",              220,    10,      1,    1000000,    130, {  9704,     0,     0, 0, 77 }, CCF_NONE  } ,
@@ -78,7 +78,7 @@ const ShipChiefData ship_chief_data[MAXCHIEFS] = {
     { GUNS_CHIEF,  "&+BMaster &+rGu&+Rnn&+rer",                       1000,    35,      2,    4000000,    700, { 54240, 22481,     0, 0, 77 }, CCF_NONE  } ,
     { RPAR_CHIEF,  "&+yVet&+Ye&+Wr&+Ya&+yn &+yB&+Yo&+Wats&+Yw&+yain",  900,    30,      2,    3500000,    640, { 43221, 66735, 55418, 0, 77 }, CCF_NONE  } ,
 
-    { SAIL_CHIEF,  "&+BChief &+WM&+wa&+Wt&+we",                       2000,    50,      3,    7500000,   1350, { 81021,132766,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
+    { SAIL_CHIEF,  "&+BChief &+WM&+wa&+Wt&+we",                       2000,    50,      3,    7500000,   1350, { 81021,133075,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
     { GUNS_CHIEF,  "&+WE&+wl&+Wi&+wte &+RGunner",                     2500,    70,      3,    9000000,   1640, { 76859, 38107,     0, 0, 77 }, CCF_NONE  } ,
     { RPAR_CHIEF,  "&+cE&+wxp&+ce&+wrt &+cE&+wng&+ci&+wn&+cee&+wr",   2200,    60,      3,    8000000,   1480, { 49051, 76859,     0, 0, 77 }, CCF_NONE  } ,
 }; 
