@@ -586,7 +586,7 @@ void initialize_skills()
                 TAR_OFFAREA | TAR_AGGRO, spell_shadow_burst);
   SPEC_SPELL_ADD(CLASS_ILLUSIONIST, 9, SPEC_DARK_DREAMER);
 
-  SPELL_CREATE("asphyxiate", SPELL_ASPHYXIATE, PULSE_SPELLCAST * 3,
+  SPELL_CREATE("asphyxiate", SPELL_ASPHYXIATE, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO, spell_asphyxiate);
   SPELL_ADD(CLASS_ILLUSIONIST, 9);
 

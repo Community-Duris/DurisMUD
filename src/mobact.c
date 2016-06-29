@@ -1040,6 +1040,10 @@ bool CastIllusionistSpell(P_char ch, P_char victim, int helping)
   {
     spl = SPELL_DRAGON;
   }
+  else if( !spl && npc_has_spell_slot(ch, SPELL_ASPHYXIATE) && number(0, 5) )
+  {
+    spl = SPELL_ASPHYXIATE;
+  }
   else if(!spl &&
            npc_has_spell_slot(ch, SPELL_HAMMER) &&
            number(0, 5))
