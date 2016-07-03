@@ -8655,24 +8655,10 @@ void do_springleap(P_char ch, char *argument, int cmd)
   }
 
   percent_chance = BOUNDED(1, percent_chance, 95);
-  
-  if(IS_PC(ch) &&
-     IS_PC(vict))
+
+  if( IS_PC(ch) && IS_PC(vict) )
   {
     debug("Springleap (PVP): (%s) springing (%s) with (%d) percent chance.", GET_NAME(ch), GET_NAME(vict), percent_chance);
-  }
-
-  // The percent_chance == 0 should stop ppl from notching the skill on a sitting opponent.
-  if( !((percent_chance == 0) || notch_skill(ch, SKILL_SPRINGLEAP, get_property("skill.notch.offensive", 7)))
-    && percent_chance < number(1, 100) )
-  {
-    send_to_char("You manage with complete &+Wincompetence&N to throw yourself head first into the ground!\n", ch);
-
-    act("$n, in a show of awesome skill, tackles the ground with $s head.",
-        FALSE, ch, 0, 0, TO_NOTVICT);
-    SET_POS(ch, POS_SITTING + GET_STAT(ch));
-    CharWait(ch, PULSE_VIOLENCE * 2);
-    return;
   }
 
   if((GET_POS(vict) < POS_STANDING))
@@ -8684,6 +8670,16 @@ void do_springleap(P_char ch, char *argument, int cmd)
     SET_POS(ch, POS_SITTING + GET_STAT(ch));
     CharWait(ch, PULSE_VIOLENCE * 2);
     damage(ch, ch, GET_MAX_HIT(ch) / 25, SKILL_SPRINGLEAP);
+    return;
+  }
+
+  if( !notch_skill(ch, SKILL_SPRINGLEAP, get_property("skill.notch.offensive", 7)) && percent_chance < number(1, 100) )
+  {
+    send_to_char("You manage with complete &+Wincompetence&N to throw yourself head first into the ground!\n", ch);
+
+    act("$n, in a show of awesome skill, tackles the ground with $s head.", FALSE, ch, 0, 0, TO_NOTVICT);
+    SET_POS(ch, POS_SITTING + GET_STAT(ch));
+    CharWait(ch, PULSE_VIOLENCE * 2);
     return;
   }
 
