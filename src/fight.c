@@ -666,10 +666,21 @@ bool soul_trap(P_char ch, P_char victim)
 
 void appear(P_char ch, bool removeHide )
 {
+  P_char master;
+
   if( !ch )
   {
     logit(LOG_EXIT, "appear called in fight.c without ch");
     raise(SIGSEGV);
+  }
+
+  // If someone is going vis via being ordered to do something, have the person doing the ordering go vis as well.
+  if( (master = GET_MASTER(ch)) != NULL )
+  {
+    if( IS_AFFECTED5(master, AFF5_ORDERING) )
+    {
+      appear( master, removeHide );
+    }
   }
 
   // CMD_FIRE (do_fire) handles its own hide stuff.

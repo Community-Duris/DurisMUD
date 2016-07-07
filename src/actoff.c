@@ -2071,40 +2071,36 @@ void do_order(P_char ch, char *argument, int comd)
   half_chop(argument, name, message);
   half_chop(message, cmd, temp);
 
-  if(is_silent(ch, TRUE))
-    return;
-    
-  if(IS_AFFECTED2(ch, AFF2_SILENCED))
+  if( is_silent(ch, TRUE) )
   {
-    send_to_char("You flap your lips, but nothing comes out!\n", ch);
     return;
   }
 
-  if(IS_MORPH(ch))
+  if( IS_MORPH(ch) )
   {
     send_to_char("You're a morph, not a telepath.\n", ch);
     return;
   }
-  
-  if(IS_AFFECTED(ch, AFF_KNOCKED_OUT))
+
+  if( IS_AFFECTED(ch, AFF_KNOCKED_OUT) )
   {
     send_to_char("&+wYou dream you are a god and order your phalanx into battle!&n\n", ch);
     return;
   }
-    
-  if(IS_SET(ch->specials.affected_by2, AFF2_MAJOR_PARALYSIS) ||
-     IS_SET(ch->specials.affected_by2, AFF2_MINOR_PARALYSIS))
+
+  if( IS_SET(ch->specials.affected_by2, AFF2_MAJOR_PARALYSIS)
+    || IS_SET(ch->specials.affected_by2, AFF2_MINOR_PARALYSIS) )
   {
     send_to_char("You're too paralyzed to do that.\n", ch);
     return;
   }
 
-  if(!CAN_ACT(ch))
+  if( !CAN_ACT(ch) )
   {
     send_to_char("You unable to order anything at the moment!\n", ch);
     return;
   }
-  
+
   if(IS_AFFECTED(ch, AFF_WRAITHFORM))
   {
     send_to_char("You can't speak in this form.\n", ch);
@@ -2113,51 +2109,46 @@ void do_order(P_char ch, char *argument, int comd)
 
   memset(ch_inroom, 0, sizeof(P_char) * CH_INROOM_SIZE);
 
-  if(!*name || !*message)
+  if( !*name || !*message )
   {
     send_to_char("Order who to do what?\n", ch);
     return;
   }
-  else if(!(victim = get_char_room_vis(ch, name)) &&
-           str_cmp("follower", name) && str_cmp("followers", name))
+  else if( !(victim = get_char_room_vis(ch, name)) && str_cmp("follower", name) && str_cmp("followers", name) )
   {
     send_to_char("That person isn't here.\n", ch);
     return;
   }
-  else if(ch == victim)
+  else if( ch == victim )
   {
     send_to_char("You obviously suffer from schizophrenia.\n", ch);
     return;
   }
   else
   {
-    if(GET_MASTER(ch) != NULL)
+    if( GET_MASTER(ch) != NULL )
     {
       send_to_char("Your master would not like you giving orders!\n", ch);
       return;
     }
-    if(victim && (GET_LEVEL(victim) >= (2 * GET_LEVEL(ch))))
+    if( victim && (GET_LEVEL(victim) >= (2 * GET_LEVEL(ch))) )
     {
-      act("$N refuses to obey such a wimp as you!", TRUE, ch, 0, victim,
-          TO_CHAR);
+      act("$N refuses to obey such a wimp as you!", TRUE, ch, 0, victim, TO_CHAR);
       return;
     }
 
-    for (tmp_ch = world[ch->in_room].people; tmp_ch;
-         tmp_ch = tmp_ch->next_in_room)
+    for( tmp_ch = world[ch->in_room].people; tmp_ch; tmp_ch = tmp_ch->next_in_room )
       numb_ch++;
 
-    if(numb_ch >= CH_INROOM_SIZE)
+    if( numb_ch >= CH_INROOM_SIZE )
     {
-      send_to_char
-        ("There are so many people in this room, it's impossible to hear yourself think!\n",
-         ch);
+      send_to_char("There are so many people in this room, it's impossible to hear yourself think!\n", ch);
       return;
     }
 
     tmp_ch = world[ch->in_room].people;
 
-    for (i = 0; i < numb_ch; i++)
+    for( i = 0; i < numb_ch; i++ )
     {
       ch_inroom[i] = tmp_ch;
       tmp_ch = tmp_ch->next_in_room;
@@ -2183,7 +2174,7 @@ void do_order(P_char ch, char *argument, int comd)
         }
       }
       */
-      
+
       strcpy(buf, "$N orders you to do something.");
       act(buf, FALSE, victim, 0, ch, TO_CHAR);
       act("$n gives $N an order.", FALSE, ch, 0, victim, TO_ROOM);
@@ -2193,19 +2184,19 @@ void do_order(P_char ch, char *argument, int comd)
         lowcmd[i] = tolower(cmd[i]);
       lowcmd[i] = '\0';
 
-      if(GET_MASTER(victim) != ch ||
-        !IS_AFFECTED(victim, AFF_CHARM) ||
-        strstr(lowcmd, "rent"))
+      if( GET_MASTER(victim) != ch || !IS_AFFECTED(victim, AFF_CHARM) || strstr(lowcmd, "rent") )
       {
         act("$n has an indifferent look.", FALSE, victim, 0, 0, TO_ROOM);
         return;
       }
       else
       {
-        if(CAN_ACT(victim))
+        if( CAN_ACT(victim) )
         {
           send_to_char("Ok.\n", ch);
+          SET_BIT(ch->specials.affected_by5, AFF5_ORDERING);
           command_interpreter(victim, message);
+          REMOVE_BIT(ch->specials.affected_by5, AFF5_ORDERING);
           if(char_in_list(ch))
           {
             if(char_in_list(victim) && !CAN_ACT(victim))
@@ -2272,7 +2263,9 @@ void do_order(P_char ch, char *argument, int comd)
 */
                   strcpy(buf, "$n orders you to do something.");
                   act(buf, TRUE, ch, 0, k, TO_VICT);
+                  SET_BIT(ch->specials.affected_by5, AFF5_ORDERING);
                   command_interpreter(k, message);
+                  REMOVE_BIT(ch->specials.affected_by5, AFF5_ORDERING);
 
                   if(!char_in_list(ch))
                     return;     /* leader died */

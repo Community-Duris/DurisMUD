@@ -803,7 +803,7 @@ struct attr_names_struct {
 #define AFF5_FOREST_SIGHT       BIT_27
 #define AFF5_THORNSKIN          BIT_28
 #define AFF5_FOLLOWING          BIT_29
-
+#define AFF5_ORDERING           BIT_30
 
 /* modifiers to char's abilities */
 
