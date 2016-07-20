@@ -2820,6 +2820,18 @@ void Guild::title_trim( char *raw_title, char *good_title )
           }
         }
       }
+      // "&<char>" where <char> is a non-ansi.
+      else
+      {
+        if( printed_chars_left == 1 )
+        {
+          break;
+        }
+        *(good_title++) = '&';
+        *(good_title++) = '&';
+        index++;
+        printed_chars_left -= 2;
+      }
     }
     // Regular character
     else
