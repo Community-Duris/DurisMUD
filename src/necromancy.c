@@ -2440,7 +2440,12 @@ void spell_corpseform(int level, P_char ch, char *arg, int type, P_char victim, 
   P_char   t_ch, folpet, target = NULL;
   char     tbuf[MAX_STRING_LENGTH];
   struct follow_type *foll, *next_foll;
-  
+
+  // Leaving the game (dying / renting / etc) breaks this 'cause affect is removed,
+  //   and event is removed but not the actual change in race.  It needs a rework. - Lohrr
+  send_to_char( "Temporarily disabled.\n", ch );
+  return;
+
   if (affected_by_spell(ch, SPELL_CORPSEFORM))
   {
     send_to_char("You're already surrounded by a necromatic essence.\r\n", ch);
@@ -2556,6 +2561,7 @@ void spell_corpseform(int level, P_char ch, char *arg, int type, P_char victim, 
   
   afcf->type = SPELL_CORPSEFORM;
   afcf->flags = AFFTYPE_NODISPEL;
+  afrc->modifier = GET_RACE(ch);
   afcf->duration = (int) get_property("spell.corpseform.duration.mins", 20);
   affect_to_char(ch, afcf);
   
