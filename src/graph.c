@@ -1649,9 +1649,11 @@ byte find_first_step(int src, int target, long hunt_flags, int is_ship, int wago
     return BFS_ALREADY_THERE;
   }
 
+/* Kinda spammy debugging message.
 #define YN(x) (x ? "YES" : "NO")
 debug( "From room: %d, can_fly: %s, can_dispel: %s, can_break: %s, stay_zone: %s, no_mob: %s.", world[src].number,
   YN(can_fly), YN(can_dispel), YN(can_break), YN(stay_zone), YN(no_mob) );
+*/
 
   // clear marks first
   bfs_clear_marks();
