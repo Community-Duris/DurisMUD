@@ -250,7 +250,7 @@ void breath_weapon_acid(int level, P_char ch, char *arg, int type, P_char victim
   }
 
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) ((float)dam * breath_saved_multiplier);
 
   dam = BOUNDED(20, dam, 1000);
 
@@ -311,7 +311,7 @@ void breath_weapon_poison(int level, P_char ch, char *arg, int type, P_char vict
   }
 
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam * breath_saved_multiplier);
+    dam = (int) ((float)dam * breath_saved_multiplier);
   dam = BOUNDED(20, dam, 1000);
 
   if( spell_damage(ch, victim, dam, SPLDAM_GAS, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD )
@@ -363,7 +363,7 @@ void breath_weapon_shadow_1(int level, P_char ch, char *arg, int type, P_char vi
   }
 
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam * breath_saved_multiplier);
+    dam = (int) ((float)dam * breath_saved_multiplier);
 
   dam = BOUNDED(20, dam, 1000);
 
@@ -394,7 +394,7 @@ void breath_weapon_shadow_2(int level, P_char ch, char *arg, int type, P_char vi
   }
 
   if( NewSaves(victim, SAVING_BREATH, save) )
-    dam = (int) (dam * breath_saved_multiplier);
+    dam = (int) ((float)dam * breath_saved_multiplier);
 
   dam = BOUNDED(20, dam, 1000);
 
@@ -430,7 +430,7 @@ void breath_weapon_blind(int level, P_char ch, char *arg, int type, P_char victi
     dam /= 4;
   }
   if( NewSaves(victim, SAVING_BREATH, save) )
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));;
+    dam = (int) ((float)dam * breath_saved_multiplier);;
 
   dam = BOUNDED(20, dam, 1000);
 
@@ -474,7 +474,7 @@ void breath_weapon_crimson(int level, P_char ch, char *arg, int type, P_char vic
   }
 
   if( NewSaves(victim, SAVING_BREATH, save) )
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) ((float)dam * breath_saved_multiplier);
 
   dam = BOUNDED(20, dam, 1000);
 
@@ -556,7 +556,7 @@ void breath_weapon_jasper(int level, P_char ch, char *arg, int type, P_char vict
     dam /= 4;
   }
   if( NewSaves(victim, SAVING_BREATH, save) )
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) ((float)dam * breath_saved_multiplier);
 
   dam = BOUNDED(20, dam, 1000);
 
@@ -591,7 +591,7 @@ void breath_weapon_azure(int level, P_char ch, char *arg, int type, P_char victi
     dam /= 4;
   }
   if( NewSaves(victim, SAVING_BREATH, save) )
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) ((float)dam * breath_saved_multiplier);
 
   dam = BOUNDED(20, dam, 1000);
 
@@ -627,7 +627,7 @@ void breath_weapon_basalt(int level, P_char ch, char *arg, int type, P_char vict
     dam /= 4;
   }
   if( NewSaves(victim, SAVING_BREATH, save) )
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) ((float)dam * breath_saved_multiplier);
 
   dam = BOUNDED(20, dam, 1000);
 
@@ -666,5 +666,5 @@ void breath_weapon_basalt_2(int level, P_char ch, char *arg, int type, P_char vi
 void update_breath_weapon_properties()
 {
   breath_dam_mod = get_property("dragon.Breath.DamageMod", 1.0);
-  breath_saved_multiplier = get_property("dragon.Breath.savedDamage", 2.0);
+  breath_saved_multiplier = get_property("dragon.Breath.savedDamage", 0.5);
 }

@@ -96,6 +96,7 @@ extern void set_long_description(P_obj t_obj, const char *newDescription);
 extern void set_short_description(P_obj t_obj, const char *newDescription);
 extern const struct golem_description golem_data[];
 extern float exp_mods[EXPMOD_MAX+1];
+extern float breath_saved_multiplier;
 
 // THE NEXT PERSON THAT OUTRIGHT COPIES A SPELL JUST TO CHANGE THE NAME/MESSAGES
 // IT OUTPUTS IS GOING TO BE CASTRATED BY ME AND FORCED TO EAT THEIR OWN GENITALIA.
@@ -10606,7 +10607,7 @@ void spell_shadow_breath_1(int level, P_char ch, char *arg, int type,
     return;
 
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
 
   dam = BOUNDED(1, dam, 80);
 
@@ -10635,7 +10636,7 @@ void spell_shadow_breath_2(int level, P_char ch, char *arg, int type,
   dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 7) + level);
 
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
 
   dam = BOUNDED(1, dam, 80);
 
@@ -10678,7 +10679,7 @@ void spell_fire_breath(int level, P_char ch, char *arg, int type, P_char victim,
 
   if( NewSaves(victim, SAVING_BREATH, save) )
   {
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
   }
   dam = BOUNDED(1, dam, 80);
 
@@ -10767,7 +10768,7 @@ void spell_frost_breath(int level, P_char ch, char *arg, int type, P_char victim
 
   if( NewSaves(victim, SAVING_BREATH, save) )
   {
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
   }
   dam = BOUNDED(1, dam, 80);
 
@@ -10846,7 +10847,7 @@ void spell_acid_breath(int level, P_char ch, char *arg, int type, P_char victim,
   if(IS_PC_PET(ch))
     dam /= 2;
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
 
   dam = BOUNDED(1, dam, 80);
 
@@ -10907,7 +10908,7 @@ void spell_gas_breath(int level, P_char ch, char *arg, int type, P_char victim, 
   if(IS_PC_PET(ch))
     dam /= 2;
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
   dam = BOUNDED(1, dam, 80);
 
   if(spell_damage(ch, victim, dam, SPLDAM_GAS, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages) ==
@@ -10938,7 +10939,7 @@ void spell_lightning_breath(int level, P_char ch, char *arg, int type, P_char vi
   if(IS_PC_PET(ch))
     dam /= 2;
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
 
   if(IS_AFFECTED2(victim, AFF2_PROT_LIGHTNING) &&
     number(0, 4))
@@ -10970,7 +10971,7 @@ void spell_blinding_breath(int level, P_char ch, char *arg, int type,
   if(IS_PC_PET(ch))
     dam /= 2;
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));;
+    dam = (int) (dam * breath_saved_multiplier);;
 
   dam = BOUNDED(1, dam, 80);
 
@@ -11018,7 +11019,7 @@ void spell_basalt_light(int level, P_char ch, char *arg, int type, P_char victim
   if(IS_PC_PET(ch))
     dam /= 2;
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
 
   dam = BOUNDED(1, dam, 80);
 
@@ -11060,7 +11061,7 @@ void spell_jasper_light(int level, P_char ch, char *arg, int type, P_char victim
   if(IS_PC_PET(ch))
     dam /= 2;
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
 
   dam = BOUNDED(1, dam, 80);
 
@@ -11102,7 +11103,7 @@ void spell_azure_light(int level, P_char ch, char *arg, int type, P_char victim,
   if(IS_PC_PET(ch))
     dam /= 2;
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
 
   dam = BOUNDED(1, dam, 80);
 
@@ -11146,7 +11147,7 @@ void spell_crimson_light(int level, P_char ch, char *arg, int type, P_char victi
     dam /= 2;
 
   if(NewSaves(victim, SAVING_BREATH, save))
-    dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
+    dam = (int) (dam * breath_saved_multiplier);
 
   dam = BOUNDED(1, dam, 80);
 
