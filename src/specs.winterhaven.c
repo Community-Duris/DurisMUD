@@ -332,12 +332,14 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
         // 10 min timer.
         if( obj->timer[0] + 600 <= curr_time)
         {
-          act("&+LYour $q &+Lslows down time and freezes $n &+Lin place!&n", TRUE, ch, obj, NULL, TO_CHAR);
-          act("&+L...you leap at $n &+Land deal a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, NULL, TO_CHAR);
-          act("$n's $q &+Lslows down time and freezes you in place!&n", TRUE, ch, obj, NULL, TO_VICT);
-          act("&+L...$n leaps at you and deals a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, NULL, TO_VICT);
-          act("$n's $q &+Lslows down time and freezes&n $n &+Lin place!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
-          act("&+L...$n &+Lleaps towards&n $N &+Land deals a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
+          act("&+LYour $q &+Lslows down time and freezes $N &+Lin place!&n", TRUE, ch, obj, vict, TO_CHAR);
+          act("&+L...you leap at $N &+Land deal a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, vict, TO_CHAR);
+
+          act("&+L$n&+L's $q &+Lslows down time and freezes you in place!&n", TRUE, ch, obj, vict, TO_VICT);
+          act("&+L...$n leaps at you and deals a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, vict, TO_VICT);
+
+          act("&+L$n&+L's $q &+Lslows down time and freezes&n $N &+Lin place!&n", TRUE, ch, obj, vict, TO_NOTVICT);
+          act("&+L...$n &+Lleaps towards $N &+Land deals a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, vict, TO_NOTVICT);
 
           if( IS_ALIVE(ch) && GET_OPPONENT(ch) )
           {
@@ -352,12 +354,12 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
             hit(ch, GET_OPPONENT(ch), obj);
           }
 
-          act("$Q &+Cglows &+Las it touches $N's &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_CHAR);
-          act("$Q &+Cglows &+Las it touches your &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_VICT);
-          act("$Q &+Cglows &+Las it touches $N's &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
-          switch (number(0,2))
+          act("$p &+Cglows &+Las it touches your &+Csoul&+L!&n", FALSE, ch, obj, NULL, TO_CHAR);
+          act("$p &+Cglows &+Las it touches $n&+L's &+Csoul&+L!&n", FALSE, ch, obj, NULL, TO_ROOM);
+          switch( number(0, 3) )
           {
           case 0:
+          case 1:
             rand = number(1, 20);
 
             if (rand <= 15)
@@ -366,13 +368,13 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
             }
             else
             {
-                spell_arieks_shattering_iceball(35, ch, 0, SPELL_TYPE_SPELL, vict, 0);
+              spell_arieks_shattering_iceball(35, ch, 0, SPELL_TYPE_SPELL, vict, 0);
             }
             break;
-          case 1:
+          case 2:
             spell_pword_stun(50, ch, 0, SPELL_TYPE_SPELL, vict, 0);
             break;
-          case 2:
+          case 3:
             spell_pword_blind(50, ch, 0, SPELL_TYPE_SPELL, vict, 0);
             break;
           }
@@ -401,20 +403,21 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
       act("&+L...you swiftly dodge &n$N&+L's attack and turn to deliver a &+Cvicious &+Lstrike!", TRUE, ch, obj, vict, TO_CHAR | ACT_NOTTERSE);
 
       act("&+LAn &+Bicy &+chaze &+Lbillows out from $q+L, &+Bslowing &+Ldown your attack.&n", TRUE, ch, obj, vict, TO_VICT | ACT_NOTTERSE);
-      act("&+L...&n$n &+Lswiftly dodges your attack, $m turns to deliver a &+Cvicious &+Lstrike!&n", TRUE, ch, obj, vict, TO_VICT | ACT_NOTTERSE);
+      act("&+L...$n &+Lswiftly dodges your attack, $m turns to deliver a &+Cvicious &+Lstrike!&n", TRUE, ch, obj, vict, TO_VICT | ACT_NOTTERSE);
 
       act("&+LAn &+Bicy &+chaze &+Lbillows out from $q&+L, &+Bslowing &+Ldown &n$N&+L's attack.", TRUE, ch, obj, vict, TO_NOTVICT | ACT_NOTTERSE);
-      act("&+L...&n$n &+Lswiftly dodges &n$N&+L's attack and turns to deliver a &+Cvicious &+Lstrike!", TRUE, ch, obj, vict, TO_NOTVICT | ACT_NOTTERSE);
+      act("&+L...$n &+Lswiftly dodges &n$N&+L's attack and turns to deliver a &+Cvicious &+Lstrike!", TRUE, ch, obj, vict, TO_NOTVICT | ACT_NOTTERSE);
 
       hit(ch, vict, obj);
 
-      act("$q &+Cglows &+Las it touches $n&+L's &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_CHAR);
-      act("$q &+Cglows &+Las it touches your &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_VICT);
-      act("$q &+Cglows &+Las it touches $n&+L's &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
+      act("$p &+Cglows &+Las it touches your &+Csoul&+L!&n", FALSE, ch, obj, NULL, TO_CHAR);
+      act("$p &+Cglows &+Las it touches $n&+L's &+Csoul&+L!&n", FALSE, ch, obj, NULL, TO_ROOM);
 
-      switch (number(0,2))
+      switch( number(0, 4) )
       {
       case 0:
+      case 1:
+      case 2:
         rand = number(1, 20);
         if( rand <= 12 )
         {
@@ -430,10 +433,10 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
           spell_arieks_shattering_iceball(35, ch, 0, SPELL_TYPE_SPELL, vict, 0);
         }
         break;
-      case 1:
+      case 3:
         spell_pword_stun(50, ch, 0, SPELL_TYPE_SPELL, vict, 0);
         break;
-      case 2:
+      case 4:
         spell_pword_blind(50, ch, 0, SPELL_TYPE_SPELL, vict, 0);
         break;
       }
@@ -452,8 +455,7 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
         if( obj->timer[0] + 600 <= curr_time )
         {
           act("&+LYour $q &+Chums &+Lloudly and surrounds you in a &+Cmisty &+chaze&+L.&n", TRUE, ch, obj, NULL, TO_CHAR);
-          act("&n$N's $q &+Chums &+Lloudly and surrounds $m in a &+Cmisty &+chaze&+L.&n", TRUE, ch, obj, NULL, TO_VICT);
-          act("&n$N's $q &+Chums &+Lloudly and surrounds $m in a &+Cmisty &+chaze&+L.&n", TRUE, ch, obj, NULL, TO_NOTVICT);
+          act("&+L$n&+L's $q &+Chums &+Lloudly and surrounds $m in a &+Cmisty &+chaze&+L.&n", TRUE, ch, obj, NULL, TO_ROOM);
 
           spell_shadow_shield(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
           spell_vanish(50, ch, 0, SPELL_TYPE_SPELL, ch, 0);
