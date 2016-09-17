@@ -2043,12 +2043,14 @@ int githpc_special_weap(P_obj obj, P_char ch, int cmd, char *arg)
 
 int tiamat(P_char ch, P_char pl, int cmd, char *arg)
 {
-  char     bufs[6][100];
+  char bufs[6][128];
   struct damage_messages messages = {
     bufs[0], bufs[1], bufs[2], bufs[3], bufs[4], bufs[5], 0
   };
-  char     colors[5][16] = {
-    "&+rred", "&+Lblack", "&+bblue", "&+ggreen", "&+Wwhite"
+  char dam_msg[256];
+  char colors[5][16] =
+  {
+    "&+rred&N", "&+Lblack&N", "&+bblue&N", "&+ggreen&N", "&+Wwhite&N"
   };
   P_char vict, next_ch;
   P_obj t_obj, next;
@@ -2104,7 +2106,7 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
     return TRUE;
   }
 
-  if (ch->in_room == real_room(VROOM_TIAMAT_HOME) )
+  if( ch->in_room == real_room(VROOM_TIAMAT_HOME) )
   {
     if( cmd == CMD_SOUTH && !IS_TRUSTED(pl) )
     {
@@ -2121,72 +2123,61 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
       return FALSE;
     }
 
-    if (affected_by_spell(ch, SPELL_SILENCE))
+    if( affected_by_spell(ch, SPELL_SILENCE) )
     {
       act("&+LWith a mighty &+RROAR&+l, &+LTiamat shreds the blanket of silence!", 0,
           ch, 0, 0, TO_ROOM);
       affect_from_char(ch, SPELL_SILENCE);
     }
-    
-    if(!IS_SET(world[ch->in_room].room_flags, MAGIC_LIGHT))
+
+    if( !IS_SET(world[ch->in_room].room_flags, MAGIC_LIGHT) )
     {
-      act
-        ("A beam of light radiates from &+LTiamats eyes, lighting a sconce upon the wall.",
-         0, ch, 0, 0, TO_ROOM);
+      act("A beam of light radiates from &+LTiamats eyes, lighting a sconce upon the wall.",
+        FALSE, ch, NULL, NULL, TO_ROOM);
       SET_BIT(world[ch->in_room].room_flags, MAGIC_LIGHT);
-    }                           /*
-                                   below here, is not room specific
-                                 */
+    }
   }
 
-  if (cmd != 0)
+  // Below here, is not room specific
+  if( cmd != CMD_PERIODIC )
     return FALSE;
 
-  switch (number(1, 3))
+  switch( number(1, 3) )
   {
-  case 1:                      /* Knock em all on their ass */
-    act("&+LTiamat lashes out with her mighty tail!", FALSE, ch, 0, 0,
-        TO_ROOM);
+  // Knock em all on their ass
+  case 1:
+    act("&+LTiamat lashes out with her mighty tail!", FALSE, ch, 0, 0, TO_ROOM);
     for (vict = world[ch->in_room].people; vict; vict = next_ch)
     {
       next_ch = vict->next_in_room;
-      
+
       if(IS_TRUSTED(vict))
         continue;
 
-      if(!IS_DRAGON(vict) &&
-         !affected_by_spell(vict, SKILL_BERSERK) &&
-         IS_FIGHTING(vict) &&
-         (GET_OPPONENT(vict) == ch))
+      if( !IS_DRAGON(vict) && !affected_by_spell(vict, SKILL_BERSERK) && IS_FIGHTING(vict)
+        && (GET_OPPONENT(vict) == ch) )
       {
         if (!StatSave(vict, APPLY_AGI, -4))
         {
           SET_POS(vict, POS_SITTING + GET_STAT(vict));
-          
           CharWait(vict, PULSE_VIOLENCE * 2);
-          
-          act("&+LThe powerful sweep sends you crashing to the ground!",
-              FALSE, vict, 0, 0, TO_CHAR);
+          act("&+LThe powerful sweep sends you crashing to the ground!", FALSE, vict, 0, 0, TO_CHAR);
           act("$n&+L crashes to the ground!", FALSE, vict, 0, 0, TO_ROOM);
         }
         else
           act("&+LYou nimbly dodge the sweep!", FALSE, vict, 0, 0, TO_CHAR);
       }
     }
-
     break;
-
+  // Bitch slap someone
   case 2:
-    if (!(vict = char_in_room(ch->in_room)))    /* Bitch slap someone */
+    if( !(vict = char_in_room(ch->in_room)) )
     {
       vict = GET_OPPONENT(ch);
     }
-    
-    if(vict &&
-      !IS_DRAGON(vict) &&
-      !affected_by_spell(vict, SKILL_BERSERK) &&
-      IS_FIGHTING(vict) &&
-      (GET_OPPONENT(vict) == ch))
+
+    if( vict && !IS_DRAGON(vict) && !affected_by_spell(vict, SKILL_BERSERK) && IS_FIGHTING(vict)
+      && (GET_OPPONENT(vict) == ch) )
     {
       if (!StatSave(vict, APPLY_AGI, -4))
       {
@@ -2195,60 +2186,52 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
           "$N&+L is slapped by Tiamat's tail, and crashes to the ground!",
           "", msgs.victim, msgs.room
         };
-        
+
         SET_POS(vict, POS_SITTING + GET_STAT(vict));
-        
         CharWait(vict, PULSE_VIOLENCE * 2);
-        
-        melee_damage(ch, vict, dice(50, 50) + 5, 0, &msgs);
+        // 10 to 500 damage, avg 260. Note: With 40 rolls, it's gonna be close to average.
+        melee_damage(ch, vict, dice(40, 50), 0, &msgs);
       }
       else
       {
-        act("&+LYou nimbly jump $n's tail sweep!", FALSE, ch, 0, vict,
-            TO_VICT);
-        act("$N &+Lnimbly jumps $n's fierce tail sweep!", TRUE, ch, 0, vict,
-            TO_NOTVICT);
+        act("&+LYou nimbly jump $n's tail sweep!", FALSE, ch, 0, vict, TO_VICT);
+        act("$N &+Lnimbly jumps $n's fierce tail sweep!", TRUE, ch, 0, vict, TO_NOTVICT);
       }
     }
-
     break;
+  // Bitch stab someone
   case 3:
   default:
-    if (!(vict = char_in_room(ch->in_room)))    /* Bitch stab someone */
+    if (!(vict = char_in_room(ch->in_room)) )
     {
       vict = GET_OPPONENT(ch);
     }
-    
+    if( vict && !IS_DRAGON(vict) && !affected_by_spell(vict, SKILL_BERSERK) && IS_FIGHTING(vict)
+      && (GET_OPPONENT(vict) == ch) && !IS_TRUSTED(vict) )
     {
-      if(vict &&
-        !IS_DRAGON(vict) &&
-        !affected_by_spell(vict, SKILL_BERSERK) &&
-        IS_FIGHTING(vict) &&
-        (GET_OPPONENT(vict) == ch) &&
-        !IS_TRUSTED(vict))
+      struct damage_messages msgs =
       {
-        struct damage_messages msgs = {
-          "", "&+RHer tail lashes out, stabbing you deep in the back!",
-          "$N makes a strange sound as &+LTiamat's tail stabs $M in the back!",
-          msgs.attacker, msgs.victim, msgs.room
-        };
+        "", "&+RHer tail lashes out, stabbing you deep in the back!",
+        "$N makes a strange sound as &+LTiamat's tail stabs $M in the back!",
+        msgs.attacker, msgs.victim, msgs.room
+      };
 
-        melee_damage(ch, vict, dice(10, 30), PHSDAM_NOREDUCE, &msgs);
+      // Damage 10 to 300, average 160
+      melee_damage(ch, vict, dice(10, 30), PHSDAM_NOREDUCE, &msgs);
 
-        if(IS_ALIVE(vict))
-        {
-          spell_poison(59, ch, 0, 0, vict, NULL);
-        }
-
+      if( IS_ALIVE(vict) )
+      {
+        spell_poison(59, ch, 0, 0, vict, NULL);
       }
     }
     break;
   }
-  /* End of tail */
+  // End of tail
 
-  for (i = 1; i < 6; i++)
-  {                             /* Loop through the 5 heads */
-    switch (number(1, 3))
+  // Loop through the 5 heads
+  for( i = 1; i < 6; i++ )
+  {
+    switch( number(1, 3) )
     {
     case 1:
     case 2:                    /* Bite someone          */
@@ -2257,51 +2240,39 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
       if (vict)
       {
         sprintf(bufs[0], "You bite $N with your %s head.", colors[i - 1]);
-        sprintf(bufs[1], "The %s head of $n lashes out and bites you.",
-                colors[i - 1]);
+        sprintf(bufs[1], "The %s head of $n lashes out and bites you.", colors[i - 1]);
         sprintf(bufs[2], "$n bites $N with $m %s head.", colors[i - 1]);
-        sprintf(bufs[3],
-                "You bite $N with your %s head until they are dead.",
-                colors[i - 1]);
-        sprintf(bufs[4], "The %s head of $n bites you... to DEATH!",
-                colors[i - 1]);
-        sprintf(bufs[5], "$n bites $N in two with $m %s head! $N is dead.",
-                colors[i - 1]);
-        switch (i)
+        sprintf(bufs[3], "You bite $N with your %s head until they are dead.", colors[i - 1]);
+        sprintf(bufs[4], "The %s head of $n bites you... to DEATH!", colors[i - 1]);
+        sprintf(bufs[5], "$n bites $N in two with $m %s head! $N is dead.", colors[i - 1]);
+        switch( i )
         {
-        case 1:
+        case 1: // Red head
           damtype = SPLDAM_FIRE;
-          act("&+RFire courses through your blood as she bites deep!", FALSE,
-              vict, 0, 0, TO_CHAR);
+          sprintf( dam_msg, "&+RFire courses through your blood as she bites deep!" );
           break;
-        case 2:
-          damtype = SPLDAM_GENERIC;
-          act
-            ("&+BYour heart skips a beat or three as her mighty teeth clamp down upon your arm!",
-             FALSE, vict, 0, 0, TO_CHAR);
+        case 2: // Black head
+          damtype = SPLDAM_ACID;
+          sprintf( dam_msg, "&+LShe lashes out at you, the acid from her fangs burning immensly!" );
           break;
-        case 3:
+        case 3: // Blue head
+          damtype = SPLDAM_LIGHTNING;
+          sprintf( dam_msg, "&+BYour heart skips a beat or three as her shocking teeth clamp down upon your arm!" );
+          break;
+        case 4: // Green head
+          damtype = SPLDAM_GAS;
+          sprintf( dam_msg, "&+GYou feel a wave of poisonous nausea, as her teeth sink deep!" );
+          break;
+        case 5: // White head
           damtype = SPLDAM_COLD;
-          act
-            ("&+WShe rips into your skin, sending shivers of intense cold through your body!",
-             FALSE, vict, 0, 0, TO_CHAR);
-          break;
-        case 4:
-          damtype = SPLDAM_ACID;
-          act
-            ("&+LShe lashes out at you, the acid from her fangs burning immensly!",
-             FALSE, vict, 0, 0, TO_CHAR);
-          break;
-        case 5:
-          damtype = SPLDAM_ACID;
-          act
-            ("&+GYou feel a wave of poisonous nausea, as her teeth sink deep!",
-             FALSE, vict, 0, 0, TO_CHAR);
+          sprintf( dam_msg, "&+WShe rips into your skin, sending shivers of intense cold through your body!" );
           break;
         }
-        spell_damage(ch, vict, dice(6, 6), damtype,
-                     SPLDAM_BREATH | SPLDAM_NOSHRUG | SPLDAM_NODEFLECT,
-                     &messages);
+        spell_damage(ch, vict, dice(6, 6), damtype, SPLDAM_BREATH | SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &messages);
+        if( IS_ALIVE(ch) && IS_ALIVE(vict) )
+        {
+          act( dam_msg, FALSE, vict, NULL, NULL, TO_CHAR);
+        }
       }
       break;
 
@@ -2309,55 +2280,51 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
       switch (i)
       {
       case 1:
-        act("&+LTiamat's&+R red head breathes fire!", 1, ch, 0, 0, TO_ROOM);
-        funct = spell_fire_breath;
+        act("$n&+r's red head breathes &+Rfire&+r!&N", TRUE, ch, NULL, NULL, TO_ROOM);
+        funct = breath_weapon_fire;
         break;
       case 2:
-        act("&+LTiamat's&+B blue head breathes &=LBelectricity!", 1, ch, 0,
-            0, TO_ROOM);
-        funct = spell_lightning_breath;
+        act("$n&+w's &+Lblack &+whead breathes &+Lacid&+w!&n", TRUE, ch, NULL, NULL, TO_ROOM);
+        funct = breath_weapon_acid;
         break;
       case 3:
-        act("&+LTiamat's&+W white head breathes frost!", 1, ch, 0, 0,
-            TO_ROOM);
-        funct = spell_frost_breath;
+        act("$n&+B's &+bblue &+Bhead breathes &=LBelectricity&N&+B!&N", TRUE, ch, NULL, NULL, TO_ROOM);
+        funct = breath_weapon_lightning;
         break;
       case 4:
-        act("&+LTiamat's black head breathes acid!", 1, ch, 0, 0, TO_ROOM);
-        funct = spell_acid_breath;
+        act("$n&+G's &+ggreen &+Ghead breathes &+gpoison gas&+G!&n", TRUE, ch, NULL, NULL, TO_ROOM);
+        funct = breath_weapon_poison;
         break;
       case 5:
-        act("&+LTiamat's black head breathes blackness!", 1, ch, 0, 0, TO_ROOM);
-        funct = spell_shadow_breath_2;
+        act("$n&+w's &+Wwhite &+whead breathes &+Wfrost&+w!&n", TRUE, ch, NULL, NULL, TO_ROOM);
+        funct = breath_weapon_frost;
         break;
       default:
-        act("&+LTiamat's&+g green head breathes poison gas!", 1, ch, 0, 0,
-            TO_ROOM);
-        funct = spell_gas_breath;
+        act("$n&+w's &+Lblack &+whead breathes &+Lblackness&+w!&n", TRUE, ch, NULL, NULL, TO_ROOM);
+        funct = breath_weapon_shadow_2;
         break;
-
       }
 
-      for (vict = world[ch->in_room].people; vict; vict = next_ch)
+      for( vict = world[ch->in_room].people; vict; vict = next_ch )
       {
-        if (!is_char_in_room(vict, ch->in_room))
+        if( !is_char_in_room(vict, ch->in_room) )
         {
           break;
         }
-        
         next_ch = vict->next_in_room;
 
-        if(!IS_DRAGON(vict))
-        {                       /* items, lets mess with some prot.  */
-          funct(60, ch, NULL, 0, vict, 0);      /* also, since we ARE the queen :) */
-          
-          if(!is_char_in_room(vict, ch->in_room))
+        /* items, lets mess with some prot.  */
+        if( !IS_DRAGON(vict) )
+        {
+          funct(60, ch, NULL, 0, vict, 0);
+          if( !is_char_in_room(vict, ch->in_room) )
           {
             continue;
           }
-          
-          switch (i)
+          // Also, since we ARE the queen :)
+          switch( i )
           {
+          // Red head
           case 1:
             if (IS_AFFECTED(vict, AFF_BARKSKIN))
             {
@@ -2369,11 +2336,11 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
                 "&+RThe burst of flame causes your bark-like skin to catch fire!",
                 "$N &+Rcatches on fire!"
               };
-              spell_damage(ch, vict, dice(5, 20), SPLDAM_FIRE,
-                           SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &msgs);
+              spell_damage(ch, vict, dice(5, 20), SPLDAM_FIRE, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &msgs);
             }
             break;
-          case 2:
+          // Blue head
+          case 3:
             if (IS_AFFECTED(vict, AFF_HASTE))
             {
               struct damage_messages msgs = {
@@ -2384,12 +2351,33 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
                 "&+BBetween your spell of haste and &+LTiamat's &+Belectrical discharge, your heart cracks under the strain!",
                 "$N's&+B face turns a shade of blue, as $s heart stops for a moment!"
               };
-              spell_damage(ch, vict, dice(20, 20), SPLDAM_LIGHTNING,
-                           SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &msgs);
+              spell_damage(ch, vict, dice(20, 20), SPLDAM_LIGHTNING, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &msgs);
             }
             break;
-          case 3:
-            if (has_skin_spell(vict))
+          // Green head
+          case 4:
+            if (!number(0, 5))
+            {
+              act("&+LTiamat &+RROARS &+Lloudly, and her tailsweep sends you crashing into the wall!",
+                  FALSE, ch, 0, vict, TO_VICT);
+              act("&+LTiamat &+RROARS &+Lloudly, and in a frightening display, whips her tail deftly about the room!",
+                  FALSE, ch, 0, vict, TO_NOTVICT);
+              SET_POS(vict, POS_SITTING + GET_STAT(vict));
+
+              stop_fighting(vict);
+              if( IS_DESTROYING(vict) )
+                stop_destroying(vict);
+
+              if(CAN_ACT(vict))
+              {                 // prevent cumulative stun/lag
+                Stun(vict, ch, PULSE_VIOLENCE * 2, TRUE);
+                CharWait(vict, PULSE_VIOLENCE * 3);
+              }
+            }
+            break;
+          // White head
+          case 5:
+            if( has_skin_spell(vict) )
             {
               struct damage_messages msgs = {
                 "$N &+Wscreams in pain as $S stone-like skin cracks under the intense cold!",
@@ -2399,41 +2387,17 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
                 "&+WThe intense coldness cracks your stone-like skin!",
                 "$N &+Wscreams in pain as $S stone-like skin cracks under the intense cold!"
               };
-              spell_damage(ch, vict, dice(5, 100), SPLDAM_COLD,
-                           SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &msgs);
+              spell_damage(ch, vict, dice(5, 100), SPLDAM_COLD, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &msgs);
             }
             break;
-          case 4:
-          if (!number(0, 5))
-          {
-            {
-              act("&+LTiamat &+RROARS &+Lloudly, and her tailsweep sends you crashing into the wall!",
-                  FALSE, ch, 0, vict, TO_VICT);
-              act("&+LTiamat &+RROARS &+Lloudly, and in a frightening display, whips her tail deftly about the room!",
-                  FALSE, ch, 0, vict, TO_NOTVICT);
-              SET_POS(vict, POS_SITTING + GET_STAT(vict));
-              
-              stop_fighting(vict);
-              if( IS_DESTROYING(vict) )
-                stop_destroying(vict);
-              
-              if(CAN_ACT(vict))
-              {                 // prevent cumulative stun/lag
-                Stun(vict, ch, PULSE_VIOLENCE * 2, TRUE);
-                CharWait(vict, PULSE_VIOLENCE * 3);
-              }
-            }
-          }
-            break;
-          case 5:
-            break;
+          // Black head
+          case 2:
           default:
             break;
           }
         }
       }
       break;
-
     }
   }
   return TRUE;
