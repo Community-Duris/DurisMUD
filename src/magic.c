@@ -1356,11 +1356,14 @@ void spell_wither(int level, P_char ch, char *arg, int type, P_char victim, P_ob
     return;
   }
 
+/* Commented this out.. need && (type == SPELL_TYPE_SPELL) if you re-add it.
+ * Was commented 'cause was stopping wither traps from working.
   if( victim == ch )
   {
     send_to_char("You may not wither yourself.", ch);
     return;
   }
+*/
 
   if( IS_CONSTRUCT(victim) )
   {
