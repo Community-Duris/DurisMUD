@@ -995,7 +995,7 @@ struct racewar_struct
   const char *name;
 };
 
-#define MAX_SURNAME                         8
+#define MAX_SURNAME                         9
 
 struct surname_struct
 {

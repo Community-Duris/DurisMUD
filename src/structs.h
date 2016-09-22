@@ -949,13 +949,15 @@ struct room_data {
 #define SURNAME_LORD      (BIT_7 | BIT_5)         // 101
 #define SURNAME_KING      (BIT_7 | BIT_6)         // 110
 // The 'special' surnames get their own set.
-#define SURNAME_LIGHTBRINGER      (BIT_8)                  // 001
-#define SURNAME_DRAGONSLAYER      (BIT_9)                  // 010
-#define SURNAME_DOCTOR            (BIT_9  | BIT_8)         // 011
-#define SURNAME_SERIALKILLER      (BIT_10)                 // 100
-#define SURNAME_GRIMREAPER        (BIT_10 | BIT_8)         // 101
-#define SURNAME_DECEPTICON        (BIT_10 | BIT_9)         // 110
-#define SURNAME_TOUGHGUY          (BIT_10 | BIT_9 | BIT_8) // 111
+#define SURNAME_LIGHTBRINGER      (                                   BIT_8)  // 00001
+#define SURNAME_DRAGONSLAYER      (                           BIT_9        )  // 00010
+#define SURNAME_DOCTOR            (                           BIT_9 | BIT_8)  // 00011
+#define SURNAME_SERIALKILLER      (                  BIT_10                )  // 00100
+#define SURNAME_GRIMREAPER        (                  BIT_10 |         BIT_8)  // 00101
+#define SURNAME_DECEPTICON        (                  BIT_10 | BIT_9        )  // 00110
+#define SURNAME_TOUGHGUY          (                  BIT_10 | BIT_9 | BIT_8)  // 00111
+#define SURNAME_DEMONSLAYER       (         BIT_11                         )  // 01000
+// MAX_SURNAME:                   (BIT_12 | BIT_11 | BIT_10 | BIT_9 | BIT_8)  // 11111
 // Do not use bits 5 through 12 .. These are for the surnames.
 
 #define PLR3_NOBEEP        BIT_17

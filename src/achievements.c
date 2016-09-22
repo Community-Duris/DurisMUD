@@ -107,7 +107,17 @@ void do_achievements(P_char ch, char *arg, int cmd)
     sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s &+W%d%%\r\n",
         "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+wKill 1000 Dragons", "&+w10% damage increase vs Dragons", get_progress(ch, AIP_DRAGONSLAYER, 1000));
   strcat(buf, buf3);
-  //-----DRagonslayer
+  //-----Dragonslayer
+
+  //-----Achievement: Demonslayer
+  if(affected_by_spell(ch, ACH_DEMONSLAYER))
+    sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s\r\n",
+        "&+rD&+Rem&+Lon &+rS&+Rlaye&+rr&n", "&+BKill 1000 Demons", "&+B10% damage increase vs Demons");
+  else
+    sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s &+W%d%%\r\n",
+        "&+rD&+Rem&+Lon &+rS&+Rlaye&+rr&n", "&+wKill 1000 Demons", "&+w10% damage increase vs Demons", get_progress(ch, AIP_DEMONSLAYER, 1000));
+  strcat(buf, buf3);
+  //-----Demonslayer
 
   //-----Achievement: Trader
   if( cargo >= 10000 )
@@ -213,6 +223,9 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
 
   if ((ach == 2) && !affected_by_spell(ch, AIP_DRAGONSLAYER) && !affected_by_spell(ch, ACH_DRAGONSLAYER))
     apply_achievement(ch, AIP_DRAGONSLAYER);
+
+  if ((ach == 2) && !affected_by_spell(ch, AIP_DEMONSLAYER) && !affected_by_spell(ch, ACH_DEMONSLAYER))
+    apply_achievement(ch, AIP_DEMONSLAYER);
 
   if ((ach == 3) && !affected_by_spell(ch, AIP_DECEPTICON) && !affected_by_spell(ch, ACH_DECEPTICON))
     apply_achievement(ch, AIP_DECEPTICON);
@@ -389,6 +402,34 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
       }
     }
     /* end Dragonslayer */
+
+    /* Demonslayer */
+    if((findaf && findaf->type == AIP_DEMONSLAYER) && (ach == 2) && (GET_RACE(victim) == RACE_DEMON) )
+    {
+      int result;
+
+      // Skip demons in hometowns (ie zarbons).
+      if( !IS_HOMETOWN(ch->in_room) )
+      {
+        findaf->modifier++;
+      }
+
+      result = findaf->modifier;
+      // If they already have the DemonSlayer achievement, kill the achievement in progress.
+      if( affected_by_spell(ch, ACH_DEMONSLAYER) )
+      {
+        affect_remove(ch, findaf);
+      }
+      // Check to see if we've hit 1000 kills
+      else if(result >= 1000)
+      {
+        affect_remove(ch, findaf);
+        apply_achievement(ch, ACH_DEMONSLAYER);
+        send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RDemonslayer&+r achievement!&n\r\n", ch);
+        send_to_char("&+yYou will now do 10 percent more damage to demon races!&n\r\n", ch);
+      }
+    }
+    /* end Demonslayer */
 
     // You Strahd Me2
     if( (findaf && findaf->type == AIP_YOUSTRAHDME) && (ach == 2)
