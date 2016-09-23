@@ -64,6 +64,7 @@ extern struct time_info_data time_info;
 extern struct arena_data arena;
 extern P_event event_list;
 extern const int dam_cap_data[];
+extern const char *connected_types[];
 extern void update_ingame_racewar( int racewar );
 
 static char buf[MAX_INPUT_LENGTH];
@@ -2826,8 +2827,12 @@ void extract_char(P_char ch)
   if( IS_PC(ch) )
   {
     // If it's not an immortal or a locker char.
-    if( GET_LEVEL(ch) < MINLVLIMMORTAL && !ends_with(GET_NAME(ch), ".locker") )
-      update_ingame_racewar( -GET_RACEWAR(GET_TRUE_CHAR(ch)) );
+    if( (GET_LEVEL(ch) < MINLVLIMMORTAL) && !ends_with(GET_NAME(ch), ".locker") )
+    {
+      debug( "Char: '%s' decrementing ingame_racewar; connection: %s.", GET_NAME(ch),
+        (ch->desc==NULL) ? "LINKDEAD" : connected_types[STATE(ch->desc)] );
+      update_ingame_racewar( -GET_RACEWAR(ch) );
+    }
     if (IS_AFFECTED2(ch, AFF2_CASTING))
       StopCasting(ch);
   }
