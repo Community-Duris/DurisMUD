@@ -1456,13 +1456,13 @@ int mortal_heaven(int room, P_char ch, int cmd, char *arg)
 
     if (tch->only.pc->pc_timer[PC_TIMER_HEAVEN] <= time(NULL))
     {
-      send_to_char("Your soul is torn from the afterlife, eternal rest denied...\n\r", ch);
-      act("$n is torn from the afterlife.", FALSE, ch, 0, 0, TO_ROOM);
+      send_to_char("Your soul is torn from the afterlife, eternal rest denied...\n\r", tch);
+      act("$n is torn from the afterlife.", FALSE, tch, 0, 0, TO_ROOM);
       writeCharacter(tch, RENT_DEATH, NOWHERE);
       // If it's not an immortal.
-      if( IS_PC(ch) && (GET_LEVEL( ch ) < MINLVLIMMORTAL) )
+      if( IS_PC(tch) && (GET_LEVEL( tch ) < MINLVLIMMORTAL) )
       {
-        update_ingame_racewar( -GET_RACEWAR(ch) );
+        update_ingame_racewar( -GET_RACEWAR(tch) );
       }
       extract_char(tch);
       if( !tch->desc )
