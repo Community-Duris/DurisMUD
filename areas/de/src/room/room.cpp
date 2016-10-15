@@ -38,8 +38,8 @@
 
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 #include "room.h"        // header for room stuff
 
 
@@ -48,7 +48,7 @@ extern room **g_roomLookup, *g_currentRoom;
 extern uint g_numbLookupEntries, g_numbRooms, g_lowestRoomNumber, g_highestRoomNumber;
 extern bool g_madeChanges;
 extern char g_revdirs[];
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 
 //
 // findRoom : Returns the address of the room node that has the requested
@@ -724,7 +724,7 @@ room *getRoomKeyword(const char *key, const bool checkRooms)
   const uint highMobNumb = getHighestMobNumber();
 
 
-  if (strnumer(key))
+  if (strnumber(key))
   {
     return findRoom(strtoul(key, NULL, 10));
   }

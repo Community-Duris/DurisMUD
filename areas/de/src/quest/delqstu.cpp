@@ -36,8 +36,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "quest.h"
 
@@ -70,7 +70,7 @@ void deleteQuestUser(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext(
 "\nError in input - specify vnum of mob from which to delete quest.\n\n");

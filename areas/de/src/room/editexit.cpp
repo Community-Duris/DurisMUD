@@ -36,19 +36,19 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
-#include "graphcon.h"
+#include "../graphcon.h"
 
-#include "misc/menu.h"
-#include "dispflag.h"
+#include "../misc/menu.h"
+#include "../dispflag.h"
 #include "editexit.h"
 #include "room.h"
 #include "exit.h"
 
 extern bool g_madeChanges;
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 extern menu g_exitMenu, g_exitStateTopMenu, g_exitStateBottomMenu;
 extern room *g_currentRoom;
 

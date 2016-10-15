@@ -41,18 +41,18 @@
 #  include <unistd.h>
 #endif
 
-#include "types.h"
-#include "fh.h"
-#include "de.h"
-#include "room/room.h"
-#include "obj/object.h"
-#include "mob/mob.h"
-#include "command/alias.h"
-#include "keys.h"
-#include "vardef.h"
-#include "misc/loaded.h"
-#include "misc/misc.h"
-#include "graphcon.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../de.h"
+#include "../room/room.h"
+#include "../obj/object.h"
+#include "../mob/mob.h"
+#include "../command/alias.h"
+#include "../keys.h"
+#include "../vardef.h"
+#include "../misc/loaded.h"
+#include "../misc/misc.h"
+#include "../graphcon.h"
 
 
 extern bool g_madeChanges;
@@ -585,7 +585,7 @@ void checkArgs(const int argc, const char *argv[])
         }
       }
 
-      if (strnumer(strn) && strtoul(strn, NULL, 10))
+      if (strnumber(strn) && strtoul(strn, NULL, 10))
         g_numbLookupEntries = strtoul(strn, NULL, 10);
     }
   }
@@ -648,7 +648,7 @@ void renumberAll(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nThe 'renumber' command's first argument must be a positive number.\n\n");
     return;
@@ -769,7 +769,7 @@ void lookup(const char *args)
 
  // only one arg specified, so check everything - rooms first
 
-  vnum = strnumer(args);
+  vnum = strnumber(args);
   if (vnum) 
     num = strtoul(args, NULL, 10);
 
@@ -888,7 +888,7 @@ void where(const char *keyStrn)
   const questItem *qitem;
   const questQuest *qquest;
   char strn[1024];
-  bool vnum = strnumer(keyStrn), match2 = false, foundMatch = false;
+  bool vnum = strnumber(keyStrn), match2 = false, foundMatch = false;
   uint num, j;
   size_t lines = 1;
   const uint highRoomNumb = getHighestRoomNumber();
@@ -1470,7 +1470,7 @@ void preDisplayLookupList(const char *args)
 
   if (strlen(arg2))
   {
-    if (!strnumer(arg2))
+    if (!strnumber(arg2))
     {
       _outtext(LOOKUP_CMD_FORMAT_STR);
       return;
@@ -2143,7 +2143,7 @@ void changeMaxVnumUser(const char *args)
   const uint topVnum = strtoul(args, NULL, 10);
 
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nSpecify the new max vnum for rooms, objects, and mobs as the first argument.\n\n");
     return;

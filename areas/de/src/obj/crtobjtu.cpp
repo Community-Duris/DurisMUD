@@ -36,8 +36,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "object.h"
 
@@ -59,7 +59,7 @@ objectType *createObjectTypeUser(const char *args)
 
   if (strlen(args))
   {
-    if (!strnumer(args))
+    if (!strnumber(args))
     {
       _outtext("\nError in vnum argument - non-numerics in input.\n\n");
       return NULL;

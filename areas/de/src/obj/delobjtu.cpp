@@ -37,9 +37,9 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
-#include "keys.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../keys.h"
 
 #include "object.h"
 
@@ -92,7 +92,7 @@ void deleteObjectTypeUser(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nError in input - specify vnum of object type.\n\n");
     return;

@@ -37,14 +37,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
-#include "de.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../de.h"
 
 #include "readset.h"
 
-#include "command/alias.h"
-#include "vardef.h"
+#include "../command/alias.h"
+#include "../vardef.h"
 
 
 

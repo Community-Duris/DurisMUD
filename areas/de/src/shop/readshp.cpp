@@ -36,10 +36,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
-#include "readfile.h"
+#include "../readfile.h"
 
 #include "shop.h"
 
@@ -54,7 +54,7 @@ extern bool g_madeChanges, g_readFromSubdirs;
 
 void ensureShopValueIsNumeric(const char *input, const char *inputWhat, const uint shopNumb)
 {
-  if (!strnumer(input))
+  if (!strnumber(input))
   {
     char outstrn[512];
 
@@ -200,7 +200,7 @@ shop *readShopFromFile(FILE *shopFile, const bool defaultShop)
 
   deleteChar(strn, 0);
 
-  if (!strnumer(strn))
+  if (!strnumber(strn))
   {
     _outtext(
 "Error in string that should be shop vnum - after removing first and last\n"

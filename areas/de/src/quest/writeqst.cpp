@@ -36,8 +36,8 @@
 #include <string.h>
 
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "quest.h"
 

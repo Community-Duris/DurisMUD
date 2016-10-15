@@ -34,7 +34,7 @@
 
 #include <string.h>
 
-#include "fh.h"
+#include "../fh.h"
 
 
 //
@@ -81,12 +81,11 @@ stringNode *createKeywordList(const char *keywordStrn)
         SNode->setString(strn);
         if (!SNode->string)
         {
-          delete SNode;
-
           displayAllocError("stringNode", "createKeywordList");
 
           if (SNode == homeSNode)
             homeSNode = NULL;
+          delete SNode;
 
           return homeSNode;
         }

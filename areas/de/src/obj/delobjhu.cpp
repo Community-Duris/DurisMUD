@@ -36,8 +36,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "objhere.h"
 
@@ -64,7 +64,7 @@ void deleteObjectHereUser(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nError in input - specify vnum of obj in this room.\n\n");
     return;

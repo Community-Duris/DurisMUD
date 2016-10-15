@@ -37,11 +37,11 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "types.h"
-#include "fh.h"
-#include "misc/menu.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../misc/menu.h"
 
-#include "graphcon.h"
+#include "../graphcon.h"
 
 #include "quest.h"
 

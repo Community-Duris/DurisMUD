@@ -36,8 +36,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
 extern uint g_numbObjTypes, g_numbLookupEntries;
 
@@ -68,7 +68,7 @@ void renumberObjectsUser(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext(
 "\nThe 'renumberobject' command's first argument must be a positive number.\n\n");

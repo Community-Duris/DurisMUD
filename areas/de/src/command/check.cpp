@@ -35,22 +35,22 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
-#include "obj/objsize.h"
-#include "obj/traps.h"
-#include "obj/armor.h"
-#include "spells.h"
-#include "obj/weapons.h"
-#include "obj/missiles.h"
-#include "obj/liquids.h"
-#include "obj/shields.h"
-#include "obj/material.h"
-#include "obj/objcraft.h"
-#include "defines.h"
+#include "../obj/objsize.h"
+#include "../obj/traps.h"
+#include "../obj/armor.h"
+#include "../spells.h"
+#include "../obj/weapons.h"
+#include "../obj/missiles.h"
+#include "../obj/liquids.h"
+#include "../obj/shields.h"
+#include "../obj/material.h"
+#include "../obj/objcraft.h"
+#include "../defines.h"
 
-#include "misc/mudcomm.h"
+#include "../misc/mudcomm.h"
 #include "check.h"
 
 extern zone g_zoneRec;
@@ -58,7 +58,7 @@ extern "C" flagDef room_bits[], extra_bits[], extra2_bits[], wear_bits[],
                    affected1_bits[], affected2_bits[], affected3_bits[], affected4_bits[],
                    action_bits[], aggro_bits[], aggro2_bits[], aggro3_bits[];
 extern flagDef g_npc_class_bits[], g_race_names[];
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 
 //
 // outCheckError : writes error to file, pauses if numbLines is too high, returns true if user quits
@@ -458,7 +458,7 @@ uint checkRooms(FILE *file, size_t& numbLines, bool *userQuit)
 
      // check for single-file rooms with incorrect number of exits
 
-      if ((roomPtr->roomFlags & SINGLE_FILE) && (getNumbExits(roomPtr) != 2))
+      if ((roomPtr->roomFlags & ROOM_SINGLE_FILE) && (getNumbExits(roomPtr) != 2))
       {
         sprintf(strn, "room #%u has SINGLE_FILE flag set, but has %u exit%s instead of 2\n",
                 roomNumb, getNumbExits(roomPtr), plural(getNumbExits(roomPtr)));
@@ -475,7 +475,7 @@ uint checkRooms(FILE *file, size_t& numbLines, bool *userQuit)
 
       if (((roomPtr->sectorType == SECT_UNDERWATER) || (roomPtr->sectorType == SECT_UNDERWATER_GR) ||
            (roomPtr->sectorType == SECT_PLANE_OF_WATER)) &&
-          !(roomPtr->roomFlags & UNDERWATER))
+          !(roomPtr->roomFlags & ROOM_UNDERWATER))
       {
         sprintf(strn,
   "room #%u has sector type of UNDERWATER, UNDERWATER_GROUND, or PLANE_OF_WATER, but doesn't have UNDERWATER "
@@ -492,7 +492,7 @@ uint checkRooms(FILE *file, size_t& numbLines, bool *userQuit)
 
       if ((!((roomPtr->sectorType == SECT_UNDERWATER) || (roomPtr->sectorType == SECT_UNDERWATER_GR) ||
            (roomPtr->sectorType == SECT_PLANE_OF_WATER))) &&
-           (roomPtr->roomFlags & UNDERWATER))
+           (roomPtr->roomFlags & ROOM_UNDERWATER))
       {
         sprintf(strn,
   "room #%u has UNDERWATER flag set, but a sector type other than UNDERWATER, UNDERWATER_GROUND, or "
@@ -540,11 +540,11 @@ uint checkRooms(FILE *file, size_t& numbLines, bool *userQuit)
 
      // check for rooms with more than one light flag set
 
-      if (((roomPtr->roomFlags & DARK) &&
-          (roomPtr->roomFlags & (TWILIGHT | MAGIC_LIGHT | MAGIC_DARK))) ||
-          ((roomPtr->roomFlags & TWILIGHT) &&
-          (roomPtr->roomFlags & (MAGIC_LIGHT | MAGIC_DARK))) ||
-          ((roomPtr->roomFlags & MAGIC_LIGHT) && (roomPtr->roomFlags & MAGIC_DARK)))
+      if (((roomPtr->roomFlags & ROOM_DARK) &&
+          (roomPtr->roomFlags & (ROOM_TWILIGHT | ROOM_MAGIC_LIGHT | ROOM_MAGIC_DARK))) ||
+          ((roomPtr->roomFlags & ROOM_TWILIGHT) &&
+          (roomPtr->roomFlags & (ROOM_MAGIC_LIGHT | ROOM_MAGIC_DARK))) ||
+          ((roomPtr->roomFlags & ROOM_MAGIC_LIGHT) && (roomPtr->roomFlags & ROOM_MAGIC_DARK)))
       {
         sprintf(strn, "room #%u has some combination of nonsensical light flags set\n",
                 roomNumb);
@@ -559,7 +559,7 @@ uint checkRooms(FILE *file, size_t& numbLines, bool *userQuit)
 
      // check for rooms with a nonsensical combination of heal flags set
 
-      if ((roomPtr->roomFlags & HEAL) && (roomPtr->roomFlags & NO_HEAL))
+      if ((roomPtr->roomFlags & ROOM_HEAL) && (roomPtr->roomFlags & ROOM_NO_HEAL))
       {
         sprintf(strn, "room #%u is both HEAL and NOHEAL - makes no sense\n",
                 roomNumb);

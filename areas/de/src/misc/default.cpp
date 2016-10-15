@@ -37,13 +37,13 @@
 
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
-#include "system.h"
-#include "keys.h"
-#include "room/room.h"
-#include "obj/object.h"
-#include "mob/mob.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../system.h"
+#include "../keys.h"
+#include "../room/room.h"
+#include "../obj/object.h"
+#include "../mob/mob.h"
 
 
 

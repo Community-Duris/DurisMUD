@@ -37,8 +37,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
 #include "mob.h"
 #include "mobhere.h"
@@ -306,7 +306,7 @@ mobType *getMatchingMob(const char *strn)
   const uint highMobNumb = getHighestMobNumber();
 
 
-  if (strnumer(strn))
+  if (strnumber(strn))
   {
     isVnum = true;
     vnum = atoi(strn);

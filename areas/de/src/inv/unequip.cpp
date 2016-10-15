@@ -35,12 +35,12 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
-#include "de.h"
-#include "misc/editable.h"
-#include "obj/objhere.h"
-#include "mob/mobhere.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../de.h"
+#include "../misc/editable.h"
+#include "../obj/objhere.h"
+#include "../mob/mobhere.h"
 
 extern bool g_madeChanges;
 extern room *g_currentRoom;
@@ -57,7 +57,7 @@ void unequipMobSpecific(mobHere *mobH, const char *objStrn)
   uint vnum;
 
 
-  isVnum = strnumer(objStrn);
+  isVnum = strnumber(objStrn);
   if (isVnum)
     vnum = strtoul(objStrn, NULL, 10);
 

@@ -53,11 +53,11 @@ extern zone g_zoneRec;
 extern uint g_numbLookupEntries, g_highestRoomNumber, g_lowestRoomNumber, g_numbRooms;
 extern bool g_madeChanges;
 extern variable *g_varHead;
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 
 extern "C" struct class_names class_names_table[];
 extern "C" struct race_names race_names_table[];
-extern void initialize_skills(void);
+extern void initialize_skills();
 
 //
 // startInit : Initializes after reading the data files

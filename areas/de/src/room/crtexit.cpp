@@ -35,11 +35,11 @@
 
 #include <string.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "exit.h"
-#include "misc/strnnode.h"
+#include "../misc/strnnode.h"
 
 
 

@@ -36,9 +36,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "types.h"
-#include "fh.h"
-#include "keys.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../keys.h"
 
 #include "mob.h"
 
@@ -92,7 +92,7 @@ void deleteMobTypeUser(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nError in input - specify vnum of mob type.\n\n");
     return;

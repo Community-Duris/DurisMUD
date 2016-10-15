@@ -29,7 +29,7 @@ int currentSkill = 0;
 
 
 #if defined(_DE_) || defined(_PFILE_)
-extern "C" void initialize_skills(void);
+extern void initialize_skills();
 
 int flag2idx(int);
 #else

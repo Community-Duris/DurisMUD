@@ -36,10 +36,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
-#include "room/room.h"
+#include "../room/room.h"
 
 extern bool g_madeChanges;
 extern room *g_currentRoom;
@@ -64,7 +64,7 @@ void deleteMobHereUser(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nError in input - specify vnum of mob in this room.\n\n");
     return;

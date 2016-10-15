@@ -12,8 +12,8 @@
 #include "objmisc.h"
 #include "spells.h"
 
-#include <vector>
-using namespace std;
+//#include <vector>
+//using namespace std;
 
 const char *specdata[][MAX_SPEC] = {
   {"", "", "", ""},                                                                               //None
@@ -681,17 +681,17 @@ flagDef  room_bits[] = {
   {"NO_HEAL",       "No heal",            1, 0},
   {"RENTABLE",      "Rentable",           1, 0},
   {"DOCKABLE",      "Dockable",           1, 0},
-  {"MAGIC_DARK",    "Magic darkness",     1, 0},
-  {"MAGIC_LIGHT",   "Magic light",        1, 0},
-  {"NO_SUMMON",     "No summon",          1, 0},
-  {"GUILD",         "Guild room",         1, 0},
-  {"TWILIGHT",      "Twilight",           1, 0},
-  {"NO_PSI",        "No psionics",        1, 0},
-  {"NO_GATE",       "No gate/planeshift", 1, 0},
-  {"NO_TRACK",      "No track",           0, 0},
-  {"ATRIUM",        "Atrium",             0, 0},
-  {"BLOCKS_SIGHT",  "Blocks farsee/scan", 1, 0},
-  {"BFS_MARK",      "BFS mark",           0, 0},
+  {"ROOM_MAGIC_DARK",  "Magic darkness",     1, 0},
+  {"ROOM_MAGIC_LIGHT", "Magic light",        1, 0},
+  {"NO_SUMMON",        "No summon",          1, 0},
+  {"GUILD",            "Guild room",         1, 0},
+  {"TWILIGHT",         "Twilight",           1, 0},
+  {"NO_PSI",           "No psionics",        1, 0},
+  {"NO_GATE",          "No gate/planeshift", 1, 0},
+  {"NO_TRACK",         "No track",           0, 0},
+  {"ATRIUM",           "Atrium",             0, 0},
+  {"BLOCKS_SIGHT",     "Blocks farsee/scan", 1, 0},
+  {"BFS_MARK",         "BFS mark",           0, 0},
   {0}
 };
 

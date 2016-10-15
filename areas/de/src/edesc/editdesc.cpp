@@ -36,10 +36,10 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-#include "types.h"
-#include "fh.h"
-#include "misc/menu.h"
-#include "graphcon.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../misc/menu.h"
+#include "../graphcon.h"
 #include "edesc.h"
 
 extern bool g_madeChanges;

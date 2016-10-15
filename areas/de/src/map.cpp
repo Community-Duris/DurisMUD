@@ -116,13 +116,13 @@ int calculate_relative_room(room *room, int x, int y)
   // handle horizontal wrapping
   if( local_x + x < 0 )
     local_x += g_zoneRec.mapWidth;
-  else if( local_x + x >= g_zoneRec.mapWidth )
+  else if( (uint)(local_x + x) >= g_zoneRec.mapWidth )
     local_x -= g_zoneRec.mapWidth;
   
   // handle vertical wrapping
   if( local_y + y < 0 )
     local_y += g_zoneRec.mapHeight;
-  else if( local_y + y >= g_zoneRec.mapHeight )
+  else if( (uint)(local_y + y) >= g_zoneRec.mapHeight )
     local_y -= g_zoneRec.mapHeight;
   
   return (zone_start_vnum + local_x + x + ( (local_y + y ) * g_zoneRec.mapWidth));
@@ -134,7 +134,7 @@ int calculate_relative_room(room *room, int x, int y)
 
 void displayMap(void)
 {
-  int where, what;
+//  int where, what;
   char buf[16384];
 
  /* return, so map isnt on prompt line */

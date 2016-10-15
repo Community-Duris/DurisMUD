@@ -37,9 +37,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
-#include "de.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../de.h"
 
 #include "writezon.h"
 
@@ -48,7 +48,7 @@
 extern zone g_zoneRec;
 extern bool g_readFromSubdirs;
 extern uint g_numbObjs, g_numbMobs;
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 
 
 //

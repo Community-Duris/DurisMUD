@@ -36,14 +36,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
-#include "graphcon.h"
+#include "../graphcon.h"
 
 #include "editshp.h"
-#include "misc/menu.h"
-#include "keys.h"
+#include "../misc/menu.h"
+#include "../keys.h"
 
 extern menu g_shopItemMenu;
 
@@ -186,7 +186,7 @@ bool interpEditShopSoldMenu(const usint origch, shop *shp, mobType *mob)
 
  // get input, and love it
 
-  if (((origch >= 'A') || (origch >= FIRST_SHOP_POSTALPHA_CH)) && numbItems)
+  if (((origch >= 'A') || (origch >= FIRST_SHOP_POSTALPHA_CH)) && numbItems > 0)
   {
     usint ch = origch;
 
@@ -197,13 +197,13 @@ bool interpEditShopSoldMenu(const usint origch, shop *shp, mobType *mob)
     {
       while (true)
       {
-        uint vnum = shp->producedItemList[ch - 'A'];
+        uint vnum = shp->producedItemList[(uint)(ch - 'A')];
 
         editUIntValSearchableList(&vnum, true, "vnum", displayObjectTypeList);
 
         if (!getVnumCheckVal() || objExists(vnum))
         {
-          shp->producedItemList[ch - 'A'] = vnum;
+          shp->producedItemList[(uint)(ch - 'A')] = vnum;
 
           break;
         }

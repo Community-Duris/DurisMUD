@@ -37,8 +37,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
 #include "mob.h"
 
@@ -62,7 +62,7 @@ void editMobTypeStrn(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nSpecify the vnum of the mob you want to edit.\n\n");
 

@@ -298,7 +298,7 @@ uint editUIntVal(uint *val, const bool allowZero, const char *prompt)
 
     getStrn(valStrn, 10, 1, 7, UNUSED_FIELD_CH, valStrn, false, false);
 
-    if (strnumer(valStrn) && (allowZero || (strtoul(valStrn, NULL, 10) > 0)))
+    if (strnumber(valStrn) && (allowZero || (strtoul(valStrn, NULL, 10) > 0)))
       break;
   }
 
@@ -345,7 +345,7 @@ uint editUIntValHelp(uint *val, const bool allowZero, const char *prompt, bool *
 
     getStrn(valStrn, 10, 1, 7, UNUSED_FIELD_CH, valStrn, false, false);
 
-    if (strnumer(valStrn) && (allowZero || (strtoul(valStrn, NULL, 10) > 0)))
+    if (strnumber(valStrn) && (allowZero || (strtoul(valStrn, NULL, 10) > 0)))
       break;
 
     if (!strcmp(valStrn, "?"))
@@ -405,7 +405,7 @@ uint editUIntValHelpSearch(uint *val, const bool allowZero, const char *prompt, 
 
     getStrn(valStrn, 10, 1, 7, UNUSED_FIELD_CH, valStrn, false, false);
 
-    if (strnumer(valStrn) && (allowZero || (strtoul(valStrn, NULL, 10) > 0)))
+    if (strnumber(valStrn) && (allowZero || (strtoul(valStrn, NULL, 10) > 0)))
       break;
 
     if (!strcmp(valStrn, "?"))
@@ -515,7 +515,7 @@ int editIntVal(int *val, const bool allowZero, const char *prompt)
 
     getStrn(valStrn, 11, 1, 7, UNUSED_FIELD_CH, valStrn, false, false);
 
-    if (strnumerneg(valStrn) && (allowZero || (atoi(valStrn) != 0)))
+    if (strnumberneg(valStrn) && (allowZero || (atoi(valStrn) != 0)))
       break;
   }
 
@@ -562,7 +562,7 @@ int editIntValHelp(int *val, const bool allowZero, const char *prompt, bool *wan
 
     getStrn(valStrn, 11, 1, 7, UNUSED_FIELD_CH, valStrn, false, false);
 
-    if (strnumerneg(valStrn) && (allowZero || (atoi(valStrn) != 0)))
+    if (strnumberneg(valStrn) && (allowZero || (atoi(valStrn) != 0)))
       break;
 
     if (!strcmp(valStrn, "?"))
@@ -623,7 +623,7 @@ int editIntValHelpSearch(int *val, const bool allowZero, const char *prompt, boo
 
     getStrn(valStrn, 11, 1, 7, UNUSED_FIELD_CH, valStrn, false, false);
 
-    if (strnumerneg(valStrn) && (allowZero || (atoi(valStrn) != 0)))
+    if (strnumberneg(valStrn) && (allowZero || (atoi(valStrn) != 0)))
       break;
 
     if (!strcmp(valStrn, "?"))

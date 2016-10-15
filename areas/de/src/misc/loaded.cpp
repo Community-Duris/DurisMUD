@@ -36,13 +36,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 #include "loaded.h"
-#include "obj/objhere.h"
-#include "mob/mobhere.h"
-#include "misc/master.h"
-#include "command/command.h"
+#include "../obj/objhere.h"
+#include "../mob/mobhere.h"
+#include "../misc/master.h"
+#include "../command/command.h"
 
 
 
@@ -385,7 +385,7 @@ void displayLoadedList(const char *args)
     return;
   }
 
-  vnum = strnumer(args);
+  vnum = strnumber(args);
 
   if (vnum) 
     numb = strtoul(args, NULL, 10);
@@ -461,7 +461,7 @@ void setLimitOverrideObj(const char *args, const bool updateChanges, const bool 
   getArg(args, 1, arg1, 255);
   getArg(args, 2, arg2, 255);
 
-  if (!strnumer(arg1) || !strnumer(arg2))
+  if (!strnumber(arg1) || !strnumber(arg2))
   {
     _outtext("\nThe second and third args should be the vnum and the limit.\n\n");
     return;
@@ -500,7 +500,7 @@ void setLimitOverrideMob(const char *args, const bool updateChanges, const bool 
   getArg(args, 1, arg1, 255);
   getArg(args, 2, arg2, 255);
 
-  if (!strnumer(arg1) || !strnumer(arg2))
+  if (!strnumber(arg1) || !strnumber(arg2))
   {
     _outtext("\nThe second and third args should be the vnum and the limit.\n\n");
     return;

@@ -34,8 +34,8 @@
 
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
 extern command g_listCommands[];
 extern room *g_currentRoom;

@@ -37,8 +37,8 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
 #include "object.h"
 #include "objhere.h"
@@ -91,7 +91,7 @@ void createObjectHereStrn(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nError in input (not numeric).\n\n");
     return;

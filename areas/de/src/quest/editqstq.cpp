@@ -36,12 +36,12 @@
 
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
-#include "misc/menu.h"
-#include "keys.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../misc/menu.h"
+#include "../keys.h"
 
-#include "graphcon.h"
+#include "../graphcon.h"
 
 #include "editqst.h"
 #include "editqstq.h"

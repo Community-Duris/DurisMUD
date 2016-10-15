@@ -30,8 +30,8 @@
 
 #ifndef _MOB_H_
 
-#include "quest/quest.h"
-#include "shop/shop.h"
+#include "../quest/quest.h"
+#include "../shop/shop.h"
 
 // mob positions
 

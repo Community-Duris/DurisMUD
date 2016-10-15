@@ -38,12 +38,12 @@
 #include <stdio.h>
 #include <ctype.h>
 
-#include "fh.h"
+#include "../fh.h"
 #include "master.h"
-#include "edesc/edesc.h"
-#include "obj/objhere.h"
-#include "mob/mobhere.h"
-#include "room/room.h"
+#include "../edesc/edesc.h"
+#include "../obj/objhere.h"
+#include "../mob/mobhere.h"
+#include "../room/room.h"
 
 
 extern room *g_currentRoom;

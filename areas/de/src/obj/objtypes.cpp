@@ -35,10 +35,10 @@
 
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
-#include "spells.h"
+#include "../spells.h"
 #include "armor.h"
 #include "weapons.h"
 #include "traps.h"
@@ -49,8 +49,7 @@
 #include "missiles.h"
 #include "totem.h"
 
-#include "spells.h"
-#include "defines.h"
+#include "../defines.h"
 
 extern flagDef g_armorMiscFlagDef[], g_contFlagDef[], g_totemSphereFlagDef[],
                g_shieldMiscFlagDef[], g_roomExitDirectionList[], g_objInstrTypeList[],

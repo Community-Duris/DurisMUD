@@ -37,9 +37,9 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
-#include "spells.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../spells.h"
 
 #include "object.h"
 #include "objhere.h"
@@ -50,7 +50,7 @@ extern objectType **g_objLookup;
 extern uint g_lowestObjNumber, g_highestObjNumber, g_numbLookupEntries, g_numbObjTypes;
 extern editableListNode *g_inventory;
 extern bool g_madeChanges;
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 extern room *g_currentRoom;
 
 extern Skill skills[MAX_AFFECT_TYPES];
@@ -637,7 +637,7 @@ objectType *getMatchingObj(const char *strn)
   const uint highObjNumb = getHighestObjNumber();
 
 
-  if (strnumer(strn))
+  if (strnumber(strn))
   {
     isVnum = true;
     vnum = strtoul(strn, NULL, 10);
@@ -693,9 +693,9 @@ objectType *getMatchingObj(const char *strn)
 
 void showKeyUsed(const char *args)
 {
-  objectType *obj;
+  objectType *obj = NULL;
   room *roomPtr;
-  uint vnum;
+  uint vnum = 0;
   size_t lines = 0;
   char outStrn[512];
   bool foundKey = false;
@@ -744,7 +744,7 @@ void showKeyUsed(const char *args)
 
  // allow looking for objects that don't exist in this zone
 
-  if (strnumer(args))
+  if (strnumber(args))
   {
     vnum = strtoul(args, NULL, 10);
 

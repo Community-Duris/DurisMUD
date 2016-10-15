@@ -37,8 +37,8 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 #include "mudcomm.h"
 
 const mudCommand g_mudCommands[] =

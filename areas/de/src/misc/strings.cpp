@@ -33,9 +33,9 @@
 
 #include <string.h>
 #include <ctype.h>
-#include "types.h"
-#include "boolean.h"
-#include "fh.h"
+#include "../types.h"
+#include "../boolean.h"
+#include "../fh.h"
 
 
 //
@@ -380,10 +380,10 @@ char *lowstrn(char *strn)
 
 
 //
-// strnumer : returns TRUE if string is composed entirely of numerics, FALSE on 0 length string
+// strnumber : returns TRUE if string is composed entirely of numerics, FALSE on 0 length string
 //
 
-bool strnumer(const char *strn)
+bool strnumber(const char *strn)
 {
   if (*strn == '\0')
     return false;
@@ -401,11 +401,11 @@ bool strnumer(const char *strn)
 
 
 //
-// strnumerneg : returns TRUE if string is composed entirely of numerics, FALSE on 0 length string - allows
+// strnumberneg : returns TRUE if string is composed entirely of numerics, FALSE on 0 length string - allows
 //               negative sign at the start
 //
 
-bool strnumerneg(const char *strn)
+bool strnumberneg(const char *strn)
 {
   if (*strn == '-')
     strn++;

@@ -36,9 +36,9 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
-#include "keys.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../keys.h"
 
 #include "room.h"
 
@@ -81,7 +81,7 @@ void deleteRoomUser(const char *args)
   }
   else
   {
-    if (!strnumer(args))
+    if (!strnumber(args))
     {
       _outtext("\nError in input - specify a room number as the argument.\n\n");
 

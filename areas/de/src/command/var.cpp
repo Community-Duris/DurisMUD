@@ -38,13 +38,13 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-#include "types.h"
-#include "fh.h"
-#include "keys.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../keys.h"
 
 #include "var.h"
-#include "vardef.h"
-#include "system.h"
+#include "../vardef.h"
+#include "../system.h"
 
 
 
@@ -390,7 +390,7 @@ int getVarNumb(const variable *varHead, const char *varName, const int defVal)
 {
   const variable *var = getVar(varHead, varName);
 
-  if (var && strnumer(var->varValue))
+  if (var && strnumber(var->varValue))
     return atoi(var->varValue);
   else
     return defVal;
@@ -409,7 +409,7 @@ uint getVarNumbUnsigned(const variable *varHead, const char *varName, const uint
 {
   const variable *var = getVar(varHead, varName);
 
-  if (var && strnumer(var->varValue)) 
+  if (var && strnumber(var->varValue)) 
     return strtoul(var->varValue, NULL, 10);
   else 
     return defVal;

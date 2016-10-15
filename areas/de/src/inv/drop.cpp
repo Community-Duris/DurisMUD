@@ -33,10 +33,10 @@
 
 #include <stdio.h>
 
-#include "de.h"
-#include "fh.h"
-#include "obj/objhere.h"
-#include "mob/mobhere.h"
+#include "../de.h"
+#include "../fh.h"
+#include "../obj/objhere.h"
+#include "../mob/mobhere.h"
 
 extern editableListNode *g_inventory;
 extern room *g_currentRoom;
@@ -294,7 +294,7 @@ void dropEntityCmd(const char *args, const bool deleteOriginal)
 
  // dropping by vnum
 
-  if (strnumer(args))
+  if (strnumber(args))
   {
     vnum = strtoul(args, NULL, 10);
 

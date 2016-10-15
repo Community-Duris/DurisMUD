@@ -32,8 +32,8 @@
  */
 
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "object.h"
 

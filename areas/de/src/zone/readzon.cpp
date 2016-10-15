@@ -37,17 +37,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "zone.h"
 #include "readzon.h"
-#include "misc/loaded.h"
-#include "keys.h"
-#include "vardef.h"
-#include "defines.h"
+#include "../misc/loaded.h"
+#include "../keys.h"
+#include "../vardef.h"
+#include "../defines.h"
 
-#include "readfile.h"
+#include "../readfile.h"
 
 
 
@@ -1663,7 +1663,7 @@ bool readZoneFile(const char *filename)
   char zoneFilename[512] = "", strn[512];
   bool contPause = true;
 
-  uint lineReading = 1, unused, temp, toproom;
+  uint lineReading = 1, unused, temp, toproom = 0;
 
  // note - every zone command now has 8 args - the 5th arg is always the
  //        %age to load, 6-8 are unused as of now (8 args include if-flag)

@@ -36,12 +36,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
-#include "vardef.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../vardef.h"
 
 #include "maincomm.h"
-#include "system.h"
+#include "../system.h"
 
 extern variable *g_varHead;
 extern command g_mainCommands[];

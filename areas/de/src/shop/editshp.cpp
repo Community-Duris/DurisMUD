@@ -37,12 +37,12 @@
 #include <ctype.h>
 
 
-#include "fh.h"
-#include "types.h"
-#include "keys.h"
-#include "misc/menu.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../keys.h"
+#include "../misc/menu.h"
 
-#include "graphcon.h"
+#include "../graphcon.h"
 
 #include "editshp.h"
 

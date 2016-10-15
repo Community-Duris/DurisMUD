@@ -28,7 +28,7 @@
 
 #ifndef _COMMAND_H_
 
-#include "types.h"
+#include "../types.h"
 
 typedef struct _command
 {

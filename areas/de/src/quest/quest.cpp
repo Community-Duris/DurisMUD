@@ -37,8 +37,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
 #include "quest.h"
 
@@ -1295,7 +1295,7 @@ void tell(const char *args)
   const mobType *mob = getMatchingMob(arg);
   if (!mob)
   {
-    if (strnumer(arg))
+    if (strnumber(arg))
     {
       _outtext("\nNo mob type exists with that vnum.\n\n");
       return;
@@ -1390,7 +1390,7 @@ questQuest *getQuestTellCmd(const mobType *mob, const uint numbq, const char *st
 
     strn++;
 
-    if (strnumer(strn) && atoi(strn))
+    if (strnumber(strn) && atoi(strn))
     {
       val = strtoul(strn, NULL, 10);
       val--;

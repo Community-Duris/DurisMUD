@@ -36,10 +36,10 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
-#include "keys.h"
-#include "misc/menu.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../keys.h"
+#include "../misc/menu.h"
 
 #include "quest.h"
 
@@ -68,7 +68,7 @@ void editQuestStrn(const char *strn)
     return;
   }
 
-  if (!strnumer(strn))
+  if (!strnumber(strn))
   {
     _outtext("\nSpecify the vnum of the mob you want to edit.\n\n");
 

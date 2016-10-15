@@ -28,7 +28,7 @@
 
 #ifndef _OBJHERE_H_
 
-#include "types.h"
+#include "../types.h"
 #include "object.h"
 
 // "object here" record - used for objects in a room, mob, etc.

@@ -37,8 +37,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "room.h"
 
@@ -47,7 +47,7 @@
 extern room *g_currentRoom;
 extern "C" flagDef room_bits[];
 extern flagDef g_roomManaList[];
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 
 
 //
@@ -73,7 +73,7 @@ void displayRoomList(const char *strn)
   }
   else
   {
-    vnum = strnumer(strn);
+    vnum = strnumber(strn);
     numb = strtoul(strn, NULL, 10);
   }
 
@@ -222,7 +222,7 @@ void displayExitList(const char *strn)
   }
   else
   {
-    if (strnumer(strn))
+    if (strnumber(strn))
     {
       numb = strtoul(strn, NULL, 10);
       vnum = true;
@@ -370,7 +370,7 @@ void displayRoomInfo(const char *args)
   }
   else
   {
-    if (!strnumer(args))
+    if (!strnumber(args))
     {
       _outtext("\nError in input - specify a valid room vnum.\n\n");
 

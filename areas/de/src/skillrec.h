@@ -1,1 +1,0 @@
-/home/lohrr/mud/src/skillrec.h

@@ -36,8 +36,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 extern editableListNode *g_inventory;
 extern room *g_currentRoom;
@@ -183,7 +183,7 @@ void putEntityCmd(const char *args, const bool deleteOriginal)
 
  // find target container
 
-  if (strnumer(argtwo))
+  if (strnumber(argtwo))
   {
     const uint vnum = strtoul(argtwo, NULL, 10);
 
@@ -307,7 +307,7 @@ void putEntityCmd(const char *args, const bool deleteOriginal)
 
  // check inventory for obj matching vnum in arg one
 
-  if (strnumer(argone))
+  if (strnumber(argone))
   {
     const uint vnum = strtoul(argone, NULL, 10);
 

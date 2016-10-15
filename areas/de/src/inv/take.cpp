@@ -34,11 +34,11 @@
 #include <stdio.h>
 #include <ctype.h>
 
-#include "de.h"
-#include "fh.h"
-#include "obj/objhere.h"
-#include "mob/mobhere.h"
-#include "defines.h"
+#include "../de.h"
+#include "../fh.h"
+#include "../obj/objhere.h"
+#include "../mob/mobhere.h"
+#include "../defines.h"
 
 extern editableListNode *g_inventory;
 extern room *g_currentRoom;
@@ -76,7 +76,7 @@ void takeEntityFromEntity(const char *objStrn, const bool deleteOriginal, const 
 
  // first try by vnum
 
-  if (strnumer(containerStrn))
+  if (strnumber(containerStrn))
   {
    // user entered vnum for container
 
@@ -192,7 +192,7 @@ void takeEntityFromEntity(const char *objStrn, const bool deleteOriginal, const 
 
   objHere = NULL;
 
-  if (strnumer(objStrn))
+  if (strnumber(objStrn))
   {
    // user entered vnum for object
 
@@ -368,7 +368,10 @@ bool takeEntityObjEdesc(objectType *obj, extraDesc *desc, const bool deleteOrigi
       objH = objH->Next;
     }
   }
-
+  if( !obj )
+  {
+    return FALSE;
+  }
  // if deleteOriginal is true, remove from object type and rebuild lists, else make new copy of edesc
  // for inventory node
 
@@ -602,7 +605,7 @@ void takeEntityCmd(const char *args, const bool deleteOriginal)
 
  // check if user entered vnum
 
-  if (strnumer(args))
+  if (strnumber(args))
   {
     vnum = strtoul(args, NULL, 10);
 

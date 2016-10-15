@@ -42,8 +42,8 @@
 #  include <direct.h>
 #endif
 
-#include "fh.h"
-#include "system.h"
+#include "../fh.h"
+#include "../system.h"
 #include "strnnode.h"    // header for string node functions
 
 

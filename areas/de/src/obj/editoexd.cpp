@@ -36,14 +36,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
-#include "keys.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../keys.h"
 
 #include "object.h"
-#include "edesc/edesc.h"
+#include "../edesc/edesc.h"
 
-#include "misc/menu.h"
+#include "../misc/menu.h"
 #include "editoexd.h"
 
 

@@ -33,8 +33,8 @@
 
 
 
-#include "fh.h"
-#include "readfile.h"
+#include "../fh.h"
+#include "../readfile.h"
 
 
 //

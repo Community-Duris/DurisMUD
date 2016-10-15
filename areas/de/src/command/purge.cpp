@@ -37,15 +37,15 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-#include "fh.h"
-#include "types.h"
-#include "keys.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../keys.h"
 
-#include "room/room.h"
-#include "obj/objhere.h"
-#include "mob/mobhere.h"
-#include "zone/zone.h"
-#include "misc/editable.h"
+#include "../room/room.h"
+#include "../obj/objhere.h"
+#include "../mob/mobhere.h"
+#include "../zone/zone.h"
+#include "../misc/editable.h"
 
 extern room *g_currentRoom;
 extern bool g_madeChanges;
@@ -101,7 +101,7 @@ void purge(const char *args)
   objectHere *obj = NULL;
   mobHere *mob = NULL;
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     editableListNode *matchingNode;
     char whatMatched;

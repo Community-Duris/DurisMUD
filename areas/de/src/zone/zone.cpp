@@ -35,9 +35,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "fh.h"
-#include "types.h"
-#include "de.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../de.h"
 
 #include "zone.h"
 
@@ -110,7 +110,7 @@ void setZoneNumbStrn(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nThe 'set zone number' command requires a numeric argument.\n\n");
     return;

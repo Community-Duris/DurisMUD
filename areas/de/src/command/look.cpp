@@ -37,16 +37,16 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
-#include "obj/objhere.h"
-#include "misc/master.h"
-#include "misc/editable.h"
+#include "../obj/objhere.h"
+#include "../misc/master.h"
+#include "../misc/editable.h"
 
 extern room *g_currentRoom;
 extern zone g_zoneRec;
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 
 
 //
@@ -432,7 +432,7 @@ void lookEntity(const char *args)
 
  // check if user is looking by vnum
 
-  if (strnumer(args))
+  if (strnumber(args))
   {
     const uint vnum = strtoul(args, NULL, 10);
 

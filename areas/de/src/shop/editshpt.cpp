@@ -37,12 +37,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "types.h"
-#include "fh.h"
-#include "misc/menu.h"
-#include "keys.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../misc/menu.h"
+#include "../keys.h"
 
-#include "graphcon.h"
+#include "../graphcon.h"
 
 #include "shop.h"
 
@@ -212,9 +212,9 @@ bool interpEditShopBoughtMenu(const usint origch, shop *shp, mobType *mob)
 
     if (numbItems > (uint)(ch - 'A'))
     {
-      oldVal = shp->tradedItemList[ch - 'A'];
+      oldVal = shp->tradedItemList[(uint)(ch - 'A')];
 
-      editFlags(g_objTypeList, &(shp->tradedItemList[ch - 'A']), ENTITY_SHOP, 
+      editFlags(g_objTypeList, &(shp->tradedItemList[(uint)(ch - 'A')]), ENTITY_SHOP, 
                 getMobShortName(mob), mob->mobNumber, "object type bought", NULL, 0, false);
 
      // check for duplicates
@@ -223,7 +223,7 @@ bool interpEditShopBoughtMenu(const usint origch, shop *shp, mobType *mob)
       {
         if (i == (ch - 'A')) continue;
        
-        if (shp->tradedItemList[i] == shp->tradedItemList[ch - 'A'])
+        if (shp->tradedItemList[i] == shp->tradedItemList[(uint)(ch - 'A')])
         {
           coords = _gettextposition();
 
@@ -233,7 +233,7 @@ bool interpEditShopBoughtMenu(const usint origch, shop *shp, mobType *mob)
           displayColorString("&+CError: this shop already buys that type of item.  Press a key..");
           getkey();
 
-          shp->tradedItemList[ch - 'A'] = oldVal;
+          shp->tradedItemList[(uint)(ch - 'A')] = oldVal;
 
           displayEditShopBoughtMenu(shp, mob);
           return false;

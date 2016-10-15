@@ -38,10 +38,10 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
-#include "readfile.h"
+#include "../readfile.h"
 
 #include "readqst.h"
 
@@ -412,7 +412,7 @@ quest *readQuestFromFile(FILE *questFile, uint *questNumb)
 
   deleteChar(strn, 0);
 
-  if (!strnumer(strn))
+  if (!strnumber(strn))
   {
     _outtext("Error: Non-numerics found in mob number ref in .qst file (string read was\n'#");
     _outtext(strn);

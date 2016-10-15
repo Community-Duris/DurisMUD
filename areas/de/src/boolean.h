@@ -38,6 +38,8 @@
   #define FALSE 0
 #endif
 
+#ifndef __cplusplus
+
 #ifndef true
   #define true 1
 #endif
@@ -47,4 +49,6 @@
 #endif
 
 #define _BOOLEAN_H_
+#endif
+
 #endif

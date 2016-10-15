@@ -37,13 +37,13 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
-#include "keys.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../keys.h"
 
-#include "graphcon.h"
+#include "../graphcon.h"
 
-#include "misc/menu.h"
+#include "../misc/menu.h"
 #include "zone.h"
 
 extern menu g_zoneMiscMenu;

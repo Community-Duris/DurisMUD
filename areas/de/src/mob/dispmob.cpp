@@ -37,8 +37,8 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 #include "mob.h"
 
 extern "C" flagDef action_bits[], affected1_bits[], affected2_bits[], affected3_bits[], affected4_bits[], 
@@ -120,7 +120,7 @@ void displayMobTypeList(const char *strn)
   }
   else
   {
-    vnum = strnumer(strn);
+    vnum = strnumber(strn);
     numb = strtoul(strn, NULL, 10);
   }
 
@@ -235,7 +235,7 @@ void displayMobInfo(const char *args)
   mob = getMatchingMob(args);
   if (!mob)
   {
-    if (strnumer(args))
+    if (strnumber(args))
       _outtext("\nNo mob type exists with that vnum.\n\n");
     else
       _outtext("\nNo mob type exists with that keyword.\n\n");

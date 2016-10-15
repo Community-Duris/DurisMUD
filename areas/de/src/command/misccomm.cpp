@@ -36,11 +36,11 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-#include "types.h"
-#include "fh.h"
-#include "keys.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../keys.h"
 
-#include "room/room.h"
+#include "../room/room.h"
 
 #include "misccomm.h"
 
@@ -54,7 +54,7 @@ extern shop *g_defaultShop;
 extern zone g_zoneRec;
 extern command g_copyDescCommands[], g_copyCommands[], g_copyDefaultCommands[], g_mainCommands[];
 extern bool g_madeChanges;
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 extern alias *g_aliasHead;
 extern variable *g_varHead;
 
@@ -351,7 +351,7 @@ bool cloneExecCommand(const usint command, const char *args)
 
   if (arg2[0] == '\0')  // no second arg
   {
-    if (!strnumer(arg1))
+    if (!strnumber(arg1))
     {
       _outtext("\nThe second argument should specify the vnum to clone.\n\n");
       return false;
@@ -361,7 +361,7 @@ bool cloneExecCommand(const usint command, const char *args)
   }
   else
   {
-    if (!strnumer(arg1) || !strnumer(arg2))
+    if (!strnumber(arg1) || !strnumber(arg2))
     {
       _outtext("\n"
 "The second and third arguments should specify the vnum and amount to clone.\n\n");
@@ -418,7 +418,7 @@ bool copyDescExecCommand(const usint command, const char *args)
     sprintf(arg2, "%u", g_currentRoom->roomNumber);
   }
 
-  if (!strnumer(arg1) || !strnumer(arg2))
+  if (!strnumber(arg1) || !strnumber(arg2))
   {
     _outtext("\n"
 "The third and fourth arguments should specify the vnum of the desc to be copied\n"
@@ -465,7 +465,7 @@ bool copyDefaultExecCommand(const usint command, const char *args)
     tocopy = g_currentRoom->roomNumber;
   }
   else
-  if (!strlen(args) || (!strnumer(args) && (command != COPYDEFCMD_EXIT) && (command != COPYDEFCMD_EDESC)))
+  if (!strlen(args) || (!strnumber(args) && (command != COPYDEFCMD_EXIT) && (command != COPYDEFCMD_EDESC)))
   {
     _outtext(COPYDEF_NOT_ENOUGH_ARGS_MSG);
 

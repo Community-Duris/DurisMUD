@@ -36,11 +36,11 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
-#include "room/room.h"
-#include "mob/mobhere.h"
-#include "misc/master.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../room/room.h"
+#include "../mob/mobhere.h"
+#include "../misc/master.h"
 
 extern bool g_madeChanges;
 extern room *g_currentRoom;
@@ -69,7 +69,7 @@ void mountMob(const char *args)
 
  // check arg1 (mounting) to see if it's a vnum or a keywordish string
 
-  if (!strnumer(arg1))
+  if (!strnumber(arg1))
   {
     checkEditableList(arg1, g_currentRoom->editableListHead, &whatMatched, &matchingNode, 1);
 
@@ -121,7 +121,7 @@ void mountMob(const char *args)
 
  // check arg2 (mount) to see if it's a vnum or a keywordish string
 
-  if (!strnumer(arg2))
+  if (!strnumber(arg2))
   {
     checkEditableList(arg2, g_currentRoom->editableListHead, &whatMatched, &matchingNode, 1);
 
@@ -247,7 +247,7 @@ void unmountMob(const char *args)
 
  // check arg1 (mounting) to see if it's a vnum or a keywordish string
 
-  if (!strnumer(arg1))
+  if (!strnumber(arg1))
   {
     checkEditableList(arg1, g_currentRoom->editableListHead, &whatMatched, &matchingNode, 1);
 
@@ -342,7 +342,7 @@ void followMob(const char *args)
 
  // check arg1 (following) to see if it's a vnum or a keywordish string
 
-  if (!strnumer(arg1))
+  if (!strnumber(arg1))
   {
     checkEditableList(arg1, g_currentRoom->editableListHead, &whatMatched, &matchingNode, 1);
 
@@ -394,7 +394,7 @@ void followMob(const char *args)
 
  // check arg2 (leader) to see if it's a vnum or a keywordish string
 
-  if (!strnumer(arg2))
+  if (!strnumber(arg2))
   {
     checkEditableList(arg2, g_currentRoom->editableListHead, &whatMatched, &matchingNode, 1);
 
@@ -518,7 +518,7 @@ void unfollowMob(const char *args)
 
  // check arg1 (following) to see if it's a vnum or a keywordish string
 
-  if (!strnumer(arg1))
+  if (!strnumber(arg1))
   {
     checkEditableList(arg1, g_currentRoom->editableListHead, &whatMatched, &matchingNode, 1);
 

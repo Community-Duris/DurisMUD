@@ -35,8 +35,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
 #include "object.h"
 
@@ -59,7 +59,7 @@ void editObjectTypeStrn(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nSpecify the vnum of the object you want to edit.\n\n");
 

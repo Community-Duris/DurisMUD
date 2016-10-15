@@ -37,10 +37,10 @@
 #include <string.h>
 
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
-#include "readfile.h"
+#include "../readfile.h"
 
 #include "mob.h"
 
@@ -71,7 +71,7 @@ char *convertMobMoneyRedundant(char *strptr, uint *money, bool *blnError, const 
 
   *strptr = '\0';
 
-  if (!strnumer(numbstart))
+  if (!strnumber(numbstart))
   {
     *blnError = true;
     return strptr;

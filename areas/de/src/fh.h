@@ -1364,7 +1364,7 @@ void checkForMultipleShopsInOneRoom(void);
 
 // skills.c
 
-extern "C" void initialize_skills(void);
+extern void initialize_skills();
 
 // stat.cpp
 
@@ -1385,8 +1385,8 @@ char *getArg(const char *strn, const size_t argNumb, char *arg, const size_t int
 char *upstrn(char *strn);
 char *upfirstarg(char *strn);
 char *lowstrn(char *strn);
-bool strnumer(const char *strn);
-bool strnumerneg(const char *strn);
+bool strnumber(const char *strn);
+bool strnumberneg(const char *strn);
 bool strfloat(const char *strn);
 bool strcmpnocase(const char *strn1, const char *strn2);
 bool strcmpnocasecount(const char *strn1, const char *strn2, const size_t intCount);

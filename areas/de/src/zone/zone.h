@@ -30,7 +30,7 @@
 
 #ifndef _ZONE_H_
 
-#include "types.h"
+#include "../types.h"
 
 #define NUMB_ZONEMISC_FLAGS   5
 

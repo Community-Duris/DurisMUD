@@ -36,8 +36,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "mob.h"
 
@@ -71,7 +71,7 @@ void renumberMobsUser(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext(
 "\nThe 'renumbermob' command's first argument must be a positive number.\n\n");

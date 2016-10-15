@@ -4438,7 +4438,7 @@
             
             cleaned up/added comments to the first chunk of takeEntity()
             
-            changed strnumer() to not take pos arg, changed one place that used pos to use strn + 1
+            changed strnumber() to not take pos arg, changed one place that used pos to use strn + 1
             
             realized I am being dumb with extra deletion of editableNodes - should just make a
             'copy editable node' function and use that if necessary, would be extra-easy
@@ -4480,7 +4480,7 @@
             
             fixed bug wherein dropping a mob by vnum that wasn't immediately found would crash DE
             
-            changed strnumer() to return FALSE if string is empty, fixing 'list loaded' and who
+            changed strnumber() to return FALSE if string is empty, fixing 'list loaded' and who
             knows what else
             
             updated displayLoadedList() to tell the user if no match was found

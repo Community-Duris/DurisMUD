@@ -34,12 +34,12 @@
 
 #include <string.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 extern command g_createEditCommands[];
 extern room *g_currentRoom;
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 
 //
 // createEdit

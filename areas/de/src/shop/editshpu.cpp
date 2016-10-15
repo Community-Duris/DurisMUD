@@ -36,9 +36,9 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
-#include "keys.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../keys.h"
 
 #include "shop.h"
 
@@ -66,7 +66,7 @@ void editShopStrn(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext("\nSpecify the vnum of the mob you want to edit.\n\n");
 

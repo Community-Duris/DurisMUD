@@ -36,8 +36,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
 #include "object.h"
 

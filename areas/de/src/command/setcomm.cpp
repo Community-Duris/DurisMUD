@@ -34,11 +34,11 @@
 
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
 #include "setcomm.h"
-#include "vardef.h"
+#include "../vardef.h"
 #include "alias.h"
 
 extern alias *g_aliasHead;

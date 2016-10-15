@@ -36,9 +36,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "fh.h"
-#include "types.h"
-#include "misc/editable.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../misc/editable.h"
 
 extern bool g_madeChanges;
 extern room *g_currentRoom;
@@ -92,7 +92,7 @@ void equipMobSpecific(mobHere *mobH, const char *args)
 
   getArg(args, 2, objStrn, 255);
 
-  if (!mobH->inventoryHead && !strnumer(objStrn))
+  if (!mobH->inventoryHead && !strnumber(objStrn))
   {
    _outtext("\nThat mob is not carrying anything.\n\n");
 
@@ -101,7 +101,7 @@ void equipMobSpecific(mobHere *mobH, const char *args)
 
  // search mob's inventory for object that matches second keyword/vnum
 
-  isVnum = strnumer(objStrn);
+  isVnum = strnumber(objStrn);
   if (isVnum)
   {
     vnum = strtoul(objStrn, NULL, 10);

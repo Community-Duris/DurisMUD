@@ -36,15 +36,15 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
-#include "keys.h"
+#include "../types.h"
+#include "../fh.h"
+#include "../keys.h"
 #include "room.h"
 
 extern room *g_currentRoom;
 extern uint g_numbLookupEntries;
 extern bool g_madeChanges;
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 extern char g_revdirs[];
 
 //
@@ -74,7 +74,7 @@ bool createRoomPrompt(const char *args)
 
   if (strlen(args))
   {
-    if (!strnumer(args))
+    if (!strnumber(args))
     {
       _outtext("\nError in vnum argument - non-numerics in input.\n\n");
       return false;
@@ -245,8 +245,10 @@ bool createRoomPrompt(const char *args)
     if (*exitPtr)
       deleteRoomExit(*exitPtr, true);
 
-    createExit(exitPtr, true);
+    if( !createExit(exitPtr, true) )
+      return FALSE;
 
+#pragma warning(suppress: 6011)
     (*exitPtr)->destRoom = g_currentRoom->roomNumber;
 
     _outtext(g_exitnames[ch]);

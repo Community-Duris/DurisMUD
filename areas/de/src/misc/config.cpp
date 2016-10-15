@@ -37,12 +37,12 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
-#include "vardef.h"
-#include "system.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../vardef.h"
+#include "../system.h"
 #include "menu.h"
-#include "graphcon.h"
+#include "../graphcon.h"
 
 extern bool g_madeChanges;
 extern variable *g_varHead;

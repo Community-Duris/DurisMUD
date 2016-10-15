@@ -35,11 +35,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "fh.h"
+#include "../fh.h"
 
-#include "misc/master.h"
-#include "mob/mobhere.h"
-#include "obj/objhere.h"
+#include "../misc/master.h"
+#include "../mob/mobhere.h"
+#include "../obj/objhere.h"
 
 extern bool g_madeChanges;
 extern room *g_currentRoom;
@@ -63,7 +63,7 @@ void setEntityRandomVal(const char *args)
 
   chance = atoi(arg2);
 
-  if (!strnumer(arg2) || (chance <= 0) || (chance > 100))
+  if (!strnumber(arg2) || (chance <= 0) || (chance > 100))
   {
     _outtext("\nInput for second argument is invalid (should be 1-100).\n\n");
     return;
@@ -71,7 +71,7 @@ void setEntityRandomVal(const char *args)
 
  // if first arg specifies a vnum, search through room's obj and mobhere list
 
-  if (strnumer(arg1))
+  if (strnumber(arg1))
   {
     uint vnum;
 
@@ -137,7 +137,7 @@ void setEntityRandomVal(const char *args)
     sprintf(outstrn, "\nRandom chance for '%s&n' to load set to %u%%.\n\n",
             getObjShortName(obj->objectPtr), chance);
   }
-  else
+  else if( mob )
   {
     if (mob->randomChance != chance)
       g_madeChanges = true;
@@ -147,6 +147,9 @@ void setEntityRandomVal(const char *args)
     sprintf(outstrn, "\nRandom chance for '%s&n' to load set to %u%%.\n\n",
            getMobShortName(mob->mobPtr), chance);
   }
-
+  else
+  {
+    sprintf( outstrn, "\nError with finding target.\n\n" );
+  }
   displayColorString(outstrn);
 }

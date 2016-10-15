@@ -36,8 +36,8 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "object.h"
 #include "traps.h"
@@ -88,7 +88,7 @@ void displayObjectTypeList(const char *strn, const bool scanTitle)
   }
   else
   {
-    vnum = strnumer(strn);
+    vnum = strnumber(strn);
     numb = strtoul(strn, NULL, 10);
   }
 
@@ -354,7 +354,7 @@ void displayObjectInfo(const char *args)
   obj = getMatchingObj(args);
   if (!obj)
   {
-    if (strnumer(args))
+    if (strnumber(args))
       _outtext("\nNo object type exists with that vnum.\n\n");
     else
       _outtext("\nNo object type exists with that keyword.\n\n");

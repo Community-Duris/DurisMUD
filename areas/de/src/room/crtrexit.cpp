@@ -35,15 +35,15 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
 #include "exit.h"
 #include "room.h"
 
 extern room *g_currentRoom;
 extern bool g_madeChanges;
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 
 
 //

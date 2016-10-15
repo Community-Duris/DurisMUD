@@ -35,21 +35,21 @@
 
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
-#include "graphcon.h"
+#include "../graphcon.h"
 
 #include "room.h"
 #include "exit.h"
 
-#include "misc/menu.h"
+#include "../misc/menu.h"
 
 
 
 extern bool g_madeChanges;
-extern char *g_exitnames[];
-extern char *g_exitkeys[];
+extern const char *g_exitnames[];
+extern const char *g_exitkeys[];
 extern uint g_exitflags[];
 extern menu g_roomExitMenu;
 

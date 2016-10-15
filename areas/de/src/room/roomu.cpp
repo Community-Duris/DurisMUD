@@ -36,19 +36,19 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
-#include "de.h"
+#include "../fh.h"
+#include "../types.h"
+#include "../de.h"
 
 #include "room.h"
 #include "roomu.h"
 
-#include "keys.h"
+#include "../keys.h"
 
 extern room *g_currentRoom;
 extern uint g_numbExits, g_numbRooms, g_numbLookupEntries;
 extern bool g_madeChanges;
-extern char *g_exitnames[];
+extern const char *g_exitnames[];
 extern char g_revdirs[];
 
 //
@@ -60,7 +60,7 @@ extern char g_revdirs[];
 void gotoRoomStrn(const char *origargs)
 {
   char outstrn[768], args[512];
-  const bool numeric = strnumer(args);
+  const bool numeric = strnumber(origargs);
 
 
   if (!strlen(origargs))
@@ -175,6 +175,11 @@ bool createGrid(const uint sizex, const uint sizey, const uint sizez, const char
 
   const uint gridsize = sizex * sizey * sizez;
 
+  if( (sizex < 1) || (sizey < 1) ||(sizez < 1) )
+  {
+    return FALSE;
+  }
+
   if (getNumbFreeRooms() < gridsize)
   {
     if (!changeMaxVnumAutoEcho(g_numbLookupEntries + gridsize + 999))
@@ -182,14 +187,15 @@ bool createGrid(const uint sizex, const uint sizey, const uint sizez, const char
   }
 
   roomArr = new(std::nothrow) uint[gridsize];
-  if (!roomArr)
+  if( !roomArr )
   {
     displayAllocError("uint[]", "createGrid");
 
     return false;
   }
 
- // create rooms for grid
+  // create rooms for grid
+  memset(roomArr, 0, gridsize);
 
  // start at end of room array so that upper-left-most corner is lowest vnum
 
@@ -224,9 +230,7 @@ bool createGrid(const uint sizex, const uint sizey, const uint sizez, const char
   }
 
  // link rooms
-
-  arrPos = 0;
-
+  arrPos = 1;  // PENIS: This needs checking 0 or 1 or ???
   for (z = 0; z < sizez; z++)
   {
     for (y = 0; y < sizey; y++)
@@ -265,7 +269,7 @@ bool createGrid(const uint sizex, const uint sizey, const uint sizez, const char
       }
     }
   }
-
+  #pragma warning(suppress: 6385)
   sprintf(strn, "\n"
 "%ux%ux%u grid created, starting at room #%u (upper northwest corner)\n"
 "and ending at room #%u (lower southeast corner) (%u exits, %u rooms\n"
@@ -322,7 +326,7 @@ void createGridInterp(const char *args)
     return;
   }
 
-  if (!strnumer(arg1) || !strnumer(arg2) || !strnumer(arg3))
+  if (!strnumber(arg1) || !strnumber(arg2) || !strnumber(arg3))
   {
     _outtext("\n"
 "The first, second, and third arguments (third argument optional) should specify\n"
@@ -458,7 +462,7 @@ void linkRoomsInterp(const char *args)
   getArg(args, 1, arg1, 511);
   getArg(args, 2, arg2, 511);
 
-  isnum1 = strnumer(arg1);
+  isnum1 = strnumber(arg1);
 
  // specific to number of args
 
@@ -470,7 +474,7 @@ void linkRoomsInterp(const char *args)
     room2 = strtoul(arg2, NULL, 10);
     dir = getDirfromKeyword(arg3);
 
-    isnum2 = strnumer(arg2);
+    isnum2 = strnumber(arg2);
   }
   else 
   if (numbArgs(args) == 2)
@@ -519,7 +523,7 @@ void renumberRoomsUser(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     _outtext(
 "\nThe 'renumberroom' command's first argument must be a positive number.\n\n");

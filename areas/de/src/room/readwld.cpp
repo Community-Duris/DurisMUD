@@ -37,14 +37,14 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "fh.h"
-#include "types.h"
+#include "../fh.h"
+#include "../types.h"
 
 #include "room.h"
 #include "exit.h"
-#include "edesc/edesc.h"
-#include "vardef.h"
-#include "readfile.h"
+#include "../edesc/edesc.h"
+#include "../vardef.h"
+#include "../readfile.h"
 
 
 
@@ -234,7 +234,7 @@ room *readRoomFromFile(FILE *worldFile, const bool checkDupes, const bool incNum
  // if incNumbRooms is TRUE, assume room is being read into main room list
  // and not a default room or whatever else
 
-  if (!strnumer(strn) && incNumbRooms)
+  if (!strnumber(strn) && incNumbRooms)
   {
     _outtext("Error: room has vnum of '");
     _outtext(strn);

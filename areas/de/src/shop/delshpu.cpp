@@ -36,10 +36,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "types.h"
-#include "fh.h"
+#include "../types.h"
+#include "../fh.h"
 
-#include "mob/mob.h"
+#include "../mob/mob.h"
 
 extern bool g_madeChanges;
 
@@ -70,7 +70,7 @@ void deleteShopUser(const char *args)
     return;
   }
 
-  if (!strnumer(args))
+  if (!strnumber(args))
   {
     displayColorString(
 "&n\nError in input - specify vnum of mob from which to delete shop.\n\n");
