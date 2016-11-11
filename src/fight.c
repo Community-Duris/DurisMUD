@@ -8661,10 +8661,8 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
 
   // Monks and immaterial (ghosts, phantoms, etc...) may be parried when attacker
   // has a weapon.
-  if(GET_CLASS(attacker, CLASS_MONK) ||
-      IS_IMMATERIAL(attacker))
-    if(!attacker->equipment[WIELD] &&
-        !attacker->equipment[WIELD2])
+  if(GET_CLASS(attacker, CLASS_MONK) || IS_IMMATERIAL(attacker))
+    if(!attacker->equipment[WIELD] && !attacker->equipment[WIELD2])
       return FALSE;
 
   // Ensure the victim has a weapon for parrying.

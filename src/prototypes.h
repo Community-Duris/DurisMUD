@@ -263,7 +263,6 @@ void do_meditate(P_char, char *, int);
 void stop_meditation(P_char);
 void do_more(P_char, char *, int);
 void do_nokill(P_char, char *, int);
-void do_parry(P_char, char *, int);
 void do_shapechange(P_char, char *, int);
 void do_subterfuge(P_char, char *, int);
 void do_trip(P_char, char *, int);
