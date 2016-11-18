@@ -378,6 +378,9 @@ void update_dam_factors()
   dam_factor[DF_UNDEAD_MODIFIER] = get_property("damage.modifier.undead", 1.000);
   dam_factor[DF_NEUTRAL_MODIFIER] = get_property("damage.modifier.neutral", 1.000);
   dam_factor[DF_TWOHANDED_MODIFIER] = get_property("damage.modifier.twohanded", 1.500);
+  dam_factor[DF_KNEELING] = get_property("damage.modifier.kneeling", 1.150);
+  dam_factor[DF_SITTING] = get_property("damage.modifier.sitting", 1.300);
+  dam_factor[DF_PRONE] = get_property("damage.modifier.prone", 1.500);
 
 }
 
@@ -5164,15 +5167,15 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags, struct damage_
     }
     else if( MIN_POS(victim, POS_KNEELING + STAT_DEAD) && !has_innate(victim, INNATE_GROUNDFIGHTING) )
     {
-      dam = (dam * get_property("damage.modifier.kneeling", 1.150));
+      dam *= dam_factor[DF_KNEELING];
     }
     else if( MIN_POS(victim, POS_SITTING + STAT_DEAD) && !has_innate(victim, INNATE_GROUNDFIGHTING) )
     {
-      dam = (dam * get_property("damage.modifier.sitting", 1.300));
+      dam *= dam_factor[DF_SITTING];
     }
     else if( MIN_POS(victim, POS_PRONE + STAT_DEAD) && !has_innate(victim, INNATE_GROUNDFIGHTING) )
     {
-      dam = (dam * get_property("damage.modifier.lying", 1.500));
+      dam *= dam_factor[DF_PRONE];
     }
   }
 
