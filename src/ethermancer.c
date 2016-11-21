@@ -2387,7 +2387,7 @@ void event_razor_wind(P_char victim, P_char ch, P_obj obj, void *data)
     && --duration > 0 )
   {
     // This has to be backwards for the event search to work right.. *sigh*
-    add_event(event_razor_wind, PULSE_SPELLCAST * 2, victim, ch, NULL, 0, &duration, sizeof(int));
+    add_event(event_razor_wind, PULSE_SPELLCAST, victim, ch, NULL, 0, &duration, sizeof(int));
   }
   else if( IS_ALIVE(victim) && duration <= 0 )
   {
@@ -2433,7 +2433,7 @@ void spell_razor_wind(int level, P_char ch, char *arg, int type, P_char victim, 
   }
 
   // This has to be backwards for the event search to work right.. *sigh*
-  add_event(event_razor_wind, PULSE_SPELLCAST * 2, victim, ch, NULL, 0, &duration, sizeof(duration));
+  add_event(event_razor_wind, PULSE_SPELLCAST, victim, ch, NULL, 0, &duration, sizeof(duration));
 }
 
 void spell_conjure_void_elemental(int level, P_char ch, char *arg, int type, P_char victim, P_obj tar_obj)
