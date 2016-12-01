@@ -573,12 +573,14 @@ void do_bardsing(P_char ch, char *arg)
       return;
     }
     for (foo = world[ch->in_room].people; foo; foo = foo->next_in_room)
+    {
       if(foo != ch)
       {
         sprintf(Gbuf4, "$n sings %s '%s'", language_known(ch, foo),
                 language_CRYPT(ch, foo, arg));
         act(Gbuf4, FALSE, ch, 0, foo, TO_VICT);
       }
+    }
     sprintf(Gbuf4, "You sing %s '%s'", language_known(ch, ch), arg);
     act(Gbuf4, FALSE, ch, 0, 0, TO_CHAR);
   }
@@ -1755,38 +1757,33 @@ void event_echosong(P_char ch, P_char victim, P_obj obj, void *data)
         break;
       }
     // for each person in the room
-    for (victim = world[room].people; victim; victim = victim2)
+    for( victim = world[room].people; victim; victim = victim2 )
     {
       victim2 = victim->next_in_room;
 
-      // immortals are not effected
-      if(IS_TRUSTED(victim))
+      // Immortals are not effected
+      if( IS_TRUSTED(victim) )
       {
         continue;
       }
-      if((ch == victim &&
-        !(songDescrip->flags & SONG_AGGRESSIVE)) ||
-        (grouped(ch, victim) &&
-        !(songDescrip->flags & SONG_AGGRESSIVE)) ||
-        (ch != victim && !grouped(ch, victim) &&
-        !(songDescrip->flags & SONG_ALLIES)))
+
+      if( IS_SET(songDescrip->flags, SONG_AGGRESSIVE) && !should_area_hit(ch, victim) )
       {
-        if((songDescrip->flags & SONG_AGGRESSIVE) &&
-          bard_saves(ch, victim, song) &&
-          IS_ALIVE(ch) &&
-          victim &&
-          IS_ALIVE(victim))
-        {
-          bard_aggro(victim, ch);
-        }
-        
-        if(is_char_in_room(victim, room) &&
-          IS_ALIVE(ch) &&
-          victim &&
-          IS_ALIVE(victim))
-        {
-          (songDescrip->funct) (songLevel, ch, victim, song);
-        }
+        continue;
+      }
+
+      if( IS_SET(songDescrip->flags, SONG_ALLIES) && (ch != victim) && !grouped(ch, victim) )
+      {
+        continue;
+      }
+
+      // Sing the song.
+      (songDescrip->funct) (songLevel, ch, victim, song);
+
+      if( IS_SET(songDescrip->flags, SONG_AGGRESSIVE) && IS_ALIVE(ch) && IS_ALIVE(victim)
+        && bard_saves(ch, victim, song) && !IS_FIGHTING(victim) )
+      {
+        bard_aggro(victim, ch);
       }
     }
   }
@@ -1910,30 +1907,27 @@ void event_bardsong(P_char ch, P_char victim, P_obj obj, void *data)
       continue;
     }
 
-    if( (ch == tch && !(sd->flags & SONG_AGGRESSIVE))
-      || (grouped(ch, tch) && !(sd->flags & SONG_AGGRESSIVE))
-      || (ch != tch && !grouped(ch, tch) && !(sd->flags & SONG_ALLIES)) )
+    if( IS_SET(sd->flags, SONG_AGGRESSIVE) && (!should_area_hit( ch, tch )
+      || ( number(1, 100) > aggr_chance )) )
     {
-      if( (sd->flags & SONG_AGGRESSIVE) && bard_saves(ch, tch, song) )
-      {
-        if( !IS_FIGHTING(tch) )
-        {
-          bard_aggro(tch, ch);
-        }
-      }
-      if( IS_ALIVE(ch) && is_char_in_room(tch, room) )
-      {
-        if( !IS_SET(sd->flags, SONG_AGGRESSIVE) || number(1, 100) <= aggr_chance )
-        {
-          (sd->funct) (l, ch, tch, song);
-        }
-      }
-      else
-      {
-        break;
-      }
+      continue;
+    }
+
+    if( IS_SET(sd->flags, SONG_ALLIES) && (ch != tch) && !grouped(ch, tch) )
+    {
+      continue;
+    }
+
+    // Sing the song.
+    (sd->funct) (l, ch, tch, song);
+
+    if( IS_SET(sd->flags, SONG_AGGRESSIVE) && IS_ALIVE(ch) && IS_ALIVE(tch)
+      && bard_saves(ch, tch, song) && !IS_FIGHTING(tch) )
+    {
+      bard_aggro(tch, ch);
     }
   }
+
   if( !IS_ALIVE(ch) )
   {
     return;
