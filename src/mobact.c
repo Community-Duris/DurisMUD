@@ -66,6 +66,9 @@ extern bool can_banish(P_char ch, P_char victim);
 extern bool has_skin_spell(P_char);
 extern bool has_wind_blade_wielded(P_char);
 extern void event_wait(P_char ch, P_char victim, P_obj obj, void *data);
+extern P_nevent ne_schedule[PULSES_IN_TICK];
+extern void clear_nevent( P_nevent e );
+extern struct misfire_properties_struct misfire_properties;
 
 int CheckFor_remember(P_char ch, P_char victim);
 int count_potions(P_char ch);
@@ -99,6 +102,7 @@ extern int cast_as_damage_area(P_char, void (*func) (int, P_char, char *, int, P
 extern int cast_as_damage_area(P_char, void (*func) (int, P_char, char *, int, P_char, P_obj), int, P_char, float,
   float, bool (*s_func) (P_char, P_char));
 
+struct continent_misfire_data continent_misfire;
 
 struct remember_data
 {
@@ -9132,15 +9136,84 @@ void AddToRememberArray(P_char ch, int zone)
 
 }
 
+struct misfire_info
+{
+  int zone_number;
+  int racewar_side;
+};
+
+// The ch, victim, and obj args should be NULL.  data contains the zone number and racewar side.
+void event_misfire_cooldown( P_char ch, P_char victim, P_obj obj, void *data )
+{
+  struct misfire_info *info = (misfire_info *)data;
+
+  // If we have a negative zone number, it means we're on a continent.
+  if( info->zone_number < 0 )
+  {
+    continent_misfire.misfiring[-(info->zone_number)][info->racewar_side] = FALSE;
+  }
+  else
+  {
+    zone_table[info->zone_number].misfiring[info->racewar_side] = FALSE;
+  }
+}
+
+void event_remove_misfire_cooldown( int zn, int racewar_side )
+{
+  P_nevent e1;
+  struct misfire_info *info;
+
+  for( int i = 0; i < PULSES_IN_TICK; i++ )
+  {
+    for( e1 = ne_schedule[i]; e1; e1 = e1->next_sched )
+    {
+      if( e1->func == event_misfire_cooldown )
+      {
+        info = (misfire_info *)(e1->data);
+        if( (info->racewar_side == racewar_side) && (info->zone_number == zn) )
+        {
+          clear_nevent( e1 );
+          return;
+        }
+      }
+    }
+  }
+}
+
 void AddCharToZone(P_char ch)
 {
-  int      a;
+  int zn;
 
   if(IS_NPC(ch))
     return;
-  a = (ch->in_room == -1 ? -1 : world[ch->in_room].zone);
-  if((a >= 0) && (a < MAX_ZONES))
-    AddToRememberArray(ch, a);
+  zn = (ch->in_room == -1 ? -1 : world[ch->in_room].zone);
+  if((zn >= 0) && (zn < MAX_ZONES))
+  {
+    AddToRememberArray(ch, zn);
+    // Immortals do not affect misfire regardless of IS_TRUSTED toggle.
+    if( GET_LEVEL(ch) >= MINLVLIMMORTAL )
+    {
+      return;
+    }
+
+    // Surface map checks continent, others zone.
+    if( IS_SURFACE_MAP(ch->in_room) )
+    {
+      // If the continent ch is on is back up to misfire size for ch's racewar side
+      //   and ch's racewar side is currently misfiring there.
+      if( (++(continent_misfire.players[CONTINENT(ch->in_room)][GET_RACEWAR(ch)]) == misfire_properties.pvp_maxAllies[GET_RACEWAR(ch)])
+        && continent_misfire.misfiring[CONTINENT(ch->in_room)][GET_RACEWAR(ch)] )
+      {
+        // The negative sign means it's a continent and not a regular zone.
+        event_remove_misfire_cooldown( -CONTINENT(ch->in_room), GET_RACEWAR(ch) );
+      }
+    }
+    // If we're back up to misfire size and misfiring is ocurring.
+    else if( (++zone_table[zn].players[GET_RACEWAR(ch)] == misfire_properties.pvp_maxAllies[GET_RACEWAR(ch)]) && zone_table[zn].misfiring[GET_RACEWAR(ch)] )
+    {
+      event_remove_misfire_cooldown( zn, GET_RACEWAR(ch) );
+    }
+  }
 }
 
 void send_to_zone_func(int z, int mask, const char *msg)
@@ -9264,27 +9337,51 @@ int CheckMindflayerPresence(P_char ch)
 
 void DelCharFromZone(P_char ch)
 {
-  int      a;
+  int zn;
   struct remember_data *foo, *foo2 = NULL;
+  struct misfire_info misfire;
 
   if(IS_NPC(ch))
     return;
   if(ch->in_room == -1)
     return;
-  a = (world[ch->in_room].zone);
-  if(!remember_array[a])
+  zn = (world[ch->in_room].zone);
+  if((zn < 0) || (zn >= MAX_ZONES))
     return;
-  if((a < 0) || (a >= MAX_ZONES))
-    return;
-  if(remember_array[a]->c == ch)
+
+  // Immortals do not affect misfire regardless of IS_TRUSTED toggle.
+  if( GET_LEVEL(ch) < MINLVLIMMORTAL )
   {
-    foo = remember_array[a];
-    remember_array[a] = foo->next;
+    // Surface map checks continent, others zone.
+    if( IS_SURFACE_MAP(ch->in_room) )
+    {
+      // The negative sign means it's a continent and not a regular zone.
+      misfire.zone_number = -CONTINENT(ch->in_room);
+      misfire.racewar_side = GET_RACEWAR(ch);
+      // Create a cooldown timer for misfiring.
+      add_event( event_misfire_cooldown, 15 * WAIT_SEC, NULL, NULL, NULL, 0, &misfire, sizeof(misfire));
+    }
+    // If we're dropping below misfire size and misfiring is ocurring.
+    else if( (zone_table[zn].players[GET_RACEWAR(ch)]-- == misfire_properties.pvp_maxAllies[GET_RACEWAR(ch)]) && zone_table[zn].misfiring[GET_RACEWAR(ch)] )
+    {
+      misfire.zone_number = zn;
+      misfire.racewar_side = GET_RACEWAR(ch);
+      // Create a cooldown timer for misfiring.
+      add_event( event_misfire_cooldown, 15 * WAIT_SEC, NULL, NULL, NULL, 0, &misfire, sizeof(misfire));
+    }
+  }
+
+  if(!remember_array[zn])
+    return;
+  if(remember_array[zn]->c == ch)
+  {
+    foo = remember_array[zn];
+    remember_array[zn] = foo->next;
     FREE(foo);
   }
   else
   {
-    for (foo = remember_array[a]; foo && !foo2; foo = foo->next)
+    for (foo = remember_array[zn]; foo && !foo2; foo = foo->next)
       if(foo->next && foo->next->c == ch)
         foo2 = foo;
     if(foo2)
@@ -10564,63 +10661,50 @@ void event_agg_attack(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
-  if(ch->specials.z_cord != victim->specials.z_cord)
+  if( ch->specials.z_cord != victim->specials.z_cord )
   {
     return;
   }
-  
-  if(ch->in_room == victim->in_room)
-  {   
-    if((IS_MAGE(victim) ||
-       IS_CLERIC(victim)) &&
-       !number(0, 2) &&
-       !IS_PC_PET(victim) &&
-       !IS_CASTING(ch) &&
-       !IS_IMMOBILE(ch))
+
+  if( ch->in_room == victim->in_room )
+  {
+    if( (IS_MAGE(victim) || IS_CLERIC(victim)) && !number(0, 2)
+      && !IS_PC_PET(victim) && !IS_CASTING(ch) && !IS_IMMOBILE(ch) )
     {
-        if(GOOD_FOR_GAZING(ch, victim) &&
-           number(0, 2))
-        {
-          gaze(ch, victim);
-        }
-        else if(isMaulable(ch, victim) &&
-                GET_CHAR_SKILL(ch, SKILL_MAUL) > 40 &&
-                number(0, 2))
-        {
-          do_maul(ch, GET_NAME(victim), CMD_MAUL);
-        }
-        else if(isSpringable(ch, victim) &&
-                GET_CHAR_SKILL(ch, SKILL_SPRINGLEAP) > 40 &&
-                number(0, 2))
-        {
-          do_kneel(ch, 0, CMD_KNEEL);
-          do_springleap(ch, GET_NAME(victim), 0);
-        }
-        else if( isBashable(ch, victim) && GET_CHAR_SKILL(ch, SKILL_BASH) > 40 && number(0, 2) )
-        {
-          bash(ch, victim);
-        }
-        else if(GET_CHAR_SKILL(ch, SKILL_SWITCH_OPPONENTS))
-        {
-          attack(ch, victim);
-        }
+      if( GOOD_FOR_GAZING(ch, victim) && number(0, 2) )
+      {
+        gaze(ch, victim);
+        return;
+      }
+      else if( isMaulable(ch, victim) && GET_CHAR_SKILL(ch, SKILL_MAUL) > 40 && number(0, 2) )
+      {
+        do_maul(ch, GET_NAME(victim), CMD_MAUL);
+        return;
+      }
+      else if( isSpringable(ch, victim) && GET_CHAR_SKILL(ch, SKILL_SPRINGLEAP) > 40 && number(0, 2) )
+      {
+        do_kneel(ch, NULL, CMD_KNEEL);
+        do_springleap(ch, GET_NAME(victim), 0);
+        return;
+      }
+      else if( isBashable(ch, victim) && GET_CHAR_SKILL(ch, SKILL_BASH) > 40 && number(0, 2) )
+      {
+        bash(ch, victim);
+        return;
+      }
+      else if( GET_CHAR_SKILL(ch, SKILL_SWITCH_OPPONENTS) )
+      {
+        attack(ch, victim);
+        return;
+      }
     }
-    
-    if(IS_PC(ch))
+
+    if( IS_PC(ch) )
     {
       send_to_char("Being the ferocious sort, you charge at the enemy!\r\n", ch);
-    }
-    
-    if(IS_NPC(ch))
-    {
-      MobStartFight(ch, victim);
-    }
-    else
-    {
-      if(GET_CHAR_SKILL(ch, SKILL_BACKSTAB) &&
-        ((ch->equipment[WIELD] && IS_BACKSTABBER(ch->equipment[WIELD])) ||
-        (ch->equipment[SECONDARY_WEAPON] &&
-        IS_BACKSTABBER(ch->equipment[SECONDARY_WEAPON]))))
+      if( GET_CHAR_SKILL(ch, SKILL_BACKSTAB)
+        && ((ch->equipment[WIELD] && IS_BACKSTABBER(ch->equipment[WIELD]))
+        || (ch->equipment[SECONDARY_WEAPON] && IS_BACKSTABBER(ch->equipment[SECONDARY_WEAPON]))) )
       {
         backstab(ch, victim);
       }
@@ -10628,6 +10712,10 @@ void event_agg_attack(P_char ch, P_char victim, P_obj obj, void *data)
       {
         attack(ch, victim);
       }
+    }
+    else
+    {
+      MobStartFight(ch, victim);
     }
   }
   else
@@ -10637,13 +10725,14 @@ void event_agg_attack(P_char ch, P_char victim, P_obj obj, void *data)
     {
       return;                   /* PCs will have to track on their own */
     }
-    
+
     if(IS_SET(ch->specials.act, ACT_SENTINEL) || IS_FIGHTING(ch))
     {
       return;                   /* damn, missed again */
     }
-    
+
     for(door = 0; door < NUM_EXITS; door++)
+    {
       if(CAN_GO(ch, door) &&
         (victim->in_room == EXIT(ch, door)->to_room) &&
         CAN_SEE(ch, victim))
@@ -10652,6 +10741,7 @@ void event_agg_attack(P_char ch, P_char victim, P_obj obj, void *data)
         add_event(event_agg_attack, 1, ch, victim, 0, 0, 0, 0);
         return;
       }
+    }
   }
 }
 
@@ -11134,3 +11224,29 @@ void event_mob_proc(P_char mob, P_char victim, P_obj object, void *data)
     add_event(event_mob_proc, PULSE_MOBILE + number(-4,4), mob, victim, NULL, 0, NULL, 0 );
   }
 }
+
+void startPvP( P_char ch )
+{
+  int zn = world[ch->in_room].zone;
+
+  affect_from_char( ch, TAG_PVPDELAY );
+  set_short_affected_by(ch, TAG_PVPDELAY, WAIT_PVPDELAY);
+
+  // Misfire activation here.
+  if( !CONTINENT(ch->in_room) )
+  {
+    if( zone_table[zn].players[GET_RACEWAR(ch)] >= misfire_properties.pvp_maxAllies[GET_RACEWAR(ch)] )
+    {
+      zone_table[zn].misfiring[GET_RACEWAR(ch)] = TRUE;
+    }
+  }
+  else
+  {
+    if( continent_misfire.players[CONTINENT(ch->in_room)][GET_RACEWAR(ch)]
+      >= misfire_properties.pvp_maxAllies[GET_RACEWAR(ch)] )
+    {
+      continent_misfire.misfiring[CONTINENT(ch->in_room)][GET_RACEWAR(ch)] = TRUE;
+    }
+  }
+}
+

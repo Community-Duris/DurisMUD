@@ -9624,10 +9624,8 @@ void perform_violence(void)
 
     if( IS_PC(ch) && IS_PC(opponent) )
     {
-      affect_from_char( ch, TAG_PVPDELAY );
-      set_short_affected_by(ch, TAG_PVPDELAY, WAIT_PVPDELAY );
-      affect_from_char( opponent, TAG_PVPDELAY );
-      set_short_affected_by(opponent, TAG_PVPDELAY, WAIT_PVPDELAY);
+      startPvP( ch );
+      startPvP( opponent );
     }
 
     if( !FightingCheck(ch, opponent, "perform_violence") )

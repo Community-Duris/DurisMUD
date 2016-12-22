@@ -3053,10 +3053,10 @@ void do_steal(P_char ch, char *argument, int cmd)
   // player stealing is a PvP action.. though not nearly as serious as actual fighting.
   //  set the time to make it look like it was PvP action, but 20 seconds ago.  This
   //  will let them rent/locker in 40 seconds, and steal (again) in 10 seconds
+  // Bleh.. they can have the full timer.. I don't feel like adding a timer argument to startPvP(ch).
   if( IS_PC(ch) && IS_PC(victim) )
   {
-    affect_from_char(ch, TAG_PVPDELAY);
-    set_short_affected_by(ch, TAG_PVPDELAY, 40 * WAIT_SEC);
+    startPvP( ch );
   }
 
   /* successful heist is less likely to be detected */

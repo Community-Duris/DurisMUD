@@ -49,6 +49,7 @@ extern P_event event_type_list[];
 extern P_index mob_index;
 extern P_index obj_index;
 extern P_room world;
+extern const racewar_struct racewar_color[MAX_RACEWAR+2];
 extern const char *event_names[];
 extern const struct stat_data stat_factor[];
 extern const struct racial_data_type racial_data[];
@@ -62,6 +63,7 @@ extern struct time_info_data time_info;
 extern void initialize_skills(void);
 extern int avail_hometowns[][LAST_RACE + 1];
 extern int guild_locations[][CLASS_COUNT + 1];
+extern struct continent_misfire_data continent_misfire;
 
 extern Skill skills[MAX_AFFECT_TYPES+1];
 int      SortedSkills[MAX_AFFECT_TYPES+1];
@@ -101,6 +103,9 @@ saves_data_type saves_data[] = {
  */
 
 struct mm_ds *dead_cast_pool = NULL;
+
+struct misfire_properties_struct misfire_properties;
+
 
 int compare_skills(const void *v1, const void *v2)
 {
@@ -425,86 +430,101 @@ P_char misfire_check(P_char ch, P_char victim, int flag)
 {
   P_char new_target, tch;
   int oversize = 0, chance;
+  bool PvP_misfiring;
 
-// Mobs by themselves do not trigger misfire.
-  if(!IS_PC(ch) ||
-     !victim)
+  // Mobs by themselves do not trigger misfire.
+  if( !IS_PC(ch) || !victim )
   {
     return victim;
   }
 
-// Player is already tagged, so let us move along.
-  if(affected_by_spell(ch, TAG_NOMISFIRE))
+  // Player is already tagged, so let us move along.
+  if( affected_by_spell(ch, TAG_NOMISFIRE) )
   {
     return victim;
   }
 
-// new_target is used as a comparison below.
+  // new_target is used as a comparison below.
   new_target = victim;
 
-// If there are no racewar conflicts, then it is a group zone misfire check.
-// Code currently set to 99, so tweak this value in sql.
-  if(!is_racewar_in_room(ch))
+  PvP_misfiring = FALSE;
+  // If we're not on a surface map continent.
+  if( !CONTINENT(ch->in_room) )
+  {
+    // Then check zone numbers.
+    if( zone_table[world[ch->in_room].zone].misfiring[GET_RACEWAR(ch)] )
+    {
+      PvP_misfiring = TRUE;
+      oversize = zone_table[world[ch->in_room].zone].players[GET_RACEWAR(ch)]
+        - misfire_properties.pvp_maxAllies[GET_RACEWAR(ch)];
+      // Guarentee misfiring possibility if zone is misfiring.
+      if( oversize < 1 )
+        oversize = 1;
+    }
+  }
+  else
+  {
+    if( continent_misfire.misfiring[CONTINENT(ch->in_room)][GET_RACEWAR(ch)] )
+    {
+      PvP_misfiring = TRUE;
+      oversize = continent_misfire.players[CONTINENT(ch->in_room)][GET_RACEWAR(ch)]
+        - misfire_properties.pvp_maxAllies[GET_RACEWAR(ch)];
+      // Guarentee misfiring possibility if continent is misfiring.
+      if( oversize < 1 )
+        oversize = 1;
+    }
+  }
+
+
+    if( oversize <= 0 )
+    {
+      set_short_affected_by(ch, TAG_NOMISFIRE, WAIT_SEC * misfire_properties.pvp_recountDelay );
+      return new_target;
+    }
+
+  // If there are no racewar conflicts, then it is a group zone misfire check.
+  // Code currently set to 99, so tweak this value in sql.
+  if( !PvP_misfiring )
   {
     for(tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
     {
-      if(IS_NPC(tch) &&
-        !IS_PC_PET(tch) &&
-        IS_FIGHTING(tch))
+      if( IS_NPC(tch) && !IS_PC_PET(tch) && IS_FIGHTING(tch) )
       {
         break;
       }
     }
-    
-    if(!tch)
+    if( !tch )
     {
       return new_target;
     }
-    
-    oversize = get_number_allies_within_range(ch) -
-                 get_property("misfire.zoning.maxGroup", 99);
-    
-    // Nothing to worry about, so let us move along.
-    if(oversize <= 0)
-    {
-      return new_target;
-    }
-  } 
-  else // Racewar PvP section.
-  {
-    oversize = (get_number_allies_within_range(ch) - 
-      (GOOD_RACE(ch) ? get_property("misfire.pvp.maxAllies.good", 14) :
-      get_property("misfire.pvp.maxAllies.evil", 12)));
+    oversize = zone_table[world[ch->in_room].zone].players[GET_RACEWAR(ch)] - misfire_properties.zoning_maxGroup;
 
-    if(oversize <= 0 &&
-      !affected_by_spell(ch, TAG_NOMISFIRE))
+    // Nothing to worry about, so let us move along.
+    if( oversize <= 0 )
     {
-      set_short_affected_by(ch, TAG_NOMISFIRE, 
-        WAIT_SEC * get_property("misfire.pvp.recountDelay.sec", 2));
-      
       return new_target;
     }
-  }  
-// Too many players... determine misfire percentage.
-  if(oversize > 0)
+  }
+
+  // Too many players... determine misfire percentage.
+  if( oversize > 0 )
   {
-    chance = get_property("misfire.pvp.minChance", 40) +
-      (oversize - 1) * get_property("misfire.pvp.chanceStep", 15);
-      
-    chance = MIN(chance, get_property("misfire.pvp.maxChance", 60));
+    chance = misfire_properties.pvp_minChance + (oversize - 1) * misfire_properties.pvp_chanceStep;
+
+    chance = MIN(chance, misfire_properties.pvp_maxChance);
 
     if(chance > number(0,100))
     { // Misfire!
-      new_target = get_random_char_in_room(ch->in_room, ch, DISALLOW_SELF); 
+      new_target = get_random_char_in_room(ch->in_room, ch, DISALLOW_SELF);
     }
   }
-// And a message.
+
+  // And a message.
   if(victim != new_target)
   {
-    act("$N just got in your way!",
-      FALSE, ch, 0, new_target, TO_CHAR);
+    act("$N just got in your way!", FALSE, ch, 0, new_target, TO_CHAR);
   }
-  
+
   return new_target;
 }
 
@@ -2976,4 +2996,21 @@ void update_racial_exp_mod_victims()
     sprintf(buf, "gain.exp.mod.victim.race.%s", race_names_table[i].no_spaces);
     racial_exp_mod_victims[i] = get_property(buf, 1.0);
   }
+}
+
+// Updates the misfire_properties struct.  Called during apply_properties() in properties.c.
+void update_misfire_properties()
+{
+  char buf[MAX_STRING_LENGTH];
+
+  misfire_properties.zoning_maxGroup = get_property("misfire.zoning.maxGroup", 99);
+  for( int i = 0; i <= MAX_RACEWAR; i++ )
+  {
+    sprintf( buf, "misfire.pvp.maxAllies.%s", racewar_color[i].name );
+    misfire_properties.pvp_maxAllies[i] = get_property(buf, 5);
+  }
+  misfire_properties.pvp_recountDelay = get_property("misfire.pvp.recountDelay.sec", 2);
+  misfire_properties.pvp_minChance = get_property("misfire.pvp.minChance", 40);
+  misfire_properties.pvp_chanceStep = get_property("misfire.pvp.chanceStep", 15);
+  misfire_properties.pvp_maxChance = get_property("misfire.pvp.maxChance", 60);
 }

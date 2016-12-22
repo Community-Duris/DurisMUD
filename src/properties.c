@@ -37,6 +37,7 @@ extern void update_racial_dam_factors();
 extern void update_saving_throws();
 extern void update_breath_weapon_properties();
 extern void update_regen_properties();
+extern void update_misfire_properties();
 extern float hp_mob_con_factor;
 extern float hp_mob_npc_pc_ratio;
 extern int damroll_cap;
@@ -124,6 +125,7 @@ void apply_properties()
   damroll_cap = get_property("damage.damrollCap", 64);
   hitroll_cap = get_property("damage.hitrollCap", 75);
   errand_notch = get_property("epic.errandStep", 500);
+  update_misfire_properties();
 }
 
 int parse_property(struct property *property, char *buf)

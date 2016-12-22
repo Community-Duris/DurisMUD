@@ -730,10 +730,8 @@ void do_fire(P_char ch, char *argument, int cmd)
     {
       if( IS_PC(ch) && IS_PC(victim) )
       {
-        affect_from_char( ch, TAG_PVPDELAY );
-        set_short_affected_by(ch, TAG_PVPDELAY, WAIT_PVPDELAY);
-        affect_from_char( victim, TAG_PVPDELAY );
-        set_short_affected_by(victim, TAG_PVPDELAY, WAIT_PVPDELAY);
+        startPvP( ch );
+        startPvP( victim );
       }
       if( !affected_by_spell(ch, TAG_FIRING) )
       {
@@ -1259,10 +1257,8 @@ void do_throw(P_char ch, char *argument, int cmd)
     {
       if (IS_PC(ch) && IS_PC(vict))
 		  {
-        affect_from_char( ch, TAG_PVPDELAY );
-        set_short_affected_by(ch, TAG_PVPDELAY, WAIT_PVPDELAY);
-        affect_from_char( vict, TAG_PVPDELAY );
-        set_short_affected_by(vict, TAG_PVPDELAY, WAIT_PVPDELAY);
+        startPvP( ch );
+        startPvP( vict );
 		  }
 
       sprintf(messages.attacker, "You hit $N with $p!");

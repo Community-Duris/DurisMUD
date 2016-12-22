@@ -27,6 +27,7 @@
 
 #include "defines.h"
 #include "player_log.h"
+#include "map.h"
 
 #ifdef _HPUX_SOURCE
 #define srandom srand
@@ -675,6 +676,25 @@ struct zone_data {
                     LAST_HOME */
   char *owner;
   int avg_mob_level;
+
+  u_short players[MAX_RACEWAR + 1];
+  bool misfiring[MAX_RACEWAR + 1];
+};
+
+struct continent_misfire_data
+{
+  u_short players[NUM_CONTINENTS][MAX_RACEWAR + 1];
+  bool misfiring[NUM_CONTINENTS][MAX_RACEWAR + 1];
+};
+
+struct misfire_properties_struct
+{
+  ushort zoning_maxGroup;
+  ushort pvp_maxAllies[MAX_RACEWAR + 1];
+  ushort pvp_recountDelay; // in seconds
+  ushort pvp_minChance;
+  ushort pvp_chanceStep;
+  ushort pvp_maxChance;
 };
 
 struct town {

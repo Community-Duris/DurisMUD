@@ -75,6 +75,7 @@ extern struct zone_data *zone_table;
 extern int LOADED_RANDOM_ZONES;
 extern struct time_info_data time_info;
 extern const racewar_struct racewar_color[MAX_RACEWAR+2];
+extern struct continent_misfire_data continent_misfire;
 
 int      whats_in_maproom(P_char, int, int);
 // These are set in weather.c
@@ -1117,7 +1118,15 @@ void assign_continents()
   for( int i = 0; continents[i].id; i++ )
   {
     fprintf(stderr, " - %s ", strip_ansi(continents[i].name).c_str());
-    set_continent(real_room0(continents[i].seed_room), continents[i].id);    
+    set_continent(real_room0(continents[i].seed_room), continents[i].id);
+  }
+  for( int i = 0;i < NUM_CONTINENTS; i++ )
+  {
+    for( int j = 0; j <= MAX_RACEWAR; j++ )
+    {
+      continent_misfire.players[i][j] = 0;
+      continent_misfire.misfiring[i][j] = FALSE;
+    }
   }
 }
 
