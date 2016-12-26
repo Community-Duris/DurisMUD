@@ -3267,7 +3267,7 @@ void check_aggro_from_command( P_char exec_char )
     next_mob = mob->next_in_room;
 
     // Only consider aggro NPCs (not including self) that are not lagged nor fighting something else nor asleep/ko'd.
-    if( !IS_NPC(mob) || !IS_AGGRESSIVE(mob) || (mob == exec_char) || !CAN_ACT(mob)
+    if( !IS_ALIVE(mob) || !IS_NPC(mob) || !IS_AGGRESSIVE(mob) || (mob == exec_char) || !CAN_ACT(mob)
       || IS_FIGHTING(mob) || !IS_AWAKE(mob) )
     {
       continue;
