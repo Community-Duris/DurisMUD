@@ -1614,7 +1614,7 @@ struct racial_data_type racial_data[LAST_RACE + 1] = {
   { 100, 250, 500,  600, 1,  500} , // Beholderkin
   {  25, 125,   0,    0, 2,  125} , // Zombie
   { 150, 250, 300,  500, 1, 1000} , // Spectre
-  { 200, 250,   0,    0, 2, 1000} , // Skeleton
+  { 200, 150,   0,    0, 2, 1000} , // Skeleton
   { 500, 300, 800, 1000, 1, 1500} , // Wraith
   { 500, 300, 500,  700, 1, 1500} , // Shadow
   {  14, 170, 200,  150, 2,  500} , // Purple Worm
