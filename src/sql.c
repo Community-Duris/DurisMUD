@@ -453,27 +453,16 @@ void sql_check_level_cap( long max_frags, int racewar )
   // If enough time has passed, and level should change, update level if appropriate.
   if( next_update <= time(NULL) )
   {
-    // New max frags
-    if( max_frags > old_max_frags )
+    // Have enough frags to update level.
+    if( old_level < FRAGS_TO_LEVEL(max_frags) )
     {
-      // New level
-      if( old_level < FRAGS_TO_LEVEL(max_frags) )
-      {
-        sprintf(query, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d, level = %d, next_update = FROM_UNIXTIME(%ld)",
-          max_frags/100., racewar, old_level + 1, CAP_DELAY(old_level) );
-        db_query(query);
-      }
-      else
-      {
-        sprintf(query, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d", max_frags / 100., racewar );
-        db_query(query);
-      }
+      sprintf(query, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d, level = %d, next_update = FROM_UNIXTIME(%ld)",
+        max_frags/100., racewar, old_level + 1, CAP_DELAY(old_level) );
+      db_query(query);
     }
-    // Already had enough frags to update level.
-    else if( old_level < FRAGS_TO_LEVEL(old_max_frags) )
+    else if( max_frags > old_max_frags )
     {
-      sprintf(query, "UPDATE level_cap SET level = %d, next_update = FROM_UNIXTIME(%ld)",
-        old_level + 1, CAP_DELAY(old_level) );
+      sprintf(query, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d", max_frags / 100., racewar );
       db_query(query);
     }
   }
