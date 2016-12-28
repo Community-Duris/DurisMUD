@@ -82,7 +82,8 @@ void update_skills(P_char ch)
       ch->only.pc->skills[s].taught = MAX(ch->only.pc->skills[s].taught, MAX(SKILL_DATA_ALL(ch, s).maxlearn[0],
         SKILL_DATA_ALL(ch, s).maxlearn[ch->player.spec]));
 */
-      ch->only.pc->skills[s].taught = SKILL_DATA_ALL(ch, s).maxlearn[ch->player.spec];
+      ch->only.pc->skills[s].taught = MAX(ch->only.pc->skills[s].taught,
+        SKILL_DATA_ALL(ch, s).maxlearn[ch->player.spec]);
 
       lastlvl = ch->only.pc->skills[s].learned;
       shouldbe = (GET_LEVEL(ch) * 3 / 2);
@@ -94,7 +95,7 @@ void update_skills(P_char ch)
       ch->only.pc->skills[s].taught = 100;
 #else
       ch->only.pc->skills[s].learned =
-        MAX(MIN(40, GET_LEVEL(ch) * 3 / 2), ch->only.pc->skills[s].learned);
+        MAX( MIN(40, GET_LEVEL(ch) * 3 / 2), ch->only.pc->skills[s].learned );
 
       //debug("new learned: %d", ch->only.pc->skills[s].learned);
 #endif
