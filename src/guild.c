@@ -79,11 +79,9 @@ void update_skills(P_char ch)
     {
 /* Why is there 3 possibilitie for .taught?  Either you lose a lvl or spec out of the skill and it goes down,
  *   or you gain a level or spec to a higher skill max and it goes up.  There should be no MAX( ... ).
+ */
       ch->only.pc->skills[s].taught = MAX(ch->only.pc->skills[s].taught, MAX(SKILL_DATA_ALL(ch, s).maxlearn[0],
         SKILL_DATA_ALL(ch, s).maxlearn[ch->player.spec]));
-*/
-      ch->only.pc->skills[s].taught = MAX(ch->only.pc->skills[s].taught,
-        SKILL_DATA_ALL(ch, s).maxlearn[ch->player.spec]);
 
       lastlvl = ch->only.pc->skills[s].learned;
       shouldbe = (GET_LEVEL(ch) * 3 / 2);
