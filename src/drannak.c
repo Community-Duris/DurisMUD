@@ -2013,6 +2013,11 @@ void enhance(P_char ch, P_obj source, P_obj material)
     send_to_char( "This item is too powerful to be enhanced further.\n", ch );
     return;
   }
+  if( sval > GET_LEVEL(ch) * 2 )
+  {
+    send_to_char( "This item is too powerful for you to enhance right now.  Gain another levl and try again.\n", ch );
+    return;
+  }
 
   if( IS_SET(source->wear_flags, ITEM_GUILD_INSIGNIA) )
     minval +=5;
