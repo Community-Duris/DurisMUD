@@ -170,6 +170,7 @@ bool is_quested_item( P_obj obj );
 void do_setship( P_char ch, char *arg );
 void which_race( P_char ch, char *argument );
 void stat_race(P_char ch, char *arg);
+void stat_skill(P_char ch, char *arg);
 void stat_zone(P_char ch, char *arg);
 void event_mob_mundane(P_char, P_char, P_obj, void *);
 void which_stat(P_char ch, char *argument);
@@ -1592,7 +1593,7 @@ void stat_game(P_char ch)
   send_to_char(buf, ch);
 }
 
-#define STAT_SYNTAX "Syntax:\n   stat game\n   stat room <room #>\n   stat zone <zone #>\n   stat obj|item  #|'name'\n   stat char|mob #|'name'\n   stat trap 'name'\n   stat shop #|'name'\n   stat damage\n   stat quest 'name'\n   stat quest 'race'\n"
+#define STAT_SYNTAX "Syntax:\n   stat game\n   stat room <room #>\n   stat zone <zone #>\n   stat obj|item  #|'name'\n   stat char|mob #|'name'\n   stat trap 'name'\n   stat shop #|'name'\n   stat skill #|'name'\n   stat damage\n   stat quest 'name'\n   stat quest 'race'\n"
 
 
 //CMD = 555 is used for storing stat o string in db.
@@ -3018,6 +3019,11 @@ void do_stat(P_char ch, char *argument, int cmd)
 //  }
   else if((*arg1 == 's') || (*arg1 == 'S'))
   {
+    if( (arg1[1] == 'k') || (arg1[1] == 'K') )
+    {
+      stat_skill( ch, arg2 );
+      return;
+    }
 
     /* shop data on a mobile in world, similar to statting a mobile,
        but gives info on the shop proc, rather than the mob.  Due to
@@ -12843,3 +12849,55 @@ void which_weapon(P_char ch, char *argument)
   }
 }
 #undef OBJ_COLOR
+
+int lookup_skill( char *skill_name )
+{
+  int skl;
+  for( skl = FIRST_SKILL; skl++; skl <= LAST_SKILL )
+  {
+    if( is_abbrev(skill_name, skills[skl].name) )
+    {
+      return skl;
+    }
+  }
+  return SKILL_NONE;
+}
+
+void stat_skill(P_char ch, char *arg)
+{
+  int skl;
+
+  if( is_number(arg) )
+  {
+    skl = atoi(arg);
+    if( !IS_SKILL(skl) )
+    {
+      send_to_char_f( ch, "That's not a valid skill number (Range: %d to %d).\n", FIRST_SKILL, LAST_SKILL );
+      return;
+    }
+  }
+  else if( (skl = lookup_skill( arg )) == SKILL_NONE )
+  {
+    send_to_char_f( ch, "'%s' is not recognized as a skill.", arg );
+    return;
+  }
+
+  send_to_char_f( ch, "&+YSkill: '&n%s&+Y'&N %d\n", skills[skl].name, skl );
+  for( int cls = 1; class_names_table[cls].code != NULL; cls++ )
+  {
+    if( skills[skl].m_class[cls-1].rlevel[0] > 0 )
+    {
+      send_to_char_f( ch, "Class: %s : @lvl %d Max %d.\n", class_names_table[cls].code,
+        skills[skl].m_class[cls-1].rlevel[0],
+        skills[skl].m_class[cls-1].maxlearn[0] );
+    }
+    for( int spec = 1; spec < MAX_SPEC; spec++ )
+    {
+      if( skills[skl].m_class[cls-1].rlevel[spec] != skills[skl].m_class[cls-1].rlevel[0]  )
+      {
+        send_to_char_f( ch, "Spec: %d %s : @lvl %d Max %d.\n", spec, specdata[cls][spec-1],
+          skills[skl].m_class[cls-1].rlevel[spec], skills[skl].m_class[cls-1].maxlearn[spec] );
+      }
+    }
+  }
+}
