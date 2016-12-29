@@ -5300,10 +5300,6 @@ bool find_chance(P_char ch)
 
 bool is_salvageable(P_obj temp)
 {
-  if( OBJ_VNUM(temp) == VOBJ_RANDOM_ARMOR )
-  {
-    return FALSE;
-  }
 
   if( OBJ_VNUM(temp) > 400237 && OBJ_VNUM(temp) < 400259 )
   {
@@ -5322,11 +5318,6 @@ bool is_salvageable(P_obj temp)
     return FALSE;
 	}
 
-  if( OBJ_VNUM(temp) == 366 )
-  {
-    return FALSE;
-  }
-
   if( IS_SET(temp->extra2_flags, ITEM2_SOULBIND) )
   {
     return FALSE;
@@ -5337,14 +5328,15 @@ bool is_salvageable(P_obj temp)
     return FALSE;
   }
 
-  if( OBJ_VNUM(temp) == 352 )
+  switch( OBJ_VNUM(temp) )
   {
-    return FALSE;
-  }
-
-  if( OBJ_VNUM(temp) == 98 )
-  {
-    return FALSE;
+    case VOBJ_RANDOM_ARMOR:
+    case VOBJ_RANDOM_THRUSTED:
+    case VOBJ_RANDOM_WEAPON:
+    case  98:
+    case 352:
+    case 366:
+      return FALSE;
   }
 
   if( temp->type == ITEM_FOOD )
