@@ -2281,6 +2281,7 @@ void obj_from_room(P_obj object)
 
 void obj_to_obj(P_obj obj, P_obj obj_to)
 {
+  P_char   owner;
   P_obj    tmp_obj, o;
   int      wgt = 0, t_wgt = 0;
   char     buf[MAX_STRING_LENGTH];
@@ -2342,6 +2343,15 @@ void obj_to_obj(P_obj obj, P_obj obj_to)
       break;
     wgt = GET_OBJ_WEIGHT(tmp_obj) - t_wgt;
   }
+
+  tmp_obj = obj->loc.inside;
+  while( OBJ_INSIDE(tmp_obj) )
+    tmp_obj = tmp_obj->loc.inside;
+  if( (OBJ_CARRIED( tmp_obj ) && ( owner = tmp_obj->loc.carrying ))
+    || (OBJ_WORN( tmp_obj ) && ( owner = tmp_obj->loc.wearing )) )
+  {
+    owner->specials.carry_weight += GET_OBJ_WEIGHT(obj);
+  }
 }
 
 /*
@@ -2350,18 +2360,19 @@ void obj_to_obj(P_obj obj, P_obj obj_to)
 
 void obj_from_obj(P_obj obj)
 {
+  P_char   owner;
   P_obj    tmp, obj_from;
   int      wgt;
 
-  if OBJ_INSIDE
-    (obj)
+  if( OBJ_INSIDE(obj) )
   {
     obj_from = obj->loc.inside;
     if (obj == obj_from->contains)      /* head of list */
       obj_from->contains = obj->next_content;
     else
     {
-      for (tmp = obj_from->contains; tmp && (tmp->next_content != obj); tmp = tmp->next_content) ;      /* locate previous */
+      for (tmp = obj_from->contains; tmp && (tmp->next_content != obj); tmp = tmp->next_content)
+        ;      /* locate previous */
 
       if (!tmp)
       {
@@ -2373,11 +2384,19 @@ void obj_from_obj(P_obj obj)
 
     /* Subtract weight from containers container */
     wgt = GET_OBJ_WEIGHT(obj);
-    for (tmp = obj->loc.inside; wgt && tmp;
-         tmp = OBJ_INSIDE(tmp) ? tmp->loc.inside : NULL)
+    for( tmp = obj->loc.inside; wgt && tmp; tmp = OBJ_INSIDE(tmp) ? tmp->loc.inside : NULL )
     {
       tmp->weight -= GET_OBJ_WEIGHT(obj);
       wgt = GET_OBJ_WEIGHT(tmp);
+    }
+
+    // Remove weight from carrier.
+    tmp = obj->loc.inside;
+    while( OBJ_INSIDE(tmp) )
+      tmp = tmp->loc.inside;
+    if( (OBJ_CARRIED( tmp ) && ( owner = tmp->loc.carrying )) || (OBJ_WORN( tmp ) && ( owner = tmp->loc.wearing )) )
+    {
+      owner->specials.carry_weight -= GET_OBJ_WEIGHT(obj);
     }
 
     obj->loc_p = LOC_NOWHERE;
