@@ -1080,7 +1080,7 @@ void show_visual_status(P_char ch, P_char tar_char)
     SVS("&+y$S skin has the texture of &+Liron&+y!");
 
   if (affected_by_spell(tar_char, SPELL_FAERIE_FIRE))
-    SVS("&+r$E is outlined with dancing purplish flames!");
+    SVS("&+m$E is outlined with dancing purplish flames!&n");
 
   if (IS_AFFECTED4
       (tar_char, AFF4_STORNOGS_SPHERES | AFF4_STORNOGS_GREATER_SPHERES))
