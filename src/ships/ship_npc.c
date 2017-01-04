@@ -804,7 +804,9 @@ P_ship try_load_pirate_ship(P_ship target)
 
     if (ship)
     {
-        statuslog(AVATAR, "%s's ship is attacked by a %s!", target->ownername, (type == NPC_AI_PIRATE) ? "pirate" : ((type == NPC_AI_HUNTER) ? "hunter" : "unknown"));
+        statuslog(AVATAR, "%s's ship (room %d) is attacked by a %s (room %d)!", target->ownername, 
+          world[target->location].number, (type == NPC_AI_PIRATE) ? "pirate" : ((type == NPC_AI_HUNTER) ? "hunter"
+          : "unknown"), world[ship->location].number);
     }
 
     if(!IS_SET(target->flags, ATTACKBYNPC)) 
