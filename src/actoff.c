@@ -6184,7 +6184,7 @@ void parlay(P_char ch, P_char victim)
 
 void do_tackle(P_char ch, char *arg, int cmd)
 {
-  P_char   vict = NULL;
+  P_char   vict = NULL, mount;
   struct affected_type af;
   int i, door, target_room, percent_chance;
 
@@ -6342,9 +6342,8 @@ void do_tackle(P_char ch, char *arg, int cmd)
        !IS_ROOM( ch->in_room, ROOM_GUILD)) // Prevents tackling past golems.
     {
       door = number(0, NUM_EXITS - 1);
-      
-      if(CAN_GO(ch, door) &&
-	 !check_wall(ch->in_room, door) &&
+
+      if(CAN_GO(ch, door) && !check_wall(ch->in_room, door) &&
          !IS_OCEAN_ROOM(target_room = world[ch->in_room].dir_option[door]->to_room))
       {
         act("You &+ctackle&N $N &+RHARD&N in the chest and go &+Wflying&N out of the room with $m.",
@@ -6353,9 +6352,9 @@ void do_tackle(P_char ch, char *arg, int cmd)
            FALSE, ch, 0, vict, TO_VICT);
         act("$n &+ctackles&N $N &+RHARD&N sending them both &+Wflying&N out of the room!",
            FALSE, ch, 0, vict, TO_NOTVICT);
-        
 //      target_room = world[ch->in_room].dir_option[door]->to_room;
-     
+        if( mount = get_linked_char(vict, LNK_RIDING) )
+          unlink_char(vict, mount, LNK_RIDING);
         char_from_room(ch);
         char_from_room(vict);
         char_to_room(ch, target_room, -1);
@@ -6366,14 +6365,20 @@ void do_tackle(P_char ch, char *arg, int cmd)
     SET_POS(vict, POS_SITTING + GET_STAT(vict));
     CharWait(ch, PULSE_VIOLENCE * 2);
     CharWait(vict, PULSE_VIOLENCE * 2);
-    
+
     act("You &+ctackle&n $N square in the chest knocking the &+Cwind&n out of $M!",
        FALSE, ch, 0, vict, TO_CHAR);
     act("$n &+ctackles&n $N square in the chest knocking the &+Cwind&n out of $M!",
        FALSE, ch, 0, vict, TO_NOTVICT);
     act("$n &+ctackles&n you square in the chest knocking the &+Cwind&n out of you!",
        FALSE, ch, 0, vict, TO_VICT);
-    
+    if( mount = get_linked_char(vict, LNK_RIDING) )
+    {
+      act( "$n falls off of $N.", FALSE, vict, NULL, mount, TO_ROOM );
+      act( "You fall off of $N.", FALSE, vict, NULL, mount, TO_CHAR );
+      unlink_char(vict, mount, LNK_RIDING);
+    }
+
     if(!affected_by_spell(vict, SKILL_TACKLE))
     {
       bzero(&af, sizeof(af));
