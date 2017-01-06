@@ -19604,8 +19604,8 @@ void event_acidimmolate(P_char ch, P_char vict, P_obj obj, void *data)
     acidburntime++;
   }
 
-  //dam = (int) (GET_LEVEL(ch) * 2);
-  dam = 1; //this is now just a pulling spell.
+  dam = (int) (GET_LEVEL(ch) * 2);
+  //dam = 1; //this is now just a pulling spell.
   if( !GET_CLASS(ch, CLASS_CONJURER) )
   {
     if( acidburntime >= 4 )
@@ -19641,31 +19641,28 @@ void event_acidimmolate(P_char ch, P_char vict, P_obj obj, void *data)
   }
 }
 
-void spell_acidimmolate(int level, P_char ch, char *arg, int type,
-                        P_char victim, P_obj obj)
+void spell_acidimmolate(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int acidburn = 0;
-  
+
   if(!ch)
   {
     logit(LOG_EXIT, "spell_immolate called in magic.c with no ch");
     raise(SIGSEGV);
   }
-  
-  if(!(victim) ||
-     !IS_ALIVE(ch) ||
-     !IS_ALIVE(victim))
+
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
   {
     return;
   }
-  
+
   act("&+GYour bubbling spray of goo strikes $N&+G full on!&N", TRUE, ch, 0,
     victim, TO_CHAR);
   act("&+GA bubbling spray of goo spews from $n&+G striking you &+Gfull on!&N",
     FALSE, ch, 0, victim, TO_VICT);
   act("&+GA bubbling spray of goo spews from $n&+G striking $N &+Gfull on!&N",
     FALSE, ch, 0, victim, TO_NOTVICT);
-  
+
   engage(ch, victim);
 
   if(spell_damage(ch, victim, (int) GET_LEVEL(ch) * 2 + number(20, 120),
