@@ -68,7 +68,6 @@ int get_weapon_msg(P_obj weapon)
   case WEAPON_SHORTSWORD:
   case WEAPON_2HANDSWORD:
   case WEAPON_SICKLE:
-  case WEAPON_LANCE:
   case WEAPON_POLEARM:
   case WEAPON_LONGSWORD:
     return MSG_SLASH;
@@ -81,6 +80,7 @@ int get_weapon_msg(P_obj weapon)
   case WEAPON_FLAIL:
   case WEAPON_CLUB:
   case WEAPON_SPIKED_CLUB:
+  case WEAPON_LANCE:
     return MSG_CRUSH;
   case WEAPON_MACE:
   case WEAPON_SPIKED_MACE:
