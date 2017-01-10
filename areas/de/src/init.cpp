@@ -133,6 +133,8 @@ void startInit(void)
     g_zoneRec.lifeHigh = 50;
     g_zoneRec.resetMode = ZONE_RESET_ALWAYS;
     g_zoneRec.zoneDiff = 1;
+    g_zoneRec.mapWidth = 1;
+    g_zoneRec.mapHeight = 1;
 
     uint vnum = 1;
 
