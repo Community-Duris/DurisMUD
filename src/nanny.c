@@ -3040,6 +3040,7 @@ void perform_eq_wipe(P_char ch)
   system( Gbuf2 );
 
   // Delete the ship too
+/* Not deleting ships this wipe.
   if( ship = get_ship_from_owner(ch->player.name) )
   {
     shipObjHash.erase(ship);
@@ -3047,6 +3048,7 @@ void perform_eq_wipe(P_char ch)
   }
   else
     debug( "%s had no ship.", ch->player.name );
+*/
 
   if( longestptime < ch->player.time.played )
   {
