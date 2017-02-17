@@ -188,6 +188,7 @@ class Guild
 
     string get_name() { return string(name); }
     void set_name( char *new_name ) { sprintf( name, "%s", new_name ); save(); }
+    void set_racewar( int new_racewar ) { if( (new_racewar > 0) && (new_racewar <= MAX_RACEWAR) ) racewar = new_racewar; save(); }
 
     unsigned long get_prestige( ) { return prestige; }
     void add_prestige( int prest ) { prestige += prest; save(); }

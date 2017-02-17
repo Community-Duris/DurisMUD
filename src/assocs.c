@@ -1321,15 +1321,15 @@ void do_supervise( P_char god, char *argument, int cmd )
     if( !is_number(second) || (( guild = get_guild_from_id(atoi( second )) ) == NULL) )
     {
       send_to_char_f( god, "'%s' is not a valid association number.\n"
-        "&+YSyntax: &+wsupervise setbit <association number> <prestige|construction> <amount>&+Y.&n\n", second );
+        "&+YSyntax: &+wsupervise setbit <association number> <prestige|construction|frags|racewar> <amount>&+Y.&n\n", second );
       return;
     }
 
     rest = lohrr_chop( rest, third );
     if( !*third )
     {
-      send_to_char_f( god, "&+YPlease enter &+wprestige&+Y, &+wconstruction&+Y, or &+wfrags&+Y for which points you want to setbit.\n"
-        "&+YSyntax: &+wsupervise setbit <association number> <prestige|construction|frags> <amount>&+Y.&n\n", second );
+      send_to_char_f( god, "&+YPlease enter &+wprestige&+Y, &+wconstruction&+Y, &+wfrags&+Y, or &+wracewar&+Y for which points you want to setbit.\n"
+        "&+YSyntax: &+wsupervise setbit <association number> <prestige|construction|frags|racewar> <amount>&+Y.&n\n", second );
       return;
     }
     lohrr_chop( rest, fourth );
@@ -1337,10 +1337,10 @@ void do_supervise( P_char god, char *argument, int cmd )
     {
       if( !*fourth )
         send_to_char( "Please enter the amount to which you wish to setbit the guild's points.\n"
-          "&+YSyntax: &+wsupervise setbit <association number> <prestige|construction|frags> <amount>&+Y.&n\n", god );
+          "&+YSyntax: &+wsupervise setbit <association number> <prestige|construction|frags|racewar> <amount>&+Y.&n\n", god );
       else
         send_to_char_f( god, "'%s' is not a valid amount to setbit the guild's points.\n"
-          "&+YSyntax: &+wsupervise setbit <association number> <prestige|construction|frags> <amount>&+Y.&n\n", fourth );
+          "&+YSyntax: &+wsupervise setbit <association number> <prestige|construction|frags|racewar> <amount>&+Y.&n\n", fourth );
       return;
     }
 
@@ -1365,11 +1365,25 @@ void do_supervise( P_char god, char *argument, int cmd )
       send_to_char_f( god, "You set %s's frags to %.2f.\n", guild->get_name().c_str(), guild->get_frags() / 100. );
       return;
     }
+    else if( is_abbrev(third, "racewar") )
+    {
+      bits = atoi(fourth);
+      if( (bits <= 0) || (bits > MAX_RACEWAR) )
+      {
+        send_to_char_f( god, "Invalid racewar side - %d (valid range is from 1 to %d).\n", bits, MAX_RACEWAR );
+        return;
+      }
+      guild->set_racewar( bits );
+      guild->save();
+      send_to_char_f( god, "You set %s's racewar to %d - &+%c%s&n.\n", guild->get_name().c_str(), bits,
+        racewar_color[bits].color, racewar_color[bits].name );
+      return;
+    }
     else
     {
-      send_to_char_f( god, "&+Y'&n%s&+Y' is not a valid point type.\n",
-        "&+YPlease enter &+wprestige&+Y or &+wconstruction&+Y for which points you want to setbit.\n"
-        "&+YSyntax: &+wsupervise setbit <association number> <prestige|construction> <amount>&+Y.&n\n", third );
+      send_to_char_f( god, "&+Y'&n%s&+Y' is not a valid point type.\n"
+        "&+YPlease enter &+wprestige&+Y, &+wconstruction&+Y, &+wfrags&+Y, or &+wracewar&+Y for which points you want to setbit.\n"
+        "&+YSyntax: &+wsupervise setbit <association number> <prestige|construction|frags|racewar> <amount>&+Y.&n\n", third );
       return;
     }
   }
@@ -1421,7 +1435,7 @@ void do_supervise( P_char god, char *argument, int cmd )
     "<&+Mf&n>ound  <leader_name> <bits_string> <asc_name>\n<&+Md&n>elete <asc_number>\n"
     "<&+Mn&n>ame   <asc_number> <new_asc_name>\n<&+Mt&n>ype   <asc_number> <bits_string>\n"
     "<&+Mg&n>overn <asc_number>\n<&+Mu&n>pdate <asc_number>\n"
-    "<&+Ms&n>etbit <asc_number> <prestige|construction_points> <value>\n"
+    "<&+Ms&n>etbit <asc_number> <prestige|construction_points|frags|racewar> <value>\n"
     "<&+Mb&n>an    <mortal_name>\n&+m============================&n\n"
     "   &+y<bits_string>: c = challenge, h = hide title, s = hide subtitle, combine for both, n = none&n\n"
     "   &+y(i.e. sup f johnny ch The Jumpin' Johnnies)&n\n\n" );
