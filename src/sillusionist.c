@@ -151,8 +151,8 @@ void spell_shadow_monster(int level, P_char ch, char *arg, int type, P_char vict
 		}
 	}
 
-	// So, no shadow monster potions or scrolls then (save ones used by illusionists)?
-	if (summoned >= MAX(1, GET_LEVEL(ch) / 14) || !GET_CLASS(ch, CLASS_ILLUSIONIST))
+	// Non-illusionists get a limit of 1 (for weapon procs etc).
+	if (summoned >= MAX(1, GET_LEVEL(ch) / 14) || summoned && !GET_CLASS(ch, CLASS_ILLUSIONIST))
 	{
 		send_to_char("You cannot summon any more shadows!\r\n", ch);
 		return;
