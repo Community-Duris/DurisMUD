@@ -150,6 +150,17 @@ void downgrade_string(char *out, const char *in, const unimap &conv)
 {
   while (*in)
   {
+    // let TELNET through unmolested
+    if (*in == (char)255)
+    {
+      // Hack!  The only SB/SE we use is COMPRESS.
+      int len = in[1] == (char)250 ? 5 : 3;
+      for (int i=0; i<len; i++)
+        if (*in) // end in a string inside a TELNET command?  Can't happen but...
+          *out++ = *in++;
+      continue;
+    }
+
     int c = get_utf8(in);
     int r = conv[c];
     if (!r) // TODO: downgrade by dropping accents, etc
