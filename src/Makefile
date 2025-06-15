@@ -7,11 +7,7 @@ CC	= g++
 DEBUG	= -ggdb3
 #LDFLAGS	= -ggdb3
 
-ifdef USE_SHARED
-	LDFLAGS += -rdynamic
-endif
-
-LDFLAGS += -L/usr/lib/mysql -L./ships -fno-stack-protector
+LDFLAGS += -L/usr/lib/mysql -fno-stack-protector
 
 OPTS    = -O0 -march=core2
 
@@ -34,9 +30,7 @@ ifdef EFENCE
 endif
 
 # GENERAL_LIBS += -lcygipc 
-LIBS += -lships $(GENERAL_LIBS)
-
-OUR_LIBS = libships.a
+LIBS += $(GENERAL_LIBS)
 
 # files that would be compiled as dynamic libs if USE_SHARED was defined
 #    make sure that they are NOT included in ANY form in OBJS!!!
@@ -47,7 +41,21 @@ SH_LIBS 	=
 
 OPT_OBJS	= graph.o mm.o 
 
-OBJS	=  \
+SHIP_SRCS = \
+	ship_auto.c \
+	ship_base.c \
+	ship_cargo.c \
+	ship_combat.c \
+	ship_control.c \
+	ship_npc.c \
+	ship_npc_ai.c \
+	ship_shop.c \
+	ship_utils.c \
+	ship_variables.c \
+
+SHIP_OBJS = $(SHIP_SRCS:%.c=ships/%.o)
+
+OBJS =  $(SHIP_OBJS) \
 				 magic.o \
 				 achievements.o \
 				 account.o \
@@ -258,10 +266,7 @@ SRCS	= $(OBJS:.o=.c) $(OPT_OBJS:.o=.c) $(SH_LIBS:.o=.c) $(PFILE_OBJS:.o=.c)
 
 all: $(PROGS)
 
-libships.a:
-	cd ships && $(MAKE) -f Makefile.linux
-
-dms_new : $(DMS_OBJS) $(OPT_OBJS) $(OUR_LIBS)
+dms_new : $(DMS_OBJS) $(OPT_OBJS)
 	$(CC) $(LDFLAGS) -g -o dms_new $(DMS_OBJS) $(OPT_OBJS) $(LIBS)
 	chmod a+rx dms_new
 
