@@ -37,16 +37,6 @@
 #define THEURGOLEM_VALOR 3
 #define NECROGOLEM_LAST  3
 
-struct golem_description
-{
-  char    *name;
-  int      vnum;
-  int      corpse_lvl;
-  float    hps;
-  int      max_level;
-  int      cost;
-};
-
 #define CORPSEFORM_INNATE 0
 #define CORPSEFORM_REG    1
 
@@ -60,6 +50,31 @@ struct golem_description
 #define CORPSE_RACEWAR 5
 #define CORPSE_SAVEID 6
 #define CORPSE_RACE 7
+
+struct undead_description
+{
+  char    *name;
+  char    *short_desc;
+  int      corpse_level;
+  int      act;
+  int      aff1;
+  int      aff2;
+  float    hps;
+  int      max_level;
+  int      cost;
+  uint     pet_class;
+  int      race;
+};
+
+struct golem_description
+{
+  char    *name;
+  int      vnum;
+  int      corpse_lvl;
+  float    hps;
+  int      max_level;
+  int      cost;
+};
 
 void spell_corpseform(int, P_char, char *, int, P_char, P_obj);
 void event_corpseform_wearoff(P_char, P_char, P_obj, void *);

@@ -33,22 +33,6 @@ bool isCarved(P_obj corpse);
 int CheckFor_remember(P_char ch, P_char victim);
 P_obj get_globe( P_char ch );
 
-struct undead_description
-{
-  char    *name;
-  char    *short_desc;
-  int      corpse_level;
-  int      act;
-  int      aff1;
-  int      aff2;
-  float    hps;
-  int      max_level;
-  int      cost;
-  uint     pet_class;
-  int      race;
-};
-
-extern const struct golem_description golem_data[];
 const struct golem_description golem_data[4] = {
   {
    "flesh golem", 34, 41, 15.0, 50, 6},

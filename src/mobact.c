@@ -22,6 +22,7 @@
 #include "specs.prototypes.h"
 #include "spells.h"
 #include "structs.h"
+#include "necromancy.h"
 #include "utils.h"
 #include "justice.h"
 #include "graph.h"
@@ -80,9 +81,7 @@ bool check_ch_nevents( P_char ch );
 bool check_disruptive_blow(P_char ch);
 char *get_function_name(void *func);
 
-#define UNDEAD_TYPES 6
-
-extern const int undead_data[][7];
+extern const struct undead_description undead_data[NECROPET_LAST + 1];
 
 static P_char find_protector_target(P_char ch);
 void check_for_wagon(P_char);
@@ -1242,7 +1241,7 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
       {
         if((npc_has_spell_slot(ch, SPELL_RAISE_LICH) ||
 	    npc_has_spell_slot(ch, SPELL_CALL_LIBERATOR)) &&
-            (high_corpse >= undead_data[5][0]))
+            (high_corpse >= undead_data[NECROPET_LICH].corpse_level))
         {
 	  if (GET_CLASS(ch, CLASS_THEURGIST))
 	    spl = SPELL_CALL_LIBERATOR;
@@ -1251,11 +1250,11 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
         }
         else if((npc_has_spell_slot(ch, SPELL_RAISE_VAMPIRE) ||
 	         npc_has_spell_slot(ch, SPELL_CALL_KNIGHT)) &&
-                 (high_corpse >= undead_data[4][0]))
+                 (high_corpse >= undead_data[NECROPET_VAMPIRE].corpse_level))
         {
           if((npc_has_spell_slot(ch, SPELL_RAISE_WRAITH) ||
 	      npc_has_spell_slot(ch, SPELL_CALL_BRALANI)) &&
-              (number(0, 2) == 1) && (high_corpse >= undead_data[3][0]))
+              (number(0, 2) == 1) && (high_corpse >= undead_data[NECROPET_WRAITH].corpse_level))
             if (GET_CLASS(ch, CLASS_THEURGIST))
 	      spl = SPELL_CALL_BRALANI;
 	    else
@@ -1268,7 +1267,7 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
         }
         else if((npc_has_spell_slot(ch, SPELL_RAISE_WRAITH) ||
 	         npc_has_spell_slot(ch, SPELL_CALL_BRALANI)) &&
-                 (high_corpse >= undead_data[3][0]))
+                 (high_corpse >= undead_data[NECROPET_WRAITH].corpse_level))
         {
           if (GET_CLASS(ch, CLASS_THEURGIST))
 	    spl = SPELL_CALL_BRALANI;
@@ -1277,7 +1276,7 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
         }
         else if((npc_has_spell_slot(ch, SPELL_RAISE_SPECTRE) ||
 	         npc_has_spell_slot(ch, SPELL_CALL_ASURA)) &&
-                 (high_corpse >= undead_data[2][0]))
+                 (high_corpse >= undead_data[NECROPET_SPECTRE].corpse_level))
         {
 	  if (GET_CLASS(ch, CLASS_THEURGIST))
 	    spl = SPELL_CALL_ASURA;
