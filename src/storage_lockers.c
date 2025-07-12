@@ -332,9 +332,7 @@ static bool locker_handle_leave(P_char ch, StorageLocker *pLocker, int room, int
 		/* this person isn't the proper occupant, so kick them the hell out */
 		send_to_char("You feel yourself being (ungracefully) ejected from the locker.\r\n", tmpChar);
 		char_from_room(tmpChar);
-		// char_to_room(tmpChar, world[ch->in_room].dir_option[0]->to_room, 0);
-		//  functionality of alt_hometown_check disabled
-		char_to_room(tmpChar, alt_hometown_check(ch, locker_exit_room(ch, room), 0), 0);
+		char_to_room(tmpChar, locker_exit_room(ch, room), 0);
 		tmpChar = world[ch->in_room].people;
 	} /* while */
 
@@ -429,12 +427,10 @@ static bool locker_handle_leave(P_char ch, StorageLocker *pLocker, int room, int
 	send_to_char("As you leave, you see the &+YSLSC&n member applying magic locks to the door...\r\n", ch);
 
 	troom = locker_exit_room(ch, room);
-	struct zone_data *zone = &zone_table[world[troom].zone];
-	if (zone->status > ZONE_NORMAL)
+	if (IS_TOWN_RAIDED(ch))
 	{
-		// functionality of alt_hometown_check disabled
 		if (world[ch->in_room].dir_option[0])
-			world[ch->in_room].dir_option[0]->to_room = alt_hometown_check(ch, troom, 0);
+			world[ch->in_room].dir_option[0]->to_room = troom;
 		else
 			logit(LOG_WIZ, "locker_exit_room missing while saving %s in room %d", GET_NAME(ch), ch->in_room);
 	}

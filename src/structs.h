@@ -691,7 +691,7 @@ struct zone_data
 	int               real_top, real_bottom;
 	int               reset_mode; /* conditions for reset (see below)   */
 	struct reset_com *cmd;        /* command table for reset              */
-	int               status;
+	time_t            last_raid;  /* timestamp of last invader spotted */
 	/*
 	 *  Reset mode:                              *
 	 *  0: Don't reset, and don't update age.    *

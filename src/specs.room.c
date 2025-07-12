@@ -330,14 +330,13 @@ int inn(int room, P_char ch, int cmd, char *arg)
 		}
 
 		zone = &zone_table[world[ch->in_room].zone];
-		if (zone->status > ZONE_NORMAL && (GET_LEVEL(ch) > 25) && (zone_table[world[ch->in_room].zone].number != WINTERHAVEN))
+		if (IS_TOWN_RAIDED(ch) && (GET_LEVEL(ch) > 25) && (zone_table[world[ch->in_room].zone].number != WINTERHAVEN))
 		{
 			send_to_char("The receptionist turns and says, '&+RThe town is under attack!&n'\n", ch);
 			send_to_char("  '&+WTry to get a portal out of here, or run to another exit!&n'\n", ch);
 			send_to_char("  '&+WPlease hurry great adventurer, the town needs you.&n'\n", ch);
 			send_to_char("The receptionist wishes you good luck. \n", ch);
 
-			add_event(event_justice_raiding, 200, ch, 0, 0, 0, &room, sizeof(room));
 			return FALSE;
 		}
 

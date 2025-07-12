@@ -1531,14 +1531,6 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
 	was_in   = ch->in_room;
 	new_room = world[was_in].dir_option[exitnumb]->to_room;
 	zone     = &zone_table[world[new_room].zone];
-	if (IS_ROOM(was_in, ROOM_LOCKER))
-	{
-		if (zone->status > ZONE_NORMAL)
-		{
-			// this functionality has been disabled
-			new_room = alt_hometown_check(ch, new_room, 0);
-		}
-	}
 
 	if (new_room == NOWHERE)
 	{

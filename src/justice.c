@@ -446,15 +446,14 @@ void justice_action_invader(P_char ch)
 	//  squad issued from another hometown that will 'encourage' the invaders to
 	//  leave.  Hopefully this works out better than justice ever has...  - Jexni 3/4/11
 
-	if (IS_INVADER(ch) && IS_PC(ch) && get_scheduled(ch, event_justice_raiding))
+	if (IS_INVADER(ch) && IS_PC(ch) && IS_TOWN_RAIDED(ch))
 	{
 		if (!number(0, 1))
 			return;
 	}
 	else
 	{
-		zone_struct->status = ZONE_RAID;
-		add_event(event_justice_raiding, WAIT_SEC * 200, ch, 0, 0, 0, &room, sizeof(room));
+		zone_struct->last_raid = time(0);
 	}
 
 	if (IS_INVADER(ch))
@@ -483,17 +482,6 @@ void justice_action_invader(P_char ch)
 			return;
 		}
 	}
-}
-
-void event_justice_raiding(P_char ch, P_char victim, P_obj obj, void *data)
-{
-
-	struct zone_data *zone;
-	int               room = *((int *)data);
-
-	zone         = &zone_table[world[room].zone];
-	zone->status = ZONE_NORMAL;
-	return;
 }
 
 /*

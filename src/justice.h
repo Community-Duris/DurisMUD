@@ -132,6 +132,8 @@ extern const char          *town_name_list[];
 // removed check for dracos, it is performed very ineffectively, and why should alarm sound on just lesser dracos anyways? -Odorf
 #define NPC_INVADER(a, b) (IS_NPC(a) && !TRUSTED_NPC(a) && (!BORNHERE(a, b) || IS_MORPH(a)) && (IS_SET(hometowns[b - 1].flags, EVILRACE(a) ? JUSTICE_GOODHOME : GOODRACE(a) ? JUSTICE_EVILHOME : 0)))
 
+#define IS_TOWN_RAIDED(ch) (zone_table[world[ch->in_room].zone].last_raid + 200 > time(0))
+
 /* need a special ma for dealing with elf-town and invaders */
 
 #define IS_ELFIE(a) ((GET_RACE(a) == RACE_GREY) || (GET_RACE(a) == RACE_CENTAUR) || (GET_RACE(a) == RACE_HALFELF))

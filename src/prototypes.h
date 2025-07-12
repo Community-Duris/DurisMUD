@@ -1329,7 +1329,6 @@ void      do_report_crime(P_char, char *, int);
 int       justice_is_criminal(P_char);
 void      PC_SET_TOWN_JUSTICE_FLAGS(P_char ch, int flag, int town);
 void      justice_action_invader(P_char ch);
-void      event_justice_raiding(P_char, P_char, P_obj, void *);
 void      justice_action_wanted(P_char ch);
 void      justice_action_arrest(P_char, P_char);
 void      justice_guard_remove(P_char ch);

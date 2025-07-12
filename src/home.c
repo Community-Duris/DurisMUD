@@ -80,7 +80,6 @@ void construct_home(P_char ch)
 		new_home->zone->top                    = -1;
 		new_home->zone->real_top               = -1;
 		new_home->zone->real_bottom            = -1;
-		new_home->zone->status                 = 0;
 		new_home->zone->hometown               = 0;
 		new_home->zone->avg_mob_level          = 0;
 

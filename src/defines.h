@@ -1289,12 +1289,6 @@ struct surname_struct
 #define HUNT_ROOM             129 /* just run to that room */
 #define HUNT_JUSTICE_HELP     130 /* call for help from that room */
 
-#define ZONE_NORMAL    1 /* zone not being raided or anything */
-#define ZONE_REPAIR    2
-#define ZONE_RAID      3
-#define ZONE_SACK      4
-#define ZONE_DESTROYED 5
-
 #define KVARK_IMPROVED_FIGHTS 0
 
 typedef struct _flagDef
