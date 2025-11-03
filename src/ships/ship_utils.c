@@ -41,7 +41,7 @@ ShipObjHash::ShipObjHash()
 }
 P_ship ShipObjHash::find(P_obj key)
 {
-    unsigned hash_value = (unsigned)key;
+    unsigned hash_value = (unsigned)(unsigned long)key;
     unsigned t_index = hash_value % SHIP_OBJ_TABLE_SIZE;
     P_ship curr = table[t_index];
     while (curr != 0)
@@ -54,7 +54,7 @@ P_ship ShipObjHash::find(P_obj key)
 }
 bool ShipObjHash::add(P_ship ship)
 {
-    unsigned hash_value = (unsigned)ship->shipobj;
+    unsigned hash_value = (unsigned)(unsigned long)ship->shipobj;
     unsigned t_index = hash_value % SHIP_OBJ_TABLE_SIZE;
     P_ship curr = table[t_index];
     while (curr != 0)
@@ -70,7 +70,7 @@ bool ShipObjHash::add(P_ship ship)
 }
 bool ShipObjHash::erase(P_ship ship)
 {
-    unsigned hash_value = (unsigned)ship->shipobj;
+    unsigned hash_value = (unsigned)(unsigned long)ship->shipobj;
     return erase(ship, hash_value % SHIP_OBJ_TABLE_SIZE);
 }
 bool ShipObjHash::erase(P_ship ship, unsigned t_index)

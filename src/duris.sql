@@ -415,6 +415,33 @@ CREATE TABLE `items` (
 SET character_set_client = @saved_cs_client;
 
 --
+-- Table structure for table `level_cap`
+-- Arih: Added missing table definition to fix level cap bug where characters
+--        couldn't level past 20 due to empty level_cap table in dev database
+--
+
+DROP TABLE IF EXISTS `level_cap`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `level_cap` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `most_frags` float NOT NULL DEFAULT '0',
+  `racewar_leader` int(11) NOT NULL DEFAULT '0',
+  `level` int(11) NOT NULL DEFAULT '25',
+  `next_update` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Dumping data for table `level_cap`
+-- NOTE: This table should have only ONE row. The racewar_leader column indicates which side is leading.
+--
+
+INSERT INTO `level_cap` (id, most_frags, racewar_leader, level, next_update)
+VALUES (1, 0, 2, 56, NOW());
+
+--
 -- Table structure for table `log_entries`
 --
 

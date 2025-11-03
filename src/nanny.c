@@ -3555,7 +3555,7 @@ void enter_game(P_desc d)
   if (!d->host)
   {
     wizlog(57, "%s had null host.", GET_NAME(ch));
-    snprintf(d->host, MAX_STRING_LENGTH, "UNKNOWN \0");
+    snprintf(d->host, MAX_STRING_LENGTH, "UNKNOWN");
   }
 
   ch->only.pc->last_ip = ip2ul(d->host);
@@ -3563,7 +3563,7 @@ void enter_game(P_desc d)
   if (!d->login)
   {
     wizlog(57, "%s had null login.", GET_NAME(ch));
-    snprintf(d->login, MAX_STRING_LENGTH, "UNKNOWN \0");
+    snprintf(d->login, MAX_STRING_LENGTH, "UNKNOWN");
   }
 
   if (IS_TRUSTED(ch))
@@ -5513,7 +5513,7 @@ void display_classtable(P_desc d)
   for (cls = 1; cls <= CLASS_COUNT; cls++)
     if (class_table[GET_RACE(d->character)][cls] != 5)
     {
-      snprintf(template_buf, MAX_STRING_LENGTH, "\r\n%%c) %%-%ds(%%c for help)",
+      snprintf(template_buf, MAX_STRING_LENGTH, "\r\n%%c) %%-%lds(%%c for help)",
               strlen(class_names_table[cls].ansi) -
               ansi_strlen(class_names_table[cls].ansi) + 20);
       snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), template_buf, class_names_table[cls].letter,

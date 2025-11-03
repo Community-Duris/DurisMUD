@@ -2546,7 +2546,7 @@ int crew_shop_proc(int room, P_char ch, int cmd, char *arg)
         send_to_char_f(ch, "&+Y%2d)&N ", ++n);
 
         char name_format[20];
-        sprintf(name_format, "%%-%ds&N", strlen(ship_chief_data[i].name) + (30 - strlen(strip_ansi(ship_chief_data[i].name).c_str())));
+        sprintf(name_format, "%%-%ds&N", (int)(strlen(ship_chief_data[i].name) + (30 - strlen(strip_ansi(ship_chief_data[i].name).c_str()))));
         send_to_char_f(ch, name_format, ship_chief_data[i].name);
 
         send_to_char_f(ch, "   %-11s", ship_chief_data[i].get_spec());

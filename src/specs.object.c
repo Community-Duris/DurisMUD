@@ -8469,6 +8469,7 @@ int druid_sabre(P_obj obj, P_char ch, int cmd, char *arg)
 {
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
+  return 0;
 }
 
 int druid_spring(P_obj obj, P_char ch, int cmd, char *arg)
@@ -11047,6 +11048,7 @@ int god_bp(P_obj obj, P_char ch, int cmd, char *arg)
       }
     }
   }
+  return 0;
 }
 
 
@@ -11116,6 +11118,7 @@ int out_of_god_bp(P_obj obj, P_char ch, int cmd, char *arg)
     }
   }
 
+  return 0;
 }
 
 int ring_of_regeneration(P_obj obj, P_char ch, int cmd, char *arg)
@@ -13424,6 +13427,7 @@ int unmulti_altar(P_obj obj, P_char ch, int cmd, char *arg)
   }
 
   unmulti(ch, obj);
+  return TRUE;
 }
 
 int thought_beacon(P_obj obj, P_char ch, int cmd, char *arg)
@@ -14704,6 +14708,7 @@ int random_gc_room( )
       return rroom;
     }
   }
+  return 0;
 }
 
 int gc_portal( P_obj obj, P_char ch, int cmd, char *argument )
@@ -14764,6 +14769,7 @@ int random_ec_room( )
       return rroom;
     }
   }
+  return 0;
 }
 
 int random_ud_room( )

@@ -16,14 +16,15 @@ DEPEND = $(CCPP) -MM
 # Compiler flags.
 #
 # Turn on -O3 for the production version!
-COMPILER_FLAGS = -g -Wall -Wno-write-strings
+COMPILER_FLAGS = -g -Wall -Wno-write-strings -fpermissive -std=gnu++98
 PROFILE_FLAGS = #-pg -static
 INCLUDES = -I/usr/include/mysql
 
 #
-# Preprocessing flags. 
-#	
-DEBUG_FLAGS = 
+# Preprocessing flags.
+#
+DEBUG_FLAGS =
+#OPTION_FLAGS = -D__NO_MYSQL__
 #OPTION_FLAGS = -D_OSX_
 COMPILER_FLAGS += $(DEBUG_FLAGS) $(OPTION_FLAGS)
 

@@ -3726,6 +3726,8 @@ int remove_and_wear(P_char ch, P_obj obj_object, int position, int keyword, int 
     execute_wear(ch, obj_object, position, keyword, showit);
     return TRUE;
   }
+
+  return FALSE;
 }
 
 /*

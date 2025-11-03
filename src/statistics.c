@@ -290,7 +290,7 @@ void do_statistic(P_char ch, char *argument, int val)
     send_to_char("\t", ch);
     send_to_char(Gbuf2, ch);
     send_to_char(" -&n\r\n", ch);
-    snprintf(buf, MAX_STRING_LENGTH, "");
+    buf[0] = '\0';
     while (j < 24)
     {
       if (day[j].howmany > 1)
@@ -303,7 +303,7 @@ void do_statistic(P_char ch, char *argument, int val)
         day[j].inhalls = (float) (day[j].inhalls / day[j].howmany);
         day[j].total = (float) (day[j].total / day[j].howmany);
 
-        snprintf(Gbuf5, MAX_STRING_LENGTH, "");
+        Gbuf5[0] = '\0';
 
         if (!strcmp(Gbuf2, "goodies") || !strcmp(Gbuf2, "all"))
         {
@@ -437,7 +437,7 @@ void do_statistic(P_char ch, char *argument, int val)
                 (float) (day[j].illithids_lvl / day[j].howmany /
                          day[j].illithids);
 
-            snprintf(Gbuf3, MAX_STRING_LENGTH, "");
+            Gbuf3[0] = '\0';
             i = 0;
             while (i < day[j].goodies_lvl)
             {
@@ -448,7 +448,7 @@ void do_statistic(P_char ch, char *argument, int val)
                     Gbuf3, day[j].goodies_lvl);
             strcat(Gbuf5, buf);
 
-            snprintf(Gbuf3, MAX_STRING_LENGTH, "");
+            Gbuf3[0] = '\0';
             i = 0;
             while (i < day[j].evils_lvl)
             {
@@ -459,7 +459,7 @@ void do_statistic(P_char ch, char *argument, int val)
                     day[j].evils_lvl);
             strcat(Gbuf5, buf);
 
-            snprintf(Gbuf3, MAX_STRING_LENGTH, "");
+            Gbuf3[0] = '\0';
             i = 0;
             while (i < day[j].undeads_lvl)
             {
@@ -470,7 +470,7 @@ void do_statistic(P_char ch, char *argument, int val)
                     Gbuf3, day[j].undeads_lvl);
             strcat(Gbuf5, buf);
 
-            snprintf(Gbuf3, MAX_STRING_LENGTH, "");
+            Gbuf3[0] = '\0';
             i = 0;
             while (i < day[j].illithids_lvl)
             {
@@ -540,8 +540,7 @@ int show_moth_stati(P_char ch, char *stati_date, char *argument)
 //create_zone(0);
   memset(day, 0, sizeof(day));
   memset(month, 0, sizeof(month));
-  snprintf(Gbuf4, MAX_STRING_LENGTH, "");
-  strcat(buf, "");
+  Gbuf4[0] = '\0';
 
   send_to_char("\t\t\t&+W", ch);
 
@@ -753,4 +752,5 @@ int show_moth_stati(P_char ch, char *stati_date, char *argument)
 
   send_to_char(Gbuf4, ch);
 
+  return 0;
 }

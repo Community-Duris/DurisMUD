@@ -175,6 +175,7 @@ int sphinx_prefect_crown( P_obj obj, P_char ch, int cmd, char *arg )
     obj->timer[1] = 1;
     return FALSE;
   }
+  return 0;
 }
 
 int adjacent_room_nesw(P_char ch, int num_rooms )
@@ -370,6 +371,7 @@ int proc_soldon_hat( P_obj obj, P_char ch, int cmd, char *argument )
     apply_achievement(mob, TAG_CONJURED_PET);
   }
 
+  return 0;
 }
 
 // This is a proc to punish people who crash the mud.

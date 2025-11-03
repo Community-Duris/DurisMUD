@@ -71,6 +71,7 @@ int epic_points(P_char ch)
   for (int i = 0; epic_teachers[i].vnum; i++) {
     mob_index[real_mobile(epic_teachers[i].vnum)].func.mob = epic_teacher;
   }
+  return 0;
 }
 
 const char *epic_prestige(P_char ch)

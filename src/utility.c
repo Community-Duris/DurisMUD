@@ -6174,7 +6174,7 @@ char *coins_to_string( int platinum, int gold, int silver, int copper, char *col
     // Otherwise, print just plat and return it.
     else
     {
-      snprintf(ret_string, MAX_STRING_LENGTH, "&+W%dp&n", platinum, color_string );
+      snprintf(ret_string, MAX_STRING_LENGTH, "&+W%dp&n", platinum);
       return ret_string;
     }
   }

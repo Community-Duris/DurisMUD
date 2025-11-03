@@ -41,15 +41,13 @@ const int path[5] = {
 //Init function
 int init()
 {
-
-
-
+  return 0;
 }
 
 
 int startMoving(P_char ch)
 {
-
+  return 0;
 }
 
 

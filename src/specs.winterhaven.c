@@ -4516,6 +4516,7 @@ P_obj make_gem_gift( )
   // 300 to (300 + 25 * 32 = 1100) base plat + (2d4 * 50 = 100 to 400) plat.
   // Totalling 400 to 1500 plat.
   gift->cost = ( 300 + (vnum - LG_FLAWLESS_TOPAZ) * 25 + dice(2, 4) * 50 ) * 1000;
+  return 0;
 }
 
 int lancer_gift(P_obj obj, P_char ch, int cmd, char *arg)

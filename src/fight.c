@@ -967,6 +967,7 @@ unsigned int calculate_ch_state(P_char ch)
     else
       return GET_STAT(ch);
   }
+  return STAT_DEAD;
 }
 
 void update_pos(P_char ch)
@@ -4898,7 +4899,7 @@ int check_shields(P_char ch, P_char victim, int dam, int flags)
                 !IS_ELITE(ch) &&
                 !IS_GREATER_RACE(ch))
             {
-              snprintf(buf, MAX_STRING_LENGTH, "&+YBright light falls from above and&n $N &+Ysends forth divine power!&n", get_god_name(victim));
+              snprintf(buf, MAX_STRING_LENGTH, "&+YBright light falls from above and&n $N &+Ysends forth divine power!&n");
               act(buf, FALSE, ch, 0, victim, TO_CHAR);
               snprintf(buf, MAX_STRING_LENGTH, "&+w%s&+w sends a ray of light down upon&n $N.", get_god_name(victim));
               act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
@@ -4946,7 +4947,7 @@ int check_shields(P_char ch, P_char victim, int dam, int flags)
           case 8:
             if(GET_HIT(victim) + 50 < GET_MAX_HIT(victim))
             {
-              snprintf(buf, MAX_STRING_LENGTH, "&+wBright light falls from above and&n $N&+w's wounds begin to heal!&n", get_god_name(victim));
+              snprintf(buf, MAX_STRING_LENGTH, "&+wBright light falls from above and&n $N&+w's wounds begin to heal!&n");
               act(buf, FALSE, ch, 0, victim, TO_CHAR);
               snprintf(buf, MAX_STRING_LENGTH, "&+w%s&+w sends a ray of light down upon&n $N&+w, healing some of $S wounds.", get_god_name(victim));
               act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
@@ -6295,6 +6296,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
 
     return DAM_NONEDEAD;
   }
+  return 0;
 }
 
 int calculate_ac(P_char ch)
@@ -10147,6 +10149,7 @@ int battle_frenzy(P_char ch, P_char victim)
     act("You attempt to knee $N, but don't quite make it.&N", TRUE, ch, NULL,
         victim, TO_CHAR);
   }
+  return 0;
 }
 
 void engage(P_char ch, P_char victim)
@@ -10315,13 +10318,10 @@ bool critical_attack(P_char ch, P_char victim, int msg)
     }
     else
     {
-      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your attack penetrates $N's defense and strikes to the &+Wbone!&n&N",
-          attack_hit_text[msg].singular);
-      snprintf(victim_msg, MAX_STRING_LENGTH, "$n's attack causes you to gush &+Rblood!&n&N",
-          attack_hit_text[msg].plural);
+      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your attack penetrates $N's defense and strikes to the &+Wbone!&n&N");
+      snprintf(victim_msg, MAX_STRING_LENGTH, "$n's attack causes you to gush &+Rblood!&n&N");
       act(victim_msg, TRUE, ch, NULL, victim, TO_VICT);
-      snprintf(room_msg, MAX_STRING_LENGTH, "$N's body &+yquivers&n as $n's hit strikes deep!&N",
-          attack_hit_text[msg].plural);
+      snprintf(room_msg, MAX_STRING_LENGTH, "$N's body &+yquivers&n as $n's hit strikes deep!&N");
       act(room_msg, TRUE, ch, NULL, victim, TO_NOTVICT);
 
       if(GET_VITALITY(victim) > 20)
@@ -10358,8 +10358,7 @@ bool critical_attack(P_char ch, P_char victim, int msg)
   {
     if( affected_by_spell(victim, SPELL_STONE_SKIN) )
     {
-      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your mighty attack shatters $N's magical protection!&N",
-          attack_hit_text[msg].singular);
+      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your mighty attack shatters $N's magical protection!&N");
       act(attacker_msg, TRUE, ch, NULL, victim, TO_CHAR);
 
       snprintf(victim_msg, MAX_STRING_LENGTH, "The magic protecting your body shatters as $n %s you!&N",
@@ -10374,8 +10373,7 @@ bool critical_attack(P_char ch, P_char victim, int msg)
     }
     else if( affected_by_spell(victim, SPELL_BIOFEEDBACK) )
     {
-      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your mighty attack shatters $N's magical protection!&N",
-          attack_hit_text[msg].singular);
+      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your mighty attack shatters $N's magical protection!&N");
       act(attacker_msg, TRUE, ch, NULL, victim, TO_CHAR);
 
       snprintf(victim_msg, MAX_STRING_LENGTH, "The magic protecting your body shatters as $n %s you!&N",
@@ -10390,8 +10388,7 @@ bool critical_attack(P_char ch, P_char victim, int msg)
     }
     else if( affected_by_spell(victim, SPELL_SHADOW_SHIELD) )
     {
-      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your mighty attack shatters $N's magical protection!&N",
-          attack_hit_text[msg].singular);
+      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your mighty attack shatters $N's magical protection!&N");
       act(attacker_msg, TRUE, ch, NULL, victim, TO_CHAR);
 
       snprintf(victim_msg, MAX_STRING_LENGTH, "The magic protecting your body shatters as $n %s you!&N",
@@ -10418,13 +10415,13 @@ bool critical_attack(P_char ch, P_char victim, int msg)
         attack_hit_text[msg].singular);
     act(victim_msg, TRUE, ch, NULL, victim, TO_VICT);
 
-    snprintf(room_msg, MAX_STRING_LENGTH, "$n uses the momentum of $s previous strike against $N to land another attack!&N",
-        attack_hit_text[msg].singular);
+    snprintf(room_msg, MAX_STRING_LENGTH, "$n uses the momentum of $s previous strike against $N to land another attack!&N");
     hit(ch, victim, ch->equipment[SECONDARY_WEAPON]);
 
     return TRUE;
 
   }
+  return FALSE;
 }
 
 bool critical_disarm(P_char ch, P_char victim)

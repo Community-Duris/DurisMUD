@@ -2089,8 +2089,8 @@ void show_string(struct descriptor_data *d, const char *input)
   {
     strncpy(buffer, d->showstr_vector[d->showstr_page],
             (unsigned)
-            (diff = ((int) d->showstr_vector[d->showstr_page + 1])
-             - ((int) d->showstr_vector[d->showstr_page])));
+            (diff = ((intptr_t) d->showstr_vector[d->showstr_page + 1])
+             - ((intptr_t) d->showstr_vector[d->showstr_page])));
     buffer[diff] = '\0';
     send_to_char(buffer, d->character);
     send_to_char("&N", d->character);

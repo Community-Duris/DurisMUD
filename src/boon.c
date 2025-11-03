@@ -2094,7 +2094,7 @@ int boon_display(P_char ch, char *argument)
       if (pid)
         snprintf(pname, MAX_STRING_LENGTH, "%s", get_player_name_from_pid(pid));
       snprintf(buff + strlen(buff), MAX_STRING_LENGTH - strlen(buff), "%-10s ", pname);
-      snprintf(buff + strlen(buff), MAX_STRING_LENGTH - strlen(buff), "\r\n &+CDescription&n: ", ch);
+      snprintf(buff + strlen(buff), MAX_STRING_LENGTH - strlen(buff), "\r\n &+CDescription&n: ");
     }
     
     // Description of boon for mortal view
@@ -2777,6 +2777,7 @@ int boon_get_random_zone(int std)
 {
   if (!random_std[std].id)
     return 0;
+  return random_std[std].id;
 }
 
 // The function placed throughout the code to check for completion of boons

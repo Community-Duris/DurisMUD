@@ -8,11 +8,11 @@
 
 void punt(char *msg)
 {
-    fprintf(stderr, "%s\n");
+    fprintf(stderr, "%s\n", msg);
     exit(0);
 }
 
-main()
+int main()
 {
     FILE *area_list, *all_mob, *tmp_mob;
     char area[8192], buf[8192], area_name[80], mob_name[80];

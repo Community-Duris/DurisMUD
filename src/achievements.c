@@ -196,7 +196,7 @@ void do_achievements(P_char ch, char *arg, int cmd)
   }
 
 
-  snprintf(buf3, MAX_STRING_LENGTH, "\r\n&+L=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-&n\r\n\r\n", GET_NAME(ch));
+  snprintf(buf3, MAX_STRING_LENGTH, "\r\n&+L=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-&n\r\n\r\n");
   strcat(buf, buf3);
   /* snprintf(buf2, MAX_STRING_LENGTH, "   &+w%-15s          &+Y% 6.2f\t\r\n",
      name, pts);*/

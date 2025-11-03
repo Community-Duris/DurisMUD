@@ -1454,8 +1454,8 @@ void stat_dam(P_char ch, char *arg)
     mult_mod = get_property(prop_name, 1.);
     multiplier = combat_by_race[race][1];
     damcap = combat_by_race[race][2];
-    snprintf(buf, 512, "%%-%ds &+W%%2d&n  %%.3f  (&+W%%.3f&n) &+%%c%%.3f (%%d)&n\n",
-      strlen(race_name) - ansi_strlen(race_name) + 15);
+    snprintf(buf, 512, "%%-%lds &+W%%2d&n  %%.3f  (&+W%%.3f&n) &+%%c%%.3f (%%d)&n\n",
+      (long)(strlen(race_name) - ansi_strlen(race_name) + 15));
     snprintf(tmplate, 512, buf, race_name, (int) pulse, multiplier, mult_mod, (damcap > 1) ? 'C' : 'c', damcap,
       (int)(damcap * damroll_cap) );
     send_to_char(tmplate, ch);
@@ -2415,7 +2415,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     if(IS_NPC(k))
     {
       //snprintf(buf2, MAX_STRING_LENGTH, "&+Y+(&N%s&+Y)", comma_string((long) (GET_LEVEL(k) * GET_HIT(k) * .4)));
-      snprintf(buf2, MAX_STRING_LENGTH, "");
+      buf2[0] = '\0';
     }
     else
     {
@@ -3973,7 +3973,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         break;
 
       case TimedShutdownData::AUTOREBOOT_COPYOVER:
-        snprintf(buf, 500, "\r\nDuris fades into nothing, as the world begins its reconstruction...\r\n", shutdownData.IssuedBy);
+        snprintf(buf, 500, "\r\nDuris fades into nothing, as the world begins its reconstruction...\r\n");
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
@@ -3981,7 +3981,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         break;
 
       case TimedShutdownData::AUTOREBOOT:
-        snprintf(buf, 500, "\r\nDuris fades into nothing, as the world begins its reconstruction...\r\n", shutdownData.IssuedBy);
+        snprintf(buf, 500, "\r\nDuris fades into nothing, as the world begins its reconstruction...\r\n");
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
@@ -3990,7 +3990,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
 
       case TimedShutdownData::PWIPE:
         // Dunno why, but send_to_all isn't color coding here, maybe term type is erased in database or such? :(
-        snprintf(buf, 500, "\r\n\033[1;5;44mDuris begins to fade into nothing.. So do you.. \033[0m\r\n\033[1;5;44mThis is really the end!!!\033[0m\r\n\033[1;5;44m............\033[0m\r\n\033[1;5;44m........\033[0m\r\n\033[1;5;44m......\033[0m\r\n\033[1;5;44m...\033[0m\r\n\033[1;5;44m.\033[0m\n\r", shutdownData.IssuedBy);
+        snprintf(buf, 500, "\r\n\033[1;5;44mDuris begins to fade into nothing.. So do you.. \033[0m\r\n\033[1;5;44mThis is really the end!!!\033[0m\r\n\033[1;5;44m............\033[0m\r\n\033[1;5;44m........\033[0m\r\n\033[1;5;44m......\033[0m\r\n\033[1;5;44m...\033[0m\r\n\033[1;5;44m.\033[0m\n\r");
         send_to_all(buf);
         logit(LOG_STATUS, "Shutdown pwipe called.");
         if( !sql_pwipe( 1723699 ) )
@@ -4178,7 +4178,7 @@ void do_shutdown(P_char ch, char *argument, int cmd)
   // if there is a pending shutdown, cancel it now...
   if((shutdownData.eShutdownType != TimedShutdownData::NONE))
   {
-    snprintf(buf, 100, "&+R*** Scheduled %s cancelled ***&n\n", type, GET_NAME(ch));
+    snprintf(buf, 100, "&+R*** Scheduled %s cancelled ***&n\n", type);
     send_to_all(buf);
     snprintf(buf, 100, "Scheduled %s cancelled by %s", type, GET_NAME(ch));
     shutdownData.eShutdownType = TimedShutdownData::NONE;
@@ -8761,7 +8761,7 @@ void do_which(P_char ch, char *args, int cmd)
                   obj_index[t_obj->R_num].virtual_number,
                   t_obj->short_description, where_obj(t_obj, FALSE), temp);
 
-          snprintf(temp, MAX_STRING_LENGTH, "");
+          temp[0] = '\0';
           o_len += strlen(buf1);
           if(o_len > MAX_STRING_LENGTH)
           {
@@ -11130,7 +11130,7 @@ void stat_zone( P_char ch, char *arg )
         racewar_color[rw].color, racewar_color[rw].name, zdata->players[rw], YESNO(zdata->misfiring[rw]) );
     }
   }
-  snprintf(o_buf + strlen(o_buf), MAX_STRING_LENGTH - strlen(o_buf), "\n&+YExits from this zone:\n", buf);
+  snprintf(o_buf + strlen(o_buf), MAX_STRING_LENGTH - strlen(o_buf), "\n&+YExits from this zone:\n");
 
   int exits_shown = 0;
   int i, i2, i3;
@@ -11224,7 +11224,7 @@ void do_offlinemsg(P_char ch, char *arg, int cmd)
 
   if( !name || !*name || *name == '?' )
   {
-    snprintf(buf, MAX_STRING_LENGTH, "&+YSyntax:&N offlinemsg <player's name> <message to send>\n\r", name );
+    snprintf(buf, MAX_STRING_LENGTH, "&+YSyntax:&N offlinemsg <player's name> <message to send>\n\r");
     send_to_char( buf, ch );
     return;
   }

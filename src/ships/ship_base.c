@@ -1494,7 +1494,7 @@ void ship_activity()
                             {
                                 ship->armor[j] += MIN(ship->crew.get_hull_repair_mod(), (ship->maxarmor[j] - ship->armor[j]));
                                 ship->repair--;
-                                if (ship->armor == 0)
+                                if (ship->repair == 0)
                                     act_to_all_in_ship(ship, "&+RThe ship is out of repair materials!.&N");
                                 ship->crew.reduce_stamina(4, ship);
                                 ship->crew.rpar_skill_raise((ship->timer[T_BSTATION] > 0 && HAS_VALID_TARGET(ship)) ? 0.1 : 0.01);

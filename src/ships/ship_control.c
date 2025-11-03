@@ -1292,7 +1292,7 @@ const char* get_ship_status(P_ship ship)
 int look_ship(P_char ch, P_ship ship)
 {
     char name_format[20];
-    sprintf(name_format, "%%-%ds", strlen(ship->name) + (20 - strlen(strip_ansi(ship->name).c_str())));
+    sprintf(name_format, "%%-%ds", (int)(strlen(ship->name) + (20 - strlen(strip_ansi(ship->name).c_str()))));
     int realspeed = ship->get_maxspeed();
     if(has_innate(ch, INNATE_SEADOG))
     realspeed += 2;

@@ -315,7 +315,7 @@ void do_epic_skills(P_char ch, char *arg, int cmd)
     } else 
 	if(teacher = read_mobile(epic_teachers[t].vnum, VIRTUAL))
 	{
-      snprintf(buff, MAX_STRING_LENGTH, "&+W%-25s &n&+yTeacher&+Y: &n %s\n", skills[skill].name,teacher->player.short_descr, teacher->player.short_descr);
+      snprintf(buff, MAX_STRING_LENGTH, "&+W%-25s &n&+yTeacher&+Y: &n %s\n", skills[skill].name, teacher->player.short_descr);
 	extract_char(teacher);
     }
     send_to_char(buff, ch);

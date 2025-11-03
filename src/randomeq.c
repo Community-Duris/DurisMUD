@@ -1664,6 +1664,7 @@ P_obj set_enchant_affect(P_obj obj, int proc)
     SET_BIT(obj->bitvector, AFF2_VAMPIRIC_TOUCH);
     break;
   }
+  return obj;
 }
 P_obj set_encrust_affect(P_obj obj, int proc)
 {
@@ -1700,6 +1701,7 @@ P_obj set_encrust_affect(P_obj obj, int proc)
     break;
   }
 
+  return 0;
 }
 
 bool identify_random(P_obj obj)

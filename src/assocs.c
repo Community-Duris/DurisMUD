@@ -3149,6 +3149,7 @@ int Guild::update( )
     member_count++;
   }
   save( );
+  return 0;
 }
 
 void Guild::update_online_members()

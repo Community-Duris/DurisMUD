@@ -550,20 +550,16 @@ void create_zone(int theme, int map_room1, int map_room2, int level_range,
     {
       if (i > 1 && i < 10)
         snprintf(buf1, MAX_STRING_LENGTH,
-                "&+WA huge sign with the engraving '&+RWarning, &+Lthis zone should be a challenge for lowbie groups&+W'&n ",
-                i * 2);
+                "&+WA huge sign with the engraving '&+RWarning, &+Lthis zone should be a challenge for lowbie groups&+W'&n ");
       else if (i > 9 && i < 20)
         snprintf(buf1, MAX_STRING_LENGTH,
-                "&+WA huge sign with the engraving '&+RWarning, &+Lthis zone should be a challenge for mid leveled groups&+W'&n ",
-                i * 2);
+                "&+WA huge sign with the engraving '&+RWarning, &+Lthis zone should be a challenge for mid leveled groups&+W'&n ");
       else if (i > 19 && i < 30)
         snprintf(buf1, MAX_STRING_LENGTH,
-                "&+WA huge sign with the engraving '&+RWarning, &+Lthis zone should be a challenge for &+rsmall&+L high leveled groups towards the end&+W'&n ",
-                i * 2);
+                "&+WA huge sign with the engraving '&+RWarning, &+Lthis zone should be a challenge for &+rsmall&+L high leveled groups towards the end&+W'&n ");
       else
         snprintf(buf1, MAX_STRING_LENGTH,
-                "&+WA huge sign with the engraving '&+RWarning, &+Lthis zone should be a challenge for &+RBIG&+L high leveled groups towards the end&+W'&n ",
-                i * 2);
+                "&+WA huge sign with the engraving '&+RWarning, &+Lthis zone should be a challenge for &+RBIG&+L high leveled groups towards the end&+W'&n ");
 
       set_long_description(sign, buf1);
       obj_to_room(sign,
@@ -749,6 +745,7 @@ int read_relic_highscore()
 
   wizlog(56, "%d %d %d", GOODIE_RELIC_POINTS, EVIL_RELIC_POINTS,
          UNDEAD_RELIC_POINTS);
+  return 0;
 }
 
 
@@ -768,6 +765,7 @@ int write_relic_highscore()
 
   wizlog(56, "%d %d %d", GOODIE_RELIC_POINTS, EVIL_RELIC_POINTS,
          UNDEAD_RELIC_POINTS);
+  return 0;
 }
 
 
@@ -870,6 +868,7 @@ int update_relic(P_char ch, P_obj obj)
   }
 
 
+  return 0;
 }
 
 int get_relic_num(P_char ch)
@@ -1488,6 +1487,7 @@ int reset_lab(int type)
 //Remove entrance!
   world[real_room(entrance_room)].dir_option[DIR_DOWN] = 0;
 
+  return 0;
 }
 int create_lab(int type)
 {
@@ -1657,6 +1657,7 @@ int create_lab(int type)
                 world[real_room(start_room)].number, DIR_DOWN);
   world[real_room(map_room)].sector_type = 0;
 
+  return 0;
 }
 
 
@@ -1705,6 +1706,7 @@ int connect_other(int room)
   }
 
 
+  return 0;
 }
 
 
@@ -1729,4 +1731,5 @@ int dir_to_num(int dir)
   if (dir == DIR_WEST)
     return -1;
 
+  return 0;
 }

@@ -167,7 +167,7 @@ void do_track_not_in_use(P_char ch, char *arg, int cmd)
     
     if( found_path )
     {
-      snprintf(descbuf, MAX_STRING_LENGTH, "&+BFound path (%d steps):\r\n", path.size());
+      snprintf(descbuf, MAX_STRING_LENGTH, "&+BFound path (%ld steps):\r\n", (long)path.size());
       send_to_char(descbuf, ch);
       for( vector<int>::iterator it = path.begin(); it != path.end(); it++ )
       {

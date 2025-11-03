@@ -4830,7 +4830,7 @@ void writeSavedItem(P_obj item)
 	}
   snprintf(obj_dir_name, MAX_STRING_LENGTH, "%s/SavedItems/", SAVE_DIR);
 
-  snprintf(obj_file_name, MAX_STRING_LENGTH, "item.%s.%d", FirstWord(item->name), (int) item);
+  snprintf(obj_file_name, MAX_STRING_LENGTH, "item.%s.%ld", FirstWord(item->name), (long) item);
 
   for (buf = obj_file_name; *buf; buf++)
     *buf = LOWER(*buf);
@@ -4966,7 +4966,7 @@ void PurgeSavedItemFile(P_obj item)
   if (!item)
 		return;
 
-  snprintf(Gbuf2, MAX_STRING_LENGTH, "item.%s.%d", FirstWord(item->name), (int) item);
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "item.%s.%ld", FirstWord(item->name), (long) item);
   for (tmp = Gbuf2; *tmp; tmp++)
     *tmp = LOWER(*tmp);
 
@@ -5621,7 +5621,7 @@ int restoreTownJustice(int town_nr)
     hometowns[town_nr - 1].crime_list = crec;
   }
 
-  return (int) (buf - start);
+  return (int)(long) (buf - start);
 }
 
 void restore_town_justice(void)

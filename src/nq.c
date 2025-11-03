@@ -878,6 +878,7 @@ void nq_char_death(P_char ch, P_char victim)
 int nq_action_check(P_char ch, P_char mob, char *phrase)
 {
   nq_action_check_all(ch, mob, phrase, 0);
+  return 0;
 }
 
 /*

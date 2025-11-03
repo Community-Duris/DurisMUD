@@ -1170,7 +1170,7 @@ string format_time(long seconds) {
 	if( seconds < 0 ) seconds = 0;
 	
 	if( seconds < 60 ) {
-		snprintf(tmp, 128, "&+R<1m&n", seconds );
+		snprintf(tmp, 128, "&+R<1m&n");
 		
 	} else if( seconds < ( 60 * 60 ) ) {
 		snprintf(tmp, 128, "&+R%ldm&n", (seconds / 60) % 60 );

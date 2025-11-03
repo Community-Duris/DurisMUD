@@ -858,10 +858,10 @@ void do_skills(P_char ch, char *argument, int cmd)
       send_to_char("&=LYYou feel a great disturbance in your skills.\n",
           ch);
 
-    snprintf(buf1, MAX_STRING_LENGTH, "");
+    buf1[0] = '\0';
     for (skil = 0; skil <= MAX_AFFECT_TYPES; skil++)
     {
-      snprintf(buf, MAX_STRING_LENGTH, "");
+      buf[0] = '\0';
       skl = SortedSkills[skil];
       if(( (IS_EPIC_SKILL(skl) &&
         target->only.pc->skills[skl].learned) ||

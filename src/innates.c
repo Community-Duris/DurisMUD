@@ -1760,6 +1760,7 @@ int parasitebite(P_char ch, P_char victim)
 /*if (IS_ALIVE(victim) && has_innate(ch, INNATE_INFEST) && !number(0, 7-mod) && IS_ATTACHED_TO(ch, victim))
     infest(ch, victim); FOR LATER USE */
 
+  return 0;
 }
 
 void bite(P_char ch, P_char victim)

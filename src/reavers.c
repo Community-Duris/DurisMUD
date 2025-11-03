@@ -878,6 +878,7 @@ bool ilesh_fury(P_char ch, P_char victim, P_obj wpn)
         break;
     }
   }
+  return FALSE;
 }
 
 /*

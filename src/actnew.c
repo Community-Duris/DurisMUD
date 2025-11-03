@@ -4492,6 +4492,8 @@ bool throw_potion(P_char ch, P_obj potion, P_char victim, P_obj obj)
   }
   else
     extract_obj(potion);
+
+  return FALSE;
 }
 
 

@@ -6921,7 +6921,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 
         if (f != NULL)
         {
-          if (fscanf(f, "%s\n", buf, buf2) == 1)
+          if (fscanf(f, "%s\n", buf) == 1)
           {
             strncpy(d->host2, buf, 128);
           }
@@ -7047,7 +7047,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 
           if (f != NULL)
           {
-            if (fscanf(f, "%s\n", buf, buf2) == 1)
+            if (fscanf(f, "%s\n", buf) == 1)
             {
               strncpy(d->host2, buf, 128);
             }
@@ -8209,7 +8209,7 @@ void do_punish(P_char ch, char *arg, int cmd)
 
   if( !*arg )
   {
-    snprintf(Gbuf1, MAX_STRING_LENGTH, "Supply a damn reason!\n", GET_NAME(t_ch));
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "Supply a damn reason!\n");
     send_to_char(Gbuf1, ch);
     clear_title(t_ch);
     return;

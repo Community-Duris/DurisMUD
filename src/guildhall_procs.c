@@ -48,6 +48,7 @@ int golem_noflee(P_char ch, P_char pl, int cmd, char *arg)
               return FALSE;}
            }                            //END ELSE in GH and user FLED
         }                               //END CMD = FLEE
+  return FALSE;
 }                                       // END GELLZ GH Golem noflee Proc.
 
 

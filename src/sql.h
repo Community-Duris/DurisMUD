@@ -4,12 +4,12 @@
 #include "structs.h"
 
 #ifdef TEST_MUD
-  #define DB_HOST "localhost"
+  #define DB_HOST "127.0.0.1"
   #define DB_USER "duris"
   #define DB_PASSWD "duris"
   #define DB_NAME "duris_dev"
 #else
-  #define DB_HOST "localhost"
+  #define DB_HOST "127.0.0.1"
   #define DB_USER "duris"
   #define DB_PASSWD "duris"
   #define DB_NAME "duris"

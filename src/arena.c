@@ -230,6 +230,7 @@ int arena_team_count(int team)
 
     return count;
   }
+  return 0;
 }
 
 void initialize_arena(void)

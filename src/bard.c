@@ -1736,7 +1736,7 @@ void event_echosong(P_char ch, P_char victim, P_obj obj, void *data)
     // show a message to the room for the echo
     char     echoText[100];
 
-    snprintf(echoText, 100, "&+LYou hear the faint echo of music...\r\n", GET_NAME(ch));
+    snprintf(echoText, 100, "&+LYou hear the faint echo of music...\r\n");
     send_to_room(echoText, room);
 
     // get the song

@@ -862,6 +862,7 @@ int addQuestTropy(int questID)
 
 
 
+  return 0;
 }
 
 float getQuestTropy(int questID)

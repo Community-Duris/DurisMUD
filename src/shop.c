@@ -730,7 +730,7 @@ void shopping_sell(char *arg, P_char ch, P_char keeper, int shop_nr)
     if( sale < 1 )
       sale = 1;
   
-    snprintf(Gbuf1, MAX_STRING_LENGTH, "The shopkeeper says 'This item is rather common, you won't get as much for it.'\r\n", temp1->short_description);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "The shopkeeper says 'This item is rather common, you won't get as much for it.'\r\n");
     send_to_char(Gbuf1, ch);
   }
 
@@ -858,7 +858,7 @@ void shopping_value(char *arg, P_char ch, P_char keeper, int shop_nr)
     if(sale < 1)
       sale = 1;
 
-    snprintf(Gbuf1, MAX_STRING_LENGTH, "The shopkeeper says 'This item is rather common, it's not worth that much.'\r\n", temp1->short_description);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "The shopkeeper says 'This item is rather common, it's not worth that much.'\r\n");
     send_to_char(Gbuf1, ch);
   }
 

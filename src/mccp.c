@@ -41,8 +41,8 @@ void zlib_free(void *opaque, void *address)
 
 void advertise_mccp(int desc)
 {
-  write_to_descriptor(desc, compress2_on_str);
-  write_to_descriptor(desc, compress_on_str);
+  write_to_descriptor(desc, (const char *)compress2_on_str);
+  write_to_descriptor(desc, (const char *)compress_on_str);
 }
 
 /* parse telnet options and return amount of characters 
@@ -118,11 +118,11 @@ int compress_start(P_desc player, int mccp_version)
 
   if (mccp_version == MCCP_VER1)
   {
-    write_to_descriptor(player->descriptor, enable_compress);
+    write_to_descriptor(player->descriptor, (const char *)enable_compress);
   }
   else if (mccp_version == MCCP_VER2)
   {
-    write_to_descriptor(player->descriptor, enable_compress2);
+    write_to_descriptor(player->descriptor, (const char *)enable_compress2);
   }
   else
   {

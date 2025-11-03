@@ -729,6 +729,7 @@ int do_fetid_breath(P_char ch)
     
     fetid_breath(ch, tch);
   }
+  return 0;
 }
 
 int whirlwind_of_teetch(P_char ch, int targets)
@@ -747,6 +748,7 @@ int whirlwind_of_teetch(P_char ch, int targets)
 		if (victim = pick_target(ch, PT_TOLERANT))
 		  insectbite(ch, victim);
 	}
+  return 0;
 }
 
 void hyena_bite(P_char ch, P_char victim)
@@ -809,6 +811,7 @@ int yeenoghu(P_char ch, P_char tch, int cmd, char *arg)
   	if (victim = pick_target(ch, PT_NUKETARGET | PT_WEAKEST))
       hyena_bite(ch, victim);
   }
+  return 0;
 }
 
 void demogorgon_tail(P_char ch)
@@ -3077,7 +3080,8 @@ int ticket_taker(P_char ch, P_char pl, int cmd, char *arg)
 {
   P_obj    obj;
   char     name[MAX_INPUT_LENGTH];
-  bool     no_ticket, found, i;
+  bool     no_ticket, found;
+  int      i;
   P_obj    obj_entered;
 
   /*
@@ -13513,6 +13517,7 @@ int necro_specpet_bone(P_char ch, P_char pl, int cmd, char *arg)
 
 int necro_specpet_blood(P_char ch, P_char pl, int cmd, char *arg)
 {
+  return 0;
 }
 
 int necro_specpet_flesh(P_char ch, P_char pl, int cmd, char *arg)
@@ -14147,6 +14152,7 @@ int shabo_palle(P_char ch, P_char vict, int cmd, char *arg)
     askedquestion = TRUE;
   }
 
+  return 0;
 }
 
 int shabo_derro_savant(P_char ch, P_char pl, int cmd, char *arg)
@@ -16658,6 +16664,7 @@ int monk_remort(P_char ch, P_char pl, int cmd, char *arg)
     CharWait(pl, WAIT_SEC * 30);
     return TRUE;
   }
+  return 0;
 }
 
 void finish_smelt( P_char ch, P_char pl, int vnum );

@@ -1181,6 +1181,7 @@ int outpost_generate_walls(Building* building, int type, int numgolem)
   
     world[building->get_mob()->in_room].sector_type = SECT_CASTLE;
   }
+  return 0;
 }
 
 void outpost_setup_gateguards(int location, int type, int amnt, Building *building)
@@ -1197,7 +1198,7 @@ int outpost_patrol_proc(P_char ch, P_char pl, int cmd, char *arg)
 {
   SET_BIT(ch->specials.act, ACT_SPEC_DIE);
 
-
+  return FALSE;
 }
 
 int outpost_gateguard_proc(P_char ch, P_char pl, int cmd, char *arg)

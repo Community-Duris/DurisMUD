@@ -3953,6 +3953,7 @@ bool roundkick(P_char ch, P_char victim)
   }
 #endif
 
+  return FALSE;
 }
 
 void do_roundkick(P_char ch, char *argument, int cmd)

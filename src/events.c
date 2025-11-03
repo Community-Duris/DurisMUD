@@ -983,11 +983,11 @@ __attribute__((deprecated)) bool Schedule(int type, long pulses, int flag, void 
     break;
   case EVENT_FALLING_CHAR:
     e1->actor.a_ch = (P_char) actor;
-    e1->target.t_num = (int) target;
+    e1->target.t_num = (int)(long) target;
     break;
   case EVENT_FALLING_OBJ:
     e1->actor.a_obj = (P_obj) actor;
-    e1->target.t_num = (int) target;
+    e1->target.t_num = (int)(long) target;
     break;
   case EVENT_OBJ_AFFECT:
     e1->actor.a_obj = (P_obj) actor;
