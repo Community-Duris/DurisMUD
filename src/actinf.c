@@ -6388,7 +6388,7 @@ void do_who(P_char ch, char *argument, int cmd)
     // Gods can see all!
     if( !IS_TRUSTED(ch) )
     {
-      if( IS_DISGUISE(tch) || IS_SET(tch->specials.act, PLR_NOWHO) )
+      if( IS_SET(tch->specials.act, PLR_NOWHO) )
 // Anon removed atm.
 //        || (sort && IS_SET(tch->specials.act, PLR_ANONYMOUS)) )
       {
@@ -6558,7 +6558,7 @@ void do_who(P_char ch, char *argument, int cmd)
           }
 
           strcat(who_output, " &N(");
-          strcat(who_output, race_names_table[(int) GET_RACE(who_list[j])].ansi);
+          strcat(who_output, race_names_table[get_real_race(who_list[j])].ansi);
           strcat(who_output, "&N)");
 
           if( who_list[j]->desc && who_list[j]->desc->olc )

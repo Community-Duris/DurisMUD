@@ -1603,6 +1603,13 @@ bool ac_can_see_obj(P_char sub, P_obj obj, int zrange )
 #endif
 
 
+int get_real_race(P_char ch)
+{
+  struct affected_type *af = get_spell_from_char(ch, TAG_RACE_CHANGE);
+  return af ? af->modifier : ch->player.race;
+}
+
+
 bool can_char_multi_to_class(P_char ch,  int m_class)
 {
   int i = 0;
