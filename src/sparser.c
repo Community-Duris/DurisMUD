@@ -1423,7 +1423,7 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data, char *arg
               break;
 
           if (!dummy)
-            if ((dummy = read_mobile(46, VIRTUAL)) == FALSE)
+            if (!(dummy = read_mobile(46, VIRTUAL)))
             {
               vict = 0;
             }

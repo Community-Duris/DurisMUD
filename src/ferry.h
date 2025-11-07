@@ -76,7 +76,7 @@ class Ferry {
 	}
 
 	const char* cur_dest_name() {
-		if( route.empty() ) return '\0';
+		if( route.empty() ) return NULL;
 
 		// hack to find the next route leg that is an actual stop
 		int i = (cur_route_leg+1)%route.size();
