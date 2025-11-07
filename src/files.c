@@ -441,7 +441,7 @@ int writeStatus(char *buf, P_char ch, bool updateTime )
   ADD_INT(buf, ch->specials.alignment);
   ADD_INT(buf, 0);
   ADD_SHORT(buf, ch->only.pc->prestige);
-  ADD_SHORT(buf, ch->specials.guild->get_id());
+  ADD_SHORT(buf, GET_ASSOC_ID(ch));
   ADD_INT(buf, ch->specials.guild_status);
   ADD_LONG(buf, ch->only.pc->time_left_guild);
   ADD_BYTE(buf, ch->only.pc->nb_left_guild);

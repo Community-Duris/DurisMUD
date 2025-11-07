@@ -16,6 +16,7 @@
 
 /* defines allowing access to player association data */ 
 #define GET_ASSOC(ch) ((ch)->specials.guild)
+#define GET_ASSOC_ID(ch) (GET_ASSOC(ch) ? GET_ASSOC(ch)->get_id() : 0)
 #define GET_A_BITS(ch) ((ch)->specials.guild_status)
 
 /* maximum/minimum numbers of associations */
