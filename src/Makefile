@@ -7,11 +7,11 @@ CC	= g++
 DEBUG	= -ggdb3
 #LDFLAGS	= -ggdb3
 
-LDFLAGS += -L/usr/lib/mysql -fno-stack-protector
+LDFLAGS += -L/usr/lib/mysql
 
 OPTS    = -O0 -march=core2
 
-CFLAGS = -g -Wno-write-strings -fpermissive -fno-stack-protector -std=c++11 -Wno-error=address -Wno-format-truncation
+CFLAGS = -g -Wno-write-strings -std=c++14
 #CFLAGS += -D__NO_MYSQL__
 CFLAGS += -DTEST_MUD
 
