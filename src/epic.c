@@ -403,7 +403,7 @@ void gain_epic(P_char ch, int type, int data, int amount)
   send_to_char(buffer, ch);
   ch->only.pc->epics += amount;
   log_epic_gain(GET_PID(ch), type, data, amount);
-  char type_str[10];
+  char type_str[12];
 
   switch(type)
   {
