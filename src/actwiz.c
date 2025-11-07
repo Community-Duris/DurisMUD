@@ -1531,9 +1531,9 @@ void stat_game(P_char ch)
   x = used_descs;
 
   /* clear out counters */
-  for (i = 0; i <= LAST_RACE + 1; i++)
+  for (i = 0; i < ARRAY_SIZE(race); i++)
     race[i] = 0.0;
-  for (i = 0; i <= CLASS_COUNT; i++)
+  for (i = 0; i < ARRAY_SIZE(m_class); i++)
     m_class[i] = 0.0;
   /* begin counting */
   for (d = descriptor_list; d; d = d->next)
@@ -7972,10 +7972,10 @@ struct obj_data *clone_obj(P_obj obj)
     }
   }
 
-  for (i = 0; i <= NUMB_OBJ_VALS; i++)
+  for (i = 0; i < ARRAY_SIZE(obj->value); i++)
     ocopy->value[i] = obj->value[i];
 
-  for (i = 0; i < 4; i++)
+  for (i = 0; i < ARRAY_SIZE(obj->timer); i++)
     ocopy->timer[i] = obj->timer[i];
 
   ocopy->wear_flags = obj->wear_flags;

@@ -4025,7 +4025,7 @@ int get_mincircle( int spell )
   }
 
   // Skip CLASS_NONE..
-  for( i = 1; i <= CLASS_COUNT; i++ )
+  for( i = 1; i < CLASS_COUNT; i++ )
   {
     for( j = 0; j < MAX_SPEC; j++ )
     {
