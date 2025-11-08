@@ -534,8 +534,16 @@ void game_loop(int s)
   snprintf(buf, MAX_STRING_LENGTH, "avail_descs set to: %d", avail_descs);
   logit(LOG_STATUS, buf);
 
-  sigaddset(&mask, SIGUSR1 | SIGUSR2 | SIGINT | SIGPIPE | SIGHUP |
-            SIGALRM | SIGTERM | SIGURG | SIGSEGV);
+  sigemptyset(&mask);
+  sigaddset(&mask, SIGUSR1);
+  sigaddset(&mask, SIGUSR2);
+  sigaddset(&mask, SIGINT);
+  sigaddset(&mask, SIGPIPE);
+  sigaddset(&mask, SIGHUP);
+  sigaddset(&mask, SIGALRM);
+  sigaddset(&mask, SIGTERM);
+  sigaddset(&mask, SIGURG);
+  sigaddset(&mask, SIGSEGV);
 
 #ifdef USE_ASYNCHRONOUS_IO
   io_init();
