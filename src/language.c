@@ -364,7 +364,7 @@ char    *language_CRYPT(P_char ch, P_char victim, char *message)
   ulong    ttl;
 
   strncpy(string, message, MAX_INPUT_LENGTH);
-  strncpy(string, makedrunk(string, ch), MAX_INPUT_LENGTH);
+  makedrunk(string, ch);
 
   ntstr = translation;
   str = string;
