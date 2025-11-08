@@ -265,11 +265,11 @@ SRCS	= $(OBJS:.o=.c) $(SH_LIBS:.o=.c) $(PFILE_OBJS:.o=.c)
 all: $(PROGS)
 
 dms_new : $(DMS_OBJS)
-	$(CC) $(LDFLAGS) -g -o dms_new $(DMS_OBJS) $(LIBS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -g -o dms_new $(DMS_OBJS) $(LIBS)
 	chmod a+rx dms_new
 
 pfile : $(PFILE_OBJS) $(SHARED_PFILE_OBJS) mm.o common.o
-	$(CC) $(LDFLAGS) -g -o pfile $(PFILE_OBJS) $(SHARED_PFILE_OBJS) common.o mm.o $(LIBS) 
+	$(CC) $(CFLAGS) $(LDFLAGS) -g -o pfile $(PFILE_OBJS) $(SHARED_PFILE_OBJS) common.o mm.o $(LIBS)
 
 $(DMS_OBJS): %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) $(DEBUG) -c $< -o $@
