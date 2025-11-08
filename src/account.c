@@ -217,9 +217,11 @@ void get_account_password(P_desc d, char *arg)
   echo_on(d);
   if (is_account_confirmed(d))
   {
-    display_account_menu(d, NULL);
+    // Display MOTD before showing account menu
+    SEND_TO_Q(motd.c_str(), d);
+    SEND_TO_Q("\r\n*** PRESS RETURN: ", d);
     update_account_iplist(d);
-    STATE(d) = CON_DISPLAY_ACCT_MENU;
+    STATE(d) = CON_ACCT_RMOTD;
     return;
   }
   else

@@ -1589,8 +1589,9 @@ struct txt_q {
 #define CON_SWAPSTATYN              83
 #define CON_SWAPSTAT                84
 #define CON_ACCT_CONFIRM_CHAR       85
+#define CON_ACCT_RMOTD              86  // Read MOTD after account login
 
-#define TOTAL_CON 86
+#define TOTAL_CON 87
 
 /* modes of confirmation- SAM 7-94 */
 #define CONFIRM_NONE    0

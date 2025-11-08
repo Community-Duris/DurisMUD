@@ -6497,8 +6497,11 @@ void nanny(P_desc d, char *arg)
     account_new_char_name(d, arg);
     break;
 
-
-
+  case CON_ACCT_RMOTD:
+    // User pressed RETURN after reading MOTD, show account menu
+    display_account_menu(d, NULL);
+    STATE(d) = CON_DISPLAY_ACCT_MENU;
+    break;
 
 
 
