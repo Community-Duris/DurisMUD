@@ -853,7 +853,7 @@ void weather_setup(void)
       precip[(int) sector_table[zon].climate.season_precip[s]];
 
     sector_table[zon].conditions.temp =
-      temps[(int) sector_table[zon].climate.season_temp[s]];
+      ARR_GET(temps, sector_table[zon].climate.season_temp[s]);
 
     sector_table[zon].conditions.humidity =
       humid[(int) sector_table[zon].climate.season_precip[s]];

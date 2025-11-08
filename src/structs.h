@@ -91,6 +91,15 @@ typedef struct combat_data *P_combat;
 
 #endif
 
+#define ARRAY_SIZE(A)  (sizeof(A)/sizeof(*(A)))
+#define ARR_GET(arr, i) \
+   ( \
+   ((i)<0) ? \
+     (printf("ARRAY " #arr " index %d negative at %s:%d\n", (i), __FILE__, __LINE__), arr[0]) : \
+   ((i)>=ARRAY_SIZE(arr)) ? \
+     (printf("ARRAY " #arr " index %d ≥ %d at %s:%d\n", (i), ARRAY_SIZE(arr), __FILE__, __LINE__), arr[ARRAY_SIZE(arr)-1]) : \
+     arr[i])
+
 #define MVFLG_DRAG_FOLLOWERS     BIT_1
 #define MVFLG_NOMSG              BIT_2
 #define MVFLG_FLEE               BIT_3
