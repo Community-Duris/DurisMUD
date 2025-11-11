@@ -96,6 +96,7 @@ const struct race_names race_names_table[LAST_RACE + 2] = {
   {"Kuo Toa", "KuoToa", "&+GKu&+Lo T&+Goa&n", "KT"},
   {"Wood Elf", "WoodElf", "&+gW&+Goo&+gd E&+Glf&n", "WE"},  // 35
   {"Firbolg", "Firbolg", "&+yFir&+cbolg&n", "FB"},
+  {"Tiefling", "Tiefling", "&+MTie&+cfl&+ming&n", "TF"}, 
   {"Agathinon", "Agathinon", "&+WAga&+Yt&+Whin&+Yo&+Wn&n", "AG"},
   {"Eladrin", "Eladrin", "&+cE&+Cl&+Wadr&+Ci&+cn&n", "EL"},
   {"Gargoyle", "Gargoyle", "&+LGar&+wgo&+Lyle&n", "MG"},
@@ -159,7 +160,7 @@ const struct race_names race_names_table[LAST_RACE + 2] = {
   {"Fire Giant", "FireGiant", "&+rFi&+Rre Gia&+rnt&n", "FG"},
   {"Frost Giant", "FrostGiant", "&+cFro&+Cst Gi&+cant&n", "IG"},
   {"Deva", "Deva", "&+wD&+Wev&+wa&n", "DV"},
-  {0} /* 99 races! */
+  {0} /* 100 races! */
 };
 
 int race_size(int race)
@@ -233,6 +234,7 @@ int race_size(int race)
     case RACE_BRALANI:
     case RACE_GHAELE:
     case RACE_KUOTOA:
+    case RACE_TIEFLING:
     default:
       return SIZE_MEDIUM;
       break;

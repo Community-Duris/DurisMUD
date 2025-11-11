@@ -902,6 +902,8 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_MINOTAUR(ch) (GET_RACE(ch) == RACE_MINOTAUR)
 
+#define IS_TIEFLING(ch) (GET_RACE(ch) == RACE_TIEFLING)
+
 #define IS_SHADE(ch) (GET_RACE(ch) == RACE_SHADE)
 
 #define IS_REVENANT(ch) (GET_RACE(ch) == RACE_REVENANT)
@@ -1114,7 +1116,8 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define PUNDEAD_RACE(ch)  IS_RACEWAR_UNDEAD(ch)
 
 #define OLD_RACE_NEUTRAL(race) ( (race == RACE_THRIKREEN) \
-                              || (race == RACE_MINOTAUR) )
+                              || (race == RACE_MINOTAUR) \
+		              || (race == RACE_TIEFLING) )
 
 #define OLD_RACE_GOOD(race, align)( (race == RACE_HUMAN) \
                                  || (race == RACE_GREY) \

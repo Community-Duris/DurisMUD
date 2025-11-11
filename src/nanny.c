@@ -4989,6 +4989,12 @@ void select_race(P_desc d, char *arg)
   case 'T':
     strcpy(Gbuf, "TROLL");
     break;
+  case 'f':
+    GET_RACE(d->character) = RACE_TIEFLING;
+    break;
+  case 'F':
+    strcpy (Gbuf, "TIEFLING");
+    break;
   /*
   case 'f':
     GET_RACE(d->character) = RACE_HALFELF;
@@ -5924,6 +5930,17 @@ void find_starting_location(P_char ch, int hometown)
   int      guild_num;
   char     Gbuf1[MAX_STRING_LENGTH];
 
+  // I think this is kind've hacky, but it will work!
+  // -- Eikel
+  if (GET_RACE(ch) == RACE_TIEFLING)
+  {
+	  if (GET_ALIGNMENT(ch) < 0) {
+	    GET_HOME(ch) = guild_locations[HOME_ARACHDRATHOS][0];
+	    return;
+	  }
+  }
+
+				
   if (hometown == 0)
   {
     hometown = find_hometown(GET_RACE(ch), true);
@@ -6054,6 +6071,7 @@ void set_char_height_weight(P_char ch)
     case RACE_ORC:
     case RACE_PHANTOM:
     case RACE_GITHZERAI:
+    case RACE_TIEFLING:
     case RACE_KUOTOA:
       mean_h = 68;
       mean_w = 150;
@@ -6186,6 +6204,7 @@ void set_char_size(P_char ch)
   case RACE_OROG:
   case RACE_WOODELF:
   case RACE_KUOTOA:
+  case RACE_TIEFLING:
     GET_SIZE(ch) = SIZE_MEDIUM;
     break;
   case RACE_HARPY:

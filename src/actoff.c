@@ -4362,6 +4362,11 @@ void do_headbutt(P_char ch, char *argument, int cmd)
     {
       dam *= get_property("damage.headbutt.damBonusMinotaur", 1.500);
     }
+    // Added for Tieflings (they have horns!).
+    if (GET_RACE(ch) == RACE_TIEFLING)
+    {
+      dam *= get_property("damage.headbutt.damBonusTiefling", 1.250);
+    }
 
     // if victim is smaller, do a bit more damage
     if( get_takedown_size(victim) < get_takedown_size(ch) )

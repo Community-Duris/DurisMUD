@@ -7292,7 +7292,7 @@ bool has_eq_slot( P_char ch, int wear_slot )
       break;
     case WEAR_TAIL:
       if( !IS_CENTAUR(ch) && !IS_MINOTAUR(ch) && !IS_PSBEAST(ch)
-        && !IS_KOBOLD(ch) )
+        && !IS_KOBOLD(ch) && !IS_TIEFLING(ch) )
       {
         return FALSE;
       }
@@ -7307,7 +7307,7 @@ bool has_eq_slot( P_char ch, int wear_slot )
       }
       break;
     case WEAR_HORN:
-      if( !IS_MINOTAUR(ch) && !IS_HARPY(ch) && !IS_PSBEAST(ch) )
+      if( !IS_MINOTAUR(ch) && !IS_HARPY(ch) && !IS_PSBEAST(ch) && !IS_TIEFLING(ch) )
       {
         return FALSE;
       }
