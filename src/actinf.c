@@ -1081,6 +1081,8 @@ void show_visual_status(P_char ch, P_char tar_char)
 
   if (affected_by_spell(tar_char, SPELL_FAERIE_FIRE))
     SVS("&+m$E is outlined with dancing purplish flames!&n");
+  if (IS_AFFECTED(tar_char, AFF_INFERNAL_FURY))
+    SVS("&+y$E is emanating &+Rinf&+rer&+Lnal e&+rner&+Rgies&+y!&n");
 
   if (IS_AFFECTED4
       (tar_char, AFF4_STORNOGS_SPHERES | AFF4_STORNOGS_GREATER_SPHERES))

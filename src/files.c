@@ -368,7 +368,7 @@ int writeStatus(char *buf, P_char ch, bool updateTime )
   // Arih : Changed from ADD_LONG to ADD_INT because pc_timer is int array, not long array.
   // This was causing offset mismatch errors during character load (restoreStatus offset mismatch).
   for (i = 0; i < NUMB_PC_TIMERS; i++)
-    ADD_INT(buf, ch->only.pc->pc_timer[i]);
+    ADD_LONG(buf, ch->only.pc->pc_timer[i]);
 
   //XXX
 //  if (0 && ch->only.pc->trophy)
@@ -2118,7 +2118,7 @@ ush_int getShort(char **buf)
 
   bcopy(*buf, &s, short_size);
 
-  s = ntohs((ush_int) s);
+  s = ((ush_int) s);
   *buf += short_size;
 
   return s;
@@ -2130,7 +2130,7 @@ uint getInt(char **buf)
 
   bcopy(*buf, &i, int_size);
 
-  i = ntohl(i);
+  i = (i);
   *buf += int_size;
 
   return i;
@@ -2142,7 +2142,7 @@ unsigned long getLong(char **buf)
 
   bcopy(*buf, &l, long_size);
 
-  l = ntohl(l);
+  l = (l);
   *buf += long_size;
 
   return l;
@@ -2260,7 +2260,7 @@ int restoreStatus(char *buf, P_char ch)
   GET_INTE(buf);                //!!! last_level
 
   for (i = 0; i < NUMB_PC_TIMERS; i++)
-    ch->only.pc->pc_timer[i] = GET_INTE(buf);
+    ch->only.pc->pc_timer[i] = GET_LONG(buf);
 
   /* trophy stuff */
 //  ch->only.pc->trophy = NULL;
@@ -2674,6 +2674,8 @@ int restoreAffects(char *buf, P_char ch)
   /*
    * ok, some innate powers just set bits, so we need to reset those
    */
+  if (has_innate(ch, INNATE_INFERNAL_FURY))
+    SET_BIT(ch->specials.affected_by, AFF_INFERNAL_FURY);
   if (has_innate(ch, INNATE_SNEAK))
     SET_BIT(ch->specials.affected_by, AFF_SNEAK);
   if (has_innate(ch, INNATE_FARSEE))

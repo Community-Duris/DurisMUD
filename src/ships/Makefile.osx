@@ -16,7 +16,7 @@ DEPEND = $(CCPP) -MM
 # Compiler flags.
 #
 # Turn on -O3 for the production version!
-COMPILER_FLAGS = -g -Wall -Wno-write-strings -arch i386 -fno-stack-protector
+COMPILER_FLAGS = -g -Wall -Wno-write-strings -arch i386 -fno-stack-protector -std=c++11
 PROFILE_FLAGS = #-pg -static
 #INCLUDES = -I/usr/local/mysql-i386/include -I/usr/include/mysql
 INCLUDES  = -I. -I/usr/include/libxml2 -I/usr/local/include/mysql -I./ships

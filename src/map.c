@@ -377,12 +377,12 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
         }
       }
       else if(OBJ_VNUM(obj) == VOBJ_GEMMINE && (( (has_innate(ch, INNATE_MINER) ||
-        IS_AFFECTED5(ch, AFF5_MINE)) && distance < 2 ) || IS_TRUSTED(ch) ) )
+        IS_AFFECTED5(ch, AFF5_MINE)) && distance < 5 ) || IS_TRUSTED(ch) ) )
       {
         val = MIN(val, CONTAINS_GEMMINE);
       }
       else if(OBJ_VNUM(obj) == VOBJ_MINE && (( (has_innate(ch, INNATE_MINER) ||
-        IS_AFFECTED5(ch, AFF5_MINE)) && distance < 3 ) || IS_TRUSTED(ch) ) )
+        IS_AFFECTED5(ch, AFF5_MINE)) && distance < 10 ) || IS_TRUSTED(ch) ) )
       {
         val = MIN(val, CONTAINS_MINE);
       }

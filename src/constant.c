@@ -25,6 +25,8 @@ const char *god_list[] = {
   "Kvark",
   "Tharkun",
   "Fotenak",
+  "Xanadin",
+  "Tyrus",
   "\0"
 };
 

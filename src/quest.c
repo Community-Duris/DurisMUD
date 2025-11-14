@@ -860,8 +860,6 @@ int addQuestTropy(int questID)
   snprintf(sys, 200, "cp %s %s", TEMP_QUEST_FILE_TROPHY, QUEST_FILE_TROPHY);
   system(sys);
 
-
-
   return 0;
 }
 

@@ -1412,6 +1412,7 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data, char *arg
         // ALWAYS true for tar_char_world - let spells handle the situation!
         target_ok = TRUE;
         vict = get_char_vis(ch, Gbuf1);
+        debug("parse_spell_arguments (TAR_CHAR_WORLD) Gbuf1=%s, vict=%s", Gbuf1, vict ? GET_NAME(vict) : "(null)");
         if (!vict || (!is_introd(vict, ch)) ||
             (IS_PC(ch) && IS_PC(vict) && racewar(ch, vict)))
         {
@@ -1423,7 +1424,7 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data, char *arg
               break;
 
           if (!dummy)
-            if ((dummy = read_mobile(46, VIRTUAL)) == FALSE)
+            if ((dummy = read_mobile(46, VIRTUAL)) == NULL)
             {
               vict = 0;
             }

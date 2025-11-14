@@ -1095,6 +1095,9 @@ P_obj create_random_eq_new( P_char killer, P_char mob, int object_type, int mate
   // Min: (( 5 * 0.75 * 0.15) + (2 *  5)) / 3 = 10.5625 / 3 = 3
   // Max: ((11 * 1.21 * 5.00) + (2 * 11)) / 3 = 88.55 / 3 = 29.
 
+  int maxValue = GET_LEVEL(mob) > 60 ? 8 : GET_LEVEL(mob) > 49 ? 6
+									   : GET_LEVEL(mob) > 35   ? 5
+															   : 4;
   // Item Attributes
   if( !number(0, 5) && (GET_LEVEL(mob) > 49) )
   {
@@ -1102,17 +1105,18 @@ P_obj create_random_eq_new( P_char killer, P_char mob, int object_type, int mate
     // (10 * .5 * .2 + 0) to (65 * 1.5 * 1.7 + 20) = 1 to 185
     value = (int) (material_data[material].m_stat * prefix_data[prefix].m_stat * slot_data[slot].m_stat + number(0, 20));
     // 1 to 185. When we divide by 30, we get 0 to 6.
-    obj = setprefix_obj(obj, value / 30, 2);
+    obj = setprefix_obj(obj, dice( value / 30, maxValue), 2);
   }
-  if( !number(0, 2) && (GET_LEVEL(mob) > 35) )
+  if( !number(0, 2) && (GET_LEVEL(mob) > 20) )
   {
     value = (int) (material_data[material].m_stat * prefix_data[prefix].m_stat * slot_data[slot].m_stat + number(0, 20));
     // 1 to 185. When we divide by 36, we get 0 to 5.
-    obj = setprefix_obj(obj, value / 36, 1);
+    obj = setprefix_obj(obj, dice( value / 36, maxValue), 1);
   }
   value = (int) (material_data[material].m_stat * prefix_data[prefix].m_stat * slot_data[slot].m_stat + number(0, 20));
   // 1 to 185. When we divide by 46, we get 0 to 4.
-  obj = setprefix_obj(obj, value / 46, 0);
+  obj = setprefix_obj(obj, dice( value / 46, maxValue), 0);
+
 
   obj->material = material_data[material].m_number;
 

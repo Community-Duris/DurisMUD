@@ -1555,8 +1555,8 @@ void spell_restore_spirit(int, P_char, char *, int, P_char, P_obj);
 void spell_repair_one_item(int, P_char, char *, int, P_char, P_obj);
 void spell_corpse_portal(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
 void spell_contain_being(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
+void spell_infernal_fury(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
 int get_spell_component(P_char, int, int);
-
 
 /* smagic.c */
 
@@ -3045,6 +3045,7 @@ void epiclog(int, const char *,...);
 void strToLower(char *);
 void wizlog(int level, const char *,...);
 void debug(const char *,...);
+void logexp(const char *,...);
 int distance_from_shore(int);
 int dir_from_keyword(char *);
 int weight_notches_above_naked(P_char);

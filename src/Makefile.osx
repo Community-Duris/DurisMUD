@@ -15,7 +15,7 @@ LDFLAGS += -L/usr/local/lib/mysql -L./ships
 
 OPTS    = -O2
 
-CFLAGS = -pg -Wno-write-strings -arch i386 -fno-stack-protector
+CFLAGS = -pg -Wno-write-strings -arch i386 -fno-stack-protector -std=c++11
 
 #CFLAGS += -D__NO_MYSQL__
 CFLAGS += -DTEST_MUD

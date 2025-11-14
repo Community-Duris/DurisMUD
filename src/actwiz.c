@@ -2768,35 +2768,35 @@ void do_stat(P_char ch, char *argument, int cmd)
     if(k->specials.affected_by)
     {
       sprintbitde(k->specials.affected_by, affected1_bits, buf2);
-      snprintf(buf, MAX_STRING_LENGTH, "&+YAffected by (1):&n %10u - %s\n", k->specials.affected_by, buf2);
+      snprintf(buf, MAX_STRING_LENGTH, "&+YAffected by (1):&n %10lu - %s\n", k->specials.affected_by, buf2);
       strcat(o_buf, buf);
     }
 
     if(k->specials.affected_by2)
     {
       sprintbitde(k->specials.affected_by2, affected2_bits, buf2);
-      snprintf(buf, MAX_STRING_LENGTH, "&+YAffected by (2):&n %10u - %s\n", k->specials.affected_by2, buf2);
+      snprintf(buf, MAX_STRING_LENGTH, "&+YAffected by (2):&n %10lu - %s\n", k->specials.affected_by2, buf2);
       strcat(o_buf, buf);
     }
 
     if(k->specials.affected_by3)
     {
       sprintbitde(k->specials.affected_by3, affected3_bits, buf2);
-      snprintf(buf, MAX_STRING_LENGTH, "&+YAffected by (3):&n %10u - %s\n", k->specials.affected_by3, buf2);
+      snprintf(buf, MAX_STRING_LENGTH, "&+YAffected by (3):&n %10lu - %s\n", k->specials.affected_by3, buf2);
       strcat(o_buf, buf);
     }
 
     if(k->specials.affected_by4)
     {
       sprintbitde(k->specials.affected_by4, affected4_bits, buf2);
-      snprintf(buf, MAX_STRING_LENGTH, "&+YAffected by (4):&n %10u - %s\n", k->specials.affected_by4, buf2);
+      snprintf(buf, MAX_STRING_LENGTH, "&+YAffected by (4):&n %10lu - %s\n", k->specials.affected_by4, buf2);
       strcat(o_buf, buf);
     }
 
     if(k->specials.affected_by5)
     {
       sprintbitde(k->specials.affected_by5, affected5_bits, buf2);
-      snprintf(buf, MAX_STRING_LENGTH, "&+YAffected by (5):&n %10u - %s\n", k->specials.affected_by5, buf2);
+      snprintf(buf, MAX_STRING_LENGTH, "&+YAffected by (5):&n %10lu - %s\n", k->specials.affected_by5, buf2);
       strcat(o_buf, buf);
     }
 
@@ -5210,7 +5210,7 @@ void do_start(P_char ch, int nomsg)
 
   GET_EXP(ch) = 1;
 
-  if(isname("Duris", GET_NAME(ch)))
+  if(isname("Duris", GET_NAME(ch)) || god_check(GET_NAME(ch)))
   {
     ch->player.level = OVERLORD;
   }
@@ -12939,6 +12939,13 @@ void which_weapon(P_char ch, char *argument)
 int lookup_skill( char *skill_name )
 {
   int skl;
+  for( skl = FIRST_SPELL; skl <= LAST_SPELL; skl++ )
+  {
+    if( is_abbrev(skill_name, skills[skl].name) )
+    {
+      return skl;
+    }
+  }
   for( skl = FIRST_SKILL; skl <= LAST_SKILL; skl++ )
   {
     if( is_abbrev(skill_name, skills[skl].name) )

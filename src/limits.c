@@ -801,26 +801,24 @@ void clear_title(P_char ch)
   }
 }
 
-void display_gain(P_char ch, int gain)
+void display_gain(P_char ch, int gain, int type)
 {
   char     buffer[MAX_STRING_LENGTH];
   P_char   tch;
 
   // only display PC's
   if( IS_NPC(ch) || ch->in_room < 0 || ch->in_room > top_of_world )
+  {
     return;
+  }
 
   if( GET_LEVEL(ch) >= MINLVLIMMORTAL )
-    snprintf(buffer, MAX_STRING_LENGTH, "&+yExperience&n: %s would have gained %d.\n", GET_NAME(ch), gain);
-  else
-    snprintf(buffer, MAX_STRING_LENGTH, "&+yExperience&n: %s by %d.\n", GET_NAME(ch), gain);
-
-  for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (IS_TRUSTED(tch) && IS_SET(tch->specials.act2, PLR2_EXP))
-    {
-      send_to_char(buffer, tch);
-    }
+    logexp("%s would have gained %d (%d) experience.\n", GET_NAME(ch), gain, type);
+  }
+  else
+  {
+    logexp("%s gained %d (%d) experience. points.curr_exp = %d, needed for level = %d\n", GET_NAME(ch), gain, type, GET_EXP(ch), new_exp_table[GET_LEVEL(ch) + 1]);
   }
 }
 
@@ -832,28 +830,25 @@ void update_exp_table()
   new_exp_table[0] = 0;
   global_exp_limit = 0;
 
-  fprintf(stderr, "Generating exp table.\n");
-  for (i = 1; i <= MAXLVL; i++)
-  {
-    // Changed this so we start at exp.required.1 and can set each value
-    //   up to exp.required.62.  If no value is set, take the previous.
-    // If you change this back, need to reset values in duris.properties.
-//    snprintf(buf, 128, "exp.required.%d", ((i + 4) / 5) * 5);
-    snprintf(buf, 128, "exp.required.%02d", i);
-    new_exp_table[i] = get_property(buf, -1);
-    // If exp.required.i not found, set to i-1's value.
-    if( new_exp_table[i] == -1 )
-    {
-      // Default lvl 1 exp is 2k.  But lvl 1 exp property should be set.
-      new_exp_table[i] = (i==1) ? 2000 : new_exp_table[i-1];
-    }
-    global_exp_limit += new_exp_table[i];
-
-    // Arih: for debugging exp bug - Debug logging for levels 25-31 to diagnose exp table bug
-    if (i >= 25 && i <= 31) {
-      fprintf(stderr, "  Level %d: exp required = %ld\n", i, new_exp_table[i]);
-    }
-  }
+	debug("Generating exp table.\n");
+	for (i = 1; i <= MAXLVL; i++)
+	{
+		// Changed this so we start at exp.required.1 and can set each value
+		//   up to exp.required.62.  If no value is set, take the previous.
+		// If you change this back, need to reset values in duris.properties.
+		//    sprintf(buf, "exp.required.%d", ((i + 4) / 5) * 5);
+		sprintf(buf, "exp.required.%02d", i);
+		int propVal = get_property(buf, -1);
+		// If exp.required.i not found, set to i-1's value.
+		if (propVal == -1)
+		{
+			// Default lvl 1 exp is 2k.  But lvl 1 exp property should be set.
+			propVal = (i == 1) ? 2000 : new_exp_table[i - 1];
+		}
+		new_exp_table[i] = propVal;
+		global_exp_limit += (long)new_exp_table[i];
+		debug("new_exp_table[%d]=%d, global_exp_limit=%d", i, propVal, global_exp_limit);
+	}
 }
 
 float gain_exp_modifiers_race_only(P_char ch, P_char victim, float XP)
@@ -1435,7 +1430,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   {
     GET_EXP(ch) += (int)XP_final;
   }
-  display_gain(ch, (int)XP_final);
+  display_gain(ch, (int)XP_final, type);
   if( GET_LEVEL(ch) >= MINLVLIMMORTAL )
   {
     return 0;
@@ -1449,6 +1444,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     {
       for( int i = GET_LEVEL(ch) + 1; (i <= levelcap) && (new_exp_table[i] <= GET_EXP( ch )); i++ )
   	  {
+		logexp("player %s advancing level, p.exp = %d, newlevelexp = %d, levelcap = %d (a)", GET_NAME(ch), GET_EXP(ch), new_exp_table[i], levelcap);
       	GET_EXP(ch) -= new_exp_table[i];
       	advance_level(ch);
   	  }
@@ -1459,6 +1455,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
       levelcap = MIN( levelcap, get_property("exp.maxExpLevel", 46) );
       for( int i = GET_LEVEL(ch) + 1; (i <= levelcap) && (new_exp_table[i] <= GET_EXP( ch )); i++ )
       {
+		logexp("player %s advancing level, p.exp = %d, newlevelexp = %d, levelcap = %d (b)", GET_NAME(ch), GET_EXP(ch), new_exp_table[i], levelcap);
         GET_EXP(ch) -= new_exp_table[i];
         advance_level(ch);
       }
@@ -1468,8 +1465,8 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   {
     while (GET_EXP(ch) < 0)
     {
-      logit(LOG_EXP, "LOSING LEVEL: %s - old exp: %d, new exp %d, difference: %d",
-        J_NAME(ch), GET_EXP(ch), GET_EXP(ch)+new_exp_table[GET_LEVEL(ch)], new_exp_table[GET_LEVEL(ch)] );
+      logexp("LOSING LEVEL: %s - old exp: %d, new exp %d, difference: %d",
+	      J_NAME(ch), GET_EXP(ch), GET_EXP(ch) + new_exp_table[GET_LEVEL(ch)], new_exp_table[GET_LEVEL(ch)]);
       GET_EXP(ch) += new_exp_table[GET_LEVEL(ch)];
       lose_level(ch);
     }

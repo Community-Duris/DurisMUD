@@ -95,16 +95,16 @@ void epic_gain_skillpoints(P_char ch, int gain)
   ch->only.pc->epic_skill_points = MAX(0, ch->only.pc->epic_skill_points + gain);
 } */
 
-bool epic_stored_in(unsigned int *vector, int code)
+bool epic_stored_in(unsigned long *vector, int code)
 {
-  unsigned int flag = *vector;
+  unsigned long flag = *vector;
 
   if((flag >> 30) == 0)
-    *vector = (unsigned int)code;
+    *vector = (unsigned long)code;
   else if((flag >> 30) == 1)
-    *vector |= (unsigned int)code << 10;
+    *vector |= (unsigned long)code << 10;
   else if((flag >> 30) == 2)
-    *vector |= (unsigned int)code << 20;
+    *vector |= (unsigned long)code << 20;
   else
     return false;
 
@@ -403,7 +403,7 @@ void gain_epic(P_char ch, int type, int data, int amount)
   send_to_char(buffer, ch);
   ch->only.pc->epics += amount;
   log_epic_gain(GET_PID(ch), type, data, amount);
-  char type_str[10];
+  char type_str[20];
 
   switch(type)
   {

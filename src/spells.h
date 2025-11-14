@@ -702,7 +702,9 @@
 #define SPELL_REST                    651
 #define SPELL_GIRILALS_GRANITE_HAMMER 652
 #define SPELL_ILESHS_SMASHING_FURY    653
-#define LAST_SPELL SPELL_ILESHS_SMASHING_FURY
+#define SPELL_INFERNAL_FURY           654
+#define LAST_SPELL SPELL_INFERNAL_FURY
+
 
 #define FIRST_SKILL                  1000  /* should be a decent split point */
 #define SKILL_SNEAK                  1000

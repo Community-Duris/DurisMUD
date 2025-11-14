@@ -4769,6 +4769,7 @@ int check_shields(P_char ch, P_char victim, int dam, int flags)
   double fshield = get_property("damage.shield.fireshield", 0.750);
   double cshield = get_property("damage.shield.coldshield", 0.750);
   double lshield = get_property("damage.shield.lightningshield", 0.750);
+  double ifshield = get_property("damage.shield.infernalfuryshield", 0.90);
 
   uint  sflags =
     SPLDAM_GLOBE | SPLDAM_NODEFLECT | RAWDAM_TRANCEVAMP;
@@ -4839,6 +4840,13 @@ int check_shields(P_char ch, P_char victim, int dam, int flags)
     "You are &+rscratched&n to death by $n's hide.",
     "$N is &+rscratched&n to death by $n's hide.",
   };
+  struct damage_messages infernalfury = {
+	  "&+yThe &+Rinf&+rer&+Lnal e&+rner&+Rgies &+ysurrounding you &+Wsear &+yinto&n $N &+yas $E hits you!&n",
+	  "&+yYou are engulfed by &+Rinf&+rer&+Lnal e&+rner&+Rgies &+yas you hit&n $n&+y!&n",
+	  "$N &+yis is engulfed by &+Rinf&+rer&+Lnal e&+rner&+Rgies &+yas $E hits&n $n&+y!&n",
+	  "&+yThe &+Rinf&+rer&+Lnal e&+rner&+Rgies &+Wsear &+ythe life out of&n $N &+yas $E touches you for the last time.&n",
+	  "&+yThe &+Wpower &+yof the &+RNin&+Le He&+Rlls &+yconsumes you!&n",
+	  "&+yAs &n$N &+Wtouches &+ythe &+Rinf&+rer&+Lnal e&+rner&+Rgies &+yaround&n $n, &+y$E falls lifeless to the ground."};
 
   if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
   {
@@ -5032,8 +5040,15 @@ int check_shields(P_char ch, P_char victim, int dam, int flags)
   }
   else if( result == DAM_NONEDEAD && IS_AFFECTED5(victim, AFF5_THORNSKIN) )
   {
-    result = raw_damage(victim, ch, 2, RAWDAM_DEFAULT | flags, &thornskin);
+	struct affected_type* afp = get_spell_from_char(victim, SPELL_THORNSKIN);
+	double thornDamage = afp == NULL ? 2 : dice(2, MIN(2, afp->level / 10)); // 2 dam for bit, 2d(level/10, min 2) - 2d2 at 1, 2d5 at 50
+	result = raw_damage(victim, ch, thornDamage, RAWDAM_DEFAULT | flags, &thornskin);
   }
+  else if( result == DAM_NONEDEAD && IS_AFFECTED(victim, AFF_INFERNAL_FURY) )
+  {
+    result = spell_damage(victim, ch, (int) (dam * ifshield), SPLDAM_NEGATIVE, SPLDAM_GRSPIRIT | SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &infernalfury);
+  }
+
 
   if( (result == DAM_NONEDEAD) && has_innate(victim, INNATE_ACID_BLOOD) && (dam > ( (flags & PHSDAM_TOUCH) ? 9 : 5 ))
     && !number(0, 9) )

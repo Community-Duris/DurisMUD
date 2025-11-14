@@ -463,8 +463,9 @@ struct edit_data {
 #define INNATE_DET_SUBVERSION         171
 #define INNATE_LIVING_STONE           172
 #define INNATE_INVISIBILITY           173
+#define INNATE_INFERNAL_FURY          174
 
-#define LAST_INNATE                   173   // LAST means last, not last + 1 or whatever
+#define LAST_INNATE                   174   // LAST means last, not last + 1 or whatever
 
 struct extra_descr_data {
   char *keyword;                /* Keyword in look/examine          */
@@ -528,11 +529,11 @@ struct obj_data {
   sh_int craftsmanship;         /* how well made item is            */
   sh_int z_cord;                /* where in the room (up/down)      */
 
-  unsigned int bitvector;              /* To set chars bits                */
-  unsigned int bitvector2;             /* 2nd 32 bits                      */
-  unsigned int bitvector3;
-  unsigned int bitvector4;
-  unsigned int bitvector5;
+  unsigned long bitvector;              /* To set chars bits                */
+  unsigned long bitvector2;             /* 2nd 32 bits                      */
+  unsigned long bitvector3;
+  unsigned long bitvector4;
+  unsigned long bitvector5;
 
   struct obj_affected_type
     affected[MAX_OBJ_AFFECT];   /* Which abilities in PC to change  */
@@ -1167,11 +1168,12 @@ struct affected_type {
   uint flags;                                   /* flags describing affect behavior, see AFFTYPE_* defines */
   int modifier;                 /* This is added to apropriate ability     */
   ubyte location;               /* Tells which ability to change(APPLY_XXX)*/
-  unsigned int bitvector;       /* Tells which bits to set (AFF_XXX)       */
-  unsigned int bitvector2;      /* Tells which bits to set (AFF2_XXX)      */
-  unsigned int bitvector3;
-  unsigned int bitvector4;
-  unsigned int bitvector5;
+  unsigned short level;
+  unsigned long bitvector;       /* Tells which bits to set (AFF_XXX)       */
+  unsigned long bitvector2;      /* Tells which bits to set (AFF2_XXX)      */
+  unsigned long bitvector3;
+  unsigned long bitvector4;
+  unsigned long bitvector5;
   struct affected_type *next;
 };
 
@@ -1333,11 +1335,11 @@ struct npc_only_data {          /* values only used by NPCs  */
 #define SECS_BETWEEN_AFF_REFRESH  60    /* RL seconds between each refresh */
 
 struct char_special_data {
-  unsigned int affected_by;     /* Bitvector for spells/skills affected by */
-  unsigned int affected_by2;    /* Bitvector for spells/skills affected by */
-  unsigned int affected_by3;
-  unsigned int affected_by4;
-  unsigned int affected_by5;
+  unsigned long affected_by;     /* Bitvector for spells/skills affected by */
+  unsigned long affected_by2;    /* Bitvector for spells/skills affected by */
+  unsigned long affected_by3;
+  unsigned long affected_by4;
+  unsigned long affected_by5;
 
   byte x_cord;                  /* Sub-coordinate of large room            */
   byte y_cord;

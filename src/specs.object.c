@@ -13086,6 +13086,27 @@ void apply_zone_spell(P_char ch, int count, const char *zone_name, P_obj obj, in
         message = SETMSG_PROTECT;
       }
       break;
+	case SPELL_HASTE:
+	  if( !IS_AFFECTED(ch, AFF_HASTE) )
+	  {
+		spell_haste(MIN(56, count * 10), ch, 0, 0, ch, 0);
+		message = SETMSG_STRENGTH;
+	  }
+	  break;
+	case SPELL_FIRESHIELD:
+	  if( !IS_AFFECTED2(ch, AFF2_FIRESHIELD) )
+	  {
+		spell_fireshield(MIN(56, count * 10), ch, 0, 0, ch, 0);
+		message = SETMSG_STRENGTH;
+	  }
+	  break;
+	case SPELL_INFERNAL_FURY:
+	  if( !IS_AFFECTED(ch, AFF_INFERNAL_FURY) )
+	  {
+		spell_infernal_fury(MIN(56, count * 10), ch, 0, 0, ch, 0);
+		message = SETMSG_STRENGTH;
+	  }
+	  break;
     case SPELL_STRENGTH:
     case SPELL_BLESS:
       if( !affected_by_spell(ch, spell) )

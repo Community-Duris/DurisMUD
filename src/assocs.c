@@ -519,7 +519,7 @@ bool Guild::load_guild( int guild_num )
   new_guild = new Guild();
 
   // Get the guild name.
-  fgets( new_guild->name, ASC_MAX_STR + 1, file );
+  fgets( new_guild->name, ASC_MAX_STR, file );
   // Cut the carriage return off.
   new_guild->name[strlen(new_guild->name) - 1] = '\0';
   // Then the guild number and frag info.

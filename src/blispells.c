@@ -74,6 +74,7 @@ void spell_thornskin(int level, P_char ch, char *arg, int type, P_char victim, P
     af1.location = APPLY_AC;
     af1.bitvector = AFF_ARMOR;
     af1.bitvector5 = AFF5_THORNSKIN;
+    af1.level = (ushort)level;
 
     affect_to_char(victim, &af1);
     act("&+y$n&+y's skin gains the toughness of dead plant life, &+Lthorns&+y and brambles grow from $s skin!",
@@ -87,6 +88,7 @@ void spell_thornskin(int level, P_char ch, char *arg, int type, P_char victim, P
     af1.type = SPELL_THORNSKIN;
     af1.duration =  25;
     af1.bitvector5 = AFF5_THORNSKIN;
+	af1.level = (ushort)level;
 
     affect_to_char(victim, &af1);
     act("&+LThorns&+y and brambles grow from $n&+y's skin!", FALSE, victim, 0, 0, TO_ROOM);
@@ -107,6 +109,7 @@ void spell_thornskin(int level, P_char ch, char *arg, int type, P_char victim, P
           shown = TRUE;
         }
         af1->duration = 25;
+		af1->level = (ushort)level;
       }
     }
     if( !shown )

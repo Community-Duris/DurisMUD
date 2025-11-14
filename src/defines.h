@@ -78,6 +78,9 @@ typedef unsigned int uint;
 #define BIT_30   536870912U
 #define BIT_31  1073741824U
 #define BIT_32  2147483648U
+#define BIT_33  4294967296U
+#define BIT_34  8589934592U
+#define BIT_35 17179869184U
 
 #define MAX_INT_SIGNED    2147483647
 #define MIN_INT_SIGNED   -2147483647
@@ -667,6 +670,7 @@ struct attr_names_struct {
 #define AFF_PROT_FIRE         BIT_30
 #define AFF_CAMPING           BIT_31
 #define AFF_BIOFEEDBACK       BIT_32
+#define AFF_INFERNAL_FURY     BIT_33
 
 /* affected_by2 */
 

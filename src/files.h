@@ -101,14 +101,14 @@
 
 #define ADD_BYTE(buf, b) { *(char *)buf = b; buf++; }
 
-#define ADD_SHORT(buf, s) { ush_int tmp_ = htons((sh_int) (s)); \
+#define ADD_SHORT(buf, s) { ush_int tmp_ = ((sh_int) (s)); \
                               bcopy(&tmp_, buf, short_size); \
                               buf += short_size; }
 
-#define ADD_INT(buf, i) { uint tmp_ = htonl((unsigned) (i)); \
+#define ADD_INT(buf, i) { uint tmp_ = ((unsigned) (i)); \
                             bcopy(&tmp_, buf, int_size); buf += int_size; }
 
-#define ADD_LONG(buf, l) { ulong tmp_ = htonl((unsigned) (l)); \
+#define ADD_LONG(buf, l) { ulong tmp_ = ((unsigned) (l)); \
                              bcopy(&tmp_, buf, long_size); \
                              buf += long_size; }
 

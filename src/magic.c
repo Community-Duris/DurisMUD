@@ -13976,6 +13976,24 @@ void astral_banishment(P_char ch, P_char victim, int hwordtype, int level)
   }
 }
 
+void spell_infernal_fury(int level, P_char ch, char *arg, int type, P_char victim,
+                P_obj obj)
+{
+	struct affected_type af;
+
+	if (!IS_AFFECTED(victim, AFF_INFERNAL_FURY))
+	{
+		act("$n &+Yis surrounded by &+Rinf&+rer&+Lnal f&+rla&+Rmes&+Y!&n", TRUE, victim, 0, 0, TO_ROOM);
+		act("You &+Yare surrounded by &+Rinf&+rer&+Lnal f&+rla&+Rmes&+Y!&n", TRUE, victim, 0, 0, TO_CHAR);
+		bzero(&af, sizeof(af));
+		af.type = SPELL_INFERNAL_FURY;
+		af.duration = 6;
+		af.bitvector = AFF_INFERNAL_FURY;
+		affect_to_char(victim, &af);
+	}
+}
+
+
 void spell_ghastly_touch(int level, P_char ch, char *arg, int type, P_char victim,
                 P_obj obj)
 {

@@ -763,6 +763,8 @@ void apply_affs(P_char ch, int mode)
    * ok, some innate powers just set bits, so we need to reset those
    */
 
+  if (has_innate(ch, INNATE_INFERNAL_FURY))
+    SET_BIT(ch->specials.affected_by, AFF_INFERNAL_FURY);
   if (has_innate(ch, INNATE_SNEAK))
     SET_BIT(ch->specials.affected_by, AFF_SNEAK);
   if (has_innate(ch, INNATE_FARSEE))
@@ -1179,7 +1181,7 @@ void apply_affs(P_char ch, int mode)
  * called only from all_affects(). JAB
  */
 
-void affect_modify(int loc, int mod, unsigned int *bitv, int from_eq)
+void affect_modify(int loc, int mod, unsigned long *bitv, int from_eq)
 {
   if (bitv)
   {
@@ -1868,7 +1870,7 @@ char affect_total(P_char ch, int kill_ch)
 
   ch->specials.base_combat_round = MAX(3.0, ch->specials.base_combat_round);
 
-  if (IS_PC(ch) && GET_CHAR_SKILL(ch, SKILL_MINE) >= 30)
+  if (IS_PC(ch) && GET_CHAR_SKILL(ch, SKILL_MINE) >= 1)
 	  ch->specials.affected_by5 |= AFF5_MINE; /* high enough skill in forge grants miner's sight */
 
   /* only if actually in game. JAB */

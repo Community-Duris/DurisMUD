@@ -3022,6 +3022,7 @@ SPELL_ADD(CLASS_SUMMONER, 11);
                TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO | TAR_ELEMENTAL,
                spell_arieks_shattering_iceball);
   SPELL_ADD(CLASS_SHAMAN, 9);
+  SPEC_SPELL_ADD(CLASS_ETHERMANCER, 9, SPEC_FROSTMAGUS);
 
   SPELL_CREATE("scathing wind", SPELL_SCATHING_WIND, PULSE_SPELLCAST * 3,
                 TAR_AREA | TAR_OFFAREA | TAR_AGGRO | TAR_ELEMENTAL,
@@ -5121,6 +5122,10 @@ SPELL_ADD(CLASS_SUMMONER, 11);
   SPELL_CREATE("ghastly touch", SPELL_GHASTLY_TOUCH, PULSE_SPELLCAST * 2 / 3,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                 spell_ghastly_touch);
+
+  SPELL_CREATE("infernal fury", SPELL_INFERNAL_FURY, PULSE_SPELLCAST * 2 / 3,
+                TAR_SELF_ONLY,
+                spell_infernal_fury);
 #ifndef _DE_
   create_epic_skills();
 #endif

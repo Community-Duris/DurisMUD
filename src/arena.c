@@ -227,10 +227,8 @@ int arena_team_count(int team)
           arena.team[team].player[i].ch != NULL)
         count++;
     }
-
-    return count;
   }
-  return 0;
+  return count;
 }
 
 void initialize_arena(void)

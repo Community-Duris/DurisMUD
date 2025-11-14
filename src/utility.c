@@ -852,6 +852,25 @@ void debug(const char *format, ...)
   va_end(args);
 }
 
+void logexp(const char *format, ...)
+{
+  P_desc   i;
+  va_list  args;
+  char     lbuf[MAX_STRING_LENGTH];
+
+  strcpy(lbuf, "&+C*** EXP:&n ");
+  va_start(args, format);
+  vsprintf(lbuf + strlen(lbuf), format, args);
+  strcat(lbuf, "\r\n");
+  lbuf[sizeof(lbuf)] = 0;
+  for (i = descriptor_list; i; i = i->next)
+    if (!i->connected && i->character &&
+        IS_TRUSTED(i->character) &&
+        IS_SET(i->character->specials.act2, PLR2_EXP))
+      send_to_char(lbuf, i->character);
+  va_end(args);
+}
+
 void loginlog(int level, const char *format, ...)
 {
   va_list  args;
@@ -4022,7 +4041,7 @@ void boot_desc_data()
 {
   FILE    *f;
   int      count;
-  char     buf[20];
+  char     buf[100];
 
   /* appearance first */
   if (!(f = fopen("lib/descs/appearance", "r")))

@@ -15,7 +15,7 @@ LDFLAGS += -L/usr/lib/mysql -L./ships
 
 OPTS    = -O2
 
-CFLAGS = -g
+CFLAGS = -g -std=c++11
 #CFLAGS += -D__NO_MYSQL__
 CFLAGS += -D__CYGWIN_BUILD__
 CFLAGS += -DTEST_MUD

@@ -115,7 +115,7 @@ int is_valid_email(const char *email)
     return 0;
 
   p++; // Skip the @
-  at_count = 1;
+  at_count = 0;
   prev_char = '\0';
 
   // Validate domain part

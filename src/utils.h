@@ -288,11 +288,11 @@ bool IS_OUTDOORS(int r);
 
 #define IS_ROOM( room, flag ) (IS_SET(world[room].room_flags, (flag)) )
 
-#define SET_BIT(var, bit)  ((var) = (var) | (bit))
+#define SET_BIT(var, bit)  ((var) = (var) | ((unsigned long)bit))
 
-#define REMOVE_BIT(var, bit)  ((var) = (var) & ~(bit) )
+#define REMOVE_BIT(var, bit)  ((var) = (var) & ~((unsigned long)bit) )
 
-#define TOGGLE_BIT(var, bit) ((var) = (var) ^ (bit))
+#define TOGGLE_BIT(var, bit) ((var) = (var) ^ ((unsigned long)bit))
 #define PLR_FLAGS(ch)          ((ch)->specials.act)
 #define PLR2_FLAGS(ch)          ((ch)->specials.act2)
 #define PLR3_FLAGS(ch)	    ((ch)->specials.act3)

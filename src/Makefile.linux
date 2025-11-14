@@ -15,7 +15,7 @@ LDFLAGS += -L/usr/lib/mysql -L./ships -fno-stack-protector
 
 OPTS    = -O0 -march=core2
 
-CFLAGS = -g -Wno-write-strings -fpermissive -fno-stack-protector -std=gnu++98 -Wno-error=address -Wno-format-truncation
+CFLAGS = -g -Wno-write-strings -fpermissive -fno-stack-protector -std=c++11 -Wno-error=address -Wno-format-truncation
 #CFLAGS += -D__NO_MYSQL__
 CFLAGS += -DTEST_MUD
 
