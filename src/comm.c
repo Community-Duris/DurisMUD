@@ -2261,7 +2261,7 @@ int process_output(P_desc t)
  // t->character) >= 1 && (STATE(t) != CON_TEXTED) )   arih: why remove color? its ugly!
 
   if( IS_ANSI_TERM(t) && (STATE(t) != CON_TEXTED) &&
-      (!realChar || GET_LEVEL(t->character) >= 1) )
+      (!realChar || (t->character && GET_LEVEL(t->character) >= 1)))
   {
     flg = TRUE;
   }
@@ -2349,7 +2349,7 @@ int process_output(P_desc t)
                 was_upper = FALSE;
               }
               snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[%s%s%sm", bold ? "1;" : "",
-                      blink ? (t->character && PLR3_FLAGGED(t->character, PLR3_UNDERLINE) ? "4;" : "5;") : "",
+                      blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
                       (bg ? color_table[k].bg_code : color_table[k].fg_code));
               j += (5 + (bold ? 2 : 0) + (blink ? 2 : 0));
             }
@@ -2388,7 +2388,7 @@ int process_output(P_desc t)
                 was_upper = FALSE;
               }
               snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[%s%s%s;%sm", bold ? "1;" : "",
-                      blink ? (PLR3_FLAGGED(t->character, PLR3_UNDERLINE) ? "4;" : "5;") : "",
+                      blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
                       color_table[bg].bg_code, color_table[k].fg_code);
               j += (8 + (bold ? 2 : 0) + (blink ? 2 : 0));
             }

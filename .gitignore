@@ -8,6 +8,7 @@
 /gmon.out
 /areas/de/src/cscope.out
 cscope.out
+*.a
 *.o
 *.backup
 *~
