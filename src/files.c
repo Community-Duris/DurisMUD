@@ -714,6 +714,105 @@ void writeStatus(nlohmann::json& data, P_char ch, bool updateTime )
 
     ch->player.time.saved = tmpl;
 }
+
+// Writes the list of affects starting with af to the string buf.
+// af->duration updated with updateShortAffects(ch); please make sure this is called,
+//   or you will have timers being reset each time a player rents out / re enters game.
+void writeAffects( nlohmann::json& data, struct affected_type *af )
+{
+  int i = 0;
+  P_event  tmp;
+  signed short count = 0;
+  struct affected_type *first = af;
+  nlohmann::json arr = nlohmann::json::array();
+  
+  data["affects"]["affect_version"] = SAV_AFFVERS;
+
+  while( af )
+  {
+    if( !IS_SET(af->flags, AFFTYPE_NOSAVE) )
+    {
+      count++;
+    }
+    af = af->next;
+  }
+
+  data["affects"]["count"] = count;
+
+  for( af = first; af; af = af->next )
+  {
+    nlohmann::json obj = nlohmann::json::object();
+
+    byte     custom_messages = 0;       /* 0 - none, 1 - to_char, 2 - to_room, 3 - both */
+
+    if( IS_SET(af->flags, AFFTYPE_NOSAVE) )
+    {
+      continue;
+    }
+
+#ifndef _PFILE_
+    if (af->wear_off_message_index != 0)
+    {
+      if (skills[af->type].wear_off_char[af->wear_off_message_index]) ;
+      custom_messages = 1;
+      if (skills[af->type].wear_off_room[af->wear_off_message_index]) ;
+      custom_messages |= 2;
+    }
+#endif
+
+    obj["custom_messages"] = custom_messages;
+
+#ifndef _PFILE_
+    if (custom_messages & 1)
+    {
+      obj["wear_off_char_message"] = SAFE_STRING(skills[af->type].wear_off_char[af->wear_off_message_index]);
+    }
+    if (custom_messages & 2)
+    {
+      obj["wear_off_room_message"] = SAFE_STRING(skills[af->type].wear_off_char[af->wear_off_message_index]);
+    }
+#endif
+
+    obj["type"] = af->type;
+
+    if( IS_SET(af->flags, AFFTYPE_SHORT) )
+    {
+
+#ifndef _PFILE_
+      for (tmp = event_list; tmp; tmp = tmp->next_event)
+        if ((struct affected_type *) tmp->target.t_arg == af)
+          break;
+
+      if (tmp != NULL)
+      {
+        obj["event_time_pulses"] = event_time(tmp, T_PULSES);
+      }
+      else
+#endif
+      // af->duration updated with updateShortAffects(ch), but we want secs to save not pulses.
+      obj["event_time_seconds"] = af->duration/WAIT_SEC;
+    }
+    else
+    {
+      obj["duration"] = af->duration;
+    }
+
+    obj["flags"] = af->flags;
+    obj["modifier"] = af->modifier;
+    obj["location"] = af->location;
+    obj["bitvector"] = af->bitvector;
+    obj["bitvector2"] = af->bitvector2;
+    obj["bitvector3"] = af->bitvector3;
+    obj["bitvector4"] = af->bitvector4;
+    obj["bitvector5"] = af->bitvector5;
+    obj["bitvector6"] = 0;
+
+    arr.emplace_back(obj);
+    i++;
+  }
+
+    data["affects"]["aff_list"]         = arr;
+}
 #endif
 // This function updates ch's short affect durations for saving purposes.
 //   When called, it walks through ch's affects and finds the corresponding
@@ -2011,6 +2110,7 @@ int writeCharacter(P_char ch, int type, int room)
 
   buf += writeSkills(buf, ch, MAX_SKILLS);
 
+
   ADD_INT(witness_off, (int) (buf - buff));
 
   buf += writeWitness(buf, ch->specials.witnessed);
@@ -2019,6 +2119,10 @@ int writeCharacter(P_char ch, int type, int room)
 
   updateShortAffects(ch);
   buf += writeAffects(buf, ch->affected);
+
+#ifdef ENABLE_JSON_PFILE
+  writeAffects(data, ch->affected);
+#endif
 
   ADD_INT(item_off, (int) (buf - buff));
 
