@@ -28,6 +28,8 @@
 /* defines */
 #define ENABLE_JSON_PFILE
 
+#define SAFE_STRING(str) str == NULL ? "" : str
+
 #define SAV_STATVERS  47
 #define SAV_SKILLVERS 2
 #define SAV_ITEMVERS  35
