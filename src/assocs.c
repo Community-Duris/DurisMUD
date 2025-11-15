@@ -472,8 +472,8 @@ void Guild::save( )
 
   // Print the name first.
   snprintf(write_buf, MAX_STRING_LENGTH, "%s\n", name );
-  // Then the guild number and frag info.
-  snprintf(buf, MAX_STR_NORMAL, "%u %lu %lu %s\n", id_number, frags.frags, frags.top_frags, frags.topfragger );
+  // Then the guild racewar and frag info.
+  snprintf(buf, MAX_STR_NORMAL, "%u %lu %lu %s\n", racewar, frags.frags, frags.top_frags, frags.topfragger );
 
   strcat( write_buf, buf );
   // Then the default guild titles

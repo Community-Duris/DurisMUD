@@ -3137,7 +3137,7 @@ void spell_rest( int level, P_char ch, char *arg, int type, P_char victim, P_obj
   af.type = TAG_RESTED;
   af.duration = 150;
   af.flags = AFFTYPE_PERM | AFFTYPE_NODISPEL | AFFTYPE_OFFLINE;
-  affect_to_char(ch, &af);
+  affect_to_char(victim, &af);
 
   act( "You give $N a rested bonus.", FALSE, ch, NULL, victim, TO_CHAR );
   debug( "%s gives %s a rested bonus!", J_NAME(ch), J_NAME(victim) );

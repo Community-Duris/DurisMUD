@@ -65,7 +65,7 @@ extern struct ctfData ctfdata[];
 // Max_btype + 1 since we have a null ender.
 struct boon_types_struct boon_types[MAX_BTYPE+1] = {
   {"none",  "No bonus exists"},
-  {"expm",  "Gain %d% bonus to exp"},
+  {"expm",  "Gain %d%% bonus to exp"},
   {"exp",   "Gain exp"},
   {"epic",  "Gain %d epics"},
   {"cash",  "Receive %s"},

@@ -10465,8 +10465,9 @@ void newb_spellup(P_char ch, P_char victim)
     spell_agility(61, ch, 0, SPELL_TYPE_SPELL, victim, 0);
     spell_dexterity(61, ch, 0, SPELL_TYPE_SPELL, victim, 0);
     spell_accel_healing(61, ch, 0, SPELL_TYPE_SPELL, victim, 0);
+	spell_rest(61, ch, 0, SPELL_TYPE_SPELL, victim, 0);
 
-    send_to_char("\nEnjoy your blessings.\n", victim);
+	send_to_char("\nEnjoy your blessings.\n", victim);
 }
 
 void do_newb_spellup_all(P_char ch, char *arg, int cmd)
@@ -10477,7 +10478,7 @@ void do_newb_spellup_all(P_char ch, char *arg, int cmd)
   {
     if( d->connected == CON_PLAYING && ch != d->character )
     {
-      if (GET_LEVEL(d->character) <= 36)
+      if (GET_LEVEL(d->character) <= 60)
       {
         newb_spellup(ch, d->character);
       }
