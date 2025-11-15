@@ -31,6 +31,7 @@
 #include "json/json.hpp"
 
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 extern P_char character_list;
@@ -497,6 +498,197 @@ int writeStatus(char *buf, P_char ch, bool updateTime )
   return (int) (buf - start);
 }
 
+#ifdef ENABLE_JSON_PFILE
+/*
+ * following are functions that write data to disk (or prepare data for
+ * writing).  JAB
+ */
+
+void writeStatus(nlohmann::json& data, P_char ch, bool updateTime )
+{
+  //char    *start = buf;
+  int      tmp, i;
+  long     tmpl;
+  struct affected_type *af, *next_af;
+/*  sh_int dummy_short = 0; */
+
+  ADD_BYTE_JSON(data, "stat_version", (char) SAV_STATVERS);
+  ADD_STRING_JSON(data, "name", GET_NAME(ch));
+  ADD_INT_JSON(data, "pid", GET_PID(ch));
+  ADD_BYTE_JSON(data, "screen_length", ch->only.pc->screen_length);
+  ADD_STRING_JSON(data, "pwd", ch->only.pc->pwd);
+  ADD_STRING_JSON(data, "short_descr", ch->player.short_descr);
+  ADD_STRING_JSON(data, "long_descr", ch->player.long_descr);
+  ADD_STRING_JSON(data, "description", ch->player.description);
+  ADD_STRING_JSON(data, "title", GET_TITLE(ch));
+  ADD_INT_JSON(data, "m_class", ch->player.m_class);
+  ADD_INT_JSON(data, "secondary_class", ch->player.secondary_class);
+  ADD_BYTE_JSON(data, "spec", ch->player.spec);
+  ADD_BYTE_JSON(data, "race", GET_RACE(ch));
+  ADD_BYTE_JSON(data, "racewar", GET_RACEWAR(ch));
+  ADD_BYTE_JSON(data, "level", GET_LEVEL(ch));
+  ADD_BYTE_JSON(data, "sex", GET_SEX(ch));
+  ADD_SHORT_JSON(data, "weight", ch->player.weight);
+  ADD_SHORT_JSON(data, "height", ch->player.height);
+  ADD_BYTE_JSON(data, "size", GET_SIZE(ch));
+  ADD_INT_JSON(data, "home", GET_HOME(ch));
+  ADD_INT_JSON(data, "birthplace", GET_BIRTHPLACE(ch));
+  ADD_INT_JSON(data, "orig_birthplace", GET_ORIG_BIRTHPLACE(ch));
+  ADD_LONG_JSON(data, "birth", ch->player.time.birth);
+
+  if( updateTime )
+  {
+    tmpl = time(0);
+    tmp = ch->player.time.played + (int) (tmpl - ch->player.time.logon);
+    ADD_INT_JSON(data, "time_age_seconds", tmp);            /* player age in secs */
+    ADD_LONG_JSON(data, "time_last_save", tmpl);          /* last save time */
+  }
+  else
+  {
+    ADD_INT_JSON(data, "time_played", ch->player.time.played);
+    ADD_LONG_JSON(data, "time_saved", ch->player.time.saved);
+  }
+
+  ADD_SHORT_JSON(data, "time_perm_aging", ch->player.time.perm_aging);
+
+  for (i = 0; i < MAX_CIRCLE + 1; i++)
+    ADD_BYTE_JSON(data, "undead_spell_slot_", ch->specials.undead_spell_slots[i]);
+
+  ADD_INT_JSON(data, "last_level", 0);              //!!! last_level
+
+  ch->player.time.saved = tmpl;
+
+  // Arih : Changed from ADD_LONG to ADD_INT because pc_timer is int array, not long array.
+  // This was causing offset mismatch errors during character load (restoreStatus offset mismatch).
+  for (i = 0; i < NUMB_PC_TIMERS; i++)
+    ADD_LONG_JSON(data, "pc_timer_", ch->only.pc->pc_timer[i]);
+
+//  if (0 && ch->only.pc->trophy)
+//  {
+//    struct trophy_data *tr;
+//
+//    tmp = 0;
+//    for (tr = ch->only.pc->trophy; tr; tr = tr->next)
+//      tmp++;
+//    ADD_BYTE_JSON(data, "tropy_count", tmp);
+//    for (tr = ch->only.pc->trophy; tr; tr = tr->next)
+//    {
+//      ADD_INT_JSON(data, "trophy_vnum", tr->vnum);
+//      ADD_INT_JSON(data, "trophy_kills", tr->kills);
+//    }
+//  }
+//  else
+//  {
+//    ADD_BYTE_JSON(data, "trophy", 0);
+//  }
+
+  ADD_SHORT_JSON(data, "max_tongue", (short) MAX_TONGUE);
+  
+  for (tmp = 0; tmp < MAX_TONGUE; tmp++)
+    ADD_BYTE_JSON(data, "language", GET_LANGUAGE(ch, tmp));
+
+  ADD_SHORT_JSON(data, "max_intro", (short) MAX_INTRO);
+  
+  for (tmp = 0; tmp < MAX_INTRO; tmp++)
+  {
+    ADD_INT_JSON(data, "introd_list_", ch->only.pc->introd_list[tmp]);
+    ADD_LONG_JSON(data, "introd_times_", ch->only.pc->introd_times[tmp]);
+  }
+  
+  for (tmp = 0; tmp < MAX_FORGE_ITEMS; tmp++)
+  {      
+    ADD_INT_JSON(data, "learned_forged_list_", ch->only.pc->learned_forged_list[tmp]);
+  }
+   
+  ADD_BYTE_JSON(data, "stat_str", ch->base_stats.Str);
+  ADD_BYTE_JSON(data, "stat_dex", ch->base_stats.Dex);
+  ADD_BYTE_JSON(data, "stat_agi", ch->base_stats.Agi);
+  ADD_BYTE_JSON(data, "stat_con", ch->base_stats.Con);
+  ADD_BYTE_JSON(data, "stat_pow", ch->base_stats.Pow);
+  ADD_BYTE_JSON(data, "stat_int", ch->base_stats.Int);
+  ADD_BYTE_JSON(data, "stat_wis", ch->base_stats.Wis);
+  ADD_BYTE_JSON(data, "stat_cha", ch->base_stats.Cha);
+  ADD_BYTE_JSON(data, "stat_kar", ch->base_stats.Kar);
+  ADD_BYTE_JSON(data, "stat_luk", ch->base_stats.Luk);
+
+  ADD_SHORT_JSON(data, "mana", GET_MANA(ch));
+  ADD_SHORT_JSON(data, "base_mana", ch->points.base_mana);
+  ADD_SHORT_JSON(data, "hit", MAX(0, GET_MAX_HIT(ch)-GET_HIT(ch)));
+  ADD_BYTE_JSON(data, "spells_memmed", ch->only.pc->spells_memmed[MAX_CIRCLE]);
+  ADD_SHORT_JSON(data, "base_hit", ch->points.base_hit);
+  ADD_SHORT_JSON(data, "vitality", GET_VITALITY(ch));
+  ADD_SHORT_JSON(data, "base_vitality", ch->points.base_vitality);
+
+  ADD_INT_JSON(data, "copper", GET_COPPER(ch));
+  ADD_INT_JSON(data, "silver", GET_SILVER(ch));
+  ADD_INT_JSON(data, "gold", GET_GOLD(ch));
+  ADD_INT_JSON(data, "platinum", GET_PLATINUM(ch));
+  ADD_INT_JSON(data, "exp", GET_EXP(ch));
+  ADD_INT_JSON(data, "nil_", 0);
+  ADD_INT_JSON(data, "epics", ch->only.pc->epics);
+  ADD_INT_JSON(data, "epic_skill_points", ch->only.pc->epic_skill_points);
+  ADD_INT_JSON(data, "skillpoints", ch->only.pc->skillpoints);
+  ADD_INT_JSON(data, "spell_bind_used", ch->only.pc->spell_bind_used);
+
+  ADD_INT_JSON(data, "act", ch->specials.act);
+  ADD_INT_JSON(data, "act2", ch->specials.act2);
+  ADD_INT_JSON(data, "vote", ch->only.pc->vote);
+  ADD_INT_JSON(data, "alignment", ch->specials.alignment);
+  ADD_INT_JSON(data, "nil__", 0);
+  ADD_SHORT_JSON(data, "prestige", ch->only.pc->prestige);
+  ADD_SHORT_JSON(data, "guild_id", ch->specials.guild->get_id());
+  ADD_INT_JSON(data, "guild_status", ch->specials.guild_status);
+  ADD_LONG_JSON(data, "time_left_guild", ch->only.pc->time_left_guild);
+  ADD_BYTE_JSON(data, "nb_left_guild", ch->only.pc->nb_left_guild);
+  ADD_LONG_JSON(data, "time_unspecced", ch->only.pc->time_unspecced);
+
+  ADD_LONG_JSON(data, "frags", ch->only.pc->frags);
+  ADD_LONG_JSON(data, "oldfrags", ch->only.pc->oldfrags);
+
+  /* granted data */
+
+  ADD_INT_JSON(data, "numb_gcmd", ch->only.pc->numb_gcmd);
+
+  for (tmp = 0; tmp < ch->only.pc->numb_gcmd; tmp++)
+    ADD_INT_JSON(data, "gcmd_arr_", ch->only.pc->gcmd_arr[tmp]);
+
+  for (tmp = 0; tmp < MAX_COND; tmp++)
+    ADD_BYTE_JSON(data, "", ch->specials.conditions[tmp]);
+
+  ADD_STRING_JSON(data, "poofIn", ch->only.pc->poofIn);
+  ADD_STRING_JSON(data, "poofOut", ch->only.pc->poofOut);
+  ADD_STRING_JSON(data, "poofInSound", ch->only.pc->poofInSound);
+  ADD_STRING_JSON(data, "poofOutSound", ch->only.pc->poofOutSound);
+  ADD_BYTE_JSON(data, "echo_toggle", ch->only.pc->echo_toggle);
+  ADD_SHORT_JSON(data, "prompt", ch->only.pc->prompt);
+  ADD_LONG_JSON(data, "wiz_invis", ch->only.pc->wiz_invis);
+  ADD_LONG_JSON(data, "law_flags", ch->only.pc->law_flags);
+  ADD_SHORT_JSON(data, "wimpy", ch->only.pc->wimpy);
+  ADD_SHORT_JSON(data, "aggressive", ch->only.pc->aggressive);
+  ADD_BYTE_JSON(data, "highest_level", ch->only.pc->highest_level);
+  ADD_INT_JSON(data, "bank_copper", GET_BALANCE_COPPER(ch)); /* bank account */
+  ADD_INT_JSON(data, "bank_silver", GET_BALANCE_SILVER(ch)); /* bank account */
+  ADD_INT_JSON(data, "bank_gold", GET_BALANCE_GOLD(ch));   /* bank account */
+  ADD_INT_JSON(data, "bank_platinum", GET_BALANCE_PLATINUM(ch));       /* bank account */
+  ADD_LONG_JSON(data, "numb_deaths", ch->only.pc->numb_deaths);
+
+
+  ADD_INT_JSON(data, "quest_active", ch->only.pc->quest_active);
+  ADD_INT_JSON(data, "quest_mob_vnum", ch->only.pc->quest_mob_vnum);
+  ADD_INT_JSON(data, "quest_type", ch->only.pc->quest_type);
+  ADD_INT_JSON(data, "quest_accomplished", ch->only.pc->quest_accomplished );
+  ADD_INT_JSON(data, "quest_started", ch->only.pc->quest_started );
+  ADD_INT_JSON(data, "quest_zone_number", ch->only.pc->quest_zone_number );
+  ADD_INT_JSON(data, "quest_giver", ch->only.pc->quest_giver);
+  ADD_INT_JSON(data, "quest_level", ch->only.pc->quest_level );
+  ADD_INT_JSON(data, "quest_receiver", ch->only.pc->quest_receiver );
+  ADD_INT_JSON(data, "quest_shares_left", ch->only.pc->quest_shares_left );
+  ADD_INT_JSON(data, "quest_kill_how_many", ch->only.pc->quest_kill_how_many);
+  ADD_INT_JSON(data, "quest_kill_original", ch->only.pc->quest_kill_original);
+  ADD_INT_JSON(data, "quest_map_room", ch->only.pc->quest_map_room );
+  ADD_INT_JSON(data, "quest_map_bought", ch->only.pc->quest_map_bought );
+}
+#endif
 // This function updates ch's short affect durations for saving purposes.
 //   When called, it walks through ch's affects and finds the corresponding
 //   event for each short affect.  It then updates the duration of the affect
@@ -1660,11 +1852,13 @@ int writeCharacter(P_char ch, int type, int room)
   FILE    *f;
   P_obj    obj, obj2;
   char    *buf, *skill_off, *affect_off, *item_off, *size_off, *witness_off, *tmp;
-  char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
+  char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH], Gbuf3[MAX_STRING_LENGTH];
   int      i, bak;
   struct affected_type *af;
   static char buff[SAV_MAXSIZE * 2];
-
+#ifdef ENABLE_JSON_PFILE
+  nlohmann::json data;
+#endif
   struct stat statbuf;
 
   if( !ch || !GET_NAME(ch) )
@@ -1752,6 +1946,21 @@ int writeCharacter(P_char ch, int type, int room)
                                  * save time
                                  */
 
+#ifdef ENABLE_JSON_PFILE
+  ADD_BYTE_JSON(data, "save_version", (char) SAV_SAVEVERS);
+  ADD_BYTE_JSON(data, "short_size", (char) (short_size));
+  ADD_BYTE_JSON(data, "int_size", (char) (int_size));
+  ADD_BYTE_JSON(data, "long_size", (char) (long_size));
+  ADD_BYTE_JSON(data, "restore_type", (char) type);
+  ADD_INT_JSON(data, "skill_off", (int) 0);
+  ADD_INT_JSON(data, "witness_off", (int) 0);
+  ADD_INT_JSON(data, "affect_off", (int) 0);
+  ADD_INT_JSON(data, "item_off", (int) 0);
+  ADD_INT_JSON(data, "size_off", (int) 0);
+  ADD_INT_JSON(data, "surname", (ch->specials.act3) );
+  ADD_INT_JSON(data, "room", room);
+  ADD_LONG_JSON(data, "time", time(0));
+#endif
   /*
    * unequip everything and remove affects before saving
    */
@@ -1766,6 +1975,11 @@ int writeCharacter(P_char ch, int type, int room)
 
   buf += writeStatus(buf, ch,
     ((type != RENT_POOFARTI) && (type != RENT_SWAPARTI) && (type != RENT_FIGHTARTI)) ? TRUE : FALSE);
+
+#ifdef ENABLE_JSON_PFILE
+  writeStatus(data, ch,
+    ((type != RENT_POOFARTI) && (type != RENT_SWAPARTI) && (type != RENT_FIGHTARTI)) ? TRUE : FALSE);
+#endif
 
   ADD_INT(skill_off, (int) (buf - buff));
 
@@ -1941,6 +2155,34 @@ int writeCharacter(P_char ch, int type, int room)
     else
       fclose(f);
   }
+
+#ifdef ENABLE_JSON_PFILE
+
+  strcpy(Gbuf3, Gbuf1);
+  strcat(Gbuf3, ".json");
+
+  data["name"] = GET_NAME(ch);
+  //data["blob"] = buff;
+
+  std::ofstream output_file(Gbuf3);
+
+  if (!output_file.is_open())  
+  {
+      int      tmp_errno;
+
+      tmp_errno = errno;
+      logit(LOG_FILE, "Couldn't write to player save file!\n");
+      logit(LOG_FILE, "   fwrite failed, errno = %d\n", tmp_errno);
+      wizlog(AVATAR, "&+R&-LPANIC!&N  Error writing pfile for %s!",
+            GET_NAME(ch));
+  } 
+  else 
+  {
+      auto j = nlohmann::ordered_json::parse(data);
+      output_file << std::setw(4) << j << std::endl;
+      output_file.close();
+  }
+#endif
 
   switch (bak)
   {

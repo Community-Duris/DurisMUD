@@ -26,6 +26,7 @@
 #include "utils.h"
 
 /* defines */
+#define ENABLE_JSON_PFILE
 
 #define SAV_STATVERS  47
 #define SAV_SKILLVERS 2
@@ -117,6 +118,20 @@
                                           ADD_SHORT(buf, l_); \
                                           bcopy(s, buf, (int)l_); buf += l_; \
                                } else { ADD_SHORT(buf, 0); } }
+
+#define ADD_BYTE(buf, b) { *(char *)buf = b; buf++; }
+
+#ifdef ENABLE_JSON_PFILE
+#define ADD_SHORT_JSON(data, name, s) { data[name] = s; }
+
+#define ADD_INT_JSON(data, name, i) { data[name] = i; }
+
+#define ADD_LONG_JSON(data, name, l) { data[name] = l; }
+
+#define ADD_STRING_JSON(data, name, s) { if(s != NULL) data[name] = s; else data[name] = ""; }
+
+#define ADD_BYTE_JSON(data, name, b) { data[name] = b; }
+#endif
 
 #define GET_BYTE(buf) (*(char *)((buf)++))
 #define GET_SHORT(buf) getShort(&buf)
