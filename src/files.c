@@ -500,10 +500,9 @@ int writeStatus(char *buf, P_char ch, bool updateTime )
 
 #ifdef ENABLE_JSON_PFILE
 /*
- * following are functions that write data to disk (or prepare data for
- * writing).  JAB
+ * following are functions that write data to disk in json format (or prepare data for
+ * writing).  MWH
  */
-
 
 void writeStatus(nlohmann::json& data, P_char ch, bool updateTime )
 {
@@ -720,7 +719,6 @@ void writeStatus(nlohmann::json& data, P_char ch, bool updateTime )
 //   or you will have timers being reset each time a player rents out / re enters game.
 void writeAffects( nlohmann::json& data, struct affected_type *af )
 {
-  int i = 0;
   P_event  tmp;
   signed short count = 0;
   struct affected_type *first = af;
@@ -808,10 +806,65 @@ void writeAffects( nlohmann::json& data, struct affected_type *af )
     obj["bitvector6"] = 0;
 
     arr.emplace_back(obj);
-    i++;
   }
 
     data["affects"]["aff_list"]         = arr;
+}
+
+void writeSkills( nlohmann::json& data, P_char ch, int num)
+{
+  int      i;
+  nlohmann::json arr = nlohmann::json::array();
+
+  data["skill"]["skill_version"] = SAV_SKILLVERS;
+  data["skill"]["count"] = num;
+
+  /* Save the spell memorized, and skill usages info -DCL */
+  for (i = 0; i < num; i++)
+  {
+    nlohmann::json obj = nlohmann::json::object();
+    obj["name"] = skills[i].name;
+    obj["index"] = i;
+    obj["learned"] = ch->only.pc->skills[i].learned;
+    obj["taught"] = ch->only.pc->skills[i].taught;
+    arr.emplace_back(obj);
+  }
+
+  data["skill"]["skill_list"] = arr;
+}
+
+/* write witness record (TASFALEN) */
+
+void writeWitness(nlohmann::json& data, wtns_rec * rec)
+{
+  wtns_rec *first = rec;
+  int      count = 0;
+  nlohmann::json arr = nlohmann::json::array();
+
+  while (rec)
+  {
+    count++;
+    rec = rec->next;
+  }
+
+  data["witness"]["witness_version"]  = SAV_WTNSVERS;
+  data["witness"]["count"] = count;
+
+  rec = first;
+
+  while (rec)
+  {
+    nlohmann::json obj = nlohmann::json::object();
+    obj["attacker"] = SAFE_STRING(rec->attacker);
+    obj["victim"] = SAFE_STRING(rec->victim);
+    obj["time"] = rec->time;
+    obj["crime"] = rec->crime;
+    obj["room"] = rec->room;
+    arr.emplace_back(obj);
+    rec = rec->next;
+  }
+
+  data["witness"]["witness_list"] = arr;
 }
 #endif
 // This function updates ch's short affect durations for saving purposes.
@@ -2100,7 +2153,6 @@ int writeCharacter(P_char ch, int type, int room)
 
   buf += writeStatus(buf, ch,
     ((type != RENT_POOFARTI) && (type != RENT_SWAPARTI) && (type != RENT_FIGHTARTI)) ? TRUE : FALSE);
-
 #ifdef ENABLE_JSON_PFILE
   writeStatus(data, ch,
     ((type != RENT_POOFARTI) && (type != RENT_SWAPARTI) && (type != RENT_FIGHTARTI)) ? TRUE : FALSE);
@@ -2109,17 +2161,21 @@ int writeCharacter(P_char ch, int type, int room)
   ADD_INT(skill_off, (int) (buf - buff));
 
   buf += writeSkills(buf, ch, MAX_SKILLS);
-
+#ifdef ENABLE_JSON_PFILE
+    writeSkills(data, ch, MAX_SKILLS);
+#endif
 
   ADD_INT(witness_off, (int) (buf - buff));
 
   buf += writeWitness(buf, ch->specials.witnessed);
+#ifdef ENABLE_JSON_PFILE
+    writeWitness(data, ch->specials.witnessed);
+#endif
 
   ADD_INT(affect_off, (int) (buf - buff));
 
   updateShortAffects(ch);
   buf += writeAffects(buf, ch->affected);
-
 #ifdef ENABLE_JSON_PFILE
   writeAffects(data, ch->affected);
 #endif
