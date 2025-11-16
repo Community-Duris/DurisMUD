@@ -28,8 +28,9 @@
 #include "vnum.obj.h"
 #include "assocs.h"
 #include "storage_lockers.h"
+#ifdef ENABLE_JSON_PFILE
 #include "json/json.hpp"
-
+#endif
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -42,6 +43,9 @@ extern P_desc descriptor_list;
 extern int spl_table[TOTALLVLS][MAX_CIRCLE];
 static P_event save_event;
 char *ibuf;
+#ifdef ENABLE_JSON_PFILE
+nlohmann::json iarr = nlohmann::json::array();
+#endif
 static int corpse_room;
 static int int_size = sizeof(int);
 static int long_size = sizeof(long);
@@ -866,6 +870,225 @@ void writeWitness(nlohmann::json& data, wtns_rec * rec)
 
   data["witness"]["witness_list"] = arr;
 }
+
+nlohmann::json writeObject(P_obj obj, int o_f_flag, ulong o_u_flag, int count, int loc)
+{
+  int      i;
+  struct extra_descr_data *tmp;
+  struct obj_affect *af;
+
+  if( !obj )
+    return FALSE;
+  
+  save_count += count;
+
+  nlohmann::json item = nlohmann::json::object();
+
+  item["flags"]["o_f_flag"] = o_f_flag;
+  item["virtual_number"] = obj_index[obj->R_num].virtual_number;
+  item["craftsmanship"] = obj->craftsmanship;
+  item["condition"] = obj->condition;
+
+  if (o_f_flag & O_F_WORN)
+    item["worn_location"] = loc;
+
+  if (o_f_flag & O_F_COUNT)
+    item["count"] = count;
+
+  if (o_f_flag & O_F_AFFECTS)
+  {
+    for (i = 0, af = obj->affects; af; af = af->next) i++;
+
+    item["affects"]["count"] = i;
+    
+    nlohmann::json affect_list = nlohmann::json::array();
+    for (af = obj->affects; af; af = af->next)
+    {
+      nlohmann::json affect = nlohmann::json::object();
+      affect["obj_affect_time"] = obj_affect_time(obj, af);
+      affect["type"] = af->type;
+      affect["data"] = af->data;
+      affect["extra2"] = af->extra2;
+      affect_list.emplace_back(affect);
+    }
+
+    item["affects"]["affect_list"] = affect_list;
+  }
+
+  if (o_u_flag)
+  {
+    item["flags"]["o_u_flag"] = o_u_flag;
+
+    if (o_u_flag & O_U_KEYS)
+      item["strings"]["name"] = SAFE_STRING(obj->name);
+
+    if (o_u_flag & O_U_DESC1)
+      item["strings"]["description"] = SAFE_STRING(obj->description);
+
+    if (o_u_flag & O_U_DESC2)
+      item["strings"]["short_description"] = SAFE_STRING(obj->short_description);
+
+    if (o_u_flag & O_U_DESC3)
+      item["strings"]["action_description"] = SAFE_STRING(obj->action_description);
+
+    if (o_u_flag & O_U_EDESC)
+    {
+      int nDescs = 0;
+      struct extra_descr_data *ed = obj->ex_description;
+      while (ed)
+      {
+        if (ed->keyword)
+          nDescs++;
+        ed = ed->next;
+      }
+      
+      // count.  foreach: keyword + desc
+      item["strings"]["ex_descriptions"]["count"] = nDescs;
+
+      ed = obj->ex_description;
+      nlohmann::json ex_descriptions = nlohmann::json::array();
+      while (ed)
+      {
+        nlohmann::json ex_description = nlohmann::json::object();
+        if (ed->keyword)
+        {
+          ex_description["keyword"] = SAFE_STRING(ed->keyword);
+          ex_description["description"] = SAFE_STRING(ed->description);
+          ex_descriptions.emplace_back(ex_description);
+        }
+        ed = ed->next;
+      }
+      item["strings"]["ex_descriptions"]["ex_description_list"] = ex_descriptions;
+    }
+
+    for (i = 0; i < 4; i++)
+    {
+      if (o_u_flag & (1 << (i + 4)))
+      {
+        char buf[25];
+        snprintf(buf, 25, "value_%d", i);
+        item["values"][buf] = obj->value[i];
+      }
+    }
+
+    if (o_u_flag & O_U_VAL4)
+      item["values"]["value_4"] = obj->value[4];
+
+    if (o_u_flag & O_U_VAL5)
+      item["values"]["value_5"] = obj->value[5];
+
+    if (o_u_flag & O_U_VAL6)
+      item["values"]["value_6"] = obj->value[6];
+
+    if (o_u_flag & O_U_VAL7)
+      item["values"]["value_7"] = obj->value[7];
+
+    if (o_u_flag & O_U_TIMER)
+    {
+      for (i = 0; i < 4; i++)
+      {
+        char buf[25];
+        snprintf(buf, 25, "timer_%d", i);
+        item["timers"][buf] = obj->timer[i];
+      }
+    }
+
+    if (o_u_flag & O_U_TRAP)
+    {
+      item["trap"]["trap_eff"] = obj->trap_eff;
+      item["trap"]["trap_dam"] = obj->trap_dam;
+      item["trap"]["trap_charge"] = obj->trap_charge;
+      item["trap"]["trap_level"] = obj->trap_level;
+    }
+
+    if (o_u_flag & O_U_TYPE)
+      item["type"] = obj->type;
+
+    if (o_u_flag & O_U_WEAR)
+      item["wear_flags"] = obj->wear_flags;
+
+    if (o_u_flag & O_U_EXTRA)
+      item["extra_flags"] = obj->extra_flags;
+
+    if (o_u_flag & O_U_ANTI)
+      item["anti_flags"] = obj->anti_flags;
+
+    if (o_u_flag & O_U_ANTI2)
+      item["anti2_flags"] = obj->anti2_flags;
+
+    if (o_u_flag & O_U_EXTRA2)
+      item["extra2_flags"] = obj->extra2_flags;
+
+    if (o_u_flag & O_U_WEIGHT)
+      item["weight"] = obj->weight;
+
+    if (o_u_flag & O_U_MATERIAL)
+      item["material"] = obj->material;
+
+/*    if (o_u_flag & O_U_SPACE)
+        item["space"] = obj->space;
+*/
+    if (o_u_flag & O_U_COST)
+      item["cost"] = obj->cost;
+
+    if (o_u_flag & O_U_BV1)
+      item["bitvector"] = obj->bitvector;
+
+    if (o_u_flag & O_U_BV2)
+      item["bitvector2"] = obj->bitvector2;
+
+    if (o_u_flag & O_U_BV3)
+      item["bitvector3"] = obj->bitvector3;
+
+    if (o_u_flag & O_U_BV4)
+      item["bitvector4"] = obj->bitvector4;
+
+    if (o_u_flag & O_U_BV5)
+      item["bitvector5"] = obj->bitvector5;
+
+    if (o_u_flag & O_U_AFFS)
+    {
+      nlohmann::json obj_affects = nlohmann::json::array();
+      for (i = 0; i < MAX_OBJ_AFFECT; i++)
+      {
+        nlohmann::json obj_affect = nlohmann::json::object();
+        obj_affect["location"] = obj->affected[i].location;
+        obj_affect["modifier"] = obj->affected[i].modifier;
+        obj_affects.emplace_back(obj_affect);
+      }
+
+      item["obj_affects"]["obj_affect_list"] = obj_affects;
+    }
+  }
+  if (o_f_flag & O_F_SPELLBOOK)
+  {
+    if (!(tmp = find_spell_description(obj)))
+    {                           /*
+                                 * this _SHOULD_
+                                 * not happen..
+                                 * but will it? we
+                                 * shall see.
+                                 */
+      //ADD_INT(ibuf, 0);
+    }
+    else
+    {
+      item["spellbook"]["count"] = (MAX_SKILLS / 8) + 1;
+      
+      nlohmann::json spells = nlohmann::json::array();
+      for (i = 0; i < (MAX_SKILLS / 8) + 1; i++)
+      {
+        nlohmann::json spell = nlohmann::json::object();
+        spell["description"] = tmp->description[i];
+        spells.emplace_back(spell);
+      }
+
+      item["spellbook"]["spell_list"] = spells;
+    }
+  }
+
+	return item;
+}
 #endif
 // This function updates ch's short affect durations for saving purposes.
 //   When called, it walks through ch's affects and finds the corresponding
@@ -1230,8 +1453,12 @@ bool writeObjectlist(P_obj obj, int loc)
        * call to write it's contents (if any), and move on.
        */
 
-		if (!IS_SET(w_obj->extra_flags, ITEM_NORENT))
-		   ibuf += writeObject(w_obj, o_f_flag, o_u_flag, (ush_int) 1, loc, ibuf);
+		  if (!IS_SET(w_obj->extra_flags, ITEM_NORENT))
+      {
+		    ibuf += writeObject(w_obj, o_f_flag, o_u_flag, (ush_int) 1, loc, ibuf);
+        nlohmann::json item = writeObject(w_obj, o_f_flag, o_u_flag, (ush_int) 1, loc);
+        iarr.emplace_back(item);        
+      }
 
       if (obj_c)
         w_obj->weight += cont_wgt;
@@ -1316,7 +1543,11 @@ bool writeObjectlist(P_obj obj, int loc)
     /* okie, we have all data, let's write it out */
 
   	if (!IS_SET(w_obj->extra_flags, ITEM_NORENT))
+    {
       ibuf += writeObject(w_obj, o_f_flag, o_u_flag, (ush_int) count, loc, ibuf);
+      nlohmann::json item = writeObject(w_obj, o_f_flag, o_u_flag, (ush_int) count, loc);
+      iarr.emplace_back(item);
+    }
 
     if (obj_c)
       w_obj->weight += cont_wgt;
@@ -1326,8 +1557,8 @@ bool writeObjectlist(P_obj obj, int loc)
    * end of a list, need the marker byte
    */
 
-  if (!loc)
-    ADD_BYTE(ibuf, O_F_EOL);
+  //if (!loc)
+   // ADD_BYTE(ibuf, O_F_EOL);
 
   if (t_obj)
     extract_obj(t_obj);
@@ -1793,6 +2024,9 @@ int writeItems(char *buf, P_char ch)
 
   ibuf = buf;
 
+#ifdef ENABLE_JSON_PFILE
+  iarr.clear();
+#endif
   ADD_BYTE(ibuf, (char) SAV_ITEMVERS);
   a = countEquip(ch);           /*
                                  * including contents of worn containers
@@ -2183,6 +2417,9 @@ int writeCharacter(P_char ch, int type, int room)
   ADD_INT(item_off, (int) (buf - buff));
 
   buf += writeItems(buf, ch);
+#ifdef ENABLE_JSON_PFILE
+    data["items"] = iarr;
+#endif
 
   ADD_INT(size_off, (int) (buf - buff));
 
