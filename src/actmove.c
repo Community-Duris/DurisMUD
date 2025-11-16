@@ -3554,14 +3554,6 @@ void do_drag(P_char ch, char *argument, int cmd)
         act("$n drags $N along behind $m.", TRUE, ch, 0, tch, TO_ROOM);
         act("You drag $N along behind you.", TRUE, ch, 0, tch, TO_CHAR);
         act("$n drags you along behind $m.", TRUE, ch, 0, tch, TO_VICT);
-
-        if( (tch->specials.arrest_by != NULL) && IS_AFFECTED(tch, AFF_BOUND)
-            && !IS_NPC(ch))
-        {
-          if( CHAR_IN_TOWN(ch))
-            if( GET_CRIME_T(CHAR_IN_TOWN(ch), CRIME_CORPSE_DRAG))
-              justice_witness(ch, NULL, CRIME_AGAINST_TOWN);
-        }
       }
       return;
     }
@@ -3682,36 +3674,6 @@ void do_drag(P_char ch, char *argument, int cmd)
               obj->short_description,
               (IS_PC(ch) ? GET_NAME(ch) : ch->player.short_descr),
               world[ch->in_room].number);
-
-        strcpy(Gbuf4, obj->action_description);
-        *Gbuf4 = tolower(*Gbuf4);
-        owner = get_char(Gbuf4);
-        if( obj->value[4] == 1)
-        {
-          if( owner)
-          {
-            if( !is_linked_to(ch, owner, LNK_CONSENT) && (owner != ch))
-            {
-              if( CHAR_IN_TOWN(ch))
-              {
-                if( GET_CRIME_T(CHAR_IN_TOWN(ch), CRIME_CORPSE_DRAG))
-                {
-                  justice_witness(ch, NULL, CRIME_CORPSE_DRAG);
-                }
-              }
-            }
-          }
-          else
-          {
-            if( CHAR_IN_TOWN(ch))
-            {
-              if( GET_CRIME_T(CHAR_IN_TOWN(ch), CRIME_CORPSE_DRAG))
-              {
-                justice_witness(ch, NULL, CRIME_CORPSE_DRAG);
-              }
-            }
-          }
-        }
       }
       return;
     }

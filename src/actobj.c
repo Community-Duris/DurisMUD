@@ -785,36 +785,6 @@ void do_get(P_char ch, char *argument, int cmd)
                     }
                   }
                   get(ch, o_obj, s_obj, FALSE);
-/*
-      if (corpse_flag == 1 && s_obj->value[4] == 1) {
-        strcpy(Gbuf4, s_obj->action_description);
-        *Gbuf4 = tolower(*Gbuf4);
-        owner = get_char(Gbuf4);
-        if (owner) {
-          if (!is_linked_to(ch, owner, LNK_CONSENT) &&
-              (owner != ch)) {
-            if (CHAR_IN_TOWN(ch)) {
-              if (GET_CRIME_T(CHAR_IN_TOWN(ch),CRIME_CORPSE_LOOT)) {
-                if (GET_ITEM_TYPE(o_obj) != ITEM_MONEY) {
-                  o_obj->justice_status = J_OBJ_CORPSE;
-                  o_obj->justice_name = str_dup(s_obj->action_description);
-                }
-                looting = TRUE;
-              }
-            }
-          }
-        } else {
-          if (CHAR_IN_TOWN(ch)) {
-            if (GET_CRIME_T(CHAR_IN_TOWN(ch),CRIME_CORPSE_LOOT)) {
-              if (GET_ITEM_TYPE(o_obj) != ITEM_MONEY) {
-                o_obj->justice_status = J_OBJ_CORPSE;
-                o_obj->justice_name = str_dup(s_obj->action_description);
-              }
-              looting = TRUE;
-            }
-          }
-        }
-      }*/
 
                   total++;
                   if( IS_ARTIFACT( s_obj ) )
@@ -995,39 +965,6 @@ void do_get(P_char ch, char *argument, int cmd)
                 }
                 get(ch, o_obj, s_obj, TRUE);
 
-                /*
-                   if (corpse_flag == 1 && s_obj->value[4] == 1) {
-                   strcpy(Gbuf4, s_obj->action_description);
-                   *Gbuf4 = tolower(*Gbuf4);
-                   owner = get_char(Gbuf4);
-                   if (owner) {
-                   if (!is_linked_to(ch, owner, LNK_CONSENT) &&
-                   (owner != ch)) {
-                   if (CHAR_IN_TOWN(ch)) {
-                   if (GET_CRIME_T(CHAR_IN_TOWN(ch),CRIME_CORPSE_LOOT)) {
-                   if (GET_ITEM_TYPE(o_obj) != ITEM_MONEY) {
-                   o_obj->justice_status = J_OBJ_CORPSE;
-                   o_obj->justice_name = str_dup(s_obj->action_description);
-                   }
-                   looting = TRUE;
-                   }
-                   }
-                   }
-                   } else {
-                   if (CHAR_IN_TOWN(ch)) {
-                   if (GET_CRIME_T(CHAR_IN_TOWN(ch),CRIME_CORPSE_LOOT)) {
-                   if (GET_ITEM_TYPE(o_obj) != ITEM_MONEY) {
-                   o_obj->justice_status = J_OBJ_CORPSE;
-                   o_obj->justice_name = str_dup(s_obj->action_description);
-                   }
-                   looting = TRUE;
-                   }
-                   }
-                   }
-                   }
-
-                 */
-
                 found = TRUE;
                 if (GET_ITEM_TYPE(s_obj) == ITEM_QUIVER)
                   if (s_obj->value[3] > 0)
@@ -1084,15 +1021,7 @@ void do_get(P_char ch, char *argument, int cmd)
   room_light(ch->in_room, REAL);
 
   if(looting)
-  {
-    /* Thieves may get away with it */
     CharWait(ch, 10);
-    if (GET_CLASS(ch, CLASS_ROGUE))
-      if (GET_CHAR_SKILL(ch, SKILL_STEAL) > number(1, 101))
-        return;
-    justice_witness(ch, NULL, CRIME_CORPSE_LOOT);
-  }
-
 }
 
 void do_junk(P_char ch, char *argument, int cmd)

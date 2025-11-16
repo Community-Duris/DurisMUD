@@ -898,7 +898,6 @@ void spell_conjure_air(int level, P_char ch, char *arg, int type,
   char_to_room(mob, ch->in_room, 0);
 
   act(summons[sum].message, TRUE, mob, 0, 0, TO_ROOM);
-  justice_witness(ch, NULL, CRIME_SUMMON);
 
   mlvl = (level / 5) * 2;
   lvl = number(mlvl, mlvl * 3);
@@ -2479,7 +2478,6 @@ void spell_conjure_void_elemental(int level, P_char ch, char *arg, int type, P_c
   char_to_room(mob, ch->in_room, 0);
 
   act("&+LNegative energies coalesce and form a Voi&+wd Elemen&+Ltal!&n", TRUE, mob, 0, 0, TO_ROOM);
-  justice_witness(ch, NULL, CRIME_SUMMON);
 
   mlvl = (level / 5) * 2;
   lvl = number(mlvl, mlvl * 3);
@@ -2584,7 +2582,6 @@ void spell_conjure_ice_elemental(int level, P_char ch, char *arg, int type, P_ch
   char_to_room(mob, ch->in_room, 0);
 
   act("&+WAn Ice Elemental forms from a cold gust of air.&n", TRUE, mob, 0, 0, TO_ROOM);
-  justice_witness(ch, NULL, CRIME_SUMMON);
 
   mlvl = (level / 5) * 2;
   lvl = number(mlvl, mlvl * 3);

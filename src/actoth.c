@@ -3076,7 +3076,6 @@ void do_steal(P_char ch, char *argument, int cmd)
    */
   if (!caught)
   {
-/*    justice_witness (ch, victim, CRIME_FAKE_THEFT); */
     if (!failed)
       send_to_char("Heh heh, got away clean, too!\r\n", ch);
     else
@@ -3094,8 +3093,6 @@ void do_steal(P_char ch, char *argument, int cmd)
     REMOVE_BIT(ch->specials.affected_by, AFF_HIDE);
     act("$n has come out of hiding!", TRUE, ch, 0, 0, TO_ROOM);
   }
-
-  justice_witness(ch, victim, failed ? CRIME_ATT_THEFT : CRIME_THEFT);
 
   if ((GET_STAT(victim) < STAT_SLEEPING) ||
       IS_AFFECTED(victim, AFF_SLEEP) ||
@@ -4148,7 +4145,6 @@ void do_use(P_char ch, char *argument, int cmd)
 
         if (IS_PC(tmp_char) && should_not_kill(ch, tmp_char))
           return;
-        justice_witness(ch, tmp_char, CRIME_ATT_MURDER);
       }                         /*
                                  * * if
                                  */

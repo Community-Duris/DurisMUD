@@ -3962,7 +3962,6 @@ int collar_frost(P_obj obj, P_char ch, int cmd, char *arg)
 
         GET_SIZE(icemental) = SIZE_MEDIUM;
         icemental->player.m_class = CLASS_WARRIOR;
-        justice_witness(ch, NULL, CRIME_SUMMON);
         icemental->player.level = 45;
         sum = dice(GET_LEVEL(icemental) * 4, 8) + (GET_LEVEL(icemental) * 3);
         while( icemental->affected )
@@ -4096,7 +4095,6 @@ int collar_flames(P_obj obj, P_char ch, int cmd, char *arg)
         act("&nYou feel slightly drained as your $q channels magical energy.&n", FALSE, ch, obj, obj, TO_CHAR);
         GET_SIZE(firemental) = SIZE_MEDIUM;
         firemental->player.m_class = CLASS_WARRIOR;
-        justice_witness(ch, NULL, CRIME_SUMMON);
         firemental->player.level = 45 + number(-5, 0);
         sum = dice(GET_LEVEL(firemental) * 4, 8) + (GET_LEVEL(firemental) * 3);
         while( firemental->affected )

@@ -1822,7 +1822,6 @@ void spell_call_woodland_beings(int level, P_char ch, char *arg, int type, P_cha
 
   char_to_room(mob, ch->in_room, 0);
   act(summons[sum].message, TRUE, mob, 0, 0, TO_ROOM);
-  justice_witness(ch, NULL, CRIME_SUMMON);
 
   mlvl = (level / 5) * 2;
   lvl = number(mlvl, mlvl * 3);
@@ -1879,7 +1878,6 @@ void spell_elemental_swarm(int level, P_char ch, char *arg, int type, P_char vic
 
   char_to_room(mob, ch->in_room, 0);
   act("$n &+Lgrunts, and comes forth to join the swarm!!.", TRUE, mob, 0, 0, TO_ROOM);
-  justice_witness(ch, NULL, CRIME_SUMMON);
 
   lvl = number(level - 3, level + 3);
   mob->player.level = BOUNDED(1, lvl, 51);
@@ -2024,7 +2022,6 @@ void spell_conjour_elemental(int level, P_char ch, char *arg, int type,
 
   char_to_room(mob, room, 0);
   act(summons[sum].message, TRUE, mob, 0, 0, TO_ROOM);
-  justice_witness(ch, NULL, CRIME_SUMMON);
 
   // Reworking level code for conj pets.
   /*
@@ -2153,7 +2150,6 @@ void spell_living_stone(int level, P_char ch, char *arg, int type, P_char victim
 
   char_to_room(mob, ch->in_room, 0);
   act("$n &+Lcomes to life!.", TRUE, mob, 0, 0, TO_ROOM);
-  justice_witness(ch, NULL, CRIME_SUMMON);
 
   lvl = number(level - 3, level + 3);
 
@@ -2227,7 +2223,6 @@ void spell_greater_living_stone(int level, P_char ch, char *arg, int type,
 
   char_to_room(mob, ch->in_room, 0);
   act("$n &+Lcomes to life!.", TRUE, mob, 0, 0, TO_ROOM);
-  justice_witness(ch, NULL, CRIME_SUMMON);
 
   lvl = number(level - 3, level + 3);
 
@@ -8455,7 +8450,6 @@ void spell_summon(int level, P_char ch, char *arg, int type, P_char victim,
         TRUE, ch, 0, 0, TO_ROOM);
     CharWait(mob, 2 * PULSE_VIOLENCE);
     char_to_room(mob, ch->in_room, 0);
-    justice_witness(ch, NULL, CRIME_SUMMON);
 
     remember(mob, ch);
 
@@ -13715,7 +13709,6 @@ void spell_faerie_fire(int level, P_char ch, char *arg, int type,
   else if(!number(0, 1) && IS_DISGUISE(victim))
   {
     remove_disguise(victim, TRUE);
-    justice_witness(victim, NULL, CRIME_DISGUISE);
   }
   act("$N is surrounded by the dancing outline of &+mpurplish flames!&n",
       TRUE, ch, 0, victim, TO_NOTVICT);
@@ -13816,7 +13809,6 @@ void spell_faerie_fog(int level, P_char ch, char *arg, int type,
         act("$n is wearing a disguise!", TRUE, tmp_victim, 0, 0, TO_ROOM);
         act("Your disguise has been noticed!", TRUE, tmp_victim, 0, 0, TO_CHAR);
       }
-      justice_witness(tmp_victim, NULL, CRIME_DISGUISE);
     }
   }
 }

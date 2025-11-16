@@ -3247,7 +3247,6 @@ void capture(P_char ch, P_char victim)
 
     if (!is_wanted)
     {
-      justice_witness(ch, victim, CRIME_ATT_MURDER);
       if((GET_STAT(victim) > STAT_INCAP) && !IS_FIGHTING(ch) && !IS_DESTROYING(ch))
         set_fighting(ch, victim);
     }
@@ -3279,9 +3278,6 @@ void capture(P_char ch, P_char victim)
     extract_obj(unequip_char(ch, HOLD), TRUE); // Arti rope?
 
     notch_skill(ch, SKILL_CAPTURE, 2.22);
-
-    if (!is_wanted)
-      justice_witness(ch, victim, CRIME_KIDNAPPING);
 
     return;
   }

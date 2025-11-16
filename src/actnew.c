@@ -1759,8 +1759,6 @@ P_char morph(P_char ch, int rnum, int mode)
    */
   writeCharacter(ch, 1, NOWHERE);
 
-  justice_witness(ch, NULL, CRIME_SHAPE_CHANGE);
-
   return mob;
 }
 
@@ -1910,8 +1908,6 @@ P_char un_morph(P_char mob)
   //  }                           /* shouldn't trigger agg
   //                               */
   do_save_silent(ch, 1);
-
-  justice_witness(ch, NULL, CRIME_SHAPE_CHANGE);
 
   return ch;
 }
@@ -2338,7 +2334,6 @@ void do_shapechange(P_char ch, char *arg, int cmd)
       send_to_char("&+WYou shift back into your own shape.&N\r\n", ch);
       act("&+W$n shifts back into $s own image.&N", FALSE,
           ch, 0, ch, TO_ROOM);
-      justice_witness(ch, NULL, CRIME_DISGUISE);
       CharWait(ch, PULSE_VIOLENCE * 3);
       remove_disguise(ch, FALSE);
     }
@@ -2429,7 +2424,6 @@ if (IS_DISGUISE(ch))
     GET_NAME(ch), ch->disguise.name );
   act(mobname, FALSE, ch, 0, NULL, TO_ROOM);
   SET_BIT(ch->specials.act, PLR_NOWHO);
-  justice_witness(ch, NULL, CRIME_DISGUISE);
 
   balance_affects(ch);
 
@@ -2519,8 +2513,6 @@ void do_dirttoss(P_char ch, char *arg, int cmd)
        ch);
     return;
   }
-
-  justice_witness(ch, vict, CRIME_ATT_MURDER);
 
   i = skl_lvl - (GET_C_AGI(vict) / 6);
 
@@ -3470,8 +3462,6 @@ void do_hamstring(P_char ch, char *arg, int cmd)
      return;
      }
      */
-  justice_witness(ch, vict, CRIME_ATT_MURDER);
-
   i = (skl_lvl) - (GET_C_AGI(vict) / 10);
 
   act("You sweep downward and try to slice the back of $N's knees!",

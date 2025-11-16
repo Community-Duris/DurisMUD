@@ -1843,17 +1843,6 @@ bool check_mob_retaliate(P_char ch, P_char tar_char, int spl)
         continue;
       }
 
-      /* Justice hook:
-       *  Okay.. at this point, the victim knows that he's about to get hit by an aggro
-       *  area spell.  If he doesn't know it, he'll know when the spell goes off.
-       *  If he's already fighting the caster , there is no reason to call this.
-       *  The only problem with this code, is that someone else in the room might
-       *  (or might not) notice the aggression.
-       *  This code, unfortunatly, limits everyones knowledge to basically the same as
-       *  the victims. :(
-       */
-      justice_witness(ch, tch, CRIME_ATT_MURDER);
-
       if( IS_NPC(tch) )
       {
         MobStartFight(tch, ch);
@@ -1880,7 +1869,6 @@ bool check_mob_retaliate(P_char ch, P_char tar_char, int spl)
       {
         appear(ch);
       }
-      justice_witness(ch, tar_char, CRIME_ATT_MURDER);
     }
   }
   else
@@ -1899,8 +1887,6 @@ bool check_mob_retaliate(P_char ch, P_char tar_char, int spl)
       {
         if( number(1, 150) <= (GET_LEVEL(tar_char) + STAT_INDEX(GET_C_INT(tar_char))) )
         {
-          // Justice hook: read notes above
-          justice_witness(ch, tar_char, CRIME_ATT_MURDER);
           if( IS_DESTROYING(tar_char) )
           {
             stop_destroying(tar_char);
@@ -2827,7 +2813,6 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
           {
             continue;
           }
-          justice_witness(ch, t, CRIME_ATT_MURDER);
         }
       }
     }
@@ -2853,10 +2838,6 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
           }
         }
       }
-    }
-    else
-    {
-      justice_witness(ch, tar_char, CRIME_ATT_MURDER);
     }
   }
 

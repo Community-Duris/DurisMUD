@@ -11320,7 +11320,6 @@ int glowing_necklace(P_obj obj, P_char ch, int cmd, char *arg)
 
         GET_SIZE(watermental) = SIZE_MEDIUM;
         watermental->player.m_class = CLASS_WARRIOR;
-        justice_witness(ch, NULL, CRIME_SUMMON);
         watermental->player.level = 45;
         sum = dice(GET_LEVEL(watermental) * 4, 8) + (GET_LEVEL(watermental) * 3);
         while( watermental->affected )
@@ -11444,7 +11443,6 @@ int staff_shadow_summoning(P_obj obj, P_char ch, int cmd, char *arg)
 
         GET_SIZE(shadow) = SIZE_MEDIUM;
         shadow->player.m_class = CLASS_WARRIOR;
-        justice_witness(ch, NULL, CRIME_SUMMON);
         shadow->player.level = 40;
         sum = dice(GET_LEVEL(shadow) * 4, 8) + (GET_LEVEL(shadow) * 3);
         while( shadow->affected )

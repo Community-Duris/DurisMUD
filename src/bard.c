@@ -220,9 +220,6 @@ void bard_aggro(P_char ch, P_char victim)
   
   if(IS_PC(victim) && !IS_FIGHTING(victim) && !IS_DESTROYING(victim) )
   {
-    // justice_witness(victim, ch, CRIME_ATT_MURDER);
-    // strcpy(Gbuf1, GET_NAME(victim));
-    
     set_fighting(victim, ch);
   }
   else if(IS_NPC(victim) && !IS_FIGHTING(victim) && !IS_DESTROYING(victim) )

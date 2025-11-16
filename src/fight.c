@@ -5797,8 +5797,6 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
         return DAM_NONEDEAD;
       }
 
-      //justice_witness(ch, victim, CRIME_ATT_MURDER);
-
       if(victim->following == ch)
       {
         stop_follower(victim);
@@ -10073,7 +10071,6 @@ int pv_common(P_char ch, P_char opponent, const P_obj wpn)
         || leapSucceed( opponent, ch )
         || MonkRiposte( opponent, ch, wpn )) )
       {
-        //justice_witness(ch, opponent, CRIME_ATT_MURDER);
         return FALSE;
       }
     }

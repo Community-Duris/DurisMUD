@@ -2915,7 +2915,6 @@ void spell_mirage(int level, P_char ch, char *arg, int type, P_char victim, P_ob
       if (GET_TITLE(gm))
         gm->disguise.title = str_dup(GET_TITLE(gm));
       SET_BIT(gm->specials.act, PLR_NOWHO);
-      justice_witness(gm, NULL, CRIME_DISGUISE);
       
       affect_to_char(gm, &af);
       add_event(event_mirage, 0, gm, NULL, NULL, 0, 0, 0);

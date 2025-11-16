@@ -1870,8 +1870,6 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
 
     /* justice check.. */
 
-    justice_witness(ch, victim, CRIME_ATT_MURDER);
-
     return FALSE;
   }
 

@@ -1027,7 +1027,6 @@ void do_fire(P_char ch, char *argument, int cmd)
         {
           MobRetaliateRange(tmpch, ch);
         }
-        justice_witness(ch, tmpch, CRIME_ATT_MURDER);
         if( !char_in_list(ch) )
         {
           break;

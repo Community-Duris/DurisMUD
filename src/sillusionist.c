@@ -177,7 +177,6 @@ void spell_shadow_monster(int level, P_char ch, char *arg, int type, P_char vict
 
   char_to_room(mob, ch->in_room, 0);
   act("$n &+wappears from nowhere!", TRUE, mob, 0, 0, TO_ROOM);
-//  justice_witness(ch, NULL, CRIME_SUMMON);
 
   mob->player.level = BOUNDED(1, number(level - 5, level + 1), 55);
 
@@ -243,7 +242,6 @@ void spell_insects(int level, P_char ch, char *arg, int type, P_char victim, P_o
 
     char_to_room(mob, ch->in_room, 0);
     act("$n &+Lappears from nowhere!", TRUE, mob, 0, 0, TO_ROOM);
-//    justice_witness(ch, NULL, CRIME_SUMMON);
 
     mob->player.level = MIN(30, MAX(1, number(level - 7, level - 2)));
 
@@ -829,7 +827,6 @@ void spell_mask(int level, P_char ch, char *arg, int type, P_char victim,
       send_to_char("&+WYou f&Nad&+Le back into your own image.&N\r\n", ch);
       act("&+W$n &+Wf&Nad&+Les back into $s &+Lown image.&N", FALSE,
           ch, 0, ch, TO_ROOM);
-//      justice_witness(ch, NULL, CRIME_DISGUISE);
       CharWait(ch, PULSE_VIOLENCE * 3);
       remove_disguise(ch, FALSE);
       if (target)
@@ -902,7 +899,6 @@ void spell_mask(int level, P_char ch, char *arg, int type, P_char victim,
                 GET_NAME(ch), GET_NAME(target));
         act(tbuf, FALSE, ch, 0, NULL, TO_ROOM);
         SET_BIT(ch->specials.act, PLR_NOWHO);
-//        justice_witness(ch, NULL, CRIME_DISGUISE);
 
       }
     }
@@ -1550,7 +1546,6 @@ void spell_clone_form(int level, P_char ch, char *arg, int type, P_char victim, 
     send_to_char("&+WYou f&Nad&+Le back into your own image.&N\r\n", ch);
     act("&+W$n &+Wf&Nad&+Les back into $s &+Lown image.&N", FALSE,
         ch, 0, ch, TO_ROOM);
-//    justice_witness(ch, NULL, CRIME_DISGUISE);
     CharWait(ch, PULSE_VIOLENCE * 3);
     remove_disguise(ch, FALSE);
     return;
@@ -1618,7 +1613,6 @@ void spell_clone_form(int level, P_char ch, char *arg, int type, P_char victim, 
         GET_NAME(ch), t_ch->player.short_descr);
       act(tbuf, FALSE, ch, 0, NULL, TO_ROOM);
       SET_BIT(ch->specials.act, PLR_NOWHO);
-//      justice_witness(ch, NULL, CRIME_DISGUISE);
     }
   }
   else
@@ -1670,7 +1664,6 @@ void spell_clone_form(int level, P_char ch, char *arg, int type, P_char victim, 
                   GET_NAME(ch), GET_NAME(target));
           act(tbuf, FALSE, ch, 0, NULL, TO_ROOM);
           SET_BIT(ch->specials.act, PLR_NOWHO);
-//          justice_witness(ch, NULL, CRIME_DISGUISE);
           return;
         }
       }
@@ -1914,7 +1907,6 @@ void spell_dragon(int level, P_char ch, char *arg, int type, P_char victim, P_ob
 
   char_to_room(mob, ch->in_room, 0);
   act("$n &+wappears from nowhere!", TRUE, mob, 0, 0, TO_ROOM);
-//  justice_witness(ch, NULL, CRIME_SUMMON);
 
   mob->player.level = BOUNDED(1, number(level - 5, level + 1), 55);
 
@@ -2033,7 +2025,6 @@ void spell_titan(int level, P_char ch, char *arg, int type, P_char victim,
 
   char_to_room(mob, ch->in_room, 0);
   act("$n &+Lappears from nowhere!", TRUE, mob, 0, 0, TO_ROOM);
-//  justice_witness(ch, NULL, CRIME_SUMMON);
 
 // play_sound(SOUND_ELEMENTAL, NULL, ch->in_room, TO_ROOM);
 

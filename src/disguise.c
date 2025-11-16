@@ -140,7 +140,6 @@ void do_disguise(P_char ch, char *arg, int cmd)
       remove_disguise(ch, FALSE);
       act("$n starts removing $s disguise.", FALSE, ch, 0, ch, TO_ROOM);
       send_to_char( "You start removing your disguise.\n\r", ch );
-      justice_witness(ch, NULL, CRIME_DISGUISE);
       CharWait(ch, PULSE_VIOLENCE * 3);
     }
     // Otherwise they are clueless
@@ -269,7 +268,6 @@ void do_disguise(P_char ch, char *arg, int cmd)
   {
     send_to_char("You do a horrid job", ch);
     notch_skill(ch, SKILL_DISGUISE, 25);
-    justice_witness(ch, NULL, CRIME_DISGUISE);
     CharWait(ch, PULSE_VIOLENCE * 3);
     if( !IS_TRUSTED(ch) && !affected_by_spell(ch, ACH_DECEPTICON) && number(0, 1) )
     {
@@ -350,7 +348,6 @@ void do_disguise(P_char ch, char *arg, int cmd)
       snprintf(Gbuf1, MAX_STRING_LENGTH, "%s starts disguising into a %s.", GET_NAME(ch), disguise_list[i]);
     }
     SET_BIT(ch->specials.act, PLR_NOWHO);
-    justice_witness(ch, NULL, CRIME_DISGUISE);
     act(Gbuf1, TRUE, ch, NULL, NULL, TO_ROOM);
     if( !IS_TRUSTED(ch) && !affected_by_spell(ch, ACH_DECEPTICON) )
     {

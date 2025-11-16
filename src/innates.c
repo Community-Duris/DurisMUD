@@ -3448,7 +3448,6 @@ void halfling_stealaction(P_char ch, char *arg, int cmd)
   }
   if (!IS_NPC(ch)) {
   }
-  justice_witness(ch, vict, failed ? CRIME_ATT_THEFT : CRIME_THEFT);
 
   if ((GET_STAT(vict) < STAT_SLEEPING) || IS_AFFECTED(vict, AFF_SLEEP) ||
       IS_AFFECTED(vict, AFF_KNOCKED_OUT) ||
