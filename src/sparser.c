@@ -890,8 +890,9 @@ void say_spell(P_char ch, int si)
       space = TRUE;
 
   snprintf(Gbuf2, MAX_STRING_LENGTH, "$n utters the word%s '%s'", space ? "s" : "", Gbuf1);
-  snprintf(Gbuf1, j, "$n utters the word%s '%s'", space ? "s" : "", skills[si].name);
-
+  //snprintf(Gbuf1, j, "$n utters the word%s '%s'", space ? "s" : "", skills[si].name);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "$n utters the word%s '%s'", 
+           space ? "s" : "", skills[si].name);
 // This for allows players who hear a spell being casted the opportunity to notch.
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
