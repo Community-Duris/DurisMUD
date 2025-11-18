@@ -1083,7 +1083,8 @@ const char *command[MAX_CMD] = {
   "offlinemsg",
   "instacast",
   "surname",
-  "\n"                          /* MAX_CMD = 835, MAX_CMD_LIST = 1000 */
+  "namedreport",
+  "\n"                          /* MAX_CMD = 836, MAX_CMD_LIST = 1000 */
 };
 
 const char *fill_words[] = {
@@ -2826,6 +2827,7 @@ void assign_command_pointers(void)
   CMD_Y(CMD_HEADLOCK, STAT_NORMAL + POS_STANDING, do_headlock, 0, TRUE);
   CMD_Y(CMD_GROUNDSLAM, STAT_NORMAL + POS_STANDING, do_groundslam, 0, TRUE);
   CMD_Y(CMD_LEGLOCK, STAT_NORMAL + POS_PRONE, do_leglock, 0, TRUE);
+  CMD_N(CMD_NAMEDREPORT, STAT_DEAD + POS_PRONE, do_namedreport, 0, FALSE);
 
   CMD_N(CMD_BUILD, STAT_NORMAL + POS_STANDING, do_build, 0, TRUE);
   CMD_Y(CMD_PRESTIGE, STAT_NORMAL + POS_STANDING, do_prestige, 0, FALSE);

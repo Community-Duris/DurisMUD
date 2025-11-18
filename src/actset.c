@@ -1523,7 +1523,7 @@ static void ac_ageCopy(void *where, int offset, char *value, int bit, int on_off
 /* Use on_off to determine whether to set/clr which bit */
 static void ac_bitCopy(void *where, int offset, char *value, int bit, int on_off)
 {
-  long     orig_bits;
+  int     orig_bits;
 
   while (offset > 31)
   {
@@ -1542,10 +1542,10 @@ static void ac_bitCopy(void *where, int offset, char *value, int bit, int on_off
 
 static void ac_idx2flagCopy(void *where, int offset, char *value, int bit, int on_off)
 {
-  long     flag;
+  int     flag;
 
   flag = 1 << (bit - 1);
-  bcopy((char *) &flag, (char *) where + offset, sizeof(long));
+  bcopy((char *) &flag, (char *) where + offset, sizeof(int));
 }
 
 static void ac_positionCopy(void *where, int offset, char *value, int bit, int on_off)

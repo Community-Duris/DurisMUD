@@ -25,6 +25,7 @@
 #include "spells.h"
 #include "structs.h"
 #include "utils.h"
+#include "utility.h"
 #include "arena.h"
 #include "arenadef.h"
 #include "justice.h"
@@ -256,6 +257,72 @@ struct zone_random_data {
   {1325, {RACE_HUMAN, 0}, {{3, SPELL_ARMOR}, {5, SPELL_ENDURANCE}}},
   {0, {0}, {{0, 0}} }
 };
+
+extern Skill skills[];
+
+void do_namedreport(P_char ch, char *argument, int cmd)
+{
+	send_to_char("&+YCurrent listing of spells granted by named sets by zone.&n\n", ch);
+	send_to_char("&+Y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=&n\n\n", ch);
+	send_to_char("  &+MNotes&n: &+W*&n if a zone isn't listed, sets still grant hitpoints\n", ch);
+    send_to_char("         &+W*&n caster level of the spell(s) is based on number of items\n", ch);
+	send_to_char("           going over set requirements will increase caster level\n", ch);
+	send_to_char("         &+W*&n &+Gthese&n spells have a cooldown of 1 minute\n", ch);
+	send_to_char("           &+ythese&n spells have a cooldown of 5 minutes\n", ch);
+	
+	send_to_char("\n&+Y ZONE NAME                                        &+W|&+B SPELLS GRANTED &+W(&+Ypieces required&n&+W)&n\n", ch);
+	send_to_char("&+W-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=&n\n", ch);
+	for (int i = 0; i < ARRAY_SIZE(zones_random_data); i++)
+	{
+		char buffer[MAX_STRING_LENGTH] = {0};
+
+		int zone_id = real_zone(zones_random_data[i].zone);
+
+		if (zone_id <= 0)
+		{
+			continue;
+		}
+
+		const char *zone_name = zone_table[zone_id].name;		
+		
+		snprintf(buffer, ARRAY_SIZE(buffer), " %s    &+W|&n ", pad_ansi( zone_name, 45, FALSE ).c_str());
+
+		if(zones_random_data[i].proc_spells[0][0] == 0)
+		{
+			strncat(buffer, "&+LNONE&n", ARRAY_SIZE(buffer));
+			continue;
+		}
+
+		for (int x = 0; x < ARRAY_SIZE(zones_random_data[i].proc_spells); x++)
+		{			
+			char buf[1024];
+			if(zones_random_data[i].proc_spells[x][0] != 0 && zones_random_data[i].proc_spells[x][1] <= MAX_AFFECT_TYPES)
+			{
+				struct {
+					int spellNum;
+					const char* color;
+				} spellColors[] = {
+					{ SPELL_STONE_SKIN, "&+G" },
+					{ SPELL_INVIGORATE, "&+G" },
+					{ SPELL_CONJURE_ELEMENTAL, "&+y" }
+				};
+				const char *spellColor = "&+B";
+				for (int y = 0; y < ARRAY_SIZE(spellColors); y++)
+				{
+					if (zones_random_data[i].proc_spells[x][1] == spellColors[y].spellNum)
+					{
+						spellColor = spellColors[y].color;
+						break;
+					}
+				}
+				snprintf(buf, ARRAY_SIZE(buf), "%s%s%s &+W(&+Y%d&+W)&n", x != 0 ? "&+W,&n " : "", spellColor, skills[zones_random_data[i].proc_spells[x][1]].name, zones_random_data[i].proc_spells[x][0]);
+				strncat(buffer, buf, ARRAY_SIZE(buffer));
+			}
+		}
+		strncat(buffer, "\n", ARRAY_SIZE(buffer));
+		send_to_char(buffer, ch);
+	}
+}
 
 struct random_mob
 {

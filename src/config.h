@@ -114,7 +114,7 @@
 #define MINLVLIMMORTAL        57    /* bottom of immortal levels */
 #define MAX_CIRCLE            12    /* Alter at your own peril! */
 #define MAX_CMD_LIST        1000    /* maximum number of total commands */
-#define MAX_CMD              836    // Current number of commands, including the final newline. // Arih: for debugging exp bug - incremented for expkkk
+#define MAX_CMD              837    // Current number of commands, including the final newline. // Arih: for debugging exp bug - incremented for expkkk
 #define MAX_CONNECTIONS      256    /* last descriptor allowed, really; needs fixed */
 #define MAX_DUPES_IN_WELL      5    /* donation well won't accept more than this of same item */
 #define MAX_HOSTNAME         256    /* max length of server's hostname */

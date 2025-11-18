@@ -839,6 +839,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_HUMANOID(ch) ((GET_RACE(ch) > RACE_NONE) && \
            (GET_RACE(ch) < 31) || \
+		   (GET_RACE(ch) == RACE_TIEFLING)   || \
            (GET_RACE(ch) == RACE_FIRBOLG)   || \
            (GET_RACE(ch) == RACE_AGATHINON) || \
            (GET_RACE(ch) == RACE_HUMANOID)  || \

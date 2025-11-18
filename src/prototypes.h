@@ -1044,6 +1044,7 @@ void checkFragList(P_char ch);
 
 /* random.mob.c */
 P_char create_random_mob(int theme, int mob_level);
+void do_namedreport(P_char ch, char *argument, int cmd);
 
 /* random.zone.c */
 void display_random_zones(P_char ch);

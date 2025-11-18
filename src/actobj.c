@@ -5031,7 +5031,7 @@ void do_wield(P_char ch, char *argument, int cmd)
   char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
   char     Gbuf3[MAX_STRING_LENGTH];
 
-  if (IS_ANIMAL(ch))
+  if (IS_ANIMAL(ch) || (IS_NPC(ch) && !IS_HUMANOID(ch)))
   {
     send_to_char("DUH!\r\n", ch);
     return;
