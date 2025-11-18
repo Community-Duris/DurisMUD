@@ -805,11 +805,11 @@ void setHeavenTime( P_char victim )
 void AddFrags(P_char ch, P_char victim)
 {
   P_char   tch;
-  int allies, recfrag, frag_gain, loss;
+  int allies, recfrag, frag_gain; //, loss;
   char buffer[1024];
   struct affected_type af, *afp, *next_af;
 
-  float gain, real_gain;
+  float gain, real_gain, loss;
 
   if( IS_NPC(ch) )
   {

@@ -883,7 +883,7 @@ float gain_exp_modifiers(P_char ch, P_char victim, float XP)
   if( victim )
   {
     if(CHAR_IN_TOWN(ch) &&
-      (GET_LEVEL(victim) > 20) &&
+      (GET_LEVEL(victim) > HOMETOWN_EXP_LEVEL_LIMIT) &&
       !IS_PC(victim))
     {
       XP *= exp_mods[EXPMOD_VICT_HOMETOWN];

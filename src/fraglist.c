@@ -369,6 +369,10 @@ void do_fraglist(P_char ch, char *arg, int cmd)
     {
       snprintf(filename, MAX_STRING_LENGTH, "Fraglists/fraglist.firbolg");
     }
+    else if (strstr("tiefling", arg))
+    {
+      snprintf(filename, MAX_STRING_LENGTH, "Fraglists/fraglist.tiefling");
+    }
     else if (strstr("warrior", arg))
     {
       snprintf(filename, MAX_STRING_LENGTH, "Fraglists/fraglist.warrior");

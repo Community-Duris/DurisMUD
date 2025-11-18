@@ -1417,4 +1417,5 @@ struct material_data {
 
 #define EXPMOD_MAX                         61
 
+#define HOMETOWN_EXP_LEVEL_LIMIT	   46 // TONS of Mobs in HT's that SHOULD be expable on.
 #endif /* _DURIS_DEFINES_H_ */
