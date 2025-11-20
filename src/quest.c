@@ -489,8 +489,9 @@ int quester(P_char ch, P_char pl, int cmd, char *arg)
     {
       if (qmp->key_words && isname(Gbuf1, qmp->key_words))
       {
-/*	send_to_char(qmp->message, pl);*/
-        act("$n asks $N a question.", FALSE, pl, 0, ch, TO_NOTVICT);
+        // no dollars/ansi here
+        snprintf(name, sizeof name, "$n asks $N about %s.", Gbuf1);
+        act(name, FALSE, pl, 0, ch, TO_NOTVICT);
         act(qmp->message, FALSE, ch, 0, pl, qmp->echoAll ? TO_ROOM : TO_VICT);
         if (qmp->echoAll)
           send_to_room("\n", ch->in_room);
