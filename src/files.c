@@ -941,23 +941,32 @@ bool restoreStatus(const nlohmann::json& data, P_char ch)
     std::string poofIn          = data["status"]["strings"]["poofIn"].get<std::string>();
     std::string poofOut         = data["status"]["strings"]["poofOut"].get<std::string>();
 
-
-    ch->player.short_descr      = const_cast<char*>(short_descr.c_str());
-    ch->player.long_descr       = const_cast<char*>(long_descr.c_str());
-    ch->player.description      = const_cast<char*>(description.c_str());
-    ch->only.pc->poofIn         = const_cast<char*>(poofIn.c_str());
-    ch->only.pc->poofOut        = const_cast<char*>(poofOut.c_str());
-    GET_TITLE(ch)               = const_cast<char*>(title.c_str());
-    GET_NAME(ch)                = const_cast<char*>(name.c_str());
-    str                         = const_cast<char*>(pwd.c_str());
+    char* buf1                  = const_cast<char*>(short_descr.c_str());
+    ch->player.short_descr      = getString(&buf1);
+    buf1                        = const_cast<char*>(long_descr.c_str());
+    ch->player.long_descr       = getString(&buf1);
+    buf1                        = const_cast<char*>(description.c_str());
+    ch->player.description      = getString(&buf1);
+    buf1                        = const_cast<char*>(poofIn.c_str());
+    ch->only.pc->poofIn         = getString(&buf1);
+    buf1                        = const_cast<char*>(poofOut.c_str());
+    ch->only.pc->poofOut        = getString(&buf1);
+    buf1                        = const_cast<char*>(title.c_str());
+    GET_TITLE(ch)               = getString(&buf1);
+    buf1                        = const_cast<char*>(name.c_str());
+    GET_NAME(ch)                = getString(&buf1);
+    buf1                        = const_cast<char*>(pwd.c_str());
+    str                         = getString(&buf1);
 
     if (stat_vers > 10)
     {
       std::string poofInSound   = data["status"]["strings"]["poofInSound"].get<std::string>();
       std::string poofOutSound  = data["status"]["strings"]["poofOutSound"].get<std::string>();
 
-      ch->only.pc->poofInSound  = const_cast<char*>(poofInSound.c_str());
-      ch->only.pc->poofOutSound = const_cast<char*>(poofOutSound.c_str());
+      buf1                      = const_cast<char*>(poofInSound.c_str());
+      ch->only.pc->poofInSound  = getString(&buf1);
+      buf1                      = const_cast<char*>(poofOutSound.c_str());
+      ch->only.pc->poofOutSound = getString(&buf1);
     }
   }
   else 
@@ -1425,6 +1434,131 @@ bool restoreStatus(const nlohmann::json& data, P_char ch)
   return true;
 }
 
+bool restoreSkills(nlohmann::json& pfile, P_char ch, int maxnum)
+{
+  int      i, n;
+
+  if(!pfile.contains("skill"))
+  {
+    logit(LOG_FILE, "Save file for %s skills restore failed - Missing Skill section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  skill_vers = pfile["skill"]["skill_version"];
+
+  if (skill_vers > (char) SAV_SKILLVERS)
+  {
+    logit(LOG_FILE, "Save file for %s skills restore failed.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return 0;
+  }
+  
+  n = (int)pfile["skill"]["count"].get<int>();
+
+  if (n > maxnum)
+  {
+    logit(LOG_FILE, "Not all %s skills could be loaded.", GET_NAME(ch));
+    send_to_char("Not all your skills could be loaded. Please report this to a God.\r\n", ch);
+  }
+
+  /*
+   * Allow memorized spells and skill usages to be saved. -DCL
+   */
+
+  auto& arr = pfile["skill"]["skill_list"];
+  for (i = 0; i < maxnum; i++)
+  {
+    ch->only.pc->skills[i].learned = 0;
+    ch->only.pc->skills[i].taught = 0;
+
+    if (i < n)
+    {
+      if(arr.size() > 0 && i < arr.size())
+      {
+        ch->only.pc->skills[i].learned = (char)arr[i]["learned"].get<int>();
+        ch->only.pc->skills[i].taught = (char)arr[i]["taught"].get<int>();
+      }
+    }
+  }
+
+  return true;
+}
+
+/* Restore witness record  */
+#ifndef _PFILE_
+bool restoreWitness(nlohmann::json& pfile, P_char ch)
+{
+  wtns_rec *rec;
+  int      count;
+
+  if(!pfile.contains("witness"))
+  {
+    logit(LOG_FILE, "Save file for %s witness restore failed - No Witness section.", GET_NAME(ch));
+    send_to_char("Your witness record is munged. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  witness_vers = (int)pfile["witness"]["witness_version"].get<int>();
+
+  if (witness_vers > (char) SAV_WTNSVERS)
+  {
+    logit(LOG_FILE, "Save file for %s witness restore failed.", GET_NAME(ch));
+    send_to_char("Your witness record is munged. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  count = (int)pfile["witness"]["count"].get<int>();
+  auto& arr = pfile["witness"]["witness_list"];
+
+  if(arr.size() == 0 && count > 0)
+  {
+    logit(LOG_FILE, "Save file for %s witness restore failed - count doesn't match array.", GET_NAME(ch));
+    send_to_char("Your witness record is munged. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  for (; count > 0; count--)
+  {
+    if (!dead_witness_pool)
+      dead_witness_pool =
+        (struct mm_ds *) mm_create("WITNESS", sizeof(wtns_rec),
+                                   offsetof(wtns_rec, next), 1);
+
+    rec = (wtns_rec *) mm_get(dead_witness_pool);
+
+    std::string attacker            = arr[count]["attacker"].get<std::string>();
+    std::string victim              = arr[count]["victim"].get<std::string>();
+
+    char* str                       = const_cast<char*>(attacker.c_str());
+    rec->attacker                   = getString(&str);
+    str                             = const_cast<char*>(victim.c_str());
+    rec->victim                     = getString(&str);
+    rec->time                       = (int)arr[count]["time"].get<int>();
+    rec->crime                      = (int)arr[count]["crime"].get<int>();
+    rec->room                       = (int)arr[count]["room"].get<int>();
+
+    /* Ok we remove all the record that are 1 month old and more TASFALEN3 */
+    if (((rec->time + SECS_PER_MUD_MONTH) < time(NULL)) ||
+        (rec->crime <= CRIME_LAST_FAKE))
+    {
+      str_free(rec->attacker);
+      str_free(rec->victim);
+      mm_release(dead_witness_pool, rec);
+    }
+    else
+    {
+      rec->next = ch->specials.witnessed;
+      ch->specials.witnessed = rec;
+    }
+  }
+
+  return true;
+}
+#endif
+
 int restoreCharOnlyJSON(P_char ch, char *name)
 {
   nlohmann::json pfile;
@@ -1470,9 +1604,7 @@ int restoreCharOnlyJSON(P_char ch, char *name)
         logit(LOG_FILE, "Warning: JSON Save file not opened.");
         fprintf(stderr, "Problem restoring save file of: %s\n", name);
         logit(LOG_FILE, "Problem restoring save file of %s.", name);
-        send_to_char
-          ("There is something wrong with your save file!  Please talk to a God.\r\n",
-          ch);
+        send_to_char("There is something wrong with your save file!  Please talk to a God.\r\n", ch);
     return -2;
   }
 
@@ -1486,60 +1618,23 @@ int restoreCharOnlyJSON(P_char ch, char *name)
     logit(LOG_FILE, "Warning: JSON Save file not parsed.");
     fprintf(stderr, "Problem restoring save file of: %s\n", name);
     logit(LOG_FILE, "Problem restoring save file of %s.", name);
-    send_to_char
-          ("There is something wrong with your save file!  Please talk to a God.\r\n",
-          ch);
+    send_to_char("There is something wrong with your save file!  Please talk to a God.\r\n", ch);
     return -2;
   }
 
   fstream.close();
 
-/* TASFALEN */
+  b_savevers          = pfile["header"]["save_version"].get<char>();
 
-
-
-/*  if (GET_BYTE(buf) != (char) SAV_SAVEVERS) {
-   logit(LOG_FILE, "Save file of %s is in an older format.", name);
-   send_to_char(
-   "Your character file is in an old format which the game doesn't know how\r\n"
-   "to load.  Please log on with another character and talk to a God.\r\n",
-   ch);
-   return -2;
-   }
- */
-
-/* end TASFALEN */
-
-  // Read the type sizes from the save file
-  //int saved_short_size = pfile["header"]["short_size"].get<int>();
-  //int saved_int_size = pfile["header"]["int_size"].get<int>();
-  //int saved_long_size = pfile["header"]["long_size"].get<int>();
-
-  //logit(LOG_FILE, "restoreCharacter: %s - saved sizes: short=%d int=%d long=%d, current sizes: short=%d int=%d long=%d",
-  //  name, saved_short_size, saved_int_size, saved_long_size, short_size, int_size, long_size);
-
-  //if ((saved_short_size != short_size) || (saved_int_size != int_size) ||
-  //    (saved_long_size != long_size))
-  //{
-  //  logit(LOG_FILE, "Save file of %s has mismatched architecture.", name);
-  //  send_to_char
-  //    ("Your character file was created on a machine of a different architecture\r\n"
-  //     "type than the current one; loading such a file is not yet supported.\r\n"
-  //     "Please talk to a God.\r\n", ch);
-  //  return -2;
-  //}
-  //if (size < 5 * int_size + 5 * sizeof(char) + long_size)
-  //{
-  //  logit(LOG_FILE, "Warning: Save file is only %d bytes.", size);
-  //  fprintf(stderr, "Problem restoring save file of: %s\n", name);
-   // logit(LOG_FILE, "Problem restoring save file of %s.", name);
-  //  send_to_char("There is something wrong with your save file!  Please talk to a God.\r\n", ch);
-  //  return -2;
-  //}
-
+  if (b_savevers != (char) SAV_SAVEVERS) {
+    logit(LOG_FILE, "Save file of %s is in an older format.", name);
+    send_to_char("Your character file is in an old format which the game doesn't know how\r\n"
+      "to load.  Please log on with another character and talk to a God.\r\n", ch);
+    return -2;
+  }
+ 
   if(pfile.contains("header"))
   {
-    b_savevers          = pfile["header"]["save_version"].get<char>();
     type                = pfile["header"]["type"].get<int>();
     skill_off           = pfile["header"]["skill_off"].get<int>();
     affect_off          = pfile["header"]["affect_off"].get<int>();
@@ -1568,59 +1663,39 @@ int restoreCharOnlyJSON(P_char ch, char *name)
     return -2;
   }
 
-  restoreStatus(pfile, ch);
-  logit(LOG_FILE, "restoreStatus debug: %s", name);
+  if(!restoreStatus(pfile, ch))
+  {
+    logit(LOG_FILE, "Error: JSON Save file has errors in the status section.", size);
+    fprintf(stderr, "Problem restoring save file of: %s\n", name);
+    logit(LOG_FILE, "Problem restoring save file of %s.", name);
+    send_to_char("There is something wrong with your save file!  Please talk to a God.\r\n", ch);
+    return -2;
+  }
 
   if (type == 4)                /*
                                  * return from death, flaked out. JAB
                                  */
     SET_POS(ch, POS_PRONE + STAT_SLEEPING);
 
-// /* TASFALEN */
+  if(!restoreSkills(pfile, ch, MAX_SKILLS))
+  {
+    logit(LOG_FILE, "Error: JSON Save file has errors in the skills section.", size);
+    fprintf(stderr, "Problem restoring save file of: %s\n", name);
+    logit(LOG_FILE, "Problem restoring save file of %s.", name);
+    send_to_char("There is something wrong with your save file!  Please talk to a God.\r\n", ch);
+    return -2;
+  }
 
-//   if (b_savevers < (char) SAV_WTNSVERS)
-//   {                             /* no witness record save in file */
-
-//     if ((restoreSkills(buff + skill_off, ch, MAX_SKILLS) + skill_off) !=
-//         affect_off)
-//     {
-//       logit(LOG_FILE, "Warning: restoreSkills() not match offset.");
-//       fprintf(stderr, "Problem restoring save file of: %s\n", name);
-//       logit(LOG_FILE, "Problem restoring save file of %s.", name);
-//       send_to_char
-//         ("There is something wrong with your save file!  Please talk to a God.\r\n",
-//          ch);
-//       return -2;
-//     }
-//   }
-//   else
-//   {
-
-//     if ((restoreSkills(buff + skill_off, ch, MAX_SKILLS) + skill_off) !=
-//         witness_off)
-//     {
-//       logit(LOG_FILE, "Warning: restoreSkills() not match offset.");
-//       fprintf(stderr, "Problem restoring save file of: %s\n", name);
-//       logit(LOG_FILE, "Problem restoring save file of %s.", name);
-//       send_to_char
-//         ("There is something wrong with your save file!  Please talk to a God.\r\n",
-//          ch);
-//       return -2;
-//     }
-// #ifndef _PFILE_
-//     if ((restoreWitness(buff + witness_off, ch) + witness_off) != affect_off)
-//     {
-//       logit(LOG_FILE, "Warning: restoreWitness() not match offset.");
-//       fprintf(stderr, "Problem restoring save file of: %s\n", name);
-//       logit(LOG_FILE, "Problem restoring save file of %s.", name);
-//       send_to_char
-//         ("There is something wrong with your save file!  Please talk to a God.\r\n",
-//          ch);
-//       return -2;
-//     }
-// #endif
-//   }
-//   /* end TASFALEN */
+#ifndef _PFILE_
+  if (!restoreWitness(pfile,  ch))
+  {
+    logit(LOG_FILE, "Warning: restoreWitness() not match offset.");
+    fprintf(stderr, "Problem restoring save file of: %s\n", name);
+    logit(LOG_FILE, "Problem restoring save file of %s.", name);
+    send_to_char("There is something wrong with your save file!  Please talk to a God.\r\n", ch);
+    return -2;
+  }
+#endif
 
   return type;
 }

@@ -131,6 +131,5 @@
 #endif
 #define GET_LONG(buf) getLong(&buf)
 #define GET_STRING(buf) getString(&buf)
-
-
+  
 #endif /* _SOJ_PFILES_H_ */
