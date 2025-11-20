@@ -334,7 +334,7 @@ int calculate_hitpoints(P_char ch)
   racial_con = stat_factor[GET_RACE(ch)].Con;
   for( i = 0; i < MAX_WEAR; i++ )
   {
-    if( obj = ch->equipment[i] )
+    if ((obj = ch->equipment[i]))
     {
       for( j = 0; j < MAX_OBJ_AFFECT; j++ )
       {
@@ -508,7 +508,7 @@ int calculate_hitpoints2(P_char ch)
   racial_con = stat_factor[race].Con;
   for( i = 0; i < MAX_WEAR; i++ )
   {
-    if( obj = ch->equipment[i] )
+    if ((obj = ch->equipment[i]))
     {
       for( j = 0; j < MAX_OBJ_AFFECT; j++ )
       {
@@ -559,7 +559,7 @@ int calculate_hitpoints2(P_char ch)
       {
         continue;
       }
-      if( obj = ch->equipment[i] )
+      if ((obj = ch->equipment[i]))
       {
         for( j = 0; j < MAX_OBJ_AFFECT; j++ )
         {
@@ -3005,10 +3005,10 @@ void clear_all_links(P_char ch)
     SET_POS(rider, POS_SITTING + GET_STAT(rider));
   }
 
-  while( cld = ch->linking )
+  while ((cld = ch->linking))
     unlink_char(ch, cld->linked, cld->type);
 
-  while( cld = ch->linked )
+  while ((cld = ch->linked))
     unlink_char(cld->linking, ch, cld->type);
 }
 
@@ -3018,7 +3018,7 @@ void clear_links(P_char ch, ush_int type)
   struct char_link_data *cld;
   P_char   tch;
 
-  while( tch = get_linked_char(ch, type) )
+  while ((tch = get_linked_char(ch, type)))
     unlink_char(ch, tch, type);
 }
 

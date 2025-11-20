@@ -1725,9 +1725,9 @@ bool identify_random(P_obj obj)
     return false;
   
   strcpy(old_name, obj->short_description);
-  if (c = strstr(old_name, " of "))
+  if ((c = strstr(old_name, " of ")))
     *c = '\0';
-  if (c = strstr(old_name, " crafted by"))
+  if ((c = strstr(old_name, " crafted by")))
     *c = '\0';
 
   snprintf(buffer, 256, "%s of %s&n", old_name, spells_data[i].name);

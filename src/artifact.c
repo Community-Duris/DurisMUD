@@ -275,7 +275,7 @@ void list_artifacts_sql( P_char ch, int type, bool Godlist, bool allArtis )
       return;
     }
 
-    while( (row = mysql_fetch_row(res)) )
+    while ((row = mysql_fetch_row(res)))
     {
       vnum    = atoi(row[0]);
       locType = atoi(row[1]);
@@ -494,7 +494,7 @@ void addOnGroundArtis_sql()
     }
     else
     {
-      while( (row = mysql_fetch_row(res)) )
+      while ((row = mysql_fetch_row(res)))
       {
         if( !(arti = read_object( atoi(row[0]), VIRTUAL )) )
         {
@@ -1516,7 +1516,7 @@ P_obj artifact_in_bag_search( P_obj contents, int vnum )
     if( temp->contains )
     {
       // If it's inside those contents, return it.
-      if( inside = artifact_in_bag_search(temp->contains, vnum) )
+      if ((inside = artifact_in_bag_search(temp->contains, vnum)))
       {
         return inside;
       }
@@ -1594,7 +1594,7 @@ P_obj artifact_find( arti_data artidata )
           // Check eq worn first, since they will probably be wearing it.
           for( i = 0; i < MAX_WEAR; i++ )
           {
-            if( obj = ch->equipment[i] )
+            if ((obj = ch->equipment[i]))
             {
               if( OBJ_VNUM(obj) == vnum )
               {
@@ -1609,7 +1609,7 @@ P_obj artifact_find( arti_data artidata )
           }
           // If they're not wearing it, then check inventory.  We do have to keep looking since
           //   there can be multiple NPCs with the same vnum.
-          if( inside = artifact_in_bag_search(ch->carrying, vnum) )
+          if ((inside = artifact_in_bag_search(ch->carrying, vnum)))
           {
             return inside;
           }
@@ -1627,7 +1627,7 @@ P_obj artifact_find( arti_data artidata )
           // Check eq worn first, since they will probably be wearing it.
           for( i = 0; i < MAX_WEAR; i++ )
           {
-            if( obj = ch->equipment[i] )
+            if ((obj = ch->equipment[i]))
             {
               if( OBJ_VNUM(obj) == vnum )
               {
@@ -1660,7 +1660,7 @@ P_obj artifact_find( arti_data artidata )
         if( obj->type == ITEM_CORPSE && IS_SET(obj->value[CORPSE_FLAGS], PC_CORPSE)
           && isname(name, obj->name) )
         {
-          if( inside = artifact_in_bag_search( obj->contains, vnum) )
+          if ((inside = artifact_in_bag_search( obj->contains, vnum)))
           {
             return inside;
           }
@@ -1685,7 +1685,7 @@ P_obj artifact_find( arti_data artidata )
         if( obj->contains )
         {
           // Look for the object inside the container.
-          if( inside = artifact_in_bag_search(obj->contains, vnum) )
+          if ((inside = artifact_in_bag_search(obj->contains, vnum)))
           {
             return inside;
           }
@@ -1753,7 +1753,7 @@ void arti_files_to_sql( P_char ch, char *arg )
     return;
   }
 
-  while( dire = readdir(dir) )
+  while ((dire = readdir(dir)))
   {
 
     vnum = atoi(dire->d_name);
@@ -1799,7 +1799,7 @@ void arti_files_to_sql( P_char ch, char *arg )
         continue;
       }
       // Otherwise, pull it from ground/NPC/etc.
-      else if( arti = artifact_find(artidata) )
+      else if ((arti = artifact_find(artidata)))
       {
         snprintf(buf, MAX_STRING_LENGTH, "Found another copy of arti %s (%d) in game, pulling it.\n\r",
           OBJ_SHORT(arti), OBJ_VNUM(arti) );
@@ -1808,7 +1808,7 @@ void arti_files_to_sql( P_char ch, char *arg )
       }
     }
 
-    if( arti = read_object( vnum, VIRTUAL) )
+    if ((arti = read_object( vnum, VIRTUAL)))
     {
       type = IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR;
 
@@ -1898,7 +1898,7 @@ void event_artifact_check_poof_sql( P_char ch, P_char vict, P_obj obj, void * ar
   // If there were any artis to pull
   if( mysql_num_rows(res) > 0 )
   {
-    while( (row = mysql_fetch_row(res)) )
+    while ((row = mysql_fetch_row(res)))
     {
       vnum     = atoi(row[0]);
       locType  = atoi(row[1]);
@@ -2035,7 +2035,7 @@ void event_artifact_check_poof_sql( P_char ch, P_char vict, P_obj obj, void * ar
             {
               continue;
             }
-            if( arti = get_object_from_char( owner, vnum ) )
+            if ((arti = get_object_from_char( owner, vnum )))
             {
               break;
             }
@@ -2070,7 +2070,7 @@ void event_artifact_check_poof_sql( P_char ch, P_char vict, P_obj obj, void * ar
         {
           if( IS_NPC(owner) && GET_VNUM(owner) == location )
           {
-            if( arti = get_object_from_char( owner, vnum ) )
+            if ((arti = get_object_from_char( owner, vnum )))
             {
               break;
             }
@@ -2292,7 +2292,7 @@ void event_artifact_wars_sql(P_char ch, P_char vict, P_obj obj, void *arg)
   artilist = NULL;
   // First, build a list of those with multiple artifacts.
   // The list needs to be of a format: pid of char, then some sort of list of owned artifact vnum+type
-  while( (row = mysql_fetch_row(res)) )
+  while ((row = mysql_fetch_row(res)))
   {
     // Since locType is on PC or on PC corpse, location will always be the PID of the PC.
     pid = atoi(row[2]);
@@ -2492,7 +2492,7 @@ void arti_hunt_sql( P_char ch, char *arg )
   }
 
   // Loop through the directory files.
-  while (dire = readdir(dir))
+  while ((dire = readdir(dir)))
   {
     // Skip backup/locker files/etc
     if( strstr( dire->d_name, "." ) )
@@ -3243,7 +3243,7 @@ void event_artifact_check_bind_sql( P_char ch, P_char vict, P_obj obj, void * ar
   curr_time = time(NULL);
 
   bindData = list = NULL;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     bindData = new bind_data;
     bindData->vnum      = atoi(row[0]);
@@ -3274,7 +3274,7 @@ void event_artifact_check_bind_sql( P_char ch, P_char vict, P_obj obj, void * ar
           if( list->timer + timer_length < curr_time )
           {
             // If the owner isn't online, the soul can not merge.
-            if( owner = get_char_online( get_player_name_from_pid(artidata.location) ) )
+            if ((owner = get_char_online( get_player_name_from_pid(artidata.location))))
             {
               act("&+L$p &+Lmerges with your &+wsoul&+L.", FALSE, owner, arti, 0, TO_CHAR);
               qry("UPDATE artifact_bind SET owner_pid = %d, timer = %ld WHERE vnum = %d", artidata.location, curr_time, list->vnum);
@@ -3359,7 +3359,7 @@ void arti_fixit_sql( P_char ch )
 
   counter = 0;
   // Walk through each arti that's on a PC.
-  while( (row = mysql_fetch_row(res)) )
+  while ((row = mysql_fetch_row(res)))
   {
     vnum = atoi(row[0]);
     location = atoi(row[1]);
@@ -3489,7 +3489,7 @@ void addOnMobArtis_sql()
     }
     else
     {
-      while( (row = mysql_fetch_row(res)) )
+      while ((row = mysql_fetch_row(res)))
       {
         if( !(arti = read_object( atoi(row[0]), VIRTUAL )) )
         {
@@ -3565,7 +3565,7 @@ void arti_player_sql( P_char ch, char *arg )
   }
 
   shownData = FALSE;
-  while( (row = mysql_fetch_row(res)) )
+  while ((row = mysql_fetch_row(res)))
   {
     vnum    = atoi(row[0]);
     locType = atoi(row[1]);

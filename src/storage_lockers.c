@@ -189,7 +189,7 @@ bool StorageLocker::MakeChests(P_char ch, char *args)
   GBuf1[0] = GBuf2[0] = '\0';
 
   // Change held to hold (every instance but first).
-  while( tmp = strstr(args, " held") )
+  while ((tmp = strstr(args, " held")))
   {
     tmp[2] = 'o';
   }
@@ -1764,7 +1764,7 @@ static void locker_access_show(P_char ch, P_char locker)
   else
   {
     snprintf(buffer, MAX_STR_NORMAL, "Locker Access: " );
-    while( (row = mysql_fetch_row( res )) != NULL )
+    while ((row = mysql_fetch_row(res)))
     {
       strcat( buffer, row[0] );
       strcat( buffer, ", " );

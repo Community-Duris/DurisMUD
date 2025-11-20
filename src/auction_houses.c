@@ -108,7 +108,7 @@ void auction_houses_activity()
   MYSQL_RES *res = mysql_store_result(DB);
 
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     int auction_id = atoi(row[0]);
 
@@ -269,7 +269,7 @@ bool auction_resort(P_char ch, char *args)
   MYSQL_ROW row;
 
   int count = 0;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     int auction_id = atoi(row[0]);
     string obj_short(row[1]);
@@ -559,7 +559,7 @@ bool auction_list(P_char ch, char *args)
   }
 
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     char *auction_id = row[0];
     char *seller_name = row[1];
@@ -748,7 +748,7 @@ bool auction_remove(P_char ch, char *args)
   res = mysql_store_result(DB);
 
   i = 0;
-  while( auction_row = mysql_fetch_row(res) )
+  while ((auction_row = mysql_fetch_row(res)))
   {
     auc_ids[i++] = atoi(auction_row[0]);
     if( i == 100 )
@@ -989,7 +989,7 @@ bool auction_pickup(P_char ch, char *args)
 
   if( mysql_num_rows(res) >= 1 )
   {
-    while( row = mysql_fetch_row(res) )
+    while ((row = mysql_fetch_row(res)))
     {
       int id = atoi(row[0]);
       int quantity = atoi( row[2] );

@@ -4597,13 +4597,12 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
 
   skill = GET_CHAR_SKILL(ch, SKILL_SNEAKY_STRIKE);
 
-  if(weapon = ch->equipment[WIELD])
-  {
+  if ((weapon = ch->equipment[WIELD]))
     dam = (dice(weapon->value[1], MAX(1, weapon->value[2])) + weapon->value[2]);
-  }
   else
   {
-    dam = (IS_PC(ch) ? dice(1, skill / 5) : dice(ch->points.damnodice, ch->points.damsizedice));
+    dam = (IS_PC(ch) ? dice(1, skill / 5)
+                     : dice(ch->points.damnodice, ch->points.damsizedice));
   }
   /* notch_skill(ch, SKILL_SNEAKY_STRIKE, get_property("skill.notch.offensive", 7)); */
   notch_skill(ch, SKILL_SNEAKY_STRIKE, 5);
@@ -6356,7 +6355,7 @@ void do_tackle(P_char ch, char *arg, int cmd)
         act("$n &+ctackles&N $N &+RHARD&N sending them both &+Wflying&N out of the room!",
            FALSE, ch, 0, vict, TO_NOTVICT);
 //      target_room = world[ch->in_room].dir_option[door]->to_room;
-        if( mount = get_linked_char(vict, LNK_RIDING) )
+        if ((mount = get_linked_char(vict, LNK_RIDING)))
           unlink_char(vict, mount, LNK_RIDING);
         char_from_room(ch);
         char_from_room(vict);

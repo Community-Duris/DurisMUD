@@ -509,7 +509,7 @@ int vamp(P_char ch, double fhits, double fcap)
     blocked = (int) (hits * (((float)number(50, 60)) / 100));
     hits -= blocked;
   }
-  else if( af = get_spell_from_char(ch, SPELL_BMANTLE) )
+  else if ((af = get_spell_from_char(ch, SPELL_BMANTLE)))
   {
     blocked = (int) (MIN(hits * (GET_LEVEL(ch) / 100), af->modifier));
     hits -=blocked;
@@ -765,7 +765,7 @@ void setHeavenTime( P_char victim )
     counter = 0;
     i = -1;
     // Walk through and record each pkill id battle number.
-    while( (row = mysql_fetch_row(res)) != NULL )
+    while ((row = mysql_fetch_row(res)))
     {
       kill_ids[++i] = atoi(row[0]);
     }
@@ -938,7 +938,7 @@ void AddFrags(P_char ch, P_char victim)
   }
 
   // When a player with a blood tasks dies, they now satisfy the pvp spill blood task.
-  if( afp = get_epic_task(victim) )
+  if ((afp = get_epic_task(victim)))
   {
     if( (abs( afp->modifier ) == SPILL_BLOOD) && (loss > 0) )
     {
@@ -6727,7 +6727,7 @@ bool tainted_blade(P_char ch, P_char victim)
 
   if( raw_damage(ch, victim, 60, RAWDAM_DEFAULT, messages) == DAM_NONEDEAD )
   {
-    if (old_af = get_spell_from_char(victim, blade_skill))
+    if ((old_af = get_spell_from_char(victim, blade_skill)))
     {
       old_af->modifier = 1 + GET_CHAR_SKILL(ch, blade_skill) / 33;
       return FALSE;
@@ -7827,15 +7827,15 @@ bool weapon_proc(P_obj obj, P_char ch, P_char victim)
 
   count = 0;
   room = ch->in_room;
-  if (spells[0] = obj->value[5] % 1000)
+  if ((spells[0] = obj->value[5] % 1000))
   {
     count++;
   }
-  if (spells[1] = obj->value[5] % 1000000 / 1000)
+  if ((spells[1] = obj->value[5] % 1000000 / 1000))
   {
     count++;
   }
-  if (spells[2] = obj->value[5] % 1000000000 / 1000000)
+  if ((spells[2] = obj->value[5] % 1000000000 / 1000000))
   {
     count++;
   }
@@ -10136,7 +10136,7 @@ int pv_common(P_char ch, P_char opponent, const P_obj wpn)
 
     if(number(1, 100) <= chance1)
     {
-      if(spell = memorize_last_spell(ch))
+      if ((spell = memorize_last_spell(ch)))
       {
         char buf[256];
         snprintf(buf, 256, "%s's essence &+Cempowers you&n and you are rewarded with &+G%s!\n",

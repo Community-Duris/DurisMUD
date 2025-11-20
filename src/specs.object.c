@@ -4947,7 +4947,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
           affect_to_char(ch, &aff);
           act("&+LAs you utter the word, a chill runs through your body as power takes hold...", FALSE, ch, obj, 0, TO_CHAR);
           act("$n &+wwhispers something to $s $q&+w, and &+Lshudders &+wwith new power...", FALSE, ch, obj, 0, TO_ROOM);
-          if(af = get_spell_from_char(ch, TAG_HOLY_DEFENSE))
+          if ((af = get_spell_from_char(ch, TAG_HOLY_DEFENSE)))
              affect_from_char(ch, TAG_HOLY_DEFENSE);
           CharWait(ch, 2 * PULSE_VIOLENCE);
           return TRUE;
@@ -4986,7 +4986,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
           affect_to_char(ch, &aff);
           act("&+WAs you utter the word, a chill runs through your body as power takes hold...", FALSE, ch, obj, 0, TO_CHAR);
           act("$n &+wwhispers something to $s $q&+w, and &+Wshudders &+wwith new power...", FALSE, ch, obj, 0, TO_ROOM);
-          if(af = get_spell_from_char(ch, TAG_HOLY_OFFENSE))
+          if ((af = get_spell_from_char(ch, TAG_HOLY_OFFENSE)))
             affect_from_char(ch, TAG_HOLY_OFFENSE);
           CharWait(ch, 2 * PULSE_VIOLENCE);
           return TRUE;
@@ -14741,7 +14741,7 @@ int random_gc_room( )
   int rroom;
 
   // Pick a random map room
-  while( rroom = real_room0(number( SURFACE_MAP_START, SURFACE_MAP_END )) )
+  while ((rroom = real_room0(number( SURFACE_MAP_START, SURFACE_MAP_END ))))
   {
     // If it's on gc and not on mountains, return it.
     if( IS_CONTINENT(rroom, CONT_GC) && world[rroom].sector_type != SECT_MOUNTAIN )
@@ -14802,7 +14802,7 @@ int random_ec_room( )
   int rroom;
 
   // Pick a random map room
-  while( rroom = real_room0(number( SURFACE_MAP_START, SURFACE_MAP_END )) )
+  while ((rroom = real_room0(number( SURFACE_MAP_START, SURFACE_MAP_END))))
   {
     // If it's on gc and not on mountains, return it.
     if( IS_CONTINENT(rroom, CONT_EC) && world[rroom].sector_type != SECT_MOUNTAIN )

@@ -114,7 +114,7 @@ string wiki_help(string str)
   vector<string> matching_topics;
 
   bool exact_match = false;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     string match(row[0]);
     if( tolower(match) == tolower(str) )

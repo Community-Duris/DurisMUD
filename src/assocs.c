@@ -1531,7 +1531,7 @@ void do_prestige( P_char ch, char *argument, int cmd )
   send_to_char("&+bPrestigious Associations\n"
     "&+W--------------------------------------------------------------\n", ch);
 
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     id = atoi(row[0]);
     name = pad_ansi(trim(string(row[1]), " \t\n").c_str(), 40);
@@ -2376,7 +2376,7 @@ void Guild::ledger( P_char member, char *args )
     mysql_free_result(res);
     return;
   }
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     snprintf(buff, MAX_STRING_LENGTH, "%s\r\n", row[0]);
     send_to_char(buff, member );

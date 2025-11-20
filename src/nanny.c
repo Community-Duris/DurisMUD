@@ -4072,7 +4072,7 @@ void create_denied_file(const char *dir, char *name)
   for (; *buff; buff++)
     *buff = LOWER(*buff);
   snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", dir, buf[0], buf);
-  if( f = fopen(Gbuf1, "w") )
+  if ((f = fopen(Gbuf1, "w")))
   {
     fclose(f);
   }

@@ -118,7 +118,7 @@ int grapple_misfire_chance(P_char ch, P_char victim, int type)
     {
       chance = (int)get_property("grapple.misfire.leglock", 10);
     }
-    else if (type = 1) // Someone is casting
+    else if (type == 1) // Someone is casting
     {
       chance = (int)get_property("grapple.misfire.casting", 50);
     }

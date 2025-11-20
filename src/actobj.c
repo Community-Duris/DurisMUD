@@ -1753,7 +1753,7 @@ void do_put(P_char ch, char *argument, int cmd)
     }
     o_obj = create_money(c, s, g, p);
     obj_to_char(o_obj, ch);
-    if (count = put(ch, o_obj, s_obj, TRUE))
+    if ((count = put(ch, o_obj, s_obj, TRUE)))
     {
       snprintf(buf, MAX_STRING_LENGTH, "You put %d &+Wplatinum&n, %d &+Ygold&n, %d silver, and %d &+ycopper&n coins into $P.",
         plat, gold, silv, copp);
@@ -2874,7 +2874,8 @@ void do_pour(P_char ch, char *argument, int cmd)
     from_obj->value[1] = from_obj->value[1] / 2;
     return;
   }
-  else if (to_char = get_char_vis(ch, Gbuf2)) {
+  else if ((to_char = get_char_vis(ch, Gbuf2)))
+  {
     act("$n splashes $N with contents of $p.", TRUE, ch, from_obj, to_char, TO_NOTVICT);
     act("$n splashes you with contents of $p.", TRUE, ch, from_obj, to_char, TO_NOTVICT);
     act("You splash $N with contents of $p.", FALSE, ch, from_obj, to_char, TO_CHAR);

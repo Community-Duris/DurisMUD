@@ -744,9 +744,10 @@ int whirlwind_of_teetch(P_char ch, int targets)
 	       TRUE, ch, 0, 0, TO_ROOM);
 	send_to_char("&+WYou send out a deep howl as you charge at your foes!", ch);
 	
-	for (int i = targets; i && IS_ALIVE(ch); i--) {
-		if (victim = pick_target(ch, PT_TOLERANT))
-		  insectbite(ch, victim);
+	for (int i = targets; i && IS_ALIVE(ch); i--)
+	{
+          if ((victim = pick_target(ch, PT_TOLERANT)))
+            insectbite(ch, victim);
 	}
   return 0;
 }
@@ -808,7 +809,7 @@ int yeenoghu(P_char ch, P_char tch, int cmd, char *arg)
   else if (!number(0, 3))
   {
   	P_char victim;
-  	if (victim = pick_target(ch, PT_NUKETARGET | PT_WEAKEST))
+  	if ((victim = pick_target(ch, PT_NUKETARGET | PT_WEAKEST)))
       hyena_bite(ch, victim);
   }
   return 0;

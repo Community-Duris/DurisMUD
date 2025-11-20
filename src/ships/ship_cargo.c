@@ -130,7 +130,7 @@ int read_cargo()
 	MYSQL_RES *res = mysql_store_result(DB);
   
 	MYSQL_ROW row;
-	while( (row = mysql_fetch_row(res)) ) 
+	while ((row = mysql_fetch_row(res)))
     {
         char *type = row[0];
         int port_id = atoi(row[1]);

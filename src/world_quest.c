@@ -586,7 +586,7 @@ void do_quest(P_char ch, char *args, int cmd)
 
 
 
-  if (q_giver = read_mobile(real_mobile(ch->only.pc->quest_giver), REAL))
+  if ((q_giver = read_mobile(real_mobile(ch->only.pc->quest_giver), REAL)))
   {
     snprintf(q_name, MAX_STRING_LENGTH, "%s", q_giver->player.short_descr);
     snprintf(buf, MAX_STRING_LENGTH,"%s gave you the following quest:\r\n", q_name);
@@ -607,7 +607,7 @@ void do_quest(P_char ch, char *args, int cmd)
   }
 
   //wizlog(56, "questmob num:%d",ch->only.pc->quest_mob_vnum);
-  if (q_mob = read_mobile(real_mobile(ch->only.pc->quest_mob_vnum), REAL))
+  if ((q_mob = read_mobile(real_mobile(ch->only.pc->quest_mob_vnum), REAL)))
   {
     snprintf(q_name, MAX_STRING_LENGTH, "%s", q_mob->player.short_descr);
 

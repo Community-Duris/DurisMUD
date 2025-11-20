@@ -263,7 +263,7 @@ int ballista( P_obj obj, P_char ch, int cmd, char *arg )
           act( "$p slams into the ground with $n impaled upon it.", TRUE, vict, ammo, NULL, TO_ROOM );
           act( "You hit the ground and bounce off of $p.", TRUE, vict, ammo, NULL, TO_CHAR );
         }
-        else if( target = get_siege_room( ch, arg2) )
+        else if ((target = get_siege_room( ch, arg2)))
         {
           snprintf(buf, MAX_STRING_LENGTH, "%s slams into $p", ammo->short_description );
           act( buf, TRUE, NULL, target, 0, TO_ROOM );

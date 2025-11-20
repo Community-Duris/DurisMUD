@@ -167,7 +167,7 @@ int load_nexus_stones()
   }
     
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     int stone_id = atoi(row[0]);
     char* stone_name = row[1];
@@ -298,7 +298,7 @@ void update_nexus_stat_mods()
   reset_racewar_stat_mods();
   
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     int align = atoi(row[0]);
     int stat_affect = atoi(row[1]);
@@ -589,7 +589,7 @@ void nexus_stone_epics(P_char ch, P_obj stone)
   }
 
   int amount = amount_max;
-  if( afp = get_epic_task(ch) )
+  if ((afp = get_epic_task(ch)))
   {
     if( abs(afp->modifier) - SPILL_BLOOD == STONE_ID(stone) )
     {
@@ -1363,7 +1363,7 @@ void nexus_stone_list(P_char ch)
   }
   
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     char* stone_name = row[0];
     int align = atoi(row[1]);
@@ -1404,7 +1404,7 @@ void nexus_stone_god_list(P_char ch)
   }
   
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     int stone_id = atoi(row[0]);
     char* stone_name = row[1];
@@ -1624,7 +1624,7 @@ P_obj get_random_enemy_nexus(P_char ch)
 
   int i = 1;
   MYSQL_ROW row;
-  while(row = mysql_fetch_row(res))
+  while ((row = mysql_fetch_row(res)))
   {
     if (atoi(row[1]) == STONE_ALIGN_GOOD)
       align = RACEWAR_GOOD;

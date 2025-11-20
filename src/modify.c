@@ -1554,7 +1554,7 @@ bool rename_spellbook( char *old_name, char *new_name )
   snprintf(new_book, MAX_STRING_LENGTH, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*new_name), new_name );
 
   // If old_name has a spellbook...
-  if( file = fopen( old_book, "r") )
+  if ((file = fopen( old_book, "r")))
   {
     fclose( file );
     // Move it to new_name.
@@ -1583,7 +1583,7 @@ bool rename_craftlist( char *old_name, char *new_name )
   snprintf(new_book, MAX_STRING_LENGTH, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*new_name), new_name );
 
   // If old_name has a crafting book...
-  if( file = fopen( old_book, "r") )
+  if ((file = fopen( old_book, "r")))
   {
     fclose( file );
     // Move it to new_name.
@@ -2009,7 +2009,7 @@ void page_string_real(struct descriptor_data *d, char *str)
     return;
   }
 
-  for (s = str, pages = 1; s = next_page(s, d); pages++)
+  for (s = str, pages = 1; (s = next_page(s, d)); pages++)
     ;
 
   d->showstr_count = pages;

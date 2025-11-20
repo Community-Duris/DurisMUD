@@ -121,7 +121,7 @@ void load_guildhalls(vector<Guildhall*>& guildhalls)
   MYSQL_RES *res = mysql_store_result(DB);
 
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     Guildhall *gh = new Guildhall();
     gh->id = atoi(row[0]);
@@ -203,7 +203,7 @@ void load_guildhall_rooms(Guildhall *guildhall)
   MYSQL_RES *res = mysql_store_result(DB);
 
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     GuildhallRoom *room = NULL;
 

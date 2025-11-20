@@ -303,7 +303,7 @@ void do_epic_skills(P_char ch, char *arg, int cmd)
 
     if(IS_TRUSTED(ch))
     {
-      if(teacher = read_mobile(epic_teachers[t].vnum, VIRTUAL))
+      if ((teacher = read_mobile(epic_teachers[t].vnum, VIRTUAL)))
       {
         snprintf(buff, MAX_STRING_LENGTH, "&+W%-25s &n(&+W%-5d&n) %s\n", skills[skill].name, epic_teachers[t].vnum, teacher->player.short_descr);
         extract_char(teacher);
@@ -313,7 +313,7 @@ void do_epic_skills(P_char ch, char *arg, int cmd)
         snprintf(buff, MAX_STRING_LENGTH, "&+W%-25s &n(&+W%-5d&n) Teacher does not exist.\n", skills[skill].name, epic_teachers[t].vnum);
       }
     } else 
-	if(teacher = read_mobile(epic_teachers[t].vnum, VIRTUAL))
+	if ((teacher = read_mobile(epic_teachers[t].vnum, VIRTUAL)))
 	{
       snprintf(buff, MAX_STRING_LENGTH, "&+W%-25s &n&+yTeacher&+Y: &n %s\n", skills[skill].name, teacher->player.short_descr);
 	extract_char(teacher);
@@ -595,7 +595,8 @@ void event_blizzard(P_char ch, P_char victim, P_obj obj, void *data)
     if((faf = get_spell_from_room(room, SPELL_FIRESTORM)) ||
         (faf = get_spell_from_room(room, SPELL_SCATHING_WIND)) ||
         (faf = get_spell_from_room(room, SPELL_INCENDIARY_CLOUD))) {
-      if(victim = get_random_char_in_room(ch->in_room, ch, 0)) {
+      if ((victim = get_random_char_in_room(ch->in_room, ch, 0)))
+      {
         snprintf(buffer, 256, "&+CThe snow melts from the heat of &+R%s &+Cand you are only splashed by &+bwater&n.",
             skills[faf->type].name);
         send_to_char(buffer, victim);
@@ -604,7 +605,9 @@ void event_blizzard(P_char ch, P_char victim, P_obj obj, void *data)
         act(buffer, FALSE, victim, 0, 0, TO_ROOM);
         make_wet(victim, 2 * WAIT_MIN);
       }
-    } else if(victim = get_random_char_in_room(ch->in_room, ch, DISALLOW_SELF | DISALLOW_GROUPED)) {
+    }
+    else if ((victim = get_random_char_in_room(ch->in_room, ch, DISALLOW_SELF | DISALLOW_GROUPED)))
+    {
       spell_damage(ch, victim, 70 + dice(4,6), SPLDAM_COLD,
           SPLDAM_NOSHRUG | SPLDAM_NODEFLECT,
           (number(0, 2) && GET_CHAR_SKILL(ch, SKILL_SUMMON_BLIZZARD) > 30) ? &messages1 : &messages2);

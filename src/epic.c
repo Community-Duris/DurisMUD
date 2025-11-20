@@ -241,7 +241,7 @@ vector<epic_trophy_data> get_epic_zone_trophy(P_char ch)
   int trophy_size = (int) get_property("epic.zoneTrophy.size", 40);
 
   MYSQL_ROW row;
-  while(row = mysql_fetch_row(res))
+  while ((row = mysql_fetch_row(res)))
   {
     int zone_number = atoi(row[0]);
 
@@ -466,7 +466,7 @@ void gain_epic(P_char ch, int type, int data, int amount)
     epic_feed_artifacts(ch, amount, type);
 
     // Handle the total number of epics ch has gained.
-    if( afp = get_spell_from_char(ch, TAG_EPICS_GAINED) )
+    if ((afp = get_spell_from_char(ch, TAG_EPICS_GAINED)))
     {
       afp->modifier += amount;
     }
@@ -527,7 +527,7 @@ void epic_frag(P_char ch, int victim_pid, int amount)
 {
   struct affected_type *afp;
 
-  if( afp = get_epic_task(ch) )
+  if ((afp = get_epic_task(ch)))
   {
     if( abs(afp->modifier) == SPILL_BLOOD )
     {
@@ -1387,7 +1387,7 @@ vector<string> get_epic_players(int racewar)
   }
 
   MYSQL_ROW row;
-  while(row = mysql_fetch_row(res))
+  while ((row = mysql_fetch_row(res)))
   {
     names.push_back(string(row[0]));
   }
@@ -2013,7 +2013,7 @@ vector<epic_zone_data> get_epic_zones()
 
   MYSQL_ROW row;
 
-  while(row = mysql_fetch_row(res))
+  while ((row = mysql_fetch_row(res)))
   {
     zones.push_back(epic_zone_data(atoi(row[0]), string(row[1]), atof(row[2]), atoi(row[3])));
   }

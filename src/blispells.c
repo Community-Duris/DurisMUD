@@ -1209,7 +1209,7 @@ void spell_bloodstone(int level, P_char ch, char *arg, int type, P_char victim, 
     return;
   }
 
-  if( afp = get_spell_from_char(ch, SPELL_BLOODSTONE) )
+  if ((afp = get_spell_from_char(ch, SPELL_BLOODSTONE)))
   {
     bloodstone = get_obj_in_list_num(real_object(433), world[afp->modifier].contents);
     if( bloodstone )

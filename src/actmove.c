@@ -2207,9 +2207,9 @@ int find_door(P_char ch, char *type, char *dir)
   if( *dir)
   {                             /* a direction was specified */
     door = search_block(dir, dirs, FALSE);
-    if( door = -1)
+    if (door == -1)
       door = search_block(dir, short_dirs, FALSE);
-    if( door == -1)
+    if (door == -1)
     {
       send_to_char("That's not a direction.\n", ch);
       return (-1);

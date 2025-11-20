@@ -1110,13 +1110,16 @@ void get_property_format(const char *input, char *formatted)
   char c;
   bool was_space = false;
 
-  while (c = *input++) {
+  while ((c = *input++))
+  {
     if (isspace(c))
       was_space = true;
-    else if (was_space) {
+    else if (was_space)
+    {
       *formatted++ = toupper(c);
       was_space = false;
-    } else
+    }
+    else
       *formatted++ = c;
   }
 
@@ -4264,10 +4267,8 @@ void do_summon_imp(P_char ch, char *argument, int cmd)
 
   setup_pet(imp, ch, -1, 0);
   
-  if(foe = GET_OPPONENT(ch))
-  {
+  if ((foe = GET_OPPONENT(ch)))
     MobStartFight(imp, foe);
-  }
 }
 
 #undef DEVIL_IMP
@@ -4366,7 +4367,7 @@ void do_immolate(P_char ch, char *argument, int cmd)
   act("As $n raises $s hands &+Ra fiery inferno &nof &+Ydancing flames&n flows from $m.",
       FALSE, ch, 0, victim, TO_ROOM);
   
-  if(afp = get_spell_from_char(ch, SPELL_FIRESHIELD))
+  if ((afp = get_spell_from_char(ch, SPELL_FIRESHIELD)))
   {
     wear_off_message(ch, afp);
     affect_remove(ch, afp);

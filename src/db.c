@@ -4070,7 +4070,7 @@ void free_obj(P_obj obj)
   }
   ClearObjEvents(obj);
 
-  while (af = obj->affects)
+  while ((af = obj->affects))
     obj_affect_remove(obj, af);
 
   /* MOST obj strings should not be freed, as they are shared among all

@@ -107,7 +107,7 @@ void purge_linked_auras(P_char ch)
   struct affected_type *af, *next_af;
   P_char   tch;
 
-  while (tch = get_linking_char(ch, LNK_PALADIN_AURA))
+  while ((tch = get_linking_char(ch, LNK_PALADIN_AURA)))
     unlink_char(tch, ch, LNK_PALADIN_AURA);
 
   disarm_char_nevents(ch, event_apply_group_auras);

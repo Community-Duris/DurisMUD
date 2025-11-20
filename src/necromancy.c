@@ -1206,7 +1206,7 @@ void check_saved_corpse(P_char ch)
   if (!ch)
     return;
 
-  if (e = get_scheduled(ch, event_saved_corpse))
+  if ((e = get_scheduled(ch, event_saved_corpse)))
   {
     SavedCorpseData *data = (SavedCorpseData*) e->data;
     corpse = data->corpse;

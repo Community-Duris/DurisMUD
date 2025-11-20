@@ -218,8 +218,8 @@ int leviathan( P_char ch, P_char pl, int cmd, char *arg )
       return TRUE;
 
    // Attack nearby ships (within 3 rooms ) if not fighting
-   if( cmd == CMD_PERIODIC && !number( 0, 1 ) && !IS_FIGHTING(ch) )
-      if( ship = leviathan_find_ship( ch, ch->in_room, 3 ) )
+   if ((cmd == CMD_PERIODIC && !number( 0, 1 ) && !IS_FIGHTING(ch)))
+      if ((ship = leviathan_find_ship( ch, ch->in_room, 3 )))
       {
           act_to_all_in_ship( ship,"$N speeds into your ship!", ch );
           act( "$N speeds into a ship!", FALSE, ch, NULL, ch, TO_ROOM );
@@ -261,7 +261,7 @@ int leviathan( P_char ch, P_char pl, int cmd, char *arg )
             act( "$N lashes out with a tentacle, wrapping it around you, lifts and quickly slams you upon the water surface!", FALSE, tch, NULL, ch, TO_CHAR );
             act( "$N lashes out grabbing $n with a tentacle, thrashing $m into the water!", FALSE, tch, NULL, ch, TO_ROOM );
             // Move victim 1-3 rooms away
-            if( to_room = adjacent_room_nesw(ch, number( 1, 3 )) )
+            if ((to_room = adjacent_room_nesw(ch, number( 1, 3 ))))
             {
                char_from_room(tch);
                char_to_room(tch, to_room, -1);

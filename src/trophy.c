@@ -348,7 +348,7 @@ void load_zone_trophy(P_char ch)
   }
   
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     struct zone_trophy_data data;
     data.zone_number = atoi(row[0]);

@@ -644,7 +644,7 @@ int outpost_inside(int room, P_char ch, int cmd, char *arg)
     one_argument(arg, buff);
     if (isname(" out", buff))
     {
-      if (old_room = ch->in_room)
+      if ((old_room = ch->in_room))
       {
         Building* building = get_building_from_room(ch->in_room);
         int z = building->get_level();
@@ -769,7 +769,7 @@ bool Building::generate_portals()
     }
   }
 
-  if( portal_op = read_object(BUILDING_PORTAL, VIRTUAL) )
+  if ((portal_op = read_object(BUILDING_PORTAL, VIRTUAL)))
   {
     snprintf(buff, MAX_STRING_LENGTH, portal_op->description, ghname);
     portal_op->value[0] = guildhall_room;
@@ -778,7 +778,7 @@ bool Building::generate_portals()
     obj_to_room(portal_op, gate_room());
   }
 
-  if( portal_gh = read_object(BUILDING_PORTAL, VIRTUAL) )
+  if ((portal_gh = read_object(BUILDING_PORTAL, VIRTUAL)))
   {
     snprintf(buff, MAX_STRING_LENGTH, portal_gh->description, continent_name(world[location()].continent));
     portal_gh->value[0] = rooms[0]->number;

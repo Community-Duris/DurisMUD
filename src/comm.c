@@ -1385,7 +1385,7 @@ int init_socket(int port)
       exit(1);
     }
   }
-  if (bind_error = (bind(s, (struct sockaddr *) &sa, sizeof(sa))) < 0)
+  if ((bind_error = (bind(s, (struct sockaddr *) &sa, sizeof(sa))) < 0))
   {
     logit(LOG_EXIT, "bind error %d", bind_error);
     close(s);

@@ -8632,7 +8632,7 @@ void do_which(P_char ch, char *args, int cmd)
       case apply:
         for (j = 0; j < 3; j++)
         {
-          if(found = (t_obj->affected[j].location == i))
+          if ((found = (t_obj->affected[j].location == i)))
             break;
         }
         break;
@@ -11494,7 +11494,7 @@ void whois_ip( P_char ch, char *ip_address )
       send_to_char_f( ch, "%s", row[0] );
     }
   }
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     if( (targ = get_char_online( row[0] )) != NULL )
     {
@@ -11570,7 +11570,7 @@ void do_whois(P_char ch, char *arg, int cmd)
     {
       CAP(name);
       send_to_char_f( ch, "&=LWIP Addresses used by %s:&N\n", name );
-      while( (row = mysql_fetch_row( res )) != NULL )
+      while ((row = mysql_fetch_row(res)))
       {
         send_to_char_f( ch, "%s, ", row[0] );
       }

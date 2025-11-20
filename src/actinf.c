@@ -5088,7 +5088,7 @@ void do_score(P_char ch, char *argument, int cmd)
   */
       afp2 = get_spell_from_char(ch, TAG_EPICS_GAINED);
 
-      if( afp = get_epic_task(ch) )
+      if ((afp = get_epic_task(ch)))
       {
         i = afp->modifier;
         if( i < 0 )

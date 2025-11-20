@@ -2933,7 +2933,7 @@ void event_mirage(P_char ch, P_char vict, P_obj obj, void *data)
 {
   struct affected_type *afp;
 
-  if (afp = get_spell_from_char(ch, SPELL_MIRAGE))
+  if ((afp = get_spell_from_char(ch, SPELL_MIRAGE)))
   {
     if (afp->modifier != ch->in_room)
     {

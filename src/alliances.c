@@ -50,7 +50,7 @@ void load_alliances()
   MYSQL_ROW row;
 
   Alliance alliance;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     alliance.forging_assoc = get_guild_from_id(atoi(row[0]));
     alliance.joining_assoc = get_guild_from_id(atoi(row[1]));

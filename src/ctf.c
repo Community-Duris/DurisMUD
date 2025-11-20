@@ -690,7 +690,7 @@ void show_ctf_score(P_char ch, char *argument)
   MYSQL_ROW row;
   
   *buff = '\0';
-  while (row = mysql_fetch_row(res))
+  while ((row = mysql_fetch_row(res)))
   {
      snprintf(buff + strlen(buff), MAX_STRING_LENGTH - strlen(buff), "%-30s %-3d\r\n", get_player_name_from_pid(atoi(row[1])), atoi(row[0]));
   }
@@ -799,7 +799,7 @@ void ctf_populate_boons()
 
   MYSQL_ROW row;
 
-  while (row = mysql_fetch_row(res))
+  while ((row = mysql_fetch_row(res)))
     ctfdata[atoi(row[0])].room = atoi(row[1]);
 
   mysql_free_result(res);

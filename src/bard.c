@@ -182,7 +182,7 @@ void stop_singing(P_char ch)
         affect_remove(ch, af);
       }
   }
-  while (tch = get_linking_char(ch, LNK_SONG))
+  while ((tch = get_linking_char(ch, LNK_SONG)))
   {
     unlink_char(tch, ch, LNK_SONG);
   }

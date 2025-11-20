@@ -2973,7 +2973,7 @@ void spell_thought_beacon(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  if (afp = get_spell_from_char(ch, SPELL_THOUGHT_BEACON))
+  if ((afp = get_spell_from_char(ch, SPELL_THOUGHT_BEACON)))
   {
     beacon = get_obj_in_list_num(real_object(VOBJ_THOUGHT_BEACON), world[afp->modifier].contents);
     if (beacon)

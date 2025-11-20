@@ -140,7 +140,7 @@ int load_outposts()
   Building* building;
 
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     int id = atoi(row[0]);
     int guild = atoi(row[1]);
@@ -149,7 +149,7 @@ int load_outposts()
     int portal = atoi(row[4]);
     int golems = atoi(row[5]);
 
-    if( building = load_building(get_guild_from_id(guild), BUILDING_OUTPOST, outpost_locations[id][0], level))
+    if ((building = load_building(get_guild_from_id(guild), BUILDING_OUTPOST, outpost_locations[id][0], level)))
     {
       building->set_dir( outpost_locations[id][1] );
       outpost_generate_walls(building, walls, golems);

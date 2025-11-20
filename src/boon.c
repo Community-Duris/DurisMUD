@@ -771,7 +771,7 @@ int validate_boon_data(BoonData *bdata, int flag)
     case BARG_ALL:
       for( i = 1; i < MAX_BARG; i++ )
       {
-        if( retval = validate_boon_data(bdata, i) )
+        if ((retval = validate_boon_data(bdata, i)))
         {
           return (i%100) * 100 + retval % 100;
           /* Above does the same thing, but faster.
@@ -2027,7 +2027,7 @@ int boon_display(P_char ch, char *argument)
 	"ID", "Duration", "Racewar", "Description");
 
   MYSQL_ROW row;
-  while (row = mysql_fetch_row(res))
+  while ((row = mysql_fetch_row(res)))
   {
     int id = atoi(row[0]);
     int timethen = atoi(row[1]);
@@ -2606,7 +2606,7 @@ void boon_maintenance()
   MYSQL_ROW row;
   
   i = 0;
-  while (row = mysql_fetch_row(res))
+  while ((row = mysql_fetch_row(res)))
   {
     id[i++] = atoi(row[0]);
   }
@@ -2726,7 +2726,7 @@ void boon_random_maintenance()
   MYSQL_ROW row;
   
   i = 0;
-  while (row = mysql_fetch_row(res))
+  while ((row = mysql_fetch_row(res)))
   {
     id[i] = atoi(row[0]);
     r[i] = atoi(row[1]);
@@ -2890,7 +2890,7 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
   MYSQL_ROW row;
 
   i = 0;
-  while (row = mysql_fetch_row(res))
+  while ((row = mysql_fetch_row(res)))
   {
     id[i++] = atoi(row[0]);
   }

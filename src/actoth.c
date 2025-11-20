@@ -5777,7 +5777,7 @@ void do_fly(P_char ch, char *argument, int cmd)
 
   zone = &zone_table[world[ch->in_room].zone];
   /* mounted chars can use this to order their mounts as well */
-  if (mount = get_linked_char(ch, LNK_RIDING))
+  if ((mount = get_linked_char(ch, LNK_RIDING)))
   {
     ch = mount;                 /* simply change who were dealing with */
     rider = ch;
@@ -5986,7 +5986,7 @@ void do_swim(P_char ch, char *argument, int cmd)
 
   zone = &zone_table[world[ch->in_room].zone];
   /* mounted chars can use this to order their mounts as well */
-  if (mount = get_linked_char(ch, LNK_RIDING))
+  if ((mount = get_linked_char(ch, LNK_RIDING)))
   {
     ch = mount;
     rider = ch;

@@ -4890,7 +4890,7 @@ bool should_area_hit(P_char ch, P_char victim)
   if( IS_ROOM(ch->in_room, ROOM_SINGLE_FILE) && !AdjacentInRoom(ch, victim) )
     return FALSE;
 
-  if( af = get_spell_from_char(victim, TAG_IMMUNE_AREA) )
+  if ((af = get_spell_from_char(victim, TAG_IMMUNE_AREA)))
   {
     affect_remove(victim, af);
     return FALSE;
@@ -5197,7 +5197,7 @@ int get_takedown_size(P_char ch)
 {
   P_char   mount;
 
-  if (mount = get_linked_char(ch, LNK_RIDING))
+  if ((mount = get_linked_char(ch, LNK_RIDING)))
   {
     if (GET_ALT_SIZE(mount) >= GET_ALT_SIZE(ch))
       return MIN(SIZE_MAXIMUM, GET_ALT_SIZE(ch) + 1);

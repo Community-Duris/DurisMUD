@@ -189,14 +189,14 @@ void nq_free_reward(struct nq_reward *reward)
   if (reward->skill)
     FREE(reward->skill);
 
-  while (string = reward->tag)
+  while ((string = reward->tag))
   {
     reward->tag = string->next;
     FREE(string->string);
     FREE(string);
   }
 
-  while (item = reward->item)
+  while ((item = reward->item))
   {
     reward->item = item->next;
     nq_free_item(item);
@@ -209,34 +209,34 @@ void nq_free_action(struct nq_action *action)
   struct nq_reward *reward;
   struct nq_string *string;
 
-  while (string = action->phrase)
+  while ((string = action->phrase))
   {
     action->phrase = string->next;
     FREE(string->string);
     FREE(string);
   }
 
-  while (string = action->tag)
+  while ((string = action->tag))
   {
     action->tag = string->next;
     FREE(string->string);
     FREE(string);
   }
 
-  while (string = action->no_tag)
+  while ((string = action->no_tag))
   {
     action->tag = string->next;
     FREE(string->string);
     FREE(string);
   }
 
-  while (item = action->item)
+  while ((item = action->item))
   {
     action->item = item->next;
     nq_free_item(item);
   }
 
-  while (reward = action->reward)
+  while ((reward = action->reward))
   {
     action->reward = reward->next;
     nq_free_reward(reward);
@@ -265,7 +265,7 @@ void nq_free_actor_template(struct nq_actor_template *tmpl)
         nq_free_action(action);
       }
 
-  while (action = tmpl->common_actions)
+  while ((action = tmpl->common_actions))
   {
     tmpl->common_actions = tmpl->common_actions->next;
     nq_free_action(action);
@@ -282,7 +282,7 @@ void nq_free_instance(struct nq_instance *instance, P_char ch)
 
   FREE(instance->questor);
 
-  while (actor = instance->actor)
+  while ((actor = instance->actor))
   {
     instance->actor = actor->next;
     if (actor->loaded && char_in_list(actor->ch))
@@ -303,14 +303,14 @@ void nq_free_instance(struct nq_instance *instance, P_char ch)
     FREE(actor);
   }
 
-  while (log = instance->log)
+  while ((log = instance->log))
   {
     instance->log = log->next;
     FREE(log->string);
     FREE(log);
   }
 
-  while (tag = instance->tag)
+  while ((tag = instance->tag))
   {
     instance->tag = tag->next;
     FREE(tag->string);
@@ -328,13 +328,13 @@ void nq_free_quest(struct nq_quest *quest, P_char ch)
 
   FREE(quest->id);
 
-  while (instance = quest->instance)
+  while ((instance = quest->instance))
   {
     quest->instance = instance->next;
     nq_free_instance(instance, ch);
   }
 
-  while (actor = quest->actor)
+  while ((actor = quest->actor))
   {
     quest->actor = actor->next;
     FREE(actor);
@@ -725,7 +725,7 @@ int nq_test_single_action(struct nq_action *action,
   memset(components, 0, sizeof(components));
 
   for (found = 0, item = action->item; item; item = item->next)
-    if (obj = nq_find_item(item, mob, components))
+    if ((obj = nq_find_item(item, mob, components)))
       components[found++] = obj;
     else
       return 0;

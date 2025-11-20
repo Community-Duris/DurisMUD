@@ -2032,14 +2032,14 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
   strcpy( Gbuf2, Gbuf1 );
   snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.old", Gbuf1, Gbuf1 );
   system( Gbuf2 );
-  if( f = fopen( Gbuf1, "r" ) )
+  if ((f = fopen( Gbuf1, "r" )))
   {
     debug( "deleteCharacter: Error: pfile (%s) still exists.", Gbuf1 );
     debug( "deleteCharacter: Command: (%s) failed.", Gbuf2 );
     fclose( f );
     snprintf(Gbuf2, MAX_STRING_LENGTH, "rm -f %s", Gbuf1 );
     system( Gbuf2 );
-    if( f = fopen( Gbuf1, "r" ) )
+    if ((f = fopen( Gbuf1, "r" )))
     {
       fclose( f );
       debug( "deleteCharacter: Command: (%s) failed.", Gbuf2 );
@@ -2051,7 +2051,7 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
     // delete the locker as well
     snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.locker", SAVE_DIR, LOWER(*ch->player.name), name );
     snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
-    if( f = fopen( Gbuf1, "r" ) )
+    if ((f = fopen( Gbuf1, "r" )))
     {
       fclose( f );
       system( Gbuf2 );
@@ -2060,7 +2060,7 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
 
   // Delete file containing conjurable mobs.
   snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*ch->player.name), name);
-  if( f = fopen( Gbuf1, "r" ) )
+  if ((f = fopen( Gbuf1, "r" )))
   {
     fclose( f );
     snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
@@ -2068,7 +2068,7 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
   }
   // Delete file containing crafting/forging recipe list.
   snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*ch->player.name), name);
-  if( f = fopen( Gbuf1, "r" ) )
+  if ((f = fopen( Gbuf1, "r" )))
   {
     fclose( f );
     snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.bak", Gbuf1, Gbuf1 );

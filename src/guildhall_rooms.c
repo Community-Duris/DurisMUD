@@ -342,7 +342,7 @@ bool BankRoom::init()
   world[real_room0(this->vnum)].funct = guildhall_bank_room;
   
   // set up bank counter
-  if( this->counter = read_object(GH_BANK_COUNTER_VNUM, VIRTUAL) )
+  if ((this->counter = read_object(GH_BANK_COUNTER_VNUM, VIRTUAL)))
   {
     obj_to_room(this->counter, real_room0(this->vnum));
   }
@@ -355,7 +355,7 @@ bool TownPortalRoom::init()
   GuildhallRoom::init();
 
   // set up town portal
-  if( this->portal = read_object(GH_TOWN_PORTAL_VNUM, VIRTUAL) )
+  if ((this->portal = read_object(GH_TOWN_PORTAL_VNUM, VIRTUAL)))
   {
     if( this->guildhall->racewar == RACEWAR_GOOD )
     {
@@ -427,7 +427,7 @@ bool LibraryRoom::init()
   GuildhallRoom::init();
   
   // set up tome
-  if( this->tome = read_object(GH_LIBRARY_TOME_VNUM, VIRTUAL) )
+  if ((this->tome = read_object(GH_LIBRARY_TOME_VNUM, VIRTUAL)))
   {
     obj_to_room(this->tome, real_room0(this->vnum));
   }

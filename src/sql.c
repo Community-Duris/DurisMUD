@@ -1254,7 +1254,8 @@ void send_offline_messages(P_char ch)
 	}
 
 	MYSQL_ROW row;
-	while( row = mysql_fetch_row(res) ) {
+	while ((row = mysql_fetch_row(res)))
+	{
 		send_to_char(row[1], ch);
 		qry("DELETE FROM offline_messages WHERE id = '%d'", atoi(row[0]));
 	}
@@ -1453,7 +1454,7 @@ void do_sql(P_char ch, char *argument, int cmd)
             send_to_char("That prepped statement does not exist.\n\r", ch );
             tmp[0] = '\0';
           }
-          while( (row = mysql_fetch_row(db)) )
+          while ((row = mysql_fetch_row(db)))
             ;
           mysql_free_result(db);
 
@@ -1523,7 +1524,7 @@ void do_sql(P_char ch, char *argument, int cmd)
     strcat(result, " |\n\n");
 
     int maxsize = 100;
-    while( (row = mysql_fetch_row(db)) )
+    while ((row = mysql_fetch_row(db)))
     {
       maxsize--;
       if( maxsize == 0 )
@@ -1642,7 +1643,7 @@ void show_frag_trophy(P_char ch, P_char who)
   char buff[MAX_STRING_LENGTH];
 
   MYSQL_ROW row;
-  while( row = mysql_fetch_row(res) )
+  while ((row = mysql_fetch_row(res)))
   {
     snprintf(buff, MAX_STRING_LENGTH, " &+g(&+G%2d&+g) &+W%s\r\n", atoi(row[1]), row[0]);
     send_to_char( buff, ch);

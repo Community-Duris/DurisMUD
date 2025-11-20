@@ -1763,7 +1763,8 @@ void spell_grease(int level, P_char ch, char *arg, int type, P_char victim, P_ob
   act("&+LA black oily substance&n spreads all over $N's clothes, yuck!", FALSE, victim, 0, ch, TO_ROOM);
   act("&+LA black oily substance&n spreads all over your clothes, yuck!", FALSE, victim, 0, 0, TO_CHAR);
 
-  if(afp = get_spell_from_char(victim, SPELL_GREASE)) {
+  if ((afp = get_spell_from_char(victim, SPELL_GREASE)))
+  {
     afp->duration = 1;
     afp->modifier = number(1,4);
   } else {

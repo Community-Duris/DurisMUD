@@ -6013,7 +6013,7 @@ void spell_binding_wind(int level, P_char ch, char *arg, int type,
   af.ch = ch;
   affect_to_room(ch->in_room, &af);
 
-  if(afp = get_spell_from_room(&world[ch->in_room], SPELL_WIND_TUNNEL))
+  if ((afp = get_spell_from_room(&world[ch->in_room], SPELL_WIND_TUNNEL)))
   {
     affect_room_remove(ch->in_room, afp);
   }
@@ -6035,7 +6035,7 @@ void spell_wind_tunnel(int level, P_char ch, char *arg, int type,
   af.ch = ch;
   affect_to_room(ch->in_room, &af);
 
-  if(afp = get_spell_from_room(&world[ch->in_room], SPELL_BINDING_WIND))
+  if ((afp = get_spell_from_room(&world[ch->in_room], SPELL_BINDING_WIND)))
   {
     affect_room_remove(ch->in_room, afp);
   }
@@ -7641,7 +7641,7 @@ void spell_slow(int level, P_char ch, char *arg, int type, P_char victim,
   {
     bzero(&af, sizeof(af));
     af.type = SPELL_SLOW;
-    af.duration = (level >> 4 + 1);
+    af.duration = (level >> 4) + 1;
     af.modifier = 2;
     af.bitvector2 = AFF2_SLOW;
 
@@ -9854,7 +9854,7 @@ void spell_reveal_true_name(int level, P_char ch, char *arg, int type, P_char vi
     if(ex)
     {                           /* restring name */
       obj->name = str_dup(ex->description);
-      if(eol = rindex(obj->name, '\r'))
+      if ((eol = rindex(obj->name, '\r')))
         *eol = '\0';
       SET_BIT(obj->str_mask, STRUNG_KEYS);
       newname = TRUE;
@@ -9868,7 +9868,7 @@ void spell_reveal_true_name(int level, P_char ch, char *arg, int type, P_char vi
     {                           /* restring short desc */
       /* free(obj->short_description); */
       obj->short_description = str_dup(ex->description);
-      if(eol = rindex(obj->short_description, '\r'))
+      if ((eol = rindex(obj->short_description, '\r')))
         *eol = '\0';
       SET_BIT(obj->str_mask, STRUNG_DESC2);
       newname = TRUE;
@@ -9882,7 +9882,7 @@ void spell_reveal_true_name(int level, P_char ch, char *arg, int type, P_char vi
     {                           /* restring description */
       /*free(obj->description); */
       obj->description = str_dup(ex->description);
-      if(eol = rindex(obj->description, '\r'))
+      if ((eol = rindex(obj->description, '\r')))
         *eol = '\0';
       SET_BIT(obj->str_mask, STRUNG_DESC1);
       newname = TRUE;
@@ -20754,7 +20754,7 @@ void spell_moonstone(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  if(afp = get_spell_from_char(ch, SPELL_MOONSTONE))
+  if ((afp = get_spell_from_char(ch, SPELL_MOONSTONE)))
   {
     moonstone = get_obj_in_list_num(real_object(419), world[afp->modifier].contents);
     if(moonstone)
