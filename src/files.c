@@ -1219,14 +1219,13 @@ bool restoreStatus(const nlohmann::json& data, P_char ch)
     ch->base_stats.Cha          = (ubyte)data["status"]["stats"]["stat_cha"].get<int>();
     ch->base_stats.Kar          = (ubyte)data["status"]["stats"]["stat_kar"].get<int>();
     ch->base_stats.Luk          = (ubyte)data["status"]["stats"]["stat_luk"].get<int>();
-    ch->curr_stats              = ch->base_stats;
-
     GET_MANA(ch)                = (short)data["status"]["stats"]["mana"].get<short>();
     ch->points.base_mana        = (short)data["status"]["stats"]["base_mana"].get<short>();
-    GET_HIT(ch)                 = MAX((short)data["status"]["stats"]["hit"].get<short>(), 0);
-    ch->points.base_hit         = MAX((short)data["status"]["stats"]["base_hit"].get<short>(), 1);
     GET_VITALITY(ch)            = (short)data["status"]["stats"]["vitality"].get<short>();
     ch->points.base_vitality    = (short)data["status"]["stats"]["max_vitality"].get<short>();
+    GET_HIT(ch)                 = MAX((short)data["status"]["stats"]["hit"].get<short>(), 0);
+    ch->points.base_hit         = MAX((short)data["status"]["stats"]["base_hit"].get<short>(), 1);
+    ch->curr_stats              = ch->base_stats;
     ch->points.hit_reg          = 0;
     ch->points.move_reg         = 0;
     ch->points.mana_reg         = 0;
