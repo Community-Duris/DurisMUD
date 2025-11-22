@@ -11,6 +11,7 @@
 #include <fcntl.h>
 #include <netdb.h>
 #include <netinet/in.h>
+#include <netinet/tcp.h>
 #include <stdio.h>
 #include <string.h>
 #include <sys/socket.h>
@@ -1393,6 +1394,8 @@ int new_connection(int s)
     return (-1);
   }
   nonblock(t);
+  i = 1;
+  setsockopt(t, SOL_TCP, TCP_NODELAY, &i, sizeof(i));
 
   return (t);
 }
