@@ -3860,13 +3860,11 @@ void event_tsunamiwave(P_char ch, P_char victim, P_obj obj, void *data)
 int SeaKingdom_Tsunami(P_obj obj, P_char ch, int cmd, char *arg)
 {
 
-  int      dam = cmd / 1000, curr_time;
+  int      dam = cmd / 1000;
   struct affected_type *af;
   P_char   vict;
 
-  curr_time = time(NULL);
   /* check for periodic event calls */
-
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
   if (!ch && cmd == CMD_PERIODIC)
@@ -3893,10 +3891,10 @@ int SeaKingdom_Tsunami(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (arg && (isname(arg, "trident") || isname(arg, "tsunami")))
   {
+    time_t curr_time = time(NULL);
+
     if (cmd == CMD_TAP)
     {
-      curr_time = time(NULL);
-
       if (obj->timer[0] + 300 <= curr_time)
       {
 
@@ -3931,14 +3929,14 @@ int SeaKingdom_Tsunami(P_obj obj, P_char ch, int cmd, char *arg)
               act
                 ("&+W$N&+L is &+Bvit&+Cal&+Wiz&+Ced by &+WTsu&+Bna&+bmi's&+W power&+W!",
                  FALSE, ch, obj, vict, TO_ROOM);
-              spell_vitality(60, ch, 0, SPELL_TYPE_SPELL, vict, 0);
+              spell_vitality(GET_LEVEL(ch), ch, 0, SPELL_TYPE_SPELL, vict, 0);
             }
             else if (vict == ch)
             {
               act
                 ("&+W$n&+L is &+Bvit&+Cal&+Wiz&+Ced by &+WTsu&+Bna&+bmi's&+W power&+W!",
                  FALSE, ch, obj, vict, TO_ROOM);
-              spell_vitality(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+              spell_vitality(GET_LEVEL(ch), ch, 0, SPELL_TYPE_SPELL, ch, 0);
             }
           }
           else
@@ -3970,7 +3968,6 @@ int SeaKingdom_Tsunami(P_obj obj, P_char ch, int cmd, char *arg)
           ("\n&+WTsu&+Bna&+bmi&+L,&+b the trident of &+cstorms &+b vibrates &+Bviolently&+b and suddenly becomes &+Lstill.\n",
            ch->in_room);
         obj->timer[0] = curr_time;
-        return TRUE;
       }
 
       else
@@ -3978,36 +3975,53 @@ int SeaKingdom_Tsunami(P_obj obj, P_char ch, int cmd, char *arg)
         act
           ("You &+Ltap and tap and &+Wtap but no &+Bwa&+bter's comin outta &+Wthis &+Bs&+Ch&+Wa&+Cf&+Bt.",
            TRUE, ch, obj, NULL, TO_CHAR);
-        return TRUE;
       }
-    } else if (obj->timer[1] + 500 > time(NULL) && !IS_TRUSTED(ch)) {
-      return FALSE;
-    } else if (cmd == CMD_THRUST && HAS_FOOTING(ch) && !IS_WATER_ROOM(ch->in_room)) {
-      act("You thrust $q deep into the ground invoking the name of Poseidon, King of the Sea.",
-          FALSE, ch, obj, 0, TO_CHAR);
-      act("With great strength $n thrusts $q deep into the ground as he invokes the name of Poseidon.",
-          FALSE, ch, obj, 0, TO_ROOM);
-      add_event(event_tsunamiwave, WAIT_SEC, ch, 0, 0, 0, &(ch->in_room), sizeof(ch->in_room));
-      obj->timer[1] = time(NULL);
-      return TRUE;
-    } else if (cmd == CMD_RAISE && IS_WATER_ROOM(ch->in_room)) {
-      act("You raise your $q skyward calling for the aid of Poseidon, ruler of the Sea.",
-          FALSE, ch, obj, 0, TO_CHAR);
-      act("$n raises $s $q skyward while shouting a prayer to Poseidon, ruler of the Sea.",
-          FALSE, ch, obj, 0, TO_ROOM);
-      add_event(event_tsunamiwave, WAIT_SEC, ch, 0, 0, 0, &(ch->in_room), sizeof(ch->in_room));
-      obj->timer[1] = time(NULL);
-      return TRUE;
-    } else if (cmd == CMD_RAISE && !IS_WATER_ROOM(ch->in_room) &&
-        !HAS_FOOTING(ch)) {
-      act("You raise your $q skyward calling for the aid of Poseidon, ruler of the Sea.",
-          FALSE, ch, obj, 0, TO_CHAR);
-      act("$n raises $s $q skyward while shouting a prayer to Poseidon, ruler of the Sea.",
-          FALSE, ch, obj, 0, TO_ROOM);
-      add_event(event_tsunamiwave, WAIT_SEC, ch, 0, 0, 0, &(ch->in_room), sizeof(ch->in_room));
-      obj->timer[1] = time(NULL);
       return TRUE;
     }
+
+    if (cmd != CMD_THRUST && cmd != CMD_RAISE)
+      return FALSE;
+
+    if (obj->timer[1] + 500 > curr_time && !IS_TRUSTED(ch))
+    {
+      send_to_char("You &+Lthrust&n, &+Lraise&n, and shake the trident madly but nothing happens.\n",
+       ch);
+      return TRUE;
+    }
+
+    if (cmd == CMD_THRUST)
+    {
+      if (!HAS_FOOTING(ch))
+      {
+        send_to_char("There's no ground to thrust the trident into!\n", ch);
+        return TRUE;
+      }
+      if (IS_WATER_ROOM(ch->in_room))
+      {
+	send_to_char("The pressure of water around you would block ground water.\n", ch);
+	return TRUE;
+      }
+      act("You thrust $q deep into the ground invoking the name of Poseidon, King of the Sea.",
+          FALSE, ch, obj, 0, TO_CHAR);
+      act("With great strength $n thrusts $q deep into the ground as $e invokes the name of Poseidon.",
+          FALSE, ch, obj, 0, TO_ROOM);
+    }
+    else // cmd == CMD_RAISE
+    {
+      if (HAS_FOOTING(ch) && !IS_WATER_ROOM(ch->in_room))
+      {
+        send_to_char("You can't summon any water here; perhaps there's some in the ground?\n", ch);
+        return FALSE;
+      }
+      act("You raise your $q skyward calling for the aid of Poseidon, ruler of the Sea.",
+          FALSE, ch, obj, 0, TO_CHAR);
+      act("$n raises $s $q skyward while shouting a prayer to Poseidon, ruler of the Sea.",
+          FALSE, ch, obj, 0, TO_ROOM);
+    }
+
+    add_event(event_tsunamiwave, WAIT_SEC, ch, 0, 0, 0, &(ch->in_room), sizeof(ch->in_room));
+    obj->timer[1] = curr_time;
+    return TRUE;
   }
   return FALSE;
 }
