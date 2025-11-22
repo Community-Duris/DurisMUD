@@ -1268,7 +1268,6 @@ struct pc_only_data {           /* values only used by PCs        */
   int numb_gcmd;                /* number of granted cmds */
 
   ulong law_flags;              /* KNOWN, WANTED, OUTCAST in hometowns */
-  int olc_zone;                 /* what are they editing? */
 #ifdef OVL
   sh_int ovl_count;
   sh_int ovl_timer;
@@ -1569,7 +1568,7 @@ struct txt_q {
 */
 #define CON_BONUS4                  52 // Krov: new 5 bonus system
 #define CON_BONUS5                  53
-#define CON_TEXTED                  54
+// #define CON_TEXTED                  54
 // #define CON_PICKSIDE                55 <-- Unused.
 #define CON_ENTER_LOGIN             56
 #define CON_ENTER_HOST              57
@@ -1651,7 +1650,6 @@ struct descriptor_data {
   P_char character;             /* linked to char             */
   P_char original;              /* original char              */
   struct snoop_data snoop;      /* to snoop people.           */
-  struct olc_data *olc;         /*. OLC info - defined in olc.h   .*/
   P_desc next;                  /* link to next descriptor    */
   char tmp_val;                 /* temporary field used in char creation only */
   char confirm_state;           /* SAM 7-94, used to allow confirming commands */

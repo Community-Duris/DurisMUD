@@ -11,6 +11,7 @@
 #include <fcntl.h>
 #include <netdb.h>
 #include <netinet/in.h>
+#include <netinet/tcp.h>
 #include <stdio.h>
 #include <string.h>
 #include <sys/socket.h>
@@ -28,7 +29,6 @@
 #include "events.h"
 #include "interp.h"
 #include "lookup_process.h"
-#include "olc.h"
 #include "prototypes.h"
 #include "structs.h"
 #include "utils.h"
@@ -818,10 +818,7 @@ void game_loop(int port, int sslport)
         }
         point->prompt_mode = TRUE;
 
-/*        if (point->olc)
-          olc_string_add(point->olc, comm);
-                                                                else */ if (point->showstr_count)
-                                                        /* pager for text */
+        if (point->showstr_count) /* pager for text */
           show_string(point, comm);
         else if (point->str)    /* mail, boards */
           string_add(point, comm);
@@ -847,35 +844,19 @@ void game_loop(int port, int sslport)
     for (point = descriptor_list; point; point = next_point)
     {
       next_point = point->next;
-      if (FD_ISSET(point->descriptor, &output_set) && point->output.head)
-        if (process_output(point) < 0)
-        {
-          close_socket(point);
-        }
-        else
-#ifdef SMART_PROMPT
-        if (point->character && (IS_PC(point->character) || IS_MORPH(point->character)))
-        {
-          if( IS_SET(GET_PLYR(point->character)->specials.act, PLR_OLDSMARTP)
-            && !point->showstr_count && !point->str && !point->olc && !IS_FIGHTING(GET_PLYR(point->character)))
-          {
-            point->prompt_mode = FALSE;
-          }
-          else if( !IS_SET(GET_PLYR(point->character)->specials.act, PLR_SMARTPROMPT) )
-          {
-            point->prompt_mode = TRUE;
-          }
-        }
-/*
-              !IS_SET(GET_PLYR(point->character)->specials.act, PLR_SMARTPROMPT)
-           && !IS_SET(GET_PLYR(point->character)->specials.act, PLR_OLDSMARTP))
-*/
-#endif
-//        point->prompt_mode = TRUE;
+
+      // this code tries to skip players who have too much pending text.
+      // But, we currently boot them anyway...
+      if (!FD_ISSET(point->descriptor, &output_set))
+        continue;
+
+      if (process_output(point) < 0)
+      {
+        close_socket(point);
+        continue;
+      }
     }
 
-    /* give the people some prompts */
-    make_prompt();
     PROFILE_END(prompts);
 
     /* handle heartbeat stuff */
@@ -1413,6 +1394,8 @@ int new_connection(int s)
     return (-1);
   }
   nonblock(t);
+  i = 1;
+  setsockopt(t, SOL_TCP, TCP_NODELAY, &i, sizeof(i));
 
   return (t);
 }
@@ -1498,9 +1481,6 @@ void close_socket(struct descriptor_data *d)
       d->snoop.snooping = 0;
     }
   }
-/*  if (d->olc) {
-    olc_end(d->olc);
-  }*/
   if (d->str && (*d->str))
   {
     FREE(*d->str);
@@ -1869,7 +1849,6 @@ int new_descriptor(int s, bool ssl)
                                  */
   strcpy(newd->login, " ? ");
   newd->editor = NULL;
-  newd->olc = NULL;
   newd->out_compress = MCCP_NONE;
   newd->z_str = NULL;
   newd->sslses = sslses;
@@ -2230,34 +2209,46 @@ int process_output(P_desc t)
 {
   char     buf[MAX_STRING_LENGTH + 1], buffer[MAX_STRING_LENGTH + 1];
   char     buf2[MAX_STRING_LENGTH];
-  bool     flg, bold = FALSE, blink = FALSE;
+  bool     bold = FALSE, blink = FALSE;
   int      ibuf = 0;
   int      i, j, k, bg = 0;
   snoop_by_data *snoop_by_ptr;
   P_char   realChar = t->original ? t->original : t->character;
+  string   descbuf;
 
-  if( STATE(t) == CON_PLAYING && IS_PC(realChar)
+  bool text = t->output.head;
+
+  if (text && STATE(t) == CON_PLAYING && IS_PC(realChar)
     && ((t->prompt_mode == (PLR_FLAGGED(realChar, PLR_SMARTPROMPT))
     || (t->prompt_mode != PLR_FLAGGED(realChar, PLR_OLDSMARTP)))) )
   {
     if( !t->snoop.snooping || !t->snoop.snooping->desc || !t->snoop.snooping->desc->prompt_mode)
-    if( write_to_descriptor(t, "\r\n") < 0 )
+      descbuf += "\r\n";
+  }
+
+  if (text && !t->connected && t->character &&
+      (IS_PC(t->character) || IS_MORPH(t->character)) &&
+      !IS_SET(GET_PLYR(t->character)->specials.act, PLR_COMPACT))
+  {
+    write_to_q("\r\n", &t->output, 1);
+  }
+
+#ifdef SMART_PROMPT
+  if (t->character && (IS_PC(t->character) || IS_MORPH(t->character)))
+  {
+    if( IS_SET(GET_PLYR(t->character)->specials.act, PLR_OLDSMARTP)
+      && !t->showstr_count && !t->str && !IS_FIGHTING(GET_PLYR(t->character)))
     {
-      return (-1);
+      t->prompt_mode = FALSE;
+    }
+    else if( !IS_SET(GET_PLYR(t->character)->specials.act, PLR_SMARTPROMPT) && text)
+    {
+      t->prompt_mode = TRUE;
     }
   }
-//  if( realChar && IS_ANSI_TERM(t) && GET_LEVEL(
- // t->character) >= 1 && (STATE(t) != CON_TEXTED) )   arih: why remove color? its ugly!
+#endif
 
-  if( IS_ANSI_TERM(t) && (STATE(t) != CON_TEXTED) &&
-      (!realChar || (t->character && GET_LEVEL(t->character) >= 1)))
-  {
-    flg = TRUE;
-  }
-  else
-  {
-    flg = FALSE;
-  }
+  make_prompt(t);
 
   /* Cycle thru output queue */
   while( get_from_q(&t->output, buf) )
@@ -2301,19 +2292,13 @@ int process_output(P_desc t)
           break;
         case 'N':
         case 'n':
-          if (flg)
-          {
-            snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
-            j += 4;
-          }
+          snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
+          j += 4;
           was_upper = FALSE;
           break;
         case 'L':
-          if (flg)
-          {
-            snprintf(&buffer[j], MAX_STRING_LENGTH, "\r\n");
-            j += 2;
-          }
+          snprintf(&buffer[j], MAX_STRING_LENGTH, "\r\n");
+          j += 2;
           break;
         case '+':
         case '-':
@@ -2327,21 +2312,18 @@ int process_output(P_desc t)
           k = find_color_entry(buf[i]);
           if (color_table[k].symbol != NULL)
           {
-            if (flg)
+            if (isupper(buf[i]))
+              was_upper = TRUE;
+            else if (was_upper)
             {
-              if (isupper(buf[i]))
-                was_upper = TRUE;
-              else if (was_upper)
-              {
-                snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
-                j += 4;
-                was_upper = FALSE;
-              }
-              snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[%s%s%sm", bold ? "1;" : "",
-                      blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
-                      (bg ? color_table[k].bg_code : color_table[k].fg_code));
-              j += (5 + (bold ? 2 : 0) + (blink ? 2 : 0));
+              snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
+              j += 4;
+              was_upper = FALSE;
             }
+            snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[%s%s%sm", bold ? "1;" : "",
+                    blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
+                    (bg ? color_table[k].bg_code : color_table[k].fg_code));
+            j += (5 + (bold ? 2 : 0) + (blink ? 2 : 0));
           }
           else
           {
@@ -2366,21 +2348,18 @@ int process_output(P_desc t)
           if ((color_table[k].symbol != NULL)
               && (color_table[bg].symbol != NULL))
           {
-            if (flg)
+            if (isupper(buf[i]))
+              was_upper = TRUE;
+            else if (was_upper)
             {
-              if (isupper(buf[i]))
-                was_upper = TRUE;
-              else if (was_upper)
-              {
-                snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
-                j += 4;
-                was_upper = FALSE;
-              }
-              snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[%s%s%s;%sm", bold ? "1;" : "",
-                      blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
-                      color_table[bg].bg_code, color_table[k].fg_code);
-              j += (8 + (bold ? 2 : 0) + (blink ? 2 : 0));
+              snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
+              j += 4;
+              was_upper = FALSE;
             }
+            snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[%s%s%s;%sm", bold ? "1;" : "",
+                    blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
+                    color_table[bg].bg_code, color_table[k].fg_code);
+            j += (8 + (bold ? 2 : 0) + (blink ? 2 : 0));
           }
           else
           {
@@ -2395,7 +2374,7 @@ int process_output(P_desc t)
           break;
         }
       }
-      else if (flg && (buf[i] == '\n'))
+      else if (buf[i] == '\n')
       {
         /* Want normal color at EoLN */
         snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m\n");
@@ -2409,20 +2388,12 @@ int process_output(P_desc t)
 
     buffer[j] = '\0';
 
-
-    if (write_to_descriptor(t, buffer) < 0)
-      return (-1);
+    descbuf += buffer;
   }
 
-  if (!t->connected && t->character && !t->olc &&
-      (IS_PC(t->character) || IS_MORPH(t->character)) &&
-      !IS_SET(GET_PLYR(t->character)->specials.act, PLR_COMPACT))
-  {
-    if (write_to_descriptor(t, "\r\n") < 0)
-    {
+  if (write_to_descriptor(t, descbuf.c_str()) < 0)
       return (-1);
-    }
-  }
+
   return (1);
 }
 

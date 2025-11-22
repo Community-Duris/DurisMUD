@@ -473,7 +473,7 @@ extern unsigned int game_locked_level;
 #define CMD_DRAGONPUNCH    442
 #define CMD_REVOKE         443
 #define CMD_GRANT          444
-#define CMD_OLC            445
+#define CMD_OLC            445 // removed
 #define CMD_MOTD           446
 #define CMD_ZRESET         447
 #define CMD_FULL           448

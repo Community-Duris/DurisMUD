@@ -3822,8 +3822,6 @@ void enter_game(P_desc d)
 
   if(IS_SET(ch->specials.act, PLR_SMARTPROMPT))
      REMOVE_BIT(ch->specials.act, PLR_SMARTPROMPT);
-  //if (IS_SET(ch->specials.act, PLR_SMARTPROMPT) && IS_ANSI_TERM(d))
-  //  InitScreen(ch);
 
   schedule_pc_events(ch);
 

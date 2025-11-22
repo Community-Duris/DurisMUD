@@ -19,7 +19,6 @@
 #include "db.h"
 #include "events.h"
 #include "interp.h"
-#include "olc.h"
 #include "prototypes.h"
 #include "structs.h"
 #include "utils.h"
@@ -28,698 +27,343 @@
 extern P_desc descriptor_list;
 extern P_index mob_index;
 
-void make_prompt(void)
+void make_prompt(P_desc point)
 {
   P_char   t_ch = NULL, t_ch_f = NULL, tank = NULL, orig = NULL;
   P_obj    t_obj_f = NULL;
-  P_desc   point, next_point;
   char     promptbuf[MAX_INPUT_LENGTH]; /*, pname[512]; */
   char     promptbuf2[MAX_INPUT_LENGTH], *pPrompt;
   snoop_by_data *snoop_by_ptr;
   int      percent, t_ch_p = 0;
   char     prompt_buf[256];
-  bool     ansi;
 
-  for( point = descriptor_list; point; point = next_point )
+  t_ch = point->character;
+  orig = point->original;
+  if (t_ch)
   {
-    next_point = point->next;
-    t_ch = point->character;
-    orig = point->original;
-    ansi = IS_ANSI_TERM(point);
-    if (t_ch)
-    {
-      t_ch_f = GET_OPPONENT(t_ch);
-      t_obj_f = t_ch->specials.destroying_obj;
-    }
+    t_ch_f = GET_OPPONENT(t_ch);
+    t_obj_f = t_ch->specials.destroying_obj;
+  }
 
-//  Dunno about this old code... Guess I'll leave it commented out.
-//    if (!point->prompt_mode && !point->showstr_count && !point->str && !point->olc )
-    if( !point->prompt_mode )
-    {
-      continue;
-    }
+  if( !point->prompt_mode )
+    return;
 
-    if (point->showstr_count)
+  if (point->showstr_count)
+  {
+    snprintf(promptbuf, MAX_INPUT_LENGTH,
+            "\n&+g[Return to continue, (q)uit, (r)efresh, (b)ack, or page number (%d/%d)]&n\n",
+            point->showstr_page, point->showstr_count);
+    if (write_to_descriptor(point, promptbuf) < 0)
     {
-      if (ansi)
-        snprintf(promptbuf, MAX_INPUT_LENGTH,
-                "\n\033[32m[Return to continue, (q)uit, (r)efresh, (b)ack, or page number (%d/%d)]\033[0m\n",
-                point->showstr_page, point->showstr_count);
-      else
-        snprintf(promptbuf, MAX_INPUT_LENGTH,
-                "\n[Return to continue, (q)uit, (r)efresh, (b)ack, or page number (%d/%d)]\n",
-                point->showstr_page, point->showstr_count);
-      if (write_to_descriptor(point, promptbuf) < 0)
-      {
-        logit(LOG_COMM, "Closing socket on write error");
-        close_socket(point);
-      }
-      // Reset the promptmode (decides when to display another prompt).
-      point->prompt_mode = FALSE;
-      continue;
+      logit(LOG_COMM, "Closing socket on write error");
+      close_socket(point);
     }
-    if (point->str)
-    {
-      if (write_to_descriptor(point, "] ") < 0)
-      {
-        logit(LOG_COMM, "Closing socket on write error");
-        close_socket(point);
-      }
-      point->prompt_mode = FALSE;
-      continue;
-    }
-    /* Online zone editing maybe?
-    if (point->olc)
-    {
-        olc_prompt(point->olc);
-        continue;
-    }
-    */
+    // Reset the promptmode (decides when to display another prompt).
+    point->prompt_mode = FALSE;
+    return;
+  }
+  if (point->str)
+  {
+    write_to_q("] ", &point->output, 1);
+    point->prompt_mode = FALSE;
+    return;
+  }
 
-    // Don't show a prompt if we're not in the game yet.
-    // Don't show a prompt if awaiting a yes/no answer - SAM 7-94
-    if( point->connected || point->confirm_state == CONFIRM_AWAIT )
-    {
-      point->prompt_mode = FALSE;
-      continue;
-    }
+  // Don't show a prompt if we're not in the game yet.
+  // Don't show a prompt if awaiting a yes/no answer - SAM 7-94
+  if( point->connected || point->confirm_state == CONFIRM_AWAIT )
+  {
+    point->prompt_mode = FALSE;
+    return;
+  }
 
-    if( t_ch )
-    {
-      t_ch_p = orig ? orig->only.pc->prompt : t_ch->only.pc->prompt;
-    }
+  if( t_ch )
+  {
+    t_ch_p = orig ? orig->only.pc->prompt : t_ch->only.pc->prompt;
+  }
 
-    if( ansi && t_ch && t_ch->desc && t_ch->desc->term_type == TERM_MSP )
+  if( t_ch && t_ch->desc && t_ch->desc->term_type == TERM_MSP )
+    strcpy(promptbuf, "\n<prompt>\n&+g<");
+  else
+    strcpy(promptbuf, "&+g<");
+
+  /* infobar prompt */
+  if( IS_SET((orig ? orig : t_ch)->specials.act, PLR_SMARTPROMPT) )
+  {
+    UpdateScreen(t_ch, 0);
+    snprintf(promptbuf, MAX_INPUT_LENGTH, "&+R>&n");
+    send_to_char(promptbuf, t_ch);
+    point->prompt_mode = FALSE;
+    return;
+  }
+
+  if (!t_ch_p)
+    return;
+
+  if( IS_SET(t_ch_p, PROMPT_HIT) )
+  {
+    if( GET_MAX_HIT(t_ch) > 0 )
     {
-      strcpy(promptbuf, "\n<prompt>\n\033[32m<");
-    }
-    else if( ansi )
-    {
-      strcpy(promptbuf, "\033[32m<");
+      percent = (100 * GET_HIT(t_ch)) / GET_MAX_HIT(t_ch);
     }
     else
     {
-      strcpy(promptbuf, "<");
+      debug( "make_prompt: ch '%s' %d has less than 1 (%d) max hps?!?", J_NAME(t_ch),
+        IS_NPC(t_ch) ? GET_VNUM(t_ch) : GET_PID(t_ch), GET_MAX_HIT(t_ch) );
+      percent = -1;
     }
 
-    /* infobar prompt */
-    if( IS_SET((orig ? orig : t_ch)->specials.act, PLR_SMARTPROMPT) )
+    // Healthy -> Green.
+    if( percent >= 66 )
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+g %dh", t_ch->points.hit);
+    // Wounded -> Brown.
+    else if( percent >= 33 )
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+y %dh", t_ch->points.hit);
+    // Hurt bad -> Red.
+    else if( percent >= 15 )
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+r %dh", t_ch->points.hit);
+    // Nearing death -> Bright red on grey.
+    else
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&=KR %dh", t_ch->points.hit);
+  }
+  if( IS_SET(t_ch_p, PROMPT_MAX_HIT) )
+    snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+g/%dH", GET_MAX_HIT(t_ch));
+  if( IS_SET(t_ch_p, PROMPT_MANA) )
+  {
+    if( GET_MAX_MANA(t_ch) > 0 )
+      percent = (100 * GET_MANA(t_ch)) / GET_MAX_MANA(t_ch);
+    else
     {
-      UpdateScreen(t_ch, 0);
-      snprintf(promptbuf, MAX_INPUT_LENGTH, "&+R>&n");
-      send_to_char(promptbuf, t_ch);
-      point->prompt_mode = FALSE;
-      return;
+      debug( "make_prompt: ch '%s' %d has less than 1 (%d) max mana?!?", J_NAME(t_ch),
+        IS_NPC(t_ch) ? GET_VNUM(t_ch) : GET_PID(t_ch), GET_MAX_MANA(t_ch) );
+      percent = -1;
     }
-    if( t_ch_p )
+    if (percent >= 66)
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+g %dm", GET_MANA(t_ch));
+    else if (percent >= 33)
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+y %dm", GET_MANA(t_ch));
+    else if (percent >= 0)
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+r %dm", GET_MANA(t_ch));
+    else
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&=KR%dm", GET_MANA(t_ch));
+  }
+  if( IS_SET(t_ch_p, PROMPT_MAX_MANA) )
+    snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+g/%dM", GET_MAX_MANA(t_ch));
+  if( IS_SET(t_ch_p, PROMPT_MOVE) )
+  {
+    if( GET_MAX_VITALITY(t_ch) > 0 )
     {
-      if( IS_SET(t_ch_p, PROMPT_HIT) )
-      {
-        if( ansi )
-        {
-          if( GET_MAX_HIT(t_ch) > 0 )
-          {
-            percent = (100 * GET_HIT(t_ch)) / GET_MAX_HIT(t_ch);
-          }
-          else
-          {
-            debug( "make_prompt: ch '%s' %d has less than 1 (%d) max hps?!?", J_NAME(t_ch),
-              IS_NPC(t_ch) ? GET_VNUM(t_ch) : GET_PID(t_ch), GET_MAX_HIT(t_ch) );
-            percent = -1;
-          }
+      percent = (100 * GET_VITALITY(t_ch)) / GET_MAX_VITALITY(t_ch);
+    }
+    else
+    {
+      debug( "make_prompt: ch '%s' %d has less than 1 (%d) max moves?!?", J_NAME(t_ch),
+        IS_NPC(t_ch) ? GET_VNUM(t_ch) : GET_PID(t_ch), GET_MAX_VITALITY(t_ch) );
+      percent = -1;
+    }
 
-          // Healthy -> Green.
-          if( percent >= 66 )
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[0;32m %dh", t_ch->points.hit);
-          }
-          // Wounded -> Brown.
-          else if( percent >= 33 )
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[33m %dh", t_ch->points.hit);
-          }
-          // Hut bad -> Red.
-          else if( percent >= 15 )
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[31m %dh", t_ch->points.hit);
-          }
-          // Nearing death -> Bright red on grey.
-          else
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[31;40;1;5m %dh", t_ch->points.hit);
-          }
-        }
-        else
-        {
-          // No color
-          snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), " %dh", t_ch->points.hit);
-        }
-      }
-      if( IS_SET(t_ch_p, PROMPT_MAX_HIT) )
-      {
-        if( ansi )
-        {
-          snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[0;32m/%dH", GET_MAX_HIT(t_ch));
-        }
-        else
-        {
-          snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "/%dH", GET_MAX_HIT(t_ch));
-        }
-      }
-      if( IS_SET(t_ch_p, PROMPT_MANA) )
-      {
-        if( ansi )
-        {
-          if( GET_MAX_MANA(t_ch) > 0 )
-          {
-            percent = (100 * GET_MANA(t_ch)) / GET_MAX_MANA(t_ch);
-          }
-          else
-          {
-            debug( "make_prompt: ch '%s' %d has less than 1 (%d) max mana?!?", J_NAME(t_ch),
-              IS_NPC(t_ch) ? GET_VNUM(t_ch) : GET_PID(t_ch), GET_MAX_MANA(t_ch) );
-            percent = -1;
-          }
-          if (percent >= 66)
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[0;32m %dm", GET_MANA(t_ch));
-          }
-          else if (percent >= 33)
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[0;33m %dm", GET_MANA(t_ch));
-          }
-          else if (percent >= 0)
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[0;31m %dm", GET_MANA(t_ch));
-          }
-          else
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), " \033[31;40;1;5m%dm", GET_MANA(t_ch));
-          }
-        }
-        else
-        {
-          snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), " %dm", GET_MANA(t_ch));
-        }
-      }
-      if( IS_SET(t_ch_p, PROMPT_MAX_MANA) )
-      {
-        if( ansi )
-        {
-          snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[0;32m/%dM", GET_MAX_MANA(t_ch));
-        }
-        else
-        {
-          snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "/%dM", GET_MAX_MANA(t_ch));
-        }
-      }
-      if( IS_SET(t_ch_p, PROMPT_MOVE) )
-      {
-        if( ansi )
-        {
-          if( GET_MAX_VITALITY(t_ch) > 0 )
-          {
-            percent = (100 * GET_VITALITY(t_ch)) / GET_MAX_VITALITY(t_ch);
-          }
-          else
-          {
-            debug( "make_prompt: ch '%s' %d has less than 1 (%d) max moves?!?", J_NAME(t_ch),
-              IS_NPC(t_ch) ? GET_VNUM(t_ch) : GET_PID(t_ch), GET_MAX_VITALITY(t_ch) );
-            percent = -1;
-          }
-
-          if( percent >= 66 )
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[0;32m %dv", t_ch->points.vitality);
-          }
-          else if (percent >= 33)
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[0;33m %dv", t_ch->points.vitality);
-          }
-          else
-          {
-            snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[0;31m %dv", t_ch->points.vitality);
-          }
-        }
-        else
-        {
-          snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), " %dv", t_ch->points.vitality);
-        }
-      }
-      if( IS_SET(t_ch_p, PROMPT_MAX_MOVE) )
-      {
-        if( ansi )
-        {
-          snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "\033[0;32m/%dV", GET_MAX_VITALITY(t_ch));
-        }
-        else
-        {
-          snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "/%dV", GET_MAX_VITALITY(t_ch));
-        }
-      }
-      if( IS_SET(t_ch_p, PROMPT_STATUS) )
-      {
-        if( ansi )
-        {
-          strcat(promptbuf, " \033[0;36mPos:\033[0m");
-        }
-        else
-        {
-          strcat(promptbuf, " Pos:");
-        }
-        if( GET_POS(t_ch) == POS_STANDING )
-        {
-          if (ansi)
-          {
-            strcat(promptbuf, "\033[1;32m standing\033[0m");
-          }
-          else
-          {
-            strcat(promptbuf, " standing");
-          }
-        }
-        else if (GET_POS(t_ch) == POS_SITTING)
-        {
-          if (ansi)
-          {
-            strcat(promptbuf, "\033[0;36m sitting\033[0m");
-          }
-          else
-          {
-            strcat(promptbuf, " sitting");
-          }
-        }
-        else if (GET_POS(t_ch) == POS_KNEELING)
-        {
-          if (ansi)
-          {
-            strcat(promptbuf, "\033[0;36m kneeling\033[0m");
-          }
-          else
-          {
-            strcat(promptbuf, " kneeling");
-          }
-        }
-        else if (GET_POS(t_ch) == POS_PRONE)
-        {
-          if (ansi)
-          {
-            strcat(promptbuf, "\033[0;31m on your ass\033[0m");
-          }
-          else
-          {
-            strcat(promptbuf, " on your ass");
-          }
-        }
+    if( percent >= 66 )
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+g %dv", t_ch->points.vitality);
+    else if (percent >= 33)
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+y %dv", t_ch->points.vitality);
+    else
+      snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+r %dv", t_ch->points.vitality);
+  }
+  if( IS_SET(t_ch_p, PROMPT_MAX_MOVE) )
+    snprintf(promptbuf + strlen(promptbuf), MAX_STRING_LENGTH - strlen(promptbuf), "&+g/%dV", GET_MAX_VITALITY(t_ch));
+  if( IS_SET(t_ch_p, PROMPT_STATUS) )
+  {
+    strcat(promptbuf, " &+cPos:&n");
+    if( GET_POS(t_ch) == POS_STANDING )
+      strcat(promptbuf, "&+G standing&n");
+    else if (GET_POS(t_ch) == POS_SITTING)
+      strcat(promptbuf, "&+c sitting&n");
+    else if (GET_POS(t_ch) == POS_KNEELING)
+      strcat(promptbuf, "&+c kneeling&n");
+    else if (GET_POS(t_ch) == POS_PRONE)
+      strcat(promptbuf, "&+r on your ass&n");
 
 #ifdef STANCES_ALLOWED
-        if (ansi)
-          strcat(promptbuf, " \033[0;36mSta:\033[0m");
-        else
-          strcat(promptbuf, " Sta:");
+    strcat(promptbuf, " &+cSta:&n");
 
-        if(IS_AFFECTED5(t_ch, AFF5_STANCE_DEFENSIVE))
-        {
-          if (ansi)
-          strcat(promptbuf, "\033[0;33m Def\033[0m");
-          else
-          strcat(promptbuf, " Def");
-        }
-        else if(IS_AFFECTED5(t_ch, AFF5_STANCE_OFFENSIVE))
-        {
-          if (ansi)
-            strcat(promptbuf, "\033[0;31m Off\033[0m");
-          else
-            strcat(promptbuf, " Off");
-        }
-        else
-          if (ansi)
-            strcat(promptbuf, "\033[0;32m none\033[0m");
-          else
-            strcat(promptbuf, " None");
+    if(IS_AFFECTED5(t_ch, AFF5_STANCE_DEFENSIVE))
+      strcat(promptbuf, "&+y Def&n");
+    else if(IS_AFFECTED5(t_ch, AFF5_STANCE_OFFENSIVE))
+      strcat(promptbuf, "&+r Off&n");
+    else
+      strcat(promptbuf, "&+g none&n");
 #endif
-      }
+  }
 
-      if( IS_SET(t_ch_p, PROMPT_TWOLINE)
-        && (t_ch_p & (PROMPT_HIT | PROMPT_MAX_HIT | PROMPT_MANA | PROMPT_MAX_MANA | PROMPT_MOVE | PROMPT_MAX_MOVE)) )
+  if( IS_SET(t_ch_p, PROMPT_TWOLINE)
+    && (t_ch_p & (PROMPT_HIT | PROMPT_MAX_HIT | PROMPT_MANA | PROMPT_MAX_MANA | PROMPT_MOVE | PROMPT_MAX_MOVE)) )
+  {
+    strcat(promptbuf, "&+g >\n");
+    snprintf(promptbuf2, MAX_STRING_LENGTH, "&+g<");
+    pPrompt = promptbuf2 + strlen(promptbuf2);
+  }
+  else
+  {
+    pPrompt = promptbuf + strlen(promptbuf);
+  }
+
+  /* the prompt elements only active while fighting */
+  if( t_ch_f && (t_ch->in_room == t_ch_f->in_room) )
+  {
+    /* TANK elements only active if... */
+    if( (tank = GET_OPPONENT(t_ch_f)) && (t_ch->in_room == tank->in_room) )
+    {
+      if( IS_SET(t_ch_p, PROMPT_TANK_NAME))
       {
-        if( ansi )
-        {
-          strcat(promptbuf, "\033[0;32m >\n");
-          snprintf(promptbuf2, MAX_STRING_LENGTH, "\033[32m<");
-        }
-        else
-        {
-          strcat(promptbuf, " >\n");
-          snprintf(promptbuf2, MAX_STRING_LENGTH, "<");
-        }
-        pPrompt = promptbuf2 + strlen(promptbuf2);
+        snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), " &+BT: %s",
+          (t_ch != tank && !CAN_SEE(t_ch, tank)) ? "someone"
+          : (IS_PC(tank) ? PERS(tank, t_ch, 0, true) : (FirstWord((tank)->player.name))));
       }
+      if( IS_SET(t_ch_p, PROMPT_STATUS) && IS_SET(t_ch_p, PROMPT_TANK_COND) )
+      {
+        strcat(pPrompt, " &+cTP:&n");
+        if (GET_POS(tank) == POS_STANDING)
+          strcat(pPrompt, "&+g sta&n");
+        else if (GET_POS(tank) == POS_SITTING)
+          strcat(pPrompt, "&+g sit&n");
+        else if (GET_POS(tank) == POS_KNEELING)
+          strcat(pPrompt, "&+g kne&n");
+        else if (GET_POS(tank) == POS_PRONE)
+          strcat(pPrompt, "&+g ass&n");
+      }
+      if( IS_SET(t_ch_p, PROMPT_TANK_COND) )
+      {
+        strcat(pPrompt, "&n TC:");
+
+        if (GET_MAX_HIT(tank) > 0)
+          percent = (100 * GET_HIT(tank)) / GET_MAX_HIT(tank);
+        else
+          percent = -1;
+
+        if (percent >= 100)
+          strcat(pPrompt, "&+g excellent");
+        else if (percent >= 90)
+          strcat(pPrompt, "&+y few scratches");
+        else if (percent >= 75)
+          strcat(pPrompt, "&+Y small wounds");
+        else if (percent >= 50)
+          strcat(pPrompt, "&+M few wounds");
+        else if (percent >= 30)
+          strcat(pPrompt, "&+m nasty wounds");
+        else if (percent >= 15)
+          strcat(pPrompt, "&+R pretty hurt");
+        else if (percent >= 0)
+          strcat(pPrompt, "&+r awful");
+        else
+          strcat(pPrompt, "&+r bleeding, close to death");
+      }
+    }
+
+    if( IS_SET(t_ch_p, PROMPT_ENEMY) )
+    {
+      snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), " &+rE: %s",
+        (!CAN_SEE(t_ch, t_ch_f)) ? "someone" : (IS_PC(t_ch_f) ? PERS(t_ch_f, t_ch, 0, true)
+        : (FirstWord((t_ch_f)->player.name))));
+    }
+
+    if( IS_SET(t_ch_p, PROMPT_STATUS) && IS_SET(t_ch_p, PROMPT_ENEMY_COND) )
+    {
+      strcat(pPrompt, " &+cEP:&n");
+      if (GET_POS(t_ch_f) == POS_STANDING)
+        strcat(pPrompt, "&+g sta&n");
+      else if (GET_POS(t_ch_f) == POS_SITTING)
+        strcat(pPrompt, "&+g sit&n");
+      else if (GET_POS(t_ch_f) == POS_KNEELING)
+        strcat(pPrompt, "&+g kne&n");
+      else if (GET_POS(t_ch_f) == POS_PRONE)
+        strcat(pPrompt, "&+g ass&n");
+    }
+
+    if( IS_SET(t_ch_p, PROMPT_ENEMY_COND) )
+    {
+      if (GET_MAX_HIT(t_ch_f) > 0)
+        percent = (100 * GET_HIT(t_ch_f)) / GET_MAX_HIT(t_ch_f);
       else
-      {
-        pPrompt = promptbuf + strlen(promptbuf);
-      }
-
-      /* the prompt elements only active while fighting */
-      if( t_ch_f && (t_ch->in_room == t_ch_f->in_room) )
-      {
-        /* TANK elements only active if... */
-        if( (tank = GET_OPPONENT(t_ch_f)) && (t_ch->in_room == tank->in_room) )
-        {
-          if( IS_SET(t_ch_p, PROMPT_TANK_NAME))
-          {
-            if( ansi )
-            {
-              snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), " \033[0;34;1mT: %s",
-                (t_ch != tank && !CAN_SEE(t_ch, tank)) ? "someone"
-                : (IS_PC(tank) ? PERS(tank, t_ch, 0, true) : (FirstWord((tank)->player.name))));
-            }
-            else
-            {
-              snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), " T: %s",
-                (t_ch != tank && !CAN_SEE(t_ch, tank)) ? "someone"
-                : (IS_PC(tank) ? PERS(tank, t_ch, 0, true) : (FirstWord((tank)->player.name))));
-            }
-          }
-          if( IS_SET(t_ch_p, PROMPT_STATUS) && IS_SET(t_ch_p, PROMPT_TANK_COND) )
-          {
-            if (ansi)
-              strcat(pPrompt, " \033[0;36mTP:\033[0m");
-            else
-              strcat(pPrompt, " TP:");
-            if (GET_POS(tank) == POS_STANDING)
-              if (ansi)
-                strcat(pPrompt, "\033[0;32m sta\033[0m");
-              else
-                strcat(pPrompt, " sta");
-            else if (GET_POS(tank) == POS_SITTING)
-              if (ansi)
-                strcat(pPrompt, "\033[0;32m sit\033[0m");
-              else
-                strcat(pPrompt, " sit");
-            else if (GET_POS(tank) == POS_KNEELING)
-              if (ansi)
-                strcat(pPrompt, "\033[0;32m kne\033[0m");
-              else
-                strcat(pPrompt, " kne");
-            else if (GET_POS(tank) == POS_PRONE)
-              if (ansi)
-                strcat(pPrompt, "\033[0;32m ass\033[0m");
-              else
-                strcat(pPrompt, " ass");
-          }
-          if( IS_SET(t_ch_p, PROMPT_TANK_COND) )
-          {
-            if (ansi)
-              strcat(pPrompt, "\033[0m TC:");
-            else
-              strcat(pPrompt, " TC:");
-            if (GET_MAX_HIT(tank) > 0)
-            {
-              percent = (100 * GET_HIT(tank)) / GET_MAX_HIT(tank);
-            }
-            else
-            {
-              percent = -1;
-            }
-            if (percent >= 100)
-            {
-              if (ansi)
-                strcat(pPrompt, "\033[0;32m excellent");
-              else
-                strcat(pPrompt, " excellent");
-            }
-            else if (percent >= 90)
-            {
-              if (ansi)
-                strcat(pPrompt, "\033[0;33m few scratches");
-              else
-                strcat(pPrompt, " few scratches");
-            }
-            else if (percent >= 75)
-            {
-              if (ansi)
-                strcat(pPrompt, "\033[0;33;40;1m small wounds");
-              else
-                strcat(pPrompt, " small wounds");
-            }
-            else if (percent >= 50)
-            {
-              if (ansi)
-                strcat(pPrompt, "\033[0;35;40;1m few wounds");
-              else
-                strcat(pPrompt, " few wounds");
-            }
-            else if (percent >= 30)
-            {
-              if (ansi)
-                strcat(pPrompt, "\033[0;35m nasty wounds");
-              else
-                strcat(pPrompt, " nasty wounds");
-            }
-            else if (percent >= 15)
-            {
-              if (ansi)
-                strcat(pPrompt, "\033[0;31;40;1m pretty hurt");
-              else
-                strcat(pPrompt, " pretty hurt");
-            }
-            else if (percent >= 0)
-            {
-              if (ansi)
-                strcat(pPrompt, "\033[0;31m awful");
-              else
-                strcat(pPrompt, " awful");
-            }
-            else
-            {
-              if (ansi)
-                strcat(pPrompt, "\033[0;31m bleeding, close to death");
-              else
-                strcat(pPrompt, " bleeding, close to death");
-            }
-          }
-        }
-        if( IS_SET(t_ch_p, PROMPT_ENEMY) )
-        {
-          if( ansi )
-          {
-            snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), " \033[0;31mE: %s",
-              (!CAN_SEE(t_ch, t_ch_f)) ? "someone" : (IS_PC(t_ch_f) ? PERS(t_ch_f, t_ch, 0, true)
-              : (FirstWord((t_ch_f)->player.name))));
-          }
-          else
-          {
-            snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), " E: %s",
-              (!CAN_SEE(t_ch, t_ch_f) ) ? "someone" : (IS_PC(t_ch_f) ? PERS(t_ch_f, t_ch, 0, true)
-              : (FirstWord((t_ch_f)->player.name))));
-          }
-        }
-        if( IS_SET(t_ch_p, PROMPT_STATUS) && IS_SET(t_ch_p, PROMPT_ENEMY_COND) )
-        {
-          if (ansi)
-            strcat(pPrompt, " \033[0;36mEP:\033[0m");
-          else
-            strcat(pPrompt, " EP:");
-          if (GET_POS(t_ch_f) == POS_STANDING)
-            if (ansi)
-              strcat(pPrompt, "\033[0;32m sta\033[0m");
-            else
-              strcat(pPrompt, " sta");
-          else if (GET_POS(t_ch_f) == POS_SITTING)
-            if (ansi)
-              strcat(pPrompt, "\033[0;32m sit\033[0m");
-            else
-              strcat(pPrompt, " sit");
-          else if (GET_POS(t_ch_f) == POS_KNEELING)
-            if (ansi)
-              strcat(pPrompt, "\033[0;32m kne\033[0m");
-            else
-              strcat(pPrompt, " kne");
-          else if (GET_POS(t_ch_f) == POS_PRONE)
-            if (ansi)
-              strcat(pPrompt, "\033[0;32m ass\033[0m");
-            else
-              strcat(pPrompt, " ass");
-        }
-        if( IS_SET(t_ch_p, PROMPT_ENEMY_COND) )
-        {
-          if (GET_MAX_HIT(t_ch_f) > 0)
-          {
-            percent = (100 * GET_HIT(t_ch_f)) / GET_MAX_HIT(t_ch_f);
-          }
-          else
-          {
-            percent = -1;
-          }
-          if (ansi)
-            strcat(pPrompt, "\033[0;36m EC:");
-          else
-            strcat(pPrompt, " EC:");
-          if (percent >= 100)
-          {
-            if (ansi)
-              strcat(pPrompt, "\033[0;32m excellent");
-            else
-              strcat(pPrompt, " excellent");
-          }
-          else if (percent >= 90)
-          {
-            if (ansi)
-              strcat(pPrompt, "\033[0;33m few scratches");
-            else
-              strcat(pPrompt, " few scratches");
-          }
-          else if (percent >= 75)
-          {
-            if (ansi)
-              strcat(pPrompt, "\033[0;33;40;1m small wounds");
-            else
-              strcat(pPrompt, " small wounds");
-          }
-          else if (percent >= 50)
-          {
-            if (ansi)
-              strcat(pPrompt, "\033[0;35;40;1m few wounds");
-            else
-              strcat(pPrompt, " few wounds");
-          }
-          else if (percent >= 30)
-          {
-            if (ansi)
-              strcat(pPrompt, "\033[0;35m nasty wounds");
-            else
-              strcat(pPrompt, " nasty wounds");
-          }
-          else if (percent >= 15)
-          {
-            if (ansi)
-              strcat(pPrompt, "\033[0;31;40;1m pretty hurt");
-            else
-              strcat(pPrompt, " pretty hurt");
-          }
-          else if (percent >= 0)
-          {
-            if (ansi)
-              strcat(pPrompt, "\033[0;31m awful");
-            else
-              strcat(pPrompt, " awful");
-          }
-          else
-          {
-            if (ansi)
-              strcat(pPrompt, "\033[0;31m bleeding, close to death");
-            else
-              strcat(pPrompt, " bleeding, close to death");
-          }
-        }
-      }
-      if( t_obj_f )
-      {
-        if( ansi )
-        {
-          strcat(pPrompt, "\033[32m E: ");
-          strcat(pPrompt, FirstWord(t_obj_f->name) );
-          strcat(pPrompt, " EC: " );
-          if(t_obj_f->condition > 90)
-            strcat(pPrompt, "\033[1;32m");
-          else if(t_obj_f->condition > 70)
-            strcat(pPrompt, "\033[32m");
-          else if(t_obj_f->condition > 50)
-            strcat(pPrompt, "\033[0;33m");
-          else if(t_obj_f->condition > 20)
-            strcat(pPrompt, "\033[0;31m");
-          else
-            strcat(pPrompt, "\033[1;31m");
-
-          snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), "%d ", t_obj_f->condition );
-        }
-        else
-        {
-          strcat(pPrompt, " E: ");
-          strcat(pPrompt, FirstWord(t_obj_f->name) );
-          snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), " EC: %d", t_obj_f->condition );
-        }
-      }
-
-      if( IS_SET(t_ch_p, PROMPT_VIS) && IS_TRUSTED(t_ch) )
-      {
-        if( ansi )
-        {
-          strcat(pPrompt, "\033[0;35m");
-        }
-        snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), " Vis: %d", t_ch->only.pc->wiz_invis);
-      }
-      if( IS_SET(t_ch->specials.act, PLR_AFK) )
-      {
-        if( ansi )
-          strcat(pPrompt, "\033[0m (\033[31;40;1mAFK\033[0m)");
-        else
-          strcat(pPrompt, " (AFK)");
-      }
-    }
-    else
-    {
-      pPrompt = promptbuf;
-    }
-
-    if( ansi )
-      strcat(pPrompt, "\033[0;32m> ");
-    else
-      strcat(pPrompt, " > ");
-
-    if( t_ch && t_ch->desc && t_ch->desc->term_type == TERM_MSP )
-    {
-      strcat(pPrompt, "\033[0m\n</prompt>\n");
-    }
-
-    if( t_ch_p )
-    {
-      /* give the log some prompts */
-      prompt_buf[0] = '\0';
-      append_prompt(point->character, prompt_buf);
-      write_to_pc_log(point->character, prompt_buf, LOG_PUBLIC);
-
-      snoop_by_ptr = point->snoop.snoop_by_list;
-      while( snoop_by_ptr )
-      {
-        write_to_q("&+B%&n ", &snoop_by_ptr->snoop_by->desc->output, 1);
-        write_to_q(promptbuf, &snoop_by_ptr->snoop_by->desc->output, 1);
-        if( IS_SET(t_ch_p, PROMPT_TWOLINE) )
-        {
-          write_to_q("&+B%&n ", &snoop_by_ptr->snoop_by->desc->output, 1);
-          write_to_q(promptbuf2, &snoop_by_ptr->snoop_by->desc->output, 1);
-        }
-        write_to_q("\n", &snoop_by_ptr->snoop_by->desc->output, 1);
-        process_output( snoop_by_ptr->snoop_by->desc );
-
-        snoop_by_ptr = snoop_by_ptr->next;
-      }
-
-      point->prompt_mode = FALSE;
-      if( write_to_descriptor(point, promptbuf) < 0 )
-      {
-        logit(LOG_COMM, "Closing socket on write error: promptbuf.");
-        close_socket(point);
-        continue;
-      }
-      if( IS_SET(t_ch_p, PROMPT_TWOLINE) && write_to_descriptor(point, promptbuf2) < 0)
-      {
-        logit(LOG_COMM, "Closing socket on write error: promptbuf2.");
-        close_socket(point);
-        continue;
-      }
-      if (ansi && point->character && point->character->desc && !(point->character->desc->term_type == TERM_MSP))
-      {
-        if (write_to_descriptor(point, "\033[0m") < 0)
-        {
-          logit(LOG_COMM, "Closing socket on write error: normalize.");
-          close_socket(point);
-          continue;
-        }
-      }
+        percent = -1;
+      strcat(pPrompt, "&+c EC:");
+      if (percent >= 100)
+        strcat(pPrompt, "&+g excellent");
+      else if (percent >= 90)
+        strcat(pPrompt, "&+y few scratches");
+      else if (percent >= 75)
+        strcat(pPrompt, "&+Y small wounds");
+      else if (percent >= 50)
+        strcat(pPrompt, "&+M few wounds");
+      else if (percent >= 30)
+        strcat(pPrompt, "&+m nasty wounds");
+      else if (percent >= 15)
+        strcat(pPrompt, "&+R pretty hurt");
+      else if (percent >= 0)
+        strcat(pPrompt, "&+r awful");
+      else
+        strcat(pPrompt, "&+r bleeding, close to death");
     }
   }
+  if( t_obj_f )
+  {
+    strcat(pPrompt, "&+g E: ");
+    strcat(pPrompt, FirstWord(t_obj_f->name) );
+    strcat(pPrompt, " EC: " );
+    if(t_obj_f->condition > 90)
+      strcat(pPrompt, "&+G");
+    else if(t_obj_f->condition > 70)
+      strcat(pPrompt, "&+g");
+    else if(t_obj_f->condition > 50)
+      strcat(pPrompt, "&+y");
+    else if(t_obj_f->condition > 20)
+      strcat(pPrompt, "&+r");
+    else
+      strcat(pPrompt, "&+R");
+
+    snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), "%d ", t_obj_f->condition );
+  }
+
+  if( IS_SET(t_ch_p, PROMPT_VIS) && IS_TRUSTED(t_ch) )
+  {
+    strcat(pPrompt, "&+m");
+    snprintf(pPrompt + strlen(pPrompt), MAX_STRING_LENGTH - strlen(pPrompt), " Vis: %d", t_ch->only.pc->wiz_invis);
+  }
+  if( IS_SET(t_ch->specials.act, PLR_AFK) )
+    strcat(pPrompt, "&n (&+RAFK&n)");
+
+  strcat(pPrompt, "&+g> ");
+
+  if( t_ch && t_ch->desc && t_ch->desc->term_type == TERM_MSP )
+    strcat(pPrompt, "&n\n</prompt>\n");
+
+
+  /* give the log some prompts */
+  prompt_buf[0] = '\0';
+  append_prompt(point->character, prompt_buf);
+  write_to_pc_log(point->character, prompt_buf, LOG_PUBLIC);
+
+  snoop_by_ptr = point->snoop.snoop_by_list;
+  while( snoop_by_ptr )
+  {
+    write_to_q("&+B%&n ", &snoop_by_ptr->snoop_by->desc->output, 1);
+    write_to_q(promptbuf, &snoop_by_ptr->snoop_by->desc->output, 1);
+    if( IS_SET(t_ch_p, PROMPT_TWOLINE) )
+    {
+      write_to_q("&+B%&n ", &snoop_by_ptr->snoop_by->desc->output, 1);
+      write_to_q(promptbuf2, &snoop_by_ptr->snoop_by->desc->output, 1);
+    }
+    write_to_q("\n", &snoop_by_ptr->snoop_by->desc->output, 1);
+    process_output( snoop_by_ptr->snoop_by->desc );
+
+    snoop_by_ptr = snoop_by_ptr->next;
+  }
+
+  point->prompt_mode = FALSE;
+  write_to_q(promptbuf, &point->output, 1);
+  if (IS_SET(t_ch_p, PROMPT_TWOLINE))
+    write_to_q(promptbuf2, &point->output, 1);
+  if (point->character && point->character->desc && !(point->character->desc->term_type == TERM_MSP))
+    write_to_q("&n", &point->output, 1);
 }
 
 

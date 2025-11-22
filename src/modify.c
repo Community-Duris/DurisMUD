@@ -988,34 +988,6 @@ void string_add(struct descriptor_data *d, char *str)
       SEND_TO_Q(MENU, d);
       d->connected = CON_MAIN_MENU;
     }
-    else if (STATE(d) == CON_TEXTED)
-    {
-      if (terminator == 1)
-      {
-        if (!(fl = fopen((char *) d->storage, "w")))
-        {
-          logit(LOG_DEBUG, "string_add: Can't write file '%s'.", d->storage);
-        }
-        else
-        {
-          if (*d->str)
-          {
-            fputs(stripcr(buf1, *d->str), fl);
-          }
-          fclose(fl);
-          logit(LOG_DEBUG, "OLC: %s saves '%s'.", GET_NAME(d->character),
-                d->storage);
-          SEND_TO_Q("Saved.\r\n", d);
-        }
-      }
-      else
-        SEND_TO_Q("Edit aborted.\r\n", d);
-      act("$n stops editing some scrolls.", TRUE, d->character, 0, 0,
-          TO_ROOM);
-      FREE(d->storage);
-      d->storage = NULL;
-      STATE(d) = CON_PLAYING;
-    }
     else if (!d->connected && d->character && !IS_NPC(d->character))
     {
       if (terminator == 1)

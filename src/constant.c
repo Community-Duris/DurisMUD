@@ -1037,12 +1037,12 @@ const char *connected_types[TOTAL_CON+1] = {
   "WELCOME",
   "NEWNAME",
   "HOST_LOOKUP",
-  "OOLC",
-  "ROLC",
-  "ZOLC",
-  "MOLC",
-  "SOLC",
-  "QOLC",
+  "OOLC", // deleted
+  "ROLC", // deleted
+  "ZOLC", // deleted
+  "MOLC", // deleted
+  "SOLC", // deleted
+  "QOLC", // deleted
   "BONUS4",
   "BONUS5",
   "TEXT_EDITOR",

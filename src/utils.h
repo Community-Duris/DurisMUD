@@ -40,8 +40,6 @@
 #define CAP(st)  (*(st) = UPPER(*(st)), st)
 */
 
-#define CLS(ch) (IS_ANSI_TERM(ch) ? "\033[H\033[J" : "")
-
 //#ifndef MEMCHK
 //#
 //#define CREATE(result, type, number, tag)
@@ -1025,8 +1023,6 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define TERM_SKIP_ANSI      9
 #define TERM_HELP         254
 #define TERM_UNDEFINED    255
-
-#define IS_ANSI_TERM(i) (i && (i->term_type == TERM_ANSI || i->term_type == TERM_MSP))
 
 #define CAN_SPEAK(ch) ( IS_HUMANOID(ch) || IS_DRAGON(ch) || IS_DRAGONKIN(ch) || IS_DEMON(ch) || IS_GIANT(ch) \
   || (( IS_PC_PET(ch) || IS_PC(ch) ) && !IS_ANIMAL(ch)) || IS_UNDEAD(ch) || IS_EFREET(ch) || IS_TITAN(ch) )

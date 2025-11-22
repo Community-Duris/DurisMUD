@@ -2207,16 +2207,12 @@ int getItemMaxSP(const P_obj item);
 void setItemMaxSP(P_obj item);
 int getItemCurrentSP(const P_obj item);
 
-/* olc.c */
-void do_olc(P_char, char *, int);
-
-
 /* prompt.c */
 
 void UpdateScreen(P_char, int);
 void InitScreen(P_char);
 char *make_bar(long, long, long);
-void make_prompt(void);
+void make_prompt(P_desc);
 
 /* processlogin.c */
 
