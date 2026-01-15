@@ -650,9 +650,20 @@ P_obj get_object_in_equip_vis(P_char ch, char *arg, int *j)
 P_obj get_object_in_equip(P_char ch, char *arg, int *j)
 {
   for ((*j) = 0; (*j) < MAX_WEAR; (*j)++)
-    if (ch->equipment[(*j)])
-      if (isname(arg, ch->equipment[(*j)]->name))
-        return (ch->equipment[(*j)]);
+	  if (ch->equipment[(*j)])
+	  {
+          if (IS_SET(PLR3_FLAGS(ch), PLR3_PARTIAL_MATCH))
+          {
+              if (isname_partial(arg, ch->equipment[(*j)]->name))
+                  return (ch->equipment[(*j)]);
+          }
+          else
+          {
+              if (isname(arg, ch->equipment[(*j)]->name))
+                  return (ch->equipment[(*j)]);
+		  }
+	  }
+      
 
   return (0);
 }

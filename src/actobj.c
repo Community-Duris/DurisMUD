@@ -496,8 +496,21 @@ void do_get(P_char ch, char *argument, int cmd)
     {
       next_obj = o_obj->next_content;
 
-      if (alldot && !isname(Gbuf2, o_obj->name))
-        continue;
+	  if (alldot) 
+      {
+		  if (IS_SET(PLR3_FLAGS(ch), PLR3_PARTIAL_MATCH))
+          {
+			  /* partial match mode */
+			  if (!isname_partial(Gbuf2, o_obj->name))
+				  continue;
+		  }
+		  else 
+          {
+			  /* strict match mode */
+			  if (!isname(Gbuf2, o_obj->name))
+				  continue;
+		  }
+	  }
 
       if (CAN_SEE_OBJ(ch, o_obj))
       {
@@ -729,8 +742,21 @@ void do_get(P_char ch, char *argument, int cmd)
         {
           next_obj = o_obj->next_content;
 
-          if (alldot && !isname(Gbuf2, o_obj->name))
-            continue;
+		  if (alldot) 
+          {
+			  if IS_SET(PLR3_FLAGS(ch), PLR3_PARTIAL_MATCH)
+              {
+				  /* partial match mode */
+				  if (!isname_partial(Gbuf2, o_obj->name))
+					  continue;
+			  }
+			  else 
+              {
+				  /* strict match mode */
+				  if (!isname(Gbuf2, o_obj->name))
+					  continue;
+			  }
+		  }
 
           /*
            * fixed an annoying bug, you can now always get

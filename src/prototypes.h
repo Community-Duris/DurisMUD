@@ -1183,6 +1183,7 @@ int affected_by_spell_count(P_char, int);
 bool affected_by_spell_flagged(P_char, int, uint);
 bool affected_by_skill(P_char ch, int skill);
 bool isname(const char *, const char *);
+int isname_partial(const char* str, const char* namelist);
 char *FirstWord(char *);
 int can_char_use_item(P_char, P_obj);
 int char_light(P_char);

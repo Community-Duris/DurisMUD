@@ -4276,98 +4276,100 @@ void show_toggles(P_char ch)
   }
 
   snprintf(Gbuf1, MAX_STRING_LENGTH,
-          "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-          "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n"
-          "                          &+r    STATUS of toggles.    "
-          "                           &N\r\n"
-          "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-          "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n"
-          "&+r   Tell        :&+g %-3s    &+y|&N"
-          "&+r     Brief Mode  :&+g %-3s    &+y|&N"
-          "&+r     No Locate   :&+g %-3s    &+y|&N\r\n"
-          "&+r   SmartPrompt :&+g %-3s    &+y|&N"
-          "&+r     Compact Mode:&+g %-3s    &+y|&N"
-          "&+r     Wimpy Level :&+g %-4s   &+y|&N\r\n"
-          "&+r   Shout       :&+g %-3s    &+y|&N"
-          "&+r     Echo        :&+g %-3s    &+y|&N"
-          "&+r     Vicious     :&+g %-3s    &+y|&N\r\n"
-          "&+r   Petition    :&+g %-3s    &+y|&N"
-          "&+r     Paging      :&+g %-3s    &+y|&N"
-          "&+r     Save Notify :&+g %-3s    &+y|&N\r\n"
-          "&+r   Who List    :&+g %-3s    &+y|&N"
-          "&+r     Screen Size :&+g %-3s    &+y|&N"
-          "&+r     Terminal    :&+g %-4s   &+y|&N\r\n"
-          "&+r   Map         :&+g %-3s    &+y|&N"
-          "&+r     Old SmartP  :&+g %-3s    &+y|&N"
-          "&+r     Show Titles :&+g %-3s    &+y|&N\r\n"
-          "&+r   Battle Alert:&+g %-3s    &+y|&N"
-          "&+r     Kingdom View:&+g %-3s    &+y|&N"
-          "&+r     Ship Map    :&+g %-3s    &+y|&N\r\n"
-          "&+r   Take        :&+g %-3s    &+y|&N"
-          "&+r     Terse Battle:&+g %-3s    &+y|&N"
-          "&+r     QuickChant  :&+g %-3s    &+y|&N\r\n"
-          "&+r   Project     :&+g %-3s    &+y|&N"
-          "&+r     AFK         :&+g %-3s    &+y|&N"
-          "&+r     NChat       :&+g %-3s    &+y|&N\r\n"
-          "&+r   Hint Channel:&+g %-3s    &+y|&N"
-          "&+r     Group Needed:&+g %-3s    &+y|&N"
-          "&+r     Showspec    :&+g %-3s    &+y|&N\r\n"
-          "&+r   Web Info    :&+g %-3s    &+y|&N"
-          "&+r     Show Quests :&+g %-3s    &+y|&N"
-          "&+r     Boons       :&+g %-3s    &+y|&N\r\n"
-          "&+r   Newbie EQ   :&+g %-3s    &+y|&N"
-          "&+r     No Beep     :&+g %-3s    &+y|&n"
-          "&+r     Underline   :&+g %-3s    &+y|&N\r\n"
-          "&+r   Surname     :&+g %-3s    &+y|"
-          "&+r     Damage      :&+g %-3s    &+y|&n"
-          "&+r     No Level    :&+g %-3s    &+y|&n\r\n"
-          "&+r   PetDamage   :&+g %-3s    &+y|"
-          "&+r     Guildname   :&+g %-3s    &+y|"
-          "&+r     GMCP        :&+g %-3s    &+y|&n\r\n"
-          "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
-          "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n",
-          ONOFF(!PLR_FLAGGED(ch, PLR_NOTELL)),
-          ONOFF(PLR_FLAGGED(ch, PLR_BRIEF)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_NOLOCATE)),
-          ONOFF(PLR_FLAGGED(ch, PLR_SMARTPROMPT)),
-          ONOFF(PLR_FLAGGED(ch, PLR_COMPACT)),
-          Gbuf2,
-          ONOFF(!PLR_FLAGGED(ch, PLR_NOSHOUT)),
-          ONOFF(PLR_FLAGGED(ch, PLR_ECHO)),
-          ONOFF(PLR_FLAGGED(ch, PLR_VICIOUS)),
-          ONOFF(PLR_FLAGGED(ch, PLR_PETITION)),
-          ONOFF(PLR_FLAGGED(ch, PLR_PAGING_ON)),
-          ONOFF(PLR_FLAGGED(ch, PLR_SNOTIFY)),
-          ONOFF(PLR_FLAGGED(ch, PLR_NOWHO)),
-          Gbuf3,
-          (send_ch->desc->term_type == 1 ? "GEN " : (send_ch->desc->term_type == 2 ? "ANSI" : "MSP ")),
-          ONOFF(PLR_FLAGGED(ch, PLR_MAP)),
-          ONOFF(PLR_FLAGGED(ch, PLR_OLDSMARTP)),
-          ONOFF(!PLR2_FLAGGED(ch, PLR2_NOTITLE)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_BATTLEALERT)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_KINGDOMVIEW)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_SHIPMAP)),
-          ONOFF(!PLR2_FLAGGED(ch, PLR2_NOTAKE)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_TERSE)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_QUICKCHANT)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_PROJECT)),
-          ONOFF(PLR_FLAGGED(ch, PLR_AFK)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_NCHAT)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_HINT_CHANNEL)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_LGROUP)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_SPEC)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_WEBINFO)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_SHOW_QUEST)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_BOON)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_NEWBIEEQ)),
-          ONOFF(PLR3_FLAGGED(ch, PLR3_NOBEEP)),
-          ONOFF(PLR3_FLAGGED(ch, PLR3_UNDERLINE)),
-          ONOFF(PLR3_FLAGGED(ch, PLR3_SURNAMES)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_DAMAGE)),
-          ONOFF(PLR3_FLAGGED(ch, PLR3_NOLEVEL)),
-          ONOFF(PLR3_FLAGGED(ch, PLR3_PET_DAMAGE)),
-          ONOFF(PLR3_FLAGGED(ch, PLR3_GUILDNAME)),
-          ONOFF(!PLR3_FLAGGED(ch, PLR3_NOGMCP)) );
+      "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+      "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n"
+      "                          &+r    STATUS of toggles.    "
+      "                           &N\r\n"
+      "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+      "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n"
+      "&+r   Tell        :&+g %-3s    &+y|&N"
+      "&+r     Brief Mode  :&+g %-3s    &+y|&N"
+      "&+r     No Locate   :&+g %-3s    &+y|&N\r\n"
+      "&+r   SmartPrompt :&+g %-3s    &+y|&N"
+      "&+r     Compact Mode:&+g %-3s    &+y|&N"
+      "&+r     Wimpy Level :&+g %-4s   &+y|&N\r\n"
+      "&+r   Shout       :&+g %-3s    &+y|&N"
+      "&+r     Echo        :&+g %-3s    &+y|&N"
+      "&+r     Vicious     :&+g %-3s    &+y|&N\r\n"
+      "&+r   Petition    :&+g %-3s    &+y|&N"
+      "&+r     Paging      :&+g %-3s    &+y|&N"
+      "&+r     Save Notify :&+g %-3s    &+y|&N\r\n"
+      "&+r   Who List    :&+g %-3s    &+y|&N"
+      "&+r     Screen Size :&+g %-3s    &+y|&N"
+      "&+r     Terminal    :&+g %-4s   &+y|&N\r\n"
+      "&+r   Map         :&+g %-3s    &+y|&N"
+      "&+r     Old SmartP  :&+g %-3s    &+y|&N"
+      "&+r     Show Titles :&+g %-3s    &+y|&N\r\n"
+      "&+r   Battle Alert:&+g %-3s    &+y|&N"
+      "&+r     Kingdom View:&+g %-3s    &+y|&N"
+      "&+r     Ship Map    :&+g %-3s    &+y|&N\r\n"
+      "&+r   Take        :&+g %-3s    &+y|&N"
+      "&+r     Terse Battle:&+g %-3s    &+y|&N"
+      "&+r     QuickChant  :&+g %-3s    &+y|&N\r\n"
+      "&+r   Project     :&+g %-3s    &+y|&N"
+      "&+r     AFK         :&+g %-3s    &+y|&N"
+      "&+r     NChat       :&+g %-3s    &+y|&N\r\n"
+      "&+r   Hint Channel:&+g %-3s    &+y|&N"
+      "&+r     Group Needed:&+g %-3s    &+y|&N"
+      "&+r     Showspec    :&+g %-3s    &+y|&N\r\n"
+      "&+r   Web Info    :&+g %-3s    &+y|&N"
+      "&+r     Show Quests :&+g %-3s    &+y|&N"
+      "&+r     Boons       :&+g %-3s    &+y|&N\r\n"
+      "&+r   Newbie EQ   :&+g %-3s    &+y|&N"
+      "&+r     No Beep     :&+g %-3s    &+y|&n"
+      "&+r     Underline   :&+g %-3s    &+y|&N\r\n"
+      "&+r   Surname     :&+g %-3s    &+y|"
+      "&+r     Damage      :&+g %-3s    &+y|&n"
+      "&+r     No Level    :&+g %-3s    &+y|&n\r\n"
+      "&+r   PetDamage   :&+g %-3s    &+y|"
+      "&+r     Guildname   :&+g %-3s    &+y|"
+      "&+r     GMCP        :&+g %-3s    &+y|&n\r\n"
+      "&+r   PartialMatch:&+g %-3s    &+y|&n\r\n"
+      "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+      "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n",
+      ONOFF(!PLR_FLAGGED(ch, PLR_NOTELL)),
+      ONOFF(PLR_FLAGGED(ch, PLR_BRIEF)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_NOLOCATE)),
+      ONOFF(PLR_FLAGGED(ch, PLR_SMARTPROMPT)),
+      ONOFF(PLR_FLAGGED(ch, PLR_COMPACT)),
+      Gbuf2,
+      ONOFF(!PLR_FLAGGED(ch, PLR_NOSHOUT)),
+      ONOFF(PLR_FLAGGED(ch, PLR_ECHO)),
+      ONOFF(PLR_FLAGGED(ch, PLR_VICIOUS)),
+      ONOFF(PLR_FLAGGED(ch, PLR_PETITION)),
+      ONOFF(PLR_FLAGGED(ch, PLR_PAGING_ON)),
+      ONOFF(PLR_FLAGGED(ch, PLR_SNOTIFY)),
+      ONOFF(PLR_FLAGGED(ch, PLR_NOWHO)),
+      Gbuf3,
+      (send_ch->desc->term_type == 1 ? "GEN " : (send_ch->desc->term_type == 2 ? "ANSI" : "MSP ")),
+      ONOFF(PLR_FLAGGED(ch, PLR_MAP)),
+      ONOFF(PLR_FLAGGED(ch, PLR_OLDSMARTP)),
+      ONOFF(!PLR2_FLAGGED(ch, PLR2_NOTITLE)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_BATTLEALERT)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_KINGDOMVIEW)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_SHIPMAP)),
+      ONOFF(!PLR2_FLAGGED(ch, PLR2_NOTAKE)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_TERSE)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_QUICKCHANT)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_PROJECT)),
+      ONOFF(PLR_FLAGGED(ch, PLR_AFK)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_NCHAT)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_HINT_CHANNEL)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_LGROUP)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_SPEC)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_WEBINFO)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_SHOW_QUEST)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_BOON)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_NEWBIEEQ)),
+      ONOFF(PLR3_FLAGGED(ch, PLR3_NOBEEP)),
+      ONOFF(PLR3_FLAGGED(ch, PLR3_UNDERLINE)),
+      ONOFF(PLR3_FLAGGED(ch, PLR3_SURNAMES)),
+      ONOFF(PLR2_FLAGGED(ch, PLR2_DAMAGE)),
+      ONOFF(PLR3_FLAGGED(ch, PLR3_NOLEVEL)),
+      ONOFF(PLR3_FLAGGED(ch, PLR3_PET_DAMAGE)),
+      ONOFF(PLR3_FLAGGED(ch, PLR3_GUILDNAME)),
+      ONOFF(!PLR3_FLAGGED(ch, PLR3_NOGMCP)),
+      ONOFF(PLR3_FLAGGED(ch, PLR3_PARTIAL_MATCH))  );
   send_to_char(Gbuf1, send_ch);
 
   if (GET_LEVEL(ch) >= AVATAR)
@@ -4398,8 +4400,8 @@ void show_toggles(P_char ch)
             ONOFF(PLR_FLAGGED(ch, PLR_DEBUG)),
             ONOFF(PLR_FLAGGED(ch, PLR_MORTAL)),
             ONOFF(PLR2_FLAGGED(ch, PLR2_HEAL)),
-            ONOFF(PLR3_FLAGGED(ch, PLR3_EPICWATCH)));
-    send_to_char(Gbuf1, send_ch);
+            ONOFF(PLR3_FLAGGED(ch, PLR3_EPICWATCH)) );
+            send_to_char(Gbuf1, send_ch);
     send_to_char("&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n", send_ch);
   }
 }
@@ -4471,6 +4473,7 @@ static const char *toggles_list[] = {
   "petdamage",
   "guildname",
   "gmcp",                 // 65
+  "partialmatch",         // 66  
   "\n"
 };
 
@@ -4597,7 +4600,10 @@ static const char *tog_messages[][2] = {
   {"You turn off the display of your guild name.\r\n",
    "You turn on the display of your guild name.\r\n"},
   {"&+WGMCP&N data streaming enabled.\r\n",
-   "&+WGMCP&N data streaming disabled.\r\n"}
+   "&+WGMCP&N data streaming disabled.\r\n"},
+  { "Partial word matching DISABLED.\r\n",
+	"Partial word matching ENABLED.\r\n" }
+
 };
 
 void do_more(P_char ch, char *arg, int cmd)
@@ -5111,6 +5117,9 @@ void do_toggle(P_char ch, char *arg, int cmd)
   case 65:  /* gmcp */
     result = PLR3_TOG_CHK(ch, PLR3_NOGMCP);
     break;
+  case 66:  /* partialmatch */
+	  result = PLR3_TOG_CHK(ch, PLR3_PARTIAL_MATCH);
+	  break;
   default:
     break;
   }

@@ -1003,6 +1003,7 @@ struct room_data {
 #define PLR3_EPICWATCH     BIT_20 /* For Immortals: displays calls to epiclog */
 #define PLR3_PET_DAMAGE    BIT_21
 #define PLR3_NOGMCP        BIT_22  /* Player has disabled GMCP */
+#define PLR3_PARTIAL_MATCH BIT_23  /* Player wants partial item name matching */
 
 /* For players : Prompt flags (16 bits max) */
 #define PROMPT_NONE        BIT_1

@@ -77,6 +77,7 @@ int map_view_distance(P_char ch, int room);
 bool leave_safe_room( P_char ch );
 void add_weight( P_obj obj, int weight );
 
+
 /*
  * called every 20 seconds, just loops through chars doing...stuff
  */
@@ -741,6 +742,38 @@ bool isname( const char *match, const char *namelist )
         return TRUE;
 }
 */
+
+// modified isname() to allow partial matching - Voodoo
+// isolated so use can be controlled 
+// managed by toggle PRTLMTCH wherever CHAR_DATA is available to check
+int isname_partial(const char* str, const char* namelist)
+{
+   // fprintf(stderr, "++ in PARTIAL MATCH CODE\r\n");
+	char name[MAX_INPUT_LENGTH];
+	const char* p = namelist;
+
+	if (!str || !*str || !namelist || !*namelist)
+		return 0;
+
+	while (*p) {
+		int len = 0;
+
+		/* extract next word from namelist */
+		while (*p && !isspace(*p) && len < MAX_INPUT_LENGTH - 1)
+			name[len++] = *(p++);
+		name[len] = '\0';
+
+		/* prefix match: compare only strlen(str) characters */
+		if (!strncasecmp(str, name, strlen(str)))
+			return 1;
+
+		/* skip spaces */
+		while (isspace(*p))
+			p++;
+	}
+
+	return 0;
+}
 
 
 bool isname(const char *str, const char *namelist)
@@ -1793,7 +1826,8 @@ P_obj get_obj_in_list(char *name, P_obj list)
     return (0);
 
   for (i = list, j = 1; i && (j <= k); i = i->next_content)
-    if (isname(tmp, i->name))
+	  // can do control partial name matches here, no CH to check toggle - Voodoo
+    if (isname_partial(tmp, i->name))
     {
       if (j == k)
         return (i);
@@ -3349,35 +3383,71 @@ P_obj get_obj_in_list_vis(P_char ch, char *name, P_obj list, bool no_tracks )
   }
   if( no_tracks )
   {
-    for (i = list, j = 1; i && (j <= k); i = i->next_content)
-    {
-      if( isname(tmp, i->name)
-        || (IS_PC(ch) && IS_TRUSTED(ch) && atoi(name) > 0 && atoi(name) == OBJ_VNUM(i)) )
+      for (i = list, j = 1; i && (j <= k); i = i->next_content)
       {
-        if( CAN_SEE_OBJ(ch, i) || IS_NOSHOW(i) && OBJ_VNUM(i) != VNUM_TRACKS )
-        {
-          if (j == k)
-            return (i);
-          j++;
-        }
+          if (IS_SET(PLR3_FLAGS(ch), PLR3_PARTIAL_MATCH))
+          {
+              /* partial match mode */
+              if (isname_partial(tmp, i->name)
+                  || (IS_PC(ch) && IS_TRUSTED(ch) && atoi(name) > 0 && atoi(name) == OBJ_VNUM(i)))
+              {
+                  if (CAN_SEE_OBJ(ch, i) || (IS_NOSHOW(i) && OBJ_VNUM(i) != VNUM_TRACKS))
+                  {
+                      if (j == k)
+                          return i;
+                      j++;
+                  }
+              }
+          }
+          else
+          {
+              /* strict match mode */
+              if (isname(tmp, i->name)
+                  || (IS_PC(ch) && IS_TRUSTED(ch) && atoi(name) > 0 && atoi(name) == OBJ_VNUM(i)))
+              {
+                  if (CAN_SEE_OBJ(ch, i) || (IS_NOSHOW(i) && OBJ_VNUM(i) != VNUM_TRACKS))
+                  {
+                      if (j == k)
+                          return i;
+                      j++;
+                  }
+              }
+          }
       }
-    }
   }
   else
   {
-    for (i = list, j = 1; i && (j <= k); i = i->next_content)
-    {
-      if( isname(tmp, i->name)
-        || (IS_PC(ch) && IS_TRUSTED(ch) && atoi(name) > 0 && atoi(name) == OBJ_VNUM(i)) )
-      {
-        if (CAN_SEE_OBJ(ch, i) || IS_NOSHOW(i))
-        {
-          if (j == k)
-            return (i);
-          j++;
-        }
-      }
-    }
+	  for (i = list, j = 1; i && (j <= k); i = i->next_content)
+	  {
+		  if (IS_SET(PLR3_FLAGS(ch), PLR3_PARTIAL_MATCH))
+		  {
+			  /* partial match mode */
+			  if (isname_partial(tmp, i->name)
+				  || (IS_PC(ch) && IS_TRUSTED(ch) && atoi(name) > 0 && atoi(name) == OBJ_VNUM(i)))
+			  {
+				  if (CAN_SEE_OBJ(ch, i) || IS_NOSHOW(i))
+				  {
+					  if (j == k)
+						  return i;
+					  j++;
+				  }
+			  }
+		  }
+		  else
+		  {
+			  /* strict match mode */
+			  if (isname(tmp, i->name)
+				  || (IS_PC(ch) && IS_TRUSTED(ch) && atoi(name) > 0 && atoi(name) == OBJ_VNUM(i)))
+			  {
+				  if (CAN_SEE_OBJ(ch, i) || IS_NOSHOW(i))
+				  {
+					  if (j == k)
+						  return i;
+					  j++;
+				  }
+			  }
+		  }
+	  }
   }
   return (0);
 }
@@ -3924,12 +3994,30 @@ int generic_find(char *arg, int bitvector, P_char ch, P_char * tar_ch, P_obj * t
   }
   if (IS_SET(bitvector, FIND_OBJ_EQUIP))
   {
-    for (found = FALSE, i = 0; i < MAX_WEAR && !found; i++)
-      if (ch->equipment[i] && isname(name, ch->equipment[i]->name))
-      {
-        *tar_obj = ch->equipment[i];
-        found = TRUE;
-      }
+	  for (found = FALSE, i = 0; i < MAX_WEAR && !found; i++)
+	  {
+		  if (!ch->equipment[i])
+			  continue;
+
+		  if (PLR3_FLAGGED(ch, PLR3_PARTIAL_MATCH))
+		  {
+			  /* partial match mode */
+			  if (isname_partial(name, ch->equipment[i]->name))
+			  {
+				  *tar_obj = ch->equipment[i];
+				  found = TRUE;
+			  }
+		  }
+		  else
+		  {
+			  /* strict match mode */
+			  if (isname(name, ch->equipment[i]->name))
+			  {
+				  *tar_obj = ch->equipment[i];
+				  found = TRUE;
+			  }
+		  }
+	  }
     if (found)
     {
       return (FIND_OBJ_EQUIP);
