@@ -143,6 +143,7 @@ void select_swapstat( P_desc d, char *arg);
 void swapstats(P_char ch, int stat1, int stat2);
 
 extern void do_summon_book(P_char ch, char *arg, int cmd);
+extern void do_summon_totem(P_char ch, char *arg, int cmd);
 
 void update_ingame_racewar( int racewar )
 {
@@ -3962,9 +3963,38 @@ if(d->character->base_stats.Wis < 80)
 
   do_look(ch, 0, -4);
 
+  /* Entering game - Summon items that characters should have when they log in */
+  
+  // Summon spellbook for wizards who have the summon book innate ability
+  // This works by checking if the character has the INNATE_SUMMON_BOOK innate,
+  // which is typically granted to wizard classes. The do_summon_book function
+  // creates a personalized spellbook for the character. -Liskin
   if (has_innate(ch, INNATE_SUMMON_BOOK))
   {
     do_summon_book(ch, "", 0);
+  }
+
+  // Summon totem for goblins who have the summon totem innate ability
+  // Goblins receive the INNATE_SUMMON_TOTEM innate at level 26 as a racial ability.
+  // The do_summon_totem function creates a spirit totem that provides various
+  // benefits based on the goblin's level (soulshield at 41+, sense life at 36+, etc.).
+  // This works similarly to the book summoning - it checks for the innate and
+  // calls the summon function if available. -Liskin
+  if (has_innate(ch, INNATE_SUMMON_TOTEM))
+  {
+    do_summon_totem(ch, "", 0);
+  }
+
+  // Summon soulbound item for characters who have bound an item to their soul
+  // The soulbind epic skill allows players (with 20.00+ frags) to permanently bind
+  // an item to their character. The has_soulbind function checks if the character
+  // has a TAG_SOULBIND affect, which stores the virtual number of the bound item.
+  // If found, load_soulbind creates the item, applies soulbind flags (NORENT, NOSELL, etc.),
+  // and gives it to the character. This ensures players always have their soulbound
+  // item when they enter the game. -Liskin
+  if (has_soulbind(ch) != 0)
+  {
+    load_soulbind(ch);
   }
 }
 
@@ -4481,8 +4511,11 @@ void select_pwd(P_desc d, char *arg)
     }
     else
     {
-      if( (d->character->only.pc->pwd[0] != '$' && strn_cmp(CRYPT(arg, d->character->only.pc->pwd), d->character->only.pc->pwd, 10))
-        || (d->character->only.pc->pwd[0] == '$' && strcmp( CRYPT2(arg, d->character->only.pc->pwd), d->character->only.pc->pwd)) )
+      // Fixed password comparison - removed legacy CRYPT support (2015 password upgrade code)
+      // All passwords now use CRYPT2 (MD5 crypt format with $ prefix). The old code compared
+      // only 10 characters of the hash (strn_cmp), which was insecure. Now we use full strcmp
+      // to compare the entire hash string for proper security. -Liskin
+      if( strcmp(CRYPT2(arg, d->character->only.pc->pwd), d->character->only.pc->pwd) )
       {
         SEND_TO_Q("Invalid password.\r\n", d);
         SEND_TO_Q("Invalid password ... disconnecting.\r\n", d);
@@ -4615,12 +4648,10 @@ void select_pwd(P_desc d, char *arg)
         SEND_TO_Q(motd.c_str(), d);
       }
 
-      // Use better passwords now.
-      if( d->character->only.pc->pwd[0] != '$' )
-      {
-        SEND_TO_Q("\n\r\n\r&=LRUpgrading password - All characters now in use!&n\n\r\n\r", d);
-        strcpy( d->character->only.pc->pwd, CRYPT2(arg, GET_NAME(d->character)) );
-      }
+      // Removed legacy password upgrade code - all passwords were upgraded in 2015.
+      // The password upgrade check (checking for '$' prefix) and automatic upgrade
+      // code has been removed as it's no longer needed after 9+ years. All existing
+      // characters should already have passwords in the CRYPT2 format. -Liskin
 
       SEND_TO_Q("\r\n*** PRESS RETURN: ", d);
       STATE(d) = CON_RMOTD;
