@@ -2952,9 +2952,16 @@ bool _parse_name(char *arg, char *name)
 
   /* if any player or mob already has this name, we can't use it */
 
-  for (i = 0; i <= top_of_mobt; i++)
-    if (isname(name, mob_index[i].keys))
-      return TRUE;
+  // Fixed: Add bounds checking to prevent array out-of-bounds access. -Liskin
+  // Verify top_of_mobt is valid and mob_index is not NULL before accessing
+  if (mob_index != NULL && top_of_mobt >= 0)
+  {
+    for (i = 0; i <= top_of_mobt; i++)
+    {
+      if (isname(name, mob_index[i].keys))
+        return TRUE;
+    }
+  }
 
   if( search_block(name, command, TRUE) >= 0 )
     return TRUE;
@@ -3664,18 +3671,24 @@ void enter_game(P_desc d)
     STATE(d) = CON_FLUSH;
   }
 
+  // Fixed: Cannot use snprintf on NULL pointer - must allocate memory first or use a safe default.
+  // If host is NULL, we can't write to it, so we use a safe default string for ip2ul. -Liskin
   if (!d->host)
   {
     wizlog(57, "%s had null host.", GET_NAME(ch));
-    snprintf(d->host, MAX_STRING_LENGTH, "UNKNOWN");
+    // Use a safe default instead of trying to write to NULL pointer
+    ch->only.pc->last_ip = ip2ul("UNKNOWN");
+  }
+  else
+  {
+    ch->only.pc->last_ip = ip2ul(d->host);
   }
 
-  ch->only.pc->last_ip = ip2ul(d->host);
-
+  // Fixed: Cannot use snprintf on NULL pointer. If login is NULL, we log it but don't try to write to it. -Liskin
   if (!d->login)
   {
     wizlog(57, "%s had null login.", GET_NAME(ch));
-    snprintf(d->login, MAX_STRING_LENGTH, "UNKNOWN");
+    // Don't try to write to NULL pointer - just log the issue
   }
 
   if (IS_TRUSTED(ch))
@@ -5404,8 +5417,11 @@ void select_class(P_desc d, char *arg)
     SEND_TO_Q("\r\n[Press Return or Enter to return to the Class Menu]", d);
     return;
   }
-  if (class_table[GET_RACE(d->character)]
-      [flag2idx(d->character->player.m_class)] == 5)
+  // Fixed: Add bounds checking for array access to prevent out-of-bounds errors. -Liskin
+  int race = GET_RACE(d->character);
+  int class_idx = flag2idx(d->character->player.m_class);
+  if (race >= 0 && race <= LAST_RACE && class_idx >= 0 && class_idx <= CLASS_COUNT &&
+      class_table[race][class_idx] == 5)
   {
     SEND_TO_Q("\r\nThis is not an allowed class for your race!", d);
     return;
@@ -5444,8 +5460,11 @@ void select_class(P_desc d, char *arg)
     SEND_TO_Q("&+LN)eutral&n\r\n", d);
 /*    if (!invitemode && (class_table[(int) GET_RACE(d->character)][flag2idx(d->character->player.m_class)] != 3) &&
         (!RACE_NEUTRAL(d->character) || is_invited(GET_NAME(d->character))))*/
-    if (class_table[(int) GET_RACE(d->character)]
-        [flag2idx(d->character->player.m_class)] != 3)
+    // Fixed: Add bounds checking for array access to prevent out-of-bounds errors. -Liskin
+    int race = (int) GET_RACE(d->character);
+    int class_idx = flag2idx(d->character->player.m_class);
+    if (race >= 0 && race <= LAST_RACE && class_idx >= 0 && class_idx <= CLASS_COUNT &&
+        class_table[race][class_idx] != 3)
       SEND_TO_Q("&+rE)vil&n\r\n", d);
     SEND_TO_Q("Alignment only affects your character's alignment and not the chosen racewar side.\n", d);
     SEND_TO_Q("\r\nYour selection: ", d);
@@ -5502,8 +5521,15 @@ void display_classtable(P_desc d)
   SEND_TO_Q("\r\n---------------", d);
 
   buf[0] = 0;
+  // Fixed: Add bounds checking for array access to prevent out-of-bounds errors. -Liskin
+  int race = GET_RACE(d->character);
+  if (race < 0 || race > LAST_RACE)
+  {
+    // Invalid race, skip class table display
+    return;
+  }
   for (cls = 1; cls <= CLASS_COUNT; cls++)
-    if (class_table[GET_RACE(d->character)][cls] != 5)
+    if (class_table[race][cls] != 5)
     {
       snprintf(template_buf, MAX_STRING_LENGTH, "\r\n%%c) %%-%lds(%%c for help)",
               strlen(class_names_table[cls].ansi) -
@@ -5630,7 +5656,10 @@ void select_hometown(P_desc d, char *arg)
     // else if (i == HOME_SYLVANDAWN)
       // town_letter = 's';
 
-    if ((avail_hometowns[i][GET_RACE(d->character)] == 1) &&
+    // Fixed: Add bounds checking for array access to prevent out-of-bounds errors. -Liskin
+    int race = GET_RACE(d->character);
+    if (i >= 0 && i <= LAST_HOME && race >= 0 && race <= LAST_RACE &&
+        avail_hometowns[i][race] == 1 &&
         (LOWER(*arg) == LOWER(town_name_list[i][0])))
     {
       home = i;
@@ -5647,7 +5676,16 @@ void select_hometown(P_desc d, char *arg)
   }
 
   /* did they select one that is allowed for their race */
-  if (avail_hometowns[home][(int) GET_RACE(d->character)] != 1)
+  // Fixed: Add bounds checking for array access to prevent out-of-bounds errors. -Liskin
+  int race = GET_RACE(d->character);
+  if (home < 0 || home > LAST_HOME || race < 0 || race > LAST_RACE)
+  {
+    SEND_TO_Q("\r\nInvalid hometown or race selection.\r\n ", d);
+    SEND_TO_Q("Please select again.\r\n\r\nHometown: ", d);
+    STATE(d) = CON_HOMETOWN;
+    return;
+  }
+  if (avail_hometowns[home][race] != 1)
   {
     SEND_TO_Q("\r\nThat is not a hometown for your race.\r\n ", d);
     SEND_TO_Q("Please select again.\r\n\r\nHometown: ", d);
@@ -5967,10 +6005,23 @@ void find_starting_location(P_char ch, int hometown)
     snprintf(Gbuf1, MAX_STRING_LENGTH, "find_starting_location: illegal class %d for %s",
             ch->player.m_class, GET_NAME(ch));
     logit(LOG_DEBUG, Gbuf1);
+    // Fixed: Add bounds checking for array access. HOME_THARN should be valid, but verify. -Liskin
+    if (HOME_THARN >= 0 && HOME_THARN <= LAST_HOME)
+      GET_HOME(ch) = guild_locations[HOME_THARN][0];  /* default */
+    else
+      GET_HOME(ch) = -1;  /* fallback if bounds check fails */
+    return;
+  }
+  // Fixed: Add bounds checking for array access to prevent out-of-bounds errors. -Liskin
+  int class_idx = flag2idx(ch->player.m_class);
+  if (hometown < 0 || hometown > LAST_HOME || class_idx < 0 || class_idx > CLASS_COUNT)
+  {
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "set_guild_location: invalid hometown %d or class_idx %d\n", hometown, class_idx);
+    logit(LOG_DEBUG, Gbuf1);
     GET_HOME(ch) = guild_locations[HOME_THARN][0];  /* default */
     return;
   }
-  guild_num = guild_locations[hometown][flag2idx(ch->player.m_class)];
+  guild_num = guild_locations[hometown][class_idx];
 
   if (guild_num == -1)
   {
@@ -5978,7 +6029,11 @@ void find_starting_location(P_char ch, int hometown)
             "find_starting_location: hometown %d, no guild for class %d (%s)",
             hometown, ch->player.m_class, GET_NAME(ch));
     logit(LOG_DEBUG, Gbuf1);
-    GET_HOME(ch) = guild_locations[hometown][0];
+    // Fixed: Add bounds checking for array access to prevent out-of-bounds errors. -Liskin
+    if (hometown >= 0 && hometown <= LAST_HOME)
+      GET_HOME(ch) = guild_locations[hometown][0];
+    else
+      GET_HOME(ch) = -1;  /* fallback if bounds check fails */
     return;
   }
   if( guild_num == 22800 )
@@ -6004,7 +6059,15 @@ int find_starting_alignment(int race, int m_class)
     logit(LOG_STATUS, Gbuf1);
     return (0);                 /* default */
   }
-  return (class_table[race][flag2idx(m_class)]);
+  // Fixed: Add bounds checking for array access to prevent out-of-bounds errors. -Liskin
+  int class_idx = flag2idx(m_class);
+  if (race < 1 || race > LAST_RACE || class_idx < 0 || class_idx > CLASS_COUNT)
+  {
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "find_starting_alignment: invalid race %d or class_idx %d\n", race, class_idx);
+    logit(LOG_STATUS, Gbuf1);
+    return (0);  /* default */
+  }
+  return (class_table[race][class_idx]);
 }
 
 /* sets initial values for player law_flags, based on race and class */
@@ -7017,7 +7080,9 @@ void nanny(P_desc d, char *arg)
       logit(LOG_EXIT, "Nanny: illegal state of con'ness #1 (%d)", STATE(d));
     if (d->character && d->character->events)
       ClearCharEvents(d->character);
-    if (d->output.head == 0)
+    // Fixed: Use NULL instead of 0 for pointer comparison. d->output.head is a pointer (struct txt_block *),
+    // so comparing to NULL is clearer and more correct than comparing to 0. -Liskin
+    if (d->output.head == NULL)
       close_socket(d);
     return;
 #if 0
