@@ -68,6 +68,38 @@ void     set_keywords(P_obj t_obj, const char *newKeys);
 void     set_short_description(P_obj t_obj, const char *newShort);
 void     set_long_description(P_obj t_obj, const char *newDescription);
 
+struct randomeq_weapon_data
+{
+	char  *base_name;
+	int    weapon_type;
+	bool   one_handed;
+	bool   two_handed;
+	bool   throwable;
+	bool   force_return;
+	bool   allowed_materials[MAT_HIGHEST];
+	ulong  weight;
+};
+
+struct randomeq_material_weapon_data
+{
+	int     material_type;
+	ushort  one_handed_min_dice;
+	ushort  one_handed_max_dice;
+	ushort  one_handed_min_size;
+	ushort  one_handed_max_size;
+	ushort  two_handed_min_dice;
+	ushort  two_handed_max_dice;
+	ushort  two_handed_min_size;
+	ushort  two_handed_max_size;
+	ulong   weight;
+};
+
+struct randomeq_prefix_data
+{
+	int    apply_loc;
+	ulong  weight;
+};
+
 
 //m_number is the material number used by game check, constant.c for the
 //correct value! - Kvark

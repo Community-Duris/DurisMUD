@@ -5331,6 +5331,11 @@ void initialize_skills()
                TAR_IGNORE, spell_holy_intercession);
   SPEC_SPELL_ADD(CLASS_CLERIC, 10, SPEC_HOLYMAN);
 
+  SPELL_CREATE_MSG("warring zeal", SPELL_WARRING_ZEAL, PULSE_SPELLCAST * 2,
+               TAR_SELF_ONLY, spell_warring_zeal,
+			   "The sound of the wardrums subsides.");
+  SPEC_SPELL_ADD(CLASS_CLERIC, 10, SPEC_ZEALOT);
+
 #ifndef _DE_
   create_epic_skills();
 #endif

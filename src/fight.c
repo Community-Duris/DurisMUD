@@ -5642,6 +5642,23 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags, struct damage_
     return result;
   }
 
+  if(affected_by_spell(ch, SPELL_WARRING_ZEAL))
+  {
+	struct damage_messages wz_messages ={
+      "Your strike $N with &+Wholy &+rfe&+Rrv&+ror&n!",
+      "You feel the &+Wholy &+Ypower&n of $n's strike!",
+      "$n's strike bathes $N in &+Wholy &+rfl&+Ram&+res&n!",
+      "$N is consumed by your &+Wholy &+rfl&+Ram&+res&n!",
+      "You are consumed by $n's &+Wholy &+rfl&+Ram&+res&n!",
+      "$N is consumed by $n's &+Wholy &+rfl&+Ram&+res&n!", 0};
+	int local_dam = dice((int)get_property("spell.warringzeal.dize.num", 8), (int)get_property("spell.warringzeal.dize.num", 5)); // default is 2-10 damage after reductions
+	result = spell_damage(ch, victim, local_dam, SPLDAM_HOLY, SPLDAM_NODEFLECT, &wz_messages);
+	if(result != DAM_NONEDEAD)
+	{
+		return result;
+	}
+  }
+
   if (ilogb(dam) / 2 > number(1, 100))
   {
     DamageStuff(victim, SPLDAM_GENERIC);

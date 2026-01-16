@@ -12953,6 +12953,16 @@ void apply_zone_spell(P_char ch, int count, const char *zone_name, int zone_inde
 
   switch (spell)
   {
+  case SPELL_REGENERATION:
+  case SPELL_ACCEL_HEALING:
+  case SPELL_PACTUM_SERPENTIS:
+    if (!affected_by_spell(ch, SPELL_REGENERATION) && !affected_by_spell(ch, SPELL_PACTUM_SERPENTIS) &&
+        !affected_by_spell(ch, SKILL_REGENERATE) && !affected_by_spell(ch, SPELL_ACCEL_HEALING))
+    {
+      (skills[spell].spell_pointer)(MIN(56, count * 10), ch, 0, 0, ch, 0);
+      message = SETMSG_PROTECT;
+    }
+    break;
   case SPELL_STONE_SKIN:
     if (!has_skin_spell(ch) && obj->timer[0] + get_property("timer.stoneskin.generic", 60) < time(NULL))
     {
@@ -13049,6 +13059,8 @@ void apply_zone_spell(P_char ch, int count, const char *zone_name, int zone_inde
           // frequently, negating the !fear ability of the song for
           // many group members
           paf->duration = GET_LEVEL(ch) / 3;
+		  SET_BIT(paf->flags, AFFTYPE_SET_AFFECT | AFFTYPE_NOSAVE);
+          paf->context = reinterpret_cast<void *>(zone_index);
         }
       }
     }

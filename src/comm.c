@@ -2789,11 +2789,12 @@ int process_input(P_desc t)
   {
     if (*(t->buf + i) == (signed char)IAC)
     {
-      int consumed = parse_telnet_options(t, t->buf + i);
-      if (consumed > 0)
+      int remaining = strlen(t->buf + i);
+      int consumed = parse_telnet_options(t, t->buf + i, remaining);
+      if (consumed > 0 && consumed <= remaining)
       {
         /* remove processed telnet data from buffer */
-        memmove(t->buf + i, t->buf + i + consumed, strlen(t->buf + i + consumed) + 1);
+        memmove(t->buf + i, t->buf + i + consumed, remaining - consumed + 1);
         i--; /* recheck this position */
       }
     }
@@ -2822,9 +2823,16 @@ int process_input(P_desc t)
   {
     if (!ISNEWL(*(t->buf + i)) && !(flag = (k >= (MAX_INPUT_LENGTH - 2))))
     {
-      /* safety fallback for telnet */
+      /* telnet */
       if (*(t->buf + i) == (signed char)IAC)
-        i += parse_telnet_options(t, t->buf + i);
+      {
+        int remaining = strlen(t->buf + i);
+        int consumed = parse_telnet_options(t, t->buf + i, remaining);
+        if (consumed > 0 && consumed <= remaining)
+          i += consumed;
+        else
+          i++;
+      }
       /* backspace? (handle both ^H and DEL) */
       else if (*(t->buf + i) == '\b' || (unsigned char)*(t->buf + i) == 127)
       {

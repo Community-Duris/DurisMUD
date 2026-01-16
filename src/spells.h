@@ -727,8 +727,9 @@
 #define SPELL_DIVINE_FONT             676
 #define SPELL_VITAL_INTERCESSION      677
 #define SPELL_HOLY_INTERCESSION       678
-#define SPELL_FROST_BEAM	      679
-#define LAST_SPELL                    SPELL_FROST_BEAM
+#define SPELL_FROST_BEAM              679
+#define SPELL_WARRING_ZEAL            680
+#define LAST_SPELL                    SPELL_WARRING_ZEAL
 
 
 #define FIRST_SKILL                  1000  /* should be a decent split point */

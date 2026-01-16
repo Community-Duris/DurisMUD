@@ -71,12 +71,12 @@ int send_ga(P_desc desc)
  * to "cut" from input stream
  * If you ever need to make it "the right way", look into
  * sources of telnetd demon */
-int parse_telnet_options(P_desc player, char *buf)
+int parse_telnet_options(P_desc player, char *buf, int buflen)
 {
   ubyte    *p = (ubyte*)(buf);
   int      mccp_ver = 0;
 
-  if (*p != IAC)
+  if (buflen < 1 || *p != IAC)
     return 0;
 
   switch (*(p + 1))
@@ -121,13 +121,17 @@ int parse_telnet_options(P_desc player, char *buf)
   case SB:  /* subnegotiation */
     {
       int len = 2;
-      /* no null check - buf = 4800 */
-      while (len < 4096 && !(p[len] == IAC && p[len+1] == SE))
+      while (len < buflen && p[len] != '\0' && !(p[len] == IAC && p[len+1] == SE))
         len++;
+
+      /* incomplete, wait for more */
+      if (len >= buflen || p[len] == '\0')
+        return 0;
+
       if (p[len] == IAC && p[len+1] == SE)
         len += 2;
-      else if (len >= 4096)
-        return 2;  /* malformed */
+      else
+        return 0;
 
       if (p[2] == TELOPT_TTYPE && len > 4) {
         if (p[3] == TELQUAL_IS) {
