@@ -5050,7 +5050,7 @@ void select_sex(P_desc d, char *arg)
   if( !IS_NEWBIE(d->character) )
 	{
 	  SEND_TO_Q
-	    ("\r\n\r\nDo you want to play hardcore? Hardcore char can only die 5 times, then it's gone for ever.\r\n",
+	    ("\r\n\r\nDo you want to play hardcore? Hardcore char can only die 1 time, then it's gone for ever.\r\n",
 	     d);
 	  SEND_TO_Q
 	    ("Only recommended for &+Yvery&n experience player who are looking for a new challange.\r\n",

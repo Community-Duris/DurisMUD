@@ -2714,7 +2714,7 @@ void die(P_char ch, P_char killer)
       {
         ch->only.pc->numb_deaths++;
       }
-      // Hardcore chars die after 5 deaths.
+      // Hardcore chars die after 1 death. -Liskin
       if ((ch->only.pc->numb_deaths > 0) &&
           IS_HARDCORE(ch))
       {
