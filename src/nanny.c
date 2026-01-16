@@ -4211,21 +4211,10 @@ void select_name(P_desc d, char *arg, int flag)
   }
   else
   {
-    // Fixed: Use STATE() macro instead of direct ->connected access for consistency. -Liskin
-    for (t_d = descriptor_list; t_d; t_d = t_d->next)
-      if ((t_d != d) && t_d->character && STATE(t_d) &&
-          !str_cmp(tmp_name, GET_NAME(t_d->character)))
-      {
-        close_socket(t_d);
-        break;
-        /*
-        SEND_TO_Q
-          ("Your char is stuck at the menu. Try another name, and ask a god for help, or wait a few minutes for it to clear.",
-           d);
-        SEND_TO_Q("Name: ", d);
-        return;
-        */
-      }
+    // Fixed: DDoS protection - Allow all connection attempts to proceed to password verification.
+    // Old connections will ONLY be booted AFTER successful password verification in select_pwd().
+    // This prevents attackers from booting players without knowing the password, regardless of IP. -Liskin
+    // No action needed here - just allow the connection to proceed to password entry.
   }
 
   /* capitalize the first letter of name */
@@ -4579,18 +4568,22 @@ void select_pwd(P_desc d, char *arg)
         return;
       }
 
-      /* Check if already playing */
+      /* Check if already playing - Fixed: DDoS protection - Only boot old connection AFTER password verification */
+      // This prevents attackers from booting players without knowing the password.
+      // Password has been verified at this point, so it's safe to boot the old connection.
+      // We still log security events for monitoring different-IP connections. -Liskin
       for (k = descriptor_list; k; k = k->next)
       {
         if ((k->character != d->character) && k->character)
         {
+          bool name_matches = FALSE;
+          
           if (k->original)
           {
             if (GET_NAME(k->original) &&
                 (!str_cmp(GET_NAME(k->original), GET_NAME(d->character))))
             {
-              SEND_TO_Q("Overriding old connection...\r\n", d);
-              close_socket(k);
+              name_matches = TRUE;
             }
           }
           else
@@ -4598,9 +4591,31 @@ void select_pwd(P_desc d, char *arg)
             if (GET_NAME(k->character) &&
                 (!str_cmp(GET_NAME(k->character), GET_NAME(d->character))))
             {
-              SEND_TO_Q("Overriding old connection...\r\n", d);
-              close_socket(k);
+              name_matches = TRUE;
             }
+          }
+          
+          if (name_matches)
+          {
+            // Password verified - safe to boot old connection
+            bool same_ip = (d->host && k->host && !str_cmp(d->host, k->host));
+            bool old_in_game = (STATE(k) == CON_PLAYING);
+            
+            // Log security event if different IP (for monitoring)
+            if (!same_ip)
+            {
+              logit(LOG_PLAYER, "SECURITY: Password-authenticated connection to %s from %s booting existing connection from %s (state %d)",
+                    GET_NAME(d->character), d->host ? d->host : "UNKNOWN",
+                    k->host ? k->host : "UNKNOWN", STATE(k));
+              if (old_in_game)
+              {
+                wizlog(AVATAR, "SECURITY: Password-authenticated connection to %s from %s booting in-game connection from %s",
+                       GET_NAME(d->character), d->host ? d->host : "UNKNOWN", k->host ? k->host : "UNKNOWN");
+              }
+            }
+            
+            SEND_TO_Q("Overriding old connection...\r\n", d);
+            close_socket(k);
           }
         }
       }
