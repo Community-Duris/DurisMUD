@@ -355,12 +355,18 @@ int write_to_descriptor(P_desc player, const char *txt)
 
           len = (long) player->z_str->next_out -
             (long) player->out_compress_buf;
-          if (raw_write_to_descriptor(player, player->out_compress_buf, len) < 0)
+          int write_result = raw_write_to_descriptor(player, player->out_compress_buf, len);
+          if (write_result < 0)
           {
             if (conv_buf != static_conv_buf)
               FREE(conv_buf);
             return (-1);
           }
+          /* BUGFIX: Break if socket write returned 0 (would block/buffer full).
+           * This prevents infinite loop when socket can't accept more data.
+           * The remaining compressed data will be sent on the next game loop iteration. -Liskin */
+          if (write_result == 0)
+            break;
 
         }
         while (player->z_str->avail_out == 0);
@@ -469,8 +475,14 @@ int write_to_descriptor_binary(P_desc player, const unsigned char *data, size_t 
 
           out_len = (long)player->z_str->next_out -
                     (long)player->out_compress_buf;
-          if (raw_write_to_descriptor(player, player->out_compress_buf, out_len) < 0)
+          int write_result = raw_write_to_descriptor(player, player->out_compress_buf, out_len);
+          if (write_result < 0)
             return -1;
+          /* BUGFIX -Liskin: Break if socket write returned 0 (would block/buffer full).
+           * This prevents infinite loop when socket can't accept more data.
+           * The remaining compressed data will be sent on the next game loop iteration. */
+          if (write_result == 0)
+            break;
         }
         while (player->z_str->avail_out == 0);
       }
