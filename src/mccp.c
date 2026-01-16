@@ -160,10 +160,22 @@ int compress_start(P_desc player, int mccp_version)
   if (player->z_str)
     return 0;
 
+  /* BUGFIX -Liskin: Allocate z_stream structure */
   CREATE(s, z_stream, 1, MEM_TAG_ZSTREAM);
-  //s = (z_stream *) malloc(sizeof(z_stream));
+  if (!s)
+  {
+    logit(LOG_DEBUG, "MCCP: Failed to allocate z_stream");
+    return -1;
+  }
+
+  /* BUGFIX -Liskin: Allocate compression output buffer with validation */
   CREATE(player->out_compress_buf, char, COMPRESS_BUF_SIZE, MEM_TAG_BUFFER);
-  //player->out_compress_buf = (char *) malloc(COMPRESS_BUF_SIZE);
+  if (!player->out_compress_buf)
+  {
+    FREE(s);
+    logit(LOG_DEBUG, "MCCP: Failed to allocate compression buffer");
+    return -1;
+  }
 
   s->next_in = NULL;
   s->avail_in = 0;
@@ -173,11 +185,15 @@ int compress_start(P_desc player, int mccp_version)
   s->zfree = zlib_free;
   s->opaque = NULL;
 
-  if (deflateInit(s, COMPRESS_EFFICIENCY) != Z_OK)
+  /* BUGFIX -Liskin: Initialize zlib compression stream.
+   * On failure, properly free both allocated buffers before returning. */
+  int init_result = deflateInit(s, COMPRESS_EFFICIENCY);
+  if (init_result != Z_OK)
   {
+    logit(LOG_DEBUG, "MCCP: deflateInit failed with code %d", init_result);
     FREE(player->out_compress_buf);
     FREE(s);
-    logit(LOG_DEBUG, "MCCP: deflateInit failed");
+    player->out_compress_buf = NULL;
     return -1;
   }
 
@@ -221,11 +237,22 @@ int compress_end(P_desc player, int flush)
     do
     {
       status = deflate(player->z_str, Z_FINISH);
+      /* BUGFIX -Liskin: Improved error handling for zlib deflate() calls.
+       * Only continue on Z_OK or Z_STREAM_END. Other codes indicate errors. */
       if (status != Z_STREAM_END && status != Z_OK)
       {
+        logit(LOG_DEBUG, "MCCP: deflate(Z_FINISH) failed with code %d", status);
         break;
       }
+      
+      /* BUGFIX -Liskin: Validate buffer length before writing to avoid overflow. */
       len = (long) player->z_str->next_out - (long) player->out_compress_buf;
+      if (len < 0 || len > COMPRESS_BUF_SIZE)
+      {
+        logit(LOG_DEBUG, "MCCP: Invalid buffer length %d in compress_end", len);
+        break;
+      }
+      
       if (raw_write_to_descriptor(player, player->out_compress_buf, len) < 0)
         break;
     }
@@ -236,6 +263,7 @@ int compress_end(P_desc player, int flush)
   FREE(player->out_compress_buf);
   FREE(player->z_str);
   player->out_compress = 0;
+  player->z_str = NULL;  /* BUGFIX -Liskin: Clear pointer to prevent use-after-free */
 
   return 0;
 }
@@ -345,16 +373,28 @@ int write_to_descriptor(P_desc player, const char *txt)
           player->z_str->avail_out = COMPRESS_BUF_SIZE;
 
           status = deflate(player->z_str, Z_SYNC_FLUSH);
+          /* BUGFIX -Liskin: Improved zlib error handling. Z_OK indicates success,
+           * all other codes represent errors that should be logged and handled. */
           if (status != Z_OK)
           {
-            logit(LOG_DEBUG, "MCCP: deflate failed");
+            logit(LOG_DEBUG, "MCCP: deflate failed with code %d", status);
             if (conv_buf != static_conv_buf)
               FREE(conv_buf);
             return (-1);
           }
 
+          /* BUGFIX -Liskin: Validate compressed data length before using to prevent
+           * potential buffer overflow from malformed compression output. */
           len = (long) player->z_str->next_out -
             (long) player->out_compress_buf;
+          if (len < 0 || len > COMPRESS_BUF_SIZE)
+          {
+            logit(LOG_DEBUG, "MCCP: Invalid compressed buffer length %ld", len);
+            if (conv_buf != static_conv_buf)
+              FREE(conv_buf);
+            return (-1);
+          }
+          
           int write_result = raw_write_to_descriptor(player, player->out_compress_buf, len);
           if (write_result < 0)
           {
@@ -468,13 +508,22 @@ int write_to_descriptor_binary(P_desc player, const unsigned char *data, size_t 
           player->z_str->avail_out = COMPRESS_BUF_SIZE;
 
           status = deflate(player->z_str, Z_SYNC_FLUSH);
+          /* BUGFIX -Liskin: Improved zlib error handling for binary writes. */
           if (status != Z_OK)
           {
+            logit(LOG_DEBUG, "MCCP: deflate failed in binary write with code %d", status);
             return -1;
           }
 
+          /* BUGFIX -Liskin: Validate compressed output buffer length before use. */
           out_len = (long)player->z_str->next_out -
                     (long)player->out_compress_buf;
+          if (out_len < 0 || out_len > COMPRESS_BUF_SIZE)
+          {
+            logit(LOG_DEBUG, "MCCP: Invalid compressed buffer length %ld in binary write", out_len);
+            return -1;
+          }
+          
           int write_result = raw_write_to_descriptor(player, player->out_compress_buf, out_len);
           if (write_result < 0)
             return -1;
