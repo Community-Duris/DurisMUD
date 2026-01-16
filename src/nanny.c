@@ -4211,8 +4211,9 @@ void select_name(P_desc d, char *arg, int flag)
   }
   else
   {
+    // Fixed: Use STATE() macro instead of direct ->connected access for consistency. -Liskin
     for (t_d = descriptor_list; t_d; t_d = t_d->next)
-      if ((t_d != d) && t_d->character && t_d->connected &&
+      if ((t_d != d) && t_d->character && STATE(t_d) &&
           !str_cmp(tmp_name, GET_NAME(t_d->character)))
       {
         close_socket(t_d);
@@ -4399,7 +4400,8 @@ P_char find_ch_from_same_host(P_desc d)
     if( d == k || !k->character )
       continue;
     
-    if (k->connected == CON_PLAYING && 
+    // Fixed: Use STATE() macro instead of direct ->connected access for consistency. -Liskin
+    if (STATE(k) == CON_PLAYING && 
         d->character != k->character && 
         !IS_TRUSTED(k->character) && 
         d->host && k->host && 
