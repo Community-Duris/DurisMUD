@@ -2931,15 +2931,24 @@ bool _parse_name(char *arg, char *name)
   if (strlen(arg) < 2)          /* min name size */
     return TRUE;
 
-  for (i = 0; i < strlen(arg); i++)
+  // Fixed: Use unsigned char for ctype functions to avoid UB, and proper bounds checking
+  // Cast to unsigned char when calling isalpha() to avoid undefined behavior with negative
+  // char values. Also fixed the high-bit check to work correctly with both signed/unsigned char.
+  // -Liskin
+  size_t arg_len = strlen(arg);
+  if (arg_len >= MAX_NAME_LENGTH)
+    return TRUE;
+    
+  for (i = 0; i < arg_len; i++)
   {
+    unsigned char uc = (unsigned char)arg[i];
     name[i] = LOWER(arg[i]);
-    /* check for high bit chars, non-alphas, and if any letter other
+    /* check for high bit chars (non-ASCII), non-alphas, and if any letter other
        then the first is CAPS */
-    if ((arg[i] < 0) || !isalpha(arg[i]) || (i && (name[i] != arg[i])))
+    if ((uc > 127) || !isalpha((unsigned char)arg[i]) || (i && (name[i] != arg[i])))
       return TRUE;
   }
-  name[strlen(arg)] = '\0';
+  name[arg_len] = '\0';
 
   /* if any player or mob already has this name, we can't use it */
 
@@ -2981,26 +2990,38 @@ bool valid_password(P_desc d, char *arg)
        "(Answer: Yes, I damn well did, try again)\r\n", d);
     return FALSE;
   }
-  i = -1;
-  do
+  // Fixed: Add bounds checking to prevent buffer overflow. -Liskin
+  size_t arg_len = strlen(arg);
+  if (arg_len >= MAX_INPUT_LENGTH)
   {
-    i++;
-    password[i] = LOWER(*(arg + i));
+    SEND_TO_Q("Password too long.\r\n", d);
+    return FALSE;
   }
-  while (*(arg + i));
+  for (i = 0; i < arg_len; i++)
+  {
+    password[i] = LOWER(arg[i]);
+  }
+  password[arg_len] = '\0';
 
-  i = -1;
-  do
-  {
-    i++;
+  // Fixed: Add bounds checking and proper string copying to prevent buffer overflow. -Liskin
 #ifndef USE_ACCOUNT
-    name[i] = LOWER(*(d->character->player.name + i));
+  size_t name_len = strlen(d->character->player.name);
+  if (name_len >= MAX_INPUT_LENGTH)
+    name_len = MAX_INPUT_LENGTH - 1;
+  for (i = 0; i < name_len; i++)
+  {
+    name[i] = LOWER(d->character->player.name[i]);
   }
-  while (*(d->character->player.name + i));
+  name[name_len] = '\0';
 #else
-    name[i] = LOWER(*(d->account->acct_name + i));
+  size_t name_len = strlen(d->account->acct_name);
+  if (name_len >= MAX_INPUT_LENGTH)
+    name_len = MAX_INPUT_LENGTH - 1;
+  for (i = 0; i < name_len; i++)
+  {
+    name[i] = LOWER(d->account->acct_name[i]);
   }
-  while (*(d->account->acct_name + i));
+  name[name_len] = '\0';
 #endif
 
   if (strstr(name, password) || strstr(password, name))
@@ -3012,12 +3033,15 @@ bool valid_password(P_desc d, char *arg)
   }
   /* stole this from linux passwd.c */
 
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior
+  // when char is signed and has negative values. -Liskin
   other = ucase = lcase = 0;
   for (p = arg; *p; p++)
   {
-    ucase = ucase || isupper(*p);
-    lcase = lcase || islower(*p);
-    other = other || !isalpha(*p);
+    unsigned char uc = (unsigned char)*p;
+    ucase = ucase || isupper(uc);
+    lcase = lcase || islower(uc);
+    other = other || !isalpha(uc);
   }
 
   if ((!ucase || !lcase) && !other)
@@ -3121,7 +3145,8 @@ void perform_eq_wipe(P_char ch)
   snprintf(Gbuf2, MAX_STRING_LENGTH, "%c%s", LOWER(*ch->player.name), ch->player.name + 1 );
   snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.locker", SAVE_DIR, *Gbuf2, Gbuf2 );
   unlink(Gbuf1);
-  strcat(Gbuf1, ".bak");
+  // Fixed: Use strncat with bounds checking instead of strcat to prevent buffer overflow. -Liskin
+  strncat(Gbuf1, ".bak", MAX_STRING_LENGTH - strlen(Gbuf1) - 1);
   unlink(Gbuf1);
 
   // Delete the ship too
@@ -3754,7 +3779,8 @@ void enter_game(P_desc d)
   ct -= 4*60*60;
   snprintf(timestr, MAX_STRING_LENGTH, "%s", asctime( localtime(&ct) ));
   *(timestr + strlen(timestr) - 1) = '\0';
-  strcat( timestr, " EST" );
+  // Fixed: Use strncat with bounds checking instead of strcat to prevent buffer overflow. -Liskin
+  strncat(timestr, " EST", MAX_STRING_LENGTH - strlen(timestr) - 1);
   ct += 4*60*60;
 
   loginlog(GET_LEVEL(ch), "%s [%s] enters game @ %s.%s [%d]",
@@ -4022,13 +4048,17 @@ void select_terminal(P_desc d, char *arg)
   case TERM_MSP:
     d->term_type = TERM_MSP;
     arg = one_argument(arg, temp_buf);
-    strcpy(d->client_str, arg);
+    // Fixed: Use strncpy with bounds checking to prevent buffer overflow. -Liskin
+    strncpy(d->client_str, arg, sizeof(d->client_str) - 1);
+    d->client_str[sizeof(d->client_str) - 1] = '\0';
     SEND_TO_Q(greetinga, d);
     break;
   case TERM_ANSI:
     d->term_type = TERM_ANSI;
     arg = one_argument(arg, temp_buf);
-    strcpy(d->client_str, arg);
+    // Fixed: Use strncpy with bounds checking to prevent buffer overflow. -Liskin
+    strncpy(d->client_str, arg, sizeof(d->client_str) - 1);
+    d->client_str[sizeof(d->client_str) - 1] = '\0';
 
     temp = number(1, NUM_ANSI_LOGINS);
     switch (temp)
@@ -4089,7 +4119,9 @@ bool pfile_exists(const char *dir, char *name)
   struct stat statbuf;
   char     Gbuf1[MAX_STRING_LENGTH];
 
-  strcpy(buf, name);
+  // Fixed: Use strncpy with bounds checking to prevent buffer overflow. -Liskin
+  strncpy(buf, name, sizeof(buf) - 1);
+  buf[sizeof(buf) - 1] = '\0';
   buff = buf;
   for (; *buff; buff++)
     *buff = LOWER(*buff);
@@ -4114,7 +4146,9 @@ void create_denied_file(const char *dir, char *name)
   char     Gbuf1[MAX_STRING_LENGTH];
   FILE    *f;
 
-  strcpy(buf, name);
+  // Fixed: Use strncpy with bounds checking to prevent buffer overflow. -Liskin
+  strncpy(buf, name, sizeof(buf) - 1);
+  buf[sizeof(buf) - 1] = '\0';
   buff = buf;
   for (; *buff; buff++)
     *buff = LOWER(*buff);
@@ -4146,7 +4180,8 @@ void select_name(P_desc d, char *arg, int flag)
   P_desc   t_d = NULL;
   int      i = 1;
 
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
   if (!*arg)
   {
 	SEND_TO_Q("Bad name, please try another.\r\n", d);
@@ -4669,7 +4704,9 @@ void select_pwd(P_desc d, char *arg)
       echo_off(d);
       return;
     }
-    strcpy( d->character->only.pc->pwd, CRYPT2(arg, d->character->player.name) );
+    // Fixed: Use strncpy with bounds checking for password storage. -Liskin
+    strncpy(d->character->only.pc->pwd, CRYPT2(arg, d->character->player.name), sizeof(d->character->only.pc->pwd) - 1);
+    d->character->only.pc->pwd[sizeof(d->character->only.pc->pwd) - 1] = '\0';
     echo_on(d);
     SEND_TO_Q("\r\nPlease retype password: ", d);
     echo_off(d);
@@ -4723,7 +4760,9 @@ void select_pwd(P_desc d, char *arg)
       echo_off(d);
       return;
     }
-    strcpy(d->character->only.pc->pwd, CRYPT2(arg, d->character->player.name) );
+    // Fixed: Use strncpy with bounds checking for password storage. -Liskin
+    strncpy(d->character->only.pc->pwd, CRYPT2(arg, d->character->player.name), sizeof(d->character->only.pc->pwd) - 1);
+    d->character->only.pc->pwd[sizeof(d->character->only.pc->pwd) - 1] = '\0';
     echo_on(d);
     SEND_TO_Q("\r\nPlease retype your new password: ", d);
     echo_off(d);
@@ -4738,7 +4777,9 @@ void select_pwd(P_desc d, char *arg)
       SEND_TO_Q("\r\nPasswords don't match.\r\nPassword change aborted\r\n",
                 d);
       /* restore old pwd */
-      strcpy(d->character->only.pc->pwd, d->old_pwd);
+      // Fixed: Use strncpy with bounds checking to prevent buffer overflow. -Liskin
+      strncpy(d->character->only.pc->pwd, d->old_pwd, sizeof(d->character->only.pc->pwd) - 1);
+      d->character->only.pc->pwd[sizeof(d->character->only.pc->pwd) - 1] = '\0';
       STATE(d) = CON_MAIN_MENU;
       SEND_TO_Q(MENU, d);
       return;
@@ -4781,7 +4822,8 @@ void select_pwd(P_desc d, char *arg)
 void select_main_menu(P_desc d, char *arg)
 {
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
   /* a little chicanery to force them to enter a valid password.  If they are in in CON_MAIN_MENU with a d->rtype
      greater than 20 (6 is normal max), they have to do the 'change password' thing.  JAB */
@@ -4790,7 +4832,9 @@ void select_main_menu(P_desc d, char *arg)
   {
     SEND_TO_Q("Your password has been expired.  Please enter your current password:", d);
     echo_off(d);
-    strcpy(d->old_pwd, d->character->only.pc->pwd);
+    // Fixed: Use strncpy with bounds checking to prevent buffer overflow. -Liskin
+    strncpy(d->old_pwd, d->character->only.pc->pwd, sizeof(d->old_pwd) - 1);
+    d->old_pwd[sizeof(d->old_pwd) - 1] = '\0';
     STATE(d) = CON_PWD_NEW;
     return;
   }
@@ -4821,7 +4865,9 @@ void select_main_menu(P_desc d, char *arg)
   case '3':                    /* change password */
     SEND_TO_Q("Enter current password.", d);
     echo_off(d);
-    strcpy(d->old_pwd, d->character->only.pc->pwd);
+    // Fixed: Use strncpy with bounds checking to prevent buffer overflow. -Liskin
+    strncpy(d->old_pwd, d->character->only.pc->pwd, sizeof(d->old_pwd) - 1);
+    d->old_pwd[sizeof(d->old_pwd) - 1] = '\0';
     STATE(d) = CON_PWD_NEW;
     break;
   case '4':                    /* change long description */
@@ -4912,7 +4958,8 @@ void select_newbie(P_desc d, char *arg)
 void select_hardcore(P_desc d, char *arg)
 {
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
   switch (*arg)
   {
@@ -4942,7 +4989,8 @@ void select_hardcore(P_desc d, char *arg)
 void select_sex(P_desc d, char *arg)
 {
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
   switch (*arg)
   {
@@ -4999,7 +5047,8 @@ void select_race(P_desc d, char *arg)
   char     Gbuf[MAX_INPUT_LENGTH];
 
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
   /*
    ** Since we have turned off echoing for telnet client,
@@ -5062,7 +5111,8 @@ void select_race(P_desc d, char *arg)
         break;
       }
       /* Uppercase = show help (for letter keys) */
-      if (isalpha(key) && *arg == toupper(key))
+      // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+      if (isalpha((unsigned char)key) && *arg == toupper((unsigned char)key))
       {
         strncpy(Gbuf, race_names_table[playable_races[i].race_id].normal, sizeof(Gbuf) - 1);
         Gbuf[sizeof(Gbuf) - 1] = '\0';
@@ -5141,7 +5191,8 @@ void select_race(P_desc d, char *arg)
 void select_reroll(P_desc d, char *arg)
 {
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
   switch (*arg)
   {
@@ -5175,7 +5226,8 @@ void select_bonus(P_desc d, char *arg)
   int      i = 0;
 
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
   switch (LOWER(*arg))
   {
@@ -5302,7 +5354,8 @@ void select_class(P_desc d, char *arg)
   Gbuf[0] = 0;
 
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
   d->character->player.m_class = CLASS_NONE;
 
@@ -5311,11 +5364,17 @@ void select_class(P_desc d, char *arg)
     if( *arg == class_names_table[cls].letter )
       d->character->player.m_class = 1 << (cls - 1);
     else if( tolower(*arg) == class_names_table[cls].letter )
-      strcpy(Gbuf, class_names_table[cls].normal);
+    {
+      // Fixed: Use strncpy with bounds checking to prevent buffer overflow. -Liskin
+      strncpy(Gbuf, class_names_table[cls].normal, sizeof(Gbuf) - 1);
+      Gbuf[sizeof(Gbuf) - 1] = '\0';
+    }
     // Had to hardcode the # for Summoners (option 3).
     else if( *arg == '#' )
     {
-      strcpy(Gbuf, class_names_table[29].normal);
+      // Fixed: Use strncpy with bounds checking to prevent buffer overflow. -Liskin
+      strncpy(Gbuf, class_names_table[29].normal, sizeof(Gbuf) - 1);
+      Gbuf[sizeof(Gbuf) - 1] = '\0';
     }
     else if( tolower(*arg) == 'z' )
     {
@@ -5454,7 +5513,8 @@ void display_classtable(P_desc d)
               (class_names_table[cls].letter == '3') ? '#' : toupper(class_names_table[cls].letter));
     }
 
-  strcat(buf, "\r\n");
+  // Fixed: Use strncat with bounds checking instead of strcat to prevent buffer overflow. -Liskin
+  strncat(buf, "\r\n", MAX_INPUT_LENGTH - strlen(buf) - 1);
   SEND_TO_Q(buf, d);
 
   if (GET_RACE(d->character) == RACE_ILLITHID)
@@ -5475,7 +5535,8 @@ void select_alignment(P_desc d, char *arg)
   int      align = 0, home, err = 0;
 
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
   switch (*arg)
   {
@@ -5555,7 +5616,8 @@ void select_hometown(P_desc d, char *arg)
   int      home;
 
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
   home = -1;
   for (int i = 0; i <= LAST_HOME; i++)
@@ -5608,7 +5670,8 @@ void select_hometown(P_desc d, char *arg)
 void select_keepchar(P_desc d, char *arg)
 {
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
   switch (LOWER(*arg))
   {
   case 'n':
@@ -5636,7 +5699,9 @@ void display_stats(P_desc d)
 {
   char     Gbuf1[MAX_STRING_LENGTH];
 
-  strcpy(Gbuf1, "\r\nYour basic stats:\r\n");
+  // Fixed: Use strncpy with bounds checking instead of strcpy to prevent buffer overflow. -Liskin
+  strncpy(Gbuf1, "\r\nYour basic stats:\r\n", sizeof(Gbuf1) - 1);
+  Gbuf1[sizeof(Gbuf1) - 1] = '\0';
 
   snprintf(Gbuf1 + strlen(Gbuf1), MAX_STRING_LENGTH - strlen(Gbuf1),
           "Strength:     &+%c%15s&n      Power:        &+%c%s&n\r\n",
@@ -5686,10 +5751,11 @@ void display_characteristics(P_desc d)
           "\r\n\r\n---------------------------------------\r\nNAME:     %s\r\n",
           GET_NAME(d->character));
 
+  // Fixed: Use strncat with bounds checking instead of strcat to prevent buffer overflow. -Liskin
   if (d->character->player.sex == SEX_MALE)
-    strcat(Gbuf1, "SEX:      Male\r\n");
+    strncat(Gbuf1, "SEX:      Male\r\n", MAX_STRING_LENGTH - strlen(Gbuf1) - 1);
   else
-    strcat(Gbuf1, "SEX:      Female\r\n");
+    strncat(Gbuf1, "SEX:      Female\r\n", MAX_STRING_LENGTH - strlen(Gbuf1) - 1);
 
   /*
   snprintf(Gbuf1 + strlen(Gbuf1), MAX_STRING_LENGTH - strlen(Gbuf1), "Your short description is...%s\r\n",
@@ -5701,10 +5767,11 @@ void display_characteristics(P_desc d)
   snprintf(Gbuf1 + strlen(Gbuf1), MAX_STRING_LENGTH - strlen(Gbuf1), "CLASS:    %s\r\n",
           get_class_string(d->character, buffer));
 
+  // Fixed: Use strncat with bounds checking instead of strcat to prevent buffer overflow. -Liskin
   if (GET_ALIGNMENT(d->character) == 1000)
-    strcat(Gbuf1, "ALIGN:    &+YGood&n\r\n");
+    strncat(Gbuf1, "ALIGN:    &+YGood&n\r\n", MAX_STRING_LENGTH - strlen(Gbuf1) - 1);
   else if (GET_ALIGNMENT(d->character) == -1000)
-    strcat(Gbuf1, "ALIGN:    &+rEvil&n\r\n");
+    strncat(Gbuf1, "ALIGN:    &+rEvil&n\r\n", MAX_STRING_LENGTH - strlen(Gbuf1) - 1);
   else
   {
     if (GET_ALIGNMENT(d->character) != 0)
@@ -5713,7 +5780,8 @@ void display_characteristics(P_desc d)
             GET_ALIGNMENT(d->character));
       GET_ALIGNMENT(d->character) = 0;
     }
-    strcat(Gbuf1, "ALIGNMENT:    &+LNeutral&n\r\n");
+    // Fixed: Use strncat with bounds checking instead of strcat to prevent buffer overflow. -Liskin
+    strncat(Gbuf1, "ALIGNMENT:    &+LNeutral&n\r\n", MAX_STRING_LENGTH - strlen(Gbuf1) - 1);
   }
 
   if (GET_HOME(d->character) > 0)
@@ -6498,7 +6566,8 @@ void nanny(P_desc d, char *arg)
     /* Name confirm for new player */
   case CON_NAME_CONF:
     /* skip whitespaces */
-    for (; isspace(*arg); arg++) ;
+    // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
     if (*arg == 'y' || *arg == 'Y')
     {
       SEND_TO_Q("\r\nEntering new character generation mode.\r\n", d);
@@ -6549,7 +6618,8 @@ void nanny(P_desc d, char *arg)
     STATE(d) = CON_CONFIRM_EMAIL;
     break;
   case CON_CONFIRM_EMAIL:
-    for (; isspace(*arg); arg++) ;
+    // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
     if (*arg == 'y' || *arg == 'Y')
     {                           /* continue */
 //      snprintf(Gbuf1, MAX_STRING_LENGTH, "Please enter your sex? (M/F) ");
@@ -6572,7 +6642,8 @@ void nanny(P_desc d, char *arg)
     /* Appropriate name for new player */
   case CON_APPROPRIATE_NAME:
     /* skip whitespaces */
-    for (; isspace(*arg); arg++) ;
+    // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
     if (*arg == 'y' || *arg == 'Y')
     {
 /*
@@ -6621,7 +6692,8 @@ void nanny(P_desc d, char *arg)
   case CON_PWD_D_CONF:
   case CON_PWD_NORM:
     /* skip whitespaces */
-    for (; isspace(*arg); arg++) ;
+    // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
     if (STATE(d) == CON_PWD_NEW ||
         STATE(d) == CON_PWD_GET || STATE(d) == CON_PWD_NORM)
@@ -6681,7 +6753,8 @@ void nanny(P_desc d, char *arg)
   case CON_SHOW_CLASS_RACE_TABLE:
     /* Race war info for new player */
   case CON_SHOW_RACE_TABLE:
-    for (; isspace(*arg); arg++) ;
+    // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
     SEND_TO_Q(racetable, d);
     STATE(d) = CON_GET_RACE;
     break;
@@ -6786,7 +6859,8 @@ void nanny(P_desc d, char *arg)
 
     /* response to disclaimer */
   case CON_DISCLMR:
-    for (; isspace(*arg); arg++) ;
+    // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
     switch (*arg)
     {
     case 'N':
@@ -7079,7 +7153,8 @@ void show_swapstat( P_desc d )
 void select_swapstat( P_desc d, char *arg )
 {
   /* skip whitespaces */
-  for (; isspace(*arg); arg++) ;
+  // Fixed: Cast to unsigned char for ctype functions to avoid undefined behavior. -Liskin
+  for (; isspace((unsigned char)*arg); arg++) ;
 
   switch (*arg)
   {
