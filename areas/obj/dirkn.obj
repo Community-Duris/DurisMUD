@@ -558,15 +558,21 @@ b'ardingol foe hammer~
 ~
 E
 _room_msg~
-&+LAs $q&+L's &+Ltwin hammerhead is brought down upon $N&+L,it &+rexp&+Rlo&+rdes&+L in a &+wto&+Wrre&+wnt&+L of immense &+Benergy&+L.  Suddenly, the &+wsp&+Wiri&+wts&+L of the&L&+wan&+Wce&+Bs&+Wtr&+wal &+yburrow &+Lwardens appear, and viciously attack $N&+L's &+Ws&+You&+Wl&+L!&n
+&+LAs $q&+L's &+Ltwin hammerhead is brought down upon $N&+L,it &+rexp&+Rlo&+rdes&+L in a &+wto&+Wrre&+wnt&+L of immense &+Benergy&+L.  Suddenly, the &+wsp&+Wiri&+wts&+L of the
+&+wan&+Wce&+Bs&+Wtr&+wal &+yburrow &+Lwardens appear, and viciously attack $N&+L's &+Ws&+You&+Wl&+L!&n
 ~
 E
 _char_msg~
-&+LSuddenly, your vision becomes hazy and you feel your &+Mmind&+L start to wander&Lslightly, as you feel the &+wsp&+Wiri&+wts &+Lof the &+wan&+Wce&+Bs&+Wtr&+wal &+yburrow &+Lwardens guiding&L$q &+Ltowards $N&+L, ravaging his &+Ws&+You&+Wl &+Lwith their &+Wdivine &+Lpowers!&n
+&+LSuddenly, your vision becomes hazy and you feel your &+Mmind&+L start to wander
+&+Lslightly, as you feel the &+wsp&+Wiri&+wts &+Lof the &+wan&+Wce&+Bs&+Wtr&+wal &+yburrow &+Lwardens guiding
+&+L$q &+Ltowards $N&+L, ravaging his &+Ws&+You&+Wl &+Lwith their &+Wdivine &+Lpowers!&n
 ~
 E
 _victim_msg~
-&+LAs $n &+Lbrings down the twin hammerhead of $q&L&+Lon you, &+Btime &+Lslows to a near stop as the weapon impacts your &+rflesh&+L.&L&+LSuddenly, the head vibrates with a frightening aura, and the essence&L&+Lof the &+wan&+Wce&+Bs&+Wtr&+wal &+yburrow &+Lwardens viciously &+Lattack your &+Ws&+You&+Wl&+L!&n
+&+LAs $n &+Lbrings down the twin hammerhead of $q
+&+Lon you, &+Btime &+Lslows to a near stop as the weapon impacts your &+rflesh&+L.
+&+LSuddenly, the head vibrates with a frightening aura, and the essence
+&+Lof the &+wan&+Wce&+Bs&+Wtr&+wal &+yburrow &+Lwardens viciously &+Lattack your &+Ws&+You&+Wl&+L!&n
 ~
 A
 18 4
