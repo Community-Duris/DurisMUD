@@ -2539,9 +2539,11 @@ void spell_mirage(int level, P_char ch, char *arg, int type, P_char victim, P_ob
 		}
 	}
 
-	act("&+LAs $n spreads $s hands out wide, bright &+rp&+Rr&+Yi&+Gs&+ym&+Ca&+ct&+Bi&+bc &+wm&+Wote&+ws&+L of &+ma&+Mr&+Lca&+Mn&+me&L&+Lpower appear before $m in mid air.  The &+wm&+Wote&+ws&+L "
-	    "pul&+wse a&+Wnd be&+wgin t&+Lo abs&+worb al&+Wl&L&+wra&+Wys of li&+wght&+L into i&+wtself g&+Wrowing b&+wright&+Ler and m&+wore num&+Werous m&+woment b&+Ly mome&+wnt.&L&+LWith another "
-	    "&+ma&+Mr&+Lca&+Mn&+me&+L gesture $n scatters the &+rp&+Rr&+Yi&+Gs&+ym&+Ca&+ct&+Bi&+bc &+wm&+Wote&+ws&+L accross&L&+La great wide arc before $s companions.&n\r\n",
+	act("&+LAs $n spreads $s hands out wide, bright &+rp&+Rr&+Yi&+Gs&+ym&+Ca&+ct&+Bi&+bc &+wm&+Wote&+ws&+L of &+ma&+Mr&+Lca&+Mn&+me\n"
+	    "&+Lpower appear before $m in mid air.  The &+wm&+Wote&+ws&+L pul&+wse a&+Wnd be&+wgin t&+Lo abs&+worb al&+Wl\n"
+	    "&+wra&+Wys of li&+wght&+L into i&+wtself g&+Wrowing b&+wright&+Ler and m&+wore num&+Werous m&+woment b&+Ly mome&+wnt.\n"
+	    "&+LWith another &+ma&+Mr&+Lca&+Mn&+me&+L gesture $n scatters the &+rp&+Rr&+Yi&+Gs&+ym&+Ca&+ct&+Bi&+bc &+wm&+Wote&+ws&+L across\n"
+	    "&+La great wide arc before $s companions.&n\r\n",
 	    TRUE,
 	    ch,
 	    0,
@@ -2549,9 +2551,11 @@ void spell_mirage(int level, P_char ch, char *arg, int type, P_char victim, P_ob
 	    TO_ROOM);
 	act("&+LAs a &+rp&+Rr&+Yi&+Gs&+ym&+Ca&+ct&+Bi&+bc &+wm&+Wot&+we&+L settles before you $n speaks an &+ma&+Mr&+Lca&+Mn&+me&+L word of &+Wpower&+L!&n", TRUE, ch, 0, 0, TO_ROOM);
 
-	act("&+LAs you spread your hands out wide, bright &+rp&+Rr&+Yi&+Gs&+ym&+Ca&+ct&+Bi&+bc &+wm&+Wote&+ws&+L of &+ma&+Mr&+Lca&+Mn&+me&L&+Lpower appear before you in mid air.  The &+wm&+Wote&+ws&+L "
-	    "pul&+wse a&+Wnd be&+wgin t&+Lo abs&+worb al&+Wl&L&+wra&+Wys of li&+wght&+L into i&+wtself g&+Wrowing b&+wright&+Ler and m&+wore num&+Werous m&+woment b&+Ly mome&+wnt.&L&+LWith another "
-	    "&+ma&+Mr&+Lca&+Mn&+me&+L gesture you scatter the &+rp&+Rr&+Yi&+Gs&+ym&+Ca&+ct&+Bi&+bc &+wm&+Wote&+ws&+L accross&L&+La great wide arc before your companions.&n\r\n",
+	act("&+LAs you spread your hands out wide, bright &+rp&+Rr&+Yi&+Gs&+ym&+Ca&+ct&+Bi&+bc &+wm&+Wote&+ws&+L of &+ma&+Mr&+Lca&+Mn&+me\n"
+	    "&+Lpower appear before you in mid air.  The &+wm&+Wote&+ws&+L pul&+wse a&+Wnd be&+wgin t&+Lo abs&+worb al&+Wl\n"
+	    "&+wra&+Wys of li&+wght&+L into i&+wtself g&+Wrowing b&+wright&+Ler and m&+wore num&+Werous m&+woment b&+Ly mome&+wnt.\n"
+	    "&+LWith another &+ma&+Mr&+Lca&+Mn&+me&+L gesture you scatter the &+rp&+Rr&+Yi&+Gs&+ym&+Ca&+ct&+Bi&+bc &+wm&+Wote&+ws&+L across\n"
+	    "&+La great wide arc before your companions.&n\r\n",
 	    TRUE,
 	    ch,
 	    0,

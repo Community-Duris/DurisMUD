@@ -17793,7 +17793,8 @@ void event_apocalypse(P_char ch, P_char victim, P_obj obj, void *data)
 			if (should_area_hit(ch, tch) && !number(0, 2) && !IS_STUNNED(tch))
 			{
 				act("The Horseman of &+yF&+Ya&+ym&+Yi&+yn&+Ye&N glares around!", TRUE, tch, 0, 0, TO_ROOM);
-				act("&+LThe Horseman of &+yF&+Ya&+ym&+Yi&+yn&+Ye &+Lglares at you with &+rdeathly g&+Rl&+wo&+Ww&+wi&+Rn&+rg eyes&L&+Lcausing you to lose your &+Yconcentration.",
+				act("&+LThe Horseman of &+yF&+Ya&+ym&+Yi&+yn&+Ye &+Lglares at you with &+rdeathly g&+Rl&+wo&+Ww&+wi&+Rn&+rg eyes\n"
+				    "&+Lcausing you to lose your &+Yconcentration.",
 				    TRUE,
 				    tch,
 				    0,

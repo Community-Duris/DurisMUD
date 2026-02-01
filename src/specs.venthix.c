@@ -63,7 +63,8 @@ int roulette_pistol(P_obj obj, P_char ch, int cmd, char *arg)
 			if (obj->value[0])
 			{
 				act("&+yA live round is still loaded.  You spin the chamber and lock it.&n", FALSE, ch, obj, 0, TO_CHAR);
-				act("&+y$n opens the chamber and notices a live round already chambered.&L$e spins the chamber and locks it back.&n", FALSE, ch, obj, 0, TO_ROOM);
+				act("&+y$n opens the chamber and notices a live round already chambered.\n"
+				    "&+y$e spins the chamber and locks it back.&n", FALSE, ch, obj, 0, TO_ROOM);
 			}
 
 			// If no live round is found in the pistol...
@@ -519,8 +520,10 @@ void halloween_mine_proc(P_char ch)
 {
 	char buff[MAX_STRING_LENGTH];
 	snprintf(buff, MAX_STRING_LENGTH, " %s 86", GET_NAME(ch));
-	act("Your dig hits a burried &+ypumpkin&n.&LSuddenly it begins to move and digs itself out of the mine!", TRUE, ch, 0, 0, TO_CHAR);
-	act("$n dig hits a burried &+ypumpkin&n.&LSuddenly it begins to move and digs itself out of the mine!", TRUE, ch, 0, 0, TO_ROOM);
+	act("Your dig hits a burried &+ypumpkin&n.\n"
+	    "Suddenly it begins to move and digs itself out of the mine!", TRUE, ch, 0, 0, TO_CHAR);
+	act("$n dig hits a burried &+ypumpkin&n.\n"
+	    "Suddenly it begins to move and digs itself out of the mine!", TRUE, ch, 0, 0, TO_ROOM);
 	do_givepet(ch, buff, CMD_GIVEPET);
 }
 

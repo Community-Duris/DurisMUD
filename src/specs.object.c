@@ -2945,18 +2945,20 @@ int vapor(P_obj obj, P_char ch, int cmd, char *arg)
 			obj_from_char(obj);
 			equip_char(ch, obj, slot, FALSE);
 
-			act("&+LSuddenly the &+ggreen vapor &+Lon the ground starts to sw&+wi&+Wrl &+Las if coming&n&L&+Lalive."
-			    "  You gasp in horror when you feel it caressing your legs as&n&L&+Lit coils itself around you."
-			    "  &+WWr&+wi&+Wthing tentacles &+Lstart to probe you&n&L&+Llike the arms of a hungry octopus."
-			    "  Within seconds your whole being&n&L&+Lis encased in a &+bchilling cloud&n &+Lof &+ggreen vapor&+L.&n",
+			act("&+LSuddenly the &+ggreen vapor &+Lon the ground starts to sw&+wi&+Wrl &+Las if coming&n\n"
+			    "&+Lalive.  You gasp in horror when you feel it caressing your legs as&n\n"
+			    "&+Lit coils itself around you.  &+WWr&+wi&+Wthing tentacles &+Lstart to probe you&n\n"
+			    "&+Llike the arms of a hungry octopus.  Within seconds your whole being&n\n"
+			    "&+Lis encased in a &+bchilling cloud&n &+Lof &+ggreen vapor&+L.&n",
 			    FALSE,
 			    ch,
 			    obj,
 			    0,
 			    TO_CHAR);
-			act("&+LSuddenly the &+ggreen vapor &+Lby&n $n's &+Lfeet starts to sw&+wi&+Wrl &+Las if&n&L&+Lcoming alive."
-			    "  Staring wide-eyed, as if trying to deny reality, he&n&L&+Lwatches as the &+wvapor &+Lslowly coils itself around his legs."
-			    "  &+WWr&+wi&+Wthing&n&L&+Wtentacles &+Lstart to probe $s body like the arms of a hungry octopus&n&L"
+			act("&+LSuddenly the &+ggreen vapor &+Lby&n $n's &+Lfeet starts to sw&+wi&+Wrl &+Las if&n\n"
+			    "&+Lcoming alive.  Staring wide-eyed, as if trying to deny reality, he&n\n"
+			    "&+Lwatches as the &+wvapor &+Lslowly coils itself around his legs.  &+WWr&+wi&+Wthing&n\n"
+			    "&+Wtentacles &+Lstart to probe $s body like the arms of a hungry octopus&n\n"
 			    "&+Land within seconds $e is encased in a &+bchilling &+Lcloud of vapor.&n",
 			    FALSE,
 			    ch,
@@ -4140,30 +4142,42 @@ int kvasir_dagger(P_obj obj, P_char ch, int cmd, char *arg)
 	switch (number(0, 3))
 	{
 		case 0:
-			act("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_NOTVICT);
-			act("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_CHAR);
-			act("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_VICT);
+			act("&+WFrost runs down the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_NOTVICT);
+			act("&+WFrost runs down the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_CHAR);
+			act("&+WFrost runs down the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_VICT);
 			spell_cone_of_cold(60, ch, NULL, SPELL_TYPE_SPELL, victim, obj);
 			break;
 
 		case 1:
-			act("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_NOTVICT);
-			act("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_CHAR);
-			act("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_VICT);
+			act("&+WFrost runs down the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_NOTVICT);
+			act("&+WFrost runs down the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_CHAR);
+			act("&+WFrost runs down the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_VICT);
 			spell_ice_storm(60, ch, NULL, 0, victim, obj);
 			break;
 
 		case 2:
-			act("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_NOTVICT);
-			act("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_CHAR);
-			act("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_VICT);
+			act("&+RFlames &+Wcrackle along the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_NOTVICT);
+			act("&+RFlames &+Wcrackle along the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_CHAR);
+			act("&+RFlames &+Wcrackle along the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_VICT);
 			spell_immolate(60, ch, NULL, 0, victim, obj);
 			break;
 
 		case 3:
-			act("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_NOTVICT);
-			act("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_CHAR);
-			act("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_VICT);
+			act("&+RFlames &+Wcrackle along the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_NOTVICT);
+			act("&+RFlames &+Wcrackle along the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_CHAR);
+			act("&+RFlames &+Wcrackle along the blade of a&n $q\n"
+			    "&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n", TRUE, ch, obj, victim, TO_VICT);
 			spell_firestorm(60, ch, NULL, 0, victim, obj);
 			break;
 	}

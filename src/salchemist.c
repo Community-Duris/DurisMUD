@@ -1747,8 +1747,10 @@ void do_enchant(P_char ch, char *argument, int cmd)
 	GET_PLATINUM(ch) = GET_PLATINUM(ch) - (circle * 10);
 	// notch_skill(ch, SKILL_ENCHANT, 7.7);
 
-	act("&+L$n melts some &+Wplatinum &+Lcoins in a vial of &+gacid &+Land then&n &L&+Lproceeds to carefully pour it over $s $q.&n", TRUE, ch, item, 0, TO_ROOM);
-	act("&+LYou melt some &+Wplatinum &+Lcoins in a vial of &+gacid &+Land then&n&L&+Lproceed to carefully pour it over your $q.&n", TRUE, ch, item, 0, TO_CHAR);
+	act("&+L$n melts some &+Wplatinum &+Lcoins in a vial of &+gacid &+Land then&n\n"
+	    "&+Lproceeds to carefully pour it over $s $q.&n", TRUE, ch, item, 0, TO_ROOM);
+	act("&+LYou melt some &+Wplatinum &+Lcoins in a vial of &+gacid &+Land then&n\n"
+	    "&+Lproceed to carefully pour it over your $q.&n", TRUE, ch, item, 0, TO_CHAR);
 
 	// cant add_event with both ch and item so item/spell has to be passed in data
 	// add_event(event_enchant, 1 * PULSE_VIOLENCE, ch, 0, item, 0, &spl, sizeof(spl));
@@ -1793,8 +1795,10 @@ void event_enchant(P_char ch, P_char victim, P_obj item, void *data)
 	skill = GET_CHAR_SKILL(ch, SKILL_ENCHANT);
 	if (!number(0, skill - 10))
 	{
-		act("$n utters a foul curse as $e pours too much acid on $q.&L$n's $q was damaged as the acid eats into it!", FALSE, ch, item, 0, TO_ROOM);
-		act("You utter a foul curse as you pour too much acid on the $q.&LYour $q was damaged as the acid eats into it!", FALSE, ch, item, 0, TO_CHAR);
+		act("$n utters a foul curse as $e pours too much acid on $q.\n"
+		    "$n's $q was damaged as the acid eats into it!", FALSE, ch, item, 0, TO_ROOM);
+		act("You utter a foul curse as you pour too much acid on the $q.\n"
+		    "Your $q was damaged as the acid eats into it!", FALSE, ch, item, 0, TO_CHAR);
 		item->condition = item->condition - number(5, 10);
 
 		if (item->condition < 1)
@@ -1814,8 +1818,10 @@ void event_enchant(P_char ch, P_char victim, P_obj item, void *data)
 		}
 		return;
 	}
-	act("$n's $q starts to heat up and then turns &+Wwhite hot before&n&Lslowly &+bcooling down&n and turning back to normal.&n", FALSE, ch, item, 0, TO_ROOM);
-	act("Your $q starts to heat up and then turns &+Wwhite hot&n before&n&Lslowly &+bcooling down&n and turning back to normal.", TRUE, ch, item, 0, TO_CHAR);
+	act("$n's $q starts to heat up and then turns &+Wwhite hot before&n\n"
+	    "slowly &+bcooling down&n and turning back to normal.&n", FALSE, ch, item, 0, TO_ROOM);
+	act("Your $q starts to heat up and then turns &+Wwhite hot&n before&n\n"
+	    "slowly &+bcooling down&n and turning back to normal.", TRUE, ch, item, 0, TO_CHAR);
 
 	logit(LOG_DEBUG, "%s enchanted %s with %s.", GET_NAME(ch), item->short_description, skills[spll].name);
 
