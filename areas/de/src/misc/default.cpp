@@ -227,7 +227,7 @@ void writeDefaultFiles(const char *filePrefix)
     sprintf(strn, "Writing room default to %s...\n", fileName);
     _outtext(strn);
 
-    defaultFile = fopen(fileName, "wt");
+    defaultFile = fopen(fileName, "wb");
 
     writeRoomtoFile(defaultFile, g_defaultRoom);
 
@@ -249,7 +249,7 @@ void writeDefaultFiles(const char *filePrefix)
     sprintf(strn, "Writing object default to %s...\n", fileName);
     _outtext(strn);
 
-    defaultFile = fopen(fileName, "wt");
+    defaultFile = fopen(fileName, "wb");
 
     writeObjecttoFile(defaultFile, g_defaultObject);
 
@@ -271,7 +271,7 @@ void writeDefaultFiles(const char *filePrefix)
     sprintf(strn, "Writing mob default to %s...\n", fileName);
     _outtext(strn);
 
-    defaultFile = fopen(fileName, "wt");
+    defaultFile = fopen(fileName, "wb");
 
     writeMobtoFile(defaultFile, g_defaultMob);
 
@@ -293,7 +293,7 @@ void writeDefaultFiles(const char *filePrefix)
     sprintf(strn, "Writing exit default to %s...\n", fileName);
     _outtext(strn);
 
-    defaultFile = fopen(fileName, "wt");
+    defaultFile = fopen(fileName, "wb");
 
     writeWorldExittoFile(defaultFile, g_defaultExit, "D0\n");
 
@@ -315,7 +315,7 @@ void writeDefaultFiles(const char *filePrefix)
     sprintf(strn, "Writing extra desc default to %s...\n", fileName);
     _outtext(strn);
 
-    defaultFile = fopen(fileName, "wt");
+    defaultFile = fopen(fileName, "wb");
 
     writeExtraDesctoFile(defaultFile, g_defaultExtraDesc);
 
@@ -337,7 +337,7 @@ void writeDefaultFiles(const char *filePrefix)
     sprintf(strn, "Writing quest default to %s...\n", fileName);
     _outtext(strn);
 
-    defaultFile = fopen(fileName, "wt");
+    defaultFile = fopen(fileName, "wb");
 
     writeQuesttoFile(defaultFile, g_defaultQuest, 0);
 
@@ -359,7 +359,7 @@ void writeDefaultFiles(const char *filePrefix)
     sprintf(strn, "Writing shop default to %s...\n", fileName);
     _outtext(strn);
 
-    defaultFile = fopen(fileName, "wt");
+    defaultFile = fopen(fileName, "wb");
 
     writeShoptoFile(defaultFile, g_defaultShop, 0, true);
 

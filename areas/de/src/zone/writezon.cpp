@@ -824,7 +824,7 @@ void writeZoneFile(const char *filename)
 
  // open the zone file for writing
 
-  if ((zoneFile = fopen(zoneFilename, "wt")) == NULL)
+  if ((zoneFile = fopen(zoneFilename, "wb")) == NULL)
   {
     _outtext("Couldn't open ");
     _outtext(zoneFilename);

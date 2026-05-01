@@ -202,7 +202,7 @@ void writeWorldFile(char *filename)
 
  // open the world file for writing
 
-  if ((worldFile = fopen(worldFilename, "wt")) == NULL)
+  if ((worldFile = fopen(worldFilename, "wb")) == NULL)
   {
     _outtext("Couldn't open ");
     _outtext(worldFilename);

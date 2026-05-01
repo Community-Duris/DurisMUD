@@ -163,7 +163,7 @@ void writeQuestFile(const char *filename)
 
  // open the world file for writing
 
-  if ((questFile = fopen(questFilename, "wt")) == NULL)
+  if ((questFile = fopen(questFilename, "wb")) == NULL)
   {
     _outtext("Couldn't open ");
     _outtext(questFilename);

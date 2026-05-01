@@ -83,7 +83,7 @@ void writeSettingsFile(const char *filename, const bool writeLimits)
 
   strcat(setFilename, filename);
 
-  if ((setFile = fopen(setFilename, "wt")) == NULL)
+  if ((setFile = fopen(setFilename, "wb")) == NULL)
   {
     _outtext("Couldn't open ");
     _outtext(setFilename);

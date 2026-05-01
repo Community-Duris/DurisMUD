@@ -688,7 +688,7 @@ void writeInventoryFile(void)
 
  // create inventory file
 
-  invFile = fopen(invFilename, "wt");
+  invFile = fopen(invFilename, "wb");
 
   if (!invFile)
   {
