@@ -187,7 +187,7 @@ void writeObjectFile(const char *filename)
 
  // open the object file for writing
 
-  if ((objectFile = fopen(objectFilename, "wt")) == NULL)
+  if ((objectFile = fopen(objectFilename, "wb")) == NULL)
   {
     _outtext("Couldn't open ");
     _outtext(objectFilename);

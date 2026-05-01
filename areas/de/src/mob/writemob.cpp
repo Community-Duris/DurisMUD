@@ -156,7 +156,7 @@ void writeMobFile(const char *filename)
 
  // open the mob file for writing
 
-  if ((mobFile = fopen(mobFilename, "wt")) == NULL)
+  if ((mobFile = fopen(mobFilename, "wb")) == NULL)
   {
     _outtext("Couldn't open ");
     _outtext(mobFilename);

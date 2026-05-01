@@ -186,7 +186,7 @@ void writeShopFile(const char *filename)
 
  // open the world file for writing
 
-  if ((shopFile = fopen(shopFilename, "wt")) == NULL)
+  if ((shopFile = fopen(shopFilename, "wb")) == NULL)
   {
     _outtext("Couldn't open ");
     _outtext(shopFilename);
