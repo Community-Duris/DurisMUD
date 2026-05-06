@@ -749,7 +749,6 @@ void NukeChessBoard(P_obj);
 /* comm.c */
 void        append_prompt(P_char, char *);
 int         wizconnectsite(char *, char *, int);
-int         find_color_entry(int);
 int         get_from_q(struct txt_q *, char *);
 int         init_socket(int);
 int         process_input(P_desc);

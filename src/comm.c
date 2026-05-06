@@ -8,6 +8,7 @@
 
 #include "prototypes.h"
 #include "structs.h"
+#include "ansi.h"
 #include "comm.h"
 #include "db.h"
 #include "events.h"
@@ -171,7 +172,6 @@ int                   slow_death              = 0;
 volatile sig_atomic_t tics                    = 0;
 long                  boot_time;
 int                   ipc_id    = 0;
-int                   was_upper = FALSE;
 pid_t                 lookup_host_process;
 pid_t                 lookup_ident_process;
 int                   max_users_playing = 0;
@@ -196,26 +196,6 @@ P_char     executing_ch;
 #define PAD_COMMAND_OUTPUT (500)                    // some space for appending a warning
 char   command_output[MAX_COMMAND_OUTPUT + PAD_COMMAND_OUTPUT + 1];
 size_t output_length;
-
-/* ============= Ansi color table and data structure  ============== */
-
-struct ansi_color
-{
-	const char *symbol;  /* Symbol used in the game. eg &+symbol */
-	const char *fg_code; /* ^[[fg_codem; = foreground color code */
-	const char *bg_code; /* Same except it's the background color */
-} color_table[] = {
-
-	{ "L", "30", "40"}, /* * Black            */
-	{ "R", "31", "41"}, /* * Red              */
-	{ "G", "32", "42"}, /* * Green            */
-	{ "Y", "33", "43"}, /* * Yellow           */
-	{ "B", "34", "44"}, /* * Blue             */
-	{ "M", "35", "45"}, /* * Magenta          */
-	{ "C", "36", "46"}, /* * Cyan             */
-	{ "W", "37", "47"}, /* * White            */
-	{NULL, NULL, NULL}  /* * End of the table */
-};
 
 #define MIN_SOCKET_BUFFER_SIZE 20480
 
@@ -2624,27 +2604,6 @@ static void greet(P_desc newd)
 	/* sga_negotiate(newd); */
 }
 
-/*
- * Return index into color_table. (Ithor) **  Did not use toupper,
- * because it tends to screw up on some machines. (mine)
- */
-
-int find_color_entry(int c)
-{
-	int  i = 0;
-	char s;
-
-	s = UPPER(c);
-
-	while ((color_table[i].symbol != NULL) && (*color_table[i].symbol != s))
-		i++;
-
-	return i;
-}
-
-// LATENT: assumes callers pass a buffer of at least MAX_STRING_LENGTH;
-// no size parameter to enforce. Safe because all callers use prompt_buf
-// which is now MAX_STRING_LENGTH. Would need a size_t param to harden.
 void append_prompt(P_char ch, char *promptbuf)
 {
 	char   t_buf[512];
@@ -2936,11 +2895,8 @@ void clear_logs(P_char ch)
 
 int process_output(P_desc t)
 {
-	char           buf[MAX_STRING_LENGTH + 1], buffer[MAX_STRING_LENGTH + 1];
+	char           buf[MAX_STRING_LENGTH];
 	char           buf2[MAX_STRING_LENGTH];
-	bool           bold = FALSE, blink = FALSE;
-	int            ibuf = 0;
-	int            i, j, k, bg = 0;
 	snoop_by_data *snoop_by_ptr;
 	P_char         realChar = t->original ? t->original : t->character;
 	string         descbuf;
@@ -2988,138 +2944,17 @@ int process_output(P_desc t)
 			format_to_snoopers(buf, buf2);
 		}
 		while (snoop_by_ptr)
-		/*    if (t->snoop.snoop_by) {*/
 		{
-
-			/* desc check makes snoop go wacky?  one never knows.. */
-			//      if (snoop_by_ptr->snoop_by->desc)
-			//      {
 			write_to_q(buf2, &snoop_by_ptr->snoop_by->desc->output, 1);
-			//      }
 
 			snoop_by_ptr = snoop_by_ptr->next;
 		}
 
-		ibuf = strlen(buf);
-		/* Go through and convert/strip color symbols -Ithor */
-		for (i = 0, j = 0; (i < ibuf) && (j < (sizeof(buffer))); i++)
-		{
-			if (buf[i] == '&')
-			{
-				i++;
-				if (i >= ibuf)
-					continue;
+		AnsiString abuf(buf);
+		abuf.term(buf, t->character && PLR3_FLAGGED(t->character, PLR3_UNDERLINE) ?
+			TL_UNDERLINE : TL_BLINK);
 
-				switch (buf[i])
-				{
-					case '&':
-						buffer[j++] = '&';
-						break;
-					case 'N':
-					case 'n':
-						snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
-						j += 4;
-						was_upper = FALSE;
-						break;
-					case 'L':
-						snprintf(&buffer[j], MAX_STRING_LENGTH, "\r\n");
-						j += 2;
-						break;
-					case '+':
-					case '-':
-						bg = (buf[i] == '-');
-						i++;
-						if (i >= ibuf)
-							continue;
-
-						bold  = bg ? 0 : (isupper(buf[i])) ? 1 : 0;
-						blink = !bg ? 0 : (isupper(buf[i])) ? 1 : 0;
-						k     = find_color_entry(buf[i]);
-						if (color_table[k].symbol != NULL)
-						{
-							if (isupper(buf[i]))
-								was_upper = TRUE;
-							else if (was_upper)
-							{
-								snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
-								j += 4;
-								was_upper = FALSE;
-							}
-							snprintf(&buffer[j],
-							         MAX_STRING_LENGTH,
-							         "\033[%s%s%sm",
-							         bold ? "1;" : "",
-							         blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
-							         (bg ? color_table[k].bg_code : color_table[k].fg_code));
-							j += (5 + (bold ? 2 : 0) + (blink ? 2 : 0));
-						}
-						else
-						{
-							snprintf(&buffer[j], MAX_STRING_LENGTH, "&%c%c", (bg ? '-' : '+'), buf[i]);
-							j += 3;
-						}
-						break;
-
-					case '=':
-						i++;
-						if (i >= ibuf)
-							continue;
-
-						blink = (isupper(buf[i]) ? 1 : 0);
-						bg    = find_color_entry(buf[i]);
-						i++;
-						if (i >= ibuf)
-							continue;
-
-						bold = (isupper(buf[i]) ? 1 : 0);
-						k    = find_color_entry(buf[i]);
-						if ((color_table[k].symbol != NULL) && (color_table[bg].symbol != NULL))
-						{
-							if (isupper(buf[i]))
-								was_upper = TRUE;
-							else if (was_upper)
-							{
-								snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
-								j += 4;
-								was_upper = FALSE;
-							}
-							snprintf(&buffer[j],
-							         MAX_STRING_LENGTH,
-							         "\033[%s%s%s;%sm",
-							         bold ? "1;" : "",
-							         blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
-							         color_table[bg].bg_code,
-							         color_table[k].fg_code);
-							j += (8 + (bold ? 2 : 0) + (blink ? 2 : 0));
-						}
-						else
-						{
-							snprintf(&buffer[j], MAX_STRING_LENGTH, "&=%c%c", buf[i - 1], buf[i]);
-							j += 4;
-						}
-						break;
-
-					default:
-						snprintf(&buffer[j], MAX_STRING_LENGTH, "&%c", buf[i]);
-						j += 2;
-						break;
-				}
-			}
-			else if (buf[i] == '\n')
-			{
-				/* Want normal color at EoLN */
-				snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m\n");
-				j += 5;
-			}
-			else
-			{
-				buffer[j++] = buf[i];
-			}
-		}
-
-		buffer[j] = '\0';
-
-		descbuf += buffer;
+		descbuf += buf;
 	}
 
 	if (write_to_descriptor(t, descbuf.c_str()) < 0)
