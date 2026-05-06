@@ -24,12 +24,12 @@ extern long   sentbytes;
 int mccp_alloc = 0;
 int mccp_free  = 0;
 
-const unsigned char compress_on_str[]  = {IAC, WILL, TELOPT_COMPRESS, '\0'};
-const unsigned char compress2_on_str[] = {IAC, WILL, TELOPT_COMPRESS2, '\0'};
-const unsigned char enable_compress[]  = {IAC, SB, TELOPT_COMPRESS, WILL, SE, '\0'};
-const unsigned char enable_compress2[] = {IAC, SB, TELOPT_COMPRESS2, IAC, SE, '\0'};
-const unsigned char sga_will_str[]     = {IAC, WILL, TELOPT_SGA, '\0'};
-const unsigned char ga_str[]           = {IAC, GA, '\0'};
+const unsigned char compress_on_str[]  = {IAC, WILL, TELOPT_COMPRESS};
+const unsigned char compress2_on_str[] = {IAC, WILL, TELOPT_COMPRESS2};
+const unsigned char enable_compress[]  = {IAC, SB, TELOPT_COMPRESS, WILL, SE};
+const unsigned char enable_compress2[] = {IAC, SB, TELOPT_COMPRESS2, IAC, SE};
+const unsigned char sga_will_str[]     = {IAC, WILL, TELOPT_SGA};
+const unsigned char ga_str[]           = {IAC, GA};
 
 void *zlib_alloc(void *opaque, unsigned int items, unsigned int size);
 void  zlib_free(void *opaque, void *address);
@@ -51,8 +51,8 @@ void zlib_free(void *opaque, void *address)
 
 void advertise_mccp(P_desc desc)
 {
-	write_to_descriptor(desc, (const char *)compress2_on_str);
-	write_to_descriptor(desc, (const char *)compress_on_str);
+	write_to_descriptor_binary(desc, compress2_on_str, sizeof compress2_on_str);
+	write_to_descriptor_binary(desc, compress_on_str, sizeof compress_on_str);
 }
 
 void sga_negotiate(P_desc desc) { write_to_descriptor_binary(desc, sga_will_str, 3); }
@@ -189,11 +189,11 @@ int compress_start(P_desc player, int mccp_version)
 
 	if (mccp_version == MCCP_VER1)
 	{
-		write_to_descriptor(player, (const char *)enable_compress);
+		write_to_descriptor_binary(player, enable_compress, sizeof enable_compress);
 	}
 	else if (mccp_version == MCCP_VER2)
 	{
-		write_to_descriptor(player, (const char *)enable_compress2);
+		write_to_descriptor_binary(player, enable_compress2, sizeof enable_compress2);
 	}
 	else
 	{

@@ -1593,9 +1593,9 @@ bool valid_password(P_desc d, char *arg)
 
 void echo_on(P_desc d)
 {
-	char on_string[] = {(char)IAC, (char)WONT, (char)TELOPT_ECHO, (char)TELOPT_NAOFFD, (char)TELOPT_NAOCRD, (char)0};
+	unsigned char on_string[] = {IAC, WONT, TELOPT_ECHO, TELOPT_NAOFFD, TELOPT_NAOCRD};
 
-	SEND_TO_Q(on_string, d);
+	write_to_descriptor_binary(d, on_string, 5);
 }
 
 /*
@@ -1604,14 +1604,9 @@ void echo_on(P_desc d)
 
 void echo_off(P_desc d)
 {
-	char off_string[] = {
-		(char)IAC,
-		(char)WILL,
-		(char)TELOPT_ECHO,
-		(char)0,
-	};
+	unsigned char off_string[] = {IAC, WILL, TELOPT_ECHO};
 
-	SEND_TO_Q(off_string, d);
+	write_to_descriptor_binary(d, off_string, 3);
 }
 
 int number_of_players(void)
