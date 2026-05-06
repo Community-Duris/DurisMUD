@@ -325,55 +325,10 @@ int write_to_descriptor(P_desc player, const char *txt)
 		total = strlen(txt);
 	}
 
-	if (!player->out_compress)
-	{
-		if (raw_write_to_descriptor(player, txt, total) < 0)
-		{
-			if (conv_buf != static_conv_buf)
-				FREE(conv_buf);
-			return (-1);
-		}
-	}
-	else
-	{
-		if (player && player->z_str)
-		{
-			player->z_str->next_in  = (unsigned char *)txt;
-			player->z_str->avail_in = total;
-
-			while (player->z_str->avail_in)
-			{
-				do
-				{
-					player->z_str->next_out  = (Bytef *)player->out_compress_buf;
-					player->z_str->avail_out = COMPRESS_BUF_SIZE;
-
-					status = deflate(player->z_str, Z_SYNC_FLUSH);
-					if (status != Z_OK)
-					{
-						logit(LOG_DEBUG, "MCCP: deflate failed");
-						if (conv_buf != static_conv_buf)
-							FREE(conv_buf);
-						return (-1);
-					}
-
-					len = (long)player->z_str->next_out - (long)player->out_compress_buf;
-					if (raw_write_to_descriptor(player, player->out_compress_buf, len) < 0)
-					{
-						if (conv_buf != static_conv_buf)
-							FREE(conv_buf);
-						return (-1);
-					}
-
-				} while (player->z_str->avail_out == 0);
-			}
-		}
-	}
-
+	int ret = write_to_descriptor_binary(player, (const unsigned char*)txt, total);
 	if (conv_buf != static_conv_buf)
 		FREE(conv_buf);
-
-	return (0);
+	return ret;
 }
 
 /* never ever call this function, unless you are write_to_descriptor */
