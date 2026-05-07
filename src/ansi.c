@@ -256,3 +256,40 @@ void AnsiString::colorize(int attr)
 	for (wchar_t &c : *this)
 		c = GET_CHAR(c) | attr;
 }
+
+void AnsiString::colorize(const std::vector<int> &grad)
+{
+	if (grad.empty())
+		return colorize(0);
+
+	int m = grad.size();
+	int n = size();
+	// Proportionally stretch the gradient to cover the entire string.  We use
+	// the Bresenham line drawing algorithm on a n×m rectangle.
+
+	// When expanding, prefer the rightmost Bresenham ray as it makes output
+	// have longer repeats on the left which is more consitent with what people
+	// tend to make manually.  Ie, aaabbcc not aabbbcc (most "evenest") or
+	// aabbccc.
+	int d = (n>m)? n-1 : 0;
+	auto ca = begin();
+	for (const auto &ga : grad)
+	{
+		while (d >= 0)
+		{
+			d -= m;
+			*ca = GET_CHAR(*ca) | ga;
+			if (ca != end()) // running past can't happen but let's be safe
+				ca++;
+		}
+
+		d += n;
+	}
+}
+
+Gradient::Gradient(const char *ansi)
+{
+	resize(strlen(ansi));
+	for (auto &v : *this)
+		v = ATTR_FG(char2col(*ansi++));
+}

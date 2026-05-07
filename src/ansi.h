@@ -42,6 +42,12 @@ enum term_lastbit_t
 	TL_BRIGHT_BG,
 };
 
+class Gradient : public std::vector<int>
+{
+public:
+	Gradient(const char *ansi); // takes a list of foregrounds without the &+
+};
+
 class AnsiString : public std::wstring
 {
 public:
@@ -52,6 +58,7 @@ public:
 	void plain(char *out) const;
 	void term(char *out, int lastbit) const;
 	void colorize(int attr);
+	void colorize(const std::vector<int> &grad);
 
 	wchar_t ch(int i) const { return (i<0 || (size_t)i>=size()) ? 0 : GET_CHAR((*this)[i]); }
 	int attr(int i) const { return (i<0 || (size_t)i>=size()) ? 0 : GET_ATTR((*this)[i]); }
