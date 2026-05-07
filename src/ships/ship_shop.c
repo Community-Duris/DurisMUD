@@ -25,7 +25,6 @@ extern char                  arg1[MAX_STRING_LENGTH];
 extern char                  arg2[MAX_STRING_LENGTH];
 extern char                  arg3[MAX_STRING_LENGTH];
 extern P_char                character_list;
-extern const char           *rude_ass[];
 extern const int             davy_jones_locker_rnum;
 extern const int             ship_transit_rnum;
 extern struct affected_type *get_spell_from_char(P_char ch, int spell, void *context);
@@ -2119,32 +2118,6 @@ int buy_hull(P_char ch, P_ship ship, int owned, char *arg1, char *arg2)
 	}
 	else
 	{
-		if ((int)strlen(strip_ansi(arg2).c_str()) <= 0)
-		{
-			send_to_char("No name selected.\n"
-			             "&+YSyntax: '&+gbuy &+Gh&+gull <number> <name>&+Y'.&n\n",
-			             ch);
-			return TRUE;
-		}
-		if (!is_valid_ansi_with_msg(ch, arg2, FALSE))
-		{
-			send_to_char("&+gInvalid ANSI name!&n\n", ch);
-			sprintf(buf, "spank me");
-			command_interpreter(ch, buf);
-			return TRUE;
-		}
-		if (sub_string_set(strip_ansi(arg2).c_str(), rude_ass))
-		{
-			send_to_char("&+gName must not contain rude terms.&n\n", ch);
-			sprintf(buf, "whap me");
-			command_interpreter(ch, buf);
-			return TRUE;
-		}
-		if ((int)strlen(strip_ansi(arg2).c_str()) > 20)
-		{
-			send_to_char("&+gShip names can be at most 20 characters (not including ansi).&n\n", ch);
-			return TRUE;
-		}
 		if (!check_ship_name(0, ch, arg2))
 		{
 			return TRUE;

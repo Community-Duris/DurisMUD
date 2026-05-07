@@ -7,6 +7,7 @@
 
 #include "prototypes.h"
 #include "structs.h"
+#include "ansi.h"
 #include "comm.h"
 #include "db.h"
 #include "events.h"
@@ -32,6 +33,7 @@
 
 extern char buf[MAX_STRING_LENGTH];
 extern bool insert_money_pickup(int pid, int money);
+extern const char *rude_ass[];
 
 static unsigned long long ship_save_signature_mix(unsigned long long hash, const void *data, size_t len)
 {
@@ -434,27 +436,8 @@ bool rename_ship(P_char ch, char *owner_name, char *new_name)
 		return FALSE;
 	}
 
-	if (IS_TRUSTED(ch))
-	{
-		if (!is_valid_ansi(new_name, FALSE))
-		{
-			send_to_char("Invalid ANSI characters in name.\n", ch);
-			return FALSE;
-		}
-	}
-	else
-	{
-		if ((int)strlen(strip_ansi(new_name).c_str()) > 20)
-		{
-			send_to_char("Name must be less than 20 chars (not including ansi))\r\n", ch);
-			return FALSE;
-		}
-
-		if (!is_valid_ansi_with_msg(ch, new_name, FALSE))
-		{
-			return FALSE;
-		}
-	}
+	if (!check_ship_name(temp, ch, new_name))
+		return FALSE;
 
 	name_ship(new_name, temp);
 	name_ship_rooms(temp);
@@ -1371,15 +1354,47 @@ int ship_obj_proc(P_obj obj, P_char ch, int cmd, char *arg)
 bool is_npc_ship_name(const char *);
 bool check_ship_name(P_ship ship, P_char ch, char *name)
 {
+	char plain[MAX_STRING_LENGTH];
+	const char *err = 0;
+
 	if (ship && IS_NPC_SHIP(ship))
 		return true;
+
+	AnsiString an(name);
+	an.plain(plain);
+	if (an.empty()) // only ansi
+		err = "&+gA ship must bear a name.&n\n";
+	else if (an.ch(0) == ' ' || an.ch(an.size() - 1) == ' ')
+		err = "&+gColored spaces are still spaces.&n\n";
+	else if (an.size() > 20)
+		err = "&+gShip names can be at most 20 characters (not including ansi).&n\n";
+	else if (sub_string_set(plain, rude_ass))
+		err = "&+gName must not contain rude terms.&n\n";
+	else if (is_npc_ship_name(plain))
+		err = "&+gThis name is reserved, choose another name for your ship!&n\n";
+	else if (!strncmp(name, "testcolor", 9))
+		err = "&+gWe're no longer testing, give us a name!&n\n";
+	else
+		for (wchar_t c : an)
+		{
+			if (GET_BG(c))
+				err = "&+gBackground colors are for painters, not sailors!&n\n";
+			if (GET_FG(c) == 16)
+				err = "&+gI can't see that...&n\n";
+		}
+
+	if (err)
+	{
+		send_to_char(err, ch);
+		return false;
+	}
 
 	ShipVisitor svs;
 	for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
 	{
 		if (svs == ship || IS_NPC_SHIP(svs))
 			continue;
-		if (!strcmp(strip_ansi(name).c_str(), strip_ansi(svs->name).c_str()))
+		if (!strcasecmp(plain, strip_ansi(svs->name).c_str()))
 		{
 			if (!ship || ship->frags <= svs->frags)
 			{
@@ -1387,11 +1402,6 @@ bool check_ship_name(P_ship ship, P_char ch, char *name)
 				return false;
 			}
 		}
-	}
-	if (is_npc_ship_name(name))
-	{
-		send_to_char("This name is reserved, choose another name for your ship!\r\n", ch);
-		return false;
 	}
 	return true;
 }

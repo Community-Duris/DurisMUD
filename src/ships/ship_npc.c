@@ -65,12 +65,12 @@ bool is_npc_ship_name(const char *name)
 {
 	for (unsigned n = 0; n < sizeof(pirateShipNames) / sizeof(char *); n++)
 	{
-		if (!strcmp(strip_ansi(name).c_str(), strip_ansi(pirateShipNames[n]).c_str()))
+		if (!strcmp(name, strip_ansi(pirateShipNames[n]).c_str()))
 			return true;
 	}
-	if (!strcmp(strip_ansi(name).c_str(), strip_ansi(CYRICS_REVENGE_NAME).c_str()))
+	if (!strcmp(name, strip_ansi(CYRICS_REVENGE_NAME).c_str()))
 		return true;
-	if (!strcmp(strip_ansi(name).c_str(), strip_ansi(ZONE_SHIP_NAME).c_str()))
+	if (!strcmp(name, strip_ansi(ZONE_SHIP_NAME).c_str()))
 		return true;
 	return false;
 }
