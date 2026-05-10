@@ -31,6 +31,7 @@
 #define GET_BG(x) (((x) >> 26) & 31)
 #define SET_FG(c, x) (c) = (((c) & 0x7c1fffff) | ATTR_FG(x))
 #define SET_BG(c, x) (c) = (((c) & 0x03ffffff) | ATTR_BG(x))
+#define COLORED(bg, fg, c) ((c) | ATTR_FG(fg) | ATTR_BG(bg))
 
 #define MAX_STRING_LENGTH 65536
 

@@ -1,3 +1,4 @@
+#include "ansi.h"
 #include "db.h"
 #include "interp.h"
 #include "utility.h"
@@ -22,8 +23,7 @@ extern P_index                  obj_index;
 extern int                      top_of_objt;
 extern const flagDef            room_bits[];
 extern const char              *sector_types[];
-extern const char              *sector_symbol[];
-extern mapSymbolInfo            color_symbol[];
+extern const AnsiString		sector_symbol[];
 extern P_index                  mob_index;
 extern int                      top_of_mobt;
 extern P_desc                   descriptor_list;
@@ -214,50 +214,21 @@ void do_test_writemap(P_char ch, char *arg, int cmd)
 
 	for (int y = 0; y < height; y++)
 	{
-		buff[0] = '\0';
+		buff[0];
+		AnsiString line;
 		for (int x = 0; x < width; x++)
 		{
 			where_rnum = calculate_relative_room(rroom, x, y);
 
 			if (!where_rnum)
-			{
 				what = 21; // rock
-			}
 			else
-			{
 				what = world[where_rnum].sector_type;
-			}
-			/*
-			if (hadbg)
-			  strcat(buf, "&n");
-			if ((prev != what) || (x == 0))
-			{
-			  int shift = 0;
-			  if (hadbg && color_symbol[what].hasBg)
-			    shift = -2;
-			  snprintf(buff + strlen(buff) + shift, MAX_STRING_LENGTH, "&%s%s",
-			          color_symbol[what].colorStrn, sector_symbol[what]);
-
-			  hadbg = color_symbol[what].hasBg;
-			  prev = what;
-			}
-			else
-			{
-			  int shift = 0;
-			  if (hadbg)
-			    shift = -2;
-			  snprintf(buff + strlen(buff) + shift, MAX_STRING_LENGTH, "%s", sector_symbol[what]);
-			}*/
-			snprintf(buff + strlen(buff), MAX_STRING_LENGTH - strlen(buff), "&%s%s", color_symbol[what].colorStrn, sector_symbol[what]);
-			//      if( color_symbol[what].hasBg )
-			//        strcat(buff, "&n");
-
-			// strcat(buff, sector_symbol[what]);
+			line.push_back(sector_symbol[what][0]);
 		}
-
-		strcat(buff, "\n"); // removed '&n'
+		line.push_back('\n');
+		line.ansi(buff);
 		output_file << buff;
-		// send_to_char(buff, ch);
 	}
 }
 

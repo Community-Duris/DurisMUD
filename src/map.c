@@ -13,6 +13,7 @@ using namespace std;
 
 #include "prototypes.h"
 #include "structs.h"
+#include "ansi.h"
 #include "comm.h"
 #include "db.h"
 #include "utils.h"
@@ -74,7 +75,6 @@ extern struct zone_data             *zone;
 extern struct zone_data             *zone_table;
 extern int                           LOADED_RANDOM_ZONES;
 extern struct time_info_data         time_info;
-extern const racewar_struct          racewar_color[MAX_RACEWAR + 2];
 extern struct continent_misfire_data continent_misfire;
 
 int whats_in_maproom(P_char, int, int);
@@ -86,130 +86,128 @@ int map_dayblind_modifier;
 void add_quest_data(char *map);
 
 /* map specific defines */
+enum
+{
 // Category 1: Stuff that overrides everything:
-#define CONTAINS_NOTHING  0
-#define CONTAINS_CH       1
-#define CONTAINS_CTF_FLAG 2
+	CONTAINS_NOTHING,
+	CONTAINS_CH,
+	CONTAINS_YOUR_SHIP,
+	CONTAINS_CTF_FLAG,
 // Category 2: Stuff that's really big:
-#define CONTAINS_GOOD_SHIP    3
-#define CONTAINS_EVIL_SHIP    4
-#define CONTAINS_UNDEAD_SHIP  5
-#define CONTAINS_NEUTRAL_SHIP 6
-#define CONTAINS_UNKNOWN_SHIP 7
-#define CONTAINS_SHIP         8
-#define CONTAINS_FERRY        9
+	CONTAINS_GOOD_SHIP,
+	CONTAINS_EVIL_SHIP,
+	CONTAINS_UNDEAD_SHIP,
+	CONTAINS_NEUTRAL_SHIP,
+	CONTAINS_UNKNOWN_SHIP,
+	CONTAINS_NPC_SHIP,
+	CONTAINS_SHIP,
+	CONTAINS_FERRY,
 // Category 3: Light/Dark:
-#define CONTAINS_MAGIC_DARK  10
-#define CONTAINS_MAGIC_LIGHT 11
+	CONTAINS_MAGIC_DARK,
+	CONTAINS_MAGIC_LIGHT,
 // Category 4: Lifeforms:
-#define CONTAINS_WITCH    12
-#define CONTAINS_DRAGON   13
-#define CONTAINS_BUILDING 14
-#define CONTAINS_GOOD_PC  15
-#define CONTAINS_EVIL_PC  16
-#define CONTAINS_GROUP    17
-#define CONTAINS_PC       18
-#define CONTAINS_MOB      19
+	CONTAINS_WITCH,
+	CONTAINS_DRAGON,
+	CONTAINS_BUILDING,
+	CONTAINS_GOOD_PC,
+	CONTAINS_EVIL_PC,
+	CONTAINS_GROUP,
+	CONTAINS_PC,
+	CONTAINS_MOB,
 // Category 5: Objects:
-#define CONTAINS_PORTAL    20
-#define CONTAINS_GUILDHALL 21
-#define CONTAINS_CORPSE    22
-#define CONTAINS_TRACK     23
-#define CONTAINS_BLOOD     24
-#define CONTAINS_OLD_BLOOD 25
-#define CONTAINS_MINE      26
-#define CONTAINS_GEMMINE   27
-#define CONTAINS_CARGO     28
-#define CONTAINS_MAX       28
+	CONTAINS_PORTAL,
+	CONTAINS_GUILDHALL,
+	CONTAINS_CORPSE,
+	CONTAINS_TRACK,
+	CONTAINS_BLOOD,
+	CONTAINS_OLD_BLOOD,
+	CONTAINS_MINE,
+	CONTAINS_GEMMINE,
+	CONTAINS_CARGO,
+	CONTAINS_MAX
+};
 
 #define HIDDEN_BY_FOREST(from_room, to_room) (world[to_room].sector_type == SECT_FOREST && world[from_room].sector_type != SECT_FOREST)
 
-const char *sector_symbol[NUM_SECT_TYPES] = {
-	"^", /* * larger towns */
-	"+", /* * roads */
-	".", /* * plains/fields */
-	"*", /* * forest */
-	"^", /* * hills */
-	"M", /* * mountains */
-	"r", /* * water shallow */
-	" ", /* * water boat */
-	" ", /* * noground */
-	" ", /* * underwater */
-	" ", /* * underwater ground */
-	" ", /* * fire plane */
-	" ", /* * water ship */
-	".", /* * UD wild */
-	"*", /* * UD city */
-	".", /* * UD inside */
-	" ", /* * UD water */
-	" ", /* * UD noswim */
-	" ", /* * UD noground */
-	" ", /* * air plane */
-	" ", /* * water plane */
-	" ", /* * earth plane */
-	" ", /* * etheral plane */
-	"R", /* * astral plane */
-	".", /* desert */
-	".", /* arctic tundra */
-	"*", /* swamp */
-	"M", /* UD mountains */
-	"*", /* UD slime */
-	",", /* UD low ceilings */
-	" ", /* UD liquid mithril */
-	"o", /* UD mushroom forest */
-	"#", /* Castle Wall */
-	"^", /* Castle Porticulus */
-	"O", /* Castle Itself */
-	" ", // Negative Plane
-	" ", // Plane of Avernus
-	"+", // Patrolled Road
-	"*", // Snowy Forest
-	" "  // Lava
+extern const AnsiString sector_symbol[];
+const AnsiString sector_symbol[NUM_SECT_TYPES] = {
+	"&=wl^", /* * larger towns */
+	 "&+L+", /* * roads */
+	 "&+g.", /* * plains/fields */
+	 "&+g**&+G*",  /* * forest */
+	 "&+y^", /* * hills */
+	 "&+yM", /* * mountains */
+	"&=cwr", /* * water shallow */
+	"&=bB ", /* * water boat */
+	 "&+w ", /* * noground */
+	 "&+w ", /* * underwater */
+
+	 "&+w ", /* * underwater ground */
+	"&=rR ", /* * fire plane */
+	"&=bB ", /* * water ship */
+	"&=mL.", /* * UD wild */
+	"&=wl*", /* * UD city */
+	 "&+m.", /* * UD inside */
+	"&=bB ", /* * UD water */
+	"&=bB ", /* * UD noswim */
+	 "&+w ", /* * UD noground */
+	 "&+w ", /* * air plane */
+
+	 "&+L ", /* * water plane */
+	 "&+w ", /* * earth plane */
+	 "&+w ", /* * etheral plane */
+	"&=LrR", /* * astral plane */
+	"&=yY.", /* desert */
+	 "&+W.", /* arctic tundra */
+	"&=mL*", /* swamp */
+	 "&+LM", /* UD mountains */
+	"&=rL*", /* UD slime */
+	 "&+M,", /* UD low ceilings */
+
+	"&=wW ", /* UD liquid mithril */
+	 "&+Mo", /* UD mushroom forest */
+	"&=wL#", /* Castle Wall */
+	"&=wB^", /* Castle Porticulus */
+	 "&+rO", /* Castle Itself */
+	"&=lw ", // Negative Plane
+	"&=lw ", // Plane of Avernus
+	 "&+L+", // Patrolled Road
+	"&=lg*", // Snowy Forest
+	"&=rR ", // Lava
 };
 
-// whee..  'typedef char bool'?  BAH!
-
-mapSymbolInfo color_symbol[NUM_SECT_TYPES] = {
-	{"=wl",  true},
-    { "+L", false},
-    { "+g", false},
-    { "+g", false},
-    { "+y", false},
-    { "+y", false},
-    {"=cw",  true},
-    {"=bB",  true},
-    { "+w", false},
-    { "+w", false},
-	{ "+w", false},
-    {"=rR",  true},
-    {"=bB",  true},
-    {"=mL",  true},
-    {"=wl",  true},
-    { "+m", false},
-    {"=bB",  true},
-    {"=bB",  true},
-    { "+w", false},
-    { "+w", false},
-	{ "+L", false},
-    { "+w", false},
-    { "+w", false},
-    {"=Lr",  true},
-    {"=yY",  true},
-    { "+W", false},
-    {"=mL",  true},
-    { "+L", false},
-    {"=rL",  true},
-    { "+M", false},
-	{"=wW",  true},
-    { "+M", false},
-    {"=wL",  true},
-    {"=wB",  true},
-    { "+r", false},
-    {"=lw",  true},
-    {"=lw",  true},
-    { "+L", false},
-    {"=lg",  true},
-    {"=rR",  true}
+static const AnsiString contents_symbol[CONTAINS_MAX] = {
+	" ",            // nothing
+	"&+W@",         // ch (you)
+	"&+W^>v<",      // your ship	↑↗→↘↓↙←↖
+	"&=LYF",        // CTF flag
+	"&+YS",         // good ship
+	"&+RS",         // evil ship
+	"&+LS",         // undead ship
+	"&+MS",         // neutral/squid ship
+	"&+CS",         // unknown ship
+	"&+WS",         // NPC ship
+	"&+WS",         // ship
+	"&+WF",         // ferry
+	"&+LD",         // magic dark
+	"&+WL",         // magic light
+	"&=LWW",        // witch
+	"&=LRD",        // dragon
+	"&+C#",         // building
+	"&=LYP",        // good pc
+	"&=LRP",        // evil pc
+	"&=LGP",        // group
+	"&=LWP",        // pc
+	"&=LBM",        // mob
+	"&+MO",         // portal
+	"&+CG",         // guildhall
+	"&+rC",         // corpse
+	"&+Y.",         // track
+	"&+R.",         // blood
+	"&+r.",         // old blood
+	"&+Ym",         // mine
+	"&+ym",         // gem mine
+	"&=bLo",        // cargo
 };
 
 unsigned int calculate_relative_room(unsigned int rroom, int x, int y)
@@ -335,9 +333,13 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
 					P_ship temp = shipObjHash.find(obj);
 					if (temp)
 					{
-						if (SHIP_DOCKED(temp) || temp->race == NPCSHIP)
+						if (SHIP_DOCKED(temp))
 						{
 							val = MIN(val, CONTAINS_SHIP);
+						}
+						else if (temp->race == NPCSHIP)
+						{
+							val = MIN(val, CONTAINS_NPC_SHIP);
 						}
 						else if (temp->race == GOODIESHIP)
 						{
@@ -593,8 +595,8 @@ static inline void append_fmt(char (&dst)[N], int shift, const char *fmt, Args..
 
 void display_map_room(P_char ch, int from_room, int n, int show_map_regardless, int gmcp_pkg_type)
 {
-	int    x, y, where, what, from_what, prev = -1, temp;
-	int    where_rnum, whats_in, distance;
+	int    x, y, where, what, from_what, heading;
+	int    where_rnum, whats_in;
 	bool   hadbg = false, map_tile;
 	char   buf[MAX_STRING_LENGTH], minibuf[10];
 	char   gmcp_map_buf[MAX_STRING_LENGTH * 4]; /* Buffer for GMCP map */
@@ -645,226 +647,77 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless, 
 
 	for (y = (int)(-0.6 * n); y <= (int)(0.6 * n); y++)
 	{
-		buf[0] = '\0';
+		AnsiString line;
 
 		/* send a space, each line */
 		if (!skip_text_output && ch->desc->term_type != TERM_MSP)
-		{
-			send_to_char("           ", ch, LOG_NONE);
-		}
+			line.set("           ");
 
 		for (x = -n; x <= n; x++)
 		{
-			where_rnum = calculate_relative_room(from_room, x, y);
-			distance   = (int)sqrt(x * x + y * y);
-
-			if (!where_rnum && IS_UD_MAP(from_room))
-			{
-				what = SECT_EARTH_PLANE;
-			}
-			else if (!where_rnum)
-			{
-				what = SECT_OCEAN;
-			}
-			else
-			{
-				what = SECTOR_TYPE(where_rnum);
-			}
-
-			what     = BOUNDED(0, (int)what, (NUM_SECT_TYPES - 1));
-			map_tile = false;
-
-			if (hadbg)
-			{
-				append_cstr(buf, "&n");
-			}
-
-			whats_in = whats_in_maproom(ch, where_rnum, distance, show_map_regardless);
+			int where_rnum = calculate_relative_room(from_room, x, y);
+			int distance = sqrt(x * x + y * y);
 
 			if (horizontal_factor * y * y + vertical_factor * x * x > n * n * 0.6)
 			{
-				append_cstr(buf, " ");
+				line.push_back(' ');
+				continue;
 			}
-			// We want an @ iff we're on land, and a [< | ^ | > | v] if on an undocked ship.
-			// All we need to check here is on undocked ship since @ is done via CONTAINS_CH below.
-			else if (x == 0 && y == 0 && (ship = get_ship_from_char(ch)) && !SHIP_DOCKED(ship) && ship->location == from_room)
-			{
-				float heading = ship->heading;
-				// Use an arrow in the direction of the ship.
-				if (heading > 315 || heading <= 45)
-				{
-					append_cstr(buf, "&+W^&n");
-				}
-				else if (heading > 45 && heading <= 135)
-				{
-					append_cstr(buf, "&+W>&n");
-				}
-				else if (heading > 135 && heading <= 225)
-				{
-					append_cstr(buf, "&+Wv&n");
-				}
-				else
-				{
-					append_cstr(buf, "&+W<&n");
-				}
-			}
-			else if (whats_in == CONTAINS_CH)
-			{
-				append_cstr(buf, "&+W@&n");
-			}
-			else if (whats_in == CONTAINS_MAGIC_DARK)
-			{
-				append_cstr(buf, "&+LD&n");
-			}
-			else if (whats_in == CONTAINS_MAGIC_LIGHT)
-			{
-				append_cstr(buf, "&+WL&n");
-			}
-			else if (whats_in == CONTAINS_GOOD_SHIP)
-			{
-				snprintf(minibuf, sizeof(minibuf), "&+%cS&n", racewar_color[RACEWAR_GOOD].color);
-				append_cstr(buf, minibuf);
-			}
-			else if (whats_in == CONTAINS_EVIL_SHIP)
-			{
-				snprintf(minibuf, sizeof(minibuf), "&+%cS&n", racewar_color[RACEWAR_EVIL].color);
-				append_cstr(buf, minibuf);
-			}
-			else if (whats_in == CONTAINS_UNDEAD_SHIP)
-			{
-				snprintf(minibuf, sizeof(minibuf), "&+%cS&n", racewar_color[RACEWAR_UNDEAD].color);
-				append_cstr(buf, minibuf);
-			}
-			else if (whats_in == CONTAINS_NEUTRAL_SHIP)
-			{
-				snprintf(minibuf, sizeof(minibuf), "&+%cS&n", racewar_color[RACEWAR_NEUTRAL].color);
-				append_cstr(buf, minibuf);
-			}
-			else if (whats_in == CONTAINS_UNKNOWN_SHIP)
-			{
-				snprintf(minibuf, sizeof(minibuf), "&+%cS&n", racewar_color[MAX_RACEWAR + 1].color);
-				append_cstr(buf, minibuf);
-			}
-			else if (whats_in == CONTAINS_SHIP)
-			{
-				snprintf(minibuf, sizeof(minibuf), "&+%cS&n", racewar_color[RACEWAR_NONE].color);
-				append_cstr(buf, minibuf);
-			}
-			else if (whats_in == CONTAINS_FERRY)
-			{
-				append_cstr(buf, "&+WF&n");
-			}
-			else if (whats_in == CONTAINS_DRAGON)
-			{
-				append_cstr(buf, "&=LRD&n");
-			}
-			else if (whats_in == CONTAINS_WITCH)
-			{
-				append_cstr(buf, "&=LWW&n");
-			}
-			else if (whats_in == CONTAINS_BUILDING)
-			{
-				append_cstr(buf, "&+C#&n");
-			}
-			else if (whats_in == CONTAINS_GUILDHALL)
-			{
-				append_cstr(buf, "&+CG&n");
-			}
-			else if (whats_in == CONTAINS_CARGO)
-			{
-				append_cstr(buf, "&=bB&+Lo&n");
-			}
-			else if (whats_in == CONTAINS_MOB)
-			{
-				append_cstr(buf, "&=LBM&n");
-			}
-			else if (whats_in == CONTAINS_TRACK)
-			{
-				append_cstr(buf, "&+Y.");
-			}
-			else if (whats_in == CONTAINS_OLD_BLOOD)
-			{
-				append_cstr(buf, "&+r.");
-			}
-			else if (whats_in == CONTAINS_BLOOD)
-			{
-				append_cstr(buf, "&+R.");
-			}
-			else if ((whats_in == CONTAINS_PORTAL))
-			{
-				append_cstr(buf, "&+MO");
-			}
-			else if (whats_in == CONTAINS_GROUP)
-			{
-				append_cstr(buf, "&=LGP&n");
-			}
-			else if (whats_in == CONTAINS_GOOD_PC)
-			{
-				append_cstr(buf, "&=LYP&n");
-			}
-			else if (whats_in == CONTAINS_EVIL_PC)
-			{
-				append_cstr(buf, "&=LRP&n");
-			}
-			else if (whats_in == CONTAINS_PC)
-			{
-				append_cstr(buf, "&=LWP&n");
-			}
-			else if (whats_in == CONTAINS_CORPSE)
-			{
-				append_cstr(buf, "&+rC");
-			}
-			else if (whats_in == CONTAINS_MINE)
-			{
-				append_cstr(buf, "&+Ym");
-			}
-			else if (whats_in == CONTAINS_GEMMINE)
-			{
-				append_cstr(buf, "&+ym");
-			}
-			else if (ch->specials.z_cord < 0 && what != SECT_OCEAN && what != SECT_WATER_NOSWIM && what != SECT_NO_GROUND)
-			{ /* underwater */
-				append_cstr(buf, "&+L ");
-			}
-#if defined(CTF_MUD) && (CTF_MUD == 1)
-			else if (whats_in == CONTAINS_CTF_FLAG)
-			{
-				append_cstr(buf, "&=LYF");
-			}
-#endif
-			else if ((prev != what || what == SECT_FOREST) || (x == -n))
-			{
-				int shift = 0;
 
-				if (hadbg && color_symbol[what].hasBg)
-				{
-					shift = -2;
-				}
+			if (!where_rnum)
+				what = IS_UD_MAP(from_room) ? SECT_EARTH_PLANE : SECT_OCEAN;
+			else
+				what = SECTOR_TYPE(where_rnum);
 
-				append_fmt(buf, shift, "&%s%s", (what == SECT_FOREST && !number(0, 2)) ? "+G" : color_symbol[what].colorStrn, sector_symbol[what]);
-				hadbg    = color_symbol[what].hasBg;
-				prev     = what;
-				map_tile = true;
+			what     = BOUNDED(0, what, (NUM_SECT_TYPES - 1));
+
+			if (x == 0 && y == 0 && (ship = get_ship_from_char(ch)) && !SHIP_DOCKED(ship) && ship->location == from_room)
+				whats_in = CONTAINS_YOUR_SHIP;
+			else
+				whats_in = whats_in_maproom(ch, where_rnum, distance, show_map_regardless);
+
+			if (whats_in && whats_in < CONTAINS_MAX)
+			{
+				const AnsiString& symb = contents_symbol[whats_in];
+				size_t nv = symb.size();
+				if (!nv)
+					line.push_back(COLORED(20, 30, '!')); // error
+				else if (nv == 1)
+					line.push_back(symb[0]);
+				else switch(whats_in)
+				{
+				case CONTAINS_YOUR_SHIP:
+					// Use an arrow in the direction of the ship.
+					heading = ship->heading;
+					heading += 180 / nv - 1; // center on north etc
+					heading %= 360;
+					heading /= 360 / nv;
+					line.push_back(symb[BOUNDED(0, heading, nv-1)]);
+					break;
+
+				default: // pick randomly
+					line.push_back(symb[number(0, nv-1)]);
+				}
 			}
 			else
 			{
-				int shift = 0;
-				if (hadbg)
+				const AnsiString& symb = sector_symbol[what];
+				size_t nv = symb.size();
+				if (!nv)
+					line.push_back('!'); // error
+				else if (nv == 1)
+					line.push_back(symb[0]);
+				else switch(what)
 				{
-					shift = -2;
+				default: // forest/etc: pick randomly
+					line.push_back(symb[number(0, nv - 1)]);
 				}
-				append_fmt(buf, shift, "%s", sector_symbol[what]);
-				map_tile = true;
-			}
-
-			if (!map_tile)
-			{
-				prev  = -1;
-				hadbg = false;
 			}
 		}
 
-		append_cstr(buf, "&n \n"); // removed '&n'
+		line.push_back('\n');
+		line.ansi(buf);
+
 		if (!skip_text_output)
 		{
 			send_to_char(buf, ch);
