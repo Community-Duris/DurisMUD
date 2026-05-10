@@ -127,10 +127,12 @@ enum
 	CONTAINS_MAX
 };
 
+#define NUM_GLYPHS (NUM_SECT_TYPES + CONTAINS_MAX)
+
 #define HIDDEN_BY_FOREST(from_room, to_room) (world[to_room].sector_type == SECT_FOREST && world[from_room].sector_type != SECT_FOREST)
 
 extern const AnsiString sector_symbol[];
-const AnsiString sector_symbol[NUM_SECT_TYPES] = {
+const AnsiString sector_symbol[NUM_SECT_TYPES + CONTAINS_MAX] = {
 	"&=wl^", /* * larger towns */
 	 "&+L+", /* * roads */
 	 "&+g.", /* * plains/fields */
@@ -144,7 +146,7 @@ const AnsiString sector_symbol[NUM_SECT_TYPES] = {
 
 	 "&+w ", /* * underwater ground */
 	"&=rR ", /* * fire plane */
-	"&=bB ", /* * water ship */
+	"&=bB ", /* * water */
 	"&=mL.", /* * UD wild */
 	"&=wl*", /* * UD city */
 	 "&+m.", /* * UD inside */
@@ -174,9 +176,7 @@ const AnsiString sector_symbol[NUM_SECT_TYPES] = {
 	 "&+L+", // Patrolled Road
 	"&=lg*", // Snowy Forest
 	"&=rR ", // Lava
-};
 
-static const AnsiString contents_symbol[CONTAINS_MAX] = {
 	" ",            // nothing
 	"&+W@",         // ch (you)
 	"&+W^>v<",      // your ship	↑↗→↘↓↙←↖
@@ -208,6 +208,85 @@ static const AnsiString contents_symbol[CONTAINS_MAX] = {
 	"&+Ym",         // mine
 	"&+ym",         // gem mine
 	"&=bLo",        // cargo
+};
+
+// mostly sector_types but some have unfitting names
+const char *glyph_names[NUM_GLYPHS] = {
+	"zone",         // inside
+	"city",
+	"field",
+	"forest",
+	"hills",
+	"mountain",
+	"reefs",	// water-swim
+	"water",	// water-noswim
+	"noground",
+	"underwater",
+
+	"bottom",       // underwater_ground
+	"fire_plane",
+	"ocean",
+	"ud_wild",
+	"ud_city",
+	"ud_inside",
+	"ud_water",     // UD-swim
+	"ud_pool",      // UD-noswim (this name sounds being impassable)
+	"ud_noground",
+	"air_plane",
+
+	"water_plane",
+	"earth_plane",
+	"ethereal",
+	"astral",
+	"desert",
+	"tundra",
+	"swamp",
+	"ud_mountain",
+	"ud_slime",
+	"ud_lowceil",
+
+	"ud_liqmith",
+	"ud_mushroom",
+	"castle_wall",
+	"castle_gate",
+	"castle",
+	"neg_plane",
+	"avernus",
+	"road",
+	"snowy_forest",
+	"magma",        // "lava" but it'd be terribly confusing
+
+	"nothing",      // never displayed
+	"you",
+	"your_ship",
+	"CTF_flag",
+	"good_ship",
+	"evil_ship",
+	"undead_ship",
+	"neutral_ship", // also squid ship
+	"unknown_ship", // never used
+	"npc_ship",
+	"ship",         // docked
+	"ferry",
+	"magic_dark",
+	"magic_light",
+	"witch",
+	"dragon",       // or devil/demon
+	"building",
+	"good_pc",
+	"evil_pc",      // by align not side
+	"group",
+	"pc",
+	"mob",
+	"portal",
+	"guildhall",
+	"corpse",
+	"track",
+	"blood",
+	"old_blood",
+	"mine",
+	"gem_mine",
+	"cargo",
 };
 
 unsigned int calculate_relative_room(unsigned int rroom, int x, int y)
@@ -678,7 +757,7 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless, 
 
 			if (whats_in && whats_in < CONTAINS_MAX)
 			{
-				const AnsiString& symb = contents_symbol[whats_in];
+				const AnsiString& symb = sector_symbol[whats_in + NUM_SECT_TYPES];
 				size_t nv = symb.size();
 				if (!nv)
 					line.push_back(COLORED(20, 30, '!')); // error
@@ -754,6 +833,41 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless, 
 }
 
 void display_map(P_char ch, int n, int show_map_regardless) { display_map_room(ch, ch->in_room, n, show_map_regardless, 0); }
+
+void do_mapglyphs(P_char ch, char *argument, int cmd)
+{
+	char buf[MAX_STRING_LENGTH], bufgl[MAX_STRING_LENGTH];
+
+	// Alas, this table listed horizontally sucks halfling balls, thus
+	// we add this complexity for nicer vertical order.
+	int num_columns = 4;
+	int num_rows = (NUM_GLYPHS + num_columns - 1) / num_columns;
+
+	for (int y = 0; y < num_rows; y++)
+	{
+		char *bp = buf;
+
+		for (int x = 0; ; x++)
+		{
+			int i = x * num_rows + y;
+			if (i >= NUM_GLYPHS)
+				break;
+
+			sector_symbol[i].ansi(bufgl);
+			bp += sprintf(bp, "%-12s %s", glyph_names[i], bufgl);
+
+			if (x == num_columns - 1)
+				break;
+
+			int spc = 17 - sector_symbol[i].size();
+			while (spc-- > 0)
+				*bp++ = ' ';
+		}
+
+		sprintf(bp, "\n");
+		send_to_char(buf, ch);
+	}
+}
 
 int map_view_distance(P_char ch, int room)
 {

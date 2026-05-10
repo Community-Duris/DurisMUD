@@ -196,6 +196,7 @@ void        do_look(P_char, char *, int);
 void        do_motd(P_char, char *, int);
 void        do_news(P_char, char *, int);
 void        do_cheaters(P_char, char *, int);
+void        do_mapglyphs(P_char, char *, int);
 void        do_ok(P_char, char *, int);
 void        do_read(P_char, char *, int);
 void        do_report(P_char, char *, int);
@@ -1703,6 +1704,7 @@ void         random_encounters(P_char);
 int          randobjs_to_mob(P_char);
 P_obj        ran_magical(P_char);
 P_obj        ran_obj(P_char, ulong);
+void         do_mapglyphs(P_char, char *, int);
 
 /* memorize.c */
 int IS_PART_NOT_CASTER(P_char ch);

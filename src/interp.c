@@ -746,7 +746,7 @@ const char *command[MAX_CMD] = {
 	"ogreroar",
 	"bearhug",
 	"dig",
-	"justice",
+	"mapglyphs",
 	"supervise",
 	"society", /* 500 */
 
@@ -2573,6 +2573,7 @@ void assign_command_pointers(void)
 	CMD_N(CMD_LOCK, STAT_RESTING + POS_SITTING, do_lock, 0, TRUE);
 	CMD_N(CMD_MAIL, STAT_RESTING + POS_SITTING, do_mail, 0, FALSE);
 	CMD_N(CMD_MAP, STAT_SLEEPING + POS_PRONE, do_map, MINLVLIMMORTAL, FALSE);
+	CMD_N(CMD_MAPGLYPHS, STAT_DEAD + POS_PRONE, do_mapglyphs, 0, FALSE);
 	CMD_N(CMD_LOTUS, STAT_RESTING + POS_SITTING, do_lotus, 0, TRUE);
 	CMD_N(CMD_MEDITATE, STAT_RESTING + POS_SITTING, do_meditate, 0, TRUE);
 	CMD_N(CMD_MORE, STAT_DEAD + POS_PRONE, do_more, 0, FALSE);

@@ -526,7 +526,7 @@ extern unsigned int game_locked_level;
 #define CMD_OGRE_ROAR       496
 #define CMD_BEARHUG         497
 #define CMD_DIG             498
-#define CMD_JUSTICE         499
+#define CMD_MAPGLYPHS       499
 #define CMD_SUPERVISE       500
 #define CMD_SOCIETY         501
 #define CMD_TRAPSET         502
