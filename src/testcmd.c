@@ -1,4 +1,3 @@
-#include "ansi.h"
 #include "db.h"
 #include "interp.h"
 #include "utility.h"

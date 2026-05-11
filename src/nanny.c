@@ -2075,6 +2075,8 @@ void enter_game(P_desc d)
 		rest = 365 * 24 * 60 * 60;
 	}
 
+	set_glyphs_preset(ch, 0);
+
 	send_to_char(WELC_MESSG, ch);
 	ch->desc       = d;
 	ch->next       = character_list;

@@ -7,7 +7,6 @@
 
 #include "prototypes.h"
 #include "structs.h"
-#include "ansi.h"
 #include "comm.h"
 #include "db.h"
 #include "events.h"

@@ -13,7 +13,6 @@ using namespace std;
 
 #include "prototypes.h"
 #include "structs.h"
-#include "ansi.h"
 #include "comm.h"
 #include "db.h"
 #include "utils.h"
@@ -90,7 +89,7 @@ enum
 {
 // Category 1: Stuff that overrides everything:
 	CONTAINS_NOTHING,
-	CONTAINS_CH,
+	CONTAINS_CH = NUM_SECT_TYPES,
 	CONTAINS_YOUR_SHIP,
 	CONTAINS_CTF_FLAG,
 // Category 2: Stuff that's really big:
@@ -127,12 +126,12 @@ enum
 	CONTAINS_MAX
 };
 
-#define NUM_GLYPHS (NUM_SECT_TYPES + CONTAINS_MAX)
+#define NUM_GLYPHS CONTAINS_MAX
 
 #define HIDDEN_BY_FOREST(from_room, to_room) (world[to_room].sector_type == SECT_FOREST && world[from_room].sector_type != SECT_FOREST)
 
 extern const AnsiString sector_symbol[];
-const AnsiString sector_symbol[NUM_SECT_TYPES + CONTAINS_MAX] = {
+const AnsiString sector_symbol[NUM_GLYPHS] = {
 	"&=wl^", /* * larger towns */
 	 "&+L+", /* * roads */
 	 "&+g.", /* * plains/fields */
@@ -177,7 +176,6 @@ const AnsiString sector_symbol[NUM_SECT_TYPES + CONTAINS_MAX] = {
 	"&=lg*", // Snowy Forest
 	"&=rR ", // Lava
 
-	" ",            // nothing
 	"&+W@",         // ch (you)
 	"&+W^>v<",      // your ship	↑↗→↘↓↙←↖
 	"&=LYF",        // CTF flag
@@ -256,7 +254,6 @@ const char *glyph_names[NUM_GLYPHS] = {
 	"snowy_forest",
 	"magma",        // "lava" but it'd be terribly confusing
 
-	"nothing",      // never displayed
 	"you",
 	"your_ship",
 	"CTF_flag",
@@ -756,41 +753,27 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless, 
 				whats_in = whats_in_maproom(ch, where_rnum, distance, show_map_regardless);
 
 			if (whats_in && whats_in < CONTAINS_MAX)
-			{
-				const AnsiString& symb = sector_symbol[whats_in + NUM_SECT_TYPES];
-				size_t nv = symb.size();
-				if (!nv)
-					line.push_back(COLORED(20, 30, '!')); // error
-				else if (nv == 1)
-					line.push_back(symb[0]);
-				else switch(whats_in)
-				{
-				case CONTAINS_YOUR_SHIP:
-					// Use an arrow in the direction of the ship.
-					heading = ship->heading;
-					heading += 180 / nv - 1; // center on north etc
-					heading %= 360;
-					heading /= 360 / nv;
-					line.push_back(symb[BOUNDED(0, heading, nv-1)]);
-					break;
+				what = whats_in;
 
-				default: // pick randomly
-					line.push_back(symb[number(0, nv-1)]);
-				}
-			}
-			else
+			const AnsiString& symb = IS_PC(ch)? ch->only.pc->map_glyphs[what] : sector_symbol[what];
+			size_t nv = symb.size();
+			if (!nv)
+				line.push_back('!'); // error
+			else if (nv == 1)
+				line.push_back(symb[0]);
+			else switch(what)
 			{
-				const AnsiString& symb = sector_symbol[what];
-				size_t nv = symb.size();
-				if (!nv)
-					line.push_back('!'); // error
-				else if (nv == 1)
-					line.push_back(symb[0]);
-				else switch(what)
-				{
-				default: // forest/etc: pick randomly
-					line.push_back(symb[number(0, nv - 1)]);
-				}
+			case CONTAINS_YOUR_SHIP:
+				// Use an arrow in the direction of the ship.
+				heading = ship->heading;
+				heading += 180 / nv - 1; // center on north etc
+				heading %= 360;
+				heading /= 360 / nv;
+				line.push_back(symb[BOUNDED(0, heading, nv-1)]);
+				break;
+
+			default: // forest/etc: pick randomly
+				line.push_back(symb[number(0, nv - 1)]);
 			}
 		}
 
@@ -834,9 +817,113 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless, 
 
 void display_map(P_char ch, int n, int show_map_regardless) { display_map_room(ch, ch->in_room, n, show_map_regardless, 0); }
 
+static const char* glyph_preset_names[][2] = {
+	{"ascii", "0 basic ascii base baseline"},
+	{"cp437", "1 cp437 ibm"},
+	{"diag. arrows", "2"},
+	{"diag. double arrows", "3"},
+};
+
+void set_glyphs_preset(P_char ch, int w)
+{
+	auto& gly = ch->only.pc->map_glyphs;
+	gly.resize(NUM_GLYPHS);
+
+	for (int i = 0; i < NUM_GLYPHS; i++)
+		gly[i] = sector_symbol[i];
+
+	if (w >= 1)
+	{
+		gly[CONTAINS_MOB]          = "&+B☺";
+		gly[CONTAINS_YOUR_SHIP]    = "&+W↑→↓←";
+		gly[SECT_FOREST]           = "&+g♣♣♠♣♣♠&+G♣♠";
+		gly[SECT_HILLS]            = "&+y⌂";
+		gly[SECT_UNDRWLD_MOUNTAIN] = "&+L▒";
+	}
+
+	if (w == 2)
+	{
+		gly[CONTAINS_YOUR_SHIP]    = "&+W↑↗→↘↓↙←↖";
+	}
+
+	if (w == 3)
+	{
+		gly[CONTAINS_YOUR_SHIP]    = "&+W⇑⇗⇒⇘⇓⇙⇐⇖";
+	}
+}
+
 void do_mapglyphs(P_char ch, char *argument, int cmd)
 {
+	if (!IS_PC(ch))
+		return send_to_char("Mobs have to live with the defaults.\n", ch);
+
 	char buf[MAX_STRING_LENGTH], bufgl[MAX_STRING_LENGTH];
+	auto& gly = ch->only.pc->map_glyphs;
+
+	argument = one_argument(argument, buf);
+	if (isname(buf, "0 basic ascii base baseline"))
+	{
+		set_glyphs_preset(ch, 0);
+		send_to_char("Loaded preset 0 (ascii).\n", ch);
+		return;
+	}
+	else if (isname(buf, "1"))
+	{
+		set_glyphs_preset(ch, 1);
+		send_to_char("Loaded preset 1 (wip).\n", ch);
+		return;
+	}
+	else if (*buf)
+	{
+		// Presets
+		for (int i = 0; i < ARRAY_SIZE(glyph_preset_names); i++)
+			if (isname(buf, glyph_preset_names[i][1]))
+			{
+				set_glyphs_preset(ch, i);
+				send_to_char_f(ch, "Loaded preset %d (%s).\n", i, glyph_preset_names[i][0]);
+				return;
+			}
+
+		// Setting individual glyphs.
+		int what = -1;
+
+		// try exact match
+		for (int i = 0; i < NUM_GLYPHS; i++)
+			if (!strcmp(buf, glyph_names[i]))
+			{
+				what = i;
+				break;
+			}
+		if (what == -1)
+			for (int i = 0; i < NUM_GLYPHS; i++)
+				if (is_abbrev(buf, glyph_names[i]))
+				{
+					what = i;
+					break;
+				}
+
+		if (what == -1)
+			return send_to_char("No such glyph name.\n", ch);
+
+		while (argument[0] == ' ')
+			argument++;
+		AnsiString x = argument;
+		if (x.empty())
+		{
+			gly[what] = sector_symbol[what];
+			gly[what].ansi(bufgl);
+			send_to_char_f(ch, "Reset %s to default (%s).\n", glyph_names[what], bufgl);
+		}
+		else if (x.size() > 16)
+			return send_to_char("Too many variants.\n", ch);
+		else
+		{
+			gly[what] = x;
+			gly[what].ansi(bufgl);
+			send_to_char_f(ch, "Set %s to \"%s\".\n", glyph_names[what], bufgl);
+		}
+		return;
+	}
 
 	// Alas, this table listed horizontally sucks halfling balls, thus
 	// we add this complexity for nicer vertical order.
@@ -853,13 +940,13 @@ void do_mapglyphs(P_char ch, char *argument, int cmd)
 			if (i >= NUM_GLYPHS)
 				break;
 
-			sector_symbol[i].ansi(bufgl);
+			gly[i].ansi(bufgl);
 			bp += sprintf(bp, "%-12s %s", glyph_names[i], bufgl);
 
 			if (x == num_columns - 1)
 				break;
 
-			int spc = 17 - sector_symbol[i].size();
+			int spc = 17 - gly[i].size();
 			while (spc-- > 0)
 				*bp++ = ' ';
 		}

@@ -1704,6 +1704,7 @@ void         random_encounters(P_char);
 int          randobjs_to_mob(P_char);
 P_obj        ran_magical(P_char);
 P_obj        ran_obj(P_char, ulong);
+void         set_glyphs_preset(P_char, int);
 void         do_mapglyphs(P_char, char *, int);
 
 /* memorize.c */
