@@ -2261,6 +2261,7 @@ int new_descriptor(int s, int conn_type)
 
 static void greet(P_desc newd)
 {
+	check_cp437(newd);
 	if (bannedsite(newd->host, 0))
 	{
 		write_to_descriptor(newd,

@@ -1721,6 +1721,7 @@ struct descriptor_data
 	char              tmp_val;                      /* temporary field used in char creation only */
 	char              confirm_state;                /* SAM 7-94, used to allow confirming commands */
 	::byte            term_type;                    /* terminal type, normal or ansi */
+	ubyte             cp437;                        /* no Unicode capability      */
 	char              last_command[MAX_INPUT_LENGTH];
 	P_acct            account;
 	char             *selected_char_name; /* temporary storage for character selection confirmation */

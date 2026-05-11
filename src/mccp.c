@@ -296,31 +296,11 @@ int write_to_descriptor(P_desc player, const char *txt)
 	conv_buf[j] = '\0';
 	txt         = conv_buf;
 	total       = j;
-
-	/*
-	 * charset logic:
-	 * - ssl connections: always utf8
-	 * - mtts with utf8 flag: utf8
-	 * - mtts without utf8 flag: cp437
-	 * - zmud/cmud (no mtts support): cp437
-	 * - everyone else: utf8 (modern default)
-	 */
 	char down[j + 1];
-	int  need_cp437 = 0;
 
-	if (!player->sslses)
+	if (player->cp437)
 	{
-		if (player->mtts_flags && !(player->mtts_flags & MTTS_UTF8))
-			need_cp437 = 1;
-		else if (player->ttype_client[0] && (strncasecmp(player->ttype_client, "ZMUD", 4) == 0 || strncasecmp(player->ttype_client, "CMUD", 4) == 0 ||
-		                                     strncasecmp(player->ttype_client, "VT", 2) == 0 || strncasecmp(player->ttype_client, "ANSI", 4) == 0 || strncasecmp(player->ttype_client, "DUMB", 4) == 0))
-			need_cp437 = 1;
-	}
-
-	if (need_cp437)
-	{
-		char *dend = down;
-		downgrade_string(dend, txt, u_cp437);
+		downgrade_string(down, txt, u_cp437);
 		txt   = down;
 		total = strlen(txt);
 	}

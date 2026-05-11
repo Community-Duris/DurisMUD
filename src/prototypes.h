@@ -3192,6 +3192,7 @@ int  compress_end(P_desc, int);
 void ttype_negotiate(P_desc d);
 void ttype_handle_negotiation(P_desc d, int cmd);
 void ttype_handle_subnegotiation(P_desc d, const unsigned char *data, int len);
+void check_cp437(P_desc d);
 
 /* poisons */
 void poison_lifeleak(int, P_char, char *, int, P_char, struct affected_type *);

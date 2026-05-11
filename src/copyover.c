@@ -687,6 +687,7 @@ void copyover_recover(int *mother_desc, int *mother_desc_ssl, int *ws_desc)
 		d->prompt_mode                                   = FALSE;
 		d->connected                                     = -1; // temp state until player loads
 		used_descs++;
+		check_cp437(d);
 
 		// load character
 		if (desc_entry.player_name[0])

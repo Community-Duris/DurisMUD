@@ -103,6 +103,7 @@ static void parse_mtts_bitvector(P_desc d, const char *str)
 
 	if (flags & MTTS_UTF8)
 		d->charset_detected = 1;
+	check_cp437(d);
 }
 
 /*
@@ -199,4 +200,34 @@ void ttype_handle_subnegotiation(P_desc d, const unsigned char *data, int len)
 
 	/* request next round */
 	ttype_send_request(d);
+}
+
+// recheck UTF8 capability
+void check_cp437(P_desc d)
+{
+	/*
+	 * charset logic:
+	 * - ssl connections: always utf8
+	 * - mtts with utf8 flag: utf8
+	 * - mtts without utf8 flag: cp437
+	 * - zmud/cmud (no mtts support): cp437
+	 * - everyone else: utf8 (modern default)
+	 */
+
+	if (d->sslses)
+		d->cp437 = 0;
+	else if (d->mtts_flags)
+		d->cp437 = !(d->mtts_flags & MTTS_UTF8);
+	else if (!d->ttype_client[0])
+		d->cp437 = 0;
+	else if (strncasecmp(d->ttype_client, "ZMUD", 4) == 0
+		 || strncasecmp(d->ttype_client, "CMUD", 4) == 0
+		 || strncasecmp(d->ttype_client, "VT", 2) == 0
+		 || strncasecmp(d->ttype_client, "ANSI", 4) == 0
+		 || strncasecmp(d->ttype_client, "DUMB", 4) == 0)
+	{
+		d->cp437 = 1;
+	}
+	else
+		d->cp437 = 0;
 }
