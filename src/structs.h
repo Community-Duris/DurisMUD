@@ -904,6 +904,7 @@ struct room_data
 	::byte chance_fall;
 	::byte current_speed;
 	::byte current_direction;
+	ubyte altglyph;                                    /* Map glyph variation                */
 	/* special procedure */
 	room_proc_type funct;
 

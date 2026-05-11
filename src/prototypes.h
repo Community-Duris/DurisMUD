@@ -1706,6 +1706,7 @@ P_obj        ran_magical(P_char);
 P_obj        ran_obj(P_char, ulong);
 void         set_glyphs_preset(P_char, int);
 void         do_mapglyphs(P_char, char *, int);
+void         init_map_glyphs(void);
 
 /* memorize.c */
 int IS_PART_NOT_CASTER(P_char ch);

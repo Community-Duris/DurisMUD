@@ -772,6 +772,15 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless, 
 				line.push_back(symb[BOUNDED(0, heading, nv-1)]);
 				break;
 
+			case SECT_ROAD:
+				heading = 0;
+				if (where_rnum)
+					heading = world[where_rnum].altglyph;
+				if (heading > nv)
+					heading = 0;
+				line.push_back(symb[heading]);
+				break;
+
 			default: // forest/etc: pick randomly
 				line.push_back(symb[number(0, nv - 1)]);
 			}
@@ -836,6 +845,7 @@ void set_glyphs_preset(P_char ch, int w)
 	{
 		gly[CONTAINS_MOB]          = "&+B☺";
 		gly[CONTAINS_YOUR_SHIP]    = "&+W↑→↓←";
+		gly[SECT_ROAD]             = "&+L+║═╚║║╔╠═╝═╩╗╣╦╬";
 		gly[SECT_FOREST]           = "&+g♣♣♠♣♣♠&+G♣♠";
 		gly[SECT_HILLS]            = "&+y⌂";
 		gly[SECT_UNDRWLD_MOUNTAIN] = "&+L▒";
@@ -1468,4 +1478,37 @@ const char *get_map_direction(int from, int to)
 		return "southeast";
 
 	return "somewhere";
+}
+
+void init_map_glyphs(void)
+{
+	for (int room = 0; room <= top_of_world; room++)
+	{
+		if (!IS_MAP_ROOM(room))
+			 continue;
+		ubyte variant = 0;
+		switch(world[room].sector_type)
+		{
+		case SECT_ROAD:
+			for (int dir = 0; dir < 4; dir++)
+			{
+				int nr = room;
+				// We allow up to 2 tiles of damaged road.
+				for (int i = 0; i < 3; i++)
+				{
+					auto d_o = world[nr].dir_option[dir];
+					if (!d_o)
+						break;
+					if (!(nr = (d_o->to_room)))
+						break;
+					if (world[nr].sector_type == SECT_ROAD || !IS_MAP_ROOM(nr))
+					{
+						variant |= 1 << dir;
+						break;
+					}
+				}
+			}
+			world[room].altglyph = variant;
+		}
+	}
 }

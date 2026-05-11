@@ -556,6 +556,10 @@ void boot_db(int mini_mode)
 	logit(LOG_STATUS, "Initializing Random Load Tables.");
 	init_rand_tables();
 
+	fprintf(stderr, "Assigning map glyph variations.\r\n");
+	logit(LOG_STATUS, "Assigning map glyph variations.");
+	init_map_glyphs();
+
 	if (0)
 	{ /* EMAIL registration  */
 		fprintf(stderr, "Initializing EMAIL registration table.\n\r");
