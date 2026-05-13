@@ -250,8 +250,7 @@ int compress_end(P_desc player, int flush)
 int write_to_descriptor(P_desc player, const char *txt)
 {
 	int   len, total, status, i, j;
-	char  static_conv_buf[MAX_STRING_LENGTH];
-	char *conv_buf = static_conv_buf;
+	char  conv_buf[MAX_STRING_LENGTH * 2];
 
 	if (player->write_failed)
 		return -1;
@@ -278,10 +277,6 @@ int write_to_descriptor(P_desc player, const char *txt)
 		return 0;
 	}
 
-	if ((len = strlen(txt)) > MAX_STRING_LENGTH * 0.8)
-		CREATE(conv_buf, char, (unsigned int)(len * 1.1), MEM_TAG_BUFFER);
-	// conv_buf = (char *) malloc((unsigned int) (len * 1.1));
-
 	for (i = 0, j = 0; txt[i]; i++)
 	{
 		if (txt[i] == '\n')
@@ -306,8 +301,6 @@ int write_to_descriptor(P_desc player, const char *txt)
 	}
 
 	int ret = write_to_descriptor_binary(player, (const unsigned char*)txt, total);
-	if (conv_buf != static_conv_buf)
-		FREE(conv_buf);
 	return ret;
 }
 
