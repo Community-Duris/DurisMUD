@@ -224,5 +224,5 @@ void event_patrol_move(P_char ch, P_char vict, P_obj obj, void *data)
 			}
 		}
 	}
-	add_event(event_patrol_move, huntData->normalSpeed, ch, vict, obj, 0, huntData, sizeof(struct hunt_data));
+	add_event(event_patrol_move, huntData->normalSpeed, ch, vict, obj, 0, huntData, sizeof(PatrolData));
 }
