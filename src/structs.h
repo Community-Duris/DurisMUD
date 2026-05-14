@@ -1710,6 +1710,7 @@ struct descriptor_data
 	int               max_str;                      /* -                          */
 	char             *name;                         /* name for mail system       */
 	bool              prompt_mode;                  /* control of prompt-printing */
+	int               buflen;
 	char              buf[MAX_QUEUE_LENGTH];        /* buffer for raw input       */
 	char              last_input[MAX_INPUT_LENGTH]; /* the last input         */
 	struct txt_q      output;                       /* q of strings to send       */
@@ -1757,12 +1758,8 @@ struct descriptor_data
 
 	/* ttype/mtts support */
 	int    ttype_state;        /* 0=none, 1=sent_do, 2=cycling, 3=complete */
-	int    ttype_round;        /* mtts round (1-4) */
-	char   ttype_client[64];   /* client name from ttype round 1 */
-	char   ttype_terminal[32]; /* terminal type from round 2 */
 	char   ttype_last[128];    /* last response for duplicate detection */
-	int    mtts_flags;         /* bitvector from round 3 */
-	int    charset_detected;   /* 1 if ttype says client supports utf8 */
+	int    mtts_flags;         /* bitvector */
 	time_t ttype_timeout;      /* when to give up waiting for ttype */
 
 	/* ping/pong for dead connection detection */

@@ -64,6 +64,7 @@
 #include "timers.h"
 #include "tradeskill.h"
 #include "ttype.h"
+#include "unicode.h"
 #include "websocket.h"
 #include "world_quest.h"
 #include "ws_handlers.h"
@@ -102,6 +103,7 @@ void              format_to_snoopers(char *from_string, char *to_string);
 extern void       update_breath_weapon_properties();
 extern void       update_regen_properties();
 static void       greet(P_desc newd);
+static void       process_line(P_desc t, char *in);
 
 /* local globals */
 
@@ -2798,9 +2800,8 @@ int process_output(P_desc t)
 
 int process_input(P_desc t)
 {
-	int            sofar, thisround, begin, squelch, i, k, flag;
-	char           tmp[MAX_INPUT_LENGTH + 3], buffer[MAX_INPUT_LENGTH + 60];
-	snoop_by_data *snoop_by_ptr;
+	int            thisround, begin;
+	char           tmp[MAX_INPUT_LENGTH + 3], *buf, *bp;
 
 	/* WebSocket connections use their own input processing */
 	if (t->websocket)
@@ -2808,213 +2809,157 @@ int process_input(P_desc t)
 		return websocket_process_input(t);
 	}
 
-	sofar = 0;
-	flag  = 0;
-	begin = strlen(t->buf);
+	begin = t->buflen;
+	if (begin < 0 || begin >= MAX_QUEUE_LENGTH)
+		abort(); // likely memory corruption
+	buf = t->buf;
 
 	/*
 	 * Read in some stuff
 	 */
 	if (t->sslses)
 	{
-		thisround = gnutls_record_recv(t->sslses, t->buf + begin, (MAX_QUEUE_LENGTH - begin));
+		thisround = gnutls_record_recv(t->sslses, buf + begin, MAX_QUEUE_LENGTH - begin - 1);
 		if (!thisround)
 		{
 			logit(LOG_COMM, "EOF encountered on socket read for %s.", (t->character) ? GET_NAME(t->character) : "NOCHAR");
 			return (-1);
 		}
-		else if (thisround > 0)
-			sofar += thisround;
-		else if (thisround != GNUTLS_E_AGAIN && thisround != GNUTLS_E_INTERRUPTED)
+		else if (thisround < 0)
 		{
-			logit(LOG_COMM, "process_input() CON_%d %s Read: %d Error: %s", t->connected, (t->character) ? GET_NAME(t->character) : "", thisround, gnutls_strerror(thisround));
-			return (-1);
+			if (thisround != GNUTLS_E_AGAIN && thisround != GNUTLS_E_INTERRUPTED)
+			{
+				logit(LOG_COMM, "process_input() CON_%d %s Read: %d Error: %s", t->connected, (t->character) ? GET_NAME(t->character) : "", thisround, gnutls_strerror(thisround));
+				return (-1);
+			}
+			return 0;
 		}
 	}
 	else
-		do
+	{
+		thisround = read(t->descriptor, buf + begin, MAX_QUEUE_LENGTH - begin - 1);
+		if (!thisround)
 		{
-			if ((thisround = read(t->descriptor, (t->buf + begin + sofar), (unsigned)(MAX_QUEUE_LENGTH - begin - sofar - 1))) > 0)
-				sofar += thisround;
-			else if (thisround < 0)
-				if (errno !=
-#ifdef _HPUX_SOURCE
-				    EAGAIN
-#else
-				    EWOULDBLOCK
-#endif
-				)
-				{
-					logit(LOG_COMM, "process_input() CON_%d %s Read: %d Error: %d", t->connected, (t->character) ? GET_NAME(t->character) : "", thisround, errno);
-					return (-1);
-				}
-				else
-					break;
-			else
+			logit(LOG_COMM, "EOF encountered on socket read.");
+			return (-1);
+		}
+		else if (thisround < 0)
+		{
+			if (errno != EAGAIN)
 			{
-				logit(LOG_COMM, "EOF encountered on socket read.");
+				logit(LOG_COMM, "process_input() CON_%d %s Read: %d Error: %d", t->connected, (t->character) ? GET_NAME(t->character) : "", thisround, errno);
 				return (-1);
 			}
-		}
-
-		while (!ISNEWL(*(t->buf + begin + sofar - 1)));
-
-	*(t->buf + begin + sofar) = 0;
-
-	/* processed before user input - no newline */
-	for (i = begin; *(t->buf + i); i++)
-	{
-		if (*(t->buf + i) == (signed char)IAC)
-		{
-			int remaining = strlen(t->buf + i);
-			int consumed  = parse_telnet_options(t, t->buf + i, remaining);
-			if (consumed > 0 && consumed <= remaining)
-			{
-				/* remove processed telnet data from buffer */
-				memmove(t->buf + i, t->buf + i + consumed, remaining - consumed + 1);
-				i--; /* recheck this position */
-			}
+			return 0;
 		}
 	}
 
-	/*
-	 * scan input stream for a newline, if one isn't found, command is not
-	 * yet ready for processing, so do not xfer it to input queue, and
-	 * return 0, so that this socket is skipped.
-	 */
+	int len = begin + thisround;
+	buf[len] = 0; // safety vs broken code
+	bp = buf;
 
-	for (i = begin; !ISNEWL(*(t->buf + i)); i++)
-		if (!*(t->buf + i))
-			return (0);
+	for (int i = 0; i < len; i++)
+	{
+		switch (buf[i])
+		{
+		case 0:     // illegal; ignore
+		case '\r':
+			break;
 
+		case '\n':
+			*bp = 0;
+			process_line(t, buf);
+			bp = buf;
+			break;
+
+		case (char)IAC:
+		{
+			int consumed = parse_telnet_options(t, buf + i, len - i);
+			if (consumed <= 0)
+				goto incomplete; // partial; need to wait for more
+			i += consumed - 1;
+		}
+
+		case '\b':
+		case 127: // handle both ^H and DEL
+			while (bp > buf)
+			{
+				// Eat whole Unicode characters, do no other
+				// processing.  We don't support clusters thus
+				// no need to consume multiple codepoints.
+				if (!IS_UTF8_TAIL(*--bp) || t->cp437)
+					break;
+			}
+			break;
+
+		default:
+			*bp++ = buf[i]; // possibly no-op if bp hasn't changed
+		}
+	}
+
+incomplete:
+	if (bp - buf > MAX_INPUT_LENGTH - 1)
+	{
+		// is it even a good idea to process it anyway?
+		*bp = 0;
+		process_line(t, buf);
+		bp = buf;
+	}
+	t->buflen = bp - buf;
+	return 0;
+}
+
+static void process_line(P_desc t, char *in)
+{
+	char out[MAX_QUEUE_LENGTH * 3]; // max expansion
+	char buffer[MAX_STRING_LENGTH];
 #ifdef SMART_PROMPT
 	if (t->character && IS_SET(t->character->specials.act, PLR_SMARTPROMPT))
 		t->prompt_mode = TRUE;
 #endif
 
-	/*
-	 * input contains 1 or more newlines; process the stuff
-	 */
+	if (t->cp437)
+		upgrade_cp437_and_dollars(out, in);
+	else if (validate_utf8_and_dollars(out, in))
+		write_to_descriptor(t, "Bad characters in input, skipped.\r\n");
 
-	for (i = 0, k = 0; *(t->buf + i);)
+	int k = strlen(out);
+	if (k > (MAX_INPUT_LENGTH - 1))
 	{
-		if (!ISNEWL(*(t->buf + i)) && !(flag = (k >= (MAX_INPUT_LENGTH - 2))))
-		{
-			/* telnet */
-			if (*(t->buf + i) == (signed char)IAC)
-			{
-				int remaining = strlen(t->buf + i);
-				int consumed  = parse_telnet_options(t, t->buf + i, remaining);
-				if (consumed > 0 && consumed <= remaining)
-					i += consumed;
-				else
-					i++;
-			}
-			/* backspace? (handle both ^H and DEL) */
-			else if (*(t->buf + i) == '\b' || (unsigned char)*(t->buf + i) == 127)
-			{
-				/* more than one char ? */
-				if (k)
-				{
-					if (*(tmp + --k) == '$')
-						k--;
-					i++;
-				}
-				else
-				{
-					/* no chars to delete, so just skip the backspace */
-					i++;
-				}
-			}
-			else
-			{
-				if (*(t->buf + i) == '$')
-				{
-					/*
-					 * a '$'?  if so, have to double it, so that act()
-					 * won't choke on it later on.
-					 */
-					*(tmp + k) = '$';
-					k++;
-				}
-				/* printable character? */
-				if (isascii(*(t->buf + i)) && isprint(*(t->buf + i)))
-				{
-					*(tmp + k) = *(t->buf + i);
-					i++;
-					k++;
-				}
-				else
-				{
-					/* garbage character, skip it */
-					i++;
-				}
-			}
-		}
-		else
-		{
-			/* newline or input too long, have to actually DO something with it. */
-			*(tmp + k) = 0;
+		k = MAX_INPUT_LENGTH - 1;
+		while (IS_UTF8_TAIL(out[k])) // don't cut in the middle of an Unicode char
+			k--; // max 3, we have validated
+		out[k] = 0;
 
-			/*
-			 * bah! this was in wrong spot, wouldn't catch it until after
-			 * it had hosed memory by overwriting some huge ass string to
-			 * a little dinky char array.  JAB
-			 */
-
-			if (k > (MAX_INPUT_LENGTH - 1))
-			{
-				k          = MAX_INPUT_LENGTH - 1;
-				*(tmp + k) = 0;
-				snprintf(buffer, MAX_STRING_LENGTH, "Line too long. Truncated to:\r\n%s\r\n", tmp);
-				if (write_to_descriptor(t, buffer) < 0)
-					return (-1);
-
-				/* skip the rest of the line */
-				for (; *(t->buf + i) && !ISNEWL(*(t->buf + i)); i++)
-					;
-			}
-			/* handle '!' to repeat last command */
-			if ((*tmp != '!') || !t->last_input || !t->character || t->connected)
-				strcpy(t->last_input, tmp);
-			else
-				strcpy(tmp, t->last_input);
-
-			if (t)
-				if (t->character && IS_PC(t->character))
-				{
-					t->character->only.pc->recived_data = t->character->only.pc->recived_data + strlen(tmp);
-					recivedbytes                        = recivedbytes + strlen(tmp);
-				}
-			write_to_q(tmp, &t->input, 0);
-
-			snoop_by_ptr = t->snoop.snoop_by_list;
-
-			/*
-			      if (t->snoop.snoop_by) {
-			*/
-			while (snoop_by_ptr)
-			{
-				write_to_q("&+y%&n ", &snoop_by_ptr->snoop_by->desc->output, 1);
-				write_to_q(tmp, &snoop_by_ptr->snoop_by->desc->output, 1);
-				write_to_q("\r\n", &snoop_by_ptr->snoop_by->desc->output, 1);
-
-				snoop_by_ptr = snoop_by_ptr->next;
-			}
-
-			/* find end of entry */
-			for (; ISNEWL(*(t->buf + i)); i++)
-				;
-
-			/* squelch the entry from the buffer */
-			for (squelch = 0;; squelch++)
-				if ((*(t->buf + squelch) = *(t->buf + i + squelch)) == '\0')
-					break;
-			k = 0;
-			i = 0;
-		}
+		char buffer[MAX_STRING_LENGTH];
+		snprintf(buffer, sizeof buffer, "Line too long. Truncated to:\r\n%s\r\n", out);
+		if (write_to_descriptor(t, buffer) < 0)
+			return;
 	}
-	return (1);
+
+	/* handle '!' to repeat last command */
+	if ((*out != '!') || !t->last_input || !t->character || t->connected)
+		memcpy(t->last_input, out, k + 1);
+	else
+		strcpy(out, t->last_input);
+
+	if (t && t->character && IS_PC(t->character))
+	{
+		t->character->only.pc->recived_data += k;
+		recivedbytes                        += k;
+	}
+	write_to_q(out, &t->input, 0);
+
+	snoop_by_data *snoop_by_ptr = t->snoop.snoop_by_list;
+
+	while (snoop_by_ptr)
+	{
+		write_to_q("&+y%&n ", &snoop_by_ptr->snoop_by->desc->output, 1);
+		write_to_q(out, &snoop_by_ptr->snoop_by->desc->output, 1);
+		write_to_q("\r\n", &snoop_by_ptr->snoop_by->desc->output, 1);
+
+		snoop_by_ptr = snoop_by_ptr->next;
+	}
 }
 
 /*

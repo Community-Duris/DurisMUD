@@ -71,23 +71,23 @@ int send_ga(P_desc desc)
 int parse_telnet_options(P_desc player, char *buf, int buflen)
 {
 	ubyte *p        = (ubyte *)(buf);
-	int    mccp_ver = 0;
 
 	if (buflen < 1 || *p != IAC)
 		return 0;
 
 	switch (*(p + 1))
 	{
+		case IAC: // ignore escaped 255 byte: illegal in UTF-8, redundant in CP437
+			return 2;
 		case DO:
 			switch (*(p + 2))
 			{
 				case TELOPT_COMPRESS:
-					if (mccp_ver < MCCP_VER2) // prefer version 2 over 1
-						mccp_ver = MCCP_VER1;
-					break;
+					compress_start(player, MCCP_VER1);
+					return 3;
 				case TELOPT_COMPRESS2:
-					mccp_ver = MCCP_VER2;
-					break;
+					compress_start(player, MCCP_VER2);
+					return 3;
 				case TELOPT_GMCP:
 					gmcp_handle_negotiation(player, DO);
 					return 3;
@@ -95,7 +95,7 @@ int parse_telnet_options(P_desc player, char *buf, int buflen)
 					player->sga_disabled = 1;
 					return 3;
 			}
-			break;
+			return 3;
 		case DONT:
 			switch (*(p + 2))
 			{
@@ -106,31 +106,31 @@ int parse_telnet_options(P_desc player, char *buf, int buflen)
 					player->sga_disabled = 0;
 					return 3;
 			}
-			/* fall through */
+			return 3;
 		case WILL:
 			if (*(p + 2) == TELOPT_TTYPE)
 				ttype_handle_negotiation(player, WILL);
-			return (*(p + 2) != '\0') ? 3 : 2;
+			return 3;
 		case WONT:
 			if (*(p + 2) == TELOPT_TTYPE)
 				ttype_handle_negotiation(player, WONT);
-			return (*(p + 2) != '\0') ? 3 : 2;
+			return 3;
 		case SB: /* subnegotiation */
 		{
-			int len = 2;
-			while (len < buflen && p[len] != '\0' && !(p[len] == IAC && p[len + 1] == SE))
+			int len = 3;
+			while (len < buflen && !(p[len] == IAC && p[len + 1] == SE))
 				len++;
 
+			if (len > 128) // arbitrary; a telnet subnego is not supposed to be long
+				return 128;
+
 			/* incomplete, wait for more */
-			if (len >= buflen || p[len] == '\0')
+			if (len >= buflen)
 				return 0;
 
-			if (p[len] == IAC && p[len + 1] == SE)
-				len += 2;
-			else
-				return 0;
+			len += 2;
 
-			if (p[2] == TELOPT_TTYPE && len > 4)
+			if (p[2] == TELOPT_TTYPE)
 			{
 				if (p[3] == TELQUAL_IS)
 				{
@@ -151,11 +151,6 @@ int parse_telnet_options(P_desc player, char *buf, int buflen)
 		}
 	}
 
-	if (mccp_ver)
-	{
-		compress_start(player, mccp_ver);
-		return 3;
-	}
 	return 1; /* lets cut at least IAC from stream */
 }
 

@@ -4,11 +4,14 @@
  * detects mud clients via ttype negotiation and parses
  * mtts bitvector for terminal capabilities like utf-8.
  *
- * mtts cycling:
- *   round 1: client name (e.g. "MUDLET", "TINTIN++")
- *   round 2: terminal type (e.g. "XTERM-256COLOR")
- *   round 3: "MTTS ###" bitvector with capabilities
- *   round 4: same as round 3 = end of cycling
+ * telnet ttype gives a number of terminal names, meant to be given in the order
+ * from most specific to the least.  Among MUD clients, the first name tends to be
+ * the client's name.  Subsequent values might be the client's version, some common
+ * terminal names, etc.  The end of the list is marked by returning to the first
+ * entry and cycling anew.
+ *
+ * mtts inserts a string "MTTS ###" as one of the names, it's a decimal number
+ * giving reported capabilities.
  */
 
 #include "prototypes.h"
@@ -52,7 +55,6 @@ void ttype_handle_negotiation(P_desc d, int cmd)
 	if (cmd == WILL)
 	{
 		d->ttype_state   = TTYPE_CYCLING;
-		d->ttype_round   = 0;
 		d->ttype_last[0] = '\0';
 		ttype_send_request(d);
 	}
@@ -70,13 +72,6 @@ static void ttype_send_request(P_desc d)
 	if (!d || d->ttype_state != TTYPE_CYCLING)
 		return;
 
-	if (d->ttype_round >= MTTS_MAX_ROUNDS)
-	{
-		d->ttype_state = TTYPE_COMPLETE;
-		return;
-	}
-
-	d->ttype_round++;
 	write_to_descriptor_binary(d, ttype_send, 6);
 }
 
@@ -101,8 +96,6 @@ static void parse_mtts_bitvector(P_desc d, const char *str)
 
 	d->mtts_flags = (int)flags;
 
-	if (flags & MTTS_UTF8)
-		d->charset_detected = 1;
 	check_cp437(d);
 }
 
@@ -159,44 +152,24 @@ void ttype_handle_subnegotiation(P_desc d, const unsigned char *data, int len)
 		return;
 	}
 
-	/* check if same as last response - signals end of cycling */
-	if (d->ttype_last[0] && strcmp(term_type, d->ttype_last) == 0)
+	/* the list should be complete if it goes back to the first entry, but check for looping on
+	   the last response, too */
+	if (d->ttype_last[0] && !(strcmp(term_type, d->ttype_last) && strcmp(term_type, d->client_name)))
 	{
 		d->ttype_state = TTYPE_COMPLETE;
 		return;
 	}
 
 	/* store for duplicate detection */
-	strncpy(d->ttype_last, term_type, sizeof(d->ttype_last) - 1);
-	d->ttype_last[sizeof(d->ttype_last) - 1] = '\0';
+	strlcpy(d->ttype_last, term_type, sizeof(d->ttype_last));
 
-	/* process based on round */
-	switch (d->ttype_round)
-	{
-		case 1:
-			/* round 1: client name */
-			strncpy(d->ttype_client, term_type, sizeof(d->ttype_client) - 1);
-			d->ttype_client[sizeof(d->ttype_client) - 1] = '\0';
-			/* also set client_name for display */
-			strncpy(d->client_name, term_type, sizeof(d->client_name) - 1);
-			d->client_name[sizeof(d->client_name) - 1] = '\0';
-			break;
+	/* take the first ttype as client name */
+	if (!*d->client_name)
+		strlcpy(d->client_name, term_type, sizeof(d->client_name));
 
-		case 2:
-			/* round 2: terminal type */
-			strncpy(d->ttype_terminal, term_type, sizeof(d->ttype_terminal) - 1);
-			d->ttype_terminal[sizeof(d->ttype_terminal) - 1] = '\0';
-			break;
-
-		case 3:
-		case 4:
-			/* round 3/4: mtts bitvector */
-			if (strncasecmp(term_type, "MTTS", 4) == 0)
-			{
-				parse_mtts_bitvector(d, term_type);
-			}
-			break;
-	}
+	/* MTTS response can come as any entry; typically not first but checking doesn't hurt */
+	if (strncasecmp(term_type, "MTTS", 4) == 0)
+		parse_mtts_bitvector(d, term_type);
 
 	/* request next round */
 	ttype_send_request(d);
@@ -218,13 +191,13 @@ void check_cp437(P_desc d)
 		d->cp437 = 0;
 	else if (d->mtts_flags)
 		d->cp437 = !(d->mtts_flags & MTTS_UTF8);
-	else if (!d->ttype_client[0])
+	else if (!d->client_name[0])
 		d->cp437 = 0;
-	else if (strncasecmp(d->ttype_client, "ZMUD", 4) == 0
-		 || strncasecmp(d->ttype_client, "CMUD", 4) == 0
-		 || strncasecmp(d->ttype_client, "VT", 2) == 0
-		 || strncasecmp(d->ttype_client, "ANSI", 4) == 0
-		 || strncasecmp(d->ttype_client, "DUMB", 4) == 0)
+	else if (strncasecmp(d->client_name, "ZMUD", 4) == 0
+		 || strncasecmp(d->client_name, "CMUD", 4) == 0
+		 || strncasecmp(d->client_name, "VT", 2) == 0
+		 || strncasecmp(d->client_name, "ANSI", 4) == 0
+		 || strncasecmp(d->client_name, "DUMB", 4) == 0)
 	{
 		d->cp437 = 1;
 	}

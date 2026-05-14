@@ -25,8 +25,6 @@
 #define MTTS_TRUECOLOR     256
 #define MTTS_MNES          512
 
-#define MTTS_MAX_ROUNDS 4
-
 /* function prototypes */
 void ttype_negotiate(P_desc d);
 void ttype_handle_negotiation(P_desc d, int cmd);

@@ -210,3 +210,38 @@ void downgrade_string(char *out, const char *in, const unimap &conv)
 	}
 	*out = 0;
 }
+
+void upgrade_cp437_and_dollars(char *out, const char *in)
+{
+	while (*in)
+	{
+		int c = (unsigned char)*in++;
+		if (c < ' ') // controls are illegal, including \n
+			continue;
+		if (c == '$')
+			*out++ = '$';
+		put_utf8(out, cp437_u[c]);
+	}
+	*out = 0;
+}
+
+bool validate_utf8_and_dollars(char *out, const char *in)
+{
+	bool err = false;
+
+	while (*in)
+	{
+		int c = get_utf8(in);
+		if (c < ' ') // controls are illegal, including \n
+			continue;
+		if (c == '$')
+			*out++ = '$';
+		if (c < 127 || ascii[c]) // rule: anything we can downgrade is allowed
+			put_utf8(out, c);
+		else
+			err = true; // complain
+	}
+	*out = 0;
+
+	return err;
+}

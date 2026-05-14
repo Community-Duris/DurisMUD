@@ -2,6 +2,7 @@
 
 // Unicode replacement char
 #define UNI_BAD 0xFFFD
+#define IS_UTF8_TAIL(x) (((x) & 0xc0) == 0x80)
 
 typedef unsigned short ushort;
 
@@ -31,3 +32,6 @@ void put_utf8(char *&d, int v);
 void downgrade_string(char *out, const char *in, const unimap &conv);
 
 extern unimap u_cp437;
+
+void upgrade_cp437_and_dollars(char *out, const char *in);
+bool validate_utf8_and_dollars(char *out, const char *in);
