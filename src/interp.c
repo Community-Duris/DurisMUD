@@ -1484,7 +1484,13 @@ void command_interpreter(P_char ch, char *argument)
 	// mortals may never use the magical newline
 	if (!IS_TRUSTED(ch))
 	{
-		if (!((cmd == CMD_SOCIETY) || (cmd == CMD_CONSTRUCT) || (cmd == CMD_BUY) || (cmd == CMD_RENAME) || (cmd == CMD_TESTCOLOR)))
+		if (!(cmd == CMD_SOCIETY
+		   || cmd == CMD_CONSTRUCT
+		   || cmd == CMD_BUY
+		   || cmd == CMD_RENAME
+		   || cmd == CMD_TESTCOLOR
+		   || cmd == CMD_MAPGLYPHS
+		   ))
 		{
 			for (ch_ptr = argument; *ch_ptr != '\0'; ch_ptr++)
 			{
