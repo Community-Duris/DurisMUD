@@ -1484,15 +1484,6 @@ void command_interpreter(P_char ch, char *argument)
 	// mortals may never use the magical newline
 	if (!IS_TRUSTED(ch))
 	{
-		for (ch_ptr = argument; *ch_ptr != '\0'; ch_ptr++)
-		{
-			if (*ch_ptr == '&' && *(ch_ptr + 1) == 'L')
-			{
-				send_to_char("No mortal may posess the newline!\r\n", ch);
-				return;
-			}
-		}
-
 		if (!((cmd == CMD_SOCIETY) || (cmd == CMD_CONSTRUCT) || (cmd == CMD_BUY) || (cmd == CMD_RENAME) || (cmd == CMD_TESTCOLOR)))
 		{
 			for (ch_ptr = argument; *ch_ptr != '\0'; ch_ptr++)
