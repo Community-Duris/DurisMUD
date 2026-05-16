@@ -1,4 +1,5 @@
 #include <vector>
+#include <functional>
 
 // Unicode replacement char
 #define UNI_BAD 0xFFFD
@@ -23,8 +24,12 @@ public:
 	unimap();
 	unimap(const char16_t[256]);
 	unimap(const char *);
+	unimap(ushort r, const char *);
 	ushort operator[](int c) const;
 	void   set(int c, ushort v);
+	void   foreach(std::function<void(int, ushort)> func) const;
+	void operator+=(const unimap& other);
+	void operator-=(const unimap& other);
 };
 
 int  get_utf8(const char *&s);
@@ -32,6 +37,7 @@ void put_utf8(char *&d, int v);
 void downgrade_string(char *out, const char *in, const unimap &conv);
 
 extern unimap u_cp437;
+extern unimap u_ascii;
 
 void upgrade_cp437_and_dollars(char *out, const char *in);
 bool validate_utf8_and_dollars(char *out, const char *in);
