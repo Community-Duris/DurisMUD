@@ -9353,7 +9353,7 @@ void spell_reveal_true_name(int level, P_char ch, char *arg, int type, P_char vi
 
 void spell_identify(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
-	int  i, currelem, temp, inacc;
+	int  i, currelem, temp;
 	bool found;
 	char Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH], Gbuf3[MAX_STRING_LENGTH];
 	char strarr[STRARR_ELEM][STRARR_LEN];
@@ -9362,21 +9362,6 @@ void spell_identify(int level, P_char ch, char *arg, int type, P_char victim, P_
 	{
 		bzero(strarr, STRARR_ELEM * STRARR_LEN);
 		currelem = 0;
-
-		/* based on intelligence and level of caster, inaccuracies will pop up */
-
-		if (level < 60)
-		{
-			inacc = (110 - GET_C_INT(ch)) + (number(0, 40) - level) + number(0, 3);
-			if (inacc < 0)
-				inacc = 0;
-			if (inacc > 20)
-				inacc = 20;
-		}
-		else
-		{
-			inacc = 0;
-		}
 
 		if (level < 60 && IS_SET(obj->extra_flags, ITEM_NOIDENTIFY))
 		{
@@ -9515,16 +9500,12 @@ void spell_identify(int level, P_char ch, char *arg, int type, P_char victim, P_
 				         MAX_STRING_LENGTH,
 				         "It appears to be a %s these level %d spells:\n",
 				         (GET_ITEM_TYPE(obj) == ITEM_SCROLL) ? "scroll charged with" : "potion that grants",
-				         obj->value[0] + (inacc ? number(-inacc, inacc) : 0));
+				         obj->value[0]);
 				send_to_char(Gbuf1, ch);
 
 				if (obj->value[1] >= 1)
 				{
-					if (inacc && !number(0, 4))
-						i = (obj->value[1] - number(-1, 1));
-					else
-						i = obj->value[1];
-
+					i = obj->value[1];
 					if (i < 1)
 						i = 0;
 					else if (i > LAST_SPELL)
@@ -9536,11 +9517,7 @@ void spell_identify(int level, P_char ch, char *arg, int type, P_char victim, P_
 				}
 				if (obj->value[2] >= 1)
 				{
-					if (inacc && !number(0, 4))
-						i = (obj->value[2] - number(-1, 1));
-					else
-						i = obj->value[2];
-
+					i = obj->value[2];
 					if (i < 1)
 						i = 1;
 					else if (i > LAST_SPELL)
@@ -9552,11 +9529,7 @@ void spell_identify(int level, P_char ch, char *arg, int type, P_char victim, P_
 				}
 				if (obj->value[3] >= 1)
 				{
-					if (inacc && !number(0, 4))
-						i = (obj->value[3] - number(-1, 1));
-					else
-						i = obj->value[3];
-
+					i = obj->value[3];
 					if (i < 1)
 						i = 1;
 					else if (i > LAST_SPELL)
@@ -9580,11 +9553,7 @@ void spell_identify(int level, P_char ch, char *arg, int type, P_char victim, P_
 
 				if (obj->value[3] >= 1)
 				{
-					if (inacc && !number(0, 4))
-						i = (obj->value[3] - number(-1, 1));
-					else
-						i = obj->value[3];
-
+					i = obj->value[3];
 					if (i < 1)
 						i = 1;
 					else if (i > LAST_SPELL)
@@ -9592,7 +9561,7 @@ void spell_identify(int level, P_char ch, char *arg, int type, P_char victim, P_
 
 					sprinttype(i, (const char **)spells, Gbuf2);
 
-					snprintf(Gbuf1, MAX_STRING_LENGTH, "level %d spell \"%s\"\n", obj->value[0] + (inacc ? number(-inacc, inacc) : 0), Gbuf2);
+					snprintf(Gbuf1, MAX_STRING_LENGTH, "level %d spell \"%s\"\n", obj->value[0], Gbuf2);
 					send_to_char(Gbuf1, ch);
 				}
 				break;
