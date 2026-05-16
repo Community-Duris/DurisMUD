@@ -62,14 +62,15 @@ unimap::unimap(const char16_t conv[256])
 	"└┴┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀"                                                                                                                                                                 \
 	"αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²■ "
 
-// superfluous entry because dumb ISO thinks all char arrays are strings
+// superfluous entry because dumb ISO C++ thinks all char arrays are strings
 const char16_t cp437_u[257] = u" ☺☻♥♦♣♠•◘○◙♂♀♪♫☼▶◀↕‼¶§▬↨↑↓→←∟↔▲▼" CP437_PRINTABLE;
 
 // Control characters map to controls or ' '.
 unimap u_cp437(u"       \a\b\t\n  \r             \e    " CP437_PRINTABLE);
 
-unimap ascii("  " // U+00A0 = &nbsp;
-             "!¡ c¢ L£ $¤ Y¥ |¦ $§ \"¨ <« !¬ -­ -¯ 2² 3³ '´ uµ $¶ .· ,¸ 1¹ >» ?¿ AÀ AÁ AÂ AÃ"
+// Downgrade table.
+unimap u_ascii("  " // U+00A0 = &nbsp;
+             "!¡ c¢ L£ $¤ Y¥ |¦ $§ \"¨ <« !¬ -¯ 2² 3³ '´ uµ $¶ .· ,¸ 1¹ >» ?¿ AÀ AÁ AÂ AÃ"
              "AÄ AÅ AÆ CÇ EÈ EÉ EÊ EË IÌ IÍ IÎ IÏ DÐ NÑ OÒ OÓ OÔ OÕ OÖ *× OØ UÙ UÚ UÛ UÜ YÝ"
              "TÞ sß aà aá aâ aã aä aå aæ cç eè eé eê eë iì ií iî iï dð nñ oò oó oô oõ oö /÷"
              "oø uù uú uû uü yý tþ yÿ AĀ"
@@ -91,7 +92,7 @@ unimap ascii("  " // U+00A0 = &nbsp;
              "kʞ Lʟ qʠ ?ʡ hʮ hʯ hʰ hʱ jʲ rʳ rʴ rʵ Rʶ wʷ yʸ 'ʹ \"ʺ `ʻ 'ʼ `ʽ 'ʾ `ʿ <˂ >˃ ^˄ v˅"
              "^ˆ vˇ 'ˊ `ˋ ,ˏ +˖ -˗ ~˜ \"˝ `˞ '˟ \"ˮ -‐"
              "-‑ -‒ -– -— -― |‖ _‗ `‘ '’ ,‚ `‛ \"“ \"” \"„ \"‟ +† $‡ o• +‣ .․ :‥ .… -‧ '′ \"″ `‵"
-             "\"‶ ^‸ <‹ >› ?‽ _‿ *⁂ -⁃ /⁄ [⁅ ]⁆ <⁌ >⁍ *⁎ ;⁏ *⁕ F₣ L₤ W₩ e€ p₱ hℎ"
+             "\"‶ ^‸ <‹ >› ?‽ _‿ *⁂ -⁃ /⁄ [⁅ ]⁆ <⁌ >⁍ *⁎ ;⁏ *⁕ F₣ L₤ W₩ E€ P₱ hℎ"
              "KK AÅ e℮ <← ^↑ >→ v↓ -−"
              "/∕ \\∖ *∗ |∣ ~∼ ~∽ ~≈ ^⌃"
              "v⌄ [⌊ ]⌋ -─"
@@ -100,7 +101,30 @@ unimap ascii("  " // U+00A0 = &nbsp;
              "+┵ +┶ +┷ +┸ +┹ +┺ +┻ +┼ +┽ +┾ +┿ +╀ +╁ +╂ +╃ +╄ +╅ +╆ +╇ +╈ +╉ +╊ +╋ -╌ -╍ |╎"
              "|╏ =═ |║ +╒ +╓ +╔ +╕ +╖ +╗ +╘ +╙ +╚ +╛ +╜ +╝ +╞ +╟ +╠ +╡ +╢ +╣ +╤ +╥ +╦ +╧ +╨"
              "+╩ +╪ +╫ +╬ .╭ .╮ '╯ `╰ /╱ \\╲ X╳ -╴ '╵ -╶ .╷ -╸ '╹ -╺ .╻ -╼ |╽ -╾ |╿ #█ .░ X▒"
-             "#▓ *▪ *▫ ^▲ ^△ ^▴ ^▵ >▶ >▷ >▸ >▹ >► >▻ V▼ V▽ v▾ v▿ <◀ <◁ <◂ <◃ <◄ <◅ o○ O◯ ");
+             "#▓ *▪ *▫ ^▲ ^△ ^▴ ^▵ >▶ >▷ >▸ >▹ >► >▻ V▼ V▽ v▾ v▿ <◀ <◁ <◂ <◃ <◄ <◅ o○ O◯ "
+             "^⌂ @☺ @☻ *☼ *♠ *♣ *♥ *♦");
+
+// the "safe" character set, as it's implemented by all stock Windows fonts, and fonts that
+// follow this recommendation.  Until recently, Windows provided no convenient way to borrow
+// characters from other fonts, thus many clients are effectively limited to these.
+// On the other hand, Linux clients and terminals had this capability since forever, but
+// a character from some other font may look out of place, look misaligned, or even leak out
+// of its cell onto the next.  Thus, WGL-4 is a safe default.
+unimap wgl4(1,
+	"¡¢£¤¥¦§¨©ª«¬-®¯°±²³´µ¶·¸¹º»¼½¾¿"
+	"ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ"
+	"ĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿ"
+	"ŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſ"
+	"ƒǺǻǼǽǾǿˆˇˉ˘˙˚˛˜˝"
+	";΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξο"
+	"πρςστυφχψωϊϋόύώ"
+	"ЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+	"абвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџҐґ"
+	"ẀẁẂẃẄẅỲỳ"
+	"–—―‗‘’‚‛“”„†‡•…‰′″‹›‼‾⁄ⁿ₣₤₧€℅ℓ№™Ω℮⅛⅜⅝⅞←↑→↓↔↕↨"
+	"∂∆∏∑−∕∙√∞∟∩∫≈≠≡≤≥⌂⌐⌠⌡"
+	"─│┌┐└┘├┤┬┴┼═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╪╫╬▀▄█▌▐░▒▓"
+	"■□▪▫▬▲►▼◄◊○●◘◙◦☺☻☼♀♂♠♣♥♦♪♫");
 
 unimap::unimap(const char *in)
 {
@@ -117,6 +141,67 @@ unimap::unimap(const char *in)
 		while (*in == ' ') // spaces for readability
 			in++;
 	}
+}
+
+unimap::unimap(ushort r, const char *in)
+{
+	resize(1);
+
+	while (*in)
+	{
+		int i = get_utf8(in);
+		if (!i)
+			break;
+		set(i, r);
+	}
+}
+
+void unimap::foreach(std::function<void(int, ushort)> func) const
+{
+	ushort r;
+
+	const um128 &G = at(0);
+	for (int s = 0; s < 128; s++)
+	{
+		r = G[s];
+		if (!r)
+			continue;
+		const um128 &S = at(r);
+		for (int p = 0; p < 128; p++)
+		{
+			r = S[p];
+			if (!r)
+				continue;
+			const um128 &P = at(r);
+			for (int c = 0; c < 128; c++)
+			{
+				r = P[c];
+				if (!r)
+					continue;
+				func(s << 14 | p << 7 | c, r);
+			}
+		}
+	}
+}
+
+// add two maps, replacing duplicated entries
+void unimap::operator+=(const unimap& other)
+{
+	other.foreach([this](int c, ushort r)
+	{
+		if (r)
+			this->set(c, r);
+	});
+}
+
+// remove all entries that occur in the other map
+void unimap::operator-=(const unimap& other)
+{
+	other.foreach([this](int c, ushort r)
+	{
+		if (r)
+			this->set(c, 0);
+	});
 }
 
 int get_utf8(const char *&str)
@@ -202,7 +287,7 @@ void downgrade_string(char *out, const char *in, const unimap &conv)
 		int r = conv[c];
 		if (!r)
 		{
-			r = ascii[c]; // downgrade by dropping accents, etc
+			r = u_ascii[c]; // downgrade by dropping accents, etc
 			if (!r)
 				r = '?';
 		}
@@ -236,7 +321,7 @@ bool validate_utf8_and_dollars(char *out, const char *in)
 			continue;
 		if (c == '$')
 			*out++ = '$';
-		if (c < 127 || ascii[c]) // rule: anything we can downgrade is allowed
+		if (c < 127 || u_ascii[c] || wgl4[c]) // rule: WGL-4 and anything we can downgrade is allowed
 			put_utf8(out, c);
 		else
 			err = true; // complain
