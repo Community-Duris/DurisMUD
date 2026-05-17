@@ -3622,7 +3622,6 @@ void spell_wellness(int level, P_char ch, char *arg, int type, P_char victim, P_
 			}
 
 			heal(tch, ch, gain, GET_MAX_HIT(tch));
-			//      healCondition(tch, gain);
 			update_pos(tch);
 			send_to_char("&+WYou feel slightly better.\n", tch);
 		}
@@ -3658,7 +3657,6 @@ void spell_lesser_mending(int level, P_char ch, char *arg, int type, P_char vict
 	act("$N &+wis surrounded by a flashing &+ggreen &+waura!", FALSE, ch, 0, victim, TO_NOTVICT);
 
 	heal(victim, ch, gain, GET_MAX_HIT(victim));
-	//  healCondition(victim, gain);
 	update_pos(victim);
 
 	send_to_char("&+WYou feel a bit better.\n", victim);
@@ -3689,7 +3687,6 @@ void spell_mending(int level, P_char ch, char *arg, int type, P_char victim, P_o
 	act("$N &+wis surrounded by a glowing &+Ggreen &+waura!", FALSE, ch, 0, victim, TO_NOTVICT);
 
 	heal(victim, ch, gain, GET_MAX_HIT(victim));
-	//  healCondition(victim, gain);
 
 	update_pos(victim);
 }
@@ -3746,7 +3743,6 @@ void spell_greater_mending(int level, P_char ch, char *arg, int type, P_char vic
 	}
 
 	heal(victim, ch, gain, GET_MAX_HIT(victim));
-	//  healCondition(victim, gain);
 	update_pos(victim);
 
 	act("$N &+wshudders as an immense rush of &+Glife &+wflows into $S body!&n", FALSE, ch, 0, victim, TO_CHAR);

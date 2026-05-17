@@ -27,7 +27,6 @@
 #include "justice.h"
 #include "map.h"
 #include "necromancy.h"
-#include "new_combat_def.h"
 #include "nexus_stones.h"
 #include "range.h"
 #include "specs.prototypes.h"
@@ -2543,11 +2542,7 @@ int dryad(P_char ch, P_char pl, int cmd, char *arg)
 							snprintf(Gbuf4, MAX_STRING_LENGTH, "You dive inbetween your dryad and %s, taking up the fight!\r\n", (IS_NPC(vict) ? vict->player.short_descr : GET_NAME(vict)));
 							send_to_char(Gbuf4, tmp_ch);
 							stop_fighting(vict);
-#ifndef NEW_COMBAT
 							hit(tmp_ch, vict, tmp_ch->equipment[PRIMARY_WEAPON]);
-#else
-							hit(tmp_ch, vict, tmp_ch->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(tmp_ch), TRUE, FALSE);
-#endif
 							return (TRUE);
 						}
 					}
@@ -12479,7 +12474,6 @@ int conj_specpet_golem(P_char ch, P_char pl, int cmd, char *arg)
 				healpoints = (number(1, 30));
 				CharWait(vict, PULSE_VIOLENCE * 1);
 				GET_HIT(vict) -= healpoints;
-				healCondition(vict, healpoints);
 				update_pos(vict);
 			}
 		}
@@ -12645,7 +12639,6 @@ int conj_specpet_triton(P_char ch, P_char pl, int cmd, char *arg)
 			if ((healpoints + GET_HIT(ch)) >= GET_MAX_HIT(ch))
 				healpoints = MAX(0, GET_MAX_HIT(ch) - GET_HIT(ch) - dice(1, 4));
 			GET_HIT(ch) += healpoints;
-			healCondition(ch, healpoints);
 			update_pos(ch);
 			act("$n&+B stretches &+bout and lets loose a &+Btriumphant &+Whowl&+b!", FALSE, ch, 0, vict, TO_ROOM);
 			act("&+bAbsorbing &+Bmoisture &+bfrom its surroundings $n &+brebuilds its &+Bbody.&+b!", FALSE, ch, 0, vict, TO_ROOM);
@@ -12673,7 +12666,6 @@ int conj_specpet_undine(P_char ch, P_char pl, int cmd, char *arg)
 		if ((GET_HIT(vict) - healpoints) <= 0)
 			healpoints = (GET_HIT(vict) - dice(1, 4));
 		GET_HIT(vict) -= healpoints;
-		healCondition(vict, healpoints);
 		update_pos(vict);
 		act("&+bWith &=LBlightning&N&+B speed $n&+b flows forward, choking &+B$N&+b!", FALSE, ch, 0, vict, TO_NOTVICT);
 		act("&+bWith &=LBlightning&N&+B speed $n&+b flows forward, choking &+BYOU&+b!", FALSE, ch, 0, vict, TO_VICT);

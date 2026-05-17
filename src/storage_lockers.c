@@ -2948,8 +2948,6 @@ static P_char load_locker_char(P_char ch, char *esc_locker_name, int bValidateAc
 	vict->next     = character_list;
 	character_list = vict;
 
-	setCharPhysTypeInfo(vict);
-
 	// saving info for teleport return command
 	vict->specials.was_in_room = vict->in_room;
 

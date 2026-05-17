@@ -28,7 +28,6 @@
 #include "map.h"
 #include "mm.h"
 #include "necromancy.h"
-#include "new_combat_def.h"
 #include "nexus_stones.h"
 #include "objmisc.h"
 #include "paladins.h"
@@ -675,11 +674,7 @@ bool MobCastSpell(P_char ch, P_char victim, P_obj object, int spl, int lvl)
 					MobStartFight(tch, ch);
 				else if (tch->only.pc->aggressive >= 0 && tch->only.pc->aggressive < GET_HIT(tch))
 				{
-#ifndef NEW_COMBAT
 					hit(tch, ch, tch->equipment[PRIMARY_WEAPON]);
-#else
-					hit(tch, ch, tch->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(tch), TRUE, FALSE);
-#endif
 				}
 
 				if (!char_in_list(ch) || !char_in_list(tch))
@@ -5288,11 +5283,7 @@ bool MobWarrior(P_char ch)
 			if ((tch != ch) && IS_FIGHTING(tch) && ((GET_OPPONENT(tch) == ch) || (GET_OPPONENT(ch) == tch)))
 			{
 				if (number(0, 135) > MAX(99, ((GET_LEVEL(ch) - 10) * 9)))
-#ifndef NEW_COMBAT
 					hit(ch, tch, ch->equipment[PRIMARY_WEAPON]);
-#else
-					hit(ch, tch, ch->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(ch), TRUE, FALSE);
-#endif
 			}
 		}
 		if (char_in_list(ch))
@@ -7717,11 +7708,7 @@ void mobact_rescueHandle(P_char mob, P_char attacker)
 			else
 				snprintf(buf, MAX_STRING_LENGTH, "Hey! That's my pal you're messing with!\r\n");
 			mobsay(pl, buf);
-#ifndef NEW_COMBAT
 			hit(pl, attacker, pl->equipment[PRIMARY_WEAPON]);
-#else
-			hit(pl, attacker, pl->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(pl), TRUE, FALSE);
-#endif
 
 			if (!char_in_list(attacker) || (attacker->in_room != pl->in_room))
 				return;

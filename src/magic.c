@@ -36,7 +36,6 @@
 #include "map.h"
 #include "mm.h"
 #include "necromancy.h"
-#include "new_combat_def.h"
 #include "objmisc.h"
 #include "outposts.h"
 #include "sound.h"
@@ -3296,7 +3295,6 @@ void spell_entropy_storm(int level, P_char ch, char *arg, int type, P_char victi
 		{
 			healpoints = 70;
 			heal(tch, ch, healpoints, GET_MAX_HIT(tch));
-			// healCondition(tch, healpoints);
 			update_pos(tch);
 			send_to_char("&+LYou feel the black vapors infusing you with negative energy!\n", tch);
 		}
@@ -5861,7 +5859,6 @@ void spell_cure_serious(int level, P_char ch, char *arg, int type, P_char victim
 
 	healpoints = dice(3, 8);
 	heal(victim, ch, healpoints, GET_MAX_HIT(victim));
-	// healCondition(victim, healpoints);
 
 	send_to_char("&+WYou feel a lot better!\n", victim);
 
@@ -5874,7 +5871,6 @@ void spell_cure_critic(int level, P_char ch, char *arg, int type, P_char victim,
 
 	healpoints = dice(3, 10) + 10;
 	heal(victim, ch, healpoints, GET_MAX_HIT(victim));
-	// healCondition(victim, healpoints);
 	send_to_char("&+WYou feel MUCH better!\n", victim);
 	update_pos(victim);
 }
@@ -5885,7 +5881,6 @@ void spell_cure_light(int level, P_char ch, char *arg, int type, P_char victim, 
 
 	healpoints = number(2, 10);
 	heal(victim, ch, healpoints, GET_MAX_HIT(victim));
-	// healCondition(victim, healpoints);
 	update_pos(victim);
 	send_to_char("&+WYou feel a little better!\n", victim);
 }
@@ -8180,11 +8175,7 @@ void charm_generic(int level, P_char ch, P_char victim)
 			/* if they fail, wham! */
 			remember(victim, ch);
 
-#ifndef NEW_COMBAT
 			hit(victim, ch, ch->equipment[PRIMARY_WEAPON]);
-#else
-			hit(victim, ch, victim->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(victim), TRUE, FALSE);
-#endif
 		}
 		return;
 	}
@@ -11522,7 +11513,6 @@ void spell_mend_soul(int level, P_char ch, char *arg, int type, P_char victim, P
 
 	heal(victim, ch, healpoints, GET_MAX_HIT(victim));
 
-	// healCondition(victim, healpoints);
 	if (healpoints)
 		send_to_char("&+WHoly &+Renergy&n flows into you from the &+Wh&+yea&+Wv&+Ye&+Wns&n, mending your wounds!\n", victim);
 	if (victim != ch && healpoints)
@@ -11557,7 +11547,6 @@ void spell_heal_undead(int level, P_char ch, char *arg, int type, P_char victim,
 
 	heal(victim, ch, healpoints, GET_MAX_HIT(victim));
 
-	// healCondition(victim, healpoints);
 	if (healpoints)
 	{
 		send_to_char("&+WYou feel the powers of darkness strengthen you!\n", victim);
@@ -11591,7 +11580,6 @@ void spell_greater_heal_undead(int level, P_char ch, char *arg, int type, P_char
 
 	heal(victim, ch, healpoints, GET_MAX_HIT(victim));
 
-	// healCondition(victim, healpoints);
 	if (healpoints)
 		send_to_char("&+WYou feel the powers of darkness flow into you!!\n", victim);
 	if (victim != ch && healpoints)

@@ -15,7 +15,6 @@
 #include "objmisc.h"
 #include <string.h>
 #include "damage.h"
-#include "new_combat.h"
 
 extern P_room world; /* dyn alloc'ed array of rooms     */
 // extern int rev_dir[];
@@ -1149,177 +1148,12 @@ float getMaterialDeflection(const int mat /*P_obj obj */, const P_obj weap)
 }
 
 /*
- * getArmorDeflection : takes material, craftsmanship, damage resistance
- *                      bonus, and thickness into account
- */
-
-float getArmorDeflection(const P_obj armor, const P_obj weap)
-{
-	float mod_def, mod = 0.0;
-	int   craft;
-
-	if (!armor || ((GET_ITEM_TYPE(armor) != ITEM_ARMOR) && (GET_ITEM_TYPE(armor) != ITEM_SHIELD)))
-		return getMaterialDeflection(armor->material, weap);
-
-	mod_def = getMaterialDeflection(armor->material, weap);
-
-	/* max of 5% + 7% + 5% for a total of 17% added possible */
-
-	/* first, thickness - doesn't affect deflection much */
-
-	if (GET_ITEM_TYPE(armor) == ITEM_ARMOR)
-	{
-		switch (armor->value[3])
-		{
-			case ARMOR_THICKNESS_VERY_THIN:
-				mod -= 0.05;
-				break;
-
-			case ARMOR_THICKNESS_THIN:
-				mod -= 0.02;
-				break;
-
-			case ARMOR_THICKNESS_THICK:
-				mod += 0.02;
-				break;
-
-			case ARMOR_THICKNESS_VERY_THICK:
-				mod += 0.05;
-				if (mod_def < 0.01)
-					mod_def = 0.01;
-				break;
-		}
-	}
-	else if (GET_ITEM_TYPE(armor) == ITEM_SHIELD)
-	{
-		switch (armor->value[4])
-		{
-			case ARMOR_THICKNESS_VERY_THIN:
-				mod -= 0.05;
-				break;
-
-			case ARMOR_THICKNESS_THIN:
-				mod -= 0.02;
-				break;
-
-			case ARMOR_THICKNESS_THICK:
-				mod += 0.02;
-				break;
-
-			case ARMOR_THICKNESS_VERY_THICK:
-				mod += 0.05;
-				if (mod_def < 0.01)
-					mod_def = 0.01;
-				break;
-		}
-	}
-	/* next, craftsmanship (should be 0-15) */
-
-	mod += (BOUNDED(OBJCRAFT_LOWEST, armor->craftsmanship, OBJCRAFT_HIGHEST) - OBJCRAFT_AVERAGE) * 0.01;
-
-	/* finally let's apply a little damage resistance bonus (0.0-0.05) */
-
-	//  mod += ((float) BOUNDED(0, armor->damres_bonus, 100) / 2000.0);
-
-	mod += mod_def;
-	if (mod < 0.0)
-		mod = 0.0;
-	if (mod > MAX_ARMOR_DEFLECTION)
-		mod = MAX_ARMOR_DEFLECTION;
-
-	return (ARMOR_DEFLECTION_MULT * mod);
-}
-
-/*
  * getMaterialAbsorbtion : let's make this easy and just use the deflection
  *                         numbers times two..  if necessary it can be
  *                         broken down individually later
  */
 
 float getMaterialAbsorbtion(const int mat, /*P_obj obj, */ const P_obj weap) { return (BOUNDED(0, (int)(getMaterialDeflection(mat, weap) * 2), 1)); }
-
-/*
- * getArmorAbsorbtion : takes material, craftsmanship, damage resistance
- *                      bonus, and thickness into account
- */
-
-float getArmorAbsorbtion(const P_obj armor, const P_obj weap)
-{
-	float mod_def, mod = 0.0;
-	int   craft;
-
-	if (!armor || ((GET_ITEM_TYPE(armor) != ITEM_ARMOR) && (GET_ITEM_TYPE(armor) != ITEM_SHIELD)))
-		return getMaterialAbsorbtion(armor->material, weap);
-
-	mod_def = getMaterialAbsorbtion(armor->material, weap);
-
-	/* max of 10% + 14% + 10% for a highest multiplier of 34% possible */
-
-	/* first, thickness - affects absorbtion a bit */
-
-	if (GET_ITEM_TYPE(armor) == ITEM_ARMOR)
-	{
-		switch (armor->value[3])
-		{
-			case ARMOR_THICKNESS_VERY_THIN:
-				mod -= 0.10;
-				break;
-
-			case ARMOR_THICKNESS_THIN:
-				mod -= 0.05;
-				break;
-
-			case ARMOR_THICKNESS_THICK:
-				mod += 0.05;
-				if (mod_def < 0.01)
-					mod_def = 0.01;
-				break;
-
-			case ARMOR_THICKNESS_VERY_THICK:
-				mod += 0.10;
-				if (mod_def < 0.02)
-					mod_def = 0.02;
-				break;
-		}
-	}
-	else if (GET_ITEM_TYPE(armor) == ITEM_SHIELD)
-	{
-		switch (armor->value[4])
-		{
-			case ARMOR_THICKNESS_VERY_THIN:
-				mod -= 0.10;
-				break;
-
-			case ARMOR_THICKNESS_THIN:
-				mod -= 0.05;
-				break;
-
-			case ARMOR_THICKNESS_THICK:
-				mod += 0.05;
-				if (mod_def < 0.01)
-					mod_def = 0.01;
-				break;
-
-			case ARMOR_THICKNESS_VERY_THICK:
-				mod += 0.10;
-				if (mod_def < 0.02)
-					mod_def = 0.02;
-				break;
-		}
-	}
-	/* next, craftsmanship (should be 0-15) */
-
-	mod += (BOUNDED(OBJCRAFT_LOWEST, armor->craftsmanship, OBJCRAFT_HIGHEST) - OBJCRAFT_AVERAGE) * 0.02;
-
-	/* finally let's apply a little damage resistance bonus (0.0-0.10) */
-
-	//  mod += ((float) BOUNDED(0, armor->damres_bonus, 100) / 1000.0);
-
-	if (mod < 0.0)
-		mod = 0.0;
-
-	return (ARMOR_ABSORBTION_MULT * BOUNDED(0, (int)(mod_def * (1.0 + mod)), (int)MAX_ARMOR_ABSORBTION));
-}
 
 /*
  * getMaterialMaxSP

@@ -4473,8 +4473,6 @@ void do_layhand(P_char ch, char *argument, int cmd)
 
 	heal(vict, ch, healpoints, GET_MAX_HIT(vict));
 
-	healCondition(vict, healamt);
-
 	update_pos(vict);
 
 	if (IS_AFFECTED4(vict, AFF4_CARRY_PLAGUE))

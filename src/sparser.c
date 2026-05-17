@@ -27,8 +27,6 @@
 #include "guildhall.h"
 #include "justice.h"
 #include "mm.h"
-#include "new_combat.h"
-#include "new_combat_def.h"
 #include "profile.h"
 #include "ships.h"
 #include "sound.h"
@@ -1862,11 +1860,7 @@ bool check_mob_retaliate(P_char ch, P_char tar_char, int spl)
 			}
 			else
 			{
-#ifndef NEW_COMBAT
 				hit(tch, ch, tch->equipment[PRIMARY_WEAPON]);
-#else
-				hit(tch, ch, tch->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(tch), TRUE, FALSE);
-#endif
 			}
 			if (!IS_ALIVE(ch) || !char_in_list(ch))
 			{

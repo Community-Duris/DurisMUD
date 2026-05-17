@@ -22,7 +22,6 @@
 #include "map.h"
 #include "mm.h"
 #include "necromancy.h"
-#include "new_combat_def.h"
 #include "objmisc.h"
 #include "outposts.h"
 #include "sound.h"

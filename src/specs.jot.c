@@ -232,7 +232,6 @@ int mistweave(P_obj obj, P_char ch, int cmd, char *arg)
 				dodamage = (GET_HIT(vict) - dice(1, 4));
 			}
 			GET_HIT(vict) -= dodamage;
-			healCondition(vict, dodamage);
 			update_pos(vict);
 			act("&+mThe &+Lblack smoke &+mengulfs $N&+m!", FALSE, ch, 0, vict, TO_NOTVICT);
 			act("&+mThe &+Lblack smoke &+mengulfs you&+m!", FALSE, ch, 0, vict, TO_VICT);
@@ -259,7 +258,6 @@ int mistweave(P_obj obj, P_char ch, int cmd, char *arg)
 						dodamage = (GET_HIT(tch) - dice(1, 4));
 					}
 					GET_HIT(tch) -= dodamage;
-					healCondition(tch, dodamage);
 					update_pos(tch);
 				}
 			}

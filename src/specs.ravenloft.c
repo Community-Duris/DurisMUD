@@ -216,12 +216,7 @@ int strahd_charm(P_char strahd, P_char charmie, int cmd, char *arg)
                        short_descr : GET_NAME(vict)));
               send_to_char(Gbuf4, tmp_ch);
               stop_fighting(vict);
-#ifndef NEW_COMBAT
               hit(tmp_ch, vict, tmp_ch->equipment[PRIMARY_WEAPON]);
-#else
-              hit(tmp_ch, vict, tmp_ch->equipment[WIELD], TYPE_UNDEFINED,
-                  getBodyTarget(tmp_ch), TRUE, FALSE);
-#endif
               return (TRUE);
             }
           }

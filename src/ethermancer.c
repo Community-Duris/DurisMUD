@@ -995,8 +995,6 @@ void spell_greater_ethereal_recharge(int level, P_char ch, char *arg, int type, 
 	healpoints = number(150, (GET_LEVEL(ch) * 5));
 	heal(victim, ch, healpoints, GET_MAX_HIT(victim));
 
-	healCondition(victim, healpoints);
-
 	if (victim != ch)
 	{
 		act("$n reaches out at $N, touching $M. ", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -1029,8 +1027,6 @@ void spell_ethereal_recharge(int level, P_char ch, char *arg, int type, P_char v
 
 	healpoints = MIN(150, dice(5, level));
 	heal(victim, ch, healpoints, GET_MAX_HIT(victim));
-
-	healCondition(victim, healpoints);
 
 	if (victim != ch)
 	{

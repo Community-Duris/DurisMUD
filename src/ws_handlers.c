@@ -1600,7 +1600,6 @@ void ws_cmd_create_character(struct descriptor_data *d, cJSON *data)
 	/* actual character creation */
 	extern bool pfile_exists(const char *dir, char *name);
 	extern void clear_char(P_char ch);
-	extern void setCharPhysTypeInfo(P_char ch);
 	extern void init_char(P_char ch);
 	extern void add_char_to_account(P_desc d);
 	extern int  writeCharacter(P_char ch, int type, int room);
@@ -1661,7 +1660,6 @@ void ws_cmd_create_character(struct descriptor_data *d, cJSON *data)
 		d->character->only.pc             = (struct pc_only_data *)mm_get(dead_pconly_pool);
 		d->character->only.pc->aggressive = -1;
 		d->character->desc                = d;
-		setCharPhysTypeInfo(d->character);
 	}
 
 	ch = d->character;

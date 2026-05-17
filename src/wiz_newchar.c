@@ -33,7 +33,6 @@ void do_newchar(P_char ch, char *argument, int cmd)
 	extern int   writeCharacter(P_char ch, int type, int room);
 	extern void  clear_char(P_char ch);
 	extern void  init_char(P_char ch);
-	extern void  setCharPhysTypeInfo(P_char ch);
 	extern char *mysql_str(const char *str, char *buf);
 
 	char   arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
@@ -334,9 +333,6 @@ void do_newchar(P_char ch, char *argument, int cmd)
 			}
 		}
 	}
-
-	// set physical type info
-	setCharPhysTypeInfo(newch);
 
 	// save character to db - this assigns auto-increment pid
 	if (!writeCharacter(newch, RENT_QUIT, NOWHERE))

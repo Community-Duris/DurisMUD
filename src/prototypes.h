@@ -22,7 +22,6 @@
 #include <string>
 #include "account.h"
 #include "mail.h"
-#include "new_combat_def.h"
 using namespace std;
 
 // The below line will abuse player times in game, and use it to eq-wipe every player in the game.
@@ -971,18 +970,14 @@ void   die(P_char, P_char);
 void   do_trophy(P_char, char *, int);
 void   group_gain(P_char, P_char);
 float  group_exp_modifier(P_char ch);
-#ifndef NEW_COMBAT
 bool hit(P_char, P_char, P_obj, int * = NULL);
 int  chance_to_hit(P_char, P_char, int, P_obj);
 bool weapon_proc(P_obj, P_char, P_char);
 int  calculate_ac(P_char);
-#endif
 void  load_messages(void);
 P_obj make_corpse(P_char, int);
 void  make_bloodstain(P_char);
-#ifndef NEW_COMBAT
 void perform_violence(void);
-#endif
 void                  set_fighting(P_char, P_char);
 bool                  set_fighting(P_char, P_char, bool);
 void                  set_destroying(P_char, P_obj);
@@ -1985,37 +1980,6 @@ bool                                   pfile_exists(const char *, char *);
 void                                   event_autosave(P_char, P_char, P_obj, void *);
 void                                   update_ingame_racewar(int racewar);
 
-/* new_combat.c */
-/*
-int pick_a_arm(P_char);
-int pick_a_head(P_char);
-int pick_a_limb(P_char);
-int pick_a_body(P_char);
-int pick_a_any(P_char);
-int pick_a_leg(P_char);
-*/
-int calcChDamagetoVictwithInnateArmor(
-	P_char ch, P_char victim, P_obj weap, const int dam, const int loc, const int specific_body_loc, int *damDefl, int *damAbsorb, int *innateArmorBlocks, int *weapDamage);
-int calcChDamagetoVictwithArmor(
-	P_char ch, P_char victim, P_obj weap, const int dam, const int body_loc, const int specific_body_loc, P_obj *armor_damaged, int *damDefl, int *damAbsorb, int *armorBlocks, int *weapDamage);
-void displayWeaponDamage(const int weap_type, const P_char ch, const P_obj object);
-int  applyDamagetoObject(P_char ch, P_obj object, const unsigned int dam);
-void victParry(const P_char ch, const P_char victim, P_obj weapon, const int body_loc_target, const int parryrand, const int chance);
-void victDodge(const P_char ch, const P_char victim, const int weaptype, const int body_loc_target, const int dodgerand, const int chance);
-int  getBodypartWeight(const P_char vict, const int loc);
-void createBodypartinRoom(const int room, const int loc, const char *bodypart, const P_char vict);
-/*int victLostLowerArm(P_char victim, const int loc);*/
-int  checkEffectsofLocDamage(P_char ch, P_char victim, const int loc, const int dam);
-int  victDamage(P_char ch, P_char victim, const int barehanded, const int weaptype, const int dam, const int loc);
-void victMiss(const P_char ch, const P_char victim, const int weaptype, const int loc, const int barehanded);
-int  getBodyTarget(const P_char ch);
-void displayArmorAbsorbedAllDamageMessage(const P_char ch, const P_char victim, const int barehanded, const int weaptype, const int body_loc_target, const P_obj armor_hit);
-
-#ifdef NEW_COMBAT
-int  hit(P_char, P_char, P_obj, const int, const int, const int, const int);
-void perform_violence(void);
-#endif
-
 int stat_shops(int, P_char, int, char *);
 
 /* necromancy.c */
@@ -2025,129 +1989,6 @@ int  can_raise_greater_draco(P_char ch);
 void spell_corpseform(int, P_char, char *, int, P_char, P_obj);
 void event_corpseform_wearoff(P_char, P_char, P_obj, void *);
 void spell_undead_to_death(int, P_char, char *, int, P_char, P_obj);
-
-/* new_combat_bpdam.c */
-
-int victDamagedHead(P_char ch, P_char vict, const int loc, const int dam);
-int victLostHead(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedEye(P_char ch, P_char vict, const int loc, const int dam);
-int victLostEye(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedEar(P_char ch, P_char vict, const int loc, const int dam);
-int victLostEar(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedNeck(P_char ch, P_char vict, const int loc, const int dam);
-int victLostNeck(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedUpperTorso(P_char ch, P_char vict, const int loc, const int dam);
-int victLostUpperTorso(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedLowerTorso(P_char ch, P_char vict, const int loc, const int dam);
-int victLostLowerTorso(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedUpperArm(P_char ch, P_char vict, const int loc, const int dam);
-int victLostUpperArm(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedLowerArm(P_char ch, P_char vict, const int loc, const int dam);
-int victLostLowerArm(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedElbow(P_char ch, P_char vict, const int loc, const int dam);
-int victLostElbow(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedWrist(P_char ch, P_char vict, const int loc, const int dam);
-int victLostWrist(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedHand(P_char ch, P_char vict, const int loc, const int dam);
-int victLostHand(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedUpperLeg(P_char ch, P_char vict, const int loc, const int dam);
-int victLostUpperLeg(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedLowerLeg(P_char ch, P_char vict, const int loc, const int dam);
-int victLostLowerLeg(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedKnee(P_char ch, P_char vict, const int loc, const int dam);
-int victLostKnee(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedFoot(P_char ch, P_char vict, const int loc, const int dam);
-int victLostFoot(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedAnkle(P_char ch, P_char vict, const int loc, const int dam);
-int victLostAnkle(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedChin(P_char ch, P_char vict, const int loc, const int dam);
-int victLostChin(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedShoulder(P_char ch, P_char vict, const int loc, const int dam);
-int victLostShoulder(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedBody(P_char ch, P_char vict, const int loc, const int dam);
-int victLostBody(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedWing(P_char ch, P_char vict, const int loc, const int dam);
-int victLostWing(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedBeak(P_char ch, P_char vict, const int loc, const int dam);
-int victLostBeak(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedJoint(P_char ch, P_char vict, const int loc, const int dam);
-int victLostJoint(P_char ch, P_char vict, const int loc, const int dam);
-int victDamagedEyestalk(P_char ch, P_char vict, const int loc, const int dam);
-int victLostEyestalk(P_char ch, P_char vict, const int loc, const int dam);
-
-/* new_combat_user.c */
-
-const char *getBodyLocColorPercent(const int percent);
-void        display_condition_body_loc(const P_char ch, const P_char vict, const int loc);
-void        display_condition_paired_body_loc(const P_char ch, const P_char vict, const int loc, const int loc2);
-void        do_condition(P_char ch, char *argument, int cmd);
-
-/* new_combat_util.c */
-
-/*int getTopLoc(int);*/
-void healCondition(P_char, int);
-void regenCondition(P_char, int);
-int  racePhysHumanoid(const int race);
-int  racePhysFourArmedHumanoid(const int race);
-int  racePhysQuadruped(const int race);
-int  racePhysCentaur(const int race);
-int  racePhysBird(const int race);
-int  racePhysWingedHumanoid(const int race);
-int  racePhysWingedQuadruped(const int race);
-int  racePhysNoExtremities(const int race);
-int  racePhysInsectoid(const int race);
-int  racePhysArachnid(const int race);
-int  racePhysBeholder(const int race);
-int  getNumbBodyLocsbyRace(const int race);
-int  getNumbBodyLocsbyPhysType(const int physType);
-int  getPhysTypebyRace(const int race);
-int  bodyLocisUpperArms(const int physType, const int loc);
-int  bodyLocisUpperWrists(const int physType, const int loc);
-int  bodyLocisUpperHands(const int physType, const int loc);
-int  bodyLocisHead(const int physType, const int loc);
-int  bodyLocisChin(const int physType, const int loc);
-int  bodyLocisLeftEye(const int physType, const int loc);
-int  bodyLocisRightEye(const int physType, const int loc);
-int  bodyLocisEar(const int physType, const int loc);
-int  bodyLocisNeck(const int physType, const int loc);
-int  bodyLocisUpperTorso(const int physType, const int loc);
-int  bodyLocisLowerTorso(const int physType, const int loc);
-int  bodyLocisUpperShoulders(const int physType, const int loc);
-int  bodyLocisLegs(const int physType, const int loc);
-int  bodyLocisFeet(const int physType, const int loc);
-int  bodyLocisLowerArms(const int physType, const int loc);
-int  bodyLocisLowerWrists(const int physType, const int loc);
-int  bodyLocisLowerHands(const int physType, const int loc);
-int  bodyLocisHorseBody(const int physType, const int loc);
-int  bodyLocisRearLegs(const int physType, const int loc);
-int  bodyLocisRearFeet(const int physType, const int loc);
-
-const char *getBodyLocStrn(const int loc, const P_char ch);
-const int   getBodyLocMaxHP(const P_char ch, const int loc);
-int         getBodyLocCurrHP(const P_char ch, const int loc);
-int         getCharToHitValClassandLevel(const P_char ch);
-int         getChartoHitSkillMod(const int wpn_skl_lvl);
-int         getVictimtoHitMod(const P_char ch, const P_char victim);
-int         bodyLocisLow(const int body_loc_target);
-int         bodyLocisMiddle(const int body_loc_target);
-int         bodyLocisHigh(const int body_loc_target);
-int         getBodyLocTargettingtoHitMod(const P_char ch, const P_char victim, const int body_loc_target, const int weaptype);
-const char *getWeaponUseString(const int weaptype);
-const char *getWeaponHitVerb(const int weaptype, const int tochar);
-int         getWeaponSkillNumb(const P_obj weapon);
-int         getCharWeaponSkillLevel(const P_char, const P_obj);
-/*
-int WeaponSkill_num(const P_char ch);
-*/
-int         getNPCweaponSkillLevel(const P_char ch, const int wpn_skill);
-int         canCharDodgeParry(const P_char vict, const P_char attacker);
-char        targetisArms(const int body_loc);
-char        targetisHands(const int body_loc);
-int         calcChDamagetoVict(P_char ch, P_char victim, P_obj weap, const int body_loc, const int wpn_skl, const int wpn_skl_lvl, const int hit_type, const int crit_hit);
-int         getCharParryVal(const P_char vict, const P_char attacker, const int body_loc_target, const P_obj weapon);
-const char *getParryEaseString(const int passedby, const int tochar);
-int         getCharDodgeVal(const P_char vict, const P_char attacker, const int body_loc_target, const P_obj weapon);
-const char *getDodgeEaseString(const int passedby, const int tochar);
 
 /* new_skills.c */
 
@@ -2990,7 +2831,6 @@ int       GET_CHAR_SKILL_P(P_char, int);
 char     *get_class_string(P_char, char *);
 void      broadcast_to_arena(const char *, P_char, P_char, int);
 void      remove_plushit_bits(P_char mob);
-void      setCharPhysTypeInfo(P_char);
 int       is_introd(P_char, P_char);
 void      add_intro(P_char, P_char);
 void      purge_old_intros(P_char);

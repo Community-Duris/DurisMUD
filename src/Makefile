@@ -157,7 +157,6 @@ OBJS =  $(SHIP_OBJS) \
 				 name_gen.o \
 				 nanny.o \
 				 necromancy.o \
-				 new_combat_util.o \
 				 new_skills.o \
 				 nq.o \
 				 objconv.o \

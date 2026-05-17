@@ -9036,7 +9036,6 @@ int fumblegaunts(P_obj obj, P_char ch, int cmd, char *arg)
 			act("&+L$n's $q blurs as it strikes you.", FALSE, ch, obj, vict, TO_VICT);
 			act("&+L$n's $q blurs as it strikes&N $N.", FALSE, ch, obj, vict, TO_NOTVICT);
 #endif
-#ifndef NEW_COMBAT
 			if (GET_OPPONENT(ch))
 				hit(ch, GET_OPPONENT(ch), ch->equipment[PRIMARY_WEAPON]);
 			if (GET_OPPONENT(ch))
@@ -9047,7 +9046,6 @@ int fumblegaunts(P_obj obj, P_char ch, int cmd, char *arg)
 				hit(ch, GET_OPPONENT(ch), ch->equipment[PRIMARY_WEAPON]);
 			if (GET_OPPONENT(ch))
 				hit(ch, GET_OPPONENT(ch), ch->equipment[PRIMARY_WEAPON]);
-#endif
 		}
 		else
 		{

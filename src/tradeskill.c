@@ -30,7 +30,6 @@
 #include "justice.h"
 #include "map.h"
 #include "mm.h"
-#include "new_combat_def.h"
 #include "objmisc.h"
 #include "sound.h"
 #include "specs.barovia.h"

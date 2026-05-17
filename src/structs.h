@@ -1165,20 +1165,9 @@ struct char_point_data
 	sh_int max_vitality;
 	sh_int max_ward;
 
-	/* values for storing damage done to each body part - maximums are
-	   determined by max hp of player - body location stuff is currently
-	   in new_combat.h */
-
-#ifdef NEW_COMBAT
-	sh_int *location_hit; /* dynamically allocated based on race - no need to
-	                         store numb of elements since it's static for race type */
-#endif
-
 	sh_int delay_move; /* for out of breath stuff */
-#if 1
 	sh_int base_armor; /* Mainly for mobs, PC is always 100  */
 	sh_int curr_armor; /* current armor class  */
-#endif
 	int cash[4];  /* Money carried  */
 	int curr_exp; /* The current experience of the player       */
 

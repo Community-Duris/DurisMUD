@@ -600,8 +600,6 @@ void event_hit_regen(P_char ch, P_char victim, P_obj obj, void *data)
 	}
 #endif
 
-	healCondition(ch, per_tick); // no idea if it really needed, disabled by NEW_COMBAT  -Odorf
-
 	if (GET_HIT(ch) > GET_MAX_HIT(ch) && per_tick > 0)
 	{
 		GET_HIT(ch) = GET_MAX_HIT(ch);

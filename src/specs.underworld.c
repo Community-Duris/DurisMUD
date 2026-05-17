@@ -24,7 +24,6 @@
 #include "handler.h"
 #include "justice.h"
 #include "map.h"
-#include "new_combat_def.h"
 #include "nexus_stones.h"
 #include "range.h"
 #include "sound.h"

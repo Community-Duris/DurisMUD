@@ -40,7 +40,6 @@
 #include "map.h"
 #include "mm.h"
 #include "multiplay_whitelist.h"
-#include "new_combat_def.h"
 #include "nexus_stones.h"
 #include "outposts.h"
 #include "poll.h"

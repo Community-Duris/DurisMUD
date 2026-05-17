@@ -40,7 +40,6 @@
 #include "map.h"
 #include "mm.h"
 #include "necromancy.h"
-#include "new_combat_def.h"
 #include "objmisc.h"
 #include "outposts.h"
 #include "paladins.h"
@@ -3525,8 +3524,6 @@ int try_riposte(P_char ch, P_char victim, P_obj wpn)
 
 	hit(ch, victim, wpn);
 
-#ifndef NEW_COMBAT
-
 	if (char_in_list(ch) && char_in_list(victim) && GET_CLASS(ch, CLASS_BERSERKER))
 	{
 		if (affected_by_spell(ch, SKILL_BERSERK))
@@ -3534,19 +3531,6 @@ int try_riposte(P_char ch, P_char victim, P_obj wpn)
 			hit(ch, victim, wpn);
 		}
 	} // new zerker stuff
-
-#else
-
-	hit(ch, victim, ch->equipment[WIELD], getBodyTarget(ch), TRUE, FALSE);
-
-	if (GET_CLASS(ch, CLASS_BERSERKER))
-	{
-		if (affected_by_spell(ch, SKILL_BERSERK))
-		{
-			hit(ch, victim, ch->equipment[WIELD], getBodyTarget(ch), TRUE, FALSE);
-		}
-	} // same as above
-#endif
 
 	if (char_in_list(ch) && char_in_list(victim) && (skl = GET_CHAR_SKILL(ch, SKILL_FOLLOWUP_RIPOSTE)) > 0)
 	{
@@ -6892,7 +6876,6 @@ case RACEWAR_NEUTRAL:
 		return dam;
 	}
 
-#ifndef NEW_COMBAT
 	int required_weapon_skill(P_obj wpn)
 	{
 
@@ -6957,7 +6940,7 @@ case RACEWAR_NEUTRAL:
 				break;
 		}
 	}
-#endif
+
 	/*
 	 * this performs an attack of ch on victim using weapon currently
 	 * wielded as primary.
@@ -8998,7 +8981,6 @@ case RACEWAR_NEUTRAL:
 		spell_damage(ch, vict, hits * GET_LEVEL(ch) / 4, SPLDAM_COLD, SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &messages);
 	}
 
-#ifndef NEW_COMBAT
 #define ADD_ATTACK(slot) (attacks[number_attacks++] = (slot))
 
 	int calculate_attacks(P_char ch, int attacks[])
@@ -9813,8 +9795,6 @@ case RACEWAR_NEUTRAL:
 			}
 		}
 	}
-
-#endif
 
 	void double_strike(P_char ch, P_char victim, P_obj wpn)
 	{

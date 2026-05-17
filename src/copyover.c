@@ -50,7 +50,6 @@ extern void nonblock(int s);
 
 extern int  restoreCharOnly(P_char ch, char *name);
 extern void clear_char(P_char ch);
-extern void setCharPhysTypeInfo(P_char ch);
 
 static int copyover_in_progress = 0;
 
@@ -704,7 +703,6 @@ static P_char copyover_load_player(const char *name, P_desc d)
 	player->only.pc = (struct pc_only_data *)mm_get(dead_pconly_pool);
 
 	player->desc = d;
-	setCharPhysTypeInfo(player);
 
 	status = restoreCharOnly(player, (char *)name);
 	if (status < 0)

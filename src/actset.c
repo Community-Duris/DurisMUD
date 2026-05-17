@@ -593,14 +593,7 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
 		}
 		if (SAME_STRING(flag, "race"))
 		{
-#ifdef NEW_COMBAT
-			FREE((char *)ppl->points.location_hit);
-			ppl->points.location_hit = NULL;
-#endif
-
 			setbit_parseTable(ch, (void *)ppl, table, ARRAY_SIZE(table), flag, val, on_off, SETBIT_CHAR);
-
-			setCharPhysTypeInfo(ppl);
 
 			do_restore(ch, GET_NAME(ppl), 0);
 

@@ -4209,8 +4209,6 @@ int restorePetStatus(char *buf, P_char ch)
 	ch->player.m_class = GET_BYTE(buf); // should be updated, must be 16 bits or mroe
 	GET_RACE(ch)       = GET_BYTE(buf);
 
-	setCharPhysTypeInfo(ch); /* probably necessary..  or maybe not.  shrug */
-
 	//  GET_LEVEL(ch) = GET_BYTE(buf);
 	ch->player.level                       = GET_BYTE(buf);
 	GET_SEX(ch)                            = GET_BYTE(buf);

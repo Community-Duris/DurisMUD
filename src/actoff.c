@@ -48,7 +48,6 @@
 #include "guard.h"
 #include "guildhall.h"
 #include "justice.h"
-#include "new_combat_def.h"
 #include "objmisc.h"
 #include "paladins.h"
 #include "siege.h"
@@ -4588,11 +4587,7 @@ void do_assist_core(P_char ch, P_char victim)
 	if (IS_NPC(ch))
 		MobStartFight(ch, GET_OPPONENT(victim));
 	else
-#ifndef NEW_COMBAT
 		hit(ch, GET_OPPONENT(victim), ch->equipment[PRIMARY_WEAPON]);
-#else
-		hit(ch, GET_OPPONENT(victim), ch->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(ch), TRUE, FALSE);
-#endif
 
 	if (char_in_list(ch))
 		CharWait(ch, (int)(PULSE_VIOLENCE * 0.5));
@@ -5984,14 +5979,10 @@ void attack(P_char ch, P_char victim)
 			victim->specials.combat_tics = (int)victim->specials.base_combat_round;
 		}
 
-#ifndef NEW_COMBAT
 		if (IS_ALIVE(victim) && !surprise(ch, victim))
 		{
 			hit(ch, victim, ch->equipment[PRIMARY_WEAPON]);
 		}
-#else
-		hit(ch, victim, ch->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(ch), TRUE, FALSE);
-#endif
 		if (char_in_list(ch) && (IS_PC(ch) || (ch->following && IS_PC(ch->following))))
 		{
 			CharWait(ch, PULSE_VIOLENCE + 2);

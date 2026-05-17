@@ -25,7 +25,6 @@
 #include "defines.h"
 #include "justice.h"
 #include "mm.h"
-#include "new_combat_def.h"
 #include "objmisc.h"
 #include "random_equipment_config.h"
 #include "hardcore_config.h"

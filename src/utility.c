@@ -40,7 +40,6 @@ using namespace std;
 #include "justice.h"
 #include "map.h"
 #include "mm.h"
-#include "new_combat.h"
 #include "persistence_queue.h"
 #include "redis.h"
 #include "latency_trace.h"
@@ -5302,31 +5301,6 @@ void purge_old_intros(P_char ch)
 			}
 		}
 	}
-}
-
-void setCharPhysTypeInfo(P_char ch)
-{
-	int size;
-
-#ifndef NEW_COMBAT
-	return;
-#else
-
-#if 0
-  GET_PHYS_TYPE(ch) = getPhysTypebyRace(GET_RACE(ch));
-#endif
-#if 1
-	GET_PHYS_TYPE(ch) = PHYS_TYPE_HUMANOID; /* temporary .. */
-#endif
-	size = getNumbBodyLocsbyPhysType(GET_PHYS_TYPE(ch));
-
-	if (!(ch->points.location_hit = (sh_int *)__malloc(sizeof(sh_int) * size, MEM_TAG_ARRAY, __FILE__, __LINE__)))
-	{
-		panic_corruption("utility", "setCharPhysTypeInfo(): couldn't alloc phys info for %s (size %d)", GET_NAME(ch), size);
-	}
-
-	bzero(ch->points.location_hit, sizeof(sh_int) * size);
-#endif
 }
 
 /* broadcasts message to whatever arena rm is part of */

@@ -26,7 +26,6 @@
 #include "justice.h"
 #include "listen.h"
 #include "mm.h"
-#include "new_combat_def.h"
 #include "objmisc.h"
 #include "spells.h"
 #include "sql.h"
@@ -899,18 +898,7 @@ void do_flurry_of_blows(P_char ch, char *arg)
 		for (int i = 1; i <= num_hits_per_target && count <= max_num_attacks; i++, count++)
 		{
 			if (!should_not_kill(ch, tch) && (GET_STAT(tch) != STAT_DEAD))
-#ifndef NEW_COMBAT
 				hit(ch, tch, NULL);
-
-#else
-				hit(ch,
-				    tch,
-				    NULL,
-				    TYPE_UNDEFINED,
-				    number(0, 10), /* fix up for real later.. */
-				    TRUE,
-				    FALSE);
-#endif
 		}
 	}
 	CharWait(ch, PULSE_VIOLENCE * 3);
@@ -1002,7 +990,6 @@ void do_hitall(P_char ch, char *arg, int cmd)
 
 		if (GET_CHAR_SKILL(ch, SKILL_HITALL) >= percent)
 			if (!should_not_kill(ch, mob))
-#ifndef NEW_COMBAT
 				hit(ch, mob, ch->equipment[PRIMARY_WEAPON]);
 		if (GET_CLASS(ch, CLASS_BERSERKER) && GET_STAT(mob) != STAT_DEAD)
 		{
@@ -1011,23 +998,6 @@ void do_hitall(P_char ch, char *arg, int cmd)
 				hit(ch, mob, ch->equipment[PRIMARY_WEAPON]);
 			}
 		} // new zerker stuff
-#else
-				hit(ch,
-				    mob,
-				    ch->equipment[WIELD],
-				    TYPE_UNDEFINED,
-				    number(0, 10), /* fix up for real later.. */
-				    TRUE,
-				    FALSE);
-		if (GET_CLASS(ch, CLASS_BERSERKER))
-		{
-			if (affected_by_spell(ch, SKILL_BERSERK))
-			{
-				hit(ch, mob, ch->equipment[WIELD], TYPE_UNDEFINED, number(0, 10), TRUE, FALSE);
-			}
-
-		} // same as above
-#endif
 
 		// riposte, damage shield, etc can kill the character
 		// and it appears we've had a crash due to this, so adding this

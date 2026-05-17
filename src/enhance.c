@@ -14,7 +14,6 @@
 #include "events.h"
 #include "interp.h"
 #include "mm.h"
-#include "new_combat_def.h"
 #include "prototypes.h"
 #include "spells.h"
 #include "structs.h"

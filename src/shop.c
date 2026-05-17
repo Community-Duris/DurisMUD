@@ -1088,7 +1088,6 @@ void shopping_repair(char *arg, P_char ch, P_char keeper, int shop_nr)
 	}
 
 	/* make all the correct tests to make sure that everything is kosher */
-#ifndef NEW_COMBAT
 	if (obj->type == ITEM_WEAPON)
 	{
 		wpn = read_object(obj_index[obj->R_num].virtual_number, VIRTUAL);
@@ -1160,55 +1159,6 @@ void shopping_repair(char *arg, P_char ch, P_char keeper, int shop_nr)
 		mobsay(keeper, "This is pretty bad, I'm afraid I can't help you.");
 		return;
 	}
-#else
-	cond = BOUNDED(1, (int)(((float)obj->curr_sp / (float)obj->max_sp) * 10.0), 12);
-
-	if (cond > 0)
-	{
-		if (obj->curr_sp < obj->max_sp)
-		{
-			/* get the value of the object */
-			cost = obj->cost;
-			/* divide by condition   */
-			cost /= (cond * 10);
-			/* then cost = difference between current and max */
-			/*      cost *= (100 - obj->condition);*/
-			cost *= 3;
-			if (GET_LEVEL(keeper) > 35) /* super repair guy */
-				cost = ((cost * 5) / 4);
-			cost = BOUNDED(number(75, 125), cost, number(99500, 100500));
-			if ((GET_MONEY(ch) < cost) && !IS_TRUSTED(ch))
-				gem = accept_gem_for_debt(ch, keeper, cost);
-
-			if (!transact(ch, gem, keeper, cost))
-			{
-				snprintf(buf, MAX_STRING_LENGTH, shop_index[shop_nr].missing_cash2, GET_NAME(ch));
-				mobsay(keeper, buf);
-				return;
-			}
-			else
-			{
-				/* fix the armor */
-				act("$N fiddles with $p.", TRUE, ch, obj, keeper, TO_ROOM);
-				act("$N fiddles with $p.", TRUE, ch, obj, keeper, TO_CHAR);
-				obj->curr_sp = obj->max_sp;
-				mobsay(keeper, "All fixed!");
-			}
-		}
-		else
-		{
-			mobsay(keeper, "Eh? Sure looks fine to me.");
-		}
-		act("$N gives you $p.", TRUE, ch, obj, keeper, TO_CHAR);
-		act("$N gives $p to $n.", TRUE, ch, obj, keeper, TO_ROOM);
-		return;
-	}
-	else
-	{
-		mobsay(keeper, "This is pretty bad, I'm afraid I can't help you.");
-		return;
-	}
-#endif
 }
 int shop_keeper(P_char keeper, P_char ch, int cmd, char *arg)
 {

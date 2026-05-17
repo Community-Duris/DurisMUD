@@ -12,7 +12,6 @@
 #include <time.h>
 #include "damage.h"
 #include "justice.h"
-#include "new_combat_def.h"
 #include "objmisc.h"
 #include "spells.h"
 #include "weather.h"
@@ -52,57 +51,6 @@ char *item_condition(P_obj obj)
 		snprintf(buf, 32, " [%s%2d&n%%]", bufCOLOR, obj->condition);
 	else
 		buf[0] = '\0';
-
-	/* Default conditon is 100, and reflects average quality. This can be
-	 * raised, through _special_ and _expensive_ smiths, tailors, etc to a max
-	 * of 125, reflecting exceptional quality and manufacture. Code only
-	 * cares about 1-12, so lets chop the name down a bit...
-	 */
-
-	/*  This isn't used atm. - We use the actual % now.
-  #ifndef NEW_COMBAT
-	value = BOUNDED(1, obj->condition / 10, 12);
-  #else
-	value = BOUNDED(1, (int) (((float) obj->curr_sp / (float) obj->max_sp) * 10.0), 12);
-  #endif
-
-	// So these item types wont be shown with a condition.
-	if( obj->type == ITEM_CORPSE )
-	  value = 12;
-
-	switch (value)
-	{
-	case 1:
-	  snprintf(buf, MAX_STRING_LENGTH, " [ruined]         ");
-	  break;
-	case 2:
-	  snprintf(buf, MAX_STRING_LENGTH, " [well worn]      ");
-	  break;
-	case 3:
-	  snprintf(buf, MAX_STRING_LENGTH, " [worn]           ");
-	  break;
-	case 4:
-	  snprintf(buf, MAX_STRING_LENGTH, " [partially worn] ");
-	  break;
-	case 5:
-	  snprintf(buf, MAX_STRING_LENGTH, " [fair]           ");
-	  break;
-	case 6:
-	  snprintf(buf, MAX_STRING_LENGTH, " [used]           ");
-	  break;
-	case 7:
-	  snprintf(buf, MAX_STRING_LENGTH, " [good]           ");
-	  break;
-	case 8:
-	  snprintf(buf, MAX_STRING_LENGTH, " [very good]      ");
-	  break;
-	case 9:
-	  snprintf(buf, MAX_STRING_LENGTH, " [almost new]     ");
-	  break;
-	default:
-	  snprintf(buf, MAX_STRING_LENGTH, "");
-	}
-	*/
 
 	return buf;
 }

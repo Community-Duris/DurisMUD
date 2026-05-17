@@ -1454,7 +1454,6 @@ P_char load_dummy_char(char *name)
 	restoreItemsOnly(owner, -1);
 	owner->next    = character_list;
 	character_list = owner;
-	setCharPhysTypeInfo(owner);
 	updateArtis = TRUE;
 
 	return owner;
