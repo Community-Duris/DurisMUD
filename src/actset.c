@@ -1613,7 +1613,7 @@ static void ac_hitmanaCopy(void *where, int offset, char *value, int bit, int on
 	sh_int val;
 
 	if (IS_PC(ch))
-		val = (sh_int)bit - graf(ch, age(ch).year, 2, 4, 17, 14, 8, 4, 3);
+		val = (sh_int)bit - 17;
 	else
 		val = (sh_int)bit;
 

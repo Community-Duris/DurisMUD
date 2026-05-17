@@ -92,7 +92,6 @@ int   skill_off, affect_off, item_off;
 P_obj save_equip[MAX_WEAR];
 
 int      anchor_room(int room);
-int      calculate_hitpoints(P_char ch);
 int      calculate_mana(P_char ch);
 P_nevent get_scheduled(P_obj obj, event_func func);
 void     proclib_obj_event(P_char, P_char, P_obj obj, void *);
@@ -2277,7 +2276,7 @@ int restoreStatus(char *buf, P_char ch)
 	ch->specials.carry_weight = 0;
 	ch->specials.carry_items  = 0;
 
-	ch->points.max_hit      = 0; // ch->points.base_hit + calculate_hitpoints(ch);
+	ch->points.max_hit      = 0;
 	ch->points.max_mana     = ch->points.base_mana + calculate_mana(ch);
 	ch->points.max_vitality = vitality_limit(ch);
 

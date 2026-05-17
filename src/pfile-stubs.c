@@ -51,8 +51,6 @@ int GET_LEVEL(P_char ch) { return ch->player.level; }
 
 int vitality_limit(P_char ch) { return ch->points.base_vitality; }
 
-int calculate_hitpoints(P_char ch) { return 1; }
-
 int calculate_mana(P_char ch) { return 1; }
 
 void extract_obj(void *obj, int i) { FREE(obj); }
