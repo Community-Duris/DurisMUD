@@ -43,7 +43,6 @@
 #include "graph.h"
 #include "guildhall.h"
 #include "hardcore.h"
-#include "helpfile.h"
 #include "json_utils.h"
 #include "lookup_process.h"
 #include "map.h"

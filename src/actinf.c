@@ -33,7 +33,6 @@ using namespace std;
 #include "grapple.h"
 #include "guard.h"
 #include "hardcore_config.h"
-#include "helpfile.h"
 #include "justice.h"
 #include "map.h"
 #include "nexus_stones.h"
@@ -139,8 +138,6 @@ extern const surname_struct       feudal_surnames[7];
 extern int                        get_power_level(P_char);
 
 void display_map(P_char ch, int n, int show_map_regardless);
-
-extern HelpFilesCPPClass help_index;
 
 extern struct TimedShutdownData shutdownData;
 

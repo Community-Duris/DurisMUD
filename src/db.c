@@ -146,7 +146,6 @@ P_table mob_tables; /* for random mob tables */
 P_ereg email_reg_table;
 int    num_mob_tables, num_obj_tables = 0;
 
-// struct help_index_element *help_index = 0;			// commented by weebler
 struct info_index_element *info_index = 0;
 
 int           top_of_mobt  = 0; /* * top of mobile index table * */
@@ -513,16 +512,6 @@ void boot_db(int mini_mode)
 			fatal_boot_error("db", "Trouble opening mini object file areas_mini/mini.obj: %s", strerror(errno));
 		}
 	}
-	/*
-	  // This part commented out by Weebler
-	if (!(help_fl = fopen(HELP_KWRD_FILE, "r")))
-	{
-	  logit(LOG_FILE, "   Could not open help file.");
-	  fprintf(stderr, "ERROR! Could not open help file! Exiting.");
-	  raise(SIGSEGV);
-	}
-	else
-	  help_index = build_help_index(help_fl, &top_of_helpt);*/
 
 	fprintf(stderr, "Loading zone table.\r\n");
 	logit(LOG_STATUS, "Loading zone table.");

@@ -727,7 +727,7 @@ extern unsigned int game_locked_level;
 #define CMD_DISGUST         697
 #define CMD_VOTE            698
 #define CMD_HIRE            699
-#define CMD_RELOADHELP      700
+// #define CMD_RELOADHELP      700
 #define CMD_TESTCOLOR       701
 #define CMD_MULTICLASS      702
 #define CMD_RESETARTI       703 // Resets timer on an arti.

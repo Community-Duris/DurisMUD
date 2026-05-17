@@ -348,35 +348,6 @@ void sa_ageCopy(P_char ch, unsigned long offset, int value)
 	ch->player.time.birth = curr_time - secs;
 }
 
-void do_reload_help(P_char ch, char *arg, int cmd)
-{
-	send_to_char("This does not work.\n", ch);
-	send_to_char("It is not really neccessary either, but\n", ch);
-	send_to_char("if you want to try to make it work, see\n", ch);
-	send_to_char("actwiz.c, the function is do_reload_help.\n", ch);
-	send_to_char("I tried for several hours, and now I am done trying.\n\n", ch);
-	/*
-	  To make this work, SOMEHOW, you have to reference helpfile.c
-	  and make it compile.  Anytime I try, it gives me stupid errors.
-	  I can't make it work.
-	  Below is the code you need, if you can ever get it referenced.
-
-	  send_to_char("Clearing old help data..\n", ch);
-
-	  help_index.clear();
-
-	  send_to_char("Loading new help data..\n", ch);
-
-	  if(help_index.reload()){
-	    send_to_char("Help data rebuilt.\n", ch);
-	  }else{
-	    logit(LOG_FILE, "   Could not open help file.");
-	    fprintf(stderr, "ERROR! Could not open help file! Exiting.");
-	    raise(SIGSEGV);
-	  }
-	*/
-}
-
 void do_reboot_restore(P_char ch, P_char victim)
 {
 

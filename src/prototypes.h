@@ -1899,8 +1899,6 @@ void  quad_arg(char *, int *, char *, int *, char *);
 void  do_string(P_char, char *, int);
 void  do_rename(P_char, char *, int);
 char *one_word(char *, char *);
-// void clear_help_index(struct help_index_element **list_head, const int help_size);
-// struct help_index_element *build_help_index(FILE *, int *);
 void  night_watchman(void);
 void  check_reboot(void);
 char *next_page(char *, struct descriptor_data *);

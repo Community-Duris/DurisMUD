@@ -817,13 +817,6 @@ struct reset_q_type
 	struct reset_q_element *tail;
 };
 
-/* commented out by Weebler
-struct help_index_element {
-  char *keyword;
-  long pos;
-};
-*/
-
 struct info_index_element
 {
 	char *keyword;

@@ -78,7 +78,6 @@ extern int                           racial_values[LAST_RACE + 1][2];
 extern int                           top_of_helpt;
 extern int                           top_of_infot;
 extern int                           used_descs;
-// extern struct help_index_element *help_index;	// Commented by weebler
 extern struct info_index_element *info_index;
 extern struct zone_data          *zone_table;
 extern struct mm_ds              *dead_mob_pool;
