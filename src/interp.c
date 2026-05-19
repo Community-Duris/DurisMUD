@@ -55,6 +55,7 @@
 #include "testcmd.h"
 #include "tether.h"
 #include "tradeskill.h"
+#include "unicode.h"
 #include "vnum.room.h"
 #include "weather.h"
 
@@ -1290,7 +1291,7 @@ void command_interpreter(P_char ch, char *argument)
 {
 	uint   look_at, begin, old_room;
 	int    cmd, i, j, k, current;
-	char  *ch_ptr;
+	const char  *ch_ptr;
 	P_char target, master, exec_char = ch;
 
 	if (debug_mode)
@@ -1511,6 +1512,22 @@ void command_interpreter(P_char ch, char *argument)
 							break;
 					}
 				}
+			}
+		}
+
+		static unimap u_none("");
+		const unimap *um = 0;
+		if (cmd == CMD_BUY || cmd == CMD_CONSTRUCT || cmd == CMD_RENAME)
+			um = &u_none;
+		else if (cmd != CMD_MAPGLYPHS)
+			um = &u_ascii;
+		if (um)
+		{
+			for (ch_ptr = argument; *ch_ptr; )
+			{
+				int c = get_utf8(ch_ptr);
+				if (c >= 127 && !(*um)[c])
+					return send_to_char("Pardon? No fancy characters allowed as input.\n", ch);
 			}
 		}
 
