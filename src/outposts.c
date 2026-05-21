@@ -106,6 +106,9 @@ int init_outposts()
 
 int load_outposts()
 {
+	for (int i = 0; outpost_locations[i][0]; i++)
+		qry("INSERT IGNORE into outposts(id) VALUES(%d)", i);
+
 	// load outposts from DB
 	if (!qry("SELECT id, owner_id, level, walls, portal_room, golems FROM outposts"))
 	{
