@@ -4106,26 +4106,6 @@ void do_quaff(P_char ch, char *argument, int cmd)
 		return;
 	}
 
-	struct affected_type af, *afp;
-	memset(&af, 0, sizeof(af));
-	af.type     = TAG_POTION_TIMER;
-	af.duration = 3;
-	af.flags    = AFFTYPE_NODISPEL;
-	affect_to_char(ch, &af);
-
-	/* value[5] specifies special functions for epic potions */
-	/*
-	  //make sure to add default spell to potion.
-	  if(bottle->value[5] > 0)
-	  {
-	    if(bottle->value[5] == 1337)
-	    {
-	      advance_level(ch);
-	      extract_obj(bottle);
-	      return;
-	    }
-	  }
-	*/
 	// value[4] specifies damage player takes from potion - considered non-magical
 	if (bottle->value[4] > 0)
 	{
@@ -4142,6 +4122,13 @@ void do_quaff(P_char ch, char *argument, int cmd)
 	}
 	else
 	{
+		struct affected_type af, *afp;
+		memset(&af, 0, sizeof(af));
+		af.type     = TAG_POTION_TIMER;
+		af.duration = 3;
+		af.flags    = AFFTYPE_NODISPEL;
+		affect_to_char(ch, &af);
+
 		for (i = 1; i < 4; i++)
 		{
 			if (bottle->value[i] >= 1)
