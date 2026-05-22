@@ -1172,13 +1172,27 @@ int outpost_generate_walls(Building *building, int type, int numgolem)
 
 	for (x = 0; x < NUM_EXITS; x++)
 	{
+		if (walllocal[x])
+			world[walllocal[x]].altglyph = x;
+
 		if (x == gate)
 		{
 			// outpost_setup_gateguards(world[walllocal[x]].dir_option[gate]->to_room, OUTPOST_GATEGUARD_WAR, 2, building->get_guild());
 			outpost_setup_gateguards(walllocal[x], OUTPOST_GATEGUARD_WAR, numgolem, building);
 			world[walllocal[x]].sector_type = SECT_CASTLE_GATE;
+			world[walllocal[x]].altglyph = x;
 			building->set_golem_room(walllocal[x]);
 			continue;
+		}
+		else
+		{	/* We could use regular exit numbers as-is, but it's much more
+			 * user friendly to rearrange them like this:
+			 *    6 0 8     1 2 3
+			 *    3   1  →  4   5
+			 *    7 2 9     6 7 8
+			 */
+			static int variants[NUM_EXITS] = {2, 5, 7, 4, 0, 0, 1, 8, 3, 6};
+			world[walllocal[x]].altglyph = variants[x];
 		}
 
 		switch (x)

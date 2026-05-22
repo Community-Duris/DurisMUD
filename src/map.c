@@ -773,6 +773,8 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless, 
 				break;
 
 			case SECT_ROAD:
+			case SECT_CASTLE_WALL:
+			case SECT_CASTLE_GATE:
 				heading = 0;
 				if (where_rnum)
 					heading = world[where_rnum].altglyph;
@@ -849,6 +851,9 @@ void set_glyphs_preset(P_char ch, int w)
 		gly[SECT_FOREST]           = "&+g♣♣♠♣♣♠&+G♣♠";
 		gly[SECT_HILLS]            = "&+y⌂";
 		gly[SECT_UNDRWLD_MOUNTAIN] = "&+L▒";
+		gly[SECT_CASTLE_WALL]      = "&=wL#┌─┐││└─┘";
+		gly[SECT_CASTLE_GATE]      = "&=wB╨╞╥╡";
+		gly[SECT_CASTLE]           = "&=wrO";
 	}
 
 	if (w == 2)
@@ -1501,7 +1506,9 @@ void init_map_glyphs(void)
 						break;
 					if (!(nr = (d_o->to_room)))
 						break;
-					if (world[nr].sector_type == SECT_ROAD || !IS_MAP_ROOM(nr))
+					if (world[nr].sector_type == SECT_ROAD ||
+					    world[nr].sector_type == SECT_CASTLE_GATE ||
+					    !IS_MAP_ROOM(nr))
 					{
 						variant |= 1 << dir;
 						break;

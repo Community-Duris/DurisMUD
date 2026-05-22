@@ -569,7 +569,11 @@ void run_the_game(int port, int sslport)
 	{
 		fprintf(stderr, "--  Skipping optional subsystems in mini mode.\r\n");
 	}
-	 time_after = clock();
+
+	fprintf(stderr, "Assigning map glyph variations.\r\n");
+        init_map_glyphs();
+
+	time_after = clock();
 	bfs_reset_marks();
 	fprintf(stderr, "Boot completed in: %d milliseconds\n", (int)((time_after - time_before) * 1E3 / CLOCKS_PER_SEC));
 	logit(LOG_STATUS, "Boot completed in:%d milliseconds\n", (int)((time_after - time_before) * 1E3 / CLOCKS_PER_SEC));
