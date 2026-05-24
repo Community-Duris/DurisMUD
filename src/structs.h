@@ -39,11 +39,6 @@
 #endif
 #include "account.h"
 
-#ifdef EFENCE
-#include <stdlib.h>
-#include "efence.h"
-#endif
-
 #ifdef _OSX_
 typedef unsigned long int ulong;
 #endif

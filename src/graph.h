@@ -1,9 +1,5 @@
 #ifndef _GRAPH_H_
 #define _GRAPH_H_
-#ifdef EFENCE
-#include <stdlib.h>
-#include "efence.h"
-#endif
 
 #define BFS_ERROR         -1
 #define BFS_ALREADY_THERE -2

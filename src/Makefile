@@ -1,7 +1,6 @@
 # Makefile for Project Duris!
 
 SHELL = /bin/sh
-#EFENCE = 1
 
 CC	= g++
 DEBUG	= -ggdb3
@@ -21,12 +20,6 @@ CFLAGS += -DCHAOS_MUD=1
 INCLUDES	= -I. -I../tests/async -I/usr/include/libxml2 -I/usr/include/mysql -I./ships
 
 GENERAL_LIBS    = -lm -lstdc++ -lz -lxml2 -lcrypt -lmysqlclient -lgnutls -lssl -lcrypto -lcjson -lhiredis -lbsd -pthread
-
-ifdef EFENCE
-	LDFLAGS += -L.
-	LIBS += -lefence -lrt
-	CFLAGS += -DEFENCE
-endif
 
 # GENERAL_LIBS += -lcygipc
 LIBS += $(GENERAL_LIBS)

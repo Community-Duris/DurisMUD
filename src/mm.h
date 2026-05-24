@@ -1,7 +1,3 @@
-#ifdef EFENCE
-#include <stdlib.h>
-#include "efence.h"
-#endif
 #include <stddef.h> /* needed for the offsetof macro */
 #define MM_STATS
 
