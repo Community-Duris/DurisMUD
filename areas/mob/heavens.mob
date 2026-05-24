@@ -156,21 +156,6 @@ X 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#18
-random zone mob prototype~
-Super raider~
-Super raider stands here in mid-air.
-~
-&+LThis strange and interesting creature appears to be from some distant land.
-&+LThe age of this individual is nearly impossible to calculate, as it is shrouded
-&+Lin a massive cloak that is heavily stained and soiled. This cloak also disguises
-&+Lwhat &+rbattlefield&+L capabilities or &+bmagical&+L prowess he possesses if any.
-~
-1107298377 0 0 0 65588 0 0 0 0 S
-PH 12 1 0 -1
-51 11 19 25d47+250 3d5+3
-6.2.6.1 22275
-8 8 1
 #19
 fearsome warg~
 &+ya fearsome warg&n~

@@ -760,7 +760,6 @@ void        act(const char *, int, P_char, P_obj, void *, int);
 void        close_socket(P_desc);
 void        close_sockets(int);
 int         is_desc_valid(P_desc);
-void        coma(int);
 void        flush_queues(P_desc);
 void        nonblock(int);
 void        parse_name(P_desc, char *);
@@ -1101,15 +1100,6 @@ void writeHallOfFame(P_char ch, char thekiller[1024]);
 void checkLeaderBoard(P_char ch);
 long getLeaderBoardPts(P_char ch);
 
-/* period.list.c */
-void  place_period_books();
-void  display_book(P_char ch);
-float getTomeTropy(int id);
-void  deletePeriodEntry(char names[15][MAX_STRING_LENGTH], int frags[15], int pos, char killer[10][MAX_STRING_LENGTH]);
-void  insertPeriodEntry(char names[15][MAX_STRING_LENGTH], int frags[15], char *name, int newFrags, int pos, char killer[10][MAX_STRING_LENGTH], char *killername);
-void  checkPEriodOfFame(P_char ch, char thekiller[1024]);
-void  writePeriodOfFame(P_char ch, char thekiller[1024]);
-void  displayPERIODCore(P_char ch, char *arg, int cmd);
 /* graph.c */
 
 signed char find_first_step(int src, int target, long hunt_flags, int is_ship, int wagon_type, int *ttl_steps);

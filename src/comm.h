@@ -27,8 +27,6 @@
 
 #define SEND_TO_Q(messg, desc) write_to_q((messg), &(desc)->output, 1)
 
-extern const char *COMA_SIGN;
-
 /* following was io.h, for asych I/O operations, not used currently.  If we
    ever use it, makes more sense for it to be here.  JAB */
 

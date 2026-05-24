@@ -1013,7 +1013,6 @@ void assign_mobiles(void)
 	mob_index[real_mobile0(15113)].func.mob = dranum_jurtrem;
 	mob_index[real_mobile0(15125)].func.mob = dranum_jurtrem;
 
-	mob_index[real_mobile0(18)].func.mob   = ai_mob_proc;
 	mob_index[real_mobile0(1255)].func.mob = random_quest_mob_proc;
 	mob_index[real_mobile0(1256)].func.mob = random_mob_proc;
 	/*

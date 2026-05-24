@@ -865,7 +865,6 @@ int smith(P_char, P_char, int, char *);
 
 /* specs.jot.c */
 
-int ai_mob_proc(P_char, P_char, int, char *);
 int random_mob_proc(P_char, P_char, int, char *);
 int random_quest_mob_proc(P_char, P_char, int, char *);
 

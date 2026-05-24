@@ -218,12 +218,6 @@ struct ansi_color
 
 #define MIN_SOCKET_BUFFER_SIZE 20480
 
-const char *COMA_SIGN = "\r\n\
-DurisMUD is currently inactive due to excessive load on the host machine.\r\n\
-Please try again later.\r\n\r\n\
-Sadly, \r\n\r\n\
-the DurisMUD system operators\r\n\r\n";
-
 /*
  * ********************************************************************* *
  * main game loop and related stuff                                 *

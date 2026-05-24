@@ -75,7 +75,6 @@ OBJS =  $(SHIP_OBJS) \
 				 actoth.o \
 				 actset.o \
 				 actwiz.o \
-				 ai_mobs.o \
 				 specs.ailvio.o \
 				 alliances.o \
 				 automatic_rules.o \
@@ -162,7 +161,6 @@ OBJS =  $(SHIP_OBJS) \
 				 objconv.o \
 				 objmisc.o \
 				 outposts.o \
-				 period.list.o \
 				 persistence_queue.o \
 				 sql_persistence_raw.o \
 				 sql_pool.o \
