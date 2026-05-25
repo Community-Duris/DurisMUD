@@ -6,8 +6,6 @@ CC	= g++
 DEBUG	= -ggdb3
 #LDFLAGS	= -ggdb3
 
-LDFLAGS += -L/usr/lib/mysql
-
 CFLAGS = -g -std=c++20 -D_FORTIFY_SOURCE=0 -Wno-write-strings
 #CFLAGS += -D__NO_MYSQL__
 CFLAGS += -DTEST_MUD
