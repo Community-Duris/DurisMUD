@@ -970,9 +970,9 @@ void spell_psychic_crush(int level, P_char ch, char *arg, int type, P_char victi
 void spell_single_death_field(int level, P_char ch, char *args, int type, P_char victim, P_obj obj)
 {
 	int                    dam;
-	struct damage_messages messages = {"",
-	                                   "",
-	                                   "",
+	struct damage_messages messages = {"$N's body shivers and $E turns pale as a wave of death reaches $M.",
+	                                   "Your mind blacks out for a moment as a wave of death runs through you.",
+	                                   "$N's body shivers and $E turns pale as a wave of death reaches $M.",
 	                                   "$N's body shivers and falls lifeless as a wave of death reaches $M.",
 	                                   "Your mind collapses as a wave of death runs through your body.",
 	                                   "$N's body shivers and falls lifeless as a wave of death reaches $M.",
