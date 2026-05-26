@@ -883,6 +883,71 @@ const char *persistence_item_uid_text(P_obj obj, char *buf, int buf_size)
   return buf;
 }
 
+static const char *persistence_clean_field(const char *in, char *buf,
+                                           int buf_size)
+{
+  int i;
+
+  if (!buf || buf_size <= 0)
+    return "";
+
+  if (!in)
+  {
+    snprintf(buf, buf_size, "none");
+    return buf;
+  }
+
+  for (i = 0; in[i] && i < buf_size - 1; i++)
+  {
+    if (in[i] == '|' || in[i] == '\r' || in[i] == '\n')
+      buf[i] = ' ';
+    else
+      buf[i] = in[i];
+  }
+  buf[i] = '\0';
+  return buf;
+}
+
+void persistence_record_item_event(const char *event_type, P_obj obj,
+                                   P_char actor, const char *source,
+                                   const char *target, const char *note)
+{
+  char uid[32];
+  char event_buf[128];
+  char item_buf[256];
+  char actor_buf[128];
+  char source_buf[256];
+  char target_buf[256];
+  char note_buf[256];
+  int item_vnum = -1;
+  int actor_id = -1;
+
+  if (obj)
+  {
+    persistence_assign_item_uid(obj, event_type ? event_type : "item_event");
+    if (obj->R_num >= 0)
+      item_vnum = obj_index[obj->R_num].virtual_number;
+  }
+
+  if (actor)
+    actor_id = IS_NPC(actor) ? GET_VNUM(actor) : GET_PID(actor);
+
+  logit(LOG_EVENT,
+        "PERSISTENCE_ITEM_EVENT|ts=%ld|event=%s|item_uid=%s|vnum=%d|item=%s|actor=%s|actor_id=%d|source=%s|target=%s|note=%s",
+        (long) time(NULL),
+        persistence_clean_field(event_type, event_buf, sizeof(event_buf)),
+        persistence_item_uid_text(obj, uid, sizeof(uid)),
+        item_vnum,
+        persistence_clean_field(obj ? OBJ_SHORT(obj) : "none",
+                                item_buf, sizeof(item_buf)),
+        persistence_clean_field(actor ? J_NAME(actor) : "system",
+                                actor_buf, sizeof(actor_buf)),
+        actor_id,
+        persistence_clean_field(source, source_buf, sizeof(source_buf)),
+        persistence_clean_field(target, target_buf, sizeof(target_buf)),
+        persistence_clean_field(note, note_buf, sizeof(note_buf)));
+}
+
 void debug(const char *format, ...)
 {
 	P_desc  i;

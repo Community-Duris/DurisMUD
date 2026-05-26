@@ -29,6 +29,9 @@ void persistence_alert(int level, const char *domain, const char *owner,
 unsigned long long persistence_next_item_uid(void);
 void persistence_assign_item_uid(P_obj obj, const char *reason);
 const char *persistence_item_uid_text(P_obj obj, char *buf, int buf_size);
+void persistence_record_item_event(const char *event_type, P_obj obj,
+                                   P_char actor, const char *source,
+                                   const char *target, const char *note);
 
 int cmd_from_dir(int dir);
 int direction_tag(P_char ch);
