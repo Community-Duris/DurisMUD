@@ -14,6 +14,8 @@ cscope.out
 *.d
 *.backup
 *~
+tests/generated_*.sql
+tests/*.load.log
 lib/information/leaderboard
 lib/information/leaderboardprod
 lib/information/hardcore_hall_of_fame
