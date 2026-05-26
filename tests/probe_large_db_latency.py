@@ -46,6 +46,13 @@ PROBES = [
         "SELECT queue_id,domain,owner_id FROM persistence_save_queue WHERE status='PENDING' ORDER BY priority DESC, queued_at ASC LIMIT 50",
     ),
     (
+        "rollback_insert_minimal_wal",
+        "START TRANSACTION; "
+        "INSERT INTO persistence_event_wal (queued_at,event_type,payload) "
+        "VALUES (NOW(6),'probe','rollback minimal wal event payload'); "
+        "ROLLBACK",
+    ),
+    (
         "rollback_insert_item_event",
         "START TRANSACTION; "
         "INSERT INTO persistence_item_events "

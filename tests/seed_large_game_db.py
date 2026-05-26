@@ -93,7 +93,7 @@ def create_schema(out, database: str, reset: bool, disable_binlog: bool) -> None
 
     if reset:
         tables = [
-            "persistence_save_queue", "persistence_corpse_items",
+            "persistence_event_wal", "persistence_save_queue", "persistence_corpse_items",
             "persistence_corpse_snapshots", "persistence_item_events",
             "persistence_items", "locker_access", "auction_bid_history",
             "auction_item_pickups", "auction_money_pickups", "auctions",
@@ -359,7 +359,15 @@ CREATE TABLE IF NOT EXISTS `persistence_save_queue` (
   `status` enum('PENDING','PROCESSING','DONE','FAILED') NOT NULL default 'PENDING',
   PRIMARY KEY (`queue_id`),
   KEY `status_priority` (`status`,`priority`,`queued_at`),
+  KEY `status_priority_dequeue` (`status`,`priority` DESC,`queued_at`,`queue_id`,`domain`,`owner_id`),
   KEY `owner_lookup` (`domain`,`owner_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `persistence_event_wal` (
+  `wal_id` bigint unsigned NOT NULL auto_increment,
+  `queued_at` datetime(6) NOT NULL,
+  `event_type` varchar(32) NOT NULL,
+  `payload` text NOT NULL,
+  PRIMARY KEY (`wal_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 """)
 
@@ -618,6 +626,21 @@ def generate_data(out, args) -> dict[str, int]:
         batch,
     )
 
+    counts["persistence_event_wal"] = emit_insert(
+        out,
+        "persistence_event_wal",
+        ["queued_at", "event_type", "payload"],
+        (
+            [
+                dt_from_day(base_epoch, args.days - 1, rng),
+                rng.choice(EVENTS),
+                f"uid={item_uid_start + rng.randrange(item_count)} actor={rng.choice(players)['pid']} transfer={rng.randint(1, 1000000)}",
+            ]
+            for _ in range(args.wal_events)
+        ),
+        batch,
+    )
+
     counts["locker_access"] = emit_insert(
         out,
         "locker_access",
@@ -806,6 +829,7 @@ def parse_args(argv: Sequence[str]) -> argparse.Namespace:
     parser.add_argument("--corpses", type=int, default=1500)
     parser.add_argument("--items-per-corpse", type=int, default=16)
     parser.add_argument("--pending-saves", type=int, default=25000)
+    parser.add_argument("--wal-events", type=int, default=25000)
     parser.add_argument("--locker-visitors-per-player", type=int, default=4)
     parser.add_argument("--auctions", type=int, default=12000)
     parser.add_argument("--bids-per-auction", type=int, default=5)

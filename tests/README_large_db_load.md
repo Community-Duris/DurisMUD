@@ -13,6 +13,7 @@ The default profile creates:
 - 810,000 item transfer/persistence events
 - 80,000 current item ownership rows
 - 24,000 corpse item rows
+- 25,000 minimal WAL/outbox rows
 - auctions, auction bids, locker access, shop sales, eq drops, statistics, and
   pending save queue rows
 
@@ -63,3 +64,16 @@ python tests/probe_large_db_latency.py --database duris_test --repeats 5
 The probe reports MySQL server-side microsecond timings for representative
 read/write paths: player lookup, locker access, recent logs, item ownership,
 item transfer history, pending save queue, and rollback-wrapped writes.
+
+If you already have an older generated database and want to apply only the
+persistence load-test indexes/tables:
+
+```sh
+docker exec -i durismud-mysql-1 mysql -uduris -pduris < tests/apply_persistence_load_indexes.sql
+```
+
+On the 500-player/90-day dataset, the `status_priority_dequeue` index changed
+the pending save dequeue probe from roughly 8-10 ms to roughly 0.5 ms on the
+local Docker MySQL container. Rollback-wrapped writes can still exceed the 5 ms
+warning budget, which is expected pressure evidence for keeping SQL writes off
+the gameplay thread.
