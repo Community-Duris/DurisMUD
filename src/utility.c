@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <unistd.h>
 using namespace std;
 #ifdef _HPUX_SOURCE
 #include <varargs.h>
@@ -843,6 +844,43 @@ void persistence_alert(int level, const char *domain, const char *owner,
   logit(LOG_FILE, "PERSISTENCE: %s", alert);
   logit(LOG_WIZ, "PERSISTENCE: %s", alert);
   wizlog(level, "&+R&-LPERSISTENCE:&n %s", alert);
+}
+
+unsigned long long persistence_next_item_uid(void)
+{
+  return (unsigned long long) next_obj_uid++;
+}
+
+void persistence_assign_item_uid(P_obj obj, const char *reason)
+{
+  if (!obj || obj->obj_uid)
+    return;
+
+  obj->obj_uid = (unsigned long) persistence_next_item_uid();
+
+  if (!obj->obj_uid)
+  {
+    persistence_alert(AVATAR, "item_uid",
+                      reason ? reason : "unknown", "0", "none",
+                      "assignment_failed", "object pointer=%p", obj);
+  }
+}
+
+const char *persistence_item_uid_text(P_obj obj, char *buf, int buf_size)
+{
+  if (!buf || buf_size <= 0)
+    return "none";
+
+  if (!obj || !obj->obj_uid)
+  {
+    snprintf(buf, buf_size, "none");
+  }
+  else
+  {
+    snprintf(buf, buf_size, "%lu", obj->obj_uid);
+  }
+
+  return buf;
 }
 
 void debug(const char *format, ...)
