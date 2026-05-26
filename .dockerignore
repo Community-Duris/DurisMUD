@@ -12,19 +12,30 @@ docs/
 *.o
 *.a
 *.so
+*.d
+*.exe
+dms
+dms_new
+obj/
 src/dms
 src/dms_new
 src/*.o
+src/.depend
+src/Makefile
 src/ships/*.o
 src/ships/*.a
+src/ships/.depend
+areas/world.*
+areas/src/*/make_*
+areas/src/*/*.o
 
-# Player files (will be mounted as volume)
+# Runtime data
 Players/
 !Players/.gitkeep
-
-# Logs (will be mounted as volume)
 logs/
 *.log
+duris.crt
+duris.key
 
 # Python cache
 __pycache__/
@@ -81,7 +92,9 @@ arihfix*.md
 
 # Test data
 zonelist.txt
+tests/
+tests;C/
 
-# Build scripts (except the ones we need)
+# Build scripts
 import_help.sh
 search_haste_items.sh

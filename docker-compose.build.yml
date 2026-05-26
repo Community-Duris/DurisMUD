@@ -1,0 +1,12 @@
+services:
+  build:
+    build:
+      context: .
+      dockerfile: Dockerfile.build
+    command:
+      - /bin/sh
+      - -lc
+      - cp Makefile.linux Makefile && cp ships/Makefile.linux ships/Makefile && make dms_new
+    volumes:
+      - .:/durismud
+    working_dir: /durismud/src
