@@ -1697,6 +1697,7 @@ void event_autosave(P_char ch, P_char victim, P_obj obj, void *data)
 		logit(LOG_DEBUG, "event_autosave: DEAD/NONEXISTANT char %s '%s'.", (ch == NULL) ? "!" : IS_NPC(ch) ? "NPC" : "PC", (ch == NULL) ? "NULL" : J_NAME(ch));
 		return;
 	}
+	persistence_flush_item_events(64);
 	do_save_silent(ch, 1);
 	add_event(event_autosave, 1200, ch, 0, 0, 0, 0, 0);
 }

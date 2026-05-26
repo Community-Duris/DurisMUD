@@ -37,6 +37,7 @@ using namespace std;
 #include "map.h"
 #include "mm.h"
 #include "new_combat.h"
+#include "persistence_queue.h"
 #include "redis.h"
 #include "specializations.h"
 #include "spells.h"
@@ -908,11 +909,51 @@ static const char *persistence_clean_field(const char *in, char *buf,
   return buf;
 }
 
+int persistence_flush_item_events(int max_events)
+{
+  char line[PERSISTENCE_EVENT_MAX_LEN];
+  unsigned long dropped;
+  int flushed = 0;
+
+  if (max_events <= 0)
+    max_events = PERSISTENCE_EVENT_QUEUE_CAPACITY;
+
+  while (flushed < max_events &&
+         persistence_item_event_queue_dequeue(line, sizeof(line)))
+  {
+    logit(LOG_EVENT, "%s", line);
+    flushed++;
+  }
+
+  dropped = persistence_item_event_queue_dropped();
+  if (dropped)
+  {
+    persistence_alert(AVATAR, "item_event", "queue", "none", "none",
+                      "dropped_events",
+                      "%lu item persistence events were dropped before flush",
+                      dropped);
+    persistence_item_event_queue_clear_dropped();
+  }
+
+  return flushed;
+}
+
+int persistence_pending_item_events(void)
+{
+  return persistence_item_event_queue_pending();
+}
+
+unsigned long persistence_dropped_item_events(void)
+{
+  return persistence_item_event_queue_dropped();
+}
+
 void persistence_record_item_event(const char *event_type, P_obj obj,
                                    P_char actor, const char *source,
                                    const char *target, const char *note)
 {
   char uid[32];
+  char line[MAX_STRING_LENGTH];
   char event_buf[128];
   char item_buf[256];
   char actor_buf[128];
@@ -932,20 +973,22 @@ void persistence_record_item_event(const char *event_type, P_obj obj,
   if (actor)
     actor_id = IS_NPC(actor) ? GET_VNUM(actor) : GET_PID(actor);
 
-  logit(LOG_EVENT,
-        "PERSISTENCE_ITEM_EVENT|ts=%ld|event=%s|item_uid=%s|vnum=%d|item=%s|actor=%s|actor_id=%d|source=%s|target=%s|note=%s",
-        (long) time(NULL),
-        persistence_clean_field(event_type, event_buf, sizeof(event_buf)),
-        persistence_item_uid_text(obj, uid, sizeof(uid)),
-        item_vnum,
-        persistence_clean_field(obj ? OBJ_SHORT(obj) : "none",
-                                item_buf, sizeof(item_buf)),
-        persistence_clean_field(actor ? J_NAME(actor) : "system",
-                                actor_buf, sizeof(actor_buf)),
-        actor_id,
-        persistence_clean_field(source, source_buf, sizeof(source_buf)),
-        persistence_clean_field(target, target_buf, sizeof(target_buf)),
-        persistence_clean_field(note, note_buf, sizeof(note_buf)));
+  snprintf(line, sizeof(line),
+           "PERSISTENCE_ITEM_EVENT|ts=%ld|event=%s|item_uid=%s|vnum=%d|item=%s|actor=%s|actor_id=%d|source=%s|target=%s|note=%s",
+           (long) time(NULL),
+           persistence_clean_field(event_type, event_buf, sizeof(event_buf)),
+           persistence_item_uid_text(obj, uid, sizeof(uid)),
+           item_vnum,
+           persistence_clean_field(obj ? OBJ_SHORT(obj) : "none",
+                                   item_buf, sizeof(item_buf)),
+           persistence_clean_field(actor ? J_NAME(actor) : "system",
+                                   actor_buf, sizeof(actor_buf)),
+           actor_id,
+           persistence_clean_field(source, source_buf, sizeof(source_buf)),
+           persistence_clean_field(target, target_buf, sizeof(target_buf)),
+           persistence_clean_field(note, note_buf, sizeof(note_buf)));
+
+  persistence_item_event_queue_enqueue(line);
 }
 
 void debug(const char *format, ...)

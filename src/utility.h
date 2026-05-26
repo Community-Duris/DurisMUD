@@ -32,6 +32,9 @@ const char *persistence_item_uid_text(P_obj obj, char *buf, int buf_size);
 void persistence_record_item_event(const char *event_type, P_obj obj,
                                    P_char actor, const char *source,
                                    const char *target, const char *note);
+int persistence_flush_item_events(int max_events);
+int persistence_pending_item_events(void);
+unsigned long persistence_dropped_item_events(void);
 
 int cmd_from_dir(int dir);
 int direction_tag(P_char ch);
