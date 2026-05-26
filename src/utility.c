@@ -814,6 +814,37 @@ void wizlog(int level, const char *format, ...)
 	va_end(args);
 }
 
+void persistence_alert(int level, const char *domain, const char *owner,
+                       const char *item_uid, const char *event_id,
+                       const char *action, const char *format, ...)
+{
+  va_list args;
+  char details[MAX_STRING_LENGTH];
+  char alert[MAX_STRING_LENGTH * 2];
+
+  details[0] = '\0';
+  if (format && *format)
+  {
+    va_start(args, format);
+    vsnprintf(details, sizeof(details), format, args);
+    va_end(args);
+  }
+
+  snprintf(alert, sizeof(alert),
+           "domain=%s owner=%s item_uid=%s event_id=%s action=%s%s%s",
+           (domain && *domain) ? domain : "unknown",
+           (owner && *owner) ? owner : "unknown",
+           (item_uid && *item_uid) ? item_uid : "none",
+           (event_id && *event_id) ? event_id : "none",
+           (action && *action) ? action : "unknown",
+           details[0] ? " detail=" : "",
+           details);
+
+  logit(LOG_FILE, "PERSISTENCE: %s", alert);
+  logit(LOG_WIZ, "PERSISTENCE: %s", alert);
+  wizlog(level, "&+R&-LPERSISTENCE:&n %s", alert);
+}
+
 void debug(const char *format, ...)
 {
 	P_desc  i;

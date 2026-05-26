@@ -3067,6 +3067,12 @@ void                  CAP(char *);
 void                  DECAP(char *);
 void                  InitGrantFastLookup(void);
 void                  logit(const char *, const char *, ...);
+void                  persistence_alert(int level, const char *domain,
+                                        const char *owner,
+                                        const char *item_uid,
+                                        const char *event_id,
+                                        const char *action,
+                                        const char *format, ...);
 void                  sprint64bit(ulong *, const char **, char *);
 void                  sprintbit(ulong, const char **, char *);
 void                  sprinttype(int, const char **, char *);

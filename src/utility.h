@@ -23,6 +23,9 @@ void disconnect_rooms(int v1, int v2);
 P_char get_char_online(char *name, bool include_linkdead = TRUE);
 
 void logit(const char *, const char *, ...);
+void persistence_alert(int level, const char *domain, const char *owner,
+                       const char *item_uid, const char *event_id,
+                       const char *action, const char *format, ...);
 
 int cmd_from_dir(int dir);
 int direction_tag(P_char ch);

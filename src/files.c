@@ -1212,7 +1212,12 @@ void writeCorpse(P_obj corpse)
 	if (corpse->value[CORPSE_SAVEID] == 0)
 		corpse->value[CORPSE_SAVEID] = time(NULL);
 
-	sql_save_corpse(corpse);
+	if (!sql_save_corpse(corpse))
+	{
+		persistence_alert(AVATAR, "corpse", corpse->action_description,
+		                  "none", "none", "sql_save_failed",
+		                  "save_id=%d", corpse->value[CORPSE_SAVEID]);
+	}
 }
 
 int writeItems(char *buf, P_char ch)
@@ -1468,6 +1473,10 @@ int writeCharacter(P_char ch, int type, int room)
 		{
 			logit(LOG_FILE, "sql_save_locker failed for %s", GET_NAME(ch));
 			wizlog(AVATAR, "&+RERROR&N sql_save_locker failed for %s", GET_NAME(ch));
+			persistence_alert(AVATAR, "locker", GET_NAME(ch), "none",
+			                  "none", "sql_save_failed",
+			                  "owner_pid=%d owner_assoc_id=%d",
+			                  owner_pid, owner_assoc_id);
 			result = 0;
 		}
 	}
@@ -1477,6 +1486,9 @@ int writeCharacter(P_char ch, int type, int room)
 		{
 			logit(LOG_FILE, "sql_save_player failed for %s", GET_NAME(ch));
 			wizlog(AVATAR, "&+RERROR&N sql_save_player failed for %s", GET_NAME(ch));
+			persistence_alert(AVATAR, "player", GET_NAME(ch), "none",
+			                  "none", "sql_save_failed",
+			                  "type=%d room=%d", type, room);
 			result = 0;
 		}
 	}
