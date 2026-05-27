@@ -913,16 +913,43 @@ int persistence_flush_item_events(int max_events)
 {
   char line[PERSISTENCE_EVENT_MAX_LEN];
   unsigned long dropped;
+  FILE *log_f = NULL;
   int flushed = 0;
+  int pending;
 
   if (max_events <= 0)
     max_events = PERSISTENCE_EVENT_QUEUE_CAPACITY;
 
+  pending = persistence_item_event_queue_pending();
+  if (pending > 0)
+  {
+    log_f = fopen(LOG_EVENT, "a");
+    if (!log_f)
+    {
+      persistence_alert(AVATAR, "item_event", "queue", "none", "none",
+                        "flush_open_failed",
+                        "could not open %s; %d events remain queued",
+                        LOG_EVENT, pending);
+      return 0;
+    }
+  }
+
   while (flushed < max_events &&
          persistence_item_event_queue_dequeue(line, sizeof(line)))
   {
-    logit(LOG_EVENT, "%s", line);
+    fputs(line, log_f);
+    fputs("\n", log_f);
     flushed++;
+  }
+
+  if (log_f)
+  {
+    if (fclose(log_f))
+    {
+      persistence_alert(AVATAR, "item_event", "queue", "none", "none",
+                        "flush_close_failed",
+                        "close failed after flushing %d events", flushed);
+    }
   }
 
   dropped = persistence_item_event_queue_dropped();
