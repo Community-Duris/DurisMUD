@@ -28,7 +28,7 @@
 
 #define SAV_STATVERS  47
 #define SAV_SKILLVERS 2
-#define SAV_ITEMVERS  35
+#define SAV_ITEMVERS  36
 #define SAV_AFFVERS   8
 // #define SAV_MAXSIZE 65536
 #define SAV_MAXSIZE   240000
@@ -45,6 +45,7 @@
 #define O_F_EOL       16 /* marks end of a 'contents' list */
 #define O_F_AFFECTS   32 /* object had a decay event when saved */
 #define O_F_SPELLBOOK 64 /* has spellbook array */
+#define O_F_UID       128 /* object has persistent item identity */
 
 /* defines for O_F_UNIQUE saved items */
 
@@ -129,6 +130,13 @@
 		buf += long_size;                                                                                                                                                                              \
 	}
 
+#define ADD_ULL(buf, l)                                                                                                                                                                                \
+	{                                                                                                                                                                                                  \
+		unsigned long long tmp_ = ((unsigned long long)(l));                                                                                                                                            \
+		bcopy(&tmp_, buf, sizeof(tmp_));                                                                                                                                                                \
+		buf += sizeof(tmp_);                                                                                                                                                                            \
+	}
+
 #define ADD_STRING(buf, s)                                                                                                                                                                             \
 	{                                                                                                                                                                                                  \
 		ush_int l_;                                                                                                                                                                                    \
@@ -152,6 +160,7 @@
 #define GET_INTE(bf) (ntohl(*((int *)bf)++))
 #endif
 #define GET_LONG(buf)   getLong(&buf)
+#define GET_ULL(buf)    getUnsignedLongLong(&buf)
 #define GET_STRING(buf) getString(&buf)
 
 /* save_equip array - used during save to hold unequipped items */

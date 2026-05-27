@@ -816,6 +816,10 @@ bool writeObjectlist(P_obj obj, int loc)
 		if (w_obj->affects)
 			o_f_flag |= O_F_AFFECTS;
 
+		persistence_assign_item_uid(w_obj, "writeObjectlist");
+		if (w_obj->obj_uid)
+			o_f_flag |= O_F_UID;
+
 		if ((o_u_flag = ObjUniqueFlags(w_obj, t_obj)))
 			o_f_flag |= O_F_UNIQUE;
 
@@ -966,6 +970,9 @@ int writeObject(P_obj obj, int o_f_flag, ulong o_u_flag, int count, int loc, cha
 	ADD_INT(ibuf, obj_index[obj->R_num].virtual_number);
 	ADD_SHORT(ibuf, obj->craftsmanship);
 	ADD_SHORT(ibuf, obj->condition);
+
+	if (o_f_flag & O_F_UID)
+		ADD_ULL(ibuf, obj->obj_uid);
 
 	if (o_f_flag & O_F_WORN)
 		ADD_BYTE(ibuf, loc);
@@ -1169,6 +1176,10 @@ int write_one_object(P_obj obj, char *dest_buff)
 
 	if (obj->affects)
 		o_f_flag |= O_F_AFFECTS;
+
+	persistence_assign_item_uid(obj, "write_one_object");
+	if (obj->obj_uid)
+		o_f_flag |= O_F_UID;
 
 	if ((o_u_flag = ObjUniqueFlags(obj, t_obj)))
 		o_f_flag |= O_F_UNIQUE;
@@ -1640,6 +1651,16 @@ long getLong(char **buf)
 
 	l = (l);
 	*buf += long_size;
+
+	return l;
+}
+
+unsigned long long getUnsignedLongLong(char **buf)
+{
+	unsigned long long l;
+
+	bcopy(*buf, &l, sizeof(l));
+	*buf += sizeof(l);
 
 	return l;
 }
@@ -2766,6 +2787,14 @@ P_obj restoreObjects(char *buf, P_char ch, int not_room)
 
 		obj->craftsmanship = GET_SHORT(buf);
 		obj->condition     = GET_SHORT(buf);
+		if (obj_vers >= 36 && (o_f_flag & O_F_UID))
+		{
+			unsigned long long saved_uid = GET_ULL(buf);
+
+			obj->obj_uid = (unsigned long)saved_uid;
+			if (obj->obj_uid >= next_obj_uid)
+				next_obj_uid = obj->obj_uid + 1;
+		}
 		if (o_f_flag & O_F_WORN)
 		{
 			loc = GET_BYTE(buf);
@@ -3085,6 +3114,15 @@ P_obj read_one_object(char *read_buf)
 	obj->g_key         = 1;
 	obj->craftsmanship = GET_SHORT(buf);
 	obj->condition     = GET_SHORT(buf);
+
+	if (obj_vers >= 36 && (o_f_flag & O_F_UID))
+	{
+		unsigned long long saved_uid = GET_ULL(buf);
+
+		obj->obj_uid = (unsigned long)saved_uid;
+		if (obj->obj_uid >= next_obj_uid)
+			next_obj_uid = obj->obj_uid + 1;
+	}
 
 	if (o_f_flag & O_F_COUNT)
 		i_count = GET_SHORT(buf);

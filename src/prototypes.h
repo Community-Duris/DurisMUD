@@ -1041,6 +1041,7 @@ int     writePetStatus(char *, P_char);
 int     writeWitnessed(char *, P_char);
 uint    getInt(char **);
 long    getLong(char **);
+unsigned long long getUnsignedLongLong(char **);
 ulong   ObjUniqueFlags(P_obj, P_obj);
 ush_int getShort(char **);
 void    PurgeCorpseFile(P_obj);
