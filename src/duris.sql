@@ -295,13 +295,17 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
 CREATE TABLE `epic_gain` (
   `id` int(10) unsigned NOT NULL auto_increment,
+  `event_key` varchar(128) default NULL,
   `pid` bigint(20) NOT NULL default '0',
   `time` datetime NOT NULL,
   `type` int(11) NOT NULL default '0',
   `type_id` int(11) NOT NULL default '0',
   `epics` int(11) NOT NULL default '0',
   PRIMARY KEY  (`id`),
-  KEY `pid_index` (`pid`)
+  UNIQUE KEY `reward_event_key` (`event_key`),
+  KEY `pid_index` (`pid`),
+  KEY `epic_gain_pid_type_time` (`pid`,`type`,`time`),
+  KEY `epic_gain_pid_type_id` (`pid`,`type`,`type_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 SET character_set_client = @saved_cs_client;
 
@@ -822,6 +826,7 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
 CREATE TABLE `world_quest_accomplished` (
   `id` int(10) unsigned NOT NULL auto_increment,
+  `event_key` varchar(128) default NULL,
   `pid` varchar(45) NOT NULL default '',
   `timestamp` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
   `quest_giver` int(10) unsigned NOT NULL default '0',
@@ -830,7 +835,10 @@ CREATE TABLE `world_quest_accomplished` (
   `quest_target` int(10) NOT NULL default '0',
   `reward_vnum` int(10) NOT NULL default '0',
   `reward_desc` varchar(255) NOT NULL default '',
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `reward_event_key` (`event_key`),
+  KEY `world_quest_pid_level_time` (`pid`,`player_level`,`timestamp`),
+  KEY `world_quest_pid_target` (`pid`,`quest_target`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 SET character_set_client = @saved_cs_client;
 
@@ -892,6 +900,7 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
 CREATE TABLE `zone_touches` (
   `id` int(10) NOT NULL auto_increment,
+  `event_key` varchar(128) default NULL,
   `boot_time` TIMESTAMP NULL DEFAULT NULL,
   `zone_number` int(11) default NULL,
   `touched_at` TIMESTAMP NULL DEFAULT NULL,
@@ -900,6 +909,7 @@ CREATE TABLE `zone_touches` (
   `epic_value` int(11) default NULL,
   `alignment_delta` int(10) default NULL,
   PRIMARY KEY  (`id`),
+  UNIQUE KEY `reward_event_key` (`event_key`),
   KEY `zone_number_index` (`zone_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 SET character_set_client = @saved_cs_client;

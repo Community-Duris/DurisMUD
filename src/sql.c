@@ -77,6 +77,7 @@ int  sql_shop_sell(P_char ch, P_obj obj, int value) { return -1; }
 void sql_world_quest_finished(P_char ch, P_obj obj) {}
 int  sql_world_quest_done_already(P_char ch, int quest_target) { return -1; }
 int  sql_world_quest_can_do_another(P_char ch) { return -1; }
+void sql_zone_touch_finished(const char *event_key, int boot_time, int touched_at, int zone_number, int toucher_pid, int group_size, int epic_value, int alignment_delta) {}
 
 void        sql_connectIP(P_char ch) {}
 void        sql_disconnectIP(P_char ch) {}
@@ -91,6 +92,7 @@ bool sql_persistence_write_item_event_line(const char *line) { return FALSE; }
 void send_to_pid_offline(const char *msg, int pid) {}
 void send_offline_messages(P_char ch) {}
 void log_epic_gain(int pid, int zone_id, int type, int epics) {}
+void log_epic_gain_event(const char *event_key, int pid, int type, int type_id, int epics) {}
 void update_zone_db() {}
 void update_zone_epic_level(int zone_id, int level) {}
 void show_frag_trophy(P_char ch, P_char who) { send_to_char("Disabled.", ch); }
@@ -129,6 +131,11 @@ static void sql_resetConnectTimes(void);
 MYSQL *DB;
 static MYSQL *persistenceDB = NULL;
 static bool persistence_tables_ready = FALSE;
+static bool persistence_reward_tables_ready = FALSE;
+static unsigned long persistence_reward_event_sequence = 0;
+static MYSQL *sql_persistence_connection(void);
+static bool sql_persistence_ensure_reward_tables(MYSQL *db);
+static void sql_reward_event_key(char *buf, int buf_size, const char *type, int pid, int source_id);
 
 /* Escapes a string. */
 char *mysql_str(const char *str, char *buf)
@@ -311,6 +318,9 @@ int initialize_mysql()
 
 	sql_resetConnectTimes();
 	sql_populate_lookup_tables();
+
+	if (!sql_persistence_ensure_reward_tables(sql_persistence_connection()))
+		logit(LOG_DEBUG, "Persistence reward idempotency schema is not ready; reward writes will use legacy inserts until the schema is repaired.");
 
 	return 1;
 }
@@ -1021,19 +1031,44 @@ void sql_connectIP(P_char ch)
 
 void sql_world_quest_finished(P_char ch, P_obj reward)
 {
+	MYSQL *db;
 	char buf[MAX_STRING_LENGTH];
+	char event_key[128];
+	char event_key_sql[256];
 
 	int   reward_vnum = reward ? ((reward->R_num >= 0) ? obj_index[reward->R_num].virtual_number : 0) : 0;
 	char *reward_desc = reward ? mysql_str(reward->short_description, buf) : mysql_str("", buf);
 
-	db_query("INSERT INTO world_quest_accomplished (pid, timestamp, quest_giver, player_name, player_level, quest_target, reward_vnum, reward_desc) VALUES (%d, now(), %d, '%s', %d, %d, %d, '%s')",
-	         GET_PID(ch),
-	         ch->only.pc->quest_giver,
-	         GET_NAME(ch),
-	         GET_LEVEL(ch),
-	         ch->only.pc->quest_mob_vnum,
-	         reward_vnum,
-	         reward_desc);
+	db = persistence_reward_tables_ready ? sql_persistence_connection() : NULL;
+	if (!db)
+	{
+		db_query("INSERT INTO world_quest_accomplished (pid, timestamp, quest_giver, player_name, player_level, quest_target, reward_vnum, reward_desc) VALUES (%d, now(), %d, '%s', %d, %d, %d, '%s')",
+		         GET_PID(ch),
+		         ch->only.pc->quest_giver,
+		         GET_NAME(ch),
+		         GET_LEVEL(ch),
+		         ch->only.pc->quest_mob_vnum,
+		         reward_vnum,
+		         reward_desc);
+	}
+	else
+	{
+		sql_reward_event_key(event_key, sizeof(event_key), "quest_complete", GET_PID(ch), ch->only.pc->quest_mob_vnum);
+		mysql_real_escape_string(db, event_key_sql, event_key, strlen(event_key));
+
+		db_query("INSERT INTO world_quest_accomplished "
+		         "(event_key, pid, timestamp, quest_giver, player_name, player_level, quest_target, reward_vnum, reward_desc) "
+		         "VALUES ('%s', %d, now(), %d, '%s', %d, %d, %d, '%s') "
+		         "ON DUPLICATE KEY UPDATE event_key=event_key",
+		         event_key_sql,
+		         GET_PID(ch),
+		         ch->only.pc->quest_giver,
+		         GET_NAME(ch),
+		         GET_LEVEL(ch),
+		         ch->only.pc->quest_mob_vnum,
+		         reward_vnum,
+		         reward_desc);
+	}
 
 	mark_player_dirty(GET_PID(ch));
 }
@@ -1099,6 +1134,48 @@ int sql_world_quest_done_already(P_char ch, int quest_target)
 		mysql_free_result(db);
 	}
 	return returning_value;
+}
+
+void sql_zone_touch_finished(const char *event_key, int boot_time, int touched_at, int zone_number, int toucher_pid, int group_size, int epic_value, int alignment_delta)
+{
+	MYSQL *db;
+	char event_key_buf[128];
+	char event_key_sql[256];
+
+	db = persistence_reward_tables_ready ? sql_persistence_connection() : NULL;
+	if (!db)
+	{
+		db_query("INSERT INTO zone_touches (boot_time, touched_at, zone_number, toucher_pid, group_size, epic_value, alignment_delta) "
+		         "VALUES (FROM_UNIXTIME(%d), FROM_UNIXTIME(%d), %d, %d, %d, %d, %d)",
+		         boot_time,
+		         touched_at,
+		         zone_number,
+		         toucher_pid,
+		         group_size,
+		         epic_value,
+		         alignment_delta);
+		return;
+	}
+
+	if (!event_key || !*event_key)
+	{
+		sql_reward_event_key(event_key_buf, sizeof(event_key_buf), "zone_touch", toucher_pid, zone_number);
+		event_key = event_key_buf;
+	}
+
+	mysql_real_escape_string(db, event_key_sql, event_key, strlen(event_key));
+
+	db_query("INSERT INTO zone_touches (event_key, boot_time, touched_at, zone_number, toucher_pid, group_size, epic_value, alignment_delta) "
+	         "VALUES ('%s', FROM_UNIXTIME(%d), FROM_UNIXTIME(%d), %d, %d, %d, %d, %d) "
+	         "ON DUPLICATE KEY UPDATE event_key=event_key",
+	         event_key_sql,
+	         boot_time,
+	         touched_at,
+	         zone_number,
+	         toucher_pid,
+	         group_size,
+	         epic_value,
+	         alignment_delta);
 }
 
 const char *sql_select_IP_info(P_char ch, char *buf, size_t bufSize, time_t *lastConnect, time_t *lastDisconnect)
@@ -1345,6 +1422,7 @@ static MYSQL *sql_persistence_connection(void)
 		mysql_close(persistenceDB);
 		persistenceDB = NULL;
 		persistence_tables_ready = FALSE;
+		persistence_reward_tables_ready = FALSE;
 	}
 
 	snprintf(db_name, sizeof(db_name), "%s", DB_NAME);
@@ -1425,6 +1503,158 @@ static bool sql_persistence_ensure_tables(MYSQL *db)
 
 	persistence_tables_ready = TRUE;
 	return TRUE;
+}
+
+static bool sql_persistence_column_exists(MYSQL *db, const char *table_name, const char *column_name)
+{
+	char query[512];
+	char table_sql[128];
+	char column_sql[128];
+	MYSQL_RES *res;
+	MYSQL_ROW row;
+	bool exists = FALSE;
+
+	if (!db || !table_name || !column_name)
+		return FALSE;
+
+	mysql_real_escape_string(db, table_sql, table_name, strlen(table_name));
+	mysql_real_escape_string(db, column_sql, column_name, strlen(column_name));
+	snprintf(query,
+	         sizeof(query),
+	         "SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS "
+	         "WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = '%s' AND COLUMN_NAME = '%s'",
+	         table_sql,
+	         column_sql);
+
+	if (mysql_real_query(db, query, strlen(query)))
+		return FALSE;
+
+	res = mysql_store_result(db);
+	if (!res)
+		return FALSE;
+
+	row = mysql_fetch_row(res);
+	if (row && row[0] && atoi(row[0]) > 0)
+		exists = TRUE;
+
+	mysql_free_result(res);
+	return exists;
+}
+
+static bool sql_persistence_index_exists(MYSQL *db, const char *table_name, const char *index_name)
+{
+	char query[512];
+	char table_sql[128];
+	char index_sql[128];
+	MYSQL_RES *res;
+	MYSQL_ROW row;
+	bool exists = FALSE;
+
+	if (!db || !table_name || !index_name)
+		return FALSE;
+
+	mysql_real_escape_string(db, table_sql, table_name, strlen(table_name));
+	mysql_real_escape_string(db, index_sql, index_name, strlen(index_name));
+	snprintf(query,
+	         sizeof(query),
+	         "SELECT COUNT(*) FROM INFORMATION_SCHEMA.STATISTICS "
+	         "WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = '%s' AND INDEX_NAME = '%s'",
+	         table_sql,
+	         index_sql);
+
+	if (mysql_real_query(db, query, strlen(query)))
+		return FALSE;
+
+	res = mysql_store_result(db);
+	if (!res)
+		return FALSE;
+
+	row = mysql_fetch_row(res);
+	if (row && row[0] && atoi(row[0]) > 0)
+		exists = TRUE;
+
+	mysql_free_result(res);
+	return exists;
+}
+
+static bool sql_persistence_ensure_event_key(MYSQL *db, const char *table_name)
+{
+	char query[512];
+
+	if (!db || !table_name)
+		return FALSE;
+
+	if (!sql_persistence_column_exists(db, table_name, "event_key"))
+	{
+		snprintf(query, sizeof(query), "ALTER TABLE %s ADD COLUMN event_key VARCHAR(128) DEFAULT NULL", table_name);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+	}
+
+	if (!sql_persistence_index_exists(db, table_name, "reward_event_key"))
+	{
+		snprintf(query, sizeof(query), "ALTER TABLE %s ADD UNIQUE KEY reward_event_key (event_key)", table_name);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+	}
+
+	return TRUE;
+}
+
+static bool sql_persistence_ensure_index(MYSQL *db, const char *table_name, const char *index_name, const char *index_sql)
+{
+	char query[512];
+
+	if (!db || !table_name || !index_name || !index_sql)
+		return FALSE;
+
+	if (sql_persistence_index_exists(db, table_name, index_name))
+		return TRUE;
+
+	snprintf(query, sizeof(query), "ALTER TABLE %s ADD KEY %s %s", table_name, index_name, index_sql);
+	return sql_persistence_query(db, query);
+}
+
+static bool sql_persistence_ensure_reward_tables(MYSQL *db)
+{
+	if (persistence_reward_tables_ready)
+		return TRUE;
+
+	if (!db)
+		return FALSE;
+
+	if (!sql_persistence_ensure_event_key(db, "epic_gain"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_event_key(db, "world_quest_accomplished"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_event_key(db, "zone_touches"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_index(db, "epic_gain", "epic_gain_pid_type_time", "(pid,type,time)"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_index(db, "epic_gain", "epic_gain_pid_type_id", "(pid,type,type_id)"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_index(db, "world_quest_accomplished", "world_quest_pid_level_time", "(pid,player_level,timestamp)"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_index(db, "world_quest_accomplished", "world_quest_pid_target", "(pid,quest_target)"))
+		return FALSE;
+
+	persistence_reward_tables_ready = TRUE;
+	return TRUE;
+}
+
+static void sql_reward_event_key(char *buf, int buf_size, const char *type, int pid, int source_id)
+{
+	if (!buf || buf_size <= 0)
+		return;
+
+	persistence_reward_event_sequence++;
+	snprintf(buf, buf_size, "%s:%d:%d:%ld:%lu", type ? type : "reward", pid, source_id, (long)time(NULL), persistence_reward_event_sequence);
 }
 
 static void persistence_line_field(const char *token, char *key, int key_size,
@@ -1700,7 +1930,44 @@ int sql_quest_trophy(P_char giver)
 	return returning_value;
 }
 
-void log_epic_gain(int pid, int type, int type_id, int epics) { qry("INSERT INTO epic_gain (pid, time, type, type_id, epics) values ('%d', now(), '%d', '%d', '%d')", pid, type, type_id, epics); }
+void log_epic_gain(int pid, int type, int type_id, int epics)
+{
+	char event_key[128];
+
+	sql_reward_event_key(event_key, sizeof(event_key), "epic_gain", pid, type_id);
+	log_epic_gain_event(event_key, pid, type, type_id, epics);
+}
+
+void log_epic_gain_event(const char *event_key, int pid, int type, int type_id, int epics)
+{
+	MYSQL *db;
+	char event_key_buf[128];
+	char event_key_sql[256];
+
+	db = persistence_reward_tables_ready ? sql_persistence_connection() : NULL;
+	if (!db)
+	{
+		qry("INSERT INTO epic_gain (pid, time, type, type_id, epics) values ('%d', now(), '%d', '%d', '%d')", pid, type, type_id, epics);
+		return;
+	}
+
+	if (!event_key || !*event_key)
+	{
+		sql_reward_event_key(event_key_buf, sizeof(event_key_buf), "epic_gain", pid, type_id);
+		event_key = event_key_buf;
+	}
+
+	mysql_real_escape_string(db, event_key_sql, event_key, strlen(event_key));
+
+	qry("INSERT INTO epic_gain (event_key, pid, time, type, type_id, epics) "
+	    "values ('%s', '%d', now(), '%d', '%d', '%d') "
+	    "ON DUPLICATE KEY UPDATE event_key=event_key",
+	    event_key_sql,
+	    pid,
+	    type,
+	    type_id,
+	    epics);
+}
 
 /* The prepstatement_duris_sql table looks like:
 +-------------+---------+------+-----+---------+----------------+
