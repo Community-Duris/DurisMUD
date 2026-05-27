@@ -969,11 +969,26 @@ static int persistence_item_event_log_writer(const char *line, void *context)
 {
   FILE *log_f;
   int ok = 1;
+  static unsigned long fallback_count = 0;
 
   (void) context;
 
   if (!line || !*line)
     return 1;
+
+  if (sql_persistence_write_item_event_line(line))
+    return 1;
+
+  fallback_count++;
+  if (fallback_count <= 5 || !(fallback_count % 1000))
+  {
+    logit(LOG_FILE,
+          "PERSISTENCE: domain=item_event owner=worker item_uid=none event_id=none action=sql_fallback detail=SQL persistence unavailable; wrote event to flat log fallback count=%lu",
+          fallback_count);
+    logit(LOG_WIZ,
+          "PERSISTENCE: domain=item_event owner=worker item_uid=none event_id=none action=sql_fallback detail=SQL persistence unavailable; wrote event to flat log fallback count=%lu",
+          fallback_count);
+  }
 
   log_f = fopen(LOG_EVENT, "a");
   if (!log_f)

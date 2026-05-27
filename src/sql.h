@@ -93,6 +93,7 @@ int         sql_find_racewar_for_ip(char *ip, int *racewar_side);
 // to log disconnect times...
 void sql_disconnectIP(P_char ch);
 bool qry(const char *format, ...);
+bool sql_persistence_write_item_event_line(const char *line);
 void sql_world_quest_finished(P_char ch, P_obj obj);
 int  sql_world_quest_done_already(P_char ch, int number);
 int  sql_world_quest_can_do_another(P_char ch);

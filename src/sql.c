@@ -16,6 +16,7 @@
 #include <math.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <time.h>
@@ -30,6 +31,7 @@
 #include "redis.h"
 #include "specializations.h"
 #include "spells.h"
+#include "persistence_queue.h"
 #include "sql_player.h"
 #include "timers.h"
 
@@ -72,7 +74,7 @@ int  sql_quest_finish(P_char ch, P_char giver, int type, int value) { return -1;
 int  sql_quest_trophy(P_char giver) { return -1; }
 int  sql_shop_trophy(P_obj obj) { return -1; }
 int  sql_shop_sell(P_char ch, P_obj obj, int value) { return -1; }
-void sql_world_quest_finished(P_char ch, P_char giver, P_obj obj) {}
+void sql_world_quest_finished(P_char ch, P_obj obj) {}
 int  sql_world_quest_done_already(P_char ch, int quest_target) { return -1; }
 int  sql_world_quest_can_do_another(P_char ch) { return -1; }
 
@@ -85,7 +87,8 @@ const char *sql_select_IP_info(P_char ch, char *buf, size_t bufSize, time_t *las
 }
 int  sql_find_racewar_for_ip(char *ip, int *racewar_side) { return -1; }
 bool qry(const char *format, ...) { return TRUE; }
-void send_to_char_offline(const char *msg, int pid) {}
+bool sql_persistence_write_item_event_line(const char *line) { return FALSE; }
+void send_to_pid_offline(const char *msg, int pid) {}
 void send_offline_messages(P_char ch) {}
 void log_epic_gain(int pid, int zone_id, int type, int epics) {}
 void update_zone_db() {}
@@ -124,6 +127,8 @@ static void sql_resetConnectTimes(void);
 
 // The global database handler
 MYSQL *DB;
+static MYSQL *persistenceDB = NULL;
+static bool persistence_tables_ready = FALSE;
 
 /* Escapes a string. */
 char *mysql_str(const char *str, char *buf)
@@ -1324,6 +1329,260 @@ bool qry(const char *format, ...)
 	}
 
 	return TRUE;
+}
+
+static MYSQL *sql_persistence_connection(void)
+{
+	char db_name[50];
+	MYSQL *db;
+	unsigned int timeout = 10;
+
+	if (persistenceDB && mysql_ping(persistenceDB) == 0)
+		return persistenceDB;
+
+	if (persistenceDB)
+	{
+		mysql_close(persistenceDB);
+		persistenceDB = NULL;
+		persistence_tables_ready = FALSE;
+	}
+
+	snprintf(db_name, sizeof(db_name), "%s", DB_NAME);
+	if (RUNNING_PORT != DFLT_PORT)
+		snprintf(db_name, sizeof(db_name), "duris_dev");
+
+	db = mysql_init(NULL);
+	if (!db)
+		return NULL;
+
+	mysql_options(db, MYSQL_OPT_READ_TIMEOUT, &timeout);
+	mysql_options(db, MYSQL_OPT_WRITE_TIMEOUT, &timeout);
+
+	if (!mysql_real_connect(db, DB_HOST, DB_USER, DB_PASSWD, db_name, DB_PORT, NULL, CLIENT_MULTI_STATEMENTS))
+	{
+		mysql_close(db);
+		return NULL;
+	}
+
+	persistenceDB = db;
+	return persistenceDB;
+}
+
+static bool sql_persistence_query(MYSQL *db, const char *query)
+{
+	if (!db || !query)
+		return FALSE;
+
+	if (mysql_real_query(db, query, strlen(query)))
+	{
+		logit(LOG_DEBUG, "Persistence MySQL error: %s", mysql_error(db));
+		return FALSE;
+	}
+
+	return TRUE;
+}
+
+static bool sql_persistence_ensure_tables(MYSQL *db)
+{
+	if (persistence_tables_ready)
+		return TRUE;
+
+	if (!sql_persistence_query(db,
+	                          "CREATE TABLE IF NOT EXISTS persistence_item_event_audit ("
+	                          "event_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,"
+	                          "event_time BIGINT UNSIGNED NOT NULL,"
+	                          "event_type VARCHAR(64) NOT NULL,"
+	                          "item_uid BIGINT UNSIGNED NOT NULL,"
+	                          "owner_type VARCHAR(32) NOT NULL,"
+	                          "owner_ref VARCHAR(64) NOT NULL,"
+	                          "actor_id INT NOT NULL DEFAULT -1,"
+	                          "vnum INT NOT NULL DEFAULT -1,"
+	                          "item_name VARCHAR(255) NOT NULL DEFAULT '',"
+	                          "raw_event TEXT NOT NULL,"
+	                          "created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,"
+	                          "PRIMARY KEY (event_id),"
+	                          "KEY item_time (item_uid,event_time),"
+	                          "KEY owner_lookup (owner_type,owner_ref)"
+	                          ") ENGINE=InnoDB"))
+		return FALSE;
+
+	if (!sql_persistence_query(db,
+	                          "CREATE TABLE IF NOT EXISTS persistence_items_current ("
+	                          "item_uid BIGINT UNSIGNED NOT NULL,"
+	                          "owner_type VARCHAR(32) NOT NULL,"
+	                          "owner_ref VARCHAR(64) NOT NULL,"
+	                          "event_time BIGINT UNSIGNED NOT NULL,"
+	                          "event_type VARCHAR(64) NOT NULL,"
+	                          "actor_id INT NOT NULL DEFAULT -1,"
+	                          "vnum INT NOT NULL DEFAULT -1,"
+	                          "item_name VARCHAR(255) NOT NULL DEFAULT '',"
+	                          "updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP "
+	                          "ON UPDATE CURRENT_TIMESTAMP,"
+	                          "PRIMARY KEY (item_uid),"
+	                          "KEY owner_lookup (owner_type,owner_ref)"
+	                          ") ENGINE=InnoDB"))
+		return FALSE;
+
+	persistence_tables_ready = TRUE;
+	return TRUE;
+}
+
+static void persistence_line_field(const char *token, char *key, int key_size,
+                                   char *value, int value_size)
+{
+	const char *eq;
+	int key_len;
+
+	if (key && key_size > 0)
+		key[0] = '\0';
+	if (value && value_size > 0)
+		value[0] = '\0';
+
+	if (!token)
+		return;
+
+	eq = strchr(token, '=');
+	if (!eq)
+		return;
+
+	key_len = (int)(eq - token);
+	if (key && key_size > 0)
+	{
+		key_len = MIN(key_len, key_size - 1);
+		strncpy(key, token, key_len);
+		key[key_len] = '\0';
+	}
+
+	if (value && value_size > 0)
+		snprintf(value, value_size, "%s", eq + 1);
+}
+
+static void persistence_parse_owner(const char *target, char *owner_type,
+                                    int owner_type_size, char *owner_ref,
+                                    int owner_ref_size)
+{
+	const char *colon;
+	int len;
+
+	snprintf(owner_type, owner_type_size, "unknown");
+	snprintf(owner_ref, owner_ref_size, "unknown");
+
+	if (!target || !*target)
+		return;
+
+	if (!str_cmp(target, "destroyed"))
+	{
+		snprintf(owner_type, owner_type_size, "destroyed");
+		snprintf(owner_ref, owner_ref_size, "0");
+		return;
+	}
+
+	colon = strchr(target, ':');
+	if (!colon)
+	{
+		snprintf(owner_ref, owner_ref_size, "%s", target);
+		return;
+	}
+
+	len = (int)(colon - target);
+	len = MIN(len, owner_type_size - 1);
+	strncpy(owner_type, target, len);
+	owner_type[len] = '\0';
+	snprintf(owner_ref, owner_ref_size, "%s", colon + 1);
+}
+
+bool sql_persistence_write_item_event_line(const char *line)
+{
+	MYSQL *db;
+	char copy[PERSISTENCE_EVENT_MAX_LEN];
+	char *saveptr = NULL;
+	char *token;
+	char key[64], value[512];
+	char event_type[64] = "unknown";
+	char target[128] = "unknown";
+	char owner_type[32], owner_ref[64];
+	char item_name[MAX_INPUT_LENGTH] = "";
+	char item_sql[MAX_STRING_LENGTH];
+	char event_sql[256], owner_type_sql[128], owner_ref_sql[256];
+	char raw_sql[PERSISTENCE_EVENT_MAX_LEN * 2 + 1];
+	char query[MAX_STRING_LENGTH * 2];
+	unsigned long long item_uid = 0;
+	unsigned long long event_time = 0;
+	int actor_id = -1;
+	int vnum = -1;
+
+	if (!line || !*line)
+		return FALSE;
+
+	db = sql_persistence_connection();
+	if (!db || !sql_persistence_ensure_tables(db))
+		return FALSE;
+
+	snprintf(copy, sizeof(copy), "%s", line);
+	token = strtok_r(copy, "|", &saveptr);
+	while (token)
+	{
+		persistence_line_field(token, key, sizeof(key), value, sizeof(value));
+
+		if (!str_cmp(key, "ts"))
+			event_time = strtoull(value, NULL, 10);
+		else if (!str_cmp(key, "event"))
+			snprintf(event_type, sizeof(event_type), "%s", value);
+		else if (!str_cmp(key, "item_uid"))
+			item_uid = strtoull(value, NULL, 10);
+		else if (!str_cmp(key, "vnum"))
+			vnum = atoi(value);
+		else if (!str_cmp(key, "item"))
+			snprintf(item_name, sizeof(item_name), "%s", value);
+		else if (!str_cmp(key, "actor_id"))
+			actor_id = atoi(value);
+		else if (!str_cmp(key, "target"))
+			snprintf(target, sizeof(target), "%s", value);
+
+		token = strtok_r(NULL, "|", &saveptr);
+	}
+
+	if (!item_uid)
+		return FALSE;
+
+	if (!event_time)
+		event_time = time(NULL);
+
+	persistence_parse_owner(target, owner_type, sizeof(owner_type),
+	                        owner_ref, sizeof(owner_ref));
+
+	mysql_real_escape_string(db, event_sql, event_type, strlen(event_type));
+	mysql_real_escape_string(db, owner_type_sql, owner_type, strlen(owner_type));
+	mysql_real_escape_string(db, owner_ref_sql, owner_ref, strlen(owner_ref));
+	mysql_real_escape_string(db, item_sql, item_name, strlen(item_name));
+	mysql_real_escape_string(db, raw_sql, line, strlen(line));
+
+	snprintf(query, sizeof(query),
+	         "INSERT INTO persistence_item_event_audit "
+	         "(event_time,event_type,item_uid,owner_type,owner_ref,actor_id,vnum,item_name,raw_event) "
+	         "VALUES (%llu,'%s',%llu,'%s','%s',%d,%d,'%s','%s')",
+	         event_time, event_sql, item_uid, owner_type_sql, owner_ref_sql,
+	         actor_id, vnum, item_sql, raw_sql);
+
+	if (!sql_persistence_query(db, query))
+		return FALSE;
+
+	snprintf(query, sizeof(query),
+	         "INSERT INTO persistence_items_current "
+	         "(item_uid,owner_type,owner_ref,event_time,event_type,actor_id,vnum,item_name) "
+	         "VALUES (%llu,'%s','%s',%llu,'%s',%d,%d,'%s') "
+	         "ON DUPLICATE KEY UPDATE "
+	         "owner_type=IF(VALUES(event_time) >= event_time, VALUES(owner_type), owner_type),"
+	         "owner_ref=IF(VALUES(event_time) >= event_time, VALUES(owner_ref), owner_ref),"
+	         "event_type=IF(VALUES(event_time) >= event_time, VALUES(event_type), event_type),"
+	         "actor_id=IF(VALUES(event_time) >= event_time, VALUES(actor_id), actor_id),"
+	         "vnum=IF(VALUES(event_time) >= event_time, VALUES(vnum), vnum),"
+	         "item_name=IF(VALUES(event_time) >= event_time, VALUES(item_name), item_name),"
+	         "event_time=GREATEST(event_time, VALUES(event_time))",
+	         item_uid, owner_type_sql, owner_ref_sql, event_time, event_sql,
+	         actor_id, vnum, item_sql);
+
+	return sql_persistence_query(db, query);
 }
 
 void send_to_pid_offline(const char *msg, int pid)
