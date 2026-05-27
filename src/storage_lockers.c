@@ -52,6 +52,17 @@ extern P_nevent get_scheduled(P_char ch, event_func func);
 void            event_memorize(P_char, P_char, P_obj, void *);
 int             is_wearing_necroplasm(P_char);
 
+static void persistence_record_locker_item_event(P_obj obj, P_char actor, const char *locker_name, const char *source, const char *note)
+{
+	char target[MAX_INPUT_LENGTH];
+
+	if (!obj || !locker_name || !*locker_name)
+		return;
+
+	snprintf(target, sizeof(target), "locker:%s", locker_name);
+	persistence_record_item_event("owner_locker", obj, actor, source, target, note);
+}
+
 #define LOCKERS_START 65201
 #define LOCKERS_MAX   99
 // for mini_mode
@@ -2465,12 +2476,14 @@ void StorageLocker::LockerToPFile(void)
 			{
 				obj_from_obj(innerObj);
 				obj_to_char(innerObj, m_chLocker);
+				persistence_record_locker_item_event(innerObj, m_chUser, GET_NAME(m_chLocker), "locker_chest", "locker_to_pfile");
 			}
 		}
 		else
 		{
 			obj_from_room(tmp_object);
 			obj_to_char(tmp_object, m_chLocker);
+			persistence_record_locker_item_event(tmp_object, m_chUser, GET_NAME(m_chLocker), "locker_room", "locker_to_pfile");
 		}
 	}
 }
@@ -2488,6 +2501,7 @@ void StorageLocker::PFileToLocker(void)
 		obj_from_char(tmp_object);
 		if ((tmp_object->type == ITEM_MONEY) || !PutInProperChest(tmp_object))
 			obj_to_room(tmp_object, m_realRoom);
+		persistence_record_locker_item_event(tmp_object, m_chUser, GET_NAME(m_chLocker), "locker_pfile", "pfile_to_locker");
 	}
 	m_itemCount = nCount;
 
