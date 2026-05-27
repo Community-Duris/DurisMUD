@@ -1702,6 +1702,118 @@ void event_autosave(P_char ch, P_char victim, P_obj obj, void *data)
 	add_event(event_autosave, 1200, ch, 0, 0, 0, 0, 0);
 }
 
+#define PERSISTENCE_DEFERRED_SAVE_SLOTS 512
+
+struct deferred_save_slot
+{
+  int pid;
+  int type;
+  int level_dirty;
+  char reason[64];
+};
+
+static struct deferred_save_slot deferred_saves[PERSISTENCE_DEFERRED_SAVE_SLOTS];
+
+static struct deferred_save_slot *find_deferred_save_slot(int pid)
+{
+  int i;
+
+  for (i = 0; i < PERSISTENCE_DEFERRED_SAVE_SLOTS; i++)
+    if (deferred_saves[i].pid == pid)
+      return &deferred_saves[i];
+
+  return NULL;
+}
+
+static struct deferred_save_slot *find_empty_deferred_save_slot(void)
+{
+  int i;
+
+  for (i = 0; i < PERSISTENCE_DEFERRED_SAVE_SLOTS; i++)
+    if (!deferred_saves[i].pid)
+      return &deferred_saves[i];
+
+  return NULL;
+}
+
+static void event_deferred_character_save(P_char ch, P_char victim, P_obj obj,
+                                          void *data)
+{
+  struct deferred_save_slot pending;
+  struct deferred_save_slot *slot;
+
+  (void) victim;
+  (void) obj;
+  (void) data;
+
+  if (!IS_ALIVE(ch) || IS_NPC(ch))
+    return;
+
+  slot = find_deferred_save_slot(GET_PID(ch));
+  if (!slot)
+    return;
+
+  pending = *slot;
+  memset(slot, 0, sizeof(*slot));
+
+  if (pending.level_dirty)
+    sql_update_level(ch);
+
+  do_save_silent(ch, pending.type ? pending.type : 1);
+}
+
+static void persistence_schedule_checkpoint(P_char ch, int type, int delay,
+                                            const char *reason,
+                                            int level_dirty)
+{
+  struct deferred_save_slot *slot;
+
+  if (!IS_ALIVE(ch) || IS_NPC(ch))
+    return;
+
+  slot = find_deferred_save_slot(GET_PID(ch));
+  if (slot)
+  {
+    slot->type = type ? type : slot->type;
+    slot->level_dirty = slot->level_dirty || level_dirty;
+    return;
+  }
+
+  slot = find_empty_deferred_save_slot();
+  if (!slot)
+  {
+    persistence_alert(AVATAR, "player_save", GET_NAME(ch), "none", "none",
+                      "deferred_save_full",
+                      "deferred save table full; saving synchronously for %s",
+                      reason ? reason : "unknown");
+    if (level_dirty)
+      sql_update_level(ch);
+    do_save_silent(ch, type ? type : 1);
+    return;
+  }
+
+  slot->pid = GET_PID(ch);
+  slot->type = type ? type : 1;
+  slot->level_dirty = level_dirty;
+  snprintf(slot->reason, sizeof(slot->reason), "%s",
+           reason ? reason : "unknown");
+
+  add_event(event_deferred_character_save, delay > 0 ? delay : 1, ch, 0, 0, 0,
+            0, 0);
+}
+
+void persistence_schedule_character_save(P_char ch, int type, int delay,
+                                         const char *reason)
+{
+  persistence_schedule_checkpoint(ch, type, delay, reason, 0);
+}
+
+void persistence_schedule_level_checkpoint(P_char ch, int type, int delay,
+                                           const char *reason)
+{
+  persistence_schedule_checkpoint(ch, type, delay, reason, 1);
+}
+
 void do_save_silent(P_char ch, int type)
 {
 	FILE  *f;

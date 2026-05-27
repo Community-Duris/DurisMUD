@@ -676,7 +676,7 @@ void advance_level(P_char ch)
    ///TODO CODE THIS PIECE OF MASTER    */
 
 	ch->player.level++;
-	sql_update_level(ch);
+	persistence_schedule_level_checkpoint(ch, 1, 5, "advance_level");
 
 	if (GET_LEVEL(ch) > 1)
 	{

@@ -38,6 +38,10 @@ unsigned long persistence_dropped_item_events(void);
 int persistence_start_item_event_worker(void);
 void persistence_stop_item_event_worker(void);
 int persistence_item_event_worker_active(void);
+void persistence_schedule_character_save(P_char ch, int type, int delay,
+                                         const char *reason);
+void persistence_schedule_level_checkpoint(P_char ch, int type, int delay,
+                                           const char *reason);
 
 int cmd_from_dir(int dir);
 int direction_tag(P_char ch);

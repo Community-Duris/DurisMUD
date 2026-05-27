@@ -2627,7 +2627,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
 			send_to_char("&+WKannard &+Lthe &+ctra&+Cvell&+cer &nmakes a strange gesture about your body, and hands you your item.\r\n&n", pl);
 			act("You now have $p!\r\n", FALSE, pl, obj, 0, TO_CHAR);
 			obj_to_char(obj, pl);
-			do_save_silent(pl, 1);
+			persistence_schedule_character_save(pl, 1, 5, "epic_store_purchase");
 			// Log the transaction in epic log file.
 			epiclog(56, "%s bought '%s' (%d) at the epic store for %d epics.", J_NAME(pl), obj->short_description, VOBJ_EPIC_MUSHROOM, COST_EPIC_MUSHROOM);
 			return TRUE;
@@ -2647,7 +2647,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
 			send_to_char("&+WKannard &+Lthe &+ctra&+Cvell&+cer &nmakes a strange gesture about your body, and hands you your item.\r\n&n", pl);
 			act("You now have $p!\r\n", FALSE, pl, obj, 0, TO_CHAR);
 			obj_to_char(obj, pl);
-			do_save_silent(pl, 1);
+			persistence_schedule_character_save(pl, 1, 5, "epic_store_purchase");
 			// Log the transaction in epic log file.
 			epiclog(56, "%s bought '%s' (%d) at the epic store for %d epics.", J_NAME(pl), obj->short_description, VOBJ_EPIC_FIX_SCROLL, COST_EPIC_FIX_SCROLL);
 			return TRUE;
@@ -2667,7 +2667,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
 			send_to_char("&+WKannard &+Lthe &+ctra&+Cvell&+cer &nmakes a strange gesture about your body, and hands you your item.\r\n&n", pl);
 			act("You now have $p!\r\n", FALSE, pl, obj, 0, TO_CHAR);
 			obj_to_char(obj, pl);
-			do_save_silent(pl, 1);
+			persistence_schedule_character_save(pl, 1, 5, "epic_store_purchase");
 			// Log the transaction in epic log file.
 			epiclog(56, "%s bought '%s' (%d) at the epic store for %d epics.", J_NAME(pl), obj->short_description, VOBJ_EPIC_FAERIE_BAG, COST_EPIC_FAERIE_BAG);
 			return TRUE;
@@ -2687,7 +2687,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
 			send_to_char("&+WKannard &+Lthe &+ctra&+Cvell&+cer &nmakes a strange gesture about your body, and hands you your item.\r\n&n", pl);
 			act("You now have $p!\r\n", FALSE, pl, obj, 0, TO_CHAR);
 			obj_to_char(obj, pl);
-			do_save_silent(pl, 1);
+			persistence_schedule_character_save(pl, 1, 5, "epic_store_purchase");
 			// Log the transaction in epic log file.
 			epiclog(56, "%s bought '%s' (%d) at the epic store for %d epics.", J_NAME(pl), obj->short_description, VOBJ_EPIC_BATTLEROBE, COST_EPIC_BATTLEROBE);
 			return TRUE;
@@ -2707,7 +2707,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
 			send_to_char("&+WKannard &+Lthe &+ctra&+Cvell&+cer &nmakes a strange gesture about your body, and hands you your item.\r\n&n", pl);
 			act("You now have $p!\r\n", FALSE, pl, obj, 0, TO_CHAR);
 			obj_to_char(obj, pl);
-			do_save_silent(pl, 1);
+			persistence_schedule_character_save(pl, 1, 5, "epic_store_purchase");
 			// Log the transaction in epic log file.
 			epiclog(56, "%s bought '%s' (%d) at the epic store for %d epics.", J_NAME(pl), obj->short_description, VOBJ_EPIC_TOCORPSE_POTION, COST_EPIC_TOCORPSE_POTION);
 			return TRUE;
@@ -2727,7 +2727,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
 			send_to_char("&+WKannard &+Lthe &+ctra&+Cvell&+cer &nmakes a strange gesture about your body, and hands you your item.\r\n&n", pl);
 			act("You now have $p!\r\n", FALSE, pl, obj, 0, TO_CHAR);
 			obj_to_char(obj, pl);
-			do_save_silent(pl, 1);
+			persistence_schedule_character_save(pl, 1, 5, "epic_store_purchase");
 			// Log the transaction in epic log file.
 			epiclog(56, "%s bought '%s' (%d) at the epic store for %d epics.", J_NAME(pl), obj->short_description, VOBJ_EPIC_LANTAN_TOOLS, COST_EPIC_LANTAN_TOOLS);
 			return TRUE;
@@ -2749,7 +2749,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
 			// Why isn't this set in the zone files?  How peculiar.
 			SET_BIT(obj->bitvector5, AFF5_FOREST_SIGHT);
 			obj_to_char(obj, pl);
-			do_save_silent(pl, 1);
+			persistence_schedule_character_save(pl, 1, 5, "epic_store_purchase");
 			// Log the transaction in epic log file.
 			epiclog(56, "%s bought '%s' (%d) at the epic store for %d epics.", J_NAME(pl), obj->short_description, VOBJ_EPIC_FOREST_EYES, COST_EPIC_FOREST_EYES);
 			return TRUE;
@@ -2768,7 +2768,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
 			send_to_char("&+WKannard &+Lthe &+ctra&+Cvell&+cer &nmakes a strange gesture about your body, and hands you your item.\r\n&n", pl);
 			act("You now have $p!\r\n", FALSE, pl, obj, 0, TO_CHAR);
 			obj_to_char(obj, pl);
-			do_save_silent(pl, 1);
+			persistence_schedule_character_save(pl, 1, 5, "epic_store_purchase");
 			// Log the transaction in epic log file.
 			epiclog(56, "%s bought '%s' (%d) at the epic store for %d epics.", J_NAME(pl), obj->short_description, VOBJ_EPIC_BOTTLE_EPICS, COST_EPIC_BOTTLE_EPICS);
 			return TRUE;

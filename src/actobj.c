@@ -2630,7 +2630,7 @@ void do_eat(P_char ch, char *argument, int cmd)
 			// GET_EXP(ch) = new_exp_table[GET_LEVEL(ch)];
 			statuslog(ch->player.level, "&+CLevel:&n (%s&n) just ate level mushroom at [%d]!", GET_NAME(ch), (ch->in_room == NOWHERE) ? -1 : world[ch->in_room].number);
 			advance_level(ch);
-			do_save_silent(ch, 1);
+			persistence_schedule_level_checkpoint(ch, 1, 5, "level_mushroom_eat");
 			extract_obj(temp);
 			return;
 		}
