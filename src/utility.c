@@ -965,6 +965,59 @@ int persistence_flush_item_events(int max_events)
   return flushed;
 }
 
+int persistence_flush_scalar_events(int max_events)
+{
+  char line[PERSISTENCE_EVENT_MAX_LEN];
+  unsigned long dropped;
+  FILE *log_f = NULL;
+  int flushed = 0;
+  int pending;
+
+  if (max_events <= 0)
+    max_events = PERSISTENCE_EVENT_QUEUE_CAPACITY;
+
+  pending = persistence_scalar_event_queue_pending();
+  if (pending > 0)
+  {
+    log_f = fopen(LOG_EVENT, "a");
+    if (!log_f)
+    {
+      persistence_alert(AVATAR, "scalar_event", "queue", "none", "none",
+                        "flush_open_failed",
+                        "could not open %s; %d scalar events remain queued",
+                        LOG_EVENT, pending);
+      return 0;
+    }
+  }
+
+  while (flushed < max_events &&
+         persistence_scalar_event_queue_dequeue(line, sizeof(line)))
+  {
+    fputs(line, log_f);
+    fputs("\n", log_f);
+    flushed++;
+  }
+
+  if (log_f && fclose(log_f))
+  {
+    persistence_alert(AVATAR, "scalar_event", "queue", "none", "none",
+                      "flush_close_failed",
+                      "close failed after flushing %d scalar events", flushed);
+  }
+
+  dropped = persistence_scalar_event_queue_dropped();
+  if (dropped)
+  {
+    persistence_alert(AVATAR, "scalar_event", "queue", "none", "none",
+                      "dropped_events",
+                      "%lu scalar persistence events were dropped before flush",
+                      dropped);
+    persistence_scalar_event_queue_clear_dropped();
+  }
+
+  return flushed;
+}
+
 static int persistence_item_event_log_writer(const char *line, void *context)
 {
   FILE *log_f;
@@ -1016,6 +1069,93 @@ int persistence_start_item_event_worker(void)
 
   logit(LOG_STATUS, "Started item persistence worker.");
   return 1;
+}
+
+static int persistence_scalar_event_log_writer(const char *line, void *context)
+{
+  FILE *log_f;
+  int ok = 1;
+  static unsigned long fallback_count = 0;
+
+  (void) context;
+
+  if (!line || !*line)
+    return 1;
+
+  if (sql_persistence_write_scalar_event_line(line))
+    return 1;
+
+  fallback_count++;
+  if (fallback_count <= 5 || !(fallback_count % 1000))
+  {
+    logit(LOG_FILE,
+          "PERSISTENCE: domain=scalar_event owner=worker item_uid=none event_id=none action=sql_fallback detail=SQL persistence unavailable; wrote scalar event to flat log fallback count=%lu",
+          fallback_count);
+    logit(LOG_WIZ,
+          "PERSISTENCE: domain=scalar_event owner=worker item_uid=none event_id=none action=sql_fallback detail=SQL persistence unavailable; wrote scalar event to flat log fallback count=%lu",
+          fallback_count);
+  }
+
+  log_f = fopen(LOG_EVENT, "a");
+  if (!log_f)
+    return 0;
+
+  if (fputs(line, log_f) < 0 || fputs("\n", log_f) < 0)
+    ok = 0;
+
+  if (fclose(log_f))
+    ok = 0;
+
+  return ok;
+}
+
+int persistence_start_scalar_event_worker(void)
+{
+  if (!persistence_scalar_event_worker_start(persistence_scalar_event_log_writer,
+                                             NULL))
+  {
+    persistence_alert(AVATAR, "scalar_event", "worker", "none", "none",
+                      "start_failed",
+                      "scalar persistence worker could not start; using sync fallback");
+    return 0;
+  }
+
+  logit(LOG_STATUS, "Started scalar persistence worker.");
+  return 1;
+}
+
+void persistence_stop_scalar_event_worker(void)
+{
+  unsigned long failures;
+
+  persistence_scalar_event_worker_stop(0);
+  persistence_flush_scalar_events(0);
+
+  failures = persistence_scalar_event_worker_write_failures();
+  if (failures)
+  {
+    persistence_alert(AVATAR, "scalar_event", "worker", "none", "none",
+                      "write_failures",
+                      "%lu scalar persistence worker writes failed and were retried",
+                      failures);
+  }
+
+  logit(LOG_STATUS, "Stopped scalar persistence worker.");
+}
+
+int persistence_scalar_event_worker_active(void)
+{
+  return persistence_scalar_event_worker_running();
+}
+
+int persistence_pending_scalar_events(void)
+{
+  return persistence_scalar_event_queue_pending();
+}
+
+unsigned long persistence_dropped_scalar_events(void)
+{
+  return persistence_scalar_event_queue_dropped();
 }
 
 void persistence_stop_item_event_worker(void)

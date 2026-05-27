@@ -89,6 +89,7 @@ const char *sql_select_IP_info(P_char ch, char *buf, size_t bufSize, time_t *las
 int  sql_find_racewar_for_ip(char *ip, int *racewar_side) { return -1; }
 bool qry(const char *format, ...) { return TRUE; }
 bool sql_persistence_write_item_event_line(const char *line) { return FALSE; }
+bool sql_persistence_write_scalar_event_line(const char *line) { return FALSE; }
 void send_to_pid_offline(const char *msg, int pid) {}
 void send_offline_messages(P_char ch) {}
 void log_epic_gain(int pid, int zone_id, int type, int epics) {}
@@ -928,32 +929,72 @@ void sql_webinfo_toggle(P_char ch)
 /* Update level info */
 void sql_update_level(P_char ch)
 {
+	char line[PERSISTENCE_EVENT_MAX_LEN];
+
 	if (!ch || !IS_PC(ch))
 		return;
+
+	snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=player_level|pid=%d|level=%d", (long)time(NULL), GET_PID(ch), GET_LEVEL(ch));
+	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
+		return;
+
 	// level already saved in player_data
 }
 
 /* Update money info */
 void sql_update_money(P_char ch)
 {
+	char line[PERSISTENCE_EVENT_MAX_LEN];
+
 	if (!ch || !IS_PC(ch))
 		return;
+
+	snprintf(line,
+	         sizeof(line),
+	         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=player_money|pid=%d|copper=%d|silver=%d|gold=%d|platinum=%d|bank_copper=%d|bank_silver=%d|bank_gold=%d|bank_platinum=%d",
+	         (long)time(NULL),
+	         GET_PID(ch),
+	         GET_COPPER(ch),
+	         GET_SILVER(ch),
+	         GET_GOLD(ch),
+	         GET_PLATINUM(ch),
+	         GET_BALANCE_COPPER(ch),
+	         GET_BALANCE_SILVER(ch),
+	         GET_BALANCE_GOLD(ch),
+	         GET_BALANCE_PLATINUM(ch));
+	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
+		return;
+
 	// money stored as copper/silver/gold/platinum in player_data
 }
 
 /* Update playtime info */
 void sql_update_playtime(P_char ch)
 {
+	char line[PERSISTENCE_EVENT_MAX_LEN];
+
 	if (!ch || !IS_PC(ch))
 		return;
+
+	snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=player_playtime|pid=%d|played_time=%d", (long)time(NULL), GET_PID(ch), ch->player.time.played);
+	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
+		return;
+
 	// playtime is played_time in player_data
 }
 
 /* Update player's epics: We want to record their total epics gained not epics unused */
 void sql_update_epics(P_char ch)
 {
+	char line[PERSISTENCE_EVENT_MAX_LEN];
+
 	if (!ch || !IS_PC(ch))
 		return;
+
+	snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=player_epics|pid=%d|epics=%ld", (long)time(NULL), GET_PID(ch), ch->only.pc->epics);
+	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
+		return;
+
 	// epics already in player_data
 }
 
@@ -1811,6 +1852,110 @@ bool sql_persistence_write_item_event_line(const char *line)
 	         "event_time=GREATEST(event_time, VALUES(event_time))",
 	         item_uid, owner_type_sql, owner_ref_sql, event_time, event_sql,
 	         actor_id, vnum, item_sql);
+
+	return sql_persistence_query(db, query);
+}
+
+bool sql_persistence_write_scalar_event_line(const char *line)
+{
+	MYSQL *db;
+	char copy[PERSISTENCE_EVENT_MAX_LEN];
+	char *saveptr = NULL;
+	char *token;
+	char key[64], value[512];
+	char event_type[64] = "unknown";
+	char query[MAX_STRING_LENGTH];
+	int pid = 0;
+	int level = 0;
+	int copper = 0;
+	int silver = 0;
+	int gold = 0;
+	int platinum = 0;
+	int bank_copper = 0;
+	int bank_silver = 0;
+	int bank_gold = 0;
+	int bank_platinum = 0;
+	int played_time = 0;
+	long epics = 0;
+
+	if (!line || !*line)
+		return FALSE;
+
+	db = sql_persistence_connection();
+	if (!db)
+		return FALSE;
+
+	snprintf(copy, sizeof(copy), "%s", line);
+	token = strtok_r(copy, "|", &saveptr);
+	while (token)
+	{
+		persistence_line_field(token, key, sizeof(key), value, sizeof(value));
+
+		if (!str_cmp(key, "event"))
+			snprintf(event_type, sizeof(event_type), "%s", value);
+		else if (!str_cmp(key, "pid"))
+			pid = atoi(value);
+		else if (!str_cmp(key, "level"))
+			level = atoi(value);
+		else if (!str_cmp(key, "copper"))
+			copper = atoi(value);
+		else if (!str_cmp(key, "silver"))
+			silver = atoi(value);
+		else if (!str_cmp(key, "gold"))
+			gold = atoi(value);
+		else if (!str_cmp(key, "platinum"))
+			platinum = atoi(value);
+		else if (!str_cmp(key, "bank_copper"))
+			bank_copper = atoi(value);
+		else if (!str_cmp(key, "bank_silver"))
+			bank_silver = atoi(value);
+		else if (!str_cmp(key, "bank_gold"))
+			bank_gold = atoi(value);
+		else if (!str_cmp(key, "bank_platinum"))
+			bank_platinum = atoi(value);
+		else if (!str_cmp(key, "played_time"))
+			played_time = atoi(value);
+		else if (!str_cmp(key, "epics"))
+			epics = atol(value);
+
+		token = strtok_r(NULL, "|", &saveptr);
+	}
+
+	if (pid <= 0)
+		return FALSE;
+
+	if (!str_cmp(event_type, "player_level"))
+	{
+		snprintf(query, sizeof(query), "UPDATE player_data SET level=%d WHERE pid=%d", level, pid);
+	}
+	else if (!str_cmp(event_type, "player_money"))
+	{
+		snprintf(query,
+		         sizeof(query),
+		         "UPDATE player_data SET copper=%d, silver=%d, gold=%d, platinum=%d, "
+		         "bank_copper=%d, bank_silver=%d, bank_gold=%d, bank_platinum=%d WHERE pid=%d",
+		         copper,
+		         silver,
+		         gold,
+		         platinum,
+		         bank_copper,
+		         bank_silver,
+		         bank_gold,
+		         bank_platinum,
+		         pid);
+	}
+	else if (!str_cmp(event_type, "player_playtime"))
+	{
+		snprintf(query, sizeof(query), "UPDATE player_data SET played_time=%d WHERE pid=%d", played_time, pid);
+	}
+	else if (!str_cmp(event_type, "player_epics"))
+	{
+		snprintf(query, sizeof(query), "UPDATE player_data SET epics=%ld WHERE pid=%d", epics, pid);
+	}
+	else
+	{
+		return FALSE;
+	}
 
 	return sql_persistence_query(db, query);
 }

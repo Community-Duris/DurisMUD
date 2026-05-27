@@ -21,6 +21,7 @@
 
 static int failures = 0;
 static int slow_writer_calls = 0;
+static int slow_scalar_writer_calls = 0;
 
 static long long elapsed_usec(std::chrono::steady_clock::time_point start,
                               std::chrono::steady_clock::time_point end)
@@ -54,7 +55,7 @@ static void test_enqueue_stays_inside_main_thread_budget()
   long long max_call = 0;
   auto total_start = std::chrono::steady_clock::now();
 
-  std::printf("[1/5] enqueue timing under normal persistence load ...\n");
+  std::printf("[1/6] enqueue timing under normal persistence load ...\n");
   persistence_item_event_queue_reset();
 
   for (int i = 0; i < writes; i++)
@@ -91,7 +92,7 @@ static void test_slow_writer_does_not_block_enqueue()
   const long long budget = no_lag_budget_usec();
   long long max_call = 0;
 
-  std::printf("[2/5] enqueue timing while simulated SQL/file writer is slow ...\n");
+  std::printf("[2/6] enqueue timing while simulated SQL/file writer is slow ...\n");
   persistence_item_event_queue_reset();
 
   for (int i = 0; i < writes; i++)
@@ -121,7 +122,7 @@ static void test_full_queue_fails_fast()
   const long long budget = no_lag_budget_usec();
   long long overflow_time;
 
-  std::printf("[3/5] full queue overflow fails fast instead of blocking ...\n");
+  std::printf("[3/6] full queue overflow fails fast instead of blocking ...\n");
   persistence_item_event_queue_reset();
 
   for (int i = 0; i < PERSISTENCE_EVENT_QUEUE_CAPACITY; i++)
@@ -165,7 +166,7 @@ static void test_background_worker_keeps_slow_writes_off_main_thread()
   const long long budget = no_lag_budget_usec();
   long long max_call = 0;
 
-  std::printf("[4/5] background worker absorbs slow writes off the main thread ...\n");
+  std::printf("[4/6] background worker absorbs slow writes off the main thread ...\n");
   persistence_item_event_worker_stop(0);
   persistence_item_event_queue_reset();
   slow_writer_calls = 0;
@@ -208,7 +209,7 @@ static void test_flush_is_bounded_and_outside_record_path()
 {
   char out[PERSISTENCE_EVENT_MAX_LEN];
 
-  std::printf("[5/5] bounded drain leaves remaining events queued ...\n");
+  std::printf("[5/6] bounded drain leaves remaining events queued ...\n");
   persistence_item_event_worker_stop(0);
   persistence_item_event_queue_reset();
 
@@ -225,6 +226,67 @@ static void test_flush_is_bounded_and_outside_record_path()
     fail("bounded dequeue did not leave expected events pending");
 }
 
+static int slow_scalar_background_writer(const char *line, void *context)
+{
+  int *calls = static_cast<int *>(context);
+
+  (void) line;
+
+  std::this_thread::sleep_for(std::chrono::milliseconds(5));
+  (*calls)++;
+  return 1;
+}
+
+static void test_scalar_checkpoint_worker_keeps_sql_off_main_thread()
+{
+  const int writes = 100;
+  const long long budget = no_lag_budget_usec();
+  long long max_call = 0;
+
+  std::printf("[6/6] scalar checkpoint worker absorbs slow SQL off the main thread ...\n");
+  persistence_scalar_event_worker_stop(0);
+  persistence_scalar_event_queue_reset();
+  slow_scalar_writer_calls = 0;
+
+  if (!persistence_scalar_event_worker_start(slow_scalar_background_writer,
+                                             &slow_scalar_writer_calls))
+  {
+    fail("scalar background worker failed to start");
+    return;
+  }
+
+  for (int i = 0; i < writes; i++)
+  {
+    char line[256];
+    std::snprintf(line, sizeof(line),
+                  "PERSISTENCE_SCALAR_EVENT|event=player_level|pid=100|level=%d",
+                  i);
+
+    auto start = std::chrono::steady_clock::now();
+    if (!persistence_scalar_event_queue_enqueue(line))
+      fail("scalar enqueue failed while background worker was running");
+    auto end = std::chrono::steady_clock::now();
+
+    long long call_time = elapsed_usec(start, end);
+    if (call_time > max_call)
+      max_call = call_time;
+  }
+
+  persistence_scalar_event_worker_stop(1);
+
+  std::printf("  max scalar enqueue with 5ms writer: %lld usec, budget: %lld usec, written: %lu\n",
+              max_call, budget, persistence_scalar_event_worker_written());
+
+  if (max_call > budget)
+    fail("scalar background worker allowed slow SQL to block enqueue");
+
+  if (slow_scalar_writer_calls != writes)
+    fail("scalar background worker did not drain all queued writes");
+
+  if (persistence_scalar_event_queue_pending() != 0)
+    fail("scalar background worker left events pending after drain stop");
+}
+
 int main()
 {
   test_enqueue_stays_inside_main_thread_budget();
@@ -232,6 +294,7 @@ int main()
   test_full_queue_fails_fast();
   test_background_worker_keeps_slow_writes_off_main_thread();
   test_flush_is_bounded_and_outside_record_path();
+  test_scalar_checkpoint_worker_keeps_sql_off_main_thread();
 
   if (failures)
   {
