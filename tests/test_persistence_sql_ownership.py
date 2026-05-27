@@ -60,6 +60,7 @@ def main() -> int:
         """
         DROP TABLE IF EXISTS persistence_item_event_audit_test;
         DROP TABLE IF EXISTS persistence_items_current_test;
+        DROP TABLE IF EXISTS persistence_item_conflicts_test;
 
         CREATE TABLE persistence_item_event_audit_test (
           event_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -92,6 +93,24 @@ def main() -> int:
           PRIMARY KEY (item_uid),
           KEY owner_lookup (owner_type,owner_ref)
         ) ENGINE=InnoDB;
+
+        CREATE TABLE persistence_item_conflicts_test (
+          conflict_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+          item_uid BIGINT UNSIGNED NOT NULL,
+          existing_owner_type VARCHAR(32) NOT NULL,
+          existing_owner_ref VARCHAR(64) NOT NULL,
+          existing_event_time BIGINT UNSIGNED NOT NULL,
+          incoming_owner_type VARCHAR(32) NOT NULL,
+          incoming_owner_ref VARCHAR(64) NOT NULL,
+          incoming_event_time BIGINT UNSIGNED NOT NULL,
+          incoming_event_type VARCHAR(64) NOT NULL,
+          resolution VARCHAR(64) NOT NULL,
+          raw_event TEXT NOT NULL,
+          created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          PRIMARY KEY (conflict_id),
+          KEY item_created (item_uid,created_at),
+          KEY resolution_lookup (resolution)
+        ) ENGINE=InnoDB;
         """
     )
     mysql(setup)
@@ -100,6 +119,16 @@ def main() -> int:
       INSERT INTO persistence_item_event_audit_test
         (event_time,event_type,item_uid,owner_type,owner_ref,actor_id,vnum,item_name,raw_event)
       VALUES ({ts},'{event}',{uid},'{owner_type}','{owner_ref}',{actor},{vnum},'{name}','{raw}');
+
+      INSERT INTO persistence_item_conflicts_test
+        (item_uid,existing_owner_type,existing_owner_ref,existing_event_time,
+         incoming_owner_type,incoming_owner_ref,incoming_event_time,
+         incoming_event_type,resolution,raw_event)
+      SELECT item_uid,owner_type,owner_ref,event_time,'{owner_type}','{owner_ref}',{ts},'{event}',
+        IF({ts} >= event_time,'newest_incoming_wins','existing_newer_wins'),'{raw}'
+      FROM persistence_items_current_test
+      WHERE item_uid={uid}
+      AND (owner_type <> '{owner_type}' OR owner_ref <> '{owner_ref}');
 
       INSERT INTO persistence_items_current_test
         (item_uid,owner_type,owner_ref,event_time,event_type,actor_id,vnum,item_name)
@@ -166,6 +195,18 @@ def main() -> int:
     )
     assert_equal(audit_count, "3", "audit trail should retain every ownership event")
 
+    conflict_summary = mysql(
+        "SELECT COUNT(*), "
+        "SUM(resolution='newest_incoming_wins'), "
+        "SUM(resolution='existing_newer_wins') "
+        "FROM persistence_item_conflicts_test WHERE item_uid=900000000001;"
+    )
+    assert_equal(
+        conflict_summary,
+        "2\t1\t1",
+        "conflicting owners should be audited while newest-owner rules still apply",
+    )
+
     mysql(
         upsert_template.format(
             ts=130,
@@ -185,6 +226,12 @@ def main() -> int:
         "FROM persistence_items_current_test WHERE item_uid=900000000001;"
     )
     assert_equal(destroyed, "destroyed\t0\t130", "destroyed event should clear live ownership")
+
+    final_conflicts = mysql(
+        "SELECT COUNT(*) FROM persistence_item_conflicts_test "
+        "WHERE item_uid=900000000001;"
+    )
+    assert_equal(final_conflicts, "3", "destroyed ownership conflict should also be audited")
 
     print("Persistence SQL ownership tests passed.")
     return 0

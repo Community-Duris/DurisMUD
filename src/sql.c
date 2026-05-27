@@ -1584,6 +1584,26 @@ static bool sql_persistence_ensure_tables(MYSQL *db)
 	                          ") ENGINE=InnoDB"))
 		return FALSE;
 
+	if (!sql_persistence_query(db,
+	                          "CREATE TABLE IF NOT EXISTS persistence_item_conflicts ("
+	                          "conflict_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,"
+	                          "item_uid BIGINT UNSIGNED NOT NULL,"
+	                          "existing_owner_type VARCHAR(32) NOT NULL,"
+	                          "existing_owner_ref VARCHAR(64) NOT NULL,"
+	                          "existing_event_time BIGINT UNSIGNED NOT NULL,"
+	                          "incoming_owner_type VARCHAR(32) NOT NULL,"
+	                          "incoming_owner_ref VARCHAR(64) NOT NULL,"
+	                          "incoming_event_time BIGINT UNSIGNED NOT NULL,"
+	                          "incoming_event_type VARCHAR(64) NOT NULL,"
+	                          "resolution VARCHAR(64) NOT NULL,"
+	                          "raw_event TEXT NOT NULL,"
+	                          "created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,"
+	                          "PRIMARY KEY (conflict_id),"
+	                          "KEY item_created (item_uid,created_at),"
+	                          "KEY resolution_lookup (resolution)"
+	                          ") ENGINE=InnoDB"))
+		return FALSE;
+
 	persistence_tables_ready = TRUE;
 	return TRUE;
 }
@@ -1847,6 +1867,7 @@ bool sql_persistence_write_item_event_line(const char *line)
 	unsigned long long event_time = 0;
 	int actor_id = -1;
 	int vnum = -1;
+	my_ulonglong conflicts_logged = 0;
 
 	if (!line || !*line)
 		return FALSE;
@@ -1903,6 +1924,40 @@ bool sql_persistence_write_item_event_line(const char *line)
 
 	if (!sql_persistence_query(db, query))
 		return FALSE;
+
+	snprintf(query, sizeof(query),
+	         "INSERT INTO persistence_item_conflicts "
+	         "(item_uid,existing_owner_type,existing_owner_ref,existing_event_time,"
+	         "incoming_owner_type,incoming_owner_ref,incoming_event_time,"
+	         "incoming_event_type,resolution,raw_event) "
+	         "SELECT item_uid,owner_type,owner_ref,event_time,'%s','%s',%llu,'%s',"
+	         "IF(%llu >= event_time,'newest_incoming_wins','existing_newer_wins'),'%s' "
+	         "FROM persistence_items_current "
+	         "WHERE item_uid=%llu "
+	         "AND (owner_type <> '%s' OR owner_ref <> '%s')",
+	         owner_type_sql,
+	         owner_ref_sql,
+	         event_time,
+	         event_sql,
+	         event_time,
+	         raw_sql,
+	         item_uid,
+	         owner_type_sql,
+	         owner_ref_sql);
+
+	if (!sql_persistence_query(db, query))
+		return FALSE;
+
+	conflicts_logged = mysql_affected_rows(db);
+	if (conflicts_logged > 0)
+	{
+		logit(LOG_FILE,
+		      "PERSISTENCE: domain=item_event owner=sql item_uid=%llu event_id=none action=owner_conflict detail=incoming %s:%s at %llu conflicted with current owner; newest owner will win",
+		      item_uid, owner_type, owner_ref, event_time);
+		logit(LOG_WIZ,
+		      "PERSISTENCE: domain=item_event owner=sql item_uid=%llu event_id=none action=owner_conflict detail=incoming %s:%s at %llu conflicted with current owner; newest owner will win",
+		      item_uid, owner_type, owner_ref, event_time);
+	}
 
 	snprintf(query, sizeof(query),
 	         "INSERT INTO persistence_items_current "
