@@ -42,7 +42,6 @@ extern P_char                 character_list;
 extern P_room                 world;
 extern const int              top_of_world;
 extern int                    top_of_objt;
-extern P_event                event_list;
 extern bool                   command_confirm;
 extern char                  *coin_names[];
 extern char                  *drinks[];
@@ -94,7 +93,6 @@ void get(P_char ch, P_obj o_obj, P_obj s_obj, int showit)
 	int     got_p = 0, got_g = 0, got_s = 0, got_c = 0, notall = 0;
 	char    Gbuf3[MAX_STRING_LENGTH], buf[MAX_STRING_LENGTH];
 	P_obj   corpse = NULL;
-	P_event e1     = NULL;
 	bool    slip   = FALSE;
 	P_char  rider  = NULL;
 

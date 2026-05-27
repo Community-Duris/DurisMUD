@@ -44,7 +44,6 @@
 extern Skill   skills[];
 extern P_char  character_list;
 extern P_desc  descriptor_list;
-extern P_event event_list;
 extern P_index mob_index;
 extern P_index obj_index;
 extern P_room  world;
@@ -973,7 +972,6 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
 {
 	P_char  target = NULL, tmp = NULL;
 	P_obj   obj = NULL, best_corpse = NULL;
-	P_event e1 = NULL;
 
 	int                 dam = 0, lvl = 0, spl = 0, high_corpse = 0, pets;
 	int                 att_num_adjust[] = {100, 50, 15, 0};

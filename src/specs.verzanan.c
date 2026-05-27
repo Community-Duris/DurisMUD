@@ -32,7 +32,6 @@
 
 extern P_char                 character_list;
 extern P_desc                 descriptor_list;
-extern P_event                current_event;
 extern P_index                obj_index;
 extern P_room                 world;
 extern char                  *coin_names[];
@@ -42,82 +41,6 @@ extern int                    top_of_zone_table;
 extern struct time_info_data  time_info;
 extern struct zone_data      *zone;
 extern struct zone_data      *zone_table;
-
-/*
-   this routine is attached to the WD clock tower, if you wish to use this
-   elsewhere: ct1, ct2, clock_zones need to change, and the event (db.c) needs
-   to be added in a special manner.  -JAB
- */
-int clock_tower(P_obj obj, P_char ch, int cmd, char *arg)
-{
-	int       temp, zon;
-	int       ct1 = 4, ct2 = 6;
-	char      Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
-	const int clock_zones[] = {2700, 3001, 3200, 5500, 3500, 5300};
-
-	if (cmd == CMD_SET_PERIODIC)
-	{
-		return FALSE;
-	}
-
-	if (cmd != CMD_PERIODIC)
-	{
-		return FALSE;
-	}
-
-	if (!current_event || (current_event->type != EVENT_OBJ_SPECIAL))
-	{
-		logit(LOG_EXIT, "Call to clock_tower with messed current_event");
-		return FALSE;
-	}
-	// Clock is off (event is rather), so reschedule for +1 hour
-	if (time_info.hour % 3)
-	{
-		current_event->timer = 1;
-		return TRUE;
-	}
-	snprintf(Gbuf1,
-	         MAX_STRING_LENGTH,
-	         "%d%s.\r\n",
-	         (time_info.hour % 12) ? (time_info.hour % 12) : 12,
-	         (time_info.hour == 12)  ? " noon"
-	         : (time_info.hour == 0) ? " midnight"
-	         : (time_info.hour > 11) ? "pm"
-	                                 : "am");
-
-	for (temp = 0; temp < ct1; temp++)
-	{
-		zon = real_room(clock_zones[temp]);
-		if (zon == NOWHERE)
-		{
-			continue;
-		}
-		zon = world[zon].zone;
-
-		snprintf(Gbuf2, MAX_STRING_LENGTH, "The clock tower chimes the hour of %s", Gbuf1);
-		send_to_zone_outdoor(zon, Gbuf2);
-		snprintf(Gbuf2, MAX_STRING_LENGTH, "From outside, the faint chimes of the clock tower sound %s", Gbuf1);
-		send_to_zone_indoor(zon, Gbuf2);
-	}
-
-	for (temp = ct1; temp < ct2; temp++)
-	{
-		zon = real_room(clock_zones[temp]);
-		if (zon == NOWHERE)
-		{
-			continue;
-		}
-		zon = world[zon].zone;
-
-		snprintf(Gbuf2, MAX_STRING_LENGTH, "From the city, the clock tower chimes %s", Gbuf1);
-		send_to_zone_outdoor(zon, Gbuf2);
-		snprintf(Gbuf2, MAX_STRING_LENGTH, "From outside in the direction of the city, the clock tower chimes %s", Gbuf1);
-		send_to_zone_indoor(zon, Gbuf2);
-	}
-
-	current_event->timer = 3;
-	return TRUE;
-}
 
 /* Proc for Lord Piergeiron, wandering the town and locking gates, etc. */
 int piergeiron(P_char ch, P_char pl, int cmd, char *arg)
@@ -719,7 +642,6 @@ int wanderer(P_char ch, P_char pl, int cmd, char *arg)
 int dog_one(P_char ch, P_char pl, int cmd, char *arg)
 {
 	P_obj   i, temp, next_obj;
-	P_event e1;
 
 	/* check for periodic event calls */
 	if (cmd == CMD_SET_PERIODIC)
@@ -790,7 +712,6 @@ int dog_one(P_char ch, P_char pl, int cmd, char *arg)
 int dog_two(P_char ch, P_char pl, int cmd, char *arg)
 {
 	P_obj   i, temp, next_obj;
-	P_event e1;
 
 	/* check for periodic event calls */
 	if (cmd == CMD_SET_PERIODIC)

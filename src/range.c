@@ -32,7 +32,6 @@
  */
 
 extern P_desc      descriptor_list;
-extern P_event     current_event;
 extern P_room      world;
 extern P_index     mob_index;
 extern P_index     obj_index;

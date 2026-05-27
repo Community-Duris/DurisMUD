@@ -54,7 +54,6 @@ extern const struct class_names class_names_table[];
 
 extern const char            *target_locs[];
 extern P_desc                 descriptor_list;
-extern P_event                current_event;
 extern P_room                 world;
 extern const int              top_of_world;
 extern P_index                mob_index;
@@ -3995,7 +3994,6 @@ void do_quaff(P_char ch, char *argument, int cmd)
 	char                  Gbuf1[MAX_STRING_LENGTH];
 	int                   secs;
 	int                   potiontimeleft;
-	P_event               ne;
 	struct affected_type *af2;
 	struct affected_type *next;
 

@@ -43,8 +43,6 @@ extern P_index           mob_index;
 extern P_obj             object_list;
 extern P_room            world;
 extern const int         top_of_world;
-extern P_event           current_event;
-extern P_event           event_list;
 extern struct mm_ds     *dead_mob_pool;
 extern struct mm_ds     *dead_pconly_pool;
 extern P_char            character_list;

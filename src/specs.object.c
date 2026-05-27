@@ -41,13 +41,11 @@
 /*
    external variables
  */
-extern P_event     event_type_list[];
 extern P_char      character_list;
 extern P_desc      descriptor_list;
 extern P_index     mob_index;
 extern P_index     obj_index;
 extern P_room      world;
-extern P_event     current_event;
 extern char       *coin_names[];
 extern char       *command[];
 extern const char *dirs[];
@@ -1242,25 +1240,6 @@ int trustee_artifact(P_obj obj, P_char ch, int cmd, char *arg)
 	return TRUE;
 }
 
-int check_trap_trigger(P_char ch, int when) { return FALSE; }
-
-int trap_timer(P_obj obj, P_char ch, int cmd, char *arg)
-{
-	P_obj trap;
-
-	if (cmd == CMD_SET_PERIODIC)
-		return TRUE;
-	if (!current_event || !ch)
-		return FALSE;
-	else if ((trap = read_object(obj->value[2], VIRTUAL)))
-	{
-		obj_to_room(trap, ch->in_room);
-		return TRUE;
-	}
-	return FALSE; /*
-	                 hope we didnt get here, but oh well
-	               */
-}
 int creeping_doom(P_obj obj, P_char ch, int cmd, char *arg)
 {
 	P_char t;

@@ -49,7 +49,6 @@ extern P_char                        character_list;
 extern P_char                        combat_list;
 extern P_char                        dead_guys;
 extern P_desc                        descriptor_list;
-extern P_event                       current_event;
 extern P_index                       mob_index;
 extern P_index                       obj_index;
 extern P_obj                         object_list;
@@ -70,7 +69,6 @@ extern const struct racial_data_type racial_data[];
 extern struct zone_data             *zone_table;
 extern struct time_info_data         time_info;
 extern struct arena_data             arena;
-extern P_event                       event_list;
 static char                          buf[MAX_INPUT_LENGTH];
 extern Skill                         skills[];
 extern bool                          innate_two_daggers(P_char);
@@ -2480,16 +2478,6 @@ int obj_affect_time(P_obj obj, struct obj_affect *af)
 			return ne_event_time(e);
 	}
 	return -1;
-	/*
-	  P_event  e;
-
-	  for (e = obj->events; e; e = e->next)
-	    if (e->type == EVENT_OBJ_AFFECT &&
-	        (struct obj_affect *) e->target.t_ch == af)
-	      return event_time(e, T_PULSES);
-
-	  return -1;
-	*/
 }
 
 int affect_from_obj(P_obj obj, sh_int spell)

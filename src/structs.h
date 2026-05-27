@@ -57,7 +57,6 @@ typedef struct char_data         *P_char;
 typedef struct Guild             *P_Guild;
 typedef struct Alliance          *P_Alliance;
 typedef struct descriptor_data   *P_desc;
-typedef struct event_data        *P_event;
 typedef struct nevent_data       *P_nevent;
 typedef struct obj_data          *P_obj;
 typedef struct room_data         *P_room;
@@ -561,7 +560,6 @@ struct obj_data
 	} loc;
 
 	P_char   hitched_to; /* Who are we hitched to?           */
-	P_event  events;     /* events attached to this obj      */
 	P_nevent nevents;
 	P_obj    contains;     /* Contains objects                 */
 	P_obj    next_content; /* For 'contains' lists             */
@@ -1487,7 +1485,6 @@ struct char_data
 	P_char next_in_room; /* For room->people - list       */
 	P_char next;         /* For either mobile | p-list    */
 
-	P_event  events; /* events attached to this char      */
 	P_nevent nevents;
 
 	struct char_player_data     player; /* Normal data               */
@@ -1956,53 +1953,6 @@ struct hunt_data
 	} targ;
 	vector<int> path; /* path returned by dijkstra */
 	ubyte       path_step;
-};
-
-struct event_data
-{
-	ubyte   type;     /* type of event triggered:  EVENT_*        */
-	short   element;  /* element of events[] this is a member of  */
-	bool    one_shot; /* if TRUE, event is deleted once triggered */
-	ush_int timer;    /* number of cycles (minutes) before event,
-	                     if we want to schedule an event longer
-	                     than 45 (real) days in advance we'll
-	                     have to change this to u_int which will
-	                     let us schedule up to 4000 (real) years
-	                     in advance.                              */
-	union
-	{
-		P_char                  a_ch;   /* one of these will point to the initiator */
-		P_obj                   a_obj;  /* (actor) of this event.  type determines  */
-		P_room                  a_room; /* which is valid.                          */
-		struct trackrecordtype *a_track;
-		void (*a_func)(void);
-	} actor;
-
-	union
-	{
-		P_char                     t_ch;   /* one of these will point at the target of */
-		P_obj                      t_obj;  /* this event (or none, it's optional in    */
-		P_room                     t_room; /* some cases).  Or if this is a delayed    */
-		struct zone_data          *t_zone; /* command of some sort, t_arg will get     */
-		char                      *t_arg;  /* sent to command_interpreter.             */
-		int                        t_num;
-		struct scribing_data_type *t_scribe;
-		struct spellcast_datatype *t_spell;
-		void (*t_func)(P_char);
-		struct hunt_data               *t_hunt;
-		struct generic_event_arguments *t_generic;
-		P_event                         t_event; /* just to confuse everyone (actually used by EVENT_PEER - Tharkun) */
-	} target;
-
-	P_event prev_sched; /* pointer to prev event in schedule[]       */
-						//  P_event prev_type;            /* pointer to prev event in event_sub_list[] */
-	P_event prev_event; /* pointer to prev event in event_list or
-	                       avail_events */
-	P_event next_sched; /* pointer to next event in schedule[]       */
-						//  P_event next_type;            /* pointer to next event in event_sub_list[] */
-	P_event next_event; /* pointer to next event in event_list or
-	                       avail_events */
-	P_event next;       /* pointer to next event on obj or char      */
 };
 
 struct nevent_data

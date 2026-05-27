@@ -26,8 +26,6 @@
 extern P_char      char_in_room(int);
 extern P_char      character_list;
 extern P_desc      descriptor_list;
-extern P_event     event_type_list[];
-extern P_event     current_event;
 extern P_index     mob_index;
 extern P_index     obj_index;
 extern P_room      world;
@@ -635,45 +633,6 @@ int mir_fire(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 	}
 	return FALSE;
-}
-
-void web_to_smoke(P_char ch, P_char victim, P_obj obj, void *data)
-{
-	int   room;
-	P_obj room_junk = NULL, room_junk_temp = NULL, smoke, web;
-
-	if (!current_event || (current_event->type != EVENT_SPECIAL))
-	{
-		logit(LOG_EXIT, "Call to web_to_smoke() with invalid event");
-		return;
-	}
-	/* fathom our location */
-	room = atoi((char *)current_event->target.t_arg);
-	if (room <= 0)
-	{
-		logit(LOG_EXIT, "web_to_smoke() in invalid room.");
-		return;
-	}
-	/* double check for the web, and replace with smoke if its there */
-	for (room_junk = world[room].contents; room_junk; room_junk = room_junk_temp)
-	{
-		room_junk_temp = room_junk->next_content;
-		if ((obj_index[room_junk->R_num].virtual_number == 41900) || (obj_index[room_junk->R_num].virtual_number == 41901))
-		{
-			web   = room_junk;
-			smoke = read_object(41908, VIRTUAL);
-			if (!smoke)
-			{
-				logit(LOG_EXIT, "assert: web_to_smoke() failed to load object 41908");
-				return;
-			}
-			send_to_room("The spider webs begin to smolder, and just might burst into flames at any moment.\r\n", room);
-			obj_from_room(web);
-			obj_to_room(smoke, room);
-			return;
-		}
-	}
-	return;
 }
 
 void event_smoke_to_fire(P_char ch, P_char victim, P_obj obj, void *data)

@@ -56,8 +56,6 @@ extern P_index                obj_index;
 extern P_char                 character_list;
 extern P_desc                 descriptor_list;
 extern P_char                 combat_list;
-extern P_event                current_event;
-extern P_event                event_list;
 extern P_obj                  object_list;
 extern P_room                 world;
 extern P_index                mob_index;
@@ -8567,7 +8565,6 @@ void spell_channel(int level, P_char ch, P_char victim, P_obj obj)
 {
 	char                 Gbuf[MAX_STRING_LENGTH];
 	P_char               vict, avatar;
-	P_event              ev, e_save;
 	struct affected_type new_af;
 	int                  room;
 	snoop_by_data       *snoop_by_ptr;
@@ -11774,29 +11771,8 @@ void spell_endurance(int level, P_char ch, char *arg, int type, P_char victim, P
 
 void BackToUsualForm(P_char ch)
 {
-	P_event e, save_ce = current_event;
-
 	act("The mists in the room coalesce into $n's form...", TRUE, ch, 0, 0, TO_ROOM);
 	act("You return to your ordinary form...", TRUE, ch, 0, 0, TO_CHAR);
-
-	// looks like this stuff was remove elsewhere, so commenting this out
-	// but the function is used elsewhere, just no event related stuff anymore
-
-	/*if(!current_event || (current_event->type != EVENT_CHAR_EXECUTE) ||
-	    (current_event->target.t_func != BackToUsualForm))
-	{
-	  save_ce = current_event;
-	  for (e = ch->events; e; e = e->next)
-	    if((e->type == EVENT_CHAR_EXECUTE) &&
-	        (e->target.t_func == BackToUsualForm))
-	      break;
-	  if(e)
-	  {
-	    current_event = e;
-	    RemoveEvent();
-	  }
-	  current_event = save_ce;
-	}*/
 
 	affect_from_char(ch, SPELL_WRAITHFORM);
 }
@@ -14174,7 +14150,6 @@ void spell_dispel_magic(int level, P_char ch, char *arg, int type, P_char victim
 	struct affected_type *af, *next_af_dude;
 	int                   mod, success = 0, nosave = 0;
 	P_obj                 temp_wall, next_obj, obj2;
-	P_event               e1 = NULL, e2;
 	P_char                orig;
 
 	if (!IS_ALIVE(ch))

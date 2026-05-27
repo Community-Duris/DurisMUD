@@ -26,8 +26,6 @@
 extern P_room      world;
 extern const int   top_of_world;
 extern P_index     mob_index;
-extern P_event     current_event;
-extern const char *get_event_name(P_event);
 extern const int   rev_dir[];
 
 vector<Building *> buildings;

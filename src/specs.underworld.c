@@ -38,7 +38,6 @@
 extern P_room            world;
 extern struct zone_data *zone_table;
 extern const int         top_of_world;
-extern P_event           current_event;
 extern P_index           obj_index;
 
 int            range_scan_track(P_char ch, int distance, int type_scan);

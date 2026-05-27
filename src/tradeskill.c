@@ -57,7 +57,6 @@ extern struct zone_data *zone_table;
 extern const char       *material_names[];
 extern P_char            character_list;
 extern P_desc            descriptor_list;
-extern P_event           event_type_list[];
 extern P_index           mob_index;
 extern P_index           obj_index;
 extern P_obj             object_list;
@@ -2124,16 +2123,6 @@ void do_salvation(P_char ch, char *arg, int cmd)
 	vamp(ch, number(100, 200), GET_MAX_HIT(ch));
 }
 
-void do_drandebug(P_char ch, char *arg, int cmd)
-{
-	return;
-	/*
-	P_obj obj;
-	int value = itemvalue(ch, obj);
-	debug("Item's value is: %d\r\n&n", value);
-	*/
-}
-
 // Returns the lowest material vnum (lowest quality) for material with the same type as obj->material.
 // I.e. for a material type FEATHER -> returns 400000 (vnum for a small feather).
 //   Material range for FEATHER is 400000 (lowest quality) - 400004 (highest quality).
@@ -3812,7 +3801,7 @@ int get_ival_from_proc(obj_proc_type proc)
 	    proc == vecna_deathportal || proc == vecna_deathaltar || proc == vecna_stonemist || proc == vecna_ghosthands || proc == vecna_torturerroom || proc == vecna_gorge || proc == mob_vecna_procs ||
 	    proc == arenaobj_proc || proc == burn_touch_obj || proc == drowcrusher || proc == hewards_mystical_organ || proc == mir_fire || proc == board || proc == random_tomb || proc == random_glass ||
 	    proc == random_slab || proc == refreshing_fountain || proc == magical_fountain || proc == changelog || proc == wall_generic || proc == huntsman_ward || proc == item_switch ||
-	    proc == clock_tower || proc == verzanan_portal || proc == die_roller || proc == elfgate || proc == guildwindow || proc == guildhome || proc == automaton_lever ||
+	    proc == verzanan_portal || proc == die_roller || proc == elfgate || proc == guildwindow || proc == guildhome || proc == automaton_lever ||
 	    proc == illithid_teleport_veil || proc == teleporting_pool || proc == llyms_altar || proc == newbie_sign1 || proc == newbie_sign2 || proc == vareena_statue || proc == wh_corpse_decay ||
 	    proc == dragon_heart_decay || proc == ravenloft_bell || proc == toe_chamber_switch || proc == flesh_golem_repop || proc == unmulti_altar || proc == jubilex_grid_mob_generator ||
 	    proc == eth2_tree_obj || proc == magic_deck || proc == blackjack_table || proc == toe_chamber_switch || proc == drowcrusher)

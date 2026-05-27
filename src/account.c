@@ -1763,24 +1763,6 @@ int is_char_in_game(struct acct_chars *c, P_desc d)
 			logit(LOG_COMM, "%s [%s@%s] has reconnected.", GET_NAME(d->character), d->login, d->host);
 			loginlog(d->character->player.level, "%s [%s@%s] has reconnected.", GET_NAME(d->character), d->login, d->host);
 
-#if 0
-      /* panic, lets check for spellcast events and nuke them, hopefully allowing a release from
-         spellcast bug */
-      if (IS_AFFECTED2(d->character, AFF2_CASTING))
-      {
-        P_event  ev;
-
-        LOOP_EVENTS(ev, (d->character)->events)
-          if (ev->type == EVENT_SPELLCAST)
-        {
-          statuslog(AVATAR, "Spellcast bug on %s aborted",
-                    GET_NAME(d->character));
-          StopCasting(d->character);
-        }
-      }
-      /* if they were morph'ed when they lost link, put them
-         back... */
-#endif
 			if (IS_SET(ch->specials.act, PLR_MORPH))
 			{
 				if (!ch->only.pc->switched || !IS_MORPH(ch->only.pc->switched) ||

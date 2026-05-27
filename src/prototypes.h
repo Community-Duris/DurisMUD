@@ -357,7 +357,6 @@ bool is_stat_max(sbyte);
 
 /* tradeskill.c */
 void do_salvation(P_char ch, char *arg, int cmd);
-void do_drandebug(P_char ch, char *arg, int cmd);
 int  get_matstart(P_obj obj);
 bool has_affect(P_obj obj);
 void do_refine(P_char ch, char *arg, int cmd);
@@ -890,20 +889,13 @@ void edit_start(P_desc desc, char *old_text, int max_lines, void (*callback)(P_d
 
 void                             clear_char_nevents(P_char, int, void *);
 void                             load_event_names();
-bool                             RemoveEvent(void);
-__attribute__((deprecated)) bool Schedule(int, long, int, void *, void *);
-void                             set_event_time(P_event e1, int secs);
-int                              event_time(P_event, int);
 int                              Berserk(P_char, int);
 void                             CharWait(P_char, int);
 void                             ClearCharEvents(P_char);
 void                             ClearObjEvents(P_obj);
 void                             clear_events_type(P_char, int);
-void                             Events(void);
-void                             ReSchedule(void);
 void                             StartRegen(P_char, int);
 void                             Stun(P_char, P_char, int, bool);
-void                             init_events(void);
 typedef void (*event_func)(P_char ch, P_char victim, P_obj obj, void *data);
 void add_event(event_func, int, P_char, P_char, P_obj, int, void *, int);
 
@@ -2765,7 +2757,6 @@ int   MaxTrackDist(P_char);
 void  track_move(P_char);
 void  add_track(P_char, int);
 void  do_track(P_char, char *, int);
-void  nuke_track(struct trackrecordtype *);
 void  show_tracks(P_char ch, int room);
 void  show_tracking_map(P_char);
 

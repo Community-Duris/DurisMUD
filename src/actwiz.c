@@ -144,7 +144,6 @@ extern flagDef                          missile_types[];
 extern float                            combat_by_class[][2];
 extern float                            combat_by_race[][3];
 extern long                             new_exp_table[]; // Arih: Fixed type mismatch bug - was int, should be long
-extern const char                      *get_event_name(P_event);
 extern const char                      *get_function_name(void *);
 extern const char                      *spldam_types[];
 extern const char                      *craftsmanship_names[];
@@ -1569,7 +1568,6 @@ void stat_game(P_char ch)
 void do_stat(P_char ch, char *argument, int cmd)
 {
 	P_char                   k = 0, t_mob = 0, shopkeeper, mob, rider;
-	P_event                  e1 = NULL;
 	P_obj                    j = 0, t_obj = 0;
 	P_room                   rm = 0;
 	char                     arg1[MAX_STRING_LENGTH], arg2[MAX_STRING_LENGTH], *rest;
@@ -2194,18 +2192,10 @@ void do_stat(P_char ch, char *argument, int cmd)
 				strcat(o_buf, "\n");
 			}
 		}
-		if (j->events || j->nevents)
+		if (j->nevents)
 		{
 			P_nevent ne;
 			strcat(o_buf, "&+YEvents:\n&+Y-------\n");
-
-			for (e1 = j->events; e1; e1 = e1->next)
-				snprintf(o_buf + strlen(o_buf),
-				         MAX_STRING_LENGTH - strlen(o_buf),
-				         "%6d&+Y seconds,&n %s%s&+Y.\n",
-				         event_time(e1, T_SECS),
-				         event_names[(int)e1->type],
-				         (e1->one_shot) ? "" : "&+Y(&N&+RR&+Y)");
 
 			LOOP_EVENTS_OBJ(ne, j->nevents)
 			{
@@ -2880,15 +2870,11 @@ void do_stat(P_char ch, char *argument, int cmd)
 				}
 			}
 		}
-		if (k->events || k->nevents)
+		if (k->nevents)
 		{
 			P_nevent ne;
 			strcat(o_buf, "&+YEvents:\n&+Y-------\n");
 
-			for (e1 = k->events; e1; e1 = e1->next)
-			{
-				snprintf(o_buf + strlen(o_buf), MAX_STRING_LENGTH - strlen(o_buf), "%6d&+Y seconds,&n %s&+Y.\n", event_time(e1, T_SECS), get_event_name(e1));
-			}
 			LOOP_EVENTS_CH(ne, k->nevents)
 			{
 				snprintf(o_buf + strlen(o_buf), MAX_STRING_LENGTH - strlen(o_buf), "%6d&+Y seconds,&n %s", ne_event_time(ne) / WAIT_SEC, get_function_name((void *)ne->func));

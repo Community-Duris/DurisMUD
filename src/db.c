@@ -41,7 +41,6 @@
  */
 
 extern P_desc                  descriptor_list;
-extern P_event                 current_event;
 extern const char             *equipment_types[];
 extern const char             *town_name_list[];
 extern const int               min_stats_for_class[][8];
@@ -628,7 +627,6 @@ void boot_db(int mini_mode)
 	fprintf(stderr, "-- Events\n");
 	logit(LOG_STATUS, "Initializing event driver.");
 	ne_init_events();
-	// init_events();
 
 	/*
 	 * can't do the dynamic proc lib loading until AFTER the event driver
@@ -644,11 +642,6 @@ void boot_db(int mini_mode)
 		load_all_proc_libs();
 	}
 #endif
-
-	/*
-	 * have to do ships after events, since zone resets (loading ships)
-	 * are done in init_events now.
-	 */
 
 	fprintf(stderr, "-- Ships\n");
 	logit(LOG_STATUS, "Initializing ships.");
@@ -3106,7 +3099,6 @@ void reset_zone(int zone, int force_item_repop)
 	int       temp, room, ival;
 	P_char    mob = NULL, last_mob = NULL, tmp_mob = NULL, last_mob_followable = NULL;
 	P_obj     obj, obj_to;
-	P_event   e1 = NULL;
 	arti_data artidata;
 	char      buf[MAX_STRING_LENGTH];
 

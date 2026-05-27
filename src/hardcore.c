@@ -39,7 +39,6 @@
 
 extern P_char      character_list;
 extern P_desc      descriptor_list;
-extern P_event     event_type_list[];
 extern P_index     mob_index;
 extern P_index     obj_index;
 extern P_obj       object_list;

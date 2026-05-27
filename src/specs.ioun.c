@@ -22,7 +22,6 @@
 
 extern P_char                 character_list;
 extern P_desc                 descriptor_list;
-extern P_event                current_event;
 extern P_index                obj_index;
 extern P_room                 world;
 extern char                  *coin_names[];

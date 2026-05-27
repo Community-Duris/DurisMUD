@@ -24,7 +24,6 @@ int show_moth_stati(P_char ch, char *stati_date, char *argument);
  */
 
 extern P_char                character_list;
-extern P_event               current_event;
 extern P_room                world;
 extern int                   top_of_zone_table;
 extern struct time_info_data time_info;

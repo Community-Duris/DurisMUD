@@ -60,14 +60,12 @@
 extern P_index                mob_index;
 extern P_index                obj_index;
 extern P_desc                 descriptor_list;
-extern P_event                current_event;
 extern P_room                 world;
 extern const char            *command[];
 extern const char            *dirs[];
 extern const struct stat_data stat_factor[];
 extern struct str_app_type    str_app[];
 extern struct zone_data      *zone_table;
-extern P_event                event_list;
 extern int                    innate_abilities[];
 extern int                    class_innates[][5];
 extern const int              rev_dir[];
@@ -2194,7 +2192,6 @@ void do_flee(P_char ch, char *argument, int cmd)
 	int                  i, attempted_dir, start_room, atts, fight_pc = FALSE, j;
 	char                 buf[MAX_INPUT_LENGTH];
 	P_char               tch, was_fighting = NULL;
-	P_event              e1, e2;
 	struct affected_type af;
 	char                *arg1;
 	char                 arg[512];

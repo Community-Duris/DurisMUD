@@ -23,8 +23,6 @@ extern P_index                 obj_index;
 extern P_char                  character_list;
 extern P_desc                  descriptor_list;
 extern P_char                  combat_list;
-extern P_event                 current_event;
-extern P_event                 event_type_list[];
 extern P_obj                   object_list;
 extern P_room                  world;
 extern P_index                 mob_index;

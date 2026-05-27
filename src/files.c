@@ -33,12 +33,10 @@
 using namespace std;
 
 extern P_char            character_list;
-extern P_event           event_list;
 extern int               mini_mode;
 extern P_index           mob_index;
 extern P_desc            descriptor_list;
 extern int               spl_table[TOTALLVLS][MAX_CIRCLE];
-static P_event           save_event;
 char                    *ibuf;
 static int               corpse_room;
 static int               int_size  = sizeof(int);
@@ -533,7 +531,6 @@ void updateShortAffects(P_char ch)
 int writeAffects(char *buf, struct affected_type *af)
 {
 	struct affected_type *first = af;
-	P_event               tmp;
 	char                 *start = buf;
 	signed short          count = 0;
 
@@ -580,20 +577,8 @@ int writeAffects(char *buf, struct affected_type *af)
 		ADD_SHORT(buf, af->type);
 		if (IS_SET(af->flags, AFFTYPE_SHORT))
 		{
-
-#ifndef _PFILE_
-			for (tmp = event_list; tmp; tmp = tmp->next_event)
-				if ((struct affected_type *)tmp->target.t_arg == af)
-					break;
-
-			if (tmp != NULL)
-			{
-				ADD_INT(buf, event_time(tmp, T_PULSES));
-			}
-			else
-#endif
-				// af->duration updated with updateShortAffects(ch), but we want secs to save not pulses.
-				ADD_INT(buf, af->duration / WAIT_SEC);
+			// af->duration updated with updateShortAffects(ch), but we want secs to save not pulses.
+			ADD_INT(buf, af->duration / WAIT_SEC);
 		}
 		else
 		{

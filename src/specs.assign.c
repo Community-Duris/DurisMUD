@@ -1779,11 +1779,6 @@ void assign_objects(void)
 	obj_index[real_object0(1425)].func.obj = item_switch;
 	obj_index[real_object0(1427)].func.obj = item_switch;
 
-#if 0
-  /* Southern Verzanan */
-  obj_index[real_object0(2998)].func.obj = clock_tower; /* WD clock */
-#endif
-
 	/* The Underworld */
 	obj_index[real_object0(4505)].func.obj = hammer;
 	obj_index[real_object0(4403)].func.obj = magic_pool;

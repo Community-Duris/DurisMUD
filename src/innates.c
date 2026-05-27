@@ -47,7 +47,6 @@ float regen_factor[REG_MAX + 1];
 
 extern Skill       skills[];
 extern P_room      world;
-extern P_event     current_event;
 extern P_index     mob_index;
 extern const char *dirs[];
 // extern int rev_dir[];

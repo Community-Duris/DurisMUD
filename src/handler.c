@@ -45,7 +45,6 @@ extern P_char                        character_list;
 extern P_char                        combat_list;
 extern P_char                        dead_guys;
 extern P_desc                        descriptor_list;
-extern P_event                       current_event;
 extern P_index                       mob_index;
 extern P_index                       obj_index;
 extern P_obj                         object_list;
@@ -65,7 +64,6 @@ extern const struct racial_data_type racial_data[];
 extern struct zone_data             *zone_table;
 extern struct time_info_data         time_info;
 extern struct arena_data             arena;
-extern P_event                       event_list;
 extern const int                     dam_cap_data[];
 extern const char                   *connected_types[];
 
@@ -3212,8 +3210,6 @@ void extract_char(P_char ch)
 	P_char                k;
 	P_desc                t_desc;
 	int                   l, i;
-	P_event               ev_save;
-	P_event               ev;
 	char                  buf[MAX_STRING_LENGTH];
 	snoop_by_data        *snoop_by_ptr, *next;
 	struct affected_type *af, *nextaf;

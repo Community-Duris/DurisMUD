@@ -237,7 +237,6 @@ int  mob_vecna_procs(P_obj, P_char, int, char *); // Many procs on one item.
 /* specs.highway.c */
 
 void event_smoke_to_fire(P_char ch, P_char victim, P_obj obj, void *data);
-void event_web_to_smoke(P_char ch, P_char victim, P_obj obj, void *data);
 int  wand_of_wonder(P_obj, P_char, int, char *);
 int  hewards_mystical_organ(P_obj, P_char, int, char *);
 int  amethyst_orb(P_obj, P_char, int, char *);
@@ -664,8 +663,6 @@ int transp_tow_misty_gloves(P_obj, P_char, int, char *);
 int zarbon_shaper(P_obj, P_char, int, char *);
 int rod_of_zarbon(P_obj, P_char, int, char *);
 int illithid_teleport_veil(P_obj, P_char, int, char *);
-int check_trap_trigger(P_char, int);
-int trap_timer(P_obj, P_char, int, char *);
 int flaming_mace_ruzdo(P_obj, P_char, int, char *);
 int automaton_lever(P_obj, P_char, int, char *);
 int banana(P_obj, P_char, int, char *);
@@ -908,7 +905,6 @@ int  casino_two(P_char, P_char, int, char *);
 int  cat_one(P_char, P_char, int, char *);
 int  cell_drunk(P_char, P_char, int, char *);
 int  cleric_one(P_char, P_char, int, char *);
-int  clock_tower(P_obj, P_char, int, char *);
 int  commoner_five(P_char, P_char, int, char *);
 int  commoner_four(P_char, P_char, int, char *);
 int  commoner_one(P_char, P_char, int, char *);

@@ -1438,23 +1438,6 @@ void command_interpreter(P_char ch, char *argument)
 	}
 	if (IS_AFFECTED2(ch, AFF2_CASTING))
 	{
-		/* This is all using the old event data stuff, ch->events is no longer used.
-		 *   It has been replaced by P_nevent, ch->nevents, LOOP_EVENTS_CH, ev->func == event_spellcast
-		 * Since we haven't seen it in a while, and ch->events is always NULL, no point in updating this.
-		// check for spellcast loop bug!!!!!
-		P_event  ev;
-
-		// This is POSSIBLY a spellcast event in the wrong place.  Instead of
-		//   just nuking it, see how long it has.  If more then 5 pulses, then nuke it.
-		LOOP_EVENTS( ev, ch->events )
-		{
-		  if( IS_PC(ch) && (ev->type == EVENT_SPELLCAST) && (event_time(ev, T_PULSES) > 5) )
-		  {
-		    statuslog(AVATAR, "Spellcast bug on %s: spell aborted.", J_NAME(ch));
-		    StopCasting(ch);
-		  }
-		}
-		*/
 		if (cmd != CMD_PETITION && cmd != CMD_RETURN)
 		{
 			send_to_char("You're busy spellcasting!\r\n", ch);

@@ -26,7 +26,6 @@
    external variables
  */
 
-extern P_event                       current_event;
 extern P_room                        world;
 extern char                         *command[];
 extern const struct stat_data        stat_factor[];

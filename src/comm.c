@@ -85,7 +85,6 @@
 
 /* external variables */
 
-extern P_event               schedule[];
 extern P_index               mob_index;
 extern P_room                world;
 extern char                  debug_mode;
@@ -1256,12 +1255,6 @@ void game_loop(int port, int sslport)
 		/* handle heartbeat stuff */
 		/* Note: pulse now changes every 1/4 sec  */
 		after_events_call = TRUE;
-		/* Not using old events anymore.
-		if (schedule[pulse])
-		{
-		  Events();
-		}
-		*/
 		clock_t ne_events_begin = clock();
 		ne_events();
 		clock_t ne_events_end = clock();

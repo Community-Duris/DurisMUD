@@ -5487,8 +5487,6 @@ void nanny(P_desc d, char *arg)
 		default:
 			if (STATE(d) != CON_FLUSH)
 				logit(LOG_EXIT, "Nanny: illegal state of con'ness #1 (%d)", STATE(d));
-			if (d->character && d->character->events)
-				ClearCharEvents(d->character);
 			if (d->output.head == 0)
 				close_socket(d);
 			return;

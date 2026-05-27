@@ -32,7 +32,6 @@ extern P_index     mob_index;
 extern P_index     obj_index;
 extern P_room      world;
 extern const int   top_of_world;
-extern P_event     current_event;
 extern char       *coin_names[];
 extern char       *command[];
 extern const char *dirs[];
