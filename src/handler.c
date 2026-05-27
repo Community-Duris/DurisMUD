@@ -77,6 +77,54 @@ int  map_view_distance(P_char ch, int room);
 bool leave_safe_room(P_char ch);
 void add_weight(P_obj obj, int weight);
 
+static const char *persistence_char_owner(P_char ch, char *buf, int buf_size)
+{
+	if (!buf || buf_size <= 0)
+		return "none";
+
+	if (!ch)
+		snprintf(buf, buf_size, "none");
+	else if (IS_PC(ch))
+		snprintf(buf, buf_size, "player:%d", GET_PID(ch));
+	else
+		snprintf(buf, buf_size, "mob:%d", GET_VNUM(ch));
+
+	return buf;
+}
+
+static const char *persistence_room_owner(int room, char *buf, int buf_size)
+{
+	if (!buf || buf_size <= 0)
+		return "none";
+
+	if (room >= 0 && room <= top_of_world)
+		snprintf(buf, buf_size, "room:%d", world[room].number);
+	else
+		snprintf(buf, buf_size, "room:unknown");
+
+	return buf;
+}
+
+static const char *persistence_object_owner(P_obj obj, char *buf, int buf_size)
+{
+	char uid[32];
+
+	if (!buf || buf_size <= 0)
+		return "none";
+
+	if (!obj)
+	{
+		snprintf(buf, buf_size, "none");
+	}
+	else
+	{
+		persistence_assign_item_uid(obj, "container_owner");
+		snprintf(buf, buf_size, "item:%s", persistence_item_uid_text(obj, uid, sizeof(uid)));
+	}
+
+	return buf;
+}
+
 /*
  * called every 20 seconds, just loops through chars doing...stuff
  */
@@ -1547,6 +1595,7 @@ void obj_to_char(P_obj object, P_char ch)
 {
 	P_obj o;
 	char  Gbuf[MAX_STRING_LENGTH];
+	char  owner_buf[64];
 
 	if (!ch)
 	{
@@ -1640,6 +1689,12 @@ void obj_to_char(P_obj object, P_char ch)
 
 	mark_char_or_owner_dirty(ch);
 	SET_BIT(ch->runtime_flags, CHAR_RFLAG_DIRTY_INVENTORY);
+	persistence_record_item_event("owner_player",
+	                              object,
+	                              ch,
+	                              "nowhere",
+	                              persistence_char_owner(ch, owner_buf, sizeof(owner_buf)),
+	                              "obj_to_char");
 }
 
 /*
@@ -2213,6 +2268,7 @@ void obj_to_room(P_obj object, int room)
 	P_char   i;
 	P_nevent e1;
 	P_obj    o;
+	char     owner_buf[64];
 
 	if (!OBJ_NOWHERE(object))
 	{
@@ -2334,6 +2390,12 @@ void obj_to_room(P_obj object, int room)
 	{
 		artifact_update_location_sql(object);
 	}
+	persistence_record_item_event("owner_room",
+	                              object,
+	                              NULL,
+	                              "nowhere",
+	                              persistence_room_owner(room, owner_buf, sizeof(owner_buf)),
+	                              "obj_to_room");
 }
 
 /*
@@ -2448,6 +2510,7 @@ void obj_to_obj(P_obj obj, P_obj obj_to)
 	P_obj  tmp_obj, o;
 	int    wgt = 0, t_wgt = 0;
 	char   buf[MAX_STRING_LENGTH];
+	char   owner_buf[64];
 
 	if (!obj || !obj_to || ((obj_to->type != ITEM_CONTAINER) && (obj_to->type != ITEM_QUIVER) && (obj_to->type != ITEM_STORAGE) && (obj_to->type != ITEM_CORPSE)))
 	{
@@ -2515,6 +2578,12 @@ void obj_to_obj(P_obj obj, P_obj obj_to)
 	  }
 	*/
 	mark_container_dirty(obj_to);
+	persistence_record_item_event("owner_container",
+	                              obj,
+	                              NULL,
+	                              "nowhere",
+	                              persistence_object_owner(obj_to, owner_buf, sizeof(owner_buf)),
+	                              "obj_to_obj");
 }
 
 // appends obj to end of a linked list - used during load to preserve order
@@ -2747,6 +2816,7 @@ void extract_obj(P_obj obj, int gone_for_good)
 	// clear New events as well as old ones!
 	disarm_obj_nevents(obj, 0);
 	ClearObjEvents(obj);
+	persistence_record_item_event("owner_destroyed", obj, NULL, "nowhere", "destroyed", "extract_obj");
 
 	/* We don't want to do this because extract_obj( obj, TRUE ) gets called when
 	 *   someone rents.  We need to handle this in the next function one step up in the stack.
