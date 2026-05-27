@@ -3085,6 +3085,9 @@ void                  persistence_record_item_event(const char *event_type,
 int                   persistence_flush_item_events(int max_events);
 int                   persistence_pending_item_events(void);
 unsigned long         persistence_dropped_item_events(void);
+int                   persistence_start_item_event_worker(void);
+void                  persistence_stop_item_event_worker(void);
+int                   persistence_item_event_worker_active(void);
 void                  sprint64bit(ulong *, const char **, char *);
 void                  sprintbit(ulong, const char **, char *);
 void                  sprinttype(int, const char **, char *);

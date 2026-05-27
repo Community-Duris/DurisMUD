@@ -965,6 +965,68 @@ int persistence_flush_item_events(int max_events)
   return flushed;
 }
 
+static int persistence_item_event_log_writer(const char *line, void *context)
+{
+  FILE *log_f;
+  int ok = 1;
+
+  (void) context;
+
+  if (!line || !*line)
+    return 1;
+
+  log_f = fopen(LOG_EVENT, "a");
+  if (!log_f)
+    return 0;
+
+  if (fputs(line, log_f) < 0 || fputs("\n", log_f) < 0)
+    ok = 0;
+
+  if (fclose(log_f))
+    ok = 0;
+
+  return ok;
+}
+
+int persistence_start_item_event_worker(void)
+{
+  if (!persistence_item_event_worker_start(persistence_item_event_log_writer,
+                                           NULL))
+  {
+    persistence_alert(AVATAR, "item_event", "worker", "none", "none",
+                      "start_failed",
+                      "item persistence worker could not start; using sync fallback");
+    return 0;
+  }
+
+  logit(LOG_STATUS, "Started item persistence worker.");
+  return 1;
+}
+
+void persistence_stop_item_event_worker(void)
+{
+  unsigned long failures;
+
+  persistence_item_event_worker_stop(0);
+  persistence_flush_item_events(0);
+
+  failures = persistence_item_event_worker_write_failures();
+  if (failures)
+  {
+    persistence_alert(AVATAR, "item_event", "worker", "none", "none",
+                      "write_failures",
+                      "%lu item persistence worker writes failed and were retried",
+                      failures);
+  }
+
+  logit(LOG_STATUS, "Stopped item persistence worker.");
+}
+
+int persistence_item_event_worker_active(void)
+{
+  return persistence_item_event_worker_running();
+}
+
 int persistence_pending_item_events(void)
 {
   return persistence_item_event_queue_pending();

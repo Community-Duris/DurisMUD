@@ -7,7 +7,7 @@
  *
  * Compile from durismud/:
  *   g++ -std=c++20 -I src -o tests/test_persistence_no_lag \
- *       tests/test_persistence_no_lag.cpp src/persistence_queue.c
+ *       tests/test_persistence_no_lag.cpp src/persistence_queue.c -pthread
  */
 
 #include <chrono>
@@ -20,6 +20,7 @@
 #include "persistence_queue.h"
 
 static int failures = 0;
+static int slow_writer_calls = 0;
 
 static long long elapsed_usec(std::chrono::steady_clock::time_point start,
                               std::chrono::steady_clock::time_point end)
@@ -53,7 +54,7 @@ static void test_enqueue_stays_inside_main_thread_budget()
   long long max_call = 0;
   auto total_start = std::chrono::steady_clock::now();
 
-  std::printf("[1/4] enqueue timing under normal persistence load ...\n");
+  std::printf("[1/5] enqueue timing under normal persistence load ...\n");
   persistence_item_event_queue_reset();
 
   for (int i = 0; i < writes; i++)
@@ -90,7 +91,7 @@ static void test_slow_writer_does_not_block_enqueue()
   const long long budget = no_lag_budget_usec();
   long long max_call = 0;
 
-  std::printf("[2/4] enqueue timing while simulated SQL/file writer is slow ...\n");
+  std::printf("[2/5] enqueue timing while simulated SQL/file writer is slow ...\n");
   persistence_item_event_queue_reset();
 
   for (int i = 0; i < writes; i++)
@@ -120,7 +121,7 @@ static void test_full_queue_fails_fast()
   const long long budget = no_lag_budget_usec();
   long long overflow_time;
 
-  std::printf("[3/4] full queue overflow fails fast instead of blocking ...\n");
+  std::printf("[3/5] full queue overflow fails fast instead of blocking ...\n");
   persistence_item_event_queue_reset();
 
   for (int i = 0; i < PERSISTENCE_EVENT_QUEUE_CAPACITY; i++)
@@ -147,11 +148,68 @@ static void test_full_queue_fails_fast()
     fail("overflow did not increment dropped-event counter");
 }
 
+static int slow_background_writer(const char *line, void *context)
+{
+  int *calls = static_cast<int *>(context);
+
+  (void) line;
+
+  std::this_thread::sleep_for(std::chrono::milliseconds(5));
+  (*calls)++;
+  return 1;
+}
+
+static void test_background_worker_keeps_slow_writes_off_main_thread()
+{
+  const int writes = 100;
+  const long long budget = no_lag_budget_usec();
+  long long max_call = 0;
+
+  std::printf("[4/5] background worker absorbs slow writes off the main thread ...\n");
+  persistence_item_event_worker_stop(0);
+  persistence_item_event_queue_reset();
+  slow_writer_calls = 0;
+
+  if (!persistence_item_event_worker_start(slow_background_writer,
+                                           &slow_writer_calls))
+  {
+    fail("background worker failed to start");
+    return;
+  }
+
+  for (int i = 0; i < writes; i++)
+  {
+    auto start = std::chrono::steady_clock::now();
+    if (!persistence_item_event_queue_enqueue("PERSISTENCE_ITEM_EVENT|event=worker-slow"))
+      fail("enqueue failed while background worker was running");
+    auto end = std::chrono::steady_clock::now();
+
+    long long call_time = elapsed_usec(start, end);
+    if (call_time > max_call)
+      max_call = call_time;
+  }
+
+  persistence_item_event_worker_stop(1);
+
+  std::printf("  max enqueue with 5ms writer: %lld usec, budget: %lld usec, written: %lu\n",
+              max_call, budget, persistence_item_event_worker_written());
+
+  if (max_call > budget)
+    fail("background worker allowed slow writes to block enqueue");
+
+  if (slow_writer_calls != writes)
+    fail("background worker did not drain all queued writes");
+
+  if (persistence_item_event_queue_pending() != 0)
+    fail("background worker left events pending after drain stop");
+}
+
 static void test_flush_is_bounded_and_outside_record_path()
 {
   char out[PERSISTENCE_EVENT_MAX_LEN];
 
-  std::printf("[4/4] bounded drain leaves remaining events queued ...\n");
+  std::printf("[5/5] bounded drain leaves remaining events queued ...\n");
+  persistence_item_event_worker_stop(0);
   persistence_item_event_queue_reset();
 
   for (int i = 0; i < 10; i++)
@@ -172,6 +230,7 @@ int main()
   test_enqueue_stays_inside_main_thread_budget();
   test_slow_writer_does_not_block_enqueue();
   test_full_queue_fails_fast();
+  test_background_worker_keeps_slow_writes_off_main_thread();
   test_flush_is_bounded_and_outside_record_path();
 
   if (failures)

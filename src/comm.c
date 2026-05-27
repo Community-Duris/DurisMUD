@@ -499,7 +499,9 @@ void run_the_game(int port, int sslport)
 
 	fprintf(stderr, "Entering game loop.\n\r");
 	logit(LOG_STATUS, "Entering game loop.");
+	persistence_start_item_event_worker();
 	game_loop(port, sslport);
+	persistence_stop_item_event_worker();
 
 	/* Don't need this anymore, as dropped artis are handled in real time on the DB.
 	// Look for dropped artis and remove them from the next boot.

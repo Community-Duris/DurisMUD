@@ -9,7 +9,7 @@ DEBUG	= -ggdb3
 
 LDFLAGS += -L/usr/lib/mysql
 
-CFLAGS = -g -std=c++20 -D_FORTIFY_SOURCE=0 -Wno-write-strings -Wno-format-truncation -Wno-register 
+CFLAGS = -g -std=c++20 -D_FORTIFY_SOURCE=0 -Wno-write-strings -Wno-format-truncation -Wno-register -pthread
 #CFLAGS += -D__NO_MYSQL__
 CFLAGS += -DTEST_MUD
 
@@ -19,7 +19,7 @@ CFLAGS += -DTEST_MUD
 
 INCLUDES	= -I. -I/usr/include/libxml2 -I/usr/include/mysql -I./ships
 
-GENERAL_LIBS    = -lm -lstdc++ -lz -lxml2 -lcrypt -lmysqlclient -lgnutls -lssl -lcrypto -lcjson -lhiredis
+GENERAL_LIBS    = -lm -lstdc++ -lz -lxml2 -lcrypt -lmysqlclient -lgnutls -lssl -lcrypto -lcjson -lhiredis -pthread
 
 ifdef EFENCE
 	LDFLAGS += -L.
