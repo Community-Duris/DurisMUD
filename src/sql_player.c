@@ -892,8 +892,8 @@ bool sql_save_player_status(P_char ch, int type, int room)
 	char *esc_title      = sql_escape_string(GET_TITLE(ch) ? GET_TITLE(ch) : "");
 	char *esc_poofin     = sql_escape_string(ch->only.pc->poofIn ? ch->only.pc->poofIn : "");
 	char *esc_poofout    = sql_escape_string(ch->only.pc->poofOut ? ch->only.pc->poofOut : "");
-	char *esc_poofinsnd  = sql_escape_string(ch->only.pc->poofInSound ? ch->only.pc->poofInSound : "");
-	char *esc_poofoutsnd = sql_escape_string(ch->only.pc->poofOutSound ? ch->only.pc->poofOutSound : "");
+	char *esc_poofinsnd  = sql_escape_string("");
+	char *esc_poofoutsnd = sql_escape_string("");
 
 	// Start own transaction only after all preflight lookups and string escaping succeed.
 	bool own_txn = false;
@@ -3852,8 +3852,8 @@ bool sql_load_player_status(P_char ch, int pid)
 	// immortal stuff
 	ch->only.pc->poofIn        = sql_row_str(row, col++);
 	ch->only.pc->poofOut       = sql_row_str(row, col++);
-	ch->only.pc->poofInSound   = sql_row_str(row, col++);
-	ch->only.pc->poofOutSound  = sql_row_str(row, col++);
+	col++;
+	col++;
 	ch->only.pc->echo_toggle   = sql_row_int(row, col++, 0);
 	ch->only.pc->prompt        = sql_row_int(row, col++, 0);
 	ch->only.pc->wiz_invis     = sql_row_long(row, col++, 0);

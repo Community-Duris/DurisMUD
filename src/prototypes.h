@@ -603,8 +603,6 @@ void             do_make_guide(P_char ch, char *argument, int cmd);
 void             do_newbie(P_char ch, char *argument, int cmd);
 void             do_poofIn(P_char, char *, int);
 void             do_poofOut(P_char, char *, int);
-void             do_poofInSound(P_char, char *, int);
-void             do_poofOutSound(P_char, char *, int);
 void             do_ptell(P_char, char *, int);
 void             do_purge(P_char, char *, int);
 void             do_questwhere(P_char, char *, int);

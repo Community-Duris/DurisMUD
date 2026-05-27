@@ -1086,17 +1086,6 @@ void do_goto(P_char ch, char *argument, int cmd)
 		send_to_char("You try, but you can't seem to get there.\n\r", ch);
 		return;
 	}
-
-	if (ch->only.pc->poofOutSound)
-	{
-		snprintf(output, MAX_STRING_LENGTH, "!!SOUND(%s F=1 P=10)\n", ch->only.pc->poofOutSound);
-
-		for (pers = world[ch->in_room].people; pers; pers = pers->next_in_room)
-		{
-			if ((pers == ch) || CAN_SEE(pers, ch))
-				sound_to_char(output, pers);
-		}
-	}
 	if (ch->only.pc->poofOut == NULL)
 	{
 		strcpy(output, "$n disappears in a puff of smoke.");
@@ -1138,16 +1127,6 @@ void do_goto(P_char ch, char *argument, int cmd)
 		}
 	}
 
-	if (ch->only.pc->poofInSound)
-	{
-		snprintf(output, MAX_STRING_LENGTH, "!!SOUND(%s F=1 P=30)\n", ch->only.pc->poofInSound);
-
-		for (pers = world[ch->in_room].people; pers; pers = pers->next_in_room)
-		{
-			if ((pers == ch) || CAN_SEE(pers, ch))
-				sound_to_char(output, pers);
-		}
-	}
 	if (ch->only.pc->poofIn == NULL)
 	{
 		strcpy(output, "$n appears with an ear-splitting bang.");
@@ -6420,72 +6399,6 @@ void do_poofOut(P_char ch, char *argument, int cmd)
 		if (*argument == ' ')
 			argument++;
 		ch->only.pc->poofOut = str_dup(argument);
-	}
-}
-
-void do_poofInSound(P_char ch, char *argument, int cmd)
-{
-	char arg[MAX_INPUT_LENGTH];
-
-	if (!IS_TRUSTED(ch))
-		return;
-
-	one_argument(argument, arg);
-
-	if (!*arg)
-	{
-		if (ch->only.pc->poofInSound != NULL)
-			str_free(ch->only.pc->poofInSound);
-		ch->only.pc->poofInSound = NULL;
-	}
-	else if (strstr(arg, "!!SOUND") || strstr(arg, "!!sound"))
-	{
-		send_to_char("To set your poofin sound, just specify the filename (with extension).\n", ch);
-		return;
-	}
-	else
-	{
-		if (ch->only.pc->poofInSound != NULL)
-			str_free(ch->only.pc->poofInSound);
-
-		if (*argument == ' ')
-			argument++;
-		if (strlen(argument) > 39)
-			*(argument + 38) = '\0';
-		ch->only.pc->poofInSound = str_dup(argument);
-	}
-}
-
-void do_poofOutSound(P_char ch, char *argument, int cmd)
-{
-	char arg[MAX_INPUT_LENGTH];
-
-	if (!IS_TRUSTED(ch))
-		return;
-
-	one_argument(argument, arg);
-
-	if (!*arg)
-	{
-		if (ch->only.pc->poofOutSound != NULL)
-			str_free(ch->only.pc->poofOutSound);
-		ch->only.pc->poofOutSound = NULL;
-	}
-	else if (strstr(arg, "!!SOUND") || strstr(arg, "!!sound"))
-	{
-		send_to_char("To set your poofout sound, just specify the filename (with extension).\n", ch);
-		return;
-	}
-	else
-	{
-		if (ch->only.pc->poofOutSound != NULL)
-			str_free(ch->only.pc->poofOutSound);
-
-		if (*argument == ' ')
-			argument++;
-		if (strlen(argument) > 39)
-			*(argument + 38) = '\0';
-		ch->only.pc->poofOutSound = str_dup(argument);
 	}
 }
 

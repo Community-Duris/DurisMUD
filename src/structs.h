@@ -1255,8 +1255,6 @@ struct pc_only_data
 
 	char *poofIn;
 	char *poofOut;
-	char *poofInSound;
-	char *poofOutSound;
 	/*  char *title;*/
 
 	P_char switched;

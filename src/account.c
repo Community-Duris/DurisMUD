@@ -1241,10 +1241,6 @@ void cleanup_temp_char(P_char ch)
 			str_free(ch->only.pc->poofIn);
 		if (ch->only.pc->poofOut)
 			str_free(ch->only.pc->poofOut);
-		if (ch->only.pc->poofInSound)
-			str_free(ch->only.pc->poofInSound);
-		if (ch->only.pc->poofOutSound)
-			str_free(ch->only.pc->poofOutSound);
 		if (ch->only.pc->gcmd_arr)
 			FREE(ch->only.pc->gcmd_arr);
 	}

@@ -4595,16 +4595,6 @@ void do_score(P_char ch, char *argument, int cmd)
 				snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "PoofOut: None\n");
 			else
 				snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "PoofOut: %s\n", ch->only.pc->poofOut);
-
-			if (ch->only.pc->poofInSound == NULL)
-				snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "PoofInSound:  None\n");
-			else
-				snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "PoofInSound:  %s\n", ch->only.pc->poofInSound);
-
-			if (ch->only.pc->poofOutSound == NULL)
-				snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "PoofOutSound: None\n");
-			else
-				snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "PoofOutSound: %s\n", ch->only.pc->poofOutSound);
 		}
 	}
 	/* group leader */

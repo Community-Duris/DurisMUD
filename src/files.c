@@ -454,8 +454,8 @@ int writeStatus(char *buf, P_char ch, bool updateTime)
 		ADD_BYTE(buf, ch->specials.conditions[tmp]);
 	ADD_STRING(buf, ch->only.pc->poofIn);
 	ADD_STRING(buf, ch->only.pc->poofOut);
-	ADD_STRING(buf, ch->only.pc->poofInSound);
-	ADD_STRING(buf, ch->only.pc->poofOutSound);
+	ADD_STRING(buf, "");
+	ADD_STRING(buf, "");
 	ADD_BYTE(buf, ch->only.pc->echo_toggle);
 	ADD_SHORT(buf, ch->only.pc->prompt);
 	ADD_LONG(buf, ch->only.pc->wiz_invis);
@@ -2239,8 +2239,8 @@ int restoreStatus(char *buf, P_char ch)
 	ch->only.pc->poofOut = GET_STRING(buf);
 	if (stat_vers > 10)
 	{
-		ch->only.pc->poofInSound  = GET_STRING(buf);
-		ch->only.pc->poofOutSound = GET_STRING(buf);
+		free(GET_STRING(buf));
+		free(GET_STRING(buf));
 	}
 	ch->only.pc->echo_toggle = GET_BYTE(buf);
 	ch->only.pc->prompt      = GET_SHORT(buf);
