@@ -5454,12 +5454,14 @@ bool sql_load_all_corpses(void)
 					o->loc.inside = cur_corpse;
 				}
 				obj_to_room(cur_corpse, cur_room);
+				persistence_refresh_restored_corpse(cur_corpse, "sql_load_all_corpses");
 				loaded++;
 			}
 			else if (cur_corpse)
 			{
 				// corpse with no items
 				obj_to_room(cur_corpse, cur_room);
+				persistence_refresh_restored_corpse(cur_corpse, "sql_load_all_corpses");
 				loaded++;
 			}
 
@@ -5656,11 +5658,13 @@ bool sql_load_all_corpses(void)
 			o->loc.inside = cur_corpse;
 		}
 		obj_to_room(cur_corpse, cur_room);
+		persistence_refresh_restored_corpse(cur_corpse, "sql_load_all_corpses");
 		loaded++;
 	}
 	else if (cur_corpse)
 	{
 		obj_to_room(cur_corpse, cur_room);
+		persistence_refresh_restored_corpse(cur_corpse, "sql_load_all_corpses");
 		loaded++;
 	}
 

@@ -1049,6 +1049,7 @@ void    confiscate_all(P_char);
 // void recalc_base_hits(P_char);
 void restoreCorpses(void);
 void writeCorpse(P_obj);
+void persistence_refresh_restored_corpse(P_obj corpse, const char *source);
 int  writeObject(P_obj, int, ulong, int, int, char *);
 int  write_one_object(P_obj, char *, int include_persistent_uid = TRUE);
 void restoreSavedItems(void);

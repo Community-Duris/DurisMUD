@@ -75,6 +75,13 @@ extern const int                     top_of_world;
 #ifndef _PFILE_
 extern Skill skills[];
 #endif
+
+/*
+ * Crash recovery should not punish a player for reboot time.  Keep this
+ * multiplier easy to tune if production needs a wider or tighter window.
+ */
+#define PERSISTENCE_CORPSE_RESTORE_TIMER_MULTIPLIER 3
+
 #ifdef _PFILE_
 char  buff[SAV_MAXSIZE];
 char *buf = buff;
@@ -1232,6 +1239,35 @@ void writeCorpse(P_obj corpse)
 		                  "none", "none", "sql_save_failed",
 		                  "save_id=%d", corpse->value[CORPSE_SAVEID]);
 	}
+}
+
+void persistence_refresh_restored_corpse(P_obj corpse, const char *source)
+{
+	char target[128];
+	int base_decay;
+	int restored_decay;
+
+	if (!corpse || (corpse->type != ITEM_CORPSE) || !IS_SET(corpse->value[CORPSE_FLAGS], PC_CORPSE))
+		return;
+
+	base_decay     = get_property("timer.decay.corpse.pc", 120) * WAIT_MIN;
+	restored_decay = base_decay * PERSISTENCE_CORPSE_RESTORE_TIMER_MULTIPLIER;
+
+	affect_from_obj(corpse, TAG_OBJ_DECAY);
+	set_obj_affected(corpse, restored_decay, TAG_OBJ_DECAY, 0);
+
+	snprintf(target, sizeof(target), "corpse:%d", corpse->value[CORPSE_SAVEID]);
+	persistence_record_item_event("owner_corpse_restored", corpse, NULL,
+	                              "corpse_file", target,
+	                              "restore_corpse_timer_refreshed");
+	logit(LOG_CORPSE,
+	      "Restored player corpse %s from %s with decay timer refreshed to %d pulses.",
+	      OBJ_SHORT(corpse) ? OBJ_SHORT(corpse) : "unknown corpse",
+	      source ? source : "unknown source",
+	      restored_decay);
+	logit(LOG_WIZ,
+	      "Persistence restored player corpse %s with refreshed crash recovery timer.",
+	      target);
 }
 
 int writeItems(char *buf, P_char ch)
