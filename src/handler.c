@@ -2816,7 +2816,8 @@ void extract_obj(P_obj obj, int gone_for_good)
 	// clear New events as well as old ones!
 	disarm_obj_nevents(obj, 0);
 	ClearObjEvents(obj);
-	persistence_record_item_event("owner_destroyed", obj, NULL, "nowhere", "destroyed", "extract_obj");
+	if (gone_for_good)
+		persistence_record_item_event("owner_destroyed", obj, NULL, "nowhere", "destroyed", "extract_obj");
 
 	/* We don't want to do this because extract_obj( obj, TRUE ) gets called when
 	 *   someone rents.  We need to handle this in the next function one step up in the stack.

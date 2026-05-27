@@ -1050,7 +1050,7 @@ void    confiscate_all(P_char);
 void restoreCorpses(void);
 void writeCorpse(P_obj);
 int  writeObject(P_obj, int, ulong, int, int, char *);
-int  write_one_object(P_obj, char *);
+int  write_one_object(P_obj, char *, int include_persistent_uid = TRUE);
 void restoreSavedItems(void);
 void writeSavedItem(P_obj);
 void PurgeSavedItemFile(P_obj);

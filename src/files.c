@@ -1139,7 +1139,7 @@ int writeObject(P_obj obj, int o_f_flag, ulong o_u_flag, int count, int loc, cha
 
 // This function writes one object to a char buffer, and returns the total number of bytes written.
 // This will *not* write the contents of a container object.
-int write_one_object(P_obj obj, char *dest_buff)
+int write_one_object(P_obj obj, char *dest_buff, int include_persistent_uid)
 {
 	char *start = dest_buff;
 	char *buff  = dest_buff;
@@ -1177,9 +1177,12 @@ int write_one_object(P_obj obj, char *dest_buff)
 	if (obj->affects)
 		o_f_flag |= O_F_AFFECTS;
 
-	persistence_assign_item_uid(obj, "write_one_object");
-	if (obj->obj_uid)
-		o_f_flag |= O_F_UID;
+	if (include_persistent_uid)
+	{
+		persistence_assign_item_uid(obj, "write_one_object");
+		if (obj->obj_uid)
+			o_f_flag |= O_F_UID;
+	}
 
 	if ((o_u_flag = ObjUniqueFlags(obj, t_obj)))
 		o_f_flag |= O_F_UNIQUE;

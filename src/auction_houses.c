@@ -727,7 +727,7 @@ bool auction_offer(P_char ch, char *args)
 	// save to db
 	char  obj_buff[MAX_STRING_LENGTH];
 	char *obj_buff_ptr = obj_buff;
-	int   obj_buff_len = write_one_object(tmp_obj, obj_buff_ptr);
+	int   obj_buff_len = write_one_object(tmp_obj, obj_buff_ptr, auction_quantity == 1);
 
 	mysql_real_escape_string(DB, buff, obj_buff, obj_buff_len);
 
@@ -791,6 +791,11 @@ bool auction_offer(P_char ch, char *args)
 	int end_time       = time(NULL) + auction_length;
 	ws_broadcast_auction_new(new_auction_id, ch->player.name, tmp_obj->short_description, starting_price, buy_price, end_time);
 
+	char source_owner[64];
+	char target_owner[64];
+	snprintf(source_owner, sizeof(source_owner), "player:%d", GET_PID(ch));
+	snprintf(target_owner, sizeof(target_owner), "auction:%d", new_auction_id);
+
 	logit(LOG_STATUS, "%s put %s up for auction.", ch->player.name, desc_buff);
 	snprintf(buff, MAX_STRING_LENGTH, "&+WYou put &n%s &+Won the market.\r\n", tmp_obj->short_description);
 	send_to_char(buff, ch);
@@ -806,8 +811,16 @@ bool auction_offer(P_char ch, char *args)
 		tmp_obj = temp_obj;
 		// Move to next object.
 		temp_obj = temp_obj->next_content;
+		if (auction_quantity == 1)
+		{
+			persistence_record_item_event("owner_auction", tmp_obj, ch, source_owner, target_owner, "auction_offer");
+		}
+		else
+		{
+			persistence_record_item_event("owner_destroyed", tmp_obj, ch, source_owner, "destroyed", "auction_quantity_serialized_without_uid");
+		}
 		// Then extract the object.
-		extract_obj(tmp_obj);
+		extract_obj(tmp_obj, auction_quantity > 1);
 	}
 	writeCharacter(ch, 1, ch->in_room);
 
