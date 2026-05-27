@@ -3860,12 +3860,6 @@ int cell_drunk(P_char ch, P_char pl, int cmd, char *arg)
 	if (cmd == CMD_SET_PERIODIC)
 		return TRUE;
 
-#if 0
-/***    kludge, will fix later   ***/
-  if (IS_OUTLAW(ch))
-    k->specials.jail_time = 120;
-#endif
-
 	/*
 	   Pc-Mobile interaction engine
 	 */
@@ -4355,18 +4349,6 @@ int guild_protection(P_char ch, P_char pl)
 	spell_slow(60, ch, 0, 0, pl, 0);
 	spell_harm(60, ch, NULL, 0, pl, 0);
 
-#if 0
-  if (IS_PC(pl))
-  {
-    if (!IS_SET(pl->only.pc->law_flags, PLR_OUTLAW))
-      SET_BIT(pl->only.pc->law_flags, PLR_OUTLAW);
-  }
-  else
-  {
-    if (!IS_OUTLAW(pl))
-      SET_BIT(pl->specials.act, NPC_OUTLAW);
-  }
-#endif
 	spell_teleport(60, ch, 0, 0, pl, 0);
 	return (1);
 }

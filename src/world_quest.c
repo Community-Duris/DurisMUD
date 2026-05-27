@@ -68,7 +68,6 @@ extern const char                *fullness[];
 extern struct material_data       materials[];
 extern const char                *month_name[];
 extern const char                *player_bits[];
-extern const char                *player_law_flags[];
 extern const char                *player_prompt[];
 extern flagDef                    weapon_types[];
 extern const char                *weekdays[];

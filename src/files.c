@@ -459,7 +459,7 @@ int writeStatus(char *buf, P_char ch, bool updateTime)
 	ADD_BYTE(buf, ch->only.pc->echo_toggle);
 	ADD_SHORT(buf, ch->only.pc->prompt);
 	ADD_LONG(buf, ch->only.pc->wiz_invis);
-	ADD_LONG(buf, ch->only.pc->law_flags);
+	ADD_LONG(buf, 0);
 	ADD_SHORT(buf, ch->only.pc->wimpy);
 	ADD_SHORT(buf, ch->only.pc->aggressive);
 	ADD_BYTE(buf, ch->only.pc->highest_level);
@@ -2245,7 +2245,7 @@ int restoreStatus(char *buf, P_char ch)
 	ch->only.pc->echo_toggle = GET_BYTE(buf);
 	ch->only.pc->prompt      = GET_SHORT(buf);
 	ch->only.pc->wiz_invis   = GET_LONG(buf);
-	ch->only.pc->law_flags   = (ulong)GET_LONG(buf);
+	GET_LONG(buf);
 	ch->only.pc->wimpy       = GET_SHORT(buf);
 	ch->only.pc->aggressive  = GET_SHORT(buf);
 

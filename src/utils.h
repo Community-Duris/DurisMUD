@@ -418,8 +418,6 @@ int race_size(int race);
 
 #define GET_WIZINVIS(ch) ((ch)->only.pc->wiz_invis)
 
-#define GET_LFLAGS(ch) ((ch)->only.pc->law_flags)
-
 #define GET_PLAYER_LOG(ch) ((ch)->only.pc->log)
 
 #define IS_AWAKE(ch) ((GET_STAT(ch) > STAT_SLEEPING) && !IS_AFFECTED((ch), AFF_KNOCKED_OUT))
@@ -583,27 +581,7 @@ int race_size(int race);
 
 #define IS_PATROL(CH) (IS_NPC(CH) && IS_SET((CH)->specials.act, ACT_PATROL))
 
-/*
-#define IS_AGGRESSIVE(MOB) (IS_NPC(MOB) && \
-  ((IS_SET((MOB)->specials.act, ACT_AGGRESSIVE)) || \
-  (IS_SET((MOB)->specials.act, ACT_AGGRESSIVE_EVIL)) || \
-  (IS_SET((MOB)->specials.act, ACT_AGGRESSIVE_GOOD)) || \
-  (IS_SET((MOB)->specials.act, ACT_AGGRESSIVE_NEUTRAL)) || \
-  (IS_SET((MOB)->specials.act, ACT_AGG_RACEEVIL)) || \
-  (IS_SET((MOB)->specials.act, ACT_AGG_RACEGOOD)) || \
-  (IS_SET((MOB)->specials.act, ACT_AGG_OUTCAST))))
-*/
-
 #define IS_AGGRESSIVE(m) (IS_NPC(m) && ((m)->only.npc->aggro_flags || (m)->only.npc->aggro2_flags || (m)->only.npc->aggro3_flags))
-
-#define CHAR_IS_FLAGGED(CH) (0)
-/* have to redo this macro for new law flags JAB
-(IS_NPC(CH)? (IS_SET((CH)->specials.act, NPC_OUTLAW)? 2: 0):  \
- IS_SET((CH)->only.pc->law_flags, PLR_OUTCAST)? 4:  \
- IS_SET((CH)->only.pc->law_flags, PLR_KILLER)?  3:  \
- IS_SET((CH)->only.pc->law_flags, PLR_OUTLAW)?  2:  \
- IS_SET((CH)->only.pc->law_flags, PLR_THIEF)?   1: 0)
-*/
 
 #define GET_LEVEL(character) ((character == NULL) ? -1 : (int)character->player.level)
 
@@ -627,8 +605,6 @@ int race_size(int race);
 #define OBJ_FALLING(o)                                                                                                                                                                                 \
 	((o) && !IS_SET((o)->extra_flags, ITEM_LEVITATES) && OBJ_ROOM(o) &&                                                                                                                                \
 	 ((world[(o)->loc.room].sector_type == SECT_NO_GROUND) || (world[(o)->loc.room].sector_type == SECT_UNDRWLD_NOGROUND) || (world[(o)->loc.room].chance_fall >= number(1, 100)) || (o->z_cord > 0)))
-
-#define IS_OUTLAW(ch) ((IS_NPC(ch) && IS_SET(ch->specials.act, NPC_OUTLAW)) || (IS_PC(ch) && IS_SET(ch->only.pc->law_flags, PLR_OUTLAW)))
 
 #define IS_GUARD(ch) (IS_NPC(ch) && (IS_SET((ch)->only.npc->aggro_flags, AGGR_OUTCASTS) || isname("guard", GET_NAME(ch))))
 

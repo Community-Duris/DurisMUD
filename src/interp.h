@@ -242,7 +242,7 @@ extern unsigned int game_locked_level;
 #define CMD_CREDITS         212
 #define CMD_DISBAND         213
 #define CMD_VIS             214
-#define CMD_LFLAGS          215
+//#define CMD_LFLAGS          215
 #define CMD_POOFIN          216
 #define CMD_WIZLIST         217
 #define CMD_DISPLAY         218

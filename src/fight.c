@@ -1711,9 +1711,6 @@ void change_alignment(P_char ch, P_char victim)
 		if (victim->only.pc->aggressive > -1)
 			v_al -= 100;
 
-		if (IS_SET(victim->only.pc->law_flags, PLR_VICIOUS))
-			v_al -= 25;
-
 		if (GET_SPEC(victim, CLASS_ROGUE, SPEC_ASSASSIN) || GET_CLASS(ch, CLASS_ASSASSIN))
 			change += 2;
 

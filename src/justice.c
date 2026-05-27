@@ -268,8 +268,6 @@ P_char justice_make_guard(int rroom)
 			equip_char(ch, obj, HOLD, 0);
 	}
 	/* justice guards should always be aggro to outcasts! */
-	/*  if (!IS_SET(ch->specials.act, ACT_AGG_OUTCAST))
-	    SET_BIT(ch->specials.act, ACT_AGG_OUTCAST);*/
 	if (!IS_AGGROFLAG(ch, AGGR_OUTCASTS))
 		SET_BIT(ch->only.npc->aggro_flags, AGGR_OUTCASTS);
 
@@ -422,13 +420,6 @@ void justice_action_invader(P_char ch)
 
 	if (!IS_INVADER(ch))
 		return;
-
-	/*Original Justice
-	if (!justice_send_guards(NOWHERE, ch, MOB_SPEC_J_OUTCAST, (MAX(11, GET_LEVEL(ch)) / 11) + 1))
-	 {
-	  return;
-	 }
-	*/
 
 	zone_struct = &zone_table[world[ch->in_room].zone];
 	room        = ch->in_room;

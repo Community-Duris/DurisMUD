@@ -1580,7 +1580,7 @@ P_char morph(P_char ch, int rnum, int mode)
 	 * "fix" their npcact flags so we don't get any "unwanted"
 	 * behaivors... These are the only allowable NPC acts
 	 */
-	mob->specials.act &= ACT_ISNPC | ACT_NICE_THIEF | /*NPC_OUTLAW | */
+	mob->specials.act &= ACT_ISNPC | ACT_NICE_THIEF |
 	                     ACT_CANSWIM | ACT_CANFLY | ACT_BREAK_CHARM | ACT_MOUNT;
 
 	/*

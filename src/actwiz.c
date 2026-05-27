@@ -2680,9 +2680,6 @@ void do_stat(P_char ch, char *argument, int cmd)
 			sprintbit(k->specials.act3, player3_bits, buf2);
 			snprintf(buf, MAX_STRING_LENGTH, "&+YAct3: &N%s\n", buf2);
 			strcat(o_buf, buf);
-			/* sprintbit(k->only.pc->law_flags, player_law_flags, buf2); */
-			/* snprintf(buf, MAX_STRING_LENGTH, "&+YFlags (Player Flags): &N%s\n", buf2); */
-			/* strcat(o_buf, buf); */
 		}
 		if (k->specials.affected_by)
 		{

@@ -4494,15 +4494,6 @@ int find_starting_alignment(int race, int m_class)
 	return (class_table[race][flag2idx(m_class)]);
 }
 
-/* sets initial values for player law_flags, based on race and class */
-
-ulong init_law_flags(P_char ch)
-{
-	ulong flags = 0;
-
-	return flags;
-}
-
 /* set char's height and weight, based mainly on race and sex, but high/low
    CON is a factor, and all variables are bell-curved, so things will tend
    towards the average range.  Not perfect, but beats the snot out of plain
@@ -4736,7 +4727,6 @@ void init_char(P_char ch)
 	ch->only.pc->pid             = getNewPCidNumb();
 	ch->only.pc->screen_length   = 24; /* default */
 	ch->only.pc->wiz_invis       = 0;
-	ch->only.pc->law_flags       = 0;
 	ch->only.pc->highest_level   = 1;
 	ch->player.short_descr       = 0;
 	ch->player.long_descr        = 0;
@@ -4794,7 +4784,6 @@ void init_char(P_char ch)
 	set_char_height_weight(ch); /* height and weight */
 	set_char_size(ch);
 
-	ch->only.pc->law_flags    = init_law_flags(ch); /* starting law flags */
 	ch->specials.affected_by  = 0;
 	ch->specials.affected_by2 = 0;
 	ch->specials.affected_by3 = 0;

@@ -50,7 +50,6 @@ extern const char              *item_material[];
 extern const char              *item_types[];
 extern const char              *player_bits[];
 extern const char              *player2_bits[];
-extern const char              *player_law_flags[];
 extern const char              *position_types[];
 extern const flagDef            room_bits[];
 extern const char              *sector_types[];
@@ -564,7 +563,6 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
 		{"prompt", PCOFFSET(prompt), NULL, ac_shortCopy},
 		{"screensize", PCOFFSET(screen_length), NULL, ac_ubyteCopy},
 		{"winvis", PCOFFSET(wiz_invis), NULL, ac_sbyteCopy},
-		{"law_flags", PCOFFSET(law_flags), player_law_flags, ac_longCopy, sizeof(char *)},
 		{"wimpy", PCOFFSET(wimpy), NULL, ac_shortCopy},
 		{"aggr", PCOFFSET(aggressive), NULL, ac_shortCopy},
 		{"balc", PCOFFSET(spare1), NULL, ac_intCopy},
@@ -647,7 +645,7 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
 				return;
 			}
 		}
-		else if (SAME_STRING(flag, "echo") || SAME_STRING(flag, "screensize") || SAME_STRING(flag, "prompt") || SAME_STRING(flag, "law_flags") || SAME_STRING(flag, "winvis") ||
+		else if (SAME_STRING(flag, "echo") || SAME_STRING(flag, "screensize") || SAME_STRING(flag, "prompt") || SAME_STRING(flag, "winvis") ||
 		         SAME_STRING(flag, "wimpy") || SAME_STRING(flag, "aggr") || SAME_STRING(flag, "balp") || SAME_STRING(flag, "balg") || SAME_STRING(flag, "bals") || SAME_STRING(flag, "balc") ||
 		         SAME_STRING(flag, "lesson") || SAME_STRING(flag, "frags") || SAME_STRING(flag, "epics") || SAME_STRING(flag, "epic_skill_points") || SAME_STRING(flag, "prestige") ||
 		         SAME_STRING(flag, "time_left_guild") || SAME_STRING(flag, "nb_left_guild") || SAME_STRING(flag, "deaths") || SAME_STRING(flag, "heaven"))

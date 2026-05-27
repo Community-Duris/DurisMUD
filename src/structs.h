@@ -1287,7 +1287,6 @@ struct pc_only_data
 	int *gcmd_arr;  /* granted arr, stores granted cmd numbs */
 	int  numb_gcmd; /* number of granted cmds */
 
-	ulong law_flags; /* KNOWN, WANTED, OUTCAST in hometowns */
 #ifdef OVL
 	sh_int ovl_count;
 	sh_int ovl_timer;
@@ -1353,7 +1352,6 @@ struct npc_only_data
 	sh_int  attack_type; /* barehand attack                        */
 	Memory *memory;      /* Used for memory system */
 	int     home;
-	ush_int law_flags; /* extensions to specials.act rel. to pkill */
 	P_char  orig_char; /* used instead of memory ptr to keep
 	                      track of who is controlling the mob */
 	int lowest_hit;    /* lowest hitpoints this mob ever reached */

@@ -723,10 +723,6 @@ const char *player3_bits[] = {"FRAGLEADER",
 
 const char *player_prompt[] = {"NONE", "HITS", "MAX-HITS", "MANA", "MAX-MANA", "MOVES", "MAX-MOVES", "TANK-COND", "TANK-NAME", "ENEMY-NAME", "ENEMY-COND", "VIS", "TWOLINE", "STATUS", "\n"};
 
-const char *player_law_flags[] = {"KN_ASH", "KN_BS",  "KN_CAL", "KN_EM",  "KN_LUI", "KN_MH", "KN_TT",      "KN_VE",      "KN_UNUSED1", "KN_UNUSED2", "OC_ASH",
-                                  "OC_BS",  "OC_CAL", "OC_EM",  "OC_LUI", "OC_MH",  "OC_TT", "OC_VE",      "OC_UNUSED1", "OC_UNUSED2", "WT_ASH",     "WT_BS",
-                                  "WT_CAL", "WT_EM",  "WT_LUI", "WT_MH",  "WT_TT",  "WT_VE", "WT_UNUSED1", "WT_UNUSED2", "KN_EVIL",    "OC_EVIL",    "\n"};
-
 const char *position_types[] = {"Prone", "Kneeling", "Sitting", "Standing", "Dead", "Dying", "Incapacitated", "Sleeping", "Resting", "Normal", "\n"};
 
 const char *target_types[] = {"TAR_IGNORE",
