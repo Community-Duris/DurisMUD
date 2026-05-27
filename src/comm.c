@@ -499,6 +499,7 @@ void run_the_game(int port, int sslport)
 
 	fprintf(stderr, "Entering game loop.\n\r");
 	logit(LOG_STATUS, "Entering game loop.");
+	persistence_replay_fallback_events();
 	persistence_start_item_event_worker();
 	persistence_start_scalar_event_worker();
 	game_loop(port, sslport);

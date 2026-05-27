@@ -3084,6 +3084,7 @@ void                  persistence_record_item_event(const char *event_type,
                                                     const char *target,
                                                     const char *note);
 int                   persistence_flush_item_events(int max_events);
+int                   persistence_replay_fallback_events(void);
 int                   persistence_pending_item_events(void);
 unsigned long         persistence_dropped_item_events(void);
 int                   persistence_start_item_event_worker(void);

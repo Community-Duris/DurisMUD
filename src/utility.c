@@ -8,6 +8,7 @@
  */
 
 #include <ctype.h>
+#include <errno.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -80,6 +81,8 @@ uint                                 debugcount = 0;
 extern P_index                       mob_index;
 extern const int                     rev_dir[];
 extern void                          event_spellcast(P_char, P_char, P_obj, void *);
+#define PERSISTENCE_ITEM_EVENT_PREFIX "PERSISTENCE_ITEM_EVENT|"
+#define PERSISTENCE_SCALAR_EVENT_PREFIX "PERSISTENCE_SCALAR_EVENT|"
 int                                  ship_obj_proc(P_obj obj, P_char ch, int cmd, char *arg);
 extern struct mm_ds                 *dead_mob_pool;
 extern struct mm_ds                 *dead_pconly_pool;
@@ -1016,6 +1019,150 @@ int persistence_flush_scalar_events(int max_events)
   }
 
   return flushed;
+}
+
+static int persistence_line_has_prefix(const char *line, const char *prefix)
+{
+  return line && prefix && !strncmp(line, prefix, strlen(prefix));
+}
+
+static void persistence_trim_record_line(char *line)
+{
+  int len;
+
+  if (!line)
+    return;
+
+  len = strlen(line);
+  while (len > 0 && (line[len - 1] == '\n' || line[len - 1] == '\r'))
+  {
+    line[len - 1] = '\0';
+    len--;
+  }
+}
+
+int persistence_replay_fallback_events(void)
+{
+  FILE *in_f;
+  FILE *out_f;
+  char line[PERSISTENCE_EVENT_MAX_LEN + 8];
+  char event_line[PERSISTENCE_EVENT_MAX_LEN + 8];
+  char tmp_path[512];
+  char backup_path[512];
+  int replayed = 0;
+  int failed = 0;
+  int saw_persistence = 0;
+  int rewrite_failed = 0;
+
+  in_f = fopen(LOG_EVENT, "r");
+  if (!in_f)
+  {
+    if (errno != ENOENT)
+    {
+      persistence_alert(AVATAR, "persistence_replay", "boot", "none",
+                        "none", "open_failed",
+                        "could not open %s for fallback replay: errno=%d",
+                        LOG_EVENT, errno);
+    }
+    return 0;
+  }
+
+  snprintf(tmp_path, sizeof(tmp_path), "%s.persistence-replay.tmp", LOG_EVENT);
+  out_f = fopen(tmp_path, "w");
+  if (!out_f)
+  {
+    fclose(in_f);
+    persistence_alert(AVATAR, "persistence_replay", "boot", "none",
+                      "none", "temp_open_failed",
+                      "could not open %s while replaying fallback events",
+                      tmp_path);
+    return 0;
+  }
+
+  while (fgets(line, sizeof(line), in_f))
+  {
+    snprintf(event_line, sizeof(event_line), "%s", line);
+    persistence_trim_record_line(event_line);
+
+    if (persistence_line_has_prefix(event_line, PERSISTENCE_ITEM_EVENT_PREFIX))
+    {
+      saw_persistence = 1;
+      if (sql_persistence_write_item_event_line(event_line))
+        replayed++;
+      else
+      {
+        failed++;
+        if (fputs(event_line, out_f) < 0 || fputs("\n", out_f) < 0)
+          rewrite_failed = 1;
+      }
+    }
+    else if (persistence_line_has_prefix(event_line,
+                                         PERSISTENCE_SCALAR_EVENT_PREFIX))
+    {
+      saw_persistence = 1;
+      if (sql_persistence_write_scalar_event_line(event_line))
+        replayed++;
+      else
+      {
+        failed++;
+        if (fputs(event_line, out_f) < 0 || fputs("\n", out_f) < 0)
+          rewrite_failed = 1;
+      }
+    }
+    else if (fputs(line, out_f) < 0)
+      rewrite_failed = 1;
+  }
+
+  if (fclose(in_f))
+    rewrite_failed = 1;
+  if (fclose(out_f))
+    rewrite_failed = 1;
+
+  if (!saw_persistence)
+  {
+    remove(tmp_path);
+    return 0;
+  }
+
+  if (rewrite_failed)
+  {
+    persistence_alert(AVATAR, "persistence_replay", "boot", "none",
+                      "none", "rewrite_failed",
+                      "fallback replay wrote SQL but could not safely rewrite %s; leaving original log for retry",
+                      LOG_EVENT);
+    remove(tmp_path);
+    return replayed;
+  }
+
+  snprintf(backup_path, sizeof(backup_path), "%s.persistence-replay.%ld",
+           LOG_EVENT, (long)time(NULL));
+  if (rename(LOG_EVENT, backup_path))
+  {
+    persistence_alert(AVATAR, "persistence_replay", "boot", "none",
+                      "none", "backup_failed",
+                      "could not backup %s to %s after replay; leaving original log for retry",
+                      LOG_EVENT, backup_path);
+    remove(tmp_path);
+    return replayed;
+  }
+
+  if (rename(tmp_path, LOG_EVENT))
+  {
+    persistence_alert(AVATAR, "persistence_replay", "boot", "none",
+                      "none", "replace_failed",
+                      "could not replace %s after replay; backup retained at %s",
+                      LOG_EVENT, backup_path);
+    rename(backup_path, LOG_EVENT);
+    remove(tmp_path);
+    return replayed;
+  }
+
+  persistence_alert(AVATAR, "persistence_replay", "boot", "none", "none",
+                    failed ? "partial_replay" : "replayed",
+                    "replayed %d fallback persistence events; %d remain queued in %s",
+                    replayed, failed, LOG_EVENT);
+
+  return replayed;
 }
 
 static int persistence_item_event_log_writer(const char *line, void *context)
