@@ -674,7 +674,7 @@ void event_wait(P_char ch, P_char victim, P_obj obj, void *data)
 	}
 	if (ch) // Just making sure.
 	{
-		if (ch->specials.act2, PLR2_WAIT)
+		if (ch->specials.act2 & PLR2_WAIT)
 		{
 			REMOVE_BIT(ch->specials.act2, PLR2_WAIT);
 		}

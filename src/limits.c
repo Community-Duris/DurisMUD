@@ -735,7 +735,7 @@ void advance_level(P_char ch)
 	if (IS_PC(ch) && (ch->only.pc->highest_level < GET_LEVEL(ch)))
 		ch->only.pc->highest_level = GET_LEVEL(ch);
 
-	if ((GET_LEVEL(ch) == get_property("exp.maxExpLevel", 45)) && !IS_HARDCORE(ch) && (!GET_RACE(ch) == RACE_LICH))
+	if ((GET_LEVEL(ch) == get_property("exp.maxExpLevel", 45)) && !IS_HARDCORE(ch) && (GET_RACE(ch) != RACE_LICH))
 	{
 		char buf[512];
 		snprintf(buf,
@@ -887,8 +887,6 @@ void update_exp_table()
 
 float gain_exp_modifiers_race_only(P_char ch, P_char victim, float XP)
 {
-	char prop_buf[128];
-
 	// debug("Gain exp race (%d) Start.", (int)XP);
 
 	if (ch && GET_RACE(ch) >= 1 && GET_RACE(ch) <= LAST_RACE)
@@ -901,7 +899,6 @@ float gain_exp_modifiers_race_only(P_char ch, P_char victim, float XP)
 		XP *= racial_exp_mod_victims[GET_RACE(victim)];
 	}
 	// debug("Gain exp victim (%d) Start.", (int)XP);
-	prop_buf[0];
 	// debug("Gain exp race End (%d).", (int)XP);
 	return XP;
 }

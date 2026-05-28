@@ -2198,7 +2198,7 @@ void event_revenant_crown(P_char ch, P_char victim, P_obj obj, void *data)
 	{
 		act("Your skin blisters and boils start to form!&n", FALSE, ch, obj, 0, TO_CHAR);
 		wizlog(57, " Reverant crown worn by %s begins to melt due race check conflict!", GET_NAME(ch));
-		GET_HIT(ch) >> 1;
+		GET_HIT(ch) >>= 1;
 		CharWait(ch, 2 * WAIT_SEC);
 	}
 	else if ((af = get_spell_from_char(ch, TAG_RACE_CHANGE)) == NULL)
@@ -2332,7 +2332,7 @@ void event_dragonlord_check(P_char ch, P_char victim, P_obj obj, void *data)
 	{
 		act("Your scales smoke and burn as they &+Rdisintegrate!&n", FALSE, ch, obj, 0, TO_CHAR);
 		wizlog(57, "Dragonlord armor worn by %s begins to melt due race check conflict!", GET_NAME(ch));
-		GET_HIT(ch) >> 1;
+		GET_HIT(ch) >>= 1;
 		CharWait(ch, 2 * WAIT_SEC);
 	}
 	if ((af = get_spell_from_char(ch, TAG_RACE_CHANGE)) == NULL)

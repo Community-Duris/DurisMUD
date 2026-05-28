@@ -473,7 +473,7 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
 
 				if (GET_SPEC(who, CLASS_ROGUE, SPEC_THIEF) && IS_AFFECTED(who, AFF_SNEAK))
 				{
-					if (((GET_CHAR_SKILL(who, SKILL_SNEAK) * .46) + (GET_LEVEL(who) >= 30) ? (GET_LEVEL(who) * 2 - 58) : 0) >= number(1, 100))
+					if (((GET_CHAR_SKILL(who, SKILL_SNEAK) * .46) + ((GET_LEVEL(who) >= 30) ? (GET_LEVEL(who) * 2 - 58) : 0)) >= number(1, 100))
 					{
 						continue;
 					}

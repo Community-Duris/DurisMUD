@@ -8945,7 +8945,7 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
 		data->path_step = -1;
 		debug("event_mob_hunt: %s finished hunting %s", J_NAME(ch), data->hunt_type < HUNT_LAST_VICTIM_TARGET ? J_NAME(data->targ.victim) : world[targ_room].name);
 	}
-	else if (data->path_step != -1 && data->path_step >= 0 && data->path_step < data->path.size())
+	else if (data->path_step >= 0 && data->path_step < data->path.size())
 	{
 		next_step = data->path[data->path_step];
 		dummy     = data->path.size() - data->path_step;

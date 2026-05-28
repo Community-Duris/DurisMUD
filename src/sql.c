@@ -1409,8 +1409,6 @@ int sql_world_quest_can_do_another(P_char ch)
 		{
 			returning_value = returning_value - atoi(row[0]);
 		}
-		else
-			returning_value;
 
 		while ((row = mysql_fetch_row(db)))
 			;

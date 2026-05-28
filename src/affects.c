@@ -145,7 +145,7 @@ int apply_ac(P_char ch, int eq_pos)
 		return 0;
 	}
 
-	if ((GET_ITEM_TYPE(ch->equipment[eq_pos]) != ITEM_ARMOR) && (GET_ITEM_TYPE(ch->equipment[eq_pos]) != ITEM_SHIELD))
+	if (GET_ITEM_TYPE(ch->equipment[eq_pos]) != ITEM_ARMOR && GET_ITEM_TYPE(ch->equipment[eq_pos]) != ITEM_SHIELD)
 	{
 		return 0;
 	}

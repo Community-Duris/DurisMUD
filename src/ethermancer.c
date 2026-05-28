@@ -2006,12 +2006,8 @@ void spell_ethereal_travel(int level, P_char ch, char *arg, int type, P_char vic
 	// if the teleporter is grouped
 	if (ch->group)
 	{
-
-		// get the character's group list
-		gl = ch->group;
-
 		// teleport the group members in the character's room
-		for (gl; gl; gl = gl->next)
+		for (gl = ch->group; gl; gl = gl->next)
 		{
 			if (gl->ch->in_room == from_room)
 			{

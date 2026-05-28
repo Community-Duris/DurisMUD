@@ -3324,7 +3324,7 @@ void do_eat(P_char ch, char *argument, int cmd)
 			bzero(&af, sizeof(af));
 			af.type     = TAG_EATEN;
 			af.flags    = AFFTYPE_NOSHOW;
-			af.duration = 1 + (temp->value[0] > 0) ? temp->value[0] : 1;
+			af.duration = MAX(temp->value[0], 1);
 
 			int hit_reg;
 			int mov_reg;

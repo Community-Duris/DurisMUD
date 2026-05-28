@@ -1063,7 +1063,7 @@ char *CRYPT2(char *passwd, char *name);
 
 #define EARTH_REAVER_WEAPONS(wpn) ((getWeaponDamType(wpn->value[0]) == WEAPONTYPE_BLUDGEON) && !IS_SET(wpn->extra_flags, ITEM_TWOHANDS))
 
-#define FLAME_REAVER_WEAPONS(wpn) (IS_SWORD(wpn) || (wpn)->value[0] == WEAPON_FLAIL | WEAPON_WHIP)
+#define FLAME_REAVER_WEAPONS(wpn) (IS_SWORD(wpn) || (wpn)->value[0] == WEAPON_FLAIL || (wpn)->value[0] == WEAPON_WHIP)
 
 #define FROST_REAVER_WEAPONS(wpn) (IS_BLUDGEON(wpn))
 

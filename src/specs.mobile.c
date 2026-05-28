@@ -616,7 +616,7 @@ void fetid_breath(P_char ch, P_char victim)
 	dam = dice(level, 8) + level;
 
 	if (StatSave(victim, APPLY_CON, 0))
-		dam >> 1;
+		dam >>= 1;
 
 	if (!StatSave(victim, APPLY_AGI, 0))
 		knock = TRUE;

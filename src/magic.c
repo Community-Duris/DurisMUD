@@ -4863,11 +4863,8 @@ void spell_group_teleport(int level, P_char ch, char *arg, int type, P_char vict
 	if (ch->group)
 	{
 
-		// get the character's group list
-		gl = ch->group;
-
 		// teleport the group members in the character's room
-		for (gl; gl; gl = gl->next)
+		for (gl = ch->group; gl; gl = gl->next)
 		{
 			if (gl->ch->in_room == from_room)
 			{
@@ -11545,7 +11542,7 @@ void spell_greater_heal_undead(int level, P_char ch, char *arg, int type, P_char
 	int healpoints = 300;
 
 	// GET_RACE2 -> shapeshifted into skeleton (Blighters).
-	if (!IS_UNDEADRACE(victim) && IS_PC(ch) && IS_NPC(victim) && !GET_RACE2(victim) == RACE_SKELETON)
+	if (!IS_UNDEADRACE(victim) && IS_PC(ch) && IS_NPC(victim) && GET_RACE2(victim) != RACE_SKELETON)
 	// old guildhalls (deprecated)
 	//     && mob_index[GET_RNUM(victim)].virtual_number != WARRIOR_GOLEM_VNUM &&
 	//      mob_index[GET_RNUM(victim)].virtual_number != MAGE_GOLEM_VNUM &&
@@ -16264,7 +16261,7 @@ void spell_reduce(int level, P_char ch, char *arg, int type, P_char victim, P_ob
 	if (type == SPELL_ANIMAL_GROWTH)
 		animal_growth = TRUE;
 
-	if (GET_SIZE(victim) == SIZE_TINY && !(victim->specials.affected_by3, AFF3_REDUCE))
+	if (GET_SIZE(victim) == SIZE_TINY && !(victim->specials.affected_by3 & AFF3_REDUCE))
 	{
 		send_to_char("Why would you want to reduce them? They are tiny enough!&n\n\r", ch);
 		return; // check to make sure they are not racial tiny.

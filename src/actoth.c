@@ -5927,7 +5927,7 @@ void try_to_donate(P_char ch, P_obj obj_to_put)
 		 * If there's already an item in the well, increment dupes_in_well
 		 * Unless it is a random drop - Jexni
 		 */
-		if ((obj_object->R_num == obj_to_put->R_num) && (!obj_index[obj_to_put->R_num].virtual_number == RANDOM_OBJ_VNUM))
+		if ((obj_object->R_num == obj_to_put->R_num) && (obj_index[obj_to_put->R_num].virtual_number != RANDOM_OBJ_VNUM))
 		{
 			dupes_in_well++;
 		}

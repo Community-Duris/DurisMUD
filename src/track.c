@@ -921,7 +921,7 @@ void show_tracks(P_char ch, int room)
 	 *   Special cases get a a 10% chance up to 46 and a 30% chance at 56 for detecting the track (as per below).
 	 * Now we have a skill, percent, & chance...
 	 */
-	chance = 10 + (GET_LEVEL(ch) > 46) ? (2 * (GET_LEVEL(ch) - 46)) : 0;
+	chance = 10 + ((GET_LEVEL(ch) > 46) ? (2 * (GET_LEVEL(ch) - 46)) : 0);
 
 	for (obj = world[room].contents; obj; obj = next_obj)
 	{

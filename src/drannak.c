@@ -1923,6 +1923,7 @@ bool calmcheck(P_char ch)
 /* =========================================================================
  *  ENHANCE FUNCTIONS - extracted to enhance.c
  * ========================================================================= */
+
 void christmas_proc(P_char ch)
 {
 	P_char mob;
@@ -2044,7 +2045,7 @@ bool add_epiccount(P_char ch, int gain)
 		af.modifier = gain;
 		af.duration = -1;
 		af.location = 0;
-		af.flags    = AFFTYPE_NODISPEL, AFFTYPE_PERM;
+		af.flags    = AFFTYPE_NODISPEL | AFFTYPE_PERM;
 		affect_to_char(ch, &af);
 		return FALSE;
 	}

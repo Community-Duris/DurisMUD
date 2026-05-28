@@ -1631,7 +1631,7 @@ void command_interpreter(P_char ch, char *argument)
 
 				if (IS_ANIMAL(ch) && GET_SPEC(ch->following, CLASS_SHAMAN, SPEC_ANIMALIST))
 				{
-					i >> 1;
+					i >>= 1;
 				}
 
 				if (ch->following && GET_CLASS(ch->following, CLASS_MINDFLAYER))
@@ -3341,7 +3341,7 @@ void check_aggro_from_command(P_char exec_char)
 				if (IS_ALIVE(exec_master) && exec_master->in_room == room)
 				{
 					exec_char      = exec_master;
-					calming_chance = CALMCHANCE(exec_char) + (has_innate(exec_char, INNATE_CALMING)) ? 10 : 0;
+					calming_chance = CALMCHANCE(exec_char) + (has_innate(exec_char, INNATE_CALMING) ? 10 : 0);
 					exec_master    = NULL;
 				}
 				else

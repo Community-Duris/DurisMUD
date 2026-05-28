@@ -715,7 +715,7 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 			}
 			else
 			{
-				world[location].number;
+				location = world[location].number;
 			}
 			qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, 'Y', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE() )",
 			    vnum,

@@ -3980,7 +3980,7 @@ void do_summon_imp(P_char ch, char *argument, int cmd)
 		return;
 	}
 
-	if (world[ch->in_room].sector_type == SECT_PLANE_OF_AVERNUS | SECT_FIREPLANE)
+	if (world[ch->in_room].sector_type == SECT_PLANE_OF_AVERNUS || world[ch->in_room].sector_type == SECT_FIREPLANE)
 	{
 		imp->player.level = (int)(GET_LEVEL(ch) * 0.9);
 	}
