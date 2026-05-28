@@ -204,7 +204,7 @@ int ioun_warp(P_obj obj, P_char ch, int cmd, char *argument)
 
 			if (obj->value[5] > 10)
 			{
-				obj->value[5] == 10;
+				obj->value[5] = 10;
 			}
 
 			/*

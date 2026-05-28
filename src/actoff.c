@@ -2866,7 +2866,7 @@ void do_consume(P_char ch, char *argument, int cmd)
 			act("...another chunk of &+R$N&n's &+grotten &+yflesh&n falls to the ground...&n", FALSE, ch, 0, victim, TO_NOTVICT);
 			act("...another chunk of your &+grotten &+yflesh&n falls to the ground...&n", FALSE, ch, 0, victim, TO_VICT);
 			act("...another chunk of &+R$N&n's &+grotten &+yflesh&n falls to the ground, and you feel your &+gprayer &nflow back into your mind...&n", FALSE, ch, 0, victim, TO_CHAR);
-			spell == memorize_last_spell(ch);
+			memorize_last_spell(ch);
 			char buf[256];
 			send_to_char(buf, ch);
 			/*if(!NewSaves(victim, SAVING_FEAR, 0))
@@ -2874,7 +2874,7 @@ void do_consume(P_char ch, char *argument, int cmd)
 			vamp(ch, temp_dam, GET_MAX_HIT(ch) * VAMPPERCENT(ch));
 			spell_damage(ch, victim, 3 * GET_LEVEL(ch), SPLDAM_GENERIC, RAWDAM_NOKILL, 0);
 		}
-		spell == memorize_last_spell(ch);
+		memorize_last_spell(ch);
 		char buf[256];
 		send_to_char(buf, ch);
 		--af->modifier;

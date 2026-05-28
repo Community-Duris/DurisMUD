@@ -8724,7 +8724,7 @@ case RACEWAR_NEUTRAL:
 			if (GET_CLASS(victim, CLASS_WARRIOR) || GET_CLASS(victim, CLASS_PALADIN) || GET_CLASS(victim, CLASS_RANGER))
 			{
 				learnedvictim = (int)(learnedvictim * 1.25);
-				npcepicparry == TRUE;
+				npcepicparry = TRUE;
 			}
 		}
 
