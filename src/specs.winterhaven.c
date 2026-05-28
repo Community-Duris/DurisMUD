@@ -1561,7 +1561,7 @@ int wh_janitor(P_char ch, P_char pl, int cmd, char *arg)
 	/* Is there anything in the room that we can pick up? Do it! */
 	for (o = world[ch->in_room].contents; o; o = o->next_content)
 	{
-		if (o->type == (ITEM_SWITCH || ITEM_KEY || ITEM_TRASH))
+		if (o->type == ITEM_SWITCH || o->type == ITEM_KEY || o->type == ITEM_TRASH)
 			continue;
 
 		if (!CAN_GET_OBJ(ch, o, rider))

@@ -2395,9 +2395,7 @@ void spell_innate_blast(int level, P_char ch, char *arg, int type, P_char victim
 
 		if (!IS_AFFECTED2(victim, AFF2_MAJOR_PARALYSIS) && !IS_AFFECTED2(victim, AFF2_MINOR_PARALYSIS))
 		{
-			af.duration = (lev >> 5 + 1);
-			if (af.duration < 1)
-				af.duration = 1;
+			af.duration = (lev >> 5) + 1;
 
 			affect_to_char(victim, &af);
 
