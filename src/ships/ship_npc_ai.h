@@ -3,6 +3,9 @@
 
 #include "ships.h"
 
+// must be a value that survives float conversion exactly
+#define INF_RANGE 65536
+
 enum NPC_AI_Mode
 {
 	NPC_AI_IDLING,

@@ -1533,14 +1533,14 @@ void NPCShipAI::a_predict_target(int steps)
 
 void NPCShipAI::a_update_side_props()
 {
-	min_range_total = INT_MAX;
+	min_range_total = INF_RANGE;
 	for (int i = 0; i < 4; i++)
 	{
 		side_props[i].ready_timer  = INT_MAX;
 		side_props[i].damage_ready = 0;
-		side_props[i].max_range    = INT_MAX;
-		side_props[i].good_range   = INT_MAX;
-		side_props[i].min_range    = INT_MAX;
+		side_props[i].max_range    = INF_RANGE;
+		side_props[i].good_range   = INF_RANGE;
+		side_props[i].min_range    = INF_RANGE;
 	}
 	for (int w_num = 0; w_num < MAXSLOTS; w_num++)
 	{
@@ -1579,9 +1579,9 @@ void NPCShipAI::a_update_side_props()
 	}
 	for (int i = 0; i < 4; i++)
 	{
-		if (side_props[i].good_range == INT_MAX)
+		if (side_props[i].good_range == INF_RANGE)
 			side_props[i].good_range = 0;
-		if (side_props[i].min_range == INT_MAX)
+		if (side_props[i].min_range == INF_RANGE)
 			side_props[i].min_range = 0;
 	}
 }
@@ -1589,14 +1589,14 @@ void NPCShipAI::a_update_side_props()
 void NPCShipAI::a_update_target_side_props()
 {
 
-	t_max_range = INT_MAX;
-	t_min_range = INT_MAX;
+	t_max_range = INF_RANGE;
+	t_min_range = INF_RANGE;
 	for (int i = 0; i < 4; i++)
 	{
 		tside_props[i].ready_timer  = INT_MAX;
 		tside_props[i].damage_ready = 0;
-		tside_props[i].max_range    = INT_MAX;
-		tside_props[i].min_range    = INT_MAX;
+		tside_props[i].max_range    = INF_RANGE;
+		tside_props[i].min_range    = INF_RANGE;
 		tside_props[i].land_dist    = calc_land_dist(proj_x, proj_y, proj_angle[i], 10);
 	}
 
@@ -1641,7 +1641,7 @@ void NPCShipAI::a_update_target_side_props()
 				t_max_range = weapon_data[w_index].max_range;
 		}
 	}
-	if (t_min_range == INT_MAX)
+	if (t_min_range == INF_RANGE)
 		t_min_range = 0;
 }
 
