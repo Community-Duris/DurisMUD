@@ -383,21 +383,21 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
 	// Handle anti-race - Thris dev crit.
 	if (IS_THRIKREEN(pl) && skl == SKILL_DEVASTATING_CRITICAL)
 	{
-		snprintf(buffer, MAX_STRING_LENGTH, "I cannot with good conscience teach this skill to a %s!\n", race_names_table[RACE_THRIKREEN].ansi);
+		snprintf(buffer, sizeof buffer, "I cannot with good conscience teach this skill to a %s!\n", race_names_table[RACE_THRIKREEN].ansi);
 		send_to_char(buffer, pl);
 		return TRUE;
 	}
 
 	if (pTeacher->deny_skill && GET_CHAR_SKILL(pl, pTeacher->deny_skill))
 	{
-		snprintf(buffer, MAX_STRING_LENGTH, "I cannot with good conscience teach this skill to someone who has already studied &+W%s&n!\n", skills[pTeacher->deny_skill].name);
+		snprintf(buffer, sizeof buffer, "I cannot with good conscience teach this skill to someone who has already studied &+W%s&n!\n", skills[pTeacher->deny_skill].name);
 		send_to_char(buffer, pl);
 		return TRUE;
 	}
 
 	if (pTeacher->pre_requisite && GET_CHAR_SKILL(pl, pTeacher->pre_requisite) < pTeacher->pre_req_lvl)
 	{
-		snprintf(buffer, MAX_STRING_LENGTH, "You have not yet mastered the art of &+W%s&n!\r\n", skills[pTeacher->pre_requisite].name);
+		snprintf(buffer, sizeof buffer, "You have not yet mastered the art of &+W%s&n!\r\n", skills[pTeacher->pre_requisite].name);
 		send_to_char(buffer, pl);
 		return TRUE;
 	}
@@ -411,7 +411,7 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
 	// If the prereq skill is less than the epic skill (after teaching).
 	if (pTeacher->pre_requisite && GET_CHAR_SKILL(pl, pTeacher->pre_requisite) < GET_CHAR_SKILL(pl, skl) + get_property("epic.skillGain", 10))
 	{
-		snprintf(buffer, MAX_STRING_LENGTH, "You must study &+W%s&n more before you can progress in &+W%s&n.\n", skills[pTeacher->pre_requisite].name, skills[skl].name);
+		snprintf(buffer, sizeof buffer, "You must study &+W%s&n more before you can progress in &+W%s&n.\n", skills[pTeacher->pre_requisite].name, skills[skl].name);
 		send_to_char(buffer, pl);
 		return TRUE;
 	}
@@ -425,14 +425,14 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
 	// Handle anti-race - Thris dev crit.
 	if (IS_THRIKREEN(pl) && skl == SKILL_DEVASTATING_CRITICAL)
 	{
-		snprintf(buffer, MAX_STRING_LENGTH, "I cannot with good conscience teach this skill to a %s!\n", race_names_table[RACE_THRIKREEN].ansi);
+		snprintf(buffer, sizeof buffer, "I cannot with good conscience teach this skill to a %s!\n", race_names_table[RACE_THRIKREEN].ansi);
 		send_to_char(buffer, pl);
 		return TRUE;
 	}
 
 	if (pTeacher->deny_skill && GET_CHAR_SKILL(pl, pTeacher->deny_skill))
 	{
-		snprintf(buffer, MAX_STRING_LENGTH, "I cannot with good conscience teach that skill to someone who has already studied &+W%s&n!\n", skills[pTeacher->deny_skill].name);
+		snprintf(buffer, sizeof buffer, "I cannot with good conscience teach that skill to someone who has already studied &+W%s&n!\n", skills[pTeacher->deny_skill].name);
 		send_to_char(buffer, pl);
 		return TRUE;
 	}
@@ -469,8 +469,7 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
 	int old_skill  = pl->only.pc->skills[skl].learned;
 	int old_taught = pl->only.pc->skills[skl].taught;
 
-	snprintf(buffer,
-         MAX_STRING_LENGTH,
+	snprintf(buffer, sizeof buffer,
          "$n takes you aside and teaches you the finer points of &+W%s&n.\n"
          "&+cYou feel your skill in %s improving.&n\n",
          skills[skl].name,
@@ -488,7 +487,7 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
 		pl->only.pc->skills[skl].taught = pl->only.pc->skills[skl].learned = 100;
 	if (pl->only.pc->skills[skl].taught == 100)
 	{
-		snprintf(buffer, MAX_STRING_LENGTH, "You have mastered &+W%s&N.\n", skills[skl].name);
+		snprintf(buffer, sizeof buffer, "You have mastered &+W%s&N.\n", skills[skl].name);
 		send_to_char(buffer, pl);
 	}
 	if (!do_save_silent(pl, 1))
@@ -895,11 +894,11 @@ int devotion_skill_check(P_char ch)
 	buf[0] = '\0';
 
 	if (dev_power > 4)
-		snprintf(buf, MAX_STRING_LENGTH, "You feel as if %s took over your body bringing death to your foes!\n", get_god_name(ch));
+		snprintf(buf, sizeof buf, "You feel as if %s took over your body bringing death to your foes!\n", get_god_name(ch));
 	else if (dev_power > 2)
-		snprintf(buf, MAX_STRING_LENGTH, "%s fills you with holy power bringing death to your foes!\n", get_god_name(ch));
+		snprintf(buf, sizeof buf, "%s fills you with holy power bringing death to your foes!\n", get_god_name(ch));
 	else if (dev_power > 0)
-		snprintf(buf, MAX_STRING_LENGTH, "%s fills you with holy power to destroy your foes!\n", get_god_name(ch));
+		snprintf(buf, sizeof buf, "%s fills you with holy power to destroy your foes!\n", get_god_name(ch));
 
 	send_to_char(buf, ch);
 

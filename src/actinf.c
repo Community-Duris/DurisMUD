@@ -1195,14 +1195,14 @@ void show_visual_status(P_char ch, P_char tar_char)
 	if (IS_NPC(tar_char) && (GET_CLASS(ch, CLASS_RANGER) || GET_CLASS(ch, CLASS_SUMMONER)))
 	{
 		get_class_string(tar_char, buf2);
-		snprintf(buf, MAX_STRING_LENGTH, "Through your advanced training, you glean they are a level &+Y%d &N%s&n.", GET_LEVEL(tar_char), buf2);
+		snprintf(buf, sizeof buf, "Through your advanced training, you glean they are a level &+Y%d &N%s&n.", GET_LEVEL(tar_char), buf2);
 		SVS(buf);
 	}
 
 	if (IS_TRUSTED(ch))
 	{
 		get_class_string(tar_char, buf2);
-		snprintf(buf, MAX_STRING_LENGTH, "&+YLevel: &N%d &+YClass(es): &N%s &+YHitpoints: %d/%d", GET_LEVEL(tar_char), buf2, GET_HIT(tar_char), GET_MAX_HIT(tar_char));
+		snprintf(buf, sizeof buf, "&+YLevel: &N%d &+YClass(es): &N%s &+YHitpoints: %d/%d", GET_LEVEL(tar_char), buf2, GET_HIT(tar_char), GET_MAX_HIT(tar_char));
 		SVS(buf);
 	}
 	send_to_char("\n", ch);
@@ -3300,22 +3300,22 @@ void do_examine(P_char ch, char *argument, int cmd)
 			int ratio = (int)(100 * curr / max);
 
 			if (curr < 0 | max < 0)
-				snprintf(buf, MAX_STRING_LENGTH, "$p seems to be bugged - please notify a god-type fellow, and report the item via the BUG command!");
+				snprintf(buf, sizeof buf, "$p seems to be bugged - please notify a god-type fellow, and report the item via the BUG command!");
 
 			if (ratio >= 100)
-				snprintf(buf, MAX_STRING_LENGTH, "$p seems to be unused.");
+				snprintf(buf, sizeof buf, "$p seems to be unused.");
 			else if (ratio > 90)
-				snprintf(buf, MAX_STRING_LENGTH, "$p seems to be slightly used.");
+				snprintf(buf, sizeof buf, "$p seems to be slightly used.");
 			else if (ratio > 55)
-				snprintf(buf, MAX_STRING_LENGTH, "$p seems to be somehow depleted of its magic.");
+				snprintf(buf, sizeof buf, "$p seems to be somehow depleted of its magic.");
 			else if (ratio > 45)
-				snprintf(buf, MAX_STRING_LENGTH, "$p seems to be about halfway full.");
+				snprintf(buf, sizeof buf, "$p seems to be about halfway full.");
 			else if (ratio > 10)
-				snprintf(buf, MAX_STRING_LENGTH, "$p seems to be worn out.");
+				snprintf(buf, sizeof buf, "$p seems to be worn out.");
 			else if (ratio > 0)
-				snprintf(buf, MAX_STRING_LENGTH, "$p seems to be almost dried up.");
+				snprintf(buf, sizeof buf, "$p seems to be almost dried up.");
 			else if (ratio == 0)
-				snprintf(buf, MAX_STRING_LENGTH, "$p seems to be completely drained of its magic.");
+				snprintf(buf, sizeof buf, "$p seems to be completely drained of its magic.");
 
 			act(buf, FALSE, ch, tmp_object, 0, TO_CHAR);
 		}
@@ -3330,7 +3330,7 @@ void do_examine(P_char ch, char *argument, int cmd)
 			else
 				wtype = tmp_object->value[0];
 
-			snprintf(buf, MAX_STRING_LENGTH, "$p is a %s.", weapon_types[wtype].flagLong);
+			snprintf(buf, sizeof buf, "$p is a %s.", weapon_types[wtype].flagLong);
 
 			act(buf, FALSE, ch, tmp_object, 0, TO_CHAR);
 		}
@@ -3374,43 +3374,42 @@ void do_examine(P_char ch, char *argument, int cmd)
 					percent = BOUNDED(1, (int)percent, 100);
 
 					if (percent > 99)
-						snprintf(buf2, MAX_STRING_LENGTH, "&nis full!");
+						snprintf(buf2, sizeof buf2, "&nis full!");
 					else if (percent > 80)
-						snprintf(buf2, MAX_STRING_LENGTH, "&nis stuffed with items.");
+						snprintf(buf2, sizeof buf2, "&nis stuffed with items.");
 					else if (percent > 60)
-						snprintf(buf2, MAX_STRING_LENGTH, "&nis about three-quarters full.");
+						snprintf(buf2, sizeof buf2, "&nis about three-quarters full.");
 					else if (percent > 40)
-						snprintf(buf2, MAX_STRING_LENGTH, "&nis about halfway full.");
+						snprintf(buf2, sizeof buf2, "&nis about halfway full.");
 					else if (percent > 30)
-						snprintf(buf2, MAX_STRING_LENGTH, "&nis partially filled.");
+						snprintf(buf2, sizeof buf2, "&nis partially filled.");
 					else if (percent > 10)
-						snprintf(buf2, MAX_STRING_LENGTH, "&ncan hold a lot more.");
+						snprintf(buf2, sizeof buf2, "&ncan hold a lot more.");
 					else
-						snprintf(buf2, MAX_STRING_LENGTH, "&nis as good as empty.");
+						snprintf(buf2, sizeof buf2, "&nis as good as empty.");
 
-					snprintf(buf,
-					         MAX_STRING_LENGTH,
+					snprintf(buf, sizeof buf,
 					         "%s&n can hold around %d pounds, and %s\n",
 					         tmp_object->short_description,
 					         tmp_object->value[0] + number(-(tmp_object->value[0] >> 1), tmp_object->value[0] >> 1),
 					         buf2);
 					send_to_char(buf, ch);
 
-					snprintf(buf, MAX_STRING_LENGTH, "%s &ncurrently contains:\n", tmp_object->short_description);
+					snprintf(buf, sizeof buf, "%s &ncurrently contains:\n", tmp_object->short_description);
 					send_to_char(buf, ch);
 				}
 				else
 				{
-					snprintf(buf, MAX_STRING_LENGTH, "%s&n currently contains:\n", tmp_object->short_description);
+					snprintf(buf, sizeof buf, "%s&n currently contains:\n", tmp_object->short_description);
 					send_to_char(buf, ch);
 				}
 			}
-			snprintf(buf, MAX_STRING_LENGTH, "in %s", argument);
+			snprintf(buf, sizeof buf, "in %s", argument);
 			do_look(ch, buf, -4);
 		}
 		else if (GET_ITEM_TYPE(tmp_object) == ITEM_CORPSE)
 		{
-			snprintf(buf, MAX_STRING_LENGTH, "in %s", argument);
+			snprintf(buf, sizeof buf, "in %s", argument);
 			do_look(ch, buf, -4);
 		}
 	}
@@ -6934,7 +6933,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 			{
 				if (!*d->host2)
 				{
-					snprintf(buf2, MAX_STRING_LENGTH, "lib/etc/hosts/%d.%s", d->descriptor, d->host);
+					snprintf(buf2, sizeof buf2, "lib/etc/hosts/%d.%s", d->descriptor, d->host);
 					f = fopen(buf2, "r");
 
 					if (f != NULL)
@@ -7020,8 +7019,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 		strcat(biglist, buf);
 	}
 
-	snprintf(line,
-	         MAX_STRING_LENGTH,
+	snprintf(line, sizeof line,
 	         "\nNon-playing: %d  In game: %d  Using Client: %d Linkdeads: %d  Sockets: %d  Using compression: %d\n",
 	         num_non_play,
 	         num_in_game,

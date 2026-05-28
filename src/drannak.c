@@ -1174,19 +1174,19 @@ void randomizeitem(P_char ch, P_obj obj)
 
 	if (good > 0)
 	{
-		snprintf(tempdesc, MAX_STRING_LENGTH, "%s", obj->short_description);
+		snprintf(tempdesc, sizeof tempdesc, "%s", obj->short_description);
 		snprintf(short_desc, MAX_STRING_LENGTH, "%s&n%s &+w[&+Lsu&+wp&+Wer&+wi&+Lor&+w]&n", tempdesc, emsg);
 		set_short_description(obj, short_desc);
 	}
 	else if (good < 0)
 	{
-		snprintf(tempdesc, MAX_STRING_LENGTH, "%s", obj->short_description);
+		snprintf(tempdesc, sizeof tempdesc, "%s", obj->short_description);
 		snprintf(short_desc, MAX_STRING_LENGTH, "%s&n%s &+w[&+ypoor&+w]&n", tempdesc, emsg);
 		set_short_description(obj, short_desc);
 	}
 	else if (modified)
 	{
-		snprintf(tempdesc, MAX_STRING_LENGTH, "%s", obj->short_description);
+		snprintf(tempdesc, sizeof tempdesc, "%s", obj->short_description);
 		snprintf(short_desc, MAX_STRING_LENGTH, "%s&n%s &+w[&+Gmodified&+w]&n", tempdesc, emsg);
 		set_short_description(obj, short_desc);
 	}

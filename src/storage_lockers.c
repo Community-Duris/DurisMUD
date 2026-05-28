@@ -3408,7 +3408,7 @@ static void locker_access_transferAccess(P_char chLocker, P_char ch)
 
 	// Set list of names that have access to locker.
 	if (chLocker->player.description != NULL)
-		snprintf(names, MAX_STR_NORMAL, "%s", chLocker->player.description);
+		snprintf(names, sizeof names, "%s", chLocker->player.description);
 	else
 		names[0] = '\0';
 

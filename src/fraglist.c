@@ -576,7 +576,7 @@ void do_fraglist(P_char ch, char *arg, int cmd)
 			name[0]                = toupper(name[0]);
 			frags                  = atoi(row[1]);
 			fragnum                = frags / 100.0;
-			snprintf(buf2, MAX_STRING_LENGTH, "   &+Y%-30s             &+R% 6.2f\r\n", name, fragnum);
+			snprintf(buf2, sizeof buf2, "   &+Y%-30s             &+R% 6.2f\r\n", name, fragnum);
 			strcat(buf, buf2);
 			count++;
 		}
@@ -586,7 +586,7 @@ void do_fraglist(P_char ch, char *arg, int cmd)
 	// pad with "nobody" if less than 10 results
 	while (count < MAX_FRAG_SIZE)
 	{
-		snprintf(buf2, MAX_STRING_LENGTH, "   &+Y%-30s             &+R% 6.2f\r\n", "Nobody", 0.0);
+		snprintf(buf2, sizeof buf2, "   &+Y%-30s             &+R% 6.2f\r\n", "Nobody", 0.0);
 		strcat(buf, buf2);
 		count++;
 	}
@@ -611,7 +611,7 @@ void do_fraglist(P_char ch, char *arg, int cmd)
 			name[0]                = toupper(name[0]);
 			frags                  = atoi(row[1]);
 			fragnum                = frags / 100.0;
-			snprintf(buf2, MAX_STRING_LENGTH, "   &+Y%-30s             &+R% 6.2f\r\n", name, fragnum);
+			snprintf(buf2, sizeof buf2, "   &+Y%-30s             &+R% 6.2f\r\n", name, fragnum);
 			strcat(buf, buf2);
 			count++;
 		}
@@ -621,7 +621,7 @@ void do_fraglist(P_char ch, char *arg, int cmd)
 	// pad with "nobody" if less than 10 results
 	while (count < MAX_FRAG_SIZE)
 	{
-		snprintf(buf2, MAX_STRING_LENGTH, "   &+Y%-30s             &+R% 6.2f\r\n", "Nobody", 0.0);
+		snprintf(buf2, sizeof buf2, "   &+Y%-30s             &+R% 6.2f\r\n", "Nobody", 0.0);
 		strcat(buf, buf2);
 		count++;
 	}

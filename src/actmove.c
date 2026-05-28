@@ -981,7 +981,7 @@ char *enter_message(P_char ch, P_char people, int exitnumb, char *amsg, int was_
 		}
 		/* amsg's only %s is placeholder for verb, which is now in tmp2 */
 
-		snprintf(tmp, MAX_STRING_LENGTH, amsg, tmp2);
+		snprintf(tmp, sizeof tmp, amsg, tmp2);
 
 		strcpy(amsg, tmp);
 	}
@@ -990,8 +990,7 @@ char *enter_message(P_char ch, P_char people, int exitnumb, char *amsg, int was_
 
 		/* amsg's only %s is placeholder for verb .. */
 
-		snprintf(tmp,
-		         MAX_STRING_LENGTH,
+		snprintf(tmp, sizeof tmp,
 		         amsg,
 		         IS_ROOM(ch->in_room, ROOM_UNDERWATER) ? "swims in"
 		         : ch->specials.z_cord < 0             ? "swims in"

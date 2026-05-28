@@ -575,7 +575,7 @@ void do_gcc(P_char ch, char *argument, int cmd)
 			}
 		}
 
-		snprintf(guild_name, MAX_STRING_LENGTH, "%s", from_guild->get_name().c_str());
+		snprintf(guild_name, sizeof guild_name, "%s", from_guild->get_name().c_str());
 		for (i = descriptor_list; i; i = i->next)
 		{
 			if (!(to_ch = i->character))

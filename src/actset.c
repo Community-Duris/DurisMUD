@@ -330,11 +330,11 @@ static int setbit_parse(char *arg, int *type, char *name, char *flag, char *val,
 	{
 		if (*on_off_str)
 		{
-			snprintf(bad_on_off, MAX_STRING_LENGTH, "%s", on_off_str);
+			snprintf(bad_on_off, sizeof bad_on_off, "%s", on_off_str);
 		}
 		else
 		{
-			snprintf(bad_on_off, MAX_STRING_LENGTH, " ");
+			snprintf(bad_on_off, sizeof bad_on_off, " ");
 		}
 	}
 

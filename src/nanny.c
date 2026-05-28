@@ -5579,7 +5579,7 @@ int tossHint(P_char ch)
 
 	if (iLOADED < 1)
 		return 0;
-	snprintf(buf2, MAX_STRING_LENGTH, "&+MHint: &+m%s", hint_array[number(0, iLOADED - 1)]);
+	snprintf(buf2, sizeof buf2, "&+MHint: &+m%s", hint_array[number(0, iLOADED - 1)]);
 	send_to_char(buf2, ch);
 	return 0;
 }

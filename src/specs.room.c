@@ -948,7 +948,7 @@ int pet_shops(int room, P_char ch, int cmd, char *arg)
 			return TRUE;
 		}
 		val = mount_rent_cost(mount);
-		snprintf(buf, MAX_STRING_LENGTH, "A stable-hand says, 'That pet will cost ye %s to rent.'", coin_stringv(val));
+		snprintf(buf, sizeof buf, "A stable-hand says, 'That pet will cost ye %s to rent.'", coin_stringv(val));
 		act(buf, FALSE, ch, 0, 0, TO_CHAR);
 		return TRUE;
 	}
@@ -977,7 +977,7 @@ int pet_shops(int room, P_char ch, int cmd, char *arg)
 		{
 			return FALSE;
 		}
-		snprintf(buf, MAX_STRING_LENGTH, "%s%d", GET_NAME(ch), ticket->value[1]);
+		snprintf(buf, sizeof buf, "%s%d", GET_NAME(ch), ticket->value[1]);
 		//    petrestore(ch, buf);
 		SUB_MONEY(ch, val, 0);
 		obj_from_char(ticket);

@@ -2180,33 +2180,33 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
 					vict = GET_OPPONENT(ch);
 				if (vict)
 				{
-					snprintf(bufs[0], MAX_STRING_LENGTH, "You bite $N with your %s head.", colors[i - 1]);
-					snprintf(bufs[1], MAX_STRING_LENGTH, "The %s head of $n lashes out and bites you.", colors[i - 1]);
-					snprintf(bufs[2], MAX_STRING_LENGTH, "$n bites $N with $m %s head.", colors[i - 1]);
-					snprintf(bufs[3], MAX_STRING_LENGTH, "You bite $N with your %s head until they are dead.", colors[i - 1]);
-					snprintf(bufs[4], MAX_STRING_LENGTH, "The %s head of $n bites you... to DEATH!", colors[i - 1]);
-					snprintf(bufs[5], MAX_STRING_LENGTH, "$n bites $N in two with $m %s head! $N is dead.", colors[i - 1]);
+					snprintf(bufs[0], sizeof bufs[0], "You bite $N with your %s head.", colors[i - 1]);
+					snprintf(bufs[1], sizeof bufs[1], "The %s head of $n lashes out and bites you.", colors[i - 1]);
+					snprintf(bufs[2], sizeof bufs[2], "$n bites $N with $m %s head.", colors[i - 1]);
+					snprintf(bufs[3], sizeof bufs[3], "You bite $N with your %s head until they are dead.", colors[i - 1]);
+					snprintf(bufs[4], sizeof bufs[4], "The %s head of $n bites you... to DEATH!", colors[i - 1]);
+					snprintf(bufs[5], sizeof bufs[5], "$n bites $N in two with $m %s head! $N is dead.", colors[i - 1]);
 					switch (i)
 					{
 						case 1: // Red head
 							damtype = SPLDAM_FIRE;
-							snprintf(dam_msg, MAX_STRING_LENGTH, "&+RFire courses through your blood as she bites deep!");
+							snprintf(dam_msg, sizeof dam_msg, "&+RFire courses through your blood as she bites deep!");
 							break;
 						case 2: // Black head
 							damtype = SPLDAM_ACID;
-							snprintf(dam_msg, MAX_STRING_LENGTH, "&+LShe lashes out at you, the acid from her fangs burning immensly!");
+							snprintf(dam_msg, sizeof dam_msg, "&+LShe lashes out at you, the acid from her fangs burning immensly!");
 							break;
 						case 3: // Blue head
 							damtype = SPLDAM_LIGHTNING;
-							snprintf(dam_msg, MAX_STRING_LENGTH, "&+BYour heart skips a beat or three as her shocking teeth clamp down upon your arm!");
+							snprintf(dam_msg, sizeof dam_msg, "&+BYour heart skips a beat or three as her shocking teeth clamp down upon your arm!");
 							break;
 						case 4: // Green head
 							damtype = SPLDAM_GAS;
-							snprintf(dam_msg, MAX_STRING_LENGTH, "&+GYou feel a wave of poisonous nausea, as her teeth sink deep!");
+							snprintf(dam_msg, sizeof dam_msg, "&+GYou feel a wave of poisonous nausea, as her teeth sink deep!");
 							break;
 						case 5: // White head
 							damtype = SPLDAM_COLD;
-							snprintf(dam_msg, MAX_STRING_LENGTH, "&+WShe rips into your skin, sending shivers of intense cold through your body!");
+							snprintf(dam_msg, sizeof dam_msg, "&+WShe rips into your skin, sending shivers of intense cold through your body!");
 							break;
 					}
 					spell_damage(ch, vict, dice(6, 6), damtype, SPLDAM_BREATH | SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &messages);

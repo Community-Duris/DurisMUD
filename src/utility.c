@@ -5123,26 +5123,26 @@ void generate_desc(P_char ch)
 			snprintf(buf, 80, "%s %s with %s", prep, race_names_table[GET_RACE(ch)].ansi, generate_modif(ch));
 			break;
 		case 2: /* just appearance */
-			snprintf(buf2, MAX_STRING_LENGTH, "%s", generate_appear(ch));
+			snprintf(buf2, sizeof buf2, "%s", generate_appear(ch));
 			snprintf(buf, 80, "%s %s %s", VOWEL(buf2[0]) ? "An" : "A", buf2, race_names_table[GET_RACE(ch)].ansi);
 			break;
 		case 3:
 		case 4: /* s+m */
-			snprintf(buf2, MAX_STRING_LENGTH, "%s", generate_shape(ch));
+			snprintf(buf2, sizeof buf2, "%s", generate_shape(ch));
 			snprintf(buf, 80, "%s %s %s with %s", VOWEL(buf2[0]) ? "An" : "A", buf2, race_names_table[GET_RACE(ch)].ansi, generate_modif(ch));
 			break;
 		case 5:
 		case 6: /*s+a */
-			snprintf(buf2, MAX_STRING_LENGTH, "%s", generate_shape(ch));
+			snprintf(buf2, sizeof buf2, "%s", generate_shape(ch));
 			snprintf(buf, 80, "%s %s, %s %s", VOWEL(buf2[0]) ? "An" : "A", buf2, generate_appear(ch), race_names_table[GET_RACE(ch)].ansi);
 			break;
 		case 7:
 		case 8: /*m+a */
-			snprintf(buf2, MAX_STRING_LENGTH, "%s", generate_appear(ch));
+			snprintf(buf2, sizeof buf2, "%s", generate_appear(ch));
 			snprintf(buf, 80, "%s %s %s with %s", VOWEL(buf2[0]) ? "An" : "A", buf2, race_names_table[GET_RACE(ch)].ansi, generate_modif(ch));
 			break;
 		case 9: /*m+a+s */
-			snprintf(buf2, MAX_STRING_LENGTH, "%s", generate_shape(ch));
+			snprintf(buf2, sizeof buf2, "%s", generate_shape(ch));
 			snprintf(buf, 80, "%s %s, %s %s with %s", VOWEL(buf2[0]) ? "An" : "A", buf2, generate_appear(ch), race_names_table[GET_RACE(ch)].ansi, generate_modif(ch));
 			break;
 	} /* case */

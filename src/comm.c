@@ -2455,8 +2455,7 @@ int new_descriptor(int s, int conn_type)
 
 			buf.mtype = MSG_HOST_REQ;
 			buf.desc  = desc;
-			snprintf(buf.addr,
-			         MAX_STRING_LENGTH,
+			snprintf(buf.addr, sizeof buf.addr,
 			         "%d.%d.%d.%d",
 			         ((unsigned char *)&(sock.sin_addr))[0],
 			         ((unsigned char *)&(sock.sin_addr))[1],
@@ -2500,8 +2499,7 @@ int new_descriptor(int s, int conn_type)
 		 * will signal the "reciver" that this name already occurs in the
 		 * lookup list.
 		 */
-		snprintf(buf.addr,
-		         MAX_STRING_LENGTH,
+		snprintf(buf.addr, sizeof buf.addr,
 		         ".%d.%d.%d.%d",
 		         ((unsigned char *)&(sock.sin_addr))[0],
 		         ((unsigned char *)&(sock.sin_addr))[1],

@@ -768,7 +768,7 @@ int smith(P_char ch, P_char pl, int cmd, char *arg)
 	}
 
 	// Take their money.
-	snprintf(buffer, MAX_STRING_LENGTH, "You hand $N %s.", coin_stringv(forge_prices[i - 1]));
+	snprintf(buffer, sizeof buffer, "You hand $N %s.", coin_stringv(forge_prices[i - 1]));
 	act(buffer, FALSE, pl, 0, ch, TO_CHAR);
 	SUB_MONEY(pl, forge_prices[i - 1], 0);
 

@@ -2573,7 +2573,7 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
 			// if (GET_CLASS(ch, CLASS_PSIONICIST | CLASS_DRUID | CLASS_ETHERMANCER) ||
 			if (GET_CLASS(ch, CLASS_PSIONICIST | CLASS_MINDFLAYER | CLASS_DRUID | CLASS_BLIGHTER) || number(1, 100) <= GET_CHAR_SKILL(ch, skl))
 			{
-				snprintf(buf, MAX_STRING_LENGTH, "Casting: %s ", skills[arg->spell].name);
+				snprintf(buf, sizeof buf, "Casting: %s ", skills[arg->spell].name);
 				for (i = 0; i < (arg->timeleft / 4); i++)
 				{
 					strcat(buf, "*");
@@ -2665,8 +2665,7 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
 	// We don't want IS_TRUSTED(ch) because that can be turned off with toggle fog.
 	if (GET_LEVEL(ch) > MAXLVLMORTAL && IS_PC(ch))
 	{
-		snprintf(buf,
-		         MAX_STRING_LENGTH,
+		snprintf(buf, sizeof buf,
 		         "%s cast '%s' at %s in room %d",
 		         GET_NAME(ch),
 		         skills[arg->spell].name,

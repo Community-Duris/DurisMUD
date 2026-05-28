@@ -10491,7 +10491,7 @@ int world_quest(P_char ch, P_char pl, int cmd, char *arg)
 
 			temp = 10 * GET_LEVEL(pl);
 
-			snprintf(money_string, MAX_STRING_LENGTH, "Hmmmm, yeah, I might have a additional information for you, but I'm not giving it away for free! It'll cost you %s.", coin_stringv(temp));
+			snprintf(money_string, sizeof money_string, "Hmmmm, yeah, I might have a additional information for you, but I'm not giving it away for free! It'll cost you %s.", coin_stringv(temp));
 
 			mobsay(ch, money_string);
 			if (GET_MONEY(pl) < temp)
@@ -10548,7 +10548,7 @@ int world_quest(P_char ch, P_char pl, int cmd, char *arg)
 
 		temp = 20 * GET_LEVEL(pl);
 
-		snprintf(money_string, MAX_STRING_LENGTH, "Hmmmm, yeah, I might have a tip for you, but I'm not giving it away for free! It'll cost you %s.", coin_stringv(temp));
+		snprintf(money_string, sizeof money_string, "Hmmmm, yeah, I might have a tip for you, but I'm not giving it away for free! It'll cost you %s.", coin_stringv(temp));
 
 		mobsay(ch, money_string);
 
@@ -14815,7 +14815,7 @@ int llyren(P_char ch, P_char pl, int cmd, char *arg)
 		if (IS_PC(owner))
 			continue;
 
-		snprintf(buffer, MAX_STRING_LENGTH, "You see %s in posession of %s.\n", t_obj->short_description, owner->player.short_descr);
+		snprintf(buffer, sizeof buffer, "You see %s in posession of %s.\n", t_obj->short_description, owner->player.short_descr);
 		send_to_char(buffer, pl);
 	}
 
@@ -15581,31 +15581,31 @@ void finish_smelt(P_char ch, P_char pl, int vnum)
 	switch ((OBJ_VNUM(ore) - LOWEST_ORE_VNUM) / 3)
 	{
 		case 0:
-			snprintf(oreType, MAX_STRING_LENGTH, "&+ciron&n");
+			snprintf(oreType, sizeof oreType, "&+ciron&n");
 			break;
 		case 1:
-			snprintf(oreType, MAX_STRING_LENGTH, "&+Ctin&n");
+			snprintf(oreType, sizeof oreType, "&+Ctin&n");
 			break;
 		case 2:
-			snprintf(oreType, MAX_STRING_LENGTH, "&+ycopper&n");
+			snprintf(oreType, sizeof oreType, "&+ycopper&n");
 			break;
 		case 3:
-			snprintf(oreType, MAX_STRING_LENGTH, "&nsilver");
+			snprintf(oreType, sizeof oreType, "&nsilver");
 			break;
 		case 4:
-			snprintf(oreType, MAX_STRING_LENGTH, "&+Ygold&n");
+			snprintf(oreType, sizeof oreType, "&+Ygold&n");
 			break;
 		case 5:
-			snprintf(oreType, MAX_STRING_LENGTH, "&+Wplatinum&n");
+			snprintf(oreType, sizeof oreType, "&+Wplatinum&n");
 			break;
 		case 6:
-			snprintf(oreType, MAX_STRING_LENGTH, "&+mmithril&n");
+			snprintf(oreType, sizeof oreType, "&+mmithril&n");
 			break;
 		case 7:
-			snprintf(oreType, MAX_STRING_LENGTH, "&+Madamantium&n");
+			snprintf(oreType, sizeof oreType, "&+Madamantium&n");
 			break;
 		default:
-			snprintf(oreType, MAX_STRING_LENGTH, "&+Lmetal&n");
+			snprintf(oreType, sizeof oreType, "&+Lmetal&n");
 			break;
 	}
 	snprintf(buf, MAX_STRING_LENGTH, "$n &+RSMELTS&n some %s!", oreType);

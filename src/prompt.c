@@ -208,7 +208,7 @@ void make_prompt(P_desc point)
 	if (IS_SET(t_ch_p, PROMPT_TWOLINE) && (t_ch_p & (PROMPT_HIT | PROMPT_MAX_HIT | PROMPT_MANA | PROMPT_MAX_MANA | PROMPT_MOVE | PROMPT_MAX_MOVE)))
 	{
 		strcat(promptbuf, "&+g >\n");
-		snprintf(promptbuf2, MAX_STRING_LENGTH, "&+g<");
+		snprintf(promptbuf2, sizeof promptbuf2, "&+g<");
 		pPrompt = promptbuf2 + strlen(promptbuf2);
 	}
 	else
@@ -538,23 +538,23 @@ void UpdateScreen(P_char ch, int update)
 		}
 	}
 	else
-		snprintf(buf, MAX_STRING_LENGTH, " N/A");
+		snprintf(buf, sizeof buf, " N/A");
 	send_to_char(buf, ch);
-	snprintf(buf, MAX_STRING_LENGTH, VT_CURREST);
+	snprintf(buf, sizeof buf, VT_CURREST);
 	send_to_char(buf, ch);
 
 	/* enemy */
-	snprintf(buf, MAX_STRING_LENGTH, VT_CURSAVE);
+	snprintf(buf, sizeof buf, VT_CURSAVE);
 	send_to_char(buf, ch);
-	snprintf(buf, MAX_STRING_LENGTH, VT_CURSPOS, size, 50);
+	snprintf(buf, sizeof buf, VT_CURSPOS, size, 50);
 	send_to_char(buf, ch);
-	snprintf(buf, MAX_STRING_LENGTH, "          ");
+	snprintf(buf, sizeof buf, "          ");
 	send_to_char(buf, ch);
-	snprintf(buf, MAX_STRING_LENGTH, VT_CURSPOS, size, 50);
+	snprintf(buf, sizeof buf, VT_CURSPOS, size, 50);
 	send_to_char(buf, ch);
 	if (enemy && IS_SET(ch->specials.act, PLR_DEBUG))
 	{
-		snprintf(buf, MAX_STRING_LENGTH, " %s", !CAN_SEE(ch, enemy) ? "someone" : J_NAME(enemy));
+		snprintf(buf, sizeof buf, " %s", !CAN_SEE(ch, enemy) ? "someone" : J_NAME(enemy));
 		if (GET_MAX_HIT(enemy) > 0 && GET_HIT(enemy) > 0)
 			percent = (100 * GET_HIT(enemy)) / GET_MAX_HIT(enemy);
 		else
@@ -577,10 +577,10 @@ void UpdateScreen(P_char ch, int update)
 			strcat(buf, " bleeding, close to death");
 	}
 	else
-		snprintf(buf, MAX_STRING_LENGTH, " N/A");
+		snprintf(buf, sizeof buf, " N/A");
 	send_to_char(buf, ch);
 
-	snprintf(buf, MAX_STRING_LENGTH, VT_CURREST);
+	snprintf(buf, sizeof buf, VT_CURREST);
 	send_to_char(buf, ch);
 }
 

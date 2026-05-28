@@ -2363,9 +2363,9 @@ void sql_log(P_char ch, char *kind, char *format, ...)
 	static char ip_buff[15];
 	ip_buff[0] = '\0';
 
-	if (ch->desc && ch->desc->host)
+	if (ch->desc && *ch->desc->host)
 	{
-		snprintf(ip_buff, 50, "%s", ch->desc->host);
+		snprintf(ip_buff, sizeof ip_buff, "%s", ch->desc->host);
 	}
 
 	snprintf(buff,

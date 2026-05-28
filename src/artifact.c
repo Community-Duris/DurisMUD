@@ -3895,7 +3895,7 @@ void arti_player_sql(P_char ch, char *arg)
 		totalTime /= 60;
 		hours = totalTime % 24;
 
-		snprintf(timeBuf, MAX_STRING_LENGTH, "%c%2ld:%02d:%02d", negTime ? '-' : ' ', totalTime / 24, hours, minutes);
+		snprintf(timeBuf, sizeof timeBuf, "%c%2ld:%02d:%02d", negTime ? '-' : ' ', totalTime / 24, hours, minutes);
 
 		snprintf(buf, MAX_STRING_LENGTH, "%s&n%-11s %-22s%s (#%d)\r\n", locationBuf, timeBuf, row[5], OBJ_SHORT(arti), vnum);
 		send_to_char(buf, ch);

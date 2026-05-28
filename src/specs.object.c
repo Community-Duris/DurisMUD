@@ -3722,7 +3722,7 @@ int good_evil_sword(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, obj->name) && OBJ_WORN(obj))
 		{
-			snprintf(tmp_buf, MAX_STRING_LENGTH, "&+LHealth remaining:&+r %d&N\n", -(obj->value[7]));
+			snprintf(tmp_buf, sizeof tmp_buf, "&+LHealth remaining:&+r %d&N\n", -(obj->value[7]));
 			send_to_char(tmp_buf, ch);
 			return TRUE;
 		}
@@ -3755,7 +3755,7 @@ int good_evil_sword(P_obj obj, P_char ch, int cmd, char *arg)
 		// 1/30 chance.
 		if (!number(0, 29))
 		{
-			snprintf(curWhisper, MAX_STRING_LENGTH, "$p whispers into your mind '%s&n'", whisperings[number(0, SWORD_WHISPERINGS - 1)]);
+			snprintf(curWhisper, sizeof curWhisper, "$p whispers into your mind '%s&n'", whisperings[number(0, SWORD_WHISPERINGS - 1)]);
 			act(curWhisper, FALSE, ch, obj, 0, TO_CHAR);
 		}
 		good_evil_stoneOrSoulshield(obj);
@@ -12518,28 +12518,25 @@ int skill_beacon(P_obj obj, P_char ch, int cmd, char *argument)
 	{
 		if (IS_TRUSTED(ch))
 		{
-			snprintf(buf,
-			         MAX_STRING_LENGTH,
+			snprintf(buf, sizeof buf,
 			         "This is a skill beacon object. The following values are used to configure it:\n"
 			         "  &+Wval0&n   skill number\n"
 			         "  &+Wval1&n   minimal skill level to use the beacon\n"
 			         "  &+Wval2&n   maximal skill level beacon will grant");
 			if (skill)
-				snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "\n$p is %sactive and grants skill &+W%s&n.", active ? "" : "in", skills[skill].name);
+				snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "\n$p is %sactive and grants skill &+W%s&n.", active ? "" : "in", skills[skill].name);
 			if (requirement)
-				snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "\nrequired skill level is &+W%d&n", requirement);
+				snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "\nrequired skill level is &+W%d&n", requirement);
 			if (cap)
-				snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "\nit will not raise skill above &+W%d&n", cap);
+				snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "\nit will not raise skill above &+W%d&n", cap);
 		}
 		else if (GET_C_INT(ch) > number(50, 150))
-			snprintf(buf,
-			         MAX_STRING_LENGTH,
+			snprintf(buf, sizeof buf,
 			         "$p is a monolithic block of an unidentified metal. There are some runes drawn on"
 			         " it which you decipher as referring to the art of &+W%s&n.",
 			         skills[skill].name);
 		else
-			snprintf(buf,
-			         MAX_STRING_LENGTH,
+			snprintf(buf, sizeof buf,
 			         "$p is a monolithic block of an unidentified metal. There are some runes drawn on"
 			         " it which you can not decipher at all.");
 		act(buf, FALSE, ch, obj, 0, TO_CHAR);

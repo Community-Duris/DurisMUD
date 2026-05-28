@@ -4264,10 +4264,9 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
 				type = "SHUTDOWN";
 			}
 			if (secs > 60)
-				//        snprintf(buf, MAX_STRING_LENGTH, "&+R*** Scheduled %s in %d minutes ***&n\n", type, secs/60, shutdownData.IssuedBy);
-				snprintf(buf, MAX_STRING_LENGTH, "&+R*** Scheduled %s in %ld minutes ***&n\n", type, secs / 60);
+				snprintf(buf, sizeof buf, "&+R*** Scheduled %s in %ld minutes ***&n\n", type, secs / 60);
 			else
-				snprintf(buf, MAX_STRING_LENGTH, "&+R*** Scheduled &-L%s&n&+R in %ld seconds ***&n\n", type, secs);
+				snprintf(buf, sizeof buf, "&+R*** Scheduled &-L%s&n&+R in %ld seconds ***&n\n", type, secs);
 			send_to_all(buf);
 			// and set when the next warning should occur..
 
@@ -4311,9 +4310,9 @@ void displayShutdownMsg(P_char ch)
 	}
 
 	if (secs > 60)
-		snprintf(buf, 200, "&+R*** Scheduled %s in %ld minute%s***&n\n", type, secs / 60, (secs >= 120) ? "s " : " ");
+		snprintf(buf, sizeof buf, "&+R*** Scheduled %s in %ld minute%s***&n\n", type, secs / 60, (secs >= 120) ? "s " : " ");
 	else
-		snprintf(buf, 200, "&+R*** Scheduled &-L%s&n&+R in %ld seconds ***&n\n", type, secs);
+		snprintf(buf, sizeof buf, "&+R*** Scheduled &-L%s&n&+R in %ld seconds ***&n\n", type, secs);
 	send_to_char(buf, ch);
 }
 
@@ -4486,7 +4485,7 @@ void do_shutdown(P_char ch, char *argument, int cmd)
 	shutdownData.Reason[255]  = '\0';
 	shutdownData.next_warning = -1;
 	shutdownData.reboot_time  = (time(0) + (mins_to_reboot * 60));
-	snprintf(buf, MAX_STRING_LENGTH, "Scheduled %s initiated by %s in %d minutes.", type, GET_NAME(ch), mins_to_reboot);
+	snprintf(buf, sizeof buf, "Scheduled %s initiated by %s in %d minutes.", type, GET_NAME(ch), mins_to_reboot);
 	wizlog(60, buf);
 	sql_log(ch, WIZLOG, "%s initiated by %s in %d minutes.", type, GET_NAME(ch), mins_to_reboot);
 	// calling the event will start the event
@@ -4804,7 +4803,7 @@ void do_force(P_char ch, char *argument, int cmd)
 				send_to_char("Ok.\n", ch);
 			else
 			{
-				snprintf(buf, MAX_STRING_LENGTH, "$n has forced you to '%s'.", to_force);
+				snprintf(buf, sizeof buf, "$n has forced you to '%s'.", to_force);
 				act(buf, FALSE, ch, 0, vict, TO_VICT);
 				if (level < 62)
 					wizlog(GET_LEVEL(ch), "%s has forced %s to '%s' [%d/%d]", GET_NAME(ch), GET_NAME(vict), to_force, world[ch->in_room].number, world[vict->in_room].number);
@@ -4828,7 +4827,7 @@ void do_force(P_char ch, char *argument, int cmd)
 				vict = i->character;
 				if ((level > GET_LEVEL(vict)))
 				{
-					snprintf(buf, MAX_STRING_LENGTH, "$n has forced you to '%s'.", to_force);
+					snprintf(buf, sizeof buf, "$n has forced you to '%s'.", to_force);
 					act(buf, FALSE, ch, 0, vict, TO_VICT);
 					forced_command = 1;
 					command_interpreter(vict, to_force);
@@ -5036,7 +5035,7 @@ void do_purge(P_char ch, char *argument, int cmd)
 			}
 			while (fscanf(flist, " %s \n", buf) != EOF)
 			{
-				snprintf(buf2, MAX_STRING_LENGTH, "Players/%c/%s", LOWER(*buf), buf);
+				snprintf(buf2, sizeof buf2, "Players/%c/%s", LOWER(*buf), buf);
 				f    = fopen(buf2, "r");
 				vict = (struct char_data *)mm_get(dead_mob_pool);
 				ensure_pconly_pool();
@@ -7668,9 +7667,9 @@ void do_approve(P_char ch, char *arg, int cmd)
 			{
 				if (STATE(d1) == CON_ACCEPTWAIT && d1->character && !str_cmp(GET_NAME(d1->character), arg))
 				{
-					logit(LOG_NEWCHAR, "%s approved new char %s from %s.", GET_NAME(ch), GET_NAME(d1->character), (d1->host ? d1->host : "UNKNOWN"));
-					snprintf(Gbuf1, MAX_STRING_LENGTH, "&+c*** STATUS: %s approved new player %s from %s.\n", GET_NAME(ch), GET_NAME(d1->character), d1->host ? d1->host : "&+WUNKNOWN&n");
-					snprintf(Gbuf2, MAX_STRING_LENGTH, "&+c*** STATUS: Someone approved new player %s from %s.\n", GET_NAME(d1->character), d1->host ? d1->host : "&+WUNKNOWN&n");
+					logit(LOG_NEWCHAR, "%s approved new char %s from %s.", GET_NAME(ch), GET_NAME(d1->character), (*d1->host ? d1->host : "UNKNOWN"));
+					snprintf(Gbuf1, MAX_STRING_LENGTH, "&+c*** STATUS: %s approved new player %s from %s.\n", GET_NAME(ch), GET_NAME(d1->character), *d1->host ? d1->host : "&+WUNKNOWN&n");
+					snprintf(Gbuf2, MAX_STRING_LENGTH, "&+c*** STATUS: Someone approved new player %s from %s.\n", GET_NAME(d1->character), *d1->host ? d1->host : "&+WUNKNOWN&n");
 
 					for (d2 = descriptor_list; d2; d2 = d2->next)
 					{
@@ -8129,7 +8128,7 @@ void do_ingame(P_char ch, char *args, int cmd)
 		// Not self, in game, visible and lower lvl.
 		if ((desc->character != ch) && (desc->connected == CON_PLAYING) && CAN_SEE(ch, desc->character) && (GET_LEVEL(desc->character) < GET_LEVEL(ch)))
 		{
-			snprintf(name, MAX_STRING_LENGTH, "%s", GET_TRUE_NAME(desc->character));
+			snprintf(name, sizeof name, "%s", GET_TRUE_NAME(desc->character));
 			// We know there's at least one %s in the string that needs substituting.
 			snprintf(buf2, MAX_STRING_LENGTH, buf1, name);
 			i = 1;

@@ -917,7 +917,7 @@ void AddFrags(P_char ch, P_char victim)
 	sql_modify_frags(victim, -loss);
 	redis_invalidate_fraglist();
 	victim->only.pc->frags -= loss;
-	snprintf(buffer, MAX_STRING_LENGTH, "You just lost %.02f frags!\r\n", ((float)loss) / 100);
+	snprintf(buffer, sizeof buffer, "You just lost %.02f frags!\r\n", ((float)loss) / 100);
 	send_to_char(buffer, victim);
 	debug("%s just fragged %s for %.02f/%.02f frags!", J_NAME(ch), J_NAME(victim), ((float)real_gain) / 100, ((float)loss) / 100);
 	checkFragList(victim);
@@ -3164,20 +3164,20 @@ void dam_message(double fdam, P_char ch, P_char victim, struct damage_messages *
 	else if (msg_flags & DAMMSG_EFFECT_HIT)
 	{
 		snprintf(buf_char, 160, messages->attacker, victim_damage2[h_loop], weapon_damage[w_loop]);
-		snprintf(buf_vict, MAX_STRING_LENGTH, messages->victim, victim_damage[h_loop], weapon_damage[w_loop]);
-		snprintf(buf_notvict, MAX_STRING_LENGTH, messages->room, victim_damage[h_loop], weapon_damage[w_loop]);
+		snprintf(buf_vict, sizeof buf_vict, messages->victim, victim_damage[h_loop], weapon_damage[w_loop]);
+		snprintf(buf_notvict, sizeof buf_notvict, messages->room, victim_damage[h_loop], weapon_damage[w_loop]);
 	}
 	else if ((msg_flags & DAMMSG_EFFECT))
 	{
-		snprintf(buf_char, MAX_STRING_LENGTH, messages->attacker, victim_damage[h_loop]);
-		snprintf(buf_vict, MAX_STRING_LENGTH, messages->victim, victim_damage[h_loop]);
-		snprintf(buf_notvict, MAX_STRING_LENGTH, messages->room, victim_damage[h_loop]);
+		snprintf(buf_char, sizeof buf_char, messages->attacker, victim_damage[h_loop]);
+		snprintf(buf_vict, sizeof buf_vict, messages->victim, victim_damage[h_loop]);
+		snprintf(buf_notvict, sizeof buf_notvict, messages->room, victim_damage[h_loop]);
 	}
 	else if (msg_flags & DAMMSG_HIT)
 	{
-		snprintf(buf_char, MAX_STRING_LENGTH, messages->attacker, weapon_damage[w_loop]);
-		snprintf(buf_vict, MAX_STRING_LENGTH, messages->victim, weapon_damage[w_loop]);
-		snprintf(buf_notvict, MAX_STRING_LENGTH, messages->room, weapon_damage[w_loop]);
+		snprintf(buf_char, sizeof buf_char, messages->attacker, weapon_damage[w_loop]);
+		snprintf(buf_vict, sizeof buf_vict, messages->victim, weapon_damage[w_loop]);
+		snprintf(buf_notvict, sizeof buf_notvict, messages->room, weapon_damage[w_loop]);
 	}
 	/* if (IS_PC(ch) && IS_SET(ch->specials.act2, PLR2_DAMAGE) )
 	   strcat(buf_char, showdam);*/
@@ -4872,11 +4872,11 @@ int check_shields(P_char ch, P_char victim, int dam, int flags)
 					case 2:
 						if (!EYELESS(ch) && !affected_by_spell(ch, SPELL_BLINDNESS))
 						{
-							snprintf(buf, MAX_STRING_LENGTH, "$N &+wmutters a prayer to %s, and then heavy &+Ldarkness &+wshrouds your vision.&n", get_god_name(victim));
+							snprintf(buf, sizeof buf, "$N &+wmutters a prayer to %s, and then heavy &+Ldarkness &+wshrouds your vision.&n", get_god_name(victim));
 							act(buf, FALSE, ch, 0, victim, TO_CHAR);
-							snprintf(buf, MAX_STRING_LENGTH, "$n &+wgropes around as if blind as $N mutters a prayer to %s.", get_god_name(victim));
+							snprintf(buf, sizeof buf, "$n &+wgropes around as if blind as $N mutters a prayer to %s.", get_god_name(victim));
 							act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
-							snprintf(buf, MAX_STRING_LENGTH, "&+wYou send a prayer to %s, to shroud your foes in &+Ldarkness.&n", get_god_name(victim));
+							snprintf(buf, sizeof buf, "&+wYou send a prayer to %s, to shroud your foes in &+Ldarkness.&n", get_god_name(victim));
 							act(buf, FALSE, ch, 0, victim, TO_VICT);
 							blind(victim, ch, number(4, 8) * WAIT_SEC);
 							break;
@@ -4897,11 +4897,11 @@ int check_shields(P_char ch, P_char victim, int dam, int flags)
 					case 4:
 						if (IS_CLERIC(ch) && !IS_ELITE(ch) && !IS_GREATER_RACE(ch))
 						{
-							snprintf(buf, MAX_STRING_LENGTH, "&+YBright light falls from above and&n $N &+Ysends forth divine power!&n");
+							snprintf(buf, sizeof buf, "&+YBright light falls from above and&n $N &+Ysends forth divine power!&n");
 							act(buf, FALSE, ch, 0, victim, TO_CHAR);
-							snprintf(buf, MAX_STRING_LENGTH, "&+w%s&+w sends a ray of light down upon&n $N.", get_god_name(victim));
+							snprintf(buf, sizeof buf, "&+w%s&+w sends a ray of light down upon&n $N.", get_god_name(victim));
 							act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
-							snprintf(buf, MAX_STRING_LENGTH, "&+wYou send a prayer to %s&+w who instills you with &+Rwrath!&n", get_god_name(victim));
+							snprintf(buf, sizeof buf, "&+wYou send a prayer to %s&+w who instills you with &+Rwrath!&n", get_god_name(victim));
 							act(buf, FALSE, ch, 0, victim, TO_VICT);
 							spell_silence(GET_LEVEL(victim), victim, 0, 0, ch, 0);
 							break;
@@ -4934,21 +4934,21 @@ int check_shields(P_char ch, P_char victim, int dam, int flags)
 					case 8:
 						if (GET_HIT(victim) + 50 < GET_MAX_HIT(victim))
 						{
-							snprintf(buf, MAX_STRING_LENGTH, "&+wBright light falls from above and&n $N&+w's wounds begin to heal!&n");
+							snprintf(buf, sizeof buf, "&+wBright light falls from above and&n $N&+w's wounds begin to heal!&n");
 							act(buf, FALSE, ch, 0, victim, TO_CHAR);
-							snprintf(buf, MAX_STRING_LENGTH, "&+w%s&+w sends a ray of light down upon&n $N&+w, healing some of $S wounds.", get_god_name(victim));
+							snprintf(buf, sizeof buf, "&+w%s&+w sends a ray of light down upon&n $N&+w, healing some of $S wounds.", get_god_name(victim));
 							act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
-							snprintf(buf, MAX_STRING_LENGTH, "&+wYou send a prayer to %s&+w, who smiles upon you and mends some of your wounds.", get_god_name(victim));
+							snprintf(buf, sizeof buf, "&+wYou send a prayer to %s&+w, who smiles upon you and mends some of your wounds.", get_god_name(victim));
 							act(buf, FALSE, ch, 0, victim, TO_VICT);
 							spell_heal(GET_LEVEL(victim), victim, 0, 0, victim, 0);
 							break;
 						}
 					case 9:
-						snprintf(buf, MAX_STRING_LENGTH, "$N &+wmutters a prayer to %s &+was $e stares coldly at you.&n", get_god_name(victim));
+						snprintf(buf, sizeof buf, "$N &+wmutters a prayer to %s &+was $e stares coldly at you.&n", get_god_name(victim));
 						act(buf, FALSE, ch, 0, victim, TO_CHAR);
-						snprintf(buf, MAX_STRING_LENGTH, "&+w%s&+w sends a mighty wrath upon&n $n &+was &n$N&+w's prayers are heard.", get_god_name(victim));
+						snprintf(buf, sizeof buf, "&+w%s&+w sends a mighty wrath upon&n $n &+was &n$N&+w's prayers are heard.", get_god_name(victim));
 						act(buf, FALSE, ch, 0, victim, TO_NOTVICT);
-						snprintf(buf, MAX_STRING_LENGTH, "&+wYou send a prayer to %s&+w, who responds with a bolt from the Heavens!", get_god_name(victim));
+						snprintf(buf, sizeof buf, "&+wYou send a prayer to %s&+w, who responds with a bolt from the Heavens!", get_god_name(victim));
 						act(buf, FALSE, ch, 0, victim, TO_VICT);
 						spell_full_harm(GET_LEVEL(victim), victim, 0, 0, ch, 0);
 						break;
@@ -7603,30 +7603,30 @@ case RACEWAR_NEUTRAL:
 				dam += GET_LEVEL(ch);
 			}
 
-			snprintf(attacker_msg, MAX_STRING_LENGTH, "You feel a powerful rush of &+rAnG&+RE&+rr&n as your%%s %s %%s.", attack_hit_text[msg].singular);
-			snprintf(victim_msg, MAX_STRING_LENGTH, "A sense of &+RWi&+rLD H&+RAt&+rE &nsurrounds $n as $s%%s %s %%s.", attack_hit_text[msg].singular);
-			snprintf(room_msg, MAX_STRING_LENGTH, "A sense of &+RWi&+rLD H&+RAt&+rE &nsurrounds $n as $s%%s %s %%s.", attack_hit_text[msg].singular);
+			snprintf(attacker_msg, sizeof attacker_msg, "You feel a powerful rush of &+rAnG&+RE&+rr&n as your%%s %s %%s.", attack_hit_text[msg].singular);
+			snprintf(victim_msg, sizeof victim_msg, "A sense of &+RWi&+rLD H&+RAt&+rE &nsurrounds $n as $s%%s %s %%s.", attack_hit_text[msg].singular);
+			snprintf(room_msg, sizeof room_msg, "A sense of &+RWi&+rLD H&+RAt&+rE &nsurrounds $n as $s%%s %s %%s.", attack_hit_text[msg].singular);
 			messages.type = DAMMSG_HIT_EFFECT;
 		}
 		else if (notch_skill(victim, SKILL_BOILING_BLOOD, get_property("skill.notch.defensive", 17)) || GET_CHAR_SKILL(victim, SKILL_BOILING_BLOOD) / 10 > number(1, 100))
 		{
-			snprintf(attacker_msg, MAX_STRING_LENGTH, "$N is so overcome with bloodlust, your %s barely grazes $M!", attack_hit_text[msg].singular);
-			snprintf(victim_msg, MAX_STRING_LENGTH, "You are so overcome with bloodlust, $n's %s barely grazes you!", attack_hit_text[msg].singular);
-			snprintf(room_msg, MAX_STRING_LENGTH, "$N is so overcome with bloodlust, $n's %s barely grazes $M!", attack_hit_text[msg].singular);
+			snprintf(attacker_msg, sizeof attacker_msg, "$N is so overcome with bloodlust, your %s barely grazes $M!", attack_hit_text[msg].singular);
+			snprintf(victim_msg, sizeof victim_msg, "You are so overcome with bloodlust, $n's %s barely grazes you!", attack_hit_text[msg].singular);
+			snprintf(room_msg, sizeof room_msg, "$N is so overcome with bloodlust, $n's %s barely grazes $M!", attack_hit_text[msg].singular);
 			dam = 1;
 		}
 		else if (get_linked_char(ch, LNK_FLANKING) == victim)
 		{
-			snprintf(attacker_msg, MAX_STRING_LENGTH, "You %%s as your%%s %s reaches $S unprotected flank.", attack_hit_text[msg].singular);
-			snprintf(victim_msg, MAX_STRING_LENGTH, "$n %%s as $s%%s %s reaches your unprotected flank.", attack_hit_text[msg].singular);
-			snprintf(room_msg, MAX_STRING_LENGTH, "$n %%s as $s%%s %s reaches $S unprotected flank.", attack_hit_text[msg].singular);
+			snprintf(attacker_msg, sizeof attacker_msg, "You %%s as your%%s %s reaches $S unprotected flank.", attack_hit_text[msg].singular);
+			snprintf(victim_msg, sizeof victim_msg, "$n %%s as $s%%s %s reaches your unprotected flank.", attack_hit_text[msg].singular);
+			snprintf(room_msg, sizeof room_msg, "$n %%s as $s%%s %s reaches $S unprotected flank.", attack_hit_text[msg].singular);
 			messages.type = DAMMSG_EFFECT_HIT;
 		}
 		else if (get_linked_char(ch, LNK_CIRCLING) == victim)
 		{
-			snprintf(attacker_msg, MAX_STRING_LENGTH, "$N screams in pain as your %s tears into $S flesh", attack_hit_text[msg].singular);
-			snprintf(victim_msg, MAX_STRING_LENGTH, "You scream in pain as $n's %s tears into your flesh.", attack_hit_text[msg].singular);
-			snprintf(room_msg, MAX_STRING_LENGTH, "$N screams in pain as $n's %s tears into $S flesh.", attack_hit_text[msg].singular);
+			snprintf(attacker_msg, sizeof attacker_msg, "$N screams in pain as your %s tears into $S flesh", attack_hit_text[msg].singular);
+			snprintf(victim_msg, sizeof victim_msg, "You scream in pain as $n's %s tears into your flesh.", attack_hit_text[msg].singular);
+			snprintf(room_msg, sizeof room_msg, "$N screams in pain as $n's %s tears into $S flesh.", attack_hit_text[msg].singular);
 			messages.type = DAMMSG_EFFECT_HIT;
 		}
 		/* Set property skill.anatomy.ratio to determine how often to check anatomy_strike().
@@ -7644,9 +7644,9 @@ case RACEWAR_NEUTRAL:
 		}
 		else
 		{
-			snprintf(attacker_msg, MAX_STRING_LENGTH, "Your%%s %s %%s.", attack_hit_text[msg].singular);
-			snprintf(victim_msg, MAX_STRING_LENGTH, "$n's%%s %s %%s.", attack_hit_text[msg].singular);
-			snprintf(room_msg, MAX_STRING_LENGTH, "$n's%%s %s %%s.", attack_hit_text[msg].singular);
+			snprintf(attacker_msg, sizeof attacker_msg, "Your%%s %s %%s.", attack_hit_text[msg].singular);
+			snprintf(victim_msg, sizeof victim_msg, "$n's%%s %s %%s.", attack_hit_text[msg].singular);
+			snprintf(room_msg, sizeof room_msg, "$n's%%s %s %%s.", attack_hit_text[msg].singular);
 			messages.type = DAMMSG_HIT_EFFECT | DAMMSG_TERSE;
 		}
 

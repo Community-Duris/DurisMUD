@@ -11021,7 +11021,7 @@ bool check_item_teleport(P_char ch, char *arg, int cmd)
 				{
 					act("You follow $N.", FALSE, tch, 0, ch, TO_CHAR);
 					send_to_char("\n", tch);
-					snprintf(Gbuf1, MAX_STRING_LENGTH, "%s %s", command[cmd - 1], arg);
+					snprintf(Gbuf1, sizeof Gbuf1, "%s %s", command[cmd - 1], arg);
 					command_interpreter(tch, Gbuf1);
 				}
 			}
@@ -13912,7 +13912,7 @@ void spell_feeblemind(int level, P_char ch, char *arg, int type, P_char victim, 
 						{
 							affect_remove(victim, af2);
 							i--;
-							snprintf(Gbuffer_1, MAX_STRING_LENGTH, "You forget %s!\n", skills[af2->modifier].name);
+							snprintf(Gbuffer_1, sizeof Gbuffer_1, "You forget %s!\n", skills[af2->modifier].name);
 							send_to_char(Gbuffer_1, victim);
 							continue;
 						}
@@ -17977,15 +17977,15 @@ void spell_ether_sense(int level, P_char ch, char *arg, int type, P_char vict, P
 		}
 		else if (elevel < 100)
 		{
-			snprintf(buf, MAX_STRING_LENGTH, "&+rYou detect a evil presence in the ether around you.\n");
+			snprintf(buf, sizeof buf, "&+rYou detect a evil presence in the ether around you.\n");
 		}
 		else if (elevel < 250)
 		{
-			snprintf(buf, MAX_STRING_LENGTH, "&+rYou detect a evil presence in the ether around you.\n");
+			snprintf(buf, sizeof buf, "&+rYou detect a evil presence in the ether around you.\n");
 		}
 		else
 		{
-			snprintf(buf, MAX_STRING_LENGTH, "&+rYou detect a evil presence in the ether around you.\n");
+			snprintf(buf, sizeof buf, "&+rYou detect a evil presence in the ether around you.\n");
 		}
 		send_to_char(buf, ch);
 	}

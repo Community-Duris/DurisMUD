@@ -369,7 +369,7 @@ void edit_string_add(struct edit_data *data, char *str)
 			}
 			else
 			{
-				snprintf(buf, MAX_STRING_LENGTH, "&+YLine %d deleted.&N\r\n", ln);
+				snprintf(buf, sizeof buf, "&+YLine %d deleted.&N\r\n", ln);
 				SEND_TO_Q(buf, data->desc);
 			}
 		}
@@ -390,12 +390,12 @@ void edit_string_add(struct edit_data *data, char *str)
 				c++;
 			if (ln > c)
 			{
-				snprintf(buf, MAX_STRING_LENGTH, "&+YMoved to end of buffer.&N\r\n");
+				snprintf(buf, sizeof buf, "&+YMoved to end of buffer.&N\r\n");
 				ln = c + 1;
 			}
 			else
 			{
-				snprintf(buf, MAX_STRING_LENGTH, "&+YMoved to line %d.&N\r\n", ln);
+				snprintf(buf, sizeof buf, "&+YMoved to line %d.&N\r\n", ln);
 			}
 			SEND_TO_Q(buf, data->desc);
 			data->cur_line = (ln - 1);
@@ -442,7 +442,7 @@ void edit_string_add(struct edit_data *data, char *str)
 		if (!data->is_god && edit_has_ansi(str))
 		{
 			SEND_TO_Q("&+RNo ANSI characters allowed as input.  &+YDiscarding line.&N\r\n", data->desc);
-			snprintf(buf, MAX_STRING_LENGTH, "%3d&+W:&N ", data->cur_line + 1);
+			snprintf(buf, sizeof buf, "%3d&+W:&N ", data->cur_line + 1);
 			SEND_TO_Q(buf, data->desc);
 			return;
 		}
@@ -464,7 +464,7 @@ void edit_string_add(struct edit_data *data, char *str)
 			}
 		}
 	}
-	snprintf(buf, MAX_STRING_LENGTH, "%3d&+W:&N ", data->cur_line + 1);
+	snprintf(buf, sizeof buf, "%3d&+W:&N ", data->cur_line + 1);
 	SEND_TO_Q(buf, data->desc);
 }
 

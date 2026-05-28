@@ -599,7 +599,7 @@ void arena_activity()
 
 			if (arena.timer[0] < 1)
 			{
-				snprintf(buf, MAX_STRING_LENGTH, "&+W%d seconds till the match begins, those of you in the arena who wish to leave, \r\n&+Wnow is your last chance!&N\r\n", DEFAULT_TIMER_ACCEPT);
+				snprintf(buf, sizeof buf, "&+W%d seconds till the match begins, those of you in the arena who wish to leave, \r\n&+Wnow is your last chance!&N\r\n", DEFAULT_TIMER_ACCEPT);
 				send_to_arena(buf, -1);
 				arena.stage++;
 				arena.timer[0] = DEFAULT_TIMER_ACCEPT;
@@ -616,7 +616,7 @@ void arena_activity()
 				case 3:
 				case 4:
 				case 5:
-					snprintf(buf, MAX_STRING_LENGTH, "&+W%d!!&N\r\n", arena.timer[0]);
+					snprintf(buf, sizeof buf, "&+W%d!!&N\r\n", arena.timer[0]);
 					send_to_arena(buf, -1);
 					break;
 				case 10:
@@ -684,7 +684,7 @@ void arena_activity()
 				case 3:
 				case 4:
 				case 5:
-					snprintf(buf, MAX_STRING_LENGTH, "&+W%d!!!\r\n&N", arena.timer[0]);
+					snprintf(buf, sizeof buf, "&+W%d!!!\r\n&N", arena.timer[0]);
 					send_to_arena(buf, -1);
 					break;
 				case 10:

@@ -1156,13 +1156,13 @@ bool char_to_room(P_char ch, int room, int dir)
 	{
 		if (was_in_arena && IS_SET(arena.flags, FLAG_SEENAME))
 		{
-			snprintf(buf, MAX_STRING_LENGTH, "%s has left the arena.\r\n", GET_NAME(ch));
+			snprintf(buf, sizeof buf, "%s has left the arena.\r\n", GET_NAME(ch));
 			send_to_arena(buf, -1);
 			//      broadcast_to_arena("%s has left the arena.\r\n", ch, 0, was_in);
 		}
 		else if (IS_SET(arena.flags, FLAG_SEENAME))
 		{
-			snprintf(buf, MAX_STRING_LENGTH, "%s has entered the arena.\r\n", GET_NAME(ch));
+			snprintf(buf, sizeof buf, "%s has entered the arena.\r\n", GET_NAME(ch));
 			send_to_arena(buf, -1);
 			//      broadcast_to_arena("%s has entered the arena.\r\n", ch, 0, room);
 		}

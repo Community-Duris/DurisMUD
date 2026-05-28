@@ -471,9 +471,9 @@ static void crafting_handle_craft_command(P_char ch, char *argument, int cmd)
 				continue;
 			}
 			if (crafting_recipe_display_vnums)
-				snprintf(buffer, 256, "   &+W%-4d  %-18d&n%s&n\n", i + 1, recipes[i], tobj->short_description);
+				snprintf(buffer, sizeof buffer, "   &+W%-4d  %-18d&n%s&n\n", i + 1, recipes[i], tobj->short_description);
 			else
-				snprintf(buffer, 256, "   &+W%-4d  &n%s&n\n", i + 1, tobj->short_description);
+				snprintf(buffer, sizeof buffer, "   &+W%-4d  &n%s&n\n", i + 1, tobj->short_description);
 			page_string(ch->desc, buffer, 1);
 			send_to_char("----------------------------------------------------------------------------\n", ch);
 			extract_obj(tobj);
@@ -585,13 +585,13 @@ static void crafting_handle_craft_command(P_char ch, char *argument, int cmd)
 		if (numLowest == 0)
 		{
 			send_to_char("&+yYou open your &+Ltome &+yof &+Ycra&+yftsm&+Lanship &+yand examine the &+Litem&n.\n", ch);
-			snprintf(buf1, MAX_STRING_LENGTH, "To craft this item, you will need %d of %s.\r\n&n", numHighest, matHighest->short_description);
+			snprintf(buf1, sizeof buf1, "To craft this item, you will need %d of %s.\r\n&n", numHighest, matHighest->short_description);
 			page_string(ch->desc, buf1, 1);
 		}
 		else
 		{
 			send_to_char("&+yYou open your &+Ltome &+yof &+Ycra&+yftsm&+Lanship &+yand examine the &+Litem&n.\n", ch);
-			snprintf(buf1, MAX_STRING_LENGTH, "To craft this item, you will need %d of %s and %d of %s.\r\n&n", numHighest, matHighest->short_description, numLowest, matLowest->short_description);
+			snprintf(buf1, sizeof buf1, "To craft this item, you will need %d of %s and %d of %s.\r\n&n", numHighest, matHighest->short_description, numLowest, matLowest->short_description);
 			page_string(ch->desc, buf1, 1);
 		}
 
@@ -599,7 +599,7 @@ static void crafting_handle_craft_command(P_char ch, char *argument, int cmd)
 		 *   then we add 4 (total 5) and divide by 5 (result minimum 1).
 		 * But, in case we change that, I'm leaving the code here. 2/10/2015
 		      send_to_char("&+yYou open your &+Ltome &+yof &+Ycra&+yftsm&+Lanship &+yand examine the &+Litem&n.\n", ch);
-		      snprintf(buf1, MAX_STRING_LENGTH, "To craft this item, you will need %d of %s.\r\n&n", numLowest, matLowest->short_description);
+		      snprintf(buf1, sizeof buf1, "To craft this item, you will need %d of %s.\r\n&n", numLowest, matLowest->short_description);
 		      page_string(ch->desc, buf1, 1);
 		*/
 
@@ -607,7 +607,7 @@ static void crafting_handle_craft_command(P_char ch, char *argument, int cmd)
 		{
 			send_to_char("...as well as &+W1 &nof &+ma &+Mm&+Ya&+Mg&+Yi&+Mc&+Ya&+Ml &+messence&n due to the &+mmagical &nproperties this item possesses.\r\n", ch);
 		}
-		snprintf(buf1, MAX_STRING_LENGTH, "You will also need one gnomish crafting tool box; it is consumed as you work.\r\n");
+		snprintf(buf1, sizeof buf1, "You will also need one gnomish crafting tool box; it is consumed as you work.\r\n");
 		send_to_char(buf1, ch);
 
 		// It's safe to assume tobj exists since we checked after the read_object call.
@@ -648,7 +648,7 @@ static void crafting_handle_craft_command(P_char ch, char *argument, int cmd)
 				send_to_char("This is a quest item and cannot be crafted from a player recipe.\r\n", ch);
 			else
 			{
-				snprintf(buf1, MAX_STRING_LENGTH, "You need level %d to craft this recipe (you are level %d).\r\n", (iVal + crafting_level_gate_multiplier() - 1) / crafting_level_gate_multiplier(), GET_LEVEL(ch));
+				snprintf(buf1, sizeof buf1, "You need level %d to craft this recipe (you are level %d).\r\n", (iVal + crafting_level_gate_multiplier() - 1) / crafting_level_gate_multiplier(), GET_LEVEL(ch));
 				send_to_char(buf1, ch);
 			}
 			extract_obj(tobj);
@@ -772,10 +772,10 @@ static void crafting_handle_craft_command(P_char ch, char *argument, int cmd)
 		SET_BIT(tobj->extra_flags, ITEM_NOREPAIR);
 		REMOVE_BIT(tobj->extra_flags, ITEM_SECRET);
 		randomizeitem(ch, tobj);
-		snprintf(keywords, MAX_STRING_LENGTH, "%s %s tradeskill", tobj->name, GET_NAME(ch));
+		snprintf(keywords, sizeof keywords, "%s %s tradeskill", tobj->name, GET_NAME(ch));
 
-		snprintf(tempdesc, MAX_STRING_LENGTH, "%s", tobj->short_description);
-		snprintf(short_desc, MAX_STRING_LENGTH, "%s &+ymade by&n &+r%s&n", tempdesc, GET_NAME(ch));
+		snprintf(tempdesc, sizeof tempdesc, "%s", tobj->short_description);
+		snprintf(short_desc, sizeof short_desc, "%s &+ymade by&n &+r%s&n", tempdesc, GET_NAME(ch));
 		set_keywords(tobj, keywords);
 		set_short_description(tobj, short_desc);
 
@@ -1033,9 +1033,9 @@ static void crafting_handle_forge_command(P_char ch, char *argument, int cmd)
 				continue;
 			}
 			if (crafting_recipe_display_vnums)
-				snprintf(recipe, 256, "   &+W%-4d  %-18d&n%s&n\n", i + 1, recipes[i], obj->short_description);
+				snprintf(recipe, sizeof recipe, "   &+W%-4d  %-18d&n%s&n\n", i + 1, recipes[i], obj->short_description);
 			else
-				snprintf(recipe, 256, "   &+W%-4d  &n%s&n\n", i + 1, obj->short_description);
+				snprintf(recipe, sizeof recipe, "   &+W%-4d  &n%s&n\n", i + 1, obj->short_description);
 			page_string(ch->desc, recipe, 1);
 			send_to_char("----------------------------------------------------------------------------\n", ch);
 			extract_obj(obj);
@@ -1090,7 +1090,7 @@ static void crafting_handle_forge_command(P_char ch, char *argument, int cmd)
 	// Attempt to load the object we're inspecting/making.
 	if (!(obj = read_object(objVnum, VIRTUAL)))
 	{
-		snprintf(Gbuf1, MAX_STRING_LENGTH, "Your recipe # %d seems to be &+rcorrupted&n. Please tell a &+WGod.\n\r", objVnum);
+		snprintf(Gbuf1, sizeof Gbuf1, "Your recipe # %d seems to be &+rcorrupted&n. Please tell a &+WGod.\n\r", objVnum);
 		logit(LOG_DEBUG, "do_forge: '%s' has bad recipe vnum (%d) - couldn't load object.", ch ? J_NAME(ch) : "NULL", objVnum);
 		return;
 	}
@@ -1132,19 +1132,19 @@ static void crafting_handle_forge_command(P_char ch, char *argument, int cmd)
 		send_to_char("&+yYou open your &+Ltome &+yof &+Ycra&+yftsm&+Lanship &+yand examine the &+Litem&n.\n", ch);
 		if (numLowQuality == 0)
 		{
-			snprintf(recipe, MAX_STRING_LENGTH, "To forge this item, you will need %d of %s.\r\n&n", numHighQuality, highQualityMaterial->short_description);
+			snprintf(recipe, sizeof recipe, "To forge this item, you will need %d of %s.\r\n&n", numHighQuality, highQualityMaterial->short_description);
 		}
 		else
 		{
 			// numHighQuality will always be >= 1 with the code the way it is on 2/11/2015.
 			if (numHighQuality == 0)
 			{
-				snprintf(recipe, MAX_STRING_LENGTH, "To forge this item, you will need %d of %s.\r\n&n", numLowQuality, lowQualityMaterial->short_description);
+				snprintf(recipe, sizeof recipe, "To forge this item, you will need %d of %s.\r\n&n", numLowQuality, lowQualityMaterial->short_description);
 			}
 			else
 			{
 				snprintf(recipe,
-				         MAX_STRING_LENGTH,
+				         sizeof recipe,
 				         "To forge this item, you will need %d of %s and %d of %s.\r\n&n",
 				         numHighQuality,
 				         highQualityMaterial->short_description,
@@ -1157,7 +1157,7 @@ static void crafting_handle_forge_command(P_char ch, char *argument, int cmd)
 		{
 			strcat(recipe, "You must have &+W1 &nof &+ma &+Mm&+Ya&+Mg&+Yi&+Mc&+Ya&+Ml &+messence&n due to the &+mmagical &nproperties this item possesses.\r\n");
 		}
-		snprintf(Gbuf1, MAX_STRING_LENGTH, "You will also need one blacksmithing flux; it is consumed to bind the work.\r\n");
+		snprintf(Gbuf1, sizeof Gbuf1, "You will also need one blacksmithing flux; it is consumed to bind the work.\r\n");
 		strncat(recipe, Gbuf1, sizeof(recipe) - strlen(recipe) - 1);
 
 		page_string(ch->desc, recipe, 1);
@@ -1287,8 +1287,8 @@ static void crafting_handle_forge_command(P_char ch, char *argument, int cmd)
 		REMOVE_BIT(obj->extra_flags, ITEM_SECRET);
 		randomizeitem(ch, obj);
 
-		snprintf(keywords, MAX_STRING_LENGTH, "%s %s tradeskill", obj->name, GET_NAME(ch));
-		snprintf(short_desc, MAX_STRING_LENGTH, "%s &+ymade by&n &+r%s&n", obj->short_description, GET_NAME(ch));
+		snprintf(keywords, sizeof keywords, "%s %s tradeskill", obj->name, GET_NAME(ch));
+		snprintf(short_desc, sizeof short_desc, "%s &+ymade by&n &+r%s&n", obj->short_description, GET_NAME(ch));
 		set_keywords(obj, keywords);
 		set_short_description(obj, short_desc);
 

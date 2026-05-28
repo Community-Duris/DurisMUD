@@ -1547,7 +1547,7 @@ void do_forage(P_char ch, char *arg, int cmd)
 			}
 			treeobj = read_object(20, VIRTUAL);
 			obj_to_room(treeobj, ch->in_room);
-			snprintf(buf, MAX_STRING_LENGTH, "Searching %s, you manage to unroot $p.", sectmessage);
+			snprintf(buf, sizeof buf, "Searching %s, you manage to unroot $p.", sectmessage);
 			act(buf, FALSE, ch, treeobj, 0, TO_CHAR);
 			act("Foraging around, $n unroots $p.", TRUE, ch, treeobj, 0, TO_ROOM);
 			CharWait(ch, PULSE_VIOLENCE * 1);
@@ -6161,7 +6161,7 @@ void do_fly(P_char ch, char *argument, int cmd)
 				//        act("$N follows you.", TRUE, ch, 0, k->follower, TO_CHAR);
 				//        act("$N follows $n.", TRUE, ch, 0, k->follower, TO_NOTVICT);
 				act("You follow $n.", TRUE, ch, 0, k->follower, TO_VICT);
-				snprintf(Gbuf1, MAX_STRING_LENGTH, "fly %s", argument);
+				snprintf(Gbuf1, sizeof Gbuf1, "fly %s", argument);
 				command_interpreter(k->follower, Gbuf1);
 			}
 		}
@@ -6692,8 +6692,7 @@ void do_ascend(P_char ch, char *arg, int cmd)
 		             "the holy army, from this day on you will be an "
 		             "&+WAvenger&n of divine law.\n\n",
 		             ch);
-		snprintf(buffer,
-		         MAX_STRING_LENGTH,
+		snprintf(buffer, sizeof buffer,
 		         "You hear a loud voice exclaiming, '&+WWelcome my child, you shall\n"
 		         "&+Wnow be the avenging hand of %s,\n"
 		         "&+Wthe %s &+Wfor his enemies!'",

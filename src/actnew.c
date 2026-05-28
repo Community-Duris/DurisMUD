@@ -2376,11 +2376,11 @@ void do_shapechange(P_char ch, char *arg, int cmd)
 	IS_DISGUISE_SHAPE(ch)    = TRUE;
 	if (GET_CLASS(ch, CLASS_BLIGHTER))
 	{
-		snprintf(mobname, MAX_STRING_LENGTH, "skeleton %s", GET_NAME(mob));
+		snprintf(mobname, sizeof mobname, "skeleton %s", GET_NAME(mob));
 		ch->disguise.title = str_dup(mobname);
-		snprintf(mobname, MAX_STRING_LENGTH, "a skeleton of %s&n", mob->player.short_descr);
+		snprintf(mobname, sizeof mobname, "a skeleton of %s&n", mob->player.short_descr);
 		ch->disguise.name = str_dup(mobname);
-		snprintf(mobname, MAX_STRING_LENGTH, "A skeleton of %s&n stands here.", mob->player.short_descr);
+		snprintf(mobname, sizeof mobname, "A skeleton of %s&n stands here.", mob->player.short_descr);
 		ch->disguise.longname = str_dup(mobname);
 		ch->disguise.race     = RACE_SKELETON;
 	}
@@ -2394,9 +2394,9 @@ void do_shapechange(P_char ch, char *arg, int cmd)
 	ch->disguise.m_class = mob->player.m_class;
 	ch->disguise.racewar = GET_RACEWAR(mob);
 	ch->disguise.hit     = GET_LEVEL(ch) * 2;
-	snprintf(mobname, MAX_STRING_LENGTH, "&+WYou shift into the form of %s!\r\n", ch->disguise.name);
+	snprintf(mobname, sizeof mobname, "&+WYou shift into the form of %s!\r\n", ch->disguise.name);
 	send_to_char(mobname, ch);
-	snprintf(mobname, MAX_STRING_LENGTH, "&+WThe image of %s &Nshifts&+W into the form of %s!\r\n", GET_NAME(ch), ch->disguise.name);
+	snprintf(mobname, sizeof mobname, "&+WThe image of %s &Nshifts&+W into the form of %s!\r\n", GET_NAME(ch), ch->disguise.name);
 	act(mobname, FALSE, ch, 0, NULL, TO_ROOM);
 	SET_BIT(ch->specials.act, PLR_NOWHO);
 
