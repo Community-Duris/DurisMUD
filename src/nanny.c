@@ -2244,7 +2244,7 @@ void enter_game(P_desc d)
 		STATE(d) = CON_FLUSH;
 	}
 
-	if (!d->host)
+	if (!*d->host)
 	{
 		wizlog(57, "%s had null host.", GET_NAME(ch));
 		snprintf(d->host, MAX_STRING_LENGTH, "UNKNOWN");
@@ -2252,7 +2252,7 @@ void enter_game(P_desc d)
 
 	ch->only.pc->last_ip = ip2ul(d->host);
 
-	if (!d->login)
+	if (!*d->login)
 	{
 		wizlog(57, "%s had null login.", GET_NAME(ch));
 		snprintf(d->login, MAX_STRING_LENGTH, "UNKNOWN");
@@ -2910,7 +2910,7 @@ P_char find_ch_from_same_host(P_desc d)
 		if (d == k || !k->character)
 			continue;
 
-		if (k->connected == CON_PLAYING && d->character != k->character && !IS_TRUSTED(k->character) && d->host && k->host && !str_cmp(d->host, k->host))
+		if (k->connected == CON_PLAYING && d->character != k->character && !IS_TRUSTED(k->character) && *d->host && *k->host && !str_cmp(d->host, k->host))
 		{
 			// ch connected from same host
 			return k->character;
@@ -4874,8 +4874,8 @@ void newby_announce(P_desc d)
 	         d->descriptor,
 	         (d->wait / WAIT_SEC) / 60,
 	         (d->wait / WAIT_SEC) % 60,
-	         d->login ? d->login : "unknown",
-	         d->host ? d->host : "UNKNOWN");
+	         *d->login ? d->login : "unknown",
+	         *d->host ? d->host : "UNKNOWN");
 	for (i = descriptor_list; i; i = i->next)
 	{
 		if (!i->connected && i->character && IS_SET(i->character->specials.act, PLR_NAMES) && IS_TRUSTED(i->character))

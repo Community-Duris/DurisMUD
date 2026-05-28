@@ -996,7 +996,7 @@ void shopping_list(char *arg, P_char ch, P_char keeper, int shop_nr)
 					if (obj1->value[1])
 						snprintf(Gbuf3, MAX_STRING_LENGTH, "%s of %s", descbuf, drinks[obj1->value[2]]);
 					else
-						snprintf(Gbuf3, MAX_STRING_LENGTH, "%s", descbuf ? descbuf : "");
+						snprintf(Gbuf3, MAX_STRING_LENGTH, "%s", descbuf);
 
 					snprintf(Gbuf2, MAX_STRING_LENGTH, "%s for %s.\r\n", pad_ansi(Gbuf3, 45).c_str(), coin_stringv(sale));
 				}

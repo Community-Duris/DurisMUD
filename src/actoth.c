@@ -5985,7 +5985,7 @@ void do_fly(P_char ch, char *argument, int cmd)
 		ch    = mount; /* simply change who were dealing with */
 		rider = ch;
 	}
-	if (!buf)
+	if (!*buf)
 	{
 		send_to_char("Fly what, where why or who?!?\r\n", ch);
 		return;
@@ -6185,7 +6185,7 @@ void do_swim(P_char ch, char *argument, int cmd)
 		ch    = mount;
 		rider = ch;
 	}
-	if (!buf)
+	if (!*buf)
 	{
 		send_to_char("Swim what, where why or who?!?\r\n", ch);
 		return;

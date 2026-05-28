@@ -575,7 +575,7 @@ void do_release(P_char ch, char *argument, int cmd)
 
 	one_argument(argument, arg);
 	sdesc = atoi(arg);
-	if ((sdesc == 0) && arg)
+	if ((sdesc == 0) && *arg)
 	{
 		P_char t_ch = NULL;
 
@@ -7546,7 +7546,7 @@ void do_decline(P_char ch, char *arg, int cmd)
 				SEND_TO_Q("\n\nPlease enter another, more suitable fantasy name:", d);
 			}
 			d->character->only.pc->prestige = 0;
-			logit(LOG_NEWCHAR, "%s declined new char %s (%s): %s.", GET_NAME(ch), GET_NAME(d->character), (d->host ? d->host : "UNKNOWN"), (arg ? arg : "NO REASON GIVEN"));
+			logit(LOG_NEWCHAR, "%s declined new char %s (%s): %s.", GET_NAME(ch), GET_NAME(d->character), (*d->host ? d->host : "UNKNOWN"), (arg ? arg : "NO REASON GIVEN"));
 			snprintf(Gbuf1, MAX_STRING_LENGTH, "&+c*** STATUS: %s declined new player %s. (%s)\n", GET_NAME(ch), GET_NAME(d->character), arg);
 			snprintf(Gbuf2, MAX_STRING_LENGTH, "&+c*** STATUS: Someone declined new player %s. (%s)\n", GET_NAME(d->character), arg);
 			for (i = descriptor_list; i; i = i->next)
@@ -7598,7 +7598,7 @@ void do_approve(P_char ch, char *arg, int cmd)
 					         GET_NAME(d1->character),
 					         get_class_string(d1->character, Gbuf2),
 					         race_names_table[(int)GET_RACE(d1->character)].ansi,
-					         d1->host ? d1->host : "UNKNOWN",
+					         *d1->host ? d1->host : "UNKNOWN",
 					         d1->character->only.pc->pc_timer[PC_TIMER_HEAVEN] / 60,
 					         d1->character->only.pc->pc_timer[PC_TIMER_HEAVEN] % 60,
 					         d1->descriptor,
@@ -7959,20 +7959,19 @@ void do_clone(P_char ch, char *argument, int cmd)
 				}
 			}
 			/* clone EQ equiped  */
-			if (mob->equipment)
-				for (j = 0; j < MAX_WEAR; j++)
+			for (j = 0; j < MAX_WEAR; j++)
+			{
+				if (mob->equipment[j])
 				{
-					if (mob->equipment[j])
+					/* clone mob->equipment[j]  */
+					ocopy = clone_obj(mob->equipment[j]);
+					if (mob->equipment[j]->contains)
 					{
-						/* clone mob->equipment[j]  */
-						ocopy = clone_obj(mob->equipment[j]);
-						if (mob->equipment[j]->contains)
-						{
-							clone_container_obj(ocopy, mob->equipment[j]);
-						}
-						equip_char(mcopy, ocopy, j, 0);
+						clone_container_obj(ocopy, mob->equipment[j]);
 					}
+					equip_char(mcopy, ocopy, j, 0);
 				}
+			}
 			/* clone EQ carried  */
 			if (mob->carrying)
 				for (obj = mob->carrying; obj; obj = obj->next_content)
@@ -10056,7 +10055,7 @@ void do_givepet(P_char ch, char *arg, int cmd)
 			mob->only.npc->aggro_flags = 0;
 			char_to_room(mob, victim->in_room, 0);
 			setup_pet(mob, victim, -1, PET_NOCASH | PET_NOAGGRO);
-			if (msg)
+			if (*msg)
 				act(msg, TRUE, victim, 0, mob, TO_CHAR);
 			add_follower(mob, victim);
 		}
@@ -10749,7 +10748,7 @@ void do_offlinemsg(P_char ch, char *arg, int cmd)
 
 	pid = get_player_pid_from_name(name);
 
-	if (!name || !*name || *name == '?')
+	if (!*name || *name == '?')
 	{
 		snprintf(buf, MAX_STRING_LENGTH, "&+YSyntax:&N offlinemsg <player's name> <message to send>\n\r");
 		send_to_char(buf, ch);

@@ -2445,12 +2445,12 @@ void spell_radial_navigation(int level, P_char ch, char *arg, int type, P_char v
 	 * }
 	 */
 
-	if (!arg1)
+	if (!*arg1)
 	{
 		send_to_char("You must specify a direction of travel: n,s,e,w\r\n", ch);
 		return;
 	}
-	if (!arg2)
+	if (!*arg2)
 	{
 		send_to_char("You must specify the distance you wish to travel.\r\n", ch);
 		return;

@@ -713,7 +713,7 @@ void do_ctf(P_char ch, char *arg, int cmd)
 	if (!strcmp(arg1, "reset") && IS_TRUSTED(ch))
 	{
 		arg = one_argument(arg, arg2);
-		if (arg2 && isdigit(*arg2))
+		if (isdigit(*arg2))
 		{
 			for (i = 1; ctfdata[i].id; i++)
 			{
@@ -745,7 +745,7 @@ void do_ctf(P_char ch, char *arg, int cmd)
 			return;
 		}
 		arg = one_argument(arg, arg3);
-		if (arg3 && isdigit(*arg3))
+		if (isdigit(*arg3))
 		{
 			amnt = atoi(arg3);
 			if (amnt <= 0)

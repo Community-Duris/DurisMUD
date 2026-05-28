@@ -326,8 +326,8 @@ void ws_broadcast_player_login(struct descriptor_data *player_d) {
     cJSON_AddStringToObject(data, "race", ws_get_race_name(GET_RACE(player_d->character)));
     cJSON_AddStringToObject(data, "class", ws_get_class_name(player_d->character->player.m_class));
     cJSON_AddNumberToObject(data, "faction", GET_RACEWAR(player_d->character));
-    cJSON_AddStringToObject(data, "client", player_d->client_name ? player_d->client_name : "");
-    cJSON_AddStringToObject(data, "clientVersion", player_d->client_version ? player_d->client_version : "");
+    cJSON_AddStringToObject(data, "client", player_d->client_name);
+    cJSON_AddStringToObject(data, "clientVersion", player_d->client_version);
     cJSON_AddItemToObject(root, "data", data);
 
     json = cJSON_PrintUnformatted(root);

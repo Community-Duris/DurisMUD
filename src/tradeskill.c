@@ -3806,7 +3806,7 @@ int get_ival_from_proc(obj_proc_type proc)
 	    proc == vecna_deathportal || proc == portal_door || proc == portal_wormhole || proc == verzanan_portal || proc == newbie_portal || proc == no_kill_priest_obj || proc == magic_pool ||
 	    proc == moonstone_fragment || proc == treasure_chest || proc == cards_object || proc == artifact_monolith || proc == burbul_map_obj || proc == chyron_search_obj || proc == blood_stains ||
 	    proc == ice_shattered_bits || proc == tracks || proc == frost_beacon || proc == ice_block || proc == charon_ship || proc == moonstone || proc == nexus || proc == pesky_imp_chest ||
-	    proc == tower_summoning || proc == shabo_trap_north || proc == shabo_trap_north_two || proc == shabo_trap_south || shabo_trap_south_two || proc == shabo_trap_up || proc == shabo_trap_down ||
+	    proc == tower_summoning || proc == shabo_trap_north || proc == shabo_trap_north_two || proc == shabo_trap_south || proc == shabo_trap_south_two || proc == shabo_trap_up || proc == shabo_trap_down ||
 	    proc == shabo_trap_up_two || proc == slot_machine || proc == unspec_altar || proc == epic_stone || proc == stat_pool_str || proc == stat_pool_dex || proc == stat_pool_agi ||
 	    proc == stat_pool_con || proc == stat_pool_pow || proc == stat_pool_int || proc == stat_pool_wis || proc == stat_pool_cha || proc == stat_pool_luc || proc == spell_pool ||
 	    proc == druid_spring || proc == blighter_pond || proc == flying_citadel || proc == trap_razor_hooks || proc == trap_tower1_para || proc == trap_tower2_sleep || proc == hoa_plat ||

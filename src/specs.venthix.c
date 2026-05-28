@@ -715,7 +715,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
 	if (cmd == CMD_HELP && arg && strstr(arg, "zombies") && IS_TRUSTED(ch))
 	{
 		half_chop(arg, arg1, arg2);
-		if (arg2 && isname(arg2, "begin"))
+		if (isname(arg2, "begin"))
 		{
 			// set game to standby mode to setup the next round
 			obj->value[ZOMBIES_STATUS] = 2;
@@ -723,7 +723,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
 			send_to_zone(zone, "&+WThe game has started.&n\r\n");
 			return TRUE;
 		}
-		else if (arg2 && isname(arg2, "end"))
+		else if (isname(arg2, "end"))
 		{
 			obj->value[ZOMBIES_STATUS] = 0;
 			obj->timer[ZTIMER_STANDBY] = 0;
@@ -732,7 +732,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
 			zgame_clear_zombies(obj);
 			return TRUE;
 		}
-		else if (arg2 && isname(arg2, "status"))
+		else if (isname(arg2, "status"))
 		{
 			snprintf(buff, MAX_STRING_LENGTH, "&+WZombies Game Status&n\r\n");
 			snprintf(buff2, MAX_STRING_LENGTH, "&+L           Status&+W: &+c%s&n\r\n", (obj->value[ZOMBIES_STATUS] == 1 ? "On" : obj->value[ZOMBIES_STATUS] == 0 ? "Off" : "Standby"));
@@ -748,7 +748,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
 			send_to_char(buff, ch);
 			return TRUE;
 		}
-		else if (arg2 && strstr(arg2, "level"))
+		else if (strstr(arg2, "level"))
 		{
 			argument_interpreter(arg2, arg3, arg4);
 			if (isdigit(*arg4))

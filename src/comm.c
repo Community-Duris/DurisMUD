@@ -998,7 +998,7 @@ void game_loop(int port, int sslport)
 					next_d = d->next;
 					if (fcntl(d->descriptor, F_GETFD) == -1 && errno == EBADF)
 					{
-						logit(LOG_STATUS, "ebadf: closing bad descriptor %d, host=%s, ws=%d, state=%d", d->descriptor, d->host ? d->host : "null", d->websocket, d->connected);
+						logit(LOG_STATUS, "ebadf: closing bad descriptor %d, host=%s, ws=%d, state=%d", d->descriptor, *d->host ? d->host : "null", d->websocket, d->connected);
 						close_socket(d);
 					}
 				}

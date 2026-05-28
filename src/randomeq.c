@@ -1752,7 +1752,7 @@ bool identify_random(P_obj obj)
 	for (i = 0; i < 62 && spells_data[i].spell != obj->value[5]; i++)
 		;
 
-	if (i == 62 || !spells_data[i].name)
+	if (i == 62 || !*spells_data[i].name)
 		return false;
 
 	strcpy(old_name, obj->short_description);

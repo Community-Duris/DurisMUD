@@ -18494,7 +18494,7 @@ void spell_knock(int cmd, P_char ch, char *argument, int type, P_char victim, P_
 	chance  = GET_LEVEL(ch);
 	percent = number(1, 100);
 
-	if (!Gbuf2 || !*Gbuf2)
+	if (!*Gbuf2)
 	{
 		send_to_char("What requires unlocking here again?\n", ch);
 		return;

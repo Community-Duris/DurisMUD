@@ -6518,7 +6518,7 @@ void do_who(P_char ch, char *argument, int cmd)
 		         (tchReal->in_room > NOWHERE) ? world[tchReal->in_room].number : -1,
 		         tchReal->only.pc->wiz_invis,
 		         buf5,
-		         (tch->desc->host) ? tch->desc->host : "UNKNOWN");
+		         (*tch->desc->host) ? tch->desc->host : "UNKNOWN");
 
 		strcat(who_output, buf4);
 		send_to_char(who_output, ch);
@@ -6597,7 +6597,7 @@ int got_dupe_host(P_desc orig)
 
 	while (d)
 	{
-		if ((d != orig) && d->host && !strcasecmp(orig->host, d->host))
+		if ((d != orig) && *d->host && !strcasecmp(orig->host, d->host))
 		{
 			return TRUE;
 		}
@@ -6624,11 +6624,11 @@ void do_users(P_char ch, char *argument, int cmd)
 		do_users_DEPRECATED(ch, connbuf, cmd);
 		return;
 	}
-	else if (linebuf && *linebuf && is_abbrev(linebuf, "nonplaying"))
+	else if (*linebuf && is_abbrev(linebuf, "nonplaying"))
 	{
 		nonplaying = TRUE;
 	}
-	else if (linebuf && *linebuf && is_abbrev(linebuf, "get_name"))
+	else if (*linebuf && is_abbrev(linebuf, "get_name"))
 	{
 		getname = TRUE;
 	}
@@ -6656,7 +6656,7 @@ void do_users(P_char ch, char *argument, int cmd)
 
 		sprinttype(d->connected, connected_types, connbuf);
 
-		if (d->host)
+		if (*d->host)
 		{
 			if (!*d->host2)
 			{
@@ -6775,7 +6775,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 			           */
 
 		if (*name)
-			if ((!t_ch || !t_ch->player.name || !isname(t_ch->player.name, name)) && (!d->host || !strstr(d->host, name)))
+			if ((!t_ch || !*t_ch->player.name || !isname(t_ch->player.name, name)) && (!*d->host || !strstr(d->host, name)))
 				continue;
 
 		num_non_play++;
@@ -6811,7 +6811,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 		/*
 		 * Get IP Address
 		 */
-		if (d->host)
+		if (*d->host)
 		{
 			if (!*d->host2)
 			{
@@ -6829,7 +6829,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 					fclose(f);
 				}
 			}
-			if (d->login)
+			if (*d->login)
 			{
 				snprintf(line + strlen(line), MAX_STRING_LENGTH - strlen(line), " %8s %s%s&n", d->login, got_dupe_host(d) ? "&+R" : "&+Y", d->host2);
 			}
@@ -6893,7 +6893,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 			continue;
 
 		if (*name)
-			if ((!t_ch->player.name || !isname(t_ch->player.name, name)) && (!d || !d->host || !strstr(d->host, name)))
+			if ((!*t_ch->player.name || !isname(t_ch->player.name, name)) && (!d || !*d->host || !strstr(d->host, name)))
 				continue;
 
 		if (d && d->original)
@@ -6929,7 +6929,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 			/*
 			 * Get IP Address
 			 */
-			if (d->host)
+			if (*d->host)
 			{
 				if (!*d->host2)
 				{
@@ -6947,7 +6947,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 						fclose(f);
 					}
 				}
-				if (d->login)
+				if (*d->login)
 				{
 					snprintf(line + strlen(line), MAX_STRING_LENGTH - strlen(line), " %8s %s%s&n", d->login, got_dupe_host(d) ? "&+R" : "&+Y", d->host2);
 				}

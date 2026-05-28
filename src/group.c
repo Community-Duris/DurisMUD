@@ -794,7 +794,7 @@ void do_group(P_char ch, char *argument, int cmd)
 
 	if (ch->group && (victim->group == ch->group))
 	{
-		if (rank && (isname(rank, "back") || isname(rank, "front")))
+		if (*rank && (isname(rank, "back") || isname(rank, "front")))
 		{
 			return;
 			if (isname(rank, "front"))

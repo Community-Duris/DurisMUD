@@ -3570,7 +3570,7 @@ P_char get_char_ranged_vis(P_char ch, char *arg, int range)
 	 */
 	half_chop(arg, target, direction);
 
-	if (!direction || !*direction)
+	if (!*direction)
 		return NULL;
 
 	dir = dir_from_keyword(direction);

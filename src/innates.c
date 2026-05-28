@@ -3437,7 +3437,7 @@ void do_innate(P_char ch, char *arg, int cmd)
 	}
 
 	argument_interpreter(arg, innate_name + strlen(innate_name), innate_args);
-	if (!innate_name || *innate_name == '\0')
+	if (*innate_name == '\0')
 	{
 		/*
 		 * List available racial abilities

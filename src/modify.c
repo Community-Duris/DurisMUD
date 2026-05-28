@@ -1343,7 +1343,7 @@ void do_rename(P_char ch, char *arg, int cmd)
 	bool has_wrong_arg = FALSE;
 
 	arg = one_argument(arg, type);
-	if (!type || !*type || !arg || !*arg || !(is_abbrev(type, "char") || is_abbrev(type, "ship")))
+	if (!*type || !arg || !*arg || !(is_abbrev(type, "char") || is_abbrev(type, "ship")))
 	{
 		has_wrong_arg = TRUE;
 	}
@@ -1352,7 +1352,7 @@ void do_rename(P_char ch, char *arg, int cmd)
 	{
 		// get name of char whos name/ship will be renamed
 		arg = one_argument(arg, who_to_rename);
-		if (!who_to_rename || !*who_to_rename || !*arg || !arg)
+		if (!*who_to_rename || !*arg || !arg)
 		{
 			has_wrong_arg = TRUE;
 		}
@@ -1364,7 +1364,7 @@ void do_rename(P_char ch, char *arg, int cmd)
 		{
 			// get new name, drop anything after the new name since names only accept one word.
 			half_chop(arg, new_name, rest);
-			if (!new_name || !*new_name)
+			if (!*new_name)
 			{
 				has_wrong_arg = TRUE;
 			}
@@ -1430,7 +1430,7 @@ int mob_do_rename_hook(P_char npc, P_char ch, int cmd, char *arg)
 	if (!str_cmp(askFor, "rename"))
 	{
 		arg = one_argument(arg, new_name);
-		if (!*new_name || !new_name)
+		if (!*new_name)
 		{
 			snprintf(buffer, MAX_STRING_LENGTH, "Syntax: ask %s rename <newname>\r\n", npc->player.short_descr);
 			send_to_char(buffer, ch);

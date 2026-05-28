@@ -270,7 +270,7 @@ int magic_deck(P_obj obj, P_char ch, int cmd, char *argument)
 		argument = one_argument(argument, betbuf1); // get one argument from list
 		argument = one_argument(argument, betbuf2); // get SECOND argument from list
 		// We only need to check the second argument, since if it exists, the first does also.
-		if (!betbuf2)
+		if (!*betbuf2)
 		{
 			act(STR_CARDS_ARG_FAIL, FALSE, ch, NULL, NULL, TO_CHAR);
 			return TRUE;

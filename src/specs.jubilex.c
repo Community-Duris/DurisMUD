@@ -320,7 +320,7 @@ int jubilex_grid_mob_generator(P_obj obj, P_char ch, int cmd, char *arg)
 			return FALSE;
 
 		/* go through the list of mob vnums and spawn a new one if the limit hasn't yet been reached */
-		for (int i = 0; mob_vnums && mob_vnums[i] > 0; i++)
+		for (int i = 0; mob_vnums[i] > 0; i++)
 		{
 			int rnum = real_mobile(mob_vnums[i]);
 			if (mob_index[rnum].number < mob_index[rnum].limit)

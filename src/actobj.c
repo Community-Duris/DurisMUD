@@ -5457,7 +5457,7 @@ void do_wear(P_char ch, char *argument, int cmd)
 			send_to_char(Gbuf3, ch);
 		}
 	}
-	else if (!Gbuf1 || str_cmp(Gbuf1, "all")) // No Item Designated
+	else if (!*Gbuf1 || str_cmp(Gbuf1, "all")) // No Item Designated
 	{
 		send_to_char("Wear what?\r\n", ch);
 	}

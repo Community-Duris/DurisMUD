@@ -471,7 +471,7 @@ int blackjack_table(P_obj obj, P_char ch, int cmd, char *argument)
 		argument = one_argument(argument, arg);
 		one_argument(argument, arg2);
 		// We only need to check the second argument, since if it exists, the first does also.
-		if (!arg2)
+		if (!*arg2)
 		{
 			act(STR_CARDS_ARG_FAIL, FALSE, ch, NULL, NULL, TO_CHAR);
 			return TRUE;

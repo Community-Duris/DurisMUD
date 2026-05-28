@@ -1666,7 +1666,7 @@ int slot_machine(P_obj obj, P_char ch, int cmd, char *arg)
 	arg = one_argument(arg, Gbuf2); // multicoin
 	arg = one_argument(arg, Gbuf3); // multicoin
 	//  argument_interpreter(arg, Gbuf1, Gbuf2);
-	if (!Gbuf1 || !Gbuf2 || !Gbuf3)
+	if (!*Gbuf1 || !*Gbuf2 || !*Gbuf3)
 		return FALSE;
 
 	type    = coin_type(Gbuf2);
@@ -10694,7 +10694,7 @@ int god_bp(P_obj obj, P_char ch, int cmd, char *arg)
 		return FALSE;
 
 	arg = one_argument(arg, Gbuf1); // multicoin
-	if (!Gbuf1)
+	if (!*Gbuf1)
 		return FALSE;
 
 	if (!IS_TRUSTED(ch))
@@ -10753,7 +10753,7 @@ int out_of_god_bp(P_obj obj, P_char ch, int cmd, char *arg)
 		return FALSE;
 
 	arg = one_argument(arg, Gbuf1);
-	if (!Gbuf1)
+	if (!*Gbuf1)
 		return FALSE;
 
 	// check if gbuf1 is flap
