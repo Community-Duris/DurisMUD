@@ -79,8 +79,8 @@ def main() -> int:
     )
     assert_contains(
         offer,
-        "extract_obj(tmp_obj, auction_quantity > 1)",
-        "quantity auction originals should be removed as transformed source items",
+        "extract_obj(tmp_obj, FALSE)",
+        "auction removal should not double-record destroyed events through extract_obj",
     )
     assert_contains(
         extract,
@@ -90,7 +90,7 @@ def main() -> int:
     assert_order(
         offer,
         "persistence_record_item_event(\"owner_auction\"",
-        "extract_obj(tmp_obj, auction_quantity > 1)",
+        "extract_obj(tmp_obj, FALSE)",
         "auction ownership should be recorded before removing the in-memory item",
     )
 

@@ -1,0 +1,87 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+!CLAUDE.md
+docs/
+
+# Build artifacts
+*.o
+*.a
+*.so
+src/dms
+src/dms_new
+src/*.o
+src/ships/*.o
+src/ships/*.a
+
+# Player files (will be mounted as volume)
+Players/
+!Players/.gitkeep
+
+# Logs (will be mounted as volume)
+logs/
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+*$py.class
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.orig
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Docker files themselves
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Development scripts
+find_gear.py
+parse_help_markers.py
+scrape_help_from_mud.py
+import_help_to_db.py
+zonename.py
+set_god_level*.py
+promote_to_god.py
+
+# Development databases/configs
+devmysql.md
+duris_help*.hlp
+fix_mysql_schema.sql
+
+# SQL reports and analysis
+*_REPORT.md
+*_ANALYSIS.md
+*_COMPARISON.md
+*_VERDICT.md
+*_IMPACT.md
+arihfix*.md
+
+# Test data
+zonelist.txt
+
+# Build scripts (except the ones we need)
+import_help.sh
+search_haste_items.sh

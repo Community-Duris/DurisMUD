@@ -820,7 +820,7 @@ bool auction_offer(P_char ch, char *args)
 			persistence_record_item_event("owner_destroyed", tmp_obj, ch, source_owner, "destroyed", "auction_quantity_serialized_without_uid");
 		}
 		// Then extract the object.
-		extract_obj(tmp_obj, auction_quantity > 1);
+		extract_obj(tmp_obj, FALSE);
 	}
 	writeCharacter(ch, 1, ch->in_room);
 

@@ -1741,20 +1741,41 @@ static void event_deferred_character_save(P_char ch, P_char victim, P_obj obj,
 {
   struct deferred_save_slot pending;
   struct deferred_save_slot *slot;
+  int pid = data ? *((int *)data) : 0;
 
   (void) victim;
   (void) obj;
-  (void) data;
 
-  if (!IS_ALIVE(ch) || IS_NPC(ch))
+  if (!pid && ch && !IS_NPC(ch))
+    pid = GET_PID(ch);
+
+  if (!pid)
     return;
 
-  slot = find_deferred_save_slot(GET_PID(ch));
+  slot = find_deferred_save_slot(pid);
   if (!slot)
     return;
 
   pending = *slot;
   memset(slot, 0, sizeof(*slot));
+
+  if (!ch || IS_NPC(ch))
+  {
+    persistence_alert(AVATAR, "player_save", "deferred_save", "none", "none",
+                      "deferred_save_character_missing",
+                      "discarded deferred save slot for pid=%d reason=%s",
+                      pending.pid, pending.reason);
+    return;
+  }
+
+  if (!IS_ALIVE(ch))
+  {
+    persistence_alert(AVATAR, "player_save", "deferred_save", "none", "none",
+                      "deferred_save_character_not_alive",
+                      "discarded deferred save slot for pid=%d reason=%s",
+                      pending.pid, pending.reason);
+    return;
+  }
 
   if (pending.level_dirty)
     sql_update_level(ch);
@@ -1799,7 +1820,7 @@ static void persistence_schedule_checkpoint(P_char ch, int type, int delay,
            reason ? reason : "unknown");
 
   add_event(event_deferred_character_save, delay > 0 ? delay : 1, ch, 0, 0, 0,
-            0, 0);
+            &slot->pid, sizeof(slot->pid));
 }
 
 void persistence_schedule_character_save(P_char ch, int type, int delay,

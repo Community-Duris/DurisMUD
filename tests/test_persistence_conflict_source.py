@@ -39,9 +39,19 @@ def assert_order(text: str, before: str, after: str, message: str) -> None:
 def main() -> int:
     sql = read("src/sql.c")
     sql = sql[sql.index("#else"):]
+    utility = read("src/utility.c")
 
     ensure = section(sql, "static bool sql_persistence_ensure_tables", "static bool sql_persistence_ensure_reward_tables")
-    writer = section(sql, "bool sql_persistence_write_item_event_line", "bool sql_persistence_write_scalar_event_line")
+    writer = section(
+        sql,
+        "\nstatic bool sql_persistence_write_item_event_line_locked(",
+        "\nbool sql_persistence_write_item_event_line(",
+    )
+    recorder = section(
+        utility,
+        "void persistence_record_item_event",
+        "void debug(const char *format, ...)",
+    )
 
     assert_contains(
         ensure,
@@ -83,6 +93,16 @@ def main() -> int:
         "INSERT INTO persistence_item_conflicts",
         "INSERT INTO persistence_items_current",
         "conflict should be recorded before current owner is changed",
+    )
+    assert_contains(
+        utility,
+        "static unsigned long long persistence_event_time_usec(void)",
+        "item ownership events should use high-resolution event times",
+    )
+    assert_contains(
+        recorder,
+        "persistence_event_time_usec()",
+        "item event records should avoid same-second ownership ordering ties",
     )
 
     print("persistence conflict source checks passed")

@@ -64,10 +64,20 @@ def test_corpse_looting_rewrites_corpse_file_after_money_or_item_transfer() -> N
     assert "extract_obj(o_obj);" in body
 
 
+def test_corpse_save_failures_alert_when_sql_write_fails() -> None:
+    files_c = read_source("src/files.c")
+
+    write_body = section(files_c, "void writeCorpse(P_obj corpse)", "int writeItems(char *buf, P_char ch)")
+    assert "if (!sql_save_corpse(corpse))" in write_body
+    assert '"sql_save_failed"' in write_body
+    assert "persistence_alert(" in write_body
+
+
 def main() -> int:
     test_restored_player_corpses_get_tripled_recovery_decay()
     test_restore_corpses_refreshes_loaded_corpse_before_preserving_file()
     test_corpse_looting_rewrites_corpse_file_after_money_or_item_transfer()
+    test_corpse_save_failures_alert_when_sql_write_fails()
     print("corpse recovery source checks passed")
     return 0
 

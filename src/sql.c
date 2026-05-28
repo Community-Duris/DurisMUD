@@ -21,6 +21,7 @@
 #include <sys/stat.h>
 #include <time.h>
 #include <unistd.h>
+#include <pthread.h>
 #include "account.h"
 #include "assocs.h"
 #include "boon.h"
@@ -131,11 +132,14 @@ static void sql_resetConnectTimes(void);
 // The global database handler
 MYSQL *DB;
 static MYSQL *persistenceDB = NULL;
+static pthread_mutex_t persistence_sql_mutex = PTHREAD_MUTEX_INITIALIZER;
 static bool persistence_tables_ready = FALSE;
 static bool persistence_reward_tables_ready = FALSE;
 static unsigned long persistence_reward_event_sequence = 0;
 static MYSQL *sql_persistence_connection(void);
 static bool sql_persistence_ensure_reward_tables(MYSQL *db);
+static bool sql_persistence_write_item_event_line_locked(const char *line);
+static bool sql_persistence_write_scalar_event_line_locked(const char *line);
 static void sql_reward_event_key(char *buf, int buf_size, const char *type, int pid, int source_id);
 static const char *sql_scalar_clean_field(const char *in, char *buf, int buf_size);
 
@@ -1848,7 +1852,7 @@ static void persistence_parse_owner(const char *target, char *owner_type,
 	snprintf(owner_ref, owner_ref_size, "%s", colon + 1);
 }
 
-bool sql_persistence_write_item_event_line(const char *line)
+static bool sql_persistence_write_item_event_line_locked(const char *line)
 {
 	MYSQL *db;
 	char copy[PERSISTENCE_EVENT_MAX_LEN];
@@ -1977,7 +1981,18 @@ bool sql_persistence_write_item_event_line(const char *line)
 	return sql_persistence_query(db, query);
 }
 
-bool sql_persistence_write_scalar_event_line(const char *line)
+bool sql_persistence_write_item_event_line(const char *line)
+{
+	bool ok;
+
+	pthread_mutex_lock(&persistence_sql_mutex);
+	ok = sql_persistence_write_item_event_line_locked(line);
+	pthread_mutex_unlock(&persistence_sql_mutex);
+
+	return ok;
+}
+
+static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 {
 	MYSQL *db;
 	char copy[PERSISTENCE_EVENT_MAX_LEN];
@@ -2200,6 +2215,17 @@ bool sql_persistence_write_scalar_event_line(const char *line)
 	}
 
 	return sql_persistence_query(db, query);
+}
+
+bool sql_persistence_write_scalar_event_line(const char *line)
+{
+	bool ok;
+
+	pthread_mutex_lock(&persistence_sql_mutex);
+	ok = sql_persistence_write_scalar_event_line_locked(line);
+	pthread_mutex_unlock(&persistence_sql_mutex);
+
+	return ok;
 }
 
 void send_to_pid_offline(const char *msg, int pid)

@@ -15,6 +15,8 @@
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
+#include <pthread.h>
+#include <sys/time.h>
 using namespace std;
 #ifdef _HPUX_SOURCE
 #include <varargs.h>
@@ -83,6 +85,7 @@ extern const int                     rev_dir[];
 extern void                          event_spellcast(P_char, P_char, P_obj, void *);
 #define PERSISTENCE_ITEM_EVENT_PREFIX "PERSISTENCE_ITEM_EVENT|"
 #define PERSISTENCE_SCALAR_EVENT_PREFIX "PERSISTENCE_SCALAR_EVENT|"
+static pthread_mutex_t persistence_fallback_log_mutex = PTHREAD_MUTEX_INITIALIZER;
 int                                  ship_obj_proc(P_obj obj, P_char ch, int cmd, char *arg);
 extern struct mm_ds                 *dead_mob_pool;
 extern struct mm_ds                 *dead_pconly_pool;
@@ -912,6 +915,17 @@ static const char *persistence_clean_field(const char *in, char *buf,
   return buf;
 }
 
+static unsigned long long persistence_event_time_usec(void)
+{
+  struct timeval tv;
+
+  if (gettimeofday(&tv, NULL))
+    return (unsigned long long)time(NULL) * 1000000ULL;
+
+  return ((unsigned long long)tv.tv_sec * 1000000ULL) +
+         (unsigned long long)tv.tv_usec;
+}
+
 int persistence_flush_item_events(int max_events)
 {
   char line[PERSISTENCE_EVENT_MAX_LEN];
@@ -919,6 +933,9 @@ int persistence_flush_item_events(int max_events)
   FILE *log_f = NULL;
   int flushed = 0;
   int pending;
+
+  if (persistence_item_event_worker_running())
+    return 0;
 
   if (max_events <= 0)
     max_events = PERSISTENCE_EVENT_QUEUE_CAPACITY;
@@ -975,6 +992,9 @@ int persistence_flush_scalar_events(int max_events)
   FILE *log_f = NULL;
   int flushed = 0;
   int pending;
+
+  if (persistence_scalar_event_worker_running())
+    return 0;
 
   if (max_events <= 0)
     max_events = PERSISTENCE_EVENT_QUEUE_CAPACITY;
@@ -1190,15 +1210,20 @@ static int persistence_item_event_log_writer(const char *line, void *context)
           fallback_count);
   }
 
+  pthread_mutex_lock(&persistence_fallback_log_mutex);
   log_f = fopen(LOG_EVENT, "a");
   if (!log_f)
+  {
+    pthread_mutex_unlock(&persistence_fallback_log_mutex);
     return 0;
+  }
 
   if (fputs(line, log_f) < 0 || fputs("\n", log_f) < 0)
     ok = 0;
 
   if (fclose(log_f))
     ok = 0;
+  pthread_mutex_unlock(&persistence_fallback_log_mutex);
 
   return ok;
 }
@@ -1243,15 +1268,20 @@ static int persistence_scalar_event_log_writer(const char *line, void *context)
           fallback_count);
   }
 
+  pthread_mutex_lock(&persistence_fallback_log_mutex);
   log_f = fopen(LOG_EVENT, "a");
   if (!log_f)
+  {
+    pthread_mutex_unlock(&persistence_fallback_log_mutex);
     return 0;
+  }
 
   if (fputs(line, log_f) < 0 || fputs("\n", log_f) < 0)
     ok = 0;
 
   if (fclose(log_f))
     ok = 0;
+  pthread_mutex_unlock(&persistence_fallback_log_mutex);
 
   return ok;
 }
@@ -1365,8 +1395,8 @@ void persistence_record_item_event(const char *event_type, P_obj obj,
     actor_id = IS_NPC(actor) ? GET_VNUM(actor) : GET_PID(actor);
 
   snprintf(line, sizeof(line),
-           "PERSISTENCE_ITEM_EVENT|ts=%ld|event=%s|item_uid=%s|vnum=%d|item=%s|actor=%s|actor_id=%d|source=%s|target=%s|note=%s",
-           (long) time(NULL),
+           "PERSISTENCE_ITEM_EVENT|ts=%llu|event=%s|item_uid=%s|vnum=%d|item=%s|actor=%s|actor_id=%d|source=%s|target=%s|note=%s",
+           persistence_event_time_usec(),
            persistence_clean_field(event_type, event_buf, sizeof(event_buf)),
            persistence_item_uid_text(obj, uid, sizeof(uid)),
            item_vnum,

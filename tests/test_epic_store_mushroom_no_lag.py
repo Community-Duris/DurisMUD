@@ -28,6 +28,13 @@ def assert_not_contains(text: str, needle: str, message: str) -> None:
         raise AssertionError(message)
 
 
+def assert_order(text: str, before: str, after: str, message: str) -> None:
+    before_at = text.index(before)
+    after_at = text.index(after)
+    if before_at > after_at:
+        raise AssertionError(message)
+
+
 def section(text: str, start: str, end: str) -> str:
     start_at = text.index(start)
     end_at = text.index(end, start_at)
@@ -41,7 +48,7 @@ def main() -> int:
     actoth = read("src/actoth.c")
 
     epic_store = section(tradeskill, "int epic_store", "int learn_tradeskill")
-    mushroom_eat = section(actobj, "if(oaffect == 1337)", "act(\"$n eats $p.\"")
+    mushroom_eat = section(actobj, "if (oaffect == 1337)", "act(\"$n eats $p.\"")
     advance_level = section(limits, "void advance_level", "void lose_level")
 
     assert_contains(
@@ -53,6 +60,37 @@ def main() -> int:
         actoth,
         "void persistence_schedule_level_checkpoint",
         "coalesced level checkpoint scheduler must exist",
+    )
+    deferred_event = section(
+        actoth,
+        "static void event_deferred_character_save",
+        "static void persistence_schedule_checkpoint",
+    )
+    assert_contains(
+        deferred_event,
+        "int pid = data ? *((int *)data) : 0;",
+        "deferred save event should carry the pid separately from the character pointer",
+    )
+    assert_contains(
+        deferred_event,
+        "pending = *slot;",
+        "deferred save event should copy the pending slot before clearing it",
+    )
+    assert_order(
+        deferred_event,
+        "memset(slot, 0, sizeof(*slot));",
+        "if (!IS_ALIVE(ch))",
+        "stale deferred save slots must be cleared even if the character is no longer alive",
+    )
+    assert_contains(
+        deferred_event,
+        "deferred_save_character_missing",
+        "deferred save event should alert and clear the slot if the character pointer is gone",
+    )
+    assert_contains(
+        actoth,
+        "&slot->pid, sizeof(slot->pid)",
+        "deferred save scheduling should copy the pid into event data",
     )
     assert_contains(
         epic_store,

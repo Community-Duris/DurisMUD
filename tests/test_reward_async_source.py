@@ -45,6 +45,27 @@ def main() -> int:
     epic = section(sql, "void log_epic_gain_event", "/* The prepstatement_duris_sql table")
     writer = section(sql, "bool sql_persistence_write_scalar_event_line", "void send_to_pid_offline")
 
+    assert_contains(
+        sql,
+        "static pthread_mutex_t persistence_sql_mutex",
+        "background persistence writers should serialize access to the shared MySQL handle",
+    )
+    for writer_name in (
+        "sql_persistence_write_item_event_line",
+        "sql_persistence_write_scalar_event_line",
+    ):
+        wrapper = section(sql, f"\nbool {writer_name}(", "\n}")
+        assert_contains(
+            wrapper,
+            "pthread_mutex_lock(&persistence_sql_mutex);",
+            f"{writer_name} should lock the shared persistence SQL connection",
+        )
+        assert_contains(
+            wrapper,
+            "pthread_mutex_unlock(&persistence_sql_mutex);",
+            f"{writer_name} should unlock the shared persistence SQL connection",
+        )
+
     for name, block in (
         ("world quest completion", quest),
         ("zone touch", zone),
