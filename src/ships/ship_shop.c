@@ -2080,7 +2080,7 @@ int buy_hull(P_char ch, P_ship ship, int owned, char *arg1, char *arg2)
 		{
 			if (GET_EPIC_POINTS(ch) < SHIPTYPE_EPIC_COST(hull_type))
 			{
-				send_to_char_f(ch, "&+gThat upgrade costs &+W%d epics&+g!&n\n", SHIPTYPE_EPIC_COST(1928));
+				send_to_char_f(ch, "&+gThat upgrade costs &+W%d epics&+g!&n\n", SHIPTYPE_EPIC_COST(hull_type));
 				return TRUE;
 			}
 			cost *= -1;
