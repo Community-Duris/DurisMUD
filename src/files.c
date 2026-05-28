@@ -1345,6 +1345,147 @@ int writeWitness(char *buf, wtns_rec *rec)
 	return (int)(buf - start);
 }
 
+static int persistence_write_character_flat_fallback(P_char ch, int type, int room)
+{
+	FILE        *f;
+	char        *buf, *skill_off, *affect_off, *item_off, *size_off, *witness_off, *tmp;
+	char        Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH], dir[MAX_STRING_LENGTH];
+	int         bak;
+	static char fallback_buff[SAV_MAXSIZE * 2];
+	struct stat statbuf;
+
+	if (!ch || !GET_NAME(ch))
+		return 0;
+
+	buf = fallback_buff;
+	ADD_BYTE(buf, (char)SAV_SAVEVERS);
+	ADD_BYTE(buf, (char)(short_size));
+	ADD_BYTE(buf, (char)(int_size));
+	ADD_BYTE(buf, (char)(long_size));
+	ADD_BYTE(buf, (char)type);
+
+	skill_off = buf;
+	ADD_INT(buf, (int)0);
+	witness_off = buf;
+	ADD_INT(buf, (int)0);
+	affect_off = buf;
+	ADD_INT(buf, (int)0);
+	item_off = buf;
+	ADD_INT(buf, (int)0);
+	size_off = buf;
+	ADD_INT(buf, (int)0);
+	ADD_INT(buf, (ch->specials.act3));
+	ADD_INT(buf, room);
+	ADD_LONG(buf, time(0));
+
+	buf += writeStatus(buf, ch, ((type != RENT_POOFARTI) && (type != RENT_SWAPARTI) && (type != RENT_FIGHTARTI)) ? TRUE : FALSE);
+	ADD_INT(skill_off, (int)(buf - fallback_buff));
+	buf += writeSkills(buf, ch, MAX_SKILLS);
+	ADD_INT(witness_off, (int)(buf - fallback_buff));
+	buf += writeWitness(buf, ch->specials.witnessed);
+	ADD_INT(affect_off, (int)(buf - fallback_buff));
+	updateShortAffects(ch);
+	buf += writeAffects(buf, ch->affected);
+	ADD_INT(item_off, (int)(buf - fallback_buff));
+	buf += writeItems(buf, ch);
+	ADD_INT(size_off, (int)(buf - fallback_buff));
+
+	if ((int)(buf - fallback_buff) > SAV_MAXSIZE)
+	{
+		persistence_alert(AVATAR, "player_flat_fallback", GET_NAME(ch), "none",
+		                  "none", "fallback_too_large",
+		                  "type=%d room=%d size=%d max=%d",
+		                  type, room, (int)(buf - fallback_buff), SAV_MAXSIZE);
+		return 0;
+	}
+
+	snprintf(dir, sizeof(dir), "%s/%c", SAVE_DIR, LOWER(*ch->player.name));
+	mkdir(dir, 0775);
+	snprintf(Gbuf1, sizeof(Gbuf1), "%s/", dir);
+	tmp = Gbuf1 + strlen(Gbuf1);
+	strncat(Gbuf1, GET_NAME(ch), sizeof(Gbuf1) - strlen(Gbuf1) - 1);
+	for (; *tmp; tmp++)
+		*tmp = LOWER(*tmp);
+	snprintf(Gbuf2, sizeof(Gbuf2), "%s.bak", Gbuf1);
+
+	if (stat(Gbuf1, &statbuf) == 0)
+	{
+		if (rename(Gbuf1, Gbuf2) == -1)
+		{
+			persistence_alert(AVATAR, "player_flat_fallback", GET_NAME(ch),
+			                  "none", "none", "backup_failed",
+			                  "path=%s errno=%d", Gbuf1, errno);
+			return 0;
+		}
+		bak = 1;
+	}
+	else
+	{
+		if (errno != ENOENT)
+		{
+			persistence_alert(AVATAR, "player_flat_fallback", GET_NAME(ch),
+			                  "none", "none", "stat_failed",
+			                  "path=%s errno=%d", Gbuf1, errno);
+			return 0;
+		}
+		bak = 0;
+	}
+
+	f = fopen(Gbuf1, "wb");
+	if (!f)
+	{
+		persistence_alert(AVATAR, "player_flat_fallback", GET_NAME(ch),
+		                  "none", "none", "open_failed",
+		                  "path=%s errno=%d", Gbuf1, errno);
+		bak -= 2;
+	}
+	else
+	{
+		if (fwrite(fallback_buff, 1, (unsigned)(buf - fallback_buff), f) != (size_t)(buf - fallback_buff))
+		{
+			persistence_alert(AVATAR, "player_flat_fallback", GET_NAME(ch),
+			                  "none", "none", "write_failed",
+			                  "path=%s errno=%d", Gbuf1, errno);
+			fclose(f);
+			bak -= 2;
+		}
+		else if (fclose(f))
+		{
+			persistence_alert(AVATAR, "player_flat_fallback", GET_NAME(ch),
+			                  "none", "none", "close_failed",
+			                  "path=%s errno=%d", Gbuf1, errno);
+			bak -= 2;
+		}
+	}
+
+	switch (bak)
+	{
+		case 1:
+			if (unlink(Gbuf2) == -1)
+				logit(LOG_FILE, "Could not delete backup pfile %s after fallback save.", Gbuf2);
+		case 0:
+			persistence_alert(AVATAR, "player_flat_fallback", GET_NAME(ch),
+			                  "none", "none", "fallback_saved",
+			                  "type=%d room=%d path=%s size=%d",
+			                  type, room, Gbuf1, (int)(buf - fallback_buff));
+			return 1;
+
+		case -1:
+			if (rename(Gbuf2, Gbuf1) == -1)
+			{
+				persistence_alert(AVATAR, "player_flat_fallback", GET_NAME(ch),
+				                  "none", "none", "restore_failed",
+				                  "path=%s backup=%s errno=%d", Gbuf1, Gbuf2, errno);
+			}
+			return 0;
+
+		case -2:
+			return 0;
+	}
+
+	return 0;
+}
+
 void delete_knownShapes(P_char ch)
 {
 	struct char_shapechange_data *curShape = ch->only.pc->knownShapes;
@@ -1527,6 +1668,13 @@ int writeCharacter(P_char ch, int type, int room)
 			                  "none", "sql_save_failed",
 			                  "owner_pid=%d owner_assoc_id=%d",
 			                  owner_pid, owner_assoc_id);
+			if (!persistence_write_character_flat_fallback(ch, type, room))
+			{
+				persistence_alert(AVATAR, "locker", GET_NAME(ch), "none",
+				                  "none", "flat_fallback_failed",
+				                  "owner_pid=%d owner_assoc_id=%d",
+				                  owner_pid, owner_assoc_id);
+			}
 			result = 0;
 		}
 	}
@@ -1539,6 +1687,12 @@ int writeCharacter(P_char ch, int type, int room)
 			persistence_alert(AVATAR, "player", GET_NAME(ch), "none",
 			                  "none", "sql_save_failed",
 			                  "type=%d room=%d", type, room);
+			if (!persistence_write_character_flat_fallback(ch, type, room))
+			{
+				persistence_alert(AVATAR, "player", GET_NAME(ch), "none",
+				                  "none", "flat_fallback_failed",
+				                  "type=%d room=%d", type, room);
+			}
 			result = 0;
 		}
 	}
