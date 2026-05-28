@@ -6215,7 +6215,7 @@ void do_setattr(P_char ch, char *arg, int cmd)
 	/* Note that following macro will only work on non-Cray   */
 	/* architectures. */
 
-#define OFFSET_OF(Type, Field) ((int)(((char *)(&(((Type)NULL)->Field))) - ((char *)NULL)))
+#define OFFSET_OF(Type, Field) ((size_t)(((char *)(&(((Type)NULL)->Field))) - ((char *)NULL)))
 
 	/* Declaration */
 

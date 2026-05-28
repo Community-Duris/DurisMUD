@@ -1320,7 +1320,7 @@ P_char captain_is_aboard(P_ship ship)
 bool pc_is_aboard(P_ship ship)
 {
 	if (!(ship))
-		return NULL;
+		return false;
 
 	for (int i = 0; i < ship->room_count; i++)
 	{
