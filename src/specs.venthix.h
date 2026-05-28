@@ -1,5 +1,5 @@
 #ifndef _SPECS_VENTHIX_H_
-#define _SPESC_VENTHIX_H_
+#define _SPECS_VENTHIX_H_
 
 #include <vector>
 using namespace std;
