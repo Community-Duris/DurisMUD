@@ -185,13 +185,7 @@ class Guild
 	friend int    migrate_guilds_from_files(void);
 
 public:
-	unsigned int get_id()
-	{
-		if (this == NULL)
-			return 0;
-		else
-			return id_number;
-	}
+	unsigned int get_id() { return id_number; }
 	unsigned int get_racewar() { return racewar; }
 	char        *get_top_fragger() { return frags.topfragger; }
 	long         get_top_frags() { return frags.top_frags; }
