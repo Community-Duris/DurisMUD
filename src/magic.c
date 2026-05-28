@@ -7683,7 +7683,6 @@ void spell_ventriloquate(int level, P_char ch, char *arg, int type, P_char victi
 
 void spell_word_of_recall(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
-	P_char rider;
 	int    loc_nr, e_pos, heavy;
 	int    a, b = 0;
 
@@ -7778,7 +7777,7 @@ void spell_word_of_recall(int level, P_char ch, char *arg, int type, P_char vict
 	e_pos = heavy = 0;
 	do
 	{
-		if (IS_CARRYING_W(victim, rider) > ((CAN_CARRY_W(victim) / 100) * 70))
+		if (total_carried_weight(victim) > ((CAN_CARRY_W(victim) / 100) * 70))
 			if (victim->equipment[e_pos])
 			{
 				logit(LOG_RECALL, "WORD OF RECALL: (%s) drops (%s) in [%d].", GET_NAME(victim), victim->equipment[e_pos]->short_description, world[victim->in_room].number);

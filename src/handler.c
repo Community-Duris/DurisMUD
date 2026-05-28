@@ -2947,7 +2947,7 @@ bool obj_is_in_container(P_obj obj, P_obj container)
  */
 void Decay(P_obj obj)
 {
-	P_char carrier = NULL, rider;
+	P_char carrier = NULL;
 	P_obj  t_obj = NULL, t_obj2 = NULL;
 	int    pos, dest            = 0, old_load;
 	bool   corpselog    = FALSE;
@@ -3027,7 +3027,7 @@ void Decay(P_obj obj)
 		if (OBJ_CARRIED(t_obj))
 		{
 			carrier  = t_obj->loc.carrying;
-			old_load = IS_CARRYING_W(carrier, rider);
+			old_load = total_carried_weight(carrier);
 
 			if (IS_SET(obj->value[1], PC_CORPSE))
 			{
@@ -3042,7 +3042,7 @@ void Decay(P_obj obj)
 		else if (OBJ_WORN(t_obj))
 		{
 			carrier  = t_obj->loc.wearing;
-			old_load = IS_CARRYING_W(carrier, rider);
+			old_load = total_carried_weight(carrier);
 
 			if (IS_SET(obj->value[1], PC_CORPSE))
 			{
@@ -3157,9 +3157,9 @@ void Decay(P_obj obj)
 
 	if (carrier)
 	{
-		if (old_load > IS_CARRYING_W(carrier, rider))
+		if (old_load > total_carried_weight(carrier))
 			send_to_char("Your load suddenly feels lighter!\r\n", carrier);
-		if (old_load < IS_CARRYING_W(carrier, rider))
+		if (old_load < total_carried_weight(carrier))
 			send_to_char("Your load suddenly feels heavier!\r\n", carrier);
 	}
 }

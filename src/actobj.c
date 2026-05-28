@@ -96,7 +96,6 @@ void get(P_char ch, P_obj o_obj, P_obj s_obj, int showit)
 	P_obj   corpse = NULL;
 	P_event e1     = NULL;
 	bool    slip   = FALSE;
-	P_char  rider  = NULL;
 
 	if (!o_obj || !ch)
 	{
@@ -209,7 +208,7 @@ void get(P_char ch, P_obj o_obj, P_obj s_obj, int showit)
 	      GET_ITEM_TYPE(o_obj),
 	      GET_OBJ_WEIGHT(o_obj),
 	      IS_CARRYING_N(ch),
-	      IS_CARRYING_W(ch, rider),
+	      total_carried_weight(ch),
 	      showit ? 1 : 0,
 	      s_obj && s_obj->short_description ? s_obj->short_description : "(none)",
 	      s_obj ? OBJ_VNUM(s_obj) : -1);
@@ -236,21 +235,17 @@ void get(P_char ch, P_obj o_obj, P_obj s_obj, int showit)
 
 	if ((o_obj->type == ITEM_MONEY) && ((o_obj->value[0] > 0) || (o_obj->value[1] > 0) || (o_obj->value[2] > 0) || (o_obj->value[3] > 0)))
 	{
-		GET_PLATINUM(ch) += (got_p = o_obj->value[3]); //(got_p = MAX(0, MIN(o_obj->value[3], CAN_CARRY_COINS(ch))));
-		                                               //    notall += (got_p != o_obj->value[3]);
-		o_obj->value[3] = 0;                           //-= got_p;
+		GET_PLATINUM(ch) += (got_p = o_obj->value[3]);
+		o_obj->value[3] = 0;
 
-		GET_GOLD(ch) += (got_g = o_obj->value[2]); //(got_g = MAX(0, MIN(o_obj->value[2], CAN_CARRY_COINS(ch))));
-		                                           //    notall += (got_g != o_obj->value[2]);
-		o_obj->value[2] = 0;                       //-= got_g;
+		GET_GOLD(ch) += (got_g = o_obj->value[2]);
+		o_obj->value[2] = 0;
 
-		GET_SILVER(ch) += (got_s = o_obj->value[1]); //(got_s = MAX(0, MIN(o_obj->value[1], CAN_CARRY_COINS(ch))));
-		                                             //    notall += (got_s != o_obj->value[1]);
-		o_obj->value[1] = 0;                         //-= got_s;
+		GET_SILVER(ch) += (got_s = o_obj->value[1]);
+		o_obj->value[1] = 0;
 
-		GET_COPPER(ch) += (got_c = o_obj->value[0]); //(got_c = MAX(0, MIN(o_obj->value[0], CAN_CARRY_COINS(ch))));
-		                                             //    notall += (got_c != o_obj->value[0]);
-		o_obj->value[0] = 0;                         //-= got_c;
+		GET_COPPER(ch) += (got_c = o_obj->value[0]);
+		o_obj->value[0] = 0;
 
 		int total_value = (got_p * 1000 + got_g * 100 + got_s * 10 + got_c);
 		logit(LOG_DEBUG,
@@ -854,7 +849,6 @@ static bool do_get_try_container_item(P_char ch,
                                       bool        report_carry_limit)
 {
 	const bool local_container = source_is_local;
-	P_char rider = NULL;
 	char Gbuf3[MAX_STRING_LENGTH];
 
 	if (!CAN_SEE_OBJ(ch, o_obj) && !local_container)
@@ -879,9 +873,9 @@ static bool do_get_try_container_item(P_char ch,
 
 	if (IS_CARRYING_N(ch) < CAN_CARRY_N(ch))
 	{
-		if (((IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(o_obj)) <= CAN_CARRY_W(ch)) || local_container)
+		if (((total_carried_weight(ch) + GET_OBJ_WEIGHT(o_obj)) <= CAN_CARRY_W(ch)) || local_container)
 		{
-			return do_get_finalize_container_item_or_reject(ch, hood, s_obj, o_obj, total, found, corpse_flag, local_container ? 1 : 0, IS_CARRYING_W(ch, rider), CAN_CARRY_W(ch), reject_tag, post_tag, fail);
+			return do_get_finalize_container_item_or_reject(ch, hood, s_obj, o_obj, total, found, corpse_flag, local_container ? 1 : 0, total_carried_weight(ch), CAN_CARRY_W(ch), reject_tag, post_tag, fail);
 		}
 
 		logit(LOG_DEBUG,
@@ -892,7 +886,7 @@ static bool do_get_try_container_item(P_char ch,
 		      o_obj->short_description ? o_obj->short_description : "?",
 		      OBJ_VNUM(o_obj),
 		      GET_OBJ_WEIGHT(o_obj),
-		      IS_CARRYING_W(ch, rider),
+		      total_carried_weight(ch),
 		      CAN_CARRY_W(ch),
 		      s_obj->short_description ? s_obj->short_description : "(none)",
 		      OBJ_VNUM(s_obj),
@@ -1035,7 +1029,7 @@ static void do_get_mark_alldot(char *arg1, bool &alldot)
 
 void do_get(P_char ch, char *argument, int cmd)
 {
-	P_char hood = NULL, owner = NULL, rider;
+	P_char hood = NULL, owner = NULL;
 	P_obj  s_obj = NULL, o_obj = NULL, next_obj;
 	bool   found = FALSE, fail = FALSE, corpse_flag = FALSE, alldot = FALSE, carried, stop_bulk = FALSE;
 	char   Gbuf2[MAX_STRING_LENGTH], Gbuf3[MAX_STRING_LENGTH];
@@ -1095,7 +1089,7 @@ void do_get(P_char ch, char *argument, int cmd)
 	      fight_in_room(ch) ? 1 : 0,
 	      on_front_line(ch) ? 1 : 0,
 	      IS_CARRYING_N(ch),
-	      IS_CARRYING_W(ch, rider));
+	      total_carried_weight(ch));
 
 	if (IS_NPC(ch) && ch->following && (ch->in_room == ch->following->in_room))
 	{
@@ -1188,7 +1182,7 @@ void do_get(P_char ch, char *argument, int cmd)
 			      GET_ITEM_TYPE(o_obj),
 			      GET_OBJ_WEIGHT(o_obj),
 			      IS_CARRYING_N(ch),
-			      IS_CARRYING_W(ch, rider),
+			      total_carried_weight(ch),
 			      do_get_obj_is_takeable(ch, o_obj) ? 1 : 0,
 			      ((GET_LEVEL(ch) >= 60) && !IS_NPC(ch)) ? 1 : 0,
 			      alldot ? 1 : 0,
@@ -1215,7 +1209,7 @@ void do_get(P_char ch, char *argument, int cmd)
 
 				if ((IS_CARRYING_N(ch) + 1) <= CAN_CARRY_N(ch) || ((OBJ_VNUM(o_obj) > LOWEST_MAT_VNUM) && (OBJ_VNUM(o_obj) <= HIGHEST_MAT_VNUM)))
 				{
-					if ((IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(o_obj)) <= CAN_CARRY_W(ch))
+					if ((total_carried_weight(ch) + GET_OBJ_WEIGHT(o_obj)) <= CAN_CARRY_W(ch))
 					{
 						if (do_get_obj_is_takeable(ch, o_obj))
 						{
@@ -1231,7 +1225,7 @@ void do_get(P_char ch, char *argument, int cmd)
 							      OBJ_VNUM(o_obj),
 							      IS_CARRYING_N(ch),
 							      CAN_CARRY_N(ch),
-							      IS_CARRYING_W(ch, rider),
+							      total_carried_weight(ch),
 							      CAN_CARRY_W(ch));
 							do_get_reject_not_takeable(ch, o_obj, fail);
 						}
@@ -1287,7 +1281,7 @@ fail = TRUE;
 			      o_obj->obj_uid,
 			      CAN_SEE_OBJ(ch, o_obj) ? 1 : 0,
 			      IS_CARRYING_N(ch),
-			      IS_CARRYING_W(ch, rider));
+			      total_carried_weight(ch));
 			/*
 			 * was object disarmed?  did PC still manage to get it? if so,
 			 * get object --TAM
@@ -1297,7 +1291,7 @@ fail = TRUE;
 
 			if (IS_CARRYING_N(ch) < CAN_CARRY_N(ch) || ((OBJ_VNUM(o_obj) > LOWEST_MAT_VNUM) && (OBJ_VNUM(o_obj) <= HIGHEST_MAT_VNUM)))
 			{
-				if ((IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(o_obj)) <= CAN_CARRY_W(ch))
+				if ((total_carried_weight(ch) + GET_OBJ_WEIGHT(o_obj)) <= CAN_CARRY_W(ch))
 				{
 					if (do_get_obj_is_takeable(ch, o_obj))
 					{
@@ -1382,7 +1376,7 @@ fail = TRUE;
 			      arg1,
 			      arg2,
 			      IS_CARRYING_N(ch),
-			      IS_CARRYING_W(ch, rider),
+			      total_carried_weight(ch),
 			      IS_TRUSTED(ch) ? 1 : 0);
 			send_to_char(Gbuf3, ch);
 			fail = TRUE;
@@ -2645,7 +2639,7 @@ void do_give(P_char ch, char *argument, int cmd)
 	char   arg[MAX_INPUT_LENGTH];
 	char   Gbuf1[MAX_STRING_LENGTH];
 	int    amount, ctype;
-	P_char vict, rider;
+	P_char vict;
 	P_obj  obj;
 
 	/*  struct affected_type af;*/
@@ -2711,11 +2705,6 @@ void do_give(P_char ch, char *argument, int cmd)
 
 		send_to_char("Ok.\r\n", ch);
 
-		if (((CAN_CARRY_COINS(vict, rider) < amount) || (amount > 1000)) && !is_linked_to(ch, vict, LNK_CONSENT) && (!IS_TRUSTED(vict)) && (cmd != -4) && !IS_TRUSTED(ch))
-		{
-			act("$E must consent to you before you can overload $M.", 0, ch, 0, vict, TO_CHAR);
-			return;
-		}
 		if (((ctype == 3) && (amount > 999)) || ((ctype == 2) && (amount > 99)))
 		{
 			wizlog(56, "%s gives %s %d %s in [%d]", J_NAME(ch), J_NAME(vict), amount, (ctype == 3) ? "plat" : "gold", world[ch->in_room].number);
@@ -2810,7 +2799,7 @@ void do_give(P_char ch, char *argument, int cmd)
 		act("$N seems to have $S hands full.", 0, ch, 0, vict, TO_CHAR);
 		return;
 	}
-	if (((((GET_OBJ_WEIGHT(obj) + IS_CARRYING_W(vict, rider)) > CAN_CARRY_W(vict)) || (GET_OBJ_WEIGHT(obj) > 25)) && !is_linked_to(ch, vict, LNK_CONSENT)) && (cmd != -4) && (!IS_TRUSTED(ch)))
+	if (((((GET_OBJ_WEIGHT(obj) + total_carried_weight(vict)) > CAN_CARRY_W(vict)) || (GET_OBJ_WEIGHT(obj) > 25)) && !is_linked_to(ch, vict, LNK_CONSENT)) && (cmd != -4) && (!IS_TRUSTED(ch)))
 	{
 		act("$E must consent to you before you can overload $M.", 0, ch, 0, vict, TO_CHAR);
 		return;

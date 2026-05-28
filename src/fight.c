@@ -1334,7 +1334,6 @@ bool AdjacentInRoom(P_char ch, P_char ch2)
 P_obj make_corpse(P_char ch, int loss)
 {
 	P_obj  corpse, o, money;
-	P_char rider;
 	char   buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 	int    i, e_time;
 	int    random_zone_map_room = 0;
@@ -1413,8 +1412,8 @@ P_obj make_corpse(P_char ch, int loss)
 	if (IS_NPC(ch))
 	{
 		e_time                       = get_property("timer.decay.corpse.npc", 120) * WAIT_MIN;
-		corpse->weight               = IS_CARRYING_W(ch, rider) * 2;
-		corpse->value[CORPSE_WEIGHT] = IS_CARRYING_W(ch, rider);
+		corpse->weight               = total_carried_weight(ch) * 2;
+		corpse->value[CORPSE_WEIGHT] = total_carried_weight(ch);
 		corpse->value[CORPSE_FLAGS]  = NPC_CORPSE;
 		if (ch->only.npc)
 			corpse->value[CORPSE_VNUM] = mob_index[GET_RNUM(ch)].virtual_number;
@@ -1425,8 +1424,8 @@ P_obj make_corpse(P_char ch, int loss)
 	else
 	{
 		e_time                       = get_property("timer.decay.corpse.pc", 120) * WAIT_MIN;
-		corpse->weight               = GET_WEIGHT(ch) + IS_CARRYING_W(ch, rider);
-		corpse->value[CORPSE_WEIGHT] = IS_CARRYING_W(ch, rider); /* contains */
+		corpse->weight               = GET_WEIGHT(ch) + total_carried_weight(ch);
+		corpse->value[CORPSE_WEIGHT] = total_carried_weight(ch); /* contains */
 		corpse->value[CORPSE_FLAGS]  = PC_CORPSE;
 		corpse->value[CORPSE_PID]    = GET_PID(ch);
 
@@ -9003,7 +9002,6 @@ case RACEWAR_NEUTRAL:
 
 	int calculate_attacks(P_char ch, int attacks[])
 	{
-		P_char rider;
 		int    number_attacks = 0;
 		P_obj  weapon;
 
@@ -9018,13 +9016,9 @@ case RACEWAR_NEUTRAL:
 			int  num_atts         = MonkNumberOfAttacks(ch);
 			int  weight_threshold = GET_C_STR(ch) / 2;
 
-			if (!IS_TRUSTED(ch) && (IS_CARRYING_W(ch, rider) >= weight_threshold) && IS_PC(ch))
+			if (!IS_TRUSTED(ch) && (total_carried_weight(ch) >= weight_threshold) && IS_PC(ch))
 			{
-				// if (affected_by_spell(ch, SPELL_STONE_SKIN))
-				// num_atts -=
-				// MIN(num_atts - 1, (int) ((IS_CARRYING_W(ch, rider) - 20) / 10));
-				// else
-				num_atts -= MIN(num_atts - 1, (int)((IS_CARRYING_W(ch, rider) - 30) / 10));
+				num_atts -= MIN(num_atts - 1, (int)((total_carried_weight(ch) - 30) / 10));
 
 				// if (!number(0, 4))
 				send_to_char("&+LYou feel weighed down, which is causing you to lose attacks.&n\r\n", ch);

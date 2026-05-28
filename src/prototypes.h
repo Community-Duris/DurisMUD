@@ -3128,6 +3128,7 @@ void                  request_shutdown(int shutdown_type, const char *issuer, co
 
 int                   distance_from_shore(int);
 int                   dir_from_keyword(char *);
+int                   total_carried_weight(P_char);
 int                   weight_notches_above_naked(P_char);
 char                  char_in_snoopby_list(snoop_by_data *, P_char);
 void                  rem_char_from_snoopby_list(snoop_by_data **, P_char);

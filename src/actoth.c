@@ -2882,7 +2882,7 @@ void do_steal(P_char ch, char *argument, int cmd)
 	int    skl;
 	char   victim_name[MAX_INPUT_LENGTH];
 	char   obj_name[MAX_INPUT_LENGTH];
-	P_char victim, rider;
+	P_char victim;
 
 	P_obj obj = NULL;
 	int   percent, roll, i, type = 0;
@@ -2943,7 +2943,7 @@ void do_steal(P_char ch, char *argument, int cmd)
 		send_to_char("My! Aren't we the greedy one!  You couldn't carry anything more if it was just\r\nlaying around on the ground!\r\n", ch);
 		return;
 	}
-	if (IS_CARRYING_W(ch, rider) >= CAN_CARRY_W(ch))
+	if (total_carried_weight(ch) >= CAN_CARRY_W(ch))
 	{
 		send_to_char("Sheesh!  With that load it's a wonder you can walk!\r\n", ch);
 		return;
@@ -3127,7 +3127,7 @@ void do_steal(P_char ch, char *argument, int cmd)
 			break;
 		case 1:
 			/* redoing this so each location has a flag mod */
-			if ((IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(obj)) > CAN_CARRY_W(ch))
+			if ((total_carried_weight(ch) + GET_OBJ_WEIGHT(obj)) > CAN_CARRY_W(ch))
 			{
 				send_to_char("Oooof!  Damn that's heavy!\r\n", ch);
 				failed = TRUE;
@@ -3195,7 +3195,7 @@ void do_steal(P_char ch, char *argument, int cmd)
 			else
 			{
 				/* Steal the item */
-				if (!failed && ((IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(obj)) > CAN_CARRY_W(ch)))
+				if (!failed && ((total_carried_weight(ch) + GET_OBJ_WEIGHT(obj)) > CAN_CARRY_W(ch)))
 				{
 					send_to_char("Oooof!  Damn that's heavy!\r\n", ch);
 					failed = TRUE;
@@ -3484,7 +3484,7 @@ bool newsteal_CheckIfValid(P_char ch, const char *victim_name, const char *args)
                  ch);
     return false;
   }
-  if (IS_CARRYING_W(ch, rider) >= CAN_CARRY_W(ch))
+  if (total_carried_weight(ch) >= CAN_CARRY_W(ch))
   {
     send_to_char("Sheesh!  With that load it's a wonder you can walk!\r\n", ch);
     return false;
@@ -6076,21 +6076,6 @@ void do_fly(P_char ch, char *argument, int cmd)
 				act("You fly up higher.", FALSE, ch, 0, rider, TO_VICT);
 			}
 			act("$n flies up from below.", TRUE, ch, 0, 0, TO_ROOM);
-			/*
-			      if (!IS_MAP_ROOM(ch->in_room) && ch->specials.z_cord > 2 && OUTSIDE(ch))
-			        if (real_room0(maproom_of_zone(world[zone->real_bottom].zone))) {
-			          char_from_room(ch);
-			          char_to_room(ch,
-			              real_room0(maproom_of_zone(world[zone->real_bottom].zone)), -4);
-
-			          saw_map = 1;
-			          if (rider) {
-			            char_from_room(rider);
-			            char_to_room(rider, ch->in_room, -4);
-			            saw_map = 1;
-			          }
-			        }
-			*/
 		}
 	}
 	else if (!str_cmp(buf, "down"))
@@ -6137,13 +6122,6 @@ void do_fly(P_char ch, char *argument, int cmd)
 	/* flying mounts, et al */
 	if (rider)
 		rider->specials.z_cord = ch->specials.z_cord;
-	/*
-	  if (!saw_map) {
-	    if (rider)
-	      do_look(rider, 0, -4);
-	    do_look(ch, 0, -4);
-	  }
-	*/
 	/* Followers */
 	if (ch->followers)
 	{

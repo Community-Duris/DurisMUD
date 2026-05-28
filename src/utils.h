@@ -486,26 +486,17 @@ int race_size(int race);
 #define GET_OBJ_SIZE(obj)  (((obj)->size > 0) ? (obj)->size : 0)
 #define GET_OBJ_SPACE(obj) (((obj)->space > 0) ? (obj)->space : 0)
 
-#define COIN_WEIGHT(c, s, g, p) (0)
-// #define COIN_WEIGHT(c, s, g, p) (((c) + (s) + (g) + (p)) / 50)
-
 #define CAN_CARRY_W(ch) (str_app[STAT_INDEX(GET_C_STR(ch))].carry_w + (IS_TRUSTED(ch) ? 20000 : 0))
 
 #define CAN_CARRY_N(ch) (IS_TRUSTED(ch) ? 3000 : (STAT_INDEX(GET_C_DEX(ch)) / 3) + (IS_NPC(ch) ? 12 : 6))
-
-#define IS_CARRYING_W(ch, rider)                                                                                                                                                                       \
-	((ch)->specials.carry_weight + COIN_WEIGHT(GET_COPPER(ch), GET_SILVER(ch), GET_GOLD(ch), GET_PLATINUM(ch)) +                                                                                       \
-	 (((rider = GET_RIDER(ch)) == NULL) ? 0 : (rider->player.weight + rider->specials.carry_weight)) + COIN_WEIGHT(GET_COPPER(rider), GET_SILVER(rider), GET_GOLD(rider), GET_PLATINUM(rider)))
 
 #define GET_CARRYING_W(ch) ((ch)->specials.carry_weight)
 
 #define IS_CARRYING_N(ch) ((ch)->specials.carry_items)
 
-#define CAN_CARRY_COINS(ch, rider) ((CAN_CARRY_W(ch) - IS_CARRYING_W(ch, rider)) * 25)
+#define CAN_CARRY_OBJ(ch, obj) (((total_carried_weight(ch) + GET_OBJ_WEIGHT(obj)) <= CAN_CARRY_W(ch)) && ((IS_CARRYING_N(ch) + 1) <= CAN_CARRY_N(ch)))
 
-#define CAN_CARRY_OBJ(ch, obj, rider) (((IS_CARRYING_W(ch, rider) + GET_OBJ_WEIGHT(obj)) <= CAN_CARRY_W(ch)) && ((IS_CARRYING_N(ch) + 1) <= CAN_CARRY_N(ch)))
-
-#define CAN_GET_OBJ(ch, obj, rider) (CAN_WEAR(obj, ITEM_TAKE) && CAN_CARRY_OBJ(ch, obj, rider) && CAN_SEE_OBJ(ch, obj))
+#define CAN_GET_OBJ(ch, obj, rider) (CAN_WEAR(obj, ITEM_TAKE) && CAN_CARRY_OBJ(ch, obj) && CAN_SEE_OBJ(ch, obj))
 
 #define IS_OBJ_STAT(obj, stat)  (IS_SET((obj)->extra_flags, stat))
 #define IS_OBJ_STAT2(obj, stat) (IS_SET((obj)->extra2_flags, stat)) /* TASFALEN */

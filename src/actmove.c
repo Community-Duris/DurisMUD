@@ -86,7 +86,7 @@ int load_modifier(P_char ch)
 	if (CAN_CARRY_W(ch) <= 0)
 		return 300;
 
-	p = 100 - MAX(0, ((CAN_CARRY_W(ch) - IS_CARRYING_W(ch, rider)) * 100) / CAN_CARRY_W(ch));
+	p = 100 - MAX(0, ((CAN_CARRY_W(ch) - total_carried_weight(ch)) * 100) / CAN_CARRY_W(ch));
 
 	if (p < 10)
 		return 75;
@@ -1278,7 +1278,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
 		affect_from_char(ch, SPELL_CONCEALMENT);
 	}
 
-	if (IS_CARRYING_W(ch, rider) > CAN_CARRY_W(ch) && IS_PC(ch))
+	if (total_carried_weight(ch) > CAN_CARRY_W(ch) && IS_PC(ch))
 	{
 		send_to_char("You collapse under your carried load!\n", ch);
 		act("$n collapses under the weight of $s inventory!", TRUE, ch, 0, 0, TO_ROOM);
@@ -3214,7 +3214,7 @@ void do_follow(P_char ch, char *argument, int cmd)
 void do_drag(P_char ch, char *argument, int cmd)
 {
 	P_obj  obj;
-	P_char tch, owner = NULL, rider;
+	P_char tch, owner = NULL;
 	char   Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
 	char   Gbuf4[MAX_STRING_LENGTH];
 	int    dragCommand;
@@ -3312,17 +3312,13 @@ void do_drag(P_char ch, char *argument, int cmd)
 			return;
 		}
 
-		if((GET_STAT(tch) != STAT_INCAP) && (GET_STAT(tch) != STAT_DYING)
-       /* && !(is_linked_to(ch, tch, LNK_CONSENT) &&
-          (GET_STAT(tch) == STAT_SLEEPING)) && */
-        /*!IS_AFFECTED(tch, AFF_KNOCKED_OUT) 
-         &&  !IS_AFFECTED(tch, AFF_BOUND)) */ )
+		if((GET_STAT(tch) != STAT_INCAP) && (GET_STAT(tch) != STAT_DYING))
 		{
 			send_to_char("They may not appreciate that.\n", ch);
 			return;
 		}
 
-		if ((IS_NPC(tch) || (GET_WEIGHT(tch) + IS_CARRYING_W(tch, rider)) > (MAX_DRAG * CAN_CARRY_W(ch) - IS_CARRYING_W(ch, rider))) && !IS_TRUSTED(ch))
+		if ((IS_NPC(tch) || (GET_WEIGHT(tch) + total_carried_weight(tch)) > (MAX_DRAG * CAN_CARRY_W(ch) - total_carried_weight(ch))) && !IS_TRUSTED(ch))
 		{
 			act("$E's too heavy for you to drag!", FALSE, ch, 0, tch, TO_CHAR);
 			act("$n tries to drag $N out, but after a series of grunts, gives up.", TRUE, ch, 0, tch, TO_ROOM);
@@ -3411,7 +3407,7 @@ void do_drag(P_char ch, char *argument, int cmd)
 			return;
 		}
 		/* Let players drag an object up to 150 % of their max_carry */
-		if ((GET_OBJ_WEIGHT(obj) > (MAX_DRAG * CAN_CARRY_W(ch) - IS_CARRYING_W(ch, rider))) && !IS_TRUSTED(ch))
+		if ((GET_OBJ_WEIGHT(obj) > (MAX_DRAG * CAN_CARRY_W(ch) - total_carried_weight(ch))) && !IS_TRUSTED(ch))
 		{
 			act("It's too heavy for you to drag!", FALSE, ch, 0, 0, TO_CHAR);
 			act("$n tries to drag out $p, but after a series of grunts, gives up.", TRUE, ch, obj, 0, TO_ROOM);

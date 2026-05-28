@@ -1599,7 +1599,7 @@ void stat_game(P_char ch)
 // CMD = 555 is used for storing stat o string in db.
 void do_stat(P_char ch, char *argument, int cmd)
 {
-	P_char                   k = 0, t_mob = 0, shopkeeper, mob, rider;
+	P_char                   k = 0, t_mob = 0, shopkeeper, mob;
 	P_event                  e1 = NULL;
 	P_obj                    j = 0, t_obj = 0;
 	P_room                   rm = 0;
@@ -2543,7 +2543,7 @@ void do_stat(P_char ch, char *argument, int cmd)
 		         GET_C_CHA(k),
 		         k->base_stats.Cha,
 		         i3,
-		         IS_CARRYING_W(k, rider));
+		         total_carried_weight(k));
 		strcat(o_buf, buf);
 
 		snprintf(buf,

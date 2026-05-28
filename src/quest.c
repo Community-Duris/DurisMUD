@@ -186,39 +186,6 @@ void give_reward(struct quest_complete_data *qcp, P_char mob, P_char pl)
 	struct group_list *gl;
 	int                group_fact = 1;
 	int                temp       = 1;
-	P_char             rider;
-	/*
-	   value_pts = 2500 * (GET_LEVEL(mob) / 2);
-
-	   if (pl->group)
-	   {
-
-	   for (gl = pl->group; gl; gl = gl->next)
-	   if ((pl->in_room == gl->ch->in_room) && (gl->ch != pl))
-	   group_fact++;
-
-	   value_pts = (int) value_pts / group_fact;
-
-	   value_pts = BOUNDED(1, value_pts, 10000 + number(100,1500) );
-
-	   for (gl = pl->group; gl; gl = gl->next)
-	   if ((pl->in_room == gl->ch->in_room) && (gl->ch != pl) && IS_PC(gl->ch)) {
-
-	   adjust_lvl_from_epics(gl->ch, value_pts);
-
-	   snprintf(buffer, 1024, "You gained %d epic points!!\r\n", (value_pts / 100));
-	   send_to_char(buffer, gl->ch);
-	   }
-	   }
-
-	   value_pts = BOUNDED(1, value_pts, 10000 + number(100,1500) );
-
-	   snprintf(buffer, 1024, "You gained %d epic points!!\r\n", (value_pts / 100));
-
-
-	   adjust_lvl_from_epics(pl, value_pts);
-	   send_to_char(buffer, pl);
-	 */
 
 	wizlog(58, "%s has completed quest from %s [%d].", GET_NAME(pl), mob->player.short_descr, GET_VNUM(mob));
 
@@ -245,7 +212,7 @@ void give_reward(struct quest_complete_data *qcp, P_char mob, P_char pl)
 					break;
 				}
 
-				if ((IS_CARRYING_N(pl) < CAN_CARRY_N(pl)) && ((IS_CARRYING_W(pl, rider) + GET_OBJ_WEIGHT(obj)) < CAN_CARRY_W(pl)))
+				if ((IS_CARRYING_N(pl) < CAN_CARRY_N(pl)) && ((total_carried_weight(pl) + GET_OBJ_WEIGHT(obj)) < CAN_CARRY_W(pl)))
 				{
 					obj_to_char(obj, pl);
 					act("$n gives you $p.", FALSE, mob, obj, pl, TO_VICT);

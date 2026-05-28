@@ -4789,16 +4789,24 @@ int dir_from_keyword(char *keyword)
 	return dir;
 }
 
+int total_carried_weight(P_char ch)
+{
+	int weight = ch->specials.carry_weight;
+	P_char rider = GET_RIDER(ch);
+	if (rider)
+		weight += rider->player.weight + rider->specials.carry_weight;
+	return weight;
+}
+
 /* self-explanatory :) 0 would be naked, 14 overloaded */
 int weight_notches_above_naked(P_char ch)
 {
-	P_char rider;
 	int    percent = CAN_CARRY_W(ch);
 
 	if (percent <= 0)
 		percent = 1;
 
-	percent = (int)((IS_CARRYING_W(ch, rider) * 100) / percent);
+	percent = (int)((total_carried_weight(ch) * 100) / percent);
 
 	if (percent <= 0)
 		return 0;

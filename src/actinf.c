@@ -555,13 +555,12 @@ string save_to_string(P_char ch, int save_type)
 
 const char *load_to_string(P_char ch)
 {
-	P_char rider;
 	int    percent = CAN_CARRY_W(ch);
 
 	if (percent <= 0)
 		percent = 1;
 
-	percent = (int)((IS_CARRYING_W(ch, rider) * 100) / percent);
+	percent = (int)((total_carried_weight(ch) * 100) / percent);
 
 	if (percent <= 0)
 		return (load_names[0]);
@@ -3945,7 +3944,6 @@ void do_attributes(P_char ch, char *argument, int cmd)
 	char   buf[MAX_STRING_LENGTH];
 	char   buffer[MAX_STRING_LENGTH];
 	int    t_val, h, w;
-	P_char rider;
 
 	if (ch == NULL)
 	{
@@ -3991,102 +3989,6 @@ void do_attributes(P_char ch, char *argument, int cmd)
 	{
 		if (IS_TRUSTED(ch) || GET_LEVEL(ch) >= MIN_LEVEL_FOR_ATTRIBUTES)
 		{
-			/* this is ugly, because of new racial stat mods.  JAB */
-#if 0
-      if (GET_C_STR(ch) > stat_factor[(int) GET_RACE(ch)].Str)
-        snprintf(buf, MAX_STRING_LENGTH, "&+cSTR: &+Y***&n");
-      else
-        snprintf(buf, MAX_STRING_LENGTH, "&+cSTR: &+Y%3d&n",
-                MAX(1, (int) ((GET_C_STR(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Str) + .55)));
-
-      if (GET_C_AGI(ch) > stat_factor[(int) GET_RACE(ch)].Agi)
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cAGI: &+Y***&n");
-      else
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cAGI: &+Y%3d&n",
-                MAX(1, (int) ((GET_C_AGI(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Agi) + .55)));
-
-      if (GET_C_DEX(ch) > stat_factor[(int) GET_RACE(ch)].Dex)
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cDEX: &+Y***&n");
-      else
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cDEX: &+Y%3d&n",
-                MAX(1, (int) ((GET_C_DEX(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Dex) + .55)));
-
-      if (GET_C_CON(ch) > stat_factor[(int) GET_RACE(ch)].Con)
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cCON: &+Y***&n");
-      else
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cCON: &+Y%3d&n",
-                MAX(1, (int) ((GET_C_CON(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Con) + .55)));
-
-      if (GET_C_LUK(ch) > stat_factor[(int) GET_RACE(ch)].Luk)
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cLUCK: &+Y***&n\n");
-      else
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cLUCK: &+Y%3d&n\n",
-                MAX(1, (int) ((GET_C_LUK(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Luk) + .55)));
-
-      if (GET_C_POW(ch) > stat_factor[(int) GET_RACE(ch)].Pow)
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "&+cPOW: &+Y***&n");
-      else
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "&+cPOW: &+Y%3d&n",
-                MAX(1, (int) ((GET_C_POW(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Pow) + .55)));
-
-      if (GET_C_INT(ch) > stat_factor[(int) GET_RACE(ch)].Int)
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cINT: &+Y***&n");
-      else
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cINT: &+Y%3d&n",
-                MAX(1, (int) ((GET_C_INT(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Int) + .55)));
-
-      if (GET_C_WIS(ch) > stat_factor[(int) GET_RACE(ch)].Wis)
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cWIS: &+Y***&n");
-      else
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cWIS: &+Y%3d&n",
-                MAX(1, (int) ((GET_C_WIS(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Wis) + .55)));
-
-      if (GET_C_CHA(ch) > stat_factor[(int) GET_RACE(ch)].Cha)
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cCHA: &+Y***&n\n\n");
-      else
-        snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cCHA: &+Y%3d&n\n\n",
-                MAX(1, (int) ((GET_C_CHA(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Cha) + .55)));
-#endif
-			/*
-
-			      snprintf(buf, MAX_STRING_LENGTH, "&+cSTR: &+Y%3d&n",
-			              MAX(1,
-			                  (int) ((GET_C_STR(ch) * 100 /
-			                          stat_factor[(int) GET_RACE(ch)].Str) + .55)));
-			      snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cAGI: &+Y%3d&n",
-			              MAX(1,
-			                  (int) ((GET_C_AGI(ch) * 100 /
-			                          stat_factor[(int) GET_RACE(ch)].Agi) + .55)));
-			      snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cDEX: &+Y%3d&n",
-			              MAX(1,
-			                  (int) ((GET_C_DEX(ch) * 100 /
-			                          stat_factor[(int) GET_RACE(ch)].Dex) + .55)));
-			      snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cCON: &+Y%3d&n",
-			              MAX(1,
-			                  (int) ((GET_C_CON(ch) * 100 /
-			                          stat_factor[(int) GET_RACE(ch)].Con) + .55)));
-			      snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cLUCK: &+Y%3d&n\n",
-			              MAX(1,
-			                  (int) ((GET_C_LUK(ch) * 100 /
-			                          stat_factor[(int) GET_RACE(ch)].Luk) + .55)));
-			      snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "&+cPOW: &+Y%3d&n",
-			              MAX(1,
-			                  (int) ((GET_C_POW(ch) * 100 /
-			                          stat_factor[(int) GET_RACE(ch)].Pow) + .55)));
-			      snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cINT: &+Y%3d&n",
-			              MAX(1,
-			                  (int) ((GET_C_INT(ch) * 100 /
-			                          stat_factor[(int) GET_RACE(ch)].Int) + .55)));
-			      snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cWIS: &+Y%3d&n",
-			              MAX(1,
-			                  (int) ((GET_C_WIS(ch) * 100 /
-			                          stat_factor[(int) GET_RACE(ch)].Wis) + .55)));
-			      snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "  &+cCHA: &+Y%3d&n\n\n",
-			              MAX(1,
-			                  (int) ((GET_C_CHA(ch) * 100 /
-			                          stat_factor[(int) GET_RACE(ch)].Cha) + .55)));
-			*/
-
 			// drannak new way
 			char o_buf[MAX_STRING_LENGTH] = "", buf2[MAX_STRING_LENGTH] = "";
 			strcat(o_buf, "  &+GActual &n(&+gBase&n)     &+GActual &n(&+gBase&n)\n");
@@ -4195,7 +4097,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
 			         GET_C_LUK(ch),
 			         (int)(GET_C_LUK(ch) * 100. / racial_stats.Luk + .55),
 			         i3,
-			         IS_CARRYING_W(ch, rider));
+			         total_carried_weight(ch));
 			strcat(o_buf, buf);
 
 			/* snprintf(buf, MAX_STRING_LENGTH,

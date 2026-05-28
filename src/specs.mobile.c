@@ -1421,7 +1421,7 @@ int seas_coral_golem(P_char ch, P_char pl, int cmd, char *arg)
 int money_changer(P_char me, P_char ch, int cmd, char *arg)
 {
 	P_char rider;
-	long   amount, from, to, n, ok, rate = 0;
+	long   amount, from, to, n, rate = 0;
 	char   Gbuf1[MAX_STRING_LENGTH];
 
 	/*
@@ -1497,13 +1497,6 @@ int money_changer(P_char me, P_char ch, int cmd, char *arg)
 			return TRUE;
 		}
 		n  = (amount * (100 - RATE_TO_LOWER) / 100) / pow10(to);
-		ok = (CAN_CARRY_COINS(ch, rider) >= n);
-
-		if (!ok)
-		{
-			send_to_char("You can't carry the coins resulting from that exchange.\r\n", ch);
-			return TRUE;
-		}
 		ch->points.cash[from] -= (amount / pow10(from));
 		ch->points.cash[to] += n;
 		act("$n exchanges some coins with $N.", TRUE, ch, 0, me, TO_ROOM);
