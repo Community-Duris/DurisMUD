@@ -873,7 +873,7 @@ static bool do_group_add(P_char ch, P_char victim)
 		old_group = next;
 	}
 
-	update_groupies(ch);
+	update_groupies(ch, true);
 	return true;
 }
 

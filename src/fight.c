@@ -518,7 +518,7 @@ int vamp(P_char ch, double fhits, double fcap)
 		send_to_char(buf, ch);
 	}
 
-	update_groupies(ch);
+	update_groupies(ch, true);
 
 	return hits;
 }
@@ -5877,7 +5877,7 @@ case RACEWAR_NEUTRAL:
 				}
 			}
 
-			update_groupies(ch);
+			update_groupies(ch, true);
 
 			/* we crash, because victim has most likely been extracted and its memory may now belong to something else */
 			if (GET_STAT(victim) == STAT_DEAD)
