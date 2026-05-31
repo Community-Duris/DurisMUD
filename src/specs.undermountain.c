@@ -425,7 +425,7 @@ int lightning_sword(P_obj obj, P_char ch, int cmd, char *arg)
 			for (corpse = world[ch->in_room].contents; corpse; corpse = next_obj)
 			{
 				next_obj = corpse->next_content;
-				if ((GET_ITEM_TYPE(corpse) == ITEM_CORPSE))
+				if (GET_ITEM_TYPE(corpse) == ITEM_CORPSE)
 				{
 					for (temp = corpse->contains; temp; temp = next_obj)
 					{

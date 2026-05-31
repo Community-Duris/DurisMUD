@@ -1330,7 +1330,7 @@ void command_interpreter(P_char ch, char *argument)
 	}
 
 	/* Find first non blank */
-	for (begin = 0; (*(argument + begin) == ' '); begin++)
+	for (begin = 0; *(argument + begin) == ' '; begin++)
 		;
 
 	/* Find length of first word */

@@ -9353,7 +9353,7 @@ P_char find_protector_target(P_char ch)
 				cur_val |= BIT_4;
 			else if ((GET_RACE(ch) != GET_RACE(vict)) || (GET_RACE(ch) == GET_RACE(t_ch)))
 				cur_val |= BIT_5;
-			else if ((t_ch->following == ch))
+			else if (t_ch->following == ch)
 				cur_val |= BIT_4;
 		}
 		else if (IS_NPC(t_ch) && IS_AFFECTED(vict, AFF_CHARM))

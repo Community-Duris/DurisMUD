@@ -1716,7 +1716,7 @@ int can_connect(struct acct_chars *c, P_desc d)
 	if (c->blocked)
 		return 0;
 
-	if ((c->racewar == ACCT_IMMORTAL))
+	if (c->racewar == ACCT_IMMORTAL)
 		return 1;
 
 	if ((c->racewar == ACCT_GOOD) && (current_time < (d->account->acct_evil + racewarSwitchTimer)))

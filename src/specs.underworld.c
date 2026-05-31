@@ -2071,7 +2071,7 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
 			return TRUE;
 		}
 
-		if ((cmd == CMD_SLAP))
+		if (cmd == CMD_SLAP)
 		{
 			MobStartFight(ch, pl);
 			return FALSE;

@@ -1277,7 +1277,7 @@ int shop_keeper(P_char keeper, P_char ch, int cmd, char *arg)
 		if (shop_index[shop_nr].temptime == time_info.hour)
 			shop_index[shop_nr].flag = 0;
 	}
-	if ((cmd == CMD_STEAL))
+	if (cmd == CMD_STEAL)
 	{
 		/* Steal */
 		arg = one_argument(arg, argm);

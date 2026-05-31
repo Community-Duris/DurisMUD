@@ -3983,7 +3983,7 @@ void ansi_comp(char *str)
 				np_len += 4;
 				continue;
 			}
-			if ((*(str + 1) == '='))
+			if (*(str + 1) == '=')
 			{
 				if (isupper(*(str + 1)))
 					np_len += 2;

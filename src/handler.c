@@ -1346,7 +1346,7 @@ bool char_to_room(P_char ch, int room, int dir)
 			return FALSE;
 		}
 	}
-	if ((world[room].sector_type == SECT_NEG_PLANE))
+	if (world[room].sector_type == SECT_NEG_PLANE)
 	{
 		negsector(ch);
 		if (!IS_ALIVE(ch))

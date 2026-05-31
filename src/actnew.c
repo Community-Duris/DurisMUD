@@ -1231,7 +1231,7 @@ void do_commands(P_char ch, char *arg, int cmd)
 						continue;
 					break;
 				case 3:
-					if ((cmd_info[i + 1].command_pointer == do_action))
+					if (cmd_info[i + 1].command_pointer == do_action)
 						continue;
 					break;
 			}

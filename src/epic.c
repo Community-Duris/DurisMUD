@@ -1076,7 +1076,7 @@ void epic_zone_balance()
 		if (lt == 0)
 			touch_last = true;
 
-		if ((alignment == 0))
+		if (alignment == 0)
 		{
 			if (touch_last)
 				db_query("UPDATE zones SET last_touch=NOW() WHERE number='%d'", epic_zones[i].number);
@@ -1469,7 +1469,7 @@ void epic_zone_erase_touch(int zone_number)
 {
 	for (vector<epic_zone_completion>::iterator it = epic_zone_completions.begin(); it != epic_zone_completions.end(); it++)
 	{
-		if ((it->number == zone_number))
+		if (it->number == zone_number)
 		{
 			epic_zone_completions.erase(it);
 			break;

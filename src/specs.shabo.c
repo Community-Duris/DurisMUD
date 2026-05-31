@@ -898,7 +898,7 @@ int shaboath_necromancy_tower(int room, P_char ch, int cmd, char *argument)
 	{
 		next_obj = obj->next_content;
 
-		if ((GET_ITEM_TYPE(obj) == ITEM_CORPSE))
+		if (GET_ITEM_TYPE(obj) == ITEM_CORPSE)
 		{
 			/*          ((necro_teacher = get_char_num(NECROMANCER_BOSS)) != 0) &&
 			          can_raise_undead(necro_teacher, 56)) {

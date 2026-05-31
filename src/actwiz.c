@@ -12528,7 +12528,7 @@ void which_armor(P_char ch, char *argument)
 		// Load a copy of object.
 		obj = read_object(r_num, REAL);
 
-		if ((obj->type == ITEM_ARMOR))
+		if (obj->type == ITEM_ARMOR)
 		{
 			if ((op == OP_EQUAL && obj->value[0] == acValue) || (op == OP_LESS_THAN && obj->value[0] < acValue) || (op == OP_GREATER_THAN && obj->value[0] > acValue))
 			{

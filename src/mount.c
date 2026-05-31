@@ -685,21 +685,21 @@ int wagon_pull(P_char ch, int mob)
 		{
 			navi_info[mob].destination = navi_info[mob].destination1;
 		}
-		else if ((ch->in_room == navi_info[mob].destination1))
+		else if (ch->in_room == navi_info[mob].destination1)
 		{
 			if (navi_info[mob].destination2)
 				navi_info[mob].destination = navi_info[mob].destination2;
 			else
 				navi_info[mob].destination = navi_info[mob].start1;
 		}
-		else if ((ch->in_room == navi_info[mob].destination2))
+		else if (ch->in_room == navi_info[mob].destination2)
 		{
 			if (navi_info[mob].destination3)
 				navi_info[mob].destination = navi_info[mob].destination3;
 			else
 				navi_info[mob].destination = navi_info[mob].start1;
 		}
-		else if ((ch->in_room == navi_info[mob].destination3))
+		else if (ch->in_room == navi_info[mob].destination3)
 			navi_info[mob].destination = navi_info[mob].start1;
 	}
 
