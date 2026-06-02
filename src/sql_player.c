@@ -969,7 +969,7 @@ bool sql_save_player_status(P_char ch, int type, int room)
 		                   ch->player.time.birth,
 		                   ch->player.time.played,
 		                   (long)time(0),
-		                   ch->player.time.perm_aging,
+		                   0, //!!! perm_aging
 		                   ch->base_stats.Str,
 		                   ch->base_stats.Dex,
 		                   ch->base_stats.Agi,
@@ -1111,7 +1111,7 @@ bool sql_save_player_status(P_char ch, int type, int room)
 		                   ch->player.time.birth,
 		                   ch->player.time.played,
 		                   (long)time(0),
-		                   ch->player.time.perm_aging,
+		                   0, //!!! perm_aging
 		                   ch->base_stats.Str,
 		                   ch->base_stats.Dex,
 		                   ch->base_stats.Agi,
@@ -3781,7 +3781,7 @@ bool sql_load_player_status(P_char ch, int pid)
 	ch->player.time.played     = sql_row_int(row, col++, 0);
 	ch->player.time.saved      = sql_row_long(row, col++, 0);
 	ch->player.time.logon      = time(0);
-	ch->player.time.perm_aging = sql_row_int(row, col++, 0);
+	col++; //!!! perm_aging
 
 	// base stats
 	ch->base_stats.Str = sql_row_int(row, col++, 0);

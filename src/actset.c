@@ -602,7 +602,7 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
 		}
 		if (ppl)
 		{
-			if (SAME_STRING(flag, "level") || SAME_STRING(flag, "secondary_level"))
+			if (SAME_STRING(flag, "level"))
 			{
 				if (IS_PC(ppl) && GET_LEVEL(ch) < OVERLORD && atoi(val) >= MINLVLIMMORTAL)
 				{

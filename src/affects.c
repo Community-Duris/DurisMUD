@@ -901,8 +901,6 @@ void apply_affs(P_char ch, int mode)
 	GET_MAX_WARD(ch) = ch->points.base_ward + ((mode) ? TmpAffs.Ward : 0);
 	GET_WARD(ch)     = GET_MAX_WARD(ch) - t1;
 
-	ch->player.time.age_mod = (mode) ? TmpAffs.Age : 0;
-
 	ch->points.hit_reg  = TmpAffs.hit_reg;
 	ch->points.move_reg = TmpAffs.move_reg;
 	ch->points.mana_reg = TmpAffs.mana_reg;

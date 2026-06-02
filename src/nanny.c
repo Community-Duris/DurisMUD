@@ -4737,7 +4737,6 @@ void init_char(P_char ch)
 	ch->only.pc->prestige        = 0; /* clear this early, so we can use as newby timer */
 	ch->only.pc->nb_left_guild   = 0;
 	ch->only.pc->time_left_guild = 0;
-	ch->player.secondary_level   = 0;
 
 	/* Initialize frags, epics, and deaths to prevent random values */
 	ch->only.pc->frags       = 0;

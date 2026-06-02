@@ -313,7 +313,6 @@ bool IS_OUTDOORS(int r);
 #define GET_TITLE(ch)          ((ch)->player.title)
 #define GET_DISGUISE_TITLE(ch) ((ch)->disguise.title)
 
-#define GET_SECONDARY_LEVEL(ch) ((int)(ch)->player.secondary_level)
 #define GET_DISGUISE_LEVEL(ch)  ((int)(ch)->disguise.level)
 
 // #define GET_CLASS(ch)   ((ch)->player.m_class)
@@ -328,8 +327,6 @@ bool IS_OUTDOORS(int r);
 #define GET_RACEWAR(ch)       ((ch)->player.racewar)
 
 int race_size(int race);
-
-#define GET_PHYS_TYPE(ch) ((ch)->player.phys_type)
 
 #define GET_HOME(ch)            ((ch)->player.hometown)
 #define GET_BIRTHPLACE(ch)      ((ch)->player.birthplace)
@@ -684,8 +681,6 @@ int race_size(int race);
 #define IS_HARDCORE(ch) (IS_PC(ch) && IS_SET(ch->specials.act2, PLR2_HARDCORE_CHAR))
 
 #define IS_MULTICLASS_PC(ch) (IS_PC(ch) && ((ch)->player.secondary_class > 0) && ((ch)->player.secondary_class != BIT_32))
-
-#define IS_FULL_MULTICLASS_PC(ch) (IS_PC(ch) && ((ch)->player.secondary_level == 56))
 
 #define IS_NEWBIE(ch)       (IS_PC(ch) && IS_SET(ch->specials.act2, PLR2_NEWBIE))
 #define IS_NEWBIE_GUIDE(ch) (IS_PC(ch) && IS_SET(ch->specials.act2, PLR2_NEWBIE_GUIDE))

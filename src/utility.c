@@ -2175,13 +2175,6 @@ struct time_info_data age(P_char ch)
 	 * aging
 	 */
 	player_age.year += 5;
-	/*  player_age.year += ch->player.time.perm_aging;        *
-	 * permanent
-	 * 'unnatural' aging
-	 */
-	player_age.year += ch->player.time.age_mod; /*
-	                                             * temporary 'unnatural' aging
-	                                             */
 	player_age.year = MAX(0, player_age.year);  /*
 	                                             * since I don't want to deal
 	                                             * with 'infants'

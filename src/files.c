@@ -349,7 +349,7 @@ int writeStatus(char *buf, P_char ch, bool updateTime)
 		ADD_INT(buf, ch->player.time.played);
 		ADD_LONG(buf, ch->player.time.saved);
 	}
-	ADD_SHORT(buf, ch->player.time.perm_aging);
+	ADD_SHORT(buf, 0); //!!! perm_aging
 
 	for (i = 0; i < MAX_CIRCLE + 1; i++)
 		ADD_BYTE(buf, ch->specials.undead_spell_slots[i]);
@@ -1960,7 +1960,6 @@ int restoreStatus(char *buf, P_char ch)
 	GET_SIZE(ch)      = GET_BYTE(buf);
 
 	GET_HOME(ch)            = GET_INTE(buf);
-	GET_BIRTHPLACE(ch)      = 0;
 	GET_BIRTHPLACE(ch)      = GET_INTE(buf);
 	GET_ORIG_BIRTHPLACE(ch) = GET_INTE(buf);
 
@@ -1968,7 +1967,7 @@ int restoreStatus(char *buf, P_char ch)
 	ch->player.time.played     = GET_INTE(buf);
 	ch->player.time.saved      = GET_LONG(buf); /* last save time */
 	ch->player.time.logon      = time(0);       /* set it */
-	ch->player.time.perm_aging = GET_SHORT(buf);
+	GET_SHORT(buf); //!!! oerm_aging
 	for (i = 0; i < MAX_CIRCLE + 1; i++)
 		ch->specials.undead_spell_slots[i] = GET_BYTE(buf);
 	GET_INTE(buf); //!!! last_level

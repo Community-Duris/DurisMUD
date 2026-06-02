@@ -1076,8 +1076,6 @@ struct time_data
 	time_t birth;      /* This represents the characters age    */
 	time_t logon;      /* Time of the last logon                */
 	time_t saved;      /* Time of the last save                 */
-	sh_int perm_aging; /* permanent 'unnatural' aging */
-	sh_int age_mod;    /* temporary 'unnatural' aging */
 	uint   played;     /* accumulated time played in secs       */
 };
 
@@ -1093,9 +1091,7 @@ struct char_player_data
 	ubyte            spec;
 	ubyte            race;            /* race                                 */
 	ubyte            racewar;         /* race                                 */
-	ubyte            phys_type;       /* physiology type                      */
 	ubyte            level;           /* level                                */
-	ubyte            secondary_level; /* level                                */
 	unsigned int     secondary_class; /* class                                */
 	int              hometown;        /* PCs Hometown (last saved room)       */
 	int              birthplace;      /* birth room                           */

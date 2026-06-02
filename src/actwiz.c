@@ -5740,12 +5740,6 @@ void do_restore(P_char ch, char *argument, int cmd)
 			GET_COND(victim, DRUNK)  = 0;
 		}
 
-		/*
-		    j = getNumbBodyLocsbyPhysType(GET_PHYS_TYPE(victim));
-		    for (i = 0; i < j; i++)
-		      victim->points.location_hit[i] = 0;
-		*/
-
 		if ((cmd != -4) && !IS_TRUSTED(victim))
 		{
 			wizlog(GET_LEVEL(ch), "%s has restored %s", GET_NAME(ch), GET_NAME(victim));
