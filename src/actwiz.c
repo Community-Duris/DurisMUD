@@ -5252,40 +5252,15 @@ void roll_basic_attributes(P_char ch, int type)
 
 	if (type != ROLL_MOB_NORMAL && type != ROLL_MOB_GOOD && type != ROLL_MOB_ELITE)
 	{
-		ch->base_stats.Str = ch->curr_stats.Str = dice(rolls, faces) + base;
-		ch->base_stats.Dex = ch->curr_stats.Dex = dice(rolls, faces) + base;
-		ch->base_stats.Agi = ch->curr_stats.Agi = dice(rolls, faces) + base;
-		ch->base_stats.Con = ch->curr_stats.Con = dice(rolls, faces) + base;
-		ch->base_stats.Pow = ch->curr_stats.Pow = dice(rolls, faces) + base;
-		ch->base_stats.Int = ch->curr_stats.Int = dice(rolls, faces) + base;
-		ch->base_stats.Wis = ch->curr_stats.Wis = dice(rolls, faces) + base;
-		ch->base_stats.Cha = ch->curr_stats.Cha = dice(rolls, faces) + base;
-		ch->base_stats.Kar = ch->curr_stats.Kar = dice(rolls, faces) + base;
-		ch->base_stats.Luk = ch->curr_stats.Luk = dice(rolls, faces) + base;
+		for (int i = 0; i < MAX_ATTRIBUTES; i++)
+			ch->base_stats[i] = ch->curr_stats[i] = dice(rolls, faces) + base;
 	}
 	// Mobs may have a 'lower limit' already entered in base_stats.
 	else
 	{
-		if ((value = dice(rolls, faces) + base) > ch->base_stats.Str)
-			ch->base_stats.Str = ch->curr_stats.Str = value;
-		if ((value = dice(rolls, faces) + base) > ch->base_stats.Dex)
-			ch->base_stats.Dex = ch->curr_stats.Dex = value;
-		if ((value = dice(rolls, faces) + base) > ch->base_stats.Agi)
-			ch->base_stats.Agi = ch->curr_stats.Agi = value;
-		if ((value = dice(rolls, faces) + base) > ch->base_stats.Con)
-			ch->base_stats.Con = ch->curr_stats.Con = value;
-		if ((value = dice(rolls, faces) + base) > ch->base_stats.Pow)
-			ch->base_stats.Pow = ch->curr_stats.Pow = value;
-		if ((value = dice(rolls, faces) + base) > ch->base_stats.Int)
-			ch->base_stats.Int = ch->curr_stats.Int = value;
-		if ((value = dice(rolls, faces) + base) > ch->base_stats.Wis)
-			ch->base_stats.Wis = ch->curr_stats.Wis = value;
-		if ((value = dice(rolls, faces) + base) > ch->base_stats.Cha)
-			ch->base_stats.Cha = ch->curr_stats.Cha = value;
-		if ((value = dice(rolls, faces) + base) > ch->base_stats.Kar)
-			ch->base_stats.Kar = ch->curr_stats.Kar = value;
-		if ((value = dice(rolls, faces) + base) > ch->base_stats.Luk)
-			ch->base_stats.Luk = ch->curr_stats.Luk = value;
+		for (int i = 0; i < MAX_ATTRIBUTES; i++)
+			if ((value = dice(rolls, faces) + base) > ch->base_stats[i])
+				ch->base_stats[i] = ch->curr_stats[i] = value;
 	}
 }
 

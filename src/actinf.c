@@ -3996,15 +3996,8 @@ void do_attributes(P_char ch, char *argument, int cmd)
 			struct stat_data racial_stats;
 
 			i                = GET_RACE(ch);
-			racial_stats.Str = stat_factor[i].Str;
-			racial_stats.Pow = stat_factor[i].Pow;
-			racial_stats.Dex = stat_factor[i].Dex;
-			racial_stats.Int = stat_factor[i].Int;
-			racial_stats.Agi = stat_factor[i].Agi;
-			racial_stats.Wis = stat_factor[i].Wis;
-			racial_stats.Con = stat_factor[i].Con;
-			racial_stats.Cha = stat_factor[i].Cha;
-			racial_stats.Luk = stat_factor[i].Luk;
+			for (int j = 0; j < MAX_ATTRIBUTES; j++)
+				racial_stats[j] = stat_factor[i][j];
 
 			for (i = i3 = 0; i < MAX_WEAR; i++)
 			{

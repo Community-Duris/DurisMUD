@@ -267,10 +267,8 @@ void do_newchar(P_char ch, char *argument, int cmd)
 	GET_ORIG_BIRTHPLACE(newch) = GET_HOME(newch);
 
 	// set all stats to 100
-	newch->base_stats.Str = newch->base_stats.Dex = newch->base_stats.Agi = 100;
-	newch->base_stats.Con = newch->base_stats.Pow = newch->base_stats.Int = 100;
-	newch->base_stats.Wis = newch->base_stats.Cha = newch->base_stats.Kar = 100;
-	newch->base_stats.Luk                                                 = 100;
+	for (int i = 0; i < MAX_ATTRIBUTES; i++)
+		newch->base_stats[i] = 100;
 	newch->curr_stats                                                     = newch->base_stats;
 
 	// init_char does pid assignment, skill setup, hp/mana/vitality etc

@@ -280,14 +280,8 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
 	if ((frags >= 1000) && !affected_by_spell(ch, ACH_SERIALKILLER))
 	{
 		send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RSerial Killer&+r achievement!&n\r\n", ch);
-		ch->base_stats.Str = BOUNDED(1, (ch->base_stats.Str + 2), 100);
-		ch->base_stats.Agi = BOUNDED(1, (ch->base_stats.Agi + 2), 100);
-		ch->base_stats.Dex = BOUNDED(1, (ch->base_stats.Dex + 2), 100);
-		ch->base_stats.Con = BOUNDED(1, (ch->base_stats.Con + 2), 100);
-		ch->base_stats.Pow = BOUNDED(1, (ch->base_stats.Pow + 2), 100);
-		ch->base_stats.Wis = BOUNDED(1, (ch->base_stats.Wis + 2), 100);
-		ch->base_stats.Int = BOUNDED(1, (ch->base_stats.Int + 2), 100);
-		ch->base_stats.Cha = BOUNDED(1, (ch->base_stats.Cha + 2), 100);
+		for (int i = 0; i < MAX_ATTRIBUTES; i++)
+			ch->base_stats[i] = BOUNDED(1, (ch->base_stats[i] + 2), 100);
 		apply_achievement(ch, ACH_SERIALKILLER);
 	}
 

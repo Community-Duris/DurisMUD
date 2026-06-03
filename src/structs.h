@@ -1150,6 +1150,42 @@ struct stat_data
 
 	sh_int Kar; /* 2 'special' stats */
 	sh_int Luk;
+
+	sh_int& operator[](int i)
+	{
+		switch (i)
+		{
+		case 0: return Str;
+		case 1: return Dex;
+		case 2: return Agi;
+		case 3: return Con;
+		case 4: return Pow;
+		case 5: return Int;
+		case 6: return Wis;
+		case 7: return Cha;
+		case 8: return Kar;
+		case 9: return Luk;
+		default: return Kar;
+		}
+	}
+
+	const sh_int& operator[](int i) const
+	{
+		switch (i)
+		{
+		case 0: return Str;
+		case 1: return Dex;
+		case 2: return Agi;
+		case 3: return Con;
+		case 4: return Pow;
+		case 5: return Int;
+		case 6: return Wis;
+		case 7: return Cha;
+		case 8: return Kar;
+		case 9: return Luk;
+		default: return Kar;
+		}
+	}
 };
 
 struct char_point_data

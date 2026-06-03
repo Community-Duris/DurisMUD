@@ -2479,43 +2479,9 @@ void enter_game(P_desc d)
 		update_ingame_racewar(GET_RACEWAR(ch));
 
 	// make sure existing chars have base stats 80 - Drannak
-	if (d->character->base_stats.Str < 80)
-	{
-		d->character->base_stats.Str = 80;
-	}
-	if (d->character->base_stats.Agi < 80)
-	{
-		d->character->base_stats.Agi = 80;
-	}
-	if (d->character->base_stats.Dex < 80)
-	{
-		d->character->base_stats.Dex = 80;
-	}
-	if (d->character->base_stats.Con < 80)
-	{
-		d->character->base_stats.Con = 80;
-	}
-	if (d->character->base_stats.Luk < 80)
-	{
-		d->character->base_stats.Luk = 80;
-	}
-	if (d->character->base_stats.Pow < 80)
-	{
-		d->character->base_stats.Pow = 80;
-	}
-	if (d->character->base_stats.Int < 80)
-	{
-		d->character->base_stats.Int = 80;
-	}
-	if (d->character->base_stats.Wis < 80)
-	{
-		d->character->base_stats.Wis = 80;
-	}
-
-	if (d->character->base_stats.Cha < 80)
-	{
-		d->character->base_stats.Cha = 80;
-	}
+	for (int i = 0; i < MAX_ATTRIBUTES; i++)
+		if (d->character->base_stats[i] < 80)
+			d->character->base_stats[i] = 80;
 
 	// goodie AP fix
 	if (GET_CLASS(ch, CLASS_ANTIPALADIN) && GET_ALIGNMENT(ch) > -10)
