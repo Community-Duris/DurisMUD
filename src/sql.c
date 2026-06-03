@@ -137,6 +137,7 @@ static bool persistence_tables_ready = FALSE;
 static bool persistence_reward_tables_ready = FALSE;
 static unsigned long persistence_reward_event_sequence = 0;
 static MYSQL *sql_persistence_connection(void);
+static bool sql_ensure_runtime_schema(MYSQL *db);
 static bool sql_persistence_ensure_reward_tables(MYSQL *db);
 static bool sql_persistence_write_item_event_line_locked(const char *line);
 static bool sql_persistence_write_scalar_event_line_locked(const char *line);
@@ -325,8 +326,10 @@ int initialize_mysql()
 	sql_resetConnectTimes();
 	sql_populate_lookup_tables();
 
-	if (!sql_persistence_ensure_reward_tables(sql_persistence_connection()))
-		logit(LOG_DEBUG, "Persistence reward idempotency schema is not ready; reward writes will use legacy inserts until the schema is repaired.");
+	if (!sql_ensure_runtime_schema(DB))
+		logit(LOG_DEBUG, "Runtime schema drift repair did not complete; some SQL features may fail until migrations are applied.");
+
+	(void)sql_persistence_connection();
 
 	return 1;
 }
@@ -1752,6 +1755,142 @@ static bool sql_persistence_ensure_reward_tables(MYSQL *db)
 		return FALSE;
 
 	persistence_reward_tables_ready = TRUE;
+	return TRUE;
+}
+
+static bool sql_schema_ensure_column(MYSQL *db, const char *table_name, const char *column_name, const char *alter_sql)
+{
+	char query[512];
+
+	if (!db || !table_name || !column_name || !alter_sql)
+		return FALSE;
+
+	if (sql_persistence_column_exists(db, table_name, column_name))
+		return TRUE;
+
+	snprintf(query, sizeof(query), "ALTER TABLE %s %s", table_name, alter_sql);
+	return sql_persistence_query(db, query);
+}
+
+static bool sql_schema_ensure_corpse_tables(MYSQL *db)
+{
+	if (!db)
+		return FALSE;
+
+	if (!sql_persistence_query(db,
+	                          "CREATE TABLE IF NOT EXISTS corpses ("
+	                          "id INT AUTO_INCREMENT PRIMARY KEY,"
+	                          "player_name VARCHAR(50) NOT NULL,"
+	                          "save_id BIGINT NOT NULL,"
+	                          "room_vnum INT DEFAULT 0,"
+	                          "short_descr VARCHAR(512) DEFAULT NULL,"
+	                          "description TEXT DEFAULT NULL,"
+	                          "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
+	                          "UNIQUE KEY uk_player_saveid (player_name, save_id),"
+	                          "INDEX idx_player_name (player_name)"
+	                          ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db, "corpses", "short_descr", "ADD COLUMN short_descr VARCHAR(512) DEFAULT NULL"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db, "corpses", "description", "ADD COLUMN description TEXT DEFAULT NULL"))
+		return FALSE;
+
+	if (!sql_persistence_query(db,
+	                          "CREATE TABLE IF NOT EXISTS corpse_items ("
+	                          "id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,"
+	                          "corpse_id INT NOT NULL,"
+	                          "vnum INT NOT NULL,"
+	                          "item_type INT NOT NULL DEFAULT 0,"
+	                          "container_id INT UNSIGNED DEFAULT NULL,"
+	                          "quantity SMALLINT UNSIGNED DEFAULT 1,"
+	                          "weight INT DEFAULT 0,"
+	                          "cost INT DEFAULT 0,"
+	                          "timer INT DEFAULT -1,"
+	                          "extra_flags BIGINT UNSIGNED DEFAULT 0,"
+	                          "value0 INT DEFAULT 0, value1 INT DEFAULT 0, value2 INT DEFAULT 0, value3 INT DEFAULT 0,"
+	                          "value4 INT DEFAULT 0, value5 INT DEFAULT 0, value6 INT DEFAULT 0, value7 INT DEFAULT 0,"
+	                          "name VARCHAR(512) DEFAULT NULL,"
+	                          "short_descr VARCHAR(512) DEFAULT NULL,"
+	                          "description TEXT DEFAULT NULL,"
+	                          "action_descr TEXT DEFAULT NULL,"
+	                          "obj_uid BIGINT UNSIGNED DEFAULT NULL,"
+	                          "item_condition SMALLINT DEFAULT 100,"
+	                          "INDEX idx_corpse_id (corpse_id),"
+	                          "INDEX idx_vnum (vnum),"
+	                          "INDEX idx_obj_uid (obj_uid)"
+	                          ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db, "corpse_items", "item_type", "ADD COLUMN item_type INT NOT NULL DEFAULT 0 AFTER vnum"))
+		return FALSE;
+
+	if (!sql_persistence_column_exists(db, "corpse_items", "obj_uid"))
+	{
+		if (sql_persistence_column_exists(db, "corpse_items", "unique_id"))
+		{
+			if (!sql_persistence_query(db,
+			                           "ALTER TABLE corpse_items CHANGE COLUMN unique_id obj_uid BIGINT UNSIGNED DEFAULT NULL"))
+				return FALSE;
+		}
+		else if (!sql_schema_ensure_column(db, "corpse_items", "obj_uid", "ADD COLUMN obj_uid BIGINT UNSIGNED DEFAULT NULL"))
+		{
+			return FALSE;
+		}
+	}
+
+	if (!sql_schema_ensure_column(db, "corpse_items", "item_condition", "ADD COLUMN item_condition SMALLINT DEFAULT 100 AFTER obj_uid"))
+		return FALSE;
+
+	if (!sql_persistence_query(db,
+	                          "CREATE TABLE IF NOT EXISTS corpse_item_affects ("
+	                          "id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,"
+	                          "item_id INT UNSIGNED NOT NULL,"
+	                          "location TINYINT UNSIGNED DEFAULT 0,"
+	                          "modifier INT DEFAULT 0,"
+	                          "INDEX idx_item_id (item_id)"
+	                          ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"))
+		return FALSE;
+
+	if (!sql_persistence_query(db,
+	                          "CREATE TABLE IF NOT EXISTS corpse_item_extra_descr ("
+	                          "id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,"
+	                          "item_id INT UNSIGNED NOT NULL,"
+	                          "keyword VARCHAR(255) NOT NULL,"
+	                          "description TEXT,"
+	                          "INDEX idx_item_id (item_id)"
+	                          ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"))
+		return FALSE;
+
+	return TRUE;
+}
+
+static bool sql_schema_ensure_auction_schema(MYSQL *db)
+{
+	if (!db)
+		return FALSE;
+
+	return sql_schema_ensure_column(db, "auctions", "obj_info_text", "ADD COLUMN obj_info_text TEXT DEFAULT NULL");
+}
+
+static bool sql_ensure_runtime_schema(MYSQL *db)
+{
+	if (!db)
+		return FALSE;
+
+	if (!sql_persistence_ensure_tables(db))
+		return FALSE;
+
+	if (!sql_persistence_ensure_reward_tables(db))
+		return FALSE;
+
+	if (!sql_schema_ensure_corpse_tables(db))
+		return FALSE;
+
+	if (!sql_schema_ensure_auction_schema(db))
+		return FALSE;
+
 	return TRUE;
 }
 

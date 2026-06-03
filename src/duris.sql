@@ -148,6 +148,7 @@ CREATE TABLE `auctions` (
   `obj_blob_str` blob NOT NULL,
   `id_keywords` varchar(1024) NOT NULL default '',
   `quantity` int(11) NOT NULL default '1',
+  `obj_info_text` text,
   PRIMARY KEY  (`id`),
   KEY `seller_pid` (`seller_pid`),
   KEY `auction_end` (`end_time`),
@@ -888,6 +889,159 @@ CREATE TABLE `zones` (
   `stonecount` int(10) NOT NULL default '1',
   PRIMARY KEY  (`id`),
   KEY `number_index` (`number`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Table structure for table `corpses`
+-- Normalized corpse persistence (see migrations/schema_migration_v2.sql)
+--
+
+DROP TABLE IF EXISTS `corpse_item_extra_descr`;
+DROP TABLE IF EXISTS `corpse_item_affects`;
+DROP TABLE IF EXISTS `corpse_items`;
+DROP TABLE IF EXISTS `corpses`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `corpses` (
+  `id` int(11) NOT NULL auto_increment,
+  `player_name` varchar(50) NOT NULL,
+  `save_id` bigint(20) NOT NULL,
+  `room_vnum` int(11) default '0',
+  `short_descr` varchar(512) default NULL,
+  `description` text,
+  `created_at` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `uk_player_saveid` (`player_name`,`save_id`),
+  KEY `idx_player_name` (`player_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+SET character_set_client = @saved_cs_client;
+
+DROP TABLE IF EXISTS `corpse_items`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `corpse_items` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `corpse_id` int(11) NOT NULL,
+  `vnum` int(11) NOT NULL,
+  `item_type` int(11) NOT NULL default '0',
+  `container_id` int(10) unsigned default NULL,
+  `quantity` smallint(5) unsigned default '1',
+  `weight` int(11) default '0',
+  `cost` int(11) default '0',
+  `timer` int(11) default '-1',
+  `extra_flags` bigint(20) unsigned default '0',
+  `value0` int(11) default '0',
+  `value1` int(11) default '0',
+  `value2` int(11) default '0',
+  `value3` int(11) default '0',
+  `value4` int(11) default '0',
+  `value5` int(11) default '0',
+  `value6` int(11) default '0',
+  `value7` int(11) default '0',
+  `name` varchar(512) default NULL,
+  `short_descr` varchar(512) default NULL,
+  `description` text,
+  `action_descr` text,
+  `obj_uid` bigint(20) unsigned default NULL,
+  `item_condition` smallint(6) default '100',
+  PRIMARY KEY  (`id`),
+  KEY `idx_corpse_id` (`corpse_id`),
+  KEY `idx_vnum` (`vnum`),
+  KEY `idx_obj_uid` (`obj_uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+SET character_set_client = @saved_cs_client;
+
+DROP TABLE IF EXISTS `corpse_item_affects`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `corpse_item_affects` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `item_id` int(10) unsigned NOT NULL,
+  `location` tinyint(3) unsigned default '0',
+  `modifier` int(11) default '0',
+  PRIMARY KEY  (`id`),
+  KEY `idx_item_id` (`item_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+SET character_set_client = @saved_cs_client;
+
+DROP TABLE IF EXISTS `corpse_item_extra_descr`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `corpse_item_extra_descr` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `item_id` int(10) unsigned NOT NULL,
+  `keyword` varchar(255) NOT NULL,
+  `description` text,
+  PRIMARY KEY  (`id`),
+  KEY `idx_item_id` (`item_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Persistence item ownership tables (async worker; also created at boot in sql.c)
+--
+
+DROP TABLE IF EXISTS `persistence_item_conflicts`;
+DROP TABLE IF EXISTS `persistence_items_current`;
+DROP TABLE IF EXISTS `persistence_item_event_audit`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `persistence_item_event_audit` (
+  `event_id` bigint(20) unsigned NOT NULL auto_increment,
+  `event_time` bigint(20) unsigned NOT NULL,
+  `event_type` varchar(64) NOT NULL,
+  `item_uid` bigint(20) unsigned NOT NULL,
+  `owner_type` varchar(32) NOT NULL,
+  `owner_ref` varchar(64) NOT NULL,
+  `actor_id` int(11) NOT NULL default '-1',
+  `vnum` int(11) NOT NULL default '-1',
+  `item_name` varchar(255) NOT NULL default '',
+  `raw_event` text NOT NULL,
+  `created_at` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`event_id`),
+  KEY `item_time` (`item_uid`,`event_time`),
+  KEY `owner_lookup` (`owner_type`,`owner_ref`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+DROP TABLE IF EXISTS `persistence_items_current`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `persistence_items_current` (
+  `item_uid` bigint(20) unsigned NOT NULL,
+  `owner_type` varchar(32) NOT NULL,
+  `owner_ref` varchar(64) NOT NULL,
+  `event_time` bigint(20) unsigned NOT NULL,
+  `event_type` varchar(64) NOT NULL,
+  `actor_id` int(11) NOT NULL default '-1',
+  `vnum` int(11) NOT NULL default '-1',
+  `item_name` varchar(255) NOT NULL default '',
+  `updated_at` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`item_uid`),
+  KEY `owner_lookup` (`owner_type`,`owner_ref`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+SET character_set_client = @saved_cs_client;
+
+DROP TABLE IF EXISTS `persistence_item_conflicts`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+CREATE TABLE `persistence_item_conflicts` (
+  `conflict_id` bigint(20) unsigned NOT NULL auto_increment,
+  `item_uid` bigint(20) unsigned NOT NULL,
+  `existing_owner_type` varchar(32) NOT NULL,
+  `existing_owner_ref` varchar(64) NOT NULL,
+  `existing_event_time` bigint(20) unsigned NOT NULL,
+  `incoming_owner_type` varchar(32) NOT NULL,
+  `incoming_owner_ref` varchar(64) NOT NULL,
+  `incoming_event_time` bigint(20) unsigned NOT NULL,
+  `incoming_event_type` varchar(64) NOT NULL,
+  `resolution` varchar(64) NOT NULL,
+  `raw_event` text NOT NULL,
+  `created_at` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`conflict_id`),
+  KEY `item_created` (`item_uid`,`created_at`),
+  KEY `resolution_lookup` (`resolution`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 SET character_set_client = @saved_cs_client;
 
