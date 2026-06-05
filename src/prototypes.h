@@ -992,10 +992,8 @@ void    moveToBackup(char *name);
 int     writeCharacter(P_char, int, int);
 void    restore_houses();
 void    writeShapechangeData(P_char ch);
-int     writeWitness(char *, wtns_rec *);
 int     register_ship(int);
 int     ship_registered(int);
-int     restoreWitness(char *, P_char);
 bool    writeObjectlist(P_obj, int);
 char   *getString(char **);
 int     confiscate_item(P_char, int);
@@ -1023,7 +1021,6 @@ int     writeItems(char *, P_char);
 int     writeSkills(char *, P_char, int);
 int     writeStatus(char *, P_char, bool);
 int     writePetStatus(char *, P_char);
-int     writeWitnessed(char *, P_char);
 uint    getInt(char **);
 long    getLong(char **);
 unsigned long long getUnsignedLongLong(char **);
@@ -1107,12 +1104,8 @@ void update_groupies(P_char, bool only_in_room = false);
 bool group_remove_member(P_char);
 bool group_add_member(P_char, P_char);
 void fix_group_ranks(P_char);
-int  verify_group_formation(P_char, int);
 /* guild.c */
 char  *replace(char *g_string, char *replace_from, char *replace_to);
-char  *replace_it(char *g_string, char *replace_from, char *replace_to);
-int    readGuildFile(P_char ch, int zonenum);
-int    sackGuild(int oldguild, int guildnumber, int newguild);
 bool   CharHasSpec(P_char);
 char  *how_good(int, int);
 int    CharMaxSkill(P_char, int);
@@ -1284,11 +1277,6 @@ char *lohrr_chop(char *, char *);
 /* justice.c */
 
 void      check_item(P_char);
-void      crime_add(int, char *, const char *, int, int, time_t, int, int);
-crm_rec  *crime_find(crm_rec *, char *, const char *, int, int, int, crm_rec *);
-int       crime_remove(int, crm_rec *);
-void      witness_add(P_char, P_char, P_char, int, int);
-wtns_rec *witness_find(wtns_rec *, char *, char *, int, int, wtns_rec *);
 P_char    justice_make_guard(int);
 void      justice_delete_guard(P_char);
 int       justice_send_guards(int, P_char, int, int);
@@ -1298,8 +1286,6 @@ void      do_justice(P_char, char *, int);
 void      JusticeGuardMove(P_char, char *, int);
 void      JusticeGuardHunt(P_char);
 void      justice_set_outcast(P_char ch, int town);
-int       witness_remove(P_char, wtns_rec *);
-void      do_report_crime(P_char, char *, int);
 int       justice_is_criminal(P_char);
 void      PC_SET_TOWN_JUSTICE_FLAGS(P_char ch, int flag, int town);
 void      justice_action_invader(P_char ch);
@@ -2024,20 +2010,11 @@ int  CountNumGreaterElementalFollowersInSameRoom(P_char);
 
 int  GetCircle(int spl);
 void convertObj(P_obj obj);
-void randomizeObj(P_obj, int);
 
 /* objmisc.c */
 
 int   get_weapon_msg(P_obj weapon);
 int   getWeaponDamType(const int weaptype);
-float getMaterialDeflection(const int, const P_obj weap);
-float getArmorDeflection(const P_obj armor, const P_obj weap);
-float getMaterialAbsorbtion(const int, const P_obj weap);
-float getArmorAbsorbtion(const P_obj armor, const P_obj weap);
-int   getMaterialMaxSP(const int material);
-int   getItemMaxSP(const P_obj item);
-void  setItemMaxSP(P_obj item);
-int   getItemCurrentSP(const P_obj item);
 
 /* prompt.c */
 
@@ -2272,7 +2249,6 @@ void  return_from_poly_obj(P_char);
 P_obj find_key(P_char, int);
 bool  check_get_disarmed_obj(P_char, P_char, P_obj);
 bool  transact(P_char, P_obj, P_char, int);
-int   OutlawAggro(P_char, const char *);
 long  pow10(long);
 void  exec_social(P_char, char *, int, int *, void **);
 void  firesector(P_char);

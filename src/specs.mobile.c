@@ -62,8 +62,6 @@ extern struct str_app_type    str_app[];
 extern struct time_info_data  time_info;
 extern struct zone_data      *zone;
 extern struct zone_data      *zone_table;
-extern const char            *crime_list[];
-extern const char            *crime_rep[];
 extern const char            *specdata[][MAX_SPEC];
 extern struct class_names     class_names_table[];
 int                           range_scan_track(P_char ch, int distance, int type_scan);
@@ -3792,7 +3790,7 @@ int cityguard(P_char ch, P_char pl, int cmd, char *arg)
 		MobStartFight(ch, tar_ch);
 		return (TRUE);
 	}
-	return OutlawAggro(ch, "$n screams '%s! Fresh blood! Kill!'");
+	return false;
 }
 
 /*

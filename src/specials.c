@@ -221,33 +221,6 @@ void swimming_char(P_char ch)
 	  AddEvent(EVENT_SWIMMING, swim_timer, TRUE, ch, 0);*/
 }
 
-int OutlawAggro(struct char_data *ch, const char *foo)
-{
-#if 0
-  struct char_data *tch;
-  char     Gbuf4[MAX_STRING_LENGTH];
-  int      flag_lvl;
-
-  /*
-     Heh, just for fun added this to proc.. (have a fun, people. :) 
-   */
-  for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
-    if (CAN_SEE(ch, tch))
-      if ((CHAR_IS_FLAGGED(tch) == 4) || (CHAR_IS_FLAGGED(tch) == 3))
-      {
-        flag_lvl = CHAR_IS_FLAGGED(tch);
-        snprintf(Gbuf4, MAX_STRING_LENGTH, foo,
-                (flag_lvl == 4) ? "Outcast" :
-                (flag_lvl == 2) ? "Outlaw" :
-                (flag_lvl == 3) ? "Killer" : "Thief");
-        act(Gbuf4, FALSE, ch, 0, 0, TO_ROOM);
-        MobStartFight(ch, tch);
-        return TRUE;
-      }
-#endif
-	return FALSE;
-}
-
 long pow10(long x)
 {
 	int y = 1;

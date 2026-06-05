@@ -1182,7 +1182,7 @@ struct char_display_info
 };
 
 // cleanup temp char loaded via restoreCharOnly before freeing
-// handles items, affects, events, strings, and witnesses
+// handles items, affects, events, strings
 // NOTE: does NOT free the char struct itself or pc_only_data - caller must do that
 void cleanup_temp_char(P_char ch)
 {
@@ -1242,18 +1242,6 @@ void cleanup_temp_char(P_char ch)
 			str_free(ch->only.pc->poofOut);
 		if (ch->only.pc->gcmd_arr)
 			FREE(ch->only.pc->gcmd_arr);
-	}
-
-	// free witnesses linked list
-	while (ch->specials.witnessed)
-	{
-		wtns_rec *w            = ch->specials.witnessed;
-		ch->specials.witnessed = w->next;
-		if (w->attacker)
-			str_free(w->attacker);
-		if (w->victim)
-			str_free(w->victim);
-		free(w);
 	}
 }
 

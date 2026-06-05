@@ -96,8 +96,6 @@ int                    zone2saveable(int zone_index);
 int                    saveable2zone(int saved_zone);
 void                   epic_choose_new_epic_task(P_char ch);
 
-void clear_racial_skills(P_char ch);
-
 #define GET_EPIC_POINTS(ch) (IS_NPC(ch) ? 0 : ch->only.pc->epics)
 
 #define EPIC_ZONE        0  // Touching epic stones.

@@ -50,12 +50,8 @@ extern struct shop_data *shop_index;
 int                     skip_corpse_save = 0;
 extern struct hold_data TmpAffs;
 extern struct mm_ds    *dead_mob_pool;
-// extern struct mm_ds *dead_construction_pool;
 extern struct mm_ds *dead_trophy_pool;
-extern struct mm_ds *dead_witness_pool;
-extern struct mm_ds *dead_crime_pool;
 extern struct mm_ds *dead_house_pool;
-// extern P_house first_house;
 extern int LOADED_RANDOM_ZONES;
 
 extern P_index                       obj_index;
@@ -1297,34 +1293,12 @@ int writeItems(char *buf, P_char ch)
 
 /* write witness record (TASFALEN) */
 
-int writeWitness(char *buf, wtns_rec *rec)
+int writeWitness(char *buf)
 {
-	wtns_rec *first = rec;
-	char     *start = buf;
-	int       count = 0;
-
-	while (rec)
-	{
-		count++;
-		rec = rec->next;
-	}
 	ADD_BYTE(buf, (char)SAV_WTNSVERS);
+	ADD_INT(buf, 0);
 
-	rec = first;
-	ADD_INT(buf, count);
-
-	while (rec)
-	{
-		ADD_STRING(buf, rec->attacker);
-		ADD_STRING(buf, rec->victim);
-		ADD_LONG(buf, rec->time);
-		ADD_INT(buf, rec->crime);
-		ADD_INT(buf, rec->room);
-
-		rec = rec->next;
-	}
-
-	return (int)(buf - start);
+	return 5;
 }
 
 static int persistence_write_character_flat_fallback(P_char ch, int type, int room)
@@ -1364,7 +1338,7 @@ static int persistence_write_character_flat_fallback(P_char ch, int type, int ro
 	ADD_INT(skill_off, (int)(buf - fallback_buff));
 	buf += writeSkills(buf, ch, MAX_SKILLS);
 	ADD_INT(witness_off, (int)(buf - fallback_buff));
-	buf += writeWitness(buf, ch->specials.witnessed);
+	buf += writeWitness(buf);
 	ADD_INT(affect_off, (int)(buf - fallback_buff));
 	updateShortAffects(ch);
 	buf += writeAffects(buf, ch->affected);
@@ -2508,7 +2482,6 @@ int restoreSkills(char *buf, P_char ch, int maxnum)
 #ifndef _PFILE_
 int restoreWitness(char *buf, P_char ch)
 {
-	wtns_rec *rec;
 	char     *start = buf;
 	int       count;
 
@@ -2704,7 +2677,6 @@ int restoreCharOnly(P_char ch, char *name)
 			sql_load_player_skills(ch);
 			sql_load_player_affects(ch);
 			//sql_load_player_items(ch);
-			sql_load_player_witnesses(ch);
 			sql_load_player_shapechanges(ch);
 			return 0;
 		}

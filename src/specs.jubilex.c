@@ -37,8 +37,6 @@ extern struct str_app_type    str_app[];
 extern struct time_info_data  time_info;
 extern struct zone_data      *zone;
 extern struct zone_data      *zone_table;
-extern const char            *crime_list[];
-extern const char            *crime_rep[];
 extern const char            *specdata[][MAX_SPEC];
 extern struct class_names     class_names_table[];
 int                           range_scan_track(P_char ch, int distance, int type_scan);

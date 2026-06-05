@@ -682,14 +682,6 @@ void boot_db(int mini_mode)
 		load_justice_area();
 	}
 
-	// old guildhalls (deprecated)
-	//  logit(LOG_STATUS, "Loading house.");
-	//  restore_houses();
-
-	// old guildhalls (deprecated)
-	//  logit(LOG_STATUS, " ... loading house construction Q");
-	//  loadConstructionQ();
-
 	logit(LOG_STATUS, "Setting up player-side artifact list.");
 	setupMortArtiList_sql();
 	// skip loading artifacts from db during copyover - they're restored from copyover.dat
@@ -3033,10 +3025,6 @@ P_obj read_object(int nr, int type)
 	  obj->timer[3] = time(NULL);
 	}
 	*/
-
-	/* init justice flag */
-	//  obj->justice_status = 0;
-	//  obj->justice_name = NULL;
 
 	convertObj(obj);
 

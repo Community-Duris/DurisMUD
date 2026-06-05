@@ -35,8 +35,6 @@
 
 #define IF_STR(st) ((st) ? (st) : "\0")
 
-#define GET_TIME_JUDGE(ch) ((ch)->specials.time_judge)
-
 /*
 #define CAP(st)  (*(st) = UPPER(*(st)), st)
 */

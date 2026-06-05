@@ -3339,12 +3339,6 @@ void do_steal(P_char ch, char *argument, int cmd)
 	if (!number(0, 1))
 		caught = TRUE;
 
-	/*i
-	   if (!failed && caught && (type == 2 || type == 3) && obj) {
-	   obj->justice_status = J_OBJ_STEAL;
-	   obj->justice_name = str_dup(J_NAME(ch));
-	   }
-	 */
 	if (!caught)
 	{
 		if (!failed)

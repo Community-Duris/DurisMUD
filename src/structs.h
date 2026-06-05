@@ -66,12 +66,6 @@ typedef struct mob_prog_act_list *P_mprog_list;
 typedef struct arti_data         *P_arti;
 typedef unsigned char             ubyte;
 typedef unsigned short int        ush_int;
-typedef struct witness_data       wtns_rec;
-typedef struct crime_info         crime_rec;
-typedef struct crime_data         crm_rec;
-// old guildhalls (deprecated)
-// typedef struct house_control_rec *P_house;
-// typedef struct house_upgrade_rec *P_house_upgrade;
 typedef struct acct_entry *P_acct;
 typedef void (*event_func_type)(P_char, P_char, P_obj, void *);
 
@@ -1397,9 +1391,7 @@ struct char_special_data
 	P_obj  destroying_obj;  /* For destroying objects                  */
 
 	sh_int    timer;
-	wtns_rec *witnessed;
 	P_char    arrest_by;
-	sh_int    time_judge;
 	char      undead_spell_slots[MAX_CIRCLE + 1];
 
 	// copyover temp - stash fighting info til mobs load
@@ -1963,47 +1955,10 @@ struct nevent_data
 	P_nevent               next_sched;
 };
 
-/* data structure for justice witness record as held in memory.  This
-   struct ends up being a linked list.. */
-
-struct witness_data
-{
-	time_t    time;     /* When did it happen? */
-	char     *attacker; /* who did it? */
-	char     *victim;   /* who did they do it to? */
-	ubyte     crime;    /* what did they do? */
-	int       room;     /* Where did they do it?  (VIRTUAL!) */
-	wtns_rec *next;     /* next record (or NULL if none) */
-};
-
-struct crime_data
-{
-	time_t   time;
-	char    *attacker;
-	char    *victim;
-	ubyte    crime;
-	int      room;
-	int      money;
-	ubyte    status;
-	crm_rec *next;
-};
-
-struct group_formations
-{
-	int   formation_id;
-	char *formation_name;
-	int   total_slots;
-	int   offensive_slots;
-	int   defensive_slots;
-	int   free_slots;
-	int   protected_slots;
-};
 /* structure used for grouping.. */
 struct group_list
 {
 	P_char             ch;
-	int                formation_id;
-	int                formation_valid;
 	struct group_list *next;
 };
 

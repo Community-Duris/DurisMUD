@@ -89,7 +89,6 @@ bool   sql_load_player_status(P_char ch, int pid) { return false; }
 bool   sql_load_player_skills(P_char ch) { return false; }
 bool   sql_load_player_affects(P_char ch) { return false; }
 bool   sql_load_player_items(P_char ch) { return false; }
-bool   sql_load_player_witnesses(P_char ch) { return false; }
 bool   sql_load_player_shapechanges(P_char ch) { return false; }
 bool   sql_save_player_pets(P_char ch, int save_type) { return false; }
 bool   sql_load_player_pets(P_char ch) { return false; }
@@ -3364,52 +3363,10 @@ bool sql_save_player_witnesses(P_char ch)
 	}
 
 	// DELETE + INSERT batch in one multi-statement round-trip.
+	// can be deleted after a wipe
 	char batch[16384];
 	int  bpos = snprintf(batch, sizeof(batch),
 	                     "DELETE FROM player_witnesses WHERE pid=%d", pid);
-
-	// insert current witnesses, flushing as needed
-	for (wtns_rec *w = ch->specials.witnessed; w; w = w->next)
-	{
-		char *esc_attacker = sql_escape_string(w->attacker ? w->attacker : "");
-		char *esc_victim   = sql_escape_string(w->victim ? w->victim : "");
-		int new_pos = batch_append(batch, bpos, sizeof(batch),
-		                           ";INSERT INTO player_witnesses (pid, crime, room_vnum, attacker_name, victim_name, witness_time) "
-		                           "VALUES (%d, %d, %d, '%s', '%s', FROM_UNIXTIME(NULLIF(%ld,0)))",
-		                           pid,
-		                           w->crime,
-		                           w->room,
-		                           esc_attacker ? esc_attacker : "",
-		                           esc_victim ? esc_victim : "",
-		                           (long)w->time);
-		free(esc_attacker);
-		free(esc_victim);
-		if (new_pos < 0)
-		{
-			if (bpos > 0 && !sql_run_multi_query(batch))
-			{
-				if (own_txn) sql_rollback();
-				return false;
-			}
-			batch[0] = '\0';
-			bpos = 0;
-			new_pos = batch_append(batch, bpos, sizeof(batch),
-			                       "INSERT INTO player_witnesses (pid, crime, room_vnum, attacker_name, victim_name, witness_time) "
-			                       "VALUES (%d, %d, %d, '%s', '%s', FROM_UNIXTIME(NULLIF(%ld,0)))",
-			                       pid,
-			                       w->crime,
-			                       w->room,
-			                       esc_attacker ? esc_attacker : "",
-			                       esc_victim ? esc_victim : "",
-			                       (long)w->time);
-			if (new_pos < 0)
-			{
-				if (own_txn) sql_rollback();
-				return false;
-			}
-		}
-		bpos = new_pos;
-	}
 
 	if (bpos > 0 && !sql_run_multi_query(batch))
 	{
@@ -4473,49 +4430,6 @@ bool sql_load_player_items(P_char ch)
 	return true;
 }
 
-bool sql_load_player_witnesses(P_char ch)
-{
-	if (!ch || !IS_PC(ch) || !DB)
-		return false;
-
-	int pid = GET_PID(ch);
-	if (pid <= 0)
-		return false;
-
-	char query[256];
-	snprintf(query,
-	         sizeof(query),
-	         "SELECT crime, room_vnum, attacker_name, victim_name, UNIX_TIMESTAMP(witness_time) "
-	         "FROM player_witnesses WHERE pid=%d",
-	         pid);
-
-	MYSQL_RES *result = db_query("%s", query);
-	if (!result)
-		return false;
-
-	MYSQL_ROW row;
-	while ((row = mysql_fetch_row(result)))
-	{
-		wtns_rec *w = (wtns_rec *)malloc(sizeof(wtns_rec));
-		if (!w)
-			continue;
-
-		memset(w, 0, sizeof(wtns_rec));
-		w->crime    = sql_row_int(row, 0, 0);
-		w->room     = sql_row_int(row, 1, 0);
-		w->attacker = sql_row_str(row, 2);
-		w->victim   = sql_row_str(row, 3);
-		w->time     = sql_row_long(row, 4, 0);
-
-		// prepend to list
-		w->next                = ch->specials.witnessed;
-		ch->specials.witnessed = w;
-	}
-	mysql_free_result(result);
-
-	return true;
-}
-
 P_char sql_load_player(const char *name)
 {
 	if (!name || !DB)
@@ -4571,12 +4485,6 @@ P_char sql_load_player(const char *name)
 	if (!sql_load_player_items(ch))
 	{
 		logit(LOG_DEBUG, "sql_load_player: failed to load items for %s", name);
-		// continue anyway
-	}
-
-	if (!sql_load_player_witnesses(ch))
-	{
-		logit(LOG_DEBUG, "sql_load_player: failed to load witnesses for %s", name);
 		// continue anyway
 	}
 

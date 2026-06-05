@@ -64,8 +64,6 @@ extern int                              top_of_helpt;
 extern FILE                            *help_fl;
 extern const char                      *weapons[];
 extern const char                      *justice_flags[];
-extern const char                      *justice_status[];
-extern const char                      *crime_list[];
 extern const flagDef                    action_bits[];
 extern const flagDef                    action2_bits[];
 extern const flagDef                    aggro_bits[];
@@ -2211,14 +2209,6 @@ void do_stat(P_char ch, char *argument, int cmd)
 			}
 			strcat(o_buf, buf);
 		}
-
-		/*
-		   if(j->justice_status > 0) {
-		   strcat(o_buf, "\n&+RJustice:\n");
-		   sprinttype(j->justice_status, justice_obj_status, buf2);
-		   snprintf(o_buf + strlen(o_buf), MAX_STRING_LENGTH - strlen(o_buf), " &+RStatus: %s Belongs to: %s&N\n",
-		   buf2, j->justice_name);
-		   } */
 
 		// Insert item into db
 		if (cmd == 555)

@@ -666,8 +666,6 @@ void do_stance(P_char ch, char *argument, int cmd)
 		send_to_char("You enter a defensive stance..\n", ch);
 	}
 
-	if (ch->group)
-		verify_group_formation(ch, 0);
 	CharWait(ch, PULSE_VIOLENCE * 1);
 
 #else

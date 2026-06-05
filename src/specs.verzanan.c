@@ -1678,7 +1678,7 @@ int casino_three(P_char ch, P_char pl, int cmd, char *arg)
 		SET_POS(evil, POS_SITTING + GET_STAT(evil));
 		return (TRUE);
 	}
-	return OutlawAggro(ch, "$n screams '%s! Fresh blood! Kill!'");
+	return false;
 }
 
 int casino_four(P_char ch, P_char pl, int cmd, char *arg)
@@ -1796,7 +1796,7 @@ int guard_one(P_char ch, P_char pl, int cmd, char *arg)
 		MobStartFight(ch, evil);
 		return (TRUE);
 	}
-	return OutlawAggro(ch, "$n growls 'You're gonna pay, dead beat!'");
+	return false;
 }
 
 int guard_two(P_char ch, P_char pl, int cmd, char *arg)
@@ -4420,8 +4420,6 @@ int guild_guard_one(P_char ch, P_char pl, int cmd, char *arg)
 		MobStartFight(ch, evil);
 		return (TRUE);
 	}
-	if (OutlawAggro(ch, "$n screams '%s! Fresh blood! Kill!'"))
-		return (TRUE);
 
 	if (pl)
 	{
@@ -4748,8 +4746,6 @@ int guild_guard_four(P_char ch, P_char pl, int cmd, char *arg)
 		char_to_room(ch, real_room(5534), 0);
 		return (TRUE);
 	}
-	if (OutlawAggro(ch, "$n screams '%s! Fresh blood! Kill!'"))
-		return (TRUE);
 
 	if (pl)
 	{
@@ -6372,7 +6368,7 @@ int bouncer_one(P_char ch, P_char pl, int cmd, char *arg)
 		char_to_room(ch, real_room(b_path[0]), -1);
 		act("$n pops into view, with a sulphurous BANG!.", FALSE, ch, 0, 0, TO_ROOM);
 	}
-	return OutlawAggro(ch, "$n screams '%s! Fresh blood! Kill!'");
+	return false;
 }
 
 int bouncer_two(P_char ch, P_char pl, int cmd, char *arg)
@@ -6458,7 +6454,7 @@ int bouncer_two(P_char ch, P_char pl, int cmd, char *arg)
 		char_to_room(ch, real_room(b_path[0]), -1);
 		act("$n pops into view, with a sulphurous BANG!.", FALSE, ch, 0, 0, TO_ROOM);
 	}
-	return OutlawAggro(ch, "$n screams '%s! Fresh blood! Kill!'");
+	return false;
 }
 
 int bouncer_three(P_char ch, P_char pl, int cmd, char *arg)
@@ -6537,7 +6533,7 @@ int bouncer_three(P_char ch, P_char pl, int cmd, char *arg)
 		char_to_room(ch, real_room(b_path[0]), -1);
 		act("$n pops into view, with a sulphurous BANG!.", FALSE, ch, 0, 0, TO_ROOM);
 	}
-	return OutlawAggro(ch, "$n screams '%s! Fresh blood! Kill!'");
+	return false;
 }
 
 int bouncer_four(P_char ch, P_char pl, int cmd, char *arg)
@@ -6630,5 +6626,5 @@ int bouncer_four(P_char ch, P_char pl, int cmd, char *arg)
 		char_to_room(ch, real_room(b_path[0]), -1);
 		act("$n pops into view, with a sulphurous BANG!.", FALSE, ch, 0, 0, TO_ROOM);
 	}
-	return OutlawAggro(ch, "$n screams '%s! Fresh blood! Kill!'");
+	return false;
 }

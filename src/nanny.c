@@ -88,8 +88,6 @@ extern char                      *greetinga3;
 extern char                      *greetinga4;
 extern int                        top_of_mobt;
 extern P_index                    mob_index;
-extern void                       assign_racial_skills(P_char ch);
-extern void                       reset_racial_skills(P_char ch);
 extern void                       GetMIA(char *playerName, char *returned);
 extern void                       GetMIA2(char *playerName, char *returned);
 extern int                        pulse;
@@ -1790,7 +1788,6 @@ void enter_game(P_desc d)
 {
 	struct zone_data    *zone;
 	struct affected_type af1, *afp1, *afp2;
-	crm_rec             *crec = NULL;
 	int                  cost;
 	int                  r_room    = NOWHERE;
 	long                 time_gone = 0, hit_g, move_g, heal_time, rest;
@@ -2063,9 +2060,6 @@ void enter_game(P_desc d)
 		set_char_size(ch);
 
 		update_skills(ch);
-		// Once racial skills are removed, this will be unnecessary.
-		//  Furthermore, it will wipe any formerly-racial now-epic skills learned. - Lohrr
-		//    reset_racial_skills( ch );
 	}
 	// Don't do any of above for new chars, but do give well-rested bonus.
 	else
@@ -2554,9 +2548,6 @@ void enter_game(P_desc d)
 			add_event(event_change_yzar_race, time_to_witching_hour, ch, ch, NULL, 0, NULL, sizeof(NULL));
 		}
 	}
-	// This is to remove the racial epic skills set with TAG_RACIAL_SKILLS
-	// after the current wipe (as of 4/25/14) this should be removed - Torgal
-	//  clear_racial_skills(ch); - And removed. - Lohrr
 
 	/* Send GMCP data -- telnet: gated by GMCP_ENABLED (IAC DO received).
 	 * WebSocket: must also have completed the WS handshake to avoid

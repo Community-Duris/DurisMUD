@@ -1191,7 +1191,7 @@
 #define TAG_BOON                      2066
 #define TAG_CTF                       2067
 #define TAG_CTF_BONUS                 2068
-#define TAG_RACIAL_SKILLS             2069 // deprecated - 4/25/14
+//#define TAG_RACIAL_SKILLS             2069 // deprecated - 4/25/14
 #define TAG_SOULBIND                  2070
 #define ACH_UNSTOPPABLE               2071
 #define ACH_LETSGETDIRTY              2072

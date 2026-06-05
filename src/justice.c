@@ -104,8 +104,6 @@ struct hometown_data hometowns[LAST_HOME] = {
 };
 
 struct mm_ds              *dead_justice_guard_pool = NULL;
-struct mm_ds              *dead_witness_pool       = NULL;
-struct mm_ds              *dead_crime_pool         = NULL;
 struct justice_guard_list *guard_list              = NULL;
 
 const char *justice_flags[] = {"Evil",    /* JUSTICE_EVILHOME */

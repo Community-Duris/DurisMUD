@@ -71,8 +71,6 @@ long  global_exp_limit;
 float exp_mods[EXPMOD_MAX + 1];
 
 void checkPeriodOfFame(P_char ch, char killer[1024]);
-void advance_skillpoints(P_char ch);
-void demote_skillpoints(P_char ch);
 
 #if 0
 #define READ_TITLE(ch) (GET_SEX(ch) == SEX_MALE ? titles[GET_CLASS(ch) - 1][GET_LEVEL(ch)].title_m : titles[GET_CLASS(ch) - 1][GET_LEVEL(ch)].title_f)
