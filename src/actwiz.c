@@ -109,7 +109,6 @@ extern const int                        shot_damage[];
 extern const struct stat_data           stat_factor[];
 extern const char                      *size_types[];
 extern const char                      *item_size_types[];
-extern int                              bounce_null_sites;
 extern int                              number_of_shops;
 extern int                              invitemode;
 extern int                              pulse;
@@ -6540,8 +6539,6 @@ void do_ban(P_char ch, char *argument, int cmd)
 	{
 		/* list the sites  */
 		send_to_char("Lvl By:              Banned substrings\n--------------------------------------\n", ch);
-		if (bounce_null_sites)
-			send_to_char("                    [Null sites being bounced]\n", ch);
 		if (ban_list == (struct ban_t *)NULL)
 		{
 			send_to_char("Empty list!\n", ch);
@@ -6564,12 +6561,6 @@ void do_ban(P_char ch, char *argument, int cmd)
 		return;
 	}
 	logit(LOG_WIZ, "(%s) ban %s", ch->player.name, argument);
-	if (!str_cmp(name, "null"))
-	{
-		bounce_null_sites = 1;
-		send_to_char("Null sites will now be bounced.\n", ch);
-		return;
-	}
 	for (tmp = ban_list; tmp; tmp = tmp->next)
 	{
 		if (!str_cmp(name, tmp->name))
@@ -6611,12 +6602,6 @@ void do_allow(P_char ch, char *argument, int cmd)
 	if (!*name)
 	{
 		send_to_char("Remove which string from the ban list?\n", ch);
-		return;
-	}
-	if (!str_cmp(name, "null"))
-	{
-		bounce_null_sites = 0;
-		send_to_char("Null sites will now not be bounced.\n", ch);
 		return;
 	}
 	if (ban_list == NULL)

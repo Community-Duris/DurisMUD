@@ -148,7 +148,6 @@ static void       process_line(P_desc t, char *in);
 
 P_desc descriptor_list, next_to_process, next_save = 0;
 fd_set input_set, output_set, exc_set; /* for socket handling */
-int    bounce_null_sites = 0;
 int    mini_mode         = 0;
 int    lawful            = 0;
 int    no_specials       = 0;
@@ -295,10 +294,6 @@ int main(int argc, char **argv)
 				req_passwd = 0;
 				logit(LOG_STATUS, "Allowing changing of password without old one.");
 				break;
-			case 'n':
-				bounce_null_sites = 1;
-				logit(LOG_STATUS, "Bouncing null sites");
-				break;
 			case 'm':
 				mini_mode  = 1;
 				no_ferries = 1;
@@ -323,7 +318,7 @@ int main(int argc, char **argv)
 	if (pos < argc)
 		if (!isdigit(*argv[pos]))
 		{
-			fatal_boot_error("comm", "Usage: %s [-l] [-m] [-s] [-p] [-n] [-f] [-d pathname] [ port # ]", argv[0]);
+			fatal_boot_error("comm", "Usage: %s [-l] [-m] [-s] [-p] [-f] [-d pathname] [ port # ]", argv[0]);
 		}
 		else if ((port = atoi(argv[pos])) <= 1024)
 		{
@@ -2374,36 +2369,6 @@ int new_descriptor(int s, int conn_type)
 				strncpy(Gbuf1, proxy_ip, MAX_STRING_LENGTH - 1);
 		}
 
-#if 0
-    if (strlen(Gbuf1) < 8)
-    {
-      /*
-       * address is garbage, bounce em
-       */
-      if (bounce_null_sites)
-      {
-        // WTF?  This is a set of valid addresses!
-        write(desc, "Your site name is unparseable!\r\n");
-        logit(LOG_COMM, "Null site name bounced.");
-        shutdown(desc, 2);
-        used_descs--;
-        close(desc);
-#if 0
-#ifdef MEM_DEBUG
-        mem_use[MEM_DESC] -= sizeof(struct descriptor_data);
-#endif
-        FREE((char *) newd);
-#endif
-        mm_release(dead_desc_pool, newd);
-        return (0);
-      }
-      else
-      {
-        strcpy(Gbuf1, "&+RUNTRACEABLE&n");
-        flag = TRUE;
-      }
-    }
-#endif
 		/*
 		 * things got ugly, 20k+ sites, so, split it into 2 files, a
 		 * sorted historical one and an unsorted 'recent' one.  Rather
