@@ -1453,10 +1453,7 @@ int item_switch(P_obj obj, P_char ch, int cmd, char *arg)
 	}
 	else
 	{
-		if (back == in_room)
-		{
-			REMOVE_BIT(world[back].dir_option[(int)rev_dir[door]]->exit_info, EX_BLOCKED);
-		}
+		REMOVE_BIT(world[back].dir_option[(int)rev_dir[door]]->exit_info, EX_BLOCKED);
 
 		if (obj->value[3] == 1)
 		{
