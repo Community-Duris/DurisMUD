@@ -45,7 +45,6 @@
 /* external variables */
 
 extern const int top_of_world;
-extern P_ereg    email_reg_table;
 extern int       mini_mode;
 // extern FILE *help_fl;		// commented by weebler
 extern FILE                         *info_fl;
@@ -2245,12 +2244,6 @@ void enter_game(P_desc d)
 
 	ch->only.pc->last_ip = ip2ul(d->host);
 
-	if (!d->login)
-	{
-		wizlog(57, "%s had null login.", GET_NAME(ch));
-		snprintf(d->login, MAX_STRING_LENGTH, "UNKNOWN");
-	}
-
 	if (IS_TRUSTED(ch))
 	{
 		/*
@@ -3014,8 +3007,8 @@ void reconnect(P_desc d, P_char tmp_ch)
 	tmp_ch->specials.timer   = 0;
 	STATE(d)                 = CON_PLAYING;
 	act("$n has reconnected.", TRUE, tmp_ch, 0, 0, TO_ROOM);
-	logit(LOG_COMM, "%s [%s@%s] has reconnected.", GET_NAME(d->character), d->login, d->host);
-	loginlog(d->character->player.level, "%s [%s@%s] has reconnected.", GET_NAME(d->character), d->login, d->host);
+	logit(LOG_COMM, "%s [%s] has reconnected.", GET_NAME(d->character), d->host);
+	loginlog(d->character->player.level, "%s [%s] has reconnected.", GET_NAME(d->character), d->host);
 	sql_log(d->character, CONNECTLOG, "Reconnected");
 	/* if they were morph'ed when they lost link, put them
 	 back... */
@@ -3065,7 +3058,7 @@ void select_pwd(P_desc d, char *arg)
 					SEND_TO_Q("Invalid password ... disconnecting.\r\n", d);
 					if (!IS_TRUSTED(d->character))
 					{
-						logit(LOG_PLAYER, "Invalid password for %s from %s@%s.", GET_NAME(d->character), d->login, d->host);
+						logit(LOG_PLAYER, "Invalid password for %s from %s.", GET_NAME(d->character), d->host);
 						sql_log(d->character, CONNECTLOG, "Invalid Password");
 					}
 					STATE(d) = CON_FLUSH;
@@ -3165,7 +3158,7 @@ void select_pwd(P_desc d, char *arg)
 					return;
 				}
 
-				logit(LOG_COMM, "%s [%s@%s] has connected.", GET_NAME(d->character), d->login, d->host);
+				logit(LOG_COMM, "%s [%s] has connected.", GET_NAME(d->character),d->host);
 				sql_log(d->character, CONNECTLOG, "Connected");
 
 				if (IS_TRUSTED(d->character))
@@ -3302,14 +3295,13 @@ void select_pwd(P_desc d, char *arg)
 			}
 			SEND_TO_Q("\r\nDeleting character...\r\n\r\n", d);
 			statuslog(d->character->player.level,
-			          "%s deleted %sself (%s@%s).",
+			          "%s deleted %sself (%s).",
 			          GET_NAME(d->character),
 			          GET_SEX(d->character) == SEX_MALE     ? "him"
 			          : GET_SEX(d->character) == SEX_FEMALE ? "her"
 			                                                : "it",
-			          d->login,
 			          d->host);
-			logit(LOG_PLAYER, "%s deleted %sself (%s@%s).", GET_NAME(d->character), GET_SEX(d->character) == SEX_MALE ? "him" : "her", d->login, d->host);
+			logit(LOG_PLAYER, "%s deleted %sself (%s).", GET_NAME(d->character), GET_SEX(d->character) == SEX_MALE ? "him" : "her", d->host);
 			sql_log(d->character, PLAYERLOG, "Deleted self");
 			if (!deleteCharacter(d->character))
 			{
@@ -4838,7 +4830,7 @@ void newby_announce(P_desc d)
 
 	snprintf(Gbuf1,
 	         MAX_STRING_LENGTH,
-	         "&+C*** New char: &n%s (%s %s %s) - Rolled for %ld:%02ld, Socket: %d, Idle: %d:%02d, IP: %s %s.\n",
+	         "&+C*** New char: &n%s (%s %s %s) - Rolled for %ld:%02ld, Socket: %d, Idle: %d:%02d, IP: %s.\n",
 	         GET_NAME(d->character),
 	         GET_SEX(d->character) == SEX_MALE     ? "Male"
 	         : GET_SEX(d->character) == SEX_FEMALE ? "Female"
@@ -4850,8 +4842,7 @@ void newby_announce(P_desc d)
 	         d->descriptor,
 	         (d->wait / WAIT_SEC) / 60,
 	         (d->wait / WAIT_SEC) % 60,
-	         d->login ? d->login : "unknown",
-	         d->host ? d->host : "UNKNOWN");
+	         *d->host ? d->host : "UNKNOWN");
 	for (i = descriptor_list; i; i = i->next)
 	{
 		if (!i->connected && i->character && IS_SET(i->character->specials.act, PLR_NAMES) && IS_TRUSTED(i->character))
@@ -5065,48 +5056,6 @@ void nanny(P_desc d, char *arg)
 				}
 			}
 			break;
-#ifndef USE_ACCOUNT
-
-			/* Player enteres in login */
-		case CON_ENTER_LOGIN:
-			snprintf(d->registered_login, MAX_STRING_LENGTH, "%s", arg);
-			SEND_TO_Q("\n\rNow, the hostname part of your email address: ", d);
-			STATE(d) = CON_ENTER_HOST;
-			break;
-		case CON_ENTER_HOST:
-			snprintf(d->registered_host, MAX_STRING_LENGTH, "%s", arg);
-			if (email_in_use(d->registered_login, d->registered_host))
-			{
-				SEND_TO_Q("That email is in use already.\n\r", d);
-				STATE(d) = CON_EXIT;
-				SEND_TO_Q("\n\rPRESS RETURN.", d);
-				return;
-			}
-			snprintf(Gbuf1, MAX_STRING_LENGTH, "Your email is registered as %s@%s, is this correct? ", d->registered_login, d->registered_host);
-			SEND_TO_Q(Gbuf1, d);
-			STATE(d) = CON_CONFIRM_EMAIL;
-			break;
-		case CON_CONFIRM_EMAIL:
-			for (; isspace(*arg); arg++)
-				;
-			if (*arg == 'y' || *arg == 'Y')
-			{ /* continue */
-				//      snprintf(Gbuf1, MAX_STRING_LENGTH, "Please enter your sex? (M/F) ");
-				//      SEND_TO_Q(Gbuf1, d);
-
-				SEND_TO_Q(racewars, d);
-				STATE(d) = CON_SHOW_RACE_TABLE;
-				/*      display_available_races(d);
-				      STATE(d) = CON_GET_RACE;*/
-			}
-			else
-			{ /* wrong email */
-				SEND_TO_Q("Okay, resetting...\n\r", d);
-				SEND_TO_Q("What is your login or userid portion of your email? ", d);
-				STATE(d) = CON_ENTER_LOGIN;
-			}
-			break;
-#endif
 
 			/* Appropriate name for new player */
 		case CON_APPROPRIATE_NAME:
@@ -5115,12 +5064,6 @@ void nanny(P_desc d, char *arg)
 				;
 			if (*arg == 'y' || *arg == 'Y')
 			{
-/*
-   if (mini_mode) {
-   SEND_TO_Q("We now need an email address for authorization.\n\rPlease type in your login or userid: ",d);
-   STATE(d) = CON_ENTER_LOGIN;
-   } else {
- */
 #ifndef USE_ACCOUNT
 				snprintf(Gbuf1, MAX_STRING_LENGTH, "\r\nPlease enter a password for %s: ", GET_NAME(d->character));
 				SEND_TO_Q(Gbuf1, d);
@@ -5396,26 +5339,6 @@ void nanny(P_desc d, char *arg)
 			break;
 
 		case CON_WELCOME:
-#if 0
-    if (mini_mode)
-    {
-      struct registration_node *x;
-      CREATE(x, struct registration_node, 1);
-
-      snprintf(x->host, MAX_STRING_LENGTH, "%s", d->registered_host);
-      snprintf(x->login, MAX_STRING_LENGTH, "%s", d->registered_login);
-      snprintf(x->name, MAX_STRING_LENGTH, "%s", GET_NAME(d->character));
-      x->name[0] = tolower(x->name[0]);
-      x->next = email_reg_table[(int) x->name[0] - (int) 'a'].next;
-      email_reg_table[(int) x->name[0] - (int) 'a'].next = x;
-      dump_email_reg_db();
-      email_player_info(x->login, x->host, d);
-      SEND_TO_Q
-        ("Your character information will be emailed to you shortly.\n\r", d);
-      STATE(d) = CON_EXIT;
-      return;
-    }
-#endif
 			writeCharacter(d->character, 2, NOWHERE);
 #ifdef USE_ACCOUNT
 			display_account_menu(d, arg);
@@ -5478,45 +5401,6 @@ void nanny(P_desc d, char *arg)
 
 #endif
 	}
-}
-
-/* EMAIL: takes a char, generate a random password for them, then emails
- * the password data to them.
- */
-
-void email_player_info(char *login, char *host, struct descriptor_data *d)
-{
-
-	char  buf[MAX_STRING_LENGTH];
-	char  password[9];
-	int   counter;
-	FILE *fp;
-
-	for (counter = 0; counter < 6; counter++)
-		password[counter] = (random() % 26) + 97;
-	for (counter = 6; counter < 8; counter++)
-		password[counter] = (random() % 10) + 48;
-	password[8] = '\0';
-	snprintf(buf, MAX_STRING_LENGTH, "/tmp/%s.REG", GET_NAME(d->character));
-	if (!(fp = fopen(buf, "w")))
-	{
-		ereglog(AVATAR, "Could not open emailreg temp file! (%s)", GET_NAME(d->character));
-		return;
-	};
-	fprintf(fp, "  *** Duris Character Registration *** \n\n\n");
-	fprintf(fp, " INSERT POLICY BULLSHIT HERE\n\n\n");
-	fprintf(fp, "Your character name is: %s\n", GET_NAME(d->character));
-	fprintf(fp, "Your password is %s\n", password);
-	fprintf(fp, ".\n");
-	fclose(fp);
-	if (!(fp = fopen("EmailReg.Q", "at")))
-	{
-		ereglog(AVATAR, "Could not open Q file! (%s)", GET_NAME(d->character));
-		return;
-	};
-	fprintf(fp, "mail -s \"%s\" %s@%s < /tmp/%s.REG\n", "Duris Character", login, host, GET_NAME(d->character));
-	ereglog(AVATAR, "Executing Command %s", buf);
-	fclose(fp);
 }
 
 char *hint_array[1000];

@@ -6816,14 +6816,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 					fclose(f);
 				}
 			}
-			if (d->login)
-			{
-				snprintf(line + strlen(line), MAX_STRING_LENGTH - strlen(line), " %8s %s%s&n", d->login, got_dupe_host(d) ? "&+R" : "&+Y", d->host2);
-			}
-			else
-			{
-				snprintf(line + strlen(line), MAX_STRING_LENGTH - strlen(line), "         %s%s&n", got_dupe_host(d) ? "&+R" : "&+Y", d->host2);
-			}
+			snprintf(line + strlen(line), MAX_STRING_LENGTH - strlen(line), "         %s%s&n", got_dupe_host(d) ? "&+R" : "&+Y", d->host2);
 		}
 		else
 		{
@@ -6934,14 +6927,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 						fclose(f);
 					}
 				}
-				if (d->login)
-				{
-					snprintf(line + strlen(line), MAX_STRING_LENGTH - strlen(line), " %8s %s%s&n", d->login, got_dupe_host(d) ? "&+R" : "&+Y", d->host2);
-				}
-				else
-				{
-					snprintf(line + strlen(line), MAX_STRING_LENGTH - strlen(line), "         %s%s&n", got_dupe_host(d) ? "&+R" : "&+Y", d->host2);
-				}
+				snprintf(line + strlen(line), MAX_STRING_LENGTH - strlen(line), "         %s%s&n", got_dupe_host(d) ? "&+R" : "&+Y", d->host2);
 			}
 			else
 			{

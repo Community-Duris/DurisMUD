@@ -142,7 +142,6 @@ P_index obj_index; /* * index table for object file     */
 P_table obj_tables; /* for random obj tables */
 P_table mob_tables; /* for random mob tables */
 
-P_ereg email_reg_table;
 int    num_mob_tables, num_obj_tables = 0;
 
 struct info_index_element *info_index = 0;
@@ -167,7 +166,6 @@ void assign_continents();
 void init_rand_tables(void);
 void init_email_reg_db(void);
 void dump_email_reg_db(void);
-void check_registered_email(struct descriptor_data *);
 int  email_in_use(char *, char *);
 
 void release_obj_mem(P_obj obj);
@@ -813,112 +811,6 @@ void weather_setup(void)
 	}
 	fclose(fl);
 }
-
-/* EMAIL Registration setup */
-int email_in_use(char *login, char *host)
-{
-	int                       temp, flag;
-	struct registration_node *x;
-
-	flag = 0;
-	for (temp = 0; temp < 26; temp++)
-	{
-		x = email_reg_table[temp].next;
-		while (x)
-		{
-			if (strstr(login, x->login) && strstr(host, x->host))
-				flag = 1;
-			x = x->next;
-		}
-	}
-	return flag;
-}
-
-void check_registered_email(struct descriptor_data *d)
-{
-
-	struct registration_node *x;
-	int                       temp;
-	char                     *tname;
-
-	tname    = str_dup(GET_NAME(d->character));
-	tname[0] = tolower(tname[0]); /* lowercase first letter */
-	for (temp = 0; temp < 26; temp++)
-	{
-		x = email_reg_table[temp].next;
-		while (x)
-		{
-			if (strstr(tname, x->name) && (!(strstr(d->host, x->host) && strstr(d->login, x->login))))
-			{
-				/* we have same name but not same registered host/login */
-			}
-			if (!strstr(tname, x->name) && ((strstr(d->host, x->host) && strstr(d->login, x->login))))
-			{
-				/* we have same host/login as someone ELSES character */
-			}
-			x = x->next;
-		}
-	}
-	FREE(tname);
-}
-
-void dump_email_reg_db()
-{
-	int                       temp;
-	struct registration_node *x;
-	FILE                     *rfile;
-
-	if (!(rfile = fopen(EMAIL_FILE, "w")))
-	{
-		fprintf(stderr, "Cant open email file for writing.\n\r");
-		return;
-	}
-	for (temp = 0; temp < 26; temp++)
-	{
-		x = email_reg_table[temp].next;
-		while (x)
-		{
-			fprintf(rfile, "%s %s %s\n", x->name, x->login, x->host);
-			x = x->next;
-		}
-	}
-	fprintf(rfile, "$\n");
-	fclose(rfile);
-}
-
-void init_email_reg_db()
-{
-	int                       temp;
-	struct registration_node *x;
-	FILE                     *rfile;
-	char                      buf[MAX_STRING_LENGTH];
-
-	CREATE(email_reg_table, registration_node, 26, MEM_TAG_REGNODE); /* 26 alphabets */
-																	 //  email_reg_table = (struct registration_node *) calloc(26, sizeof(struct registration_node));  /* 26 alphabets */
-
-	for (temp = 0; temp < 26; temp++)
-	{
-		email_reg_table[temp].next = 0;
-	}
-	if (!(rfile = fopen(EMAIL_FILE, "r")))
-	{
-		fprintf(stderr, "Cant open email file.\n\r");
-		return;
-	}
-	for (;;)
-	{ /* read in file */
-		fgets(buf, 100, rfile);
-		if (buf[0] == '$')
-			break; /* eof */
-		CREATE(x, registration_node, 1, MEM_TAG_REGNODE);
-		// x = (struct registration_node *) malloc(sizeof(struct registration_node));
-		sscanf(buf, "%s %s %s\n", x->name, x->login, x->host);
-		temp                       = (int)buf[0] - (int)'a'; /* couldn't remember function */
-		x->next                    = email_reg_table[temp].next;
-		email_reg_table[temp].next = x;
-	}
-	fclose(rfile);
-};
 
 /* generate random mob and obj tables */
 void init_rand_tables()

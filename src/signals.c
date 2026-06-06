@@ -33,7 +33,6 @@ extern int  shutdownflag;
 extern volatile sig_atomic_t signal_shutdown_pending;
 
 // extern pid_t lookup_host_process;
-extern pid_t lookup_ident_process;
 void         reap(int sig);
 
 void shutdown_request(int);

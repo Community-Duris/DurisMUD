@@ -170,7 +170,6 @@ long                  boot_time;
 int                   ipc_id    = 0;
 int                   was_upper = FALSE;
 pid_t                 lookup_host_process;
-pid_t                 lookup_ident_process;
 int                   max_users_playing = 0;
 int                   used_descs = 0, avail_descs = 0, max_descs = 0, max_descs_this_hour = 0;
 struct mm_ds         *dead_desc_pool = NULL;
@@ -342,10 +341,6 @@ int main(int argc, char **argv)
 	/*
 	  if (!(lookup_host_process = fork()))
 	    exit(run_lookup_host_process(ipc_id));
-	*/
-	/*
-	  if (!(lookup_ident_process = fork()))
-	    exit(run_lookup_ident_process(ipc_id));
 	*/
 	if (chdir(dir) < 0)
 	{
@@ -734,7 +729,6 @@ void game_loop(int port, int sslport)
 	static struct timeval opt_time;
 	struct timeval        last_time, now, timespent, timeout, null_time;
 	struct host_answer    host_ans_buf;
-	struct ident_answer   ident_ans_buf;
 	sigset_t              mask, oldset;
 	int                   s, S;
 	int                   WS; /* WebSocket listener socket */
@@ -878,10 +872,8 @@ void game_loop(int port, int sslport)
 		}
 		/*
 		    struct host_answer host_ans_buf;
-		    struct ident_answer ident_ans_buf;
 		*/
 		bzero(&host_ans_buf, sizeof(host_ans_buf));
-		bzero(&ident_ans_buf, sizeof(ident_ans_buf));
 		/* Check for answers to hostname queuries */
 		/* just ignore errors (hope they are all "no message" errors) */
 #if 0
@@ -890,12 +882,6 @@ void game_loop(int port, int sslport)
                MSG_HOST_ANS, IPC_NOWAIT) == -1)
       host_ans_buf.desc = s;    /* so nothing happens  */
 #endif
-		/*
-		    if (msgrcv(ipc_id, (struct msgbuf *) &ident_ans_buf,
-		               sizeof(struct ident_answer) - sizeof(long),
-		               MSG_IDENT_ANS, IPC_NOWAIT) == -1)
-		           ident_ans_buf.desc = s;
-		*/
 		/* Check what's happening out there */
 		FD_ZERO(&input_set);
 		FD_ZERO(&output_set);
@@ -922,9 +908,6 @@ void game_loop(int port, int sslport)
 			 * good time to see if the message answer we checked for
 			 * before matches
 			 */
-
-			if ((point->descriptor == ident_ans_buf.desc) && (*((time_t *)(point->login + 4)) == ident_ans_buf.stamp))
-				strcpy(point->login, ident_ans_buf.name);
 
 			if ((point->descriptor == host_ans_buf.desc) && !strncmp(host_ans_buf.addr, point->host /*+ 3 */, strlen(host_ans_buf.addr)))
 			{
@@ -2507,7 +2490,6 @@ int new_descriptor(int s, int conn_type)
 	newd->confirm_state = 0;       /*
 	                                * SAM 7-94
 	                                */
-	strcpy(newd->login, " ? ");
 	newd->editor       = NULL;
 	newd->out_compress = MCCP_NONE;
 	newd->z_str        = NULL;

@@ -2341,8 +2341,8 @@ void ws_cmd_delete_character(struct descriptor_data *d, cJSON *data)
 	}
 
 	/* log the deletion */
-	statuslog(ch->player.level, "%s deleted %s via web client (%s@%s).", d->account->acct_name, char_name, d->login, d->host);
-	logit(LOG_PLAYER, "%s deleted %s via web client (%s@%s).", d->account->acct_name, char_name, d->login, d->host);
+	statuslog(ch->player.level, "%s deleted %s via web client (%s).", d->account->acct_name, char_name, d->host);
+	logit(LOG_PLAYER, "%s deleted %s via web client (%s).", d->account->acct_name, char_name,d->host);
 
 	if (!deleteCharacter(ch))
 	{

@@ -1741,8 +1741,8 @@ int is_char_in_game(struct acct_chars *c, P_desc d)
 			ch->specials.timer = 0;
 			STATE(d)           = CON_PLAYING;
 
-			logit(LOG_COMM, "%s [%s@%s] has reconnected.", GET_NAME(d->character), d->login, d->host);
-			loginlog(d->character->player.level, "%s [%s@%s] has reconnected.", GET_NAME(d->character), d->login, d->host);
+			logit(LOG_COMM, "%s [%s] has reconnected.", GET_NAME(d->character), d->host);
+			loginlog(d->character->player.level, "%s [%s] has reconnected.", GET_NAME(d->character), d->host);
 
 			if (IS_SET(ch->specials.act, PLR_MORPH))
 			{
@@ -2000,8 +2000,8 @@ void account_delete_char(P_desc d, char *arg)
 			return;
 		}
 		SEND_TO_Q("\r\n&+RDeleting character...&n\r\n\r\n", d);
-		statuslog(d->character->player.level, "%s deleted %sself (%s@%s).", GET_NAME(d->character), GET_SEX(d->character) == SEX_MALE ? "him" : "her", d->login, d->host);
-		logit(LOG_PLAYER, "%s deleted %sself (%s@%s).", GET_NAME(d->character), GET_SEX(d->character) == SEX_MALE ? "him" : "her", d->login, d->host);
+		statuslog(d->character->player.level, "%s deleted %sself (%s).", GET_NAME(d->character), GET_SEX(d->character) == SEX_MALE ? "him" : "her", d->host);
+		logit(LOG_PLAYER, "%s deleted %sself (%s).", GET_NAME(d->character), GET_SEX(d->character) == SEX_MALE ? "him" : "her", d->host);
 		deleteCharacter(d->character);
 		d->character = NULL;      // Clear dangling pointer
 		d->term_type = TERM_ANSI; // Preserve ANSI terminal mode
