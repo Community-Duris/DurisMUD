@@ -353,15 +353,13 @@ int advatoi(const char *s)
 {
 	char  string[MAX_INPUT_LENGTH];
 	char *stringptr = string;
-	char  tempstring[2];
 	int   num = 0, num2 = 0, num3 = 0;
 	int   multiplier = 0;
 
 	strcpy(string, s);
 	while (isdigit(*stringptr))
 	{                                        /* while current character is a digit */
-		strncpy(tempstring, stringptr, 1);   /* copy first digit */
-		num = (num * 10) + atoi(tempstring); /* add to current number */
+		num = (num * 10) + stringptr[0] - '0'; /* add to current number */
 		stringptr++;                         /* advance */
 	}
 
@@ -390,8 +388,7 @@ int advatoi(const char *s)
 
 	while (isdigit(*stringptr))
 	{                                      /* if any digits follow add those too */
-		strncpy(tempstring, stringptr, 1); /* copy first digit */
-		num2 = num2 + (atoi(tempstring));
+		num2 = num2 + stringptr[0] - '0';
 		stringptr++;
 	}
 
@@ -415,8 +412,7 @@ int advatoi(const char *s)
 		}
 	while (isdigit(*stringptr))
 	{                                      /* if any digits follow add those too */
-		strncpy(tempstring, stringptr, 1); /* copy first digit */
-		num3 = num3 + (atoi(tempstring));
+		num3 = num3 + stringptr[0] - '0';
 		stringptr++;
 	}
 
@@ -435,8 +431,7 @@ int advatoi(const char *s)
 		}
 	while (isdigit(*stringptr))
 	{                                      /* if any digits follow add those too */
-		strncpy(tempstring, stringptr, 1); /* copy first digit */
-		num3 = num3 + (atoi(tempstring));
+		num3 = num3 + stringptr[0] - '0';
 		stringptr++;
 	}
 	num = num + num2 + num3;

@@ -4354,17 +4354,11 @@ void do_shutdown(P_char ch, char *argument, int cmd)
 
 			// If there's text after minutes, that's the reason
 			if (reason_start && *reason_start)
-			{
-				strncpy(reason, reason_start, MAX_STRING_LENGTH - 1);
-				reason[MAX_STRING_LENGTH - 1] = '\0';
-			}
+				strlcpy(reason, reason_start, sizeof reason);
 		}
 		// If temp_arg is NOT numeric, entire argument is the reason
 		else
-		{
-			strncpy(reason, argument, MAX_STRING_LENGTH - 1);
-			reason[MAX_STRING_LENGTH - 1] = '\0';
-		}
+			strlcpy(reason, argument, sizeof reason);
 	}
 
 	if (shutdownData.eShutdownType == TimedShutdownData::AUTOREBOOT)
@@ -4481,8 +4475,7 @@ void do_shutdown(P_char ch, char *argument, int cmd)
 		type = "shutdown";
 	}
 	strcpy(shutdownData.IssuedBy, GET_NAME(ch));
-	strncpy(shutdownData.Reason, reason, 255);
-	shutdownData.Reason[255]  = '\0';
+	strlcpy(shutdownData.Reason, reason, sizeof shutdownData.Reason);
 	shutdownData.next_warning = -1;
 	shutdownData.reboot_time  = (time(0) + (mins_to_reboot * 60));
 	snprintf(buf, sizeof buf, "Scheduled %s initiated by %s in %d minutes.", type, GET_NAME(ch), mins_to_reboot);

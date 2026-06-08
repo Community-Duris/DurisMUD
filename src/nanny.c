@@ -3610,23 +3610,20 @@ void select_race(P_desc d, char *arg)
 			/* Uppercase = show help (for letter keys) */
 			if (isalpha(key) && *arg == toupper(key))
 			{
-				strncpy(Gbuf, race_names_table[playable_races[i].race_id].normal, sizeof(Gbuf) - 1);
-				Gbuf[sizeof(Gbuf) - 1] = '\0';
+				strlcpy(Gbuf, race_names_table[playable_races[i].race_id].normal, sizeof Gbuf);
 				found                  = TRUE;
 				break;
 			}
 			/* Special: '!' for '1' (Kobold help), '@' for '2' (Drider help) */
 			if (key == '1' && *arg == '!')
 			{
-				strncpy(Gbuf, race_names_table[RACE_KOBOLD].normal, sizeof(Gbuf) - 1);
-				Gbuf[sizeof(Gbuf) - 1] = '\0';
+				strlcpy(Gbuf, race_names_table[RACE_KOBOLD].normal, sizeof Gbuf);
 				found                  = TRUE;
 				break;
 			}
 			if (key == '2' && *arg == '@')
 			{
-				strncpy(Gbuf, race_names_table[RACE_DRIDER].normal, sizeof(Gbuf) - 1);
-				Gbuf[sizeof(Gbuf) - 1] = '\0';
+				strlcpy(Gbuf, race_names_table[RACE_DRIDER].normal, sizeof Gbuf);
 				found                  = TRUE;
 				break;
 			}

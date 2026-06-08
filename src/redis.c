@@ -2873,8 +2873,7 @@ static char *generate_fraglist_output(void)
 		{
 			if (row[0] && row[1])
 			{
-				strncpy(name, row[0], sizeof(name) - 1);
-				name[sizeof(name) - 1] = '\0';
+				strlcpy(name, row[0], sizeof name);
 				name[0]                = toupper(name[0]);
 				frags                  = atoi(row[1]);
 				fragnum                = frags / 100.0;
@@ -2906,8 +2905,7 @@ static char *generate_fraglist_output(void)
 		{
 			if (row[0] && row[1])
 			{
-				strncpy(name, row[0], sizeof(name) - 1);
-				name[sizeof(name) - 1] = '\0';
+				strlcpy(name, row[0], sizeof name);
 				name[0]                = toupper(name[0]);
 				frags                  = atoi(row[1]);
 				fragnum                = frags / 100.0;

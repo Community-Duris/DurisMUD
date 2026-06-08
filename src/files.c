@@ -1660,8 +1660,7 @@ int writeCharacter(P_char ch, int type, int room)
 		{
 			// player locker: playername.locker - get player's pid
 			char pname[MAX_NAME_LENGTH + 1];
-			strncpy(pname, GET_NAME(ch), sizeof(pname) - 1);
-			pname[sizeof(pname) - 1] = '\0';
+			strlcpy(pname, GET_NAME(ch), sizeof pname);
 			char *dot                = strstr(pname, ".locker");
 			if (dot)
 				*dot = '\0';
@@ -1894,8 +1893,7 @@ char *getString(char **buf)
 	{
 		CREATE(s, char, (unsigned)(len + 1), MEM_TAG_STRING);
 
-		strncpy(s, *buf, (unsigned)len);
-		s[len] = 0;
+		strcpy(s, *buf);
 		*buf += len;
 	}
 	return s;

@@ -1453,8 +1453,7 @@ const char *sql_select_IP_info(P_char ch, char *buf, size_t bufSize, time_t *las
 
 		if (NULL != row)
 		{
-			strncpy(buf, row[0] ? row[0] : "", bufSize - 2);
-			buf[bufSize - 1] = '\0';
+			strlcpy(buf, row[0] ? row[0] : "", bufSize);
 			now              = strtoul(row[3], NULL, 10);
 			if (lastConnect)
 			{

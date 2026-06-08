@@ -276,11 +276,11 @@ static bool esc_locker_name_matches_player(const char *esc_locker_name, P_char c
 		if (dot)
 		{
 			int len = dot - src;
-			if (len < 0)
+			if (len <= 0)
 				len = 0;
-			if (len >= MAX_INPUT_LENGTH)
+			if (len > MAX_INPUT_LENGTH)
 				len = MAX_INPUT_LENGTH - 1;
-			strncpy(locker_acct, src, len);
+			memcpy(locker_acct, src, len);
 			locker_acct[len]   = '\0';
 			int locker_racewar = atoi(dot + 1);
 			return (player_acct && !str_cmp(locker_acct, player_acct) && locker_racewar == GET_RACEWAR(ch));
@@ -1402,8 +1402,7 @@ bool ComboChest::ItemFits(P_obj obj)
 
 PrivateChest::PrivateChest(int chest_id, const char *name, bool has_password) : LockerChest(name, "in your private chest"), m_chestId(chest_id), m_hasPassword(has_password)
 {
-	strncpy(m_chestName, name, sizeof(m_chestName) - 1);
-	m_chestName[sizeof(m_chestName) - 1] = '\0';
+	strlcpy(m_chestName, name, sizeof(m_chestName));
 
 	m_pChestObject = read_object(m_chestVnum, VIRTUAL);
 	if (m_pChestObject)
@@ -2667,7 +2666,7 @@ static int create_new_locker(P_char ch, P_char locker)
 			if (dot)
 			{
 				int len = dot - src;
-				strncpy(acct_name, src, len);
+				memcpy(acct_name, src, len);
 				acct_name[len] = '\0';
 			}
 			else

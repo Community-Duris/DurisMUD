@@ -521,8 +521,7 @@ static int ws_load_char_info(const char *charname, struct ws_char_info *info)
 		return 0;
 	}
 
-	strncpy(info->name, GET_NAME(temp_ch), 31);
-	info->name[31] = '\0';
+	strlcpy(info->name, GET_NAME(temp_ch), sizeof info->name);
 	/* capitalize first letter */
 	if (info->name[0])
 		info->name[0] = toupper(info->name[0]);
@@ -760,8 +759,7 @@ void ws_cmd_login(struct descriptor_data *d, cJSON *data)
 	}
 
 	/* lowercase for filesystem lookup */
-	strncpy(tmp_name, account_name, sizeof(tmp_name) - 1);
-	tmp_name[sizeof(tmp_name) - 1] = '\0';
+	strlcpy(tmp_name, account_name, sizeof tmp_name);
 	for (int i = 0; tmp_name[i]; i++)
 	{
 		tmp_name[i] = tolower(tmp_name[i]);
@@ -1061,8 +1059,7 @@ void ws_cmd_register(struct descriptor_data *d, cJSON *data)
 	}
 
 	/* copy and normalize account name */
-	strncpy(tmp_name, account_json->valuestring, MAX_INPUT_LENGTH - 1);
-	tmp_name[MAX_INPUT_LENGTH - 1] = '\0';
+	strlcpy(tmp_name, account_json->valuestring, sizeof tmp_name);
 
 	/* convert to lowercase except first char */
 	tmp_name[0] = toupper(tmp_name[0]);
@@ -1612,8 +1609,7 @@ void ws_cmd_create_character(struct descriptor_data *d, cJSON *data)
 	P_char ch;
 
 	/* capitalize name */
-	strncpy(capitalized_name, name, MAX_NAME_LENGTH);
-	capitalized_name[MAX_NAME_LENGTH] = '\0';
+	strlcpy(capitalized_name, name, sizeof capitalized_name);
 	capitalized_name[0]               = toupper(capitalized_name[0]);
 	for (i = 1; capitalized_name[i]; i++)
 	{
@@ -1745,8 +1741,7 @@ void ws_cmd_create_character(struct descriptor_data *d, cJSON *data)
 	init_char(ch);
 
 	/* copy account password to character */
-	strncpy(ch->only.pc->pwd, d->account->acct_password, sizeof(ch->only.pc->pwd) - 1);
-	ch->only.pc->pwd[sizeof(ch->only.pc->pwd) - 1] = '\0';
+	strlcpy(ch->only.pc->pwd, d->account->acct_password, sizeof ch->only.pc->pwd);
 
 #ifdef USE_ACCOUNT
 	add_char_to_account(d);
@@ -1843,8 +1838,7 @@ void ws_cmd_validate_name(struct descriptor_data *d, cJSON *data)
 	}
 
 	/* capitalize name for pfile_exists */
-	strncpy(capitalized_name, name, MAX_NAME_LENGTH);
-	capitalized_name[MAX_NAME_LENGTH] = '\0';
+	strlcpy(capitalized_name, name, sizeof capitalized_name);
 	capitalized_name[0]               = toupper(capitalized_name[0]);
 	for (i = 1; capitalized_name[i]; i++)
 	{
@@ -2077,8 +2071,7 @@ void ws_cmd_account_info(struct descriptor_data *d, cJSON *data)
 					}
 
 					/* build character json object */
-					strncpy(name_cap, GET_NAME(temp_ch), 31);
-					name_cap[31] = '\0';
+					strlcpy(name_cap, GET_NAME(temp_ch), sizeof name_cap);
 					if (name_cap[0])
 						name_cap[0] = toupper(name_cap[0]);
 
@@ -2746,8 +2739,7 @@ void ws_cmd_rested_bonus(struct descriptor_data *d, cJSON *data)
 
 					/* capitalize name */
 					char name_cap[32];
-					strncpy(name_cap, GET_NAME(temp_ch), 31);
-					name_cap[31] = '\0';
+					strlcpy(name_cap, GET_NAME(temp_ch), sizeof name_cap);
 					if (name_cap[0])
 						name_cap[0] = toupper(name_cap[0]);
 

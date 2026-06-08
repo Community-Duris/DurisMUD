@@ -594,14 +594,6 @@ int strn_cmp(const char *arg1, const char *arg2, uint n)
 	return (0);
 }
 
-int str_n_cmp(const char *argv1, const char *argv2)
-{
-	char name[MAX_INPUT_LENGTH];
-
-	strncpy(name, argv1, strlen(argv2));
-	return str_cmp(name, argv2);
-}
-
 /* returns TRUE if char is in global list, FALSE if not */
 
 const int char_in_list(const P_char ch)
@@ -6949,13 +6941,11 @@ char *CRYPT2(char *passwd, char *name)
 	// If it's not already encrypted.
 	if (*name != '$')
 	{
-		snprintf(buf, 40, "$1$");
-		strncpy(buf + 3, name, 8);
-		strcat(buf, "$");
+		snprintf(buf, sizeof buf, "$1$%.8s$", name);
 	}
 	else
 	{
-		snprintf(buf, 40, "%s", name);
+		snprintf(buf, sizeof buf, "%s", name);
 	}
 
 	return crypt(passwd, buf);

@@ -60,8 +60,7 @@ static void mail_ensure_dir(const char *path)
 		return;
 	}
 
-	strncpy(dir, path, sizeof(dir) - 1);
-	dir[sizeof(dir) - 1] = '\0';
+	strlcpy(dir, path, sizeof(dir));
 	slash = strrchr(dir, '/');
 	if (!slash)
 	{
@@ -238,8 +237,7 @@ void index_mail(char *raw_name_to_index, long pos)
 	{
 		/* name not already in index.. add it */
 		new_index = (mail_index_type *)mm_get(dead_mail2_pool);
-		strncpy(new_index->recipient, name_to_index, NAME_SIZE);
-		new_index->recipient[strlen(name_to_index)] = '\0';
+		strlcpy(new_index->recipient, name_to_index, sizeof new_index->recipient);
 		new_index->list_start                       = 0;
 
 		/* add to front of list */
@@ -345,9 +343,9 @@ void store_mail(char *to, char *from, char *message_pointer)
 	memset(&header, 0, sizeof(header)); /* clear the record */
 	header.block_type = HEADER_BLOCK;
 	header.next_block = LAST_BLOCK;
-	strncpy(header.txt, msg_txt, HEADER_BLOCK_DATASIZE);
-	strncpy(header.from, from, NAME_SIZE);
-	strncpy(header.to, to, NAME_SIZE);
+	strlcpy(header.txt, msg_txt, sizeof header.txt);
+	strlcpy(header.from, from, sizeof header.from);
+	strlcpy(header.to, to, sizeof header.to);
 	/*  tmp = str_dup(header.to);
 	 *tmp = LOWER(*tmp);*/
 	header.mail_time                  = time(0);
@@ -373,8 +371,7 @@ void store_mail(char *to, char *from, char *message_pointer)
 	/* now write the current data block */
 	memset(&data, 0, sizeof(data)); /* clear the record */
 	data.block_type = LAST_BLOCK;
-	strncpy(data.txt, msg_txt, DATA_BLOCK_DATASIZE);
-	data.txt[DATA_BLOCK_DATASIZE] = '\0';
+	strlcpy(data.txt, msg_txt, sizeof data.txt);
 	write_to_file(&data, BLOCK_SIZE, target_address);
 	bytes_written += strlen(data.txt);
 	msg_txt += strlen(data.txt);
@@ -404,8 +401,7 @@ void store_mail(char *to, char *from, char *message_pointer)
 
 		/* now write the next block, assuming it's the last.  */
 		data.block_type = LAST_BLOCK;
-		strncpy(data.txt, msg_txt, DATA_BLOCK_DATASIZE);
-		data.txt[DATA_BLOCK_DATASIZE] = '\0';
+		strlcpy(data.txt, msg_txt, sizeof data.txt);
 		write_to_file(&data, BLOCK_SIZE, target_address);
 
 		bytes_written += strlen(data.txt);

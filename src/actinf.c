@@ -6714,7 +6714,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 					if (fscanf(f, "%s\n", buf) == 1)
 						strlcpy(d->host2, buf, sizeof d->host2);
 					else
-						strncpy(d->host2, d->host, sizeof d->host2);
+						strlcpy(d->host2, d->host, sizeof d->host2);
 					fclose(f);
 				}
 			}
@@ -6830,7 +6830,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 						if (fscanf(f, "%s\n", buf) == 1)
 							strlcpy(d->host2, buf, sizeof d->host2);
 						else
-							strncpy(d->host2, d->host, sizeof d->host2);
+							strlcpy(d->host2, d->host, sizeof d->host2);
 						fclose(f);
 					}
 				}

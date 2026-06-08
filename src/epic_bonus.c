@@ -147,8 +147,7 @@ bool get_epic_bonus_data(P_char ch, EpicBonusData *ebdata)
 
 	ebdata->pid  = atoi(row[0]);
 	ebdata->type = atoi(row[1]);
-	strncpy(ebdata->time, row[2] ? row[2] : "", sizeof(ebdata->time) - 1);
-	ebdata->time[sizeof(ebdata->time) - 1] = '\0';
+	strlcpy(ebdata->time, row[2] ? row[2] : "", sizeof(ebdata->time));
 
 	mysql_free_result(res);
 

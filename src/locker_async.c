@@ -510,8 +510,7 @@ static void locker_owner_ids(P_char chLocker, int *owner_pid, int *owner_assoc_i
 	{
 		char pname[MAX_NAME_LENGTH + 1];
 		char *dot;
-		strncpy(pname, GET_NAME(chLocker), sizeof(pname) - 1);
-		pname[sizeof(pname) - 1] = '\0';
+		strlcpy(pname, GET_NAME(chLocker), sizeof(pname));
 		dot = strstr(pname, ".locker");
 		if (dot)
 			*dot = '\0';

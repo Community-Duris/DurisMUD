@@ -486,8 +486,7 @@ void sql_player_error(const char *context, const char *query)
 	{
 		// log first 200 chars of query for debugging
 		//char truncated[201];
-		//strncpy(truncated, query, 200);
-		//truncated[200] = '\0';
+		//strlcpy(truncated, query, sizeof truncated);
 		logit(LOG_DEBUG, "sql_player: query: %s...", query);
 	}
 }
@@ -637,8 +636,7 @@ bool sql_player_rename(P_char ch, const char *new_name)
 		return false;
 
 	char normalized_name[MAX_STRING_LENGTH];
-	strncpy(normalized_name, new_name, sizeof(normalized_name) - 1);
-	normalized_name[sizeof(normalized_name) - 1] = '\0';
+	strlcpy(normalized_name, new_name, sizeof(normalized_name));
 	normalize_player_name_case(normalized_name);
 
 	char *escaped_name = sql_escape_string(normalized_name);
@@ -6558,8 +6556,7 @@ int sql_migrate_all_players(void)
 
 		while ((pf_entry = readdir(pf_dir)) != NULL)
 		{
-			strncpy(fname, pf_entry->d_name, sizeof(fname) - 1);
-			fname[sizeof(fname) - 1] = '\0';
+			strlcpy(fname, pf_entry->d_name, sizeof(fname));
 
 			// skip . and ..
 			if (fname[0] == '.')
@@ -10216,8 +10213,7 @@ bool sql_load_all_ships()
 	{
 		if (!row[0])
 			continue;
-		strncpy(owner_names[num_ships], row[0], 63);
-		owner_names[num_ships][63] = '\0';
+		strlcpy(owner_names[num_ships], row[0], sizeof owner_names[num_ships]);
 		num_ships++;
 	}
 	mysql_free_result(result);
@@ -10430,7 +10426,7 @@ Guild *sql_load_guild(unsigned int guild_id)
 
 	Guild *guild     = new Guild();
 	guild->id_number = atoi(row[0]);
-	strncpy(guild->name, row[1] ? row[1] : "", ASC_MAX_STR - 1);
+	strlcpy(guild->name, row[1] ? row[1] : "", sizeof guild->name);
 	guild->racewar         = row[2] ? atoi(row[2]) : 0;
 	guild->bits            = row[3] ? atoi(row[3]) : 0;
 	guild->prestige        = row[4] ? strtoul(row[4], NULL, 10) : 0;
@@ -10441,7 +10437,7 @@ Guild *sql_load_guild(unsigned int guild_id)
 	guild->copper          = row[9] ? atoi(row[9]) : 0;
 	guild->frags.frags     = row[10] ? atol(row[10]) : 0;
 	guild->frags.top_frags = row[11] ? atol(row[11]) : 0;
-	strncpy(guild->frags.topfragger, row[12] ? row[12] : "", MAX_NAME_LENGTH);
+	strlcpy(guild->frags.topfragger, row[12] ? row[12] : "", sizeof guild->frags.topfragger);
 	mysql_free_result(result);
 
 	// load ranks
@@ -10457,7 +10453,7 @@ Guild *sql_load_guild(unsigned int guild_id)
 	{
 		int idx = atoi(row[0]);
 		if (idx >= 0 && idx < ASC_NUM_RANKS)
-			strncpy(guild->titles[idx], row[1] ? row[1] : "", ASC_MAX_STR_RANK - 1);
+			strlcpy(guild->titles[idx], row[1] ? row[1] : "", ASC_MAX_STR_RANK);
 	}
 	mysql_free_result(result);
 
@@ -10474,7 +10470,7 @@ Guild *sql_load_guild(unsigned int guild_id)
 	while ((row = mysql_fetch_row(result)))
 	{
 		P_member mem = new guild_member();
-		strncpy(mem->name, row[0] ? row[0] : "", MAX_NAME_LENGTH);
+		strlcpy(mem->name, row[0] ? row[0] : "", sizeof mem->name);
 		mem->bits          = row[1] ? atoi(row[1]) : 0;
 		mem->debt          = row[2] ? atoi(row[2]) : 0;
 		mem->online_status = GSTAT_OFFLINE;

@@ -112,7 +112,7 @@ int evaluate_expression(P_obj obj, char *expr)
 				end = ptr;
 				while (*ptr && !isspace(*ptr) && (find_oper_num(*ptr) == 0))
 					ptr++;
-				strncpy(name, end, (unsigned)(ptr - end));
+				memcpy(name, end, (unsigned)(ptr - end));
 				name[ptr - end] = 0;
 				for (i = 0; extra_bits[i].flagShort; i++)
 					if (!str_cmp(name, extra_bits[i].flagShort))

@@ -330,7 +330,7 @@ int websocket_parse_handshake(struct descriptor_data *d, const char *buf, size_t
 		else if (strncasecmp(line, "Sec-WebSocket-Key:", 18) == 0)
 		{
 			const char *value = skip_header_value(line, 18);
-			strncpy(ws_key, value, sizeof(ws_key) - 1);
+			strlcpy(ws_key, value, sizeof(ws_key));
 		}
 		else if (strncasecmp(line, "Sec-WebSocket-Version:", 22) == 0)
 		{
@@ -343,8 +343,7 @@ int websocket_parse_handshake(struct descriptor_data *d, const char *buf, size_t
 		else if (strncasecmp(line, "User-Agent:", 11) == 0)
 		{
 			const char *value = skip_header_value(line, 11);
-			strncpy(d->client_name, value, sizeof(d->client_name) - 1);
-			d->client_name[sizeof(d->client_name) - 1] = '\0';
+			strlcpy(d->client_name, value, sizeof d->client_name);
 			if (strstr(value, "Firefox"))
 			{
 				snprintf(d->client_name, sizeof(d->client_name), "Firefox");
@@ -390,8 +389,7 @@ int websocket_parse_handshake(struct descriptor_data *d, const char *buf, size_t
 				struct in6_addr ipv6;
 				if (inet_pton(AF_INET, client_ip, &ipv4) == 1 || inet_pton(AF_INET6, client_ip, &ipv6) == 1)
 				{
-					strncpy(d->host, client_ip, sizeof(d->host) - 1);
-					d->host[sizeof(d->host) - 1] = '\0';
+					strlcpy(d->host, client_ip, sizeof(d->host));
 					resolve_descriptor_hostname_async(d->host, d->descriptor);
 				}
 			}

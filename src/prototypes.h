@@ -3053,7 +3053,6 @@ int  move_cost(P_char, int);
 int  number(int, int);
 int  maproom_of_zone(int);
 /* int str_cmp(const char *, const char *); */
-int                   str_n_cmp(const char *, const char *);
 int                   strn_cmp(const char *, const char *, uint);
 int                   exitnumb_to_cmd(int);
 int                   cmd_to_exitnumb(int);

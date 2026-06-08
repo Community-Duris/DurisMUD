@@ -41,8 +41,7 @@ struct mm_ds *mm_create(const char *name, size_t size, size_t next_off, unsigned
 	struct mm_ds_list *list_entry;
 
 	CREATE(mmds, mm_ds, 1, MEM_TAG_MEMMAN);
-	strncpy(mmds->name, name, 7);
-	mmds->name[7] = '\0';
+	strlcpy(mmds->name, name, sizeof mmds->name);
 
 	mmds->head = mmds->tail = NULL;
 	mmds->size              = size;

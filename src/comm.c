@@ -943,8 +943,7 @@ void game_loop(int port, int sslport)
 			if ((point->descriptor == host_ans_buf.desc) && !strncmp(host_ans_buf.addr, point->host /*+ 3 */, strlen(host_ans_buf.addr)))
 			{
 				/* we have a match! */
-				strncpy(point->host, host_ans_buf.name, 49);
-				point->host[49] = 0;
+				strlcpy(point->host, host_ans_buf.name, sizeof point->host);
 
 				/* site ban code, skip if address is junk */
 				snprintf(buf, MAX_STRING_LENGTH, "%s\r\n", point->host);
@@ -2197,8 +2196,7 @@ static int parse_proxy_protocol(int desc, char *real_ip, size_t ip_len)
 
 	if (sscanf(buf, "PROXY %7s %45s %45s %d %d", proto, src_ip, dst_ip, &src_port, &dst_port) == 5)
 	{
-		strncpy(real_ip, src_ip, ip_len - 1);
-		real_ip[ip_len - 1] = '\0';
+		strlcpy(real_ip, src_ip, ip_len);
 		return 1;
 	}
 

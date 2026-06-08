@@ -160,8 +160,8 @@ int replace_str(char **string, char *pattern, char *replacement, int rep_all, in
 			flow += strlen(pattern);
 			len = ((char *)flow - (char *)*string) - strlen(pattern);
 
-			strncpy(replace_buffer, *string, len);
-			strcat(replace_buffer, replacement);
+			memcpy(replace_buffer, *string, len);
+			strcpy(replace_buffer + len, replacement);
 			strcat(replace_buffer, flow);
 		}
 	}
@@ -2010,8 +2010,7 @@ void show_string(struct descriptor_data *d, const char *input)
 	/* Or if we have more to show.... */
 	else
 	{
-		strncpy(buffer, d->showstr_vector[d->showstr_page], (unsigned)(diff = ((intptr_t)d->showstr_vector[d->showstr_page + 1]) - ((intptr_t)d->showstr_vector[d->showstr_page])));
-		buffer[diff] = '\0';
+		strlcpy(buffer, d->showstr_vector[d->showstr_page], sizeof buffer);
 		send_to_char(buffer, d->character);
 		send_to_char("&N", d->character);
 		d->showstr_page++;

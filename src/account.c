@@ -988,8 +988,7 @@ void account_select_char(P_desc d, char *arg)
 
 	// Capitalize character name for display
 	char name_cap[32];
-	strncpy(name_cap, c->charname, 31);
-	name_cap[31] = '\0';
+	strlcpy(name_cap, c->charname, sizeof name_cap);
 	if (name_cap[0])
 		name_cap[0] = toupper(name_cap[0]);
 
@@ -1296,8 +1295,7 @@ int load_char_display_data(char *charname, struct char_display_info *info)
 	}
 
 	// Extract display data
-	strncpy(info->charname, GET_NAME(temp_ch), 31);
-	info->charname[31]    = '\0';
+	strlcpy(info->charname, GET_NAME(temp_ch), sizeof info->charname);
 	info->level           = GET_LEVEL(temp_ch);
 	info->secondary_level = GET_SECONDARY_LEVEL(temp_ch);
 	info->race            = GET_RACE(temp_ch);
@@ -1346,15 +1344,9 @@ void get_race_name_from_info(struct char_display_info *info, char *race_str, int
 {
 	extern const struct race_names race_names_table[];
 	if (info->race >= 0 && info->race < LAST_RACE)
-	{
-		strncpy(race_str, race_names_table[info->race].normal, max_len - 1);
-		race_str[max_len - 1] = '\0';
-	}
+		strlcpy(race_str, race_names_table[info->race].normal, max_len);
 	else
-	{
-		strncpy(race_str, "Unknown", max_len - 1);
-		race_str[max_len - 1] = '\0';
-	}
+		strlcpy(race_str, "Unknown", max_len);
 }
 
 void check_rested_bonus(P_desc d)
@@ -1373,8 +1365,7 @@ void check_rested_bonus(P_desc d)
 		{
 			// Capitalize character name
 			char name_cap[32];
-			strncpy(name_cap, info.charname, 31);
-			name_cap[31] = '\0';
+			strlcpy(name_cap, info.charname, sizeof name_cap);
 			if (name_cap[0])
 				name_cap[0] = toupper(name_cap[0]);
 
@@ -1488,8 +1479,7 @@ void display_delete_character_list(P_desc d)
 		}
 
 		// Capitalize character name
-		strncpy(name_capitalized, info.charname, 31);
-		name_capitalized[31] = '\0';
+		strlcpy(name_capitalized, info.charname, sizeof name_capitalized);
 		if (name_capitalized[0])
 			name_capitalized[0] = toupper(name_capitalized[0]);
 
@@ -1505,14 +1495,13 @@ void display_delete_character_list(P_desc d)
 		{
 			// Multiclass
 			snprintf(level_str, 16, "%d/%d", info.level, info.secondary_level);
-			snprintf(class_str, 64, "%s/%s", class_names_table[primary_idx].normal, class_names_table[secondary_idx].normal);
+			snprintf(class_str, sizeof class_str, "%s/%s", class_names_table[primary_idx].normal, class_names_table[secondary_idx].normal);
 		}
 		else
 		{
 			// Single class
 			snprintf(level_str, 16, "%d", info.level);
-			strncpy(class_str, class_names_table[primary_idx].normal, 63);
-			class_str[63] = '\0';
+			strlcpy(class_str, class_names_table[primary_idx].normal, sizeof class_str);
 		}
 
 		// Truncate strings if too long
@@ -1615,22 +1604,16 @@ void display_character_list(P_desc d, P_acct account)
 		char               line_buf[512];
 
 		// capitalize character name
-		strncpy(name_capitalized, ch->charname, 31);
-		name_capitalized[31] = '\0';
+		strlcpy(name_capitalized, ch->charname, sizeof name_capitalized);
 		if (name_capitalized[0])
 			name_capitalized[0] = toupper(name_capitalized[0]);
 
 		// get race name
 		extern const struct race_names race_names_table[];
 		if (ch->race >= 0 && ch->race < LAST_RACE)
-		{
-			strncpy(race_str, race_names_table[ch->race].normal, 31);
-			race_str[31] = '\0';
-		}
+			strlcpy(race_str, race_names_table[ch->race].normal, sizeof race_str);
 		else
-		{
-			strncpy(race_str, "Unknown", 31);
-		}
+			strlcpy(race_str, "Unknown", sizeof race_str);
 
 		// get class name(s)
 		extern const struct class_names class_names_table[];
@@ -1640,13 +1623,12 @@ void display_character_list(P_desc d, P_acct account)
 		if (ch->secondary_class && secondary_idx > 0)
 		{
 			snprintf(level_str, 16, "%d", ch->level);
-			snprintf(class_str, 64, "%s/%s", class_names_table[primary_idx].normal, class_names_table[secondary_idx].normal);
+			snprintf(class_str, sizeof class_str, "%s/%s", class_names_table[primary_idx].normal, class_names_table[secondary_idx].normal);
 		}
 		else
 		{
 			snprintf(level_str, 16, "%d", ch->level);
-			strncpy(class_str, class_names_table[primary_idx].normal, 63);
-			class_str[63] = '\0';
+			strlcpy(class_str, class_names_table[primary_idx].normal, sizeof class_str);
 		}
 
 		// truncate strings if too long for table
@@ -1976,8 +1958,7 @@ void account_new_char_name(P_desc d, char *arg)
 		d->character = player;
 	}
 
-	strncpy(d->character->only.pc->pwd, d->account->acct_password, sizeof(d->character->only.pc->pwd) - 1);
-	d->character->only.pc->pwd[sizeof(d->character->only.pc->pwd) - 1] = '\0';
+	strlcpy(d->character->only.pc->pwd, d->account->acct_password, sizeof(d->character->only.pc->pwd));
 	d->character->player.name = str_dup(arg);
 	normalize_player_name_case(d->character->player.name);
 	SEND_TO_Q("You chose the name ", d);
@@ -2120,8 +2101,7 @@ void account_delete_char(P_desc d, char *arg)
 
 	// Capitalize character name for display
 	char name_cap[128];
-	strncpy(name_cap, c->charname, 127);
-	name_cap[127] = '\0';
+	strlcpy(name_cap, c->charname, sizeof name_cap);
 	if (name_cap[0])
 		name_cap[0] = toupper(name_cap[0]);
 
@@ -2204,8 +2184,7 @@ int read_account(P_acct acct) // returns -1 if error, 1 if no errors
 #ifndef __NO_MYSQL__
 
 	char name_backup[256];
-	strncpy(name_backup, acct->acct_name, sizeof(name_backup) - 1);
-	name_backup[sizeof(name_backup) - 1] = '\0';
+	strlcpy(name_backup, acct->acct_name, sizeof(name_backup));
 
 	struct acct_entry *loaded = sql_load_account(name_backup);
 	if (!loaded)

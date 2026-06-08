@@ -690,8 +690,7 @@ char *json_build_room_info(struct room_data *room, struct char_data *ch)
 				if (tch->player.name)
 				{
 					char keyword_buf[64];
-					strncpy(keyword_buf, tch->player.name, sizeof(keyword_buf) - 1);
-					keyword_buf[sizeof(keyword_buf) - 1] = '\0';
+					strlcpy(keyword_buf, tch->player.name, sizeof(keyword_buf));
 					char *space                          = strchr(keyword_buf, ' ');
 					if (space)
 						*space = '\0'; /* Get first word only */

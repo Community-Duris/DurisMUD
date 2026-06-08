@@ -254,8 +254,7 @@ void displayHardCore(P_char ch, char *arg, int cmd)
 	{
 		if (row[0] && row[1])
 		{
-			strncpy(name, row[0], sizeof(name) - 1);
-			name[sizeof(name) - 1] = '\0';
+			strlcpy(name, row[0], sizeof name);
 			name[0]                = toupper(name[0]);
 			pts                    = atof(row[1]) / (float)config->score_display_divisor;
 
@@ -355,8 +354,7 @@ void displayLeader(P_char ch, char *arg, int cmd)
 	{
 		if (row[0] && row[1])
 		{
-			strncpy(name, row[0], sizeof(name) - 1);
-			name[sizeof(name) - 1] = '\0';
+			strlcpy(name, row[0], sizeof name);
 			name[0]                = toupper(name[0]);
 			pts                    = atof(row[1]) / (float)config->score_display_divisor;
 

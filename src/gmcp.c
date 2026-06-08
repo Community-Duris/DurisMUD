@@ -137,19 +137,11 @@ void gmcp_handle_input(struct descriptor_data *d, const char *data, size_t len)
 				cJSON *sig     = cJSON_GetObjectItem(root, "sig");
 
 				if (client && cJSON_IsString(client) && client->valuestring)
-				{
-					strncpy(d->client_name, client->valuestring, sizeof(d->client_name) - 1);
-					d->client_name[sizeof(d->client_name) - 1] = '\0';
-				}
+					strlcpy(d->client_name, client->valuestring, sizeof d->client_name);
 				if (version && cJSON_IsString(version) && version->valuestring)
-				{
-					strncpy(d->client_version, version->valuestring, sizeof(d->client_version) - 1);
-					d->client_version[sizeof(d->client_version) - 1] = '\0';
-				}
+					strlcpy(d->client_version, version->valuestring, sizeof d->client_version);
 				if (sig && cJSON_IsString(sig) && verify_durisweb_sig(sig->valuestring))
-				{
 					d->durisweb_verified = 1;
-				}
 				cJSON_Delete(root);
 			}
 		}
@@ -170,15 +162,9 @@ void gmcp_handle_input(struct descriptor_data *d, const char *data, size_t len)
 				cJSON *version = cJSON_GetObjectItem(root, "version");
 
 				if (client && cJSON_IsString(client) && client->valuestring)
-				{
-					strncpy(d->client_name, client->valuestring, sizeof(d->client_name) - 1);
-					d->client_name[sizeof(d->client_name) - 1] = '\0';
-				}
+					strlcpy(d->client_name, client->valuestring, sizeof d->client_name);
 				if (version && cJSON_IsString(version) && version->valuestring)
-				{
-					strncpy(d->client_version, version->valuestring, sizeof(d->client_version) - 1);
-					d->client_version[sizeof(d->client_version) - 1] = '\0';
-				}
+					strlcpy(d->client_version, version->valuestring, sizeof d->client_version);
 				cJSON_Delete(root);
 			}
 		}
@@ -834,8 +820,7 @@ void gmcp_send_group_status(struct char_data *ch)
 			if (member->player.name)
 			{
 				static char keyword_buf[64];
-				strncpy(keyword_buf, member->player.name, sizeof(keyword_buf) - 1);
-				keyword_buf[sizeof(keyword_buf) - 1] = '\0';
+				strlcpy(keyword_buf, member->player.name, sizeof keyword_buf);
 				/* get first word (keyword) */
 				char *space = strchr(keyword_buf, ' ');
 				if (space)

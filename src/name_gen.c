@@ -138,7 +138,7 @@ int get_name(char return_namn[256])
 			tempstring[len - 1] = '\0'; /* remove linefeed          */
 		if ((tempstring[0] != '/') && (tempstring[0] != '['))
 		{
-			strncpy(start[antal_start], tempstring, strlen(tempstring));
+			strlcpy(start[antal_start], tempstring, sizeof start[antal_start]);
 			antal_start++;
 		}
 	}
@@ -155,7 +155,7 @@ int get_name(char return_namn[256])
 			tempstring[len - 1] = '\0'; /* remove linefeed          */
 		if ((tempstring[0] != '/') && (tempstring[0] != '['))
 		{
-			strncpy(mitt[antal_mitt], tempstring, strlen(tempstring));
+			strlcpy(mitt[antal_mitt], tempstring, sizeof mitt[antal_mitt]);
 			antal_mitt++;
 		}
 	}
@@ -172,7 +172,7 @@ int get_name(char return_namn[256])
 			tempstring[len - 1] = '\0'; /* remove linefeed          */
 		if ((tempstring[0] != '/') && (tempstring[0] != '['))
 		{
-			strncpy(slut[antal_slut], tempstring, strlen(tempstring));
+			strlcpy(slut[antal_slut], tempstring, sizeof slut[antal_slut]);
 			antal_slut++;
 		}
 	}
