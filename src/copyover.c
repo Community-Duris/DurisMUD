@@ -133,10 +133,8 @@ static int write_desc_entry(FILE *fp, P_desc d)
 			}
 		}
 	}
-	strncpy(entry.host, d->host, sizeof(entry.host) - 1);
-	entry.host[sizeof(entry.host) - 1] = '\0';
-	strncpy(entry.host2, d->host2, sizeof(entry.host2) - 1);
-	entry.host2[sizeof(entry.host2) - 1] = '\0';
+	strlcpy(entry.host, d->host, sizeof(entry.host));
+	strlcpy(entry.host2, d->host2, sizeof(entry.host2));
 	entry.term_type                      = d->term_type;
 	entry.gmcp_enabled                   = d->gmcp_enabled;
 	entry.out_compress                   = d->out_compress;
@@ -795,10 +793,8 @@ int copyover_recover(int *mother_desc, int *mother_desc_ssl, int *ws_desc)
 		int opt = 1;
 		setsockopt(d->descriptor, SOL_TCP, TCP_NODELAY, &opt, sizeof(opt));
 
-		strncpy(d->host, desc_entry.host, sizeof(d->host) - 1);
-		d->host[sizeof(d->host) - 1] = '\0';
-		strncpy(d->host2, desc_entry.host2, sizeof(d->host2) - 1);
-		d->host2[sizeof(d->host2) - 1] = '\0';
+		strlcpy(d->host, desc_entry.host, sizeof(d->host));
+		strlcpy(d->host2, desc_entry.host2, sizeof(d->host2));
 		d->term_type                   = desc_entry.term_type;
 		d->gmcp_enabled                = desc_entry.gmcp_enabled;
 		d->mtts_flags                  = desc_entry.mtts_flags;

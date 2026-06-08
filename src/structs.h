@@ -1689,10 +1689,10 @@ struct descriptor_data
 {
 	sh_int            descriptor; /* file descriptor for socket */
 	char              host[50];   /* hostname                   */
-	char              host2[128];
+	char              host2[254];
 	char              login[9]; /* userid from host           */
 	char              registered_host[50];
-	char              registered_login[9];
+        char              registered_login[9];
 	::byte            rtype;                        /* character restore status   */
 	::byte            connected;                    /* mode of 'connectedness'    */
 	int               wait;                         /* wait for how many loops    */

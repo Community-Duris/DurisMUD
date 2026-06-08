@@ -1977,7 +1977,7 @@ bool do_save_silent(P_char ch, int type)
 					if (tmp_buf[0] == 'N')
 					{
 						sscanf(tmp_buf, "Name:    %s\n", tmp_buf2);
-						strncpy(ch->desc->host2, tmp_buf2, 128);
+						strlcpy(ch->desc->host2, tmp_buf2, sizeof ch->desc->host2);
 						snprintf(tmp_buf, sizeof tmp_buf, "../hosts/%d", ch->desc->descriptor);
 						unlink(tmp_buf);
 					}

@@ -41,7 +41,7 @@ struct copyover_desc
 	int    fd;
 	char   player_name[50];
 	char   host[50];
-	char   host2[128];
+	char   host2[254];
 	::byte term_type;
 	int    gmcp_enabled;
 	int    out_compress;
