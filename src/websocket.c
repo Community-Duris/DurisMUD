@@ -281,7 +281,7 @@ int websocket_accept(int listen_fd, struct descriptor_data *d)
 	d->ws_pong_received  = 0;
 
 	/* get peer address */
-	strncpy(d->host, inet_ntoa(peer.sin_addr), sizeof(d->host) - 1);
+	inet_ntop(AF_INET, &peer.sin_addr, d->host, sizeof d->host);
 
 	statuslog(56, "WebSocket connection from %s", d->host);
 

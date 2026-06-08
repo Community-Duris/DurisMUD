@@ -18,6 +18,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <gnutls/gnutls.h>
+#include <arpa/inet.h>
 #include <netdb.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
@@ -1811,7 +1812,7 @@ int init_socket(int port)
 	linger_values.l_onoff  = 0;
 	linger_values.l_linger = 0;
 
-	bzero(&sa, sizeof(struct sockaddr_in));
+	bzero(&sa, sizeof sa);
 	/*
 	  gethostname(hostname, MAX_HOSTNAME);
 	  hp = gethostbyname(hostname);
@@ -2307,8 +2308,9 @@ int new_descriptor(int s, int conn_type)
 {
 	P_desc             newd;
 	bool               flag = FALSE, found = FALSE, looking_up = FALSE;
-	char               Gbuf1[MAX_STRING_LENGTH], Gbuf3[MAX_STRING_LENGTH];
-	int                desc, size;
+	char               Gbuf3[MAX_STRING_LENGTH];
+	int                desc;
+	socklen_t          size;
 	struct sockaddr_in sock;
 	FILE              *f;
 	gnutls_session_t   sslses = 0;
@@ -2363,29 +2365,22 @@ int new_descriptor(int s, int conn_type)
 	 */
 	size = sizeof(sock);
 
-	if (getpeername(desc, (struct sockaddr *)&sock, (socklen_t *)&size) < 0)
+	if (getpeername(desc, (struct sockaddr *)&sock, &size) < 0)
 	{
 		perror("getpeername");
-		strcpy(Gbuf1, "&+RUNTRACEABLE&n");
+		strcpy(newd->host, "&+RUNTRACEABLE&n");
 		flag = TRUE;
 	}
 	else
 	{
-
-		snprintf(Gbuf1,
-		         MAX_STRING_LENGTH,
-		         "%d.%d.%d.%d",
-		         ((unsigned char *)&(sock.sin_addr))[0],
-		         ((unsigned char *)&(sock.sin_addr))[1],
-		         ((unsigned char *)&(sock.sin_addr))[2],
-		         ((unsigned char *)&(sock.sin_addr))[3]);
+		inet_ntop(AF_INET, &sock.sin_addr, newd->host, sizeof newd->host);
 
 		/* check for proxy protocol on websocket connections */
 		if (conn_type == 2)
 		{
 			char proxy_ip[46];
 			if (parse_proxy_protocol(desc, proxy_ip, sizeof(proxy_ip)))
-				strncpy(Gbuf1, proxy_ip, MAX_STRING_LENGTH - 1);
+				strlcpy(newd->host, proxy_ip, sizeof newd->host);
 		}
 
 #if 0
@@ -2440,91 +2435,8 @@ int new_descriptor(int s, int conn_type)
 		      }
 		    }
 		*/
-		if (!flag && !found)
-		{
-			/*
-			 * well didn't have it on file, so have to bite the bullet and
-			 * look it up.  Fortunately, only have to do this once per
-			 * site, ever.
-			 */
-
-			/*
-			 * okay.. need to look this up...
-			 */
-			struct host_request buf;
-
-			buf.mtype = MSG_HOST_REQ;
-			buf.desc  = desc;
-			snprintf(buf.addr,
-			         MAX_STRING_LENGTH,
-			         "%d.%d.%d.%d",
-			         ((unsigned char *)&(sock.sin_addr))[0],
-			         ((unsigned char *)&(sock.sin_addr))[1],
-			         ((unsigned char *)&(sock.sin_addr))[2],
-			         ((unsigned char *)&(sock.sin_addr))[3]);
-
-#if 0
-      if (msgsnd(ipc_id, (struct msgbuf *) &buf,
-                 sizeof(struct host_request) - sizeof(long), 0) == -1)
-      {
-        /*
-         * msgsnd() failed... DAMN!  for now, just segfault
-         */
-			panic_corruption("comm", "msgsnd failed");
-      }
-      /*
-       * I'll use yellow to indicate the address is being looked up
-       */
-#endif
-
-			snprintf(Gbuf1, MAX_STRING_LENGTH, "%s", buf.addr);
-			looking_up = TRUE;
-		}
-		if (found)
-			strcpy(Gbuf1, Gbuf3);
 	}
 
-	/*
-	 * okay.. we simulate it looking up even if doesn't need to.  This
-	 * way, all the bansite code, etc, can be put in the same place.
-	 */
-
-	if (!looking_up)
-	{ /* simulate it anyway */
-		struct host_answer buf;
-
-		buf.mtype = MSG_HOST_ANS;
-		buf.desc  = desc;
-		/*
-		 * note that I put in a "." in the front of the addr field. That
-		 * will signal the "reciver" that this name already occurs in the
-		 * lookup list.
-		 */
-		snprintf(buf.addr,
-		         MAX_STRING_LENGTH,
-		         ".%d.%d.%d.%d",
-		         ((unsigned char *)&(sock.sin_addr))[0],
-		         ((unsigned char *)&(sock.sin_addr))[1],
-		         ((unsigned char *)&(sock.sin_addr))[2],
-		         ((unsigned char *)&(sock.sin_addr))[3]);
-
-		strcpy(buf.name, Gbuf1);
-#if 0
-    if (msgsnd(ipc_id, (struct msgbuf *) &buf,
-               sizeof(struct host_answer) - sizeof(long), 0) == -1)
-    {
-      /*
-       * msgsnd() failed... DAMN!  for now, just segfault
-       */
-			panic_corruption("comm", "msgsnd failed");
-    }
-#endif
-		/*
-		 * I'll use yellow to indicate the address is being looked up
-		 */
-
-		snprintf(Gbuf1, MAX_STRING_LENGTH, "%s", buf.addr);
-	}
 	//  if (!found)
 	//    write_to_descriptor(desc, "Looking up your hostname...\r\n");
 	/*
@@ -2533,7 +2445,6 @@ int new_descriptor(int s, int conn_type)
 	newd->descriptor = desc;
 	// newd->connected = CON_HOST_LOOKUP;
 	newd->wait = 1;
-	strncpy(newd->host, Gbuf1, 50);
 	resolve_descriptor_hostname_async(strip_ansi(newd->host).c_str(), desc);
 	*newd->host2              = '\0';
 	newd->prompt_mode         = FALSE;
