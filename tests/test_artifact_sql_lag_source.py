@@ -34,6 +34,13 @@ def assert_not_contains(text: str, needle: str, message: str) -> None:
         raise AssertionError(message)
 
 
+def assert_order(text: str, before: str, after: str, message: str) -> None:
+    before_at = text.index(before)
+    after_at = text.index(after, before_at)
+    if before_at > after_at:
+        raise AssertionError(message)
+
+
 def main() -> int:
     artifact = read("src/artifact.c")
     sql = read("src/sql.c")
@@ -59,6 +66,44 @@ def main() -> int:
         "void sql_get_bind_data(int vnum, int *owner_pid, int *timer)",
         "void sql_update_bind_data",
     )
+    data_read = section(
+        artifact,
+        "bool get_artifact_data_sql(int vnum, P_arti adata)",
+        "void artifact_feed_sql",
+    )
+    location_update = section(
+        artifact,
+        "void artifact_update_location_sql(P_obj arti)",
+        "// Returns TRUE iff arti vnum has timer ticking already.",
+    )
+    remove_owned = section(
+        artifact,
+        "bool remove_owned_artifact_sql(P_obj arti, int pid)",
+        "// This is used for when a character is deleted.",
+    )
+    poof_check = section(
+        artifact,
+        "void event_artifact_check_poof_sql",
+        "// Looks through list, and adds entry to the end of list.",
+    )
+    syncdb = section(
+        artifact,
+        "void arti_syncdb_sql(P_char ch)",
+        "send_to_char_f(ch, \"Cleared %d, updated %d artifact ownerships",
+    )
+
+    for needle in (
+        "static P_arti artifact_state_cache = NULL;",
+        "static bool artifact_state_cache_get",
+        "static void artifact_state_cache_store_values",
+        "static void artifact_state_cache_forget",
+        "static void artifact_state_cache_clear",
+    ):
+        assert_contains(
+            artifact,
+            needle,
+            f"artifact local state cache should include {needle}",
+        )
 
     for name, block in (
         ("object artifact update", object_update),
@@ -74,6 +119,16 @@ def main() -> int:
             block,
             "SELECT owned, location",
             f"{name} should not preflight the artifact row before writing",
+        )
+    for name, block in (
+        ("object artifact update", object_update),
+        ("vnum artifact update", vnum_update),
+        ("artifact feed missing-row insert", section(artifact, "if (!get_artifact_data_sql(vnum, &artidata))", "// If we're tyring to feed over the limit.")),
+    ):
+        assert_contains(
+            block,
+            "artifact_state_cache_store_values",
+            f"{name} should refresh local artifact state after successful SQL writes",
         )
 
     assert_contains(
@@ -96,6 +151,46 @@ def main() -> int:
         "SELECT owner_pid, timer FROM artifact_bind WHERE vnum = %d",
         "artifact bind reads should fetch only the needed columns",
     )
+    assert_contains(
+        data_read,
+        "artifact_state_cache_get(vnum, adata)",
+        "artifact data reads should consult the local state cache before querying SQL",
+    )
+    assert_order(
+        data_read,
+        "artifact_state_cache_get(vnum, adata)",
+        "SELECT owned, locType, location",
+        "artifact data cache should be checked before the SQL SELECT",
+    )
+    assert_contains(
+        data_read,
+        "artifact_state_cache_store(&fetched);",
+        "artifact data reads should populate the local state cache after SQL fetch",
+    )
+    assert_contains(
+        location_update,
+        "get_artifact_data_sql(OBJ_VNUM(arti), &artidata);",
+        "artifact movement updates should read state through the cached helper",
+    )
+    assert_contains(
+        remove_owned,
+        "ON DUPLICATE KEY UPDATE owned='Y'",
+        "artifact corpse removal path should upsert corpse ownership without a preflight SELECT",
+    )
+    assert_not_contains(
+        remove_owned,
+        "SELECT owned, UNIX_TIMESTAMP(timer)",
+        "artifact corpse removal path should not preflight the artifact row",
+    )
+    for name, block in (
+        ("poof sweep", poof_check),
+        ("syncdb command", syncdb),
+    ):
+        assert_contains(
+            block,
+            "artifact_state_cache_clear();",
+            f"{name} should clear local artifact state after broad table mutation",
+        )
 
     print("artifact SQL lag source checks passed")
     return 0

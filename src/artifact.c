@@ -70,6 +70,7 @@ struct bind_data
 
 // Internal globals
 bool updateArtis = TRUE;
+static P_arti artifact_state_cache = NULL;
 
 // forward declarations for redis cache
 P_char load_dummy_char(char *name);
@@ -78,6 +79,100 @@ void   arti_redis_cache(int type, bool Godlist);
 
 // invalidate redis cache
 static void arti_cache_invalidate(void) { redis_invalidate_artifact_cache(); }
+
+static P_arti artifact_state_cache_find(int vnum)
+{
+	P_arti entry;
+
+	for (entry = artifact_state_cache; entry; entry = entry->next)
+	{
+		if (entry->vnum == vnum)
+			return entry;
+	}
+	return NULL;
+}
+
+static void artifact_state_cache_store_values(int vnum, bool owned, int locType, int location, time_t timer, int type)
+{
+	P_arti entry = artifact_state_cache_find(vnum);
+
+	if (!entry)
+	{
+		entry                 = new arti_data;
+		entry->next           = artifact_state_cache;
+		artifact_state_cache  = entry;
+	}
+
+	entry->vnum     = vnum;
+	entry->owned    = owned;
+	entry->locType  = locType;
+	entry->location = location;
+	entry->timer    = timer;
+	entry->type     = type;
+}
+
+static void artifact_state_cache_store(P_arti adata)
+{
+	if (!adata)
+		return;
+
+	artifact_state_cache_store_values(adata->vnum,
+	                                  adata->owned,
+	                                  adata->locType,
+	                                  adata->location,
+	                                  adata->timer,
+	                                  adata->type);
+}
+
+static bool artifact_state_cache_get(int vnum, P_arti adata)
+{
+	P_arti entry = artifact_state_cache_find(vnum);
+
+	if (!entry)
+		return FALSE;
+
+	if (adata)
+	{
+		*adata      = *entry;
+		adata->next = NULL;
+	}
+	return TRUE;
+}
+
+static void artifact_state_cache_forget(int vnum)
+{
+	P_arti entry = artifact_state_cache;
+	P_arti prev  = NULL;
+
+	while (entry)
+	{
+		if (entry->vnum == vnum)
+		{
+			if (prev)
+				prev->next = entry->next;
+			else
+				artifact_state_cache = entry->next;
+			delete entry;
+			return;
+		}
+		prev  = entry;
+		entry = entry->next;
+	}
+}
+
+static void artifact_state_cache_clear(void)
+{
+	P_arti entry = artifact_state_cache;
+	P_arti next;
+
+	while (entry)
+	{
+		next = entry->next;
+		delete entry;
+		entry = next;
+	}
+	artifact_state_cache = NULL;
+}
 
 // populate redis cache at boot
 void arti_cache_init(void)
@@ -558,6 +653,7 @@ void arti_remove_sql(int vnum, bool mortalToo)
 
 	// Remove from artifacts table:
 	qry("DELETE FROM artifacts WHERE vnum = '%d'", vnum);
+	artifact_state_cache_forget(vnum);
 	arti_cache_invalidate();
 	// Possibly remove from artifacts_mortal table:
 	if (mortalToo)
@@ -686,6 +782,7 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 		to_time = (oldtime >= to_time) ? oldtime : to_time;
 
 		qry("UPDATE artifacts SET timer = FROM_UNIXTIME(%lu), lastUpdate=SYSDATE() WHERE vnum = %d", to_time, vnum);
+		artifact_state_cache_forget(vnum);
 		arti_cache_invalidate();
 	}
 	else
@@ -721,6 +818,7 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 			    IS_IOUN(arti)     ? ARTIFACT_IOUN
 			    : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE
 			                      : ARTIFACT_MAJOR);
+			artifact_state_cache_store_values(vnum, TRUE, ARTIFACT_ONGROUND, location, to_time, IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR);
 			arti_cache_invalidate();
 		}
 		else if (OBJ_WORN(cont) || OBJ_CARRIED(cont))
@@ -745,6 +843,7 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 					    IS_IOUN(arti)     ? ARTIFACT_IOUN
 					    : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE
 					                      : ARTIFACT_MAJOR);
+					artifact_state_cache_store_values(vnum, FALSE, ARTIFACT_ON_NPC, location, to_time, IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR);
 					arti_cache_invalidate();
 				}
 				// Adding a PC owner to arti -> owned = 'Y', location = PID.
@@ -759,6 +858,7 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 					    IS_IOUN(arti)     ? ARTIFACT_IOUN
 					    : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE
 					                      : ARTIFACT_MAJOR);
+					artifact_state_cache_store_values(vnum, TRUE, ARTIFACT_ON_PC, location, to_time, IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR);
 					arti_cache_invalidate();
 				}
 			}
@@ -869,6 +969,7 @@ void artifact_update_sql(P_obj arti, char owned, time_t timer)
 {
 	int        type, locType, location, vnum = arti ? OBJ_VNUM(arti) : -1;
 	bool       new_owned;
+	P_arti     cached;
 	P_char     owner;
 	P_obj      obj1;
 
@@ -996,25 +1097,37 @@ void artifact_update_sql(P_obj arti, char owned, time_t timer)
 
 	// Only set it to owned if we know that it's owned. For existing rows, any
 	// other owned value leaves the current owned flag untouched.
-	new_owned = (UPPER(owned) == 'Y');
+	cached = artifact_state_cache_find(vnum);
+	if (UPPER(owned) == 'Y')
+		new_owned = TRUE;
+	else if (UPPER(owned) == 'N')
+		new_owned = FALSE;
+	else
+		new_owned = cached ? cached->owned : FALSE;
 
-	qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) "
-	    "VALUES(%d, '%c', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE()) "
-	    "ON DUPLICATE KEY UPDATE "
-	    "owned=CASE WHEN '%c'='Y' THEN 'Y' WHEN '%c'='N' THEN 'N' ELSE owned END, "
-	    "locType=VALUES(locType), "
-	    "location=CASE WHEN VALUES(locType)=%d THEN location ELSE VALUES(location) END, "
-	    "timer=VALUES(timer), type=VALUES(type), lastUpdate=SYSDATE()",
-	    vnum,
-	    new_owned ? 'Y' : 'N',
-	    locType,
-	    location,
-	    timer,
-	    type,
-	    UPPER(owned),
-	    UPPER(owned),
-	    ARTIFACT_ONCORPSE);
-	arti_cache_invalidate();
+	if (locType == ARTIFACT_ONCORPSE && cached)
+		location = cached->location;
+
+	if (qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) "
+	        "VALUES(%d, '%c', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE()) "
+	        "ON DUPLICATE KEY UPDATE "
+	        "owned=CASE WHEN '%c'='Y' THEN 'Y' WHEN '%c'='N' THEN 'N' ELSE owned END, "
+	        "locType=VALUES(locType), "
+	        "location=CASE WHEN VALUES(locType)=%d THEN location ELSE VALUES(location) END, "
+	        "timer=VALUES(timer), type=VALUES(type), lastUpdate=SYSDATE()",
+	        vnum,
+	        new_owned ? 'Y' : 'N',
+	        locType,
+	        location,
+	        timer,
+	        type,
+	        UPPER(owned),
+	        UPPER(owned),
+	        ARTIFACT_ONCORPSE))
+	{
+		artifact_state_cache_store_values(vnum, new_owned, locType, location, timer, type);
+		arti_cache_invalidate();
+	}
 }
 
 // This function just updates/creates a new entry for the arti with vnum vnum.
@@ -1033,17 +1146,20 @@ void artifact_update_sql(int vnum, bool owned, int locType, int location, time_t
 		logit(LOG_ARTIFACT, "artifact_update_sql: WARNING: timer was %ld, resetting to 10 days for vnum %d", (long)0, vnum);
 	}
 
-	qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) "
-	    "VALUES(%d, '%c', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE()) "
-	    "ON DUPLICATE KEY UPDATE owned=VALUES(owned), locType=VALUES(locType), "
-	    "location=VALUES(location), timer=VALUES(timer), type=VALUES(type), lastUpdate=SYSDATE()",
-	    vnum,
-	    owned ? 'Y' : 'N',
-	    locType,
-	    location,
-	    timer,
-	    type);
-	arti_cache_invalidate();
+	if (qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) "
+	        "VALUES(%d, '%c', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE()) "
+	        "ON DUPLICATE KEY UPDATE owned=VALUES(owned), locType=VALUES(locType), "
+	        "location=VALUES(location), timer=VALUES(timer), type=VALUES(type), lastUpdate=SYSDATE()",
+	        vnum,
+	        owned ? 'Y' : 'N',
+	        locType,
+	        location,
+	        timer,
+	        type))
+	{
+		artifact_state_cache_store_values(vnum, owned, locType, location, timer, type);
+		arti_cache_invalidate();
+	}
 }
 
 // Remove the artifact data from the DB.
@@ -1053,9 +1169,8 @@ void artifact_update_sql(int vnum, bool owned, int locType, int location, time_t
 bool remove_owned_artifact_sql(P_obj arti, int pid)
 {
 	int        vnum            = arti ? OBJ_VNUM(arti) : -1;
-	bool       update_existing = FALSE;
-	MYSQL_RES *res;
-	MYSQL_ROW  row = NULL;
+	int        type            = arti ? (IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR) : ARTIFACT_MAJOR;
+	P_arti     cached;
 
 	if (!updateArtis)
 	{
@@ -1069,52 +1184,37 @@ bool remove_owned_artifact_sql(P_obj arti, int pid)
 		return FALSE;
 	}
 
-	// If we can't query the DB, we have a big issue (only values we care about are time difference and owned value).
-	if (!qry("SELECT owned, UNIX_TIMESTAMP(timer), UNIX_TIMESTAMP(lastUpdate) FROM artifacts WHERE vnum = %d", vnum))
+	if (pid <= 0)
 	{
-		logit(LOG_ARTIFACT, "remove_owned_artifact_sql: failed to read from database.");
-		return FALSE;
-	}
-	res = mysql_store_result(DB);
-	if (mysql_num_rows(res) > 0 && !(row = mysql_fetch_row(res)))
-	{
-		logit(LOG_ARTIFACT, "remove_owned_artifact_sql: failed to fetch row?!");
-		mysql_free_result(res);
-		return FALSE;
-	}
-	if (row)
-	{
-		update_existing = TRUE;
-	}
-	mysql_free_result(res);
-
-	// If there's an existing entry in the DB.
-	if (update_existing)
-	{
-		// Non-positive pid -> remove arti from game.
-		if (pid <= 0)
+		if (qry("UPDATE artifacts SET owned='N', locType=%d, location=%d, lastUpdate=SYSDATE() WHERE vnum=%d", ARTIFACT_NOTINGAME, NOWHERE, vnum))
 		{
-			qry("UPDATE artifacts SET owned='N', locType=%d, location=%d, lastUpdate=SYSDATE() WHERE vnum=%d", ARTIFACT_NOTINGAME, NOWHERE, vnum);
-			arti_cache_invalidate();
-		}
-		// Otherwise, we're moving to a corpse of char who's PID is pid.
-		else
-		{
-			// On a PC corpse -> owned == Yes, and location == pid.
-			qry("UPDATE artifacts SET owned='Y', locType=%d, location=%d, lastUpdate=SYSDATE() WHERE vnum=%d", ARTIFACT_ONCORPSE, pid, vnum);
+			artifact_state_cache_forget(vnum);
 			arti_cache_invalidate();
 		}
 	}
-	// If the entry doesn't exist and we're moving arti to a corpse (Yes, this would be a buggy situation).
-	else if (pid > 0)
+	else
 	{
-		// On a PC corpse -> owned == 'Y', locType == 'OnCorpse', and location == pid.
-		qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, 'Y', %d, %d, 0, %d, SYSDATE())", vnum, ARTIFACT_ONCORPSE, pid, IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR);		arti_cache_invalidate();
+		cached = artifact_state_cache_find(vnum);
+		if (qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) "
+		        "VALUES(%d, 'Y', %d, %d, 0, %d, SYSDATE()) "
+		        "ON DUPLICATE KEY UPDATE owned='Y', locType=VALUES(locType), location=VALUES(location), lastUpdate=SYSDATE()",
+		        vnum,
+		        ARTIFACT_ONCORPSE,
+		        pid,
+		        type))
+		{
+			artifact_state_cache_store_values(vnum, TRUE, ARTIFACT_ONCORPSE, pid, cached ? cached->timer : 0, type);
+			arti_cache_invalidate();
+		}
 	}
 
 	// Safe to assume that a poofed arti has an entry in artifact_bind.  We don't really care either way though,
 	//   as long as it doesn't have an entry with a pid after poof.
-	qry("UPDATE artifact_bind SET owner_pid = -1, timer = 0 WHERE vnum = %d", vnum);
+	{
+		int bind_owner_pid = -1;
+		int bind_timer     = 0;
+		sql_update_bind_data(vnum, &bind_owner_pid, &bind_timer);
+	}
 
 	// If pid <= 0 && there's no existing entry, don't bother.
 	return TRUE;
@@ -1139,6 +1239,7 @@ void remove_all_artifacts_sql(P_char ch)
 
 	// Nullify arti timers on all ch's equipment.
 	qry("UPDATE artifacts SET owned='N', timer=NULL, lastUpdate=SYSDATE() WHERE location=%d and locType=%d", pid, ARTIFACT_ON_PC);
+	artifact_state_cache_clear();
 	arti_cache_invalidate();
 }
 
@@ -1208,8 +1309,12 @@ void artifact_update_location_sql(P_obj arti)
 bool get_artifact_data_sql(int vnum, P_arti adata)
 {
 	bool       owned;
+	arti_data fetched;
 	MYSQL_RES *res;
 	MYSQL_ROW  row = NULL;
+
+	if (artifact_state_cache_get(vnum, adata))
+		return artifact_state_cache_find(vnum)->owned;
 
 	if (!qry("SELECT owned, locType, location, UNIX_TIMESTAMP(timer), type FROM artifacts WHERE vnum = %d", vnum))
 	{
@@ -1232,16 +1337,16 @@ bool get_artifact_data_sql(int vnum, P_arti adata)
 		return FALSE;
 	}
 	owned = (!strcmp(row[0], "Y")) ? TRUE : FALSE;
+	fetched.vnum     = vnum;
+	fetched.owned    = owned;
+	fetched.locType  = atoi(row[1]);
+	fetched.location = atoi(row[2]);
+	fetched.timer    = row[3] ? atol(row[3]) : 0;
+	fetched.type     = atoi(row[4]);
+	fetched.next     = NULL;
+	artifact_state_cache_store(&fetched);
 	if (adata != NULL)
-	{
-		adata->vnum     = vnum;
-		adata->owned    = owned;
-		adata->locType  = atoi(row[1]);
-		adata->location = atoi(row[2]);
-		adata->timer    = row[3] ? atol(row[3]) : 0;
-		adata->type     = atoi(row[4]);
-		adata->next     = NULL;
-	}
+		*adata = fetched;
 	mysql_free_result(res);
 	return owned;
 }
@@ -1294,13 +1399,21 @@ void artifact_feed_sql(P_char owner, P_obj arti, int feed_seconds, bool soulChec
 	{
 		statuslog(MINLVLIMMORTAL, "artifact_feed_sql: called without an entry in DB?!");
 		send_to_char("&+RYou feel a deep sense of satisfaction from somewhere...\r\n", owner);
-		qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, 'Y', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE())",
-		    vnum,
-		    ARTIFACT_ON_PC,
-		    GET_PID(owner),
-		    poof_time,
-		    IS_IOUN(arti) ? ARTIFACT_IOUN : (IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR));
-		arti_cache_invalidate();
+		if (qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, 'Y', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE())",
+		        vnum,
+		        ARTIFACT_ON_PC,
+		        GET_PID(owner),
+		        poof_time,
+		        IS_IOUN(arti) ? ARTIFACT_IOUN : (IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR)))
+		{
+			artifact_state_cache_store_values(vnum,
+			                                  TRUE,
+			                                  ARTIFACT_ON_PC,
+			                                  GET_PID(owner),
+			                                  poof_time,
+			                                  IS_IOUN(arti) ? ARTIFACT_IOUN : (IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR));
+			arti_cache_invalidate();
+		}
 		return;
 	}
 
@@ -2275,6 +2388,7 @@ void event_artifact_check_poof_sql(P_char ch, P_char vict, P_obj obj, void *arg)
 
 	// Clear the artis from the list.  Note: doing it after the loop intentionally.
 	qry("UPDATE artifacts SET owned='N', locType=%d, location=-1, timer=NULL, lastUpdate=SYSDATE() WHERE owned='Y' AND timer < now()", ARTIFACT_NOTINGAME);
+	artifact_state_cache_clear();
 	arti_cache_invalidate();
 
 	add_event(event_artifact_check_poof_sql, 12 * WAIT_SEC, NULL, NULL, NULL, 0, NULL, 0);
@@ -2757,6 +2871,7 @@ void arti_clear_sql(P_char ch, char *arg)
 	// Remove from artifacts table:
 	if (qry("DELETE FROM artifacts WHERE vnum = '%d'", vnum))
 	{
+		artifact_state_cache_forget(vnum);
 		arti_cache_invalidate();
 		act("&+WThe artifact data for $p&+W has been cleared from the Immortal list.  You fool!", FALSE, ch, arti, 0, TO_CHAR);
 		if (qry("DELETE FROM artifacts_mortal WHERE vnum = '%d'", vnum))
@@ -3378,7 +3493,11 @@ void event_artifact_check_bind_sql(P_char ch, P_char vict, P_obj obj, void *arg)
 			      get_player_name_from_pid(list->owner_pid),
 			      list->owner_pid);
 			debug("%3d: artifact '%s&n' %d is unowned, but bound.  Setting owner_pid = -1 and timer = 0.", ++counter, pad_ansi(arti ? OBJ_SHORT(arti) : "NULL", 35, TRUE).c_str(), list->vnum);
-			qry("UPDATE artifact_bind SET owner_pid = -1, timer = 0 WHERE vnum = %d", list->vnum);
+			{
+				int bind_owner_pid = -1;
+				int bind_timer     = 0;
+				sql_update_bind_data(list->vnum, &bind_owner_pid, &bind_timer);
+			}
 		}
 		if (arti)
 		{
@@ -3438,6 +3557,7 @@ void arti_fixit_sql(P_char ch)
 		{
 			sql_update_bind_data(vnum, &location, &timer);
 			qry("UPDATE artifacts SET timer = FROM_UNIXTIME(%lu), lastUpdate=SYSDATE() WHERE vnum = %d", new_time, vnum);
+			artifact_state_cache_forget(vnum);
 			arti_cache_invalidate();
 			send_to_char_f(ch,
 			               "%3d) '%s&n'%6d - timer reset and now owned by '%s' %d.\n\r",
@@ -3491,6 +3611,7 @@ void arti_syncdb_sql(P_char ch)
 	}
 
 	send_to_char("Syncing artifact ownership from player saves...\n\r", ch);
+	artifact_state_cache_clear();
 
 	// clear artifacts table (main table used by god view)
 	const char *clear_artifacts_sql = "UPDATE artifacts SET location = 0, owned = 'N', locType = 1, lastUpdate = SYSDATE() "
