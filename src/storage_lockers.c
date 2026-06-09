@@ -2361,6 +2361,8 @@ static P_char create_locker_char(P_char chOwner, P_char ch, char *locker_name)
 
 static int save_locker_char(P_char ch, int bTerminal)
 {
+	pid_t pid;
+
 	// reap any finished locker save children
 	while (waitpid(-1, NULL, WNOHANG) > 0)
 		;
@@ -2376,28 +2378,25 @@ static int save_locker_char(P_char ch, int bTerminal)
 		{
 			pLocker->LockerToPFile();
 
-			if (bTerminal)
+			pid = fork();
+			if (pid == 0)
 			{
-				// async save - fork so parent doesnt block
-				pid_t pid = fork();
-				if (pid == 0)
+				MYSQL *child_conn = sql_create_child_connection();
+				if (child_conn)
 				{
-					// child
-					MYSQL *child_conn = sql_create_child_connection();
-					if (child_conn)
-					{
-						sql_reset_for_child(child_conn);
-						writeCharacter(chLocker, 3, NOWHERE);
-						mysql_close(child_conn);
-					}
-					_exit(0);
+					sql_reset_for_child(child_conn);
+					writeCharacter(chLocker, bTerminal ? 3 : 0, NOWHERE);
+					mysql_close(child_conn);
 				}
-				// parent continues, dont wait for child
+				_exit(0);
 			}
-			else
+			else if (pid < 0)
 			{
-				// sync save for non-terminal (periodic saves while in locker)
-				if (!writeCharacter(chLocker, 0, NOWHERE))
+				persistence_alert(AVATAR, "locker", GET_NAME(ch), "none",
+				                  "none", "async_save_fork_failed",
+				                  "falling back to synchronous locker save type=%d",
+				                  bTerminal ? 3 : 0);
+				if (!writeCharacter(chLocker, bTerminal ? 3 : 0, NOWHERE))
 				{
 					logit(LOG_OBJ, "%s's locker not saving properly!", GET_NAME(ch));
 					debug("%s's locker not saving properly!", GET_NAME(ch));
