@@ -2067,6 +2067,18 @@ static bool sql_schema_ensure_auction_schema(MYSQL *db)
 	if (!sql_persistence_ensure_index(db, "auction_item_pickups", "idx_source_auction_id", "(source_auction_id)"))
 		return FALSE;
 
+	if (!sql_persistence_ensure_index(db, "auction_item_pickups", "idx_pid_retrieved", "(pid,retrieved,id)"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_index(db, "auctions", "idx_status_end_id", "(status,end_time,id)"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_index(db, "auctions", "idx_seller_status_end", "(seller_name,status,end_time)"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_index(db, "auction_bid_history", "idx_auction_date", "(auction_id,date)"))
+		return FALSE;
+
 	return TRUE;
 }
 
@@ -2417,6 +2429,8 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	char event_key_sql[256];
 	char player_name_sql[256];
 	char reward_desc_sql[512];
+	char bidder_name[128] = "";
+	char bidder_name_sql[256];
 	char query[MAX_STRING_LENGTH];
 	int pid = 0;
 	int level = 0;
@@ -2442,6 +2456,8 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	int mob_vnum = 0;
 	int reward_type = 0;
 	int reward_value = 0;
+	int auction_id = 0;
+	int bid_amount = 0;
 	int boot_time = 0;
 	int touched_at = 0;
 	int zone_number = 0;
@@ -2519,6 +2535,12 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			reward_type = atoi(value);
 		else if (!str_cmp(key, "reward_value"))
 			reward_value = atoi(value);
+		else if (!str_cmp(key, "auction_id"))
+			auction_id = atoi(value);
+		else if (!str_cmp(key, "bidder_name"))
+			snprintf(bidder_name, sizeof(bidder_name), "%s", value);
+		else if (!str_cmp(key, "bid_amount"))
+			bid_amount = atoi(value);
 		else if (!str_cmp(key, "boot_time"))
 			boot_time = atoi(value);
 		else if (!str_cmp(key, "touched_at"))
@@ -2658,6 +2680,18 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 		         pid,
 		         reward_type,
 		         reward_value);
+	}
+	else if (!str_cmp(event_type, "auction_bid_history"))
+	{
+		mysql_real_escape_string(db, bidder_name_sql, bidder_name, strlen(bidder_name));
+		snprintf(query,
+		         sizeof(query),
+		         "INSERT INTO auction_bid_history (date, auction_id, bidder_pid, bidder_name, bid_amount) "
+		         "VALUES (unix_timestamp(), %d, %d, '%s', %d)",
+		         auction_id,
+		         pid,
+		         bidder_name_sql,
+		         bid_amount);
 	}
 	else
 	{

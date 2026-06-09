@@ -13,6 +13,7 @@
 #include <string>
 #include <vector>
 #include "files.h"
+#include "persistence_queue.h"
 #include "spells.h"
 #include "sql.h"
 #include "ws_handlers.h"
@@ -69,6 +70,60 @@ EqSort *sorter;
 
 // forward declarations
 bool check_db_active();
+
+static const char *auction_event_field(const char *in, char *buf, int buf_size)
+{
+	int i, out = 0;
+
+	if (!buf || buf_size <= 0)
+		return "";
+
+	if (!in)
+		in = "";
+
+	for (i = 0; in[i] && out < buf_size - 1; i++)
+	{
+		if (in[i] == '|' || in[i] == '\r' || in[i] == '\n' || in[i] == '=')
+			buf[out++] = '_';
+		else
+			buf[out++] = in[i];
+	}
+	buf[out] = '\0';
+	return buf;
+}
+
+static void auction_record_bid_history(int auction_id, P_char bidder, int bid_amount)
+{
+	char line[PERSISTENCE_EVENT_MAX_LEN];
+	char bidder_name[MAX_INPUT_LENGTH];
+
+	if (!bidder || !IS_PC(bidder))
+		return;
+
+	snprintf(line,
+	         sizeof(line),
+	         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=auction_bid_history|pid=%d|auction_id=%d|bidder_name=%s|bid_amount=%d",
+	         (long)time(NULL),
+	         GET_PID(bidder),
+	         auction_id,
+	         auction_event_field(GET_NAME(bidder), bidder_name, sizeof(bidder_name)),
+	         bid_amount);
+
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			return;
+		if (persistence_write_fallback_event_line(line, "scalar_event", "auction_bid_history", "queue_full_flat_fallback"))
+			return;
+	}
+
+	qry("INSERT INTO auction_bid_history (date, auction_id, bidder_pid, bidder_name, bid_amount) VALUES "
+	    "(unix_timestamp(), %d, %d, '%s', %d)",
+	    auction_id,
+	    GET_PID(bidder),
+	    GET_NAME(bidder),
+	    bid_amount);
+}
 
 // backfill state - static so it persists between calls
 static int backfill_state = 0; // 0=pending, 1=done, -1=skip (no column)
@@ -918,10 +973,12 @@ bool auction_list(P_char ch, char *args)
 		return TRUE;
 	}
 
+	int list_limit = MAX(1, AUCTION_LIST_LIMIT);
 	if (!qry("SELECT id, seller_name, UNIX_TIMESTAMP(end_time) - UNIX_TIMESTAMP() as secs_remaining, cur_price, buy_price, obj_short, obj_vnum, winning_bidder_pid, winning_bidder_name, seller_pid, "
-	         "quantity from auctions where status = %d %s order by secs_remaining asc",
+	         "quantity from auctions where status = %d %s order by end_time asc limit %d",
 	         AUCTION_STATUS_OPEN,
-	         where_str))
+	         where_str,
+	         list_limit))
 		return FALSE;
 
 	MYSQL_RES *res = mysql_store_result(DB);
@@ -935,8 +992,10 @@ bool auction_list(P_char ch, char *args)
 	}
 
 	MYSQL_ROW row;
+	int listed_count = 0;
 	while ((row = mysql_fetch_row(res)))
 	{
+		listed_count++;
 		char *auction_id          = row[0];
 		char *seller_name         = row[1];
 		long  secs_remaining      = atol(row[2]);
@@ -1017,6 +1076,15 @@ bool auction_list(P_char ch, char *args)
 				         pad_ansi(cur_price_str.c_str(), 6).c_str());
 		}
 
+		send_to_char(buff, ch);
+	}
+
+	if (listed_count >= list_limit)
+	{
+		snprintf(buff,
+		         MAX_STRING_LENGTH,
+		         "&+YShowing the first %d auctions. Narrow the list by player or sort keywords for more specific results.&n\r\n",
+		         list_limit);
 		send_to_char(buff, ch);
 	}
 
@@ -1297,12 +1365,7 @@ bool auction_bid(P_char ch, char *args)
 		snprintf(buff, MAX_STRING_LENGTH, "&+WYou pay &n%s&n.\r\n", coin_stringv(to_pay));
 		send_to_char(buff, ch);
 
-		qry("INSERT INTO auction_bid_history (date, auction_id, bidder_pid, bidder_name, bid_amount) VALUES "
-		    "(unix_timestamp(), %d, %d, '%s', %d)",
-		    auction_id,
-		    GET_PID(ch),
-		    ch->player.name,
-		    bid_value);
+		auction_record_bid_history(auction_id, ch, bid_value);
 
 		// refund previous bidder
 		if (winning_bidder_pid && winning_bidder_pid != GET_PID(ch))
@@ -1339,12 +1402,7 @@ bool auction_bid(P_char ch, char *args)
 		snprintf(buff, MAX_STRING_LENGTH, "&+WYou pay &n%s&n.\r\n", coin_stringv(to_pay));
 		send_to_char(buff, ch);
 
-		qry("INSERT INTO auction_bid_history (date, auction_id, bidder_pid, bidder_name, bid_amount) VALUES "
-		    "(unix_timestamp(), %d, %d, '%s', %d)",
-		    auction_id,
-		    GET_PID(ch),
-		    ch->player.name,
-		    bid_value);
+		auction_record_bid_history(auction_id, ch, bid_value);
 
 		snprintf(buff, MAX_STRING_LENGTH, "&+WYou bid &n%s&+W on &n%d %s&n.\r\n", coin_stringv(bid_value), quantity, obj_short.c_str());
 		send_to_char(buff, ch);
@@ -1639,27 +1697,11 @@ bool finalize_auction(int auction_id, P_char to_ch)
 
 bool insert_money_pickup(int pid, int money)
 {
-	if (!qry("SELECT pid FROM auction_money_pickups WHERE pid = '%d' LIMIT 1", pid))
+	if (!qry("INSERT INTO auction_money_pickups (pid, money) VALUES ('%d', '%d') "
+	         "ON DUPLICATE KEY UPDATE money = money + VALUES(money)",
+	         pid,
+	         money))
 		return FALSE;
-
-	MYSQL_RES *res = mysql_store_result(DB);
-
-	MYSQL_ROW row = mysql_fetch_row(res);
-
-	if (!row)
-	{
-		mysql_free_result(res);
-
-		if (!qry("INSERT INTO auction_money_pickups (pid, money) VALUES ('%d', '%d')", pid, money))
-			return FALSE;
-	}
-	else
-	{
-		mysql_free_result(res);
-
-		if (!qry("UPDATE auction_money_pickups SET money = money + %d WHERE pid = '%d'", money, pid))
-			return FALSE;
-	}
 
 	logit(LOG_STATUS, "PID %d picked up %d", pid, money);
 

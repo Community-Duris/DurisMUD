@@ -88,7 +88,8 @@ CREATE TABLE `auction_bid_history` (
   `bidder_name` varchar(32) NOT NULL default '',
   `bid_amount` int(11) NOT NULL default '0',
   PRIMARY KEY  (`id`),
-  KEY `auction_id` (`auction_id`)
+  KEY `auction_id` (`auction_id`),
+  KEY `idx_auction_date` (`auction_id`,`date`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 SET character_set_client = @saved_cs_client;
 
@@ -108,7 +109,8 @@ CREATE TABLE `auction_item_pickups` (
   `source_auction_id` int(10) unsigned default NULL,
   PRIMARY KEY  (`id`),
   KEY `pid` (`pid`),
-  KEY `idx_source_auction_id` (`source_auction_id`)
+  KEY `idx_source_auction_id` (`source_auction_id`),
+  KEY `idx_pid_retrieved` (`pid`,`retrieved`,`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 SET character_set_client = @saved_cs_client;
 
@@ -154,7 +156,9 @@ CREATE TABLE `auctions` (
   PRIMARY KEY  (`id`),
   KEY `seller_pid` (`seller_pid`),
   KEY `auction_end` (`end_time`),
-  KEY `status` (`status`)
+  KEY `status` (`status`),
+  KEY `idx_status_end_id` (`status`,`end_time`,`id`),
+  KEY `idx_seller_status_end` (`seller_name`,`status`,`end_time`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 SET character_set_client = @saved_cs_client;
 
