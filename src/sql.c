@@ -943,8 +943,13 @@ void sql_update_level(P_char ch)
 		return;
 
 	snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=player_level|pid=%d|level=%d", (long)time(NULL), GET_PID(ch), GET_LEVEL(ch));
-	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
-		return;
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			return;
+		if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
+			return;
+	}
 
 	// level already saved in player_data
 }
@@ -970,8 +975,13 @@ void sql_update_money(P_char ch)
 	         GET_BALANCE_SILVER(ch),
 	         GET_BALANCE_GOLD(ch),
 	         GET_BALANCE_PLATINUM(ch));
-	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
-		return;
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			return;
+		if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
+			return;
+	}
 
 	// money stored as copper/silver/gold/platinum in player_data
 }
@@ -985,8 +995,13 @@ void sql_update_playtime(P_char ch)
 		return;
 
 	snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=player_playtime|pid=%d|played_time=%d", (long)time(NULL), GET_PID(ch), ch->player.time.played);
-	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
-		return;
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			return;
+		if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
+			return;
+	}
 
 	// playtime is played_time in player_data
 }
@@ -1000,8 +1015,13 @@ void sql_update_epics(P_char ch)
 		return;
 
 	snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=player_epics|pid=%d|epics=%ld", (long)time(NULL), GET_PID(ch), ch->only.pc->epics);
-	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
-		return;
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			return;
+		if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
+			return;
+	}
 
 	// epics already in player_data
 }
@@ -1105,8 +1125,13 @@ void sql_world_quest_finished(P_char ch, P_obj reward)
 	         reward_vnum,
 	         sql_scalar_clean_field(reward ? reward->short_description : "", reward_field, sizeof(reward_field)));
 
-	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
-		queued = 1;
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			queued = 1;
+		else if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
+			queued = 1;
+	}
 
 	if (!queued)
 	{
@@ -1235,8 +1260,13 @@ void sql_zone_touch_finished(const char *event_key, int boot_time, int touched_a
 	         epic_value,
 	         alignment_delta);
 
-	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
-		return;
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			return;
+		if (persistence_write_fallback_event_line(line, "scalar_event", "zone_touch", "queue_full_flat_fallback"))
+			return;
+	}
 
 	db = persistence_reward_tables_ready ? sql_persistence_connection() : NULL;
 	if (!db)
@@ -2673,8 +2703,13 @@ void log_epic_gain_event(const char *event_key, int pid, int type, int type_id, 
 	         type_id,
 	         epics);
 
-	if (persistence_scalar_event_worker_running() && persistence_scalar_event_queue_enqueue(line))
-		return;
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			return;
+		if (persistence_write_fallback_event_line(line, "scalar_event", "epic_gain", "queue_full_flat_fallback"))
+			return;
+	}
 
 	db = persistence_reward_tables_ready ? sql_persistence_connection() : NULL;
 	if (!db)

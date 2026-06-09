@@ -890,6 +890,72 @@ const char *persistence_item_uid_text(P_obj obj, char *buf, int buf_size)
   return buf;
 }
 
+int persistence_write_fallback_event_line(const char *line,
+                                          const char *domain,
+                                          const char *owner,
+                                          const char *action)
+{
+  FILE *log_f;
+  int ok = 1;
+  static unsigned long fallback_count = 0;
+
+  if (!line || !*line)
+    return 0;
+
+  pthread_mutex_lock(&persistence_fallback_log_mutex);
+  log_f = fopen(LOG_EVENT, "a");
+  if (!log_f)
+  {
+    pthread_mutex_unlock(&persistence_fallback_log_mutex);
+    persistence_alert(AVATAR,
+                      domain ? domain : "persistence",
+                      owner ? owner : "fallback",
+                      "none",
+                      "none",
+                      action ? action : "fallback_open_failed",
+                      "could not open %s; event not persisted", LOG_EVENT);
+    return 0;
+  }
+
+  if (fputs(line, log_f) < 0 || fputs("\n", log_f) < 0)
+    ok = 0;
+
+  if (fclose(log_f))
+    ok = 0;
+  pthread_mutex_unlock(&persistence_fallback_log_mutex);
+
+  fallback_count++;
+  if (!ok)
+  {
+    persistence_alert(AVATAR,
+                      domain ? domain : "persistence",
+                      owner ? owner : "fallback",
+                      "none",
+                      "none",
+                      action ? action : "fallback_write_failed",
+                      "write to %s failed; event not persisted", LOG_EVENT);
+    return 0;
+  }
+
+  if (fallback_count <= 5 || !(fallback_count % 1000))
+  {
+    logit(LOG_FILE,
+          "PERSISTENCE: domain=%s owner=%s action=%s detail=wrote event to flat fallback count=%lu",
+          domain ? domain : "persistence",
+          owner ? owner : "fallback",
+          action ? action : "flat_fallback",
+          fallback_count);
+    logit(LOG_WIZ,
+          "PERSISTENCE: domain=%s owner=%s action=%s detail=wrote event to flat fallback count=%lu",
+          domain ? domain : "persistence",
+          owner ? owner : "fallback",
+          action ? action : "flat_fallback",
+          fallback_count);
+  }
+
+  return 1;
+}
+
 static const char *persistence_clean_field(const char *in, char *buf,
                                            int buf_size)
 {
@@ -1409,7 +1475,13 @@ void persistence_record_item_event(const char *event_type, P_obj obj,
            persistence_clean_field(target, target_buf, sizeof(target_buf)),
            persistence_clean_field(note, note_buf, sizeof(note_buf)));
 
-  persistence_item_event_queue_enqueue(line);
+  if (!persistence_item_event_queue_enqueue(line))
+  {
+    persistence_write_fallback_event_line(line,
+                                          "item_event",
+                                          actor ? J_NAME(actor) : "system",
+                                          "queue_full_flat_fallback");
+  }
 }
 
 void debug(const char *format, ...)

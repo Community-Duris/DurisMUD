@@ -3084,6 +3084,7 @@ unsigned long         persistence_dropped_item_events(void);
 int                   persistence_start_item_event_worker(void);
 void                  persistence_stop_item_event_worker(void);
 int                   persistence_item_event_worker_active(void);
+int                   persistence_write_fallback_event_line(const char *line, const char *domain, const char *owner, const char *action);
 int                   persistence_start_scalar_event_worker(void);
 void                  persistence_stop_scalar_event_worker(void);
 int                   persistence_scalar_event_worker_active(void);
