@@ -1772,6 +1772,160 @@ static bool sql_schema_ensure_column(MYSQL *db, const char *table_name, const ch
 	return sql_persistence_query(db, query);
 }
 
+static bool sql_schema_ensure_obj_uid_columns(MYSQL *db, const char *table_name)
+{
+	char query[512];
+
+	if (!db || !table_name)
+		return FALSE;
+
+	if (!sql_persistence_column_exists(db, table_name, "obj_uid"))
+	{
+		if (sql_persistence_column_exists(db, table_name, "unique_id"))
+		{
+			snprintf(query,
+			         sizeof(query),
+			         "ALTER TABLE %s CHANGE COLUMN unique_id obj_uid BIGINT UNSIGNED DEFAULT NULL",
+			         table_name);
+			if (!sql_persistence_query(db, query))
+				return FALSE;
+		}
+		else
+		{
+			snprintf(query,
+			         sizeof(query),
+			         "ADD COLUMN obj_uid BIGINT UNSIGNED DEFAULT NULL");
+			if (!sql_schema_ensure_column(db, table_name, "obj_uid", query))
+				return FALSE;
+		}
+	}
+
+	if (!sql_schema_ensure_column(db,
+	                              table_name,
+	                              "item_condition",
+	                              "ADD COLUMN item_condition SMALLINT DEFAULT 100 AFTER obj_uid"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_index(db, table_name, "idx_obj_uid", "(obj_uid)"))
+		return FALSE;
+
+	return TRUE;
+}
+
+static bool sql_schema_ensure_persistent_item_columns(MYSQL *db, const char *table_name, bool has_chests)
+{
+	if (!db || !table_name)
+		return FALSE;
+
+	if (has_chests && !sql_schema_ensure_column(db,
+	                                            table_name,
+	                                            "chest_id",
+	                                            "ADD COLUMN chest_id INT UNSIGNED DEFAULT NULL AFTER locker_id"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db,
+	                              table_name,
+	                              "wear_flags",
+	                              "ADD COLUMN wear_flags INT DEFAULT NULL AFTER extra_flags"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db,
+	                              table_name,
+	                              "item_type",
+	                              "ADD COLUMN item_type TINYINT DEFAULT NULL AFTER wear_flags"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db,
+	                              table_name,
+	                              "bitvector1",
+	                              "ADD COLUMN bitvector1 BIGINT UNSIGNED DEFAULT NULL AFTER action_descr"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db,
+	                              table_name,
+	                              "bitvector2",
+	                              "ADD COLUMN bitvector2 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector1"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db,
+	                              table_name,
+	                              "bitvector3",
+	                              "ADD COLUMN bitvector3 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector2"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db,
+	                              table_name,
+	                              "bitvector4",
+	                              "ADD COLUMN bitvector4 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector3"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db,
+	                              table_name,
+	                              "bitvector5",
+	                              "ADD COLUMN bitvector5 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector4"))
+		return FALSE;
+
+	return sql_schema_ensure_obj_uid_columns(db, table_name);
+}
+
+static bool sql_schema_ensure_locker_tables(MYSQL *db)
+{
+	if (!db)
+		return FALSE;
+
+	if (!sql_schema_ensure_persistent_item_columns(db, "player_items", FALSE))
+		return FALSE;
+
+	if (!sql_schema_ensure_persistent_item_columns(db, "locker_items", TRUE))
+		return FALSE;
+
+	if (!sql_persistence_ensure_index(db, "locker_items", "idx_locker_chest", "(locker_id,chest_id)"))
+		return FALSE;
+
+	if (!sql_persistence_query(db,
+	                          "CREATE TABLE IF NOT EXISTS private_chests ("
+	                          "id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,"
+	                          "locker_id INT UNSIGNED NOT NULL,"
+	                          "chest_name VARCHAR(32) NOT NULL,"
+	                          "password_hash VARCHAR(64) DEFAULT NULL,"
+	                          "is_public TINYINT(1) DEFAULT 0,"
+	                          "sort_config TEXT DEFAULT NULL,"
+	                          "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
+	                          "FOREIGN KEY (locker_id) REFERENCES lockers(id) ON DELETE CASCADE,"
+	                          "UNIQUE KEY uk_locker_chest (locker_id,chest_name),"
+	                          "INDEX idx_locker_id (locker_id)"
+	                          ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db,
+	                              "private_chests",
+	                              "sort_config",
+	                              "ADD COLUMN sort_config TEXT DEFAULT NULL AFTER is_public"))
+		return FALSE;
+
+	if (!sql_persistence_query(db,
+	                          "CREATE TABLE IF NOT EXISTS private_chest_log ("
+	                          "id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,"
+	                          "locker_id INT UNSIGNED NOT NULL,"
+	                          "chest_id INT UNSIGNED DEFAULT NULL,"
+	                          "char_name VARCHAR(64) NOT NULL,"
+	                          "action_type ENUM('open','close','put','get','fail') NOT NULL,"
+	                          "item_short VARCHAR(256) DEFAULT NULL,"
+	                          "logged_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,"
+	                          "FOREIGN KEY (locker_id) REFERENCES lockers(id) ON DELETE CASCADE,"
+	                          "INDEX idx_locker_id (locker_id),"
+	                          "INDEX idx_logged_at (logged_at)"
+	                          ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"))
+		return FALSE;
+
+	if (!sql_persistence_query(db,
+	                          "INSERT IGNORE INTO private_chests (locker_id,chest_name,is_public) "
+	                          "SELECT id,'public',1 FROM lockers WHERE locker_name LIKE 'account.%'"))
+		return FALSE;
+
+	return TRUE;
+}
+
 static bool sql_schema_ensure_corpse_tables(MYSQL *db)
 {
 	if (!db)
@@ -1843,6 +1997,9 @@ static bool sql_schema_ensure_corpse_tables(MYSQL *db)
 	if (!sql_schema_ensure_column(db, "corpse_items", "item_condition", "ADD COLUMN item_condition SMALLINT DEFAULT 100 AFTER obj_uid"))
 		return FALSE;
 
+	if (!sql_persistence_ensure_index(db, "corpse_items", "idx_obj_uid", "(obj_uid)"))
+		return FALSE;
+
 	if (!sql_persistence_query(db,
 	                          "CREATE TABLE IF NOT EXISTS corpse_item_affects ("
 	                          "id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,"
@@ -1886,6 +2043,9 @@ static bool sql_ensure_runtime_schema(MYSQL *db)
 		return FALSE;
 
 	if (!sql_schema_ensure_corpse_tables(db))
+		return FALSE;
+
+	if (!sql_schema_ensure_locker_tables(db))
 		return FALSE;
 
 	if (!sql_schema_ensure_auction_schema(db))

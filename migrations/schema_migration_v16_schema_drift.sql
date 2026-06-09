@@ -112,5 +112,298 @@ CREATE TABLE IF NOT EXISTS persistence_item_conflicts (
   KEY resolution_lookup (resolution)
 ) ENGINE=InnoDB;
 
--- After CREATE TABLE above, start the MUD once (or run reward/auction ALTERs manually)
--- so sql_ensure_runtime_schema() can add: event_key*, obj_info_text, corpse item_type, etc.
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS ensure_runtime_schema_drift//
+CREATE PROCEDURE ensure_runtime_schema_drift()
+BEGIN
+  IF EXISTS (SELECT 1 FROM information_schema.tables
+             WHERE table_schema = DATABASE() AND table_name = 'corpses') THEN
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'corpses'
+                   AND column_name = 'short_descr') THEN
+      ALTER TABLE corpses ADD COLUMN short_descr VARCHAR(512) DEFAULT NULL;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'corpses'
+                   AND column_name = 'description') THEN
+      ALTER TABLE corpses ADD COLUMN description TEXT DEFAULT NULL;
+    END IF;
+  END IF;
+
+  IF EXISTS (SELECT 1 FROM information_schema.tables
+             WHERE table_schema = DATABASE() AND table_name = 'corpse_items') THEN
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'corpse_items'
+                   AND column_name = 'item_type') THEN
+      ALTER TABLE corpse_items ADD COLUMN item_type INT NOT NULL DEFAULT 0 AFTER vnum;
+    END IF;
+
+    IF EXISTS (SELECT 1 FROM information_schema.columns
+               WHERE table_schema = DATABASE() AND table_name = 'corpse_items'
+               AND column_name = 'unique_id') THEN
+      ALTER TABLE corpse_items CHANGE COLUMN unique_id obj_uid BIGINT UNSIGNED DEFAULT NULL;
+    ELSEIF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                       WHERE table_schema = DATABASE() AND table_name = 'corpse_items'
+                       AND column_name = 'obj_uid') THEN
+      ALTER TABLE corpse_items ADD COLUMN obj_uid BIGINT UNSIGNED DEFAULT NULL;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'corpse_items'
+                   AND column_name = 'item_condition') THEN
+      ALTER TABLE corpse_items ADD COLUMN item_condition SMALLINT DEFAULT 100 AFTER obj_uid;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.statistics
+                   WHERE table_schema = DATABASE() AND table_name = 'corpse_items'
+                   AND index_name = 'idx_obj_uid') THEN
+      ALTER TABLE corpse_items ADD INDEX idx_obj_uid (obj_uid);
+    END IF;
+  END IF;
+
+  IF EXISTS (SELECT 1 FROM information_schema.tables
+             WHERE table_schema = DATABASE() AND table_name = 'player_items') THEN
+    IF EXISTS (SELECT 1 FROM information_schema.columns
+               WHERE table_schema = DATABASE() AND table_name = 'player_items'
+               AND column_name = 'unique_id') THEN
+      ALTER TABLE player_items CHANGE COLUMN unique_id obj_uid BIGINT UNSIGNED DEFAULT NULL;
+    ELSEIF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                       WHERE table_schema = DATABASE() AND table_name = 'player_items'
+                       AND column_name = 'obj_uid') THEN
+      ALTER TABLE player_items ADD COLUMN obj_uid BIGINT UNSIGNED DEFAULT NULL;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'player_items'
+                   AND column_name = 'item_condition') THEN
+      ALTER TABLE player_items ADD COLUMN item_condition SMALLINT DEFAULT 100 AFTER obj_uid;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.statistics
+                   WHERE table_schema = DATABASE() AND table_name = 'player_items'
+                   AND index_name = 'idx_obj_uid') THEN
+      ALTER TABLE player_items ADD INDEX idx_obj_uid (obj_uid);
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'player_items'
+                   AND column_name = 'wear_flags') THEN
+      ALTER TABLE player_items ADD COLUMN wear_flags INT DEFAULT NULL AFTER extra_flags;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'player_items'
+                   AND column_name = 'item_type') THEN
+      ALTER TABLE player_items ADD COLUMN item_type TINYINT DEFAULT NULL AFTER wear_flags;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'player_items'
+                   AND column_name = 'bitvector1') THEN
+      ALTER TABLE player_items ADD COLUMN bitvector1 BIGINT UNSIGNED DEFAULT NULL AFTER action_descr;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'player_items'
+                   AND column_name = 'bitvector2') THEN
+      ALTER TABLE player_items ADD COLUMN bitvector2 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector1;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'player_items'
+                   AND column_name = 'bitvector3') THEN
+      ALTER TABLE player_items ADD COLUMN bitvector3 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector2;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'player_items'
+                   AND column_name = 'bitvector4') THEN
+      ALTER TABLE player_items ADD COLUMN bitvector4 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector3;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'player_items'
+                   AND column_name = 'bitvector5') THEN
+      ALTER TABLE player_items ADD COLUMN bitvector5 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector4;
+    END IF;
+  END IF;
+
+  IF EXISTS (SELECT 1 FROM information_schema.tables
+             WHERE table_schema = DATABASE() AND table_name = 'locker_items') THEN
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND column_name = 'chest_id') THEN
+      ALTER TABLE locker_items ADD COLUMN chest_id INT UNSIGNED DEFAULT NULL AFTER locker_id;
+    END IF;
+
+    IF EXISTS (SELECT 1 FROM information_schema.columns
+               WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+               AND column_name = 'unique_id') THEN
+      ALTER TABLE locker_items CHANGE COLUMN unique_id obj_uid BIGINT UNSIGNED DEFAULT NULL;
+    ELSEIF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                       WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                       AND column_name = 'obj_uid') THEN
+      ALTER TABLE locker_items ADD COLUMN obj_uid BIGINT UNSIGNED DEFAULT NULL;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND column_name = 'item_condition') THEN
+      ALTER TABLE locker_items ADD COLUMN item_condition SMALLINT DEFAULT 100 AFTER obj_uid;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.statistics
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND index_name = 'idx_obj_uid') THEN
+      ALTER TABLE locker_items ADD INDEX idx_obj_uid (obj_uid);
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND column_name = 'wear_flags') THEN
+      ALTER TABLE locker_items ADD COLUMN wear_flags INT DEFAULT NULL AFTER extra_flags;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND column_name = 'item_type') THEN
+      ALTER TABLE locker_items ADD COLUMN item_type TINYINT DEFAULT NULL AFTER wear_flags;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND column_name = 'bitvector1') THEN
+      ALTER TABLE locker_items ADD COLUMN bitvector1 BIGINT UNSIGNED DEFAULT NULL AFTER action_descr;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND column_name = 'bitvector2') THEN
+      ALTER TABLE locker_items ADD COLUMN bitvector2 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector1;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND column_name = 'bitvector3') THEN
+      ALTER TABLE locker_items ADD COLUMN bitvector3 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector2;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND column_name = 'bitvector4') THEN
+      ALTER TABLE locker_items ADD COLUMN bitvector4 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector3;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND column_name = 'bitvector5') THEN
+      ALTER TABLE locker_items ADD COLUMN bitvector5 BIGINT UNSIGNED DEFAULT NULL AFTER bitvector4;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.statistics
+                   WHERE table_schema = DATABASE() AND table_name = 'locker_items'
+                   AND index_name = 'idx_locker_chest') THEN
+      ALTER TABLE locker_items ADD INDEX idx_locker_chest (locker_id, chest_id);
+    END IF;
+  END IF;
+
+  IF EXISTS (SELECT 1 FROM information_schema.tables
+             WHERE table_schema = DATABASE() AND table_name = 'lockers') THEN
+    CREATE TABLE IF NOT EXISTS private_chests (
+      id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      locker_id INT UNSIGNED NOT NULL,
+      chest_name VARCHAR(32) NOT NULL,
+      password_hash VARCHAR(64) DEFAULT NULL,
+      is_public TINYINT(1) DEFAULT 0,
+      sort_config TEXT DEFAULT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (locker_id) REFERENCES lockers(id) ON DELETE CASCADE,
+      UNIQUE KEY uk_locker_chest (locker_id, chest_name),
+      INDEX idx_locker_id (locker_id)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'private_chests'
+                   AND column_name = 'sort_config') THEN
+      ALTER TABLE private_chests ADD COLUMN sort_config TEXT DEFAULT NULL AFTER is_public;
+    END IF;
+
+    CREATE TABLE IF NOT EXISTS private_chest_log (
+      id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      locker_id INT UNSIGNED NOT NULL,
+      chest_id INT UNSIGNED DEFAULT NULL,
+      char_name VARCHAR(64) NOT NULL,
+      action_type ENUM('open','close','put','get','fail') NOT NULL,
+      item_short VARCHAR(256) DEFAULT NULL,
+      logged_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (locker_id) REFERENCES lockers(id) ON DELETE CASCADE,
+      INDEX idx_locker_id (locker_id),
+      INDEX idx_logged_at (logged_at)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+    INSERT IGNORE INTO private_chests (locker_id, chest_name, is_public)
+    SELECT id, 'public', 1
+    FROM lockers
+    WHERE locker_name LIKE 'account.%';
+  END IF;
+
+  IF EXISTS (SELECT 1 FROM information_schema.tables
+             WHERE table_schema = DATABASE() AND table_name = 'auctions')
+     AND NOT EXISTS (SELECT 1 FROM information_schema.columns
+                     WHERE table_schema = DATABASE() AND table_name = 'auctions'
+                     AND column_name = 'obj_info_text') THEN
+    ALTER TABLE auctions ADD COLUMN obj_info_text TEXT DEFAULT NULL;
+  END IF;
+
+  IF EXISTS (SELECT 1 FROM information_schema.tables
+             WHERE table_schema = DATABASE() AND table_name = 'epic_gain') THEN
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'epic_gain'
+                   AND column_name = 'event_key') THEN
+      ALTER TABLE epic_gain ADD COLUMN event_key VARCHAR(128) DEFAULT NULL;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.statistics
+                   WHERE table_schema = DATABASE() AND table_name = 'epic_gain'
+                   AND index_name = 'reward_event_key') THEN
+      ALTER TABLE epic_gain ADD UNIQUE KEY reward_event_key (event_key);
+    END IF;
+  END IF;
+
+  IF EXISTS (SELECT 1 FROM information_schema.tables
+             WHERE table_schema = DATABASE() AND table_name = 'world_quest_accomplished') THEN
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'world_quest_accomplished'
+                   AND column_name = 'event_key') THEN
+      ALTER TABLE world_quest_accomplished ADD COLUMN event_key VARCHAR(128) DEFAULT NULL;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.statistics
+                   WHERE table_schema = DATABASE() AND table_name = 'world_quest_accomplished'
+                   AND index_name = 'reward_event_key') THEN
+      ALTER TABLE world_quest_accomplished ADD UNIQUE KEY reward_event_key (event_key);
+    END IF;
+  END IF;
+
+  IF EXISTS (SELECT 1 FROM information_schema.tables
+             WHERE table_schema = DATABASE() AND table_name = 'zone_touches') THEN
+    IF NOT EXISTS (SELECT 1 FROM information_schema.columns
+                   WHERE table_schema = DATABASE() AND table_name = 'zone_touches'
+                   AND column_name = 'event_key') THEN
+      ALTER TABLE zone_touches ADD COLUMN event_key VARCHAR(128) DEFAULT NULL;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM information_schema.statistics
+                   WHERE table_schema = DATABASE() AND table_name = 'zone_touches'
+                   AND index_name = 'reward_event_key') THEN
+      ALTER TABLE zone_touches ADD UNIQUE KEY reward_event_key (event_key);
+    END IF;
+  END IF;
+END//
+
+DELIMITER ;
+
+CALL ensure_runtime_schema_drift();
+DROP PROCEDURE IF EXISTS ensure_runtime_schema_drift;
