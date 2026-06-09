@@ -95,6 +95,10 @@ void sql_disconnectIP(P_char ch);
 bool qry(const char *format, ...);
 bool sql_persistence_write_item_event_line(const char *line);
 bool sql_persistence_write_scalar_event_line(const char *line);
+bool sql_persistence_item_owner_matches(unsigned long long item_uid,
+                                        const char *owner_type,
+                                        const char *owner_ref,
+                                        const char *context);
 void sql_world_quest_finished(P_char ch, P_obj obj);
 int  sql_world_quest_done_already(P_char ch, int number);
 int  sql_world_quest_can_do_another(P_char ch);

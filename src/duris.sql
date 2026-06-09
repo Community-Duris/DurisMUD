@@ -105,8 +105,10 @@ CREATE TABLE `auction_item_pickups` (
   `obj_blob_str` blob NOT NULL,
   `retrieved` tinyint(1) NOT NULL default '0',
   `quantity` int(11) NOT NULL default '1',
+  `source_auction_id` int(10) unsigned default NULL,
   PRIMARY KEY  (`id`),
-  KEY `pid` (`pid`)
+  KEY `pid` (`pid`),
+  KEY `idx_source_auction_id` (`source_auction_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 SET character_set_client = @saved_cs_client;
 

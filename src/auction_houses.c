@@ -1405,7 +1405,7 @@ bool auction_pickup(P_char ch, char *args)
 			string obj_short(auction_row[1]);
 			mysql_free_result(res);
 
-			if (!qry("INSERT INTO auction_item_pickups (pid, obj_blob_str) (SELECT '%d', obj_blob_str FROM auctions WHERE id = '%d')", GET_PID(ch), auction_id))
+			if (!qry("INSERT INTO auction_item_pickups (pid, obj_blob_str, source_auction_id) (SELECT '%d', obj_blob_str, id FROM auctions WHERE id = '%d')", GET_PID(ch), auction_id))
 				return FALSE;
 
 			snprintf(buff, MAX_STRING_LENGTH, "&+WA voice in your mind says, &+W'&n%s &+Wis ready for pickup, oh Great Master!'\r\n", obj_short.c_str());
@@ -1446,7 +1446,7 @@ bool auction_pickup(P_char ch, char *args)
 	}
 	mysql_free_result(res);
 
-	if (!qry("SELECT id, obj_blob_str, quantity FROM auction_item_pickups WHERE pid = '%d' AND retrieved = 0", GET_PID(ch)))
+	if (!qry("SELECT id, obj_blob_str, quantity, COALESCE(source_auction_id, 0) FROM auction_item_pickups WHERE pid = '%d' AND retrieved = 0", GET_PID(ch)))
 	{
 		send_to_char("Oh Noes!  Failed to read database.\n", ch);
 		return FALSE;
@@ -1459,6 +1459,7 @@ bool auction_pickup(P_char ch, char *args)
 		{
 			int id       = atoi(row[0]);
 			int quantity = atoi(row[2]);
+			int source_auction_id = atoi(row[3]);
 
 			P_obj tmp_obj  = read_one_object(row[1]);
 			P_obj temp_obj = tmp_obj;
@@ -1466,6 +1467,17 @@ bool auction_pickup(P_char ch, char *args)
 			{
 				logit(LOG_DEBUG, "auction_pickup(): problem 1 retrieving auction_item_pickups[%d].\r\n", id);
 				continue;
+			}
+			if (tmp_obj->obj_uid > 0 && source_auction_id > 0)
+			{
+				char owner_ref[32];
+				snprintf(owner_ref, sizeof(owner_ref), "%d", source_auction_id);
+				if (!sql_persistence_item_owner_matches(tmp_obj->obj_uid, "auction", owner_ref, "auction_pickup"))
+				{
+					qry("UPDATE auction_item_pickups SET retrieved = 1 where id = '%d'", id);
+					extract_obj(tmp_obj, FALSE);
+					continue;
+				}
 			}
 			// While there is another object to load..
 			if (quantity > 1)
@@ -1573,7 +1585,7 @@ bool finalize_auction(int auction_id, P_char to_ch)
 	if (!winning_bidder_pid)
 	{
 		// no one bid, return item to seller
-		if (!qry("INSERT INTO auction_item_pickups (pid, obj_blob_str, quantity) (SELECT '%d', obj_blob_str, '%d' FROM auctions WHERE id = '%d')", seller_pid, quantity, auction_id))
+		if (!qry("INSERT INTO auction_item_pickups (pid, obj_blob_str, quantity, source_auction_id) (SELECT '%d', obj_blob_str, '%d', id FROM auctions WHERE id = '%d')", seller_pid, quantity, auction_id))
 			return FALSE;
 
 		// broadcast expired auction to web (no winner)
@@ -1600,7 +1612,7 @@ bool finalize_auction(int auction_id, P_char to_ch)
 		insert_money_pickup(seller_pid, paid_price);
 
 		// item to buyer
-		if (!qry("INSERT INTO auction_item_pickups (pid, obj_blob_str, quantity) (SELECT '%d', obj_blob_str, '%d' FROM auctions WHERE id = '%d')", winning_bidder_pid, quantity, auction_id))
+		if (!qry("INSERT INTO auction_item_pickups (pid, obj_blob_str, quantity, source_auction_id) (SELECT '%d', obj_blob_str, '%d', id FROM auctions WHERE id = '%d')", winning_bidder_pid, quantity, auction_id))
 			return FALSE;
 
 		// alert buyer and seller that auction closed

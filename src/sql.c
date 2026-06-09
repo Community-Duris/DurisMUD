@@ -2058,7 +2058,16 @@ static bool sql_schema_ensure_auction_schema(MYSQL *db)
 	if (!db)
 		return FALSE;
 
-	return sql_schema_ensure_column(db, "auctions", "obj_info_text", "ADD COLUMN obj_info_text TEXT DEFAULT NULL");
+	if (!sql_schema_ensure_column(db, "auctions", "obj_info_text", "ADD COLUMN obj_info_text TEXT DEFAULT NULL"))
+		return FALSE;
+
+	if (!sql_schema_ensure_column(db, "auction_item_pickups", "source_auction_id", "ADD COLUMN source_auction_id INT UNSIGNED DEFAULT NULL"))
+		return FALSE;
+
+	if (!sql_persistence_ensure_index(db, "auction_item_pickups", "idx_source_auction_id", "(source_auction_id)"))
+		return FALSE;
+
+	return TRUE;
 }
 
 static bool sql_ensure_runtime_schema(MYSQL *db)
@@ -2316,6 +2325,79 @@ bool sql_persistence_write_item_event_line(const char *line)
 
 	pthread_mutex_lock(&persistence_sql_mutex);
 	ok = sql_persistence_write_item_event_line_locked(line);
+	pthread_mutex_unlock(&persistence_sql_mutex);
+
+	return ok;
+}
+
+static bool sql_persistence_item_owner_matches_locked(unsigned long long item_uid,
+                                                      const char *owner_type,
+                                                      const char *owner_ref,
+                                                      const char *context)
+{
+	MYSQL *db;
+	MYSQL_RES *res;
+	MYSQL_ROW row;
+	char query[512];
+	bool matches = TRUE;
+
+	if (!item_uid || !owner_type || !*owner_type || !owner_ref || !*owner_ref)
+		return TRUE;
+
+	db = sql_persistence_connection();
+	if (!db || !sql_persistence_ensure_tables(db))
+		return TRUE;
+
+	snprintf(query,
+	         sizeof(query),
+	         "SELECT owner_type, owner_ref, event_time "
+	         "FROM persistence_items_current WHERE item_uid=%llu LIMIT 1",
+	         item_uid);
+
+	if (!sql_persistence_query(db, query))
+		return TRUE;
+
+	res = mysql_store_result(db);
+	if (!res)
+		return TRUE;
+
+	row = mysql_fetch_row(res);
+	if (row && (str_cmp(row[0] ? row[0] : "", owner_type) ||
+	            str_cmp(row[1] ? row[1] : "", owner_ref)))
+	{
+		matches = FALSE;
+		logit(LOG_FILE,
+		      "PERSISTENCE: domain=item_load owner=%s:%s item_uid=%llu event_id=none action=stale_owner_skip detail=context=%s current=%s:%s at %s",
+		      owner_type,
+		      owner_ref,
+		      item_uid,
+		      context ? context : "load",
+		      row[0] ? row[0] : "unknown",
+		      row[1] ? row[1] : "unknown",
+		      row[2] ? row[2] : "unknown");
+		logit(LOG_WIZ,
+		      "PERSISTENCE: skipped stale item uid=%llu for %s:%s during %s; current owner is %s:%s.",
+		      item_uid,
+		      owner_type,
+		      owner_ref,
+		      context ? context : "load",
+		      row[0] ? row[0] : "unknown",
+		      row[1] ? row[1] : "unknown");
+	}
+
+	mysql_free_result(res);
+	return matches;
+}
+
+bool sql_persistence_item_owner_matches(unsigned long long item_uid,
+                                        const char *owner_type,
+                                        const char *owner_ref,
+                                        const char *context)
+{
+	bool ok;
+
+	pthread_mutex_lock(&persistence_sql_mutex);
+	ok = sql_persistence_item_owner_matches_locked(item_uid, owner_type, owner_ref, context);
 	pthread_mutex_unlock(&persistence_sql_mutex);
 
 	return ok;
