@@ -7,6 +7,7 @@
 #include "utils.h"
 #include "epic_skills.h"
 #include <string.h>
+#include "auction_houses.h"
 #include "damage.h"
 #include "epic.h"
 #include "skills.h"
@@ -143,6 +144,106 @@ epic_teacher_skill epic_teachers[] = {
 	{55168, SKILL_EPIC_WARDING_FAITH, 0, 100, 0, 0, 0},
 	{0}
 };
+
+// Data-driven table: which (class, spec) pairs are allowed for each spec-restricted epic skill.
+// Entries for the same skill must be grouped together (consecutive rows).
+struct epic_spec_allowed epic_spec_allowed_skills[] = {
+	{ SKILL_IMPROVED_TRACK, CLASS_ROGUE,     SPEC_ASSASSIN },
+	{ SKILL_IMPROVED_TRACK, CLASS_RANGER,    SPEC_HUNTSMAN },
+	{ SKILL_IMPROVED_TRACK, CLASS_MERCENARY, SPEC_BOUNTY },
+	{ 0, 0, 0 }
+};
+
+void validate_epic_skills_for_spec(P_char ch)
+{
+	if (IS_NPC(ch) || !IS_PC(ch))
+		return;
+
+	int i, s;
+
+	for (i = 0; epic_spec_allowed_skills[i].skill; i++)
+	{
+		int skill = epic_spec_allowed_skills[i].skill;
+
+		// Only process the first entry for each skill (entries are grouped).
+		if (i > 0 && epic_spec_allowed_skills[i - 1].skill == skill)
+			continue;
+
+		// Check if the player has a valid (class, spec) pair for this skill.
+		bool can_keep = false;
+		for (int j = i; epic_spec_allowed_skills[j].skill == skill; j++)
+		{
+			if (GET_SPEC(ch, epic_spec_allowed_skills[j].m_class, epic_spec_allowed_skills[j].spec))
+			{
+				can_keep = true;
+				break;
+			}
+		}
+
+		// If they have the skill learned but can't keep it, remove and reimburse.
+		if (!can_keep && GET_CHAR_SKILL(ch, skill))
+		{
+			int learned = GET_CHAR_SKILL(ch, skill);
+
+			// Find the epic_reward entry for this skill.
+			for (s = 0; epic_rewards[s].type; s++)
+			{
+				if (epic_rewards[s].value == skill)
+					break;
+			}
+
+			// Always remove the skill, even if we can't calculate a refund.
+			ch->only.pc->skills[skill].learned = 0;
+			ch->only.pc->skills[skill].taught  = 0;
+
+			send_to_char_f(ch,
+			               "&+RYou lose your knowledge of %s as it is no longer available to you.&n\r\n",
+			               skills[skill].name);
+
+			if (epic_rewards[s].type)
+			{
+				int points_refunded = 0;
+				int coins_refunded  = 0;
+				int skill_gain      = (int)get_property("epic.skillGain", 10);
+				int progress_factor = (int)get_property("epic.progressFactor", 30);
+
+				// Calculate refund for each practice session (matching epic_teacher() charges).
+				for (int skill_level = 0; skill_level < learned; skill_level += skill_gain)
+				{
+					float cost_f       = 1.0f + (float)skill_level / (float)progress_factor;
+					int   points_cost  = (int)(cost_f * (float)epic_rewards[s].points_cost);
+					int   coins_cost   = (int)(cost_f * (float)epic_rewards[s].coins);
+
+					if (IS_MULTICLASS_PC(ch) && !IS_SET(epic_rewards[s].classes, ch->player.m_class) &&
+					    IS_SET(epic_rewards[s].classes, ch->player.secondary_class))
+					{
+						points_cost *= (int)(get_property("epic.multiclass.EpicSkillCost", 2));
+						coins_cost *= (int)(get_property("epic.multiclass.EpicPlatCost", 3));
+					}
+
+					points_refunded += points_cost;
+					coins_refunded  += coins_cost;
+				}
+
+				// Apply the cost multipliers from epic_teacher() (2015-6 wipe adjustments).
+				points_refunded *= 3;
+				coins_refunded  *= 2;
+
+				// Reimburse.
+				ch->only.pc->epics += points_refunded;
+				insert_money_pickup(GET_PID(ch), coins_refunded);
+
+				logit(LOG_DEBUG, "%s lost epic skill %s on spec change - refunded %d epics and %s",
+				      GET_NAME(ch), skills[skill].name, points_refunded, comma_string(coins_refunded));
+
+				send_to_char_f(ch,
+				               "&+WYou are refunded %d epic points and %s.&n\r\n",
+				               points_refunded,
+				               coin_stringv(coins_refunded));
+			}
+		}
+	}
+}
 
 void create_epic_skills()
 {

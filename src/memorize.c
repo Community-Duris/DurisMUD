@@ -2212,6 +2212,14 @@ int ScriberSillyChecks(P_char ch, int spl)
 		send_to_char("You have the spell already in your spellbook, boggle?\n", ch);
 		return FALSE;
 	}
+	/* Auto-fix: if spellbook has consumed pages but no spell data, reset them.
+	 * This handles the case where player_item_extra_descr table was dropped
+	 * but player_items still has value[3] (used pages). */
+	if (o1->value[3] > 0 && !d)
+	{
+		o1->value[3] = 0;
+	}
+
 	if ((GetSpellPages(ch, spl) + o1->value[3]) > o1->value[2])
 	{
 		send_to_char("Sorry, the spellbook at hand has no room for more spells.\n", ch);

@@ -3241,6 +3241,20 @@ bool sql_load_player_items(P_char ch)
 		}
 	}
 
+	/* Auto-fix corrupted spellbooks: pages consumed but no spell data stored.
+	 * This happens when player_item_extra_descr table loses rows but
+	 * player_items still has value[3] (used pages). Reset pages to 0 so
+	 * the spellbook can be re-scribed. */
+	for (int i = 0; i < loaded_count; i++)
+	{
+		if (items[i] && items[i]->type == ITEM_SPELLBOOK && items[i]->value[3] > 0 && !find_spell_description(items[i]))
+		{
+			logit(LOG_DEBUG, "sql_load_player_items: auto-fixed corrupted spellbook vnum %d for %s (reset %d used pages)",
+			      obj_index[items[i]->R_num].virtual_number, GET_NAME(ch), items[i]->value[3]);
+			items[i]->value[3] = 0;
+		}
+	}
+
 	free(items);
 	free(item_ids);
 	free(container_ids);

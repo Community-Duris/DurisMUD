@@ -1022,8 +1022,11 @@ int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			int delta = GET_RACEWAR(ch);
 			delta     = (delta == RACEWAR_EVIL) ? -1 : (delta == RACEWAR_GOOD ? 1 : 0);
-			if (delta != 0)
-				update_epic_zone_alignment(zone_number, delta);
+
+			// Alignment update is deferred (anti-exploit). The completion
+			// record stores the pending delta; it will be applied to the DB
+			// by apply_pending_epic_zone_completions() once
+			// epic.showCompleted.delaySecs has passed.
 
 			// set completed flag
 			epic_zone_completions.push_back(epic_zone_completion(zone_number, time(NULL), delta));
@@ -1512,7 +1515,7 @@ bool epic_zone_done(int zone_number)
 {
 	for (vector<epic_zone_completion>::iterator it = epic_zone_completions.begin(); it != epic_zone_completions.end(); it++)
 	{
-		if ((it->number == zone_number) && (time(NULL) - it->done_at) > (int)get_property("epic.showCompleted.delaySecs", (15 * 60)))
+		if ((it->number == zone_number) && (time(NULL) - it->done_at) > (int)get_property("epic.showCompleted.delaySecs", (30 * 60)))
 		{
 			return TRUE;
 		}
@@ -1520,17 +1523,27 @@ bool epic_zone_done(int zone_number)
 	return FALSE;
 }
 
-int epic_zone_data::displayed_alignment() const
+// Apply pending alignment changes to the DB once the delay has passed.
+// Called before generating the epic zones output so displayed_alignment()
+// always returns the correct current value.
+static void apply_pending_epic_zone_completions(void)
 {
-	int delta = 0;
+	int delay = (int)get_property("epic.showCompleted.delaySecs", (30 * 60));
 
-	for (vector<epic_zone_completion>::iterator it = epic_zone_completions.begin(); it != epic_zone_completions.end(); it++)
+	for (vector<epic_zone_completion>::iterator it = epic_zone_completions.begin();
+	     it != epic_zone_completions.end(); it++)
 	{
-		if ((it->number == this->number) && (time(NULL) - it->done_at) < (int)get_property("epic.showCompleted.delaySecs", (15 * 60)))
+		if (!it->applied && it->delta != 0 &&
+		    (time(NULL) - it->done_at) >= delay)
 		{
-			return this->alignment - it->delta;
+			update_epic_zone_alignment(it->number, it->delta);
+			it->applied = true;
 		}
 	}
+}
+
+int epic_zone_data::displayed_alignment() const
+{
 	return this->alignment;
 }
 
@@ -1760,6 +1773,9 @@ char *generate_epic_zones_output(void)
 
 	strcat(output, "&+WEpic Zones &+G-----------------------------------------\n\n");
 
+	// Apply any pending alignment changes past the delay before reading DB
+	apply_pending_epic_zone_completions();
+
 	vector<epic_zone_data> epic_zones = get_epic_zones();
 
 	for (size_t i = 0; i < epic_zones.size(); i++)
@@ -1880,9 +1896,9 @@ void update_epic_zone_alignment(int zone_number, int delta)
 	/* This is ruining the epic_zone_balance function causing it to go from good to evil instead of neutral.
 	  qry("UPDATE zones SET alignment = alignment + (%d) WHERE number = %d AND epic_type > 0 and alignment = 0", delta, zone_number);
 	 */
-	// min/max bounds on alignment
-	qry("UPDATE zones SET alignment = %d WHERE alignment > %d", EPIC_ZONE_ALIGNMENT_MAX, EPIC_ZONE_ALIGNMENT_MAX);
-	qry("UPDATE zones SET alignment = %d WHERE alignment < %d", EPIC_ZONE_ALIGNMENT_MIN, EPIC_ZONE_ALIGNMENT_MIN);
+	// min/max bounds on alignment (scoped to the specific zone)
+	qry("UPDATE zones SET alignment = %d WHERE number = %d AND alignment > %d", EPIC_ZONE_ALIGNMENT_MAX, zone_number, EPIC_ZONE_ALIGNMENT_MAX);
+	qry("UPDATE zones SET alignment = %d WHERE number = %d AND alignment < %d", EPIC_ZONE_ALIGNMENT_MIN, zone_number, EPIC_ZONE_ALIGNMENT_MIN);
 
 	// debug("update_epic_zone_alignment(zone_number=%d, delta=%d)", zone_number, delta);
 #endif

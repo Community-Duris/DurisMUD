@@ -22,11 +22,20 @@ struct epic_teacher_skill
 	int pre_req_lvl;
 };
 
+struct epic_spec_allowed
+{
+	int           skill;
+	unsigned int  m_class;
+	int           spec;
+};
+
 int  epic_teacher(P_char ch, P_char pl, int cmd, char *arg);
 int  devotion_spell_check(int);
 void spell_resistance_check(P_char, P_char, void *);
 void do_epic_skills(P_char ch, char *arg, int cmd);
 void do_hone(P_char, char *, int);
+extern struct epic_spec_allowed epic_spec_allowed_skills[];
+void validate_epic_skills_for_spec(P_char ch);
 bool silent_spell_check(P_char ch);
 void say_silent_spell(P_char ch, int spell);
 int  two_weapon_check(P_char ch);

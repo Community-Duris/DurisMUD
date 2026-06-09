@@ -3202,6 +3202,14 @@ P_obj restoreObjects(char *buf, P_char ch, int not_room)
 
 		obj_count += i_count;
 
+		/* Auto-fix corrupted spellbooks: pages consumed but no spell data stored. */
+		if (obj->type == ITEM_SPELLBOOK && obj->value[3] > 0 && !find_spell_description(obj))
+		{
+			logit(LOG_DEBUG, "restoreObjects: auto-fixed corrupted spellbook vnum %d (reset %d used pages)",
+			      obj_index[obj->R_num].virtual_number, obj->value[3]);
+			obj->value[3] = 0;
+		}
+
 		if (!dummy_obj)
 		{
 			do

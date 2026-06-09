@@ -868,11 +868,9 @@ void artifact_switch_check(P_char ch, P_obj arti)
 void artifact_update_sql(P_obj arti, char owned, time_t timer)
 {
 	int        type, locType, location, vnum = arti ? OBJ_VNUM(arti) : -1;
-	bool       new_owned, update_existing = FALSE;
+	bool       new_owned;
 	P_char     owner;
 	P_obj      obj1;
-	MYSQL_RES *res;
-	MYSQL_ROW  row;
 
 	if (!updateArtis)
 	{
@@ -988,121 +986,44 @@ void artifact_update_sql(P_obj arti, char owned, time_t timer)
 	}
 	// At this point, type, locType, location, and vnum should be correct.
 
-	// If we can't query the DB, we have a big issue (only values we care about are time difference and owned value).
-	if (!qry("SELECT owned, location, UNIX_TIMESTAMP(timer), UNIX_TIMESTAMP(lastUpdate) FROM artifacts WHERE vnum = %d", vnum))
+	// Arih : Validate timer to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
+	// FROM_UNIXTIME(0) causes MySQL to reject the datetime.
+	if (timer <= 0)
 	{
-		logit(LOG_ARTIFACT, "arti_update_sql: failed to read from database.");
-		return;
-	}
-	res = mysql_store_result(DB);
-	// Since vnum is unique, num rows should be 0 or 1.
-	if (mysql_num_rows(res) < 1 || (row = mysql_fetch_row(res)) == NULL)
-	{
-		// Only set it to owned if we know that it's owned.
-		if (UPPER(owned) == 'Y')
-		{
-			new_owned = TRUE;
-		}
-		else
-		{
-			new_owned = FALSE;
-		}
-	}
-	else
-	{
-		if (UPPER(owned) == 'Y')
-		{
-			new_owned = TRUE;
-		}
-		else if (UPPER(owned) == 'N')
-		{
-			new_owned = FALSE;
-		}
-		else
-		{
-			new_owned = (!strcmp(row[0], "Y")) ? TRUE : FALSE;
-		}
-
-		// If it's on a corpse, it should be on the corpse of the last owner,
-		//   so we don't want to move it to NOWHERE.
-		if (locType == ARTIFACT_ONCORPSE)
-		{
-			location = atoi(row[1]);
-		}
-
-		update_existing = TRUE;
+		timer = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
+		logit(LOG_ARTIFACT, "arti_update_sql: WARNING: timer was %ld, resetting to 10 days for vnum %d", (long)0, vnum);
 	}
 
-	mysql_free_result(res);
+	// Only set it to owned if we know that it's owned. For existing rows, any
+	// other owned value leaves the current owned flag untouched.
+	new_owned = (UPPER(owned) == 'Y');
 
-	// If we have an entry already in the DB, update it.
-	if (update_existing)
-	{
-		// Arih : Validate timer to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
-		// FROM_UNIXTIME(0) causes MySQL to reject the datetime.
-		if (timer <= 0)
-		{
-			timer = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
-			logit(LOG_ARTIFACT, "arti_update_sql (UPDATE): WARNING: timer was %ld, resetting to 10 days for vnum %d", (long)0, vnum);
-		}
-
-		qry("UPDATE artifacts SET owned='%c', locType=%d, location=%d, timer=FROM_UNIXTIME(%lu), type=%d, lastUpdate=SYSDATE() WHERE vnum=%d",
-		    new_owned ? 'Y' : 'N',
-		    locType,
-		    location,
-		    timer,
-		    type,
-		    vnum);
-		arti_cache_invalidate();
-	}
-	// Otherwise, create one.
-	else
-	{
-		logit(LOG_ARTIFACT, "arti_update_sql: Creating entry: vnum: %d, new_owned: %c, locType: %d, location; %d, timer: %lu, type: %d.", vnum, new_owned ? 'Y' : 'N', locType, location, timer, type);
-
-		// Arih : Validate timer to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
-		// FROM_UNIXTIME(0) causes MySQL to reject the datetime.
-		if (timer <= 0)
-		{
-			timer = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
-			logit(LOG_ARTIFACT, "arti_update_sql: WARNING: timer was %ld, resetting to 10 days for vnum %d", (long)0, vnum);
-		}
-
-		qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES( %d, '%c', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE())", vnum, new_owned ? 'Y' : 'N', locType, location, timer, type);
-		arti_cache_invalidate();
-	}
+	qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) "
+	    "VALUES(%d, '%c', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE()) "
+	    "ON DUPLICATE KEY UPDATE "
+	    "owned=CASE WHEN '%c'='Y' THEN 'Y' WHEN '%c'='N' THEN 'N' ELSE owned END, "
+	    "locType=VALUES(locType), "
+	    "location=CASE WHEN VALUES(locType)=%d THEN location ELSE VALUES(location) END, "
+	    "timer=VALUES(timer), type=VALUES(type), lastUpdate=SYSDATE()",
+	    vnum,
+	    new_owned ? 'Y' : 'N',
+	    locType,
+	    location,
+	    timer,
+	    type,
+	    UPPER(owned),
+	    UPPER(owned),
+	    ARTIFACT_ONCORPSE);
+	arti_cache_invalidate();
 }
 
 // This function just updates/creates a new entry for the arti with vnum vnum.
 void artifact_update_sql(int vnum, bool owned, int locType, int location, time_t timer, int type)
 {
-	bool       update_existing;
-	MYSQL_RES *res;
-	MYSQL_ROW  row;
-
 	if (!updateArtis)
 	{
 		return;
 	}
-
-	// If we can't query the DB, we have a big issue (only values we care about are time difference and owned value).
-	if (!qry("SELECT owned, location, UNIX_TIMESTAMP(timer), UNIX_TIMESTAMP(lastUpdate) FROM artifacts WHERE vnum = %d", vnum))
-	{
-		logit(LOG_ARTIFACT, "arti_update_sql: failed to read from database.");
-		return;
-	}
-	res = mysql_store_result(DB);
-
-	// Since vnum is unique, num rows should be 0 or 1.
-	if (mysql_num_rows(res) < 1 || (row = mysql_fetch_row(res)) == NULL)
-	{
-		update_existing = FALSE;
-	}
-	else
-	{
-		update_existing = TRUE;
-	}
-	mysql_free_result(res);
 
 	// Arih : Validate timer to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
 	// FROM_UNIXTIME(0) causes MySQL to reject the datetime.
@@ -1112,16 +1033,17 @@ void artifact_update_sql(int vnum, bool owned, int locType, int location, time_t
 		logit(LOG_ARTIFACT, "artifact_update_sql: WARNING: timer was %ld, resetting to 10 days for vnum %d", (long)0, vnum);
 	}
 
-	if (update_existing)
-	{
-		qry("UPDATE artifacts SET owned='%c', locType=%d, location=%d, timer=FROM_UNIXTIME(%lu), type=%d, lastUpdate=SYSDATE() WHERE vnum=%d", owned ? 'Y' : 'N', locType, location, timer, type, vnum);
-		arti_cache_invalidate();
-	}
-	else
-	{
-		qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, '%c', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE())", vnum, owned ? 'Y' : 'N', locType, location, timer, type);
-		arti_cache_invalidate();
-	}
+	qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) "
+	    "VALUES(%d, '%c', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE()) "
+	    "ON DUPLICATE KEY UPDATE owned=VALUES(owned), locType=VALUES(locType), "
+	    "location=VALUES(location), timer=VALUES(timer), type=VALUES(type), lastUpdate=SYSDATE()",
+	    vnum,
+	    owned ? 'Y' : 'N',
+	    locType,
+	    location,
+	    timer,
+	    type);
+	arti_cache_invalidate();
 }
 
 // Remove the artifact data from the DB.
@@ -1257,8 +1179,19 @@ void artifact_update_location_sql(P_obj arti)
 			artifact_switch_check(owner, arti);
 			if (!timerStarted)
 			{
-				// Set the timer to the max for a newly acquired arti.
-				artidata.timer = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
+				// Check bind table as safety net - if artifact was previously bound,
+				// the DB query may have failed. Don't reset the timer.
+				int bind_owner_pid, bind_timer;
+				sql_get_bind_data(OBJ_VNUM(arti), &bind_owner_pid, &bind_timer);
+				if (bind_owner_pid <= 0)
+				{
+					// Set the timer to the max for a newly acquired arti.
+					artidata.timer = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
+				}
+				else
+				{
+					logit(LOG_ARTIFACT, "artifact_update_location_sql: WARNING: arti vnum %d not owned in artifacts table but has bind entry for pid %d, preserving existing timer.", OBJ_VNUM(arti), bind_owner_pid);
+				}
 			}
 			// PC owner forces a start to timer.
 			artifact_update_sql(arti, 'Y', artidata.timer);
@@ -3400,7 +3333,7 @@ void event_artifact_check_bind_sql(P_char ch, P_char vict, P_obj obj, void *arg)
 						if ((owner = get_char_online(get_player_name_from_pid(artidata.location))))
 						{
 							act("&+L$p &+Lmerges with your &+wsoul&+L.", FALSE, owner, arti, 0, TO_CHAR);
-							qry("UPDATE artifact_bind SET owner_pid = %d, timer = %ld WHERE vnum = %d", artidata.location, curr_time, list->vnum);
+							logit(LOG_ARTIFACT, "event_artifact_check_bind_sql(): WARNING: bind timer > curr_time for artifact vnum %d, skipping immediate merge.", list->vnum);
 							logit(LOG_ARTIFACT,
 							      "event_artifact_check_bind_sql(): artifact '%s' %d merged with '%s' %d's soul.",
 							      arti ? OBJ_SHORT(arti) : "NULL",
@@ -3421,13 +3354,7 @@ void event_artifact_check_bind_sql(P_char ch, P_char vict, P_obj obj, void *arg)
 					}
 					else if (list->timer > curr_time)
 					{
-						debug("%3d: artifact '%s&n'%6d's timer is later than curr_time.",
-						      ++counter,
-						      pad_ansi(arti ? OBJ_SHORT(arti) : "NULL", 35, TRUE).c_str(),
-						      list->vnum,
-						      J_NAME(owner),
-						      artidata.location);
-						qry("UPDATE artifact_bind SET owner_pid = %d, timer = %ld WHERE vnum = %d", artidata.location, curr_time, list->vnum);
+						logit(LOG_ARTIFACT, "event_artifact_check_bind_sql(): WARNING: bind timer > curr_time for artifact vnum %d, skipping immediate merge.", list->vnum);
 					}
 				}
 			}

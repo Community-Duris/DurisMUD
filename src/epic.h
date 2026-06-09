@@ -41,10 +41,11 @@ struct epic_zone_data
 
 struct epic_zone_completion
 {
-	epic_zone_completion(int _number, int _done_at, int _delta) : number(_number), done_at(_done_at), delta(_delta) {}
-	int number;
-	int done_at;
-	int delta;
+	epic_zone_completion(int _number, int _done_at, int _delta) : number(_number), done_at(_done_at), delta(_delta), applied(false) {}
+	int  number;
+	int  done_at;
+	int  delta;
+	bool applied;
 };
 
 void                     create_epic_skills();

@@ -3351,7 +3351,7 @@ void send_mud_info(const char *name, P_char ch) { send_to_char(get_mud_info(name
 
 void sql_get_bind_data(int vnum, int *owner_pid, int *timer)
 {
-	if (!qry("select * from artifact_bind where vnum = %d", vnum))
+	if (!qry("SELECT owner_pid, timer FROM artifact_bind WHERE vnum = %d", vnum))
 	{
 		logit(LOG_DEBUG, "sql_get_bind_data(): failed to read from database");
 		return;
@@ -3372,8 +3372,8 @@ void sql_get_bind_data(int vnum, int *owner_pid, int *timer)
 		MYSQL_ROW row = mysql_fetch_row(res);
 		if (row != NULL)
 		{
-			*owner_pid = atoi(row[1]);
-			*timer     = atoi(row[2]);
+			*owner_pid = atoi(row[0]);
+			*timer     = atoi(row[1]);
 		}
 	}
 	mysql_free_result(res);
@@ -3381,22 +3381,11 @@ void sql_get_bind_data(int vnum, int *owner_pid, int *timer)
 
 void sql_update_bind_data(int vnum, int *owner_pid, int *timer)
 {
-	if (!qry("select * from artifact_bind where vnum = %d", vnum))
-	{
-		logit(LOG_DEBUG, "sql_update_bind_data(): failed to read from database");
-		return;
-	}
-
-	MYSQL_RES *res = mysql_store_result(DB);
-	if (mysql_num_rows(res) > 0)
-	{
-		qry("UPDATE artifact_bind SET owner_pid = %d, timer = %d WHERE vnum = %d", *owner_pid, *timer, vnum);
-	}
-	else
-	{
-		qry("INSERT INTO artifact_bind VALUES(%d, %d, %d)", vnum, *owner_pid, *timer);
-	}
-	mysql_free_result(res);
+	qry("INSERT INTO artifact_bind (vnum, owner_pid, timer) VALUES(%d, %d, %d) "
+	    "ON DUPLICATE KEY UPDATE owner_pid=VALUES(owner_pid), timer=VALUES(timer)",
+	    vnum,
+	    *owner_pid,
+	    *timer);
 }
 
 bool sql_clear_zone_trophy()

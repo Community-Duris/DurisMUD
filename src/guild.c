@@ -119,6 +119,9 @@ void update_skills(P_char ch)
 		}
 	}
 
+	// Validate any spec-restricted epic skills.
+	validate_epic_skills_for_spec(ch);
+
 	// assumes that the instruments and songs are back to back in spells.h
 	for (skl = FIRST_INSTRUMENT; skl <= LAST_SONG; skl++)
 	{

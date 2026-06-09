@@ -2225,9 +2225,7 @@ void do_give(P_char ch, char *argument, int cmd)
 			mark_player_dirty(GET_PID(ch));
 		if (IS_PC(vict))
 			mark_player_dirty(GET_PID(vict));
-#ifndef __NO_MYSQL__
-		artifact_switch_check(ch, obj);
-#endif
+
 	}
 	/*
 	 * added by DTS 5/18/95 to solve light bug

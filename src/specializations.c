@@ -9,6 +9,7 @@ using namespace std;
 #include "interp.h"
 #include "utils.h"
 #include "epic.h"
+#include "epic_skills.h"
 #include "specializations.h"
 #include "spells.h"
 #include "sql.h"
@@ -676,6 +677,7 @@ void do_specialize(P_char ch, char *argument, int cmd)
 			snprintf(buf, MAX_STRING_LENGTH, "From this day onwards you will follow the path of the %s&n!", GET_SPEC_NAME(ch->player.m_class, i));
 			ch->player.spec = i + 1;
 			update_skills(ch);
+			validate_epic_skills_for_spec(ch);
 			mobsay(teacher, buf);
 			return;
 		}
@@ -714,6 +716,7 @@ void unspecialize(P_char ch, P_obj obj)
 		    TO_ROOM);
 		ch->player.spec = 0;
 		update_skills(ch);
+		validate_epic_skills_for_spec(ch);
 		// epic_gain_skillpoints(ch, -1);
 		ch->only.pc->epics -= 10;
 		forget_spells(ch, -1);
