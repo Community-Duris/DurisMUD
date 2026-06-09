@@ -43,6 +43,8 @@ def main() -> int:
     quest = section(sql, "void sql_world_quest_finished", "int sql_world_quest_can_do_another")
     zone = section(sql, "void sql_zone_touch_finished", "const char *sql_select_IP_info")
     epic = section(sql, "void log_epic_gain_event", "/* The prepstatement_duris_sql table")
+    shop = section(sql, "int sql_shop_sell", "int sql_shop_trophy")
+    quest_trophy = section(sql, "int sql_quest_finish", "int sql_quest_trophy")
     writer = section(sql, "bool sql_persistence_write_scalar_event_line", "void send_to_pid_offline")
 
     assert_contains(
@@ -70,6 +72,8 @@ def main() -> int:
         ("world quest completion", quest),
         ("zone touch", zone),
         ("epic gain", epic),
+        ("shop trophy sale", shop),
+        ("quest trophy finish", quest_trophy),
     ):
         assert_contains(
             block,
@@ -88,7 +92,13 @@ def main() -> int:
             f"{name} should enqueue before falling back to direct SQL",
         )
 
-    for event_name in ("epic_gain", "world_quest_finished", "zone_touch"):
+    for event_name in (
+        "epic_gain",
+        "world_quest_finished",
+        "zone_touch",
+        "shop_trophy_sell",
+        "quest_trophy_finish",
+    ):
         assert_contains(
             writer,
             f'event_type, "{event_name}"',

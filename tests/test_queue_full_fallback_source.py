@@ -103,6 +103,8 @@ def main() -> int:
         ("world quest completion", "void sql_world_quest_finished", "int sql_world_quest_can_do_another"),
         ("zone touch", "void sql_zone_touch_finished", "const char *sql_select_IP_info"),
         ("epic gain", "void log_epic_gain_event", "/* The prepstatement_duris_sql table"),
+        ("shop trophy sale", "int sql_shop_sell", "int sql_shop_trophy"),
+        ("quest trophy finish", "int sql_quest_finish", "int sql_quest_trophy"),
     ):
         block = section(sql, start, end)
         assert_order(

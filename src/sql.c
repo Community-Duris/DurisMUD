@@ -2436,6 +2436,12 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	int player_level = 0;
 	int quest_target = 0;
 	int reward_vnum = 0;
+	int item_vnum = 0;
+	int sale_value = 0;
+	int seller_pid = 0;
+	int mob_vnum = 0;
+	int reward_type = 0;
+	int reward_value = 0;
 	int boot_time = 0;
 	int touched_at = 0;
 	int zone_number = 0;
@@ -2501,6 +2507,18 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			reward_vnum = atoi(value);
 		else if (!str_cmp(key, "reward_desc"))
 			snprintf(reward_desc, sizeof(reward_desc), "%s", value);
+		else if (!str_cmp(key, "item_vnum"))
+			item_vnum = atoi(value);
+		else if (!str_cmp(key, "sale_value"))
+			sale_value = atoi(value);
+		else if (!str_cmp(key, "seller_pid"))
+			seller_pid = atoi(value);
+		else if (!str_cmp(key, "mob_vnum"))
+			mob_vnum = atoi(value);
+		else if (!str_cmp(key, "reward_type"))
+			reward_type = atoi(value);
+		else if (!str_cmp(key, "reward_value"))
+			reward_value = atoi(value);
 		else if (!str_cmp(key, "boot_time"))
 			boot_time = atoi(value);
 		else if (!str_cmp(key, "touched_at"))
@@ -2620,6 +2638,27 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 		         epic_value,
 		         alignment_delta);
 	}
+	else if (!str_cmp(event_type, "shop_trophy_sell"))
+	{
+		snprintf(query,
+		         sizeof(query),
+		         "INSERT INTO shop_trophy (item, value, seller, timestamp) "
+		         "VALUES ('%d', '%d', %d, now())",
+		         item_vnum,
+		         sale_value,
+		         seller_pid);
+	}
+	else if (!str_cmp(event_type, "quest_trophy_finish"))
+	{
+		snprintf(query,
+		         sizeof(query),
+		         "INSERT INTO quest_trophy (mob_vnum, pid, type, reward_value, timestamp) "
+		         "VALUES ('%d', '%d', %d, %d, now())",
+		         mob_vnum,
+		         pid,
+		         reward_type,
+		         reward_value);
+	}
 	else
 	{
 		return FALSE;
@@ -2676,9 +2715,26 @@ void send_offline_messages(P_char ch)
 
 int sql_shop_sell(P_char ch, P_obj obj, int value)
 {
+	char line[PERSISTENCE_EVENT_MAX_LEN];
 	int m_virtual = (obj->R_num >= 0) ? obj_index[obj->R_num].virtual_number : 0;
 
 	int pid = (IS_PC(ch) ? GET_PID(ch) : 0);
+
+	snprintf(line,
+	         sizeof(line),
+	         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=shop_trophy_sell|item_vnum=%d|sale_value=%d|seller_pid=%d",
+	         (long)time(NULL),
+	         m_virtual,
+	         value,
+	         pid);
+
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			return 1;
+		if (persistence_write_fallback_event_line(line, "scalar_event", "shop_trophy", "queue_full_flat_fallback"))
+			return 1;
+	}
 
 	qry("INSERT INTO shop_trophy (item, value, seller, timestamp) VALUES ('%d', '%d', %d, now())", m_virtual, value, pid);
 
@@ -2725,9 +2781,27 @@ int sql_shop_trophy(P_obj obj)
 int sql_quest_finish(P_char ch, P_char giver, int type, int value)
 {
 
+	char line[PERSISTENCE_EVENT_MAX_LEN];
 	int m_virtual = GET_VNUM(giver);
 	// GET_PID(ch), ch->only.pc->quest_giver, GET_NAME(ch), GET_LEVEL(ch), ch->only.pc->quest_mob_vnum, m_virtual ,reward->short_description );
-	char buff[MAX_STRING_LENGTH];
+
+	snprintf(line,
+	         sizeof(line),
+	         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=quest_trophy_finish|pid=%d|mob_vnum=%d|reward_type=%d|reward_value=%d",
+	         (long)time(NULL),
+	         GET_PID(ch),
+	         m_virtual,
+	         type,
+	         value);
+
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			return 1;
+		if (persistence_write_fallback_event_line(line, "scalar_event", "quest_trophy", "queue_full_flat_fallback"))
+			return 1;
+	}
+
 	qry("INSERT INTO quest_trophy (mob_vnum, pid, type, reward_value, timestamp) VALUES ('%d', '%d', %d, %d ,now())", m_virtual, GET_PID(ch), type, value);
 	return 1;
 }
