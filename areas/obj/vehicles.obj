@@ -87,6 +87,24 @@ A &+Cflight&n ticket lies here.~
 13 15 3 0 7 0 8388616 1 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
+#47009
+heavy teleportation anchor~
+&+La heavy &+Yt&+ce&+Yl&+ce&+Yp&+co&+Yr&+ct&+Ya&+ct&+Yi&+co&+Yn &+Lanchor&n~
+&+LA heavy &+Yt&+ce&+Yl&+ce&+Yp&+co&+Yr&+ct&+Ya&+ct&+Yi&+co&+Yn &+Lanchor&n lies here.~
+~
+4 36 5 0 11 0 33554433 12599297 64 0 0
+50 5 5 2 0 0 0 0
+10 250000 100
+E
+heavy teleportation anchor~
+   &+LThis huge, obsidian anchor is covered in ancient runes
+&+mthat pulse with a faint magenta glow, which increases in
+&+Lintensity and rhythm when near bodies of water. The anchor
+&+mhas a huge, old braided rope tied into a loop, allowing
+&+Lit to be worn when carried.
+~
+A
+14 40
 #47013
 ferry ship wavedancer __ferry__~
 &+ythe &+WWave&+BDancer&n~
@@ -169,6 +187,24 @@ ferry ship crimson fulgur __ferry__~
 &+rweapon of ocean warfare. Seemingly everywhere there can be any,
 &+rcrude pikes jut out sea-ward from The &+RC&+rr&+Ri&+rm&+Rs&+ro&+Rn F&+ru&+ylg&+ru&+Rr&+r, like the
 &+rspines on a blood-soaked crown.
+~
+#47018
+ferry ship stromvok __ferry__~
+&+Rthe Str&+Lom&+Rvok&N~
+&+RThe Str&+Lom&+Rvok &+yfloats here, ready to ferry passengers.~
+~
+28 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+ferry ship stromvok __ferry__~
+&+R   The Stromvok is a towering frigate retrofitted from a fishing
+&+Rvessel into a passenger ferry. Huge bulging timber planks have
+&+Rbeen reinforced &+Lwith heavy cold-iron plates &+Rand moorings. Patch-
+&+Lwork repairs of wood and metal give The Stromvok a port-side tilt,
+&+Rcausing passenge&+Lrs to compensate. Despite&+R its lopsidedness and
+&+Rramshackle construction, The Stromvok crashes through the mighty
+&+Rwake with the unwavering fortitude of its mountainous captain.
 ~
 #47040
 captains quarters key~
@@ -349,9 +385,9 @@ ink-rubbed scrimshaw depicting hunting tribesmen in the
 of the sun, sharpening the wearer's focus on the horizon.
 ~
 A
-55 3
+55 4
 A
-20 -3
+20 -4
 #47076
 forge-fire forge fire goggles~
 &+Ys&+Ro&+rme &+Yf&+Ro&+rrge-&+Yf&+Ri&+rre &+Yg&+Ro&+rggles&N~
@@ -370,7 +406,7 @@ forge-fire forge fire goggles~
 A
 17 -20
 A
-24 -3
+24 -4
 #47077
 thick leather belt warhammer shaped buckle~
 &n&+ya thick leather belt with &+ma w&+Ma&+mrh&+Ma&+mmm&+Me&+mr-sh&+Ma&+mp&+Me&+md &+mbuckle&N~
@@ -389,9 +425,9 @@ thick leather belt warhammer shaped buckle~
 &+mGrudge - the infamous dwarven warferry.
 ~
 A
-31 3
+31 4
 A
-18 3
+18 4
 #47078
 festoon scrimshawed whale bones~
 &+Wa f&Ne&+Wst&Noo&+Wn &No&+Wf &Ns&+Wcri&Nm&+Ws&Nh&+Wawe&Nd &+Bwh&+ca&+Bl&+ce &+Wb&No&+Wn&Ne&+Ws&N~
@@ -408,9 +444,9 @@ festoon scrimshawed whale bone~
 &Nillustrations of rolling waves and sea serpents.
 ~
 A
-34 2
+34 3
 A
-31 2
+31 3
 #47079
 kraken hide kraken-hide loin cloth loincloth~
 &N&+ca &+Lk&+Gr&+La&+Gk&+Le&+Gn&n&+c-hide &+cloincloth&N~
@@ -438,7 +474,7 @@ dangling necklace kraken teeth~
 10 0 0 0 0 0 0 0
 0 125000 100 32768 12288 0 0
 A
-20 -3
+20 -4
 A
 23 -3
 #47081
@@ -450,9 +486,9 @@ wyvern skull wyvern-skull pauldrons~
 15 0 0 0 0 0 0 0
 2 25000 100 67108864 128 0 0
 A
-14 30
+14 40
 A
-23 -3
+23 -4
 #47082
 wyvern skull wyvern-skull poleyns~
 &+Ws&Nom&+We &+ywyvern&n-&+Wsk&Nu&+Wll&N &+Wpo&Nley&+Wns&n~
@@ -462,9 +498,9 @@ wyvern skull wyvern-skull poleyns~
 15 0 0 0 0 0 0 0
 2 25000 100 67108864 128 0 0
 A
-14 30
+14 40
 A
-23 -3
+23 -4
 #47083
 heavy dwarven arbalest~
 &+La heavy &+ydwarven &+Ca&+yr&+Cb&+ya&+Cl&+ye&+Cs&+yt&N~
@@ -627,9 +663,9 @@ mantle squall~
 46 15 15 6 0 0 0 0
 -50 100000 100 0 192 0 0
 A
-55 4
+55 5
 A
-36 4
+36 5
 T
 6 3 1 100
 #47092
@@ -649,7 +685,7 @@ old signet ring _id_~
 &n&+can old signet ring&N~
 &n&+cAn old signet ring&N lies here, forgotten.~
 ~
-9 18 1 0 15 0 0 3 0 0 0
+18 18 1 0 15 0 0 3 0 0 0
 5 0 0 0 0 0 0 0
 0 500000 100
 E
@@ -675,11 +711,45 @@ ancestral bracer tribe whale~
 ~
 9 34 2 0 14 0 8192 4097 0 0 0
 5 0 0 0 0 0 0 0
-0 250000 100 2080 92 0 0
+0 250000 100 8 28 0 0
 A
 13 30
 A
 14 30
+#47095
+carved blue dragon tooth dragon-tooth pipe~
+&+ca carved &+Bblue dragon-&+Wt&No&+Wo&Nt&+Wh &+cpipe&N~
+&+cA carved &+Bblue dragon-&+Wt&No&+Wo&Nt&+Wh &+cpipe&N lies here.~
+~
+41 10 2 0 14 0 8193 16385 0 0 0
+5 100 1 0 0 0 0 0
+0 250000 100 2 64 0 0
+A
+40 5
+A
+23 -4
+#47096
+crystal harp vokstron _noquest_~
+&+Ca cr&+my&+Ms&+Bt&+Cal &+Yharp&+C named &+Y'&+BThe &+GVo&+Ck&+cst&+Cr&+Gon&+Y'&N~
+&+CA cr&+my&+Ms&+Bt&+Cal &+Yharp&+C named &+Y'&+BThe &+GVo&+Ck&+cst&+Cr&+Gon&+Y'&N lies here.~
+~
+32 8 6 0 15 0 33554432 8404993 64 0 0
+187 100 0 0 0 0 0 0
+5 1250000 100
+E
+crystal harp vokstron~
+&+C   This massive instrument, standing nearly as tall as a man,
+&+cis made of finely-carved crystal, reinforced by silver, and
+&+Cthe sinew of a kraken forming the wires. The sound that comes
+&+cfrom this instrument vibrates through the air, forcing the
+&+Cwind into the control of the player. It is said that the Vokstrun
+&+ccan harmonize with the howling winds, allowing a ship's captain
+&+Cto literally 'play' the weather to drive his sails.
+~
+A
+57 -1
+A
+58 -1
 #47100
 charred seafood skewer~
 &+La charred &+Bs&+ge&+Ba&+gf&+Bo&+go&+Bd &+rs&+Rk&+re&+Rw&+re&+Rr&N~

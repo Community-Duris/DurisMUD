@@ -620,7 +620,7 @@ int str_n_cmp(const char *argv1, const char *argv2)
 
 const int char_in_list(const P_char ch)
 {
-	register P_char tmp;
+	P_char tmp;
 
 	if (!ch)
 		return FALSE;
@@ -638,7 +638,7 @@ const int char_in_list(const P_char ch)
 
 const int is_char_in_room(P_char ch, const int room)
 {
-	register P_char tmp;
+	P_char tmp;
 
 	if (!ch || room >= top_of_world || room == 0)
 		return FALSE;
@@ -677,7 +677,7 @@ char *deleteChar(char *strn, const unsigned long strnPos)
 
 char strleft(const char *strn, const char *substrn)
 {
-	register ulong i, len = strlen(strn), sublen = strlen(substrn);
+	ulong i, len = strlen(strn), sublen = strlen(substrn);
 
 	if (sublen > len)
 		return FALSE;
@@ -1773,7 +1773,7 @@ struct time_info_data age(P_char ch)
 
 int exist_in_equipment(P_char ch, int bitflag)
 {
-	register int i;
+	int i;
 
 	for (i = 0; i < MAX_WEAR; i++)
 	{
@@ -2971,7 +2971,7 @@ bool aggressive_to_class(P_char ch, P_char target)
 bool aggressive_to(P_char ch, P_char target)
 {
 	int                   tmp_race = 0;
-	register int          chance;
+	int          chance;
 	struct affected_type *af;
 
 	if (!ch || !target || ch == target)
@@ -3168,7 +3168,7 @@ bool aggressive_to(P_char ch, P_char target)
 bool is_aggr_to(P_char ch, P_char target)
 {
 	int          tmp_race = 0;
-	register int chance;
+	int chance;
 	P_char       master;
 
 	if (ch == target || !IS_ALIVE(ch) || !IS_ALIVE(target))
@@ -3592,7 +3592,7 @@ void ansi_comp(char *str)
 // Note: if length is negative, we pad the beginning instead of the end.
 string pad_ansi(const char *str, int length, bool trim_to_length)
 {
-	register char lookat;
+	char lookat;
 	bool          bPadEnd = TRUE;
 	string        ret_str("");
 	int           to_pad;
@@ -5033,7 +5033,7 @@ int GET_ALT_SIZE(P_char ch)
 ClassSkillInfo SKILL_DATA_ALL(P_char ch, int skill)
 {
 	ClassSkillInfo dummy;
-	int            required_level, new_cap, innate;
+	int            required_level, new_cap;
 	int            pri_class, sec_class;
 	int            pri_rlevel, sec_rlevel, pri_cap, sec_cap;
 	float          pri_mod = get_property("skill.cap.multi.mod.primarySkill", 100.0);
@@ -5113,15 +5113,6 @@ ClassSkillInfo SKILL_DATA_ALL(P_char ch, int skill)
 		printf("Invalid m_class %x for %s\n", ch->player.m_class, J_NAME(ch));
 		ch->player.m_class = 1; // warrior
 		dummy              = SKILL_DATA(ch, skill);
-	}
-
-	// If there's an innate associated with the skill.
-	if ((innate = get_innate_from_skill(skill)) >= 0)
-	{
-		if (has_innate(ch, innate))
-		{
-			dummy.maxlearn[ch->player.spec] = 100;
-		}
 	}
 
 	return dummy;
@@ -5233,30 +5224,13 @@ int GET_CHAR_SKILL_P(P_char ch, int skl)
 
 int GET_LVL_FOR_SKILL(P_char ch, int skill)
 {
-	int classlvl, innatelvl;
-
 	// We don't check IS_ALIVE() because a char that just died and lost level would not be alive.
 	if (!ch)
 	{
 		return 0;
 	}
 
-	classlvl  = SKILL_DATA_ALL(ch, skill).rlevel[ch->player.spec];
-	innatelvl = get_innate_from_skill(skill);
-	// If there is an innate that grants skill.
-	if (innatelvl > 0)
-	{
-		// If ch has the innate.
-		if ((innatelvl = get_level_from_innate(ch, innatelvl)))
-		{
-			if (classlvl)
-				return MIN(innatelvl, classlvl);
-			else
-				return innatelvl;
-		}
-	}
-
-	return classlvl;
+	return SKILL_DATA_ALL(ch, skill).rlevel[ch->player.spec];
 }
 
 /* this function returns a random non-god character in room

@@ -1119,7 +1119,7 @@ char *CRYPT2(char *passwd, char *name);
 #define COIN_GOLD     2
 #define COIN_PLATINUM 3
 
-#define GROUNDFIGHTING_CHECK(ch) (notch_skill(ch, SKILL_GROUNDFIGHTING, get_property("skill.notch.offensive", 7)) || GET_CHAR_SKILL(ch, SKILL_GROUNDFIGHTING) >= number(1, 100))
+#define GROUNDFIGHTING_CHECK(ch) has_innate(ch, INNATE_GROUNDFIGHTING)
 
 #define GET_FRAGS(ch) ((ch)->only.pc->frags)
 

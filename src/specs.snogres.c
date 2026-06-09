@@ -65,7 +65,7 @@ int snogres_lich_shout(P_char ch, P_char tch, int cmd, char *arg)
 
 int snogres_flesh_golem(P_char ch, P_char pl, int cmd, char *arg)
 {
-	register P_char i;
+	P_char i;
 	P_char          golem, lich;
 	int             count = 0;
 

@@ -282,7 +282,7 @@ void format_text(char **ptr_string, int mode, struct descriptor_data *d, int max
 void parse_action(int command, char *string, struct descriptor_data *d)
 {
 	int          indent = 0, rep_all = 0, flags = 0, total_len, replaced;
-	register int j = 0;
+	int j = 0;
 	int          i, line_low, line_high;
 	char        *s = NULL, *t = NULL, temp, buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
@@ -754,7 +754,7 @@ char *stripcr(char *dest, const char *src)
 void string_add(struct descriptor_data *d, char *str)
 {
 	int          terminator = 0, num = 0;
-	register int i = 2, j = 0;
+	int i = 2, j = 0;
 	char         actions[MAX_INPUT_LENGTH], *ch_ptr, buf1[MAX_STRING_LENGTH];
 	FILE        *fl;
 
@@ -939,7 +939,11 @@ void string_add(struct descriptor_data *d, char *str)
 			}
 			else
 				SEND_TO_Q("Mail aborted.\r\n", d);
-			d->name = 0;
+			if (d->name)
+			{
+				FREE(d->name);
+			}
+			d->name = NULL;
 			FREE(*d->str);
 			*d->str = NULL;
 			d->str  = NULL;

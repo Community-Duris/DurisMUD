@@ -183,9 +183,9 @@ p2 0 1 0 -1
 0.0.0.0 0
 8 8 1
 #47015
-huge skeletal dragon~
-&+La &Nh&+Lu&Ng&+Le &+Wskeletal &+Ld&Nr&+La&Ng&+Lo&Nn&N~
-&+LA h&Nug&+Le &+Wskeletal &+Ldr&Nag&+Lon &+rstands here, &+Rwings spread.
+corrosyvile ancient black dragon~
+&+LCorrosyvile, the ancient black dragon&N~
+&+LAn a&+mn&+Lc&+mi&+Le&+mn&+Lt black dragon rests here.
 ~
    &+LThis massive skeleton is that of a dragon.  It stands here, living
 &+Lby unnatural magic by the will of a dark overlord.  This dragon has
@@ -198,89 +198,96 @@ d 0 1 0 7
 0.0.0.0 0
 8 8 1
 #47016
-mighty gryphon~
-&+ya mighty gr&+Yyp&+Who&+yn&N~
-&+yA mighty gr&+Yyp&+Who&+yn stands here, wings spread.
+huge wyvern~
+&Na huge &+ywyvern&N~
+&nA huge &+ywyvern &Nis perched here, wings spread.
 ~
-   &+yThis mighty gryphon is massive in size and is equipped with a large,
-&+yfurred leather saddle with several large satchels tied around the
-&+ybody of this tamed beast.  It has the beaked head of an eagle, the body
-&+yof a lion, and two huge feathered wings.
+&+y   This huge brown wyvern has a large, hardened leather saddle
+&+ycovered in small pouches and straps harnessed around the girth
+&+yof it's massive body. It's body has a draconic form, with thick,
+&+ybrown feathers growing from it's massive wings like a giant eagle.
+&+yThe wyvern's face comes to a beak: glossy-black and razor-sharp,
+&+ymuch like its talons.
 ~
-2250 0 0 0 24 0 0 0 500 S
-b 0 1 0 6
+2506 0 0 0 24 0 0 0 -500 S
+dk 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #47017
-giant green dragon~
-&+ga giant &+Ggreen &+Ldragon&N~
-&+gA giant &+Ggreen &+Ldragon flies here&+G, its massive wings spread open.
+mailed wyvern~
+&+La &+Wmai&+Lled &+ywyvern&N~
+&NA &+ywyvern &Nadorned with &+Wmai&+Lled &+Larmor &Nis perched here, wings spread.
 ~
-   &+gThis giant green dragon stands here tethered to a massive post.
-&+gAlthough not quite as big as other green dragons, this one is still
-&+gquite massive.  A huge black leather saddle has been strapped to the
-&+gbackside of this beast.
+&+y   This huge wyvern wears some custom chainmail-and-leather armor
+&+ythat seems to be lightweight enough not to hinder it's flight
+&+yabilities. It's flanks are protected by hardened leather pads
+&+ythat each bare the gale-crest of &+WSto&+Lrm Port&+y. Custom-crafted
+&+yguards around its neck and head outline the the spikes and
+&+yfeathers that peak around the leather and through the chainmail.
 ~
-2122 0 0 0 24 0 0 0 -500 S
-d 0 1 0 6
+2378 0 0 0 24 0 0 0 -500 S
+dk 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #47018
-huge hippogryph~
-&+La huge hippo&+Ygr&+Wyph&N~
-&+LA huge hippo&+Ygr&+Wyph &+Lstands here, cleaning its wing with its antlers.
+armored wyvern~
+&+Lan &+rar&+Lm&+ror&+Le&+rd &+ywyvern&N~
+&NA &+ywyvern &Nadnored with &+rBloodstone&+L-branded armor&N is perched here, wings spread.
 ~
-   &+LThis massive beast has the body of a giant black lion, sprouting
-&+Lwith feathers.  Rather then the head of the king of the jungle, however
-&+Lthis beast has the head of a large goat, equipped with two multi-pronged
-&+Lantlers.  The hippogryph has long brilliant blue and yellow feathered
-&+Lwings.
+&+L   This massive &+ywyvern&+L has the appearance of a feathered dragon,
+&+Lcovered in a custom-crafted suit of &Nch&+Wai&Nn&+Wm&Nai&+Wl&+L armor with two
+&+Ldistinct banners on its sides displaying the sigils of &+RBloodstone
+&+RKeep.&+L The &+ywyvern&+L is very large and quick for it's size, eagerly
+&+Lawaiting it's next flight.
 ~
-2122 0 0 0 24 0 0 0 0 S
-b 0 1 0 6
-56 0 0 1d1+1 1d1+1
+2378 0 0 0 24 0 0 0 -500 S
+dk 0 1 0 6
+60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #47019
-flying carpet~
-&+Wa &+Mflying &+Wcarpet&N~
-&+WA magical &+Mflying &+Wcarpet &+Wfloats here, wavering in mid-air.
+great white hippogriff~
+&+Wa great white &+yhippo&+Wgr&+yi&+Wf&+yf&N~
+&+WA great white &+yhippo&+Wgr&+yi&+Wf&+yf &+Wstands here, wings spread.
 ~
-   &+WThis gloriously-stitched carpet floats majestically several feet over
-&+Wthe ground.  Acting with magical enchantment, this carpet moves and reacts
-&+Wwith a mind of its own.
+&+W   This massive beast has the angular head of a giant eagle,
+&+Wthe neck and shoulders of lion, and the body and legs of a
+&+Whorse. It stands majestically, flapping its huge, white
+&+Wwings occasionally in anticipation of its next flight.
 ~
-2122 0 0 0 24 0 0 0 0 S
+2122 0 0 0 24 0 0 0 500 S
 b 0 1 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #47020
-emerald dragon~
-&+gan &+Ge&+gm&+Ge&+gr&+Ga&+gl&+Gd &+Ldragon&N~
-&+GA giant emerald dragon covered with glorious scales flies here.
+great white griffin~
+&+Wa great white &+yg&+Yr&+Wi&+yf&+Wfi&+yn~
+&+WA great white &+ygr&+Wi&+yf&+Wfi&+yn &+Wstands here, wings spread.
 ~
-   &+gThis giant green dragon stands here tethered to a massive post.
-&+gAlthough not quite as big as other green dragons, this one is still
-&+gquite massive.  A huge black leather saddle has been strapped to the
-&+gbackside of this beast.
+&+W   This massive beast has the head and wings of a giant eagle
+&+Watop the body and legs of a great lion. On land it moves with
+&+Wa prowl to its stride, slinky and smooth like a cat. In flight,
+&+Wit moves more like an eagle, flying high and distant in reliance
+&+Won it's keen eyesight.
 ~
-2122 0 0 0 24 0 0 0 -500 S
-d 0 1 0 6
+2122 0 0 0 24 0 0 0 500 S
+b 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #47021
-powerful gryphon~
-&+ya powerful &+Wgr&+Yyp&+yhon&N~
-&+yA powerful &+Wgr&+Yyph&+yon flies here, majestically moving with the wind.
+huge griffin~
+&Na huge &+Wgr&+Yif&+yfin&N~
+&NA huge &+Wgr&+Yif&+yfin &Nstands here, wings spread.
 ~
-   &+yThis mighty gryphon is massive in size and is equipped with a large,
-&+yfurred leather saddle with several large satchels tied around the
-&+ybody of this tamed beast.  It has the beaked head of an eagle, the body
-&+yof a lion, and two huge feathered wings.
+&+W   This massive beast has the head and wings of a giant eagle
+&+Watop the body and legs of a great lion. On land it moves with
+&+Wa prowl to its stride, slinky and smooth like a cat. In flight,
+&+Wit moves more like an eagle, flying high and distant in reliance
+&+Won it's keen eyesight.
 ~
 2250 0 0 0 24 0 0 0 500 S
 b 0 1 0 6
@@ -288,15 +295,15 @@ b 0 1 0 6
 0.0.0.0 0
 8 8 1
 #47022
-huge hippogryph~
-&+La hippo&+Ygr&+Wyph&N~
-&+LA hippo&+Ygr&+Wyph &+Lflies here, beating its wings majestically.
+flying carpet~
+&+Wa &+Mflying &+Wcarpet&N~
+&+WA magical &+Mflying &+Wc&+Ma&+Wr&+Mp&+We&+Mt &+Wdances in mid-air.
 ~
-   &+LThis massive beast has the body of a giant black lion, sprouting
-&+Lwith feathers.  Rather then the head of the king of the jungle, however
-&+Lthis beast has the head of a large goat, equipped with two multi-pronged
-&+Lantlers.  The hippogryph has long brilliant blue and yellow feathered
-&+Lwings.
+&+W   This carpet is woven from shimmering rune-threads of intricate
+&+Mpatterns that pulse with a faint glow. It hovers a few feet above
+&+Wthe ground with subtle undulation, dancing eagerly in anticipation
+&+Mof its next rider. The carpet moves and reacts, stiffening and
+&+Wsoftening with its own will as it slices through the air.
 ~
 2122 0 0 0 24 0 0 0 0 S
 b 0 1 0 6
@@ -304,14 +311,16 @@ b 0 1 0 6
 0.0.0.0 0
 8 8 1
 #47023
-onyx dragon~
-&+Lan onyx dragon&N~
-&+LAn enormous onyx dragon flies here, wings spread wide.
+azerathrax ancient blue dragon~
+&+bAzerathrax, the &+Lancient &+Bblue dragon&N~
+&+bAn &+Lancient &+Bblue dragon&+b rests here.
 ~
-   &+LThis massive onyx dragon stares forth with two slanted eyes of
-&+Lfire.  Huge razor-sharp black teeth peer forth from the scaled lips
-&+Lof this fearsome beast.  As imposing as it his, however, this onyx
-&+Ldragon is used for hire to fly travellers from one place to another.
+   &+BThis massive blue dragon, Azerathrax, has ancient, slanted
+&+Beyes of blue fire. It's body is covered in smooth, wide scales
+&+Bthat grow into razor-sharp spines that bristle from it's neck,
+&+Bback, and elbows. Azerathrax is old and wrinkled, fully grown
+&+Binto a gargantuan beast with wings that span a few dozen feet
+&+Ba twin-barbed tail that crackles with occasional sparks.
 ~
 2122 0 0 0 24 0 0 0 -1000 S
 d 0 1 0 -1
@@ -319,48 +328,48 @@ d 0 1 0 -1
 0.0.0.0 0
 8 8 1
 #47024
-great blue drake~
-&+Ba great blue drake&N~
-&+BA great blue drake flies here, wings beating mightily.
+large wyvern~
+&na large &+ywyvern&N~
+&NA large &+ywyvern&N is perched here, wings spread.
 ~
-   &+BThis large, saddled dragon rests here ready to take flight.  It
-&+Banxiously paces back and forth, eager to spread its massive wings.
-&+BAlthough much smaller then most blue dragons, this breed is also
-&+Bmuch more intelligent, as it has taken into gathering money from
-&+Btravellers for simply flying across the realm.
+&+y   This huge brown wyvern has a large, hardened leather saddle
+&+ycovered in small pouches and straps harnessed around the girth
+&+yof it's massive body. It's body has a draconic form, with thick,
+&+ybrown feathers growing from it's massive wings like a giant eagle.
+&+yThe wyvern's face comes to a beak: glossy-black and razor-sharp,
+&+ymuch like its talons.
 ~
-2122 0 0 0 24 0 0 0 -100 S
-d 0 513 0 6
+2378 0 0 0 134217752 0 0 0 -500 S
+dk 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #47025
-saddled fire drake~
-&+ra &+Lsaddled &+rfire drake&N~
-&+rA fire drake wearing a &+Lthick saddle &+rflies here.
+harnessed roc chainmail harness~
+&+ya &+cha&+yr&+cne&+ys&+cse&+yd roc&N~
+&+yA roc adorned in &+cch&+Cai&+cnm&+Cai&+cl &+yis perched here, wings spread.
 ~
-   &+rThis large red fire drake snorts out small puffs of smoke, causing the
-&+rair over its nose and face to waver with heat.  It wears a huge black
-&+rleather saddle lined with thick fur.  Two huge straps wrap around a metal
-&+rmouthpiece and into a harness around the drake's body.
+&+y   This great, winged beast has been fitted with a silver
+&+ychainmail harness, connected with leather straps, a saddle,
+&+yand foot-loops. It's huge wings are a couple dozen feet at
+&+yfull span, while it's beak rivals that of a giant eagle.
 ~
-2282 0 0 0 24 0 0 0 -100 S
-d 0 1 0 6
+2282 0 0 0 134217752 0 0 0 -100 S
+b 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #47026
-giant wyvern~
-&+ya GIANT wyvern&N~
-&+yA GIANT wyvern flies here, its massive wings beating mightily.
+harnessed griffin adorned chainmail~
+&+ya &+cha&+yr&+cne&+ys&+cse&+yd &+Wgr&+Yif&+yfin&N~
+&+yA &+Wgr&+Yif&+yfin adorned in &+cch&+Cai&+cnm&+Cail&N&+y stands here, wings spread.
 ~
-   &+yThis wyvern, baring the head of a dragon and the furred body of a
-&+ylion with demonic wings, is of utterly monstrous giant size.  It's beak
-&+yis enormous and its eyes stare forth with a fierce glare.  This giant
-&+ywyvern has been fitted with a huge saddle, making it mountable by travellers
-&+ydue to its above-average size.
+&+W   This huge griffin has been fit with a custom, form-fitting suit
+&+Yof chainmail. A tight silver helmet fits around its eagle head,
+&+ywhile a chainmail shirt is wrapped around its lion body with thick
+&+yleather bands that bind under the belly.
 ~
-74 0 0 0 24 0 0 0 -500 S
+74 0 0 0 134217752 0 0 0 500 S
 b 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -385,49 +394,233 @@ d 0 17825812 0 7
 0.0.0.0 0
 8 8 1
 #47028
-mighty griffon~
-&+ya mighty &+Wgr&+Yi&N&+yffon&N~
-&+yA mighty &+Wg&+Yri&N&+yffon flies here, &n&+yits mighty winds spread wide.
+harnessed frost chainmail drake~
+&+Ca &+cha&+Cr&+cne&+Cs&+cse&+Cd &+Wfrost &+Cdrake&N~
+&+CA &+Wfrost &+Cdrake adorned in &+cch&+Cai&+cnm&+Cai&+Cl stands here, wings spread.
 ~
-   &+yThis mighty griffon has two huge powerful wings covered in brilliant brown
-&+Wwhite &+Yand yellow &N&+yfeathers.  This griffon's body is that of a strong,
-&+Wkingly &n&+ylion with talons as sharp as an &+Weagle&N and the head to match.
+&+C   This mighty &+Wfrost&+C drake, likely raised from birth as a flying
+&+Cmount, is dressed in ch&+cai&+Cnm&+cai&+Cl armor, made to fit around the
+&+Cwinged fore-legs and hind-legs of the great beast, to protect
+&+Cguard its flanks. The drake has an angular, silvery face with
+&+Cglaring &+Bblue&+C eyes. It occasionally exhales snorts of &+Wfrozen air&+C.
 ~
-2058 0 0 0 134217752 0 0 0 0 S
-b 0 1 0 -1
-56 0 0 1d1+1 1d1+1
+2570 0 0 0 134217752 0 0 0 -500 S
+d 0 1 0 -1
+60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #47029
-lithe black drake~
-&+La lithe black drake&N~
-&+LA lithe black drake flies here, wings spread wide.
+harnessed chainmail wyvern~
+&+ya &+cha&+yr&+cne&+ys&+cse&+yd wyvern&N~
+&+yA wyvern adorned in &+cch&+Cai&+cnm&+Cai&+cl&+y is perched here, wings spread.
 ~
-   &+LThis black drake has taken into the interest of platinum and
-&+Ltraverses the skies on the payment of his patrons.  Although
-&+Laging, this drake is quite lithe, dipping and moving with
-&+Lstrength and exquisite accuracy.
+   &+yThis massive, brown-feathered draconic wyvern stands here,
+&+yadorned in a custom-crafted suit of chainmail around its torso.
+&+yIt has massive, feathered wings and an angular head from which
+&+yeyes dart back and forth, in search of threats, prey, and riders.
 ~
-3082 0 0 0 24 0 0 0 -100 S
-d 0 513 0 6
+2314 0 0 0 134217752 0 0 0 -500 S
+dk 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #47030
-saddled white drake~
-&+Wa saddled white drake&N~
-&+WA saddled white drake flies here, its massive wings spread.
+cryoss ancient white dragon~
+&+WCryoss, the &+Lancient &+Wwhite dragon&N~
+&+WAn &+Lancient &+Wwhite dragon &+Wrests here.
 ~
-   &+WThis young white dragon has for some reason taken into the
-&+Wconstant profession of traversing the airways above the great
-&+Wrealms.  This young dragon is quite intelligent, speaking to
-&+Wmost of its passangers of both common and ancient lore.
+   &+WCryoss is a massive reptillian beast with huge, frosty white
+&+Wwings that wrap around the mammoth trunk of its torso. Cryoss
+&+Whas huge swirls of frosty spikes that curl from around his
+&+Wbright white eyes and continue up his nose, into the spikes
+&+Walong his spine. He breathes gusts of chilling air and speaks
+&+Win deep, crunchy rumbles.
 ~
-2250 0 0 0 134217728 0 0 0 0 S
-d 0 513 0 -1
+2762 0 0 0 134217728 0 0 0 0 S
+d 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#47031
+mighty roc~
+&+ya mighty roc&N~
+&NA mighty &+yroc &Nis perched here, wings spread.
+~
+   &+yThis massive bird resembles a giant vulture that acts
+&+yand moves with the agency of a noble steed. Enormous wings
+&+yof vibrant brown and white feathers extend from it's
+&+ygnarled, muscular torso. A huge beak of mottled yellow
+&+yconceals a snake-like forked tongue.
+~
+2122 0 0 0 402653208 0 0 0 0 S
+b 0 1 0 6
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#47032
+mighty wyvern~
+&Na mighty &+ywyvern&N~
+&nA mighty &+ywyvern &Nis perched here, wings spread.
+~
+&+y   This mighty brown wyvern has a large, hardened leather saddle
+&+ycovered in small pouches and straps harnessed around the girth
+&+yof it's massive body. It's body has a draconic form, with thick,
+&+ybrown feathers growing from it's massive wings like a giant eagle.
+&+yThe wyvern's face comes to a beak: glossy-black and razor-sharp,
+&+ymuch like its talons.
+~
+2506 0 0 0 24 0 0 0 -500 S
+dk 0 1 0 6
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#47033
+mighty griffin~
+&Na mighty &+Wgr&+Yif&+yfin&N~
+&NA mighty &+Wgr&+Yif&+yfin &Nstands here, wings spread.
+~
+&+W   This mighty beast has the head and wings of a giant eagle
+&+Watop the body and legs of a great lion. On land it moves with
+&+Wa prowl to its stride, slinky and smooth like a cat. In flight,
+&+Wit moves more like an eagle, flying high and distant in reliance
+&+Won it's keen eyesight.
+~
+2250 0 0 0 24 0 0 0 500 S
+b 0 1 0 6
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#47034
+large hippogriff~
+&na large &+yhippo&+Wg&+Yri&+yff&N~
+&nA large &+yhippo&+Wg&+Yri&+yff &nstands here, wings spread.
+~
+&+W   This massive beast has the angular head of a giant eagle,
+&+Wthe neck and shoulders of lion, and the body and legs of a
+&+Whorse. It stands majestically, flapping its huge, white
+&+Wwings occasionally in anticipation of its next flight.
+~
+2122 0 0 0 24 0 0 0 500 S
+b 0 1 0 5
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#47035
+large griffin~
+&Na large &+Wgr&+Yif&+yfin&N~
+&NA large &+Wgr&+Yif&+yfin &Nstands here, wings spread.
+~
+&+W   This large beast has the head and wings of a giant eagle
+&+Watop the body and legs of a great lion. On land it moves with
+&+Wa prowl to its stride, slinky and smooth like a cat. In flight,
+&+Wit moves more like an eagle, flying high and distant in reliance
+&+Won it's keen eyesight.
+~
+2250 0 0 0 24 0 0 0 500 S
+b 0 1 0 6
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#47036
+aurumax ancient copper dragon~
+&+yAurumax, the &+Lancient &+yc&No&+yp&Np&+ye&Nr &+yd&Nr&+ya&Ng&+yo&Nn&N~
+&+yAn &+Lancient &+yc&no&+yp&Np&+ye&Nr&+y dragon &Nrests here.
+~
+   &+yAurumax is a mountainous reptillian dragon that resembles
+&+ya copper-rich mountainside when he curls into a slumber.
+&+yHis wings remain tucked under his fore-legs almost constantly,
+&+ychoosing to fly only when he tires of his mountain domain every
+&+yfew thousand years.
+~
+2122 0 0 0 134217752 0 0 0 0 S
+d 0 1 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#47037
+verdax ancient jade dragon~
+&+GV&+ge&+Gr&+gd&+Ga&+gx&+g, the &+Lancient &+Gjade &+gdragon&N~
+&+gAn &+Lancient &+Gjade &+gdragon rests here.
+~
+&+G   When not seen flying through the sky, V&+ge&+Gr&+gd&+Ga&+gx&+G walks slowly
+&+glike a living mountain of semi-translucent jade. Thick, mossy-green
+&+Gscales overlap, forming a shimmering hide that glistens from
+&+glight-to-dark green in the sunlight. Massive, green-veined wings
+&+Gand emerald eyes seem to move synchroniously, holding an ancient
+&+gwisdom that has watched the world for centuries.
+~
+526410 0 0 0 134217752 0 0 0 0 S
+d 0 1 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#47038
+mighty great eagle~
+&Na mighty &+ygreat &+Wea&+Yg&+yle&N~
+&NA mighty &+ygreat &+Wea&+Yg&+yle &Nis perched here, wings spread.
+~
+&+W   This magnificent bird has a huge golden beak and brilliant
+&+Wwhite feathers that overlap from it's head across the brown
+&+Yfeathers of it's body. It has huge talons that rival those
+&+yof a roc, and massive wings that are just as large. Piercing
+&+yblue eyes stare out, scanning the horizons and always aware.
+~
+2122 0 0 0 134217752 0 0 0 100 S
+b 0 1 0 6
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#47039
+huge skeletal dragon~
+&+La huge &+Ws&Nk&+We&Nl&+We&Nt&+Wa&Nl &+Ldragon&N~
+&+LA huge &+Ws&Nk&+We&Nl&+We&Nt&+Wa&Nl &+Ldragon stands here, wings spread.
+~
+&+L   This monstrous dracolich is a harrowing skeletal of aged
+&+Wbone and the necrotic remains of undead flesh. A chilling,
+&Nblack draft wafts behind every movement of the jagged beast.
+&+WA small, mysterious blue flame burns within its cavernous
+&Nribcage, casting a rhythmic glow across the vertebrae of
+&+Lits exposed spine and tail.
+~
+1050698 0 0 0 134217752 0 0 0 -1000 S
+d 0 1 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#47040
+large wyvern~
+&Na large &+ywyvern&N~
+&nA large &+ywyvern &Nis perched here, wings spread.
+~
+&+y   This large brown wyvern has a large, hardened leather saddle
+&+ycovered in small pouches and straps harnessed around the girth
+&+yof it's massive body. It's body has a draconic form, with thick,
+&+ybrown feathers growing from it's massive wings like a giant eagle.
+&+yThe wyvern's face comes to a beak: glossy-black and razor-sharp,
+&+ymuch like its talons.
+~
+2506 0 0 0 24 0 0 0 -500 S
+dk 0 1 0 6
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#47041
+glimmyris ancient faerie dragon~
+&+mGlimmyris, the &+Lancient &+Mfaerie dragon&N~
+&+mAn &+Lancient &+Mfaerie dragon&+m rests here.
+~
+&+m   Glimmyris is a breathtaking spectacle of &+cs&+Ch&+ci&+Cm&+cm&+Ce&+cr&+Ci&+cn&+Cg&+m scales that
+&+meach seem to cast a different &+cc&+Co&+Gl&+Yo&+Rr&+m of &+Wlight&+m, creating a prismatic
+&+mspectrum in the &+Ysun&+Wshine&+m. Though she possesses the immense scale
+&+mof an ancient wyrm, her fluids remain fluid and unpredictable.
+&+mHer &+Bbut&+cter&+Bfly &+mwings leave a trail of sparkling, &+Yp&+Rr&+Mi&+ms&+cm&+Ba&+Ct&+ci&+Gc &+mdust,
+&+moutlining their form despite their translucense.
+~
+2122 0 0 0 134217752 0 0 0 1000 S
+d 0 1 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
 #47050
 noble winterhaven~
 &+ca noble from &+WWinterhaven&N~
@@ -671,7 +864,7 @@ pb 0 1 0 -1
 0.0.0.0 0
 8 8 1
 #47065
-haafgurd barbarian tribe whale jarl~
+haafgurd barbarian tribe whale captain jarl~
 &+WHaafgurd&+C, &+cjarl &+Cof the &+BTribe of the Whale&N~
 &+WHaafgurd, &+cJarl &+Cof the &+BTribe of the Whale&+C stands here scanning the horizon.
 ~
@@ -1673,3 +1866,22 @@ ea 0 1 1 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
+#47124
+kjelgar storm giant captain~
+&+WK&Nj&+We&Nl&+Wg&Na&+Wr&+L, &+CCa&+cpta&+Cin &+Lof the &+RStr&+Lom&+Rvok~
+&+WK&Nj&+We&Nl&+Wg&Na&+Wr&+L, the imposing &+Ws&Nt&+Wo&Nr&+Wm g&Ni&+Wa&Nn&+Wt &+Cca&+cpta&+Cin &+Lsits here, controlling the &+RStr&+Lom&+Rvok&+L.
+~
+&+W   Captain Kjelgar is massive, even for a storm giant. He is
+&+Rclothed only in a patchwork leather codpiece and a tunic made
+&+Wfrom the mast of a fallen pirate ship. His thick, white hair
+&+Rhangs loose behind his head, tangled into several large knots
+&+Wthat have hardened with sea-breeze. His massive, muscular
+&+Rshoulders jut out from either side of his ramshackle tunic,
+&+Wthickened from years of tensing and releasing the command
+&+Rchains of the Stromvok.
+~
+16779338 0 0 0 939524120 14528 0 0 500 S
+sg 0 1 3 6
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

@@ -972,6 +972,14 @@ void do_encrust(P_char ch, char *argument, int cmd)
 		return;
 	}
 
+	if (item->type != ITEM_WEAPON && item->type != ITEM_ARMOR &&
+	    item->type != ITEM_SHIELD && item->type != ITEM_WORN &&
+	    item->type != ITEM_LIGHT && item->type != ITEM_INSTRUMENT)
+	{
+		act("You can only encrust weapons, armor, shields, and worn equipment.", FALSE, ch, 0, 0, TO_CHAR);
+		return;
+	}
+
 	if (isname("encrust", item->name))
 	{
 		act("You may not further encrust this item.", FALSE, ch, 0, 0, TO_CHAR);
@@ -993,7 +1001,8 @@ void do_encrust(P_char ch, char *argument, int cmd)
 		act("What item do you wish to encrust?", FALSE, ch, 0, 0, TO_CHAR);
 		return;
 	}
-	if (jewel->value[6] == 0 && obj_index[jewel->R_num].virtual_number != RANDOM_OBJ_VNUM)
+	if ((jewel->type != ITEM_TREASURE && jewel->type != ITEM_OTHER) ||
+	    (jewel->value[6] == 0 && obj_index[jewel->R_num].virtual_number != RANDOM_OBJ_VNUM))
 	{
 		act("Is THAT a jewel?!?!?", FALSE, ch, 0, 0, TO_CHAR);
 		return;
@@ -1010,13 +1019,6 @@ void do_encrust(P_char ch, char *argument, int cmd)
 	wizlog(56, buf2);
 
 	craftsmanship = item->craftsmanship;
-	//  if(!item->value[5] || !item->value[6] || !item->value[7])
-	{
-
-		item->value[5] = jewel->value[6];
-		item->value[6] = GET_LEVEL(ch);
-		item->value[7] = 30;
-	}
 
 	if (number(1, 110) > skill)
 	{
@@ -1044,10 +1046,11 @@ void do_encrust(P_char ch, char *argument, int cmd)
 	new_item->material             = item->material;
 	new_item->type                 = item->type;
 	new_item->weight               = item->weight + 1;
-	new_item->affected[0].location = item->affected[0].location;
-	new_item->affected[0].modifier = item->affected[0].modifier;
-	new_item->affected[1].location = item->affected[1].location;
-	new_item->affected[1].modifier = item->affected[1].modifier;
+	for (int i = 0; i < MAX_OBJ_AFFECT; i++)
+	{
+		new_item->affected[i].location = item->affected[i].location;
+		new_item->affected[i].modifier = item->affected[i].modifier;
+	}
 
 	SET_BIT(new_item->wear_flags, ITEM_TAKE);
 	SET_BIT(new_item->wear_flags, item->wear_flags);
@@ -1056,6 +1059,7 @@ void do_encrust(P_char ch, char *argument, int cmd)
 	SET_BIT(new_item->bitvector2, item->bitvector2);
 	SET_BIT(new_item->bitvector3, item->bitvector3);
 	SET_BIT(new_item->bitvector4, item->bitvector4);
+	SET_BIT(new_item->bitvector5, item->bitvector5);
 	new_item->anti_flags |= item->anti_flags;
 	new_item->anti2_flags |= item->anti2_flags;
 	SET_BIT(new_item->extra_flags, item->extra_flags);
@@ -1064,17 +1068,31 @@ void do_encrust(P_char ch, char *argument, int cmd)
 	new_item->craftsmanship = MIN(craftsmanship + 1, OBJCRAFT_HIGHEST);
 
 	int i = 0;
-	for (i; i < 7; i++)
+	for (i = 0; i < NUMB_OBJ_VALS; i++)
 	{
 		new_item->value[i] = item->value[i];
 	}
 
-	SET_BIT(new_item->extra_flags, ITEM_ENCRUSTED | ITEM_NOREPAIR);
-	SET_BIT(new_item->type, item->type);
+	new_item->value[5] = jewel->value[6];
+	new_item->value[6] = GET_LEVEL(ch);
+	new_item->value[7] = 30;
 
-	snprintf(buf1, MAX_STRING_LENGTH, "%s with %s", str_dup(item->short_description), str_dup(jewel->short_description));
+	new_item->cost = item->cost;
+	new_item->condition = item->condition;
+	new_item->trap_eff = item->trap_eff;
+	new_item->trap_dam = item->trap_dam;
+	new_item->trap_charge = item->trap_charge;
+	new_item->trap_level = item->trap_level;
+	for (i = 0; i < 6; i++)
+	{
+		new_item->timer[i] = item->timer[i];
+	}
+
+	SET_BIT(new_item->extra_flags, ITEM_ENCRUSTED | ITEM_NOREPAIR);
+
+	snprintf(buf1, MAX_STRING_LENGTH, "%s with %s", item->short_description, jewel->short_description);
 	set_short_description(new_item, buf1);
-	snprintf(buf1, MAX_STRING_LENGTH, "%s", str_dup(item->description));
+	snprintf(buf1, MAX_STRING_LENGTH, "%s", item->description);
 	set_long_description(new_item, buf1);
 	snprintf(buf1, MAX_STRING_LENGTH, "%s %s", item->name, "encrust");
 	set_keywords(new_item, buf1);
@@ -1123,7 +1141,7 @@ int encrusted_eq_proc(P_obj obj, P_char ch, int cmd, char *arg)
 		if (j != SPELL_ENERGY_DRAIN && j != 0)
 		{
 			// validation
-			if (j >= MAX_AFFECT_TYPES || *skills[j].spell_pointer == 0)
+			if (j < 0 || j >= MAX_AFFECT_TYPES || *skills[j].spell_pointer == 0)
 			{
 				return FALSE;
 			}

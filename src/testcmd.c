@@ -37,7 +37,7 @@ extern struct zone_random_data
 	int zone;
 	int races[10];
 	int proc_spells[3][2];
-} zones_random_data[100];
+} zones_random_data[];
 extern const racewar_struct racewar_color[MAX_RACEWAR + 2];
 extern P_char               character_list;
 

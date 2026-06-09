@@ -2021,6 +2021,7 @@ void assign_objects(void)
 	obj_index[real_object0(92065)].func.obj = iron_flindbar;
 	obj_index[real_object0(92020)].func.obj = generic_parry_proc;
 	obj_index[real_object0(82500)].func.obj = generic_parry_proc;
+	obj_index[real_object0(83605)].func.obj = generic_parry_proc;
 	obj_index[real_object0(18000)].func.obj = generic_riposte_proc;
 	obj_index[real_object0(92121)].func.obj = flame_of_north;
 

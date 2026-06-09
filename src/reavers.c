@@ -918,7 +918,7 @@ void spell_thryms_icerazor(int level, P_char ch, char *arg, int type, P_char vic
 	af.type     = SPELL_THRYMS_ICERAZOR;
 	af.duration = level / 2;
 	af.location = APPLY_HITROLL;
-	af.modifier = number(1, 4);
+	af.modifier = 5 + MAX(0, level - 51);
 
 	affect_to_char(victim, &af);
 
@@ -946,13 +946,13 @@ bool thryms_icerazor(P_char ch, P_char victim, P_obj wpn)
 
 	messages.obj = wpn;
 
-	dam = number(1, (GET_LEVEL(ch) / 4));
+	dam = number(8, 6);
 
 	if (IS_AFFECTED2(ch, AFF3_COLDSHIELD))
-		dam += number(1, 8);
+		dam += number(4, 3);
 
 	if (IS_AFFECTED2(ch, AFF2_FIRESHIELD))
-		dam -= number(1, 8);
+		dam -= number(4, 4);
 
 	dam = MAX(1, dam);
 

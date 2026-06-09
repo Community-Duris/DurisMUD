@@ -3167,10 +3167,11 @@ smidrin forgemaster master dwarf dwarven blacksmith~
 &n&+ySmi&+Yd&+Lrin the &N&+Yf&+Ro&N&+rrge&+Lmaster&N~
 &N&+ySmi&+Yd&+Lrin the &+Ydwarven &N&+Yf&+Ro&N&+rrge&+Lmaster &+Lstands here, &N&+chammering&+L and surveying his work.
 ~
-   &+YSmidrin, a mountain dwarf by blood, has taken over the occupation of grand
-&+Yblacksmith, here at the heart of Alatorin.  Smidrin wears thick, blackened
-&+Yblacksmiths coveralls and wields a firm heavy mallet.  Rumor through the Alatorin
-&+Ypeople is that Smidrin was once a warrior in Taark's defensive seiges during
+   &+YSmidrin, a mountain dwarf by blood, has taken over the
+&+Yoccupation of grand &+Yblacksmith, here at the heart of Alatorin.
+&+YSmidrin wears thick, blackened &+Yblacksmiths coveralls and wields
+&+Ya firm heavy mallet.  Rumor through the Alatorin &+Ypeople is that
+&+YSmidrin was once a warrior in Taark's defensive sieges during
 &+Ythe earliest years of Alatorin's origination.
 ~
 2122 0 0 0 939524248 192 0 0 60 S
@@ -6790,7 +6791,7 @@ large bladeback pyro pyrolisk~
    &+LThis bladeback pyrolisk is much larger than the others, its back
 &+Las tall as a &+ygiant&+L while its tail as long as a &+gdragon.
 ~
-1090537576 1 0 0 672137368 5257408 553910336 0 0 S
+1073760296 1 0 0 672137368 5257408 553910336 0 0 S
 d 0 1 1 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -6879,7 +6880,7 @@ blazing avatar gorm god moradin~
 &+Rthe &+Rb&+rl&+Ra&+rz&+Ri&+rn&+Rg &+Ravatar of &+YM&+Ro&+rrad&+Ri&+Yn~
 &+RThe b&+rl&+Ra&+rz&+Ri&+rn&+Rg avatar of &+YM&+Ro&+rrad&+Ri&+Yn &+Rhovers here, gazing authoritatively over the &+mr&+ri&+mf&+rt.&N
 ~
-&+R   The blazing avatar of &+YM&+Ro&+rrad&+Ri&+Yn manifests as a titanic, awe-
+&+R   The blazing avatar of &+YM&+Ro&+rrad&+Ri&+Yn &+Rmanifests as a titanic, awe-
 &+rinspiring dwarven figure forged from the purest &+Wwhite-&+Rhot &+rs&+Ro&+rl&+Ra&+rr
 &+Rfire and &+rmolten &+Ladamant&+R. His beard is a cascading &+Yf&+Ro&+rrge-&+Yf&+Ri&+rre &+Rof
 &+rs&+Yw&+ri&+Yr&+rl&+Yi&+rng &+Yg&+ro&+Yl&+rd and crimson &+Ys&+Rp&+Ya&+Rr&+Yk&+Rs&+r, flowing down over a chestplate
@@ -6929,3 +6930,20 @@ b 0 1 1 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
+#83524
+debmawr svirfneblin noble~
+&+RDebmawr&n~
+&+RDebmawr&+y, a curious svirfneblin noble&+R, pays the port a rare visit.
+~
+   &+RDebmawr &+yis dressed in a thick rothe-pelt robe, adorned
+&+Rwith a glittering array of rubies that create a calydoscopic
+&+Rrainbow effect when struck by light. Debmawr waddles with a
+&+Rquickness that is hurried by the delight he has in inspecting
+&+Rthis strange and wondrous place, far above his home deep
+&+Rwithin the Underdark.
+~
+2184 0 0 0 134217752 0 0 0 0 S
+pg 0 2048 4 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

@@ -887,7 +887,7 @@ void check_nevents()
 {
 	P_char            ch;
 	bool              shown = FALSE;
-	register P_nevent e1, e2;
+	P_nevent e1, e2;
 
 	// For each event in the game,
 	for (int i = 0; i < PULSES_IN_TICK; i++)

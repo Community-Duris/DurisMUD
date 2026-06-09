@@ -28,7 +28,6 @@
 
 extern P_desc                   descriptor_list;
 extern P_room                   world;
-extern const char              *language_names[];
 extern const flagDef            action_bits[];
 extern const flagDef            action2_bits[];
 extern const flagDef            affected1_bits[];
@@ -561,7 +560,6 @@ static void setbit_char(P_char ch, char *name, char *flag, char *val, int on_off
 		{"prestige", PCOFFSET(prestige), NULL, ac_shintCopy},
 		{"time_left_guild", PCOFFSET(time_left_guild), NULL, ac_longCopy},
 		{"nb_left_guild", PCOFFSET(nb_left_guild), NULL, ac_sbyteCopy},
-		{"language", 0, language_names, ac_tongueCopy, sizeof(char *)},
 		{"echo", PCOFFSET(echo_toggle), NULL, ac_ubyteCopy},
 		{"prompt", PCOFFSET(prompt), NULL, ac_shortCopy},
 		{"screensize", PCOFFSET(screen_length), NULL, ac_ubyteCopy},

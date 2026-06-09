@@ -196,7 +196,7 @@ static long *end_ptr = &randtbl[DEG_3 + 1];
 
 void esrand(unsigned int x)
 {
-	register int i;
+	int i;
 
 	if (rand_type == TYPE_0)
 	{
@@ -237,7 +237,7 @@ char *initstate(unsigned int seed, char *arg_state, int n)
 	/* seed for R. N. G. */
 	/* pointer to state array */
 	/* # bytes of state info */
-	register char *ostate = (char *)(&state[-1]);
+	char *ostate = (char *)(&state[-1]);
 
 	if (rand_type == TYPE_0)
 		state[-1] = rand_type;
@@ -310,9 +310,9 @@ char *initstate(unsigned int seed, char *arg_state, int n)
 
 char *setstate(char *arg_state)
 {
-	register long *new_state = (long *)arg_state;
-	register int   type      = new_state[0] % MAX_TYPES;
-	register int   rear      = new_state[0] / MAX_TYPES;
+	long *new_state = (long *)arg_state;
+	int   type      = new_state[0] % MAX_TYPES;
+	int   rear      = new_state[0] / MAX_TYPES;
 	char          *ostate    = (char *)(&state[-1]);
 
 	if (rand_type == TYPE_0)

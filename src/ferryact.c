@@ -243,6 +243,32 @@ const struct ferry_definition ferries[] = {
 			{ 0 }
 		}
 	},
+	{
+		"The Stromvok",        // name
+		7,                     // id
+		47018,                 // shop object
+		47198,                 // boarding room vnum
+		(int[]){47198, 47125, 0}, // other rooms
+		2,                     // speed
+		120,                   // wait time
+		60,                    // depart notice time
+		5000,                  // ticket price
+		(struct ferry_definition::stop_info[]){         // stops
+			{
+				22445,
+				"&+WSto&+Lrm Port&N"
+			},
+			{
+				66688,
+				"&+YTorrhan&N"
+			},
+			{
+				30929,
+				"&+WStrathor&N"
+			},
+			{ 0 }
+		}
+	},
 	{ 0 }
 };
 

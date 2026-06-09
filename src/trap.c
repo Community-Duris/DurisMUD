@@ -522,7 +522,7 @@ void trapdamage(P_char ch, P_obj obj)
 
 				bzero(&af, sizeof(af));
 				af.type      = SPELL_SLEEP;
-				af.duration  = dam / 4;
+				af.duration  = 1 + number(0, level / 10);
 				af.bitvector = AFF_SLEEP;
 				affect_to_char(ch, &af);
 
@@ -547,7 +547,7 @@ void trapdamage(P_char ch, P_obj obj)
 
 					bzero(&af, sizeof(af));
 					af.type      = SPELL_SLEEP;
-					af.duration  = dice(numdice, numsides);
+					af.duration  = 1 + number(0, level / 20);
 					af.bitvector = AFF_SLEEP;
 					affect_to_char(wch, &af);
 

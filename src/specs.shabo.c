@@ -318,7 +318,7 @@ int aboleth_pendant(P_obj obj, P_char ch, int cmd, char *argument)
 
 int tower_summoning(P_obj obj, P_char ch, int cmd, char *arg)
 {
-	//  register P_char i;
+	//  P_char i;
 	P_char istalker;
 	P_char vict;
 	P_char smob, next_mob;

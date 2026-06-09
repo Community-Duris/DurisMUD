@@ -2,7 +2,7 @@
 the &+LMo&+yunt&+La&+yin &nof &+LPeril Peaks~
 57695 1 8 40 50 3
 *
-* Zone edited with durisEdit v2.99de
+* Zone edited with durisEdit v3.02
 *
 *
 D 0 57505 0 2 100 0 0 0
@@ -296,16 +296,17 @@ G 1 57564 1 0 100 0 0 0            *    a bridge gate key
 M 0 57513 1 57551 100 0 0 0        * a human female
 E 1 57509 1 19 100 0 0 0           *   some magical elven glasses
 M 0 57515 1 57551 100 0 0 0        * a human man
-E 1 57505 1 16 100 0 0 0           *   an ancestral loggsword of strength
+E 1 57505 1 16 100 0 0 0           *   an ancestral longsword of strength
 M 0 57512 1 57551 100 0 0 0        * an elven woman
 E 1 57516 1 7 100 0 0 0            *   a pair of finely woven elven leggings
-M 0 57510 1 57551 100 0 0 0        * a tatooed human
+M 0 57510 1 57551 100 0 0 0        * a tattooed human
 E 1 57507 1 10 100 0 0 0           *   some rune covered electrum sleeves
 M 0 57514 1 57551 100 0 0 0        * an old magician
 E 1 57503 1 6 100 0 0 0            *   a mouse colored pointy top hat
 M 0 57560 1 57552 100 0 0 0        * a shopkeeper
-G 1 57533 1 0 100 0 0 0            *    a magical potion
-G 1 57539 1 0 100 0 0 0            *    a magical potion
+G 1 57533 1 0 100 0 0 0            *    a potion of soul magic
+G 1 57539 1 0 100 0 0 0            *    a potion of chilling magic
+G 1 57584 1 0 100 0 0 0            *    a shimmering potion of learning
 M 0 57559 1 57555 100 0 0 0        * a weaponsmaster
 E 1 57557 29 16 100 0 0 0          *   a steel longsword with tribal markings
 E 1 57557 29 17 100 0 0 0          *   a steel longsword with tribal markings
@@ -336,7 +337,7 @@ M 0 57660 1 57564 100 0 0 0        * a clan bear barbarian
 M 0 57569 1 57565 100 0 0 0        * a tribal barbarian
 M 0 57524 1 57567 100 0 0 0        * a swirling mass of colors
 M 0 57526 1 57571 100 0 0 0        * the Lord of Darkness
-E 1 57532 1 12 100 0 0 0           *   a shimmering transluscent cloak
+E 1 57532 1 12 100 0 0 0           *   a shimmering translucent cloak
 E 1 57571 1 20 100 0 0 0           *   the damned mask
 M 0 57520 1 57574 100 0 0 0        * a swirling tentacled mass
 G 1 57555 1 0 100 0 0 0            *    a slimy tentacle from a carniverous plant

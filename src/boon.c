@@ -99,6 +99,55 @@ struct boon_options_struct boon_options[] = {
 	"\0"
 };
 
+void     boon_notify(int id, P_char ch, int action);
+static void boon_mob_label(int criteria2, char *buf, size_t len, int for_list);
+static void boon_race_label(int criteria2, char *buf, size_t len);
+
+static MYSQL_RES *boon_store_result(const char *where)
+{
+	MYSQL_RES *res = mysql_store_result(DB);
+
+	if (!res)
+	{
+		logit(LOG_DEBUG, "%s: mysql_store_result failed", where ? where : "boon");
+	}
+	return res;
+}
+
+static void boon_collect_ids(MYSQL_RES *res, int *id, const char *where)
+{
+	MYSQL_ROW row;
+	int       i = 0;
+
+	if (!res || !id)
+	{
+		return;
+	}
+	while ((row = mysql_fetch_row(res)) && i < (MAX_BOONS - 1))
+	{
+		id[i++] = row[0] ? atoi(row[0]) : 0;
+	}
+	id[i] = 0;
+	if (row)
+	{
+		logit(LOG_DEBUG, "%s: active boon list truncated at MAX_BOONS", where ? where : "boon");
+	}
+}
+
+static int boon_ctf_index(int flag_id)
+{
+	int i;
+
+	for (i = 1; ctfdata[i].id; i++)
+	{
+		if (ctfdata[i].id == flag_id)
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+
 // level 0 means it can be randomly set, otherwise manually by the listed level.
 // Can make more randomly set once the data_validation is updated so we don't end
 // up with crazy bonuses for easy accomplishments.
@@ -270,22 +319,22 @@ int get_valid_boon_option(char *arg)
 int is_boon_valid(int id)
 {
 	if (!qry("SELECT id FROM boons WHERE id = '%d'", id))
-		return FALSE;
-	else
 	{
-		MYSQL_RES *res = mysql_store_result(DB);
-		if (mysql_num_rows(res) < 1)
-		{
-			mysql_free_result(res);
-			return FALSE;
-		}
-		else
-		{
-			mysql_free_result(res);
-			return TRUE;
-		}
+		return FALSE;
 	}
-	return FALSE;
+
+	MYSQL_RES *res = boon_store_result("is_boon_valid");
+	if (!res)
+	{
+		return FALSE;
+	}
+	if (mysql_num_rows(res) < 1)
+	{
+		mysql_free_result(res);
+		return FALSE;
+	}
+	mysql_free_result(res);
+	return TRUE;
 }
 
 int count_boons(int active, int random)
@@ -302,15 +351,18 @@ int count_boons(int active, int random)
 	         (random ? "(random = 1) " : ""));
 
 	if (!qry(dbqry))
-		return 0;
-	else
 	{
-		MYSQL_RES *res = mysql_store_result(DB);
-		count          = mysql_num_rows(res);
-		mysql_free_result(res);
-		return count;
+		return 0;
 	}
-	return 0;
+
+	MYSQL_RES *res = boon_store_result("count_boons");
+	if (!res)
+	{
+		return 0;
+	}
+	count = mysql_num_rows(res);
+	mysql_free_result(res);
+	return count;
 }
 
 void zero_boon_data(BoonData *bdata)
@@ -348,32 +400,39 @@ bool get_boon_data(int id, BoonData *bdata)
 		return FALSE;
 	}
 
-	MYSQL_RES *res = mysql_store_result(DB);
-
+	MYSQL_RES *res = boon_store_result("get_boon_data");
+	if (!res)
+	{
+		return FALSE;
+	}
 	if (mysql_num_rows(res) < 1)
 	{
-		// debug("get_boon_data(): no results");
 		mysql_free_result(res);
 		return FALSE;
 	}
 
 	MYSQL_ROW row = mysql_fetch_row(res);
+	if (!row)
+	{
+		mysql_free_result(res);
+		return FALSE;
+	}
 
-	bdata->id        = atoi(row[0]); // or ID
-	bdata->time      = atoi(row[1]);
-	bdata->duration  = atoi(row[2]);
-	bdata->racewar   = atoi(row[3]);
-	bdata->type      = atoi(row[4]);
-	bdata->option    = atoi(row[5]);
-	bdata->criteria  = atof(row[6]);
-	bdata->criteria2 = atof(row[7]);
-	bdata->bonus     = atof(row[8]);
-	bdata->bonus2    = atof(row[9]);
-	bdata->random    = atoi(row[10]);
-	bdata->author    = row[11];
-	bdata->active    = atoi(row[12]);
-	bdata->pid       = atoi(row[13]);
-	bdata->repeat    = atoi(row[14]);
+	bdata->id        = row[0] ? atoi(row[0]) : 0;
+	bdata->time      = row[1] ? atoi(row[1]) : 0;
+	bdata->duration  = row[2] ? atoi(row[2]) : 0;
+	bdata->racewar   = row[3] ? atoi(row[3]) : 0;
+	bdata->type      = row[4] ? atoi(row[4]) : 0;
+	bdata->option    = row[5] ? atoi(row[5]) : 0;
+	bdata->criteria  = row[6] ? atof(row[6]) : 0;
+	bdata->criteria2 = row[7] ? atof(row[7]) : 0;
+	bdata->bonus     = row[8] ? atof(row[8]) : 0;
+	bdata->bonus2    = row[9] ? atof(row[9]) : 0;
+	bdata->random    = row[10] ? atoi(row[10]) : 0;
+	bdata->author    = row[11] ? row[11] : "";
+	bdata->active    = row[12] ? atoi(row[12]) : 0;
+	bdata->pid       = row[13] ? atoi(row[13]) : 0;
+	bdata->repeat    = row[14] ? atoi(row[14]) : 0;
 
 	mysql_free_result(res);
 
@@ -391,21 +450,28 @@ bool get_boon_progress_data(int id, int pid, BoonProgress *bpg)
 		return FALSE;
 	}
 
-	MYSQL_RES *res = mysql_store_result(DB);
-
+	MYSQL_RES *res = boon_store_result("get_boon_progress_data");
+	if (!res)
+	{
+		return FALSE;
+	}
 	if (mysql_num_rows(res) < 1)
 	{
-		// debug("get_boon_progress_data(): no results");
 		mysql_free_result(res);
 		return FALSE;
 	}
 
 	MYSQL_ROW row = mysql_fetch_row(res);
+	if (!row)
+	{
+		mysql_free_result(res);
+		return FALSE;
+	}
 
-	bpg->id      = atoi(row[0]);
-	bpg->boonid  = atoi(row[1]);
-	bpg->pid     = atoi(row[2]);
-	bpg->counter = atof(row[3]);
+	bpg->id      = row[0] ? atoi(row[0]) : 0;
+	bpg->boonid  = row[1] ? atoi(row[1]) : 0;
+	bpg->pid     = row[2] ? atoi(row[2]) : 0;
+	bpg->counter = row[3] ? atof(row[3]) : 0;
 
 	mysql_free_result(res);
 
@@ -423,21 +489,28 @@ bool get_boon_shop_data(int pid, BoonShop *bshop)
 		return FALSE;
 	}
 
-	MYSQL_RES *res = mysql_store_result(DB);
-
+	MYSQL_RES *res = boon_store_result("get_boon_shop_data");
+	if (!res)
+	{
+		return FALSE;
+	}
 	if (mysql_num_rows(res) < 1)
 	{
-		// debug("get_boon_progress_data(): no results");
 		mysql_free_result(res);
 		return FALSE;
 	}
 
 	MYSQL_ROW row = mysql_fetch_row(res);
+	if (!row)
+	{
+		mysql_free_result(res);
+		return FALSE;
+	}
 
-	bshop->id     = atoi(row[0]);
-	bshop->pid    = atoi(row[1]);
-	bshop->points = atoi(row[2]);
-	bshop->stats  = atoi(row[3]);
+	bshop->id     = row[0] ? atoi(row[0]) : 0;
+	bshop->pid    = row[1] ? atoi(row[1]) : 0;
+	bshop->points = row[2] ? atoi(row[2]) : 0;
+	bshop->stats  = row[3] ? atoi(row[3]) : 0;
 
 	mysql_free_result(res);
 
@@ -518,17 +591,14 @@ int validate_boon_data(BoonData *bdata, int flag)
 							return 2;
 						}
 						// Is it even an epic zone?
-						j = 0;
-						while (j <= epic_zones.size() && epic_zones[j].number != iCriteria)
-							j++;
-						for (j = 0; j <= epic_zones.size(); j++)
+						for (j = 0; j < (int)epic_zones.size(); j++)
 						{
 							if (epic_zones[j].number == iCriteria)
 							{
 								break;
 							}
 						}
-						if (j > epic_zones.size())
+						if (j >= (int)epic_zones.size())
 						{
 							return 3;
 						}
@@ -2002,8 +2072,11 @@ int boon_display(P_char ch, char *argument)
 		return -1;
 	}
 
-	MYSQL_RES *res = mysql_store_result(DB);
-
+	MYSQL_RES *res = boon_store_result("boon_display");
+	if (!res)
+	{
+		return -1;
+	}
 	if (mysql_num_rows(res) < 1)
 	{
 		mysql_free_result(res);
@@ -2034,6 +2107,11 @@ int boon_display(P_char ch, char *argument)
 		int    active    = atoi(row[12]);
 		pid              = atoi(row[13]);
 		int repeat       = atoi(row[14]);
+
+		if (type < 0 || type >= MAX_BTYPE || option < 0 || option >= MAX_BOPT)
+		{
+			continue;
+		}
 
 		// Should we display this line to ch?
 		if (!IS_TRUSTED(ch) && ((racewar != 0 && GET_RACEWAR(ch) != racewar) || (pid != 0 && GET_PID(ch) != pid)))
@@ -2218,25 +2296,23 @@ int boon_display(P_char ch, char *argument)
 			}
 			case BOPT_MOB:
 			{
-				int    r_num = 0;
-				P_char mob;
-				if ((int)criteria2 == -1)
-				{
-					snprintf(buffoption, MAX_STRING_LENGTH, boon_options[option].desc, (int)criteria, "of anything");
-					break;
-				}
-				if ((int)criteria2 < 0 || (r_num = real_mobile((int)criteria2)) < 0 || !(mob = read_mobile(r_num, REAL)))
+				char mob_label[MAX_STRING_LENGTH];
+
+				boon_mob_label((int)criteria2, mob_label, sizeof(mob_label), TRUE);
+				if (!strcmp(mob_label, "unknown mob"))
 				{
 					snprintf(buffoption, MAX_STRING_LENGTH, "Error, can't read mobile.");
 					break;
 				}
-				snprintf(buffoption, MAX_STRING_LENGTH, boon_options[option].desc, (int)criteria, J_NAME(mob));
-				extract_char(mob);
+				snprintf(buffoption, MAX_STRING_LENGTH, boon_options[option].desc, (int)criteria, mob_label);
 				break;
 			}
 			case BOPT_RACE:
 			{
-				snprintf(buffoption, MAX_STRING_LENGTH, boon_options[option].desc, (int)criteria, race_names_table[(int)criteria2].ansi);
+				char race_label[MAX_STRING_LENGTH];
+
+				boon_race_label((int)criteria2, race_label, sizeof(race_label));
+				snprintf(buffoption, MAX_STRING_LENGTH, boon_options[option].desc, (int)criteria, race_label);
 				break;
 			}
 			case BOPT_GH:
@@ -2339,16 +2415,21 @@ int create_boon(BoonData *bdata)
 		// Get the new ID
 		if (qry("SELECT MAX(id) FROM boons"))
 		{
-			MYSQL_RES *res = mysql_store_result(DB);
+			MYSQL_RES *res = boon_store_result("create_boon");
+			MYSQL_ROW  row;
 
+			if (!res)
+			{
+				return FALSE;
+			}
 			if (mysql_num_rows(res) < 1)
 			{
 				mysql_free_result(res);
 				return FALSE;
 			}
 
-			MYSQL_ROW row = mysql_fetch_row(res);
-			bdata->id     = atoi(row[0]);
+			row       = mysql_fetch_row(res);
+			bdata->id = (row && row[0]) ? atoi(row[0]) : 0;
 			mysql_free_result(res);
 		}
 
@@ -2372,15 +2453,21 @@ int create_boon_progress(BoonProgress *bpg)
 	{
 		if (qry("SELECT MAX(id) FROM boons_progress"))
 		{
-			MYSQL_RES *res = mysql_store_result(DB);
+			MYSQL_RES *res = boon_store_result("create_boon_progress");
+			MYSQL_ROW  row;
+
+			if (!res)
+			{
+				return FALSE;
+			}
 			if (mysql_num_rows(res) < 1)
 			{
 				mysql_free_result(res);
 				return FALSE;
 			}
 
-			MYSQL_ROW row = mysql_fetch_row(res);
-			bpg->id       = atoi(row[0]);
+			row     = mysql_fetch_row(res);
+			bpg->id = (row && row[0]) ? atoi(row[0]) : 0;
 			mysql_free_result(res);
 		}
 
@@ -2425,8 +2512,11 @@ int extend_boon(int id, int extend, const char *name)
 		return FALSE;
 	}
 
-	MYSQL_RES *res = mysql_store_result(DB);
-
+	MYSQL_RES *res = boon_store_result("extend_boon");
+	if (!res)
+	{
+		return FALSE;
+	}
 	if (mysql_num_rows(res) < 1)
 	{
 		mysql_free_result(res);
@@ -2434,6 +2524,11 @@ int extend_boon(int id, int extend, const char *name)
 	}
 
 	MYSQL_ROW row = mysql_fetch_row(res);
+	if (!row || !row[0] || !row[1] || !row[2])
+	{
+		mysql_free_result(res);
+		return FALSE;
+	}
 
 	int timethen = atoi(row[0]);
 	int duration = atoi(row[1]);
@@ -2466,6 +2561,42 @@ int extend_boon(int id, int extend, const char *name)
 	return TRUE;
 }
 
+/* Mob-kill boon text from criteria2 only (matches list vs progress wording). */
+static void boon_mob_label(int criteria2, char *buf, size_t len, int for_list)
+{
+	int r_num;
+
+	if (!buf || !len)
+	{
+		return;
+	}
+	if (criteria2 == -1)
+	{
+		snprintf(buf, len, for_list ? "of anything" : "anything");
+		return;
+	}
+	if (criteria2 > 0 && (r_num = real_mobile(criteria2)) >= 0 && mob_index[r_num].desc2 && *mob_index[r_num].desc2)
+	{
+		snprintf(buf, len, "%s", mob_index[r_num].desc2);
+		return;
+	}
+	snprintf(buf, len, "unknown mob");
+}
+
+static void boon_race_label(int criteria2, char *buf, size_t len)
+{
+	if (!buf || !len)
+	{
+		return;
+	}
+	if (criteria2 < 0 || criteria2 > LAST_RACE || !race_names_table[criteria2].ansi || !*race_names_table[criteria2].ansi)
+	{
+		snprintf(buf, len, "unknown race");
+		return;
+	}
+	snprintf(buf, len, "%s", race_names_table[criteria2].ansi);
+}
+
 void boon_notify(int id, P_char ch, int action)
 {
 	char   buff[MAX_STRING_LENGTH];
@@ -2494,6 +2625,7 @@ void boon_notify(int id, P_char ch, int action)
 			{
 				continue;
 			}
+			*buff = '\0';
 			switch (action)
 			{
 				case BN_CREATE: // Might become annoying
@@ -2509,42 +2641,26 @@ void boon_notify(int id, P_char ch, int action)
 					BoonProgress bpg;
 					if (!get_boon_progress_data(bdata.id, GET_PID(d->character), &bpg))
 					{
-						return;
+						continue;
 					}
 					if (bdata.option == BOPT_RACE)
 					{
 						char tmp[MAX_STRING_LENGTH];
-						if ((int)bdata.criteria2 < 0 || (int)bdata.criteria2 > LAST_RACE)
-						{
-							snprintf(tmp, MAX_STRING_LENGTH, "Invalid Race");
-						}
-						else
-						{
-							snprintf(tmp, MAX_STRING_LENGTH, "%s", race_names_table[(int)bdata.criteria2].ansi);
-						}
+
+						boon_race_label((int)bdata.criteria2, tmp, sizeof(tmp));
 						snprintf(buff,
 						         MAX_STRING_LENGTH,
 						         "&+CYou have killed %d of %d %s&+C(s) for boon # %d.&n\r\n",
 						         (int)bpg.counter,
 						         (int)bdata.criteria,
-						         race_names_table[(int)bdata.criteria2].ansi,
+						         tmp,
 						         bdata.id);
 					}
 					else if (bdata.option == BOPT_MOB)
 					{
-						int    r_num = 0;
-						char   tmp[MAX_STRING_LENGTH];
-						P_char mob;
+						char tmp[MAX_STRING_LENGTH];
 
-						if ((int)bdata.criteria2 > 0 && (r_num = real_mobile((int)bdata.criteria2)) > 0 && (mob = read_mobile(r_num, REAL)))
-						{
-							snprintf(tmp, MAX_STRING_LENGTH, "%s", J_NAME(mob));
-							extract_char(mob);
-						}
-						else
-						{
-							snprintf(tmp, MAX_STRING_LENGTH, "Invalid Mob");
-						}
+						boon_mob_label((int)bdata.criteria2, tmp, sizeof(tmp), FALSE);
 						snprintf(buff, MAX_STRING_LENGTH, "&+CYou have killed %d of %d %s&+C(s) for boon # %d.&n\r\n", (int)bpg.counter, (int)bdata.criteria, tmp, bdata.id);
 					}
 					else if (bdata.option == BOPT_FRAGS)
@@ -2570,7 +2686,10 @@ void boon_notify(int id, P_char ch, int action)
 				default:
 					break;
 			}
-			send_to_char(buff, d->character);
+			if (*buff)
+			{
+				send_to_char(buff, d->character);
+			}
 		}
 	}
 	return;
@@ -2599,22 +2718,18 @@ void boon_maintenance()
 		return;
 	}
 
-	MYSQL_RES *res = mysql_store_result(DB);
-
+	MYSQL_RES *res = boon_store_result("boon_maintenance");
+	if (!res)
+	{
+		return;
+	}
 	if (mysql_num_rows(res) < 1)
 	{
 		mysql_free_result(res);
 		return;
 	}
 
-	MYSQL_ROW row;
-
-	i = 0;
-	while ((row = mysql_fetch_row(res)))
-	{
-		id[i++] = atoi(row[0]);
-	}
-
+	boon_collect_ids(res, id, "boon_maintenance");
 	mysql_free_result(res);
 
 	for (i = 0; id[i]; i++)
@@ -2654,15 +2769,17 @@ void boon_maintenance()
 			}
 			case BOPT_CTFB:
 			{
+				int ctf_i = boon_ctf_index((int)bdata.criteria);
+
 				// If this is based on a boon type flag, and that flag has expired
-				if (ctfdata[(int)bdata.criteria].type == CTF_BOON && ctfdata[(int)bdata.criteria].room == 0)
+				if (ctf_i > 0 && ctfdata[ctf_i].type == CTF_BOON && ctfdata[ctf_i].room == 0)
 				{
 					expire = TRUE;
 				}
-				if (expire)
+				if (expire && ctf_i > 0)
 				{
 					ctf_delete_flag((int)bdata.criteria);
-					ctfdata[(int)bdata.criteria].room = 0;
+					ctfdata[ctf_i].room = 0;
 				}
 				break;
 			}
@@ -2807,6 +2924,11 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 		return;
 	}
 
+	if ((option == BOPT_MOB || option == BOPT_RACE) && !victim)
+	{
+		return;
+	}
+
 	for (i = 0; i < MAX_BOONS; i++)
 	{
 		id[i] = 0;
@@ -2882,23 +3004,18 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 		return;
 	}
 
-	MYSQL_RES *res = mysql_store_result(DB);
-
-	// Nothing found, oh well
+	MYSQL_RES *res = boon_store_result("check_boon_completion");
+	if (!res)
+	{
+		return;
+	}
 	if (mysql_num_rows(res) < 1)
 	{
 		mysql_free_result(res);
 		return;
 	}
 
-	MYSQL_ROW row;
-
-	i = 0;
-	while ((row = mysql_fetch_row(res)))
-	{
-		id[i++] = atoi(row[0]);
-	}
-
+	boon_collect_ids(res, id, "check_boon_completion");
 	mysql_free_result(res);
 
 	// Run through results and apply bonuses!
@@ -3038,48 +3155,68 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 				}
 				break;
 			case BTYPE_POWER:
+			{
 				struct affected_type af;
+				int                  aff = (int)bdata.bonus;
+				int                  bit = (int)bdata.bonus2;
+				const char          *flag_name = NULL;
+
 				bzero(&af, sizeof(af));
 				af.type     = TAG_BOON;
 				af.duration = 60;
 				*buff       = '\0';
-				if ((int)bdata.bonus == 1)
+				if (bit >= 0 && bit < (int)(sizeof(long) * 8))
 				{
-					snprintf(buff, MAX_STRING_LENGTH, "%s", affected1_bits[(int)bdata.bonus2].flagLong);
-					af.bitvector = (long)1 << (int)bdata.bonus2;
+					if (aff == 1 && affected1_bits[bit].flagLong)
+					{
+						flag_name    = affected1_bits[bit].flagLong;
+						af.bitvector = (long)1 << bit;
+					}
+					else if (aff == 2 && affected2_bits[bit].flagLong)
+					{
+						flag_name     = affected2_bits[bit].flagLong;
+						af.bitvector2 = (long)1 << bit;
+					}
+					else if (aff == 3 && affected3_bits[bit].flagLong)
+					{
+						flag_name     = affected3_bits[bit].flagLong;
+						af.bitvector3 = (long)1 << bit;
+					}
+					else if (aff == 4 && affected4_bits[bit].flagLong)
+					{
+						flag_name     = affected4_bits[bit].flagLong;
+						af.bitvector4 = (long)1 << bit;
+					}
+					else if (aff == 5 && affected5_bits[bit].flagLong)
+					{
+						flag_name     = affected5_bits[bit].flagLong;
+						af.bitvector5 = (long)1 << bit;
+					}
 				}
-				if ((int)bdata.bonus == 2)
+				if (!flag_name)
 				{
-					snprintf(buff, MAX_STRING_LENGTH, "%s", affected2_bits[(int)bdata.bonus2].flagLong);
-					af.bitvector2 = (long)1 << (int)bdata.bonus2;
+					debug("check_boon_completion(): invalid power affect %d/%d for boon #%d.", aff, bit, bdata.id);
+					break;
 				}
-				if ((int)bdata.bonus == 3)
-				{
-					snprintf(buff, MAX_STRING_LENGTH, "%s", affected3_bits[(int)bdata.bonus2].flagLong);
-					af.bitvector3 = (long)1 << (int)bdata.bonus2;
-				}
-				if ((int)bdata.bonus == 4)
-				{
-					snprintf(buff, MAX_STRING_LENGTH, "%s", affected4_bits[(int)bdata.bonus2].flagLong);
-					af.bitvector4 = (long)1 << (int)bdata.bonus2;
-				}
-				if ((int)bdata.bonus == 5)
-				{
-					snprintf(buff, MAX_STRING_LENGTH, "%s", affected5_bits[(int)bdata.bonus2].flagLong);
-					af.bitvector5 = (long)1 << (int)bdata.bonus2;
-				}
-				if (!*buff)
-				{
-					snprintf(buff, MAX_STRING_LENGTH, "Undefined");
-				}
-				affect_to_char_with_messages(ch, &af, "&+CYour bonus power fa&+cdes away...&n\r\n", NULL);
+				snprintf(buff, MAX_STRING_LENGTH, "%s", flag_name);
+				affect_to_char_with_messages(ch, &af, "&+CYour bonus power fa&+cdes away...&n\r\n", "$n&+C's bonus power fades.&n\r\n");
 				boon_notify(bdata.id, ch, BN_COMPLETE);
 				send_to_char_f(ch, "You have been granted the power of %s for a while.\r\n", buff);
 				break;
+			}
 			case BTYPE_SPELL:
+			{
+				int skillnum = (int)bdata.bonus;
+
 				boon_notify(bdata.id, ch, BN_COMPLETE);
-				((*skills[(int)bdata.bonus].spell_pointer)(56, ch, NULL, SPELL_TYPE_SPELL, ch, NULL));
+				if (skillnum < 0 || skillnum >= MAX_SKILLS || !skills[skillnum].spell_pointer)
+				{
+					debug("check_boon_completion(): invalid spell %d for boon #%d.", skillnum, bdata.id);
+					break;
+				}
+				((*skills[skillnum].spell_pointer)(56, ch, NULL, SPELL_TYPE_SPELL, ch, NULL));
 				break;
+			}
 			case BTYPE_STAT:
 				boon_notify(bdata.id, ch, BN_COMPLETE);
 				if (bdata.bonus == STR)
@@ -3225,15 +3362,20 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 		// if its a boon ctf flag and not repeatable boon remove flag
 		if (bdata.option == BOPT_CTFB)
 		{
-			if (bdata.repeat)
+			int ctf_i = boon_ctf_index((int)bdata.criteria);
+
+			if (ctf_i > 0)
 			{
-				obj_to_room(ctfdata[(int)bdata.criteria].obj, real_room0(ctfdata[(int)bdata.criteria].room));
-				send_to_room_f(real_room0(ctfdata[(int)bdata.criteria].room), "%s &n appears.\r\n", (ctfdata[(int)bdata.criteria].obj)->short_description);
-			}
-			else
-			{
-				ctf_delete_flag((int)bdata.criteria);
-				ctfdata[(int)bdata.criteria].room = 0;
+				if (bdata.repeat && ctfdata[ctf_i].obj && ctfdata[ctf_i].room)
+				{
+					obj_to_room(ctfdata[ctf_i].obj, real_room0(ctfdata[ctf_i].room));
+					send_to_room_f(real_room0(ctfdata[ctf_i].room), "%s &n appears.\r\n", ctfdata[ctf_i].obj->short_description);
+				}
+				else if (!bdata.repeat)
+				{
+					ctf_delete_flag((int)bdata.criteria);
+					ctfdata[ctf_i].room = 0;
+				}
 			}
 		}
 #endif

@@ -299,7 +299,7 @@ const char *GREETINGS = "\r\n\r\n\
 int fread_string_to_buffer(FILE *fl, char *buf)
 {
 	char           tmp[MAX_STRING_LENGTH];
-	register char *point  = NULL;
+	char *point  = NULL;
 	int            length = 0, t_length = 0, done = FALSE;
 
 	buf[0] = '\0';
@@ -346,7 +346,7 @@ int fread_string_to_buffer(FILE *fl, char *buf)
 
 	for (point = buf + length - 1; point > buf && *point != '&'; point--)
 		;
-	if (*point == '&' && toupper(*(point + 1)) != 'N')
+	if (point > buf && *point == '&' && toupper(*(point + 1)) != 'N')
 	{
 		strcat(buf, "&n");
 		length += 2;
@@ -1480,7 +1480,7 @@ void setup_dir(FILE *fl, int room, int dir)
 
 void renum_world(void)
 {
-	register int room, door, to_room;
+	int room, door, to_room;
 
 	for (room = 0; room <= top_of_world; room++)
 		for (door = 0; door <= (NUM_EXITS - 1); door++)
@@ -3486,10 +3486,6 @@ void reset_zone(int zone, int force_item_repop)
 							}
 							if (mob)
 							{
-								// Drannak trying out item stat randomization 3/28/14
-								//  Added check for shopkeeper so their wares don't look goofy.
-								if (!IS_ARTIFACT(obj) && !IS_SHOPKEEPER(mob))
-									randomizeitem(mob, obj);
 								obj_to_char(obj, mob);
 								last_cmd = 1;
 								break;
@@ -3556,11 +3552,6 @@ void reset_zone(int zone, int force_item_repop)
 							}
 							if (mob && (ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR))
 							{
-								// Drannak trying out item stat randomization 3/28/14
-								// Added check for shopkeeper so their wares don't look goofy.
-								//   Removed shopkeeper check: this is eq'd items not for-sale items.
-								if (!IS_ARTIFACT(obj))
-									randomizeitem(mob, obj);
 								if (mob->equipment[ZCMD.arg3])
 									obj_to_char(unequip_char(mob, ZCMD.arg3), mob);
 								equip_char(mob, obj, ZCMD.arg3, 1);
@@ -3774,7 +3765,7 @@ int is_empty(int zone_nr)
 char *fread_string(FILE *fl)
 {
 	char           buf[MAX_STRING_LENGTH], tmp[MAX_STRING_LENGTH], *rslt;
-	register char *point;
+	char *point;
 	int            done = 0, length = 0, templength = 0;
 
 	buf[0] = '\0';
@@ -3859,7 +3850,7 @@ char *fread_string(FILE *fl)
 void skip_fread(FILE *fl)
 {
 	char           tmp[MAX_STRING_LENGTH];
-	register char *point;
+	char *point;
 
 	if (!fl)
 	{
@@ -4228,7 +4219,7 @@ void clear_char(P_char ch)
 /* returns the real number of the zone with given virtual number */
 int real_zone0(const int virt)
 {
-	register int bot, top, mid;
+	int bot, top, mid;
 
 	bot = 0;
 	top = top_of_zone_table;
@@ -4265,7 +4256,7 @@ int real_zone0(const int virt)
  */
 int real_zone(const int virt)
 {
-	register int bot, top, mid;
+	int bot, top, mid;
 
 	bot = 0;
 	top = top_of_zone_table;
@@ -4298,7 +4289,7 @@ int real_zone(const int virt)
 /* returns the real number of the room with given virtual number */
 int real_room0(const int virt)
 {
-	register int bot, top, mid;
+	int bot, top, mid;
 
 	bot = 0;
 	top = top_of_world;
@@ -4335,7 +4326,7 @@ int real_room0(const int virt)
 
 int real_room(const int virt)
 {
-	register int bot, top, mid;
+	int bot, top, mid;
 
 	bot = 0;
 	top = top_of_world;
@@ -4371,7 +4362,7 @@ int real_room(const int virt)
 
 int real_mobile0(const int virt)
 {
-	register int bot, top, mid;
+	int bot, top, mid;
 
 	bot = 0;
 	top = top_of_mobt;
@@ -4405,7 +4396,7 @@ int real_mobile0(const int virt)
 
 int real_mobile(const int virt)
 {
-	register int bot, top, mid;
+	int bot, top, mid;
 
 	bot = 0;
 	top = top_of_mobt;
@@ -4439,7 +4430,7 @@ int real_mobile(const int virt)
 
 int real_object0(const int virt)
 {
-	register int bot, top, mid;
+	int bot, top, mid;
 
 	bot = 0;
 	top = top_of_objt;
@@ -4473,7 +4464,7 @@ int real_object0(const int virt)
 
 int real_object(const int virt)
 {
-	register int bot, top, mid;
+	int bot, top, mid;
 
 	bot = 0;
 	top = top_of_objt;

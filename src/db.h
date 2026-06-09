@@ -21,7 +21,8 @@ using namespace std;
 #define ZONE_FILE    "areas/world.zon"     /* zone defs & command tables*/
 #define JUSTICE_FILE "areas/world.justice" /* justice definition file   */
 
-#define MAIL_FILE "Players/mail"
+#define MAIL_FILE        "Accounts/mail" /* player pfiles moved under Accounts/; mail follows */
+#define MAIL_FILE_LEGACY "Players/mail" /* pre-migration location */
 
 #define CREDITS_FILE   "lib/information/credits" /* for the 'credits' command */
 #define MAP1_FILE      "lib/information/map1"

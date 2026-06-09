@@ -1570,8 +1570,8 @@ O 0 338 999 83374 20 0 0 0         * (object type not in this .obj file)
 O 0 1703 5 83374 15 0 0 0          * (object type not in this .obj file)
 O 0 1703 5 83374 65 0 0 0          * (object type not in this .obj file)
 O 0 83180 2 83376 100 0 0 0        * a huge crate
-P 1 102 2 83180 40 0 0 0           *   (object type not in this .obj file)
-P 1 102 2 83180 40 0 0 0           *   (object type not in this .obj file)
+P 1 102 999 83180 40 0 0 0         *   (object type not in this .obj file)
+P 1 102 999 83180 40 0 0 0         *   (object type not in this .obj file)
 P 1 412 999 83180 40 0 0 0         *   (object type not in this .obj file)
 P 1 412 999 83180 100 0 0 0        *   (object type not in this .obj file)
 P 1 412 999 83180 100 0 0 0        *   (object type not in this .obj file)
@@ -1758,6 +1758,7 @@ P 1 83196 2 83429 100 0 0 0        *   a flying spellbook
 P 1 5 999 83429 100 0 0 0          *   (object type not in this .obj file)
 P 1 5 999 83429 100 0 0 0          *   (object type not in this .obj file)
 P 1 5 999 83429 100 0 0 0          *   (object type not in this .obj file)
+P 1 83160 5 83429 100 0 0 0        *   a scroll of soulshield
 O 0 83139 8 83828 100 0 0 0        * a small wooden desk
 P 1 58335 5 83139 100 0 0 0        *   (object type not in this .obj file)
 P 1 40404 1 83139 100 0 0 0        *   (object type not in this .obj file)
@@ -2118,7 +2119,7 @@ E 1 83112 999 11 100 0 0 0         *   an iron shield bearing the crest of Alato
 E 1 83119 999 16 100 0 0 0         *   a polished iron broadsword
 M 0 83140 1 83188 100 0 0 0        * Miboli Snoblsniz
 E 1 83145 3 18 100 0 0 0           *   a tiny key
-E 1 83268 1 18 2 0 0 0             *   an old tome entitled 'Advanced Magic Missile Techniques'
+E 1 83268 1 18 10 0 0 0            *   an old tome entitled 'Advanced Magic Missile Techniques'
 M 0 83241 1 83190 100 0 0 0        * a disgruntled and incoherent goblin
 M 0 83171 4 83195 100 0 0 0        * a brewer
 E 1 83274 8 24 100 0 0 0           *   a badge of Barlow's Brewery
@@ -2232,7 +2233,7 @@ M 0 83208 3 83232 100 0 0 0        * a hungry Hammerhelm soldier
 M 0 83124 2 83232 100 0 0 0        * a retired guard
 M 0 83210 2 83234 100 0 0 0        * a holyman
 E 1 83204 1 3 100 0 0 0            *   a string of dwarven prayer beads
-G 1 83160 4 0 100 0 0 0            *    a scroll of soulshield
+G 1 83160 5 0 100 0 0 0            *    a scroll of soulshield
 M 0 83209 1 83235 100 0 0 0        * the Hammerhelm weaponsmaster
 G 1 83111 999 0 100 0 0 0          *    an iron broadsword
 G 1 83119 999 0 100 0 0 0          *    a polished iron broadsword
@@ -2557,9 +2558,9 @@ E 1 83158 1 6 100 0 0 0            *   a shining helmet
 E 1 83159 1 16 100 0 0 0           *   a shining steel holy avenger
 M 0 83160 1 83295 30 0 0 0         * Ditts Stomard the dwarven holyman
 E 1 83161 1 5 100 0 0 0            *   a long dwarven religious robe
-P 1 83160 4 83161 100 0 0 0        *   a scroll of soulshield
-P 1 83160 4 83161 100 0 0 0        *   a scroll of soulshield
-P 1 83160 4 83161 100 0 0 0        *   a scroll of soulshield
+P 1 83160 5 83161 100 0 0 0        *   a scroll of soulshield
+P 1 83160 5 83161 100 0 0 0        *   a scroll of soulshield
+P 1 83160 5 83161 100 0 0 0        *   a scroll of soulshield
 E 1 83162 1 16 50 0 0 0            *   a gleaming dwarven warhammer covered with runic script
 M 0 83161 1 83295 30 0 0 0         * Osemius the cloud giant
 E 1 83163 1 6 100 0 0 0            *   a wreath of intertwined nightshade and roses
@@ -3458,6 +3459,7 @@ G 1 368 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 83356 999 0 100 0 0 0          *    a vial of adder venom
 G 1 2020 999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 53 999 0 100 0 0 0             *    (object type not in this .obj file)
+G 1 102 999 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83334 5 83609 100 0 0 0        * a burly guard of Helgor outpost
 E 1 83350 12 5 100 0 0 0           *   a full suit of heavy adamantite
 E 1 83351 12 6 100 0 0 0           *   a heavy adamantite full-faced helmet
@@ -3617,6 +3619,7 @@ G 1 500 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 368 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 53 999 0 100 0 0 0             *    (object type not in this .obj file)
 G 1 377 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 102 999 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 53642 4 83686 100 0 0 0        * (mob type not in this .mob file)
 M 0 53642 4 83686 100 0 0 0        * (mob type not in this .mob file)
 M 0 53642 4 83690 100 0 0 0        * (mob type not in this .mob file)
@@ -3652,6 +3655,7 @@ G 1 836 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 837 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 838 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 829 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 102 999 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83352 1 83701 100 0 0 0        * a shady dwarf merchant
 G 1 83390 999 0 100 0 0 0          *    a potion of iNSaNe STrEnGTh
 G 1 83391 999 0 100 0 0 0          *    a potion of remedying
@@ -3750,6 +3754,7 @@ G 1 40441 16 0 100 0 0 0           *    (object type not in this .obj file)
 M 0 83406 1 83762 100 0 0 0        * Ravi Bjornson
 E 1 83446 1 16 100 0 0 0           *   a silver scimitar
 M 0 83367 1 83764 100 0 0 0        * a cheerful dwarven receptionist
+M 0 83524 1 83767 30 0 0 0         * Debmawr
 M 0 43123 2 83768 60 0 0 0         * (mob type not in this .mob file)
 M 0 43124 2 83768 60 0 0 0         * (mob type not in this .mob file)
 M 0 43149 2 83768 90 0 0 0         * (mob type not in this .mob file)
@@ -3894,11 +3899,11 @@ G 1 83435 999 0 100 0 0 0          *    a scroll of revelations
 M 0 83386 1 83828 100 0 0 0        * a halfling magician
 G 1 83145 3 0 100 0 0 0            *    a tiny key
 G 1 83430 2 0 100 0 0 0            *    a thick elemental key
-M 0 55551 3 83829 50 0 0 0         * (mob type not in this .mob file)
-M 0 55550 3 83829 50 0 0 0         * (mob type not in this .mob file)
-M 0 55552 3 83829 50 0 0 0         * (mob type not in this .mob file)
-M 0 55553 3 83829 50 0 0 0         * (mob type not in this .mob file)
-M 0 55554 2 83829 50 0 0 0         * (mob type not in this .mob file)
+M 0 55551 3 83829 100 0 0 0        * (mob type not in this .mob file)
+M 0 55550 3 83829 100 0 0 0        * (mob type not in this .mob file)
+M 0 55552 3 83829 100 0 0 0        * (mob type not in this .mob file)
+M 0 55553 3 83829 100 0 0 0        * (mob type not in this .mob file)
+M 0 55554 2 83829 100 0 0 0        * (mob type not in this .mob file)
 M 0 55551 3 83829 25 0 0 0         * (mob type not in this .mob file)
 M 0 55550 3 83829 25 0 0 0         * (mob type not in this .mob file)
 M 0 55552 3 83829 25 0 0 0         * (mob type not in this .mob file)

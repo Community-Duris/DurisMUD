@@ -81,9 +81,9 @@ D 0 94819 0 2 100 0 0 0
 *     north exit from "The Precious Gates of Ivory" to
 *     "A Moonwell Through the Precious Gates of Ivory" - closed/locked
 *
-D 0 94820 2 2 100 0 0 0
+D 0 94820 2 1 100 0 0 0
 *     south exit from "A Moonwell Through the Precious Gates of Ivory" to
-*     "The Precious Gates of Ivory" - closed/locked
+*     "The Precious Gates of Ivory" - closed
 *
 D 0 94840 5 8 100 0 0 0
 *     down exit from "A Collapsed Portion of the West Wing" to

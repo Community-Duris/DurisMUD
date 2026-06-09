@@ -64,10 +64,6 @@ void update_skills(P_char ch)
 	if (!ch || !IS_PC(ch))
 		return;
 
-	// #ifdef SKILLPOINTS
-	//   return;
-	// #endif
-
 	for (skl = FIRST_SKILL; skl <= LAST_SKILL; skl++)
 	{
 		skllvl = GET_LVL_FOR_SKILL(ch, skl);
@@ -152,10 +148,6 @@ bool notch_skill(P_char ch, int skill, float chance)
 {
 	int  intel, t, lvl, l, slvl, i;
 	char buf[MAX_STRING_LENGTH];
-
-	// #ifdef SKILLPOINTS
-	//   return 0;
-	// #endif
 
 	if (!IS_ALIVE(ch))
 		return FALSE;
@@ -260,6 +252,7 @@ bool notch_skill(P_char ch, int skill, float chance)
 	}
 #endif
 
+again:
 	snprintf(buf, MAX_STRING_LENGTH, "&+cYou feel your skill in %s improving.\n", skills[skill].name);
 	send_to_char(buf, ch);
 	// If skill is maxxed, check it vs. the epic skill list to see if an epic skill has opened up.
@@ -275,7 +268,24 @@ bool notch_skill(P_char ch, int skill, float chance)
 		}
 	}
 
+	if (l < t && number(0,1) && affected_by_spell(ch, SPELL_LEARNING))
+		goto again; // 2 notches on average
+
 	return TRUE;
+}
+
+void spell_learning(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
+{
+	affect_from_char(ch, SPELL_LEARNING);
+
+	struct affected_type af;
+	bzero(&af, sizeof(af));
+	af.type       = SPELL_LEARNING;
+	af.flags      = AFFTYPE_NOAPPLY;
+	af.duration   = 2 * level;
+	affect_to_char(ch, &af);
+
+	act("&+cYou feel more capable of improving your skills.", FALSE, ch, 0, 0, TO_CHAR);
 }
 
 int SpellCopyCost(P_char ch, int spell)
@@ -712,14 +722,7 @@ void do_spells(P_char ch, char *argument, int cmd)
 
 			if (!SKILL_DATA_ALL(target, spell).maxlearn[0] && !SKILL_DATA_ALL(target, spell).maxlearn[target->player.spec])
 				continue;
-			// #ifdef SKILLPOINTS
-			//         snprintf(buf, MAX_STRING_LENGTH, "%3d %s%-25s %s",
-			//           (target && IS_PC(target)) ? target->only.pc->skills[spell].taught : 0,
-			//           (target && (circle > get_max_circle(target))) ? "&+L" : "",
-			//           skills[spell].name, buf2);
-			// #else
 			snprintf(buf, MAX_STRING_LENGTH, "%s%-25s %s", (target && (circle > get_max_circle(target))) ? "&+L" : "", skills[spell].name, buf2);
-			// #endif
 			if (target)
 			{
 				if (meming_class(target))
@@ -837,6 +840,11 @@ void do_skills(P_char ch, char *argument, int cmd)
 			{
 				if (IS_PC(target))
 				{
+					const char *color = "";
+					if (IS_EPIC_SKILL(skl))
+						color = GET_CHAR_SKILL(target, skl)<100 ? "&+y" : "&+Y";
+					else if (GET_CHAR_SKILL(target, skl) >= target->only.pc->skills[skl].taught)
+						color = "&+W";
 					int lvl = GET_LVL_FOR_SKILL(target, skl);
 					if (lvl > GET_LEVEL(target))
 						if (IS_TRUSTED(ch))
@@ -850,12 +858,12 @@ void do_skills(P_char ch, char *argument, int cmd)
 						         MAX_STRING_LENGTH,
 						         "%-25s %s%6d&n [%d]\n",
 						         skills[skl].name,
-						         GET_CHAR_SKILL(target, skl) < target->only.pc->skills[skl].taught ? "" : "&+W",
+						         color,
 						         GET_CHAR_SKILL(target, skl),
 						         target->only.pc->skills[skl].taught);
 					else
 						snprintf(
-							buf, MAX_STRING_LENGTH, "%-25s %s%6d&n\n", skills[skl].name, GET_CHAR_SKILL(target, skl) < target->only.pc->skills[skl].taught ? "" : "&+W", GET_CHAR_SKILL(target, skl));
+							buf, MAX_STRING_LENGTH, "%-25s %s%6d&n\n", skills[skl].name, color, GET_CHAR_SKILL(target, skl));
 				}
 				else
 				{
@@ -936,11 +944,6 @@ void do_practice(P_char ch, char *arg, int cmd)
 	char   buf[MAX_STRING_LENGTH], buf1[MAX_STRING_LENGTH], obuf[MAX_STRING_LENGTH];
 	int    skl, spl, circle, i, meming_cl, cost, ret;
 	P_char teacher;
-
-#ifdef SKILLPOINTS
-	do_practice_new(ch, arg, cmd);
-	return;
-#endif
 
 	if (!IS_ALIVE(ch) || !IS_PC(ch))
 		return;

@@ -14,7 +14,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 2
 #45001
-elven gate guard elf~
+guard elven gate elf~
 &+Gthe elven gate guard&N~
 &+gA &+Ggate&N &+gguard stands here on his post.
 ~
@@ -27,7 +27,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 1
 #45002
-white rabbit~
+rabbit white~
 &+Wa white rabbit&n~
 &+WA white rabbit hops around here, wiggling its nose.&n
 ~
@@ -42,7 +42,7 @@ AH 0 0 0 -1
 0.0.0.0 388
 8 8 0
 #45003
-warty toad~
+toad warty~
 &+ga &+Gw&+Ya&+Gr&+Yt&+Gy &+gtoad&n~
 &+gA &+Gw&+Ya&+Gr&+Yt&+Gy &+gtoad sits here, croaking quietly.&n
 ~
@@ -69,7 +69,7 @@ A 0 0 0 -1
 0.0.0.0 129
 8 8 0
 #45005
-elf druid elven~
+druid elf elven~
 &+ga elf druid&N~
 &+GThis young elven druid stands here evaluating an element of nature.&N
 ~
@@ -84,7 +84,7 @@ PE 0 128 0 -1
 0.0.0.0 0
 8 8 1
 #45006
-druid great elf hasira~
+hasira druid great elf~
 &+GHasira&N~
 &+GHasira&N, the great druid, stands here teaching her students.
 ~
@@ -115,7 +115,7 @@ PE 0 32 0 -1
 0.0.0.0 0
 8 8 1
 #45008
-king elf solirum elven~
+solirum king elf elven~
 &+GSolirum,&N &+gthe elven king&N~
 &+GSolirum&N, &+gthe elven king&N, sits on his throne giving you a stern gaze.
 ~
@@ -130,7 +130,7 @@ PE 0 32768 0 -1
 0.0.0.0 0
 8 8 1
 #45009
-queen elf selistra~
+selistra queen elf~
 &+GSelistra, the queen of the elves&N~
 &+GSelistra&N, the queen of the elves, is here looking somber.
 ~
@@ -146,7 +146,7 @@ PE 0 32768 0 -1
 0.0.0.0 0
 8 8 2
 #45010
-elf bartender pub keeper zilota~
+zilota elf bartender pub keeper~
 Zilota~
 Zilota, bartender and pub owner stands here ready to serve you.
 ~
@@ -158,7 +158,7 @@ PE 5 2 0 -1
 3.4.8.6 234900
 8 8 2
 #45011
-tired elven adventurer~
+adventurer tired elven~
 &+ya tired elven adventurer&N~
 &+yA tired elven adventurer is here resting in the hay.&N
 ~
@@ -172,7 +172,7 @@ PE 0 1 0 -1
 0.0.0.0 0
 8 8 1
 #45012
-elf gaston reglia~
+gaston reglia elf~
 &+GGaston Reglia&N~
 &+GGaston Reglia&N, the master chef, stands here preparing the next meal.
 ~
@@ -185,7 +185,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 1
 #45013
-elf barantoosil shopkeeper mage~
+barantoosil elf shopkeeper mage~
 Barantoosil~
 Barantoosil the mage stands here waiting for you to make up your mind.
 ~
@@ -198,7 +198,7 @@ PE 5 2 0 -1
 3.4.8.6 234900
 8 8 1
 #45014
-elf armorer armorer charing~
+armorer elf charing~
 &+ythe armorer of Charing&N~
 &+yThe armorer of Charing stands here polishing a suit of mail.&N
 ~
@@ -215,7 +215,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 1
 #45015
-elf oracle~
+oracle elf~
 &+Wthe oracle&N~
 &+mThe great Oracle of Charing stands here looking into your soul.&N
 ~
@@ -229,7 +229,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 2
 #45016
-elf scribe~
+scribe elf~
 the scribe~
 The scribe stands here scribbling down something on parchment.
 ~
@@ -241,7 +241,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 1
 #45017
-elf weaponsmith elven~
+weaponsmith elf elven~
 &+Wthe weaponsmith&N~
 The elven &+Gweaponsmith&N stands here polishing a sword.
 ~
@@ -258,7 +258,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 1
 #45018
-elf shanya~
+shanya elf~
 &+gShanya&N~
 &+GShanya&N is here organizing her items for sale.
 ~
@@ -291,7 +291,7 @@ PE 0 2048 0 -1
 0.0.0.0 0
 8 8 1
 #45020
-elf mage apprentice~
+apprentice elf mage~
 an apprentice elf mage~
 An apprentice elf mage is standing here, practicing a spell.
 ~
@@ -304,7 +304,7 @@ PE 5 2048 0 -1
 9.7.3.0 8748
 8 8 1
 #45021
-an elf warrior training~
+warrior elf training~
 an elf warrior trainee~
 An elf warrior stands here training in the arts of battle!
 ~
@@ -334,7 +334,7 @@ PE 0 32 0 -1
 0.0.0.0 0
 8 8 1
 #45023
-elf master guild thief diam~
+diam master elf guild thief~
 &+LDiam&N, the master thief&N~
 &+LDiam&N, the master thief, is here hiding in the shadows.
 ~
@@ -366,7 +366,7 @@ VT 0 1 0 2
 0.0.0.0 0
 8 8 0
 #45025
-elf rogue~
+rogue elf~
 an elf rogue~
 A dark and mysterious looking elf rogue stands here, guarding the guild.
 ~
@@ -378,7 +378,7 @@ PE 5 2 0 -1
 2.4.8.6 230850
 8 8 1
 #45026
-elven acolyte young~
+acolyte elven young~
 &+ca elven cleric&N~
 &+cA elven young acolyte is standing here deep in thought.&N
 ~
@@ -393,7 +393,7 @@ PE 0 32 0 -1
 0.0.0.0 0
 8 8 2
 #45027
-elf commoner~
+commoner elf~
 a elf commoner~
 An elf commoner is standing here, going about his business.
 ~
@@ -406,7 +406,7 @@ PE 5 0 0 -1
 3.2.0.0 907
 8 8 1
 #45028
-rogue elf bartender~
+bartender rogue elf~
 &+ma rogue bartender&N~
 A &+mrogue bartender&N watches as you approach the bar.
 ~
@@ -421,7 +421,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 1
 #45029
-an elf noble~
+noble elf~
 an elf noble~
 An elf noble stands here, looking at you with a smirk on his face.
 ~
@@ -434,7 +434,7 @@ PE 5 512 0 -1
 5.9.8.4 109350
 8 8 1
 #45030
-elf guard justice elite city~
+guard elf justice elite city~
 an elite elven guard~
 An elite elven guard stands here, guarding the city.
 ~
@@ -447,7 +447,7 @@ PE 5 2 0 -1
 6.9.4.6 206550
 8 8 1
 #45031
-elf justice guard~
+guard elf justice~
 an elven guard~
 An elven guard stands here ready to defend the city.
 ~
@@ -474,7 +474,7 @@ A 0 0 0 -1
 0.0.0.0 129
 8 8 1
 #45033
-elf jailkeeper~
+jailkeeper elf~
 the elven jailkeeper~
 The jailkeeper is standing here, going over some files.
 ~
@@ -487,7 +487,7 @@ PE 1 512 0 -1
 2.4.8.6 230850
 8 8 1
 #45034
-elf palace guard~
+guard elf palace~
 an elite palace guard~
 &+gAn elite palace guard stands here defending the palace.
 ~
@@ -501,7 +501,7 @@ PE 0 2 0 -1
 4.0.5.0 18711
 8 8 1
 #45035
-elf elven hunting cat panther black~
+panther elf elven hunting cat black~
 &+La black panther&n~
 &+LA black panther, hunting cat of the elves, stands here ready to pounce.
 ~
@@ -515,7 +515,7 @@ A 0 0 0 -1
 0.0.0.0 1036
 8 8 0
 #45036
-jail guard elf~
+guard jail elf~
 a jail guard~
 A &+Wguard&N is posted here, watching over the jail.
 ~
@@ -543,7 +543,7 @@ PE 0 1 0 -1
 0.0.0.0 0
 8 8 1
 #45038
-an elf receptionist~
+receptionist elf~
 an elven receptionist~
 The elven receptionist of Charing stands here ready to serve you.
 ~
@@ -555,7 +555,7 @@ PE 0 32 0 -1
 0.0.0.0 0
 8 8 2
 #45039
-elf elven woman commoner~
+commoner elf elven woman~
 an elven woman~
 &+mThis elf female commoner is here wandering about the city.&N
 ~
@@ -571,7 +571,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 2
 #45040
-elf guardian mage~
+guardian elf mage~
 the mage guard~
 A guardian mage is here, protecting the tower.
 ~
@@ -584,7 +584,7 @@ PE 5 2 0 -1
 2.4.8.6 230850
 8 8 1
 #45041
-temple guardian clay golem~
+golem temple guardian clay~
 &+Wa clay golem&N~
 &+WA clay golem is standing here guarding the temple.&N
 ~
@@ -599,7 +599,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 1
 #45042
-elf warrior guaridan~
+warrior elf guaridan~
 an elven warrior guaridan~
 &+gAn elven warrior is here, guarding the enterance to the guild.&N
 ~
@@ -629,7 +629,7 @@ A 0 1 0 -1
 0.0.0.0 0
 8 8 1
 #45044
-elven trail keeper elf~
+keeper elven trail elf~
 &+gan elven trail keeper&N~
 An &+Gelven trail keeper&N is here picking of debris from this part of the city.
 ~
@@ -644,7 +644,7 @@ PE 0 0 0 -1
 0.0.0.0 0
 8 8 1
 #45045
-elf elven traveler~
+traveler elf elven~
 an elven traveler~
 An elven traveler is wandering around here looking for adventure.
 ~
@@ -683,12 +683,12 @@ PE 5 2 0 -1
 3.4.8.6 234900
 8 8 1
 #45048
-elf palace attendant elven~
+attendant elf palace elven~
 &+ba palace attendant&N~
 &+bA palace attendant is here tending to the needs of the royal family.&N
 ~
    Dressed in a white suit, this elf serves the royal family.
->From running various errands to organzing important events,
+From running various errands to organzing important events,
 this attendant does not allow anything to interupt his duty.
 He pays no particular attention to you and continues working.
 ~
@@ -698,7 +698,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 1
 #45049
-the guardian spirit _no_move_~
+guardian spirit _no_move_~
 &+MThe guardian spirit&n~
 &+MThe guardian spirit stands here preventing any from passing.&n
 ~
@@ -723,7 +723,7 @@ R 0 0 0 -1
 0.0.0.0 388
 8 8 0
 #45051
-white rabbit~
+rabbit white~
 &+Wa white rabbit&n~
 &+WA white rabbit hops around here, wiggling its nose.&n
 ~
@@ -736,7 +736,7 @@ AH 0 0 0 -1
 0.0.0.0 388
 8 8 0
 #45052
-sneaky weasel~
+weasel sneaky~
 &+La sneaky weasel&n~
 &+LA sneaky weasel peers around cautiously, trying to avoid people.&n
 ~
@@ -749,7 +749,7 @@ A 0 0 0 -1
 0.0.0.0 648
 8 8 0
 #45053
-elf alkatia~
+alkatia elf~
 &+GAlkatia&N, &+gthe elven fletcher&N~
 &+GAlkatia stands here working on a new bow&N
 ~
@@ -764,7 +764,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 2
 #45054
-elf ranger antwin shopkeeper~
+antwin elf ranger shopkeeper~
 &+mAntwin&N, the shopkeeper~
 &+mAntwin&N, the shopkeeper, is here organizing his items for sale.
 ~
@@ -781,7 +781,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 1
 #45055
-elf bartender ranger~
+bartender elf ranger~
 &+man elven bartender&N~
 &+mAn elven ranger, with a mug in hand, is here tending the guild bar.
 ~
@@ -798,7 +798,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 1
 #45056
-elf guild storekeeper~
+storekeeper elf guild~
 the guild storekeeper astria~
 Astria the temple store keeper is here ready to offer you guild items for a discount.
 ~
@@ -811,7 +811,7 @@ PE 5 0 0 -1
 4.5.9.6 238950
 8 8 2
 #45057
-elf bartender cleric~
+bartender elf cleric~
 a bartender of the faith~
 The temple bartender stands here pouring drinks for the faithful.
 ~
@@ -824,7 +824,7 @@ PE 5 32 0 -1
 4.5.9.6 238950
 8 8 1
 #45058
-elf mage bartender kazoon~
+kazoon elf mage bartender~
 &+GKazoon,&N &+gthe bartender mage&N~
 The &+Gmystic bartender Kazoon&N is standing here adding his touch to his brew.
 ~
@@ -856,7 +856,7 @@ PE 0 512 0 -1
 0.0.0.0 0
 8 8 1
 #45060
-elf warrior shopkeeper~
+shopkeeper elf warrior~
 &+gthe guild shopkeeper&N~
 &+gThe guild shopkeeper is here ready to serve you.&N
 ~
@@ -873,7 +873,7 @@ PE 0 1 0 -1
 0.0.0.0 0
 8 8 1
 #45061
-elf rogue storekeeper~
+storekeeper elf rogue~
 &+ma tricky looking storekeeper&N~
 A &+mtricky looking rogue&N is here, minding the guild store.
 ~
@@ -905,7 +905,7 @@ P2 0 128 0 -1
 0.0.0.0 0
 8 8 1
 #45063
-barkeep mistress nelanna~
+nelanna barkeep mistress~
 &+WNelanna&N~
 &+WNelanna, The Mistress Barkeep&N stands here, flirting with the customers.
 ~
@@ -925,7 +925,7 @@ PE 0 2 0 -1
 0.0.0.0 0
 8 8 2
 #45064
-head lettuce~
+lettuce head~
 &+Ga head of lettuce&N~
 &+gA &+Ghead of lettuce&N &+gsits on the ground here growing quietly.
 ~
@@ -940,9 +940,9 @@ VT 0 1 0 2
 0.0.0.0 0
 8 8 0
 #45065
-elf guardian ranger~
+ranger elf guardian~
 the ranger guild guardian~
-The guardian to the ranger guild stands here guarding the enterance.
+The guardian to the ranger guild stands here guarding the entrance.
 ~
 This ranger seems to be rather intent on keeper non guild members out!
 ~
@@ -952,11 +952,11 @@ PE 5 2 0 -1
 2.4.8.6 230850
 8 8 1
 #45066
-elf necromacer guardian~
+necromancer elf guardian~
 the tower guardian~
-The guardian to the tower of necromacy stands here guarding the tower door.
+The guardian to the tower of necromancy stands here guarding the tower door.
 ~
-This aged necromacer refused to allow anyone who is not a
+This aged necromancer refused to allow anyone who is not a
 guild memeber access to the tower.
 ~
 2123 0 0 0 0 0 0 0 0 S
@@ -965,7 +965,7 @@ PE 5 1 0 -1
 2.4.8.6 230850
 8 8 1
 #45067
-elven usher~
+usher elven~
 &+Lthe half-elf usher&N~
 &+LA Half-Elven usher stands here, guarding the backstage entrance.&N
 ~
@@ -981,7 +981,7 @@ P2 5 1 0 -1
 2.4.8.6 230850
 8 8 1
 #45068
-elf ranger master gendel ginzi~
+gendel ginzi elf ranger master~
 &+YGendel Ginzi&N, the great ranger&N~
 &+YGendel Ginzi&N, the great ranger, stands here demonstrating a new skill.&N
 ~
@@ -1031,7 +1031,7 @@ VT 0 1 0 2
 0.0.0.0 0
 8 8 0
 #45071
-drow prisoner~
+prisoner drow~
 a weakened &+mdrow prisoner&N~
 A weakened &+mdrow prisoner&N is shackled here, ready for execution.
 ~
@@ -1060,7 +1060,7 @@ PE 0 0 0 -1
 0.0.0.0 0
 8 8 1
 #45073
-an elven cat~
+cat elven~
 an elven cat~
 An elven cat is here mewing for attention, and rubbing your leg.
 ~
@@ -1073,7 +1073,7 @@ A 0 0 0 -1
 0.0.0.0 129
 8 8 0
 #45074
-elven horse~
+horse elven~
 &+Wa white elven horse&n~
 &+WA mighty white elven horse stands here, prodding the ground&n.
 ~
@@ -1111,7 +1111,7 @@ A 0 0 0 -1
 0.0.0.0 9720
 8 8 1
 #45077
-young woman elf~
+woman young elf~
 young woman~
 A young and pretty elven woman sits here conversing with friends.
 ~
@@ -1125,7 +1125,7 @@ PE 0 0 0 -1
 4.2.0.0 1036
 8 8 2
 #45078
-young male elf~
+male young elf~
 &+ga young male elf&n~
 A young elven male is here, trying to attract Nelanna's attention.
 ~
@@ -1140,7 +1140,7 @@ PE 0 0 0 -1
 4.3.0.0 1166
 8 8 1
 #45079
-wicked elf bouncer~
+bouncer wicked elf~
 the commons bouncer~
 &+LA wicked looking elf bouncer is here, scanning the area for trouble.&N
 ~
@@ -1155,7 +1155,7 @@ PE 0 1 0 -1
 0.9.3.0 9720
 8 8 1
 #45080
-drunk elf patron~
+patron drunk elf~
 a drunk elf~
 A drunken elf waves around his tankard, singing loudly with his friends.
 ~
@@ -1185,7 +1185,7 @@ P2 0 32768 0 -1
 5.3.0.0 1296
 8 8 1
 #45082
-halfelf half elf boy~
+boy halfelf half elf~
 a half-elf boy~
 A half-elf boy stands here, dreaming of becomming a performer.
 ~
@@ -1231,7 +1231,7 @@ P2 0 32768 0 -1
 0.2.7.6 222750
 8 8 1
 #45085
-elf arch-sorc mage master morlyntra sorcerer~
+morlyntra elf arch-sorc mage master sorcerer~
 &+rMorlyntra&N~
 &+RMorlyntra&N, the great sorceress of Charing, is here ready to train you.
 ~
@@ -1293,7 +1293,7 @@ PH 1 32 0 -1
 0.3.1.5 121500
 8 8 1
 #45089
-elven acolyte young cleric~
+cleric elven acolyte young~
 &+ma elven cleric&N~
 &+mThis elven cleric is here enjoying a drink.&N
 ~

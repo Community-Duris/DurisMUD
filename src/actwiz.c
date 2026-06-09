@@ -90,7 +90,6 @@ extern const flagDef                    affected3_bits[];
 extern const flagDef                    affected4_bits[];
 extern const flagDef                    affected5_bits[];
 extern const char                      *item_types[];
-extern const char                      *language_names[];
 extern const char                      *missileweapons[];
 extern const char                      *shot_types[];
 extern const char                      *player_bits[];
@@ -2795,19 +2794,6 @@ void do_stat(P_char ch, char *argument, int cmd)
 			strcat(o_buf, buf);
 		}
 
-		if (IS_PC(k))
-		{
-			snprintf(buf, MAX_STRING_LENGTH, "&+YLanguages known:&n\n");
-			for (i = 1; i <= TONGUE_GOD; i++)
-			{
-				snprintf(buf + strlen(buf), MAX_STRING_LENGTH - strlen(buf), "&+Y%-12s&n%3d%% ", language_names[i - 1], GET_LANGUAGE(k, i));
-				if (!(i % 4))
-					strcat(buf, "\n");
-			}
-			if (TONGUE_GOD % 4)
-				strcat(buf, "\n");
-			strcat(o_buf, buf);
-		}
 		/* Show player on mobs piss list */
 		if (IS_NPC(k) && IS_SET(k->specials.act, ACT_MEMORY))
 		{
@@ -5289,13 +5275,6 @@ void NewbySkillSet(P_char ch, bool fullReset)
 	// Walk through skills..
 	for (i = FIRST_SKILL; i <= LAST_SKILL; i++)
 	{
-		// #ifdef SKILLPOINTS
-		//     if(SKILL_DATA_ALL(ch, i).rlevel[0] &&
-		//         SKILL_DATA_ALL(ch, i).rlevel[0] <= GET_LEVEL(ch) )
-		//     {
-		//       ch->only.pc->skills[i].learned = 10;
-		//       ch->only.pc->skills[i].taught = 10;
-		// #else
 		if (!fullReset && (IS_EPIC_SKILL(i) || IS_TRADESKILL(i)))
 		{
 			continue;
@@ -5305,7 +5284,6 @@ void NewbySkillSet(P_char ch, bool fullReset)
 		{
 			ch->only.pc->skills[i].learned = number(5, 20);
 			ch->only.pc->skills[i].taught  = SKILL_DATA_ALL(ch, i).maxlearn[0] - 10;
-			// #endif
 		}
 		else if (SKILL_DATA_ALL(ch, i).rlevel[0] && IS_SPELL(i) && SKILL_DATA_ALL(ch, i).rlevel[0] <= GET_LEVEL(ch) && praying_class(ch))
 		{
@@ -5348,8 +5326,6 @@ void do_start(P_char ch, int nomsg)
 	{
 		load_obj_to_newbies(ch);
 	}
-
-	init_defaultlanguages(ch);
 
 	if (nomsg == CMD_MULTICLASS)
 	{
@@ -11984,8 +11960,8 @@ void do_where(P_char ch, char *argument, int cmd)
 	char           *args;
 	int             length = 0, count = 0, o_count = 0, v_num;
 	bool            flag;
-	register P_char i;
-	register P_obj  k;
+	P_char i;
+	P_obj  k;
 	P_desc          d;
 	P_char          t_ch;
 

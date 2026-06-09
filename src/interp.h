@@ -467,7 +467,7 @@ extern unsigned int game_locked_level;
 #define CMD_FEIGNDEATH      437
 #define CMD_CHANT           438
 #define CMD_DRAG            439
-#define CMD_SPEAK           440
+#define CMD_SPEAK           440 // removed
 #define CMD_RELOAD          441
 #define CMD_DRAGONPUNCH     442
 #define CMD_REVOKE          443

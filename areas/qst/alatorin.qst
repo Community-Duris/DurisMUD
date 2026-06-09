@@ -1242,10 +1242,10 @@ R E 500000
 G I 83509
 Q
 ~
-R I 83369
 R I 83599
 R I 83599
 R E 250000
+G I 83369
 QA
 &N$n excitedly snatches the dragonscales from $N.
 &+Y'Nicely done!' &Nhe bellows, fondling the dragonhide with bedazzlement.
@@ -4076,6 +4076,15 @@ QA
 R I 83258
 G I 55033
 S
+#83281
+QA
+~
+R I 83626
+G I 83626
+D
+&NA priest of &+WThe High Old Ones&N' &-L&+Yflashes&N out of existence!
+~
+S
 #83283
 M
 qc_action 500~
@@ -4086,6 +4095,15 @@ S
 M
 qc_action 600~
 &+LA strange &N&+mgloomwing &+Lflies by in a distant darkness, leaving a trail of &N&+bblack haze&+L behind it.
+~
+S
+#83288
+QA
+~
+R I 83626
+G I 83626
+D
+&NA priest of &+RThe High Old Ones&N' &-L&+Yflashes&N out of existence!
 ~
 S
 #83289
@@ -4129,7 +4147,7 @@ hi hello~
 &N$n says &+Y"Gimbrin's the name. Smithin's the game. I work with metal
 &+Ymaterials, ye know, from salvaging armor? Here's what I can do:
 
-&+YGive me eight pieces of the same top tier metal materials, &+mso&+Mme &+mte&+Mmp&+mer&+Med&N
+&+YGive me six pieces of the same top tier metal materials, &+mso&+Mme &+mte&+Mmp&+mer&+Med&N
 &+mmit&+Mhri&+ml ar&+mmo&+Mr&+Y, so I know what I'm workin with, and &Nfifty &+Wplatinum coins
 &+Yfor me efforts, and I'll smith ye somethin' boundta' knot their beards!'
 &+Y'If it's a premium metal,' &N$n &Nadds &+Y'Add a &+Rgn&+romi&+Rsh &+Lshopkeepers token&+Y.'
@@ -4146,10 +4164,10 @@ steel: &Na rare piece of &+bcold&+csteel&N
 &+Y*&+mm&+Mi&+mt&+Mh&+mr&+Mi&+ml&N: &+Can ancient chunk of dwarven mithril&N (&+Y* &N+&+Rgn&+romi&+Rsh &+Lshopkeepers token&N)
 &+Y*&+La&+md&+La&+mm&+La&+mn&+Lt&+mi&+Lu&+mm&N: &+Lsome ancient &+ma&+Ld&+ma&+Lm&+ma&+Ln&+mn&+Lt&+mi&+Lu&+mm&N (&+Y* &N+&+Rgn&+romi&+Rsh &+Lshopkeepers token&N)
 
-&+YFor example: give me eight &+crare pieces of &+Bcold-&+Ciron&+Y, &+mso&+Mme te&+mmpe&+Mred&+m mit&+Mhr&+mil
+&+YFor example: give me six &+crare pieces of &+Bcold-&+Ciron&+Y, &+mso&+Mme te&+mmpe&+Mred&+m mit&+Mhr&+mil
 &+Mar&+mmpla&+Mtes&+Y from Steelgrip's Depot, and &Nfifty &+Wplatinum coins&+Y, and I'll smith
 &+Yfor ye some special armplates!'
-&+YGive me eight &+Lsome ancient &+ma&+Ld&+ma&+Lm&+ma&+Ln&+mn&+Lt&+mi&+Lu&+mm&N, &+mso&+Mme te&+mmpe&+Mred &+mmit&+Mhril &+mbo&+Mots&+Y,
+&+YGive me six &+Lsome ancient &+ma&+Ld&+ma&+Lm&+ma&+Ln&+mn&+Lt&+mi&+Lu&+mm&N, &+mso&+Mme te&+mmpe&+Mred &+mmit&+Mhril &+mbo&+Mots&+Y,
 &Nfifty &+Wplatinum coins&+Y, and &+La &+Rgn&+romi&+Rsh &+Lshopkeepers token&+Y, and I'll smith
 &+Yfor ye some REALLY special boots!'"
 ~
@@ -4162,8 +4180,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83631
-G I 400114
-G I 400114
 G I 400114
 G I 400114
 G I 400114
@@ -4187,8 +4203,6 @@ G I 400114
 G I 400114
 G I 400114
 G I 400114
-G I 400114
-G I 400114
 G I 83188
 G C 50000
 QA
@@ -4200,8 +4214,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 97051
-G I 400114
-G I 400114
 G I 400114
 G I 400114
 G I 400114
@@ -4225,8 +4237,6 @@ G I 400114
 G I 400114
 G I 400114
 G I 400114
-G I 400114
-G I 400114
 G I 83191
 G C 50000
 QA
@@ -4238,8 +4248,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83632
-G I 400114
-G I 400114
 G I 400114
 G I 400114
 G I 400114
@@ -4263,8 +4271,6 @@ G I 400124
 G I 400124
 G I 400124
 G I 400124
-G I 400124
-G I 400124
 G I 83189
 G C 50000
 QA
@@ -4276,8 +4282,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 97092
-G I 400124
-G I 400124
 G I 400124
 G I 400124
 G I 400124
@@ -4301,8 +4305,6 @@ G I 400124
 G I 400124
 G I 400124
 G I 400124
-G I 400124
-G I 400124
 G I 83190
 G C 50000
 QA
@@ -4320,8 +4322,6 @@ G I 400124
 G I 400124
 G I 400124
 G I 400124
-G I 400124
-G I 400124
 G I 83191
 G C 50000
 QA
@@ -4333,8 +4333,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83632
-G I 400124
-G I 400124
 G I 400124
 G I 400124
 G I 400124
@@ -4358,8 +4356,6 @@ G I 400129
 G I 400129
 G I 400129
 G I 400129
-G I 400129
-G I 400129
 G I 83189
 G C 50000
 QA
@@ -4371,8 +4367,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83636
-G I 400129
-G I 400129
 G I 400129
 G I 400129
 G I 400129
@@ -4396,8 +4390,6 @@ G I 400129
 G I 400129
 G I 400129
 G I 400129
-G I 400129
-G I 400129
 G I 83190
 G C 50000
 QA
@@ -4409,8 +4401,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83635
-G I 400129
-G I 400129
 G I 400129
 G I 400129
 G I 400129
@@ -4434,8 +4424,6 @@ G I 400129
 G I 400129
 G I 400129
 G I 400129
-G I 400129
-G I 400129
 G I 83192
 G C 50000
 QA
@@ -4447,8 +4435,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83638
-G I 400134
-G I 400134
 G I 400134
 G I 400134
 G I 400134
@@ -4472,8 +4458,6 @@ G I 400134
 G I 400134
 G I 400134
 G I 400134
-G I 400134
-G I 400134
 G I 83188
 G C 50000
 QA
@@ -4485,8 +4469,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83640
-G I 400134
-G I 400134
 G I 400134
 G I 400134
 G I 400134
@@ -4510,8 +4492,6 @@ G I 400134
 G I 400134
 G I 400134
 G I 400134
-G I 400134
-G I 400134
 G I 83191
 G C 50000
 QA
@@ -4523,8 +4503,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83642
-G I 400134
-G I 400134
 G I 400134
 G I 400134
 G I 400134
@@ -4548,8 +4526,6 @@ G I 400139
 G I 400139
 G I 400139
 G I 400139
-G I 400139
-G I 400139
 G I 83189
 G C 50000
 QA
@@ -4561,8 +4537,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83644
-G I 400139
-G I 400139
 G I 400139
 G I 400139
 G I 400139
@@ -4586,8 +4560,6 @@ G I 400139
 G I 400139
 G I 400139
 G I 400139
-G I 400139
-G I 400139
 G I 83190
 G C 50000
 QA
@@ -4599,8 +4571,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83646
-G I 400139
-G I 400139
 G I 400139
 G I 400139
 G I 400139
@@ -4624,8 +4594,6 @@ G I 400139
 G I 400139
 G I 400139
 G I 400139
-G I 400139
-G I 400139
 G I 83192
 G C 50000
 QA
@@ -4637,8 +4605,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83648
-G I 400144
-G I 400144
 G I 400144
 G I 400144
 G I 400144
@@ -4662,8 +4628,6 @@ G I 400144
 G I 400144
 G I 400144
 G I 400144
-G I 400144
-G I 400144
 G I 83188
 G C 50000
 QA
@@ -4675,8 +4639,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83650
-G I 400144
-G I 400144
 G I 400144
 G I 400144
 G I 400144
@@ -4700,8 +4662,6 @@ G I 400144
 G I 400144
 G I 400144
 G I 400144
-G I 400144
-G I 400144
 G I 83191
 G C 50000
 QA
@@ -4713,8 +4673,6 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83652
-G I 400144
-G I 400144
 G I 400144
 G I 400144
 G I 400144
@@ -4738,10 +4696,9 @@ G I 400154
 G I 400154
 G I 400154
 G I 400154
-G I 400154
-G I 400154
 G I 83189
 G C 50000
+G I 55033
 QA
 &N$n &ndrops the &+cm&+Ce&+ct&+Ca&+cl&n materials into a huge, &+Yg&+Rl&+rowi&+Rn&+Yg&+L crucible.
 After several minutes, the smelting process complete, $n pours it
@@ -4751,8 +4708,7 @@ An hour later, after a magnificent display of &+Ys&+rm&+Yi&+rt&+Yh&+re&+Yr&+ry, 
 runs a rag across his completed creation and hands it to $N.
 ~
 R I 83654
-G I 400154
-G I 400154
+G I 55033
 G I 400154
 G I 400154
 G I 400154
@@ -4776,10 +4732,9 @@ G I 400154
 G I 400154
 G I 400154
 G I 400154
-G I 400154
-G I 400154
 G I 83190
 G C 50000
+G I 55033
 QA
 &N$n &ndrops the &+cm&+Ce&+ct&+Ca&+cl&n materials into a huge, &+Yg&+Rl&+rowi&+Rn&+Yg&+L crucible.
 After several minutes, the smelting process complete, $n pours it
@@ -4795,8 +4750,7 @@ G I 400154
 G I 400154
 G I 400154
 G I 400154
-G I 400154
-G I 400154
+G I 55033
 G I 83191
 G C 50000
 QA
@@ -4814,10 +4768,9 @@ G I 400154
 G I 400154
 G I 400154
 G I 400154
-G I 400154
-G I 400154
 G I 83192
 G C 50000
+G I 55033
 QA
 &N$n &ndrops the &+cm&+Ce&+ct&+Ca&+cl&n materials into a huge, &+Yg&+Rl&+rowi&+Rn&+Yg&+L crucible.
 After several minutes, the smelting process complete, $n pours it
@@ -4833,10 +4786,9 @@ G I 400149
 G I 400149
 G I 400149
 G I 400149
-G I 400149
-G I 400149
 G I 83189
 G C 50000
+G I 55033
 QA
 &N$n &ndrops the &+cm&+Ce&+ct&+Ca&+cl&n materials into a huge, &+Yg&+Rl&+rowi&+Rn&+Yg&+L crucible.
 After several minutes, the smelting process complete, $n pours it
@@ -4852,8 +4804,7 @@ G I 400149
 G I 400149
 G I 400149
 G I 400149
-G I 400149
-G I 400149
+G I 55033
 G I 83188
 G C 50000
 QA
@@ -4871,8 +4822,7 @@ G I 400149
 G I 400149
 G I 400149
 G I 400149
-G I 400149
-G I 400149
+G I 55033
 G I 83190
 G C 50000
 QA
@@ -4890,8 +4840,7 @@ G I 400149
 G I 400149
 G I 400149
 G I 400149
-G I 400149
-G I 400149
+G I 55033
 G I 83191
 G C 50000
 QA
@@ -4909,8 +4858,7 @@ G I 400149
 G I 400149
 G I 400149
 G I 400149
-G I 400149
-G I 400149
+G I 55033
 G I 83192
 G C 50000
 QA
@@ -4928,8 +4876,7 @@ G I 400184
 G I 400184
 G I 400184
 G I 400184
-G I 400184
-G I 400184
+G I 55033
 G I 83189
 G C 50000
 QA
@@ -4947,8 +4894,7 @@ G I 400184
 G I 400184
 G I 400184
 G I 400184
-G I 400184
-G I 400184
+G I 55033
 G I 83188
 G C 50000
 QA
@@ -4966,8 +4912,7 @@ G I 400184
 G I 400184
 G I 400184
 G I 400184
-G I 400184
-G I 400184
+G I 55033
 G I 83190
 G C 50000
 QA
@@ -4985,8 +4930,7 @@ G I 400184
 G I 400184
 G I 400184
 G I 400184
-G I 400184
-G I 400184
+G I 55033
 G I 83191
 G C 50000
 QA
@@ -5004,8 +4948,7 @@ G I 400184
 G I 400184
 G I 400184
 G I 400184
-G I 400184
-G I 400184
+G I 55033
 G I 83192
 G C 50000
 QA
@@ -5023,8 +4966,7 @@ G I 400189
 G I 400189
 G I 400189
 G I 400189
-G I 400189
-G I 400189
+G I 55033
 G I 83189
 G C 50000
 QA
@@ -5042,8 +4984,7 @@ G I 400189
 G I 400189
 G I 400189
 G I 400189
-G I 400189
-G I 400189
+G I 55033
 G I 83188
 G C 50000
 QA
@@ -5061,8 +5002,7 @@ G I 400189
 G I 400189
 G I 400189
 G I 400189
-G I 400189
-G I 400189
+G I 55033
 G I 83190
 G C 50000
 QA
@@ -5080,8 +5020,7 @@ G I 400189
 G I 400189
 G I 400189
 G I 400189
-G I 400189
-G I 400189
+G I 55033
 G I 83191
 G C 50000
 QA
@@ -5099,8 +5038,7 @@ G I 400189
 G I 400189
 G I 400189
 G I 400189
-G I 400189
-G I 400189
+G I 55033
 G I 83192
 G C 50000
 QA
@@ -5118,8 +5056,7 @@ G I 400199
 G I 400199
 G I 400199
 G I 400199
-G I 400199
-G I 400199
+G I 55033
 G I 83189
 G C 50000
 QA
@@ -5137,8 +5074,7 @@ G I 400199
 G I 400199
 G I 400199
 G I 400199
-G I 400199
-G I 400199
+G I 55033
 G I 83188
 G C 50000
 QA
@@ -5156,8 +5092,7 @@ G I 400199
 G I 400199
 G I 400199
 G I 400199
-G I 400199
-G I 400199
+G I 55033
 G I 83190
 G C 50000
 QA
@@ -5175,8 +5110,7 @@ G I 400199
 G I 400199
 G I 400199
 G I 400199
-G I 400199
-G I 400199
+G I 55033
 G I 83191
 G C 50000
 QA
@@ -5194,8 +5128,7 @@ G I 400199
 G I 400199
 G I 400199
 G I 400199
-G I 400199
-G I 400199
+G I 55033
 G I 83192
 G C 50000
 S
@@ -5640,7 +5573,7 @@ silver dragon scale scales chromium dragonscales dragonscale~
 &n$n turns to $N, grins and says '&+WGreetings.  I will forge your tempered &+Mmithril &+Wleg plates, arm plates, breastplate, or helmet into a scaled masterpiece.'
 &NCracking his knuckles, $n continues '&+WI work in three types of scale - &Nc&+Wh&+Cr&+Rom&+Ci&+Wu&Nm &+Ldragon&N&+cscale&+W, which can be found amongst the rare chromium dragons around the realms, special &+Wsil&+Cv&N&+cer dragonscales &+Wfound from the &+Csilver dragons &+Wof &N&+yShan&+La&n&+yt&+La&N&+yr&+W, as well as common &+Ldragon scales &+Wfound on any dragon.'
 &N$n spits on his hands, rubs them together, and grips his hammer.
-&+W'I forge these scales with my hammer, here, onto tempered mithril that Steelgrip makes.'
+&+W'I &+Rforge&+W these scales with my hammer, here, onto tempered mithril that Steelgrip makes.'
 
 &NAfter a moment, $n whispers &+W'Don't forget to ask me about &+Ysalvaged&+W dragonscales.'
 ~
@@ -5651,11 +5584,12 @@ hi hello~
 &N$n peers closer at $N and says &+W'Or, ye could ask me about &+Csalvaged&+W dragonscales!'
 ~
 MA
-forge equipment mithril breastplate platemail arm leg plates helmet~
+forge equipment mithril breastplate platemail arm leg plates helmet boots sabatons feet~
 &n$n nods at $N and says &+W'Simply give me one of the following:
 &+Mso&N&+mme te&+Mmper&N&+med &+Cmithril &n&+ma&+Mrm plates&N
 &+Mso&N&+mme te&+Mmper&N&+med &+Cmithril &N&+ml&+Meg plates&N
 &+Ma &N&+mtemp&+Mered &+Cmithril &+Mhel&N&+cmet&N
+&+Msome &N&+mtemp&+Mered &+Cmithril &+Mbo&+mots&N
 &N&+ma te&+Mmp&N&+mer&+Med &+Cmithril &N&+mbr&+Mea&N&+mst&+Mpl&N&+mate&N
 
 &+W...and one of the following:
@@ -5923,6 +5857,40 @@ R E 500000
 G I 120059
 G I 55033
 G I 55033
+QA
+&N$n smelts the &N&+mtempered &+Cmithril&+L, emblazoning it with &+Cdragonscales.
+~
+R I 31544
+G I 78414
+G I 78414
+G I 78414
+G I 78414
+G I 83188
+G C 100000
+QA
+&N$n takes the &+Wscales &N&+mand tosses the &+Cmithril &N&+marmor &ninto the forge.
+~
+R I 83700
+G I 83377
+G C 100000
+G I 83192
+QA
+&N$n takes the &+Wscales &N&+mand tosses the &+Cmithril &N&+marmor &ninto the forge.
+~
+R I 83699
+G I 83313
+G C 100000
+G I 83192
+QA
+&N$n takes the &+Wscales &N&+mand tosses the &+Cmithril &N&+marmor &ninto the forge.
+~
+R I 83701
+G I 392
+G I 392
+G I 392
+G I 392
+G C 100000
+G I 83192
 S
 #83348
 MA
@@ -6061,6 +6029,13 @@ R I 400233
 G I 83415
 D
 &N&+r'Enjoy your reward' he says 'Your eternal reward.'
+~
+S
+#83367
+M
+qc_action 200~
+&+cThe distant roar of thunder and brief flashes amongst the dark
+&+cclouds of the horizon hint at a coming shorefront storm.
 ~
 S
 #83378
@@ -7459,5 +7434,45 @@ R I 400234
 G I 83626
 D
 &+WThe blazing avatar of Moradin bows and flashes out of existence.
+~
+S
+#83524
+MA
+hi hello~
+&N$n scurries over to $N and says &+R'Well met! Ah, have you ever
+&+Rseen such a place? I have been to the surface many times, and
+&+Rit is always breathtaking!'
+
+&NAfter several moments of peering in wonder out a nearby window,
+&+RDebmawr&N grumbles to $N &+R'That moneychanger, though, he is
+&+Rrobbing me blind!'
+~
+MA
+moneychanger bank banker robbing rob blind~
+&N$n frowns and says &+R'Ye see, each time I change coin, I get less
+&+Rand less! Seven rock-turns ago, we'd agree on fifteen hundred
+&+Rsurface coins. Now? I'm lucky to get half that! Ye look smart, $N..
+&+Rmaybe we can make a deal!' &Nhe exclaims, clapping his hands.
+
+&+R'Give me &none thousand &+Wplatinum coins&+R, and I'll give ye
+&+Rmy last svirfneblin noblemark, or what ye surface folk refer
+&+Rto as a &+rgn&+Rom&+rish &+Lshopkeepers token&+R. What do ye say?'&N
+~
+QA
+&N$n smiles and cups his hands, allowing $N to drop in the &+ycoin-sack&N.
+&NAfter several minutes of tediously inspecting, biting, and neatly
+stacking each &+Wcoin&N into neat piles, $n finally stands up and
+says &+R'One thousand! Ye got yerself a deal, meester $N!'
+~
+R I 55033
+G C 1000000
+D
+&N$n bows deeply before $N.
+&+R'As fer me', &Nhe says, adjusting his belt and rightening the
+seemingly under-packed rucksack over his shoulder, &+R'I'm off to
+&+Rsee the world!'
+
+&N$n salutes again and then waddles through the doors and into
+&nthe streets of the port.
 ~
 S

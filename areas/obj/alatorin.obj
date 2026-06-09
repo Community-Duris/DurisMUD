@@ -1653,7 +1653,7 @@ pair chromium dragonscale vambraces~
 &+Lwith sparkling magic.
 ~
 A
-35 3
+35 4
 A
 23 -4
 #83211
@@ -1669,7 +1669,7 @@ chromium pair dragonscale greaves~
    &+LThese greaves are crafted of glowing, magical chromium dragonscales.
 ~
 A
-35 3
+35 4
 A
 23 -4
 #83212
@@ -2357,7 +2357,7 @@ ancient sacred stone key~
 &+yAn ancient &+ykey&+Lof the &+Ws&+ya&+Wc&+yr&+We&+yd &+Ws&+yt&+Wo&+yn&+We&+y points downward with a &+cmagi&+Ccal &+cm&+Ca&+cg&+Cn&+ce&+Ct&+ci&+Cs&+cm&+L.~
 ~
 18 11 2 0 7 0 0 8404993 64 0 0
-0 95 0 0 0 0 0 0
+0 50 0 0 0 0 0 0
 0 500000 100
 E
 ancient cracked stone key~
@@ -2407,7 +2407,7 @@ A
 A
 19 5
 #83257
-vapor crown limbo~
+vapor crown limbo _noquest_~
 &+cthe &Nvapor &N&+ccrown of &+CL&N&+cimbo&N~
 &+cA strange crown made of &Nswirling vapor &N&+cfloats here.~
 ~
@@ -4286,7 +4286,7 @@ bloody head lord deramuth~
 &+rthe bloody head of &+WLord Deramuth&N~
 &+rThe bloody head of &+WLord Deramuth&+r lays here unmoving.~
 ~
-8 2 2 0 5 0 8392704 16385 0 0 0
+8 2 2 0 5 0 8392704 16385 32768 0 0
 0 0 0 0 0 0 0 0
 0 500 100
 E
@@ -4299,11 +4299,11 @@ ornate detailed ornately-detailed armor plating armor-plating siege master~
 &+Lsome &+Co&+cr&+Cn&+ca&+Ct&+ce&+Cl&+cy-&+Cd&+ce&+Ct&+ca&+Ci&+cl&+Ce&+cd &+ma&+Lr&+mm&+Lo&+mr&+L-&+cplating &+Lof the &+Ys&+ri&+Ye&+rg&+Ye m&+ra&+Ys&+rt&+Ye&+rr&N~
 &+LSome &+Co&+cr&+Cn&+ca&+Ct&+ce&+Cl&+cy-&+Cd&+ce&+Ct&+ca&+Ci&+cl&+Ce&+cd &+ma&+Lr&+mm&+Lo&+mr&+L-&+cplating &+Lof the &+Ys&+ri&+Ye&+rg&+Ye m&+ra&+Ys&+rt&+Ye&+rr&N lies here.~
 ~
-9 19 4 0 11 0 0 377 64 0 0
+9 19 4 0 11 0 0 553648505 64 0 0
 25 0 0 5 0 0 0 0
 2 500000 100 73728 0 0 33554432
 A
-17 -25
+17 -40
 A
 54 40
 #83371
@@ -5377,7 +5377,7 @@ shimmering portal~
 &+WA sh&+Cim&+Wme&+Cri&+Wng portal burns with &+Yblazing &+Wlight&N.~
 ~
 25 1 3 0 7 0 0 0 64 0 0
-83831 7 -1 0 0 0 0 0
+83188 7 -1 0 0 0 0 0
 0 0 100
 E
 shimmering portal~
@@ -8736,8 +8736,8 @@ chromium claw~
 &+LA &Nch&+Rr&+com&+Ri&Nu&+Wm &+Ldragon's &+cclaw&+L lies here.~
 ~
 5 35 4 0 15 0 0 8193 64 0 0
-9 3 6 0 0 0 0 0
-1 26334 100
+9 5 3 0 0 0 0 0
+1 26334 100 0 192 0 0
 E
 chromium claw~
 &+L   This dragon's foot bears 3 large claws, the middle of which being
@@ -8809,8 +8809,8 @@ tight black leather suit gnomish workmans leather~
 &+LA tight, black leather suit of gnomish workmans' leather has been left here.~
 ~
 9 14 2 0 15 0 512 9 0 0 2148139200
-22 0 0 2 0 0 0 0
--100 235441 100 512 0 0 0
+40 0 0 2 0 0 0 0
+-100 235441 100
 E
 tight black leather suit gnomish workmans leather~
 &+LThis gnome-sized jumpsuit is made of finely-cured black leather and
@@ -9305,9 +9305,9 @@ cold-metal toe caps cold metal~
 &+Cfor the elite soldiers of the mountain folk.
 ~
 A
-18 1
+18 2
 A
-19 1
+19 2
 #83633
 finely crafted brass plates arm armplates~
 &n&+ysome finely crafted armplates of brass&N~
@@ -9317,7 +9317,7 @@ finely crafted brass plates arm armplates~
 15 0 0 0 0 0 0 0
 3 55000 100
 A
-13 10
+13 15
 A
 19 3
 #83634
@@ -9329,7 +9329,7 @@ finely crafted brass sabatons~
 15 0 0 0 0 0 0 0
 3 55000 100
 A
-13 10
+13 15
 A
 19 3
 #83635
@@ -9341,7 +9341,7 @@ finely crafted legplates brass leg plates~
 15 0 0 0 0 0 0 0
 3 55000 100
 A
-13 10
+13 15
 A
 19 3
 #83636
@@ -9353,7 +9353,7 @@ finely crafted brass breastplate breast plate~
 15 0 0 0 0 0 0 0
 3 55000 100
 A
-13 20
+13 25
 A
 19 3
 #83637
@@ -9365,7 +9365,7 @@ finely crafted brass helmet~
 15 0 0 0 0 0 0 0
 3 55000 100
 A
-13 10
+13 15
 A
 19 3
 #83638
@@ -9374,60 +9374,60 @@ dwarven helmet polished bronze~
 &+yA d&+Yw&+ya&+Yr&+yv&+Ye&+yn helmet of polished bronze&n lies here.~
 ~
 9 20 3 0 11 0 0 17 64 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 55000 100
 A
-22 -2
+22 -3
 A
-23 -2
+23 -3
 #83639
 dwarven armor polished bronze~
 &+ysome d&+Yw&+ya&+Yr&+yv&+Ye&+yn armor of polished bronze&n~
 &+ySome d&+Yw&+ya&+Yr&+yv&+Ye&+yn armor of polished bronze&n lies here.~
 ~
 9 20 3 0 11 0 0 9 64 0 0
-20 0 0 0 0 0 0 0
+50 0 0 0 0 0 0 0
 3 55000 100
 A
-22 -3
+22 -4
 A
-23 -3
+23 -4
 #83640
 dwarven polished bronze arm plates armplates~
 &+ysome d&+Yw&+ya&+Yr&+yv&+Ye&+yn armplates of polished bronze&n~
 &+ySome d&+Yw&+ya&+Yr&+yv&+Ye&+yn armplates of polished bronze&n lies here.~
 ~
 9 20 3 0 11 0 0 257 64 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 55000 100
 A
-22 -2
+22 -3
 A
-23 -2
+23 -3
 #83641
 dwarven polished bronze legplates leg plates~
 &+ysome d&+Yw&+ya&+Yr&+yv&+Ye&+yn legplates of polished bronze&n~
 &+ySome d&+Yw&+ya&+Yr&+yv&+Ye&+yn legplates of polished bronze&n lies here.~
 ~
 9 20 3 0 11 0 0 33 64 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 55000 100
 A
-22 -2
+22 -3
 A
-23 -2
+23 -3
 #83642
 dwarven boots polished bronze~
 &+ysome d&+Yw&+ya&+Yr&+yv&+Ye&+yn boots of polished bronze&n~
 &+ySome d&+Yw&+ya&+Yr&+yv&+Ye&+yn boots of polished bronze&n lies here.~
 ~
 9 20 3 0 11 0 0 65 64 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 55000 100
 A
-22 -2
+22 -3
 A
-23 -2
+23 -3
 #83643
 blessed copper circlet~
 &+ya &+yb&+Cl&+ye&+Cs&+ys&+Ce&+yd c&No&+ypp&Ne&+yr circlet&n~
@@ -9439,7 +9439,7 @@ blessed copper circlet~
 A
 34 2
 A
-24 -1
+24 -2
 #83644
 blessed copper chestplate~
 &+ya &+yb&+Cl&+ye&+Cs&+ys&+Ce&+yd c&No&+ypp&Ne&+yr chestplate&n~
@@ -9451,7 +9451,7 @@ blessed copper chestplate~
 A
 34 3
 A
-24 -1
+24 -3
 #83645
 blessed copper armplates arm plates~
 &+ysome &+yb&+Cl&+ye&+Cs&+ys&+Ce&+yd c&No&+ypp&Ne&+yr armplates&n~
@@ -9463,7 +9463,7 @@ blessed copper armplates arm plates~
 A
 34 2
 A
-24 -1
+24 -2
 #83646
 blessed copper legplates leg plates~
 &+ysome &+yb&+Cl&+ye&+Cs&+ys&+Ce&+yd c&No&+ypp&Ne&+yr legplates&n~
@@ -9475,7 +9475,7 @@ blessed copper legplates leg plates~
 A
 34 2
 A
-24 -1
+24 -2
 #83647
 blessed copper toe caps toe-caps~
 &+ysome &+yb&+Cl&+ye&+Cs&+ys&+Ce&+yd c&No&+ypp&Ne&+yr toe-caps&n~
@@ -9487,7 +9487,7 @@ blessed copper toe caps toe-caps~
 A
 34 2
 A
-24 -1
+24 -2
 #83648
 well-crafted well crafted silver chainmail hood~
 &+Ca w&+ce&+Cll-cr&+ca&+Cft&+ce&+Cd s&+ci&+Clv&+ce&+Cr ch&+cai&+Cnm&+cai&+Cl h&+coo&+Cd&N~
@@ -9497,9 +9497,9 @@ well-crafted well crafted silver chainmail hood~
 15 0 0 0 0 0 0 0
 0 85000 100
 A
-24 -2
+24 -3
 A
-20 -2
+20 -3
 #83649
 well-crafted well crafted silver chainmail tunic~
 &+Ca w&+ce&+Cll-cr&+ca&+Cft&+ce&+Cd s&+ci&+Clv&+ce&+Cr ch&+cai&+Cnm&+cai&+Cl t&+cu&+Cn&+ci&+Cc&N~
@@ -9509,9 +9509,9 @@ well-crafted well crafted silver chainmail tunic~
 15 0 0 0 0 0 0 0
 0 85000 100
 A
-24 -3
+24 -4
 A
-20 -3
+20 -4
 #83650
 well-crafted well crafted silver chainmail sleeves~
 &+Cs&+co&+Cm&+ce &+Cw&+ce&+Cll-cr&+ca&+Cft&+ce&+Cd s&+ci&+Clv&+ce&+Cr ch&+cai&+Cnm&+cai&+Cl sl&+cee&+Cv&+ce&+Cs&N~
@@ -9521,9 +9521,9 @@ well-crafted well crafted silver chainmail sleeves~
 15 0 0 0 0 0 0 0
 0 85000 100
 A
-24 -2
+24 -3
 A
-20 -2
+20 -3
 #83651
 well-crafted well crafted silver chainmail leggings~
 &+Cs&+co&+Cm&+ce &+Cw&+ce&+Cll-cr&+ca&+Cft&+ce&+Cd s&+ci&+Clv&+ce&+Cr ch&+cai&+Cnm&+cai&+Cl l&+ce&+Cgg&+ci&+Cngs&N~
@@ -9533,9 +9533,9 @@ well-crafted well crafted silver chainmail leggings~
 15 0 0 0 0 0 0 0
 0 85000 100
 A
-24 -2
+24 -3
 A
-20 -2
+20 -3
 #83652
 well-crafted well crafted silver chainmail sabatons~
 &+Cs&+co&+Cm&+ce &+Cw&+ce&+Cll-cr&+ca&+Cft&+ce&+Cd s&+ci&+Clv&+ce&+Cr ch&+cai&+Cnm&+cai&+Cl s&+ca&+Cb&+ca&+Ct&+co&+Cns&N~
@@ -9545,31 +9545,31 @@ well-crafted well crafted silver chainmail sabatons~
 15 0 0 0 0 0 0 0
 0 85000 100
 A
-24 -2
+24 -3
 A
-20 -2
+20 -3
 #83653
 magnificent glittering gold helmet~
 &+Ya magnificent g&+Wl&+Yi&+Wt&+Yt&+We&+Yr&+Wi&+Yn&+Wg &+Ygold helmet&n~
 &+YA magnificent g&+Wl&+Yi&+Wt&+Yt&+We&+Yr&+Wi&+Yn&+Wg &+Ygold helmet&n lies here.~
 ~
 9 24 4 0 14 0 0 17 0 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 125000 100 32 0 0 0
 A
 13 25
 A
-31 4
+31 5
 #83654
 magnificent glittering gold breastplate breast plate~
 &+Ya magnificent g&+Wl&+Yi&+Wt&+Yt&+We&+Yr&+Wi&+Yn&+Wg &+Ygold breastplate&n~
 &+YA magnificent g&+Wl&+Yi&+Wt&+Yt&+We&+Yr&+Wi&+Yn&+Wg &+Ygold breastplate&n lies here.~
 ~
 9 24 4 0 14 0 0 9 0 0 0
-20 0 0 0 0 0 0 0
+50 0 0 0 0 0 0 0
 3 125000 100 32 0 0 0
 A
-13 40
+13 45
 A
 31 5
 #83655
@@ -9578,58 +9578,58 @@ magnificent glittering gold armplates arm plates~
 &+YSome magnificent g&+Wl&+Yi&+Wt&+Yt&+We&+Yr&+Wi&+Yn&+Wg &+Ygold armplates&n lies here.~
 ~
 9 24 4 0 14 0 0 257 0 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 125000 100 32 0 0 0
 A
 13 25
 A
-31 4
+31 5
 #83656
 magnificent glittering gold legplates leg plates~
 &+Ysome magnificent g&+Wl&+Yi&+Wt&+Yt&+We&+Yr&+Wi&+Yn&+Wg &+Ygold legplates&n~
 &+YSome magnificent g&+Wl&+Yi&+Wt&+Yt&+We&+Yr&+Wi&+Yn&+Wg &+Ygold legplates&n lies here.~
 ~
 9 24 4 0 14 0 0 33 0 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 125000 100 32 0 0 0
 A
 13 25
 A
-31 4
+31 5
 #83657
 magnificent glittering gold sabatons~
 &+Ysome magnificent g&+Wl&+Yi&+Wt&+Yt&+We&+Yr&+Wi&+Yn&+Wg &+Ygold sabatons&n~
 &+YSome magnificent g&+Wl&+Yi&+Wt&+Yt&+We&+Yr&+Wi&+Yn&+Wg &+Ygold sabatons&n lies here.~
 ~
 9 24 4 0 14 0 0 65 0 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 125000 100 32 0 0 0
 A
 13 25
 A
-31 4
+31 5
 #83658
 enchanted pure electrum helmet~
 &+Wan enchanted helmet of pure electrum&N~
 &+WAn enchanted helmet of pure electrum&N lies here.~
 ~
 9 23 4 0 14 0 0 17 0 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 130000 100 268435456 0 0 0
 A
 13 25
 A
-20 -4
+20 -5
 #83659
 enchanted pure electrum chest plate chestplate~
 &+Wan enchanted chestplate of pure electrum&N~
 &+WAn enchanted chestplate of pure electrum&N lies here.~
 ~
 9 23 4 0 14 0 0 9 0 0 0
-20 0 0 0 0 0 0 0
+50 0 0 0 0 0 0 0
 3 130000 100 268435456 0 0 0
 A
-13 40
+13 45
 A
 20 -5
 #83660
@@ -9638,36 +9638,36 @@ enchanted pure electrum armplates arm plates~
 &+WSome enchanted armplates of pure electrum&N lies here.~
 ~
 9 23 4 0 14 0 0 257 0 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 130000 100 268435456 0 0 0
 A
 13 25
 A
-20 -4
+20 -5
 #83661
 enchanted pure electrum leg plates legplates~
 &+Wsome enchanted legplates of pure electrum&N~
 &+WSome enchanted legplates of pure electrum&N lies here.~
 ~
 9 23 4 0 14 0 0 33 0 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 130000 100 268435456 0 0 0
 A
 13 25
 A
-20 -4
+20 -5
 #83662
 enchanted pure electrum sabatons~
 &+Wsome enchanted sabatons of pure electrum&N~
 &+WSome enchanted sabatons of pure electrum&N lies here.~
 ~
 9 23 4 0 14 0 0 65 0 0 0
-20 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 3 130000 100 268435456 0 0 0
 A
 13 25
 A
-20 -4
+20 -5
 #83663
 finely-detailed platinum circlet~
 &+Wa finely-detailed platinum circlet&N~
@@ -9679,17 +9679,17 @@ finely-detailed platinum circlet~
 A
 13 25
 A
-24 -4
+24 -5
 #83664
 finely-detailed platinum breast plate breastplate~
 &+Wa finely-detailed platinum breastplate&N~
 &+WA finely-detailed platinum breastplate&N lies here.~
 ~
 9 25 3 0 13 0 1 9 64 0 0
-25 0 0 0 0 0 0 0
+50 0 0 0 0 0 0 0
 1 165000 100 4 0 0 0
 A
-13 40
+13 45
 A
 24 -5
 #83665
@@ -9703,7 +9703,7 @@ finely-detailed platinum arm plates armplates~
 A
 13 25
 A
-24 -4
+24 -5
 #83666
 finely-detailed platinum leg plates legplates~
 &+Wsome finely-detailed platinum legplates&N~
@@ -9715,7 +9715,7 @@ finely-detailed platinum leg plates legplates~
 A
 13 25
 A
-24 -4
+24 -5
 #83667
 finely-detailed platinum sabatons~
 &+Wsome finely-detailed platinum sabatons&N~
@@ -9727,7 +9727,7 @@ finely-detailed platinum sabatons~
 A
 13 25
 A
-24 -4
+24 -5
 #83668
 ancient dwarven mithril crown~
 &+Ca crown of ancient dwarven mithril&N~
@@ -9782,22 +9782,22 @@ crown ancient adamantium~
 &+LA crown of ancient &+mad&+La&+mm&+La&+mn&+Lt&+mi&+Lu&+mm&N lies here.~
 ~
 9 19 3 0 14 0 0 17 64 0 0
-25 0 0 0 0 0 0 0
+30 0 0 0 0 0 0 0
 1 250000 100
 A
 17 -40
 A
-32 4
+32 5
 #83673
 ancient adamantium chestplate~
 &+La chestplate of ancient &+mad&+La&+mm&+La&+mn&+Lt&+mi&+Lu&+mm&N~
 &+LA chestplate of ancient &+mad&+La&+mm&+La&+mn&+Lt&+mi&+Lu&+mm&N lies here.~
 ~
 9 19 3 0 14 0 0 9 64 0 0
-25 0 0 0 0 0 0 0
+50 0 0 0 0 0 0 0
 1 250000 100
 A
-17 -85
+17 -100
 A
 32 5
 #83674
@@ -9806,36 +9806,36 @@ ancient adamantium armplates arm plates~
 &+LSome armplates of ancient &+mad&+La&+mm&+La&+mn&+Lt&+mi&+Lu&+mm&N lies here.~
 ~
 9 19 3 0 14 0 0 257 64 0 0
-25 0 0 0 0 0 0 0
+30 0 0 0 0 0 0 0
 1 250000 100
 A
 17 -40
 A
-32 4
+32 5
 #83675
 ancient adamantium legplates leg plates~
 &+Lsome legplates of ancient &+mad&+La&+mm&+La&+mn&+Lt&+mi&+Lu&+mm&N~
 &+LSome legplates of ancient &+mad&+La&+mm&+La&+mn&+Lt&+mi&+Lu&+mm&N lies here.~
 ~
 9 19 3 0 14 0 0 33 64 0 0
-25 0 0 0 0 0 0 0
+30 0 0 0 0 0 0 0
 1 250000 100
 A
 17 -40
 A
-32 4
+32 5
 #83676
 ancient adamantium sabatons~
 &+Lsome sabatons of ancient &+mad&+La&+mm&+La&+mn&+Lt&+mi&+Lu&+mm&N~
 &+LSome sabatons of ancient &+mad&+La&+mm&+La&+mn&+Lt&+mi&+Lu&+mm&N lies here.~
 ~
 9 19 3 0 14 0 0 65 64 0 0
-25 0 0 0 0 0 0 0
+30 0 0 0 0 0 0 0
 1 250000 100
 A
 17 -40
 A
-32 4
+32 5
 #83677
 chain moonstone crystals~
 &+ca c&+Ch&+ca&+Ci&+cn of moon&+Lstone &+Ccrystals&N~
@@ -10123,3 +10123,54 @@ ring wondrous wonderous power~
 9 35 1 0 14 0 1 3 64 0 0
 0 0 0 0 0 0 0 0
 0 0 100 16777232 0 0 0
+#83699
+chromium dragonscale sabatons~
+&+Lsome &+Wc&nh&n&+cr&+rom&+ci&nu&+Wm &+Ldragon&n&+Cs&+Lc&+Ca&+Ll&+Ce &n&+csabatons&N~
+&+LSome &+Wc&Nh&+cr&+Rom&+ci&Nu&+Wm &+Ldragon&+Cs&+Lc&+Ca&+Ll&+Ce &+csabatons &+Lhave been left here.~
+~
+9 35 4 0 11 0 1024 65 66 121258427 0
+20 0 0 5 0 0 0 0
+9 55333 100 268435456 192 0 0
+E
+spiked chromium dragonscale helmet~
+   &+LThis dragonscale helmet is made from ths shimmering, precious scales
+&+Lof a chromium dragon.
+~
+A
+35 4
+A
+31 4
+#83700
+white dragon scalemail sabatons~
+&+Wsome white dragon scalemail sabatons&N~
+&+WA spiked white dragon scalemail helmet has been left here.~
+~
+9 35 3 0 7 0 0 65 64 0 0
+10 0 0 0 0 0 0 0
+3 18433 100
+E
+spiked white dragon scalemail sabatons~
+&+WGlistening white dragon scalemail has been forged into the form
+&+Wtwo feet-protecting sabatons.
+~
+A
+18 4
+A
+24 -3
+#83701
+mithril dragonscale dragon scale sabatons~
+&n&+msome mithril and &+Ldragon&N&+ms&+Lc&N&+ma&+Ll&N&+me &N&+msabatons&N~
+&+mSome mithril and &+Ldragon&N&+ms&n&+mc&+La&N&+ml&+Le &N&+marm plates have been left here.~
+~
+9 35 4 0 7 0 0 65 64 0 0
+5 0 0 0 0 0 0 0
+3 16448 100
+E
+mithril dragonscale dragon scale sabatons~
+   &+mThese fine, mithril sabatons &+Lare emblazoned with some thick, various
+&+Ldragonscales.
+~
+A
+17 -40
+A
+23 -3

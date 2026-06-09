@@ -31,7 +31,7 @@ extern struct descriptor_data  *descriptor_list;
 extern struct mm_ds            *dead_mob_pool;
 extern struct mm_ds            *dead_pconly_pool;
 extern struct room_data        *world;
-extern long                     top_of_world;
+extern int                      top_of_world;
 extern int                      is_bcrypt_hash(const char *hash);
 extern int                      bcrypt_verify_password(const char *password, const char *hash);
 extern char                    *bcrypt_hash_password(const char *password);

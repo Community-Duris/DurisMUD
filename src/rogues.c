@@ -49,7 +49,7 @@ void do_slip(P_char ch, char *argument, int cmd)
 		if (bits && bits2 && (container->type == ITEM_CONTAINER))
 		{
 			// Will it fit?
-			if (((GET_OBJ_WEIGHT(obj) + GET_OBJ_WEIGHT(container)) <= container->value[0]) || ((container->value[0] == -1)))
+			if (((GET_OBJ_WEIGHT(obj) + container_total_weight(container)) <= container->value[0]) || ((container->value[0] == -1)))
 			{
 				putsuc = put(ch, obj, container, FALSE);
 				act("You slip $p into $P...", TRUE, ch, obj, container, TO_CHAR);

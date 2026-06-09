@@ -69,7 +69,6 @@ extern const char                *craftsmanship_names[];
 extern const char                *dirs[];
 extern const char                *event_names[];
 extern const char                *fullness[];
-extern const char                *language_names[];
 extern struct material_data       materials[];
 extern const char                *month_name[];
 extern const char                *player_bits[];
@@ -1367,7 +1366,8 @@ void show_char_to_char(P_char i, P_char ch, int mode)
 			strcat(buffer, "&+R(Q)&n");
 		}
 
-		if (IS_PC(i) || (i->specials.position != i->only.npc->default_pos) || IS_FIGHTING(i) || IS_RIDING(i) || i->lobj->Visible_Type() || (GET_RNUM(i) == real_mobile(IMAGE_REFLECTION_VNUM)) ||
+		if (IS_PC(i) || (i->specials.position != i->only.npc->default_pos) || IS_FIGHTING(i) || IS_RIDING(i) ||
+		    i->lobj && i->lobj->Visible_Type() || (GET_RNUM(i) == real_mobile(IMAGE_REFLECTION_VNUM)) ||
 		    IS_DESTROYING(ch))
 		{
 			/* A player char or a mobile w/o long descr, or not in default pos. */
@@ -1697,7 +1697,7 @@ void show_char_to_char(P_char i, P_char ch, int mode)
 			if (IS_TRUSTED(ch) && IS_SET(ch->specials.act, PLR_VNUM) && IS_NPC(i))
 				snprintf(buffer + strlen(buffer), MAX_STRING_LENGTH - strlen(buffer), " [&+Y%d&n]", mob_index[GET_RNUM(i)].virtual_number);
 
-			act(buffer, TRUE, ch, i->lobj->Visible_Object(), GET_OPPONENT(i), TO_CHAR);
+			act(buffer, TRUE, ch, i->lobj? i->lobj->Visible_Object() : 0, GET_OPPONENT(i), TO_CHAR);
 		}
 		else
 		{ /* npc with long */
@@ -2013,12 +2013,6 @@ void ShowCharSpellBookSpells(P_char ch, P_obj obj, char *short_desc)
 	}
 	i = 0;
 	j = 0;
-	/*
-	   if (obj->value[0] && GET_LANGUAGE (ch, obj->value[0]) <= (25 + number (1, 10))) {
-	   act ("$p is written in some language you don't understand!", TRUE, ch, obj, 0, TO_CHAR);
-	   return;
-	   }
-	 */
 	if (obj->value[1] && !GET_CLASS(ch, obj->value[1]))
 	{
 		snprintf(buf, MAX_STRING_LENGTH, "%s appears to have been originally written by a %s.", short_desc, class_names_table[flag2idx(obj->value[1])].ansi);
@@ -5051,9 +5045,6 @@ void do_score(P_char ch, char *argument, int cmd)
 		send_to_char_f(ch, "&nEpic Bonus: &+C%s&n (&+C%.0f&n)\r\n", ebd[ebdata.type].description, get_epic_bonus(ch, ebdata.type) * EPIC_HEALTH_REGEN_MOD);
 	else
 		send_to_char_f(ch, "&nEpic Bonus: &+C%s&n (&+C%.2f%%&n)\r\n", ebd[ebdata.type].description, get_epic_bonus(ch, ebdata.type) * 100.);
-	// #ifdef SKILLPOINTS
-	// send_to_char_f(ch, "&nSkill Points: &+W%d&n\r\n", ch->only.pc->skillpoints);
-	// #endif
 	send_to_char("&+RFrags:&n   ", ch);
 
 	fragnum = (float)ch->only.pc->frags;

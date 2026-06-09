@@ -54,7 +54,7 @@ extern P_obj                  object_list;
 
 int kossuth(P_char ch, P_char pl, int cmd, char *arg)
 {
-	register P_char i;
+	P_char i;
 	P_char          minion;
 	int             count = 0;
 

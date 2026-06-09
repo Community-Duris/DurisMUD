@@ -65,7 +65,6 @@ extern const char                *craftsmanship_names[];
 extern const char                *dirs[];
 extern const char                *event_names[];
 extern const char                *fullness[];
-extern const char                *language_names[];
 extern struct material_data       materials[];
 extern const char                *month_name[];
 extern const char                *player_bits[];

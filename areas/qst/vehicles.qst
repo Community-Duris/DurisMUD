@@ -2499,3 +2499,60 @@ qc_action 150~
 &+B&-Lzigzagging through the area leaving small puffs of smoke in their wake.
 ~
 S
+#47124
+MA
+hi hello~
+&+WK&Nj&+We&Nl&+Wg&Na&+Wr&N nods at $N and says &+W'Well met, welcome aboard.'
+&+WK&Nj&+We&Nl&+Wg&Na&+Wr&N lifts his mighty arm in salute to $N.
+
+&+W'Perhaps one interested in something more than transit across
+&+Wsea?' &Nhe says, peering curiously at $N. I can craft you fantastic
+&+Witems out of five each of these materials, plus &+Rgn&+romi&+Rsh &+Lshopkeepers
+&+Ltoken(s)&+W, and 100 platinum coins!' &Nhe says with wrinkled grin.
+
+&+Y*&+Wbone&N: &+Wa piece of &+cimmortal &+Wbone &N(&+Y*&N+1 &+Rgn&+romi&+Rsh &+Lshopkeeper token&N)
+&+Y*&Lobsidian&N: &+Lsome pitch-black obsidian &N(&+Y*&N+1 &+Rgn&+romi&+Rsh &+Lshopkeeper token&N)
+&+Y*&+gcrystal&N: &+ca moon&+Lstone &+Ccrystal &N(&+Y*&N+2 &+Rgn&+romi&+Rsh &+Lshopkeeper tokens&N)
+
+&+WFor example, give me five &+Wan &+cimmortal &+Wbones&+W, a &+Rgn&+romi&+Rsh &+Lshopkeeper token,
+&+Wand 100 platinum coins, and I'll craft ya something special!'
+~
+QA
+&N$n &+Wsmiles and begins carving the bone pieces down into smaller
+&+Wpieces, fitting them together and smoothing it out before detailing
+&+Wthe contraption with scrimshaw. Finally, he reveals a bulbous &+Bpipe&+W.
+~
+R I 47095
+G I 55033
+G I 400069
+G I 400069
+G I 400069
+G I 400069
+G I 400069
+G C 100000
+QA
+&n$n gathers the &+Lobsidian &Nand fuses them together in a
+&nheavy &+Ymagical flaming vice&N! Suddenly: an &+Lanchor&N is formed.
+~
+R I 47009
+G I 55033
+G I 400179
+G I 400179
+G I 400179
+G I 400179
+G I 400179
+G C 100000
+QA
+&N$n gasps at the &+Wcr&+Mys&+Bt&+Wals &Nand cheerfully gets to work.
+After several long hours of careful craftsmanship, &+WK&Nj&+We&nl&+Wg&Na&+Wr&N completes a &+Yharp&N.
+~
+R I 47096
+G I 55033
+G I 400941
+G I 400941
+G I 400941
+G I 400941
+G I 400941
+G C 100000
+G I 55033
+S

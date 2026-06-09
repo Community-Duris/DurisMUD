@@ -87,16 +87,13 @@ D3
 0 0 55206
 S
 #55005
-Unnamed~
-&+wThis large alley boarders the massive 50 foot walls that protect the city
-of &+WWinterhaven&+w. The wall itself is composed of 10 foot segments of solid
-&+LObsidian&+w. The streets are paved with slabs of &+Wm&+wa&+Wr&+wb&+Wl&+we&+Wd &+Lgranite &+wand are kept
-in perfect condition by an army of street sweepers and masons. Throngs of
-citizens and visitors wander the streets, busily minding their own business.
-To the &+LSouth&+w, the street leads a main intersection and the &+WEastern gates&+w.
-To the &+LNorth&+w, the alley continues alongside the wall.&n
+Distribution for Ambassadors &+cTo Alatorin&N~
 ~
-550 142639168 0
+550 32768 0
+D0
+~
+~
+0 0 55403
 S
 #55006
 &+yA &+WBright &+yAlley Alongside a Massive &+LStone &+yWall~
@@ -8946,13 +8943,9 @@ D5
 0 0 55614
 S
 #55400
-Distribution for Ambassadors~
+Distribution for Ambassadors &+Wto Winterhaven&N~
 ~
 550 32768 0
-D0
-~
-~
-0 0 55403
 D2
 ~
 ~

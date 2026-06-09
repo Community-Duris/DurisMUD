@@ -1907,8 +1907,11 @@ F 1 59005 72 59354 100 0 0 0       * a bloodthirsty bat (following)
 F 1 59005 72 59354 100 0 0 0       * a bloodthirsty bat (following)
 F 1 59005 72 59354 100 0 0 0       * a bloodthirsty bat (following)
 M 0 55252 1 59354 33 0 0 0         * (mob type not in this .mob file)
+G 1 55328 1 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 55253 1 59354 33 0 0 0         * (mob type not in this .mob file)
+G 1 55330 1 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 55254 1 59354 33 0 0 0         * (mob type not in this .mob file)
+G 1 55329 1 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 59081 1 59355 100 0 0 0        * Gadof Blinsky
 G 1 59261 999 0 100 0 0 0          *    a set of marbles painted to look like eyes
 G 1 59262 999 0 100 0 0 0          *    a severed hand standing up on its fingers

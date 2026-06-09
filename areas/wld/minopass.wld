@@ -1434,7 +1434,7 @@ D2
 0 0 94770
 S
 #94772
-&+LA &+mPortal&+L Before an Agonizing &+rLabyrinth&N~
+&+LA &+mPortal&+L Overlooking an Agonizing &+rLabyrinth&N~
    &+LA huge portal, floating at the northern end of a small flight of
 &+Lstairs, grants passage back to the &+ggates&+L of&+r annihilation&+L.  From here,
 &+Lhowever, a huge tunnel starts to the south.  The tunnel does not
@@ -1458,6 +1458,10 @@ S
 &+Land floor of this obsidian &+rlabyrinth&+L, making it more of a tomb.
 ~
 947 33028 13
+D0
+~
+~
+0 0 94772
 D1
 ~
 ~
@@ -2432,7 +2436,7 @@ S
 D2
 ~
 ~
-3 0 94819
+1 0 94819
 S
 #94821
 &+WA &+cMoonwell&+W in a Glorious M&Nar&+Lb&+Wl&Ne &+WChamber&N~
@@ -2444,7 +2448,7 @@ S
 &+Wmoonwell in the center of the room.
    &+WA small m&Nar&+Lb&+Wl&Ne &+Wsign is seen before a northern corridor.
 ~
-947 33718272 0
+947 33718276 0
 D0
 ~
 ~
@@ -2463,6 +2467,10 @@ D0
 ~
 ~
 0 0 94823
+D2
+~
+~
+0 0 94821
 S
 #94823
 &+WA Long Polished M&Nar&+Lb&+Wl&Ne &+WCorridor&N~

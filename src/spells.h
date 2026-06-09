@@ -614,7 +614,7 @@
 #define SPELL_BLOOD_SIROCCO           565
 #define SPELL_EXTRACT_WATER_ELEMENTAL 566
 #define SPELL_DEADFALL                567
-// #define SPELL_                    568 Unused.
+#define SPELL_LEARNING                568
 #define SPELL_EXPLOSIVE_CASCADE        569
 #define SPELL_CELESTIAL_AURA           570
 #define SPELL_SUMMON_GHASTS            571
@@ -1013,7 +1013,7 @@
 #define SKILL_ENHANCEDMELEE          1279
 #define SKILL_RESCUEALL              1280
 #define SKILL_ENHANCEDBASH           1281
-#define SKILL_GROUNDFIGHTING         1282
+//#define SKILL_GROUNDFIGHTING         1282
 #define SKILL_MELEE_MASTERY          1283
 #define SKILL_TRAMPLE                1284
 #define SKILL_HANDCONTROL            1285

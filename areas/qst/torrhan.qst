@@ -218,6 +218,12 @@ Q
 ~
 R I 66645
 G I 66644
+QA
+&+yThe tailor works quietly, then returns the cloak.
+&+W"How's this color?"&n
+~
+R I 66638
+G I 66645
 S
 #66701
 M

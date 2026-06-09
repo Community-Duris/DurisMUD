@@ -13718,10 +13718,6 @@ The southern pier extends south from the center.
 ~
 ~
 0 0 133054
-D3
-~
-~
-0 0 133079
 S
 #133052
 &+BNorthern Pier~
@@ -13735,38 +13731,26 @@ D0
 The northern pier extends further north.
 ~
 ~
-0 0 133076
+0 0 133053
 D2
 The northen pier extends south.
 ~
 ~
 0 0 133051
-D3
-~
-~
-0 0 133080
 S
 #133053
-&+BThe Great Tharnadian Bay&N~
-   &+BThis massive circular bay is surrounded by huge rocky
-&+Breefs that grasp the lagoon and suppress the waves. Huge
-&+Bships bob in the currents from all reaches of the world.
-&+BTo the east, the towering spires of Caer Tannad give way
-&+Bto the splendid city.
+&+BEnd of the Northern Pier~
+     &+yWhile obviously in terrible disrepair, the pier is still in use.
+&+yHuge ropes are coiled all over.  On the northern edge, a ship is often
+&+ytied to the pier, and a gangway pulled up allowing people to embark, and
+&+ydisembark.
 ~
-1325 134250560 12 0
-D0
-~
-~
-0 0 133077
-D1
-~
-~
-0 0 133079
+1325 143687744 1 0
 D2
+The docks continue south.
 ~
 ~
-0 0 133078
+0 0 133052
 D3
 A great ocean can be seen in that direction
 ~
@@ -13791,10 +13775,6 @@ The southern pier extends south.
 ~
 ~
 0 0 133055
-D3
-~
-~
-0 0 133082
 S
 #133055
 &+BEnd of the Southern Pier&n~
@@ -13809,10 +13789,11 @@ The docks continue north.
 ~
 ~
 0 0 133054
-D3
+D2
+A vast ocean can be seen to the south.
 ~
 ~
-0 0 133083
+0 0 -1
 S
 #133056
 &+GOutside the Southern City Gates&n~
@@ -14206,171 +14187,4 @@ D3
 ~
 ~
 0 0 132766
-S
-#133076
-&+BEnd of the Northern Pier~
-     &+yWhile obviously in terrible disrepair, the pier is still in use.
-&+yHuge ropes are coiled all over.  On the northern edge, a ship is often
-&+ytied to the pier, and a gangway pulled up allowing people to embark, and
-&+ydisembark.
-~
-1325 143687744 1 0
-D2
-~
-~
-0 0 133052
-D3
-~
-~
-0 0 133081
-S
-#133077
-&+BThe Great Tharnadian Bay&N~
-   &+BThis massive circular bay is surrounded by huge rocky
-&+Breefs that grasp the lagoon and suppress the waves. Huge
-&+Bships bob in the currents from all reaches of the world.
-&+BTo the east, the towering spires of Caer Tannad give way
-&+Bto the splendid city.
-~
-1325 134250560 12 0
-D1
-~
-~
-0 0 133080
-D2
-~
-~
-0 0 133053
-S
-#133078
-&+BThe Great Tharnadian Bay&N~
-   &+BThis massive circular bay is surrounded by huge rocky
-&+Breefs that grasp the lagoon and suppress the waves. Huge
-&+Bships bob in the currents from all reaches of the world.
-&+BTo the east, the towering spires of Caer Tannad give way
-&+Bto the splendid city.
-~
-1325 167804928 12 0
-D0
-~
-~
-0 0 133053
-D1
-~
-~
-0 0 133082
-S
-#133079
-&+BThe Great Tharnadian Bay&N~
-   &+BThis massive circular bay is surrounded by huge rocky
-&+Breefs that grasp the lagoon and suppress the waves. Huge
-&+Bships bob in the currents from all reaches of the world.
-&+BTo the east, the towering spires of Caer Tannad give way
-&+Bto the splendid city.
-~
-1325 167804928 12 0
-D0
-~
-~
-0 0 133080
-D1
-~
-~
-0 0 133051
-D2
-~
-~
-0 0 133082
-D3
-~
-~
-0 0 133053
-S
-#133080
-&+BThe Great Tharnadian Bay&N~
-   &+BThis massive circular bay is surrounded by huge rocky
-&+Breefs that grasp the lagoon and suppress the waves. Huge
-&+Bships bob in the currents from all reaches of the world.
-&+BTo the east, the towering spires of Caer Tannad give way
-&+Bto the splendid city.
-~
-1325 167804928 12 0
-D0
-~
-~
-0 0 133081
-D1
-~
-~
-0 0 133052
-D2
-~
-~
-0 0 133079
-D3
-~
-~
-0 0 133077
-S
-#133081
-&+BThe Great Tharnadian Bay&N~
-   &+BThis massive circular bay is surrounded by huge rocky
-&+Breefs that grasp the lagoon and suppress the waves. Huge
-&+Bships bob in the currents from all reaches of the world.
-&+BTo the east, the towering spires of Caer Tannad give way
-&+Bto the splendid city.
-~
-1325 167804928 12 0
-D1
-~
-~
-0 0 133076
-D2
-~
-~
-0 0 133080
-S
-#133082
-&+BThe Great Tharnadian Bay&N~
-   &+BThis massive circular bay is surrounded by huge rocky
-&+Breefs that grasp the lagoon and suppress the waves. Huge
-&+Bships bob in the currents from all reaches of the world.
-&+BTo the east, the towering spires of Caer Tannad give way
-&+Bto the splendid city.
-~
-1325 167804928 12 0
-D0
-~
-~
-0 0 133079
-D1
-~
-~
-0 0 133054
-D2
-~
-~
-0 0 133083
-D3
-~
-~
-0 0 133078
-S
-#133083
-&+BThe Great Tharnadian Bay&N~
-   &+BThis massive circular bay is surrounded by huge rocky
-&+Breefs that grasp the lagoon and suppress the waves. Huge
-&+Bships bob in the currents from all reaches of the world.
-&+BTo the east, the towering spires of Caer Tannad give way
-&+Bto the splendid city.
-~
-1325 167804928 12 0
-D0
-~
-~
-0 0 133082
-D1
-~
-~
-0 0 133055
 S

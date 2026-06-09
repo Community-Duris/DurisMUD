@@ -1934,7 +1934,7 @@ bool put(P_char ch, P_obj o_obj, P_obj s_obj, int showit)
 					return (FALSE);
 				}
 
-				if (((GET_OBJ_WEIGHT(s_obj) + GET_OBJ_WEIGHT(o_obj)) <= (s_obj->value[0])) ||
+				if (((container_total_weight(s_obj) + GET_OBJ_WEIGHT(o_obj)) <= (s_obj->value[0])) ||
 				    ((s_obj->value[0] == -1) && (GET_ITEM_TYPE(s_obj) == ITEM_STORAGE || GET_ITEM_TYPE(s_obj) == ITEM_CONTAINER)))
 				{
 
@@ -5951,7 +5951,7 @@ void do_empty(P_char ch, char *argument, int cmd)
 	while ((content = obj1->contains) != NULL)
 	{
 
-		if (((GET_OBJ_WEIGHT(obj2) + GET_OBJ_WEIGHT(content)) > obj1->value[0]) && (obj1->value[0] != -1))
+		if (((container_total_weight(obj2) + GET_OBJ_WEIGHT(content)) > obj2->value[0]) && (obj2->value[0] != -1))
 		{
 			act("$P will not fit in $p.", FALSE, ch, obj2, (void *)content, TO_CHAR);
 			send_to_char_f(ch, "You moved %d item%s from %s to %s.\n", count, count == 1 ? "" : "s", OBJ_SHORT(obj1), OBJ_SHORT(obj2));

@@ -378,7 +378,7 @@ void ctf_notify(const char *msg, int racewar)
 // Can just call ctfdata[i].obj now
 P_obj get_ctf_flag(int id)
 {
-	// register P_obj flag;
+	// P_obj flag;
 
 	// for (flag = object_list; flag; flag = flag->next)
 	//{

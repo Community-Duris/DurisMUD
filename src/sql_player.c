@@ -2274,9 +2274,6 @@ bool sql_load_player_pets(P_char ch)
 					{
 						if (items[j].db_id == items[i].container_id && items[j].obj)
 						{
-							// container weight is stored with total contents weight
-							// need to remove the weight from the container since obj_to_obj will add it again
-							items[j].obj->weight -= items[i].obj->weight;
 							obj_to_obj(items[i].obj, items[j].obj);
 							break;
 						}
@@ -2289,6 +2286,14 @@ bool sql_load_player_pets(P_char ch)
 				else
 				{
 					obj_to_char(items[i].obj, pet);
+				}
+			}
+
+			for (int k = 0; k < item_count; k++)
+			{
+				if (items[k].obj)
+				{
+					recalc_container_weight(items[k].obj);
 				}
 			}
 		}
@@ -3192,12 +3197,17 @@ bool sql_load_player_items(P_char ch)
 		{
 			if (item_ids[j] == container_ids[i] && items[j])
 			{
-				// container weight is stored with total contents weight
-				// need to remove the weight from the container since obj_to_obj will add it again
-				items[j]->weight -= items[i]->weight;
 				obj_to_obj(items[i], items[j]);
 				break;
 			}
+		}
+	}
+
+	for (int j = 0; j < loaded_count; j++)
+	{
+		if (items[j])
+		{
+			recalc_container_weight(items[j]);
 		}
 	}
 

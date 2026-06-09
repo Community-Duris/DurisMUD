@@ -1157,6 +1157,7 @@ void   do_spec(P_char, char *, int);
 void   do_skills(P_char, char *, int);
 void   do_spells(P_char, char *, int);
 bool   notch_skill(P_char, int, float);
+void   spell_learning(int, P_char, char *, int, P_char, P_obj);
 void   SetGuildSpellLvl(void);
 void   update_skills(P_char);
 string list_spells(int, int);
@@ -1234,6 +1235,9 @@ void                  extract_obj(P_obj obj, int gone_for_good = FALSE); // Only
                                                                          //   and it's going away completely, then use.
 void                   obj_from_char(P_obj);
 void                   obj_from_obj(P_obj);
+void                   recalc_container_weight(P_obj);
+void                   container_reset_empty_weight(P_obj);
+int                    container_total_weight(P_obj);
 void                   obj_from_room(P_obj);
 void                   obj_to_char(P_obj obj, P_char ch);
 void                   obj_to_char_at_end(P_obj obj, P_char ch);
@@ -1277,7 +1281,6 @@ void   engulf(P_char, P_char);
 void   do_slime(P_char, char *, int);
 void   slime(P_char, P_char);
 void   do_squidrage(P_char ch, char *arg, int cmd);
-int    get_innate_from_skill(int skill);
 int    get_level_from_innate(P_char ch, int innate);
 /* interp.c */
 
@@ -1341,17 +1344,7 @@ void      clean_town_justice(void);
 
 char *language_CRYPT(P_char, P_char, char *);
 char *language_known(P_char, P_char);
-char *language_singlepass(P_char, int, char *);
-char  casecorrect(int);
-char  low_case(int);
-int   npc_get_pseudo_language_skill(P_char, int);
-int   npc_get_pseudo_spoken_language(P_char);
-int   on_aakkonen(int);
-int   on_vokaali(int);
-void  do_speak(P_char, char *, int);
-void  init_defaultlanguages(P_char);
-void  language_gain(P_char, P_char, int);
-void  language_show(P_char);
+int can_understand_language(P_char speaker, P_char victim);
 
 /* limits.c */
 
