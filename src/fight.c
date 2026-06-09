@@ -4032,9 +4032,9 @@ if (victim && IS_UNDEADRACE(victim))
 
 	if (GET_LEVEL(victim) < 56) // Message is not displayed versus level 56 and greater vampires.
 	{
-		act("$N&+W wavers in agony, as the positive energies purge $s undead essence!&n", FALSE, caster, 0, victim, TO_CHAR);
+		act("$N&+W wavers in agony, as the positive energies purge $S undead essence!&n", FALSE, caster, 0, victim, TO_CHAR);
 		act("&+WNooo! The holy power of&n $n&+W is almost too much...&n", FALSE, caster, 0, victim, TO_VICT);
-		act("$N&+W wavers in agony, as the positive energies sent by&n $n&+W purge $s essence!&n", FALSE, caster, 0, victim, TO_NOTVICT);
+		act("$N&+W wavers in agony, as the positive energies sent by&n $n&+W purge $S essence!&n", FALSE, caster, 0, victim, TO_NOTVICT);
 	}
 
 	if (IS_AFFECTED2(victim, AFF2_SOULSHIELD))
