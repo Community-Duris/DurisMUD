@@ -91,6 +91,7 @@ int  sql_find_racewar_for_ip(char *ip, int *racewar_side) { return -1; }
 bool qry(const char *format, ...) { return TRUE; }
 bool sql_persistence_write_item_event_line(const char *line) { return FALSE; }
 bool sql_persistence_write_scalar_event_line(const char *line) { return FALSE; }
+bool sql_persistence_execute_raw(const char *sql) { return FALSE; }
 void send_to_pid_offline(const char *msg, int pid) {}
 void send_offline_messages(P_char ch) {}
 void log_epic_gain(int pid, int zone_id, int type, int epics) {}
@@ -877,22 +878,55 @@ void sql_insert_new_item(P_char ch, P_obj obj)
 	do_stat(ch, item_id, 555);
 }
 
+/* Local counter-based pkill event ID — no sync DB call.
+ * pkill_event.id is int(10) unsigned (~4.3B max), so we use a simple
+ * incrementing 32-bit counter. Seed from time() at first call to make
+ * IDs unpredictable, then wrap at ~4 billion (essentially never).
+ */
+static unsigned long pkill_event_local_counter = 0;
+
 unsigned long new_pkill_event(P_char ch)
 {
+	char sql[MAX_STRING_LENGTH];
 	char room_name_sql[MAX_STRING_LENGTH];
-	char query[MAX_STRING_LENGTH];
+	int queued = 0;
 
 	mysql_str(world[ch->in_room].name, room_name_sql);
-	snprintf(query, MAX_STRING_LENGTH, "INSERT INTO pkill_event (stamp, room_vnum, room_name) VALUES( NOW(), %d, '%s' )", world[ch->in_room].number, room_name_sql);
 
-	if (mysql_real_query(DB, query, strlen(query)) != 0)
+	/* Seed once, then simple 32-bit increment */
+	if (!pkill_event_local_counter)
+		pkill_event_local_counter = (unsigned long)time(NULL);
+	pkill_event_local_counter++;
+	unsigned long event_id = pkill_event_local_counter;
+
+	/* Build the pkill_event INSERT SQL and enqueue to large-event queue */
+	snprintf(sql, sizeof(sql),
+	         "INSERT INTO pkill_event (id, stamp, room_vnum, room_name) "
+	         "VALUES( %lu, NOW(), %d, '%s' )",
+	         event_id,
+	         world[ch->in_room].number,
+	         room_name_sql);
+
+	if (persistence_large_event_worker_running())
 	{
-		logit(LOG_DEBUG, "MYSQL: Failed to create pkill event");
-		logit(LOG_DEBUG, "MYSQL: Query was: %s", query);
-		return 0;
+		if (persistence_large_event_queue_enqueue(sql))
+			queued = 1;
+		else if (persistence_write_fallback_event_line(sql, "pkill_event", GET_NAME(ch), "queue_full_flat_fallback"))
+			queued = 1;
 	}
 
-	return mysql_insert_id(DB);
+	if (!queued)
+	{
+		/* Sync fallback: execute directly */
+		if (mysql_real_query(DB, sql, strlen(sql)) != 0)
+		{
+			logit(LOG_DEBUG, "MYSQL: Failed to create pkill event (sync fallback)");
+			logit(LOG_DEBUG, "MYSQL: Query was: %s", sql);
+			return 0;
+		}
+	}
+
+	return event_id;
 }
 
 void get_pkill_player_description(P_char ch, char *buffer)
@@ -927,10 +961,12 @@ void store_pkill_info(unsigned long pkill_event, P_char ch, const char *type, in
 		return;
 	}
 
-	/* Collect and store pkill_info synchronously â€” full data, no truncation */
+	/* Collect data synchronously (from in-memory state - safe) */
 	char equip_sql[MAX_STRING_LENGTH];
 	char player_description_sql[MAX_STRING_LENGTH];
 	char log_sql[MAX_LOG_LEN];
+	char raw_sql[PERSISTENCE_LARGE_EVENT_MAX_LEN];
+	int queued = 0;
 
 	get_equipment_list(ch, buf, 1);
 	mysql_str(buf, equip_sql);
@@ -941,8 +977,9 @@ void store_pkill_info(unsigned long pkill_event, P_char ch, const char *type, in
 	raw_log = GET_PLAYER_LOG(ch)->read(LOG_PUBLIC, MAX_LOG_LEN);
 	mysql_str(raw_log, log_sql);
 
-	db_query("INSERT INTO pkill_info (event_id, pid, level, pk_type, player_description, equip, log, inroom, leader) "
-	         "VALUES( %d, %d, %d, '%s', '%s', '%s', '%s', %d ,%d )",
+	snprintf(raw_sql, sizeof(raw_sql),
+	         "INSERT INTO pkill_info (event_id, pid, level, pk_type, player_description, equip, log, inroom, leader) "
+	         "VALUES( %lu, %d, %d, '%s', '%s', '%s', '%s', %d ,%d )",
 	         pkill_event,
 	         GET_PID(ch),
 	         GET_LEVEL(ch),
@@ -952,6 +989,29 @@ void store_pkill_info(unsigned long pkill_event, P_char ch, const char *type, in
 	         log_sql,
 	         in_room,
 	         leader);
+
+	if (persistence_large_event_worker_running())
+	{
+		if (persistence_large_event_queue_enqueue(raw_sql))
+			queued = 1;
+		else if (persistence_write_fallback_event_line(raw_sql, "pkill_info", GET_NAME(ch), "queue_full_flat_fallback"))
+			queued = 1;
+	}
+
+	if (!queued)
+	{
+		db_query("INSERT INTO pkill_info (event_id, pid, level, pk_type, player_description, equip, log, inroom, leader) "
+		         "VALUES( %lu, %d, %d, '%s', '%s', '%s', '%s', %d ,%d )",
+		         pkill_event,
+		         GET_PID(ch),
+		         GET_LEVEL(ch),
+		         type,
+		         player_description_sql,
+		         equip_sql,
+		         log_sql,
+		         in_room,
+		         leader);
+	}
 }
 
 /* Save racewr pkill information */

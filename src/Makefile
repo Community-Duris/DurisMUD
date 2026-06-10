@@ -151,7 +151,7 @@ OBJS =  $(SHIP_OBJS) \
 				 objmisc.o \
 				 outposts.o \
 				 period.list.o \
-				 persistence_queue.o \
+				 persistence_queue.o \n				 sql_persistence_raw.o \
 				 poll.o \
 				 prompt.o \
 				 properties.o \

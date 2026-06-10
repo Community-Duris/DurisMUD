@@ -502,8 +502,10 @@ void run_the_game(int port, int sslport)
 	persistence_replay_fallback_events();
 	persistence_start_item_event_worker();
 	persistence_start_scalar_event_worker();
+	persistence_start_large_event_worker();
 	game_loop(port, sslport);
 	persistence_stop_scalar_event_worker();
+	persistence_stop_large_event_worker();
 	persistence_stop_item_event_worker();
 
 	/* Don't need this anymore, as dropped artis are handled in real time on the DB.

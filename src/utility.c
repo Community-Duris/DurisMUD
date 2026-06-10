@@ -7149,3 +7149,55 @@ void trim_and_end_colorless(char *orig, char *good, int length)
 		*good = '\0';
 	}
 }
+
+static int persistence_large_event_log_writer(const char *line, void *context)
+{
+  (void) context;
+
+  if (!line || !*line)
+    return 1;
+
+  if (sql_persistence_execute_raw(line))
+    return 1;
+
+  return 0;
+}
+
+int persistence_start_large_event_worker(void)
+{
+  if (!persistence_large_event_worker_start(persistence_large_event_log_writer,
+                                             NULL))
+  {
+    persistence_alert(AVATAR, "large_event", "worker", "none", "none",
+                      "start_failed",
+                      "large-event persistence worker could not start; using sync fallback");
+    return 0;
+  }
+
+  logit(LOG_STATUS, "Started large-event persistence worker.");
+  return 1;
+}
+
+void persistence_stop_large_event_worker(void)
+{
+  unsigned long failures;
+
+  persistence_large_event_worker_stop(0);
+
+  failures = persistence_large_event_worker_write_failures();
+  if (failures)
+  {
+    persistence_alert(AVATAR, "large_event", "worker", "none", "none",
+                      "write_failures",
+                      "%lu large-event persistence worker writes failed and were retried",
+                      failures);
+  }
+
+  logit(LOG_STATUS, "Stopped large-event persistence worker.");
+}
+
+int persistence_large_event_worker_active(void)
+{
+  return persistence_large_event_worker_running();
+}
+
