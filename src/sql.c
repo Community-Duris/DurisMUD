@@ -1089,7 +1089,8 @@ void sql_update_level(P_char ch)
 			return;
 	}
 
-	// level already saved in player_data
+	// Sync fallback: update database directly when worker not available
+	db_query("UPDATE player_data SET level=%d WHERE pid=%d", GET_LEVEL(ch), GET_PID(ch));
 }
 
 /* Update money info */
@@ -1121,7 +1122,18 @@ void sql_update_money(P_char ch)
 			return;
 	}
 
-	// money stored as copper/silver/gold/platinum in player_data
+	// Sync fallback: update database directly when worker not available
+	db_query("UPDATE player_data SET copper=%d, silver=%d, gold=%d, platinum=%d, "
+	         "bank_copper=%d, bank_silver=%d, bank_gold=%d, bank_platinum=%d WHERE pid=%d",
+	         GET_COPPER(ch),
+	         GET_SILVER(ch),
+	         GET_GOLD(ch),
+	         GET_PLATINUM(ch),
+	         GET_BALANCE_COPPER(ch),
+	         GET_BALANCE_SILVER(ch),
+	         GET_BALANCE_GOLD(ch),
+	         GET_BALANCE_PLATINUM(ch),
+	         GET_PID(ch));
 }
 
 /* Update playtime info */
@@ -1141,7 +1153,8 @@ void sql_update_playtime(P_char ch)
 			return;
 	}
 
-	// playtime is played_time in player_data
+	// Sync fallback: update database directly when worker not available
+	db_query("UPDATE player_data SET played_time=%d WHERE pid=%d", ch->player.time.played, GET_PID(ch));
 }
 
 /* Update player's epics: We want to record their total epics gained not epics unused */
@@ -1161,7 +1174,8 @@ void sql_update_epics(P_char ch)
 			return;
 	}
 
-	// epics already in player_data
+	// Sync fallback: update database directly when worker not available
+	db_query("UPDATE player_data SET epics=%ld WHERE pid=%d", ch->only.pc->epics, GET_PID(ch));
 }
 
 void manual_log(P_char ch)
