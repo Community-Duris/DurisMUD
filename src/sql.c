@@ -445,7 +445,9 @@ int sql_save_player_core(P_char ch)
 		}
 		if (!queued)
 		{
-			snprintf(query, MAX_STRING_LENGTH, "UPDATE player_data SET active = 0 WHERE name = '%s' and pid != %d", p->name, GET_PID(ch));
+			char name_sql[256];
+			mysql_str(p->name, name_sql);
+			snprintf(query, MAX_STRING_LENGTH, "UPDATE player_data SET active = 0 WHERE name = '%s' and pid != %d", name_sql, GET_PID(ch));
 			db_query(query);
 			db_query("UPDATE player_data SET active = 1 WHERE pid = %d", GET_PID(ch));
 		}
