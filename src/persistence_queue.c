@@ -2,6 +2,8 @@
 #include <string.h>
 #include <pthread.h>
 #include <unistd.h>
+#include <errno.h>
+#include <time.h>
 
 #include "persistence_queue.h"
 
@@ -25,6 +27,7 @@ static persistence_item_event_writer persistence_item_event_worker_writer;
 static void *persistence_item_event_worker_context;
 static unsigned long persistence_item_event_worker_write_count;
 static unsigned long persistence_item_event_worker_failure_count;
+static time_t persistence_item_event_worker_last_heartbeat;
 
 static persistence_event_queue_data persistence_scalar_event_queue;
 static pthread_mutex_t persistence_scalar_event_queue_mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -37,6 +40,7 @@ static persistence_scalar_event_writer persistence_scalar_event_worker_writer;
 static void *persistence_scalar_event_worker_context;
 static unsigned long persistence_scalar_event_worker_write_count;
 static unsigned long persistence_scalar_event_worker_failure_count;
+static time_t persistence_scalar_event_worker_last_heartbeat;
 
 /* Large-payload event queue */
 static persistence_event_queue_data persistence_large_event_queue;
@@ -50,6 +54,7 @@ static persistence_scalar_event_writer persistence_large_event_worker_writer;
 static void *persistence_large_event_worker_context;
 static unsigned long persistence_large_event_worker_write_count;
 static unsigned long persistence_large_event_worker_failure_count;
+static time_t persistence_large_event_worker_last_heartbeat;
 
 static void persistence_item_event_queue_pop_head(void)
 {
@@ -161,11 +166,19 @@ static void *persistence_item_event_worker_main(void *unused)
     should_write = 0;
 
     pthread_mutex_lock(&persistence_item_event_queue_mutex);
+    /* Deadlock-detection heartbeat: advance timestamp under the queue
+     * mutex on every iteration. A worker stuck in cond_wait, a blocking
+     * MySQL call, or anywhere else without releasing the mutex will
+     * leave this stale and be flagged as stuck by
+     * persistence_item_event_worker_stuck() on the main thread. */
+    persistence_item_event_worker_last_heartbeat = time(NULL);
     while (persistence_item_event_queue.count <= 0 &&
            !persistence_item_event_worker_stop_requested)
     {
       pthread_cond_wait(&persistence_item_event_queue_cond,
                         &persistence_item_event_queue_mutex);
+      /* Refresh heartbeat after waking from cond_wait too. */
+      persistence_item_event_worker_last_heartbeat = time(NULL);
     }
 
     if (persistence_item_event_worker_stop_requested &&
@@ -237,6 +250,7 @@ int persistence_item_event_worker_start(persistence_item_event_writer writer,
   persistence_item_event_worker_stop_requested = 0;
   persistence_item_event_worker_drain_requested = 0;
   persistence_item_event_worker_is_running = 1;
+  persistence_item_event_worker_last_heartbeat = time(NULL);
   pthread_mutex_unlock(&persistence_item_event_queue_mutex);
 
   result = pthread_create(&persistence_item_event_worker_thread, NULL,
@@ -270,9 +284,33 @@ void persistence_item_event_worker_stop(int drain_remaining)
 int persistence_item_event_worker_running(void)
 {
   int running;
+  int kill_rc;
 
   pthread_mutex_lock(&persistence_item_event_queue_mutex);
   running = persistence_item_event_worker_is_running;
+  if (running)
+  {
+    /* Watchdog: the worker thread sets persistence_item_event_worker_is_running=0 under this same
+     * mutex before exiting. If the flag is still 1 but the thread is
+     * gone (killed by signal, segfault, or pthread_exit that didn't
+     * run the cleanup), pthread_kill(tid, 0) returns ESRCH. We clear
+     * the flag here so the next producer falls through to the sync
+     * path instead of enqueuing into an undrained queue.
+     *
+     * Note: this does NOT detect deadlocks - a thread stuck in a
+     * blocking MySQL call will pass this check. For deadlock
+     * detection, a separate heartbeat is needed.
+     */
+    kill_rc = pthread_kill(persistence_item_event_worker_thread, 0);
+    if (kill_rc == ESRCH)
+    {
+      persistence_item_event_worker_is_running = 0;
+      running = 0;
+    }
+    /* EINVAL: tid is no longer valid (already joined) - shouldn't
+     * happen here since the flag is still 1, but ignore it.
+     */
+  }
   pthread_mutex_unlock(&persistence_item_event_queue_mutex);
 
   return running;
@@ -510,11 +548,14 @@ static void *persistence_scalar_event_worker_main(void *unused)
     should_write = 0;
 
     pthread_mutex_lock(&persistence_scalar_event_queue_mutex);
+    /* Deadlock-detection heartbeat: see item worker. */
+    persistence_scalar_event_worker_last_heartbeat = time(NULL);
     while (persistence_scalar_event_queue.count <= 0 &&
            !persistence_scalar_event_worker_stop_requested)
     {
       pthread_cond_wait(&persistence_scalar_event_queue_cond,
                         &persistence_scalar_event_queue_mutex);
+      persistence_scalar_event_worker_last_heartbeat = time(NULL);
     }
 
     if (persistence_scalar_event_worker_stop_requested &&
@@ -586,6 +627,7 @@ int persistence_scalar_event_worker_start(persistence_scalar_event_writer writer
   persistence_scalar_event_worker_stop_requested = 0;
   persistence_scalar_event_worker_drain_requested = 0;
   persistence_scalar_event_worker_is_running = 1;
+  persistence_scalar_event_worker_last_heartbeat = time(NULL);
   pthread_mutex_unlock(&persistence_scalar_event_queue_mutex);
 
   result = pthread_create(&persistence_scalar_event_worker_thread, NULL,
@@ -619,9 +661,33 @@ void persistence_scalar_event_worker_stop(int drain_remaining)
 int persistence_scalar_event_worker_running(void)
 {
   int running;
+  int kill_rc;
 
   pthread_mutex_lock(&persistence_scalar_event_queue_mutex);
   running = persistence_scalar_event_worker_is_running;
+  if (running)
+  {
+    /* Watchdog: the worker thread sets persistence_scalar_event_worker_is_running=0 under this same
+     * mutex before exiting. If the flag is still 1 but the thread is
+     * gone (killed by signal, segfault, or pthread_exit that didn't
+     * run the cleanup), pthread_kill(tid, 0) returns ESRCH. We clear
+     * the flag here so the next producer falls through to the sync
+     * path instead of enqueuing into an undrained queue.
+     *
+     * Note: this does NOT detect deadlocks - a thread stuck in a
+     * blocking MySQL call will pass this check. For deadlock
+     * detection, a separate heartbeat is needed.
+     */
+    kill_rc = pthread_kill(persistence_scalar_event_worker_thread, 0);
+    if (kill_rc == ESRCH)
+    {
+      persistence_scalar_event_worker_is_running = 0;
+      running = 0;
+    }
+    /* EINVAL: tid is no longer valid (already joined) - shouldn't
+     * happen here since the flag is still 1, but ignore it.
+     */
+  }
   pthread_mutex_unlock(&persistence_scalar_event_queue_mutex);
 
   return running;
@@ -662,11 +728,14 @@ static void *persistence_large_event_worker_main(void *unused)
     should_write = 0;
 
     pthread_mutex_lock(&persistence_large_event_queue_mutex);
+    /* Deadlock-detection heartbeat: see item worker. */
+    persistence_large_event_worker_last_heartbeat = time(NULL);
     while (persistence_large_event_queue.count <= 0 &&
            !persistence_large_event_worker_stop_requested)
     {
       pthread_cond_wait(&persistence_large_event_queue_cond,
                         &persistence_large_event_queue_mutex);
+      persistence_large_event_worker_last_heartbeat = time(NULL);
     }
 
     if (persistence_large_event_worker_stop_requested &&
@@ -738,6 +807,7 @@ int persistence_large_event_worker_start(persistence_scalar_event_writer writer,
   persistence_large_event_worker_stop_requested = 0;
   persistence_large_event_worker_drain_requested = 0;
   persistence_large_event_worker_is_running = 1;
+  persistence_large_event_worker_last_heartbeat = time(NULL);
   pthread_mutex_unlock(&persistence_large_event_queue_mutex);
 
   result = pthread_create(&persistence_large_event_worker_thread, NULL,
@@ -771,9 +841,33 @@ void persistence_large_event_worker_stop(int drain_remaining)
 int persistence_large_event_worker_running(void)
 {
   int running;
+  int kill_rc;
 
   pthread_mutex_lock(&persistence_large_event_queue_mutex);
   running = persistence_large_event_worker_is_running;
+  if (running)
+  {
+    /* Watchdog: the worker thread sets persistence_large_event_worker_is_running=0 under this same
+     * mutex before exiting. If the flag is still 1 but the thread is
+     * gone (killed by signal, segfault, or pthread_exit that didn't
+     * run the cleanup), pthread_kill(tid, 0) returns ESRCH. We clear
+     * the flag here so the next producer falls through to the sync
+     * path instead of enqueuing into an undrained queue.
+     *
+     * Note: this does NOT detect deadlocks - a thread stuck in a
+     * blocking MySQL call will pass this check. For deadlock
+     * detection, a separate heartbeat is needed.
+     */
+    kill_rc = pthread_kill(persistence_large_event_worker_thread, 0);
+    if (kill_rc == ESRCH)
+    {
+      persistence_large_event_worker_is_running = 0;
+      running = 0;
+    }
+    /* EINVAL: tid is no longer valid (already joined) - shouldn't
+     * happen here since the flag is still 1, but ignore it.
+     */
+  }
   pthread_mutex_unlock(&persistence_large_event_queue_mutex);
 
   return running;

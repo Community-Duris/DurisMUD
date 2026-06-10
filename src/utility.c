@@ -85,6 +85,7 @@ extern const int                     rev_dir[];
 extern void                          event_spellcast(P_char, P_char, P_obj, void *);
 #define PERSISTENCE_ITEM_EVENT_PREFIX "PERSISTENCE_ITEM_EVENT|"
 #define PERSISTENCE_SCALAR_EVENT_PREFIX "PERSISTENCE_SCALAR_EVENT|"
+#define PERSISTENCE_LARGE_EVENT_PREFIX "PERSISTENCE_LARGE_EVENT|"
 static pthread_mutex_t persistence_fallback_log_mutex = PTHREAD_MUTEX_INITIALIZER;
 int                                  ship_obj_proc(P_obj obj, P_char ch, int cmd, char *arg);
 extern struct mm_ds                 *dead_mob_pool;
@@ -1104,6 +1105,9 @@ int persistence_flush_scalar_events(int max_events)
     persistence_scalar_event_queue_clear_dropped();
   }
 
+  /* Deadlock-detection watchdog: runs on the main thread, periodically. */
+  persistence_worker_heartbeat_check(0);
+
   return flushed;
 }
 
@@ -1131,8 +1135,12 @@ int persistence_replay_fallback_events(void)
 {
   FILE *in_f;
   FILE *out_f;
-  char line[PERSISTENCE_EVENT_MAX_LEN + 8];
-  char event_line[PERSISTENCE_EVENT_MAX_LEN + 8];
+  /* Sized to the largest event type we replay (large = 128KB). The scalar
+   * and item events are 1KB so the extra space is unused but harmless.
+   * Stack cost: ~256KB, well within the default 8MB thread stack.
+   */
+  char line[PERSISTENCE_LARGE_EVENT_MAX_LEN + 8];
+  char event_line[PERSISTENCE_LARGE_EVENT_MAX_LEN + 8];
   char tmp_path[512];
   char backup_path[512];
   int replayed = 0;
@@ -1187,6 +1195,19 @@ int persistence_replay_fallback_events(void)
     {
       saw_persistence = 1;
       if (sql_persistence_write_scalar_event_line(event_line))
+        replayed++;
+      else
+      {
+        failed++;
+        if (fputs(event_line, out_f) < 0 || fputs("\n", out_f) < 0)
+          rewrite_failed = 1;
+      }
+    }
+    else if (persistence_line_has_prefix(event_line,
+                                         PERSISTENCE_LARGE_EVENT_PREFIX))
+    {
+      saw_persistence = 1;
+      if (sql_persistence_write_large_event_line(event_line))
         replayed++;
       else
       {
@@ -7157,7 +7178,7 @@ static int persistence_large_event_log_writer(const char *line, void *context)
   if (!line || !*line)
     return 1;
 
-  if (sql_persistence_execute_raw(line))
+  if (sql_persistence_write_large_event_line(line))
     return 1;
 
   return 0;

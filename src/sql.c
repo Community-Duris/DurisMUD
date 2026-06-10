@@ -92,6 +92,160 @@ bool qry(const char *format, ...) { return TRUE; }
 bool sql_persistence_write_item_event_line(const char *line) { return FALSE; }
 bool sql_persistence_write_scalar_event_line(const char *line) { return FALSE; }
 bool sql_persistence_execute_raw(const char *sql) { return FALSE; }
+/* Worker entry point for the large-event queue. Parses the structured
+ * PERSISTENCE_LARGE_EVENT line, escapes all string fields on persistenceDB,
+ * builds the INSERT, and executes. Mirrors the approach used by the
+ * scalar-event writer so escape and execute share a connection.
+ */
+static bool sql_persistence_write_large_event_line_locked(const char *line)
+{
+  /* Diagnostic counters for silent-drop paths. Safe without
+   * locks because this function is only called from the large
+   * event worker thread (the public wrapper takes
+   * persistence_sql_mutex). */
+  static unsigned long large_event_unknown_event_count = 0;
+  static unsigned long large_event_invalid_pid_count = 0;
+
+	MYSQL *db;
+	char copy[PERSISTENCE_LARGE_EVENT_MAX_LEN];
+	char *saveptr = NULL;
+	char *token;
+	char key[64], value[4096];
+	char event_type[64] = "unknown";
+	unsigned long event_id = 0;
+	int room_vnum = 0;
+	char room_name_raw[256] = "";
+	int pid = 0;
+	int level = 0;
+	int inroom = 0;
+	int leader = 0;
+	char pk_type_raw[64] = "";
+	char player_description_raw[1024] = "";
+	char equip_raw[65536] = "";
+	char log_raw[65536] = "";
+	char event_type_sql[128];
+	char room_name_sql[512];
+	char pk_type_sql[128];
+	char player_description_sql[2048];
+	char equip_sql[131072];
+	char log_sql[131072];
+	char query[200000];
+	int got_pkill_event = 0;
+	int got_pkill_info = 0;
+
+	if (!line || !*line)
+		return FALSE;
+
+	db = sql_persistence_connection();
+	if (!db)
+		return FALSE;
+
+	snprintf(copy, sizeof(copy), "%s", line);
+	token = strtok_r(copy, "|", &saveptr);
+	while (token)
+	{
+		const char *eq = strchr(token, '=');
+		if (eq)
+		{
+			int key_len = (int)(eq - token);
+			if (key_len >= (int)sizeof(key))
+				key_len = sizeof(key) - 1;
+			memcpy(key, token, key_len);
+			key[key_len] = '\0';
+			snprintf(value, sizeof(value), "%s", eq + 1);
+		}
+		else
+		{
+			key[0] = '\0';
+			value[0] = '\0';
+		}
+
+		if (!str_cmp(key, "event"))
+			snprintf(event_type, sizeof(event_type), "%s", value);
+		else if (!str_cmp(key, "event_id"))
+			event_id = (unsigned long) strtoul(value, NULL, 10);
+		else if (!str_cmp(key, "room_vnum"))
+			room_vnum = atoi(value);
+		else if (!str_cmp(key, "room_name"))
+			snprintf(room_name_raw, sizeof(room_name_raw), "%s", value);
+		else if (!str_cmp(key, "pid"))
+			pid = atoi(value);
+		else if (!str_cmp(key, "level"))
+			level = atoi(value);
+		else if (!str_cmp(key, "inroom"))
+			inroom = atoi(value);
+		else if (!str_cmp(key, "leader"))
+			leader = atoi(value);
+		else if (!str_cmp(key, "pk_type"))
+			snprintf(pk_type_raw, sizeof(pk_type_raw), "%s", value);
+		else if (!str_cmp(key, "player_description"))
+			snprintf(player_description_raw, sizeof(player_description_raw), "%s", value);
+		else if (!str_cmp(key, "equip"))
+			snprintf(equip_raw, sizeof(equip_raw), "%s", value);
+		else if (!str_cmp(key, "log"))
+			snprintf(log_raw, sizeof(log_raw), "%s", value);
+
+		token = strtok_r(NULL, "|", &saveptr);
+	}
+
+	if (!str_cmp(event_type, "pkill_event"))
+	{
+		got_pkill_event = 1;
+		escape_on_persistenceDB(event_type, event_type_sql, sizeof(event_type_sql));
+		escape_on_persistenceDB(room_name_raw, room_name_sql, sizeof(room_name_sql));
+		snprintf(query, sizeof(query),
+		         "INSERT INTO pkill_event (id, stamp, room_vnum, room_name) "
+		         "VALUES( %lu, NOW(), %d, '%s' )",
+		         event_id, room_vnum, room_name_sql);
+	}
+	else if (!str_cmp(event_type, "pkill_info"))
+	{
+		got_pkill_info = 1;
+		escape_on_persistenceDB(pk_type_raw, pk_type_sql, sizeof(pk_type_sql));
+		escape_on_persistenceDB(player_description_raw, player_description_sql, sizeof(player_description_sql));
+		escape_on_persistenceDB(equip_raw, equip_sql, sizeof(equip_sql));
+		escape_on_persistenceDB(log_raw, log_sql, sizeof(log_sql));
+		snprintf(query, sizeof(query),
+		         "INSERT INTO pkill_info (event_id, pid, level, pk_type, player_description, equip, log, inroom, leader) "
+		         "VALUES( %lu, %d, %d, '%s', '%s', '%s', '%s', %d, %d )",
+		         event_id, pid, level, pk_type_sql,
+		         player_description_sql, equip_sql, log_sql, inroom, leader);
+	}
+	else
+	{
+		large_event_unknown_event_count++;
+		if (large_event_unknown_event_count <= 5 || !(large_event_unknown_event_count % 1000))
+		{
+			logit(LOG_FILE, "PERSISTENCE: domain=large_event owner=worker action=unknown_event_type "
+				 "detail=event_type='%s' pid=%d count=%lu raw=%.200s",
+				event_type, pid, large_event_unknown_event_count, line ? line : "(null)");
+		}
+		logit(LOG_DEBUG, "Persistence: unknown large event type '%s'; raw line: %.200s", event_type, line);
+		return FALSE;
+	}
+
+	if (mysql_real_query(db, query, strlen(query)))
+	{
+		logit(LOG_DEBUG, "Persistence MySQL error in large event (%s): %s",
+		      got_pkill_event ? "pkill_event" : "pkill_info", mysql_error(db));
+		logit(LOG_DEBUG, "Persistence MySQL failed query (first 200 chars): %.200s", query);
+		return FALSE;
+	}
+
+	return TRUE;
+}
+
+bool sql_persistence_write_large_event_line(const char *line)
+{
+	bool ok;
+
+	pthread_mutex_lock(&persistence_sql_mutex);
+	ok = sql_persistence_write_large_event_line_locked(line);
+	pthread_mutex_unlock(&persistence_sql_mutex);
+
+	return ok;
+}
+
 void send_to_pid_offline(const char *msg, int pid) {}
 void send_offline_messages(P_char ch) {}
 void log_epic_gain(int pid, int zone_id, int type, int epics) {}
@@ -102,6 +256,79 @@ void show_frag_trophy(P_char ch, P_char who) { send_to_char("Disabled.", ch); }
 void sql_log(P_char ch, char *kind, char *format, ...) {}
 
 bool get_zone_info(int zone_number, struct zone_info *info) { return FALSE; }
+
+/* Bounded escape helper. Caps the input length to out_size/2 - 1
+ * so mysql_real_escape_string can never overflow the output buffer
+ * (it may write up to 2*in_len + 1 bytes). Use this in preference
+ * to calling mysql_real_escape_string(DB, ...) directly.
+ *
+ * Safe to call with in == NULL (writes a single NUL into out[0]
+ * and returns). Safe to call with out_size == 0 (no-op).
+ */
+static void escape_on_DB(const char *in, char *out, size_t out_size)
+{
+  size_t in_len;
+  size_t max_input;
+
+  if (!out || out_size == 0)
+    return;
+
+  out[0] = '\0';
+
+  if (!in)
+    return;
+
+  in_len = strlen(in);
+  max_input = out_size / 2;
+  if (max_input == 0)
+    return;
+  /* mysql_real_escape_string may emit up to 2*in_len + 1 bytes
+   * (backslash, quote, NUL, etc). Reserving the last byte for NUL
+   * means the input bound is out_size/2 - 1.
+   */
+  max_input--;
+  if (in_len > max_input)
+    in_len = max_input;
+
+  mysql_real_escape_string(DB, out, in, (unsigned long)in_len);
+}
+
+/* Bounded escape helper for the persistenceDB connection.
+ * Mirrors escape_on_DB but uses the global `persistenceDB`
+ * connection so charset/state match the connection the worker
+ * will execute on. Cap the input length to out_size/2 - 1 so
+ * mysql_real_escape_string can never overflow the output buffer.
+ *
+ * Safe to call with in == NULL (writes a single NUL into out[0]
+ * and returns). Safe to call with out_size == 0 (no-op).
+ */
+static void escape_on_persistenceDB(const char *in, char *out, size_t out_size)
+{
+  size_t in_len;
+  size_t max_input;
+
+  if (!out || out_size == 0)
+    return;
+
+  out[0] = '\0';
+
+  if (!in)
+    return;
+
+  in_len = strlen(in);
+  max_input = out_size / 2;
+  if (max_input == 0)
+    return;
+  /* mysql_real_escape_string may emit up to 2*in_len + 1 bytes
+   * (backslash, quote, NUL, etc). Reserving the last byte for NUL
+   * means the input bound is out_size/2 - 1.
+   */
+  max_input--;
+  if (in_len > max_input)
+    in_len = max_input;
+
+  mysql_real_escape_string(persistenceDB, out, in, (unsigned long)in_len);
+}
 
 string escape_str(const char *str) { return string(str); }
 
@@ -132,12 +359,12 @@ static void sql_resetConnectTimes(void);
 
 // The global database handler
 MYSQL *DB;
-static MYSQL *persistenceDB = NULL;
-static pthread_mutex_t persistence_sql_mutex = PTHREAD_MUTEX_INITIALIZER;
-static bool persistence_tables_ready = FALSE;
-static bool persistence_reward_tables_ready = FALSE;
-static unsigned long persistence_reward_event_sequence = 0;
-static MYSQL *sql_persistence_connection(void);
+MYSQL *persistenceDB = NULL;
+pthread_mutex_t persistence_sql_mutex = PTHREAD_MUTEX_INITIALIZER;
+bool persistence_tables_ready = FALSE;
+bool persistence_reward_tables_ready = FALSE;
+unsigned long persistence_reward_event_sequence = 0;
+MYSQL *sql_persistence_connection(void);
 static bool sql_ensure_runtime_schema(MYSQL *db);
 static bool sql_persistence_ensure_reward_tables(MYSQL *db);
 static bool sql_persistence_write_item_event_line_locked(const char *line);
@@ -178,10 +405,10 @@ void sql_populate_lookup_tables()
 		if (!race_names_table[i].normal || !race_names_table[i].normal[0])
 			continue;
 
-		mysql_real_escape_string(DB, esc_name, race_names_table[i].normal, strlen(race_names_table[i].normal));
-		mysql_real_escape_string(DB, esc_ansi, race_names_table[i].ansi ? race_names_table[i].ansi : "", race_names_table[i].ansi ? strlen(race_names_table[i].ansi) : 0);
-		mysql_real_escape_string(DB, esc_short, race_names_table[i].no_spaces ? race_names_table[i].no_spaces : "", race_names_table[i].no_spaces ? strlen(race_names_table[i].no_spaces) : 0);
-		mysql_real_escape_string(DB, esc_abbrev, race_names_table[i].code ? race_names_table[i].code : "", race_names_table[i].code ? strlen(race_names_table[i].code) : 0);
+		escape_on_DB(race_names_table[i].normal, esc_name, sizeof(esc_name));
+		escape_on_DB(race_names_table[i].ansi, esc_ansi, sizeof(esc_ansi));
+		escape_on_DB(race_names_table[i].no_spaces, esc_short, sizeof(esc_short));
+		escape_on_DB(race_names_table[i].code, esc_abbrev, sizeof(esc_abbrev));
 
 		// check if this is a playable race and get racewar side
 		int racewar  = 0;
@@ -223,9 +450,9 @@ void sql_populate_lookup_tables()
 		if (!class_names_table[i].normal || !class_names_table[i].normal[0])
 			continue;
 
-		mysql_real_escape_string(DB, esc_name, class_names_table[i].normal, strlen(class_names_table[i].normal));
-		mysql_real_escape_string(DB, esc_ansi, class_names_table[i].ansi ? class_names_table[i].ansi : "", class_names_table[i].ansi ? strlen(class_names_table[i].ansi) : 0);
-		mysql_real_escape_string(DB, esc_short, class_names_table[i].code ? class_names_table[i].code : "", class_names_table[i].code ? strlen(class_names_table[i].code) : 0);
+		escape_on_DB(class_names_table[i].normal, esc_name, sizeof(esc_name));
+		escape_on_DB(class_names_table[i].ansi, esc_ansi, sizeof(esc_ansi));
+		escape_on_DB(class_names_table[i].code, esc_short, sizeof(esc_short));
 
 		char letter[2] = {class_names_table[i].letter, '\0'};
 
@@ -878,6 +1105,35 @@ void sql_insert_new_item(P_char ch, P_obj obj)
 	do_stat(ch, item_id, 555);
 }
 
+/* Clean a string for inclusion in a PERSISTENCE_LARGE_EVENT line.
+ * Strips '|' (field separator) and CR/LF so the line format stays intact.
+ * The escape itself is performed on the persistence DB connection inside
+ * the worker, to avoid a charset mismatch between DB and persistenceDB.
+ */
+static const char *sql_large_clean_field(const char *in, char *buf, int buf_size)
+{
+	int i;
+
+	if (!buf || buf_size <= 0)
+		return "";
+
+	if (!in)
+	{
+		buf[0] = '\0';
+		return buf;
+	}
+
+	for (i = 0; in[i] && i < buf_size - 1; i++)
+	{
+		if (in[i] == '|' || in[i] == '\r' || in[i] == '\n')
+			buf[i] = ' ';
+		else
+			buf[i] = in[i];
+	}
+	buf[i] = '\0';
+	return buf;
+}
+
 /* Local counter-based pkill event ID — no sync DB call.
  * pkill_event.id is int(10) unsigned (~4.3B max), so we use a simple
  * incrementing 32-bit counter. Seed from time() at first call to make
@@ -887,11 +1143,9 @@ static unsigned long pkill_event_local_counter = 0;
 
 unsigned long new_pkill_event(P_char ch)
 {
-	char sql[MAX_STRING_LENGTH];
-	char room_name_sql[MAX_STRING_LENGTH];
+	char line[PERSISTENCE_LARGE_EVENT_MAX_LEN];
+	char room_name_clean[256];
 	int queued = 0;
-
-	mysql_str(world[ch->in_room].name, room_name_sql);
 
 	/* Seed once, then simple 32-bit increment */
 	if (!pkill_event_local_counter)
@@ -899,25 +1153,41 @@ unsigned long new_pkill_event(P_char ch)
 	pkill_event_local_counter++;
 	unsigned long event_id = pkill_event_local_counter;
 
-	/* Build the pkill_event INSERT SQL and enqueue to large-event queue */
-	snprintf(sql, sizeof(sql),
-	         "INSERT INTO pkill_event (id, stamp, room_vnum, room_name) "
-	         "VALUES( %lu, NOW(), %d, '%s' )",
+	/* Build a structured PERSISTENCE_LARGE_EVENT line and enqueue it.
+	 * String fields are pipe/CR/LF cleaned; the worker escapes them on
+	 * persistenceDB so the escape and the execute use the same connection
+	 * (and therefore the same charset).
+	 */
+	sql_large_clean_field(world[ch->in_room].name, room_name_clean, sizeof(room_name_clean));
+	snprintf(line, sizeof(line),
+	         "PERSISTENCE_LARGE_EVENT|event=pkill_event|event_id=%lu|room_vnum=%d|room_name=%s",
 	         event_id,
 	         world[ch->in_room].number,
-	         room_name_sql);
+	         room_name_clean);
 
 	if (persistence_large_event_worker_running())
 	{
-		if (persistence_large_event_queue_enqueue(sql))
+		if (persistence_large_event_queue_enqueue(line))
 			queued = 1;
-		else if (persistence_write_fallback_event_line(sql, "pkill_event", GET_NAME(ch), "queue_full_flat_fallback"))
+		else if (persistence_write_fallback_event_line(line, "pkill_event", GET_NAME(ch), "queue_full_flat_fallback"))
 			queued = 1;
 	}
 
 	if (!queued)
 	{
-		/* Sync fallback: execute directly */
+		/* Sync fallback: build the INSERT with escaping on the main DB.
+		 * The async path (above) is the common case; this only runs when
+		 * the worker is down.
+		 */
+		char room_name_sql[512];
+		char sql[MAX_STRING_LENGTH];
+		mysql_str(world[ch->in_room].name, room_name_sql);
+		snprintf(sql, sizeof(sql),
+		         "INSERT INTO pkill_event (id, stamp, room_vnum, room_name) "
+		         "VALUES( %lu, NOW(), %d, '%s' )",
+		         event_id,
+		         world[ch->in_room].number,
+		         room_name_sql);
 		if (mysql_real_query(DB, sql, strlen(sql)) != 0)
 		{
 			logit(LOG_DEBUG, "MYSQL: Failed to create pkill event (sync fallback)");
@@ -961,45 +1231,65 @@ void store_pkill_info(unsigned long pkill_event, P_char ch, const char *type, in
 		return;
 	}
 
-	/* Collect data synchronously (from in-memory state - safe) */
-	char equip_sql[MAX_STRING_LENGTH];
-	char player_description_sql[MAX_STRING_LENGTH];
-	char log_sql[MAX_LOG_LEN];
-	char raw_sql[PERSISTENCE_LARGE_EVENT_MAX_LEN];
+	/* Collect data synchronously (from in-memory state - safe). We keep the
+	 * raw (unescaped) values here; escaping is deferred to the worker thread
+	 * so the escape and the execute share the same MySQL connection (and
+	 * therefore the same charset), avoiding a DB / persistenceDB mismatch.
+	 */
+	char equip_clean[PERSISTENCE_LARGE_EVENT_MAX_LEN / 2];
+	char player_description_clean[512];
+	char log_clean[PERSISTENCE_LARGE_EVENT_MAX_LEN / 2];
+	char pk_type_clean[64];
+	char line[PERSISTENCE_LARGE_EVENT_MAX_LEN];
 	int queued = 0;
 
 	get_equipment_list(ch, buf, 1);
-	mysql_str(buf, equip_sql);
+	sql_large_clean_field(buf, equip_clean, sizeof(equip_clean));
 
 	get_pkill_player_description(ch, buf);
-	mysql_str(buf, player_description_sql);
+	sql_large_clean_field(buf, player_description_clean, sizeof(player_description_clean));
 
 	raw_log = GET_PLAYER_LOG(ch)->read(LOG_PUBLIC, MAX_LOG_LEN);
-	mysql_str(raw_log, log_sql);
+	sql_large_clean_field(raw_log, log_clean, sizeof(log_clean));
 
-	snprintf(raw_sql, sizeof(raw_sql),
-	         "INSERT INTO pkill_info (event_id, pid, level, pk_type, player_description, equip, log, inroom, leader) "
-	         "VALUES( %lu, %d, %d, '%s', '%s', '%s', '%s', %d ,%d )",
+	sql_large_clean_field(type, pk_type_clean, sizeof(pk_type_clean));
+
+	snprintf(line, sizeof(line),
+	         "PERSISTENCE_LARGE_EVENT|event=pkill_info|event_id=%lu|pid=%d|level=%d|pk_type=%s|player_description=%s|equip=%s|log=%s|inroom=%d|leader=%d",
 	         pkill_event,
 	         GET_PID(ch),
 	         GET_LEVEL(ch),
-	         type,
-	         player_description_sql,
-	         equip_sql,
-	         log_sql,
+	         pk_type_clean,
+	         player_description_clean,
+	         equip_clean,
+	         log_clean,
 	         in_room,
 	         leader);
 
 	if (persistence_large_event_worker_running())
 	{
-		if (persistence_large_event_queue_enqueue(raw_sql))
+		if (persistence_large_event_queue_enqueue(line))
 			queued = 1;
-		else if (persistence_write_fallback_event_line(raw_sql, "pkill_info", GET_NAME(ch), "queue_full_flat_fallback"))
+		else if (persistence_write_fallback_event_line(line, "pkill_info", GET_NAME(ch), "queue_full_flat_fallback"))
 			queued = 1;
 	}
 
 	if (!queued)
 	{
+		/* Sync fallback (worker not running). Escape on the main DB so
+		 * the escape and execute share the same connection.
+		 */
+		char equip_sql[MAX_STRING_LENGTH];
+		char player_description_sql[MAX_STRING_LENGTH];
+		char log_sql[MAX_LOG_LEN];
+
+		get_equipment_list(ch, buf, 1);
+		mysql_str(buf, equip_sql);
+		get_pkill_player_description(ch, buf);
+		mysql_str(buf, player_description_sql);
+		raw_log = GET_PLAYER_LOG(ch)->read(LOG_PUBLIC, MAX_LOG_LEN);
+		mysql_str(raw_log, log_sql);
+
 		db_query("INSERT INTO pkill_info (event_id, pid, level, pk_type, player_description, equip, log, inroom, leader) "
 		         "VALUES( %lu, %d, %d, '%s', '%s', '%s', '%s', %d ,%d )",
 		         pkill_event,
@@ -1311,6 +1601,12 @@ void sql_world_quest_finished(P_char ch, P_obj reward)
 	if (!queued)
 	{
 		char *reward_desc = reward ? mysql_str(reward->short_description, buf) : mysql_str("", buf);
+		char name_sql[256];
+
+		/* Escape the player name once on the main DB so it's safe in both
+		 * the simple-INSERT and the idempotent ON DUPLICATE KEY path.
+		 */
+		mysql_str(GET_NAME(ch), name_sql);
 
 		db = persistence_reward_tables_ready ? sql_persistence_connection() : NULL;
 		if (!db)
@@ -1318,7 +1614,7 @@ void sql_world_quest_finished(P_char ch, P_obj reward)
 			db_query("INSERT INTO world_quest_accomplished (pid, timestamp, quest_giver, player_name, player_level, quest_target, reward_vnum, reward_desc) VALUES (%d, now(), %d, '%s', %d, %d, %d, '%s')",
 			         GET_PID(ch),
 			         ch->only.pc->quest_giver,
-			         GET_NAME(ch),
+			         name_sql,
 			         GET_LEVEL(ch),
 			         ch->only.pc->quest_mob_vnum,
 			         reward_vnum,
@@ -1326,7 +1622,7 @@ void sql_world_quest_finished(P_char ch, P_obj reward)
 		}
 		else
 		{
-			mysql_real_escape_string(db, event_key_sql, event_key, strlen(event_key));
+			escape_on_DB(event_key, event_key_sql, sizeof(event_key_sql));
 
 			db_query("INSERT INTO world_quest_accomplished "
 			         "(event_key, pid, timestamp, quest_giver, player_name, player_level, quest_target, reward_vnum, reward_desc) "
@@ -1335,7 +1631,7 @@ void sql_world_quest_finished(P_char ch, P_obj reward)
 			         event_key_sql,
 			         GET_PID(ch),
 			         ch->only.pc->quest_giver,
-			         GET_NAME(ch),
+			         name_sql,
 			         GET_LEVEL(ch),
 			         ch->only.pc->quest_mob_vnum,
 			         reward_vnum,
@@ -1458,7 +1754,7 @@ void sql_zone_touch_finished(const char *event_key, int boot_time, int touched_a
 		return;
 	}
 
-	mysql_real_escape_string(db, event_key_sql, event_key, strlen(event_key));
+	escape_on_DB(event_key, event_key_sql, sizeof(event_key_sql));
 
 	db_query("INSERT INTO zone_touches (event_key, boot_time, touched_at, zone_number, toucher_pid, group_size, epic_value, alignment_delta) "
 	         "VALUES ('%s', FROM_UNIXTIME(%d), FROM_UNIXTIME(%d), %d, %d, %d, %d, %d) "
@@ -1571,7 +1867,7 @@ void perform_wiki_search(P_char ch, const char *query)
 
 	// SECURITY FIX: Sanitize user input to prevent SQL injection
 	// Escape the query string using MySQL's built-in escape function
-	mysql_real_escape_string(DB, escaped_query, query, strlen(query));
+	escape_on_DB(query, escaped_query, sizeof(escaped_query));
 
 	/*
 	MYSQL_RES *db  = db_query("SELECT UPPER(si_title) , old_id, REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(old_text,'<pre>',''),'</pre>',''), ']]', ''),'[[' ,'' ), '::', ':'), '<br>', '') FROM
@@ -1703,7 +1999,7 @@ bool qry(const char *format, ...)
 	return TRUE;
 }
 
-static MYSQL *sql_persistence_connection(void)
+MYSQL *sql_persistence_connection(void)
 {
 	char db_name[50];
 	MYSQL *db;
@@ -2438,11 +2734,11 @@ static bool sql_persistence_write_item_event_line_locked(const char *line)
 	persistence_parse_owner(target, owner_type, sizeof(owner_type),
 	                        owner_ref, sizeof(owner_ref));
 
-	mysql_real_escape_string(db, event_sql, event_type, strlen(event_type));
-	mysql_real_escape_string(db, owner_type_sql, owner_type, strlen(owner_type));
-	mysql_real_escape_string(db, owner_ref_sql, owner_ref, strlen(owner_ref));
-	mysql_real_escape_string(db, item_sql, item_name, strlen(item_name));
-	mysql_real_escape_string(db, raw_sql, line, strlen(line));
+	escape_on_persistenceDB(event_type, event_sql, sizeof(event_sql));
+	escape_on_persistenceDB(owner_type, owner_type_sql, sizeof(owner_type_sql));
+	escape_on_persistenceDB(owner_ref, owner_ref_sql, sizeof(owner_ref_sql));
+	escape_on_persistenceDB(item_name, item_sql, sizeof(item_sql));
+	escape_on_persistenceDB(line, raw_sql, sizeof(raw_sql));
 
 	snprintf(query, sizeof(query),
 	         "INSERT INTO persistence_item_event_audit "
@@ -2592,6 +2888,13 @@ bool sql_persistence_item_owner_matches(unsigned long long item_uid,
 
 static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 {
+	/* Diagnostic counters - only the scalar worker thread calls this
+	 * function (via sql_persistence_write_scalar_event_line which takes
+	 * persistence_sql_mutex), so no atomic / lock needed.
+	 */
+	static unsigned long unknown_event_count = 0;
+	static unsigned long invalid_pid_count = 0;
+
 	MYSQL *db;
 	char copy[PERSISTENCE_EVENT_MAX_LEN];
 	char *saveptr = NULL;
@@ -2765,11 +3068,19 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	if (pid <= 0 && str_cmp(event_type, "zone_touch")
 	    && str_cmp(event_type, "zone_table_update")
 	    && str_cmp(event_type, "zone_alignment_update"))
+	{
+		invalid_pid_count++;
+		if (invalid_pid_count <= 5 || !(invalid_pid_count % 1000))
+		{
+			logit(LOG_FILE, "PERSISTENCE: domain=scalar_event owner=worker action=invalid_pid detail=event_type='%s' pid=%d count=%lu raw=%.200s",
+			      event_type, pid, invalid_pid_count, line ? line : "(null)");
+		}
 		return FALSE;
+	}
 
 	else if (!str_cmp(event_type, "player_active"))
 	{
-		mysql_real_escape_string(db, player_name_sql, player_name, strlen(player_name));
+		escape_on_persistenceDB(player_name, player_name_sql, sizeof(player_name_sql));
 		snprintf(query, sizeof(query), "UPDATE player_data SET active = 0 WHERE name = '%s' AND pid != %d", player_name_sql, pid);
 		if (!sql_persistence_query(db, query))
 			return FALSE;
@@ -2814,7 +3125,7 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 		if (!event_key[0])
 			sql_reward_event_key(event_key, sizeof(event_key), "epic_gain", pid, type_id);
 
-		mysql_real_escape_string(db, event_key_sql, event_key, strlen(event_key));
+		escape_on_persistenceDB(event_key, event_key_sql, sizeof(event_key_sql));
 		snprintf(query,
 		         sizeof(query),
 		         "INSERT INTO epic_gain (event_key, pid, time, type, type_id, epics) "
@@ -2834,9 +3145,9 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 		if (!event_key[0])
 			sql_reward_event_key(event_key, sizeof(event_key), "quest_complete", pid, quest_target);
 
-		mysql_real_escape_string(db, event_key_sql, event_key, strlen(event_key));
-		mysql_real_escape_string(db, player_name_sql, player_name, strlen(player_name));
-		mysql_real_escape_string(db, reward_desc_sql, reward_desc, strlen(reward_desc));
+		escape_on_persistenceDB(event_key, event_key_sql, sizeof(event_key_sql));
+		escape_on_persistenceDB(player_name, player_name_sql, sizeof(player_name_sql));
+		escape_on_persistenceDB(reward_desc, reward_desc_sql, sizeof(reward_desc_sql));
 		snprintf(query,
 		         sizeof(query),
 		         "INSERT INTO world_quest_accomplished "
@@ -2860,7 +3171,7 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 		if (!event_key[0])
 			sql_reward_event_key(event_key, sizeof(event_key), "zone_touch", toucher_pid, zone_number);
 
-		mysql_real_escape_string(db, event_key_sql, event_key, strlen(event_key));
+		escape_on_persistenceDB(event_key, event_key_sql, sizeof(event_key_sql));
 		snprintf(query,
 		         sizeof(query),
 		         "INSERT INTO zone_touches "
@@ -2899,7 +3210,7 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	}
 	else if (!str_cmp(event_type, "auction_bid_history"))
 	{
-		mysql_real_escape_string(db, bidder_name_sql, bidder_name, strlen(bidder_name));
+		escape_on_persistenceDB(bidder_name, bidder_name_sql, sizeof(bidder_name_sql));
 		snprintf(query,
 		         sizeof(query),
 		         "INSERT INTO auction_bid_history (date, auction_id, bidder_pid, bidder_name, bid_amount) "
@@ -2924,8 +3235,8 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	}	else if (!str_cmp(event_type, "account_character_update"))
 	{
 		char acct_sql[257];
-		mysql_real_escape_string(db, acct_sql, save_acct_name, strlen(save_acct_name));
-		mysql_real_escape_string(db, bidder_name_sql, bidder_name, strlen(bidder_name));
+		escape_on_persistenceDB(save_acct_name, acct_sql, sizeof(acct_sql));
+		escape_on_persistenceDB(bidder_name, bidder_name_sql, sizeof(bidder_name_sql));
 		snprintf(query, sizeof(query),
 		         "INSERT INTO account_characters "
 		         "(account_name, pid, char_name, created_at, deleted_at) "
@@ -2945,10 +3256,10 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	else if (!str_cmp(event_type, "frag_leaderboard_update"))
 	{
 		char acct_sql[257], race_sql[129], class_sql[129];
-		mysql_real_escape_string(db, acct_sql, save_acct_name, strlen(save_acct_name));
-		mysql_real_escape_string(db, bidder_name_sql, bidder_name, strlen(bidder_name));
-		mysql_real_escape_string(db, race_sql, save_race, strlen(save_race));
-		mysql_real_escape_string(db, class_sql, save_class, strlen(save_class));
+		escape_on_persistenceDB(save_acct_name, acct_sql, sizeof(acct_sql));
+		escape_on_persistenceDB(bidder_name, bidder_name_sql, sizeof(bidder_name_sql));
+		escape_on_persistenceDB(save_race, race_sql, sizeof(race_sql));
+		escape_on_persistenceDB(save_class, class_sql, sizeof(class_sql));
 		snprintf(query, sizeof(query),
 		         "REPLACE INTO frag_leaderboard "
 		         "(pid, account_name, char_name, total_frags, racewar, race, class, level, deleted_at) "
@@ -2993,7 +3304,7 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	}
 	else if (!str_cmp(event_type, "player_killed_by"))
 	{
-		mysql_real_escape_string(db, player_name_sql, player_name, strlen(player_name));
+		escape_on_persistenceDB(player_name, player_name_sql, sizeof(player_name_sql));
 		snprintf(query, sizeof(query), "UPDATE player_data SET killed_by = '%s' WHERE pid = %d", player_name_sql, pid);
 		if (!sql_persistence_query(db, query))
 			return FALSE;
@@ -3002,6 +3313,12 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 
 	else
 	{
+		unknown_event_count++;
+		if (unknown_event_count <= 5 || !(unknown_event_count % 1000))
+		{
+			logit(LOG_FILE, "PERSISTENCE: domain=scalar_event owner=worker action=unknown_event_type detail=event_type='%s' pid=%d count=%lu raw=%.200s",
+			      event_type, pid, unknown_event_count, line ? line : "(null)");
+		}
 		return FALSE;
 	}
 
@@ -3022,7 +3339,21 @@ bool sql_persistence_write_scalar_event_line(const char *line)
 void send_to_pid_offline(const char *msg, int pid)
 {
 	char buff[MAX_STRING_LENGTH];
-	mysql_real_escape_string(DB, buff, msg, strlen(msg));
+	size_t msg_len;
+	size_t max_input;
+
+	if (!msg)
+		return;
+
+	/* mysql_real_escape_string may write up to 2*in_len+1 bytes.
+	 * Bound the input so the escaped output always fits in buff.
+	 */
+	msg_len = strlen(msg);
+	max_input = sizeof(buff) / 2 - 1;
+	if (msg_len > max_input)
+		msg_len = max_input;
+
+	escape_on_DB(msg, buff, sizeof(buff));
 	qry("INSERT INTO offline_messages (date, pid, message) VALUES (now(), '%d', '%s')", pid, buff);
 }
 
@@ -3215,7 +3546,7 @@ void log_epic_gain_event(const char *event_key, int pid, int type, int type_id, 
 		return;
 	}
 
-	mysql_real_escape_string(db, event_key_sql, event_key, strlen(event_key));
+	escape_on_persistenceDB(event_key, event_key_sql, sizeof(event_key_sql));
 
 	qry("INSERT INTO epic_gain (event_key, pid, time, type, type_id, epics) "
 	    "values ('%s', '%d', now(), '%d', '%d', '%d') "
@@ -3345,7 +3676,7 @@ void do_sql(P_char ch, char *argument, int cmd)
 			{
 				// SECURITY FIX: Escape user input to prevent SQL injection
 				char escaped_desc[MAX_STRING_LENGTH * 2 + 1];
-				mysql_real_escape_string(DB, escaped_desc, rest, strlen(rest));
+				escape_on_DB(rest, escaped_desc, sizeof(escaped_desc));
 				snprintf(buf, MAX_STRING_LENGTH, "UPDATE prepstatement_duris_sql SET description = '%s' WHERE id='%d'", escaped_desc, prep_statement);
 				do_sql(ch, buf, 0);
 				return;
@@ -3354,7 +3685,7 @@ void do_sql(P_char ch, char *argument, int cmd)
 			{
 				// SECURITY FIX: Escape user input to prevent SQL injection
 				char escaped_sql[MAX_STRING_LENGTH * 2 + 1];
-				mysql_real_escape_string(DB, escaped_sql, rest, strlen(rest));
+				escape_on_DB(rest, escaped_sql, sizeof(escaped_sql));
 				if (qry("UPDATE prepstatement_duris_sql SET sql_code = '%s' WHERE id='%d'", escaped_sql, prep_statement))
 				{
 					snprintf(buf, MAX_STRING_LENGTH, "Row %d sql_code set to '%s'.\n\r", prep_statement, rest);
@@ -3440,7 +3771,7 @@ void update_zone_db()
 		}
 
 		char name_buff[MAX_STRING_LENGTH];
-		mysql_real_escape_string(DB, name_buff, zone_table[z].name, strlen(zone_table[z].name));
+		escape_on_DB(zone_table[z].name, name_buff, sizeof(name_buff));
 
 		MYSQL_RES *res = mysql_store_result(DB);
 		if (mysql_num_rows(res) > 0)
@@ -3558,7 +3889,7 @@ void sql_log(P_char ch, char *kind, char *format, ...)
 
 	static char message_buff[MAX_STRING_LENGTH];
 	message_buff[0] = '\0';
-	mysql_real_escape_string(DB, message_buff, buff, strlen(buff));
+	escape_on_DB(buff, message_buff, sizeof(message_buff));
 
 	static char ip_buff[15];
 	ip_buff[0] = '\0';

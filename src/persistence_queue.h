@@ -5,6 +5,11 @@
 #define PERSISTENCE_EVENT_MAX_LEN 1024
 #define PERSISTENCE_WORKER_RETRY_USEC 100000
 
+/* Deadlock-detection heartbeat: if a worker hasn't advanced its
+ * timestamp within this many seconds while still flagged
+ * running, the main-thread watchdog flags it as stuck. */
+#define PERSISTENCE_WORKER_HEARTBEAT_STUCK_SECS 30
+
 /* Large-payload event queue — for events that exceed the 1024-byte limit
  * (e.g. pkill_info with full equipment list and player log).
  * 64 slots x 128KB = 8MB total.
@@ -58,4 +63,7 @@ int persistence_large_event_worker_running(void);
 unsigned long persistence_large_event_worker_written(void);
 unsigned long persistence_large_event_worker_write_failures(void);
 
+int persistence_item_event_worker_stuck(int threshold_secs);
+int persistence_scalar_event_worker_stuck(int threshold_secs);
+int persistence_large_event_worker_stuck(int threshold_secs);
 #endif

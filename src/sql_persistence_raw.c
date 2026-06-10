@@ -20,46 +20,10 @@
 #include <mysql.h>
 
 extern MYSQL *DB;
-static pthread_mutex_t persistence_sql_mutex = PTHREAD_MUTEX_INITIALIZER;
-static MYSQL *persistenceDB = NULL;
 
-static MYSQL *sql_persistence_connection(void)
-{
-	char db_name[50];
-	MYSQL *db;
-	unsigned int timeout = 10;
-
-	if (persistenceDB && mysql_ping(persistenceDB) == 0)
-		return persistenceDB;
-
-	if (persistenceDB)
-	{
-		mysql_close(persistenceDB);
-		persistenceDB = NULL;
-	}
-
-	snprintf(db_name, sizeof(db_name), "%s", DB_NAME);
-	extern int RUNNING_PORT;
-	extern int DFLT_PORT;
-	if (RUNNING_PORT != DFLT_PORT)
-		snprintf(db_name, sizeof(db_name), "duris_dev");
-
-	db = mysql_init(NULL);
-	if (!db)
-		return NULL;
-
-	mysql_options(db, MYSQL_OPT_READ_TIMEOUT, &timeout);
-	mysql_options(db, MYSQL_OPT_WRITE_TIMEOUT, &timeout);
-
-	if (!mysql_real_connect(db, DB_HOST, DB_USER, DB_PASSWD, db_name, DB_PORT, NULL, CLIENT_MULTI_STATEMENTS))
-	{
-		mysql_close(db);
-		return NULL;
-	}
-
-	persistenceDB = db;
-	return persistenceDB;
-}
+/* Connection state is owned by sql.c; we just use it here. */
+extern MYSQL *persistenceDB;
+extern pthread_mutex_t persistence_sql_mutex;
 
 bool sql_persistence_execute_raw(const char *sql)
 {
