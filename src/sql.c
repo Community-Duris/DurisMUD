@@ -2766,7 +2766,18 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	    && str_cmp(event_type, "zone_alignment_update"))
 		return FALSE;
 
-	if (!str_cmp(event_type, "player_level"))
+	else if (!str_cmp(event_type, "player_active"))
+	{
+		mysql_real_escape_string(db, player_name_sql, player_name, strlen(player_name));
+		snprintf(query, sizeof(query), "UPDATE player_data SET active = 0 WHERE name = '%s' AND pid != %d", player_name_sql, pid);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+		snprintf(query, sizeof(query), "UPDATE player_data SET active = 1 WHERE pid = %d", pid);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+		return TRUE;
+	}
+		if (!str_cmp(event_type, "player_level"))
 	{
 		snprintf(query, sizeof(query), "UPDATE player_data SET level=%d WHERE pid=%d", level, pid);
 	}
@@ -2909,6 +2920,49 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			if (!sql_persistence_query(db, query))
 				return FALSE;
 		}
+	}	else if (!str_cmp(event_type, "account_character_update"))
+	{
+		char acct_sql[257];
+		mysql_real_escape_string(db, acct_sql, save_acct_name, strlen(save_acct_name));
+		mysql_real_escape_string(db, bidder_name_sql, bidder_name, strlen(bidder_name));
+		snprintf(query, sizeof(query),
+		         "INSERT INTO account_characters "
+		         "(account_name, pid, char_name, created_at, deleted_at) "
+		         "VALUES('%s', %d, '%s', NOW(), NULL) "
+		         "ON DUPLICATE KEY UPDATE "
+		         "account_name = VALUES(account_name), "
+		         "pid = VALUES(pid), "
+		         "char_name = VALUES(char_name), "
+		         "deleted_at = NULL",
+		         acct_sql,
+		         pid,
+		         bidder_name_sql);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+		return TRUE;
+	}
+	else if (!str_cmp(event_type, "frag_leaderboard_update"))
+	{
+		char acct_sql[257], race_sql[129], class_sql[129];
+		mysql_real_escape_string(db, acct_sql, save_acct_name, strlen(save_acct_name));
+		mysql_real_escape_string(db, bidder_name_sql, bidder_name, strlen(bidder_name));
+		mysql_real_escape_string(db, race_sql, save_race, strlen(save_race));
+		mysql_real_escape_string(db, class_sql, save_class, strlen(save_class));
+		snprintf(query, sizeof(query),
+		         "REPLACE INTO frag_leaderboard "
+		         "(pid, account_name, char_name, total_frags, racewar, race, class, level, deleted_at) "
+		         "VALUES(%d, '%s', '%s', %d, %d, '%s', '%s', %d, NULL)",
+		         pid,
+		         acct_sql,
+		         bidder_name_sql,
+		         total_frags,
+		         racewar_val,
+		         race_sql,
+		         class_sql,
+		         level);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+		return TRUE;
 	}
 	else if (!str_cmp(event_type, "zone_table_update"))
 	{
@@ -2922,6 +2976,18 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			if (!sql_persistence_query(db, query))
 				return FALSE;
 		}
+		return TRUE;
+	}	else if (!str_cmp(event_type, "zone_alignment_update"))
+	{
+		snprintf(query, sizeof(query), "UPDATE zones SET alignment = alignment + (%d) WHERE number = %d AND epic_type > 0", delta, zone_number);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+		snprintf(query, sizeof(query), "UPDATE zones SET alignment = %d WHERE number = %d AND alignment > %d", EPIC_ZONE_ALIGNMENT_MAX, zone_number, EPIC_ZONE_ALIGNMENT_MAX);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+		snprintf(query, sizeof(query), "UPDATE zones SET alignment = %d WHERE number = %d AND alignment < %d", EPIC_ZONE_ALIGNMENT_MIN, zone_number, EPIC_ZONE_ALIGNMENT_MIN);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
 		return TRUE;
 	}
 	else if (!str_cmp(event_type, "player_killed_by"))
@@ -2947,7 +3013,7 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 		         "VALUES(%d, %d, %d, '%s', '%s', '%s', '%s', %d, %d)",
 		         type_id,
 		         pid,
-		         player_level,
+		         level,
 		         pk_sql,
 		         pd_sql,
 		         eq_sql,
