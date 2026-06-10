@@ -917,11 +917,11 @@ void store_pkill_info(unsigned long pkill_event, P_char ch, const char *type, in
 {
 	char buf[MAX_STRING_LENGTH];
 	char line[PERSISTENCE_EVENT_MAX_LEN];
-	/* Async event line budget: PERSISTENCE_EVENT_MAX_LEN=1024, fixed overhead=180 chars.
-	 * 843 bytes remain for 3 fields -> 280 chars each (3 bytes margin).
-	 * Sync fallback uses full MAX_STRING_LENGTH/MAX_LOG_LEN data via mysql_str().
-	 * Tradeoff: async path truncates to 280 chars; sync path stores full data. */
-	char pd_clean[280], eq_clean[280], lg_clean[280];
+	/* Split into 3 events to avoid truncation: metadata (pkill_info), equip (pkill_info_eq), log (pkill_info_log).
+	 * Equip event overhead=109 => 914 chars for equip list (~15-18 items).
+	 * Log event overhead=108 => 915 chars for player log (~15 entries).
+	 * Sync fallback uses full MAX_STRING_LENGTH/MAX_LOG_LEN data via mysql_str(). */
+	char pd_clean[280], eq_clean[914], lg_clean[915]; /* Split: equip 914, log 915, pd stays 280 */
 	const char *raw_log;
 	int queued = 0;
 
@@ -944,26 +944,41 @@ void store_pkill_info(unsigned long pkill_event, P_char ch, const char *type, in
 	raw_log = GET_PLAYER_LOG(ch)->read(LOG_PUBLIC, MAX_LOG_LEN);
 	sql_scalar_clean_field(raw_log, lg_clean, sizeof(lg_clean));
 
-	/* Try async scalar event queue first */
-	snprintf(line,
-	         sizeof(line),
-	         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=pkill_info|pkill_event=%lu|pid=%d|level=%d|pk_type=%s|player_description=%s|equip=%s|log=%s|inroom=%d|leader=%d",
-	         (long)time(NULL),
-	         pkill_event,
-	         GET_PID(ch),
-	         GET_LEVEL(ch),
-	         type,
-	         pd_clean,
-	         eq_clean,
-	         lg_clean,
-	         in_room,
-	         leader);
+	/* Try async scalar event queue: 3 events (metadata, equip, log).
+	 * Only metadata failure triggers sync fallback — prevents duplicate rows.
+	 * Equip/log are best-effort enrichments. */
 	if (persistence_scalar_event_worker_running())
 	{
+		int meta_ok = 0;
+
+		/* Event 1: metadata + player_description — authoritative, gates sync fallback */
+		snprintf(line, sizeof(line),
+		         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=pkill_info|pkill_event=%lu|pid=%d|level=%d|pk_type=%s|player_description=%s|inroom=%d|leader=%d",
+		         (long)time(NULL), pkill_event, GET_PID(ch), GET_LEVEL(ch), type, pd_clean, in_room, leader);
 		if (persistence_scalar_event_queue_enqueue(line))
-			queued = 1;
+			meta_ok = 1;
 		else if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
-			queued = 1;
+			meta_ok = 1;
+
+		/* Events 2 & 3: best-effort enrichments (failure = partial data, acceptable) */
+		if (meta_ok)
+		{
+			snprintf(line, sizeof(line),
+			         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=pkill_info_eq|pkill_event=%lu|pid=%d|equip=%s",
+			         (long)time(NULL), pkill_event, GET_PID(ch), eq_clean);
+			if (!persistence_scalar_event_queue_enqueue(line))
+				persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback");
+		}
+		if (meta_ok)
+		{
+			snprintf(line, sizeof(line),
+			         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=pkill_info_log|pkill_event=%lu|pid=%d|log=%s",
+			         (long)time(NULL), pkill_event, GET_PID(ch), lg_clean);
+			if (!persistence_scalar_event_queue_enqueue(line))
+				persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback");
+		}
+
+		queued = meta_ok;
 	}
 
 	if (!queued)
@@ -2619,8 +2634,8 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	int boot_time = 0;
 	int touched_at = 0;
 	char player_description[280] = "";
-	char equip[280] = "";
-	char log[280] = "";
+	char equip[914] = ""; /* pkill_info_eq: 914 chars for equip list */
+	char log[915] = "";   /* pkill_info_log: 915 chars for player log */
 	char pk_type_sql[64] = "";
 	char save_acct_name[128] = "";
 	char save_race[64] = "";
@@ -3000,28 +3015,45 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	}
 	else if (!str_cmp(event_type, "pkill_info"))
 	{
-		/* SQL escape buffers: 2*280+1 = 561 (worst-case mysql_real_escape_string expansion).
-		 * Fixes pre-existing overflow: old pd_sql[256] was too small even for 200-char inputs. */
-		char pd_sql[561], eq_sql[561], lg_sql[561], pk_sql[64];
+		/* Metadata INSERT: equip and log filled by pkill_info_eq / pkill_info_log events */
+		char pd_sql[561], pk_sql[64];
 		mysql_real_escape_string(db, pk_sql, pk_type_sql, strlen(pk_type_sql));
 		mysql_real_escape_string(db, pd_sql, player_description, strlen(player_description));
-		mysql_real_escape_string(db, eq_sql, equip, strlen(equip));
-		mysql_real_escape_string(db, lg_sql, log, strlen(log));
 		snprintf(query,
 		         sizeof(query),
 		         "INSERT INTO pkill_info (event_id, pid, level, pk_type, player_description, equip, log, inroom, leader) "
-		         "VALUES(%d, %d, %d, '%s', '%s', '%s', '%s', %d, %d)",
+		         "VALUES(%d, %d, %d, '%s', '%s', '', '', %d, %d)",
 		         type_id,
 		         pid,
 		         level,
 		         pk_sql,
 		         pd_sql,
-		         eq_sql,
-		         lg_sql,
 		         type,
 		         auction_id);
 		if (!sql_persistence_query(db, query))
 			return FALSE;
+		return TRUE;
+	}
+	else if (!str_cmp(event_type, "pkill_info_eq"))
+	{
+		/* UPDATE equip after metadata INSERT */
+		char eq_sql[1829];
+		mysql_real_escape_string(db, eq_sql, equip, strlen(equip));
+		snprintf(query, sizeof(query),
+		         "UPDATE pkill_info SET equip = '%s' WHERE event_id = %d AND pid = %d",
+		         eq_sql, type_id, pid);
+		sql_persistence_query(db, query); /* best-effort: row might not exist yet */
+		return TRUE;
+	}
+	else if (!str_cmp(event_type, "pkill_info_log"))
+	{
+		/* UPDATE log after metadata INSERT */
+		char lg_sql[1831];
+		mysql_real_escape_string(db, lg_sql, log, strlen(log));
+		snprintf(query, sizeof(query),
+		         "UPDATE pkill_info SET log = '%s' WHERE event_id = %d AND pid = %d",
+		         lg_sql, type_id, pid);
+		sql_persistence_query(db, query); /* best-effort: row might not exist yet */
 		return TRUE;
 	}
 	else
