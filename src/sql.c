@@ -2579,6 +2579,10 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			epic_value = atoi(value);
 		else if (!str_cmp(key, "alignment_delta"))
 			alignment_delta = atoi(value);
+		else if (!str_cmp(key, "last_touch"))
+			;
+		else if (!str_cmp(key, "reset_perc"))
+			alignment_delta = atoi(value);
 		else if (!str_cmp(key, "delta"))
 			delta = atoi(value);
 		else if (!str_cmp(key, "total_frags"))
@@ -2733,6 +2737,20 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			if (!sql_persistence_query(db, query))
 				return FALSE;
 		}
+	}
+	else if (!str_cmp(event_type, "zone_table_update"))
+	{
+		snprintf(query, sizeof(query), "UPDATE zones SET last_touch = NOW() WHERE number = '%d'", zone_number);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+
+		if (alignment_delta)
+		{
+			snprintf(query, sizeof(query), "UPDATE zones SET reset_perc = 1 WHERE number = '%d'", zone_number);
+			if (!sql_persistence_query(db, query))
+				return FALSE;
+		}
+		return TRUE;
 	}
 	else
 	{

@@ -23,6 +23,7 @@ using namespace std;
 #include "epic_bonus.h"
 #include "epic_skills.h"
 #include "nexus_stones.h"
+#include "persistence_queue.h"
 #include "objmisc.h"
 #include "random.zone.h"
 #include "redis.h"
