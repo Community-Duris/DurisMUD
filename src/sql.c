@@ -593,6 +593,9 @@ void get_level_cap(int *level, int *racewar)
 /* Save frags delta */
 void sql_modify_frags(P_char ch, int gain)
 {
+	char line[PERSISTENCE_EVENT_MAX_LEN];
+	int queued = 0;
+
 	// We don't want IS_TRUSTED(ch) because that can be turned off with toggle fog.
 	if (GET_LEVEL(ch) > MAXLVLMORTAL)
 	{
@@ -600,12 +603,31 @@ void sql_modify_frags(P_char ch, int gain)
 	}
 	if (IS_MORPH(ch))
 		ch = MORPH_ORIG(ch);
-	sql_save_progress(GET_PID(ch), gain, PROGRESS_FRAGS);
-	// Update frag leaderboard with new frag count (incremental update for performance)
-	// Only update if the character is in the database (pid > 0)
-	if (GET_PID(ch) > 0)
+
+	// Enqueue frag progress and leaderboard update via async scalar event queue
+	snprintf(line,
+	         sizeof(line),
+	         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=player_frags|pid=%d|delta=%d|total_frags=%d",
+	         (long)time(NULL),
+	         GET_PID(ch),
+	         gain,
+	         ch->only.pc->frags);
+	if (persistence_scalar_event_worker_running())
 	{
-		db_query("UPDATE frag_leaderboard SET total_frags = %d, last_updated = NOW() WHERE pid = %ld AND deleted_at IS NULL", ch->only.pc->frags, GET_PID(ch));
+		if (persistence_scalar_event_queue_enqueue(line))
+			queued = 1;
+		else if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
+			queued = 1;
+	}
+
+	if (!queued)
+	{
+		// Fallback: synchronous write when worker not available
+		sql_save_progress(GET_PID(ch), gain, PROGRESS_FRAGS);
+		if (GET_PID(ch) > 0)
+		{
+			db_query("UPDATE frag_leaderboard SET total_frags = %d, last_updated = NOW() WHERE pid = %ld AND deleted_at IS NULL", ch->only.pc->frags, GET_PID(ch));
+		}
 	}
 
 	if (gain > 0)
@@ -2458,6 +2480,8 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	int reward_value = 0;
 	int auction_id = 0;
 	int bid_amount = 0;
+	int delta = 0;
+	int total_frags = 0;
 	int boot_time = 0;
 	int touched_at = 0;
 	int zone_number = 0;
@@ -2555,6 +2579,10 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			epic_value = atoi(value);
 		else if (!str_cmp(key, "alignment_delta"))
 			alignment_delta = atoi(value);
+		else if (!str_cmp(key, "delta"))
+			delta = atoi(value);
+		else if (!str_cmp(key, "total_frags"))
+			total_frags = atoi(value);
 
 		token = strtok_r(NULL, "|", &saveptr);
 	}
@@ -2692,6 +2720,19 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 		         pid,
 		         bidder_name_sql,
 		         bid_amount);
+	}
+	else if (!str_cmp(event_type, "player_frags"))
+	{
+		snprintf(query, sizeof(query), "INSERT INTO progress VALUES(0, %d, %d, NOW(), %d)", pid, PROGRESS_FRAGS, delta);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+
+		if (pid > 0)
+		{
+			snprintf(query, sizeof(query), "UPDATE frag_leaderboard SET total_frags = %d, last_updated = NOW() WHERE pid = %d AND deleted_at IS NULL", total_frags, pid);
+			if (!sql_persistence_query(db, query))
+				return FALSE;
+		}
 	}
 	else
 	{
