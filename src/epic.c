@@ -1890,18 +1890,31 @@ void update_epic_zone_alignment(int zone_number, int delta)
 #ifdef __NO_MYSQL__
 	return;
 #else
-	// add alignment
-	qry("UPDATE zones SET alignment = alignment + (%d) WHERE number = %d AND epic_type > 0", delta, zone_number);
+	{
+		char line[PERSISTENCE_EVENT_MAX_LEN];
+		int queued = 0;
 
-	// if alignment delta resulted in 0, add one more so that it doesn't stay on 0
-	/* This is ruining the epic_zone_balance function causing it to go from good to evil instead of neutral.
-	  qry("UPDATE zones SET alignment = alignment + (%d) WHERE number = %d AND epic_type > 0 and alignment = 0", delta, zone_number);
-	 */
-	// min/max bounds on alignment (scoped to the specific zone)
-	qry("UPDATE zones SET alignment = %d WHERE number = %d AND alignment > %d", EPIC_ZONE_ALIGNMENT_MAX, zone_number, EPIC_ZONE_ALIGNMENT_MAX);
-	qry("UPDATE zones SET alignment = %d WHERE number = %d AND alignment < %d", EPIC_ZONE_ALIGNMENT_MIN, zone_number, EPIC_ZONE_ALIGNMENT_MIN);
+		snprintf(line,
+		         sizeof(line),
+		         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=zone_alignment_update|zone_number=%d|delta=%d",
+		         (long)time(NULL),
+		         zone_number,
+		         delta);
+		if (persistence_scalar_event_worker_running())
+		{
+			if (persistence_scalar_event_queue_enqueue(line))
+				queued = 1;
+			else if (persistence_write_fallback_event_line(line, "scalar_event", "zone_alignment", "queue_full_flat_fallback"))
+				queued = 1;
+		}
 
-	// debug("update_epic_zone_alignment(zone_number=%d, delta=%d)", zone_number, delta);
+		if (!queued)
+		{
+			qry("UPDATE zones SET alignment = alignment + (%d) WHERE number = %d AND epic_type > 0", delta, zone_number);
+			qry("UPDATE zones SET alignment = %d WHERE number = %d AND alignment > %d", EPIC_ZONE_ALIGNMENT_MAX, zone_number, EPIC_ZONE_ALIGNMENT_MAX);
+			qry("UPDATE zones SET alignment = %d WHERE number = %d AND alignment < %d", EPIC_ZONE_ALIGNMENT_MIN, zone_number, EPIC_ZONE_ALIGNMENT_MIN);
+		}
+	}
 #endif
 }
 

@@ -2652,7 +2652,9 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 		token = strtok_r(NULL, "|", &saveptr);
 	}
 
-	if (pid <= 0 && str_cmp(event_type, "zone_touch"))
+	if (pid <= 0 && str_cmp(event_type, "zone_touch")
+	    && str_cmp(event_type, "zone_table_update")
+	    && str_cmp(event_type, "zone_alignment_update"))
 		return FALSE;
 
 	if (!str_cmp(event_type, "player_level"))
