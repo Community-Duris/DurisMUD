@@ -917,7 +917,11 @@ void store_pkill_info(unsigned long pkill_event, P_char ch, const char *type, in
 {
 	char buf[MAX_STRING_LENGTH];
 	char line[PERSISTENCE_EVENT_MAX_LEN];
-	char pd_clean[200], eq_clean[200], lg_clean[200];
+	/* Async event line budget: PERSISTENCE_EVENT_MAX_LEN=1024, fixed overhead=180 chars.
+	 * 843 bytes remain for 3 fields -> 280 chars each (3 bytes margin).
+	 * Sync fallback uses full MAX_STRING_LENGTH/MAX_LOG_LEN data via mysql_str().
+	 * Tradeoff: async path truncates to 280 chars; sync path stores full data. */
+	char pd_clean[280], eq_clean[280], lg_clean[280];
 	const char *raw_log;
 	int queued = 0;
 
@@ -2614,9 +2618,9 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	int total_frags = 0;
 	int boot_time = 0;
 	int touched_at = 0;
-	char player_description[256] = "";
-	char equip[256] = "";
-	char log[256] = "";
+	char player_description[280] = "";
+	char equip[280] = "";
+	char log[280] = "";
 	char pk_type_sql[64] = "";
 	char save_acct_name[128] = "";
 	char save_race[64] = "";
@@ -2930,7 +2934,9 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	}
 	else if (!str_cmp(event_type, "pkill_info"))
 	{
-		char pd_sql[256], eq_sql[256], lg_sql[256], pk_sql[64];
+		/* SQL escape buffers: 2*280+1 = 561 (worst-case mysql_real_escape_string expansion).
+		 * Fixes pre-existing overflow: old pd_sql[256] was too small even for 200-char inputs. */
+		char pd_sql[561], eq_sql[561], lg_sql[561], pk_sql[64];
 		mysql_real_escape_string(db, pk_sql, pk_type_sql, strlen(pk_type_sql));
 		mysql_real_escape_string(db, pd_sql, player_description, strlen(player_description));
 		mysql_real_escape_string(db, eq_sql, equip, strlen(equip));
