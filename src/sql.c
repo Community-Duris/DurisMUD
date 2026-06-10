@@ -424,12 +424,32 @@ int sql_save_player_core(P_char ch)
 		spec_name = GET_SPEC_NAME(ch->player.m_class, ch->player.spec - 1);
 	}
 
-	// deactivate any other players with same name (handles renamed characters)
-	snprintf(query, MAX_STRING_LENGTH, "UPDATE player_data SET active = 0 WHERE name = '%s' and pid != %d", p->name, GET_PID(ch));
-	db_query(query);
-
-	// mark this player as active
-	db_query("UPDATE player_data SET active = 1 WHERE pid = %d", GET_PID(ch));
+	// deactivate any other players with same name (handles renamed characters), async via scalar event queue
+	{
+		char line[PERSISTENCE_EVENT_MAX_LEN];
+		int queued = 0;
+		char name_clean[128];
+		sql_scalar_clean_field(p->name, name_clean, sizeof(name_clean));
+		snprintf(line,
+		         sizeof(line),
+		         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=player_active|pid=%d|name=%s",
+		         (long)time(NULL),
+		         GET_PID(ch),
+		         name_clean);
+		if (persistence_scalar_event_worker_running())
+		{
+			if (persistence_scalar_event_queue_enqueue(line))
+				queued = 1;
+			else if (persistence_write_fallback_event_line(line, "scalar_event", p->name, "queue_full_flat_fallback"))
+				queued = 1;
+		}
+		if (!queued)
+		{
+			snprintf(query, MAX_STRING_LENGTH, "UPDATE player_data SET active = 0 WHERE name = '%s' and pid != %d", p->name, GET_PID(ch));
+			db_query(query);
+			db_query("UPDATE player_data SET active = 1 WHERE pid = %d", GET_PID(ch));
+		}
+	}
 
 	// Update frag leaderboard tables for web statistics
 	sql_update_account_character(ch);
@@ -671,19 +691,42 @@ void sql_update_account_character(P_char ch)
 	mysql_str(account_name, account_name_sql);
 	mysql_str(ch->player.name, char_name_sql);
 
-	// Insert or update account_characters mapping
-	// Using INSERT...ON DUPLICATE KEY UPDATE to preserve created_at for existing records
-	db_query("INSERT INTO account_characters "
-	         "(account_name, pid, char_name, created_at, deleted_at) "
-	         "VALUES('%s', %ld, '%s', NOW(), NULL) "
-	         "ON DUPLICATE KEY UPDATE "
-	         "account_name = VALUES(account_name), "
-	         "pid = VALUES(pid), "
-	         "char_name = VALUES(char_name), "
-	         "deleted_at = NULL",
-	         account_name_sql,
-	         GET_PID(ch),
-	         char_name_sql);
+	// Insert or update account_characters mapping, async via scalar event queue
+	{
+		char line[PERSISTENCE_EVENT_MAX_LEN];
+		int queued = 0;
+		char acct_clean[128], char_clean[128];
+		sql_scalar_clean_field(account_name, acct_clean, sizeof(acct_clean));
+		sql_scalar_clean_field(ch->player.name, char_clean, sizeof(char_clean));
+		snprintf(line,
+		         sizeof(line),
+		         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=account_character_update|pid=%d|account_name=%s|char_name=%s",
+		         (long)time(NULL),
+		         GET_PID(ch),
+		         acct_clean,
+		         char_clean);
+		if (persistence_scalar_event_worker_running())
+		{
+			if (persistence_scalar_event_queue_enqueue(line))
+				queued = 1;
+			else if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
+				queued = 1;
+		}
+		if (!queued)
+		{
+			db_query("INSERT INTO account_characters "
+			         "(account_name, pid, char_name, created_at, deleted_at) "
+			         "VALUES('%s', %ld, '%s', NOW(), NULL) "
+			         "ON DUPLICATE KEY UPDATE "
+			         "account_name = VALUES(account_name), "
+			         "pid = VALUES(pid), "
+			         "char_name = VALUES(char_name), "
+			         "deleted_at = NULL",
+			         account_name_sql,
+			         GET_PID(ch),
+			         char_name_sql);
+		}
+	}
 }
 
 double sql_get_total_donated(const char *account_name)
@@ -735,19 +778,49 @@ void sql_update_frag_leaderboard(P_char ch)
 	mysql_str(race_name, race_sql);
 	mysql_str(class_name, class_sql);
 
-	// Insert or update frag_leaderboard
-	// Using REPLACE to handle both insert and update cases
-	db_query("REPLACE INTO frag_leaderboard "
-	         "(pid, account_name, char_name, total_frags, racewar, race, class, level, deleted_at) "
-	         "VALUES(%ld, '%s', '%s', %d, %d, '%s', '%s', %d, NULL)",
-	         GET_PID(ch),
-	         account_name_sql,
-	         char_name_sql,
-	         ch->only.pc->frags,
-	         GET_RACEWAR(ch),
-	         race_sql,
-	         class_sql,
-	         GET_LEVEL(ch));
+	// Insert or update frag_leaderboard, async via scalar event queue
+	{
+		char line[PERSISTENCE_EVENT_MAX_LEN];
+		int queued = 0;
+		char acct_clean[128], char_clean[128], race_clean[64], class_clean[64];
+		sql_scalar_clean_field(account_name, acct_clean, sizeof(acct_clean));
+		sql_scalar_clean_field(ch->player.name, char_clean, sizeof(char_clean));
+		sql_scalar_clean_field(race_name, race_clean, sizeof(race_clean));
+		sql_scalar_clean_field(class_name, class_clean, sizeof(class_clean));
+		snprintf(line,
+		         sizeof(line),
+		         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=frag_leaderboard_update|pid=%d|account_name=%s|char_name=%s|total_frags=%d|racewar=%d|race=%s|class_name=%s|level=%d",
+		         (long)time(NULL),
+		         GET_PID(ch),
+		         acct_clean,
+		         char_clean,
+		         ch->only.pc->frags,
+		         GET_RACEWAR(ch),
+		         race_clean,
+		         class_clean,
+		         GET_LEVEL(ch));
+		if (persistence_scalar_event_worker_running())
+		{
+			if (persistence_scalar_event_queue_enqueue(line))
+				queued = 1;
+			else if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
+				queued = 1;
+		}
+		if (!queued)
+		{
+			db_query("REPLACE INTO frag_leaderboard "
+			         "(pid, account_name, char_name, total_frags, racewar, race, class, level, deleted_at) "
+			         "VALUES(%ld, '%s', '%s', %d, %d, '%s', '%s', %d, NULL)",
+			         GET_PID(ch),
+			         account_name_sql,
+			         char_name_sql,
+			         ch->only.pc->frags,
+			         GET_RACEWAR(ch),
+			         race_sql,
+			         class_sql,
+			         GET_LEVEL(ch));
+		}
+	}
 }
 
 /* Soft delete a character from the leaderboard tables */
@@ -2529,6 +2602,10 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	char equip[256] = "";
 	char log[256] = "";
 	char pk_type_sql[64] = "";
+	char save_acct_name[128] = "";
+	char save_race[64] = "";
+	char save_class[64] = "";
+	int racewar_val = 0;
 	int zone_number = 0;
 	int toucher_pid = 0;
 	int group_size = 0;
@@ -2648,6 +2725,18 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			type = atoi(value);
 		else if (!str_cmp(key, "leader"))
 			auction_id = atoi(value);
+		else if (!str_cmp(key, "name"))
+			snprintf(player_name, sizeof(player_name), "%s", value);
+		else if (!str_cmp(key, "account_name"))
+			snprintf(save_acct_name, sizeof(save_acct_name), "%s", value);
+		else if (!str_cmp(key, "char_name"))
+			snprintf(bidder_name, sizeof(bidder_name), "%s", value);
+		else if (!str_cmp(key, "race"))
+			snprintf(save_race, sizeof(save_race), "%s", value);
+		else if (!str_cmp(key, "class_name"))
+			snprintf(save_class, sizeof(save_class), "%s", value);
+		else if (!str_cmp(key, "racewar"))
+			racewar_val = atoi(value);
 
 		token = strtok_r(NULL, "|", &saveptr);
 	}
