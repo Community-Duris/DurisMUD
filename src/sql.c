@@ -841,9 +841,10 @@ void get_pkill_player_description(P_char ch, char *buffer)
 void store_pkill_info(unsigned long pkill_event, P_char ch, const char *type, int leader, int in_room)
 {
 	char buf[MAX_STRING_LENGTH];
-	char equip_sql[MAX_STRING_LENGTH];
-	char player_description_sql[MAX_STRING_LENGTH];
-	char log_sql[MAX_LOG_LEN];
+	char line[PERSISTENCE_EVENT_MAX_LEN];
+	char pd_clean[200], eq_clean[200], lg_clean[200];
+	const char *raw_log;
+	int queued = 0;
 
 	if (!ch || !IS_PC(ch))
 		return;
@@ -854,25 +855,65 @@ void store_pkill_info(unsigned long pkill_event, P_char ch, const char *type, in
 		return;
 	}
 
+	/* Collect raw data once for both async and sync fallback */
 	get_equipment_list(ch, buf, 1);
-	mysql_str(buf, equip_sql);
+	sql_scalar_clean_field(buf, eq_clean, sizeof(eq_clean));
 
 	get_pkill_player_description(ch, buf);
-	mysql_str(buf, player_description_sql);
+	sql_scalar_clean_field(buf, pd_clean, sizeof(pd_clean));
 
-	mysql_str(GET_PLAYER_LOG(ch)->read(LOG_PUBLIC, MAX_LOG_LEN), log_sql);
+	raw_log = GET_PLAYER_LOG(ch)->read(LOG_PUBLIC, MAX_LOG_LEN);
+	sql_scalar_clean_field(raw_log, lg_clean, sizeof(lg_clean));
 
-	db_query("INSERT INTO pkill_info (event_id, pid, level, pk_type, player_description, equip, log, inroom, leader) "
-	         "VALUES( %d, %d, %d, '%s', '%s', '%s', '%s', %d ,%d )",
+	/* Try async scalar event queue first */
+	snprintf(line,
+	         sizeof(line),
+	         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=pkill_info|pkill_event=%lu|pid=%d|level=%d|pk_type=%s|player_description=%s|equip=%s|log=%s|inroom=%d|leader=%d",
+	         (long)time(NULL),
 	         pkill_event,
 	         GET_PID(ch),
 	         GET_LEVEL(ch),
 	         type,
-	         player_description_sql,
-	         equip_sql,
-	         log_sql,
+	         pd_clean,
+	         eq_clean,
+	         lg_clean,
 	         in_room,
 	         leader);
+	if (persistence_scalar_event_worker_running())
+	{
+		if (persistence_scalar_event_queue_enqueue(line))
+			queued = 1;
+		else if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
+			queued = 1;
+	}
+
+	if (!queued)
+	{
+		/* Sync fallback: SQL-escape the raw strings from buf and raw_log */
+		char equip_sql[MAX_STRING_LENGTH];
+		char player_description_sql[MAX_STRING_LENGTH];
+		char log_sql[MAX_LOG_LEN];
+
+		get_equipment_list(ch, buf, 1);
+		mysql_str(buf, equip_sql);
+
+		get_pkill_player_description(ch, buf);
+		mysql_str(buf, player_description_sql);
+
+		mysql_str(raw_log, log_sql);
+
+		db_query("INSERT INTO pkill_info (event_id, pid, level, pk_type, player_description, equip, log, inroom, leader) "
+		         "VALUES( %d, %d, %d, '%s', '%s', '%s', '%s', %d ,%d )",
+		         pkill_event,
+		         GET_PID(ch),
+		         GET_LEVEL(ch),
+		         type,
+		         player_description_sql,
+		         equip_sql,
+		         log_sql,
+		         in_room,
+		         leader);
+	}
 }
 
 /* Save racewr pkill information */
@@ -2484,6 +2525,10 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	int total_frags = 0;
 	int boot_time = 0;
 	int touched_at = 0;
+	char player_description[256] = "";
+	char equip[256] = "";
+	char log[256] = "";
+	char pk_type_sql[64] = "";
 	int zone_number = 0;
 	int toucher_pid = 0;
 	int group_size = 0;
@@ -2589,6 +2634,20 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			delta = atoi(value);
 		else if (!str_cmp(key, "total_frags"))
 			total_frags = atoi(value);
+		else if (!str_cmp(key, "pkill_event"))
+			type_id = atoi(value);
+		else if (!str_cmp(key, "pk_type"))
+			snprintf(pk_type_sql, sizeof(pk_type_sql), "%s", value);
+		else if (!str_cmp(key, "player_description"))
+			snprintf(player_description, sizeof(player_description), "%s", value);
+		else if (!str_cmp(key, "equip"))
+			snprintf(equip, sizeof(equip), "%s", value);
+		else if (!str_cmp(key, "log"))
+			snprintf(log, sizeof(log), "%s", value);
+		else if (!str_cmp(key, "inroom"))
+			type = atoi(value);
+		else if (!str_cmp(key, "leader"))
+			auction_id = atoi(value);
 
 		token = strtok_r(NULL, "|", &saveptr);
 	}
@@ -2758,6 +2817,30 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 	{
 		mysql_real_escape_string(db, player_name_sql, player_name, strlen(player_name));
 		snprintf(query, sizeof(query), "UPDATE player_data SET killed_by = '%s' WHERE pid = %d", player_name_sql, pid);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
+		return TRUE;
+	}
+	else if (!str_cmp(event_type, "pkill_info"))
+	{
+		char pd_sql[256], eq_sql[256], lg_sql[256], pk_sql[64];
+		mysql_real_escape_string(db, pk_sql, pk_type_sql, strlen(pk_type_sql));
+		mysql_real_escape_string(db, pd_sql, player_description, strlen(player_description));
+		mysql_real_escape_string(db, eq_sql, equip, strlen(equip));
+		mysql_real_escape_string(db, lg_sql, log, strlen(log));
+		snprintf(query,
+		         sizeof(query),
+		         "INSERT INTO pkill_info (event_id, pid, level, pk_type, player_description, equip, log, inroom, leader) "
+		         "VALUES(%d, %d, %d, '%s', '%s', '%s', '%s', %d, %d)",
+		         type_id,
+		         pid,
+		         player_level,
+		         pk_sql,
+		         pd_sql,
+		         eq_sql,
+		         lg_sql,
+		         type,
+		         auction_id);
 		if (!sql_persistence_query(db, query))
 			return FALSE;
 		return TRUE;
