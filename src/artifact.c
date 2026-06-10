@@ -79,6 +79,7 @@ void   arti_redis_cache(int type, bool Godlist);
 
 // invalidate redis cache
 static void arti_cache_invalidate(void) { redis_invalidate_artifact_cache(); }
+static bool artifact_data_exists_sql(int vnum, P_arti adata);
 
 static P_arti artifact_state_cache_find(int vnum)
 {
@@ -730,10 +731,9 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 {
 	int           vnum = OBJ_VNUM(arti), location;
 	long unsigned oldtime, to_time;
+	arti_data     artidata;
 	P_char        owner;
 	P_obj         cont;
-	MYSQL_RES    *res;
-	MYSQL_ROW     row;
 
 	if (!updateArtis)
 	{
@@ -759,31 +759,21 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 		logit(LOG_ARTIFACT, "artifact_feed_to_min_sql: WARNING: to_time was %ld, resetting to current time + 10 days for vnum %d", (long)(time(NULL) + min_minutes * 60), vnum);
 	}
 
-	if (!qry("select owned, UNIX_TIMESTAMP(timer) from artifacts where vnum = %d", vnum))
+	if (artifact_data_exists_sql(vnum, &artidata))
 	{
-		logit(LOG_ARTIFACT, "artifact_feed_to_min_sql: failed to read from database.");
-		return;
-	}
-	res = mysql_store_result(DB);
-	if (mysql_num_rows(res) > 0)
-	{
-		if (!(row = mysql_fetch_row(res)))
+		if (!artidata.owned)
 		{
-			logit(LOG_ARTIFACT, "artifact_feed_to_min_sql: failed to fetch row.");
-			mysql_free_result(res);
-			return;
+			logit(LOG_ARTIFACT, "artifact_feed_to_min_sql: WARNING: Updating time on non-owned (N) artifact %d.", vnum);
 		}
-		if (strcmp(row[0], "Y"))
-		{
-			logit(LOG_ARTIFACT, "artifact_feed_to_min_sql: WARNING: Updating time on non-owned (%s) artifact %d.", row[0], vnum);
-		}
-		oldtime = atoi(row[1]);
+		oldtime = artidata.timer;
 		// Keep the bigger one, since we're feeding to at least min_minutes.
 		to_time = (oldtime >= to_time) ? oldtime : to_time;
 
-		qry("UPDATE artifacts SET timer = FROM_UNIXTIME(%lu), lastUpdate=SYSDATE() WHERE vnum = %d", to_time, vnum);
-		artifact_state_cache_forget(vnum);
-		arti_cache_invalidate();
+		if (qry("UPDATE artifacts SET timer = FROM_UNIXTIME(%lu), lastUpdate=SYSDATE() WHERE vnum = %d", to_time, vnum))
+		{
+			artifact_state_cache_store_values(vnum, artidata.owned, artidata.locType, artidata.location, to_time, artidata.type);
+			arti_cache_invalidate();
+		}
 	}
 	else
 	{
@@ -808,18 +798,20 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 			}
 			else
 			{
-				world[location].number;
+				location = world[location].number;
 			}
-			qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, 'Y', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE() )",
-			    vnum,
-			    ARTIFACT_ONGROUND,
-			    location,
-			    to_time,
-			    IS_IOUN(arti)     ? ARTIFACT_IOUN
-			    : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE
-			                      : ARTIFACT_MAJOR);
-			artifact_state_cache_store_values(vnum, TRUE, ARTIFACT_ONGROUND, location, to_time, IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR);
-			arti_cache_invalidate();
+			if (qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, 'Y', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE() )",
+			        vnum,
+			        ARTIFACT_ONGROUND,
+			        location,
+			        to_time,
+			        IS_IOUN(arti)     ? ARTIFACT_IOUN
+			        : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE
+			                          : ARTIFACT_MAJOR))
+			{
+				artifact_state_cache_store_values(vnum, TRUE, ARTIFACT_ONGROUND, location, to_time, IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR);
+				arti_cache_invalidate();
+			}
 		}
 		else if (OBJ_WORN(cont) || OBJ_CARRIED(cont))
 		{
@@ -835,31 +827,35 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 				if (IS_NPC(owner))
 				{
 					location = GET_VNUM(owner);
-					qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, 'N', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE() )",
-					    vnum,
-					    ARTIFACT_ON_NPC,
-					    location,
-					    to_time,
-					    IS_IOUN(arti)     ? ARTIFACT_IOUN
-					    : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE
-					                      : ARTIFACT_MAJOR);
-					artifact_state_cache_store_values(vnum, FALSE, ARTIFACT_ON_NPC, location, to_time, IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR);
-					arti_cache_invalidate();
+					if (qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, 'N', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE() )",
+					        vnum,
+					        ARTIFACT_ON_NPC,
+					        location,
+					        to_time,
+					        IS_IOUN(arti)     ? ARTIFACT_IOUN
+					        : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE
+					                          : ARTIFACT_MAJOR))
+					{
+						artifact_state_cache_store_values(vnum, FALSE, ARTIFACT_ON_NPC, location, to_time, IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR);
+						arti_cache_invalidate();
+					}
 				}
 				// Adding a PC owner to arti -> owned = 'Y', location = PID.
 				else
 				{
 					location = GET_PID(owner);
-					qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, 'Y', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE() )",
-					    vnum,
-					    ARTIFACT_ON_PC,
-					    location,
-					    to_time,
-					    IS_IOUN(arti)     ? ARTIFACT_IOUN
-					    : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE
-					                      : ARTIFACT_MAJOR);
-					artifact_state_cache_store_values(vnum, TRUE, ARTIFACT_ON_PC, location, to_time, IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR);
-					arti_cache_invalidate();
+					if (qry("INSERT INTO artifacts (vnum, owned, locType, location, timer, type, lastUpdate) VALUES(%d, 'Y', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE() )",
+					        vnum,
+					        ARTIFACT_ON_PC,
+					        location,
+					        to_time,
+					        IS_IOUN(arti)     ? ARTIFACT_IOUN
+					        : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE
+					                          : ARTIFACT_MAJOR))
+					{
+						artifact_state_cache_store_values(vnum, TRUE, ARTIFACT_ON_PC, location, to_time, IS_IOUN(arti) ? ARTIFACT_IOUN : IS_UNIQUE(arti) ? ARTIFACT_UNIQUE : ARTIFACT_MAJOR);
+						arti_cache_invalidate();
+					}
 				}
 			}
 		}
@@ -876,7 +872,6 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 			logit(LOG_ARTIFACT, "artifact_feed_to_min_sql: arti vnum %d is in an UNKNOWN location?!", vnum);
 		}
 	}
-	mysql_free_result(res);
 }
 
 // This function handles the 'soul' of the artifact.
@@ -1305,20 +1300,18 @@ void artifact_update_location_sql(P_obj arti)
 	}
 }
 
-// Returns TRUE iff arti vnum has timer ticking already.
-bool get_artifact_data_sql(int vnum, P_arti adata)
+static bool artifact_data_exists_sql(int vnum, P_arti adata)
 {
-	bool       owned;
 	arti_data fetched;
 	MYSQL_RES *res;
 	MYSQL_ROW  row = NULL;
 
 	if (artifact_state_cache_get(vnum, adata))
-		return artifact_state_cache_find(vnum)->owned;
+		return TRUE;
 
 	if (!qry("SELECT owned, locType, location, UNIX_TIMESTAMP(timer), type FROM artifacts WHERE vnum = %d", vnum))
 	{
-		logit(LOG_ARTIFACT, "get_artifact_data_sql: failed to read from database.");
+		logit(LOG_ARTIFACT, "artifact_data_exists_sql: failed to read from database.");
 		return FALSE;
 	}
 	res = mysql_store_result(DB);
@@ -1332,13 +1325,12 @@ bool get_artifact_data_sql(int vnum, P_arti adata)
 
 	if (!(row = mysql_fetch_row(res)))
 	{
-		logit(LOG_ARTIFACT, "get_artifact_data_sql: failed to fetch row?!");
+		logit(LOG_ARTIFACT, "artifact_data_exists_sql: failed to fetch row?!");
 		mysql_free_result(res);
 		return FALSE;
 	}
-	owned = (!strcmp(row[0], "Y")) ? TRUE : FALSE;
 	fetched.vnum     = vnum;
-	fetched.owned    = owned;
+	fetched.owned    = (!strcmp(row[0], "Y")) ? TRUE : FALSE;
 	fetched.locType  = atoi(row[1]);
 	fetched.location = atoi(row[2]);
 	fetched.timer    = row[3] ? atol(row[3]) : 0;
@@ -1348,7 +1340,21 @@ bool get_artifact_data_sql(int vnum, P_arti adata)
 	if (adata != NULL)
 		*adata = fetched;
 	mysql_free_result(res);
-	return owned;
+	return TRUE;
+}
+
+// Returns TRUE iff arti vnum has timer ticking already.
+bool get_artifact_data_sql(int vnum, P_arti adata)
+{
+	arti_data artidata;
+
+	if (!artifact_data_exists_sql(vnum, &artidata))
+		return FALSE;
+
+	if (adata)
+		*adata = artidata;
+
+	return artidata.owned;
 }
 
 void artifact_feed_sql(P_char owner, P_obj arti, int feed_seconds, bool soulCheck)

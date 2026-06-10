@@ -66,10 +66,20 @@ def main() -> int:
         "void sql_get_bind_data(int vnum, int *owner_pid, int *timer)",
         "void sql_update_bind_data",
     )
+    exists_read = section(
+        artifact,
+        "static bool artifact_data_exists_sql(int vnum, P_arti adata)",
+        "// Returns TRUE iff arti vnum has timer ticking already.",
+    )
     data_read = section(
         artifact,
         "bool get_artifact_data_sql(int vnum, P_arti adata)",
         "void artifact_feed_sql",
+    )
+    feed_min = section(
+        artifact,
+        "void artifact_feed_to_min_sql(P_obj arti, int min_minutes)",
+        "void artifact_switch_check",
     )
     location_update = section(
         artifact,
@@ -98,6 +108,7 @@ def main() -> int:
         "static void artifact_state_cache_store_values",
         "static void artifact_state_cache_forget",
         "static void artifact_state_cache_clear",
+        "static bool artifact_data_exists_sql",
     ):
         assert_contains(
             artifact,
@@ -152,20 +163,25 @@ def main() -> int:
         "artifact bind reads should fetch only the needed columns",
     )
     assert_contains(
-        data_read,
+        exists_read,
         "artifact_state_cache_get(vnum, adata)",
-        "artifact data reads should consult the local state cache before querying SQL",
+        "artifact existence reads should consult the local state cache before querying SQL",
     )
     assert_order(
-        data_read,
+        exists_read,
         "artifact_state_cache_get(vnum, adata)",
         "SELECT owned, locType, location",
         "artifact data cache should be checked before the SQL SELECT",
     )
     assert_contains(
-        data_read,
+        exists_read,
         "artifact_state_cache_store(&fetched);",
-        "artifact data reads should populate the local state cache after SQL fetch",
+        "artifact existence reads should populate the local state cache after SQL fetch",
+    )
+    assert_contains(
+        data_read,
+        "artifact_data_exists_sql(vnum, &artidata)",
+        "legacy artifact data reads should share the cached existence helper",
     )
     assert_contains(
         location_update,
@@ -191,6 +207,21 @@ def main() -> int:
             "artifact_state_cache_clear();",
             f"{name} should clear local artifact state after broad table mutation",
         )
+    assert_contains(
+        feed_min,
+        "artifact_data_exists_sql(vnum, &artidata)",
+        "artifact feed-to-min should use the cached artifact existence helper",
+    )
+    assert_not_contains(
+        feed_min,
+        "select owned, UNIX_TIMESTAMP(timer) from artifacts",
+        "artifact feed-to-min should not issue its own artifact timer SELECT",
+    )
+    assert_contains(
+        feed_min,
+        "location = world[location].number;",
+        "artifact feed-to-min should persist room vnums, not room indexes",
+    )
 
     print("artifact SQL lag source checks passed")
     return 0
