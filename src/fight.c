@@ -28,6 +28,7 @@
 #include "boon.h"
 #include "ctf.h"
 #include "damage.h"
+#include "persistence_queue.h"
 #include "disguise.h"
 #include "dreadlord.h"
 #include "epic.h"
@@ -2600,8 +2601,41 @@ void die(P_char ch, P_char killer)
 			{
 				update_pos(ch);
 				checkHallOfFame(ch, GET_NAME(killer));
-				// save killer to database for hall of fame
-				db_query("UPDATE player_data SET killed_by = '%s' WHERE pid = %d", GET_NAME(killer), GET_PID(ch));
+				// save killer to database for hall of fame (async via scalar event queue)
+				{
+					char line[PERSISTENCE_EVENT_MAX_LEN];
+					int queued = 0;
+					char killer_name_safe[128];
+					const char *kn = GET_NAME(killer);
+					int kni;
+
+					// clean killer name for pipe-delimited event format
+					for (kni = 0; kn[kni] && kni < (int)sizeof(killer_name_safe) - 1; kni++)
+					{
+						if (kn[kni] == '|' || kn[kni] == '\r' || kn[kni] == '\n')
+							killer_name_safe[kni] = ' ';
+						else
+							killer_name_safe[kni] = kn[kni];
+					}
+					killer_name_safe[kni] = '\0';
+
+					snprintf(line,
+					         sizeof(line),
+					         "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=player_killed_by|pid=%d|killer_name=%s",
+					         (long)time(NULL),
+					         GET_PID(ch),
+					         killer_name_safe);
+					if (persistence_scalar_event_worker_running())
+					{
+						if (persistence_scalar_event_queue_enqueue(line))
+							queued = 1;
+						else if (persistence_write_fallback_event_line(line, "scalar_event", GET_NAME(ch), "queue_full_flat_fallback"))
+							queued = 1;
+					}
+
+					if (!queued)
+						db_query("UPDATE player_data SET killed_by = '%s' WHERE pid = %d", GET_NAME(killer), GET_PID(ch));
+				}
 				act("&+LThe &+rhand &+Lof &+WGod &+Lgrabs &+R$n &+Lby the &+cthroat&+L.&N", FALSE, ch, 0, 0, TO_ROOM);
 				act("&+LThe &+rhand &+Lof &+WGod &+Ltears &+R$n&+L's &+wsoul &+Lfrom this &+cplane &+Lof existence.&N", FALSE, ch, 0, 0, TO_ROOM);
 				act("&+L$n's &+cbody &+Llands on the ground in a crumpled heap, &+wsoul &+Lgone forever.&N", FALSE, ch, 0, 0, TO_ROOM);

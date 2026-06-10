@@ -2539,6 +2539,8 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			quest_giver = atoi(value);
 		else if (!str_cmp(key, "player_name"))
 			snprintf(player_name, sizeof(player_name), "%s", value);
+		else if (!str_cmp(key, "killer_name"))
+			snprintf(player_name, sizeof(player_name), "%s", value);
 		else if (!str_cmp(key, "player_level"))
 			player_level = atoi(value);
 		else if (!str_cmp(key, "quest_target"))
@@ -2750,6 +2752,14 @@ static bool sql_persistence_write_scalar_event_line_locked(const char *line)
 			if (!sql_persistence_query(db, query))
 				return FALSE;
 		}
+		return TRUE;
+	}
+	else if (!str_cmp(event_type, "player_killed_by"))
+	{
+		mysql_real_escape_string(db, player_name_sql, player_name, strlen(player_name));
+		snprintf(query, sizeof(query), "UPDATE player_data SET killed_by = '%s' WHERE pid = %d", player_name_sql, pid);
+		if (!sql_persistence_query(db, query))
+			return FALSE;
 		return TRUE;
 	}
 	else
