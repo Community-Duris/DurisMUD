@@ -2796,8 +2796,13 @@ int move_cost(P_char ch, int dir)
 		return 1;
 	}
 
-	a = movement_loss[(int)world[ch->in_room].sector_type];
-	b = movement_loss[(int)world[world[ch->in_room].dir_option[dir]->to_room].sector_type];
+	int sector_idx_a = (int)world[ch->in_room].sector_type;
+	int sector_idx_b = (int)world[world[ch->in_room].dir_option[dir]->to_room].sector_type;
+	int num_sectors = 12;
+	if (sector_idx_a < 0 || sector_idx_a >= num_sectors) sector_idx_a = 3; /* SECT_FIELD */
+	if (sector_idx_b < 0 || sector_idx_b >= num_sectors) sector_idx_b = 3;
+	a = movement_loss[sector_idx_a];
+	b = movement_loss[sector_idx_b];
 
 	moves = a + b;
 	moves = (load_modifier(ch) * moves) / 200;
@@ -6016,6 +6021,10 @@ char *get_player_name_from_pid(int pid)
 	}
 
 	MYSQL_RES *res = mysql_store_result(DB);
+	if (!res)
+	{
+		return 0;
+	}
 
 	if (mysql_num_rows(res) < 1)
 	{
