@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/time.h>
+#include <unistd.h>
 #include <time.h>
 #include "account.h"
 #include "assocs.h"
@@ -282,6 +283,10 @@ static bool sql_run_query(const char *query)
 
 	// consume any result set
 	MYSQL_RES *result = mysql_store_result(DB);
+	if (!result)
+	{
+		return FALSE;
+	}
 	if (result)
 		mysql_free_result(result);
 
@@ -462,6 +467,8 @@ bool sql_delete_player_by_name(const char *name)
 
 // master save function
 
+#define SQL_SAVE_MAX_RETRIES 3
+
 bool sql_save_player(P_char ch, int type, int room)
 {
 	if (!ch || !IS_PC(ch))
@@ -476,65 +483,91 @@ bool sql_save_player(P_char ch, int type, int room)
 		return false;
 	}
 
-	// start transaction for atomic save
-	if (!sql_begin_transaction())
+	for (int attempt = 1; attempt <= SQL_SAVE_MAX_RETRIES; attempt++)
 	{
-		logit(LOG_DEBUG, "sql_save_player: failed to start transaction");
-		return false;
+		// start transaction for atomic save
+		if (!sql_begin_transaction())
+		{
+			if (attempt < SQL_SAVE_MAX_RETRIES)
+			{
+				logit(LOG_DEBUG, "sql_save_player: begin_txn attempt %d/%d failed for %s, retrying...", attempt, SQL_SAVE_MAX_RETRIES, GET_NAME(ch));
+				usleep(attempt * 200000); // 200ms, 400ms, 600ms
+				continue;
+			}
+			logit(LOG_DEBUG, "sql_save_player: failed to start transaction for %s after %d attempts", GET_NAME(ch), SQL_SAVE_MAX_RETRIES);
+			return false;
+		}
+
+		// save all components
+		bool failed = false;
+		const char *failed_step = NULL;
+
+		if (!sql_save_player_status(ch, type, room))
+		{
+			failed = true;
+			failed_step = "status";
+		}
+		else if (!sql_save_player_skills(ch))
+		{
+			failed = true;
+			failed_step = "skills";
+		}
+		else if (!sql_save_player_affects(ch))
+		{
+			failed = true;
+			failed_step = "affects";
+		}
+		else if (!sql_save_player_items(ch))
+		{
+			failed = true;
+			failed_step = "items";
+		}
+		else if (!sql_save_player_pets(ch, type))
+		{
+			failed = true;
+			failed_step = "pets";
+		}
+		else if (!sql_save_player_witnesses(ch))
+		{
+			failed = true;
+			failed_step = "witnesses";
+		}
+
+		if (failed)
+		{
+			sql_rollback();
+			if (attempt < SQL_SAVE_MAX_RETRIES)
+			{
+				logit(LOG_DEBUG, "sql_save_player: %s save attempt %d/%d failed for %s, retrying...", failed_step, attempt, SQL_SAVE_MAX_RETRIES, GET_NAME(ch));
+				usleep(attempt * 200000);
+				continue;
+			}
+			logit(LOG_DEBUG, "sql_save_player: failed to save %s for %s after %d attempts", failed_step, GET_NAME(ch), SQL_SAVE_MAX_RETRIES);
+			return false;
+		}
+
+		// commit transaction
+		if (!sql_commit())
+		{
+			sql_rollback();
+			if (attempt < SQL_SAVE_MAX_RETRIES)
+			{
+				logit(LOG_DEBUG, "sql_save_player: commit attempt %d/%d failed for %s, retrying...", attempt, SQL_SAVE_MAX_RETRIES, GET_NAME(ch));
+				usleep(attempt * 200000);
+				continue;
+			}
+			logit(LOG_DEBUG, "sql_save_player: failed to commit for %s after %d attempts", GET_NAME(ch), SQL_SAVE_MAX_RETRIES);
+			return false;
+		}
+
+		if (attempt > 1)
+		{
+			logit(LOG_DEBUG, "sql_save_player: succeeded on retry attempt %d for %s", attempt, GET_NAME(ch));
+		}
+		return true;
 	}
 
-	// save all components
-	if (!sql_save_player_status(ch, type, room))
-	{
-		logit(LOG_DEBUG, "sql_save_player: failed to save status for %s", GET_NAME(ch));
-		sql_rollback();
-		return false;
-	}
-
-	if (!sql_save_player_skills(ch))
-	{
-		logit(LOG_DEBUG, "sql_save_player: failed to save skills for %s", GET_NAME(ch));
-		sql_rollback();
-		return false;
-	}
-
-	if (!sql_save_player_affects(ch))
-	{
-		logit(LOG_DEBUG, "sql_save_player: failed to save affects for %s", GET_NAME(ch));
-		sql_rollback();
-		return false;
-	}
-
-	if (!sql_save_player_items(ch))
-	{
-		logit(LOG_DEBUG, "sql_save_player: failed to save items for %s", GET_NAME(ch));
-		sql_rollback();
-		return false;
-	}
-
-	if (!sql_save_player_pets(ch, type))
-	{
-		logit(LOG_DEBUG, "sql_save_player: failed to save pets for %s", GET_NAME(ch));
-		sql_rollback();
-		return false;
-	}
-
-	if (!sql_save_player_witnesses(ch))
-	{
-		logit(LOG_DEBUG, "sql_save_player: failed to save witnesses for %s", GET_NAME(ch));
-		sql_rollback();
-		return false;
-	}
-
-	// commit transaction
-	if (!sql_commit())
-	{
-		logit(LOG_DEBUG, "sql_save_player: failed to commit for %s", GET_NAME(ch));
-		sql_rollback();
-		return false;
-	}
-
-	return true;
+	return false; // unreachable, but keeps compiler happy
 }
 
 // status save (main player data)
@@ -7709,6 +7742,10 @@ bool sql_save_ship(P_ship ship)
 	else
 	{
 		result = mysql_store_result(DB);
+		if (!result)
+		{
+			return 0;
+		}
 	}
 	free(batch);
 	if (result)
