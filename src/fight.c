@@ -50,7 +50,6 @@
 #include "spells.h"
 #include "sql.h"
 #include "sql_player.h"
-#include "tether.h"
 #include "vnum.obj.h"
 #include "weather.h"
 #include "world_quest.h"
@@ -4673,14 +4672,6 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
 	// ugly hack - we smuggle damage_type for eq poofing messages on 8 highest bits
 	messages->type |= type << 24;
 	result = raw_damage(ch, victim, dam, (RAWDAM_DEFAULT ^ flags) | RAWDAM_NOWARD, messages, damAccumulator);
-
-	// Tether code here
-	/*
-	  if( GET_CLASS( ch, CLASS_CABALIST ) )
-	  {
-	    tetherheal( ch, dam );
-	  }
-	*/
 
 	if (type == SPLDAM_ACID && !number(0, 3))
 	{

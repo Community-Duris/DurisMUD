@@ -263,7 +263,7 @@ struct edit_data
 #define LNK_PALADIN_AURA    16
 #define LNK_GRAPPLED        17
 #define LNK_CIRCLING        18
-#define LNK_TETHER          19
+//#define LNK_TETHER          19
 #define LNK_SNG_HEALING     20
 #define LNK_CEGILUNE        21
 #define LNK_ILESH           22

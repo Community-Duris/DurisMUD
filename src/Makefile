@@ -226,7 +226,6 @@ OBJS =  $(SHIP_OBJS) \
 				 statistics.o \
 				 storage_lockers.o \
 				 locker_async.o \
-				 tether.o \
 				 timers.o \
 				 track.o \
 				 tradeskill.o \

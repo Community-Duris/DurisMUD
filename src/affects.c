@@ -98,7 +98,6 @@ extern void essence_broken(struct char_link_data *);
 extern void event_broken(struct char_link_data *);
 extern void charm_broken(struct char_link_data *);
 extern void casting_broken(struct char_link_data *);
-extern void tether_broken(struct char_link_data *);
 
 extern void cegilunes_broken(struct char_obj_link_data *);
 extern void ileshs_broken(struct char_obj_link_data *);
@@ -2636,7 +2635,6 @@ void initialize_links()
 	define_link(LNK_PALADIN_AURA, "PALADIN_AURA", aura_broken, LNKFLG_AFFECT | LNKFLG_ROOM);
 	define_link(LNK_GRAPPLED, "GRAPPLED", NULL, LNKFLG_ROOM);
 	define_link(LNK_CIRCLING, "CIRCLING", NULL, LNKFLG_ROOM | LNKFLG_EXCLUSIVE);
-	define_link(LNK_TETHER, "TETHERING", tether_broken, LNKFLG_ROOM);
 	define_link(LNK_SNG_HEALING, "SONG_HEALING", song_broken, LNKFLG_AFFECT | LNKFLG_ROOM);
 	define_link(LNK_DRAGOON_MOUNT, "DRAGOON_MOUNT", charm_broken, LNKFLG_AFFECT | LNKFLG_EXCLUSIVE);
 

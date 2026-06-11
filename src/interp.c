@@ -52,7 +52,6 @@
 #include "enhance.h"
 #include "sql.h"
 #include "testcmd.h"
-#include "tether.h"
 #include "tradeskill.h"
 #include "vnum.room.h"
 #include "weather.h"
@@ -1054,7 +1053,7 @@ const char *command[MAX_CMD] = {
 	"focus",
 	"boon",
 	"ctf",
-	"tether",
+	"tether", // removed
 	"questwhere",
 	"newbsa",
 	"salvage",
@@ -2815,7 +2814,6 @@ void assign_command_pointers(void)
 	CMD_Y(CMD_FOCUS, STAT_RESTING + POS_SITTING, do_assimilate, 0, TRUE);
 	CMD_Y(CMD_BOON, STAT_SLEEPING + POS_PRONE, do_boon, 0, FALSE);
 	CMD_Y(CMD_CTF, STAT_NORMAL + POS_STANDING, do_ctf, 0, FALSE);
-	CMD_Y(CMD_TETHER, STAT_NORMAL + POS_STANDING, do_tether, 0, FALSE);
 	CMD_Y(CMD_AUCTION, STAT_NORMAL + POS_STANDING, new_ah_call, 0, FALSE);
 
 	CMD_Y(CMD_ZLIST, STAT_DEAD + POS_PRONE, do_zlist, IMMORTAL, FALSE);

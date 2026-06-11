@@ -833,7 +833,7 @@ extern unsigned int game_locked_level;
 #define CMD_FOCUS           803 // Assimilate for ShadowBeast
 #define CMD_BOON            804
 #define CMD_CTF             805 // Capture the flag
-#define CMD_TETHER          806 // Tether, for Cabalists (abandoned)
+//#define CMD_TETHER          806 // Tether, for Cabalists (abandoned)
 #define CMD_QUESTWHERE      807 // Searches for items received from quests
 #define CMD_NEWBSA          808 // Newbie buff all.
 #define CMD_SALVAGE         809

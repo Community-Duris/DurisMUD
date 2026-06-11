@@ -10099,25 +10099,6 @@ void restrain(P_char ch, P_char victim)
 		// If hps are low.. like under 100 or so low, we insta-kill?  WTF?
 		if (GET_HIT(victim) < (number(0, 100) + anatomy_skill) / 2)
 		{
-			/*
-			      if(GET_CLASS(ch, CLASS_CABALIST))
-			      {
-			        act("Your powerful will easily dominates the inferior creature before you.\n"
-			            "You draw $S soul into your essence sentencing $M to judgement.\n"
-			            "The guilt is obvious for there are so few true of heart. You strip\n"
-			            "the body of the soul and let the dead husk topple to the ground.",
-			            FALSE, ch, 0, victim, TO_CHAR);
-			        act("As you stare into&n $N's bottomless eyes you loose yourself\n"
-			            "in the endless void. Powers beyond your understanding probe your soul\n"
-			            "judging your deeds. The verdict is one - guilty. Your soul is ripped\n"
-			            "from your body and the now dead husk topples to the ground.",
-			            FALSE, ch, 0, victim, TO_VICT);
-			        act("$N shudders as $E tries, and fails, to break free of the will of $n.\n"
-			            "A second of silence passes before simply utters a silent sigh and topples over dead.",
-			            FALSE, ch, 0, victim, TO_NOTVICT);
-			      }
-			      else
-			*/
 			{
 				act("&+LYou turn to &n$N &+Land make an un&+who&+Wly &+Lgesture.\n"
 				    "&+LA &nsmoking &+Ldark pit opens beneath &n$S feet, the smell of death\n"
