@@ -570,7 +570,7 @@ const int material_absorbtion[TOTALATTACK_TYPES][TOTALMATERIALS] = {
 #endif
 
 extern const int movement_loss[];
-const int        movement_loss[] = {
+const int        movement_loss[NUM_SECT_TYPES] = {
     1,  /* * Inside     */
     1,  /* * City       */
     3,  /* * Field      */
@@ -607,11 +607,14 @@ const int        movement_loss[] = {
     2,  /* Castle Gate */
     2,  /* Castle Main */
     4,  /* negative plane */
-    4   /* plane of avernus */
+    4,  /* plane of avernus */
+    1,  /* road */
+    7,  /* snowy forest */
+    10, /* magma */
 };
 
 extern const int track_limit[];
-const int        track_limit[] = {
+const int        track_limit[NUM_SECT_TYPES] = {
     1, /* * Inside     */
     2, /* * City       */
     4, /* * Field      */
@@ -649,7 +652,9 @@ const int        track_limit[] = {
     0, /* Castle Main */
     0, /* negative plane */
     0, /* plane of avernus */
-    4  /* road */
+    4, /* road */
+    5, /* snowy forest */
+    0, /* magma */
 };
 
 const char *weekdays[7] = {
