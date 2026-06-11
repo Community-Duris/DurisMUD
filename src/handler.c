@@ -1113,7 +1113,7 @@ bool char_to_room(P_char ch, int room, int dir)
 		return FALSE;
 	}
 
-	if (room < 0)
+	if (room < 0 || room >= top_of_world)
 	{
 		if (IS_NPC(ch))
 		{
@@ -1123,6 +1123,7 @@ bool char_to_room(P_char ch, int room, int dir)
 			return FALSE;
 		}
 		// Move them to Limbo!
+		int bad_room = room;
 		room = 0;
 		logit(LOG_DEBUG, "char_to_room: trying to move %s to room < 0", GET_NAME(ch));
 		wizlog(AVATAR, "char_to_room: trying to move %s to room < 0", GET_NAME(ch));
@@ -1225,7 +1226,7 @@ bool char_to_room(P_char ch, int room, int dir)
 
 	// if anything has moved on the map, find everyone who can see them
 	// and set their flag to send a map update
-	if (IS_MAP_ROOM(was_in) || IS_MAP_ROOM(ch->in_room))
+	if ((was_in >= 0 && was_in < top_of_world && IS_MAP_ROOM(was_in)) || IS_MAP_ROOM(ch->in_room))
 	{
 		for (d = descriptor_list; d; d = d->next)
 		{
@@ -1237,12 +1238,14 @@ bool char_to_room(P_char ch, int room, int dir)
 			int    observer_map_room = who->in_room;
 			P_ship observer_ship     = NULL;
 
+			if (who->in_room < 0 || who->in_room >= top_of_world) continue;
 			if (IS_SHIP_ROOM(who->in_room))
 			{
 				// Ship observers: GMCP only (no terminal spam)
 				if (!GMCP_ENABLED(who))
 					continue;
 				observer_ship = get_ship_from_char(who);
+				if (observer_ship->location < 0 || observer_ship->location >= top_of_world) continue;
 				if (observer_ship && IS_MAP_ROOM(observer_ship->location))
 				{
 					// Skip wilderness zones - too large, frontend doesn't render them anyway
