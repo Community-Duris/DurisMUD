@@ -248,6 +248,9 @@ unsigned int calculate_relative_room(unsigned int rroom, int x, int y)
  */
 int calculate_map_distance(int room1, int room2)
 {
+	if (room1 < 0 || room1 >= top_of_world || room2 < 0 || room2 >= top_of_world)
+		return -1;
+	
 	int v1, v2, map1, map2, x1, dx, y1, dy, x2, y2;
 
 	if (&zone_table[world[room1].zone] != &zone_table[world[room2].zone])
