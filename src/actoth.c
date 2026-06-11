@@ -4235,7 +4235,7 @@ void do_recite(P_char ch, char *argument, int cmd)
 						}
 					}
 					in_room = ch->in_room;
-					((*skills[j].spell_pointer)((int)scroll->value[0], ch, 0, SPELL_TYPE_SPELL, victim, obj));
+					((*skills[j].spell_pointer)((int)scroll->value[0], ch, argument, SPELL_TYPE_SPELL, victim, obj));
 
 					/* best thing to do if victim dies is just extract the obj and quit out, since many
 					   spells kill the mud w/o a victim
