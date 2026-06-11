@@ -96,6 +96,7 @@ bool qry(const char *format, ...);
 bool sql_persistence_write_item_event_line(const char *line);
 bool sql_persistence_write_scalar_event_line(const char *line);
 bool sql_persistence_write_large_event_line(const char *line);
+MYSQL *sql_persistence_connection(void);
 bool sql_persistence_execute_raw(const char *sql);
 bool sql_persistence_item_owner_matches(unsigned long long item_uid,
                                         const char *owner_type,

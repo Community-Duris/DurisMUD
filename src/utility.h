@@ -51,6 +51,8 @@ void persistence_stop_large_event_worker(void);
 int persistence_large_event_worker_active(void);
 int persistence_pending_scalar_events(void);
 unsigned long persistence_dropped_scalar_events(void);
+void utility_latency_dump(void);
+void utility_latency_reset(void);
 void persistence_schedule_character_save(P_char ch, int type, int delay,
                                          const char *reason);
 void persistence_schedule_level_checkpoint(P_char ch, int type, int delay,

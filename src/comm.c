@@ -68,6 +68,9 @@
 #include "websocket.h"
 #include "world_quest.h"
 #include "ws_handlers.h"
+#include "latency_trace.h"
+#include "persistence_queue.h"
+#include "test_async.h"
 
 /* external variables */
 
@@ -503,6 +506,17 @@ void run_the_game(int port, int sslport)
 	persistence_start_item_event_worker();
 	persistence_start_scalar_event_worker();
 	persistence_start_large_event_worker();
+
+	/* Boot-time scalar queue flood test: overflows the queue so the
+	 * latency_trace instrumentation can capture scalar_enq_ok/drop
+	 * and fallback_file_write statistics in the next periodic dump.
+	 * Reset all TU-level ring buffers before the test so data is clean. */
+	latency_trace_reset();
+	persistence_queue_latency_reset();
+	utility_latency_reset();
+	test_persistence_run_one("queue_flood_scalar");
+	test_persistence_run_one("worker_scalar_fallback");
+
 	game_loop(port, sslport);
 	persistence_stop_scalar_event_worker();
 	persistence_stop_large_event_worker();
@@ -899,6 +913,7 @@ void game_loop(int port, int sslport)
 		}
 		PROFILE_END(connections);
 		double connections_time = (double)(connections_profile_end - connections_profile_beg) / (double)CLOCKS_PER_SEC;
+		latency_trace_record("connections", (long)(connections_time * 1000000.0), pulse);
 
 #if 0
     if (debug_mode)
@@ -1067,6 +1082,7 @@ void game_loop(int port, int sslport)
 		}
 		PROFILE_END(commands);
 		double commands_time = (double)(commands_profile_end - commands_profile_beg) / (double)CLOCKS_PER_SEC;
+		latency_trace_record("commands", (long)(commands_time * 1000000.0), pulse);
 
 		PROFILE_START(prompts);
 		for (point = descriptor_list; point; point = next_point)
@@ -1091,6 +1107,7 @@ void game_loop(int port, int sslport)
 
 		PROFILE_END(prompts);
 		double prompts_time = (double)(prompts_profile_end - prompts_profile_beg) / (double)CLOCKS_PER_SEC;
+		latency_trace_record("prompts", (long)(prompts_time * 1000000.0), pulse);
 
 		/* handle heartbeat stuff */
 		/* Note: pulse now changes every 1/4 sec  */
@@ -1105,13 +1122,16 @@ void game_loop(int port, int sslport)
 		ne_events();
 		clock_t ne_events_end = clock();
 		double ne_events_time = (double)(ne_events_end - ne_events_begin) / (double)CLOCKS_PER_SEC;
+		latency_trace_record("ne_events", (long)(ne_events_time * 1000000.0), pulse);
 
 		/* Flush dirty room GMCP updates every 2 pulses (~500ms) */
 		if (!(pulse % 2))
 		{
+			clock_t _gmcp = clock();
 			gmcp_flush_dirty_rooms();
 			gmcp_flush_dirty_ship_contacts();
 			gmcp_flush_dirty_ship_info();
+			latency_trace_record("gmcp_flush", (long)((clock() - _gmcp) * 1000000.0 / CLOCKS_PER_SEC), pulse);
 		}
 
 		PROFILE_START(activities);
@@ -1150,11 +1170,12 @@ void game_loop(int port, int sslport)
 			epic_zone_balance();
 		}
 
-		if (!(pulse % WAIT_SEC))
+		if (!(pulse % (WAIT_SEC * 60)))
 			boon_maintenance();
 
 		PROFILE_END(activities);
 		double activities_time = (double)(activities_profile_end - activities_profile_beg) / (double)CLOCKS_PER_SEC;
+		latency_trace_record("activities", (long)(activities_time * 1000000.0), pulse);
 
 		PROFILE_START(combat);
 		perform_violence();
@@ -1223,6 +1244,7 @@ void game_loop(int port, int sslport)
 		//      }
 		PROFILE_END(combat);
 		double combat_time = (double)(combat_profile_end - combat_profile_beg) / (double)CLOCKS_PER_SEC;
+		latency_trace_record("combat", (long)(combat_time * 1000000.0), pulse);
 
 		PROFILE_START(pulse_reset);
 		// tics since last checkpoint signal
@@ -1244,6 +1266,7 @@ void game_loop(int port, int sslport)
 		}
 		clock_t affect_and_points_end = clock();
 		double affect_and_points_time = (double)(affect_and_points_end - affect_and_points_begin) / (double)CLOCKS_PER_SEC;
+		latency_trace_record("affect_and_points", (long)(affect_and_points_time * 1000000.0), pulse);
 		/* check out the time */
 #if 1
 		loop_time_end = clock();
@@ -1259,6 +1282,8 @@ void game_loop(int port, int sslport)
 			statuslog(56, "  - prompts time - %f", prompts_time);
 			statuslog(56, "  - aff/pts time - %f", affect_and_points_time);
 		}
+		latency_trace_record("total_tick", (long)(loop_time * 1000000.0), pulse);
+		if (!(tics % 300)) { FILE *_ltf = fopen("/durismud/logs/latency_trace.log", "a"); if(_ltf){ latency_trace_dump(_ltf); fclose(_ltf); } latency_trace_dump(stderr); fflush(stderr); persistence_queue_latency_dump(); utility_latency_dump(); }
 		memcpy(&timeout, &opt_time, sizeof(timeout));
 		suseconds_t usec_spent = (suseconds_t)(loop_time * 1000 * 1000);
 		timeout.tv_usec = MAX(0, timeout.tv_usec - usec_spent);

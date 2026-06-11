@@ -1498,7 +1498,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 
 	// Check boon exp modifier
 	// This is a exp bonus for any exp gotten in zone?
-	if (type != EXP_BOON && type != EXP_DEATH && type != EXP_RESURRECT)
+	if (type != EXP_BOON && type != EXP_DEATH && type != EXP_RESURRECT && type != EXP_DAMAGE)
 	{
 		check_boon_completion(ch, victim, (int)XP, BOPT_NONE);
 	}

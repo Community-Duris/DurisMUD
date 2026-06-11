@@ -1,19 +1,30 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <pthread.h>
+#include <signal.h>
 #include <unistd.h>
 #include <errno.h>
 #include <time.h>
 
 #include "persistence_queue.h"
+#include "latency_trace.h"
+
+/* wizlog() and logit() are declared in utility.h / structs.h; pull in
+ * just the declarations to avoid dragging heavy dependencies into this
+ * translation unit. */
+extern void wizlog(int level, const char *format, ...);
+extern void logit(const char *filename, const char *format, ...);
 
 struct persistence_event_queue_data
 {
-  char events[PERSISTENCE_EVENT_QUEUE_CAPACITY][PERSISTENCE_EVENT_MAX_LEN];
+  char **events;       /* dynamically allocated: events[i] = malloc(MAX_LEN) */
   int head;
   int tail;
   int count;
+  int capacity;        /* current number of slots */
   unsigned long dropped;
+  unsigned long resize_count;
 };
 
 static persistence_event_queue_data persistence_item_event_queue;
@@ -56,6 +67,102 @@ static unsigned long persistence_large_event_worker_write_count;
 static unsigned long persistence_large_event_worker_failure_count;
 static time_t persistence_large_event_worker_last_heartbeat;
 
+/* ===================================================================
+ * Dynamic queue helpers – callers MUST hold the queue mutex.
+ * =================================================================== */
+
+/* Allocate internal buffer for 'capacity' event slots.
+ * Returns 1 on success, 0 on failure (unchanged on failure). */
+static int persistence_queue_alloc(persistence_event_queue_data *q, int capacity)
+{
+  char **new_events = (char **)calloc(capacity, sizeof(char *));
+  if (!new_events) return 0;
+  for (int i = 0; i < capacity; i++) {
+    new_events[i] = (char *)malloc(PERSISTENCE_EVENT_MAX_LEN);
+    if (!new_events[i]) {
+      for (int j = 0; j < i; j++) free(new_events[j]);
+      free(new_events);
+      return 0;
+    }
+  }
+  q->events = new_events;
+  q->capacity = capacity;
+  return 1;
+}
+
+/* Grow the queue to 'new_capacity'. Existing events are migrated.
+ * Returns 1 on success, 0 on failure (queue is unchanged). */
+static int persistence_queue_grow(persistence_event_queue_data *q, int new_capacity)
+{
+  char **new_events = (char **)calloc(new_capacity, sizeof(char *));
+  if (!new_events) return 0;
+  for (int i = 0; i < new_capacity; i++) {
+    new_events[i] = (char *)malloc(PERSISTENCE_EVENT_MAX_LEN);
+    if (!new_events[i]) {
+      for (int j = 0; j < i; j++) free(new_events[j]);
+      free(new_events);
+      return 0;
+    }
+  }
+
+  /* Copy existing events preserving ring order */
+  int old_count = q->count;
+  for (int i = 0; i < old_count; i++) {
+    int old_idx = (q->head + i) % q->capacity;
+    memcpy(new_events[i], q->events[old_idx], PERSISTENCE_EVENT_MAX_LEN);
+  }
+
+  /* Free old storage */
+  for (int i = 0; i < q->capacity; i++) free(q->events[i]);
+  free(q->events);
+
+  /* Swap in new */
+  int old_capacity = q->capacity;
+  q->events = new_events;
+  q->head = 0;
+  q->tail = old_count;
+  q->capacity = new_capacity;
+  q->resize_count++;
+
+  /* Notify operators and log: queue grew to avoid drops */
+  logit("logs/log/status",
+    "PERSISTENCE QUEUE RESIZE: capacity %d -> %d (count=%d resize_count=%lu)",
+    old_capacity, new_capacity, old_count, q->resize_count);
+  wizlog(57,
+    "&+R&-LPERSISTENCE QUEUE RESIZE:&n capacity %d -> %d (count=%d resize_count=%lu)",
+    old_capacity, new_capacity, old_count, q->resize_count);
+
+  return 1;
+}
+
+/* Free all queue memory. Caller must re-initialize before reuse. */
+static void persistence_queue_free(persistence_event_queue_data *q)
+{
+  if (q->events) {
+    for (int i = 0; i < q->capacity; i++) {
+      if (q->events[i]) free(q->events[i]);
+    }
+    free(q->events);
+    q->events = NULL;
+  }
+  q->head = 0;
+  q->tail = 0;
+  q->count = 0;
+  q->capacity = 0;
+  q->dropped = 0;
+  q->resize_count = 0;
+}
+
+/* Try to double the queue capacity up to the absolute maximum.
+ * Returns 1 if the queue now has room, 0 if it can't grow further. */
+static int persistence_queue_auto_grow(persistence_event_queue_data *q, int max_capacity)
+{
+  int new_cap = q->capacity * 2;
+  if (new_cap > max_capacity) new_cap = max_capacity;
+  if (new_cap <= q->capacity) return 0;
+  return persistence_queue_grow(q, new_cap);
+}
+
 static void persistence_item_event_queue_pop_head(void)
 {
   persistence_event_queue_data *q = &persistence_item_event_queue;
@@ -63,7 +170,7 @@ static void persistence_item_event_queue_pop_head(void)
   if (q->count <= 0)
     return;
 
-  q->head = (q->head + 1) % PERSISTENCE_EVENT_QUEUE_CAPACITY;
+  q->head = (q->head + 1) % q->capacity;
   q->count--;
 }
 
@@ -77,7 +184,17 @@ int persistence_item_event_queue_enqueue(const char *line)
 
   pthread_mutex_lock(&persistence_item_event_queue_mutex);
 
-  if (q->count >= PERSISTENCE_EVENT_QUEUE_CAPACITY)
+  /* Lazy init */
+  if (!q->events)
+    persistence_queue_alloc(q, PERSISTENCE_EVENT_QUEUE_CAPACITY);
+
+  if (q->count >= q->capacity)
+  {
+    /* Auto-resize: try to double capacity */
+    persistence_queue_auto_grow(q, PERSISTENCE_EVENT_QUEUE_MAX_CAPACITY);
+  }
+
+  if (q->count >= q->capacity)
   {
     q->dropped++;
     ok = 0;
@@ -85,7 +202,7 @@ int persistence_item_event_queue_enqueue(const char *line)
   else
   {
     snprintf(q->events[q->tail], PERSISTENCE_EVENT_MAX_LEN, "%s", line);
-    q->tail = (q->tail + 1) % PERSISTENCE_EVENT_QUEUE_CAPACITY;
+    q->tail = (q->tail + 1) % q->capacity;
     q->count++;
     pthread_cond_signal(&persistence_item_event_queue_cond);
   }
@@ -147,7 +264,7 @@ void persistence_item_event_queue_clear_dropped(void)
 void persistence_item_event_queue_reset(void)
 {
   pthread_mutex_lock(&persistence_item_event_queue_mutex);
-  memset(&persistence_item_event_queue, 0, sizeof(persistence_item_event_queue));
+  persistence_queue_free(&persistence_item_event_queue);
   persistence_item_event_worker_write_count = 0;
   persistence_item_event_worker_failure_count = 0;
   pthread_mutex_unlock(&persistence_item_event_queue_mutex);
@@ -345,7 +462,7 @@ static void persistence_scalar_event_queue_pop_head(void)
   if (q->count <= 0)
     return;
 
-  q->head = (q->head + 1) % PERSISTENCE_EVENT_QUEUE_CAPACITY;
+  q->head = (q->head + 1) % q->capacity;
   q->count--;
 }
 
@@ -356,7 +473,7 @@ static void persistence_large_event_queue_pop_head(void)
   if (q->count <= 0)
     return;
 
-  q->head = (q->head + 1) % PERSISTENCE_LARGE_EVENT_QUEUE_CAPACITY;
+  q->head = (q->head + 1) % q->capacity;
   q->count--;
 }
 
@@ -370,17 +487,29 @@ int persistence_scalar_event_queue_enqueue(const char *line)
 
   pthread_mutex_lock(&persistence_scalar_event_queue_mutex);
 
-  if (q->count >= PERSISTENCE_EVENT_QUEUE_CAPACITY)
+  /* Lazy init */
+  if (!q->events)
+    persistence_queue_alloc(q, PERSISTENCE_EVENT_QUEUE_CAPACITY);
+
+  if (q->count >= q->capacity)
+  {
+    /* Auto-resize: try to double capacity */
+    persistence_queue_auto_grow(q, PERSISTENCE_EVENT_QUEUE_MAX_CAPACITY);
+  }
+
+  if (q->count >= q->capacity)
   {
     q->dropped++;
     ok = 0;
+    latency_trace_record("scalar_enq_drop", 0, 0);
   }
   else
   {
     snprintf(q->events[q->tail], PERSISTENCE_EVENT_MAX_LEN, "%s", line);
-    q->tail = (q->tail + 1) % PERSISTENCE_EVENT_QUEUE_CAPACITY;
+    q->tail = (q->tail + 1) % q->capacity;
     q->count++;
     pthread_cond_signal(&persistence_scalar_event_queue_cond);
+    latency_trace_record("scalar_enq_ok", 0, 0);
   }
 
   pthread_mutex_unlock(&persistence_scalar_event_queue_mutex);
@@ -432,7 +561,17 @@ int persistence_large_event_queue_enqueue(const char *line)
 
   pthread_mutex_lock(&persistence_large_event_queue_mutex);
 
-  if (q->count >= PERSISTENCE_LARGE_EVENT_QUEUE_CAPACITY)
+  /* Lazy init */
+  if (!q->events)
+    persistence_queue_alloc(q, PERSISTENCE_LARGE_EVENT_QUEUE_CAPACITY);
+
+  if (q->count >= q->capacity)
+  {
+    /* Auto-resize: try to double capacity */
+    persistence_queue_auto_grow(q, PERSISTENCE_LARGE_EVENT_QUEUE_MAX_CAPACITY);
+  }
+
+  if (q->count >= q->capacity)
   {
     q->dropped++;
     ok = 0;
@@ -440,7 +579,7 @@ int persistence_large_event_queue_enqueue(const char *line)
   else
   {
     snprintf(q->events[q->tail], PERSISTENCE_LARGE_EVENT_MAX_LEN, "%s", line);
-    q->tail = (q->tail + 1) % PERSISTENCE_LARGE_EVENT_QUEUE_CAPACITY;
+    q->tail = (q->tail + 1) % q->capacity;
     q->count++;
     pthread_cond_signal(&persistence_large_event_queue_cond);
   }
@@ -502,7 +641,7 @@ void persistence_large_event_queue_clear_dropped(void)
 void persistence_large_event_queue_reset(void)
 {
   pthread_mutex_lock(&persistence_large_event_queue_mutex);
-  memset(&persistence_large_event_queue, 0, sizeof(persistence_large_event_queue));
+  persistence_queue_free(&persistence_large_event_queue);
   persistence_large_event_worker_write_count = 0;
   persistence_large_event_worker_failure_count = 0;
   pthread_mutex_unlock(&persistence_large_event_queue_mutex);
@@ -529,7 +668,7 @@ void persistence_scalar_event_queue_clear_dropped(void)
 void persistence_scalar_event_queue_reset(void)
 {
   pthread_mutex_lock(&persistence_scalar_event_queue_mutex);
-  memset(&persistence_scalar_event_queue, 0, sizeof(persistence_scalar_event_queue));
+  persistence_queue_free(&persistence_scalar_event_queue);
   persistence_scalar_event_worker_write_count = 0;
   persistence_scalar_event_worker_failure_count = 0;
   pthread_mutex_unlock(&persistence_scalar_event_queue_mutex);
@@ -893,4 +1032,86 @@ unsigned long persistence_large_event_worker_write_failures(void)
   pthread_mutex_unlock(&persistence_large_event_queue_mutex);
 
   return count;
+}
+
+int persistence_item_event_worker_heartbeat_age(void)
+{
+  time_t last;
+  int age;
+
+  pthread_mutex_lock(&persistence_item_event_queue_mutex);
+  last = persistence_item_event_worker_last_heartbeat;
+  pthread_mutex_unlock(&persistence_item_event_queue_mutex);
+
+  if (last == 0)
+    return -1;
+
+  age = (int)(time(NULL) - last);
+  return age >= 0 ? age : 0;
+}
+
+int persistence_scalar_event_worker_heartbeat_age(void)
+{
+  time_t last;
+  int age;
+
+  pthread_mutex_lock(&persistence_scalar_event_queue_mutex);
+  last = persistence_scalar_event_worker_last_heartbeat;
+  pthread_mutex_unlock(&persistence_scalar_event_queue_mutex);
+
+  if (last == 0)
+    return -1;
+
+  age = (int)(time(NULL) - last);
+  return age >= 0 ? age : 0;
+}
+
+int persistence_large_event_worker_heartbeat_age(void)
+{
+  time_t last;
+  int age;
+
+  pthread_mutex_lock(&persistence_large_event_queue_mutex);
+  last = persistence_large_event_worker_last_heartbeat;
+  pthread_mutex_unlock(&persistence_large_event_queue_mutex);
+
+  if (last == 0)
+    return -1;
+
+  age = (int)(time(NULL) - last);
+  return age >= 0 ? age : 0;
+}
+
+void persistence_item_event_worker_heartbeat_set(time_t timestamp)
+{
+  pthread_mutex_lock(&persistence_item_event_queue_mutex);
+  persistence_item_event_worker_last_heartbeat = timestamp;
+  pthread_mutex_unlock(&persistence_item_event_queue_mutex);
+}
+
+void persistence_scalar_event_worker_heartbeat_set(time_t timestamp)
+{
+  pthread_mutex_lock(&persistence_scalar_event_queue_mutex);
+  persistence_scalar_event_worker_last_heartbeat = timestamp;
+  pthread_mutex_unlock(&persistence_scalar_event_queue_mutex);
+}
+
+void persistence_large_event_worker_heartbeat_set(time_t timestamp)
+{
+  pthread_mutex_lock(&persistence_large_event_queue_mutex);
+  persistence_large_event_worker_last_heartbeat = timestamp;
+  pthread_mutex_unlock(&persistence_large_event_queue_mutex);
+}
+
+void persistence_queue_latency_dump(void)
+{
+  FILE *f = fopen("/durismud/logs/latency_trace.log", "a");
+  if (!f) return;
+  latency_trace_dump(f);
+  fclose(f);
+}
+
+void persistence_queue_latency_reset(void)
+{
+  latency_trace_reset();
 }

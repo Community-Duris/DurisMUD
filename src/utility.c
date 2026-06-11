@@ -42,6 +42,7 @@ using namespace std;
 #include "new_combat.h"
 #include "persistence_queue.h"
 #include "redis.h"
+#include "latency_trace.h"
 #include "specializations.h"
 #include "spells.h"
 #include "sql.h"
@@ -91,6 +92,9 @@ unsigned long                        persistence_fallback_count = 0;
 unsigned long                        persistence_replay_handled = 0;
 unsigned long                        persistence_item_worker_fallback_count = 0;
 unsigned long                        persistence_scalar_fallback_count = 0;
+unsigned long                        persistence_item_worker_restart_count = 0;
+unsigned long                        persistence_scalar_worker_restart_count = 0;
+unsigned long                        persistence_large_worker_restart_count = 0;
 int                                  ship_obj_proc(P_obj obj, P_char ch, int cmd, char *arg);
 extern struct mm_ds                 *dead_mob_pool;
 extern struct mm_ds                 *dead_pconly_pool;
@@ -922,11 +926,14 @@ int persistence_write_fallback_event_line(const char *line,
     return 0;
   }
 
+  clock_t _fb_beg = clock();
   if (fputs(line, log_f) < 0 || fputs("\n", log_f) < 0)
     ok = 0;
 
   if (fclose(log_f))
     ok = 0;
+  { long _fb_us = (long)((clock() - _fb_beg) * 1000000L / CLOCKS_PER_SEC);
+    latency_trace_record("fallback_file_write", _fb_us, 0); }
   persistence_fallback_count++;
   pthread_mutex_unlock(&persistence_fallback_log_mutex);
 
@@ -997,6 +1004,9 @@ static unsigned long long persistence_event_time_usec(void)
   return ((unsigned long long)tv.tv_sec * 1000000ULL) +
          (unsigned long long)tv.tv_usec;
 }
+/* Forward declaration: defined after persistence_flush_scalar_events(). */
+void persistence_worker_heartbeat_check(int threshold_secs);
+
 
 int persistence_flush_item_events(int max_events)
 {
@@ -1116,6 +1126,63 @@ int persistence_flush_scalar_events(int max_events)
   return flushed;
 }
 
+
+void persistence_worker_heartbeat_check(int threshold_secs)
+{
+  int age;
+
+  if (threshold_secs <= 0)
+    threshold_secs = PERSISTENCE_WORKER_HEARTBEAT_STUCK_SECS;
+
+  /* Item event worker */
+  if (!persistence_item_event_worker_running())
+  {
+    age = persistence_item_event_worker_heartbeat_age();
+    if (age > 0 && age >= threshold_secs)
+    {
+      persistence_alert(AVATAR, "item_event", "worker", "none", "none",
+                        "auto_restart",
+                        "item worker dead (heartbeat_age=%d threshold=%d); restarting",
+                        age, threshold_secs);
+      persistence_item_worker_restart_count++;
+      logit(LOG_STATUS, "PERSISTENCE: domain=item_event owner=worker action=auto_restart detail=restarted count=%lu", persistence_item_worker_restart_count);
+      persistence_start_item_event_worker();
+    }
+  }
+
+  /* Scalar event worker */
+  if (!persistence_scalar_event_worker_running())
+  {
+    age = persistence_scalar_event_worker_heartbeat_age();
+    if (age > 0 && age >= threshold_secs)
+    {
+      persistence_alert(AVATAR, "scalar_event", "worker", "none", "none",
+	                    "auto_restart",
+	                    "scalar worker dead (heartbeat_age=%d threshold=%d); restarting",
+	                    age, threshold_secs);
+	  persistence_scalar_worker_restart_count++;
+	  logit(LOG_STATUS, "PERSISTENCE: domain=scalar_event owner=worker action=auto_restart detail=restarted count=%lu", persistence_scalar_worker_restart_count);
+	  persistence_start_scalar_event_worker();
+    }
+  }
+
+  /* Large event worker */
+  if (!persistence_large_event_worker_running())
+  {
+    age = persistence_large_event_worker_heartbeat_age();
+    if (age > 0 && age >= threshold_secs)
+    {
+      persistence_alert(AVATAR, "large_event", "worker", "none", "none",
+	                    "auto_restart",
+	                    "large-event worker dead (heartbeat_age=%d threshold=%d); restarting",
+	                    age, threshold_secs);
+	  persistence_large_worker_restart_count++;
+	  logit(LOG_STATUS, "PERSISTENCE: domain=large_event owner=worker action=auto_restart detail=restarted count=%lu", persistence_large_worker_restart_count);
+	  persistence_start_large_event_worker();
+    }
+  }
+
+}
 static int persistence_line_has_prefix(const char *line, const char *prefix)
 {
   return line && prefix && !strncmp(line, prefix, strlen(prefix));
@@ -1321,15 +1388,31 @@ static int persistence_item_event_log_writer(const char *line, void *context)
     return 0;
   }
 
+  clock_t _fb_beg = clock();
   if (fputs(line, log_f) < 0 || fputs("\n", log_f) < 0)
     ok = 0;
 
   if (fclose(log_f))
     ok = 0;
+  { long _fb_us = (long)((clock() - _fb_beg) * 1000000L / CLOCKS_PER_SEC);
+    latency_trace_record("fallback_file_write", _fb_us, 0); }
   persistence_item_worker_fallback_count++;
   pthread_mutex_unlock(&persistence_fallback_log_mutex);
 
   return ok;
+}
+
+void utility_latency_dump(void)
+{
+  FILE *f = fopen("/durismud/logs/latency_trace.log", "a");
+  if (!f) return;
+  latency_trace_dump(f);
+  fclose(f);
+}
+
+void utility_latency_reset(void)
+{
+  latency_trace_reset();
 }
 
 int persistence_start_item_event_worker(void)
@@ -1380,11 +1463,14 @@ static int persistence_scalar_event_log_writer(const char *line, void *context)
     return 0;
   }
 
+  clock_t _fb_beg = clock();
   if (fputs(line, log_f) < 0 || fputs("\n", log_f) < 0)
     ok = 0;
 
   if (fclose(log_f))
     ok = 0;
+  { long _fb_us = (long)((clock() - _fb_beg) * 1000000L / CLOCKS_PER_SEC);
+    latency_trace_record("fallback_file_write", _fb_us, 0); }
   persistence_scalar_fallback_count++;
   pthread_mutex_unlock(&persistence_fallback_log_mutex);
 

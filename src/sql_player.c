@@ -285,7 +285,14 @@ static bool sql_run_query(const char *query)
 	MYSQL_RES *result = mysql_store_result(DB);
 	if (!result)
 	{
-		return FALSE;
+		// mysql_store_result returns NULL for successful INSERT/UPDATE/DELETE
+		// (no result set). Only treat as failure if there's a real error.
+		if (mysql_errno(DB) != 0)
+		{
+			sql_player_error("sql_run_query", query);
+			return false;
+		}
+		return true;
 	}
 	if (result)
 		mysql_free_result(result);

@@ -4507,17 +4507,22 @@ void do_home(P_char ch, char *argument, int cmd)
 		send_to_char("Get out of here!\r\n", ch);
 		return;
 	}
-
 	// Only way I can figure to tell if a town is evil or good for now.
-	if (IS_RACEWAR_GOOD(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number) - 1].flags, JUSTICE_EVILHOME))
 	{
-		send_to_char("You can't really see yourself living in such an awful place as this.\n", ch);
-		return;
-	}
-	else if (IS_RACEWAR_EVIL(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number) - 1].flags, JUSTICE_GOODHOME))
-	{
-		send_to_char("You can't really see yourself living in such an awful place as this.\n", ch);
-		return;
+		int town = VNUM2TOWN(world[ch->in_room].number);
+		if (town > 0 && town <= LAST_HOME)
+		{
+			if (IS_RACEWAR_GOOD(ch) && IS_SET(hometowns[town - 1].flags, JUSTICE_EVILHOME))
+			{
+			send_to_char("You can't really see yourself living in such an awful place as this.\n", ch);
+				return;
+			}
+			else if (IS_RACEWAR_EVIL(ch) && IS_SET(hometowns[town - 1].flags, JUSTICE_GOODHOME))
+			{
+			send_to_char("You can't really see yourself living in such an awful place as this.\n", ch);
+				return;
+			}
+		}
 	}
 
 	SUB_MONEY(ch, cost, 0);

@@ -36,6 +36,9 @@ extern unsigned long          persistence_fallback_count;
 extern unsigned long          persistence_replay_handled;
 extern unsigned long          persistence_item_worker_fallback_count;
 extern unsigned long          persistence_scalar_fallback_count;
+extern unsigned long          persistence_item_worker_restart_count;
+extern unsigned long          persistence_scalar_worker_restart_count;
+extern unsigned long          persistence_large_worker_restart_count;
 
 void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
 {
@@ -165,11 +168,14 @@ void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
 		if (total_fallback >= 10 && total_fallback != last_reported)
 		{
 			last_reported = total_fallback;
-			wizlog(AVATAR, "&+R&-LPERSISTENCE FALLBACK:&n %lu total (%lu sync, %lu item worker, %lu scalar worker) hit flat fallback this runtime. These will be replayed into SQL on next boot. File: logs/log/events | Type 'more logs/log/events' for details.",
+			wizlog(AVATAR, "&+R&-LPERSISTENCE FALLBACK:&n %lu total (%lu sync, %lu item worker, %lu scalar worker) hit flat fallback this runtime. Restarts: item=%lu scalar=%lu large=%lu. These will be replayed into SQL on next boot. File: logs/log/events | Type 'more logs/log/events' for details.",
 			       total_fallback,
 			       persistence_fallback_count,
 			       persistence_item_worker_fallback_count,
-			       persistence_scalar_fallback_count);
+			       persistence_scalar_fallback_count,
+			       persistence_item_worker_restart_count,
+			       persistence_scalar_worker_restart_count,
+			       persistence_large_worker_restart_count);
 		}
 	}
 

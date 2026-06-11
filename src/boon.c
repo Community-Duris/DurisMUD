@@ -45,6 +45,8 @@ using namespace std;
 #include "spells.h"
 #include "sql.h"
 #include "sql_player.h"
+#include "persistence_queue.h"
+#include "redis.h"
 
 extern P_desc                         descriptor_list;
 extern P_room                         world;
@@ -99,7 +101,130 @@ struct boon_options_struct boon_options[] = {
 	"\0"
 };
 
-void     boon_notify(int id, P_char ch, int action);
+/* ---- Read-through Redis cache helpers ---- */
+
+#define CACHE_KEY_BOON_DATA     "mud:cache:boon:%d"
+#define CACHE_KEY_BOON_PROGRESS "mud:cache:boon_progress:%d:%d"
+#define CACHE_KEY_BOON_SHOP     "mud:cache:boon_shop:%d"
+
+static const char *boon_cache_data_key(int id)
+{
+	static char key[64];
+	snprintf(key, sizeof(key), CACHE_KEY_BOON_DATA, id);
+	return key;
+}
+
+static const char *boon_cache_progress_key(int boonid, int pid)
+{
+	static char key[64];
+	snprintf(key, sizeof(key), CACHE_KEY_BOON_PROGRESS, boonid, pid);
+	return key;
+}
+
+static const char *boon_cache_shop_key(int pid)
+{
+	static char key[64];
+	snprintf(key, sizeof(key), CACHE_KEY_BOON_SHOP, pid);
+	return key;
+}
+
+/* Serialize BoonData to a pipe-delimited string. */
+static void boon_data_serialize(const BoonData *bd, char *buf, size_t len)
+{
+	snprintf(buf, len, "%d|%d|%d|%d|%d|%d|%f|%f|%f|%f|%d|%d|%s|%d|%d",
+	         bd->id, bd->time, bd->duration, bd->racewar, bd->type, bd->option,
+	         bd->criteria, bd->criteria2, bd->bonus, bd->bonus2,
+	         bd->random, bd->active, bd->author.c_str(), bd->pid, bd->repeat);
+}
+
+/* Deserialize a pipe-delimited string into BoonData. Returns TRUE on success. */
+static bool boon_data_deserialize(const char *str, BoonData *bd)
+{
+	if (!str || !bd)
+		return FALSE;
+	char author_buf[256];
+	int n = sscanf(str, "%d|%d|%d|%d|%d|%d|%lf|%lf|%lf|%lf|%d|%d|%255[^|]|%d|%d",
+	               &bd->id, &bd->time, &bd->duration, &bd->racewar, &bd->type, &bd->option,
+	               &bd->criteria, &bd->criteria2, &bd->bonus, &bd->bonus2,
+	               &bd->random, &bd->active, author_buf, &bd->pid, &bd->repeat);
+	if (n < 13)
+		return FALSE;
+	bd->author = author_buf;
+	return TRUE;
+}
+
+/* Serialize BoonProgress. */
+static void boon_progress_serialize(const BoonProgress *bp, char *buf, size_t len)
+{
+	snprintf(buf, len, "%d|%d|%d|%f", bp->id, bp->boonid, bp->pid, bp->counter);
+}
+
+static bool boon_progress_deserialize(const char *str, BoonProgress *bp)
+{
+	if (!str || !bp)
+		return FALSE;
+	return sscanf(str, "%d|%d|%d|%lf", &bp->id, &bp->boonid, &bp->pid, &bp->counter) >= 4;
+}
+
+/* Serialize BoonShop. */
+static void boon_shop_serialize(const BoonShop *bs, char *buf, size_t len)
+{
+	snprintf(buf, len, "%d|%d|%d|%d|%d", bs->id, bs->pid, bs->points, bs->stats, bs->cash);
+}
+
+static bool boon_shop_deserialize(const char *str, BoonShop *bs)
+{
+	if (!str || !bs)
+		return FALSE;
+	int n = sscanf(str, "%d|%d|%d|%d|%d", &bs->id, &bs->pid, &bs->points, &bs->stats, &bs->cash);
+	if (n < 4)
+		return FALSE;
+	if (n < 5)
+		bs->cash = 0;
+	return TRUE;
+}
+
+/* ---- Dedup ring buffer: prevent same boon from completing more than once in 2s ---- */
+#define BOON_DEDUP_SIZE  64
+#define BOON_DEDUP_TIMEOUT 2  /* seconds */
+
+struct boon_dedup_entry {
+	int     pid;
+	int     boon_id;
+	time_t  timestamp;
+};
+
+static struct boon_dedup_entry boon_dedup_ring[BOON_DEDUP_SIZE];
+static int boon_dedup_index = 0;
+
+/* Returns TRUE if (pid, boon_id) was recently processed (within BOON_DEDUP_TIMEOUTs).
+ * If not found, records the pair and returns FALSE. */
+static bool boon_was_recently_processed(int pid, int boon_id)
+{
+	time_t now = time(0);
+	int i;
+
+	/* Scan ring for a recent match */
+	for (i = 0; i < BOON_DEDUP_SIZE; i++)
+	{
+		if (boon_dedup_ring[i].pid == pid &&
+		    boon_dedup_ring[i].boon_id == boon_id &&
+		    (now - boon_dedup_ring[i].timestamp) < BOON_DEDUP_TIMEOUT)
+		{
+			return TRUE;
+		}
+	}
+
+	/* Record this invocation, overwriting the oldest entry */
+	boon_dedup_ring[boon_dedup_index].pid       = pid;
+	boon_dedup_ring[boon_dedup_index].boon_id   = boon_id;
+	boon_dedup_ring[boon_dedup_index].timestamp = now;
+	boon_dedup_index = (boon_dedup_index + 1) % BOON_DEDUP_SIZE;
+
+	return FALSE;
+}
+
+/* ---------------------------------------------------------------- */
 static void boon_mob_label(int criteria2, char *buf, size_t len, int for_list);
 static void boon_race_label(int criteria2, char *buf, size_t len);
 
@@ -394,6 +519,21 @@ bool get_boon_data(int id, BoonData *bdata)
 	if (!bdata)
 		return FALSE;
 
+	/* Try read-through Redis cache first */
+#ifndef __NO_MYSQL__
+	if (redis_enabled)
+	{
+		char *cached = redis_cache_get(boon_cache_data_key(id));
+		if (cached)
+		{
+			bool ok = boon_data_deserialize(cached, bdata);
+			free(cached);
+			if (ok)
+				return TRUE;
+		}
+	}
+#endif
+
 	if (!qry("SELECT id, time, duration, racewar, type, opt, criteria, criteria2, bonus, bonus2, random, author, active, pid, rpt FROM boons WHERE id = '%d'", id))
 	{
 		debug("get_boon_data(): cant read from db");
@@ -436,6 +576,16 @@ bool get_boon_data(int id, BoonData *bdata)
 
 	mysql_free_result(res);
 
+	/* Populate Redis cache for next read */
+#ifndef __NO_MYSQL__
+	if (redis_enabled)
+	{
+		char serialized[512];
+		boon_data_serialize(bdata, serialized, sizeof(serialized));
+		redis_cache_set(boon_cache_data_key(id), serialized);
+	}
+#endif
+
 	return TRUE;
 }
 
@@ -443,6 +593,21 @@ bool get_boon_progress_data(int id, int pid, BoonProgress *bpg)
 {
 	if (!bpg)
 		return FALSE;
+
+	/* Try read-through Redis cache first */
+#ifndef __NO_MYSQL__
+	if (redis_enabled)
+	{
+		char *cached = redis_cache_get(boon_cache_progress_key(id, pid));
+		if (cached)
+		{
+			bool ok = boon_progress_deserialize(cached, bpg);
+			free(cached);
+			if (ok)
+				return TRUE;
+		}
+	}
+#endif
 
 	if (!qry("SELECT id, boonid, pid, counter FROM boons_progress WHERE boonid = '%d' AND pid = '%d'", id, pid))
 	{
@@ -475,6 +640,16 @@ bool get_boon_progress_data(int id, int pid, BoonProgress *bpg)
 
 	mysql_free_result(res);
 
+	/* Populate Redis cache for next read */
+#ifndef __NO_MYSQL__
+	if (redis_enabled)
+	{
+		char serialized[128];
+		boon_progress_serialize(bpg, serialized, sizeof(serialized));
+		redis_cache_set(boon_cache_progress_key(id, pid), serialized);
+	}
+#endif
+
 	return TRUE;
 }
 
@@ -482,6 +657,21 @@ bool get_boon_shop_data(int pid, BoonShop *bshop)
 {
 	if (!bshop)
 		return FALSE;
+
+	/* Try read-through Redis cache first */
+#ifndef __NO_MYSQL__
+	if (redis_enabled)
+	{
+		char *cached = redis_cache_get(boon_cache_shop_key(pid));
+		if (cached)
+		{
+			bool ok = boon_shop_deserialize(cached, bshop);
+			free(cached);
+			if (ok)
+				return TRUE;
+		}
+	}
+#endif
 
 	if (!qry("SELECT id, pid, points, stats from boons_shop WHERE pid = '%d'", pid))
 	{
@@ -513,6 +703,16 @@ bool get_boon_shop_data(int pid, BoonShop *bshop)
 	bshop->stats  = row[3] ? atoi(row[3]) : 0;
 
 	mysql_free_result(res);
+
+	/* Populate Redis cache for next read */
+#ifndef __NO_MYSQL__
+	if (redis_enabled)
+	{
+		char serialized[128];
+		boon_shop_serialize(bshop, serialized, sizeof(serialized));
+		redis_cache_set(boon_cache_shop_key(pid), serialized);
+	}
+#endif
 
 	return TRUE;
 }
@@ -1869,11 +2069,20 @@ void boon_shop(P_char ch, char *argument)
 					break;
 				}
 			}
-			if (!qry("UPDATE boons_shop SET stats = '%d' WHERE pid = '%d'", bshop.stats, GET_PID(ch)))
+			char line[MAX_STRING_LENGTH];
+			snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=boon_shop_update_stats|pid=%d|boon_stats=%d", (long)time(0), GET_PID(ch), bshop.stats);
+			if (!persistence_scalar_event_queue_enqueue(line) && !persistence_write_fallback_event_line(line, "scalar_event", "boon_shop", "queue_full_fallback"))
 			{
-				debug("boon_shop(): failed to update shop DB entry");
-				return;
+				if (!qry("UPDATE boons_shop SET stats = '%d' WHERE pid = '%d'", bshop.stats, GET_PID(ch)))
+				{
+					debug("boon_shop(): failed to update shop DB entry");
+					return;
+				}
 			}
+#ifndef __NO_MYSQL__
+			if (redis_enabled)
+				redis_cache_del(boon_cache_shop_key(GET_PID(ch)));
+#endif
 		}
 	}
 
@@ -2479,12 +2688,19 @@ int create_boon_progress(BoonProgress *bpg)
 
 int create_boon_shop_entry(BoonShop *bshop)
 {
+	char line[MAX_STRING_LENGTH];
+
 	if (!bshop)
 	{
 		debug("create_boon_shop_entry(): NULL bshop passed to function");
 		return FALSE;
 	}
 
+	snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=boon_shop_insert|pid=%d|boon_points=%d|boon_stats=%d", (long)time(0), bshop->pid, bshop->points, bshop->stats);
+	if (persistence_scalar_event_queue_enqueue(line))
+		return TRUE;
+	if (persistence_write_fallback_event_line(line, "scalar_event", "boon_shop", "queue_full_fallback"))
+		return TRUE;
 	if (!qry("INSERT into boons_shop (pid, points, stats) VALUES (%d, %d, %d)", bshop->pid, bshop->points, bshop->stats))
 	{
 		return FALSE;
@@ -2495,8 +2711,21 @@ int create_boon_shop_entry(BoonShop *bshop)
 
 int remove_boon(int id)
 {
+	char line[MAX_STRING_LENGTH];
+
+	// Invalidate Redis cache immediately
+#ifndef __NO_MYSQL__
+	if (redis_enabled)
+		redis_cache_del(boon_cache_data_key(id));
+#endif
+
 	// if (!qry("DELETE FROM boons WHERE id = %d", id))
 	//  Gona leave boons on the DB for history lookup purposes
+	snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=boon_remove|boon_id=%d", (long)time(0), id);
+	if (persistence_scalar_event_queue_enqueue(line))
+		return 1;
+	if (persistence_write_fallback_event_line(line, "scalar_event", "boon_remove", "queue_full_fallback"))
+		return 1;
 	if (!qry("UPDATE boons SET active='0', duration='0' WHERE id='%d'", id))
 	{
 		return 0;
@@ -2547,11 +2776,23 @@ int extend_boon(int id, int extend, const char *name)
 	int ct        = calculate + time(0);
 	duration      = extend;
 
+	// Invalidate Redis cache after successful async enqueue attempt or sync write
+#ifndef __NO_MYSQL__
+	if (redis_enabled)
+		redis_cache_del(boon_cache_data_key(id));
+#endif
+
 	if (!qry("UPDATE boons SET time = '%d', duration = '%d', active = '1', author = '*%s' WHERE id = '%d'", ct, duration, name, id))
 	{
 		debug("extend_boon(): failed to update boon");
 		return FALSE;
 	}
+
+	// Invalidate again after sync write confirms
+#ifndef __NO_MYSQL__
+	if (redis_enabled)
+		redis_cache_del(boon_cache_data_key(id));
+#endif
 
 	if (active)
 		boon_notify(id, NULL, BN_EXTEND);
@@ -3075,13 +3316,22 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 		else if (boon_options[option].progress && bpg.counter != -1)
 		{
 			// let's notch up their counter appropriately
-			if (!qry("UPDATE boons_progress SET counter = '%f' WHERE id = '%d'", (bpg.counter + (bdata.option == BOPT_FRAGS ? data : 1.0)), bpg.id))
+			char line[MAX_STRING_LENGTH];
+			snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=boon_progress_update|boon_id=%d|boon_counter=%f", (long)time(0), bpg.id, (bpg.counter + (bdata.option == BOPT_FRAGS ? data : 1.0)));
+			if (!persistence_scalar_event_queue_enqueue(line) && !persistence_write_fallback_event_line(line, "scalar_event", "boon_progress", "queue_full_fallback"))
 			{
-				debug("check_boon_completion(): failed to update bpg DB entry: counter: %f, id: %d.", bpg.counter + (bdata.option == BOPT_FRAGS ? data : 1.0), bpg.id);
-				logit(LOG_DEBUG, "check_boon_completion(): failed to update bpg DB entry: counter: %f, id: %d.", bpg.counter + (bdata.option == BOPT_FRAGS ? data : 1.0), bpg.id);
-				send_to_char("Failed to update your progress entry for this boon, please contact an Immortal.\r\n", ch);
-				continue;
+				if (!qry("UPDATE boons_progress SET counter = '%f' WHERE id = '%d'", (bpg.counter + (bdata.option == BOPT_FRAGS ? data : 1.0)), bpg.id))
+				{
+					debug("check_boon_completion(): failed to update bpg DB entry: counter: %f, id: %d.", bpg.counter + (bdata.option == BOPT_FRAGS ? data : 1.0), bpg.id);
+					logit(LOG_DEBUG, "check_boon_completion(): failed to update bpg DB entry: counter: %f, id: %d.", bpg.counter + (bdata.option == BOPT_FRAGS ? data : 1.0), bpg.id);
+					send_to_char("Failed to update your progress entry for this boon, please contact an Immortal.\r\n", ch);
+					continue;
+				}
 			}
+#ifndef __NO_MYSQL__
+			if (redis_enabled)
+				redis_cache_del(boon_cache_progress_key(bpg.boonid, bpg.pid));
+#endif
 			bpg.counter += (bdata.option == BOPT_FRAGS ? data : 1.0);
 		}
 		// or if we're dealing with non progression and it's not repeatable (counter = -1)
@@ -3103,11 +3353,19 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 			}
 			else
 			{
-				qry("UPDATE boons_progress SET counter = '%d' WHERE id = '%d'", (bdata.repeat ? 0 : -1), bpg.id);
+				char line[MAX_STRING_LENGTH];
+				snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=boon_progress_counter_reset|boon_id=%d|boon_stats=%d", (long)time(0), bpg.id, (bdata.repeat ? 0 : -1));
+				if (!persistence_scalar_event_queue_enqueue(line))
+					persistence_write_fallback_event_line(line, "scalar_event", "boon_progress", "queue_full_fallback");
 			}
 		}
 		else
-			qry("UPDATE boons_progress SET counter = '%d' WHERE id = '%d'", (bdata.repeat ? 0 : -1), bpg.id);
+		{
+			char line[MAX_STRING_LENGTH];
+			snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=boon_progress_counter_reset|boon_id=%d|boon_stats=%d", (long)time(0), bpg.id, (bdata.repeat ? 0 : -1));
+			if (!persistence_scalar_event_queue_enqueue(line))
+				persistence_write_fallback_event_line(line, "scalar_event", "boon_progress", "queue_full_fallback");
+		}
 
 		// OK, if we've made it here, they successfully completed a boon
 		// Apply bonuses
@@ -3292,13 +3550,22 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 				}
 				else
 				{
-					if (!qry("UPDATE boons_shop SET stats = '%d' WHERE pid = '%d'", (bshop.stats + (int)bdata.bonus), GET_PID(ch)))
+					char line[MAX_STRING_LENGTH];
+					snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=boon_shop_update_stats|pid=%d|boon_stats=%d", (long)time(0), GET_PID(ch), (bshop.stats + (int)bdata.bonus));
+					if (!persistence_scalar_event_queue_enqueue(line) && !persistence_write_fallback_event_line(line, "scalar_event", "boon_shop", "queue_full_fallback"))
 					{
-						debug("check_boon_completion(): Failed to update shop DB entry: stats %d, pid %d.", (bshop.stats + (int)bdata.bonus), GET_PID(ch));
-						logit(LOG_DEBUG, "check_boon_completion(): Failed to update shop DB entry: stats %d, pid %d.", (bshop.stats + (int)bdata.bonus), GET_PID(ch));
-						send_to_char("Failed to update your shop data for this boon, please contact an Immortal.\r\n", ch);
-						continue;
+						if (!qry("UPDATE boons_shop SET stats = '%d' WHERE pid = '%d'", (bshop.stats + (int)bdata.bonus), GET_PID(ch)))
+						{
+							debug("check_boon_completion(): Failed to update shop DB entry: stats %d, pid %d.", (bshop.stats + (int)bdata.bonus), GET_PID(ch));
+							logit(LOG_DEBUG, "check_boon_completion(): Failed to update shop DB entry: stats %d, pid %d.", (bshop.stats + (int)bdata.bonus), GET_PID(ch));
+							send_to_char("Failed to update your shop data for this boon, please contact an Immortal.\r\n", ch);
+							continue;
+						}
 					}
+#ifndef __NO_MYSQL__
+					if (redis_enabled)
+						redis_cache_del(boon_cache_shop_key(GET_PID(ch)));
+#endif
 				}
 				break;
 			case BTYPE_POINT:
@@ -3318,13 +3585,22 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 				}
 				else
 				{
-					if (!qry("UPDATE boons_shop SET points = '%d' WHERE pid = '%d'", (bshop.points + (int)bdata.bonus), GET_PID(ch)))
+					char line[MAX_STRING_LENGTH];
+					snprintf(line, sizeof(line), "PERSISTENCE_SCALAR_EVENT|ts=%ld|event=boon_shop_update_points|pid=%d|boon_points=%d", (long)time(0), GET_PID(ch), (bshop.points + (int)bdata.bonus));
+					if (!persistence_scalar_event_queue_enqueue(line) && !persistence_write_fallback_event_line(line, "scalar_event", "boon_shop", "queue_full_fallback"))
 					{
-						debug("check_boon_completion(): Failed to update shop DB entry: points %d, pid %d.", (bshop.points + (int)bdata.bonus), GET_PID(ch));
-						logit(LOG_DEBUG, "check_boon_completion(): Failed to update shop DB entry: points %d, pid %d.", (bshop.points + (int)bdata.bonus), GET_PID(ch));
-						send_to_char("Failed to update your shop data for this boon, please contact an Immortal.\r\n", ch);
-						continue;
+						if (!qry("UPDATE boons_shop SET points = '%d' WHERE pid = '%d'", (bshop.points + (int)bdata.bonus), GET_PID(ch)))
+						{
+							debug("check_boon_completion(): Failed to update shop DB entry: points %d, pid %d.", (bshop.points + (int)bdata.bonus), GET_PID(ch));
+							logit(LOG_DEBUG, "check_boon_completion(): Failed to update shop DB entry: points %d, pid %d.", (bshop.points + (int)bdata.bonus), GET_PID(ch));
+							send_to_char("Failed to update your shop data for this boon, please contact an Immortal.\r\n", ch);
+							continue;
+						}
 					}
+#ifndef __NO_MYSQL__
+					if (redis_enabled)
+						redis_cache_del(boon_cache_shop_key(GET_PID(ch)));
+#endif
 				}
 				break;
 			case BTYPE_ITEM:

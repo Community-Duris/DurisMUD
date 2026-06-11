@@ -7329,9 +7329,15 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
 	{
 		int calming   = 0;
 		int nocalming = 0;
-		if ((IS_RACEWAR_EVIL(tmp_ch) && IS_SET(hometowns[VNUM2TOWN(world[tmp_ch->in_room].number) - 1].flags, JUSTICE_GOODHOME)) ||
-		    (IS_RACEWAR_GOOD(tmp_ch) && IS_SET(hometowns[VNUM2TOWN(world[tmp_ch->in_room].number) - 1].flags, JUSTICE_EVILHOME)))
-			nocalming = 1;
+		{
+			int town = VNUM2TOWN(world[tmp_ch->in_room].number);
+			if (town > 0 && town <= LAST_HOME)
+			{
+				if ((IS_RACEWAR_EVIL(tmp_ch) && IS_SET(hometowns[town - 1].flags, JUSTICE_GOODHOME)) ||
+				    (IS_RACEWAR_GOOD(tmp_ch) && IS_SET(hometowns[town - 1].flags, JUSTICE_EVILHOME)))
+					nocalming = 1;
+			}
+		}
 
 		// Alright, if !elite ch and !nocalming.. check for calming:
 		//   if ch's level <= target's level - 5 or 25% hit,

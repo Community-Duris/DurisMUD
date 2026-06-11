@@ -12,6 +12,7 @@
 #include "ships.h"
 #include "spells.h"
 #include "sql.h"
+#include "test_async.h"
 using namespace std;
 
 extern struct zone_data        *zone_table;
@@ -1140,6 +1141,52 @@ void do_test(P_char ch, char *arg, int cmd)
 			}
 		}
 		debug("Could not find maliciousPID %d in game. :(");
+	}
+	else if (isname("persistence", buff))
+	{
+		/* Async persistence stress test suite */
+		char testname[64];
+		arg = one_argument(arg, testname);
+
+		if (isname("all", testname) || !*testname)
+		{
+			send_to_char("&+CRunning all async persistence stress tests...&n\r\n", ch);
+			test_persistence_run_all();
+			send_to_char("&+GTest suite complete. Check logs/log/test_persistence for results.&n\r\n", ch);
+		}
+		else if (isname("status", testname))
+		{
+			send_to_char_f(ch, "&+YTest status: running=%d completed=%d total=%d passed=%d failed=%d skipped=%d&n\r\n",
+			               test_suite_running, test_suite_completed,
+			               test_total, test_passed, test_failed, test_skipped);
+		}
+		else if (isname("reset", testname))
+		{
+			test_persistence_reset();
+			send_to_char("&+GTest counters reset.&n\r\n", ch);
+		}
+		else if (isname("summary", testname))
+		{
+			test_persistence_print_summary();
+			send_to_char("&+GSummary written to test log.&n\r\n", ch);
+		}
+		else
+		{
+			/* Try to run by name */
+			if (test_persistence_run_one(testname))
+			{
+				send_to_char_f(ch, "&+GTest '%s' completed. Check logs for details.&n\r\n", testname);
+			}
+			else
+			{
+				send_to_char("&+RUnknown persistence test. Available: all, status, reset, summary, or one of:\r\n", ch);
+				send_to_char("  queue_flood_item, queue_flood_scalar, queue_flood_large,\r\n", ch);
+				send_to_char("  worker_item_fallback, worker_scalar_fallback, replay_events,\r\n", ch);
+				send_to_char("  counter_consistency, broadcast_threshold, thread_safety_queues,\r\n", ch);
+				send_to_char("  large_event_roundtrip, worker_stuck, mixed_path_fallback, edge_cases&n\r\n", ch);
+			}
+		}
+		return;
 	}
 	else
 	{

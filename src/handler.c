@@ -48,6 +48,8 @@ extern P_desc                        descriptor_list;
 extern P_event                       current_event;
 extern P_index                       mob_index;
 extern P_index                       obj_index;
+extern int                           boot_in_progress;
+extern int                           zone_reset_in_progress;
 extern P_obj                         object_list;
 extern P_room                        world;
 extern const struct race_names       race_names_table[];
@@ -1592,9 +1594,15 @@ bool char_to_room(P_char ch, int room, int dir)
 
 	int nocalming = 0;
 	int calming   = 0;
-	if ((IS_RACEWAR_GOOD(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number) - 1].flags, JUSTICE_GOODHOME)) ||
-	    (IS_RACEWAR_EVIL(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number) - 1].flags, JUSTICE_EVILHOME)))
-		nocalming = 1;
+	{
+		int town = VNUM2TOWN(world[ch->in_room].number);
+		if (town > 0 && town <= LAST_HOME)
+		{
+			if ((IS_RACEWAR_GOOD(ch) && IS_SET(hometowns[town - 1].flags, JUSTICE_GOODHOME)) ||
+			    (IS_RACEWAR_EVIL(ch) && IS_SET(hometowns[town - 1].flags, JUSTICE_EVILHOME)))
+				nocalming = 1;
+		}
+	}
 
 	if (t_ch && !IS_ELITE(t_ch) && !nocalming && (((GET_LEVEL(t_ch) - GET_LEVEL(ch)) <= 5) || !number(0, 3)) && has_innate(ch, INNATE_CALMING))
 		calming = (int)get_property("innate.calming.delay", 10);
@@ -1789,12 +1797,15 @@ void obj_to_char(P_obj object, P_char ch)
 
 	mark_char_or_owner_dirty(ch);
 	SET_BIT(ch->runtime_flags, CHAR_RFLAG_DIRTY_INVENTORY);
-	persistence_record_item_event("owner_player",
-	                              object,
-	                              ch,
-	                              "nowhere",
-	                              persistence_char_owner(ch, owner_buf, sizeof(owner_buf)),
-	                              "obj_to_char");
+	if (IS_PC(ch) || IS_PC_PET(ch))
+	{
+		persistence_record_item_event("owner_player",
+		                              object,
+		                              ch,
+		                              "nowhere",
+		                              persistence_char_owner(ch, owner_buf, sizeof(owner_buf)),
+		                              "obj_to_char");
+	}
 }
 
 /*
@@ -2490,12 +2501,15 @@ void obj_to_room(P_obj object, int room)
 	{
 		artifact_update_location_sql(object);
 	}
-	persistence_record_item_event("owner_room",
-	                              object,
-	                              NULL,
-	                              "nowhere",
-	                              persistence_room_owner(room, owner_buf, sizeof(owner_buf)),
-	                              "obj_to_room");
+	if (!boot_in_progress && !zone_reset_in_progress)
+	{
+		persistence_record_item_event("owner_room",
+		                              object,
+		                              NULL,
+		                              "nowhere",
+		                              persistence_room_owner(room, owner_buf, sizeof(owner_buf)),
+		                              "obj_to_room");
+	}
 }
 
 /*
@@ -2677,12 +2691,15 @@ void obj_to_obj(P_obj obj, P_obj obj_to)
 	  }
 	*/
 	mark_container_dirty(obj_to);
-	persistence_record_item_event("owner_container",
-	                              obj,
-	                              NULL,
-	                              "nowhere",
-	                              persistence_object_owner(obj_to, owner_buf, sizeof(owner_buf)),
-	                              "obj_to_obj");
+	if (!boot_in_progress && !zone_reset_in_progress)
+	{
+		persistence_record_item_event("owner_container",
+		                              obj,
+		                              NULL,
+		                              "nowhere",
+		                              persistence_object_owner(obj_to, owner_buf, sizeof(owner_buf)),
+		                              "obj_to_obj");
+	}
 }
 
 // appends obj to end of a linked list - used during load to preserve order

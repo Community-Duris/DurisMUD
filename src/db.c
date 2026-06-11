@@ -153,6 +153,8 @@ int           top_of_helpt;     /* * top of help index table         */
 int           top_of_infot;     /* * top of info index table         */
 
 int no_mail = 0; /* Is mail system working this boot? */
+int boot_in_progress = 0; /* 1 during world loading, 0 during normal gameplay */
+int zone_reset_in_progress = 0; /* 1 during reset_zone(), 0 during normal gameplay */
 
 struct time_info_data time_info; /* * the information about the time * */
 
@@ -395,6 +397,7 @@ void boot_db(int mini_mode)
 	logit(LOG_STATUS, "Boot db -- BEGIN.");
 	fprintf(stderr, "\nBoot db -- BEGIN.\r\n");
 	boot_time = time(0);
+	boot_in_progress = 1;
 
 	logit(LOG_STATUS, "Resetting the game time:");
 	fprintf(stderr, "Resetting the game time:\r\n");
@@ -712,6 +715,7 @@ void boot_db(int mini_mode)
 	//  loadGodProcs();
 
 	logit(LOG_STATUS, "Boot db -- DONE.");
+	boot_in_progress = 0;
 }
 
 void update_stat_data()
@@ -3735,6 +3739,7 @@ void reset_zone(int zone, int force_item_repop)
 
 	zone_table[zone].age = 0;
 
+	zone_reset_in_progress = 0;
 #ifdef SIEGE_ENABLED
 	// Check and deploy troops if applicable.
 	check_deploy(&zone_table[zone]);

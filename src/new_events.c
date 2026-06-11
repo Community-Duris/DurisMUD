@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <dlfcn.h>
 #include <sys/time.h>
 #ifndef _LINUX_SOURCE
 #include <sys/types.h>
@@ -33,6 +34,7 @@
 #include "specs.prototypes.h"
 #include "spells.h"
 #include "vnum.obj.h"
+#include "latency_trace.h"
 
 #define MAX_FUNCTIONS       6000
 #define FUNCTION_NAMES_FILE "lib/misc/event_names"
@@ -613,6 +615,7 @@ void ne_events(void)
 		// If this event has a function to execute (hasn't been neutered)
 		if (current_nevent->func)
 		{
+			clock_t _ev_beg = clock();
 #ifdef DO_PROFILE
 			event_func_type evf = current_nevent->func;
 			PROFILE_START(event_func);
@@ -622,6 +625,8 @@ void ne_events(void)
 #else
 			(current_nevent->func)(current_nevent->ch, current_nevent->victim, current_nevent->obj, current_nevent->data);
 #endif
+			/* Record per-event timing - use dladdr for human-readable function name */
+			{ Dl_info _di; const char *_n = (dladdr((void*)current_nevent->func, &_di) && _di.dli_sname) ? _di.dli_sname : "?"; latency_trace_record(_n, (long)((clock() - _ev_beg) * 1000000.0 / CLOCKS_PER_SEC), pulse); }
 		}
 
 		clear_nevent(current_nevent);
@@ -630,6 +635,13 @@ void ne_events(void)
 	}
 	PROFILE_END(event_loop);
 	count++;
+
+	/* Dump per-event latency trace every ~300 calls */
+	if (!(count % 300)) {
+		FILE *_f = fopen("/durismud/logs/latency_trace.log", "a");
+		if (_f) { latency_trace_dump(_f); fclose(_f); }
+		latency_trace_dump(stderr); fflush(stderr);
+	}
 }
 
 // Returns the first instance of an event with func as the event function.
