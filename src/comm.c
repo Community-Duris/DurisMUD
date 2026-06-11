@@ -2943,7 +2943,14 @@ static void process_line(P_desc t, char *in)
 	if (t->cp437)
 		upgrade_cp437_and_dollars(out, in);
 	else if (validate_utf8_and_dollars(out, in))
-		write_to_descriptor(t, "Bad characters in input, skipped.\r\n");
+	{
+		// During login (non-zero connected), bad bytes come from client negotiation;
+		// silently discard and re-prompt instead of confusing the user.
+		if (!t->connected)
+			write_to_descriptor(t, "Bad characters in input, skipped.\r\n");
+		out[0] = '\0';
+	}
+
 
 	int k = strlen(out);
 	if (k > (MAX_INPUT_LENGTH - 1))

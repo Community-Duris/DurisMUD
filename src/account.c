@@ -195,7 +195,7 @@ void select_accountname(P_desc d, char *arg)
 		;
 	if (!*arg)
 	{
-		close_socket(d);
+		SEND_TO_Q("Please enter your account name: ", d);
 		return;
 	}
 

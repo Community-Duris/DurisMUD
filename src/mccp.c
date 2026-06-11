@@ -121,9 +121,6 @@ int parse_telnet_options(P_desc player, char *buf, int buflen)
 			while (len < buflen && !(p[len] == IAC && p[len + 1] == SE))
 				len++;
 
-			if (len > 128) // arbitrary; a telnet subnego is not supposed to be long
-				return 128;
-
 			/* incomplete, wait for more */
 			if (len >= buflen)
 				return 0;
