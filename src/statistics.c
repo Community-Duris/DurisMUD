@@ -32,6 +32,10 @@ extern struct zone_data     *zone;
 extern struct zone_data     *zone_table;
 extern struct sector_data   *sector_table;
 extern P_desc                descriptor_list;
+extern unsigned long          persistence_fallback_count;
+extern unsigned long          persistence_replay_handled;
+extern unsigned long          persistence_item_worker_fallback_count;
+extern unsigned long          persistence_scalar_fallback_count;
 
 void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
 {
@@ -141,6 +145,33 @@ void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
 	    illithids_lvl,
 	    unique_ips);
 #endif
+
+	/* Persistence fallback status broadcast (throttled) */
+	{
+		static unsigned long last_reported = 0;
+		static int           replay_reported = 0;
+		unsigned long        total_fallback;
+
+		/* One-time broadcast for events replayed on boot (properly handled) */
+		if (persistence_replay_handled > 0 && !replay_reported)
+		{
+			replay_reported = 1;
+			wizlog(AVATAR, "&+R&-LPERSISTENCE REPLAY:&n %lu events WERE properly handled (replayed into SQL on boot). File: logs/log/events | Type 'more logs/log/events' to review.",
+			       persistence_replay_handled);
+		}
+
+		/* Runtime fallback warning: combine all three fallback paths */
+		total_fallback = persistence_fallback_count + persistence_item_worker_fallback_count + persistence_scalar_fallback_count;
+		if (total_fallback >= 10 && total_fallback != last_reported)
+		{
+			last_reported = total_fallback;
+			wizlog(AVATAR, "&+R&-LPERSISTENCE FALLBACK:&n %lu total (%lu sync, %lu item worker, %lu scalar worker) hit flat fallback this runtime. These will be replayed into SQL on next boot. File: logs/log/events | Type 'more logs/log/events' for details.",
+			       total_fallback,
+			       persistence_fallback_count,
+			       persistence_item_worker_fallback_count,
+			       persistence_scalar_fallback_count);
+		}
+	}
 
 	add_event(event_write_statistic, PULSES_IN_TICK, NULL, NULL, NULL, 0, NULL, 0);
 	// AddEvent(EVENT_SPECIAL, 500, TRUE, write_statistic, NULL);

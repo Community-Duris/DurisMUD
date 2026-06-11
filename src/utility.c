@@ -87,6 +87,10 @@ extern void                          event_spellcast(P_char, P_char, P_obj, void
 #define PERSISTENCE_SCALAR_EVENT_PREFIX "PERSISTENCE_SCALAR_EVENT|"
 #define PERSISTENCE_LARGE_EVENT_PREFIX "PERSISTENCE_LARGE_EVENT|"
 static pthread_mutex_t persistence_fallback_log_mutex = PTHREAD_MUTEX_INITIALIZER;
+unsigned long                        persistence_fallback_count = 0;
+unsigned long                        persistence_replay_handled = 0;
+unsigned long                        persistence_item_worker_fallback_count = 0;
+unsigned long                        persistence_scalar_fallback_count = 0;
 int                                  ship_obj_proc(P_obj obj, P_char ch, int cmd, char *arg);
 extern struct mm_ds                 *dead_mob_pool;
 extern struct mm_ds                 *dead_pconly_pool;
@@ -923,6 +927,7 @@ int persistence_write_fallback_event_line(const char *line,
 
   if (fclose(log_f))
     ok = 0;
+  persistence_fallback_count++;
   pthread_mutex_unlock(&persistence_fallback_log_mutex);
 
   fallback_count++;
@@ -1269,6 +1274,17 @@ int persistence_replay_fallback_events(void)
                     "replayed %d fallback persistence events; %d remain queued in %s",
                     replayed, failed, LOG_EVENT);
 
+  if (replayed > 0 || failed > 0)
+  {
+    persistence_replay_handled = replayed + failed;
+    wizlog(AVATAR, "&+R&-LPERSISTENCE FALLBACK REPLAY:&n %d events WERE handled (replayed into SQL). %d events WILL be retried on next boot. Location: %s (rotated to backup on replay).",
+           replayed, failed, LOG_EVENT);
+  }
+  else
+  {
+    persistence_replay_handled = 0;
+  }
+
   return replayed;
 }
 
@@ -1310,6 +1326,7 @@ static int persistence_item_event_log_writer(const char *line, void *context)
 
   if (fclose(log_f))
     ok = 0;
+  persistence_item_worker_fallback_count++;
   pthread_mutex_unlock(&persistence_fallback_log_mutex);
 
   return ok;
@@ -1368,6 +1385,7 @@ static int persistence_scalar_event_log_writer(const char *line, void *context)
 
   if (fclose(log_f))
     ok = 0;
+  persistence_scalar_fallback_count++;
   pthread_mutex_unlock(&persistence_fallback_log_mutex);
 
   return ok;
