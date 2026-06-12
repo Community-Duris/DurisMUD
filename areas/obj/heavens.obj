@@ -2332,8 +2332,8 @@ earth glimmers broken mine _mine_~
 10 0 0 0 0 0 0 0
 0 0 100
 #194
-small iron ore piece _ore_~
-&+La small piece of &+ciron &+Lore&n~
+small iron ore piece inferior _ore_~
+&+La small piece of &+yi&+Lnf&+yer&+Li&+yor &+ciron &+Lore&n~
 &+LA piece of &+ciron &+Lore sits here.&n~
 ~
 8 15 2 0 5 0 0 16385 0 0 0
@@ -2352,56 +2352,56 @@ E
 Looks like peppermint schnappes.  Yummy.
 ~
 #196
-medium piece iron ore _ore_~
-&+La medium piece of &+ciron &+Lore&n~
+medium piece iron ore inferior _ore_~
+&+La medium piece of &+yi&+Lnf&+yer&+Li&+yor &+ciron &+Lore&n~
 &+La piece of &+ciron &+Lore is waiting to be picked up.&n~
 ~
 8 15 3 0 5 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 10 5000 100
 #197
-large piece iron ore _ore_~
-&+La large piece of &+ciron &+Lore&n~
+large piece iron ore inferior _ore_~
+&+La large piece of &+yi&+Lnf&+yer&+Li&+yor &+ciron &+Lore&n~
 &+La piece of &+ciron &+Lore is waiting to be picked up.&n~
 ~
 8 15 4 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 16 5000 100
 #198
-small piece steel ore _ore_~
-&+La small piece of &+Csteel &+Lore&n~
+small piece steel ore inferior _ore_~
+&+La small piece of &+yi&+Lnf&+yer&+Li&+yor &+Csteel &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 16 2 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 4 7000 100
 #199
-piece medium ore steel _ore_~
-&+La medium piece of &+Csteel &+Lore&n~
+piece medium ore steel inferior _ore_~
+&+La medium piece of &+yi&+Lnf&+yer&+Li&+yor &+Csteel &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 16 3 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 8 8000 100
 #200
-large piece steel ore _ore_~
-&+La large piece of &+Csteel &+Lore&n~
+large piece steel ore inferior _ore_~
+&+La large piece of &+yi&+Lnf&+yer&+Li&+yor &+Csteel &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 16 4 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 13 9000 100
 #201
-small piece copper ore _ore_~
-&+La small piece of &+ycopper &+Lore&n~
+small piece copper ore inferior _ore_~
+&+La small piece of &+yi&+Lnf&+yer&+Li&+yor &+ycopper &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 21 2 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 3 10000 100
 #202
-medium piece copper ore _ore_~
-&+La medium piece of &+ycopper &+Lore&n~
+medium piece copper ore inferior _ore_~
+&+La medium piece of &+yi&+Lnf&+yer&+Li&+yor &+ycopper &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 21 3 0 5 0 0 1 0 0 0
@@ -2536,64 +2536,64 @@ plates steel arm pair~
 8 8 1 3 0 0 0 0
 12 15000 100
 #219
-large piece copper ore _ore_~
-&+La large piece of &+ycopper &+Lore&n~
+large piece copper ore inferior _ore_~
+&+La large piece of &+yi&+Lnf&+yer&+Li&+yor &+ycopper &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 21 4 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 11 20000 100
 #220
-small piece silver ore _ore_~
-&+La small piece of &+wsilver &+Lore&n~
+small piece silver ore inferior _ore_~
+&+La small piece of &+yi&+Lnf&+yer&+Li&+yor &+wsilver &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 22 2 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 2 20000 100
 #221
-medium piece silver ore _ore_~
-&+La medium piece of &+wsilver &+Lore&n~
+medium piece silver ore inferior _ore_~
+&+La medium piece of &+yi&+Lnf&+yer&+Li&+yor &+wsilver &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 22 3 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 5 30000 100
 #222
-large piece silver ore _ore_~
-&+La large piece of &+wsilver &+Lore&n~
+large piece silver ore inferior _ore_~
+&+La large piece of &+yi&+Lnf&+yer&+Li&+yor &+wsilver &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 22 4 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 7 40000 100
 #223
-small piece gold ore _ore_~
-&+La small piece of &+Ygold &+Lore&n~
+small piece gold ore inferior _ore_~
+&+La small piece of &+yi&+Lnf&+yer&+Li&+yor &+Ygold &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 24 2 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 2 50000 100
 #224
-medium piece gold ore _ore_~
-&+La medium piece of &+Ygold &+Lore&n~
+medium piece gold ore inferior _ore_~
+&+La medium piece of &+yi&+Lnf&+yer&+Li&+yor &+Ygold &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 24 3 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 5 60000 100
 #225
-large piece gold ore _ore_~
-&+La large piece of &+Ygold &+Lore&n~
+large piece gold ore inferior _ore_~
+&+La large piece of &+yi&+Lnf&+yer&+Li&+yor &+Ygold &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 24 4 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 8 70000 100
 #226
-small piece platinum ore _ore_~
-&+La small piece of &+Wplatinum &+Lore&n~
+small piece platinum ore inferior _ore_~
+&+La small piece of &+yi&+Lnf&+yer&+Li&+yor &+Wplatinum &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 25 2 0 5 0 0 1 0 0 0
@@ -2616,40 +2616,40 @@ leggings studded leather pair~
 4 5 1 3 0 0 0 0
 7 500 100
 #229
-medium piece platinum ore _ore_~
-&+La medium piece of &+Wplatinum &+Lore&n~
+medium piece platinum ore inferior _ore_~
+&+La medium piece of &+yi&+Lnf&+yer&+Li&+yor &+Wplatinum &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 25 3 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 11 150000 100
 #230
-large piece platinum ore _ore_~
-&+La large piece of &+Wplatinum &+Lore&n~
+large piece platinum ore inferior _ore_~
+&+La large piece of &+yi&+Lnf&+yer&+Li&+yor &+Wplatinum &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 25 4 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 18 200000 100
 #231
-small piece mithril ore _ore_~
-&+La small piece of &+mmithril &+Lore&n~
+small piece mithril ore inferior _ore_~
+&+La small piece of &+yi&+Lnf&+yer&+Li&+yor &+mmithril &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 18 2 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 4 500000 100
 #232
-medium piece mithril ore _ore_~
-&+La medium piece of &+mmithril &+Lore&n~
+medium piece mithril ore inferior _ore_~
+&+La medium piece of &+yi&+Lnf&+yer&+Li&+yor &+mmithril &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 18 3 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
 9 600000 100
 #233
-large piece mithril ore _ore_~
-&+La large piece of &+mmithril &+Lore&n~
+large piece mithril ore inferior _ore_~
+&+La large piece of &+yi&+Lnf&+yer&+Li&+yor &+mmithril &+Lore&n~
 &+La piece of ore is sitting here waiting to be picked up.&n~
 ~
 8 18 4 0 5 0 0 1 0 0 0
@@ -5042,24 +5042,24 @@ disguise kit _disguise_kit_~
 0 0 0 0 0 0 0 0
 5 25000 100
 #501
-small ore adamantium _ore_~
-&+La small piece of &+Madamantium &+Lore~
+small ore adamantium inferior _ore_~
+&+La small piece of &+yi&+Lnf&+yer&+Li&+yor &+Madamantium &+Lore~
 &+LA piece of &+More &+Llies on the ground here.~
 ~
 8 19 2 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #502
-ore medium adamantium _ore_~
-&+La medium piece of &+Madamantium &+Lore~
+ore medium adamantium inferior _ore_~
+&+La medium piece of &+yi&+Lnf&+yer&+Li&+yor &+Madamantium &+Lore~
 &+LA piece of &+More &+Llies on the ground here.~
 ~
 8 19 3 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #503
-large ore adamantium _ore_~
-&+La large piece of &+Madamantium &+Lore~
+large ore adamantium inferior _ore_~
+&+La large piece of &+yi&+Lnf&+yer&+Li&+yor &+Madamantium &+Lore~
 &+LA piece of &+More &+Llies on the ground here.~
 ~
 8 19 4 0 7 0 0 16385 0 0 0
