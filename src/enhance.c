@@ -707,6 +707,74 @@ void do_enhance(P_char ch, char *argument, int cmd)
 		enhance(ch, source, material);
 }
 
+const char *modenhance_names[APPLY_LAST + 1] =
+{
+	0,
+	"&+wof &+rstrength&n",
+	"&+wof &+gdexterity&n",
+	"&+wof &+Mintelligence&n",
+	"&+wof &+cwisdom&n",
+	"&+wof &+cconstitution&n",
+	0, 0, 0, 0, 0, 0,
+	0, // mana
+	"&+wof &+Rhealth&n",
+	0, // moves
+	0, 0, 0,
+	"&+wof &+yprecision&n",
+	"&+wof &+ydamage&n",
+	0, 0, 0, 0, 0, 0,
+	"&+wof &+Bagility&n",
+	"&+wof &+Lpower&n",
+	"&+wof &+Ccharisma&n",
+	0, // karma
+	0, // luck
+	"&+wof &+rgreater strength&n",
+	"&+wof &+ggreater dexterity&n",
+	"&+wof &+Mgreater intelligence&n",
+	"&+wof &+cgreater wisdom&n",
+	"&+wof &+cgreater constitution&n",
+	"&+wof &+Bgreater agility&n",
+	"&+wof &+Lgreater power&n",
+	"&+wof &+Cgreater charisma&n",
+	0, // greater karma
+	0, // greater luck
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0,
+	"&+wof &+gregeneration&n",
+	"&+wof &+Gendurance&n",
+	0, // mana reg
+	0, 0,
+};
+
+static int essence_loc(int vnum)
+{
+	switch (vnum)
+	{
+	case 400238: return APPLY_INT;
+	case 400239: return APPLY_INT_MAX;
+	case 400240: return APPLY_CON;
+	case 400241: return APPLY_CON_MAX;
+	case 400242: return APPLY_AGI;
+	case 400243: return APPLY_AGI_MAX;
+	case 400244: return APPLY_DEX;
+	case 400245: return APPLY_DEX_MAX;
+	case 400246: return APPLY_STR;
+	case 400247: return APPLY_STR_MAX;
+	case 400248: return APPLY_CHA;
+	case 400249: return APPLY_CHA_MAX;
+	case 400250: return APPLY_WIS;
+	case 400251: return APPLY_WIS_MAX;
+	case 400252: return APPLY_POW;
+	case 400253: return APPLY_POW_MAX;
+	case 400254: return APPLY_HIT;
+	case 400255: return APPLY_HITROLL;
+	case 400256: return APPLY_DAMROLL;
+	case 400257: return APPLY_HIT_REG;
+	case 400258: return APPLY_MOVE_REG;
+	default: return 0;
+	}
+}
+
 void modenhance(P_char ch, P_obj source, P_obj material)
 {
 
@@ -724,7 +792,8 @@ void modenhance(P_char ch, P_obj source, P_obj material)
 		return;
 	}
 
-	char  buf[MAX_STRING_LENGTH], modstring[MAX_STRING_LENGTH];
+	char  buf[MAX_STRING_LENGTH];
+	const char* modstring;
 	P_obj robj;
 	long  robjint;
 	int   mod = 0, loctype = 0;
@@ -763,179 +832,25 @@ void modenhance(P_char ch, P_obj source, P_obj material)
 	}
 
 	int modtype = OBJ_VNUM(material);
-	switch (modtype)
-	{
-		case 400238:
-			if (source->affected[2].location == APPLY_INT)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_INT;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Mintelligence&n");
-			mod = 1;
-			break;
-		case 400239:
-			if (source->affected[2].location == APPLY_INT_MAX)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_INT_MAX;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Mgreater intelligence&n");
-			mod = 1;
-			break;
-		case 400240:
-			if (source->affected[2].location == APPLY_CON)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_CON;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+cconstitution&n");
-			mod = 1;
-			break;
-		case 400241:
-			if (source->affected[2].location == APPLY_CON_MAX)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_CON_MAX;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+cgreater constitution&n");
-			mod = 1;
-			break;
-		case 400242:
-			if (source->affected[2].location == APPLY_AGI)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_AGI;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Bagility&n");
-			mod = 1;
-			break;
-		case 400243:
-			if (source->affected[2].location == APPLY_AGI_MAX)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_AGI_MAX;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Bgreater agility&n");
-			mod = 1;
-			break;
-		case 400244:
-			if (source->affected[2].location == APPLY_DEX)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_DEX;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+gdexterity&n");
-			mod = 1;
-			break;
-		case 400245:
-			if (source->affected[2].location == APPLY_DEX_MAX)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_DEX_MAX;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+ggreater dexterity&n");
-			mod = 1;
-			break;
-		case 400246:
-			if (source->affected[2].location == APPLY_STR)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_STR;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+rstrength&n");
-			mod = 1;
-			break;
-		case 400247:
-			if (source->affected[2].location == APPLY_STR_MAX)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_STR_MAX;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+rgreater strength&n");
-			mod = 1;
-			break;
-		case 400248:
-			if (source->affected[2].location == APPLY_CHA)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_CHA;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Ccharisma&n");
-			mod = 1;
-			break;
-		case 400249:
-			if (source->affected[2].location == APPLY_CHA_MAX)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_CHA_MAX;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Cgreater charisma&n");
-			mod = 1;
-			break;
-		case 400250:
-			if (source->affected[2].location == APPLY_WIS)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_WIS;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+cwisdom&n");
-			mod = 1;
-			break;
-		case 400251:
-			if (source->affected[2].location == APPLY_WIS_MAX)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_WIS_MAX;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+cgreater wisdom&n");
-			mod = 1;
-			break;
-		case 400252:
-			if (source->affected[2].location == APPLY_POW)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_POW;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Lpower&n");
-			mod = 1;
-			break;
-		case 400253:
-			if (source->affected[2].location == APPLY_POW_MAX)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_POW_MAX;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Lgreater power&n");
-			mod = 1;
-			break;
-		case 400254:
-			if (source->affected[2].location == APPLY_HIT)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_HIT;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Rhealth&n");
-			mod = 3;
-			break;
-		case 400255:
-			if (source->affected[2].location == APPLY_HITROLL)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_HITROLL;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+yprecision&n");
-			mod = 1;
-			break;
-		case 400256:
-			if (source->affected[2].location == APPLY_DAMROLL)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_DAMROLL;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+ydamage&n");
-			mod = 1;
-			break;
-		case 400257:
-			if (source->affected[2].location == APPLY_HIT_REG)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_HIT_REG;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+gregeneration&n");
-			mod = 3;
-			break;
-		case 400258:
-			if (source->affected[2].location == APPLY_MOVE_REG)
-				loctype = 1;
-			else
-				source->affected[2].location = APPLY_MOVE_REG;
-			snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Gendurance&n");
-			mod = 3;
-			break;
+	int loc = essence_loc(modtype);
+	if (!loc)
+		return send_to_char("&=rYBuggy essence material, please tell a god!&n\n", ch);
 
-		default:
-			break;
+	if (source->affected[2].location == loc)
+		loctype = 1;
+	else
+		source->affected[2].location = loc;
+	modstring = modenhance_names[loc];
+
+	switch (loc)
+	{
+	case APPLY_HIT:
+	case APPLY_HIT_REG:
+	case APPLY_MOVE_REG:
+		mod = 3;
+		break;
+	default:
+		mod = 1;
 	}
 
 	if (loctype == 1)
@@ -952,6 +867,8 @@ void modenhance(P_char ch, P_obj source, P_obj material)
 	else
 		source->affected[2].modifier = mod;
 
+	SET_BIT(source->extra2_flags, ITEM2_ENHANCED);
+
 	SUB_MONEY(ch, cost, 0);
 	send_to_char("Your pockets feel &+Wlighter&n.\r\n", ch);
 
@@ -961,6 +878,9 @@ void modenhance(P_char ch, P_obj source, P_obj material)
 
 	obj_from_char(material);
 	extract_obj(material);
+
+	if (IS_ENCRUSTED(source))
+		return describe_encrusted_enhanced(source);
 
 	P_obj tempobj = read_object(OBJ_VNUM(source), VIRTUAL);
 	char  tempdesc[MAX_STRING_LENGTH], short_desc[MAX_STRING_LENGTH], keywords[MAX_STRING_LENGTH];

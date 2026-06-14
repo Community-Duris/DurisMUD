@@ -976,7 +976,7 @@ void do_encrust(P_char ch, char *argument, int cmd)
 	    item->type != ITEM_SHIELD && item->type != ITEM_WORN &&
 	    item->type != ITEM_LIGHT && item->type != ITEM_INSTRUMENT)
 	{
-		act("You can only encrust weapons, armor, shields, and worn equipment.", FALSE, ch, 0, 0, TO_CHAR);
+		act("You can only encrust weapons, armor, shields, instruments, and worn equipment.", FALSE, ch, 0, 0, TO_CHAR);
 		return;
 	}
 
@@ -1098,6 +1098,8 @@ void do_encrust(P_char ch, char *argument, int cmd)
 	set_keywords(new_item, buf1);
 
 	set_encrust_affect(new_item, jewel->value[6]);
+	if (IS_SET(new_item->extra2_flags, ITEM2_ENHANCED))
+		describe_encrusted_enhanced(new_item);
 	extract_obj(item);
 	extract_obj(jewel);
 	obj_to_char(new_item, ch);

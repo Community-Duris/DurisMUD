@@ -2225,6 +2225,7 @@ int   getMaterialMaxSP(const int material);
 int   getItemMaxSP(const P_obj item);
 void  setItemMaxSP(P_obj item);
 int   getItemCurrentSP(const P_obj item);
+void  describe_encrusted_enhanced(P_obj obj);
 
 /* prompt.c */
 
@@ -2331,6 +2332,7 @@ P_obj createRandomItem(P_char, P_char, int, int, int);
 
 /* random.c */
 
+uint64_t hash64(uint64_t x);
 void randomize(uint64_t seed);
 
 /*  arena.c */

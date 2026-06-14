@@ -1923,6 +1923,7 @@ bool calmcheck(P_char ch)
 /* =========================================================================
  *  ENHANCE FUNCTIONS - extracted to enhance.c
  * ========================================================================= */
+
 void christmas_proc(P_char ch)
 {
 	P_char mob;
