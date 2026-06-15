@@ -1104,13 +1104,10 @@ void do_infuse(P_char ch, char *arg, int cmd)
 	for (t_obj = ch->carrying; t_obj; t_obj = nextobj)
 	{
 		nextobj = t_obj->next_content;
-		if (obj_index[t_obj->R_num].virtual_number == RANDOM_OBJ_VNUM)
+		if (IS_ENCRUSTABLE(t_obj))
 		{
-			if (isname("_strange_", t_obj->name))
-			{
-				stone = t_obj;
-				break;
-			}
+			stone = t_obj;
+			break;
 		}
 	}
 

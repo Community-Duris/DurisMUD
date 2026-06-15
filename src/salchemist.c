@@ -1001,12 +1001,13 @@ void do_encrust(P_char ch, char *argument, int cmd)
 		act("What item do you wish to encrust?", FALSE, ch, 0, 0, TO_CHAR);
 		return;
 	}
-	if ((jewel->type != ITEM_TREASURE && jewel->type != ITEM_OTHER) ||
-	    (jewel->value[6] == 0 && obj_index[jewel->R_num].virtual_number != RANDOM_OBJ_VNUM))
+	if (!IS_ENCRUSTABLE(jewel))
 	{
 		act("Is THAT a jewel?!?!?", FALSE, ch, 0, 0, TO_CHAR);
 		return;
 	}
+	if (jewel->value[6] == 0)
+		return send_to_char("This jewel no workie, go tell a god.\n", ch);
 
 	if (jewel == item)
 	{
@@ -1055,11 +1056,11 @@ void do_encrust(P_char ch, char *argument, int cmd)
 	SET_BIT(new_item->wear_flags, ITEM_TAKE);
 	SET_BIT(new_item->wear_flags, item->wear_flags);
 
-	SET_BIT(new_item->bitvector, item->bitvector);
-	SET_BIT(new_item->bitvector2, item->bitvector2);
-	SET_BIT(new_item->bitvector3, item->bitvector3);
-	SET_BIT(new_item->bitvector4, item->bitvector4);
-	SET_BIT(new_item->bitvector5, item->bitvector5);
+	SET_BIT(new_item->bitvector, item->bitvector | jewel->bitvector);
+	SET_BIT(new_item->bitvector2, item->bitvector2 | jewel->bitvector2);
+	SET_BIT(new_item->bitvector3, item->bitvector3 | jewel->bitvector3);
+	SET_BIT(new_item->bitvector4, item->bitvector4 | jewel->bitvector4);
+	SET_BIT(new_item->bitvector5, item->bitvector5 | jewel->bitvector5);
 	new_item->anti_flags |= item->anti_flags;
 	new_item->anti2_flags |= item->anti2_flags;
 	SET_BIT(new_item->extra_flags, item->extra_flags);
@@ -1097,7 +1098,8 @@ void do_encrust(P_char ch, char *argument, int cmd)
 	snprintf(buf1, MAX_STRING_LENGTH, "%s %s", item->name, "encrust");
 	set_keywords(new_item, buf1);
 
-	set_encrust_affect(new_item, jewel->value[6]);
+	if (OBJ_VNUM(jewel) == RANDOM_OBJ_VNUM) // old encrustables
+		set_encrust_affect(new_item, jewel->value[6]);
 	if (IS_SET(new_item->extra2_flags, ITEM2_ENHANCED))
 		describe_encrusted_enhanced(new_item);
 	extract_obj(item);

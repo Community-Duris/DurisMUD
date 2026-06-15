@@ -581,6 +581,12 @@ int race_size(int race);
 #define RANDOM_OBJ_VNUM   1250
 #define IS_RANDOM_MOB(a)  (IS_NPC(a) && GET_VNUM(a) > RANDOM_VNUM_BEGIN && GET_VNUM(a) < RANDOM_VNUM_END)
 
+#define ENCRUST_VNUM_BEGIN 400291
+#define ENCRUST_VNUM_END   400299
+// old encrustables use RANDOM_OBJ_VNUM, can be deleted after wipe
+#define IS_ENCRUSTABLE(o) (OBJ_VNUM(o) >= ENCRUST_VNUM_BEGIN && OBJ_VNUM(o) <= ENCRUST_VNUM_END \
+		|| OBJ_VNUM(o) == RANDOM_OBJ_VNUM && isname("_strange_", (o)->name))
+
 #define IS_PATROL(CH) (IS_NPC(CH) && IS_SET((CH)->specials.act, ACT_PATROL))
 
 /*

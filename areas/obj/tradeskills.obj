@@ -2357,3 +2357,75 @@ large ore adamantium _ore_~
 8 19 4 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 900000 100
+#400291
+strange green stone _strange_~
+&+La strange &+Ggreen&+L stone&n~
+&+La strange &+Ggreen&+L stone&n lies here.~
+~
+13 15 3 0 7 0 0 1 0 0 0
+0 0 0 0 0 0 116 0
+0 0 100 0 12288 0 0
+#400292
+strange red stone _strange_~
+&+La strange &+Rred&+L stone&n~
+&+La strange &+Rred&+L stone&n lies here.~
+~
+13 15 3 0 7 0 0 1 0 0 0
+0 0 0 0 0 0 26 0
+0 0 100 536870912 0 0 0
+#400293
+strange yellow stone _strange_~
+&+La strange &+Yyellow&+L stone&n~
+&+La strange &+Yyellow&+L stone&n lies here.~
+~
+13 15 3 0 7 0 0 1 0 0 0
+0 0 0 0 0 0 32 0
+0 0 100 65536 0 0 0
+#400294
+strange blue stone _strange_~
+&+La strange &+Bblue&+L stone&n~
+&+La strange &+Bblue&+L stone&n lies here.~
+~
+13 15 3 0 7 0 0 1 0 0 0
+0 0 0 0 0 0 8 0
+0 0 100 0 64 0 0
+#400295
+strange black stone _strange_~
+&+La strange &+Lblack&+L stone&n~
+&+La strange &+Lblack&+L stone&n lies here.~
+~
+13 15 3 0 7 0 0 1 0 0 0
+0 0 0 0 0 0 378 0
+0 0 100 64 0 0 0
+#400296
+strange pink stone _strange_~
+&+La strange &+Mpink&+L stone&n~
+&+La strange &+Mpink&+L stone&n lies here.~
+~
+13 15 3 0 7 0 0 1 0 0 0
+0 0 0 0 0 0 37 0
+0 0 100 32768 0 0 0
+#400297
+strange sharp rubin _strange_~
+&+La strange &+Wsharp &+rrubin&n~
+&+La strange &+Wsharp &+rrubin&n lies here.~
+~
+13 15 3 0 7 0 0 1 0 0 0
+0 0 0 0 0 0 21 0
+0 0 100 32 0 0 0
+#400298
+strange yellow blue cross _strange_~
+&+La strange &+Yyellow &+Wand &+bblue&+w cross&n~
+&+La strange &+Yyellow &+Wand &+bblue&+w cross&n lies here.~
+~
+13 15 3 0 7 0 0 1 0 0 0
+0 0 0 0 0 0 4 0
+0 0 100 0 16 0 0
+#400299
+strange dark bloodstone _strange_~
+&+La strange &+rdark bl&+Roo&+rds&+Rto&+rne&n~
+&+La strange &+rdark bl&+Roo&+rds&+Rto&+rne&n lies here.~
+~
+13 15 3 0 7 0 0 1 0 0 0
+0 0 0 0 0 0 25 0
+0 0 100 16 0 0 0

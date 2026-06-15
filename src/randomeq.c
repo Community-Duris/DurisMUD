@@ -617,38 +617,7 @@ P_obj create_material(P_char killer, P_char mob)
 
 P_obj create_stones(P_char ch)
 {
-	P_obj obj;
-	char  buf1[MAX_STRING_LENGTH];
-	int   i = number(1, 9); // stones_list # of elements
-
-	obj = read_object(RANDOM_OBJ_VNUM, VIRTUAL);
-	snprintf(buf1, MAX_STRING_LENGTH, "random strange %s _strange_", strip_ansi(stone_list[i]).c_str());
-
-	if ((obj->str_mask & STRUNG_KEYS) && obj->name)
-		FREE(obj->short_description);
-	obj->short_description = NULL;
-	obj->str_mask |= STRUNG_KEYS;
-	obj->name = str_dup(buf1);
-
-	snprintf(buf1, MAX_STRING_LENGTH, "&+La strange %s", stone_list[i]);
-
-	if ((obj->str_mask & STRUNG_DESC2) && obj->short_description)
-		FREE(obj->short_description);
-	obj->short_description = NULL;
-	obj->str_mask |= STRUNG_DESC2;
-	obj->short_description = str_dup(buf1);
-
-	snprintf(buf1, MAX_STRING_LENGTH, "&+La strange %s lies here.", stone_list[i]);
-	if ((obj->str_mask & STRUNG_DESC1) && obj->description)
-		FREE(obj->description);
-	obj->description = NULL;
-	obj->str_mask |= STRUNG_DESC1;
-	obj->description = str_dup(buf1);
-
-	SET_BIT(obj->wear_flags, BIT_1);
-	obj->value[6] = stone_spell_list[i];
-
-	return obj;
+	return read_object(number(ENCRUST_VNUM_BEGIN, ENCRUST_VNUM_END), VIRTUAL);
 }
 
 // Returns TRUE iff a random item should be created from ch killing the mob.
