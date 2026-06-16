@@ -108,7 +108,6 @@ extern void dump_email_reg_db(void);
 extern void ereglog(int, const char *, ...);
 extern void whois_ip(P_char ch, char *ip_address);
 
-int               get_name(char return_name[256]);
 void              displayShutdownMsg(P_char ch);
 void              event_hatred_check(P_char, P_char, P_obj, void *);
 void              event_halfling_check(P_char, P_char, P_obj, void *);

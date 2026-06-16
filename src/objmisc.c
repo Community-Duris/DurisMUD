@@ -1717,7 +1717,7 @@ static const char *encrust_gradients[] =
 
 void describe_encrusted_enhanced(P_obj obj)
 {
-	char typebuf[MAX_STRING_LENGTH], buf[MAX_STRING_LENGTH];
+	char typebuf[MAX_STRING_LENGTH], buf[MAX_STRING_LENGTH], name[256];
 
 	const char *modstring = modenhance_names[obj->affected[2].location];
 	if (!modstring)
@@ -1727,14 +1727,16 @@ void describe_encrusted_enhanced(P_obj obj)
 	// taking enhancement into the hash.
 	uint64_t id = hash64(OBJ_VNUM(obj)) ^ hash64(obj->bitvector) ^ hash64(obj->bitvector2);
 
+	get_name(name, 9, id);
+
 	const char *type = guess_item_type(obj);
 	snprintf(typebuf, sizeof typebuf, "encrusted %s", type);
 	AnsiString typedesc(typebuf);
 	typedesc.colorize(Gradient(encrust_gradients[id % ARRAY_SIZE(encrust_gradients)]));
 	typedesc.ansi(typebuf);
 
-	snprintf(buf, sizeof buf, "%s encrusted encrust enhanced", type);
+	snprintf(buf, sizeof buf, "%s %s encrusted encrust enhanced", type, name);
 	set_keywords(obj, buf);
-	snprintf(buf, sizeof buf, "%s %s&n", typebuf, modstring);
+	snprintf(buf, sizeof buf, "%s '%s' %s&n", typebuf, name, modstring);
 	set_short_description(obj, buf);
 }

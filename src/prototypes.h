@@ -1934,6 +1934,10 @@ int  num_char_in_vehicle(P_obj);
 int  stable_master(P_char, P_char, int, char *);
 bool is_natural_mount(P_char ch, P_char mount);
 
+/* name_gen.c */
+
+int get_name(char return_namn[256], int SEX = -1, uint64_t id = 0);
+
 /* nanny.c */
 
 int                                    tossHint(P_char ch);

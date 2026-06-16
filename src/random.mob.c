@@ -71,7 +71,6 @@ extern struct mm_ds          *dead_pconly_pool;
 extern const int              class_table[LAST_RACE + 1][CLASS_COUNT + 1];
 
 int find_a_zone();
-int get_name(char return_name[256]);
 int find_mob_map_room(P_char random_mob);
 
 const char *prefix_name_theme[8][2] = {
