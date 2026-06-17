@@ -2362,7 +2362,7 @@ strange green stone _strange_~
 &+La strange &+Ggreen&+L stone&n~
 &+La strange &+Ggreen&+L stone&n lies here.~
 ~
-13 15 3 0 7 0 0 1 0 0 0
+13 15 3 0 7 0 131072 1 0 0 0
 0 0 0 0 0 0 116 0
 0 0 100 0 12288 0 0
 #400292
@@ -2372,7 +2372,7 @@ strange red stone _strange_~
 ~
 13 15 3 0 7 0 0 1 0 0 0
 0 0 0 0 0 0 26 0
-0 0 100 536870912 0 0 0
+0 0 100 570425344 0 0 0
 #400293
 strange yellow stone _strange_~
 &+La strange &+Yyellow&+L stone&n~
@@ -2380,7 +2380,7 @@ strange yellow stone _strange_~
 ~
 13 15 3 0 7 0 0 1 0 0 0
 0 0 0 0 0 0 32 0
-0 0 100 65536 0 0 0
+0 0 100 73728 0 0 0
 #400294
 strange blue stone _strange_~
 &+La strange &+Bblue&+L stone&n~
@@ -2388,7 +2388,7 @@ strange blue stone _strange_~
 ~
 13 15 3 0 7 0 0 1 0 0 0
 0 0 0 0 0 0 8 0
-0 0 100 0 64 0 0
+0 0 100 0 192 0 0
 #400295
 strange black stone _strange_~
 &+La strange &+Lblack&+L stone&n~
@@ -2402,17 +2402,17 @@ strange pink stone _strange_~
 &+La strange &+Mpink&+L stone&n~
 &+La strange &+Mpink&+L stone&n lies here.~
 ~
-13 15 3 0 7 0 0 1 0 0 0
+13 15 3 0 7 0 1048576 1 0 0 0
 0 0 0 0 0 0 37 0
-0 0 100 32768 0 0 0
+0 0 100 268468224 0 0 0
 #400297
 strange sharp rubin _strange_~
 &+La strange &+Wsharp &+rrubin&n~
 &+La strange &+Wsharp &+rrubin&n lies here.~
 ~
-13 15 3 0 7 0 0 1 0 0 0
+13 15 3 0 7 0 1048576 1 0 0 0
 0 0 0 0 0 0 21 0
-0 0 100 32 0 0 0
+0 0 100 32 0 0 8
 #400298
 strange yellow blue cross _strange_~
 &+La strange &+Yyellow &+Wand &+bblue&+w cross&n~
@@ -2420,7 +2420,7 @@ strange yellow blue cross _strange_~
 ~
 13 15 3 0 7 0 0 1 0 0 0
 0 0 0 0 0 0 4 0
-0 0 100 0 16 0 0
+0 0 100 0 28 0 0
 #400299
 strange dark bloodstone _strange_~
 &+La strange &+rdark bl&+Roo&+rds&+Rto&+rne&n~

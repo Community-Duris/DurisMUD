@@ -1063,8 +1063,8 @@ void do_encrust(P_char ch, char *argument, int cmd)
 	SET_BIT(new_item->bitvector5, item->bitvector5 | jewel->bitvector5);
 	new_item->anti_flags |= item->anti_flags;
 	new_item->anti2_flags |= item->anti2_flags;
-	SET_BIT(new_item->extra_flags, item->extra_flags);
-	SET_BIT(new_item->extra2_flags, item->extra2_flags);
+	SET_BIT(new_item->extra_flags, item->extra_flags | jewel->extra_flags);
+	SET_BIT(new_item->extra2_flags, item->extra2_flags | item->extra2_flags);
 
 	new_item->craftsmanship = MIN(craftsmanship + 1, OBJCRAFT_HIGHEST);
 
