@@ -210,41 +210,6 @@ void do_target(P_char ch, char *arg, int cmd)
 	return;
 }
 
-#if 0
-/* for ordering followers to target */
-void do_order_target(P_char ch, P_char vict, char *arg, int cmd)
-{
-  int      loc;
-  char     buf[256];
-
-  if (!ch || !vict)
-    return;
-
-  if (*arg == '\0')
-  {                             /* no arg */
-    send_to_char("Valid target areas are:\n\r", ch);
-    loc = 0;
-    while (target_locs[loc][0] != '\n')
-    {
-      snprintf(buf, 256, "    %s\n\r", target_locs[loc]);
-      send_to_char(buf, ch);
-      loc++;
-    }
-    return;
-  }
-  loc = search_block(arg, target_locs, FALSE);
-  if (loc == -1)
-  {
-    send_to_char("Type &+Wtarget&N to see valid options.", ch);
-    return;
-  }
-  vict->player.combat_target_loc = loc;
-  snprintf(buf, 256, "%s changes their combat tactics slightly.\r\n", J_NAME(vict));
-  send_to_char(buf, ch);
-  return;
-}
-#endif
-
 void do_camp(P_char ch, char *arg, int cmd)
 {
 	struct affected_type af;
@@ -2121,35 +2086,6 @@ void do_balance(P_char ch, char *argument, int cmd)
 
 	if (test_atm_present(ch))
 	{
-#if 0
-    /* Thieving bankers */
-    if (!number(0, 5))
-    {
-      switch (number(1, 4))
-      {
-      case 1:
-        if (GET_BALANCE_PLATINUM(ch))
-          GET_BALANCE_PLATINUM(ch) -=
-            (GET_BALANCE_PLATINUM(ch) / 100) * number(1, 10);
-        break;
-      case 2:
-        if (GET_BALANCE_GOLD(ch))
-          GET_BALANCE_GOLD(ch) -=
-            (GET_BALANCE_GOLD(ch) / 100) * number(5, 15);
-        break;
-      case 3:
-        if (GET_BALANCE_SILVER(ch))
-          GET_BALANCE_SILVER(ch) -=
-            (GET_BALANCE_SILVER(ch) / 100) * number(10, 20);
-        break;
-      case 4:
-        if (GET_BALANCE_COPPER(ch))
-          GET_BALANCE_COPPER(ch) -=
-            (GET_BALANCE_COPPER(ch) / 100) * number(15, 25);
-        break;
-      }
-    }
-#endif
 		snprintf(Gbuf1,
 		         MAX_STRING_LENGTH,
 		         "Your account contains:\r\n    %d &+Wplatinum&N, %d &+Ygold&N, %d silver, %d &+ycopper&N coins.\r\n",
@@ -3454,139 +3390,6 @@ void do_steal(P_char ch, char *argument, int cmd)
 	if (!IS_FIGHTING(victim) && !IS_DESTROYING(victim))
 		MobStartFight(victim, ch);
 }
-
-#if 0  // Io's new steal code - not done yet
-bool newsteal_CheckIfValid(P_char ch, const char *victim_name, const char *args)
-{
-  if (!ch || !victim)
-    return false;
-
-  if (IS_RIDING(ch))
-  {
-    send_to_char("While mounted? I don't think so...\r\n", ch);
-    return false;
-  }
-  if (!CAN_SEE(ch, ch))
-  {
-    send_to_char("You can't even see your own hand. How do you plan on stealing?\r\n", ch);
-    return false;
-  }
-  if ((IS_CARRYING_N(ch) + 1) > CAN_CARRY_N(ch))
-  {
-    send_to_char("My! Aren't we the greedy one!  You couldn't carry anything more if it was just\r\nlaying around on the ground!\r\n",
-                 ch);
-    return false;
-  }
-  if (IS_CARRYING_W(ch, rider) >= CAN_CARRY_W(ch))
-  {
-    send_to_char("Sheesh!  With that load it's a wonder you can walk!\r\n", ch);
-    return false;
-  }
-  if (CHAR_IN_SAFE_ROOM(ch))
-  {
-    send_to_char("Your conscience prevents you from stealing in such a peaceful place.\r\n",ch);
-    return false;
-  }
-  if( IS_DESTROYING(ch) )
-  {
-    send_to_char( "You can't focus enough right now.\n", ch );
-    return FALSE;
-  }
-
-  P_char victim = get_char_room_vis(ch, victim_name);
-  if (!victim)
-  {
-    send_to_char("Steal what from who?\r\n", ch);
-    return false;
-  }
-  if (victim == ch)
-  {
-    send_to_char("You want to steal from yourself?  That's silly!\r\n", ch);
-    return false;
-  }
-  if ((IS_ROOM( ch->in_room, SINGLE_FILE) &&
-      !AdjacentInRoom(ch, victim))
-  {
-    act("$N seems to be just a BIT out of reach.", FALSE, ch, 0, victim, TO_CHAR);
-    return false;
-  }
-  if (ch->group && !on_front_line(ch))
-  {
-    send_to_char("You can't quite reach...\r\n", ch);
-    return false;
-  }
-  if (victim->group && !on_front_line(victim))
-    if (GET_SPEC(ch, CLASS_THIEF, SPEC_CUTPURSE))
-    {
-      if (number(0, GET_C_DEX(ch)) < (75 + STAT_INDEX(GET_C_DEX(victim))))
-      {
-        send_to_char("You can't quite reach...\r\n", ch);
-        return false;
-      }
-    }
-    else
-    {
-      send_to_char("You can't quite reach...\r\n", ch);
-      return false;
-    }
-  if (IS_FIGHTING(victim))
-  {
-    send_to_char("Yah, right, good way to lose a hand, or a head!\r\n", ch);
-    return false;
-  }
-
-  return true;
-}
-
-void do_newsteal(P_char ch, char *argument, int cmd)
-{
-  char     victim_name[MAX_INPUT_LENGTH];
-  char     obj_name[MAX_INPUT_LENGTH];
-  // initial sanity checks
-  if (IS_NPC(ch))
-    return;
-  if (GET_LEVEL(ch) < 10)
-  {
-    send_to_char("You're too inexperienced.. get some levels.\r\n", ch);
-    return;
-  }
-  if (!GET_CHAR_SKILL(ch, SKILL_STEAL))
-  {
-    send_to_char("You better leave the art of stealing to the thieves.\r\n",
-                 ch);
-    return;
-  }
-  if (CHAR_IN_ARENA(ch))
-  {
-    send_to_char("Steal in the arena? Yeah right.\r\n", ch);
-    return;
-  }
-  /*if (GET_ALIGNMENT(ch) > 349 && !IS_TRUSTED(ch)) {
-     send_to_char("Your conscience gets the better of you. You must be getting soft in your old age.\r\n", ch);
-     return;
-     } */
-  argument = one_argument(argument, obj_name);
-  one_argument(argument, victim_name);
-
-  P_char victim = get_char_room_vis(ch, victim_name);
-
-  if (!victim)
-  {
-    send_to_char("Steal what from who?\r\n", ch);
-    return;
-  }
-  if (IS_PC(victim) && (GET_LEVEL(ch) < 35) &&
-      !GET_SPEC(ch, CLASS_THIEF, SPEC_CUTPURSE))
-  {
-    send_to_char("Maybe you should practice more...\r\n", ch);
-    return;
-  }
-  if (!newsteal_CheckIfValid(ch, victim_name, obj_name))
-    return;
-
-
-}
-#endif // Io's new steal code - not done yet
 
 void do_explist(P_char ch, char *argument, int cmd)
 {
@@ -5512,49 +5315,6 @@ void do_split(P_char ch, char *argument, int cmd)
 	send_to_char(Gbuf1, ch);
 	return;
 }
-
-#if 0
-void do_reboot(P_char ch, char *argument, int cmd)
-{
-  char    *timestr;
-  char     rbtime[MAX_STRING_LENGTH];
-  char     nwtime[MAX_STRING_LENGTH];
-  long     timenow;
-  long     uptime;
-  long     updays = 0;
-  long     uphours = 0;
-  long     upmins = 0;
-
-  timestr = asctime(localtime(&reboot_time));
-  strcpy(rbtime, timestr);
-
-  timenow = time(0);
-  timestr = asctime(localtime(&timenow));
-  strcpy(nwtime, timestr);
-
-  snprintf(Gbuf4, MAX_STRING_LENGTH, "System last rebooted at %s\r\n", rbtime);
-  send_to_char(Gbuf4, ch);
-  snprintf(Gbuf4, MAX_STRING_LENGTH, "It is now %s\r\n", nwtime);
-  send_to_char(Gbuf4, ch);
-
-  /*
-   * now figure out how long it has been up
-   */
-  uptime = timenow - reboot_time;
-
-  updays = uptime / SECS_PER_REAL_DAY;
-  uptime %= SECS_PER_REAL_DAY;
-  uphours = uptime / SECS_PER_REAL_HOUR;
-  uptime %= SECS_PER_REAL_HOUR;
-  upmins = uptime / SECS_PER_REAL_MIN;
-
-  snprintf(Gbuf4, MAX_STRING_LENGTH,
-          "The system has been up for %d days, %d hours, %d mins.\r\n",
-          updays, uphours, upmins);
-  send_to_char(Gbuf4, ch);
-}
-
-#endif
 
 void do_bury(P_char ch, char *argument, int cmd)
 {

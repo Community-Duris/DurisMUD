@@ -487,18 +487,6 @@ int RobCash(P_char ch, int cost)
 	return TRUE;
 }
 
-#if 0
-bool CharHasSpec(P_char ch)
-{
-  int      i;
-
-  for (i = SKILL_FIRST_SPEC; i <= SKILL_LAST_SPEC; i++)
-    if (GET_CHAR_SKILL_P(ch, i))
-      return TRUE;
-  return FALSE;
-}
-#endif
-
 struct spl_list
 {
 	int circle;

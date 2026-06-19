@@ -4458,15 +4458,6 @@ void do_score(P_char ch, char *argument, int cmd)
 	snprintf(buf, MAX_STRING_LENGTH, "Level: %d   Race: %s   Class: %s &nSex: %s\n&n", GET_LEVEL(ch), race_to_string(ch), get_class_string(ch, buffer), buf2);
 	send_to_char(buf, ch);
 
-	/* description */
-#if 0
-  if (ch->player.short_descr)
-  {
-    snprintf(buf, MAX_STRING_LENGTH, "Quick Description: %s\n", ch->player.short_descr);
-    send_to_char(buf, ch);
-  }
-#endif
-
 	/* hit pts, mana, moves */
 	if (GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
 	{
@@ -5646,11 +5637,6 @@ void do_time(P_char ch, char *argument, int cmd)
 		return;
 	}
 
-#if 0
-  if (IS_TRUSTED(ch))
-    snprintf(Gbuf1, MAX_STRING_LENGTH, ":%s%d", ((pulse / 5) > 9) ? "" : "0", pulse / 5);
-  else
-#endif
 	Gbuf1[0] = 0;
 
 	snprintf(Gbuf2, MAX_STRING_LENGTH, "It is %d%s%s, on ", (time_info.hour % 12) ? (time_info.hour % 12) : 12, Gbuf1, (time_info.hour > 11) ? "pm" : "am");

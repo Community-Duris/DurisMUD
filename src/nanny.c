@@ -5392,14 +5392,6 @@ void nanny(P_desc d, char *arg)
 			if (d->output.head == 0)
 				close_socket(d);
 			return;
-#if 0
-    /* better not get here or something is hosed */
-  default:
-    logit(LOG_EXIT, "Nanny: illegal state of con'ness (%d)", STATE(d));
-    raise(SIGSEGV);
-    break;
-
-#endif
 	}
 }
 

@@ -4352,21 +4352,11 @@ int wear(P_char ch, P_obj obj_object, int keyword, bool showit)
 		else
 			return FALSE;
 	}
-#if 1
 	/*
 	 * monk weight restriction
 	 */
 	if (IS_PC(ch) && GET_CLASS(ch, CLASS_MONK) && keyword != 20)
 	{
-		/*
-		if (GET_LEVEL(ch) < 40 &&
-		   (GET_OBJ_WEIGHT(obj_object) > (27 - (GET_LEVEL(ch) / 2))))
-		{
-		  if (showit)
-		    act("$p is far too heavy and cumbersome, your skills would be useless!", FALSE, ch, obj_object, 0, TO_CHAR);
-		  return FALSE;
-		}
-		*/
 		int monkweight = get_property("monk.weight.str.modifier.denominator", 10);
 
 		if (GET_OBJ_WEIGHT(obj_object) > (int)(GET_C_STR(ch) / monkweight))
@@ -4376,7 +4366,6 @@ int wear(P_char ch, P_obj obj_object, int keyword, bool showit)
 			return FALSE;
 		}
 	}
-#endif
 	/* let's check for artis here */
 	/*
 	#if 0

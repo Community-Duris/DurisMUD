@@ -1492,11 +1492,6 @@ int find_action(int cmd)
 	}
 }
 
-#if 1 /*                                                                                                                                                                                               \
-       * old do_action, new version (Brett?) *                                                                                                                                                         \
-       keeps outputting wierd garbage. JAB                                                                                                                                                             \
-       */
-
 void do_action(P_char ch, char *argument, int cmd)
 {
 	int act_nr;
@@ -1576,26 +1571,6 @@ void do_action(P_char ch, char *argument, int cmd)
 		//    send_to_char("\r\n", ch);
 		act(act_mesg->char_auto, FALSE, ch, 0, 0, TO_CHAR);
 		act(act_mesg->others_auto, act_mesg->hide, ch, 0, 0, TO_ROOM);
-#if 0
-  }
-  else if (!(obj = get_obj_room_vis(ch, buf)))
-  {
-    for (ch_ptr = buf; *ch_ptr != '\0'; ch_ptr++)
-    {
-      if (*ch_ptr == '&')
-        switch (*(ch_ptr + 1))
-        {
-        case '+':
-        case '-':
-        case '=':
-          send_to_char("Pardon? No ansi chars allowed as input.\r\n", ch);
-          break;
-        case '&':
-          ch_ptr++;
-          break;
-        }
-    }
-#endif
 	}
 	else
 	{
@@ -1610,150 +1585,7 @@ void do_action(P_char ch, char *argument, int cmd)
 			act(act_mesg->vict_found, act_mesg->hide, ch, 0, vict, TO_VICT);
 		}
 	}
-	//  if (GET_RACE(ch) == RACE_HALFLING)
-	//    halfling_stealaction(ch, argument, cmd);
 }
-
-#else /*                                                                                                                                                                                               \
-       * new version below, but buggy                                                                                                                                                                  \
-       */
-
-void do_action(P_char ch, char *argument, int cmd)
-{
-	int act_nr;
-
-	/*
-	 * leave tmp as well, do_action called from lots of places too.
-	 */
-	char                 buf1[MAX_INPUT_LENGTH], buf2[MAX_INPUT_LENGTH];
-	char                 TmpBuf[MAX_INPUT_LENGTH], a_buf[MAX_INPUT_LENGTH];
-	struct social_messg *act_mesg;
-	P_char               vict;
-
-	if ((act_nr = find_action(cmd)) < 0)
-	{
-		send_to_char("That action is not supported.\r\n", ch);
-		return;
-	}
-	act_mesg = &soc_mess_list[act_nr];
-
-	if (act_mesg->char_found)
-	{
-		/*
-		 * one_argument(a_buf, buf1);
-		 */
-		/*
-		 * argument_interpreter(a_buf, buf1, buf2);
-		 */
-		/*
-		 * this a_buf dealie allows for argument being a constant, like
-		 * do_action(ch "maid", CMD_PINCH); but all these strcpy's will
-		 * add to cpu load, hopefully not much.  JAB
-		 */
-		if (argument && *argument)
-			// LATENT: strcpy without bounds — safe because a_buf and argument
-			// are both MAX_INPUT_LENGTH. Use strlcpy for defense-in-depth.
-			strcpy(a_buf, argument);
-		else
-			a_buf[0] = 0;
-		half_chop(a_buf, buf1, buf2);
-	}
-	else
-		*buf1 = '\0';
-
-	if (!*buf1)
-	{
-		send_to_char(act_mesg->char_no_arg, ch);
-		send_to_char("\r\n", ch);
-		act(act_mesg->others_no_arg, act_mesg->hide, ch, 0, 0, TO_ROOM);
-		return;
-	}
-	if (!(vict = get_char_room_vis(ch, buf1)))
-	{
-		/*
-		 * send_to_char(act_mesg->not_found, ch);
-		 */
-		send_to_char(act_mesg->char_no_arg, ch);
-		send_to_char("\r\n", ch);
-		*TmpBuf = '\0';
-		strlcpy(TmpBuf, act_mesg->others_no_arg, sizeof(TmpBuf) - 3);
-		strlcat(TmpBuf, " '", sizeof(TmpBuf));
-		CAP(a_buf);
-		strlcat(TmpBuf, a_buf, sizeof(TmpBuf));
-		strlcat(TmpBuf, "'", sizeof(TmpBuf));
-		act(TmpBuf, act_mesg->hide, ch, 0, 0, TO_ROOM);
-	}
-	else if (vict == ch)
-	{
-		send_to_char(act_mesg->char_auto, ch);
-		send_to_char("\r\n", ch);
-		*TmpBuf = '\0';
-		strcpy(TmpBuf, act_mesg->char_found);
-		if (*buf2)
-		{
-			strcat(TmpBuf, " '");
-			CAP(buf2);
-			strcat(TmpBuf, buf2);
-			strcat(TmpBuf, "'");
-		}
-		act(TmpBuf, act_mesg->hide, ch, 0, 0, TO_ROOM);
-		/*
-		 * act(act_mesg->others_auto, act_mesg->hide, ch, 0, 0, TO_ROOM);
-		 */
-	}
-	else
-	{
-		if (!MIN_POS(vict, act_mesg->min_victim_position))
-		{
-			act("$N is not in a proper position for that.", FALSE, ch, 0, vict, TO_CHAR);
-		}
-		else
-		{
-			*TmpBuf = '\0';
-			strcpy(TmpBuf, act_mesg->char_found);
-			if (*buf2)
-			{
-				strcat(TmpBuf, " '");
-				CAP(buf2);
-				strcat(TmpBuf, buf2);
-				strcat(TmpBuf, "'");
-			}
-			/*
-			 * act(act_mesg->char_found, 0, ch, 0, vict, TO_CHAR);
-			 */
-			act(TmpBuf, 0, ch, 0, vict, TO_CHAR);
-			*TmpBuf = '\0';
-			strcpy(TmpBuf, act_mesg->others_found);
-			if (*buf2)
-			{
-				strcat(TmpBuf, " '");
-				CAP(buf2);
-				strcat(TmpBuf, buf2);
-				strcat(TmpBuf, "'");
-			}
-			/*
-			 * act(act_mesg->others_found, act_mesg->hide, ch, 0, vict,
-			 * TO_NOTVICT);
-			 */
-			act(TmpBuf, act_mesg->hide, ch, 0, vict, TO_NOTVICT);
-			*TmpBuf = '\0';
-			strcpy(TmpBuf, act_mesg->vict_found);
-			if (*buf2)
-			{
-				strcat(TmpBuf, " '");
-				CAP(buf2);
-				strcat(TmpBuf, buf2);
-				strcat(TmpBuf, "'");
-			}
-			/*
-			 * act(act_mesg->vict_found, act_mesg->hide, ch, 0, vict,
-			 * TO_VICT);
-			 */
-			act(TmpBuf, act_mesg->hide, ch, 0, vict, TO_VICT);
-		}
-	}
-}
-#endif
 
 void do_insult(P_char ch, char *argument, int cmd)
 {

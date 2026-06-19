@@ -72,10 +72,6 @@ float exp_mods[EXPMOD_MAX + 1];
 
 void checkPeriodOfFame(P_char ch, char killer[1024]);
 
-#if 0
-#define READ_TITLE(ch) (GET_SEX(ch) == SEX_MALE ? titles[GET_CLASS(ch) - 1][GET_LEVEL(ch)].title_m : titles[GET_CLASS(ch) - 1][GET_LEVEL(ch)].title_f)
-#endif
-
 int vitality_limit(P_char ch)
 {
 	int max;
@@ -501,54 +497,6 @@ int ward_regen(P_char ch, bool display_only)
 	}
 
 	return (gain);
-}
-
-void gain_practices(P_char ch)
-{
-#if 0
-  if (IS_NPC(ch))
-    return;
-
-  switch (GET_CLASS(ch))
-  {
-  case CLASS_SORCERER:
-  case CLASS_NECROMANCER:
-  case CLASS_CONJURER:
-  case CLASS_SUMMONER:
-  case CLASS_SHAMAN:
-  case CLASS_CLERIC:
-  case CLASS_DRUID:
-    ch->only.pc->spells_to_learn += MAX(2, wis_app[STAT_INDEX(GET_C_WIS(ch))].bonus + 2) + number(0, 1);
-    break;
-  default:
-    ch->only.pc->spells_to_learn += MAX(1, wis_app[STAT_INDEX(GET_C_WIS(ch))].bonus + 1) + number(0, 1);
-    break;
-  }
-#endif
-}
-
-void lose_practices(P_char ch)
-{
-#if 0
-  if (IS_NPC(ch))
-    return;
-
-  switch (GET_CLASS(ch))
-  {
-  case CLASS_SORCERER:
-  case CLASS_NECROMANCER:
-  case CLASS_CONJURER:
-  case CLASS_SUMMONER:
-  case CLASS_SHAMAN:
-  case CLASS_CLERIC:
-  case CLASS_DRUID:
-    ch->only.pc->spells_to_learn -= MAX(2, wis_app[STAT_INDEX(GET_C_WIS(ch))].bonus + 2) + 1;
-    break;
-  default:
-    ch->only.pc->spells_to_learn += MAX(1, wis_app[STAT_INDEX(GET_C_WIS(ch))].bonus + 1) + 1;
-    break;
-  }
-#endif
 }
 
 /* give a gith his sword/staff of death if he's hit 50th for the first

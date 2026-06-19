@@ -1061,17 +1061,9 @@ void shopping_repair(char *arg, P_char ch, P_char keeper, int shop_nr)
 		do_tell(keeper, buf, 0);
 		return;
 	}
-#if 0
-  if (!(obj = get_obj_in_list_vis(ch, argm, ch->carrying)))
-  {
-    send_to_char("Give what?\r\n", ch);
-    return;
-  }
-#else
 	obj = get_selling_obj(ch, argm, keeper, shop_nr, TRUE, TRUE);
 	if (!obj)
 		return;
-#endif
 	act("You give $p to $N.", TRUE, ch, obj, keeper, TO_CHAR);
 	act("$n gives $p to $N.", TRUE, ch, obj, keeper, TO_ROOM);
 	act("$N looks at $p.", TRUE, ch, obj, keeper, TO_CHAR);

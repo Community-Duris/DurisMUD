@@ -536,39 +536,6 @@ const struct minor_create_struct        minor_create_name_list[] = {
     {						"\0",				   0}
 };
 
-#if 0
-const int material_absorbtion[TOTALATTACK_TYPES][TOTALMATERIALS] = {
-/* pierce, slash                                */
-  {},                           /* MAT_UNDEFINED  0        */
-  {},                           /* MAT_N_SUBSTANT 1        */
-  {},                           /* MAT_MAG_METAL  2        */
-  {},                           /* MAT_WOOD       3        */
-  {},                           /* MAT_CLOTH      4        */
-  {},                           /* MAT_HIDE       5        */
-  {},                           /* MAT_SILICON    6        */
-  {},                           /* MAT_CRYSTAL    7        */
-  {},                           /* MAT_MAGICAL    8        */
-  {},                           /* MAT_BONE       9        */
-  {},                           /* MAT_STONE     10        */
-  {},                           /* MAT_LEATHER   11        */
-  {},                           /* MAT_S_LEATHER 12        */
-  {},                           /* MAT_SCALE     13        */
-  {},                           /* MAT_CHAIN     14        */
-  {},                           /* MAT_PLATE     15        */
-  {},                           /* MAT_MITHRIL   16        */
-  {},                           /* MAT_ADAMANTIUM 17       */
-  {},                           /* MAT_BRONZE    18        */
-  {},                           /* MAT_COPPER    19        */
-  {},                           /* MAT_SILVER    20        */
-  {},                           /* MAT_ELECTRUM  21        */
-  {},                           /* MAT_GOLD      22        */
-  {},                           /* MAT_PLATINUM  23        */
-  {}                            /* MAT_GEM       24        */
-
-
-};
-#endif
-
 extern const int movement_loss[];
 const int        movement_loss[] = {
     1,  /* * Inside     */

@@ -1356,35 +1356,6 @@ void command_interpreter(P_char ch, char *argument)
 
 	if (!cmd)
 		return;
-#if 0
-  if ((cmd != CMD_PETITION) && IS_PC(ch) && IS_ILLITHID(ch) &&
-      (GET_LEVEL(ch) < 52))
-  {
-    send_to_char("Don't you know, the Elder Brain wants you home!\r\n", ch);
-    return;
-  }
-#endif
-
-#if 0
-  if( cmd != CMD_LOOK && cmd != CMD_GET && cmd != CMD_RENT &&
-      cmd != CMD_TELL && cmd != CMD_PETITION && cmd != CMD_SAY &&
-      cmd != CMD_GIVE && cmd != CMD_STAND && cmd != CMD_INVENTORY &&
-      cmd != CMD_SCORE && cmd != CMD_WHO && cmd != CMD_EQUIPMENT &&
-      cmd != CMD_REPLY && cmd != CMD_WEAR && cmd != CMD_REMOVE &&
-      cmd != CMD_PUT && cmd != CMD_HELP && cmd != CMD_CAMP && 
-      cmd != CMD_QUIT )
-  {
-    for( P_desc d = descriptor_list; d; d = d->next )
-    {
-      if( ch->desc && d->character && ch != d->character && !IS_TRUSTED(ch)
-        && !IS_TRUSTED(d->character) && ch->only.pc->last_ip == d->character->only.pc->last_ip )
-      {
-        send_to_char("With your soul split into pieces, you can't do that!\n", ch);
-        return;
-      }
-    }
-  }
-#endif
 
 	/* happy little hack to make all 'say' procs work */
 	if (cmd == CMD_SAY2)

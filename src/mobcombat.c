@@ -1047,42 +1047,6 @@ bool DragonCombat(P_char ch, int awe)
 
 	if (IS_AFFECTED(ch, AFF_CHARM) && (ch->following) && (ch->in_room == ch->following->in_room))
 		return FALSE;
-#if 0
-    if (GET_MANA(ch) == GET_MAX_MANA(ch)) {
-      GET_MANA(ch)++;
-      /* * ok, dragons ALL breathe of first round */
-    } else
-    {
-#endif
-#if 0
-      if( !IS_ROOM(ch->in_room, NO_MAGIC | ROOM_SILENT) )
-      {
-        /* * if they have any mana, they cast 1 in 3 */
-        if ((GET_MANA(ch) > 9) && !number(0, 2))
-        {
-          if (!isname("br_f", GET_NAME(ch)) && !isname("br_c", GET_NAME(ch)) &&
-              !isname("br_g", GET_NAME(ch)) && !isname("br_a", GET_NAME(ch)) &&
-              !isname("br_l", GET_NAME(ch)) && !isname("br_s", GET_NAME(ch)) &&
-              !isname("br_b", GET_NAME(ch)))
-          {
-            /*
-             * Assign a valid character for CastMageSpell() -
-             * SKB 9 Apr 1995
-             */
-            for (tchar1 = world[ch->in_room].people; tchar1;
-                 tchar1 = tchar1->next_in_room)
-              if( GET_OPPONENT(tchar1) == ch)
-                return (CastMageSpell(ch, tchar1));
-          }
-        }
-      } elsetell
-#endif
-#if 0
-      {
-        /* can't cast, so breathe like mad */
-        breath_chance = 1;
-      }
-#endif
 
 	/*
 	 * fail casting check?  Ok, let's add a sweep with the tail 1

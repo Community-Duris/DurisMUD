@@ -4097,9 +4097,7 @@ void clear_char(P_char ch)
 	ch->in_room              = NOWHERE;
 	ch->specials.was_in_room = NOWHERE;
 	SET_POS(ch, POS_STANDING + STAT_NORMAL);
-#if 1
 	ch->points.base_armor = 0; /* Basic Armor */
-#endif
 
 	/*
 	 * Zero out our other flags -- this should have been done when

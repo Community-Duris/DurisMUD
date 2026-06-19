@@ -466,31 +466,12 @@ void do_read_player(P_char ch, char *arg, int cmd)
 		send_to_char("Syntax: load char <name> or load <m|c|o|i> <vnum>\n", ch);
 		return;
 	}
-#if 0
-  send_to_char("Temp disabled, so I can test a mem leak potential.\n", ch);
-  return;
-#endif
 
 	vict = (P_char)mm_get(dead_mob_pool);
 	clear_char(vict);
-#if 0
-  dead_pconly_pool = mm_create("PC_ONLY", sizeof(struct pc_only_data),
-                               offsetof(struct pc_only_data, switched),
-                               mm_find_best_chunk(sizeof(struct pc_only_data),
-                                                  10, 25));
-#endif
 	vict->only.pc             = (struct pc_only_data *)mm_get(dead_pconly_pool);
 	vict->only.pc->aggressive = -1;
 	vict->desc                = NULL;
-#if 0
-  if((tmp = restorePasswdOnly(vict, arg)) < 0)
-  {
-    send_to_char
-      ("&=RlDanger Will Robinson! Bad pfile!!&n (Or maybe you just fucked up typing the name.)\n",
-       ch);
-    return;
-  }
-#endif
 	if ((tmp = restoreCharOnly(vict, arg)) < 0)
 	{
 		send_to_char("&=RlDanger Will Robinson! Bad pfile!!&n\n", ch);
@@ -8792,92 +8773,6 @@ void do_revoke(P_char ch, char *args, int cmd)
 
 	send_to_char("That character does not have that command granted.\n", ch);
 }
-
-#if 0
-#define REVOKETITLE_SYNTAX "Syntax:\n revoketitle <char name>\n"
-
-/*
- * Guild-God Command.
- *
- * This command allows guild god(s) to revoke from any player the ability
- * to 'title.'  It is made a separate command to restrict gods from
- * revoking just any command--since revoke is reserved for gods level 59
- * and up..
- *
- * Some of this code was borrowed from do_revoke() [naturally..]
- */
-
-void do_revoketitle(P_char ch, char *args, int cmd)
-{
-  char     name[MAX_INPUT_LENGTH];
-  int      loopvar = 0, bitpos = -1;
-  P_char   victim;
-  char     buf[MAX_STRING_LENGTH];
-
-  buf[0] = 0;
-
-  if(!args || !*args)
-  {
-    send_to_char(REVOKETITLE_SYNTAX, ch);
-    return;
-  }
-  (void) one_argument(args, name);
-  victim = get_char_vis(ch, name);
-
-  if(!victim)
-  {
-    send_to_char("Who?", ch);
-    return;
-  }
-  if(GET_LEVEL(ch) < GET_LEVEL(victim))
-  {
-    send_to_char("Not so fast wise-guy.\n", ch);
-    return;
-  }
-  if(ch == victim)
-    send_to_char("Revoking your own powers?  Well, ok, I guess!\n", ch);
-
-  /*
-   * just in case the title command moves, or is taken out (?!?)
-   */
-
-  for (loopvar = 0; *grantable_bits[loopvar] != '\n'; loopvar++)
-    if(is_abbrev("title", grantable_bits[loopvar]))
-    {
-      bitpos = loopvar;
-      break;
-    }
-  if(bitpos < 0)
-  {
-    send_to_char("This 'title' command does not exist anymore!\n", ch);
-    return;
-  }
-  if(ch != victim)
-    strcpy(buf, "They don't have the 'title' command.\n.");
-  else
-    strcpy(buf, "You don't have the 'title' command.\n");
-  send_to_char(buf, ch);
-  return;
-
-  if(ch != victim)
-  {
-    act("You revoke $S 'title' command.", FALSE, ch, 0, victim, TO_CHAR);
-    act("$n revokes your 'title' command!", FALSE, ch, 0, victim, TO_VICT);
-  }
-  else
-    act("You revoke your 'title' command.", FALSE, ch, 0, 0, TO_CHAR);
-
-  if (!do_save_silent(victim, 1))
-    logit(LOG_WIZ, "Failed to save %s after wizard flag change.", GET_NAME(victim));
-
-  logit(LOG_WIZ, "<REVOKE>: %s revokes %s's 'title' command.",
-        GET_NAME(ch), GET_NAME(victim));
-  wizlog(GET_LEVEL(ch), "%s revokes %s's 'title' command.",
-         GET_NAME(ch), GET_NAME(victim));
-}
-
-#undef SYNTAX_REVOKETITLE
-#endif
 
 /*
  * Guild-God command.

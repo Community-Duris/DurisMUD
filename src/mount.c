@@ -720,26 +720,6 @@ int wagon_pull(P_char ch, int mob)
 			case BFS_ERROR:
 				logit(LOG_DEBUG, "BFS_ERROR in wagon_pull() mount.c with %s.", GET_NAME(ch));
 				break;
-#if 0
-    case 0:
-      snprintf(Gbuf3, MAX_STRING_LENGTH, "north");
-      break;
-    case 1:
-      snprintf(Gbuf3, MAX_STRING_LENGTH, "east");
-      break;
-    case 2:
-      snprintf(Gbuf3, MAX_STRING_LENGTH, "south");
-      break;
-    case 3:
-      snprintf(Gbuf3, MAX_STRING_LENGTH, "west");
-      break;
-    case 4:
-      snprintf(Gbuf3, MAX_STRING_LENGTH, "down");
-      break;
-    case 5:
-      snprintf(Gbuf3, MAX_STRING_LENGTH, "up");
-      break;
-#endif
 			default:
 				fprintf(stderr, "Bug: this line should never be executed.\n");
 		}

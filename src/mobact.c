@@ -6427,12 +6427,10 @@ int RateObject(P_char ch, int a, P_obj obj)
 			if (CAN_SEE(ch, ch))
 				value += 100;
 			break;
-#if 1
 		case ITEM_ARMOR:
 			if (GET_AC(ch) > -100)
 				value += 5 * obj->value[0];
 			break;
-#endif
 		case ITEM_WORN:
 		case ITEM_WEAPON:
 			value += (obj->value[1] * obj->value[2]) * damp / 10;
@@ -6453,12 +6451,10 @@ int RateObject(P_char ch, int a, P_obj obj)
 			case APPLY_MANA:
 				value += obj->affected[tmp].modifier * manap / 3;
 				break;
-#if 1
 			case APPLY_ARMOR:
 				if (GET_AC(ch) > -100)
 					value += (0 - obj->affected[tmp].modifier * 5);
 				break;
-#endif
 			case APPLY_STR:
 			case APPLY_DEX:
 			case APPLY_INT:
@@ -6541,22 +6537,6 @@ void CheckEqWorthUsing(P_char ch, P_obj obj)
 	if (obj_index[obj->R_num].virtual_number == 101) /* Dont wear the helm of ooc! */
 		return;
 
-#if 0
-  if(IS_SET(obj->extra_flags, ITEM_NODROP))
-  {
-    /*
-     * If a cleric, let's just simulate remove curse here - nothing as
-     * complicated the real thing, just remove the flag + continue,
-     * reducing the mana as we go.
-     */
-    if(IS_CLERIC(ch) && (GET_MANA(ch) >= 20))
-    {
-      GET_MANA(ch) -= 20;
-      REMOVE_BIT(obj->extra_flags, ITEM_NODROP);
-    }
-    return;
-  }
-#endif
 	/*
 	 * Keep containers around, for our mobs 'collections'..
 	 * muhahahahahaaa!
@@ -6598,15 +6578,6 @@ void CheckEqWorthUsing(P_char ch, P_obj obj)
 				         * problem solved, item in bag.
 				         */
 	}
-
-	/* horrible, horrible way to handle this..  if you really want the mob
-	   to use such behavior, flag the item as 'mobs won't take' and have
-	   the mob drop it */
-
-#if 0
-  if(RateObject(ch, 0, obj) <= 200)
-    extract_obj(obj, TRUE); // Didn't bag, not worth much, get rid of
-#endif
 }
 
 int ItemsIn(P_obj obj)
@@ -7267,40 +7238,6 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
 		}
 	}
 	PROFILE_END(mundane_wallbreak);
-#if 0
-  if(IS_ROOM(ch->in_room, MAGIC_DARK))
-  {
-    /* ok, we're in a magically dark room, escape whatever way we can! */
-    if(!IS_FIGHTING(ch))
-    {
-      if(knows_spell(ch, SPELL_CONTINUAL_LIGHT) &&
-          npc_has_spell_slot(ch, SPELL_CONTINUAL_LIGHT))
-      {
-        MobCastSpell(ch, ch, 0, SPELL_CONTINUAL_LIGHT, GET_LEVEL(ch));
-        goto normal;
-      }
-      if(!IS_SET(ch->specials.act, ACT_SENTINEL) &&
-          !IS_ROOM(ch->in_room, ROOM_NO_TELEPORT) &&
-          knows_spell(ch, SPELL_TELEPORT) &&
-          npc_has_spell_slot(ch, SPELL_TELEPORT))
-      {
-        MobCastSpell(ch, ch, 0, SPELL_TELEPORT, GET_LEVEL(ch));
-        goto normal;
-      }
-    }
-    else
-    {
-      if(!IS_SET(ch->specials.act, ACT_SENTINEL))
-      {
-        if(room_has_valid_exit(ch->in_room))
-        {
-          do_flee(ch, 0, 0);
-          goto normal;
-        }
-      }
-    }
-  }
-#endif
 	/*
 	 * check for agg mobs attacking, this should only happen under a few
 	 * circumstances: mob woke up after target entered room. mob just
@@ -9421,19 +9358,6 @@ void MobRetaliateRange(P_char ch, P_char vict)
 		}
 	}
 	/* A few guaranteed calls */
-#if 0
-  if( /*IS_DRAGON(ch) */ CAN_BREATHE(ch))
-  {
-
-    /* if there's an error..  exit the function */
-
-    result = find_first_step(ch->in_room, vict->in_room, BFS_CAN_FLY, 0, 0, &dummy);
-    if(result >= 0)
-      BreathWeapon(ch, result);
-    else
-      return;
-  }
-#endif // no range breath anymore, circling that really sucks
 	/* Higher wimpy set, as they know its tough to charge into an arrow */
 
 	if (IS_AWAKE(ch) && CAN_ACT(ch) && !IS_STUNNED(ch))

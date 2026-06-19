@@ -446,51 +446,6 @@ void SetSpellCircles(void)
 #endif
 }
 
-#if 0 /* Torm's generic circle setter */
-void SetSpellCircles(void)
-{
-  int      a, b[MAX_CIRCLE], c[MAX_CIRCLE], d, e;
-
-  for (a = 0; a < MAX_CIRCLE; a++)
-  {
-    b[a] = 0;
-    c[a] = 0;
-  }
-  b[0] = 1;
-  c[0] = 0;
-  d = 1;
-  for (a = 0; a < (MAXLVL * 3); a++)
-  {
-    if (GetMaxCircle_level(a + 1) > d)
-    {
-      d++;
-      c[d - 1] = (a - 2);
-    }
-    for (e = 1; e <= d; e++)
-      if ((a - c[e - 1]) > (d - e + 1))
-      {
-        b[e - 1]++;
-        c[e - 1] = a;
-      }
-    for (e = 0; e < MAX_CIRCLE; e++)
-      spl_table[a][e] = b[e];
-  }
-
-  /* Heh heh, ok, stuff done.  */
-  /* Result, if my math holds true (which it doesn't do usually anyway */
-  /*
-     Level 1:  1 circle 1 spell. Level 50: (with 7 as max_circle: 12, 11, 10,
-     9, 8, 6, 4)
-
-     (with max_circle of 9) about 9 all lvl spells, except few less of highest
-     lvl models the power of the spellcasters increases exponentially with exp
-     level, but so do memorization times and exp costs to next level, and
-     rarity of spells, and _SCRIBING_SPEED_ of spells!  (50th lvler doesn't
-     scribe MAX_CIRCLE lvl spells fast at all! cackle).
-   */
-}
-#endif
-
 void show_stop_memorizing(P_char ch)
 {
 	if (IS_PUNDEAD(ch) || GET_CLASS(ch, CLASS_WARLOCK) || IS_UNDEADRACE(ch) || is_wearing_necroplasm(ch))
@@ -2199,26 +2154,6 @@ int ScriberSillyChecks(P_char ch, int spl)
 		send_to_char("You need a spellbook to write to at hand! [held]\n", ch);
 		return FALSE;
 	}
-	/*
-	  if( o1->value[0] && (GET_LANGUAGE(ch, o1->value[0]) < 70) )
-	  {
-	    send_to_char ("You need to be more fluent in the language before adding anything to\nthe book at hand.\n", ch);
-	    return FALSE;
-	  }
-	  if( o1->value[1] && !GET_CLASS(ch, o1->value[1]) )
-	  {
-	    send_to_char("The spellbook you are holding is of the wrong class so you can't add to it..\n", ch);
-	    return FALSE;
-	  }*/
-
-#if 0 // nah, I gladly let fellow waste his spellbook-space by copying unusable spells
-  o3 = FindSpellBookWithSpell(ch, spl, SBOOK_MODE_IN_INV | SBOOK_MODE_ON_BELT | SBOOK_MODE_ON_GROUND );
-  if( o3 && (o3->type == ITEM_SPELLBOOK) && !((o3->value[1] == 0) || (o3->value[1] == o1->value[1])) )
-  {
-    send_to_char("You cannot copy spells from one classes spellbook to another!\n", ch);
-    return;
-  }
-#endif
 
 	d = find_spell_description(o1);
 	if (d && SpellInThisSpellBook(d, spl))

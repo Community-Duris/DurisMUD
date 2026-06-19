@@ -923,10 +923,6 @@ void displayLeader(P_char ch, char *arg, int cmd);
 void displayRelic(P_char ch, char *arg, int cmd);
 int  leapSucceed(P_char, P_char);
 int  damage_modifier(P_char, P_char, int);
-#if 0
-int get_char_dodge_skill(P_char);
-int get_char_parry_skill(P_char);
-#endif
 #ifdef REALTIME_COMBAT
 int  CharNumberOfAttacks(P_char);
 int  Combat_Tick_Maint(P_char);
@@ -1328,9 +1324,7 @@ int  adjust_lvl_from_frags_period(P_char, int mod);
 int  frag_lvl_adjustment(P_char, int mod);
 int  tick_location_lvl_adjustment(P_char);
 int  gain_exp(P_char, P_char, int, int);
-void gain_practices(P_char);
 void lose_level(P_char);
-void lose_practices(P_char);
 void point_update(void);
 void clear_title(P_char);
 

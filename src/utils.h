@@ -27,9 +27,6 @@
 /* Functions in utility.c                     */
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
-#if 0
-#define BOUNDED(a, b, c) (MIN(MAX(a, b), c))
-#endif
 
 #define ISNEWL(ch) ((ch) == '\n' || (ch) == '\r')
 
@@ -953,12 +950,11 @@ int race_size(int race);
 #define VT_REMAP                                                                                                                                                                                       \
 	"\033[0;%d;%s:13p" /* used exclusively for f-xx                                                                                                                                                    \
 	      keys here. int = key,                                                                                                                                                                        \
-string = command */
-#if 0
+string = command
 
          Other function key codes       F1=59,F2=60,F3=61,F4=62,F5=63
                                         F6=64,F7=65,F8=66,F9=67,F10=68
-#endif
+*/
 
 /* Combat related */
 

@@ -153,19 +153,6 @@ void do_aggr(P_char ch, char *arg, int cmd)
 		return;
 	}
 
-#if 0 /*                                                                                                                                                                                               \
-       * disabled at forger request                                                                                                                                                                    \
-       */
-  /*
-   * paladins are good, therefore can't be aggro --TAM
-   */
-  if (GET_CLASS(ch, CLASS_PALADIN))
-  {
-    send_to_char("Be an aggressive paladin?!  Not in this lifetime!\r\n", ch);
-    send_to_char("You'll have to use better judgement than that.\r\n", ch);
-    return;
-  }
-#endif
 	if (*Gbuf2 == '\0')
 	{ /*
 	   * Check Aggressivity
@@ -1598,7 +1585,6 @@ P_char morph(P_char ch, int rnum, int mode)
 	 * But high level druids will be able to make tanks with 4000+ hps atm
 	 * maybe hps /= 2, 3 or 4 would be better
 	 */
-#if 1
 	/*
 	 * the new forms BASE hitpoints will be the same as the player.  Note
 	 * that con mobs, eq, etc, will made the new hps look different
@@ -1620,7 +1606,6 @@ P_char morph(P_char ch, int rnum, int mode)
 
 		/* if the mob dies as a result of its affects, we're screwed */
 	}
-#endif
 
 	if (affect_total(mob, TRUE))
 		return NULL;
@@ -1665,18 +1650,8 @@ P_char morph(P_char ch, int rnum, int mode)
 	}
 	ch->only.pc->switched = mob;
 	SET_BIT(ch->specials.act, PLR_MORPH);
-#if 0
-  mob->only.npc->memory = ch;   /*
-                                 * hackish way to keep track of who is the
-                                 * original player if they drop link
-                                 */
-#else
-
-	/* too hackish for me.  let's make a new var and put orig char in
-	   there instead */
 
 	mob->only.npc->orig_char = ch;
-#endif
 	/*
 	 * Void is probably a safe place to PC for time being... assuming no
 	 * idiot gods don't fuck off in there
@@ -1716,11 +1691,7 @@ P_char un_morph(P_char mob)
 	if (virt == EVIL_AVATAR_MOB || virt == GOOD_AVATAR_MOB)
 		is_avatar = TRUE;
 
-#if 1
 	ch = mob->only.npc->orig_char;
-#else
-	ch = (P_char)mob->only.npc->memory;
-#endif
 	/* the "owning" player. We use this instead of desc->original just in
 	 * case they are linkless */
 	if (!ch)

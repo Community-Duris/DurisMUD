@@ -2805,11 +2805,9 @@ void initialize_skills()
 	SPELL_CREATE_MSG("chaos shield", SPELL_CHAOS_SHIELD, PULSE_SPELLCAST * 5, TAR_SELF_ONLY | TAR_NOCOMBAT, spell_chaos_shield, "&+LThe chaotic aura about you fades and dissapates.&n");
 	SPEC_SPELL_ADD(CLASS_SORCERER, 11, SPEC_WILDMAGE);
 
-#if 1
 	SKILL_CREATE("aerial combat", SKILL_AERIAL_COMBAT, TAR_PHYS);
 
 	SKILL_CREATE("aerial casting", SKILL_AERIAL_CASTING, TAR_MENTAL);
-#endif
 
 	SKILL_CREATE("dirt toss", SKILL_DIRTTOSS, TAR_PHYS);
 	SKILL_ADD(CLASS_THIEF, 1, 90);

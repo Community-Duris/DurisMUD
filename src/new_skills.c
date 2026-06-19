@@ -2463,17 +2463,6 @@ void do_carve(struct char_data *ch, char *argument, int cmd)
 	::byte           percent;
 	int              i, which, piece, none;
 
-#if 0
-  /* how many parts, what names, what flags and what vnums of prototype */
-  const int howmany = 9;
-  const char *part_name[] = { "skull", "scalp", "face", "eyes", "ears",
-    "tongue", "bowels", "arms", "legs"
-  };
-  const int part_flag[] = { MISSING_SKULL, MISSING_SCALP, MISSING_FACE,
-    MISSING_EYES, MISSING_EARS, MISSING_TONGUE,
-    MISSING_BOWELS, MISSING_ARMS, MISSING_LEGS
-  };
-#endif
 	int carve_weight[9];
 
 	/* find out what corpse and what bodypart we want */

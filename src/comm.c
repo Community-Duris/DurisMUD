@@ -742,20 +742,14 @@ void game_loop(int port, int sslport)
 
 	opt_time.tv_usec = OPT_USEC; /* Init time values */
 	opt_time.tv_sec  = 0;
-#if 1
 	gettimeofday(&last_time, (struct timezone *)0);
-#endif
 	pulse = 0;
 
 #ifdef DO_SET_DTABLE_SIZE
 	(void)setdtablesize(128);
 #endif
 
-#if 1
 	avail_descs = MAX_CONNECTIONS;
-#else
-	avail_descs = getdtablesize() - 10;
-#endif
 
 	snprintf(buf, MAX_STRING_LENGTH, "avail_descs set to: %d", avail_descs);
 	logit(LOG_STATUS, buf);
@@ -1389,7 +1383,6 @@ void game_loop(int port, int sslport)
 		double affect_and_points_time = (double)(affect_and_points_end - affect_and_points_begin) / (double)CLOCKS_PER_SEC;
 		latency_trace_record("affect_and_points", (long)(affect_and_points_time * 1000000.0), pulse);
 		/* check out the time */
-#if 1
 		loop_time_end = clock();
 		double loop_time = (double)(loop_time_end - loop_time_begin) / (double)CLOCKS_PER_SEC;
 		if (loop_time >= 0.250) // 4 ticks a sec
@@ -1431,7 +1424,6 @@ void game_loop(int port, int sslport)
 			sigprocmask(SIG_SETMASK, &oldset, 0);
 		}
 		gettimeofday(&last_time, (struct timezone *)0); /* end of pulse reset */
-#endif
 		PROFILE_END(pulse_reset);
 	}
 

@@ -9586,10 +9586,10 @@ void spell_identify(int level, P_char ch, char *arg, int type, P_char victim, P_
 				break;
 
 			case ITEM_FOOD:
-                send_to_char("You magically sense the nourishment effects:\n", ch);
-                send_to_char(food_modifiers(obj), ch);
-                send_to_char("\n", ch);
-                break;
+				send_to_char("You magically sense the nourishment effects:\n", ch);
+				send_to_char(food_modifiers(obj), ch);
+				send_to_char("\n", ch);
+				break;
 			case ITEM_FIREWEAPON:
 				snprintf(Gbuf1,
 				         MAX_STRING_LENGTH,
@@ -9631,39 +9631,6 @@ void spell_identify(int level, P_char ch, char *arg, int type, P_char victim, P_
 			case ITEM_WORN:
 				/* include obj affects for armor and worn items.. */
 
-#if 0
-      if(GET_ITEM_TYPE(obj) == ITEM_ARMOR)
-        temp = obj->value[0];
-      else
-        temp = 0;
-      if(temp < 0)
-        strcpy(Gbuf2, "negatively");
-      else if(temp == 0)
-        strcpy(Gbuf2, "not at all");
-      else if(temp < 6)
-        strcpy(Gbuf2, "roughly half a notch");
-      else if(temp < 10)
-        strcpy(Gbuf2, "almost a full notch");
-      else if(temp < 20)
-        strcpy(Gbuf2, "at least a notch");
-      else if(temp < 30)
-        strcpy(Gbuf2, "at least two notches");
-      else if(temp < 40)
-        strcpy(Gbuf2, "at least three notches");
-      else if(temp < 50)
-        strcpy(Gbuf2, "at least four notches");
-      else if(temp < 60)
-        strcpy(Gbuf2, "at least five notches");
-      else if(temp < 70)
-        strcpy(Gbuf2, "at least six notches");
-      else
-        strcpy(Gbuf2, "well over six notches");
-
-      snprintf(Gbuf1, MAX_STRING_LENGTH,
-              "You mystically sense that this item will affect your AC by %s%d.\n",
-              temp > 0 ? "-" : "+", temp);
-      send_to_char(Gbuf1, ch);
-#endif
 				break;
 		}
 
@@ -11079,18 +11046,10 @@ bool check_item_teleport(P_char ch, char *arg, int cmd)
 
 int KludgeDuration(P_char ch, int baselevel, int baseduration)
 {
-#if 1
 	/* return baseduration;
 	   this isn't really what was originally intended, but it's based on caster's
 	   level */
 	return MAX(1, (GET_LEVEL(ch) / baselevel) * baseduration);
-
-#else
-	if (GET_LEVEL(ch) < baselevel)
-		return baseduration;
-
-	return MAX(baseduration, (baseduration * number(75, (75 + GET_LEVEL(ch) - baselevel)) / 100));
-#endif
 }
 
 void spell_barkskin(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
@@ -14475,85 +14434,6 @@ void spell_resurrect(int level, P_char ch, char *arg, int type, P_char victim, P
 			{
 				// Complete failure, corpse is unressable.
 				logit(LOG_DEATH, "%s ressed %s:  Failed roll: %3d Chance: %3d Level: %2d", GET_NAME(ch), GET_NAME(t_ch), ss_roll, chance, level);
-
-#if 0
-        act("The $q seems to shiver, and a fitful glow briefly surrounds it.",
-            FALSE, ch, obj, 0, TO_ROOM);
-        act("The $q seems to shiver, and a fitful glow briefly surrounds it.",
-            FALSE, ch, obj, 0, TO_CHAR);
-        act("You feel a brief moment of double vision, which passes quickly.\nYou feel a pang of loss.",
-           FALSE, t_ch, 0, 0, TO_CHAR);
-        GET_VITALITY(ch) = MIN(0, GET_VITALITY(ch));
-        StartRegen(ch, EVENT_MOVE_REGEN);
-        obj->value[2] = -obj->value[2]; /*
-                                         * reverse level
-                                         * as a flag
-                                         */
-        return;
-      }
-      else if(ss_save < ss_roll)
-      {
-        /*
-         * partial success, stat loss
-         */
-        logit(LOG_DEATH, "%s res %s: Con: %2d(%3d)  Save: %2d  Roll %2d",
-              GET_NAME(ch), GET_NAME(t_ch), t_ch->base_stats.Con,
-              stat_factor[GET_RACE(t_ch)].Con * t_ch->base_stats.Con / 100,
-              ss_save, ss_roll);
-        loss_flag = TRUE;
-        ss_roll -= ss_save;
-        t_ch->base_stats.Con--;
-        t_ch->base_stats.Con = MAX(1, t_ch->base_stats.Con);
-        logit(LOG_DEATH, "%s lost a Con point from resurrect",
-              GET_NAME(t_ch));
-        ss_roll -= number(10, 15);
-        while (ss_roll > 0)
-        {
-          ss_roll -= number(9, 15);
-          switch (number(1, 9))
-          {
-          case 1:
-          case 7:
-          case 8:
-          case 9:
-            t_ch->base_stats.Con--;
-            t_ch->base_stats.Con = MAX(1, t_ch->base_stats.Con);
-            logit(LOG_DEATH, "%s lost a Con point from resurrect",
-                  GET_NAME(t_ch));
-            break;
-          case 2:
-            t_ch->base_stats.Str--;
-            t_ch->base_stats.Str = MAX(1, t_ch->base_stats.Str);
-            logit(LOG_DEATH, "%s lost a Str point from resurrect",
-                  GET_NAME(t_ch));
-            break;
-          case 3:
-            t_ch->base_stats.Dex--;
-            t_ch->base_stats.Dex = MAX(1, t_ch->base_stats.Dex);
-            logit(LOG_DEATH, "%s lost a Dex point from resurrect",
-                  GET_NAME(t_ch));
-            break;
-          case 4:
-            t_ch->base_stats.Agi--;
-            t_ch->base_stats.Agi = MAX(1, t_ch->base_stats.Agi);
-            logit(LOG_DEATH, "%s lost a Agi point from resurrect",
-                  GET_NAME(t_ch));
-            break;
-          case 5:
-            t_ch->base_stats.Int--;
-            t_ch->base_stats.Int = MAX(1, t_ch->base_stats.Int);
-            logit(LOG_DEATH, "%s lost a Int point from resurrect",
-                  GET_NAME(t_ch));
-            break;
-          case 6:
-            t_ch->base_stats.Wis--;
-            t_ch->base_stats.Wis = MAX(1, t_ch->base_stats.Wis);
-            logit(LOG_DEATH, "%s lost a Wis point from resurrect",
-                  GET_NAME(t_ch));
-            break;
-          }
-        }
-#endif
 			}
 		}
 
@@ -19620,24 +19500,6 @@ void spell_moonwell(int level, P_char ch, char *arg, int type, P_char victim, P_
 		to_room = victim->in_room;
 	}
 	from_room = ch->in_room;
-
-#if 0
-  if(!IS_TRUSTED(ch) && (time_info.hour >= 6) && (time_info.hour <= 17))
-  {
-    send_to_char("&+WThe well opens for a brief second and is quickly evaporated by the sun.\n",
-            ch);
-    act("&+WA moonwell appears for a brief second, then is quickly evaporated by the sun.",
-        FALSE, ch, 0, 0, TO_ROOM);
-    return;
-  }
-#endif
-#if 0
-  if(!OUTSIDE(ch))
-  {
-    send_to_char("You must be outside to cast this spell!\n", ch);
-    return;
-  }
-#endif
 
 	int specBonus          = 0;
 	set.to_room            = to_room;

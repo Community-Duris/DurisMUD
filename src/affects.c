@@ -1234,11 +1234,9 @@ void affect_modify(int loc, int mod, unsigned long *bitv, int from_eq)
 			SET_BIT(TmpAffs.BV_1, AFF_PROT_FIRE);
 			break;
 
-#if 1
 		case APPLY_ARMOR:
 			TmpAffs.AC += mod;
 			break;
-#endif
 		case APPLY_AGE:
 			TmpAffs.Age += mod;
 			break;

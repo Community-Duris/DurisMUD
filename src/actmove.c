@@ -408,13 +408,6 @@ int leave_by_exit(P_char ch, int exitnumb)
 	/*
 	 * to keep them from riding into buildings, while in caves, etc
 	 */
-#if 0
-  if( IS_RIDING(ch) && !IS_TRUSTED(ch) && IS_ROOM(room_to, INDOORS) )
-  {
-    send_to_char("While mounted? I don't think so...\n", ch);
-    return (0);
-  }
-#endif
 	t_ch = NULL; /*
 	              * reinit it to prevent later problems.
 	              */
@@ -798,7 +791,6 @@ int can_enter_room(P_char ch, int room, int show_msg)
 	/*
 	 * cant move around on ocean unless in a ship --TAM 04/16/94
 	 */
-#if 1
 	if (world[room].sector_type == SECT_OCEAN && !IS_TRUSTED(ch) && // !IS_ROOM(ch->in_room, ROOM_DOCKABLE) &&
 	    world[ch->in_room].sector_type != SECT_OCEAN && !IS_ROOM(room, ROOM_UNDERWATER))
 	{
@@ -814,7 +806,6 @@ int can_enter_room(P_char ch, int room, int show_msg)
 			return (0);
 		}
 	}
-#endif
 	if (world[room].sector_type == SECT_WATER_NOSWIM)
 	{
 		has_boat = FALSE;
@@ -858,15 +849,9 @@ int can_enter_room(P_char ch, int room, int show_msg)
 
 		if (!has_boat && !IS_TRUSTED(ch) && !IS_AFFECTED(ch, AFF_WRAITHFORM) && ch->specials.z_cord < 1)
 		{
-#if 1
 			if (show_msg)
 				send_to_char("You need a boat to go there.\n", ch);
 			return (0);
-#else
-			if (show_msg)
-				SET_BIT(ch->specials.affected_by3, AFF3_SWIMMING);
-			return 1;
-#endif
 		}
 	}
 	if (world[room].sector_type == SECT_NO_GROUND)
@@ -3077,41 +3062,6 @@ void do_enter(P_char ch, char *argument, int cmd)
 		send_to_char("You can't seem to find anything to enter.\n", ch);
 	}
 }
-
-#if 0 /*                                                                                                                                                                                               \
-       * * boggle                                                                                                                                                                                      \
-       */
-void do_leave(P_char ch, char *argument, int cmd)
-{
-  int      door;
-  char     Gbuf1[MAX_STRING_LENGTH];
-
-  if( !IS_ALIVE(ch) )
-  {
-    return;
-  }
-
-  if( !IS_ROOM(ch->in_room, INDOORS))
-    send_to_char("You are outside.. where do you want to go?\n", ch);
-  else
-  {
-    for (door = 0; door <= (NUM_EXITS - 1); door++)
-      if( EXIT(ch, door) &&
-          !IS_SET(EXIT(ch, door)->exit_info, EX_SECRET) &&
-          !IS_SET(EXIT(ch, door)->exit_info, EX_BLOCKED))
-        if( EXIT(ch, door)->to_room != NOWHERE)
-          if( !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED) &&
-              !IS_ROOM(EXIT(ch, door)->to_room, INDOORS) &&
-              dirs[door])
-          {
-            strcpy(Gbuf1, dirs[door]);
-            command_interpreter(ch, Gbuf1);
-            return;
-          }
-    send_to_char("I see no obvious exits to the outside.\n", ch);
-  }
-}
-#endif
 
 void do_follow(P_char ch, char *argument, int cmd)
 {

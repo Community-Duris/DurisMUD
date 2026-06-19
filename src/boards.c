@@ -8,7 +8,6 @@
  *  CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.               *
  ************************************************************************ */
 
-#if 0
 /*
 TO ADD A NEW BOARD, simply follow our easy 3-step program:
 1 - Create a new board object in the object files
@@ -22,7 +21,6 @@ TO ADD A NEW BOARD, simply follow our easy 3-step program:
 	Filename of this board, in quotes.
 	Last field must always be 0.
 */
-#endif
 
 #include "prototypes.h"
 #include "structs.h"

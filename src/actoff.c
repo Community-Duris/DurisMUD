@@ -2064,7 +2064,6 @@ void do_order(P_char ch, char *argument, int comd)
 				}
 			}
 		}
-#if 1
 		else
 		{ /* This is order "followers" */
 			act("$n gives an order to $s followers.", FALSE, ch, 0, 0, TO_ROOM);
@@ -2132,10 +2131,6 @@ void do_order(P_char ch, char *argument, int comd)
 				}
 			}
 
-			/*
-			      if(char_in_list(ch))
-			      {
-			*/
 			if (!found)
 				send_to_char("None here are loyal subjects of yours!\n", ch);
 			else
@@ -2145,9 +2140,7 @@ void do_order(P_char ch, char *argument, int comd)
 				else
 					CharWait(ch, 2);
 			}
-			/*      }*/
 		}
-#endif
 	}
 }
 

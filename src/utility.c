@@ -456,25 +456,6 @@ char *striplinefeed(char *mesg)
 	return str_dup(tmp_buf);
 }
 
-/* yes, we're not using C++, so use macros..  bleh */
-/* macros are pass-by-name, and that screws everything up */
-#if 0
-int MIN(int a, int b)
-{
-  if (a < b)
-    return a;
-  else
-    return b;
-}
-
-int MAX(int a, int b)
-{
-  if (a > b)
-    return a;
-  else
-    return b;
-}
-#endif
 int BOUNDED(int a, int b, int c) { return (MIN(MAX(a, b), c)); }
 
 float BOUNDEDF(float a, float b, float c)
@@ -539,36 +520,6 @@ void str_free(char *source)
 	source = NULL;
 }
 
-/*
- * returns: 0 if equal, 1 if arg1 > arg2, -1 if arg1 < arg2
- */
-/*
- * scan 'till found different or end of both
- */
-#if 0
-int str_cmp(const char *arg1, const char *arg2)
-{
-  int      chk, i;
-
-  /*
-   * NULL ptr checks added, SAM 7-94
-   */
-  if ((arg1 == NULL) && (arg2 == NULL))
-    return (0);
-  else if (arg1 == NULL)
-    return (-1);
-  else if (arg2 == NULL)
-    return (1);
-
-  for (i = 0; *(arg1 + i) || *(arg2 + i); i++)
-    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
-      if (chk < 0)
-        return (-1);
-      else
-        return (1);
-  return (0);
-}
-#endif
 /*
  * returns: 0 if equal, 1 if arg1 > arg2, -1 if arg1 < arg2
  */
@@ -3887,11 +3838,7 @@ char *PERS(P_char ch, P_char vict, int short_d, bool noansi)
 	}
 
 	// If it's across racewar sides.
-#if 0
-  if( (racewar(vict, ch) /* && !IS_ILLITHID(vict)) */  || !is_introd(ch, vict) )
-#else
 	if (racewar(vict, ch) /* && !IS_ILLITHID(vict) */)
-#endif
 	{
 		if (IS_DISGUISE_PC(ch))
 		{
@@ -4591,59 +4538,13 @@ bool racewar(P_char viewer, P_char viewee)
 		return TRUE;
 
 	return FALSE;
-/*
-  if (IS_RACEWAR_EVIL(viewer) && !IS_RACEWAR_EVIL(viewee))
-	return TRUE;
-
-  if (IS_RACEWAR_UNDEAD(viewer) && !IS_RACEWAR_UNDEAD(viewee))
-	return TRUE;
-
-  if (IS_RACEWAR_GOOD(viewer) && !IS_RACEWAR_GOOD(viewee))
-	return TRUE;
-
-  if ((IS_HARPY(viewer) && GET_RACEWAR(viewer) == RACEWAR_NEUTRAL) &&
-	  !(IS_HARPY(viewee) && GET_RACEWAR(viewee) == RACEWAR_NEUTRAL))
-	return TRUE;
-*/
-#if 0
-  if (IS_RACEWAR_UNDEAD(viewer) && IS_RACEWAR_UNDEAD(viewee))
-    return FALSE;
-
-  if (IS_RACEWAR_UNDEAD(viewee) && IS_RACEWAR_UNDEAD(viewer))
-    return FALSE;
-
-  if (IS_RACEWAR_EVIL(viewer) && IS_RACEWAR_UNDEAD(viewee) && !IS_RACEWAR_UNDEAD(viewer))
-    return TRUE;
-
-  if (IS_RACEWAR_UNDEAD(viewer) && IS_RACEWAR_EVIL(viewee))
-    return TRUE;
-
-  if ((IS_RACEWAR_UNDEAD(viewer) && IS_RACEWAR_GOOD(viewee)) ||
-      (IS_RACEWAR_UNDEAD(viewee) && IS_RACEWAR_GOOD(viewer)))
-  {
-    return TRUE;
-  }
-
-  /* no one sees an illithid's true name except illithids themselves,
-     handled above */
-
-/*  if (IS_ILLITHID(viewer) != IS_ILLITHID(viewee))
-    return TRUE;*/
-
-#endif
-	/*  if (IS_ILLITHID(viewee)) return TRUE; */
 
 	/* charmed followers act as their masters */
 	if (IS_NPC(viewer) && GET_MASTER(viewer) && viewer->in_room == GET_MASTER(viewer)->in_room)
 	{
-		//    if (IS_RACEWAR_EVIL(viewer->following) != IS_RACEWAR_EVIL(viewee))
 		if (opposite_racewar(viewer->following, viewee))
 			return TRUE;
 	}
-	/*
-	  if (!(IS_PC(viewer) && IS_PC(viewee)) &&
-	      (GET_VNUM(viewee) != 250)) return FALSE;
-	*/
 	return FALSE;
 }
 
@@ -4712,10 +4613,6 @@ int IS_MORPH(P_char ch)
 	if (!ch || !IS_NPC(ch))
 		return FALSE;
 
-#if 0
-  if (ch->only.npc->memory && !IS_SET(ch->specials.act, ACT_MEMORY))
-    return TRUE;
-#endif
 	if (ch->only.npc && ch->only.npc->orig_char)
 		return TRUE;
 

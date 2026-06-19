@@ -2864,13 +2864,6 @@ void spell_wormhole(int level, P_char ch, char *arg, int type, P_char victim, P_
 			}
 		}
 
-#if 0
-     if(!OUTSIDE(ch))
-     {
-        send_to_char("You must be outside to cast this spell!\r\n", ch);
-        return;
-     }
-#endif
 		// Stopping the wayward Illithid griefing. Nov08 -Lucrot
 		if (victim && !IS_TRUSTED(ch) && IS_PC(victim) && IS_ILLITHID(ch) && !IS_ILLITHID(victim) && GET_LEVEL(victim) < 51)
 		{

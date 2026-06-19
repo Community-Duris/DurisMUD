@@ -102,7 +102,6 @@ struct ship_reg_node *ship_reg_db = NULL;
  * found below after the #if 0. -JAB
  */
 
-#if 0
 /*
  * save file structure, if you change it, change this as well, so we know
  * what the hell it's doing.
@@ -260,7 +259,6 @@ struct ship_reg_node *ship_reg_db = NULL;
  * that containers now restore with contents intact.)
  *
  */
-#endif
 
 // bv6 would be in here, but there's no unique flag for it yet
 
@@ -2201,10 +2199,8 @@ int restoreStatus(char *buf, P_char ch)
 	}
 
 // -Foo Remove hunger/thirst
-#if 1
 	GET_COND(ch, FULL)   = -1;
 	GET_COND(ch, THIRST) = -1;
-#endif
 	if (stat_vers < 35)
 		for (tmp = 0; tmp < MAX_PETS; tmp++)
 			GET_INTE(buf);

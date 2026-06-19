@@ -433,25 +433,6 @@ void npc_steal(P_char ch, P_char vict)
 	}
 }
 
-#if 0
-/*
-   A special for each tower roof in Anapest (room-based)
-
-   int tower(int room, P_char ch, int cmd, char *arg)
-   {
-   if (!cmd) {
-   if....
-   act("There is activity along the valley rim.\r\n", ....);
-   } else if (cmd==...look...) {
-   if (*arg) {
-   number = search_block(arg, t_skills, FALSE);
-   if (number == -1) {
-
-   ..nasty...may need to change call with self reference like w/mobs 
- */
-
-#endif
-
 /* Pi's room proc */
 
 P_obj find_key(P_char ch, int key)

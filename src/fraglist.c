@@ -33,10 +33,6 @@ int fragWorthy(P_char ch, P_char victim)
 {
 	int    racew;
 	P_char tch;
-#if 0
-  if (!IS_PC(ch) || !IS_PC(victim))
-    return FALSE;
-#endif
 
 	if (IS_NPC(victim))
 		return FALSE;

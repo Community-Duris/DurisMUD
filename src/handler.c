@@ -574,26 +574,6 @@ int room_light(int room_nr, int flag)
 
 	world[rroom].light = BOUNDED(-1, amt, 127);
 
-#if 0
-  if (world[rroom].people && !ALONE(world[rroom].people))
-  {
-    /*
-     * room just lit up, let's give the mobs a chance to jump things,
-     * this will mostly negate the gra torch/look/rem torch strategy,
-     * as mobs will tend to jump you when you light things up.
-     * MuHAHAHAHAHA!  JAB
-     */
-
-    LOOP_THRU_PEOPLE(t_ch, world[rroom].people)
-    {
-      if (IS_NPC(t_ch) && AWAKE(t_ch) && !IS_DESTROYING(t_ch) && !IS_FIGHTING(t_ch) &&
-          MIN_POS(t_ch, POS_STANDING + STAT_NORMAL) &&
-          (victim = PickTarget(t_ch)) && is_aggr_to(t_ch, victim))
-        AddEvent(EVENT_AGG_ATTACK, number(1, 5), TRUE, t_ch, victim);
-    }
-  }
-#endif
-
 	return world[rroom].light;
 }
 

@@ -884,13 +884,6 @@ static void setbit_obj(P_char ch, char *name, char *flag, char *val, int on_off)
 			return;
 		}
 	}
-#if 0
-  if ((obj = get_obj_vis(ch, name)) == NULL)
-  {
-    send_to_char("No object by that name here\r\n", ch);
-    return;
-  }
-#endif
 
 	setbit_parseTable(ch, (void *)obj, table, ARRAY_SIZE(table), flag, val, on_off, SETBIT_OBJ);
 
