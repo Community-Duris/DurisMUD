@@ -1014,11 +1014,6 @@ void char_from_room(P_char ch)
 		i->next_in_room = ch->next_in_room;
 	}
 
-#if 0
-  if (IS_BEING_SHADOWED(ch))
-    ch->specials.shadow.room_last_in = ch->in_room;
-#endif
-
 	ch->specials.was_in_room = world[ch->in_room].number;
 	ch->in_room              = NOWHERE;
 	ch->next_in_room         = 0;
@@ -1071,13 +1066,6 @@ bool char_to_room(P_char ch, int room, int dir)
 		      J_NAME(ch), ch->in_room, room, world[room].number);
 		return FALSE;
 	}
-
-#if 0
-  if (IS_BEING_SHADOWED(ch) && (dir > -1))
-  {
-    MoveShadower(ch, room);
-  }
-#endif
 
 	if (!IS_ROOM(room, ROOM_SINGLE_FILE))
 	{
@@ -3253,21 +3241,6 @@ void extract_char(P_char ch)
 	clear_all_links(ch);
 	if (IS_PC(ch))
 		clear_logs(ch);
-
-#if 0
-  if (IS_SHADOWING(ch))
-  {
-    act("You stop shadowing $N.", TRUE, ch, 0, GET_CHAR_SHADOWED(ch), TO_CHAR);
-    FreeShadowedData(ch, GET_CHAR_SHADOWED(ch));
-  }
-  else
-  {
-    if (IS_BEING_SHADOWED(ch))
-    {
-      StopShadowers(ch);
-    }
-  }
-#endif
 
 	/* empty vehicle slot */
 	remove_all_linked_objects(ch);

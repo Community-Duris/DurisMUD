@@ -1499,20 +1499,6 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
 		}
 	}
 
-#if 0
-  if( IS_SHADOWING(ch) && !IS_SHADOW_MOVE(ch))
-  {
-    act("You stop shadowing $N.",
-      FALSE, ch, 0, GET_CHAR_SHADOWED(ch), TO_CHAR);
-    FreeShadowedData(ch, GET_CHAR_SHADOWED(ch));
-  }
-
-  if( IS_BEING_SHADOWED(ch))
-  {
-    ch->specials.shadow.valid_last_move = TRUE;
-  }
-#endif
-
 	was_in   = ch->in_room;
 	new_room = world[was_in].dir_option[exitnumb]->to_room;
 	zone     = &zone_table[world[new_room].zone];

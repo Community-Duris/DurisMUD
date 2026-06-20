@@ -4804,12 +4804,6 @@ void init_char(P_char ch)
 	if (has_innate(ch, INNATE_DAUNTLESS))
 		SET_BIT(ch->specials.affected_by4, AFF4_NOFEAR);
 
-#if 0
-  ch->specials.shadow.shadowing = NULL;
-  ch->specials.shadow.who = NULL;
-  ch->specials.shadow.valid_last_move = FALSE;
-  ch->specials.shadow.shadow_move = FALSE;
-#endif
 	for (i = 0; i < 5; i++)
 		ch->specials.apply_saving_throw[i] = 0;
 

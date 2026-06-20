@@ -99,11 +99,6 @@
 	(((cmd) == CMD_LOOK) || ((cmd) == CMD_SCORE) || ((cmd) == CMD_QUI) || ((cmd) == CMD_TIME) || ((cmd) == CMD_IDEA) || ((cmd) == CMD_TYPO) || ((cmd) == CMD_BUG) || ((cmd) == CMD_CREDITS) ||         \
 	 ((cmd) == CMD_GLANCE) || ((cmd) == CMD_RULES) || ((cmd) == CMD_WILL) || ((cmd) == CMD_PETITION))
 
-#define IS_BEING_SHADOWED(ch) ((ch)->specials.shadow.who != NULL)
-#define IS_SHADOWING(ch)      ((ch)->specials.shadow.shadowing != NULL)
-#define IS_SHADOW_MOVE(ch)    ((ch)->specials.shadow.shadow_move == TRUE)
-#define GET_CHAR_SHADOWED(ch) ((ch)->specials.shadow.shadowing)
-
 #define IS_GLOBED(target) (IS_AFFECTED2(target, AFF2_GLOBE) || IS_AFFECTED3(target, AFF3_GR_SPIRIT_WARD))
 #define IS_MINGLOBED(ch)  (IS_AFFECTED3(target, AFF3_SPIRIT_WARD) || IS_AFFECTED(target, AFF_MINOR_GLOBE))
 
