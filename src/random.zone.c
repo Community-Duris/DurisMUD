@@ -1261,7 +1261,7 @@ P_obj create_sigil(int zone_number)
 	struct zone_data *zone = 0;
 
 	obj  = read_object(VOBJ_RANDOM_ARMOR, VIRTUAL);
-	zone = &zone_table[find_a_zone()];
+	zone = &zone_table[number(1, top_of_zone_table)];
 
 	snprintf(buf1, MAX_STRING_LENGTH, "sigil %s", zone->name);
 	snprintf(buf2, MAX_STRING_LENGTH, "&+ra sigil from %s&n", zone->name);

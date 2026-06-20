@@ -312,9 +312,7 @@ void update_dam_factors()
 
 struct affected_type *get_ward_from_char(P_char ch)
 {
-	struct affected_type *paf = NULL;
-	paf                       = get_first_affect_with_flag(ch, AFFTYPE_DAM_WARD);
-	return paf;
+	return get_first_affect_with_flag(ch, AFFTYPE_DAM_WARD);
 }
 
 int check_damage_ward(P_char attacker, P_char ch, int dam)

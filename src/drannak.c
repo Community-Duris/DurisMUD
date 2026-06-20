@@ -1883,9 +1883,7 @@ int calculate_shipfrags(P_char ch)
 		// debug("ownername: %s frags: %d getname: %s\r\n", shipfrags[i].ship->ownername, shipfrags[i].ship->frags, GET_NAME(ch));
 		if (!strcmp(shipfrags[i].ship->ownername, GET_NAME(ch)))
 		{
-			int shipfr = shipfrags[i].ship->frags;
-			// debug("shipfr: %d\r\n", shipfr);
-			return shipfr;
+			return shipfrags[i].ship->frags;
 		}
 
 		if (shipfrags[i].ship->frags == 0)

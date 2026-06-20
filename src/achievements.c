@@ -14,9 +14,7 @@ extern int     pulse;
 
 int get_frags(P_char ch)
 {
-	int frags;
-	frags = ch->only.pc->frags;
-	return frags;
+	return ch->only.pc->frags;
 }
 
 void do_achievements(P_char ch, char *arg, int cmd)
