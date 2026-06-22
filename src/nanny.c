@@ -34,7 +34,6 @@
 #include "paladins.h"
 #include "redis.h"
 #include "ships.h"
-#include "sound.h"
 #include "specializations.h"
 #include "spells.h"
 #include "sql.h"
@@ -2423,8 +2422,6 @@ void enter_game(P_desc d)
 		REMOVE_BIT(ch->specials.act, PLR_SMARTPROMPT);
 
 	schedule_pc_events(ch);
-
-	//  play_sound(SOUND_START_GAME, ch, 0, TO_CHAR);
 
 	if (EVIL_RACE(ch) && PLR_FLAGGED(ch, PLR_NOWHO))
 	{

@@ -24,7 +24,6 @@
 #include "necromancy.h"
 #include "objmisc.h"
 #include "outposts.h"
-#include "sound.h"
 #include "specs.prototypes.h"
 #include "spells.h"
 #include "sql.h"

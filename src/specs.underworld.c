@@ -26,7 +26,6 @@
 #include "map.h"
 #include "nexus_stones.h"
 #include "range.h"
-#include "sound.h"
 #include "specs.prototypes.h"
 #include "spells.h"
 #include "vnum.obj.h"

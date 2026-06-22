@@ -38,7 +38,6 @@
 #include "necromancy.h"
 #include "objmisc.h"
 #include "outposts.h"
-#include "sound.h"
 #include "specs.prototypes.h"
 #include "spells.h"
 #include "sql.h"
@@ -502,8 +501,6 @@ void spell_magic_missile(int level, P_char ch, char *arg, int type, P_char victi
 	int num_missiles = BOUNDED(1, (level / 3), 5);
 	dam              = (dice(1, 4) * 4 + number(1, level));
 
-	// play_sound(SOUND_MMISSILE, NULL, ch->in_room, TO_ROOM);
-
 	while (num_missiles-- && spell_damage(ch, victim, dam, SPLDAM_GENERIC, SPLDAM_ALLGLOBES, &messages) == DAM_NONEDEAD)
 		;
 }
@@ -636,8 +633,6 @@ void spell_shocking_grasp(int level, P_char ch, char *arg, int type, P_char vict
 	if (!NewSaves(victim, SAVING_SPELL, mod))
 		dam = (int)(dam * 2);
 
-	// play_sound(SOUND_SHOCKING_GRASP, NULL, ch->in_room, TO_ROOM);
-
 	spell_damage(ch, victim, dam, SPLDAM_LIGHTNING, SPLDAM_ALLGLOBES, &messages);
 }
 
@@ -657,8 +652,6 @@ void spell_lightning_bolt(int level, P_char ch, char *arg, int type, P_char vict
 	if (!NewSaves(victim, SAVING_SPELL, mod))
 		dam = (int)(dam * 1.33);
 
-	// play_sound(SOUND_SHOCKWAVE, NULL, ch->in_room, TO_ROOM);
-
 	spell_damage(ch, victim, dam, SPLDAM_LIGHTNING, SPLDAM_GLOBE | SPLDAM_GRSPIRIT, &messages);
 }
 
@@ -674,8 +667,6 @@ void spell_cone_of_cold(int level, P_char ch, char *arg, int type, P_char victim
 
 	int num_dice = (level / 4);
 	int dam      = (dice(num_dice + 5, 6) * 4);
-
-	// play_sound(SOUND_SPELL3, NULL, ch->in_room, TO_ROOM);
 
 	if (spell_damage(ch, victim, dam, SPLDAM_COLD, SPLDAM_GLOBE | SPLDAM_GRSPIRIT, &messages) == DAM_NONEDEAD)
 	{
@@ -1807,7 +1798,6 @@ void spell_elemental_swarm(int level, P_char ch, char *arg, int type, P_char vic
 	}
 	else
 	{
-		// play_sound(SOUND_ELEMENTAL, NULL, ch->in_room, TO_ROOM);
 		int duration = setup_pet(mob, ch, 1, PET_NOCASH | PET_NOORDER | PET_NOAGGRO);
 		add_follower(mob, ch);
 		/* if the pet will stop being charmed after a bit, also make it suicide 1-10 minutes later */
@@ -1993,7 +1983,6 @@ void spell_conjour_elemental(int level, P_char ch, char *arg, int type, P_char v
 	{ /* Under control */
 		act("$N sulkily says 'Your wish is my command, $n!'", TRUE, ch, 0, mob, TO_ROOM);
 		act("$N sulkily says 'Your wish is my command, master!'", TRUE, ch, 0, mob, TO_CHAR);
-		// play_sound(SOUND_ELEMENTAL, NULL, ch->in_room, TO_ROOM);
 		duration = setup_pet(mob, ch, 400 / STAT_INDEX(GET_C_INT(mob)), PET_NOCASH);
 		add_follower(mob, ch);
 		/* if the pet will stop being charmed after a bit, also make it suicide 1-10 minutes later */
@@ -2064,7 +2053,6 @@ void spell_living_stone(int level, P_char ch, char *arg, int type, P_char victim
 	}
 	else
 	{
-		// play_sound(SOUND_ELEMENTAL, NULL, ch->in_room, TO_ROOM);
 		int duration = setup_pet(mob, ch, 1, PET_NOCASH | PET_NOORDER | PET_NOAGGRO);
 		add_follower(mob, ch);
 		/* if the pet will stop being charmed after a bit, also make it suicide 1-10 minutes later */
@@ -2123,7 +2111,6 @@ void spell_greater_living_stone(int level, P_char ch, char *arg, int type, P_cha
 	mob->points.damnodice                          = 15;
 	mob->points.damsizedice                        = 14;
 
-	//  play_sound(SOUND_ELEMENTAL, NULL, ch->in_room, TO_ROOM);
 	int duration = setup_pet(mob, ch, 1, PET_NOCASH | PET_NOORDER | PET_NOAGGRO);
 	add_follower(mob, ch);
 	/* if the pet will stop being charmed after a bit, also make it suicide 1-10 minutes later */
@@ -2836,7 +2823,6 @@ void spell_earthen_maul(int level, P_char ch, char *arg, int type, P_char victim
 
 	dam = (int)(dam + 0.1 * dam * dam_flag);
 
-	// play_sound(SOUND_EARTHQUAKE1, NULL, ch->in_room, TO_ROOM);
 	if (spell_damage(ch, victim, dam, (dam_flag == 4) ? SPLDAM_FIRE : SPLDAM_GENERIC, 0, &messages) != DAM_NONEDEAD)
 		return;
 
@@ -2853,7 +2839,6 @@ void spell_earthen_maul(int level, P_char ch, char *arg, int type, P_char victim
 	   if(GET_POS(victim) == POS_PRONE)
 	   Stun(victim, ch, PULSE_VIOLENCE * 2, TRUE);
 	   CharWait(victim, PULSE_VIOLENCE);
-	   play_sound(SOUND_EARTHQUAKE2, NULL, ch->in_room, TO_ROOM);
 	   }
 	 */
 }
@@ -3159,8 +3144,6 @@ void spell_cyclone(int level, P_char ch, char *arg, int type, P_char victim, P_o
 	{
 		dam = (int)(dam * (1.5 + MAX(level - 30, 20) / 40.0));
 	}
-
-	/*  play_sound(SOUND_WIND3, NULL, ch->in_room, TO_ROOM); */
 
 	svchance = (int)(level / 12);
 
@@ -3549,8 +3532,6 @@ void spell_firestorm(int level, P_char ch, char *arg, int type, P_char victim, P
 	struct room_affect raf;
 	int                room = ch->in_room;
 	P_char             tch;
-
-	// play_sound(SOUND_FIRESTORM, NULL, ch->in_room, TO_ROOM);
 
 	send_to_char("You call a &+Rraging&n &+rfirestorm&n to engulf your foes!\n", ch);
 	act("$n creates a &+Rraging&n &+rfirestorm&n!", FALSE, ch, 0, 0, TO_VICTROOM);
@@ -4473,7 +4454,6 @@ void spell_wizard_eye(int level, P_char ch, char *arg, int type, P_char victim, 
 	strcpy(Gbuf1, "&+WYou cast your sights far out into the zone...\n");
 	send_to_char(Gbuf1, ch);
 	new_look(ch, NULL, CMD_LOOKAFAR, target);
-	// play_sound(SOUND_FARSITE, NULL, ch->in_room, TO_ROOM);
 
 	int mod = get_default_save_mod(victim, ch, SAVING_SPELL, SPELL_WIZARD_EYE);
 	if (NewSaves(victim, SAVING_SPELL, mod))
@@ -5132,9 +5112,6 @@ void spell_bless(int level, P_char ch, char *arg, int type, P_char victim, P_obj
 	}
 	else
 	{
-
-		// play_sound(SOUND_BLESS, NULL, ch->in_room, TO_ROOM);
-
 		if (!affected_by_spell(victim, SPELL_BLESS))
 		{
 
@@ -11241,7 +11218,6 @@ void spell_grow_spike(int level, P_char ch, char *arg, int type, P_char victim, 
 
 	dam = (int)(dam + 0.1 * dam * dam_flag);
 
-	//  play_sound(SOUND_EARTHQUAKE1, NULL, ch->in_room, TO_ROOM);
 	if (spell_damage(ch, victim, dam, (dam_flag == 4) ? SPLDAM_FIRE : SPLDAM_GENERIC, dam_flag > 1 ? 0 : SPLDAM_GLOBE, &messages))
 		return;
 
@@ -11258,7 +11234,6 @@ void spell_grow_spike(int level, P_char ch, char *arg, int type, P_char victim, 
 	   if(GET_POS(victim) == POS_PRONE)
 	   Stun(victim, PULSE_VIOLENCE * 2, TRUE);
 	   CharWait(victim, PULSE_VIOLENCE);
-	   play_sound(SOUND_EARTHQUAKE2, NULL, ch->in_room, TO_ROOM);
 	   }
 	 */
 }
@@ -14553,8 +14528,6 @@ void spell_resurrect(int level, P_char ch, char *arg, int type, P_char victim, P
 	}
 	act("&+wYou are &+cextremely tired &+wafter being resurrected!&n", TRUE, t_ch, 0, 0, TO_CHAR);
 
-	// play_sound(SOUND_RESSURECTION, NULL, t_ch->in_room, TO_ROOM);
-
 	GET_VITALITY(ch) = MIN(0, GET_VITALITY(ch));
 	StartRegen(ch, EVENT_MOVE_REGEN);
 
@@ -14938,8 +14911,6 @@ void spell_lesser_resurrect(int level, P_char ch, char *arg, int type, P_char vi
 	if (loss_flag)
 		act("You feel drained!", TRUE, t_ch, 0, 0, TO_CHAR);
 	act("You are &+yextremely tired&n after being resurrected!", TRUE, t_ch, 0, 0, TO_CHAR);
-
-	// play_sound(SOUND_RESSURECTION, NULL, t_ch->in_room, TO_ROOM);
 
 	GET_VITALITY(ch) = MIN(0, GET_VITALITY(ch));
 	StartRegen(ch, EVENT_MOVE_REGEN);
@@ -19528,8 +19499,6 @@ void spell_moonwell(int level, P_char ch, char *arg, int type, P_char victim, P_
 	{
 		act(msg.fail_to_caster, FALSE, ch, 0, 0, TO_CHAR);
 		act(msg.fail_to_caster_room, FALSE, ch, 0, 0, TO_ROOM);
-
-		// play_sound(SOUND_MOONWELL, NULL, ch->in_room, TO_ROOM);
 		return;
 	}
 
@@ -19540,9 +19509,6 @@ void spell_moonwell(int level, P_char ch, char *arg, int type, P_char victim, P_
 	}
 
 	spell_general_portal(level, ch, victim, &set, &msg);
-
-	// play_sound(SOUND_MOONWELL, NULL, ch->in_room, TO_ROOM);
-	// play_sound(SOUND_MOONWELL, NULL, set.to_room, TO_ROOM);
 }
 
 void spell_moonstone(int level, P_char ch, char *arg, int type, P_char victim, P_obj tar_obj)

@@ -23,7 +23,6 @@
 #include "damage.h"
 #include "justice.h"
 #include "objmisc.h"
-#include "sound.h"
 #include "spells.h"
 #include "weather.h"
 
@@ -719,10 +718,7 @@ void do_fire(P_char ch, char *argument, int cmd)
 				startPvP(victim, GET_RACEWAR(ch) != GET_RACEWAR(victim));
 			}
 			if (!affected_by_spell(ch, TAG_FIRING))
-			{
 				set_short_affected_by(ch, TAG_FIRING, 5 * WAIT_SEC);
-				// play_sound(SOUND_ARROW3, NULL, ch->in_room, TO_ROOM);
-			}
 
 			// Check for shield block.
 			shield = victim->equipment[WEAR_SHIELD];
@@ -766,7 +762,6 @@ void do_fire(P_char ch, char *argument, int cmd)
 			// Ranged hit, no shield.
 			if (ch->in_room != victim->in_room && !shield_blocked)
 			{
-				// play_sound(SOUND_ARROW3, NULL, victim->in_room, TO_ROOM);
 				snprintf(room_msg, MAX_STRING_LENGTH, "$n fires $p %s!", dirs[dir]);
 				act(room_msg, FALSE, ch, missile, ch, TO_NOTVICT | ACT_NOTTERSE);
 
@@ -914,7 +909,6 @@ void do_fire(P_char ch, char *argument, int cmd)
 		// So we missed, let them all enjoy nice miss messages
 		else
 		{
-			//      play_sound(SOUND_ARROW1, NULL, ch->in_room, TO_ROOM);
 			act("You fire $p at $N and miss!", FALSE, ch, missile, victim, TO_CHAR | ACT_NOTTERSE);
 
 			// Start with an arrow that was fired at an out of range target.
@@ -925,7 +919,6 @@ void do_fire(P_char ch, char *argument, int cmd)
 
 				if (world[room].people)
 				{
-					//          play_sound(SOUND_ARROW1, NULL, room, TO_ROOM);
 					if (room != ch->in_room)
 					{
 						snprintf(buf, MAX_STRING_LENGTH, "$p fired from %s drops to the ground.\n", dirs2[rev_dir[dir]]);
@@ -936,8 +929,6 @@ void do_fire(P_char ch, char *argument, int cmd)
 			// Missing a ranged shot at a target that's in range.
 			else if (ch->in_room != victim->in_room)
 			{
-				//        play_sound(SOUND_ARROW1, NULL, victim->in_room, TO_ROOM);
-
 				snprintf(buf, MAX_STRING_LENGTH, "$n fires $p %sward!", dirs[dir]);
 				act(buf, FALSE, ch, missile, 0, TO_ROOM | ACT_NOTTERSE);
 

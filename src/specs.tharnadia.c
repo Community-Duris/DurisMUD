@@ -13,7 +13,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <strings.h>
-#include "sound.h"
 #include "specs.prototypes.h"
 #include "spells.h"
 
@@ -509,24 +508,6 @@ int tharn_crier_one(P_char ch, P_char pl, int cmd, char *arg)
 					        act ("$n nudges you surreptiously.", TRUE, ch, 0, 0, TO_ROOM);
 					*/
 					mobsay(ch, "The wagon leaves from the eastern gates! Its a good way to see the sights and a safe way to get to Woodseer.");
-					break;
-				case 42:
-					play_sound(SOUND_DEAD, NULL, the_zone, TO_ZONE);
-					break;
-				case 43:
-					play_sound(SOUND_DOG1, NULL, the_zone, TO_ZONE);
-					break;
-				case 44:
-					play_sound(SOUND_HAMMER, NULL, the_zone, TO_ZONE);
-					break;
-				case 45:
-					play_sound(SOUND_HORSE2, NULL, the_zone, TO_ZONE);
-					break;
-				case 46:
-					play_sound(SOUND_PEOPLE, NULL, the_zone, TO_ZONE);
-					break;
-				case 47:
-					play_sound(SOUND_TRUMPET, NULL, the_zone, TO_ZONE);
 					break;
 				default:
 					break;

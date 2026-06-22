@@ -29,7 +29,6 @@
 #include "mm.h"
 #include "objmisc.h"
 #include "ships.h"
-#include "sound.h"
 #include "specs.prototypes.h"
 #include "spells.h"
 #include "sql_player.h"

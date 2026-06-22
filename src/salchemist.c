@@ -27,7 +27,6 @@
 #include "justice.h"
 #include "mm.h"
 #include "objmisc.h"
-#include "sound.h"
 #include "specs.prototypes.h"
 #include "spells.h"
 #include "sql.h"

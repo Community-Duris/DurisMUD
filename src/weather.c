@@ -18,7 +18,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "map.h"
-#include "sound.h"
 
 extern int abs(int);
 

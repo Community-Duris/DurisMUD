@@ -18,7 +18,6 @@
 #include <time.h>
 #include "ctf.h"
 #include "graph.h"
-#include "sound.h"
 #include "spells.h"
 
 /*
@@ -402,16 +401,7 @@ bool check_valid_ride(P_char ch)
 
 	if (valid_ride(ch->in_room, mount))
 		if (ch->specials.z_cord == mount->specials.z_cord)
-		{
-			if (!number(0, 10))
-			{
-				if (!number(0, 1))
-					play_sound(SOUND_HORSE1, NULL, ch->in_room, TO_ROOM);
-				else
-					play_sound(SOUND_HORSE2, NULL, ch->in_room, TO_ROOM);
-			}
 			return TRUE;
-		}
 
 	stop_riding(ch);
 

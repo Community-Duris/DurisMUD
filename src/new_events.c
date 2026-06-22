@@ -937,10 +937,6 @@ void ne_init_events(void)
 
 	/* special cases now */
 
-	/* WD city noises */
-	// no... fucking... way...
-	// AddEvent(EVENT_SPECIAL, PULSE_MOBILE, TRUE, zone_noises, 0);
-
 	/* game clock */
 	// This is where we set the initial hour mud-tick.
 	add_event(event_another_hour, 125 * WAIT_SEC - pulse, NULL, NULL, NULL, 0, NULL, 0);

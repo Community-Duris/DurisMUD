@@ -13,7 +13,6 @@
 #include "graph.h"
 #include "justice.h"
 #include "map.h"
-#include "sound.h"
 #include "specs.prototypes.h"
 #include "spells.h"
 #include "vnum.obj.h"
@@ -2140,8 +2139,6 @@ void static_discharge(P_char ch, P_char victim, int level, int intensity)
 
 	if (IS_AFFECTED5(victim, AFF5_WET))
 		dam = (int)(dam * 1.5);
-
-	play_sound(SOUND_SHOCKWAVE, NULL, victim->in_room, TO_ROOM);
 
 	uint flags = SPLDAM_NODEFLECT | SPLDAM_GLOBE | SPLDAM_GRSPIRIT;
 

@@ -18,7 +18,6 @@
 #include <string.h>
 #include "damage.h"
 #include "justice.h"
-#include "sound.h"
 #include "spells.h"
 
 /*
@@ -2007,7 +2006,6 @@ void do_play(P_char ch, char *arg, int cmd)
 		{
 			act("&+rYou start playing your $q&+r, but this instrument won't work for this song.", FALSE, ch, instrument, 0, TO_CHAR);
 			act("$n starts playing $p and singing aloud.", FALSE, ch, instrument, 0, TO_ROOM);
-			//        play_sound(SOUND_HARP, NULL, ch->in_room, TO_ROOM);
 			return;
 		}
 		else
@@ -2015,7 +2013,6 @@ void do_play(P_char ch, char *arg, int cmd)
 			act("&+WYou start playing your $q &+Wand singing aloud.", FALSE, ch, instrument, 0, TO_CHAR);
 			act("&+W$n starts playing $p &+Wand singing aloud.", FALSE, ch, instrument, 0, TO_ROOM);
 			verses = NUM_VERSES(ch, s);
-			//        play_sound(SOUND_HARP, NULL, ch->in_room, TO_ROOM);
 		}
 	}
 	// Min 50% chance to fail the first chords when first learning the song.

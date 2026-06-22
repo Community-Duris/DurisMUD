@@ -28,7 +28,6 @@
 #include "objmisc.h"
 #include "random_equipment_config.h"
 #include "hardcore_config.h"
-#include "sound.h"
 #include "spells.h"
 #include "vnum.obj.h"
 #include "weather.h"

@@ -17,7 +17,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include "sound.h"
 
 LINKED_OBJECTS::LINKED_OBJECTS(P_obj o, int t, LINKED_OBJECTS *append)
 {

@@ -29,7 +29,6 @@
 #include "map.h"
 #include "mm.h"
 #include "objmisc.h"
-#include "sound.h"
 #include "spells.h"
 #include "vnum.obj.h"
 #include "weather.h"

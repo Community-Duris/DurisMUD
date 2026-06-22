@@ -18,7 +18,6 @@
 #include "damage.h"
 #include "graph.h"
 #include "map.h"
-#include "sound.h"
 #include "spells.h"
 #include "vnum.obj.h"
 

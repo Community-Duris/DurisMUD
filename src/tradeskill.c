@@ -31,7 +31,6 @@
 #include "map.h"
 #include "mm.h"
 #include "objmisc.h"
-#include "sound.h"
 #include "specs.barovia.h"
 #include "specs.eth2.h"
 #include "specs.jubilex.h"

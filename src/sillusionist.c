@@ -29,7 +29,6 @@
 #include "justice.h"
 #include "mm.h"
 #include "objmisc.h"
-#include "sound.h"
 #include "specs.prototypes.h"
 #include "spells.h"
 #include "sql.h"
@@ -182,7 +181,6 @@ void spell_shadow_monster(int level, P_char ch, char *arg, int type, P_char vict
 	mob->points.base_damroll = mob->points.damroll = GET_LEVEL(ch) / 2;
 	mob->points.damnodice                          = (int)GET_LEVEL(ch) / 5;
 	mob->points.damsizedice                        = (int)GET_LEVEL(ch) / 6;
-	// play_sound(SOUND_ELEMENTAL, NULL, ch->in_room, TO_ROOM);
 
 	group_add_member(ch, mob);
 	MobStartFight(mob, victim);
@@ -1719,8 +1717,6 @@ void spell_dragon(int level, P_char ch, char *arg, int type, P_char victim, P_ob
 
 	balance_affects(mob);
 
-	// play_sound(SOUND_ELEMENTAL, NULL, ch->in_room, TO_ROOM);
-
 	setup_pet(mob, ch, 1, PET_NOORDER | PET_NOCASH);
 	if (ch->group)
 	{
@@ -1822,8 +1818,6 @@ void spell_titan(int level, P_char ch, char *arg, int type, P_char victim, P_obj
 
 	char_to_room(mob, ch->in_room, 0);
 	act("$n &+Lappears from nowhere!", TRUE, mob, 0, 0, TO_ROOM);
-
-	// play_sound(SOUND_ELEMENTAL, NULL, ch->in_room, TO_ROOM);
 
 	setup_pet(mob, ch, 1, PET_NOORDER | PET_NOCASH);
 	group_add_member(ch, mob);

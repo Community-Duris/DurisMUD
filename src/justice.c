@@ -15,7 +15,6 @@
 #include <time.h>
 #include "graph.h"
 #include "mm.h"
-#include "sound.h"
 #include "spells.h"
 
 extern P_room                world;

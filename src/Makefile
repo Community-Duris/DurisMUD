@@ -175,7 +175,6 @@ OBJS =  $(SHIP_OBJS) \
 				 salchemist.o \
 				 sillusionist.o \
 				 siege.o \
-				 sound.o \
 				 sparser.o \
 				 specials.o \
 				 specializations.o \
