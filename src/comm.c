@@ -745,10 +745,6 @@ void game_loop(int port, int sslport)
 	gettimeofday(&last_time, (struct timezone *)0);
 	pulse = 0;
 
-#ifdef DO_SET_DTABLE_SIZE
-	(void)setdtablesize(128);
-#endif
-
 	avail_descs = MAX_CONNECTIONS;
 
 	snprintf(buf, MAX_STRING_LENGTH, "avail_descs set to: %d", avail_descs);
