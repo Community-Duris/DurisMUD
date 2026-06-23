@@ -51,7 +51,7 @@ void sound_to_char(const char *messg, P_char ch)
 	return;
 	if (ch && ch->desc && messg && ch->desc->term_type == TERM_MSP)
 	{
-		delete_doubledollar(messg);
+		//delete_doubledollar(messg);
 		write_to_q(messg, &ch->desc->output, 2);
 	}
 }

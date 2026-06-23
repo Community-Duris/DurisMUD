@@ -784,7 +784,7 @@ void        send_to_zone_outdoor(int, const char *);
 void        send_to_weather_sector(int, const char *);
 void        send_to_nearby_rooms(int, const char *);
 void        write_to_q(const char *, struct txt_q *, const int);
-const char *delete_doubledollar(const char *);
+void        delete_doubledollar(char *);
 
 /* condition.c */
 

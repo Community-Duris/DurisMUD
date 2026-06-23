@@ -2956,6 +2956,7 @@ int process_output(P_desc t)
 		AnsiString abuf(buf);
 		abuf.term(buf, t->character && PLR3_FLAGGED(t->character, PLR3_UNDERLINE) ?
 			TL_UNDERLINE : TL_BLINK);
+		delete_doubledollar(buf);
 
 		descbuf += buf;
 	}
@@ -4144,7 +4145,7 @@ void act(const char *str, int hide_invisible, P_char ch, P_obj obj, void *vict_o
 							break;
 
 						case '$':
-							i = "$";
+							i = "$$"; // will be squashed later
 							break;
 
 						default:
@@ -4322,25 +4323,22 @@ void act(const char *str, int hide_invisible, P_char ch, P_obj obj, void *vict_o
 	}
 }
 
-// This function will have to be fixed if sound re-enabled. - Lohrr
-// Right now, we're overwriting a const string.
-const char *delete_doubledollar(const char *string)
+void delete_doubledollar(char *string)
 {
-	char *read1, *write1;
+	char *out = string;
 
-	//  if ((write1 = strchr(string, '$')) == NULL)
-	return string;
-
-	read1 = write1;
-
-	while (*read1)
-		if ((*(write1++) = *(read1++)) == '$')
-			if (*read1 == '$')
-				read1++;
-
-	*write1 = '\0';
-
-	return string;
+	for (;;)
+	{
+		switch (*out++ = *string++)
+		{
+		case '$':
+			if (*string == '$')
+				string++;
+			break;
+		case 0:
+			return;
+		}
+	}
 }
 
 // Puts a Cyan % in front of each line.
