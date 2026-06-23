@@ -2540,11 +2540,6 @@ void spell_taint(int level, P_char ch, char *arg, int type, P_char victim, P_obj
 
 	dam = 9 * MIN(level, 56) + number(-40, 40);
 
-	if (IS_AFFECTED2(victim, AFF2_SOULSHIELD))
-	{
-		dam *= (int).5;
-	}
-
 	if (saves_spell(victim, SAVING_SPELL))
 	{
 		dam >>= 1;
