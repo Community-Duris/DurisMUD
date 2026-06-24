@@ -7674,3 +7674,33 @@ int persistence_large_event_worker_active(void)
 {
   return persistence_large_event_worker_running();
 }
+
+unsigned int popcnt(unsigned int x)
+{
+#ifdef __POPCNT__
+	return __builtin_popcount(x);
+#else
+	unsigned res = 0;
+	while (x)
+	{
+		x &= x - 1;
+		res++;
+	}
+	return res;
+#endif
+}
+
+unsigned int popcnt(unsigned long long x)
+{
+#ifdef __POPCNT__
+	return __builtin_popcountll(x);
+#else
+	unsigned res = 0;
+	while (x)
+	{
+		x &= x - 1;
+		res++;
+	}
+	return res;
+#endif
+}

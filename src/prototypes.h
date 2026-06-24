@@ -1389,10 +1389,6 @@ void breath_weapon_crimson(int, P_char, char *, int, P_char, P_obj);
 void breath_weapon_jasper(int, P_char, char *, int, P_char, P_obj);
 void breath_weapon_azure(int, P_char, char *, int, P_char, P_obj);
 void breath_weapon_basalt(int, P_char, char *, int, P_char, P_obj);
-void breath_weapon_crimson_2(int, P_char, char *, int, P_char, P_obj);
-void breath_weapon_azure_2(int, P_char, char *, int, P_char, P_obj);
-void breath_weapon_jasper_2(int, P_char, char *, int, P_char, P_obj);
-void breath_weapon_basalt_2(int, P_char, char *, int, P_char, P_obj);
 
 /* magic.c */
 

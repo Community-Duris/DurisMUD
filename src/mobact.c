@@ -4151,11 +4151,7 @@ bool WillPsionicistSpell(P_char ch, P_char victim)
 #define BREATH_AZURE      BIT_12
 #define BREATH_JASPER     BIT_13
 #define BREATH_BASALT     BIT_14
-#define BREATH_CRIMSON_2  BIT_15
-#define BREATH_AZURE_2    BIT_16
-#define BREATH_JASPER_2   BIT_17
-#define BREATH_BASALT_2   BIT_18
-#define NUM_BREATHS       18
+#define NUM_BREATHS       14
 void BreathWeapon(P_char ch, int dir)
 {
 	int    breath_possibilities, breath_type, attempts, room, orig_room, i, distance;
@@ -4237,44 +4233,21 @@ void BreathWeapon(P_char ch, int dir)
 	{
 		breath_possibilities += BREATH_GAS_BLIND;
 	}
-	if (isname("crimson", GET_NAME(ch)))
+	if (isname("crimson", GET_NAME(ch)) || GET_VNUM(ch) == 83) // Avatar of Judgement
 	{
 		breath_possibilities += BREATH_CRIMSON;
 	}
-	if (isname("azure", GET_NAME(ch)))
+	if (isname("azure", GET_NAME(ch)) || GET_VNUM(ch) == 85) // Avatar of Justice
 	{
 		breath_possibilities += BREATH_AZURE;
 	}
-	if (isname("jasper", GET_NAME(ch)))
+	if (isname("jasper", GET_NAME(ch)) || GET_VNUM(ch) == 82) // Avatar of War
 	{
 		breath_possibilities += BREATH_JASPER;
 	}
-	if (isname("basalt", GET_NAME(ch)))
+	if (isname("basalt", GET_NAME(ch)) || GET_VNUM(ch) == 84) // Avatar of Vengeance
 	{
 		breath_possibilities += BREATH_BASALT;
-	}
-	// Avatar of Judgement - Mob vnum 83.  Why aren't we just checking the vnum?
-	if (isname("judgement", GET_NAME(ch)))
-	{
-		breath_possibilities += BREATH_CRIMSON_2;
-	}
-	// Avatar of Justice - Mob vnum 85.  Why aren't we just checking the vnum?
-	// Includes others tho.... but should it?
-	if (isname("justice", GET_NAME(ch)))
-	{
-		breath_possibilities += BREATH_AZURE_2;
-	}
-	// Avatar of War - Mob vnum 82.  Why aren't we just checking the vnum?
-	// Includes others tho.... but should it?
-	if (isname("war", GET_NAME(ch)))
-	{
-		breath_possibilities += BREATH_JASPER_2;
-	}
-	// Avatar of Vengeance - Mob vnum 84.  Why aren't we just checking the vnum?
-	// Includes others tho.... but should it?
-	if (isname("vengeance", GET_NAME(ch)))
-	{
-		breath_possibilities += BREATH_BASALT_2;
 	}
 	// If we failed to find any possibilities for breath type, pick one of the first 5.
 	if (breath_possibilities == 0)
@@ -4405,34 +4378,6 @@ void BreathWeapon(P_char ch, int dir)
 			if (dir != -1)
 				snprintf(buf, MAX_STRING_LENGTH, "A &+Lshimmering&n light blasts through from the %s!\r\n", dirs[(int)rev_dir[dir] - 1]);
 			funct = breath_weapon_basalt;
-			break;
-		case BREATH_CRIMSON_2:
-			act("$n spreads $s wings and emits a &+Rshimmering &+rlight&n!", 1, ch, 0, 0, TO_ROOM);
-			act("You spread your wings and emit a &+Rshimmering &+rlight&n!", 0, ch, 0, 0, TO_CHAR);
-			if (dir != -1)
-				snprintf(buf, MAX_STRING_LENGTH, "A &+Rshimmering&n light blasts through from the %s!\r\n", dirs[(int)rev_dir[dir] - 1]);
-			funct = breath_weapon_crimson_2;
-			break;
-		case BREATH_AZURE_2:
-			act("$n spreads $s wings and emits a &+Bshimmering &+blight&n!", 1, ch, 0, 0, TO_ROOM);
-			act("You spread your wings and emit a &+Bshimmering &+blight&n!", 0, ch, 0, 0, TO_CHAR);
-			if (dir != -1)
-				snprintf(buf, MAX_STRING_LENGTH, "A &+Bshimmering&n light blasts through from the %s!\r\n", dirs[(int)rev_dir[dir] - 1]);
-			funct = breath_weapon_azure_2;
-			break;
-		case BREATH_JASPER_2:
-			act("$n spreads $s wings and emits a &+Gshimmering &+glight&n!", 1, ch, 0, 0, TO_ROOM);
-			act("You spread your wings and emit a &+Gshimmering &+glight&n!", 0, ch, 0, 0, TO_CHAR);
-			if (dir != -1)
-				snprintf(buf, MAX_STRING_LENGTH, "A &+Gshimmering&n light blasts through from the %s!\r\n", dirs[(int)rev_dir[dir] - 1]);
-			funct = breath_weapon_jasper_2;
-			break;
-		case BREATH_BASALT_2:
-			act("$n spreads $s wings and emits a &+Lshimmering &+wlight&n!", 1, ch, 0, 0, TO_ROOM);
-			act("You spread your wings and emit a &+Lshimmering &+wlight&n!", 0, ch, 0, 0, TO_CHAR);
-			if (dir != -1)
-				snprintf(buf, MAX_STRING_LENGTH, "A &+Lshimmering&n light blasts through from the %s!\r\n", dirs[(int)rev_dir[dir] - 1]);
-			funct = breath_weapon_basalt_2;
 			break;
 	}
 

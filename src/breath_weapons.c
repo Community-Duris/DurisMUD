@@ -610,18 +610,6 @@ void breath_weapon_basalt(int level, P_char ch, char *arg, int type, P_char vict
 	spell_damage(ch, victim, dam, SPLDAM_ACID, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages);
 }
 
-// Under construction...
-void breath_weapon_crimson_2(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj) { spell_crimson_light(level, ch, arg, type, victim, obj); }
-
-// Under construction...
-void breath_weapon_azure_2(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj) { spell_azure_light(level, ch, arg, type, victim, obj); }
-
-// Under construction...
-void breath_weapon_jasper_2(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj) { spell_jasper_light(level, ch, arg, type, victim, obj); }
-
-// Under construction...
-void breath_weapon_basalt_2(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj) { spell_basalt_light(level, ch, arg, type, victim, obj); }
-
 void update_breath_weapon_properties()
 {
 	breath_dam_mod          = get_property("dragon.Breath.DamageMod", 1.0);
