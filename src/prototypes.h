@@ -1694,6 +1694,7 @@ void         display_map(P_char, int, int);
 bool         is_in_line_of_sight_dir(P_char, P_char, int);
 int          calculate_map_distance(int, int);
 unsigned int calculate_relative_room(unsigned int, int, int);
+bool         calculate_map_coords(int room1, int room2, int &x, int &y);
 void         random_encounters(P_char);
 int          randobjs_to_mob(P_char);
 P_obj        ran_magical(P_char);

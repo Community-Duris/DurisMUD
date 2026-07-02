@@ -718,44 +718,30 @@ void setcontact(int i, P_ship target, P_ship ship, int x, int y)
 
 int getcontacts(P_ship ship, bool limit_range)
 {
-	int    i, j, counter;
+	int    i, j, counter = 0;
 	P_obj  obj;
-	P_ship temp;
-	float  rng = 35 + ship->crew.get_contact_range_mod();
+	float  max_range = 35 + ship->crew.get_contact_range_mod();
 
-	if (!ship || !getmap(ship, limit_range))
-		return 0;
+	ShipVisitor svs;
+        for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
+        {
+        	P_ship vict = svs;
+        	if (vict == ship)
+        		continue;
 
-	counter = 0;
-	for (i = 0; i < 100; i++)
-	{
-		for (j = 0; j < 100; j++)
-		{
-			if (world[tactical_map[j][i].rroom].contents)
-			{
-				for (obj = world[tactical_map[j][i].rroom].contents; obj; obj = obj->next_content)
-				{
-					if (!(obj))
-					{
-						continue;
-					}
+        	int x, y;
+        	if (!calculate_map_coords(ship->location, vict->location, x, y))
+        		continue;
 
-					if ((GET_ITEM_TYPE(obj) == ITEM_SHIP) && (obj->value[6] == 1))
-					{
-						if (obj != ship->shipobj)
-						{
-							temp = shipObjHash.find(obj);
-							if (temp && (!limit_range || (ship_range(ship, temp, j, 100 - i) <= rng)))
-							{
-								setcontact(counter, temp, ship, j, 100 - i);
-								counter++;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+		// somehow (0,0) is represented by (50,50)
+		x = 50 + x;
+		y = 50 - y;
+		if (limit_range && ship_range(ship, vict, x, y) > max_range)
+			continue;
+
+		setcontact(counter++, vict, ship, x, y);
+        }
+
 	return counter;
 }
 

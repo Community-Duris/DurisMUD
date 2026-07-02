@@ -275,6 +275,38 @@ int calculate_map_distance(int room1, int room2)
 	return dx * dx + dy * dy;
 }
 
+/*
+ * return relative coords from room1 to room2
+ */
+bool calculate_map_coords(int room1, int room2, int &x, int &y)
+{
+	int v1, v2, map1, map2, x1, dx, y1, dy, x2, y2;
+
+	if (&zone_table[world[room1].zone] != &zone_table[world[room2].zone])
+		return false;
+
+	struct zone_data *zone = &zone_table[world[room1].zone];
+
+	if (!IS_SET(zone->flags, ZONE_MAP))
+		return false;
+
+	unsigned int zone_start_vnum = world[zone->real_bottom].number;
+
+	v1 = world[room1].number - zone_start_vnum;
+	v2 = world[room2].number - zone_start_vnum;
+
+	x1 = v1 % zone->mapx;
+	y1 = (v1 / zone->mapx) % zone->mapy;
+
+	x2 = v2 % zone->mapx;
+	y2 = (v2 / zone->mapx) % zone->mapy;
+
+	x = x2 - x1;
+	y = y2 - y1;
+
+	return true;
+}
+
 /* takes rnum */
 
 int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
