@@ -135,7 +135,6 @@ extern void ne_events();
 long unsigned int ip2ul(const char *ip);
 void              load_alliances();
 void              initialize_transport();
-bool              newLeaderBoard(P_char ch, char *arg, int cmd);
 bool              newHardcoreBoard(P_char ch, char *arg, int cmd);
 void              format_to_snoopers(char *from_string, char *to_string);
 extern void       update_breath_weapon_properties();
@@ -556,9 +555,6 @@ void run_the_game(int port, int sslport)
 #endif
 
 		// This guarentees that files exist for reading.
-		fprintf(stderr, "-- Touching leaderboard\r\n");
-		touch(leaderboard_file);
-		newLeaderBoard(NULL, "boot", 0);
 		fprintf(stderr, "-- Touching hall of fame\r\n");
 		touch(halloffamelist_file);
 		newHardcoreBoard(NULL, "boot", 0);

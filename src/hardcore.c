@@ -301,9 +301,6 @@ long getLeaderBoardPts(P_char ch)
 	return leaderpts;
 }
 
-// leaderboard is now computed from database, no file sync needed
-bool newLeaderBoard(P_char ch, char *arg, int cmd) { return TRUE; }
-
 void displayLeader(P_char ch, char *arg, int cmd)
 {
 	char       name[MAX_STRING_LENGTH], buf[65536], buf2[2048];
