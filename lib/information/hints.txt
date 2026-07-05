@@ -1,5 +1,4 @@
 Want to see who has the world's artifacts? Try the "artifact" command!  Currently there are 3 types of artifacts: uniques, iouns and true artifacts. Arti unique, arti ioun or arti will display these lists.
-No food or water? No problem! You don't need to eat or drink on Duris.
 Visited Vella's brothel yet? Try giving an 'employee' a bit of gold!
 You can turn off room descriptions with 'toggle brief', but you might miss some zone clues.
 When out on the maps, avoid walking in hills (marked with ^) and mountains (marked with M) as they will fatigue you more quickly. Flying in these areas will not fatigue you as quickly.
@@ -11,7 +10,7 @@ Rogues can check an enemy's health without breaking hide by using the 'glance' c
 Is a dragon about?  Kneel before they enter the room to keep from fleeing from their ROAR!
 Typing "aggressive 0" will make you automatically attack any aggressive monsters that enter the room. Type "aggressioff" to turn this off.
 Some races and classes can cast 'faerie fire', which will hinder rogues from hiding.  It will also increase your ability to hit your foes.
-Be sure to have a raft or canoe handy in case you need to cross water.
+Be sure to have a raft or canoe handy in case you need to cross water.  Or you can mount an animal that can swim.
 To regain hitpoints faster, try to 'rest' or 'recline'. Sleeping will increase the heal rate even further.
 Try 'toggle battle' before your next fight.  It displays attacks a little more vividly.
 Some mobs will hunt you down if you attack them and flee.
@@ -33,7 +32,7 @@ If someone wants to group with you and says "f/c", that means you need to type "
 Your stats will be displayed more accurately at level 10 and completely revealed at level 20.
 When casting offensive spells make sure you are careful about noticing new mobs entering with the same target name.
 If you would like to get rid of a spell that is currently memorized type forget <spellname>.
-The Priest of Winterhaven will cast beneficial spells upon you if you stay by him.  Sometimes he might not notice you though!
+Some priests will cast beneficial spells upon you if you stay by them.  Sometimes they might not notice you though!
 The 'who' command can sort players by name, level, race, class or specialization.
 Watch out when range attacking mobs, as you will aggro all the mobs in the room you are ranging into. 
 Remember that all the citizens of Woodseer attack evil-aligned people on sight.
@@ -57,7 +56,6 @@ Charisma affects the prices stores charge you and affects how obedient your summ
 Save money and buy a boat!  There's a whole world out there waiting for you! Use help ship to learn how.
 Some magic works at a distance - try "cast 'spellname' <person> <direction>" to hit someone in the next room!
 "Luring" means hitting a mob and running away to make it follow you.  Luring is useful to trick a mob into leaving its friends, so you can kill it more easily.
-It's rude to look at or consider people you don't know! Try a polite acknowledgement first.
 Experiment with different social commands. Some are useful in actual game play. Example: "beckon" asks someone to follow and consent to you, or "moving" announces that you are moving ahead.
 Killing other players and taking their equipment is completely legal, but so is retribution!  Beware of your victims' allies.
 Type "toggle" to see a list of various commands you can toggle.  Try them out!  Some are quite handy.
@@ -69,7 +67,7 @@ Type 'news' daily to read the latest changes and updates on Duris.
 At level 30 you get the option to adopt a class specialization if you choose.  Check the help files for your class to see what's available.
 Not sure if you are playing the right class? Experiment with different classes until you find one that fits your play style.
 Left your ship on a different island? Go to any building docks and type 'summon ship'.
-Loosing the battle? Try to 'flee'. But don't flee too many times, or you might run into something even nastier!
+Losing the battle? Try to 'flee'. But don't flee too many times, or you might run into something even nastier!
 Be sure to check your innate abilities. These can help you win the fight. Just type "innate" to see a list.
 Type "group" to see your groupmates' health and movement.
 Knocking your foe down will increase the damage you do to him.
@@ -83,7 +81,6 @@ The term 'mob' is short for mobile and refers to any computer-controlled monster
 Most commands have help files.  Type 'help (command)' to learn how to use game commands.
 Type 'terrain' to see what kind of terrain you are in.  Druids benefit from Forest or Field terrain.
 Ask a cleric to bless your weapon - it will strike more accurately. If the blessing wears off, do it again.
-Always use magical weapons and missiles against high level demons, devils, dragons, angels and golems. If you are a monk use magic gauntlets.
 If you run across a witch doctor in your journeys, look at the products he offers. His spells last a few days or until you die.
 Undeads, trolls and trees fear fire. Also any creatures with bark-like skin are vulnerable to fire. You may want to turn your opponent's skin into bark before unleashing your sunrays upon him.
 Insects do not like fire nor ice. Protect yourself with elemental shields when fighting a druid with creeping doom.
@@ -97,4 +94,7 @@ Remember that this is Duris and there are no safe zones or areas. Disguised assa
 When you are poisoned, ask a cleric for help. You can also buy some anti-venom vials in Gnome and Goblin hometowns, they will make poison much less painful.
 To scribe spells into your spellbook, you need to goto a teacher mob, hold a quill and spellbook in your hands, rest, and type "practice (spell name)". For shorter way, you can all do "practice all". You can also do it if you have another players book in your inventory and type "scribe (spell name)".
 -- MONEY -- Get a pick from a shop and go find mines on the map. They are shown as little m's. Type mine with the pick wielded. When you discover ore, you can sell it at shops throughout duris. Some shops pay more for the ore! By the way, you can go to a weaponsmith shopkeeper to repair the pick, which is far more cost effective than purchasing a new one.
--- Movement Points -- Ideally, you want to be around x2 your race's starting age. Type help lifespan. If you are too old or too young, your movement rengeration is lower.
+There is no benefit to be of a certain age.
+Some spells, such as 'vitality' can be extended by a cheap potion at their original power.
+Need gear?  Check the 'auction' to see if there's something on sale.
+You can use area spells to reveal invisible enemies.  Beware, they will be not amused.
