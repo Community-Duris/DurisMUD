@@ -112,8 +112,6 @@ char  *greetinga2   = NULL;
 char  *greetinga3   = NULL;
 char  *greetinga4   = NULL;
 char  *greetings    = NULL; /* * greeting for ascii viewers * */
-char  *worldmap     = NULL;
-char  *worldmapa    = NULL;
 char  *disclaimer   = NULL; /* * disclaimer message * */
 char  *bugfile      = NULL;
 char  *generaltable = NULL; /* * race/class comparison charts * */
@@ -446,10 +444,6 @@ void boot_db(int mini_mode)
 	greetinga4 = file_to_string(GREETINGA4_FILE);
 	logit(LOG_STATUS, "Reading ASCII login screen.");
 	greetings = file_to_string("lib/information/greeting");
-	logit(LOG_STATUS, "Reading ASCII worldmap.");
-	worldmap = file_to_string("lib/information/worldmap");
-	logit(LOG_STATUS, "Reading ANSI worldmap.");
-	worldmapa = file_to_string("lib/information/worldmapa");
 	logit(LOG_STATUS, "Reading Ansi wizlist.");
 	wizlista = file_to_string(WIZLISTA_FILE);
 	logit(LOG_STATUS, "Reading disclaimer.");
