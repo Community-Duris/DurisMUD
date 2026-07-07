@@ -6212,12 +6212,8 @@ void do_who(P_char ch, char *argument, int cmd)
 		// Gods can see all!
 		if (!IS_TRUSTED(ch))
 		{
-			if (IS_SET(tch->specials.act, PLR_NOWHO))
-			// Anon removed atm.
-			//        || (sort && IS_SET(tch->specials.act, PLR_ANONYMOUS)) )
-			{
+			if (sort && IS_SET(tch->specials.act, PLR_ANONYMOUS))
 				continue;
-			}
 		}
 
 		if (GET_LEVEL(tch) < min_level || GET_LEVEL(tch) > max_level)
@@ -6353,11 +6349,10 @@ void do_who(P_char ch, char *argument, int cmd)
 				{
 					snprintf(who_output + strlen(who_output),
 					         MAX_STRING_LENGTH - strlen(who_output),
-					         "&n[&+w%2d&n%s%s&n]%s",
+					         "&n[&+w%2d&n%s%s&n] ",
 					         GET_LEVEL(who_list[j]),
 					         (IS_TRUSTED(ch) && (IS_SET(who_list[j]->specials.act, PLR_ANONYMOUS)) ? "*" : " "),
-					         pad_ansi(get_class_name(who_list[j], ch), 16, TRUE).c_str(),
-					         (IS_TRUSTED(ch) && (IS_SET(who_list[j]->specials.act, PLR_NOWHO)) ? "&+r%&n" : " "));
+					         pad_ansi(get_class_name(who_list[j], ch), 16, TRUE).c_str());
 				}
 				else
 				{

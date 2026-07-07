@@ -2398,7 +2398,6 @@ void do_shapechange(P_char ch, char *arg, int cmd)
 	send_to_char(mobname, ch);
 	snprintf(mobname, MAX_STRING_LENGTH, "&+WThe image of %s &Nshifts&+W into the form of %s!\r\n", GET_NAME(ch), ch->disguise.name);
 	act(mobname, FALSE, ch, 0, NULL, TO_ROOM);
-	SET_BIT(ch->specials.act, PLR_NOWHO);
 
 	balance_affects(ch);
 

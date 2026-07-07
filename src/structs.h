@@ -939,7 +939,7 @@ struct room_data
 #define PLR_ANONYMOUS   BIT_16
 #define PLR_AGGIMMUNE   BIT_17
 #define PLR_WIZMUFFED   BIT_18
-#define PLR_NOWHO       BIT_19 /* player doesn't show up on who */
+#define PLR_WHO         BIT_19 /* login announcements */
 #define PLR_PAGING_ON   BIT_20
 #define PLR_VNUM        BIT_21
 #define PLR_OLDSMARTP   BIT_22 /* old-style smartprompt */

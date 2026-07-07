@@ -309,7 +309,6 @@ void do_disguise(P_char ch, char *arg, int cmd)
 			send_to_char(Gbuf1, ch);
 			snprintf(Gbuf1, MAX_STRING_LENGTH, "%s starts disguising into a %s.", GET_NAME(ch), disguise_list[i]);
 		}
-		SET_BIT(ch->specials.act, PLR_NOWHO);
 		act(Gbuf1, TRUE, ch, NULL, NULL, TO_ROOM);
 		if (!IS_TRUSTED(ch) && !affected_by_spell(ch, ACH_DECEPTICON))
 		{
@@ -330,7 +329,6 @@ void remove_disguise(P_char ch, bool show_messages)
 	bool wasIllu  = IS_DISGUISE_ILLUSION(ch);
 	bool wasShape = IS_DISGUISE_SHAPE(ch);
 
-	REMOVE_BIT(ch->specials.act, PLR_NOWHO);
 	IS_DISGUISE_PC(ch)       = FALSE;
 	IS_DISGUISE_NPC(ch)      = FALSE;
 	IS_DISGUISE_ILLUSION(ch) = FALSE;

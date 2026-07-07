@@ -4501,7 +4501,7 @@ void show_toggles(P_char ch)
 	         "&+r   Petition    :&+g %-3s    &+y|&N"
 	         "&+r     Paging      :&+g %-3s    &+y|&N"
 	         "&+r     Save Notify :&+g %-3s    &+y|&N\r\n"
-	         "&+r   Who List    :&+g %-3s    &+y|&N"
+	         "&+r   Who Notices :&+g %-3s    &+y|&N"
 	         "&+r     Screen Size :&+g %-3s    &+y|&N"
 	         "&+r     Terminal    :&+g %-4s   &+y|&N\r\n"
 	         "&+r   Map         :&+g %-3s    &+y|&N"
@@ -4548,7 +4548,7 @@ void show_toggles(P_char ch)
 	         ONOFF(PLR_FLAGGED(ch, PLR_PETITION)),
 	         ONOFF(PLR_FLAGGED(ch, PLR_PAGING_ON)),
 	         ONOFF(PLR_FLAGGED(ch, PLR_SNOTIFY)),
-	         ONOFF(PLR_FLAGGED(ch, PLR_NOWHO)),
+	         ONOFF(PLR_FLAGGED(ch, PLR_WHO)),
 	         Gbuf3,
 	         (send_ch->desc->term_type == 1 ? "GEN " : (send_ch->desc->term_type == 2 ? "ANSI" : "MSP ")),
 	         ONOFF(PLR_FLAGGED(ch, PLR_MAP)),
@@ -4688,7 +4688,7 @@ static const char *tog_messages[][2] = {
 	{																			"Help.",																		 "Help!"},
 	{														 "&+WBrief&N mode off.\r\n",													   "&+WBrief&N mode on.\r\n"},
 	{													   "&+WCompact&N mode off.\r\n",													 "&+WCompact&N mode on.\r\n"},
-	{								 "Others can now see you on the &+WWho&n list.\r\n",                          "You will no longer show up on the &+WWho&n list.\r\n"},
+	{								 "You will no longer see &+WWho&N logs on.\r\n",                          "You will now see &+WWho&n logs on.\r\n"},
 	{								"You feel nice and turn &+WVicious&N mode off.\r\n",          "You are now &+WVicious&N and will kill mortally wounded victims.\r\n"},
 	{												 "You can now hear &+WTells&N.\r\n",										   "You are now deaf to &+WTells&N.\r\n"},
 	{											 "You are now blind to &+WNames&N.\r\n",                                        "You are now spammed by &+WNames&N.\r\n"},
@@ -4856,17 +4856,14 @@ void do_toggle(P_char ch, char *arg, int cmd)
 			result = PLR_TOG(PLR_COMPACT);
 			break;
 		case 3: /*
-		         * no who
+		         * who
 		         */
-				// Enabled by Gellz - 22042015
-			//    send_to_char("Sorry, we'll have none of that here!\r\n", send_ch);
-			//    return;
-			if (GET_LEVEL(ch) <= 29 && !IS_SET(ch->specials.act, PLR_NOWHO))
+			if (GET_LEVEL(ch) <= 29 && !IS_SET(ch->specials.act, PLR_WHO))
 			{
 				send_to_char("Sorry, you must be at least level 30 to toggle who!\r\n", send_ch);
 				return;
 			}
-			result = PLR_TOG(PLR_NOWHO);
+			result = PLR_TOG(PLR_WHO);
 			break;
 		case 4: /*
 		         * vicious
@@ -4914,15 +4911,8 @@ void do_toggle(P_char ch, char *arg, int cmd)
 				             * in case some slipped through
 				             */
 			}
-
-			// Players can no longer be anonymous.
-			else if (IS_PC(ch))
-			{
-				send_to_char("Nobody can be anonymous on Duris.\r\n", send_ch);
-				return;
-			}
-			// else
-			// result = PLR_TOG(PLR_ANONYMOUS);
+			else
+				result = PLR_TOG(PLR_ANONYMOUS);
 			break;
 		case 10: /*
 		          * petition

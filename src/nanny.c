@@ -2018,10 +2018,6 @@ void enter_game(P_desc d)
 		// old guildhalls (deprecated)
 		//    clear_sacks(ch);
 
-		/* this may fix the disguise not showing on who bug */
-		if (PLR_FLAGGED(ch, PLR_NOWHO))
-			PLR_TOG_CHK(ch, PLR_NOWHO);
-
 		/* check mail
 		   if (mail_ok && has_mail(GET_NAME(ch)))
 		   send_to_char("&=LWMail awaits you at your local postoffice.&n\r\n", ch);
@@ -2276,6 +2272,24 @@ void enter_game(P_desc d)
 	else
 		act("$n has entered the game.", TRUE, ch, 0, 0, TO_ROOM);
 
+	if (!IS_TRUSTED(ch))
+	{
+		snprintf(Gbuf1, sizeof Gbuf1, "&+G[ %s has just logged on. ]&n\n", GET_NAME(ch));
+		for (i = descriptor_list; i; i = i->next)
+		{
+			if (i->connected)
+				continue;
+
+			if (opposite_racewar(ch, i->character) && !IS_TRUSTED(i->character))
+				continue;
+			if (!IS_SET(i->character->specials.act2, PLR_WHO))
+				continue;
+
+			send_to_char(Gbuf1, i->character, LOG_PRIVATE);
+		}
+	}
+
+
 	// inform gods that a newbie has entered the game
 	if (IS_NEWBIE(ch))
 	{
@@ -2437,13 +2451,6 @@ void enter_game(P_desc d)
 		REMOVE_BIT(ch->specials.act, PLR_SMARTPROMPT);
 
 	schedule_pc_events(ch);
-
-	//  play_sound(SOUND_START_GAME, ch, 0, TO_CHAR);
-
-	if (EVIL_RACE(ch) && PLR_FLAGGED(ch, PLR_NOWHO))
-	{
-		PLR_TOG_CHK(ch, PLR_NOWHO);
-	}
 
 	struct affected_type *af;
 

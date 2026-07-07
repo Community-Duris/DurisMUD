@@ -829,7 +829,6 @@ void spell_mask(int level, P_char ch, char *arg, int type, P_char victim, P_obj 
 				send_to_char(tbuf, ch);
 				snprintf(tbuf, MAX_STRING_LENGTH, "&+LThe image of %s &+Lshifts and &+bb&+Blur&+bs&+L into %s&+L!&N\r\n", GET_NAME(ch), GET_NAME(target));
 				act(tbuf, FALSE, ch, 0, NULL, TO_ROOM);
-				SET_BIT(ch->specials.act, PLR_NOWHO);
 			}
 		}
 	}
@@ -1442,7 +1441,6 @@ void spell_clone_form(int level, P_char ch, char *arg, int type, P_char victim, 
 			send_to_char(tbuf, ch);
 			snprintf(tbuf, MAX_STRING_LENGTH, " &+LThe image of %s &Ndisappears&+L, and is replaced by %s!\r\n", GET_NAME(ch), t_ch->player.short_descr);
 			act(tbuf, FALSE, ch, 0, NULL, TO_ROOM);
-			SET_BIT(ch->specials.act, PLR_NOWHO);
 		}
 	}
 	else
@@ -1490,7 +1488,6 @@ void spell_clone_form(int level, P_char ch, char *arg, int type, P_char victim, 
 					send_to_char(tbuf, ch);
 					snprintf(tbuf, MAX_STRING_LENGTH, "&+LThe image of %s &+Lshifts and &+bb&+Blur&+bs&+L into %s&+L!&N\r\n", GET_NAME(ch), GET_NAME(target));
 					act(tbuf, FALSE, ch, 0, NULL, TO_ROOM);
-					SET_BIT(ch->specials.act, PLR_NOWHO);
 					return;
 				}
 			}
