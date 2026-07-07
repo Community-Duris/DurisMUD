@@ -4429,6 +4429,16 @@ void do_use(P_char ch, char *argument, int cmd)
 	}
 }
 
+static const char* term_name(P_char ch)
+{
+	switch (ch->desc->term_type)
+	{
+	case 2:  return "ANSI";
+	case 3:  return "MSP";
+	default: return "GEN";
+	}
+}
+
 #define ONOFF(a) ((a) ? "ON" : "OFF")
 #define TOG_OFF  0
 #define TOG_ON   1
@@ -4537,7 +4547,7 @@ void show_toggles(P_char ch)
 	         ONOFF(PLR_FLAGGED(ch, PLR_SNOTIFY)),
 	         ONOFF(PLR_FLAGGED(ch, PLR_NOWHO)),
 	         Gbuf3,
-	         (send_ch->desc->term_type == 1 ? "GEN " : (send_ch->desc->term_type == 2 ? "ANSI" : "MSP ")),
+	         term_name(send_ch),
 	         ONOFF(PLR_FLAGGED(ch, PLR_MAP)),
 	         ONOFF(PLR_FLAGGED(ch, PLR_OLDSMARTP)),
 	         ONOFF(!PLR2_FLAGGED(ch, PLR2_NOTITLE)),
@@ -4963,26 +4973,28 @@ void do_toggle(P_char ch, char *arg, int cmd)
 		case 15: /*
 		          * term
 		          */
-			if (send_ch->desc->term_type == 1 || is_abbrev(arg, "ansi"))
-			{
+		        while (*arg == ' ')
+		        	arg++;
+		        if (!*arg)
+		        {
+		        	if (send_ch->desc->term_type == 2)
+		        		send_ch->desc->term_type = 3;
+				else
+					send_ch->desc->term_type = 2;
+				// no need for GEN
+		        }
+			else if (is_abbrev(arg, "ansi"))
 				send_ch->desc->term_type = 2;
-				strcpy(Gbuf3, "ANSI");
-			}
-			else if (send_ch->desc->term_type == 2 || is_abbrev(arg, "msp"))
-			{
+			else if (is_abbrev(arg, "msp"))
 				send_ch->desc->term_type = 3;
-				strcpy(Gbuf3, "MSP ");
-			}
-			else if (send_ch->desc->term_type == 3 || is_abbrev(arg, "gen"))
-			{
+			else if (is_abbrev(arg, "gen"))
 				send_ch->desc->term_type = 1;
-				strcpy(Gbuf3, "GEN ");
-			}
 			else
 			{
 				send_to_char("USAGE: TOGGLE terminal [ansi|msp]\r\n", send_ch);
 				return;
 			}
+			strcpy(Gbuf3, term_name(send_ch));
 			result = TRUE;
 			break;
 		case 16: /*
