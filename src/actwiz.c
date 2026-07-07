@@ -5215,10 +5215,10 @@ void roll_basic_attributes(P_char ch, int type)
 	// Normal rolls - 80 to 95.
 	else if (type == ROLL_NORMAL)
 	{
-		// Used to be 5 8 53.
-		rolls = 3;
-		faces = 6;
-		base  = 77;
+		// Used to be 5 8 53, then 3 6 77.
+		rolls = 1;
+		faces = 4;
+		base  = 86;
 	}
 	// Normal mob rolls - 68 - 98.
 	else if (type == ROLL_MOB_NORMAL)
