@@ -58,7 +58,7 @@ epic_reward epic_rewards[] = {
 	{EPIC_REWARD_SKILL, SKILL_FIX, 100, 50, 500000, 0},
 	//  {EPIC_REWARD_SKILL, SKILL_CRAFT, 100, 10, 10000,
     //    0 },
-	{EPIC_REWARD_SKILL, SKILL_ENCRUST, 100, 100, 1000000, 0},
+	{EPIC_REWARD_SKILL, SKILL_ENCRUST, 100, 200, 2000000, 0},
 	//  {EPIC_REWARD_SKILL, SKILL_ENCHANT, 500, 100, 100000,
     //    0 },
     //  {EPIC_REWARD_SKILL, SKILL_SPELLBIND, 250, 100, 100000,
@@ -118,7 +118,7 @@ epic_teacher_skill epic_teachers[] = {
 	{99548, SKILL_EMPOWER_SONG, 0, 100, 0, 0},
 	{22436, SKILL_FIX, 0, 100, 0, 0, 0}, // smith in stormport
 	//  {9454,  SKILL_CRAFT, 0, 100, 0, 0, 0}, //Rjinal in Samirz
-	{40760, SKILL_ENCRUST, 0, 100, SKILL_CRAFT, 0, 100}, // Snent in Divine Home
+	{40760, SKILL_ENCRUST, 0, 100, 0, 0, 0}, // Snent in Divine Home
 	{78006, SKILL_ENCHANT, 0, 100, 0, SKILL_SPELLBIND, 0}, // Bargor in Oasis
 	{94017, SKILL_SPELLBIND, 0, 100, 0, SKILL_ENCHANT, 0}, // Kalroh in Maze of Undead Army
 	{37145, SKILL_SMELT, 0, 100, 0, 0, 0}, // Carmotee in Dumaathe
