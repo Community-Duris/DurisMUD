@@ -855,7 +855,7 @@ void game_loop(int port, int sslport)
 			 */
 
 			if ((point->descriptor == ident_ans_buf.desc) && (*((time_t *)(point->login + 4)) == ident_ans_buf.stamp))
-				strcpy(point->login, ident_ans_buf.name);
+				strlcpy(point->login, ident_ans_buf.name, sizeof(point->login));
 
 			if ((point->descriptor == host_ans_buf.desc) && !strncmp(host_ans_buf.addr, point->host /*+ 3 */, strlen(host_ans_buf.addr)))
 			{

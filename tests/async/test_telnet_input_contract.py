@@ -91,6 +91,13 @@ def test_account_confirmation_does_not_echo_stored_state() -> None:
         raise AssertionError("account confirmation must not echo stored authentication state")
 
 
+def test_descriptor_identity_copies_are_bounded() -> None:
+    if "strcpy(point->login, ident_ans_buf.name);" in COMM:
+        raise AssertionError("ident response must not overflow the descriptor login field")
+    require("strlcpy(point->login, ident_ans_buf.name, sizeof(point->login));", COMM,
+            "ident response copy must use destination capacity")
+
+
 if __name__ == "__main__":
     test_telnet_parser_waits_for_complete_command()
     test_process_input_preserves_partial_telnet_sequence()
@@ -98,4 +105,5 @@ if __name__ == "__main__":
     test_input_queue_is_bounded_and_accounted()
     test_pre_auth_terminal_selection_uses_full_input_capacity()
     test_account_confirmation_does_not_echo_stored_state()
+    test_descriptor_identity_copies_are_bounded()
     print("Telnet input hardening contracts passed")
