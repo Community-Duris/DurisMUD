@@ -85,10 +85,17 @@ def test_pre_auth_terminal_selection_uses_full_input_capacity() -> None:
     require("strlcpy(d->client_str, arg, sizeof(d->client_str));", nanny, "client identifier copies must be destination-sized")
 
 
+def test_account_confirmation_does_not_echo_stored_state() -> None:
+    account = (ROOT / "src" / "account.c").read_text()
+    if "DEBUG: Stored=" in account or "SEND_TO_Q(debug_buf, d);" in account:
+        raise AssertionError("account confirmation must not echo stored authentication state")
+
+
 if __name__ == "__main__":
     test_telnet_parser_waits_for_complete_command()
     test_process_input_preserves_partial_telnet_sequence()
     test_queue_dequeue_is_destination_sized()
     test_input_queue_is_bounded_and_accounted()
     test_pre_auth_terminal_selection_uses_full_input_capacity()
+    test_account_confirmation_does_not_echo_stored_state()
     print("Telnet input hardening contracts passed")

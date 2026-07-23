@@ -476,7 +476,6 @@ void display_account_menu(P_desc d, char *arg)
 
 void confirm_account(P_desc d, char *arg)
 {
-	char debug_buf[512];
 
 	if (!arg)
 	{
@@ -502,18 +501,6 @@ void confirm_account(P_desc d, char *arg)
 		}
 	}
 	*dst = '\0';
-
-	// Debug output
-	snprintf(debug_buf,
-	         512,
-	         "\r\n&+YDEBUG: Entered='%s' (len=%d)&n\r\n&+YDEBUG: Fixed='%s' (len=%d)&n\r\n&+YDEBUG: Stored='%s' (len=%d)&n\r\n",
-	         arg,
-	         (int)strlen(arg),
-	         fixed_input,
-	         (int)strlen(fixed_input),
-	         d->account->acct_confirmation ? d->account->acct_confirmation : "NULL",
-	         d->account->acct_confirmation ? (int)strlen(d->account->acct_confirmation) : 0);
-	SEND_TO_Q(debug_buf, d);
 
 	if (str_cmp(fixed_input, d->account->acct_confirmation))
 	{
