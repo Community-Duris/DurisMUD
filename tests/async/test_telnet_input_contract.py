@@ -77,9 +77,18 @@ def test_input_queue_is_bounded_and_accounted() -> None:
             raise AssertionError(f"{relative} bypasses the bounded descriptor input queue")
 
 
+def test_pre_auth_terminal_selection_uses_full_input_capacity() -> None:
+    nanny = (ROOT / "src" / "nanny.c").read_text()
+    require("char temp_buf[MAX_INPUT_LENGTH];", nanny, "terminal parsing token buffer must match accepted input capacity")
+    if "strcpy(d->client_str, arg);" in nanny:
+        raise AssertionError("pre-auth terminal parsing must bound copies into client_str")
+    require("strlcpy(d->client_str, arg, sizeof(d->client_str));", nanny, "client identifier copies must be destination-sized")
+
+
 if __name__ == "__main__":
     test_telnet_parser_waits_for_complete_command()
     test_process_input_preserves_partial_telnet_sequence()
     test_queue_dequeue_is_destination_sized()
     test_input_queue_is_bounded_and_accounted()
+    test_pre_auth_terminal_selection_uses_full_input_capacity()
     print("Telnet input hardening contracts passed")

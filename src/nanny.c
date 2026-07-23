@@ -2579,7 +2579,7 @@ void select_terminal(P_desc d, char *arg)
 {
 	int  term;
 	int  temp = 1;
-	char temp_buf[200];
+	char temp_buf[MAX_INPUT_LENGTH];
 
 	if ((term = (int)strtol(arg, NULL, 0)) == 0)
 	{
@@ -2599,13 +2599,13 @@ void select_terminal(P_desc d, char *arg)
 		case TERM_MSP:
 			d->term_type = TERM_MSP;
 			arg          = one_argument(arg, temp_buf);
-			strcpy(d->client_str, arg);
+			strlcpy(d->client_str, arg, sizeof(d->client_str));
 			SEND_TO_Q(greetinga, d);
 			break;
 		case TERM_ANSI:
 			d->term_type = TERM_ANSI;
 			arg          = one_argument(arg, temp_buf);
-			strcpy(d->client_str, arg);
+			strlcpy(d->client_str, arg, sizeof(d->client_str));
 
 			temp = number(1, NUM_ANSI_LOGINS);
 			switch (temp)
