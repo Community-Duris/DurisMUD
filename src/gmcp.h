@@ -43,6 +43,9 @@ struct ShipData;
 #define GMCP_PKG_SHIP_CONTACTS "Ship.Contacts"
 #define GMCP_PKG_SHIP_INFO     "Ship.Info"
 
+#define GMCP_MAX_INPUT_SIZE (1024 * 1024)
+#define GMCP_MAX_PACKAGE_SIZE 128
+
 /* negotiation */
 
 /* send gmcp will to start negotiation (called during connection setup) */

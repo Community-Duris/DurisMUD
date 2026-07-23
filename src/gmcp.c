@@ -25,55 +25,9 @@
 #include "spells.h"
 #include "sql.h"
 #include "websocket.h"
+#include "ws_auth.h"
 
 extern const int top_of_world;
-
-/* Default secret (fallback if env var not set) */
-#define DURISWEB_SECRET_DEFAULT "Dur1sM4pK3y2025xYz!"
-
-/* Get DURISWEB_SECRET from environment variable with fallback */
-static const char *get_durisweb_secret(void)
-{
-	const char *secret = getenv("DURISWEB_SECRET");
-	if (!secret || !*secret)
-	{
-		return DURISWEB_SECRET_DEFAULT;
-	}
-	return secret;
-}
-
-static int verify_durisweb_sig(const char *sig)
-{
-	if (!sig || !*sig)
-		return 0;
-
-	const char *secret = get_durisweb_secret();
-	if (!secret)
-		return 0;
-
-	time_t now    = time(NULL);
-	long   minute = now / 60;
-
-	for (int offset = 0; offset <= 1; offset++)
-	{
-		char ts[32];
-		snprintf(ts, sizeof(ts), "%ld", minute - offset);
-
-		unsigned char hash[32];
-		unsigned int  hash_len;
-		HMAC(EVP_sha256(), secret, strlen(secret), (unsigned char *)ts, strlen(ts), hash, &hash_len);
-
-		char expected[65];
-		for (int i = 0; i < 32; i++)
-		{
-			snprintf(expected + i * 2, 3, "%02x", hash[i]);
-		}
-
-		if (strcmp(sig, expected) == 0)
-			return 1;
-	}
-	return 0;
-}
 
 /* externs */
 extern struct room_data        *world;
@@ -115,21 +69,44 @@ void gmcp_handle_negotiation(struct descriptor_data *d, int cmd)
 	}
 }
 
+static int gmcp_durisweb_auth_limited(struct descriptor_data *d)
+{
+	time_t now = time(NULL);
+
+	if (!d->durisweb_auth_window_start ||
+	    (now >= d->durisweb_auth_window_start && now - d->durisweb_auth_window_start >= WS_AUTH_FAILURE_WINDOW))
+	{
+		d->durisweb_auth_window_start = now;
+		d->durisweb_auth_failures = 0;
+	}
+	return d->durisweb_auth_failures >= WS_AUTH_MAX_FAILURES;
+}
+
+static void gmcp_durisweb_auth_failure(struct descriptor_data *d)
+{
+	(void)gmcp_durisweb_auth_limited(d);
+	if (d->durisweb_auth_failures < WS_AUTH_MAX_FAILURES)
+		d->durisweb_auth_failures++;
+	if (d->durisweb_auth_failures >= WS_AUTH_MAX_FAILURES)
+		STATE(d) = CON_EXIT;
+}
+
 /* handle incoming gmcp data from telnet client */
 void gmcp_handle_input(struct descriptor_data *d, const char *data, size_t len)
 {
-	if (!d || !data || len == 0)
+	if (!d || !data || len == 0 || len > GMCP_MAX_INPUT_SIZE)
 		return;
 
-	if (len > 10 && strncmp(data, "Core.Hello", 10) == 0)
+	if (len > 10 && strncmp(data, "Core.Hello", 10) == 0 && data[10] == ' ')
 	{
+		const char *end = data + len;
 		const char *json_start = data + 10;
-		while (*json_start == ' ' && json_start < data + len)
+		while (json_start < end && *json_start == ' ')
 			json_start++;
 
-		if (*json_start == '{')
+		if (json_start < end && *json_start == '{')
 		{
-			cJSON *root = cJSON_Parse(json_start);
+			cJSON *root = cJSON_ParseWithLength(json_start, (size_t)(end - json_start));
 			if (root)
 			{
 				cJSON *client  = cJSON_GetObjectItem(root, "client");
@@ -139,23 +116,43 @@ void gmcp_handle_input(struct descriptor_data *d, const char *data, size_t len)
 				if (client && cJSON_IsString(client) && client->valuestring)
 					strlcpy(d->client_name, client->valuestring, sizeof d->client_name);
 				if (version && cJSON_IsString(version) && version->valuestring)
-					strlcpy(d->client_version, version->valuestring, sizeof d->client_version);
-				if (sig && cJSON_IsString(sig) && verify_durisweb_sig(sig->valuestring))
-					d->durisweb_verified = 1;
+				{
+					strncpy(d->client_version, version->valuestring, sizeof(d->client_version) - 1);
+					d->client_version[sizeof(d->client_version) - 1] = '\0';
+				}
+				if (sig && cJSON_IsString(sig))
+				{
+					if (d->account || d->character || d->connected == CON_PLAYING || d->durisweb_verified || d->durisweb_backend || gmcp_durisweb_auth_limited(d))
+					{
+						/* Player and service identities cannot be mixed. */
+					}
+					else if (ws_verify_durisweb_signature(sig->valuestring))
+					{
+						d->durisweb_verified = 1;
+						d->durisweb_backend  = 1;
+						d->durisweb_auth_window_start = 0;
+						d->durisweb_auth_failures = 0;
+					}
+					else
+					{
+						gmcp_durisweb_auth_failure(d);
+					}
+				}
 				cJSON_Delete(root);
 			}
 		}
 	}
 	/* Client.Info is an alias some clients use */
-	else if (len > 11 && strncmp(data, "Client.Info", 11) == 0)
+	else if (len > 11 && strncmp(data, "Client.Info", 11) == 0 && data[11] == ' ')
 	{
+		const char *end = data + len;
 		const char *json_start = data + 11;
-		while (*json_start == ' ' && json_start < data + len)
+		while (json_start < end && *json_start == ' ')
 			json_start++;
 
-		if (*json_start == '{')
+		if (json_start < end && *json_start == '{')
 		{
-			cJSON *root = cJSON_Parse(json_start);
+			cJSON *root = cJSON_ParseWithLength(json_start, (size_t)(end - json_start));
 			if (root)
 			{
 				cJSON *client  = cJSON_GetObjectItem(root, "client");

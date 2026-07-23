@@ -14,6 +14,7 @@
 #include "interp.h"
 #include "utility.h"
 #include "utils.h"
+#include <arpa/inet.h>
 #include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
@@ -982,9 +983,21 @@ void game_loop(int port, int sslport)
 			}
 			else if (FD_ISSET(point->descriptor, &input_set))
 			{
-				if (point->connected != CON_SSLNEGO && process_input(point) < 0)
+				int input_result = 0;
+				if (point->connected != CON_SSLNEGO)
+					input_result = process_input(point);
+				if (input_result < 0)
 				{
-					close_socket(point);
+					if (point->websocket && point->ws_state == WS_STATE_OPEN)
+					{
+						int close_code = point->ws_error_code ? point->ws_error_code : WS_CLOSE_PROTOCOL_ERROR;
+						const char *reason = close_code == WS_CLOSE_MESSAGE_TOO_BIG ? "Message too big" : (close_code == WS_CLOSE_INVALID_DATA ? "Invalid data" : (close_code == WS_CLOSE_INTERNAL_ERROR ? "Internal error" : "Protocol error"));
+						websocket_close(point, close_code, reason);
+					}
+					else
+					{
+						close_socket(point);
+					}
 				}
 			}
 		}
@@ -1037,26 +1050,51 @@ void game_loop(int port, int sslport)
 					max_users_playing = player_count;
 			}
 
+			/* WebSocket handshake timeout is independent of connected state. */
+			if (point->websocket && !point->ws_handshake_done && point->ws_handshake_started > 0)
+			{
+				time_t now = time(0);
+				if (now - point->ws_handshake_started >= WS_HANDSHAKE_TIMEOUT)
+				{
+					statuslog(56, "WebSocket: Closing incomplete handshake from %s", point->host);
+					close_socket(point);
+					continue;
+				}
+			}
+
 			/* WebSocket ping/pong dead connection detection */
 			if (point->websocket && point->ws_state == WS_STATE_OPEN)
 			{
 				time_t now = time(0);
 
 				/* Check for ping timeout (no pong received) */
-				if (point->ws_last_ping > 0 && !point->ws_pong_received && (now - point->ws_last_ping) > WS_PING_TIMEOUT)
+				if (point->ws_last_ping > 0 && point->ws_ping_outstanding && !point->ws_pong_received && (now - point->ws_last_ping) > WS_PING_TIMEOUT)
 				{
 					statuslog(56, "WebSocket: Closing dead connection from %s (ping timeout)", point->host);
 					websocket_close(point, WS_CLOSE_GOING_AWAY, "Ping timeout");
+					if (point->ws_state == WS_STATE_CLOSING)
+						continue;
 					close_socket(point);
 					continue;
 				}
 
-				/* Send periodic ping */
-				if (point->ws_last_ping == 0 || (now - point->ws_last_ping) >= WS_PING_INTERVAL)
+				/* Send one periodic ping at a time.  A queued ping becomes outstanding only after control output drains. */
+				if (!point->ws_ping_queued && !point->ws_ping_outstanding &&
+				    (point->ws_last_ping == 0 || (now - point->ws_last_ping) >= WS_PING_INTERVAL))
 				{
-					websocket_send_ping(point);
-					point->ws_last_ping     = now;
-					point->ws_pong_received = 0; /* Reset for next cycle */
+					if (websocket_send_ping(point) == 0)
+					{
+						if (point->ws_control_output_len == 0)
+						{
+							point->ws_last_ping = now;
+							point->ws_pong_received = 0;
+							point->ws_ping_outstanding = 1;
+						}
+						else
+						{
+							point->ws_ping_queued = 1;
+						}
+					}
 				}
 			}
 
@@ -1190,6 +1228,24 @@ void game_loop(int port, int sslport)
 			}
 
 			if (process_output(point) < 0)
+			{
+				close_socket(point);
+				continue;
+			}
+			if (point->websocket && websocket_flush_output(point) < 0)
+			{
+				close_socket(point);
+				continue;
+			}
+			if (point->websocket && point->ws_state == WS_STATE_OPEN && point->ws_ping_queued && point->ws_control_output_len == 0)
+			{
+				point->ws_ping_queued = 0;
+				point->ws_ping_outstanding = 1;
+				point->ws_pong_received = 0;
+				point->ws_last_ping = time(0);
+			}
+			if (point->websocket && point->ws_state == WS_STATE_CLOSING &&
+			    point->ws_output_len == 0 && point->ws_control_output_len == 0)
 			{
 				close_socket(point);
 				continue;
@@ -2066,6 +2122,12 @@ void close_socket(struct descriptor_data *d)
 		d->account = free_account(d->account);
 #endif
 
+	/* Clear service authorization before descriptor reuse. */
+	d->durisweb_verified = 0;
+	d->durisweb_backend  = 0;
+	d->durisweb_auth_window_start = 0;
+	d->durisweb_auth_failures = 0;
+
 	/* Free WebSocket fragment buffer if any */
 	websocket_free(d);
 
@@ -2098,12 +2160,31 @@ void nonblock(int s)
         * old/new socket code. 9/18/95  JAB                                                                                                                                                            \
         */
 
+static int proxy_peer_is_trusted(int desc)
+{
+	const char *trusted_ip = getenv("DURIS_TRUSTED_PROXY_IP");
+	struct sockaddr_storage peer;
+	struct in_addr trusted4;
+	struct in6_addr trusted6;
+	socklen_t peer_len = sizeof(peer);
+
+	if (!trusted_ip || !*trusted_ip || getpeername(desc, (struct sockaddr *)&peer, &peer_len) < 0)
+		return 0;
+	if (peer.ss_family == AF_INET)
+		return inet_pton(AF_INET, trusted_ip, &trusted4) == 1 && memcmp(&((struct sockaddr_in *)&peer)->sin_addr, &trusted4, sizeof(trusted4)) == 0;
+	if (peer.ss_family == AF_INET6)
+		return inet_pton(AF_INET6, trusted_ip, &trusted6) == 1 && memcmp(&((struct sockaddr_in6 *)&peer)->sin6_addr, &trusted6, sizeof(trusted6)) == 0;
+	return 0;
+}
+
 /* parse proxy protocol v1 header - returns 1 if found, stores real ip */
 static int parse_proxy_protocol(int desc, char *real_ip, size_t ip_len)
 {
 	char    buf[108];
-	char    proto[8], src_ip[46], dst_ip[46];
+	char    proto[8], src_ip[46], dst_ip[46], trailing;
 	int     src_port, dst_port;
+	struct in_addr src4, dst4;
+	struct in6_addr src6, dst6;
 	ssize_t n;
 	int     i;
 
@@ -2125,14 +2206,29 @@ static int parse_proxy_protocol(int desc, char *real_ip, size_t ip_len)
 		}
 	}
 	buf[i] = '\0';
+	if (i > 0 && buf[i - 1] == '\r')
+		buf[i - 1] = '\0';
 
-	if (sscanf(buf, "PROXY %7s %45s %45s %d %d", proto, src_ip, dst_ip, &src_port, &dst_port) == 5)
+	if (sscanf(buf, "PROXY %7s %45s %45s %d %d %c", proto, src_ip, dst_ip, &src_port, &dst_port, &trailing) != 5)
+		return 0;
+	if (src_port < 1 || src_port > 65535 || dst_port < 1 || dst_port > 65535)
+		return 0;
+	if (strcmp(proto, "TCP4") == 0)
 	{
-		strlcpy(real_ip, src_ip, ip_len);
-		return 1;
+		if (inet_pton(AF_INET, src_ip, &src4) != 1 || inet_pton(AF_INET, dst_ip, &dst4) != 1)
+			return 0;
 	}
+	else if (strcmp(proto, "TCP6") == 0)
+	{
+		if (inet_pton(AF_INET6, src_ip, &src6) != 1 || inet_pton(AF_INET6, dst_ip, &dst6) != 1)
+			return 0;
+	}
+	else
+		return 0;
 
-	return 0;
+	strncpy(real_ip, src_ip, ip_len - 1);
+	real_ip[ip_len - 1] = '\0';
+	return 1;
 }
 
 struct hostname_lookup_request
@@ -2308,7 +2404,7 @@ int new_descriptor(int s, int conn_type)
 			strcpy(newd->host, newd->host + 7);
 
 		/* check for proxy protocol on websocket connections */
-		if (conn_type == 2)
+		if (conn_type == 2 && proxy_peer_is_trusted(desc))
 		{
 			char proxy_ip[46];
 			if (parse_proxy_protocol(desc, proxy_ip, sizeof(proxy_ip)))
@@ -2383,6 +2479,7 @@ int new_descriptor(int s, int conn_type)
 		newd->websocket          = 1;
 		newd->ws_state           = 0; /* WS_STATE_CONNECTING */
 		newd->ws_handshake_done  = 0;
+		newd->ws_handshake_started = time(0);
 		newd->ws_fragment_buffer = NULL;
 		newd->ws_fragment_len    = 0;
 		newd->gmcp_enabled       = 1; /* WebSocket clients always get GMCP */
@@ -2790,8 +2887,11 @@ int process_output(P_desc t)
 		descbuf += buf;
 	}
 
-	if (write_to_descriptor(t, descbuf.c_str()) < 0)
-		return (-1);
+	{
+		int output_result = write_to_descriptor(t, descbuf.c_str());
+		if (output_result < 0 && !(t->websocket && output_result == WS_OUTPUT_QUEUE_FULL))
+			return (-1);
+	}
 
 	if (had_prompt && !t->connected)
 		if (send_ga(t) < 0)

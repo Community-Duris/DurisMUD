@@ -1724,13 +1724,19 @@ struct descriptor_data
 	int    websocket;
 	int    ws_state;
 	int    ws_handshake_done;
+	int    ws_error_code;
+	int    ws_compressed_message;
 	char  *ws_handshake_buffer; /* buffer for fragmented http upgrade */
 	size_t ws_handshake_len;
+	time_t ws_handshake_started;
 	char  *ws_fragment_buffer;
 	size_t ws_fragment_len;
 	unsigned char *ws_output_buffer;
 	size_t         ws_output_len;
 	size_t         ws_output_offset;
+	unsigned char *ws_control_output_buffer;
+	size_t ws_control_output_len;
+	size_t ws_control_output_offset;
 	int    gmcp_enabled;
 	int    sga_disabled;
 	int    write_failed;
@@ -1739,6 +1745,8 @@ struct descriptor_data
 	char   client_version[32];
 	int    durisweb_verified;
 	int    durisweb_backend;    /* true only for backend service, not web clients */
+	time_t durisweb_auth_window_start;
+	unsigned int durisweb_auth_failures;
 
 	/* ttype/mtts support */
 	int    ttype_state;        /* 0=none, 1=sent_do, 2=cycling, 3=complete */
@@ -1762,6 +1770,8 @@ struct descriptor_data
 	void  *ws_inflate_stream;
 	size_t ws_bytes_in;
 	size_t ws_bytes_out;
+	int    ws_ping_queued;
+	int    ws_ping_outstanding;
 
 	/* chargen state for webclient */
 	struct stat_data chargen_stats;
