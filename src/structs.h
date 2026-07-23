@@ -1566,6 +1566,8 @@ struct txt_q
 {
 	struct txt_block *head;
 	struct txt_block *tail;
+	size_t            bytes;
+	size_t            blocks;
 };
 
 /* modes of connectedness */
@@ -1706,6 +1708,7 @@ struct descriptor_data
 	char             *name;                         /* name for mail system       */
 	bool              prompt_mode;                  /* control of prompt-printing */
 	int               buflen;
+	bool              input_overflow_warned;
 	char              buf[MAX_QUEUE_LENGTH];        /* buffer for raw input       */
 	char              last_input[MAX_INPUT_LENGTH]; /* the last input         */
 	struct txt_q      output;                       /* q of strings to send       */

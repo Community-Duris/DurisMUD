@@ -136,7 +136,10 @@
 #define MAX_QUESTS              2000   /* max allowable quests */
 #define MAX_QUEUE_LENGTH        4800   /* 60 80 character lines */
 #define MAX_SEASONS             4      /* maximum number of seasons in a zone */
-#define MAX_STRING_LENGTH       65536  /* 819+ 80 character lines */
+#define MAX_STRING_LENGTH        65536  /* 819+ 80 character lines */
+#define MAX_INPUT_LINES_PER_READ 128    /* cap work from newline floods per socket event */
+#define MAX_INPUT_QUEUE_COMMANDS 256    /* preserve bursts without unbounded command backlog */
+#define MAX_INPUT_QUEUE_BYTES    MAX_STRING_LENGTH
 #define MAX_LOG_LEN             100000 /* MAX LOGGING */
 #define MAX_TONGUE              29     /* number of defined tongues */
 #define MAX_TRADE               12     /* shops, max number of item types they trade in  */

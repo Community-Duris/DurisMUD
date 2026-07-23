@@ -656,7 +656,7 @@ void ws_send_full_game_state(struct descriptor_data *d)
 	}
 
 	/* send a "look" to show the room */
-	write_to_q("look", &d->input, 0);
+	write_to_input_q(d, "look");
 }
 
 /* send auth failed message */
@@ -991,7 +991,7 @@ void ws_cmd_enter(struct descriptor_data *d, cJSON *data)
 	d->selected_char_name = str_dup(c->charname);
 
 	/* queue 'y' to confirm character selection */
-	write_to_q("y", &d->input, 0);
+	write_to_input_q(d, "y");
 	d->connected = CON_ACCT_CONFIRM_CHAR;
 }
 
@@ -1022,7 +1022,7 @@ void ws_cmd_game(struct descriptor_data *d, cJSON *data)
 
 	if (cmd && *cmd)
 	{
-		write_to_q(cmd, &d->input, 0);
+		write_to_input_q(d, cmd);
 	}
 }
 
@@ -3145,7 +3145,7 @@ void ws_handle_command(struct descriptor_data *d, const char *cmd, cJSON *data)
 		/* unknown = game cmd */
 		if (d->connected == CON_PLAYING)
 		{
-			write_to_q(cmd, &d->input, 0);
+			write_to_input_q(d, cmd);
 		}
 	}
 }

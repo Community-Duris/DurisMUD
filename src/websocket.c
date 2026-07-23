@@ -978,11 +978,11 @@ static void websocket_handle_message(struct descriptor_data *d, int opcode, char
 				/* in-game: pass raw text as command */
 				if (data_item && cJSON_IsString(data_item))
 				{
-					write_to_q(data_item->valuestring, &d->input, 0);
+					write_to_input_q(d, data_item->valuestring);
 				}
 				else if (cmd)
 				{
-					write_to_q(cmd, &d->input, 0);
+					write_to_input_q(d, cmd);
 				}
 			}
 			cJSON_Delete(json);
@@ -992,7 +992,7 @@ static void websocket_handle_message(struct descriptor_data *d, int opcode, char
 			/* not valid json - treat as raw text command if in game */
 			if (d->connected == CON_PLAYING)
 			{
-				write_to_q(payload, &d->input, 0);
+				write_to_input_q(d, payload);
 			}
 		}
 	}

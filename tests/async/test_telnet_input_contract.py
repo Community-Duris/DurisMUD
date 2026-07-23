@@ -56,8 +56,30 @@ def test_queue_dequeue_is_destination_sized() -> None:
     )
 
 
+def test_input_queue_is_bounded_and_accounted() -> None:
+    structs = (ROOT / "src" / "structs.h").read_text()
+    config = (ROOT / "src" / "config.h").read_text()
+    require("size_t            bytes;", structs, "text queues must account queued bytes")
+    require("size_t            blocks;", structs, "text queues must account queued entries")
+    require("MAX_INPUT_QUEUE_BYTES", config, "input queues need an explicit byte ceiling")
+    require("MAX_INPUT_QUEUE_COMMANDS", config, "input queues need an explicit command ceiling")
+    require("MAX_INPUT_LINES_PER_READ", config, "socket reads need a per-event line-work ceiling")
+    require("int write_to_input_q(P_desc d, const char *txt)", COMM, "descriptor input must use the bounded input queue API")
+    require("queue->bytes += txtlen;", COMM, "queue writes must update byte accounting")
+    require("queue->blocks++;", COMM, "queue writes must update entry accounting")
+    require("queue->bytes -= text_len;", COMM, "queue reads must release byte accounting")
+    require("queue->blocks--;", COMM, "queue reads must release entry accounting")
+    require("if (++lines_processed > MAX_INPUT_LINES_PER_READ)", COMM, "socket input must cap lines handled per read")
+    require("write_to_input_q(t, out)", COMM, "Telnet lines must use the bounded descriptor input queue")
+    for relative in ("src/websocket.c", "src/ws_handlers.c"):
+        source = (ROOT / relative).read_text()
+        if re.search(r"write_to_q\([^\n]*&d->input", source):
+            raise AssertionError(f"{relative} bypasses the bounded descriptor input queue")
+
+
 if __name__ == "__main__":
     test_telnet_parser_waits_for_complete_command()
     test_process_input_preserves_partial_telnet_sequence()
     test_queue_dequeue_is_destination_sized()
+    test_input_queue_is_bounded_and_accounted()
     print("Telnet input hardening contracts passed")

@@ -1104,6 +1104,8 @@ void game_loop(int port, int sslport)
 
 			if ((!t_ch || (t_ch && (CAN_ACT(t_ch) && (!IS_SET(t_ch->specials.affected_by, AFF_CHARM) || (point->original))))) && get_from_q(&point->input, comm, sizeof(comm)))
 			{
+				if (point->input.blocks < MAX_INPUT_QUEUE_COMMANDS / 2 && point->input.bytes < MAX_INPUT_QUEUE_BYTES / 2)
+					point->input_overflow_warned = false;
 
 				if (t_ch)
 				{
@@ -1473,6 +1475,14 @@ int get_from_q(struct txt_q *queue, char *dest, size_t dest_size)
 	if (copy_len != text_len)
 		logit(LOG_COMM, "get_from_q truncated %zu-byte queue entry to %zu bytes", text_len, copy_len);
 	queue->head = queue->head->next;
+	if (queue->bytes >= text_len)
+		queue->bytes -= text_len;
+	else
+		queue->bytes = 0;
+	if (queue->blocks > 0)
+		queue->blocks--;
+	if (!queue->head)
+		queue->tail = NULL;
 
 	FREE(tmp->text);
 	FREE(tmp);
@@ -1512,6 +1522,8 @@ void write_to_q(const char *txt, struct txt_q *queue, const int flag)
 
 		n_new->next = NULL;
 		queue->head = queue->tail = n_new;
+		queue->bytes             = txtlen;
+		queue->blocks            = 1;
 		return;
 	}
 
@@ -1524,6 +1536,7 @@ void write_to_q(const char *txt, struct txt_q *queue, const int flag)
 		RECREATE(queue->tail->text, char, (txtlen + taillen + 1));
 
 		strcat(queue->tail->text, txt);
+		queue->bytes += txtlen;
 		return;
 	}
 	/* nope, it needs to be sent, just add a queue entry */
@@ -1535,6 +1548,34 @@ void write_to_q(const char *txt, struct txt_q *queue, const int flag)
 	queue->tail->next = n_new;
 	queue->tail       = n_new;
 	n_new->next       = NULL;
+	queue->bytes += txtlen;
+	queue->blocks++;
+}
+
+static void warn_input_overflow(P_desc d)
+{
+	if (!d || d->input_overflow_warned)
+		return;
+	d->input_overflow_warned = true;
+	logit(LOG_COMM, "Input queue limit reached for descriptor %d", d->descriptor);
+	write_to_descriptor(d, "Too much pending input; excess commands were discarded.\r\n");
+}
+
+int write_to_input_q(P_desc d, const char *txt)
+{
+	if (!d || !txt)
+		return 0;
+
+	size_t txtlen = strlen(txt);
+	if (txtlen >= MAX_STRING_LENGTH || d->input.blocks >= MAX_INPUT_QUEUE_COMMANDS ||
+	    d->input.bytes > MAX_INPUT_QUEUE_BYTES || txtlen > MAX_INPUT_QUEUE_BYTES - d->input.bytes)
+	{
+		warn_input_overflow(d);
+		return 0;
+	}
+
+	write_to_q(txt, &d->input, 0);
+	return 1;
 }
 
 /*
@@ -2933,8 +2974,9 @@ int process_output(P_desc t)
 
 int process_input(P_desc t)
 {
-	int            thisround, begin;
-	char           tmp[MAX_INPUT_LENGTH + 3], *buf, *bp;
+	int          thisround, begin;
+	unsigned int lines_processed = 0;
+	char         tmp[MAX_INPUT_LENGTH + 3], *buf, *bp;
 
 	/* WebSocket connections use their own input processing */
 	if (t->websocket)
@@ -3012,6 +3054,12 @@ int process_input(P_desc t)
 			break;
 
 		case '\n':
+			if (++lines_processed > MAX_INPUT_LINES_PER_READ)
+			{
+				warn_input_overflow(t);
+				t->buflen = 0;
+				return 0;
+			}
 			*bp = 0;
 			process_line(t, buf);
 			bp = buf;
@@ -3121,7 +3169,7 @@ static void process_line(P_desc t, char *in)
 		t->character->only.pc->recived_data += k;
 		recivedbytes                        += k;
 	}
-	write_to_q(out, &t->input, 0);
+	write_to_input_q(t, out);
 
 	snoop_by_data *snoop_by_ptr = t->snoop.snoop_by_list;
 
