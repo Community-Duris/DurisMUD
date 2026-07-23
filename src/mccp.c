@@ -74,6 +74,10 @@ int parse_telnet_options(P_desc player, char *buf, int buflen)
 
 	if (buflen < 1 || *p != IAC)
 		return 0;
+	if (buflen < 2)
+		return 0;
+	if (buflen < 3 && (p[1] == DO || p[1] == DONT || p[1] == WILL || p[1] == WONT))
+		return 0;
 
 	switch (*(p + 1))
 	{

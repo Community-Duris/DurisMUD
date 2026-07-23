@@ -14,6 +14,7 @@
 #include "interp.h"
 #include "utility.h"
 #include "utils.h"
+#include <algorithm>
 #include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
@@ -1101,7 +1102,7 @@ void game_loop(int port, int sslport)
 
 			/* check for hella long wait time here..  bandaid solution but it should (sort of) work */
 
-			if ((!t_ch || (t_ch && (CAN_ACT(t_ch) && (!IS_SET(t_ch->specials.affected_by, AFF_CHARM) || (point->original))))) && get_from_q(&point->input, comm))
+			if ((!t_ch || (t_ch && (CAN_ACT(t_ch) && (!IS_SET(t_ch->specials.affected_by, AFF_CHARM) || (point->original))))) && get_from_q(&point->input, comm, sizeof(comm)))
 			{
 
 				if (t_ch)
@@ -1443,7 +1444,7 @@ void game_loop(int port, int sslport)
  * ******************************************************************
  */
 
-int get_from_q(struct txt_q *queue, char *dest)
+int get_from_q(struct txt_q *queue, char *dest, size_t dest_size)
 {
 	struct txt_block *tmp;
 
@@ -1453,7 +1454,7 @@ int get_from_q(struct txt_q *queue, char *dest)
 		logit(LOG_COMM, "call to get_from_q with NULL queue");
 		return (0);
 	}
-	if (!dest)
+	if (!dest || dest_size == 0)
 	{
 		logit(LOG_COMM, "call to get_from_q with bogus string");
 		return (0);
@@ -1464,8 +1465,13 @@ int get_from_q(struct txt_q *queue, char *dest)
 	if (!queue->head)
 		return (0);
 
-	tmp = queue->head;
-	strcpy(dest, queue->head->text);
+	tmp             = queue->head;
+	size_t text_len = strlen(queue->head->text);
+	size_t copy_len = std::min(text_len, dest_size - 1);
+	memcpy(dest, queue->head->text, copy_len);
+	dest[copy_len] = '\0';
+	if (copy_len != text_len)
+		logit(LOG_COMM, "get_from_q truncated %zu-byte queue entry to %zu bytes", text_len, copy_len);
 	queue->head = queue->head->next;
 
 	FREE(tmp->text);
@@ -1570,9 +1576,9 @@ void flush_queues(P_desc d)
 {
 	char str[MAX_STRING_LENGTH];
 
-	while (get_from_q(&d->output, str))
+	while (get_from_q(&d->output, str, sizeof(str)))
 		;
-	while (get_from_q(&d->input, str))
+	while (get_from_q(&d->input, str, sizeof(str)))
 		;
 }
 
@@ -2762,7 +2768,7 @@ int process_output(P_desc t)
 	make_prompt(t);
 
 	/* Cycle thru output queue */
-	while (get_from_q(&t->output, buf))
+	while (get_from_q(&t->output, buf, sizeof(buf)))
 	{
 #if 0
     if( PLR_FLAGGED(realChar, PLR_SMARTPROMPT) )
@@ -3015,7 +3021,13 @@ int process_input(P_desc t)
 		{
 			int consumed = parse_telnet_options(t, buf + i, len - i);
 			if (consumed <= 0)
-				goto incomplete; // partial; need to wait for more
+			{
+				/* Preserve an incomplete IAC sequence and the current line for the next read. */
+				memmove(bp, buf + i, (size_t)(len - i));
+				bp += len - i;
+				t->buflen = bp - buf;
+				return 0;
+			}
 			i += consumed - 1;
 			break; /* prevent fall-through to backspace handler */
 		}
@@ -3037,7 +3049,6 @@ int process_input(P_desc t)
 		}
 	}
 
-incomplete:
 	if (bp - buf > MAX_INPUT_LENGTH - 1)
 	{
 		// is it even a good idea to process it anyway?
