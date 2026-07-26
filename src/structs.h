@@ -29,6 +29,7 @@
 #include "map.h"
 #include "player_log.h"
 
+#include <sys/socket.h>
 #include <sys/types.h>
 #include <zlib.h>
 

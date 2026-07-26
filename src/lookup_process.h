@@ -25,8 +25,8 @@ struct host_request
 {
 	long               mtype;
 	sh_int             desc;
-	char               addr[24];
-	struct sockaddr_in sock;
+	char               addr[64];
+	sockaddr_in6       sock;
 	char               padding[4];
 };
 
@@ -34,7 +34,7 @@ struct host_answer
 {
 	long   mtype;
 	sh_int desc;
-	char   addr[24];
+	char   addr[64];
 	char   name[MAX_HOSTNAME];
 	char   padding[4];
 };

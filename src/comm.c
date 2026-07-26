@@ -1799,7 +1799,7 @@ int init_socket(int port)
 	int                s, bind_error;
 	char              *opt;
 	char               hostname[MAX_HOSTNAME + 1];
-	struct sockaddr_in sa;
+	sockaddr_in6       sa;
 	struct hostent    *hp;
 	int                value = 1;
 	struct linger      linger_values;
@@ -1822,8 +1822,8 @@ int init_socket(int port)
 	  }
 	*/
 	/*  sa.sin_family = hp->h_addrtype; */
-	sa.sin_family = AF_INET;
-	sa.sin_port   = htons((unsigned short int)port);
+	sa.sin6_family = AF_INET6;
+	sa.sin6_port = htons((unsigned short int)port);
 #ifdef IPPROTO_MPTCP
 	/*
 	 * Multipath TCP: if there are multiple routes available and enabled, they
@@ -1835,10 +1835,10 @@ int init_socket(int port)
 	 * doesn't require a retry from us.  Thus, the only concerns are platforms
 	 * that don't support MPTCP (Windows, old BSDs) or have CONFIG_MPTCP=n.
 	 */
-	s             = socket(PF_INET, SOCK_STREAM, IPPROTO_MPTCP);
+	s             = socket(AF_INET6, SOCK_STREAM, IPPROTO_MPTCP);
 	if (s < 0)
 #endif
-	s             = socket(PF_INET, SOCK_STREAM, 0);
+	s             = socket(AF_INET6, SOCK_STREAM, 0);
 	if (s < 0)
 	{
 		logit(LOG_EXIT, "Init-socket");
@@ -1888,14 +1888,14 @@ int init_socket(int port)
 
 int new_connection(int s)
 {
-	struct sockaddr_in isa;
-	int                i;
+	sockaddr_in6       isa;
+	socklen_t          i;
 	int                t;
 
 	i = sizeof(isa);
-	getsockname(s, (struct sockaddr *)&isa, (socklen_t *)&i);
+	getsockname(s, (struct sockaddr *)&isa, &i);
 
-	if ((t = accept(s, (struct sockaddr *)&isa, (socklen_t *)&i)) < 0)
+	if ((t = accept(s, (struct sockaddr *)&isa, &i)) < 0)
 		return (-1);
 	nonblock(t);
 	i = 1;
@@ -2311,7 +2311,7 @@ int new_descriptor(int s, int conn_type)
 	char               Gbuf3[MAX_STRING_LENGTH];
 	int                desc;
 	socklen_t          size;
-	struct sockaddr_in sock;
+	sockaddr_in6       sock;
 	FILE              *f;
 	gnutls_session_t   sslses = 0;
 
@@ -2373,7 +2373,9 @@ int new_descriptor(int s, int conn_type)
 	}
 	else
 	{
-		inet_ntop(AF_INET, &sock.sin_addr, newd->host, sizeof newd->host);
+		inet_ntop(AF_INET6, &sock.sin6_addr, newd->host, sizeof newd->host);
+		if (!strncmp(newd->host, "::ffff:", 7)) // mapped IPv4
+			strcpy(newd->host, newd->host + 7);
 
 		/* check for proxy protocol on websocket connections */
 		if (conn_type == 2)

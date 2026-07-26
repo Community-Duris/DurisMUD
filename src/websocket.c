@@ -180,10 +180,10 @@ void websocket_generate_accept_key(const char *client_key, char *accept_key)
 /* initialize websocket subsystem */
 int websocket_init(int port)
 {
-	struct sockaddr_in sa;
+	sockaddr_in6       sa;
 	int                opt = 1;
 
-	ws_listen_fd = socket(AF_INET, SOCK_STREAM, 0);
+	ws_listen_fd = socket(AF_INET6, SOCK_STREAM, 0);
 	if (ws_listen_fd < 0)
 	{
 		perror("websocket_init: socket");
@@ -200,9 +200,8 @@ int websocket_init(int port)
 
 	/* set up address */
 	memset(&sa, 0, sizeof(sa));
-	sa.sin_family      = AF_INET;
-	sa.sin_port        = htons(port);
-	sa.sin_addr.s_addr = INADDR_ANY;
+	sa.sin6_family      = AF_INET6;
+	sa.sin6_port        = htons(port);
 
 	/* bind */
 	if (bind(ws_listen_fd, (struct sockaddr *)&sa, sizeof(sa)) < 0)
@@ -245,7 +244,7 @@ void websocket_shutdown(void)
 /* accept new websocket connection */
 int websocket_accept(int listen_fd, struct descriptor_data *d)
 {
-	struct sockaddr_in peer;
+	sockaddr_in6       peer;
 	socklen_t          peer_len = sizeof(peer);
 	int                new_fd;
 	int                opt = 1;
@@ -281,7 +280,10 @@ int websocket_accept(int listen_fd, struct descriptor_data *d)
 	d->ws_pong_received  = 0;
 
 	/* get peer address */
-	inet_ntop(AF_INET, &peer.sin_addr, d->host, sizeof d->host);
+	inet_ntop(AF_INET6, &peer.sin6_addr, d->host, sizeof d->host);
+        if (!strncmp(d->host, "::ffff:", 7)) // mapped IPv4
+	        strcpy(d->host, d->host + 7);
+
 
 	statuslog(56, "WebSocket connection from %s", d->host);
 
