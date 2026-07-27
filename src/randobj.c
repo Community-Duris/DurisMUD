@@ -213,7 +213,22 @@ void do_randobj(P_char ch, char *strn, int val)
 		return;
 	}
 
-	send_to_char("Syntax: randobj <remove, map, stone, piece, eq, recipe, mob, zone> \r\n", ch);
+	if (!str_cmp("encrust", strn))
+	{
+		for (int i = 0; i<10; i++)
+		{
+			o = random_zone_item(ch);
+			if (!o)
+				return send_to_char("Failed to create item.\n", ch);
+			o->affected[2].location = APPLY_MOVE_REG;
+			describe_encrusted_enhanced(o);
+			send_to_char_f(ch, "%s\n", o->short_description);
+			extract_obj(o);
+		}
+		return;
+	}
+
+	send_to_char("Syntax: randobj <remove, map, stone, piece, eq, recipe, mob, zone, encrust> \r\n", ch);
 }
 
 //
