@@ -294,7 +294,7 @@ void spell_molecular_agitation(int level, P_char ch, char *arg, int type, P_char
 	                                   "The pain you're feeling is so intense you'd rather be dead. Ah, you are...",
 	                                   "$N suddenly doubles over due to what must be incredible pain. Only death can save $M. Wait, it did..."};
 
-	level = MIN(level, (sizeof(dam_each) / sizeof(dam_each[0] - 1)));
+	level = MIN(level, (sizeof(dam_each) / sizeof(dam_each[0])) - 1);
 	level = MAX(0, level);
 	dam   = number((dam_each[level] / 2), (dam_each[level] * 2));
 	if (StatSave(victim, APPLY_POW, POW_DIFF(ch, victim)))
