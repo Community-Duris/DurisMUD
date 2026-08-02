@@ -214,7 +214,7 @@ int main(int argc, char **argv)
 	randomize(0);
 	for (;;)
 	{
-		int this_option_optind = optind ? optind : 1;
+		uint64_t seed;
 		int option_index = 0;
 		static struct option long_options[] = {
 			{"material-rarity-report", 2, 0, -2 },
@@ -227,10 +227,11 @@ int main(int argc, char **argv)
 			{"mini",                   0, 0, 'm'},
 			{"area-debug",             0, 0, 'z'},
 			{"copyover",               0, 0, 'C'},
+			{"random-seed",            1, 0, 'R'},
 			{0}
 		};
 
-		int c = getopt_long(argc, argv, "fld:spmz",
+		int c = getopt_long(argc, argv, "fld:spmzCR:",
                              long_options, &option_index);
 		if (c == -1)
 			break;
@@ -283,6 +284,13 @@ int main(int argc, char **argv)
 			// copyover boot - sockets recovered from copyover.dat
 			copyover_boot = 1;
 			logit(LOG_STATUS, "Copyover boot mode");
+			break;
+		case 'R':
+			seed = 0;
+			for (; *optarg; optarg++)
+				seed = hash64(seed) ^ *optarg;
+			randomize(seed);
+			logit(LOG_STATUS, "Seeded random mode.");
 			break;
 		default:
 			fatal_boot_error("comm", "Usage: %s [-l] [-m] [-s] [-p] [-f] [-d pathname] [ port # ]", argv[0]);
