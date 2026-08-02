@@ -17,6 +17,7 @@
 #include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <getopt.h>
 #include <gnutls/gnutls.h>
 #include <arpa/inet.h>
 #include <netdb.h>
@@ -203,7 +204,6 @@ size_t output_length;
 int main(int argc, char **argv)
 {
 	int         port, sslport;
-	int         pos = 1;
 	const char *dir;
 	int         migrate_mode = 0;
 
@@ -212,100 +212,102 @@ int main(int argc, char **argv)
 	sslport = SSL_PORT;
 
 	randomize(0);
-
-	// check for --migrate-all before regular arg parsing
-	for (int i = 1; i < argc; i++)
+	for (;;)
 	{
-		if (!strncmp(argv[i], "--material-rarity-report", strlen("--material-rarity-report")))
+		int this_option_optind = optind ? optind : 1;
+		int option_index = 0;
+		static struct option long_options[] = {
+			{"material-rarity-report", 2, 0, -2 },
+			{"migrate-all",            0, 0, -3 },
+			{"no-ferries",             0, 0, 'f'},
+			{"no-randoms",             0, 0, 'l'},
+			{"dir",                    1, 0, 'd'},
+			{"no-specials",            0, 0, 's'},
+			{"passwd",                 0, 0, 'p'},
+			{"mini",                   0, 0, 'm'},
+			{"area-debug",             0, 0, 'z'},
+			{"copyover",               0, 0, 'C'},
+			{0}
+		};
+
+		int c = getopt_long(argc, argv, "fld:spmz",
+                             long_options, &option_index);
+		if (c == -1)
+			break;
+
+		switch (c)
 		{
-			const char *value = argv[i] + strlen("--material-rarity-report");
-			if (*value == '=')
-				value++;
-			else if (!*value && i + 1 < argc)
-				value = argv[++i];
-			material_rarity_report_dir = *value ? value : "material-rarity-report";
+		case -2:
+			if (optarg && *optarg)
+				material_rarity_report_dir = optarg;
+			else
+				material_rarity_report_dir = "material-rarity-report";
 			material_rarity_report_mode = TRUE;
 			break;
-		}
-		if (!strcmp(argv[i], "--migrate-all"))
-		{
+		case -3:
 			migrate_mode = 1;
 			break;
-		}
-	}
+		case 'f':
+			no_ferries = 1;
+			logit(LOG_STATUS, "Without ferries.");
+			break;
+		case 'l':
+			no_random = 1;
+			// lawful = 1;
+			logit(LOG_STATUS, "Without randoms.");
+			break;
+		case 'd':
+			if (!optarg || !*optarg)
+				fatal_boot_error("comm", "Directory arg expected after option -d.");
 
-	while ((pos < argc) && (*(argv[pos]) == '-'))
-	{
-		if (!strncmp(argv[pos], "--material-rarity-report", strlen("--material-rarity-report")))
-		{
-			if (argv[pos][strlen("--material-rarity-report")] == '\0' && pos + 1 < argc)
-				pos++;
-			pos++;
-			continue;
-		}
-		switch (*(argv[pos] + 1))
-		{
-			case 'f':
-				no_ferries = 1;
-				logit(LOG_STATUS, "Without ferries.");
-				break;
-			case 'l':
-				no_random = 1;
-				// lawful = 1;
-				logit(LOG_STATUS, "Without randoms.");
-				break;
-			case 'd':
-				if (*(argv[pos] + 2))
-					dir = argv[pos] + 2;
-				else if (++pos < argc)
-					dir = argv[pos];
-				else
-				{
-					fatal_boot_error("comm", "Directory arg expected after option -d.");
-				}
-				break;
-			case 's':
-				no_specials = 1;
-				logit(LOG_STATUS, "Suppressing assignment of special routines.");
-				break;
-			case 'p':
-				req_passwd = 0;
-				logit(LOG_STATUS, "Allowing changing of password without old one.");
-				break;
-			case 'm':
-				mini_mode  = 1;
-				no_ferries = 1;
-				logit(LOG_STATUS, "Running in mini mode");
-				break;
-			case 'z':
-				mini_mode = 2;
-				logit(LOG_STATUS, "Running with area debugger on");
-				break;
-			case 'C':
-				// copyover boot - sockets recovered from copyover.dat
-				copyover_boot = 1;
-				logit(LOG_STATUS, "Copyover boot mode");
-				break;
-			default:
-				logit(LOG_STATUS, "Unknown option -% in argument string.", *(argv[pos] + 1));
-				break;
-		}
-		pos++;
-	}
-
-	if (pos < argc)
-	{
-		if (!isdigit(*argv[pos]))
-		{
+			dir = optarg;
+			break;
+		case 's':
+			no_specials = 1;
+			logit(LOG_STATUS, "Suppressing assignment of special routines.");
+			break;
+		case 'p':
+			req_passwd = 0;
+			logit(LOG_STATUS, "Allowing changing of password without old one.");
+			break;
+		case 'm':
+			mini_mode  = 1;
+			no_ferries = 1;
+			logit(LOG_STATUS, "Running in mini mode");
+			break;
+		case 'z':
+			mini_mode = 2;
+			logit(LOG_STATUS, "Running with area debugger on");
+			break;
+		case 'C':
+			// copyover boot - sockets recovered from copyover.dat
+			copyover_boot = 1;
+			logit(LOG_STATUS, "Copyover boot mode");
+			break;
+		default:
 			fatal_boot_error("comm", "Usage: %s [-l] [-m] [-s] [-p] [-f] [-d pathname] [ port # ]", argv[0]);
 		}
-		else if ((port = atoi(argv[pos])) <= 1024)
-		{
-			fatal_boot_error("comm", "Illegal port #");
-		}
-		else
-			sslport = port + 1;
 	}
+
+	if (optind < argc)
+	{
+		if (!isdigit(*argv[optind]))
+			fatal_boot_error("comm", "Port number expected, got '%s'", argv[optind]);
+		if ((port = atoi(argv[optind])) <= 1024 || port > 65535)
+			fatal_boot_error("comm", "Illegal port #");
+		sslport = port + 1;
+		optind++;
+	}
+
+	if (optind < argc)
+	{
+		if (!isdigit(*argv[optind]))
+			fatal_boot_error("comm", "Port number expected, got '%s'", argv[optind]);
+		if ((sslport = atoi(argv[optind])) <= 1024 || sslport > 65535)
+			fatal_boot_error("comm", "Illegal port #");
+		optind++;
+	}
+
 	// Global variable so can check if mainmud or not!
 	RUNNING_PORT = port;
 
