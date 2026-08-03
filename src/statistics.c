@@ -57,7 +57,7 @@ void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
 	FILE      *f;
 	char      *buf = 0;
 
-	ct = time(0);
+	ct = get_time();
 	lt = localtime(&ct);
 	// tmstr = asctime(lt);
 	strftime(mdate, 10, "%Y%m%d", lt);
@@ -209,7 +209,7 @@ void do_statistic(P_char ch, char *argument, int val)
 	FILE                 *f;
 	int                   k = 0;
 
-	ct = time(0);
+	ct = get_time();
 	lt = localtime(&ct);
 	// tmstr = asctime(lt);
 	// create_zone(0);
@@ -500,7 +500,7 @@ int show_moth_stati(P_char ch, char *stati_date, char *argument)
 	FILE                 *f;
 	int                   k = 0;
 
-	ct = time(0);
+	ct = get_time();
 	lt = localtime(&ct);
 	// tmstr = asctime(lt);
 	// create_zone(0);

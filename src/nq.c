@@ -515,7 +515,7 @@ int nq_find_actor(P_char mob, struct nq_quest **quest, struct nq_instance **inst
 			if ((*actor)->ch == mob)
 				return 1;
 		for (*instance = (*quest)->instance; *instance; *instance = (*instance)->next)
-			if ((*instance)->expires < time(0))
+			if ((*instance)->expires < get_time())
 				for (*actor = (*instance)->actor; *actor; *actor = (*actor)->next)
 					if ((*actor)->ch == mob)
 						return 1;
@@ -773,7 +773,7 @@ struct nq_instance *nq_accept_quest(struct nq_quest *quest, P_char ch)
 	CREATE(instance, nq_instance, 1, MEM_TAG_NQINST);
 	memset(instance, 0, sizeof(struct nq_instance));
 	instance->questor = str_dup(ch->player.name);
-	instance->expires = time(0) + quest->duration_minutes * 60;
+	instance->expires = get_time() + quest->duration_minutes * 60;
 
 	for (i = 1; quest->actor_template[i]; i++)
 	{

@@ -397,7 +397,7 @@ bool nexus_stone_touch(P_obj stone, P_char ch)
 		will_turn = true;
 	}
 
-	int time_now = time(NULL);
+	int time_now = get_time();
 
 	if (!IS_TRUSTED(ch) && will_turn && STONE_TURN_TIMER(stone) > (time_now - get_property("nexusStones.turnTimerSecs", 10)))
 	{
@@ -530,7 +530,7 @@ int nexus_stone(P_obj stone, P_char ch, int cmd, char *arg)
 		// find nexus sage; if not there, spawn one
 		P_char sage = get_nexus_sage(STONE_ID(stone));
 
-		int time_now = time(NULL);
+		int time_now = get_time();
 
 		if (!sage && STONE_TURNED(stone) && (STONE_SAGE_TIMER(stone) < (time_now - (int)get_property("nexusStones.sage.respawnWaitSecs", 3600))))
 		{
@@ -1081,7 +1081,7 @@ int nexus_sage_train(P_char ch, P_char pl, char *arg)
 	P_obj ns = get_nexus_stone(stone_id);
 
 	if (ns)
-		STONE_SAGE_TIMER(ns) = time(NULL);
+		STONE_SAGE_TIMER(ns) = get_time();
 
 	return TRUE;
 }
@@ -1127,7 +1127,7 @@ int nexus_sage(P_char ch, P_char pl, int cmd, char *arg)
 			return TRUE;
 		}
 
-		STONE_SAGE_TIMER(ns) = time(NULL);
+		STONE_SAGE_TIMER(ns) = get_time();
 
 		if (ch->specials.alignment > 0)
 		{
@@ -1299,19 +1299,19 @@ bool load_nexus_stone(int stone_id, const char *stone_name, int room_vnum, int a
 
 	if (align <= STONE_ALIGN_EVIL)
 	{
-		STONE_TURN_TIMER(stone) = time(NULL);
+		STONE_TURN_TIMER(stone) = get_time();
 		load_guardian(stone_id, real_room(room_vnum), STONE_ALIGN_EVIL);
 		// load_sage(stone_id, real_room(room_vnum), STONE_ALIGN_EVIL);
 	}
 	else if (align >= STONE_ALIGN_GOOD)
 	{
-		STONE_TURN_TIMER(stone) = time(NULL);
+		STONE_TURN_TIMER(stone) = get_time();
 		load_guardian(stone_id, real_room(room_vnum), STONE_ALIGN_GOOD);
 		// load_sage(stone_id, real_room(room_vnum), STONE_ALIGN_GOOD);
 	}
 	else if (align == 0)
 	{
-		STONE_TURN_TIMER(stone) = time(NULL);
+		STONE_TURN_TIMER(stone) = get_time();
 		load_guardian(stone_id, real_room(room_vnum), 0);
 	}
 

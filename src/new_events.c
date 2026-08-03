@@ -1078,7 +1078,7 @@ void check_nevents()
 		}
 	}
 	if (shown)
-		debug("%ld is current time.", time(NULL));
+		debug("%ld is current time.", get_time());
 }
 
 void event_broken(struct char_link_data *cld)

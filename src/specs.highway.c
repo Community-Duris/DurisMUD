@@ -135,7 +135,7 @@ int amethyst_orb(P_obj obj, P_char ch, int cmd, char *arg)
 
 	if (cmd == CMD_STARE)
 	{
-		int curr_time = time(NULL);
+		int curr_time = get_time();
 
 		if (!obj->value[0])
 		{

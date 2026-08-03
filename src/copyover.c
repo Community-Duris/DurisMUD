@@ -503,7 +503,7 @@ void copyover_save(int mother_desc, int mother_desc_ssl, int ws_desc)
 	memset(&header, 0, sizeof(header));
 	memcpy(header.magic, COPYOVER_MAGIC, 4);
 	header.version         = COPYOVER_VERSION;
-	header.timestamp       = time(NULL);
+	header.timestamp       = get_time();
 	header.num_descriptors = num_descs;
 	header.num_mobs        = num_mobs;
 	header.num_objects     = num_objs;

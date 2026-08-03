@@ -1101,7 +1101,7 @@ void create_saved_corpse(P_obj obj, P_char mob)
 	clone_container_obj(savecorpse, obj);
 	snprintf(buff, MAX_STRING_LENGTH, "%s %s", savecorpse->name, "_savecorpse_");
 	savecorpse->name                 = str_dup(buff);
-	savecorpse->value[CORPSE_SAVEID] = time(NULL);
+	savecorpse->value[CORPSE_SAVEID] = get_time();
 	obj_to_room(savecorpse, real_room(40));
 	affect_from_obj(savecorpse, TAG_OBJ_DECAY);
 	SavedCorpseData savedCorpseData;

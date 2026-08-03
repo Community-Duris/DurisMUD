@@ -160,10 +160,10 @@ int ctf_flag_proc(P_obj flag, P_char ch, int cmd, char *argument)
 	if (cmd == CMD_PERIODIC && OBJ_ROOM(flag) && !OBJ_IN_ROOM(ctfdata[i].obj, real_room0(ctfdata[i].room)))
 	{
 		if (!flag->timer[0])
-			flag->timer[0] = time(NULL);
+			flag->timer[0] = get_time();
 		else
 		{
-			if ((flag->timer[0] + (reset * 60)) <= time(NULL))
+			if ((flag->timer[0] + (reset * 60)) <= get_time())
 			{
 				// Not needed because reload makes us a new flag
 				flag->timer[0] = 0; // But just in case...

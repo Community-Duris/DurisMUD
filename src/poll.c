@@ -186,7 +186,7 @@ static void poll_send_option_results(P_char ch, int opt_num, const char *text, c
 /* format time remaining */
 static void format_time_remaining(time_t expires_at, char *buf, size_t buflen)
 {
-	time_t remaining = expires_at - time(NULL);
+	time_t remaining = expires_at - get_time();
 
 	if (remaining <= 0)
 	{
@@ -244,7 +244,7 @@ vector<poll_data> poll_get_all(bool active_only)
 	{
 		res = db_query("SELECT id, question, created_by, UNIX_TIMESTAMP(created_at), UNIX_TIMESTAMP(expires_at), is_active, multi_select, max_choices "
 		               "FROM polls WHERE is_active = 1 AND expires_at > FROM_UNIXTIME(%ld) ORDER BY id DESC",
-		               (long)time(NULL));
+		               (long)get_time());
 	}
 	else
 	{
@@ -477,7 +477,7 @@ int poll_cast_vote(P_char ch, int poll_id, vector<int> &choices)
 void poll_check_expirations(void)
 {
 #ifndef __NO_MYSQL__
-	qry("UPDATE polls SET is_active = 0 WHERE is_active = 1 AND expires_at < FROM_UNIXTIME(%ld)", (long)time(NULL));
+	qry("UPDATE polls SET is_active = 0 WHERE is_active = 1 AND expires_at < FROM_UNIXTIME(%ld)", (long)get_time());
 #endif
 }
 
@@ -510,7 +510,7 @@ int poll_record_votes(const char *acct_name, const char *char_name, int poll_id,
 		        poll_id,
 		        acct_esc.c_str(),
 		        option_id,
-		        (long)time(NULL),
+		        (long)get_time(),
 		        char_esc.c_str()))
 		{
 			votes_cast++;
@@ -904,7 +904,7 @@ static void poll_wizard_show_summary(P_char ch, poll_wizard_data *wiz)
 		send_to_char("\r\n", ch);
 	}
 
-	time_t duration = wiz->poll.expires_at - time(NULL);
+	time_t duration = wiz->poll.expires_at - get_time();
 	snprintf(buf, MAX_STRING_LENGTH, "&+YDuration:&n %ld hours\r\n", (long)(duration / 3600));
 	send_to_char(buf, ch);
 
@@ -989,8 +989,8 @@ void poll_wizard_handle_input(P_char ch, char *input)
 				send_to_char("Please enter hours between 1 and 720 (30 days max):\r\n", ch);
 				return;
 			}
-			wiz.poll.created_at = time(NULL);
-			wiz.poll.expires_at = time(NULL) + (atoi(arg) * 3600);
+			wiz.poll.created_at = get_time();
+			wiz.poll.expires_at = get_time() + (atoi(arg) * 3600);
 			wiz.state           = POLL_WIZ_OPTIONS;
 			wiz.current_option  = 1;
 			send_to_char("\r\n&+YEnter option 1 (or 'done' when finished adding options):&n\r\n", ch);

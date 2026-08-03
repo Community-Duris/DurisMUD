@@ -286,7 +286,7 @@ int zion_fnf(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "fire"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 1 min timer.
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -303,7 +303,7 @@ int zion_fnf(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		else if (isname(arg, "flame"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 3 min 20 sec timer.
 			if (obj->timer[1] + 200 <= curr_time)
 			{
@@ -421,7 +421,7 @@ int zion_light_dark(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "light") && GET_RACEWAR(ch) != RACEWAR_EVIL)
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -443,7 +443,7 @@ int zion_light_dark(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		else if (isname(arg, "darkness") && GET_RACEWAR(ch) != RACEWAR_GOOD)
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -771,7 +771,7 @@ int zion_netheril(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "blink"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 15-20 sec timer ?
 			if (obj->timer[1] + number(15, 20) <= curr_time)
 			{
@@ -786,7 +786,7 @@ int zion_netheril(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		else if (isname(arg, "deflect"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 500 sec timer == 8 min 20 sec.
 			if (obj->timer[2] + 500 <= curr_time)
 			{
@@ -898,7 +898,7 @@ int zion_mace_of_earth(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "earth"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 1 min timer.
 			if (curr_time >= obj->timer[0] + 60)
 			{

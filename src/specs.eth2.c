@@ -306,7 +306,7 @@ int eth2_godsfury(P_obj obj, P_char ch, int cmd, char *arg)
 			return FALSE;
 		}
 
-		int curr_time = time(NULL);
+		int curr_time = get_time();
 
 		if (!CHAR_IN_NO_MAGIC_ROOM(ch))
 		{
@@ -388,7 +388,7 @@ int eth2_aramus_crown(P_obj obj, P_char ch, int cmd, char *arg)
 		else
 			return FALSE;
 
-		curr_time = time(NULL);
+		curr_time = get_time();
 
 		if (obj->timer[0] + 10 <= curr_time)
 		{

@@ -49,7 +49,7 @@ int ioun_sustenance(P_obj obj, P_char ch, int cmd, char *argument)
 	{
 		if (isname(argument, "feedme"))
 		{
-			int curr_time = time(NULL);
+			int curr_time = get_time();
 
 			if (curr_time >= obj->timer[0] + 60)
 			{
@@ -72,7 +72,7 @@ int ioun_sustenance(P_obj obj, P_char ch, int cmd, char *argument)
 
 int ioun_testicle(P_obj obj, P_char ch, int cmd, char *argument)
 {
-	int    current_time = time(NULL);
+	int    current_time = get_time();
 	P_char next, target, vict;
 	P_obj  pobj, x;
 	int    i;
@@ -175,7 +175,7 @@ int ioun_warp(P_obj obj, P_char ch, int cmd, char *argument)
 	P_char next, target, vict;
 	int    dam;
 
-	int curr_time = time(NULL);
+	int curr_time = get_time();
 	;
 
 	if (cmd == CMD_SET_PERIODIC)

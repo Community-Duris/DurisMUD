@@ -282,7 +282,7 @@ void do_camp(P_char ch, char *arg, int cmd)
 			ch->desc->snoop.snooping = 0;
 		}
 
-		ct = time(NULL);
+		ct = get_time();
 		// Convert to EST.
 		ct -= 4 * 60 * 60;
 		snprintf(timestr, 1024, "%s", asctime(localtime(&ct)));
@@ -3598,7 +3598,7 @@ void do_bug(P_char ch, char *argument, int cmd)
 		return;
 	}
 
-	t = time(0);
+	t = get_time();
 
 	snprintf(buf, MAX_STRING_LENGTH, "%s **%s[%d]: %s\n", ctime(&t), GET_NAME(ch), world[ch->in_room].number, argument);
 
@@ -3650,7 +3650,7 @@ void do_cheat(P_char ch, char *argument, int cmd)
 		send_to_char("Could not open the cheat-file.\r\n", ch);
 		return;
 	}
-	t = time(0);
+	t = get_time();
 	snprintf(Gbuf1, MAX_STRING_LENGTH, "%s &+W%s[%d] reports following cheat:&+r %s&n\n", ctime(&t), GET_NAME(ch), world[ch->in_room].number, argument);
 	fputs(Gbuf1, fl);
 	fclose(fl);
@@ -6315,7 +6315,7 @@ void ascend_theurgist(P_char ch)
 	generate_desc(ch);
 
 	// GET_AGE does not return a changeable variable.
-	ch->player.time.birth = time(NULL) - 500 * SECS_PER_MUD_YEAR;
+	ch->player.time.birth = get_time() - 500 * SECS_PER_MUD_YEAR;
 
 	GET_VITALITY(ch) = GET_MAX_VITALITY(ch) = 120;
 	forget_spells(ch, -1);
@@ -6415,7 +6415,7 @@ void do_ascend(P_char ch, char *arg, int cmd)
 		GET_RACE(ch)               = RACE_AGATHINON;
 		generate_desc(ch);
 		// GET_AGE does not return a changeable variable.
-		ch->player.time.birth = time(NULL) - 500 * SECS_PER_MUD_YEAR;
+		ch->player.time.birth = get_time() - 500 * SECS_PER_MUD_YEAR;
 		ch->player.m_class    = CLASS_AVENGER;
 		do_start(ch, 1);
 		ch->only.pc->epics = MAX(0, ch->only.pc->epics - (int)get_property("ascend.epicCost", 250));
@@ -6879,7 +6879,7 @@ void do_old_descend(P_char ch, char *arg, int cmd)
 		send_to_char("You feel a chill and realize that you are naked.\r\n", ch);
 		generate_desc(ch);
 		// GET_AGE does not return a changeable variable.
-		ch->player.time.birth = time(NULL) - 1 * SECS_PER_MUD_YEAR;
+		ch->player.time.birth = get_time() - 1 * SECS_PER_MUD_YEAR;
 		GET_VITALITY(ch) = GET_MAX_VITALITY(ch) = 120;
 		forget_spells(ch, -1);
 		ch->player.spec            = 0;

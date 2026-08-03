@@ -3560,7 +3560,7 @@ void do_world(P_char ch, char *argument, int cmd)
 	switch (world_values[world_index])
 	{
 		case WORLD_STATS:
-			ct                           = time(0);
+			ct                           = get_time();
 			tmstr                        = asctime(localtime(&ct));
 			*(tmstr + strlen(tmstr) - 1) = '\0';
 			snprintf(buf, MAX_STRING_LENGTH, "Current time is: %s (GMT)\n", tmstr);
@@ -5202,7 +5202,7 @@ void do_score(P_char ch, char *argument, int cmd)
 		}
 		else
 		{
-			ct    = time(0);
+			ct    = get_time();
 			timer = real_time_countdown(ct, af->modifier, 60 * 60 * 24 * 2);
 			snprintf(buf,
 			         MAX_STRING_LENGTH,
@@ -5516,6 +5516,9 @@ void do_score(P_char ch, char *argument, int cmd)
 	send_to_char("\n", ch);
 }
 
+extern int fast;
+extern time_t vtime, vtime0;
+
 void do_time(P_char ch, char *argument, int cmd)
 {
 	char                 *tmstr;
@@ -5575,7 +5578,7 @@ void do_time(P_char ch, char *argument, int cmd)
 	snprintf(Gbuf2, MAX_STRING_LENGTH, "The %d%s Day of the %s, Year %d.\n", day, suf, month_name[time_info.month], (time_info.year + 1000));
 	send_to_char(Gbuf2, ch);
 
-	ct     = time(0);
+	ct     = get_time();
 	uptime = real_time_passed(ct, boot_time);
 
 	// Auto Reboot - Drannak
@@ -5586,7 +5589,7 @@ void do_time(P_char ch, char *argument, int cmd)
 	if ((uptime.day * 24 + uptime.hour) > autoreboot_threshold_hours)
 	{
 		// If no shutdown in progress, or shutdown is > delay minutes out.
-		if (shutdownData.reboot_time == 0 || shutdownData.reboot_time - time(NULL) > autoreboot_delay_minutes * 60)
+		if (shutdownData.reboot_time == 0 || shutdownData.reboot_time - get_time() > autoreboot_delay_minutes * 60)
 		{
 			char shutdown_cmd[100];
 			snprintf(shutdown_cmd, 100, "autoreboot %d", autoreboot_delay_minutes);
@@ -5619,9 +5622,16 @@ void do_time(P_char ch, char *argument, int cmd)
 
 	if (IS_TRUSTED(ch))
 	{
-		snprintf(Gbuf2, MAX_STRING_LENGTH, "Kvark time&n: %ld \n", time(NULL));
+		snprintf(Gbuf2, MAX_STRING_LENGTH, "Kvark time&n: %ld \n", get_time());
 		send_to_char(Gbuf2, ch);
 	}
+
+	if (fast && time(0) != vtime0)
+	{
+		send_to_char_f(ch, "&+YFAST&n mode: &+W%.3f&+wx&n\n",
+			(vtime - vtime0) / (float)(time(0) - vtime0));
+	}
+
 	displayShutdownMsg(ch);
 }
 
@@ -7875,7 +7885,7 @@ void do_ok(P_char ch, char *arg, int cmd)
 	while (isspace(*arg))
 		arg++;
 
-	t = time(0);
+	t = get_time();
 
 	snprintf(Gbuf1, MAX_INPUT_LENGTH, "%s accepted - %s : %s", GET_NAME(t_ch), arg, ctime(&t));
 
@@ -7948,7 +7958,7 @@ void do_punish(P_char ch, char *arg, int cmd)
 		clear_title(t_ch);
 		return;
 	}
-	t = time(0);
+	t = get_time();
 	// Note: ctime contains a carriage return, so nothing after it.
 	snprintf(Gbuf1, MAX_STRING_LENGTH, "&+W%s &+Lpunished&+W %d level%s for: %s -  %s", GET_NAME(t_ch), i, (i > 1) ? "s" : "", arg, ctime(&t));
 
@@ -8055,7 +8065,7 @@ void do_artireset(P_char ch, char *arg, int cmd)
 		}
 
 		//    UpdateArtiBlood(ch, tmp_object, 100);
-		tmp_object->timer[3] = time(NULL);
+		tmp_object->timer[3] = get_time();
 		act("$p is reset.", FALSE, ch, tmp_object, 0, TO_CHAR);
 		tmp_object->value[7] = number(4, 7);
 		wizlog(GET_LEVEL(ch), "%s reset artifact '%s' in [%d]", GET_NAME(ch), tmp_object->short_description, world[ch->in_room].number);
@@ -8447,7 +8457,7 @@ void web_info(void)
 
 	strcat(Gbuf3, Gbuf2);
 
-	ct     = time(0);
+	ct     = get_time();
 	uptime = real_time_passed(ct, boot_time);
 	snprintf(Gbuf2,
 	         MAX_STRING_LENGTH,

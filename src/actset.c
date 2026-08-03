@@ -1473,7 +1473,7 @@ MAKE_COPY_FUNCTION(ubyte)
 static void ac_ageCopy(void *where, int offset, char *value, int bit, int on_off)
 {
 	long   secs;
-	time_t curr_time = time(NULL);
+	time_t curr_time = get_time();
 	P_char ch        = (P_char)where;
 
 	secs                  = (bit /* - 17 */) * SECS_PER_MUD_YEAR;
@@ -1613,7 +1613,7 @@ static void ac_hitmanaCopy(void *where, int offset, char *value, int bit, int on
 // Sets a time_t value.
 static void ac_timerCopy(void *where, int offset, char *value, int time_to_zero, int on_off)
 {
-	// So, we need to add the timer to time(NULL) to get the time when it should end.
+	// So, we need to add the timer to get_time() to get the time when it should end.
 	// And we need to adjust offset to handle the size difference between the time_t and char.
-	*((time_t *)(where) + (sizeof(char) * offset / sizeof(time_t))) = time(NULL) + time_to_zero;
+	*((time_t *)(where) + (sizeof(char) * offset / sizeof(time_t))) = get_time() + time_to_zero;
 }

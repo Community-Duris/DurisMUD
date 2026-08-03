@@ -163,7 +163,7 @@ int illesarus(P_obj obj, P_char ch, int cmd, char *arg)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (!has_skin_spell(ch) && obj->timer[0] + (int)get_property("timer.stoneskin.generic", 60) <= curr_time)
 	{

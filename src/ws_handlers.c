@@ -85,7 +85,7 @@ static int verify_durisweb_sig(const char *sig)
 	if (!secret)
 		return 0;
 
-	time_t now    = time(NULL);
+	time_t now    = time(0);
 	long   minute = now / 60;
 
 	/* check +/- 1 minute for clock skew */

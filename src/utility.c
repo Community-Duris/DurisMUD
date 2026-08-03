@@ -700,7 +700,7 @@ void logit(const char *filename, const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
-	ct = time(0);
+	ct = get_time();
 
 	bzero(tbuf, MAX_STRING_LENGTH);
 
@@ -980,7 +980,7 @@ static unsigned long long persistence_event_time_usec(void)
   struct timeval tv;
 
   if (gettimeofday(&tv, NULL))
-    return (unsigned long long)time(NULL) * 1000000ULL;
+    return (unsigned long long)get_time() * 1000000ULL;
 
   return ((unsigned long long)tv.tv_sec * 1000000ULL) +
          (unsigned long long)tv.tv_usec;
@@ -1351,7 +1351,7 @@ int persistence_quarantine_fallback_events(void)
   }
 
   snprintf(quarantine_path, sizeof(quarantine_path),
-           "%s.pwipe-quarantine.%ld.%ld", LOG_EVENT, (long)time(NULL),
+           "%s.pwipe-quarantine.%ld.%ld", LOG_EVENT, (long)get_time(),
            (long)getpid());
   if (rename(LOG_EVENT, quarantine_path))
   {
@@ -1484,7 +1484,7 @@ int persistence_replay_fallback_events(void)
   }
 
   snprintf(backup_path, sizeof(backup_path), "%s.persistence-replay.%ld.%ld",
-           LOG_EVENT, (long)time(NULL), (long)getpid());
+           LOG_EVENT, (long)get_time(), (long)getpid());
   if (link(LOG_EVENT, backup_path))
   {
     persistence_alert(AVATAR, "persistence_replay", "boot", "none",
@@ -2116,8 +2116,8 @@ struct time_info_data age(P_char ch)
 {
 	struct time_info_data player_age;
 
-	//  player_age = mud_time_passed(time (0), time(0));
-	player_age = mud_time_passed(time(0), ch->player.time.birth);
+	//  player_age = mud_time_passed(time (0), get_time());
+	player_age = mud_time_passed(get_time(), ch->player.time.birth);
 	/* natural
 	 * aging
 	 */
@@ -5091,7 +5091,7 @@ int is_introd(P_char viewee, P_char viewer)
 
 	if (viewer->only.pc->introd_list[mid] == nr)
 	{
-		viewer->only.pc->introd_times[mid] = time(0);
+		viewer->only.pc->introd_times[mid] = get_time();
 		return TRUE;
 	}
 #else
@@ -5140,7 +5140,7 @@ void add_intro(P_char introer, P_char introee)
 			introee->only.pc->introd_list[x - 1]  = introee->only.pc->introd_list[x];
 			introee->only.pc->introd_times[x - 1] = introee->only.pc->introd_times[x];
 			introee->only.pc->introd_list[x]      = GET_PID(introer);
-			introee->only.pc->introd_times[x]     = time(0);
+			introee->only.pc->introd_times[x]     = get_time();
 		}
 		else
 		{
@@ -5153,7 +5153,7 @@ void add_intro(P_char introer, P_char introee)
 	{ /* tack to end */
 		x--;
 		introee->only.pc->introd_list[x]  = GET_PID(introer);
-		introee->only.pc->introd_times[x] = time(0);
+		introee->only.pc->introd_times[x] = get_time();
 	}
 }
 
@@ -5163,7 +5163,7 @@ void purge_old_intros(P_char ch)
 	int temptime, tempnum;
 	int x, currtime;
 
-	currtime = time(0);
+	currtime = get_time();
 
 	for (x = 0; x < MAX_INTRO; x++)
 	{

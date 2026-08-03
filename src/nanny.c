@@ -1697,7 +1697,7 @@ void perform_eq_wipe(P_char ch)
 	if (longestptime < ch->player.time.played)
 	{
 		longestptime = ch->player.time.played;
-		playing_time = real_time_passed((long)((time(0) - ch->player.time.logon) + ch->player.time.played), 0);
+		playing_time = real_time_passed((long)((get_time() - ch->player.time.logon) + ch->player.time.played), 0);
 		snprintf(Gbuf1,
 		         MAX_STRING_LENGTH,
 		         "New Longest Ptime: '%s' %d with %d %dD%dH%dM%dS",
@@ -1792,7 +1792,7 @@ void enter_game(P_desc d)
 	int                  cost;
 	int                  r_room    = NOWHERE;
 	long                 time_gone = 0, hit_g, move_g, heal_time, rest;
-	time_t               ct        = time(NULL);
+	time_t               ct        = get_time();
 	int                  mana_g;
 	char                 Gbuf1[MAX_STRING_LENGTH], timestr[MAX_STRING_LENGTH];
 	bool                 nobonus = FALSE;
@@ -4688,9 +4688,9 @@ void init_char(P_char ch)
 	ch->player.short_descr       = 0;
 	ch->player.long_descr        = 0;
 	ch->player.description       = 0;
-	ch->player.time.birth        = time(0);
+	ch->player.time.birth        = get_time();
 	ch->player.time.played       = 0;
-	ch->player.time.logon        = time(0);
+	ch->player.time.logon        = get_time();
 	ch->only.pc->prestige        = 0; /* clear this early, so we can use as newby timer */
 	ch->only.pc->nb_left_guild   = 0;
 	ch->only.pc->time_left_guild = 0;
@@ -5001,7 +5001,7 @@ void nanny(P_desc d, char *arg)
 			if (*arg == 'y' || *arg == 'Y')
 			{
 				SEND_TO_Q("\r\nEntering new character generation mode.\r\n", d);
-				d->character->only.pc->pc_timer[PC_TIMER_HEAVEN] = time(NULL);
+				d->character->only.pc->pc_timer[PC_TIMER_HEAVEN] = get_time();
 				SEND_TO_Q(namechart, d);
 				STATE(d) = CON_APPROPRIATE_NAME;
 			}
@@ -5262,7 +5262,7 @@ void nanny(P_desc d, char *arg)
 				SEND_TO_Q(
 					"Now you have to wait for your character to be approved by a god.\r\nProcess should not take long.\r\nIf no god is on to approve you, you will &+WNOT&N be auto-approved.\r\n", d);
 				STATE(d)                                         = CON_ACCEPTWAIT;
-				d->character->only.pc->pc_timer[PC_TIMER_HEAVEN] = time(NULL) - d->character->only.pc->pc_timer[PC_TIMER_HEAVEN];
+				d->character->only.pc->pc_timer[PC_TIMER_HEAVEN] = get_time() - d->character->only.pc->pc_timer[PC_TIMER_HEAVEN];
 				newby_announce(d);
 			}
 			else

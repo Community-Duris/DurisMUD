@@ -266,7 +266,7 @@ void cast_channel(int level, P_char ch, char *arg, int type, P_char tar_ch, P_ob
 	P_char t_ch, is_head = get_linked_char(ch, LNK_CONSENT);
 	P_obj  t_obj;
 	int    num_valid_chars = 0, obj_found = FALSE, obj_num;
-	int    curr_time = time(NULL);
+	int    curr_time = get_time();
 
 	switch (type)
 	{

@@ -58,7 +58,7 @@ void ssl_read_cert(void)
 	if (st.st_mtim.tv_sec == cert_time.tv_sec && st.st_mtim.tv_nsec == cert_time.tv_nsec)
 		return;
 
-	printf("[%ld] reading ssl cert: %s key: %s (old_mtime=%ld.%ld new_mtime=%ld.%ld)\n", time(NULL), certfile, keyfile, cert_time.tv_sec, cert_time.tv_nsec, st.st_mtim.tv_sec, st.st_mtim.tv_nsec);
+	printf("[%ld] reading ssl cert: %s key: %s (old_mtime=%ld.%ld new_mtime=%ld.%ld)\n", get_time(), certfile, keyfile, cert_time.tv_sec, cert_time.tv_nsec, st.st_mtim.tv_sec, st.st_mtim.tv_nsec);
 	cert_time = st.st_mtim;
 	if ((err = gnutls_certificate_allocate_credentials(&cred)) < 0 || (err = gnutls_certificate_set_x509_key_file(cred, certfile, keyfile, GNUTLS_X509_FMT_PEM)) < 0 ||
 	    (err = gnutls_certificate_set_known_dh_params(cred, GNUTLS_SEC_PARAM_MEDIUM)) < 0)

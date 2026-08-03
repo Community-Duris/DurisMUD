@@ -279,7 +279,7 @@ static void sql_sync_account_character_cache(P_char ch, int room)
 		{
 			c->last_room = room;
 			c->level     = GET_LEVEL(ch);
-			c->last_save = time(NULL);
+			c->last_save = get_time();
 			break;
 		}
 		c = c->next;
@@ -957,7 +957,7 @@ bool sql_save_player_status(P_char ch, int type, int room)
 		                   room,
 		                   ch->player.time.birth,
 		                   ch->player.time.played,
-		                   (long)time(0),
+		                   (long)get_time(),
 		                   0, //!!! perm_aging
 		                   ch->base_stats.Str,
 		                   ch->base_stats.Dex,
@@ -1099,7 +1099,7 @@ bool sql_save_player_status(P_char ch, int type, int room)
 		                   room,
 		                   ch->player.time.birth,
 		                   ch->player.time.played,
-		                   (long)time(0),
+		                   (long)get_time(),
 		                   0, //!!! perm_aging
 		                   ch->base_stats.Str,
 		                   ch->base_stats.Dex,
@@ -3011,7 +3011,7 @@ bool sql_save_player_pets(P_char ch, int save_type)
 		         GET_MAX_VITALITY(pet),
 		         charm_duration,
 		         room_vnum,
-		         (long)time(0));
+		         (long)get_time());
 
 		if (!sql_run_query(ins_query))
 		{
@@ -3684,7 +3684,7 @@ bool sql_load_player_status(P_char ch, int pid)
 	ch->player.time.birth      = sql_row_long(row, col++, 0);
 	ch->player.time.played     = sql_row_int(row, col++, 0);
 	ch->player.time.saved      = sql_row_long(row, col++, 0);
-	ch->player.time.logon      = time(0);
+	ch->player.time.logon      = get_time();
 	col++; //!!! perm_aging
 
 	// base stats
@@ -7047,7 +7047,7 @@ bool sql_save_corpse(P_obj corpse)
 
 	int save_id = corpse->value[CORPSE_SAVEID];
 	if (save_id == 0)
-		save_id = time(NULL);
+		save_id = get_time();
 
 	int room_vnum = 0;
 	if (OBJ_ROOM(corpse) && corpse->loc.room > NOWHERE && corpse->loc.room <= top_of_world)
@@ -7798,7 +7798,7 @@ bool sql_save_shopkeeper(P_char ch, int shop_nr)
 
 	int  mob_vnum  = mob_index[GET_RNUM(ch)].virtual_number;
 	int  room_vnum = world[ch->in_room].number;
-	long save_time = time(0);
+	long save_time = get_time();
 
 	char del_query[128];
 	snprintf(del_query, sizeof(del_query), "DELETE FROM shopkeepers WHERE shop_id=%d", shop_nr);

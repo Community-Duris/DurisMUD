@@ -383,7 +383,7 @@ int artifact_biofeedback(P_obj obj, P_char ch, int cmd, char *argument)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (obj->timer[0] + get_property("timer.bioIoun", 80) <= curr_time && !has_skin_spell(temp_ch))
 	{
@@ -435,7 +435,7 @@ int artifact_stone(P_obj obj, P_char ch, int cmd, char *argument)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (!has_skin_spell(ch) && obj->timer[0] + (int)get_property("timer.stoneskin.generic", 60) <= curr_time)
 	{
@@ -482,7 +482,7 @@ int artifact_shadow_shield(P_obj obj, P_char ch, int cmd, char *argument)
 		}
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (!has_skin_spell(ch) && obj->timer[0] + (int)get_property("timer.stoneskin.generic", 60) <= curr_time)
 	{
@@ -531,12 +531,12 @@ int charon_ship(P_obj obj, P_char ch, int cmd, char *argument)
 
 	if (!(obj->timer[0]))
 	{
-		obj->timer[0] = time(NULL);
+		obj->timer[0] = get_time();
 	}
 
 	if (OBJ_ROOM(obj))
 	{
-		curr_time = time(NULL);
+		curr_time = get_time();
 		switch (obj->timer[1])
 		{
 			// Beginning state, docked.
@@ -544,7 +544,7 @@ int charon_ship(P_obj obj, P_char ch, int cmd, char *argument)
 				// If 1 minute has passed..
 				if (curr_time > obj->timer[0] + (1 * 60))
 				{
-					obj->timer[0] = time(NULL);
+					obj->timer[0] = get_time();
 					obj->timer[1] = 1;
 					send_to_room("&+LA spectral galleon hoists its anchor, preparing to depart.\n", obj->loc.room);
 				}
@@ -554,7 +554,7 @@ int charon_ship(P_obj obj, P_char ch, int cmd, char *argument)
 				// If 30 sec have passed..
 				if (curr_time > obj->timer[0] + (30))
 				{
-					obj->timer[0] = time(NULL);
+					obj->timer[0] = get_time();
 					if (obj->timer[2])
 					{
 						obj->timer[1] = 3;
@@ -570,7 +570,7 @@ int charon_ship(P_obj obj, P_char ch, int cmd, char *argument)
 				if (galleon_route[obj->timer[2] + 1] == -1)
 				{
 					obj->timer[1] = 4;
-					obj->timer[0] = time(NULL);
+					obj->timer[0] = get_time();
 					send_to_room("&+LA spectral galleon drops its anchor.\n", obj->loc.room);
 					spill = 1;
 				}
@@ -588,7 +588,7 @@ int charon_ship(P_obj obj, P_char ch, int cmd, char *argument)
 				if (!(obj->timer[2]))
 				{
 					obj->timer[1] = 4;
-					obj->timer[0] = time(NULL);
+					obj->timer[0] = get_time();
 					send_to_room("&+LA spectral galleon drops its anchor.\n", obj->loc.room);
 					spill = 1;
 				}
@@ -605,7 +605,7 @@ int charon_ship(P_obj obj, P_char ch, int cmd, char *argument)
 			case 4:
 				if (curr_time > obj->timer[0] + (30))
 				{
-					obj->timer[0] = time(NULL);
+					obj->timer[0] = get_time();
 					obj->timer[1] = 0;
 				}
 				break;
@@ -687,7 +687,7 @@ int pathfinder(P_obj obj, P_char ch, int cmd, char *argument)
 			{
 				return TRUE;
 			}
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			// Every 800 sec.
 			if (obj->timer[0] + 800 <= curr_time)
@@ -739,7 +739,7 @@ int artifact_hide(P_obj obj, P_char ch, int cmd, char *argument)
 			if (!say(ch, arg))
 				return TRUE;
 
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -804,7 +804,7 @@ int artifact_invisible(P_obj obj, P_char ch, int cmd, char *argument)
 			if (!say(ch, arg))
 				return TRUE;
 
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -841,7 +841,7 @@ int transp_tow_misty_gloves(P_obj obj, P_char ch, int cmd, char *argument)
 			{
 				return FALSE;
 			}
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// Every 30 sec.
 			if (obj->timer[0] + 30 <= curr_time && !has_skin_spell(ch))
 			{
@@ -863,7 +863,7 @@ int transp_tow_misty_gloves(P_obj obj, P_char ch, int cmd, char *argument)
 
 	if (argument && (cmd == CMD_RUB))
 	{
-		curr_time = time(NULL);
+		curr_time = get_time();
 
 		act("You rub your gloved hands together.", FALSE, ch, 0, 0, TO_CHAR);
 		act("$n rubs $s gloved hands together.", FALSE, ch, 0, 0, TO_ROOM);
@@ -1957,7 +1957,7 @@ int xmas_cap(P_obj obj, P_char ch, int cmd, char *arg)
 {
 	struct proc_data *data;
 	P_char            victim;
-	int               curr_time = time(NULL);
+	int               curr_time = get_time();
 
 	if (cmd == CMD_SET_PERIODIC)
 	{
@@ -2094,7 +2094,7 @@ int bloodfeast(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (OBJ_WORN(obj) && obj->loc.wearing == ch)
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// Every 30 sec.
 			if (obj->timer[0] + 30 <= curr_time && !has_skin_spell(temp_ch))
 			{
@@ -2193,7 +2193,7 @@ void event_revenant_crown(P_char ch, P_char victim, P_obj obj, void *data)
 		ch->player.race = af->modifier;
 		//    GET_AGE(ch) = racial_data[(int) GET_RACE(ch)].base_age*2;
 		// Set birthdate + base_age + 5 years.
-		ch->player.time.birth = time(NULL);
+		ch->player.time.birth = get_time();
 		// Add base_age to birthdate + base_age + 5 years.
 		ch->player.time.birth -= (racial_data[GET_RACE(ch)].base_age) * SECS_PER_MUD_YEAR;
 		affect_remove(ch, af);
@@ -2291,7 +2291,7 @@ int revenant_helm(P_obj obj, P_char ch, int cmd, char *arg)
 
 	ch->player.race = RACE_REVENANT;
 	// Set birthdate + base_age + 5 years.
-	ch->player.time.birth = time(NULL);
+	ch->player.time.birth = get_time();
 	// Add base_age to birthdate + base_age + 5 years.
 	ch->player.time.birth -= (racial_data[RACE_REVENANT].base_age) * SECS_PER_MUD_YEAR;
 	return TRUE;
@@ -2345,10 +2345,10 @@ void event_dragonlord_check(P_char ch, P_char victim, P_obj obj, void *data)
 	else
 	{
 		ch->player.race       = af->modifier;
-		ch->player.time.birth = time(NULL) - (racial_data[GET_RACE(ch)].base_age) * 2;
+		ch->player.time.birth = get_time() - (racial_data[GET_RACE(ch)].base_age) * 2;
 		//    GET_AGE(ch) = racial_data[(int) GET_RACE(ch)].base_age*2;
 		// Set birthdate + base_age + 5 years.
-		ch->player.time.birth = time(NULL);
+		ch->player.time.birth = get_time();
 		// Add base_age to birthdate + base_age + 5 years.
 		ch->player.time.birth -= (racial_data[GET_RACE(ch)].base_age) * SECS_PER_MUD_YEAR;
 		affect_remove(ch, af);
@@ -2451,10 +2451,10 @@ int dragonlord_plate_old(P_obj obj, P_char ch, int cmd, char *arg)
 
 			temp_ch->player.race = RACE_DRAGONKIN;
 
-			temp_ch->player.time.birth = time(NULL) - (racial_data[RACE_DRAGONKIN].base_age) * 2;
+			temp_ch->player.time.birth = get_time() - (racial_data[RACE_DRAGONKIN].base_age) * 2;
 			//      GET_AGE(temp_ch) += racial_data[RACE_DRAGONKIN].base_age * 2;
 			// Set birthdate + base_age + 5 years.
-			temp_ch->player.time.birth = time(NULL);
+			temp_ch->player.time.birth = get_time();
 			// Add base_age to birthdate + base_age + 5 years.
 			temp_ch->player.time.birth -= (racial_data[RACE_DRAGONKIN].base_age) * SECS_PER_MUD_YEAR;
 
@@ -2475,7 +2475,7 @@ int dragonlord_plate(P_obj obj, P_char ch, int cmd, char *arg)
 
 	if (cmd == CMD_PERIODIC && OBJ_WORN(obj) && (ch = obj->loc.wearing) && IS_ALIVE(obj->loc.wearing))
 	{
-		curr_time = time(NULL);
+		curr_time = get_time();
 		// Every 30 min.
 		if (obj->timer[1] + 1800 <= curr_time && !IS_AFFECTED4(ch, AFF4_STORNOGS_SPHERES))
 		{
@@ -2515,7 +2515,7 @@ int dragonlord_plate_oldold(P_obj obj, P_char ch, int cmd, char *arg)
 		if (OBJ_WORN(obj))
 		{
 			temp_ch   = obj->loc.wearing;
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[1] + 1800 <= curr_time && !IS_AFFECTED4(temp_ch, AFF4_STORNOGS_SPHERES))
 			{
@@ -2551,7 +2551,7 @@ int olympus_portal(P_obj obj, P_char ch, int cmd, char *arg)
 	}
 
 	// Every 30 sec..
-	if (!obj || cmd != CMD_PERIODIC || obj->timer[0] + 30 > time(NULL))
+	if (!obj || cmd != CMD_PERIODIC || obj->timer[0] + 30 > get_time())
 	{
 		return FALSE;
 	}
@@ -2604,7 +2604,7 @@ int olympus_portal(P_obj obj, P_char ch, int cmd, char *arg)
 				portal->value[0] = world[obj->loc.room].number;
 			}
 		}
-		obj->timer[0] = time(NULL);
+		obj->timer[0] = get_time();
 		return TRUE;
 	}
 
@@ -2788,7 +2788,7 @@ int vapor(P_obj obj, P_char ch, int cmd, char *arg)
 	/*
 	  Damage proc on.
 	*/
-	curr_time = time(NULL);
+	curr_time = get_time();
 	if (obj->timer[1] + 30 < curr_time)
 	{
 		if (IS_FIGHTING(ch) && OBJ_WORN(obj))
@@ -3031,7 +3031,7 @@ int golem_chunk(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "slow"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// Every 24 minutes?
 			if (obj->timer[0] + (60 * 24) <= curr_time)
 			{
@@ -3070,7 +3070,7 @@ int good_evil_stoneOrSoulshield(P_obj obj)
 		if (!IS_AFFECTED2(temp_ch, AFF2_SOULSHIELD))
 			spell_soulshield(55, temp_ch, 0, SPELL_TYPE_SPELL, temp_ch, 0);
 	}
-	curr_time = time(NULL);
+	curr_time = get_time();
 	if (obj->timer[0] + 10 <= curr_time && !has_skin_spell(temp_ch))
 	{
 		spell_stone_skin(55, temp_ch, 0, SPELL_TYPE_SPELL, temp_ch, 0);
@@ -3854,7 +3854,7 @@ int sunblade(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (OBJ_WORN(obj) && (ch = obj->loc.wearing))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (!has_skin_spell(ch) && obj->timer[0] + (int)get_property("timer.stoneskin.artifact.sunblade", 30) <= curr_time)
 			{
@@ -4255,7 +4255,7 @@ int sanguine(P_obj obj, P_char ch, int cmd, char *argument)
 			{
 				return TRUE;
 			}
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			// 5 min timer.
 			if (obj->timer[0] + 300 <= curr_time)
@@ -6413,10 +6413,10 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
 	if (type == WATCHING_WALL && cmd >= 1 && cmd < 1000)
 	{
 
-		if (obj->loc_p == LOC_ROOM && ch && !IS_TRUSTED(ch) && (time(NULL) - obj->value[6]) > 10)
+		if (obj->loc_p == LOC_ROOM && ch && !IS_TRUSTED(ch) && (get_time() - obj->value[6]) > 10)
 		{
 
-			obj->value[6] = time(NULL);
+			obj->value[6] = get_time();
 
 			for (illusionist = character_list; illusionist; illusionist = illusionist->next)
 				if (IS_PC(illusionist) && GET_PID(illusionist) == obj->value[5])
@@ -7125,7 +7125,7 @@ int zarbon_shaper(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "blink"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[1] + number(1, 5) <= curr_time)
 			{
@@ -7141,7 +7141,7 @@ int zarbon_shaper(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		else if (isname(arg, "deflect"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[2] + 500 <= curr_time)
 			{
@@ -7160,7 +7160,7 @@ int zarbon_shaper(P_obj obj, P_char ch, int cmd, char *arg)
 		else
 			return FALSE;
 	}
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (obj->timer[0] + number(1, 30) <= curr_time)
 	{
@@ -7411,7 +7411,7 @@ int trans_tower_sword(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "stone"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -7452,7 +7452,7 @@ int trans_tower_sword(P_obj obj, P_char ch, int cmd, char *arg)
 int trans_tower_shadow_globe(P_obj obj, P_char ch, int cmd, char *arg)
 {
 	P_char vict;
-	int    curr_time = time(NULL);
+	int    curr_time = get_time();
 
 	if (cmd == CMD_SET_PERIODIC)
 		return TRUE;
@@ -7515,7 +7515,7 @@ int trans_tower_shadow_globe(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "invisible"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -7649,7 +7649,7 @@ int stat_pool_common(P_obj obj, P_char ch, int cmd, sh_int *statPtr, const char 
 
 			if ((af2 = get_spell_from_char(ch, TAG_POOL)) != NULL)
 			{
-				if ((af2->modifier + (60 * 60 * 24 * 2)) > time(NULL))
+				if ((af2->modifier + (60 * 60 * 24 * 2)) > get_time())
 				{
 					send_to_char("The liquid burns your throat!  Ouch!\n", ch);
 					act("$n reels in pain as $e takes a drink from $p!", FALSE, ch, obj, 0, TO_ROOM);
@@ -7675,7 +7675,7 @@ int stat_pool_common(P_obj obj, P_char ch, int cmd, sh_int *statPtr, const char 
 	af.flags = AFFTYPE_STORE | AFFTYPE_PERM;
 	// af.duration = (int) (get_property("timer.mins.statPool", SECS_PER_REAL_HOUR * 24));
 	af.duration = -1;
-	af.modifier = time(NULL);
+	af.modifier = get_time();
 	affect_to_char(ch, &af);
 
 	act("$n takes a drink from $p.", FALSE, ch, obj, 0, TO_ROOM);
@@ -7732,7 +7732,7 @@ int spell_pool(P_obj obj, P_char ch, int cmd, char *arg)
 
 	if (cmd == CMD_SET_PERIODIC)
 	{
-		curr_time = time(NULL);
+		curr_time = get_time();
 
 		obj->value[0] = rannum;
 		obj->timer[0] = curr_time;
@@ -7742,7 +7742,7 @@ int spell_pool(P_obj obj, P_char ch, int cmd, char *arg)
 
 	spell_func = spells[obj->value[0]];
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (obj->timer[0] + (60 * 40) <= curr_time)
 	{
@@ -8059,7 +8059,7 @@ int splinter(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "splinter"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// Every 15 minutes.
 			if (obj->timer[0] + (60 * 15) <= curr_time)
 			{
@@ -8094,7 +8094,7 @@ int church_door(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "glass"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 15 <= curr_time && !affected_by_spell(ch, SPELL_ARMOR))
 			{
@@ -8234,7 +8234,7 @@ int staff_of_air_conjuration(P_obj obj, P_char ch, int cmd, char *arg)
 		return TRUE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (cmd == CMD_PERIODIC)
 	{
@@ -8309,7 +8309,7 @@ int serpent_of_miracles(P_obj obj, P_char ch, int cmd, char *arg)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 	if (arg && (cmd == CMD_SAY))
 	{
 		if (isname(arg, "wish"))
@@ -8966,7 +8966,7 @@ int guild_badge(P_obj obj, P_char ch, int cmd, char *arg)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 	if (obj->timer[0] <= curr_time)
 	{
 		// Things breaks sometimes...
@@ -9918,7 +9918,7 @@ int dragon_skull_helm(P_obj obj, P_char ch, int cmd, char *argument)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 	if (!IS_ROOM(ch->in_room, ROOM_NO_MAGIC))
 	{
 		// 1 min timer.
@@ -10004,7 +10004,7 @@ int priest_rudder(P_obj obj, P_char ch, int cmd, char *argument)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 	// 2 min timer.
 	if (obj->timer[0] + 120 <= curr_time)
 	{
@@ -10111,7 +10111,7 @@ int alch_bag(P_obj obj, P_char ch, int cmd, char *arg)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 	if (obj->timer[0] + 60 + number(0, 30) <= curr_time)
 	{
 		/* if this somehow works, it is a MIRACLE as I had nothing to copy from */
@@ -10521,7 +10521,7 @@ int out_of_god_bp(P_obj obj, P_char ch, int cmd, char *arg)
 
 int ring_of_regeneration(P_obj obj, P_char ch, int cmd, char *arg)
 {
-	int  curr_time = time(NULL);
+	int  curr_time = get_time();
 	char first_arg[256];
 
 	if (cmd == CMD_SET_PERIODIC)
@@ -10565,7 +10565,7 @@ int ring_of_regeneration(P_obj obj, P_char ch, int cmd, char *arg)
 
 int proc_whirlwinds(P_obj obj, P_char ch, int cmd, char *arg)
 {
-	int curr_time = time(NULL);
+	int curr_time = get_time();
 
 	if (cmd == CMD_SET_PERIODIC)
 	{
@@ -10661,7 +10661,7 @@ int glowing_necklace(P_obj obj, P_char ch, int cmd, char *arg)
 				send_to_char("You're too busy fighting for your life to reach up for your necklace.\n", ch);
 				return FALSE;
 			}
-			curr_time = time(NULL);
+			curr_time = get_time();
 			if ((((obj->timer[0] + (60 * 3)) + number(0, 120)) <= curr_time) || IS_TRUSTED(ch))
 			{
 				// Raise to 100 if you want spec pets to occur
@@ -10846,7 +10846,7 @@ int staff_shadow_summoning(P_obj obj, P_char ch, int cmd, char *arg)
 				send_to_char("You're too busy fighting for your life to worry about that.\n", ch);
 				return FALSE;
 			}
-			curr_time = time(NULL);
+			curr_time = get_time();
 			if (!IS_TRUSTED(ch))
 			{
 				if (obj->value[7] > 100)
@@ -11022,7 +11022,7 @@ int blood_stains(P_obj obj, P_char ch, int cmd, char *argument)
 	// Set the timer when obj is loaded
 	if (cmd == CMD_SET_PERIODIC)
 	{
-		obj->timer[0] = time(NULL);
+		obj->timer[0] = get_time();
 		return TRUE;
 	}
 
@@ -11035,14 +11035,14 @@ int blood_stains(P_obj obj, P_char ch, int cmd, char *argument)
 	if (cmd == CMD_PERIODIC && obj->value[1] < BLOOD_DRY)
 	{
 		// Change it up after 90 seconds
-		if (!IS_SET(obj->extra_flags, ITEM_NOSHOW) && (obj->timer[0] < (time(NULL) - 90)))
+		if (!IS_SET(obj->extra_flags, ITEM_NOSHOW) && (obj->timer[0] < (get_time() - 90)))
 		{
 			SET_BIT(obj->extra_flags, ITEM_NOSHOW);
 			return TRUE;
 		}
 
 		// Change it up after 3 minutes
-		if ((obj->value[1] == BLOOD_FRESH) && (obj->timer[0] < (time(NULL) - 180)))
+		if ((obj->value[1] == BLOOD_FRESH) && (obj->timer[0] < (get_time() - 180)))
 		{
 			snprintf(buf, MAX_STRING_LENGTH, "%s", long_desc_reg[obj->value[0]]);
 			obj->description = str_dup(buf);
@@ -11051,7 +11051,7 @@ int blood_stains(P_obj obj, P_char ch, int cmd, char *argument)
 		}
 
 		// Change it up after 7 minutes
-		if ((obj->value[1] == BLOOD_REG) && (obj->timer[0] < (time(NULL) - 420)))
+		if ((obj->value[1] == BLOOD_REG) && (obj->timer[0] < (get_time() - 420)))
 		{
 			snprintf(buf, MAX_STRING_LENGTH, "%s", long_desc_dry[obj->value[0]]);
 			obj->description = str_dup(buf);
@@ -11376,7 +11376,7 @@ int lyrical_instrument_of_time(P_obj obj, P_char ch, int cmd, char *argument)
 	if (!(obj == temp_ch->equipment[HOLD]))
 		return FALSE;
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (!IS_ROOM(temp_ch->in_room, ROOM_NO_MAGIC))
 	{
@@ -11648,7 +11648,7 @@ int mace_dragondeath(P_obj obj, P_char ch, int cmd, char *arg)
 
 	if (cmd == CMD_PERIODIC && !IS_ROOM(temp_ch->in_room, ROOM_NO_MAGIC))
 	{
-		curr_time = time(NULL);
+		curr_time = get_time();
 
 		if (obj->timer[0] + 60 <= curr_time)
 		{
@@ -12495,10 +12495,10 @@ void apply_zone_spell(P_char ch, int count, const char *zone_name, int zone_inde
 			}
 			break;
 		case SPELL_STONE_SKIN:
-			if (!has_skin_spell(ch) && obj->timer[0] + get_property("timer.stoneskin.generic", 60) < time(NULL))
+			if (!has_skin_spell(ch) && obj->timer[0] + get_property("timer.stoneskin.generic", 60) < get_time())
 			{
 				spell_stone_skin(count * 5, ch, 0, 0, ch, 0);
-				obj->timer[0] = time(NULL);
+				obj->timer[0] = get_time();
 				message       = SETMSG_PROTECT;
 			}
 			break;
@@ -12543,18 +12543,18 @@ void apply_zone_spell(P_char ch, int count, const char *zone_name, int zone_inde
 			}
 			break;
 		case SPELL_CONJURE_ELEMENTAL:
-			if (obj->timer[0] + get_property("timer.conjureElement.generic", 300) < time(NULL))
+			if (obj->timer[0] + get_property("timer.conjureElement.generic", 300) < get_time())
 			{
 				(skills[spell].spell_pointer)(MAX(30, count * 10), ch, 0, 0, ch, 0);
-				obj->timer[0] = time(NULL);
+				obj->timer[0] = get_time();
 				message       = SETMSG_STRENGTH;
 			}
 			break;
 		case SPELL_INVIGORATE:
-			if (obj->timer[0] + get_property("timer.invigorate.generic", 60) < time(NULL) && GET_VITALITY(ch) < GET_MAX_VITALITY(ch))
+			if (obj->timer[0] + get_property("timer.invigorate.generic", 60) < get_time() && GET_VITALITY(ch) < GET_MAX_VITALITY(ch))
 			{
 				(skills[spell].spell_pointer)(MAX(30, count * 10), ch, 0, 0, ch, 0);
-				obj->timer[0] = time(NULL);
+				obj->timer[0] = get_time();
 				message       = SETMSG_STRENGTH;
 			}
 			break;
@@ -13054,7 +13054,7 @@ int bel_sword(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "eld"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 4 min timer.
 			if (obj->timer[0] + 240 <= curr_time)
 			{
@@ -13427,14 +13427,14 @@ int portal_general_internal(P_obj obj, P_char ch, int cmd, char *arg, struct por
 	//--------------------------------
 	// check timers
 	// 1. initial stabilization
-	if ((obj->value[4] > 0) && (time(0) - obj->timer[0]) < obj->value[4])
+	if ((obj->value[4] > 0) && (get_time() - obj->timer[0]) < obj->value[4])
 	{
 		send_to_char(msg->wait_init_to_char, ch);
 		return TRUE;
 	}
 
 	// 2. post enter stabilization
-	if (obj->timer[1] > 0 && obj->value[5] > 0 && (time(0) - obj->timer[1]) < obj->value[5])
+	if (obj->timer[1] > 0 && obj->value[5] > 0 && (get_time() - obj->timer[1]) < obj->value[5])
 	{
 		send_to_char(msg->wait_to_char, ch);
 		return TRUE;
@@ -13472,7 +13472,7 @@ int portal_general_internal(P_obj obj, P_char ch, int cmd, char *arg, struct por
 
 	//------------------------
 	// reset enter stabilization as someone entered
-	obj->timer[1] = time(0);
+	obj->timer[1] = get_time();
 	//------------------------
 
 	// add lag after step out from portal
@@ -13542,7 +13542,7 @@ int mentality_mace(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "mentality"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 5 min timer.
 			if (IS_TRUSTED(ch) || (obj->timer[0] + 300 <= curr_time))
 			{
@@ -13716,7 +13716,7 @@ int resurrect_totem(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "ilienze"))
 		{
-			int curr_time = time(NULL);
+			int curr_time = get_time();
 			// 1 rl hour timer.
 			if (IS_TRUSTED(ch) || (obj->timer[0] + 3600 <= curr_time))
 			{
@@ -13789,7 +13789,7 @@ int blue_sword_armor(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "armor"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (curr_time >= obj->timer[0] + 60)
 			{
@@ -13850,7 +13850,7 @@ int jet_black_maul(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "titan"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (curr_time >= obj->timer[0] + 60)
 			{
@@ -14133,7 +14133,7 @@ int miners_helmet(P_obj obj, P_char ch, int cmd, char *argument)
 		if (!strcmp(arg, "paydirt"))
 		{
 
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			// 10 minute timer = 600 sec.
 			if (obj->timer[0] + 600 <= curr_time)
@@ -14176,7 +14176,7 @@ int thanksgiving_wings(P_obj obj, P_char ch, int cmd, char *argument)
 		}
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (obj->timer[0] + (int)200 <= curr_time)
 	{

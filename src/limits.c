@@ -1511,7 +1511,7 @@ void point_update(void)
 
 	*Gbuf1 = '\0';
 	// Subtract 5 hrs: GMT -> EST.
-	ct = time(0) - 5 * 60 * 60;
+	ct = get_time() - 5 * 60 * 60;
 	snprintf(timestr, MAX_STRING_LENGTH, "%s", asctime(localtime(&ct)));
 	*(timestr + strlen(timestr) - 1) = '\0';
 	strcat(timestr, " EST");

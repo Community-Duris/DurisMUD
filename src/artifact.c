@@ -497,7 +497,7 @@ void list_artifacts_sql(P_char ch, int type, bool Godlist, bool allArtis)
 		// calc TIME fresh from raw timestamp
 		cJSON *timerItem = cJSON_GetObjectItem(item, "timer");
 		long   timer     = timerItem ? (long)timerItem->valuedouble : 0;
-		long   totalTime = timer - time(NULL);
+		long   totalTime = timer - get_time();
 		bool   negTime   = FALSE;
 		if (totalTime < 0)
 		{
@@ -652,15 +652,15 @@ void artifact_feed_to_min_sql(P_obj arti, int min_minutes)
 	}
 
 	// Calculate the minimum time to poof in seconds.
-	to_time = time(NULL) + min_minutes * 60;
+	to_time = get_time() + min_minutes * 60;
 
 	// Arih : Validate to_time to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
 	// When min_minutes is 0 or negative, FROM_UNIXTIME(0) causes MySQL to reject the datetime.
 	// Ensure to_time is never 0 or in the past (MySQL will reject FROM_UNIXTIME(0))
 	if (to_time <= 0)
 	{
-		to_time = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
-		logit(LOG_ARTIFACT, "artifact_feed_to_min_sql: WARNING: to_time was %ld, resetting to current time + 10 days for vnum %d", (long)(time(NULL) + min_minutes * 60), vnum);
+		to_time = get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
+		logit(LOG_ARTIFACT, "artifact_feed_to_min_sql: WARNING: to_time was %ld, resetting to current time + 10 days for vnum %d", (long)(get_time() + min_minutes * 60), vnum);
 	}
 
 	if (!qry("select owned, UNIX_TIMESTAMP(timer) from artifacts where vnum = %d", vnum))
@@ -811,7 +811,7 @@ void artifact_switch_check(P_char ch, P_obj arti)
 	sql_get_bind_data(vnum, &owner_pid, &timer);
 
 	// If a pvp loot happened, and timeframe has passed, set to 0 for binding
-	if ((owner_pid == -1) && (timer + (60 * (int)get_property("artifact.feeding.switch.lootallowance.min", 30)) < time(NULL)))
+	if ((owner_pid == -1) && (timer + (60 * (int)get_property("artifact.feeding.switch.lootallowance.min", 30)) < get_time()))
 	{
 		owner_pid = 0;
 		update    = TRUE;
@@ -832,11 +832,11 @@ void artifact_switch_check(P_char ch, P_obj arti)
 		if (!timer)
 		{
 			logit(LOG_ARTIFACT, "artifact_switch_check: Timer on arti vnum %d was not set.", vnum);
-			timer  = time(NULL);
+			timer  = get_time();
 			update = TRUE;
 		}
 		// Otherwise if the timer is due, set it to the new player
-		else if ((timer + (60 * (int)get_property("artifact.feeding.switch.timer.min", 30))) < time(NULL))
+		else if ((timer + (60 * (int)get_property("artifact.feeding.switch.timer.min", 30))) < get_time())
 		{
 			act("&+L$p &+Lmerges with your &+wsoul&+L.", FALSE, ch, arti, 0, TO_CHAR);
 			owner_pid = GET_PID(ch);
@@ -1050,7 +1050,7 @@ void artifact_update_sql(P_obj arti, char owned, time_t timer)
 		// FROM_UNIXTIME(0) causes MySQL to reject the datetime.
 		if (timer <= 0)
 		{
-			timer = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
+			timer = get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
 			logit(LOG_ARTIFACT, "arti_update_sql (UPDATE): WARNING: timer was %ld, resetting to 10 days for vnum %d", (long)0, vnum);
 		}
 
@@ -1072,7 +1072,7 @@ void artifact_update_sql(P_obj arti, char owned, time_t timer)
 		// FROM_UNIXTIME(0) causes MySQL to reject the datetime.
 		if (timer <= 0)
 		{
-			timer = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
+			timer = get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
 			logit(LOG_ARTIFACT, "arti_update_sql: WARNING: timer was %ld, resetting to 10 days for vnum %d", (long)0, vnum);
 		}
 
@@ -1120,7 +1120,7 @@ void artifact_update_sql(int vnum, bool owned, int locType, int location, time_t
 	// FROM_UNIXTIME(0) causes MySQL to reject the datetime.
 	if (timer <= 0)
 	{
-		timer = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
+		timer = get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
 		logit(LOG_ARTIFACT, "artifact_update_sql: WARNING: timer was %ld, resetting to 10 days for vnum %d", (long)0, vnum);
 	}
 
@@ -1274,7 +1274,7 @@ void artifact_update_location_sql(P_obj arti)
 			if (!timerStarted)
 			{
 				// Set the timer to the max for a newly acquired arti.
-				artidata.timer = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
+				artidata.timer = get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
 			}
 			// PC owner forces a start to timer.
 			artifact_update_sql(arti, 'Y', artidata.timer);
@@ -1367,13 +1367,13 @@ void artifact_feed_sql(P_char owner, P_obj arti, int feed_seconds, bool soulChec
 	}
 
 	// Get data from DB.
-	poof_time = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
+	poof_time = get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
 
 	// Arih : Validate poof_time to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
 	// FROM_UNIXTIME(0) causes MySQL to reject the datetime.
 	if (poof_time <= 0)
 	{
-		poof_time = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
+		poof_time = get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY; // 10 days, not 60 secs
 		logit(LOG_ARTIFACT, "artifact_feed_sql: WARNING: poof_time was %ld, resetting to 10 days for vnum %d", (long)0, vnum);
 	}
 
@@ -1612,7 +1612,7 @@ void artifact_timer_sql(int vnum, char *buffer)
 	{
 		if (artidata.owned)
 		{
-			timer = artidata.timer - time(NULL);
+			timer = artidata.timer - get_time();
 		}
 		else
 		{
@@ -2682,7 +2682,7 @@ void arti_hunt_sql(P_char ch, char *arg)
 					extract_obj(arti2);
 				}
 				// If they managed to get it on pfile and not in DB, give them full timer.
-				artifact_update_sql(arti, 'Y', time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY);
+				artifact_update_sql(arti, 'Y', get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY);
 			}
 			else if (artidata.locType == ARTIFACT_ON_PC || artidata.locType == ARTIFACT_ONCORPSE)
 			{
@@ -2743,7 +2743,7 @@ void arti_hunt_sql(P_char ch, char *arg)
 				{
 					send_to_char("&+WNot yet tracked - adding.&n\n", ch);
 					// If they managed to get it on pfile and not in DB, give them full timer.
-					artifact_update_sql(arti, 'Y', time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY);
+					artifact_update_sql(arti, 'Y', get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY);
 					// If there's one in zone, pull it.
 					if ((arti2 = artifact_find(OBJ_VNUM(arti))))
 					{
@@ -3057,7 +3057,7 @@ void arti_timer_sql(P_char ch, char *arg)
 	}
 	else if (cmd == COMMAND_SET)
 	{
-		new_time = time(NULL) + 60 * minutes;
+		new_time = get_time() + 60 * minutes;
 	}
 	else
 	{
@@ -3066,16 +3066,16 @@ void arti_timer_sql(P_char ch, char *arg)
 	}
 
 	// Minimum of 1 minute.
-	if (new_time < time(NULL))
+	if (new_time < get_time())
 	{
 		send_to_char("&+WNew time is less than &+w0&+W minutes, setting to &+w1&+W minute.&n\n\r", ch);
-		new_time = time(NULL) + 60;
+		new_time = get_time() + 60;
 	}
 	// And max.
-	if (new_time > time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY)
+	if (new_time > get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY)
 	{
 		send_to_char("&+WOops, went a little over max, didn't ya?&n\n\r", ch);
-		new_time = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
+		new_time = get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
 	}
 
 	snprintf(buf, MAX_STRING_LENGTH, "&+WArtifact '&+w%s&+W' &+w%d&+W has had it's timer changed from &n", artishort, vnum);
@@ -3376,7 +3376,7 @@ void event_artifact_check_bind_sql(P_char ch, P_char vict, P_obj obj, void *arg)
 	}
 
 	timer_length = 60 * get_property("artifact.feeding.switch.lootallowance.min", 15);
-	curr_time    = time(NULL);
+	curr_time    = get_time();
 
 	bindData = list = NULL;
 	while ((row = mysql_fetch_row(res)))
@@ -3523,8 +3523,8 @@ void arti_fixit_sql(P_char ch)
 	}
 	mysql_free_result(res);
 
-	new_time  = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
-	curr_time = (int)time(NULL);
+	new_time  = get_time() + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
+	curr_time = (int)get_time();
 
 	counter = 0;
 	// Walk through each arti that's on a PC.
@@ -3882,7 +3882,7 @@ void arti_player_sql(P_char ch, char *arg)
 		{
 			totalTime = 0;
 		}
-		if ((totalTime = atol(row[4]) - time(NULL)) < 0)
+		if ((totalTime = atol(row[4]) - get_time()) < 0)
 		{
 			negTime = TRUE;
 			totalTime *= -1;

@@ -601,7 +601,7 @@ void event_fish_check(P_char ch, P_char victim, P_obj, void *data)
 
 		gain_exp(ch, NULL, (GET_CHAR_SKILL(ch, SKILL_FISHING) * afp->modifier) / 100, EXP_BOON);
 
-		// fish->timer[0] = time(NULL); Fish no longer decay - drannak 5/13/13
+		// fish->timer[0] = get_time(); Fish no longer decay - drannak 5/13/13
 		obj_to_char(fish, ch);
 		return;
 	}

@@ -1460,7 +1460,7 @@ void event_outposts_upkeep(P_char ch, P_char vict, P_obj obj, void *data)
 					if (building->get_guild() == guild)
 					{
 						// give them an hour after boot to get things in order before dropping
-						if (real_time_passed(time(0), boot_time).hour < 1 && real_time_passed(time(0), boot_time).day < 1)
+						if (real_time_passed(get_time(), boot_time).hour < 1 && real_time_passed(get_time(), boot_time).day < 1)
 						{
 							continue;
 						}

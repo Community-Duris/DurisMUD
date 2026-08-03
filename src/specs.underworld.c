@@ -208,7 +208,7 @@ int dragonkind(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "protect me"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 1 min timer.
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -437,7 +437,7 @@ int dragonkind(P_obj obj, P_char ch, int cmd, char *arg)
 
 int lightning(P_obj obj, P_char ch, int cmd, char *arg)
 {
-	int    current_time = time(NULL);
+	int    current_time = get_time();
 	P_char vict;
 
 	if (cmd == CMD_SET_PERIODIC)
@@ -705,7 +705,7 @@ int platemail_of_defense(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "stone"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (curr_time >= obj->timer[0] + 60)
 			{
@@ -788,14 +788,14 @@ int flamberge(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			act("&+LYou whisper 'timeit' to $p&+L.", FALSE, ch, obj, NULL, TO_CHAR);
 			send_to_char_f(ch, "&+rFlamberge&n timer0 is: %10ld = %s", obj->timer[0], asctime(localtime(&obj->timer[0])));
-			curr_time = time(NULL) - obj->timer[0];
+			curr_time = get_time() - obj->timer[0];
 			send_to_char_f(ch, "  diff of timer0 is: %10ld = &+G%02d&+Lm &+G%02ld&+Ls&n\n", curr_time, curr_time / 60, curr_time % 60);
 			return TRUE;
 		}
 		if (!strcmp(arg, "efreeti") && OBJ_WORN_BY(obj, ch))
 		{
 			do_say(ch, arg, CMD_SAY);
-			curr_time = time(NULL);
+			curr_time = get_time();
 			if (obj->timer[0] + 300 <= curr_time)
 			{
 				if (GET_RACEWAR(ch) == RACEWAR_GOOD)
@@ -912,7 +912,7 @@ int doombringer(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "stone"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 60 sec timer.
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -1062,7 +1062,7 @@ int mace(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "stone"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (curr_time >= obj->timer[0] + 60)
 			{
@@ -1079,7 +1079,7 @@ int mace(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		else if (isname(arg, "invisible"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (curr_time >= obj->timer[1] + 60)
 			{
@@ -1290,7 +1290,7 @@ int avernus(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "stone"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -1350,7 +1350,7 @@ int purple_worm(P_char ch, P_char pl, int cmd, char *arg)
 		for (obj = ch->carrying; obj; obj = obj->next_content)
 		{
 			// 10% chance to poop a PC corpse. average digest time == 1 min + 5*6 sec == 1 1/2 min.
-			if (obj->type == ITEM_CORPSE && IS_SET(obj->value[1], PC_CORPSE) && obj->timer[0] < time(NULL) && !number(0, 9))
+			if (obj->type == ITEM_CORPSE && IS_SET(obj->value[1], PC_CORPSE) && obj->timer[0] < get_time() && !number(0, 9))
 			{
 				obj_from_char(obj);
 				obj_to_room(obj, ch->in_room);
@@ -1425,7 +1425,7 @@ int purple_worm(P_char ch, P_char pl, int cmd, char *arg)
 							{
 								writeCorpse(obj);
 								// Corpse is digested for a minute
-								obj->timer[0] = 60 + time(NULL);
+								obj->timer[0] = 60 + get_time();
 							}
 						}
 					}
@@ -2952,7 +2952,7 @@ int barb(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "power"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 1 min timer.
 			if ((obj->timer[0] + 60 <= curr_time) && (GET_RACE(ch) == RACE_BARBARIAN))
 			{
@@ -3595,7 +3595,7 @@ int gfstone(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "stone"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// Every 1 min.
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -3848,7 +3848,7 @@ int SeaKingdom_Tsunami(P_obj obj, P_char ch, int cmd, char *arg)
 
 	if (arg && (isname(arg, "trident") || isname(arg, "tsunami")))
 	{
-		time_t curr_time = time(NULL);
+		time_t curr_time = get_time();
 
 		if (cmd == CMD_TAP)
 		{
@@ -4267,7 +4267,7 @@ int Einjar(P_obj obj, P_char ch, int cmd, char *arg)
 
 	if (cmd == CMD_SAY && arg && isname(arg, "Einjar"))
 	{
-		curr_time = time(NULL);
+		curr_time = get_time();
 		// 3 min timer.
 		if (obj->timer[0] + 180 <= curr_time)
 		{

@@ -1369,7 +1369,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
 	    send_to_char
 	          ("The &+Radrenaline&n is pumping through you like mad, this sure is exhausting...&n\n", ch);
 
-	    if(IS_PC(ch) &&  IS_THIEF(ch) && ( ch->only.pc->pc_timer[1] + 3 > time(NULL) ) )
+	    if(IS_PC(ch) &&  IS_THIEF(ch) && ( ch->only.pc->pc_timer[1] + 3 > get_time() ) )
 	      send_to_char
 	                ("...but as the master of close combat, you take no notice!!&n\n", ch);
 	    else
@@ -1380,7 +1380,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
 	/* pc_timer[1] gets set on successful flee */
 	/*
 	 if( IS_PC(ch) &&
-	     (ch->only.pc->pc_timer[1] + (IS_THIEF(ch) ? 5 : 10) > time(NULL)))
+	     (ch->only.pc->pc_timer[1] + (IS_THIEF(ch) ? 5 : 10) > get_time()))
 	 {
 	   if( need_movement < 4)
 	     need_movement += 4;

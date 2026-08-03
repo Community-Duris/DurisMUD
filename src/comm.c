@@ -110,7 +110,7 @@ bool game_booted  = FALSE;
 
 void request_shutdown(int shutdown_type, const char *issuer, const char *reason)
 {
-	shutdownData.reboot_time  = time(0);
+	shutdownData.reboot_time  = get_time();
 	shutdownData.next_warning = -1;
 	snprintf(shutdownData.IssuedBy, sizeof(shutdownData.IssuedBy), "%s", issuer ? issuer : "Launcher");
 	snprintf(shutdownData.Reason, sizeof(shutdownData.Reason), "%s", reason ? reason : "signal from launcher");
@@ -176,6 +176,8 @@ struct mm_ds         *dead_desc_pool = NULL;
 int                   RUNNING_PORT   = 0;
 int                   no_random      = 0;
 int                   no_ferries     = 0;
+int                   fast           = 0;
+time_t                vtime, vtime0;
 
 // copyover support
 int        copyover_boot             = 0;
@@ -228,10 +230,11 @@ int main(int argc, char **argv)
 			{"area-debug",             0, 0, 'z'},
 			{"copyover",               0, 0, 'C'},
 			{"random-seed",            1, 0, 'R'},
+			{"fast",                   0, 0, 'F'},
 			{0}
 		};
 
-		int c = getopt_long(argc, argv, "fld:spmzCR:",
+		int c = getopt_long(argc, argv, "fld:spmzCR:F",
                              long_options, &option_index);
 		if (c == -1)
 			break;
@@ -291,6 +294,10 @@ int main(int argc, char **argv)
 				seed = hash64(seed) ^ *optarg;
 			randomize(seed);
 			logit(LOG_STATUS, "Seeded random mode.");
+			break;
+		case 'F':
+			fast = 1;
+			logit(LOG_STATUS, "No delay mode.  Gotta go fast!");
 			break;
 		default:
 			fatal_boot_error("comm", "Usage: %s [-l] [-m] [-s] [-p] [-f] [-d pathname] [ port # ]", argv[0]);
@@ -369,11 +376,19 @@ int main(int argc, char **argv)
 
 	load_event_names();
 
+	vtime0 = vtime = time(0);
 	init_cmdlog(); /* init cmd.debug file - DCL */
 
 	run_the_game(port, sslport);
 
 	return (0);
+}
+
+time_t get_time(void)
+{
+	if (fast)
+		return vtime;
+	return time(0);
 }
 
 // all text meant to go to executing_ch - a player whos command
@@ -829,7 +844,7 @@ void game_loop(int port, int sslport)
 	copyover_boot   = 0;
 	copyover_clear_boot();
 
-	long    last_desc_per_hour_reset = time(0);
+	long    last_desc_per_hour_reset = get_time();
 	clock_t loop_time_end;
 	/* Main loop */
 	while (!shutdownflag)
@@ -846,10 +861,10 @@ void game_loop(int port, int sslport)
 		//PROFILE_END(process_signal_shutdown_pending);
 		checkpointing();
 
-		if ((last_desc_per_hour_reset + 3600) <= time(0))
+		if ((last_desc_per_hour_reset + 3600) <= get_time())
 		{
 			max_descs_this_hour = used_descs;
-			last_desc_per_hour_reset = time(0);
+			last_desc_per_hour_reset = get_time();
 		}
 		/*
 		    struct host_answer host_ans_buf;
@@ -1355,6 +1370,8 @@ void game_loop(int port, int sslport)
 			debug("Huge value for tics, resetting to 1.");
 			logit(LOG_SYS, "Huge value for tics, resetting to 1.");
 		}
+		if (!(pulse & 3))
+			vtime++;
 		pulse++;
 		after_events_call = FALSE;
 		clock_t affect_and_points_begin = clock();
@@ -1388,7 +1405,7 @@ void game_loop(int port, int sslport)
 		suseconds_t usec_spent = (suseconds_t)(loop_time * 1000 * 1000);
 		timeout.tv_usec = MAX(0, timeout.tv_usec - usec_spent);
 
-		if (timeout.tv_sec || timeout.tv_usec)
+		if ((timeout.tv_sec || timeout.tv_usec) && !fast)
 		{
 
 			/*

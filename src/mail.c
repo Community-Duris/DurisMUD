@@ -348,7 +348,7 @@ void store_mail(char *to, char *from, char *message_pointer)
 	strlcpy(header.to, to, sizeof header.to);
 	/*  tmp = str_dup(header.to);
 	 *tmp = LOWER(*tmp);*/
-	header.mail_time                  = time(0);
+	header.mail_time                  = get_time();
 	header.txt[HEADER_BLOCK_DATASIZE] = header.from[NAME_SIZE] = header.to[NAME_SIZE] = '\0';
 
 	target_address = pop_free_list(); /* find next free block */
@@ -621,7 +621,7 @@ void do_mail(P_char ch, char *arg, int cmd)
 		return;
 	}
 
-	int curr_time = time(NULL);
+	int curr_time = get_time();
 
 	P_obj furnace, new_obj;
 	if (curr_time < (1135362289 + 60 * 60 * 24 * 2))

@@ -333,7 +333,7 @@ int writeStatus(char *buf, P_char ch, bool updateTime)
 	ADD_LONG(buf, ch->player.time.birth);
 	if (updateTime)
 	{
-		tmpl = time(0);
+		tmpl = get_time();
 		tmp  = ch->player.time.played + (int)(tmpl - ch->player.time.logon);
 		ADD_INT(buf, tmp);   /* player age in secs */
 		ADD_LONG(buf, tmpl); /* last save time */
@@ -1209,7 +1209,7 @@ void writeCorpse(P_obj corpse)
 	}
 
 	if (corpse->value[CORPSE_SAVEID] == 0)
-		corpse->value[CORPSE_SAVEID] = time(NULL);
+		corpse->value[CORPSE_SAVEID] = get_time();
 
 	if (!sql_save_corpse(corpse))
 	{
@@ -1322,7 +1322,7 @@ static int persistence_write_character_flat_fallback(P_char ch, int type, int ro
 	ADD_INT(buf, (int)0);
 	ADD_INT(buf, (ch->specials.act3));
 	ADD_INT(buf, room);
-	ADD_LONG(buf, time(0));
+	ADD_LONG(buf, get_time());
 
 	buf += writeStatus(buf, ch, ((type != RENT_POOFARTI) && (type != RENT_SWAPARTI) && (type != RENT_FIGHTARTI)) ? TRUE : FALSE);
 	ADD_INT(skill_off, (int)(buf - fallback_buff));
@@ -1933,7 +1933,7 @@ int restoreStatus(char *buf, P_char ch)
 	ch->player.time.birth      = GET_LONG(buf);
 	ch->player.time.played     = GET_INTE(buf);
 	ch->player.time.saved      = GET_LONG(buf); /* last save time */
-	ch->player.time.logon      = time(0);       /* set it */
+	ch->player.time.logon      = get_time();       /* set it */
 	GET_SHORT(buf); //!!! oerm_aging
 	for (i = 0; i < MAX_CIRCLE + 1; i++)
 		ch->specials.undead_spell_slots[i] = GET_BYTE(buf);
@@ -2120,7 +2120,7 @@ int restoreStatus(char *buf, P_char ch)
 			GET_A_BITS(ch) = 0;
 			GET_INTE(buf);
 			// Set time left guild to now
-			GET_TIME_LEFT_GUILD(ch) = time(0);
+			GET_TIME_LEFT_GUILD(ch) = get_time();
 			GET_LONG(buf);
 			// Increment number of times left guild.
 			GET_NB_LEFT_GUILD(ch) = GET_BYTE(buf) + 1;
@@ -3966,7 +3966,7 @@ int writePet(P_char ch)
 	ADD_INT(buf, (int)0);
 	ADD_INT(buf, mob_index[GET_RNUM(ch)].virtual_number);
 
-	ADD_LONG(buf, time(0)); /* save time */
+	ADD_LONG(buf, get_time()); /* save time */
 
 	/* unequip everything and remove affects before saving */
 
@@ -4164,7 +4164,7 @@ int restorePetStatus(char *buf, P_char ch)
 	mob_index[GET_RNUM(ch)].virtual_number = GET_INTE(buf);
 	GET_BIRTHPLACE(ch)                     = GET_INTE(buf);
 
-	ch->player.time.birth = time(0);
+	ch->player.time.birth = get_time();
 	ch->base_stats.Str    = (ubyte)GET_BYTE(buf);
 	ch->base_stats.Dex    = (ubyte)GET_BYTE(buf);
 	ch->base_stats.Agi    = (ubyte)GET_BYTE(buf);

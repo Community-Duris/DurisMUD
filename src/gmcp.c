@@ -51,7 +51,7 @@ static int verify_durisweb_sig(const char *sig)
 	if (!secret)
 		return 0;
 
-	time_t now    = time(NULL);
+	time_t now    = time(0);
 	long   minute = now / 60;
 
 	for (int offset = 0; offset <= 1; offset++)

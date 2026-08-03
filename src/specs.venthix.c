@@ -135,7 +135,7 @@ int roulette_pistol(P_obj obj, P_char ch, int cmd, char *arg)
 // 67282 &+mt&+Mh&+me &+Mo&+mr&+Mb &+mo&+Mf &+md&+Me&+mc&+Me&+mp&+Mt&+mi&+Mo&+mn
 int orb_of_deception(P_obj obj, P_char ch, int cmd, char *arg)
 {
-	int curr_time = time(NULL);
+	int curr_time = get_time();
 
 	if (cmd == CMD_SET_PERIODIC)
 	{
@@ -157,7 +157,7 @@ int orb_of_deception(P_obj obj, P_char ch, int cmd, char *arg)
 				act("&+L$n&+L's $p &+Lbegins to vibrate.", FALSE, ch, obj, 0, TO_ROOM);
 				act("&+LYour $p &+Lbegins to vibrate.", FALSE, ch, obj, 0, TO_CHAR);
 				spell_mirage(51, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-				obj->timer[0] = time(NULL);
+				obj->timer[0] = get_time();
 				return TRUE;
 			}
 		}
@@ -624,7 +624,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
 				{
 					// set game to standby mode to setup the next round
 					obj->value[ZOMBIES_STATUS] = 2;
-					obj->timer[ZTIMER_STANDBY] = time(NULL);
+					obj->timer[ZTIMER_STANDBY] = get_time();
 					snprintf(buff, MAX_STRING_LENGTH, "&+WYou've completed round &+c%d&+W.  Prepare for the next round.&n\r\n", obj->value[ZOMBIES_LEVEL]);
 					send_to_zone(zone, buff);
 					return TRUE;
@@ -643,7 +643,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
 			else
 			{
 				// Load zombies!!!
-				if ((obj->timer[ZTIMER_WAVE] + (int)get_property("zombies.game.spawn.delay", 30) <= time(NULL)) || (!zombies && !number(0, 2)))
+				if ((obj->timer[ZTIMER_WAVE] + (int)get_property("zombies.game.spawn.delay", 30) <= get_time()) || (!zombies && !number(0, 2)))
 				{
 					obj->value[ZOMBIES_WAVE]++;
 					// Waves handling
@@ -677,7 +677,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
 					num = BOUNDED(1, num, zgame->zombies_to_load);
 					if (num)
 					{
-						obj->timer[ZTIMER_WAVE] = time(NULL);
+						obj->timer[ZTIMER_WAVE] = get_time();
 					}
 					debug("loading %d zombies", num);
 					for (int i = 0; i < num; i++)
@@ -694,7 +694,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		int delay = BOUNDED(10, (int)get_property("zombies.game.standby.delay", 15) * (obj->value[ZOMBIES_LEVEL] / 10), 120);
 		// If 2 minutes have passed and we are in standby mode begin next round
-		if (obj->value[ZOMBIES_STATUS] == 2 && (obj->timer[ZTIMER_STANDBY] + delay) <= time(NULL))
+		if (obj->value[ZOMBIES_STATUS] == 2 && (obj->timer[ZTIMER_STANDBY] + delay) <= get_time())
 		{
 			obj->timer[ZTIMER_STANDBY] = 0;
 			obj->timer[ZTIMER_WAVE]    = 0;
@@ -722,7 +722,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			// set game to standby mode to setup the next round
 			obj->value[ZOMBIES_STATUS] = 2;
-			obj->timer[ZTIMER_STANDBY] = time(NULL) - (10); // should be 10 seconds to start
+			obj->timer[ZTIMER_STANDBY] = get_time() - (10); // should be 10 seconds to start
 			send_to_zone(zone, "&+WThe game has started.&n\r\n");
 			return TRUE;
 		}

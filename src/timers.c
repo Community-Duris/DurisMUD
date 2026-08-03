@@ -6,6 +6,8 @@
 #include "sql.h"
 #include "utility.h"
 
+extern time_t get_time();
+
 #ifdef __NO_MYSQL__
 void set_timer(const char *name) {}
 
@@ -13,7 +15,7 @@ void set_timer(const char *name, int date) {}
 
 int get_timer(const char *name) { return 0; }
 #else
-void set_timer(const char *name) { set_timer(name, time(NULL)); }
+void set_timer(const char *name) { set_timer(name, get_time()); }
 
 void set_timer(const char *name, int date)
 {
@@ -53,7 +55,7 @@ bool has_elapsed(const char *name, int seconds)
 {
 	int timer = get_timer(name);
 
-	if (time(NULL) > (timer + seconds))
+	if (get_time() > (timer + seconds))
 	{
 		return TRUE;
 	}

@@ -735,7 +735,7 @@ void Guild::kick(P_char ch)
 	frag_remove(ch);
 	GET_ASSOC(ch) = NULL;
 	GET_NB_LEFT_GUILD(ch) += 1;
-	GET_TIME_LEFT_GUILD(ch) = time(NULL);
+	GET_TIME_LEFT_GUILD(ch) = get_time();
 	SET_NO_THANKS(GET_A_BITS(ch));
 	clear_title(ch);
 
@@ -1659,7 +1659,7 @@ void do_society(P_char member, char *argument, int cmd)
 		}
 		temp_time += SECS_PER_REAL_DAY * get_property("guild.secede.delay.days", 2);
 
-		if (time(NULL) >= temp_time)
+		if (get_time() >= temp_time)
 		{
 			send_to_char("Look like you can join another guild!\n", member);
 			SET_NO_THANKS(GET_A_BITS(member));
@@ -2578,7 +2578,7 @@ void Guild::secede(P_char member)
 
 	GET_ASSOC(member) = NULL;
 	GET_NB_LEFT_GUILD(member) += 1;
-	GET_TIME_LEFT_GUILD(member) = time(NULL);
+	GET_TIME_LEFT_GUILD(member) = get_time();
 	SET_NO_THANKS(GET_A_BITS(member));
 	clear_title(member);
 

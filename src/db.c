@@ -407,7 +407,7 @@ void boot_db(int mini_mode)
 {
 	logit(LOG_STATUS, "Boot db -- BEGIN.");
 	fprintf(stderr, "\nBoot db -- BEGIN.\r\n");
-	boot_time = time(0);
+	boot_time = get_time();
 
 	logit(LOG_STATUS, "Resetting the game time:");
 	fprintf(stderr, "Resetting the game time:\r\n");
@@ -734,7 +734,7 @@ void reset_time(void)
 {
 	long beginning_of_time = 650336715;
 
-	time_info = mud_time_passed(time(0), beginning_of_time);
+	time_info = mud_time_passed(get_time(), beginning_of_time);
 
 	logit(LOG_STATUS,
 	      "   Current Gametime:  %d/%d/%d  %d%s",
@@ -2315,9 +2315,9 @@ P_char read_mobile(int nr, int type)
 
 	if (letter == 'S')
 	{
-		mob->player.time.birth  = time(0);
+		mob->player.time.birth  = get_time();
 		mob->player.time.played = 0;
-		mob->player.time.logon  = time(0);
+		mob->player.time.logon  = get_time();
 
 		for (i = 0; i < 3; i++)
 			GET_COND(mob, i) = -1;
@@ -2448,9 +2448,9 @@ P_char read_mobile(int nr, int type)
 #endif
 
 		fscanf(mob_f, " %ld ", &tmp);
-		mob->player.time.birth  = time(0);
+		mob->player.time.birth  = get_time();
 		mob->player.time.played = 0;
-		mob->player.time.logon  = time(0);
+		mob->player.time.logon  = get_time();
 
 		fscanf(mob_f, " %ld ", &tmp); /* weight */
 
@@ -2915,7 +2915,7 @@ P_obj read_object(int nr, int type)
 	  add_event(event_artifact_poof, 2 * WAIT_SEC, 0, 0, obj, 0, 0, 0);
 	  // Set current timer?  Not necessary as event_artifact_poof will fix it?
 	  //   Not really sure atm.. will test this and see what happens...
-	  obj->timer[3] = time(NULL);
+	  obj->timer[3] = get_time();
 	}
 	*/
 
@@ -3084,7 +3084,7 @@ void reset_zone(int zone, int force_item_repop)
 						}
 						obj_to_obj(obj, obj_to);
 						// Artifact poof timer to BLOOD_DAYS * secs in a day.
-						obj->timer[3] = time(NULL);
+						obj->timer[3] = get_time();
 						last_cmd      = 1;
 						break;
 					}
@@ -3143,7 +3143,7 @@ void reset_zone(int zone, int force_item_repop)
 
 					obj_to_room(obj, ZCMD.arg3);
 					// Artifact poof timer to BLOOD_DAYS * secs in a day.
-					obj->timer[3] = time(NULL);
+					obj->timer[3] = get_time();
 					last_cmd      = 1;
 
 					break;

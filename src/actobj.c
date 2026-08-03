@@ -578,7 +578,7 @@ static void do_get_finalize_container_success(P_char ch, P_char hood, P_obj s_ob
 				{
 					int vnum      = OBJ_VNUM(o_obj);
 					int owner_pid = -1;
-					int timer     = time(NULL);
+					int timer     = get_time();
 					// This sets the 'soul' of the artifact to the new owner.
 					sql_update_bind_data(vnum, &owner_pid, &timer);
 					// Feed artifact to at least the minimum for across racewar sides.
@@ -3272,7 +3272,7 @@ void do_eat(P_char ch, char *argument, int cmd)
 		return;
 	}
 
-	if ((temp->value[1] < 0 || (temp->timer[0] && (time(NULL) - temp->timer[0] > 1 * 60 * 10))) && !IS_TRUSTED(ch))
+	if ((temp->value[1] < 0 || (temp->timer[0] && (get_time() - temp->timer[0] > 1 * 60 * 10))) && !IS_TRUSTED(ch))
 	{
 		act("That stinks, find some fresh food instead.", FALSE, ch, 0, 0, TO_CHAR);
 		return;
