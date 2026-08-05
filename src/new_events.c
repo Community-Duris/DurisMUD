@@ -1245,7 +1245,7 @@ void show_world_events(P_char ch, const char *arg)
 #ifdef DO_PROFILE
 
 PROFILES(DEFINE);
-bool do_profile = TRUE;
+bool do_profile = false;;
 
 void save_profile_data(const char *name, double total_inside, double total_outside, unsigned total)
 {
