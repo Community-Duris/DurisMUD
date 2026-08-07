@@ -884,7 +884,11 @@ static int sp_do_command(P_char ch, const char *line)
 	/* never let data reach a trusted command */
 	if (cmd_info[cmd].minimum_level > 0 || cmd_info[cmd].grantable)
 		return FALSE;
-	if (GET_POS(ch) < cmd_info[cmd].minimum_position)
+	/* minimum_position packs STAT_* bits above a POS_* in the low two
+	   bits; GET_POS() is masked &3 and never exceeds POS_STANDING, so a
+	   raw compare refuses every command.  Gate the way interp.c's own
+	   command loop does: MIN_POS() checks each half against its mask. */
+	if (!MIN_POS(ch, cmd_info[cmd].minimum_position))
 		return FALSE;
 
 	(*cmd_info[cmd].command_pointer)(ch, rest, cmd);
