@@ -262,7 +262,8 @@ OBJS =  $(SHIP_OBJS) \
 				 json_utils.o \
 				 gmcp.o \
 				 ttype.o \
-				 wiz_newchar.o
+				 wiz_newchar.o \
+				 zcheck.o
 
 
 # Name lists (no paths) for pfile-related objs

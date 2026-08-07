@@ -229,6 +229,7 @@ void        do_hlist(P_char, char *, int);
 void        do_rlist(P_char, char *, int);
 void        do_olist(P_char, char *, int);
 void        do_mlist(P_char, char *, int);
+void        do_zcheck(P_char, char *, int);
 
 // void do_resetspec(P_char, char *, int);
 /* actmove.c */
