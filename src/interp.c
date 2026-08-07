@@ -1102,7 +1102,8 @@ const char *command[MAX_CMD] = {
 	"redis",
 	"mixpoison",
 	"divineclaim",
-	"\n" /* MAX_CMD = 855, MAX_CMD_LIST = 1000 */
+	"zcheck",
+	"\n" /* MAX_CMD = 856, MAX_CMD_LIST = 1000 */
 };
 
 const char *fill_words[] = {"in", "from", "with", "the", "on", "at", "to", "\n"};
@@ -2807,6 +2808,7 @@ void assign_command_pointers(void)
 	CMD_Y(CMD_HLIST, STAT_DEAD + POS_PRONE, do_hlist, IMMORTAL, FALSE);
 	CMD_Y(CMD_OLIST, STAT_DEAD + POS_PRONE, do_olist, IMMORTAL, FALSE);
 	CMD_Y(CMD_MLIST, STAT_DEAD + POS_PRONE, do_mlist, IMMORTAL, FALSE);
+	CMD_Y(CMD_ZCHECK, STAT_DEAD + POS_PRONE, do_zcheck, IMMORTAL, FALSE);
 	CMD_N(CMD_POLL, STAT_NORMAL + POS_PRONE, do_poll, 30, FALSE);
 	CMD_GRT(CMD_NEWCHAR, STAT_DEAD + POS_PRONE, do_newchar, OVERLORD);
 
