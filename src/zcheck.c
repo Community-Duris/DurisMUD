@@ -55,10 +55,13 @@
  *       room VNUM, value[2] the direction (specs.object.c:1361/:1368).
  *       do_search cannot even reveal a secret exit while it is blocked
  *       (actobj.c:5849 skips EX_BLOCKED).
- *     - reset choreography: an E (or G) before any M/Y/F/R has no mob to
- *       receive the object - reset_zone reads the object anyway and then
- *       only logs (db.c:3471/:3482): the item is left in limbo, never
- *       equipped.  A P into a non-container is refused by obj_can_nest
+ *     - reset choreography: whether an E (or G) has a mob to receive its
+ *       object is a question about reset_zone's RUNNING STATE, not about
+ *       what appears earlier in the zone file - so section 5 replays that
+ *       state machine (the zc_state walk below, db.c:2979/:2998).  When no
+ *       mob is live the object is read anyway and only logged
+ *       (db.c:3481/:3412): left in limbo, never equipped.
+ *       A P into a non-container is refused by obj_can_nest
  *       (handler.c:2519; the container-type test at handler.c:2530-2531):
  *       obj_to_obj returns without placing (handler.c:2559) and only writes
  *       the exit log (utility.c:738-741 - log-only, nothing aborts), so the
@@ -162,6 +165,180 @@ static int zc_resolve_zone(P_char ch, const char *arg)
 	if (n >= 0 && n <= top_of_zone_table)
 		return n;
 	return -1;
+}
+
+/* ================================================================== *
+ * THE RESET-CHOREOGRAPHY WALK
+ *
+ * reset_zone (db.c:2976) decides "does this E/G have a mob to receive
+ * its object?" from RUNNING STATE.  It opens
+ *
+ *     int    cmd_no, last_cmd = 1, last_mob_load = 0;        db.c:2979
+ *     P_char mob = NULL, last_mob = NULL, tmp_mob = NULL,
+ *            last_mob_followable = NULL;                     db.c:2981
+ *
+ * gates EVERY command on
+ *
+ *     if (last_cmd || !ZCMD.if_flag
+ *         || (last_mob_load && (G|E|R)) || (last_mob_followable && F))
+ *                                                            db.c:2998
+ *
+ * and rewrites those flags inside each command body: a successful M sets
+ * last_cmd = last_mob_load = 1 (db.c:3247), every failure clears them
+ * (db.c:3229, :3241, :3250), and a gate that fails clears last_cmd
+ * (db.c:3646).
+ *
+ * Asking instead "did an M/Y/F/R appear EARLIER IN THE FILE?" answers a
+ * different, lexical question.  A skipped or failed M still appeared, so
+ * a genuinely mob-less E is passed clean - a FALSE NEGATIVE, the one
+ * class an audit must not have.  (Found by @xander-l reviewing PR #170.)
+ *
+ * So the walk below replays the machine instead.  Each flag is
+ * three-valued - NO / MAYBE / YES - because some branches are decidable
+ * from zone data and some are dice.  Anything undecidable lands on MAYBE
+ * and is reported as PROBABILISTIC; it is never asserted either way.
+ * ================================================================== */
+
+enum zc_tri
+{
+	ZC_NO    = 0,
+	ZC_MAYBE = 1,
+	ZC_YES   = 2
+};
+
+/* the || of the db.c:2998 gate, lifted to the lattice */
+static zc_tri zc_or(zc_tri a, zc_tri b)
+{
+	if (a == ZC_YES || b == ZC_YES)
+		return ZC_YES;
+	if (a == ZC_NO && b == ZC_NO)
+		return ZC_NO;
+	return ZC_MAYBE;
+}
+
+/* merge two possible outcomes of one command */
+static zc_tri zc_join(zc_tri a, zc_tri b)
+{
+	return (a == b) ? a : ZC_MAYBE;
+}
+
+/* how the last loader command came out - the story every finding tells */
+enum zc_why
+{
+	ZC_WHY_START,   /* no loader has run yet                            */
+	ZC_WHY_POP,     /* the ordinary live-population limit: normal       */
+	ZC_WHY_ROLL,    /* a 1..99 percentage roll                          */
+	ZC_WHY_FORCED,  /* M chance != 100: ordinary resets skip the row    */
+	ZC_WHY_MLIMIT,  /* M limit <= 0: only a forced repop can load it    */
+	ZC_WHY_ZERO,    /* chance <= 0: the roll can never be won           */
+	ZC_WHY_LIMIT,   /* Y/F/R limit <= 0, and those have no force escape */
+	ZC_WHY_BADROOM, /* M target room rnum out of range                  */
+	ZC_WHY_NOLEAD   /* F/R with no last_mob to attach to                */
+};
+
+/* a MAYBE worth telling the builder about: everything except the ordinary
+ * population limit, which is how the whole game is meant to work */
+static bool zc_why_reportable(zc_why w)
+{
+	return w != ZC_WHY_POP && w != ZC_WHY_START;
+}
+
+/* reset_zone's locals, abstracted */
+struct zc_state
+{
+	zc_tri last_cmd;      /* db.c:2979 - opens at 1                     */
+	zc_tri last_mob_load; /* db.c:2979 - opens at 0                     */
+	zc_tri mob;           /* db.c:2981 `mob` - what E / G / A attach to */
+	zc_tri last_mob;      /* db.c:2981 - F and R test !last_mob         */
+	zc_tri foll;          /* db.c:2981 last_mob_followable - F's gate   */
+	int    ld_src;        /* cmd index of the last loader, -1 = none    */
+	char   ld_cmd;        /* its command letter                         */
+	int    ld_chance;     /* its arg4                                   */
+	int    ld_limit;      /* its arg2                                   */
+	zc_why ld_why;        /* how it came out                            */
+};
+
+/* where each loader rolls its percentage */
+static const char *zc_roll_line(char c)
+{
+	if (c == 'F')
+		return "3512";
+	if (c == 'R')
+		return "3557";
+	return "3213"; /* M */
+}
+
+/* where each loader tests its limit against the live population */
+static const char *zc_limit_line(char c)
+{
+	if (c == 'Y')
+		return "3017";
+	if (c == 'F')
+		return "3510";
+	if (c == 'R')
+		return "3555";
+	return "3211"; /* M */
+}
+
+/* plain-English account of the last loader, cited to the engine */
+static void zc_loader_reason(const zc_state &st, char *buf, size_t len)
+{
+	switch (st.ld_why)
+	{
+		case ZC_WHY_ZERO:
+			snprintf(buf, len,
+			         "the %c at cmd %d carries load chance %d, and `arg4 > number(0, 99)` (db.c:%s) can never be won with %d - number() is inclusive of 0 (random.c:75) - so that loader clears last_cmd and last_mob_load on every reset",
+			         st.ld_cmd, st.ld_src, st.ld_chance, zc_roll_line(st.ld_cmd), st.ld_chance);
+			break;
+		case ZC_WHY_LIMIT:
+			snprintf(buf, len,
+			         "the %c at cmd %d carries limit %d and has no force_item_repop escape, so `mob_index[].number < %d` (db.c:%s) is never true and the row is skipped on every reset",
+			         st.ld_cmd, st.ld_src, st.ld_limit, st.ld_limit, zc_limit_line(st.ld_cmd));
+			break;
+		case ZC_WHY_FORCED:
+			snprintf(buf, len,
+			         "the M at cmd %d carries load chance %d, and the ordinary-reset test needs chance == 100 (db.c:3211), so it loads only during a FORCED repop ('zreset full', actwiz.c:5797, or the boot repop, new_events.c:1327) and then only if it wins its %d%% roll (db.c:3213)",
+			         st.ld_src, st.ld_chance, st.ld_chance);
+			break;
+		case ZC_WHY_MLIMIT:
+			snprintf(buf, len,
+			         "the M at cmd %d carries limit %d, so `mob_index[].number < %d` (db.c:3211) is never true and it can only load during a FORCED repop ('zreset full', actwiz.c:5797, or the boot repop, new_events.c:1327)",
+			         st.ld_src, st.ld_limit, st.ld_limit);
+			break;
+		case ZC_WHY_ROLL:
+			snprintf(buf, len, "the %c at cmd %d loads on a %d%% roll (db.c:%s) - a dice throw, not a fact",
+			         st.ld_cmd, st.ld_src, st.ld_chance, zc_roll_line(st.ld_cmd));
+			break;
+		case ZC_WHY_BADROOM:
+			snprintf(buf, len,
+			         "the M at cmd %d targets a room rnum outside 0..top_of_world, so reset_zone extracts the mob it just read and disables the row (db.c:3236-3243)",
+			         st.ld_src);
+			break;
+		case ZC_WHY_NOLEAD:
+			snprintf(buf, len,
+			         "the %c at cmd %d has no preceding mob in `last_mob`, so it breaks out (db.c:%s) before its follower ever reaches a room",
+			         st.ld_cmd, st.ld_src, st.ld_cmd == 'F' ? "3528" : "3573");
+			break;
+		case ZC_WHY_POP:
+			snprintf(buf, len, "the %c at cmd %d loads whenever the live population is under its limit of %d (db.c:%s)",
+			         st.ld_cmd, st.ld_src, st.ld_limit, zc_limit_line(st.ld_cmd));
+			break;
+		case ZC_WHY_START:
+		default:
+			snprintf(buf, len, "no M, Y, F or R command has run at all before this row");
+			break;
+	}
+}
+
+/* record how a loader came out - every M / Y / F / R does this, because
+ * every one of them writes the flags the db.c:2998 gate reads */
+static void zc_note_loader(zc_state &st, int idx, const reset_com &rc, zc_why why)
+{
+	st.ld_src    = idx;
+	st.ld_cmd    = rc.command;
+	st.ld_chance = rc.arg4;
+	st.ld_limit  = rc.arg2;
+	st.ld_why    = why;
 }
 
 /* ================================================================== *
@@ -667,40 +844,118 @@ void do_zcheck(P_char ch, char *argument, int cmd)
 
 	/* ---------------------------------------------------------------- *
 	 * 5. RESET CHOREOGRAPHY - commands that can never do what they say.
+	 *
+	 * Driven by the three-valued replay of reset_zone's own state
+	 * machine (the zc_state block above), NOT by "did a loader command
+	 * appear earlier in the file".
 	 * ---------------------------------------------------------------- */
 	{
-		int  shown = 0, total = 0;
-		bool loader_seen = false;
+		int      shown = 0, total = 0;
+		zc_state st;
+
+		st.last_cmd      = ZC_YES;              /* db.c:2979 - opens at 1 */
+		st.last_mob_load = ZC_NO;               /* db.c:2979              */
+		st.mob = st.last_mob = st.foll = ZC_NO; /* db.c:2981 - all NULL   */
+		st.ld_src                      = -1;
+		st.ld_cmd                      = '?';
+		st.ld_chance                   = 0;
+		st.ld_limit                    = 0;
+		st.ld_why                      = ZC_WHY_START;
+
 		send_to_char("\r\n&+W5. RESET CHOREOGRAPHY&n\r\n", ch);
+		send_to_char_f(ch,
+		               "   &+wWhat this models:&n it replays reset_zone's own state machine over this\r\n"
+		               "   zone's command list - last_cmd, last_mob_load, last_mob_followable and\r\n"
+		               "   the if_flag gate (db.c:2979/:2998) - so \"has this E a mob?\" is answered\r\n"
+		               "   the way the engine answers it, from STATE.  It decides the load\r\n"
+		               "   conditions that are FACTS of the zone data: a chance of 0 can never beat\r\n"
+		               "   number(0, 99); the ordinary-reset test needs chance == 100 (db.c:3211); a\r\n"
+		               "   limit <= 0 is never above a live count; a wear position outside 1..%d\r\n"
+		               "   can never equip (db.c:3471).\r\n"
+		               "   &+wWhat it does NOT model:&n the dice rolls themselves, live mob and object\r\n"
+		               "   populations, whether a given reset is a forced repop, the artifact\r\n"
+		               "   halving inside item_load_check (utility.c:6854), and compiled procs or\r\n"
+		               "   studioproc triggers.  A row whose fate turns on any of those is marked\r\n"
+		               "   &+yPROBABILISTIC&n and asserts NOTHING about which way it falls.\r\n",
+		               CUR_MAX_WEAR);
+
 		if (have_cmds)
 			for (i = 0; zd.cmd[i].command != 'S'; i++)
 			{
 				const reset_com &rc = zd.cmd[i];
 				char             line[MAX_STRING_LENGTH];
+				char             why[512];
+				bool             line_high = true;
+
 				line[0] = '\0';
 
+				/* ---- the gate, db.c:2998 ---- */
+				zc_tri gate = st.last_cmd;
+				if (!rc.if_flag)
+					gate = ZC_YES;
+				if (rc.command == 'G' || rc.command == 'E' || rc.command == 'R')
+					gate = zc_or(gate, st.last_mob_load);
+				if (rc.command == 'F')
+					gate = zc_or(gate, st.foll);
+
+				zc_loader_reason(st, why, sizeof(why));
+
+				/* ---- findings, read off the state this row inherits ---- */
 				switch (rc.command)
 				{
 					case 'M':
-					case 'Y':
 					case 'F':
 					case 'R':
-						loader_seen = true;
+						if (rc.arg1 < 0)
+							break; /* renum_zone_table disabled these */
+						if (rc.arg4 <= 0)
+							snprintf(line, sizeof(line),
+							         "   [&+R%c-CHANCE-ZERO&n] cmd %d: %c mob #%d carries load chance %d - `arg4 > number(0, 99)` (db.c:%s) can never be won with %d, so this loader never puts a mob in the world and clears last_cmd and last_mob_load on every reset.\r\n",
+							         rc.command, i, rc.command, mob_index[rc.arg1].virtual_number, rc.arg4,
+							         zc_roll_line(rc.command), rc.arg4);
+						else if (rc.command != 'M' && rc.arg2 <= 0)
+							snprintf(line, sizeof(line),
+							         "   [&+R%c-LIMIT-ZERO&n] cmd %d: %c mob #%d carries limit %d - `mob_index[].number < %d` (db.c:%s) is never true and %c has no force_item_repop escape, so this row never runs.\r\n",
+							         rc.command, i, rc.command, mob_index[rc.arg1].virtual_number, rc.arg2, rc.arg2,
+							         zc_limit_line(rc.command), rc.command);
+						else if (rc.command == 'M' && rc.arg4 != 100)
+						{
+							line_high = false;
+							snprintf(line, sizeof(line),
+							         "   [&+yPROBABILISTIC&n] cmd %d: M mob #%d carries load chance %d, but the ordinary-reset test at db.c:3211 needs chance == 100 - so on a normal repop this mob does not load at all, and only a FORCED repop reaches its %d%% roll. If \"%d%% of the time\" was the intent, the engine does not read it that way.\r\n",
+							         i, mob_index[rc.arg1].virtual_number, rc.arg4, rc.arg4, rc.arg4);
+						}
 						break;
 
 					case 'E':
 					case 'G':
 						if (rc.arg1 < 0)
 							break;
-						if (!loader_seen)
+						if (gate == ZC_NO)
 							snprintf(line, sizeof(line),
-							         "   [&+R%c-NO-MOB&n] cmd %d: %c obj #%d - no M/Y/F/R precedes it, so there is never a mob to receive it; reset_zone still reads the object and only logs (db.c:%s) - it never reaches the world.\r\n",
-							         rc.command, i, rc.command, obj_index[rc.arg1].virtual_number,
-							         rc.command == 'E' ? "3482, and the loaded copy is left in limbo" : "3411, and the copy is extracted");
+							         "   [&+R%c-DEAD-ROW&n] cmd %d: %c obj #%d - the reset gate (db.c:2998) is false here on EVERY reset: if_flag is set, last_cmd is 0 and last_mob_load is 0, because %s. The row never executes at all.\r\n",
+							         rc.command, i, rc.command, obj_index[rc.arg1].virtual_number, why);
+						else if (st.mob == ZC_NO)
+							snprintf(line, sizeof(line),
+							         "   [&+R%c-NO-MOB&n] cmd %d: %c obj #%d - whenever this row runs there is provably no live mob to receive it: %s. reset_zone reads the object anyway and only logs (db.c:%s).\r\n",
+							         rc.command, i, rc.command, obj_index[rc.arg1].virtual_number, why,
+							         rc.command == 'E' ? "3481, leaving the copy in limbo" : "3412, then extracting the copy");
 						else if (rc.command == 'E' && (rc.arg3 <= 0 || rc.arg3 > CUR_MAX_WEAR))
 							snprintf(line, sizeof(line),
 							         "   [&+RE-BAD-POS&n] cmd %d: E obj #%d wear-position %d is outside 1..%d - the equip test (db.c:3471) can never pass; the object loads and is left in limbo every reset.\r\n",
 							         i, obj_index[rc.arg1].virtual_number, rc.arg3, CUR_MAX_WEAR);
+						else if (rc.arg4 <= 0)
+							snprintf(line, sizeof(line),
+							         "   [&+R%c-CHANCE-ZERO&n] cmd %d: %c obj #%d carries load chance %d - item_load_check needs `zone_percent > number(0, 99)` (utility.c:6859), which %d can never win, so the object is read and immediately extracted every reset (db.c:%s).\r\n",
+							         rc.command, i, rc.command, obj_index[rc.arg1].virtual_number, rc.arg4, rc.arg4,
+							         rc.command == 'E' ? "3464-3470" : "3397-3403");
+						else if (st.mob == ZC_MAYBE && zc_why_reportable(st.ld_why))
+						{
+							line_high = false;
+							snprintf(line, sizeof(line),
+							         "   [&+yPROBABILISTIC&n] cmd %d: %c obj #%d may or may not find a mob - %s. zcheck asserts neither outcome; if that mob is meant to be reliable, the loader row is the one to look at.\r\n",
+							         i, rc.command, obj_index[rc.arg1].virtual_number, why);
+						}
 						break;
 
 					case 'P':
@@ -744,10 +999,220 @@ void do_zcheck(P_char ch, char *argument, int cmd)
 						break;
 				}
 
+				/* ---- advance the machine exactly as reset_zone does ---- */
+				zc_state b = st;
+				switch (rc.command)
+				{
+					case 'M':
+					{
+						/* db.c:3208-3251.  ENTERING the body is always MAYBE:
+						 * the ordinary door needs a live count under the
+						 * limit AND chance == 100 (db.c:3211), and
+						 * force_item_repop is a property of the caller, not
+						 * of the zone data.  The roll at db.c:3213 IS
+						 * decidable at both ends. */
+						const zc_tri roll    = (rc.arg4 <= 0) ? ZC_NO : (rc.arg4 >= 100 ? ZC_YES : ZC_MAYBE);
+						const bool   badroom = (rc.arg3 < 0 || rc.arg3 > top_of_world);
+
+						if (roll == ZC_NO)
+						{
+							/* entered: db.c:3223-3231 zeroes mob, last_mob,
+							 * both flags and last_mob_followable.  skipped:
+							 * db.c:3250 zeroes the two flags only.  Both
+							 * agree on the flags, so those are certain. */
+							b.last_cmd = b.last_mob_load = ZC_NO;
+							b.mob                        = zc_join(ZC_NO, st.mob);
+							b.last_mob                   = zc_join(ZC_NO, st.last_mob);
+							b.foll                       = zc_join(ZC_NO, st.foll);
+							zc_note_loader(b, i, rc, ZC_WHY_ZERO);
+						}
+						else if (badroom)
+						{
+							/* db.c:3236-3243: the mob is published to
+							 * last_mob / last_mob_followable at db.c:3234 and
+							 * only then extracted - the flags go to 0, the
+							 * pointers are left behind. */
+							b.last_cmd = b.last_mob_load = ZC_NO;
+							b.mob = b.last_mob = b.foll = ZC_MAYBE;
+							zc_note_loader(b, i, rc, ZC_WHY_BADROOM);
+						}
+						else
+						{
+							b.last_cmd = b.last_mob_load = ZC_MAYBE; /* db.c:3247 vs :3250 */
+							b.mob                        = zc_join(roll, st.mob);
+							b.last_mob                   = zc_join(roll, st.last_mob);
+							b.foll                       = zc_join(roll, st.foll);
+							zc_note_loader(b, i, rc,
+							               (rc.arg4 != 100) ? ZC_WHY_FORCED : (rc.arg2 <= 0 ? ZC_WHY_MLIMIT : ZC_WHY_POP));
+						}
+						break;
+					}
+
+					case 'Y':
+						/* db.c:3001-3035.  Y writes `mob` and `last_mob`
+						 * (db.c:3019/:3026) but NEVER last_mob_load and NEVER
+						 * last_mob_followable - so a Y does not open the
+						 * E / G / R door of the db.c:2998 gate at all.  That
+						 * is the sharpest divergence from a lexical "some
+						 * loader appeared earlier" test. */
+						if (rc.arg2 <= 0)
+						{
+							b.last_cmd = ZC_NO; /* db.c:3033 */
+							zc_note_loader(b, i, rc, ZC_WHY_LIMIT);
+						}
+						else
+						{
+							b.last_cmd = ZC_MAYBE;
+							b.mob      = ZC_MAYBE;
+							b.last_mob = ZC_MAYBE;
+							zc_note_loader(b, i, rc, ZC_WHY_POP);
+						}
+						break;
+
+					case 'F':
+					{
+						const zc_tri roll = (rc.arg4 <= 0) ? ZC_NO : (rc.arg4 >= 100 ? ZC_YES : ZC_MAYBE);
+
+						if (rc.arg2 <= 0)
+						{
+							/* db.c:3510 - no force_item_repop escape here */
+							b.last_cmd = b.last_mob_load = ZC_NO; /* db.c:3549 */
+							zc_note_loader(b, i, rc, ZC_WHY_LIMIT);
+						}
+						else if (roll == ZC_NO)
+						{
+							/* db.c:3522-3532 */
+							b.last_cmd = b.last_mob_load = ZC_NO;
+							b.mob                        = zc_join(ZC_NO, st.mob);
+							b.last_mob                   = zc_join(ZC_NO, st.last_mob);
+							b.foll                       = zc_join(ZC_NO, st.foll);
+							zc_note_loader(b, i, rc, ZC_WHY_ZERO);
+						}
+						else if (st.last_mob == ZC_NO)
+						{
+							/* db.c:3528 - `if (!last_mob)` fires every time */
+							b.last_cmd = b.last_mob_load = ZC_NO;
+							b.foll                       = ZC_NO;
+							b.mob                        = ZC_MAYBE;
+							zc_note_loader(b, i, rc, ZC_WHY_NOLEAD);
+						}
+						else
+						{
+							/* db.c:3534-3545 - F moves `mob` onto the
+							 * follower and leaves last_mob and
+							 * last_mob_followable pointing at the leader. */
+							b.last_cmd = b.last_mob_load = ZC_MAYBE;
+							b.mob                        = zc_join(roll, st.mob);
+							zc_note_loader(b, i, rc, (roll == ZC_YES) ? ZC_WHY_POP : ZC_WHY_ROLL);
+						}
+						break;
+					}
+
+					case 'R':
+					{
+						const zc_tri roll = (rc.arg4 <= 0) ? ZC_NO : (rc.arg4 >= 100 ? ZC_YES : ZC_MAYBE);
+
+						if (rc.arg2 <= 0)
+						{
+							b.last_cmd = b.last_mob_load = ZC_NO; /* db.c:3601 */
+							zc_note_loader(b, i, rc, ZC_WHY_LIMIT);
+						}
+						else if (roll == ZC_NO)
+						{
+							/* db.c:3569-3576 - R clears `mob` but never
+							 * last_mob_followable */
+							b.last_cmd = b.last_mob_load = ZC_NO;
+							b.mob                        = zc_join(ZC_NO, st.mob);
+							zc_note_loader(b, i, rc, ZC_WHY_ZERO);
+						}
+						else if (st.last_mob == ZC_NO)
+						{
+							b.last_cmd = b.last_mob_load = ZC_NO; /* db.c:3575 */
+							b.mob                        = ZC_MAYBE;
+							zc_note_loader(b, i, rc, ZC_WHY_NOLEAD);
+						}
+						else
+						{
+							b.last_cmd = b.last_mob_load = ZC_MAYBE; /* db.c:3598 */
+							b.mob                        = zc_join(roll, st.mob);
+							zc_note_loader(b, i, rc, (roll == ZC_YES) ? ZC_WHY_POP : ZC_WHY_ROLL);
+						}
+						break;
+					}
+
+					/* The object and door commands never touch `mob`,
+					 * `last_mob` or last_mob_followable - they write only
+					 * last_cmd, and only D writes it decidably. */
+					case 'D':
+						/* db.c:3604-3632: a D whose room or direction does
+						 * not resolve is disabled with last_cmd 0; every
+						 * other D ends at db.c:3632 with last_cmd 1. */
+						if (rc.arg1 < 0 || rc.arg1 > top_of_world || rc.arg2 < 0 || rc.arg2 >= NUM_EXITS || !world[rc.arg1].dir_option[rc.arg2])
+							b.last_cmd = ZC_NO;
+						else
+							b.last_cmd = ZC_YES;
+						break;
+
+					case 'O': /* db.c:3253-3309 */
+					case 'P': /* db.c:3311-3366 */
+						b.last_cmd = (rc.arg1 < 0 || rc.arg3 < 0) ? ZC_NO : ZC_MAYBE;
+						break;
+
+					case 'E': /* db.c:3436-3505 */
+					case 'G': /* db.c:3368-3434 */
+						/* both a success and an item_load_check MISS set
+						 * last_cmd 1 (db.c:3468/:3476 and :3401/:3407), while
+						 * a mob-less pass leaves it 0 - and the artifact
+						 * halving (utility.c:6854) is a prototype flag zcheck
+						 * does not read, so this stays MAYBE. */
+						b.last_cmd = (rc.arg1 < 0) ? ZC_NO : ZC_MAYBE;
+						break;
+
+					case 'A': /* db.c:3151-3206 */
+					case 'B': /* db.c:3037-3092 */
+					case 'C': /* db.c:3094-3149 */
+						b.last_cmd = ZC_MAYBE;
+						break;
+
+					case '!':
+						/* db.c:3635-3637 - the body does nothing, so a
+						 * disabled row does NOT clear last_cmd. */
+						break;
+
+					default:
+						b.last_cmd = ZC_NO; /* db.c:3641-3642 */
+						break;
+				}
+
+				/* fold the body into what the gate allows: db.c:2998 on the
+				 * way in, db.c:3646 on the way past */
+				if (gate == ZC_NO)
+				{
+					st.last_cmd = ZC_NO;
+				}
+				else if (gate == ZC_YES)
+				{
+					st = b;
+				}
+				else
+				{
+					/* the body may not have run at all - merge it with the
+					 * skipped outcome, which only clears last_cmd */
+					b.last_cmd      = zc_join(b.last_cmd, ZC_NO);
+					b.last_mob_load = zc_join(b.last_mob_load, st.last_mob_load);
+					b.mob           = zc_join(b.mob, st.mob);
+					b.last_mob      = zc_join(b.last_mob, st.last_mob);
+					b.foll          = zc_join(b.foll, st.foll);
+					st              = b;
+				}
+
 				if (line[0])
 				{
 					total++;
-					high_findings++;
+					if (line_high)
+						high_findings++;
+					else
+						low_findings++;
 					if (shown < ZC_MAX_LINES)
 					{
 						send_to_char(line, ch);
