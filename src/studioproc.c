@@ -1072,7 +1072,12 @@ static int sp_execute(struct sp_trig *t, struct sp_ctx *cx)
 				{
 					act("$n departs in a swirl of mist.", TRUE, self, 0, 0, TO_ROOM);
 					char_from_room(self);
-					if (!char_to_room(self, rr, -1))
+					char_to_room(self, rr, -1);
+					/* char_to_room() returns TRUE on SUCCESS (handler.c:1039);
+					   test the resulting STATE instead, the way the transporter
+					   proclib does: placed and alive means the walk continues,
+					   with room recomputed from the mob's new location. */
+					if (IS_ALIVE(self) && self->in_room == rr)
 						act("$n arrives in a swirl of mist.", TRUE, self, 0, 0, TO_ROOM);
 					else
 					{
