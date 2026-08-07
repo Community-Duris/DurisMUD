@@ -6804,7 +6804,7 @@ void spell_shadow_projection(int level, P_char ch, char *arg, int type, P_char v
 		af.type       = SPELL_SHADOW_PROJECTION;
 		af.duration   = 1;
 		af.bitvector  = AFF_SNEAK;
-		af.bitvector  = AFF_HIDE;
+		af.bitvector |= AFF_HIDE;
 		af.bitvector2 = AFF2_PASSDOOR;
 		affect_to_char(ch, &af);
 
