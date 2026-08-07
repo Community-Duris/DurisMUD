@@ -269,13 +269,13 @@ D 0 11691 2 1 100 0 0 0
 *     south exit from "An Unused Room" to
 *     "A Dim Hallway" - closed
 *
-D 0 11690 5 2 100 0 0 0
+D 0 11690 5 1 100 0 0 0
 *     down exit from "A Dim Hallway" to
-*     "The Vault of the Troll Chieftain" - closed/locked
+*     "The Vault of the Troll Chieftain" - closed
 *
-D 0 11693 4 2 100 0 0 0
+D 0 11693 4 1 100 0 0 0
 *     up exit from "The Vault of the Troll Chieftain" to
-*     "A Dim Hallway" - closed/locked
+*     "A Dim Hallway" - closed
 *
 D 0 11695 0 1 100 0 0 0
 *     north exit from "The Castle Dungeon" to
