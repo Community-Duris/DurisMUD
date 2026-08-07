@@ -79,6 +79,8 @@
 #define SP_A_ONEOF    19   /* pick 1 of the next <n> actions           */
 #define SP_A_EXIT     20   /* retarget / restate an exit               */
 #define SP_A_BLOCK    21   /* swallow the triggering command           */
+#define SP_A_RSET     22   /* remote: counter = n on another instance  */
+#define SP_A_RADD     23   /* remote: counter += n on another instance */
 
 /* ---- conditions --------------------------------------------------- */
 #define SP_C_CARRYING  0
