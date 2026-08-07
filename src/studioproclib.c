@@ -232,13 +232,25 @@ int proclibobj_transporter(P_obj obj, P_char ch, int cmd, char *argument)
 				do_look(ch, empty, CMD_LOOK);
 			}
 		}
-		else if (IS_ALIVE(ch) && ch->in_room == NOWHERE)
+		else if (char_in_list(ch) && IS_ALIVE(ch) && ch->in_room == NOWHERE)
 		{
-			/* Refused BEFORE placement: handler.c returns FALSE at three
-			   points above its `ch->in_room = room`, and TRUE/FALSE at many
-			   points below it. A FALSE from below means the character IS in
-			   the destination, so re-inserting would be a duplicate. Testing
-			   the STATE rather than the return covers both. */
+			/* Refused BEFORE placement, so step the character back out.
+			   char_in_list() comes FIRST and is the only thing allowed to
+			   touch a pointer char_to_room() has just returned FALSE for:
+			   it walks character_list comparing POINTERS and never
+			   dereferences its argument (utility.c:551) -- it is the same
+			   liveness test char_to_room() itself uses to ask whether a room
+			   proc extracted someone (handler.c:1317).  A FALSE from it means
+			   the character was killed or extracted and freed, and the two
+			   state reads that follow would be a use-after-free: the defect
+			   xander-l caught in SP_A_GOTO, whose bad state test was modelled
+			   on this very line.
+			   Only past that gate is the STATE question legitimate, and it
+			   still has to be asked: handler.c returns FALSE at three points
+			   above its `ch->in_room = room' and TRUE/FALSE at many points
+			   below, so a FALSE with ch still at NOWHERE was refused before
+			   insertion and must be put back, while a FALSE from below leaves
+			   ch in the destination, where re-inserting would be a duplicate. */
 			char_to_room(ch, was_in, -1);
 			send_to_char("Something bars the way, and you step back out.\r\n", ch);
 		}
