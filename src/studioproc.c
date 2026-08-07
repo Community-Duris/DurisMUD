@@ -1052,7 +1052,21 @@ static int sp_execute(struct sp_trig *t, struct sp_ctx *cx)
 				{
 					act("$n vanishes in a swirl of mist.", TRUE, actor, 0, 0, TO_ROOM);
 					char_from_room(actor);
-					if (!char_to_room(actor, rr, -1))
+					/* Same rule as SP_A_GOTO below, and the same two defects
+					   in one line: the return was read INVERTED, so a
+					   successful transfer got no arrival echo and no room
+					   description and then nulled cx->actor for the rest of
+					   the walk; and every use of actor sat on the FALSE side,
+					   which is exactly where char_to_room() may already have
+					   extracted and freed it.  The echo, the IS_PC() test and
+					   the look all move to TRUE; FALSE only retires the
+					   pointer from the context.
+					   Retiring rather than returning is safe here because
+					   every later action re-reads cx->actor and is already
+					   NULL-guarded: the GIVE/TRANSFER/DAMAGE gate at the top
+					   of the loop, SP_A_CAST's `actor &&' test, and the three
+					   `victim' tests (AFFECT, UNAFFECT, DO). */
+					if (char_to_room(actor, rr, -1))
 					{
 						act("$n arrives in a swirl of mist.", TRUE, actor, 0, 0, TO_ROOM);
 						if (IS_PC(actor))
@@ -1062,7 +1076,7 @@ static int sp_execute(struct sp_trig *t, struct sp_ctx *cx)
 						}
 					}
 					else
-						cx->actor = NULL;      /* extraction path: never touch again */
+						cx->actor = NULL;      /* freed or displaced: never touch again */
 				}
 				break;
 
@@ -1072,12 +1086,21 @@ static int sp_execute(struct sp_trig *t, struct sp_ctx *cx)
 				{
 					act("$n departs in a swirl of mist.", TRUE, self, 0, 0, TO_ROOM);
 					char_from_room(self);
-					char_to_room(self, rr, -1);
-					/* char_to_room() returns TRUE on SUCCESS (handler.c:1039);
-					   test the resulting STATE instead, the way the transporter
-					   proclib does: placed and alive means the walk continues,
-					   with room recomputed from the mob's new location. */
-					if (IS_ALIVE(self) && self->in_room == rr)
+					/* char_to_room() is bool and returns TRUE on SUCCESS
+					   (handler.c:1039).  BRANCH ON THE RETURN, never on
+					   self's state: char_to_room() may invoke the destination
+					   room proc, and it returns FALSE when that proc moves,
+					   kills or extracts the character -- extract_char() then
+					   frees it outright (handler.c:3512/3519), so IS_ALIVE(self)
+					   or self->in_room would be reading freed memory.  When a
+					   callee can free its argument the return value is the ONLY
+					   safe signal; a state test is itself a dereference of the
+					   thing it is trying to ask about.
+					   FALSE therefore nulls self out of the context and returns
+					   immediately -- the next iteration's own validity gate
+					   (!IS_ALIVE(self) || self->in_room < 0) would dereference
+					   it too. */
+					if (char_to_room(self, rr, -1))
 						act("$n arrives in a swirl of mist.", TRUE, self, 0, 0, TO_ROOM);
 					else
 					{
