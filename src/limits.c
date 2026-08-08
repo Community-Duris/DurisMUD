@@ -319,7 +319,7 @@ int hit_regen(P_char ch, bool display_only)
 		{
 			gain >>= 1;
 		}
-		else
+		else if (GET_STAT(ch) > STAT_INCAP)
 		{
 			gain = 0;
 		}

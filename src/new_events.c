@@ -207,11 +207,14 @@ static void nevent_link_schedule(P_nevent event, int loc)
 
 static bool nevent_overdue_player(P_nevent event)
 {
-	return event && event->deferral_count >= NEVENT_MAX_DEFERRALS && nevent_is_player_timed(event->func, event->ch);
+	/* Any event that reaches the threshold must eventually run.  Player-timed
+	 * events remain normally prioritized, but normal events cannot starve
+	 * forever behind a continuously busy player prefix. */
+	return event && event->deferral_count >= NEVENT_MAX_DEFERRALS;
 }
 
-/* Keep the budget as the default, but move a repeatedly deferred player event
- * ahead of normal work so a busy bucket cannot starve player-visible actions. */
+/* Keep the budget as the default, but move a repeatedly deferred event ahead
+ * of the remaining work so a busy bucket cannot starve any event forever. */
 static bool nevent_promote_overdue_player(P_nevent *next_event, P_nevent anchor)
 {
 	P_nevent candidate;
