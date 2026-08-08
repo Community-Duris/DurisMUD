@@ -85,6 +85,23 @@
    *   unaffect <spell|tag> [on self|actor]
    *   do [self|actor] <command line>
    *   set <counter> <n>     add <counter> <n>
+   *   rset <vnum> <counter> <n>    radd <vnum> <counter> <n>
+   *          -- set / add, but on the FIRST LIVE INSTANCE of mob
+   *             prototype <vnum> (or, when <vnum> names an object, the
+   *             first object instance) instead of on self.  Counter
+   *             names intern in the same global table, so the <counter>
+   *             a lever writes and the 'if counter <counter>' the
+   *             holder tests resolve to the same slot.  Writes are
+   *             remote; reads stay local by design -- 'if counter'
+   *             always reads self, so the holder's own trigger does the
+   *             deciding.  A moment with no live instance is a silent
+   *             no-op: the lever stays harmless while its holder awaits
+   *             a repop, and a repop starts the combination over clean
+   *             (counters are per-instance and die with the instance).
+   *             This is the primitive behind cross-room switch
+   *             combinations: each lever room writes one counter on a
+   *             shared holder, and the holder's own PULSE trigger fires
+   *             the outcome once all of them are in place.
    *   oneof <n>             -- the next n actions become a pool; one runs
    *   exit <roomvnum> <dir> [to <roomvnum>|none] [state open|closed|locked|secret]
    *   block                 -- swallow the command that triggered this
@@ -135,6 +152,8 @@ extern P_room               world;
 extern int                  top_of_world;
 extern P_index              mob_index;
 extern P_index              obj_index;
+extern P_char               character_list;   /* db.c:91       */
+extern P_obj                object_list;      /* db.c:90       */
 extern const char          *spells[];
 extern Skill                skills[];
 extern struct command_info  cmd_info[MAX_CMD_LIST];
@@ -180,7 +199,8 @@ struct sp_action
 	char *text2;                /* attack: miss message                */
 	char *text3;                /* attack: room message                */
 	int   num;                  /* vnum / spell / heal / counter value */
-	int   num2;                 /* exit: destination vnum, -1 = leave  */
+	int   num2;                 /* exit: dest vnum, -1 = leave;
+	                               rset/radd: the target vnum          */
 	int   dnum, dsize, dbonus;  /* NdS+B                               */
 	int   who;                  /* SP_WHO_xxx                          */
 	int   scope;                /* SP_SCOPE_xxx                        */
@@ -191,7 +211,8 @@ struct sp_action
 	int   slot;                 /* counter slot / exit direction       */
 	int   count;                /* oneof: pool size                    */
 	int   dur;                  /* affect duration, ticks              */
-	int   state;                /* exit state                          */
+	int   state;                /* exit state; rset/radd: target kind
+	                               (SP_T_MOB / SP_T_OBJ, parse-fixed)  */
 	int   apply;                /* affect: APPLY_xxx, 0 = APPLY_NONE   */
 	int   amod;                 /* affect: the modifier for that apply */
 	int   affword;              /* affect: AFF word 1..5, 0 = no bit   */
@@ -380,6 +401,38 @@ static void sp_obj_set(P_obj obj, int type, int slot, int value)
 	ed->next            = obj->ex_description;
 	obj->ex_description = ed;
 	obj->str_mask |= STRUNG_EDESC;
+}
+
+/* ------------------------------------------------------------------ */
+/* remote instances                                                   */
+/*                                                                    */
+/* rset / radd write a counter on ANOTHER prototype's first live      */
+/* instance, through the same sp_char_set / sp_obj_set machinery      */
+/* above.  "First" is character_list / object_list order (newest      */
+/* first), which is unambiguous in the intended use: a reset-placed   */
+/* holder that exists once.  No live instance = the caller no-ops     */
+/* silently, by design -- a lever must stay harmless, not log-spam,   */
+/* while its holder is dead or waiting on a repop.                    */
+/* ------------------------------------------------------------------ */
+
+static P_char sp_mob_instance(int vnum)
+{
+	P_char k;
+
+	for (k = character_list; k; k = k->next)
+		if (IS_NPC(k) && IS_ALIVE(k) && GET_VNUM(k) == vnum)
+			return k;
+	return NULL;
+}
+
+static P_obj sp_obj_instance(int vnum)
+{
+	P_obj o;
+
+	for (o = object_list; o; o = o->next)
+		if (o->R_num >= 0 && obj_index[o->R_num].virtual_number == vnum)
+			return o;
+	return NULL;
 }
 
 /* ------------------------------------------------------------------ */
@@ -1148,6 +1201,31 @@ static int sp_execute(struct sp_trig *t, struct sp_ctx *cx)
 
 			case SP_A_ADD:
 				sp_state_set(cx, SP_TAG_COUNTER, a->slot, sp_state_get(cx, SP_TAG_COUNTER, a->slot) + a->num);
+				break;
+
+			case SP_A_RSET:
+			case SP_A_RADD:
+				/* Remote counter write -- see the header comment.  The
+				   target KIND was fixed at parse time (a->state), so a
+				   vnum that names both a mob and an object prototype
+				   never flip-flops between the two at runtime.  No
+				   live instance = silent no-op, by design: the lever
+				   stays harmless while its holder awaits a repop, and
+				   the repop wipes the counters (they are per-instance),
+				   starting the combination over clean.  */
+				if (a->state == SP_T_MOB)
+				{
+					if ((m = sp_mob_instance(a->num2)) != NULL)
+					{
+						n = (a->op == SP_A_RADD) ? sp_char_get(m, SP_TAG_COUNTER, a->slot) + a->num : a->num;
+						sp_char_set(m, SP_TAG_COUNTER, a->slot, n);
+					}
+				}
+				else if ((o = sp_obj_instance(a->num2)) != NULL)
+				{
+					n = (a->op == SP_A_RADD) ? sp_obj_get(o, SP_TAG_COUNTER, a->slot) + a->num : a->num;
+					sp_obj_set(o, SP_TAG_COUNTER, a->slot, n);
+				}
 				break;
 
 			case SP_A_EXIT:
@@ -2772,6 +2850,39 @@ static int sp_parse_action(int targ, int vnum, struct sp_trig *t, char *line)
 		   "to" or "the" would otherwise vanish and the NEXT token would be
 		   interned as the counter name.  See the comment on sp_word(). */
 		a->op   = !strcmp(word, "set") ? SP_A_SET : SP_A_ADD;
+		p       = sp_word(p, name, sizeof(name));
+		a->slot = sp_intern_counter(name);
+		if (a->slot < 0)
+		{
+			sp_err(vnum, "counter name table full or empty name", line);
+			return FALSE;
+		}
+		sp_word(p, word, sizeof(word));
+		a->num = atoi(word);
+	}
+	else if (!strcmp(word, "rset") || !strcmp(word, "radd"))
+	{
+		/* rset|radd <vnum> <counter> <n> -- the remote forms.  A
+		   DISTINCT keyword, deliberately not an optional third
+		   argument on set/add: a counter is allowed to be named
+		   "300", and set/add ignore trailing junk after the value,
+		   so a line like "set 300 5 note" already parses today as
+		   counter "300" = 5.  An argument-count overload would
+		   silently re-read files like that; a new keyword leaves the
+		   old grammar byte-for-byte alone. */
+		a->op = !strcmp(word, "rset") ? SP_A_RSET : SP_A_RADD;
+		p     = sp_word(p, word, sizeof(word));
+		n     = atoi(word);
+		if (n > 0 && real_mobile(n) >= 0)
+			a->state = SP_T_MOB;          /* a vnum that names both: mob wins */
+		else if (n > 0 && real_object(n) >= 0)
+			a->state = SP_T_OBJ;
+		else
+		{
+			sp_err(vnum, "rset/radd: no such mob or obj vnum", line);
+			return FALSE;
+		}
+		a->num2 = n;
 		p       = sp_word(p, name, sizeof(name));
 		a->slot = sp_intern_counter(name);
 		if (a->slot < 0)
