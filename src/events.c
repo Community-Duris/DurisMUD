@@ -48,6 +48,33 @@ extern bool after_events_call;
 extern unsigned long long ne_event_tick;
 extern P_nevent current_nevent;
 
+struct regen_event_state
+{
+	float                accumulated;
+	unsigned long long   last_tick;
+};
+
+static struct regen_event_state regen_state_from_data(void *data)
+{
+	struct regen_event_state state;
+	state.accumulated = 0.0f;
+	state.last_tick = ne_event_tick;
+	if (data)
+		state = *((struct regen_event_state *)data);
+	if (state.last_tick > ne_event_tick)
+		state.last_tick = ne_event_tick;
+	return state;
+}
+
+static unsigned long long regen_elapsed_ticks(struct regen_event_state *state)
+{
+	unsigned long long elapsed = ne_event_tick - state->last_tick;
+	if (elapsed == 0)
+		elapsed = 1;
+	state->last_tick = ne_event_tick;
+	return elapsed;
+}
+
 static bool zone_reset_trace_enabled(void)
 {
 	static int enabled = -1;
@@ -312,151 +339,111 @@ void calculate_regen_values(int reg, int *per_pulse, int *delay)
 // codemod
 void event_mana_regen(P_char ch, P_char victim, P_obj obj, void *data)
 {
-	float regen_value     = *((float *)data);
-	int   regen_value_int = (int)regen_value;
+	struct regen_event_state state = regen_state_from_data(data);
+	unsigned long long elapsed_ticks = regen_elapsed_ticks(&state);
+	int regen_value_int;
+	int per_tick = 0;
+
+	per_tick = IS_AFFECTED(ch, AFF_MEDITATE) ? ((GET_C_POW(ch) + GET_C_INT(ch)) / .2) : ((GET_C_POW(ch) + GET_C_INT(ch)) / 2.5);
+	if ((per_tick == 0) || (GET_MANA(ch) == GET_MAX_MANA(ch) && per_tick > 0) || (GET_MANA(ch) < 0 && per_tick < 0))
+		return;
+
+	state.accumulated += ((float)per_tick * (float)elapsed_ticks) / (float)PULSES_IN_TICK;
+	regen_value_int = (int)state.accumulated;
 	if (regen_value_int >= 1 || regen_value_int <= -1)
 	{
 		GET_MANA(ch) += regen_value_int;
-
 		if (GET_MANA(ch) > GET_MAX_MANA(ch))
 			GET_MANA(ch) = GET_MAX_MANA(ch);
-
-		if (IS_PC(ch) && IS_AFFECTED(ch, AFF_MEDITATE) && (GET_MANA(ch) == GET_MAX_MANA(ch)) && GET_CLASS(ch, CLASS_PSIONICIST))
+		state.accumulated -= (float)regen_value_int;
+		gmcp_char_vitals(ch);
+		if (IS_PC(ch) && IS_AFFECTED(ch, AFF_MEDITATE) && GET_MANA(ch) == GET_MAX_MANA(ch) && GET_CLASS(ch, CLASS_PSIONICIST))
 		{
 			send_to_char("&+LYour mana reserves are now full.&n\r\n", ch);
 			stop_meditation(ch);
 		}
-
-		regen_value = regen_value - (float)regen_value_int;
-		gmcp_char_vitals(ch);
-	}
-	int per_tick = 0;
-	// int per_tick = mana_regen(ch);
-	if (IS_AFFECTED(ch, AFF_MEDITATE))
-	{
-		per_tick = ((GET_C_POW(ch) + GET_C_INT(ch)) / .2);
-	}
-	else
-	{
-		per_tick = ((GET_C_POW(ch) + GET_C_INT(ch)) / 2.5);
 	}
 
-	if ((per_tick == 0) || (GET_MANA(ch) == GET_MAX_MANA(ch) && per_tick > 0) || (GET_MANA(ch) < 0 && per_tick < 0))
-	{
-		return;
-	}
-
-	int delay;
-	if (IS_PC(ch))
-	{
-		delay = 1;
-		regen_value += ((float)per_tick / (float)PULSES_IN_TICK);
-	}
-	else
-	{
-		delay = MOB_MANA_REGEN_DELAY;
-		regen_value += ((float)per_tick / ((float)(PULSES_IN_TICK / MOB_MANA_REGEN_DELAY)));
-	}
-	add_event(event_mana_regen, delay, ch, 0, 0, 0, &regen_value, sizeof(regen_value));
+	add_event(event_mana_regen, IS_PC(ch) ? 1 : MOB_MANA_REGEN_DELAY, ch, 0, 0, 0, &state, sizeof(state));
 }
 
 #define MOB_WARD_REGEN_DELAY 3
 // codemod
 void event_ward_regen(P_char ch, P_char victim, P_obj obj, void *data)
 {
-	float regen_value     = *((float *)data);
-	int   regen_value_int = (int)regen_value;
-	if (regen_value_int >= 1 || regen_value_int <= -1)
-	{
-		GET_WARD(ch) += regen_value_int;
-
-		if (GET_WARD(ch) > GET_MAX_WARD(ch))
-			GET_WARD(ch) = GET_MAX_WARD(ch);
-
-		regen_value = regen_value - (float)regen_value_int;
-		gmcp_char_vitals(ch);
-	}
-
+	struct regen_event_state state = regen_state_from_data(data);
+	unsigned long long elapsed_ticks = regen_elapsed_ticks(&state);
+	int regen_value_int;
 	int per_tick = ward_regen(ch, FALSE);
 
 	if ((per_tick == 0) || (GET_WARD(ch) == GET_MAX_WARD(ch) && per_tick > 0))
-	{
 		return;
+
+	state.accumulated += ((float)per_tick * (float)elapsed_ticks) / (float)PULSES_IN_TICK;
+	regen_value_int = (int)state.accumulated;
+	if (regen_value_int >= 1 || regen_value_int <= -1)
+	{
+		GET_WARD(ch) += regen_value_int;
+		if (GET_WARD(ch) > GET_MAX_WARD(ch))
+			GET_WARD(ch) = GET_MAX_WARD(ch);
+		state.accumulated -= (float)regen_value_int;
+		gmcp_char_vitals(ch);
 	}
 
-	int delay;
-	if (IS_PC(ch))
-	{
-		delay = 1;
-		regen_value += ((float)per_tick / (float)PULSES_IN_TICK);
-	}
-	else
-	{
-		delay = MOB_WARD_REGEN_DELAY;
-		regen_value += ((float)per_tick / ((float)(PULSES_IN_TICK / MOB_WARD_REGEN_DELAY)));
-	}
-	add_event(event_ward_regen, delay, ch, 0, 0, 0, &regen_value, sizeof(regen_value));
+	add_event(event_ward_regen, IS_PC(ch) ? 1 : MOB_WARD_REGEN_DELAY, ch, 0, 0, 0, &state, sizeof(state));
 }
 
 #define MOB_MOVE_REGEN_DELAY 10
 
 void event_move_regen(P_char ch, P_char victim, P_obj obj, void *data)
 {
-	float regen_value     = *((float *)data);
-	int   regen_value_int = (int)regen_value;
-	if (regen_value_int >= 1 || regen_value_int <= -1)
-	{
-		GET_VITALITY(ch) += regen_value_int;
-
-		if (GET_VITALITY(ch) > GET_MAX_VITALITY(ch))
-			GET_VITALITY(ch) = GET_MAX_VITALITY(ch);
-
-		regen_value = regen_value - (float)regen_value_int;
-		gmcp_char_vitals(ch);
-	}
-
+	struct regen_event_state state = regen_state_from_data(data);
+	unsigned long long elapsed_ticks = regen_elapsed_ticks(&state);
+	int regen_value_int;
 	int per_tick = move_regen(ch, FALSE);
-
 #if defined(CTF_MUD) && (CTF_MUD == 1)
 	affected_type *af;
-	if ((af = get_spell_from_char(ch, TAG_CTF_BONUS)) != NULL)
-	{
-		int num = af->modifier;
-		if (num >= 10)
-		{
-			per_tick *= 2;
-		}
-	}
+	if ((af = get_spell_from_char(ch, TAG_CTF_BONUS)) != NULL && af->modifier >= 10)
+		per_tick *= 2;
 #endif
 
 	if ((per_tick == 0) || (GET_VITALITY(ch) == GET_MAX_VITALITY(ch) && per_tick > 0) || (GET_VITALITY(ch) < 0 && per_tick < 0))
-	{
 		return;
+
+	state.accumulated += ((float)per_tick * (float)elapsed_ticks) / (float)PULSES_IN_TICK;
+	regen_value_int = (int)state.accumulated;
+	if (regen_value_int >= 1 || regen_value_int <= -1)
+	{
+		GET_VITALITY(ch) += regen_value_int;
+		if (GET_VITALITY(ch) > GET_MAX_VITALITY(ch))
+			GET_VITALITY(ch) = GET_MAX_VITALITY(ch);
+		state.accumulated -= (float)regen_value_int;
+		gmcp_char_vitals(ch);
 	}
 
-	int delay;
-	if (IS_PC(ch))
-	{
-		delay = 1;
-		regen_value += ((float)per_tick / (float)PULSES_IN_TICK);
-	}
-	else
-	{
-		delay = MOB_MOVE_REGEN_DELAY;
-		regen_value += ((float)per_tick / ((float)(PULSES_IN_TICK / MOB_MOVE_REGEN_DELAY)));
-	}
-	add_event(event_move_regen, delay, ch, 0, 0, 0, &regen_value, sizeof(regen_value));
+	add_event(event_move_regen, IS_PC(ch) ? 1 : MOB_MOVE_REGEN_DELAY, ch, 0, 0, 0, &state, sizeof(state));
 }
 
 void event_hit_regen(P_char ch, P_char victim, P_obj obj, void *data)
 {
-	float regen_value     = *((float *)data);
-	int   regen_value_int = (int)regen_value;
+	struct regen_event_state state = regen_state_from_data(data);
+	unsigned long long elapsed_ticks = regen_elapsed_ticks(&state);
+	int regen_value_int;
+	int per_tick = hit_regen(ch, FALSE);
+#if defined(CTF_MUD) && (CTF_MUD == 1)
+	affected_type *af;
+	if ((af = get_spell_from_char(ch, TAG_CTF_BONUS)) != NULL && af->modifier >= 10)
+		per_tick *= 2;
+#endif
 
+	if (per_tick == 0)
+		return;
+
+	state.accumulated += ((float)per_tick * (float)elapsed_ticks) / (float)PULSES_IN_TICK;
+	regen_value_int = (int)state.accumulated;
 	if (regen_value_int >= 1 || regen_value_int <= -1)
 	{
 		GET_HIT(ch) += regen_value_int;
-
 		if (GET_HIT(ch) < -10)
 		{
 			if (!char_in_list(ch))
@@ -469,36 +456,14 @@ void event_hit_regen(P_char ch, P_char victim, P_obj obj, void *data)
 			die(ch, ch);
 			return;
 		}
-		regen_value = regen_value - (float)regen_value_int;
+		if (GET_HIT(ch) > GET_MAX_HIT(ch))
+			GET_HIT(ch) = GET_MAX_HIT(ch);
+		state.accumulated -= (float)regen_value_int;
 		gmcp_char_vitals(ch);
 	}
 
 	update_pos(ch);
-	int per_tick = hit_regen(ch, FALSE);
-#if defined(CTF_MUD) && (CTF_MUD == 1)
-	affected_type *af;
-	if ((af = get_spell_from_char(ch, TAG_CTF_BONUS)) != NULL)
-	{
-		int num = af->modifier;
-		if (num >= 10)
-		{
-			per_tick *= 2;
-		}
-	}
-#endif
-
-	if (GET_HIT(ch) > GET_MAX_HIT(ch) && per_tick > 0)
-	{
-		GET_HIT(ch) = GET_MAX_HIT(ch);
-		return;
-	}
-	if (per_tick == 0)
-	{
-		return;
-	}
-
-	regen_value += (float)per_tick / (float)PULSES_IN_TICK;
-	add_event(event_hit_regen, 1, ch, 0, 0, 0, &regen_value, sizeof(regen_value));
+	add_event(event_hit_regen, 1, ch, 0, 0, 0, &state, sizeof(state));
 }
 
 void StartRegen(P_char ch, int type)
@@ -546,8 +511,10 @@ void StartRegen(P_char ch, int type)
 	if (per_tick == 0)
 		return;
 
-	float regen_value = (float)per_tick / (float)(PULSES_IN_TICK / delay);
-	add_event(func, delay, ch, 0, 0, 0, &regen_value, sizeof(regen_value));
+	struct regen_event_state state;
+	state.accumulated = 0.0f;
+	state.last_tick = ne_event_tick;
+	add_event(func, delay, ch, 0, 0, 0, &state, sizeof(state));
 }
 
 void event_wait(P_char ch, P_char victim, P_obj obj, void *data)
