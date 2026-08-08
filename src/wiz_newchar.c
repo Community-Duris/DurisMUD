@@ -379,7 +379,7 @@ void do_newchar(P_char ch, char *argument, int cmd)
 		memset(c, 0, sizeof(struct acct_chars));
 		c->charname                            = str_dup(newch->player.name);
 		c->count                               = 1;
-		c->last                                = time(NULL);
+		c->last                                = get_time();
 		c->racewar                             = (GET_RACEWAR(newch) == RACEWAR_EVIL) ? ACCT_EVIL : ACCT_GOOD;
 		c->next                                = ch->desc->account->acct_character_list;
 		ch->desc->account->acct_character_list = c;

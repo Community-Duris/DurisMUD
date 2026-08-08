@@ -10408,7 +10408,7 @@ int world_quest(P_char ch, P_char pl, int cmd, char *arg)
 
 			temp = (int)((get_property("world.quest.abandon.mod", 1.0) * GET_LEVEL(pl) * GET_LEVEL(pl) * GET_LEVEL(pl)));
 
-			timediff = time(NULL) - pl->only.pc->quest_started;
+			timediff = get_time() - pl->only.pc->quest_started;
 			// debug("timediff: %f", timediff);
 			costmod = 1.0 - (timediff / 60.0 / 60.0 / get_property("world.quest.cost.abandon.time", 24.000));
 			costmod *= 100;
@@ -13363,7 +13363,7 @@ int io_assistant(P_char ch, P_char pl, int cmd, char *arg)
 
 	// something is whacked with the random number generator, so adding some code to ensure a quiet
 	// time...  don't spam poor vareena with whispers!  Max of 1 per 15 minutes
-	if (chVar && (time(0) > (lastWhisper + (15 * 60))))
+	if (chVar && (get_time() > (lastWhisper + (15 * 60))))
 	{
 		switch (number(1, 100))
 		{
@@ -13392,7 +13392,7 @@ int io_assistant(P_char ch, P_char pl, int cmd, char *arg)
 				return FALSE;
 		}
 		act("$n whispers something to $N.", FALSE, ch, 0, chVar, TO_NOTVICT);
-		lastWhisper = time(0);
+		lastWhisper = get_time();
 		return TRUE;
 		;
 	}

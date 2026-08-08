@@ -456,7 +456,7 @@ int flesh_golem_repop(P_obj obj, P_char ch, int cmd, char *arg)
 
 	if (cmd == CMD_PERIODIC)
 	{
-		int curr_time = time(NULL);
+		int curr_time = get_time();
 
 		if (curr_time < obj->timer[0] + 1)
 		{

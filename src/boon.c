@@ -2127,7 +2127,7 @@ int boon_display(P_char ch, char *argument)
 
 		if (duration != -1)
 		{
-			ct    = time(0);
+			ct    = get_time();
 			timer = real_time_countdown(ct, timethen, duration * 60);
 			snprintf(cdtime, MAX_STRING_LENGTH, "%2d:%02d:%02d", timer.day * 24 + timer.hour, timer.minute, timer.second);
 		}
@@ -2397,7 +2397,7 @@ int create_boon(BoonData *bdata)
 
 	if (qry("INSERT INTO boons (time, duration, racewar, type, opt, criteria, criteria2, bonus, bonus2, random, author, active, pid, rpt) VALUES "
 	        "(%d, %d, %d, %d, %d, %f, %f, %f, %f, %d, '%s', 1, '%d', '%d')",
-	        time(0),
+	        get_time(),
 	        bdata->duration,
 	        bdata->racewar,
 	        bdata->type,
@@ -2511,8 +2511,8 @@ int extend_boon(int id, int extend, const char *name)
 		return FALSE;
 	}
 
-	int calculate = MAX(0, timethen + (duration * 60) - time(0));
-	int ct        = calculate + time(0);
+	int calculate = MAX(0, timethen + (duration * 60) - get_time());
+	int ct        = calculate + get_time();
 	duration      = extend;
 
 	if (!qry("UPDATE boons SET time = '%d', duration = '%d', active = '1', author = '*%s' WHERE id = '%d'", ct, duration, name, id))
@@ -2707,7 +2707,7 @@ void boon_maintenance()
 
 		// check durations and expire if necessesary
 		expire = FALSE;
-		if ((bdata.duration != -1) && (bdata.time + (bdata.duration * 60)) < time(0))
+		if ((bdata.duration != -1) && (bdata.time + (bdata.duration * 60)) < get_time())
 		{
 			boon_notify(bdata.id, NULL, BN_EXPIRE);
 			remove_boon(bdata.id);

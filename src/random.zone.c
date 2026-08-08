@@ -880,7 +880,7 @@ int relic_proc(P_obj obj, P_char ch, int cmd, char *arg)
 		if (obj->value[6] == 0 && IS_PC(ch))
 		{
 			obj->value[6] = 1;
-			obj->timer[3] = time(NULL) - (90 * 60 * 60);
+			obj->timer[3] = get_time() - (90 * 60 * 60);
 			update_relic(ch, obj);
 
 			for (d = descriptor_list; d; d = d->next)
@@ -1490,7 +1490,7 @@ int create_lab(int type)
 						}
 						else
 						{
-							obj->timer[3] = time(NULL) - (85 * 60 * 60);
+							obj->timer[3] = get_time() - (85 * 60 * 60);
 							obj_to_char(obj, mob);
 							relic_in_game = 1;
 						}

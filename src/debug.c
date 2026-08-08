@@ -95,7 +95,7 @@ void cmdlog(P_char ch, char *str)
 		{
 			rewind(cmdfile);
 		}
-		ct = time(0);
+		ct = get_time();
 		strcpy(tbuf, asctime(localtime(&ct)));
 		tbuf[strlen(tbuf) - 1] = '\0';
 		fprintf(cmdfile, "%s :: [%d] %s in %d: %s\n", tbuf, logcount, GET_NAME(ch), world[ch->in_room].number, str);

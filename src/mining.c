@@ -245,7 +245,7 @@ P_obj get_ore_from_mine(P_char ch, int mine_quality)
 	{
 		return NULL;
 	}
-	ore->value[4] = time(NULL);
+	ore->value[4] = get_time();
 	return ore;
 }
 
@@ -253,7 +253,7 @@ P_obj get_gem_from_mine(P_char ch, int mine_quality)
 {
 	P_obj gem = read_object(mining_config_gem_vnum(), VIRTUAL);
 	if (!gem) return NULL;
-	gem->value[4] = time(NULL);
+	gem->value[4] = get_time();
 	return gem;
 }
 

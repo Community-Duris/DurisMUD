@@ -22,6 +22,7 @@
  * translation unit. */
 extern void wizlog(int level, const char *format, ...);
 extern void logit(const char *filename, const char *format, ...);
+extern time_t get_time(void);
 
 #define PERSISTENCE_WORKER_STOP_JOIN_TIMEOUT_SECS 2
 
@@ -432,14 +433,14 @@ static void *persistence_item_event_worker_main(void *unused)
      * MySQL call, or anywhere else without releasing the mutex will
      * leave this stale and be flagged as stuck by
      * persistence_item_event_worker_stuck() on the main thread. */
-    persistence_item_event_worker_last_heartbeat = time(NULL);
+    persistence_item_event_worker_last_heartbeat = get_time();
     while (persistence_item_event_queue.count <= 0 &&
            !persistence_item_event_worker_stop_requested)
     {
       pthread_cond_wait(&persistence_item_event_queue_cond,
                         &persistence_item_event_queue_mutex);
       /* Refresh heartbeat after waking from cond_wait too. */
-      persistence_item_event_worker_last_heartbeat = time(NULL);
+      persistence_item_event_worker_last_heartbeat = get_time();
     }
 
     if (persistence_item_event_worker_stop_requested &&
@@ -527,7 +528,7 @@ int persistence_item_event_worker_start(persistence_item_event_writer writer,
   persistence_item_event_worker_stop_requested = 0;
   persistence_item_event_worker_drain_requested = 0;
   persistence_item_event_worker_is_running = 1;
-  persistence_item_event_worker_last_heartbeat = time(NULL);
+  persistence_item_event_worker_last_heartbeat = get_time();
   pthread_mutex_unlock(&persistence_item_event_queue_mutex);
 
   result = pthread_create(&persistence_item_event_worker_thread, NULL,
@@ -553,7 +554,7 @@ int persistence_item_event_worker_stop(int drain_remaining)
                 persistence_item_event_worker_stop_pending_flag;
   stuck = was_running &&
           persistence_item_event_worker_last_heartbeat != 0 &&
-          (int)(time(NULL) - persistence_item_event_worker_last_heartbeat) >=
+          (int)(get_time() - persistence_item_event_worker_last_heartbeat) >=
             PERSISTENCE_WORKER_HEARTBEAT_STUCK_SECS;
   persistence_item_event_worker_stop_pending_flag = was_running ? 1 : persistence_item_event_worker_stop_pending_flag;
   if (stuck)
@@ -625,7 +626,7 @@ int persistence_item_event_worker_running(void)
       else
       {
         last = persistence_item_event_worker_last_heartbeat;
-        age = last ? (int)(time(NULL) - last) : -1;
+        age = last ? (int)(get_time() - last) : -1;
         if (age >= PERSISTENCE_WORKER_HEARTBEAT_STUCK_SECS)
         {
           /* Heartbeat staleness is not proof that the pthread exited.  Keep
@@ -964,13 +965,13 @@ static void *persistence_scalar_event_worker_main(void *unused)
 
     pthread_mutex_lock(&persistence_scalar_event_queue_mutex);
     /* Deadlock-detection heartbeat: see item worker. */
-    persistence_scalar_event_worker_last_heartbeat = time(NULL);
+    persistence_scalar_event_worker_last_heartbeat = get_time();
     while (persistence_scalar_event_queue.count <= 0 &&
            !persistence_scalar_event_worker_stop_requested)
     {
       pthread_cond_wait(&persistence_scalar_event_queue_cond,
                         &persistence_scalar_event_queue_mutex);
-      persistence_scalar_event_worker_last_heartbeat = time(NULL);
+      persistence_scalar_event_worker_last_heartbeat = get_time();
     }
 
     if (persistence_scalar_event_worker_stop_requested &&
@@ -1058,7 +1059,7 @@ int persistence_scalar_event_worker_start(persistence_scalar_event_writer writer
   persistence_scalar_event_worker_stop_requested = 0;
   persistence_scalar_event_worker_drain_requested = 0;
   persistence_scalar_event_worker_is_running = 1;
-  persistence_scalar_event_worker_last_heartbeat = time(NULL);
+  persistence_scalar_event_worker_last_heartbeat = get_time();
   pthread_mutex_unlock(&persistence_scalar_event_queue_mutex);
 
   result = pthread_create(&persistence_scalar_event_worker_thread, NULL,
@@ -1084,7 +1085,7 @@ int persistence_scalar_event_worker_stop(int drain_remaining)
                 persistence_scalar_event_worker_stop_pending_flag;
   stuck = was_running &&
           persistence_scalar_event_worker_last_heartbeat != 0 &&
-          (int)(time(NULL) - persistence_scalar_event_worker_last_heartbeat) >=
+          (int)(get_time() - persistence_scalar_event_worker_last_heartbeat) >=
             PERSISTENCE_WORKER_HEARTBEAT_STUCK_SECS;
   persistence_scalar_event_worker_stop_pending_flag = was_running ? 1 : persistence_scalar_event_worker_stop_pending_flag;
   if (stuck)
@@ -1154,7 +1155,7 @@ int persistence_scalar_event_worker_running(void)
       else
       {
         last = persistence_scalar_event_worker_last_heartbeat;
-        age = last ? (int)(time(NULL) - last) : -1;
+        age = last ? (int)(get_time() - last) : -1;
         if (age >= PERSISTENCE_WORKER_HEARTBEAT_STUCK_SECS)
         {
           persistence_scalar_event_worker_stop_pending_flag = 1;
@@ -1216,13 +1217,13 @@ static void *persistence_large_event_worker_main(void *unused)
 
     pthread_mutex_lock(&persistence_large_event_queue_mutex);
     /* Deadlock-detection heartbeat: see item worker. */
-    persistence_large_event_worker_last_heartbeat = time(NULL);
+    persistence_large_event_worker_last_heartbeat = get_time();
     while (persistence_large_event_queue.count <= 0 &&
            !persistence_large_event_worker_stop_requested)
     {
       pthread_cond_wait(&persistence_large_event_queue_cond,
                         &persistence_large_event_queue_mutex);
-      persistence_large_event_worker_last_heartbeat = time(NULL);
+      persistence_large_event_worker_last_heartbeat = get_time();
     }
 
     if (persistence_large_event_worker_stop_requested &&
@@ -1310,7 +1311,7 @@ int persistence_large_event_worker_start(persistence_scalar_event_writer writer,
   persistence_large_event_worker_stop_requested = 0;
   persistence_large_event_worker_drain_requested = 0;
   persistence_large_event_worker_is_running = 1;
-  persistence_large_event_worker_last_heartbeat = time(NULL);
+  persistence_large_event_worker_last_heartbeat = get_time();
   pthread_mutex_unlock(&persistence_large_event_queue_mutex);
 
   result = pthread_create(&persistence_large_event_worker_thread, NULL,
@@ -1336,7 +1337,7 @@ int persistence_large_event_worker_stop(int drain_remaining)
                 persistence_large_event_worker_stop_pending_flag;
   stuck = was_running &&
           persistence_large_event_worker_last_heartbeat != 0 &&
-          (int)(time(NULL) - persistence_large_event_worker_last_heartbeat) >=
+          (int)(get_time() - persistence_large_event_worker_last_heartbeat) >=
             PERSISTENCE_WORKER_HEARTBEAT_STUCK_SECS;
   persistence_large_event_worker_stop_pending_flag = was_running ? 1 : persistence_large_event_worker_stop_pending_flag;
   if (stuck)
@@ -1406,7 +1407,7 @@ int persistence_large_event_worker_running(void)
       else
       {
         last = persistence_large_event_worker_last_heartbeat;
-        age = last ? (int)(time(NULL) - last) : -1;
+        age = last ? (int)(get_time() - last) : -1;
         if (age >= PERSISTENCE_WORKER_HEARTBEAT_STUCK_SECS)
         {
           persistence_large_event_worker_stop_pending_flag = 1;
@@ -1457,7 +1458,7 @@ int persistence_item_event_worker_heartbeat_age(void)
   if (last == 0)
     return -1;
 
-  age = (int)(time(NULL) - last);
+  age = (int)(get_time() - last);
   return age >= 0 ? age : 0;
 }
 
@@ -1483,7 +1484,7 @@ int persistence_item_event_worker_stuck(int threshold_secs)
   if (last == 0)
     return 0;
 
-  age = (int)(time(NULL) - last);
+  age = (int)(get_time() - last);
   if (age < 0)
     age = 0;
   return age >= threshold_secs;
@@ -1512,7 +1513,7 @@ int persistence_scalar_event_worker_heartbeat_age(void)
   if (last == 0)
     return -1;
 
-  age = (int)(time(NULL) - last);
+  age = (int)(get_time() - last);
   return age >= 0 ? age : 0;
 }
 
@@ -1538,7 +1539,7 @@ int persistence_scalar_event_worker_stuck(int threshold_secs)
   if (last == 0)
     return 0;
 
-  age = (int)(time(NULL) - last);
+  age = (int)(get_time() - last);
   if (age < 0)
     age = 0;
   return age >= threshold_secs;
@@ -1567,7 +1568,7 @@ int persistence_large_event_worker_heartbeat_age(void)
   if (last == 0)
     return -1;
 
-  age = (int)(time(NULL) - last);
+  age = (int)(get_time() - last);
   return age >= 0 ? age : 0;
 }
 
@@ -1593,7 +1594,7 @@ int persistence_large_event_worker_stuck(int threshold_secs)
   if (last == 0)
     return 0;
 
-  age = (int)(time(NULL) - last);
+  age = (int)(get_time() - last);
   if (age < 0)
     age = 0;
   return age >= threshold_secs;

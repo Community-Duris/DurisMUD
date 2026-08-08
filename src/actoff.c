@@ -2382,7 +2382,7 @@ void do_flee(P_char ch, char *argument, int cmd)
 	}
 
 	if (IS_PC(ch))
-		ch->only.pc->pc_timer[1] = time(NULL);
+		ch->only.pc->pc_timer[1] = get_time();
 
 	ch->points.delay_move = 0;
 

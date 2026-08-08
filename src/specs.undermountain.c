@@ -631,7 +631,7 @@ int staff_of_power(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "aura"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -858,7 +858,7 @@ int staff_of_blue_flames(P_obj obj, P_char ch, int cmd, char *arg)
 		// Disabled gellz - 1/11/16 to enable use with globe of dark spell
 		//    if( !IS_OBJ_STAT(obj, ITEM_LIT) )
 		//     return FALSE;
-		curr_time = time(NULL);
+		curr_time = get_time();
 
 		if (isname(arg, "fly"))
 		{
@@ -961,7 +961,7 @@ int staff_of_blue_flames(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		else if (isname(arg, "stone"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			act("You say 'stone' to $p.", FALSE, ch, obj, NULL, TO_CHAR);
 			act("&+bThe flames of your&N $q &+Bintensify.&N", FALSE, ch, obj, NULL, TO_CHAR);
@@ -978,7 +978,7 @@ int staff_of_blue_flames(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		else if (isname(arg, "globe"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			act("You say 'globe' to $p.", FALSE, ch, obj, NULL, TO_CHAR);
 			act("&+bThe flames of your&N $q &+Bintensify.&N", FALSE, ch, obj, NULL, TO_CHAR);

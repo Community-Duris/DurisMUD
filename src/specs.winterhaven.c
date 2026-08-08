@@ -193,7 +193,7 @@ int storm_legplates(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "storm"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 				vict      = GET_OPPONENT(ch);
 				// 10 min timer.
 				if (obj->timer[0] + 600 <= curr_time)
@@ -245,7 +245,7 @@ int storm_legplates(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "storm"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 				// 10 min timer.
 				if (OUTSIDE(ch) && obj->timer[0] + 600 <= curr_time)
 				{
@@ -268,7 +268,7 @@ int storm_legplates(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "ground"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 				if (obj->timer[0] + 600 <= curr_time)
 				{
 					act("$q &+wsends a burst of &+Yelectricity &+wthrough your body.&n", TRUE, ch, obj, obj, TO_CHAR);
@@ -316,7 +316,7 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "blur"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 				vict      = GET_OPPONENT(ch);
 				// 10 min timer.
 				if (obj->timer[0] + 600 <= curr_time)
@@ -439,7 +439,7 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "misty"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 				// 10 min timer.
 				if (obj->timer[0] + 600 <= curr_time)
 				{
@@ -486,7 +486,7 @@ int volo_longsword(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "volo"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 				vict      = ParseTarget(ch, arg);
 				// 10 min timer.
 				if (obj->timer[0] + 600 <= curr_time)
@@ -603,7 +603,7 @@ int snowogre_warhammer(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "fury"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			// 10 min timer.
 			if (obj->timer[0] + 600 <= curr_time)
@@ -888,7 +888,7 @@ int deathseeker_mace(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "death"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 
 				if (obj->timer[0] + 600 <= curr_time)
 				{
@@ -951,7 +951,7 @@ int deathseeker_mace(P_obj obj, P_char ch, int cmd, char *arg)
 				target = get_char_vis(ch, viewperson);
 				if (target && target != ch && IS_PC(target) && !IS_TRUSTED(target))
 				{
-					curr_time = time(NULL);
+					curr_time = get_time();
 					if (obj->timer[0] + 600 <= curr_time)
 					{
 						switch (number(0, 1))
@@ -1131,7 +1131,7 @@ int illithid_axe(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (*Command && (cmd == CMD_SAY))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			if (!strcmp(Command, "warp") && *Toperson)
 			{
 				target = get_char_vis(ch, Toperson);
@@ -1264,7 +1264,7 @@ int dagger_ra(P_obj obj, P_char ch, int cmd, char *arg)
 
 	if (cmd == CMD_PERIODIC)
 	{
-		curr_time = time(NULL);
+		curr_time = get_time();
 		ch        = obj->loc.wearing;
 
 		if (!CHAR_IN_NO_MAGIC_ROOM(ch))
@@ -1290,7 +1290,7 @@ int dagger_ra(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "ra"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 750 sec timer == 12 min 30 sec.
 			if (obj->timer[1] + 750 <= curr_time)
 			{
@@ -1758,7 +1758,7 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
 	// a bug, so just keep that in mind if you are looking to edit this.
 	if (obj->timer[1] == 0)
 	{
-		obj->timer[1] = time(NULL);
+		obj->timer[1] = get_time();
 	}
 	if (arg && (cmd == CMD_REMOVE))
 	{
@@ -1775,7 +1775,7 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "bel"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 				vict      = ParseTarget(ch, arg);
 
 				// 800 sec timer == 13 min 20 sec, and 10 min timer.
@@ -1837,7 +1837,7 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "euronymous"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			vict      = ParseTarget(ch, arg);
 
 			// 450 sec == 7 min 30 sec & 10 min timer.
@@ -1919,7 +1919,7 @@ int demon_slayer(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		else if (isname(arg, "juiblex") || isname(arg, "jubilex"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			vict      = ParseTarget(ch, arg);
 			// 450 sec == 7 min 30 sec & 10 min timers.
 			if (obj->timer[0] + 450 <= curr_time && obj->timer[1] + 600 <= curr_time)
@@ -2072,7 +2072,7 @@ int helmet_vampires(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "dead"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 				// 25 min timer.
 				if (obj->timer[0] + 1500 <= curr_time)
 				{
@@ -2131,7 +2131,7 @@ int helmet_vampires(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "koztk"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 				vict      = ParseTarget(ch, arg);
 				// 15 min timer.
 				if (obj->timer[0] + 900 <= curr_time)
@@ -2227,8 +2227,8 @@ int buckler_saints(P_obj obj, P_char ch, int cmd, char *arg)
 {
 	P_char            vict, target;
 	int               room, max_hp;
-	int               curr_time  = time(NULL);
-	int               curr_time2 = time(NULL);
+	int               curr_time  = get_time();
+	int               curr_time2 = get_time();
 	struct proc_data *data;
 
 	if (cmd == CMD_SET_PERIODIC)
@@ -2276,7 +2276,7 @@ int buckler_saints(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "gauce"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 7 min 30 sec timer.
 			if (obj->timer[0] + 450 <= curr_time)
 			{
@@ -2295,7 +2295,7 @@ int buckler_saints(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		else if (isname(arg, "macavor"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 450 <= curr_time)
 			{
@@ -2324,7 +2324,7 @@ int buckler_saints(P_obj obj, P_char ch, int cmd, char *arg)
 		}
 		else if (isname(arg, "verdonnaly"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 450 <= curr_time)
 			{
@@ -2872,8 +2872,8 @@ int gauntlets_legend(P_obj obj, P_char ch, int cmd, char *arg)
 {
 	P_char            vict, target;
 	int               room;
-	int               curr_time  = time(NULL);
-	int               curr_time2 = time(NULL);
+	int               curr_time  = get_time();
+	int               curr_time2 = get_time();
 	struct proc_data *data;
 
 	if (cmd == CMD_SET_PERIODIC)
@@ -2965,7 +2965,7 @@ int gauntlets_legend(P_obj obj, P_char ch, int cmd, char *arg)
 		{
 			if (isname(arg, "hands"))
 			{
-				curr_time = time(NULL);
+				curr_time = get_time();
 				// 10 min timer.
 				if (obj->timer[0] + 600 <= curr_time)
 				{
@@ -3012,7 +3012,7 @@ int boots_abyss(P_obj obj, P_char ch, int cmd, char *arg)
     {
       if (isname(arg, "poseidon"))
       {
-        curr_time = time(NULL);
+        curr_time = get_time();
 
         if (obj->timer[0] + 1200 <= curr_time)
         {
@@ -3038,7 +3038,7 @@ int boots_abyss(P_obj obj, P_char ch, int cmd, char *arg)
     {
       if (isname(arg, "boots") || isname(arg, "abyss"))
       {
-        curr_time2 = time(NULL);
+        curr_time2 = get_time();
 
         if (obj->timer[1] + 600 <= curr_time2)
         {
@@ -3061,7 +3061,7 @@ int boots_abyss(P_obj obj, P_char ch, int cmd, char *arg)
   {
     if (isname(arg, "ground"))
     {
-      curr_time = time(NULL);
+      curr_time = get_time();
 
       if (obj->timer[0] + 600 <= curr_time)
       {
@@ -3083,7 +3083,7 @@ int boots_abyss(P_obj obj, P_char ch, int cmd, char *arg)
   {
     if (isname(arg, "water"))
     {
-      curr_time2 = time(NULL);
+      curr_time2 = get_time();
 
       if (obj->timer[1] + 600 <= curr_time2)
       {
@@ -3106,7 +3106,7 @@ int boots_abyss(P_obj obj, P_char ch, int cmd, char *arg)
   {
     if (isname(arg, "air"))
     {
-      curr_time2 = time(NULL);
+      curr_time2 = get_time();
 
       if (obj->timer[1] + 600 <= curr_time2)
       {
@@ -3242,7 +3242,7 @@ int poseidon_trident(P_obj obj, P_char ch, int cmd, char *arg)
   {
     if (isname(arg, "kraken"))
     {
-      curr_time = time(NULL);
+      curr_time = get_time();
 
       if (obj->timer[0] + 600 <= curr_time)
       {
@@ -3275,7 +3275,7 @@ int poseidon_trident(P_obj obj, P_char ch, int cmd, char *arg)
   {
     if (isname(arg, "poseidon"))
     {
-      curr_time = time(NULL);
+      curr_time = get_time();
 
       if (obj->timer[0] + 600 <= curr_time)
       {
@@ -3298,8 +3298,8 @@ int platemail_fame(P_obj obj, P_char ch, int cmd, char *arg)
 {
   P_char vict, target;
   int room, fame = 0;
-  int curr_time = time(NULL);
-  int curr_time2 = time(NULL);
+  int curr_time = get_time();
+  int curr_time2 = get_time();
   struct proc_data *data;
   struct affected_type *af;
 
@@ -3330,7 +3330,7 @@ int platemail_fame(P_obj obj, P_char ch, int cmd, char *arg)
   {
     if (isname(arg, "platemail")  || isname(arg, "fame"))
     {
-      curr_time = time(NULL);
+      curr_time = get_time();
 
       if (obj->timer[0] + 600 <= curr_time)
       {
@@ -3559,7 +3559,7 @@ int earring_powers(P_obj obj, P_char ch, int cmd, char *arg)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 	// 10 min timer.
 	if (obj->timer[0] + 600 <= curr_time)
 	{
@@ -3952,7 +3952,7 @@ int collar_frost(P_obj obj, P_char ch, int cmd, char *arg)
 				return FALSE;
 			}
 
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 10 min timer.
 			if (obj->timer[0] + 600 <= curr_time)
 			{
@@ -4088,7 +4088,7 @@ int collar_flames(P_obj obj, P_char ch, int cmd, char *arg)
 				send_to_char("You have too many followers already.\n\r", ch);
 				return FALSE;
 			}
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 10 min timer.
 			if (obj->timer[0] + 600 <= curr_time)
 			{

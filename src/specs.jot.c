@@ -49,7 +49,7 @@ int icicle_cloak(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "icicle"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (curr_time >= obj->timer[0] + 60)
 			{
@@ -328,7 +328,7 @@ int deva_cloak(P_obj obj, P_char ch, int cmd, char *arg)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 	if (!IS_ROOM(ch->in_room, ROOM_NO_MAGIC))
 	{
 		if ((obj->timer[0] + 360) <= curr_time)
@@ -600,7 +600,7 @@ int reliance_pegasus(P_obj obj, P_char ch, int cmd, char *arg)
 				return TRUE;
 			}
 
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 200 <= curr_time)
 			{

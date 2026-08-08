@@ -141,7 +141,7 @@ int sphinx_prefect_crown(P_obj obj, P_char ch, int cmd, char *arg)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (arg && (cmd == CMD_SAY) && isname(arg, "sphinx"))
 	{
@@ -356,13 +356,13 @@ int proc_soldon_hat(P_obj obj, P_char ch, int cmd, char *argument)
 	}
 
 	// 5 min timer.
-	if (time(NULL) < timer + 300)
+	if (get_time() < timer + 300)
 	{
 		send_to_char("&+yYou rub the brim of your hat, but nothing happens..&n\n\r", ch);
 		return TRUE;
 	}
 	// Reset timer.
-	timer = time(NULL);
+	timer = get_time();
 
 	count = 4;
 	// Load count deck hands.

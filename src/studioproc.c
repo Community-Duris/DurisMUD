@@ -820,7 +820,7 @@ static void sp_do_attack(struct sp_ctx *cx, struct sp_action *a, int aidx)
 	/* cooldown: a stamp in seconds, held per instance */
 	if (a->cooldown > 0)
 	{
-		now = (long)time(0);
+		now = (long)get_time();
 		if ((long)sp_state_get(cx, SP_TAG_COOLDOWN, aidx) > now)
 			return;
 		sp_state_set(cx, SP_TAG_COOLDOWN, aidx, (int)(now + a->cooldown));

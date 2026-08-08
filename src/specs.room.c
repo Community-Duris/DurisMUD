@@ -374,7 +374,7 @@ int inn(int room, P_char ch, int cmd, char *arg)
 			*/
 			return TRUE;
 		}
-		ct = time(NULL);
+		ct = get_time();
 		// Convert to EST. - this sux.. gotta be a be'er way.
 		ct -= 4 * 60 * 60;
 		snprintf(timestr, MAX_STRING_LENGTH, "%s", asctime(localtime(&ct)));
@@ -917,7 +917,7 @@ int pet_shops(int room, P_char ch, int cmd, char *arg)
 			ticket->value[0]          = mount_rent_cost(mount);
 			ticket->value[1]          = GET_IDNUM(mount);
 			ticket->value[2]          = world[ch->in_room].number;
-			ticket->value[3]          = time(NULL);
+			ticket->value[3]          = get_time();
 
 			act("A stable-hand hands you a ticket, saying 'Pay when ya pick up.'", FALSE, ch, 0, 0, TO_CHAR);
 			act("A stable-hand hands $n a ticket, saying 'Pay when ya pick up.'", FALSE, ch, 0, 0, TO_ROOM);
@@ -962,7 +962,7 @@ int pet_shops(int room, P_char ch, int cmd, char *arg)
 		}
 #if 0
     /* This is cost per real life day */
-    val = ((ticket->value[3] - time(NULL) / SECS_PER_REAL_DAY) * ticket->value[0]);
+    val = ((ticket->value[3] - get_time() / SECS_PER_REAL_DAY) * ticket->value[0]);
 #else
 		/* and this is the flat rate price */
 		val = ticket->value[0];
@@ -1366,7 +1366,7 @@ int mortal_heaven(int room, P_char ch, int cmd, char *arg)
 		if (IS_TRUSTED(tch) || IS_NPC(tch))
 			continue;
 
-		if (tch->only.pc->pc_timer[PC_TIMER_HEAVEN] <= time(NULL))
+		if (tch->only.pc->pc_timer[PC_TIMER_HEAVEN] <= get_time())
 		{
 			send_to_char("Your soul is torn from the afterlife, eternal rest denied...\n\r", tch);
 			act("$n is torn from the afterlife.", FALSE, tch, 0, 0, TO_ROOM);

@@ -189,7 +189,7 @@ int ebb_vambraces(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "ebb"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 
 			if (obj->timer[0] + 600 <= curr_time)
 			{
@@ -251,7 +251,7 @@ int flow_amulet(P_obj obj, P_char ch, int cmd, char *arg)
 	{
 		if (isname(arg, "flow"))
 		{
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 5 min 50 sec timer ?!?
 			if (obj->timer[0] + 350 <= curr_time)
 			{
@@ -312,7 +312,7 @@ int juiblex_grid_mob_generator(P_obj obj, P_char ch, int cmd, char *arg)
 
 	if (cmd == CMD_PERIODIC)
 	{
-		int curr_time = time(NULL);
+		int curr_time = get_time();
 
 		if (curr_time < obj->timer[0] + 180)
 			return FALSE;

@@ -82,7 +82,7 @@ int persistence_large_event_worker_heartbeat_age(void);
 
 /* Test helpers – set the heartbeat timestamp to simulate a stale worker.
  * These can be used by tests to avoid waiting for the real timeout.
- * Pass time(NULL) - age_secs to set the heartbeat to `age_secs` seconds ago. */
+ * Pass get_time() - age_secs to set the heartbeat to `age_secs` seconds ago. */
 void persistence_item_event_worker_heartbeat_set(time_t timestamp);
 void persistence_scalar_event_worker_heartbeat_set(time_t timestamp);
 void persistence_large_event_worker_heartbeat_set(time_t timestamp);

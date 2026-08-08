@@ -336,7 +336,7 @@ int shimmer_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (!IS_ROOM(ch->in_room, ROOM_NO_MAGIC))
 	{

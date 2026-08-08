@@ -5766,7 +5766,7 @@ void spell_ray_of_enfeeblement(int level, P_char ch, char *arg, int type, P_char
 void AgeChar(P_char ch, int years)
 {
 	long   played, secs;
-	time_t curr_time = time(NULL);
+	time_t curr_time = get_time();
 
 	if (IS_NPC(ch))
 		return;
@@ -8624,7 +8624,7 @@ void spell_channel(int level, P_char ch, P_char victim, P_obj obj)
 				af.flags     = AFFTYPE_NODISPEL;
 				affect_join(vict, &af, FALSE, FALSE);
 				SET_POS(vict, POS_PRONE + GET_STAT(vict));
-				vict->only.pc->pc_timer[3] = time(NULL);
+				vict->only.pc->pc_timer[3] = get_time();
 				if (ch != vict && avatar->desc)
 				{
 					vict->desc->snoop.snooping = avatar;
@@ -19806,7 +19806,7 @@ void set_up_portals(P_char ch, P_obj p1, P_obj p2, int charge)
 	int temp;
 
 	// set when portal is created, for initial stabilization
-	p1->timer[0] = time(0);
+	p1->timer[0] = get_time();
 	if (p2)
 		p2->timer[0] = p1->timer[0];
 	//----------------------------

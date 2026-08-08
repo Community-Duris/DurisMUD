@@ -764,7 +764,7 @@ void sql_check_level_cap(long max_frags, int racewar)
 		return;
 	}
 	// If enough time has passed, and level should change, update level if appropriate.
-	if (next_update <= time(NULL))
+	if (next_update <= get_time())
 	{
 		// Have enough frags to update level.
 		if (old_level < frag_cap_config_cap_level_from_frags(max_frags / 100.))
@@ -791,7 +791,7 @@ void sql_check_level_cap(long max_frags, int racewar)
 			         max_frags / 100.,
 			         racewar,
 			         next_level,
-			         (long)(time(NULL) + SECS_PER_REAL_DAY * frag_cap_config_timer_days(old_level)));
+			         (long)(get_time() + SECS_PER_REAL_DAY * frag_cap_config_timer_days(old_level)));
 			db_query(query);
 		}
 		else if (max_frags > old_max_frags)

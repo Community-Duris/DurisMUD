@@ -834,7 +834,7 @@ bool auction_offer(P_char ch, char *args)
 
 	// Preserve the id before the character save issues further SQL.
 	int new_auction_id = mysql_insert_id(DB);
-	int end_time       = time(NULL) + auction_length;
+	int end_time       = get_time() + auction_length;
 	string offered_short = tmp_obj->short_description;
 
 	// Detach, but do not destroy, the items until the inventory removal and

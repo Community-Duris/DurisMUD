@@ -428,7 +428,7 @@ void redis_log_floor_drop(P_obj obj, int room_vnum)
 	if (OBJ_VNUM(obj) == 2 && obj->value[6] > 0)
 	{
 		time_t corpse_time = (time_t)obj->value[6];
-		if (time(NULL) - corpse_time > 86400)
+		if (get_time() - corpse_time > 86400)
 			return;
 	}
 
@@ -790,7 +790,7 @@ static int dirty_debounce_count = 0;
 // returns true if we should proceed, false if debounced
 static bool check_dirty_debounce(int pid)
 {
-	time_t now = time(NULL);
+	time_t now = get_time();
 
 	for (int i = 0; i < dirty_debounce_count; i++)
 	{
@@ -1127,7 +1127,7 @@ static bool redis_save_world_state_json(redisContext *ctx)
 		return false;
 
 	cJSON_AddNumberToObject(root, "ver", REDIS_WORLD_STATE_VER);
-	cJSON_AddNumberToObject(root, "ts", (double)time(NULL));
+	cJSON_AddNumberToObject(root, "ts", (double)get_time());
 
 	// mobs array
 	cJSON *mobs = cJSON_CreateArray();
@@ -1265,7 +1265,7 @@ static bool redis_save_world_state_json(redisContext *ctx)
 		if (vnum == 2 && obj->value[6] > 0)
 		{
 			time_t corpse_time = (time_t)obj->value[6];
-			if (time(NULL) - corpse_time > 86400)
+			if (get_time() - corpse_time > 86400)
 				continue;
 		}
 
@@ -1376,7 +1376,7 @@ static bool redis_save_world_state_json(redisContext *ctx)
 	freeReplyObject(reply);
 
 	char timestamp_str[32];
-	snprintf(timestamp_str, sizeof(timestamp_str), "%ld", (long)time(NULL));
+	snprintf(timestamp_str, sizeof(timestamp_str), "%ld", (long)get_time());
 	reply = (redisReply *)redisCommand(ctx, "SET mud:world_state:timestamp %s", timestamp_str);
 	if (reply)
 		freeReplyObject(reply);
@@ -1519,7 +1519,7 @@ bool redis_has_world_state(void)
 	if (saved_time == 0)
 		return false;
 
-	time_t now = time(NULL);
+	time_t now = get_time();
 	if (now - saved_time > world_state_max_age)
 	{
 		logit(LOG_SYS, "redis: world state too old (%ld seconds), ignoring", (long)(now - saved_time));
@@ -2829,7 +2829,7 @@ static char *generate_fraglist_output(void)
 
 	get_level_cap_info(&cap_frags, &cap_racewar, &cap_level, &cap_timer);
 	cap_others = sql_level_cap((cap_racewar == RACEWAR_GOOD) ? RACEWAR_EVIL : RACEWAR_GOOD);
-	cap_timer -= time(NULL);
+	cap_timer -= get_time();
 
 	if (cap_timer <= 0)
 	{

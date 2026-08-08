@@ -3472,10 +3472,10 @@ void extract_char(P_char ch)
 				switch (GET_RACEWAR(ch))
 				{
 					case RACEWAR_GOOD:
-						ch->desc->account->acct_good = time(NULL);
+						ch->desc->account->acct_good = get_time();
 						break;
 					case RACEWAR_EVIL:
-						ch->desc->account->acct_evil = time(NULL);
+						ch->desc->account->acct_evil = get_time();
 						break;
 				}
 			}

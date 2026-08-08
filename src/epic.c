@@ -1033,7 +1033,7 @@ int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)
 				update_epic_zone_alignment(zone_number, delta);
 
 			// set completed flag
-			epic_zone_completions.push_back(epic_zone_completion(zone_number, time(NULL), delta));
+			epic_zone_completions.push_back(epic_zone_completion(zone_number, get_time(), delta));
 			redis_invalidate_epic_zones();
 			db_query("UPDATE zones SET last_touch = NOW() WHERE number = '%d'", zone_number);
 			db_query("INSERT INTO zone_touches (boot_time, touched_at, zone_number, toucher_pid, group_size, epic_value, alignment_delta) VALUES (FROM_UNIXTIME(%d), NOW(), %d, %d, %d, %d, %d);",
@@ -1088,7 +1088,7 @@ void epic_zone_balance()
 
 		// debug("zone %d alignment %d", epic_zones[i].number, alignment);
 
-		if ((time(NULL) - lt) > ((int)get_property("epic.alignment.reset.hour", 7 * 24) * 60 * 60))
+		if ((get_time() - lt) > ((int)get_property("epic.alignment.reset.hour", 7 * 24) * 60 * 60))
 		{
 			if (alignment > 0)
 				delta = -1;
@@ -1518,7 +1518,7 @@ bool epic_zone_done(int zone_number)
 {
 	for (vector<epic_zone_completion>::iterator it = epic_zone_completions.begin(); it != epic_zone_completions.end(); it++)
 	{
-		if ((it->number == zone_number) && (time(NULL) - it->done_at) > (int)get_property("epic.showCompleted.delaySecs", (15 * 60)))
+		if ((it->number == zone_number) && (get_time() - it->done_at) > (int)get_property("epic.showCompleted.delaySecs", (15 * 60)))
 		{
 			return TRUE;
 		}
@@ -1532,7 +1532,7 @@ int epic_zone_data::displayed_alignment() const
 
 	for (vector<epic_zone_completion>::iterator it = epic_zone_completions.begin(); it != epic_zone_completions.end(); it++)
 	{
-		if ((it->number == this->number) && (time(NULL) - it->done_at) < (int)get_property("epic.showCompleted.delaySecs", (15 * 60)))
+		if ((it->number == this->number) && (get_time() - it->done_at) < (int)get_property("epic.showCompleted.delaySecs", (15 * 60)))
 		{
 			return this->alignment - it->delta;
 		}

@@ -762,6 +762,7 @@ void        close_sockets(int);
 int         is_desc_valid(P_desc);
 void        flush_queues(P_desc);
 void        nonblock(int);
+time_t      get_time();
 void        parse_name(P_desc, char *);
 void        perform_complex(P_char, P_char, P_obj, P_obj, char *, int, int);
 void        perform_to_all(const char *, P_char);

@@ -338,7 +338,7 @@ void sa_intCopy(P_char ch, unsigned long offset, int value) { bcopy((char *)&val
 void sa_ageCopy(P_char ch, unsigned long offset, int value)
 {
 	long   secs;
-	time_t curr_time = time(NULL);
+	time_t curr_time = get_time();
 
 	secs                  = (value - 17) * SECS_PER_MUD_YEAR;
 	ch->player.time.birth = curr_time - secs;
@@ -2182,7 +2182,7 @@ void do_stat(P_char ch, char *argument, int cmd)
 			}
 			if (IS_ARTIFACT(j))
 			{
-				long ct = time(0);
+				long ct = get_time();
 				strcat(buf, "&+YIn game since: &n");
 				strcat(buf, asctime(localtime(&(j->timer[5]))));
 				strcat(buf, "\n");
@@ -2387,20 +2387,20 @@ void do_stat(P_char ch, char *argument, int cmd)
 
 			playing_time =
 #ifndef EQ_WIPE
-				real_time_passed((long)(k->player.time.played + (time(0) - k->player.time.logon)), 0);
+				real_time_passed((long)(k->player.time.played + (get_time() - k->player.time.logon)), 0);
 #else
-				real_time_passed((long)(k->player.time.played - EQ_WIPE + (time(0) - k->player.time.logon)), 0);
+				real_time_passed((long)(k->player.time.played - EQ_WIPE + (get_time() - k->player.time.logon)), 0);
 #endif
 			snprintf(buf, MAX_STRING_LENGTH, "&+YPlayed:  &N%3d &+Ydays  &N%2d &+Yhours  &N%2d &+Yminutes\n", playing_time.day, playing_time.hour, playing_time.minute);
 			strcat(o_buf, buf);
 
-			playing_time = real_time_passed(time(0), k->player.time.logon);
+			playing_time = real_time_passed(get_time(), k->player.time.logon);
 			snprintf(buf, MAX_STRING_LENGTH, "&+YSession: &N%3d &+Ydays  &N%2d &+Yhours  &N%2d &+Yminutes\n", playing_time.day, playing_time.hour, playing_time.minute);
 			strcat(o_buf, buf);
 		}
 		else
 		{
-			playing_time = real_time_passed(time(0), k->player.time.birth);
+			playing_time = real_time_passed(get_time(), k->player.time.birth);
 			snprintf(buf, MAX_STRING_LENGTH, "&+YLived: &N%2d &+Ydays  &N%2d &+Yhours  &N%2d &+Yminutes\n", playing_time.day, playing_time.hour, playing_time.minute);
 			strcat(o_buf, buf);
 		}
@@ -2737,7 +2737,7 @@ void do_stat(P_char ch, char *argument, int cmd)
 			         k->only.pc->pc_timer[9]);
 			strcat(o_buf, buf);
 
-			now = time(NULL);
+			now = get_time();
 			snprintf(buf,
 			         MAX_STRING_LENGTH,
 			         "&+YTimers(left): T[STAT_POOL] = &N%8ld&+Y, T[FLEE]    = &N%8ld&+Y, T[HEAVEN] = &N%8ld&+Y,\n"
@@ -4120,7 +4120,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
 		   }
 	   */
 		// how much longer until a reboot?
-		time_t secs = shutdownData.reboot_time - time(0);
+		time_t secs = shutdownData.reboot_time - get_time();
 		// special case:  going to reboot in less then ~1 second - force a restore all.
 		if ((secs <= 1) && (ch != NULL))
 		{
@@ -4200,7 +4200,7 @@ void displayShutdownMsg(P_char ch)
 		return;
 
 	char        buf[200];
-	time_t      secs = shutdownData.reboot_time - time(0);
+	time_t      secs = shutdownData.reboot_time - get_time();
 	const char *type = "REBOOT";
 	if (shutdownData.eShutdownType == TimedShutdownData::OK || shutdownData.eShutdownType == TimedShutdownData::PWIPE)
 	{
@@ -4375,7 +4375,7 @@ void do_shutdown(P_char ch, char *argument, int cmd)
 	strcpy(shutdownData.IssuedBy, GET_NAME(ch));
 	strlcpy(shutdownData.Reason, reason, sizeof shutdownData.Reason);
 	shutdownData.next_warning = -1;
-	shutdownData.reboot_time  = (time(0) + (mins_to_reboot * 60));
+	shutdownData.reboot_time  = (get_time() + (mins_to_reboot * 60));
 	snprintf(buf, sizeof buf, "Scheduled %s initiated by %s in %d minutes.", type, GET_NAME(ch), mins_to_reboot);
 	wizlog(60, buf);
 	sql_log(ch, WIZLOG, "%s initiated by %s in %d minutes.", type, GET_NAME(ch), mins_to_reboot);
@@ -4941,8 +4941,8 @@ void do_purge(P_char ch, char *argument, int cmd)
 
 				/* can't be too careful */
 
-				if ((time(0) - laston) >= 0)
-					timegone = (time(0) - laston) / 60;
+				if ((get_time() - laston) >= 0)
+					timegone = (get_time() - laston) / 60;
 				else
 					timegone = 0;
 
@@ -5328,7 +5328,7 @@ void do_start(P_char ch, int nomsg)
 #else
 	ch->player.time.played = EQ_WIPE;
 #endif
-	ch->player.time.logon = time(0);
+	ch->player.time.logon = get_time();
 }
 
 void do_advance(P_char ch, char *argument, int cmd)
@@ -7085,7 +7085,7 @@ void GetMIA(char *playerName, char *returned)
 	}
 
 	laston      = finger_foo->player.time.saved;
-	minutesgone = (time(0) - laston) / 60;
+	minutesgone = (get_time() - laston) / 60;
 
 	snprintf(returned, MAX_STRING_LENGTH, "  &n(&+cMIA: &+w");
 	if (minutesgone > 0)
@@ -7113,7 +7113,7 @@ void GetMIA(char *playerName, char *returned)
 	}
 	else
 	{
-		minutesgone = time(0) - laston;
+		minutesgone = get_time() - laston;
 		snprintf(returned + strlen(returned), MAX_STRING_LENGTH - strlen(returned), "%ld second%s", minutesgone, (minutesgone > 1) ? "s" : "");
 	}
 
@@ -7142,7 +7142,7 @@ void GetMIA2(char *playerName, char *returned)
 	}
 
 	laston   = finger_foo->player.time.saved;
-	timegone = time(0) - laston;
+	timegone = get_time() - laston;
 
 	days    = (timegone) / (3600 * 24);
 	hours   = (timegone % (3600 * 24)) / (3600);
@@ -7212,7 +7212,7 @@ void do_finger(P_char ch, char *arg, int cmd)
 	         get_class_string(finger_foo, Gbuf2),
 	         race_names_table[(int)GET_RACE(finger_foo)].ansi);
 	laston   = finger_foo->player.time.saved;
-	timegone = (time(0) - laston) / 60;
+	timegone = (get_time() - laston) / 60;
 	send_to_char(Gbuf1, ch);
 	pid = GET_PID(finger_foo);
 	snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cPID:&n %d &+cLast saved:&n %s", pid, asctime(localtime(&laston)));
@@ -7267,7 +7267,7 @@ void do_finger(P_char ch, char *arg, int cmd)
 	{
 		/* Handled in GetMIA
 		if((lastConnect == 0) && (lastDisconnect == 0))
-		  timegone = (time(0) - laston);
+		  timegone = (get_time() - laston);
 		else
 		  timegone = lastDisconnect;
 		*/

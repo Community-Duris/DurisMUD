@@ -1990,10 +1990,10 @@ void shapechange_showShape(struct char_shapechange_data *curShape,
 
   strcat(buf, buf2);
 
-  if (curShape->lastShapechanged + TIME_BETWEEN_SHAPECHANGES > time(0))
+  if (curShape->lastShapechanged + TIME_BETWEEN_SHAPECHANGES > get_time())
   {
     snprintf(buf2, MAX_STRING_LENGTH, " (%d hours rest required)",
-        (curShape->lastShapechanged + TIME_BETWEEN_SHAPECHANGES - time(0))
+        (curShape->lastShapechanged + TIME_BETWEEN_SHAPECHANGES - get_time())
         / SECS_PER_MUD_HOUR);
     strcat(buf, buf2);
   }

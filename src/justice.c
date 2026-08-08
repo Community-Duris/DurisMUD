@@ -439,7 +439,7 @@ void justice_action_invader(P_char ch)
 	}
 	else
 	{
-		zone_struct->last_raid = time(0);
+		zone_struct->last_raid = get_time();
 	}
 
 	if (IS_INVADER(ch))

@@ -766,7 +766,7 @@ bool createQuest(P_char ch, P_char giver)
 	ch->only.pc->quest_mob_vnum     = quest_mob;
 	ch->only.pc->quest_type         = QUEST_TYPE;
 	ch->only.pc->quest_accomplished = 0;
-	ch->only.pc->quest_started      = time(NULL);
+	ch->only.pc->quest_started      = get_time();
 	ch->only.pc->quest_zone_number  = zone_table[quest_zone].number;
 	ch->only.pc->quest_giver        = GET_VNUM(giver);
 	ch->only.pc->quest_level        = GET_LEVEL(ch);

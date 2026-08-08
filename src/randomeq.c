@@ -1573,7 +1573,7 @@ int random_eq_proc(P_obj obj, P_char ch, int cmd, char *argument)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 	// obj->value[6] = GET_VNUM(mob);
 	// obj->value[7] = named_spells[1];
 

@@ -807,7 +807,7 @@ int locker_async_mark_dirty(P_char chLocker, P_char chUser, int terminal, const 
 	{
 		s->state = LCHK_DIRTY;
 		s->gen = g_gen_seq++;
-		s->dirty_at = time(NULL);
+		s->dirty_at = get_time();
 	}
 
 	logit(LOG_DEBUG,
@@ -936,7 +936,7 @@ static void apply_result(struct locker_async_result *r)
 		s->rebuild_objects = 0;
 		s->state = LCHK_DIRTY;
 		s->gen = g_gen_seq++;
-		s->dirty_at = time(NULL);
+		s->dirty_at = get_time();
 		if (chLocker)
 			s->chLocker = chLocker;
 		if (chUser)
@@ -951,7 +951,7 @@ static void apply_result(struct locker_async_result *r)
 		/* Keep terminal-not-durable slot as DIRTY/busy fence. */
 		s->state = LCHK_DIRTY;
 		s->gen = g_gen_seq++;
-		s->dirty_at = time(NULL);
+		s->dirty_at = get_time();
 	}
 }
 

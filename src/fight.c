@@ -834,7 +834,7 @@ void setHeavenTime(P_char victim)
 			time_in_heaven *= 24;
 	}
 
-	victim->only.pc->pc_timer[PC_TIMER_HEAVEN] = time(NULL) + time_in_heaven;
+	victim->only.pc->pc_timer[PC_TIMER_HEAVEN] = get_time() + time_in_heaven;
 	debug("%s time in heaven: until %s = %d seconds, recent deaths = %d.", J_NAME(victim),
 	      asctime(localtime(&(victim->only.pc->pc_timer[PC_TIMER_HEAVEN]))), time_in_heaven,
 	      counter);
@@ -9088,7 +9088,7 @@ void perform_violence(void)
 	bool			melee_exp_pulse;
 	// loop through everyone fighting
 
-	time_now	= time(0);
+	time_now	= get_time();
 	melee_exp_pulse = ((pulse % PULSE_VIOLENCE) == 0);
 
 	for (ch = destroying_list; ch; ch = ch->specials.next_destroying)

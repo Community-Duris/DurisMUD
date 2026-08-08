@@ -19,7 +19,7 @@ static void format_time_ago(time_t ts, char *buf, size_t len)
 		return;
 	}
 
-	time_t now  = time(NULL);
+	time_t now  = get_time();
 	long   diff = now - ts;
 
 	if (diff < 0)

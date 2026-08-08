@@ -626,7 +626,7 @@ void do_specialize(P_char ch, char *argument, int cmd)
 	while (*argument == ' ')
 		argument++;
 
-	if (time(NULL) < ch->only.pc->time_unspecced)
+	if (get_time() < ch->only.pc->time_unspecced)
 	{
 		snprintf(buf, MAX_STRING_LENGTH, "You cannot specialize until %s.\r\n", asctime(localtime(&ch->only.pc->time_unspecced)));
 		send_to_char(buf, ch);

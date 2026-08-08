@@ -143,7 +143,7 @@ int flayed_mind_mask(P_obj obj, P_char ch, int cmd, char *argument)
 				return TRUE;
 			}
 
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 30 min timer.
 			if (obj->timer[0] + 1800 <= curr_time)
 			{
@@ -184,7 +184,7 @@ int stalker_cloak(P_obj obj, P_char ch, int cmd, char *argument)
 			{
 				return TRUE;
 			}
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 3 min timer.
 			if (obj->timer[0] + 180 <= curr_time)
 			{
@@ -201,7 +201,7 @@ int stalker_cloak(P_obj obj, P_char ch, int cmd, char *argument)
 			{
 				return TRUE;
 			}
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 3 min timer.
 			if (obj->timer[0] + 180 <= curr_time)
 			{
@@ -218,7 +218,7 @@ int stalker_cloak(P_obj obj, P_char ch, int cmd, char *argument)
 			{
 				return TRUE;
 			}
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 1 min timer.
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -264,7 +264,7 @@ int finslayer_air(P_obj obj, P_char ch, int cmd, char *argument)
 				return TRUE;
 			}
 
-			curr_time = time(NULL);
+			curr_time = get_time();
 			// 1 min timer.
 			if (obj->timer[0] + 60 <= curr_time)
 			{
@@ -304,7 +304,7 @@ int aboleth_pendant(P_obj obj, P_char ch, int cmd, char *argument)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 	// 900 for 15 mins
 	if (obj->timer[0] + 900 <= curr_time)
 	{
@@ -713,7 +713,7 @@ int mox_totem(P_obj obj, P_char ch, int cmd, char *argument)
 		return FALSE;
 	}
 
-	curr_time = time(NULL);
+	curr_time = get_time();
 
 	if (!IS_ROOM(ch->in_room, ROOM_NO_MAGIC))
 	{

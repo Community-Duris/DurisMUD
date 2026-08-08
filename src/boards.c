@@ -254,7 +254,7 @@ void Board_write_message(int board_type, struct char_data *ch, char *arg)
 		return;
 	}
 
-	ct                           = time(0);
+	ct                           = get_time();
 	tmstr                        = (char *)asctime(localtime(&ct));
 	*(tmstr + strlen(tmstr) - 9) = '\0'; /* kill seconds and year */
 
