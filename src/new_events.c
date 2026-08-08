@@ -205,7 +205,7 @@ static void nevent_link_schedule(P_nevent event, int loc)
 		ne_schedule_tail[loc] = event;
 }
 
-static bool nevent_overdue_player(P_nevent event)
+static bool nevent_overdue_event(P_nevent event)
 {
 	/* Any event that reaches the threshold must eventually run.  Player-timed
 	 * events remain normally prioritized, but normal events cannot starve
@@ -215,7 +215,7 @@ static bool nevent_overdue_player(P_nevent event)
 
 /* Keep the budget as the default, but move a repeatedly deferred event ahead
  * of the remaining work so a busy bucket cannot starve any event forever. */
-static bool nevent_promote_overdue_player(P_nevent *next_event, P_nevent anchor)
+static bool nevent_promote_overdue_event(P_nevent *next_event, P_nevent anchor)
 {
 	P_nevent candidate;
 	P_nevent prior;
@@ -226,7 +226,7 @@ static bool nevent_promote_overdue_player(P_nevent *next_event, P_nevent anchor)
 
 	for (candidate = *next_event; candidate; candidate = candidate->next_sched)
 	{
-		if (!nevent_overdue_player(candidate))
+		if (!nevent_overdue_event(candidate))
 			continue;
 		if (candidate == *next_event)
 			return TRUE;
@@ -1073,7 +1073,7 @@ void ne_events(void)
 				clock_gettime(CLOCK_MONOTONIC, &loop_finished);
 				budget_exhausted = nevent_elapsed_us(&loop_started, &loop_finished) >= budget_usec;
 			}
-			if (budget_exhausted && next_event && (max_callbacks <= 0 || executed < max_callbacks) && !priority_promotion_used && nevent_promote_overdue_player(&next_event, current_nevent))
+			if (budget_exhausted && next_event && (max_callbacks <= 0 || executed < max_callbacks) && !priority_promotion_used && nevent_promote_overdue_event(&next_event, current_nevent))
 			{
 				priority_promotion_used = TRUE;
 				continue;
@@ -1137,7 +1137,7 @@ void ne_events(void)
 			if (nevent_elapsed_us(&loop_started, &loop_finished) >= budget_usec)
 				budget_exhausted = TRUE;
 		}
-		if (budget_exhausted && next_event && (max_callbacks <= 0 || executed < max_callbacks) && !priority_promotion_used && nevent_promote_overdue_player(&next_event, NULL))
+		if (budget_exhausted && next_event && (max_callbacks <= 0 || executed < max_callbacks) && !priority_promotion_used && nevent_promote_overdue_event(&next_event, NULL))
 		{
 			priority_promotion_used = TRUE;
 			continue;
