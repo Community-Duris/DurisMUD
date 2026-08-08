@@ -39,10 +39,14 @@
 #define MAX_FUNCTIONS             6000
 #define FUNCTION_NAMES_FILE       "lib/misc/event_names"
 #define NEVENT_BUDGET_USEC_DEFAULT 25000L
-#define NEVENT_MAX_CALLBACKS_DEFAULT 1000L
+#define NEVENT_MAX_CALLBACKS_DEFAULT 4000L
 #define NEVENT_PRIORITY_NORMAL    0U
 #define NEVENT_PRIORITY_PLAYER    1U
 #define NEVENT_MAX_DEFERRALS      0U
+#define NEVENT_CATCHUP_WINDOW_PULSES 4
+#define NEVENT_CATCHUP_MAX_EXTENSION_USEC_DEFAULT 5000L
+#define NEVENT_CATCHUP_MAX_EXTRA_CALLBACKS_DEFAULT 4000L
+#define NEVENT_CALLBACK_EWMA_SHIFT 4
 #define NEVENT_ANALYTICS_CALLBACK_SLOTS 128
 #define NEVENT_ANALYTICS_CALLBACK_NAME 96
 
@@ -86,6 +90,12 @@ struct nevent_analytics_data
 };
 
 static struct nevent_analytics_data nevent_analytics;
+static long nevent_catchup_debt = 0;
+static int nevent_catchup_remaining = 0;
+static long nevent_avg_callback_us = 50;
+static long nevent_catchup_quota = 0;
+static long nevent_catchup_extension_us = 0;
+static long nevent_catchup_extra_callbacks = 0;
 
 struct nevent_funcs_name_data
 {
@@ -140,8 +150,34 @@ extern void                          event_wait(P_char, P_char, P_obj, void *);
 extern void                          event_mana_regen(P_char, P_char, P_obj, void *);
 extern void                          event_move_regen(P_char, P_char, P_obj, void *);
 extern void                          event_hit_regen(P_char, P_char, P_obj, void *);
+extern void                          event_ward_regen(P_char, P_char, P_obj, void *);
 extern void                          event_balance_affects(P_char, P_char, P_obj, void *);
 static long                           nevent_config_limit(const char *name, long fallback);
+
+static const char *nevent_callback_label(event_func_type func)
+{
+	if (func == event_hit_regen)
+		return "event_hit_regen";
+	if (func == event_mana_regen)
+		return "event_mana_regen";
+	if (func == event_move_regen)
+		return "event_move_regen";
+	if (func == event_ward_regen)
+		return "event_ward_regen";
+	if (func == event_spellcast)
+		return "event_spellcast";
+	if (func == event_memorize)
+		return "event_memorize";
+	if (func == event_wait)
+		return "event_wait";
+	if (func == event_balance_affects)
+		return "event_balance_affects";
+	if (func == event_mob_mundane)
+		return "event_mob_mundane";
+	if (func == event_reset_zone)
+		return "event_reset_zone";
+	return get_function_name((void *)func);
+}
 
 static bool nevent_is_player_timed(event_func_type func, P_char ch)
 {
@@ -776,6 +812,88 @@ static long nevent_max_callbacks(void)
 	return configured;
 }
 
+static long nevent_catchup_max_extension_us(void)
+{
+	static long configured = -1;
+	if (configured < 0)
+		configured = nevent_config_limit("DURIS_NEVENT_CATCHUP_MAX_EXTENSION_USEC", NEVENT_CATCHUP_MAX_EXTENSION_USEC_DEFAULT);
+	return configured;
+}
+
+static long nevent_catchup_max_extra_callbacks(void)
+{
+	static long configured = -1;
+	if (configured < 0)
+		configured = nevent_config_limit("DURIS_NEVENT_CATCHUP_MAX_EXTRA_CALLBACKS", NEVENT_CATCHUP_MAX_EXTRA_CALLBACKS_DEFAULT);
+	return configured;
+}
+
+static void nevent_record_callback_cost(long callback_us)
+{
+	if (callback_us < 1)
+		callback_us = 1;
+	if (nevent_avg_callback_us < 1)
+		nevent_avg_callback_us = callback_us;
+	else
+		nevent_avg_callback_us += (callback_us - nevent_avg_callback_us) >> NEVENT_CALLBACK_EWMA_SHIFT;
+	if (nevent_avg_callback_us < 1)
+		nevent_avg_callback_us = 1;
+}
+
+static void nevent_add_catchup_debt(long deferred)
+{
+	if (deferred <= 0)
+		return;
+	nevent_catchup_debt += deferred;
+	if (nevent_catchup_remaining <= 0)
+		nevent_catchup_remaining = NEVENT_CATCHUP_WINDOW_PULSES;
+}
+
+static void nevent_complete_deferred(P_nevent event)
+{
+	if (event && event->deferral_count > 0 && nevent_catchup_debt > 0)
+		nevent_catchup_debt--;
+}
+
+static void nevent_prepare_catchup(long base_budget_usec, long base_max_callbacks,
+	                               long *effective_budget_usec, long *effective_max_callbacks)
+{
+	long max_extra_callbacks = nevent_catchup_max_extra_callbacks();
+	long max_extension_usec = nevent_catchup_max_extension_us();
+	long callback_budget;
+
+	nevent_catchup_quota = 0;
+	nevent_catchup_extra_callbacks = 0;
+	nevent_catchup_extension_us = 0;
+	*effective_budget_usec = base_budget_usec;
+	*effective_max_callbacks = base_max_callbacks;
+
+	if (nevent_catchup_debt <= 0 || nevent_catchup_remaining <= 0)
+		return;
+
+	nevent_catchup_quota = (nevent_catchup_debt + nevent_catchup_remaining - 1) / nevent_catchup_remaining;
+	nevent_catchup_extra_callbacks = MIN(nevent_catchup_quota, max_extra_callbacks);
+	callback_budget = nevent_catchup_extra_callbacks * MAX(1L, nevent_avg_callback_us);
+	nevent_catchup_extension_us = MIN(max_extension_usec, callback_budget);
+	*effective_budget_usec += nevent_catchup_extension_us;
+	if (base_max_callbacks > 0)
+		*effective_max_callbacks += nevent_catchup_extra_callbacks;
+}
+
+static void nevent_finish_catchup_pulse(void)
+{
+	if (nevent_catchup_debt <= 0)
+	{
+		nevent_catchup_debt = 0;
+		nevent_catchup_remaining = 0;
+		return;
+	}
+	if (nevent_catchup_remaining > 0)
+		nevent_catchup_remaining--;
+	if (nevent_catchup_remaining <= 0)
+		nevent_catchup_remaining = NEVENT_CATCHUP_WINDOW_PULSES;
+}
+
 static bool nevent_trace_player(void)
 {
 	return nevent_config_limit("DURIS_NEVENT_TRACE_PLAYER", 0) > 0;
@@ -884,7 +1002,7 @@ static void nevent_analytics_emit_callbacks(void)
 		      NEVENT_ANALYTICS_CALLBACK_SLOTS);
 }
 
-static void nevent_analytics_record(long scanned, long executed, long deferred, long loop_us, bool budget_exhausted)
+static void nevent_analytics_record(long scanned, long executed, long deferred, long catchup_executed, long max_deferral_seen, long max_late_ticks, const char *max_late_name, unsigned long long max_late_scheduled, long max_late_deferral, long loop_us, bool budget_exhausted)
 {
 	if (!nevent_analytics_enabled())
 		return;
@@ -918,14 +1036,24 @@ static void nevent_analytics_record(long scanned, long executed, long deferred, 
 		nevent_analytics.peak_pending = ne_event_counter;
 
 	logit(LOG_STATUS,
-	      "NEVENT ANALYTICS PULSE: tick=%llu scanned=%ld executed=%ld deferred=%ld total_us=%ld pending=%ld budget_exhausted=%d",
+	      "NEVENT ANALYTICS PULSE: tick=%llu scanned=%ld executed=%ld deferred=%ld pending=%ld budget_exhausted=%d catchup_debt=%ld catchup_quota=%ld catchup_executed=%ld max_deferral=%ld max_late_ticks=%ld max_late_name=%s max_late_scheduled=%llu max_late_deferral=%ld catchup_extension_us=%ld avg_callback_us=%ld total_us=%ld",
 	      ne_event_tick,
 	      scanned,
 	      executed,
 	      deferred,
-	      loop_us,
 	      ne_event_counter,
-	      budget_exhausted ? 1 : 0);
+	      budget_exhausted ? 1 : 0,
+	      nevent_catchup_debt,
+	      nevent_catchup_quota,
+	      catchup_executed,
+	      max_deferral_seen,
+	      max_late_ticks,
+	      max_late_name,
+	      max_late_scheduled,
+	      max_late_deferral,
+	      nevent_catchup_extension_us,
+	      nevent_avg_callback_us,
+	      loop_us);
 
 	if (nevent_analytics.pulses >= PULSES_IN_TICK)
 	{
@@ -959,7 +1087,7 @@ static long nevent_elapsed_us(const struct timespec *started, const struct times
 
 /* Move only the unscanned suffix to the front of the next pulse. Leaving it
  * in the current ring bucket would delay already-due work for a full cycle. */
-static long nevent_defer_suffix(P_nevent deferred_head)
+static long nevent_defer_suffix(P_nevent deferred_head, long *new_debt)
 {
 	P_nevent event;
 	P_nevent deferred_tail = NULL;
@@ -968,6 +1096,8 @@ static long nevent_defer_suffix(P_nevent deferred_head)
 	int next_pulse;
 	long deferred = 0;
 
+	if (new_debt)
+		*new_debt = 0;
 	if (!deferred_head)
 		return 0;
 
@@ -1013,6 +1143,8 @@ static long nevent_defer_suffix(P_nevent deferred_head)
 	{
 		event->element = next_pulse;
 		event->timer = 1;
+		if (event->deferral_count == 0 && new_debt)
+			(*new_debt)++;
 		event->deferral_count++;
 		nevent_analytics_record_deferred(event);
 		deferred++;
@@ -1042,9 +1174,13 @@ void ne_events(void)
 	P_char      ch;
 	P_obj       obj;
 	struct timespec loop_started, callback_started, callback_finished, loop_finished;
-	long scanned = 0, executed = 0, slowest_us = 0, deferred = 0;
-	long budget_usec = nevent_budget_usec();
-	long max_callbacks = nevent_max_callbacks();
+	long scanned = 0, executed = 0, catchup_executed = 0, max_deferral_seen = 0, max_late_ticks = 0, max_late_deferral = 0, slowest_us = 0, deferred = 0, new_debt = 0;
+	const char *max_late_name = "none";
+	unsigned long long max_late_scheduled = 0;
+	long base_budget_usec = nevent_budget_usec();
+	long base_max_callbacks = nevent_max_callbacks();
+	long budget_usec = base_budget_usec;
+	long max_callbacks = base_max_callbacks;
 	bool budget_exhausted = FALSE;
 	bool priority_promotion_used = FALSE;
 	const char *slowest_name = "none";
@@ -1059,6 +1195,7 @@ void ne_events(void)
 		check_nevents();
 	}
 
+	nevent_prepare_catchup(base_budget_usec, base_max_callbacks, &budget_usec, &max_callbacks);
 	clock_gettime(CLOCK_MONOTONIC, &loop_started);
 	PROFILE_START(event_loop);
 	for (current_nevent = ne_schedule[pulse]; current_nevent; current_nevent = next_event)
@@ -1080,17 +1217,29 @@ void ne_events(void)
 			}
 			if (budget_exhausted && next_event)
 			{
-				deferred = nevent_defer_suffix(next_event);
+				deferred = nevent_defer_suffix(next_event, &new_debt);
+				nevent_add_catchup_debt(new_debt);
 				break;
 			}
 			continue;
+		}
+
+		if ((long)current_nevent->deferral_count > max_deferral_seen)
+			max_deferral_seen = (long)current_nevent->deferral_count;
+		if (ne_event_tick > current_nevent->scheduled_tick &&
+		    (long)(ne_event_tick - current_nevent->scheduled_tick) > max_late_ticks)
+		{
+			max_late_ticks = (long)(ne_event_tick - current_nevent->scheduled_tick);
+			max_late_name = current_nevent->func ? nevent_callback_label(current_nevent->func) : "neutered";
+			max_late_scheduled = current_nevent->scheduled_tick;
+			max_late_deferral = (long)current_nevent->deferral_count;
 		}
 
 		// If this event has a function to execute (hasn't been neutered)
 		if (current_nevent->func)
 		{
 			event_func_type callback_func = current_nevent->func;
-			const char *callback_name = get_function_name((void *)callback_func);
+			const char *callback_name = nevent_callback_label(callback_func);
 			clock_gettime(CLOCK_MONOTONIC, &callback_started);
 #ifdef DO_PROFILE
 			PROFILE_START(event_func);
@@ -1103,6 +1252,7 @@ void ne_events(void)
 			clock_gettime(CLOCK_MONOTONIC, &callback_finished);
 			executed++;
 			long callback_us = nevent_elapsed_us(&callback_started, &callback_finished);
+			nevent_record_callback_cost(callback_us);
 			if (callback_us > slowest_us)
 			{
 				slowest_us = callback_us;
@@ -1116,7 +1266,7 @@ void ne_events(void)
 			long long late_pulses = (ne_event_tick > current_nevent->scheduled_tick) ? (long long)(ne_event_tick - current_nevent->scheduled_tick) : 0;
 			logit(LOG_STATUS,
 			      "PLAYER EVENT TIMING: func=%s sequence=%llu ch_pid=%ld due_tick=%llu actual_tick=%llu late_pulses=%lld scheduled=%ld",
-			      get_function_name((void *)current_nevent->func),
+			      nevent_callback_label(current_nevent->func),
 			      current_nevent->sequence,
 			      current_nevent->ch ? (long)GET_ID(current_nevent->ch) : -1L,
 			      current_nevent->scheduled_tick,
@@ -1125,6 +1275,11 @@ void ne_events(void)
 			      ne_event_counter);
 		}
 
+		if (current_nevent->deferral_count > 0)
+		{
+			nevent_complete_deferred(current_nevent);
+			catchup_executed++;
+		}
 		clear_nevent(current_nevent);
 		mm_release(ne_dead_event_pool, current_nevent);
 		ne_event_counter--;
@@ -1144,7 +1299,8 @@ void ne_events(void)
 		}
 		if (budget_exhausted && next_event)
 		{
-			deferred = nevent_defer_suffix(next_event);
+			deferred = nevent_defer_suffix(next_event, &new_debt);
+			nevent_add_catchup_debt(new_debt);
 			break;
 		}
 	}
@@ -1155,15 +1311,38 @@ void ne_events(void)
 	if (deferred > 0)
 	{
 		logit(LOG_STATUS,
-		      "NEVENT BUDGET: pulse=%d total_us=%ld scanned=%ld executed=%ld deferred=%ld slowest=%s slowest_us=%ld scheduled=%ld",
+		      "NEVENT BUDGET: pulse=%d total_us=%ld scanned=%ld executed=%ld deferred=%ld catchup_debt=%ld catchup_quota=%ld catchup_executed=%ld max_deferral=%ld max_late_ticks=%ld max_late_name=%s max_late_scheduled=%llu max_late_deferral=%ld catchup_extension_us=%ld avg_callback_us=%ld slowest=%s slowest_us=%ld scheduled=%ld",
 		      pulse,
 		      loop_us,
 		      scanned,
 		      executed,
 		      deferred,
+		      nevent_catchup_debt,
+		      nevent_catchup_quota,
+		      catchup_executed,
+		      max_deferral_seen,
+		      max_late_ticks,
+		      max_late_name,
+		      max_late_scheduled,
+		      max_late_deferral,
+		      nevent_catchup_extension_us,
+		      nevent_avg_callback_us,
 		      slowest_name ? slowest_name : "unknown",
 		      slowest_us,
 		      ne_event_counter);
+	}
+	if (nevent_catchup_quota > 0 || new_debt > 0)
+	{
+		logit(LOG_STATUS,
+		      "NEVENT CATCHUP: pulse=%d debt=%ld remaining_pulses=%d quota=%ld executed=%ld extension_us=%ld avg_callback_us=%ld new_debt=%ld",
+		      pulse,
+		      nevent_catchup_debt,
+		      nevent_catchup_remaining,
+		      nevent_catchup_quota,
+		      catchup_executed,
+		      nevent_catchup_extension_us,
+		      nevent_avg_callback_us,
+		      new_debt);
 	}
 	if (loop_us >= 50000)
 	{
@@ -1177,7 +1356,8 @@ void ne_events(void)
 		      slowest_us,
 		      ne_event_counter);
 	}
-	nevent_analytics_record(scanned, executed, deferred, loop_us, budget_exhausted);
+	nevent_analytics_record(scanned, executed, deferred, catchup_executed, max_deferral_seen, max_late_ticks, max_late_name, max_late_scheduled, max_late_deferral, loop_us, budget_exhausted);
+	nevent_finish_catchup_pulse();
 	count++;
 	ne_event_tick++;
 }
