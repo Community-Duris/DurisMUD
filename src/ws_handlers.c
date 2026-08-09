@@ -29,6 +29,7 @@
 #include "sql_player.h"
 #include "player_name.h"
 #include "websocket.h"
+#include "ws_auth.h"
 
 extern struct descriptor_data  *descriptor_list;
 extern struct mm_ds            *dead_mob_pool;
@@ -57,67 +58,6 @@ extern const int                avail_hometowns[][LAST_RACE + 1];
 static const char *ws_get_race_name(int race);
 static const char *ws_get_class_name(unsigned int m_class);
 
-/* durisweb secret for service authentication */
-#define DURISWEB_SECRET_DEFAULT "Dur1sM4pK3y2025xYz!"
-
-static const char *get_durisweb_secret(void)
-{
-	const char *secret = getenv("DURISWEB_SECRET");
-	if (!secret || !*secret)
-	{
-		static int warned = 0;
-		if (!warned)
-		{
-			logit(LOG_DEBUG, "WARNING: DURISWEB_SECRET not set, using default (honeypot)");
-			warned = 1;
-		}
-		return DURISWEB_SECRET_DEFAULT;
-	}
-	return secret;
-}
-
-static int verify_durisweb_sig(const char *sig)
-{
-	if (!sig || !*sig)
-		return 0;
-
-	const char *secret = get_durisweb_secret();
-	if (!secret)
-		return 0;
-
-	time_t now    = time(NULL);
-	long   minute = now / 60;
-
-	/* check +/- 1 minute for clock skew */
-	for (int offset = -1; offset <= 1; offset++)
-	{
-		char ts[32];
-		snprintf(ts, sizeof(ts), "%ld", minute + offset);
-
-		unsigned char digest[EVP_MAX_MD_SIZE];
-		unsigned int  digest_len = 0;
-
-		HMAC(EVP_sha256(), secret, strlen(secret), (unsigned char *)ts, strlen(ts), digest, &digest_len);
-
-		/* sha256 = 32 bytes */
-		if (digest_len != 32)
-			continue;
-
-		char expected[65];
-		for (unsigned int i = 0; i < digest_len && i < 32; i++)
-		{
-			snprintf(expected + (i * 2), 3, "%02x", digest[i]);
-		}
-		expected[64] = '\0';
-
-		if (strcmp(sig, expected) == 0)
-		{
-			return 1;
-		}
-	}
-	return 0;
-}
-
 /* send auth response helper */
 static void send_auth_response(struct descriptor_data *d, int success, const char *error)
 {
@@ -136,26 +76,79 @@ static void send_auth_response(struct descriptor_data *d, int success, const cha
 	cJSON_Delete(root);
 }
 
+/* DurisWeb authentication attempt limiter. */
+static int ws_durisweb_auth_limited(struct descriptor_data *d)
+{
+	time_t now = time(NULL);
+
+	if (!d->durisweb_auth_window_start ||
+	    (now >= d->durisweb_auth_window_start && now - d->durisweb_auth_window_start >= WS_AUTH_FAILURE_WINDOW))
+	{
+		d->durisweb_auth_window_start = now;
+		d->durisweb_auth_failures = 0;
+	}
+	return d->durisweb_auth_failures >= WS_AUTH_MAX_FAILURES;
+}
+
+static void ws_durisweb_auth_failure(struct descriptor_data *d)
+{
+	(void)ws_durisweb_auth_limited(d);
+	if (d->durisweb_auth_failures < WS_AUTH_MAX_FAILURES)
+		d->durisweb_auth_failures++;
+	if (d->durisweb_auth_failures >= WS_AUTH_MAX_FAILURES)
+		STATE(d) = CON_EXIT;
+}
+
 /* durisweb service authentication */
 void ws_cmd_durisweb_auth(struct descriptor_data *d, cJSON *data)
 {
-	cJSON *sig = cJSON_GetObjectItem(data, "sig");
+	cJSON *sig;
 
+	if (!d)
+		return;
+	if (d->durisweb_verified || d->durisweb_backend)
+	{
+		send_auth_response(d, 0, "Already authenticated");
+		return;
+	}
+	if (ws_durisweb_auth_limited(d))
+	{
+		send_auth_response(d, 0, "Too many authentication attempts");
+		return;
+	}
+	d->durisweb_verified = 0;
+	d->durisweb_backend  = 0;
+	if (d->account || d->character || d->connected == CON_PLAYING)
+	{
+		send_auth_response(d, 0, "Invalid authentication state");
+		return;
+	}
+	if (!data)
+	{
+		ws_durisweb_auth_failure(d);
+		send_auth_response(d, 0, "Missing signature");
+		return;
+	}
+	sig = cJSON_GetObjectItem(data, "sig");
 	if (!sig || !cJSON_IsString(sig))
 	{
+		ws_durisweb_auth_failure(d);
 		send_auth_response(d, 0, "Missing signature");
 		return;
 	}
 
-	if (verify_durisweb_sig(sig->valuestring))
+	if (ws_verify_durisweb_signature(sig->valuestring))
 	{
 		d->durisweb_verified = 1;
 		d->durisweb_backend  = 1;
+		d->durisweb_auth_window_start = 0;
+		d->durisweb_auth_failures = 0;
 		statuslog(56, "DurisWeb service authenticated");
 		send_auth_response(d, 1, NULL);
 	}
 	else
 	{
+		ws_durisweb_auth_failure(d);
 		send_auth_response(d, 0, "Invalid signature");
 	}
 }
@@ -727,6 +720,11 @@ void ws_cmd_login(struct descriptor_data *d, cJSON *data)
 	char        tmp_name[256];
 	int         password_valid = 0;
 
+	if (d && (d->durisweb_verified || d->durisweb_backend))
+	{
+		ws_send_auth_failed(d, "Service connection cannot log in as a player");
+		return;
+	}
 	if (!data)
 	{
 		ws_send_auth_failed(d, "Missing login data");
@@ -1000,6 +998,11 @@ void ws_cmd_game(struct descriptor_data *d, cJSON *data)
 {
 	const char *cmd;
 
+	if (!d || d->connected != CON_PLAYING || !d->character)
+	{
+		ws_send_system(d, "error", "Character not playing");
+		return;
+	}
 	if (!data)
 		return;
 
@@ -1033,6 +1036,17 @@ void ws_cmd_register(struct descriptor_data *d, cJSON *data)
 	char   tmp_name[MAX_INPUT_LENGTH];
 	char  *hash;
 	int    i;
+
+	if (!d || d->account || d->durisweb_verified || d->durisweb_backend)
+	{
+		ws_send_auth_failed(d, "Already authenticated");
+		return;
+	}
+	if (!data)
+	{
+		ws_send_auth_failed(d, "Missing registration data");
+		return;
+	}
 
 	/* get required fields from json */
 	account_json  = cJSON_GetObjectItemCaseSensitive(data, "account");
@@ -1269,6 +1283,12 @@ void ws_cmd_roll_stats(struct descriptor_data *d, cJSON *data)
 	char  *json_str;
 	P_char temp_ch;
 
+	if (!d || !d->account)
+	{
+		ws_send_system(d, "error", "Not authenticated");
+		return;
+	}
+
 	/* get race from request */
 	race_item = cJSON_GetObjectItem(data, "race");
 	if (!race_item || !cJSON_IsNumber(race_item))
@@ -1331,6 +1351,12 @@ void ws_cmd_add_bonus(struct descriptor_data *d, cJSON *data)
 	const char *stat_name;
 	sh_int     *stat_ptr = NULL;
 
+	if (!d || !d->account)
+	{
+		ws_send_system(d, "error", "Not authenticated");
+		return;
+	}
+
 	/* check if we have bonus points remaining */
 	if (d->chargen_bonus_remaining <= 0)
 	{
@@ -1392,6 +1418,12 @@ void ws_cmd_swap_stats(struct descriptor_data *d, cJSON *data)
 	const char *stat1_name, *stat2_name;
 	sh_int     *stat1_ptr = NULL, *stat2_ptr = NULL;
 	sh_int      temp;
+
+	if (!d || !d->account)
+	{
+		ws_send_system(d, "error", "Not authenticated");
+		return;
+	}
 
 	/* get stat names */
 	stat1_item = cJSON_GetObjectItem(data, "stat1");
@@ -1461,6 +1493,12 @@ void ws_cmd_create_character(struct descriptor_data *d, cJSON *data)
 	int         hometown_id, is_hardcore, is_newbie;
 	int         class_align_req;
 	const char *faction;
+
+	if (!d || !d->account)
+	{
+		ws_send_system(d, "error", "Not authenticated");
+		return;
+	}
 
 	/* validate required fields */
 	name_item     = cJSON_GetObjectItem(data, "name");
@@ -2906,14 +2944,14 @@ void ws_cmd_poll_view(struct descriptor_data *d, cJSON *data)
 
 void ws_cmd_poll_vote(struct descriptor_data *d, cJSON *data)
 {
-	if (!d || !d->account)
+	cJSON *poll_id_json = data ? cJSON_GetObjectItem(data, "poll_id") : NULL;
+	cJSON *choices_json = data ? cJSON_GetObjectItem(data, "choices") : NULL;
+
+	if (!d || !d->account || !d->account->acct_name)
 	{
 		ws_send_system(d, "error", "Not authenticated");
 		return;
 	}
-
-	cJSON *poll_id_json = data ? cJSON_GetObjectItem(data, "poll_id") : NULL;
-	cJSON *choices_json = data ? cJSON_GetObjectItem(data, "choices") : NULL;
 
 	if (!poll_id_json || !cJSON_IsNumber(poll_id_json))
 	{

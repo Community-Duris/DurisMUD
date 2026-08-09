@@ -167,6 +167,8 @@ int compress_start(P_desc player, int mccp_version)
 {
 	z_stream *s;
 
+	if (!player || player->websocket)
+		return 0;
 	if (player->z_str)
 		return 0;
 
@@ -256,29 +258,44 @@ int write_to_descriptor(P_desc player, const char *txt)
 	int   len, total, status, i, j;
 	char  conv_buf[MAX_STRING_LENGTH * 2];
 
+	if (!player || !txt)
+		return -1;
 	if (player->write_failed)
 		return -1;
 
 	/* WebSocket connections need JSON-wrapped text frames */
 	if (player->websocket)
 	{
-		char *escaped = json_escape_ansi_string(txt);
-		if (escaped && escaped[0] != '\0')
+		int    result;
+		char  *escaped = json_escape_ansi_string(txt);
+		if (!escaped)
+			return -1;
+		if (escaped[0] == '\0')
 		{
-			/* Skip empty messages */
-			char  *json_msg = NULL;
-			size_t msg_len  = strlen(escaped) + 64;
-			json_msg        = (char *)malloc(msg_len);
-			if (json_msg)
-			{
-				snprintf(json_msg, msg_len, "{\"type\":\"text\",\"category\":\"info\",\"data\":\"%s\"}", escaped);
-				websocket_send_text(player, json_msg);
-				free(json_msg);
-			}
-		}
-		if (escaped)
 			free(escaped);
-		return 0;
+			return 0;
+		}
+
+		/* Skip empty messages */
+		char  *json_msg = NULL;
+		size_t msg_len  = strlen(escaped) + 64;
+		json_msg        = (char *)malloc(msg_len);
+		if (!json_msg)
+		{
+			free(escaped);
+			return -1;
+		}
+		int written = snprintf(json_msg, msg_len, "{\"type\":\"text\",\"category\":\"info\",\"data\":\"%s\"}", escaped);
+		if (written < 0 || (size_t)written >= msg_len)
+		{
+			free(json_msg);
+			free(escaped);
+			return -1;
+		}
+		result = websocket_send_text(player, json_msg);
+		free(json_msg);
+		free(escaped);
+		return result;
 	}
 
 	for (i = 0, j = 0; txt[i]; i++)
@@ -373,6 +390,8 @@ int write_to_descriptor_binary(P_desc player, const unsigned char *data, size_t 
 
 	if (!player || !data || len == 0)
 		return 0;
+	if (player->websocket)
+		return 0; /* WebSocket output must always use framed send APIs. */
 
 	if (player->write_failed)
 		return -1;
